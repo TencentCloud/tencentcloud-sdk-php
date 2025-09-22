@@ -92,6 +92,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProviderAliasName(string $ProviderAliasName) 设置提供商别名
  * @method string getProviderType() 获取提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商
  * @method void setProviderType(string $ProviderType) 设置提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商
+ * @method boolean getIsCloseModelParams() 获取是否关闭模型超参
+ * @method void setIsCloseModelParams(boolean $IsCloseModelParams) 设置是否关闭模型超参
+ * @method boolean getIsDeepThinking() 获取是否支持深度思考
+ * @method void setIsDeepThinking(boolean $IsDeepThinking) 设置是否支持深度思考
  */
 class ModelInfo extends AbstractModel
 {
@@ -228,6 +232,16 @@ class ModelInfo extends AbstractModel
     public $ProviderType;
 
     /**
+     * @var boolean 是否关闭模型超参
+     */
+    public $IsCloseModelParams;
+
+    /**
+     * @var boolean 是否支持深度思考
+     */
+    public $IsDeepThinking;
+
+    /**
      * @param string $ModelName 模型名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModelDesc 模型描述
@@ -264,6 +278,8 @@ class ModelInfo extends AbstractModel
      * @param string $ProviderName 提供商名称
      * @param string $ProviderAliasName 提供商别名
      * @param string $ProviderType 提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商
+     * @param boolean $IsCloseModelParams 是否关闭模型超参
+     * @param boolean $IsDeepThinking 是否支持深度思考
      */
     function __construct()
     {
@@ -380,6 +396,14 @@ class ModelInfo extends AbstractModel
 
         if (array_key_exists("ProviderType",$param) and $param["ProviderType"] !== null) {
             $this->ProviderType = $param["ProviderType"];
+        }
+
+        if (array_key_exists("IsCloseModelParams",$param) and $param["IsCloseModelParams"] !== null) {
+            $this->IsCloseModelParams = $param["IsCloseModelParams"];
+        }
+
+        if (array_key_exists("IsDeepThinking",$param) and $param["IsDeepThinking"] !== null) {
+            $this->IsDeepThinking = $param["IsDeepThinking"];
         }
     }
 }

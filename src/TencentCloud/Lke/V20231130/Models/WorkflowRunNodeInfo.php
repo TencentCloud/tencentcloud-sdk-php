@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatisticInfos(array $StatisticInfos) 设置大模型输出信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFailCode() 获取错误代码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFailCode(string $FailCode) 设置错误代码
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowRunNodeInfo extends AbstractModel
 {
@@ -124,6 +128,12 @@ class WorkflowRunNodeInfo extends AbstractModel
     public $StatisticInfos;
 
     /**
+     * @var string 错误代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FailCode;
+
+    /**
      * @param string $NodeId 节点ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NodeType 节点类型
@@ -143,6 +153,8 @@ class WorkflowRunNodeInfo extends AbstractModel
      * @param integer $CostMilliSeconds 花费时长
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $StatisticInfos 大模型输出信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FailCode 错误代码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -201,6 +213,10 @@ class WorkflowRunNodeInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->StatisticInfos, $obj);
             }
+        }
+
+        if (array_key_exists("FailCode",$param) and $param["FailCode"] !== null) {
+            $this->FailCode = $param["FailCode"];
         }
     }
 }

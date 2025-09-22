@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsSafetyLimited(integer $IsSafetyLimited) 设置是否安全限制部分功能，0-没有限制，1-有限制。限制的功能有：修改可用区、迁移变配、DTS数据迁移等
  * @method integer getIsSupportSA() 获取是否支持创建SA权限账号，0-不支持，1-支持
  * @method void setIsSupportSA(integer $IsSupportSA) 设置是否支持创建SA权限账号，0-不支持，1-支持
+ * @method integer getSlowLogThreshold() 获取慢SQL阈值，单位毫秒
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSlowLogThreshold(integer $SlowLogThreshold) 设置慢SQL阈值，单位毫秒
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -145,6 +149,12 @@ class DescribeDBInstancesAttributeResponse extends AbstractModel
     public $IsSupportSA;
 
     /**
+     * @var integer 慢SQL阈值，单位毫秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SlowLogThreshold;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -167,6 +177,8 @@ class DescribeDBInstancesAttributeResponse extends AbstractModel
      * @param integer $IsDiskEncryptFlag 是否开启磁盘加密，1-开启，0-未开启
      * @param integer $IsSafetyLimited 是否安全限制部分功能，0-没有限制，1-有限制。限制的功能有：修改可用区、迁移变配、DTS数据迁移等
      * @param integer $IsSupportSA 是否支持创建SA权限账号，0-不支持，1-支持
+     * @param integer $SlowLogThreshold 慢SQL阈值，单位毫秒
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -261,6 +273,10 @@ class DescribeDBInstancesAttributeResponse extends AbstractModel
 
         if (array_key_exists("IsSupportSA",$param) and $param["IsSupportSA"] !== null) {
             $this->IsSupportSA = $param["IsSupportSA"];
+        }
+
+        if (array_key_exists("SlowLogThreshold",$param) and $param["SlowLogThreshold"] !== null) {
+            $this->SlowLogThreshold = $param["SlowLogThreshold"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

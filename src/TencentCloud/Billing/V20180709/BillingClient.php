@@ -26,10 +26,12 @@ use TencentCloud\Billing\V20180709\Models as Models;
  * @method Models\CreateAllocationRuleResponse CreateAllocationRule(Models\CreateAllocationRuleRequest $req) 创建公摊规则
  * @method Models\CreateAllocationTagResponse CreateAllocationTag(Models\CreateAllocationTagRequest $req) 批量设置分账标签
  * @method Models\CreateAllocationUnitResponse CreateAllocationUnit(Models\CreateAllocationUnitRequest $req) 创建分账单元
+ * @method Models\CreateBudgetResponse CreateBudget(Models\CreateBudgetRequest $req) 创建预算信息
  * @method Models\CreateGatherRuleResponse CreateGatherRule(Models\CreateGatherRuleRequest $req) 创建归集规则
  * @method Models\DeleteAllocationRuleResponse DeleteAllocationRule(Models\DeleteAllocationRuleRequest $req) 公摊规则删除接口
  * @method Models\DeleteAllocationTagResponse DeleteAllocationTag(Models\DeleteAllocationTagRequest $req) 批量取消设置分账标签
  * @method Models\DeleteAllocationUnitResponse DeleteAllocationUnit(Models\DeleteAllocationUnitRequest $req) 删除分账单元
+ * @method Models\DeleteBudgetResponse DeleteBudget(Models\DeleteBudgetRequest $req) 依据预算ID删除对应预算项目
  * @method Models\DeleteGatherRuleResponse DeleteGatherRule(Models\DeleteGatherRuleRequest $req) 删除归集规则
  * @method Models\DescribeAccountBalanceResponse DescribeAccountBalance(Models\DescribeAccountBalanceRequest $req) 获取云账户余额信息。
  * @method Models\DescribeAllocateConditionsResponse DescribeAllocateConditions(Models\DescribeAllocateConditionsRequest $req) 查询资源目录筛选条件
@@ -63,6 +65,9 @@ use TencentCloud\Billing\V20180709\Models as Models;
  * @method Models\DescribeBillSummaryByRegionResponse DescribeBillSummaryByRegion(Models\DescribeBillSummaryByRegionRequest $req) 获取按地域汇总费用分布
  * @method Models\DescribeBillSummaryByTagResponse DescribeBillSummaryByTag(Models\DescribeBillSummaryByTagRequest $req) 获取按标签汇总费用分布
  * @method Models\DescribeBillSummaryForOrganizationResponse DescribeBillSummaryForOrganization(Models\DescribeBillSummaryForOrganizationRequest $req) 该接口支持通过传参，按照产品、项目、地域、计费模式和标签五个维度获取账单费用明细。
+ * @method Models\DescribeBudgetResponse DescribeBudget(Models\DescribeBudgetRequest $req) 获取预算详细信息
+ * @method Models\DescribeBudgetOperationLogResponse DescribeBudgetOperationLog(Models\DescribeBudgetOperationLogRequest $req) 查询预算修改记录
+ * @method Models\DescribeBudgetRemindRecordListResponse DescribeBudgetRemindRecordList(Models\DescribeBudgetRemindRecordListRequest $req) 返回预算提醒记录，包括预算周期、检测时间、提醒时间、提醒类型、提醒内容
  * @method Models\DescribeCostDetailResponse DescribeCostDetail(Models\DescribeCostDetailRequest $req) 查询消耗明细
 
 注意事项：
@@ -84,6 +89,7 @@ use TencentCloud\Billing\V20180709\Models as Models;
  * @method Models\DescribeVoucherUsageDetailsResponse DescribeVoucherUsageDetails(Models\DescribeVoucherUsageDetailsRequest $req) 获取代金券使用记录
  * @method Models\ModifyAllocationRuleResponse ModifyAllocationRule(Models\ModifyAllocationRuleRequest $req) 编辑公摊规则
  * @method Models\ModifyAllocationUnitResponse ModifyAllocationUnit(Models\ModifyAllocationUnitRequest $req) 修改分账单元信息
+ * @method Models\ModifyBudgetResponse ModifyBudget(Models\ModifyBudgetRequest $req) 更新预算信息
  * @method Models\ModifyGatherRuleResponse ModifyGatherRule(Models\ModifyGatherRuleRequest $req) 编辑归集规则
  * @method Models\PayDealsResponse PayDeals(Models\PayDealsRequest $req) 支付订单
  */

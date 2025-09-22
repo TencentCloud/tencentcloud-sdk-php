@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxCallPSec(integer $MaxCallPSec) 设置每秒最大并发数
  * @method string getOutboundCalleeFormat() 获取呼出被叫格式，使用 {+E.164} 或 {E.164}, 
  * @method void setOutboundCalleeFormat(string $OutboundCalleeFormat) 设置呼出被叫格式，使用 {+E.164} 或 {E.164}, 
+ * @method string getCarrierPhoneNumber() 获取运营商号码
+ * @method void setCarrierPhoneNumber(string $CarrierPhoneNumber) 设置运营商号码
  */
 class OwnNumberApplyDetailItem extends AbstractModel
 {
@@ -59,11 +61,17 @@ class OwnNumberApplyDetailItem extends AbstractModel
     public $OutboundCalleeFormat;
 
     /**
+     * @var string 运营商号码
+     */
+    public $CarrierPhoneNumber;
+
+    /**
      * @param integer $CallType 号码类型：0-呼入|1-呼出|2-呼入呼出
      * @param string $PhoneNumber 线路号码
      * @param integer $MaxCallCount 最大并发呼叫数
      * @param integer $MaxCallPSec 每秒最大并发数
      * @param string $OutboundCalleeFormat 呼出被叫格式，使用 {+E.164} 或 {E.164}, 
+     * @param string $CarrierPhoneNumber 运营商号码
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class OwnNumberApplyDetailItem extends AbstractModel
 
         if (array_key_exists("OutboundCalleeFormat",$param) and $param["OutboundCalleeFormat"] !== null) {
             $this->OutboundCalleeFormat = $param["OutboundCalleeFormat"];
+        }
+
+        if (array_key_exists("CarrierPhoneNumber",$param) and $param["CarrierPhoneNumber"] !== null) {
+            $this->CarrierPhoneNumber = $param["CarrierPhoneNumber"];
         }
     }
 }

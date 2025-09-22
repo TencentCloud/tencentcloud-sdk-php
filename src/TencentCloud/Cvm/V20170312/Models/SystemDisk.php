@@ -41,9 +41,9 @@ use TencentCloud\Common\AbstractModel;
 <li>CLOUD_TSSD：极速型SSD云硬盘</li><br>
 默认取值：当前有库存的硬盘类型。
  * @method string getDiskId() 获取系统盘ID。
-该参数目前仅用于`DescribeInstances`等查询类接口的返回参数，不可用于`RunInstances`等写接口的入参。
+该参数目前仅用于 [DescribeInstances](https://cloud.tencent.com/document/product/213/15728) 等查询类接口的返回参数，不可用于 [RunInstances](https://cloud.tencent.com/document/product/213/15730) 等写接口的入参。
  * @method void setDiskId(string $DiskId) 设置系统盘ID。
-该参数目前仅用于`DescribeInstances`等查询类接口的返回参数，不可用于`RunInstances`等写接口的入参。
+该参数目前仅用于 [DescribeInstances](https://cloud.tencent.com/document/product/213/15728) 等查询类接口的返回参数，不可用于 [RunInstances](https://cloud.tencent.com/document/product/213/15730) 等写接口的入参。
  * @method integer getDiskSize() 获取系统盘大小，单位：GiB。默认值为 50
  * @method void setDiskSize(integer $DiskSize) 设置系统盘大小，单位：GiB。默认值为 50
  * @method string getCdcId() 获取所属的独享集群ID。
@@ -71,7 +71,7 @@ class SystemDisk extends AbstractModel
 
     /**
      * @var string 系统盘ID。
-该参数目前仅用于`DescribeInstances`等查询类接口的返回参数，不可用于`RunInstances`等写接口的入参。
+该参数目前仅用于 [DescribeInstances](https://cloud.tencent.com/document/product/213/15728) 等查询类接口的返回参数，不可用于 [RunInstances](https://cloud.tencent.com/document/product/213/15730) 等写接口的入参。
      */
     public $DiskId;
 
@@ -103,7 +103,7 @@ class SystemDisk extends AbstractModel
 <li>CLOUD_TSSD：极速型SSD云硬盘</li><br>
 默认取值：当前有库存的硬盘类型。
      * @param string $DiskId 系统盘ID。
-该参数目前仅用于`DescribeInstances`等查询类接口的返回参数，不可用于`RunInstances`等写接口的入参。
+该参数目前仅用于 [DescribeInstances](https://cloud.tencent.com/document/product/213/15728) 等查询类接口的返回参数，不可用于 [RunInstances](https://cloud.tencent.com/document/product/213/15730) 等写接口的入参。
      * @param integer $DiskSize 系统盘大小，单位：GiB。默认值为 50
      * @param string $CdcId 所属的独享集群ID。
 注意：此字段可能返回 null，表示取不到有效值。

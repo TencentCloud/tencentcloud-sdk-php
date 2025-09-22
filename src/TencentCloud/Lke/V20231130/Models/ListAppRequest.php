@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoginSubAccountUin(string $LoginSubAccountUin) 设置登录用户子账号(集成商模式必填)	
  * @method string getAgentType() 获取智能体类型 dialogue：对话智能体，wechat：公众号智能体
  * @method void setAgentType(string $AgentType) 设置智能体类型 dialogue：对话智能体，wechat：公众号智能体
- * @method string getAppStatus() 获取应用状态 1:未上线 2：运行中
- * @method void setAppStatus(string $AppStatus) 设置应用状态 1:未上线 2：运行中
+ * @method string getAppStatus() 获取应用状态 1:未上线   2：运行中
+ * @method void setAppStatus(string $AppStatus) 设置应用状态 1:未上线   2：运行中
  */
 class ListAppRequest extends AbstractModel
 {
@@ -68,7 +68,7 @@ class ListAppRequest extends AbstractModel
     public $AgentType;
 
     /**
-     * @var string 应用状态 1:未上线 2：运行中
+     * @var string 应用状态 1:未上线   2：运行中
      */
     public $AppStatus;
 
@@ -79,7 +79,7 @@ class ListAppRequest extends AbstractModel
      * @param string $Keyword 关键词：应用/修改人
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)	
      * @param string $AgentType 智能体类型 dialogue：对话智能体，wechat：公众号智能体
-     * @param string $AppStatus 应用状态 1:未上线 2：运行中
+     * @param string $AppStatus 应用状态 1:未上线   2：运行中
      */
     function __construct()
     {

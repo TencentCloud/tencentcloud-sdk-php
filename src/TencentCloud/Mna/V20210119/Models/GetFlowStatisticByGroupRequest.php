@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccessRegion(string $AccessRegion) 设置接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
  * @method integer getGatewayType() 获取网关类型。0：公有云网关；1：自有网关。不传默认为0。
  * @method void setGatewayType(integer $GatewayType) 设置网关类型。0：公有云网关；1：自有网关。不传默认为0。
+ * @method string getMpApplicationId() 获取应用ID, 查询分组流量时无需使用。 查询应用流量时该字段为应用ID，GroupId 填写 "-1"
+ * @method void setMpApplicationId(string $MpApplicationId) 设置应用ID, 查询分组流量时无需使用。 查询应用流量时该字段为应用ID，GroupId 填写 "-1"
  */
 class GetFlowStatisticByGroupRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class GetFlowStatisticByGroupRequest extends AbstractModel
     public $GatewayType;
 
     /**
+     * @var string 应用ID, 查询分组流量时无需使用。 查询应用流量时该字段为应用ID，GroupId 填写 "-1"
+     */
+    public $MpApplicationId;
+
+    /**
      * @param string $GroupId 分组ID
      * @param integer $BeginTime 开始查找时间
      * @param integer $EndTime 截止时间
@@ -80,6 +87,7 @@ class GetFlowStatisticByGroupRequest extends AbstractModel
      * @param integer $TimeGranularity 时间粒度（1：按小时统计，2：按天统计）
      * @param string $AccessRegion 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
      * @param integer $GatewayType 网关类型。0：公有云网关；1：自有网关。不传默认为0。
+     * @param string $MpApplicationId 应用ID, 查询分组流量时无需使用。 查询应用流量时该字段为应用ID，GroupId 填写 "-1"
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class GetFlowStatisticByGroupRequest extends AbstractModel
 
         if (array_key_exists("GatewayType",$param) and $param["GatewayType"] !== null) {
             $this->GatewayType = $param["GatewayType"];
+        }
+
+        if (array_key_exists("MpApplicationId",$param) and $param["MpApplicationId"] !== null) {
+            $this->MpApplicationId = $param["MpApplicationId"];
         }
     }
 }

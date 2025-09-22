@@ -26,10 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置结束日期，需大于等于起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#52)。
  * @method string getLicenseType() 获取License 类型，默认为 CommercialDRMLicense 。目前支持的 License 类型包括：
 <li> CommercialDRMLicense: 商业级 DRM License</li>
-<li> JITEncryptionDRMLicense: 即时加密 DRM License</li>
  * @method void setLicenseType(string $LicenseType) 设置License 类型，默认为 CommercialDRMLicense 。目前支持的 License 类型包括：
 <li> CommercialDRMLicense: 商业级 DRM License</li>
-<li> JITEncryptionDRMLicense: 即时加密 DRM License</li>
  * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
  * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
  */
@@ -48,7 +46,6 @@ class DescribeLicenseUsageDataRequest extends AbstractModel
     /**
      * @var string License 类型，默认为 CommercialDRMLicense 。目前支持的 License 类型包括：
 <li> CommercialDRMLicense: 商业级 DRM License</li>
-<li> JITEncryptionDRMLicense: 即时加密 DRM License</li>
      */
     public $LicenseType;
 
@@ -62,7 +59,6 @@ class DescribeLicenseUsageDataRequest extends AbstractModel
      * @param string $EndTime 结束日期，需大于等于起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#52)。
      * @param string $LicenseType License 类型，默认为 CommercialDRMLicense 。目前支持的 License 类型包括：
 <li> CommercialDRMLicense: 商业级 DRM License</li>
-<li> JITEncryptionDRMLicense: 即时加密 DRM License</li>
      * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      */
     function __construct()

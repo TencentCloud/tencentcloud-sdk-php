@@ -27,11 +27,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCommand() 获取控制命令，目前支持命令如下：
 
 - ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本
+- InvokeLLM，服务端发送文本给大模型，触发对话
  * @method void setCommand(string $Command) 设置控制命令，目前支持命令如下：
 
 - ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本
+- InvokeLLM，服务端发送文本给大模型，触发对话
  * @method ServerPushText getServerPushText() 获取服务端发送播报文本命令，当Command为ServerPushText时必填
  * @method void setServerPushText(ServerPushText $ServerPushText) 设置服务端发送播报文本命令，当Command为ServerPushText时必填
+ * @method InvokeLLM getInvokeLLM() 获取服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM="1"
+ * @method void setInvokeLLM(InvokeLLM $InvokeLLM) 设置服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM="1"
  */
 class ControlAIConversationRequest extends AbstractModel
 {
@@ -49,6 +53,7 @@ class ControlAIConversationRequest extends AbstractModel
      * @var string 控制命令，目前支持命令如下：
 
 - ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本
+- InvokeLLM，服务端发送文本给大模型，触发对话
      */
     public $Command;
 
@@ -58,12 +63,19 @@ class ControlAIConversationRequest extends AbstractModel
     public $ServerPushText;
 
     /**
+     * @var InvokeLLM 服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM="1"
+     */
+    public $InvokeLLM;
+
+    /**
      * @param string $SessionId 会话 ID
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param string $Command 控制命令，目前支持命令如下：
 
 - ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本
+- InvokeLLM，服务端发送文本给大模型，触发对话
      * @param ServerPushText $ServerPushText 服务端发送播报文本命令，当Command为ServerPushText时必填
+     * @param InvokeLLM $InvokeLLM 服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM="1"
      */
     function __construct()
     {
@@ -93,6 +105,11 @@ class ControlAIConversationRequest extends AbstractModel
         if (array_key_exists("ServerPushText",$param) and $param["ServerPushText"] !== null) {
             $this->ServerPushText = new ServerPushText();
             $this->ServerPushText->deserialize($param["ServerPushText"]);
+        }
+
+        if (array_key_exists("InvokeLLM",$param) and $param["InvokeLLM"] !== null) {
+            $this->InvokeLLM = new InvokeLLM();
+            $this->InvokeLLM->deserialize($param["InvokeLLM"]);
         }
     }
 }

@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplyId(integer $ApplyId) 设置审批单号
  * @method string getPrefix() 获取送号前缀
  * @method void setPrefix(string $Prefix) 设置送号前缀
+ * @method string getMobileNddPrefix() 获取国内长途手机前缀码
+ * @method void setMobileNddPrefix(string $MobileNddPrefix) 设置国内长途手机前缀码
+ * @method boolean getLocalNumberTrimAC() 获取同市固话去掉区号
+ * @method void setLocalNumberTrimAC(boolean $LocalNumberTrimAC) 设置同市固话去掉区号
  */
 class ModifyOwnNumberApplyRequest extends AbstractModel
 {
@@ -52,10 +56,22 @@ class ModifyOwnNumberApplyRequest extends AbstractModel
     public $Prefix;
 
     /**
+     * @var string 国内长途手机前缀码
+     */
+    public $MobileNddPrefix;
+
+    /**
+     * @var boolean 同市固话去掉区号
+     */
+    public $LocalNumberTrimAC;
+
+    /**
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param array $DetailList 线路相关参数
      * @param integer $ApplyId 审批单号
      * @param string $Prefix 送号前缀
+     * @param string $MobileNddPrefix 国内长途手机前缀码
+     * @param boolean $LocalNumberTrimAC 同市固话去掉区号
      */
     function __construct()
     {
@@ -89,6 +105,14 @@ class ModifyOwnNumberApplyRequest extends AbstractModel
 
         if (array_key_exists("Prefix",$param) and $param["Prefix"] !== null) {
             $this->Prefix = $param["Prefix"];
+        }
+
+        if (array_key_exists("MobileNddPrefix",$param) and $param["MobileNddPrefix"] !== null) {
+            $this->MobileNddPrefix = $param["MobileNddPrefix"];
+        }
+
+        if (array_key_exists("LocalNumberTrimAC",$param) and $param["LocalNumberTrimAC"] !== null) {
+            $this->LocalNumberTrimAC = $param["LocalNumberTrimAC"];
         }
     }
 }

@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalCount() 获取总记录数
  * @method void setTotalCount(integer $TotalCount) 设置总记录数
  * @method string getServer() 获取镜像服务器地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServer(string $Server) 设置镜像服务器地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getContent() 获取列表信息
  * @method void setContent(array $Content) 设置列表信息
  */
@@ -38,7 +36,6 @@ class ImageRepositoryResult extends AbstractModel
 
     /**
      * @var string 镜像服务器地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Server;
 
@@ -50,7 +47,6 @@ class ImageRepositoryResult extends AbstractModel
     /**
      * @param integer $TotalCount 总记录数
      * @param string $Server 镜像服务器地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Content 列表信息
      */
     function __construct()

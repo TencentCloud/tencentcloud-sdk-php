@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Gs\V20191118\Models as Models;
 
 /**
+ * @method Models\BackUpAndroidInstanceResponse BackUpAndroidInstance(Models\BackUpAndroidInstanceRequest $req) 备份安卓实例。该接口需要联系我们开通内网存储才能使用。
  * @method Models\BackUpAndroidInstanceToStorageResponse BackUpAndroidInstanceToStorage(Models\BackUpAndroidInstanceToStorageRequest $req) 备份云手机数据到指定存储，支持 COS 和兼容 AWS S3 协议的对象存储服务。如果是备份到 COS 时，会使用公网流量，授权 COS bucket 请在控制台中操作。
  * @method Models\CleanAndroidInstancesAppDataResponse CleanAndroidInstancesAppData(Models\CleanAndroidInstancesAppDataRequest $req) 批量清理安卓实例应用数据
  * @method Models\ConnectAndroidInstanceResponse ConnectAndroidInstance(Models\ConnectAndroidInstanceRequest $req) 连接安卓实例
@@ -46,10 +47,12 @@ use TencentCloud\Gs\V20191118\Models as Models;
  * @method Models\DeleteAndroidAppResponse DeleteAndroidApp(Models\DeleteAndroidAppRequest $req) 删除安卓应用
  * @method Models\DeleteAndroidAppVersionResponse DeleteAndroidAppVersion(Models\DeleteAndroidAppVersionRequest $req) 删除安卓应用版本
  * @method Models\DeleteAndroidInstanceBackupFilesResponse DeleteAndroidInstanceBackupFiles(Models\DeleteAndroidInstanceBackupFilesRequest $req) 删除安卓实例备份文件
+ * @method Models\DeleteAndroidInstanceBackupsResponse DeleteAndroidInstanceBackups(Models\DeleteAndroidInstanceBackupsRequest $req) 批量删除安卓实例备份
  * @method Models\DeleteAndroidInstanceImagesResponse DeleteAndroidInstanceImages(Models\DeleteAndroidInstanceImagesRequest $req) 删除安卓实例镜像
  * @method Models\DeleteAndroidInstanceLabelResponse DeleteAndroidInstanceLabel(Models\DeleteAndroidInstanceLabelRequest $req) 删除安卓实例标签
  * @method Models\DescribeAndroidAppsResponse DescribeAndroidApps(Models\DescribeAndroidAppsRequest $req) 查询安卓应用信息
  * @method Models\DescribeAndroidInstanceAppsResponse DescribeAndroidInstanceApps(Models\DescribeAndroidInstanceAppsRequest $req) 查询安卓实例应用
+ * @method Models\DescribeAndroidInstanceBackupsResponse DescribeAndroidInstanceBackups(Models\DescribeAndroidInstanceBackupsRequest $req) 查询安卓实例备份列表
  * @method Models\DescribeAndroidInstanceImagesResponse DescribeAndroidInstanceImages(Models\DescribeAndroidInstanceImagesRequest $req) 查询安卓实例镜像信息，当镜像的 AndroidInstanceImageState 为 NORMAL 时，镜像处于可用状态。
  * @method Models\DescribeAndroidInstanceLabelsResponse DescribeAndroidInstanceLabels(Models\DescribeAndroidInstanceLabelsRequest $req) 查询安卓实例标签
  * @method Models\DescribeAndroidInstanceTasksStatusResponse DescribeAndroidInstanceTasksStatus(Models\DescribeAndroidInstanceTasksStatusRequest $req) 查询安卓实例任务状态
@@ -88,6 +91,7 @@ use TencentCloud\Gs\V20191118\Models as Models;
  * @method Models\RenewAndroidInstancesAccessTokenResponse RenewAndroidInstancesAccessToken(Models\RenewAndroidInstancesAccessTokenRequest $req) 续期安卓实例访问Token
  * @method Models\ResetAndroidInstancesResponse ResetAndroidInstances(Models\ResetAndroidInstancesRequest $req) 重置安卓实例
  * @method Models\RestartAndroidInstancesAppResponse RestartAndroidInstancesApp(Models\RestartAndroidInstancesAppRequest $req) 重启安卓实例应用
+ * @method Models\RestoreAndroidInstanceResponse RestoreAndroidInstance(Models\RestoreAndroidInstanceRequest $req) 还原安卓实例。该接口需要联系我们开通内网存储才能使用。
  * @method Models\RestoreAndroidInstanceFromStorageResponse RestoreAndroidInstanceFromStorage(Models\RestoreAndroidInstanceFromStorageRequest $req) 使用指定存储数据还原云手机，支持 COS 和兼容 AWS S3 协议的对象存储服务。如果还原数据来自 COS 时，会使用公网流量，授权 COS bucket 请在控制台中操作。
  * @method Models\SaveGameArchiveResponse SaveGameArchive(Models\SaveGameArchiveRequest $req) 保存游戏存档
  * @method Models\SetAndroidInstancesBGAppKeepAliveResponse SetAndroidInstancesBGAppKeepAlive(Models\SetAndroidInstancesBGAppKeepAliveRequest $req) 批量设置安卓实例应用后台保活，开启应用保活，只是降低应用被杀死或回收的优先级，并不能保证应用不会被杀死或回收（如出现内存不足等资源限制时，应用也有概率被杀死或回收）

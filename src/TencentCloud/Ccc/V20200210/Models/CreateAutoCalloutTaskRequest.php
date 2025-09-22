@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotAfter(integer $NotAfter) 设置任务停止时间戳，Unix 秒级时间戳
  * @method integer getTries() 获取最大尝试次数，1-3 次
  * @method void setTries(integer $Tries) 设置最大尝试次数，1-3 次
- * @method array getVariables() 获取自定义变量（仅高级版支持）
- * @method void setVariables(array $Variables) 设置自定义变量（仅高级版支持）
- * @method string getUUI() 获取UUI
- * @method void setUUI(string $UUI) 设置UUI
+ * @method array getVariables() 获取自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处
+ * @method void setVariables(array $Variables) 设置自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处
+ * @method string getUUI() 获取用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处
+ * @method void setUUI(string $UUI) 设置用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处
  * @method array getCalleeAttributes() 获取被叫属性
  * @method void setCalleeAttributes(array $CalleeAttributes) 设置被叫属性
  * @method string getTimeZone() 获取IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
@@ -99,12 +99,12 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
     public $Tries;
 
     /**
-     * @var array 自定义变量（仅高级版支持）
+     * @var array 自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处
      */
     public $Variables;
 
     /**
-     * @var string UUI
+     * @var string 用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处
      */
     public $UUI;
 
@@ -138,8 +138,8 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
      * @param string $Description 任务描述
      * @param integer $NotAfter 任务停止时间戳，Unix 秒级时间戳
      * @param integer $Tries 最大尝试次数，1-3 次
-     * @param array $Variables 自定义变量（仅高级版支持）
-     * @param string $UUI UUI
+     * @param array $Variables 自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处
+     * @param string $UUI 用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处
      * @param array $CalleeAttributes 被叫属性
      * @param string $TimeZone IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
      * @param array $AvailableTime 可用时间段

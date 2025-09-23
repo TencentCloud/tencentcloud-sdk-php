@@ -19,7 +19,6 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * 识别结果。
-
  *
  * @method FaceRect getFaceRect() 获取检测出的人脸框位置。
  * @method void setFaceRect(FaceRect $FaceRect) 设置检测出的人脸框位置。

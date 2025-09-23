@@ -38,6 +38,8 @@ True：表示关机之后制作镜像
 False：表示开机状态制作镜像
 默认取值：True
 开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
+ * @method array getTags() 获取标签键和标签值。 如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。 同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。 如果标签不存在会为您自动创建标签。 数组最多支持10个元素。
+ * @method void setTags(array $Tags) 设置标签键和标签值。 如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。 同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。 如果标签不存在会为您自动创建标签。 数组最多支持10个元素。
  */
 class CreateBlueprintRequest extends AbstractModel
 {
@@ -67,6 +69,11 @@ False：表示开机状态制作镜像
     public $ForcePowerOff;
 
     /**
+     * @var array 标签键和标签值。 如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。 同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。 如果标签不存在会为您自动创建标签。 数组最多支持10个元素。
+     */
+    public $Tags;
+
+    /**
      * @param string $BlueprintName 镜像名称。最大长度60。
      * @param string $Description 镜像描述。最大长度60。
      * @param string $InstanceId 需要制作镜像的实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/1207/47573) 接口返回值中的 InstanceId 获取。
@@ -76,6 +83,7 @@ True：表示关机之后制作镜像
 False：表示开机状态制作镜像
 默认取值：True
 开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
+     * @param array $Tags 标签键和标签值。 如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。 同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。 如果标签不存在会为您自动创建标签。 数组最多支持10个元素。
      */
     function __construct()
     {
@@ -104,6 +112,15 @@ False：表示开机状态制作镜像
 
         if (array_key_exists("ForcePowerOff",$param) and $param["ForcePowerOff"] !== null) {
             $this->ForcePowerOff = $param["ForcePowerOff"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

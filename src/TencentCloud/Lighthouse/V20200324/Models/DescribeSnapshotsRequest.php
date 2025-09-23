@@ -31,12 +31,10 @@ use TencentCloud\Common\AbstractModel;
 类型：String
 必选：否
 可通过 <a href="https://cloud.tencent.com/document/product/1207/54388">DescribeSnapshots</a> 接口返回值中的 SnapshotId 获取。
-
 <li>disk-id</li>按照【磁盘 ID】进行过滤。
 类型：String
 必选：否
 可通过 <a href="https://cloud.tencent.com/document/product/1207/66093">DescribeDisks</a> 接口返回值中的 DiskId 获取。
-
 <li>snapshot-name</li>按照【快照名称】进行过滤。
 类型：String
 必选：否
@@ -45,19 +43,22 @@ use TencentCloud\Common\AbstractModel;
 类型：String
 必选：否
 可通过 <a href="https://cloud.tencent.com/document/product/1207/47573">DescribeInstances</a> 接口返回值中的 InstanceId 获取。
-
+<li>tag-key</li>
+按照【标签键】进行过滤。 类型：String 必选：否
+<li>tag-value</li>
+按照【标签值】进行过滤。 类型：String 必选：否
+<li>tag:tag-key</li>
+按照【标签键值对】进行过滤。 tag-key使用具体的标签键进行替换。
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 SnapshotIds 和 Filters。
  * @method void setFilters(array $Filters) 设置过滤器列表。
 <li>snapshot-id</li>按照【快照 ID】进行过滤。
 类型：String
 必选：否
 可通过 <a href="https://cloud.tencent.com/document/product/1207/54388">DescribeSnapshots</a> 接口返回值中的 SnapshotId 获取。
-
 <li>disk-id</li>按照【磁盘 ID】进行过滤。
 类型：String
 必选：否
 可通过 <a href="https://cloud.tencent.com/document/product/1207/66093">DescribeDisks</a> 接口返回值中的 DiskId 获取。
-
 <li>snapshot-name</li>按照【快照名称】进行过滤。
 类型：String
 必选：否
@@ -66,7 +67,12 @@ use TencentCloud\Common\AbstractModel;
 类型：String
 必选：否
 可通过 <a href="https://cloud.tencent.com/document/product/1207/47573">DescribeInstances</a> 接口返回值中的 InstanceId 获取。
-
+<li>tag-key</li>
+按照【标签键】进行过滤。 类型：String 必选：否
+<li>tag-value</li>
+按照【标签值】进行过滤。 类型：String 必选：否
+<li>tag:tag-key</li>
+按照【标签键值对】进行过滤。 tag-key使用具体的标签键进行替换。
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 SnapshotIds 和 Filters。
  * @method integer getOffset() 获取偏移量，默认为 0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为 0。
@@ -88,12 +94,10 @@ class DescribeSnapshotsRequest extends AbstractModel
 类型：String
 必选：否
 可通过 <a href="https://cloud.tencent.com/document/product/1207/54388">DescribeSnapshots</a> 接口返回值中的 SnapshotId 获取。
-
 <li>disk-id</li>按照【磁盘 ID】进行过滤。
 类型：String
 必选：否
 可通过 <a href="https://cloud.tencent.com/document/product/1207/66093">DescribeDisks</a> 接口返回值中的 DiskId 获取。
-
 <li>snapshot-name</li>按照【快照名称】进行过滤。
 类型：String
 必选：否
@@ -102,7 +106,12 @@ class DescribeSnapshotsRequest extends AbstractModel
 类型：String
 必选：否
 可通过 <a href="https://cloud.tencent.com/document/product/1207/47573">DescribeInstances</a> 接口返回值中的 InstanceId 获取。
-
+<li>tag-key</li>
+按照【标签键】进行过滤。 类型：String 必选：否
+<li>tag-value</li>
+按照【标签值】进行过滤。 类型：String 必选：否
+<li>tag:tag-key</li>
+按照【标签键值对】进行过滤。 tag-key使用具体的标签键进行替换。
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 SnapshotIds 和 Filters。
      */
     public $Filters;
@@ -126,12 +135,10 @@ class DescribeSnapshotsRequest extends AbstractModel
 类型：String
 必选：否
 可通过 <a href="https://cloud.tencent.com/document/product/1207/54388">DescribeSnapshots</a> 接口返回值中的 SnapshotId 获取。
-
 <li>disk-id</li>按照【磁盘 ID】进行过滤。
 类型：String
 必选：否
 可通过 <a href="https://cloud.tencent.com/document/product/1207/66093">DescribeDisks</a> 接口返回值中的 DiskId 获取。
-
 <li>snapshot-name</li>按照【快照名称】进行过滤。
 类型：String
 必选：否
@@ -140,7 +147,12 @@ class DescribeSnapshotsRequest extends AbstractModel
 类型：String
 必选：否
 可通过 <a href="https://cloud.tencent.com/document/product/1207/47573">DescribeInstances</a> 接口返回值中的 InstanceId 获取。
-
+<li>tag-key</li>
+按照【标签键】进行过滤。 类型：String 必选：否
+<li>tag-value</li>
+按照【标签值】进行过滤。 类型：String 必选：否
+<li>tag:tag-key</li>
+按照【标签键值对】进行过滤。 tag-key使用具体的标签键进行替换。
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 SnapshotIds 和 Filters。
      * @param integer $Offset 偏移量，默认为 0。
      * @param integer $Limit 返回数量，默认为 20，最大值为 100。

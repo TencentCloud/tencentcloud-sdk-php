@@ -123,7 +123,7 @@ use TencentCloud\Common\AbstractModel;
 
 设置为true之后， 返回参数PdfUrl，为模板PDF文件链接，有效期5分钟, 可以用于将PDF文件下载到本地
 
-注: `此功能需要开通功能白名单【第三方应用集成企业获取模版PDF下载链接】，使用前请联系对接的客户经理沟通。`
+注: `此功能需要开通功能白名单【第三方应用集成企业获取模板PDF下载链接】，使用前请联系对接的客户经理沟通。`
  * @method void setWithPdfUrl(boolean $WithPdfUrl) 设置是否获取模板的PDF文件链接。
 
 <ul><li>**false**：不获取（默认）</li>
@@ -131,7 +131,7 @@ use TencentCloud\Common\AbstractModel;
 
 设置为true之后， 返回参数PdfUrl，为模板PDF文件链接，有效期5分钟, 可以用于将PDF文件下载到本地
 
-注: `此功能需要开通功能白名单【第三方应用集成企业获取模版PDF下载链接】，使用前请联系对接的客户经理沟通。`
+注: `此功能需要开通功能白名单【第三方应用集成企业获取模板PDF下载链接】，使用前请联系对接的客户经理沟通。`
  * @method UserInfo getOperator() 获取操作者的信息
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
  * @method string getUserFlowTypeId() 获取用户合同类型id
@@ -235,7 +235,7 @@ class DescribeTemplatesRequest extends AbstractModel
 
 设置为true之后， 返回参数PdfUrl，为模板PDF文件链接，有效期5分钟, 可以用于将PDF文件下载到本地
 
-注: `此功能需要开通功能白名单【第三方应用集成企业获取模版PDF下载链接】，使用前请联系对接的客户经理沟通。`
+注: `此功能需要开通功能白名单【第三方应用集成企业获取模板PDF下载链接】，使用前请联系对接的客户经理沟通。`
      */
     public $WithPdfUrl;
 
@@ -306,7 +306,7 @@ class DescribeTemplatesRequest extends AbstractModel
 
 设置为true之后， 返回参数PdfUrl，为模板PDF文件链接，有效期5分钟, 可以用于将PDF文件下载到本地
 
-注: `此功能需要开通功能白名单【第三方应用集成企业获取模版PDF下载链接】，使用前请联系对接的客户经理沟通。`
+注: `此功能需要开通功能白名单【第三方应用集成企业获取模板PDF下载链接】，使用前请联系对接的客户经理沟通。`
      * @param UserInfo $Operator 操作者的信息
      * @param string $UserFlowTypeId 用户合同类型id
      */

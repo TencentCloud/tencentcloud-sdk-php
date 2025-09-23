@@ -158,6 +158,10 @@ ANY:表示所有
  * @method void setId(integer $Id) 设置规则id  等同RuleUuid
  * @method SgDnsParseCount getDnsParseCount() 获取域名解析的IP统计
  * @method void setDnsParseCount(SgDnsParseCount $DnsParseCount) 设置域名解析的IP统计
+ * @method string getCreateTime() 获取规则创建时间
+ * @method void setCreateTime(string $CreateTime) 设置规则创建时间
+ * @method string getUpdateTime() 获取规则最近更新时间
+ * @method void setUpdateTime(string $UpdateTime) 设置规则最近更新时间
  */
 class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel
 {
@@ -355,6 +359,16 @@ ANY:表示所有
     public $DnsParseCount;
 
     /**
+     * @var string 规则创建时间
+     */
+    public $CreateTime;
+
+    /**
+     * @var string 规则最近更新时间
+     */
+    public $UpdateTime;
+
+    /**
      * @param integer $OrderIndex 排序
      * @param integer $RuleUuid 主键id
      * @param string $Uuid 规则uuid
@@ -424,6 +438,8 @@ ANY:表示所有
      * @param array $BetaList 自动化任务信息
      * @param integer $Id 规则id  等同RuleUuid
      * @param SgDnsParseCount $DnsParseCount 域名解析的IP统计
+     * @param string $CreateTime 规则创建时间
+     * @param string $UpdateTime 规则最近更新时间
      */
     function __construct()
     {
@@ -566,6 +582,14 @@ ANY:表示所有
         if (array_key_exists("DnsParseCount",$param) and $param["DnsParseCount"] !== null) {
             $this->DnsParseCount = new SgDnsParseCount();
             $this->DnsParseCount->deserialize($param["DnsParseCount"]);
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

@@ -102,6 +102,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComputeResourceAdvanceParams(ComputeResourceAdvanceParams $ComputeResourceAdvanceParams) 设置计算资源高级设置
  * @method NodeMark getNodeMarks() 获取节点标记信息，目前只提供tf平台使用
  * @method void setNodeMarks(NodeMark $NodeMarks) 设置节点标记信息，目前只提供tf平台使用
+ * @method string getWarehouseName() 获取扩容指定计算组
+ * @method void setWarehouseName(string $WarehouseName) 设置扩容指定计算组
  */
 class ScaleOutInstanceRequest extends AbstractModel
 {
@@ -267,6 +269,11 @@ class ScaleOutInstanceRequest extends AbstractModel
     public $NodeMarks;
 
     /**
+     * @var string 扩容指定计算组
+     */
+    public $WarehouseName;
+
+    /**
      * @param string $TimeUnit 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
@@ -308,6 +315,7 @@ class ScaleOutInstanceRequest extends AbstractModel
      * @param string $ComputeResourceId 计算资源id
      * @param ComputeResourceAdvanceParams $ComputeResourceAdvanceParams 计算资源高级设置
      * @param NodeMark $NodeMarks 节点标记信息，目前只提供tf平台使用
+     * @param string $WarehouseName 扩容指定计算组
      */
     function __construct()
     {
@@ -454,6 +462,10 @@ class ScaleOutInstanceRequest extends AbstractModel
         if (array_key_exists("NodeMarks",$param) and $param["NodeMarks"] !== null) {
             $this->NodeMarks = new NodeMark();
             $this->NodeMarks->deserialize($param["NodeMarks"]);
+        }
+
+        if (array_key_exists("WarehouseName",$param) and $param["WarehouseName"] !== null) {
+            $this->WarehouseName = $param["WarehouseName"];
         }
     }
 }

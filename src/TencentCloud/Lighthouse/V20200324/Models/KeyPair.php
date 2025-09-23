@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivateKey(string $PrivateKey) 设置密钥对私钥。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取密钥对绑定的标签列表。
+ * @method void setTags(array $Tags) 设置密钥对绑定的标签列表。
  */
 class KeyPair extends AbstractModel
 {
@@ -72,6 +74,11 @@ class KeyPair extends AbstractModel
     public $PrivateKey;
 
     /**
+     * @var array 密钥对绑定的标签列表。
+     */
+    public $Tags;
+
+    /**
      * @param string $KeyId 密钥对 ID ，是密钥对的唯一标识。
      * @param string $KeyName 密钥对名称。
      * @param string $PublicKey 密钥对的纯文本公钥。
@@ -80,6 +87,7 @@ class KeyPair extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PrivateKey 密钥对私钥。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 密钥对绑定的标签列表。
      */
     function __construct()
     {
@@ -116,6 +124,15 @@ class KeyPair extends AbstractModel
 
         if (array_key_exists("PrivateKey",$param) and $param["PrivateKey"] !== null) {
             $this->PrivateKey = $param["PrivateKey"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

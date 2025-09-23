@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。
  * @method void setInstanceId(string $InstanceId) 设置指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。
- * @method integer getEventId() 获取事件 ID。请通过 DescribeInstanceEvents 获取需修改的事件 ID。
- * @method void setEventId(integer $EventId) 设置事件 ID。请通过 DescribeInstanceEvents 获取需修改的事件 ID。
+ * @method integer getEventId() 获取事件 ID。请通过 [DescribeInstanceEvents](https://cloud.tencent.com/document/product/239/104779) 获取需修改的事件 ID。
+ * @method void setEventId(integer $EventId) 设置事件 ID。请通过 [DescribeInstanceEvents](https://cloud.tencent.com/document/product/239/104779) 获取需修改的事件 ID。
  * @method string getStartTime() 获取修改事件执行的计划开始时间。
  * @method void setStartTime(string $StartTime) 设置修改事件执行的计划开始时间。
  * @method string getEndTime() 获取修改事件计划执行的结束时间。开始时间配置之后，结束时间只能选择在开始时间之后的 30 分钟、1 小时、1.5 小时、2 小时和 3 小时之内。
@@ -45,7 +45,7 @@ class ModifyInstanceEventRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 事件 ID。请通过 DescribeInstanceEvents 获取需修改的事件 ID。
+     * @var integer 事件 ID。请通过 [DescribeInstanceEvents](https://cloud.tencent.com/document/product/239/104779) 获取需修改的事件 ID。
      */
     public $EventId;
 
@@ -73,7 +73,7 @@ class ModifyInstanceEventRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。
-     * @param integer $EventId 事件 ID。请通过 DescribeInstanceEvents 获取需修改的事件 ID。
+     * @param integer $EventId 事件 ID。请通过 [DescribeInstanceEvents](https://cloud.tencent.com/document/product/239/104779) 获取需修改的事件 ID。
      * @param string $StartTime 修改事件执行的计划开始时间。
      * @param string $EndTime 修改事件计划执行的结束时间。开始时间配置之后，结束时间只能选择在开始时间之后的 30 分钟、1 小时、1.5 小时、2 小时和 3 小时之内。
      * @param string $ExecutionDate 修改事件执行计划的开始日期。

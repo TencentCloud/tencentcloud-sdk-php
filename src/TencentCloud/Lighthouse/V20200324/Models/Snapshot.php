@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLatestOperationRequestId(string $LatestOperationRequestId) 设置快照最新操作的唯一请求 ID，只有创建、回滚快照时记录。
  * @method string getCreatedTime() 获取快照的创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置快照的创建时间。
+ * @method array getTags() 获取快照绑定的标签列表。
+ * @method void setTags(array $Tags) 设置快照绑定的标签列表。
  */
 class Snapshot extends AbstractModel
 {
@@ -125,6 +127,11 @@ class Snapshot extends AbstractModel
     public $CreatedTime;
 
     /**
+     * @var array 快照绑定的标签列表。
+     */
+    public $Tags;
+
+    /**
      * @param string $SnapshotId 快照 ID。
      * @param string $DiskUsage 创建此快照的磁盘类型。取值：<li>SYSTEM_DISK：系统盘</li>
      * @param string $DiskId 创建此快照的磁盘 ID。
@@ -144,6 +151,7 @@ class Snapshot extends AbstractModel
 <li>FAILED：表示操作失败</li>
      * @param string $LatestOperationRequestId 快照最新操作的唯一请求 ID，只有创建、回滚快照时记录。
      * @param string $CreatedTime 快照的创建时间。
+     * @param array $Tags 快照绑定的标签列表。
      */
     function __construct()
     {
@@ -200,6 +208,15 @@ class Snapshot extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

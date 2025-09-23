@@ -49,7 +49,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\DescribeCommonDBInstancesResponse DescribeCommonDBInstances(Models\DescribeCommonDBInstancesRequest $req) 本接口（DescribeCommonDBInstances）用于查询Redis实例列表信息。当前该接口已废弃。
  * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) 本接口（DescribeDBSecurityGroups）用于查询实例的安全组详情。
  * @method Models\DescribeGlobalReplicationAreaResponse DescribeGlobalReplicationArea(Models\DescribeGlobalReplicationAreaRequest $req) 本接口（DescribeGlobalReplicationArea）用于查询全球复制支持地域信息。
- * @method Models\DescribeInstanceAccountResponse DescribeInstanceAccount(Models\DescribeInstanceAccountRequest $req) 本接口（DescribeInstanceAccount）用于查看实例子账号信息。
+ * @method Models\DescribeInstanceAccountResponse DescribeInstanceAccount(Models\DescribeInstanceAccountRequest $req) 本接口（DescribeInstanceAccount）用于查看实例账号信息。
  * @method Models\DescribeInstanceBackupsResponse DescribeInstanceBackups(Models\DescribeInstanceBackupsRequest $req) 本接口（DescribeInstanceBackups）用于查询实例备份列表。
  * @method Models\DescribeInstanceDTSInfoResponse DescribeInstanceDTSInfo(Models\DescribeInstanceDTSInfoRequest $req) 本接口（DescribeInstanceDTSInfo）用于查询实例 DTS 信息。
  * @method Models\DescribeInstanceDealDetailResponse DescribeInstanceDealDetail(Models\DescribeInstanceDealDetailRequest $req) 本接口（DescribeInstanceDealDetail）用于查询订单信息。
@@ -109,7 +109,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\ModifyInstanceResponse ModifyInstance(Models\ModifyInstanceRequest $req) 本接口（ModifyInstance）用于修改实例相关信息。
  * @method Models\ModifyInstanceAccountResponse ModifyInstanceAccount(Models\ModifyInstanceAccountRequest $req) 本接口（ModifyInstanceAccount）用于修改实例账号。
  * @method Models\ModifyInstanceAvailabilityZonesResponse ModifyInstanceAvailabilityZones(Models\ModifyInstanceAvailabilityZonesRequest $req) 本接口（ModifyInstanceAvailabilityZones）用于变更实例可用区
- * @method Models\ModifyInstanceBackupModeResponse ModifyInstanceBackupMode(Models\ModifyInstanceBackupModeRequest $req) 修改实例的备份模式
+ * @method Models\ModifyInstanceBackupModeResponse ModifyInstanceBackupMode(Models\ModifyInstanceBackupModeRequest $req) 本接口（ModifyInstanceBackupMode）用于修改实例的备份模式。
  * @method Models\ModifyInstanceEventResponse ModifyInstanceEvent(Models\ModifyInstanceEventRequest $req) 本接口（ModifyInstanceEvent）用于修改实例的运维事件的执行计划。
  * @method Models\ModifyInstanceLogDeliveryResponse ModifyInstanceLogDelivery(Models\ModifyInstanceLogDeliveryRequest $req) 本接口（ModifyInstanceLogDelivery）用于开启或关闭投递实例日志到CLS。
  * @method Models\ModifyInstanceParamsResponse ModifyInstanceParams(Models\ModifyInstanceParamsRequest $req) 本接口（ModifyInstanceParams）用于修改 Redis 实例的参数配置。

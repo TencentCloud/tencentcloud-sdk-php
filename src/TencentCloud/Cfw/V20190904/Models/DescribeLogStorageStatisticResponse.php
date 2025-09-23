@@ -48,6 +48,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeHistogramShow(StorageHistogramShow $TimeHistogramShow) 设置柱形图格式数据
  * @method integer getArrearsStopWriting() 获取后付费模式存储状态，0正常，1欠费停止写入
  * @method void setArrearsStopWriting(integer $ArrearsStopWriting) 设置后付费模式存储状态，0正常，1欠费停止写入
+ * @method integer getNDRNetFlowSize() 获取NDR流量日志存储量，单位B
+ * @method void setNDRNetFlowSize(integer $NDRNetFlowSize) 设置NDR流量日志存储量，单位B
+ * @method integer getNDRRiskSize() 获取NDR风险日志存储量，单位B
+ * @method void setNDRRiskSize(integer $NDRRiskSize) 设置NDR风险日志存储量，单位B
+ * @method integer getNDRStorageDay() 获取NDR日志存储天数
+ * @method void setNDRStorageDay(integer $NDRStorageDay) 设置NDR日志存储天数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -124,6 +130,21 @@ class DescribeLogStorageStatisticResponse extends AbstractModel
     public $ArrearsStopWriting;
 
     /**
+     * @var integer NDR流量日志存储量，单位B
+     */
+    public $NDRNetFlowSize;
+
+    /**
+     * @var integer NDR风险日志存储量，单位B
+     */
+    public $NDRRiskSize;
+
+    /**
+     * @var integer NDR日志存储天数
+     */
+    public $NDRStorageDay;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -143,6 +164,9 @@ class DescribeLogStorageStatisticResponse extends AbstractModel
      * @param array $TimeHistogram 每日增加日志存储量柱状图
      * @param StorageHistogramShow $TimeHistogramShow 柱形图格式数据
      * @param integer $ArrearsStopWriting 后付费模式存储状态，0正常，1欠费停止写入
+     * @param integer $NDRNetFlowSize NDR流量日志存储量，单位B
+     * @param integer $NDRRiskSize NDR风险日志存储量，单位B
+     * @param integer $NDRStorageDay NDR日志存储天数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -218,6 +242,18 @@ class DescribeLogStorageStatisticResponse extends AbstractModel
 
         if (array_key_exists("ArrearsStopWriting",$param) and $param["ArrearsStopWriting"] !== null) {
             $this->ArrearsStopWriting = $param["ArrearsStopWriting"];
+        }
+
+        if (array_key_exists("NDRNetFlowSize",$param) and $param["NDRNetFlowSize"] !== null) {
+            $this->NDRNetFlowSize = $param["NDRNetFlowSize"];
+        }
+
+        if (array_key_exists("NDRRiskSize",$param) and $param["NDRRiskSize"] !== null) {
+            $this->NDRRiskSize = $param["NDRRiskSize"];
+        }
+
+        if (array_key_exists("NDRStorageDay",$param) and $param["NDRStorageDay"] !== null) {
+            $this->NDRStorageDay = $param["NDRStorageDay"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -50,7 +50,12 @@ use TencentCloud\Common\AbstractModel;
 类型：String
 必选：否
 场景Id，可通过[查看使用场景列表](https://cloud.tencent.com/document/product/1207/83512)接口获取。
-
+<li>tag-key</li>
+按照【标签键】进行过滤。 类型：String 必选：否
+<li>tag-value</li>
+按照【标签值】进行过滤。 类型：String 必选：否
+<li>tag:tag-key</li>
+按照【标签键值对】进行过滤。 tag-key使用具体的标签键进行替换。
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 BlueprintIds (可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取BlueprintId)和 Filters 。
  * @method void setFilters(array $Filters) 设置过滤器列表。
 <li>blueprint-id</li>按照【镜像 ID】进行过滤。
@@ -76,7 +81,12 @@ use TencentCloud\Common\AbstractModel;
 类型：String
 必选：否
 场景Id，可通过[查看使用场景列表](https://cloud.tencent.com/document/product/1207/83512)接口获取。
-
+<li>tag-key</li>
+按照【标签键】进行过滤。 类型：String 必选：否
+<li>tag-value</li>
+按照【标签值】进行过滤。 类型：String 必选：否
+<li>tag:tag-key</li>
+按照【标签键值对】进行过滤。 tag-key使用具体的标签键进行替换。
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 BlueprintIds (可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取BlueprintId)和 Filters 。
  */
 class DescribeBlueprintsRequest extends AbstractModel
@@ -121,7 +131,12 @@ class DescribeBlueprintsRequest extends AbstractModel
 类型：String
 必选：否
 场景Id，可通过[查看使用场景列表](https://cloud.tencent.com/document/product/1207/83512)接口获取。
-
+<li>tag-key</li>
+按照【标签键】进行过滤。 类型：String 必选：否
+<li>tag-value</li>
+按照【标签值】进行过滤。 类型：String 必选：否
+<li>tag:tag-key</li>
+按照【标签键值对】进行过滤。 tag-key使用具体的标签键进行替换。
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 BlueprintIds (可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取BlueprintId)和 Filters 。
      */
     public $Filters;
@@ -154,7 +169,12 @@ class DescribeBlueprintsRequest extends AbstractModel
 类型：String
 必选：否
 场景Id，可通过[查看使用场景列表](https://cloud.tencent.com/document/product/1207/83512)接口获取。
-
+<li>tag-key</li>
+按照【标签键】进行过滤。 类型：String 必选：否
+<li>tag-value</li>
+按照【标签值】进行过滤。 类型：String 必选：否
+<li>tag:tag-key</li>
+按照【标签键值对】进行过滤。 tag-key使用具体的标签键进行替换。
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 BlueprintIds (可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取BlueprintId)和 Filters 。
      */
     function __construct()

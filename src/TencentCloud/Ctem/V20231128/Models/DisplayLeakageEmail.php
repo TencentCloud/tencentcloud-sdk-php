@@ -22,8 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() 获取主键ID
  * @method void setId(integer $Id) 设置主键ID
+ * @method DisplayToolCommon getDisplayToolCommon() 获取公共字段
+ * @method void setDisplayToolCommon(DisplayToolCommon $DisplayToolCommon) 设置公共字段
  * @method string getEmail() 获取邮箱
  * @method void setEmail(string $Email) 设置邮箱
+ * @method string getUsername() 获取用户名
+ * @method void setUsername(string $Username) 设置用户名
+ * @method string getSource() 获取数据源
+ * @method void setSource(string $Source) 设置数据源
+ * @method integer getRiskLevel() 获取风险等级：1-低危 2-中危 3-高危 4-严重 5-误报
+ * @method void setRiskLevel(integer $RiskLevel) 设置风险等级：1-低危 2-中危 3-高危 4-严重 5-误报
+ * @method string getSuggestion() 获取建议
+ * @method void setSuggestion(string $Suggestion) 设置建议
+ * @method string getKeyword() 获取关键词
+ * @method void setKeyword(string $Keyword) 设置关键词
+ * @method integer getHandlingStatus() 获取处置状态：0-待处理 1-处理中 2-已处理
+ * @method void setHandlingStatus(integer $HandlingStatus) 设置处置状态：0-待处理 1-处理中 2-已处理
+ * @method string getRemark() 获取备注
+ * @method void setRemark(string $Remark) 设置备注
  */
 class DisplayLeakageEmail extends AbstractModel
 {
@@ -33,13 +49,61 @@ class DisplayLeakageEmail extends AbstractModel
     public $Id;
 
     /**
+     * @var DisplayToolCommon 公共字段
+     */
+    public $DisplayToolCommon;
+
+    /**
      * @var string 邮箱
      */
     public $Email;
 
     /**
+     * @var string 用户名
+     */
+    public $Username;
+
+    /**
+     * @var string 数据源
+     */
+    public $Source;
+
+    /**
+     * @var integer 风险等级：1-低危 2-中危 3-高危 4-严重 5-误报
+     */
+    public $RiskLevel;
+
+    /**
+     * @var string 建议
+     */
+    public $Suggestion;
+
+    /**
+     * @var string 关键词
+     */
+    public $Keyword;
+
+    /**
+     * @var integer 处置状态：0-待处理 1-处理中 2-已处理
+     */
+    public $HandlingStatus;
+
+    /**
+     * @var string 备注
+     */
+    public $Remark;
+
+    /**
      * @param integer $Id 主键ID
+     * @param DisplayToolCommon $DisplayToolCommon 公共字段
      * @param string $Email 邮箱
+     * @param string $Username 用户名
+     * @param string $Source 数据源
+     * @param integer $RiskLevel 风险等级：1-低危 2-中危 3-高危 4-严重 5-误报
+     * @param string $Suggestion 建议
+     * @param string $Keyword 关键词
+     * @param integer $HandlingStatus 处置状态：0-待处理 1-处理中 2-已处理
+     * @param string $Remark 备注
      */
     function __construct()
     {
@@ -58,8 +122,41 @@ class DisplayLeakageEmail extends AbstractModel
             $this->Id = $param["Id"];
         }
 
+        if (array_key_exists("DisplayToolCommon",$param) and $param["DisplayToolCommon"] !== null) {
+            $this->DisplayToolCommon = new DisplayToolCommon();
+            $this->DisplayToolCommon->deserialize($param["DisplayToolCommon"]);
+        }
+
         if (array_key_exists("Email",$param) and $param["Email"] !== null) {
             $this->Email = $param["Email"];
+        }
+
+        if (array_key_exists("Username",$param) and $param["Username"] !== null) {
+            $this->Username = $param["Username"];
+        }
+
+        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
+            $this->Source = $param["Source"];
+        }
+
+        if (array_key_exists("RiskLevel",$param) and $param["RiskLevel"] !== null) {
+            $this->RiskLevel = $param["RiskLevel"];
+        }
+
+        if (array_key_exists("Suggestion",$param) and $param["Suggestion"] !== null) {
+            $this->Suggestion = $param["Suggestion"];
+        }
+
+        if (array_key_exists("Keyword",$param) and $param["Keyword"] !== null) {
+            $this->Keyword = $param["Keyword"];
+        }
+
+        if (array_key_exists("HandlingStatus",$param) and $param["HandlingStatus"] !== null) {
+            $this->HandlingStatus = $param["HandlingStatus"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }

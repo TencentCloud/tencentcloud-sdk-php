@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
 格式为： YYYY-MM-DDThh:mm:ssZ。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。
+ * @method array getTags() 获取云硬盘备份点绑定的标签列表。
+ * @method void setTags(array $Tags) 设置云硬盘备份点绑定的标签列表。
  */
 class DiskBackup extends AbstractModel
 {
@@ -116,6 +118,11 @@ class DiskBackup extends AbstractModel
     public $CreatedTime;
 
     /**
+     * @var array 云硬盘备份点绑定的标签列表。
+     */
+    public $Tags;
+
+    /**
      * @param string $DiskBackupId 云硬盘备份点ID。
      * @param string $DiskUsage 创建此云硬盘备份点的云硬盘类型。取值：<li>DATA_DISK：数据盘</li>
      * @param string $DiskId 创建此云硬盘备份点的云硬盘 ID。
@@ -132,6 +139,7 @@ class DiskBackup extends AbstractModel
      * @param string $LatestOperationRequestId 上一次请求ID
      * @param string $CreatedTime 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。
+     * @param array $Tags 云硬盘备份点绑定的标签列表。
      */
     function __construct()
     {
@@ -188,6 +196,15 @@ class DiskBackup extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -100,6 +100,28 @@ serverless  :serverless版
  * @method void setDynamicDiskConfig(DynamicDiskConfig $DynamicDiskConfig) 设置动态硬盘扩容策略
  * @method string getInstanceChargeType() 获取实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
+ * @method integer getElasticBandwidthSwitch() 获取是否开启弹性带宽白名单   
+1:已开启弹性带宽白名单;
+0:未开启弹性带宽白名单;
+ * @method void setElasticBandwidthSwitch(integer $ElasticBandwidthSwitch) 设置是否开启弹性带宽白名单   
+1:已开启弹性带宽白名单;
+0:未开启弹性带宽白名单;
+ * @method integer getElasticBandwidthOpenStatus() 获取弹性带宽开通状态
+1:未开启弹性带宽;
+16: 开启弹性带宽中;
+32:开启弹性带宽成功;
+33:关闭弹性带宽中;
+34:关闭弹性带宽成功;
+64:开启弹性带宽失败;
+65:关闭弹性带宽失败;
+ * @method void setElasticBandwidthOpenStatus(integer $ElasticBandwidthOpenStatus) 设置弹性带宽开通状态
+1:未开启弹性带宽;
+16: 开启弹性带宽中;
+32:开启弹性带宽成功;
+33:关闭弹性带宽中;
+34:关闭弹性带宽成功;
+64:开启弹性带宽失败;
+65:关闭弹性带宽失败;
  * @method string getClusterType() 获取集群类型  
 CLOUD_IDC IDC集群
 CLOUD_CVM_SHARE CVM共享集群
@@ -312,6 +334,25 @@ serverless  :serverless版
     public $InstanceChargeType;
 
     /**
+     * @var integer 是否开启弹性带宽白名单   
+1:已开启弹性带宽白名单;
+0:未开启弹性带宽白名单;
+     */
+    public $ElasticBandwidthSwitch;
+
+    /**
+     * @var integer 弹性带宽开通状态
+1:未开启弹性带宽;
+16: 开启弹性带宽中;
+32:开启弹性带宽成功;
+33:关闭弹性带宽中;
+34:关闭弹性带宽成功;
+64:开启弹性带宽失败;
+65:关闭弹性带宽失败;
+     */
+    public $ElasticBandwidthOpenStatus;
+
+    /**
      * @var string 集群类型  
 CLOUD_IDC IDC集群
 CLOUD_CVM_SHARE CVM共享集群
@@ -388,6 +429,17 @@ serverless  :serverless版
      * @param integer $RemainingTopics 剩余创建主题数
      * @param DynamicDiskConfig $DynamicDiskConfig 动态硬盘扩容策略
      * @param string $InstanceChargeType 实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
+     * @param integer $ElasticBandwidthSwitch 是否开启弹性带宽白名单   
+1:已开启弹性带宽白名单;
+0:未开启弹性带宽白名单;
+     * @param integer $ElasticBandwidthOpenStatus 弹性带宽开通状态
+1:未开启弹性带宽;
+16: 开启弹性带宽中;
+32:开启弹性带宽成功;
+33:关闭弹性带宽中;
+34:关闭弹性带宽成功;
+64:开启弹性带宽失败;
+65:关闭弹性带宽失败;
      * @param string $ClusterType 集群类型  
 CLOUD_IDC IDC集群
 CLOUD_CVM_SHARE CVM共享集群
@@ -569,6 +621,14 @@ CLOUD_EKS_TSE EKS集群
 
         if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
             $this->InstanceChargeType = $param["InstanceChargeType"];
+        }
+
+        if (array_key_exists("ElasticBandwidthSwitch",$param) and $param["ElasticBandwidthSwitch"] !== null) {
+            $this->ElasticBandwidthSwitch = $param["ElasticBandwidthSwitch"];
+        }
+
+        if (array_key_exists("ElasticBandwidthOpenStatus",$param) and $param["ElasticBandwidthOpenStatus"] !== null) {
+            $this->ElasticBandwidthOpenStatus = $param["ElasticBandwidthOpenStatus"];
         }
 
         if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {

@@ -112,6 +112,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskBackupCount(integer $DiskBackupCount) 设置云硬盘的已有备份点数量。
  * @method integer getDiskBackupQuota() 获取云硬盘的备份点配额数量。
  * @method void setDiskBackupQuota(integer $DiskBackupQuota) 设置云硬盘的备份点配额数量。
+ * @method array getTags() 获取云硬盘绑定的标签列表。
+ * @method void setTags(array $Tags) 设置云硬盘绑定的标签列表。
  */
 class Disk extends AbstractModel
 {
@@ -242,6 +244,11 @@ class Disk extends AbstractModel
     public $DiskBackupQuota;
 
     /**
+     * @var array 云硬盘绑定的标签列表。
+     */
+    public $Tags;
+
+    /**
      * @param string $DiskId 云硬盘ID。
      * @param string $InstanceId 实例ID。
      * @param string $Zone 可用区。
@@ -288,6 +295,7 @@ class Disk extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DiskBackupCount 云硬盘的已有备份点数量。
      * @param integer $DiskBackupQuota 云硬盘的备份点配额数量。
+     * @param array $Tags 云硬盘绑定的标签列表。
      */
     function __construct()
     {
@@ -380,6 +388,15 @@ class Disk extends AbstractModel
 
         if (array_key_exists("DiskBackupQuota",$param) and $param["DiskBackupQuota"] !== null) {
             $this->DiskBackupQuota = $param["DiskBackupQuota"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

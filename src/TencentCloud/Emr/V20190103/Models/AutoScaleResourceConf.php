@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupName(string $GroupName) 设置伸缩组名
  * @method string getYarnNodeLabel() 获取标签
  * @method void setYarnNodeLabel(string $YarnNodeLabel) 设置标签
+ * @method string getWarehouseName() 获取对应的计算组
+ * @method void setWarehouseName(string $WarehouseName) 设置对应的计算组
  * @method integer getGroupStatus() 获取伸缩组状态
  * @method void setGroupStatus(integer $GroupStatus) 设置伸缩组状态
  * @method integer getParallel() 获取并行伸缩 0关闭；1开启
@@ -53,7 +55,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getEnableMNode() 获取是否支持MNode
  * @method void setEnableMNode(integer $EnableMNode) 设置是否支持MNode
  * @method AutoScaleGroupAdvanceAttrs getExtraAdvanceAttrs() 获取伸缩组更多设置
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtraAdvanceAttrs(AutoScaleGroupAdvanceAttrs $ExtraAdvanceAttrs) 设置伸缩组更多设置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AutoScaleResourceConf extends AbstractModel
 {
@@ -123,6 +127,11 @@ class AutoScaleResourceConf extends AbstractModel
     public $YarnNodeLabel;
 
     /**
+     * @var string 对应的计算组
+     */
+    public $WarehouseName;
+
+    /**
      * @var integer 伸缩组状态
      */
     public $GroupStatus;
@@ -139,6 +148,7 @@ class AutoScaleResourceConf extends AbstractModel
 
     /**
      * @var AutoScaleGroupAdvanceAttrs 伸缩组更多设置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtraAdvanceAttrs;
 
@@ -156,10 +166,12 @@ class AutoScaleResourceConf extends AbstractModel
      * @param integer $ChangeToPod 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选
      * @param string $GroupName 伸缩组名
      * @param string $YarnNodeLabel 标签
+     * @param string $WarehouseName 对应的计算组
      * @param integer $GroupStatus 伸缩组状态
      * @param integer $Parallel 并行伸缩 0关闭；1开启
      * @param integer $EnableMNode 是否支持MNode
      * @param AutoScaleGroupAdvanceAttrs $ExtraAdvanceAttrs 伸缩组更多设置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -224,6 +236,10 @@ class AutoScaleResourceConf extends AbstractModel
 
         if (array_key_exists("YarnNodeLabel",$param) and $param["YarnNodeLabel"] !== null) {
             $this->YarnNodeLabel = $param["YarnNodeLabel"];
+        }
+
+        if (array_key_exists("WarehouseName",$param) and $param["WarehouseName"] !== null) {
+            $this->WarehouseName = $param["WarehouseName"];
         }
 
         if (array_key_exists("GroupStatus",$param) and $param["GroupStatus"] !== null) {

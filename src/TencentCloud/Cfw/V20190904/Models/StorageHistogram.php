@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTime(string $Time) 设置统计时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getNDRNetflowSize() 获取NDR流量日志存储量，单位B
+ * @method void setNDRNetflowSize(integer $NDRNetflowSize) 设置NDR流量日志存储量，单位B
+ * @method integer getNDRRiskSize() 获取NDR风险日志存储量，单位B
+ * @method void setNDRRiskSize(integer $NDRRiskSize) 设置NDR风险日志存储量，单位B
  */
 class StorageHistogram extends AbstractModel
 {
@@ -74,6 +78,16 @@ class StorageHistogram extends AbstractModel
     public $Time;
 
     /**
+     * @var integer NDR流量日志存储量，单位B
+     */
+    public $NDRNetflowSize;
+
+    /**
+     * @var integer NDR风险日志存储量，单位B
+     */
+    public $NDRRiskSize;
+
+    /**
      * @param integer $AclSize 访问控制日志存储量，单位B
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IdsSize 入侵防御日志存储量，单位B
@@ -84,6 +98,8 @@ class StorageHistogram extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Time 统计时间
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $NDRNetflowSize NDR流量日志存储量，单位B
+     * @param integer $NDRRiskSize NDR风险日志存储量，单位B
      */
     function __construct()
     {
@@ -116,6 +132,14 @@ class StorageHistogram extends AbstractModel
 
         if (array_key_exists("Time",$param) and $param["Time"] !== null) {
             $this->Time = $param["Time"];
+        }
+
+        if (array_key_exists("NDRNetflowSize",$param) and $param["NDRNetflowSize"] !== null) {
+            $this->NDRNetflowSize = $param["NDRNetflowSize"];
+        }
+
+        if (array_key_exists("NDRRiskSize",$param) and $param["NDRRiskSize"] !== null) {
+            $this->NDRRiskSize = $param["NDRRiskSize"];
         }
     }
 }

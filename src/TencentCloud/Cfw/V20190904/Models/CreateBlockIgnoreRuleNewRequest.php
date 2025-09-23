@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRules(array $Rules) 设置非自定义类型规则列表
  * @method integer getRuleType() 获取RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
  * @method void setRuleType(integer $RuleType) 设置RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
- * @method integer getCoverDuplicate() 获取是否覆盖重复数据，1覆盖，非1不覆盖，跳过重复数据
- * @method void setCoverDuplicate(integer $CoverDuplicate) 设置是否覆盖重复数据，1覆盖，非1不覆盖，跳过重复数据
+ * @method integer getCoverDuplicate() 获取删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据
+ * @method void setCoverDuplicate(integer $CoverDuplicate) 设置删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据
  */
 class CreateBlockIgnoreRuleNewRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CreateBlockIgnoreRuleNewRequest extends AbstractModel
     public $RuleType;
 
     /**
-     * @var integer 是否覆盖重复数据，1覆盖，非1不覆盖，跳过重复数据
+     * @var integer 删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据
      */
     public $CoverDuplicate;
 
     /**
      * @param array $Rules 非自定义类型规则列表
      * @param integer $RuleType RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
-     * @param integer $CoverDuplicate 是否覆盖重复数据，1覆盖，非1不覆盖，跳过重复数据
+     * @param integer $CoverDuplicate 删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据
      */
     function __construct()
     {

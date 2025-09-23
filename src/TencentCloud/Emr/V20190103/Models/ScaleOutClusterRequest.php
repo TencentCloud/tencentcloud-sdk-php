@@ -74,6 +74,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScaleOutServiceConfGroupsInfo(array $ScaleOutServiceConfGroupsInfo) 设置扩容指定配置组
  * @method NodeMark getNodeMarks() 获取节点标记信息，当前只提供给tf平台使用
  * @method void setNodeMarks(NodeMark $NodeMarks) 设置节点标记信息，当前只提供给tf平台使用
+ * @method string getWarehouseName() 获取扩容指定计算组名称
+ * @method void setWarehouseName(string $WarehouseName) 设置扩容指定计算组名称
  */
 class ScaleOutClusterRequest extends AbstractModel
 {
@@ -189,6 +191,11 @@ class ScaleOutClusterRequest extends AbstractModel
     public $NodeMarks;
 
     /**
+     * @var string 扩容指定计算组名称
+     */
+    public $WarehouseName;
+
+    /**
      * @param string $InstanceChargeType 节点计费模式。取值范围：
 <li>PREPAID：预付费，即包年包月。</li>
 <li>POSTPAID_BY_HOUR：按小时后付费。</li>
@@ -216,6 +223,7 @@ class ScaleOutClusterRequest extends AbstractModel
      * @param string $SubnetId 子网，默认是集群创建时的子网
      * @param array $ScaleOutServiceConfGroupsInfo 扩容指定配置组
      * @param NodeMark $NodeMarks 节点标记信息，当前只提供给tf平台使用
+     * @param string $WarehouseName 扩容指定计算组名称
      */
     function __construct()
     {
@@ -332,6 +340,10 @@ class ScaleOutClusterRequest extends AbstractModel
         if (array_key_exists("NodeMarks",$param) and $param["NodeMarks"] !== null) {
             $this->NodeMarks = new NodeMark();
             $this->NodeMarks->deserialize($param["NodeMarks"]);
+        }
+
+        if (array_key_exists("WarehouseName",$param) and $param["WarehouseName"] !== null) {
+            $this->WarehouseName = $param["WarehouseName"];
         }
     }
 }

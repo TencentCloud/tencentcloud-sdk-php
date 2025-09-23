@@ -112,6 +112,10 @@ log：观察
  * @method void setIpVersion(integer $IpVersion) 设置Ip版本，0：IPv4，1：IPv6，默认为IPv4
  * @method integer getInvalid() 获取是否是无效规则，0 表示有效规则，1 表示无效规则，出参场景返回使用
  * @method void setInvalid(integer $Invalid) 设置是否是无效规则，0 表示有效规则，1 表示无效规则，出参场景返回使用
+ * @method string getCreateTime() 获取规则创建时间
+ * @method void setCreateTime(string $CreateTime) 设置规则创建时间
+ * @method string getUpdateTime() 获取规则最近更新时间
+ * @method void setUpdateTime(string $UpdateTime) 设置规则最近更新时间
  */
 class VpcRuleItem extends AbstractModel
 {
@@ -262,6 +266,16 @@ log：观察
     public $Invalid;
 
     /**
+     * @var string 规则创建时间
+     */
+    public $CreateTime;
+
+    /**
+     * @var string 规则最近更新时间
+     */
+    public $UpdateTime;
+
+    /**
      * @param string $SourceContent 访问源示例：
 net：IP/CIDR(192.168.0.2)
      * @param string $SourceType 访问源类型，类型可以为：net
@@ -308,6 +322,8 @@ log：观察
      * @param string $SourceName 访问源名称
      * @param integer $IpVersion Ip版本，0：IPv4，1：IPv6，默认为IPv4
      * @param integer $Invalid 是否是无效规则，0 表示有效规则，1 表示无效规则，出参场景返回使用
+     * @param string $CreateTime 规则创建时间
+     * @param string $UpdateTime 规则最近更新时间
      */
     function __construct()
     {
@@ -425,6 +441,14 @@ log：观察
 
         if (array_key_exists("Invalid",$param) and $param["Invalid"] !== null) {
             $this->Invalid = $param["Invalid"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Redis\V20180412\Models;
+namespace TencentCloud\Ccc\V20200210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyInstanceBackupMode返回参数结构体
+ * DescribeAIAnalysisResult返回参数结构体
  *
- * @method integer getTaskId() 获取任务 ID。
- * @method void setTaskId(integer $TaskId) 设置任务 ID。
+ * @method array getResultList() 获取AI会话分析结果
+ * @method void setResultList(array $ResultList) 设置AI会话分析结果
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyInstanceBackupModeResponse extends AbstractModel
+class DescribeAIAnalysisResultResponse extends AbstractModel
 {
     /**
-     * @var integer 任务 ID。
+     * @var array AI会话分析结果
      */
-    public $TaskId;
+    public $ResultList;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class ModifyInstanceBackupModeResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TaskId 任务 ID。
+     * @param array $ResultList AI会话分析结果
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,13 @@ class ModifyInstanceBackupModeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("ResultList",$param) and $param["ResultList"] !== null) {
+            $this->ResultList = [];
+            foreach ($param["ResultList"] as $key => $value){
+                $obj = new AIAnalysisResult();
+                $obj->deserialize($value);
+                array_push($this->ResultList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

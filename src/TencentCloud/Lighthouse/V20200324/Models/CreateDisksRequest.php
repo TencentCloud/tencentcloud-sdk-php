@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoVoucher(boolean $AutoVoucher) 设置是否自动使用代金券。默认不使用。
  * @method AutoMountConfiguration getAutoMountConfiguration() 获取自动挂载并初始化数据盘。
  * @method void setAutoMountConfiguration(AutoMountConfiguration $AutoMountConfiguration) 设置自动挂载并初始化数据盘。
+ * @method array getTags() 获取标签键和标签值。 如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。 同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。 如果标签不存在会为您自动创建标签。 数组最多支持10个元素。
+ * @method void setTags(array $Tags) 设置标签键和标签值。 如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。 同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。 如果标签不存在会为您自动创建标签。 数组最多支持10个元素。
  */
 class CreateDisksRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CreateDisksRequest extends AbstractModel
     public $AutoMountConfiguration;
 
     /**
+     * @var array 标签键和标签值。 如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。 同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。 如果标签不存在会为您自动创建标签。 数组最多支持10个元素。
+     */
+    public $Tags;
+
+    /**
      * @param string $Zone 可用区。可通过[DescribeZones](https://cloud.tencent.com/document/product/1207/57513)返回值中的Zone获取。
      * @param integer $DiskSize 云硬盘大小, 单位: GB。
      * @param string $DiskType 云硬盘介质类型。取值: "CLOUD_PREMIUM"(高性能云盘), "CLOUD_SSD"(SSD云硬盘)。
@@ -96,6 +103,7 @@ class CreateDisksRequest extends AbstractModel
      * @param integer $DiskBackupQuota 指定云硬盘备份点配额，取值范围: [0, 500]。不传时默认为不带备份点配额。
      * @param boolean $AutoVoucher 是否自动使用代金券。默认不使用。
      * @param AutoMountConfiguration $AutoMountConfiguration 自动挂载并初始化数据盘。
+     * @param array $Tags 标签键和标签值。 如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。 同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。 如果标签不存在会为您自动创建标签。 数组最多支持10个元素。
      */
     function __construct()
     {
@@ -146,6 +154,15 @@ class CreateDisksRequest extends AbstractModel
         if (array_key_exists("AutoMountConfiguration",$param) and $param["AutoMountConfiguration"] !== null) {
             $this->AutoMountConfiguration = new AutoMountConfiguration();
             $this->AutoMountConfiguration->deserialize($param["AutoMountConfiguration"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

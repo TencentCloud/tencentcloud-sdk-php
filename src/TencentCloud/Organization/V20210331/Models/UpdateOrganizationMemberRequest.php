@@ -29,9 +29,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPolicyType() 获取关系策略类型。PolicyType不为空，PermissionIds不能为空。取值：Financial
  * @method void setPolicyType(string $PolicyType) 设置关系策略类型。PolicyType不为空，PermissionIds不能为空。取值：Financial
  * @method array getPermissionIds() 获取成员财务权限ID列表。PermissionIds不为空，PolicyType不能为空。
-取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析，如果有值，1、2 默认必须
+取值：1-查看账单、2-查看余额、3-资金划拨（若需要开启资金划拨权限，请联系您的商务经理内部开通。）、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析、9-预算管理、10-信用额度设置（若需要开启信用额度设置权限，请联系您的商务经理内部开通。），1、2 默认必须
  * @method void setPermissionIds(array $PermissionIds) 设置成员财务权限ID列表。PermissionIds不为空，PolicyType不能为空。
-取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析，如果有值，1、2 默认必须
+取值：1-查看账单、2-查看余额、3-资金划拨（若需要开启资金划拨权限，请联系您的商务经理内部开通。）、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析、9-预算管理、10-信用额度设置（若需要开启信用额度设置权限，请联系您的商务经理内部开通。），1、2 默认必须
  * @method string getIsAllowQuit() 获取是否允许成员退出组织。取值：Allow-允许、Denied-不允许
  * @method void setIsAllowQuit(string $IsAllowQuit) 设置是否允许成员退出组织。取值：Allow-允许、Denied-不允许
  * @method string getPayUin() 获取代付者Uin。成员财务权限有代付费时需要，取值为成员对应主体的主体管理员Uin
@@ -63,7 +63,7 @@ class UpdateOrganizationMemberRequest extends AbstractModel
 
     /**
      * @var array 成员财务权限ID列表。PermissionIds不为空，PolicyType不能为空。
-取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析，如果有值，1、2 默认必须
+取值：1-查看账单、2-查看余额、3-资金划拨（若需要开启资金划拨权限，请联系您的商务经理内部开通。）、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析、9-预算管理、10-信用额度设置（若需要开启信用额度设置权限，请联系您的商务经理内部开通。），1、2 默认必须
      */
     public $PermissionIds;
 
@@ -88,7 +88,7 @@ class UpdateOrganizationMemberRequest extends AbstractModel
      * @param string $Remark 备注。最大长度为40个字符
      * @param string $PolicyType 关系策略类型。PolicyType不为空，PermissionIds不能为空。取值：Financial
      * @param array $PermissionIds 成员财务权限ID列表。PermissionIds不为空，PolicyType不能为空。
-取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析，如果有值，1、2 默认必须
+取值：1-查看账单、2-查看余额、3-资金划拨（若需要开启资金划拨权限，请联系您的商务经理内部开通。）、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析、9-预算管理、10-信用额度设置（若需要开启信用额度设置权限，请联系您的商务经理内部开通。），1、2 默认必须
      * @param string $IsAllowQuit 是否允许成员退出组织。取值：Allow-允许、Denied-不允许
      * @param string $PayUin 代付者Uin。成员财务权限有代付费时需要，取值为成员对应主体的主体管理员Uin
      * @param integer $IsModifyNickName 是否同步组织成员名称到成员账号昵称。取值： 1-同步 0-不同步

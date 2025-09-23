@@ -74,6 +74,8 @@ NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、ISOLATED（�
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getBlueprintShared() 获取镜像是否已共享。
  * @method void setBlueprintShared(boolean $BlueprintShared) 设置镜像是否已共享。
+ * @method array getTags() 获取镜像绑定的标签列表。
+ * @method void setTags(array $Tags) 设置镜像绑定的标签列表。
  */
 class Blueprint extends AbstractModel
 {
@@ -189,6 +191,11 @@ NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、ISOLATED（�
     public $BlueprintShared;
 
     /**
+     * @var array 镜像绑定的标签列表。
+     */
+    public $Tags;
+
+    /**
      * @param string $BlueprintId 镜像 ID  ，是 Blueprint 的唯一标识。
      * @param string $DisplayTitle 镜像对外展示标题。
      * @param string $DisplayVersion 镜像对外展示版本。
@@ -216,6 +223,7 @@ NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、ISOLATED（�
      * @param string $DockerVersion Docker版本号。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $BlueprintShared 镜像是否已共享。
+     * @param array $Tags 镜像绑定的标签列表。
      */
     function __construct()
     {
@@ -312,6 +320,15 @@ NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、ISOLATED（�
 
         if (array_key_exists("BlueprintShared",$param) and $param["BlueprintShared"] !== null) {
             $this->BlueprintShared = $param["BlueprintShared"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

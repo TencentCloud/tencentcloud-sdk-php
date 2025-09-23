@@ -92,6 +92,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCountryKey(string $CountryKey) 设置地区简称
  * @method string getCityKey() 获取省份、城市简称
  * @method void setCityKey(string $CityKey) 设置省份、城市简称
+ * @method string getCreateTime() 获取规则创建时间
+ * @method void setCreateTime(string $CreateTime) 设置规则创建时间
+ * @method string getUpdateTime() 获取规则最近更新时间
+ * @method void setUpdateTime(string $UpdateTime) 设置规则最近更新时间
  */
 class DescAcItem extends AbstractModel
 {
@@ -272,6 +276,16 @@ class DescAcItem extends AbstractModel
     public $CityKey;
 
     /**
+     * @var string 规则创建时间
+     */
+    public $CreateTime;
+
+    /**
+     * @var string 规则最近更新时间
+     */
+    public $UpdateTime;
+
+    /**
      * @param string $SourceContent 访问源
      * @param string $TargetContent 访问目的
      * @param string $Protocol 协议
@@ -308,6 +322,8 @@ class DescAcItem extends AbstractModel
      * @param string $LastHitTime 规则最近命中时间
      * @param string $CountryKey 地区简称
      * @param string $CityKey 省份、城市简称
+     * @param string $CreateTime 规则创建时间
+     * @param string $UpdateTime 规则最近更新时间
      */
     function __construct()
     {
@@ -465,6 +481,14 @@ class DescAcItem extends AbstractModel
 
         if (array_key_exists("CityKey",$param) and $param["CityKey"] !== null) {
             $this->CityKey = $param["CityKey"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

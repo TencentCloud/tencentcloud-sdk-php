@@ -127,6 +127,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DescribeProjectResponse DescribeProject(Models\DescribeProjectRequest $req) 查询项目详情
  * @method Models\DescribeSpaceFenceEventListResponse DescribeSpaceFenceEventList(Models\DescribeSpaceFenceEventListRequest $req) 获取位置空间中围栏告警事件列表。
  * @method Models\DescribeStudioProductResponse DescribeStudioProduct(Models\DescribeStudioProductRequest $req) 提供查看产品详细信息的能力，包括产品的ID、数据协议、认证类型等重要参数
+ * @method Models\DescribeSubscribedTopicPolicyResponse DescribeSubscribedTopicPolicy(Models\DescribeSubscribedTopicPolicyRequest $req) 本接口（DescribeSubscribedTopicPolicy）用于获取设备已订阅Topic列表
  * @method Models\DescribeTWeSeeConfigResponse DescribeTWeSeeConfig(Models\DescribeTWeSeeConfigRequest $req) 拉取 TWeSee 配置
  * @method Models\DescribeTWeSeeRecognitionTaskResponse DescribeTWeSeeRecognitionTask(Models\DescribeTWeSeeRecognitionTaskRequest $req) 查询 TWeSee 语义理解任务
  * @method Models\DescribeTWeTalkProductConfigResponse DescribeTWeTalkProductConfig(Models\DescribeTWeTalkProductConfigRequest $req) 用于获取TWeTalk服务连接产品配置信息。

@@ -21,17 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * 自动伸缩组高级设置
  *
  * @method ComputeResourceAdvanceParams getComputeResourceAdvanceParams() 获取计算资源高级设置
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComputeResourceAdvanceParams(ComputeResourceAdvanceParams $ComputeResourceAdvanceParams) 设置计算资源高级设置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AutoScaleGroupAdvanceAttrs extends AbstractModel
 {
     /**
      * @var ComputeResourceAdvanceParams 计算资源高级设置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComputeResourceAdvanceParams;
 
     /**
      * @param ComputeResourceAdvanceParams $ComputeResourceAdvanceParams 计算资源高级设置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

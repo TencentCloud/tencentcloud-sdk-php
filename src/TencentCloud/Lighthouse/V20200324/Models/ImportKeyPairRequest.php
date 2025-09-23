@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyName(string $KeyName) 设置密钥对名称，可由数字，字母和下划线组成，长度不超过 25 个字符。
  * @method string getPublicKey() 获取密钥对的公钥内容， OpenSSH RSA 格式。
  * @method void setPublicKey(string $PublicKey) 设置密钥对的公钥内容， OpenSSH RSA 格式。
+ * @method array getTags() 获取标签键和标签值。 如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。 同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。 如果标签不存在会为您自动创建标签。 数组最多支持10个元素。
+ * @method void setTags(array $Tags) 设置标签键和标签值。 如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。 同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。 如果标签不存在会为您自动创建标签。 数组最多支持10个元素。
  */
 class ImportKeyPairRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ImportKeyPairRequest extends AbstractModel
     public $PublicKey;
 
     /**
+     * @var array 标签键和标签值。 如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。 同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。 如果标签不存在会为您自动创建标签。 数组最多支持10个元素。
+     */
+    public $Tags;
+
+    /**
      * @param string $KeyName 密钥对名称，可由数字，字母和下划线组成，长度不超过 25 个字符。
      * @param string $PublicKey 密钥对的公钥内容， OpenSSH RSA 格式。
+     * @param array $Tags 标签键和标签值。 如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。 同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。 如果标签不存在会为您自动创建标签。 数组最多支持10个元素。
      */
     function __construct()
     {
@@ -60,6 +68,15 @@ class ImportKeyPairRequest extends AbstractModel
 
         if (array_key_exists("PublicKey",$param) and $param["PublicKey"] !== null) {
             $this->PublicKey = $param["PublicKey"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

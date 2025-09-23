@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskId(string $DiskId) 设置云硬盘ID，可通过 [DescribeDisks](https://cloud.tencent.com/document/api/1207/66093) 接口返回值中的 DiskId 获取。 
  * @method string getDiskBackupName() 获取云硬盘备份点名称，最大长度为 90 。
  * @method void setDiskBackupName(string $DiskBackupName) 设置云硬盘备份点名称，最大长度为 90 。
+ * @method array getTags() 获取标签键和标签值。 如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。 同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。 如果标签不存在会为您自动创建标签。 数组最多支持10个元素。
+ * @method void setTags(array $Tags) 设置标签键和标签值。 如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。 同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。 如果标签不存在会为您自动创建标签。 数组最多支持10个元素。
  */
 class CreateDiskBackupRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateDiskBackupRequest extends AbstractModel
     public $DiskBackupName;
 
     /**
+     * @var array 标签键和标签值。 如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。 同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。 如果标签不存在会为您自动创建标签。 数组最多支持10个元素。
+     */
+    public $Tags;
+
+    /**
      * @param string $DiskId 云硬盘ID，可通过 [DescribeDisks](https://cloud.tencent.com/document/api/1207/66093) 接口返回值中的 DiskId 获取。 
      * @param string $DiskBackupName 云硬盘备份点名称，最大长度为 90 。
+     * @param array $Tags 标签键和标签值。 如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。 同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。 如果标签不存在会为您自动创建标签。 数组最多支持10个元素。
      */
     function __construct()
     {
@@ -60,6 +68,15 @@ class CreateDiskBackupRequest extends AbstractModel
 
         if (array_key_exists("DiskBackupName",$param) and $param["DiskBackupName"] !== null) {
             $this->DiskBackupName = $param["DiskBackupName"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

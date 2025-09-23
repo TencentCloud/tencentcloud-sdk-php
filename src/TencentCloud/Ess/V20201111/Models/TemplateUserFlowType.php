@@ -18,7 +18,7 @@ namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 模版对应的合同类型
+ * 模板对应的合同类型
  *
  * @method string getUserFlowTypeId() 获取合同类型id
  * @method void setUserFlowTypeId(string $UserFlowTypeId) 设置合同类型id
@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置合同类型名称
  * @method string getDescription() 获取合同类型的具体描述
  * @method void setDescription(string $Description) 设置合同类型的具体描述
- * @method integer getTemplateNum() 获取每个合同类型绑定的模版数量
- * @method void setTemplateNum(integer $TemplateNum) 设置每个合同类型绑定的模版数量
+ * @method integer getTemplateNum() 获取每个合同类型绑定的模板数量
+ * @method void setTemplateNum(integer $TemplateNum) 设置每个合同类型绑定的模板数量
  */
 class TemplateUserFlowType extends AbstractModel
 {
@@ -47,7 +47,7 @@ class TemplateUserFlowType extends AbstractModel
     public $Description;
 
     /**
-     * @var integer 每个合同类型绑定的模版数量
+     * @var integer 每个合同类型绑定的模板数量
      */
     public $TemplateNum;
 
@@ -55,7 +55,7 @@ class TemplateUserFlowType extends AbstractModel
      * @param string $UserFlowTypeId 合同类型id
      * @param string $Name 合同类型名称
      * @param string $Description 合同类型的具体描述
-     * @param integer $TemplateNum 每个合同类型绑定的模版数量
+     * @param integer $TemplateNum 每个合同类型绑定的模板数量
      */
     function __construct()
     {

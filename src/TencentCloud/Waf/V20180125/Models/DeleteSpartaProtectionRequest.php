@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getDomains() 获取域名列表
  * @method void setDomains(array $Domains) 设置域名列表
- * @method string getEdition() 获取实例类型
- * @method void setEdition(string $Edition) 设置实例类型
  * @method string getInstanceID() 获取必填项。域名所属实例ID
  * @method void setInstanceID(string $InstanceID) 设置必填项。域名所属实例ID
+ * @method string getEdition() 获取实例类型
+ * @method void setEdition(string $Edition) 设置实例类型
  */
 class DeleteSpartaProtectionRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DeleteSpartaProtectionRequest extends AbstractModel
     public $Domains;
 
     /**
-     * @var string 实例类型
-     */
-    public $Edition;
-
-    /**
      * @var string 必填项。域名所属实例ID
      */
     public $InstanceID;
 
     /**
+     * @var string 实例类型
+     */
+    public $Edition;
+
+    /**
      * @param array $Domains 域名列表
-     * @param string $Edition 实例类型
      * @param string $InstanceID 必填项。域名所属实例ID
+     * @param string $Edition 实例类型
      */
     function __construct()
     {
@@ -66,12 +66,12 @@ class DeleteSpartaProtectionRequest extends AbstractModel
             $this->Domains = $param["Domains"];
         }
 
-        if (array_key_exists("Edition",$param) and $param["Edition"] !== null) {
-            $this->Edition = $param["Edition"];
-        }
-
         if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
             $this->InstanceID = $param["InstanceID"];
+        }
+
+        if (array_key_exists("Edition",$param) and $param["Edition"] !== null) {
+            $this->Edition = $param["Edition"];
         }
     }
 }

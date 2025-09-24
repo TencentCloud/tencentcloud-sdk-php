@@ -24,13 +24,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUri(string $Uri) 设置请求解密秘钥uri地址。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getKey() 获取加密key(32字节字符串)。
+ * @method string getKey() 获取加密key(十六进制32字节字符串)。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKey(string $Key) 设置加密key(32字节字符串)。
+ * @method void setKey(string $Key) 设置加密key(十六进制32字节字符串)。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVector() 获取加密初始化向量(32字节字符串)。
+ * @method string getVector() 获取加密初始化向量(十六进制32字节字符串)。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVector(string $Vector) 设置加密初始化向量(32字节字符串)。
+ * @method void setVector(string $Vector) 设置加密初始化向量(十六进制32字节字符串)。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SimpleAesDrm extends AbstractModel
@@ -42,13 +42,13 @@ class SimpleAesDrm extends AbstractModel
     public $Uri;
 
     /**
-     * @var string 加密key(32字节字符串)。
+     * @var string 加密key(十六进制32字节字符串)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
-     * @var string 加密初始化向量(32字节字符串)。
+     * @var string 加密初始化向量(十六进制32字节字符串)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vector;
@@ -56,9 +56,9 @@ class SimpleAesDrm extends AbstractModel
     /**
      * @param string $Uri 请求解密秘钥uri地址。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Key 加密key(32字节字符串)。
+     * @param string $Key 加密key(十六进制32字节字符串)。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Vector 加密初始化向量(32字节字符串)。
+     * @param string $Vector 加密初始化向量(十六进制32字节字符串)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

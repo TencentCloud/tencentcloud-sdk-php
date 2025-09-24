@@ -22,10 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
- * @method string getUserName() 获取新账号名称。其格式要求如下：<ul><li>字符范围[1,32]。</li><li>可输入[A,Z]、[a,z]、[1,9]范围的字符以及下划线“_”与短划线“-”。</li></ul>
- * @method void setUserName(string $UserName) 设置新账号名称。其格式要求如下：<ul><li>字符范围[1,32]。</li><li>可输入[A,Z]、[a,z]、[1,9]范围的字符以及下划线“_”与短划线“-”。</li></ul>
- * @method string getPassword() 获取新账号密码。密码复杂度要求如下：<ul><li>字符长度范围[8,32]。</li><li>至少包含字母、数字和特殊字符（叹号“!”、at"@"、井号“#”、百分号“%”、插入符“^”、星号“*”、小括号“()”、下划线“_”）中的两种。</li></ul>
- * @method void setPassword(string $Password) 设置新账号密码。密码复杂度要求如下：<ul><li>字符长度范围[8,32]。</li><li>至少包含字母、数字和特殊字符（叹号“!”、at"@"、井号“#”、百分号“%”、插入符“^”、星号“*”、小括号“()”、下划线“_”）中的两种。</li></ul>
+ * @method string getUserName() 获取新账号名称。其格式要求如下：
+- 字符范围[1,64]。
+- 可输入[A,Z]、[a,z]、[1,9]范围的字符以及下划线“\_”与短划线“-”。
+ * @method void setUserName(string $UserName) 设置新账号名称。其格式要求如下：
+- 字符范围[1,64]。
+- 可输入[A,Z]、[a,z]、[1,9]范围的字符以及下划线“\_”与短划线“-”。
+ * @method string getPassword() 获取新账号密码。密码复杂度要求如下：
+- 字符长度范围[8,32]。
+- 至少包含字母、数字和特殊字符（叹号“!”、at"@"、井号“#”、百分号“%”、插入符“^”、星号“\*”、小括号“()”、下划线“\_”）中的两种。
+ * @method void setPassword(string $Password) 设置新账号密码。密码复杂度要求如下：
+- 字符长度范围[8,32]。
+- 至少包含字母、数字和特殊字符（叹号“!”、at"@"、井号“#”、百分号“%”、插入符“^”、星号“\*”、小括号“()”、下划线“\_”）中的两种。
  * @method string getMongoUserPassword() 获取mongouser 账号对应的密码。mongouser 为系统默认账号，即为创建实例时，设置的密码。
  * @method void setMongoUserPassword(string $MongoUserPassword) 设置mongouser 账号对应的密码。mongouser 为系统默认账号，即为创建实例时，设置的密码。
  * @method string getUserDesc() 获取账号备注信息。
@@ -41,12 +49,16 @@ class CreateAccountUserRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 新账号名称。其格式要求如下：<ul><li>字符范围[1,32]。</li><li>可输入[A,Z]、[a,z]、[1,9]范围的字符以及下划线“_”与短划线“-”。</li></ul>
+     * @var string 新账号名称。其格式要求如下：
+- 字符范围[1,64]。
+- 可输入[A,Z]、[a,z]、[1,9]范围的字符以及下划线“\_”与短划线“-”。
      */
     public $UserName;
 
     /**
-     * @var string 新账号密码。密码复杂度要求如下：<ul><li>字符长度范围[8,32]。</li><li>至少包含字母、数字和特殊字符（叹号“!”、at"@"、井号“#”、百分号“%”、插入符“^”、星号“*”、小括号“()”、下划线“_”）中的两种。</li></ul>
+     * @var string 新账号密码。密码复杂度要求如下：
+- 字符长度范围[8,32]。
+- 至少包含字母、数字和特殊字符（叹号“!”、at"@"、井号“#”、百分号“%”、插入符“^”、星号“\*”、小括号“()”、下划线“\_”）中的两种。
      */
     public $Password;
 
@@ -67,8 +79,12 @@ class CreateAccountUserRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
-     * @param string $UserName 新账号名称。其格式要求如下：<ul><li>字符范围[1,32]。</li><li>可输入[A,Z]、[a,z]、[1,9]范围的字符以及下划线“_”与短划线“-”。</li></ul>
-     * @param string $Password 新账号密码。密码复杂度要求如下：<ul><li>字符长度范围[8,32]。</li><li>至少包含字母、数字和特殊字符（叹号“!”、at"@"、井号“#”、百分号“%”、插入符“^”、星号“*”、小括号“()”、下划线“_”）中的两种。</li></ul>
+     * @param string $UserName 新账号名称。其格式要求如下：
+- 字符范围[1,64]。
+- 可输入[A,Z]、[a,z]、[1,9]范围的字符以及下划线“\_”与短划线“-”。
+     * @param string $Password 新账号密码。密码复杂度要求如下：
+- 字符长度范围[8,32]。
+- 至少包含字母、数字和特殊字符（叹号“!”、at"@"、井号“#”、百分号“%”、插入符“^”、星号“\*”、小括号“()”、下划线“\_”）中的两种。
      * @param string $MongoUserPassword mongouser 账号对应的密码。mongouser 为系统默认账号，即为创建实例时，设置的密码。
      * @param string $UserDesc 账号备注信息。
      * @param array $AuthRole 账号的读写权限信息。

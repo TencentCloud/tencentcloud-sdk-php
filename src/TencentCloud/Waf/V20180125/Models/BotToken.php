@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScene(array $Scene) 设置场景列表，内容为空表示全部场景应用
  * @method integer getPriority() 获取优先级
  * @method void setPriority(integer $Priority) 设置优先级
+ * @method TokenValidation getTokenValidation() 获取token有效性配置信息
+ * @method void setTokenValidation(TokenValidation $TokenValidation) 设置token有效性配置信息
  */
 class BotToken extends AbstractModel
 {
@@ -94,6 +96,11 @@ class BotToken extends AbstractModel
     public $Priority;
 
     /**
+     * @var TokenValidation token有效性配置信息
+     */
+    public $TokenValidation;
+
+    /**
      * @param string $Name 会话名称
      * @param string $Description 会话描述
      * @param string $Id 会话id
@@ -104,6 +111,7 @@ class BotToken extends AbstractModel
      * @param integer $Timestamp 会话更新的时间戳
      * @param array $Scene 场景列表，内容为空表示全部场景应用
      * @param integer $Priority 优先级
+     * @param TokenValidation $TokenValidation token有效性配置信息
      */
     function __construct()
     {
@@ -156,6 +164,11 @@ class BotToken extends AbstractModel
 
         if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
             $this->Priority = $param["Priority"];
+        }
+
+        if (array_key_exists("TokenValidation",$param) and $param["TokenValidation"] !== null) {
+            $this->TokenValidation = new TokenValidation();
+            $this->TokenValidation->deserialize($param["TokenValidation"]);
         }
     }
 }

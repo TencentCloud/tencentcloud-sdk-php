@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ResetDBInstancePassword请求参数结构体
  *
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
- * @method string getUserName() 获取实例账号名
- * @method void setUserName(string $UserName) 设置实例账号名
- * @method string getPassword() 获取新密码，新密码长度不能少于8位
- * @method void setPassword(string $Password) 设置新密码，新密码长度不能少于8位
+ * @method string getInstanceId() 获取指定实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置指定实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+ * @method string getUserName() 获取指定需修改密码的账号名称。可通过接口 [DescribeAccountUsers](https://cloud.tencent.com/document/product/240/80800) 获取账号列表，复制需修改密码的账号。
+ * @method void setUserName(string $UserName) 设置指定需修改密码的账号名称。可通过接口 [DescribeAccountUsers](https://cloud.tencent.com/document/product/240/80800) 获取账号列表，复制需修改密码的账号。
+ * @method string getPassword() 获取指定账户的新密码。密码复杂度要求：
+- 8-32个字符长度。
+- 至少包含字母、数字和字符（!@#%^\*()\_）中的两种。
+ * @method void setPassword(string $Password) 设置指定账户的新密码。密码复杂度要求：
+- 8-32个字符长度。
+- 至少包含字母、数字和字符（!@#%^\*()\_）中的两种。
  */
 class ResetDBInstancePasswordRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string 指定实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 实例账号名
+     * @var string 指定需修改密码的账号名称。可通过接口 [DescribeAccountUsers](https://cloud.tencent.com/document/product/240/80800) 获取账号列表，复制需修改密码的账号。
      */
     public $UserName;
 
     /**
-     * @var string 新密码，新密码长度不能少于8位
+     * @var string 指定账户的新密码。密码复杂度要求：
+- 8-32个字符长度。
+- 至少包含字母、数字和字符（!@#%^\*()\_）中的两种。
      */
     public $Password;
 
     /**
-     * @param string $InstanceId 实例Id
-     * @param string $UserName 实例账号名
-     * @param string $Password 新密码，新密码长度不能少于8位
+     * @param string $InstanceId 指定实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param string $UserName 指定需修改密码的账号名称。可通过接口 [DescribeAccountUsers](https://cloud.tencent.com/document/product/240/80800) 获取账号列表，复制需修改密码的账号。
+     * @param string $Password 指定账户的新密码。密码复杂度要求：
+- 8-32个字符长度。
+- 至少包含字母、数字和字符（!@#%^\*()\_）中的两种。
      */
     function __construct()
     {

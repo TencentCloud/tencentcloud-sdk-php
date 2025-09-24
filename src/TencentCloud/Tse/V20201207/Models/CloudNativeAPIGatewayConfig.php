@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkId(string $NetworkId) 设置网络 id
  * @method boolean getIPV6FullChain() 获取是否为新 ipv6 CLB
  * @method void setIPV6FullChain(boolean $IPV6FullChain) 设置是否为新 ipv6 CLB
+ * @method string getCustomizedConfigContent() 获取负载均衡个性化配置内容
+ * @method void setCustomizedConfigContent(string $CustomizedConfigContent) 设置负载均衡个性化配置内容
  */
 class CloudNativeAPIGatewayConfig extends AbstractModel
 {
@@ -181,6 +183,11 @@ class CloudNativeAPIGatewayConfig extends AbstractModel
     public $IPV6FullChain;
 
     /**
+     * @var string 负载均衡个性化配置内容
+     */
+    public $CustomizedConfigContent;
+
+    /**
      * @param string $ConsoleType 控制台类型。
      * @param string $HttpUrl HTTP链接地址。
      * @param string $HttpsUrl HTTPS链接地址。
@@ -204,6 +211,7 @@ class CloudNativeAPIGatewayConfig extends AbstractModel
      * @param string $SlaveZoneName 备可用区名称
      * @param string $NetworkId 网络 id
      * @param boolean $IPV6FullChain 是否为新 ipv6 CLB
+     * @param string $CustomizedConfigContent 负载均衡个性化配置内容
      */
     function __construct()
     {
@@ -305,6 +313,10 @@ class CloudNativeAPIGatewayConfig extends AbstractModel
 
         if (array_key_exists("IPV6FullChain",$param) and $param["IPV6FullChain"] !== null) {
             $this->IPV6FullChain = $param["IPV6FullChain"];
+        }
+
+        if (array_key_exists("CustomizedConfigContent",$param) and $param["CustomizedConfigContent"] !== null) {
+            $this->CustomizedConfigContent = $param["CustomizedConfigContent"];
         }
     }
 }

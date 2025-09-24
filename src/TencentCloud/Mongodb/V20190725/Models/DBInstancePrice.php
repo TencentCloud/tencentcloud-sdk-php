@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据库实例价格
  *
- * @method float getUnitPrice() 获取单价
- * @method void setUnitPrice(float $UnitPrice) 设置单价
- * @method float getOriginalPrice() 获取原价
- * @method void setOriginalPrice(float $OriginalPrice) 设置原价
- * @method float getDiscountPrice() 获取折扣价
- * @method void setDiscountPrice(float $DiscountPrice) 设置折扣价
+ * @method float getUnitPrice() 获取实例单价。单位：元。
+ * @method void setUnitPrice(float $UnitPrice) 设置实例单价。单位：元。
+ * @method float getOriginalPrice() 获取实例原价。单位：元。
+ * @method void setOriginalPrice(float $OriginalPrice) 设置实例原价。单位：元。
+ * @method float getDiscountPrice() 获取实例折扣价。单位：元。
+ * @method void setDiscountPrice(float $DiscountPrice) 设置实例折扣价。单位：元。
  */
 class DBInstancePrice extends AbstractModel
 {
     /**
-     * @var float 单价
+     * @var float 实例单价。单位：元。
      */
     public $UnitPrice;
 
     /**
-     * @var float 原价
+     * @var float 实例原价。单位：元。
      */
     public $OriginalPrice;
 
     /**
-     * @var float 折扣价
+     * @var float 实例折扣价。单位：元。
      */
     public $DiscountPrice;
 
     /**
-     * @param float $UnitPrice 单价
-     * @param float $OriginalPrice 原价
-     * @param float $DiscountPrice 折扣价
+     * @param float $UnitPrice 实例单价。单位：元。
+     * @param float $OriginalPrice 实例原价。单位：元。
+     * @param float $DiscountPrice 实例折扣价。单位：元。
      */
     function __construct()
     {

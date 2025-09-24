@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurrentGlobalScene(GlobalSceneInfo $CurrentGlobalScene) 设置当前开启的、匹配范围为全局、优先级最高的场景
  * @method integer getCustomRuleNums() 获取自定义规则总数，不包括BOT白名单
  * @method void setCustomRuleNums(integer $CustomRuleNums) 设置自定义规则总数，不包括BOT白名单
+ * @method boolean getTldStatus() 获取图灵盾开关状态
+ * @method void setTldStatus(boolean $TldStatus) 设置图灵盾开关状态
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -61,6 +63,11 @@ class DescribeBotSceneOverviewResponse extends AbstractModel
     public $CustomRuleNums;
 
     /**
+     * @var boolean 图灵盾开关状态
+     */
+    public $TldStatus;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -71,6 +78,7 @@ class DescribeBotSceneOverviewResponse extends AbstractModel
      * @param integer $ValidSceneCount 生效场景数
      * @param GlobalSceneInfo $CurrentGlobalScene 当前开启的、匹配范围为全局、优先级最高的场景
      * @param integer $CustomRuleNums 自定义规则总数，不包括BOT白名单
+     * @param boolean $TldStatus 图灵盾开关状态
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -105,6 +113,10 @@ class DescribeBotSceneOverviewResponse extends AbstractModel
 
         if (array_key_exists("CustomRuleNums",$param) and $param["CustomRuleNums"] !== null) {
             $this->CustomRuleNums = $param["CustomRuleNums"];
+        }
+
+        if (array_key_exists("TldStatus",$param) and $param["TldStatus"] !== null) {
+            $this->TldStatus = $param["TldStatus"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

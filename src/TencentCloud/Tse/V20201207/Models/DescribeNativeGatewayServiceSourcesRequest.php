@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置单页条数，最大100
  * @method integer getOffset() 获取分页偏移量
  * @method void setOffset(integer $Offset) 设置分页偏移量
+ * @method string getSourceID() 获取服务来源ID
+ * @method void setSourceID(string $SourceID) 设置服务来源ID
  * @method string getSourceName() 获取服务来源实例名称，模糊搜索
  * @method void setSourceName(string $SourceName) 设置服务来源实例名称，模糊搜索
  * @method array getSourceTypes() 获取微服务引擎类型：TSE-Nacos｜TSE-Consul｜TSE-PolarisMesh｜Customer-Nacos｜Customer-Consul｜Customer-PolarisMesh
@@ -53,6 +55,11 @@ class DescribeNativeGatewayServiceSourcesRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var string 服务来源ID
+     */
+    public $SourceID;
+
+    /**
      * @var string 服务来源实例名称，模糊搜索
      */
     public $SourceName;
@@ -76,6 +83,7 @@ class DescribeNativeGatewayServiceSourcesRequest extends AbstractModel
      * @param string $GatewayID 网关实例ID
      * @param integer $Limit 单页条数，最大100
      * @param integer $Offset 分页偏移量
+     * @param string $SourceID 服务来源ID
      * @param string $SourceName 服务来源实例名称，模糊搜索
      * @param array $SourceTypes 微服务引擎类型：TSE-Nacos｜TSE-Consul｜TSE-PolarisMesh｜Customer-Nacos｜Customer-Consul｜Customer-PolarisMesh
      * @param string $OrderField 排序字段类型，当前仅支持SourceName
@@ -104,6 +112,10 @@ class DescribeNativeGatewayServiceSourcesRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("SourceID",$param) and $param["SourceID"] !== null) {
+            $this->SourceID = $param["SourceID"];
         }
 
         if (array_key_exists("SourceName",$param) and $param["SourceName"] !== null) {

@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionInUsed(boolean $SessionInUsed) 设置Session是否正在被启用
  * @method array getRelatedRuleID() 获取Session关联的CC规则ID
  * @method void setRelatedRuleID(array $RelatedRuleID) 设置Session关联的CC规则ID
+ * @method string getKey() 获取精准匹配时，配置的key
+ * @method void setKey(string $Key) 设置精准匹配时，配置的key
  */
 class SessionItem extends AbstractModel
 {
@@ -101,6 +103,11 @@ class SessionItem extends AbstractModel
     public $RelatedRuleID;
 
     /**
+     * @var string 精准匹配时，配置的key
+     */
+    public $Key;
+
+    /**
      * @param string $Category 匹配类型
      * @param string $KeyOrStartMat 起始模式
      * @param string $EndMat 结束模式
@@ -112,6 +119,7 @@ class SessionItem extends AbstractModel
      * @param string $SessionName Session名
      * @param boolean $SessionInUsed Session是否正在被启用
      * @param array $RelatedRuleID Session关联的CC规则ID
+     * @param string $Key 精准匹配时，配置的key
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class SessionItem extends AbstractModel
 
         if (array_key_exists("RelatedRuleID",$param) and $param["RelatedRuleID"] !== null) {
             $this->RelatedRuleID = $param["RelatedRuleID"];
+        }
+
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
         }
     }
 }

@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lke\V20231130\Models;
+namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateAgent请求参数结构体
+ * DeleteSmartEraseTemplate请求参数结构体
  *
- * @method string getAppBizId() 获取应用ID
- * @method void setAppBizId(string $AppBizId) 设置应用ID
- * @method Agent getAgent() 获取要增加的Agent的信息
- * @method void setAgent(Agent $Agent) 设置要增加的Agent的信息
+ * @method integer getDefinition() 获取智能擦除模板唯一标识。
+ * @method void setDefinition(integer $Definition) 设置智能擦除模板唯一标识。
  */
-class CreateAgentRequest extends AbstractModel
+class DeleteSmartEraseTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var integer 智能擦除模板唯一标识。
      */
-    public $AppBizId;
+    public $Definition;
 
     /**
-     * @var Agent 要增加的Agent的信息
-     */
-    public $Agent;
-
-    /**
-     * @param string $AppBizId 应用ID
-     * @param Agent $Agent 要增加的Agent的信息
+     * @param integer $Definition 智能擦除模板唯一标识。
      */
     function __construct()
     {
@@ -54,13 +46,8 @@ class CreateAgentRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AppBizId",$param) and $param["AppBizId"] !== null) {
-            $this->AppBizId = $param["AppBizId"];
-        }
-
-        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
-            $this->Agent = new Agent();
-            $this->Agent->deserialize($param["Agent"]);
+        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
+            $this->Definition = $param["Definition"];
         }
     }
 }

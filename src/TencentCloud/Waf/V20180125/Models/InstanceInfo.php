@@ -132,6 +132,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBasicFlag(integer $BasicFlag) 设置1是基础2025版本；0不是
  * @method NetworkConfig getNetworkConfig() 获取实例的网络配置
  * @method void setNetworkConfig(NetworkConfig $NetworkConfig) 设置实例的网络配置
+ * @method RCEPkg getRCEPkg() 获取RCE设备安全信息包
+ * @method void setRCEPkg(RCEPkg $RCEPkg) 设置RCE设备安全信息包
+ * @method integer getExceedPolicy() 获取超量策略。0：超量沙箱
+1：超量限流
+ * @method void setExceedPolicy(integer $ExceedPolicy) 设置超量策略。0：超量沙箱
+1：超量限流
+ * @method LLMPkg getLLMPkg() 获取大模型安全信息包
+ * @method void setLLMPkg(LLMPkg $LLMPkg) 设置大模型安全信息包
+ * @method string getElasticResourceId() 获取弹性资源Id
+ * @method void setElasticResourceId(string $ElasticResourceId) 设置弹性资源Id
  */
 class InstanceInfo extends AbstractModel
 {
@@ -376,6 +386,27 @@ class InstanceInfo extends AbstractModel
     public $NetworkConfig;
 
     /**
+     * @var RCEPkg RCE设备安全信息包
+     */
+    public $RCEPkg;
+
+    /**
+     * @var integer 超量策略。0：超量沙箱
+1：超量限流
+     */
+    public $ExceedPolicy;
+
+    /**
+     * @var LLMPkg 大模型安全信息包
+     */
+    public $LLMPkg;
+
+    /**
+     * @var string 弹性资源Id
+     */
+    public $ElasticResourceId;
+
+    /**
      * @param string $InstanceId 实例唯一ID
      * @param string $InstanceName 实例名称
      * @param string $ResourceIds 实例对应资源ID，计费使用
@@ -432,6 +463,11 @@ class InstanceInfo extends AbstractModel
      * @param MajorEventsProPkg $MajorEventsProPkg 重保增强包
      * @param integer $BasicFlag 1是基础2025版本；0不是
      * @param NetworkConfig $NetworkConfig 实例的网络配置
+     * @param RCEPkg $RCEPkg RCE设备安全信息包
+     * @param integer $ExceedPolicy 超量策略。0：超量沙箱
+1：超量限流
+     * @param LLMPkg $LLMPkg 大模型安全信息包
+     * @param string $ElasticResourceId 弹性资源Id
      */
     function __construct()
     {
@@ -640,6 +676,24 @@ class InstanceInfo extends AbstractModel
         if (array_key_exists("NetworkConfig",$param) and $param["NetworkConfig"] !== null) {
             $this->NetworkConfig = new NetworkConfig();
             $this->NetworkConfig->deserialize($param["NetworkConfig"]);
+        }
+
+        if (array_key_exists("RCEPkg",$param) and $param["RCEPkg"] !== null) {
+            $this->RCEPkg = new RCEPkg();
+            $this->RCEPkg->deserialize($param["RCEPkg"]);
+        }
+
+        if (array_key_exists("ExceedPolicy",$param) and $param["ExceedPolicy"] !== null) {
+            $this->ExceedPolicy = $param["ExceedPolicy"];
+        }
+
+        if (array_key_exists("LLMPkg",$param) and $param["LLMPkg"] !== null) {
+            $this->LLMPkg = new LLMPkg();
+            $this->LLMPkg->deserialize($param["LLMPkg"]);
+        }
+
+        if (array_key_exists("ElasticResourceId",$param) and $param["ElasticResourceId"] !== null) {
+            $this->ElasticResourceId = $param["ElasticResourceId"];
         }
     }
 }

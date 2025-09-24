@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 批量创建房间的房间信息
  *
  * @method string getName() 获取房间名称。
+字符数不超过256
  * @method void setName(string $Name) 设置房间名称。
+字符数不超过256
  * @method integer getStartTime() 获取预定的房间开始时间，unix时间戳。
  * @method void setStartTime(integer $StartTime) 设置预定的房间开始时间，unix时间戳。
  * @method integer getEndTime() 获取预定的房间结束时间，unix时间戳。
@@ -86,8 +88,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecordStream(integer $RecordStream) 设置录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
  * @method integer getWhiteBoardSnapshotMode() 获取板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
  * @method void setWhiteBoardSnapshotMode(integer $WhiteBoardSnapshotMode) 设置板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
- * @method integer getSubtitlesTranscription() 获取字幕转写功能开关：0关闭，1开启，默认关闭
- * @method void setSubtitlesTranscription(integer $SubtitlesTranscription) 设置字幕转写功能开关：0关闭，1开启，默认关闭
+ * @method integer getSubtitlesTranscription() 获取字幕转写功能开关。可以有以下取值：
+0 不开启字幕转写功能（默认值）
+1 自动转写模式：上课自动开启，下课自动停止
+ * @method void setSubtitlesTranscription(integer $SubtitlesTranscription) 设置字幕转写功能开关。可以有以下取值：
+0 不开启字幕转写功能（默认值）
+1 自动转写模式：上课自动开启，下课自动停止
  * @method array getGuests() 获取嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
  * @method void setGuests(array $Guests) 设置嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
  * @method integer getRecordMerge() 获取录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
@@ -97,6 +103,7 @@ class RoomInfo extends AbstractModel
 {
     /**
      * @var string 房间名称。
+字符数不超过256
      */
     public $Name;
 
@@ -251,7 +258,9 @@ class RoomInfo extends AbstractModel
     public $WhiteBoardSnapshotMode;
 
     /**
-     * @var integer 字幕转写功能开关：0关闭，1开启，默认关闭
+     * @var integer 字幕转写功能开关。可以有以下取值：
+0 不开启字幕转写功能（默认值）
+1 自动转写模式：上课自动开启，下课自动停止
      */
     public $SubtitlesTranscription;
 
@@ -267,6 +276,7 @@ class RoomInfo extends AbstractModel
 
     /**
      * @param string $Name 房间名称。
+字符数不超过256
      * @param integer $StartTime 预定的房间开始时间，unix时间戳。
      * @param integer $EndTime 预定的房间结束时间，unix时间戳。
      * @param integer $Resolution 头像区域，摄像头视频画面的分辨率。可以有如下取值：
@@ -299,7 +309,9 @@ class RoomInfo extends AbstractModel
      * @param string $RecordLang 录制自定义语言，仅recordlayout=9的时候此参数有效
      * @param integer $RecordStream 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
      * @param integer $WhiteBoardSnapshotMode 板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
-     * @param integer $SubtitlesTranscription 字幕转写功能开关：0关闭，1开启，默认关闭
+     * @param integer $SubtitlesTranscription 字幕转写功能开关。可以有以下取值：
+0 不开启字幕转写功能（默认值）
+1 自动转写模式：上课自动开启，下课自动停止
      * @param array $Guests 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
      * @param integer $RecordMerge 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
      */

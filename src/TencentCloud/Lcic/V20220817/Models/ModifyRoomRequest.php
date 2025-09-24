@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * ModifyRoom请求参数结构体
  *
  * @method integer getRoomId() 获取房间ID。
+字符数不超过256
  * @method void setRoomId(integer $RoomId) 设置房间ID。
+字符数不超过256
  * @method integer getSdkAppId() 获取低代码互动课堂的SdkAppId
  * @method void setSdkAppId(integer $SdkAppId) 设置低代码互动课堂的SdkAppId
  * @method integer getStartTime() 获取预定的房间开始时间，unix时间戳（秒）。直播开始后不允许修改。
@@ -112,8 +114,12 @@ video 纯视频
  * @method void setRecordLang(string $RecordLang) 设置录制自定义语言，仅recordlayout=9的时候此参数有效
  * @method integer getWhiteBoardSnapshotMode() 获取板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
  * @method void setWhiteBoardSnapshotMode(integer $WhiteBoardSnapshotMode) 设置板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
- * @method integer getSubtitlesTranscription() 获取字幕转写功能开关：0关闭，1开启，默认关闭
- * @method void setSubtitlesTranscription(integer $SubtitlesTranscription) 设置字幕转写功能开关：0关闭，1开启，默认关闭
+ * @method integer getSubtitlesTranscription() 获取字幕转写功能开关。可以有以下取值：
+0 不开启字幕转写功能（默认值）
+1 自动转写模式：上课自动开启，下课自动停止
+ * @method void setSubtitlesTranscription(integer $SubtitlesTranscription) 设置字幕转写功能开关。可以有以下取值：
+0 不开启字幕转写功能（默认值）
+1 自动转写模式：上课自动开启，下课自动停止
  * @method array getGuests() 获取嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
  * @method void setGuests(array $Guests) 设置嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
  * @method integer getRecordMerge() 获取录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
@@ -123,6 +129,7 @@ class ModifyRoomRequest extends AbstractModel
 {
     /**
      * @var integer 房间ID。
+字符数不超过256
      */
     public $RoomId;
 
@@ -277,7 +284,9 @@ video 纯视频
     public $WhiteBoardSnapshotMode;
 
     /**
-     * @var integer 字幕转写功能开关：0关闭，1开启，默认关闭
+     * @var integer 字幕转写功能开关。可以有以下取值：
+0 不开启字幕转写功能（默认值）
+1 自动转写模式：上课自动开启，下课自动停止
      */
     public $SubtitlesTranscription;
 
@@ -293,6 +302,7 @@ video 纯视频
 
     /**
      * @param integer $RoomId 房间ID。
+字符数不超过256
      * @param integer $SdkAppId 低代码互动课堂的SdkAppId
      * @param integer $StartTime 预定的房间开始时间，unix时间戳（秒）。直播开始后不允许修改。
      * @param integer $EndTime 预定的房间结束时间，unix时间戳（秒）。直播开始后不允许修改。
@@ -338,7 +348,9 @@ video 纯视频
      * @param string $RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
      * @param string $RecordLang 录制自定义语言，仅recordlayout=9的时候此参数有效
      * @param integer $WhiteBoardSnapshotMode 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
-     * @param integer $SubtitlesTranscription 字幕转写功能开关：0关闭，1开启，默认关闭
+     * @param integer $SubtitlesTranscription 字幕转写功能开关。可以有以下取值：
+0 不开启字幕转写功能（默认值）
+1 自动转写模式：上课自动开启，下课自动停止
      * @param array $Guests 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
      * @param integer $RecordMerge 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
      */

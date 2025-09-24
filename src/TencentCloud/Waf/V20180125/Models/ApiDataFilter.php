@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperator(string $Operator) 设置等于
  * @method string getValue() 获取日期，手机号，邮箱等
  * @method void setValue(string $Value) 设置日期，手机号，邮箱等
+ * @method array getValueList() 获取风险等级
+ * @method void setValueList(array $ValueList) 设置风险等级
  */
 class ApiDataFilter extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ApiDataFilter extends AbstractModel
     public $Value;
 
     /**
+     * @var array 风险等级
+     */
+    public $ValueList;
+
+    /**
      * @param string $Entity 数据标签，是否活跃，功能场景
      * @param string $Operator 等于
      * @param string $Value 日期，手机号，邮箱等
+     * @param array $ValueList 风险等级
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ApiDataFilter extends AbstractModel
 
         if (array_key_exists("Value",$param) and $param["Value"] !== null) {
             $this->Value = $param["Value"];
+        }
+
+        if (array_key_exists("ValueList",$param) and $param["ValueList"] !== null) {
+            $this->ValueList = $param["ValueList"];
         }
     }
 }

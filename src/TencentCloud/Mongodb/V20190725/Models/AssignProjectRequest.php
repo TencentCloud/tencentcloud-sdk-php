@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceIds() 获取实例 ID 列表，请登录[MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
  * @method void setInstanceIds(array $InstanceIds) 设置实例 ID 列表，请登录[MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
- * @method integer getProjectId() 获取项目ID，用户已创建项目的唯一ID。请在控制台账号中心的项目管理中复制项目 ID。
- * @method void setProjectId(integer $ProjectId) 设置项目ID，用户已创建项目的唯一ID。请在控制台账号中心的项目管理中复制项目 ID。
+ * @method integer getProjectId() 获取项目ID，用户已创建项目的唯一ID。请在控制台账号中心的[项目管理](https://console.cloud.tencent.com/project)中复制项目 ID。
+ * @method void setProjectId(integer $ProjectId) 设置项目ID，用户已创建项目的唯一ID。请在控制台账号中心的[项目管理](https://console.cloud.tencent.com/project)中复制项目 ID。
  */
 class AssignProjectRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class AssignProjectRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var integer 项目ID，用户已创建项目的唯一ID。请在控制台账号中心的项目管理中复制项目 ID。
+     * @var integer 项目ID，用户已创建项目的唯一ID。请在控制台账号中心的[项目管理](https://console.cloud.tencent.com/project)中复制项目 ID。
      */
     public $ProjectId;
 
     /**
      * @param array $InstanceIds 实例 ID 列表，请登录[MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
-     * @param integer $ProjectId 项目ID，用户已创建项目的唯一ID。请在控制台账号中心的项目管理中复制项目 ID。
+     * @param integer $ProjectId 项目ID，用户已创建项目的唯一ID。请在控制台账号中心的[项目管理](https://console.cloud.tencent.com/project)中复制项目 ID。
      */
     function __construct()
     {

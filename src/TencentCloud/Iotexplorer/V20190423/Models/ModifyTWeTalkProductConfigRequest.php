@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGreetingMessage(string $GreetingMessage) 设置欢迎语
  * @method integer getVoiceType() 获取音色，支持的音色列表：100510000-阅读男声智逍遥；101001-情感女声智瑜；101002-通用女声智聆；101003-客服女声智美；101004-通用男声智云；101005-通用女声智莉；101006-助手女声智言；101008-客服女声智琪；101009-知性女声智芸；101010-通用男声智华；101011-新闻女声智燕；101012-新闻女声智丹；101013-新闻男声智辉；101014 -新闻男声智宁；101015-男童声智萌；101016-女童声智甜；101017-情感女声智蓉；101018-情感男声智靖；101019-粤语女声智彤。
  * @method void setVoiceType(integer $VoiceType) 设置音色，支持的音色列表：100510000-阅读男声智逍遥；101001-情感女声智瑜；101002-通用女声智聆；101003-客服女声智美；101004-通用男声智云；101005-通用女声智莉；101006-助手女声智言；101008-客服女声智琪；101009-知性女声智芸；101010-通用男声智华；101011-新闻女声智燕；101012-新闻女声智丹；101013-新闻男声智辉；101014 -新闻男声智宁；101015-男童声智萌；101016-女童声智甜；101017-情感女声智蓉；101018-情感男声智靖；101019-粤语女声智彤。
+ * @method string getFastVoiceType() 获取复刻音色
+ * @method void setFastVoiceType(string $FastVoiceType) 设置复刻音色
  * @method string getTargetLanguage() 获取支持的语言，zh-中文；en-英文；默认zh
  * @method void setTargetLanguage(string $TargetLanguage) 设置支持的语言，zh-中文；en-英文；默认zh
  */
@@ -54,6 +56,11 @@ class ModifyTWeTalkProductConfigRequest extends AbstractModel
     public $VoiceType;
 
     /**
+     * @var string 复刻音色
+     */
+    public $FastVoiceType;
+
+    /**
      * @var string 支持的语言，zh-中文；en-英文；默认zh
      */
     public $TargetLanguage;
@@ -63,6 +70,7 @@ class ModifyTWeTalkProductConfigRequest extends AbstractModel
      * @param string $SystemPrompt 系统提示词
      * @param string $GreetingMessage 欢迎语
      * @param integer $VoiceType 音色，支持的音色列表：100510000-阅读男声智逍遥；101001-情感女声智瑜；101002-通用女声智聆；101003-客服女声智美；101004-通用男声智云；101005-通用女声智莉；101006-助手女声智言；101008-客服女声智琪；101009-知性女声智芸；101010-通用男声智华；101011-新闻女声智燕；101012-新闻女声智丹；101013-新闻男声智辉；101014 -新闻男声智宁；101015-男童声智萌；101016-女童声智甜；101017-情感女声智蓉；101018-情感男声智靖；101019-粤语女声智彤。
+     * @param string $FastVoiceType 复刻音色
      * @param string $TargetLanguage 支持的语言，zh-中文；en-英文；默认zh
      */
     function __construct()
@@ -92,6 +100,10 @@ class ModifyTWeTalkProductConfigRequest extends AbstractModel
 
         if (array_key_exists("VoiceType",$param) and $param["VoiceType"] !== null) {
             $this->VoiceType = $param["VoiceType"];
+        }
+
+        if (array_key_exists("FastVoiceType",$param) and $param["FastVoiceType"] !== null) {
+            $this->FastVoiceType = $param["FastVoiceType"];
         }
 
         if (array_key_exists("TargetLanguage",$param) and $param["TargetLanguage"] !== null) {

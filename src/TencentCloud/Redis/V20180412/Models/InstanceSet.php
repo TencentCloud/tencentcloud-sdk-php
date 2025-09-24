@@ -117,7 +117,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCloseTime() 获取实例隔离开始的时间。
  * @method void setCloseTime(string $CloseTime) 设置实例隔离开始的时间。
  * @method integer getSlaveReadWeight() 获取从节点读取权重。
+- 0：表示关闭副本只读。
+- 100：表示开启副本只读。
  * @method void setSlaveReadWeight(integer $SlaveReadWeight) 设置从节点读取权重。
+- 0：表示关闭副本只读。
+- 100：表示开启副本只读。
  * @method array getInstanceTags() 获取实例关联的标签信息。
  * @method void setInstanceTags(array $InstanceTags) 设置实例关联的标签信息。
  * @method string getProjectName() 获取项目名称。
@@ -358,6 +362,8 @@ class InstanceSet extends AbstractModel
 
     /**
      * @var integer 从节点读取权重。
+- 0：表示关闭副本只读。
+- 100：表示开启副本只读。
      */
     public $SlaveReadWeight;
 
@@ -552,6 +558,8 @@ class InstanceSet extends AbstractModel
      * @param integer $PriceId 计费 ID。
      * @param string $CloseTime 实例隔离开始的时间。
      * @param integer $SlaveReadWeight 从节点读取权重。
+- 0：表示关闭副本只读。
+- 100：表示开启副本只读。
      * @param array $InstanceTags 实例关联的标签信息。
      * @param string $ProjectName 项目名称。
      * @param boolean $NoAuth 是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>

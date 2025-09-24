@@ -70,12 +70,12 @@ back：后视图；
 Normal：可生成带纹理的几何模型。
 LowPoly：可生成智能减面后的模型。
 Geometry：可生成不带纹理的几何模型（白模），选择此任务时，EnablePBR参数不生效。
-Sketch：可输入草图或线稿图生成模型。
+Sketch：可输入草图或线稿图生成模型，此模式下prompt和ImageUrl/ImageBase64可一起输入。
  * @method void setGenerateType(string $GenerateType) 设置生成任务类型，默认Normal，参考值：
 Normal：可生成带纹理的几何模型。
 LowPoly：可生成智能减面后的模型。
 Geometry：可生成不带纹理的几何模型（白模），选择此任务时，EnablePBR参数不生效。
-Sketch：可输入草图或线稿图生成模型。
+Sketch：可输入草图或线稿图生成模型，此模式下prompt和ImageUrl/ImageBase64可一起输入。
  */
 class SubmitHunyuanTo3DProJobRequest extends AbstractModel
 {
@@ -131,7 +131,7 @@ back：后视图；
 Normal：可生成带纹理的几何模型。
 LowPoly：可生成智能减面后的模型。
 Geometry：可生成不带纹理的几何模型（白模），选择此任务时，EnablePBR参数不生效。
-Sketch：可输入草图或线稿图生成模型。
+Sketch：可输入草图或线稿图生成模型，此模式下prompt和ImageUrl/ImageBase64可一起输入。
      */
     public $GenerateType;
 
@@ -163,7 +163,7 @@ back：后视图；
 Normal：可生成带纹理的几何模型。
 LowPoly：可生成智能减面后的模型。
 Geometry：可生成不带纹理的几何模型（白模），选择此任务时，EnablePBR参数不生效。
-Sketch：可输入草图或线稿图生成模型。
+Sketch：可输入草图或线稿图生成模型，此模式下prompt和ImageUrl/ImageBase64可一起输入。
      */
     function __construct()
     {

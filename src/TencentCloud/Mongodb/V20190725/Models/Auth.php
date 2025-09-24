@@ -20,37 +20,53 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 用户权限
  *
- * @method integer getMask() 获取当前账号具有的权限信息。<ul><li>0：无权限。</li><li>1：只读。</li><li>2：只写。</li><li>3：读写。</li></ul>
+ * @method integer getMask() 获取当前账号具有的权限信息。
+- 0：无权限。
+- 1：只读。
+- 3：读写。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMask(integer $Mask) 设置当前账号具有的权限信息。<ul><li>0：无权限。</li><li>1：只读。</li><li>2：只写。</li><li>3：读写。</li></ul>
+ * @method void setMask(integer $Mask) 设置当前账号具有的权限信息。
+- 0：无权限。
+- 1：只读。
+- 3：读写。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNameSpace() 获取指具有当前账号权限的数据库名。
-<ul><li>* ：表示所有数据库。</li><li>db.name：表示特定name的数据库。</li></ul>
+- \* ：表示所有数据库。
+- db.name：表示特定 name 的数据库。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNameSpace(string $NameSpace) 设置指具有当前账号权限的数据库名。
-<ul><li>* ：表示所有数据库。</li><li>db.name：表示特定name的数据库。</li></ul>
+- \* ：表示所有数据库。
+- db.name：表示特定 name 的数据库。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Auth extends AbstractModel
 {
     /**
-     * @var integer 当前账号具有的权限信息。<ul><li>0：无权限。</li><li>1：只读。</li><li>2：只写。</li><li>3：读写。</li></ul>
+     * @var integer 当前账号具有的权限信息。
+- 0：无权限。
+- 1：只读。
+- 3：读写。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mask;
 
     /**
      * @var string 指具有当前账号权限的数据库名。
-<ul><li>* ：表示所有数据库。</li><li>db.name：表示特定name的数据库。</li></ul>
+- \* ：表示所有数据库。
+- db.name：表示特定 name 的数据库。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NameSpace;
 
     /**
-     * @param integer $Mask 当前账号具有的权限信息。<ul><li>0：无权限。</li><li>1：只读。</li><li>2：只写。</li><li>3：读写。</li></ul>
+     * @param integer $Mask 当前账号具有的权限信息。
+- 0：无权限。
+- 1：只读。
+- 3：读写。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NameSpace 指具有当前账号权限的数据库名。
-<ul><li>* ：表示所有数据库。</li><li>db.name：表示特定name的数据库。</li></ul>
+- \* ：表示所有数据库。
+- db.name：表示特定 name 的数据库。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

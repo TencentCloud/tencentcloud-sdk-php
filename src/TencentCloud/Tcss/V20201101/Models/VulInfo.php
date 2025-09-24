@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefenceHostCount(integer $DefenceHostCount) 设置漏洞防御主机数量
  * @method integer getDefendedCount() 获取已防御攻击次数
  * @method void setDefendedCount(integer $DefendedCount) 设置已防御攻击次数
+ * @method integer getRaspOpenNodeCount() 获取漏洞对应机器的应用防护开启数量
+ * @method void setRaspOpenNodeCount(integer $RaspOpenNodeCount) 设置漏洞对应机器的应用防护开启数量
+ * @method integer getRaspClosedNodeCount() 获取漏洞对应机器的应用防护关闭数量
+ * @method void setRaspClosedNodeCount(integer $RaspClosedNodeCount) 设置漏洞对应机器的应用防护关闭数量
  */
 class VulInfo extends AbstractModel
 {
@@ -143,6 +147,16 @@ class VulInfo extends AbstractModel
     public $DefendedCount;
 
     /**
+     * @var integer 漏洞对应机器的应用防护开启数量
+     */
+    public $RaspOpenNodeCount;
+
+    /**
+     * @var integer 漏洞对应机器的应用防护关闭数量
+     */
+    public $RaspClosedNodeCount;
+
+    /**
      * @param string $Name 漏洞名称
      * @param array $Tags 漏洞标签
      * @param float $CVSSV3Score CVSS V3分数
@@ -160,6 +174,8 @@ class VulInfo extends AbstractModel
      * @param string $DefenceScope 漏洞防御主机范围: MANUAL:自选主机节点，ALL:全部
      * @param integer $DefenceHostCount 漏洞防御主机数量
      * @param integer $DefendedCount 已防御攻击次数
+     * @param integer $RaspOpenNodeCount 漏洞对应机器的应用防护开启数量
+     * @param integer $RaspClosedNodeCount 漏洞对应机器的应用防护关闭数量
      */
     function __construct()
     {
@@ -240,6 +256,14 @@ class VulInfo extends AbstractModel
 
         if (array_key_exists("DefendedCount",$param) and $param["DefendedCount"] !== null) {
             $this->DefendedCount = $param["DefendedCount"];
+        }
+
+        if (array_key_exists("RaspOpenNodeCount",$param) and $param["RaspOpenNodeCount"] !== null) {
+            $this->RaspOpenNodeCount = $param["RaspOpenNodeCount"];
+        }
+
+        if (array_key_exists("RaspClosedNodeCount",$param) and $param["RaspClosedNodeCount"] !== null) {
+            $this->RaspClosedNodeCount = $param["RaspClosedNodeCount"];
         }
     }
 }

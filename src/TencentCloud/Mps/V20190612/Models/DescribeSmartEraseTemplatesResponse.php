@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lke\V20231130\Models;
+namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyAgent返回参数结构体
+ * DescribeSmartEraseTemplates返回参数结构体
  *
- * @method string getAgentId() 获取修改的AgentId
- * @method void setAgentId(string $AgentId) 设置修改的AgentId
+ * @method integer getTotalCount() 获取符合过滤条件的记录总数。
+ * @method void setTotalCount(integer $TotalCount) 设置符合过滤条件的记录总数。
+ * @method array getSmartEraseTemplateSet() 获取智能擦除模板详情列表。
+ * @method void setSmartEraseTemplateSet(array $SmartEraseTemplateSet) 设置智能擦除模板详情列表。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyAgentResponse extends AbstractModel
+class DescribeSmartEraseTemplatesResponse extends AbstractModel
 {
     /**
-     * @var string 修改的AgentId
+     * @var integer 符合过滤条件的记录总数。
      */
-    public $AgentId;
+    public $TotalCount;
+
+    /**
+     * @var array 智能擦除模板详情列表。
+     */
+    public $SmartEraseTemplateSet;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class ModifyAgentResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AgentId 修改的AgentId
+     * @param integer $TotalCount 符合过滤条件的记录总数。
+     * @param array $SmartEraseTemplateSet 智能擦除模板详情列表。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,17 @@ class ModifyAgentResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AgentId",$param) and $param["AgentId"] !== null) {
-            $this->AgentId = $param["AgentId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("SmartEraseTemplateSet",$param) and $param["SmartEraseTemplateSet"] !== null) {
+            $this->SmartEraseTemplateSet = [];
+            foreach ($param["SmartEraseTemplateSet"] as $key => $value){
+                $obj = new SmartEraseTemplateItem();
+                $obj->deserialize($value);
+                array_push($this->SmartEraseTemplateSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

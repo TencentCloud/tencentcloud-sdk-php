@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCelRule(string $CelRule) 设置cel表达式
  * @method string getLogicalOp() 获取配置方式的逻辑操作符，and或者or
  * @method void setLogicalOp(string $LogicalOp) 设置配置方式的逻辑操作符，and或者or
+ * @method string getPageId() 获取页面ID
+ * @method void setPageId(string $PageId) 设置页面ID
+ * @method integer getActionRatio() 获取动作灰度比例，默认值100
+ * @method void setActionRatio(integer $ActionRatio) 设置动作灰度比例，默认值100
  */
 class UpsertCCRuleRequest extends AbstractModel
 {
@@ -178,6 +182,16 @@ class UpsertCCRuleRequest extends AbstractModel
     public $LogicalOp;
 
     /**
+     * @var string 页面ID
+     */
+    public $PageId;
+
+    /**
+     * @var integer 动作灰度比例，默认值100
+     */
+    public $ActionRatio;
+
+    /**
      * @param string $Domain 域名
      * @param string $Name 名称
      * @param integer $Status 状态
@@ -200,6 +214,8 @@ class UpsertCCRuleRequest extends AbstractModel
      * @param string $LimitMethod 限频方式
      * @param string $CelRule cel表达式
      * @param string $LogicalOp 配置方式的逻辑操作符，and或者or
+     * @param string $PageId 页面ID
+     * @param integer $ActionRatio 动作灰度比例，默认值100
      */
     function __construct()
     {
@@ -300,6 +316,14 @@ class UpsertCCRuleRequest extends AbstractModel
 
         if (array_key_exists("LogicalOp",$param) and $param["LogicalOp"] !== null) {
             $this->LogicalOp = $param["LogicalOp"];
+        }
+
+        if (array_key_exists("PageId",$param) and $param["PageId"] !== null) {
+            $this->PageId = $param["PageId"];
+        }
+
+        if (array_key_exists("ActionRatio",$param) and $param["ActionRatio"] !== null) {
+            $this->ActionRatio = $param["ActionRatio"];
         }
     }
 }

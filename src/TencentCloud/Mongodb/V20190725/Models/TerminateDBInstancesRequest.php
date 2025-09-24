@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TerminateDBInstances请求参数结构体
  *
- * @method string getInstanceId() 获取指定预隔离实例ID。格式如：cmgo-p8vnipr5。
- * @method void setInstanceId(string $InstanceId) 设置指定预隔离实例ID。格式如：cmgo-p8vnipr5。
+ * @method string getInstanceId() 获取指定预隔离实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制预隔离实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置指定预隔离实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制预隔离实例 ID。
  */
 class TerminateDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 指定预隔离实例ID。格式如：cmgo-p8vnipr5。
+     * @var string 指定预隔离实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制预隔离实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId 指定预隔离实例ID。格式如：cmgo-p8vnipr5。
+     * @param string $InstanceId 指定预隔离实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制预隔离实例 ID。
      */
     function __construct()
     {

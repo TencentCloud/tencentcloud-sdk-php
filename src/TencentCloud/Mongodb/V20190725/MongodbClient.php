@@ -75,7 +75,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\OfflineIsolatedDBInstanceResponse OfflineIsolatedDBInstance(Models\OfflineIsolatedDBInstanceRequest $req) 本接口(OfflineIsolatedDBInstance)用于立即下线隔离状态的云数据库实例。进行操作的实例状态必须为隔离状态。
  * @method Models\RenameInstanceResponse RenameInstance(Models\RenameInstanceRequest $req) 本接口(RenameInstance)用于修改云数据库实例的名称。
  * @method Models\RenewDBInstancesResponse RenewDBInstances(Models\RenewDBInstancesRequest $req) 本接口(RenewDBInstance)用于续费云数据库实例，仅支持付费模式为包年包月的实例。按量计费实例不需要续费。
- * @method Models\ResetDBInstancePasswordResponse ResetDBInstancePassword(Models\ResetDBInstancePasswordRequest $req) 修改实例用户的密码
+ * @method Models\ResetDBInstancePasswordResponse ResetDBInstancePassword(Models\ResetDBInstancePasswordRequest $req) 本接口（ResetDBInstancePassword）用于重置实例访问密码。
  * @method Models\RestartNodesResponse RestartNodes(Models\RestartNodesRequest $req) 本接口用于重启数据库节点。
  * @method Models\SetAccountUserPrivilegeResponse SetAccountUserPrivilege(Models\SetAccountUserPrivilegeRequest $req) 本接口（SetAccountUserPrivilege）用于设置实例的账号权限。
  * @method Models\SetBackupRulesResponse SetBackupRules(Models\SetBackupRulesRequest $req) 本接口(SetBackupRules)用于设置 MongoDB 云数据库的自动备份规则。

@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionName(string $SessionName) 设置Session名
  * @method integer getSessionID() 获取Session对应ID
  * @method void setSessionID(integer $SessionID) 设置Session对应ID
+ * @method string getKey() 获取精准匹配时配置的key
+ * @method void setKey(string $Key) 设置精准匹配时配置的key
  */
 class UpsertSessionRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class UpsertSessionRequest extends AbstractModel
     public $SessionID;
 
     /**
+     * @var string 精准匹配时配置的key
+     */
+    public $Key;
+
+    /**
      * @param string $Domain 域名
      * @param string $Source session来源位置
      * @param string $Category 提取类别
@@ -104,6 +111,7 @@ class UpsertSessionRequest extends AbstractModel
      * @param string $Edition 版本
      * @param string $SessionName Session名
      * @param integer $SessionID Session对应ID
+     * @param string $Key 精准匹配时配置的key
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class UpsertSessionRequest extends AbstractModel
 
         if (array_key_exists("SessionID",$param) and $param["SessionID"] !== null) {
             $this->SessionID = $param["SessionID"];
+        }
+
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
         }
     }
 }

@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionId(string $RegionId) 设置网关地域 Id，可以从接口 DescribeMultiPathGatewayRegions 获取 RegionId 列表。
  * @method array getLines() 获取线路信息，当查询网关信息详情 DescribeMultiPathGateway 的时候会返回，当查询网关列表 DescribeMultiPathGateways 的时候不会返回。
  * @method void setLines(array $Lines) 设置线路信息，当查询网关信息详情 DescribeMultiPathGateway 的时候会返回，当查询网关列表 DescribeMultiPathGateways 的时候不会返回。
+ * @method string getNeedConfirm() 获取网关回源 IP 列表发生了变化是否需要重新确认，取值有：<li>true：回源 IP 列表发生了变化，需要确认；</li><li>false：回源 IP 列表未发生变化，无需确认。</li>
+ * @method void setNeedConfirm(string $NeedConfirm) 设置网关回源 IP 列表发生了变化是否需要重新确认，取值有：<li>true：回源 IP 列表发生了变化，需要确认；</li><li>false：回源 IP 列表未发生变化，无需确认。</li>
  */
 class MultiPathGateway extends AbstractModel
 {
@@ -98,6 +100,11 @@ class MultiPathGateway extends AbstractModel
     public $Lines;
 
     /**
+     * @var string 网关回源 IP 列表发生了变化是否需要重新确认，取值有：<li>true：回源 IP 列表发生了变化，需要确认；</li><li>false：回源 IP 列表未发生变化，无需确认。</li>
+     */
+    public $NeedConfirm;
+
+    /**
      * @param string $GatewayId 网关 ID。
      * @param string $GatewayName 网关名。
      * @param string $GatewayType 网关类型，取值有：
@@ -112,6 +119,7 @@ class MultiPathGateway extends AbstractModel
      * @param string $GatewayIP 网关 IP， 格式为 IPv4。
      * @param string $RegionId 网关地域 Id，可以从接口 DescribeMultiPathGatewayRegions 获取 RegionId 列表。
      * @param array $Lines 线路信息，当查询网关信息详情 DescribeMultiPathGateway 的时候会返回，当查询网关列表 DescribeMultiPathGateways 的时候不会返回。
+     * @param string $NeedConfirm 网关回源 IP 列表发生了变化是否需要重新确认，取值有：<li>true：回源 IP 列表发生了变化，需要确认；</li><li>false：回源 IP 列表未发生变化，无需确认。</li>
      */
     function __construct()
     {
@@ -161,6 +169,10 @@ class MultiPathGateway extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Lines, $obj);
             }
+        }
+
+        if (array_key_exists("NeedConfirm",$param) and $param["NeedConfirm"] !== null) {
+            $this->NeedConfirm = $param["NeedConfirm"];
         }
     }
 }

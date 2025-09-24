@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageId(string $PageId) 设置拦截页面id
  * @method string getLogicalOp() 获取匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
  * @method void setLogicalOp(string $LogicalOp) 设置匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+ * @method integer getActionRatio() 获取规则生效比例
+ * @method void setActionRatio(integer $ActionRatio) 设置规则生效比例
  */
 class ModifyCustomRuleRequest extends AbstractModel
 {
@@ -146,6 +148,11 @@ class ModifyCustomRuleRequest extends AbstractModel
     public $LogicalOp;
 
     /**
+     * @var integer 规则生效比例
+     */
+    public $ActionRatio;
+
+    /**
      * @param string $Domain 编辑的域名
      * @param integer $RuleId 编辑的规则ID
      * @param string $RuleName 编辑的规则名称
@@ -165,6 +172,7 @@ class ModifyCustomRuleRequest extends AbstractModel
      * @param integer $Status 开关状态，小程序风控规则的时候传该值
      * @param string $PageId 拦截页面id
      * @param string $LogicalOp 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+     * @param integer $ActionRatio 规则生效比例
      */
     function __construct()
     {
@@ -247,6 +255,10 @@ class ModifyCustomRuleRequest extends AbstractModel
 
         if (array_key_exists("LogicalOp",$param) and $param["LogicalOp"] !== null) {
             $this->LogicalOp = $param["LogicalOp"];
+        }
+
+        if (array_key_exists("ActionRatio",$param) and $param["ActionRatio"] !== null) {
+            $this->ActionRatio = $param["ActionRatio"];
         }
     }
 }

@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setValidTime(integer $ValidTime) 设置有效时间
  * @method integer getTsVersion() 获取版本
  * @method void setTsVersion(integer $TsVersion) 设置版本
- * @method string getOptions() 获取规则详情
- * @method void setOptions(string $Options) 设置规则详情
+ * @method string getOptions() 获取key为匹配字段；args为base64编码后的参数，等于号前为匹配参数，等于号后为匹配内容；match为逻辑符号；encodeflag为参数内容是否编码
+ * @method void setOptions(string $Options) 设置key为匹配字段；args为base64编码后的参数，等于号前为匹配参数，等于号后为匹配内容；match为逻辑符号；encodeflag为参数内容是否编码
  * @method integer getRuleId() 获取规则ID
  * @method void setRuleId(integer $RuleId) 设置规则ID
  * @method string getEventId() 获取事件id
@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCelRule(string $CelRule) 设置cel表达式
  * @method string getLogicalOp() 获取逻辑操作符
  * @method void setLogicalOp(string $LogicalOp) 设置逻辑操作符
+ * @method string getPageId() 获取页面ID
+ * @method void setPageId(string $PageId) 设置页面ID
+ * @method integer getActionRatio() 获取动作灰度比例，默认值100
+ * @method void setActionRatio(integer $ActionRatio) 设置动作灰度比例，默认值100
  */
 class CCRuleItems extends AbstractModel
 {
@@ -117,7 +121,7 @@ class CCRuleItems extends AbstractModel
     public $TsVersion;
 
     /**
-     * @var string 规则详情
+     * @var string key为匹配字段；args为base64编码后的参数，等于号前为匹配参数，等于号后为匹配内容；match为逻辑符号；encodeflag为参数内容是否编码
      */
     public $Options;
 
@@ -157,6 +161,16 @@ class CCRuleItems extends AbstractModel
     public $LogicalOp;
 
     /**
+     * @var string 页面ID
+     */
+    public $PageId;
+
+    /**
+     * @var integer 动作灰度比例，默认值100
+     */
+    public $ActionRatio;
+
+    /**
      * @param string $Name 名字
      * @param integer $Status 状态
      * @param integer $Advance 模式
@@ -168,7 +182,7 @@ class CCRuleItems extends AbstractModel
      * @param integer $Priority 优先级
      * @param integer $ValidTime 有效时间
      * @param integer $TsVersion 版本
-     * @param string $Options 规则详情
+     * @param string $Options key为匹配字段；args为base64编码后的参数，等于号前为匹配参数，等于号后为匹配内容；match为逻辑符号；encodeflag为参数内容是否编码
      * @param integer $RuleId 规则ID
      * @param string $EventId 事件id
      * @param array $SessionApplied 关联的Session规则
@@ -176,6 +190,8 @@ class CCRuleItems extends AbstractModel
      * @param string $LimitMethod 限频方式
      * @param string $CelRule cel表达式
      * @param string $LogicalOp 逻辑操作符
+     * @param string $PageId 页面ID
+     * @param integer $ActionRatio 动作灰度比例，默认值100
      */
     function __construct()
     {
@@ -264,6 +280,14 @@ class CCRuleItems extends AbstractModel
 
         if (array_key_exists("LogicalOp",$param) and $param["LogicalOp"] !== null) {
             $this->LogicalOp = $param["LogicalOp"];
+        }
+
+        if (array_key_exists("PageId",$param) and $param["PageId"] !== null) {
+            $this->PageId = $param["PageId"];
+        }
+
+        if (array_key_exists("ActionRatio",$param) and $param["ActionRatio"] !== null) {
+            $this->ActionRatio = $param["ActionRatio"];
         }
     }
 }

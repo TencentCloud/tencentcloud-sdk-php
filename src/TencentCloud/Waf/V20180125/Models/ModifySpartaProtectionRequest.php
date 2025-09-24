@@ -78,6 +78,8 @@ https：使用https协议回源
  * @method void setCiphers(array $Ciphers) 设置加密套件信息
  * @method integer getCipherTemplate() 获取加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板
  * @method void setCipherTemplate(integer $CipherTemplate) 设置加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板
+ * @method integer getProxyConnectTimeout() 获取WAF与源站的连接超时时间，默认10s。
+ * @method void setProxyConnectTimeout(integer $ProxyConnectTimeout) 设置WAF与源站的连接超时时间，默认10s。
  * @method integer getProxyReadTimeout() 获取WAF与源站的读超时时间，默认300s。
  * @method void setProxyReadTimeout(integer $ProxyReadTimeout) 设置WAF与源站的读超时时间，默认300s。
  * @method integer getProxySendTimeout() 获取WAF与源站的写超时时间，默认300s。
@@ -126,6 +128,8 @@ https：使用https协议回源
  * @method void setUpstreamRules(array $UpstreamRules) 设置分流回源时生效，分流回源的规则。
  * @method integer getUseCase() 获取业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
  * @method void setUseCase(integer $UseCase) 设置业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+ * @method integer getGzip() 获取gzip开关。0：关闭 1：默认值，打开
+ * @method void setGzip(integer $Gzip) 设置gzip开关。0：关闭 1：默认值，打开
  */
 class ModifySpartaProtectionRequest extends AbstractModel
 {
@@ -269,6 +273,11 @@ https：使用https协议回源
     public $CipherTemplate;
 
     /**
+     * @var integer WAF与源站的连接超时时间，默认10s。
+     */
+    public $ProxyConnectTimeout;
+
+    /**
      * @var integer WAF与源站的读超时时间，默认300s。
      */
     public $ProxyReadTimeout;
@@ -373,6 +382,11 @@ https：使用https协议回源
     public $UseCase;
 
     /**
+     * @var integer gzip开关。0：关闭 1：默认值，打开
+     */
+    public $Gzip;
+
+    /**
      * @param string $Domain 域名
      * @param string $DomainId 必填项。域名唯一ID
      * @param string $InstanceID 必填项。域名所属实例id
@@ -402,6 +416,7 @@ https：使用https协议回源
      * @param integer $TLSVersion TLS版本信息
      * @param array $Ciphers 加密套件信息
      * @param integer $CipherTemplate 加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板
+     * @param integer $ProxyConnectTimeout WAF与源站的连接超时时间，默认10s。
      * @param integer $ProxyReadTimeout WAF与源站的读超时时间，默认300s。
      * @param integer $ProxySendTimeout WAF与源站的写超时时间，默认300s。
      * @param integer $SniType WAF回源时的SNI类型。
@@ -426,6 +441,7 @@ https：使用https协议回源
      * @param integer $UpstreamPolicy 回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源
      * @param array $UpstreamRules 分流回源时生效，分流回源的规则。
      * @param integer $UseCase 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+     * @param integer $Gzip gzip开关。0：关闭 1：默认值，打开
      */
     function __construct()
     {
@@ -553,6 +569,10 @@ https：使用https协议回源
             $this->CipherTemplate = $param["CipherTemplate"];
         }
 
+        if (array_key_exists("ProxyConnectTimeout",$param) and $param["ProxyConnectTimeout"] !== null) {
+            $this->ProxyConnectTimeout = $param["ProxyConnectTimeout"];
+        }
+
         if (array_key_exists("ProxyReadTimeout",$param) and $param["ProxyReadTimeout"] !== null) {
             $this->ProxyReadTimeout = $param["ProxyReadTimeout"];
         }
@@ -636,6 +656,10 @@ https：使用https协议回源
 
         if (array_key_exists("UseCase",$param) and $param["UseCase"] !== null) {
             $this->UseCase = $param["UseCase"];
+        }
+
+        if (array_key_exists("Gzip",$param) and $param["Gzip"] !== null) {
+            $this->Gzip = $param["Gzip"];
         }
     }
 }

@@ -31,7 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getProtocol() 获取协议
  * @method void setProtocol(string $Protocol) 设置协议
  * @method string getRegion() 获取地区
-"多伦多": "ca",
+    "多伦多": "ca",
     "广州": "gz",
     "成都": "cd",
     "福州": "fzec",
@@ -58,9 +58,10 @@ use TencentCloud\Common\AbstractModel;
     "首尔": "kr",
     "上海": "sh",
     "新加坡": "sg",
-    "清远": "qy"
+    "清远": "qy",
+    "雅加达": "jkt"
  * @method void setRegion(string $Region) 设置地区
-"多伦多": "ca",
+    "多伦多": "ca",
     "广州": "gz",
     "成都": "cd",
     "福州": "fzec",
@@ -87,7 +88,8 @@ use TencentCloud\Common\AbstractModel;
     "首尔": "kr",
     "上海": "sh",
     "新加坡": "sg",
-    "清远": "qy"
+    "清远": "qy",
+    "雅加达": "jkt"
  * @method string getVip() 获取接入IP
  * @method void setVip(string $Vip) 设置接入IP
  * @method integer getVport() 获取接入端口
@@ -130,7 +132,7 @@ class LoadBalancerPackageNew extends AbstractModel
 
     /**
      * @var string 地区
-"多伦多": "ca",
+    "多伦多": "ca",
     "广州": "gz",
     "成都": "cd",
     "福州": "fzec",
@@ -157,7 +159,8 @@ class LoadBalancerPackageNew extends AbstractModel
     "首尔": "kr",
     "上海": "sh",
     "新加坡": "sg",
-    "清远": "qy"
+    "清远": "qy",
+    "雅加达": "jkt"
      */
     public $Region;
 
@@ -198,7 +201,7 @@ class LoadBalancerPackageNew extends AbstractModel
      * @param string $LoadBalancerName 负载均衡名
      * @param string $Protocol 协议
      * @param string $Region 地区
-"多伦多": "ca",
+    "多伦多": "ca",
     "广州": "gz",
     "成都": "cd",
     "福州": "fzec",
@@ -225,7 +228,8 @@ class LoadBalancerPackageNew extends AbstractModel
     "首尔": "kr",
     "上海": "sh",
     "新加坡": "sg",
-    "清远": "qy"
+    "清远": "qy",
+    "雅加达": "jkt"
      * @param string $Vip 接入IP
      * @param integer $Vport 接入端口
      * @param string $Zone 地域

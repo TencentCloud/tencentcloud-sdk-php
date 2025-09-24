@@ -25,7 +25,6 @@ use TencentCloud\Lke\V20231130\Models as Models;
 /**
  * @method Models\CheckAttributeLabelExistResponse CheckAttributeLabelExist(Models\CheckAttributeLabelExistRequest $req) 检查属性下的标签名是否存在
  * @method Models\CheckAttributeLabelReferResponse CheckAttributeLabelRefer(Models\CheckAttributeLabelReferRequest $req) 检查属性标签引用
- * @method Models\CreateAgentResponse CreateAgent(Models\CreateAgentRequest $req) 创建一个Agent
  * @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) 创建知识引擎应用。
  * @method Models\CreateAttributeLabelResponse CreateAttributeLabel(Models\CreateAttributeLabelRequest $req) 创建标签
  * @method Models\CreateDocCateResponse CreateDocCate(Models\CreateDocCateRequest $req) 创建Doc分类
@@ -109,7 +108,6 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\ListUnsatisfiedReplyResponse ListUnsatisfiedReply(Models\ListUnsatisfiedReplyRequest $req) 查询不满意回复列表
  * @method Models\ListUsageCallDetailResponse ListUsageCallDetail(Models\ListUsageCallDetailRequest $req) 列表查询单次调用明细
  * @method Models\ListWorkflowRunsResponse ListWorkflowRuns(Models\ListWorkflowRunsRequest $req) 此接口可查询已创建的所有工作流异步运行实例。
- * @method Models\ModifyAgentResponse ModifyAgent(Models\ModifyAgentRequest $req) 修改Agent信息
  * @method Models\ModifyAppResponse ModifyApp(Models\ModifyAppRequest $req) 修改应用请求结构体
  * @method Models\ModifyAttributeLabelResponse ModifyAttributeLabel(Models\ModifyAttributeLabelRequest $req) 编辑属性标签
  * @method Models\ModifyDocResponse ModifyDoc(Models\ModifyDocRequest $req) 修改文档

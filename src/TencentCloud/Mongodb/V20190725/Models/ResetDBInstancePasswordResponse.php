@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ResetDBInstancePassword返回参数结构体
  *
- * @method string getAsyncRequestId() 获取异步请求Id，用户查询该流程的运行状态
- * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步请求Id，用户查询该流程的运行状态
+ * @method string getAsyncRequestId() 获取任务请求 ID。
+ * @method void setAsyncRequestId(string $AsyncRequestId) 设置任务请求 ID。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ResetDBInstancePasswordResponse extends AbstractModel
 {
     /**
-     * @var string 异步请求Id，用户查询该流程的运行状态
+     * @var string 任务请求 ID。
      */
     public $AsyncRequestId;
 
@@ -38,7 +38,7 @@ class ResetDBInstancePasswordResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AsyncRequestId 异步请求Id，用户查询该流程的运行状态
+     * @param string $AsyncRequestId 任务请求 ID。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置域名
  * @method string getLogicalOp() 获取匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
  * @method void setLogicalOp(string $LogicalOp) 设置匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+ * @method integer getActionRatio() 获取规则灰度的比例，默认是100，不灰度
+ * @method void setActionRatio(integer $ActionRatio) 设置规则灰度的比例，默认是100，不灰度
  */
 class DescribeCustomRulesRspRuleListItem extends AbstractModel
 {
@@ -171,6 +173,11 @@ class DescribeCustomRulesRspRuleListItem extends AbstractModel
     public $LogicalOp;
 
     /**
+     * @var integer 规则灰度的比例，默认是100，不灰度
+     */
+    public $ActionRatio;
+
+    /**
      * @param string $ActionType 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
      * @param string $Bypass 跳过的策略
      * @param string $CreateTime 创建时间
@@ -192,6 +199,7 @@ class DescribeCustomRulesRspRuleListItem extends AbstractModel
      * @param string $PageId 拦截页面id
      * @param string $Domain 域名
      * @param string $LogicalOp 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+     * @param integer $ActionRatio 规则灰度的比例，默认是100，不灰度
      */
     function __construct()
     {
@@ -294,6 +302,10 @@ class DescribeCustomRulesRspRuleListItem extends AbstractModel
 
         if (array_key_exists("LogicalOp",$param) and $param["LogicalOp"] !== null) {
             $this->LogicalOp = $param["LogicalOp"];
+        }
+
+        if (array_key_exists("ActionRatio",$param) and $param["ActionRatio"] !== null) {
+            $this->ActionRatio = $param["ActionRatio"];
         }
     }
 }

@@ -45,7 +45,7 @@ composer require tencentcloud/tencentcloud-sdk-php
 
 推荐使用 [API 3.0 Explorer](https://console.cloud.tencent.com/api/explorer)，提供在线调用、签名验证、SDK 代码生成和快速检索接口等能力，能显著降低使用云 API 3.0 和 SDK 的难度。
 
-还可以参考 SDK 仓库中 [examples](https://github.com/TencentCloud/tencentcloud-sdk-php/tree/master/examples) 目录中的示例，展示了更多的用法。
+还可以参考 SDK 仓库中 [examples](./examples) 目录中的示例，展示了更多的用法。
 
 下面以查询实例接口DescribeInstances为例:
 
@@ -148,7 +148,7 @@ catch(TencentCloudSDKException $e) {
 
 注意：目前仅支持 POST 方法，签名方法仅支持签名方法 v3。
 
-请参考 [调用示例](https://github.com/TencentCloud/tencentcloud-sdk-php/tree/master/examples/common/CommonClient.php)
+请参考 [调用示例](./examples/common/CommonClient.php)
 
 
 # 常见问题
@@ -180,13 +180,13 @@ $client = new OcrClient($cred, 'ap-beijing', $this->clientProfile);
 ```php
 use TencentCloud\Common\Profile\RegionBreakerProfile;
 // 开启地域容灾
-$clientProfile->enableRegionBreaker=true;  
+$clientProfile->enableRegionBreaker=true;
 // 设置主备节点，以cvm产品为例，假设主节点在上海，备节点在北京，则配置如下
 $regionBreakerProfile = new RegionBreakerProfile(
     "cvm.ap-shanghai.tencentcloudapi.com",	// 主节点
-    "cvm.ap-beijing.tencentcloudapi.com"    // 备节点	
+    "cvm.ap-beijing.tencentcloudapi.com"    // 备节点
 );
-$clientProfile->setRegionBreakerProfile($regionBreakerProfile);		
+$clientProfile->setRegionBreakerProfile($regionBreakerProfile);
 ```
 
 ## 证书问题

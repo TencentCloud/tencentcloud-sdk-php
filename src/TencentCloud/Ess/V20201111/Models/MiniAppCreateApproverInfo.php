@@ -54,11 +54,11 @@ use TencentCloud\Common\AbstractModel;
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
 
 在未指定签署人电子签UserId情况下，为必填参数
- * @method string getApproverMobile() 获取签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。 此手机号用于通知和用户的实名认证等环境，请确认手机号所有方为此合同签署方。
+ * @method string getApproverMobile() 获取签署方经办人手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。 此手机号用于通知和用户的实名认证等环境，请确认手机号所有方为此合同签署方。
 
 注：`在未指定签署人电子签UserId情况下，为必填参数`
 
- * @method void setApproverMobile(string $ApproverMobile) 设置签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。 此手机号用于通知和用户的实名认证等环境，请确认手机号所有方为此合同签署方。
+ * @method void setApproverMobile(string $ApproverMobile) 设置签署方经办人手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。 此手机号用于通知和用户的实名认证等环境，请确认手机号所有方为此合同签署方。
 
 注：`在未指定签署人电子签UserId情况下，为必填参数`
 
@@ -123,7 +123,7 @@ class MiniAppCreateApproverInfo extends AbstractModel
     public $ApproverName;
 
     /**
-     * @var string 签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。 此手机号用于通知和用户的实名认证等环境，请确认手机号所有方为此合同签署方。
+     * @var string 签署方经办人手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。 此手机号用于通知和用户的实名认证等环境，请确认手机号所有方为此合同签署方。
 
 注：`在未指定签署人电子签UserId情况下，为必填参数`
 
@@ -174,7 +174,7 @@ class MiniAppCreateApproverInfo extends AbstractModel
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
 
 在未指定签署人电子签UserId情况下，为必填参数
-     * @param string $ApproverMobile 签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。 此手机号用于通知和用户的实名认证等环境，请确认手机号所有方为此合同签署方。
+     * @param string $ApproverMobile 签署方经办人手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。 此手机号用于通知和用户的实名认证等环境，请确认手机号所有方为此合同签署方。
 
 注：`在未指定签署人电子签UserId情况下，为必填参数`
 

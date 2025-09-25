@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 抄送信息
  *
- * @method string getMobile() 获取被抄送方手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+ * @method string getMobile() 获取被抄送方手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
 请确认手机号所有方为此业务通知方。
- * @method void setMobile(string $Mobile) 设置被抄送方手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+ * @method void setMobile(string $Mobile) 设置被抄送方手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
 请确认手机号所有方为此业务通知方。
  * @method string getName() 获取被抄送方姓名。
 抄送方的姓名将用于身份认证，请确保填写的姓名为抄送方的真实姓名，而非昵称等代名。
@@ -50,7 +50,7 @@ use TencentCloud\Common\AbstractModel;
 class CcInfo extends AbstractModel
 {
     /**
-     * @var string 被抄送方手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+     * @var string 被抄送方手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
 请确认手机号所有方为此业务通知方。
      */
     public $Mobile;
@@ -83,7 +83,7 @@ class CcInfo extends AbstractModel
     public $NotifyType;
 
     /**
-     * @param string $Mobile 被抄送方手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+     * @param string $Mobile 被抄送方手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
 请确认手机号所有方为此业务通知方。
      * @param string $Name 被抄送方姓名。
 抄送方的姓名将用于身份认证，请确保填写的姓名为抄送方的真实姓名，而非昵称等代名。

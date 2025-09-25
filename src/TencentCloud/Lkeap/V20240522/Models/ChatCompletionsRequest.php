@@ -38,8 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStream(boolean $Stream) 设置是否流式输出
  * @method float getTemperature() 获取控制生成的随机性，较高的值会产生更多样化的输出。
  * @method void setTemperature(float $Temperature) 设置控制生成的随机性，较高的值会产生更多样化的输出。
- * @method integer getMaxTokens() 获取最大生成的token数量，默认为4096，最大可设置为16384
- * @method void setMaxTokens(integer $MaxTokens) 设置最大生成的token数量，默认为4096，最大可设置为16384
+ * @method integer getMaxTokens() 获取模型最大输出长度（单位 token），不包含思维链内容。
+默认为4096，取值范围：各个模型不同，参考各个模型最大输出长度（示例：4k，即4096）。
+输出 token 的总长度受模型的上下文长度限制。
+ * @method void setMaxTokens(integer $MaxTokens) 设置模型最大输出长度（单位 token），不包含思维链内容。
+默认为4096，取值范围：各个模型不同，参考各个模型最大输出长度（示例：4k，即4096）。
+输出 token 的总长度受模型的上下文长度限制。
  * @method boolean getEnableSearch() 获取是否启用联网搜索
  * @method void setEnableSearch(boolean $EnableSearch) 设置是否启用联网搜索
  * @method Thinking getThinking() 获取思维链开关，本参数仅在deepseek v3.1时生效
@@ -73,7 +77,9 @@ class ChatCompletionsRequest extends AbstractModel
     public $Temperature;
 
     /**
-     * @var integer 最大生成的token数量，默认为4096，最大可设置为16384
+     * @var integer 模型最大输出长度（单位 token），不包含思维链内容。
+默认为4096，取值范围：各个模型不同，参考各个模型最大输出长度（示例：4k，即4096）。
+输出 token 的总长度受模型的上下文长度限制。
      */
     public $MaxTokens;
 
@@ -97,7 +103,9 @@ class ChatCompletionsRequest extends AbstractModel
 
      * @param boolean $Stream 是否流式输出
      * @param float $Temperature 控制生成的随机性，较高的值会产生更多样化的输出。
-     * @param integer $MaxTokens 最大生成的token数量，默认为4096，最大可设置为16384
+     * @param integer $MaxTokens 模型最大输出长度（单位 token），不包含思维链内容。
+默认为4096，取值范围：各个模型不同，参考各个模型最大输出长度（示例：4k，即4096）。
+输出 token 的总长度受模型的上下文长度限制。
      * @param boolean $EnableSearch 是否启用联网搜索
      * @param Thinking $Thinking 思维链开关，本参数仅在deepseek v3.1时生效
      */

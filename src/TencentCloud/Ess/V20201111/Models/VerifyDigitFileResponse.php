@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPdfResourceMd5(string $PdfResourceMd5) 设置加签文件MD5哈希值
  * @method integer getVerifyResult() 获取验签结果代码，代码的含义如下：<ul><li>**1**：文件验证成功。</li><li>**2**：文件验证失败。</li></ul>
  * @method void setVerifyResult(integer $VerifyResult) 设置验签结果代码，代码的含义如下：<ul><li>**1**：文件验证成功。</li><li>**2**：文件验证失败。</li></ul>
- * @method string getVerifySerialNo() 获取验签序列号, 为11为数组组成的字符串
- * @method void setVerifySerialNo(string $VerifySerialNo) 设置验签序列号, 为11为数组组成的字符串
+ * @method string getVerifySerialNo() 获取验签序列号, 为11位数字组成的字符串
+ * @method void setVerifySerialNo(string $VerifySerialNo) 设置验签序列号, 为11位数字组成的字符串
  * @method array getVerifyDigitFileResults() 获取验签结果详情，每个签名域对应的验签结果。
  * @method void setVerifyDigitFileResults(array $VerifyDigitFileResults) 设置验签结果详情，每个签名域对应的验签结果。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -44,7 +44,7 @@ class VerifyDigitFileResponse extends AbstractModel
     public $VerifyResult;
 
     /**
-     * @var string 验签序列号, 为11为数组组成的字符串
+     * @var string 验签序列号, 为11位数字组成的字符串
      */
     public $VerifySerialNo;
 
@@ -61,7 +61,7 @@ class VerifyDigitFileResponse extends AbstractModel
     /**
      * @param string $PdfResourceMd5 加签文件MD5哈希值
      * @param integer $VerifyResult 验签结果代码，代码的含义如下：<ul><li>**1**：文件验证成功。</li><li>**2**：文件验证失败。</li></ul>
-     * @param string $VerifySerialNo 验签序列号, 为11为数组组成的字符串
+     * @param string $VerifySerialNo 验签序列号, 为11位数字组成的字符串
      * @param array $VerifyDigitFileResults 验签结果详情，每个签名域对应的验签结果。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 云监控通知渠道组信息
  *
- * @method string getNoticeId() 获取云监控通知模版ID
- * @method void setNoticeId(string $NoticeId) 设置云监控通知模版ID
- * @method string getContentTmplId() 获取云监控内容模版ID，不传默认内容模版
+ * @method string getNoticeId() 获取腾讯云可观测平台通知模板 ID
+ * @method void setNoticeId(string $NoticeId) 设置腾讯云可观测平台通知模板 ID
+ * @method string getContentTmplId() 获取腾讯云可观测平台内容模板ID，不传默认内容模板
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setContentTmplId(string $ContentTmplId) 设置云监控内容模版ID，不传默认内容模版
+ * @method void setContentTmplId(string $ContentTmplId) 设置腾讯云可观测平台内容模板ID，不传默认内容模板
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAlarmLevels() 获取告警级别,0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)
  * @method void setAlarmLevels(array $AlarmLevels) 设置告警级别,0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class MonitorNoticeRule extends AbstractModel
 {
     /**
-     * @var string 云监控通知模版ID
+     * @var string 腾讯云可观测平台通知模板 ID
      */
     public $NoticeId;
 
     /**
-     * @var string 云监控内容模版ID，不传默认内容模版
+     * @var string 腾讯云可观测平台内容模板ID，不传默认内容模板
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContentTmplId;
@@ -48,8 +48,8 @@ class MonitorNoticeRule extends AbstractModel
     public $AlarmLevels;
 
     /**
-     * @param string $NoticeId 云监控通知模版ID
-     * @param string $ContentTmplId 云监控内容模版ID，不传默认内容模版
+     * @param string $NoticeId 腾讯云可观测平台通知模板 ID
+     * @param string $ContentTmplId 腾讯云可观测平台内容模板ID，不传默认内容模板
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AlarmLevels 告警级别,0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)
      */

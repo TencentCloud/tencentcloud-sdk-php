@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupResourceTypeList(array $GroupResourceTypeList) 设置部署组资源类型列表
  * @method string getStatus() 获取部署组状态过滤字段
  * @method void setStatus(string $Status) 设置部署组状态过滤字段
- * @method array getGroupIdList() 获取无
- * @method void setGroupIdList(array $GroupIdList) 设置无
+ * @method array getGroupIdList() 获取部署组ID列表
+ * @method void setGroupIdList(array $GroupIdList) 设置部署组ID列表
  */
 class DescribeGroupsRequest extends AbstractModel
 {
@@ -96,7 +96,7 @@ class DescribeGroupsRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var array 无
+     * @var array 部署组ID列表
      */
     public $GroupIdList;
 
@@ -111,7 +111,7 @@ class DescribeGroupsRequest extends AbstractModel
      * @param string $ClusterId 集群 ID。调用[DescribeSimpleClusters](https://cloud.tencent.com/document/api/649/36047)查询已创建的集群或通过[CreateCluster](https://cloud.tencent.com/document/api/649/36049)接口创建新的集群。
      * @param array $GroupResourceTypeList 部署组资源类型列表
      * @param string $Status 部署组状态过滤字段
-     * @param array $GroupIdList 无
+     * @param array $GroupIdList 部署组ID列表
      */
     function __construct()
     {

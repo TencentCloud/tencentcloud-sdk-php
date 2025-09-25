@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
 注：`创建和更新场景无需填写。`
  * @method string getDisplayName() 获取显示的用户名/昵称。
  * @method void setDisplayName(string $DisplayName) 设置显示的用户名/昵称。
- * @method string getMobile() 获取用户手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
- * @method void setMobile(string $Mobile) 设置用户手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+ * @method string getMobile() 获取用户手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
+ * @method void setMobile(string $Mobile) 设置用户手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
  * @method string getEmail() 获取用户邮箱。
  * @method void setEmail(string $Email) 设置用户邮箱。
  * @method string getOpenId() 获取用户在第三方平台ID。
@@ -85,7 +85,7 @@ class Staff extends AbstractModel
     public $DisplayName;
 
     /**
-     * @var string 用户手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+     * @var string 用户手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
      */
     public $Mobile;
 
@@ -158,7 +158,7 @@ class Staff extends AbstractModel
      * @param string $UserId 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
 注：`创建和更新场景无需填写。`
      * @param string $DisplayName 显示的用户名/昵称。
-     * @param string $Mobile 用户手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+     * @param string $Mobile 用户手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
      * @param string $Email 用户邮箱。
      * @param string $OpenId 用户在第三方平台ID。
 注：`如需在此接口提醒员工实名，该参数不传。`

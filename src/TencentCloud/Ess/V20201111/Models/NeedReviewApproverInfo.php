@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
 <li>PERSON 个人（含个人自动签）</li></ul>
  * @method string getApproverName() 获取签署方经办人的姓名。 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
  * @method void setApproverName(string $ApproverName) 设置签署方经办人的姓名。 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
- * @method string getApproverMobile() 获取签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。 请确认手机号所有方为此合同签署方。
- * @method void setApproverMobile(string $ApproverMobile) 设置签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。 请确认手机号所有方为此合同签署方。
+ * @method string getApproverMobile() 获取签署方经办人手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。 请确认手机号所有方为此合同签署方。
+ * @method void setApproverMobile(string $ApproverMobile) 设置签署方经办人手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。 请确认手机号所有方为此合同签署方。
  * @method string getApproverIdCardType() 获取签署方经办人的证件类型，支持以下类型
 <ul><li>ID_CARD 中国大陆居民身份证  (默认值)</li>
 <li>HONGKONG_AND_MACAO 中国港澳居民来往内地通行证</li>
@@ -77,7 +77,7 @@ class NeedReviewApproverInfo extends AbstractModel
     public $ApproverName;
 
     /**
-     * @var string 签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。 请确认手机号所有方为此合同签署方。
+     * @var string 签署方经办人手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。 请确认手机号所有方为此合同签署方。
      */
     public $ApproverMobile;
 
@@ -114,7 +114,7 @@ class NeedReviewApproverInfo extends AbstractModel
 <ul><li> ORGANIZATION 企业（含企业自动签）</li>
 <li>PERSON 个人（含个人自动签）</li></ul>
      * @param string $ApproverName 签署方经办人的姓名。 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
-     * @param string $ApproverMobile 签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。 请确认手机号所有方为此合同签署方。
+     * @param string $ApproverMobile 签署方经办人手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。 请确认手机号所有方为此合同签署方。
      * @param string $ApproverIdCardType 签署方经办人的证件类型，支持以下类型
 <ul><li>ID_CARD 中国大陆居民身份证  (默认值)</li>
 <li>HONGKONG_AND_MACAO 中国港澳居民来往内地通行证</li>

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method TTSConfig getTTSConfig() 获取语音同传配置，开启同传时，需要传递
  * @method void setTTSConfig(TTSConfig $TTSConfig) 设置语音同传配置，开启同传时，需要传递
+ * @method array getTerminology() 获取翻译术语集合
+ * @method void setTerminology(array $Terminology) 设置翻译术语集合
  */
 class TranslationConfig extends AbstractModel
 {
@@ -51,11 +53,17 @@ class TranslationConfig extends AbstractModel
     public $TTSConfig;
 
     /**
+     * @var array 翻译术语集合
+     */
+    public $Terminology;
+
+    /**
      * @param array $TargetLanguages 翻译的目标语言，目标语种列表（ISO 639-1）
 
      * @param integer $Mode  1： 仅文字翻译，  2： 语音同传
 
      * @param TTSConfig $TTSConfig 语音同传配置，开启同传时，需要传递
+     * @param array $Terminology 翻译术语集合
      */
     function __construct()
     {
@@ -81,6 +89,15 @@ class TranslationConfig extends AbstractModel
         if (array_key_exists("TTSConfig",$param) and $param["TTSConfig"] !== null) {
             $this->TTSConfig = new TTSConfig();
             $this->TTSConfig->deserialize($param["TTSConfig"]);
+        }
+
+        if (array_key_exists("Terminology",$param) and $param["Terminology"] !== null) {
+            $this->Terminology = [];
+            foreach ($param["Terminology"] as $key => $value){
+                $obj = new Terminology();
+                $obj->deserialize($value);
+                array_push($this->Terminology, $obj);
+            }
         }
     }
 }

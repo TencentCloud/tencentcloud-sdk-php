@@ -18,7 +18,7 @@ namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 批量认证企业任务详情信息，其中包括 TaskId，状态信息等等。
+ * 批量认证企业任务详情信息，其中包括 TaskId，状态信息等。
  *
  * @method string getTaskId() 获取生成注册链接的任务Id
  * @method void setTaskId(string $TaskId) 设置生成注册链接的任务Id

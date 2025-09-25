@@ -80,34 +80,14 @@ UpstreamProtocol：与Protocol相同
 1： 长连接
  * @method string getInstanceID() 获取必填项，域名所属实例id
  * @method void setInstanceID(string $InstanceID) 设置必填项，域名所属实例id
- * @method integer getHttpsRewrite() 获取必填项，是否开启HTTP强制跳转到HTTPS。
-0：不强制跳转
-1：开启强制跳转
- * @method void setHttpsRewrite(integer $HttpsRewrite) 设置必填项，是否开启HTTP强制跳转到HTTPS。
-0：不强制跳转
-1：开启强制跳转
- * @method integer getIsHttp2() 获取必填项，是否开启HTTP2，需要开启HTTPS协议支持。
-0：关闭
-1：开启
- * @method void setIsHttp2(integer $IsHttp2) 设置必填项，是否开启HTTP2，需要开启HTTPS协议支持。
-0：关闭
-1：开启
- * @method integer getActiveCheck() 获取必填项，是否开启主动健康检测。
-0：不开启
-1：开启
- * @method void setActiveCheck(integer $ActiveCheck) 设置必填项，是否开启主动健康检测。
-0：不开启
-1：开启
- * @method integer getCipherTemplate() 获取必填项，加密套件模板。
-0：不支持选择，使用默认模板  
-1：通用型模板 
-2：安全型模板
-3：自定义模板
- * @method void setCipherTemplate(integer $CipherTemplate) 设置必填项，加密套件模板。
-0：不支持选择，使用默认模板  
-1：通用型模板 
-2：安全型模板
-3：自定义模板
+ * @method integer getHttpsRewrite() 获取是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转
+ * @method void setHttpsRewrite(integer $HttpsRewrite) 设置是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转
+ * @method integer getIsHttp2() 获取是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启
+ * @method void setIsHttp2(integer $IsHttp2) 设置是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启
+ * @method integer getActiveCheck() 获取是否开启主动健康检测。0：不开启1：开启
+ * @method void setActiveCheck(integer $ActiveCheck) 设置是否开启主动健康检测。0：不开启1：开启
+ * @method integer getCipherTemplate() 获取加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板
+ * @method void setCipherTemplate(integer $CipherTemplate) 设置加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板
  * @method string getCert() 获取CertType为1时，需要填充此参数，表示自有证书的证书链
  * @method void setCert(string $Cert) 设置CertType为1时，需要填充此参数，表示自有证书的证书链
  * @method string getPrivateKey() 获取CertType为1时，需要填充此参数，表示自有证书的私钥
@@ -270,32 +250,22 @@ UpstreamProtocol：与Protocol相同
     public $InstanceID;
 
     /**
-     * @var integer 必填项，是否开启HTTP强制跳转到HTTPS。
-0：不强制跳转
-1：开启强制跳转
+     * @var integer 是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转
      */
     public $HttpsRewrite;
 
     /**
-     * @var integer 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
-0：关闭
-1：开启
+     * @var integer 是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启
      */
     public $IsHttp2;
 
     /**
-     * @var integer 必填项，是否开启主动健康检测。
-0：不开启
-1：开启
+     * @var integer 是否开启主动健康检测。0：不开启1：开启
      */
     public $ActiveCheck;
 
     /**
-     * @var integer 必填项，加密套件模板。
-0：不支持选择，使用默认模板  
-1：通用型模板 
-2：安全型模板
-3：自定义模板
+     * @var integer 加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板
      */
     public $CipherTemplate;
 
@@ -529,20 +499,10 @@ UpstreamProtocol：与Protocol相同
 0： 短连接
 1： 长连接
      * @param string $InstanceID 必填项，域名所属实例id
-     * @param integer $HttpsRewrite 必填项，是否开启HTTP强制跳转到HTTPS。
-0：不强制跳转
-1：开启强制跳转
-     * @param integer $IsHttp2 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
-0：关闭
-1：开启
-     * @param integer $ActiveCheck 必填项，是否开启主动健康检测。
-0：不开启
-1：开启
-     * @param integer $CipherTemplate 必填项，加密套件模板。
-0：不支持选择，使用默认模板  
-1：通用型模板 
-2：安全型模板
-3：自定义模板
+     * @param integer $HttpsRewrite 是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转
+     * @param integer $IsHttp2 是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启
+     * @param integer $ActiveCheck 是否开启主动健康检测。0：不开启1：开启
+     * @param integer $CipherTemplate 加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板
      * @param string $Cert CertType为1时，需要填充此参数，表示自有证书的证书链
      * @param string $PrivateKey CertType为1时，需要填充此参数，表示自有证书的私钥
      * @param string $SSLId CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id

@@ -140,6 +140,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeTablesNameResponse DescribeTablesName(Models\DescribeTablesNameRequest $req) 本接口（DescribeTables）用于查询数据表名称列表
  * @method Models\DescribeTaskLogResponse DescribeTaskLog(Models\DescribeTaskLogRequest $req) 本接口（DescribeTaskLog）用于获取spark 作业任务日志详情
  * @method Models\DescribeTaskMonitorInfosResponse DescribeTaskMonitorInfos(Models\DescribeTaskMonitorInfosRequest $req) 查询任务监控指标信息
+ * @method Models\DescribeTaskResourceUsageResponse DescribeTaskResourceUsage(Models\DescribeTaskResourceUsageRequest $req) 返回任务洞察资源用量
  * @method Models\DescribeTaskResultResponse DescribeTaskResult(Models\DescribeTaskResultRequest $req) 查询任务结果，仅支持30天以内的任务查询结果，且返回数据大小超过近50M会进行截断。
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 该接口（DescribleTasks）用于查询任务列表
  * @method Models\DescribeTasksAnalysisResponse DescribeTasksAnalysis(Models\DescribeTasksAnalysisRequest $req) 该接口用于洞察分析列表

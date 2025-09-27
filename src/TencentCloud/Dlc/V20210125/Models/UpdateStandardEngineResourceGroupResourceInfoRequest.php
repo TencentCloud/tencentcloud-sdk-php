@@ -58,6 +58,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSparkSpecMode(string $SparkSpecMode) 设置仅SQL资源组资源配置模式，fast：快速模式，custom：自定义模式
  * @method integer getSparkSize() 获取仅SQL资源组资源上限，仅用于快速模式
  * @method void setSparkSize(integer $SparkSize) 设置仅SQL资源组资源上限，仅用于快速模式
+ * @method integer getDriverGPUSpec() 获取gpuDriver规格
+ * @method void setDriverGPUSpec(integer $DriverGPUSpec) 设置gpuDriver规格
+ * @method integer getExecutorGPUSpec() 获取gpuExcutor 规格
+ * @method void setExecutorGPUSpec(integer $ExecutorGPUSpec) 设置gpuExcutor 规格
+ * @method integer getGPULimitSize() 获取gpu 上限
+ * @method void setGPULimitSize(integer $GPULimitSize) 设置gpu 上限
+ * @method integer getGPUSize() 获取gpu 规格
+ * @method void setGPUSize(integer $GPUSize) 设置gpu 规格
+ * @method integer getPythonGPUSpec() 获取gpupod 规格
+ * @method void setPythonGPUSpec(integer $PythonGPUSpec) 设置gpupod 规格
  */
 class UpdateStandardEngineResourceGroupResourceInfoRequest extends AbstractModel
 {
@@ -149,6 +159,31 @@ class UpdateStandardEngineResourceGroupResourceInfoRequest extends AbstractModel
     public $SparkSize;
 
     /**
+     * @var integer gpuDriver规格
+     */
+    public $DriverGPUSpec;
+
+    /**
+     * @var integer gpuExcutor 规格
+     */
+    public $ExecutorGPUSpec;
+
+    /**
+     * @var integer gpu 上限
+     */
+    public $GPULimitSize;
+
+    /**
+     * @var integer gpu 规格
+     */
+    public $GPUSize;
+
+    /**
+     * @var integer gpupod 规格
+     */
+    public $PythonGPUSpec;
+
+    /**
      * @param string $EngineResourceGroupName 引擎资源组名称
      * @param string $DriverCuSpec driver的cu规格：
 当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu），内存型cu为cpu：men=1:8，m.small（1cu内存型）、m.medium（2cu内存型）、m.large（4cu内存型）、m.xlarge（8cu内存型）
@@ -168,6 +203,11 @@ class UpdateStandardEngineResourceGroupResourceInfoRequest extends AbstractModel
      * @param string $PythonCuSpec python类型资源组python单机节点资源上限，该值要小于资源组的资源上限.small:1cu medium:2cu large:4cu xlarge:8cu 4xlarge:16cu 8xlarge:32cu 16xlarge:64cu，如果是高内存型资源，在类型前面加上m.
      * @param string $SparkSpecMode 仅SQL资源组资源配置模式，fast：快速模式，custom：自定义模式
      * @param integer $SparkSize 仅SQL资源组资源上限，仅用于快速模式
+     * @param integer $DriverGPUSpec gpuDriver规格
+     * @param integer $ExecutorGPUSpec gpuExcutor 规格
+     * @param integer $GPULimitSize gpu 上限
+     * @param integer $GPUSize gpu 规格
+     * @param integer $PythonGPUSpec gpupod 规格
      */
     function __construct()
     {
@@ -248,6 +288,26 @@ class UpdateStandardEngineResourceGroupResourceInfoRequest extends AbstractModel
 
         if (array_key_exists("SparkSize",$param) and $param["SparkSize"] !== null) {
             $this->SparkSize = $param["SparkSize"];
+        }
+
+        if (array_key_exists("DriverGPUSpec",$param) and $param["DriverGPUSpec"] !== null) {
+            $this->DriverGPUSpec = $param["DriverGPUSpec"];
+        }
+
+        if (array_key_exists("ExecutorGPUSpec",$param) and $param["ExecutorGPUSpec"] !== null) {
+            $this->ExecutorGPUSpec = $param["ExecutorGPUSpec"];
+        }
+
+        if (array_key_exists("GPULimitSize",$param) and $param["GPULimitSize"] !== null) {
+            $this->GPULimitSize = $param["GPULimitSize"];
+        }
+
+        if (array_key_exists("GPUSize",$param) and $param["GPUSize"] !== null) {
+            $this->GPUSize = $param["GPUSize"];
+        }
+
+        if (array_key_exists("PythonGPUSpec",$param) and $param["PythonGPUSpec"] !== null) {
+            $this->PythonGPUSpec = $param["PythonGPUSpec"];
         }
     }
 }

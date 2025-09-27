@@ -18,19 +18,19 @@ namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateDataMaskStrategy返回参数结构体
+ * DescribeTaskResourceUsage返回参数结构体
  *
- * @method string getStrategyId() 获取策略id
- * @method void setStrategyId(string $StrategyId) 设置策略id
+ * @method CoreInfo getCoreInfo() 获取core 用量信息
+ * @method void setCoreInfo(CoreInfo $CoreInfo) 设置core 用量信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateDataMaskStrategyResponse extends AbstractModel
+class DescribeTaskResourceUsageResponse extends AbstractModel
 {
     /**
-     * @var string 策略id
+     * @var CoreInfo core 用量信息
      */
-    public $StrategyId;
+    public $CoreInfo;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class CreateDataMaskStrategyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $StrategyId 策略id
+     * @param CoreInfo $CoreInfo core 用量信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,9 @@ class CreateDataMaskStrategyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StrategyId",$param) and $param["StrategyId"] !== null) {
-            $this->StrategyId = $param["StrategyId"];
+        if (array_key_exists("CoreInfo",$param) and $param["CoreInfo"] !== null) {
+            $this->CoreInfo = new CoreInfo();
+            $this->CoreInfo->deserialize($param["CoreInfo"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

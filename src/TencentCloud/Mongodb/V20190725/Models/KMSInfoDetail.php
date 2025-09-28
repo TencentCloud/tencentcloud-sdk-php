@@ -27,7 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreateTime() 获取实例与密钥绑定时间。
  * @method void setCreateTime(string $CreateTime) 设置实例与密钥绑定时间。
  * @method string getStatus() 获取密钥状态。
+- Enabled：开启。
+- Disabled：不开启。
  * @method void setStatus(string $Status) 设置密钥状态。
+- Enabled：开启。
+- Disabled：不开启。
  * @method string getKeyUsage() 获取密钥用途。
  * @method void setKeyUsage(string $KeyUsage) 设置密钥用途。
  * @method string getKeyOrigin() 获取密钥来源。
@@ -54,6 +58,8 @@ class KMSInfoDetail extends AbstractModel
 
     /**
      * @var string 密钥状态。
+- Enabled：开启。
+- Disabled：不开启。
      */
     public $Status;
 
@@ -77,6 +83,8 @@ class KMSInfoDetail extends AbstractModel
      * @param string $KeyName 主密钥名称。
      * @param string $CreateTime 实例与密钥绑定时间。
      * @param string $Status 密钥状态。
+- Enabled：开启。
+- Disabled：不开启。
      * @param string $KeyUsage 密钥用途。
      * @param string $KeyOrigin 密钥来源。
      * @param string $KmsRegion kms所在地域。

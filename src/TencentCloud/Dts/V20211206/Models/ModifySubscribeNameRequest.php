@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySubscribeName请求参数结构体
  *
- * @method string getSubscribeId() 获取数据订阅实例的ID
- * @method void setSubscribeId(string $SubscribeId) 设置数据订阅实例的ID
+ * @method string getSubscribeId() 获取数据订阅实例的ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+ * @method void setSubscribeId(string $SubscribeId) 设置数据订阅实例的ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
  * @method string getSubscribeName() 获取修改后的数据订阅实例的名称，长度限制为[1,60]
  * @method void setSubscribeName(string $SubscribeName) 设置修改后的数据订阅实例的名称，长度限制为[1,60]
  */
 class ModifySubscribeNameRequest extends AbstractModel
 {
     /**
-     * @var string 数据订阅实例的ID
+     * @var string 数据订阅实例的ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
      */
     public $SubscribeId;
 
@@ -38,7 +38,7 @@ class ModifySubscribeNameRequest extends AbstractModel
     public $SubscribeName;
 
     /**
-     * @param string $SubscribeId 数据订阅实例的ID
+     * @param string $SubscribeId 数据订阅实例的ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
      * @param string $SubscribeName 修改后的数据订阅实例的名称，长度限制为[1,60]
      */
     function __construct()

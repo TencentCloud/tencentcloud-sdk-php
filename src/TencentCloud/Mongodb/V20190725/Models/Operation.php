@@ -18,36 +18,36 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 需要终止的操作
+ * 需要终止的操作。
  *
- * @method string getReplicaSetName() 获取操作所在的分片名
- * @method void setReplicaSetName(string $ReplicaSetName) 设置操作所在的分片名
- * @method string getNodeName() 获取操作所在的节点名
- * @method void setNodeName(string $NodeName) 设置操作所在的节点名
- * @method integer getOpId() 获取操作序号
- * @method void setOpId(integer $OpId) 设置操作序号
+ * @method string getReplicaSetName() 获取操作所在的分片名称。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询分片名称。
+ * @method void setReplicaSetName(string $ReplicaSetName) 设置操作所在的分片名称。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询分片名称。
+ * @method string getNodeName() 获取操作所在的节点名。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询节点名称。
+ * @method void setNodeName(string $NodeName) 设置操作所在的节点名。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询节点名称。
+ * @method integer getOpId() 获取操作序号。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询操作序号。
+ * @method void setOpId(integer $OpId) 设置操作序号。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询操作序号。
  */
 class Operation extends AbstractModel
 {
     /**
-     * @var string 操作所在的分片名
+     * @var string 操作所在的分片名称。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询分片名称。
      */
     public $ReplicaSetName;
 
     /**
-     * @var string 操作所在的节点名
+     * @var string 操作所在的节点名。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询节点名称。
      */
     public $NodeName;
 
     /**
-     * @var integer 操作序号
+     * @var integer 操作序号。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询操作序号。
      */
     public $OpId;
 
     /**
-     * @param string $ReplicaSetName 操作所在的分片名
-     * @param string $NodeName 操作所在的节点名
-     * @param integer $OpId 操作序号
+     * @param string $ReplicaSetName 操作所在的分片名称。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询分片名称。
+     * @param string $NodeName 操作所在的节点名。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询节点名称。
+     * @param integer $OpId 操作序号。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询操作序号。
      */
     function __construct()
     {

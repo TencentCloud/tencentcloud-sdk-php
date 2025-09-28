@@ -62,8 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) 设置主节点可用区，该值仅在跨区迁移时生效。仅支持同地域下的可用区进行迁移。
  * @method string getRoTransType() 获取针对跨集群搬迁场景，选择同可用区RO的处理逻辑。together-同可用区RO跟随主实例迁移至目标可用区（默认选项），severally-同可用区RO保持原部署模式、不迁移至目标可用区。
  * @method void setRoTransType(string $RoTransType) 设置针对跨集群搬迁场景，选择同可用区RO的处理逻辑。together-同可用区RO跟随主实例迁移至目标可用区（默认选项），severally-同可用区RO保持原部署模式、不迁移至目标可用区。
- * @method ClusterTopology getClusterTopology() 获取集群版节点拓扑配置。
- * @method void setClusterTopology(ClusterTopology $ClusterTopology) 设置集群版节点拓扑配置。
+ * @method ClusterTopology getClusterTopology() 获取云盘版节点拓扑配置。
+ * @method void setClusterTopology(ClusterTopology $ClusterTopology) 设置云盘版节点拓扑配置。
  * @method integer getCheckFastUpgradeReboot() 获取检查原地升级是否需要重启，1 检查， 0 不检查。如果值为1，检查为原地升级需要重启，则会停止升级并进行返回提示，如果为原地升级不重启，则正常执行升级流程。
  * @method void setCheckFastUpgradeReboot(integer $CheckFastUpgradeReboot) 设置检查原地升级是否需要重启，1 检查， 0 不检查。如果值为1，检查为原地升级需要重启，则会停止升级并进行返回提示，如果为原地升级不重启，则正常执行升级流程。
  * @method string getDataCheckSensitive() 获取数据校验敏感度，非极速变配时使用此参数，敏感度根据当前实例规格计算迁移过程中的数据对比使用的cpu资源
@@ -172,7 +172,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
     public $RoTransType;
 
     /**
-     * @var ClusterTopology 集群版节点拓扑配置。
+     * @var ClusterTopology 云盘版节点拓扑配置。
      */
     public $ClusterTopology;
 
@@ -214,7 +214,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
      * @param integer $CrossCluster 是否跨区迁移。0-普通迁移，1-跨区迁移，默认值为0。该值为1时支持变更实例主节点可用区。
      * @param string $ZoneId 主节点可用区，该值仅在跨区迁移时生效。仅支持同地域下的可用区进行迁移。
      * @param string $RoTransType 针对跨集群搬迁场景，选择同可用区RO的处理逻辑。together-同可用区RO跟随主实例迁移至目标可用区（默认选项），severally-同可用区RO保持原部署模式、不迁移至目标可用区。
-     * @param ClusterTopology $ClusterTopology 集群版节点拓扑配置。
+     * @param ClusterTopology $ClusterTopology 云盘版节点拓扑配置。
      * @param integer $CheckFastUpgradeReboot 检查原地升级是否需要重启，1 检查， 0 不检查。如果值为1，检查为原地升级需要重启，则会停止升级并进行返回提示，如果为原地升级不重启，则正常执行升级流程。
      * @param string $DataCheckSensitive 数据校验敏感度，非极速变配时使用此参数，敏感度根据当前实例规格计算迁移过程中的数据对比使用的cpu资源
 对应的选项为: "high"、"normal"、"low"，默认为空

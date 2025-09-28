@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBAutonomyAction请求参数结构体
  *
- * @method integer getActionId() 获取自治任务ID。
- * @method void setActionId(integer $ActionId) 设置自治任务ID。
- * @method string getInstanceId() 获取实列ID。
- * @method void setInstanceId(string $InstanceId) 设置实列ID。
+ * @method integer getActionId() 获取自治任务ID。可通过 [DescribeDBAutonomyActions](https://cloud.tencent.com/document/product/1130/116974) 接口获取。
+ * @method void setActionId(integer $ActionId) 设置自治任务ID。可通过 [DescribeDBAutonomyActions](https://cloud.tencent.com/document/product/1130/116974) 接口获取。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
  * @method string getProduct() 获取服务产品类型，支持值包括： "redis" - 云数据库 Redis。
  * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "redis" - 云数据库 Redis。
  */
 class DescribeDBAutonomyActionRequest extends AbstractModel
 {
     /**
-     * @var integer 自治任务ID。
+     * @var integer 自治任务ID。可通过 [DescribeDBAutonomyActions](https://cloud.tencent.com/document/product/1130/116974) 接口获取。
      */
     public $ActionId;
 
     /**
-     * @var string 实列ID。
+     * @var string 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public $InstanceId;
 
@@ -45,8 +45,8 @@ class DescribeDBAutonomyActionRequest extends AbstractModel
     public $Product;
 
     /**
-     * @param integer $ActionId 自治任务ID。
-     * @param string $InstanceId 实列ID。
+     * @param integer $ActionId 自治任务ID。可通过 [DescribeDBAutonomyActions](https://cloud.tencent.com/document/product/1130/116974) 接口获取。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      * @param string $Product 服务产品类型，支持值包括： "redis" - 云数据库 Redis。
      */
     function __construct()

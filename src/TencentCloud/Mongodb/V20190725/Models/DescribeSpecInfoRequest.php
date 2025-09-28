@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSpecInfo请求参数结构体
  *
- * @method string getZone() 获取待查询可用区
- * @method void setZone(string $Zone) 设置待查询可用区
+ * @method string getZone() 获取待查询可用区。当前支持的可用区，请参见[地域与可用区](https://cloud.tencent.com/document/product/240/3637)。
+ * @method void setZone(string $Zone) 设置待查询可用区。当前支持的可用区，请参见[地域与可用区](https://cloud.tencent.com/document/product/240/3637)。
  */
 class DescribeSpecInfoRequest extends AbstractModel
 {
     /**
-     * @var string 待查询可用区
+     * @var string 待查询可用区。当前支持的可用区，请参见[地域与可用区](https://cloud.tencent.com/document/product/240/3637)。
      */
     public $Zone;
 
     /**
-     * @param string $Zone 待查询可用区
+     * @param string $Zone 待查询可用区。当前支持的可用区，请参见[地域与可用区](https://cloud.tencent.com/document/product/240/3637)。
      */
     function __construct()
     {

@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getReceiveGroup() 获取接收组
  * @method void setReceiveGroup(array $ReceiveGroup) 设置接收组
- * @method string getEndReceiveTime() 获取最后接收时间
- * @method void setEndReceiveTime(string $EndReceiveTime) 设置最后接收时间
+ * @method string getEndReceiveTime() 获取最后接收时间，格式: "HH:mm:ss"
+ * @method void setEndReceiveTime(string $EndReceiveTime) 设置最后接收时间，格式: "HH:mm:ss"
  * @method string getReceiveName() 获取接收名
  * @method void setReceiveName(string $ReceiveName) 设置接收名
  * @method array getSendChannel() 获取推送渠道
  * @method void setSendChannel(array $SendChannel) 设置推送渠道
- * @method string getStartReceiveTime() 获取开始时间
- * @method void setStartReceiveTime(string $StartReceiveTime) 设置开始时间
+ * @method string getStartReceiveTime() 获取开始时间，格式: "HH:mm:ss"
+ * @method void setStartReceiveTime(string $StartReceiveTime) 设置开始时间，格式: "HH:mm:ss"
  * @method array getReceiveUin() 获取接收用户列表
  * @method void setReceiveUin(array $ReceiveUin) 设置接收用户列表
  */
@@ -41,7 +41,7 @@ class ReceiveInfo extends AbstractModel
     public $ReceiveGroup;
 
     /**
-     * @var string 最后接收时间
+     * @var string 最后接收时间，格式: "HH:mm:ss"
      */
     public $EndReceiveTime;
 
@@ -56,7 +56,7 @@ class ReceiveInfo extends AbstractModel
     public $SendChannel;
 
     /**
-     * @var string 开始时间
+     * @var string 开始时间，格式: "HH:mm:ss"
      */
     public $StartReceiveTime;
 
@@ -67,10 +67,10 @@ class ReceiveInfo extends AbstractModel
 
     /**
      * @param array $ReceiveGroup 接收组
-     * @param string $EndReceiveTime 最后接收时间
+     * @param string $EndReceiveTime 最后接收时间，格式: "HH:mm:ss"
      * @param string $ReceiveName 接收名
      * @param array $SendChannel 推送渠道
-     * @param string $StartReceiveTime 开始时间
+     * @param string $StartReceiveTime 开始时间，格式: "HH:mm:ss"
      * @param array $ReceiveUin 接收用户列表
      */
     function __construct()

@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModelName() 获取模型标识
  * @method void setModelName(string $ModelName) 设置模型标识
- * @method string getStartTime() 获取开始时间
- * @method void setStartTime(string $StartTime) 设置开始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
  * @method integer getPageNumber() 获取页码（从1开始）
  * @method void setPageNumber(integer $PageNumber) 设置页码（从1开始）
  * @method integer getPageSize() 获取分页数量(最大值1000)
  * @method void setPageSize(integer $PageSize) 设置分页数量(最大值1000)
+ * @method string getStartTime() 获取开始时间(废弃)
+ * @method void setStartTime(string $StartTime) 设置开始时间(废弃)
+ * @method string getEndTime() 获取结束时间(废弃)
+ * @method void setEndTime(string $EndTime) 设置结束时间(废弃)
  * @method array getUinAccount() 获取uin列表
  * @method void setUinAccount(array $UinAccount) 设置uin列表
  * @method array getAppBizIds() 获取应用ID列表
@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBillingTag(string $BillingTag) 设置账单明细对应的自定义tag
  * @method string getSpaceId() 获取空间id
  * @method void setSpaceId(string $SpaceId) 设置空间id
+ * @method integer getStatStartTime() 获取开始时间戳, 单位为秒
+ * @method void setStatStartTime(integer $StatStartTime) 设置开始时间戳, 单位为秒
+ * @method integer getStatEndTime() 获取开始时间戳, 单位为秒
+ * @method void setStatEndTime(integer $StatEndTime) 设置开始时间戳, 单位为秒
  */
 class ListUsageCallDetailRequest extends AbstractModel
 {
@@ -51,16 +55,6 @@ class ListUsageCallDetailRequest extends AbstractModel
      * @var string 模型标识
      */
     public $ModelName;
-
-    /**
-     * @var string 开始时间
-     */
-    public $StartTime;
-
-    /**
-     * @var string 结束时间
-     */
-    public $EndTime;
 
     /**
      * @var integer 页码（从1开始）
@@ -71,6 +65,16 @@ class ListUsageCallDetailRequest extends AbstractModel
      * @var integer 分页数量(最大值1000)
      */
     public $PageSize;
+
+    /**
+     * @var string 开始时间(废弃)
+     */
+    public $StartTime;
+
+    /**
+     * @var string 结束时间(废弃)
+     */
+    public $EndTime;
 
     /**
      * @var array uin列表
@@ -108,11 +112,21 @@ class ListUsageCallDetailRequest extends AbstractModel
     public $SpaceId;
 
     /**
+     * @var integer 开始时间戳, 单位为秒
+     */
+    public $StatStartTime;
+
+    /**
+     * @var integer 开始时间戳, 单位为秒
+     */
+    public $StatEndTime;
+
+    /**
      * @param string $ModelName 模型标识
-     * @param string $StartTime 开始时间
-     * @param string $EndTime 结束时间
      * @param integer $PageNumber 页码（从1开始）
      * @param integer $PageSize 分页数量(最大值1000)
+     * @param string $StartTime 开始时间(废弃)
+     * @param string $EndTime 结束时间(废弃)
      * @param array $UinAccount uin列表
      * @param array $AppBizIds 应用ID列表
      * @param string $CallType 调用类型列表
@@ -120,6 +134,8 @@ class ListUsageCallDetailRequest extends AbstractModel
      * @param string $AppType 应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
      * @param string $BillingTag 账单明细对应的自定义tag
      * @param string $SpaceId 空间id
+     * @param integer $StatStartTime 开始时间戳, 单位为秒
+     * @param integer $StatEndTime 开始时间戳, 单位为秒
      */
     function __construct()
     {
@@ -138,20 +154,20 @@ class ListUsageCallDetailRequest extends AbstractModel
             $this->ModelName = $param["ModelName"];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
-        }
-
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
-        }
-
         if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {
             $this->PageNumber = $param["PageNumber"];
         }
 
         if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
             $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
 
         if (array_key_exists("UinAccount",$param) and $param["UinAccount"] !== null) {
@@ -180,6 +196,14 @@ class ListUsageCallDetailRequest extends AbstractModel
 
         if (array_key_exists("SpaceId",$param) and $param["SpaceId"] !== null) {
             $this->SpaceId = $param["SpaceId"];
+        }
+
+        if (array_key_exists("StatStartTime",$param) and $param["StatStartTime"] !== null) {
+            $this->StatStartTime = $param["StatStartTime"];
+        }
+
+        if (array_key_exists("StatEndTime",$param) and $param["StatEndTime"] !== null) {
+            $this->StatEndTime = $param["StatEndTime"];
         }
     }
 }

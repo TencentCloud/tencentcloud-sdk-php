@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
  * @method void setInstanceId(string $InstanceId) 设置指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
- * @method boolean getFilterSlave() 获取是否过滤掉从节信息。
+ * @method boolean getFilterSlave() 获取指定是否过滤掉从节信息。
 - true；过滤从节点。
-- false：不过滤。
- * @method void setFilterSlave(boolean $FilterSlave) 设置是否过滤掉从节信息。
+- false：不过滤。默认为 false。
+ * @method void setFilterSlave(boolean $FilterSlave) 设置指定是否过滤掉从节信息。
 - true；过滤从节点。
-- false：不过滤。
+- false：不过滤。默认为 false。
  */
 class DescribeInstanceShardsRequest extends AbstractModel
 {
@@ -37,17 +37,17 @@ class DescribeInstanceShardsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var boolean 是否过滤掉从节信息。
+     * @var boolean 指定是否过滤掉从节信息。
 - true；过滤从节点。
-- false：不过滤。
+- false：不过滤。默认为 false。
      */
     public $FilterSlave;
 
     /**
      * @param string $InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
-     * @param boolean $FilterSlave 是否过滤掉从节信息。
+     * @param boolean $FilterSlave 指定是否过滤掉从节信息。
 - true；过滤从节点。
-- false：不过滤。
+- false：不过滤。默认为 false。
      */
     function __construct()
     {

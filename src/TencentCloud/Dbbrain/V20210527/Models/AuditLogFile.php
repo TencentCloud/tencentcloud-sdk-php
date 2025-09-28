@@ -40,10 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDownloadUrl(string $DownloadUrl) 设置审计日志下载地址。
  * @method string getErrMsg() 获取错误信息。
  * @method void setErrMsg(string $ErrMsg) 设置错误信息。
- * @method float getProgress() 获取文件生成进度。
- * @method void setProgress(float $Progress) 设置文件生成进度。
- * @method string getFinishTime() 获取文件生成成功时间。
- * @method void setFinishTime(string $FinishTime) 设置文件生成成功时间。
+ * @method float getProgress() 获取文件生成进度。（单位：%）
+ * @method void setProgress(float $Progress) 设置文件生成进度。（单位：%）
+ * @method string getFinishTime() 获取文件生成成功时间。格式: "yyyy-MM-dd HH:mm:ss"
+ * @method void setFinishTime(string $FinishTime) 设置文件生成成功时间。格式: "yyyy-MM-dd HH:mm:ss"
  */
 class AuditLogFile extends AbstractModel
 {
@@ -86,12 +86,12 @@ class AuditLogFile extends AbstractModel
     public $ErrMsg;
 
     /**
-     * @var float 文件生成进度。
+     * @var float 文件生成进度。（单位：%）
      */
     public $Progress;
 
     /**
-     * @var string 文件生成成功时间。
+     * @var string 文件生成成功时间。格式: "yyyy-MM-dd HH:mm:ss"
      */
     public $FinishTime;
 
@@ -106,8 +106,8 @@ class AuditLogFile extends AbstractModel
      * @param float $FileSize 文件大小，单位为 KB。
      * @param string $DownloadUrl 审计日志下载地址。
      * @param string $ErrMsg 错误信息。
-     * @param float $Progress 文件生成进度。
-     * @param string $FinishTime 文件生成成功时间。
+     * @param float $Progress 文件生成进度。（单位：%）
+     * @param string $FinishTime 文件生成成功时间。格式: "yyyy-MM-dd HH:mm:ss"
      */
     function __construct()
     {

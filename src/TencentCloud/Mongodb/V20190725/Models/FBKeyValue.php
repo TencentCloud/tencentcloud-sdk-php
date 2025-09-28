@@ -18,28 +18,28 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 按key回档，用于筛选数据的键值对
+ * 按 Key 闪回键值对
  *
- * @method string getKey() 获取用于按key回档过滤的key
- * @method void setKey(string $Key) 设置用于按key回档过滤的key
- * @method string getValue() 获取用于按key回档过滤的value
- * @method void setValue(string $Value) 设置用于按key回档过滤的value
+ * @method string getKey() 获取指定按 Key 闪回的目标 Key （键） 。
+ * @method void setKey(string $Key) 设置指定按 Key 闪回的目标 Key （键） 。
+ * @method string getValue() 获取指定按 Key 闪回的目标 Key 所对应的 Value（值）。
+ * @method void setValue(string $Value) 设置指定按 Key 闪回的目标 Key 所对应的 Value（值）。
  */
 class FBKeyValue extends AbstractModel
 {
     /**
-     * @var string 用于按key回档过滤的key
+     * @var string 指定按 Key 闪回的目标 Key （键） 。
      */
     public $Key;
 
     /**
-     * @var string 用于按key回档过滤的value
+     * @var string 指定按 Key 闪回的目标 Key 所对应的 Value（值）。
      */
     public $Value;
 
     /**
-     * @param string $Key 用于按key回档过滤的key
-     * @param string $Value 用于按key回档过滤的value
+     * @param string $Key 指定按 Key 闪回的目标 Key （键） 。
+     * @param string $Value 指定按 Key 闪回的目标 Key 所对应的 Value（值）。
      */
     function __construct()
     {

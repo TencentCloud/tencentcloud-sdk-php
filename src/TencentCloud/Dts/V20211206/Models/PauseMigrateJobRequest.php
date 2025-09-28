@@ -20,18 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PauseMigrateJob请求参数结构体
  *
- * @method string getJobId() 获取数据迁移任务ID
- * @method void setJobId(string $JobId) 设置数据迁移任务ID
+ * @method string getJobId() 获取数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
+ * @method void setJobId(string $JobId) 设置数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
  */
 class PauseMigrateJobRequest extends AbstractModel
 {
     /**
-     * @var string 数据迁移任务ID
+     * @var string 数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      */
     public $JobId;
 
     /**
-     * @param string $JobId 数据迁移任务ID
+     * @param string $JobId 数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
      */
     function __construct()
     {

@@ -20,29 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyConsumerGroupPassword请求参数结构体
  *
- * @method string getSubscribeId() 获取数据订阅实例的 ID
- * @method void setSubscribeId(string $SubscribeId) 设置数据订阅实例的 ID
- * @method string getAccountName() 获取账号名称。实际的账户全称形如：account-#{SubscribeId}-#{AccountName}
- * @method void setAccountName(string $AccountName) 设置账号名称。实际的账户全称形如：account-#{SubscribeId}-#{AccountName}
- * @method string getConsumerGroupName() 获取消费组名称。实际的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}
- * @method void setConsumerGroupName(string $ConsumerGroupName) 设置消费组名称。实际的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}
+ * @method string getSubscribeId() 获取数据订阅实例的 ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+
+ * @method void setSubscribeId(string $SubscribeId) 设置数据订阅实例的 ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+
+ * @method string getAccountName() 获取账号名称。实际的账户全称形如：account-#{SubscribeId}-#{AccountName}。可通过[DescribeConsumerGroups](https://cloud.tencent.com/document/product/571/102947)接口获取。
+ * @method void setAccountName(string $AccountName) 设置账号名称。实际的账户全称形如：account-#{SubscribeId}-#{AccountName}。可通过[DescribeConsumerGroups](https://cloud.tencent.com/document/product/571/102947)接口获取。
+ * @method string getConsumerGroupName() 获取消费组名称。实际的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}。可通过[DescribeConsumerGroups](https://cloud.tencent.com/document/product/571/102947)接口获取。
+ * @method void setConsumerGroupName(string $ConsumerGroupName) 设置消费组名称。实际的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}。可通过[DescribeConsumerGroups](https://cloud.tencent.com/document/product/571/102947)接口获取。
  * @method string getNewPassword() 获取新密码。字符长度不小于3，不大于32
  * @method void setNewPassword(string $NewPassword) 设置新密码。字符长度不小于3，不大于32
  */
 class ModifyConsumerGroupPasswordRequest extends AbstractModel
 {
     /**
-     * @var string 数据订阅实例的 ID
+     * @var string 数据订阅实例的 ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+
      */
     public $SubscribeId;
 
     /**
-     * @var string 账号名称。实际的账户全称形如：account-#{SubscribeId}-#{AccountName}
+     * @var string 账号名称。实际的账户全称形如：account-#{SubscribeId}-#{AccountName}。可通过[DescribeConsumerGroups](https://cloud.tencent.com/document/product/571/102947)接口获取。
      */
     public $AccountName;
 
     /**
-     * @var string 消费组名称。实际的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}
+     * @var string 消费组名称。实际的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}。可通过[DescribeConsumerGroups](https://cloud.tencent.com/document/product/571/102947)接口获取。
      */
     public $ConsumerGroupName;
 
@@ -52,9 +55,10 @@ class ModifyConsumerGroupPasswordRequest extends AbstractModel
     public $NewPassword;
 
     /**
-     * @param string $SubscribeId 数据订阅实例的 ID
-     * @param string $AccountName 账号名称。实际的账户全称形如：account-#{SubscribeId}-#{AccountName}
-     * @param string $ConsumerGroupName 消费组名称。实际的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}
+     * @param string $SubscribeId 数据订阅实例的 ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+
+     * @param string $AccountName 账号名称。实际的账户全称形如：account-#{SubscribeId}-#{AccountName}。可通过[DescribeConsumerGroups](https://cloud.tencent.com/document/product/571/102947)接口获取。
+     * @param string $ConsumerGroupName 消费组名称。实际的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}。可通过[DescribeConsumerGroups](https://cloud.tencent.com/document/product/571/102947)接口获取。
      * @param string $NewPassword 新密码。字符长度不小于3，不大于32
      */
     function __construct()

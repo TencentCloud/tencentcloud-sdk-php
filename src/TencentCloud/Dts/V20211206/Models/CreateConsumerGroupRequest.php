@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateConsumerGroup请求参数结构体
  *
- * @method string getSubscribeId() 获取订阅实例id
- * @method void setSubscribeId(string $SubscribeId) 设置订阅实例id
+ * @method string getSubscribeId() 获取订阅实例id，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+
+ * @method void setSubscribeId(string $SubscribeId) 设置订阅实例id，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+
  * @method string getConsumerGroupName() 获取消费组名称，以数字、字母(大小写)或者_ - .开头，以数字、字母(大小写)结尾。实际生成的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}
  * @method void setConsumerGroupName(string $ConsumerGroupName) 设置消费组名称，以数字、字母(大小写)或者_ - .开头，以数字、字母(大小写)结尾。实际生成的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}
  * @method string getAccountName() 获取账号名称。以数字、字母(大小写)或者_ - .开头，以数字、字母(大小写)结尾。实际生成的账户全称形如：account-#{SubscribeId}-#{AccountName}
@@ -34,7 +36,8 @@ use TencentCloud\Common\AbstractModel;
 class CreateConsumerGroupRequest extends AbstractModel
 {
     /**
-     * @var string 订阅实例id
+     * @var string 订阅实例id，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+
      */
     public $SubscribeId;
 
@@ -59,7 +62,8 @@ class CreateConsumerGroupRequest extends AbstractModel
     public $Description;
 
     /**
-     * @param string $SubscribeId 订阅实例id
+     * @param string $SubscribeId 订阅实例id，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+
      * @param string $ConsumerGroupName 消费组名称，以数字、字母(大小写)或者_ - .开头，以数字、字母(大小写)结尾。实际生成的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}
      * @param string $AccountName 账号名称。以数字、字母(大小写)或者_ - .开头，以数字、字母(大小写)结尾。实际生成的账户全称形如：account-#{SubscribeId}-#{AccountName}
      * @param string $Password 消费组密码，长度必须大于3

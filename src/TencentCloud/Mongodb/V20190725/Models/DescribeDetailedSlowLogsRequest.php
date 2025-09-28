@@ -20,106 +20,134 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDetailedSlowLogs请求参数结构体
  *
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method string getStartTime() 获取待查询慢日志的开始时间
- * @method void setStartTime(string $StartTime) 设置待查询慢日志的开始时间
- * @method string getEndTime() 获取待慢日志的结束时间
- * @method void setEndTime(string $EndTime) 设置待慢日志的结束时间
- * @method integer getExecTime() 获取过滤执行时间大于此值的慢日志，单位ms，默认值100
- * @method void setExecTime(integer $ExecTime) 设置过滤执行时间大于此值的慢日志，单位ms，默认值100
- * @method array getCommands() 获取过滤慢日志的命令类型
- * @method void setCommands(array $Commands) 设置过滤慢日志的命令类型
- * @method array getTexts() 获取全文搜索关键字，多个关键字间为或关系
- * @method void setTexts(array $Texts) 设置全文搜索关键字，多个关键字间为或关系
- * @method array getNodeNames() 获取根据节点名过滤
- * @method void setNodeNames(array $NodeNames) 设置根据节点名过滤
- * @method array getQueryHash() 获取根据queryHash过滤
- * @method void setQueryHash(array $QueryHash) 设置根据queryHash过滤
- * @method integer getOffset() 获取分页偏移量
- * @method void setOffset(integer $Offset) 设置分页偏移量
- * @method integer getLimit() 获取返回条数
- * @method void setLimit(integer $Limit) 设置返回条数
- * @method string getOrderBy() 获取排序条件，只支持StartTime(按慢日志生成时间)和ExecTime(慢日志执行时间)
- * @method void setOrderBy(string $OrderBy) 设置排序条件，只支持StartTime(按慢日志生成时间)和ExecTime(慢日志执行时间)
- * @method string getOrderByType() 获取排序。desc倒排，asc正排
- * @method void setOrderByType(string $OrderByType) 设置排序。desc倒排，asc正排
+ * @method string getInstanceId() 获取实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+ * @method string getStartTime() 获取指定查询慢日志的开始时间。- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+ * @method void setStartTime(string $StartTime) 设置指定查询慢日志的开始时间。- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+ * @method string getEndTime() 获取指定查询慢日志的结束时间。
+- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。
+- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+ * @method void setEndTime(string $EndTime) 设置指定查询慢日志的结束时间。
+- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。
+- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+ * @method integer getExecTime() 获取指定慢日志查询阈值，即查询执行时间大于此值的慢日志。单位：ms，默认值：100。
+ * @method void setExecTime(integer $ExecTime) 设置指定慢日志查询阈值，即查询执行时间大于此值的慢日志。单位：ms，默认值：100。
+ * @method array getCommands() 获取指定查询慢日志的命令类型。
+ * @method void setCommands(array $Commands) 设置指定查询慢日志的命令类型。
+ * @method array getTexts() 获取全文搜索关键字，多个关键字间为或关系。
+ * @method void setTexts(array $Texts) 设置全文搜索关键字，多个关键字间为或关系。
+ * @method array getNodeNames() 获取指定查询慢日志的节点名称。请通过接口 [DescribeDBInstanceNodeProperty](https://cloud.tencent.com/document/product/240/82022) 查询节点名称。
+ * @method void setNodeNames(array $NodeNames) 设置指定查询慢日志的节点名称。请通过接口 [DescribeDBInstanceNodeProperty](https://cloud.tencent.com/document/product/240/82022) 查询节点名称。
+ * @method array getQueryHash() 获取指定查询 queryHash 值。
+ * @method void setQueryHash(array $QueryHash) 设置指定查询 queryHash 值。
+ * @method integer getOffset() 获取分页偏移量。默认值：0。取值范围：[0,100]。
+
+ * @method void setOffset(integer $Offset) 设置分页偏移量。默认值：0。取值范围：[0,100]。
+
+ * @method integer getLimit() 获取返回条数。默认值：20。取值范围：[0,10000]
+ * @method void setLimit(integer $Limit) 设置返回条数。默认值：20。取值范围：[0,10000]
+ * @method string getOrderBy() 获取指定慢日志排序条件。
+- StartTime：按照慢日志生成时间排序。
+- ExecTime：按照慢日志执行时间排序。
+ * @method void setOrderBy(string $OrderBy) 设置指定慢日志排序条件。
+- StartTime：按照慢日志生成时间排序。
+- ExecTime：按照慢日志执行时间排序。
+ * @method string getOrderByType() 获取指定排序方式。
+- desc：倒序。
+- asc：顺序。
+ * @method void setOrderByType(string $OrderByType) 设置指定排序方式。
+- desc：倒序。
+- asc：顺序。
  */
 class DescribeDetailedSlowLogsRequest extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 待查询慢日志的开始时间
+     * @var string 指定查询慢日志的开始时间。- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
      */
     public $StartTime;
 
     /**
-     * @var string 待慢日志的结束时间
+     * @var string 指定查询慢日志的结束时间。
+- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。
+- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
      */
     public $EndTime;
 
     /**
-     * @var integer 过滤执行时间大于此值的慢日志，单位ms，默认值100
+     * @var integer 指定慢日志查询阈值，即查询执行时间大于此值的慢日志。单位：ms，默认值：100。
      */
     public $ExecTime;
 
     /**
-     * @var array 过滤慢日志的命令类型
+     * @var array 指定查询慢日志的命令类型。
      */
     public $Commands;
 
     /**
-     * @var array 全文搜索关键字，多个关键字间为或关系
+     * @var array 全文搜索关键字，多个关键字间为或关系。
      */
     public $Texts;
 
     /**
-     * @var array 根据节点名过滤
+     * @var array 指定查询慢日志的节点名称。请通过接口 [DescribeDBInstanceNodeProperty](https://cloud.tencent.com/document/product/240/82022) 查询节点名称。
      */
     public $NodeNames;
 
     /**
-     * @var array 根据queryHash过滤
+     * @var array 指定查询 queryHash 值。
      */
     public $QueryHash;
 
     /**
-     * @var integer 分页偏移量
+     * @var integer 分页偏移量。默认值：0。取值范围：[0,100]。
+
      */
     public $Offset;
 
     /**
-     * @var integer 返回条数
+     * @var integer 返回条数。默认值：20。取值范围：[0,10000]
      */
     public $Limit;
 
     /**
-     * @var string 排序条件，只支持StartTime(按慢日志生成时间)和ExecTime(慢日志执行时间)
+     * @var string 指定慢日志排序条件。
+- StartTime：按照慢日志生成时间排序。
+- ExecTime：按照慢日志执行时间排序。
      */
     public $OrderBy;
 
     /**
-     * @var string 排序。desc倒排，asc正排
+     * @var string 指定排序方式。
+- desc：倒序。
+- asc：顺序。
      */
     public $OrderByType;
 
     /**
-     * @param string $InstanceId 实例id
-     * @param string $StartTime 待查询慢日志的开始时间
-     * @param string $EndTime 待慢日志的结束时间
-     * @param integer $ExecTime 过滤执行时间大于此值的慢日志，单位ms，默认值100
-     * @param array $Commands 过滤慢日志的命令类型
-     * @param array $Texts 全文搜索关键字，多个关键字间为或关系
-     * @param array $NodeNames 根据节点名过滤
-     * @param array $QueryHash 根据queryHash过滤
-     * @param integer $Offset 分页偏移量
-     * @param integer $Limit 返回条数
-     * @param string $OrderBy 排序条件，只支持StartTime(按慢日志生成时间)和ExecTime(慢日志执行时间)
-     * @param string $OrderByType 排序。desc倒排，asc正排
+     * @param string $InstanceId 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param string $StartTime 指定查询慢日志的开始时间。- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+     * @param string $EndTime 指定查询慢日志的结束时间。
+- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。
+- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+     * @param integer $ExecTime 指定慢日志查询阈值，即查询执行时间大于此值的慢日志。单位：ms，默认值：100。
+     * @param array $Commands 指定查询慢日志的命令类型。
+     * @param array $Texts 全文搜索关键字，多个关键字间为或关系。
+     * @param array $NodeNames 指定查询慢日志的节点名称。请通过接口 [DescribeDBInstanceNodeProperty](https://cloud.tencent.com/document/product/240/82022) 查询节点名称。
+     * @param array $QueryHash 指定查询 queryHash 值。
+     * @param integer $Offset 分页偏移量。默认值：0。取值范围：[0,100]。
+
+     * @param integer $Limit 返回条数。默认值：20。取值范围：[0,10000]
+     * @param string $OrderBy 指定慢日志排序条件。
+- StartTime：按照慢日志生成时间排序。
+- ExecTime：按照慢日志执行时间排序。
+     * @param string $OrderByType 指定排序方式。
+- desc：倒序。
+- asc：顺序。
      */
     function __construct()
     {

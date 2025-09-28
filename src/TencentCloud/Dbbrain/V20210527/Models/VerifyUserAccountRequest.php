@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * VerifyUserAccount请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
  * @method string getUser() 获取数据库账号名。
  * @method void setUser(string $User) 设置数据库账号名。
  * @method string getPassword() 获取数据库账号密码。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class VerifyUserAccountRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public $InstanceId;
 
@@ -52,7 +52,7 @@ class VerifyUserAccountRequest extends AbstractModel
     public $Product;
 
     /**
-     * @param string $InstanceId 实例ID。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      * @param string $User 数据库账号名。
      * @param string $Password 数据库账号密码。
      * @param string $Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。

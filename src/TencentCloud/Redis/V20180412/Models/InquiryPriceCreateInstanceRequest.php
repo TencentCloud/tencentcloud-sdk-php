@@ -56,12 +56,18 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
  * @method void setBillingMode(integer $BillingMode) 设置付费方式。
 - 0：按量计费。
 - 1：包年包月。
- * @method integer getZoneId() 获取实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
- * @method void setZoneId(integer $ZoneId) 设置实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
- * @method integer getRedisShardNum() 获取实例分片数量。2.8 标准架构无需配置分片，其余版本标准架构需要配置分片数量为1。集群架构需指定需购买的分片数量。
- * @method void setRedisShardNum(integer $RedisShardNum) 设置实例分片数量。2.8 标准架构无需配置分片，其余版本标准架构需要配置分片数量为1。集群架构需指定需购买的分片数量。
- * @method integer getRedisReplicasNum() 获取实例副本数量。2.8 标准架构无需配置副本数量。
- * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置实例副本数量。2.8 标准架构无需配置副本数量。
+ * @method integer getZoneId() 获取实例所属的可用区 ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+**说明**：请在 **ZoneId** 与 **ZoneName** 中至少指定一个参数。
+ * @method void setZoneId(integer $ZoneId) 设置实例所属的可用区 ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+**说明**：请在 **ZoneId** 与 **ZoneName** 中至少指定一个参数。
+ * @method integer getRedisShardNum() 获取实例分片数量。
+- 标准架构需要配置分片数量为1。
+- 集群架构分片数量支持设置为1、3、5、8、12、16、24、32、40、48、64、80、96、128。
+ * @method void setRedisShardNum(integer $RedisShardNum) 设置实例分片数量。
+- 标准架构需要配置分片数量为1。
+- 集群架构分片数量支持设置为1、3、5、8、12、16、24、32、40、48、64、80、96、128。
+ * @method integer getRedisReplicasNum() 获取实例副本数量。取值范围为：1、2、3、4、5。
+ * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置实例副本数量。取值范围为：1、2、3、4、5。
  * @method boolean getReplicasReadonly() 获取是否支持副本只读。Redis2.8标准架构、CKV标准架构无需填写。
 - true：无需支持副本只读。
 - false：需支持。
@@ -69,7 +75,9 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
 - true：无需支持副本只读。
 - false：需支持。
  * @method string getZoneName() 获取实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+**说明**：请在 **ZoneId** 与 **ZoneName** 中至少指定一个参数。
  * @method void setZoneName(string $ZoneName) 设置实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+**说明**：请在 **ZoneId** 与 **ZoneName** 中至少指定一个参数。
  * @method string getProductVersion() 获取部署方式。
 - local：本地盘版，默认为 local。
 - cloud：云盘版。
@@ -120,17 +128,20 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     public $BillingMode;
 
     /**
-     * @var integer 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+     * @var integer 实例所属的可用区 ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+**说明**：请在 **ZoneId** 与 **ZoneName** 中至少指定一个参数。
      */
     public $ZoneId;
 
     /**
-     * @var integer 实例分片数量。2.8 标准架构无需配置分片，其余版本标准架构需要配置分片数量为1。集群架构需指定需购买的分片数量。
+     * @var integer 实例分片数量。
+- 标准架构需要配置分片数量为1。
+- 集群架构分片数量支持设置为1、3、5、8、12、16、24、32、40、48、64、80、96、128。
      */
     public $RedisShardNum;
 
     /**
-     * @var integer 实例副本数量。2.8 标准架构无需配置副本数量。
+     * @var integer 实例副本数量。取值范围为：1、2、3、4、5。
      */
     public $RedisReplicasNum;
 
@@ -143,6 +154,7 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
 
     /**
      * @var string 实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+**说明**：请在 **ZoneId** 与 **ZoneName** 中至少指定一个参数。
      */
     public $ZoneName;
 
@@ -173,13 +185,17 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
      * @param integer $BillingMode 付费方式。
 - 0：按量计费。
 - 1：包年包月。
-     * @param integer $ZoneId 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
-     * @param integer $RedisShardNum 实例分片数量。2.8 标准架构无需配置分片，其余版本标准架构需要配置分片数量为1。集群架构需指定需购买的分片数量。
-     * @param integer $RedisReplicasNum 实例副本数量。2.8 标准架构无需配置副本数量。
+     * @param integer $ZoneId 实例所属的可用区 ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+**说明**：请在 **ZoneId** 与 **ZoneName** 中至少指定一个参数。
+     * @param integer $RedisShardNum 实例分片数量。
+- 标准架构需要配置分片数量为1。
+- 集群架构分片数量支持设置为1、3、5、8、12、16、24、32、40、48、64、80、96、128。
+     * @param integer $RedisReplicasNum 实例副本数量。取值范围为：1、2、3、4、5。
      * @param boolean $ReplicasReadonly 是否支持副本只读。Redis2.8标准架构、CKV标准架构无需填写。
 - true：无需支持副本只读。
 - false：需支持。
      * @param string $ZoneName 实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+**说明**：请在 **ZoneId** 与 **ZoneName** 中至少指定一个参数。
      * @param string $ProductVersion 部署方式。
 - local：本地盘版，默认为 local。
 - cloud：云盘版。

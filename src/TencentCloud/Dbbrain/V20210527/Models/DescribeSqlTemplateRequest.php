@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSqlTemplate请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
  * @method string getSchema() 获取数据库名。
  * @method void setSchema(string $Schema) 设置数据库名。
  * @method string getSqlText() 获取SQL语句。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSqlTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public $InstanceId;
 
@@ -52,7 +52,7 @@ class DescribeSqlTemplateRequest extends AbstractModel
     public $Product;
 
     /**
-     * @param string $InstanceId 实例ID。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      * @param string $Schema 数据库名。
      * @param string $SqlText SQL语句。
      * @param string $Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。

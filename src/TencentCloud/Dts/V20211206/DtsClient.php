@@ -33,11 +33,11 @@ use TencentCloud\Dts\V20211206\Models as Models;
  * @method Models\ContinueSyncJobResponse ContinueSyncJob(Models\ContinueSyncJobRequest $req) 恢复处于已暂停状态的数据同步任务。
  * @method Models\CreateCheckSyncJobResponse CreateCheckSyncJob(Models\CreateCheckSyncJobRequest $req) 校验同步任务，检查必要参数和周边配置。
  * @method Models\CreateCompareTaskResponse CreateCompareTask(Models\CreateCompareTaskRequest $req) 本接口用于创建数据对比任务，创建成功后会返回数据对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9，创建成功后可通过StartCompare启动一致性校验任务
- * @method Models\CreateConsumerGroupResponse CreateConsumerGroup(Models\CreateConsumerGroupRequest $req) 为订阅实例创建消费者组
- * @method Models\CreateMigrateCheckJobResponse CreateMigrateCheckJob(Models\CreateMigrateCheckJobRequest $req) 校验迁移任务，
+ * @method Models\CreateConsumerGroupResponse CreateConsumerGroup(Models\CreateConsumerGroupRequest $req) 为订阅实例创建消费者组。
+只有状态为运行中的实例支持创建消费组。
+ * @method Models\CreateMigrateCheckJobResponse CreateMigrateCheckJob(Models\CreateMigrateCheckJobRequest $req) 创建校验迁移任务，
 在开始迁移前, 必须调用本接口创建校验迁移任务, 且校验成功后才能开始迁移. 校验的结果可以通过DescribeMigrationCheckJob查看，
 校验成功后,迁移任务若有修改, 则必须重新校验并通过后, 才能开始迁移
-
  * @method Models\CreateMigrationServiceResponse CreateMigrationService(Models\CreateMigrationServiceRequest $req) 购买迁移任务。购买成功后会返回随机生成的迁移任务id列表，也可以通过查询迁移任务任务列表接口`DescribeMigrationJobs`看到购买成功的实例Id。注意，一旦购买成功后源及目标数据库类型，源及目标实例地域不可修改。
  * @method Models\CreateModifyCheckSyncJobResponse CreateModifyCheckSyncJob(Models\CreateModifyCheckSyncJobRequest $req) 在修改同步任务的配置后、通过该接口校验当前任务是否支持修改对象操作
  * @method Models\CreateSubscribeResponse CreateSubscribe(Models\CreateSubscribeRequest $req) 本接口(CreateSubscribe)用于创建一个数据订阅任务。
@@ -71,7 +71,7 @@ use TencentCloud\Dts\V20211206\Models as Models;
  * @method Models\DestroySyncJobResponse DestroySyncJob(Models\DestroySyncJobRequest $req) 下线同步任务，任务在已隔离状态下可以通过此操作进行任务下线，即彻底删除任务。下线操作后可通过查询同步任务信息接口DescribeSyncJobs获取任务列表查看状态，此操作成功后无法看到此任务表示下线成功。
  * @method Models\IsolateMigrateJobResponse IsolateMigrateJob(Models\IsolateMigrateJobRequest $req)  隔离退还数据迁移服务。调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。对于计费任务，在任务隔离后可进行解除隔离(RecoverMigrationJob)操作或直接进行下线销毁(DestroyMigrateJob)操作。对于不计费任务，调用此接口会直接销毁任务，无法进行恢复操作。
  * @method Models\IsolateSubscribeResponse IsolateSubscribe(Models\IsolateSubscribeRequest $req) 本接口（IsolateSubscribe）用于隔离订阅任务。调用后，订阅任务将不能使用。按量计费的任务会停止计费，包年包月的任务会自动退费
- * @method Models\IsolateSyncJobResponse IsolateSyncJob(Models\IsolateSyncJobRequest $req) 隔离同步任务，隔离后可通过查询同步任务信息接口DescribeSyncJobs获取隔离后状态。在任务隔离后可进行解除隔离(RecoverSyncJob)操作或直接进行下线操作。对于不计费任务，调用此接口后会直接删除任务，无法进行恢复操作。
+ * @method Models\IsolateSyncJobResponse IsolateSyncJob(Models\IsolateSyncJobRequest $req) 隔离同步任务，隔离后可通过查询同步任务信息接口DescribeSyncJobs获取隔离后状态。在任务隔离后可进行解除隔离(RecoverSyncJob)操作或直接进行下线(DestroySyncJob)操作。对于不计费任务，调用此接口后会直接删除任务，无法进行恢复操作。
  * @method Models\ModifyCompareTaskResponse ModifyCompareTask(Models\ModifyCompareTaskRequest $req) 修改一致性校验任务，在任务创建后启动之前，可修改一致性校验参数
  * @method Models\ModifyCompareTaskNameResponse ModifyCompareTaskName(Models\ModifyCompareTaskNameRequest $req) 修改一致性校验任务名称
  * @method Models\ModifyConsumerGroupDescriptionResponse ModifyConsumerGroupDescription(Models\ModifyConsumerGroupDescriptionRequest $req) 本接口(ModifyConsumerGroupDescription)用于修改指定订阅消费组备注。
@@ -90,10 +90,10 @@ use TencentCloud\Dts\V20211206\Models as Models;
  * @method Models\PauseMigrateJobResponse PauseMigrateJob(Models\PauseMigrateJobRequest $req) 暂停一个迁移任务。
  * @method Models\PauseSyncJobResponse PauseSyncJob(Models\PauseSyncJobRequest $req) 暂停处于同步中的数据同步任务。
  * @method Models\RecoverMigrateJobResponse RecoverMigrateJob(Models\RecoverMigrateJobRequest $req) 解除隔离数据迁移任务，用户手动发起隔离后的手动解隔离，只有任务状态为已隔离(手动操作)状态下才能触发此操作。调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。
- * @method Models\RecoverSyncJobResponse RecoverSyncJob(Models\RecoverSyncJobRequest $req) 解除隔离同步任务，任务在已隔离状态下可调用该接口解除隔离状态任务，同时可通过查询同步任务信息接口DescribeSyncJobs，获取操作后状态。
+ * @method Models\RecoverSyncJobResponse RecoverSyncJob(Models\RecoverSyncJobRequest $req) 解除隔离同步任务，任务在已隔离状态下可调用该接口解除隔离状态任务，同时可通过查询同步任务信息接口DescribeSyncJobs，获取操作后状态。注意，此接口只支持按量计费实例。
  * @method Models\ResetConsumerGroupOffsetResponse ResetConsumerGroupOffset(Models\ResetConsumerGroupOffsetRequest $req) 本接口(ResetConsumerGroupOffset)用于重置订阅消费组的offset。调用DescribeConsumerGroups接口查询消费组状态，只有消费组状态为 Dead 或 Empty 才可以执行重置该操作。否则重置不会生效，接口也不会报错。
  * @method Models\ResetSubscribeResponse ResetSubscribe(Models\ResetSubscribeRequest $req) 本接口(ResetSubscribe)用于重置订阅实例，重置后，可以重新配置订阅任务。
-可以调用 DescribeSubscribeDetail 查询订阅信息判断是否置成功。当SubsStatus变为notStarted时，表示重置成功。
+可以调用 [DescribeSubscribeDetail](https://cloud.tencent.com/document/product/571/102944) 查询订阅信息判断是否置成功。当SubsStatus变为notStarted时，表示重置成功。
  * @method Models\ResetSyncJobResponse ResetSyncJob(Models\ResetSyncJobRequest $req) 重置已经结束的同步任务，重置后可以重新配置启动任务。
  * @method Models\ResizeSyncJobResponse ResizeSyncJob(Models\ResizeSyncJobRequest $req) 调整同步任务规格，此接口只支持按量计费任务的调整，调用此接口后不会立即生效，后台调整时间大概为3~5分钟。调用此接口后可通过查询同步任务信息接口DescribeSyncJobs，获取变配后的状态。
  * @method Models\ResumeMigrateJobResponse ResumeMigrateJob(Models\ResumeMigrateJobRequest $req) 重试数据迁移任务，针对异常情况可进行重试，对于redis在失败时也可重试。注意：此操作跳过校验阶段，直接重新发起任务，相当于从StartMigrationJob开始执行。调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。

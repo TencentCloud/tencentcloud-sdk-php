@@ -26,16 +26,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubBizType(string $SubBizType) 设置知识引擎子业务类型:  FileParse(文档解析)、Embedding、Rewrite(多轮改写)、 Concurrency(并发)、KnowledgeSummary(知识总结)   KnowledgeQA(知识问答)、KnowledgeCapacity(知识库容量)、SearchEngine(搜索引擎)
  * @method string getModelName() 获取模型标识
  * @method void setModelName(string $ModelName) 设置模型标识
- * @method string getStartTime() 获取开始时间戳, 单位为秒
- * @method void setStartTime(string $StartTime) 设置开始时间戳, 单位为秒
- * @method string getEndTime() 获取结束时间戳, 单位为秒
- * @method void setEndTime(string $EndTime) 设置结束时间戳, 单位为秒
+ * @method string getStartTime() 获取开始时间戳, 单位为秒(废弃)
+ * @method void setStartTime(string $StartTime) 设置开始时间戳, 单位为秒(废弃)
+ * @method string getEndTime() 获取结束时间戳, 单位为秒(废弃)
+ * @method void setEndTime(string $EndTime) 设置结束时间戳, 单位为秒(废弃)
  * @method array getAppBizIds() 获取应用id列表
  * @method void setAppBizIds(array $AppBizIds) 设置应用id列表
  * @method string getAppType() 获取应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
  * @method void setAppType(string $AppType) 设置应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
  * @method array getSubScenes() 获取筛选子场景
  * @method void setSubScenes(array $SubScenes) 设置筛选子场景
+ * @method integer getStatStartTime() 获取开始时间戳, 单位为秒
+ * @method void setStatStartTime(integer $StatStartTime) 设置开始时间戳, 单位为秒
+ * @method integer getStatEndTime() 获取结束时间戳, 单位为秒
+ * @method void setStatEndTime(integer $StatEndTime) 设置结束时间戳, 单位为秒
  */
 class DescribeTokenUsageGraphRequest extends AbstractModel
 {
@@ -55,12 +59,12 @@ class DescribeTokenUsageGraphRequest extends AbstractModel
     public $ModelName;
 
     /**
-     * @var string 开始时间戳, 单位为秒
+     * @var string 开始时间戳, 单位为秒(废弃)
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间戳, 单位为秒
+     * @var string 结束时间戳, 单位为秒(废弃)
      */
     public $EndTime;
 
@@ -80,14 +84,26 @@ class DescribeTokenUsageGraphRequest extends AbstractModel
     public $SubScenes;
 
     /**
+     * @var integer 开始时间戳, 单位为秒
+     */
+    public $StatStartTime;
+
+    /**
+     * @var integer 结束时间戳, 单位为秒
+     */
+    public $StatEndTime;
+
+    /**
      * @param array $UinAccount 腾讯云主账号
      * @param string $SubBizType 知识引擎子业务类型:  FileParse(文档解析)、Embedding、Rewrite(多轮改写)、 Concurrency(并发)、KnowledgeSummary(知识总结)   KnowledgeQA(知识问答)、KnowledgeCapacity(知识库容量)、SearchEngine(搜索引擎)
      * @param string $ModelName 模型标识
-     * @param string $StartTime 开始时间戳, 单位为秒
-     * @param string $EndTime 结束时间戳, 单位为秒
+     * @param string $StartTime 开始时间戳, 单位为秒(废弃)
+     * @param string $EndTime 结束时间戳, 单位为秒(废弃)
      * @param array $AppBizIds 应用id列表
      * @param string $AppType 应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
      * @param array $SubScenes 筛选子场景
+     * @param integer $StatStartTime 开始时间戳, 单位为秒
+     * @param integer $StatEndTime 结束时间戳, 单位为秒
      */
     function __construct()
     {
@@ -132,6 +148,14 @@ class DescribeTokenUsageGraphRequest extends AbstractModel
 
         if (array_key_exists("SubScenes",$param) and $param["SubScenes"] !== null) {
             $this->SubScenes = $param["SubScenes"];
+        }
+
+        if (array_key_exists("StatStartTime",$param) and $param["StatStartTime"] !== null) {
+            $this->StatStartTime = $param["StatStartTime"];
+        }
+
+        if (array_key_exists("StatEndTime",$param) and $param["StatEndTime"] !== null) {
+            $this->StatEndTime = $param["StatEndTime"];
         }
     }
 }

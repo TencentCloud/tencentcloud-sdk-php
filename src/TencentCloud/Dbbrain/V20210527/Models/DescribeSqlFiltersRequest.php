@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSqlFilters请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
  * @method array getFilterIds() 获取任务ID列表，用于筛选任务列表。
  * @method void setFilterIds(array $FilterIds) 设置任务ID列表，用于筛选任务列表。
  * @method array getStatuses() 获取任务状态列表，用于筛选任务列表，取值包括RUNNING - 运行中, FINISHED - 已完成, TERMINATED - 已终止。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSqlFiltersRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public $InstanceId;
 
@@ -66,7 +66,7 @@ class DescribeSqlFiltersRequest extends AbstractModel
     public $Product;
 
     /**
-     * @param string $InstanceId 实例ID。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      * @param array $FilterIds 任务ID列表，用于筛选任务列表。
      * @param array $Statuses 任务状态列表，用于筛选任务列表，取值包括RUNNING - 运行中, FINISHED - 已完成, TERMINATED - 已终止。
      * @param integer $Offset 偏移量，默认为0。

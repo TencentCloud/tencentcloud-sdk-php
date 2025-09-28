@@ -18,12 +18,12 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 集群版 RW 节点的配置。
+ * 云盘版 RW 节点的配置。
  *
  * @method string getZone() 获取RW 节点所在可用区。
  * @method void setZone(string $Zone) 设置RW 节点所在可用区。
- * @method string getNodeId() 获取升级集群版实例时，如果要调整只读节点可用区，需要指定节点id。
- * @method void setNodeId(string $NodeId) 设置升级集群版实例时，如果要调整只读节点可用区，需要指定节点id。
+ * @method string getNodeId() 获取升级云盘版实例时，如果要调整只读节点可用区，需要指定节点 ID。
+ * @method void setNodeId(string $NodeId) 设置升级云盘版实例时，如果要调整只读节点可用区，需要指定节点 ID。
  */
 class ReadWriteNode extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ReadWriteNode extends AbstractModel
     public $Zone;
 
     /**
-     * @var string 升级集群版实例时，如果要调整只读节点可用区，需要指定节点id。
+     * @var string 升级云盘版实例时，如果要调整只读节点可用区，需要指定节点 ID。
      */
     public $NodeId;
 
     /**
      * @param string $Zone RW 节点所在可用区。
-     * @param string $NodeId 升级集群版实例时，如果要调整只读节点可用区，需要指定节点id。
+     * @param string $NodeId 升级云盘版实例时，如果要调整只读节点可用区，需要指定节点 ID。
      */
     function __construct()
     {

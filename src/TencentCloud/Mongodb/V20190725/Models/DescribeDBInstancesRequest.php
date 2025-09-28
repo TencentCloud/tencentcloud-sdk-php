@@ -20,14 +20,40 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstances请求参数结构体
  *
- * @method array getInstanceIds() 获取实例 ID 列表。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
- * @method void setInstanceIds(array $InstanceIds) 设置实例 ID 列表。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
- * @method integer getInstanceType() 获取指定查询的实例类型。取值范围如下：<ul><li>0：所有实例。</li><li>1：正式实例。</li><li>3：只读实例。</li><li>4：灾备实例。</li></ul>
- * @method void setInstanceType(integer $InstanceType) 设置指定查询的实例类型。取值范围如下：<ul><li>0：所有实例。</li><li>1：正式实例。</li><li>3：只读实例。</li><li>4：灾备实例。</li></ul>
- * @method integer getClusterType() 获取指定所查询实例的集群类型，取值范围如下：<ul><li>0：副本集实例。</li><li>1：分片实例。</li><li>-1：副本集与分片实例。</li></ul>
- * @method void setClusterType(integer $ClusterType) 设置指定所查询实例的集群类型，取值范围如下：<ul><li>0：副本集实例。</li><li>1：分片实例。</li><li>-1：副本集与分片实例。</li></ul>
- * @method array getStatus() 获取指定所查询实例的当前状态，取值范围如下所示：<ul><li>0：待初始化。</li><li>1：流程处理中，例如：变更规格、参数修改等。</li><li>2：实例正常运行中。</li><li>-2：实例已过期。</li></ul>
- * @method void setStatus(array $Status) 设置指定所查询实例的当前状态，取值范围如下所示：<ul><li>0：待初始化。</li><li>1：流程处理中，例如：变更规格、参数修改等。</li><li>2：实例正常运行中。</li><li>-2：实例已过期。</li></ul>
+ * @method array getInstanceIds() 获取实例 ID 列表。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+ * @method void setInstanceIds(array $InstanceIds) 设置实例 ID 列表。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+ * @method integer getInstanceType() 获取指定查询的实例类型。取值范围如下：
+- 0：所有实例。
+- 1：正式实例。
+- 2：临时实例
+- 3：只读实例。
+- -1：查询同时包括正式实例、只读实例与灾备实例。
+ * @method void setInstanceType(integer $InstanceType) 设置指定查询的实例类型。取值范围如下：
+- 0：所有实例。
+- 1：正式实例。
+- 2：临时实例
+- 3：只读实例。
+- -1：查询同时包括正式实例、只读实例与灾备实例。
+ * @method integer getClusterType() 获取指定所查询实例的集群类型，取值范围如下：
+- 0：副本集实例。
+- 1：分片实例。
+- -1：副本集与分片实例。
+ * @method void setClusterType(integer $ClusterType) 设置指定所查询实例的集群类型，取值范围如下：
+- 0：副本集实例。
+- 1：分片实例。
+- -1：副本集与分片实例。
+ * @method array getStatus() 获取指定所查询实例的当前状态，取值范围如下所示：
+- 0：待初始化。
+- 1：流程处理中，例如：变更规格、参数修改等。
+- 2：实例正常运行中。
+- -2：已隔离（包年包月）。
+- -3：已隔离（按量计费）。
+ * @method void setStatus(array $Status) 设置指定所查询实例的当前状态，取值范围如下所示：
+- 0：待初始化。
+- 1：流程处理中，例如：变更规格、参数修改等。
+- 2：实例正常运行中。
+- -2：已隔离（包年包月）。
+- -3：已隔离（按量计费）。
  * @method string getVpcId() 获取私有网络的 ID。
 - 基础网络则无需配置该参数。
 - 请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表中，单击私有网络名称，在**私有网络**页面获取其 ID。
@@ -40,10 +66,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置私有网络的子网ID。
 - 基础网络则无需配置该参数。
 - 请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表中，单击私有网络名称，在**私有网络**页面获取其子网 ID。
- * @method integer getPayMode() 获取指定所查询实例的付费类型，取值范围如下：<ul><li>0：查询按量计费实例。</li><li>1：查询包年包月实例。</li><li>-1：查询按量计费与包年包月实例。</li></ul>
- * @method void setPayMode(integer $PayMode) 设置指定所查询实例的付费类型，取值范围如下：<ul><li>0：查询按量计费实例。</li><li>1：查询包年包月实例。</li><li>-1：查询按量计费与包年包月实例。</li></ul>
- * @method integer getLimit() 获取单次请求返回的数量。默认值为20，取值范围为[1,100]。
- * @method void setLimit(integer $Limit) 设置单次请求返回的数量。默认值为20，取值范围为[1,100]。
+ * @method integer getPayMode() 获取指定所查询实例的付费类型。
+- 0：查询按量计费实例。
+- 1：查询包年包月实例。
+- -1：查询按量计费与包年包月实例。
+ * @method void setPayMode(integer $PayMode) 设置指定所查询实例的付费类型。
+- 0：查询按量计费实例。
+- 1：查询包年包月实例。
+- -1：查询按量计费与包年包月实例。
+ * @method integer getLimit() 获取单次请求返回的数量。默认值为20，取值范围为(1,100]。
+ * @method void setLimit(integer $Limit) 设置单次请求返回的数量。默认值为20，取值范围为(1,100]。
  * @method integer getOffset() 获取偏移量，默认值为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认值为0。
  * @method string getOrderBy() 获取配置返回结果排序依据的字段。目前支持依据"ProjectId"、"InstanceName"、"CreateTime"排序。
@@ -64,22 +96,35 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var array 实例 ID 列表。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @var array 实例 ID 列表。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public $InstanceIds;
 
     /**
-     * @var integer 指定查询的实例类型。取值范围如下：<ul><li>0：所有实例。</li><li>1：正式实例。</li><li>3：只读实例。</li><li>4：灾备实例。</li></ul>
+     * @var integer 指定查询的实例类型。取值范围如下：
+- 0：所有实例。
+- 1：正式实例。
+- 2：临时实例
+- 3：只读实例。
+- -1：查询同时包括正式实例、只读实例与灾备实例。
      */
     public $InstanceType;
 
     /**
-     * @var integer 指定所查询实例的集群类型，取值范围如下：<ul><li>0：副本集实例。</li><li>1：分片实例。</li><li>-1：副本集与分片实例。</li></ul>
+     * @var integer 指定所查询实例的集群类型，取值范围如下：
+- 0：副本集实例。
+- 1：分片实例。
+- -1：副本集与分片实例。
      */
     public $ClusterType;
 
     /**
-     * @var array 指定所查询实例的当前状态，取值范围如下所示：<ul><li>0：待初始化。</li><li>1：流程处理中，例如：变更规格、参数修改等。</li><li>2：实例正常运行中。</li><li>-2：实例已过期。</li></ul>
+     * @var array 指定所查询实例的当前状态，取值范围如下所示：
+- 0：待初始化。
+- 1：流程处理中，例如：变更规格、参数修改等。
+- 2：实例正常运行中。
+- -2：已隔离（包年包月）。
+- -3：已隔离（按量计费）。
      */
     public $Status;
 
@@ -98,12 +143,15 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var integer 指定所查询实例的付费类型，取值范围如下：<ul><li>0：查询按量计费实例。</li><li>1：查询包年包月实例。</li><li>-1：查询按量计费与包年包月实例。</li></ul>
+     * @var integer 指定所查询实例的付费类型。
+- 0：查询按量计费实例。
+- 1：查询包年包月实例。
+- -1：查询按量计费与包年包月实例。
      */
     public $PayMode;
 
     /**
-     * @var integer 单次请求返回的数量。默认值为20，取值范围为[1,100]。
+     * @var integer 单次请求返回的数量。默认值为20，取值范围为(1,100]。
      */
     public $Limit;
 
@@ -140,18 +188,34 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param array $InstanceIds 实例 ID 列表。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
-     * @param integer $InstanceType 指定查询的实例类型。取值范围如下：<ul><li>0：所有实例。</li><li>1：正式实例。</li><li>3：只读实例。</li><li>4：灾备实例。</li></ul>
-     * @param integer $ClusterType 指定所查询实例的集群类型，取值范围如下：<ul><li>0：副本集实例。</li><li>1：分片实例。</li><li>-1：副本集与分片实例。</li></ul>
-     * @param array $Status 指定所查询实例的当前状态，取值范围如下所示：<ul><li>0：待初始化。</li><li>1：流程处理中，例如：变更规格、参数修改等。</li><li>2：实例正常运行中。</li><li>-2：实例已过期。</li></ul>
+     * @param array $InstanceIds 实例 ID 列表。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param integer $InstanceType 指定查询的实例类型。取值范围如下：
+- 0：所有实例。
+- 1：正式实例。
+- 2：临时实例
+- 3：只读实例。
+- -1：查询同时包括正式实例、只读实例与灾备实例。
+     * @param integer $ClusterType 指定所查询实例的集群类型，取值范围如下：
+- 0：副本集实例。
+- 1：分片实例。
+- -1：副本集与分片实例。
+     * @param array $Status 指定所查询实例的当前状态，取值范围如下所示：
+- 0：待初始化。
+- 1：流程处理中，例如：变更规格、参数修改等。
+- 2：实例正常运行中。
+- -2：已隔离（包年包月）。
+- -3：已隔离（按量计费）。
      * @param string $VpcId 私有网络的 ID。
 - 基础网络则无需配置该参数。
 - 请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表中，单击私有网络名称，在**私有网络**页面获取其 ID。
      * @param string $SubnetId 私有网络的子网ID。
 - 基础网络则无需配置该参数。
 - 请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表中，单击私有网络名称，在**私有网络**页面获取其子网 ID。
-     * @param integer $PayMode 指定所查询实例的付费类型，取值范围如下：<ul><li>0：查询按量计费实例。</li><li>1：查询包年包月实例。</li><li>-1：查询按量计费与包年包月实例。</li></ul>
-     * @param integer $Limit 单次请求返回的数量。默认值为20，取值范围为[1,100]。
+     * @param integer $PayMode 指定所查询实例的付费类型。
+- 0：查询按量计费实例。
+- 1：查询包年包月实例。
+- -1：查询按量计费与包年包月实例。
+     * @param integer $Limit 单次请求返回的数量。默认值为20，取值范围为(1,100]。
      * @param integer $Offset 偏移量，默认值为0。
      * @param string $OrderBy 配置返回结果排序依据的字段。目前支持依据"ProjectId"、"InstanceName"、"CreateTime"排序。
      * @param string $OrderByType 配置返回结果的排序方式。

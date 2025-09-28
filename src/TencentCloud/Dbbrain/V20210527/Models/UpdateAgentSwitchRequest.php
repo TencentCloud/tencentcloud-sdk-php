@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateAgentSwitch请求参数结构体
  *
- * @method string getAgentId() 获取Agent标识。
- * @method void setAgentId(string $AgentId) 设置Agent标识。
+ * @method string getAgentId() 获取Agent标识。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+ * @method void setAgentId(string $AgentId) 设置Agent标识。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
  * @method string getSwitch() 获取停止或重连Agent，支持值包括："on" - 重连Agent， "off" - 停止Agent。
  * @method void setSwitch(string $Switch) 设置停止或重连Agent，支持值包括："on" - 重连Agent， "off" - 停止Agent。
  * @method string getProduct() 获取服务产品类型，仅支持 "dbbrain-mysql" - 自建MySQL。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class UpdateAgentSwitchRequest extends AbstractModel
 {
     /**
-     * @var string Agent标识。
+     * @var string Agent标识。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public $AgentId;
 
@@ -45,7 +45,7 @@ class UpdateAgentSwitchRequest extends AbstractModel
     public $Product;
 
     /**
-     * @param string $AgentId Agent标识。
+     * @param string $AgentId Agent标识。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      * @param string $Switch 停止或重连Agent，支持值包括："on" - 重连Agent， "off" - 停止Agent。
      * @param string $Product 服务产品类型，仅支持 "dbbrain-mysql" - 自建MySQL。
      */

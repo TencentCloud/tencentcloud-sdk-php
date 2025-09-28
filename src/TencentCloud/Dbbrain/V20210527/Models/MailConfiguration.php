@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSendMail(integer $SendMail) 设置是否开启邮件发送: 0, 否; 1, 是。
  * @method array getRegion() 获取地域配置, 如["ap-guangzhou", "ap-shanghai"]。巡检的邮件发送模板，配置需要发送巡检邮件的地域；订阅的邮件发送模板，配置当前订阅实例的所属地域。
  * @method void setRegion(array $Region) 设置地域配置, 如["ap-guangzhou", "ap-shanghai"]。巡检的邮件发送模板，配置需要发送巡检邮件的地域；订阅的邮件发送模板，配置当前订阅实例的所属地域。
- * @method array getHealthStatus() 获取发送指定的健康等级的报告, 如["HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK"]。
- * @method void setHealthStatus(array $HealthStatus) 设置发送指定的健康等级的报告, 如["HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK"]。
+ * @method array getHealthStatus() 获取包含的健康等级，包括值：HEALTH-健康，SUB_HEALTH-亚健康，RISK-风险，HIGH_RISK-高危。
+ * @method void setHealthStatus(array $HealthStatus) 设置包含的健康等级，包括值：HEALTH-健康，SUB_HEALTH-亚健康，RISK-风险，HIGH_RISK-高危。
  * @method array getContactPerson() 获取联系人id, 联系人/联系组不能都为空。
  * @method void setContactPerson(array $ContactPerson) 设置联系人id, 联系人/联系组不能都为空。
  * @method array getContactGroup() 获取联系组id, 联系人/联系组不能都为空。
@@ -44,7 +44,7 @@ class MailConfiguration extends AbstractModel
     public $Region;
 
     /**
-     * @var array 发送指定的健康等级的报告, 如["HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK"]。
+     * @var array 包含的健康等级，包括值：HEALTH-健康，SUB_HEALTH-亚健康，RISK-风险，HIGH_RISK-高危。
      */
     public $HealthStatus;
 
@@ -61,7 +61,7 @@ class MailConfiguration extends AbstractModel
     /**
      * @param integer $SendMail 是否开启邮件发送: 0, 否; 1, 是。
      * @param array $Region 地域配置, 如["ap-guangzhou", "ap-shanghai"]。巡检的邮件发送模板，配置需要发送巡检邮件的地域；订阅的邮件发送模板，配置当前订阅实例的所属地域。
-     * @param array $HealthStatus 发送指定的健康等级的报告, 如["HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK"]。
+     * @param array $HealthStatus 包含的健康等级，包括值：HEALTH-健康，SUB_HEALTH-亚健康，RISK-风险，HIGH_RISK-高危。
      * @param array $ContactPerson 联系人id, 联系人/联系组不能都为空。
      * @param array $ContactGroup 联系组id, 联系人/联系组不能都为空。
      */

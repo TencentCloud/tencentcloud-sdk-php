@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBDiagReportTasks请求参数结构体
  *
- * @method string getStartTime() 获取第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
- * @method void setStartTime(string $StartTime) 设置第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
- * @method string getEndTime() 获取最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
- * @method void setEndTime(string $EndTime) 设置最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
- * @method array getInstanceIds() 获取实例ID数组，用于筛选指定实例的任务列表。
- * @method void setInstanceIds(array $InstanceIds) 设置实例ID数组，用于筛选指定实例的任务列表。
+ * @method string getStartTime() 获取第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10T12:13:14+08:00。
+ * @method void setStartTime(string $StartTime) 设置第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10T12:13:14+08:00。
+ * @method string getEndTime() 获取最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10T12:13:14+08:00。
+ * @method void setEndTime(string $EndTime) 设置最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10T12:13:14+08:00。
+ * @method array getInstanceIds() 获取实例ID数组，用于筛选指定实例的任务列表，可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+ * @method void setInstanceIds(array $InstanceIds) 设置实例ID数组，用于筛选指定实例的任务列表，可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
  * @method array getSources() 获取任务的触发来源，支持的取值包括："DAILY_INSPECTION" - 实例巡检；"SCHEDULED" - 计划任务；"MANUAL" - 手动触发。
  * @method void setSources(array $Sources) 设置任务的触发来源，支持的取值包括："DAILY_INSPECTION" - 实例巡检；"SCHEDULED" - 计划任务；"MANUAL" - 手动触发。
  * @method string getHealthLevels() 获取报告的健康等级，支持的取值包括："HEALTH" - 健康；"SUB_HEALTH" - 亚健康；"RISK" - 危险；"HIGH_RISK" - 高危。
@@ -42,17 +42,17 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDBDiagReportTasksRequest extends AbstractModel
 {
     /**
-     * @var string 第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
+     * @var string 第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10T12:13:14+08:00。
      */
     public $StartTime;
 
     /**
-     * @var string 最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
+     * @var string 最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10T12:13:14+08:00。
      */
     public $EndTime;
 
     /**
-     * @var array 实例ID数组，用于筛选指定实例的任务列表。
+     * @var array 实例ID数组，用于筛选指定实例的任务列表，可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public $InstanceIds;
 
@@ -87,9 +87,9 @@ class DescribeDBDiagReportTasksRequest extends AbstractModel
     public $Product;
 
     /**
-     * @param string $StartTime 第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
-     * @param string $EndTime 最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
-     * @param array $InstanceIds 实例ID数组，用于筛选指定实例的任务列表。
+     * @param string $StartTime 第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10T12:13:14+08:00。
+     * @param string $EndTime 最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10T12:13:14+08:00。
+     * @param array $InstanceIds 实例ID数组，用于筛选指定实例的任务列表，可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      * @param array $Sources 任务的触发来源，支持的取值包括："DAILY_INSPECTION" - 实例巡检；"SCHEDULED" - 计划任务；"MANUAL" - 手动触发。
      * @param string $HealthLevels 报告的健康等级，支持的取值包括："HEALTH" - 健康；"SUB_HEALTH" - 亚健康；"RISK" - 危险；"HIGH_RISK" - 高危。
      * @param string $TaskStatuses 任务的状态，支持的取值包括："created" - 新建；"chosen" - 待执行； "running" - 执行中；"failed" - 失败；"finished" - 已完成。

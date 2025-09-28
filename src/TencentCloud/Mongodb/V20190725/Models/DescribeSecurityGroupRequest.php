@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSecurityGroup请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID。例如：cmgo-p8vn****。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。例如：cmgo-p8vn****。
+ * @method string getInstanceId() 获取实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
  */
 class DescribeSecurityGroupRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID。例如：cmgo-p8vn****。
+     * @var string 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId 实例 ID。例如：cmgo-p8vn****。
+     * @param string $InstanceId 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     function __construct()
     {

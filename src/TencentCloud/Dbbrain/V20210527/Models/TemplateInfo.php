@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 通知模板
  *
- * @method string getTemplateId() 获取模板id
- * @method void setTemplateId(string $TemplateId) 设置模板id
- * @method string getTemplateName() 获取模板名
- * @method void setTemplateName(string $TemplateName) 设置模板名
+ * @method string getTemplateId() 获取模板id,通过接口[通知模板查询](https://cloud.tencent.com/document/product/1130/97726)获得。
+ * @method void setTemplateId(string $TemplateId) 设置模板id,通过接口[通知模板查询](https://cloud.tencent.com/document/product/1130/97726)获得。
+ * @method string getTemplateName() 获取模板名,通过接口[通知模板查询](https://cloud.tencent.com/document/product/1130/97726)获得。
+ * @method void setTemplateName(string $TemplateName) 设置模板名,通过接口[通知模板查询](https://cloud.tencent.com/document/product/1130/97726)获得。
  */
 class TemplateInfo extends AbstractModel
 {
     /**
-     * @var string 模板id
+     * @var string 模板id,通过接口[通知模板查询](https://cloud.tencent.com/document/product/1130/97726)获得。
      */
     public $TemplateId;
 
     /**
-     * @var string 模板名
+     * @var string 模板名,通过接口[通知模板查询](https://cloud.tencent.com/document/product/1130/97726)获得。
      */
     public $TemplateName;
 
     /**
-     * @param string $TemplateId 模板id
-     * @param string $TemplateName 模板名
+     * @param string $TemplateId 模板id,通过接口[通知模板查询](https://cloud.tencent.com/document/product/1130/97726)获得。
+     * @param string $TemplateName 模板名,通过接口[通知模板查询](https://cloud.tencent.com/document/product/1130/97726)获得。
      */
     function __construct()
     {

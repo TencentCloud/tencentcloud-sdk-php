@@ -28,22 +28,56 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddress(string $Address) 设置节点访问地址。
  * @method string getWanServiceAddress() 获取节点公网访问外网地址(IP或域名，示例为IP方式)。
  * @method void setWanServiceAddress(string $WanServiceAddress) 设置节点公网访问外网地址(IP或域名，示例为IP方式)。
- * @method string getRole() 获取角色。
- * @method void setRole(string $Role) 设置角色。
- * @method boolean getHidden() 获取是否为Hidden节点
- * @method void setHidden(boolean $Hidden) 设置是否为Hidden节点
- * @method string getStatus() 获取节点状态，包括：ORMAL/STARTUP/RECOVERING/STARTUP2/UNKNOWN/DOWN/ROLLBACK/REMOVED等。
- * @method void setStatus(string $Status) 设置节点状态，包括：ORMAL/STARTUP/RECOVERING/STARTUP2/UNKNOWN/DOWN/ROLLBACK/REMOVED等。
- * @method integer getSlaveDelay() 获取主从延迟，单位秒。
- * @method void setSlaveDelay(integer $SlaveDelay) 设置主从延迟，单位秒。
- * @method integer getPriority() 获取节点优先级。
- * @method void setPriority(integer $Priority) 设置节点优先级。
+ * @method string getRole() 获取节点角色。
+- PRIMARY：主节点。
+- SECONDARY：从节点。
+- READONLY：只读节点。
+- ARBITER：仲裁节点。
+ * @method void setRole(string $Role) 设置节点角色。
+- PRIMARY：主节点。
+- SECONDARY：从节点。
+- READONLY：只读节点。
+- ARBITER：仲裁节点。
+ * @method boolean getHidden() 获取节点是否为 Hidden 节点。
+- true：Hidden 节点。
+- false：非 Hidden 节点。
+ * @method void setHidden(boolean $Hidden) 设置节点是否为 Hidden 节点。
+- true：Hidden 节点。
+- false：非 Hidden 节点。
+ * @method string getStatus() 获取节点状态。
+- NORMAL：正常运行中。
+- STARTUP：正在启动。
+- STARTUP2：正在启动，处理中间数据。
+- RECOVERING：恢复中，暂不可用。
+- DOWN：已掉线。
+- UNKNOWN：未知状态。
+- ROLLBACK：回滚中。
+- REMOVED：已移除。
+ * @method void setStatus(string $Status) 设置节点状态。
+- NORMAL：正常运行中。
+- STARTUP：正在启动。
+- STARTUP2：正在启动，处理中间数据。
+- RECOVERING：恢复中，暂不可用。
+- DOWN：已掉线。
+- UNKNOWN：未知状态。
+- ROLLBACK：回滚中。
+- REMOVED：已移除。
+ * @method integer getSlaveDelay() 获取主从同步延迟时间，单位：秒。
+ * @method void setSlaveDelay(integer $SlaveDelay) 设置主从同步延迟时间，单位：秒。
+ * @method integer getPriority() 获取节点优先级。其取值范围为[0,100]，数值越高，优先级越高。
+ * @method void setPriority(integer $Priority) 设置节点优先级。其取值范围为[0,100]，数值越高，优先级越高。
  * @method integer getVotes() 获取节点投票权。
+- 1：具有投票权。
+- 0：无投票权。
  * @method void setVotes(integer $Votes) 设置节点投票权。
+- 1：具有投票权。
+- 0：无投票权。
  * @method array getTags() 获取节点标签。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置节点标签。
- * @method string getReplicateSetId() 获取副本集Id。
- * @method void setReplicateSetId(string $ReplicateSetId) 设置副本集Id。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getReplicateSetId() 获取副本集 ID。
+ * @method void setReplicateSetId(string $ReplicateSetId) 设置副本集 ID。
  */
 class NodeProperty extends AbstractModel
 {
@@ -68,42 +102,59 @@ class NodeProperty extends AbstractModel
     public $WanServiceAddress;
 
     /**
-     * @var string 角色。
+     * @var string 节点角色。
+- PRIMARY：主节点。
+- SECONDARY：从节点。
+- READONLY：只读节点。
+- ARBITER：仲裁节点。
      */
     public $Role;
 
     /**
-     * @var boolean 是否为Hidden节点
+     * @var boolean 节点是否为 Hidden 节点。
+- true：Hidden 节点。
+- false：非 Hidden 节点。
      */
     public $Hidden;
 
     /**
-     * @var string 节点状态，包括：ORMAL/STARTUP/RECOVERING/STARTUP2/UNKNOWN/DOWN/ROLLBACK/REMOVED等。
+     * @var string 节点状态。
+- NORMAL：正常运行中。
+- STARTUP：正在启动。
+- STARTUP2：正在启动，处理中间数据。
+- RECOVERING：恢复中，暂不可用。
+- DOWN：已掉线。
+- UNKNOWN：未知状态。
+- ROLLBACK：回滚中。
+- REMOVED：已移除。
      */
     public $Status;
 
     /**
-     * @var integer 主从延迟，单位秒。
+     * @var integer 主从同步延迟时间，单位：秒。
      */
     public $SlaveDelay;
 
     /**
-     * @var integer 节点优先级。
+     * @var integer 节点优先级。其取值范围为[0,100]，数值越高，优先级越高。
      */
     public $Priority;
 
     /**
      * @var integer 节点投票权。
+- 1：具有投票权。
+- 0：无投票权。
      */
     public $Votes;
 
     /**
      * @var array 节点标签。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
-     * @var string 副本集Id。
+     * @var string 副本集 ID。
      */
     public $ReplicateSetId;
 
@@ -112,14 +163,31 @@ class NodeProperty extends AbstractModel
      * @param string $NodeName 节点名称。
      * @param string $Address 节点访问地址。
      * @param string $WanServiceAddress 节点公网访问外网地址(IP或域名，示例为IP方式)。
-     * @param string $Role 角色。
-     * @param boolean $Hidden 是否为Hidden节点
-     * @param string $Status 节点状态，包括：ORMAL/STARTUP/RECOVERING/STARTUP2/UNKNOWN/DOWN/ROLLBACK/REMOVED等。
-     * @param integer $SlaveDelay 主从延迟，单位秒。
-     * @param integer $Priority 节点优先级。
+     * @param string $Role 节点角色。
+- PRIMARY：主节点。
+- SECONDARY：从节点。
+- READONLY：只读节点。
+- ARBITER：仲裁节点。
+     * @param boolean $Hidden 节点是否为 Hidden 节点。
+- true：Hidden 节点。
+- false：非 Hidden 节点。
+     * @param string $Status 节点状态。
+- NORMAL：正常运行中。
+- STARTUP：正在启动。
+- STARTUP2：正在启动，处理中间数据。
+- RECOVERING：恢复中，暂不可用。
+- DOWN：已掉线。
+- UNKNOWN：未知状态。
+- ROLLBACK：回滚中。
+- REMOVED：已移除。
+     * @param integer $SlaveDelay 主从同步延迟时间，单位：秒。
+     * @param integer $Priority 节点优先级。其取值范围为[0,100]，数值越高，优先级越高。
      * @param integer $Votes 节点投票权。
+- 1：具有投票权。
+- 0：无投票权。
      * @param array $Tags 节点标签。
-     * @param string $ReplicateSetId 副本集Id。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ReplicateSetId 副本集 ID。
      */
     function __construct()
     {

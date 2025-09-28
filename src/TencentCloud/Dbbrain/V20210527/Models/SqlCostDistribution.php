@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFrom(float $From) 设置分段耗时下边界，单位是秒。
  * @method float getTo() 获取分段耗时上边界，单位是秒。
  * @method void setTo(float $To) 设置分段耗时上边界，单位是秒。
- * @method float getRatio() 获取耗时占比。
- * @method void setRatio(float $Ratio) 设置耗时占比。
+ * @method float getRatio() 获取耗时占比。单位（%）
+ * @method void setRatio(float $Ratio) 设置耗时占比。单位（%）
  */
 class SqlCostDistribution extends AbstractModel
 {
@@ -47,7 +47,7 @@ class SqlCostDistribution extends AbstractModel
     public $To;
 
     /**
-     * @var float 耗时占比。
+     * @var float 耗时占比。单位（%）
      */
     public $Ratio;
 
@@ -55,7 +55,7 @@ class SqlCostDistribution extends AbstractModel
      * @param integer $Count sql条数。
      * @param float $From 分段耗时下边界，单位是秒。
      * @param float $To 分段耗时上边界，单位是秒。
-     * @param float $Ratio 耗时占比。
+     * @param float $Ratio 耗时占比。单位（%）
      */
     function __construct()
     {

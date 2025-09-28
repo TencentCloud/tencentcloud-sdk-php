@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProduct() 获取服务产品类型，支持值包括："mongodb" - 云数据库 。
  * @method void setProduct(string $Product) 设置服务产品类型，支持值包括："mongodb" - 云数据库 。
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
  */
 class DescribeIndexRecommendInfoRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeIndexRecommendInfoRequest extends AbstractModel
     public $Product;
 
     /**
-     * @var string 实例ID。
+     * @var string 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public $InstanceId;
 
     /**
      * @param string $Product 服务产品类型，支持值包括："mongodb" - 云数据库 。
-     * @param string $InstanceId 实例ID。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     function __construct()
     {

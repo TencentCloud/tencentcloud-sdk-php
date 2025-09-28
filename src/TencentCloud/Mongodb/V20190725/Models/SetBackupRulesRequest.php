@@ -22,8 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
- * @method integer getBackupMethod() 获取设置自动备份方式。- 0：逻辑备份。- 1：物理备份。-3：快照备份(仅云盘版支持)。
- * @method void setBackupMethod(integer $BackupMethod) 设置设置自动备份方式。- 0：逻辑备份。- 1：物理备份。-3：快照备份(仅云盘版支持)。
+ * @method integer getBackupMethod() 获取备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
+ * @method void setBackupMethod(integer $BackupMethod) 设置备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
  * @method integer getBackupTime() 获取设置自动备份开始时间。取值范围为：[0,23]，例如：该参数设置为2，表示02:00开始备份。
  * @method void setBackupTime(integer $BackupTime) 设置设置自动备份开始时间。取值范围为：[0,23]，例如：该参数设置为2，表示02:00开始备份。
  * @method boolean getNotify() 获取设置自动备份发生错误时，是否发送失败告警。
@@ -43,7 +55,13 @@ class SetBackupRulesRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 设置自动备份方式。- 0：逻辑备份。- 1：物理备份。-3：快照备份(仅云盘版支持)。
+     * @var integer 备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
      */
     public $BackupMethod;
 
@@ -66,7 +84,13 @@ class SetBackupRulesRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
-     * @param integer $BackupMethod 设置自动备份方式。- 0：逻辑备份。- 1：物理备份。-3：快照备份(仅云盘版支持)。
+     * @param integer $BackupMethod 备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
      * @param integer $BackupTime 设置自动备份开始时间。取值范围为：[0,23]，例如：该参数设置为2，表示02:00开始备份。
      * @param boolean $Notify 设置自动备份发生错误时，是否发送失败告警。
 - true：发送。

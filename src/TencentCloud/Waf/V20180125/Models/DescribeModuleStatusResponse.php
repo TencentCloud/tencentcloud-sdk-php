@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApiProtection(integer $ApiProtection) 设置API安全是否开启
  * @method integer getRateLimit() 获取限流模块开关
  * @method void setRateLimit(integer $RateLimit) 设置限流模块开关
+ * @method integer getGzipAnalysis() 获取gzip 开关
+ * @method void setGzipAnalysis(integer $GzipAnalysis) 设置gzip 开关
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -75,6 +77,11 @@ class DescribeModuleStatusResponse extends AbstractModel
     public $RateLimit;
 
     /**
+     * @var integer gzip 开关
+     */
+    public $GzipAnalysis;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -87,6 +94,7 @@ class DescribeModuleStatusResponse extends AbstractModel
      * @param integer $AntiLeakage 信息防泄漏是否开启
      * @param integer $ApiProtection API安全是否开启
      * @param integer $RateLimit 限流模块开关
+     * @param integer $GzipAnalysis gzip 开关
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -128,6 +136,10 @@ class DescribeModuleStatusResponse extends AbstractModel
 
         if (array_key_exists("RateLimit",$param) and $param["RateLimit"] !== null) {
             $this->RateLimit = $param["RateLimit"];
+        }
+
+        if (array_key_exists("GzipAnalysis",$param) and $param["GzipAnalysis"] !== null) {
+            $this->GzipAnalysis = $param["GzipAnalysis"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

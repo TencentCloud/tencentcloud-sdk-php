@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * KillOps请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
- * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
- * @method array getOperations() 获取待终止的操作
- * @method void setOperations(array $Operations) 设置待终止的操作
+ * @method string getInstanceId() 获取实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+ * @method array getOperations() 获取待终止的操作。
+ * @method void setOperations(array $Operations) 设置待终止的操作。
  */
 class KillOpsRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * @var string 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var array 待终止的操作
+     * @var array 待终止的操作。
      */
     public $Operations;
 
     /**
-     * @param string $InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
-     * @param array $Operations 待终止的操作
+     * @param string $InstanceId 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param array $Operations 待终止的操作。
      */
     function __construct()
     {

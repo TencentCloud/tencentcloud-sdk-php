@@ -20,82 +20,118 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackupDownloadTask请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
- * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
- * @method string getBackupName() 获取备份文件名，用来过滤指定文件的下载任务
- * @method void setBackupName(string $BackupName) 设置备份文件名，用来过滤指定文件的下载任务
- * @method string getStartTime() 获取指定查询时间范围内的任务，StartTime指定开始时间，不填默认不限制开始时间
- * @method void setStartTime(string $StartTime) 设置指定查询时间范围内的任务，StartTime指定开始时间，不填默认不限制开始时间
- * @method string getEndTime() 获取指定查询时间范围内的任务，EndTime指定截止时间，不填默认不限制截止时间
- * @method void setEndTime(string $EndTime) 设置指定查询时间范围内的任务，EndTime指定截止时间，不填默认不限制截止时间
- * @method integer getLimit() 获取此次查询返回的条数，取值范围为1-100，默认为20
- * @method void setLimit(integer $Limit) 设置此次查询返回的条数，取值范围为1-100，默认为20
- * @method integer getOffset() 获取指定此次查询返回的页数，默认为0
- * @method void setOffset(integer $Offset) 设置指定此次查询返回的页数，默认为0
- * @method string getOrderBy() 获取排序字段，取值为createTime，finishTime两种，默认为createTime
- * @method void setOrderBy(string $OrderBy) 设置排序字段，取值为createTime，finishTime两种，默认为createTime
- * @method string getOrderByType() 获取排序方式，取值为asc，desc两种，默认desc
- * @method void setOrderByType(string $OrderByType) 设置排序方式，取值为asc，desc两种，默认desc
- * @method array getStatus() 获取根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试。不填默认返回所有类型
- * @method void setStatus(array $Status) 设置根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试。不填默认返回所有类型
+ * @method string getInstanceId() 获取实例ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+ * @method string getBackupName() 获取指定备份文件名，用于过滤指定文件的下载任务。请通过接口 [DescribeDBBackups](https://cloud.tencent.com/document/product/240/38574) 获取备份文件名。
+ * @method void setBackupName(string $BackupName) 设置指定备份文件名，用于过滤指定文件的下载任务。请通过接口 [DescribeDBBackups](https://cloud.tencent.com/document/product/240/38574) 获取备份文件名。
+ * @method string getStartTime() 获取指定查询时间范围内的任务，StartTime 指定开始时间。若不指定开始时间，则默认不限制开始时间。
+ * @method void setStartTime(string $StartTime) 设置指定查询时间范围内的任务，StartTime 指定开始时间。若不指定开始时间，则默认不限制开始时间。
+ * @method string getEndTime() 获取指定查询时间范围内的任务，EndTime 指定截止时间。若不指定截止时间，则默认不限制截止时间。
+ * @method void setEndTime(string $EndTime) 设置指定查询时间范围内的任务，EndTime 指定截止时间。若不指定截止时间，则默认不限制截止时间。
+ * @method integer getLimit() 获取此次查询返回的条数，取值范围为1-100，默认为20。
+ * @method void setLimit(integer $Limit) 设置此次查询返回的条数，取值范围为1-100，默认为20。
+ * @method integer getOffset() 获取指定此次查询返回的页数，默认为0。
+ * @method void setOffset(integer $Offset) 设置指定此次查询返回的页数，默认为0。
+ * @method string getOrderBy() 获取排序字段。
+- createTime：按照备份下载任务的创建时间排序。默认为 createTime。
+- finishTime：按照备份下载任务的完成时间排序。
+ * @method void setOrderBy(string $OrderBy) 设置排序字段。
+- createTime：按照备份下载任务的创建时间排序。默认为 createTime。
+- finishTime：按照备份下载任务的完成时间排序。
+ * @method string getOrderByType() 获取排序方式。
+- asc：升序排列。
+- desc：降序排列。默认为 desc。
+ * @method void setOrderByType(string $OrderByType) 设置排序方式。
+- asc：升序排列。
+- desc：降序排列。默认为 desc。
+ * @method array getStatus() 获取指定任务状态，用于过滤下载任务。若不配置该参数，则返回所有状态类型的任务。
+- 0：等待执行。
+- 1：正在下载。
+- 2：下载完成。
+- 3：下载失败。
+- 4：等待重试。
+ * @method void setStatus(array $Status) 设置指定任务状态，用于过滤下载任务。若不配置该参数，则返回所有状态类型的任务。
+- 0：等待执行。
+- 1：正在下载。
+- 2：下载完成。
+- 3：下载失败。
+- 4：等待重试。
  */
 class DescribeBackupDownloadTaskRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * @var string 实例ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 备份文件名，用来过滤指定文件的下载任务
+     * @var string 指定备份文件名，用于过滤指定文件的下载任务。请通过接口 [DescribeDBBackups](https://cloud.tencent.com/document/product/240/38574) 获取备份文件名。
      */
     public $BackupName;
 
     /**
-     * @var string 指定查询时间范围内的任务，StartTime指定开始时间，不填默认不限制开始时间
+     * @var string 指定查询时间范围内的任务，StartTime 指定开始时间。若不指定开始时间，则默认不限制开始时间。
      */
     public $StartTime;
 
     /**
-     * @var string 指定查询时间范围内的任务，EndTime指定截止时间，不填默认不限制截止时间
+     * @var string 指定查询时间范围内的任务，EndTime 指定截止时间。若不指定截止时间，则默认不限制截止时间。
      */
     public $EndTime;
 
     /**
-     * @var integer 此次查询返回的条数，取值范围为1-100，默认为20
+     * @var integer 此次查询返回的条数，取值范围为1-100，默认为20。
      */
     public $Limit;
 
     /**
-     * @var integer 指定此次查询返回的页数，默认为0
+     * @var integer 指定此次查询返回的页数，默认为0。
      */
     public $Offset;
 
     /**
-     * @var string 排序字段，取值为createTime，finishTime两种，默认为createTime
+     * @var string 排序字段。
+- createTime：按照备份下载任务的创建时间排序。默认为 createTime。
+- finishTime：按照备份下载任务的完成时间排序。
      */
     public $OrderBy;
 
     /**
-     * @var string 排序方式，取值为asc，desc两种，默认desc
+     * @var string 排序方式。
+- asc：升序排列。
+- desc：降序排列。默认为 desc。
      */
     public $OrderByType;
 
     /**
-     * @var array 根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试。不填默认返回所有类型
+     * @var array 指定任务状态，用于过滤下载任务。若不配置该参数，则返回所有状态类型的任务。
+- 0：等待执行。
+- 1：正在下载。
+- 2：下载完成。
+- 3：下载失败。
+- 4：等待重试。
      */
     public $Status;
 
     /**
-     * @param string $InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
-     * @param string $BackupName 备份文件名，用来过滤指定文件的下载任务
-     * @param string $StartTime 指定查询时间范围内的任务，StartTime指定开始时间，不填默认不限制开始时间
-     * @param string $EndTime 指定查询时间范围内的任务，EndTime指定截止时间，不填默认不限制截止时间
-     * @param integer $Limit 此次查询返回的条数，取值范围为1-100，默认为20
-     * @param integer $Offset 指定此次查询返回的页数，默认为0
-     * @param string $OrderBy 排序字段，取值为createTime，finishTime两种，默认为createTime
-     * @param string $OrderByType 排序方式，取值为asc，desc两种，默认desc
-     * @param array $Status 根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试。不填默认返回所有类型
+     * @param string $InstanceId 实例ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param string $BackupName 指定备份文件名，用于过滤指定文件的下载任务。请通过接口 [DescribeDBBackups](https://cloud.tencent.com/document/product/240/38574) 获取备份文件名。
+     * @param string $StartTime 指定查询时间范围内的任务，StartTime 指定开始时间。若不指定开始时间，则默认不限制开始时间。
+     * @param string $EndTime 指定查询时间范围内的任务，EndTime 指定截止时间。若不指定截止时间，则默认不限制截止时间。
+     * @param integer $Limit 此次查询返回的条数，取值范围为1-100，默认为20。
+     * @param integer $Offset 指定此次查询返回的页数，默认为0。
+     * @param string $OrderBy 排序字段。
+- createTime：按照备份下载任务的创建时间排序。默认为 createTime。
+- finishTime：按照备份下载任务的完成时间排序。
+     * @param string $OrderByType 排序方式。
+- asc：升序排列。
+- desc：降序排列。默认为 desc。
+     * @param array $Status 指定任务状态，用于过滤下载任务。若不配置该参数，则返回所有状态类型的任务。
+- 0：等待执行。
+- 1：正在下载。
+- 2：下载完成。
+- 3：下载失败。
+- 4：等待重试。
      */
     function __construct()
     {

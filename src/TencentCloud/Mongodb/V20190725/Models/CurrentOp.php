@@ -26,16 +26,36 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNs(string $Ns) 设置操作所在的命名空间，形式如db.collection。
  * @method string getQuery() 获取操作执行语句。
  * @method void setQuery(string $Query) 设置操作执行语句。
- * @method string getOp() 获取操作类型，可能的取值：aggregate、count、delete、distinct、find、findAndModify、getMore、insert、mapReduce、update和command。
- * @method void setOp(string $Op) 设置操作类型，可能的取值：aggregate、count、delete、distinct、find、findAndModify、getMore、insert、mapReduce、update和command。
+ * @method string getOp() 获取操作类型。
+- none：特殊状态，空闲连接或内部任务等。
+- update：更新数据。
+- insert：插入操作。
+- query：查询操作。
+- command：命令操作。
+- getmore：获取更多数据。
+- remove：删除操作。
+- killcursors：释放查询游标的操作。
+ * @method void setOp(string $Op) 设置操作类型。
+- none：特殊状态，空闲连接或内部任务等。
+- update：更新数据。
+- insert：插入操作。
+- query：查询操作。
+- command：命令操作。
+- getmore：获取更多数据。
+- remove：删除操作。
+- killcursors：释放查询游标的操作。
  * @method string getReplicaSetName() 获取操作所在的分片名称。
  * @method void setReplicaSetName(string $ReplicaSetName) 设置操作所在的分片名称。
  * @method string getNodeName() 获取操作所在的节点名称。
  * @method void setNodeName(string $NodeName) 设置操作所在的节点名称。
  * @method string getOperation() 获取操作详细信息。
  * @method void setOperation(string $Operation) 设置操作详细信息。
- * @method string getState() 获取筛选条件，节点状态，可能的取值为：Primary、Secondary。
- * @method void setState(string $State) 设置筛选条件，节点状态，可能的取值为：Primary、Secondary。
+ * @method string getState() 获取节点角色。
+- primary：主节点。
+- secondary：从节点。
+ * @method void setState(string $State) 设置节点角色。
+- primary：主节点。
+- secondary：从节点。
  * @method integer getMicrosecsRunning() 获取操作已执行时间（ms）。
  * @method void setMicrosecsRunning(integer $MicrosecsRunning) 设置操作已执行时间（ms）。
  * @method string getExecNode() 获取当前操作所在节点信息。
@@ -59,7 +79,15 @@ class CurrentOp extends AbstractModel
     public $Query;
 
     /**
-     * @var string 操作类型，可能的取值：aggregate、count、delete、distinct、find、findAndModify、getMore、insert、mapReduce、update和command。
+     * @var string 操作类型。
+- none：特殊状态，空闲连接或内部任务等。
+- update：更新数据。
+- insert：插入操作。
+- query：查询操作。
+- command：命令操作。
+- getmore：获取更多数据。
+- remove：删除操作。
+- killcursors：释放查询游标的操作。
      */
     public $Op;
 
@@ -79,7 +107,9 @@ class CurrentOp extends AbstractModel
     public $Operation;
 
     /**
-     * @var string 筛选条件，节点状态，可能的取值为：Primary、Secondary。
+     * @var string 节点角色。
+- primary：主节点。
+- secondary：从节点。
      */
     public $State;
 
@@ -97,11 +127,21 @@ class CurrentOp extends AbstractModel
      * @param integer $OpId 操作序号。
      * @param string $Ns 操作所在的命名空间，形式如db.collection。
      * @param string $Query 操作执行语句。
-     * @param string $Op 操作类型，可能的取值：aggregate、count、delete、distinct、find、findAndModify、getMore、insert、mapReduce、update和command。
+     * @param string $Op 操作类型。
+- none：特殊状态，空闲连接或内部任务等。
+- update：更新数据。
+- insert：插入操作。
+- query：查询操作。
+- command：命令操作。
+- getmore：获取更多数据。
+- remove：删除操作。
+- killcursors：释放查询游标的操作。
      * @param string $ReplicaSetName 操作所在的分片名称。
      * @param string $NodeName 操作所在的节点名称。
      * @param string $Operation 操作详细信息。
-     * @param string $State 筛选条件，节点状态，可能的取值为：Primary、Secondary。
+     * @param string $State 节点角色。
+- primary：主节点。
+- secondary：从节点。
      * @param integer $MicrosecsRunning 操作已执行时间（ms）。
      * @param string $ExecNode 当前操作所在节点信息。
      */

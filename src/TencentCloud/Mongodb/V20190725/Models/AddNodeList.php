@@ -18,7 +18,7 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 修改实例节点详情
+ * 修改实例节点详情。
  *
  * @method string getRole() 获取需要新增的节点角色。
 - SECONDARY：Mongod 节点。
@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
 - SECONDARY：Mongod 节点。
 - READONLY：只读节点。
 - MONGOS：Mongos 节点。
- * @method string getZone() 获取节点所对应的可用区。
+ * @method string getZone() 获取节点所对应的可用区。当前支持的可用区，请参见[地域和可用区](https://cloud.tencent.com/document/product/240/3637)。
 - 单可用区，所有节点在同一可用区。
 - 多可用区：当前标准规格是三可用区分布，主从节点不在同一可用区，需注意配置新增节点对应的可用区，且新增后必须满足任意2个可用区节点数大于第3个可用区原则。
- * @method void setZone(string $Zone) 设置节点所对应的可用区。
+ * @method void setZone(string $Zone) 设置节点所对应的可用区。当前支持的可用区，请参见[地域和可用区](https://cloud.tencent.com/document/product/240/3637)。
 - 单可用区，所有节点在同一可用区。
 - 多可用区：当前标准规格是三可用区分布，主从节点不在同一可用区，需注意配置新增节点对应的可用区，且新增后必须满足任意2个可用区节点数大于第3个可用区原则。
  */
@@ -46,7 +46,7 @@ class AddNodeList extends AbstractModel
     public $Role;
 
     /**
-     * @var string 节点所对应的可用区。
+     * @var string 节点所对应的可用区。当前支持的可用区，请参见[地域和可用区](https://cloud.tencent.com/document/product/240/3637)。
 - 单可用区，所有节点在同一可用区。
 - 多可用区：当前标准规格是三可用区分布，主从节点不在同一可用区，需注意配置新增节点对应的可用区，且新增后必须满足任意2个可用区节点数大于第3个可用区原则。
      */
@@ -57,7 +57,7 @@ class AddNodeList extends AbstractModel
 - SECONDARY：Mongod 节点。
 - READONLY：只读节点。
 - MONGOS：Mongos 节点。
-     * @param string $Zone 节点所对应的可用区。
+     * @param string $Zone 节点所对应的可用区。当前支持的可用区，请参见[地域和可用区](https://cloud.tencent.com/document/product/240/3637)。
 - 单可用区，所有节点在同一可用区。
 - 多可用区：当前标准规格是三可用区分布，主从节点不在同一可用区，需注意配置新增节点对应的可用区，且新增后必须满足任意2个可用区节点数大于第3个可用区原则。
      */

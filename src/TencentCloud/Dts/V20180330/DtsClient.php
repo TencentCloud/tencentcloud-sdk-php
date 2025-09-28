@@ -27,7 +27,6 @@ use TencentCloud\Dts\V20180330\Models as Models;
  * @method Models\CompleteMigrateJobResponse CompleteMigrateJob(Models\CompleteMigrateJobRequest $req) 本接口（CompleteMigrateJob）用于完成数据迁移任务。
 选择采用增量迁移方式的任务, 需要在迁移进度进入准备完成阶段后, 调用本接口, 停止迁移增量数据。
 通过DescribeMigrateJobs接口查询到任务的状态为准备完成（status=8）时，此时可以调用本接口完成迁移任务。
-
  * @method Models\CreateMigrateCheckJobResponse CreateMigrateCheckJob(Models\CreateMigrateCheckJobRequest $req) 创建校验迁移任务
 在开始迁移前, 必须调用本接口创建校验, 且校验成功后才能开始迁移. 校验的结果可以通过DescribeMigrateCheckJob查看.
 校验成功后,迁移任务若有修改, 则必须重新创建校验并通过后, 才能开始迁移.
@@ -58,7 +57,7 @@ use TencentCloud\Dts\V20180330\Models as Models;
  * @method Models\ModifySubscribeVipVportResponse ModifySubscribeVipVport(Models\ModifySubscribeVipVportRequest $req) 本接口(ModifySubscribeVipVport)用于修改数据订阅实例的IP和端口号
  * @method Models\OfflineIsolatedSubscribeResponse OfflineIsolatedSubscribe(Models\OfflineIsolatedSubscribeRequest $req) 本接口（OfflineIsolatedSubscribe）用于下线已隔离的数据订阅实例
  * @method Models\ResetSubscribeResponse ResetSubscribe(Models\ResetSubscribeRequest $req) 本接口(ResetSubscribe)用于重置数据订阅实例，已经激活的数据订阅实例，重置后可以使用ActivateSubscribe接口绑定其他的数据库实例
- * @method Models\StartMigrateJobResponse StartMigrateJob(Models\StartMigrateJobRequest $req) 本接口（StartMigrationJob）用于启动迁移任务。非定时迁移任务会在调用后立即开始迁移，定时任务则会开始倒计时。
+ * @method Models\StartMigrateJobResponse StartMigrateJob(Models\StartMigrateJobRequest $req) 本接口（StartMigrateJob）用于启动迁移任务。非定时迁移任务会在调用后立即开始迁移，定时任务则会开始倒计时。
 调用此接口前，请务必先使用CreateMigrateCheckJob校验数据迁移任务，并通过DescribeMigrateJobs接口查询到任务状态为校验通过（status=4）时，才能启动数据迁移任务。
  * @method Models\StopMigrateJobResponse StopMigrateJob(Models\StopMigrateJobRequest $req) 本接口（StopMigrateJob）用于撤销数据迁移任务。
 在迁移过程中允许调用该接口撤销迁移, 撤销迁移的任务会失败。通过DescribeMigrateJobs接口查询到任务状态为运行中（status=7）或准备完成（status=8）时，才能撤销数据迁移任务。

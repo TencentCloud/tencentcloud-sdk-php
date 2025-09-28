@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 慢日志详情
  *
- * @method string getLog() 获取慢日志
- * @method void setLog(string $Log) 设置慢日志
- * @method string getNodeName() 获取节点名称
- * @method void setNodeName(string $NodeName) 设置节点名称
- * @method string getQueryHash() 获取queryHash
- * @method void setQueryHash(string $QueryHash) 设置queryHash
+ * @method string getLog() 获取慢日志详情。
+ * @method void setLog(string $Log) 设置慢日志详情。
+ * @method string getNodeName() 获取节点名称。
+ * @method void setNodeName(string $NodeName) 设置节点名称。
+ * @method string getQueryHash() 获取查询哈希值。
+ * @method void setQueryHash(string $QueryHash) 设置查询哈希值。
  */
 class SlowLogItem extends AbstractModel
 {
     /**
-     * @var string 慢日志
+     * @var string 慢日志详情。
      */
     public $Log;
 
     /**
-     * @var string 节点名称
+     * @var string 节点名称。
      */
     public $NodeName;
 
     /**
-     * @var string queryHash
+     * @var string 查询哈希值。
      */
     public $QueryHash;
 
     /**
-     * @param string $Log 慢日志
-     * @param string $NodeName 节点名称
-     * @param string $QueryHash queryHash
+     * @param string $Log 慢日志详情。
+     * @param string $NodeName 节点名称。
+     * @param string $QueryHash 查询哈希值。
      */
     function __construct()
     {

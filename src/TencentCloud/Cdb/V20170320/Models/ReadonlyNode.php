@@ -18,14 +18,14 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 集群版的 RO 节点配置。
+ * 云盘版的 RO 节点配置。
  *
  * @method string getIsRandomZone() 获取是否分布在随机可用区。传入YES表示随机可用区。否则使用Zone指定的可用区。
  * @method void setIsRandomZone(string $IsRandomZone) 设置是否分布在随机可用区。传入YES表示随机可用区。否则使用Zone指定的可用区。
  * @method string getZone() 获取指定该节点分布在哪个可用区。
  * @method void setZone(string $Zone) 设置指定该节点分布在哪个可用区。
- * @method string getNodeId() 获取升级集群版实例时，如果要调整只读节点可用区，需要指定节点id。
- * @method void setNodeId(string $NodeId) 设置升级集群版实例时，如果要调整只读节点可用区，需要指定节点id。
+ * @method string getNodeId() 获取升级云盘版实例时，如果要调整只读节点可用区，需要指定节点 ID。
+ * @method void setNodeId(string $NodeId) 设置升级云盘版实例时，如果要调整只读节点可用区，需要指定节点 ID。
  */
 class ReadonlyNode extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ReadonlyNode extends AbstractModel
     public $Zone;
 
     /**
-     * @var string 升级集群版实例时，如果要调整只读节点可用区，需要指定节点id。
+     * @var string 升级云盘版实例时，如果要调整只读节点可用区，需要指定节点 ID。
      */
     public $NodeId;
 
     /**
      * @param string $IsRandomZone 是否分布在随机可用区。传入YES表示随机可用区。否则使用Zone指定的可用区。
      * @param string $Zone 指定该节点分布在哪个可用区。
-     * @param string $NodeId 升级集群版实例时，如果要调整只读节点可用区，需要指定节点id。
+     * @param string $NodeId 升级云盘版实例时，如果要调整只读节点可用区，需要指定节点 ID。
      */
     function __construct()
     {

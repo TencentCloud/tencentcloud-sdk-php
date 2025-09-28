@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConsumerGroups请求参数结构体
  *
- * @method string getSubscribeId() 获取订阅实例id
- * @method void setSubscribeId(string $SubscribeId) 设置订阅实例id
+ * @method string getSubscribeId() 获取订阅实例id，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+ * @method void setSubscribeId(string $SubscribeId) 设置订阅实例id，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
  * @method integer getOffset() 获取返回记录的起始偏移量。默认0
  * @method void setOffset(integer $Offset) 设置返回记录的起始偏移量。默认0
  * @method integer getLimit() 获取单次返回的记录数量。默认10
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeConsumerGroupsRequest extends AbstractModel
 {
     /**
-     * @var string 订阅实例id
+     * @var string 订阅实例id，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
      */
     public $SubscribeId;
 
@@ -45,7 +45,7 @@ class DescribeConsumerGroupsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $SubscribeId 订阅实例id
+     * @param string $SubscribeId 订阅实例id，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
      * @param integer $Offset 返回记录的起始偏移量。默认0
      * @param integer $Limit 单次返回的记录数量。默认10
      */

@@ -20,14 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSlowLogTopSqls请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID 。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID 。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
  * @method string getStartTime() 获取开始时间，如“2019-09-10 12:13:14”。
  * @method void setStartTime(string $StartTime) 设置开始时间，如“2019-09-10 12:13:14”。
  * @method string getEndTime() 获取截止时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔最大可为7天。
  * @method void setEndTime(string $EndTime) 设置截止时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔最大可为7天。
  * @method string getSortBy() 获取排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键。
+其中：
+QueryTime    - 查询耗时  
+ExecTimes    - 执行次数  
+RowsSent     - 返回行数  
+LockTime     - 锁等待时间  
+RowsExamined - 扫描行数  
+
  * @method void setSortBy(string $SortBy) 设置排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键。
+其中：
+QueryTime    - 查询耗时  
+ExecTimes    - 执行次数  
+RowsSent     - 返回行数  
+LockTime     - 锁等待时间  
+RowsExamined - 扫描行数  
+
  * @method string getOrderBy() 获取排序方式，支持ASC（升序）以及DESC（降序）。
  * @method void setOrderBy(string $OrderBy) 设置排序方式，支持ASC（升序）以及DESC（降序）。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
@@ -42,7 +56,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSlowLogTopSqlsRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID 。
+     * @var string 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public $InstanceId;
 
@@ -58,6 +72,13 @@ class DescribeSlowLogTopSqlsRequest extends AbstractModel
 
     /**
      * @var string 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键。
+其中：
+QueryTime    - 查询耗时  
+ExecTimes    - 执行次数  
+RowsSent     - 返回行数  
+LockTime     - 锁等待时间  
+RowsExamined - 扫描行数  
+
      */
     public $SortBy;
 
@@ -87,10 +108,17 @@ class DescribeSlowLogTopSqlsRequest extends AbstractModel
     public $Product;
 
     /**
-     * @param string $InstanceId 实例 ID 。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      * @param string $StartTime 开始时间，如“2019-09-10 12:13:14”。
      * @param string $EndTime 截止时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔最大可为7天。
      * @param string $SortBy 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键。
+其中：
+QueryTime    - 查询耗时  
+ExecTimes    - 执行次数  
+RowsSent     - 返回行数  
+LockTime     - 锁等待时间  
+RowsExamined - 扫描行数  
+
      * @param string $OrderBy 排序方式，支持ASC（升序）以及DESC（降序）。
      * @param integer $Limit 返回数量，默认为20，最大值为100。
      * @param integer $Offset 偏移量，默认为0。

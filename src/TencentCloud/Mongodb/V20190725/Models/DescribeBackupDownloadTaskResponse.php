@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackupDownloadTask返回参数结构体
  *
- * @method integer getTotalCount() 获取满足查询条件的所有条数
- * @method void setTotalCount(integer $TotalCount) 设置满足查询条件的所有条数
- * @method array getTasks() 获取下载任务列表
- * @method void setTasks(array $Tasks) 设置下载任务列表
+ * @method integer getTotalCount() 获取满足查询条件的所有条数。
+ * @method void setTotalCount(integer $TotalCount) 设置满足查询条件的所有条数。
+ * @method array getTasks() 获取下载任务列表。
+ * @method void setTasks(array $Tasks) 设置下载任务列表。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBackupDownloadTaskResponse extends AbstractModel
 {
     /**
-     * @var integer 满足查询条件的所有条数
+     * @var integer 满足查询条件的所有条数。
      */
     public $TotalCount;
 
     /**
-     * @var array 下载任务列表
+     * @var array 下载任务列表。
      */
     public $Tasks;
 
@@ -45,8 +45,8 @@ class DescribeBackupDownloadTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 满足查询条件的所有条数
-     * @param array $Tasks 下载任务列表
+     * @param integer $TotalCount 满足查询条件的所有条数。
+     * @param array $Tasks 下载任务列表。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

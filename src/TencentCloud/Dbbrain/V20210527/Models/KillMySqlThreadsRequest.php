@@ -20,12 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * KillMySqlThreads请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
  * @method string getStage() 获取kill会话任务的阶段，取值包括："Prepare"-准备阶段，"Commit"-提交阶段。
  * @method void setStage(string $Stage) 设置kill会话任务的阶段，取值包括："Prepare"-准备阶段，"Commit"-提交阶段。
- * @method array getThreads() 获取需要kill的sql会话ID列表，此参数用于Prepare阶段。
- * @method void setThreads(array $Threads) 设置需要kill的sql会话ID列表，此参数用于Prepare阶段。
+ * @method array getThreads() 获取需要kill的sql会话ID列表，通过接口[查询实时线程列表](https://cloud.tencent.com/document/product/1130/57824)
+此参数用于Prepare阶段。
+ * @method void setThreads(array $Threads) 设置需要kill的sql会话ID列表，通过接口[查询实时线程列表](https://cloud.tencent.com/document/product/1130/57824)
+此参数用于Prepare阶段。
  * @method string getSqlExecId() 获取执行ID，此参数用于Commit阶段。
  * @method void setSqlExecId(string $SqlExecId) 设置执行ID，此参数用于Commit阶段。
  * @method string getProduct() 获取服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
@@ -36,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class KillMySqlThreadsRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public $InstanceId;
 
@@ -46,7 +48,8 @@ class KillMySqlThreadsRequest extends AbstractModel
     public $Stage;
 
     /**
-     * @var array 需要kill的sql会话ID列表，此参数用于Prepare阶段。
+     * @var array 需要kill的sql会话ID列表，通过接口[查询实时线程列表](https://cloud.tencent.com/document/product/1130/57824)
+此参数用于Prepare阶段。
      */
     public $Threads;
 
@@ -66,9 +69,10 @@ class KillMySqlThreadsRequest extends AbstractModel
     public $RecordHistory;
 
     /**
-     * @param string $InstanceId 实例ID。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      * @param string $Stage kill会话任务的阶段，取值包括："Prepare"-准备阶段，"Commit"-提交阶段。
-     * @param array $Threads 需要kill的sql会话ID列表，此参数用于Prepare阶段。
+     * @param array $Threads 需要kill的sql会话ID列表，通过接口[查询实时线程列表](https://cloud.tencent.com/document/product/1130/57824)
+此参数用于Prepare阶段。
      * @param string $SqlExecId 执行ID，此参数用于Commit阶段。
      * @param string $Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
      * @param boolean $RecordHistory 默认是true，会记录下kill的记录；该参数为true, 则在kill操作前校验目标会话是否存在，存在则继续kill，否则取消kill。为了加快kill速度，可设置为false。

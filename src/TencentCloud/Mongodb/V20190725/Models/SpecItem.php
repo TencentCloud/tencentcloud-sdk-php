@@ -18,30 +18,16 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * mongodb售卖规格
+ * mongodb售卖规格。
  *
  * @method string getSpecCode() 获取规格信息标识。格式如：mongo.HIO10G.128g。由节点类型、规格类型、内存规格三部分组成。
-- 节点类型，如下所示。
-  - mongo：Mongod 节点。
- - mongos：Mongos 节点。
- - cfgstr：Configserver 节点。
-- 规格类型，如下所示。
- - HIO10G：通用高HIO万兆型。
- - HCD：云盘版类型。
-- 内存规格，如下所示：
- - 支持4、8、16、32、64、128、240、512。
- - 单位g：表示GB。128g则表示128GB。
+- 节点类型：**mongo**，指 Mongod 节点；**mongos**，指 Mongos 节点；**cfgstr**，指 Configserver 节点。
+- 规格类型：**HIO10G**，指通用高HIO万兆型；**HCD**：指云盘版类型。
+- 内存规格：支持4、8、16、32、64、128、240、512。单位g：表示GB。128g 则表示128GB。
  * @method void setSpecCode(string $SpecCode) 设置规格信息标识。格式如：mongo.HIO10G.128g。由节点类型、规格类型、内存规格三部分组成。
-- 节点类型，如下所示。
-  - mongo：Mongod 节点。
- - mongos：Mongos 节点。
- - cfgstr：Configserver 节点。
-- 规格类型，如下所示。
- - HIO10G：通用高HIO万兆型。
- - HCD：云盘版类型。
-- 内存规格，如下所示：
- - 支持4、8、16、32、64、128、240、512。
- - 单位g：表示GB。128g则表示128GB。
+- 节点类型：**mongo**，指 Mongod 节点；**mongos**，指 Mongos 节点；**cfgstr**，指 Configserver 节点。
+- 规格类型：**HIO10G**，指通用高HIO万兆型；**HCD**：指云盘版类型。
+- 内存规格：支持4、8、16、32、64、128、240、512。单位g：表示GB。128g 则表示128GB。
  * @method integer getStatus() 获取售卖规格有效标志，取值范围如下：
 - 0：停止售卖，
 - 1：开放售卖。
@@ -63,25 +49,23 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getConns() 获取规格所支持的最大连接数限制。
  * @method void setConns(integer $Conns) 设置规格所支持的最大连接数限制。
  * @method string getMongoVersionCode() 获取实例存储引擎版本信息。
-- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
  * @method void setMongoVersionCode(string $MongoVersionCode) 设置实例存储引擎版本信息。
-- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
  * @method integer getMongoVersionValue() 获取实例版本对应的数字版本。
  * @method void setMongoVersionValue(integer $MongoVersionValue) 设置实例版本对应的数字版本。
- * @method string getVersion() 获取实例版本信息。支持：3.6、4.2、4.4、5.0、6.0。
-
- * @method void setVersion(string $Version) 设置实例版本信息。支持：3.6、4.2、4.4、5.0、6.0。
-
+ * @method string getVersion() 获取实例版本信息。支持：4.2、4.4、5.0、6.0、7.0。
+ * @method void setVersion(string $Version) 设置实例版本信息。支持：4.2、4.4、5.0、6.0、7.0。
  * @method string getEngineName() 获取存储引擎。
  * @method void setEngineName(string $EngineName) 设置存储引擎。
  * @method integer getClusterType() 获取集群类型，取值如下：
@@ -113,16 +97,9 @@ class SpecItem extends AbstractModel
 {
     /**
      * @var string 规格信息标识。格式如：mongo.HIO10G.128g。由节点类型、规格类型、内存规格三部分组成。
-- 节点类型，如下所示。
-  - mongo：Mongod 节点。
- - mongos：Mongos 节点。
- - cfgstr：Configserver 节点。
-- 规格类型，如下所示。
- - HIO10G：通用高HIO万兆型。
- - HCD：云盘版类型。
-- 内存规格，如下所示：
- - 支持4、8、16、32、64、128、240、512。
- - 单位g：表示GB。128g则表示128GB。
+- 节点类型：**mongo**，指 Mongod 节点；**mongos**，指 Mongos 节点；**cfgstr**，指 Configserver 节点。
+- 规格类型：**HIO10G**，指通用高HIO万兆型；**HCD**：指云盘版类型。
+- 内存规格：支持4、8、16、32、64、128、240、512。单位g：表示GB。128g 则表示128GB。
      */
     public $SpecCode;
 
@@ -170,12 +147,12 @@ class SpecItem extends AbstractModel
 
     /**
      * @var string 实例存储引擎版本信息。
-- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
      */
     public $MongoVersionCode;
 
@@ -185,8 +162,7 @@ class SpecItem extends AbstractModel
     public $MongoVersionValue;
 
     /**
-     * @var string 实例版本信息。支持：3.6、4.2、4.4、5.0、6.0。
-
+     * @var string 实例版本信息。支持：4.2、4.4、5.0、6.0、7.0。
      */
     public $Version;
 
@@ -241,16 +217,9 @@ class SpecItem extends AbstractModel
 
     /**
      * @param string $SpecCode 规格信息标识。格式如：mongo.HIO10G.128g。由节点类型、规格类型、内存规格三部分组成。
-- 节点类型，如下所示。
-  - mongo：Mongod 节点。
- - mongos：Mongos 节点。
- - cfgstr：Configserver 节点。
-- 规格类型，如下所示。
- - HIO10G：通用高HIO万兆型。
- - HCD：云盘版类型。
-- 内存规格，如下所示：
- - 支持4、8、16、32、64、128、240、512。
- - 单位g：表示GB。128g则表示128GB。
+- 节点类型：**mongo**，指 Mongod 节点；**mongos**，指 Mongos 节点；**cfgstr**，指 Configserver 节点。
+- 规格类型：**HIO10G**，指通用高HIO万兆型；**HCD**：指云盘版类型。
+- 内存规格：支持4、8、16、32、64、128、240、512。单位g：表示GB。128g 则表示128GB。
      * @param integer $Status 售卖规格有效标志，取值范围如下：
 - 0：停止售卖，
 - 1：开放售卖。
@@ -262,15 +231,14 @@ class SpecItem extends AbstractModel
      * @param integer $Qps 指每秒最大请求次数，单位为：次/秒。
      * @param integer $Conns 规格所支持的最大连接数限制。
      * @param string $MongoVersionCode 实例存储引擎版本信息。
-- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
      * @param integer $MongoVersionValue 实例版本对应的数字版本。
-     * @param string $Version 实例版本信息。支持：3.6、4.2、4.4、5.0、6.0。
-
+     * @param string $Version 实例版本信息。支持：4.2、4.4、5.0、6.0、7.0。
      * @param string $EngineName 存储引擎。
      * @param integer $ClusterType 集群类型，取值如下：
 - 1：分片集群。

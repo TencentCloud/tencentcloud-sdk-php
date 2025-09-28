@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProduct() 获取服务产品类型，支持值包括："mongodb" - 云数据库 。
  * @method void setProduct(string $Product) 设置服务产品类型，支持值包括："mongodb" - 云数据库 。
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
  * @method string getDb() 获取数据库名称。
  * @method void setDb(string $Db) 设置数据库名称。
  * @method string getCollection() 获取表名。
  * @method void setCollection(string $Collection) 设置表名。
- * @method array getSigns() 获取签名。这个值是DescribelndexRecommendInfo接口返回
- * @method void setSigns(array $Signs) 设置签名。这个值是DescribelndexRecommendInfo接口返回
+ * @method array getSigns() 获取签名。这个值是 [DescribeIndexRecommendInfo](https://cloud.tencent.com/document/product/1130/98911) 接口返回
+ * @method void setSigns(array $Signs) 设置签名。这个值是 [DescribeIndexRecommendInfo](https://cloud.tencent.com/document/product/1130/98911) 接口返回
  */
 class DescribeIndexRecommendAggregationSlowLogsRequest extends AbstractModel
 {
@@ -39,7 +39,7 @@ class DescribeIndexRecommendAggregationSlowLogsRequest extends AbstractModel
     public $Product;
 
     /**
-     * @var string 实例ID。
+     * @var string 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public $InstanceId;
 
@@ -54,16 +54,16 @@ class DescribeIndexRecommendAggregationSlowLogsRequest extends AbstractModel
     public $Collection;
 
     /**
-     * @var array 签名。这个值是DescribelndexRecommendInfo接口返回
+     * @var array 签名。这个值是 [DescribeIndexRecommendInfo](https://cloud.tencent.com/document/product/1130/98911) 接口返回
      */
     public $Signs;
 
     /**
      * @param string $Product 服务产品类型，支持值包括："mongodb" - 云数据库 。
-     * @param string $InstanceId 实例ID。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      * @param string $Db 数据库名称。
      * @param string $Collection 表名。
-     * @param array $Signs 签名。这个值是DescribelndexRecommendInfo接口返回
+     * @param array $Signs 签名。这个值是 [DescribeIndexRecommendInfo](https://cloud.tencent.com/document/product/1130/98911) 接口返回
      */
     function __construct()
     {

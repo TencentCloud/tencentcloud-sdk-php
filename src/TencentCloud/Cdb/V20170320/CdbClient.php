@@ -189,6 +189,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\ModifyCdbProxyAddressVipAndVPortResponse ModifyCdbProxyAddressVipAndVPort(Models\ModifyCdbProxyAddressVipAndVPortRequest $req) 本接口（ModifyCdbProxyAddressVipAndVPort）用于修改数据库代理地址VPC信息。
  * @method Models\ModifyCdbProxyParamResponse ModifyCdbProxyParam(Models\ModifyCdbProxyParamRequest $req) 本接口（ModifyCdbProxyParam）用于配置数据库代理参数。
  * @method Models\ModifyDBInstanceLogToCLSResponse ModifyDBInstanceLogToCLS(Models\ModifyDBInstanceLogToCLSRequest $req) 开启/关闭CDB慢日志、错误日志投递CLS
+ * @method Models\ModifyDBInstanceModesResponse ModifyDBInstanceModes(Models\ModifyDBInstanceModesRequest $req) 该接口（ModifyDBInstanceModes）用于更改云数据库的模式。
  * @method Models\ModifyDBInstanceNameResponse ModifyDBInstanceName(Models\ModifyDBInstanceNameRequest $req) 本接口(ModifyDBInstanceName)用于修改云数据库实例的名称。
  * @method Models\ModifyDBInstanceProjectResponse ModifyDBInstanceProject(Models\ModifyDBInstanceProjectRequest $req) 本接口(ModifyDBInstanceProject)用于修改云数据库实例的所属项目。
  * @method Models\ModifyDBInstanceReadOnlyStatusResponse ModifyDBInstanceReadOnlyStatus(Models\ModifyDBInstanceReadOnlyStatusRequest $req) 本接口（ModifyDBInstanceReadOnlyStatus）用户设置MySQL云数据库实例为只读

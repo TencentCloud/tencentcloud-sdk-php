@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstanceDeal请求参数结构体
  *
- * @method string getDealId() 获取订单ID，通过CreateDBInstance等接口返回
- * @method void setDealId(string $DealId) 设置订单ID，通过CreateDBInstance等接口返回
+ * @method string getDealId() 获取订单 ID。
+- 按量计费实例，请通过 [CreateDBInstanceHour](https://cloud.tencent.com/document/product/240/38570) 接口输出的参数**DealId**获取。。
+- 包年包月计费实例，请通过 [CreateDBInstance](https://cloud.tencent.com/document/product/240/38571) 接口输出的参数**DealId**获取。
+ * @method void setDealId(string $DealId) 设置订单 ID。
+- 按量计费实例，请通过 [CreateDBInstanceHour](https://cloud.tencent.com/document/product/240/38570) 接口输出的参数**DealId**获取。。
+- 包年包月计费实例，请通过 [CreateDBInstance](https://cloud.tencent.com/document/product/240/38571) 接口输出的参数**DealId**获取。
  */
 class DescribeDBInstanceDealRequest extends AbstractModel
 {
     /**
-     * @var string 订单ID，通过CreateDBInstance等接口返回
+     * @var string 订单 ID。
+- 按量计费实例，请通过 [CreateDBInstanceHour](https://cloud.tencent.com/document/product/240/38570) 接口输出的参数**DealId**获取。。
+- 包年包月计费实例，请通过 [CreateDBInstance](https://cloud.tencent.com/document/product/240/38571) 接口输出的参数**DealId**获取。
      */
     public $DealId;
 
     /**
-     * @param string $DealId 订单ID，通过CreateDBInstance等接口返回
+     * @param string $DealId 订单 ID。
+- 按量计费实例，请通过 [CreateDBInstanceHour](https://cloud.tencent.com/document/product/240/38570) 接口输出的参数**DealId**获取。。
+- 包年包月计费实例，请通过 [CreateDBInstance](https://cloud.tencent.com/document/product/240/38571) 接口输出的参数**DealId**获取。
      */
     function __construct()
     {

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySubscribeAutoRenewFlag请求参数结构体
  *
- * @method string getSubscribeId() 获取订阅实例ID
- * @method void setSubscribeId(string $SubscribeId) 设置订阅实例ID
+ * @method string getSubscribeId() 获取订阅实例ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+ * @method void setSubscribeId(string $SubscribeId) 设置订阅实例ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
  * @method integer getAutoRenewFlag() 获取自动续费标识。1-自动续费，0-不自动续费
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标识。1-自动续费，0-不自动续费
  */
 class ModifySubscribeAutoRenewFlagRequest extends AbstractModel
 {
     /**
-     * @var string 订阅实例ID
+     * @var string 订阅实例ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
      */
     public $SubscribeId;
 
@@ -38,7 +38,7 @@ class ModifySubscribeAutoRenewFlagRequest extends AbstractModel
     public $AutoRenewFlag;
 
     /**
-     * @param string $SubscribeId 订阅实例ID
+     * @param string $SubscribeId 订阅实例ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
      * @param integer $AutoRenewFlag 自动续费标识。1-自动续费，0-不自动续费
      */
     function __construct()

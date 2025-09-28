@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRedisCommandOverview请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID
- * @method void setInstanceId(string $InstanceId) 设置实例 ID
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
  * @method string getStartTime() 获取开始时间，如“2025-03-17T00:00:00+00:00”。0天 < 当前服务器时间 - 开始时间 <= 10天。
  * @method void setStartTime(string $StartTime) 设置开始时间，如“2025-03-17T00:00:00+00:00”。0天 < 当前服务器时间 - 开始时间 <= 10天。
  * @method string getEndTime() 获取结束时间，如“2025-03-17T01:00:00+00:00”，0天 < 结束时间 - 开始时间 <= 10天。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRedisCommandOverviewRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID
+     * @var string 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public $InstanceId;
 
@@ -52,7 +52,7 @@ class DescribeRedisCommandOverviewRequest extends AbstractModel
     public $Product;
 
     /**
-     * @param string $InstanceId 实例 ID
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      * @param string $StartTime 开始时间，如“2025-03-17T00:00:00+00:00”。0天 < 当前服务器时间 - 开始时间 <= 10天。
      * @param string $EndTime 结束时间，如“2025-03-17T01:00:00+00:00”，0天 < 结束时间 - 开始时间 <= 10天。
      * @param string $Product 服务产品类型，仅仅支持值 "redis" - 云数据库 Redis。

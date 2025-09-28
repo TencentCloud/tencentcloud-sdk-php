@@ -18,44 +18,52 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 实例规格信息
+ * 实例规格信息。
  *
- * @method string getRegion() 获取地域信息
- * @method void setRegion(string $Region) 设置地域信息
- * @method string getZone() 获取可用区信息
- * @method void setZone(string $Zone) 设置可用区信息
- * @method array getSpecItems() 获取售卖规格信息
- * @method void setSpecItems(array $SpecItems) 设置售卖规格信息
- * @method integer getSupportMultiAZ() 获取是否支持跨可用区部署 1-支持，0-不支持
- * @method void setSupportMultiAZ(integer $SupportMultiAZ) 设置是否支持跨可用区部署 1-支持，0-不支持
+ * @method string getRegion() 获取地域信息。
+ * @method void setRegion(string $Region) 设置地域信息。
+ * @method string getZone() 获取可用区信息。
+ * @method void setZone(string $Zone) 设置可用区信息。
+ * @method array getSpecItems() 获取售卖规格信息。
+ * @method void setSpecItems(array $SpecItems) 设置售卖规格信息。
+ * @method integer getSupportMultiAZ() 获取是否支持跨可用区部署。
+- 1：支持。
+- 0：不支持。
+ * @method void setSupportMultiAZ(integer $SupportMultiAZ) 设置是否支持跨可用区部署。
+- 1：支持。
+- 0：不支持。
  */
 class SpecificationInfo extends AbstractModel
 {
     /**
-     * @var string 地域信息
+     * @var string 地域信息。
      */
     public $Region;
 
     /**
-     * @var string 可用区信息
+     * @var string 可用区信息。
      */
     public $Zone;
 
     /**
-     * @var array 售卖规格信息
+     * @var array 售卖规格信息。
      */
     public $SpecItems;
 
     /**
-     * @var integer 是否支持跨可用区部署 1-支持，0-不支持
+     * @var integer 是否支持跨可用区部署。
+- 1：支持。
+- 0：不支持。
      */
     public $SupportMultiAZ;
 
     /**
-     * @param string $Region 地域信息
-     * @param string $Zone 可用区信息
-     * @param array $SpecItems 售卖规格信息
-     * @param integer $SupportMultiAZ 是否支持跨可用区部署 1-支持，0-不支持
+     * @param string $Region 地域信息。
+     * @param string $Zone 可用区信息。
+     * @param array $SpecItems 售卖规格信息。
+     * @param integer $SupportMultiAZ 是否支持跨可用区部署。
+- 1：支持。
+- 0：不支持。
      */
     function __construct()
     {

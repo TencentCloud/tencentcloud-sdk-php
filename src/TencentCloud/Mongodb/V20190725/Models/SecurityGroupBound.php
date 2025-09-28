@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 安全组规则
  *
- * @method string getAction() 获取执行规则。ACCEPT或DROP
- * @method void setAction(string $Action) 设置执行规则。ACCEPT或DROP
- * @method string getCidrIp() 获取ip段。
- * @method void setCidrIp(string $CidrIp) 设置ip段。
- * @method string getPortRange() 获取端口范围
- * @method void setPortRange(string $PortRange) 设置端口范围
- * @method string getIpProtocol() 获取传输层协议。tcp，udp或ALL
- * @method void setIpProtocol(string $IpProtocol) 设置传输层协议。tcp，udp或ALL
- * @method string getId() 获取安全组id代表的地址集合
- * @method void setId(string $Id) 设置安全组id代表的地址集合
- * @method string getAddressModule() 获取地址组id代表的地址集合
- * @method void setAddressModule(string $AddressModule) 设置地址组id代表的地址集合
- * @method string getServiceModule() 获取服务组id代表的协议和端口集合
- * @method void setServiceModule(string $ServiceModule) 设置服务组id代表的协议和端口集合
- * @method string getDesc() 获取描述
- * @method void setDesc(string $Desc) 设置描述
+ * @method string getAction() 获取执行策略。
+- ACCEPT：允许，放行该端口相应的访问请求。
+- DROP：拒绝，直接丢弃数据包，不返回任何回应信息。
+ * @method void setAction(string $Action) 设置执行策略。
+- ACCEPT：允许，放行该端口相应的访问请求。
+- DROP：拒绝，直接丢弃数据包，不返回任何回应信息。
+ * @method string getCidrIp() 获取访问数据库的入站 IP 或 IP 段。
+ * @method void setCidrIp(string $CidrIp) 设置访问数据库的入站 IP 或 IP 段。
+ * @method string getPortRange() 获取访问数据库的端口。
+ * @method void setPortRange(string $PortRange) 设置访问数据库的端口。
+ * @method string getIpProtocol() 获取传输层协议：tcp。
+ * @method void setIpProtocol(string $IpProtocol) 设置传输层协议：tcp。
+ * @method string getId() 获取安全组 ID。
+ * @method void setId(string $Id) 设置安全组 ID。
+ * @method string getAddressModule() 获取IP 地址或 IP 地址组参数模板 ID。请登录[参数模板控制台](https://console.cloud.tencent.com/vpc/template/ip)获取参数模板 IP 地址详情。
+ * @method void setAddressModule(string $AddressModule) 设置IP 地址或 IP 地址组参数模板 ID。请登录[参数模板控制台](https://console.cloud.tencent.com/vpc/template/ip)获取参数模板 IP 地址详情。
+ * @method string getServiceModule() 获取协议端口或协议端口组参数模板 ID。请登录[参数模板控制台](https://console.cloud.tencent.com/vpc/template/protoport)获取参数模板协议端口详情。
+ * @method void setServiceModule(string $ServiceModule) 设置协议端口或协议端口组参数模板 ID。请登录[参数模板控制台](https://console.cloud.tencent.com/vpc/template/protoport)获取参数模板协议端口详情。
+ * @method string getDesc() 获取安全组描述信息。
+ * @method void setDesc(string $Desc) 设置安全组描述信息。
  */
 class SecurityGroupBound extends AbstractModel
 {
     /**
-     * @var string 执行规则。ACCEPT或DROP
+     * @var string 执行策略。
+- ACCEPT：允许，放行该端口相应的访问请求。
+- DROP：拒绝，直接丢弃数据包，不返回任何回应信息。
      */
     public $Action;
 
     /**
-     * @var string ip段。
+     * @var string 访问数据库的入站 IP 或 IP 段。
      */
     public $CidrIp;
 
     /**
-     * @var string 端口范围
+     * @var string 访问数据库的端口。
      */
     public $PortRange;
 
     /**
-     * @var string 传输层协议。tcp，udp或ALL
+     * @var string 传输层协议：tcp。
      */
     public $IpProtocol;
 
     /**
-     * @var string 安全组id代表的地址集合
+     * @var string 安全组 ID。
      */
     public $Id;
 
     /**
-     * @var string 地址组id代表的地址集合
+     * @var string IP 地址或 IP 地址组参数模板 ID。请登录[参数模板控制台](https://console.cloud.tencent.com/vpc/template/ip)获取参数模板 IP 地址详情。
      */
     public $AddressModule;
 
     /**
-     * @var string 服务组id代表的协议和端口集合
+     * @var string 协议端口或协议端口组参数模板 ID。请登录[参数模板控制台](https://console.cloud.tencent.com/vpc/template/protoport)获取参数模板协议端口详情。
      */
     public $ServiceModule;
 
     /**
-     * @var string 描述
+     * @var string 安全组描述信息。
      */
     public $Desc;
 
     /**
-     * @param string $Action 执行规则。ACCEPT或DROP
-     * @param string $CidrIp ip段。
-     * @param string $PortRange 端口范围
-     * @param string $IpProtocol 传输层协议。tcp，udp或ALL
-     * @param string $Id 安全组id代表的地址集合
-     * @param string $AddressModule 地址组id代表的地址集合
-     * @param string $ServiceModule 服务组id代表的协议和端口集合
-     * @param string $Desc 描述
+     * @param string $Action 执行策略。
+- ACCEPT：允许，放行该端口相应的访问请求。
+- DROP：拒绝，直接丢弃数据包，不返回任何回应信息。
+     * @param string $CidrIp 访问数据库的入站 IP 或 IP 段。
+     * @param string $PortRange 访问数据库的端口。
+     * @param string $IpProtocol 传输层协议：tcp。
+     * @param string $Id 安全组 ID。
+     * @param string $AddressModule IP 地址或 IP 地址组参数模板 ID。请登录[参数模板控制台](https://console.cloud.tencent.com/vpc/template/ip)获取参数模板 IP 地址详情。
+     * @param string $ServiceModule 协议端口或协议端口组参数模板 ID。请登录[参数模板控制台](https://console.cloud.tencent.com/vpc/template/protoport)获取参数模板协议端口详情。
+     * @param string $Desc 安全组描述信息。
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNoPrimaryKeyTables请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
  * @method string getDate() 获取查询日期，如2021-05-27，最早为30天前的日期。
  * @method void setDate(string $Date) 设置查询日期，如2021-05-27，最早为30天前的日期。
  * @method integer getLimit() 获取查询数目，默认为20，最大为100。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeNoPrimaryKeyTablesRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public $InstanceId;
 
@@ -59,7 +59,7 @@ class DescribeNoPrimaryKeyTablesRequest extends AbstractModel
     public $Product;
 
     /**
-     * @param string $InstanceId 实例ID。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      * @param string $Date 查询日期，如2021-05-27，最早为30天前的日期。
      * @param integer $Limit 查询数目，默认为20，最大为100。
      * @param integer $Offset 偏移量，默认为0。

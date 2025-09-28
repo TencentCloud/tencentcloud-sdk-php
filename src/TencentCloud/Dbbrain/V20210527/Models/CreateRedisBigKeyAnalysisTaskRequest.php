@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRedisBigKeyAnalysisTask请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
  * @method string getProduct() 获取服务产品类型，支持值包括 "redis" - 云数据库 Redis。
  * @method void setProduct(string $Product) 设置服务产品类型，支持值包括 "redis" - 云数据库 Redis。
  * @method array getShardIds() 获取分片节点序号列表。当列表为空时，选择所有分片节点。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateRedisBigKeyAnalysisTaskRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public $InstanceId;
 
@@ -55,7 +55,7 @@ class CreateRedisBigKeyAnalysisTaskRequest extends AbstractModel
     public $KeyDelimiterList;
 
     /**
-     * @param string $InstanceId 实例ID。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      * @param string $Product 服务产品类型，支持值包括 "redis" - 云数据库 Redis。
      * @param array $ShardIds 分片节点序号列表。当列表为空时，选择所有分片节点。
      * @param array $KeyDelimiterList Top Key前缀的分隔符列表。

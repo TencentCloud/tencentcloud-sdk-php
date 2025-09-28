@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProduct() 获取服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB。
  * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB。
- * @method string getNodeRequestType() 获取与Product保持一致。如："dcdb" ,"mariadb"。
- * @method void setNodeRequestType(string $NodeRequestType) 设置与Product保持一致。如："dcdb" ,"mariadb"。
- * @method string getInstanceId() 获取实例Id。
- * @method void setInstanceId(string $InstanceId) 设置实例Id。
+ * @method string getNodeRequestType() 获取NodeRequestType主要标识数据库产品类型，与Product保持一致。如："dcdb" ,"mariadb"。
+ * @method void setNodeRequestType(string $NodeRequestType) 设置NodeRequestType主要标识数据库产品类型，与Product保持一致。如："dcdb" ,"mariadb"。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
  */
 class CloseAuditServiceRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class CloseAuditServiceRequest extends AbstractModel
     public $Product;
 
     /**
-     * @var string 与Product保持一致。如："dcdb" ,"mariadb"。
+     * @var string NodeRequestType主要标识数据库产品类型，与Product保持一致。如："dcdb" ,"mariadb"。
      */
     public $NodeRequestType;
 
     /**
-     * @var string 实例Id。
+     * @var string 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public $InstanceId;
 
     /**
      * @param string $Product 服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB。
-     * @param string $NodeRequestType 与Product保持一致。如："dcdb" ,"mariadb"。
-     * @param string $InstanceId 实例Id。
+     * @param string $NodeRequestType NodeRequestType主要标识数据库产品类型，与Product保持一致。如："dcdb" ,"mariadb"。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     function __construct()
     {

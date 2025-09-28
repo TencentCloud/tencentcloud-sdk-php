@@ -22,14 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTemplateNameRegexp() 获取搜索字段
  * @method void setTemplateNameRegexp(string $TemplateNameRegexp) 设置搜索字段
- * @method integer getLimit() 获取返回限制长度
- * @method void setLimit(integer $Limit) 设置返回限制长度
- * @method integer getOffset() 获取偏置
- * @method void setOffset(integer $Offset) 设置偏置
- * @method string getProduct() 获取mysql -  mysql
-cynosdb -  tdsql-c
- * @method void setProduct(string $Product) 设置mysql -  mysql
-cynosdb -  tdsql-c
+ * @method integer getLimit() 获取返回限制长度，最大值: 50，默认值: 50
+ * @method void setLimit(integer $Limit) 设置返回限制长度，最大值: 50，默认值: 50
+ * @method integer getOffset() 获取偏置，最大值: 无限制，默认值: 0
+ * @method void setOffset(integer $Offset) 设置偏置，最大值: 无限制，默认值: 0
+ * @method string getProduct() 获取服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL
+ * @method void setProduct(string $Product) 设置服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL
  */
 class DescribeAlarmTemplateRequest extends AbstractModel
 {
@@ -39,27 +37,25 @@ class DescribeAlarmTemplateRequest extends AbstractModel
     public $TemplateNameRegexp;
 
     /**
-     * @var integer 返回限制长度
+     * @var integer 返回限制长度，最大值: 50，默认值: 50
      */
     public $Limit;
 
     /**
-     * @var integer 偏置
+     * @var integer 偏置，最大值: 无限制，默认值: 0
      */
     public $Offset;
 
     /**
-     * @var string mysql -  mysql
-cynosdb -  tdsql-c
+     * @var string 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL
      */
     public $Product;
 
     /**
      * @param string $TemplateNameRegexp 搜索字段
-     * @param integer $Limit 返回限制长度
-     * @param integer $Offset 偏置
-     * @param string $Product mysql -  mysql
-cynosdb -  tdsql-c
+     * @param integer $Limit 返回限制长度，最大值: 50，默认值: 50
+     * @param integer $Offset 偏置，最大值: 无限制，默认值: 0
+     * @param string $Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL
      */
     function __construct()
     {

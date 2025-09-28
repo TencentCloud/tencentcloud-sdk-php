@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 用于描述MongoDB数据库慢日志统计信息
  *
- * @method string getPattern() 获取慢日志模式
- * @method void setPattern(string $Pattern) 设置慢日志模式
- * @method string getQueryHash() 获取queryHash
- * @method void setQueryHash(string $QueryHash) 设置queryHash
- * @method integer getMaxTime() 获取最大执行时间
- * @method void setMaxTime(integer $MaxTime) 设置最大执行时间
- * @method integer getAverageTime() 获取平均执行时间
- * @method void setAverageTime(integer $AverageTime) 设置平均执行时间
- * @method integer getTotal() 获取该模式慢日志条数
- * @method void setTotal(integer $Total) 设置该模式慢日志条数
+ * @method string getPattern() 获取慢日志输出格式：库名.表名.命令。
+ * @method void setPattern(string $Pattern) 设置慢日志输出格式：库名.表名.命令。
+ * @method string getQueryHash() 获取记录慢日志时所带的queryHash 值，标识一类查询。
+ * @method void setQueryHash(string $QueryHash) 设置记录慢日志时所带的queryHash 值，标识一类查询。
+ * @method integer getMaxTime() 获取最大执行时间。单位：毫秒。
+ * @method void setMaxTime(integer $MaxTime) 设置最大执行时间。单位：毫秒。
+ * @method integer getAverageTime() 获取平均执行时间。单位：毫秒。
+ * @method void setAverageTime(integer $AverageTime) 设置平均执行时间。单位：毫秒。
+ * @method integer getTotal() 获取慢日志条数。
+ * @method void setTotal(integer $Total) 设置慢日志条数。
  */
 class SlowLogPattern extends AbstractModel
 {
     /**
-     * @var string 慢日志模式
+     * @var string 慢日志输出格式：库名.表名.命令。
      */
     public $Pattern;
 
     /**
-     * @var string queryHash
+     * @var string 记录慢日志时所带的queryHash 值，标识一类查询。
      */
     public $QueryHash;
 
     /**
-     * @var integer 最大执行时间
+     * @var integer 最大执行时间。单位：毫秒。
      */
     public $MaxTime;
 
     /**
-     * @var integer 平均执行时间
+     * @var integer 平均执行时间。单位：毫秒。
      */
     public $AverageTime;
 
     /**
-     * @var integer 该模式慢日志条数
+     * @var integer 慢日志条数。
      */
     public $Total;
 
     /**
-     * @param string $Pattern 慢日志模式
-     * @param string $QueryHash queryHash
-     * @param integer $MaxTime 最大执行时间
-     * @param integer $AverageTime 平均执行时间
-     * @param integer $Total 该模式慢日志条数
+     * @param string $Pattern 慢日志输出格式：库名.表名.命令。
+     * @param string $QueryHash 记录慢日志时所带的queryHash 值，标识一类查询。
+     * @param integer $MaxTime 最大执行时间。单位：毫秒。
+     * @param integer $AverageTime 平均执行时间。单位：毫秒。
+     * @param integer $Total 慢日志条数。
      */
     function __construct()
     {

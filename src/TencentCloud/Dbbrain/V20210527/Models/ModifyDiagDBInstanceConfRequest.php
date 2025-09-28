@@ -22,12 +22,15 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method InstanceConfs getInstanceConfs() 获取实例配置，包括巡检、概览开关等。
  * @method void setInstanceConfs(InstanceConfs $InstanceConfs) 设置实例配置，包括巡检、概览开关等。
- * @method string getRegions() 获取生效实例地域，取值为"All"，代表全地域。
- * @method void setRegions(string $Regions) 设置生效实例地域，取值为"All"，代表全地域。
+ * @method string getRegions() 获取生效实例地域，固定为"All"，代表全地域。
+ * @method void setRegions(string $Regions) 设置生效实例地域，固定为"All"，代表全地域。
  * @method string getProduct() 获取服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，"redis" - 云数据库 Redis。
  * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，"redis" - 云数据库 Redis。
  * @method array getInstanceIds() 获取指定更改巡检状态的实例ID。
+可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+
  * @method void setInstanceIds(array $InstanceIds) 设置指定更改巡检状态的实例ID。
+可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
  */
 class ModifyDiagDBInstanceConfRequest extends AbstractModel
 {
@@ -37,7 +40,7 @@ class ModifyDiagDBInstanceConfRequest extends AbstractModel
     public $InstanceConfs;
 
     /**
-     * @var string 生效实例地域，取值为"All"，代表全地域。
+     * @var string 生效实例地域，固定为"All"，代表全地域。
      */
     public $Regions;
 
@@ -48,14 +51,17 @@ class ModifyDiagDBInstanceConfRequest extends AbstractModel
 
     /**
      * @var array 指定更改巡检状态的实例ID。
+可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+
      */
     public $InstanceIds;
 
     /**
      * @param InstanceConfs $InstanceConfs 实例配置，包括巡检、概览开关等。
-     * @param string $Regions 生效实例地域，取值为"All"，代表全地域。
+     * @param string $Regions 生效实例地域，固定为"All"，代表全地域。
      * @param string $Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，"redis" - 云数据库 Redis。
      * @param array $InstanceIds 指定更改巡检状态的实例ID。
+可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     function __construct()
     {

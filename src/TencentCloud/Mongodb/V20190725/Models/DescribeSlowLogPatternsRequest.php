@@ -20,12 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSlowLogPatterns请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
- * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
- * @method string getStartTime() 获取慢日志起始时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
- * @method void setStartTime(string $StartTime) 设置慢日志起始时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
- * @method string getEndTime() 获取慢日志终止时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
- * @method void setEndTime(string $EndTime) 设置慢日志终止时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+ * @method string getInstanceId() 获取实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+ * @method string getStartTime() 获取慢日志起始时间。
+- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。
+- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+ * @method void setStartTime(string $StartTime) 设置慢日志起始时间。
+- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。
+- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+ * @method string getEndTime() 获取慢日志终止时间。
+- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。
+- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+ * @method void setEndTime(string $EndTime) 设置慢日志终止时间。
+- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。
+- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
  * @method integer getSlowMS() 获取慢日志执行时间阈值，返回执行时间超过该阈值的慢日志，单位为毫秒(ms)，最小为100毫秒。
  * @method void setSlowMS(integer $SlowMS) 设置慢日志执行时间阈值，返回执行时间超过该阈值的慢日志，单位为毫秒(ms)，最小为100毫秒。
  * @method integer getOffset() 获取偏移量，最小值为0，最大值为10000，默认值为0。
@@ -38,17 +46,21 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSlowLogPatternsRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * @var string 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 慢日志起始时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+     * @var string 慢日志起始时间。
+- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。
+- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
      */
     public $StartTime;
 
     /**
-     * @var string 慢日志终止时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+     * @var string 慢日志终止时间。
+- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。
+- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
      */
     public $EndTime;
 
@@ -73,9 +85,13 @@ class DescribeSlowLogPatternsRequest extends AbstractModel
     public $Format;
 
     /**
-     * @param string $InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
-     * @param string $StartTime 慢日志起始时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
-     * @param string $EndTime 慢日志终止时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+     * @param string $InstanceId 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param string $StartTime 慢日志起始时间。
+- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。
+- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+     * @param string $EndTime 慢日志终止时间。
+- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。
+- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
      * @param integer $SlowMS 慢日志执行时间阈值，返回执行时间超过该阈值的慢日志，单位为毫秒(ms)，最小为100毫秒。
      * @param integer $Offset 偏移量，最小值为0，最大值为10000，默认值为0。
      * @param integer $Limit 分页大小，最小值为1，最大值为100，默认值为20。

@@ -20,43 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstanceDeal返回参数结构体
  *
- * @method integer getStatus() 获取订单状态，1：未支付，2：已支付，3：发货中，4：发货成功，5：发货失败，6：退款，7：订单关闭，8：超时未支付关闭。
- * @method void setStatus(integer $Status) 设置订单状态，1：未支付，2：已支付，3：发货中，4：发货成功，5：发货失败，6：退款，7：订单关闭，8：超时未支付关闭。
- * @method float getOriginalPrice() 获取订单原价。
- * @method void setOriginalPrice(float $OriginalPrice) 设置订单原价。
- * @method float getDiscountPrice() 获取订单折扣价格。
- * @method void setDiscountPrice(float $DiscountPrice) 设置订单折扣价格。
- * @method string getAction() 获取订单行为，purchase：新购，renew：续费，upgrade：升配，downgrade：降配，refund：退货退款。
- * @method void setAction(string $Action) 设置订单行为，purchase：新购，renew：续费，upgrade：升配，downgrade：降配，refund：退货退款。
- * @method string getInstanceId() 获取当前订单的资源Id。
- * @method void setInstanceId(string $InstanceId) 设置当前订单的资源Id。
+ * @method integer getStatus() 获取订单状态。
+- 1：未支付。
+- 2：已支付。
+- 3：发货中。
+- 4：发货成功。
+- 5：发货失败。
+- 6：退款。
+- 7：订单关闭。
+- 8：超时未支付关闭。
+ * @method void setStatus(integer $Status) 设置订单状态。
+- 1：未支付。
+- 2：已支付。
+- 3：发货中。
+- 4：发货成功。
+- 5：发货失败。
+- 6：退款。
+- 7：订单关闭。
+- 8：超时未支付关闭。
+ * @method float getOriginalPrice() 获取订单原价。单位：元。
+ * @method void setOriginalPrice(float $OriginalPrice) 设置订单原价。单位：元。
+ * @method float getDiscountPrice() 获取订单折扣价格。单位：元。
+ * @method void setDiscountPrice(float $DiscountPrice) 设置订单折扣价格。单位：元。
+ * @method string getAction() 获取订单操作行为。
+- purchase：新购。
+- renew：续费。
+- upgrade：升配.
+- downgrade：降配.
+- refund：退货退款。
+ * @method void setAction(string $Action) 设置订单操作行为。
+- purchase：新购。
+- renew：续费。
+- upgrade：升配.
+- downgrade：降配.
+- refund：退货退款。
+ * @method string getInstanceId() 获取当前订单的实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置当前订单的实例 ID。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDBInstanceDealResponse extends AbstractModel
 {
     /**
-     * @var integer 订单状态，1：未支付，2：已支付，3：发货中，4：发货成功，5：发货失败，6：退款，7：订单关闭，8：超时未支付关闭。
+     * @var integer 订单状态。
+- 1：未支付。
+- 2：已支付。
+- 3：发货中。
+- 4：发货成功。
+- 5：发货失败。
+- 6：退款。
+- 7：订单关闭。
+- 8：超时未支付关闭。
      */
     public $Status;
 
     /**
-     * @var float 订单原价。
+     * @var float 订单原价。单位：元。
      */
     public $OriginalPrice;
 
     /**
-     * @var float 订单折扣价格。
+     * @var float 订单折扣价格。单位：元。
      */
     public $DiscountPrice;
 
     /**
-     * @var string 订单行为，purchase：新购，renew：续费，upgrade：升配，downgrade：降配，refund：退货退款。
+     * @var string 订单操作行为。
+- purchase：新购。
+- renew：续费。
+- upgrade：升配.
+- downgrade：降配.
+- refund：退货退款。
      */
     public $Action;
 
     /**
-     * @var string 当前订单的资源Id。
+     * @var string 当前订单的实例 ID。
      */
     public $InstanceId;
 
@@ -66,11 +105,24 @@ class DescribeDBInstanceDealResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status 订单状态，1：未支付，2：已支付，3：发货中，4：发货成功，5：发货失败，6：退款，7：订单关闭，8：超时未支付关闭。
-     * @param float $OriginalPrice 订单原价。
-     * @param float $DiscountPrice 订单折扣价格。
-     * @param string $Action 订单行为，purchase：新购，renew：续费，upgrade：升配，downgrade：降配，refund：退货退款。
-     * @param string $InstanceId 当前订单的资源Id。
+     * @param integer $Status 订单状态。
+- 1：未支付。
+- 2：已支付。
+- 3：发货中。
+- 4：发货成功。
+- 5：发货失败。
+- 6：退款。
+- 7：订单关闭。
+- 8：超时未支付关闭。
+     * @param float $OriginalPrice 订单原价。单位：元。
+     * @param float $DiscountPrice 订单折扣价格。单位：元。
+     * @param string $Action 订单操作行为。
+- purchase：新购。
+- renew：续费。
+- upgrade：升配.
+- downgrade：降配.
+- refund：退货退款。
+     * @param string $InstanceId 当前订单的实例 ID。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DropDBInstanceParamTpl请求参数结构体
  *
- * @method string getTplId() 获取参数模板 ID。
- * @method void setTplId(string $TplId) 设置参数模板 ID。
+ * @method string getTplId() 获取参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。
+ * @method void setTplId(string $TplId) 设置参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。
  */
 class DropDBInstanceParamTplRequest extends AbstractModel
 {
     /**
-     * @var string 参数模板 ID。
+     * @var string 参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。
      */
     public $TplId;
 
     /**
-     * @param string $TplId 参数模板 ID。
+     * @param string $TplId 参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。
      */
     function __construct()
     {

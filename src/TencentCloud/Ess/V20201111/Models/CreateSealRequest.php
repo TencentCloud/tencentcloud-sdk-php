@@ -110,6 +110,8 @@ use TencentCloud\Common\AbstractModel;
 </ul>
  * @method string getSealDescription() 获取印章描述内容
  * @method void setSealDescription(string $SealDescription) 设置印章描述内容
+ * @method array getOptions() 获取个性化配置字段，默认不传。
+ * @method void setOptions(array $Options) 设置个性化配置字段，默认不传。
  */
 class CreateSealRequest extends AbstractModel
 {
@@ -231,6 +233,11 @@ class CreateSealRequest extends AbstractModel
     public $SealDescription;
 
     /**
+     * @var array 个性化配置字段，默认不传。
+     */
+    public $Options;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param string $SealName 电子印章名字，1-50个中文字符
@@ -276,6 +283,7 @@ class CreateSealRequest extends AbstractModel
 <li>2.印章类型SealType是INVOICE类型，且该字段没有传入值或传入空时，会取该企业对应的统一社会信用代码作为默认的企业税号（<font color="red">如果是通过授权书授权方式认证的企业，此参数必传不能为空</font>）</li>
 </ul>
      * @param string $SealDescription 印章描述内容
+     * @param array $Options 个性化配置字段，默认不传。
      */
     function __construct()
     {
@@ -362,6 +370,15 @@ class CreateSealRequest extends AbstractModel
 
         if (array_key_exists("SealDescription",$param) and $param["SealDescription"] !== null) {
             $this->SealDescription = $param["SealDescription"];
+        }
+
+        if (array_key_exists("Options",$param) and $param["Options"] !== null) {
+            $this->Options = [];
+            foreach ($param["Options"] as $key => $value){
+                $obj = new Option();
+                $obj->deserialize($value);
+                array_push($this->Options, $obj);
+            }
         }
     }
 }

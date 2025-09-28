@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReceiveType(array $ReceiveType) 设置接收类型
  * @method array getReceiveInfo() 获取接收用户信息
  * @method void setReceiveInfo(array $ReceiveInfo) 设置接收用户信息
- * @method string getUpdateTime() 获取更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method string getUpdateTime() 获取更新时间，格式: "yyyy-MM-dd HH:mm:ss"
+ * @method void setUpdateTime(string $UpdateTime) 设置更新时间，格式: "yyyy-MM-dd HH:mm:ss"
  * @method string getTemplateName() 获取模板名
  * @method void setTemplateName(string $TemplateName) 设置模板名
  * @method array getSendChannel() 获取发送渠道
@@ -97,7 +97,7 @@ class AlarmProfileList extends AbstractModel
     public $ReceiveInfo;
 
     /**
-     * @var string 更新时间
+     * @var string 更新时间，格式: "yyyy-MM-dd HH:mm:ss"
      */
     public $UpdateTime;
 
@@ -131,7 +131,7 @@ class AlarmProfileList extends AbstractModel
      * @param integer $UpdateUin 更新用户的uin
      * @param array $ReceiveType 接收类型
      * @param array $ReceiveInfo 接收用户信息
-     * @param string $UpdateTime 更新时间
+     * @param string $UpdateTime 更新时间，格式: "yyyy-MM-dd HH:mm:ss"
      * @param string $TemplateName 模板名
      * @param array $SendChannel 发送渠道
      * @param integer $TemplateId 模板id

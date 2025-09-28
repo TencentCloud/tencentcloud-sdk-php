@@ -21,10 +21,10 @@ use TencentCloud\Common\AbstractModel;
  * RenewDBInstances请求参数结构体
  *
  * @method array getInstanceIds() 获取指定续费的一个或多个待操作的实例ID。
-- 可通过[DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568)接口返回值中的**InstanceIds**获取。
+- 可通过[DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568)接口返回值中的**InstanceId**获取。
 - 每次续费请求的实例数量上限为100。
  * @method void setInstanceIds(array $InstanceIds) 设置指定续费的一个或多个待操作的实例ID。
-- 可通过[DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568)接口返回值中的**InstanceIds**获取。
+- 可通过[DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568)接口返回值中的**InstanceId**获取。
 - 每次续费请求的实例数量上限为100。
  * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的续费时长、是否设置自动续费等属性。包年包月实例该参数为必传参数。
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的续费时长、是否设置自动续费等属性。包年包月实例该参数为必传参数。
@@ -33,7 +33,7 @@ class RenewDBInstancesRequest extends AbstractModel
 {
     /**
      * @var array 指定续费的一个或多个待操作的实例ID。
-- 可通过[DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568)接口返回值中的**InstanceIds**获取。
+- 可通过[DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568)接口返回值中的**InstanceId**获取。
 - 每次续费请求的实例数量上限为100。
      */
     public $InstanceIds;
@@ -45,7 +45,7 @@ class RenewDBInstancesRequest extends AbstractModel
 
     /**
      * @param array $InstanceIds 指定续费的一个或多个待操作的实例ID。
-- 可通过[DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568)接口返回值中的**InstanceIds**获取。
+- 可通过[DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568)接口返回值中的**InstanceId**获取。
 - 每次续费请求的实例数量上限为100。
      * @param InstanceChargePrepaid $InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的续费时长、是否设置自动续费等属性。包年包月实例该参数为必传参数。
      */

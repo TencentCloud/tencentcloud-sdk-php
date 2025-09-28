@@ -26,20 +26,31 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventId(integer $EventId) 设置自治事件ID。
  * @method string getType() 获取类型：支持RedisAutoScaleUp
  * @method void setType(string $Type) 设置类型：支持RedisAutoScaleUp
- * @method string getTriggerTime() 获取自治任务触发时间。
- * @method void setTriggerTime(string $TriggerTime) 设置自治任务触发时间。
- * @method string getCreateTime() 获取自治任务创建时间。
- * @method void setCreateTime(string $CreateTime) 设置自治任务创建时间。
- * @method string getUpdateTime() 获取自治任务更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置自治任务更新时间
- * @method string getFinishTime() 获取自治任务完成时间。
- * @method void setFinishTime(string $FinishTime) 设置自治任务完成时间。
+ * @method string getTriggerTime() 获取自治任务触发时间。格式: "yyyy-MM-dd HH:mm:ss"
+ * @method void setTriggerTime(string $TriggerTime) 设置自治任务触发时间。格式: "yyyy-MM-dd HH:mm:ss"
+ * @method string getCreateTime() 获取自治任务创建时间。格式: "yyyy-MM-dd HH:mm:ss"
+ * @method void setCreateTime(string $CreateTime) 设置自治任务创建时间。格式: "yyyy-MM-dd HH:mm:ss"
+ * @method string getUpdateTime() 获取自治任务更新时间，格式: "yyyy-MM-dd HH:mm:ss"
+ * @method void setUpdateTime(string $UpdateTime) 设置自治任务更新时间，格式: "yyyy-MM-dd HH:mm:ss"
+ * @method string getFinishTime() 获取自治任务完成时间。格式: "yyyy-MM-dd HH:mm:ss"
+ * @method void setFinishTime(string $FinishTime) 设置自治任务完成时间。格式: "yyyy-MM-dd HH:mm:ss"
  * @method integer getExpireTime() 获取剩余时间，单位：秒。
  * @method void setExpireTime(integer $ExpireTime) 设置剩余时间，单位：秒。
  * @method string getReason() 获取触发原因。
  * @method void setReason(string $Reason) 设置触发原因。
- * @method string getStatus() 获取自治任务状态：支持 RUNNING，FINISHED，TERMINATED，CANCELLED
- * @method void setStatus(string $Status) 设置自治任务状态：支持 RUNNING，FINISHED，TERMINATED，CANCELLED
+ * @method string getStatus() 获取自治任务状态：RUNNING，FINISHED，TERMINATED，CANCELLED
+其中：
+RUNNING    - 运行中  
+FINISHED   - 已完成  
+TERMINATED - 已终止  
+CANCELLED  - 已取消  
+
+ * @method void setStatus(string $Status) 设置自治任务状态：RUNNING，FINISHED，TERMINATED，CANCELLED
+其中：
+RUNNING    - 运行中  
+FINISHED   - 已完成  
+TERMINATED - 已终止  
+CANCELLED  - 已取消  
  */
 class AutonomyActionVo extends AbstractModel
 {
@@ -59,22 +70,22 @@ class AutonomyActionVo extends AbstractModel
     public $Type;
 
     /**
-     * @var string 自治任务触发时间。
+     * @var string 自治任务触发时间。格式: "yyyy-MM-dd HH:mm:ss"
      */
     public $TriggerTime;
 
     /**
-     * @var string 自治任务创建时间。
+     * @var string 自治任务创建时间。格式: "yyyy-MM-dd HH:mm:ss"
      */
     public $CreateTime;
 
     /**
-     * @var string 自治任务更新时间
+     * @var string 自治任务更新时间，格式: "yyyy-MM-dd HH:mm:ss"
      */
     public $UpdateTime;
 
     /**
-     * @var string 自治任务完成时间。
+     * @var string 自治任务完成时间。格式: "yyyy-MM-dd HH:mm:ss"
      */
     public $FinishTime;
 
@@ -89,7 +100,13 @@ class AutonomyActionVo extends AbstractModel
     public $Reason;
 
     /**
-     * @var string 自治任务状态：支持 RUNNING，FINISHED，TERMINATED，CANCELLED
+     * @var string 自治任务状态：RUNNING，FINISHED，TERMINATED，CANCELLED
+其中：
+RUNNING    - 运行中  
+FINISHED   - 已完成  
+TERMINATED - 已终止  
+CANCELLED  - 已取消  
+
      */
     public $Status;
 
@@ -97,13 +114,18 @@ class AutonomyActionVo extends AbstractModel
      * @param integer $ActionId 自治任务ID。
      * @param integer $EventId 自治事件ID。
      * @param string $Type 类型：支持RedisAutoScaleUp
-     * @param string $TriggerTime 自治任务触发时间。
-     * @param string $CreateTime 自治任务创建时间。
-     * @param string $UpdateTime 自治任务更新时间
-     * @param string $FinishTime 自治任务完成时间。
+     * @param string $TriggerTime 自治任务触发时间。格式: "yyyy-MM-dd HH:mm:ss"
+     * @param string $CreateTime 自治任务创建时间。格式: "yyyy-MM-dd HH:mm:ss"
+     * @param string $UpdateTime 自治任务更新时间，格式: "yyyy-MM-dd HH:mm:ss"
+     * @param string $FinishTime 自治任务完成时间。格式: "yyyy-MM-dd HH:mm:ss"
      * @param integer $ExpireTime 剩余时间，单位：秒。
      * @param string $Reason 触发原因。
-     * @param string $Status 自治任务状态：支持 RUNNING，FINISHED，TERMINATED，CANCELLED
+     * @param string $Status 自治任务状态：RUNNING，FINISHED，TERMINATED，CANCELLED
+其中：
+RUNNING    - 运行中  
+FINISHED   - 已完成  
+TERMINATED - 已终止  
+CANCELLED  - 已取消  
      */
     function __construct()
     {

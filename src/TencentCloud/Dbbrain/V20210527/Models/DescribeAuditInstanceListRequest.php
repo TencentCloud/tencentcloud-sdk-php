@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProduct() 获取服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB。
  * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB。
- * @method string getNodeRequestType() 获取与Product保持一致。如："dcdb" ,"mariadb"。
- * @method void setNodeRequestType(string $NodeRequestType) 设置与Product保持一致。如："dcdb" ,"mariadb"。
+ * @method string getNodeRequestType() 获取NodeRequestType主要标识数据库产品类型，与Product保持一致。如："dcdb" ,"mariadb"。
+ * @method void setNodeRequestType(string $NodeRequestType) 设置NodeRequestType主要标识数据库产品类型，与Product保持一致。如："dcdb" ,"mariadb"。
  * @method integer getAuditSwitch() 获取审计状态标识，0-未开通审计；1-已开通审计，默认为0。
  * @method void setAuditSwitch(integer $AuditSwitch) 设置审计状态标识，0-未开通审计；1-已开通审计，默认为0。
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取查询数目，默认为20，最大为100。
  * @method void setLimit(integer $Limit) 设置查询数目，默认为20，最大为100。
- * @method array getFilters() 获取查询实例的搜索条件。
- * @method void setFilters(array $Filters) 设置查询实例的搜索条件。
+ * @method array getFilters() 获取查询实例的搜索条件。Name包括：InstanceId， InstanceName。
+ * @method void setFilters(array $Filters) 设置查询实例的搜索条件。Name包括：InstanceId， InstanceName。
  */
 class DescribeAuditInstanceListRequest extends AbstractModel
 {
@@ -41,7 +41,7 @@ class DescribeAuditInstanceListRequest extends AbstractModel
     public $Product;
 
     /**
-     * @var string 与Product保持一致。如："dcdb" ,"mariadb"。
+     * @var string NodeRequestType主要标识数据库产品类型，与Product保持一致。如："dcdb" ,"mariadb"。
      */
     public $NodeRequestType;
 
@@ -61,17 +61,17 @@ class DescribeAuditInstanceListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array 查询实例的搜索条件。
+     * @var array 查询实例的搜索条件。Name包括：InstanceId， InstanceName。
      */
     public $Filters;
 
     /**
      * @param string $Product 服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB。
-     * @param string $NodeRequestType 与Product保持一致。如："dcdb" ,"mariadb"。
+     * @param string $NodeRequestType NodeRequestType主要标识数据库产品类型，与Product保持一致。如："dcdb" ,"mariadb"。
      * @param integer $AuditSwitch 审计状态标识，0-未开通审计；1-已开通审计，默认为0。
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 查询数目，默认为20，最大为100。
-     * @param array $Filters 查询实例的搜索条件。
+     * @param array $Filters 查询实例的搜索条件。Name包括：InstanceId， InstanceName。
      */
     function __construct()
     {

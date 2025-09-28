@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceParamTpl请求参数结构体
  *
- * @method string getTplId() 获取待修改的参数模板 ID，示例：tpl-jglr91vew。
- * @method void setTplId(string $TplId) 设置待修改的参数模板 ID，示例：tpl-jglr91vew。
+ * @method string getTplId() 获取待修改的参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。
+ * @method void setTplId(string $TplId) 设置待修改的参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。
  * @method string getTplName() 获取待修改参数模板名称，为空时，保持原有名称。
  * @method void setTplName(string $TplName) 设置待修改参数模板名称，为空时，保持原有名称。
  * @method string getTplDesc() 获取待修改参数模板描述，为空时，保持原有描述。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDBInstanceParamTplRequest extends AbstractModel
 {
     /**
-     * @var string 待修改的参数模板 ID，示例：tpl-jglr91vew。
+     * @var string 待修改的参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。
      */
     public $TplId;
 
@@ -52,7 +52,7 @@ class ModifyDBInstanceParamTplRequest extends AbstractModel
     public $Params;
 
     /**
-     * @param string $TplId 待修改的参数模板 ID，示例：tpl-jglr91vew。
+     * @param string $TplId 待修改的参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。
      * @param string $TplName 待修改参数模板名称，为空时，保持原有名称。
      * @param string $TplDesc 待修改参数模板描述，为空时，保持原有描述。
      * @param array $Params 待修改参数名及参数值，为空时，各参数保持原有值，支持单条或批量修改。

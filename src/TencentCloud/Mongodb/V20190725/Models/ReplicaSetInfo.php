@@ -18,20 +18,20 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 分片信息
+ * 分片信息。
  *
- * @method string getReplicaSetId() 获取副本集ID
- * @method void setReplicaSetId(string $ReplicaSetId) 设置副本集ID
+ * @method string getReplicaSetId() 获取副本集 ID。
+ * @method void setReplicaSetId(string $ReplicaSetId) 设置副本集 ID。
  */
 class ReplicaSetInfo extends AbstractModel
 {
     /**
-     * @var string 副本集ID
+     * @var string 副本集 ID。
      */
     public $ReplicaSetId;
 
     /**
-     * @param string $ReplicaSetId 副本集ID
+     * @param string $ReplicaSetId 副本集 ID。
      */
     function __construct()
     {

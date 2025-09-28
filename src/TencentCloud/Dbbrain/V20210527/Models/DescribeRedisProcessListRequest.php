@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRedisProcessList请求参数结构体
  *
- * @method string getInstanceId() 获取Redis 实例ID。
- * @method void setInstanceId(string $InstanceId) 设置Redis 实例ID。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
  * @method string getProduct() 获取服务产品类型，支持值包括 "redis" - 云数据库 Redis。
  * @method void setProduct(string $Product) 设置服务产品类型，支持值包括 "redis" - 云数据库 Redis。
  * @method integer getLimit() 获取查询的Proxy节点数量上限，默认值为20，最大值为50。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRedisProcessListRequest extends AbstractModel
 {
     /**
-     * @var string Redis 实例ID。
+     * @var string 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public $InstanceId;
 
@@ -52,7 +52,7 @@ class DescribeRedisProcessListRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param string $InstanceId Redis 实例ID。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      * @param string $Product 服务产品类型，支持值包括 "redis" - 云数据库 Redis。
      * @param integer $Limit 查询的Proxy节点数量上限，默认值为20，最大值为50。
      * @param integer $Offset Proxy节点的偏移量，默认值为0。

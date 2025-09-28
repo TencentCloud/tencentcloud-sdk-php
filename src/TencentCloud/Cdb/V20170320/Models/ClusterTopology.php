@@ -18,7 +18,7 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 集群版的节点拓扑配置。
+ * 云盘版的节点拓扑配置。
  *
  * @method ReadWriteNode getReadWriteNode() 获取RW 节点拓扑。
 说明：NodeId 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 获取。

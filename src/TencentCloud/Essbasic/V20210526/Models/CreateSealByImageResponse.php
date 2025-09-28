@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageUrl(string $ImageUrl) 设置电子印章预览链接地址，地址默认失效时间为24小时。
 
 注:`图片上传生成的电子印章无预览链接地址`
+ * @method string getSealOperatorVerifyPath() 获取人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。
+ * @method void setSealOperatorVerifyPath(string $SealOperatorVerifyPath) 设置人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。
+ * @method string getSealOperatorVerifyQrcodeUrl() 获取人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。
+ * @method void setSealOperatorVerifyQrcodeUrl(string $SealOperatorVerifyQrcodeUrl) 设置人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -49,6 +53,16 @@ class CreateSealByImageResponse extends AbstractModel
     public $ImageUrl;
 
     /**
+     * @var string 人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。
+     */
+    public $SealOperatorVerifyPath;
+
+    /**
+     * @var string 人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。
+     */
+    public $SealOperatorVerifyQrcodeUrl;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -59,6 +73,8 @@ class CreateSealByImageResponse extends AbstractModel
      * @param string $ImageUrl 电子印章预览链接地址，地址默认失效时间为24小时。
 
 注:`图片上传生成的电子印章无预览链接地址`
+     * @param string $SealOperatorVerifyPath 人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。
+     * @param string $SealOperatorVerifyQrcodeUrl 人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -80,6 +96,14 @@ class CreateSealByImageResponse extends AbstractModel
 
         if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
             $this->ImageUrl = $param["ImageUrl"];
+        }
+
+        if (array_key_exists("SealOperatorVerifyPath",$param) and $param["SealOperatorVerifyPath"] !== null) {
+            $this->SealOperatorVerifyPath = $param["SealOperatorVerifyPath"];
+        }
+
+        if (array_key_exists("SealOperatorVerifyQrcodeUrl",$param) and $param["SealOperatorVerifyQrcodeUrl"] !== null) {
+            $this->SealOperatorVerifyQrcodeUrl = $param["SealOperatorVerifyQrcodeUrl"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

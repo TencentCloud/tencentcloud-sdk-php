@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstanceParamTplDetail请求参数结构体
  *
- * @method string getTplId() 获取参数模板 ID。
- * @method void setTplId(string $TplId) 设置参数模板 ID。
+ * @method string getTplId() 获取参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。
+ * @method void setTplId(string $TplId) 设置参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。
  * @method string getParamName() 获取参数名称，传入该值，则只会获取该字段的参数详情。为空时，返回全部参数。
  * @method void setParamName(string $ParamName) 设置参数名称，传入该值，则只会获取该字段的参数详情。为空时，返回全部参数。
  */
 class DescribeDBInstanceParamTplDetailRequest extends AbstractModel
 {
     /**
-     * @var string 参数模板 ID。
+     * @var string 参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。
      */
     public $TplId;
 
@@ -38,7 +38,7 @@ class DescribeDBInstanceParamTplDetailRequest extends AbstractModel
     public $ParamName;
 
     /**
-     * @param string $TplId 参数模板 ID。
+     * @param string $TplId 参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。
      * @param string $ParamName 参数名称，传入该值，则只会获取该字段的参数详情。为空时，返回全部参数。
      */
     function __construct()

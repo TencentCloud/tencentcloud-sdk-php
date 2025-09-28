@@ -158,6 +158,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setForceRedirectHTTPSParameters(ForceRedirectHTTPSParameters $ForceRedirectHTTPSParameters) 设置访问协议强制 HTTPS 跳转配置，当 Name 取值为 ForceRedirectHTTPS 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method OriginPullProtocolParameters getOriginPullProtocolParameters() 获取回源 HTTPS 配置参数，当 Name 取值为 OriginPullProtocol 时，该参数必填。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOriginPullProtocolParameters(OriginPullProtocolParameters $OriginPullProtocolParameters) 设置回源 HTTPS 配置参数，当 Name 取值为 OriginPullProtocol 时，该参数必填。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method CompressionParameters getCompressionParameters() 获取智能压缩配置，当 Name 取值为 Compression 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompressionParameters(CompressionParameters $CompressionParameters) 设置智能压缩配置，当 Name 取值为 Compression 时，该参数必填。
@@ -234,6 +238,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method VaryParameters getVaryParameters() 获取Vary 特性配置参数，当 Name 取值为 Vary 时，该参数必填。
  * @method void setVaryParameters(VaryParameters $VaryParameters) 设置Vary 特性配置参数，当 Name 取值为 Vary 时，该参数必填。
+ * @method ContentCompressionParameters getContentCompressionParameters() 获取内容压缩配置参数，当 Name 取值为 ContentCompression 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。
+ * @method void setContentCompressionParameters(ContentCompressionParameters $ContentCompressionParameters) 设置内容压缩配置参数，当 Name 取值为 ContentCompression 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。
  */
 class RuleEngineAction extends AbstractModel
 {
@@ -375,6 +381,12 @@ class RuleEngineAction extends AbstractModel
     public $ForceRedirectHTTPSParameters;
 
     /**
+     * @var OriginPullProtocolParameters 回源 HTTPS 配置参数，当 Name 取值为 OriginPullProtocol 时，该参数必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OriginPullProtocolParameters;
+
+    /**
      * @var CompressionParameters 智能压缩配置，当 Name 取值为 Compression 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -489,6 +501,11 @@ class RuleEngineAction extends AbstractModel
     public $VaryParameters;
 
     /**
+     * @var ContentCompressionParameters 内容压缩配置参数，当 Name 取值为 ContentCompression 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。
+     */
+    public $ContentCompressionParameters;
+
+    /**
      * @param string $Name 操作名称。名称需要与参数结构体对应，例如 Name=Cache，则 CacheParameters 必填。
 <li>Cache：节点缓存 TTL；</li>
 <li>CacheKey：自定义 Cache Key；</li>
@@ -558,6 +575,8 @@ class RuleEngineAction extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ForceRedirectHTTPSParameters $ForceRedirectHTTPSParameters 访问协议强制 HTTPS 跳转配置，当 Name 取值为 ForceRedirectHTTPS 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginPullProtocolParameters $OriginPullProtocolParameters 回源 HTTPS 配置参数，当 Name 取值为 OriginPullProtocol 时，该参数必填。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CompressionParameters $CompressionParameters 智能压缩配置，当 Name 取值为 Compression 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param HSTSParameters $HSTSParameters HSTS 配置参数，当 Name 取值为 HSTS 时，该参数必填。
@@ -596,6 +615,7 @@ class RuleEngineAction extends AbstractModel
 
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VaryParameters $VaryParameters Vary 特性配置参数，当 Name 取值为 Vary 时，该参数必填。
+     * @param ContentCompressionParameters $ContentCompressionParameters 内容压缩配置参数，当 Name 取值为 ContentCompression 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。
      */
     function __construct()
     {
@@ -694,6 +714,11 @@ class RuleEngineAction extends AbstractModel
             $this->ForceRedirectHTTPSParameters->deserialize($param["ForceRedirectHTTPSParameters"]);
         }
 
+        if (array_key_exists("OriginPullProtocolParameters",$param) and $param["OriginPullProtocolParameters"] !== null) {
+            $this->OriginPullProtocolParameters = new OriginPullProtocolParameters();
+            $this->OriginPullProtocolParameters->deserialize($param["OriginPullProtocolParameters"]);
+        }
+
         if (array_key_exists("CompressionParameters",$param) and $param["CompressionParameters"] !== null) {
             $this->CompressionParameters = new CompressionParameters();
             $this->CompressionParameters->deserialize($param["CompressionParameters"]);
@@ -787,6 +812,11 @@ class RuleEngineAction extends AbstractModel
         if (array_key_exists("VaryParameters",$param) and $param["VaryParameters"] !== null) {
             $this->VaryParameters = new VaryParameters();
             $this->VaryParameters->deserialize($param["VaryParameters"]);
+        }
+
+        if (array_key_exists("ContentCompressionParameters",$param) and $param["ContentCompressionParameters"] !== null) {
+            $this->ContentCompressionParameters = new ContentCompressionParameters();
+            $this->ContentCompressionParameters->deserialize($param["ContentCompressionParameters"]);
         }
     }
 }

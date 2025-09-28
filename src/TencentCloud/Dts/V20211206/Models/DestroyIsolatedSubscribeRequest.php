@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DestroyIsolatedSubscribe请求参数结构体
  *
- * @method string getSubscribeId() 获取数据订阅实例的ID
- * @method void setSubscribeId(string $SubscribeId) 设置数据订阅实例的ID
+ * @method string getSubscribeId() 获取数据订阅实例的ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+ * @method void setSubscribeId(string $SubscribeId) 设置数据订阅实例的ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
  */
 class DestroyIsolatedSubscribeRequest extends AbstractModel
 {
     /**
-     * @var string 数据订阅实例的ID
+     * @var string 数据订阅实例的ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
      */
     public $SubscribeId;
 
     /**
-     * @param string $SubscribeId 数据订阅实例的ID
+     * @param string $SubscribeId 数据订阅实例的ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
      */
     function __construct()
     {

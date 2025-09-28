@@ -20,45 +20,56 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstanceNodeProperty请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
- * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
- * @method array getNodeIds() 获取节点ID。
- * @method void setNodeIds(array $NodeIds) 设置节点ID。
+ * @method string getInstanceId() 获取实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+ * @method array getNodeIds() 获取节点 ID。请登录 [MongoDB 控制台的节点管理](https://console.cloud.tencent.com/mongodb)复制节点 ID。
+ * @method void setNodeIds(array $NodeIds) 设置节点 ID。请登录 [MongoDB 控制台的节点管理](https://console.cloud.tencent.com/mongodb)复制节点 ID。
  * @method array getRoles() 获取节点角色。可选值包括：
-<ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul>
+- PRIMARY：主节点。
+- SECONDARY：从节点。
+- READONLY：只读节点。
+- ARBITER：仲裁节点。
  * @method void setRoles(array $Roles) 设置节点角色。可选值包括：
-<ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul>
- * @method boolean getOnlyHidden() 获取该参数指定节点是否为Hidden节点，默认为false。
- * @method void setOnlyHidden(boolean $OnlyHidden) 设置该参数指定节点是否为Hidden节点，默认为false。
+- PRIMARY：主节点。
+- SECONDARY：从节点。
+- READONLY：只读节点。
+- ARBITER：仲裁节点。
+ * @method boolean getOnlyHidden() 获取该参数指定节点是否为 Hidden 节点，默认为 false。
+ * @method void setOnlyHidden(boolean $OnlyHidden) 设置该参数指定节点是否为 Hidden 节点，默认为 false。
  * @method integer getPriority() 获取该参数指定选举新主节点的优先级。其取值范围为[0,100]，数值越高，优先级越高。
  * @method void setPriority(integer $Priority) 设置该参数指定选举新主节点的优先级。其取值范围为[0,100]，数值越高，优先级越高。
  * @method integer getVotes() 获取该参数指定节点投票权。
-<ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul>
+- 1：具有投票权。
+- 0：无投票权。
  * @method void setVotes(integer $Votes) 设置该参数指定节点投票权。
-<ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul>
+- 1：具有投票权。
+- 0：无投票权。
  * @method array getTags() 获取节点标签。
  * @method void setTags(array $Tags) 设置节点标签。
  */
 class DescribeDBInstanceNodePropertyRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
+     * @var string 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var array 节点ID。
+     * @var array 节点 ID。请登录 [MongoDB 控制台的节点管理](https://console.cloud.tencent.com/mongodb)复制节点 ID。
      */
     public $NodeIds;
 
     /**
      * @var array 节点角色。可选值包括：
-<ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul>
+- PRIMARY：主节点。
+- SECONDARY：从节点。
+- READONLY：只读节点。
+- ARBITER：仲裁节点。
      */
     public $Roles;
 
     /**
-     * @var boolean 该参数指定节点是否为Hidden节点，默认为false。
+     * @var boolean 该参数指定节点是否为 Hidden 节点，默认为 false。
      */
     public $OnlyHidden;
 
@@ -69,7 +80,8 @@ class DescribeDBInstanceNodePropertyRequest extends AbstractModel
 
     /**
      * @var integer 该参数指定节点投票权。
-<ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul>
+- 1：具有投票权。
+- 0：无投票权。
      */
     public $Votes;
 
@@ -79,14 +91,18 @@ class DescribeDBInstanceNodePropertyRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
-     * @param array $NodeIds 节点ID。
+     * @param string $InstanceId 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param array $NodeIds 节点 ID。请登录 [MongoDB 控制台的节点管理](https://console.cloud.tencent.com/mongodb)复制节点 ID。
      * @param array $Roles 节点角色。可选值包括：
-<ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul>
-     * @param boolean $OnlyHidden 该参数指定节点是否为Hidden节点，默认为false。
+- PRIMARY：主节点。
+- SECONDARY：从节点。
+- READONLY：只读节点。
+- ARBITER：仲裁节点。
+     * @param boolean $OnlyHidden 该参数指定节点是否为 Hidden 节点，默认为 false。
      * @param integer $Priority 该参数指定选举新主节点的优先级。其取值范围为[0,100]，数值越高，优先级越高。
      * @param integer $Votes 该参数指定节点投票权。
-<ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul>
+- 1：具有投票权。
+- 0：无投票权。
      * @param array $Tags 节点标签。
      */
     function __construct()

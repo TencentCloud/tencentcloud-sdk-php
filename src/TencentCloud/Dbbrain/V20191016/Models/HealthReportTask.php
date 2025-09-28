@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSource(string $Source) 设置任务的触发来源，支持的取值包括："DAILY_INSPECTION" - 实例巡检；"SCHEDULED" - 定时生成；"MANUAL" - 手动触发。
  * @method integer getProgress() 获取任务完成进度，单位%。
  * @method void setProgress(integer $Progress) 设置任务完成进度，单位%。
- * @method string getCreateTime() 获取任务创建时间。
- * @method void setCreateTime(string $CreateTime) 设置任务创建时间。
- * @method string getStartTime() 获取任务开始执行时间。
- * @method void setStartTime(string $StartTime) 设置任务开始执行时间。
- * @method string getEndTime() 获取任务完成执行时间。
- * @method void setEndTime(string $EndTime) 设置任务完成执行时间。
+ * @method string getCreateTime() 获取任务创建时间，格式: "yyyy-MM-dd HH:mm:ss"。
+ * @method void setCreateTime(string $CreateTime) 设置任务创建时间，格式: "yyyy-MM-dd HH:mm:ss"。
+ * @method string getStartTime() 获取任务开始执行时间，格式: "yyyy-MM-dd HH:mm:ss"。
+ * @method void setStartTime(string $StartTime) 设置任务开始执行时间，格式: "yyyy-MM-dd HH:mm:ss"。
+ * @method string getEndTime() 获取任务完成执行时间，格式: "yyyy-MM-dd HH:mm:ss"。
+ * @method void setEndTime(string $EndTime) 设置任务完成执行时间，格式: "yyyy-MM-dd HH:mm:ss"。
  * @method InstanceBasicInfo getInstanceInfo() 获取任务所属实例的基础信息。
  * @method void setInstanceInfo(InstanceBasicInfo $InstanceInfo) 设置任务所属实例的基础信息。
  * @method HealthStatus getHealthStatus() 获取健康报告中的健康信息。
@@ -55,17 +55,17 @@ class HealthReportTask extends AbstractModel
     public $Progress;
 
     /**
-     * @var string 任务创建时间。
+     * @var string 任务创建时间，格式: "yyyy-MM-dd HH:mm:ss"。
      */
     public $CreateTime;
 
     /**
-     * @var string 任务开始执行时间。
+     * @var string 任务开始执行时间，格式: "yyyy-MM-dd HH:mm:ss"。
      */
     public $StartTime;
 
     /**
-     * @var string 任务完成执行时间。
+     * @var string 任务完成执行时间，格式: "yyyy-MM-dd HH:mm:ss"。
      */
     public $EndTime;
 
@@ -83,9 +83,9 @@ class HealthReportTask extends AbstractModel
      * @param integer $AsyncRequestId 异步任务请求 ID。
      * @param string $Source 任务的触发来源，支持的取值包括："DAILY_INSPECTION" - 实例巡检；"SCHEDULED" - 定时生成；"MANUAL" - 手动触发。
      * @param integer $Progress 任务完成进度，单位%。
-     * @param string $CreateTime 任务创建时间。
-     * @param string $StartTime 任务开始执行时间。
-     * @param string $EndTime 任务完成执行时间。
+     * @param string $CreateTime 任务创建时间，格式: "yyyy-MM-dd HH:mm:ss"。
+     * @param string $StartTime 任务开始执行时间，格式: "yyyy-MM-dd HH:mm:ss"。
+     * @param string $EndTime 任务完成执行时间，格式: "yyyy-MM-dd HH:mm:ss"。
      * @param InstanceBasicInfo $InstanceInfo 任务所属实例的基础信息。
      * @param HealthStatus $HealthStatus 健康报告中的健康信息。
      */

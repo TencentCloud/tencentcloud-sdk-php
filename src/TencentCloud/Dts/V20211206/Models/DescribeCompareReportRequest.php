@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCompareReport请求参数结构体
  *
- * @method string getJobId() 获取迁移任务 Id
- * @method void setJobId(string $JobId) 设置迁移任务 Id
- * @method string getCompareTaskId() 获取校验任务 Id
- * @method void setCompareTaskId(string $CompareTaskId) 设置校验任务 Id
+ * @method string getJobId() 获取迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+ * @method void setJobId(string $JobId) 设置迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+ * @method string getCompareTaskId() 获取校验任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+ * @method void setCompareTaskId(string $CompareTaskId) 设置校验任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
  * @method integer getDifferenceLimit() 获取校验不一致结果的 limit
  * @method void setDifferenceLimit(integer $DifferenceLimit) 设置校验不一致结果的 limit
  * @method integer getDifferenceOffset() 获取不一致的 Offset
@@ -44,12 +44,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCompareReportRequest extends AbstractModel
 {
     /**
-     * @var string 迁移任务 Id
+     * @var string 迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
      */
     public $JobId;
 
     /**
-     * @var string 校验任务 Id
+     * @var string 校验任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
      */
     public $CompareTaskId;
 
@@ -94,8 +94,8 @@ class DescribeCompareReportRequest extends AbstractModel
     public $SkippedTable;
 
     /**
-     * @param string $JobId 迁移任务 Id
-     * @param string $CompareTaskId 校验任务 Id
+     * @param string $JobId 迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+     * @param string $CompareTaskId 校验任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
      * @param integer $DifferenceLimit 校验不一致结果的 limit
      * @param integer $DifferenceOffset 不一致的 Offset
      * @param string $DifferenceDB 搜索条件，不一致的库名

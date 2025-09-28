@@ -29,21 +29,21 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getVolume() 获取实例硬盘大小，单位：GB。每一个 CPU 规格对应的最大磁盘与最小磁盘范围，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
  * @method void setVolume(integer $Volume) 设置实例硬盘大小，单位：GB。每一个 CPU 规格对应的最大磁盘与最小磁盘范围，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
  * @method string getMongoVersion() 获取指版本信息。具体支持的版本信息 ，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
-- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
  * @method void setMongoVersion(string $MongoVersion) 设置指版本信息。具体支持的版本信息 ，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
-- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
- * @method integer getGoodsNum() 获取实例数量, 最小值1，最大值为10。
- * @method void setGoodsNum(integer $GoodsNum) 设置实例数量, 最小值1，最大值为10。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+ * @method integer getGoodsNum() 获取实例数量, 最小值1，最大值为30。
+ * @method void setGoodsNum(integer $GoodsNum) 设置实例数量, 最小值1，最大值为30。
  * @method string getZone() 获取可用区信息，输入格式如：ap-guangzhou-2。
 - 具体信息，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
 - 该参数为主可用区，如果多可用区部署，Zone必须是AvailabilityZoneList中的一个。
@@ -51,9 +51,7 @@ use TencentCloud\Common\AbstractModel;
 - 具体信息，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
 - 该参数为主可用区，如果多可用区部署，Zone必须是AvailabilityZoneList中的一个。
  * @method integer getPeriod() 获取指定购买实例的购买时长。取值可选：[1,2,3,4,5,6,7,8,9,10,11,12,24,36]；单位：月。
-
  * @method void setPeriod(integer $Period) 设置指定购买实例的购买时长。取值可选：[1,2,3,4,5,6,7,8,9,10,11,12,24,36]；单位：月。
-
  * @method string getMachineCode() 获取产品规格类型。
 - HIO10G：通用高HIO万兆型。
 - HCD：云盘版类型。
@@ -76,10 +74,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置项目ID。
 - 若不设置该参数，则为默认项目。
 - 在 [MongoDB 控制台项目管理](https://console.cloud.tencent.com/project)页面，可获取项目ID。
- * @method string getVpcId() 获取私有网络ID。请登录[私有网络控制台](https://console.cloud.tencent.com/vpc)查询确认正确的ID。 示例值：vpc-pxyzim13
- * @method void setVpcId(string $VpcId) 设置私有网络ID。请登录[私有网络控制台](https://console.cloud.tencent.com/vpc)查询确认正确的ID。 示例值：vpc-pxyzim13
- * @method string getSubnetId() 获取私有网络VPC的子网。请登录 [私有网络控制台](https://console.cloud.tencent.com/vpc) 查询子网列表确认正确的 ID。 示例值：subnet-7jbabche
- * @method void setSubnetId(string $SubnetId) 设置私有网络VPC的子网。请登录 [私有网络控制台](https://console.cloud.tencent.com/vpc) 查询子网列表确认正确的 ID。 示例值：subnet-7jbabche
+ * @method string getVpcId() 获取私有网络 ID。
+- 仅支持配置私有网络，必须选择一个与实例同一地域的私有网络。请登录[私有网络控制台](https://console.cloud.tencent.com/vpc)获取可使用的私有网络 ID。
+- 实例创建成功之后，支持更换私有网络。具体操作，请参见[更换网络](https://cloud.tencent.com/document/product/239/30910)。
+ * @method void setVpcId(string $VpcId) 设置私有网络 ID。
+- 仅支持配置私有网络，必须选择一个与实例同一地域的私有网络。请登录[私有网络控制台](https://console.cloud.tencent.com/vpc)获取可使用的私有网络 ID。
+- 实例创建成功之后，支持更换私有网络。具体操作，请参见[更换网络](https://cloud.tencent.com/document/product/239/30910)。
+ * @method string getSubnetId() 获取私有网络 VPC 的子网 ID。
+- 必须在已选的私有网络内指定一个子网。请登录[私有网络控制台](https://console.cloud.tencent.com/vpc)获取可使用的子网 ID。
+- 实例创建成功之后，支持更换私有网络及子网。具体操作，请参见[更换网络](https://cloud.tencent.com/document/product/239/30910)。
+ * @method void setSubnetId(string $SubnetId) 设置私有网络 VPC 的子网 ID。
+- 必须在已选的私有网络内指定一个子网。请登录[私有网络控制台](https://console.cloud.tencent.com/vpc)获取可使用的子网 ID。
+- 实例创建成功之后，支持更换私有网络及子网。具体操作，请参见[更换网络](https://cloud.tencent.com/document/product/239/30910)。
  * @method string getPassword() 获取实例密码。设置要求如下：
 - 字符个数为[8,32]。
 - 可输入[A,Z]、[a,z]、[0,9]范围内的字符。
@@ -104,16 +110,34 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动选择代金券。
 - 1：是。
 - 0：否。默认为0。
- * @method integer getClone() 获取实例类型。- 1：正式实例。- 3：只读实例。- 4：灾备实例。-5：整实例克隆，注意：克隆实例时，RestoreTime为必填项。
- * @method void setClone(integer $Clone) 设置实例类型。- 1：正式实例。- 3：只读实例。- 4：灾备实例。-5：整实例克隆，注意：克隆实例时，RestoreTime为必填项。
- * @method string getFather() 获取父实例 ID。当参数**Clone**为3或者4时，即实例为只读或灾备实例时，该参数必须配置。
- * @method void setFather(string $Father) 设置父实例 ID。当参数**Clone**为3或者4时，即实例为只读或灾备实例时，该参数必须配置。
- * @method array getSecurityGroup() 获取安全组 ID。 
- * @method void setSecurityGroup(array $SecurityGroup) 设置安全组 ID。 
+ * @method integer getClone() 获取实例类型。
+- 1：正式实例。
+- 3：只读实例。
+- 4：灾备实例。
+- 5：克隆实例。注意：克隆实例 RestoreTime 为必填项。
+ * @method void setClone(integer $Clone) 设置实例类型。
+- 1：正式实例。
+- 3：只读实例。
+- 4：灾备实例。
+- 5：克隆实例。注意：克隆实例 RestoreTime 为必填项。
+ * @method string getFather() 获取父实例 ID。
+- 当参数**Clone**为3或者4时，即实例为只读或灾备实例时，该参数必须配置。
+- 请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制父实例 ID。
+ * @method void setFather(string $Father) 设置父实例 ID。
+- 当参数**Clone**为3或者4时，即实例为只读或灾备实例时，该参数必须配置。
+- 请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制父实例 ID。
+ * @method array getSecurityGroup() 获取安全组 ID。 请登录[安全组控制台](https://console.cloud.tencent.com/vpc/security-group)页面获取与数据库实例同地域的安全组 ID。
+ * @method void setSecurityGroup(array $SecurityGroup) 设置安全组 ID。 请登录[安全组控制台](https://console.cloud.tencent.com/vpc/security-group)页面获取与数据库实例同地域的安全组 ID。
  * @method string getRestoreTime() 获取克隆实例回档时间，当Clone取值为5或6时为必填。- 若为克隆实例，则必须配置该参数。输入格式示例：2021-08-13 16:30:00。- 回档时间范围：仅能回档7天内时间点的数据。
  * @method void setRestoreTime(string $RestoreTime) 设置克隆实例回档时间，当Clone取值为5或6时为必填。- 若为克隆实例，则必须配置该参数。输入格式示例：2021-08-13 16:30:00。- 回档时间范围：仅能回档7天内时间点的数据。
- * @method string getInstanceName() 获取实例名称。仅支持长度为60个字符的中文、英文、数字、下划线_、分隔符- 。
- * @method void setInstanceName(string $InstanceName) 设置实例名称。仅支持长度为60个字符的中文、英文、数字、下划线_、分隔符- 。
+ * @method string getInstanceName() 获取实例名称。仅支持长度为128个字符的中文、英文、数字、下划线\_、分隔符\-。批量购买数据库实例时，支持通过自定义命名模式串与数字后缀自动升序功能，高效设置实例名称。
+- 基础模式：前缀＋自动升序编号（默认从1开始），**lnstanceName**仅需自定义实例名称前缀，例如设置为：cmgo，设置购买数量为5，则购买后，实例名称依次分别为cmgo1、cmgo2、cmgo3、cmgo4、cmgo5。
+- 自定义起始序号模式：前缀+｛R:x｝（x为自定义起始序号）。**InstanceName**需填写“前缀｛R:x｝”，例如：cmgo｛R:3｝，设置购买数量为5，则实例名称为cmgo3、cmgo4、cmgo5、cmgo6、cmgo7。
+- 复合模式串：前缀1{R:x}+前缀2{R:y}+ ⋯+固定后缀，x与y分别为每一段前缀的起始序号。**instanceName**需填写复合模式串，例如：cmgo{R:10}\_node{R:12}\_db，设置批量购买数量为5，则实例名称为 cmgo10\_node12\_db, cmgo11\_node13\_db, cmgo12\_node14\_db, cmgo13\_node15\_db, cluster14\_node16\_db. 
+ * @method void setInstanceName(string $InstanceName) 设置实例名称。仅支持长度为128个字符的中文、英文、数字、下划线\_、分隔符\-。批量购买数据库实例时，支持通过自定义命名模式串与数字后缀自动升序功能，高效设置实例名称。
+- 基础模式：前缀＋自动升序编号（默认从1开始），**lnstanceName**仅需自定义实例名称前缀，例如设置为：cmgo，设置购买数量为5，则购买后，实例名称依次分别为cmgo1、cmgo2、cmgo3、cmgo4、cmgo5。
+- 自定义起始序号模式：前缀+｛R:x｝（x为自定义起始序号）。**InstanceName**需填写“前缀｛R:x｝”，例如：cmgo｛R:3｝，设置购买数量为5，则实例名称为cmgo3、cmgo4、cmgo5、cmgo6、cmgo7。
+- 复合模式串：前缀1{R:x}+前缀2{R:y}+ ⋯+固定后缀，x与y分别为每一段前缀的起始序号。**instanceName**需填写复合模式串，例如：cmgo{R:10}\_node{R:12}\_db，设置批量购买数量为5，则实例名称为 cmgo10\_node12\_db, cmgo11\_node13\_db, cmgo12\_node14\_db, cmgo13\_node15\_db, cluster14\_node16\_db. 
  * @method array getAvailabilityZoneList() 获取若多可用区部署云数据库实例，指定多可用区列表。
 - 多可用区部署实例，参数 **Zone** 指定实例主可用区信息；**AvailabilityZoneList** 指定所有可用区信息，包含主可用区。输入格式如：[ap-guangzhou-2,ap-guangzhou-3,ap-guangzhou-4]。
 - 通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 可获取云数据库不同地域规划的可用区信息，以便指定有效的可用区。
@@ -142,8 +166,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReadonlyNodeAvailabilityZoneList(array $ReadonlyNodeAvailabilityZoneList) 设置指只读节点所属可用区数组。跨可用区部署实例，参数**ReadonlyNodeNum**不为**0**时，必须配置该参数。
  * @method string getHiddenZone() 获取Hidden节点所属可用区。跨可用区部署实例，必须配置该参数。
  * @method void setHiddenZone(string $HiddenZone) 设置Hidden节点所属可用区。跨可用区部署实例，必须配置该参数。
- * @method string getParamTemplateId() 获取参数模板 ID。参数模板是一组 MongoDB 的参数并为预设置了参数值的集合，将一组有相同诉求的参数及值 存为模板，在创建实例时，可直接引用参数值到新实例。合理使用参数模板，可以提高MongoDB数据库的效率。模板列表从 DescribeDBInstanceParamTpl 接口获取，注意模板支持的版本及实例类型。
- * @method void setParamTemplateId(string $ParamTemplateId) 设置参数模板 ID。参数模板是一组 MongoDB 的参数并为预设置了参数值的集合，将一组有相同诉求的参数及值 存为模板，在创建实例时，可直接引用参数值到新实例。合理使用参数模板，可以提高MongoDB数据库的效率。模板列表从 DescribeDBInstanceParamTpl 接口获取，注意模板支持的版本及实例类型。
+ * @method string getParamTemplateId() 获取参数模板 ID。
+- 参数模板是预置了特定参数值的集合，可用于快速配置新的 MongoDB 实例。合理使用参数模板，能有效提升数据库的部署效率与运行性能。
+- 参数模板 ID 可通过 [DescribeDBInstanceParamTpl ](https://cloud.tencent.com/document/product/240/109155)接口获取。请选择与实例版本与架构所对应的参数模板 ID。
+ * @method void setParamTemplateId(string $ParamTemplateId) 设置参数模板 ID。
+- 参数模板是预置了特定参数值的集合，可用于快速配置新的 MongoDB 实例。合理使用参数模板，能有效提升数据库的部署效率与运行性能。
+- 参数模板 ID 可通过 [DescribeDBInstanceParamTpl ](https://cloud.tencent.com/document/product/240/109155)接口获取。请选择与实例版本与架构所对应的参数模板 ID。
  */
 class CreateDBInstanceRequest extends AbstractModel
 {
@@ -165,17 +193,17 @@ class CreateDBInstanceRequest extends AbstractModel
 
     /**
      * @var string 指版本信息。具体支持的版本信息 ，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
-- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
      */
     public $MongoVersion;
 
     /**
-     * @var integer 实例数量, 最小值1，最大值为10。
+     * @var integer 实例数量, 最小值1，最大值为30。
      */
     public $GoodsNum;
 
@@ -188,7 +216,6 @@ class CreateDBInstanceRequest extends AbstractModel
 
     /**
      * @var integer 指定购买实例的购买时长。取值可选：[1,2,3,4,5,6,7,8,9,10,11,12,24,36]；单位：月。
-
      */
     public $Period;
 
@@ -220,12 +247,16 @@ class CreateDBInstanceRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string 私有网络ID。请登录[私有网络控制台](https://console.cloud.tencent.com/vpc)查询确认正确的ID。 示例值：vpc-pxyzim13
+     * @var string 私有网络 ID。
+- 仅支持配置私有网络，必须选择一个与实例同一地域的私有网络。请登录[私有网络控制台](https://console.cloud.tencent.com/vpc)获取可使用的私有网络 ID。
+- 实例创建成功之后，支持更换私有网络。具体操作，请参见[更换网络](https://cloud.tencent.com/document/product/239/30910)。
      */
     public $VpcId;
 
     /**
-     * @var string 私有网络VPC的子网。请登录 [私有网络控制台](https://console.cloud.tencent.com/vpc) 查询子网列表确认正确的 ID。 示例值：subnet-7jbabche
+     * @var string 私有网络 VPC 的子网 ID。
+- 必须在已选的私有网络内指定一个子网。请登录[私有网络控制台](https://console.cloud.tencent.com/vpc)获取可使用的子网 ID。
+- 实例创建成功之后，支持更换私有网络及子网。具体操作，请参见[更换网络](https://cloud.tencent.com/document/product/239/30910)。
      */
     public $SubnetId;
 
@@ -258,17 +289,23 @@ class CreateDBInstanceRequest extends AbstractModel
     public $AutoVoucher;
 
     /**
-     * @var integer 实例类型。- 1：正式实例。- 3：只读实例。- 4：灾备实例。-5：整实例克隆，注意：克隆实例时，RestoreTime为必填项。
+     * @var integer 实例类型。
+- 1：正式实例。
+- 3：只读实例。
+- 4：灾备实例。
+- 5：克隆实例。注意：克隆实例 RestoreTime 为必填项。
      */
     public $Clone;
 
     /**
-     * @var string 父实例 ID。当参数**Clone**为3或者4时，即实例为只读或灾备实例时，该参数必须配置。
+     * @var string 父实例 ID。
+- 当参数**Clone**为3或者4时，即实例为只读或灾备实例时，该参数必须配置。
+- 请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制父实例 ID。
      */
     public $Father;
 
     /**
-     * @var array 安全组 ID。 
+     * @var array 安全组 ID。 请登录[安全组控制台](https://console.cloud.tencent.com/vpc/security-group)页面获取与数据库实例同地域的安全组 ID。
      */
     public $SecurityGroup;
 
@@ -278,7 +315,10 @@ class CreateDBInstanceRequest extends AbstractModel
     public $RestoreTime;
 
     /**
-     * @var string 实例名称。仅支持长度为60个字符的中文、英文、数字、下划线_、分隔符- 。
+     * @var string 实例名称。仅支持长度为128个字符的中文、英文、数字、下划线\_、分隔符\-。批量购买数据库实例时，支持通过自定义命名模式串与数字后缀自动升序功能，高效设置实例名称。
+- 基础模式：前缀＋自动升序编号（默认从1开始），**lnstanceName**仅需自定义实例名称前缀，例如设置为：cmgo，设置购买数量为5，则购买后，实例名称依次分别为cmgo1、cmgo2、cmgo3、cmgo4、cmgo5。
+- 自定义起始序号模式：前缀+｛R:x｝（x为自定义起始序号）。**InstanceName**需填写“前缀｛R:x｝”，例如：cmgo｛R:3｝，设置购买数量为5，则实例名称为cmgo3、cmgo4、cmgo5、cmgo6、cmgo7。
+- 复合模式串：前缀1{R:x}+前缀2{R:y}+ ⋯+固定后缀，x与y分别为每一段前缀的起始序号。**instanceName**需填写复合模式串，例如：cmgo{R:10}\_node{R:12}\_db，设置批量购买数量为5，则实例名称为 cmgo10\_node12\_db, cmgo11\_node13\_db, cmgo12\_node14\_db, cmgo13\_node15\_db, cluster14\_node16\_db. 
      */
     public $InstanceName;
 
@@ -325,7 +365,9 @@ class CreateDBInstanceRequest extends AbstractModel
     public $HiddenZone;
 
     /**
-     * @var string 参数模板 ID。参数模板是一组 MongoDB 的参数并为预设置了参数值的集合，将一组有相同诉求的参数及值 存为模板，在创建实例时，可直接引用参数值到新实例。合理使用参数模板，可以提高MongoDB数据库的效率。模板列表从 DescribeDBInstanceParamTpl 接口获取，注意模板支持的版本及实例类型。
+     * @var string 参数模板 ID。
+- 参数模板是预置了特定参数值的集合，可用于快速配置新的 MongoDB 实例。合理使用参数模板，能有效提升数据库的部署效率与运行性能。
+- 参数模板 ID 可通过 [DescribeDBInstanceParamTpl ](https://cloud.tencent.com/document/product/240/109155)接口获取。请选择与实例版本与架构所对应的参数模板 ID。
      */
     public $ParamTemplateId;
 
@@ -335,18 +377,17 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param integer $Memory 实例内存大小，单位：GB。具体售卖的内存规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
      * @param integer $Volume 实例硬盘大小，单位：GB。每一个 CPU 规格对应的最大磁盘与最小磁盘范围，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
      * @param string $MongoVersion 指版本信息。具体支持的版本信息 ，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
-- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
-     * @param integer $GoodsNum 实例数量, 最小值1，最大值为10。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+     * @param integer $GoodsNum 实例数量, 最小值1，最大值为30。
      * @param string $Zone 可用区信息，输入格式如：ap-guangzhou-2。
 - 具体信息，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
 - 该参数为主可用区，如果多可用区部署，Zone必须是AvailabilityZoneList中的一个。
      * @param integer $Period 指定购买实例的购买时长。取值可选：[1,2,3,4,5,6,7,8,9,10,11,12,24,36]；单位：月。
-
      * @param string $MachineCode 产品规格类型。
 - HIO10G：通用高HIO万兆型。
 - HCD：云盘版类型。
@@ -358,8 +399,12 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param integer $ProjectId 项目ID。
 - 若不设置该参数，则为默认项目。
 - 在 [MongoDB 控制台项目管理](https://console.cloud.tencent.com/project)页面，可获取项目ID。
-     * @param string $VpcId 私有网络ID。请登录[私有网络控制台](https://console.cloud.tencent.com/vpc)查询确认正确的ID。 示例值：vpc-pxyzim13
-     * @param string $SubnetId 私有网络VPC的子网。请登录 [私有网络控制台](https://console.cloud.tencent.com/vpc) 查询子网列表确认正确的 ID。 示例值：subnet-7jbabche
+     * @param string $VpcId 私有网络 ID。
+- 仅支持配置私有网络，必须选择一个与实例同一地域的私有网络。请登录[私有网络控制台](https://console.cloud.tencent.com/vpc)获取可使用的私有网络 ID。
+- 实例创建成功之后，支持更换私有网络。具体操作，请参见[更换网络](https://cloud.tencent.com/document/product/239/30910)。
+     * @param string $SubnetId 私有网络 VPC 的子网 ID。
+- 必须在已选的私有网络内指定一个子网。请登录[私有网络控制台](https://console.cloud.tencent.com/vpc)获取可使用的子网 ID。
+- 实例创建成功之后，支持更换私有网络及子网。具体操作，请参见[更换网络](https://cloud.tencent.com/document/product/239/30910)。
      * @param string $Password 实例密码。设置要求如下：
 - 字符个数为[8,32]。
 - 可输入[A,Z]、[a,z]、[0,9]范围内的字符。
@@ -372,11 +417,20 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param integer $AutoVoucher 是否自动选择代金券。
 - 1：是。
 - 0：否。默认为0。
-     * @param integer $Clone 实例类型。- 1：正式实例。- 3：只读实例。- 4：灾备实例。-5：整实例克隆，注意：克隆实例时，RestoreTime为必填项。
-     * @param string $Father 父实例 ID。当参数**Clone**为3或者4时，即实例为只读或灾备实例时，该参数必须配置。
-     * @param array $SecurityGroup 安全组 ID。 
+     * @param integer $Clone 实例类型。
+- 1：正式实例。
+- 3：只读实例。
+- 4：灾备实例。
+- 5：克隆实例。注意：克隆实例 RestoreTime 为必填项。
+     * @param string $Father 父实例 ID。
+- 当参数**Clone**为3或者4时，即实例为只读或灾备实例时，该参数必须配置。
+- 请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制父实例 ID。
+     * @param array $SecurityGroup 安全组 ID。 请登录[安全组控制台](https://console.cloud.tencent.com/vpc/security-group)页面获取与数据库实例同地域的安全组 ID。
      * @param string $RestoreTime 克隆实例回档时间，当Clone取值为5或6时为必填。- 若为克隆实例，则必须配置该参数。输入格式示例：2021-08-13 16:30:00。- 回档时间范围：仅能回档7天内时间点的数据。
-     * @param string $InstanceName 实例名称。仅支持长度为60个字符的中文、英文、数字、下划线_、分隔符- 。
+     * @param string $InstanceName 实例名称。仅支持长度为128个字符的中文、英文、数字、下划线\_、分隔符\-。批量购买数据库实例时，支持通过自定义命名模式串与数字后缀自动升序功能，高效设置实例名称。
+- 基础模式：前缀＋自动升序编号（默认从1开始），**lnstanceName**仅需自定义实例名称前缀，例如设置为：cmgo，设置购买数量为5，则购买后，实例名称依次分别为cmgo1、cmgo2、cmgo3、cmgo4、cmgo5。
+- 自定义起始序号模式：前缀+｛R:x｝（x为自定义起始序号）。**InstanceName**需填写“前缀｛R:x｝”，例如：cmgo｛R:3｝，设置购买数量为5，则实例名称为cmgo3、cmgo4、cmgo5、cmgo6、cmgo7。
+- 复合模式串：前缀1{R:x}+前缀2{R:y}+ ⋯+固定后缀，x与y分别为每一段前缀的起始序号。**instanceName**需填写复合模式串，例如：cmgo{R:10}\_node{R:12}\_db，设置批量购买数量为5，则实例名称为 cmgo10\_node12\_db, cmgo11\_node13\_db, cmgo12\_node14\_db, cmgo13\_node15\_db, cluster14\_node16\_db. 
      * @param array $AvailabilityZoneList 若多可用区部署云数据库实例，指定多可用区列表。
 - 多可用区部署实例，参数 **Zone** 指定实例主可用区信息；**AvailabilityZoneList** 指定所有可用区信息，包含主可用区。输入格式如：[ap-guangzhou-2,ap-guangzhou-3,ap-guangzhou-4]。
 - 通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 可获取云数据库不同地域规划的可用区信息，以便指定有效的可用区。
@@ -391,7 +445,9 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param integer $ReadonlyNodeNum 只读节点数量，取值范围[0,5]。
      * @param array $ReadonlyNodeAvailabilityZoneList 指只读节点所属可用区数组。跨可用区部署实例，参数**ReadonlyNodeNum**不为**0**时，必须配置该参数。
      * @param string $HiddenZone Hidden节点所属可用区。跨可用区部署实例，必须配置该参数。
-     * @param string $ParamTemplateId 参数模板 ID。参数模板是一组 MongoDB 的参数并为预设置了参数值的集合，将一组有相同诉求的参数及值 存为模板，在创建实例时，可直接引用参数值到新实例。合理使用参数模板，可以提高MongoDB数据库的效率。模板列表从 DescribeDBInstanceParamTpl 接口获取，注意模板支持的版本及实例类型。
+     * @param string $ParamTemplateId 参数模板 ID。
+- 参数模板是预置了特定参数值的集合，可用于快速配置新的 MongoDB 实例。合理使用参数模板，能有效提升数据库的部署效率与运行性能。
+- 参数模板 ID 可通过 [DescribeDBInstanceParamTpl ](https://cloud.tencent.com/document/product/240/109155)接口获取。请选择与实例版本与架构所对应的参数模板 ID。
      */
     function __construct()
     {

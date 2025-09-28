@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackupSummaries请求参数结构体
  *
- * @method string getProduct() 获取需要查询备份实时统计的云数据库产品类型。可取值为：mysql 指双节点/三节点的高可用实例，mysql-basic 指单节点云盘版实例，mysql-cluster 指云盘版（原集群版）实例。
- * @method void setProduct(string $Product) 设置需要查询备份实时统计的云数据库产品类型。可取值为：mysql 指双节点/三节点的高可用实例，mysql-basic 指单节点云盘版实例，mysql-cluster 指云盘版（原集群版）实例。
+ * @method string getProduct() 获取需要查询备份实时统计的云数据库产品类型。可取值为：mysql 指双节点/三节点的高可用实例，mysql-basic 指单节点（云盘）实例，mysql-cluster 指云盘版实例。
+ * @method void setProduct(string $Product) 设置需要查询备份实时统计的云数据库产品类型。可取值为：mysql 指双节点/三节点的高可用实例，mysql-basic 指单节点（云盘）实例，mysql-cluster 指云盘版实例。
  * @method integer getOffset() 获取分页查询数据的偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置分页查询数据的偏移量，默认为0。
  * @method integer getLimit() 获取分页查询数据的条目限制，默认值为20。最小值为1，最大值为100。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBackupSummariesRequest extends AbstractModel
 {
     /**
-     * @var string 需要查询备份实时统计的云数据库产品类型。可取值为：mysql 指双节点/三节点的高可用实例，mysql-basic 指单节点云盘版实例，mysql-cluster 指云盘版（原集群版）实例。
+     * @var string 需要查询备份实时统计的云数据库产品类型。可取值为：mysql 指双节点/三节点的高可用实例，mysql-basic 指单节点（云盘）实例，mysql-cluster 指云盘版实例。
      */
     public $Product;
 
@@ -59,7 +59,7 @@ class DescribeBackupSummariesRequest extends AbstractModel
     public $OrderDirection;
 
     /**
-     * @param string $Product 需要查询备份实时统计的云数据库产品类型。可取值为：mysql 指双节点/三节点的高可用实例，mysql-basic 指单节点云盘版实例，mysql-cluster 指云盘版（原集群版）实例。
+     * @param string $Product 需要查询备份实时统计的云数据库产品类型。可取值为：mysql 指双节点/三节点的高可用实例，mysql-basic 指单节点（云盘）实例，mysql-cluster 指云盘版实例。
      * @param integer $Offset 分页查询数据的偏移量，默认为0。
      * @param integer $Limit 分页查询数据的条目限制，默认值为20。最小值为1，最大值为100。
      * @param string $OrderBy 指定按某一项排序，可选值包括： BackupVolume: 备份容量， DataBackupVolume: 数据备份容量， BinlogBackupVolume: 日志备份容量， AutoBackupVolume: 自动备份容量， ManualBackupVolume: 手动备份容量。默认按照BackupVolume排序。

@@ -20,18 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DestroyMigrateJob请求参数结构体
  *
- * @method string getJobId() 获取任务id
- * @method void setJobId(string $JobId) 设置任务id
+ * @method string getJobId() 获取任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
+ * @method void setJobId(string $JobId) 设置任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
  */
 class DestroyMigrateJobRequest extends AbstractModel
 {
     /**
-     * @var string 任务id
+     * @var string 任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      */
     public $JobId;
 
     /**
-     * @param string $JobId 任务id
+     * @param string $JobId 任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
      */
     function __construct()
     {

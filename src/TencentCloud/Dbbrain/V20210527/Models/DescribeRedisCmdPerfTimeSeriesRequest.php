@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRedisCmdPerfTimeSeries请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID
- * @method void setInstanceId(string $InstanceId) 设置实例 ID
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
  * @method string getProduct() 获取服务产品类型，仅仅支持值 "redis" - 云数据库 Redis。
  * @method void setProduct(string $Product) 设置服务产品类型，仅仅支持值 "redis" - 云数据库 Redis。
  * @method string getStartTime() 获取开始时间，如“2025-03-17T00:00:00+00:00”。0天 < 当前服务器时间 - 开始时间 <= 10天。
@@ -30,15 +30,27 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置结束时间，如“2025-03-17T01:00:00+00:00”，0天 < 结束时间 - 开始时间 <= 10天。
  * @method array getCommandList() 获取需要分析的redis命令
  * @method void setCommandList(array $CommandList) 设置需要分析的redis命令
- * @method string getMetric() 获取监控指标，以逗号分隔
- * @method void setMetric(string $Metric) 设置监控指标，以逗号分隔
- * @method integer getPeriod() 获取监控指标时间粒度，单位秒，若不提供则根据开始时间和结束时间取默认值
- * @method void setPeriod(integer $Period) 设置监控指标时间粒度，单位秒，若不提供则根据开始时间和结束时间取默认值
+ * @method string getMetric() 获取监控指标，包括：qps,latency_p99,latency_avg,latency_max，以逗号分隔
+其中：
+qps          - 每秒查询率  
+latency_p99  - 99分位延迟  
+latency_avg  - 平均延迟  
+latency_max  - 最大延迟  
+
+ * @method void setMetric(string $Metric) 设置监控指标，包括：qps,latency_p99,latency_avg,latency_max，以逗号分隔
+其中：
+qps          - 每秒查询率  
+latency_p99  - 99分位延迟  
+latency_avg  - 平均延迟  
+latency_max  - 最大延迟  
+
+ * @method integer getPeriod() 获取Period，监控指标时间粒度，单位秒，若不提供则根据开始时间和结束时间取默认值
+ * @method void setPeriod(integer $Period) 设置Period，监控指标时间粒度，单位秒，若不提供则根据开始时间和结束时间取默认值
  */
 class DescribeRedisCmdPerfTimeSeriesRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID
+     * @var string 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public $InstanceId;
 
@@ -63,23 +75,35 @@ class DescribeRedisCmdPerfTimeSeriesRequest extends AbstractModel
     public $CommandList;
 
     /**
-     * @var string 监控指标，以逗号分隔
+     * @var string 监控指标，包括：qps,latency_p99,latency_avg,latency_max，以逗号分隔
+其中：
+qps          - 每秒查询率  
+latency_p99  - 99分位延迟  
+latency_avg  - 平均延迟  
+latency_max  - 最大延迟  
+
      */
     public $Metric;
 
     /**
-     * @var integer 监控指标时间粒度，单位秒，若不提供则根据开始时间和结束时间取默认值
+     * @var integer Period，监控指标时间粒度，单位秒，若不提供则根据开始时间和结束时间取默认值
      */
     public $Period;
 
     /**
-     * @param string $InstanceId 实例 ID
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      * @param string $Product 服务产品类型，仅仅支持值 "redis" - 云数据库 Redis。
      * @param string $StartTime 开始时间，如“2025-03-17T00:00:00+00:00”。0天 < 当前服务器时间 - 开始时间 <= 10天。
      * @param string $EndTime 结束时间，如“2025-03-17T01:00:00+00:00”，0天 < 结束时间 - 开始时间 <= 10天。
      * @param array $CommandList 需要分析的redis命令
-     * @param string $Metric 监控指标，以逗号分隔
-     * @param integer $Period 监控指标时间粒度，单位秒，若不提供则根据开始时间和结束时间取默认值
+     * @param string $Metric 监控指标，包括：qps,latency_p99,latency_avg,latency_max，以逗号分隔
+其中：
+qps          - 每秒查询率  
+latency_p99  - 99分位延迟  
+latency_avg  - 平均延迟  
+latency_max  - 最大延迟  
+
+     * @param integer $Period Period，监控指标时间粒度，单位秒，若不提供则根据开始时间和结束时间取默认值
      */
     function __construct()
     {

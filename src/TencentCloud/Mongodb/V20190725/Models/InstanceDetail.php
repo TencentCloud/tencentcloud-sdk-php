@@ -18,30 +18,52 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 实例详情
+ * 实例详情。
  *
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
+ * @method string getInstanceId() 获取实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。
  * @method string getInstanceName() 获取实例名称。
  * @method void setInstanceName(string $InstanceName) 设置实例名称。
- * @method integer getPayMode() 获取付费类型，可能的返回值：1-包年包月；0-按量计费
- * @method void setPayMode(integer $PayMode) 设置付费类型，可能的返回值：1-包年包月；0-按量计费
- * @method integer getProjectId() 获取项目ID。
- * @method void setProjectId(integer $ProjectId) 设置项目ID。
- * @method integer getClusterType() 获取集群类型，可能的返回值：0-副本集实例，1-分片实例。
- * @method void setClusterType(integer $ClusterType) 设置集群类型，可能的返回值：0-副本集实例，1-分片实例。
+ * @method integer getPayMode() 获取付费类型。
+- 1：包年包月。
+- 0：按量计费。
+ * @method void setPayMode(integer $PayMode) 设置付费类型。
+- 1：包年包月。
+- 0：按量计费。
+ * @method integer getProjectId() 获取项目 ID。
+ * @method void setProjectId(integer $ProjectId) 设置项目 ID。
+ * @method integer getClusterType() 获取集群类型。
+- 0：副本集实例。
+- 1：分片实例。
+ * @method void setClusterType(integer $ClusterType) 设置集群类型。
+- 0：副本集实例。
+- 1：分片实例。
  * @method string getRegion() 获取地域信息。
  * @method void setRegion(string $Region) 设置地域信息。
  * @method string getZone() 获取可用区信息。
  * @method void setZone(string $Zone) 设置可用区信息。
- * @method integer getNetType() 获取网络类型，可能的返回值：0-基础网络，1-私有网络
- * @method void setNetType(integer $NetType) 设置网络类型，可能的返回值：0-基础网络，1-私有网络
+ * @method integer getNetType() 获取网络类型。
+- 0：基础网络。
+- 1：私有网络。
+ * @method void setNetType(integer $NetType) 设置网络类型。
+- 0：基础网络。
+- 1：私有网络。
  * @method string getVpcId() 获取私有网络的ID。
  * @method void setVpcId(string $VpcId) 设置私有网络的ID。
  * @method string getSubnetId() 获取私有网络的子网ID。
  * @method void setSubnetId(string $SubnetId) 设置私有网络的子网ID。
- * @method integer getStatus() 获取实例状态，可能的返回值：0-创建中，1-流程处理中，2-运行中，-2-实例已过期。
- * @method void setStatus(integer $Status) 设置实例状态，可能的返回值：0-创建中，1-流程处理中，2-运行中，-2-实例已过期。
+ * @method integer getStatus() 获取实例状态。
+- 0：待初始化。
+- 1：流程处理中，例如：变更规格、参数修改等。
+- 2：实例正常运行中。
+- -2：已隔离（包年包月）。
+- -3：已隔离（按量计费）。
+ * @method void setStatus(integer $Status) 设置实例状态。
+- 0：待初始化。
+- 1：流程处理中，例如：变更规格、参数修改等。
+- 2：实例正常运行中。
+- -2：已隔离（包年包月）。
+- -3：已隔离（按量计费）。
  * @method string getVip() 获取实例IP。
  * @method void setVip(string $Vip) 设置实例IP。
  * @method integer getVport() 获取端口号。
@@ -50,24 +72,48 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置实例创建时间。
  * @method string getDeadLine() 获取实例到期时间。
  * @method void setDeadLine(string $DeadLine) 设置实例到期时间。
- * @method string getMongoVersion() 获取实例版本信息。
- * @method void setMongoVersion(string $MongoVersion) 设置实例版本信息。
- * @method integer getMemory() 获取实例内存规格，单位为MB。
- * @method void setMemory(integer $Memory) 设置实例内存规格，单位为MB。
- * @method integer getVolume() 获取实例磁盘规格，单位为MB。
- * @method void setVolume(integer $Volume) 设置实例磁盘规格，单位为MB。
- * @method integer getCpuNum() 获取实例CPU核心数。
- * @method void setCpuNum(integer $CpuNum) 设置实例CPU核心数。
+ * @method string getMongoVersion() 获取实例存储引擎版本信息。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+ * @method void setMongoVersion(string $MongoVersion) 设置实例存储引擎版本信息。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+ * @method integer getMemory() 获取实例内存规格，单位：MB。
+ * @method void setMemory(integer $Memory) 设置实例内存规格，单位：MB。
+ * @method integer getVolume() 获取实例磁盘规格，单位：MB。
+ * @method void setVolume(integer $Volume) 设置实例磁盘规格，单位：MB。
+ * @method integer getCpuNum() 获取实例 CPU 核心数。
+ * @method void setCpuNum(integer $CpuNum) 设置实例 CPU 核心数。
  * @method string getMachineType() 获取实例机器类型。
+- HIO10G：通用高 HIO 万兆型。
+- HCD：云盘版类型。
  * @method void setMachineType(string $MachineType) 设置实例机器类型。
+- HIO10G：通用高 HIO 万兆型。
+- HCD：云盘版类型。
  * @method integer getSecondaryNum() 获取实例从节点数。
  * @method void setSecondaryNum(integer $SecondaryNum) 设置实例从节点数。
  * @method integer getReplicationSetNum() 获取实例分片数。
  * @method void setReplicationSetNum(integer $ReplicationSetNum) 设置实例分片数。
- * @method integer getAutoRenewFlag() 获取实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费。
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费。
- * @method integer getUsedVolume() 获取已用容量，单位MB。
- * @method void setUsedVolume(integer $UsedVolume) 设置已用容量，单位MB。
+ * @method integer getAutoRenewFlag() 获取实例自动续费标志。
+- 0：手动续费。
+- 1：自动续费。
+- 2：确认不续费。
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置实例自动续费标志。
+- 0：手动续费。
+- 1：自动续费。
+- 2：确认不续费。
+ * @method integer getUsedVolume() 获取已用容量，单位：MB。
+ * @method void setUsedVolume(integer $UsedVolume) 设置已用容量，单位：MB。
  * @method string getMaintenanceStart() 获取维护窗口起始时间。
  * @method void setMaintenanceStart(string $MaintenanceStart) 设置维护窗口起始时间。
  * @method string getMaintenanceEnd() 获取维护窗口结束时间。
@@ -88,37 +134,47 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceVer(integer $InstanceVer) 设置实例版本标记。
  * @method integer getClusterVer() 获取实例版本标记。
  * @method void setClusterVer(integer $ClusterVer) 设置实例版本标记。
- * @method integer getProtocol() 获取协议信息，可能的返回值：1-mongodb，2-dynamodb。
- * @method void setProtocol(integer $Protocol) 设置协议信息，可能的返回值：1-mongodb，2-dynamodb。
- * @method integer getInstanceType() 获取实例类型，可能的返回值，1-正式实例，2-临时实例，3-只读实例，4-灾备实例
- * @method void setInstanceType(integer $InstanceType) 设置实例类型，可能的返回值，1-正式实例，2-临时实例，3-只读实例，4-灾备实例
- * @method string getInstanceStatusDesc() 获取实例状态描述
- * @method void setInstanceStatusDesc(string $InstanceStatusDesc) 设置实例状态描述
- * @method string getRealInstanceId() 获取实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
- * @method void setRealInstanceId(string $RealInstanceId) 设置实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
+ * @method integer getProtocol() 获取协议信息：mongodb。
+ * @method void setProtocol(integer $Protocol) 设置协议信息：mongodb。
+ * @method integer getInstanceType() 获取实例类型。
+- 0：所有实例。
+- 1：正式实例。
+- 2：临时实例
+- 3：只读实例。
+- -1：同时包括正式实例、只读实例与灾备实例。
+ * @method void setInstanceType(integer $InstanceType) 设置实例类型。
+- 0：所有实例。
+- 1：正式实例。
+- 2：临时实例
+- 3：只读实例。
+- -1：同时包括正式实例、只读实例与灾备实例。
+ * @method string getInstanceStatusDesc() 获取实例状态描述。
+ * @method void setInstanceStatusDesc(string $InstanceStatusDesc) 设置实例状态描述。
+ * @method string getRealInstanceId() 获取实例对应的物理实例 ID。回档并替换过的实例有不同的 InstanceId 和 RealInstanceId，从 barad 获取监控数据等场景下需要用物理 ID 获取。
+ * @method void setRealInstanceId(string $RealInstanceId) 设置实例对应的物理实例 ID。回档并替换过的实例有不同的 InstanceId 和 RealInstanceId，从 barad 获取监控数据等场景下需要用物理 ID 获取。
  * @method array getZoneList() 获取实例当前可用区信息。
  * @method void setZoneList(array $ZoneList) 设置实例当前可用区信息。
- * @method integer getMongosNodeNum() 获取mongos节点个数。
- * @method void setMongosNodeNum(integer $MongosNodeNum) 设置mongos节点个数。
- * @method integer getMongosMemory() 获取mongos节点内存。
- * @method void setMongosMemory(integer $MongosMemory) 设置mongos节点内存。
- * @method integer getMongosCpuNum() 获取mongos节点CPU核数。
- * @method void setMongosCpuNum(integer $MongosCpuNum) 设置mongos节点CPU核数。
+ * @method integer getMongosNodeNum() 获取mongos 节点个数。
+ * @method void setMongosNodeNum(integer $MongosNodeNum) 设置mongos 节点个数。
+ * @method integer getMongosMemory() 获取mongos 节点内存。单位：MB。
+ * @method void setMongosMemory(integer $MongosMemory) 设置mongos 节点内存。单位：MB。
+ * @method integer getMongosCpuNum() 获取mongos 节点 CPU 核数。
+ * @method void setMongosCpuNum(integer $MongosCpuNum) 设置mongos 节点 CPU 核数。
  * @method integer getConfigServerNodeNum() 获取Config Server节点个数。
  * @method void setConfigServerNodeNum(integer $ConfigServerNodeNum) 设置Config Server节点个数。
- * @method integer getConfigServerMemory() 获取Config Server节点内存。
- * @method void setConfigServerMemory(integer $ConfigServerMemory) 设置Config Server节点内存。
- * @method integer getConfigServerVolume() 获取Config Server节点磁盘大小。
- * @method void setConfigServerVolume(integer $ConfigServerVolume) 设置Config Server节点磁盘大小。
- * @method integer getConfigServerCpuNum() 获取Config Server节点CPU核数。
- * @method void setConfigServerCpuNum(integer $ConfigServerCpuNum) 设置Config Server节点CPU核数。
+ * @method integer getConfigServerMemory() 获取Config Server节点内存。单位：MB。
+ * @method void setConfigServerMemory(integer $ConfigServerMemory) 设置Config Server节点内存。单位：MB。
+ * @method integer getConfigServerVolume() 获取Config Server节点磁盘大小。单位：MB。
+ * @method void setConfigServerVolume(integer $ConfigServerVolume) 设置Config Server节点磁盘大小。单位：MB。
+ * @method integer getConfigServerCpuNum() 获取Config Server 节点 CPU 核数。
+ * @method void setConfigServerCpuNum(integer $ConfigServerCpuNum) 设置Config Server 节点 CPU 核数。
  * @method integer getReadonlyNodeNum() 获取readonly节点个数。
  * @method void setReadonlyNodeNum(integer $ReadonlyNodeNum) 设置readonly节点个数。
  */
 class InstanceDetail extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string 实例 ID。
      */
     public $InstanceId;
 
@@ -128,17 +184,21 @@ class InstanceDetail extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var integer 付费类型，可能的返回值：1-包年包月；0-按量计费
+     * @var integer 付费类型。
+- 1：包年包月。
+- 0：按量计费。
      */
     public $PayMode;
 
     /**
-     * @var integer 项目ID。
+     * @var integer 项目 ID。
      */
     public $ProjectId;
 
     /**
-     * @var integer 集群类型，可能的返回值：0-副本集实例，1-分片实例。
+     * @var integer 集群类型。
+- 0：副本集实例。
+- 1：分片实例。
      */
     public $ClusterType;
 
@@ -153,7 +213,9 @@ class InstanceDetail extends AbstractModel
     public $Zone;
 
     /**
-     * @var integer 网络类型，可能的返回值：0-基础网络，1-私有网络
+     * @var integer 网络类型。
+- 0：基础网络。
+- 1：私有网络。
      */
     public $NetType;
 
@@ -168,7 +230,12 @@ class InstanceDetail extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var integer 实例状态，可能的返回值：0-创建中，1-流程处理中，2-运行中，-2-实例已过期。
+     * @var integer 实例状态。
+- 0：待初始化。
+- 1：流程处理中，例如：变更规格、参数修改等。
+- 2：实例正常运行中。
+- -2：已隔离（包年包月）。
+- -3：已隔离（按量计费）。
      */
     public $Status;
 
@@ -193,27 +260,36 @@ class InstanceDetail extends AbstractModel
     public $DeadLine;
 
     /**
-     * @var string 实例版本信息。
+     * @var string 实例存储引擎版本信息。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
      */
     public $MongoVersion;
 
     /**
-     * @var integer 实例内存规格，单位为MB。
+     * @var integer 实例内存规格，单位：MB。
      */
     public $Memory;
 
     /**
-     * @var integer 实例磁盘规格，单位为MB。
+     * @var integer 实例磁盘规格，单位：MB。
      */
     public $Volume;
 
     /**
-     * @var integer 实例CPU核心数。
+     * @var integer 实例 CPU 核心数。
      */
     public $CpuNum;
 
     /**
      * @var string 实例机器类型。
+- HIO10G：通用高 HIO 万兆型。
+- HCD：云盘版类型。
      */
     public $MachineType;
 
@@ -228,12 +304,15 @@ class InstanceDetail extends AbstractModel
     public $ReplicationSetNum;
 
     /**
-     * @var integer 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费。
+     * @var integer 实例自动续费标志。
+- 0：手动续费。
+- 1：自动续费。
+- 2：确认不续费。
      */
     public $AutoRenewFlag;
 
     /**
-     * @var integer 已用容量，单位MB。
+     * @var integer 已用容量，单位：MB。
      */
     public $UsedVolume;
 
@@ -288,22 +367,27 @@ class InstanceDetail extends AbstractModel
     public $ClusterVer;
 
     /**
-     * @var integer 协议信息，可能的返回值：1-mongodb，2-dynamodb。
+     * @var integer 协议信息：mongodb。
      */
     public $Protocol;
 
     /**
-     * @var integer 实例类型，可能的返回值，1-正式实例，2-临时实例，3-只读实例，4-灾备实例
+     * @var integer 实例类型。
+- 0：所有实例。
+- 1：正式实例。
+- 2：临时实例
+- 3：只读实例。
+- -1：同时包括正式实例、只读实例与灾备实例。
      */
     public $InstanceType;
 
     /**
-     * @var string 实例状态描述
+     * @var string 实例状态描述。
      */
     public $InstanceStatusDesc;
 
     /**
-     * @var string 实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
+     * @var string 实例对应的物理实例 ID。回档并替换过的实例有不同的 InstanceId 和 RealInstanceId，从 barad 获取监控数据等场景下需要用物理 ID 获取。
      */
     public $RealInstanceId;
 
@@ -313,17 +397,17 @@ class InstanceDetail extends AbstractModel
     public $ZoneList;
 
     /**
-     * @var integer mongos节点个数。
+     * @var integer mongos 节点个数。
      */
     public $MongosNodeNum;
 
     /**
-     * @var integer mongos节点内存。
+     * @var integer mongos 节点内存。单位：MB。
      */
     public $MongosMemory;
 
     /**
-     * @var integer mongos节点CPU核数。
+     * @var integer mongos 节点 CPU 核数。
      */
     public $MongosCpuNum;
 
@@ -333,17 +417,17 @@ class InstanceDetail extends AbstractModel
     public $ConfigServerNodeNum;
 
     /**
-     * @var integer Config Server节点内存。
+     * @var integer Config Server节点内存。单位：MB。
      */
     public $ConfigServerMemory;
 
     /**
-     * @var integer Config Server节点磁盘大小。
+     * @var integer Config Server节点磁盘大小。单位：MB。
      */
     public $ConfigServerVolume;
 
     /**
-     * @var integer Config Server节点CPU核数。
+     * @var integer Config Server 节点 CPU 核数。
      */
     public $ConfigServerCpuNum;
 
@@ -353,30 +437,53 @@ class InstanceDetail extends AbstractModel
     public $ReadonlyNodeNum;
 
     /**
-     * @param string $InstanceId 实例ID。
+     * @param string $InstanceId 实例 ID。
      * @param string $InstanceName 实例名称。
-     * @param integer $PayMode 付费类型，可能的返回值：1-包年包月；0-按量计费
-     * @param integer $ProjectId 项目ID。
-     * @param integer $ClusterType 集群类型，可能的返回值：0-副本集实例，1-分片实例。
+     * @param integer $PayMode 付费类型。
+- 1：包年包月。
+- 0：按量计费。
+     * @param integer $ProjectId 项目 ID。
+     * @param integer $ClusterType 集群类型。
+- 0：副本集实例。
+- 1：分片实例。
      * @param string $Region 地域信息。
      * @param string $Zone 可用区信息。
-     * @param integer $NetType 网络类型，可能的返回值：0-基础网络，1-私有网络
+     * @param integer $NetType 网络类型。
+- 0：基础网络。
+- 1：私有网络。
      * @param string $VpcId 私有网络的ID。
      * @param string $SubnetId 私有网络的子网ID。
-     * @param integer $Status 实例状态，可能的返回值：0-创建中，1-流程处理中，2-运行中，-2-实例已过期。
+     * @param integer $Status 实例状态。
+- 0：待初始化。
+- 1：流程处理中，例如：变更规格、参数修改等。
+- 2：实例正常运行中。
+- -2：已隔离（包年包月）。
+- -3：已隔离（按量计费）。
      * @param string $Vip 实例IP。
      * @param integer $Vport 端口号。
      * @param string $CreateTime 实例创建时间。
      * @param string $DeadLine 实例到期时间。
-     * @param string $MongoVersion 实例版本信息。
-     * @param integer $Memory 实例内存规格，单位为MB。
-     * @param integer $Volume 实例磁盘规格，单位为MB。
-     * @param integer $CpuNum 实例CPU核心数。
+     * @param string $MongoVersion 实例存储引擎版本信息。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+     * @param integer $Memory 实例内存规格，单位：MB。
+     * @param integer $Volume 实例磁盘规格，单位：MB。
+     * @param integer $CpuNum 实例 CPU 核心数。
      * @param string $MachineType 实例机器类型。
+- HIO10G：通用高 HIO 万兆型。
+- HCD：云盘版类型。
      * @param integer $SecondaryNum 实例从节点数。
      * @param integer $ReplicationSetNum 实例分片数。
-     * @param integer $AutoRenewFlag 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费。
-     * @param integer $UsedVolume 已用容量，单位MB。
+     * @param integer $AutoRenewFlag 实例自动续费标志。
+- 0：手动续费。
+- 1：自动续费。
+- 2：确认不续费。
+     * @param integer $UsedVolume 已用容量，单位：MB。
      * @param string $MaintenanceStart 维护窗口起始时间。
      * @param string $MaintenanceEnd 维护窗口结束时间。
      * @param array $ReplicaSets 分片信息。
@@ -387,18 +494,23 @@ class InstanceDetail extends AbstractModel
      * @param array $Tags 实例标签信息集合。
      * @param integer $InstanceVer 实例版本标记。
      * @param integer $ClusterVer 实例版本标记。
-     * @param integer $Protocol 协议信息，可能的返回值：1-mongodb，2-dynamodb。
-     * @param integer $InstanceType 实例类型，可能的返回值，1-正式实例，2-临时实例，3-只读实例，4-灾备实例
-     * @param string $InstanceStatusDesc 实例状态描述
-     * @param string $RealInstanceId 实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
+     * @param integer $Protocol 协议信息：mongodb。
+     * @param integer $InstanceType 实例类型。
+- 0：所有实例。
+- 1：正式实例。
+- 2：临时实例
+- 3：只读实例。
+- -1：同时包括正式实例、只读实例与灾备实例。
+     * @param string $InstanceStatusDesc 实例状态描述。
+     * @param string $RealInstanceId 实例对应的物理实例 ID。回档并替换过的实例有不同的 InstanceId 和 RealInstanceId，从 barad 获取监控数据等场景下需要用物理 ID 获取。
      * @param array $ZoneList 实例当前可用区信息。
-     * @param integer $MongosNodeNum mongos节点个数。
-     * @param integer $MongosMemory mongos节点内存。
-     * @param integer $MongosCpuNum mongos节点CPU核数。
+     * @param integer $MongosNodeNum mongos 节点个数。
+     * @param integer $MongosMemory mongos 节点内存。单位：MB。
+     * @param integer $MongosCpuNum mongos 节点 CPU 核数。
      * @param integer $ConfigServerNodeNum Config Server节点个数。
-     * @param integer $ConfigServerMemory Config Server节点内存。
-     * @param integer $ConfigServerVolume Config Server节点磁盘大小。
-     * @param integer $ConfigServerCpuNum Config Server节点CPU核数。
+     * @param integer $ConfigServerMemory Config Server节点内存。单位：MB。
+     * @param integer $ConfigServerVolume Config Server节点磁盘大小。单位：MB。
+     * @param integer $ConfigServerCpuNum Config Server 节点 CPU 核数。
      * @param integer $ReadonlyNodeNum readonly节点个数。
      */
     function __construct()

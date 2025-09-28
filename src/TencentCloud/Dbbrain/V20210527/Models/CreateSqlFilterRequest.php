@@ -20,30 +20,48 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSqlFilter请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
- * @method string getSqlType() 获取SQL类型，取值包括SELECT, UPDATE, DELETE, INSERT, REPLACE。
- * @method void setSqlType(string $SqlType) 设置SQL类型，取值包括SELECT, UPDATE, DELETE, INSERT, REPLACE。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+ * @method string getSqlType() 获取SQL语句的类型，取值包括SELECT, UPDATE, DELETE, INSERT, REPLACE。
+其中：
+SELECT   - 查询  
+UPDATE   - 更新  
+DELETE   - 删除  
+INSERT   - 插入  
+REPLACE  - 替换
+ * @method void setSqlType(string $SqlType) 设置SQL语句的类型，取值包括SELECT, UPDATE, DELETE, INSERT, REPLACE。
+其中：
+SELECT   - 查询  
+UPDATE   - 更新  
+DELETE   - 删除  
+INSERT   - 插入  
+REPLACE  - 替换
  * @method string getFilterKey() 获取关键字，用于筛选SQL语句，多个关键字用英文逗号分隔，逗号不能作为关键词，多个关键词之间的关系为“逻辑与”。
  * @method void setFilterKey(string $FilterKey) 设置关键字，用于筛选SQL语句，多个关键字用英文逗号分隔，逗号不能作为关键词，多个关键词之间的关系为“逻辑与”。
  * @method integer getMaxConcurrency() 获取最大并发度，取值不能小于0，如果该值设为 0，则表示限制所有匹配的SQL执行。
  * @method void setMaxConcurrency(integer $MaxConcurrency) 设置最大并发度，取值不能小于0，如果该值设为 0，则表示限制所有匹配的SQL执行。
  * @method integer getDuration() 获取限流时长，单位秒，支持-1和小于2147483647的正整数，-1表示永不过期。
  * @method void setDuration(integer $Duration) 设置限流时长，单位秒，支持-1和小于2147483647的正整数，-1表示永不过期。
- * @method string getSessionToken() 获取通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
- * @method void setSessionToken(string $SessionToken) 设置通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
+ * @method string getSessionToken() 获取通过 [VerifyUserAccount](https://cloud.tencent.com/document/product/1130/72828) 获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
+ * @method void setSessionToken(string $SessionToken) 设置通过 [VerifyUserAccount](https://cloud.tencent.com/document/product/1130/72828) 获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
  * @method string getProduct() 获取服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
  * @method void setProduct(string $Product) 设置服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
  */
 class CreateSqlFilterRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public $InstanceId;
 
     /**
-     * @var string SQL类型，取值包括SELECT, UPDATE, DELETE, INSERT, REPLACE。
+     * @var string SQL语句的类型，取值包括SELECT, UPDATE, DELETE, INSERT, REPLACE。
+其中：
+SELECT   - 查询  
+UPDATE   - 更新  
+DELETE   - 删除  
+INSERT   - 插入  
+REPLACE  - 替换
      */
     public $SqlType;
 
@@ -63,7 +81,7 @@ class CreateSqlFilterRequest extends AbstractModel
     public $Duration;
 
     /**
-     * @var string 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
+     * @var string 通过 [VerifyUserAccount](https://cloud.tencent.com/document/product/1130/72828) 获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
      */
     public $SessionToken;
 
@@ -73,12 +91,18 @@ class CreateSqlFilterRequest extends AbstractModel
     public $Product;
 
     /**
-     * @param string $InstanceId 实例ID。
-     * @param string $SqlType SQL类型，取值包括SELECT, UPDATE, DELETE, INSERT, REPLACE。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @param string $SqlType SQL语句的类型，取值包括SELECT, UPDATE, DELETE, INSERT, REPLACE。
+其中：
+SELECT   - 查询  
+UPDATE   - 更新  
+DELETE   - 删除  
+INSERT   - 插入  
+REPLACE  - 替换
      * @param string $FilterKey 关键字，用于筛选SQL语句，多个关键字用英文逗号分隔，逗号不能作为关键词，多个关键词之间的关系为“逻辑与”。
      * @param integer $MaxConcurrency 最大并发度，取值不能小于0，如果该值设为 0，则表示限制所有匹配的SQL执行。
      * @param integer $Duration 限流时长，单位秒，支持-1和小于2147483647的正整数，-1表示永不过期。
-     * @param string $SessionToken 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
+     * @param string $SessionToken 通过 [VerifyUserAccount](https://cloud.tencent.com/document/product/1130/72828) 获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
      * @param string $Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
      */
     function __construct()

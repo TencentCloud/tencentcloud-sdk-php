@@ -20,10 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBBackups请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
- * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
- * @method integer getBackupMethod() 获取备份方式，当前支持：0-逻辑备份，1-物理备份，2-所有备份。默认为逻辑备份。
- * @method void setBackupMethod(integer $BackupMethod) 设置备份方式，当前支持：0-逻辑备份，1-物理备份，2-所有备份。默认为逻辑备份。
+ * @method string getInstanceId() 获取实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+ * @method integer getBackupMethod() 获取备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
+ * @method void setBackupMethod(integer $BackupMethod) 设置备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
  * @method integer getLimit() 获取分页大小，最大值为100，不设置默认查询所有。
  * @method void setLimit(integer $Limit) 设置分页大小，最大值为100，不设置默认查询所有。
  * @method integer getOffset() 获取分页偏移量，最小值为0，默认值为0。
@@ -32,12 +44,18 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDBBackupsRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * @var string 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var integer 备份方式，当前支持：0-逻辑备份，1-物理备份，2-所有备份。默认为逻辑备份。
+     * @var integer 备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
      */
     public $BackupMethod;
 
@@ -52,8 +70,14 @@ class DescribeDBBackupsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param string $InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
-     * @param integer $BackupMethod 备份方式，当前支持：0-逻辑备份，1-物理备份，2-所有备份。默认为逻辑备份。
+     * @param string $InstanceId 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param integer $BackupMethod 备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
      * @param integer $Limit 分页大小，最大值为100，不设置默认查询所有。
      * @param integer $Offset 分页偏移量，最小值为0，默认值为0。
      */

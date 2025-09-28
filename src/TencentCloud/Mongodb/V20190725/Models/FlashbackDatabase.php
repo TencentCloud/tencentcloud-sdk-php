@@ -18,28 +18,28 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 按key回档，源数据所在的库表
+ * 按 Key 闪回的数据库及集合信息
  *
- * @method string getDBName() 获取按key回档源数据所在库
- * @method void setDBName(string $DBName) 设置按key回档源数据所在库
- * @method array getCollections() 获取按key回档的集群数组
- * @method void setCollections(array $Collections) 设置按key回档的集群数组
+ * @method string getDBName() 获取按 Key 闪回目标数据所在库。
+ * @method void setDBName(string $DBName) 设置按 Key 闪回目标数据所在库。
+ * @method array getCollections() 获取按 Key 闪回的数据库集合。
+ * @method void setCollections(array $Collections) 设置按 Key 闪回的数据库集合。
  */
 class FlashbackDatabase extends AbstractModel
 {
     /**
-     * @var string 按key回档源数据所在库
+     * @var string 按 Key 闪回目标数据所在库。
      */
     public $DBName;
 
     /**
-     * @var array 按key回档的集群数组
+     * @var array 按 Key 闪回的数据库集合。
      */
     public $Collections;
 
     /**
-     * @param string $DBName 按key回档源数据所在库
-     * @param array $Collections 按key回档的集群数组
+     * @param string $DBName 按 Key 闪回目标数据所在库。
+     * @param array $Collections 按 Key 闪回的数据库集合。
      */
     function __construct()
     {

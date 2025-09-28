@@ -20,26 +20,48 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 备份下载任务
  *
- * @method string getCreateTime() 获取任务创建时间
- * @method void setCreateTime(string $CreateTime) 设置任务创建时间
- * @method string getBackupName() 获取备份文件名
- * @method void setBackupName(string $BackupName) 设置备份文件名
- * @method string getReplicaSetId() 获取分片名称
- * @method void setReplicaSetId(string $ReplicaSetId) 设置分片名称
- * @method integer getBackupSize() 获取备份数据大小，单位为字节
- * @method void setBackupSize(integer $BackupSize) 设置备份数据大小，单位为字节
- * @method integer getStatus() 获取任务状态。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试
- * @method void setStatus(integer $Status) 设置任务状态。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试
- * @method integer getPercent() 获取任务进度百分比
- * @method void setPercent(integer $Percent) 设置任务进度百分比
- * @method integer getTimeSpend() 获取耗时，单位为秒
- * @method void setTimeSpend(integer $TimeSpend) 设置耗时，单位为秒
- * @method string getUrl() 获取备份数据下载链接
- * @method void setUrl(string $Url) 设置备份数据下载链接
- * @method integer getBackupMethod() 获取备份文件备份类型，0-逻辑备份，1-物理备份
- * @method void setBackupMethod(integer $BackupMethod) 设置备份文件备份类型，0-逻辑备份，1-物理备份
- * @method string getBackupDesc() 获取发起备份时指定的备注信息
- * @method void setBackupDesc(string $BackupDesc) 设置发起备份时指定的备注信息
+ * @method string getCreateTime() 获取任务创建时间。
+ * @method void setCreateTime(string $CreateTime) 设置任务创建时间。
+ * @method string getBackupName() 获取备份文件名。
+ * @method void setBackupName(string $BackupName) 设置备份文件名。
+ * @method string getReplicaSetId() 获取分片名称。
+ * @method void setReplicaSetId(string $ReplicaSetId) 设置分片名称。
+ * @method integer getBackupSize() 获取备份数据大小，单位：字节。
+ * @method void setBackupSize(integer $BackupSize) 设置备份数据大小，单位：字节。
+ * @method integer getStatus() 获取任务状态。
+- 0：等待执行。
+- 1：正在下载。
+- 2：下载完成。
+- 3：下载失败。
+- 4：等待重试。
+ * @method void setStatus(integer $Status) 设置任务状态。
+- 0：等待执行。
+- 1：正在下载。
+- 2：下载完成。
+- 3：下载失败。
+- 4：等待重试。
+ * @method integer getPercent() 获取任务进度百分比。
+ * @method void setPercent(integer $Percent) 设置任务进度百分比。
+ * @method integer getTimeSpend() 获取耗时，单位为秒。
+ * @method void setTimeSpend(integer $TimeSpend) 设置耗时，单位为秒。
+ * @method string getUrl() 获取备份数据下载链接。
+ * @method void setUrl(string $Url) 设置备份数据下载链接。
+ * @method integer getBackupMethod() 获取备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
+ * @method void setBackupMethod(integer $BackupMethod) 设置备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
+ * @method string getBackupDesc() 获取发起备份时指定的备注信息。
+ * @method void setBackupDesc(string $BackupDesc) 设置发起备份时指定的备注信息。
  * @method string getRegion() 获取地区信息。
  * @method void setRegion(string $Region) 设置地区信息。
  * @method string getBucket() 获取Bucket信息。
@@ -48,52 +70,63 @@ use TencentCloud\Common\AbstractModel;
 class BackupDownloadTask extends AbstractModel
 {
     /**
-     * @var string 任务创建时间
+     * @var string 任务创建时间。
      */
     public $CreateTime;
 
     /**
-     * @var string 备份文件名
+     * @var string 备份文件名。
      */
     public $BackupName;
 
     /**
-     * @var string 分片名称
+     * @var string 分片名称。
      */
     public $ReplicaSetId;
 
     /**
-     * @var integer 备份数据大小，单位为字节
+     * @var integer 备份数据大小，单位：字节。
      */
     public $BackupSize;
 
     /**
-     * @var integer 任务状态。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试
+     * @var integer 任务状态。
+- 0：等待执行。
+- 1：正在下载。
+- 2：下载完成。
+- 3：下载失败。
+- 4：等待重试。
      */
     public $Status;
 
     /**
-     * @var integer 任务进度百分比
+     * @var integer 任务进度百分比。
      */
     public $Percent;
 
     /**
-     * @var integer 耗时，单位为秒
+     * @var integer 耗时，单位为秒。
      */
     public $TimeSpend;
 
     /**
-     * @var string 备份数据下载链接
+     * @var string 备份数据下载链接。
      */
     public $Url;
 
     /**
-     * @var integer 备份文件备份类型，0-逻辑备份，1-物理备份
+     * @var integer 备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
      */
     public $BackupMethod;
 
     /**
-     * @var string 发起备份时指定的备注信息
+     * @var string 发起备份时指定的备注信息。
      */
     public $BackupDesc;
 
@@ -108,16 +141,27 @@ class BackupDownloadTask extends AbstractModel
     public $Bucket;
 
     /**
-     * @param string $CreateTime 任务创建时间
-     * @param string $BackupName 备份文件名
-     * @param string $ReplicaSetId 分片名称
-     * @param integer $BackupSize 备份数据大小，单位为字节
-     * @param integer $Status 任务状态。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试
-     * @param integer $Percent 任务进度百分比
-     * @param integer $TimeSpend 耗时，单位为秒
-     * @param string $Url 备份数据下载链接
-     * @param integer $BackupMethod 备份文件备份类型，0-逻辑备份，1-物理备份
-     * @param string $BackupDesc 发起备份时指定的备注信息
+     * @param string $CreateTime 任务创建时间。
+     * @param string $BackupName 备份文件名。
+     * @param string $ReplicaSetId 分片名称。
+     * @param integer $BackupSize 备份数据大小，单位：字节。
+     * @param integer $Status 任务状态。
+- 0：等待执行。
+- 1：正在下载。
+- 2：下载完成。
+- 3：下载失败。
+- 4：等待重试。
+     * @param integer $Percent 任务进度百分比。
+     * @param integer $TimeSpend 耗时，单位为秒。
+     * @param string $Url 备份数据下载链接。
+     * @param integer $BackupMethod 备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
+     * @param string $BackupDesc 发起备份时指定的备注信息。
      * @param string $Region 地区信息。
      * @param string $Bucket Bucket信息。
      */

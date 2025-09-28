@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAntiLeakage(integer $AntiLeakage) 设置防泄漏模块开关，0或者1
  * @method integer getRateLimit() 获取限流模块开关，0或1
  * @method void setRateLimit(integer $RateLimit) 设置限流模块开关，0或1
+ * @method integer getGzipAnalysis() 获取gzip 开关
+ * @method void setGzipAnalysis(integer $GzipAnalysis) 设置gzip 开关
  */
 class ModifyModuleStatusRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ModifyModuleStatusRequest extends AbstractModel
     public $RateLimit;
 
     /**
+     * @var integer gzip 开关
+     */
+    public $GzipAnalysis;
+
+    /**
      * @param string $Domain 需要设置的domain
      * @param integer $WebSecurity Web 安全模块开关，0或1
      * @param integer $AccessControl 访问控制模块开关，0或者1
@@ -88,6 +95,7 @@ class ModifyModuleStatusRequest extends AbstractModel
      * @param integer $AntiTamper 防篡改模块开关，0或者1
      * @param integer $AntiLeakage 防泄漏模块开关，0或者1
      * @param integer $RateLimit 限流模块开关，0或1
+     * @param integer $GzipAnalysis gzip 开关
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class ModifyModuleStatusRequest extends AbstractModel
 
         if (array_key_exists("RateLimit",$param) and $param["RateLimit"] !== null) {
             $this->RateLimit = $param["RateLimit"];
+        }
+
+        if (array_key_exists("GzipAnalysis",$param) and $param["GzipAnalysis"] !== null) {
+            $this->GzipAnalysis = $param["GzipAnalysis"];
         }
     }
 }

@@ -20,18 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartModifySyncJob请求参数结构体
  *
- * @method string getJobId() 获取同步任务id
- * @method void setJobId(string $JobId) 设置同步任务id
+ * @method string getJobId() 获取同步任务id，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
+ * @method void setJobId(string $JobId) 设置同步任务id，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
  */
 class StartModifySyncJobRequest extends AbstractModel
 {
     /**
-     * @var string 同步任务id
+     * @var string 同步任务id，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
      */
     public $JobId;
 
     /**
-     * @param string $JobId 同步任务id
+     * @param string $JobId 同步任务id，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
      */
     function __construct()
     {

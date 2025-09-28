@@ -30,10 +30,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceMultiParams(array $InstanceMultiParams) 设置多值参数详情列表。
  * @method integer getTotalCount() 获取参数总个数。
  * @method void setTotalCount(integer $TotalCount) 设置参数总个数。
- * @method string getMongoVersion() 获取模板适配实例版本。
- * @method void setMongoVersion(string $MongoVersion) 设置模板适配实例版本。
- * @method string getClusterType() 获取模板适配集群类型，副本集或分片。。
- * @method void setClusterType(string $ClusterType) 设置模板适配集群类型，副本集或分片。。
+ * @method string getMongoVersion() 获取模板适配的实例版本。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+ * @method void setMongoVersion(string $MongoVersion) 设置模板适配的实例版本。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+ * @method string getClusterType() 获取模板适配集群类型。
+- REPLSET：副本集实例。
+- SHARD：分片实例。
+- STANDALONE：单节点实例。
+ * @method void setClusterType(string $ClusterType) 设置模板适配集群类型。
+- REPLSET：副本集实例。
+- SHARD：分片实例。
+- STANDALONE：单节点实例。
  * @method string getTplName() 获取参数模板名称。
  * @method void setTplName(string $TplName) 设置参数模板名称。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -67,12 +87,22 @@ class DescribeDBInstanceParamTplDetailResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var string 模板适配实例版本。
+     * @var string 模板适配的实例版本。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
      */
     public $MongoVersion;
 
     /**
-     * @var string 模板适配集群类型，副本集或分片。。
+     * @var string 模板适配集群类型。
+- REPLSET：副本集实例。
+- SHARD：分片实例。
+- STANDALONE：单节点实例。
      */
     public $ClusterType;
 
@@ -92,8 +122,18 @@ class DescribeDBInstanceParamTplDetailResponse extends AbstractModel
      * @param array $InstanceTextParams 文本参数详情列表。
      * @param array $InstanceMultiParams 多值参数详情列表。
      * @param integer $TotalCount 参数总个数。
-     * @param string $MongoVersion 模板适配实例版本。
-     * @param string $ClusterType 模板适配集群类型，副本集或分片。。
+     * @param string $MongoVersion 模板适配的实例版本。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+     * @param string $ClusterType 模板适配集群类型。
+- REPLSET：副本集实例。
+- SHARD：分片实例。
+- STANDALONE：单节点实例。
      * @param string $TplName 参数模板名称。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

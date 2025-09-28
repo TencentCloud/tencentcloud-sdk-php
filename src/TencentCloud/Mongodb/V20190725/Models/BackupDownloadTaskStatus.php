@@ -18,28 +18,48 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 创建备份下载任务结果
+ * 创建备份下载任务结果。
  *
- * @method string getReplicaSetId() 获取分片名
- * @method void setReplicaSetId(string $ReplicaSetId) 设置分片名
- * @method integer getStatus() 获取任务当前状态。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试
- * @method void setStatus(integer $Status) 设置任务当前状态。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试
+ * @method string getReplicaSetId() 获取分片名。
+ * @method void setReplicaSetId(string $ReplicaSetId) 设置分片名。
+ * @method integer getStatus() 获取任务当前状态。
+- 0：等待执行。
+- 1：正在下载。
+- 2：下载完成。
+- 3：下载失败。
+- 4：等待重试。
+ * @method void setStatus(integer $Status) 设置任务当前状态。
+- 0：等待执行。
+- 1：正在下载。
+- 2：下载完成。
+- 3：下载失败。
+- 4：等待重试。
  */
 class BackupDownloadTaskStatus extends AbstractModel
 {
     /**
-     * @var string 分片名
+     * @var string 分片名。
      */
     public $ReplicaSetId;
 
     /**
-     * @var integer 任务当前状态。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试
+     * @var integer 任务当前状态。
+- 0：等待执行。
+- 1：正在下载。
+- 2：下载完成。
+- 3：下载失败。
+- 4：等待重试。
      */
     public $Status;
 
     /**
-     * @param string $ReplicaSetId 分片名
-     * @param integer $Status 任务当前状态。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试
+     * @param string $ReplicaSetId 分片名。
+     * @param integer $Status 任务当前状态。
+- 0：等待执行。
+- 1：正在下载。
+- 2：下载完成。
+- 3：下载失败。
+- 4：等待重试。
      */
     function __construct()
     {

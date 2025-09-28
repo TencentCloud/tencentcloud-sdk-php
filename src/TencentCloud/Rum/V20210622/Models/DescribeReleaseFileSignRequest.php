@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeout(integer $Timeout) 设置超时时间，不填默认是 5 分钟
  * @method integer getFileType() 获取bucket类型，不填默认1:web，2:app
  * @method void setFileType(integer $FileType) 设置bucket类型，不填默认1:web，2:app
- * @method integer getSite() 获取获取临时签名的bucket是国内站还是国际站（1表示国际站，其它表示国内站）
- * @method void setSite(integer $Site) 设置获取临时签名的bucket是国内站还是国际站（1表示国际站，其它表示国内站）
+ * @method integer getSite() 获取获取临时签名的bucket是境内还是境外（1表示境外，其它表示境内）
+ * @method void setSite(integer $Site) 设置获取临时签名的bucket是境内还是境外（1表示境外，其它表示境内）
  * @method integer getID() 获取ProjectID
  * @method void setID(integer $ID) 设置ProjectID
  */
@@ -42,7 +42,7 @@ class DescribeReleaseFileSignRequest extends AbstractModel
     public $FileType;
 
     /**
-     * @var integer 获取临时签名的bucket是国内站还是国际站（1表示国际站，其它表示国内站）
+     * @var integer 获取临时签名的bucket是境内还是境外（1表示境外，其它表示境内）
      */
     public $Site;
 
@@ -54,7 +54,7 @@ class DescribeReleaseFileSignRequest extends AbstractModel
     /**
      * @param integer $Timeout 超时时间，不填默认是 5 分钟
      * @param integer $FileType bucket类型，不填默认1:web，2:app
-     * @param integer $Site 获取临时签名的bucket是国内站还是国际站（1表示国际站，其它表示国内站）
+     * @param integer $Site 获取临时签名的bucket是境内还是境外（1表示境外，其它表示境内）
      * @param integer $ID ProjectID
      */
     function __construct()

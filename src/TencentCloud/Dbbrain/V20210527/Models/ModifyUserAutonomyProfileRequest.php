@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProfileType() 获取配置类型，为需要配置的功能枚举值，目前包含一下枚举值：AutonomyGlobal（自治功能全局配置）、RedisAutoScaleUp（Redis自治扩容配置）
  * @method void setProfileType(string $ProfileType) 设置配置类型，为需要配置的功能枚举值，目前包含一下枚举值：AutonomyGlobal（自治功能全局配置）、RedisAutoScaleUp（Redis自治扩容配置）
- * @method string getInstanceId() 获取实列ID。
- * @method void setInstanceId(string $InstanceId) 设置实列ID。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
  * @method string getProduct() 获取服务产品类型，支持值包括： "redis" - 云数据库 Redis。
  * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "redis" - 云数据库 Redis。
  * @method string getNewProfileInfo() 获取自治功能相关配置，标准JSON字符串格式。
@@ -37,7 +37,7 @@ class ModifyUserAutonomyProfileRequest extends AbstractModel
     public $ProfileType;
 
     /**
-     * @var string 实列ID。
+     * @var string 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public $InstanceId;
 
@@ -53,7 +53,7 @@ class ModifyUserAutonomyProfileRequest extends AbstractModel
 
     /**
      * @param string $ProfileType 配置类型，为需要配置的功能枚举值，目前包含一下枚举值：AutonomyGlobal（自治功能全局配置）、RedisAutoScaleUp（Redis自治扩容配置）
-     * @param string $InstanceId 实列ID。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      * @param string $Product 服务产品类型，支持值包括： "redis" - 云数据库 Redis。
      * @param string $NewProfileInfo 自治功能相关配置，标准JSON字符串格式。
      */

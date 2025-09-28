@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 安全组信息
  *
- * @method integer getProjectId() 获取所属项目id
- * @method void setProjectId(integer $ProjectId) 设置所属项目id
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method array getInbound() 获取入站规则
- * @method void setInbound(array $Inbound) 设置入站规则
- * @method array getOutbound() 获取出站规则
- * @method void setOutbound(array $Outbound) 设置出站规则
- * @method string getSecurityGroupId() 获取安全组id
- * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组id
- * @method string getSecurityGroupName() 获取安全组名称
- * @method void setSecurityGroupName(string $SecurityGroupName) 设置安全组名称
- * @method string getSecurityGroupRemark() 获取安全组备注
- * @method void setSecurityGroupRemark(string $SecurityGroupRemark) 设置安全组备注
+ * @method integer getProjectId() 获取所属项目 ID。
+ * @method void setProjectId(integer $ProjectId) 设置所属项目 ID。
+ * @method string getCreateTime() 获取安全组创建时间。
+ * @method void setCreateTime(string $CreateTime) 设置安全组创建时间。
+ * @method array getInbound() 获取安全组入站规则。
+ * @method void setInbound(array $Inbound) 设置安全组入站规则。
+ * @method array getOutbound() 获取安全组出站规则。
+ * @method void setOutbound(array $Outbound) 设置安全组出站规则。
+ * @method string getSecurityGroupId() 获取安全组 ID。
+ * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组 ID。
+ * @method string getSecurityGroupName() 获取安全组名称。
+ * @method void setSecurityGroupName(string $SecurityGroupName) 设置安全组名称。
+ * @method string getSecurityGroupRemark() 获取安全组备注信息。
+ * @method void setSecurityGroupRemark(string $SecurityGroupRemark) 设置安全组备注信息。
  */
 class SecurityGroup extends AbstractModel
 {
     /**
-     * @var integer 所属项目id
+     * @var integer 所属项目 ID。
      */
     public $ProjectId;
 
     /**
-     * @var string 创建时间
+     * @var string 安全组创建时间。
      */
     public $CreateTime;
 
     /**
-     * @var array 入站规则
+     * @var array 安全组入站规则。
      */
     public $Inbound;
 
     /**
-     * @var array 出站规则
+     * @var array 安全组出站规则。
      */
     public $Outbound;
 
     /**
-     * @var string 安全组id
+     * @var string 安全组 ID。
      */
     public $SecurityGroupId;
 
     /**
-     * @var string 安全组名称
+     * @var string 安全组名称。
      */
     public $SecurityGroupName;
 
     /**
-     * @var string 安全组备注
+     * @var string 安全组备注信息。
      */
     public $SecurityGroupRemark;
 
     /**
-     * @param integer $ProjectId 所属项目id
-     * @param string $CreateTime 创建时间
-     * @param array $Inbound 入站规则
-     * @param array $Outbound 出站规则
-     * @param string $SecurityGroupId 安全组id
-     * @param string $SecurityGroupName 安全组名称
-     * @param string $SecurityGroupRemark 安全组备注
+     * @param integer $ProjectId 所属项目 ID。
+     * @param string $CreateTime 安全组创建时间。
+     * @param array $Inbound 安全组入站规则。
+     * @param array $Outbound 安全组出站规则。
+     * @param string $SecurityGroupId 安全组 ID。
+     * @param string $SecurityGroupName 安全组名称。
+     * @param string $SecurityGroupRemark 安全组备注信息。
      */
     function __construct()
     {

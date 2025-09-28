@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
  * @method void setInstanceId(string $InstanceId) 设置指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
- * @method string getInstanceName() 获取实例名称。
- * @method void setInstanceName(string $InstanceName) 设置实例名称。
+ * @method string getInstanceName() 获取实例名称。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例名称。
+ * @method void setInstanceName(string $InstanceName) 设置实例名称。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例名称。
  * @method integer getLimit() 获取每页输出的任务列表大小。默认为 20，最多输出100条。
  * @method void setLimit(integer $Limit) 设置每页输出的任务列表大小。默认为 20，最多输出100条。
- * @method integer getOffset() 获取分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
- * @method void setOffset(integer $Offset) 设置分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+ * @method integer getOffset() 获取分页偏移量。取值需为 Limit 的整数倍：offset=limit*(页码-1)，默认值为0。
+ * @method void setOffset(integer $Offset) 设置分页偏移量。取值需为 Limit 的整数倍：offset=limit*(页码-1)，默认值为0。
  * @method array getProjectIds() 获取该字段已废弃, 请忽略, 项目 ID
  * @method void setProjectIds(array $ProjectIds) 设置该字段已废弃, 请忽略, 项目 ID
  * @method array getTaskTypes() 获取任务类型。
@@ -173,7 +173,7 @@ class DescribeTaskListRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 实例名称。
+     * @var string 实例名称。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例名称。
      */
     public $InstanceName;
 
@@ -183,7 +183,7 @@ class DescribeTaskListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+     * @var integer 分页偏移量。取值需为 Limit 的整数倍：offset=limit*(页码-1)，默认值为0。
      */
     public $Offset;
 
@@ -291,9 +291,9 @@ class DescribeTaskListRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
-     * @param string $InstanceName 实例名称。
+     * @param string $InstanceName 实例名称。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例名称。
      * @param integer $Limit 每页输出的任务列表大小。默认为 20，最多输出100条。
-     * @param integer $Offset 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+     * @param integer $Offset 分页偏移量。取值需为 Limit 的整数倍：offset=limit*(页码-1)，默认值为0。
      * @param array $ProjectIds 该字段已废弃, 请忽略, 项目 ID
      * @param array $TaskTypes 任务类型。
 

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
 <ul><li>2：停用印章</li></ul>
  * @method array getSealIds() 获取需要操作的印章ID，数组形式，印章ID可从【web控制台->印章 】获取。
  * @method void setSealIds(array $SealIds) 设置需要操作的印章ID，数组形式，印章ID可从【web控制台->印章 】获取。
+ * @method array getOptions() 获取个性化配置字段，默认不传。
+ * @method void setOptions(array $Options) 设置个性化配置字段，默认不传。
  */
 class OperateSealsRequest extends AbstractModel
 {
@@ -58,12 +60,18 @@ class OperateSealsRequest extends AbstractModel
     public $SealIds;
 
     /**
+     * @var array 个性化配置字段，默认不传。
+     */
+    public $Options;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
      * @param Agent $Agent 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      * @param integer $Act 操作类型，int，目前支持传入以下类型：
 <ul><li>1：启用印章</li></ul>
 <ul><li>2：停用印章</li></ul>
      * @param array $SealIds 需要操作的印章ID，数组形式，印章ID可从【web控制台->印章 】获取。
+     * @param array $Options 个性化配置字段，默认不传。
      */
     function __construct()
     {
@@ -94,6 +102,15 @@ class OperateSealsRequest extends AbstractModel
 
         if (array_key_exists("SealIds",$param) and $param["SealIds"] !== null) {
             $this->SealIds = $param["SealIds"];
+        }
+
+        if (array_key_exists("Options",$param) and $param["Options"] !== null) {
+            $this->Options = [];
+            foreach ($param["Options"] as $key => $value){
+                $obj = new Option();
+                $obj->deserialize($value);
+                array_push($this->Options, $obj);
+            }
         }
     }
 }

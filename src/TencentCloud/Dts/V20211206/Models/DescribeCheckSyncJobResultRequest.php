@@ -20,18 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCheckSyncJobResult请求参数结构体
  *
- * @method string getJobId() 获取同步实例id（即标识一个同步作业），形如sync-werwfs23，此值必填
- * @method void setJobId(string $JobId) 设置同步实例id（即标识一个同步作业），形如sync-werwfs23，此值必填
+ * @method string getJobId() 获取同步实例id（即标识一个同步作业），形如sync-werwfs23，此值必填，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
+ * @method void setJobId(string $JobId) 设置同步实例id（即标识一个同步作业），形如sync-werwfs23，此值必填，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
  */
 class DescribeCheckSyncJobResultRequest extends AbstractModel
 {
     /**
-     * @var string 同步实例id（即标识一个同步作业），形如sync-werwfs23，此值必填
+     * @var string 同步实例id（即标识一个同步作业），形如sync-werwfs23，此值必填，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
      */
     public $JobId;
 
     /**
-     * @param string $JobId 同步实例id（即标识一个同步作业），形如sync-werwfs23，此值必填
+     * @param string $JobId 同步实例id（即标识一个同步作业），形如sync-werwfs23，此值必填，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCurrentOp请求参数结构体
  *
- * @method string getInstanceId() 获取指定要查询的实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置指定要查询的实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+ * @method string getInstanceId() 获取指定要查询的实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置指定要查询的实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
  * @method string getNs() 获取操作所属的命名空间 namespace，格式为 db.collection。
  * @method void setNs(string $Ns) 设置操作所属的命名空间 namespace，格式为 db.collection。
  * @method integer getMillisecondRunning() 获取设置查询筛选条件为操作任务已经执行的时间。
@@ -30,8 +30,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMillisecondRunning(integer $MillisecondRunning) 设置设置查询筛选条件为操作任务已经执行的时间。
 - 默认值为0，取值范围为[0, 3600000]，单位：毫秒。
 - 结果将返回超过设置时间的操作。
- * @method string getOp() 获取设置查询筛选条件为操作任务类型。取值包括：none、update、insert，query、command、getmore、remove 和 killcursors。
- * @method void setOp(string $Op) 设置设置查询筛选条件为操作任务类型。取值包括：none、update、insert，query、command、getmore、remove 和 killcursors。
+ * @method string getOp() 获取设置查询筛选条件为操作任务类型。取值包括：
+- none：特殊状态，空闲连接或内部任务等。
+- update：更新数据。
+- insert：插入操作。
+- query：查询操作。
+- command：命令操作。
+- getmore：获取更多数据。
+- remove：删除操作。
+- killcursors：释放查询游标的操作。
+ * @method void setOp(string $Op) 设置设置查询筛选条件为操作任务类型。取值包括：
+- none：特殊状态，空闲连接或内部任务等。
+- update：更新数据。
+- insert：插入操作。
+- query：查询操作。
+- command：命令操作。
+- getmore：获取更多数据。
+- remove：删除操作。
+- killcursors：释放查询游标的操作。
  * @method string getReplicaSetName() 获取筛选条件，分片名称。
  * @method void setReplicaSetName(string $ReplicaSetName) 设置筛选条件，分片名称。
  * @method string getState() 获取设置查询筛选条件为节点角色。
@@ -40,19 +56,23 @@ use TencentCloud\Common\AbstractModel;
  * @method void setState(string $State) 设置设置查询筛选条件为节点角色。
 - primary：主节点。
 - secondary：从节点。
- * @method integer getLimit() 获取单次请求返回的数量，默认值为100，取值范围为[0,100]
- * @method void setLimit(integer $Limit) 设置单次请求返回的数量，默认值为100，取值范围为[0,100]
- * @method integer getOffset() 获取偏移量，默认值为0，取值范围为[0,10000]
- * @method void setOffset(integer $Offset) 设置偏移量，默认值为0，取值范围为[0,10000]
- * @method string getOrderBy() 获取返回结果集排序的字段，目前支持："MicrosecsRunning"/"microsecsrunning"，默认为升序排序
- * @method void setOrderBy(string $OrderBy) 设置返回结果集排序的字段，目前支持："MicrosecsRunning"/"microsecsrunning"，默认为升序排序
- * @method string getOrderByType() 获取返回结果集排序方式，可能的取值："ASC"/"asc"或"DESC"/"desc"
- * @method void setOrderByType(string $OrderByType) 设置返回结果集排序方式，可能的取值："ASC"/"asc"或"DESC"/"desc"
+ * @method integer getLimit() 获取单次请求返回的数量，默认值为100，取值范围为[0,100]。
+ * @method void setLimit(integer $Limit) 设置单次请求返回的数量，默认值为100，取值范围为[0,100]。
+ * @method integer getOffset() 获取偏移量，默认值为0，取值范围为[0,10000]。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认值为0，取值范围为[0,10000]。
+ * @method string getOrderBy() 获取返回结果集排序的字段，目前支持按照 MicrosecsRunning（操作任务已执行的时间）排序。
+ * @method void setOrderBy(string $OrderBy) 设置返回结果集排序的字段，目前支持按照 MicrosecsRunning（操作任务已执行的时间）排序。
+ * @method string getOrderByType() 获取返回结果集排序方式。
+- ASC：升序。默认为 ASC，按照升序排序。
+- DESC：降序。
+ * @method void setOrderByType(string $OrderByType) 设置返回结果集排序方式。
+- ASC：升序。默认为 ASC，按照升序排序。
+- DESC：降序。
  */
 class DescribeCurrentOpRequest extends AbstractModel
 {
     /**
-     * @var string 指定要查询的实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @var string 指定要查询的实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
@@ -69,7 +89,15 @@ class DescribeCurrentOpRequest extends AbstractModel
     public $MillisecondRunning;
 
     /**
-     * @var string 设置查询筛选条件为操作任务类型。取值包括：none、update、insert，query、command、getmore、remove 和 killcursors。
+     * @var string 设置查询筛选条件为操作任务类型。取值包括：
+- none：特殊状态，空闲连接或内部任务等。
+- update：更新数据。
+- insert：插入操作。
+- query：查询操作。
+- command：命令操作。
+- getmore：获取更多数据。
+- remove：删除操作。
+- killcursors：释放查询游标的操作。
      */
     public $Op;
 
@@ -86,40 +114,52 @@ class DescribeCurrentOpRequest extends AbstractModel
     public $State;
 
     /**
-     * @var integer 单次请求返回的数量，默认值为100，取值范围为[0,100]
+     * @var integer 单次请求返回的数量，默认值为100，取值范围为[0,100]。
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量，默认值为0，取值范围为[0,10000]
+     * @var integer 偏移量，默认值为0，取值范围为[0,10000]。
      */
     public $Offset;
 
     /**
-     * @var string 返回结果集排序的字段，目前支持："MicrosecsRunning"/"microsecsrunning"，默认为升序排序
+     * @var string 返回结果集排序的字段，目前支持按照 MicrosecsRunning（操作任务已执行的时间）排序。
      */
     public $OrderBy;
 
     /**
-     * @var string 返回结果集排序方式，可能的取值："ASC"/"asc"或"DESC"/"desc"
+     * @var string 返回结果集排序方式。
+- ASC：升序。默认为 ASC，按照升序排序。
+- DESC：降序。
      */
     public $OrderByType;
 
     /**
-     * @param string $InstanceId 指定要查询的实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param string $InstanceId 指定要查询的实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      * @param string $Ns 操作所属的命名空间 namespace，格式为 db.collection。
      * @param integer $MillisecondRunning 设置查询筛选条件为操作任务已经执行的时间。
 - 默认值为0，取值范围为[0, 3600000]，单位：毫秒。
 - 结果将返回超过设置时间的操作。
-     * @param string $Op 设置查询筛选条件为操作任务类型。取值包括：none、update、insert，query、command、getmore、remove 和 killcursors。
+     * @param string $Op 设置查询筛选条件为操作任务类型。取值包括：
+- none：特殊状态，空闲连接或内部任务等。
+- update：更新数据。
+- insert：插入操作。
+- query：查询操作。
+- command：命令操作。
+- getmore：获取更多数据。
+- remove：删除操作。
+- killcursors：释放查询游标的操作。
      * @param string $ReplicaSetName 筛选条件，分片名称。
      * @param string $State 设置查询筛选条件为节点角色。
 - primary：主节点。
 - secondary：从节点。
-     * @param integer $Limit 单次请求返回的数量，默认值为100，取值范围为[0,100]
-     * @param integer $Offset 偏移量，默认值为0，取值范围为[0,10000]
-     * @param string $OrderBy 返回结果集排序的字段，目前支持："MicrosecsRunning"/"microsecsrunning"，默认为升序排序
-     * @param string $OrderByType 返回结果集排序方式，可能的取值："ASC"/"asc"或"DESC"/"desc"
+     * @param integer $Limit 单次请求返回的数量，默认值为100，取值范围为[0,100]。
+     * @param integer $Offset 偏移量，默认值为0，取值范围为[0,10000]。
+     * @param string $OrderBy 返回结果集排序的字段，目前支持按照 MicrosecsRunning（操作任务已执行的时间）排序。
+     * @param string $OrderByType 返回结果集排序方式。
+- ASC：升序。默认为 ASC，按照升序排序。
+- DESC：降序。
      */
     function __construct()
     {

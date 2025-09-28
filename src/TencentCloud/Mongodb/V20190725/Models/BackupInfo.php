@@ -18,32 +18,54 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 备份信息
+ * 备份信息。
  *
  * @method string getInstanceId() 获取实例ID。
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
- * @method integer getBackupType() 获取备份方式，0-自动备份，1-手动备份
- * @method void setBackupType(integer $BackupType) 设置备份方式，0-自动备份，1-手动备份
- * @method string getBackupName() 获取备份名称
- * @method void setBackupName(string $BackupName) 设置备份名称
- * @method string getBackupDesc() 获取备份备注
- * @method void setBackupDesc(string $BackupDesc) 设置备份备注
- * @method integer getBackupSize() 获取备份文件大小，单位KB
- * @method void setBackupSize(integer $BackupSize) 设置备份文件大小，单位KB
- * @method string getStartTime() 获取备份开始时间
- * @method void setStartTime(string $StartTime) 设置备份开始时间
- * @method string getEndTime() 获取备份结束时间
- * @method void setEndTime(string $EndTime) 设置备份结束时间
- * @method integer getStatus() 获取备份状态，1-备份中，2-备份成功
- * @method void setStatus(integer $Status) 设置备份状态，1-备份中，2-备份成功
- * @method integer getBackupMethod() 获取备份方法，0-逻辑备份，1-物理备份
- * @method void setBackupMethod(integer $BackupMethod) 设置备份方法，0-逻辑备份，1-物理备份
- * @method integer getBackId() 获取备份记录id
- * @method void setBackId(integer $BackId) 设置备份记录id
- * @method string getDeleteTime() 获取备份删除时间
- * @method void setDeleteTime(string $DeleteTime) 设置备份删除时间
- * @method string getBackupRegion() 获取异地备份地域
- * @method void setBackupRegion(string $BackupRegion) 设置异地备份地域
+ * @method integer getBackupType() 获取备份方式。
+- 0：自动备份。
+- 1：手动备份。
+ * @method void setBackupType(integer $BackupType) 设置备份方式。
+- 0：自动备份。
+- 1：手动备份。
+ * @method string getBackupName() 获取备份文件名称。
+ * @method void setBackupName(string $BackupName) 设置备份文件名称。
+ * @method string getBackupDesc() 获取备份任务备注信息。
+ * @method void setBackupDesc(string $BackupDesc) 设置备份任务备注信息。
+ * @method integer getBackupSize() 获取备份文件大小，单位：KB。
+ * @method void setBackupSize(integer $BackupSize) 设置备份文件大小，单位：KB。
+ * @method string getStartTime() 获取备份开始时间。
+ * @method void setStartTime(string $StartTime) 设置备份开始时间。
+ * @method string getEndTime() 获取备份结束时间。
+ * @method void setEndTime(string $EndTime) 设置备份结束时间。
+ * @method integer getStatus() 获取备份状态。
+- 1：备份中。
+- 2：备份成功。
+ * @method void setStatus(integer $Status) 设置备份状态。
+- 1：备份中。
+- 2：备份成功。
+ * @method integer getBackupMethod() 获取备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明:**
+- 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+- 实例开通存储加密，则备份方式不能为物理备份。
+ * @method void setBackupMethod(integer $BackupMethod) 设置备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明:**
+- 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+- 实例开通存储加密，则备份方式不能为物理备份。
+ * @method integer getBackId() 获取备份记录 ID。
+ * @method void setBackId(integer $BackId) 设置备份记录 ID。
+ * @method string getDeleteTime() 获取备份删除时间。
+ * @method void setDeleteTime(string $DeleteTime) 设置备份删除时间。
+ * @method string getBackupRegion() 获取异地备份地域。
+ * @method void setBackupRegion(string $BackupRegion) 设置异地备份地域。
+ * @method string getRestoreTime() 获取备份支持的回档时间。
+ * @method void setRestoreTime(string $RestoreTime) 设置备份支持的回档时间。
  */
 class BackupInfo extends AbstractModel
 {
@@ -53,73 +75,99 @@ class BackupInfo extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 备份方式，0-自动备份，1-手动备份
+     * @var integer 备份方式。
+- 0：自动备份。
+- 1：手动备份。
      */
     public $BackupType;
 
     /**
-     * @var string 备份名称
+     * @var string 备份文件名称。
      */
     public $BackupName;
 
     /**
-     * @var string 备份备注
+     * @var string 备份任务备注信息。
      */
     public $BackupDesc;
 
     /**
-     * @var integer 备份文件大小，单位KB
+     * @var integer 备份文件大小，单位：KB。
      */
     public $BackupSize;
 
     /**
-     * @var string 备份开始时间
+     * @var string 备份开始时间。
      */
     public $StartTime;
 
     /**
-     * @var string 备份结束时间
+     * @var string 备份结束时间。
      */
     public $EndTime;
 
     /**
-     * @var integer 备份状态，1-备份中，2-备份成功
+     * @var integer 备份状态。
+- 1：备份中。
+- 2：备份成功。
      */
     public $Status;
 
     /**
-     * @var integer 备份方法，0-逻辑备份，1-物理备份
+     * @var integer 备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明:**
+- 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+- 实例开通存储加密，则备份方式不能为物理备份。
      */
     public $BackupMethod;
 
     /**
-     * @var integer 备份记录id
+     * @var integer 备份记录 ID。
      */
     public $BackId;
 
     /**
-     * @var string 备份删除时间
+     * @var string 备份删除时间。
      */
     public $DeleteTime;
 
     /**
-     * @var string 异地备份地域
+     * @var string 异地备份地域。
      */
     public $BackupRegion;
 
     /**
+     * @var string 备份支持的回档时间。
+     */
+    public $RestoreTime;
+
+    /**
      * @param string $InstanceId 实例ID。
-     * @param integer $BackupType 备份方式，0-自动备份，1-手动备份
-     * @param string $BackupName 备份名称
-     * @param string $BackupDesc 备份备注
-     * @param integer $BackupSize 备份文件大小，单位KB
-     * @param string $StartTime 备份开始时间
-     * @param string $EndTime 备份结束时间
-     * @param integer $Status 备份状态，1-备份中，2-备份成功
-     * @param integer $BackupMethod 备份方法，0-逻辑备份，1-物理备份
-     * @param integer $BackId 备份记录id
-     * @param string $DeleteTime 备份删除时间
-     * @param string $BackupRegion 异地备份地域
+     * @param integer $BackupType 备份方式。
+- 0：自动备份。
+- 1：手动备份。
+     * @param string $BackupName 备份文件名称。
+     * @param string $BackupDesc 备份任务备注信息。
+     * @param integer $BackupSize 备份文件大小，单位：KB。
+     * @param string $StartTime 备份开始时间。
+     * @param string $EndTime 备份结束时间。
+     * @param integer $Status 备份状态。
+- 1：备份中。
+- 2：备份成功。
+     * @param integer $BackupMethod 备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明:**
+- 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+- 实例开通存储加密，则备份方式不能为物理备份。
+     * @param integer $BackId 备份记录 ID。
+     * @param string $DeleteTime 备份删除时间。
+     * @param string $BackupRegion 异地备份地域。
+     * @param string $RestoreTime 备份支持的回档时间。
      */
     function __construct()
     {
@@ -180,6 +228,10 @@ class BackupInfo extends AbstractModel
 
         if (array_key_exists("BackupRegion",$param) and $param["BackupRegion"] !== null) {
             $this->BackupRegion = $param["BackupRegion"];
+        }
+
+        if (array_key_exists("RestoreTime",$param) and $param["RestoreTime"] !== null) {
+            $this->RestoreTime = $param["RestoreTime"];
         }
     }
 }

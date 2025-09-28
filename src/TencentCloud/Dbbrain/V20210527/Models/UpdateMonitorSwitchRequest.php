@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSwitch() 获取停止或重连Agent实例，支持值包括："on" - 重连实例， "off" - 停止实例。
  * @method void setSwitch(string $Switch) 设置停止或重连Agent实例，支持值包括："on" - 重连实例， "off" - 停止实例。
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
  * @method string getProduct() 获取服务产品类型，仅支持 "dbbrain-mysql" - 自建MySQL。
  * @method void setProduct(string $Product) 设置服务产品类型，仅支持 "dbbrain-mysql" - 自建MySQL。
  */
@@ -35,7 +35,7 @@ class UpdateMonitorSwitchRequest extends AbstractModel
     public $Switch;
 
     /**
-     * @var string 实例ID。
+     * @var string 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public $InstanceId;
 
@@ -46,7 +46,7 @@ class UpdateMonitorSwitchRequest extends AbstractModel
 
     /**
      * @param string $Switch 停止或重连Agent实例，支持值包括："on" - 重连实例， "off" - 停止实例。
-     * @param string $InstanceId 实例ID。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      * @param string $Product 服务产品类型，仅支持 "dbbrain-mysql" - 自建MySQL。
      */
     function __construct()

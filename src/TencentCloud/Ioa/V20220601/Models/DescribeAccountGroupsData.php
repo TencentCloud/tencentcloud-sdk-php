@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLatestSyncResult(string $LatestSyncResult) 设置最新一次同步任务的结果
  * @method string getLatestSyncTime() 获取最新一次同步任务的结束时间
  * @method void setLatestSyncTime(string $LatestSyncTime) 设置最新一次同步任务的结束时间
+ * @method array getNamePathArr() 获取分组名称数组
+ * @method void setNamePathArr(array $NamePathArr) 设置分组名称数组
  */
 class DescribeAccountGroupsData extends AbstractModel
 {
@@ -164,6 +166,11 @@ class DescribeAccountGroupsData extends AbstractModel
     public $LatestSyncTime;
 
     /**
+     * @var array 分组名称数组
+     */
+    public $NamePathArr;
+
+    /**
      * @param string $NamePath 账号分组名全路径，点分格式
      * @param array $IdPathArr 账号分组ID全路径，数组格式
      * @param string $ExtraInfo 扩展信息
@@ -184,6 +191,7 @@ class DescribeAccountGroupsData extends AbstractModel
      * @param boolean $ReadOnly 是否该账户的直接权限
      * @param string $LatestSyncResult 最新一次同步任务的结果
      * @param string $LatestSyncTime 最新一次同步任务的结束时间
+     * @param array $NamePathArr 分组名称数组
      */
     function __construct()
     {
@@ -276,6 +284,10 @@ class DescribeAccountGroupsData extends AbstractModel
 
         if (array_key_exists("LatestSyncTime",$param) and $param["LatestSyncTime"] !== null) {
             $this->LatestSyncTime = $param["LatestSyncTime"];
+        }
+
+        if (array_key_exists("NamePathArr",$param) and $param["NamePathArr"] !== null) {
+            $this->NamePathArr = $param["NamePathArr"];
         }
     }
 }

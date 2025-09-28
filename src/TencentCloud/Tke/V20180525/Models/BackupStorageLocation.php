@@ -31,7 +31,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPath() 获取对象存储桶路径
  * @method void setPath(string $Path) 设置对象存储桶路径
  * @method string getState() 获取存储仓库状态
+- Available: 可用
+- Unavailable: 不可用
  * @method void setState(string $State) 设置存储仓库状态
+- Available: 可用
+- Unavailable: 不可用
  * @method string getMessage() 获取详细状态信息	
  * @method void setMessage(string $Message) 设置详细状态信息	
  * @method string getLastValidationTime() 获取最后一次检查时间	
@@ -66,6 +70,8 @@ class BackupStorageLocation extends AbstractModel
 
     /**
      * @var string 存储仓库状态
+- Available: 可用
+- Unavailable: 不可用
      */
     public $State;
 
@@ -86,6 +92,8 @@ class BackupStorageLocation extends AbstractModel
      * @param string $Bucket 对象存储桶名称，如果是COS必须是tke-backup-前缀开头	
      * @param string $Path 对象存储桶路径
      * @param string $State 存储仓库状态
+- Available: 可用
+- Unavailable: 不可用
      * @param string $Message 详细状态信息	
      * @param string $LastValidationTime 最后一次检查时间	
      */

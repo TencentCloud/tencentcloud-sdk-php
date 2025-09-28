@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB for MariaDB。
  * @method string getNodeRequestType() 获取与Product保持一致。如："dcdb" ,"mariadb"
  * @method void setNodeRequestType(string $NodeRequestType) 设置与Product保持一致。如："dcdb" ,"mariadb"
- * @method string getInstanceId() 获取实例 ID 。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID 。
- * @method string getStartTime() 获取开始时间，如“2019-09-10 12:13:14”。	
- * @method void setStartTime(string $StartTime) 设置开始时间，如“2019-09-10 12:13:14”。	
- * @method string getEndTime() 获取截止时间，如“2019-09-11 10:13:14”。
- * @method void setEndTime(string $EndTime) 设置截止时间，如“2019-09-11 10:13:14”。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+ * @method string getStartTime() 获取开始时间，如“2025-03-17T00:00:00+00:00”。
+ * @method void setStartTime(string $StartTime) 设置开始时间，如“2025-03-17T00:00:00+00:00”。
+ * @method string getEndTime() 获取结束时间，如“2025-03-17T01:00:00+00:00”。
+ * @method void setEndTime(string $EndTime) 设置结束时间，如“2025-03-17T01:00:00+00:00”。
  * @method AuditLogFilter getFilter() 获取过滤条件。可按设置的过滤条件过滤日志。
  * @method void setFilter(AuditLogFilter $Filter) 设置过滤条件。可按设置的过滤条件过滤日志。
  */
@@ -46,17 +46,17 @@ class CreateAuditLogFileRequest extends AbstractModel
     public $NodeRequestType;
 
     /**
-     * @var string 实例 ID 。
+     * @var string 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public $InstanceId;
 
     /**
-     * @var string 开始时间，如“2019-09-10 12:13:14”。	
+     * @var string 开始时间，如“2025-03-17T00:00:00+00:00”。
      */
     public $StartTime;
 
     /**
-     * @var string 截止时间，如“2019-09-11 10:13:14”。
+     * @var string 结束时间，如“2025-03-17T01:00:00+00:00”。
      */
     public $EndTime;
 
@@ -68,9 +68,9 @@ class CreateAuditLogFileRequest extends AbstractModel
     /**
      * @param string $Product 服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB for MariaDB。
      * @param string $NodeRequestType 与Product保持一致。如："dcdb" ,"mariadb"
-     * @param string $InstanceId 实例 ID 。
-     * @param string $StartTime 开始时间，如“2019-09-10 12:13:14”。	
-     * @param string $EndTime 截止时间，如“2019-09-11 10:13:14”。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @param string $StartTime 开始时间，如“2025-03-17T00:00:00+00:00”。
+     * @param string $EndTime 结束时间，如“2025-03-17T01:00:00+00:00”。
      * @param AuditLogFilter $Filter 过滤条件。可按设置的过滤条件过滤日志。
      */
     function __construct()

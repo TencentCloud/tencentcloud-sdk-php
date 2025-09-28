@@ -30,14 +30,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubBizType(string $SubBizType) 设置子业务类型
  * @method string getModelName() 获取模型标识
  * @method void setModelName(string $ModelName) 设置模型标识
- * @method string getStartTime() 获取开始时间戳, 单位为秒
- * @method void setStartTime(string $StartTime) 设置开始时间戳, 单位为秒
- * @method string getEndTime() 获取结束时间戳, 单位为秒
- * @method void setEndTime(string $EndTime) 设置结束时间戳, 单位为秒
+ * @method string getStartTime() 获取开始时间戳, 单位为秒(废弃)
+ * @method void setStartTime(string $StartTime) 设置开始时间戳, 单位为秒(废弃)
+ * @method string getEndTime() 获取结束时间戳, 单位为秒(废弃)
+ * @method void setEndTime(string $EndTime) 设置结束时间戳, 单位为秒(废弃)
  * @method array getAppBizIds() 获取应用id列表
  * @method void setAppBizIds(array $AppBizIds) 设置应用id列表
  * @method string getSpaceId() 获取空间id
  * @method void setSpaceId(string $SpaceId) 设置空间id
+ * @method integer getStatStartTime() 获取开始时间戳, 单位为秒
+ * @method void setStatStartTime(integer $StatStartTime) 设置开始时间戳, 单位为秒
+ * @method integer getStatEndTime() 获取结束时间戳, 单位为秒
+ * @method void setStatEndTime(integer $StatEndTime) 设置结束时间戳, 单位为秒
  */
 class DescribeSearchStatsGraphRequest extends AbstractModel
 {
@@ -67,12 +71,12 @@ class DescribeSearchStatsGraphRequest extends AbstractModel
     public $ModelName;
 
     /**
-     * @var string 开始时间戳, 单位为秒
+     * @var string 开始时间戳, 单位为秒(废弃)
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间戳, 单位为秒
+     * @var string 结束时间戳, 单位为秒(废弃)
      */
     public $EndTime;
 
@@ -87,15 +91,27 @@ class DescribeSearchStatsGraphRequest extends AbstractModel
     public $SpaceId;
 
     /**
+     * @var integer 开始时间戳, 单位为秒
+     */
+    public $StatStartTime;
+
+    /**
+     * @var integer 结束时间戳, 单位为秒
+     */
+    public $StatEndTime;
+
+    /**
      * @param string $LoginUin 登录用户主账号(集成商模式必填)
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)
      * @param array $UinAccount uin列表
      * @param string $SubBizType 子业务类型
      * @param string $ModelName 模型标识
-     * @param string $StartTime 开始时间戳, 单位为秒
-     * @param string $EndTime 结束时间戳, 单位为秒
+     * @param string $StartTime 开始时间戳, 单位为秒(废弃)
+     * @param string $EndTime 结束时间戳, 单位为秒(废弃)
      * @param array $AppBizIds 应用id列表
      * @param string $SpaceId 空间id
+     * @param integer $StatStartTime 开始时间戳, 单位为秒
+     * @param integer $StatEndTime 结束时间戳, 单位为秒
      */
     function __construct()
     {
@@ -144,6 +160,14 @@ class DescribeSearchStatsGraphRequest extends AbstractModel
 
         if (array_key_exists("SpaceId",$param) and $param["SpaceId"] !== null) {
             $this->SpaceId = $param["SpaceId"];
+        }
+
+        if (array_key_exists("StatStartTime",$param) and $param["StatStartTime"] !== null) {
+            $this->StatStartTime = $param["StatStartTime"];
+        }
+
+        if (array_key_exists("StatEndTime",$param) and $param["StatEndTime"] !== null) {
+            $this->StatEndTime = $param["StatEndTime"];
         }
     }
 }

@@ -20,18 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例描述信息
  *
- * @method string getInstanceId() 获取集群实例ID, "cdw-xxxx" 字符串类型
- * @method void setInstanceId(string $InstanceId) 设置集群实例ID, "cdw-xxxx" 字符串类型
+ * @method string getInstanceId() 获取集群实例ID, "cdwdoris-xxxx" 字符串类型
+ * @method void setInstanceId(string $InstanceId) 设置集群实例ID, "cdwdoris-xxxx" 字符串类型
  * @method string getInstanceName() 获取集群实例名称
  * @method void setInstanceName(string $InstanceName) 设置集群实例名称
  * @method string getStatus() 获取状态,
-Init 创建中; Serving 运行中； 
-Deleted已销毁；Deleting 销毁中；
-Modify 集群变更中；
+Init  创建中
+Serving   运行中
+Isolated   已隔离
+Changing  变更中
  * @method void setStatus(string $Status) 设置状态,
-Init 创建中; Serving 运行中； 
-Deleted已销毁；Deleting 销毁中；
-Modify 集群变更中；
+Init  创建中
+Serving   运行中
+Isolated   已隔离
+Changing  变更中
  * @method string getVersion() 获取版本
  * @method void setVersion(string $Version) 设置版本
  * @method string getRegion() 获取地域, ap-guangzhou
@@ -68,8 +70,8 @@ Modify 集群变更中；
  * @method void setId(integer $Id) 设置记录ID，数值型
  * @method integer getRegionId() 获取regionId, 表示地域
  * @method void setRegionId(integer $RegionId) 设置regionId, 表示地域
- * @method string getZoneDesc() 获取可用区说明，例如 "广州二区"
- * @method void setZoneDesc(string $ZoneDesc) 设置可用区说明，例如 "广州二区"
+ * @method string getZoneDesc() 获取可用区说明，例如 "广州三区"
+ * @method void setZoneDesc(string $ZoneDesc) 设置可用区说明，例如 "广州三区"
  * @method string getFlowMsg() 获取错误流程说明信息
  * @method void setFlowMsg(string $FlowMsg) 设置错误流程说明信息
  * @method string getStatusDesc() 获取状态描述，例如“运行中”等
@@ -146,11 +148,15 @@ Modify 集群变更中；
  * @method void setCosStorageSize(float $CosStorageSize) 设置存算分离cos存储数据
  * @method boolean getIsMasterNonVM() 获取存算分离的指标 当是true 不支持新建计算组
  * @method void setIsMasterNonVM(boolean $IsMasterNonVM) 设置存算分离的指标 当是true 不支持新建计算组
+ * @method integer getCosPkgCapacity() 获取Cos容量包大小
+ * @method void setCosPkgCapacity(integer $CosPkgCapacity) 设置Cos容量包大小
+ * @method boolean getUseManagedBucket() 获取集群是否使用托管桶
+ * @method void setUseManagedBucket(boolean $UseManagedBucket) 设置集群是否使用托管桶
  */
 class InstanceInfo extends AbstractModel
 {
     /**
-     * @var string 集群实例ID, "cdw-xxxx" 字符串类型
+     * @var string 集群实例ID, "cdwdoris-xxxx" 字符串类型
      */
     public $InstanceId;
 
@@ -161,9 +167,10 @@ class InstanceInfo extends AbstractModel
 
     /**
      * @var string 状态,
-Init 创建中; Serving 运行中； 
-Deleted已销毁；Deleting 销毁中；
-Modify 集群变更中；
+Init  创建中
+Serving   运行中
+Isolated   已隔离
+Changing  变更中
      */
     public $Status;
 
@@ -246,7 +253,7 @@ Modify 集群变更中；
     public $RegionId;
 
     /**
-     * @var string 可用区说明，例如 "广州二区"
+     * @var string 可用区说明，例如 "广州三区"
      */
     public $ZoneDesc;
 
@@ -434,12 +441,23 @@ Modify 集群变更中；
     public $IsMasterNonVM;
 
     /**
-     * @param string $InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
+     * @var integer Cos容量包大小
+     */
+    public $CosPkgCapacity;
+
+    /**
+     * @var boolean 集群是否使用托管桶
+     */
+    public $UseManagedBucket;
+
+    /**
+     * @param string $InstanceId 集群实例ID, "cdwdoris-xxxx" 字符串类型
      * @param string $InstanceName 集群实例名称
      * @param string $Status 状态,
-Init 创建中; Serving 运行中； 
-Deleted已销毁；Deleting 销毁中；
-Modify 集群变更中；
+Init  创建中
+Serving   运行中
+Isolated   已隔离
+Changing  变更中
      * @param string $Version 版本
      * @param string $Region 地域, ap-guangzhou
      * @param string $Zone 可用区， ap-guangzhou-3
@@ -458,7 +476,7 @@ Modify 集群变更中；
      * @param string $AccessInfo 访问地址，例如 "10.0.0.1:9000"
      * @param integer $Id 记录ID，数值型
      * @param integer $RegionId regionId, 表示地域
-     * @param string $ZoneDesc 可用区说明，例如 "广州二区"
+     * @param string $ZoneDesc 可用区说明，例如 "广州三区"
      * @param string $FlowMsg 错误流程说明信息
      * @param string $StatusDesc 状态描述，例如“运行中”等
      * @param boolean $RenewFlag 自动续费标记
@@ -497,6 +515,8 @@ Modify 集群变更中；
      * @param integer $ComputeGroupCount 计算组个数
      * @param float $CosStorageSize 存算分离cos存储数据
      * @param boolean $IsMasterNonVM 存算分离的指标 当是true 不支持新建计算组
+     * @param integer $CosPkgCapacity Cos容量包大小
+     * @param boolean $UseManagedBucket 集群是否使用托管桶
      */
     function __construct()
     {
@@ -738,6 +758,14 @@ Modify 集群变更中；
 
         if (array_key_exists("IsMasterNonVM",$param) and $param["IsMasterNonVM"] !== null) {
             $this->IsMasterNonVM = $param["IsMasterNonVM"];
+        }
+
+        if (array_key_exists("CosPkgCapacity",$param) and $param["CosPkgCapacity"] !== null) {
+            $this->CosPkgCapacity = $param["CosPkgCapacity"];
+        }
+
+        if (array_key_exists("UseManagedBucket",$param) and $param["UseManagedBucket"] !== null) {
+            $this->UseManagedBucket = $param["UseManagedBucket"];
         }
     }
 }

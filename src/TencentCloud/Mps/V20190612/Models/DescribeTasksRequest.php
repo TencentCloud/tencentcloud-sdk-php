@@ -20,8 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTasks请求参数结构体
  *
- * @method string getStatus() 获取过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
- * @method void setStatus(string $Status) 设置过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+ * @method string getStatus() 获取任务状态过滤条件，可选值：
+- WAITING（等待中）
+- PROCESSING（处理中）
+- FINISH（已完成）。
+ * @method void setStatus(string $Status) 设置任务状态过滤条件，可选值：
+- WAITING（等待中）
+- PROCESSING（处理中）
+- FINISH（已完成）。
+ * @method boolean getSubTaskHasFailed() 获取任务结束时子任务是否有失败。
+ * @method void setSubTaskHasFailed(boolean $SubTaskHasFailed) 设置任务结束时子任务是否有失败。
  * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：100。
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：10，最大值：100。
  * @method string getScrollToken() 获取翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
@@ -34,9 +42,17 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTasksRequest extends AbstractModel
 {
     /**
-     * @var string 过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+     * @var string 任务状态过滤条件，可选值：
+- WAITING（等待中）
+- PROCESSING（处理中）
+- FINISH（已完成）。
      */
     public $Status;
+
+    /**
+     * @var boolean 任务结束时子任务是否有失败。
+     */
+    public $SubTaskHasFailed;
 
     /**
      * @var integer 返回记录条数，默认值：10，最大值：100。
@@ -59,7 +75,11 @@ class DescribeTasksRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @param string $Status 过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+     * @param string $Status 任务状态过滤条件，可选值：
+- WAITING（等待中）
+- PROCESSING（处理中）
+- FINISH（已完成）。
+     * @param boolean $SubTaskHasFailed 任务结束时子任务是否有失败。
      * @param integer $Limit 返回记录条数，默认值：10，最大值：100。
      * @param string $ScrollToken 翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
      * @param string $StartTime 查询任务开始时间
@@ -80,6 +100,10 @@ class DescribeTasksRequest extends AbstractModel
         }
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("SubTaskHasFailed",$param) and $param["SubTaskHasFailed"] !== null) {
+            $this->SubTaskHasFailed = $param["SubTaskHasFailed"];
         }
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {

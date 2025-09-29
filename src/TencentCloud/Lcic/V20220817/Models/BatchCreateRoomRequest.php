@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSdkAppId() 获取低代码平台的SdkAppId。
  * @method void setSdkAppId(integer $SdkAppId) 设置低代码平台的SdkAppId。
- * @method array getRoomInfos() 获取创建课堂ID列表
- * @method void setRoomInfos(array $RoomInfos) 设置创建课堂ID列表
+ * @method array getRoomInfos() 获取批量创建课堂的配置信息
+ * @method void setRoomInfos(array $RoomInfos) 设置批量创建课堂的配置信息
  */
 class BatchCreateRoomRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class BatchCreateRoomRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var array 创建课堂ID列表
+     * @var array 批量创建课堂的配置信息
      */
     public $RoomInfos;
 
     /**
      * @param integer $SdkAppId 低代码平台的SdkAppId。
-     * @param array $RoomInfos 创建课堂ID列表
+     * @param array $RoomInfos 批量创建课堂的配置信息
      */
     function __construct()
     {

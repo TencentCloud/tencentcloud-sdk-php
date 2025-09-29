@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListWorkflowRuns请求参数结构体
  *
- * @method integer getRunEnv() 获取运行环境。0: 测试环境； 1: 正式环境
- * @method void setRunEnv(integer $RunEnv) 设置运行环境。0: 测试环境； 1: 正式环境
  * @method string getAppBizId() 获取应用ID
  * @method void setAppBizId(string $AppBizId) 设置应用ID
- * @method integer getPage() 获取页码
- * @method void setPage(integer $Page) 设置页码
  * @method integer getPageSize() 获取每页数量
  * @method void setPageSize(integer $PageSize) 设置每页数量
+ * @method integer getRunEnv() 获取运行环境。0: 测试环境； 1: 正式环境
+ * @method void setRunEnv(integer $RunEnv) 设置运行环境。0: 测试环境； 1: 正式环境
+ * @method integer getPage() 获取页码
+ * @method void setPage(integer $Page) 设置页码
  * @method string getLoginUin() 获取登录用户主账号(集成商模式必填)
  * @method void setLoginUin(string $LoginUin) 设置登录用户主账号(集成商模式必填)
  * @method string getLoginSubAccountUin() 获取登录用户子账号(集成商模式必填)
@@ -36,24 +36,24 @@ use TencentCloud\Common\AbstractModel;
 class ListWorkflowRunsRequest extends AbstractModel
 {
     /**
-     * @var integer 运行环境。0: 测试环境； 1: 正式环境
-     */
-    public $RunEnv;
-
-    /**
      * @var string 应用ID
      */
     public $AppBizId;
 
     /**
-     * @var integer 页码
-     */
-    public $Page;
-
-    /**
      * @var integer 每页数量
      */
     public $PageSize;
+
+    /**
+     * @var integer 运行环境。0: 测试环境； 1: 正式环境
+     */
+    public $RunEnv;
+
+    /**
+     * @var integer 页码
+     */
+    public $Page;
 
     /**
      * @var string 登录用户主账号(集成商模式必填)
@@ -66,10 +66,10 @@ class ListWorkflowRunsRequest extends AbstractModel
     public $LoginSubAccountUin;
 
     /**
-     * @param integer $RunEnv 运行环境。0: 测试环境； 1: 正式环境
      * @param string $AppBizId 应用ID
-     * @param integer $Page 页码
      * @param integer $PageSize 每页数量
+     * @param integer $RunEnv 运行环境。0: 测试环境； 1: 正式环境
+     * @param integer $Page 页码
      * @param string $LoginUin 登录用户主账号(集成商模式必填)
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)
      */
@@ -86,20 +86,20 @@ class ListWorkflowRunsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RunEnv",$param) and $param["RunEnv"] !== null) {
-            $this->RunEnv = $param["RunEnv"];
-        }
-
         if (array_key_exists("AppBizId",$param) and $param["AppBizId"] !== null) {
             $this->AppBizId = $param["AppBizId"];
         }
 
-        if (array_key_exists("Page",$param) and $param["Page"] !== null) {
-            $this->Page = $param["Page"];
-        }
-
         if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
             $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("RunEnv",$param) and $param["RunEnv"] !== null) {
+            $this->RunEnv = $param["RunEnv"];
+        }
+
+        if (array_key_exists("Page",$param) and $param["Page"] !== null) {
+            $this->Page = $param["Page"];
         }
 
         if (array_key_exists("LoginUin",$param) and $param["LoginUin"] !== null) {

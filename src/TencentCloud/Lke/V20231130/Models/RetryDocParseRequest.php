@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBotBizId() 获取应用ID
  * @method void setBotBizId(string $BotBizId) 设置应用ID
- * @method string getDocBizId() 获取文档ID
- * @method void setDocBizId(string $DocBizId) 设置文档ID
+ * @method string getDocBizId() 获取废弃
+ * @method void setDocBizId(string $DocBizId) 设置废弃
+ * @method array getDocBizIds() 获取集合最大上限50个，DocBizIds有值使用DocBizIds，为空时则使用DocBizId(兼容废弃字段)
+ * @method void setDocBizIds(array $DocBizIds) 设置集合最大上限50个，DocBizIds有值使用DocBizIds，为空时则使用DocBizId(兼容废弃字段)
  */
 class RetryDocParseRequest extends AbstractModel
 {
@@ -33,13 +35,19 @@ class RetryDocParseRequest extends AbstractModel
     public $BotBizId;
 
     /**
-     * @var string 文档ID
+     * @var string 废弃
      */
     public $DocBizId;
 
     /**
+     * @var array 集合最大上限50个，DocBizIds有值使用DocBizIds，为空时则使用DocBizId(兼容废弃字段)
+     */
+    public $DocBizIds;
+
+    /**
      * @param string $BotBizId 应用ID
-     * @param string $DocBizId 文档ID
+     * @param string $DocBizId 废弃
+     * @param array $DocBizIds 集合最大上限50个，DocBizIds有值使用DocBizIds，为空时则使用DocBizId(兼容废弃字段)
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class RetryDocParseRequest extends AbstractModel
 
         if (array_key_exists("DocBizId",$param) and $param["DocBizId"] !== null) {
             $this->DocBizId = $param["DocBizId"];
+        }
+
+        if (array_key_exists("DocBizIds",$param) and $param["DocBizIds"] !== null) {
+            $this->DocBizIds = $param["DocBizIds"];
         }
     }
 }

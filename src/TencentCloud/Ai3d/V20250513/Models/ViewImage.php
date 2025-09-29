@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
 取值：back、left、right
  * @method string getViewImageUrl() 获取图片Url地址
  * @method void setViewImageUrl(string $ViewImageUrl) 设置图片Url地址
+ * @method string getViewImageBase64() 获取图片base64地址
+ * @method void setViewImageBase64(string $ViewImageBase64) 设置图片base64地址
  */
 class ViewImage extends AbstractModel
 {
@@ -41,9 +43,15 @@ class ViewImage extends AbstractModel
     public $ViewImageUrl;
 
     /**
+     * @var string 图片base64地址
+     */
+    public $ViewImageBase64;
+
+    /**
      * @param string $ViewType 视角类型。
 取值：back、left、right
      * @param string $ViewImageUrl 图片Url地址
+     * @param string $ViewImageBase64 图片base64地址
      */
     function __construct()
     {
@@ -64,6 +72,10 @@ class ViewImage extends AbstractModel
 
         if (array_key_exists("ViewImageUrl",$param) and $param["ViewImageUrl"] !== null) {
             $this->ViewImageUrl = $param["ViewImageUrl"];
+        }
+
+        if (array_key_exists("ViewImageBase64",$param) and $param["ViewImageBase64"] !== null) {
+            $this->ViewImageBase64 = $param["ViewImageBase64"];
         }
     }
 }

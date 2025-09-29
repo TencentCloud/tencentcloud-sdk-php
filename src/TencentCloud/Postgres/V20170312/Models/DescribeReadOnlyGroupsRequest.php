@@ -23,17 +23,19 @@ use TencentCloud\Common\AbstractModel;
  * @method array getFilters() 获取按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-master-instance-id：按照主实例过滤，类型为string。
 read-only-group-id：按照只读组ID过滤，类型为string。
+注：该参数的过滤条件中，db-master-instance-id为必须指定项。
  * @method void setFilters(array $Filters) 设置按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-master-instance-id：按照主实例过滤，类型为string。
 read-only-group-id：按照只读组ID过滤，类型为string。
- * @method integer getPageSize() 获取查询每一页的条数，默认为10
- * @method void setPageSize(integer $PageSize) 设置查询每一页的条数，默认为10
+注：该参数的过滤条件中，db-master-instance-id为必须指定项。
+ * @method integer getPageSize() 获取查询每一页的条数，默认为10，最大值99。
+ * @method void setPageSize(integer $PageSize) 设置查询每一页的条数，默认为10，最大值99。
  * @method integer getPageNumber() 获取查询的页码，默认为1
  * @method void setPageNumber(integer $PageNumber) 设置查询的页码，默认为1
- * @method string getOrderBy() 获取查询排序依据，目前支持:ROGroupId,CreateTime,Name
- * @method void setOrderBy(string $OrderBy) 设置查询排序依据，目前支持:ROGroupId,CreateTime,Name
- * @method string getOrderByType() 获取查询排序依据类型，目前支持:desc,asc
- * @method void setOrderByType(string $OrderByType) 设置查询排序依据类型，目前支持:desc,asc
+ * @method string getOrderBy() 获取查询排序依据，目前支持:ROGroupId,CreateTime,Name。默认值CreateTime
+ * @method void setOrderBy(string $OrderBy) 设置查询排序依据，目前支持:ROGroupId,CreateTime,Name。默认值CreateTime
+ * @method string getOrderByType() 获取查询排序依据类型，目前支持:desc,asc。默认值asc。
+ * @method void setOrderByType(string $OrderByType) 设置查询排序依据类型，目前支持:desc,asc。默认值asc。
  */
 class DescribeReadOnlyGroupsRequest extends AbstractModel
 {
@@ -41,11 +43,12 @@ class DescribeReadOnlyGroupsRequest extends AbstractModel
      * @var array 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-master-instance-id：按照主实例过滤，类型为string。
 read-only-group-id：按照只读组ID过滤，类型为string。
+注：该参数的过滤条件中，db-master-instance-id为必须指定项。
      */
     public $Filters;
 
     /**
-     * @var integer 查询每一页的条数，默认为10
+     * @var integer 查询每一页的条数，默认为10，最大值99。
      */
     public $PageSize;
 
@@ -55,12 +58,12 @@ read-only-group-id：按照只读组ID过滤，类型为string。
     public $PageNumber;
 
     /**
-     * @var string 查询排序依据，目前支持:ROGroupId,CreateTime,Name
+     * @var string 查询排序依据，目前支持:ROGroupId,CreateTime,Name。默认值CreateTime
      */
     public $OrderBy;
 
     /**
-     * @var string 查询排序依据类型，目前支持:desc,asc
+     * @var string 查询排序依据类型，目前支持:desc,asc。默认值asc。
      */
     public $OrderByType;
 
@@ -68,10 +71,11 @@ read-only-group-id：按照只读组ID过滤，类型为string。
      * @param array $Filters 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-master-instance-id：按照主实例过滤，类型为string。
 read-only-group-id：按照只读组ID过滤，类型为string。
-     * @param integer $PageSize 查询每一页的条数，默认为10
+注：该参数的过滤条件中，db-master-instance-id为必须指定项。
+     * @param integer $PageSize 查询每一页的条数，默认为10，最大值99。
      * @param integer $PageNumber 查询的页码，默认为1
-     * @param string $OrderBy 查询排序依据，目前支持:ROGroupId,CreateTime,Name
-     * @param string $OrderByType 查询排序依据类型，目前支持:desc,asc
+     * @param string $OrderBy 查询排序依据，目前支持:ROGroupId,CreateTime,Name。默认值CreateTime
+     * @param string $OrderByType 查询排序依据类型，目前支持:desc,asc。默认值asc。
      */
     function __construct()
     {

@@ -20,8 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceState返回参数结构体
  *
- * @method string getInstanceState() 获取集群状态，例如：Serving
- * @method void setInstanceState(string $InstanceState) 设置集群状态，例如：Serving
+ * @method string getInstanceState() 获取集群状态 
+ Init  创建中 
+Serving   运行中 
+Isolated   已隔离 
+Changing  变更中
+ * @method void setInstanceState(string $InstanceState) 设置集群状态 
+ Init  创建中 
+Serving   运行中 
+Isolated   已隔离 
+Changing  变更中
  * @method string getFlowCreateTime() 获取集群操作创建时间
  * @method void setFlowCreateTime(string $FlowCreateTime) 设置集群操作创建时间
  * @method string getFlowName() 获取集群操作名称
@@ -42,7 +50,11 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInstanceStateResponse extends AbstractModel
 {
     /**
-     * @var string 集群状态，例如：Serving
+     * @var string 集群状态 
+ Init  创建中 
+Serving   运行中 
+Isolated   已隔离 
+Changing  变更中
      */
     public $InstanceState;
 
@@ -87,7 +99,11 @@ class DescribeInstanceStateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $InstanceState 集群状态，例如：Serving
+     * @param string $InstanceState 集群状态 
+ Init  创建中 
+Serving   运行中 
+Isolated   已隔离 
+Changing  变更中
      * @param string $FlowCreateTime 集群操作创建时间
      * @param string $FlowName 集群操作名称
      * @param float $FlowProgress 集群操作进度

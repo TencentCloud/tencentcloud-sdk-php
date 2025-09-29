@@ -63,9 +63,9 @@ back：后视图；
  * @method boolean getEnablePBR() 获取是否开启 PBR材质生成，默认 false。
  * @method void setEnablePBR(boolean $EnablePBR) 设置是否开启 PBR材质生成，默认 false。
  * @method integer getFaceCount() 获取生成3D模型的面数，默认值为500000。
-可支持生成面数范围，参考值：40000-500000。
+可支持生成面数范围，参考值：40000-1500000。
  * @method void setFaceCount(integer $FaceCount) 设置生成3D模型的面数，默认值为500000。
-可支持生成面数范围，参考值：40000-500000。
+可支持生成面数范围，参考值：40000-1500000。
  * @method string getGenerateType() 获取生成任务类型，默认Normal，参考值：
 Normal：可生成带纹理的几何模型。
 LowPoly：可生成智能减面后的模型。
@@ -76,6 +76,16 @@ Normal：可生成带纹理的几何模型。
 LowPoly：可生成智能减面后的模型。
 Geometry：可生成不带纹理的几何模型（白模），选择此任务时，EnablePBR参数不生效。
 Sketch：可输入草图或线稿图生成模型，此模式下prompt和ImageUrl/ImageBase64可一起输入。
+ * @method string getPolygonType() 获取该参数仅在GenerateType中选择LowPoly模式可生效。
+
+多边形类型，表示模型的表面由几边形网格构成，默认为triangle,参考值:
+triangle: 三角形面。
+quadrilateral: 四边形面与三角形面混合生成。
+ * @method void setPolygonType(string $PolygonType) 设置该参数仅在GenerateType中选择LowPoly模式可生效。
+
+多边形类型，表示模型的表面由几边形网格构成，默认为triangle,参考值:
+triangle: 三角形面。
+quadrilateral: 四边形面与三角形面混合生成。
  */
 class SubmitHunyuanTo3DProJobRequest extends AbstractModel
 {
@@ -122,7 +132,7 @@ back：后视图；
 
     /**
      * @var integer 生成3D模型的面数，默认值为500000。
-可支持生成面数范围，参考值：40000-500000。
+可支持生成面数范围，参考值：40000-1500000。
      */
     public $FaceCount;
 
@@ -134,6 +144,15 @@ Geometry：可生成不带纹理的几何模型（白模），选择此任务时
 Sketch：可输入草图或线稿图生成模型，此模式下prompt和ImageUrl/ImageBase64可一起输入。
      */
     public $GenerateType;
+
+    /**
+     * @var string 该参数仅在GenerateType中选择LowPoly模式可生效。
+
+多边形类型，表示模型的表面由几边形网格构成，默认为triangle,参考值:
+triangle: 三角形面。
+quadrilateral: 四边形面与三角形面混合生成。
+     */
+    public $PolygonType;
 
     /**
      * @param string $Prompt 文生3D，3D内容的描述，中文正向提示词。
@@ -158,12 +177,17 @@ back：后视图；
 ●支持图片格式：支持jpg或png
      * @param boolean $EnablePBR 是否开启 PBR材质生成，默认 false。
      * @param integer $FaceCount 生成3D模型的面数，默认值为500000。
-可支持生成面数范围，参考值：40000-500000。
+可支持生成面数范围，参考值：40000-1500000。
      * @param string $GenerateType 生成任务类型，默认Normal，参考值：
 Normal：可生成带纹理的几何模型。
 LowPoly：可生成智能减面后的模型。
 Geometry：可生成不带纹理的几何模型（白模），选择此任务时，EnablePBR参数不生效。
 Sketch：可输入草图或线稿图生成模型，此模式下prompt和ImageUrl/ImageBase64可一起输入。
+     * @param string $PolygonType 该参数仅在GenerateType中选择LowPoly模式可生效。
+
+多边形类型，表示模型的表面由几边形网格构成，默认为triangle,参考值:
+triangle: 三角形面。
+quadrilateral: 四边形面与三角形面混合生成。
      */
     function __construct()
     {
@@ -209,6 +233,10 @@ Sketch：可输入草图或线稿图生成模型，此模式下prompt和ImageUrl
 
         if (array_key_exists("GenerateType",$param) and $param["GenerateType"] !== null) {
             $this->GenerateType = $param["GenerateType"];
+        }
+
+        if (array_key_exists("PolygonType",$param) and $param["PolygonType"] !== null) {
+            $this->PolygonType = $param["PolygonType"];
         }
     }
 }

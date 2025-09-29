@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(OrderBy $OrderBy) 设置排序
  * @method boolean getDemo() 获取是否demo模式
  * @method void setDemo(boolean $Demo) 设置是否demo模式
- * @method string getServiceStatus() 获取应用状态筛选，可枚举的值为：health、warning、error。如果选中多个状态用逗号隔开，比如："warning,error"
- * @method void setServiceStatus(string $ServiceStatus) 设置应用状态筛选，可枚举的值为：health、warning、error。如果选中多个状态用逗号隔开，比如："warning,error"
+ * @method string getServiceStatus() 获取应用状态筛选，可枚举的值为：health、warning、error。如果选中多个状态用逗号隔开，例如："warning,error"
+ * @method void setServiceStatus(string $ServiceStatus) 设置应用状态筛选，可枚举的值为：health、warning、error。如果选中多个状态用逗号隔开，例如："warning,error"
  * @method array getTags() 获取标签列表
  * @method void setTags(array $Tags) 设置标签列表
  * @method integer getPage() 获取页码
@@ -83,7 +83,7 @@ class DescribeApmServiceMetricRequest extends AbstractModel
     public $Demo;
 
     /**
-     * @var string 应用状态筛选，可枚举的值为：health、warning、error。如果选中多个状态用逗号隔开，比如："warning,error"
+     * @var string 应用状态筛选，可枚举的值为：health、warning、error。如果选中多个状态用逗号隔开，例如："warning,error"
      */
     public $ServiceStatus;
 
@@ -115,7 +115,7 @@ class DescribeApmServiceMetricRequest extends AbstractModel
      * @param integer $EndTime 结束时间
      * @param OrderBy $OrderBy 排序
      * @param boolean $Demo 是否demo模式
-     * @param string $ServiceStatus 应用状态筛选，可枚举的值为：health、warning、error。如果选中多个状态用逗号隔开，比如："warning,error"
+     * @param string $ServiceStatus 应用状态筛选，可枚举的值为：health、warning、error。如果选中多个状态用逗号隔开，例如："warning,error"
      * @param array $Tags 标签列表
      * @param integer $Page 页码
      * @param integer $PageSize 页大小

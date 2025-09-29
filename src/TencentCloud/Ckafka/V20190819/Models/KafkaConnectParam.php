@@ -32,6 +32,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBrokerAddress(string $BrokerAddress) 设置Kafka连接的broker地址, NetworkType=PUBLIC公网时必填
  * @method string getRegion() 获取CKafka连接源的实例资源地域, 跨地域时必填
  * @method void setRegion(string $Region) 设置CKafka连接源的实例资源地域, 跨地域时必填
+ * @method string getNetworkType() 获取网络类型：PUBLIC公网；VPC
+ * @method void setNetworkType(string $NetworkType) 设置网络类型：PUBLIC公网；VPC
+ * @method string getUniqVpcId() 获取vpcId，NetworkType=VPC时必传
+ * @method void setUniqVpcId(string $UniqVpcId) 设置vpcId，NetworkType=VPC时必传
+ * @method string getServiceVip() 获取vip，NetworkType=VPC时必传
+ * @method void setServiceVip(string $ServiceVip) 设置vip，NetworkType=VPC时必传
+ * @method integer getPort() 获取端口，NetworkType=VPC时必传
+ * @method void setPort(integer $Port) 设置端口，NetworkType=VPC时必传
+ * @method string getCrossNetResourceUniqueId() 获取跨云同步下需要客户传递唯一Id标志一组资源
+ * @method void setCrossNetResourceUniqueId(string $CrossNetResourceUniqueId) 设置跨云同步下需要客户传递唯一Id标志一组资源
+ * @method string getCrossNetVpcSubNetId() 获取跨云子网ID
+ * @method void setCrossNetVpcSubNetId(string $CrossNetVpcSubNetId) 设置跨云子网ID
  */
 class KafkaConnectParam extends AbstractModel
 {
@@ -62,12 +74,48 @@ class KafkaConnectParam extends AbstractModel
     public $Region;
 
     /**
+     * @var string 网络类型：PUBLIC公网；VPC
+     */
+    public $NetworkType;
+
+    /**
+     * @var string vpcId，NetworkType=VPC时必传
+     */
+    public $UniqVpcId;
+
+    /**
+     * @var string vip，NetworkType=VPC时必传
+     */
+    public $ServiceVip;
+
+    /**
+     * @var integer 端口，NetworkType=VPC时必传
+     */
+    public $Port;
+
+    /**
+     * @var string 跨云同步下需要客户传递唯一Id标志一组资源
+     */
+    public $CrossNetResourceUniqueId;
+
+    /**
+     * @var string 跨云子网ID
+     */
+    public $CrossNetVpcSubNetId;
+
+    /**
      * @param string $Resource Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id
      * @param boolean $SelfBuilt 是否为自建集群
      * @param boolean $IsUpdate 是否更新到关联的Dip任务
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BrokerAddress Kafka连接的broker地址, NetworkType=PUBLIC公网时必填
      * @param string $Region CKafka连接源的实例资源地域, 跨地域时必填
+     * @param string $NetworkType 网络类型：PUBLIC公网；VPC
+     * @param string $UniqVpcId vpcId，NetworkType=VPC时必传
+     * @param string $ServiceVip vip，NetworkType=VPC时必传
+     * @param integer $Port 端口，NetworkType=VPC时必传
+     * @param string $CrossNetResourceUniqueId 跨云同步下需要客户传递唯一Id标志一组资源
+     * @param string $CrossNetVpcSubNetId 跨云子网ID
      */
     function __construct()
     {
@@ -100,6 +148,30 @@ class KafkaConnectParam extends AbstractModel
 
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("NetworkType",$param) and $param["NetworkType"] !== null) {
+            $this->NetworkType = $param["NetworkType"];
+        }
+
+        if (array_key_exists("UniqVpcId",$param) and $param["UniqVpcId"] !== null) {
+            $this->UniqVpcId = $param["UniqVpcId"];
+        }
+
+        if (array_key_exists("ServiceVip",$param) and $param["ServiceVip"] !== null) {
+            $this->ServiceVip = $param["ServiceVip"];
+        }
+
+        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
+            $this->Port = $param["Port"];
+        }
+
+        if (array_key_exists("CrossNetResourceUniqueId",$param) and $param["CrossNetResourceUniqueId"] !== null) {
+            $this->CrossNetResourceUniqueId = $param["CrossNetResourceUniqueId"];
+        }
+
+        if (array_key_exists("CrossNetVpcSubNetId",$param) and $param["CrossNetVpcSubNetId"] !== null) {
+            $this->CrossNetVpcSubNetId = $param["CrossNetVpcSubNetId"];
         }
     }
 }

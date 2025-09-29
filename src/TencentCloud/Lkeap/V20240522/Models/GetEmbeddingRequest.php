@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetEmbedding请求参数结构体
  *
- * @method string getModel() 获取说明：选择生成向量的模型备注：可选[lke-text-embedding-v1,lke-text-embedding-v2]
- * @method void setModel(string $Model) 设置说明：选择生成向量的模型备注：可选[lke-text-embedding-v1,lke-text-embedding-v2]
+ * @method string getModel() 获取说明：选择生成向量的模型备注：可选[lke-text-embedding-v1,lke-text-embedding-v2,youtu-embedding-llm-v1]
+ * @method void setModel(string $Model) 设置说明：选择生成向量的模型备注：可选[lke-text-embedding-v1,lke-text-embedding-v2,youtu-embedding-llm-v1]
  * @method array getInputs() 获取说明：需要 embedding 的文本
 备注：单条query最多2000个字符，总条数最多7条
  * @method void setInputs(array $Inputs) 设置说明：需要 embedding 的文本
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class GetEmbeddingRequest extends AbstractModel
 {
     /**
-     * @var string 说明：选择生成向量的模型备注：可选[lke-text-embedding-v1,lke-text-embedding-v2]
+     * @var string 说明：选择生成向量的模型备注：可选[lke-text-embedding-v1,lke-text-embedding-v2,youtu-embedding-llm-v1]
      */
     public $Model;
 
@@ -55,7 +55,7 @@ class GetEmbeddingRequest extends AbstractModel
     public $Instruction;
 
     /**
-     * @param string $Model 说明：选择生成向量的模型备注：可选[lke-text-embedding-v1,lke-text-embedding-v2]
+     * @param string $Model 说明：选择生成向量的模型备注：可选[lke-text-embedding-v1,lke-text-embedding-v2,youtu-embedding-llm-v1]
      * @param array $Inputs 说明：需要 embedding 的文本
 备注：单条query最多2000个字符，总条数最多7条
      * @param string $TextType 说明：文本向量化的类型，为使得检索任务有更好的检索效果，建议区分查询文本（query）和文档文本（document）类型, 聚类、分类等对称任务可以不用特殊指定，采用系统默认值document即可。

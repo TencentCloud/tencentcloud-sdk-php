@@ -30,14 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMasterDBInstanceId(string $MasterDBInstanceId) 设置主实例id
  * @method integer getMinDelayEliminateReserve() 获取最小保留实例数
  * @method void setMinDelayEliminateReserve(integer $MinDelayEliminateReserve) 设置最小保留实例数
- * @method integer getMaxReplayLatency() 获取延迟空间大小阈值
- * @method void setMaxReplayLatency(integer $MaxReplayLatency) 设置延迟空间大小阈值
- * @method integer getReplayLatencyEliminate() 获取延迟大小开关
- * @method void setReplayLatencyEliminate(integer $ReplayLatencyEliminate) 设置延迟大小开关
- * @method float getMaxReplayLag() 获取延迟时间大小阈值
- * @method void setMaxReplayLag(float $MaxReplayLag) 设置延迟时间大小阈值
- * @method integer getReplayLagEliminate() 获取延迟时间开关
- * @method void setReplayLagEliminate(integer $ReplayLagEliminate) 设置延迟时间开关
+ * @method integer getMaxReplayLatency() 获取延迟空间大小阈值。单位MB。
+ * @method void setMaxReplayLatency(integer $MaxReplayLatency) 设置延迟空间大小阈值。单位MB。
+ * @method integer getReplayLatencyEliminate() 获取延迟大小开关。0 - 关闭； 1 - 开启。
+ * @method void setReplayLatencyEliminate(integer $ReplayLatencyEliminate) 设置延迟大小开关。0 - 关闭； 1 - 开启。
+ * @method float getMaxReplayLag() 获取延迟时间大小阈值，单位：秒。
+ * @method void setMaxReplayLag(float $MaxReplayLag) 设置延迟时间大小阈值，单位：秒。
+ * @method integer getReplayLagEliminate() 获取延迟时间开关。0 - 关闭； 1 - 开启。
+ * @method void setReplayLagEliminate(integer $ReplayLagEliminate) 设置延迟时间开关。0 - 关闭； 1 - 开启。
  * @method string getVpcId() 获取虚拟网络id
  * @method void setVpcId(string $VpcId) 设置虚拟网络id
  * @method string getSubnetId() 获取子网id
@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置地域id
  * @method string getZone() 获取地区id
  * @method void setZone(string $Zone) 设置地区id
- * @method string getStatus() 获取状态
- * @method void setStatus(string $Status) 设置状态
+ * @method string getStatus() 获取状态。枚举值：creating、ok、modifying、deleting、deleted
+ * @method void setStatus(string $Status) 设置状态。枚举值：creating、ok、modifying、deleting、deleted
  * @method array getReadOnlyDBInstanceList() 获取实例详细信息
  * @method void setReadOnlyDBInstanceList(array $ReadOnlyDBInstanceList) 设置实例详细信息
  * @method integer getRebalance() 获取自动负载均衡开关
@@ -87,22 +87,22 @@ class ReadOnlyGroup extends AbstractModel
     public $MinDelayEliminateReserve;
 
     /**
-     * @var integer 延迟空间大小阈值
+     * @var integer 延迟空间大小阈值。单位MB。
      */
     public $MaxReplayLatency;
 
     /**
-     * @var integer 延迟大小开关
+     * @var integer 延迟大小开关。0 - 关闭； 1 - 开启。
      */
     public $ReplayLatencyEliminate;
 
     /**
-     * @var float 延迟时间大小阈值
+     * @var float 延迟时间大小阈值，单位：秒。
      */
     public $MaxReplayLag;
 
     /**
-     * @var integer 延迟时间开关
+     * @var integer 延迟时间开关。0 - 关闭； 1 - 开启。
      */
     public $ReplayLagEliminate;
 
@@ -127,7 +127,7 @@ class ReadOnlyGroup extends AbstractModel
     public $Zone;
 
     /**
-     * @var string 状态
+     * @var string 状态。枚举值：creating、ok、modifying、deleting、deleted
      */
     public $Status;
 
@@ -158,15 +158,15 @@ class ReadOnlyGroup extends AbstractModel
      * @param integer $ProjectId 项目id
      * @param string $MasterDBInstanceId 主实例id
      * @param integer $MinDelayEliminateReserve 最小保留实例数
-     * @param integer $MaxReplayLatency 延迟空间大小阈值
-     * @param integer $ReplayLatencyEliminate 延迟大小开关
-     * @param float $MaxReplayLag 延迟时间大小阈值
-     * @param integer $ReplayLagEliminate 延迟时间开关
+     * @param integer $MaxReplayLatency 延迟空间大小阈值。单位MB。
+     * @param integer $ReplayLatencyEliminate 延迟大小开关。0 - 关闭； 1 - 开启。
+     * @param float $MaxReplayLag 延迟时间大小阈值，单位：秒。
+     * @param integer $ReplayLagEliminate 延迟时间开关。0 - 关闭； 1 - 开启。
      * @param string $VpcId 虚拟网络id
      * @param string $SubnetId 子网id
      * @param string $Region 地域id
      * @param string $Zone 地区id
-     * @param string $Status 状态
+     * @param string $Status 状态。枚举值：creating、ok、modifying、deleting、deleted
      * @param array $ReadOnlyDBInstanceList 实例详细信息
      * @param integer $Rebalance 自动负载均衡开关
      * @param array $DBInstanceNetInfo 网络信息

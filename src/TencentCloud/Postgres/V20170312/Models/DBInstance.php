@@ -158,6 +158,8 @@ mssql_compatible引擎：
 <li>0：否</li>
 <li>1：是</li>
 默认值：0
+ * @method integer getExpandedCpu() 获取实例已经弹性扩容的cpu核数
+ * @method void setExpandedCpu(integer $ExpandedCpu) 设置实例已经弹性扩容的cpu核数
  */
 class DBInstance extends AbstractModel
 {
@@ -387,6 +389,11 @@ mssql_compatible引擎：
     public $SupportIpv6;
 
     /**
+     * @var integer 实例已经弹性扩容的cpu核数
+     */
+    public $ExpandedCpu;
+
+    /**
      * @param string $Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段。
      * @param string $Zone 实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段。
      * @param string $VpcId 私有网络ID，形如vpc-e6w23k31。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcs](https://cloud.tencent.com/document/api/215/15778) ，从接口返回中的unVpcId字段获取。
@@ -456,6 +463,7 @@ mssql_compatible引擎：
 <li>0：否</li>
 <li>1：是</li>
 默认值：0
+     * @param integer $ExpandedCpu 实例已经弹性扩容的cpu核数
      */
     function __construct()
     {
@@ -644,6 +652,10 @@ mssql_compatible引擎：
 
         if (array_key_exists("SupportIpv6",$param) and $param["SupportIpv6"] !== null) {
             $this->SupportIpv6 = $param["SupportIpv6"];
+        }
+
+        if (array_key_exists("ExpandedCpu",$param) and $param["ExpandedCpu"] !== null) {
+            $this->ExpandedCpu = $param["ExpandedCpu"];
         }
     }
 }

@@ -468,7 +468,7 @@ abstract class AbstractClient
     
     private function handleJsonResponse($action, $responseData)
     {
-        $tmpResp = json_decode($responseData->getBody(), true)["Response"];
+        $tmpResp = json_decode($responseData->getBody()->getContents(), true)["Response"];
         if (array_key_exists("Error", $tmpResp)) {
             throw new TencentCloudSDKException($tmpResp["Error"]["Code"], $tmpResp["Error"]["Message"], $tmpResp["RequestId"]);
         }

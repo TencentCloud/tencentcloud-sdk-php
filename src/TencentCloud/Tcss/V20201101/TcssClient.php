@@ -52,6 +52,7 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\CreateAssetImageScanTaskResponse CreateAssetImageScanTask(Models\CreateAssetImageScanTaskRequest $req) 容器安全创建镜像扫描任务
  * @method Models\CreateAssetImageVirusExportJobResponse CreateAssetImageVirusExportJob(Models\CreateAssetImageVirusExportJobRequest $req) 创建本地镜像木马列表导出任务
  * @method Models\CreateCheckComponentResponse CreateCheckComponent(Models\CreateCheckComponentRequest $req) 安装检查组件，创建防护容器
+ * @method Models\CreateClusterAccessResponse CreateClusterAccess(Models\CreateClusterAccessRequest $req) 创建集群接入
  * @method Models\CreateClusterCheckTaskResponse CreateClusterCheckTask(Models\CreateClusterCheckTaskRequest $req) 创建集群检查任务，用户检查用户的集群相关风险项
  * @method Models\CreateComplianceTaskResponse CreateComplianceTask(Models\CreateComplianceTaskRequest $req) 创建合规检查任务，在资产级别触发重新检测时使用。
  * @method Models\CreateComponentExportJobResponse CreateComponentExportJob(Models\CreateComponentExportJobRequest $req) 查询本地镜像组件列表导出
@@ -322,6 +323,7 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\ModifyAssetImageScanStopResponse ModifyAssetImageScanStop(Models\ModifyAssetImageScanStopRequest $req) 容器安全停止镜像扫描
  * @method Models\ModifyCompliancePeriodTaskResponse ModifyCompliancePeriodTask(Models\ModifyCompliancePeriodTaskRequest $req) 修改定时任务的设置，包括检测周期、开启/禁用合规基准。
  * @method Models\ModifyContainerNetStatusResponse ModifyContainerNetStatus(Models\ModifyContainerNetStatusRequest $req) 隔离容器网络状态
+ * @method Models\ModifyDefendStatusResponse ModifyDefendStatus(Models\ModifyDefendStatusRequest $req) 修改防护状态
  * @method Models\ModifyEscapeEventStatusResponse ModifyEscapeEventStatus(Models\ModifyEscapeEventStatusRequest $req) ModifyEscapeEventStatus  修改容器逃逸扫描事件状态
  * @method Models\ModifyEscapeRuleResponse ModifyEscapeRule(Models\ModifyEscapeRuleRequest $req) ModifyEscapeRule  修改容器逃逸扫描规则信息
  * @method Models\ModifyEscapeWhiteListResponse ModifyEscapeWhiteList(Models\ModifyEscapeWhiteListRequest $req) 修改逃逸白名单

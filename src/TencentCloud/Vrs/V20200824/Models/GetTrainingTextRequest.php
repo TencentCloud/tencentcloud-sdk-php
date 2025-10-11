@@ -21,10 +21,8 @@ use TencentCloud\Common\AbstractModel;
  * GetTrainingText请求参数结构体
  *
  * @method integer getTaskType() 获取复刻类型。
-0 - 轻量版声音复刻（默认）;
 5 - 一句话声音复刻。
  * @method void setTaskType(integer $TaskType) 设置复刻类型。
-0 - 轻量版声音复刻（默认）;
 5 - 一句话声音复刻。
  * @method integer getDomain() 获取音色场景。（仅支持一句话声音复刻，其余复刻类型不生效） 
 0 - 通用场景（默认）； 
@@ -45,7 +43,6 @@ class GetTrainingTextRequest extends AbstractModel
 {
     /**
      * @var integer 复刻类型。
-0 - 轻量版声音复刻（默认）;
 5 - 一句话声音复刻。
      */
     public $TaskType;
@@ -67,7 +64,6 @@ class GetTrainingTextRequest extends AbstractModel
 
     /**
      * @param integer $TaskType 复刻类型。
-0 - 轻量版声音复刻（默认）;
 5 - 一句话声音复刻。
      * @param integer $Domain 音色场景。（仅支持一句话声音复刻，其余复刻类型不生效） 
 0 - 通用场景（默认）； 

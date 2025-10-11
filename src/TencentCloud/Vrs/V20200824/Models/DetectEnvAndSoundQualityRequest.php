@@ -36,12 +36,8 @@ use TencentCloud\Common\AbstractModel;
 16000：16k（默认）；
 24000：24k（仅一句话声音复刻支持）；
 48000：48k（仅一句话声音复刻支持）。
- * @method integer getTaskType() 获取复刻类型。
-0 - 轻量版声音复刻（默认）;
-5 - 一句话声音复刻。
- * @method void setTaskType(integer $TaskType) 设置复刻类型。
-0 - 轻量版声音复刻（默认）;
-5 - 一句话声音复刻。
+ * @method integer getTaskType() 获取复刻类型。5 - 一句话声音复刻。
+ * @method void setTaskType(integer $TaskType) 设置复刻类型。5 - 一句话声音复刻。
  */
 class DetectEnvAndSoundQualityRequest extends AbstractModel
 {
@@ -74,9 +70,7 @@ class DetectEnvAndSoundQualityRequest extends AbstractModel
     public $SampleRate;
 
     /**
-     * @var integer 复刻类型。
-0 - 轻量版声音复刻（默认）;
-5 - 一句话声音复刻。
+     * @var integer 复刻类型。5 - 一句话声音复刻。
      */
     public $TaskType;
 
@@ -89,9 +83,7 @@ class DetectEnvAndSoundQualityRequest extends AbstractModel
 16000：16k（默认）；
 24000：24k（仅一句话声音复刻支持）；
 48000：48k（仅一句话声音复刻支持）。
-     * @param integer $TaskType 复刻类型。
-0 - 轻量版声音复刻（默认）;
-5 - 一句话声音复刻。
+     * @param integer $TaskType 复刻类型。5 - 一句话声音复刻。
      */
     function __construct()
     {

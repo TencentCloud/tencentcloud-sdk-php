@@ -48,14 +48,16 @@ use TencentCloud\Common\AbstractModel;
 - advanced 高级版
  * @method array getAutoAreas() 获取自动擦除自定义区域。
 对选定区域，利用AI模型自动检测其中存在的擦除目标并擦除。
-注意，当擦除方式为custom时，此参数将不会生效。
+注意，当擦除方式为custom时，此参数将不会生效。修改模板时，清除区域请传入[]，不传时将保持模板区域信息不变。
  * @method void setAutoAreas(array $AutoAreas) 设置自动擦除自定义区域。
 对选定区域，利用AI模型自动检测其中存在的擦除目标并擦除。
-注意，当擦除方式为custom时，此参数将不会生效。
+注意，当擦除方式为custom时，此参数将不会生效。修改模板时，清除区域请传入[]，不传时将保持模板区域信息不变。
  * @method array getCustomAreas() 获取指定擦除自定义区域。
 对选定区域，在选定时间段内不进行检测识别直接进行擦除。
+注意：修改模板时，清除区域请传入[]，不传时将保持模板区域信息不变。
  * @method void setCustomAreas(array $CustomAreas) 设置指定擦除自定义区域。
 对选定区域，在选定时间段内不进行检测识别直接进行擦除。
+注意：修改模板时，清除区域请传入[]，不传时将保持模板区域信息不变。
  */
 class SmartEraseWatermarkConfig extends AbstractModel
 {
@@ -83,13 +85,14 @@ class SmartEraseWatermarkConfig extends AbstractModel
     /**
      * @var array 自动擦除自定义区域。
 对选定区域，利用AI模型自动检测其中存在的擦除目标并擦除。
-注意，当擦除方式为custom时，此参数将不会生效。
+注意，当擦除方式为custom时，此参数将不会生效。修改模板时，清除区域请传入[]，不传时将保持模板区域信息不变。
      */
     public $AutoAreas;
 
     /**
      * @var array 指定擦除自定义区域。
 对选定区域，在选定时间段内不进行检测识别直接进行擦除。
+注意：修改模板时，清除区域请传入[]，不传时将保持模板区域信息不变。
      */
     public $CustomAreas;
 
@@ -109,9 +112,10 @@ class SmartEraseWatermarkConfig extends AbstractModel
 - advanced 高级版
      * @param array $AutoAreas 自动擦除自定义区域。
 对选定区域，利用AI模型自动检测其中存在的擦除目标并擦除。
-注意，当擦除方式为custom时，此参数将不会生效。
+注意，当擦除方式为custom时，此参数将不会生效。修改模板时，清除区域请传入[]，不传时将保持模板区域信息不变。
      * @param array $CustomAreas 指定擦除自定义区域。
 对选定区域，在选定时间段内不进行检测识别直接进行擦除。
+注意：修改模板时，清除区域请传入[]，不传时将保持模板区域信息不变。
      */
     function __construct()
     {

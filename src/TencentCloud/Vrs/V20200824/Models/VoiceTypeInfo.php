@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoiceName(string $VoiceName) 设置音色名称
  * @method integer getVoiceGender() 获取音色性别: 1-male 2-female
  * @method void setVoiceGender(integer $VoiceGender) 设置音色性别: 1-male 2-female
- * @method integer getTaskType() 获取复刻类型: 0-轻量版复刻 1-基础版复刻
- * @method void setTaskType(integer $TaskType) 设置复刻类型: 0-轻量版复刻 1-基础版复刻
+ * @method integer getTaskType() 获取复刻类型: 1-基础版复刻
+ * @method void setTaskType(integer $TaskType) 设置复刻类型: 1-基础版复刻
  * @method string getTaskID() 获取复刻任务 ID
  * @method void setTaskID(string $TaskID) 设置复刻任务 ID
  * @method string getDateCreated() 获取创建时间
@@ -63,7 +63,7 @@ class VoiceTypeInfo extends AbstractModel
     public $VoiceGender;
 
     /**
-     * @var integer 复刻类型: 0-轻量版复刻 1-基础版复刻
+     * @var integer 复刻类型: 1-基础版复刻
      */
     public $TaskType;
 
@@ -99,7 +99,7 @@ class VoiceTypeInfo extends AbstractModel
      * @param integer $VoiceType 音色id。（若为一句话复刻时，该值为固定值“200000000”）
      * @param string $VoiceName 音色名称
      * @param integer $VoiceGender 音色性别: 1-male 2-female
-     * @param integer $TaskType 复刻类型: 0-轻量版复刻 1-基础版复刻
+     * @param integer $TaskType 复刻类型: 1-基础版复刻
      * @param string $TaskID 复刻任务 ID
      * @param string $DateCreated 创建时间
      * @param boolean $IsDeployed 部署状态。若已部署，则可通过语音合成接口调用该音色

@@ -773,6 +773,14 @@ use TencentCloud\Ess\V20201111\Models as Models;
 
 ![image](https://dyn.ess.tencent.cn/guide/capi/CreateSealByImage.png)
  * @method Models\CreateSealPolicyResponse CreateSealPolicy(Models\CreateSealPolicyRequest $req) 本接口（CreateSealPolicy）用于对企业员工进行印章授权
+ * @method Models\CreateSingleSignOnEmployeesResponse CreateSingleSignOnEmployees(Models\CreateSingleSignOnEmployeesRequest $req) 此接口（CreateSingleSignOnEmployees）用于创建单点登录企业员工。
+创建好的员工，可以通过腾讯电子签提供的链接， 如下图位置，进行登录。
+此操作的功能：
+1. 可以绑定已经实名的员工，然后 sso 登录实名绑定。
+2. 可以提前导入员工，在 sso 登录的时候进行实名。
+3. 如果已经绑定过，可以直接通过 sso 链接登录腾讯电子签。
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/0cd98ca2cc49ea1472a2397cea9a3ef6.png)
  * @method Models\CreateUserAutoSignEnableUrlResponse CreateUserAutoSignEnableUrl(Models\CreateUserAutoSignEnableUrlRequest $req) 获取个人用户自动签的开通链接。
 
 注意: `处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。`
@@ -825,6 +833,11 @@ use TencentCloud\Ess\V20201111\Models as Models;
 注意：
 **这个接口的操作人必须跟生成批量认证链接接口的操作人一致，才可以调用，否则会返回当前操作人没有认证中的企业认证流**
  * @method Models\DeleteSealPoliciesResponse DeleteSealPolicies(Models\DeleteSealPoliciesRequest $req) 本接口（DeleteSealPolicies）用于撤销企业员工持有的印章权限
+ * @method Models\DeleteSingleSignOnEmployeesResponse DeleteSingleSignOnEmployees(Models\DeleteSingleSignOnEmployeesRequest $req) 此接口（DeleteSingleSignOnEmployees）用于删除单点登录企业员工。
+注意：
+此接口只能删除未跟腾讯电子签绑定的单点登录企业员工，
+如果企业员工的单点登录信息已经和腾讯电子签里面的企业员工绑定，需要企业的超级管理员或者组织管理员在腾讯电子签控制台对当前企业员工进行离职操作，如下图操作。
+![image](https://qcloudimg.tencent-cloud.cn/raw/5e69f6e11859972d466900040f68c105.png)
  * @method Models\DescribeBatchOrganizationRegistrationTasksResponse DescribeBatchOrganizationRegistrationTasks(Models\DescribeBatchOrganizationRegistrationTasksRequest $req) 本接口（DescribeBatchOrganizationRegistrationTasks）用于查询企业批量认证任务状态。
  * @method Models\DescribeBatchOrganizationRegistrationUrlsResponse DescribeBatchOrganizationRegistrationUrls(Models\DescribeBatchOrganizationRegistrationUrlsRequest $req) 此接口用于获取企业批量认证异步任务的状态及结果。
 
@@ -983,6 +996,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 3. 请在**签署完成后的三天内**获取人脸视频，**过期后将无法获取**。
 
 **注意：该接口需要开通白名单，请联系客户经理开通后使用。**
+ * @method Models\DescribeSingleSignOnEmployeesResponse DescribeSingleSignOnEmployees(Models\DescribeSingleSignOnEmployeesRequest $req) 此接口（DescribeSingleSignOnEmployees）用于查询单点登录企业员工。
  * @method Models\DescribeThirdPartyAuthCodeResponse DescribeThirdPartyAuthCode(Models\DescribeThirdPartyAuthCodeRequest $req) 通过AuthCode查询个人用户是否实名
 
 
@@ -1073,6 +1087,8 @@ use TencentCloud\Ess\V20201111\Models as Models;
 2. 只能更新授权的印章，被授权的企业无法更新
 3. 授权企业和被授权企业必须都是已认证企业
 4. <font color='red'>需要授权企业或被授权企业的超管或者法人打开链接</font>走开通逻辑。
+ * @method Models\ModifySingleSignOnEmployeesResponse ModifySingleSignOnEmployees(Models\ModifySingleSignOnEmployeesRequest $req) 此接口（ModifySingleSignOnEmployees）用于修改单点登录企业员工。
+ 注意： 此接口只能修改未跟腾讯电子签绑定的单点登录企业员工， 如果企业员工的单点登录信息已经和腾讯电子签里面的企业员工绑定，需要在腾讯电子签小程序进行个人信息变更操作。
  * @method Models\OperateSealsResponse OperateSeals(Models\OperateSealsRequest $req) 修改印章状态（停用、启用）
  * @method Models\OperateTemplateResponse OperateTemplate(Models\OperateTemplateRequest $req) 此接口（OperateTemplate）用于对企业自有模板进行管理操作，所有操作都会有对应的回调触发，具体参考回调文档 <a href="https://qian.tencent.com/developers/company/callback_types_templates" target="_blank">模板操作相关回调</a>
 

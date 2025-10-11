@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * FlashBackDBInstance请求参数结构体
  *
- * @method string getInstanceId() 获取开启按 Key 回档的实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置开启按 Key 回档的实例 ID。
- * @method string getTargetFlashbackTime() 获取源数据想恢复到的时间。
- * @method void setTargetFlashbackTime(string $TargetFlashbackTime) 设置源数据想恢复到的时间。
- * @method array getTargetDatabases() 获取源数据所在的库表信息。
- * @method void setTargetDatabases(array $TargetDatabases) 设置源数据所在的库表信息。
- * @method string getTargetInstanceId() 获取数据最终写入的实例 ID。
- * @method void setTargetInstanceId(string $TargetInstanceId) 设置数据最终写入的实例 ID。
+ * @method string getInstanceId() 获取开启按 Key 回档的实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制需开启按 Key 回档的实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置开启按 Key 回档的实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制需开启按 Key 回档的实例 ID。
+ * @method string getTargetFlashbackTime() 获取指定数据回档的具体时间点，即将数据恢复到指定时间点的状态。
+ * @method void setTargetFlashbackTime(string $TargetFlashbackTime) 设置指定数据回档的具体时间点，即将数据恢复到指定时间点的状态。
+ * @method array getTargetDatabases() 获取指定回档数据的目标库表。
+ * @method void setTargetDatabases(array $TargetDatabases) 设置指定回档数据的目标库表。
+ * @method string getTargetInstanceId() 获取数据回档的目标实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制目标实例 ID。
+ * @method void setTargetInstanceId(string $TargetInstanceId) 设置数据回档的目标实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制目标实例 ID。
  */
 class FlashBackDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 开启按 Key 回档的实例 ID。
+     * @var string 开启按 Key 回档的实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制需开启按 Key 回档的实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 源数据想恢复到的时间。
+     * @var string 指定数据回档的具体时间点，即将数据恢复到指定时间点的状态。
      */
     public $TargetFlashbackTime;
 
     /**
-     * @var array 源数据所在的库表信息。
+     * @var array 指定回档数据的目标库表。
      */
     public $TargetDatabases;
 
     /**
-     * @var string 数据最终写入的实例 ID。
+     * @var string 数据回档的目标实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制目标实例 ID。
      */
     public $TargetInstanceId;
 
     /**
-     * @param string $InstanceId 开启按 Key 回档的实例 ID。
-     * @param string $TargetFlashbackTime 源数据想恢复到的时间。
-     * @param array $TargetDatabases 源数据所在的库表信息。
-     * @param string $TargetInstanceId 数据最终写入的实例 ID。
+     * @param string $InstanceId 开启按 Key 回档的实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制需开启按 Key 回档的实例 ID。
+     * @param string $TargetFlashbackTime 指定数据回档的具体时间点，即将数据恢复到指定时间点的状态。
+     * @param array $TargetDatabases 指定回档数据的目标库表。
+     * @param string $TargetInstanceId 数据回档的目标实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制目标实例 ID。
      */
     function __construct()
     {

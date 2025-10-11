@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAsyncRequestInfo请求参数结构体
  *
- * @method string getAsyncRequestId() 获取异步请求Id，涉及到异步流程的接口返回，如CreateBackupDBInstance
- * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步请求Id，涉及到异步流程的接口返回，如CreateBackupDBInstance
+ * @method string getAsyncRequestId() 获取指定需查询的异步请求 ID。当接口操作涉及异步流程时（如 [CreateBackupDBInstance](https://cloud.tencent.com/document/product/240/46599)），其返回值中的 AsyncRequestId 即为本参数所需填入的 ID。
+ * @method void setAsyncRequestId(string $AsyncRequestId) 设置指定需查询的异步请求 ID。当接口操作涉及异步流程时（如 [CreateBackupDBInstance](https://cloud.tencent.com/document/product/240/46599)），其返回值中的 AsyncRequestId 即为本参数所需填入的 ID。
  */
 class DescribeAsyncRequestInfoRequest extends AbstractModel
 {
     /**
-     * @var string 异步请求Id，涉及到异步流程的接口返回，如CreateBackupDBInstance
+     * @var string 指定需查询的异步请求 ID。当接口操作涉及异步流程时（如 [CreateBackupDBInstance](https://cloud.tencent.com/document/product/240/46599)），其返回值中的 AsyncRequestId 即为本参数所需填入的 ID。
      */
     public $AsyncRequestId;
 
     /**
-     * @param string $AsyncRequestId 异步请求Id，涉及到异步流程的接口返回，如CreateBackupDBInstance
+     * @param string $AsyncRequestId 指定需查询的异步请求 ID。当接口操作涉及异步流程时（如 [CreateBackupDBInstance](https://cloud.tencent.com/document/product/240/46599)），其返回值中的 AsyncRequestId 即为本参数所需填入的 ID。
      */
     function __construct()
     {

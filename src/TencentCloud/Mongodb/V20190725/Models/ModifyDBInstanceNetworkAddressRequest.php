@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
 - 单位为分钟，0表示立即回收原 IP 地址。
 - 原 IP 将在约定时间后释放，在释放前原 IP和新 IP均可访问。
 
- * @method string getNewUniqVpcId() 获取切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。
- * @method void setNewUniqVpcId(string $NewUniqVpcId) 设置切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。
- * @method string getNewUniqSubnetId() 获取切换私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。
- * @method void setNewUniqSubnetId(string $NewUniqSubnetId) 设置切换私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。
+ * @method string getNewUniqVpcId() 获取切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络 ID。
+ * @method void setNewUniqVpcId(string $NewUniqVpcId) 设置切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络 ID。
+ * @method string getNewUniqSubnetId() 获取切换后私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络的子网 ID。
+ * @method void setNewUniqSubnetId(string $NewUniqSubnetId) 设置切换后私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络的子网 ID。
  * @method array getNetworkAddresses() 获取IP 地址信息，包含新 IP 地址与 原 IP 地址。
  * @method void setNetworkAddresses(array $NetworkAddresses) 设置IP 地址信息，包含新 IP 地址与 原 IP 地址。
  */
@@ -56,12 +56,12 @@ class ModifyDBInstanceNetworkAddressRequest extends AbstractModel
     public $OldIpExpiredTime;
 
     /**
-     * @var string 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。
+     * @var string 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络 ID。
      */
     public $NewUniqVpcId;
 
     /**
-     * @var string 切换私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。
+     * @var string 切换后私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络的子网 ID。
      */
     public $NewUniqSubnetId;
 
@@ -77,8 +77,8 @@ class ModifyDBInstanceNetworkAddressRequest extends AbstractModel
 - 单位为分钟，0表示立即回收原 IP 地址。
 - 原 IP 将在约定时间后释放，在释放前原 IP和新 IP均可访问。
 
-     * @param string $NewUniqVpcId 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。
-     * @param string $NewUniqSubnetId 切换私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。
+     * @param string $NewUniqVpcId 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络 ID。
+     * @param string $NewUniqSubnetId 切换后私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络的子网 ID。
      * @param array $NetworkAddresses IP 地址信息，包含新 IP 地址与 原 IP 地址。
      */
     function __construct()

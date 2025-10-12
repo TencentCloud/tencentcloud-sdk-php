@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNatGatewayId(string $NatGatewayId) 设置私网网关唯一`ID`，形如：`intranat-xxxxxxxx`。
  * @method string getNatGatewayName() 获取私网网关名称，可任意命名，但不得超过60个字符。
  * @method void setNatGatewayName(string $NatGatewayName) 设置私网网关名称，可任意命名，但不得超过60个字符。
+ * @method boolean getDeletionProtectionEnabled() 获取私网NAT实例是否开启删除保护
+ * @method void setDeletionProtectionEnabled(boolean $DeletionProtectionEnabled) 设置私网NAT实例是否开启删除保护
  */
 class ModifyPrivateNatGatewayAttributeRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ModifyPrivateNatGatewayAttributeRequest extends AbstractModel
     public $NatGatewayName;
 
     /**
+     * @var boolean 私网NAT实例是否开启删除保护
+     */
+    public $DeletionProtectionEnabled;
+
+    /**
      * @param string $NatGatewayId 私网网关唯一`ID`，形如：`intranat-xxxxxxxx`。
      * @param string $NatGatewayName 私网网关名称，可任意命名，但不得超过60个字符。
+     * @param boolean $DeletionProtectionEnabled 私网NAT实例是否开启删除保护
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyPrivateNatGatewayAttributeRequest extends AbstractModel
 
         if (array_key_exists("NatGatewayName",$param) and $param["NatGatewayName"] !== null) {
             $this->NatGatewayName = $param["NatGatewayName"];
+        }
+
+        if (array_key_exists("DeletionProtectionEnabled",$param) and $param["DeletionProtectionEnabled"] !== null) {
+            $this->DeletionProtectionEnabled = $param["DeletionProtectionEnabled"];
         }
     }
 }

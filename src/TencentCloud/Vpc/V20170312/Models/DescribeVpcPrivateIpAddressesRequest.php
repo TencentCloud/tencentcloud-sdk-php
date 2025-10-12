@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVpcId() 获取`VPC`实例`ID`，形如：`vpc-f49l6u0z`。
  * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`，形如：`vpc-f49l6u0z`。
- * @method array getPrivateIpAddresses() 获取内网`IP`地址列表，批量查询单次请求最多支持`10`个。
- * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置内网`IP`地址列表，批量查询单次请求最多支持`10`个。
+ * @method array getPrivateIpAddresses() 获取内网`IP`地址列表，批量查询单次请求最多支持`100`个。
+ * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置内网`IP`地址列表，批量查询单次请求最多支持`100`个。
  */
 class DescribeVpcPrivateIpAddressesRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeVpcPrivateIpAddressesRequest extends AbstractModel
     public $VpcId;
 
     /**
-     * @var array 内网`IP`地址列表，批量查询单次请求最多支持`10`个。
+     * @var array 内网`IP`地址列表，批量查询单次请求最多支持`100`个。
      */
     public $PrivateIpAddresses;
 
     /**
      * @param string $VpcId `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
-     * @param array $PrivateIpAddresses 内网`IP`地址列表，批量查询单次请求最多支持`10`个。
+     * @param array $PrivateIpAddresses 内网`IP`地址列表，批量查询单次请求最多支持`100`个。
      */
     function __construct()
     {

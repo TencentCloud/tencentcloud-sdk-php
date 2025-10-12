@@ -83,17 +83,17 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\EstateCertOCRResponse EstateCertOCR(Models\EstateCertOCRRequest $req) 本接口支持不动产权证关键字段的识别，包括使用期限、面积、用途、权利性质、权利类型、坐落、共有情况、权利人、权利其他状况等。
 
 默认接口请求频率限制：5次/秒。
- * @method Models\ExtractDocBasicResponse ExtractDocBasic(Models\ExtractDocBasicRequest $req) 本接口支持识别并提取制式卡证、票据、表单等结构化场景的字段信息。无需任何配置，灵活高效。适用于各类结构化信息录入场景。点击[立即体验](https://ocrdemo.cloud.tencent.com/)。
+ * @method Models\ExtractDocBasicResponse ExtractDocBasic(Models\ExtractDocBasicRequest $req) 本接口支持识别并提取制式卡证、票据、表单等结构化场景的字段信息。无需任何配置，灵活高效。适用于各类结构化信息录入场景。点击[立即体验](https://ocrdemo.cloud.tencent.com/?action=ExtractDocBasic)。
 
 接口别名：SmartStructuralOCRV2
 
 默认接口请求频率限制：5次/秒。
- * @method Models\ExtractDocMultiResponse ExtractDocMulti(Models\ExtractDocMultiRequest $req) 本接口支持识别并提取场景复杂、版式多等结构化场景的字段信息。重点场景包括：金融、医疗、交通、出行、保险。点击[立即体验](https://ocrdemo.cloud.tencent.com/)。
+ * @method Models\ExtractDocMultiResponse ExtractDocMulti(Models\ExtractDocMultiRequest $req) 本接口支持识别并提取场景复杂、版式多等结构化场景的字段信息。重点场景包括：金融、医疗、交通、出行、保险。点击[立即体验](https://ocrdemo.cloud.tencent.com/?action=ExtractDocMulti)。
 
 接口别名：SmartStructuralPro
 
 默认接口请求频率限制：5次/秒。
- * @method Models\ExtractDocMultiProResponse ExtractDocMultiPro(Models\ExtractDocMultiProRequest $req) 本接口当前仅支持复杂磅单收发货单抽取，更多强推理场景支持定制咨询。点击[立即体验](https://ocrdemo.cloud.tencent.com/)。
+ * @method Models\ExtractDocMultiProResponse ExtractDocMultiPro(Models\ExtractDocMultiProRequest $req) 本接口当前仅支持复杂磅单收发货单抽取，更多强推理场景支持定制咨询。点击[立即体验](https://ocrdemo.cloud.tencent.com/?action=ExtractDocMultiPro)。
 
 默认接口请求频率限制：5次/秒。
  * @method Models\FinanBillOCRResponse FinanBillOCR(Models\FinanBillOCRRequest $req) <b>此接口不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/90802">通用票据识别（高级版）</a>。</b>

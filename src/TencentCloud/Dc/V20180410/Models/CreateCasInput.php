@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemarks(string $Remarks) 设置备注信息
  * @method string getArRegion() 获取接入地域
  * @method void setArRegion(string $ArRegion) 设置接入地域
+ * @method string getIdcPointType() 获取IDC侧类型，默认为OTHER。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方
+ * @method void setIdcPointType(string $IdcPointType) 设置IDC侧类型，默认为OTHER。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方
+ * @method boolean getBIapLinkProtected() 获取运营商链路是否有保护
+ * @method void setBIapLinkProtected(boolean $BIapLinkProtected) 设置运营商链路是否有保护
  */
 class CreateCasInput extends AbstractModel
 {
@@ -73,6 +77,16 @@ class CreateCasInput extends AbstractModel
     public $ArRegion;
 
     /**
+     * @var string IDC侧类型，默认为OTHER。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方
+     */
+    public $IdcPointType;
+
+    /**
+     * @var boolean 运营商链路是否有保护
+     */
+    public $BIapLinkProtected;
+
+    /**
      * @param string $Name 敏捷上云名称
      * @param string $IdcAddress 需要接入敏捷上云的IDC的地址
      * @param string $IdcType 需要接入敏捷上云的IDC的互联网服务提供商类型
@@ -80,6 +94,8 @@ class CreateCasInput extends AbstractModel
      * @param string $Telephone 联系电话
      * @param string $Remarks 备注信息
      * @param string $ArRegion 接入地域
+     * @param string $IdcPointType IDC侧类型，默认为OTHER。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方
+     * @param boolean $BIapLinkProtected 运营商链路是否有保护
      */
     function __construct()
     {
@@ -120,6 +136,14 @@ class CreateCasInput extends AbstractModel
 
         if (array_key_exists("ArRegion",$param) and $param["ArRegion"] !== null) {
             $this->ArRegion = $param["ArRegion"];
+        }
+
+        if (array_key_exists("IdcPointType",$param) and $param["IdcPointType"] !== null) {
+            $this->IdcPointType = $param["IdcPointType"];
+        }
+
+        if (array_key_exists("BIapLinkProtected",$param) and $param["BIapLinkProtected"] !== null) {
+            $this->BIapLinkProtected = $param["BIapLinkProtected"];
         }
     }
 }

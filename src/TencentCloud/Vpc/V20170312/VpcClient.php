@@ -340,7 +340,9 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DescribeAccountAttributesResponse DescribeAccountAttributes(Models\DescribeAccountAttributesRequest $req) 本接口（DescribeAccountAttributes）用于查询用户账号私有属性。
  * @method Models\DescribeAddressBandwidthRangeResponse DescribeAddressBandwidthRange(Models\DescribeAddressBandwidthRangeRequest $req) 本接口（DescribeAddressBandwidthRange）用于查询指定EIP的带宽上下限范围。
  * @method Models\DescribeAddressQuotaResponse DescribeAddressQuota(Models\DescribeAddressQuotaRequest $req) 本接口 (DescribeAddressQuota) 用于查询您账户的[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）在当前地域的配额信息。配额详情可参见 [EIP 产品简介](https://cloud.tencent.com/document/product/213/5733)。
+ * @method Models\DescribeAddressTemplateGroupInstancesResponse DescribeAddressTemplateGroupInstances(Models\DescribeAddressTemplateGroupInstancesRequest $req) 本接口（DescribeAddressTemplateGroupInstances）用于查询参数模板IP地址组口关联的实例列表。本接口不会返回查询的结果，需要根据返回的RequestId调用DescribeVpcTaskResult接口获取结果。
  * @method Models\DescribeAddressTemplateGroupsResponse DescribeAddressTemplateGroups(Models\DescribeAddressTemplateGroupsRequest $req) 本接口（DescribeAddressTemplateGroups）用于查询IP地址模板集合。
+ * @method Models\DescribeAddressTemplateInstancesResponse DescribeAddressTemplateInstances(Models\DescribeAddressTemplateInstancesRequest $req) 本接口（DescribeAddressTemplateInstances）用于查询参数模板IP地址关联的实例列表。本接口不会返回查询的结果，需要根据返回的RequestId调用DescribeVpcTaskResult接口获取结果。
  * @method Models\DescribeAddressTemplatesResponse DescribeAddressTemplates(Models\DescribeAddressTemplatesRequest $req) 本接口（DescribeAddressTemplates）用于查询IP地址模板。
  * @method Models\DescribeAddressesResponse DescribeAddresses(Models\DescribeAddressesRequest $req) 本接口 (DescribeAddresses) 用于查询一个或多个[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）的详细信息。
 * 如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的 EIP。
@@ -434,7 +436,9 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DescribeSecurityGroupPoliciesResponse DescribeSecurityGroupPolicies(Models\DescribeSecurityGroupPoliciesRequest $req) 本接口（DescribeSecurityGroupPolicies）用于查询安全组规则。
  * @method Models\DescribeSecurityGroupReferencesResponse DescribeSecurityGroupReferences(Models\DescribeSecurityGroupReferencesRequest $req) 本接口（DescribeSecurityGroupReferences）用于查询安全组被引用信息。
  * @method Models\DescribeSecurityGroupsResponse DescribeSecurityGroups(Models\DescribeSecurityGroupsRequest $req) 本接口（DescribeSecurityGroups）用于查询安全组。
+ * @method Models\DescribeServiceTemplateGroupInstancesResponse DescribeServiceTemplateGroupInstances(Models\DescribeServiceTemplateGroupInstancesRequest $req) 本接口（DescribeServiceTemplateGroupInstances）用于查询参数模板协议端口组关联的实例列表。本接口不会返回查询的结果，需要根据返回的RequestId调用DescribeVpcTaskResult接口获取结果。
  * @method Models\DescribeServiceTemplateGroupsResponse DescribeServiceTemplateGroups(Models\DescribeServiceTemplateGroupsRequest $req) 本接口（DescribeServiceTemplateGroups）用于查询协议端口模板集合。
+ * @method Models\DescribeServiceTemplateInstancesResponse DescribeServiceTemplateInstances(Models\DescribeServiceTemplateInstancesRequest $req) 本接口（DescribeServiceTemplateInstances）用于查询参数模板协议端口关联的实例列表。本接口不会返回查询的结果，需要根据返回的RequestId调用DescribeVpcTaskResult接口获取结果。
  * @method Models\DescribeServiceTemplatesResponse DescribeServiceTemplates(Models\DescribeServiceTemplatesRequest $req) 本接口（DescribeServiceTemplates）用于查询协议端口模板。
  * @method Models\DescribeSgSnapshotFileContentResponse DescribeSgSnapshotFileContent(Models\DescribeSgSnapshotFileContentRequest $req) 本接口（DescribeSgSnapshotFileContent）用于查询安全组快照文件内容。
  * @method Models\DescribeSnapshotAttachedInstancesResponse DescribeSnapshotAttachedInstances(Models\DescribeSnapshotAttachedInstancesRequest $req) 本接口（DescribeSnapshotAttachedInstances）用于查询快照策略关联实例列表。

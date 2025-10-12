@@ -61,8 +61,8 @@ use TencentCloud\Postgres\V20170312\Models as Models;
  * @method Models\DescribeDBErrlogsResponse DescribeDBErrlogs(Models\DescribeDBErrlogsRequest $req) 本接口（DescribeDBErrlogs）用于查询错误日志。
  * @method Models\DescribeDBInstanceAttributeResponse DescribeDBInstanceAttribute(Models\DescribeDBInstanceAttributeRequest $req) 本接口 (DescribeDBInstanceAttribute) 用于查询某个实例的详情信息。
  * @method Models\DescribeDBInstanceHAConfigResponse DescribeDBInstanceHAConfig(Models\DescribeDBInstanceHAConfigRequest $req) 本接口（DescribeDBInstanceHAConfig）用于查询实例HA配置信息。其中HA配置信息包括：
-<li>允许备节点切换为主节点的条件配置
-<li>半同步实例使用同步复制或异步复制的条件配置
+<li>允许备节点切换为主节点的条件配置</li>
+<li>半同步实例使用同步复制或异步复制的条件配置</li>
  * @method Models\DescribeDBInstanceParametersResponse DescribeDBInstanceParameters(Models\DescribeDBInstanceParametersRequest $req) 本接口（DescribeDBInstanceAttribute）用于查询实例的参数信息。
  * @method Models\DescribeDBInstanceSSLConfigResponse DescribeDBInstanceSSLConfig(Models\DescribeDBInstanceSSLConfigRequest $req) 本接口用于查询实例SSL状态
  * @method Models\DescribeDBInstanceSecurityGroupsResponse DescribeDBInstanceSecurityGroups(Models\DescribeDBInstanceSecurityGroupsRequest $req) 本接口（DescribeDBInstanceSecurityGroups）用于查询实例安全组。

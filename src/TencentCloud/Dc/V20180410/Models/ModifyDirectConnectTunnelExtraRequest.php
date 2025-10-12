@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTencentBackupIPv6Address(string $TencentBackupIPv6Address) 设置腾讯侧备用互联IPv6。
  * @method string getCustomerIPv6Address() 获取用户侧互联IPv6。
  * @method void setCustomerIPv6Address(string $CustomerIPv6Address) 设置用户侧互联IPv6。
+ * @method boolean getImportDirectRoute() 获取互联IP重分布状态
+ * @method void setImportDirectRoute(boolean $ImportDirectRoute) 设置互联IP重分布状态
  */
 class ModifyDirectConnectTunnelExtraRequest extends AbstractModel
 {
@@ -157,6 +159,11 @@ class ModifyDirectConnectTunnelExtraRequest extends AbstractModel
     public $CustomerIPv6Address;
 
     /**
+     * @var boolean 互联IP重分布状态
+     */
+    public $ImportDirectRoute;
+
+    /**
      * @param string $DirectConnectTunnelId 专用通道ID。
      * @param integer $Vlan 专用通道的Vlan。
      * @param BgpPeer $BgpPeer Bgp参数，包括Asn，AuthKey
@@ -176,6 +183,7 @@ class ModifyDirectConnectTunnelExtraRequest extends AbstractModel
      * @param string $TencentIPv6Address 腾讯侧互联IPv6。
      * @param string $TencentBackupIPv6Address 腾讯侧备用互联IPv6。
      * @param string $CustomerIPv6Address 用户侧互联IPv6。
+     * @param boolean $ImportDirectRoute 互联IP重分布状态
      */
     function __construct()
     {
@@ -273,6 +281,10 @@ class ModifyDirectConnectTunnelExtraRequest extends AbstractModel
 
         if (array_key_exists("CustomerIPv6Address",$param) and $param["CustomerIPv6Address"] !== null) {
             $this->CustomerIPv6Address = $param["CustomerIPv6Address"];
+        }
+
+        if (array_key_exists("ImportDirectRoute",$param) and $param["ImportDirectRoute"] !== null) {
+            $this->ImportDirectRoute = $param["ImportDirectRoute"];
         }
     }
 }

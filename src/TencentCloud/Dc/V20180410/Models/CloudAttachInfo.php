@@ -78,6 +78,12 @@ cross-region：跨地域
  * @method void setBUpdateBandwidth(boolean $BUpdateBandwidth) 设置敏捷上云服务是否处于升降配中
  * @method string getArRegion() 获取接入地域
  * @method void setArRegion(string $ArRegion) 设置接入地域
+ * @method string getIapCode() 获取运营商代码
+ * @method void setIapCode(string $IapCode) 设置运营商代码
+ * @method string getIdcPointType() 获取IDC侧类型。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方
+ * @method void setIdcPointType(string $IdcPointType) 设置IDC侧类型。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方
+ * @method boolean getBIapLinkProtected() 获取运营商链路是否有保护
+ * @method void setBIapLinkProtected(boolean $BIapLinkProtected) 设置运营商链路是否有保护
  */
 class CloudAttachInfo extends AbstractModel
 {
@@ -191,6 +197,21 @@ cross-region：跨地域
     public $ArRegion;
 
     /**
+     * @var string 运营商代码
+     */
+    public $IapCode;
+
+    /**
+     * @var string IDC侧类型。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方
+     */
+    public $IdcPointType;
+
+    /**
+     * @var boolean 运营商链路是否有保护
+     */
+    public $BIapLinkProtected;
+
+    /**
      * @param string $InstanceId 敏捷上云实例id
      * @param string $Name 敏捷上云名称
      * @param string $IapId 合作伙伴的AppId
@@ -220,6 +241,9 @@ cross-region：跨地域
      * @param boolean $CloudAttachServiceGatewaysSupport 敏捷上云是否支持创建高速上云专线网关
      * @param boolean $BUpdateBandwidth 敏捷上云服务是否处于升降配中
      * @param string $ArRegion 接入地域
+     * @param string $IapCode 运营商代码
+     * @param string $IdcPointType IDC侧类型。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方
+     * @param boolean $BIapLinkProtected 运营商链路是否有保护
      */
     function __construct()
     {
@@ -312,6 +336,18 @@ cross-region：跨地域
 
         if (array_key_exists("ArRegion",$param) and $param["ArRegion"] !== null) {
             $this->ArRegion = $param["ArRegion"];
+        }
+
+        if (array_key_exists("IapCode",$param) and $param["IapCode"] !== null) {
+            $this->IapCode = $param["IapCode"];
+        }
+
+        if (array_key_exists("IdcPointType",$param) and $param["IdcPointType"] !== null) {
+            $this->IdcPointType = $param["IdcPointType"];
+        }
+
+        if (array_key_exists("BIapLinkProtected",$param) and $param["BIapLinkProtected"] !== null) {
+            $this->BIapLinkProtected = $param["BIapLinkProtected"];
         }
     }
 }

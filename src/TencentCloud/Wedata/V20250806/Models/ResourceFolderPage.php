@@ -18,7 +18,7 @@ namespace TencentCloud\Wedata\V20250806\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 资源文件分页
+ * 资源文件夹分页
  *
  * @method array getItems() 获取资源文件夹集合信息
  * @method void setItems(array $Items) 设置资源文件夹集合信息

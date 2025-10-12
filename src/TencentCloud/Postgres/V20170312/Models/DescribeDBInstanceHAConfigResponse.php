@@ -21,23 +21,23 @@ use TencentCloud\Common\AbstractModel;
  * DescribeDBInstanceHAConfig返回参数结构体
  *
  * @method string getSyncMode() 获取主从同步方式：
-<li>Semi-sync：半同步
-<li>Async：异步
+<li>Semi-sync：半同步</li>
+<li>Async：异步</li>
  * @method void setSyncMode(string $SyncMode) 设置主从同步方式：
-<li>Semi-sync：半同步
-<li>Async：异步
+<li>Semi-sync：半同步</li>
+<li>Async：异步</li>
  * @method integer getMaxStandbyLatency() 获取高可用备机最大延迟数据量。备节点延迟数据量小于等于该值，且备节点延迟时间小于等于MaxStandbyLag时，可以切换为主节点。
-<li>单位：byte
-<li>参数范围：[1073741824, 322122547200]
+<li>单位：byte</li>
+<li>参数范围：[1073741824, 322122547200]</li>
  * @method void setMaxStandbyLatency(integer $MaxStandbyLatency) 设置高可用备机最大延迟数据量。备节点延迟数据量小于等于该值，且备节点延迟时间小于等于MaxStandbyLag时，可以切换为主节点。
-<li>单位：byte
-<li>参数范围：[1073741824, 322122547200]
+<li>单位：byte</li>
+<li>参数范围：[1073741824, 322122547200]</li>
  * @method integer getMaxStandbyLag() 获取高可用备机最大延迟时间。备节点延迟时间小于等于该值，且备节点延迟数据量小于等于MaxStandbyLatency时，可以切换为主节点。
-<li>单位：s
-<li>参数范围：[5, 10]
+<li>单位：s</li>
+<li>参数范围：[5, 10]</li>
  * @method void setMaxStandbyLag(integer $MaxStandbyLag) 设置高可用备机最大延迟时间。备节点延迟时间小于等于该值，且备节点延迟数据量小于等于MaxStandbyLatency时，可以切换为主节点。
-<li>单位：s
-<li>参数范围：[5, 10]
+<li>单位：s</li>
+<li>参数范围：[5, 10]</li>
  * @method integer getMaxSyncStandbyLatency() 获取同步备机最大延迟数据量。备机延迟数据量小于等于该值，且该备机延迟时间小于等于MaxSyncStandbyLag时，则该备机采用同步复制；否则，采用异步复制。
 该参数值针对SyncMode设置为Semi-sync的实例有效。
 异步实例该字段返回null。
@@ -65,22 +65,22 @@ class DescribeDBInstanceHAConfigResponse extends AbstractModel
 {
     /**
      * @var string 主从同步方式：
-<li>Semi-sync：半同步
-<li>Async：异步
+<li>Semi-sync：半同步</li>
+<li>Async：异步</li>
      */
     public $SyncMode;
 
     /**
      * @var integer 高可用备机最大延迟数据量。备节点延迟数据量小于等于该值，且备节点延迟时间小于等于MaxStandbyLag时，可以切换为主节点。
-<li>单位：byte
-<li>参数范围：[1073741824, 322122547200]
+<li>单位：byte</li>
+<li>参数范围：[1073741824, 322122547200]</li>
      */
     public $MaxStandbyLatency;
 
     /**
      * @var integer 高可用备机最大延迟时间。备节点延迟时间小于等于该值，且备节点延迟数据量小于等于MaxStandbyLatency时，可以切换为主节点。
-<li>单位：s
-<li>参数范围：[5, 10]
+<li>单位：s</li>
+<li>参数范围：[5, 10]</li>
      */
     public $MaxStandbyLag;
 
@@ -109,14 +109,14 @@ class DescribeDBInstanceHAConfigResponse extends AbstractModel
 
     /**
      * @param string $SyncMode 主从同步方式：
-<li>Semi-sync：半同步
-<li>Async：异步
+<li>Semi-sync：半同步</li>
+<li>Async：异步</li>
      * @param integer $MaxStandbyLatency 高可用备机最大延迟数据量。备节点延迟数据量小于等于该值，且备节点延迟时间小于等于MaxStandbyLag时，可以切换为主节点。
-<li>单位：byte
-<li>参数范围：[1073741824, 322122547200]
+<li>单位：byte</li>
+<li>参数范围：[1073741824, 322122547200]</li>
      * @param integer $MaxStandbyLag 高可用备机最大延迟时间。备节点延迟时间小于等于该值，且备节点延迟数据量小于等于MaxStandbyLatency时，可以切换为主节点。
-<li>单位：s
-<li>参数范围：[5, 10]
+<li>单位：s</li>
+<li>参数范围：[5, 10]</li>
      * @param integer $MaxSyncStandbyLatency 同步备机最大延迟数据量。备机延迟数据量小于等于该值，且该备机延迟时间小于等于MaxSyncStandbyLag时，则该备机采用同步复制；否则，采用异步复制。
 该参数值针对SyncMode设置为Semi-sync的实例有效。
 异步实例该字段返回null。

@@ -847,6 +847,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
  * @method Models\DescribeBillUsageResponse DescribeBillUsage(Models\DescribeBillUsageRequest $req) 通过此接口（DescribeBillUsage）查询该企业的套餐套餐使用情况。
  * @method Models\DescribeBillUsageDetailResponse DescribeBillUsageDetail(Models\DescribeBillUsageDetailRequest $req) 通过此接口（DescribeBillUsageDetail）查询该企业的套餐消耗详情。
  * @method Models\DescribeCancelFlowsTaskResponse DescribeCancelFlowsTask(Models\DescribeCancelFlowsTaskRequest $req) 通过[获取批量撤销签署流程腾讯电子签小程序链接](https://qian.tencent.com/developers/companyApis/operateFlows/CreateBatchCancelFlowUrl)发起批量撤销任务后，可通过此接口查询批量撤销任务的结果。
+ * @method Models\DescribeContractComparisonTaskResponse DescribeContractComparisonTask(Models\DescribeContractComparisonTaskRequest $req) 本接口（DescribeContractComparisonTask）用于查询合同对比任务结果详情。
  * @method Models\DescribeContractDiffTaskWebUrlResponse DescribeContractDiffTaskWebUrl(Models\DescribeContractDiffTaskWebUrlRequest $req) 接口（DescribeContractDiffTaskWebUrl）用于获取合同对比结果可嵌入的web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
 注：本接口生成的web页面暂不支持<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreateWebThemeConfig" target="_blank">设置本企业嵌入式页面主题配置</a>
 

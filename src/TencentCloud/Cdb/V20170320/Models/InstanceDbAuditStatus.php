@@ -80,6 +80,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOldRule(boolean $OldRule) 设置是否包含审计策略
  * @method array getRuleTemplateIds() 获取实例所应用的规则模板。
  * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置实例所应用的规则模板。
+ * @method string getTrialStatus() 获取限免状态
+ * @method void setTrialStatus(string $TrialStatus) 设置限免状态
+ * @method integer getTrialStartTime() 获取限免开启时间
+ * @method void setTrialStartTime(integer $TrialStartTime) 设置限免开启时间
+ * @method integer getTrialDuration() 获取限免持续时间
+ * @method void setTrialDuration(integer $TrialDuration) 设置限免持续时间
+ * @method integer getTrialCloseTime() 获取限免关闭时间
+ * @method void setTrialCloseTime(integer $TrialCloseTime) 设置限免关闭时间
+ * @method integer getTrialDescribeLogHours() 获取限免期查询日志时长
+ * @method void setTrialDescribeLogHours(integer $TrialDescribeLogHours) 设置限免期查询日志时长
  */
 class InstanceDbAuditStatus extends AbstractModel
 {
@@ -174,6 +184,31 @@ class InstanceDbAuditStatus extends AbstractModel
     public $RuleTemplateIds;
 
     /**
+     * @var string 限免状态
+     */
+    public $TrialStatus;
+
+    /**
+     * @var integer 限免开启时间
+     */
+    public $TrialStartTime;
+
+    /**
+     * @var integer 限免持续时间
+     */
+    public $TrialDuration;
+
+    /**
+     * @var integer 限免关闭时间
+     */
+    public $TrialCloseTime;
+
+    /**
+     * @var integer 限免期查询日志时长
+     */
+    public $TrialDescribeLogHours;
+
+    /**
      * @param string $InstanceId 实例ID。
      * @param string $AuditStatus 审计状态。ON-表示审计已开启，OFF-表示审计关闭
      * @param integer $AuditTask 任务状态。0-无任务；1-审计开启中，2-审计关闭中。
@@ -204,6 +239,11 @@ class InstanceDbAuditStatus extends AbstractModel
      * @param float $RealStorage 总存储量(单位：GB)。
      * @param boolean $OldRule 是否包含审计策略
      * @param array $RuleTemplateIds 实例所应用的规则模板。
+     * @param string $TrialStatus 限免状态
+     * @param integer $TrialStartTime 限免开启时间
+     * @param integer $TrialDuration 限免持续时间
+     * @param integer $TrialCloseTime 限免关闭时间
+     * @param integer $TrialDescribeLogHours 限免期查询日志时长
      */
     function __construct()
     {
@@ -277,6 +317,26 @@ class InstanceDbAuditStatus extends AbstractModel
 
         if (array_key_exists("RuleTemplateIds",$param) and $param["RuleTemplateIds"] !== null) {
             $this->RuleTemplateIds = $param["RuleTemplateIds"];
+        }
+
+        if (array_key_exists("TrialStatus",$param) and $param["TrialStatus"] !== null) {
+            $this->TrialStatus = $param["TrialStatus"];
+        }
+
+        if (array_key_exists("TrialStartTime",$param) and $param["TrialStartTime"] !== null) {
+            $this->TrialStartTime = $param["TrialStartTime"];
+        }
+
+        if (array_key_exists("TrialDuration",$param) and $param["TrialDuration"] !== null) {
+            $this->TrialDuration = $param["TrialDuration"];
+        }
+
+        if (array_key_exists("TrialCloseTime",$param) and $param["TrialCloseTime"] !== null) {
+            $this->TrialCloseTime = $param["TrialCloseTime"];
+        }
+
+        if (array_key_exists("TrialDescribeLogHours",$param) and $param["TrialDescribeLogHours"] !== null) {
+            $this->TrialDescribeLogHours = $param["TrialDescribeLogHours"];
         }
     }
 }

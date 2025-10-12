@@ -80,6 +80,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFaultReportContactPerson(string $FaultReportContactPerson) 设置报障联系人。
  * @method string getFaultReportContactNumber() 获取报障联系电话。
  * @method void setFaultReportContactNumber(string $FaultReportContactNumber) 设置报障联系电话。
+ * @method string getFaultReportContactEmail() 获取报障联系邮箱。
+ * @method void setFaultReportContactEmail(string $FaultReportContactEmail) 设置报障联系邮箱。
  * @method array getTagSet() 获取标签键值对
  * @method void setTagSet(array $TagSet) 设置标签键值对
  * @method string getAccessPointType() 获取物理专线的接入点类型。
@@ -232,6 +234,11 @@ class DirectConnect extends AbstractModel
     public $FaultReportContactNumber;
 
     /**
+     * @var string 报障联系邮箱。
+     */
+    public $FaultReportContactEmail;
+
+    /**
      * @var array 标签键值对
      */
     public $TagSet;
@@ -337,6 +344,7 @@ class DirectConnect extends AbstractModel
      * @param string $ChargeType 物理专线计费类型。 NON_RECURRING_CHARGE：一次性接入费用；PREPAID_BY_YEAR：按年预付费。
      * @param string $FaultReportContactPerson 报障联系人。
      * @param string $FaultReportContactNumber 报障联系电话。
+     * @param string $FaultReportContactEmail 报障联系邮箱。
      * @param array $TagSet 标签键值对
      * @param string $AccessPointType 物理专线的接入点类型。
      * @param string $IdcCity IDC所在城市
@@ -452,6 +460,10 @@ class DirectConnect extends AbstractModel
 
         if (array_key_exists("FaultReportContactNumber",$param) and $param["FaultReportContactNumber"] !== null) {
             $this->FaultReportContactNumber = $param["FaultReportContactNumber"];
+        }
+
+        if (array_key_exists("FaultReportContactEmail",$param) and $param["FaultReportContactEmail"] !== null) {
+            $this->FaultReportContactEmail = $param["FaultReportContactEmail"];
         }
 
         if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {

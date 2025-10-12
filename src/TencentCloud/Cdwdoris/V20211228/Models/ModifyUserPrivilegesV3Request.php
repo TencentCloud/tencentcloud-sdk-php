@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateComputeGroups(array $UpdateComputeGroups) 设置需绑定计算组列表
  * @method string getDefaultComputeGroup() 获取默认计算组
  * @method void setDefaultComputeGroup(string $DefaultComputeGroup) 设置默认计算组
+ * @method integer getComputeGroupType() 获取0: 灵活场景 1: 固定场景
+ * @method void setComputeGroupType(integer $ComputeGroupType) 设置0: 灵活场景 1: 固定场景
  */
 class ModifyUserPrivilegesV3Request extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ModifyUserPrivilegesV3Request extends AbstractModel
     public $DefaultComputeGroup;
 
     /**
+     * @var integer 0: 灵活场景 1: 固定场景
+     */
+    public $ComputeGroupType;
+
+    /**
      * @param string $InstanceId 集群id
      * @param string $UserName 用户名
      * @param UpdateUserPrivileges $UserPrivileges 用户权限
@@ -80,6 +87,7 @@ class ModifyUserPrivilegesV3Request extends AbstractModel
      * @param integer $UpdateType 更新类型，默认0，1为更新绑定计算组，2为更新默认计算组
      * @param array $UpdateComputeGroups 需绑定计算组列表
      * @param string $DefaultComputeGroup 默认计算组
+     * @param integer $ComputeGroupType 0: 灵活场景 1: 固定场景
      */
     function __construct()
     {
@@ -121,6 +129,10 @@ class ModifyUserPrivilegesV3Request extends AbstractModel
 
         if (array_key_exists("DefaultComputeGroup",$param) and $param["DefaultComputeGroup"] !== null) {
             $this->DefaultComputeGroup = $param["DefaultComputeGroup"];
+        }
+
+        if (array_key_exists("ComputeGroupType",$param) and $param["ComputeGroupType"] !== null) {
+            $this->ComputeGroupType = $param["ComputeGroupType"];
         }
     }
 }

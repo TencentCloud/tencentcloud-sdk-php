@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTime(string $Time) 设置线程的操作时长，单位秒。
  * @method string getInfo() 获取线程的操作语句。
  * @method void setInfo(string $Info) 设置线程的操作语句。
+ * @method string getSqlType() 获取sql类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSqlType(string $SqlType) 设置sql类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MySqlProcess extends AbstractModel
 {
@@ -80,6 +84,12 @@ class MySqlProcess extends AbstractModel
     public $Info;
 
     /**
+     * @var string sql类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SqlType;
+
+    /**
      * @param string $ID 线程ID。
      * @param string $User 线程的操作账号名。
      * @param string $Host 线程的操作主机地址。
@@ -88,6 +98,8 @@ class MySqlProcess extends AbstractModel
      * @param string $Command 线程的执行类型。
      * @param string $Time 线程的操作时长，单位秒。
      * @param string $Info 线程的操作语句。
+     * @param string $SqlType sql类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -132,6 +144,10 @@ class MySqlProcess extends AbstractModel
 
         if (array_key_exists("Info",$param) and $param["Info"] !== null) {
             $this->Info = $param["Info"];
+        }
+
+        if (array_key_exists("SqlType",$param) and $param["SqlType"] !== null) {
+            $this->SqlType = $param["SqlType"];
         }
     }
 }

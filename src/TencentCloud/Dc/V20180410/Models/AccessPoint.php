@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddress(string $Address) 设置接入点地址。
  * @method boolean getIsMacSec() 获取是否MACsec
  * @method void setIsMacSec(boolean $IsMacSec) 设置是否MACsec
+ * @method string getVersion() 获取版本号
+ * @method void setVersion(string $Version) 设置版本号
+ * @method string getAccessPointServiceType() 获取接入点业务类型，枚举值：NORMAL-标准接入点，CDZ：EZ/CDZ接入点，COOPERATIVE-合作POP
+ * @method void setAccessPointServiceType(string $AccessPointServiceType) 设置接入点业务类型，枚举值：NORMAL-标准接入点，CDZ：EZ/CDZ接入点，COOPERATIVE-合作POP
  */
 class AccessPoint extends AbstractModel
 {
@@ -122,6 +126,16 @@ class AccessPoint extends AbstractModel
     public $IsMacSec;
 
     /**
+     * @var string 版本号
+     */
+    public $Version;
+
+    /**
+     * @var string 接入点业务类型，枚举值：NORMAL-标准接入点，CDZ：EZ/CDZ接入点，COOPERATIVE-合作POP
+     */
+    public $AccessPointServiceType;
+
+    /**
      * @param string $AccessPointName 接入点的名称。
      * @param string $AccessPointId 接入点唯一ID。
      * @param string $State 接入点的状态。可用，不可用。
@@ -136,6 +150,8 @@ class AccessPoint extends AbstractModel
      * @param array $AvailablePortInfo 端口规格信息。
      * @param string $Address 接入点地址。
      * @param boolean $IsMacSec 是否MACsec
+     * @param string $Version 版本号
+     * @param string $AccessPointServiceType 接入点业务类型，枚举值：NORMAL-标准接入点，CDZ：EZ/CDZ接入点，COOPERATIVE-合作POP
      */
     function __construct()
     {
@@ -210,6 +226,14 @@ class AccessPoint extends AbstractModel
 
         if (array_key_exists("IsMacSec",$param) and $param["IsMacSec"] !== null) {
             $this->IsMacSec = $param["IsMacSec"];
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
+        }
+
+        if (array_key_exists("AccessPointServiceType",$param) and $param["AccessPointServiceType"] !== null) {
+            $this->AccessPointServiceType = $param["AccessPointServiceType"];
         }
     }
 }

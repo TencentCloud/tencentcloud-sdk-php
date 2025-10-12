@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BFD配置信息
  *
+ * @method integer getEnableBfdMultiHop() 获取使能BFD多跳，0:未开启，2-255:BFD跳数
+ * @method void setEnableBfdMultiHop(integer $EnableBfdMultiHop) 设置使能BFD多跳，0:未开启，2-255:BFD跳数
  * @method integer getProbeFailedTimes() 获取健康检查次数
  * @method void setProbeFailedTimes(integer $ProbeFailedTimes) 设置健康检查次数
  * @method integer getInterval() 获取健康检查间隔
@@ -27,6 +29,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class BFDInfo extends AbstractModel
 {
+    /**
+     * @var integer 使能BFD多跳，0:未开启，2-255:BFD跳数
+     */
+    public $EnableBfdMultiHop;
+
     /**
      * @var integer 健康检查次数
      */
@@ -38,6 +45,7 @@ class BFDInfo extends AbstractModel
     public $Interval;
 
     /**
+     * @param integer $EnableBfdMultiHop 使能BFD多跳，0:未开启，2-255:BFD跳数
      * @param integer $ProbeFailedTimes 健康检查次数
      * @param integer $Interval 健康检查间隔
      */
@@ -54,6 +62,10 @@ class BFDInfo extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("EnableBfdMultiHop",$param) and $param["EnableBfdMultiHop"] !== null) {
+            $this->EnableBfdMultiHop = $param["EnableBfdMultiHop"];
+        }
+
         if (array_key_exists("ProbeFailedTimes",$param) and $param["ProbeFailedTimes"] !== null) {
             $this->ProbeFailedTimes = $param["ProbeFailedTimes"];
         }

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTopic返回参数结构体
  *
- * @method string getTopicId() 获取日志主题ID
- * @method void setTopicId(string $TopicId) 设置日志主题ID
+ * @method string getTopicId() 获取主题ID
+ * @method void setTopicId(string $TopicId) 设置主题ID
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateTopicResponse extends AbstractModel
 {
     /**
-     * @var string 日志主题ID
+     * @var string 主题ID
      */
     public $TopicId;
 
@@ -38,7 +38,7 @@ class CreateTopicResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TopicId 日志主题ID
+     * @param string $TopicId 主题ID
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

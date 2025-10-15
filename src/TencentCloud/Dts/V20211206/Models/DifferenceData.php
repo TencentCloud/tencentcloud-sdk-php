@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSrcItem(string $SrcItem) 设置源端值
  * @method string getDstItem() 获取目标端值
  * @method void setDstItem(string $DstItem) 设置目标端值
+ * @method string getCreatedAt() 获取创建时间
+ * @method void setCreatedAt(string $CreatedAt) 设置创建时间
  * @method string getUpdatedAt() 获取更新时间
  * @method void setUpdatedAt(string $UpdatedAt) 设置更新时间
  */
@@ -68,6 +70,11 @@ class DifferenceData extends AbstractModel
     public $DstItem;
 
     /**
+     * @var string 创建时间
+     */
+    public $CreatedAt;
+
+    /**
      * @var string 更新时间
      */
     public $UpdatedAt;
@@ -79,6 +86,7 @@ class DifferenceData extends AbstractModel
      * @param string $DstChunk 目标端ID
      * @param string $SrcItem 源端值
      * @param string $DstItem 目标端值
+     * @param string $CreatedAt 创建时间
      * @param string $UpdatedAt 更新时间
      */
     function __construct()
@@ -116,6 +124,10 @@ class DifferenceData extends AbstractModel
 
         if (array_key_exists("DstItem",$param) and $param["DstItem"] !== null) {
             $this->DstItem = $param["DstItem"];
+        }
+
+        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
+            $this->CreatedAt = $param["CreatedAt"];
         }
 
         if (array_key_exists("UpdatedAt",$param) and $param["UpdatedAt"] !== null) {

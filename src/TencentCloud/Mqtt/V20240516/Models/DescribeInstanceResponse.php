@@ -96,6 +96,8 @@ API：通过API手动注册
  * @method void setTopicPrefixSlashLimit(integer $TopicPrefixSlashLimit) 设置topic前缀最大层级
  * @method integer getMessageRate() 获取单客户端发送消息限速，单位 条/秒
  * @method void setMessageRate(integer $MessageRate) 设置单客户端发送消息限速，单位 条/秒
+ * @method string getTransportLayerSecurity() 获取服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1
+ * @method void setTransportLayerSecurity(string $TransportLayerSecurity) 设置服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -272,6 +274,11 @@ API：通过API手动注册
     public $MessageRate;
 
     /**
+     * @var string 服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1
+     */
+    public $TransportLayerSecurity;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -315,6 +322,7 @@ API：通过API手动注册
      * @param integer $ServerCertLimit 服务端证书最大数量
      * @param integer $TopicPrefixSlashLimit topic前缀最大层级
      * @param integer $MessageRate 单客户端发送消息限速，单位 条/秒
+     * @param string $TransportLayerSecurity 服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -460,6 +468,10 @@ API：通过API手动注册
 
         if (array_key_exists("MessageRate",$param) and $param["MessageRate"] !== null) {
             $this->MessageRate = $param["MessageRate"];
+        }
+
+        if (array_key_exists("TransportLayerSecurity",$param) and $param["TransportLayerSecurity"] !== null) {
+            $this->TransportLayerSecurity = $param["TransportLayerSecurity"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

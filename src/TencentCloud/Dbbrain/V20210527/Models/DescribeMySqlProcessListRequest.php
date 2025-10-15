@@ -30,18 +30,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHost(string $Host) 设置线程的操作主机地址，用于筛选线程列表。
  * @method string getDB() 获取线程的操作数据库，用于筛选线程列表。
  * @method void setDB(string $DB) 设置线程的操作数据库，用于筛选线程列表。
- * @method string getState() 获取线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等
- * @method void setState(string $State) 设置线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等
- * @method string getCommand() 获取线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等
- * @method void setCommand(string $Command) 设置线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等
+ * @method string getState() 获取线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。
+ * @method void setState(string $State) 设置线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。
+ * @method string getCommand() 获取线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。
+ * @method void setCommand(string $Command) 设置线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。
  * @method integer getTime() 获取线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。
  * @method void setTime(integer $Time) 设置线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。
  * @method string getInfo() 获取线程的操作语句，用于筛选线程列表。
  * @method void setInfo(string $Info) 设置线程的操作语句，用于筛选线程列表。
  * @method integer getLimit() 获取返回数量，默认20。
  * @method void setLimit(integer $Limit) 设置返回数量，默认20。
- * @method string getProduct() 获取服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
- * @method void setProduct(string $Product) 设置服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+ * @method string getProduct() 获取服务产品类型，支持值："mysql" - 云数据库 MySQL；"mariadb"-mariadb;"cynosdb"-TDSQL-C for MySQL ;"dcdb"-TDSQL MySQL 默认为"mysql"。
+
+
+ * @method void setProduct(string $Product) 设置服务产品类型，支持值："mysql" - 云数据库 MySQL；"mariadb"-mariadb;"cynosdb"-TDSQL-C for MySQL ;"dcdb"-TDSQL MySQL 默认为"mysql"。
+
+
  * @method array getStatDimensions() 获取会话统计的维度信息,可以多个维度。
  * @method void setStatDimensions(array $StatDimensions) 设置会话统计的维度信息,可以多个维度。
  */
@@ -73,12 +77,12 @@ class DescribeMySqlProcessListRequest extends AbstractModel
     public $DB;
 
     /**
-     * @var string 线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等
+     * @var string 线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。
      */
     public $State;
 
     /**
-     * @var string 线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等
+     * @var string 线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。
      */
     public $Command;
 
@@ -98,7 +102,9 @@ class DescribeMySqlProcessListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+     * @var string 服务产品类型，支持值："mysql" - 云数据库 MySQL；"mariadb"-mariadb;"cynosdb"-TDSQL-C for MySQL ;"dcdb"-TDSQL MySQL 默认为"mysql"。
+
+
      */
     public $Product;
 
@@ -113,12 +119,14 @@ class DescribeMySqlProcessListRequest extends AbstractModel
      * @param string $User 线程的操作账号名，用于筛选线程列表。
      * @param string $Host 线程的操作主机地址，用于筛选线程列表。
      * @param string $DB 线程的操作数据库，用于筛选线程列表。
-     * @param string $State 线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等
-     * @param string $Command 线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等
+     * @param string $State 线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。
+     * @param string $Command 线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。
      * @param integer $Time 线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。
      * @param string $Info 线程的操作语句，用于筛选线程列表。
      * @param integer $Limit 返回数量，默认20。
-     * @param string $Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+     * @param string $Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"mariadb"-mariadb;"cynosdb"-TDSQL-C for MySQL ;"dcdb"-TDSQL MySQL 默认为"mysql"。
+
+
      * @param array $StatDimensions 会话统计的维度信息,可以多个维度。
      */
     function __construct()

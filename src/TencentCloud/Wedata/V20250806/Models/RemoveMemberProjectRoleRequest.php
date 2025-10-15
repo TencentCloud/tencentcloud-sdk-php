@@ -24,8 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) 设置项目id
  * @method string getUserUin() 获取用户id
  * @method void setUserUin(string $UserUin) 设置用户id
- * @method string getRoleId() 获取角色id
- * @method void setRoleId(string $RoleId) 设置角色id
+ * @method array getRoleIds() 获取角色id列表，目前支持的项目角色有
+- 308335260274237440 (项目管理员)
+- 308335260676890624 (数据工程师)
+- 308335260844662784 (运维工程师)
+- 308335260945326080 (普通成员)
+ * @method void setRoleIds(array $RoleIds) 设置角色id列表，目前支持的项目角色有
+- 308335260274237440 (项目管理员)
+- 308335260676890624 (数据工程师)
+- 308335260844662784 (运维工程师)
+- 308335260945326080 (普通成员)
  */
 class RemoveMemberProjectRoleRequest extends AbstractModel
 {
@@ -40,14 +48,22 @@ class RemoveMemberProjectRoleRequest extends AbstractModel
     public $UserUin;
 
     /**
-     * @var string 角色id
+     * @var array 角色id列表，目前支持的项目角色有
+- 308335260274237440 (项目管理员)
+- 308335260676890624 (数据工程师)
+- 308335260844662784 (运维工程师)
+- 308335260945326080 (普通成员)
      */
-    public $RoleId;
+    public $RoleIds;
 
     /**
      * @param string $ProjectId 项目id
      * @param string $UserUin 用户id
-     * @param string $RoleId 角色id
+     * @param array $RoleIds 角色id列表，目前支持的项目角色有
+- 308335260274237440 (项目管理员)
+- 308335260676890624 (数据工程师)
+- 308335260844662784 (运维工程师)
+- 308335260945326080 (普通成员)
      */
     function __construct()
     {
@@ -70,8 +86,8 @@ class RemoveMemberProjectRoleRequest extends AbstractModel
             $this->UserUin = $param["UserUin"];
         }
 
-        if (array_key_exists("RoleId",$param) and $param["RoleId"] !== null) {
-            $this->RoleId = $param["RoleId"];
+        if (array_key_exists("RoleIds",$param) and $param["RoleIds"] !== null) {
+            $this->RoleIds = $param["RoleIds"];
         }
     }
 }

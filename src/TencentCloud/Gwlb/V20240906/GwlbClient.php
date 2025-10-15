@@ -34,6 +34,7 @@ use TencentCloud\Gwlb\V20240906\Models as Models;
  * @method Models\DeleteTargetGroupsResponse DeleteTargetGroups(Models\DeleteTargetGroupsRequest $req) 删除目标组
  * @method Models\DeregisterTargetGroupInstancesResponse DeregisterTargetGroupInstances(Models\DeregisterTargetGroupInstancesRequest $req) 从目标组中解绑服务器。
  * @method Models\DescribeGatewayLoadBalancersResponse DescribeGatewayLoadBalancers(Models\DescribeGatewayLoadBalancersRequest $req) 查询一个地域的网关负载均衡实例列表。
+ * @method Models\DescribeGatewayLoadBalancersResourcesResponse DescribeGatewayLoadBalancersResources(Models\DescribeGatewayLoadBalancersResourcesRequest $req) 查询用户在当前地域支持可用区列表
  * @method Models\DescribeTargetGroupInstanceStatusResponse DescribeTargetGroupInstanceStatus(Models\DescribeTargetGroupInstanceStatusRequest $req) 查询目标组后端服务状态。目前仅支持网关负载均衡类型的目标组支持查询后端服务状态。
  * @method Models\DescribeTargetGroupInstancesResponse DescribeTargetGroupInstances(Models\DescribeTargetGroupInstancesRequest $req) 获取目标组绑定的服务器信息。
  * @method Models\DescribeTargetGroupListResponse DescribeTargetGroupList(Models\DescribeTargetGroupListRequest $req) 获取目标组列表

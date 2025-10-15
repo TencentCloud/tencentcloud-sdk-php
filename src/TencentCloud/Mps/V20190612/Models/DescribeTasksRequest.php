@@ -28,8 +28,12 @@ use TencentCloud\Common\AbstractModel;
 - WAITING（等待中）
 - PROCESSING（处理中）
 - FINISH（已完成）。
- * @method boolean getSubTaskHasFailed() 获取任务结束时子任务是否有失败。
- * @method void setSubTaskHasFailed(boolean $SubTaskHasFailed) 设置任务结束时子任务是否有失败。
+ * @method boolean getSubTaskHasFailed() 获取任务结束时子任务是否有失败。如果不传则忽略。
+<li>false: 过滤子任务没有失败的任务；</li>
+<li>true: 过滤子任务有失败的任务。</li>
+ * @method void setSubTaskHasFailed(boolean $SubTaskHasFailed) 设置任务结束时子任务是否有失败。如果不传则忽略。
+<li>false: 过滤子任务没有失败的任务；</li>
+<li>true: 过滤子任务有失败的任务。</li>
  * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：100。
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：10，最大值：100。
  * @method string getScrollToken() 获取翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
@@ -50,7 +54,9 @@ class DescribeTasksRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var boolean 任务结束时子任务是否有失败。
+     * @var boolean 任务结束时子任务是否有失败。如果不传则忽略。
+<li>false: 过滤子任务没有失败的任务；</li>
+<li>true: 过滤子任务有失败的任务。</li>
      */
     public $SubTaskHasFailed;
 
@@ -79,7 +85,9 @@ class DescribeTasksRequest extends AbstractModel
 - WAITING（等待中）
 - PROCESSING（处理中）
 - FINISH（已完成）。
-     * @param boolean $SubTaskHasFailed 任务结束时子任务是否有失败。
+     * @param boolean $SubTaskHasFailed 任务结束时子任务是否有失败。如果不传则忽略。
+<li>false: 过滤子任务没有失败的任务；</li>
+<li>true: 过滤子任务有失败的任务。</li>
      * @param integer $Limit 返回记录条数，默认值：10，最大值：100。
      * @param string $ScrollToken 翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
      * @param string $StartTime 查询任务开始时间

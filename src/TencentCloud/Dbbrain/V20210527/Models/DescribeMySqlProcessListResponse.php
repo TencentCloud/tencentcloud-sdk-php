@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getProcessList() 获取实时线程列表。
  * @method void setProcessList(array $ProcessList) 设置实时线程列表。
- * @method array getStatistics() 获取sql会话统计信息。
- * @method void setStatistics(array $Statistics) 设置sql会话统计信息。
+ * @method array getStatistics() 获取sql会话统计信息。如果请求参数中包含StatDimensions，该参数则可能返回，否则不返回。
+ * @method void setStatistics(array $Statistics) 设置sql会话统计信息。如果请求参数中包含StatDimensions，该参数则可能返回，否则不返回。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,7 +35,7 @@ class DescribeMySqlProcessListResponse extends AbstractModel
     public $ProcessList;
 
     /**
-     * @var array sql会话统计信息。
+     * @var array sql会话统计信息。如果请求参数中包含StatDimensions，该参数则可能返回，否则不返回。
      */
     public $Statistics;
 
@@ -46,7 +46,7 @@ class DescribeMySqlProcessListResponse extends AbstractModel
 
     /**
      * @param array $ProcessList 实时线程列表。
-     * @param array $Statistics sql会话统计信息。
+     * @param array $Statistics sql会话统计信息。如果请求参数中包含StatDimensions，该参数则可能返回，否则不返回。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

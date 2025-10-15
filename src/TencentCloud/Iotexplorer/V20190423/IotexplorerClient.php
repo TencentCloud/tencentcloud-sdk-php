@@ -56,6 +56,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\CreateTRTCSignaturesWithRoomIdResponse CreateTRTCSignaturesWithRoomId(Models\CreateTRTCSignaturesWithRoomIdRequest $req) 创建TRTC通话参数
  * @method Models\CreateTWeSeeRecognitionTaskResponse CreateTWeSeeRecognitionTask(Models\CreateTWeSeeRecognitionTaskRequest $req) 创建 TWeSee 语义理解任务
  * @method Models\CreateTWeTalkProductConfigResponse CreateTWeTalkProductConfig(Models\CreateTWeTalkProductConfigRequest $req) 用于配置TWeTalk服务连接产品配置信息。
+ * @method Models\CreateTWeTalkProductConfigV2Response CreateTWeTalkProductConfigV2(Models\CreateTWeTalkProductConfigV2Request $req) 用于配置TWeTalk服务连接产品配置信息。
  * @method Models\CreateTopicPolicyResponse CreateTopicPolicy(Models\CreateTopicPolicyRequest $req) 本接口（CreateTopicPolicy）用于创建一个Topic
  * @method Models\CreateTopicRuleResponse CreateTopicRule(Models\CreateTopicRuleRequest $req) 创建规则
  * @method Models\DeleteCloudStorageEventResponse DeleteCloudStorageEvent(Models\DeleteCloudStorageEventRequest $req) 删除云存事件
@@ -131,6 +132,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DescribeTWeSeeConfigResponse DescribeTWeSeeConfig(Models\DescribeTWeSeeConfigRequest $req) 拉取 TWeSee 配置
  * @method Models\DescribeTWeSeeRecognitionTaskResponse DescribeTWeSeeRecognitionTask(Models\DescribeTWeSeeRecognitionTaskRequest $req) 查询 TWeSee 语义理解任务
  * @method Models\DescribeTWeTalkProductConfigResponse DescribeTWeTalkProductConfig(Models\DescribeTWeTalkProductConfigRequest $req) 用于获取TWeTalk服务连接产品配置信息。
+ * @method Models\DescribeTWeTalkProductConfigV2Response DescribeTWeTalkProductConfigV2(Models\DescribeTWeTalkProductConfigV2Request $req) 用于查询TWeTalk服务连接产品配置信息。
  * @method Models\DescribeTopicPolicyResponse DescribeTopicPolicy(Models\DescribeTopicPolicyRequest $req) 本接口（DescribeTopicPolicy）用于查看Topic详细信息
  * @method Models\DescribeTopicRuleResponse DescribeTopicRule(Models\DescribeTopicRuleRequest $req) 获取规则信息
  * @method Models\DescribeUnbindedDevicesResponse DescribeUnbindedDevices(Models\DescribeUnbindedDevicesRequest $req) 获取未绑定的设备列表
@@ -156,6 +158,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\GetStudioProductListResponse GetStudioProductList(Models\GetStudioProductListRequest $req) 提供查询某个项目下所有产品信息的能力。
  * @method Models\GetTWeCallActiveStatusResponse GetTWeCallActiveStatus(Models\GetTWeCallActiveStatusRequest $req) 查询激活状态
  * @method Models\GetTWeTalkProductConfigListResponse GetTWeTalkProductConfigList(Models\GetTWeTalkProductConfigListRequest $req) 用于获取TWeTalk服务连接产品配置信息列表。
+ * @method Models\GetTWeTalkProductConfigListV2Response GetTWeTalkProductConfigListV2(Models\GetTWeTalkProductConfigListV2Request $req) 用于查询TWeTalk服务连接产品配置信息。
  * @method Models\GetTopicRuleListResponse GetTopicRuleList(Models\GetTopicRuleListRequest $req) 获取规则列表
  * @method Models\GetWechatDeviceTicketResponse GetWechatDeviceTicket(Models\GetWechatDeviceTicketRequest $req) 查询微信设备授权票据
  * @method Models\InheritCloudStorageUserResponse InheritCloudStorageUser(Models\InheritCloudStorageUserRequest $req) 继承云存用户
@@ -184,6 +187,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\ModifyStudioProductResponse ModifyStudioProduct(Models\ModifyStudioProductRequest $req) 提供修改产品的名称和描述等信息的能力，对于已发布产品不允许进行修改。
  * @method Models\ModifyTWeSeeConfigResponse ModifyTWeSeeConfig(Models\ModifyTWeSeeConfigRequest $req) 修改 TWeSee 配置
  * @method Models\ModifyTWeTalkProductConfigResponse ModifyTWeTalkProductConfig(Models\ModifyTWeTalkProductConfigRequest $req) 用于修改TWeTalk服务连接产品配置信息。
+ * @method Models\ModifyTWeTalkProductConfigV2Response ModifyTWeTalkProductConfigV2(Models\ModifyTWeTalkProductConfigV2Request $req) 用于修改配置TWeTalk服务连接产品配置信息。
  * @method Models\ModifyTopicPolicyResponse ModifyTopicPolicy(Models\ModifyTopicPolicyRequest $req) 本接口（UpdateTopicPolicy）用于更新Topic信息
  * @method Models\ModifyTopicRuleResponse ModifyTopicRule(Models\ModifyTopicRuleRequest $req) 修改规则
  * @method Models\PauseTWeCallDeviceResponse PauseTWeCallDevice(Models\PauseTWeCallDeviceRequest $req) 暂停设备

@@ -26,8 +26,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddonVersion(string $AddonVersion) 设置addon的版本
  * @method string getRawValues() 获取addon的参数，是一个json格式的base64转码后的字符串
  * @method void setRawValues(string $RawValues) 设置addon的参数，是一个json格式的base64转码后的字符串
- * @method string getPhase() 获取addon的状态
- * @method void setPhase(string $Phase) 设置addon的状态
+ * @method string getPhase() 获取addon的状态：
+- Installing：安装中
+- Upgrading：升级中
+- Terminating：删除中
+- Succeeded：安装/升级成功
+- InstallFailed：安装失败
+- UpgradFailed：升级失败
+ * @method void setPhase(string $Phase) 设置addon的状态：
+- Installing：安装中
+- Upgrading：升级中
+- Terminating：删除中
+- Succeeded：安装/升级成功
+- InstallFailed：安装失败
+- UpgradFailed：升级失败
  * @method string getReason() 获取addon失败的原因
  * @method void setReason(string $Reason) 设置addon失败的原因
  * @method string getCreateTime() 获取addon的创建时间
@@ -51,7 +63,13 @@ class Addon extends AbstractModel
     public $RawValues;
 
     /**
-     * @var string addon的状态
+     * @var string addon的状态：
+- Installing：安装中
+- Upgrading：升级中
+- Terminating：删除中
+- Succeeded：安装/升级成功
+- InstallFailed：安装失败
+- UpgradFailed：升级失败
      */
     public $Phase;
 
@@ -69,7 +87,13 @@ class Addon extends AbstractModel
      * @param string $AddonName addon名称
      * @param string $AddonVersion addon的版本
      * @param string $RawValues addon的参数，是一个json格式的base64转码后的字符串
-     * @param string $Phase addon的状态
+     * @param string $Phase addon的状态：
+- Installing：安装中
+- Upgrading：升级中
+- Terminating：删除中
+- Succeeded：安装/升级成功
+- InstallFailed：安装失败
+- UpgradFailed：升级失败
      * @param string $Reason addon失败的原因
      * @param string $CreateTime addon的创建时间
      */

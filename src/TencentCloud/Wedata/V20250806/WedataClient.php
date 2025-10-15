@@ -59,6 +59,8 @@ use TencentCloud\Wedata\V20250806\Models as Models;
  * @method Models\EnableProjectResponse EnableProject(Models\EnableProjectRequest $req) 启用项目
  * @method Models\GetAlarmMessageResponse GetAlarmMessage(Models\GetAlarmMessageRequest $req) 查询告警信息详情
  * @method Models\GetCodeFileResponse GetCodeFile(Models\GetCodeFileRequest $req) 查看代码文件详情
+ * @method Models\GetCodeFolderResponse GetCodeFolder(Models\GetCodeFolderRequest $req) 获取sql文件夹详情
+ * @method Models\GetDataBackfillPlanResponse GetDataBackfillPlan(Models\GetDataBackfillPlanRequest $req) 获取补录计划详情
  * @method Models\GetDataSourceResponse GetDataSource(Models\GetDataSourceRequest $req) 该接口用于查看指定数据源的详细信息
  * @method Models\GetDataSourceRelatedTasksResponse GetDataSourceRelatedTasks(Models\GetDataSourceRelatedTasksRequest $req) 数据源关联任务详情
  * @method Models\GetOpsAlarmRuleResponse GetOpsAlarmRule(Models\GetOpsAlarmRuleRequest $req) 根据告警规则id/名称查询单个告警规则信息
@@ -69,6 +71,7 @@ use TencentCloud\Wedata\V20250806\Models as Models;
  * @method Models\GetProjectResponse GetProject(Models\GetProjectRequest $req) 获取项目信息
  * @method Models\GetResourceFileResponse GetResourceFile(Models\GetResourceFileRequest $req) 获取资源文件详情
  * @method Models\GetResourceGroupMetricsResponse GetResourceGroupMetrics(Models\GetResourceGroupMetricsRequest $req) 该接口用于查看指定执行资源组的监控指标
+ * @method Models\GetSQLFolderResponse GetSQLFolder(Models\GetSQLFolderRequest $req) 获取sql文件夹详情
  * @method Models\GetSQLScriptResponse GetSQLScript(Models\GetSQLScriptRequest $req) 查询脚本详情
  * @method Models\GetTableResponse GetTable(Models\GetTableRequest $req) 查询表详情
  * @method Models\GetTableColumnsResponse GetTableColumns(Models\GetTableColumnsRequest $req) 查询表所有字段列表
@@ -121,6 +124,7 @@ use TencentCloud\Wedata\V20250806\Models as Models;
  * @method Models\RerunTaskInstancesAsyncResponse RerunTaskInstancesAsync(Models\RerunTaskInstancesAsyncRequest $req) 实例批量重跑-异步
  * @method Models\RunSQLScriptResponse RunSQLScript(Models\RunSQLScriptRequest $req) 运行SQL脚本
  * @method Models\SetSuccessTaskInstancesAsyncResponse SetSuccessTaskInstancesAsync(Models\SetSuccessTaskInstancesAsyncRequest $req) 实例批量置成功-异步
+ * @method Models\StartOpsTasksResponse StartOpsTasks(Models\StartOpsTasksRequest $req) 异步批量启动任务
  * @method Models\StopOpsTasksAsyncResponse StopOpsTasksAsync(Models\StopOpsTasksAsyncRequest $req) 异步批量下线任务
  * @method Models\StopSQLScriptRunResponse StopSQLScriptRun(Models\StopSQLScriptRunRequest $req) 停止运行SQL脚本
  * @method Models\SubmitTaskResponse SubmitTask(Models\SubmitTaskRequest $req) 提交任务。

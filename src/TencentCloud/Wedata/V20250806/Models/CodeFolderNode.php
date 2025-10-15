@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChildren(array $Children) 设置子节点列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getParentFolderPath() 获取父文件夹路径
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setParentFolderPath(string $ParentFolderPath) 设置父文件夹路径
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CodeFolderNode extends AbstractModel
 {
@@ -113,6 +117,12 @@ class CodeFolderNode extends AbstractModel
     public $Children;
 
     /**
+     * @var string 父文件夹路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ParentFolderPath;
+
+    /**
      * @param string $Id 唯一标识
      * @param string $Title 名称
      * @param string $Type 类型 folder，script
@@ -127,6 +137,8 @@ class CodeFolderNode extends AbstractModel
      * @param string $NodePermission 当前用户对节点拥有的权限	
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Children 子节点列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ParentFolderPath 父文件夹路径
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -189,6 +201,10 @@ class CodeFolderNode extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Children, $obj);
             }
+        }
+
+        if (array_key_exists("ParentFolderPath",$param) and $param["ParentFolderPath"] !== null) {
+            $this->ParentFolderPath = $param["ParentFolderPath"];
         }
     }
 }

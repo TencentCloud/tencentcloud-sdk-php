@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowLogName(string $FlowLogName) 设置流日志实例名称。长度为不超过60字符。
  * @method string getFlowLogDescription() 获取流日志实例描述。长度为不超过512个字符。
  * @method void setFlowLogDescription(string $FlowLogDescription) 设置流日志实例描述。长度为不超过512个字符。
+ * @method integer getPeriod() 获取流日志采集周期，只支持CCN类型流日志。 取值范围（单位s）：60， 300， 600。
+ * @method void setPeriod(integer $Period) 设置流日志采集周期，只支持CCN类型流日志。 取值范围（单位s）：60， 300， 600。
  */
 class ModifyFlowLogAttributeRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyFlowLogAttributeRequest extends AbstractModel
     public $FlowLogDescription;
 
     /**
+     * @var integer 流日志采集周期，只支持CCN类型流日志。 取值范围（单位s）：60， 300， 600。
+     */
+    public $Period;
+
+    /**
      * @param string $FlowLogId 流日志唯一ID。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建；可通过[DescribeFlowLogs](https://cloud.tencent.com/document/product/215/35012)接口获取。
      * @param string $VpcId 私用网络唯一ID。修改云联网流日志属性时可不填，其他流日志类型必填。
      * @param string $FlowLogName 流日志实例名称。长度为不超过60字符。
      * @param string $FlowLogDescription 流日志实例描述。长度为不超过512个字符。
+     * @param integer $Period 流日志采集周期，只支持CCN类型流日志。 取值范围（单位s）：60， 300， 600。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ModifyFlowLogAttributeRequest extends AbstractModel
 
         if (array_key_exists("FlowLogDescription",$param) and $param["FlowLogDescription"] !== null) {
             $this->FlowLogDescription = $param["FlowLogDescription"];
+        }
+
+        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
+            $this->Period = $param["Period"];
         }
     }
 }

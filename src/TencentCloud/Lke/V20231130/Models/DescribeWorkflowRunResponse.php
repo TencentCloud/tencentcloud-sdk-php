@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWorkflowRun返回参数结构体
  *
- * @method WorkflowRunDetail getWorkflowRun() 获取总数
- * @method void setWorkflowRun(WorkflowRunDetail $WorkflowRun) 设置总数
+ * @method WorkflowRunDetail getWorkflowRun() 获取工作流的详情
+ * @method void setWorkflowRun(WorkflowRunDetail $WorkflowRun) 设置工作流的详情
  * @method array getNodeRuns() 获取节点列表
  * @method void setNodeRuns(array $NodeRuns) 设置节点列表
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeWorkflowRunResponse extends AbstractModel
 {
     /**
-     * @var WorkflowRunDetail 总数
+     * @var WorkflowRunDetail 工作流的详情
      */
     public $WorkflowRun;
 
@@ -45,7 +45,7 @@ class DescribeWorkflowRunResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param WorkflowRunDetail $WorkflowRun 总数
+     * @param WorkflowRunDetail $WorkflowRun 工作流的详情
      * @param array $NodeRuns 节点列表
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

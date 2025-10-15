@@ -28,14 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHost(string $Host) 设置线程的操作主机地址。
  * @method string getDB() 获取线程的操作数据库。
  * @method void setDB(string $DB) 设置线程的操作数据库。
- * @method string getState() 获取线程的操作状态。
- * @method void setState(string $State) 设置线程的操作状态。
- * @method string getCommand() 获取线程的执行类型。
- * @method void setCommand(string $Command) 设置线程的执行类型。
+ * @method string getState() 获取线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。
+ * @method void setState(string $State) 设置线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。
+ * @method string getCommand() 获取线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。
+ * @method void setCommand(string $Command) 设置线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。
  * @method string getTime() 获取线程的操作时长，单位秒。
  * @method void setTime(string $Time) 设置线程的操作时长，单位秒。
  * @method string getInfo() 获取线程的操作语句。
  * @method void setInfo(string $Info) 设置线程的操作语句。
+ * @method string getSqlType() 获取sql类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSqlType(string $SqlType) 设置sql类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MySqlProcess extends AbstractModel
 {
@@ -60,12 +64,12 @@ class MySqlProcess extends AbstractModel
     public $DB;
 
     /**
-     * @var string 线程的操作状态。
+     * @var string 线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。
      */
     public $State;
 
     /**
-     * @var string 线程的执行类型。
+     * @var string 线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。
      */
     public $Command;
 
@@ -80,14 +84,22 @@ class MySqlProcess extends AbstractModel
     public $Info;
 
     /**
+     * @var string sql类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SqlType;
+
+    /**
      * @param string $ID 线程ID。
      * @param string $User 线程的操作账号名。
      * @param string $Host 线程的操作主机地址。
      * @param string $DB 线程的操作数据库。
-     * @param string $State 线程的操作状态。
-     * @param string $Command 线程的执行类型。
+     * @param string $State 线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。
+     * @param string $Command 线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。
      * @param string $Time 线程的操作时长，单位秒。
      * @param string $Info 线程的操作语句。
+     * @param string $SqlType sql类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -132,6 +144,10 @@ class MySqlProcess extends AbstractModel
 
         if (array_key_exists("Info",$param) and $param["Info"] !== null) {
             $this->Info = $param["Info"];
+        }
+
+        if (array_key_exists("SqlType",$param) and $param["SqlType"] !== null) {
+            $this->SqlType = $param["SqlType"];
         }
     }
 }

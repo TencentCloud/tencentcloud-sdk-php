@@ -70,6 +70,8 @@ UserId必须是传入合同（FlowId）中的签署人。
 若传了此参数，则可以不传 UserId, Name, Mobile等参数
  * @method string getFlowGroupId() 获取合同组Id，传入此参数则可以不传FlowIds
  * @method void setFlowGroupId(string $FlowGroupId) 设置合同组Id，传入此参数则可以不传FlowIds
+ * @method boolean getCanBatchReject() 获取是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。`
+ * @method void setCanBatchReject(boolean $CanBatchReject) 设置是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。`
  */
 class CreateOrganizationBatchSignUrlRequest extends AbstractModel
 {
@@ -131,6 +133,11 @@ UserId必须是传入合同（FlowId）中的签署人。
     public $FlowGroupId;
 
     /**
+     * @var boolean 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。`
+     */
+    public $CanBatchReject;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。使用此接口时，必须填写userId。
 支持填入集团子公司经办人 userId 代发合同。
 
@@ -156,6 +163,7 @@ UserId必须是传入合同（FlowId）中的签署人。
 您可以通过查询合同接口（DescribeFlowInfo）查询此参数。
 若传了此参数，则可以不传 UserId, Name, Mobile等参数
      * @param string $FlowGroupId 合同组Id，传入此参数则可以不传FlowIds
+     * @param boolean $CanBatchReject 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。`
      */
     function __construct()
     {
@@ -202,6 +210,10 @@ UserId必须是传入合同（FlowId）中的签署人。
 
         if (array_key_exists("FlowGroupId",$param) and $param["FlowGroupId"] !== null) {
             $this->FlowGroupId = $param["FlowGroupId"];
+        }
+
+        if (array_key_exists("CanBatchReject",$param) and $param["CanBatchReject"] !== null) {
+            $this->CanBatchReject = $param["CanBatchReject"];
         }
     }
 }

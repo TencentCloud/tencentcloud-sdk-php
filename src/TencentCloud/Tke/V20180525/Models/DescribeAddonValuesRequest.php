@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAddonValues请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getAddonName() 获取addon名称
- * @method void setAddonName(string $AddonName) 设置addon名称
+ * @method string getClusterId() 获取集群ID，请从容器服务控制台集群列表中获取（https://console.cloud.tencent.com/tke2/cluster）。
+ * @method void setClusterId(string $ClusterId) 设置集群ID，请从容器服务控制台集群列表中获取（https://console.cloud.tencent.com/tke2/cluster）。
+ * @method string getAddonName() 获取addon名称，请从容器服务控制台进入集群详情页后，在组件管理页面中获取。
+ * @method void setAddonName(string $AddonName) 设置addon名称，请从容器服务控制台进入集群详情页后，在组件管理页面中获取。
  */
 class DescribeAddonValuesRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 集群ID，请从容器服务控制台集群列表中获取（https://console.cloud.tencent.com/tke2/cluster）。
      */
     public $ClusterId;
 
     /**
-     * @var string addon名称
+     * @var string addon名称，请从容器服务控制台进入集群详情页后，在组件管理页面中获取。
      */
     public $AddonName;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param string $AddonName addon名称
+     * @param string $ClusterId 集群ID，请从容器服务控制台集群列表中获取（https://console.cloud.tencent.com/tke2/cluster）。
+     * @param string $AddonName addon名称，请从容器服务控制台进入集群详情页后，在组件管理页面中获取。
      */
     function __construct()
     {

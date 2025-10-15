@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPath(string $Path) 设置节点全路径，/aaa/bbb/ccc.ipynb，由各个节点的名称组成
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getParentFolderPath() 获取父文件夹路径
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setParentFolderPath(string $ParentFolderPath) 设置父文件夹路径
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CodeFile extends AbstractModel
 {
@@ -134,6 +138,12 @@ class CodeFile extends AbstractModel
     public $Path;
 
     /**
+     * @var string 父文件夹路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ParentFolderPath;
+
+    /**
      * @param string $CodeFileId 脚本ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CodeFileName 脚本名称
@@ -155,6 +165,8 @@ class CodeFile extends AbstractModel
      * @param string $AccessScope 权限范围：SHARED, PRIVATE
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Path 节点全路径，/aaa/bbb/ccc.ipynb，由各个节点的名称组成
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ParentFolderPath 父文件夹路径
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -213,6 +225,10 @@ class CodeFile extends AbstractModel
 
         if (array_key_exists("Path",$param) and $param["Path"] !== null) {
             $this->Path = $param["Path"];
+        }
+
+        if (array_key_exists("ParentFolderPath",$param) and $param["ParentFolderPath"] !== null) {
+            $this->ParentFolderPath = $param["ParentFolderPath"];
         }
     }
 }

@@ -129,12 +129,12 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getCanBatchReject() 获取是否允许此链接中签署方批量拒签。
  <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>
 
-注：`合同组暂不支持批量拒签功能。`
+注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。`
 
  * @method void setCanBatchReject(boolean $CanBatchReject) 设置是否允许此链接中签署方批量拒签。
  <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>
 
-注：`合同组暂不支持批量拒签功能。`
+注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。`
 
  * @method PresetApproverInfo getPresetApproverInfo() 获取	 预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。
  * @method void setPresetApproverInfo(PresetApproverInfo $PresetApproverInfo) 设置	 预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。
@@ -246,7 +246,7 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
      * @var boolean 是否允许此链接中签署方批量拒签。
  <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>
 
-注：`合同组暂不支持批量拒签功能。`
+注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。`
 
      */
     public $CanBatchReject;
@@ -313,7 +313,7 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
      * @param boolean $CanBatchReject 是否允许此链接中签署方批量拒签。
  <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>
 
-注：`合同组暂不支持批量拒签功能。`
+注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。`
 
      * @param PresetApproverInfo $PresetApproverInfo 	 预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。
      */

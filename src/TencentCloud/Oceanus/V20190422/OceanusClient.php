@@ -32,6 +32,7 @@ use TencentCloud\Oceanus\V20190422\Models as Models;
  * @method Models\CreateJobConfigResponse CreateJobConfig(Models\CreateJobConfigRequest $req) 创建作业配置，一个作业最多有100个配置版本
  * @method Models\CreateResourceResponse CreateResource(Models\CreateResourceRequest $req) 创建资源接口
  * @method Models\CreateResourceConfigResponse CreateResourceConfig(Models\CreateResourceConfigRequest $req) 创建资源配置接口
+ * @method Models\CreateVariableResponse CreateVariable(Models\CreateVariableRequest $req) 创建变量 
  * @method Models\CreateWorkSpaceResponse CreateWorkSpace(Models\CreateWorkSpaceRequest $req) 创建工作空间
  * @method Models\DeleteFoldersResponse DeleteFolders(Models\DeleteFoldersRequest $req) 作业列表删除文件夹
  * @method Models\DeleteJobConfigsResponse DeleteJobConfigs(Models\DeleteJobConfigsRequest $req) 删除作业配置
@@ -54,6 +55,7 @@ use TencentCloud\Oceanus\V20190422\Models as Models;
  * @method Models\DescribeSystemResourcesResponse DescribeSystemResources(Models\DescribeSystemResourcesRequest $req) 描述系统资源接口
  * @method Models\DescribeTreeJobsResponse DescribeTreeJobs(Models\DescribeTreeJobsRequest $req) 生成树状作业显示结构
  * @method Models\DescribeTreeResourcesResponse DescribeTreeResources(Models\DescribeTreeResourcesRequest $req) 查询树状结构资源列表
+ * @method Models\DescribeVariablesResponse DescribeVariables(Models\DescribeVariablesRequest $req) 变量列表展示
  * @method Models\DescribeWorkSpacesResponse DescribeWorkSpaces(Models\DescribeWorkSpacesRequest $req) 授权工作空间列表
  * @method Models\FetchSqlGatewayStatementResultResponse FetchSqlGatewayStatementResult(Models\FetchSqlGatewayStatementResultRequest $req) 查询Sql Gateway的Statement执行结果
  * @method Models\GetMetaTableResponse GetMetaTable(Models\GetMetaTableRequest $req) 查询元数据表

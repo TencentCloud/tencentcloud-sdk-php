@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAddon请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method string getClusterId() 获取集群ID，请从容器服务控制台集群列表中获取（https://console.cloud.tencent.com/tke2/cluster）。
+ * @method void setClusterId(string $ClusterId) 设置集群ID，请从容器服务控制台集群列表中获取（https://console.cloud.tencent.com/tke2/cluster）。
  * @method string getAddonName() 获取addon名称（不传时会返回集群下全部的addon）
  * @method void setAddonName(string $AddonName) 设置addon名称（不传时会返回集群下全部的addon）
  */
 class DescribeAddonRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 集群ID，请从容器服务控制台集群列表中获取（https://console.cloud.tencent.com/tke2/cluster）。
      */
     public $ClusterId;
 
@@ -38,7 +38,7 @@ class DescribeAddonRequest extends AbstractModel
     public $AddonName;
 
     /**
-     * @param string $ClusterId 集群ID
+     * @param string $ClusterId 集群ID，请从容器服务控制台集群列表中获取（https://console.cloud.tencent.com/tke2/cluster）。
      * @param string $AddonName addon名称（不传时会返回集群下全部的addon）
      */
     function __construct()

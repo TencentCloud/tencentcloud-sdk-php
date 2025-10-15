@@ -112,8 +112,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCacheApproverInfo(boolean $CacheApproverInfo) 设置缓存签署人信息。在H5签署链接动态领取场景，首次填写后，选择缓存签署人信息，在下次签署人点击领取链接时，会自动将个人信息（姓名、身份证号、手机号）填入，否则需要每次手动填写。
 
 注: `若参与方为企业员工时，暂不支持对参与方信息进行缓存`
- * @method boolean getCanBatchReject() 获取是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`合同组暂不支持批量拒签功能。`
- * @method void setCanBatchReject(boolean $CanBatchReject) 设置是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`合同组暂不支持批量拒签功能。`
+ * @method boolean getCanBatchReject() 获取是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。`
+ * @method void setCanBatchReject(boolean $CanBatchReject) 设置是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。`
  * @method PresetApproverInfo getPresetApproverInfo() 获取预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。
  * @method void setPresetApproverInfo(PresetApproverInfo $PresetApproverInfo) 设置预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。
  */
@@ -210,7 +210,7 @@ class ChannelCreateBatchQuickSignUrlRequest extends AbstractModel
     public $CacheApproverInfo;
 
     /**
-     * @var boolean 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`合同组暂不支持批量拒签功能。`
+     * @var boolean 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。`
      */
     public $CanBatchReject;
 
@@ -266,7 +266,7 @@ class ChannelCreateBatchQuickSignUrlRequest extends AbstractModel
      * @param boolean $CacheApproverInfo 缓存签署人信息。在H5签署链接动态领取场景，首次填写后，选择缓存签署人信息，在下次签署人点击领取链接时，会自动将个人信息（姓名、身份证号、手机号）填入，否则需要每次手动填写。
 
 注: `若参与方为企业员工时，暂不支持对参与方信息进行缓存`
-     * @param boolean $CanBatchReject 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`合同组暂不支持批量拒签功能。`
+     * @param boolean $CanBatchReject 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。`
      * @param PresetApproverInfo $PresetApproverInfo 预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。
      */
     function __construct()

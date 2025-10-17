@@ -90,6 +90,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateUserId(string $UpdateUserId) 设置最近更新人id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBundleId() 获取BundleId CI/CD工程生成的bundle唯一标识	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBundleId(string $BundleId) 设置BundleId CI/CD工程生成的bundle唯一标识	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBundleInfo() 获取BundleId信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBundleInfo(string $BundleInfo) 设置BundleId信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowDsDTO extends AbstractModel
 {
@@ -193,6 +201,18 @@ class WorkflowDsDTO extends AbstractModel
     public $UpdateUserId;
 
     /**
+     * @var string BundleId CI/CD工程生成的bundle唯一标识	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BundleId;
+
+    /**
+     * @var string BundleId信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BundleInfo;
+
+    /**
      * @param string $WorkflowId 工作流ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Owner 责任人
@@ -227,6 +247,10 @@ class WorkflowDsDTO extends AbstractModel
      * @param string $UpdateUser 最近更新人名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateUserId 最近更新人id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BundleId BundleId CI/CD工程生成的bundle唯一标识	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BundleInfo BundleId信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -319,6 +343,14 @@ class WorkflowDsDTO extends AbstractModel
 
         if (array_key_exists("UpdateUserId",$param) and $param["UpdateUserId"] !== null) {
             $this->UpdateUserId = $param["UpdateUserId"];
+        }
+
+        if (array_key_exists("BundleId",$param) and $param["BundleId"] !== null) {
+            $this->BundleId = $param["BundleId"];
+        }
+
+        if (array_key_exists("BundleInfo",$param) and $param["BundleInfo"] !== null) {
+            $this->BundleInfo = $param["BundleInfo"];
         }
     }
 }

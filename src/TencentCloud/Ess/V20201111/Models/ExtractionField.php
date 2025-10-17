@@ -43,15 +43,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDescription() 获取用于描述字段信息。
 
 注意：
-1、`如果Type值为OPTION时，需要在字段描述中填写选项值，用,分隔`
-2、描述字段不能超过100个字符
+1、描述字段不能超过100个字符
  * @method void setDescription(string $Description) 设置用于描述字段信息。
 
 注意：
-1、`如果Type值为OPTION时，需要在字段描述中填写选项值，用,分隔`
-2、描述字段不能超过100个字符
+1、描述字段不能超过100个字符
  * @method array getValues() 获取提取出合同中的字段信息。
  * @method void setValues(array $Values) 设置提取出合同中的字段信息。
+ * @method array getChoiceList() 获取当字段类型`Type`为OPTION时为必输项，输入选项值
+ * @method void setChoiceList(array $ChoiceList) 设置当字段类型`Type`为OPTION时为必输项，输入选项值
  */
 class ExtractionField extends AbstractModel
 {
@@ -77,8 +77,7 @@ class ExtractionField extends AbstractModel
      * @var string 用于描述字段信息。
 
 注意：
-1、`如果Type值为OPTION时，需要在字段描述中填写选项值，用,分隔`
-2、描述字段不能超过100个字符
+1、描述字段不能超过100个字符
      */
     public $Description;
 
@@ -86,6 +85,11 @@ class ExtractionField extends AbstractModel
      * @var array 提取出合同中的字段信息。
      */
     public $Values;
+
+    /**
+     * @var array 当字段类型`Type`为OPTION时为必输项，输入选项值
+     */
+    public $ChoiceList;
 
     /**
      * @param string $Name 用于合同智能提取的字段名称。
@@ -101,9 +105,9 @@ class ExtractionField extends AbstractModel
      * @param string $Description 用于描述字段信息。
 
 注意：
-1、`如果Type值为OPTION时，需要在字段描述中填写选项值，用,分隔`
-2、描述字段不能超过100个字符
+1、描述字段不能超过100个字符
      * @param array $Values 提取出合同中的字段信息。
+     * @param array $ChoiceList 当字段类型`Type`为OPTION时为必输项，输入选项值
      */
     function __construct()
     {
@@ -132,6 +136,10 @@ class ExtractionField extends AbstractModel
 
         if (array_key_exists("Values",$param) and $param["Values"] !== null) {
             $this->Values = $param["Values"];
+        }
+
+        if (array_key_exists("ChoiceList",$param) and $param["ChoiceList"] !== null) {
+            $this->ChoiceList = $param["ChoiceList"];
         }
     }
 }

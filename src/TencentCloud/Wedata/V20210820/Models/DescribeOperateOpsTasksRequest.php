@@ -76,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBlackTaskIdList(array $BlackTaskIdList) 设置黑名单任务ID列表，传了该值在筛选的时候会将列表中的任务ID剔除
  * @method string getScheduleTimeZone() 获取时区
  * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置时区
+ * @method array getRunPriorityList() 获取根据任务优先级筛选
+ * @method void setRunPriorityList(array $RunPriorityList) 设置根据任务优先级筛选
  */
 class DescribeOperateOpsTasksRequest extends AbstractModel
 {
@@ -220,6 +222,11 @@ class DescribeOperateOpsTasksRequest extends AbstractModel
     public $ScheduleTimeZone;
 
     /**
+     * @var array 根据任务优先级筛选
+     */
+    public $RunPriorityList;
+
+    /**
      * @param string $ProjectId 项目id
      * @param string $FolderIdList 文件夹id，多个文件夹以逗号分隔
      * @param string $WorkFlowIdList 工作流id，多个工作流id之间以英文字符逗号分隔
@@ -248,6 +255,7 @@ class DescribeOperateOpsTasksRequest extends AbstractModel
      * @param array $ProjectIds 项目ID列表
      * @param array $BlackTaskIdList 黑名单任务ID列表，传了该值在筛选的时候会将列表中的任务ID剔除
      * @param string $ScheduleTimeZone 时区
+     * @param array $RunPriorityList 根据任务优先级筛选
      */
     function __construct()
     {
@@ -377,6 +385,10 @@ class DescribeOperateOpsTasksRequest extends AbstractModel
 
         if (array_key_exists("ScheduleTimeZone",$param) and $param["ScheduleTimeZone"] !== null) {
             $this->ScheduleTimeZone = $param["ScheduleTimeZone"];
+        }
+
+        if (array_key_exists("RunPriorityList",$param) and $param["RunPriorityList"] !== null) {
+            $this->RunPriorityList = $param["RunPriorityList"];
         }
     }
 }

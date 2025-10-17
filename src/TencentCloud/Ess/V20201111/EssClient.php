@@ -146,6 +146,8 @@ use TencentCloud\Ess\V20201111\Models as Models;
 - 个人批量签署链接：需要传入签署方用户名字和手机号（或者身份证件信息）参数来生成签署链接。个人批量签署进行的合同的签名区， 全部变成<font color="red">手写签名</font>（不管合同里边设置的签名限制）来进行。
 - 不支持签署方含有签批控件，或设置了签署方在签署时自行添加签署控件功能的合同进行批量签署。
 - 进行小程序批量签署必须指定待签署的流程id，<font color="red">接口中FlowIds参数必传。</font>
+ * @method Models\CreateContractComparisonTaskResponse CreateContractComparisonTask(Models\CreateContractComparisonTaskRequest $req) 此接口（CreateContractComparisonTask）用于创建合同对比任务。
+适用场景：对比两份合同中字段（如：金额、日期、甲方名称等）的内容差异。
  * @method Models\CreateContractDiffTaskWebUrlResponse CreateContractDiffTaskWebUrl(Models\CreateContractDiffTaskWebUrlRequest $req) 接口（CreateContractDiffTaskWebUrl）用于创建合同对比的可嵌入web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
 注：本接口生成的web页面暂不支持<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreateWebThemeConfig" target="_blank">设置本企业嵌入式页面主题配置</a>
 
@@ -1030,6 +1032,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 
 <ul><li>处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。</li>
 <li>如果此用户在开通时候绑定过个人自动签账号许可,  关闭此用户的自动签不会归还个人自动签账号许可的额度。</li></ul>
+ * @method Models\ExportContractComparisonTaskResponse ExportContractComparisonTask(Models\ExportContractComparisonTaskRequest $req) 本接口（ExportContractComparisonTask）用于导出指定的合同对比任务的结果文件。任务完成后，用户可根据不同的使用场景，选择导出可视化对比报告（PDF）或结构化差异明细（EXCEL）。
  * @method Models\GetTaskResultApiResponse GetTaskResultApi(Models\GetTaskResultApiRequest $req) 此接口（GetTaskResultApi）用来查询转换任务的状态。如需发起转换任务，请使用<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi" target="_blank">创建文件转换任务接口</a>进行资源文件的转换操作<br />
 前提条件：已调用 <a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi" target="_blank">创建文件转换任务接口</a>进行文件转换，并得到了返回的转换任务Id。<br />
 

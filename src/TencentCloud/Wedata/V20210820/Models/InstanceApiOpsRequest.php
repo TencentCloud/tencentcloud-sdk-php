@@ -90,6 +90,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScheduleTimeFrom(string $ScheduleTimeFrom) 设置计划调度时间
  * @method string getScheduleTimeTo() 获取计划调度时间
  * @method void setScheduleTimeTo(string $ScheduleTimeTo) 设置计划调度时间
+ * @method array getRunPriorityList() 获取任务优先级过滤实例列表
+ * @method void setRunPriorityList(array $RunPriorityList) 设置任务优先级过滤实例列表
+ * @method array getInstanceCycleType() 获取实例调度周期筛选
+ * @method void setInstanceCycleType(array $InstanceCycleType) 设置实例调度周期筛选
  */
 class InstanceApiOpsRequest extends AbstractModel
 {
@@ -269,6 +273,16 @@ class InstanceApiOpsRequest extends AbstractModel
     public $ScheduleTimeTo;
 
     /**
+     * @var array 任务优先级过滤实例列表
+     */
+    public $RunPriorityList;
+
+    /**
+     * @var array 实例调度周期筛选
+     */
+    public $InstanceCycleType;
+
+    /**
      * @param InstanceOpsDto $Instance 单个查询条件
      * @param string $SortCol 排序字段，目前包含：重试次数，实例数据时间，运行耗时
      * @param array $TaskIdList 任务id列表
@@ -304,6 +318,8 @@ class InstanceApiOpsRequest extends AbstractModel
      * @param string $ScheduleTimeZone 时区
      * @param string $ScheduleTimeFrom 计划调度时间
      * @param string $ScheduleTimeTo 计划调度时间
+     * @param array $RunPriorityList 任务优先级过滤实例列表
+     * @param array $InstanceCycleType 实例调度周期筛选
      */
     function __construct()
     {
@@ -462,6 +478,14 @@ class InstanceApiOpsRequest extends AbstractModel
 
         if (array_key_exists("ScheduleTimeTo",$param) and $param["ScheduleTimeTo"] !== null) {
             $this->ScheduleTimeTo = $param["ScheduleTimeTo"];
+        }
+
+        if (array_key_exists("RunPriorityList",$param) and $param["RunPriorityList"] !== null) {
+            $this->RunPriorityList = $param["RunPriorityList"];
+        }
+
+        if (array_key_exists("InstanceCycleType",$param) and $param["InstanceCycleType"] !== null) {
+            $this->InstanceCycleType = $param["InstanceCycleType"];
         }
     }
 }

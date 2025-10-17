@@ -20,25 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeReportTaskDetail请求参数结构体
  *
- * @method string getTenantId() 获取租户id
- * @method void setTenantId(string $TenantId) 设置租户id
  * @method string getEngineTaskId() 获取引擎任务id
  * @method void setEngineTaskId(string $EngineTaskId) 设置引擎任务id
  */
 class DescribeReportTaskDetailRequest extends AbstractModel
 {
     /**
-     * @var string 租户id
-     */
-    public $TenantId;
-
-    /**
      * @var string 引擎任务id
      */
     public $EngineTaskId;
 
     /**
-     * @param string $TenantId 租户id
      * @param string $EngineTaskId 引擎任务id
      */
     function __construct()
@@ -54,10 +46,6 @@ class DescribeReportTaskDetailRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TenantId",$param) and $param["TenantId"] !== null) {
-            $this->TenantId = $param["TenantId"];
-        }
-
         if (array_key_exists("EngineTaskId",$param) and $param["EngineTaskId"] !== null) {
             $this->EngineTaskId = $param["EngineTaskId"];
         }

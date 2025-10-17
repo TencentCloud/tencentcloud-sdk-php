@@ -18,7 +18,7 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 一键迁移集群版只读实例信息
+ * 一键迁移云盘版只读实例信息
  *
  * @method string getRoInstanceId() 获取只读实例名称
  * @method void setRoInstanceId(string $RoInstanceId) 设置只读实例名称
@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskType(string $DiskType) 设置磁盘类型。 CLOUD_SSD: SSD云硬盘; CLOUD_HSSD: 增强型SSD云硬盘
  * @method string getZone() 获取可用区
  * @method void setZone(string $Zone) 设置可用区
- * @method string getDeviceType() 获取迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 标准型集群版实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 加强型集群版实例。
- * @method void setDeviceType(string $DeviceType) 设置迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 标准型集群版实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 加强型集群版实例。
+ * @method string getDeviceType() 获取迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 云盘版标准型实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 云盘版加强型实例。
+ * @method void setDeviceType(string $DeviceType) 设置迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 云盘版标准型实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 云盘版加强型实例。
  * @method string getRoGroupId() 获取只读实例所在ro组，例：cdbrg-xxx
  * @method void setRoGroupId(string $RoGroupId) 设置只读实例所在ro组，例：cdbrg-xxx
  * @method array getSrcAlarmPolicyList() 获取实例当前告警策略id数组
@@ -72,7 +72,7 @@ class MigrateClusterRoInfo extends AbstractModel
     public $Zone;
 
     /**
-     * @var string 迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 标准型集群版实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 加强型集群版实例。
+     * @var string 迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 云盘版标准型实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 云盘版加强型实例。
      */
     public $DeviceType;
 
@@ -93,7 +93,7 @@ class MigrateClusterRoInfo extends AbstractModel
      * @param integer $Volume 只读实例硬盘大小，单位：GB
      * @param string $DiskType 磁盘类型。 CLOUD_SSD: SSD云硬盘; CLOUD_HSSD: 增强型SSD云硬盘
      * @param string $Zone 可用区
-     * @param string $DeviceType 迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 标准型集群版实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 加强型集群版实例。
+     * @param string $DeviceType 迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 云盘版标准型实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 云盘版加强型实例。
      * @param string $RoGroupId 只读实例所在ro组，例：cdbrg-xxx
      * @param array $SrcAlarmPolicyList 实例当前告警策略id数组
      */

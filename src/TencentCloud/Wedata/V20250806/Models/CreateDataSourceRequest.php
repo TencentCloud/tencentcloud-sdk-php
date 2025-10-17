@@ -82,6 +82,7 @@ use TencentCloud\Common\AbstractModel;
 - GDB
 - TDENGINE
 - TDSQLC
+- FileSystem
 
  * @method void setType(string $Type) 设置数据源类型:枚举值
 
@@ -141,6 +142,7 @@ use TencentCloud\Common\AbstractModel;
 - GDB
 - TDENGINE
 - TDSQLC
+- FileSystem
 
  * @method string getProdConProperties() 获取数据源的配置信息，以JSON KV存储，根据每个数据源类型不同，而KV存储信息不同
 
@@ -452,6 +454,7 @@ class CreateDataSourceRequest extends AbstractModel
 - GDB
 - TDENGINE
 - TDSQLC
+- FileSystem
 
      */
     public $Type;
@@ -660,6 +663,7 @@ cos:
 - GDB
 - TDENGINE
 - TDSQLC
+- FileSystem
 
      * @param string $ProdConProperties 数据源的配置信息，以JSON KV存储，根据每个数据源类型不同，而KV存储信息不同
 

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQrCode(string $QrCode) 设置二维码
  * @method string getDescription() 获取描述
  * @method void setDescription(string $Description) 设置描述
+ * @method string getRecordSubject() 获取认证主体
+ * @method void setRecordSubject(string $RecordSubject) 设置认证主体
  */
 class DisplayWechatOfficialAccount extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DisplayWechatOfficialAccount extends AbstractModel
     public $Description;
 
     /**
+     * @var string 认证主体
+     */
+    public $RecordSubject;
+
+    /**
      * @param integer $Id 主键ID
      * @param DisplayToolCommon $DisplayToolCommon 公共字段
      * @param string $Name 名称
@@ -80,6 +87,7 @@ class DisplayWechatOfficialAccount extends AbstractModel
      * @param string $AccountId 账号
      * @param string $QrCode 二维码
      * @param string $Description 描述
+     * @param string $RecordSubject 认证主体
      */
     function __construct()
     {
@@ -121,6 +129,10 @@ class DisplayWechatOfficialAccount extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("RecordSubject",$param) and $param["RecordSubject"] !== null) {
+            $this->RecordSubject = $param["RecordSubject"];
         }
     }
 }

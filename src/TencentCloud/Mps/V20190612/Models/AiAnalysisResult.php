@@ -30,6 +30,7 @@ use TencentCloud\Common\AbstractModel;
 <li>Description：大模型摘要</li>
 <li>Dubbing：智能译制</li>
 <li>VideoRemake: 视频去重</li>
+<li>VideoComprehension: 视频（音频）理解</li>
  * @method void setType(string $Type) 设置任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
@@ -40,6 +41,7 @@ use TencentCloud\Common\AbstractModel;
 <li>Description：大模型摘要</li>
 <li>Dubbing：智能译制</li>
 <li>VideoRemake: 视频去重</li>
+<li>VideoComprehension: 视频（音频）理解</li>
  * @method AiAnalysisTaskClassificationResult getClassificationTask() 获取视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClassificationTask(AiAnalysisTaskClassificationResult $ClassificationTask) 设置视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
@@ -88,6 +90,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVideoRemakeTask(AiAnalysisTaskVideoRemakeResult $VideoRemakeTask) 设置视频内容分析去重任务的查询结果，当任务类型为 VideoRemake 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AiAnalysisTaskVideoComprehensionResult getVideoComprehensionTask() 获取视频（音频）理解任务的查询结果，当任务类型为 VideoComprehension 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVideoComprehensionTask(AiAnalysisTaskVideoComprehensionResult $VideoComprehensionTask) 设置视频（音频）理解任务的查询结果，当任务类型为 VideoComprehension 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AiAnalysisResult extends AbstractModel
 {
@@ -102,6 +108,7 @@ class AiAnalysisResult extends AbstractModel
 <li>Description：大模型摘要</li>
 <li>Dubbing：智能译制</li>
 <li>VideoRemake: 视频去重</li>
+<li>VideoComprehension: 视频（音频）理解</li>
      */
     public $Type;
 
@@ -178,6 +185,12 @@ class AiAnalysisResult extends AbstractModel
     public $VideoRemakeTask;
 
     /**
+     * @var AiAnalysisTaskVideoComprehensionResult 视频（音频）理解任务的查询结果，当任务类型为 VideoComprehension 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VideoComprehensionTask;
+
+    /**
      * @param string $Type 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
@@ -188,6 +201,7 @@ class AiAnalysisResult extends AbstractModel
 <li>Description：大模型摘要</li>
 <li>Dubbing：智能译制</li>
 <li>VideoRemake: 视频去重</li>
+<li>VideoComprehension: 视频（音频）理解</li>
      * @param AiAnalysisTaskClassificationResult $ClassificationTask 视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiAnalysisTaskCoverResult $CoverTask 视频内容分析智能封面任务的查询结果，当任务类型为 Cover 时有效。
@@ -211,6 +225,8 @@ class AiAnalysisResult extends AbstractModel
      * @param AiAnalysisTaskDubbingResult $DubbingTask 视频内容分析译制任务的查询结果，当任务类型为 Dubbing 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiAnalysisTaskVideoRemakeResult $VideoRemakeTask 视频内容分析去重任务的查询结果，当任务类型为 VideoRemake 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AiAnalysisTaskVideoComprehensionResult $VideoComprehensionTask 视频（音频）理解任务的查询结果，当任务类型为 VideoComprehension 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -288,6 +304,11 @@ class AiAnalysisResult extends AbstractModel
         if (array_key_exists("VideoRemakeTask",$param) and $param["VideoRemakeTask"] !== null) {
             $this->VideoRemakeTask = new AiAnalysisTaskVideoRemakeResult();
             $this->VideoRemakeTask->deserialize($param["VideoRemakeTask"]);
+        }
+
+        if (array_key_exists("VideoComprehensionTask",$param) and $param["VideoComprehensionTask"] !== null) {
+            $this->VideoComprehensionTask = new AiAnalysisTaskVideoComprehensionResult();
+            $this->VideoComprehensionTask->deserialize($param["VideoComprehensionTask"]);
         }
     }
 }

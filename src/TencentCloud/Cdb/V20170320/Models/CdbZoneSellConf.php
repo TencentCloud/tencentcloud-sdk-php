@@ -64,10 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsSupportIpv6(boolean $IsSupportIpv6) 设置是否支持ipv6
  * @method array getEngineType() 获取可支持的售卖数据库引擎类型
  * @method void setEngineType(array $EngineType) 设置可支持的售卖数据库引擎类型
- * @method integer getCloudNativeClusterStatus() 获取集群版实例在当前可用区的售卖状态。可能的返回值为：1-上线；3-停售；4-不展示
- * @method void setCloudNativeClusterStatus(integer $CloudNativeClusterStatus) 设置集群版实例在当前可用区的售卖状态。可能的返回值为：1-上线；3-停售；4-不展示
- * @method array getDiskTypeConf() 获取集群版或者单节点基础型支持的磁盘类型。
- * @method void setDiskTypeConf(array $DiskTypeConf) 设置集群版或者单节点基础型支持的磁盘类型。
+ * @method integer getCloudNativeClusterStatus() 获取云盘版实例在当前可用区的售卖状态。可能的返回值为：1-上线；3-停售；4-不展示
+ * @method void setCloudNativeClusterStatus(integer $CloudNativeClusterStatus) 设置云盘版实例在当前可用区的售卖状态。可能的返回值为：1-上线；3-停售；4-不展示
+ * @method array getDiskTypeConf() 获取云盘版或者单节点基础型支持的磁盘类型。
+ * @method void setDiskTypeConf(array $DiskTypeConf) 设置云盘版或者单节点基础型支持的磁盘类型。
  */
 class CdbZoneSellConf extends AbstractModel
 {
@@ -182,12 +182,12 @@ class CdbZoneSellConf extends AbstractModel
     public $EngineType;
 
     /**
-     * @var integer 集群版实例在当前可用区的售卖状态。可能的返回值为：1-上线；3-停售；4-不展示
+     * @var integer 云盘版实例在当前可用区的售卖状态。可能的返回值为：1-上线；3-停售；4-不展示
      */
     public $CloudNativeClusterStatus;
 
     /**
-     * @var array 集群版或者单节点基础型支持的磁盘类型。
+     * @var array 云盘版或者单节点基础型支持的磁盘类型。
      */
     public $DiskTypeConf;
 
@@ -214,8 +214,8 @@ class CdbZoneSellConf extends AbstractModel
      * @param integer $ZoneId 可用区id
      * @param boolean $IsSupportIpv6 是否支持ipv6
      * @param array $EngineType 可支持的售卖数据库引擎类型
-     * @param integer $CloudNativeClusterStatus 集群版实例在当前可用区的售卖状态。可能的返回值为：1-上线；3-停售；4-不展示
-     * @param array $DiskTypeConf 集群版或者单节点基础型支持的磁盘类型。
+     * @param integer $CloudNativeClusterStatus 云盘版实例在当前可用区的售卖状态。可能的返回值为：1-上线；3-停售；4-不展示
+     * @param array $DiskTypeConf 云盘版或者单节点基础型支持的磁盘类型。
      */
     function __construct()
     {

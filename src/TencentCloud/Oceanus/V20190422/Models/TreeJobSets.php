@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDecodeSqlCode(string $DecodeSqlCode) 设置sql
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPublishedJobConfigId() 获取发布版本配置id
+ * @method void setPublishedJobConfigId(integer $PublishedJobConfigId) 设置发布版本配置id
  */
 class TreeJobSets extends AbstractModel
 {
@@ -117,6 +119,11 @@ class TreeJobSets extends AbstractModel
     public $DecodeSqlCode;
 
     /**
+     * @var integer 发布版本配置id
+     */
+    public $PublishedJobConfigId;
+
+    /**
      * @param string $JobId 作业Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 作业名
@@ -136,6 +143,7 @@ class TreeJobSets extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DecodeSqlCode sql
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PublishedJobConfigId 发布版本配置id
      */
     function __construct()
     {
@@ -184,6 +192,10 @@ class TreeJobSets extends AbstractModel
 
         if (array_key_exists("DecodeSqlCode",$param) and $param["DecodeSqlCode"] !== null) {
             $this->DecodeSqlCode = $param["DecodeSqlCode"];
+        }
+
+        if (array_key_exists("PublishedJobConfigId",$param) and $param["PublishedJobConfigId"] !== null) {
+            $this->PublishedJobConfigId = $param["PublishedJobConfigId"];
         }
     }
 }

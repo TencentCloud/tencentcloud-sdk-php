@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
 备注：单条query最多2000个字符，总条数最多7条
  * @method string getTextType() 获取说明：文本向量化的类型，为使得检索任务有更好的检索效果，建议区分查询文本（query）和文档文本（document）类型, 聚类、分类等对称任务可以不用特殊指定，采用系统默认值document即可。
  * @method void setTextType(string $TextType) 设置说明：文本向量化的类型，为使得检索任务有更好的检索效果，建议区分查询文本（query）和文档文本（document）类型, 聚类、分类等对称任务可以不用特殊指定，采用系统默认值document即可。
- * @method string getInstruction() 获取说明：自定义任务指令词，当且仅当TextType=query时，生效
- * @method void setInstruction(string $Instruction) 设置说明：自定义任务指令词，当且仅当TextType=query时，生效
+ * @method string getInstruction() 获取说明：自定义任务指令词，当且仅当TextType=query且Model为youtu-embedding-llm-v1时，生效
+ * @method void setInstruction(string $Instruction) 设置说明：自定义任务指令词，当且仅当TextType=query且Model为youtu-embedding-llm-v1时，生效
  */
 class GetEmbeddingRequest extends AbstractModel
 {
@@ -50,7 +50,7 @@ class GetEmbeddingRequest extends AbstractModel
     public $TextType;
 
     /**
-     * @var string 说明：自定义任务指令词，当且仅当TextType=query时，生效
+     * @var string 说明：自定义任务指令词，当且仅当TextType=query且Model为youtu-embedding-llm-v1时，生效
      */
     public $Instruction;
 
@@ -59,7 +59,7 @@ class GetEmbeddingRequest extends AbstractModel
      * @param array $Inputs 说明：需要 embedding 的文本
 备注：单条query最多2000个字符，总条数最多7条
      * @param string $TextType 说明：文本向量化的类型，为使得检索任务有更好的检索效果，建议区分查询文本（query）和文档文本（document）类型, 聚类、分类等对称任务可以不用特殊指定，采用系统默认值document即可。
-     * @param string $Instruction 说明：自定义任务指令词，当且仅当TextType=query时，生效
+     * @param string $Instruction 说明：自定义任务指令词，当且仅当TextType=query且Model为youtu-embedding-llm-v1时，生效
      */
     function __construct()
     {

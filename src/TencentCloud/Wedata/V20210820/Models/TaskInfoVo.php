@@ -60,17 +60,19 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineType(string $EngineType) 设置引擎类型，DLC、EMR
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEngineName() 获取引擎名称
+ * @method string getEngineName() 获取引擎名称。在wedata侧若获取不到引擎名，则是wedata侧自动生成的标识，与集群侧的引擎名有可能不一致
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineName(string $EngineName) 设置引擎名称
+ * @method void setEngineName(string $EngineName) 设置引擎名称。在wedata侧若获取不到引擎名，则是wedata侧自动生成的标识，与集群侧的引擎名有可能不一致
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEngineSubType() 获取引擎子类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineSubType(string $EngineSubType) 设置引擎子类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEngineTaskId() 获取引擎taskId
+ * @method string getEngineTaskId() 获取引擎taskId，集成任务部分会使用资源组的资源运行任务，没有提交到引擎侧，所以没有引擎侧id
+
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineTaskId(string $EngineTaskId) 设置引擎taskId
+ * @method void setEngineTaskId(string $EngineTaskId) 设置引擎taskId，集成任务部分会使用资源组的资源运行任务，没有提交到引擎侧，所以没有引擎侧id
+
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEngineExeStatus() 获取引擎执行状态，枚举
 注意：此字段可能返回 null，表示取不到有效值。
@@ -91,6 +93,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getProductSource() 获取数据来源,DATA_INTEGRATION、DATA_EXPLORATION、DATA_QUALITY、OM_CENTER等
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductSource(string $ProductSource) 设置数据来源,DATA_INTEGRATION、DATA_EXPLORATION、DATA_QUALITY、OM_CENTER等
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIntegrationType() 获取集成任务的任务类型，表明是读端还是写端，可选择READ、WRITE
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIntegrationType(string $IntegrationType) 设置集成任务的任务类型，表明是读端还是写端，可选择READ、WRITE
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskInfoVo extends AbstractModel
@@ -156,7 +162,7 @@ class TaskInfoVo extends AbstractModel
     public $EngineType;
 
     /**
-     * @var string 引擎名称
+     * @var string 引擎名称。在wedata侧若获取不到引擎名，则是wedata侧自动生成的标识，与集群侧的引擎名有可能不一致
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineName;
@@ -168,7 +174,8 @@ class TaskInfoVo extends AbstractModel
     public $EngineSubType;
 
     /**
-     * @var string 引擎taskId
+     * @var string 引擎taskId，集成任务部分会使用资源组的资源运行任务，没有提交到引擎侧，所以没有引擎侧id
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineTaskId;
@@ -204,6 +211,12 @@ class TaskInfoVo extends AbstractModel
     public $ProductSource;
 
     /**
+     * @var string 集成任务的任务类型，表明是读端还是写端，可选择READ、WRITE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IntegrationType;
+
+    /**
      * @param string $AppID 租户id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 项目id
@@ -224,11 +237,12 @@ class TaskInfoVo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineType 引擎类型，DLC、EMR
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EngineName 引擎名称
+     * @param string $EngineName 引擎名称。在wedata侧若获取不到引擎名，则是wedata侧自动生成的标识，与集群侧的引擎名有可能不一致
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineSubType 引擎子类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EngineTaskId 引擎taskId
+     * @param string $EngineTaskId 引擎taskId，集成任务部分会使用资源组的资源运行任务，没有提交到引擎侧，所以没有引擎侧id
+
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineExeStatus 引擎执行状态，枚举
 注意：此字段可能返回 null，表示取不到有效值。
@@ -239,6 +253,8 @@ class TaskInfoVo extends AbstractModel
      * @param string $EngineExeEndTime 引擎执行结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductSource 数据来源,DATA_INTEGRATION、DATA_EXPLORATION、DATA_QUALITY、OM_CENTER等
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IntegrationType 集成任务的任务类型，表明是读端还是写端，可选择READ、WRITE
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -324,6 +340,10 @@ class TaskInfoVo extends AbstractModel
 
         if (array_key_exists("ProductSource",$param) and $param["ProductSource"] !== null) {
             $this->ProductSource = $param["ProductSource"];
+        }
+
+        if (array_key_exists("IntegrationType",$param) and $param["IntegrationType"] !== null) {
+            $this->IntegrationType = $param["IntegrationType"];
         }
     }
 }

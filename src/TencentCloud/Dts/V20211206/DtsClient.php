@@ -101,7 +101,7 @@ use TencentCloud\Dts\V20211206\Models as Models;
  * @method Models\ResumeSyncJobResponse ResumeSyncJob(Models\ResumeSyncJobRequest $req) 重试同步任务，部分可恢复报错情况下，可通过该接口重试同步任务，可通过查询同步任务信息接口DescribeSyncJobs，获取操作后状态。
  * @method Models\SkipCheckItemResponse SkipCheckItem(Models\SkipCheckItemRequest $req) 本接口用于校验检查项不通过后，可进行跳过此校验项操作，后端将不再校验该项。任何校验步骤都是不应该跳过的，通过校验是能正确执行的前置条件。支持跳过的产品及链路的校验项可 [参考文档](https://cloud.tencent.com/document/product/571/61639)。
  * @method Models\SkipSyncCheckItemResponse SkipSyncCheckItem(Models\SkipSyncCheckItemRequest $req) 本接口用于校验检查项不通过后，可进行跳过此校验项操作，后端将不再校验该项。任何校验步骤都是不应该跳过的，通过校验是能正确执行的前置条件。支持跳过的产品及链路的校验项可 [参考文档](https://cloud.tencent.com/document/product/571/61639)。
- * @method Models\StartCompareResponse StartCompare(Models\StartCompareRequest $req) 启动一致性校验任务，启动之前需要先通过接口`CreateCompareTask` 创建一致性校验任务，启动后可通过接口`DescribeCompareTasks` 查询一致性校验任务列表来获得启动后的状态
+ * @method Models\StartCompareResponse StartCompare(Models\StartCompareRequest $req) 启动一致性校验任务，启动之前需要先通过接口 [CreateCompareTask](https://cloud.tencent.com/document/product/571/82093) 创建一致性校验任务，启动后可通过接口 [DescribeCompareTasks](https://cloud.tencent.com/document/product/571/82088) 查询一致性校验任务列表来获得启动后的状态
  * @method Models\StartMigrateJobResponse StartMigrateJob(Models\StartMigrateJobRequest $req) 本接口（StartMigrationJob）用于启动迁移任务。调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。
  * @method Models\StartModifySyncJobResponse StartModifySyncJob(Models\StartModifySyncJobRequest $req) 在查询修改对象的校验任务的结果中的status为success后、通过该接口开始修改配置流程
  * @method Models\StartSubscribeResponse StartSubscribe(Models\StartSubscribeRequest $req) 本接口(StartSubscribe)用于启动一个kafka版本的数据订阅实例。只有当订阅任务的状态为checkPass时，才能调用本接口。

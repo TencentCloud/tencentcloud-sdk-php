@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 磁盘售卖类型
  *
- * @method string getDeviceType() 获取磁盘对应的实例类型。仅支持单节点基础型和集群版。
- * @method void setDeviceType(string $DeviceType) 设置磁盘对应的实例类型。仅支持单节点基础型和集群版。
+ * @method string getDeviceType() 获取磁盘对应的实例类型。仅支持单节点（云盘）和云盘版。
+ * @method void setDeviceType(string $DeviceType) 设置磁盘对应的实例类型。仅支持单节点（云盘）和云盘版。
  * @method array getDiskType() 获取可以选择的磁盘类型列表。
  * @method void setDiskType(array $DiskType) 设置可以选择的磁盘类型列表。
  */
 class DiskTypeConfigItem extends AbstractModel
 {
     /**
-     * @var string 磁盘对应的实例类型。仅支持单节点基础型和集群版。
+     * @var string 磁盘对应的实例类型。仅支持单节点（云盘）和云盘版。
      */
     public $DeviceType;
 
@@ -38,7 +38,7 @@ class DiskTypeConfigItem extends AbstractModel
     public $DiskType;
 
     /**
-     * @param string $DeviceType 磁盘对应的实例类型。仅支持单节点基础型和集群版。
+     * @param string $DeviceType 磁盘对应的实例类型。仅支持单节点（云盘）和云盘版。
      * @param array $DiskType 可以选择的磁盘类型列表。
      */
     function __construct()

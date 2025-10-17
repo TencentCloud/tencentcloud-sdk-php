@@ -167,7 +167,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeRealTimeTaskSpeedResponse DescribeRealTimeTaskSpeed(Models\DescribeRealTimeTaskSpeedRequest $req) 实时任务同步速度趋势
  * @method Models\DescribeRealViewSchemaPageResponse DescribeRealViewSchemaPage(Models\DescribeRealViewSchemaPageRequest $req) 数据集成分页获取数据库SCHEMA信息
  * @method Models\DescribeRelatedTasksByTaskIdResponse DescribeRelatedTasksByTaskId(Models\DescribeRelatedTasksByTaskIdRequest $req) 根据任务ID分页查询任务绑定监听的事件
- * @method Models\DescribeReportTaskDetailResponse DescribeReportTaskDetail(Models\DescribeReportTaskDetailRequest $req) 查询上报任务详情
+ * @method Models\DescribeReportTaskDetailResponse DescribeReportTaskDetail(Models\DescribeReportTaskDetailRequest $req) 查询上报任务详情，注意：任务执行完后，任务详情上报存在10分钟的延迟，使用接口查询任务详情时需等待任务运行完10分钟后查询
  * @method Models\DescribeReportTaskListResponse DescribeReportTaskList(Models\DescribeReportTaskListRequest $req) 查询上报任务列表
  * @method Models\DescribeResourceManagePathTreesResponse DescribeResourceManagePathTrees(Models\DescribeResourceManagePathTreesRequest $req) 获取资源管理目录树
  * @method Models\DescribeRoleListResponse DescribeRoleList(Models\DescribeRoleListRequest $req) 获取角色列表信息

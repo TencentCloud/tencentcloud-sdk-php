@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkflowId(string $WorkflowId) 设置工作流id
  * @method string getProjectId() 获取项目id
  * @method void setProjectId(string $ProjectId) 设置项目id
+ * @method string getRequestFromSource() 获取请求来源，WEB 前端；CLIENT 客户端
+ * @method void setRequestFromSource(string $RequestFromSource) 设置请求来源，WEB 前端；CLIENT 客户端
  */
 class DescribeWorkflowCanvasInfoRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeWorkflowCanvasInfoRequest extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var string 请求来源，WEB 前端；CLIENT 客户端
+     */
+    public $RequestFromSource;
+
+    /**
      * @param string $WorkflowId 工作流id
      * @param string $ProjectId 项目id
+     * @param string $RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeWorkflowCanvasInfoRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("RequestFromSource",$param) and $param["RequestFromSource"] !== null) {
+            $this->RequestFromSource = $param["RequestFromSource"];
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProjectId() 获取项目id
  * @method void setProjectId(string $ProjectId) 设置项目id
- * @method array getUseUins() 获取用户id
- * @method void setUseUins(array $UseUins) 设置用户id
+ * @method array getUserUins() 获取用户id
+ * @method void setUserUins(array $UserUins) 设置用户id
  * @method array getRoleIds() 获取角色id
  * @method void setRoleIds(array $RoleIds) 设置角色id
  */
@@ -37,7 +37,7 @@ class CreateProjectMemberRequest extends AbstractModel
     /**
      * @var array 用户id
      */
-    public $UseUins;
+    public $UserUins;
 
     /**
      * @var array 角色id
@@ -46,7 +46,7 @@ class CreateProjectMemberRequest extends AbstractModel
 
     /**
      * @param string $ProjectId 项目id
-     * @param array $UseUins 用户id
+     * @param array $UserUins 用户id
      * @param array $RoleIds 角色id
      */
     function __construct()
@@ -66,8 +66,8 @@ class CreateProjectMemberRequest extends AbstractModel
             $this->ProjectId = $param["ProjectId"];
         }
 
-        if (array_key_exists("UseUins",$param) and $param["UseUins"] !== null) {
-            $this->UseUins = $param["UseUins"];
+        if (array_key_exists("UserUins",$param) and $param["UserUins"] !== null) {
+            $this->UserUins = $param["UserUins"];
         }
 
         if (array_key_exists("RoleIds",$param) and $param["RoleIds"] !== null) {

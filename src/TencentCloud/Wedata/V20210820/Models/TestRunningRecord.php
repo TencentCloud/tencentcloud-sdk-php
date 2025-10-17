@@ -80,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBucketName(string $BucketName) 设置结果或日志桶名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getErrorMessage() 获取错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setErrorMessage(string $ErrorMessage) 设置错误信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TestRunningRecord extends AbstractModel
 {
@@ -174,6 +178,12 @@ class TestRunningRecord extends AbstractModel
     public $BucketName;
 
     /**
+     * @var string 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ErrorMessage;
+
+    /**
      * @param string $StartTime 开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 结束时间
@@ -203,6 +213,8 @@ class TestRunningRecord extends AbstractModel
      * @param string $Region 结果或日志地域
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BucketName 结果或日志桶名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ErrorMessage 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -281,6 +293,10 @@ class TestRunningRecord extends AbstractModel
 
         if (array_key_exists("BucketName",$param) and $param["BucketName"] !== null) {
             $this->BucketName = $param["BucketName"];
+        }
+
+        if (array_key_exists("ErrorMessage",$param) and $param["ErrorMessage"] !== null) {
+            $this->ErrorMessage = $param["ErrorMessage"];
         }
     }
 }

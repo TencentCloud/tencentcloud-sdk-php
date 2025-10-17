@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifiedTime(string $ModifiedTime) 设置更新时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSpecification() 获取字段使用说明
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSpecification(string $Specification) 设置字段使用说明
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SearchColumnDocVO extends AbstractModel
 {
@@ -154,6 +158,12 @@ class SearchColumnDocVO extends AbstractModel
     public $ModifiedTime;
 
     /**
+     * @var string 字段使用说明
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Specification;
+
+    /**
      * @param string $Name 字段名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChineseName 字段中文名称
@@ -179,6 +189,8 @@ class SearchColumnDocVO extends AbstractModel
      * @param string $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifiedTime 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Specification 字段使用说明
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -244,6 +256,10 @@ class SearchColumnDocVO extends AbstractModel
 
         if (array_key_exists("ModifiedTime",$param) and $param["ModifiedTime"] !== null) {
             $this->ModifiedTime = $param["ModifiedTime"];
+        }
+
+        if (array_key_exists("Specification",$param) and $param["Specification"] !== null) {
+            $this->Specification = $param["Specification"];
         }
     }
 }

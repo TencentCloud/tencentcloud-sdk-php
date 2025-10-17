@@ -62,8 +62,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubGroupId(array $SubGroupId) 设置子上课班号
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStage() 获取用户的上台状态
- * @method void setStage(integer $Stage) 设置用户的上台状态
+ * @method integer getStage() 获取本堂课用户是否上过台。0 否；1 是
+ * @method void setStage(integer $Stage) 设置本堂课用户是否上过台。0 否；1 是
  * @method integer getCurrentState() 获取用户状态。0为未到，1为在线，2为离线，3为被踢，4为永久被踢，5为暂时掉线
  * @method void setCurrentState(integer $CurrentState) 设置用户状态。0为未到，1为在线，2为离线，3为被踢，4为永久被踢，5为暂时掉线
  */
@@ -167,7 +167,7 @@ class MemberRecord extends AbstractModel
     public $SubGroupId;
 
     /**
-     * @var integer 用户的上台状态
+     * @var integer 本堂课用户是否上过台。0 否；1 是
      */
     public $Stage;
 
@@ -198,7 +198,7 @@ class MemberRecord extends AbstractModel
      * @param string $GroupId 上课班号
      * @param array $SubGroupId 子上课班号
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Stage 用户的上台状态
+     * @param integer $Stage 本堂课用户是否上过台。0 否；1 是
      * @param integer $CurrentState 用户状态。0为未到，1为在线，2为离线，3为被踢，4为永久被踢，5为暂时掉线
      */
     function __construct()

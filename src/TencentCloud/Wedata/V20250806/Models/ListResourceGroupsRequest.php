@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListResourceGroups请求参数结构体
  *
- * @method string getType() 获取执行资源组类型，不能为空
+ * @method string getType() 获取执行资源组类型
 
 - Schedule --- 调度资源组
 - Integration --- 集成资源组
 - DataService -- 数据服务资源组
- * @method void setType(string $Type) 设置执行资源组类型，不能为空
+ * @method void setType(string $Type) 设置执行资源组类型
 
 - Schedule --- 调度资源组
 - Integration --- 集成资源组
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class ListResourceGroupsRequest extends AbstractModel
 {
     /**
-     * @var string 执行资源组类型，不能为空
+     * @var string 执行资源组类型
 
 - Schedule --- 调度资源组
 - Integration --- 集成资源组
@@ -78,7 +78,7 @@ class ListResourceGroupsRequest extends AbstractModel
     public $PageSize;
 
     /**
-     * @param string $Type 执行资源组类型，不能为空
+     * @param string $Type 执行资源组类型
 
 - Schedule --- 调度资源组
 - Integration --- 集成资源组

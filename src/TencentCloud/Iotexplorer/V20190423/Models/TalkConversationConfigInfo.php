@@ -18,7 +18,7 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TTS配置信息。
+ * 会话配置信息。
  *
  * @method integer getSessionTimeout() 获取会话超时（秒）
  * @method void setSessionTimeout(integer $SessionTimeout) 设置会话超时（秒）
@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdleDetection(TalkIdleDetectionConfigInfo $IdleDetection) 设置空闲检测配置
  * @method boolean getEmotionEnabled() 获取是否启用情绪识别
  * @method void setEmotionEnabled(boolean $EmotionEnabled) 设置是否启用情绪识别
+ * @method boolean getSemanticVADEnabled() 获取是否启用语义vad
+ * @method void setSemanticVADEnabled(boolean $SemanticVADEnabled) 设置是否启用语义vad
+ * @method boolean getNoiseFilterEnabled() 获取是否启用噪声过滤
+ * @method void setNoiseFilterEnabled(boolean $NoiseFilterEnabled) 设置是否启用噪声过滤
  */
 class TalkConversationConfigInfo extends AbstractModel
 {
@@ -59,11 +63,23 @@ class TalkConversationConfigInfo extends AbstractModel
     public $EmotionEnabled;
 
     /**
+     * @var boolean 是否启用语义vad
+     */
+    public $SemanticVADEnabled;
+
+    /**
+     * @var boolean 是否启用噪声过滤
+     */
+    public $NoiseFilterEnabled;
+
+    /**
      * @param integer $SessionTimeout 会话超时（秒）
      * @param boolean $InterruptionEnabled 允许打断
      * @param integer $MaxContextTokens 最大上下文
      * @param TalkIdleDetectionConfigInfo $IdleDetection 空闲检测配置
      * @param boolean $EmotionEnabled 是否启用情绪识别
+     * @param boolean $SemanticVADEnabled 是否启用语义vad
+     * @param boolean $NoiseFilterEnabled 是否启用噪声过滤
      */
     function __construct()
     {
@@ -97,6 +113,14 @@ class TalkConversationConfigInfo extends AbstractModel
 
         if (array_key_exists("EmotionEnabled",$param) and $param["EmotionEnabled"] !== null) {
             $this->EmotionEnabled = $param["EmotionEnabled"];
+        }
+
+        if (array_key_exists("SemanticVADEnabled",$param) and $param["SemanticVADEnabled"] !== null) {
+            $this->SemanticVADEnabled = $param["SemanticVADEnabled"];
+        }
+
+        if (array_key_exists("NoiseFilterEnabled",$param) and $param["NoiseFilterEnabled"] !== null) {
+            $this->NoiseFilterEnabled = $param["NoiseFilterEnabled"];
         }
     }
 }

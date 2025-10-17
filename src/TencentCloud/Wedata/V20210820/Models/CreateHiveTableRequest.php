@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivilege(integer $Privilege) 设置表权限 ，默认为0:项目共享;1:仅个人与管理员
  * @method string getProjectId() 获取项目Id
  * @method void setProjectId(string $ProjectId) 设置项目Id
+ * @method string getType() 获取数据库类型
+ * @method void setType(string $Type) 设置数据库类型
  * @method string getIncharge() 获取责任人
  * @method void setIncharge(string $Incharge) 设置责任人
  * @method string getDataOptimizationResource() 获取数据优化引擎
@@ -69,6 +71,11 @@ class CreateHiveTableRequest extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var string 数据库类型
+     */
+    public $Type;
+
+    /**
      * @var string 责任人
      */
     public $Incharge;
@@ -99,6 +106,7 @@ class CreateHiveTableRequest extends AbstractModel
      * @param string $DDLSql base64转码之后的建表语句
      * @param integer $Privilege 表权限 ，默认为0:项目共享;1:仅个人与管理员
      * @param string $ProjectId 项目Id
+     * @param string $Type 数据库类型
      * @param string $Incharge 责任人
      * @param string $DataOptimizationResource 数据优化引擎
      * @param string $SmartOptimizerWritten 是否开启数据优化
@@ -136,6 +144,10 @@ class CreateHiveTableRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
 
         if (array_key_exists("Incharge",$param) and $param["Incharge"] !== null) {

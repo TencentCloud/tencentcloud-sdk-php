@@ -224,6 +224,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDatasourceName() 获取数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatasourceName(string $DatasourceName) 设置数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDatabaseName() 获取数据库名称 
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatabaseName(string $DatabaseName) 设置数据库名称 
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFailMsg() 获取失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFailMsg(string $FailMsg) 设置失败原因
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Rule extends AbstractModel
 {
@@ -534,6 +546,24 @@ class Rule extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatasourceName;
+
+    /**
+     * @var string 数据库名称 
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatabaseName;
+
+    /**
+     * @var string 失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FailMsg;
+
+    /**
      * @param integer $RuleId 规则ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleGroupId 规则组ID
@@ -635,6 +665,12 @@ class Rule extends AbstractModel
      * @param string $ProjectName 项目名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DatasourceName 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DatabaseName 数据库名称 
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FailMsg 失败原因
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -856,6 +892,18 @@ class Rule extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("DatasourceName",$param) and $param["DatasourceName"] !== null) {
+            $this->DatasourceName = $param["DatasourceName"];
+        }
+
+        if (array_key_exists("DatabaseName",$param) and $param["DatabaseName"] !== null) {
+            $this->DatabaseName = $param["DatabaseName"];
+        }
+
+        if (array_key_exists("FailMsg",$param) and $param["FailMsg"] !== null) {
+            $this->FailMsg = $param["FailMsg"];
         }
     }
 }

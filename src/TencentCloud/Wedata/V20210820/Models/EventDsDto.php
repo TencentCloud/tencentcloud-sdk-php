@@ -76,6 +76,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectName(string $ProjectName) 设置项目名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getValidConsumeCount() 获取事件消费有效次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setValidConsumeCount(integer $ValidConsumeCount) 设置事件消费有效次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEventId() 获取事件id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEventId(string $EventId) 设置事件id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBundleId() 获取bundleId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBundleId(string $BundleId) 设置bundleId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBundleInfo() 获取bundle信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBundleInfo(string $BundleInfo) 设置bundle信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EventDsDto extends AbstractModel
 {
@@ -164,6 +180,30 @@ class EventDsDto extends AbstractModel
     public $ProjectName;
 
     /**
+     * @var integer 事件消费有效次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ValidConsumeCount;
+
+    /**
+     * @var string 事件id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EventId;
+
+    /**
+     * @var string bundleId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BundleId;
+
+    /**
+     * @var string bundle信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BundleInfo;
+
+    /**
      * @param string $Name 事件名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EventType 事件类型GENERAL、TIME_SERIES
@@ -191,6 +231,14 @@ class EventDsDto extends AbstractModel
      * @param string $ProjectId 项目id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectName 项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ValidConsumeCount 事件消费有效次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EventId 事件id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BundleId bundleId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BundleInfo bundle信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -265,6 +313,22 @@ class EventDsDto extends AbstractModel
 
         if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
             $this->ProjectName = $param["ProjectName"];
+        }
+
+        if (array_key_exists("ValidConsumeCount",$param) and $param["ValidConsumeCount"] !== null) {
+            $this->ValidConsumeCount = $param["ValidConsumeCount"];
+        }
+
+        if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
+            $this->EventId = $param["EventId"];
+        }
+
+        if (array_key_exists("BundleId",$param) and $param["BundleId"] !== null) {
+            $this->BundleId = $param["BundleId"];
+        }
+
+        if (array_key_exists("BundleInfo",$param) and $param["BundleInfo"] !== null) {
+            $this->BundleInfo = $param["BundleInfo"];
         }
     }
 }

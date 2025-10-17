@@ -137,7 +137,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置任务描述
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateUserName() 获取监控创建人
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateUserName(string $CreateUserName) 设置监控创建人
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleGroup extends AbstractModel
 {
@@ -317,6 +319,7 @@ class RuleGroup extends AbstractModel
 
     /**
      * @var string 监控创建人
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateUserName;
 
@@ -380,6 +383,7 @@ class RuleGroup extends AbstractModel
      * @param string $Description 任务描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateUserName 监控创建人
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

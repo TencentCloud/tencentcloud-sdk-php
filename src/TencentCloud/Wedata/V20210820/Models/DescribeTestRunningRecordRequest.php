@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置试运行记录最大创建结束时间
  * @method array getRecordIdList() 获取试运行记录id
  * @method void setRecordIdList(array $RecordIdList) 设置试运行记录id
+ * @method integer getPageSize() 获取分页大小
+ * @method void setPageSize(integer $PageSize) 设置分页大小
+ * @method integer getPageIndex() 获取分页索引
+ * @method void setPageIndex(integer $PageIndex) 设置分页索引
  */
 class DescribeTestRunningRecordRequest extends AbstractModel
 {
@@ -73,6 +77,16 @@ class DescribeTestRunningRecordRequest extends AbstractModel
     public $RecordIdList;
 
     /**
+     * @var integer 分页大小
+     */
+    public $PageSize;
+
+    /**
+     * @var integer 分页索引
+     */
+    public $PageIndex;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $TaskId 任务id
      * @param string $SearchWord 搜索关键词
@@ -80,6 +94,8 @@ class DescribeTestRunningRecordRequest extends AbstractModel
      * @param string $CreateTime 试运行记录创建时间
      * @param string $EndTime 试运行记录最大创建结束时间
      * @param array $RecordIdList 试运行记录id
+     * @param integer $PageSize 分页大小
+     * @param integer $PageIndex 分页索引
      */
     function __construct()
     {
@@ -120,6 +136,14 @@ class DescribeTestRunningRecordRequest extends AbstractModel
 
         if (array_key_exists("RecordIdList",$param) and $param["RecordIdList"] !== null) {
             $this->RecordIdList = $param["RecordIdList"];
+        }
+
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("PageIndex",$param) and $param["PageIndex"] !== null) {
+            $this->PageIndex = $param["PageIndex"];
         }
     }
 }

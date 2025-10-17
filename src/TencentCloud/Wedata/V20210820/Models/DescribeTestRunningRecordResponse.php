@@ -24,6 +24,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(array $Data) 设置编排空间试运行任务
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalPages() 获取总页数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalPages(integer $TotalPages) 设置总页数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalItems() 获取总条数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalItems(integer $TotalItems) 设置总条数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -36,12 +44,28 @@ class DescribeTestRunningRecordResponse extends AbstractModel
     public $Data;
 
     /**
+     * @var integer 总页数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TotalPages;
+
+    /**
+     * @var integer 总条数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TotalItems;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $Data 编排空间试运行任务
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalPages 总页数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalItems 总条数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -65,6 +89,14 @@ class DescribeTestRunningRecordResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Data, $obj);
             }
+        }
+
+        if (array_key_exists("TotalPages",$param) and $param["TotalPages"] !== null) {
+            $this->TotalPages = $param["TotalPages"];
+        }
+
+        if (array_key_exists("TotalItems",$param) and $param["TotalItems"] !== null) {
+            $this->TotalItems = $param["TotalItems"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

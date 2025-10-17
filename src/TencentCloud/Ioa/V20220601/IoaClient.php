@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Ioa\V20220601\Models as Models;
 
 /**
+ * @method Models\CreateDLPFileDetectTaskResponse CreateDLPFileDetectTask(Models\CreateDLPFileDetectTaskRequest $req) 创建文件鉴定任务，私有化调用path为：capi/DlpOpenApi/CreateDLPFileDetectTask
  * @method Models\CreateDLPFileDetectionTaskResponse CreateDLPFileDetectionTask(Models\CreateDLPFileDetectionTaskRequest $req) 提交送检任务
  * @method Models\CreateDeviceTaskResponse CreateDeviceTask(Models\CreateDeviceTaskRequest $req) 创建获取终端进程网络服务信息任务，私有化调用path为：capi/Assets/Device/DescribeDeviceInfo
  * @method Models\CreateDeviceVirtualGroupResponse CreateDeviceVirtualGroup(Models\CreateDeviceVirtualGroupRequest $req) 创建终端自定义分组，私有化调用path为：/capi/Assets/Device/CreateDeviceVirtualGroup
@@ -31,7 +32,10 @@ use TencentCloud\Ioa\V20220601\Models as Models;
  * @method Models\DescribeAggrSoftCategorySoftListResponse DescribeAggrSoftCategorySoftList(Models\DescribeAggrSoftCategorySoftListRequest $req) 聚合的分类软件列表
  * @method Models\DescribeAggrSoftDetailResponse DescribeAggrSoftDetail(Models\DescribeAggrSoftDetailRequest $req) 聚合的软件详情
  * @method Models\DescribeAggrSoftDeviceListResponse DescribeAggrSoftDeviceList(Models\DescribeAggrSoftDeviceListRequest $req) 聚合软件的已安装终端列表
+ * @method Models\DescribeDLPEdgeNodeGroupsResponse DescribeDLPEdgeNodeGroups(Models\DescribeDLPEdgeNodeGroupsRequest $req) 查询边缘节点分组，私有化调用path为：capi/Connectors/DescribeDLPEdgeNodeGroups
+ * @method Models\DescribeDLPEdgeNodesResponse DescribeDLPEdgeNodes(Models\DescribeDLPEdgeNodesRequest $req) 查询边缘节点列表，私有化调用path为：capi/DlpOpenApi/DescribeDLPEdgeNodes
  * @method Models\DescribeDLPFileDetectResultResponse DescribeDLPFileDetectResult(Models\DescribeDLPFileDetectResultRequest $req) webservice查询文件检测结果
+ * @method Models\DescribeDLPFileDetectTaskResultResponse DescribeDLPFileDetectTaskResult(Models\DescribeDLPFileDetectTaskResultRequest $req) 查询文件鉴定任务结果
  * @method Models\DescribeDeviceChildGroupsResponse DescribeDeviceChildGroups(Models\DescribeDeviceChildGroupsRequest $req) 查询设备组子分组详情，私有化调用path为：capi/Assets/Device/DescribeDeviceChildGroups
  * @method Models\DescribeDeviceDetailListResponse DescribeDeviceDetailList(Models\DescribeDeviceDetailListRequest $req) 基于软件查看终端详情列表,私有化调用path为：capi/Software/DescribeDeviceDetailList
  * @method Models\DescribeDeviceHardwareInfoListResponse DescribeDeviceHardwareInfoList(Models\DescribeDeviceHardwareInfoListRequest $req) 查询满足条件的查询终端硬件信息列表，私有化调用path为：/capi/Assets/Device/DescribeDeviceHardwareInfoList

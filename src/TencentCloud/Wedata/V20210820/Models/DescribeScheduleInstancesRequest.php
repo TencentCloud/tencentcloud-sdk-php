@@ -22,44 +22,78 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRequestFromSource() 获取请求来源，WEB 前端；CLIENT 客户端
  * @method void setRequestFromSource(string $RequestFromSource) 设置请求来源，WEB 前端；CLIENT 客户端
- * @method array getInstances() 获取实例列表
- * @method void setInstances(array $Instances) 设置实例列表
- * @method boolean getCheckFather() 获取检查父任务类型, true: 检查父任务; false: 不检查父任务 
- * @method void setCheckFather(boolean $CheckFather) 设置检查父任务类型, true: 检查父任务; false: 不检查父任务 
- * @method string getRerunType() 获取重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
- * @method void setRerunType(string $RerunType) 设置重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
- * @method string getDependentWay() 获取实例依赖方式, 1: 自依赖; 2: 任务依赖; 3: 自依赖及父子依赖 
- * @method void setDependentWay(string $DependentWay) 设置实例依赖方式, 1: 自依赖; 2: 任务依赖; 3: 自依赖及父子依赖 
- * @method boolean getSkipEventListening() 获取重跑忽略事件监听与否 
- * @method void setSkipEventListening(boolean $SkipEventListening) 设置重跑忽略事件监听与否 
- * @method string getSonInstanceType() 获取下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目
- * @method void setSonInstanceType(string $SonInstanceType) 设置下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目
+ * @method array getInstances() 获取【已废弃参数，新用户接入无需关注】
+实例列表过滤条件
+ * @method void setInstances(array $Instances) 设置【已废弃参数，新用户接入无需关注】
+实例列表过滤条件
+ * @method boolean getCheckFather() 获取【已废弃参数，新用户接入无需关注】
+检查父任务类型,  true: 检查父任务类型;  false: 不检查父任务类型
+ * @method void setCheckFather(boolean $CheckFather) 设置【已废弃参数，新用户接入无需关注】
+检查父任务类型,  true: 检查父任务类型;  false: 不检查父任务类型
+ * @method string getRerunType() 获取【已废弃参数，新用户接入无需关注】
+重跑类型, 1: 仅重跑当前实例; 2: 重跑当前实例及其子实例; 3: 仅重跑子实例
+ * @method void setRerunType(string $RerunType) 设置【已废弃参数，新用户接入无需关注】
+重跑类型, 1: 仅重跑当前实例; 2: 重跑当前实例及其子实例; 3: 仅重跑子实例
+ * @method string getDependentWay() 获取【已废弃参数，新用户接入无需关注】
+实例依赖方式, 1: 任务自依赖; 2: 任务上游依赖; 3: 自依赖及其上游依赖 
+ * @method void setDependentWay(string $DependentWay) 设置【已废弃参数，新用户接入无需关注】
+实例依赖方式, 1: 任务自依赖; 2: 任务上游依赖; 3: 自依赖及其上游依赖 
+ * @method boolean getSkipEventListening() 获取【已废弃参数，新用户接入无需关注】
+重跑时是否忽略事件监听
+ * @method void setSkipEventListening(boolean $SkipEventListening) 设置【已废弃参数，新用户接入无需关注】
+重跑时是否忽略事件监听
+ * @method string getSonInstanceType() 获取【已废弃参数，新用户接入无需关注】
+下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目
+ * @method void setSonInstanceType(string $SonInstanceType) 设置【已废弃参数，新用户接入无需关注】
+下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目
  * @method InstanceApiOpsRequest getSearchCondition() 获取查询条件
  * @method void setSearchCondition(InstanceApiOpsRequest $SearchCondition) 设置查询条件
- * @method string getOptType() 获取访问类型
- * @method void setOptType(string $OptType) 设置访问类型
- * @method string getOperatorName() 获取操作者名称
- * @method void setOperatorName(string $OperatorName) 设置操作者名称
- * @method string getOperatorId() 获取操作者id
- * @method void setOperatorId(string $OperatorId) 设置操作者id
- * @method string getProjectId() 获取项目id
- * @method void setProjectId(string $ProjectId) 设置项目id
- * @method string getProjectIdent() 获取项目标志
- * @method void setProjectIdent(string $ProjectIdent) 设置项目标志
- * @method string getProjectName() 获取项目名称
- * @method void setProjectName(string $ProjectName) 设置项目名称
- * @method integer getPageIndex() 获取索引页码
- * @method void setPageIndex(integer $PageIndex) 设置索引页码
- * @method integer getPageSize() 获取页面大小
- * @method void setPageSize(integer $PageSize) 设置页面大小
- * @method integer getCount() 获取数据总数
- * @method void setCount(integer $Count) 设置数据总数
- * @method ProjectBaseInfoOpsRequest getRequestBaseInfo() 获取基础请求信息
- * @method void setRequestBaseInfo(ProjectBaseInfoOpsRequest $RequestBaseInfo) 设置基础请求信息
- * @method boolean getIsCount() 获取是否计算总数
- * @method void setIsCount(boolean $IsCount) 设置是否计算总数
- * @method array getProjectIds() 获取项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错
- * @method void setProjectIds(array $ProjectIds) 设置项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错
+ * @method string getOptType() 获取【已废弃参数，新用户接入无需关注】
+访问类型
+ * @method void setOptType(string $OptType) 设置【已废弃参数，新用户接入无需关注】
+访问类型
+ * @method string getOperatorName() 获取【已废弃参数，新用户接入无需关注】
+操作者名称
+ * @method void setOperatorName(string $OperatorName) 设置【已废弃参数，新用户接入无需关注】
+操作者名称
+ * @method string getOperatorId() 获取【已废弃参数，新用户接入无需关注】
+操作者id
+ * @method void setOperatorId(string $OperatorId) 设置【已废弃参数，新用户接入无需关注】
+操作者id
+ * @method string getProjectId() 获取项目ID
+ * @method void setProjectId(string $ProjectId) 设置项目ID
+ * @method string getProjectIdent() 获取【必要参数】
+项目ID
+ * @method void setProjectIdent(string $ProjectIdent) 设置【必要参数】
+项目ID
+ * @method string getProjectName() 获取【已废弃参数，新用户接入无需关注】
+项目名称
+ * @method void setProjectName(string $ProjectName) 设置【已废弃参数，新用户接入无需关注】
+项目名称
+ * @method integer getPageIndex() 获取【必要参数】
+分页查询开始页页码，默认值为 1
+ * @method void setPageIndex(integer $PageIndex) 设置【必要参数】
+分页查询开始页页码，默认值为 1
+ * @method integer getPageSize() 获取【必要参数】
+分页查询每页返回的结果行数，默认值为 10
+ * @method void setPageSize(integer $PageSize) 设置【必要参数】
+分页查询每页返回的结果行数，默认值为 10
+ * @method integer getCount() 获取【已废弃参数，新用户接入无需关注】
+数据总数
+ * @method void setCount(integer $Count) 设置【已废弃参数，新用户接入无需关注】
+数据总数
+ * @method ProjectBaseInfoOpsRequest getRequestBaseInfo() 获取【已废弃参数，新用户接入无需关注】
+基础请求信息
+ * @method void setRequestBaseInfo(ProjectBaseInfoOpsRequest $RequestBaseInfo) 设置【已废弃参数，新用户接入无需关注】
+基础请求信息
+ * @method boolean getIsCount() 获取【已废弃参数，新用户接入无需关注】
+是否计算总数
+ * @method void setIsCount(boolean $IsCount) 设置【已废弃参数，新用户接入无需关注】
+是否计算总数
+ * @method array getProjectIds() 获取【已废弃参数，新用户接入无需关注】
+项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错
+ * @method void setProjectIds(array $ProjectIds) 设置【已废弃参数，新用户接入无需关注】
+项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错
  */
 class DescribeScheduleInstancesRequest extends AbstractModel
 {
@@ -69,32 +103,38 @@ class DescribeScheduleInstancesRequest extends AbstractModel
     public $RequestFromSource;
 
     /**
-     * @var array 实例列表
+     * @var array 【已废弃参数，新用户接入无需关注】
+实例列表过滤条件
      */
     public $Instances;
 
     /**
-     * @var boolean 检查父任务类型, true: 检查父任务; false: 不检查父任务 
+     * @var boolean 【已废弃参数，新用户接入无需关注】
+检查父任务类型,  true: 检查父任务类型;  false: 不检查父任务类型
      */
     public $CheckFather;
 
     /**
-     * @var string 重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
+     * @var string 【已废弃参数，新用户接入无需关注】
+重跑类型, 1: 仅重跑当前实例; 2: 重跑当前实例及其子实例; 3: 仅重跑子实例
      */
     public $RerunType;
 
     /**
-     * @var string 实例依赖方式, 1: 自依赖; 2: 任务依赖; 3: 自依赖及父子依赖 
+     * @var string 【已废弃参数，新用户接入无需关注】
+实例依赖方式, 1: 任务自依赖; 2: 任务上游依赖; 3: 自依赖及其上游依赖 
      */
     public $DependentWay;
 
     /**
-     * @var boolean 重跑忽略事件监听与否 
+     * @var boolean 【已废弃参数，新用户接入无需关注】
+重跑时是否忽略事件监听
      */
     public $SkipEventListening;
 
     /**
-     * @var string 下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目
+     * @var string 【已废弃参数，新用户接入无需关注】
+下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目
      */
     public $SonInstanceType;
 
@@ -104,86 +144,114 @@ class DescribeScheduleInstancesRequest extends AbstractModel
     public $SearchCondition;
 
     /**
-     * @var string 访问类型
+     * @var string 【已废弃参数，新用户接入无需关注】
+访问类型
      */
     public $OptType;
 
     /**
-     * @var string 操作者名称
+     * @var string 【已废弃参数，新用户接入无需关注】
+操作者名称
      */
     public $OperatorName;
 
     /**
-     * @var string 操作者id
+     * @var string 【已废弃参数，新用户接入无需关注】
+操作者id
      */
     public $OperatorId;
 
     /**
-     * @var string 项目id
+     * @var string 项目ID
      */
     public $ProjectId;
 
     /**
-     * @var string 项目标志
+     * @var string 【必要参数】
+项目ID
      */
     public $ProjectIdent;
 
     /**
-     * @var string 项目名称
+     * @var string 【已废弃参数，新用户接入无需关注】
+项目名称
      */
     public $ProjectName;
 
     /**
-     * @var integer 索引页码
+     * @var integer 【必要参数】
+分页查询开始页页码，默认值为 1
      */
     public $PageIndex;
 
     /**
-     * @var integer 页面大小
+     * @var integer 【必要参数】
+分页查询每页返回的结果行数，默认值为 10
      */
     public $PageSize;
 
     /**
-     * @var integer 数据总数
+     * @var integer 【已废弃参数，新用户接入无需关注】
+数据总数
      */
     public $Count;
 
     /**
-     * @var ProjectBaseInfoOpsRequest 基础请求信息
+     * @var ProjectBaseInfoOpsRequest 【已废弃参数，新用户接入无需关注】
+基础请求信息
      */
     public $RequestBaseInfo;
 
     /**
-     * @var boolean 是否计算总数
+     * @var boolean 【已废弃参数，新用户接入无需关注】
+是否计算总数
      */
     public $IsCount;
 
     /**
-     * @var array 项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错
+     * @var array 【已废弃参数，新用户接入无需关注】
+项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错
      */
     public $ProjectIds;
 
     /**
      * @param string $RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
-     * @param array $Instances 实例列表
-     * @param boolean $CheckFather 检查父任务类型, true: 检查父任务; false: 不检查父任务 
-     * @param string $RerunType 重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
-     * @param string $DependentWay 实例依赖方式, 1: 自依赖; 2: 任务依赖; 3: 自依赖及父子依赖 
-     * @param boolean $SkipEventListening 重跑忽略事件监听与否 
-     * @param string $SonInstanceType 下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目
+     * @param array $Instances 【已废弃参数，新用户接入无需关注】
+实例列表过滤条件
+     * @param boolean $CheckFather 【已废弃参数，新用户接入无需关注】
+检查父任务类型,  true: 检查父任务类型;  false: 不检查父任务类型
+     * @param string $RerunType 【已废弃参数，新用户接入无需关注】
+重跑类型, 1: 仅重跑当前实例; 2: 重跑当前实例及其子实例; 3: 仅重跑子实例
+     * @param string $DependentWay 【已废弃参数，新用户接入无需关注】
+实例依赖方式, 1: 任务自依赖; 2: 任务上游依赖; 3: 自依赖及其上游依赖 
+     * @param boolean $SkipEventListening 【已废弃参数，新用户接入无需关注】
+重跑时是否忽略事件监听
+     * @param string $SonInstanceType 【已废弃参数，新用户接入无需关注】
+下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目
      * @param InstanceApiOpsRequest $SearchCondition 查询条件
-     * @param string $OptType 访问类型
-     * @param string $OperatorName 操作者名称
-     * @param string $OperatorId 操作者id
-     * @param string $ProjectId 项目id
-     * @param string $ProjectIdent 项目标志
-     * @param string $ProjectName 项目名称
-     * @param integer $PageIndex 索引页码
-     * @param integer $PageSize 页面大小
-     * @param integer $Count 数据总数
-     * @param ProjectBaseInfoOpsRequest $RequestBaseInfo 基础请求信息
-     * @param boolean $IsCount 是否计算总数
-     * @param array $ProjectIds 项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错
+     * @param string $OptType 【已废弃参数，新用户接入无需关注】
+访问类型
+     * @param string $OperatorName 【已废弃参数，新用户接入无需关注】
+操作者名称
+     * @param string $OperatorId 【已废弃参数，新用户接入无需关注】
+操作者id
+     * @param string $ProjectId 项目ID
+     * @param string $ProjectIdent 【必要参数】
+项目ID
+     * @param string $ProjectName 【已废弃参数，新用户接入无需关注】
+项目名称
+     * @param integer $PageIndex 【必要参数】
+分页查询开始页页码，默认值为 1
+     * @param integer $PageSize 【必要参数】
+分页查询每页返回的结果行数，默认值为 10
+     * @param integer $Count 【已废弃参数，新用户接入无需关注】
+数据总数
+     * @param ProjectBaseInfoOpsRequest $RequestBaseInfo 【已废弃参数，新用户接入无需关注】
+基础请求信息
+     * @param boolean $IsCount 【已废弃参数，新用户接入无需关注】
+是否计算总数
+     * @param array $ProjectIds 【已废弃参数，新用户接入无需关注】
+项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错
      */
     function __construct()
     {

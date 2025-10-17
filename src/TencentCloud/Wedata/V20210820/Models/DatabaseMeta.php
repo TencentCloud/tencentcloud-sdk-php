@@ -132,6 +132,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabaseGuid(string $DatabaseGuid) 设置库guid
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEnvironment() 获取环境，取值 prod或者 dev
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnvironment(string $Environment) 设置环境，取值 prod或者 dev
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getOwnerAccount() 获取Owner的账户信息：账号信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOwnerAccount(integer $OwnerAccount) 设置Owner的账户信息：账号信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method OperateOption getOperateOption() 获取操作权限
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOperateOption(OperateOption $OperateOption) 设置操作权限
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatabaseMeta extends AbstractModel
 {
@@ -304,6 +316,24 @@ class DatabaseMeta extends AbstractModel
     public $DatabaseGuid;
 
     /**
+     * @var string 环境，取值 prod或者 dev
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Environment;
+
+    /**
+     * @var integer Owner的账户信息：账号信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OwnerAccount;
+
+    /**
+     * @var OperateOption 操作权限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OperateOption;
+
+    /**
      * @param string $ProjectId 项目Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MetastoreType 技术类型
@@ -359,6 +389,12 @@ class DatabaseMeta extends AbstractModel
      * @param integer $LastAccessTimeByTables 库下表的最新访问时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatabaseGuid 库guid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Environment 环境，取值 prod或者 dev
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $OwnerAccount Owner的账户信息：账号信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperateOption $OperateOption 操作权限
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -489,6 +525,19 @@ class DatabaseMeta extends AbstractModel
 
         if (array_key_exists("DatabaseGuid",$param) and $param["DatabaseGuid"] !== null) {
             $this->DatabaseGuid = $param["DatabaseGuid"];
+        }
+
+        if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
+            $this->Environment = $param["Environment"];
+        }
+
+        if (array_key_exists("OwnerAccount",$param) and $param["OwnerAccount"] !== null) {
+            $this->OwnerAccount = $param["OwnerAccount"];
+        }
+
+        if (array_key_exists("OperateOption",$param) and $param["OperateOption"] !== null) {
+            $this->OperateOption = new OperateOption();
+            $this->OperateOption->deserialize($param["OperateOption"]);
         }
     }
 }

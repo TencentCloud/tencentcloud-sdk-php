@@ -28,21 +28,23 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineExeTime(string $EngineExeTime) 设置引擎执行时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getEngineExeTimes() 获取引擎执行总时间
+ * @method float getEngineExeTimeCost() 获取引擎执行总时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineExeTimes(integer $EngineExeTimes) 设置引擎执行总时间
+ * @method void setEngineExeTimeCost(float $EngineExeTimeCost) 设置引擎执行总时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCuConsume() 获取cu消耗
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCuConsume(integer $CuConsume) 设置cu消耗
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getResourceUsage() 获取资源消耗
+ * @method integer getResourceUsage() 获取该值表示任务预设资源，sql任务不需要预设资源，该值为-1
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceUsage(integer $ResourceUsage) 设置资源消耗
+ * @method void setResourceUsage(integer $ResourceUsage) 设置该值表示任务预设资源，sql任务不需要预设资源，该值为-1
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEngineName() 获取引擎名
+ * @method string getEngineName() 获取引擎名。在wedata侧若获取不到引擎名，则是wedata侧生成dlc标识，与dlc侧的引擎名存在不一致的情况
+
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineName(string $EngineName) 设置引擎名
+ * @method void setEngineName(string $EngineName) 设置引擎名。在wedata侧若获取不到引擎名，则是wedata侧生成dlc标识，与dlc侧的引擎名存在不一致的情况
+
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEngineExeStatus() 获取引擎执行状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -146,10 +148,10 @@ class EngineTaskInfo extends AbstractModel
     public $EngineExeTime;
 
     /**
-     * @var integer 引擎执行总时间
+     * @var float 引擎执行总时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $EngineExeTimes;
+    public $EngineExeTimeCost;
 
     /**
      * @var integer cu消耗
@@ -158,13 +160,14 @@ class EngineTaskInfo extends AbstractModel
     public $CuConsume;
 
     /**
-     * @var integer 资源消耗
+     * @var integer 该值表示任务预设资源，sql任务不需要预设资源，该值为-1
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceUsage;
 
     /**
-     * @var string 引擎名
+     * @var string 引擎名。在wedata侧若获取不到引擎名，则是wedata侧生成dlc标识，与dlc侧的引擎名存在不一致的情况
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineName;
@@ -293,13 +296,14 @@ class EngineTaskInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineExeTime 引擎执行时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $EngineExeTimes 引擎执行总时间
+     * @param float $EngineExeTimeCost 引擎执行总时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CuConsume cu消耗
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ResourceUsage 资源消耗
+     * @param integer $ResourceUsage 该值表示任务预设资源，sql任务不需要预设资源，该值为-1
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EngineName 引擎名
+     * @param string $EngineName 引擎名。在wedata侧若获取不到引擎名，则是wedata侧生成dlc标识，与dlc侧的引擎名存在不一致的情况
+
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineExeStatus 引擎执行状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -366,8 +370,8 @@ class EngineTaskInfo extends AbstractModel
             $this->EngineExeTime = $param["EngineExeTime"];
         }
 
-        if (array_key_exists("EngineExeTimes",$param) and $param["EngineExeTimes"] !== null) {
-            $this->EngineExeTimes = $param["EngineExeTimes"];
+        if (array_key_exists("EngineExeTimeCost",$param) and $param["EngineExeTimeCost"] !== null) {
+            $this->EngineExeTimeCost = $param["EngineExeTimeCost"];
         }
 
         if (array_key_exists("CuConsume",$param) and $param["CuConsume"] !== null) {

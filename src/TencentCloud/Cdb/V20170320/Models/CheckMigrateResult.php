@@ -18,7 +18,7 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 迁移集群版校验结果
+ * 迁移云盘版校验结果
  *
  * @method string getName() 获取校验名称
  * @method void setName(string $Name) 设置校验名称

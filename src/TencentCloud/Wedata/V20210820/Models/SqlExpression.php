@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParamExpressions(array $ParamExpressions) 设置sql表达式字段名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSystemTemplateExpressions() 获取新增模型检测类系统模板sql中占位符集合
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSystemTemplateExpressions(array $SystemTemplateExpressions) 设置新增模型检测类系统模板sql中占位符集合
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SqlExpression extends AbstractModel
 {
@@ -44,9 +48,17 @@ class SqlExpression extends AbstractModel
     public $ParamExpressions;
 
     /**
+     * @var array 新增模型检测类系统模板sql中占位符集合
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SystemTemplateExpressions;
+
+    /**
      * @param array $TableExpressions sql表达式表名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ParamExpressions sql表达式字段名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SystemTemplateExpressions 新增模型检测类系统模板sql中占位符集合
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -73,6 +85,10 @@ class SqlExpression extends AbstractModel
 
         if (array_key_exists("ParamExpressions",$param) and $param["ParamExpressions"] !== null) {
             $this->ParamExpressions = $param["ParamExpressions"];
+        }
+
+        if (array_key_exists("SystemTemplateExpressions",$param) and $param["SystemTemplateExpressions"] !== null) {
+            $this->SystemTemplateExpressions = $param["SystemTemplateExpressions"];
         }
     }
 }

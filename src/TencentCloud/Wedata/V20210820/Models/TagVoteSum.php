@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(boolean $Status) 设置当前用户对这张表是否加了该标签 true 已添加 false 未添加
  * @method string getTagName() 获取标签名
  * @method void setTagName(string $TagName) 设置标签名
+ * @method string getTagDesc() 获取标签描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagDesc(string $TagDesc) 设置标签描述
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TagVoteSum extends AbstractModel
 {
@@ -52,10 +56,18 @@ class TagVoteSum extends AbstractModel
     public $TagName;
 
     /**
+     * @var string 标签描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagDesc;
+
+    /**
      * @param integer $TagId 标签id
      * @param integer $VoteSum 该表该标签投票次数
      * @param boolean $Status 当前用户对这张表是否加了该标签 true 已添加 false 未添加
      * @param string $TagName 标签名
+     * @param string $TagDesc 标签描述
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ class TagVoteSum extends AbstractModel
 
         if (array_key_exists("TagName",$param) and $param["TagName"] !== null) {
             $this->TagName = $param["TagName"];
+        }
+
+        if (array_key_exists("TagDesc",$param) and $param["TagDesc"] !== null) {
+            $this->TagDesc = $param["TagDesc"];
         }
     }
 }

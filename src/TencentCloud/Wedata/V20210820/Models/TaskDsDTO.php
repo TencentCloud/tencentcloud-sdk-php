@@ -470,9 +470,9 @@ CI/CD工程生成的bundle唯一标识
  * @method void setBundleId(string $BundleId) 设置BundleId
 CI/CD工程生成的bundle唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBundleName() 获取Bundle名称
+ * @method string getBundleInfo() 获取bundle信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBundleName(string $BundleName) 设置Bundle名称
+ * @method void setBundleInfo(string $BundleInfo) 设置bundle信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskDsDTO extends AbstractModel
@@ -1111,10 +1111,10 @@ CI/CD工程生成的bundle唯一标识
     public $BundleId;
 
     /**
-     * @var string Bundle名称
+     * @var string bundle信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $BundleName;
+    public $BundleInfo;
 
     /**
      * @param string $TaskId 任务ID
@@ -1342,7 +1342,7 @@ CI/CD工程生成的bundle唯一标识
      * @param string $BundleId BundleId
 CI/CD工程生成的bundle唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BundleName Bundle名称
+     * @param string $BundleInfo bundle信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1813,8 +1813,8 @@ CI/CD工程生成的bundle唯一标识
             $this->BundleId = $param["BundleId"];
         }
 
-        if (array_key_exists("BundleName",$param) and $param["BundleName"] !== null) {
-            $this->BundleName = $param["BundleName"];
+        if (array_key_exists("BundleInfo",$param) and $param["BundleInfo"] !== null) {
+            $this->BundleInfo = $param["BundleInfo"];
         }
     }
 }

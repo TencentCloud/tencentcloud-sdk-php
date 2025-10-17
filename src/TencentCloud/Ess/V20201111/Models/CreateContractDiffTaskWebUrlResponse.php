@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 链接仅能使用一次
  * @method void setWebUrl(string $WebUrl) 设置合同对比嵌入式web页面链接，有效期：5分钟
 链接仅能使用一次
+ * @method string getUserData() 获取调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 1024长度。
+ * @method void setUserData(string $UserData) 设置调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 1024长度。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -46,6 +48,11 @@ class CreateContractDiffTaskWebUrlResponse extends AbstractModel
     public $WebUrl;
 
     /**
+     * @var string 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 1024长度。
+     */
+    public $UserData;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +62,7 @@ class CreateContractDiffTaskWebUrlResponse extends AbstractModel
 当`SkipFileUpload`参数为`true`时才会返回值，否则为空。
      * @param string $WebUrl 合同对比嵌入式web页面链接，有效期：5分钟
 链接仅能使用一次
+     * @param string $UserData 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 1024长度。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -76,6 +84,10 @@ class CreateContractDiffTaskWebUrlResponse extends AbstractModel
 
         if (array_key_exists("WebUrl",$param) and $param["WebUrl"] !== null) {
             $this->WebUrl = $param["WebUrl"];
+        }
+
+        if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
+            $this->UserData = $param["UserData"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

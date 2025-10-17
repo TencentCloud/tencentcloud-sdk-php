@@ -20,8 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 售卖实例类型
  *
- * @method string getTypeName() 获取售卖实例名称。Z3是高可用类型对应规格中的DeviceType包含UNIVERSAL,EXCLUSIVE；CVM是基础版类型对应规格中的DeviceType是BASIC；TKE是基础型v2类型对应规格中的DeviceType是BASIC_V2。
- * @method void setTypeName(string $TypeName) 设置售卖实例名称。Z3是高可用类型对应规格中的DeviceType包含UNIVERSAL,EXCLUSIVE；CVM是基础版类型对应规格中的DeviceType是BASIC；TKE是基础型v2类型对应规格中的DeviceType是BASIC_V2。
+ * @method string getTypeName() 获取售卖实例名称。
+Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。
+CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。
+TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。
+CLOUD_NATIVE_CLUSTER：表示云盘版标准型。
+CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。
+ECONOMICAL：表示经济型。
+ * @method void setTypeName(string $TypeName) 设置售卖实例名称。
+Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。
+CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。
+TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。
+CLOUD_NATIVE_CLUSTER：表示云盘版标准型。
+CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。
+ECONOMICAL：表示经济型。
  * @method array getEngineVersion() 获取引擎版本号
  * @method void setEngineVersion(array $EngineVersion) 设置引擎版本号
  * @method array getConfigIds() 获取售卖规格Id
@@ -30,7 +42,13 @@ use TencentCloud\Common\AbstractModel;
 class CdbSellType extends AbstractModel
 {
     /**
-     * @var string 售卖实例名称。Z3是高可用类型对应规格中的DeviceType包含UNIVERSAL,EXCLUSIVE；CVM是基础版类型对应规格中的DeviceType是BASIC；TKE是基础型v2类型对应规格中的DeviceType是BASIC_V2。
+     * @var string 售卖实例名称。
+Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。
+CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。
+TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。
+CLOUD_NATIVE_CLUSTER：表示云盘版标准型。
+CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。
+ECONOMICAL：表示经济型。
      */
     public $TypeName;
 
@@ -45,7 +63,13 @@ class CdbSellType extends AbstractModel
     public $ConfigIds;
 
     /**
-     * @param string $TypeName 售卖实例名称。Z3是高可用类型对应规格中的DeviceType包含UNIVERSAL,EXCLUSIVE；CVM是基础版类型对应规格中的DeviceType是BASIC；TKE是基础型v2类型对应规格中的DeviceType是BASIC_V2。
+     * @param string $TypeName 售卖实例名称。
+Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。
+CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。
+TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。
+CLOUD_NATIVE_CLUSTER：表示云盘版标准型。
+CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。
+ECONOMICAL：表示经济型。
      * @param array $EngineVersion 引擎版本号
      * @param array $ConfigIds 售卖规格Id
      */

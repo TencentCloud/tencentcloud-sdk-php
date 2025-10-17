@@ -93,20 +93,40 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDlcGroupName(string $DlcGroupName) 设置DLC资源组
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleGroupName() 获取任务名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleGroupName(string $RuleGroupName) 设置任务名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDatabaseName() 获取数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabaseName(string $DatabaseName) 设置数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSchemaName() 获取schema名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSchemaName(string $SchemaName) 设置schema名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTableName() 获取表名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableName(string $TableName) 设置表名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDatasourceId() 获取数据源id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatasourceId(string $DatasourceId) 设置数据源id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取任务描述
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置任务描述
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScheduleTimeZone() 获取时区
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置时区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method RuleGroupConfig getGroupConfig() 获取任务监控参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupConfig(RuleGroupConfig $GroupConfig) 设置任务监控参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEngineParam() 获取引擎参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEngineParam(string $EngineParam) 设置引擎参数
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleGroupExecStrategy extends AbstractModel
@@ -221,31 +241,37 @@ class RuleGroupExecStrategy extends AbstractModel
 
     /**
      * @var string 任务名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleGroupName;
 
     /**
      * @var string 数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatabaseName;
 
     /**
      * @var string schema名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SchemaName;
 
     /**
      * @var string 表名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableName;
 
     /**
      * @var string 数据源id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatasourceId;
 
     /**
      * @var string 任务描述
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -254,6 +280,18 @@ class RuleGroupExecStrategy extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduleTimeZone;
+
+    /**
+     * @var RuleGroupConfig 任务监控参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupConfig;
+
+    /**
+     * @var string 引擎参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EngineParam;
 
     /**
      * @param integer $RuleGroupId 规则组Id
@@ -293,12 +331,22 @@ class RuleGroupExecStrategy extends AbstractModel
      * @param string $DlcGroupName DLC资源组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleGroupName 任务名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatabaseName 数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SchemaName schema名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableName 表名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatasourceId 数据源id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 任务描述
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScheduleTimeZone 时区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleGroupConfig $GroupConfig 任务监控参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EngineParam 引擎参数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -417,6 +465,15 @@ class RuleGroupExecStrategy extends AbstractModel
 
         if (array_key_exists("ScheduleTimeZone",$param) and $param["ScheduleTimeZone"] !== null) {
             $this->ScheduleTimeZone = $param["ScheduleTimeZone"];
+        }
+
+        if (array_key_exists("GroupConfig",$param) and $param["GroupConfig"] !== null) {
+            $this->GroupConfig = new RuleGroupConfig();
+            $this->GroupConfig->deserialize($param["GroupConfig"]);
+        }
+
+        if (array_key_exists("EngineParam",$param) and $param["EngineParam"] !== null) {
+            $this->EngineParam = $param["EngineParam"];
         }
     }
 }

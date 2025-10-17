@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQrCode(string $QrCode) 设置二维码
  * @method string getDescription() 获取描述
  * @method void setDescription(string $Description) 设置描述
+ * @method string getRecordSubject() 获取认证主体
+ * @method void setRecordSubject(string $RecordSubject) 设置认证主体
+ * @method string getAccountAppid() 获取账号Appid
+ * @method void setAccountAppid(string $AccountAppid) 设置账号Appid
  */
 class DisplayWechatApplet extends AbstractModel
 {
@@ -73,6 +77,16 @@ class DisplayWechatApplet extends AbstractModel
     public $Description;
 
     /**
+     * @var string 认证主体
+     */
+    public $RecordSubject;
+
+    /**
+     * @var string 账号Appid
+     */
+    public $AccountAppid;
+
+    /**
      * @param integer $Id 主键ID
      * @param DisplayToolCommon $DisplayToolCommon 公共字段
      * @param string $Name 名称
@@ -80,6 +94,8 @@ class DisplayWechatApplet extends AbstractModel
      * @param string $AccountId 账号
      * @param string $QrCode 二维码
      * @param string $Description 描述
+     * @param string $RecordSubject 认证主体
+     * @param string $AccountAppid 账号Appid
      */
     function __construct()
     {
@@ -121,6 +137,14 @@ class DisplayWechatApplet extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("RecordSubject",$param) and $param["RecordSubject"] !== null) {
+            $this->RecordSubject = $param["RecordSubject"];
+        }
+
+        if (array_key_exists("AccountAppid",$param) and $param["AccountAppid"] !== null) {
+            $this->AccountAppid = $param["AccountAppid"];
         }
     }
 }

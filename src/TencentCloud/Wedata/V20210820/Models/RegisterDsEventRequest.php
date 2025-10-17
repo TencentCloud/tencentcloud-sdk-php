@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventBroadcastType(string $EventBroadcastType) 设置事件广播类型SINGLE、BROADCAST	
  * @method string getDimensionFormat() 获取时间格式	
  * @method void setDimensionFormat(string $DimensionFormat) 设置时间格式	
+ * @method integer getValidConsumeCount() 获取事件消费有效次数
+ * @method void setValidConsumeCount(integer $ValidConsumeCount) 设置事件消费有效次数
  */
 class RegisterDsEventRequest extends AbstractModel
 {
@@ -97,6 +99,11 @@ class RegisterDsEventRequest extends AbstractModel
     public $DimensionFormat;
 
     /**
+     * @var integer 事件消费有效次数
+     */
+    public $ValidConsumeCount;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $Name 事件名称
      * @param string $EventSubType 事件周期类型 1、分钟：MIN    2、小时 ：HOUR    3、天：DAY	
@@ -107,6 +114,7 @@ class RegisterDsEventRequest extends AbstractModel
      * @param string $EventType 事件类型GENERAL、TIME_SERIES
      * @param string $EventBroadcastType 事件广播类型SINGLE、BROADCAST	
      * @param string $DimensionFormat 时间格式	
+     * @param integer $ValidConsumeCount 事件消费有效次数
      */
     function __construct()
     {
@@ -159,6 +167,10 @@ class RegisterDsEventRequest extends AbstractModel
 
         if (array_key_exists("DimensionFormat",$param) and $param["DimensionFormat"] !== null) {
             $this->DimensionFormat = $param["DimensionFormat"];
+        }
+
+        if (array_key_exists("ValidConsumeCount",$param) and $param["ValidConsumeCount"] !== null) {
+            $this->ValidConsumeCount = $param["ValidConsumeCount"];
         }
     }
 }

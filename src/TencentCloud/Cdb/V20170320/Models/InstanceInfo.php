@@ -110,16 +110,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEngineType(string $EngineType) 设置引擎类型
  * @method integer getMaxDelayTime() 获取最大延迟阈值
  * @method void setMaxDelayTime(integer $MaxDelayTime) 设置最大延迟阈值
- * @method string getDiskType() 获取实例磁盘类型，仅云盘版实例才返回该值。可能的值为 CLOUD_SSD：SSD云硬盘， CLOUD_HSSD：增强型SSD云硬盘
- * @method void setDiskType(string $DiskType) 设置实例磁盘类型，仅云盘版实例才返回该值。可能的值为 CLOUD_SSD：SSD云硬盘， CLOUD_HSSD：增强型SSD云硬盘
+ * @method string getDiskType() 获取实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。
+说明：
+1. 若返回："DiskType": "CLOUD_HSSD"，则表示该实例磁盘类型为增强型 SSD 云硬盘。
+2. 若返回："DiskType": "CLOUD_SSD"，则表示该实例磁盘类型为 SSD 云硬盘。
+3. 若返回："DiskType": ""，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。
+ * @method void setDiskType(string $DiskType) 设置实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。
+说明：
+1. 若返回："DiskType": "CLOUD_HSSD"，则表示该实例磁盘类型为增强型 SSD 云硬盘。
+2. 若返回："DiskType": "CLOUD_SSD"，则表示该实例磁盘类型为 SSD 云硬盘。
+3. 若返回："DiskType": ""，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。
  * @method integer getExpandCpu() 获取当前扩容的CPU核心数。
  * @method void setExpandCpu(integer $ExpandCpu) 设置当前扩容的CPU核心数。
- * @method array getClusterInfo() 获取实例集群版节点信息
- * @method void setClusterInfo(array $ClusterInfo) 设置实例集群版节点信息
+ * @method array getClusterInfo() 获取云盘版实例节点信息
+ * @method void setClusterInfo(array $ClusterInfo) 设置云盘版实例节点信息
  * @method array getAnalysisNodeInfos() 获取分析引擎节点列表
  * @method void setAnalysisNodeInfos(array $AnalysisNodeInfos) 设置分析引擎节点列表
  * @method integer getDeviceBandwidth() 获取设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。
  * @method void setDeviceBandwidth(integer $DeviceBandwidth) 设置设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。
+ * @method string getDestroyProtect() 获取实例销毁保护状态，on表示开启保护，否则为关闭保护
+ * @method void setDestroyProtect(string $DestroyProtect) 设置实例销毁保护状态，on表示开启保护，否则为关闭保护
  */
 class InstanceInfo extends AbstractModel
 {
@@ -349,7 +359,11 @@ class InstanceInfo extends AbstractModel
     public $MaxDelayTime;
 
     /**
-     * @var string 实例磁盘类型，仅云盘版实例才返回该值。可能的值为 CLOUD_SSD：SSD云硬盘， CLOUD_HSSD：增强型SSD云硬盘
+     * @var string 实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。
+说明：
+1. 若返回："DiskType": "CLOUD_HSSD"，则表示该实例磁盘类型为增强型 SSD 云硬盘。
+2. 若返回："DiskType": "CLOUD_SSD"，则表示该实例磁盘类型为 SSD 云硬盘。
+3. 若返回："DiskType": ""，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。
      */
     public $DiskType;
 
@@ -359,7 +373,7 @@ class InstanceInfo extends AbstractModel
     public $ExpandCpu;
 
     /**
-     * @var array 实例集群版节点信息
+     * @var array 云盘版实例节点信息
      */
     public $ClusterInfo;
 
@@ -372,6 +386,11 @@ class InstanceInfo extends AbstractModel
      * @var integer 设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。
      */
     public $DeviceBandwidth;
+
+    /**
+     * @var string 实例销毁保护状态，on表示开启保护，否则为关闭保护
+     */
+    public $DestroyProtect;
 
     /**
      * @param integer $WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
@@ -419,11 +438,16 @@ class InstanceInfo extends AbstractModel
      * @param array $TagList 标签列表
      * @param string $EngineType 引擎类型
      * @param integer $MaxDelayTime 最大延迟阈值
-     * @param string $DiskType 实例磁盘类型，仅云盘版实例才返回该值。可能的值为 CLOUD_SSD：SSD云硬盘， CLOUD_HSSD：增强型SSD云硬盘
+     * @param string $DiskType 实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。
+说明：
+1. 若返回："DiskType": "CLOUD_HSSD"，则表示该实例磁盘类型为增强型 SSD 云硬盘。
+2. 若返回："DiskType": "CLOUD_SSD"，则表示该实例磁盘类型为 SSD 云硬盘。
+3. 若返回："DiskType": ""，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。
      * @param integer $ExpandCpu 当前扩容的CPU核心数。
-     * @param array $ClusterInfo 实例集群版节点信息
+     * @param array $ClusterInfo 云盘版实例节点信息
      * @param array $AnalysisNodeInfos 分析引擎节点列表
      * @param integer $DeviceBandwidth 设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。
+     * @param string $DestroyProtect 实例销毁保护状态，on表示开启保护，否则为关闭保护
      */
     function __construct()
     {
@@ -664,6 +688,10 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("DeviceBandwidth",$param) and $param["DeviceBandwidth"] !== null) {
             $this->DeviceBandwidth = $param["DeviceBandwidth"];
+        }
+
+        if (array_key_exists("DestroyProtect",$param) and $param["DestroyProtect"] !== null) {
+            $this->DestroyProtect = $param["DestroyProtect"];
         }
     }
 }

@@ -386,6 +386,10 @@ no：任务无需满足自依赖
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAllowRedoType() 获取允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
  * @method void setAllowRedoType(string $AllowRedoType) 设置允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
+ * @method string getOwnerId() 获取负责人Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOwnerId(string $OwnerId) 设置负责人Id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskOpsDto extends AbstractModel
 {
@@ -937,6 +941,12 @@ no：任务无需满足自依赖
     public $AllowRedoType;
 
     /**
+     * @var string 负责人Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OwnerId;
+
+    /**
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VirtualTaskId 虚拟任务id
@@ -1120,6 +1130,8 @@ yes： 任务需满足自依赖
 no：任务无需满足自依赖
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AllowRedoType 允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
+     * @param string $OwnerId 负责人Id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -1512,6 +1524,10 @@ no：任务无需满足自依赖
 
         if (array_key_exists("AllowRedoType",$param) and $param["AllowRedoType"] !== null) {
             $this->AllowRedoType = $param["AllowRedoType"];
+        }
+
+        if (array_key_exists("OwnerId",$param) and $param["OwnerId"] !== null) {
+            $this->OwnerId = $param["OwnerId"];
         }
     }
 }

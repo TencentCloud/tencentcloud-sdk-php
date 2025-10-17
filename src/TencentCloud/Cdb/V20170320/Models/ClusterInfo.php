@@ -18,7 +18,7 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 集群版节点信息
+ * 云盘版节点信息
  *
  * @method string getNodeId() 获取节点id
  * @method void setNodeId(string $NodeId) 设置节点id

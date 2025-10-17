@@ -74,6 +74,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSortItem(string $SortItem) 设置排序字段
  * @method string getSortType() 获取排序顺序
  * @method void setSortType(string $SortType) 设置排序顺序
+ * @method string getConsumeCount() 获取有效次数
+ * @method void setConsumeCount(string $ConsumeCount) 设置有效次数
  */
 class DescribeEventCasesRequest extends AbstractModel
 {
@@ -184,6 +186,11 @@ class DescribeEventCasesRequest extends AbstractModel
     public $SortType;
 
     /**
+     * @var string 有效次数
+     */
+    public $ConsumeCount;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $Category 事件实例目录,示例取值:
 - 已过期: expired
@@ -211,6 +218,7 @@ class DescribeEventCasesRequest extends AbstractModel
      * @param string $TimeToLive 事件实例有效时间
      * @param string $SortItem 排序字段
      * @param string $SortType 排序顺序
+     * @param string $ConsumeCount 有效次数
      */
     function __construct()
     {
@@ -299,6 +307,10 @@ class DescribeEventCasesRequest extends AbstractModel
 
         if (array_key_exists("SortType",$param) and $param["SortType"] !== null) {
             $this->SortType = $param["SortType"];
+        }
+
+        if (array_key_exists("ConsumeCount",$param) and $param["ConsumeCount"] !== null) {
+            $this->ConsumeCount = $param["ConsumeCount"];
         }
     }
 }

@@ -75,7 +75,7 @@ use TencentCloud\Wedata\V20250806\Models as Models;
  * @method Models\GetSQLScriptResponse GetSQLScript(Models\GetSQLScriptRequest $req) 查询脚本详情
  * @method Models\GetTableResponse GetTable(Models\GetTableRequest $req) 查询表详情
  * @method Models\GetTableColumnsResponse GetTableColumns(Models\GetTableColumnsRequest $req) 查询表所有字段列表
- * @method Models\GetTaskResponse GetTask(Models\GetTaskRequest $req) 创建任务接口
+ * @method Models\GetTaskResponse GetTask(Models\GetTaskRequest $req) 获取任务详情接口
  * @method Models\GetTaskCodeResponse GetTaskCode(Models\GetTaskCodeRequest $req) 获取任务代码
  * @method Models\GetTaskInstanceResponse GetTaskInstance(Models\GetTaskInstanceRequest $req) 调度实例详情
  * @method Models\GetTaskInstanceLogResponse GetTaskInstanceLog(Models\GetTaskInstanceLogRequest $req) 获取实例列表
@@ -139,9 +139,9 @@ use TencentCloud\Wedata\V20250806\Models as Models;
  * @method Models\UpdateResourceGroupResponse UpdateResourceGroup(Models\UpdateResourceGroupRequest $req) 该接口用于变配/续费资源
  * @method Models\UpdateSQLFolderResponse UpdateSQLFolder(Models\UpdateSQLFolderRequest $req) 重命名SQL文件夹
  * @method Models\UpdateSQLScriptResponse UpdateSQLScript(Models\UpdateSQLScriptRequest $req) 保存探索脚本内容
- * @method Models\UpdateTaskResponse UpdateTask(Models\UpdateTaskRequest $req) 创建任务接口
+ * @method Models\UpdateTaskResponse UpdateTask(Models\UpdateTaskRequest $req) 更新任务接口
  * @method Models\UpdateWorkflowResponse UpdateWorkflow(Models\UpdateWorkflowRequest $req) 更新工作流（包括工作流基本信息与工作流参数）
- * @method Models\UpdateWorkflowFolderResponse UpdateWorkflowFolder(Models\UpdateWorkflowFolderRequest $req) 创建文件夹
+ * @method Models\UpdateWorkflowFolderResponse UpdateWorkflowFolder(Models\UpdateWorkflowFolderRequest $req) 更新工作流文件夹
  */
 
 class WedataClient extends AbstractClient

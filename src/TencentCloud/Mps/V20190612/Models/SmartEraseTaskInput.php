@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRawParameter(RawSmartEraseParameter $RawParameter) 设置智能擦除自定义参数，当 Definition 填 0 时有效。 该参数用于高度定制场景，建议您优先使用 Definition 指定智能擦除参数。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method OverrideEraseParameter getOverrideParameter() 获取智能擦除自定义参数，当 Definition 不填 0 时有效。 当填写了该结构中的部分擦除参数时，将使用填写的参数覆盖智能擦除模板中的参数。 该参数用于高度定制场景，建议您仅使用 Definition 指定智能擦除参数。
+ * @method void setOverrideParameter(OverrideEraseParameter $OverrideParameter) 设置智能擦除自定义参数，当 Definition 不填 0 时有效。 当填写了该结构中的部分擦除参数时，将使用填写的参数覆盖智能擦除模板中的参数。 该参数用于高度定制场景，建议您仅使用 Definition 指定智能擦除参数。
  * @method TaskOutputStorage getOutputStorage() 获取文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置文件的目标存储，不填则继承上层的 OutputStorage 值。
@@ -63,6 +65,11 @@ class SmartEraseTaskInput extends AbstractModel
     public $RawParameter;
 
     /**
+     * @var OverrideEraseParameter 智能擦除自定义参数，当 Definition 不填 0 时有效。 当填写了该结构中的部分擦除参数时，将使用填写的参数覆盖智能擦除模板中的参数。 该参数用于高度定制场景，建议您仅使用 Definition 指定智能擦除参数。
+     */
+    public $OverrideParameter;
+
+    /**
      * @var TaskOutputStorage 文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -85,6 +92,7 @@ class SmartEraseTaskInput extends AbstractModel
      * @param integer $Definition 智能擦除模板id。
      * @param RawSmartEraseParameter $RawParameter 智能擦除自定义参数，当 Definition 填 0 时有效。 该参数用于高度定制场景，建议您优先使用 Definition 指定智能擦除参数。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param OverrideEraseParameter $OverrideParameter 智能擦除自定义参数，当 Definition 不填 0 时有效。 当填写了该结构中的部分擦除参数时，将使用填写的参数覆盖智能擦除模板中的参数。 该参数用于高度定制场景，建议您仅使用 Definition 指定智能擦除参数。
      * @param TaskOutputStorage $OutputStorage 文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OutputObjectPath 文件的输出路径，可以为相对路径或者绝对路径。
@@ -117,6 +125,11 @@ class SmartEraseTaskInput extends AbstractModel
         if (array_key_exists("RawParameter",$param) and $param["RawParameter"] !== null) {
             $this->RawParameter = new RawSmartEraseParameter();
             $this->RawParameter->deserialize($param["RawParameter"]);
+        }
+
+        if (array_key_exists("OverrideParameter",$param) and $param["OverrideParameter"] !== null) {
+            $this->OverrideParameter = new OverrideEraseParameter();
+            $this->OverrideParameter->deserialize($param["OverrideParameter"]);
         }
 
         if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {

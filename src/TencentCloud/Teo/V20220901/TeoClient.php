@@ -43,7 +43,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\CreateCustomizeErrorPageResponse CreateCustomizeErrorPage(Models\CreateCustomizeErrorPageRequest $req) 创建自定义错误页面。
  * @method Models\CreateDnsRecordResponse CreateDnsRecord(Models\CreateDnsRecordRequest $req) 在创建完站点后，并且站点为 NS 模式接入时，您可以通过本接口创建 DNS 记录。
  * @method Models\CreateFunctionResponse CreateFunction(Models\CreateFunctionRequest $req) 创建并部署边缘函数至 EdgeOne 的边缘节点。
- * @method Models\CreateFunctionRuleResponse CreateFunctionRule(Models\CreateFunctionRuleRequest $req) 创建边缘函数的触发规则。
+ * @method Models\CreateFunctionRuleResponse CreateFunctionRule(Models\CreateFunctionRuleRequest $req) 创建边缘函数的触发规则。支持通过自定义过滤条件来决定是否需要执行函数，当需要执行函数时，提供了多种选择目标函数的方式，包括：直接指定，基于客户端归属地区选择和基于权重选择。
  * @method Models\CreateJustInTimeTranscodeTemplateResponse CreateJustInTimeTranscodeTemplate(Models\CreateJustInTimeTranscodeTemplateRequest $req) 即时转码已经提供了预置转码模板，满足大部分的需求。如果有个性化的转码需求，可以通过本接口创建自定义的转码模板，最多可创建100个自定义转码模板。
 为了确保即时转码效果的一致性，避免因 EO 缓存或 M3U8 分片处理过程中的模板变更导致视频输出异常，模板在创建后不可进行修改。
 即时转码详细能力了解：[EdgeOne视频即时处理功能介绍](https://cloud.tencent.com/document/product/1552/111927)。
@@ -234,7 +234,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\ModifyDnsRecordsResponse ModifyDnsRecords(Models\ModifyDnsRecordsRequest $req) 您可以通过本接口批量修改 DNS 记录。
  * @method Models\ModifyDnsRecordsStatusResponse ModifyDnsRecordsStatus(Models\ModifyDnsRecordsStatusRequest $req) 您可以通过本接口批量修改 DNS 记录的状态，批量对记录进行开启和停用。
  * @method Models\ModifyFunctionResponse ModifyFunction(Models\ModifyFunctionRequest $req) 修改边缘函数，支持修改函数的内容及描述信息，修改且重新部署后，函数立刻生效。
- * @method Models\ModifyFunctionRuleResponse ModifyFunctionRule(Models\ModifyFunctionRuleRequest $req) 修改边缘函数触发规则，支持修改规则条件、执行函数以及描述信息。
+ * @method Models\ModifyFunctionRuleResponse ModifyFunctionRule(Models\ModifyFunctionRuleRequest $req) 修改边缘函数触发规则，支持修改规则条件、执行函数以及描述信息。您可以先通过 DescribeFunctionRules 接口来获取需要修改的规则的 RuleId，然后传入修改后的规则内容，原规则内容会被覆盖式更新。
  * @method Models\ModifyFunctionRulePriorityResponse ModifyFunctionRulePriority(Models\ModifyFunctionRulePriorityRequest $req) 修改边缘函数触发规则的优先级。
  * @method Models\ModifyHostsCertificateResponse ModifyHostsCertificate(Models\ModifyHostsCertificateRequest $req) 完成域名创建之后，您可以为域名配置自有证书，也可以使用 EdgeOne 为您提供的 [免费证书](https://cloud.tencent.com/document/product/1552/90437)。
 如果您需要配置自有证书，请先将证书上传至 [SSL证书控制台](https://console.cloud.tencent.com/certoverview)，然后在本接口中传入对应的证书 ID。详情参考 [部署自有证书至 EdgeOne 域名

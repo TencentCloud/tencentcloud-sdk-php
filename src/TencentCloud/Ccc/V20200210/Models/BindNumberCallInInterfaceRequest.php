@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNumber(string $Number) 设置待绑定的号码
  * @method Interface getCallInInterface() 获取待绑定的回调地址
  * @method void setCallInInterface(Interface $CallInInterface) 设置待绑定的回调地址
+ * @method string getNumberType() 获取绑定号码类型: inner: 内线号码 | number: 正常线路号码
+ * @method void setNumberType(string $NumberType) 设置绑定号码类型: inner: 内线号码 | number: 正常线路号码
  */
 class BindNumberCallInInterfaceRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class BindNumberCallInInterfaceRequest extends AbstractModel
     public $CallInInterface;
 
     /**
+     * @var string 绑定号码类型: inner: 内线号码 | number: 正常线路号码
+     */
+    public $NumberType;
+
+    /**
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param string $Number 待绑定的号码
      * @param Interface $CallInInterface 待绑定的回调地址
+     * @param string $NumberType 绑定号码类型: inner: 内线号码 | number: 正常线路号码
      */
     function __construct()
     {
@@ -73,6 +81,10 @@ class BindNumberCallInInterfaceRequest extends AbstractModel
         if (array_key_exists("CallInInterface",$param) and $param["CallInInterface"] !== null) {
             $this->CallInInterface = new Interface();
             $this->CallInInterface->deserialize($param["CallInInterface"]);
+        }
+
+        if (array_key_exists("NumberType",$param) and $param["NumberType"] !== null) {
+            $this->NumberType = $param["NumberType"];
         }
     }
 }

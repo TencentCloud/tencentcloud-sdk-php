@@ -47,6 +47,7 @@ use TencentCloud\Ioa\V20220601\Models as Models;
  * @method Models\DescribeSoftCensusListByDeviceResponse DescribeSoftCensusListByDevice(Models\DescribeSoftCensusListByDeviceRequest $req) 查看终端树下的软件列表,私有化调用path为：capi/Software/DescribeSoftCensusListByDevice
  * @method Models\DescribeSoftwareInformationResponse DescribeSoftwareInformation(Models\DescribeSoftwareInformationRequest $req) 查看指定终端的软件详情列表,私有化调用path为：capi/Software/DescribeSoftwareInformation
  * @method Models\DescribeVirtualDevicesResponse DescribeVirtualDevices(Models\DescribeVirtualDevicesRequest $req) 展示自定义分组终端列表，私有化调用path为：/capi/Assets/DescribeVirtualDevices
+ * @method Models\ExportDeviceDownloadTaskResponse ExportDeviceDownloadTask(Models\ExportDeviceDownloadTaskRequest $req) 创建终端导出任务，私有化调用path为：capi/Assets/Device/ExportDeviceDownloadTask
  * @method Models\ExportSoftwareInformationListResponse ExportSoftwareInformationList(Models\ExportSoftwareInformationListRequest $req) 导出基于指定终端查看软件信息详情列表查询,私有化调用path为：capi/Software/ExportSoftwareInformationList
  * @method Models\ModifyVirtualDeviceGroupsResponse ModifyVirtualDeviceGroups(Models\ModifyVirtualDeviceGroupsRequest $req) 终端自定义分组增减终端，私有化调用path为：/capi/Assets/Device/ModifyVirtualDeviceGroups
  */

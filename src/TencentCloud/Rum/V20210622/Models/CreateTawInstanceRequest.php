@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourcePackageNum(integer $ResourcePackageNum) 设置预付费资源包数量(仅预付费需要)
  * @method integer getInstanceType() 获取实例类型 1:原web相关类型 2:app端类型
  * @method void setInstanceType(integer $InstanceType) 设置实例类型 1:原web相关类型 2:app端类型
+ * @method integer getAutoRenewalType() 获取自动续费类型
+ * @method void setAutoRenewalType(integer $AutoRenewalType) 设置自动续费类型
+ * @method integer getAutoRenewalThreshold() 获取自动续费阈值
+ * @method void setAutoRenewalThreshold(integer $AutoRenewalThreshold) 设置自动续费阈值
  */
 class CreateTawInstanceRequest extends AbstractModel
 {
@@ -108,6 +112,16 @@ class CreateTawInstanceRequest extends AbstractModel
     public $InstanceType;
 
     /**
+     * @var integer 自动续费类型
+     */
+    public $AutoRenewalType;
+
+    /**
+     * @var integer 自动续费阈值
+     */
+    public $AutoRenewalThreshold;
+
+    /**
      * @param integer $AreaId 片区Id，(至少大于0)
      * @param integer $ChargeType 计费类型, (1=后付费)
      * @param integer $DataRetentionDays 数据保存时间，(至少大于0)
@@ -120,6 +134,8 @@ class CreateTawInstanceRequest extends AbstractModel
      * @param integer $ResourcePackageType 预付费资源包类型(仅预付费需要)
      * @param integer $ResourcePackageNum 预付费资源包数量(仅预付费需要)
      * @param integer $InstanceType 实例类型 1:原web相关类型 2:app端类型
+     * @param integer $AutoRenewalType 自动续费类型
+     * @param integer $AutoRenewalThreshold 自动续费阈值
      */
     function __construct()
     {
@@ -185,6 +201,14 @@ class CreateTawInstanceRequest extends AbstractModel
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
             $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("AutoRenewalType",$param) and $param["AutoRenewalType"] !== null) {
+            $this->AutoRenewalType = $param["AutoRenewalType"];
+        }
+
+        if (array_key_exists("AutoRenewalThreshold",$param) and $param["AutoRenewalThreshold"] !== null) {
+            $this->AutoRenewalThreshold = $param["AutoRenewalThreshold"];
         }
     }
 }

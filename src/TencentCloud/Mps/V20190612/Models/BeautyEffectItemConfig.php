@@ -21,8 +21,12 @@ use TencentCloud\Common\AbstractModel;
  * 美颜效果配置项
  *
  * @method string getType() 获取类型名称。取值如下：
-
 <li>Whiten：美白</li>
+<li>BlackAlpha1：美黑</li>
+<li>BlackAlpha2：较强美黑</li>
+<li>FoundationAlpha2：美白-粉白</li>
+<li>Clear：清晰度</li>
+<li>Sharpen：锐化</li>
 <li>Smooth：磨皮</li>
 <li>BeautyThinFace：瘦脸</li>
 <li>NatureFace：自然脸型</li>
@@ -32,12 +36,18 @@ use TencentCloud\Common\AbstractModel;
 <li>RemoveEyeBags：祛眼袋</li>
 <li>ThinNose：瘦鼻</li>
 <li>RemoveLawLine：祛法令纹</li>
+<li>CheekboneThin：瘦颧骨</li>
+<li>FaceFeatureLipsLut：口红</li>
 <li>ToothWhiten：牙齿美白</li>
-
-
+<li>FaceFeatureSoftlight：柔光</li>
+<li>Makeup：美妆</li>
  * @method void setType(string $Type) 设置类型名称。取值如下：
-
 <li>Whiten：美白</li>
+<li>BlackAlpha1：美黑</li>
+<li>BlackAlpha2：较强美黑</li>
+<li>FoundationAlpha2：美白-粉白</li>
+<li>Clear：清晰度</li>
+<li>Sharpen：锐化</li>
 <li>Smooth：磨皮</li>
 <li>BeautyThinFace：瘦脸</li>
 <li>NatureFace：自然脸型</li>
@@ -47,9 +57,11 @@ use TencentCloud\Common\AbstractModel;
 <li>RemoveEyeBags：祛眼袋</li>
 <li>ThinNose：瘦鼻</li>
 <li>RemoveLawLine：祛法令纹</li>
+<li>CheekboneThin：瘦颧骨</li>
+<li>FaceFeatureLipsLut：口红</li>
 <li>ToothWhiten：牙齿美白</li>
-
-
+<li>FaceFeatureSoftlight：柔光</li>
+<li>Makeup：美妆</li>
  * @method string getSwitch() 获取能力配置开关，可选值：
 <li>ON：开启；</li>
 <li>OFF：关闭。</li>
@@ -60,13 +72,21 @@ use TencentCloud\Common\AbstractModel;
 默认值：ON。
  * @method integer getValue() 获取效果强度，值范围：[0, 100]。
  * @method void setValue(integer $Value) 设置效果强度，值范围：[0, 100]。
+ * @method string getResourcePath() 获取附加资源路径。
+ * @method void setResourcePath(string $ResourcePath) 设置附加资源路径。
+ * @method string getExtInfo() 获取自定义参数。
+ * @method void setExtInfo(string $ExtInfo) 设置自定义参数。
  */
 class BeautyEffectItemConfig extends AbstractModel
 {
     /**
      * @var string 类型名称。取值如下：
-
 <li>Whiten：美白</li>
+<li>BlackAlpha1：美黑</li>
+<li>BlackAlpha2：较强美黑</li>
+<li>FoundationAlpha2：美白-粉白</li>
+<li>Clear：清晰度</li>
+<li>Sharpen：锐化</li>
 <li>Smooth：磨皮</li>
 <li>BeautyThinFace：瘦脸</li>
 <li>NatureFace：自然脸型</li>
@@ -76,9 +96,11 @@ class BeautyEffectItemConfig extends AbstractModel
 <li>RemoveEyeBags：祛眼袋</li>
 <li>ThinNose：瘦鼻</li>
 <li>RemoveLawLine：祛法令纹</li>
+<li>CheekboneThin：瘦颧骨</li>
+<li>FaceFeatureLipsLut：口红</li>
 <li>ToothWhiten：牙齿美白</li>
-
-
+<li>FaceFeatureSoftlight：柔光</li>
+<li>Makeup：美妆</li>
      */
     public $Type;
 
@@ -96,9 +118,23 @@ class BeautyEffectItemConfig extends AbstractModel
     public $Value;
 
     /**
-     * @param string $Type 类型名称。取值如下：
+     * @var string 附加资源路径。
+     */
+    public $ResourcePath;
 
+    /**
+     * @var string 自定义参数。
+     */
+    public $ExtInfo;
+
+    /**
+     * @param string $Type 类型名称。取值如下：
 <li>Whiten：美白</li>
+<li>BlackAlpha1：美黑</li>
+<li>BlackAlpha2：较强美黑</li>
+<li>FoundationAlpha2：美白-粉白</li>
+<li>Clear：清晰度</li>
+<li>Sharpen：锐化</li>
 <li>Smooth：磨皮</li>
 <li>BeautyThinFace：瘦脸</li>
 <li>NatureFace：自然脸型</li>
@@ -108,14 +144,18 @@ class BeautyEffectItemConfig extends AbstractModel
 <li>RemoveEyeBags：祛眼袋</li>
 <li>ThinNose：瘦鼻</li>
 <li>RemoveLawLine：祛法令纹</li>
+<li>CheekboneThin：瘦颧骨</li>
+<li>FaceFeatureLipsLut：口红</li>
 <li>ToothWhiten：牙齿美白</li>
-
-
+<li>FaceFeatureSoftlight：柔光</li>
+<li>Makeup：美妆</li>
      * @param string $Switch 能力配置开关，可选值：
 <li>ON：开启；</li>
 <li>OFF：关闭。</li>
 默认值：ON。
      * @param integer $Value 效果强度，值范围：[0, 100]。
+     * @param string $ResourcePath 附加资源路径。
+     * @param string $ExtInfo 自定义参数。
      */
     function __construct()
     {
@@ -140,6 +180,14 @@ class BeautyEffectItemConfig extends AbstractModel
 
         if (array_key_exists("Value",$param) and $param["Value"] !== null) {
             $this->Value = $param["Value"];
+        }
+
+        if (array_key_exists("ResourcePath",$param) and $param["ResourcePath"] !== null) {
+            $this->ResourcePath = $param["ResourcePath"];
+        }
+
+        if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
+            $this->ExtInfo = $param["ExtInfo"];
         }
     }
 }

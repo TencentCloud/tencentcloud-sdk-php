@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lighthouse\V20200324\Models;
+namespace TencentCloud\Ioa\V20220601\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SyncBlueprint返回参数结构体
+ * ExportDeviceDownloadTask返回参数结构体
  *
- * @method array getDestinationRegionBlueprintSet() 获取目标地域镜像信息。
- * @method void setDestinationRegionBlueprintSet(array $DestinationRegionBlueprintSet) 设置目标地域镜像信息。
+ * @method DeviceDownloadTask getData() 获取业务响应数据
+ * @method void setData(DeviceDownloadTask $Data) 设置业务响应数据
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class SyncBlueprintResponse extends AbstractModel
+class ExportDeviceDownloadTaskResponse extends AbstractModel
 {
     /**
-     * @var array 目标地域镜像信息。
+     * @var DeviceDownloadTask 业务响应数据
      */
-    public $DestinationRegionBlueprintSet;
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class SyncBlueprintResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DestinationRegionBlueprintSet 目标地域镜像信息。
+     * @param DeviceDownloadTask $Data 业务响应数据
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,13 +54,9 @@ class SyncBlueprintResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DestinationRegionBlueprintSet",$param) and $param["DestinationRegionBlueprintSet"] !== null) {
-            $this->DestinationRegionBlueprintSet = [];
-            foreach ($param["DestinationRegionBlueprintSet"] as $key => $value){
-                $obj = new DestinationRegionBlueprint();
-                $obj->deserialize($value);
-                array_push($this->DestinationRegionBlueprintSet, $obj);
-            }
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new DeviceDownloadTask();
+            $this->Data->deserialize($param["Data"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

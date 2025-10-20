@@ -20,27 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * redis top慢日志聚合详情。
  *
- * @method string getCmd() 获取命令模版。
- * @method void setCmd(string $Cmd) 设置命令模版。
+ * @method string getCmd() 获取命令模板。
+ * @method void setCmd(string $Cmd) 设置命令模板。
  * @method string getDetail() 获取命令详情。
  * @method void setDetail(string $Detail) 设置命令详情。
  * @method integer getExecTimes() 获取执行次数。
  * @method void setExecTimes(integer $ExecTimes) 设置执行次数。
- * @method float getQueryTime() 获取总耗时。
- * @method void setQueryTime(float $QueryTime) 设置总耗时。
- * @method float getQueryTimeAvg() 获取平均执行时间。
- * @method void setQueryTimeAvg(float $QueryTimeAvg) 设置平均执行时间。
- * @method float getQueryTimeMax() 获取最大执行时间。
- * @method void setQueryTimeMax(float $QueryTimeMax) 设置最大执行时间。
- * @method float getQueryTimeMin() 获取最小执行时间。
- * @method void setQueryTimeMin(float $QueryTimeMin) 设置最小执行时间。
- * @method float getQueryTimeRatio() 获取总耗时占比
- * @method void setQueryTimeRatio(float $QueryTimeRatio) 设置总耗时占比
+ * @method float getQueryTime() 获取总耗时。单位：s
+ * @method void setQueryTime(float $QueryTime) 设置总耗时。单位：s
+ * @method float getQueryTimeAvg() 获取平均执行时间。单位：s
+ * @method void setQueryTimeAvg(float $QueryTimeAvg) 设置平均执行时间。单位：s
+ * @method float getQueryTimeMax() 获取最大执行时间。单位：s
+ * @method void setQueryTimeMax(float $QueryTimeMax) 设置最大执行时间。单位：s
+ * @method float getQueryTimeMin() 获取最小执行时间。单位：s
+ * @method void setQueryTimeMin(float $QueryTimeMin) 设置最小执行时间。单位：s
+ * @method float getQueryTimeRatio() 获取总耗时占比。单位：%
+ * @method void setQueryTimeRatio(float $QueryTimeRatio) 设置总耗时占比。单位：%
  */
 class SlowLogAgg extends AbstractModel
 {
     /**
-     * @var string 命令模版。
+     * @var string 命令模板。
      */
     public $Cmd;
 
@@ -55,39 +55,39 @@ class SlowLogAgg extends AbstractModel
     public $ExecTimes;
 
     /**
-     * @var float 总耗时。
+     * @var float 总耗时。单位：s
      */
     public $QueryTime;
 
     /**
-     * @var float 平均执行时间。
+     * @var float 平均执行时间。单位：s
      */
     public $QueryTimeAvg;
 
     /**
-     * @var float 最大执行时间。
+     * @var float 最大执行时间。单位：s
      */
     public $QueryTimeMax;
 
     /**
-     * @var float 最小执行时间。
+     * @var float 最小执行时间。单位：s
      */
     public $QueryTimeMin;
 
     /**
-     * @var float 总耗时占比
+     * @var float 总耗时占比。单位：%
      */
     public $QueryTimeRatio;
 
     /**
-     * @param string $Cmd 命令模版。
+     * @param string $Cmd 命令模板。
      * @param string $Detail 命令详情。
      * @param integer $ExecTimes 执行次数。
-     * @param float $QueryTime 总耗时。
-     * @param float $QueryTimeAvg 平均执行时间。
-     * @param float $QueryTimeMax 最大执行时间。
-     * @param float $QueryTimeMin 最小执行时间。
-     * @param float $QueryTimeRatio 总耗时占比
+     * @param float $QueryTime 总耗时。单位：s
+     * @param float $QueryTimeAvg 平均执行时间。单位：s
+     * @param float $QueryTimeMax 最大执行时间。单位：s
+     * @param float $QueryTimeMin 最小执行时间。单位：s
+     * @param float $QueryTimeRatio 总耗时占比。单位：%
      */
     function __construct()
     {

@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lighthouse\V20200324\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SyncBlueprint返回参数结构体
+ * DescribeRoutePolicyEntries返回参数结构体
  *
- * @method array getDestinationRegionBlueprintSet() 获取目标地域镜像信息。
- * @method void setDestinationRegionBlueprintSet(array $DestinationRegionBlueprintSet) 设置目标地域镜像信息。
+ * @method array getRoutePolicyEntrySet() 获取路由接收策略条目列表。
+ * @method void setRoutePolicyEntrySet(array $RoutePolicyEntrySet) 设置路由接收策略条目列表。
+ * @method integer getTotalCount() 获取符合条件的实例数量。
+ * @method void setTotalCount(integer $TotalCount) 设置符合条件的实例数量。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class SyncBlueprintResponse extends AbstractModel
+class DescribeRoutePolicyEntriesResponse extends AbstractModel
 {
     /**
-     * @var array 目标地域镜像信息。
+     * @var array 路由接收策略条目列表。
      */
-    public $DestinationRegionBlueprintSet;
+    public $RoutePolicyEntrySet;
+
+    /**
+     * @var integer 符合条件的实例数量。
+     */
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class SyncBlueprintResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DestinationRegionBlueprintSet 目标地域镜像信息。
+     * @param array $RoutePolicyEntrySet 路由接收策略条目列表。
+     * @param integer $TotalCount 符合条件的实例数量。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,13 +62,17 @@ class SyncBlueprintResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DestinationRegionBlueprintSet",$param) and $param["DestinationRegionBlueprintSet"] !== null) {
-            $this->DestinationRegionBlueprintSet = [];
-            foreach ($param["DestinationRegionBlueprintSet"] as $key => $value){
-                $obj = new DestinationRegionBlueprint();
+        if (array_key_exists("RoutePolicyEntrySet",$param) and $param["RoutePolicyEntrySet"] !== null) {
+            $this->RoutePolicyEntrySet = [];
+            foreach ($param["RoutePolicyEntrySet"] as $key => $value){
+                $obj = new RoutePolicyEntry();
                 $obj->deserialize($value);
-                array_push($this->DestinationRegionBlueprintSet, $obj);
+                array_push($this->RoutePolicyEntrySet, $obj);
             }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

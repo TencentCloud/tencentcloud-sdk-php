@@ -60,11 +60,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBitrate(integer $Bitrate) 设置音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。 当取值为 0，表示音频码率和原始音频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSampleRate() 获取音频流的采样率，不同编码标准支持的采样率选项不同。详细参考[音频采样率支持范围文档](https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53)
+ * @method integer getSampleRate() 获取音频流的采样率，不同编码标准支持的采样率选项不同。填0代表使用源音频的采样率数值。
+详细参考[音频采样率支持范围文档](https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53)
 单位：Hz
 注意：请确保源音频流的采样率在上述选项范围内，否则可能导致转码失败！
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSampleRate(integer $SampleRate) 设置音频流的采样率，不同编码标准支持的采样率选项不同。详细参考[音频采样率支持范围文档](https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53)
+ * @method void setSampleRate(integer $SampleRate) 设置音频流的采样率，不同编码标准支持的采样率选项不同。填0代表使用源音频的采样率数值。
+详细参考[音频采样率支持范围文档](https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53)
 单位：Hz
 注意：请确保源音频流的采样率在上述选项范围内，否则可能导致转码失败！
 注意：此字段可能返回 null，表示取不到有效值。
@@ -116,7 +118,8 @@ class AudioTemplateInfoForUpdate extends AbstractModel
     public $Bitrate;
 
     /**
-     * @var integer 音频流的采样率，不同编码标准支持的采样率选项不同。详细参考[音频采样率支持范围文档](https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53)
+     * @var integer 音频流的采样率，不同编码标准支持的采样率选项不同。填0代表使用源音频的采样率数值。
+详细参考[音频采样率支持范围文档](https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53)
 单位：Hz
 注意：请确保源音频流的采样率在上述选项范围内，否则可能导致转码失败！
 注意：此字段可能返回 null，表示取不到有效值。
@@ -160,7 +163,8 @@ class AudioTemplateInfoForUpdate extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Bitrate 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。 当取值为 0，表示音频码率和原始音频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SampleRate 音频流的采样率，不同编码标准支持的采样率选项不同。详细参考[音频采样率支持范围文档](https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53)
+     * @param integer $SampleRate 音频流的采样率，不同编码标准支持的采样率选项不同。填0代表使用源音频的采样率数值。
+详细参考[音频采样率支持范围文档](https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53)
 单位：Hz
 注意：请确保源音频流的采样率在上述选项范围内，否则可能导致转码失败！
 注意：此字段可能返回 null，表示取不到有效值。

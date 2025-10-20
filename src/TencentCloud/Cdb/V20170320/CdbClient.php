@@ -137,6 +137,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\DescribeInstanceAlarmEventsResponse DescribeInstanceAlarmEvents(Models\DescribeInstanceAlarmEventsRequest $req) 本接口（DescribeInstanceAlarmEvents）用于查询实例发生的事件信息。
  * @method Models\DescribeInstanceParamRecordsResponse DescribeInstanceParamRecords(Models\DescribeInstanceParamRecordsRequest $req) 该接口（DescribeInstanceParamRecords）用于查询实例参数修改历史。
  * @method Models\DescribeInstanceParamsResponse DescribeInstanceParams(Models\DescribeInstanceParamsRequest $req) 该接口（DescribeInstanceParams）用于查询实例的参数列表。
+ * @method Models\DescribeInstancePasswordComplexityResponse DescribeInstancePasswordComplexity(Models\DescribeInstancePasswordComplexityRequest $req) 该接口（DescribeInstancePasswordComplexity）用于查询实例的密码复杂度参数列表。
  * @method Models\DescribeInstanceUpgradeCheckJobResponse DescribeInstanceUpgradeCheckJob(Models\DescribeInstanceUpgradeCheckJobRequest $req) 该接口（DescribeInstanceUpgradeCheckJob）查询实例版本升级校验任务。
  * @method Models\DescribeInstanceUpgradeTypeResponse DescribeInstanceUpgradeType(Models\DescribeInstanceUpgradeTypeRequest $req) 本接口（DescribeInstanceUpgradeType）用于查询数据库实例升级类型。
  * @method Models\DescribeLocalBinlogConfigResponse DescribeLocalBinlogConfig(Models\DescribeLocalBinlogConfigRequest $req) 该接口用于查询实例本地binlog保留策略。

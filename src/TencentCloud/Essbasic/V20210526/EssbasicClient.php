@@ -1026,10 +1026,10 @@ Agent参数中的OpenId 必须为审批者的openId，且链接必须由审批�
 <font color="red">此接口即将下线， 请使用新接口</font>  [查询渠道计费消耗情况](https://qian.tencent.com/developers/partnerApis/fee/ChannelDescribeBillUsageDetail)
 
 注: 此接口**每日限频50次**，若要扩大限制次数,请提前与客服经理或邮件至e-contract@tencent.com进行联系。
- * @method Models\DescribeUserFlowTypeResponse DescribeUserFlowType(Models\DescribeUserFlowTypeRequest $req) 查询用户模版类型，分为两种模式：
+ * @method Models\DescribeUserFlowTypeResponse DescribeUserFlowType(Models\DescribeUserFlowTypeRequest $req) 查询用户模板类型，分为两种模式：
 <ul>
-<li>QueryBindTemplate:false，查询用户合同模版类型，返回用户合同模版类型ID，用户合同模版类型名称，用户合同模版类型描述信息</li>
-<li>QueryBindTemplate:false，查询用户合同模版类型，返回用户合同模版类型ID，用户合同模版类型名称，用户合同模版类型描述信息，被绑定的模版数量</li>
+<li>QueryBindTemplate:false，查询用户合同模板类型，返回用户合同模板类型ID，用户合同模板类型名称，用户合同模板类型描述信息</li>
+<li>QueryBindTemplate:false，查询用户合同模板类型，返回用户合同模板类型ID，用户合同模板类型名称，用户合同模板类型描述信息，被绑定的模板数量</li>
 </ul>
  * @method Models\GetDownloadFlowUrlResponse GetDownloadFlowUrl(Models\GetDownloadFlowUrlRequest $req) 此接口（GetDownloadFlowUrl）用户获取合同控制台下载页面链接,  点击链接后会跳转至本企业合同管理控制台(会筛选出传入的合同列表), 点击**下载**按钮后就会下载传入的合同列表, 下载页面如下图
 ![image](https://dyn.ess.tencent.cn/guide/capi/channel_GetDownloadFlowUrl.png)

@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReconciliationExtInfo(array $ReconciliationExtInfo) 设置离线集成对账告警配置信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getMonitorWhiteTasks() 获取监控对象的白名单配置
+ * @method void setMonitorWhiteTasks(array $MonitorWhiteTasks) 设置监控对象的白名单配置
  */
 class AlarmRuleDetail extends AbstractModel
 {
@@ -102,6 +104,11 @@ class AlarmRuleDetail extends AbstractModel
     public $ReconciliationExtInfo;
 
     /**
+     * @var array 监控对象的白名单配置
+     */
+    public $MonitorWhiteTasks;
+
+    /**
      * @param integer $Trigger 失败触发时机 
 
 1 – 首次失败触发
@@ -120,6 +127,7 @@ class AlarmRuleDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ReconciliationExtInfo 离线集成对账告警配置信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $MonitorWhiteTasks 监控对象的白名单配置
      */
     function __construct()
     {
@@ -175,6 +183,15 @@ class AlarmRuleDetail extends AbstractModel
                 $obj = new ReconciliationStrategyInfo();
                 $obj->deserialize($value);
                 array_push($this->ReconciliationExtInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("MonitorWhiteTasks",$param) and $param["MonitorWhiteTasks"] !== null) {
+            $this->MonitorWhiteTasks = [];
+            foreach ($param["MonitorWhiteTasks"] as $key => $value){
+                $obj = new MonitorWhiteTask();
+                $obj->deserialize($value);
+                array_push($this->MonitorWhiteTasks, $obj);
             }
         }
     }

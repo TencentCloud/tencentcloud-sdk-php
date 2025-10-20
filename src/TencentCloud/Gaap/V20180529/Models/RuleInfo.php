@@ -41,10 +41,10 @@ use TencentCloud\Common\AbstractModel;
  * @method array getRealServerSet() 获取已绑定的源站相关信息
  * @method void setRealServerSet(array $RealServerSet) 设置已绑定的源站相关信息
  * @method integer getBindStatus() 获取源站的服务状态，0表示异常，1表示正常。
-未开启健康检查时，该状态始终未正常。
+未开启健康检查时，该状态始终为正常。
 只要有一个源站健康状态为异常时，该状态为异常，具体源站的状态请查看RealServerSet。
  * @method void setBindStatus(integer $BindStatus) 设置源站的服务状态，0表示异常，1表示正常。
-未开启健康检查时，该状态始终未正常。
+未开启健康检查时，该状态始终为正常。
 只要有一个源站健康状态为异常时，该状态为异常，具体源站的状态请查看RealServerSet。
  * @method string getForwardHost() 获取通道转发到源站的请求所携带的host，其中default表示直接转发接收到的host。
  * @method void setForwardHost(string $ForwardHost) 设置通道转发到源站的请求所携带的host，其中default表示直接转发接收到的host。
@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setForcedRedirect(string $ForcedRedirect) 设置强转HTTPS指示，当传递值为https:时表示强转为https
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getForwardProtocol() 获取七层转发规则的回源协议类型
+ * @method void setForwardProtocol(string $ForwardProtocol) 设置七层转发规则的回源协议类型
  */
 class RuleInfo extends AbstractModel
 {
@@ -115,7 +117,7 @@ class RuleInfo extends AbstractModel
 
     /**
      * @var integer 源站的服务状态，0表示异常，1表示正常。
-未开启健康检查时，该状态始终未正常。
+未开启健康检查时，该状态始终为正常。
 只要有一个源站健康状态为异常时，该状态为异常，具体源站的状态请查看RealServerSet。
      */
     public $BindStatus;
@@ -144,6 +146,11 @@ class RuleInfo extends AbstractModel
     public $ForcedRedirect;
 
     /**
+     * @var string 七层转发规则的回源协议类型
+     */
+    public $ForwardProtocol;
+
+    /**
      * @param string $RuleId 规则信息
      * @param string $ListenerId 监听器信息
      * @param string $Domain 规则域名
@@ -155,7 +162,7 @@ class RuleInfo extends AbstractModel
      * @param RuleCheckParams $CheckParams 健康检查相关参数
      * @param array $RealServerSet 已绑定的源站相关信息
      * @param integer $BindStatus 源站的服务状态，0表示异常，1表示正常。
-未开启健康检查时，该状态始终未正常。
+未开启健康检查时，该状态始终为正常。
 只要有一个源站健康状态为异常时，该状态为异常，具体源站的状态请查看RealServerSet。
      * @param string $ForwardHost 通道转发到源站的请求所携带的host，其中default表示直接转发接收到的host。
      * @param string $ServerNameIndicationSwitch 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
@@ -164,6 +171,7 @@ class RuleInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ForcedRedirect 强转HTTPS指示，当传递值为https:时表示强转为https
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ForwardProtocol 七层转发规则的回源协议类型
      */
     function __construct()
     {
@@ -242,6 +250,10 @@ class RuleInfo extends AbstractModel
 
         if (array_key_exists("ForcedRedirect",$param) and $param["ForcedRedirect"] !== null) {
             $this->ForcedRedirect = $param["ForcedRedirect"];
+        }
+
+        if (array_key_exists("ForwardProtocol",$param) and $param["ForwardProtocol"] !== null) {
+            $this->ForwardProtocol = $param["ForwardProtocol"];
         }
     }
 }

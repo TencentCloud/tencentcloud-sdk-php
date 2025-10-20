@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lighthouse\V20200324\Models;
+namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SyncBlueprint返回参数结构体
+ * DescribeInstancePasswordComplexity返回参数结构体
  *
- * @method array getDestinationRegionBlueprintSet() 获取目标地域镜像信息。
- * @method void setDestinationRegionBlueprintSet(array $DestinationRegionBlueprintSet) 设置目标地域镜像信息。
+ * @method integer getTotalCount() 获取实例的参数总数
+ * @method void setTotalCount(integer $TotalCount) 设置实例的参数总数
+ * @method array getItems() 获取参数详情
+ * @method void setItems(array $Items) 设置参数详情
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class SyncBlueprintResponse extends AbstractModel
+class DescribeInstancePasswordComplexityResponse extends AbstractModel
 {
     /**
-     * @var array 目标地域镜像信息。
+     * @var integer 实例的参数总数
      */
-    public $DestinationRegionBlueprintSet;
+    public $TotalCount;
+
+    /**
+     * @var array 参数详情
+     */
+    public $Items;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class SyncBlueprintResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DestinationRegionBlueprintSet 目标地域镜像信息。
+     * @param integer $TotalCount 实例的参数总数
+     * @param array $Items 参数详情
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,12 +62,16 @@ class SyncBlueprintResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DestinationRegionBlueprintSet",$param) and $param["DestinationRegionBlueprintSet"] !== null) {
-            $this->DestinationRegionBlueprintSet = [];
-            foreach ($param["DestinationRegionBlueprintSet"] as $key => $value){
-                $obj = new DestinationRegionBlueprint();
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
+            $this->Items = [];
+            foreach ($param["Items"] as $key => $value){
+                $obj = new ParameterDetail();
                 $obj->deserialize($value);
-                array_push($this->DestinationRegionBlueprintSet, $obj);
+                array_push($this->Items, $obj);
             }
         }
 

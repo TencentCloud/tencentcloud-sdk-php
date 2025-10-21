@@ -26,6 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSampleRate(integer $SampleRate) 设置抽样比例;范围0,100。默认为100
  * @method integer getThreadCount() 获取线程数，取值1-8，默认为1
  * @method void setThreadCount(integer $ThreadCount) 设置线程数，取值1-8，默认为1
+ * @method string getType() 获取对比类型：builtin（内置校验）、independent（独立校验）。默认为builtin，mongodb及redis链路不支持独立校验。
+ * @method void setType(string $Type) 设置对比类型：builtin（内置校验）、independent（独立校验）。默认为builtin，mongodb及redis链路不支持独立校验。
+ * @method array getCompareMode() 获取校验类型，枚举值：structureCheck-结构校验(目前仅postgresql支持)、full-全量校验、increment-增量校验(如果勾选了增量校验，Method只能选dataCheck)、advanceObject-数据库信息校验(目前仅mongodb支持) 
+ * @method void setCompareMode(array $CompareMode) 设置校验类型，枚举值：structureCheck-结构校验(目前仅postgresql支持)、full-全量校验、increment-增量校验(如果勾选了增量校验，Method只能选dataCheck)、advanceObject-数据库信息校验(目前仅mongodb支持) 
+ * @method integer getReCheckTime() 获取复检次数
+ * @method void setReCheckTime(integer $ReCheckTime) 设置复检次数
+ * @method integer getReCheckInterval() 获取复检时间间隔，单位为分钟，取值 1-60
+ * @method void setReCheckInterval(integer $ReCheckInterval) 设置复检时间间隔，单位为分钟，取值 1-60
  */
 class CompareOptions extends AbstractModel
 {
@@ -45,9 +53,33 @@ class CompareOptions extends AbstractModel
     public $ThreadCount;
 
     /**
+     * @var string 对比类型：builtin（内置校验）、independent（独立校验）。默认为builtin，mongodb及redis链路不支持独立校验。
+     */
+    public $Type;
+
+    /**
+     * @var array 校验类型，枚举值：structureCheck-结构校验(目前仅postgresql支持)、full-全量校验、increment-增量校验(如果勾选了增量校验，Method只能选dataCheck)、advanceObject-数据库信息校验(目前仅mongodb支持) 
+     */
+    public $CompareMode;
+
+    /**
+     * @var integer 复检次数
+     */
+    public $ReCheckTime;
+
+    /**
+     * @var integer 复检时间间隔，单位为分钟，取值 1-60
+     */
+    public $ReCheckInterval;
+
+    /**
      * @param string $Method 对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比), 默认为dataCheck
      * @param integer $SampleRate 抽样比例;范围0,100。默认为100
      * @param integer $ThreadCount 线程数，取值1-8，默认为1
+     * @param string $Type 对比类型：builtin（内置校验）、independent（独立校验）。默认为builtin，mongodb及redis链路不支持独立校验。
+     * @param array $CompareMode 校验类型，枚举值：structureCheck-结构校验(目前仅postgresql支持)、full-全量校验、increment-增量校验(如果勾选了增量校验，Method只能选dataCheck)、advanceObject-数据库信息校验(目前仅mongodb支持) 
+     * @param integer $ReCheckTime 复检次数
+     * @param integer $ReCheckInterval 复检时间间隔，单位为分钟，取值 1-60
      */
     function __construct()
     {
@@ -72,6 +104,22 @@ class CompareOptions extends AbstractModel
 
         if (array_key_exists("ThreadCount",$param) and $param["ThreadCount"] !== null) {
             $this->ThreadCount = $param["ThreadCount"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("CompareMode",$param) and $param["CompareMode"] !== null) {
+            $this->CompareMode = $param["CompareMode"];
+        }
+
+        if (array_key_exists("ReCheckTime",$param) and $param["ReCheckTime"] !== null) {
+            $this->ReCheckTime = $param["ReCheckTime"];
+        }
+
+        if (array_key_exists("ReCheckInterval",$param) and $param["ReCheckInterval"] !== null) {
+            $this->ReCheckInterval = $param["ReCheckInterval"];
         }
     }
 }

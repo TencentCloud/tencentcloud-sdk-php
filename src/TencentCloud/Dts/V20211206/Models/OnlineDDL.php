@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OnlineDDL类型
  *
- * @method string getStatus() 获取状态
- * @method void setStatus(string $Status) 设置状态
+ * @method string getStatus() 获取状态，ON-启用，OFF-不启用。
+ * @method void setStatus(string $Status) 设置状态，ON-启用，OFF-不启用。
  */
 class OnlineDDL extends AbstractModel
 {
     /**
-     * @var string 状态
+     * @var string 状态，ON-启用，OFF-不启用。
      */
     public $Status;
 
     /**
-     * @param string $Status 状态
+     * @param string $Status 状态，ON-启用，OFF-不启用。
      */
     function __construct()
     {

@@ -149,6 +149,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\DescribePrometheusZonesResponse DescribePrometheusZones(Models\DescribePrometheusZonesRequest $req) 列出 Prometheus 服务可用区。
  * @method Models\DescribeRecordingRulesResponse DescribeRecordingRules(Models\DescribeRecordingRulesRequest $req) 根据条件查询 Prometheus 预聚合规则
  * @method Models\DescribeRemoteURLsResponse DescribeRemoteURLs(Models\DescribeRemoteURLsRequest $req) 获取多写配置详情
+ * @method Models\DescribeRemoteWritesResponse DescribeRemoteWrites(Models\DescribeRemoteWritesRequest $req) 查询安装的 Agent 列表
  * @method Models\DescribeSSOAccountResponse DescribeSSOAccount(Models\DescribeSSOAccountRequest $req) 列出当前grafana实例的所有授权账号
  * @method Models\DescribeServiceDiscoveryResponse DescribeServiceDiscovery(Models\DescribeServiceDiscoveryRequest $req) 列出在腾讯云容器服务下创建的 Prometheus 服务发现。
 <p>注意：前提条件，已经通过 Prometheus 控制台集成了对应的腾讯云容器服务，具体请参考

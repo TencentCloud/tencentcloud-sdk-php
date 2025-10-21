@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ResetConsumerGroupOffset请求参数结构体
  *
- * @method string getSubscribeId() 获取订阅实例id
- * @method void setSubscribeId(string $SubscribeId) 设置订阅实例id
- * @method string getTopicName() 获取订阅的kafka topic
- * @method void setTopicName(string $TopicName) 设置订阅的kafka topic
- * @method string getConsumerGroupName() 获取消费组名称。实际的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}
- * @method void setConsumerGroupName(string $ConsumerGroupName) 设置消费组名称。实际的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}
- * @method array getPartitionNos() 获取需要修改offset的分区编号
- * @method void setPartitionNos(array $PartitionNos) 设置需要修改offset的分区编号
+ * @method string getSubscribeId() 获取订阅实例id，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+ * @method void setSubscribeId(string $SubscribeId) 设置订阅实例id，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+ * @method string getTopicName() 获取订阅的kafka topic，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+ * @method void setTopicName(string $TopicName) 设置订阅的kafka topic，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+ * @method string getConsumerGroupName() 获取消费组名称。实际的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}。可通过[DescribeConsumerGroups](https://cloud.tencent.com/document/api/571/102947)接口获取。
+ * @method void setConsumerGroupName(string $ConsumerGroupName) 设置消费组名称。实际的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}。可通过[DescribeConsumerGroups](https://cloud.tencent.com/document/api/571/102947)接口获取。
+ * @method array getPartitionNos() 获取需要修改offset的分区编号，可通过[DescribeOffsetByTime](https://cloud.tencent.com/document/api/571/102946)接口获取。
+ * @method void setPartitionNos(array $PartitionNos) 设置需要修改offset的分区编号，可通过[DescribeOffsetByTime](https://cloud.tencent.com/document/api/571/102946)接口获取。
  * @method string getResetMode() 获取重置方式。枚举值为 earliest-从最开始位置开始消费；latest-从最新位置开始消费；datetime-从指定时间前最近的checkpoint开始消费
  * @method void setResetMode(string $ResetMode) 设置重置方式。枚举值为 earliest-从最开始位置开始消费；latest-从最新位置开始消费；datetime-从指定时间前最近的checkpoint开始消费
  * @method string getResetDatetime() 获取当 ResetMode 为 datetime 时，该项需要填，格式为：Y-m-d h:m:s。如果不填，默认用0时间，效果与earliest相同。
@@ -36,22 +36,22 @@ use TencentCloud\Common\AbstractModel;
 class ResetConsumerGroupOffsetRequest extends AbstractModel
 {
     /**
-     * @var string 订阅实例id
+     * @var string 订阅实例id，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
      */
     public $SubscribeId;
 
     /**
-     * @var string 订阅的kafka topic
+     * @var string 订阅的kafka topic，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
      */
     public $TopicName;
 
     /**
-     * @var string 消费组名称。实际的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}
+     * @var string 消费组名称。实际的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}。可通过[DescribeConsumerGroups](https://cloud.tencent.com/document/api/571/102947)接口获取。
      */
     public $ConsumerGroupName;
 
     /**
-     * @var array 需要修改offset的分区编号
+     * @var array 需要修改offset的分区编号，可通过[DescribeOffsetByTime](https://cloud.tencent.com/document/api/571/102946)接口获取。
      */
     public $PartitionNos;
 
@@ -66,10 +66,10 @@ class ResetConsumerGroupOffsetRequest extends AbstractModel
     public $ResetDatetime;
 
     /**
-     * @param string $SubscribeId 订阅实例id
-     * @param string $TopicName 订阅的kafka topic
-     * @param string $ConsumerGroupName 消费组名称。实际的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}
-     * @param array $PartitionNos 需要修改offset的分区编号
+     * @param string $SubscribeId 订阅实例id，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+     * @param string $TopicName 订阅的kafka topic，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+     * @param string $ConsumerGroupName 消费组名称。实际的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}。可通过[DescribeConsumerGroups](https://cloud.tencent.com/document/api/571/102947)接口获取。
+     * @param array $PartitionNos 需要修改offset的分区编号，可通过[DescribeOffsetByTime](https://cloud.tencent.com/document/api/571/102946)接口获取。
      * @param string $ResetMode 重置方式。枚举值为 earliest-从最开始位置开始消费；latest-从最新位置开始消费；datetime-从指定时间前最近的checkpoint开始消费
      * @param string $ResetDatetime 当 ResetMode 为 datetime 时，该项需要填，格式为：Y-m-d h:m:s。如果不填，默认用0时间，效果与earliest相同。
      */

@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCompareTask请求参数结构体
  *
- * @method string getJobId() 获取任务 Id
- * @method void setJobId(string $JobId) 设置任务 Id
+ * @method string getJobId() 获取任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
+ * @method void setJobId(string $JobId) 设置任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
  * @method string getTaskName() 获取数据对比任务名称，若为空则默认给CompareTaskId相同值
  * @method void setTaskName(string $TaskName) 设置数据对比任务名称，若为空则默认给CompareTaskId相同值
  * @method string getObjectMode() 获取数据对比对象模式，sameAsMigrate(全部迁移对象， 默认为此项配置)，custom(自定义模式)
@@ -34,7 +36,8 @@ use TencentCloud\Common\AbstractModel;
 class CreateCompareTaskRequest extends AbstractModel
 {
     /**
-     * @var string 任务 Id
+     * @var string 任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      */
     public $JobId;
 
@@ -59,7 +62,8 @@ class CreateCompareTaskRequest extends AbstractModel
     public $Options;
 
     /**
-     * @param string $JobId 任务 Id
+     * @param string $JobId 任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      * @param string $TaskName 数据对比任务名称，若为空则默认给CompareTaskId相同值
      * @param string $ObjectMode 数据对比对象模式，sameAsMigrate(全部迁移对象， 默认为此项配置)，custom(自定义模式)
      * @param CompareObject $Objects 数据对比对象，当ObjectMode为custom时，此项需要填写。

@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePrometheusScrapeStatistics请求参数结构体
  *
+ * @method array getInstanceIds() 获取实例ID列表
+ * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表
  * @method string getJobType() 获取job 类型
  * @method void setJobType(string $JobType) 设置job 类型
  */
 class DescribePrometheusScrapeStatisticsRequest extends AbstractModel
 {
     /**
+     * @var array 实例ID列表
+     */
+    public $InstanceIds;
+
+    /**
      * @var string job 类型
      */
     public $JobType;
 
     /**
+     * @param array $InstanceIds 实例ID列表
      * @param string $JobType job 类型
      */
     function __construct()
@@ -46,6 +54,10 @@ class DescribePrometheusScrapeStatisticsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
+            $this->InstanceIds = $param["InstanceIds"];
+        }
+
         if (array_key_exists("JobType",$param) and $param["JobType"] !== null) {
             $this->JobType = $param["JobType"];
         }

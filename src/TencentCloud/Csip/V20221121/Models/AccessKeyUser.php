@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
 1 已开启
  * @method integer getCheckStatus() 获取0 表示已检测 1 表示检测中
  * @method void setCheckStatus(integer $CheckStatus) 设置0 表示已检测 1 表示检测中
+ * @method integer getCloudType() 获取云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
+ * @method void setCloudType(integer $CloudType) 设置云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
  */
 class AccessKeyUser extends AbstractModel
 {
@@ -175,6 +177,11 @@ class AccessKeyUser extends AbstractModel
     public $CheckStatus;
 
     /**
+     * @var integer 云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
+     */
+    public $CloudType;
+
+    /**
      * @param integer $ID 账号ID
      * @param string $Name 账号名称
      * @param integer $Type 0 主账号 1子账号
@@ -200,6 +207,7 @@ class AccessKeyUser extends AbstractModel
 0 未开启
 1 已开启
      * @param integer $CheckStatus 0 表示已检测 1 表示检测中
+     * @param integer $CloudType 云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
      */
     function __construct()
     {
@@ -298,6 +306,10 @@ class AccessKeyUser extends AbstractModel
 
         if (array_key_exists("CheckStatus",$param) and $param["CheckStatus"] !== null) {
             $this->CheckStatus = $param["CheckStatus"];
+        }
+
+        if (array_key_exists("CloudType",$param) and $param["CloudType"] !== null) {
+            $this->CloudType = $param["CloudType"];
         }
     }
 }

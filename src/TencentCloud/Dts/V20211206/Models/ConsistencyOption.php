@@ -22,6 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getMode() 获取一致性检测类型: full(全量检测迁移对象)、noCheck(不检测)、notConfigured(未配置)
  * @method void setMode(string $Mode) 设置一致性检测类型: full(全量检测迁移对象)、noCheck(不检测)、notConfigured(未配置)
+ * @method string getObjectMode() 获取校验对象选择。枚举值：sameAsMigrate-与迁移同步任务相同、custom-用户自定义，搭配Objects操作
+ * @method void setObjectMode(string $ObjectMode) 设置校验对象选择。枚举值：sameAsMigrate-与迁移同步任务相同、custom-用户自定义，搭配Objects操作
+ * @method DatabaseTableObject getObjects() 获取校验对象
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setObjects(DatabaseTableObject $Objects) 设置校验对象
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method CompareOptions getOptions() 获取校验配置
+ * @method void setOptions(CompareOptions $Options) 设置校验配置
  */
 class ConsistencyOption extends AbstractModel
 {
@@ -31,7 +39,27 @@ class ConsistencyOption extends AbstractModel
     public $Mode;
 
     /**
+     * @var string 校验对象选择。枚举值：sameAsMigrate-与迁移同步任务相同、custom-用户自定义，搭配Objects操作
+     */
+    public $ObjectMode;
+
+    /**
+     * @var DatabaseTableObject 校验对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Objects;
+
+    /**
+     * @var CompareOptions 校验配置
+     */
+    public $Options;
+
+    /**
      * @param string $Mode 一致性检测类型: full(全量检测迁移对象)、noCheck(不检测)、notConfigured(未配置)
+     * @param string $ObjectMode 校验对象选择。枚举值：sameAsMigrate-与迁移同步任务相同、custom-用户自定义，搭配Objects操作
+     * @param DatabaseTableObject $Objects 校验对象
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CompareOptions $Options 校验配置
      */
     function __construct()
     {
@@ -48,6 +76,20 @@ class ConsistencyOption extends AbstractModel
         }
         if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
             $this->Mode = $param["Mode"];
+        }
+
+        if (array_key_exists("ObjectMode",$param) and $param["ObjectMode"] !== null) {
+            $this->ObjectMode = $param["ObjectMode"];
+        }
+
+        if (array_key_exists("Objects",$param) and $param["Objects"] !== null) {
+            $this->Objects = new DatabaseTableObject();
+            $this->Objects->deserialize($param["Objects"]);
+        }
+
+        if (array_key_exists("Options",$param) and $param["Options"] !== null) {
+            $this->Options = new CompareOptions();
+            $this->Options->deserialize($param["Options"]);
         }
     }
 }

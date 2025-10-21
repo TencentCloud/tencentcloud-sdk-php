@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setArchId(string $ArchId) 设置架构ID
  * @method string getArchName() 获取架构名称
  * @method void setArchName(string $ArchName) 设置架构名称
+ * @method integer getTaskSource() 获取来源
+ * @method void setTaskSource(integer $TaskSource) 设置来源
  */
 class TaskListItem extends AbstractModel
 {
@@ -136,6 +138,11 @@ class TaskListItem extends AbstractModel
     public $ArchName;
 
     /**
+     * @var integer 来源
+     */
+    public $TaskSource;
+
+    /**
      * @param integer $TaskId 任务ID
      * @param string $TaskTitle 任务标题
      * @param string $TaskDescription 任务描述
@@ -152,6 +159,7 @@ class TaskListItem extends AbstractModel
      * @param integer $TaskStatusType 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
      * @param string $ArchId 架构ID
      * @param string $ArchName 架构名称
+     * @param integer $TaskSource 来源
      */
     function __construct()
     {
@@ -228,6 +236,10 @@ class TaskListItem extends AbstractModel
 
         if (array_key_exists("ArchName",$param) and $param["ArchName"] !== null) {
             $this->ArchName = $param["ArchName"];
+        }
+
+        if (array_key_exists("TaskSource",$param) and $param["TaskSource"] !== null) {
+            $this->TaskSource = $param["TaskSource"];
         }
     }
 }

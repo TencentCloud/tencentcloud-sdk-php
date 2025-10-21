@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCompareTasks请求参数结构体
  *
- * @method string getJobId() 获取迁移任务 Id
- * @method void setJobId(string $JobId) 设置迁移任务 Id
+ * @method string getJobId() 获取迁移任务 Id，可通过 [DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084) 接口获取。
+
+ * @method void setJobId(string $JobId) 设置迁移任务 Id，可通过 [DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084) 接口获取。
+
  * @method integer getLimit() 获取分页设置，表示每页显示多少条任务，默认为 20
  * @method void setLimit(integer $Limit) 设置分页设置，表示每页显示多少条任务，默认为 20
  * @method integer getOffset() 获取分页偏移量
@@ -34,7 +36,8 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCompareTasksRequest extends AbstractModel
 {
     /**
-     * @var string 迁移任务 Id
+     * @var string 迁移任务 Id，可通过 [DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084) 接口获取。
+
      */
     public $JobId;
 
@@ -59,7 +62,8 @@ class DescribeCompareTasksRequest extends AbstractModel
     public $Status;
 
     /**
-     * @param string $JobId 迁移任务 Id
+     * @param string $JobId 迁移任务 Id，可通过 [DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084) 接口获取。
+
      * @param integer $Limit 分页设置，表示每页显示多少条任务，默认为 20
      * @param integer $Offset 分页偏移量
      * @param string $CompareTaskId 校验任务 ID

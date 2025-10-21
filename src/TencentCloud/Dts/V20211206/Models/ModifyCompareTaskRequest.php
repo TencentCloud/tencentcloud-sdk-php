@@ -20,10 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCompareTask请求参数结构体
  *
- * @method string getJobId() 获取任务 Id
- * @method void setJobId(string $JobId) 设置任务 Id
- * @method string getCompareTaskId() 获取对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9
- * @method void setCompareTaskId(string $CompareTaskId) 设置对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9
+ * @method string getJobId() 获取任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
+ * @method void setJobId(string $JobId) 设置任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
+ * @method string getCompareTaskId() 获取对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
+ * @method void setCompareTaskId(string $CompareTaskId) 设置对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
  * @method string getTaskName() 获取任务名称
  * @method void setTaskName(string $TaskName) 设置任务名称
  * @method string getObjectMode() 获取数据对比对象模式，sameAsMigrate(全部迁移对象， 默认为此项配置)、custom(自定义)，注意自定义对比对象必须是迁移对象的子集
@@ -36,12 +40,14 @@ use TencentCloud\Common\AbstractModel;
 class ModifyCompareTaskRequest extends AbstractModel
 {
     /**
-     * @var string 任务 Id
+     * @var string 任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      */
     public $JobId;
 
     /**
-     * @var string 对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9
+     * @var string 对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      */
     public $CompareTaskId;
 
@@ -66,8 +72,10 @@ class ModifyCompareTaskRequest extends AbstractModel
     public $Options;
 
     /**
-     * @param string $JobId 任务 Id
-     * @param string $CompareTaskId 对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9
+     * @param string $JobId 任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
+     * @param string $CompareTaskId 对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      * @param string $TaskName 任务名称
      * @param string $ObjectMode 数据对比对象模式，sameAsMigrate(全部迁移对象， 默认为此项配置)、custom(自定义)，注意自定义对比对象必须是迁移对象的子集
      * @param CompareObject $Objects 对比对象，若CompareObjectMode取值为custom，则此项必填

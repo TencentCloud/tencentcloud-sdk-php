@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDstDatabaseType(string $DstDatabaseType) 设置目标端数据库类型,如mysql,mariadb,percona,cynosdbmysql(表示TDSQL-C MySQL),tdpg(TDSQL PostgreSQL版),tdsqlmysql,kafka,tdstore(表示TDSQL TDStore版)等。
  * @method string getDstRegion() 获取目标端数据库所在地域,如ap-guangzhou
  * @method void setDstRegion(string $DstRegion) 设置目标端数据库所在地域,如ap-guangzhou
- * @method string getSpecification() 获取同步任务规格，Standard:标准版
- * @method void setSpecification(string $Specification) 设置同步任务规格，Standard:标准版
+ * @method string getSpecification() 获取同步任务规格，Standard:标准版，目前仅支持Standard规格。
+ * @method void setSpecification(string $Specification) 设置同步任务规格，Standard:标准版，目前仅支持Standard规格。
  * @method integer getTimeSpan() 获取购买时长（单位：月），当PayMode值为PrePay则此项配置有意义，默认为1月，取值范围为[1,100]
  * @method void setTimeSpan(integer $TimeSpan) 设置购买时长（单位：月），当PayMode值为PrePay则此项配置有意义，默认为1月，取值范围为[1,100]
  * @method array getTags() 获取标签信息
@@ -75,7 +75,7 @@ class CreateSyncJobRequest extends AbstractModel
     public $DstRegion;
 
     /**
-     * @var string 同步任务规格，Standard:标准版
+     * @var string 同步任务规格，Standard:标准版，目前仅支持Standard规格。
      */
     public $Specification;
 
@@ -120,7 +120,7 @@ class CreateSyncJobRequest extends AbstractModel
      * @param string $SrcRegion 源端数据库所在地域,如ap-guangzhou
      * @param string $DstDatabaseType 目标端数据库类型,如mysql,mariadb,percona,cynosdbmysql(表示TDSQL-C MySQL),tdpg(TDSQL PostgreSQL版),tdsqlmysql,kafka,tdstore(表示TDSQL TDStore版)等。
      * @param string $DstRegion 目标端数据库所在地域,如ap-guangzhou
-     * @param string $Specification 同步任务规格，Standard:标准版
+     * @param string $Specification 同步任务规格，Standard:标准版，目前仅支持Standard规格。
      * @param integer $TimeSpan 购买时长（单位：月），当PayMode值为PrePay则此项配置有意义，默认为1月，取值范围为[1,100]
      * @param array $Tags 标签信息
      * @param integer $Count 一次购买的同步任务数量，取值范围为[1, 10]，默认为1

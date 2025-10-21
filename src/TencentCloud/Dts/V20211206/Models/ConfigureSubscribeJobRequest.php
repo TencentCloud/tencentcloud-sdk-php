@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ConfigureSubscribeJob请求参数结构体
  *
- * @method string getSubscribeId() 获取数据订阅实例的 ID
- * @method void setSubscribeId(string $SubscribeId) 设置数据订阅实例的 ID
+ * @method string getSubscribeId() 获取数据订阅实例的 ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+ * @method void setSubscribeId(string $SubscribeId) 设置数据订阅实例的 ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
  * @method string getSubscribeMode() 获取数据订阅的类型，当 DatabaseType 不为 mongodb 时，枚举值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 DatabaseType 为 mongodb 时，枚举值为 all-全实例更新；database-订阅单库；collection-订阅单集合
  * @method void setSubscribeMode(string $SubscribeMode) 设置数据订阅的类型，当 DatabaseType 不为 mongodb 时，枚举值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 DatabaseType 为 mongodb 时，枚举值为 all-全实例更新；database-订阅单库；collection-订阅单集合
  * @method string getAccessType() 获取源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
@@ -52,7 +52,7 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，�
 class ConfigureSubscribeJobRequest extends AbstractModel
 {
     /**
-     * @var string 数据订阅实例的 ID
+     * @var string 数据订阅实例的 ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
      */
     public $SubscribeId;
 
@@ -110,7 +110,7 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，�
     public $ConsumerSubnetId;
 
     /**
-     * @param string $SubscribeId 数据订阅实例的 ID
+     * @param string $SubscribeId 数据订阅实例的 ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
      * @param string $SubscribeMode 数据订阅的类型，当 DatabaseType 不为 mongodb 时，枚举值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 DatabaseType 为 mongodb 时，枚举值为 all-全实例更新；database-订阅单库；collection-订阅单集合
      * @param string $AccessType 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
      * @param array $Endpoints 数据库节点信息

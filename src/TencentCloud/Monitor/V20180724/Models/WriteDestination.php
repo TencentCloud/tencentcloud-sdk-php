@@ -14,26 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dts\V20211206\Models;
+namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * StopMigrateJob请求参数结构体
+ * 数据写向目标
  *
- * @method string getJobId() 获取数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
-
- * @method void setJobId(string $JobId) 设置数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+ * @method string getDestination() 获取存储标识
+ * @method void setDestination(string $Destination) 设置存储标识
  */
-class StopMigrateJobRequest extends AbstractModel
+class WriteDestination extends AbstractModel
 {
     /**
-     * @var string 数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
-
+     * @var string 存储标识
      */
-    public $JobId;
+    public $Destination;
 
     /**
-     * @param string $JobId 数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+     * @param string $Destination 存储标识
      */
     function __construct()
     {
@@ -48,8 +46,8 @@ class StopMigrateJobRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists("Destination",$param) and $param["Destination"] !== null) {
+            $this->Destination = $param["Destination"];
         }
     }
 }

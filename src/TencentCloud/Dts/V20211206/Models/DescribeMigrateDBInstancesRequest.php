@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMigrateDBInstances请求参数结构体
  *
- * @method string getDatabaseType() 获取数据库类型，如mysql,redis等
- * @method void setDatabaseType(string $DatabaseType) 设置数据库类型，如mysql,redis等
+ * @method string getDatabaseType() 获取数据库类型，如mysql,percona,mariadb,tdsqlmysql,mariadb,postgresql,cynosdbmysql,redis,tendis,keewidb,tdstore,mongodb,clickhouse,sqlserver等。
+ * @method void setDatabaseType(string $DatabaseType) 设置数据库类型，如mysql,percona,mariadb,tdsqlmysql,mariadb,postgresql,cynosdbmysql,redis,tendis,keewidb,tdstore,mongodb,clickhouse,sqlserver等。
  * @method string getMigrateRole() 获取实例作为迁移的源还是目标,src(表示源)，dst(表示目标)
  * @method void setMigrateRole(string $MigrateRole) 设置实例作为迁移的源还是目标,src(表示源)，dst(表示目标)
- * @method string getInstanceId() 获取云数据库实例ID
- * @method void setInstanceId(string $InstanceId) 设置云数据库实例ID
- * @method string getInstanceName() 获取云数据库名称
- * @method void setInstanceName(string $InstanceName) 设置云数据库名称
+ * @method string getInstanceId() 获取云数据库实例ID，可通过对应业务实例列表获取实例信息。
+ * @method void setInstanceId(string $InstanceId) 设置云数据库实例ID，可通过对应业务实例列表获取实例信息。
+ * @method string getInstanceName() 获取云数据库名称，可通过对应业务实例列表获取实例信息。
+ * @method void setInstanceName(string $InstanceName) 设置云数据库名称，可通过对应业务实例列表获取实例信息。
  * @method integer getLimit() 获取返回数量限制
  * @method void setLimit(integer $Limit) 设置返回数量限制
  * @method integer getOffset() 获取偏移量
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeMigrateDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 数据库类型，如mysql,redis等
+     * @var string 数据库类型，如mysql,percona,mariadb,tdsqlmysql,mariadb,postgresql,cynosdbmysql,redis,tendis,keewidb,tdstore,mongodb,clickhouse,sqlserver等。
      */
     public $DatabaseType;
 
@@ -54,12 +54,12 @@ class DescribeMigrateDBInstancesRequest extends AbstractModel
     public $MigrateRole;
 
     /**
-     * @var string 云数据库实例ID
+     * @var string 云数据库实例ID，可通过对应业务实例列表获取实例信息。
      */
     public $InstanceId;
 
     /**
-     * @var string 云数据库名称
+     * @var string 云数据库名称，可通过对应业务实例列表获取实例信息。
      */
     public $InstanceName;
 
@@ -94,10 +94,10 @@ class DescribeMigrateDBInstancesRequest extends AbstractModel
     public $TmpToken;
 
     /**
-     * @param string $DatabaseType 数据库类型，如mysql,redis等
+     * @param string $DatabaseType 数据库类型，如mysql,percona,mariadb,tdsqlmysql,mariadb,postgresql,cynosdbmysql,redis,tendis,keewidb,tdstore,mongodb,clickhouse,sqlserver等。
      * @param string $MigrateRole 实例作为迁移的源还是目标,src(表示源)，dst(表示目标)
-     * @param string $InstanceId 云数据库实例ID
-     * @param string $InstanceName 云数据库名称
+     * @param string $InstanceId 云数据库实例ID，可通过对应业务实例列表获取实例信息。
+     * @param string $InstanceName 云数据库名称，可通过对应业务实例列表获取实例信息。
      * @param integer $Limit 返回数量限制
      * @param integer $Offset 偏移量
      * @param string $AccountMode 资源所属账号 为空值或self(表示本账号内资源)、other(表示其他账户资源)

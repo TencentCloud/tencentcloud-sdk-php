@@ -20,22 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SkipCheckItem请求参数结构体
  *
- * @method string getJobId() 获取数据迁移任务ID
- * @method void setJobId(string $JobId) 设置数据迁移任务ID
- * @method array getStepIds() 获取需要跳过校验项的步骤id，需要通过DescribeMigrationCheckJob接口返回StepInfo[i].StepId字段获取，例如：["OptimizeCheck"]
- * @method void setStepIds(array $StepIds) 设置需要跳过校验项的步骤id，需要通过DescribeMigrationCheckJob接口返回StepInfo[i].StepId字段获取，例如：["OptimizeCheck"]
+ * @method string getJobId() 获取数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
+ * @method void setJobId(string $JobId) 设置数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
+ * @method array getStepIds() 获取需要跳过校验项的步骤id，需要通过[DescribeMigrationCheckJob](https://cloud.tencent.com/document/product/571/82086)接口返回StepInfo[i].StepId字段获取，例如：["OptimizeCheck"]
+ * @method void setStepIds(array $StepIds) 设置需要跳过校验项的步骤id，需要通过[DescribeMigrationCheckJob](https://cloud.tencent.com/document/product/571/82086)接口返回StepInfo[i].StepId字段获取，例如：["OptimizeCheck"]
  * @method string getForeignKeyFlag() 获取当出现外键依赖检查导致校验不通过时、可以通过该字段选择是否迁移外键依赖，当StepIds包含ConstraintCheck且该字段值为shield时表示不迁移外键依赖、当StepIds包含ConstraintCheck且值为migrate时表示迁移外键依赖
  * @method void setForeignKeyFlag(string $ForeignKeyFlag) 设置当出现外键依赖检查导致校验不通过时、可以通过该字段选择是否迁移外键依赖，当StepIds包含ConstraintCheck且该字段值为shield时表示不迁移外键依赖、当StepIds包含ConstraintCheck且值为migrate时表示迁移外键依赖
  */
 class SkipCheckItemRequest extends AbstractModel
 {
     /**
-     * @var string 数据迁移任务ID
+     * @var string 数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      */
     public $JobId;
 
     /**
-     * @var array 需要跳过校验项的步骤id，需要通过DescribeMigrationCheckJob接口返回StepInfo[i].StepId字段获取，例如：["OptimizeCheck"]
+     * @var array 需要跳过校验项的步骤id，需要通过[DescribeMigrationCheckJob](https://cloud.tencent.com/document/product/571/82086)接口返回StepInfo[i].StepId字段获取，例如：["OptimizeCheck"]
      */
     public $StepIds;
 
@@ -45,8 +48,9 @@ class SkipCheckItemRequest extends AbstractModel
     public $ForeignKeyFlag;
 
     /**
-     * @param string $JobId 数据迁移任务ID
-     * @param array $StepIds 需要跳过校验项的步骤id，需要通过DescribeMigrationCheckJob接口返回StepInfo[i].StepId字段获取，例如：["OptimizeCheck"]
+     * @param string $JobId 数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
+     * @param array $StepIds 需要跳过校验项的步骤id，需要通过[DescribeMigrationCheckJob](https://cloud.tencent.com/document/product/571/82086)接口返回StepInfo[i].StepId字段获取，例如：["OptimizeCheck"]
      * @param string $ForeignKeyFlag 当出现外键依赖检查导致校验不通过时、可以通过该字段选择是否迁移外键依赖，当StepIds包含ConstraintCheck且该字段值为shield时表示不迁移外键依赖、当StepIds包含ConstraintCheck且值为migrate时表示迁移外键依赖
      */
     function __construct()

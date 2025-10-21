@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubscribeId(string $SubscribeId) 设置订阅实例ID
  * @method string getMessage() 获取失败或者报错提示，成功则提示success。
  * @method void setMessage(string $Message) 设置失败或者报错提示，成功则提示success。
- * @method string getStatus() 获取任务运行状态，可能值为 running,failed,success
- * @method void setStatus(string $Status) 设置任务运行状态，可能值为 running,failed,success
+ * @method string getStatus() 获取任务运行状态，可能值为 running(运行中),failed(失败),success(成功),unknown(未知状态)。
+ * @method void setStatus(string $Status) 设置任务运行状态，可能值为 running(运行中),failed(失败),success(成功),unknown(未知状态)。
  * @method integer getProgress() 获取当前总体进度，范围 0~100
  * @method void setProgress(integer $Progress) 设置当前总体进度，范围 0~100
  * @method integer getStepAll() 获取校验总步骤数
@@ -50,7 +50,7 @@ class DescribeSubscribeCheckJobResponse extends AbstractModel
     public $Message;
 
     /**
-     * @var string 任务运行状态，可能值为 running,failed,success
+     * @var string 任务运行状态，可能值为 running(运行中),failed(失败),success(成功),unknown(未知状态)。
      */
     public $Status;
 
@@ -82,7 +82,7 @@ class DescribeSubscribeCheckJobResponse extends AbstractModel
     /**
      * @param string $SubscribeId 订阅实例ID
      * @param string $Message 失败或者报错提示，成功则提示success。
-     * @param string $Status 任务运行状态，可能值为 running,failed,success
+     * @param string $Status 任务运行状态，可能值为 running(运行中),failed(失败),success(成功),unknown(未知状态)。
      * @param integer $Progress 当前总体进度，范围 0~100
      * @param integer $StepAll 校验总步骤数
      * @param integer $StepNow 当前执行步骤

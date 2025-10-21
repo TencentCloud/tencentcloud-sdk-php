@@ -20,15 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SkipSyncCheckItem请求参数结构体
  *
- * @method string getJobId() 获取任务id，如：sync-4ddgid2
- * @method void setJobId(string $JobId) 设置任务id，如：sync-4ddgid2
+ * @method string getJobId() 获取任务id，如：sync-4ddgid2，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
+ * @method void setJobId(string $JobId) 设置任务id，如：sync-4ddgid2，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
  * @method array getStepIds() 获取需要跳过校验项的步骤id，需要通过`DescribeCheckSyncJobResult`接口返回StepInfos[i].StepId字段获取，例如：["OptimizeCheck"]
  * @method void setStepIds(array $StepIds) 设置需要跳过校验项的步骤id，需要通过`DescribeCheckSyncJobResult`接口返回StepInfos[i].StepId字段获取，例如：["OptimizeCheck"]
  */
 class SkipSyncCheckItemRequest extends AbstractModel
 {
     /**
-     * @var string 任务id，如：sync-4ddgid2
+     * @var string 任务id，如：sync-4ddgid2，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
      */
     public $JobId;
 
@@ -38,7 +41,8 @@ class SkipSyncCheckItemRequest extends AbstractModel
     public $StepIds;
 
     /**
-     * @param string $JobId 任务id，如：sync-4ddgid2
+     * @param string $JobId 任务id，如：sync-4ddgid2，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
      * @param array $StepIds 需要跳过校验项的步骤id，需要通过`DescribeCheckSyncJobResult`接口返回StepInfos[i].StepId字段获取，例如：["OptimizeCheck"]
      */
     function __construct()

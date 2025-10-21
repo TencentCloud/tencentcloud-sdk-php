@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySyncRateLimit请求参数结构体
  *
- * @method string getJobId() 获取迁移任务ID
- * @method void setJobId(string $JobId) 设置迁移任务ID
+ * @method string getJobId() 获取同步任务ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+ * @method void setJobId(string $JobId) 设置同步任务ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
  * @method integer getDumpThread() 获取同步任务全量导出线程数、有效值为 1-16
  * @method void setDumpThread(integer $DumpThread) 设置同步任务全量导出线程数、有效值为 1-16
- * @method integer getDumpRps() 获取同步任务全量导出的 Rps 限制、需要大于 0
- * @method void setDumpRps(integer $DumpRps) 设置同步任务全量导出的 Rps 限制、需要大于 0
+ * @method integer getDumpRps() 获取同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000
+ * @method void setDumpRps(integer $DumpRps) 设置同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000
  * @method integer getLoadThread() 获取同步任务全量导入线程数、有效值为 1-16
  * @method void setLoadThread(integer $LoadThread) 设置同步任务全量导入线程数、有效值为 1-16
  * @method integer getSinkerThread() 获取同步任务增量导入线程数、有效值为 1-128
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifySyncRateLimitRequest extends AbstractModel
 {
     /**
-     * @var string 迁移任务ID
+     * @var string 同步任务ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
      */
     public $JobId;
 
@@ -46,7 +46,7 @@ class ModifySyncRateLimitRequest extends AbstractModel
     public $DumpThread;
 
     /**
-     * @var integer 同步任务全量导出的 Rps 限制、需要大于 0
+     * @var integer 同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000
      */
     public $DumpRps;
 
@@ -66,9 +66,9 @@ class ModifySyncRateLimitRequest extends AbstractModel
     public $LoadRps;
 
     /**
-     * @param string $JobId 迁移任务ID
+     * @param string $JobId 同步任务ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
      * @param integer $DumpThread 同步任务全量导出线程数、有效值为 1-16
-     * @param integer $DumpRps 同步任务全量导出的 Rps 限制、需要大于 0
+     * @param integer $DumpRps 同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000
      * @param integer $LoadThread 同步任务全量导入线程数、有效值为 1-16
      * @param integer $SinkerThread 同步任务增量导入线程数、有效值为 1-128
      * @param integer $LoadRps 同步任务全量导入的Rps

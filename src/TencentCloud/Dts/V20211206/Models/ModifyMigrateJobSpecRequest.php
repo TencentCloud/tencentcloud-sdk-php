@@ -20,15 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyMigrateJobSpec请求参数结构体
  *
- * @method string getJobId() 获取任务id
- * @method void setJobId(string $JobId) 设置任务id
+ * @method string getJobId() 获取任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
+ * @method void setJobId(string $JobId) 设置任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
  * @method string getNewInstanceClass() 获取新实例规格大小，包括：micro、small、medium、large、xlarge、2xlarge
  * @method void setNewInstanceClass(string $NewInstanceClass) 设置新实例规格大小，包括：micro、small、medium、large、xlarge、2xlarge
  */
 class ModifyMigrateJobSpecRequest extends AbstractModel
 {
     /**
-     * @var string 任务id
+     * @var string 任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      */
     public $JobId;
 
@@ -38,7 +41,8 @@ class ModifyMigrateJobSpecRequest extends AbstractModel
     public $NewInstanceClass;
 
     /**
-     * @param string $JobId 任务id
+     * @param string $JobId 任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      * @param string $NewInstanceClass 新实例规格大小，包括：micro、small、medium、large、xlarge、2xlarge
      */
     function __construct()

@@ -20,26 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ResizeSyncJob请求参数结构体
  *
- * @method string getJobId() 获取同步任务id
- * @method void setJobId(string $JobId) 设置同步任务id
- * @method string getNewInstanceClass() 获取任务规格
- * @method void setNewInstanceClass(string $NewInstanceClass) 设置任务规格
+ * @method string getJobId() 获取同步任务id，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
+ * @method void setJobId(string $JobId) 设置同步任务id，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
+ * @method string getNewInstanceClass() 获取任务规格，可选值包括micro,small,medium,large
+ * @method void setNewInstanceClass(string $NewInstanceClass) 设置任务规格，可选值包括micro,small,medium,large
  */
 class ResizeSyncJobRequest extends AbstractModel
 {
     /**
-     * @var string 同步任务id
+     * @var string 同步任务id，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
      */
     public $JobId;
 
     /**
-     * @var string 任务规格
+     * @var string 任务规格，可选值包括micro,small,medium,large
      */
     public $NewInstanceClass;
 
     /**
-     * @param string $JobId 同步任务id
-     * @param string $NewInstanceClass 任务规格
+     * @param string $JobId 同步任务id，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
+     * @param string $NewInstanceClass 任务规格，可选值包括micro,small,medium,large
      */
     function __construct()
     {

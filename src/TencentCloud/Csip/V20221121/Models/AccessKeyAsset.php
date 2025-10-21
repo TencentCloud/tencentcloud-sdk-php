@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
 1 表示检测中
  * @method void setCheckStatus(integer $CheckStatus) 设置0 表示已检测
 1 表示检测中
+ * @method integer getCloudType() 获取云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
+ * @method void setCloudType(integer $CloudType) 设置云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
  */
 class AccessKeyAsset extends AbstractModel
 {
@@ -170,6 +172,11 @@ class AccessKeyAsset extends AbstractModel
     public $CheckStatus;
 
     /**
+     * @var integer 云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
+     */
+    public $CloudType;
+
+    /**
      * @param integer $ID AK 的id
      * @param string $Name AK名称
      * @param string $Remark 备注
@@ -196,6 +203,7 @@ class AccessKeyAsset extends AbstractModel
 2:已删除(已在cam侧删除，安全中心仍然存留之前的记录)
      * @param integer $CheckStatus 0 表示已检测
 1 表示检测中
+     * @param integer $CloudType 云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
      */
     function __construct()
     {
@@ -286,6 +294,10 @@ class AccessKeyAsset extends AbstractModel
 
         if (array_key_exists("CheckStatus",$param) and $param["CheckStatus"] !== null) {
             $this->CheckStatus = $param["CheckStatus"];
+        }
+
+        if (array_key_exists("CloudType",$param) and $param["CloudType"] !== null) {
+            $this->CloudType = $param["CloudType"];
         }
     }
 }

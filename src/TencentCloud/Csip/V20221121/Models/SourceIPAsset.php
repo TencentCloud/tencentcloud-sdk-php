@@ -31,9 +31,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRegion() 获取IP地域
  * @method void setRegion(string $Region) 设置IP地域
  * @method integer getEventType() 获取调用方式
+-1:未统计
 0:控制台调用
 1:API
  * @method void setEventType(integer $EventType) 设置调用方式
+-1:未统计
 0:控制台调用
 1:API
  * @method integer getIPType() 获取IP类型
@@ -66,6 +68,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShowStatus(boolean $ShowStatus) 设置展示状态
  * @method string getISP() 获取运营商字段
  * @method void setISP(string $ISP) 设置运营商字段
+ * @method array getVpcInfo() 获取账号外vpc信息
+ * @method void setVpcInfo(array $VpcInfo) 设置账号外vpc信息
+ * @method integer getCloudType() 获取云类型
+0为腾讯云
+ * @method void setCloudType(integer $CloudType) 设置云类型
+0为腾讯云
  */
 class SourceIPAsset extends AbstractModel
 {
@@ -96,6 +104,7 @@ class SourceIPAsset extends AbstractModel
 
     /**
      * @var integer 调用方式
+-1:未统计
 0:控制台调用
 1:API
      */
@@ -161,12 +170,24 @@ class SourceIPAsset extends AbstractModel
     public $ISP;
 
     /**
+     * @var array 账号外vpc信息
+     */
+    public $VpcInfo;
+
+    /**
+     * @var integer 云类型
+0为腾讯云
+     */
+    public $CloudType;
+
+    /**
      * @param integer $ID 源IP id
      * @param string $SourceIP 源IP
      * @param string $Remark 备注
      * @param integer $AppID 账号所属APPID
      * @param string $Region IP地域
      * @param integer $EventType 调用方式
+-1:未统计
 0:控制台调用
 1:API
      * @param integer $IPType IP类型
@@ -184,6 +205,9 @@ class SourceIPAsset extends AbstractModel
      * @param string $Nickname 昵称
      * @param boolean $ShowStatus 展示状态
      * @param string $ISP 运营商字段
+     * @param array $VpcInfo 账号外vpc信息
+     * @param integer $CloudType 云类型
+0为腾讯云
      */
     function __construct()
     {
@@ -274,6 +298,19 @@ class SourceIPAsset extends AbstractModel
 
         if (array_key_exists("ISP",$param) and $param["ISP"] !== null) {
             $this->ISP = $param["ISP"];
+        }
+
+        if (array_key_exists("VpcInfo",$param) and $param["VpcInfo"] !== null) {
+            $this->VpcInfo = [];
+            foreach ($param["VpcInfo"] as $key => $value){
+                $obj = new SourceIPVpcInfo();
+                $obj->deserialize($value);
+                array_push($this->VpcInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("CloudType",$param) and $param["CloudType"] !== null) {
+            $this->CloudType = $param["CloudType"];
         }
     }
 }

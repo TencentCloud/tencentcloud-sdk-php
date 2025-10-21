@@ -90,6 +90,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagList(array $TagList) 设置空间标签信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEnableMcpAccess() 获取是否开启mcp服务
+ * @method void setEnableMcpAccess(integer $EnableMcpAccess) 设置是否开启mcp服务
+ * @method string getMcpAccess() 获取mcp的访问地址
+ * @method void setMcpAccess(string $McpAccess) 设置mcp的访问地址
  */
 class ServerlessSpace extends AbstractModel
 {
@@ -209,6 +213,16 @@ class ServerlessSpace extends AbstractModel
     public $TagList;
 
     /**
+     * @var integer 是否开启mcp服务
+     */
+    public $EnableMcpAccess;
+
+    /**
+     * @var string mcp的访问地址
+     */
+    public $McpAccess;
+
+    /**
      * @param string $SpaceId Serverless索引空间ID
      * @param string $SpaceName Serverless索引空间名
      * @param integer $Status Serverless索引空间状态，0正常，-1已删除
@@ -244,6 +258,8 @@ class ServerlessSpace extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagList 空间标签信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EnableMcpAccess 是否开启mcp服务
+     * @param string $McpAccess mcp的访问地址
      */
     function __construct()
     {
@@ -348,6 +364,14 @@ class ServerlessSpace extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagList, $obj);
             }
+        }
+
+        if (array_key_exists("EnableMcpAccess",$param) and $param["EnableMcpAccess"] !== null) {
+            $this->EnableMcpAccess = $param["EnableMcpAccess"];
+        }
+
+        if (array_key_exists("McpAccess",$param) and $param["McpAccess"] !== null) {
+            $this->McpAccess = $param["McpAccess"];
         }
     }
 }

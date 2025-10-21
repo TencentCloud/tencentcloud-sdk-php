@@ -74,6 +74,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEvidence(string $Evidence) 设置告警证据
  * @method string getRuleKey() 获取告警规则标识
  * @method void setRuleKey(string $RuleKey) 设置告警规则标识
+ * @method integer getCloudType() 获取云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
+ * @method void setCloudType(integer $CloudType) 设置云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
  */
 class AccessKeyAlarm extends AbstractModel
 {
@@ -193,6 +195,11 @@ class AccessKeyAlarm extends AbstractModel
     public $RuleKey;
 
     /**
+     * @var integer 云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
+     */
+    public $CloudType;
+
+    /**
      * @param string $Name 告警名称
      * @param integer $Level 告警等级
 0-无效 1-提示 2-低危 3-中危 4-高危 5-严重
@@ -220,6 +227,7 @@ class AccessKeyAlarm extends AbstractModel
      * @param boolean $IsSupportEditWhiteAccount 是否支持编辑信任账号
      * @param string $Evidence 告警证据
      * @param string $RuleKey 告警规则标识
+     * @param integer $CloudType 云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
      */
     function __construct()
     {
@@ -320,6 +328,10 @@ class AccessKeyAlarm extends AbstractModel
 
         if (array_key_exists("RuleKey",$param) and $param["RuleKey"] !== null) {
             $this->RuleKey = $param["RuleKey"];
+        }
+
+        if (array_key_exists("CloudType",$param) and $param["CloudType"] !== null) {
+            $this->CloudType = $param["CloudType"];
         }
     }
 }

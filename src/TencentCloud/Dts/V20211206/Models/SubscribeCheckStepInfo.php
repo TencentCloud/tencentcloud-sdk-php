@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStepId(string $StepId) 设置步骤Id
  * @method integer getStepNo() 获取步骤编号，从 1 开始
  * @method void setStepNo(integer $StepNo) 设置步骤编号，从 1 开始
- * @method string getStatus() 获取当前步骤状态，可能值为 notStarted,running,finished,failed
- * @method void setStatus(string $Status) 设置当前步骤状态，可能值为 notStarted,running,finished,failed
+ * @method string getStatus() 获取当前步骤状态，可能值为 notStarted-未开始，running-运行中，finished-已完成，failed-失败，unknown-未知
+ * @method void setStatus(string $Status) 设置当前步骤状态，可能值为 notStarted-未开始，running-运行中，finished-已完成，failed-失败，unknown-未知
  * @method integer getPercent() 获取当前步骤进度
  * @method void setPercent(integer $Percent) 设置当前步骤进度
  * @method array getErrors() 获取错误提示
@@ -53,7 +53,7 @@ class SubscribeCheckStepInfo extends AbstractModel
     public $StepNo;
 
     /**
-     * @var string 当前步骤状态，可能值为 notStarted,running,finished,failed
+     * @var string 当前步骤状态，可能值为 notStarted-未开始，running-运行中，finished-已完成，failed-失败，unknown-未知
      */
     public $Status;
 
@@ -76,7 +76,7 @@ class SubscribeCheckStepInfo extends AbstractModel
      * @param string $StepName 步骤名称
      * @param string $StepId 步骤Id
      * @param integer $StepNo 步骤编号，从 1 开始
-     * @param string $Status 当前步骤状态，可能值为 notStarted,running,finished,failed
+     * @param string $Status 当前步骤状态，可能值为 notStarted-未开始，running-运行中，finished-已完成，failed-失败，unknown-未知
      * @param integer $Percent 当前步骤进度
      * @param array $Errors 错误提示
      * @param array $Warnings 告警提示

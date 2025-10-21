@@ -20,15 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyMigrateRuntimeAttribute请求参数结构体
  *
- * @method string getJobId() 获取迁移任务id，如：dts-2rgv0f09
- * @method void setJobId(string $JobId) 设置迁移任务id，如：dts-2rgv0f09
+ * @method string getJobId() 获取迁移任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
+ * @method void setJobId(string $JobId) 设置迁移任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
  * @method array getOtherOptions() 获取需要修改的属性，此结构设计为通用结构，用于屏蔽多个业务的定制属性。<br>例如对于Redis:<br>{<br>	 "Key": "DstWriteMode",	//目标库写入模式<br> 	"Value": "normal"	          //clearData(清空目标实例数据)、overwrite(以覆盖写的方式执行任务)、normal(跟正常流程一样，不做额外动作，默认为此值) <br>},<br>{<br/>	 "Key": "IsDstReadOnly",	//是否在迁移时设置目标库只读<br/> 	"Value": "true"	          //true(设置只读)、false(不设置只读) <br/>} 
  * @method void setOtherOptions(array $OtherOptions) 设置需要修改的属性，此结构设计为通用结构，用于屏蔽多个业务的定制属性。<br>例如对于Redis:<br>{<br>	 "Key": "DstWriteMode",	//目标库写入模式<br> 	"Value": "normal"	          //clearData(清空目标实例数据)、overwrite(以覆盖写的方式执行任务)、normal(跟正常流程一样，不做额外动作，默认为此值) <br>},<br>{<br/>	 "Key": "IsDstReadOnly",	//是否在迁移时设置目标库只读<br/> 	"Value": "true"	          //true(设置只读)、false(不设置只读) <br/>} 
  */
 class ModifyMigrateRuntimeAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 迁移任务id，如：dts-2rgv0f09
+     * @var string 迁移任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      */
     public $JobId;
 
@@ -38,7 +41,8 @@ class ModifyMigrateRuntimeAttributeRequest extends AbstractModel
     public $OtherOptions;
 
     /**
-     * @param string $JobId 迁移任务id，如：dts-2rgv0f09
+     * @param string $JobId 迁移任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      * @param array $OtherOptions 需要修改的属性，此结构设计为通用结构，用于屏蔽多个业务的定制属性。<br>例如对于Redis:<br>{<br>	 "Key": "DstWriteMode",	//目标库写入模式<br> 	"Value": "normal"	          //clearData(清空目标实例数据)、overwrite(以覆盖写的方式执行任务)、normal(跟正常流程一样，不做额外动作，默认为此值) <br>},<br>{<br/>	 "Key": "IsDstReadOnly",	//是否在迁移时设置目标库只读<br/> 	"Value": "true"	          //true(设置只读)、false(不设置只读) <br/>} 
      */
     function __construct()

@@ -20,26 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSyncJobs请求参数结构体
  *
- * @method string getJobId() 获取同步任务id，如sync-werwfs23
- * @method void setJobId(string $JobId) 设置同步任务id，如sync-werwfs23
- * @method array getJobIds() 获取同步任务id列表，如sync-werwfs23
- * @method void setJobIds(array $JobIds) 设置同步任务id列表，如sync-werwfs23
+ * @method string getJobId() 获取同步任务id，如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
+ * @method void setJobId(string $JobId) 设置同步任务id，如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
+ * @method array getJobIds() 获取同步任务id列表，如["sync-n3gh7md9"]
+ * @method void setJobIds(array $JobIds) 设置同步任务id列表，如["sync-n3gh7md9"]
  * @method string getJobName() 获取同步任务名
  * @method void setJobName(string $JobName) 设置同步任务名
- * @method string getOrder() 获取排序字段，可以取值为CreateTime
- * @method void setOrder(string $Order) 设置排序字段，可以取值为CreateTime
+ * @method string getOrder() 获取排序字段，目前仅支持CreateTime字段排序
+ * @method void setOrder(string $Order) 设置排序字段，目前仅支持CreateTime字段排序
  * @method string getOrderSeq() 获取排序方式，升序为ASC，降序为DESC，默认为CreateTime降序
  * @method void setOrderSeq(string $OrderSeq) 设置排序方式，升序为ASC，降序为DESC，默认为CreateTime降序
  * @method integer getOffset() 获取偏移量，默认为0
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取返回同步任务实例数量，默认20，有效区间[1,100]
  * @method void setLimit(integer $Limit) 设置返回同步任务实例数量，默认20，有效区间[1,100]
- * @method array getStatus() 获取状态集合，如Initialized,CheckPass,Running,ResumableErr,Stopped
- * @method void setStatus(array $Status) 设置状态集合，如Initialized,CheckPass,Running,ResumableErr,Stopped
+ * @method array getStatus() 获取状态集合，如Initialized(初始化),CheckPass(校验通过),Running(运行中),ResumableErr(恢复中),Stopped(已结束)
+ * @method void setStatus(array $Status) 设置状态集合，如Initialized(初始化),CheckPass(校验通过),Running(运行中),ResumableErr(恢复中),Stopped(已结束)
  * @method string getRunMode() 获取运行模式，如Immediate:立即运行，Timed:定时运行
  * @method void setRunMode(string $RunMode) 设置运行模式，如Immediate:立即运行，Timed:定时运行
- * @method string getJobType() 获取任务类型，如mysql2mysql：msyql同步到mysql
- * @method void setJobType(string $JobType) 设置任务类型，如mysql2mysql：msyql同步到mysql
+ * @method string getJobType() 获取任务类型，如mysql2mysql：msyql同步到mysql;可取值有mysql2mysql、mysql2kafka、tdsqlmysql2kafka、tdsqlmysql2tdsqlmysql、tdsqlmysql2mysql、mysql2tdsqlmysql、mysql2mariadb、mariadb2mariadb、mariadb2kafka、cynosdbmysql2kafka、cynosdbmysql2cynosdbmysql、cynosdbmysql2mysql、mysql2cynosdbmysql、mariadb2tdsqlmysql、tdsqlmysql2cynosdbmysql、cynosdbmysql2tdsqlmysql、tdstore2mysql、tdstore2percona、tdstore2mariadb、tdstore2cynosdbmysql、cynosdbmysql2mariadb、mariadb2cynosdbmysql、tdsqlmysql2mariadb、mariadb2mysql、percona2mariadb、postgresql2postgresql、tdstore2tdsqlmysql、mongodb2mongodb
+ * @method void setJobType(string $JobType) 设置任务类型，如mysql2mysql：msyql同步到mysql;可取值有mysql2mysql、mysql2kafka、tdsqlmysql2kafka、tdsqlmysql2tdsqlmysql、tdsqlmysql2mysql、mysql2tdsqlmysql、mysql2mariadb、mariadb2mariadb、mariadb2kafka、cynosdbmysql2kafka、cynosdbmysql2cynosdbmysql、cynosdbmysql2mysql、mysql2cynosdbmysql、mariadb2tdsqlmysql、tdsqlmysql2cynosdbmysql、cynosdbmysql2tdsqlmysql、tdstore2mysql、tdstore2percona、tdstore2mariadb、tdstore2cynosdbmysql、cynosdbmysql2mariadb、mariadb2cynosdbmysql、tdsqlmysql2mariadb、mariadb2mysql、percona2mariadb、postgresql2postgresql、tdstore2tdsqlmysql、mongodb2mongodb
  * @method string getPayMode() 获取付费类型，PrePay：预付费，PostPay：后付费
  * @method void setPayMode(string $PayMode) 设置付费类型，PrePay：预付费，PostPay：后付费
  * @method array getTagFilters() 获取tag
@@ -52,12 +54,13 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSyncJobsRequest extends AbstractModel
 {
     /**
-     * @var string 同步任务id，如sync-werwfs23
+     * @var string 同步任务id，如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
      */
     public $JobId;
 
     /**
-     * @var array 同步任务id列表，如sync-werwfs23
+     * @var array 同步任务id列表，如["sync-n3gh7md9"]
      */
     public $JobIds;
 
@@ -67,7 +70,7 @@ class DescribeSyncJobsRequest extends AbstractModel
     public $JobName;
 
     /**
-     * @var string 排序字段，可以取值为CreateTime
+     * @var string 排序字段，目前仅支持CreateTime字段排序
      */
     public $Order;
 
@@ -87,7 +90,7 @@ class DescribeSyncJobsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array 状态集合，如Initialized,CheckPass,Running,ResumableErr,Stopped
+     * @var array 状态集合，如Initialized(初始化),CheckPass(校验通过),Running(运行中),ResumableErr(恢复中),Stopped(已结束)
      */
     public $Status;
 
@@ -97,7 +100,7 @@ class DescribeSyncJobsRequest extends AbstractModel
     public $RunMode;
 
     /**
-     * @var string 任务类型，如mysql2mysql：msyql同步到mysql
+     * @var string 任务类型，如mysql2mysql：msyql同步到mysql;可取值有mysql2mysql、mysql2kafka、tdsqlmysql2kafka、tdsqlmysql2tdsqlmysql、tdsqlmysql2mysql、mysql2tdsqlmysql、mysql2mariadb、mariadb2mariadb、mariadb2kafka、cynosdbmysql2kafka、cynosdbmysql2cynosdbmysql、cynosdbmysql2mysql、mysql2cynosdbmysql、mariadb2tdsqlmysql、tdsqlmysql2cynosdbmysql、cynosdbmysql2tdsqlmysql、tdstore2mysql、tdstore2percona、tdstore2mariadb、tdstore2cynosdbmysql、cynosdbmysql2mariadb、mariadb2cynosdbmysql、tdsqlmysql2mariadb、mariadb2mysql、percona2mariadb、postgresql2postgresql、tdstore2tdsqlmysql、mongodb2mongodb
      */
     public $JobType;
 
@@ -122,16 +125,17 @@ class DescribeSyncJobsRequest extends AbstractModel
     public $DstInfoPattern;
 
     /**
-     * @param string $JobId 同步任务id，如sync-werwfs23
-     * @param array $JobIds 同步任务id列表，如sync-werwfs23
+     * @param string $JobId 同步任务id，如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
+     * @param array $JobIds 同步任务id列表，如["sync-n3gh7md9"]
      * @param string $JobName 同步任务名
-     * @param string $Order 排序字段，可以取值为CreateTime
+     * @param string $Order 排序字段，目前仅支持CreateTime字段排序
      * @param string $OrderSeq 排序方式，升序为ASC，降序为DESC，默认为CreateTime降序
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 返回同步任务实例数量，默认20，有效区间[1,100]
-     * @param array $Status 状态集合，如Initialized,CheckPass,Running,ResumableErr,Stopped
+     * @param array $Status 状态集合，如Initialized(初始化),CheckPass(校验通过),Running(运行中),ResumableErr(恢复中),Stopped(已结束)
      * @param string $RunMode 运行模式，如Immediate:立即运行，Timed:定时运行
-     * @param string $JobType 任务类型，如mysql2mysql：msyql同步到mysql
+     * @param string $JobType 任务类型，如mysql2mysql：msyql同步到mysql;可取值有mysql2mysql、mysql2kafka、tdsqlmysql2kafka、tdsqlmysql2tdsqlmysql、tdsqlmysql2mysql、mysql2tdsqlmysql、mysql2mariadb、mariadb2mariadb、mariadb2kafka、cynosdbmysql2kafka、cynosdbmysql2cynosdbmysql、cynosdbmysql2mysql、mysql2cynosdbmysql、mariadb2tdsqlmysql、tdsqlmysql2cynosdbmysql、cynosdbmysql2tdsqlmysql、tdstore2mysql、tdstore2percona、tdstore2mariadb、tdstore2cynosdbmysql、cynosdbmysql2mariadb、mariadb2cynosdbmysql、tdsqlmysql2mariadb、mariadb2mysql、percona2mariadb、postgresql2postgresql、tdstore2tdsqlmysql、mongodb2mongodb
      * @param string $PayMode 付费类型，PrePay：预付费，PostPay：后付费
      * @param array $TagFilters tag
      * @param string $SrcInfoPattern 源端数据库连接信息，可以输入实例ID或者IP等

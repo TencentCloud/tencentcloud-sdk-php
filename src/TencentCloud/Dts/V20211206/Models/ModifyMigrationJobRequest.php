@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyMigrationJob请求参数结构体
  *
- * @method string getJobId() 获取任务id
- * @method void setJobId(string $JobId) 设置任务id
+ * @method string getJobId() 获取任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
+ * @method void setJobId(string $JobId) 设置任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
  * @method string getRunMode() 获取运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)
  * @method void setRunMode(string $RunMode) 设置运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)
  * @method MigrateOption getMigrateOption() 获取迁移任务配置选项，描述任务如何执行迁移等一系列配置信息；字段下的RateLimitOption不可配置、如果需要修改任务的限速信息、请在任务运行后通过ModifyMigrateRateLimit接口修改
@@ -42,7 +44,8 @@ use TencentCloud\Common\AbstractModel;
 class ModifyMigrationJobRequest extends AbstractModel
 {
     /**
-     * @var string 任务id
+     * @var string 任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      */
     public $JobId;
 
@@ -87,7 +90,8 @@ class ModifyMigrationJobRequest extends AbstractModel
     public $AutoRetryTimeRangeMinutes;
 
     /**
-     * @param string $JobId 任务id
+     * @param string $JobId 任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      * @param string $RunMode 运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)
      * @param MigrateOption $MigrateOption 迁移任务配置选项，描述任务如何执行迁移等一系列配置信息；字段下的RateLimitOption不可配置、如果需要修改任务的限速信息、请在任务运行后通过ModifyMigrateRateLimit接口修改
      * @param DBEndpointInfo $SrcInfo 源实例信息

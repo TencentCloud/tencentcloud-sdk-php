@@ -20,15 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ResumeMigrateJob请求参数结构体
  *
- * @method string getJobId() 获取数据迁移任务ID
- * @method void setJobId(string $JobId) 设置数据迁移任务ID
+ * @method string getJobId() 获取数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
+ * @method void setJobId(string $JobId) 设置数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
  * @method string getResumeOption() 获取恢复任务的模式，目前的取值有：clearData 清空目标实例数据，overwrite 以覆盖写的方式执行任务，normal 跟正常流程一样，不做额外动作；注意，clearData、overwrite仅对redis生效，normal仅针对非redis链路生效
  * @method void setResumeOption(string $ResumeOption) 设置恢复任务的模式，目前的取值有：clearData 清空目标实例数据，overwrite 以覆盖写的方式执行任务，normal 跟正常流程一样，不做额外动作；注意，clearData、overwrite仅对redis生效，normal仅针对非redis链路生效
  */
 class ResumeMigrateJobRequest extends AbstractModel
 {
     /**
-     * @var string 数据迁移任务ID
+     * @var string 数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      */
     public $JobId;
 
@@ -38,7 +41,8 @@ class ResumeMigrateJobRequest extends AbstractModel
     public $ResumeOption;
 
     /**
-     * @param string $JobId 数据迁移任务ID
+     * @param string $JobId 数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      * @param string $ResumeOption 恢复任务的模式，目前的取值有：clearData 清空目标实例数据，overwrite 以覆盖写的方式执行任务，normal 跟正常流程一样，不做额外动作；注意，clearData、overwrite仅对redis生效，normal仅针对非redis链路生效
      */
     function __construct()

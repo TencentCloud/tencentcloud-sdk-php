@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySyncJobConfig请求参数结构体
  *
- * @method string getJobId() 获取同步任务id
- * @method void setJobId(string $JobId) 设置同步任务id
+ * @method string getJobId() 获取同步任务ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+ * @method void setJobId(string $JobId) 设置同步任务ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
  * @method Objects getDynamicObjects() 获取修改后的同步对象
  * @method void setDynamicObjects(Objects $DynamicObjects) 设置修改后的同步对象
  * @method DynamicOptions getDynamicOptions() 获取修改后的同步任务选项
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifySyncJobConfigRequest extends AbstractModel
 {
     /**
-     * @var string 同步任务id
+     * @var string 同步任务ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
      */
     public $JobId;
 
@@ -45,7 +45,7 @@ class ModifySyncJobConfigRequest extends AbstractModel
     public $DynamicOptions;
 
     /**
-     * @param string $JobId 同步任务id
+     * @param string $JobId 同步任务ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
      * @param Objects $DynamicObjects 修改后的同步对象
      * @param DynamicOptions $DynamicOptions 修改后的同步任务选项
      */

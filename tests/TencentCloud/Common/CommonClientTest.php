@@ -82,7 +82,6 @@ final class CommonClientTest extends TestCase
             getenv("TENCENTCLOUD_SECRET_KEY")
         );
         $httpProfile = new HttpProfile();
-        $httpProfile->setReqMethod("GET");
         $clientProfile = new ClientProfile();
         $clientProfile->setHttpProfile($httpProfile);
         $client = new CommonClient("hunyuan", "2023-09-01", $cred, "", $clientProfile);
@@ -96,7 +95,6 @@ final class CommonClientTest extends TestCase
             } else {
                 echo $resp;
             }
-        }         
-    }    
-
+        }
+    }
 }

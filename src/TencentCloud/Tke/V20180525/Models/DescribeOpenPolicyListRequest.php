@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOpenPolicyList请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method string getClusterId() 获取集群ID，请从容器服务集群列表获取（https://console.cloud.tencent.com/tke2/cluster）
+ * @method void setClusterId(string $ClusterId) 设置集群ID，请从容器服务集群列表获取（https://console.cloud.tencent.com/tke2/cluster）
  * @method string getCategory() 获取策略分类 基线：baseline 优选：priority 可选：optional
  * @method void setCategory(string $Category) 设置策略分类 基线：baseline 优选：priority 可选：optional
  */
 class DescribeOpenPolicyListRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 集群ID，请从容器服务集群列表获取（https://console.cloud.tencent.com/tke2/cluster）
      */
     public $ClusterId;
 
@@ -38,7 +38,7 @@ class DescribeOpenPolicyListRequest extends AbstractModel
     public $Category;
 
     /**
-     * @param string $ClusterId 集群ID
+     * @param string $ClusterId 集群ID，请从容器服务集群列表获取（https://console.cloud.tencent.com/tke2/cluster）
      * @param string $Category 策略分类 基线：baseline 优选：priority 可选：optional
      */
     function __construct()

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getResourceId() 获取资源ID
  * @method void setResourceId(string $ResourceId) 设置资源ID
- * @method integer getVersion() 获取0-引用 JAR 程序包，1-主程序包，2-引用配置文件，3-Python程序包，4-Python数据文件
- * @method void setVersion(integer $Version) 设置0-引用 JAR 程序包，1-主程序包，2-引用配置文件，3-Python程序包，4-Python数据文件
- * @method integer getType() 获取引用资源类型，例如主资源设置为1，代表main class所在的jar包
- * @method void setType(integer $Type) 设置引用资源类型，例如主资源设置为1，代表main class所在的jar包
+ * @method integer getVersion() 获取资源版本
+ * @method void setVersion(integer $Version) 设置资源版本
+ * @method integer getType() 获取0-引用 JAR 程序包，1-主程序包，2-引用配置文件，3-Python程序包，4-Python数据文件
+ * @method void setType(integer $Type) 设置0-引用 JAR 程序包，1-主程序包，2-引用配置文件，3-Python程序包，4-Python数据文件
  */
 class ResourceRef extends AbstractModel
 {
@@ -35,19 +35,19 @@ class ResourceRef extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var integer 0-引用 JAR 程序包，1-主程序包，2-引用配置文件，3-Python程序包，4-Python数据文件
+     * @var integer 资源版本
      */
     public $Version;
 
     /**
-     * @var integer 引用资源类型，例如主资源设置为1，代表main class所在的jar包
+     * @var integer 0-引用 JAR 程序包，1-主程序包，2-引用配置文件，3-Python程序包，4-Python数据文件
      */
     public $Type;
 
     /**
      * @param string $ResourceId 资源ID
-     * @param integer $Version 0-引用 JAR 程序包，1-主程序包，2-引用配置文件，3-Python程序包，4-Python数据文件
-     * @param integer $Type 引用资源类型，例如主资源设置为1，代表main class所在的jar包
+     * @param integer $Version 资源版本
+     * @param integer $Type 0-引用 JAR 程序包，1-主程序包，2-引用配置文件，3-Python程序包，4-Python数据文件
      */
     function __construct()
     {

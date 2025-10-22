@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrorMsg(string $ErrorMsg) 设置错误信息
  * @method boolean getHasCN() 获取是否包含CN节点
  * @method void setHasCN(boolean $HasCN) 设置是否包含CN节点
+ * @method array getExistingJarConfList() 获取实例已经存在的jar包列表
+ * @method void setExistingJarConfList(array $ExistingJarConfList) 设置实例已经存在的jar包列表
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -54,6 +56,11 @@ class DescribeClusterConfigsResponse extends AbstractModel
     public $HasCN;
 
     /**
+     * @var array 实例已经存在的jar包列表
+     */
+    public $ExistingJarConfList;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -63,6 +70,7 @@ class DescribeClusterConfigsResponse extends AbstractModel
      * @param string $BuildVersion 返回当前内核版本 如果不存在则返回空字符串
      * @param string $ErrorMsg 错误信息
      * @param boolean $HasCN 是否包含CN节点
+     * @param array $ExistingJarConfList 实例已经存在的jar包列表
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -97,6 +105,15 @@ class DescribeClusterConfigsResponse extends AbstractModel
 
         if (array_key_exists("HasCN",$param) and $param["HasCN"] !== null) {
             $this->HasCN = $param["HasCN"];
+        }
+
+        if (array_key_exists("ExistingJarConfList",$param) and $param["ExistingJarConfList"] !== null) {
+            $this->ExistingJarConfList = [];
+            foreach ($param["ExistingJarConfList"] as $key => $value){
+                $obj = new ClusterConfigsInfoFromEMR();
+                $obj->deserialize($value);
+                array_push($this->ExistingJarConfList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

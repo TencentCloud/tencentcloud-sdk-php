@@ -142,6 +142,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPodManagementPolicyType(string $PodManagementPolicyType) 设置启动策略[OrderedReady/Parallel]
  * @method integer getPartition() 获取滚动更新分区序号
  * @method void setPartition(integer $Partition) 设置滚动更新分区序号
+ * @method boolean getIncrementalDeployment() 获取是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数
+ * @method void setIncrementalDeployment(boolean $IncrementalDeployment) 设置是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数
  */
 class DeployContainerApplicationRequest extends AbstractModel
 {
@@ -451,6 +453,11 @@ class DeployContainerApplicationRequest extends AbstractModel
     public $Partition;
 
     /**
+     * @var boolean 是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数
+     */
+    public $IncrementalDeployment;
+
+    /**
      * @param string $ApplicationId 应用ID
      * @param ContainerGroupObservabilityConfig $ObservabilityConfig 可观测配置
      * @param string $ClusterId 集群ID
@@ -512,6 +519,7 @@ class DeployContainerApplicationRequest extends AbstractModel
      * @param boolean $StaticIpEnabled 是否启用静态IP
      * @param string $PodManagementPolicyType 启动策略[OrderedReady/Parallel]
      * @param integer $Partition 滚动更新分区序号
+     * @param boolean $IncrementalDeployment 是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数
      */
     function __construct()
     {
@@ -814,6 +822,10 @@ class DeployContainerApplicationRequest extends AbstractModel
 
         if (array_key_exists("Partition",$param) and $param["Partition"] !== null) {
             $this->Partition = $param["Partition"];
+        }
+
+        if (array_key_exists("IncrementalDeployment",$param) and $param["IncrementalDeployment"] !== null) {
+            $this->IncrementalDeployment = $param["IncrementalDeployment"];
         }
     }
 }

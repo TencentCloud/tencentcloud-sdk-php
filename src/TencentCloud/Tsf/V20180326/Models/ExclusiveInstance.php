@@ -32,6 +32,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionId(string $RegionId) 设置实例地域id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
  * @method string getInstanceNamespaceId() 获取实例命名空间ID，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
  * @method void setInstanceNamespaceId(string $InstanceNamespaceId) 设置实例命名空间ID，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
+ * @method string getGroupId() 获取部署组Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupId(string $GroupId) 设置部署组Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCreateTime() 获取创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(integer $CreateTime) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUpdateTime() 获取更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdateTime(integer $UpdateTime) 设置更新时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ExclusiveInstance extends AbstractModel
 {
@@ -66,12 +78,36 @@ class ExclusiveInstance extends AbstractModel
     public $InstanceNamespaceId;
 
     /**
+     * @var string 部署组Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupId;
+
+    /**
+     * @var integer 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
+     * @var integer 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdateTime;
+
+    /**
      * @param string $CenterType 配置中心类型[注册中心Registration、配置中心Configuration]
      * @param string $InstanceId 实例id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
      * @param string $InstanceType 实例类型，例如北极星Polaris
      * @param string $InstanceName 实例名称
      * @param string $RegionId 实例地域id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
      * @param string $InstanceNamespaceId 实例命名空间ID，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
+     * @param string $GroupId 部署组Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UpdateTime 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -108,6 +144,18 @@ class ExclusiveInstance extends AbstractModel
 
         if (array_key_exists("InstanceNamespaceId",$param) and $param["InstanceNamespaceId"] !== null) {
             $this->InstanceNamespaceId = $param["InstanceNamespaceId"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

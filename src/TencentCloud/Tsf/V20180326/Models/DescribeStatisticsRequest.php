@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
 可通过调用[DescribeClusterInstances](https://cloud.tencent.com/document/product/649/36048)查询已导入的实例列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=instance)进行查询。实例ID例如：ins-6decplwk。
  * @method void setConfigCenterInstanceId(string $ConfigCenterInstanceId) 设置独占配置中心的ID。
 可通过调用[DescribeClusterInstances](https://cloud.tencent.com/document/product/649/36048)查询已导入的实例列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=instance)进行查询。实例ID例如：ins-6decplwk。
+ * @method string getServiceFilter() 获取服务过滤
+ * @method void setServiceFilter(string $ServiceFilter) 设置服务过滤
  */
 class DescribeStatisticsRequest extends AbstractModel
 {
@@ -145,6 +147,11 @@ class DescribeStatisticsRequest extends AbstractModel
     public $ConfigCenterInstanceId;
 
     /**
+     * @var string 服务过滤
+     */
+    public $ServiceFilter;
+
+    /**
      * @param string $Type 统计类型。可选值 Interface：接口类型、Service：服务类型、Group：部署组类型、Instance：实例类型、SQL：SQL类型、NoSQL：NoSQL类型
      * @param integer $TimeStep 步长，单位秒。可选值 60、3600、86400
      * @param integer $Offset 偏移量，取值范围大于等于0，默认值为0
@@ -164,6 +171,7 @@ class DescribeStatisticsRequest extends AbstractModel
      * @param array $NamespaceIdList 命名空间ID数组。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一
      * @param string $ConfigCenterInstanceId 独占配置中心的ID。
 可通过调用[DescribeClusterInstances](https://cloud.tencent.com/document/product/649/36048)查询已导入的实例列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=instance)进行查询。实例ID例如：ins-6decplwk。
+     * @param string $ServiceFilter 服务过滤
      */
     function __construct()
     {
@@ -245,6 +253,10 @@ class DescribeStatisticsRequest extends AbstractModel
 
         if (array_key_exists("ConfigCenterInstanceId",$param) and $param["ConfigCenterInstanceId"] !== null) {
             $this->ConfigCenterInstanceId = $param["ConfigCenterInstanceId"];
+        }
+
+        if (array_key_exists("ServiceFilter",$param) and $param["ServiceFilter"] !== null) {
+            $this->ServiceFilter = $param["ServiceFilter"];
         }
     }
 }

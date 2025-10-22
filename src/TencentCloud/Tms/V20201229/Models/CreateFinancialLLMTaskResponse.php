@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Teo\V20220901\Models;
+namespace TencentCloud\Tms\V20201229\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeZones返回参数结构体
+ * CreateFinancialLLMTask返回参数结构体
  *
- * @method integer getTotalCount() 获取符合条件的站点个数。
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的站点个数。
- * @method array getZones() 获取站点列表详情。
- * @method void setZones(array $Zones) 设置站点列表详情。
+ * @method string getTaskId() 获取金融大模型审校任务ID
+ * @method void setTaskId(string $TaskId) 设置金融大模型审校任务ID
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeZonesResponse extends AbstractModel
+class CreateFinancialLLMTaskResponse extends AbstractModel
 {
     /**
-     * @var integer 符合条件的站点个数。
+     * @var string 金融大模型审校任务ID
      */
-    public $TotalCount;
-
-    /**
-     * @var array 站点列表详情。
-     */
-    public $Zones;
+    public $TaskId;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class DescribeZonesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 符合条件的站点个数。
-     * @param array $Zones 站点列表详情。
+     * @param string $TaskId 金融大模型审校任务ID
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +54,8 @@ class DescribeZonesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
-            $this->Zones = [];
-            foreach ($param["Zones"] as $key => $value){
-                $obj = new Zone();
-                $obj->deserialize($value);
-                array_push($this->Zones, $obj);
-            }
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchWord(string $SearchWord) 设置模糊查询，部署组名称，不填写时查询全量
  * @method string getAppMicroServiceType() 获取部署组类型，精确过滤字段，M：service mesh, P：原生应用， G：网关应用
  * @method void setAppMicroServiceType(string $AppMicroServiceType) 设置部署组类型，精确过滤字段，M：service mesh, P：原生应用， G：网关应用
+ * @method string getGroupName() 获取按照【部署组名称】进行过滤，不填写时查询全量。可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-zvw6zp9a&tab=publish&subTab=group)进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。
+ * @method void setGroupName(string $GroupName) 设置按照【部署组名称】进行过滤，不填写时查询全量。可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-zvw6zp9a&tab=publish&subTab=group)进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。
  */
 class DescribeSimpleGroupsRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class DescribeSimpleGroupsRequest extends AbstractModel
     public $AppMicroServiceType;
 
     /**
+     * @var string 按照【部署组名称】进行过滤，不填写时查询全量。可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-zvw6zp9a&tab=publish&subTab=group)进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。
+     */
+    public $GroupName;
+
+    /**
      * @param array $GroupIdList 按照【部署组ID】进行过滤，不填写时查询全量。可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-zvw6zp9a&tab=publish&subTab=group)进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。
      * @param string $ApplicationId 按照【应用ID】进行过滤，不填写时查询全量。可通过调用[DescribeApplications](https://cloud.tencent.com/document/product/649/36090)查询已创建的应用列表或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
      * @param string $ClusterId 按照【集群ID】进行过滤，不填写时查询全量。可通过调用[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已创建的集群列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=docker)进行查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。
@@ -96,6 +103,7 @@ class DescribeSimpleGroupsRequest extends AbstractModel
      * @param string $GroupId 部署组ID，不填写时查询全量
      * @param string $SearchWord 模糊查询，部署组名称，不填写时查询全量
      * @param string $AppMicroServiceType 部署组类型，精确过滤字段，M：service mesh, P：原生应用， G：网关应用
+     * @param string $GroupName 按照【部署组名称】进行过滤，不填写时查询全量。可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-zvw6zp9a&tab=publish&subTab=group)进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class DescribeSimpleGroupsRequest extends AbstractModel
 
         if (array_key_exists("AppMicroServiceType",$param) and $param["AppMicroServiceType"] !== null) {
             $this->AppMicroServiceType = $param["AppMicroServiceType"];
+        }
+
+        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
+            $this->GroupName = $param["GroupName"];
         }
     }
 }

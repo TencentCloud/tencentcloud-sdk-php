@@ -186,6 +186,8 @@ mssql_compatible引擎：
 <li>0：否</li>
 <li>1：是</li>
 默认值：0
+ * @method boolean getDeletionProtection() 获取实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
+ * @method void setDeletionProtection(boolean $DeletionProtection) 设置实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
  */
 class CreateInstancesRequest extends AbstractModel
 {
@@ -397,6 +399,11 @@ mssql_compatible引擎：
     public $NeedSupportIpv6;
 
     /**
+     * @var boolean 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
+     */
+    public $DeletionProtection;
+
+    /**
      * @param string $Zone 实例所属主可用区， 如：ap-guangzhou-3；若需要支持多可用区，在DBNodeSet.N字段中进行添加主可用区和备可用区信息；
 可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
      * @param string $SpecCode 售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
@@ -480,6 +487,7 @@ mssql_compatible引擎：
 <li>0：否</li>
 <li>1：是</li>
 默认值：0
+     * @param boolean $DeletionProtection 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
      */
     function __construct()
     {
@@ -626,6 +634,10 @@ mssql_compatible引擎：
 
         if (array_key_exists("NeedSupportIpv6",$param) and $param["NeedSupportIpv6"] !== null) {
             $this->NeedSupportIpv6 = $param["NeedSupportIpv6"];
+        }
+
+        if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
+            $this->DeletionProtection = $param["DeletionProtection"];
         }
     }
 }

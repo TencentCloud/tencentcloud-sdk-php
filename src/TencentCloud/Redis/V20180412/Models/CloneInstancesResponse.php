@@ -20,17 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CloneInstances返回参数结构体
  *
- * @method string getDealId() 获取请求任务 ID。
- * @method void setDealId(string $DealId) 设置请求任务 ID。
+ * @method string getDealId() 获取交易的ID。
+ * @method void setDealId(string $DealId) 设置交易的ID。
  * @method array getInstanceIds() 获取克隆实例的 ID。
  * @method void setInstanceIds(array $InstanceIds) 设置克隆实例的 ID。
+ * @method string getDealName() 获取订单号。
+ * @method void setDealName(string $DealName) 设置订单号。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CloneInstancesResponse extends AbstractModel
 {
     /**
-     * @var string 请求任务 ID。
+     * @var string 交易的ID。
+     * @deprecated
      */
     public $DealId;
 
@@ -40,13 +43,19 @@ class CloneInstancesResponse extends AbstractModel
     public $InstanceIds;
 
     /**
+     * @var string 订单号。
+     */
+    public $DealName;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param string $DealId 请求任务 ID。
+     * @param string $DealId 交易的ID。
      * @param array $InstanceIds 克隆实例的 ID。
+     * @param string $DealName 订单号。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +77,10 @@ class CloneInstancesResponse extends AbstractModel
 
         if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
             $this->InstanceIds = $param["InstanceIds"];
+        }
+
+        if (array_key_exists("DealName",$param) and $param["DealName"] !== null) {
+            $this->DealName = $param["DealName"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

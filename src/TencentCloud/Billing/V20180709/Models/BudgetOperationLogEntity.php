@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 预算修改记录信息
  *
- * @method integer getPayerUin() 获取Uin
- * @method void setPayerUin(integer $PayerUin) 设置Uin
- * @method integer getOwnerUin() 获取主用户Uin
+ * @method integer getPayerUin() 获取支付者Uin
+ * @method void setPayerUin(integer $PayerUin) 设置支付者Uin
+ * @method integer getOwnerUin() 获取使用者Uin
 
- * @method void setOwnerUin(integer $OwnerUin) 设置主用户Uin
+ * @method void setOwnerUin(integer $OwnerUin) 设置使用者Uin
 
  * @method integer getOperateUin() 获取操作用户Uin
  * @method void setOperateUin(integer $OperateUin) 设置操作用户Uin
@@ -32,28 +32,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBillDay(integer $BillDay) 设置日期
  * @method string getBillMonth() 获取月份
  * @method void setBillMonth(string $BillMonth) 设置月份
- * @method string getAction() 获取修改类型：ADD(新增)、UPDATE(更新)
- * @method void setAction(string $Action) 设置修改类型：ADD(新增)、UPDATE(更新)
+ * @method string getAction() 获取修改类型：ADD(新增)、UPDATE(更新)、DELETE(删除)
+ * @method void setAction(string $Action) 设置修改类型：ADD(新增)、UPDATE(更新)、DELETE(删除)
  * @method array getDiffValue() 获取变更信息
  * @method void setDiffValue(array $DiffValue) 设置变更信息
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getUpdateTime() 获取修改时间
  * @method void setUpdateTime(string $UpdateTime) 设置修改时间
- * @method string getOperationChannel() 获取修改渠道：官网修改/API修改
- * @method void setOperationChannel(string $OperationChannel) 设置修改渠道：官网修改/API修改
+ * @method string getOperationChannel() 获取修改渠道：CONSOLE/API
+ * @method void setOperationChannel(string $OperationChannel) 设置修改渠道：CONSOLE/API
  * @method string getBudgetId() 获取预算项目id
  * @method void setBudgetId(string $BudgetId) 设置预算项目id
  */
 class BudgetOperationLogEntity extends AbstractModel
 {
     /**
-     * @var integer Uin
+     * @var integer 支付者Uin
      */
     public $PayerUin;
 
     /**
-     * @var integer 主用户Uin
+     * @var integer 使用者Uin
 
      */
     public $OwnerUin;
@@ -74,7 +74,7 @@ class BudgetOperationLogEntity extends AbstractModel
     public $BillMonth;
 
     /**
-     * @var string 修改类型：ADD(新增)、UPDATE(更新)
+     * @var string 修改类型：ADD(新增)、UPDATE(更新)、DELETE(删除)
      */
     public $Action;
 
@@ -94,7 +94,7 @@ class BudgetOperationLogEntity extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var string 修改渠道：官网修改/API修改
+     * @var string 修改渠道：CONSOLE/API
      */
     public $OperationChannel;
 
@@ -104,17 +104,17 @@ class BudgetOperationLogEntity extends AbstractModel
     public $BudgetId;
 
     /**
-     * @param integer $PayerUin Uin
-     * @param integer $OwnerUin 主用户Uin
+     * @param integer $PayerUin 支付者Uin
+     * @param integer $OwnerUin 使用者Uin
 
      * @param integer $OperateUin 操作用户Uin
      * @param integer $BillDay 日期
      * @param string $BillMonth 月份
-     * @param string $Action 修改类型：ADD(新增)、UPDATE(更新)
+     * @param string $Action 修改类型：ADD(新增)、UPDATE(更新)、DELETE(删除)
      * @param array $DiffValue 变更信息
      * @param string $CreateTime 创建时间
      * @param string $UpdateTime 修改时间
-     * @param string $OperationChannel 修改渠道：官网修改/API修改
+     * @param string $OperationChannel 修改渠道：CONSOLE/API
      * @param string $BudgetId 预算项目id
      */
     function __construct()

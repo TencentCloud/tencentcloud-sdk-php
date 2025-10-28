@@ -74,8 +74,8 @@ use TencentCloud\Common\AbstractModel;
 <li> l7Flow_request_ua_browser：按浏览器类型维度统计 L7 访问请求数指标；</li>
 <li> l7Flow_request_ua_os：按操作系统类型维度统计 L7 访问请求数指标；</li>
 <li> l7Flow_request_ua：按 User-Agent 维度统计 L7 访问请求数指标。</li>
- * @method array getZoneIds() 获取站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
- * @method void setZoneIds(array $ZoneIds) 设置站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
+ * @method array getZoneIds() 获取站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
+ * @method void setZoneIds(array $ZoneIds) 设置站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
  * @method integer getLimit() 获取查询前多少个 top 数据，最大值为1000。不填默认为10，表示查询 top10 的数据。
  * @method void setLimit(integer $Limit) 设置查询前多少个 top 数据，最大值为1000。不填默认为10，表示查询 top10 的数据。
  * @method array getFilters() 获取筛选数据时使用的过滤条件，取值参考 [指标分析筛选条件说明](https://cloud.tencent.com/document/product/1552/98219#1aaf1150-55a4-4b4d-b103-3a8317ac7945) 中针对 L7 访问流量、带宽、请求数的可用筛选项。
@@ -129,7 +129,7 @@ class DescribeTopL7AnalysisDataRequest extends AbstractModel
     public $MetricName;
 
     /**
-     * @var array 站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
+     * @var array 站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
      */
     public $ZoneIds;
 
@@ -182,7 +182,7 @@ class DescribeTopL7AnalysisDataRequest extends AbstractModel
 <li> l7Flow_request_ua_browser：按浏览器类型维度统计 L7 访问请求数指标；</li>
 <li> l7Flow_request_ua_os：按操作系统类型维度统计 L7 访问请求数指标；</li>
 <li> l7Flow_request_ua：按 User-Agent 维度统计 L7 访问请求数指标。</li>
-     * @param array $ZoneIds 站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
+     * @param array $ZoneIds 站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
      * @param integer $Limit 查询前多少个 top 数据，最大值为1000。不填默认为10，表示查询 top10 的数据。
      * @param array $Filters 筛选数据时使用的过滤条件，取值参考 [指标分析筛选条件说明](https://cloud.tencent.com/document/product/1552/98219#1aaf1150-55a4-4b4d-b103-3a8317ac7945) 中针对 L7 访问流量、带宽、请求数的可用筛选项。
 如需限定站点或内容标识符，请在 `ZoneIds.N` 参数中另行传入对应的值。

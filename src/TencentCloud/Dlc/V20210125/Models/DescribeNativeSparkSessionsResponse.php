@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getSparkSessionsList() 获取spark session列表
  * @method void setSparkSessionsList(array $SparkSessionsList) 设置spark session列表
+ * @method integer getTotalSpec() 获取资源组总规格
+ * @method void setTotalSpec(integer $TotalSpec) 设置资源组总规格
+ * @method integer getTotalAvailable() 获取资源组当前可用规格
+ * @method void setTotalAvailable(integer $TotalAvailable) 设置资源组当前可用规格
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +37,24 @@ class DescribeNativeSparkSessionsResponse extends AbstractModel
     public $SparkSessionsList;
 
     /**
+     * @var integer 资源组总规格
+     */
+    public $TotalSpec;
+
+    /**
+     * @var integer 资源组当前可用规格
+     */
+    public $TotalAvailable;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $SparkSessionsList spark session列表
+     * @param integer $TotalSpec 资源组总规格
+     * @param integer $TotalAvailable 资源组当前可用规格
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -61,6 +77,14 @@ class DescribeNativeSparkSessionsResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SparkSessionsList, $obj);
             }
+        }
+
+        if (array_key_exists("TotalSpec",$param) and $param["TotalSpec"] !== null) {
+            $this->TotalSpec = $param["TotalSpec"];
+        }
+
+        if (array_key_exists("TotalAvailable",$param) and $param["TotalAvailable"] !== null) {
+            $this->TotalAvailable = $param["TotalAvailable"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

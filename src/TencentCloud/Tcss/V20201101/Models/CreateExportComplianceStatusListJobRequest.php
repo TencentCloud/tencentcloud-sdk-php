@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExportAll(boolean $ExportAll) 设置true, 全部导出；false, 根据IdList来导出数据。
  * @method array getIdList() 获取要导出的资产ID列表或检测项ID列表，由ExportByAsset的取值决定。
  * @method void setIdList(array $IdList) 设置要导出的资产ID列表或检测项ID列表，由ExportByAsset的取值决定。
+ * @method array getFilters() 获取筛选
+ * @method void setFilters(array $Filters) 设置筛选
  */
 class CreateExportComplianceStatusListJobRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateExportComplianceStatusListJobRequest extends AbstractModel
     public $IdList;
 
     /**
+     * @var array 筛选
+     */
+    public $Filters;
+
+    /**
      * @param string $AssetType 要导出信息的资产类型
      * @param boolean $ExportByAsset 按照检测项导出，还是按照资产导出。true: 按照资产导出；false: 按照检测项导出。
      * @param boolean $ExportAll true, 全部导出；false, 根据IdList来导出数据。
      * @param array $IdList 要导出的资产ID列表或检测项ID列表，由ExportByAsset的取值决定。
+     * @param array $Filters 筛选
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class CreateExportComplianceStatusListJobRequest extends AbstractModel
 
         if (array_key_exists("IdList",$param) and $param["IdList"] !== null) {
             $this->IdList = $param["IdList"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new RunTimeFilters();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

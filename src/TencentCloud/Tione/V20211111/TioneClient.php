@@ -28,6 +28,7 @@ use TencentCloud\Tione\V20211111\Models as Models;
 使用该接口调用时需要携带腾讯云的密钥信息用于身份信息鉴权，建议通过腾讯云的云 API SDK调用，具体可以参考
 https://cloud.tencent.com/document/product/1278/85305
  * @method Models\CreateDatasetResponse CreateDataset(Models\CreateDatasetRequest $req) 创建数据集
+ * @method Models\CreateExportResponse CreateExport(Models\CreateExportRequest $req) 创建任务式建模训练任务，Notebook，在线服务和批量预测任务日志下载任务API
  * @method Models\CreateModelServiceResponse CreateModelService(Models\CreateModelServiceRequest $req) 用于创建、发布一个新的模型服务
  * @method Models\CreateModelServiceAuthTokenResponse CreateModelServiceAuthToken(Models\CreateModelServiceAuthTokenRequest $req) 创建一个 AuthToken
  * @method Models\CreateNotebookResponse CreateNotebook(Models\CreateNotebookRequest $req) 创建Notebook
@@ -35,6 +36,7 @@ https://cloud.tencent.com/document/product/1278/85305
  * @method Models\CreateTrainingModelResponse CreateTrainingModel(Models\CreateTrainingModelRequest $req) 导入模型
  * @method Models\CreateTrainingTaskResponse CreateTrainingTask(Models\CreateTrainingTaskRequest $req) 创建模型训练任务
  * @method Models\DeleteDatasetResponse DeleteDataset(Models\DeleteDatasetRequest $req) 删除数据集
+ * @method Models\DeleteExportResponse DeleteExport(Models\DeleteExportRequest $req) 删除任务式建模训练任务，Notebook，在线服务和批量预测任务日志导出任务API
  * @method Models\DeleteModelServiceResponse DeleteModelService(Models\DeleteModelServiceRequest $req) 根据服务id删除模型服务
  * @method Models\DeleteModelServiceAuthTokenResponse DeleteModelServiceAuthToken(Models\DeleteModelServiceAuthTokenRequest $req) 删除一个 AuthToken
  * @method Models\DeleteModelServiceGroupResponse DeleteModelServiceGroup(Models\DeleteModelServiceGroupRequest $req) 根据服务组id删除服务组下所有模型服务
@@ -50,6 +52,7 @@ https://cloud.tencent.com/document/product/1278/85305
  * @method Models\DescribeBuildInImagesResponse DescribeBuildInImages(Models\DescribeBuildInImagesRequest $req) 获取内置镜像列表
  * @method Models\DescribeDatasetsResponse DescribeDatasets(Models\DescribeDatasetsRequest $req) 查询数据集列表
  * @method Models\DescribeEventsResponse DescribeEvents(Models\DescribeEventsRequest $req) 获取任务式建模训练任务，Notebook，在线服务和批量预测任务的事件API
+ * @method Models\DescribeExportResponse DescribeExport(Models\DescribeExportRequest $req) 查看任务式建模训练任务，Notebook，在线服务和批量预测任务日志下载任务状态API
  * @method Models\DescribeInferTemplatesResponse DescribeInferTemplates(Models\DescribeInferTemplatesRequest $req) 已废弃，收敛到统一接口
 
 查询推理镜像模板

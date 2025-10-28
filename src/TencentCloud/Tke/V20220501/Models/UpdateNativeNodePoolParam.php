@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceTypes(array $InstanceTypes) 设置机型列表
  * @method integer getReplicas() 获取期望节点数
  * @method void setReplicas(integer $Replicas) 设置期望节点数
+ * @method boolean getUpdateExistedNode() 获取是否更新存量节点
+ * @method void setUpdateExistedNode(boolean $UpdateExistedNode) 设置是否更新存量节点
  * @method array getDataDisks() 获取数据盘列表
  * @method void setDataDisks(array $DataDisks) 设置数据盘列表
  * @method array getKeyIds() 获取ssh公钥id数组
@@ -158,6 +160,11 @@ class UpdateNativeNodePoolParam extends AbstractModel
     public $Replicas;
 
     /**
+     * @var boolean 是否更新存量节点
+     */
+    public $UpdateExistedNode;
+
+    /**
      * @var array 数据盘列表
      */
     public $DataDisks;
@@ -193,6 +200,7 @@ class UpdateNativeNodePoolParam extends AbstractModel
      * @param boolean $EnableAutoscaling 是否开启弹性伸缩
      * @param array $InstanceTypes 机型列表
      * @param integer $Replicas 期望节点数
+     * @param boolean $UpdateExistedNode 是否更新存量节点
      * @param array $DataDisks 数据盘列表
      * @param array $KeyIds ssh公钥id数组
      * @param array $GPUConfigs 节点池 GPU 配置
@@ -282,6 +290,10 @@ class UpdateNativeNodePoolParam extends AbstractModel
 
         if (array_key_exists("Replicas",$param) and $param["Replicas"] !== null) {
             $this->Replicas = $param["Replicas"];
+        }
+
+        if (array_key_exists("UpdateExistedNode",$param) and $param["UpdateExistedNode"] !== null) {
+            $this->UpdateExistedNode = $param["UpdateExistedNode"];
         }
 
         if (array_key_exists("DataDisks",$param) and $param["DataDisks"] !== null) {

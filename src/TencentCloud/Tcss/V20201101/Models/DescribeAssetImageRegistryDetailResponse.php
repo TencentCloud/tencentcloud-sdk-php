@@ -88,6 +88,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSensitiveInfoCnt(integer $SensitiveInfoCnt) 设置敏感信息数
  * @method integer getId() 获取Id
  * @method void setId(integer $Id) 设置Id
+ * @method string getSolution() 获取解决方案
+ * @method void setSolution(string $Solution) 设置解决方案
+ * @method string getReason() 获取原因
+ * @method void setReason(string $Reason) 设置原因
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -265,6 +269,16 @@ class DescribeAssetImageRegistryDetailResponse extends AbstractModel
     public $Id;
 
     /**
+     * @var string 解决方案
+     */
+    public $Solution;
+
+    /**
+     * @var string 原因
+     */
+    public $Reason;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -304,6 +318,8 @@ class DescribeAssetImageRegistryDetailResponse extends AbstractModel
      * @param string $ImageCreateTime 镜像创建的时间
      * @param integer $SensitiveInfoCnt 敏感信息数
      * @param integer $Id Id
+     * @param string $Solution 解决方案
+     * @param string $Reason 原因
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -453,6 +469,14 @@ class DescribeAssetImageRegistryDetailResponse extends AbstractModel
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Solution",$param) and $param["Solution"] !== null) {
+            $this->Solution = $param["Solution"];
+        }
+
+        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
+            $this->Reason = $param["Reason"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

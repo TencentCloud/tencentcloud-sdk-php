@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHitType() 获取该字段用于标识本次审核决策归因，比如text_nlp_tianji标识是由nlp tianji模型给出的审核决策，text_keyword_public标识命中了业务的关键词库
  * @method void setHitType(string $HitType) 设置该字段用于标识本次审核决策归因，比如text_nlp_tianji标识是由nlp tianji模型给出的审核决策，text_keyword_public标识命中了业务的关键词库
+ * @method string getSessionId() 获取流式审核策略维度下的唯一会话ID
+ * @method void setSessionId(string $SessionId) 设置流式审核策略维度下的唯一会话ID
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -129,6 +131,11 @@ class TextModerationResponse extends AbstractModel
     public $HitType;
 
     /**
+     * @var string 流式审核策略维度下的唯一会话ID
+     */
+    public $SessionId;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -151,6 +158,7 @@ class TextModerationResponse extends AbstractModel
      * @param SentimentAnalysis $SentimentAnalysis 情感分析结果
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HitType 该字段用于标识本次审核决策归因，比如text_nlp_tianji标识是由nlp tianji模型给出的审核决策，text_keyword_public标识命中了业务的关键词库
+     * @param string $SessionId 流式审核策略维度下的唯一会话ID
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -227,6 +235,10 @@ class TextModerationResponse extends AbstractModel
 
         if (array_key_exists("HitType",$param) and $param["HitType"] !== null) {
             $this->HitType = $param["HitType"];
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

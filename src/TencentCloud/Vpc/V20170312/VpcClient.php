@@ -439,6 +439,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DescribeRouteTablesResponse DescribeRouteTables(Models\DescribeRouteTablesRequest $req) 本接口（DescribeRouteTables）用于查询路由表。
  * @method Models\DescribeRoutesResponse DescribeRoutes(Models\DescribeRoutesRequest $req) 本接口（DescribeRoutes）用于查询路由列表。
  * @method Models\DescribeSecurityGroupAssociationStatisticsResponse DescribeSecurityGroupAssociationStatistics(Models\DescribeSecurityGroupAssociationStatisticsRequest $req) 本接口（DescribeSecurityGroupAssociationStatistics）用于查询安全组关联的实例统计。
+ * @method Models\DescribeSecurityGroupExpandedPoliciesResponse DescribeSecurityGroupExpandedPolicies(Models\DescribeSecurityGroupExpandedPoliciesRequest $req) 本接口（DescribeSecurityGroupExpandedPolicies）用于查看参数模板展开后的安全组规则。本接口会通过缓存降低请求后端服务的调用次数，因此拉取结果会存在延迟（缓存超时时间为1分钟）。
  * @method Models\DescribeSecurityGroupLimitsResponse DescribeSecurityGroupLimits(Models\DescribeSecurityGroupLimitsRequest $req) 本接口(DescribeSecurityGroupLimits)用于查询用户安全组配额。
  * @method Models\DescribeSecurityGroupPoliciesResponse DescribeSecurityGroupPolicies(Models\DescribeSecurityGroupPoliciesRequest $req) 本接口（DescribeSecurityGroupPolicies）用于查询安全组规则。
  * @method Models\DescribeSecurityGroupReferencesResponse DescribeSecurityGroupReferences(Models\DescribeSecurityGroupReferencesRequest $req) 本接口（DescribeSecurityGroupReferences）用于查询安全组被引用信息。

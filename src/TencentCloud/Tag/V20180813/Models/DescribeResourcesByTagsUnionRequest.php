@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeResourcesByTagsUnion请求参数结构体
  *
- * @method array getTagFilters() 获取标签过滤数组
- * @method void setTagFilters(array $TagFilters) 设置标签过滤数组
+ * @method array getTagFilters() 获取标签过滤数组，数量最多六个
+ * @method void setTagFilters(array $TagFilters) 设置标签过滤数组，数量最多六个
  * @method integer getCreateUin() 获取创建标签者uin
  * @method void setCreateUin(integer $CreateUin) 设置创建标签者uin
  * @method integer getOffset() 获取数据偏移量，默认为 0, 必须为Limit参数的整数倍
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeResourcesByTagsUnionRequest extends AbstractModel
 {
     /**
-     * @var array 标签过滤数组
+     * @var array 标签过滤数组，数量最多六个
      */
     public $TagFilters;
 
@@ -80,7 +80,7 @@ class DescribeResourcesByTagsUnionRequest extends AbstractModel
     public $ServiceType;
 
     /**
-     * @param array $TagFilters 标签过滤数组
+     * @param array $TagFilters 标签过滤数组，数量最多六个
      * @param integer $CreateUin 创建标签者uin
      * @param integer $Offset 数据偏移量，默认为 0, 必须为Limit参数的整数倍
      * @param integer $Limit 每页大小，默认为 15

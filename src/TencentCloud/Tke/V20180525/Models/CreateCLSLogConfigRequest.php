@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method string getLogsetId() 获取CLS日志集ID
  * @method void setLogsetId(string $LogsetId) 设置CLS日志集ID
- * @method string getClusterType() 获取当前集群类型支持tke、eks
- * @method void setClusterType(string $ClusterType) 设置当前集群类型支持tke、eks
+ * @method string getClusterType() 获取当前集群类型支持tke（标准集群）、eks（serverless集群）
+ * @method void setClusterType(string $ClusterType) 设置当前集群类型支持tke（标准集群）、eks（serverless集群）
  */
 class CreateCLSLogConfigRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class CreateCLSLogConfigRequest extends AbstractModel
     public $LogsetId;
 
     /**
-     * @var string 当前集群类型支持tke、eks
+     * @var string 当前集群类型支持tke（标准集群）、eks（serverless集群）
      */
     public $ClusterType;
 
@@ -55,7 +55,7 @@ class CreateCLSLogConfigRequest extends AbstractModel
      * @param string $LogConfig 日志采集配置的json表达
      * @param string $ClusterId 集群ID
      * @param string $LogsetId CLS日志集ID
-     * @param string $ClusterType 当前集群类型支持tke、eks
+     * @param string $ClusterType 当前集群类型支持tke（标准集群）、eks（serverless集群）
      */
     function __construct()
     {

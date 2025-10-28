@@ -54,8 +54,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniformSocialCreditCode(string $UniformSocialCreditCode) 设置企业统一社会信用代码
  * @method string getLegalName() 获取企业法人的姓名
  * @method void setLegalName(string $LegalName) 设置企业法人的姓名
- * @method string getAutoJumpUrl() 获取认证完成跳回的链接，最长500个字符
- * @method void setAutoJumpUrl(string $AutoJumpUrl) 设置认证完成跳回的链接，最长500个字符
+ * @method string getAutoJumpUrl() 获取<font color="red">即将废弃</font>，入参请使用JumpEvents。
+认证完成跳回的链接，最长500个字符。
+
+ * @method void setAutoJumpUrl(string $AutoJumpUrl) 设置<font color="red">即将废弃</font>，入参请使用JumpEvents。
+认证完成跳回的链接，最长500个字符。
+
  * @method string getOrganizationAddress() 获取营业执照企业地址
  * @method void setOrganizationAddress(string $OrganizationAddress) 设置营业执照企业地址
  * @method string getAdminName() 获取认证人姓名
@@ -178,6 +182,18 @@ p.s. 仅在对公打款不为空时有效
 
 
 p.s. 仅在对公打款不为空时有效
+ * @method array getJumpEvents() 获取跳转事件，其中包括认证期间收录，授权书审核，企业认证的回跳事件。
+p.s.
+Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font>
+如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 
+
+p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
+ * @method void setJumpEvents(array $JumpEvents) 设置跳转事件，其中包括认证期间收录，授权书审核，企业认证的回跳事件。
+p.s.
+Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font>
+如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 
+
+p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
  */
 class CreateOrganizationAuthUrlRequest extends AbstractModel
 {
@@ -219,7 +235,9 @@ class CreateOrganizationAuthUrlRequest extends AbstractModel
     public $LegalName;
 
     /**
-     * @var string 认证完成跳回的链接，最长500个字符
+     * @var string <font color="red">即将废弃</font>，入参请使用JumpEvents。
+认证完成跳回的链接，最长500个字符。
+
      */
     public $AutoJumpUrl;
 
@@ -357,6 +375,16 @@ p.s. 仅在对公打款不为空时有效
     public $BankAccountNumberSame;
 
     /**
+     * @var array 跳转事件，其中包括认证期间收录，授权书审核，企业认证的回跳事件。
+p.s.
+Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font>
+如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 
+
+p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
+     */
+    public $JumpEvents;
+
+    /**
      * @param UserInfo $Operator 操作人信息
      * @param array $AuthorizationTypes 指定授权方式 支持多选:
 
@@ -374,7 +402,9 @@ p.s. 仅在对公打款不为空时有效
 
      * @param string $UniformSocialCreditCode 企业统一社会信用代码
      * @param string $LegalName 企业法人的姓名
-     * @param string $AutoJumpUrl 认证完成跳回的链接，最长500个字符
+     * @param string $AutoJumpUrl <font color="red">即将废弃</font>，入参请使用JumpEvents。
+认证完成跳回的链接，最长500个字符。
+
      * @param string $OrganizationAddress 营业执照企业地址
      * @param string $AdminName 认证人姓名
      * @param string $AdminMobile 认证人手机号
@@ -436,6 +466,12 @@ p.s.
 
 
 p.s. 仅在对公打款不为空时有效
+     * @param array $JumpEvents 跳转事件，其中包括认证期间收录，授权书审核，企业认证的回跳事件。
+p.s.
+Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font>
+如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 
+
+p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
      */
     function __construct()
     {
@@ -545,6 +581,15 @@ p.s. 仅在对公打款不为空时有效
 
         if (array_key_exists("BankAccountNumberSame",$param) and $param["BankAccountNumberSame"] !== null) {
             $this->BankAccountNumberSame = $param["BankAccountNumberSame"];
+        }
+
+        if (array_key_exists("JumpEvents",$param) and $param["JumpEvents"] !== null) {
+            $this->JumpEvents = [];
+            foreach ($param["JumpEvents"] as $key => $value){
+                $obj = new JumpEvent();
+                $obj->deserialize($value);
+                array_push($this->JumpEvents, $obj);
+            }
         }
     }
 }

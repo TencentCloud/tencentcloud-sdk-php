@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 路由表冲突对象
  *
  * @method string getRouteTableType() 获取路由表类型。
+枚举值：CcsCluster、Vpc、VpcRouteTable、CcsClusterRouteTable
  * @method void setRouteTableType(string $RouteTableType) 设置路由表类型。
+枚举值：CcsCluster、Vpc、VpcRouteTable、CcsClusterRouteTable
  * @method string getRouteTableCidrBlock() 获取路由表CIDR。
  * @method void setRouteTableCidrBlock(string $RouteTableCidrBlock) 设置路由表CIDR。
  * @method string getRouteTableName() 获取路由表名称。
@@ -33,6 +35,7 @@ class RouteTableConflict extends AbstractModel
 {
     /**
      * @var string 路由表类型。
+枚举值：CcsCluster、Vpc、VpcRouteTable、CcsClusterRouteTable
      */
     public $RouteTableType;
 
@@ -53,6 +56,7 @@ class RouteTableConflict extends AbstractModel
 
     /**
      * @param string $RouteTableType 路由表类型。
+枚举值：CcsCluster、Vpc、VpcRouteTable、CcsClusterRouteTable
      * @param string $RouteTableCidrBlock 路由表CIDR。
      * @param string $RouteTableName 路由表名称。
      * @param string $RouteTableId 路由表ID。

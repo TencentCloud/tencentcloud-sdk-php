@@ -31,6 +31,7 @@ class ConflictItem extends AbstractModel
 {
     /**
      * @var string 冲突资源的ID。已废弃
+     * @deprecated
      */
     public $ConfilctId;
 

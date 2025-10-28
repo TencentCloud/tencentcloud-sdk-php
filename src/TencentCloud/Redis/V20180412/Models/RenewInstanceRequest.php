@@ -20,34 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RenewInstance请求参数结构体
  *
- * @method integer getPeriod() 获取购买时长，单位：月。
- * @method void setPeriod(integer $Period) 设置购买时长，单位：月。
- * @method string getInstanceId() 获取实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
- * @method string getModifyPayMode() 获取标识是否修改计费模式。<ul><li>当前实例计费模式为按量计费方式，预转换为包年包月而续费，请指定该参数为 <b>prepaid</b>。</li><li>当前实例计费模式为包年包月方式，可不设置该参数。</li></ul>
- * @method void setModifyPayMode(string $ModifyPayMode) 设置标识是否修改计费模式。<ul><li>当前实例计费模式为按量计费方式，预转换为包年包月而续费，请指定该参数为 <b>prepaid</b>。</li><li>当前实例计费模式为包年包月方式，可不设置该参数。</li></ul>
+ * @method integer getPeriod() 获取购买时长。
+- 单位：月。
+- 取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+ * @method void setPeriod(integer $Period) 设置购买时长。
+- 单位：月。
+- 取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+ * @method string getInstanceId() 获取实例 ID，请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method string getModifyPayMode() 获取标识是否修改计费模式。
+- 当前实例计费模式为按量计费方式，预转换为包年包月而续费，请指定该参数为 <b>prepaid</b>。
+- 当前实例计费模式为包年包月方式，可不设置该参数。
+ * @method void setModifyPayMode(string $ModifyPayMode) 设置标识是否修改计费模式。
+- 当前实例计费模式为按量计费方式，预转换为包年包月而续费，请指定该参数为 <b>prepaid</b>。
+- 当前实例计费模式为包年包月方式，可不设置该参数。
  */
 class RenewInstanceRequest extends AbstractModel
 {
     /**
-     * @var integer 购买时长，单位：月。
+     * @var integer 购买时长。
+- 单位：月。
+- 取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
      */
     public $Period;
 
     /**
-     * @var string 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @var string 实例 ID，请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 标识是否修改计费模式。<ul><li>当前实例计费模式为按量计费方式，预转换为包年包月而续费，请指定该参数为 <b>prepaid</b>。</li><li>当前实例计费模式为包年包月方式，可不设置该参数。</li></ul>
+     * @var string 标识是否修改计费模式。
+- 当前实例计费模式为按量计费方式，预转换为包年包月而续费，请指定该参数为 <b>prepaid</b>。
+- 当前实例计费模式为包年包月方式，可不设置该参数。
      */
     public $ModifyPayMode;
 
     /**
-     * @param integer $Period 购买时长，单位：月。
-     * @param string $InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
-     * @param string $ModifyPayMode 标识是否修改计费模式。<ul><li>当前实例计费模式为按量计费方式，预转换为包年包月而续费，请指定该参数为 <b>prepaid</b>。</li><li>当前实例计费模式为包年包月方式，可不设置该参数。</li></ul>
+     * @param integer $Period 购买时长。
+- 单位：月。
+- 取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+     * @param string $InstanceId 实例 ID，请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param string $ModifyPayMode 标识是否修改计费模式。
+- 当前实例计费模式为按量计费方式，预转换为包年包月而续费，请指定该参数为 <b>prepaid</b>。
+- 当前实例计费模式为包年包月方式，可不设置该参数。
      */
     function __construct()
     {

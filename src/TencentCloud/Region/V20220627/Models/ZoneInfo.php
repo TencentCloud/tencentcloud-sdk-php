@@ -33,7 +33,6 @@ use TencentCloud\Common\AbstractModel;
 <li> ap-shenzhen-fsi-2 </li>
 <li> ap-shenzhen-fsi-3 </li>
 <li> ap-guangzhou-1（售罄）</li>
-<li> ap-guangzhou-2（售罄）</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
 <li> ap-guangzhou-6 </li>
@@ -76,7 +75,6 @@ use TencentCloud\Common\AbstractModel;
 <li> ap-shenzhen-fsi-2 </li>
 <li> ap-shenzhen-fsi-3 </li>
 <li> ap-guangzhou-1（售罄）</li>
-<li> ap-guangzhou-2（售罄）</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
 <li> ap-guangzhou-6 </li>
@@ -153,7 +151,6 @@ class ZoneInfo extends AbstractModel
 <li> ap-shenzhen-fsi-2 </li>
 <li> ap-shenzhen-fsi-3 </li>
 <li> ap-guangzhou-1（售罄）</li>
-<li> ap-guangzhou-2（售罄）</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
 <li> ap-guangzhou-6 </li>
@@ -251,7 +248,6 @@ class ZoneInfo extends AbstractModel
 <li> ap-shenzhen-fsi-2 </li>
 <li> ap-shenzhen-fsi-3 </li>
 <li> ap-guangzhou-1（售罄）</li>
-<li> ap-guangzhou-2（售罄）</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
 <li> ap-guangzhou-6 </li>

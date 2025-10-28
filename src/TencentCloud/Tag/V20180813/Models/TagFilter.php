@@ -18,7 +18,7 @@ namespace TencentCloud\Tag\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * tag过滤数组多个是与的关系
+ * 标签键值过滤条件
  *
  * @method string getTagKey() 获取标签键
  * @method void setTagKey(string $TagKey) 设置标签键

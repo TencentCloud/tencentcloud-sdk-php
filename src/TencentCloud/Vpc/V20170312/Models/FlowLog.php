@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 流日志
  *
- * @method string getVpcId() 获取私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
- * @method void setVpcId(string $VpcId) 设置私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
+ * @method string getVpcId() 获取私有网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
+ * @method void setVpcId(string $VpcId) 设置私有网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
  * @method string getFlowLogId() 获取流日志唯一ID。
  * @method void setFlowLogId(string $FlowLogId) 设置流日志唯一ID。
  * @method string getFlowLogName() 获取流日志实例名字。
  * @method void setFlowLogName(string $FlowLogName) 设置流日志实例名字。
- * @method string getResourceType() 获取流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
- * @method void setResourceType(string $ResourceType) 设置流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
+ * @method string getResourceType() 获取流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转换），DCG（专线网关）。
+ * @method void setResourceType(string $ResourceType) 设置流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转换），DCG（专线网关）。
  * @method string getResourceId() 获取资源唯一ID。
  * @method void setResourceId(string $ResourceId) 设置资源唯一ID。
  * @method string getTrafficType() 获取流日志采集类型，ACCEPT（允许），REJECT（拒绝），ALL（全部）。
@@ -50,11 +50,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowLogStorage(FlowLogStorage $FlowLogStorage) 设置消费端信息，当消费端类型为ckafka时返回。
  * @method string getCloudLogRegion() 获取流日志存储ID对应的地域信息。
  * @method void setCloudLogRegion(string $CloudLogRegion) 设置流日志存储ID对应的地域信息。
+ * @method integer getPeriod() 获取流日志采集周期，只支持CCN类型流日志。取值范围（单位s）：60， 300， 600。
+ * @method void setPeriod(integer $Period) 设置流日志采集周期，只支持CCN类型流日志。取值范围（单位s）：60， 300， 600。
  */
 class FlowLog extends AbstractModel
 {
     /**
-     * @var string 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
+     * @var string 私有网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
      */
     public $VpcId;
 
@@ -69,7 +71,7 @@ class FlowLog extends AbstractModel
     public $FlowLogName;
 
     /**
-     * @var string 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
+     * @var string 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转换），DCG（专线网关）。
      */
     public $ResourceType;
 
@@ -129,10 +131,15 @@ class FlowLog extends AbstractModel
     public $CloudLogRegion;
 
     /**
-     * @param string $VpcId 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
+     * @var integer 流日志采集周期，只支持CCN类型流日志。取值范围（单位s）：60， 300， 600。
+     */
+    public $Period;
+
+    /**
+     * @param string $VpcId 私有网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
      * @param string $FlowLogId 流日志唯一ID。
      * @param string $FlowLogName 流日志实例名字。
-     * @param string $ResourceType 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
+     * @param string $ResourceType 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转换），DCG（专线网关）。
      * @param string $ResourceId 资源唯一ID。
      * @param string $TrafficType 流日志采集类型，ACCEPT（允许），REJECT（拒绝），ALL（全部）。
      * @param string $CloudLogId 流日志存储ID。
@@ -144,6 +151,7 @@ class FlowLog extends AbstractModel
      * @param string $StorageType 消费端类型：cls、ckafka。
      * @param FlowLogStorage $FlowLogStorage 消费端信息，当消费端类型为ckafka时返回。
      * @param string $CloudLogRegion 流日志存储ID对应的地域信息。
+     * @param integer $Period 流日志采集周期，只支持CCN类型流日志。取值范围（单位s）：60， 300， 600。
      */
     function __construct()
     {
@@ -222,6 +230,10 @@ class FlowLog extends AbstractModel
 
         if (array_key_exists("CloudLogRegion",$param) and $param["CloudLogRegion"] !== null) {
             $this->CloudLogRegion = $param["CloudLogRegion"];
+        }
+
+        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
+            $this->Period = $param["Period"];
         }
     }
 }

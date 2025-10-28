@@ -28,16 +28,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始时间 yyyy-mm-dd HH:mm:ss格式
  * @method string getEndTime() 获取结束时间 yyyy-mm-dd HH:mm:ss格式
  * @method void setEndTime(string $EndTime) 设置结束时间 yyyy-mm-dd HH:mm:ss格式
- * @method integer getStatus() 获取状态
- * @method void setStatus(integer $Status) 设置状态
+ * @method integer getStatus() 获取1 生效 2 失效 3 作废
+ * @method void setStatus(integer $Status) 设置1 生效 2 失效 3 作废
  * @method string getSavingAmount() 获取累计节省金额（单位：元）
  * @method void setSavingAmount(string $SavingAmount) 设置累计节省金额（单位：元）
  * @method array getRegion() 获取地域
  * @method void setRegion(array $Region) 设置地域
- * @method integer getPayType() 获取支付类型
- * @method void setPayType(integer $PayType) 设置支付类型
+ * @method integer getPayType() 获取1 全预付 2 部分预付 3 全不预付
+ * @method void setPayType(integer $PayType) 设置1 全预付 2 部分预付 3 全不预付
  * @method string getBuyTime() 获取购买时间 yyyy-mm-dd HH:mm:ss格式
  * @method void setBuyTime(string $BuyTime) 设置购买时间 yyyy-mm-dd HH:mm:ss格式
+ * @method string getPromiseAmount() 获取承诺金额
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPromiseAmount(string $PromiseAmount) 设置承诺金额
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SavingPlanOverviewDetail extends AbstractModel
 {
@@ -62,7 +66,7 @@ class SavingPlanOverviewDetail extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 状态
+     * @var integer 1 生效 2 失效 3 作废
      */
     public $Status;
 
@@ -77,7 +81,7 @@ class SavingPlanOverviewDetail extends AbstractModel
     public $Region;
 
     /**
-     * @var integer 支付类型
+     * @var integer 1 全预付 2 部分预付 3 全不预付
      */
     public $PayType;
 
@@ -87,15 +91,23 @@ class SavingPlanOverviewDetail extends AbstractModel
     public $BuyTime;
 
     /**
+     * @var string 承诺金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PromiseAmount;
+
+    /**
      * @param string $SpType 节省计划类型
      * @param string $PayAmount 支付金额（单位：元）
      * @param string $StartTime 开始时间 yyyy-mm-dd HH:mm:ss格式
      * @param string $EndTime 结束时间 yyyy-mm-dd HH:mm:ss格式
-     * @param integer $Status 状态
+     * @param integer $Status 1 生效 2 失效 3 作废
      * @param string $SavingAmount 累计节省金额（单位：元）
      * @param array $Region 地域
-     * @param integer $PayType 支付类型
+     * @param integer $PayType 1 全预付 2 部分预付 3 全不预付
      * @param string $BuyTime 购买时间 yyyy-mm-dd HH:mm:ss格式
+     * @param string $PromiseAmount 承诺金额
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -144,6 +156,10 @@ class SavingPlanOverviewDetail extends AbstractModel
 
         if (array_key_exists("BuyTime",$param) and $param["BuyTime"] !== null) {
             $this->BuyTime = $param["BuyTime"];
+        }
+
+        if (array_key_exists("PromiseAmount",$param) and $param["PromiseAmount"] !== null) {
+            $this->PromiseAmount = $param["PromiseAmount"];
         }
     }
 }

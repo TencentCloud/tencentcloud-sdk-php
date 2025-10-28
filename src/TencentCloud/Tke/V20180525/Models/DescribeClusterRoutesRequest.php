@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusterRoutes请求参数结构体
  *
- * @method string getRouteTableName() 获取路由表名称。
- * @method void setRouteTableName(string $RouteTableName) 设置路由表名称。
+ * @method string getRouteTableName() 获取路由表名称。与集群 ID 一致，可以到[集群控制台](https://console.cloud.tencent.com/tke2)进行复制。
+ * @method void setRouteTableName(string $RouteTableName) 设置路由表名称。与集群 ID 一致，可以到[集群控制台](https://console.cloud.tencent.com/tke2)进行复制。
  * @method array getFilters() 获取过滤条件,当前只支持按照单个条件GatewayIP进行过滤（可选）
  * @method void setFilters(array $Filters) 设置过滤条件,当前只支持按照单个条件GatewayIP进行过滤（可选）
  */
 class DescribeClusterRoutesRequest extends AbstractModel
 {
     /**
-     * @var string 路由表名称。
+     * @var string 路由表名称。与集群 ID 一致，可以到[集群控制台](https://console.cloud.tencent.com/tke2)进行复制。
      */
     public $RouteTableName;
 
@@ -38,7 +38,7 @@ class DescribeClusterRoutesRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param string $RouteTableName 路由表名称。
+     * @param string $RouteTableName 路由表名称。与集群 ID 一致，可以到[集群控制台](https://console.cloud.tencent.com/tke2)进行复制。
      * @param array $Filters 过滤条件,当前只支持按照单个条件GatewayIP进行过滤（可选）
      */
     function __construct()

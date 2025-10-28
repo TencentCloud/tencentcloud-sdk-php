@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFlowLogName() 获取流日志实例名称。长度为不超过60个字符。
  * @method void setFlowLogName(string $FlowLogName) 设置流日志实例名称。长度为不超过60个字符。
- * @method string getResourceType() 获取流日志所属资源类型，VPC（私有网络），SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择VPC，SUBNET，CCN，DCG时，请通过工单加入白名单。
- * @method void setResourceType(string $ResourceType) 设置流日志所属资源类型，VPC（私有网络），SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择VPC，SUBNET，CCN，DCG时，请通过工单加入白名单。
+ * @method string getResourceType() 获取流日志所属资源类型，NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择CCN，DCG时，请通过工单加入白名单。
+ * @method void setResourceType(string $ResourceType) 设置流日志所属资源类型，NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择CCN，DCG时，请通过工单加入白名单。
  * @method string getResourceId() 获取资源唯一ID。
  * @method void setResourceId(string $ResourceId) 设置资源唯一ID。
  * @method string getTrafficType() 获取流日志采集类型，ACCEPT（允许），REJECT（拒绝），ALL（全部）。
@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowLogStorage(FlowLogStorage $FlowLogStorage) 设置流日志消费端信息，当消费端类型为ckafka时，必填。
  * @method string getCloudLogRegion() 获取流日志存储ID对应的地域，不传递默认为本地域。
  * @method void setCloudLogRegion(string $CloudLogRegion) 设置流日志存储ID对应的地域，不传递默认为本地域。
+ * @method integer getPeriod() 获取流日志采集周期，只支持CCN类型流日志。取值范围（单位s）：60， 300， 600。
+ * @method void setPeriod(integer $Period) 设置流日志采集周期，只支持CCN类型流日志。取值范围（单位s）：60， 300， 600。
  */
 class CreateFlowLogRequest extends AbstractModel
 {
@@ -53,7 +55,7 @@ class CreateFlowLogRequest extends AbstractModel
     public $FlowLogName;
 
     /**
-     * @var string 流日志所属资源类型，VPC（私有网络），SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择VPC，SUBNET，CCN，DCG时，请通过工单加入白名单。
+     * @var string 流日志所属资源类型，NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择CCN，DCG时，请通过工单加入白名单。
      */
     public $ResourceType;
 
@@ -104,8 +106,13 @@ class CreateFlowLogRequest extends AbstractModel
     public $CloudLogRegion;
 
     /**
+     * @var integer 流日志采集周期，只支持CCN类型流日志。取值范围（单位s）：60， 300， 600。
+     */
+    public $Period;
+
+    /**
      * @param string $FlowLogName 流日志实例名称。长度为不超过60个字符。
-     * @param string $ResourceType 流日志所属资源类型，VPC（私有网络），SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择VPC，SUBNET，CCN，DCG时，请通过工单加入白名单。
+     * @param string $ResourceType 流日志所属资源类型，NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择CCN，DCG时，请通过工单加入白名单。
      * @param string $ResourceId 资源唯一ID。
      * @param string $TrafficType 流日志采集类型，ACCEPT（允许），REJECT（拒绝），ALL（全部）。
      * @param string $VpcId 私用网络唯一ID。当ResourceType为CCN时不填，其他类型必填。
@@ -116,6 +123,7 @@ class CreateFlowLogRequest extends AbstractModel
      * @param string $StorageType 消费端类型：cls、ckafka。默认值cls。当选择ckafka时，请通过工单加入白名单。
      * @param FlowLogStorage $FlowLogStorage 流日志消费端信息，当消费端类型为ckafka时，必填。
      * @param string $CloudLogRegion 流日志存储ID对应的地域，不传递默认为本地域。
+     * @param integer $Period 流日志采集周期，只支持CCN类型流日志。取值范围（单位s）：60， 300， 600。
      */
     function __construct()
     {
@@ -178,6 +186,10 @@ class CreateFlowLogRequest extends AbstractModel
 
         if (array_key_exists("CloudLogRegion",$param) and $param["CloudLogRegion"] !== null) {
             $this->CloudLogRegion = $param["CloudLogRegion"];
+        }
+
+        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
+            $this->Period = $param["Period"];
         }
     }
 }

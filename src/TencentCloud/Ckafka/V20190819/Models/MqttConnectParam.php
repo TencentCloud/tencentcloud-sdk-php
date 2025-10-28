@@ -35,7 +35,9 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getSelfBuilt() 获取是否为自建集群
  * @method void setSelfBuilt(boolean $SelfBuilt) 设置是否为自建集群
  * @method boolean getIsUpdate() 获取是否更新到关联的Dip任务
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsUpdate(boolean $IsUpdate) 设置是否更新到关联的Dip任务
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取MQTT连接源的实例资源地域, 跨地域时必填
  * @method void setRegion(string $Region) 设置MQTT连接源的实例资源地域, 跨地域时必填
  * @method string getIp() 获取IP
@@ -80,6 +82,7 @@ class MqttConnectParam extends AbstractModel
 
     /**
      * @var boolean 是否更新到关联的Dip任务
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsUpdate;
 
@@ -102,6 +105,7 @@ class MqttConnectParam extends AbstractModel
      * @param string $UniqVpcId MQTT Instance vpc-id
      * @param boolean $SelfBuilt 是否为自建集群
      * @param boolean $IsUpdate 是否更新到关联的Dip任务
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region MQTT连接源的实例资源地域, 跨地域时必填
      * @param string $Ip IP
      */

@@ -52,6 +52,16 @@ HostNameSettings的该入参非必选，未选时不设置主机名后缀。
 <li>其他类型（Linux 等）实例：字符长度为[1, 39]，且与 HostName 的长度和不能超过 41，允许支持多个点号，点之间为一段，每段允许字母（不限制大小写）、数字和短横线（-）组成。</li> 
 假设后缀名称为 suffix，原主机名为 test.0，最终主机名为 test.0.suffix。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHostNameDelimiter() 获取云服务器的主机名分隔符。
+默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为主机名的分隔符。如果不设置，则默认采用点号（.）分隔符。
+通过分割符连接多段。
+
+假设原主机名为“product-as-host”，分隔符HostNameDelimiter为“-”，设置主机名后缀"suffix"，那么最终主机名为“product-as-host-suffix”。
+ * @method void setHostNameDelimiter(string $HostNameDelimiter) 设置云服务器的主机名分隔符。
+默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为主机名的分隔符。如果不设置，则默认采用点号（.）分隔符。
+通过分割符连接多段。
+
+假设原主机名为“product-as-host”，分隔符HostNameDelimiter为“-”，设置主机名后缀"suffix"，那么最终主机名为“product-as-host-suffix”。
  */
 class HostNameSettings extends AbstractModel
 {
@@ -84,6 +94,15 @@ HostNameSettings的该入参非必选，未选时不设置主机名后缀。
     public $HostNameSuffix;
 
     /**
+     * @var string 云服务器的主机名分隔符。
+默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为主机名的分隔符。如果不设置，则默认采用点号（.）分隔符。
+通过分割符连接多段。
+
+假设原主机名为“product-as-host”，分隔符HostNameDelimiter为“-”，设置主机名后缀"suffix"，那么最终主机名为“product-as-host-suffix”。
+     */
+    public $HostNameDelimiter;
+
+    /**
      * @param string $HostName 云服务器的主机名。
 <li> 点号（.）和短横线（-）不能作为 HostName 的首尾字符，不能连续使用。</li> 
 <li> 不支持 Windows 实例。</li> 
@@ -100,6 +119,11 @@ HostNameSettings的该入参非必选，未选时不设置主机名后缀。
 <li>其他类型（Linux 等）实例：字符长度为[1, 39]，且与 HostName 的长度和不能超过 41，允许支持多个点号，点之间为一段，每段允许字母（不限制大小写）、数字和短横线（-）组成。</li> 
 假设后缀名称为 suffix，原主机名为 test.0，最终主机名为 test.0.suffix。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HostNameDelimiter 云服务器的主机名分隔符。
+默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为主机名的分隔符。如果不设置，则默认采用点号（.）分隔符。
+通过分割符连接多段。
+
+假设原主机名为“product-as-host”，分隔符HostNameDelimiter为“-”，设置主机名后缀"suffix"，那么最终主机名为“product-as-host-suffix”。
      */
     function __construct()
     {
@@ -124,6 +148,10 @@ HostNameSettings的该入参非必选，未选时不设置主机名后缀。
 
         if (array_key_exists("HostNameSuffix",$param) and $param["HostNameSuffix"] !== null) {
             $this->HostNameSuffix = $param["HostNameSuffix"];
+        }
+
+        if (array_key_exists("HostNameDelimiter",$param) and $param["HostNameDelimiter"] !== null) {
+            $this->HostNameDelimiter = $param["HostNameDelimiter"];
         }
     }
 }

@@ -18,14 +18,14 @@ namespace TencentCloud\Dbbrain\V20210527\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * redis key空间信息。
+ * redis key的内存占用等信息。
  *
  * @method string getKey() 获取key名。
  * @method void setKey(string $Key) 设置key名。
  * @method string getType() 获取key类型。
  * @method void setType(string $Type) 设置key类型。
- * @method string getEncoding() 获取key编码方式。
- * @method void setEncoding(string $Encoding) 设置key编码方式。
+ * @method string getEncoding() 获取key编码方式。包括 int、string、linkedlist、hashtable、skiplist、zipmap、ziplist、intset、quicklist、listpack。
+ * @method void setEncoding(string $Encoding) 设置key编码方式。包括 int、string、linkedlist、hashtable、skiplist、zipmap、ziplist、intset、quicklist、listpack。
  * @method integer getExpireTime() 获取key过期时间戳（毫秒），0代表未设置过期时间。
  * @method void setExpireTime(integer $ExpireTime) 设置key过期时间戳（毫秒），0代表未设置过期时间。
  * @method integer getLength() 获取key内存大小，单位Byte。
@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAveElementSize(integer $AveElementSize) 设置平均元素长度。
  * @method string getShardId() 获取所属分片序号。
  * @method void setShardId(string $ShardId) 设置所属分片序号。
+ * @method integer getDb() 获取key所属数据库编号。
+ * @method void setDb(integer $Db) 设置key所属数据库编号。
  */
 class RedisKeySpaceData extends AbstractModel
 {
@@ -52,7 +54,7 @@ class RedisKeySpaceData extends AbstractModel
     public $Type;
 
     /**
-     * @var string key编码方式。
+     * @var string key编码方式。包括 int、string、linkedlist、hashtable、skiplist、zipmap、ziplist、intset、quicklist、listpack。
      */
     public $Encoding;
 
@@ -87,15 +89,21 @@ class RedisKeySpaceData extends AbstractModel
     public $ShardId;
 
     /**
+     * @var integer key所属数据库编号。
+     */
+    public $Db;
+
+    /**
      * @param string $Key key名。
      * @param string $Type key类型。
-     * @param string $Encoding key编码方式。
+     * @param string $Encoding key编码方式。包括 int、string、linkedlist、hashtable、skiplist、zipmap、ziplist、intset、quicklist、listpack。
      * @param integer $ExpireTime key过期时间戳（毫秒），0代表未设置过期时间。
      * @param integer $Length key内存大小，单位Byte。
      * @param integer $ItemCount 元素个数。
      * @param integer $MaxElementSize 最大元素长度。
      * @param integer $AveElementSize 平均元素长度。
      * @param string $ShardId 所属分片序号。
+     * @param integer $Db key所属数据库编号。
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class RedisKeySpaceData extends AbstractModel
 
         if (array_key_exists("ShardId",$param) and $param["ShardId"] !== null) {
             $this->ShardId = $param["ShardId"];
+        }
+
+        if (array_key_exists("Db",$param) and $param["Db"] !== null) {
+            $this->Db = $param["Db"];
         }
     }
 }

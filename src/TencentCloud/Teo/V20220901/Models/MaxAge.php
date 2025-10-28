@@ -26,9 +26,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFollowOrigin(string $FollowOrigin) 设置是否遵循源站，取值有：
 <li>on：遵循源站，忽略MaxAge 时间设置；</li>
 <li>off：不遵循源站，使用MaxAge 时间设置。</li>
- * @method integer getMaxAgeTime() 获取MaxAge 时间设置，单位秒，最大365天。
+ * @method integer getMaxAgeTime() 获取MaxAge 时间设置，单位为秒，取值：0～315360000。
 注意：时间为0，即不缓存。
- * @method void setMaxAgeTime(integer $MaxAgeTime) 设置MaxAge 时间设置，单位秒，最大365天。
+ * @method void setMaxAgeTime(integer $MaxAgeTime) 设置MaxAge 时间设置，单位为秒，取值：0～315360000。
 注意：时间为0，即不缓存。
  */
 class MaxAge extends AbstractModel
@@ -41,7 +41,7 @@ class MaxAge extends AbstractModel
     public $FollowOrigin;
 
     /**
-     * @var integer MaxAge 时间设置，单位秒，最大365天。
+     * @var integer MaxAge 时间设置，单位为秒，取值：0～315360000。
 注意：时间为0，即不缓存。
      */
     public $MaxAgeTime;
@@ -50,7 +50,7 @@ class MaxAge extends AbstractModel
      * @param string $FollowOrigin 是否遵循源站，取值有：
 <li>on：遵循源站，忽略MaxAge 时间设置；</li>
 <li>off：不遵循源站，使用MaxAge 时间设置。</li>
-     * @param integer $MaxAgeTime MaxAge 时间设置，单位秒，最大365天。
+     * @param integer $MaxAgeTime MaxAge 时间设置，单位为秒，取值：0～315360000。
 注意：时间为0，即不缓存。
      */
     function __construct()

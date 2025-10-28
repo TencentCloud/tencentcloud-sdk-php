@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceLanguage(string $SourceLanguage) 设置表示Content的原始语种，枚举值包括 "en" 和 "zh"。其中，"en" 表示英文，"zh" 表示中文。非中文场景的处理耗时较高，具体情况取决于送审文本长度，非中文场景需[反馈工单](https://console.cloud.tencent.com/workorder/category?level1_id=141&level2_id=1287&source=14&data_title=%E6%96%87%E6%9C%AC%E5%86%85%E5%AE%B9%E5%AE%89%E5%85%A8&step=1)确认。
  * @method string getType() 获取审核的业务类型，枚举值包括"TEXT"和"TEXT_AIGC"。其中"TEXT"表示传统文本审核，"TEXT_AIGC"表示AI生成检测（生成检测能力具体能力了解可[参见文档](https://cloud.tencent.com/document/product/1124/118694)）。
  * @method void setType(string $Type) 设置审核的业务类型，枚举值包括"TEXT"和"TEXT_AIGC"。其中"TEXT"表示传统文本审核，"TEXT_AIGC"表示AI生成检测（生成检测能力具体能力了解可[参见文档](https://cloud.tencent.com/document/product/1124/118694)）。
+ * @method string getSessionId() 获取流式审核策略维度下的唯一会话ID
+ * @method void setSessionId(string $SessionId) 设置流式审核策略维度下的唯一会话ID
  */
 class TextModerationRequest extends AbstractModel
 {
@@ -76,6 +78,11 @@ class TextModerationRequest extends AbstractModel
     public $Type;
 
     /**
+     * @var string 流式审核策略维度下的唯一会话ID
+     */
+    public $SessionId;
+
+    /**
      * @param string $Content 该字段表示待检测对象的文本内容，文本需要按utf-8格式编码，长度不能超过10000个字符（按unicode编码计算），并进行 Base64加密
      * @param string $BizType 该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](https://console.cloud.tencent.com/cms/clouds/manage)中配置。
 备注：不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。
@@ -84,6 +91,7 @@ class TextModerationRequest extends AbstractModel
      * @param Device $Device 该字段表示待检测对象对应的设备相关信息，传入后可便于甄别相应违规风险设备
      * @param string $SourceLanguage 表示Content的原始语种，枚举值包括 "en" 和 "zh"。其中，"en" 表示英文，"zh" 表示中文。非中文场景的处理耗时较高，具体情况取决于送审文本长度，非中文场景需[反馈工单](https://console.cloud.tencent.com/workorder/category?level1_id=141&level2_id=1287&source=14&data_title=%E6%96%87%E6%9C%AC%E5%86%85%E5%AE%B9%E5%AE%89%E5%85%A8&step=1)确认。
      * @param string $Type 审核的业务类型，枚举值包括"TEXT"和"TEXT_AIGC"。其中"TEXT"表示传统文本审核，"TEXT_AIGC"表示AI生成检测（生成检测能力具体能力了解可[参见文档](https://cloud.tencent.com/document/product/1124/118694)）。
+     * @param string $SessionId 流式审核策略维度下的唯一会话ID
      */
     function __construct()
     {
@@ -126,6 +134,10 @@ class TextModerationRequest extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
         }
     }
 }

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIPAMD请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method string getClusterId() 获取集群 ID，请[登录控制台](https://console.cloud.tencent.com/tke2/cluster)在集群列表复制ID
+ * @method void setClusterId(string $ClusterId) 设置集群 ID，请[登录控制台](https://console.cloud.tencent.com/tke2/cluster)在集群列表复制ID
  */
 class DescribeIPAMDRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 集群 ID，请[登录控制台](https://console.cloud.tencent.com/tke2/cluster)在集群列表复制ID
      */
     public $ClusterId;
 
     /**
-     * @param string $ClusterId 集群ID
+     * @param string $ClusterId 集群 ID，请[登录控制台](https://console.cloud.tencent.com/tke2/cluster)在集群列表复制ID
      */
     function __construct()
     {

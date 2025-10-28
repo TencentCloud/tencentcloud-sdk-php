@@ -20,21 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccounts请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID，形如postgres-6fego161
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-6fego161
+ * @method string getDBInstanceId() 获取实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
  * @method integer getLimit() 获取分页返回，每页最大返回数目，默认20，取值范围为1-100
  * @method void setLimit(integer $Limit) 设置分页返回，每页最大返回数目，默认20，取值范围为1-100
  * @method integer getOffset() 获取数据偏移量，从0开始。
  * @method void setOffset(integer $Offset) 设置数据偏移量，从0开始。
  * @method string getOrderBy() 获取返回数据按照创建时间或者用户名排序。取值支持createTime、name、updateTime。createTime-按照创建时间排序；name-按照用户名排序; updateTime-按照更新时间排序。
+默认值：createTime
  * @method void setOrderBy(string $OrderBy) 设置返回数据按照创建时间或者用户名排序。取值支持createTime、name、updateTime。createTime-按照创建时间排序；name-按照用户名排序; updateTime-按照更新时间排序。
+默认值：createTime
  * @method string getOrderByType() 获取返回结果是升序还是降序。取值只能为desc或者asc。desc-降序；asc-升序
+默认值：desc
  * @method void setOrderByType(string $OrderByType) 设置返回结果是升序还是降序。取值只能为desc或者asc。desc-降序；asc-升序
+默认值：desc
  */
 class DescribeAccountsRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，形如postgres-6fego161
+     * @var string 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public $DBInstanceId;
 
@@ -50,20 +54,24 @@ class DescribeAccountsRequest extends AbstractModel
 
     /**
      * @var string 返回数据按照创建时间或者用户名排序。取值支持createTime、name、updateTime。createTime-按照创建时间排序；name-按照用户名排序; updateTime-按照更新时间排序。
+默认值：createTime
      */
     public $OrderBy;
 
     /**
      * @var string 返回结果是升序还是降序。取值只能为desc或者asc。desc-降序；asc-升序
+默认值：desc
      */
     public $OrderByType;
 
     /**
-     * @param string $DBInstanceId 实例ID，形如postgres-6fego161
+     * @param string $DBInstanceId 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      * @param integer $Limit 分页返回，每页最大返回数目，默认20，取值范围为1-100
      * @param integer $Offset 数据偏移量，从0开始。
      * @param string $OrderBy 返回数据按照创建时间或者用户名排序。取值支持createTime、name、updateTime。createTime-按照创建时间排序；name-按照用户名排序; updateTime-按照更新时间排序。
+默认值：createTime
      * @param string $OrderByType 返回结果是升序还是降序。取值只能为desc或者asc。desc-降序；asc-升序
+默认值：desc
      */
     function __construct()
     {

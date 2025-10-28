@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 <li>ddos_attackNum_sregion：按攻击源地区的攻击数量排行；</li>
 <li>ddos_attackFlux_sip：按攻击源IP的攻击数量排行；</li>
 <li>ddos_attackFlux_sregion：按攻击源地区的攻击数量排行。</li>
- * @method array getZoneIds() 获取站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
- * @method void setZoneIds(array $ZoneIds) 设置站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
+ * @method array getZoneIds() 获取站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
+ * @method void setZoneIds(array $ZoneIds) 设置站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
  * @method array getPolicyIds() 获取DDoS策略组ID集合，不填默认选择全部策略ID。
  * @method void setPolicyIds(array $PolicyIds) 设置DDoS策略组ID集合，不填默认选择全部策略ID。
  * @method string getAttackType() 获取攻击类型，取值有：
@@ -93,7 +93,7 @@ class DescribeDDoSAttackTopDataRequest extends AbstractModel
     public $MetricName;
 
     /**
-     * @var array 站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
+     * @var array 站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
      */
     public $ZoneIds;
 
@@ -145,7 +145,7 @@ class DescribeDDoSAttackTopDataRequest extends AbstractModel
 <li>ddos_attackNum_sregion：按攻击源地区的攻击数量排行；</li>
 <li>ddos_attackFlux_sip：按攻击源IP的攻击数量排行；</li>
 <li>ddos_attackFlux_sregion：按攻击源地区的攻击数量排行。</li>
-     * @param array $ZoneIds 站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
+     * @param array $ZoneIds 站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
      * @param array $PolicyIds DDoS策略组ID集合，不填默认选择全部策略ID。
      * @param string $AttackType 攻击类型，取值有：
 <li>flood：洪泛攻击；</li>

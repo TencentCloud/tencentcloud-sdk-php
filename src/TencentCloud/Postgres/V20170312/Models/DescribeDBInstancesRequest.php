@@ -22,39 +22,39 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getFilters() 获取按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string
-db-instance-name：按照实例名过滤，类型为string
+db-instance-name：按照实例名过滤，支持模糊匹配，类型为string
 db-project-id：按照项目ID过滤，类型为integer
-db-pay-mode：按照实例付费模式过滤，类型为string
+db-pay-mode：按照实例付费模式过滤，prepaid - 预付费；postpaid - 后付费。类型为string
 db-tag-key：按照标签键过滤，类型为string
 db-private-ip： 按照实例私有网络IP过滤，类型为string
 db-public-address： 按照实例外网地址过滤，类型为string
 db-dedicated-cluster-id: 按照私有集群Id过滤，类型为string
  * @method void setFilters(array $Filters) 设置按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string
-db-instance-name：按照实例名过滤，类型为string
+db-instance-name：按照实例名过滤，支持模糊匹配，类型为string
 db-project-id：按照项目ID过滤，类型为integer
-db-pay-mode：按照实例付费模式过滤，类型为string
+db-pay-mode：按照实例付费模式过滤，prepaid - 预付费；postpaid - 后付费。类型为string
 db-tag-key：按照标签键过滤，类型为string
 db-private-ip： 按照实例私有网络IP过滤，类型为string
 db-public-address： 按照实例外网地址过滤，类型为string
 db-dedicated-cluster-id: 按照私有集群Id过滤，类型为string
- * @method integer getLimit() 获取每页显示数量，取值范围为1-100，默认为返回10条。
- * @method void setLimit(integer $Limit) 设置每页显示数量，取值范围为1-100，默认为返回10条。
+ * @method integer getLimit() 获取每页显示数量，取值范围为0-100，传入0时，取默认配置。默认为返回10条。
+ * @method void setLimit(integer $Limit) 设置每页显示数量，取值范围为0-100，传入0时，取默认配置。默认为返回10条。
  * @method integer getOffset() 获取数据偏移量，从0开始。
  * @method void setOffset(integer $Offset) 设置数据偏移量，从0开始。
- * @method string getOrderBy() 获取排序指标，如实例名、创建时间等，支持DBInstanceId,CreateTime,Name,EndTime
- * @method void setOrderBy(string $OrderBy) 设置排序指标，如实例名、创建时间等，支持DBInstanceId,CreateTime,Name,EndTime
- * @method string getOrderByType() 获取排序方式，包括升序：asc、降序：desc。
- * @method void setOrderByType(string $OrderByType) 设置排序方式，包括升序：asc、降序：desc。
+ * @method string getOrderBy() 获取排序指标，如实例名、创建时间等，支持DBInstanceId,CreateTime,Name,EndTime。默认值：CreateTime。
+ * @method void setOrderBy(string $OrderBy) 设置排序指标，如实例名、创建时间等，支持DBInstanceId,CreateTime,Name,EndTime。默认值：CreateTime。
+ * @method string getOrderByType() 获取排序方式，包括升序：asc、降序：desc。默认值：asc。
+ * @method void setOrderByType(string $OrderByType) 设置排序方式，包括升序：asc、降序：desc。默认值：asc。
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
     /**
      * @var array 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string
-db-instance-name：按照实例名过滤，类型为string
+db-instance-name：按照实例名过滤，支持模糊匹配，类型为string
 db-project-id：按照项目ID过滤，类型为integer
-db-pay-mode：按照实例付费模式过滤，类型为string
+db-pay-mode：按照实例付费模式过滤，prepaid - 预付费；postpaid - 后付费。类型为string
 db-tag-key：按照标签键过滤，类型为string
 db-private-ip： 按照实例私有网络IP过滤，类型为string
 db-public-address： 按照实例外网地址过滤，类型为string
@@ -63,7 +63,7 @@ db-dedicated-cluster-id: 按照私有集群Id过滤，类型为string
     public $Filters;
 
     /**
-     * @var integer 每页显示数量，取值范围为1-100，默认为返回10条。
+     * @var integer 每页显示数量，取值范围为0-100，传入0时，取默认配置。默认为返回10条。
      */
     public $Limit;
 
@@ -73,29 +73,29 @@ db-dedicated-cluster-id: 按照私有集群Id过滤，类型为string
     public $Offset;
 
     /**
-     * @var string 排序指标，如实例名、创建时间等，支持DBInstanceId,CreateTime,Name,EndTime
+     * @var string 排序指标，如实例名、创建时间等，支持DBInstanceId,CreateTime,Name,EndTime。默认值：CreateTime。
      */
     public $OrderBy;
 
     /**
-     * @var string 排序方式，包括升序：asc、降序：desc。
+     * @var string 排序方式，包括升序：asc、降序：desc。默认值：asc。
      */
     public $OrderByType;
 
     /**
      * @param array $Filters 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string
-db-instance-name：按照实例名过滤，类型为string
+db-instance-name：按照实例名过滤，支持模糊匹配，类型为string
 db-project-id：按照项目ID过滤，类型为integer
-db-pay-mode：按照实例付费模式过滤，类型为string
+db-pay-mode：按照实例付费模式过滤，prepaid - 预付费；postpaid - 后付费。类型为string
 db-tag-key：按照标签键过滤，类型为string
 db-private-ip： 按照实例私有网络IP过滤，类型为string
 db-public-address： 按照实例外网地址过滤，类型为string
 db-dedicated-cluster-id: 按照私有集群Id过滤，类型为string
-     * @param integer $Limit 每页显示数量，取值范围为1-100，默认为返回10条。
+     * @param integer $Limit 每页显示数量，取值范围为0-100，传入0时，取默认配置。默认为返回10条。
      * @param integer $Offset 数据偏移量，从0开始。
-     * @param string $OrderBy 排序指标，如实例名、创建时间等，支持DBInstanceId,CreateTime,Name,EndTime
-     * @param string $OrderByType 排序方式，包括升序：asc、降序：desc。
+     * @param string $OrderBy 排序指标，如实例名、创建时间等，支持DBInstanceId,CreateTime,Name,EndTime。默认值：CreateTime。
+     * @param string $OrderByType 排序方式，包括升序：asc、降序：desc。默认值：asc。
      */
     function __construct()
     {

@@ -43,8 +43,10 @@ use TencentCloud\Trro\V20220325\Models as Models;
  * @method Models\DescribeSessionStatisticsByIntervalResponse DescribeSessionStatisticsByInterval(Models\DescribeSessionStatisticsByIntervalRequest $req) 获取各时间段的会话统计值
  * @method Models\GetDeviceLicenseResponse GetDeviceLicense(Models\GetDeviceLicenseRequest $req) 获取设备已经绑定的可用授权数量
  * @method Models\GetDevicesResponse GetDevices(Models\GetDevicesRequest $req) 查询用户设备的授权绑定情况
+ * @method Models\GetDurationDetailsResponse GetDurationDetails(Models\GetDurationDetailsRequest $req) 查询该时间段、对应项目、设备的不同分辨率的通话时长流水，流水以日期（天）为单位
  * @method Models\GetLicenseStatResponse GetLicenseStat(Models\GetLicenseStatRequest $req) 统计license类型数量
  * @method Models\GetLicensesResponse GetLicenses(Models\GetLicensesRequest $req) 按授权查看license列表
+ * @method Models\GetTotalDurationResponse GetTotalDuration(Models\GetTotalDurationRequest $req) 查询该时间段、对应项目、设备的不同分辨率的通话时长汇总
  * @method Models\ModifyCallbackUrlResponse ModifyCallbackUrl(Models\ModifyCallbackUrlRequest $req) 设置回调URL
 录制回调事件内容参考：https://cloud.tencent.com/document/product/647/81113
 转推回调事件内容参考：https://cloud.tencent.com/document/product/647/88552

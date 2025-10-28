@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
 <li>ddos_attackMaxPackageRate：攻击包速率峰值 ；</li>
 <li>ddos_attackBandwidth：攻击带宽曲线；</li>
 <li>ddos_attackPackageRate：攻击包速率曲线。</li>
- * @method array getZoneIds() 获取站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
- * @method void setZoneIds(array $ZoneIds) 设置站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
+ * @method array getZoneIds() 获取站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
+ * @method void setZoneIds(array $ZoneIds) 设置站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
  * @method array getPolicyIds() 获取DDoS策略组ID列表，不填默认选择全部策略ID。
  * @method void setPolicyIds(array $PolicyIds) 设置DDoS策略组ID列表，不填默认选择全部策略ID。
  * @method string getInterval() 获取查询时间粒度，取值有：
@@ -79,7 +79,7 @@ class DescribeDDoSAttackDataRequest extends AbstractModel
     public $MetricNames;
 
     /**
-     * @var array 站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
+     * @var array 站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
      */
     public $ZoneIds;
 
@@ -113,7 +113,7 @@ class DescribeDDoSAttackDataRequest extends AbstractModel
 <li>ddos_attackMaxPackageRate：攻击包速率峰值 ；</li>
 <li>ddos_attackBandwidth：攻击带宽曲线；</li>
 <li>ddos_attackPackageRate：攻击包速率曲线。</li>
-     * @param array $ZoneIds 站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
+     * @param array $ZoneIds 站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
      * @param array $PolicyIds DDoS策略组ID列表，不填默认选择全部策略ID。
      * @param string $Interval 查询时间粒度，取值有：
 <li>min：1分钟；</li>

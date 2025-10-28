@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorageAccountId(string $StorageAccountId) 设置被指定存储用户ID
  * @method string getStorageAppId() 获取被指定存储用户appid
  * @method void setStorageAppId(string $StorageAppId) 设置被指定存储用户appid
+ * @method integer getCompress() 获取是否压缩。
+1:压缩  2:不压缩
+ * @method void setCompress(integer $Compress) 设置是否压缩。
+1:压缩  2:不压缩
  */
 class Storage extends AbstractModel
 {
@@ -66,12 +70,20 @@ class Storage extends AbstractModel
     public $StorageAppId;
 
     /**
+     * @var integer 是否压缩。
+1:压缩  2:不压缩
+     */
+    public $Compress;
+
+    /**
      * @param string $StorageType 存储类型（目前支持 cos、cls）
      * @param string $StorageRegion 存储所在地域
      * @param string $StorageName 存储名称(cos：存储名称为用户自定义的存储桶名称，不包含"-APPID"，仅支持小写字母、数字以及中划线"-"的组合，不能超过50字符，且不支持中划线"-"开头或结尾； cls：存储名称为日志主题id，字符长度为1-50个字符)
      * @param string $StoragePrefix 存储目录前缀，cos日志文件前缀仅支持字母和数字的组合，3-40个字符
      * @param string $StorageAccountId 被指定存储用户ID
      * @param string $StorageAppId 被指定存储用户appid
+     * @param integer $Compress 是否压缩。
+1:压缩  2:不压缩
      */
     function __construct()
     {
@@ -108,6 +120,10 @@ class Storage extends AbstractModel
 
         if (array_key_exists("StorageAppId",$param) and $param["StorageAppId"] !== null) {
             $this->StorageAppId = $param["StorageAppId"];
+        }
+
+        if (array_key_exists("Compress",$param) and $param["Compress"] !== null) {
+            $this->Compress = $param["Compress"];
         }
     }
 }

@@ -126,9 +126,11 @@ use TencentCloud\Common\AbstractModel;
 <li>**APP**：<font color="red">APP或小程序</font>跳转电子签小程序链接, 一般用于贵方小程序或者APP跳转过来,  打开后进入腾讯电子签小程序</li>
 <li>**H5**：<font color="red">H5长链接</font>跳转H5链接, 一般用于贵方H5跳转过来,  打开后进入腾讯电子签H5页面</li>
 <li>**SHORT_H5**：<font color="red">H5短链</font>跳转H5的短链形式, 一般用于发送短信中带的链接, 打开后进入腾讯电子签H5页面</li></ul>
- * @method string getAutoJumpBackEvent() 获取触发自动跳转事件，仅对EndPoint为App类型有效，可选值包括：
+ * @method string getAutoJumpBackEvent() 获取<font color="red">已废弃</font> 请使用 JumpEvents 参数，进行替换。
+触发自动跳转事件，仅对EndPoint为App类型有效，可选值包括：
 <ul><li> **VERIFIED** :企业认证完成/员工认证完成后跳回原App/小程序</li></ul>
- * @method void setAutoJumpBackEvent(string $AutoJumpBackEvent) 设置触发自动跳转事件，仅对EndPoint为App类型有效，可选值包括：
+ * @method void setAutoJumpBackEvent(string $AutoJumpBackEvent) 设置<font color="red">已废弃</font> 请使用 JumpEvents 参数，进行替换。
+触发自动跳转事件，仅对EndPoint为App类型有效，可选值包括：
 <ul><li> **VERIFIED** :企业认证完成/员工认证完成后跳回原App/小程序</li></ul>
  * @method array getAuthorizationTypes() 获取可选的此企业允许的授权方式, 可以设置的方式有:
 <ul>
@@ -144,9 +146,11 @@ use TencentCloud\Common\AbstractModel;
 注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持中国大陆居民身份证类型`。
  * @method void setProxyOperatorIdCardNumber(string $ProxyOperatorIdCardNumber) 设置子客经办人身份证
 注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持中国大陆居民身份证类型`。
- * @method string getAutoJumpUrl() 获取认证完成跳转链接。
+ * @method string getAutoJumpUrl() 获取<font color="red">已废弃</font> 请使用 JumpEvents 参数，进行替换。
+认证完成跳转链接。
 注意：`此功能仅在Endpoint参数设置成 H5 或 PC时才有效`。
- * @method void setAutoJumpUrl(string $AutoJumpUrl) 设置认证完成跳转链接。
+ * @method void setAutoJumpUrl(string $AutoJumpUrl) 设置<font color="red">已废弃</font> 请使用 JumpEvents 参数，进行替换。
+认证完成跳转链接。
 注意：`此功能仅在Endpoint参数设置成 H5 或 PC时才有效`。
  * @method string getTopNavigationStatus() 获取是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。
 
@@ -196,6 +200,12 @@ p.s.
 只有认证方式是授权书+对公打款时才生效。
  * @method UserInfo getOperator() 获取无
  * @method void setOperator(UserInfo $Operator) 设置无
+ * @method array getJumpEvents() 获取跳转事件，其中包括认证期间收录，授权书审核，企业认证的回跳事件。
+p.s.Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font>
+如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
+ * @method void setJumpEvents(array $JumpEvents) 设置跳转事件，其中包括认证期间收录，授权书审核，企业认证的回跳事件。
+p.s.Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font>
+如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
  */
 class CreateConsoleLoginUrlRequest extends AbstractModel
 {
@@ -289,7 +299,8 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
     public $Endpoint;
 
     /**
-     * @var string 触发自动跳转事件，仅对EndPoint为App类型有效，可选值包括：
+     * @var string <font color="red">已废弃</font> 请使用 JumpEvents 参数，进行替换。
+触发自动跳转事件，仅对EndPoint为App类型有效，可选值包括：
 <ul><li> **VERIFIED** :企业认证完成/员工认证完成后跳回原App/小程序</li></ul>
      */
     public $AutoJumpBackEvent;
@@ -310,7 +321,8 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
     public $ProxyOperatorIdCardNumber;
 
     /**
-     * @var string 认证完成跳转链接。
+     * @var string <font color="red">已废弃</font> 请使用 JumpEvents 参数，进行替换。
+认证完成跳转链接。
 注意：`此功能仅在Endpoint参数设置成 H5 或 PC时才有效`。
      */
     public $AutoJumpUrl;
@@ -377,6 +389,13 @@ p.s.
     public $Operator;
 
     /**
+     * @var array 跳转事件，其中包括认证期间收录，授权书审核，企业认证的回跳事件。
+p.s.Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font>
+如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
+     */
+    public $JumpEvents;
+
+    /**
      * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容
 此接口下面信息必填。
 <ul>
@@ -430,7 +449,8 @@ p.s.
 <li>**APP**：<font color="red">APP或小程序</font>跳转电子签小程序链接, 一般用于贵方小程序或者APP跳转过来,  打开后进入腾讯电子签小程序</li>
 <li>**H5**：<font color="red">H5长链接</font>跳转H5链接, 一般用于贵方H5跳转过来,  打开后进入腾讯电子签H5页面</li>
 <li>**SHORT_H5**：<font color="red">H5短链</font>跳转H5的短链形式, 一般用于发送短信中带的链接, 打开后进入腾讯电子签H5页面</li></ul>
-     * @param string $AutoJumpBackEvent 触发自动跳转事件，仅对EndPoint为App类型有效，可选值包括：
+     * @param string $AutoJumpBackEvent <font color="red">已废弃</font> 请使用 JumpEvents 参数，进行替换。
+触发自动跳转事件，仅对EndPoint为App类型有效，可选值包括：
 <ul><li> **VERIFIED** :企业认证完成/员工认证完成后跳回原App/小程序</li></ul>
      * @param array $AuthorizationTypes 可选的此企业允许的授权方式, 可以设置的方式有:
 <ul>
@@ -439,7 +459,8 @@ p.s.
 </ul>
      * @param string $ProxyOperatorIdCardNumber 子客经办人身份证
 注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持中国大陆居民身份证类型`。
-     * @param string $AutoJumpUrl 认证完成跳转链接。
+     * @param string $AutoJumpUrl <font color="red">已废弃</font> 请使用 JumpEvents 参数，进行替换。
+认证完成跳转链接。
 注意：`此功能仅在Endpoint参数设置成 H5 或 PC时才有效`。
      * @param string $TopNavigationStatus 是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。
 
@@ -465,6 +486,9 @@ p.s.
 p.s.
 只有认证方式是授权书+对公打款时才生效。
      * @param UserInfo $Operator 无
+     * @param array $JumpEvents 跳转事件，其中包括认证期间收录，授权书审核，企业认证的回跳事件。
+p.s.Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font>
+如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
      */
     function __construct()
     {
@@ -568,6 +592,15 @@ p.s.
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
+        }
+
+        if (array_key_exists("JumpEvents",$param) and $param["JumpEvents"] !== null) {
+            $this->JumpEvents = [];
+            foreach ($param["JumpEvents"] as $key => $value){
+                $obj = new JumpEvent();
+                $obj->deserialize($value);
+                array_push($this->JumpEvents, $obj);
+            }
         }
     }
 }

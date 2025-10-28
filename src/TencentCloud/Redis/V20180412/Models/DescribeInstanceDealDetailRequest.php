@@ -20,18 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceDealDetail请求参数结构体
  *
- * @method array getDealIds() 获取订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。数组最大长度限制为10
- * @method void setDealIds(array $DealIds) 设置订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。数组最大长度限制为10
+ * @method array getDealIds() 获取订单号，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。数组最大长度限制为10
+ * @method void setDealIds(array $DealIds) 设置订单号，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。数组最大长度限制为10
+ * @method string getDealName() 获取订单号，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealName。数组最大长度限制为10
+ * @method void setDealName(string $DealName) 设置订单号，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealName。数组最大长度限制为10
  */
 class DescribeInstanceDealDetailRequest extends AbstractModel
 {
     /**
-     * @var array 订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。数组最大长度限制为10
+     * @var array 订单号，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。数组最大长度限制为10
+     * @deprecated
      */
     public $DealIds;
 
     /**
-     * @param array $DealIds 订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。数组最大长度限制为10
+     * @var string 订单号，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealName。数组最大长度限制为10
+     */
+    public $DealName;
+
+    /**
+     * @param array $DealIds 订单号，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。数组最大长度限制为10
+     * @param string $DealName 订单号，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealName。数组最大长度限制为10
      */
     function __construct()
     {
@@ -48,6 +57,10 @@ class DescribeInstanceDealDetailRequest extends AbstractModel
         }
         if (array_key_exists("DealIds",$param) and $param["DealIds"] !== null) {
             $this->DealIds = $param["DealIds"];
+        }
+
+        if (array_key_exists("DealName",$param) and $param["DealName"] !== null) {
+            $this->DealName = $param["DealName"];
         }
     }
 }

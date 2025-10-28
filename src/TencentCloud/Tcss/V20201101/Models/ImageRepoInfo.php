@@ -108,6 +108,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSensitiveInfoCnt(integer $SensitiveInfoCnt) 设置敏感信息
  * @method boolean getRecommendedFix() 获取是否推荐处置
  * @method void setRecommendedFix(boolean $RecommendedFix) 设置是否推荐处置
+ * @method string getSolution() 获取解决方案
+ * @method void setSolution(string $Solution) 设置解决方案
+ * @method string getReason() 获取原因
+ * @method void setReason(string $Reason) 设置原因
  */
 class ImageRepoInfo extends AbstractModel
 {
@@ -333,6 +337,16 @@ class ImageRepoInfo extends AbstractModel
     public $RecommendedFix;
 
     /**
+     * @var string 解决方案
+     */
+    public $Solution;
+
+    /**
+     * @var string 原因
+     */
+    public $Reason;
+
+    /**
      * @param string $ImageDigest 镜像Digest
      * @param string $ImageRepoAddress 镜像仓库地址
      * @param string $RegistryType 仓库类型
@@ -377,6 +391,8 @@ class ImageRepoInfo extends AbstractModel
      * @param boolean $HasNeedFixVul 是否存在必修漏洞
      * @param integer $SensitiveInfoCnt 敏感信息
      * @param boolean $RecommendedFix 是否推荐处置
+     * @param string $Solution 解决方案
+     * @param string $Reason 原因
      */
     function __construct()
     {
@@ -565,6 +581,14 @@ class ImageRepoInfo extends AbstractModel
 
         if (array_key_exists("RecommendedFix",$param) and $param["RecommendedFix"] !== null) {
             $this->RecommendedFix = $param["RecommendedFix"];
+        }
+
+        if (array_key_exists("Solution",$param) and $param["Solution"] !== null) {
+            $this->Solution = $param["Solution"];
+        }
+
+        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
+            $this->Reason = $param["Reason"];
         }
     }
 }

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始时间。
  * @method string getEndTime() 获取结束时间。
  * @method void setEndTime(string $EndTime) 设置结束时间。
- * @method array getZoneIds() 获取站点ID集合，此参数必填。
- * @method void setZoneIds(array $ZoneIds) 设置站点ID集合，此参数必填。
+ * @method array getZoneIds() 获取站点ID集合，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。
+ * @method void setZoneIds(array $ZoneIds) 设置站点ID集合，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。
  * @method array getDomains() 获取子域名集合，不填默认选择全部子域名。
  * @method void setDomains(array $Domains) 设置子域名集合，不填默认选择全部子域名。
  * @method integer getLimit() 获取分页查询的限制数目，默认值为 20，最大查询条目为 300。
@@ -46,7 +46,7 @@ class DownloadL7LogsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array 站点ID集合，此参数必填。
+     * @var array 站点ID集合，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。
      */
     public $ZoneIds;
 
@@ -68,7 +68,7 @@ class DownloadL7LogsRequest extends AbstractModel
     /**
      * @param string $StartTime 开始时间。
      * @param string $EndTime 结束时间。
-     * @param array $ZoneIds 站点ID集合，此参数必填。
+     * @param array $ZoneIds 站点ID集合，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。
      * @param array $Domains 子域名集合，不填默认选择全部子域名。
      * @param integer $Limit 分页查询的限制数目，默认值为 20，最大查询条目为 300。
      * @param integer $Offset 分页的偏移量，默认值为 0。

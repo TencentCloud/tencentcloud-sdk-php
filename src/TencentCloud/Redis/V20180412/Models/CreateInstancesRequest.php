@@ -21,9 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * CreateInstances请求参数结构体
  *
  * @method integer getTypeId() 获取实例类型。
-<ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。</li>说明：CKV 版本当前有存量用户使用，暂时保留。</ul>
+- 2：Redis 2.8 内存版（标准架构）。
+- 3：CKV 3.2 内存版（标准架构）。
+- 4：CKV 3.2 内存版（集群架构）。
+- 6：Redis 4.0 内存版（标准架构）。
+- 7：Redis 4.0 内存版（集群架构）。
+- 8：Redis 5.0 内存版（标准架构）。
+- 9：Redis 5.0 内存版（集群架构）。
+- 15：Redis 6.2 内存版（标准架构）。
+- 16：Redis 6.2 内存版（集群架构）。
+- 17：Redis 7.0 内存版（标准架构）。
+- 18：Redis 7.0 内存版（集群架构）。
+- 200：Memcached 1.6 内存版（集群架构）。
+**说明**：CKV 版本当前有存量用户使用，暂时保留。
  * @method void setTypeId(integer $TypeId) 设置实例类型。
-<ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。</li>说明：CKV 版本当前有存量用户使用，暂时保留。</ul>
+- 2：Redis 2.8 内存版（标准架构）。
+- 3：CKV 3.2 内存版（标准架构）。
+- 4：CKV 3.2 内存版（集群架构）。
+- 6：Redis 4.0 内存版（标准架构）。
+- 7：Redis 4.0 内存版（集群架构）。
+- 8：Redis 5.0 内存版（标准架构）。
+- 9：Redis 5.0 内存版（集群架构）。
+- 15：Redis 6.2 内存版（标准架构）。
+- 16：Redis 6.2 内存版（集群架构）。
+- 17：Redis 7.0 内存版（标准架构）。
+- 18：Redis 7.0 内存版（集群架构）。
+- 200：Memcached 1.6 内存版（集群架构）。
+**说明**：CKV 版本当前有存量用户使用，暂时保留。
  * @method integer getMemSize() 获取内存容量，单位为MB， 数值需为1024的整数倍。具体规格，请通过 [DescribeProductInfo](https://cloud.tencent.com/document/api/239/30600) 接口查询全地域的售卖规格。
 - **TypeId**为标准架构时，**MemSize**是实例总内存容量；
 - **TypeId**为集群架构时，**MemSize**是单分片内存容量。
@@ -83,10 +107,10 @@ use TencentCloud\Common\AbstractModel;
 - 标准版实例无需配置该参数。
 - 集群版实例，分片数量范围为：[1、3、5、8、12、16、24、32、40、48、64、80、96、128]。
  * @method integer getRedisReplicasNum() 获取实例副本数量。
-- Redis 内存版 4.0、5.0、6.2 标准架构和集群架构支持副本数量范围为[1,5]。
+- Redis 内存版 4.0、5.0、6.2、7.0 标准架构和集群架构支持副本数量范围为[1,5]。
 - Redis 2.8标准版、CKV标准版只支持1副本。
  * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置实例副本数量。
-- Redis 内存版 4.0、5.0、6.2 标准架构和集群架构支持副本数量范围为[1,5]。
+- Redis 内存版 4.0、5.0、6.2、7.0 标准架构和集群架构支持副本数量范围为[1,5]。
 - Redis 2.8标准版、CKV标准版只支持1副本。
  * @method boolean getReplicasReadonly() 获取标识实例是否需支持副本只读。
 - Redis 2.8 标准版、CKV标准版不支持副本只读。
@@ -132,8 +156,14 @@ use TencentCloud\Common\AbstractModel;
 - local：传统架构，默认为 local。
 - cdc：独享集群。
 - cloud：云原生，当前已暂停售卖。
- * @method string getRedisClusterId() 获取独享集群 ID。当**ProductVersion**设置为**cdc**时，该参数必须设置。
- * @method void setRedisClusterId(string $RedisClusterId) 设置独享集群 ID。当**ProductVersion**设置为**cdc**时，该参数必须设置。
+ * @method string getRedisClusterId() 获取独享集群 ID。
+
+- 当 **ProductVersion** 设置为 **cdc** 时，该参数必须设置。
+- 请通过接口[ DescribeRedisClusters](https://cloud.tencent.com/document/product/239/109628) 获取集群 ID。
+ * @method void setRedisClusterId(string $RedisClusterId) 设置独享集群 ID。
+
+- 当 **ProductVersion** 设置为 **cdc** 时，该参数必须设置。
+- 请通过接口[ DescribeRedisClusters](https://cloud.tencent.com/document/product/239/109628) 获取集群 ID。
  * @method array getAlarmPolicyList() 获取告警策略 ID 数组。
 
 - 请登录[腾讯云可观测平台-告警管理-策略管理](https://console.cloud.tencent.com/monitor/alarm/policy)获取告警策略 ID。
@@ -149,7 +179,19 @@ class CreateInstancesRequest extends AbstractModel
 {
     /**
      * @var integer 实例类型。
-<ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。</li>说明：CKV 版本当前有存量用户使用，暂时保留。</ul>
+- 2：Redis 2.8 内存版（标准架构）。
+- 3：CKV 3.2 内存版（标准架构）。
+- 4：CKV 3.2 内存版（集群架构）。
+- 6：Redis 4.0 内存版（标准架构）。
+- 7：Redis 4.0 内存版（集群架构）。
+- 8：Redis 5.0 内存版（标准架构）。
+- 9：Redis 5.0 内存版（集群架构）。
+- 15：Redis 6.2 内存版（标准架构）。
+- 16：Redis 6.2 内存版（集群架构）。
+- 17：Redis 7.0 内存版（标准架构）。
+- 18：Redis 7.0 内存版（集群架构）。
+- 200：Memcached 1.6 内存版（集群架构）。
+**说明**：CKV 版本当前有存量用户使用，暂时保留。
      */
     public $TypeId;
 
@@ -236,7 +278,7 @@ class CreateInstancesRequest extends AbstractModel
 
     /**
      * @var integer 实例副本数量。
-- Redis 内存版 4.0、5.0、6.2 标准架构和集群架构支持副本数量范围为[1,5]。
+- Redis 内存版 4.0、5.0、6.2、7.0 标准架构和集群架构支持副本数量范围为[1,5]。
 - Redis 2.8标准版、CKV标准版只支持1副本。
      */
     public $RedisReplicasNum;
@@ -300,7 +342,10 @@ class CreateInstancesRequest extends AbstractModel
     public $ProductVersion;
 
     /**
-     * @var string 独享集群 ID。当**ProductVersion**设置为**cdc**时，该参数必须设置。
+     * @var string 独享集群 ID。
+
+- 当 **ProductVersion** 设置为 **cdc** 时，该参数必须设置。
+- 请通过接口[ DescribeRedisClusters](https://cloud.tencent.com/document/product/239/109628) 获取集群 ID。
      */
     public $RedisClusterId;
 
@@ -319,7 +364,19 @@ class CreateInstancesRequest extends AbstractModel
 
     /**
      * @param integer $TypeId 实例类型。
-<ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。</li>说明：CKV 版本当前有存量用户使用，暂时保留。</ul>
+- 2：Redis 2.8 内存版（标准架构）。
+- 3：CKV 3.2 内存版（标准架构）。
+- 4：CKV 3.2 内存版（集群架构）。
+- 6：Redis 4.0 内存版（标准架构）。
+- 7：Redis 4.0 内存版（集群架构）。
+- 8：Redis 5.0 内存版（标准架构）。
+- 9：Redis 5.0 内存版（集群架构）。
+- 15：Redis 6.2 内存版（标准架构）。
+- 16：Redis 6.2 内存版（集群架构）。
+- 17：Redis 7.0 内存版（标准架构）。
+- 18：Redis 7.0 内存版（集群架构）。
+- 200：Memcached 1.6 内存版（集群架构）。
+**说明**：CKV 版本当前有存量用户使用，暂时保留。
      * @param integer $MemSize 内存容量，单位为MB， 数值需为1024的整数倍。具体规格，请通过 [DescribeProductInfo](https://cloud.tencent.com/document/api/239/30600) 接口查询全地域的售卖规格。
 - **TypeId**为标准架构时，**MemSize**是实例总内存容量；
 - **TypeId**为集群架构时，**MemSize**是单分片内存容量。
@@ -350,7 +407,7 @@ class CreateInstancesRequest extends AbstractModel
 - 标准版实例无需配置该参数。
 - 集群版实例，分片数量范围为：[1、3、5、8、12、16、24、32、40、48、64、80、96、128]。
      * @param integer $RedisReplicasNum 实例副本数量。
-- Redis 内存版 4.0、5.0、6.2 标准架构和集群架构支持副本数量范围为[1,5]。
+- Redis 内存版 4.0、5.0、6.2、7.0 标准架构和集群架构支持副本数量范围为[1,5]。
 - Redis 2.8标准版、CKV标准版只支持1副本。
      * @param boolean $ReplicasReadonly 标识实例是否需支持副本只读。
 - Redis 2.8 标准版、CKV标准版不支持副本只读。
@@ -374,7 +431,10 @@ class CreateInstancesRequest extends AbstractModel
 - local：传统架构，默认为 local。
 - cdc：独享集群。
 - cloud：云原生，当前已暂停售卖。
-     * @param string $RedisClusterId 独享集群 ID。当**ProductVersion**设置为**cdc**时，该参数必须设置。
+     * @param string $RedisClusterId 独享集群 ID。
+
+- 当 **ProductVersion** 设置为 **cdc** 时，该参数必须设置。
+- 请通过接口[ DescribeRedisClusters](https://cloud.tencent.com/document/product/239/109628) 获取集群 ID。
      * @param array $AlarmPolicyList 告警策略 ID 数组。
 
 - 请登录[腾讯云可观测平台-告警管理-策略管理](https://console.cloud.tencent.com/monitor/alarm/policy)获取告警策略 ID。

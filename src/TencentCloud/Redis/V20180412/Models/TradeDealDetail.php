@@ -49,6 +49,7 @@ class TradeDealDetail extends AbstractModel
 {
     /**
      * @var string 订单号ID，调用云API时使用此ID
+     * @deprecated
      */
     public $DealId;
 

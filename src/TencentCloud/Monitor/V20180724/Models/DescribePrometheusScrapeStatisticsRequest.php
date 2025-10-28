@@ -22,8 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceIds() 获取实例ID列表
  * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表
+ * @method string getClusterId() 获取集群ID
+ * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method string getJobType() 获取job 类型
  * @method void setJobType(string $JobType) 设置job 类型
+ * @method string getJob() 获取job 过滤，不写就是全部 job
+ * @method void setJob(string $Job) 设置job 过滤，不写就是全部 job
  */
 class DescribePrometheusScrapeStatisticsRequest extends AbstractModel
 {
@@ -33,13 +37,25 @@ class DescribePrometheusScrapeStatisticsRequest extends AbstractModel
     public $InstanceIds;
 
     /**
+     * @var string 集群ID
+     */
+    public $ClusterId;
+
+    /**
      * @var string job 类型
      */
     public $JobType;
 
     /**
+     * @var string job 过滤，不写就是全部 job
+     */
+    public $Job;
+
+    /**
      * @param array $InstanceIds 实例ID列表
+     * @param string $ClusterId 集群ID
      * @param string $JobType job 类型
+     * @param string $Job job 过滤，不写就是全部 job
      */
     function __construct()
     {
@@ -58,8 +74,16 @@ class DescribePrometheusScrapeStatisticsRequest extends AbstractModel
             $this->InstanceIds = $param["InstanceIds"];
         }
 
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
         if (array_key_exists("JobType",$param) and $param["JobType"] !== null) {
             $this->JobType = $param["JobType"];
+        }
+
+        if (array_key_exists("Job",$param) and $param["Job"] !== null) {
+            $this->Job = $param["Job"];
         }
     }
 }

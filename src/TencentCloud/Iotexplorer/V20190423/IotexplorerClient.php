@@ -55,6 +55,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\CreateStudioProductResponse CreateStudioProduct(Models\CreateStudioProductRequest $req) 为用户提供新建产品的能力，用于管理用户的设备
  * @method Models\CreateTRTCSignaturesWithRoomIdResponse CreateTRTCSignaturesWithRoomId(Models\CreateTRTCSignaturesWithRoomIdRequest $req) 创建TRTC通话参数
  * @method Models\CreateTWeSeeRecognitionTaskResponse CreateTWeSeeRecognitionTask(Models\CreateTWeSeeRecognitionTaskRequest $req) 创建 TWeSee 语义理解任务
+ * @method Models\CreateTWeSeeServiceResponse CreateTWeSeeService(Models\CreateTWeSeeServiceRequest $req) 开通 TWeSee 后付费服务
  * @method Models\CreateTWeTalkProductConfigResponse CreateTWeTalkProductConfig(Models\CreateTWeTalkProductConfigRequest $req) 用于配置TWeTalk服务连接产品配置信息。
  * @method Models\CreateTWeTalkProductConfigV2Response CreateTWeTalkProductConfigV2(Models\CreateTWeTalkProductConfigV2Request $req) 用于配置TWeTalk服务连接产品配置信息。
  * @method Models\CreateTopicPolicyResponse CreateTopicPolicy(Models\CreateTopicPolicyRequest $req) 本接口（CreateTopicPolicy）用于创建一个Topic
@@ -217,6 +218,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\UpdateDevicesEnableStateResponse UpdateDevicesEnableState(Models\UpdateDevicesEnableStateRequest $req) 批量禁用启用设备
  * @method Models\UpdateFirmwareResponse UpdateFirmware(Models\UpdateFirmwareRequest $req) 本接口（UpdateFirmware）用于对指定设备发起固件升级请求
  * @method Models\UpdateOtaModuleResponse UpdateOtaModule(Models\UpdateOtaModuleRequest $req) 本接口（UpdateOtaModule）用于修改OTA模块
+ * @method Models\UpdateOtaTaskStatusResponse UpdateOtaTaskStatus(Models\UpdateOtaTaskStatusRequest $req) 本接口（UpdateOtaTask）当固件升级大任务处于没有在全部成功的状态时，可修改为取消状态，取消部分或全部设备的升级;或其它允许的可修改的状态。
  * @method Models\UploadFirmwareResponse UploadFirmware(Models\UploadFirmwareRequest $req) 本接口（UploadFirmware）用于创建设备固件版本信息，在平台用于固件版本升级、固件资源下发等。
  */
 

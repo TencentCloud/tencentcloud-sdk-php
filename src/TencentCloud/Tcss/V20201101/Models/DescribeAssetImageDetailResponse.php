@@ -80,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemainScanTime(integer $RemainScanTime) 设置剩余扫描时间
  * @method integer getIsAuthorized() 获取授权为：1，未授权为：0
  * @method void setIsAuthorized(integer $IsAuthorized) 设置授权为：1，未授权为：0
+ * @method string getSolution() 获取解决方案
+ * @method void setSolution(string $Solution) 设置解决方案
+ * @method string getReason() 获取原因
+ * @method void setReason(string $Reason) 设置原因
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -236,6 +240,16 @@ class DescribeAssetImageDetailResponse extends AbstractModel
     public $IsAuthorized;
 
     /**
+     * @var string 解决方案
+     */
+    public $Solution;
+
+    /**
+     * @var string 原因
+     */
+    public $Reason;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -271,6 +285,8 @@ class DescribeAssetImageDetailResponse extends AbstractModel
      * @param integer $Status 镜像扫描状态
      * @param integer $RemainScanTime 剩余扫描时间
      * @param integer $IsAuthorized 授权为：1，未授权为：0
+     * @param string $Solution 解决方案
+     * @param string $Reason 原因
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -404,6 +420,14 @@ class DescribeAssetImageDetailResponse extends AbstractModel
 
         if (array_key_exists("IsAuthorized",$param) and $param["IsAuthorized"] !== null) {
             $this->IsAuthorized = $param["IsAuthorized"];
+        }
+
+        if (array_key_exists("Solution",$param) and $param["Solution"] !== null) {
+            $this->Solution = $param["Solution"];
+        }
+
+        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
+            $this->Reason = $param["Reason"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

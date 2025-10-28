@@ -40,6 +40,12 @@ UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会�
 
 假设后缀名称为 suffix，原实例名为 test.0，最终实例名为 test.0.suffix。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceNameDelimiter() 获取云服务器实例名分隔符。 默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为实例名的分隔符。如果不设置，则默认采用点号（.）分隔符。 通过分割符连接多段。
+
+假设原实例名为“product-as-instance”，分隔符InstanceNameDelimiter为“-”，设置实例名后缀"suffix"，那么最终实例名为“product-as-instance-suffix”。
+ * @method void setInstanceNameDelimiter(string $InstanceNameDelimiter) 设置云服务器实例名分隔符。 默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为实例名的分隔符。如果不设置，则默认采用点号（.）分隔符。 通过分割符连接多段。
+
+假设原实例名为“product-as-instance”，分隔符InstanceNameDelimiter为“-”，设置实例名后缀"suffix"，那么最终实例名为“product-as-instance-suffix”。
  */
 class InstanceNameSettings extends AbstractModel
 {
@@ -66,6 +72,13 @@ UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会�
     public $InstanceNameSuffix;
 
     /**
+     * @var string 云服务器实例名分隔符。 默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为实例名的分隔符。如果不设置，则默认采用点号（.）分隔符。 通过分割符连接多段。
+
+假设原实例名为“product-as-instance”，分隔符InstanceNameDelimiter为“-”，设置实例名后缀"suffix"，那么最终实例名为“product-as-instance-suffix”。
+     */
+    public $InstanceNameDelimiter;
+
+    /**
      * @param string $InstanceName 云服务器的实例名。字符长度为[2, 108]。
      * @param string $InstanceNameStyle 云服务器实例名的风格，取值范围包括 ORIGINAL 和 UNIQUE，默认为 ORIGINAL。
 
@@ -76,6 +89,9 @@ UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会�
 
 假设后缀名称为 suffix，原实例名为 test.0，最终实例名为 test.0.suffix。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceNameDelimiter 云服务器实例名分隔符。 默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为实例名的分隔符。如果不设置，则默认采用点号（.）分隔符。 通过分割符连接多段。
+
+假设原实例名为“product-as-instance”，分隔符InstanceNameDelimiter为“-”，设置实例名后缀"suffix"，那么最终实例名为“product-as-instance-suffix”。
      */
     function __construct()
     {
@@ -100,6 +116,10 @@ UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会�
 
         if (array_key_exists("InstanceNameSuffix",$param) and $param["InstanceNameSuffix"] !== null) {
             $this->InstanceNameSuffix = $param["InstanceNameSuffix"];
+        }
+
+        if (array_key_exists("InstanceNameDelimiter",$param) and $param["InstanceNameDelimiter"] !== null) {
+            $this->InstanceNameDelimiter = $param["InstanceNameDelimiter"];
         }
     }
 }

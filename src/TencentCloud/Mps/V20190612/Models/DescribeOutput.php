@@ -86,6 +86,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPidSelector(PidSelector $PidSelector) 设置对于含有多个音/视频轨的流，可以指定需要使用的轨道
  * @method array getStreamUrls() 获取输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址
  * @method void setStreamUrls(array $StreamUrls) 设置输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址
+ * @method StreamSelector getStreamSelector() 获取对于含有多个音/视频轨的流，可以指定需要使用的轨道
+ * @method void setStreamSelector(StreamSelector $StreamSelector) 设置对于含有多个音/视频轨的流，可以指定需要使用的轨道
  */
 class DescribeOutput extends AbstractModel
 {
@@ -198,6 +200,7 @@ class DescribeOutput extends AbstractModel
 
     /**
      * @var PidSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     * @deprecated
      */
     public $PidSelector;
 
@@ -205,6 +208,11 @@ class DescribeOutput extends AbstractModel
      * @var array 输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址
      */
     public $StreamUrls;
+
+    /**
+     * @var StreamSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     */
+    public $StreamSelector;
 
     /**
      * @param string $OutputId 输出Id。
@@ -240,6 +248,7 @@ class DescribeOutput extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PidSelector $PidSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
      * @param array $StreamUrls 输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址
+     * @param StreamSelector $StreamSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
      */
     function __construct()
     {
@@ -354,6 +363,11 @@ class DescribeOutput extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->StreamUrls, $obj);
             }
+        }
+
+        if (array_key_exists("StreamSelector",$param) and $param["StreamSelector"] !== null) {
+            $this->StreamSelector = new StreamSelector();
+            $this->StreamSelector->deserialize($param["StreamSelector"]);
         }
     }
 }

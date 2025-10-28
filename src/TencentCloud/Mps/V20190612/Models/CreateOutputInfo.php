@@ -50,8 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZones(array $Zones) 设置可用区，output最多只支持输入一个可用区。	
  * @method CreateOutputRistSettings getRISTSettings() 获取输出的RIST的配置。
  * @method void setRISTSettings(CreateOutputRistSettings $RISTSettings) 设置输出的RIST的配置。
- * @method PidSelector getPidSelector() 获取对于含有多个音/视频轨的流，可以指定需要使用的轨道
- * @method void setPidSelector(PidSelector $PidSelector) 设置对于含有多个音/视频轨的流，可以指定需要使用的轨道
+ * @method PidSelector getPidSelector() 获取对于含有多个音/视频轨的流，可以指定需要使用的轨道。PidSelector 与 TrackSelector 只能存在一个
+ * @method void setPidSelector(PidSelector $PidSelector) 设置对于含有多个音/视频轨的流，可以指定需要使用的轨道。PidSelector 与 TrackSelector 只能存在一个
+ * @method StreamSelector getStreamSelector() 获取对于含有多个音/视频轨的流，可以指定需要使用的轨道。PidSelector 与 TrackSelector 只能存在一个
+ * @method void setStreamSelector(StreamSelector $StreamSelector) 设置对于含有多个音/视频轨的流，可以指定需要使用的轨道。PidSelector 与 TrackSelector 只能存在一个
  */
 class CreateOutputInfo extends AbstractModel
 {
@@ -127,9 +129,15 @@ class CreateOutputInfo extends AbstractModel
     public $RISTSettings;
 
     /**
-     * @var PidSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     * @var PidSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道。PidSelector 与 TrackSelector 只能存在一个
+     * @deprecated
      */
     public $PidSelector;
+
+    /**
+     * @var StreamSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道。PidSelector 与 TrackSelector 只能存在一个
+     */
+    public $StreamSelector;
 
     /**
      * @param string $OutputName 输出的名称。
@@ -147,7 +155,8 @@ class CreateOutputInfo extends AbstractModel
      * @param array $SecurityGroupIds 绑定的输入安全组 ID。 
      * @param array $Zones 可用区，output最多只支持输入一个可用区。	
      * @param CreateOutputRistSettings $RISTSettings 输出的RIST的配置。
-     * @param PidSelector $PidSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     * @param PidSelector $PidSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道。PidSelector 与 TrackSelector 只能存在一个
+     * @param StreamSelector $StreamSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道。PidSelector 与 TrackSelector 只能存在一个
      */
     function __construct()
     {
@@ -225,6 +234,11 @@ class CreateOutputInfo extends AbstractModel
         if (array_key_exists("PidSelector",$param) and $param["PidSelector"] !== null) {
             $this->PidSelector = new PidSelector();
             $this->PidSelector->deserialize($param["PidSelector"]);
+        }
+
+        if (array_key_exists("StreamSelector",$param) and $param["StreamSelector"] !== null) {
+            $this->StreamSelector = new StreamSelector();
+            $this->StreamSelector->deserialize($param["StreamSelector"]);
         }
     }
 }

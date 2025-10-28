@@ -46,6 +46,8 @@ name
  * @method void setTotalSpecMin(integer $TotalSpecMin) 设置总规格最小
  * @method integer getTotalSpecMax() 获取总规格最大
  * @method void setTotalSpecMax(integer $TotalSpecMax) 设置总规格最大
+ * @method string getState() 获取状态，STARTING、RUNNING、TERMINATED
+ * @method void setState(string $State) 设置状态，STARTING、RUNNING、TERMINATED
  */
 class SparkSessionInfo extends AbstractModel
 {
@@ -111,6 +113,11 @@ name
     public $TotalSpecMax;
 
     /**
+     * @var string 状态，STARTING、RUNNING、TERMINATED
+     */
+    public $State;
+
+    /**
      * @param string $SparkSessionId spark session id
      * @param string $SparkSessionName spark session名称
      * @param string $ResourceGroupId 资源组id
@@ -124,6 +131,7 @@ name
      * @param integer $ExecutorNumMax executor最大数量
      * @param integer $TotalSpecMin 总规格最小
      * @param integer $TotalSpecMax 总规格最大
+     * @param string $State 状态，STARTING、RUNNING、TERMINATED
      */
     function __construct()
     {
@@ -184,6 +192,10 @@ name
 
         if (array_key_exists("TotalSpecMax",$param) and $param["TotalSpecMax"] !== null) {
             $this->TotalSpecMax = $param["TotalSpecMax"];
+        }
+
+        if (array_key_exists("State",$param) and $param["State"] !== null) {
+            $this->State = $param["State"];
         }
     }
 }

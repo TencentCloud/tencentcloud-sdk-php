@@ -86,11 +86,11 @@ use TencentCloud\As\V20180419\Models as Models;
     "DetailedStatusMessageSet": [ // 活动内部错误集合（非空不代表活动失败）
         {
             "Code": "InvalidInstanceType",
-            "Zone": "ap-guangzhou-2",
+            "Zone": "ap-guangzhou-6",
             "InstanceId": "",
             "InstanceChargeType": "POSTPAID_BY_HOUR",
             "SubnetId": "subnet-4t5mgeuu",
-            "Message": "The specified instance type `S5.LARGE8` is invalid in `subnet-4t5mgeuu`, `ap-guangzhou-2`.",
+            "Message": "The specified instance type `S5.LARGE8` is invalid in `subnet-4t5mgeuu`, `ap-guangzhou-6`.",
             "InstanceType": "S5.LARGE8"
         }
     ]

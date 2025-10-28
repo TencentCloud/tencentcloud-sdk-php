@@ -42,16 +42,19 @@ class AddressTemplateItem extends AbstractModel
 
     /**
      * @var string IP模板名称，废弃字段。
+     * @deprecated
      */
     public $AddressTemplateName;
 
     /**
      * @var string 废弃字段。
+     * @deprecated
      */
     public $From;
 
     /**
      * @var string 废弃字段
+     * @deprecated
      */
     public $To;
 

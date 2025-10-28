@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getLogsetId() 获取CLS日志集ID
- * @method void setLogsetId(string $LogsetId) 设置CLS日志集ID
- * @method string getTopicId() 获取CLS日志主题ID
- * @method void setTopicId(string $TopicId) 设置CLS日志主题ID
+ * @method string getLogsetId() 获取CLS日志集ID，可以通过cls接口或者控制台获取
+ * @method void setLogsetId(string $LogsetId) 设置CLS日志集ID，可以通过cls接口或者控制台获取
+ * @method string getTopicId() 获取CLS日志主题ID，可以通过cls接口或者控制台获取
+ * @method void setTopicId(string $TopicId) 设置CLS日志主题ID，可以通过cls接口或者控制台获取
  * @method string getTopicRegion() 获取topic所在region，默认为集群当前region
  * @method void setTopicRegion(string $TopicRegion) 设置topic所在region，默认为集群当前region
  */
@@ -37,12 +37,12 @@ class EnableClusterAuditRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string CLS日志集ID
+     * @var string CLS日志集ID，可以通过cls接口或者控制台获取
      */
     public $LogsetId;
 
     /**
-     * @var string CLS日志主题ID
+     * @var string CLS日志主题ID，可以通过cls接口或者控制台获取
      */
     public $TopicId;
 
@@ -53,8 +53,8 @@ class EnableClusterAuditRequest extends AbstractModel
 
     /**
      * @param string $ClusterId 集群ID
-     * @param string $LogsetId CLS日志集ID
-     * @param string $TopicId CLS日志主题ID
+     * @param string $LogsetId CLS日志集ID，可以通过cls接口或者控制台获取
+     * @param string $TopicId CLS日志主题ID，可以通过cls接口或者控制台获取
      * @param string $TopicRegion topic所在region，默认为集群当前region
      */
     function __construct()

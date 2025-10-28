@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getLogsetId() 获取cls服务的logsetID
- * @method void setLogsetId(string $LogsetId) 设置cls服务的logsetID
- * @method string getTopicId() 获取cls服务的topicID
- * @method void setTopicId(string $TopicId) 设置cls服务的topicID
+ * @method string getLogsetId() 获取cls服务的logsetID，通过cls接口或者控制台获取
+ * @method void setLogsetId(string $LogsetId) 设置cls服务的logsetID，通过cls接口或者控制台获取
+ * @method string getTopicId() 获取cls服务的topicID，通过cls接口或者控制台获取
+ * @method void setTopicId(string $TopicId) 设置cls服务的topicID，通过cls接口或者控制台获取
  * @method string getTopicRegion() 获取topic所在地域，默认为集群所在地域
  * @method void setTopicRegion(string $TopicRegion) 设置topic所在地域，默认为集群所在地域
  */
@@ -37,12 +37,12 @@ class EnableEventPersistenceRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string cls服务的logsetID
+     * @var string cls服务的logsetID，通过cls接口或者控制台获取
      */
     public $LogsetId;
 
     /**
-     * @var string cls服务的topicID
+     * @var string cls服务的topicID，通过cls接口或者控制台获取
      */
     public $TopicId;
 
@@ -53,8 +53,8 @@ class EnableEventPersistenceRequest extends AbstractModel
 
     /**
      * @param string $ClusterId 集群ID
-     * @param string $LogsetId cls服务的logsetID
-     * @param string $TopicId cls服务的topicID
+     * @param string $LogsetId cls服务的logsetID，通过cls接口或者控制台获取
+     * @param string $TopicId cls服务的topicID，通过cls接口或者控制台获取
      * @param string $TopicRegion topic所在地域，默认为集群所在地域
      */
     function __construct()

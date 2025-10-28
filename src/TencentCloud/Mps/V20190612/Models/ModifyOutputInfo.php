@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputType(string $OutputType) 设置输出类型：Internet/TencentCSS/StreamLive
  * @method PidSelector getPidSelector() 获取对于含有多个音/视频轨的流，可以指定需要使用的轨道
  * @method void setPidSelector(PidSelector $PidSelector) 设置对于含有多个音/视频轨的流，可以指定需要使用的轨道
+ * @method StreamSelector getStreamSelector() 获取对于含有多个音/视频轨的流，可以指定需要使用的轨道
+ * @method void setStreamSelector(StreamSelector $StreamSelector) 设置对于含有多个音/视频轨的流，可以指定需要使用的轨道
  */
 class ModifyOutputInfo extends AbstractModel
 {
@@ -128,8 +130,14 @@ class ModifyOutputInfo extends AbstractModel
 
     /**
      * @var PidSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     * @deprecated
      */
     public $PidSelector;
+
+    /**
+     * @var StreamSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     */
+    public $StreamSelector;
 
     /**
      * @param string $OutputId 需要修改的Output的Id。
@@ -148,6 +156,7 @@ class ModifyOutputInfo extends AbstractModel
      * @param CreateOutputRistSettings $RISTSettings 转推RIST的配置。
      * @param string $OutputType 输出类型：Internet/TencentCSS/StreamLive
      * @param PidSelector $PidSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     * @param StreamSelector $StreamSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
      */
     function __construct()
     {
@@ -225,6 +234,11 @@ class ModifyOutputInfo extends AbstractModel
         if (array_key_exists("PidSelector",$param) and $param["PidSelector"] !== null) {
             $this->PidSelector = new PidSelector();
             $this->PidSelector->deserialize($param["PidSelector"]);
+        }
+
+        if (array_key_exists("StreamSelector",$param) and $param["StreamSelector"] !== null) {
+            $this->StreamSelector = new StreamSelector();
+            $this->StreamSelector->deserialize($param["StreamSelector"]);
         }
     }
 }

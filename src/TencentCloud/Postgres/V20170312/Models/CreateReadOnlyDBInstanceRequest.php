@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpecCode(string $SpecCode) 设置售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
  * @method integer getStorage() 获取实例硬盘容量大小，单位：GB。该参数的设置步长为10。
  * @method void setStorage(integer $Storage) 设置实例硬盘容量大小，单位：GB。该参数的设置步长为10。
- * @method integer getInstanceCount() 获取购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。
- * @method void setInstanceCount(integer $InstanceCount) 设置购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。
+ * @method integer getInstanceCount() 获取购买实例数量，取值范围：[1-6]。购买支持最大数量6个。
+ * @method void setInstanceCount(integer $InstanceCount) 设置购买实例数量，取值范围：[1-6]。购买支持最大数量6个。
  * @method integer getPeriod() 获取购买时长，单位：月。
 <li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
 <li>后付费：只支持1</li>
@@ -94,6 +94,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBVersion(string $DBVersion) 设置不再需要指定，内核版本号与主实例保持一致
  * @method string getDedicatedClusterId() 获取专属集群ID
  * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置专属集群ID
+ * @method boolean getDeletionProtection() 获取实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
+ * @method void setDeletionProtection(boolean $DeletionProtection) 设置实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
  */
 class CreateReadOnlyDBInstanceRequest extends AbstractModel
 {
@@ -119,7 +121,7 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
     public $Storage;
 
     /**
-     * @var integer 购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。
+     * @var integer 购买实例数量，取值范围：[1-6]。购买支持最大数量6个。
      */
     public $InstanceCount;
 
@@ -220,12 +222,17 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
     public $DedicatedClusterId;
 
     /**
+     * @var boolean 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
+     */
+    public $DeletionProtection;
+
+    /**
      * @param string $Zone 实例所属主可用区， 如：ap-guangzhou-3；
 可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
      * @param string $MasterDBInstanceId 只读实例的主实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      * @param string $SpecCode 售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
      * @param integer $Storage 实例硬盘容量大小，单位：GB。该参数的设置步长为10。
-     * @param integer $InstanceCount 购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。
+     * @param integer $InstanceCount 购买实例数量，取值范围：[1-6]。购买支持最大数量6个。
      * @param integer $Period 购买时长，单位：月。
 <li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
 <li>后付费：只支持1</li>
@@ -257,6 +264,7 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
      * @param string $Name 实例名。仅支持长度小于60的中文/英文/数字/"_"/"-"
      * @param string $DBVersion 不再需要指定，内核版本号与主实例保持一致
      * @param string $DedicatedClusterId 专属集群ID
+     * @param boolean $DeletionProtection 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
      */
     function __construct()
     {
@@ -354,6 +362,10 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
             $this->DedicatedClusterId = $param["DedicatedClusterId"];
+        }
+
+        if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
+            $this->DeletionProtection = $param["DeletionProtection"];
         }
     }
 }

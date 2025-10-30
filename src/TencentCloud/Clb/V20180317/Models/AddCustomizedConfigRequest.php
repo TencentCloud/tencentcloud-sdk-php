@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfigType(string $ConfigType) 设置配置类型，取值范围["CLB", "SERVER", "LOCATION"]，分别表示CLB配置，server配置，location配置。
  * @method string getConfigContent() 获取配置内容
  * @method void setConfigContent(string $ConfigContent) 设置配置内容
+ * @method array getTags() 获取标签
+ * @method void setTags(array $Tags) 设置标签
  */
 class AddCustomizedConfigRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class AddCustomizedConfigRequest extends AbstractModel
     public $ConfigContent;
 
     /**
+     * @var array 标签
+     */
+    public $Tags;
+
+    /**
      * @param string $ConfigName 配置名字
      * @param string $ConfigType 配置类型，取值范围["CLB", "SERVER", "LOCATION"]，分别表示CLB配置，server配置，location配置。
      * @param string $ConfigContent 配置内容
+     * @param array $Tags 标签
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class AddCustomizedConfigRequest extends AbstractModel
 
         if (array_key_exists("ConfigContent",$param) and $param["ConfigContent"] !== null) {
             $this->ConfigContent = $param["ConfigContent"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * CreateRoom请求参数结构体
  *
  * @method string getName() 获取课堂名称。
+字符数不超过256
  * @method void setName(string $Name) 设置课堂名称。
+字符数不超过256
  * @method integer getStartTime() 获取预定的课堂开始时间，unix时间戳（秒）。
  * @method void setStartTime(integer $StartTime) 设置预定的课堂开始时间，unix时间戳（秒）。
  * @method integer getEndTime() 获取预定的课堂结束时间，unix时间戳（秒）。
@@ -90,8 +92,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVideoOrientation(integer $VideoOrientation) 设置横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
  * @method integer getIsGradingRequiredPostClass() 获取开启课后评分。 0：不开启(默认)  1：开启
  * @method void setIsGradingRequiredPostClass(integer $IsGradingRequiredPostClass) 设置开启课后评分。 0：不开启(默认)  1：开启
- * @method integer getRoomType() 获取课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)注：大班课的布局(layout)只有三分屏
- * @method void setRoomType(integer $RoomType) 设置课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)注：大班课的布局(layout)只有三分屏
+ * @method integer getRoomType() 获取课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放); 3 圆桌会议 注：大班课的布局(layout)只有三分屏
+ * @method void setRoomType(integer $RoomType) 设置课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放); 3 圆桌会议 注：大班课的布局(layout)只有三分屏
+ * @method array getGuests() 获取嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
+ * @method void setGuests(array $Guests) 设置嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
  * @method integer getEndDelayTime() 获取拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
  * @method void setEndDelayTime(integer $EndDelayTime) 设置拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
  * @method integer getLiveType() 获取直播类型：0 常规（默认）1 伪直播 2 RTMP推流直播
@@ -102,23 +106,42 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableAutoStart(integer $EnableAutoStart) 设置是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1或2的时候有效
  * @method string getRecordBackground() 获取录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
  * @method void setRecordBackground(string $RecordBackground) 设置录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
- * @method string getRecordScene() 获取录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。
-数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
- * @method void setRecordScene(string $RecordScene) 设置录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。
-数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
+ * @method string getRecordScene() 获取录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
+
+自定义场景参数的含义。如下：
+     scene：自定义js/css对应的场景值。如scene=recordScene，会加载 recordScene 场景对应的 js/css，这样就可以自定义录制页面的元素。 
+    lng：录制页面对应的语种。如lng=en，则录制界面为en。（枚举值：en,zh，zh-TW，jp，ar，kr，vi）
+     customToken：录制页面中涉及客户自己的服务需要鉴权时进行配置。一般情况下，无需配置。
+ * @method void setRecordScene(string $RecordScene) 设置录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
+
+自定义场景参数的含义。如下：
+     scene：自定义js/css对应的场景值。如scene=recordScene，会加载 recordScene 场景对应的 js/css，这样就可以自定义录制页面的元素。 
+    lng：录制页面对应的语种。如lng=en，则录制界面为en。（枚举值：en,zh，zh-TW，jp，ar，kr，vi）
+     customToken：录制页面中涉及客户自己的服务需要鉴权时进行配置。一般情况下，无需配置。
  * @method string getRecordLang() 获取录制自定义语言，仅recordlayout=9的时候此参数有效
  * @method void setRecordLang(string $RecordLang) 设置录制自定义语言，仅recordlayout=9的时候此参数有效
  * @method integer getRecordStream() 获取录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
  * @method void setRecordStream(integer $RecordStream) 设置录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
  * @method integer getWhiteBoardSnapshotMode() 获取板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
  * @method void setWhiteBoardSnapshotMode(integer $WhiteBoardSnapshotMode) 设置板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
- * @method integer getSubtitlesTranscription() 获取字幕转写功能开关：0关闭，1开启，默认关闭
- * @method void setSubtitlesTranscription(integer $SubtitlesTranscription) 设置字幕转写功能开关：0关闭，1开启，默认关闭
+ * @method integer getSubtitlesTranscription() 获取字幕转写功能开关。可以有以下取值：
+0 不开启字幕转写功能（默认值）
+1 自动转写模式：上课自动开启，下课自动停止
+2 手动转写模式：支持老师或者助教通过客户端API手动开启/关闭字幕转写
+设置0和1时客户端均不展示手动开关，设置2时老师或者助教端展示字幕转写开关
+ * @method void setSubtitlesTranscription(integer $SubtitlesTranscription) 设置字幕转写功能开关。可以有以下取值：
+0 不开启字幕转写功能（默认值）
+1 自动转写模式：上课自动开启，下课自动停止
+2 手动转写模式：支持老师或者助教通过客户端API手动开启/关闭字幕转写
+设置0和1时客户端均不展示手动开关，设置2时老师或者助教端展示字幕转写开关
+ * @method integer getRecordMerge() 获取录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
+ * @method void setRecordMerge(integer $RecordMerge) 设置录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
  */
 class CreateRoomRequest extends AbstractModel
 {
     /**
      * @var string 课堂名称。
+字符数不超过256
      */
     public $Name;
 
@@ -238,9 +261,14 @@ class CreateRoomRequest extends AbstractModel
     public $IsGradingRequiredPostClass;
 
     /**
-     * @var integer 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)注：大班课的布局(layout)只有三分屏
+     * @var integer 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放); 3 圆桌会议 注：大班课的布局(layout)只有三分屏
      */
     public $RoomType;
+
+    /**
+     * @var array 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
+     */
+    public $Guests;
 
     /**
      * @var integer 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
@@ -268,8 +296,12 @@ class CreateRoomRequest extends AbstractModel
     public $RecordBackground;
 
     /**
-     * @var string 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。
-数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
+     * @var string 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
+
+自定义场景参数的含义。如下：
+     scene：自定义js/css对应的场景值。如scene=recordScene，会加载 recordScene 场景对应的 js/css，这样就可以自定义录制页面的元素。 
+    lng：录制页面对应的语种。如lng=en，则录制界面为en。（枚举值：en,zh，zh-TW，jp，ar，kr，vi）
+     customToken：录制页面中涉及客户自己的服务需要鉴权时进行配置。一般情况下，无需配置。
      */
     public $RecordScene;
 
@@ -290,12 +322,22 @@ class CreateRoomRequest extends AbstractModel
     public $WhiteBoardSnapshotMode;
 
     /**
-     * @var integer 字幕转写功能开关：0关闭，1开启，默认关闭
+     * @var integer 字幕转写功能开关。可以有以下取值：
+0 不开启字幕转写功能（默认值）
+1 自动转写模式：上课自动开启，下课自动停止
+2 手动转写模式：支持老师或者助教通过客户端API手动开启/关闭字幕转写
+设置0和1时客户端均不展示手动开关，设置2时老师或者助教端展示字幕转写开关
      */
     public $SubtitlesTranscription;
 
     /**
+     * @var integer 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
+     */
+    public $RecordMerge;
+
+    /**
      * @param string $Name 课堂名称。
+字符数不超过256
      * @param integer $StartTime 预定的课堂开始时间，unix时间戳（秒）。
      * @param integer $EndTime 预定的课堂结束时间，unix时间戳（秒）。
      * @param integer $SdkAppId 低代码互动课堂的SdkAppId。
@@ -330,18 +372,28 @@ class CreateRoomRequest extends AbstractModel
 1 只看老师和助教
      * @param integer $VideoOrientation 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
      * @param integer $IsGradingRequiredPostClass 开启课后评分。 0：不开启(默认)  1：开启
-     * @param integer $RoomType 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)注：大班课的布局(layout)只有三分屏
+     * @param integer $RoomType 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放); 3 圆桌会议 注：大班课的布局(layout)只有三分屏
+     * @param array $Guests 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
      * @param integer $EndDelayTime 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
      * @param integer $LiveType 直播类型：0 常规（默认）1 伪直播 2 RTMP推流直播
      * @param string $RecordLiveUrl 伪直播链接。 支持的协议以及格式： 协议：HTTP、HTTPS、RTMP、HLS 。格式：FLV、MP3、MP4、MPEG-TS、MOV、MKV、M4A。视频编码：H.264、VP8。音频编码：AAC、OPUS。
      * @param integer $EnableAutoStart 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1或2的时候有效
      * @param string $RecordBackground 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
-     * @param string $RecordScene 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。
-数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
+     * @param string $RecordScene 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
+
+自定义场景参数的含义。如下：
+     scene：自定义js/css对应的场景值。如scene=recordScene，会加载 recordScene 场景对应的 js/css，这样就可以自定义录制页面的元素。 
+    lng：录制页面对应的语种。如lng=en，则录制界面为en。（枚举值：en,zh，zh-TW，jp，ar，kr，vi）
+     customToken：录制页面中涉及客户自己的服务需要鉴权时进行配置。一般情况下，无需配置。
      * @param string $RecordLang 录制自定义语言，仅recordlayout=9的时候此参数有效
      * @param integer $RecordStream 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
      * @param integer $WhiteBoardSnapshotMode 板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
-     * @param integer $SubtitlesTranscription 字幕转写功能开关：0关闭，1开启，默认关闭
+     * @param integer $SubtitlesTranscription 字幕转写功能开关。可以有以下取值：
+0 不开启字幕转写功能（默认值）
+1 自动转写模式：上课自动开启，下课自动停止
+2 手动转写模式：支持老师或者助教通过客户端API手动开启/关闭字幕转写
+设置0和1时客户端均不展示手动开关，设置2时老师或者助教端展示字幕转写开关
+     * @param integer $RecordMerge 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
      */
     function __construct()
     {
@@ -444,6 +496,10 @@ class CreateRoomRequest extends AbstractModel
             $this->RoomType = $param["RoomType"];
         }
 
+        if (array_key_exists("Guests",$param) and $param["Guests"] !== null) {
+            $this->Guests = $param["Guests"];
+        }
+
         if (array_key_exists("EndDelayTime",$param) and $param["EndDelayTime"] !== null) {
             $this->EndDelayTime = $param["EndDelayTime"];
         }
@@ -482,6 +538,10 @@ class CreateRoomRequest extends AbstractModel
 
         if (array_key_exists("SubtitlesTranscription",$param) and $param["SubtitlesTranscription"] !== null) {
             $this->SubtitlesTranscription = $param["SubtitlesTranscription"];
+        }
+
+        if (array_key_exists("RecordMerge",$param) and $param["RecordMerge"] !== null) {
+            $this->RecordMerge = $param["RecordMerge"];
         }
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneStockInfos(array $ZoneStockInfos) 设置地域库存信息
  * @method integer getStockCount() 获取库存数量
  * @method void setStockCount(integer $StockCount) 设置库存数量
+ * @method float getMaxCpu() 获取最大cpu
+ * @method void setMaxCpu(float $MaxCpu) 设置最大cpu
+ * @method float getMinCpu() 获取最小cpu
+ * @method void setMinCpu(float $MinCpu) 设置最小cpu
  */
 class InstanceSpec extends AbstractModel
 {
@@ -94,6 +98,16 @@ class InstanceSpec extends AbstractModel
     public $StockCount;
 
     /**
+     * @var float 最大cpu
+     */
+    public $MaxCpu;
+
+    /**
+     * @var float 最小cpu
+     */
+    public $MinCpu;
+
+    /**
      * @param integer $Cpu 实例CPU，单位：核
      * @param integer $Memory 实例内存，单位：GB
      * @param integer $MaxStorageSize 实例最大可用存储，单位：GB
@@ -104,6 +118,8 @@ class InstanceSpec extends AbstractModel
      * @param integer $MaxIoBandWidth 最大IO带宽
      * @param array $ZoneStockInfos 地域库存信息
      * @param integer $StockCount 库存数量
+     * @param float $MaxCpu 最大cpu
+     * @param float $MinCpu 最小cpu
      */
     function __construct()
     {
@@ -161,6 +177,14 @@ class InstanceSpec extends AbstractModel
 
         if (array_key_exists("StockCount",$param) and $param["StockCount"] !== null) {
             $this->StockCount = $param["StockCount"];
+        }
+
+        if (array_key_exists("MaxCpu",$param) and $param["MaxCpu"] !== null) {
+            $this->MaxCpu = $param["MaxCpu"];
+        }
+
+        if (array_key_exists("MinCpu",$param) and $param["MinCpu"] !== null) {
+            $this->MinCpu = $param["MinCpu"];
         }
     }
 }

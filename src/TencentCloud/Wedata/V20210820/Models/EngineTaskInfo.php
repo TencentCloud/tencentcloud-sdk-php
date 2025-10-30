@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,21 +28,23 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineExeTime(string $EngineExeTime) 设置引擎执行时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getEngineExeTimes() 获取引擎执行总时间
+ * @method float getEngineExeTimeCost() 获取引擎执行总时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineExeTimes(integer $EngineExeTimes) 设置引擎执行总时间
+ * @method void setEngineExeTimeCost(float $EngineExeTimeCost) 设置引擎执行总时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCuConsume() 获取cu消耗
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCuConsume(integer $CuConsume) 设置cu消耗
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getResourceUsage() 获取资源消耗
+ * @method integer getResourceUsage() 获取该值表示任务预设资源，sql任务不需要预设资源，该值为-1
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceUsage(integer $ResourceUsage) 设置资源消耗
+ * @method void setResourceUsage(integer $ResourceUsage) 设置该值表示任务预设资源，sql任务不需要预设资源，该值为-1
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEngineName() 获取引擎名
+ * @method string getEngineName() 获取引擎名。在wedata侧若获取不到引擎名，则是wedata侧生成dlc标识，与dlc侧的引擎名存在不一致的情况
+
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineName(string $EngineName) 设置引擎名
+ * @method void setEngineName(string $EngineName) 设置引擎名。在wedata侧若获取不到引擎名，则是wedata侧生成dlc标识，与dlc侧的引擎名存在不一致的情况
+
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEngineExeStatus() 获取引擎执行状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -110,6 +112,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCmdArgs(string $CmdArgs) 设置入参
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getVCoreSeconds() 获取使用虚拟核心秒数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVCoreSeconds(integer $VCoreSeconds) 设置使用虚拟核心秒数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMemorySeconds() 获取使用的内存秒数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMemorySeconds(integer $MemorySeconds) 设置使用的内存秒数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEmrUserName() 获取EMR用户名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEmrUserName(string $EmrUserName) 设置EMR用户名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getQueryId() 获取任务的查询ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQueryId(string $QueryId) 设置任务的查询ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationId() 获取应用程序ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationId(string $ApplicationId) 设置应用程序ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EngineTaskInfo extends AbstractModel
 {
@@ -126,10 +148,10 @@ class EngineTaskInfo extends AbstractModel
     public $EngineExeTime;
 
     /**
-     * @var integer 引擎执行总时间
+     * @var float 引擎执行总时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $EngineExeTimes;
+    public $EngineExeTimeCost;
 
     /**
      * @var integer cu消耗
@@ -138,13 +160,14 @@ class EngineTaskInfo extends AbstractModel
     public $CuConsume;
 
     /**
-     * @var integer 资源消耗
+     * @var integer 该值表示任务预设资源，sql任务不需要预设资源，该值为-1
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceUsage;
 
     /**
-     * @var string 引擎名
+     * @var string 引擎名。在wedata侧若获取不到引擎名，则是wedata侧生成dlc标识，与dlc侧的引擎名存在不一致的情况
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineName;
@@ -239,17 +262,48 @@ class EngineTaskInfo extends AbstractModel
     public $CmdArgs;
 
     /**
+     * @var integer 使用虚拟核心秒数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VCoreSeconds;
+
+    /**
+     * @var integer 使用的内存秒数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MemorySeconds;
+
+    /**
+     * @var string EMR用户名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EmrUserName;
+
+    /**
+     * @var string 任务的查询ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QueryId;
+
+    /**
+     * @var string 应用程序ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationId;
+
+    /**
      * @param string $EngineSubmitTime 引擎提交时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineExeTime 引擎执行时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $EngineExeTimes 引擎执行总时间
+     * @param float $EngineExeTimeCost 引擎执行总时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CuConsume cu消耗
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ResourceUsage 资源消耗
+     * @param integer $ResourceUsage 该值表示任务预设资源，sql任务不需要预设资源，该值为-1
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EngineName 引擎名
+     * @param string $EngineName 引擎名。在wedata侧若获取不到引擎名，则是wedata侧生成dlc标识，与dlc侧的引擎名存在不一致的情况
+
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineExeStatus 引擎执行状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -284,6 +338,16 @@ class EngineTaskInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CmdArgs 入参
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $VCoreSeconds 使用虚拟核心秒数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MemorySeconds 使用的内存秒数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EmrUserName EMR用户名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $QueryId 任务的查询ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationId 应用程序ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -306,8 +370,8 @@ class EngineTaskInfo extends AbstractModel
             $this->EngineExeTime = $param["EngineExeTime"];
         }
 
-        if (array_key_exists("EngineExeTimes",$param) and $param["EngineExeTimes"] !== null) {
-            $this->EngineExeTimes = $param["EngineExeTimes"];
+        if (array_key_exists("EngineExeTimeCost",$param) and $param["EngineExeTimeCost"] !== null) {
+            $this->EngineExeTimeCost = $param["EngineExeTimeCost"];
         }
 
         if (array_key_exists("CuConsume",$param) and $param["CuConsume"] !== null) {
@@ -376,6 +440,26 @@ class EngineTaskInfo extends AbstractModel
 
         if (array_key_exists("CmdArgs",$param) and $param["CmdArgs"] !== null) {
             $this->CmdArgs = $param["CmdArgs"];
+        }
+
+        if (array_key_exists("VCoreSeconds",$param) and $param["VCoreSeconds"] !== null) {
+            $this->VCoreSeconds = $param["VCoreSeconds"];
+        }
+
+        if (array_key_exists("MemorySeconds",$param) and $param["MemorySeconds"] !== null) {
+            $this->MemorySeconds = $param["MemorySeconds"];
+        }
+
+        if (array_key_exists("EmrUserName",$param) and $param["EmrUserName"] !== null) {
+            $this->EmrUserName = $param["EmrUserName"];
+        }
+
+        if (array_key_exists("QueryId",$param) and $param["QueryId"] !== null) {
+            $this->QueryId = $param["QueryId"];
+        }
+
+        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
+            $this->ApplicationId = $param["ApplicationId"];
         }
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -78,9 +78,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsumerLag(integer $ConsumerLag) 设置消费堆积
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLastUpdateTime() 获取最后消费进度更新时间，秒为单位
+ * @method integer getLastUpdateTime() 获取最后消费进度更新时间，**Unix时间戳（毫秒）**
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLastUpdateTime(integer $LastUpdateTime) 设置最后消费进度更新时间，秒为单位
+ * @method void setLastUpdateTime(integer $LastUpdateTime) 设置最后消费进度更新时间，**Unix时间戳（毫秒）**
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxRetryTimes() 获取最大重试次数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -179,7 +179,7 @@ class SubscriptionData extends AbstractModel
     public $ConsumerLag;
 
     /**
-     * @var integer 最后消费进度更新时间，秒为单位
+     * @var integer 最后消费进度更新时间，**Unix时间戳（毫秒）**
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastUpdateTime;
@@ -240,7 +240,7 @@ CLUSTERING 集群模式;
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ConsumerLag 消费堆积
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $LastUpdateTime 最后消费进度更新时间，秒为单位
+     * @param integer $LastUpdateTime 最后消费进度更新时间，**Unix时间戳（毫秒）**
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxRetryTimes 最大重试次数
 注意：此字段可能返回 null，表示取不到有效值。

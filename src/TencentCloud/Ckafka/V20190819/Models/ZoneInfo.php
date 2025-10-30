@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsInternalApp(integer $IsInternalApp) 设置是否内部APP
  * @method integer getAppId() 获取应用标识
  * @method void setAppId(integer $AppId) 设置应用标识
- * @method boolean getFlag() 获取标识
- * @method void setFlag(boolean $Flag) 设置标识
+ * @method boolean getFlag() 获取可用区是否售罄标识，true表示已售罄，false表示未售罄。
+ * @method void setFlag(boolean $Flag) 设置可用区是否售罄标识，true表示已售罄，false表示未售罄。
  * @method string getZoneName() 获取可用区名称
  * @method void setZoneName(string $ZoneName) 设置可用区名称
- * @method integer getZoneStatus() 获取可用区状态
- * @method void setZoneStatus(integer $ZoneStatus) 设置可用区状态
+ * @method integer getZoneStatus() 获取可用区状态  枚举示例:  3: 开启，4: 关闭;  可用区状态以SoldOut为准
+ * @method void setZoneStatus(integer $ZoneStatus) 设置可用区状态  枚举示例:  3: 开启，4: 关闭;  可用区状态以SoldOut为准
  * @method string getExflag() 获取额外标识
  * @method void setExflag(string $Exflag) 设置额外标识
  * @method string getSoldOut() 获取true为售罄，false为未售罄
@@ -59,7 +59,7 @@ class ZoneInfo extends AbstractModel
     public $AppId;
 
     /**
-     * @var boolean 标识
+     * @var boolean 可用区是否售罄标识，true表示已售罄，false表示未售罄。
      */
     public $Flag;
 
@@ -69,7 +69,7 @@ class ZoneInfo extends AbstractModel
     public $ZoneName;
 
     /**
-     * @var integer 可用区状态
+     * @var integer 可用区状态  枚举示例:  3: 开启，4: 关闭;  可用区状态以SoldOut为准
      */
     public $ZoneStatus;
 
@@ -98,9 +98,9 @@ class ZoneInfo extends AbstractModel
      * @param string $ZoneId 可用区
      * @param integer $IsInternalApp 是否内部APP
      * @param integer $AppId 应用标识
-     * @param boolean $Flag 标识
+     * @param boolean $Flag 可用区是否售罄标识，true表示已售罄，false表示未售罄。
      * @param string $ZoneName 可用区名称
-     * @param integer $ZoneStatus 可用区状态
+     * @param integer $ZoneStatus 可用区状态  枚举示例:  3: 开启，4: 关闭;  可用区状态以SoldOut为准
      * @param string $Exflag 额外标识
      * @param string $SoldOut true为售罄，false为未售罄
      * @param array $SalesInfo 标准版售罄信息

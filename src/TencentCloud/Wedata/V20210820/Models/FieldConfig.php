@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFieldDataType(string $FieldDataType) 设置字段值类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ColumnValueConfig getValueConfig() 获取字段值变量信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setValueConfig(ColumnValueConfig $ValueConfig) 设置字段值变量信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FieldConfig extends AbstractModel
 {
@@ -54,11 +58,19 @@ class FieldConfig extends AbstractModel
     public $FieldDataType;
 
     /**
+     * @var ColumnValueConfig 字段值变量信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ValueConfig;
+
+    /**
      * @param string $FieldKey 字段key
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FieldValue 字段值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FieldDataType 字段值类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ColumnValueConfig $ValueConfig 字段值变量信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +96,11 @@ class FieldConfig extends AbstractModel
 
         if (array_key_exists("FieldDataType",$param) and $param["FieldDataType"] !== null) {
             $this->FieldDataType = $param["FieldDataType"];
+        }
+
+        if (array_key_exists("ValueConfig",$param) and $param["ValueConfig"] !== null) {
+            $this->ValueConfig = new ColumnValueConfig();
+            $this->ValueConfig->deserialize($param["ValueConfig"]);
         }
     }
 }

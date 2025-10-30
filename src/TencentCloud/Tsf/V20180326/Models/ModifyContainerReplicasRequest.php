@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyContainerReplicas请求参数结构体
  *
- * @method string getGroupId() 获取部署组ID，部署组唯一标识
- * @method void setGroupId(string $GroupId) 设置部署组ID，部署组唯一标识
+ * @method string getGroupId() 获取部署组ID，部署组唯一标识，调用[DescribeClusters](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=docker)接口，选定一个容器集群，选择部署组，查看DescribeSingleContainerGroups接口返回的GroupId
+ * @method void setGroupId(string $GroupId) 设置部署组ID，部署组唯一标识，调用[DescribeClusters](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=docker)接口，选定一个容器集群，选择部署组，查看DescribeSingleContainerGroups接口返回的GroupId
  * @method integer getInstanceNum() 获取实例数量
  * @method void setInstanceNum(integer $InstanceNum) 设置实例数量
  */
 class ModifyContainerReplicasRequest extends AbstractModel
 {
     /**
-     * @var string 部署组ID，部署组唯一标识
+     * @var string 部署组ID，部署组唯一标识，调用[DescribeClusters](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=docker)接口，选定一个容器集群，选择部署组，查看DescribeSingleContainerGroups接口返回的GroupId
      */
     public $GroupId;
 
@@ -38,7 +38,7 @@ class ModifyContainerReplicasRequest extends AbstractModel
     public $InstanceNum;
 
     /**
-     * @param string $GroupId 部署组ID，部署组唯一标识
+     * @param string $GroupId 部署组ID，部署组唯一标识，调用[DescribeClusters](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=docker)接口，选定一个容器集群，选择部署组，查看DescribeSingleContainerGroups接口返回的GroupId
      * @param integer $InstanceNum 实例数量
      */
     function __construct()

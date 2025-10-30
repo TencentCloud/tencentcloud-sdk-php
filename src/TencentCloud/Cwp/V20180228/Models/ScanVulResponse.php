@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTaskId() 获取任务id
  * @method void setTaskId(integer $TaskId) 设置任务id
+ * @method integer getBasicVersionCount() 获取自选主机里面包含基础版个数
+ * @method void setBasicVersionCount(integer $BasicVersionCount) 设置自选主机里面包含基础版个数
+ * @method integer getSuccessCount() 获取创建扫描任务机器个数
+ * @method void setSuccessCount(integer $SuccessCount) 设置创建扫描任务机器个数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +37,24 @@ class ScanVulResponse extends AbstractModel
     public $TaskId;
 
     /**
+     * @var integer 自选主机里面包含基础版个数
+     */
+    public $BasicVersionCount;
+
+    /**
+     * @var integer 创建扫描任务机器个数
+     */
+    public $SuccessCount;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param integer $TaskId 任务id
+     * @param integer $BasicVersionCount 自选主机里面包含基础版个数
+     * @param integer $SuccessCount 创建扫描任务机器个数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +72,14 @@ class ScanVulResponse extends AbstractModel
         }
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("BasicVersionCount",$param) and $param["BasicVersionCount"] !== null) {
+            $this->BasicVersionCount = $param["BasicVersionCount"];
+        }
+
+        if (array_key_exists("SuccessCount",$param) and $param["SuccessCount"] !== null) {
+            $this->SuccessCount = $param["SuccessCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

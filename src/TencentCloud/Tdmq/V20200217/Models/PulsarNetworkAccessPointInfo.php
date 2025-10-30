@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneName(string $ZoneName) 设置可用区信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getTls() 获取是否开启TLS加密
+ * @method void setTls(boolean $Tls) 设置是否开启TLS加密
+ * @method string getCustomUrl() 获取接入点自定义域名
+ * @method void setCustomUrl(string $CustomUrl) 设置接入点自定义域名
  */
 class PulsarNetworkAccessPointInfo extends AbstractModel
 {
@@ -146,6 +150,16 @@ class PulsarNetworkAccessPointInfo extends AbstractModel
     public $ZoneName;
 
     /**
+     * @var boolean 是否开启TLS加密
+     */
+    public $Tls;
+
+    /**
+     * @var string 接入点自定义域名
+     */
+    public $CustomUrl;
+
+    /**
      * @param string $VpcId vpc的id，支撑网和公网接入点，该字段为空
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网id，支撑网和公网接入点，该字段为空
@@ -172,6 +186,8 @@ class PulsarNetworkAccessPointInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ZoneName 可用区信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $Tls 是否开启TLS加密
+     * @param string $CustomUrl 接入点自定义域名
      */
     function __construct()
     {
@@ -233,6 +249,14 @@ class PulsarNetworkAccessPointInfo extends AbstractModel
 
         if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
             $this->ZoneName = $param["ZoneName"];
+        }
+
+        if (array_key_exists("Tls",$param) and $param["Tls"] !== null) {
+            $this->Tls = $param["Tls"];
+        }
+
+        if (array_key_exists("CustomUrl",$param) and $param["CustomUrl"] !== null) {
+            $this->CustomUrl = $param["CustomUrl"];
         }
     }
 }

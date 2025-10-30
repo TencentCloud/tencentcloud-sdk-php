@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyTime(string $ModifyTime) 设置最近修改时间
  * @method string getUuid() 获取服务器Uuid
  * @method void setUuid(string $Uuid) 设置服务器Uuid
- * @method string getLocations() 获取登陆地
- * @method void setLocations(string $Locations) 设置登陆地
+ * @method string getLocations() 获取登录地
+ * @method void setLocations(string $Locations) 设置登录地
  */
 class LoginWhiteCombinedInfo extends AbstractModel
 {
@@ -124,7 +124,7 @@ class LoginWhiteCombinedInfo extends AbstractModel
     public $Uuid;
 
     /**
-     * @var string 登陆地
+     * @var string 登录地
      */
     public $Locations;
 
@@ -143,7 +143,7 @@ class LoginWhiteCombinedInfo extends AbstractModel
      * @param string $CreateTime 创建时间
      * @param string $ModifyTime 最近修改时间
      * @param string $Uuid 服务器Uuid
-     * @param string $Locations 登陆地
+     * @param string $Locations 登录地
      */
     function __construct()
     {

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(string $Output) 设置工具、大模型的输出信息，json
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getModelName() 获取模型名
+ * @method void setModelName(string $ModelName) 设置模型名
  */
 class AgentDebugInfo extends AbstractModel
 {
@@ -44,10 +46,16 @@ class AgentDebugInfo extends AbstractModel
     public $Output;
 
     /**
+     * @var string 模型名
+     */
+    public $ModelName;
+
+    /**
      * @param string $Input 工具、大模型的输入信息，json
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Output 工具、大模型的输出信息，json
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ModelName 模型名
      */
     function __construct()
     {
@@ -68,6 +76,10 @@ class AgentDebugInfo extends AbstractModel
 
         if (array_key_exists("Output",$param) and $param["Output"] !== null) {
             $this->Output = $param["Output"];
+        }
+
+        if (array_key_exists("ModelName",$param) and $param["ModelName"] !== null) {
+            $this->ModelName = $param["ModelName"];
         }
     }
 }

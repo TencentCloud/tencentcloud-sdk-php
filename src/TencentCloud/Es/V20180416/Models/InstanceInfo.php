@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -334,6 +334,10 @@ RENEW_FLAG_DEFAULT：不自动续费
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableDestroyProtection(string $EnableDestroyProtection) 设置开启集群保护：OPEN-开启，CLOSE-关闭
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getShowKibanaIpPort() 获取kibana内网访问地址
+ * @method void setShowKibanaIpPort(string $ShowKibanaIpPort) 设置kibana内网访问地址
+ * @method boolean getIsCdzLite() 获取是否为CDZLite可用区
+ * @method void setIsCdzLite(boolean $IsCdzLite) 设置是否为CDZLite可用区
  */
 class InstanceInfo extends AbstractModel
 {
@@ -871,6 +875,16 @@ RENEW_FLAG_DEFAULT：不自动续费
     public $EnableDestroyProtection;
 
     /**
+     * @var string kibana内网访问地址
+     */
+    public $ShowKibanaIpPort;
+
+    /**
+     * @var boolean 是否为CDZLite可用区
+     */
+    public $IsCdzLite;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 地域
@@ -1028,6 +1042,8 @@ RENEW_FLAG_DEFAULT：不自动续费
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnableDestroyProtection 开启集群保护：OPEN-开启，CLOSE-关闭
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ShowKibanaIpPort kibana内网访问地址
+     * @param boolean $IsCdzLite 是否为CDZLite可用区
      */
     function __construct()
     {
@@ -1455,6 +1471,14 @@ RENEW_FLAG_DEFAULT：不自动续费
 
         if (array_key_exists("EnableDestroyProtection",$param) and $param["EnableDestroyProtection"] !== null) {
             $this->EnableDestroyProtection = $param["EnableDestroyProtection"];
+        }
+
+        if (array_key_exists("ShowKibanaIpPort",$param) and $param["ShowKibanaIpPort"] !== null) {
+            $this->ShowKibanaIpPort = $param["ShowKibanaIpPort"];
+        }
+
+        if (array_key_exists("IsCdzLite",$param) and $param["IsCdzLite"] !== null) {
+            $this->IsCdzLite = $param["IsCdzLite"];
         }
     }
 }

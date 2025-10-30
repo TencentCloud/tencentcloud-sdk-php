@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -81,11 +81,21 @@ use TencentCloud\Common\AbstractModel;
  * @method array getTags() 获取标签描述列表。通过指定该参数可以支持绑定标签到启动配置。每个启动配置最多支持30个标签。
  * @method void setTags(array $Tags) 设置标签描述列表。通过指定该参数可以支持绑定标签到启动配置。每个启动配置最多支持30个标签。
  * @method HostNameSettings getHostNameSettings() 获取云服务器主机名（HostName）的相关设置。
+不支持windows实例设置主机名。 
+新增该属性时，必须传递云服务器的主机名，其它未传递字段会设置为默认值。
+会校验主机名(如果存在后缀则加上后缀)是否超过最大位数46。
  * @method void setHostNameSettings(HostNameSettings $HostNameSettings) 设置云服务器主机名（HostName）的相关设置。
+不支持windows实例设置主机名。 
+新增该属性时，必须传递云服务器的主机名，其它未传递字段会设置为默认值。
+会校验主机名(如果存在后缀则加上后缀)是否超过最大位数46。
  * @method InstanceNameSettings getInstanceNameSettings() 获取云服务器实例名（InstanceName）的相关设置。
 如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。
+新增该属性时，必须传递云服务器的实例名称，其它未传递字段会设置为默认值。
+会校验实例名称(如果存在后缀则加上后缀)是否超过最大位数108。
  * @method void setInstanceNameSettings(InstanceNameSettings $InstanceNameSettings) 设置云服务器实例名（InstanceName）的相关设置。
 如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。
+新增该属性时，必须传递云服务器的实例名称，其它未传递字段会设置为默认值。
+会校验实例名称(如果存在后缀则加上后缀)是否超过最大位数108。
  * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
  * @method string getDiskTypePolicy() 获取云盘类型选择策略，默认取值 ORIGINAL，取值范围：
@@ -215,12 +225,17 @@ class CreateLaunchConfigurationRequest extends AbstractModel
 
     /**
      * @var HostNameSettings 云服务器主机名（HostName）的相关设置。
+不支持windows实例设置主机名。 
+新增该属性时，必须传递云服务器的主机名，其它未传递字段会设置为默认值。
+会校验主机名(如果存在后缀则加上后缀)是否超过最大位数46。
      */
     public $HostNameSettings;
 
     /**
      * @var InstanceNameSettings 云服务器实例名（InstanceName）的相关设置。
 如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。
+新增该属性时，必须传递云服务器的实例名称，其它未传递字段会设置为默认值。
+会校验实例名称(如果存在后缀则加上后缀)是否超过最大位数108。
      */
     public $InstanceNameSettings;
 
@@ -299,8 +314,13 @@ class CreateLaunchConfigurationRequest extends AbstractModel
      * @param array $InstanceTags 标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
      * @param array $Tags 标签描述列表。通过指定该参数可以支持绑定标签到启动配置。每个启动配置最多支持30个标签。
      * @param HostNameSettings $HostNameSettings 云服务器主机名（HostName）的相关设置。
+不支持windows实例设置主机名。 
+新增该属性时，必须传递云服务器的主机名，其它未传递字段会设置为默认值。
+会校验主机名(如果存在后缀则加上后缀)是否超过最大位数46。
      * @param InstanceNameSettings $InstanceNameSettings 云服务器实例名（InstanceName）的相关设置。
 如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。
+新增该属性时，必须传递云服务器的实例名称，其它未传递字段会设置为默认值。
+会校验实例名称(如果存在后缀则加上后缀)是否超过最大位数108。
      * @param InstanceChargePrepaid $InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
      * @param string $DiskTypePolicy 云盘类型选择策略，默认取值 ORIGINAL，取值范围：
 <li>ORIGINAL：使用设置的云盘类型</li>

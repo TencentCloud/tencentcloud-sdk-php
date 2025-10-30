@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInferNormal(string $InferNormal) 设置推测结果是否异常
  * @method string getSample() 获取标本
  * @method void setSample(string $Sample) 设置标本
+ * @method string getMethod() 获取检测方法
+ * @method void setMethod(string $Method) 设置检测方法
  */
 class IndicatorItem extends AbstractModel
 {
@@ -122,6 +124,11 @@ class IndicatorItem extends AbstractModel
     public $Sample;
 
     /**
+     * @var string 检测方法
+     */
+    public $Method;
+
+    /**
      * @param string $Code 英文缩写
      * @param string $Scode 标准缩写
      * @param string $Name 项目名称
@@ -136,6 +143,7 @@ class IndicatorItem extends AbstractModel
      * @param Coordinate $Coords 指标项坐标位置
      * @param string $InferNormal 推测结果是否异常
      * @param string $Sample 标本
+     * @param string $Method 检测方法
      */
     function __construct()
     {
@@ -205,6 +213,10 @@ class IndicatorItem extends AbstractModel
 
         if (array_key_exists("Sample",$param) and $param["Sample"] !== null) {
             $this->Sample = $param["Sample"];
+        }
+
+        if (array_key_exists("Method",$param) and $param["Method"] !== null) {
+            $this->Method = $param["Method"];
         }
     }
 }

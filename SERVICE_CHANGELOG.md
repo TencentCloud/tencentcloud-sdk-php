@@ -1,72 +1,10 @@
-# Release 3.0.1411
+# Release 3.0.1480
 
-## 应用性能监控(apm) 版本：2021-06-22
+## 操作审计(cloudaudit) 版本：2019-03-19
 
-### 第 40 次发布
+### 第 18 次发布
 
-发布时间：2025-06-30 01:09:28
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-新增接口：
-
-* [CreateProfileTask](https://cloud.tencent.com/document/api/1463/120402)
-
-
-
-## 边缘计算机器(ecm) 版本：2019-07-19
-
-### 第 77 次发布
-
-发布时间：2025-06-30 01:41:22
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-<font color="#dd0000">**预下线接口**：</font>
-
-* AttachDisks
-* CreateDisks
-* DeleteSnapshots
-* DescribeDisks
-* DescribeSnapshots
-* DetachDisks
-* TerminateDisks
-
-
-
-## 云数据库 MongoDB(mongodb) 版本：2019-07-25
-
-### 第 53 次发布
-
-发布时间：2025-06-30 02:04:59
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-新增接口：
-
-* [DescribeDetailedSlowLogs](https://cloud.tencent.com/document/api/240/120403)
-
-新增数据结构：
-
-* [SlowLogItem](https://cloud.tencent.com/document/api/240/38576#SlowLogItem)
-
-
-
-## 云数据库 MongoDB(mongodb) 版本：2018-04-08
-
-
-
-## 文字识别(ocr) 版本：2018-11-19
-
-### 第 198 次发布
-
-发布时间：2025-06-30 02:10:19
+发布时间：2025-10-29 01:13:56
 
 本次发布包含了以下内容：
 
@@ -74,18 +12,174 @@
 
 修改数据结构：
 
-* [CustomsPaymentReceipt](https://cloud.tencent.com/document/api/866/33527#CustomsPaymentReceipt)
+* [Storage](https://cloud.tencent.com/document/api/629/35353#Storage)
 
-	* 新增成员：CommonContent
-
-
+	* 新增成员：Compress
 
 
-## 边缘安全加速平台(teo) 版本：2022-09-01
 
-### 第 106 次发布
 
-发布时间：2025-06-30 02:29:59
+## 数据库智能管家 DBbrain(dbbrain) 版本：2021-05-27
+
+### 第 49 次发布
+
+发布时间：2025-10-29 01:16:00
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改数据结构：
+
+* [RedisKeySpaceData](https://cloud.tencent.com/document/api/1130/57812#RedisKeySpaceData)
+
+	* 新增成员：Db
+
+
+
+
+## 数据库智能管家 DBbrain(dbbrain) 版本：2019-10-16
+
+
+
+## 数据湖计算 DLC(dlc) 版本：2021-01-25
+
+### 第 139 次发布
+
+发布时间：2025-10-29 01:16:51
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeNativeSparkSessions](https://cloud.tencent.com/document/api/1342/122148)
+
+	* 新增出参：TotalSpec, TotalAvailable
+
+
+修改数据结构：
+
+* [SparkSessionInfo](https://cloud.tencent.com/document/api/1342/53778#SparkSessionInfo)
+
+	* 新增成员：State
+
+
+
+
+## 媒体处理(mps) 版本：2019-06-12
+
+### 第 152 次发布
+
+发布时间：2025-10-29 01:35:00
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeImageTaskDetail](https://cloud.tencent.com/document/api/862/118509)
+
+	* 新增出参：ErrCode, ErrMsg, Message
+
+
+
+
+## 节省计划(svp) 版本：2024-01-25
+
+### 第 4 次发布
+
+发布时间：2025-10-29 01:56:21
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改数据结构：
+
+* [SavingPlanOverviewDetail](https://cloud.tencent.com/document/api/1761/106543#SavingPlanOverviewDetail)
+
+	* 新增成员：PromiseAmount
+
+
+
+
+## 容器安全服务(tcss) 版本：2020-11-01
+
+### 第 82 次发布
+
+发布时间：2025-10-29 02:02:06
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [CreateExportComplianceStatusListJob](https://cloud.tencent.com/document/api/1285/65611)
+
+	* 新增入参：Filters
+
+* [DescribeAssetImageDetail](https://cloud.tencent.com/document/api/1285/65506)
+
+	* 新增出参：Solution, Reason
+
+* [DescribeAssetImageRegistryDetail](https://cloud.tencent.com/document/api/1285/65501)
+
+	* 新增出参：Solution, Reason
+
+* [DescribeAssetImageRegistryRiskListExport](https://cloud.tencent.com/document/api/1285/65496)
+
+	* <font color="#dd0000">**修改入参**：</font>ExportField
+
+	* 新增出参：JobId
+
+
+修改数据结构：
+
+* [ImageRepoInfo](https://cloud.tencent.com/document/api/1285/65614#ImageRepoInfo)
+
+	* 新增成员：Solution, Reason
+
+* [ImagesInfo](https://cloud.tencent.com/document/api/1285/65614#ImagesInfo)
+
+	* 新增成员：Solution, Reason
+
+
+
+
+## 文本内容安全(tms) 版本：2020-12-29
+
+### 第 16 次发布
+
+发布时间：2025-10-29 02:17:10
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [TextModeration](https://cloud.tencent.com/document/api/1124/51860)
+
+	* 新增入参：SessionId
+
+	* 新增出参：SessionId
+
+
+
+
+## 文本内容安全(tms) 版本：2020-07-13
+
+
+
+## 实时互动-工业能源版(trro) 版本：2022-03-25
+
+### 第 11 次发布
+
+发布时间：2025-10-29 02:19:49
 
 本次发布包含了以下内容：
 
@@ -93,23 +187,28 @@
 
 新增接口：
 
-* [ConfirmOriginACLUpdate](https://cloud.tencent.com/document/api/1552/120409)
-* [DescribeOriginACL](https://cloud.tencent.com/document/api/1552/120408)
-* [DisableOriginACL](https://cloud.tencent.com/document/api/1552/120407)
-* [EnableOriginACL](https://cloud.tencent.com/document/api/1552/120406)
-* [ModifyOriginACL](https://cloud.tencent.com/document/api/1552/120405)
+* [GetDurationDetails](https://cloud.tencent.com/document/api/1584/124556)
+* [GetTotalDuration](https://cloud.tencent.com/document/api/1584/124555)
 
 新增数据结构：
 
-* [Addresses](https://cloud.tencent.com/document/api/1552/80721#Addresses)
-* [CurrentOriginACL](https://cloud.tencent.com/document/api/1552/80721#CurrentOriginACL)
-* [NextOriginACL](https://cloud.tencent.com/document/api/1552/80721#NextOriginACL)
-* [OriginACLEntity](https://cloud.tencent.com/document/api/1552/80721#OriginACLEntity)
-* [OriginACLInfo](https://cloud.tencent.com/document/api/1552/80721#OriginACLInfo)
+* [DurationDetails](https://cloud.tencent.com/document/api/1584/89828#DurationDetails)
 
 
 
-## 边缘安全加速平台(teo) 版本：2022-01-06
+## 私有网络(vpc) 版本：2017-03-12
+
+### 第 271 次发布
+
+发布时间：2025-10-29 02:30:54
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [DescribeSecurityGroupExpandedPolicies](https://cloud.tencent.com/document/api/215/124557)
 
 
 

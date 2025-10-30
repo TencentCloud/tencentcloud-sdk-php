@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubAccountUin(string $SubAccountUin) 设置操作者Uin
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAutoScaleTag() 获取自动扩容标识：0-非自动，1-自动
+ * @method void setAutoScaleTag(integer $AutoScaleTag) 设置自动扩容标识：0-非自动，1-自动
  */
 class Operation extends AbstractModel
 {
@@ -90,6 +92,11 @@ class Operation extends AbstractModel
     public $SubAccountUin;
 
     /**
+     * @var integer 自动扩容标识：0-非自动，1-自动
+     */
+    public $AutoScaleTag;
+
+    /**
      * @param integer $Id 操作唯一id
      * @param string $StartTime 操作开始时间
      * @param string $Type 操作类型
@@ -100,6 +107,7 @@ class Operation extends AbstractModel
      * @param integer $RollbackTag 回滚标记， 0未回滚 ，1回滚中，2已回滚
      * @param string $SubAccountUin 操作者Uin
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AutoScaleTag 自动扩容标识：0-非自动，1-自动
      */
     function __construct()
     {
@@ -154,6 +162,10 @@ class Operation extends AbstractModel
 
         if (array_key_exists("SubAccountUin",$param) and $param["SubAccountUin"] !== null) {
             $this->SubAccountUin = $param["SubAccountUin"];
+        }
+
+        if (array_key_exists("AutoScaleTag",$param) and $param["AutoScaleTag"] !== null) {
+            $this->AutoScaleTag = $param["AutoScaleTag"];
         }
     }
 }

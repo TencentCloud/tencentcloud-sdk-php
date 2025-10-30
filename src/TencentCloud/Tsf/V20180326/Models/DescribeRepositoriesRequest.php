@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSearchWord() 获取查询关键字（按照仓库名称搜索）
  * @method void setSearchWord(string $SearchWord) 设置查询关键字（按照仓库名称搜索）
- * @method integer getOffset() 获取查询起始偏移
- * @method void setOffset(integer $Offset) 设置查询起始偏移
- * @method integer getLimit() 获取返回数量限制
- * @method void setLimit(integer $Limit) 设置返回数量限制
- * @method string getRepositoryType() 获取仓库类型（默认仓库：default，私有仓库：private）
- * @method void setRepositoryType(string $RepositoryType) 设置仓库类型（默认仓库：default，私有仓库：private）
+ * @method integer getOffset() 获取查询起始偏移，大于等于0，默认值为0
+ * @method void setOffset(integer $Offset) 设置查询起始偏移，大于等于0，默认值为0
+ * @method integer getLimit() 获取返回数量限制，大于0，默认为不分页
+ * @method void setLimit(integer $Limit) 设置返回数量限制，大于0，默认为不分页
+ * @method string getRepositoryType() 获取仓库类型（默认仓库：default，私有仓库：private，公共仓库：public-demo）
+ * @method void setRepositoryType(string $RepositoryType) 设置仓库类型（默认仓库：default，私有仓库：private，公共仓库：public-demo）
  */
 class DescribeRepositoriesRequest extends AbstractModel
 {
@@ -37,25 +37,25 @@ class DescribeRepositoriesRequest extends AbstractModel
     public $SearchWord;
 
     /**
-     * @var integer 查询起始偏移
+     * @var integer 查询起始偏移，大于等于0，默认值为0
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量限制
+     * @var integer 返回数量限制，大于0，默认为不分页
      */
     public $Limit;
 
     /**
-     * @var string 仓库类型（默认仓库：default，私有仓库：private）
+     * @var string 仓库类型（默认仓库：default，私有仓库：private，公共仓库：public-demo）
      */
     public $RepositoryType;
 
     /**
      * @param string $SearchWord 查询关键字（按照仓库名称搜索）
-     * @param integer $Offset 查询起始偏移
-     * @param integer $Limit 返回数量限制
-     * @param string $RepositoryType 仓库类型（默认仓库：default，私有仓库：private）
+     * @param integer $Offset 查询起始偏移，大于等于0，默认值为0
+     * @param integer $Limit 返回数量限制，大于0，默认为不分页
+     * @param string $RepositoryType 仓库类型（默认仓库：default，私有仓库：private，公共仓库：public-demo）
      */
     function __construct()
     {

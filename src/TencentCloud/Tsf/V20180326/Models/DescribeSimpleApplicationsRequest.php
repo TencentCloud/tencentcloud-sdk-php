@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,44 +20,53 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSimpleApplications请求参数结构体
  *
- * @method array getApplicationIdList() 获取应用ID列表
- * @method void setApplicationIdList(array $ApplicationIdList) 设置应用ID列表
- * @method string getApplicationType() 获取应用类型
- * @method void setApplicationType(string $ApplicationType) 设置应用类型
- * @method integer getLimit() 获取每页条数
- * @method void setLimit(integer $Limit) 设置每页条数
- * @method integer getOffset() 获取起始偏移量
- * @method void setOffset(integer $Offset) 设置起始偏移量
+ * @method array getApplicationIdList() 获取应用ID列表，可通过调用[DescribeApplications](https://cloud.tencent.com/document/api/649/36090)查询已创建的应用列表或登录控制台进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/api/649/36094)创建新的应用。
+ * @method void setApplicationIdList(array $ApplicationIdList) 设置应用ID列表，可通过调用[DescribeApplications](https://cloud.tencent.com/document/api/649/36090)查询已创建的应用列表或登录控制台进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/api/649/36094)创建新的应用。
+ * @method string getApplicationType() 获取指定应用类型，目前支持：
+- `V`：普通应用/CVM应用
+- `C`：容器应用
+- `S`：serverless 应用
+ * @method void setApplicationType(string $ApplicationType) 设置指定应用类型，目前支持：
+- `V`：普通应用/CVM应用
+- `C`：容器应用
+- `S`：serverless 应用
+ * @method integer getLimit() 获取数量限制，默认为20，最大值为100。关于Limit详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
+ * @method void setLimit(integer $Limit) 设置数量限制，默认为20，最大值为100。关于Limit详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
+ * @method integer getOffset() 获取偏移量，默认为0。关于Offset详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于Offset详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
  * @method string getMicroserviceType() 获取微服务类型
  * @method void setMicroserviceType(string $MicroserviceType) 设置微服务类型
- * @method array getApplicationResourceTypeList() 获取资源类型数组
- * @method void setApplicationResourceTypeList(array $ApplicationResourceTypeList) 设置资源类型数组
+ * @method array getApplicationResourceTypeList() 获取应用资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
+ * @method void setApplicationResourceTypeList(array $ApplicationResourceTypeList) 设置应用资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
  * @method string getSearchWord() 获取通过id和name进行关键词过滤
  * @method void setSearchWord(string $SearchWord) 设置通过id和name进行关键词过滤
- * @method boolean getDisableProgramAuthCheck() 获取无
- * @method void setDisableProgramAuthCheck(boolean $DisableProgramAuthCheck) 设置无
+ * @method boolean getDisableProgramAuthCheck() 获取是否关闭鉴权查询
+ * @method void setDisableProgramAuthCheck(boolean $DisableProgramAuthCheck) 设置是否关闭鉴权查询
  * @method array getMicroserviceTypeList() 获取查询指定微服务类型的应用列表
  * @method void setMicroserviceTypeList(array $MicroserviceTypeList) 设置查询指定微服务类型的应用列表
  */
 class DescribeSimpleApplicationsRequest extends AbstractModel
 {
     /**
-     * @var array 应用ID列表
+     * @var array 应用ID列表，可通过调用[DescribeApplications](https://cloud.tencent.com/document/api/649/36090)查询已创建的应用列表或登录控制台进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/api/649/36094)创建新的应用。
      */
     public $ApplicationIdList;
 
     /**
-     * @var string 应用类型
+     * @var string 指定应用类型，目前支持：
+- `V`：普通应用/CVM应用
+- `C`：容器应用
+- `S`：serverless 应用
      */
     public $ApplicationType;
 
     /**
-     * @var integer 每页条数
+     * @var integer 数量限制，默认为20，最大值为100。关于Limit详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
      */
     public $Limit;
 
     /**
-     * @var integer 起始偏移量
+     * @var integer 偏移量，默认为0。关于Offset详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
      */
     public $Offset;
 
@@ -67,7 +76,7 @@ class DescribeSimpleApplicationsRequest extends AbstractModel
     public $MicroserviceType;
 
     /**
-     * @var array 资源类型数组
+     * @var array 应用资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
      */
     public $ApplicationResourceTypeList;
 
@@ -77,7 +86,7 @@ class DescribeSimpleApplicationsRequest extends AbstractModel
     public $SearchWord;
 
     /**
-     * @var boolean 无
+     * @var boolean 是否关闭鉴权查询
      */
     public $DisableProgramAuthCheck;
 
@@ -87,14 +96,17 @@ class DescribeSimpleApplicationsRequest extends AbstractModel
     public $MicroserviceTypeList;
 
     /**
-     * @param array $ApplicationIdList 应用ID列表
-     * @param string $ApplicationType 应用类型
-     * @param integer $Limit 每页条数
-     * @param integer $Offset 起始偏移量
+     * @param array $ApplicationIdList 应用ID列表，可通过调用[DescribeApplications](https://cloud.tencent.com/document/api/649/36090)查询已创建的应用列表或登录控制台进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/api/649/36094)创建新的应用。
+     * @param string $ApplicationType 指定应用类型，目前支持：
+- `V`：普通应用/CVM应用
+- `C`：容器应用
+- `S`：serverless 应用
+     * @param integer $Limit 数量限制，默认为20，最大值为100。关于Limit详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
+     * @param integer $Offset 偏移量，默认为0。关于Offset详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
      * @param string $MicroserviceType 微服务类型
-     * @param array $ApplicationResourceTypeList 资源类型数组
+     * @param array $ApplicationResourceTypeList 应用资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
      * @param string $SearchWord 通过id和name进行关键词过滤
-     * @param boolean $DisableProgramAuthCheck 无
+     * @param boolean $DisableProgramAuthCheck 是否关闭鉴权查询
      * @param array $MicroserviceTypeList 查询指定微服务类型的应用列表
      */
     function __construct()

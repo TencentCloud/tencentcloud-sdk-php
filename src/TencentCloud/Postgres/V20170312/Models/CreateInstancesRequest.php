@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
 可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
  * @method string getSpecCode() 获取售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
  * @method void setSpecCode(string $SpecCode) 设置售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
- * @method integer getStorage() 获取实例容量大小，单位：GB。
- * @method void setStorage(integer $Storage) 设置实例容量大小，单位：GB。
+ * @method integer getStorage() 获取实例磁盘容量大小，单位：GB。该参数的设置步长为10。
+ * @method void setStorage(integer $Storage) 设置实例磁盘容量大小，单位：GB。该参数的设置步长为10。
  * @method integer getInstanceCount() 获取购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。
  * @method void setInstanceCount(integer $InstanceCount) 设置购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。
  * @method integer getPeriod() 获取购买时长，单位：月。
@@ -110,8 +110,8 @@ use TencentCloud\Common\AbstractModel;
 默认值：0
  * @method array getVoucherIds() 获取代金券ID列表，目前仅支持指定一张代金券。
  * @method void setVoucherIds(array $VoucherIds) 设置代金券ID列表，目前仅支持指定一张代金券。
- * @method integer getProjectId() 获取项目ID。
- * @method void setProjectId(integer $ProjectId) 设置项目ID。
+ * @method integer getProjectId() 获取项目ID。默认取之为0，表示归属默认项目。
+ * @method void setProjectId(integer $ProjectId) 设置项目ID。默认取之为0，表示归属默认项目。
  * @method integer getActivityId() 获取活动ID。
  * @method void setActivityId(integer $ActivityId) 设置活动ID。
  * @method string getName() 获取实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
@@ -186,6 +186,8 @@ mssql_compatible引擎：
 <li>0：否</li>
 <li>1：是</li>
 默认值：0
+ * @method boolean getDeletionProtection() 获取实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
+ * @method void setDeletionProtection(boolean $DeletionProtection) 设置实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
  */
 class CreateInstancesRequest extends AbstractModel
 {
@@ -201,7 +203,7 @@ class CreateInstancesRequest extends AbstractModel
     public $SpecCode;
 
     /**
-     * @var integer 实例容量大小，单位：GB。
+     * @var integer 实例磁盘容量大小，单位：GB。该参数的设置步长为10。
      */
     public $Storage;
 
@@ -307,7 +309,7 @@ class CreateInstancesRequest extends AbstractModel
     public $VoucherIds;
 
     /**
-     * @var integer 项目ID。
+     * @var integer 项目ID。默认取之为0，表示归属默认项目。
      */
     public $ProjectId;
 
@@ -397,10 +399,15 @@ mssql_compatible引擎：
     public $NeedSupportIpv6;
 
     /**
+     * @var boolean 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
+     */
+    public $DeletionProtection;
+
+    /**
      * @param string $Zone 实例所属主可用区， 如：ap-guangzhou-3；若需要支持多可用区，在DBNodeSet.N字段中进行添加主可用区和备可用区信息；
 可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
      * @param string $SpecCode 售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
-     * @param integer $Storage 实例容量大小，单位：GB。
+     * @param integer $Storage 实例磁盘容量大小，单位：GB。该参数的设置步长为10。
      * @param integer $InstanceCount 购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。
      * @param integer $Period 购买时长，单位：月。
 <li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
@@ -442,7 +449,7 @@ mssql_compatible引擎：
 <li>1：是</li>
 默认值：0
      * @param array $VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
-     * @param integer $ProjectId 项目ID。
+     * @param integer $ProjectId 项目ID。默认取之为0，表示归属默认项目。
      * @param integer $ActivityId 活动ID。
      * @param string $Name 实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
 
@@ -480,6 +487,7 @@ mssql_compatible引擎：
 <li>0：否</li>
 <li>1：是</li>
 默认值：0
+     * @param boolean $DeletionProtection 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
      */
     function __construct()
     {
@@ -626,6 +634,10 @@ mssql_compatible引擎：
 
         if (array_key_exists("NeedSupportIpv6",$param) and $param["NeedSupportIpv6"] !== null) {
             $this->NeedSupportIpv6 = $param["NeedSupportIpv6"];
+        }
+
+        if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
+            $this->DeletionProtection = $param["DeletionProtection"];
         }
     }
 }

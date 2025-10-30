@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AssociateHaVipInstance请求参数结构体
  *
-
+ * @method array getHaVipAssociationSet() 获取HaVip绑定的子机或网卡。最多支持10个实例。
+ * @method void setHaVipAssociationSet(array $HaVipAssociationSet) 设置HaVip绑定的子机或网卡。最多支持10个实例。
  */
 class AssociateHaVipInstanceRequest extends AbstractModel
 {
-
+    /**
+     * @var array HaVip绑定的子机或网卡。最多支持10个实例。
+     */
+    public $HaVipAssociationSet;
 
     /**
-
+     * @param array $HaVipAssociationSet HaVip绑定的子机或网卡。最多支持10个实例。
      */
     function __construct()
     {
@@ -42,6 +46,13 @@ class AssociateHaVipInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("HaVipAssociationSet",$param) and $param["HaVipAssociationSet"] !== null) {
+            $this->HaVipAssociationSet = [];
+            foreach ($param["HaVipAssociationSet"] as $key => $value){
+                $obj = new HaVipAssociation();
+                $obj->deserialize($value);
+                array_push($this->HaVipAssociationSet, $obj);
+            }
+        }
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyTime(string $ModifyTime) 设置后台参数修改开始时间
  * @method string getEffectiveTime() 获取后台参数生效开始时间
  * @method void setEffectiveTime(string $EffectiveTime) 设置后台参数生效开始时间
- * @method string getState() 获取修改状态
- * @method void setState(string $State) 设置修改状态
+ * @method string getState() 获取修改状态。枚举值：in progress、success、paused
+ * @method void setState(string $State) 设置修改状态。枚举值：in progress、success、paused
  * @method string getOperator() 获取操作者（一般为用户sub UIN）
  * @method void setOperator(string $Operator) 设置操作者（一般为用户sub UIN）
  * @method string getEventLog() 获取时间日志。
@@ -65,7 +65,7 @@ class EventInfo extends AbstractModel
     public $EffectiveTime;
 
     /**
-     * @var string 修改状态
+     * @var string 修改状态。枚举值：in progress、success、paused
      */
     public $State;
 
@@ -85,7 +85,7 @@ class EventInfo extends AbstractModel
      * @param string $NewValue 本次修改期望参数值
      * @param string $ModifyTime 后台参数修改开始时间
      * @param string $EffectiveTime 后台参数生效开始时间
-     * @param string $State 修改状态
+     * @param string $State 修改状态。枚举值：in progress、success、paused
      * @param string $Operator 操作者（一般为用户sub UIN）
      * @param string $EventLog 时间日志。
      */

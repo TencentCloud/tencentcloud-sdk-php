@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -72,8 +72,8 @@ use TencentCloud\Common\AbstractModel;
 - COS: COS文件
  * @method string getInputCosUri() 获取输入COS地址。
  * @method void setInputCosUri(string $InputCosUri) 设置输入COS地址。
- * @method string getInputTemplateId() 获取输入模版ID。
- * @method void setInputTemplateId(string $InputTemplateId) 设置输入模版ID。
+ * @method string getInputTemplateId() 获取输入模板ID。
+ * @method void setInputTemplateId(string $InputTemplateId) 设置输入模板ID。
  * @method RunOption getOption() 获取WDL运行选项。
  * @method void setOption(RunOption $Option) 设置WDL运行选项。
  * @method NFOption getNFOption() 获取Nextflow运行选项。
@@ -88,8 +88,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExecutionTime(ExecutionTime $ExecutionTime) 设置执行时间。
  * @method string getErrorMessage() 获取错误信息。
  * @method void setErrorMessage(string $ErrorMessage) 设置错误信息。
- * @method string getResultNotify() 获取运行结果通知方式。
- * @method void setResultNotify(string $ResultNotify) 设置运行结果通知方式。
+ * @method RunGroupNotification getNotification() 获取任务批次通知。
+ * @method void setNotification(RunGroupNotification $Notification) 设置任务批次通知。
  * @method string getCreateTime() 获取创建时间。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
  * @method string getUpdateTime() 获取更新时间。
@@ -98,6 +98,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreator(string $Creator) 设置创建者。
  * @method string getCreatorId() 获取创建者ID。
  * @method void setCreatorId(string $CreatorId) 设置创建者ID。
+ * @method string getResultNotify() 获取运行结果通知方式。
+ * @method void setResultNotify(string $ResultNotify) 设置运行结果通知方式。
  */
 class RunGroup extends AbstractModel
 {
@@ -204,7 +206,7 @@ class RunGroup extends AbstractModel
     public $InputCosUri;
 
     /**
-     * @var string 输入模版ID。
+     * @var string 输入模板ID。
      */
     public $InputTemplateId;
 
@@ -244,9 +246,9 @@ class RunGroup extends AbstractModel
     public $ErrorMessage;
 
     /**
-     * @var string 运行结果通知方式。
+     * @var RunGroupNotification 任务批次通知。
      */
-    public $ResultNotify;
+    public $Notification;
 
     /**
      * @var string 创建时间。
@@ -267,6 +269,11 @@ class RunGroup extends AbstractModel
      * @var string 创建者ID。
      */
     public $CreatorId;
+
+    /**
+     * @var string 运行结果通知方式。
+     */
+    public $ResultNotify;
 
     /**
      * @param string $RunGroupId 任务批次ID。
@@ -295,7 +302,7 @@ class RunGroup extends AbstractModel
 - MANUAL: 手动输入
 - COS: COS文件
      * @param string $InputCosUri 输入COS地址。
-     * @param string $InputTemplateId 输入模版ID。
+     * @param string $InputTemplateId 输入模板ID。
      * @param RunOption $Option WDL运行选项。
      * @param NFOption $NFOption Nextflow运行选项。
      * @param array $Volumes 使用的缓存卷。
@@ -303,11 +310,12 @@ class RunGroup extends AbstractModel
      * @param array $RunStatusCounts 各状态任务的数量。
      * @param ExecutionTime $ExecutionTime 执行时间。
      * @param string $ErrorMessage 错误信息。
-     * @param string $ResultNotify 运行结果通知方式。
+     * @param RunGroupNotification $Notification 任务批次通知。
      * @param string $CreateTime 创建时间。
      * @param string $UpdateTime 更新时间。
      * @param string $Creator 创建者。
      * @param string $CreatorId 创建者ID。
+     * @param string $ResultNotify 运行结果通知方式。
      */
     function __construct()
     {
@@ -444,8 +452,9 @@ class RunGroup extends AbstractModel
             $this->ErrorMessage = $param["ErrorMessage"];
         }
 
-        if (array_key_exists("ResultNotify",$param) and $param["ResultNotify"] !== null) {
-            $this->ResultNotify = $param["ResultNotify"];
+        if (array_key_exists("Notification",$param) and $param["Notification"] !== null) {
+            $this->Notification = new RunGroupNotification();
+            $this->Notification->deserialize($param["Notification"]);
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
@@ -462,6 +471,10 @@ class RunGroup extends AbstractModel
 
         if (array_key_exists("CreatorId",$param) and $param["CreatorId"] !== null) {
             $this->CreatorId = $param["CreatorId"];
+        }
+
+        if (array_key_exists("ResultNotify",$param) and $param["ResultNotify"] !== null) {
+            $this->ResultNotify = $param["ResultNotify"];
         }
     }
 }

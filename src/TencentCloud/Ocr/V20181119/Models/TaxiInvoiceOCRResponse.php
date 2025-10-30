@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TaxiInvoiceOCR返回参数结构体
  *
- * @method string getInvoiceNum() 获取发票代码
- * @method void setInvoiceNum(string $InvoiceNum) 设置发票代码
- * @method string getInvoiceCode() 获取发票号码
- * @method void setInvoiceCode(string $InvoiceCode) 设置发票号码
+ * @method string getInvoiceNum() 获取发票号码
+ * @method void setInvoiceNum(string $InvoiceNum) 设置发票号码
+ * @method string getInvoiceCode() 获取发票代码
+ * @method void setInvoiceCode(string $InvoiceCode) 设置发票代码
  * @method string getDate() 获取日期
  * @method void setDate(string $Date) 设置日期
  * @method string getFare() 获取金额
@@ -54,12 +54,12 @@ use TencentCloud\Common\AbstractModel;
 class TaxiInvoiceOCRResponse extends AbstractModel
 {
     /**
-     * @var string 发票代码
+     * @var string 发票号码
      */
     public $InvoiceNum;
 
     /**
-     * @var string 发票号码
+     * @var string 发票代码
      */
     public $InvoiceCode;
 
@@ -121,8 +121,8 @@ class TaxiInvoiceOCRResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $InvoiceNum 发票代码
-     * @param string $InvoiceCode 发票号码
+     * @param string $InvoiceNum 发票号码
+     * @param string $InvoiceCode 发票代码
      * @param string $Date 日期
      * @param string $Fare 金额
      * @param string $GetOnTime 上车时间

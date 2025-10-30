@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,18 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteConfig请求参数结构体
  *
- * @method string getConfigId() 获取采集规则配置ID
- * @method void setConfigId(string $ConfigId) 设置采集规则配置ID
+ * @method string getConfigId() 获取采集配置ID
+ - 通过[获取采集规则配置](https://cloud.tencent.com/document/product/614/58616)获取采集配置Id。
+ * @method void setConfigId(string $ConfigId) 设置采集配置ID
+ - 通过[获取采集规则配置](https://cloud.tencent.com/document/product/614/58616)获取采集配置Id。
  */
 class DeleteConfigRequest extends AbstractModel
 {
     /**
-     * @var string 采集规则配置ID
+     * @var string 采集配置ID
+ - 通过[获取采集规则配置](https://cloud.tencent.com/document/product/614/58616)获取采集配置Id。
      */
     public $ConfigId;
 
     /**
-     * @param string $ConfigId 采集规则配置ID
+     * @param string $ConfigId 采集配置ID
+ - 通过[获取采集规则配置](https://cloud.tencent.com/document/product/614/58616)获取采集配置Id。
      */
     function __construct()
     {

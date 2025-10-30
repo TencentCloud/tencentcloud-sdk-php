@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -122,6 +122,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatestOperationErrorMsg(string $LatestOperationErrorMsg) 设置实例的最新操作错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method Metadata getMetadata() 获取自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。**注：内测中**。
+ * @method void setMetadata(Metadata $Metadata) 设置自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。**注：内测中**。
+ * @method array getPublicIPv6Addresses() 获取实例绑定的公网IPv6地址。
+ * @method void setPublicIPv6Addresses(array $PublicIPv6Addresses) 设置实例绑定的公网IPv6地址。
  */
 class Instance extends AbstractModel
 {
@@ -341,6 +345,16 @@ class Instance extends AbstractModel
     public $LatestOperationErrorMsg;
 
     /**
+     * @var Metadata 自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。**注：内测中**。
+     */
+    public $Metadata;
+
+    /**
+     * @var array 实例绑定的公网IPv6地址。
+     */
+    public $PublicIPv6Addresses;
+
+    /**
      * @param Placement $Placement 实例所在的位置。
      * @param string $InstanceId 实例`ID`。
      * @param string $InstanceType 实例机型。
@@ -392,6 +406,8 @@ class Instance extends AbstractModel
      * @param integer $DefaultLoginPort 默认登录端口。
      * @param string $LatestOperationErrorMsg 实例的最新操作错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param Metadata $Metadata 自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。**注：内测中**。
+     * @param array $PublicIPv6Addresses 实例绑定的公网IPv6地址。
      */
     function __construct()
     {
@@ -584,6 +600,15 @@ class Instance extends AbstractModel
 
         if (array_key_exists("LatestOperationErrorMsg",$param) and $param["LatestOperationErrorMsg"] !== null) {
             $this->LatestOperationErrorMsg = $param["LatestOperationErrorMsg"];
+        }
+
+        if (array_key_exists("Metadata",$param) and $param["Metadata"] !== null) {
+            $this->Metadata = new Metadata();
+            $this->Metadata->deserialize($param["Metadata"]);
+        }
+
+        if (array_key_exists("PublicIPv6Addresses",$param) and $param["PublicIPv6Addresses"] !== null) {
+            $this->PublicIPv6Addresses = $param["PublicIPv6Addresses"];
         }
     }
 }

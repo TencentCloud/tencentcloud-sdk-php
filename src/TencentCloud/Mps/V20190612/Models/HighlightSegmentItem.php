@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,13 +31,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSegmentTags(array $SegmentTags) 设置片段标签
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBeginTime() 获取直播切片对应直播起始时间点，采用 ISO 日期格式。	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBeginTime(string $BeginTime) 设置直播切片对应直播起始时间点，采用 ISO 日期格式。	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取直播切片对应直播结束时间点，采用 ISO 日期格式。	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置直播切片对应直播结束时间点，采用 ISO 日期格式。	
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTitle() 获取集锦标题。
+ * @method void setTitle(string $Title) 设置集锦标题。
+ * @method string getSummary() 获取集锦概要。
+ * @method void setSummary(string $Summary) 设置集锦概要。
  */
 class HighlightSegmentItem extends AbstractModel
 {
@@ -64,15 +64,23 @@ class HighlightSegmentItem extends AbstractModel
 
     /**
      * @var string 直播切片对应直播起始时间点，采用 ISO 日期格式。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BeginTime;
 
     /**
      * @var string 直播切片对应直播结束时间点，采用 ISO 日期格式。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
+
+    /**
+     * @var string 集锦标题。
+     */
+    public $Title;
+
+    /**
+     * @var string 集锦概要。
+     */
+    public $Summary;
 
     /**
      * @param float $Confidence 置信度。
@@ -81,9 +89,9 @@ class HighlightSegmentItem extends AbstractModel
      * @param array $SegmentTags 片段标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BeginTime 直播切片对应直播起始时间点，采用 ISO 日期格式。	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 直播切片对应直播结束时间点，采用 ISO 日期格式。	
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Title 集锦标题。
+     * @param string $Summary 集锦概要。
      */
     function __construct()
     {
@@ -120,6 +128,14 @@ class HighlightSegmentItem extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("Title",$param) and $param["Title"] !== null) {
+            $this->Title = $param["Title"];
+        }
+
+        if (array_key_exists("Summary",$param) and $param["Summary"] !== null) {
+            $this->Summary = $param["Summary"];
         }
     }
 }

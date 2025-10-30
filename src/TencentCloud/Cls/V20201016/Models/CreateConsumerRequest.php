@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateConsumer请求参数结构体
  *
- * @method string getTopicId() 获取投递任务绑定的日志主题 ID
- * @method void setTopicId(string $TopicId) 设置投递任务绑定的日志主题 ID
+ * @method string getTopicId() 获取投递任务绑定的日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+ * @method void setTopicId(string $TopicId) 设置投递任务绑定的日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
  * @method boolean getNeedContent() 获取是否投递日志的元数据信息，默认为 true。
 当NeedContent为true时：字段Content有效。
 当NeedContent为false时：字段Content无效。
@@ -38,7 +42,9 @@ use TencentCloud\Common\AbstractModel;
 class CreateConsumerRequest extends AbstractModel
 {
     /**
-     * @var string 投递任务绑定的日志主题 ID
+     * @var string 投递任务绑定的日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
      */
     public $TopicId;
 
@@ -65,7 +71,9 @@ class CreateConsumerRequest extends AbstractModel
     public $Compression;
 
     /**
-     * @param string $TopicId 投递任务绑定的日志主题 ID
+     * @param string $TopicId 投递任务绑定的日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
      * @param boolean $NeedContent 是否投递日志的元数据信息，默认为 true。
 当NeedContent为true时：字段Content有效。
 当NeedContent为false时：字段Content无效。

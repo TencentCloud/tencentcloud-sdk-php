@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExternalTrafficPolicy(string $ExternalTrafficPolicy) 设置外部流量策略
  * @method string getLoadBalancerProvisioner() 获取负载均衡提供者
  * @method void setLoadBalancerProvisioner(string $LoadBalancerProvisioner) 设置负载均衡提供者
- * @method string getLoadBalancingType() 获取负载均衡类型
- * @method void setLoadBalancingType(string $LoadBalancingType) 设置负载均衡类型
+ * @method string getLoadBalancingType() 获取负载均衡类型，Intranet表示内网，Internet表示外网
+ * @method void setLoadBalancingType(string $LoadBalancingType) 设置负载均衡类型，Intranet表示内网，Internet表示外网
  * @method string getClusterIp() 获取k8s负载均衡内网vip
  * @method void setClusterIp(string $ClusterIp) 设置k8s负载均衡内网vip
  * @method integer getDisableServiceInt() 获取禁用服务Int记录
@@ -128,7 +128,7 @@ class ServiceSetting extends AbstractModel
     public $LoadBalancerProvisioner;
 
     /**
-     * @var string 负载均衡类型
+     * @var string 负载均衡类型，Intranet表示内网，Internet表示外网
      */
     public $LoadBalancingType;
 
@@ -190,7 +190,7 @@ class ServiceSetting extends AbstractModel
      * @param string $ExternalTrafficStrategy 外部流量策略
      * @param string $ExternalTrafficPolicy 外部流量策略
      * @param string $LoadBalancerProvisioner 负载均衡提供者
-     * @param string $LoadBalancingType 负载均衡类型
+     * @param string $LoadBalancingType 负载均衡类型，Intranet表示内网，Internet表示外网
      * @param string $ClusterIp k8s负载均衡内网vip
      * @param integer $DisableServiceInt 禁用服务Int记录
      * @param integer $OpenSessionAffinityInt 开启SessionAffinity Int记录

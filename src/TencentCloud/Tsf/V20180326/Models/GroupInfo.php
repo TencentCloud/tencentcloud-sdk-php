@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,25 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 日志投递kafka用，描述部署组信息
  *
- * @method string getGroupId() 获取部署组id
- * @method void setGroupId(string $GroupId) 设置部署组id
+ * @method string getGroupId() 获取部署组ID
+可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)或[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-yo7kp9dv&tab=publish&subTab=group)进行查看。
+ * @method void setGroupId(string $GroupId) 设置部署组ID
+可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)或[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-yo7kp9dv&tab=publish&subTab=group)进行查看。
  * @method string getGroupName() 获取部署组名称
  * @method void setGroupName(string $GroupName) 设置部署组名称
- * @method string getClusterType() 获取集群类型
- * @method void setClusterType(string $ClusterType) 设置集群类型
- * @method string getClusterId() 获取集群id
- * @method void setClusterId(string $ClusterId) 设置集群id
+ * @method string getClusterType() 获取集群类型，C：容器集群，V：虚拟机集群
+ * @method void setClusterType(string $ClusterType) 设置集群类型，C：容器集群，V：虚拟机集群
+ * @method string getClusterId() 获取集群ID
+可通过[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已经创建的集群列表，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1)查看。
+ * @method void setClusterId(string $ClusterId) 设置集群ID
+可通过[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已经创建的集群列表，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1)查看。
  * @method string getClusterName() 获取集群名称
  * @method void setClusterName(string $ClusterName) 设置集群名称
  * @method string getNamespaceName() 获取命名空间名称
  * @method void setNamespaceName(string $NamespaceName) 设置命名空间名称
- * @method string getAssociateTime() 获取绑定时间
- * @method void setAssociateTime(string $AssociateTime) 设置绑定时间
+ * @method string getAssociateTime() 获取绑定时间，格式yyyy-MM-dd HH:mm:ss
+ * @method void setAssociateTime(string $AssociateTime) 设置绑定时间，格式yyyy-MM-dd HH:mm:ss
  */
 class GroupInfo extends AbstractModel
 {
     /**
-     * @var string 部署组id
+     * @var string 部署组ID
+可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)或[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-yo7kp9dv&tab=publish&subTab=group)进行查看。
      */
     public $GroupId;
 
@@ -48,12 +53,13 @@ class GroupInfo extends AbstractModel
     public $GroupName;
 
     /**
-     * @var string 集群类型
+     * @var string 集群类型，C：容器集群，V：虚拟机集群
      */
     public $ClusterType;
 
     /**
-     * @var string 集群id
+     * @var string 集群ID
+可通过[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已经创建的集群列表，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1)查看。
      */
     public $ClusterId;
 
@@ -68,18 +74,20 @@ class GroupInfo extends AbstractModel
     public $NamespaceName;
 
     /**
-     * @var string 绑定时间
+     * @var string 绑定时间，格式yyyy-MM-dd HH:mm:ss
      */
     public $AssociateTime;
 
     /**
-     * @param string $GroupId 部署组id
+     * @param string $GroupId 部署组ID
+可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)或[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-yo7kp9dv&tab=publish&subTab=group)进行查看。
      * @param string $GroupName 部署组名称
-     * @param string $ClusterType 集群类型
-     * @param string $ClusterId 集群id
+     * @param string $ClusterType 集群类型，C：容器集群，V：虚拟机集群
+     * @param string $ClusterId 集群ID
+可通过[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已经创建的集群列表，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1)查看。
      * @param string $ClusterName 集群名称
      * @param string $NamespaceName 命名空间名称
-     * @param string $AssociateTime 绑定时间
+     * @param string $AssociateTime 绑定时间，格式yyyy-MM-dd HH:mm:ss
      */
     function __construct()
     {

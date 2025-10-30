@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -130,6 +130,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTCBType(string $TCBType) 设置TCB部署类型
  * @method string getUrl() 获取监听器Url(clb专属)
  * @method void setUrl(string $Url) 设置监听器Url(clb专属)
+ * @method string getAlgorithm() 获取新证书加密算法
+ * @method void setAlgorithm(string $Algorithm) 设置新证书加密算法
+ * @method string getOldAlgorithm() 获取旧证书加密算法
+ * @method void setOldAlgorithm(string $OldAlgorithm) 设置旧证书加密算法
  */
 class UpdateRecordDetail extends AbstractModel
 {
@@ -281,6 +285,16 @@ class UpdateRecordDetail extends AbstractModel
     public $Url;
 
     /**
+     * @var string 新证书加密算法
+     */
+    public $Algorithm;
+
+    /**
+     * @var string 旧证书加密算法
+     */
+    public $OldAlgorithm;
+
+    /**
      * @param integer $Id 更新详情记录id
      * @param string $CertId 新旧证书更新 - 新证书ID
      * @param string $OldCertId 新旧证书更新 - 旧证书ID
@@ -336,6 +350,8 @@ class UpdateRecordDetail extends AbstractModel
      * @param string $EnvId 环境ID
      * @param string $TCBType TCB部署类型
      * @param string $Url 监听器Url(clb专属)
+     * @param string $Algorithm 新证书加密算法
+     * @param string $OldAlgorithm 旧证书加密算法
      */
     function __construct()
     {
@@ -440,6 +456,14 @@ class UpdateRecordDetail extends AbstractModel
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("Algorithm",$param) and $param["Algorithm"] !== null) {
+            $this->Algorithm = $param["Algorithm"];
+        }
+
+        if (array_key_exists("OldAlgorithm",$param) and $param["OldAlgorithm"] !== null) {
+            $this->OldAlgorithm = $param["OldAlgorithm"];
         }
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -41,6 +41,10 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getSteadyState() 获取稳态标记。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSteadyState(boolean $SteadyState) 设置稳态标记。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUserId() 获取websocket与trtc实时翻译的UserId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserId(string $UserId) 设置websocket与trtc实时翻译的UserId
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class LiveStreamTransTextRecognitionResult extends AbstractModel
@@ -89,6 +93,12 @@ class LiveStreamTransTextRecognitionResult extends AbstractModel
     public $SteadyState;
 
     /**
+     * @var string websocket与trtc实时翻译的UserId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserId;
+
+    /**
      * @param string $Text 识别文本。
      * @param float $StartPtsTime 翻译片段起始的 PTS 时间，单位：秒。
      * @param float $EndPtsTime 翻译片段终止的 PTS 时间，单位：秒。
@@ -99,6 +109,8 @@ class LiveStreamTransTextRecognitionResult extends AbstractModel
      * @param string $EndTime 翻译结束UTC时间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SteadyState 稳态标记。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UserId websocket与trtc实时翻译的UserId
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -144,6 +156,10 @@ class LiveStreamTransTextRecognitionResult extends AbstractModel
 
         if (array_key_exists("SteadyState",$param) and $param["SteadyState"] !== null) {
             $this->SteadyState = $param["SteadyState"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
         }
     }
 }

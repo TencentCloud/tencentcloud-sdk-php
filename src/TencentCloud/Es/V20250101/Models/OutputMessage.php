@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContent(string $Content) 设置文本内容	
  * @method string getReasoningContent() 获取推理内容	
  * @method void setReasoningContent(string $ReasoningContent) 设置推理内容	
+ * @method array getToolCalls() 获取模型生成的工具调用
+ * @method void setToolCalls(array $ToolCalls) 设置模型生成的工具调用
  */
 class OutputMessage extends AbstractModel
 {
@@ -45,9 +47,15 @@ class OutputMessage extends AbstractModel
     public $ReasoningContent;
 
     /**
+     * @var array 模型生成的工具调用
+     */
+    public $ToolCalls;
+
+    /**
      * @param string $Role 角色
      * @param string $Content 文本内容	
      * @param string $ReasoningContent 推理内容	
+     * @param array $ToolCalls 模型生成的工具调用
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class OutputMessage extends AbstractModel
 
         if (array_key_exists("ReasoningContent",$param) and $param["ReasoningContent"] !== null) {
             $this->ReasoningContent = $param["ReasoningContent"];
+        }
+
+        if (array_key_exists("ToolCalls",$param) and $param["ToolCalls"] !== null) {
+            $this->ToolCalls = [];
+            foreach ($param["ToolCalls"] as $key => $value){
+                $obj = new ToolCall();
+                $obj->deserialize($value);
+                array_push($this->ToolCalls, $obj);
+            }
         }
     }
 }

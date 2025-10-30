@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertificateId(string $CertificateId) 设置证书 ID。
  * @method string getValidType() 获取验证类型：DNS_AUTO = 自动DNS验证（仅支持在腾讯云解析且解析状态正常的域名使用该验证类型），DNS = 手动DNS验证，FILE = 文件验证。
  * @method void setValidType(string $ValidType) 设置验证类型：DNS_AUTO = 自动DNS验证（仅支持在腾讯云解析且解析状态正常的域名使用该验证类型），DNS = 手动DNS验证，FILE = 文件验证。
- * @method string getCsrType() 获取类型，默认 Original。可选项：Original = 原证书 CSR，Upload = 手动上传，Online = 在线生成。
- * @method void setCsrType(string $CsrType) 设置类型，默认 Original。可选项：Original = 原证书 CSR，Upload = 手动上传，Online = 在线生成。
+ * @method string getCsrType() 获取类型，默认 original。可选项：original = 原证书 CSR，upload = 手动上传，online = 在线生成。
+ * @method void setCsrType(string $CsrType) 设置类型，默认 original。可选项：original = 原证书 CSR，upload = 手动上传，online = 在线生成。
  * @method string getCsrContent() 获取CSR 内容，手动上传的时候需要。
  * @method void setCsrContent(string $CsrContent) 设置CSR 内容，手动上传的时候需要。
  * @method string getCsrkeyPassword() 获取KEY 密码。
@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
 （CsrType为Online才可选）， 默认为RSA
  * @method string getCertCSRKeyParameter() 获取CSR加密参数，CsrEncryptAlgo为RSA时， 可选2048、4096等默认为2048；CsrEncryptAlgo为ECC时，可选prime256v1，secp384r1等，默认为prime256v1; 
  * @method void setCertCSRKeyParameter(string $CertCSRKeyParameter) 设置CSR加密参数，CsrEncryptAlgo为RSA时， 可选2048、4096等默认为2048；CsrEncryptAlgo为ECC时，可选prime256v1，secp384r1等，默认为prime256v1; 
+ * @method string getSignAlgo() 获取签名算法
+ * @method void setSignAlgo(string $SignAlgo) 设置签名算法
  */
 class ReplaceCertificateRequest extends AbstractModel
 {
@@ -52,7 +54,7 @@ class ReplaceCertificateRequest extends AbstractModel
     public $ValidType;
 
     /**
-     * @var string 类型，默认 Original。可选项：Original = 原证书 CSR，Upload = 手动上传，Online = 在线生成。
+     * @var string 类型，默认 original。可选项：original = 原证书 CSR，upload = 手动上传，online = 在线生成。
      */
     public $CsrType;
 
@@ -83,15 +85,21 @@ class ReplaceCertificateRequest extends AbstractModel
     public $CertCSRKeyParameter;
 
     /**
+     * @var string 签名算法
+     */
+    public $SignAlgo;
+
+    /**
      * @param string $CertificateId 证书 ID。
      * @param string $ValidType 验证类型：DNS_AUTO = 自动DNS验证（仅支持在腾讯云解析且解析状态正常的域名使用该验证类型），DNS = 手动DNS验证，FILE = 文件验证。
-     * @param string $CsrType 类型，默认 Original。可选项：Original = 原证书 CSR，Upload = 手动上传，Online = 在线生成。
+     * @param string $CsrType 类型，默认 original。可选项：original = 原证书 CSR，upload = 手动上传，online = 在线生成。
      * @param string $CsrContent CSR 内容，手动上传的时候需要。
      * @param string $CsrkeyPassword KEY 密码。
      * @param string $Reason 重颁发原因。
      * @param string $CertCSREncryptAlgo CSR加密方式，可选：RSA、ECC、SM2
 （CsrType为Online才可选）， 默认为RSA
      * @param string $CertCSRKeyParameter CSR加密参数，CsrEncryptAlgo为RSA时， 可选2048、4096等默认为2048；CsrEncryptAlgo为ECC时，可选prime256v1，secp384r1等，默认为prime256v1; 
+     * @param string $SignAlgo 签名算法
      */
     function __construct()
     {
@@ -136,6 +144,10 @@ class ReplaceCertificateRequest extends AbstractModel
 
         if (array_key_exists("CertCSRKeyParameter",$param) and $param["CertCSRKeyParameter"] !== null) {
             $this->CertCSRKeyParameter = $param["CertCSRKeyParameter"];
+        }
+
+        if (array_key_exists("SignAlgo",$param) and $param["SignAlgo"] !== null) {
+            $this->SignAlgo = $param["SignAlgo"];
         }
     }
 }

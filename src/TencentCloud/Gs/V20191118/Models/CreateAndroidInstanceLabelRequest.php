@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getKey() 获取标签键
  * @method void setKey(string $Key) 设置标签键
- * @method string getValue() 获取标签值
- * @method void setValue(string $Value) 设置标签值
+ * @method string getValue() 获取标签值。普通场景下，该值不需要填写；高级场景下，需要两个层级进行分组时才填写。
+ * @method void setValue(string $Value) 设置标签值。普通场景下，该值不需要填写；高级场景下，需要两个层级进行分组时才填写。
+ * @method string getDescription() 获取标签描述
+ * @method void setDescription(string $Description) 设置标签描述
  */
 class CreateAndroidInstanceLabelRequest extends AbstractModel
 {
@@ -33,13 +35,19 @@ class CreateAndroidInstanceLabelRequest extends AbstractModel
     public $Key;
 
     /**
-     * @var string 标签值
+     * @var string 标签值。普通场景下，该值不需要填写；高级场景下，需要两个层级进行分组时才填写。
      */
     public $Value;
 
     /**
+     * @var string 标签描述
+     */
+    public $Description;
+
+    /**
      * @param string $Key 标签键
-     * @param string $Value 标签值
+     * @param string $Value 标签值。普通场景下，该值不需要填写；高级场景下，需要两个层级进行分组时才填写。
+     * @param string $Description 标签描述
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreateAndroidInstanceLabelRequest extends AbstractModel
 
         if (array_key_exists("Value",$param) and $param["Value"] !== null) {
             $this->Value = $param["Value"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

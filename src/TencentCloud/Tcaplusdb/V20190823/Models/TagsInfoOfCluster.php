@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 集群的标签信息
  *
  * @method string getClusterId() 获取集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ErrorInfo getError() 获取错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setError(ErrorInfo $Error) 设置错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TagsInfoOfCluster extends AbstractModel
 {
     /**
      * @var string 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
 
     /**
      * @var array 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var ErrorInfo 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Error;
 
     /**
      * @param string $ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorInfo $Error 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

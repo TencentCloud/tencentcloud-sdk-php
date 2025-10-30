@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,20 +26,20 @@ use TencentCloud\Common\AbstractModel;
  ap-guangzhou  广州地域；
 ap-nanjing 南京地域。
 
-详细信息请查看官网：
+详细信息请查看官网[地域和访问域名](https://cloud.tencent.com/document/product/614/18940)
 
-https://cloud.tencent.com/document/product/614/18940
+
  * @method void setRegion(string $Region) 设置地域信息。
 
 示例：
  ap-guangzhou  广州地域；
 ap-nanjing 南京地域。
 
-详细信息请查看官网：
+详细信息请查看官网[地域和访问域名](https://cloud.tencent.com/document/product/614/18940)
 
-https://cloud.tencent.com/document/product/614/18940
- * @method string getTopicId() 获取日志主题ID。
- * @method void setTopicId(string $TopicId) 设置日志主题ID。
+
+ * @method string getTopicId() 获取日志主题ID。-通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题ID
+ * @method void setTopicId(string $TopicId) 设置日志主题ID。-通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题ID
  * @method integer getScope() 获取投递数据范围。
 
 0: 全部日志, 包括告警策略日常周期执行的所有日志，也包括告警策略变更产生的日志，默认值
@@ -60,14 +60,14 @@ class DeliverConfig extends AbstractModel
  ap-guangzhou  广州地域；
 ap-nanjing 南京地域。
 
-详细信息请查看官网：
+详细信息请查看官网[地域和访问域名](https://cloud.tencent.com/document/product/614/18940)
 
-https://cloud.tencent.com/document/product/614/18940
+
      */
     public $Region;
 
     /**
-     * @var string 日志主题ID。
+     * @var string 日志主题ID。-通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题ID
      */
     public $TopicId;
 
@@ -87,10 +87,10 @@ https://cloud.tencent.com/document/product/614/18940
  ap-guangzhou  广州地域；
 ap-nanjing 南京地域。
 
-详细信息请查看官网：
+详细信息请查看官网[地域和访问域名](https://cloud.tencent.com/document/product/614/18940)
 
-https://cloud.tencent.com/document/product/614/18940
-     * @param string $TopicId 日志主题ID。
+
+     * @param string $TopicId 日志主题ID。-通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题ID
      * @param integer $Scope 投递数据范围。
 
 0: 全部日志, 包括告警策略日常周期执行的所有日志，也包括告警策略变更产生的日志，默认值

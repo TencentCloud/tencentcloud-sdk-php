@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DrainClusterVirtualNode请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getNodeName() 获取节点名
- * @method void setNodeName(string $NodeName) 设置节点名
+ * @method string getClusterId() 获取集群ID，通过DescribeClusters接口获取
+ * @method void setClusterId(string $ClusterId) 设置集群ID，通过DescribeClusters接口获取
+ * @method string getNodeName() 获取节点ID
+ * @method void setNodeName(string $NodeName) 设置节点ID
  */
 class DrainClusterVirtualNodeRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 集群ID，通过DescribeClusters接口获取
      */
     public $ClusterId;
 
     /**
-     * @var string 节点名
+     * @var string 节点ID
      */
     public $NodeName;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param string $NodeName 节点名
+     * @param string $ClusterId 集群ID，通过DescribeClusters接口获取
+     * @param string $NodeName 节点ID
      */
     function __construct()
     {

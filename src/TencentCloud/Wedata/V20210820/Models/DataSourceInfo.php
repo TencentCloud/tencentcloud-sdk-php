@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -179,6 +179,12 @@ use TencentCloud\Common\AbstractModel;
  * @method array getDataSourceEnvInfos() 获取 数据源环境信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataSourceEnvInfos(array $DataSourceEnvInfos) 设置 数据源环境信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getForbidProbe() 获取禁止数据探查
+ * @method void setForbidProbe(boolean $ForbidProbe) 设置禁止数据探查
+ * @method string getDatasourceType() 获取数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatasourceType(string $DatasourceType) 设置数据源类型
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataSourceInfo extends AbstractModel
@@ -424,6 +430,17 @@ class DataSourceInfo extends AbstractModel
     public $DataSourceEnvInfos;
 
     /**
+     * @var boolean 禁止数据探查
+     */
+    public $ForbidProbe;
+
+    /**
+     * @var string 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatasourceType;
+
+    /**
      * @param string $DatabaseName 若数据源列表为绑定数据库，则为db名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 数据源描述信息
@@ -503,6 +520,9 @@ class DataSourceInfo extends AbstractModel
      * @param string $Model 是否标准模式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DataSourceEnvInfos  数据源环境信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ForbidProbe 禁止数据探查
+     * @param string $DatasourceType 数据源类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -682,6 +702,14 @@ class DataSourceInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DataSourceEnvInfos, $obj);
             }
+        }
+
+        if (array_key_exists("ForbidProbe",$param) and $param["ForbidProbe"] !== null) {
+            $this->ForbidProbe = $param["ForbidProbe"];
+        }
+
+        if (array_key_exists("DatasourceType",$param) and $param["DatasourceType"] !== null) {
+            $this->DatasourceType = $param["DatasourceType"];
         }
     }
 }

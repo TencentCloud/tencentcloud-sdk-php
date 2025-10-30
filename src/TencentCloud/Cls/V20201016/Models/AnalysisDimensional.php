@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取分析名称
  * @method void setName(string $Name) 设置分析名称
- * @method string getType() 获取分析类型：query，field ，original
- * @method void setType(string $Type) 设置分析类型：query，field ，original
+ * @method string getType() 获取分析类型：query(自定义检索分析)，field(字段TOP5及占比统计) ，original(相关原始日志)
+
+ * @method void setType(string $Type) 设置分析类型：query(自定义检索分析)，field(字段TOP5及占比统计) ，original(相关原始日志)
+
  * @method string getContent() 获取分析内容
  * @method void setContent(string $Content) 设置分析内容
  * @method array getConfigInfo() 获取多维分析配置。
@@ -117,7 +119,8 @@ class AnalysisDimensional extends AbstractModel
     public $Name;
 
     /**
-     * @var string 分析类型：query，field ，original
+     * @var string 分析类型：query(自定义检索分析)，field(字段TOP5及占比统计) ，original(相关原始日志)
+
      */
     public $Type;
 
@@ -173,7 +176,8 @@ class AnalysisDimensional extends AbstractModel
 
     /**
      * @param string $Name 分析名称
-     * @param string $Type 分析类型：query，field ，original
+     * @param string $Type 分析类型：query(自定义检索分析)，field(字段TOP5及占比统计) ，original(相关原始日志)
+
      * @param string $Content 分析内容
      * @param array $ConfigInfo 多维分析配置。
 

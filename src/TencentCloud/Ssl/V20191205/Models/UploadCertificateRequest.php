@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置标签列表
  * @method boolean getRepeatable() 获取相同的证书是否允许重复上传； true：允许上传相同指纹的证书；  false：不允许上传相同指纹的证书； 默认值：true
  * @method void setRepeatable(boolean $Repeatable) 设置相同的证书是否允许重复上传； true：允许上传相同指纹的证书；  false：不允许上传相同指纹的证书； 默认值：true
+ * @method string getKeyPassword() 获取私钥密码
+ * @method void setKeyPassword(string $KeyPassword) 设置私钥密码
  */
 class UploadCertificateRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class UploadCertificateRequest extends AbstractModel
     public $Repeatable;
 
     /**
+     * @var string 私钥密码
+     */
+    public $KeyPassword;
+
+    /**
      * @param string $CertificatePublicKey 证书内容。
      * @param string $CertificatePrivateKey 私钥内容，证书类型为 SVR 时必填，为 CA 时可不填。
      * @param string $CertificateType 证书类型，默认 SVR。CA = CA证书，SVR = 服务器证书。
@@ -88,6 +95,7 @@ class UploadCertificateRequest extends AbstractModel
      * @param string $CertificateUse 证书用途/证书来源。“CLB，CDN，WAF，LIVE，DDOS”
      * @param array $Tags 标签列表
      * @param boolean $Repeatable 相同的证书是否允许重复上传； true：允许上传相同指纹的证书；  false：不允许上传相同指纹的证书； 默认值：true
+     * @param string $KeyPassword 私钥密码
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class UploadCertificateRequest extends AbstractModel
 
         if (array_key_exists("Repeatable",$param) and $param["Repeatable"] !== null) {
             $this->Repeatable = $param["Repeatable"];
+        }
+
+        if (array_key_exists("KeyPassword",$param) and $param["KeyPassword"] !== null) {
+            $this->KeyPassword = $param["KeyPassword"];
         }
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,34 +34,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIssuingCountry(string $IssuingCountry) 设置发行国（机读码区的解析结果）
  * @method string getNationality() 获取国家地区代码（机读码区的解析结果）
  * @method void setNationality(string $Nationality) 设置国家地区代码（机读码区的解析结果）
- * @method array getWarn() 获取告警码：
--9103	证照翻拍告警
--9102	证照复印件告警（包括黑白复印件、彩色复印件）
--9106       证件遮挡告警
- * @method void setWarn(array $Warn) 设置告警码：
--9103	证照翻拍告警
--9102	证照复印件告警（包括黑白复印件、彩色复印件）
--9106       证件遮挡告警
+ * @method array getWarn() 获取该字段已废弃， 将固定返回空数组，不建议使用。
+
+ * @method void setWarn(array $Warn) 设置该字段已废弃， 将固定返回空数组，不建议使用。
+
  * @method string getImage() 获取证件中的人像图片base64
  * @method void setImage(string $Image) 设置证件中的人像图片base64
- * @method string getAdvancedInfo() 获取扩展字段:
-{
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
-}
- * @method void setAdvancedInfo(string $AdvancedInfo) 设置扩展字段:
-{
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
-}
+ * @method string getAdvancedInfo() 获取该字段已废弃， 将固定返回"1"，不建议使用。
+
+ * @method void setAdvancedInfo(string $AdvancedInfo) 设置该字段已废弃， 将固定返回"1"，不建议使用。
+
  * @method string getCodeSet() 获取最下方第一行 MRZ Code 序列
  * @method void setCodeSet(string $CodeSet) 设置最下方第一行 MRZ Code 序列
  * @method string getCodeCrc() 获取最下方第二行 MRZ Code 序列
@@ -94,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
 -9107 证件反光告警
 -9108 证件模糊告警
 -9109 告警能力未开通
+ * @method integer getCardCount() 获取输入图片中的卡证数量（仅请求曼谷地域[ap-bangkok]返回）
+ * @method void setCardCount(integer $CardCount) 设置输入图片中的卡证数量（仅请求曼谷地域[ap-bangkok]返回）
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -135,10 +119,9 @@ class MLIDPassportOCRResponse extends AbstractModel
     public $Nationality;
 
     /**
-     * @var array 告警码：
--9103	证照翻拍告警
--9102	证照复印件告警（包括黑白复印件、彩色复印件）
--9106       证件遮挡告警
+     * @var array 该字段已废弃， 将固定返回空数组，不建议使用。
+
+     * @deprecated
      */
     public $Warn;
 
@@ -148,15 +131,9 @@ class MLIDPassportOCRResponse extends AbstractModel
     public $Image;
 
     /**
-     * @var string 扩展字段:
-{
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
-}
+     * @var string 该字段已废弃， 将固定返回"1"，不建议使用。
+
+     * @deprecated
      */
     public $AdvancedInfo;
 
@@ -205,6 +182,11 @@ class MLIDPassportOCRResponse extends AbstractModel
     public $WarnCardInfos;
 
     /**
+     * @var integer 输入图片中的卡证数量（仅请求曼谷地域[ap-bangkok]返回）
+     */
+    public $CardCount;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -217,20 +199,11 @@ class MLIDPassportOCRResponse extends AbstractModel
      * @param string $DateOfExpiration 有效期（机读码区的解析结果）
      * @param string $IssuingCountry 发行国（机读码区的解析结果）
      * @param string $Nationality 国家地区代码（机读码区的解析结果）
-     * @param array $Warn 告警码：
--9103	证照翻拍告警
--9102	证照复印件告警（包括黑白复印件、彩色复印件）
--9106       证件遮挡告警
+     * @param array $Warn 该字段已废弃， 将固定返回空数组，不建议使用。
+
      * @param string $Image 证件中的人像图片base64
-     * @param string $AdvancedInfo 扩展字段:
-{
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
-}
+     * @param string $AdvancedInfo 该字段已废弃， 将固定返回"1"，不建议使用。
+
      * @param string $CodeSet 最下方第一行 MRZ Code 序列
      * @param string $CodeCrc 最下方第二行 MRZ Code 序列
      * @param string $Surname 姓（机读码区的解析结果）
@@ -247,6 +220,7 @@ class MLIDPassportOCRResponse extends AbstractModel
 -9107 证件反光告警
 -9108 证件模糊告警
 -9109 告警能力未开通
+     * @param integer $CardCount 输入图片中的卡证数量（仅请求曼谷地域[ap-bangkok]返回）
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -329,6 +303,10 @@ class MLIDPassportOCRResponse extends AbstractModel
 
         if (array_key_exists("WarnCardInfos",$param) and $param["WarnCardInfos"] !== null) {
             $this->WarnCardInfos = $param["WarnCardInfos"];
+        }
+
+        if (array_key_exists("CardCount",$param) and $param["CardCount"] !== null) {
+            $this->CardCount = $param["CardCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,8 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServerName(string $ServerName) 设置服务名
  * @method DeployParam getDeployInfo() 获取部署信息
  * @method void setDeployInfo(DeployParam $DeployInfo) 设置部署信息
- * @method ServerBaseConfig getServerConfig() 获取服务配置信息
- * @method void setServerConfig(ServerBaseConfig $ServerConfig) 设置服务配置信息
+ * @method ServerBaseConfig getServerConfig() 获取服务配置信息(已废弃)
+ * @method void setServerConfig(ServerBaseConfig $ServerConfig) 设置服务配置信息(已废弃)
+ * @method array getItems() 获取服务配置信息
+ * @method void setItems(array $Items) 设置服务配置信息
+ * @method CreateVpcInfo getVpcInfo() 获取vpc 信息
+ * @method void setVpcInfo(CreateVpcInfo $VpcInfo) 设置vpc 信息
  */
 class CreateCloudRunServerRequest extends AbstractModel
 {
@@ -47,15 +51,27 @@ class CreateCloudRunServerRequest extends AbstractModel
     public $DeployInfo;
 
     /**
-     * @var ServerBaseConfig 服务配置信息
+     * @var ServerBaseConfig 服务配置信息(已废弃)
      */
     public $ServerConfig;
+
+    /**
+     * @var array 服务配置信息
+     */
+    public $Items;
+
+    /**
+     * @var CreateVpcInfo vpc 信息
+     */
+    public $VpcInfo;
 
     /**
      * @param string $EnvId 环境Id
      * @param string $ServerName 服务名
      * @param DeployParam $DeployInfo 部署信息
-     * @param ServerBaseConfig $ServerConfig 服务配置信息
+     * @param ServerBaseConfig $ServerConfig 服务配置信息(已废弃)
+     * @param array $Items 服务配置信息
+     * @param CreateVpcInfo $VpcInfo vpc 信息
      */
     function __construct()
     {
@@ -86,6 +102,20 @@ class CreateCloudRunServerRequest extends AbstractModel
         if (array_key_exists("ServerConfig",$param) and $param["ServerConfig"] !== null) {
             $this->ServerConfig = new ServerBaseConfig();
             $this->ServerConfig->deserialize($param["ServerConfig"]);
+        }
+
+        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
+            $this->Items = [];
+            foreach ($param["Items"] as $key => $value){
+                $obj = new DiffConfigItem();
+                $obj->deserialize($value);
+                array_push($this->Items, $obj);
+            }
+        }
+
+        if (array_key_exists("VpcInfo",$param) and $param["VpcInfo"] !== null) {
+            $this->VpcInfo = new CreateVpcInfo();
+            $this->VpcInfo->deserialize($param["VpcInfo"]);
         }
     }
 }

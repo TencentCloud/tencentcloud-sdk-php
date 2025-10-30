@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,10 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisabled(boolean $Disabled) 设置是否禁止使用（true，禁止使用，false，可以使用）
  * @method boolean getIsAlias() 获取是否别名
  * @method void setIsAlias(boolean $IsAlias) 设置是否别名
- * @method integer getStatus() 获取1代表模版开启，0代表模版关闭
- * @method void setStatus(integer $Status) 设置1代表模版开启，0代表模版关闭
- * @method string getModifyTime() 获取模版最后修改时间
- * @method void setModifyTime(string $ModifyTime) 设置模版最后修改时间
+ * @method integer getStatus() 获取1代表模板开启，0代表模板关闭
+ * @method void setStatus(integer $Status) 设置1代表模板开启，0代表模板关闭
+ * @method string getModifyTime() 获取模板最后修改时间
+ * @method void setModifyTime(string $ModifyTime) 设置模板最后修改时间
  */
 class DspaDiscoveryComplianceGroupInfo extends AbstractModel
 {
@@ -84,12 +84,12 @@ class DspaDiscoveryComplianceGroupInfo extends AbstractModel
     public $IsAlias;
 
     /**
-     * @var integer 1代表模版开启，0代表模版关闭
+     * @var integer 1代表模板开启，0代表模板关闭
      */
     public $Status;
 
     /**
-     * @var string 模版最后修改时间
+     * @var string 模板最后修改时间
      */
     public $ModifyTime;
 
@@ -102,8 +102,8 @@ class DspaDiscoveryComplianceGroupInfo extends AbstractModel
      * @param integer $LevelGroupId 合规组对应的分级组ID
      * @param boolean $Disabled 是否禁止使用（true，禁止使用，false，可以使用）
      * @param boolean $IsAlias 是否别名
-     * @param integer $Status 1代表模版开启，0代表模版关闭
-     * @param string $ModifyTime 模版最后修改时间
+     * @param integer $Status 1代表模板开启，0代表模板关闭
+     * @param string $ModifyTime 模板最后修改时间
      */
     function __construct()
     {

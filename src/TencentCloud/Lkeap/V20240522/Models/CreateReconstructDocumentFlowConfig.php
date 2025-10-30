@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,15 +33,21 @@ use TencentCloud\Common\AbstractModel;
 1：只返回每一页的OCR原始Json；
 2：只返回每一页的MD，
 3：返回全文MD + 每一页的OCR原始Json；
-4：返回全文MD + 每一页的MD，
+4：返回全文MD + 每一页的MD
+5: 返回全文md，每一页ocr原始json，每一页md
 默认值为0
+
  * @method void setResultType(string $ResultType) 设置智能文档解析返回结果的格式
 0：只返回全文MD；
 1：只返回每一页的OCR原始Json；
 2：只返回每一页的MD，
 3：返回全文MD + 每一页的OCR原始Json；
-4：返回全文MD + 每一页的MD，
+4：返回全文MD + 每一页的MD
+5: 返回全文md，每一页ocr原始json，每一页md
 默认值为0
+
+ * @method boolean getIgnoreFailedPage() 获取是否忽略失败页，返回已成功的页数据。默认为true。
+ * @method void setIgnoreFailedPage(boolean $IgnoreFailedPage) 设置是否忽略失败页，返回已成功的页数据。默认为true。
  */
 class CreateReconstructDocumentFlowConfig extends AbstractModel
 {
@@ -59,10 +65,17 @@ class CreateReconstructDocumentFlowConfig extends AbstractModel
 1：只返回每一页的OCR原始Json；
 2：只返回每一页的MD，
 3：返回全文MD + 每一页的OCR原始Json；
-4：返回全文MD + 每一页的MD，
+4：返回全文MD + 每一页的MD
+5: 返回全文md，每一页ocr原始json，每一页md
 默认值为0
+
      */
     public $ResultType;
+
+    /**
+     * @var boolean 是否忽略失败页，返回已成功的页数据。默认为true。
+     */
+    public $IgnoreFailedPage;
 
     /**
      * @param string $TableResultType Markdown文件中表格返回的形式
@@ -74,8 +87,11 @@ class CreateReconstructDocumentFlowConfig extends AbstractModel
 1：只返回每一页的OCR原始Json；
 2：只返回每一页的MD，
 3：返回全文MD + 每一页的OCR原始Json；
-4：返回全文MD + 每一页的MD，
+4：返回全文MD + 每一页的MD
+5: 返回全文md，每一页ocr原始json，每一页md
 默认值为0
+
+     * @param boolean $IgnoreFailedPage 是否忽略失败页，返回已成功的页数据。默认为true。
      */
     function __construct()
     {
@@ -96,6 +112,10 @@ class CreateReconstructDocumentFlowConfig extends AbstractModel
 
         if (array_key_exists("ResultType",$param) and $param["ResultType"] !== null) {
             $this->ResultType = $param["ResultType"];
+        }
+
+        if (array_key_exists("IgnoreFailedPage",$param) and $param["IgnoreFailedPage"] !== null) {
+            $this->IgnoreFailedPage = $param["IgnoreFailedPage"];
         }
     }
 }

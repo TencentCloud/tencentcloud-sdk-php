@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfigRiskCount(integer $ConfigRiskCount) 设置权限配置风险
  * @method integer getActionRiskCount() 获取危险行为告警
  * @method void setActionRiskCount(integer $ActionRiskCount) 设置危险行为告警
- * @method boolean getIsAccessCloudAudit() 获取是否接入云审计日志
- * @method void setIsAccessCloudAudit(boolean $IsAccessCloudAudit) 设置是否接入云审计日志
+ * @method boolean getIsAccessCloudAudit() 获取是否接入操作审计日志
+ * @method void setIsAccessCloudAudit(boolean $IsAccessCloudAudit) 设置是否接入操作审计日志
  * @method boolean getIsAccessCheck() 获取是否配置风险的安全体检
  * @method void setIsAccessCheck(boolean $IsAccessCheck) 设置是否配置风险的安全体检
  * @method boolean getIsAccessUeba() 获取是否配置用户行为管理策略
@@ -135,7 +135,7 @@ class SubUserInfo extends AbstractModel
     public $ActionRiskCount;
 
     /**
-     * @var boolean 是否接入云审计日志
+     * @var boolean 是否接入操作审计日志
      */
     public $IsAccessCloudAudit;
 
@@ -165,7 +165,7 @@ class SubUserInfo extends AbstractModel
      * @param integer $LogCount 访问/行为日志数量
      * @param integer $ConfigRiskCount 权限配置风险
      * @param integer $ActionRiskCount 危险行为告警
-     * @param boolean $IsAccessCloudAudit 是否接入云审计日志
+     * @param boolean $IsAccessCloudAudit 是否接入操作审计日志
      * @param boolean $IsAccessCheck 是否配置风险的安全体检
      * @param boolean $IsAccessUeba 是否配置用户行为管理策略
      */

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,27 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * tsf-privilege模块，数据项
  *
- * @method string getProgramItemId() 获取数据项ID
- * @method void setProgramItemId(string $ProgramItemId) 设置数据项ID
+ * @method string getProgramItemId() 获取数据项ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)接口查询已创建的数据集或登陆控制台进行查看；也可以通过调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
+
+ * @method void setProgramItemId(string $ProgramItemId) 设置数据项ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)接口查询已创建的数据集或登陆控制台进行查看；也可以通过调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
+
  * @method Resource getResource() 获取资源
  * @method void setResource(Resource $Resource) 设置资源
  * @method array getValueList() 获取数据值列表
  * @method void setValueList(array $ValueList) 设置数据值列表
  * @method boolean getIsAll() 获取全选标识，true: 全选；false: 非全选
  * @method void setIsAll(boolean $IsAll) 设置全选标识，true: 全选；false: 非全选
- * @method integer getCreationTime() 获取创建时间
- * @method void setCreationTime(integer $CreationTime) 设置创建时间
- * @method integer getLastUpdateTime() 获取最后更新时间
- * @method void setLastUpdateTime(integer $LastUpdateTime) 设置最后更新时间
+ * @method integer getCreationTime() 获取创建时间，时间戳格式【Long】
+ * @method void setCreationTime(integer $CreationTime) 设置创建时间，时间戳格式【Long】
+ * @method integer getLastUpdateTime() 获取最后更新时间，时间戳格式【Long】，单位毫秒
+ * @method void setLastUpdateTime(integer $LastUpdateTime) 设置最后更新时间，时间戳格式【Long】，单位毫秒
  * @method boolean getDeleteFlag() 获取删除标识，true: 可删除；false: 不可删除
  * @method void setDeleteFlag(boolean $DeleteFlag) 设置删除标识，true: 可删除；false: 不可删除
- * @method string getProgramId() 获取数据集ID
- * @method void setProgramId(string $ProgramId) 设置数据集ID
+ * @method string getProgramId() 获取数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口获取
+ * @method void setProgramId(string $ProgramId) 设置数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口获取
  */
 class ProgramItem extends AbstractModel
 {
     /**
-     * @var string 数据项ID
+     * @var string 数据项ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)接口查询已创建的数据集或登陆控制台进行查看；也可以通过调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
+
      */
     public $ProgramItemId;
 
@@ -60,12 +63,12 @@ class ProgramItem extends AbstractModel
     public $IsAll;
 
     /**
-     * @var integer 创建时间
+     * @var integer 创建时间，时间戳格式【Long】
      */
     public $CreationTime;
 
     /**
-     * @var integer 最后更新时间
+     * @var integer 最后更新时间，时间戳格式【Long】，单位毫秒
      */
     public $LastUpdateTime;
 
@@ -75,19 +78,20 @@ class ProgramItem extends AbstractModel
     public $DeleteFlag;
 
     /**
-     * @var string 数据集ID
+     * @var string 数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口获取
      */
     public $ProgramId;
 
     /**
-     * @param string $ProgramItemId 数据项ID
+     * @param string $ProgramItemId 数据项ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)接口查询已创建的数据集或登陆控制台进行查看；也可以通过调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
+
      * @param Resource $Resource 资源
      * @param array $ValueList 数据值列表
      * @param boolean $IsAll 全选标识，true: 全选；false: 非全选
-     * @param integer $CreationTime 创建时间
-     * @param integer $LastUpdateTime 最后更新时间
+     * @param integer $CreationTime 创建时间，时间戳格式【Long】
+     * @param integer $LastUpdateTime 最后更新时间，时间戳格式【Long】，单位毫秒
      * @param boolean $DeleteFlag 删除标识，true: 可删除；false: 不可删除
-     * @param string $ProgramId 数据集ID
+     * @param string $ProgramId 数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口获取
      */
     function __construct()
     {

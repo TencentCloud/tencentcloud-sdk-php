@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,13 +34,13 @@ use TencentCloud\Common\AbstractModel;
 <li>off：关闭。</li>
  * @method array getTlsVersion() 获取Tls 版本设置，取值有：
 <li>TLSv1：TLSv1版本；</li>
-<li>TLSV1.1：TLSv1.1版本；</li>
-<li>TLSV1.2：TLSv1.2版本；</li>
+<li>TLSv1.1：TLSv1.1版本；</li>
+<li>TLSv1.2：TLSv1.2版本；</li>
 <li>TLSv1.3：TLSv1.3版本。</li>修改时必须开启连续的版本。
  * @method void setTlsVersion(array $TlsVersion) 设置Tls 版本设置，取值有：
 <li>TLSv1：TLSv1版本；</li>
-<li>TLSV1.1：TLSv1.1版本；</li>
-<li>TLSV1.2：TLSv1.2版本；</li>
+<li>TLSv1.1：TLSv1.1版本；</li>
+<li>TLSv1.2：TLSv1.2版本；</li>
 <li>TLSv1.3：TLSv1.3版本。</li>修改时必须开启连续的版本。
  * @method Hsts getHsts() 获取HSTS 配置。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -84,8 +84,8 @@ class Https extends AbstractModel
     /**
      * @var array Tls 版本设置，取值有：
 <li>TLSv1：TLSv1版本；</li>
-<li>TLSV1.1：TLSv1.1版本；</li>
-<li>TLSV1.2：TLSv1.2版本；</li>
+<li>TLSv1.1：TLSv1.1版本；</li>
+<li>TLSv1.2：TLSv1.2版本；</li>
 <li>TLSv1.3：TLSv1.3版本。</li>修改时必须开启连续的版本。
      */
     public $TlsVersion;
@@ -126,8 +126,8 @@ class Https extends AbstractModel
 <li>off：关闭。</li>
      * @param array $TlsVersion Tls 版本设置，取值有：
 <li>TLSv1：TLSv1版本；</li>
-<li>TLSV1.1：TLSv1.1版本；</li>
-<li>TLSV1.2：TLSv1.2版本；</li>
+<li>TLSv1.1：TLSv1.1版本；</li>
+<li>TLSv1.2：TLSv1.2版本；</li>
 <li>TLSv1.3：TLSv1.3版本。</li>修改时必须开启连续的版本。
      * @param Hsts $Hsts HSTS 配置。
 注意：此字段可能返回 null，表示取不到有效值。

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTreeJobs请求参数结构体
  *
- * @method array getFilters() 获取筛选条件字段
- * @method void setFilters(array $Filters) 设置筛选条件字段
+ * @method array getFilters() 获取筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录
+ * @method void setFilters(array $Filters) 设置筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录
  * @method string getWorkSpaceId() 获取工作空间 Serialid
  * @method void setWorkSpaceId(string $WorkSpaceId) 设置工作空间 Serialid
  */
 class DescribeTreeJobsRequest extends AbstractModel
 {
     /**
-     * @var array 筛选条件字段
+     * @var array 筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录
      */
     public $Filters;
 
@@ -38,7 +38,7 @@ class DescribeTreeJobsRequest extends AbstractModel
     public $WorkSpaceId;
 
     /**
-     * @param array $Filters 筛选条件字段
+     * @param array $Filters 筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录
      * @param string $WorkSpaceId 工作空间 Serialid
      */
     function __construct()

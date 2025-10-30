@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperationHistory(string $OperationHistory) 设置手术史
  * @method string getTransfusionHistory() 获取输血史
  * @method void setTransfusionHistory(string $TransfusionHistory) 设置输血史
+ * @method string getDiseasePresent() 获取现病史
+ * @method void setDiseasePresent(string $DiseasePresent) 设置现病史
  */
 class DiseaseMedicalHistory extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DiseaseMedicalHistory extends AbstractModel
     public $TransfusionHistory;
 
     /**
+     * @var string 现病史
+     */
+    public $DiseasePresent;
+
+    /**
      * @param string $MainDiseaseHistory 主病史
      * @param string $AllergyHistory 过敏史
      * @param string $InfectHistory 传染疾病史
      * @param string $OperationHistory 手术史
      * @param string $TransfusionHistory 输血史
+     * @param string $DiseasePresent 现病史
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DiseaseMedicalHistory extends AbstractModel
 
         if (array_key_exists("TransfusionHistory",$param) and $param["TransfusionHistory"] !== null) {
             $this->TransfusionHistory = $param["TransfusionHistory"];
+        }
+
+        if (array_key_exists("DiseasePresent",$param) and $param["DiseasePresent"] !== null) {
+            $this->DiseasePresent = $param["DiseasePresent"];
         }
     }
 }

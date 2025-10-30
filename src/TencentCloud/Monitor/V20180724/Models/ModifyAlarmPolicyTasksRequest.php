@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModule(string $Module) 设置模块名，这里填“monitor”
  * @method string getPolicyId() 获取告警策略 ID
  * @method void setPolicyId(string $PolicyId) 设置告警策略 ID
- * @method array getTriggerTasks() 获取告警策略触发任务列表，空数据代表解绑
- * @method void setTriggerTasks(array $TriggerTasks) 设置告警策略触发任务列表，空数据代表解绑
+ * @method array getTriggerTasks() 获取告警策略触发任务列表，空数据代表解绑示例值： { "Type": "AS", "TaskConfig": "{\"Region\":\"ap-guangzhou\",\"Group\":\"asg-0zhspjx\",\"Policy\":\"asp-ganig28\"}" }
+ * @method void setTriggerTasks(array $TriggerTasks) 设置告警策略触发任务列表，空数据代表解绑示例值： { "Type": "AS", "TaskConfig": "{\"Region\":\"ap-guangzhou\",\"Group\":\"asg-0zhspjx\",\"Policy\":\"asp-ganig28\"}" }
  */
 class ModifyAlarmPolicyTasksRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ModifyAlarmPolicyTasksRequest extends AbstractModel
     public $PolicyId;
 
     /**
-     * @var array 告警策略触发任务列表，空数据代表解绑
+     * @var array 告警策略触发任务列表，空数据代表解绑示例值： { "Type": "AS", "TaskConfig": "{\"Region\":\"ap-guangzhou\",\"Group\":\"asg-0zhspjx\",\"Policy\":\"asp-ganig28\"}" }
      */
     public $TriggerTasks;
 
     /**
      * @param string $Module 模块名，这里填“monitor”
      * @param string $PolicyId 告警策略 ID
-     * @param array $TriggerTasks 告警策略触发任务列表，空数据代表解绑
+     * @param array $TriggerTasks 告警策略触发任务列表，空数据代表解绑示例值： { "Type": "AS", "TaskConfig": "{\"Region\":\"ap-guangzhou\",\"Group\":\"asg-0zhspjx\",\"Policy\":\"asp-ganig28\"}" }
      */
     function __construct()
     {

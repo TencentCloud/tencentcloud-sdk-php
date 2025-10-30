@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置数据库创建时间
  * @method string getIsFullTextEnabled() 获取是否全文启用 0：否 1：是
  * @method void setIsFullTextEnabled(string $IsFullTextEnabled) 设置是否全文启用 0：否 1：是
+ * @method string getIsAvailabilityGroups() 获取是否是可用性组 0：否 1：是
+ * @method void setIsAvailabilityGroups(string $IsAvailabilityGroups) 设置是否是可用性组 0：否 1：是
+ * @method string getAGSyncState() 获取AG组数据库同步状态
+ * @method void setAGSyncState(string $AGSyncState) 设置AG组数据库同步状态
  */
 class DbNormalDetail extends AbstractModel
 {
@@ -165,6 +169,16 @@ class DbNormalDetail extends AbstractModel
     public $IsFullTextEnabled;
 
     /**
+     * @var string 是否是可用性组 0：否 1：是
+     */
+    public $IsAvailabilityGroups;
+
+    /**
+     * @var string AG组数据库同步状态
+     */
+    public $AGSyncState;
+
+    /**
      * @param string $IsSubscribed 是否已订阅 0：否 1：是
      * @param string $CollationName 数据库排序规则
      * @param string $IsAutoCleanupOn 开启CT之后是否自动清理 0：否 1：是
@@ -185,6 +199,8 @@ class DbNormalDetail extends AbstractModel
      * @param string $UserAccessDesc 用户类型
      * @param string $CreateTime 数据库创建时间
      * @param string $IsFullTextEnabled 是否全文启用 0：否 1：是
+     * @param string $IsAvailabilityGroups 是否是可用性组 0：否 1：是
+     * @param string $AGSyncState AG组数据库同步状态
      */
     function __construct()
     {
@@ -277,6 +293,14 @@ class DbNormalDetail extends AbstractModel
 
         if (array_key_exists("IsFullTextEnabled",$param) and $param["IsFullTextEnabled"] !== null) {
             $this->IsFullTextEnabled = $param["IsFullTextEnabled"];
+        }
+
+        if (array_key_exists("IsAvailabilityGroups",$param) and $param["IsAvailabilityGroups"] !== null) {
+            $this->IsAvailabilityGroups = $param["IsAvailabilityGroups"];
+        }
+
+        if (array_key_exists("AGSyncState",$param) and $param["AGSyncState"] !== null) {
+            $this->AGSyncState = $param["AGSyncState"];
         }
     }
 }

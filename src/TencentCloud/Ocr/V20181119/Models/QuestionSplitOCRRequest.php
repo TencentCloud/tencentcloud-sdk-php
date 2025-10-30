@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableImageCrop(boolean $EnableImageCrop) 设置是否开启切边增强和弯曲矫正,默认为false不开启
  * @method boolean getEnableOnlyDetectBorder() 获取是否只返回检测框，默认false
  * @method void setEnableOnlyDetectBorder(boolean $EnableOnlyDetectBorder) 设置是否只返回检测框，默认false
+ * @method boolean getUseNewModel() 获取false: 使用当前默认模型  true: 使用新的多模态推理模型，速度更快推理效果更强，仅 `EnableOnlyDetectBorder` 为 `true` 时生效，公测中
+ * @method void setUseNewModel(boolean $UseNewModel) 设置false: 使用当前默认模型  true: 使用新的多模态推理模型，速度更快推理效果更强，仅 `EnableOnlyDetectBorder` 为 `true` 时生效，公测中
  */
 class QuestionSplitOCRRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class QuestionSplitOCRRequest extends AbstractModel
     public $EnableOnlyDetectBorder;
 
     /**
+     * @var boolean false: 使用当前默认模型  true: 使用新的多模态推理模型，速度更快推理效果更强，仅 `EnableOnlyDetectBorder` 为 `true` 时生效，公测中
+     */
+    public $UseNewModel;
+
+    /**
      * @param string $ImageUrl 图片的 Url 地址。支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载图片经 Base64 编码后不超过 10M。图片下载时间不超过 3 秒。支持的图片像素：需介于20-10000px之间。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      * @param string $ImageBase64 图片的 Base64 值。支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载图片经Base64编码后不超过 10M。图片下载时间不超过 3 秒。支持的图片像素：需介于20-10000px之间。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      * @param boolean $IsPdf 是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
      * @param integer $PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
      * @param boolean $EnableImageCrop 是否开启切边增强和弯曲矫正,默认为false不开启
      * @param boolean $EnableOnlyDetectBorder 是否只返回检测框，默认false
+     * @param boolean $UseNewModel false: 使用当前默认模型  true: 使用新的多模态推理模型，速度更快推理效果更强，仅 `EnableOnlyDetectBorder` 为 `true` 时生效，公测中
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class QuestionSplitOCRRequest extends AbstractModel
 
         if (array_key_exists("EnableOnlyDetectBorder",$param) and $param["EnableOnlyDetectBorder"] !== null) {
             $this->EnableOnlyDetectBorder = $param["EnableOnlyDetectBorder"];
+        }
+
+        if (array_key_exists("UseNewModel",$param) and $param["UseNewModel"] !== null) {
+            $this->UseNewModel = $param["UseNewModel"];
         }
     }
 }

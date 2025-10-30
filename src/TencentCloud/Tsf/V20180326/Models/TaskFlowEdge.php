@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,40 +20,40 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 工作流图中的边
  *
- * @method string getNodeId() 获取节点 ID
- * @method void setNodeId(string $NodeId) 设置节点 ID
- * @method string getChildNodeId() 获取子节点 ID
- * @method void setChildNodeId(string $ChildNodeId) 设置子节点 ID
+ * @method string getNodeId() 获取节点 ID，节点类型为任务时为任务ID，节点类型为逻辑节点"且"时为 AND，为逻辑节点"或"时为 OR，节点类型为头节点时为字符串"head"
+ * @method void setNodeId(string $NodeId) 设置节点 ID，节点类型为任务时为任务ID，节点类型为逻辑节点"且"时为 AND，为逻辑节点"或"时为 OR，节点类型为头节点时为字符串"head"
+ * @method string getChildNodeId() 获取子节点 ID，节点类型为任务时为任务ID，节点类型为逻辑节点"且"时为 AND，为逻辑节点"或"时为 OR
+ * @method void setChildNodeId(string $ChildNodeId) 设置子节点 ID，节点类型为任务时为任务ID，节点类型为逻辑节点"且"时为 AND，为逻辑节点"或"时为 OR
  * @method string getCoreNode() 获取是否核心任务,Y/N
  * @method void setCoreNode(string $CoreNode) 设置是否核心任务,Y/N
- * @method string getEdgeType() 获取边类型
- * @method void setEdgeType(string $EdgeType) 设置边类型
- * @method string getNodeType() 获取任务节点类型
- * @method void setNodeType(string $NodeType) 设置任务节点类型
+ * @method string getEdgeType() 获取边类型，上下游任务依赖触发关系。一共2个值，Y：成功触发，N：失败触发
+ * @method void setEdgeType(string $EdgeType) 设置边类型，上下游任务依赖触发关系。一共2个值，Y：成功触发，N：失败触发
+ * @method string getNodeType() 获取任务节点类型，一共有4种类型，AND：逻辑节点且，OR：逻辑节点或，TASK：任务节点，START：头节点
+ * @method void setNodeType(string $NodeType) 设置任务节点类型，一共有4种类型，AND：逻辑节点且，OR：逻辑节点或，TASK：任务节点，START：头节点
  * @method string getPositionX() 获取X轴坐标位置
  * @method void setPositionX(string $PositionX) 设置X轴坐标位置
  * @method string getPositionY() 获取Y轴坐标位置
  * @method void setPositionY(string $PositionY) 设置Y轴坐标位置
- * @method string getGraphId() 获取图 ID
- * @method void setGraphId(string $GraphId) 设置图 ID
- * @method string getFlowId() 获取工作流 ID
- * @method void setFlowId(string $FlowId) 设置工作流 ID
+ * @method string getGraphId() 获取图 ID，新建工作流时自动生成，不需要填写，查看工作流图时后端返回
+ * @method void setGraphId(string $GraphId) 设置图 ID，新建工作流时自动生成，不需要填写，查看工作流图时后端返回
+ * @method string getFlowId() 获取工作流 ID，新建工作流时自动生成，不需要填写，查看工作流图时后端返回
+ * @method void setFlowId(string $FlowId) 设置工作流 ID，新建工作流时自动生成，不需要填写，查看工作流图时后端返回
  * @method string getNodeName() 获取节点名称
  * @method void setNodeName(string $NodeName) 设置节点名称
- * @method string getTaskId() 获取任务ID
- * @method void setTaskId(string $TaskId) 设置任务ID
- * @method string getTaskLogId() 获取任务历史ID
- * @method void setTaskLogId(string $TaskLogId) 设置任务历史ID
+ * @method string getTaskId() 获取任务ID，新建工作流时不需要填写，查看工作流图时后端返回
+ * @method void setTaskId(string $TaskId) 设置任务ID，新建工作流时不需要填写，查看工作流图时后端返回
+ * @method string getTaskLogId() 获取任务历史ID，新建工作流时不需要填写，查看工作流图时后端返回
+ * @method void setTaskLogId(string $TaskLogId) 设置任务历史ID，新建工作流时不需要填写，查看工作流图时后端返回
  */
 class TaskFlowEdge extends AbstractModel
 {
     /**
-     * @var string 节点 ID
+     * @var string 节点 ID，节点类型为任务时为任务ID，节点类型为逻辑节点"且"时为 AND，为逻辑节点"或"时为 OR，节点类型为头节点时为字符串"head"
      */
     public $NodeId;
 
     /**
-     * @var string 子节点 ID
+     * @var string 子节点 ID，节点类型为任务时为任务ID，节点类型为逻辑节点"且"时为 AND，为逻辑节点"或"时为 OR
      */
     public $ChildNodeId;
 
@@ -63,12 +63,12 @@ class TaskFlowEdge extends AbstractModel
     public $CoreNode;
 
     /**
-     * @var string 边类型
+     * @var string 边类型，上下游任务依赖触发关系。一共2个值，Y：成功触发，N：失败触发
      */
     public $EdgeType;
 
     /**
-     * @var string 任务节点类型
+     * @var string 任务节点类型，一共有4种类型，AND：逻辑节点且，OR：逻辑节点或，TASK：任务节点，START：头节点
      */
     public $NodeType;
 
@@ -83,12 +83,12 @@ class TaskFlowEdge extends AbstractModel
     public $PositionY;
 
     /**
-     * @var string 图 ID
+     * @var string 图 ID，新建工作流时自动生成，不需要填写，查看工作流图时后端返回
      */
     public $GraphId;
 
     /**
-     * @var string 工作流 ID
+     * @var string 工作流 ID，新建工作流时自动生成，不需要填写，查看工作流图时后端返回
      */
     public $FlowId;
 
@@ -98,28 +98,28 @@ class TaskFlowEdge extends AbstractModel
     public $NodeName;
 
     /**
-     * @var string 任务ID
+     * @var string 任务ID，新建工作流时不需要填写，查看工作流图时后端返回
      */
     public $TaskId;
 
     /**
-     * @var string 任务历史ID
+     * @var string 任务历史ID，新建工作流时不需要填写，查看工作流图时后端返回
      */
     public $TaskLogId;
 
     /**
-     * @param string $NodeId 节点 ID
-     * @param string $ChildNodeId 子节点 ID
+     * @param string $NodeId 节点 ID，节点类型为任务时为任务ID，节点类型为逻辑节点"且"时为 AND，为逻辑节点"或"时为 OR，节点类型为头节点时为字符串"head"
+     * @param string $ChildNodeId 子节点 ID，节点类型为任务时为任务ID，节点类型为逻辑节点"且"时为 AND，为逻辑节点"或"时为 OR
      * @param string $CoreNode 是否核心任务,Y/N
-     * @param string $EdgeType 边类型
-     * @param string $NodeType 任务节点类型
+     * @param string $EdgeType 边类型，上下游任务依赖触发关系。一共2个值，Y：成功触发，N：失败触发
+     * @param string $NodeType 任务节点类型，一共有4种类型，AND：逻辑节点且，OR：逻辑节点或，TASK：任务节点，START：头节点
      * @param string $PositionX X轴坐标位置
      * @param string $PositionY Y轴坐标位置
-     * @param string $GraphId 图 ID
-     * @param string $FlowId 工作流 ID
+     * @param string $GraphId 图 ID，新建工作流时自动生成，不需要填写，查看工作流图时后端返回
+     * @param string $FlowId 工作流 ID，新建工作流时自动生成，不需要填写，查看工作流图时后端返回
      * @param string $NodeName 节点名称
-     * @param string $TaskId 任务ID
-     * @param string $TaskLogId 任务历史ID
+     * @param string $TaskId 任务ID，新建工作流时不需要填写，查看工作流图时后端返回
+     * @param string $TaskLogId 任务历史ID，新建工作流时不需要填写，查看工作流图时后端返回
      */
     function __construct()
     {

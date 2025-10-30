@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaxMark(string $TaxMark) 设置合计税额前字样
  * @method integer getCompanySealMark() 获取是否有公司印章（0：没有，1：有）
  * @method void setCompanySealMark(integer $CompanySealMark) 设置是否有公司印章（0：没有，1：有）
+ * @method string getInvoicePageIndex() 获取全电类型的多页pdf票据中，支持输出票面页码：当前第几页，一共第几页。
+ * @method void setInvoicePageIndex(string $InvoicePageIndex) 设置全电类型的多页pdf票据中，支持输出票面页码：当前第几页，一共第几页。
  */
 class VatElectronicInfo extends AbstractModel
 {
@@ -178,6 +180,11 @@ class VatElectronicInfo extends AbstractModel
     public $CompanySealMark;
 
     /**
+     * @var string 全电类型的多页pdf票据中，支持输出票面页码：当前第几页，一共第几页。
+     */
+    public $InvoicePageIndex;
+
+    /**
      * @param string $Title 发票名称
      * @param string $Number 发票号码
      * @param string $Date 开票日期
@@ -200,6 +207,7 @@ class VatElectronicInfo extends AbstractModel
      * @param string $PretaxAmountMark 合计金额前字样
      * @param string $TaxMark 合计税额前字样
      * @param integer $CompanySealMark 是否有公司印章（0：没有，1：有）
+     * @param string $InvoicePageIndex 全电类型的多页pdf票据中，支持输出票面页码：当前第几页，一共第几页。
      */
     function __construct()
     {
@@ -305,6 +313,10 @@ class VatElectronicInfo extends AbstractModel
 
         if (array_key_exists("CompanySealMark",$param) and $param["CompanySealMark"] !== null) {
             $this->CompanySealMark = $param["CompanySealMark"];
+        }
+
+        if (array_key_exists("InvoicePageIndex",$param) and $param["InvoicePageIndex"] !== null) {
+            $this->InvoicePageIndex = $param["InvoicePageIndex"];
         }
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,20 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartWebRecord请求参数结构体
  *
- * @method string getRecordUrl() 获取需要录制的网页URL
-
- * @method void setRecordUrl(string $RecordUrl) 设置需要录制的网页URL
-
- * @method integer getMaxDurationLimit() 获取录制最大时长限制， 单位 s, 合法取值范围[1800, 36000], 默认 36000s(10 小时)
-
- * @method void setMaxDurationLimit(integer $MaxDurationLimit) 设置录制最大时长限制， 单位 s, 合法取值范围[1800, 36000], 默认 36000s(10 小时)
-
+ * @method string getRecordUrl() 获取【必填】需要录制的网页URL
+ * @method void setRecordUrl(string $RecordUrl) 设置【必填】需要录制的网页URL
  * @method StorageParams getStorageParams() 获取【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储；输出文件的存储格式仅支持hls或mp4
  * @method void setStorageParams(StorageParams $StorageParams) 设置【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储；输出文件的存储格式仅支持hls或mp4
- * @method WebRecordVideoParams getWebRecordVideoParams() 获取页面录制视频参数
- * @method void setWebRecordVideoParams(WebRecordVideoParams $WebRecordVideoParams) 设置页面录制视频参数
  * @method integer getSdkAppId() 获取【必填】TRTC的SdkAppId
  * @method void setSdkAppId(integer $SdkAppId) 设置【必填】TRTC的SdkAppId
+ * @method integer getMaxDurationLimit() 获取录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时)
+ * @method void setMaxDurationLimit(integer $MaxDurationLimit) 设置录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时)
+ * @method WebRecordVideoParams getWebRecordVideoParams() 获取页面录制视频参数
+ * @method void setWebRecordVideoParams(WebRecordVideoParams $WebRecordVideoParams) 设置页面录制视频参数
  * @method string getRecordId() 获取当对重复任务敏感时，请关注此值： 为了避免任务在短时间内重复发起，导致任务重复
 传入录制RecordId来标识此次任务， 小于32字节，若携带RecordId发起两次以上的开始录制请求，任务只会启动一个，第二个报错FailedOperation.TaskExist。注意StartWebRecord调用失败时而非FailedOperation.TaskExist错误，请更换RecordId重新发起。
  * @method void setRecordId(string $RecordId) 设置当对重复任务敏感时，请关注此值： 为了避免任务在短时间内重复发起，导致任务重复
@@ -48,16 +44,9 @@ use TencentCloud\Common\AbstractModel;
 class StartWebRecordRequest extends AbstractModel
 {
     /**
-     * @var string 需要录制的网页URL
-
+     * @var string 【必填】需要录制的网页URL
      */
     public $RecordUrl;
-
-    /**
-     * @var integer 录制最大时长限制， 单位 s, 合法取值范围[1800, 36000], 默认 36000s(10 小时)
-
-     */
-    public $MaxDurationLimit;
 
     /**
      * @var StorageParams 【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储；输出文件的存储格式仅支持hls或mp4
@@ -65,14 +54,19 @@ class StartWebRecordRequest extends AbstractModel
     public $StorageParams;
 
     /**
-     * @var WebRecordVideoParams 页面录制视频参数
-     */
-    public $WebRecordVideoParams;
-
-    /**
      * @var integer 【必填】TRTC的SdkAppId
      */
     public $SdkAppId;
+
+    /**
+     * @var integer 录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时)
+     */
+    public $MaxDurationLimit;
+
+    /**
+     * @var WebRecordVideoParams 页面录制视频参数
+     */
+    public $WebRecordVideoParams;
 
     /**
      * @var string 当对重复任务敏感时，请关注此值： 为了避免任务在短时间内重复发起，导致任务重复
@@ -96,13 +90,11 @@ class StartWebRecordRequest extends AbstractModel
     public $EmulateMobileParams;
 
     /**
-     * @param string $RecordUrl 需要录制的网页URL
-
-     * @param integer $MaxDurationLimit 录制最大时长限制， 单位 s, 合法取值范围[1800, 36000], 默认 36000s(10 小时)
-
+     * @param string $RecordUrl 【必填】需要录制的网页URL
      * @param StorageParams $StorageParams 【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储；输出文件的存储格式仅支持hls或mp4
-     * @param WebRecordVideoParams $WebRecordVideoParams 页面录制视频参数
      * @param integer $SdkAppId 【必填】TRTC的SdkAppId
+     * @param integer $MaxDurationLimit 录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时)
+     * @param WebRecordVideoParams $WebRecordVideoParams 页面录制视频参数
      * @param string $RecordId 当对重复任务敏感时，请关注此值： 为了避免任务在短时间内重复发起，导致任务重复
 传入录制RecordId来标识此次任务， 小于32字节，若携带RecordId发起两次以上的开始录制请求，任务只会启动一个，第二个报错FailedOperation.TaskExist。注意StartWebRecord调用失败时而非FailedOperation.TaskExist错误，请更换RecordId重新发起。
      * @param array $PublishCdnParams 若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1
@@ -126,22 +118,22 @@ class StartWebRecordRequest extends AbstractModel
             $this->RecordUrl = $param["RecordUrl"];
         }
 
-        if (array_key_exists("MaxDurationLimit",$param) and $param["MaxDurationLimit"] !== null) {
-            $this->MaxDurationLimit = $param["MaxDurationLimit"];
-        }
-
         if (array_key_exists("StorageParams",$param) and $param["StorageParams"] !== null) {
             $this->StorageParams = new StorageParams();
             $this->StorageParams->deserialize($param["StorageParams"]);
         }
 
+        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
+            $this->SdkAppId = $param["SdkAppId"];
+        }
+
+        if (array_key_exists("MaxDurationLimit",$param) and $param["MaxDurationLimit"] !== null) {
+            $this->MaxDurationLimit = $param["MaxDurationLimit"];
+        }
+
         if (array_key_exists("WebRecordVideoParams",$param) and $param["WebRecordVideoParams"] !== null) {
             $this->WebRecordVideoParams = new WebRecordVideoParams();
             $this->WebRecordVideoParams->deserialize($param["WebRecordVideoParams"]);
-        }
-
-        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
-            $this->SdkAppId = $param["SdkAppId"];
         }
 
         if (array_key_exists("RecordId",$param) and $param["RecordId"] !== null) {

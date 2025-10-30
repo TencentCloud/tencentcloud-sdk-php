@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVarDefaultValue(string $VarDefaultValue) 设置自定义变量默认值
  * @method string getVarDefaultFileName() 获取自定义变量文件默认名称
  * @method void setVarDefaultFileName(string $VarDefaultFileName) 设置自定义变量文件默认名称
+ * @method integer getVarModuleType() 获取变量类型
+ * @method void setVarModuleType(integer $VarModuleType) 设置变量类型
  */
 class UpdateVarRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class UpdateVarRequest extends AbstractModel
     public $VarDefaultFileName;
 
     /**
+     * @var integer 变量类型
+     */
+    public $VarModuleType;
+
+    /**
      * @param string $AppBizId 应用ID
      * @param string $VarId 变量ID
      * @param string $VarName 变量名称，最大支持50个字符
@@ -80,6 +87,7 @@ class UpdateVarRequest extends AbstractModel
      * @param string $VarType 参数类型
      * @param string $VarDefaultValue 自定义变量默认值
      * @param string $VarDefaultFileName 自定义变量文件默认名称
+     * @param integer $VarModuleType 变量类型
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class UpdateVarRequest extends AbstractModel
 
         if (array_key_exists("VarDefaultFileName",$param) and $param["VarDefaultFileName"] !== null) {
             $this->VarDefaultFileName = $param["VarDefaultFileName"];
+        }
+
+        if (array_key_exists("VarModuleType",$param) and $param["VarModuleType"] !== null) {
+            $this->VarModuleType = $param["VarModuleType"];
         }
     }
 }

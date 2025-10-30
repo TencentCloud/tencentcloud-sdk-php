@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -103,11 +103,10 @@ AI 美照默认提供1个并发，代表最多能同时处理1个已提交的任
 
 每个写真模型自训练完成起1年内有效，有效期内可使用写真模型 ID 生成图片，期满后需要重新训练。
 提交训练写真模型任务按并发计费，无默认并发额度。
- * @method Models\TextToImageResponse TextToImage(Models\TextToImageRequest $req) **本接口已迁移至腾讯混元大模型-文生图轻量版，即将停止此处维护，可切换至 [文生图轻量版 API](https://cloud.tencent.com/document/product/1729/108738) 继续使用。**
-
-智能文生图接口基于文生图（标准版）模型，将根据输入的文本描述，智能生成与之相关的结果图。
-
-智能文生图默认提供3个并发任务数，代表最多能同时处理3个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+ * @method Models\TextToImageLiteResponse TextToImageLite(Models\TextToImageLiteRequest $req) 混元文生图接口，基于混元大模型，根据输入的文本描述智能生成图片
+默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+ * @method Models\TextToImageRapidResponse TextToImageRapid(Models\TextToImageRapidRequest $req) 混元文生图接口，基于混元大模型，根据输入的文本描述智能生成图片
+默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
  * @method Models\UploadTrainPortraitImagesResponse UploadTrainPortraitImages(Models\UploadTrainPortraitImagesRequest $req) AI 写真分为上传训练图片、训练写真模型（可选跳过）、生成写真图片3个环节，需要依次调用对应接口。
 本接口用于上传人像图片并指定对应的写真模型 ID。上传的图片要求是同一个人，建议上传单人、正脸、脸部区域占比较大、脸部清晰无遮挡、无大角度偏转、无夸张表情的图片。
 可选模式：

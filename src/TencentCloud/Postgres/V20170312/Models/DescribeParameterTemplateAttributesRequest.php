@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeParameterTemplateAttributes请求参数结构体
  *
- * @method string getTemplateId() 获取参数模板ID
- * @method void setTemplateId(string $TemplateId) 设置参数模板ID
+ * @method string getTemplateId() 获取参数模板ID。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
+ * @method void setTemplateId(string $TemplateId) 设置参数模板ID。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
  */
 class DescribeParameterTemplateAttributesRequest extends AbstractModel
 {
     /**
-     * @var string 参数模板ID
+     * @var string 参数模板ID。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
      */
     public $TemplateId;
 
     /**
-     * @param string $TemplateId 参数模板ID
+     * @param string $TemplateId 参数模板ID。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
      */
     function __construct()
     {

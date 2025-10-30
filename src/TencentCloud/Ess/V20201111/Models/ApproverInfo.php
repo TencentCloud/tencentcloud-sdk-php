@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,9 +38,9 @@ use TencentCloud\Common\AbstractModel;
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
  * @method void setApproverName(string $ApproverName) 设置签署方经办人的姓名。
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
- * @method string getApproverMobile() 获取签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+ * @method string getApproverMobile() 获取签署方经办人手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
 请确认手机号所有方为此合同签署方。
- * @method void setApproverMobile(string $ApproverMobile) 设置签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+ * @method void setApproverMobile(string $ApproverMobile) 设置签署方经办人手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
 请确认手机号所有方为此合同签署方。
  * @method string getOrganizationName() 获取组织机构名称。
 请确认该名称与企业营业执照中注册的名称一致。
@@ -278,6 +278,9 @@ use TencentCloud\Common\AbstractModel;
 <ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
  * @method void setSignEndpoints(array $SignEndpoints) 设置进入签署流程的限制，目前支持以下选项：
 <ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
+ * @method RegisterInfo getRegisterInfo() 获取快速注册相关信息
+
+ * @method void setRegisterInfo(RegisterInfo $RegisterInfo) 设置快速注册相关信息
  */
 class ApproverInfo extends AbstractModel
 {
@@ -299,7 +302,7 @@ class ApproverInfo extends AbstractModel
     public $ApproverName;
 
     /**
-     * @var string 签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+     * @var string 签署方经办人手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
 请确认手机号所有方为此合同签署方。
      */
     public $ApproverMobile;
@@ -507,6 +510,12 @@ class ApproverInfo extends AbstractModel
     public $SignEndpoints;
 
     /**
+     * @var RegisterInfo 快速注册相关信息
+
+     */
+    public $RegisterInfo;
+
+    /**
      * @param integer $ApproverType 在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
 **0**：企业
 **1**：个人
@@ -516,7 +525,7 @@ class ApproverInfo extends AbstractModel
 注: `个人自动签场景为白名单功能，使用前请联系对接的客户经理沟通。`
      * @param string $ApproverName 签署方经办人的姓名。
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
-     * @param string $ApproverMobile 签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+     * @param string $ApproverMobile 签署方经办人手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
 请确认手机号所有方为此合同签署方。
      * @param string $OrganizationName 组织机构名称。
 请确认该名称与企业营业执照中注册的名称一致。
@@ -636,6 +645,7 @@ class ApproverInfo extends AbstractModel
 ![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
      * @param array $SignEndpoints 进入签署流程的限制，目前支持以下选项：
 <ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
+     * @param RegisterInfo $RegisterInfo 快速注册相关信息
      */
     function __construct()
     {
@@ -760,6 +770,11 @@ class ApproverInfo extends AbstractModel
 
         if (array_key_exists("SignEndpoints",$param) and $param["SignEndpoints"] !== null) {
             $this->SignEndpoints = $param["SignEndpoints"];
+        }
+
+        if (array_key_exists("RegisterInfo",$param) and $param["RegisterInfo"] !== null) {
+            $this->RegisterInfo = new RegisterInfo();
+            $this->RegisterInfo->deserialize($param["RegisterInfo"]);
         }
     }
 }

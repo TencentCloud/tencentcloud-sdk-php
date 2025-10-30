@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -64,6 +64,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoicePrint(VoicePrint $VoicePrint) 设置声纹配置
  * @method TurnDetection getTurnDetection() 获取语义断句检测
  * @method void setTurnDetection(TurnDetection $TurnDetection) 设置语义断句检测
+ * @method integer getSubtitleMode() 获取机器人字幕显示模式。
+- 0表示尽快显示，不会和音频播放进行同步。此时字幕全量下发，后面的字幕会包含前面的字幕。
+- 1表示句子级别的实时显示，会和音频播放进行同步，只有当前句子对应的音频播放完后，下一条字幕才会下发。此时字幕增量下发，端上需要把前后的字幕进行拼接才是完整字幕。
+ * @method void setSubtitleMode(integer $SubtitleMode) 设置机器人字幕显示模式。
+- 0表示尽快显示，不会和音频播放进行同步。此时字幕全量下发，后面的字幕会包含前面的字幕。
+- 1表示句子级别的实时显示，会和音频播放进行同步，只有当前句子对应的音频播放完后，下一条字幕才会下发。此时字幕增量下发，端上需要把前后的字幕进行拼接才是完整字幕。
+ * @method array getInterruptWordList() 获取打断词列表，在AI说话期间，只有说出列表中的打断词才会打断AI说话。
+注意：打断词不会触发AI回复。
+ * @method void setInterruptWordList(array $InterruptWordList) 设置打断词列表，在AI说话期间，只有说出列表中的打断词才会打断AI说话。
+注意：打断词不会触发AI回复。
  */
 class AgentConfig extends AbstractModel
 {
@@ -146,6 +156,19 @@ class AgentConfig extends AbstractModel
     public $TurnDetection;
 
     /**
+     * @var integer 机器人字幕显示模式。
+- 0表示尽快显示，不会和音频播放进行同步。此时字幕全量下发，后面的字幕会包含前面的字幕。
+- 1表示句子级别的实时显示，会和音频播放进行同步，只有当前句子对应的音频播放完后，下一条字幕才会下发。此时字幕增量下发，端上需要把前后的字幕进行拼接才是完整字幕。
+     */
+    public $SubtitleMode;
+
+    /**
+     * @var array 打断词列表，在AI说话期间，只有说出列表中的打断词才会打断AI说话。
+注意：打断词不会触发AI回复。
+     */
+    public $InterruptWordList;
+
+    /**
      * @param string $UserId 机器人的UserId，用于进房发起任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个任务时，机器人的UserId也不能相互重复，否则会中断前一个任务。需要保证机器人UserId在房间内唯一。
      * @param string $UserSig 机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
      * @param string $TargetUserId 机器人拉流的UserId, 填写后，机器人会拉取该UserId的流进行实时处理
@@ -168,6 +191,11 @@ class AgentConfig extends AbstractModel
      * @param AmbientSound $AmbientSound 环境音设置
      * @param VoicePrint $VoicePrint 声纹配置
      * @param TurnDetection $TurnDetection 语义断句检测
+     * @param integer $SubtitleMode 机器人字幕显示模式。
+- 0表示尽快显示，不会和音频播放进行同步。此时字幕全量下发，后面的字幕会包含前面的字幕。
+- 1表示句子级别的实时显示，会和音频播放进行同步，只有当前句子对应的音频播放完后，下一条字幕才会下发。此时字幕增量下发，端上需要把前后的字幕进行拼接才是完整字幕。
+     * @param array $InterruptWordList 打断词列表，在AI说话期间，只有说出列表中的打断词才会打断AI说话。
+注意：打断词不会触发AI回复。
      */
     function __construct()
     {
@@ -239,6 +267,14 @@ class AgentConfig extends AbstractModel
         if (array_key_exists("TurnDetection",$param) and $param["TurnDetection"] !== null) {
             $this->TurnDetection = new TurnDetection();
             $this->TurnDetection->deserialize($param["TurnDetection"]);
+        }
+
+        if (array_key_exists("SubtitleMode",$param) and $param["SubtitleMode"] !== null) {
+            $this->SubtitleMode = $param["SubtitleMode"];
+        }
+
+        if (array_key_exists("InterruptWordList",$param) and $param["InterruptWordList"] !== null) {
+            $this->InterruptWordList = $param["InterruptWordList"];
         }
     }
 }

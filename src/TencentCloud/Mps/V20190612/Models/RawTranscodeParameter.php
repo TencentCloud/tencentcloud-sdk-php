@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,12 +45,14 @@ use TencentCloud\Common\AbstractModel;
  * @method TEHDConfig getTEHDConfig() 获取极速高清转码参数。
  * @method void setTEHDConfig(TEHDConfig $TEHDConfig) 设置极速高清转码参数。
  * @method string getStdExtInfo() 获取扩展参数，序列化的 json 字符串。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStdExtInfo(string $StdExtInfo) 设置扩展参数，序列化的 json 字符串。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EnhanceConfig getEnhanceConfig() 获取音视频增强配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) 设置音视频增强配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method SubtitleTemplate getSubtitleTemplate() 获取字幕参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubtitleTemplate(SubtitleTemplate $SubtitleTemplate) 设置字幕参数
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RawTranscodeParameter extends AbstractModel
@@ -93,7 +95,6 @@ class RawTranscodeParameter extends AbstractModel
 
     /**
      * @var string 扩展参数，序列化的 json 字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StdExtInfo;
 
@@ -102,6 +103,12 @@ class RawTranscodeParameter extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnhanceConfig;
+
+    /**
+     * @var SubtitleTemplate 字幕参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubtitleTemplate;
 
     /**
      * @param string $Container 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
@@ -117,8 +124,9 @@ class RawTranscodeParameter extends AbstractModel
      * @param AudioTemplateInfo $AudioTemplate 音频流配置参数，当 RemoveAudio 为 0，该字段必填。
      * @param TEHDConfig $TEHDConfig 极速高清转码参数。
      * @param string $StdExtInfo 扩展参数，序列化的 json 字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnhanceConfig $EnhanceConfig 音视频增强配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubtitleTemplate $SubtitleTemplate 字幕参数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -168,6 +176,11 @@ class RawTranscodeParameter extends AbstractModel
         if (array_key_exists("EnhanceConfig",$param) and $param["EnhanceConfig"] !== null) {
             $this->EnhanceConfig = new EnhanceConfig();
             $this->EnhanceConfig->deserialize($param["EnhanceConfig"]);
+        }
+
+        if (array_key_exists("SubtitleTemplate",$param) and $param["SubtitleTemplate"] !== null) {
+            $this->SubtitleTemplate = new SubtitleTemplate();
+            $this->SubtitleTemplate->deserialize($param["SubtitleTemplate"]);
         }
     }
 }

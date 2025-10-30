@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,6 +38,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置公网出流量带宽[1,2048]Mbps
  * @method string getDescription() 获取负载均衡描述
  * @method void setDescription(string $Description) 设置负载均衡描述
+ * @method string getSlaType() 获取负载均衡的规格类型，支持：
+- 不传为共享型。
+- clb.c2.medium：标准型规格
+- clb.c3.small：高阶型1规格
+- clb.c3.medium：高阶型2规格
+- clb.c4.small：超强型1规格
+- clb.c4.medium：超强型2规格
+- clb.c4.large：超强型3规格
+- clb.c4.xlarge：超强型4规格
+ * @method void setSlaType(string $SlaType) 设置负载均衡的规格类型，支持：
+- 不传为共享型。
+- clb.c2.medium：标准型规格
+- clb.c3.small：高阶型1规格
+- clb.c3.medium：高阶型2规格
+- clb.c4.small：超强型1规格
+- clb.c4.medium：超强型2规格
+- clb.c4.large：超强型3规格
+- clb.c4.xlarge：超强型4规格
  */
 class ModifyNetworkBasicInfoRequest extends AbstractModel
 {
@@ -75,6 +93,19 @@ class ModifyNetworkBasicInfoRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var string 负载均衡的规格类型，支持：
+- 不传为共享型。
+- clb.c2.medium：标准型规格
+- clb.c3.small：高阶型1规格
+- clb.c3.medium：高阶型2规格
+- clb.c4.small：超强型1规格
+- clb.c4.medium：超强型2规格
+- clb.c4.large：超强型3规格
+- clb.c4.xlarge：超强型4规格
+     */
+    public $SlaType;
+
+    /**
      * @param string $GatewayId 云原生API网关实例ID。
      * @param string $GroupId 分组id
      * @param string $NetworkType 网络类型：
@@ -84,6 +115,15 @@ class ModifyNetworkBasicInfoRequest extends AbstractModel
      * @param string $Vip ip地址
      * @param integer $InternetMaxBandwidthOut 公网出流量带宽[1,2048]Mbps
      * @param string $Description 负载均衡描述
+     * @param string $SlaType 负载均衡的规格类型，支持：
+- 不传为共享型。
+- clb.c2.medium：标准型规格
+- clb.c3.small：高阶型1规格
+- clb.c3.medium：高阶型2规格
+- clb.c4.small：超强型1规格
+- clb.c4.medium：超强型2规格
+- clb.c4.large：超强型3规格
+- clb.c4.xlarge：超强型4规格
      */
     function __construct()
     {
@@ -120,6 +160,10 @@ class ModifyNetworkBasicInfoRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("SlaType",$param) and $param["SlaType"] !== null) {
+            $this->SlaType = $param["SlaType"];
         }
     }
 }

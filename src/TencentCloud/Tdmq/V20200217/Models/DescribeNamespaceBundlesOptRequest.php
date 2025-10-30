@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBundle(string $Bundle) 设置过滤的 bundle
  * @method string getOwnerBroker() 获取bundle 所属的 broker IP 地址，支持模糊查询
  * @method void setOwnerBroker(string $OwnerBroker) 设置bundle 所属的 broker IP 地址，支持模糊查询
+ * @method string getTenant() 获取租户(如果没有自定义租户名称，和 tenantId 相同；如果有配置自定义租户名称，则为自定义租户名 user_tenant)
+ * @method void setTenant(string $Tenant) 设置租户(如果没有自定义租户名称，和 tenantId 相同；如果有配置自定义租户名称，则为自定义租户名 user_tenant)
  */
 class DescribeNamespaceBundlesOptRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class DescribeNamespaceBundlesOptRequest extends AbstractModel
     public $OwnerBroker;
 
     /**
+     * @var string 租户(如果没有自定义租户名称，和 tenantId 相同；如果有配置自定义租户名称，则为自定义租户名 user_tenant)
+     */
+    public $Tenant;
+
+    /**
      * @param string $ClusterName 物理集群名
      * @param string $TenantId 虚拟集群（租户）ID
      * @param string $NamespaceName 命名空间名
@@ -88,6 +95,7 @@ class DescribeNamespaceBundlesOptRequest extends AbstractModel
      * @param integer $Offset 查询偏移量
      * @param string $Bundle 过滤的 bundle
      * @param string $OwnerBroker bundle 所属的 broker IP 地址，支持模糊查询
+     * @param string $Tenant 租户(如果没有自定义租户名称，和 tenantId 相同；如果有配置自定义租户名称，则为自定义租户名 user_tenant)
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class DescribeNamespaceBundlesOptRequest extends AbstractModel
 
         if (array_key_exists("OwnerBroker",$param) and $param["OwnerBroker"] !== null) {
             $this->OwnerBroker = $param["OwnerBroker"];
+        }
+
+        if (array_key_exists("Tenant",$param) and $param["Tenant"] !== null) {
+            $this->Tenant = $param["Tenant"];
         }
     }
 }

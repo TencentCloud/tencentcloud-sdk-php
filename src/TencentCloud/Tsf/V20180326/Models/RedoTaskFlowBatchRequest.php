@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RedoTaskFlowBatch请求参数结构体
  *
- * @method string getFlowBatchId() 获取工作流批次 ID
- * @method void setFlowBatchId(string $FlowBatchId) 设置工作流批次 ID
+ * @method string getFlowBatchId() 获取工作流批次 ID。在[工作流管理](https://console.cloud.tencent.com/tsf/tct?rid=1&tab=workflowManage)页面，点击第一列的工作流ID进入工作流执行记录列表页面，第一列的内容即为工作流批次ID。
+ * @method void setFlowBatchId(string $FlowBatchId) 设置工作流批次 ID。在[工作流管理](https://console.cloud.tencent.com/tsf/tct?rid=1&tab=workflowManage)页面，点击第一列的工作流ID进入工作流执行记录列表页面，第一列的内容即为工作流批次ID。
  */
 class RedoTaskFlowBatchRequest extends AbstractModel
 {
     /**
-     * @var string 工作流批次 ID
+     * @var string 工作流批次 ID。在[工作流管理](https://console.cloud.tencent.com/tsf/tct?rid=1&tab=workflowManage)页面，点击第一列的工作流ID进入工作流执行记录列表页面，第一列的内容即为工作流批次ID。
      */
     public $FlowBatchId;
 
     /**
-     * @param string $FlowBatchId 工作流批次 ID
+     * @param string $FlowBatchId 工作流批次 ID。在[工作流管理](https://console.cloud.tencent.com/tsf/tct?rid=1&tab=workflowManage)页面，点击第一列的工作流ID进入工作流执行记录列表页面，第一列的内容即为工作流批次ID。
      */
     function __construct()
     {

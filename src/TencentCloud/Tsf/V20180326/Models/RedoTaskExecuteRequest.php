@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RedoTaskExecute请求参数结构体
  *
- * @method string getBatchId() 获取任务批次ID
- * @method void setBatchId(string $BatchId) 设置任务批次ID
- * @method string getExecuteId() 获取任务执行ID
- * @method void setExecuteId(string $ExecuteId) 设置任务执行ID
- * @method string getTaskId() 获取任务ID
- * @method void setTaskId(string $TaskId) 设置任务ID
+ * @method string getBatchId() 获取任务批次ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)页面第一列点击任务ID进入任务详情，进入执行记录列表页，第一列内容即为任务批次ID。
+ * @method void setBatchId(string $BatchId) 设置任务批次ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)页面第一列点击任务ID进入任务详情，进入执行记录列表页，第一列内容即为任务批次ID。
+ * @method string getExecuteId() 获取任务执行ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)页面第一列点击任务ID进入任务详情，进入执行记录页，点击批次ID进入执行详情列表页，第一列即为任务执行ID。
+ * @method void setExecuteId(string $ExecuteId) 设置任务执行ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)页面第一列点击任务ID进入任务详情，进入执行记录页，点击批次ID进入执行详情列表页，第一列即为任务执行ID。
+ * @method string getTaskId() 获取任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页查看任务ID。
+ * @method void setTaskId(string $TaskId) 设置任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页查看任务ID。
  */
 class RedoTaskExecuteRequest extends AbstractModel
 {
     /**
-     * @var string 任务批次ID
+     * @var string 任务批次ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)页面第一列点击任务ID进入任务详情，进入执行记录列表页，第一列内容即为任务批次ID。
      */
     public $BatchId;
 
     /**
-     * @var string 任务执行ID
+     * @var string 任务执行ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)页面第一列点击任务ID进入任务详情，进入执行记录页，点击批次ID进入执行详情列表页，第一列即为任务执行ID。
      */
     public $ExecuteId;
 
     /**
-     * @var string 任务ID
+     * @var string 任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页查看任务ID。
      */
     public $TaskId;
 
     /**
-     * @param string $BatchId 任务批次ID
-     * @param string $ExecuteId 任务执行ID
-     * @param string $TaskId 任务ID
+     * @param string $BatchId 任务批次ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)页面第一列点击任务ID进入任务详情，进入执行记录列表页，第一列内容即为任务批次ID。
+     * @param string $ExecuteId 任务执行ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)页面第一列点击任务ID进入任务详情，进入执行记录页，点击批次ID进入执行详情列表页，第一列即为任务执行ID。
+     * @param string $TaskId 任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页查看任务ID。
      */
     function __construct()
     {

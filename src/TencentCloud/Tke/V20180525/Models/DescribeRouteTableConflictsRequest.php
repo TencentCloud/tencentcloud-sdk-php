@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRouteTableCidrBlock() 获取路由表CIDR
  * @method void setRouteTableCidrBlock(string $RouteTableCidrBlock) 设置路由表CIDR
- * @method string getVpcId() 获取路由表绑定的VPC
- * @method void setVpcId(string $VpcId) 设置路由表绑定的VPC
+ * @method string getVpcId() 获取路由表绑定的VPC，请到 [VPC 控制台](https://console.cloud.tencent.com/vpc/vpc)复制 VPC ID
+ * @method void setVpcId(string $VpcId) 设置路由表绑定的VPC，请到 [VPC 控制台](https://console.cloud.tencent.com/vpc/vpc)复制 VPC ID
  */
 class DescribeRouteTableConflictsRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeRouteTableConflictsRequest extends AbstractModel
     public $RouteTableCidrBlock;
 
     /**
-     * @var string 路由表绑定的VPC
+     * @var string 路由表绑定的VPC，请到 [VPC 控制台](https://console.cloud.tencent.com/vpc/vpc)复制 VPC ID
      */
     public $VpcId;
 
     /**
      * @param string $RouteTableCidrBlock 路由表CIDR
-     * @param string $VpcId 路由表绑定的VPC
+     * @param string $VpcId 路由表绑定的VPC，请到 [VPC 控制台](https://console.cloud.tencent.com/vpc/vpc)复制 VPC ID
      */
     function __construct()
     {

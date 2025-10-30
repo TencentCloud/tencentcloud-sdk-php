@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -60,9 +60,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQualityControlTask(ScheduleQualityControlTaskResult $QualityControlTask) 设置媒体质检任务输出
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ScheduleExecRuleTaskResult getExecRuleTask() 获取条件判断任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExecRuleTask(ScheduleExecRuleTaskResult $ExecRuleTask) 设置条件判断任务输出
+注意：此字段可能返回 null，表示取不到有效值。
  * @method ScheduleSmartSubtitleTaskResult getSmartSubtitlesTask() 获取智能字幕任务输出
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSmartSubtitlesTask(ScheduleSmartSubtitleTaskResult $SmartSubtitlesTask) 设置智能字幕任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method SmartEraseTaskResult getSmartEraseTask() 获取智能擦除任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSmartEraseTask(SmartEraseTaskResult $SmartEraseTask) 设置智能擦除任务输出
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ActivityResItem extends AbstractModel
@@ -128,10 +136,22 @@ class ActivityResItem extends AbstractModel
     public $QualityControlTask;
 
     /**
+     * @var ScheduleExecRuleTaskResult 条件判断任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExecRuleTask;
+
+    /**
      * @var ScheduleSmartSubtitleTaskResult 智能字幕任务输出
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SmartSubtitlesTask;
+
+    /**
+     * @var SmartEraseTaskResult 智能擦除任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SmartEraseTask;
 
     /**
      * @param MediaProcessTaskTranscodeResult $TranscodeTask 转码任务输出
@@ -154,7 +174,11 @@ class ActivityResItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ScheduleQualityControlTaskResult $QualityControlTask 媒体质检任务输出
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScheduleExecRuleTaskResult $ExecRuleTask 条件判断任务输出
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ScheduleSmartSubtitleTaskResult $SmartSubtitlesTask 智能字幕任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SmartEraseTaskResult $SmartEraseTask 智能擦除任务输出
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -220,9 +244,19 @@ class ActivityResItem extends AbstractModel
             $this->QualityControlTask->deserialize($param["QualityControlTask"]);
         }
 
+        if (array_key_exists("ExecRuleTask",$param) and $param["ExecRuleTask"] !== null) {
+            $this->ExecRuleTask = new ScheduleExecRuleTaskResult();
+            $this->ExecRuleTask->deserialize($param["ExecRuleTask"]);
+        }
+
         if (array_key_exists("SmartSubtitlesTask",$param) and $param["SmartSubtitlesTask"] !== null) {
             $this->SmartSubtitlesTask = new ScheduleSmartSubtitleTaskResult();
             $this->SmartSubtitlesTask->deserialize($param["SmartSubtitlesTask"]);
+        }
+
+        if (array_key_exists("SmartEraseTask",$param) and $param["SmartEraseTask"] !== null) {
+            $this->SmartEraseTask = new SmartEraseTaskResult();
+            $this->SmartEraseTask->deserialize($param["SmartEraseTask"]);
         }
     }
 }

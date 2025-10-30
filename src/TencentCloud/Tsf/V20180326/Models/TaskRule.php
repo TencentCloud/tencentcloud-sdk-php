@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 任务规则
  *
- * @method string getRuleType() 获取触发规则类型, Cron/Repeat
- * @method void setRuleType(string $RuleType) 设置触发规则类型, Cron/Repeat
+ * @method string getRuleType() 获取触发规则类型，枚举值。一共3个值，Cron：定时触发，Repeat：周期触发，WorkFlow：工作流触发
+ * @method void setRuleType(string $RuleType) 设置触发规则类型，枚举值。一共3个值，Cron：定时触发，Repeat：周期触发，WorkFlow：工作流触发
  * @method string getExpression() 获取Cron类型规则，cron表达式。
  * @method void setExpression(string $Expression) 设置Cron类型规则，cron表达式。
  * @method integer getRepeatInterval() 获取时间间隔， 单位毫秒
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class TaskRule extends AbstractModel
 {
     /**
-     * @var string 触发规则类型, Cron/Repeat
+     * @var string 触发规则类型，枚举值。一共3个值，Cron：定时触发，Repeat：周期触发，WorkFlow：工作流触发
      */
     public $RuleType;
 
@@ -48,7 +48,7 @@ class TaskRule extends AbstractModel
     public $RepeatInterval;
 
     /**
-     * @param string $RuleType 触发规则类型, Cron/Repeat
+     * @param string $RuleType 触发规则类型，枚举值。一共3个值，Cron：定时触发，Repeat：周期触发，WorkFlow：工作流触发
      * @param string $Expression Cron类型规则，cron表达式。
      * @param integer $RepeatInterval 时间间隔， 单位毫秒
 注意：此字段可能返回 null，表示取不到有效值。

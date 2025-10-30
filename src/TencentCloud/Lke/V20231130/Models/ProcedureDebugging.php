@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -49,7 +49,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgent(AgentDebugInfo $Agent) 设置Agent调试信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCustomVariables() 获取自定义参数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomVariables(array $CustomVariables) 设置自定义参数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProcedureDebugging extends AbstractModel
 {
@@ -97,6 +99,7 @@ class ProcedureDebugging extends AbstractModel
 
     /**
      * @var array 自定义参数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomVariables;
 
@@ -116,6 +119,7 @@ class ProcedureDebugging extends AbstractModel
      * @param AgentDebugInfo $Agent Agent调试信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CustomVariables 自定义参数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFailedTotalCount(integer $FailedTotalCount) 设置失败总数,如果取不到返回0
  * @method integer getRunningTotalCount() 获取部署中总数,如果取不到返回0
  * @method void setRunningTotalCount(integer $RunningTotalCount) 设置部署中总数,如果取不到返回0
+ * @method integer getPendingTotalCount() 获取待部署总数
+ * @method void setPendingTotalCount(integer $PendingTotalCount) 设置待部署总数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -61,6 +63,11 @@ class DescribeHostUpdateRecordDetailResponse extends AbstractModel
     public $RunningTotalCount;
 
     /**
+     * @var integer 待部署总数
+     */
+    public $PendingTotalCount;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -71,6 +78,7 @@ class DescribeHostUpdateRecordDetailResponse extends AbstractModel
      * @param integer $SuccessTotalCount 成功总数,如果取不到返回0
      * @param integer $FailedTotalCount 失败总数,如果取不到返回0
      * @param integer $RunningTotalCount 部署中总数,如果取不到返回0
+     * @param integer $PendingTotalCount 待部署总数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -109,6 +117,10 @@ class DescribeHostUpdateRecordDetailResponse extends AbstractModel
 
         if (array_key_exists("RunningTotalCount",$param) and $param["RunningTotalCount"] !== null) {
             $this->RunningTotalCount = $param["RunningTotalCount"];
+        }
+
+        if (array_key_exists("PendingTotalCount",$param) and $param["PendingTotalCount"] !== null) {
+            $this->PendingTotalCount = $param["PendingTotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

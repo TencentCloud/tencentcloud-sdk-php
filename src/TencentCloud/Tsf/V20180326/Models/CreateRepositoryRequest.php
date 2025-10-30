@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRepositoryName(string $RepositoryName) 设置仓库名称
  * @method string getRepositoryType() 获取仓库类型（默认仓库：default，私有仓库：private）
  * @method void setRepositoryType(string $RepositoryType) 设置仓库类型（默认仓库：default，私有仓库：private）
- * @method string getBucketName() 获取仓库所在桶名称
- * @method void setBucketName(string $BucketName) 设置仓库所在桶名称
- * @method string getBucketRegion() 获取仓库所在桶地域
- * @method void setBucketRegion(string $BucketRegion) 设置仓库所在桶地域
+ * @method string getBucketName() 获取仓库所在桶名称，[存储桶概述和创建](https://cloud.tencent.com/document/product/436/13312)
+ * @method void setBucketName(string $BucketName) 设置仓库所在桶名称，[存储桶概述和创建](https://cloud.tencent.com/document/product/436/13312)
+ * @method string getBucketRegion() 获取仓库所在桶地域，[存储桶概述和创建](https://cloud.tencent.com/document/product/436/13312)
+ * @method void setBucketRegion(string $BucketRegion) 设置仓库所在桶地域，[存储桶概述和创建](https://cloud.tencent.com/document/product/436/13312)
  * @method string getDirectory() 获取目录
  * @method void setDirectory(string $Directory) 设置目录
  * @method string getRepositoryDesc() 获取仓库描述
@@ -46,12 +46,12 @@ class CreateRepositoryRequest extends AbstractModel
     public $RepositoryType;
 
     /**
-     * @var string 仓库所在桶名称
+     * @var string 仓库所在桶名称，[存储桶概述和创建](https://cloud.tencent.com/document/product/436/13312)
      */
     public $BucketName;
 
     /**
-     * @var string 仓库所在桶地域
+     * @var string 仓库所在桶地域，[存储桶概述和创建](https://cloud.tencent.com/document/product/436/13312)
      */
     public $BucketRegion;
 
@@ -68,8 +68,8 @@ class CreateRepositoryRequest extends AbstractModel
     /**
      * @param string $RepositoryName 仓库名称
      * @param string $RepositoryType 仓库类型（默认仓库：default，私有仓库：private）
-     * @param string $BucketName 仓库所在桶名称
-     * @param string $BucketRegion 仓库所在桶地域
+     * @param string $BucketName 仓库所在桶名称，[存储桶概述和创建](https://cloud.tencent.com/document/product/436/13312)
+     * @param string $BucketRegion 仓库所在桶地域，[存储桶概述和创建](https://cloud.tencent.com/document/product/436/13312)
      * @param string $Directory 目录
      * @param string $RepositoryDesc 仓库描述
      */

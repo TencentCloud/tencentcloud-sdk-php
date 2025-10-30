@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNodeRun请求参数结构体
  *
+ * @method string getAppBizId() 获取应用ID
+ * @method void setAppBizId(string $AppBizId) 设置应用ID
  * @method string getNodeRunId() 获取节点运行实例ID
  * @method void setNodeRunId(string $NodeRunId) 设置节点运行实例ID
  */
 class DescribeNodeRunRequest extends AbstractModel
 {
     /**
+     * @var string 应用ID
+     */
+    public $AppBizId;
+
+    /**
      * @var string 节点运行实例ID
      */
     public $NodeRunId;
 
     /**
+     * @param string $AppBizId 应用ID
      * @param string $NodeRunId 节点运行实例ID
      */
     function __construct()
@@ -46,6 +54,10 @@ class DescribeNodeRunRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("AppBizId",$param) and $param["AppBizId"] !== null) {
+            $this->AppBizId = $param["AppBizId"];
+        }
+
         if (array_key_exists("NodeRunId",$param) and $param["NodeRunId"] !== null) {
             $this->NodeRunId = $param["NodeRunId"];
         }

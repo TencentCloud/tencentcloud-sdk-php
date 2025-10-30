@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRiskScanTask请求参数结构体
  *
- * @method array getTaskIdList() 获取任务id 列表
- * @method void setTaskIdList(array $TaskIdList) 设置任务id 列表
+ * @method array getTaskIdList() 获取任务id 和目标AppID列表
+ * @method void setTaskIdList(array $TaskIdList) 设置任务id 和目标AppID列表
  * @method array getMemberId() 获取集团账号的成员id
  * @method void setMemberId(array $MemberId) 设置集团账号的成员id
  */
 class DeleteRiskScanTaskRequest extends AbstractModel
 {
     /**
-     * @var array 任务id 列表
+     * @var array 任务id 和目标AppID列表
      */
     public $TaskIdList;
 
@@ -38,7 +38,7 @@ class DeleteRiskScanTaskRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @param array $TaskIdList 任务id 列表
+     * @param array $TaskIdList 任务id 和目标AppID列表
      * @param array $MemberId 集团账号的成员id
      */
     function __construct()

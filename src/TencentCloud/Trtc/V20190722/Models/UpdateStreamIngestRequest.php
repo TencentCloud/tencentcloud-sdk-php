@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStreamUrl(string $StreamUrl) 设置源流URL。
  * @method integer getVolume() 获取音量，取值范围[0, 100]，默认100，表示原音量。
  * @method void setVolume(integer $Volume) 设置音量，取值范围[0, 100]，默认100，表示原音量。
- * @method boolean getIsPause() 获取是否暂停，默认false表示不暂停。暂停期间任务仍在进行中仍会计费，如果要销毁任务请调用停止接口。
- * @method void setIsPause(boolean $IsPause) 设置是否暂停，默认false表示不暂停。暂停期间任务仍在进行中仍会计费，如果要销毁任务请调用停止接口。
+ * @method boolean getIsPause() 获取是否暂停，默认false表示不暂停。暂停期间任务仍在进行中仍会计费，暂停超过12小时会自动销毁任务, 建议主动调用停止任务接口。
+ * @method void setIsPause(boolean $IsPause) 设置是否暂停，默认false表示不暂停。暂停期间任务仍在进行中仍会计费，暂停超过12小时会自动销毁任务, 建议主动调用停止任务接口。
  */
 class UpdateStreamIngestRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class UpdateStreamIngestRequest extends AbstractModel
     public $Volume;
 
     /**
-     * @var boolean 是否暂停，默认false表示不暂停。暂停期间任务仍在进行中仍会计费，如果要销毁任务请调用停止接口。
+     * @var boolean 是否暂停，默认false表示不暂停。暂停期间任务仍在进行中仍会计费，暂停超过12小时会自动销毁任务, 建议主动调用停止任务接口。
      */
     public $IsPause;
 
@@ -63,7 +63,7 @@ class UpdateStreamIngestRequest extends AbstractModel
      * @param string $TaskId 任务的唯一Id，在启动任务成功后会返回。
      * @param string $StreamUrl 源流URL。
      * @param integer $Volume 音量，取值范围[0, 100]，默认100，表示原音量。
-     * @param boolean $IsPause 是否暂停，默认false表示不暂停。暂停期间任务仍在进行中仍会计费，如果要销毁任务请调用停止接口。
+     * @param boolean $IsPause 是否暂停，默认false表示不暂停。暂停期间任务仍在进行中仍会计费，暂停超过12小时会自动销毁任务, 建议主动调用停止任务接口。
      */
     function __construct()
     {

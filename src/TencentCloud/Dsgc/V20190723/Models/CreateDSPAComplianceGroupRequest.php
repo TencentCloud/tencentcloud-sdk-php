@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComplianceGroupRules(array $ComplianceGroupRules) 设置合规组规则配置（参数已废弃，请传空数组）
  * @method integer getLevelGroupId() 获取分级组ID，默认值为1，新增参数，可选
  * @method void setLevelGroupId(integer $LevelGroupId) 设置分级组ID，默认值为1，新增参数，可选
- * @method integer getStatus() 获取1代表模版开启，0代表模版关闭
- * @method void setStatus(integer $Status) 设置1代表模版开启，0代表模版关闭
+ * @method integer getStatus() 获取1代表模板开启，0代表模板关闭
+ * @method void setStatus(integer $Status) 设置1代表模板开启，0代表模板关闭
  * @method integer getCloseComplianceId() 获取该complianceId的开启状态将被关闭
  * @method void setCloseComplianceId(integer $CloseComplianceId) 设置该complianceId的开启状态将被关闭
  */
@@ -63,7 +63,7 @@ class CreateDSPAComplianceGroupRequest extends AbstractModel
     public $LevelGroupId;
 
     /**
-     * @var integer 1代表模版开启，0代表模版关闭
+     * @var integer 1代表模板开启，0代表模板关闭
      */
     public $Status;
 
@@ -78,7 +78,7 @@ class CreateDSPAComplianceGroupRequest extends AbstractModel
      * @param string $Description 合规组描述，最大长度为1024个字符
      * @param array $ComplianceGroupRules 合规组规则配置（参数已废弃，请传空数组）
      * @param integer $LevelGroupId 分级组ID，默认值为1，新增参数，可选
-     * @param integer $Status 1代表模版开启，0代表模版关闭
+     * @param integer $Status 1代表模板开启，0代表模板关闭
      * @param integer $CloseComplianceId 该complianceId的开启状态将被关闭
      */
     function __construct()

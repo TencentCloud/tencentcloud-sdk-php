@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteImageTags请求参数结构体
  *
- * @method array getImageTags() 获取镜像版本数组
- * @method void setImageTags(array $ImageTags) 设置镜像版本数组
+ * @method array getImageTags() 获取需要删除的镜像版本列表，可通过调用[DescribeImageTags](https://cloud.tencent.com/document/api/649/36052)查询已创建的镜像版本列表或登录控制台进行查看。
+ * @method void setImageTags(array $ImageTags) 设置需要删除的镜像版本列表，可通过调用[DescribeImageTags](https://cloud.tencent.com/document/api/649/36052)查询已创建的镜像版本列表或登录控制台进行查看。
  * @method string getRepoType() 获取企业: tcr ；个人: personal或者不填
  * @method void setRepoType(string $RepoType) 设置企业: tcr ；个人: personal或者不填
  */
 class DeleteImageTagsRequest extends AbstractModel
 {
     /**
-     * @var array 镜像版本数组
+     * @var array 需要删除的镜像版本列表，可通过调用[DescribeImageTags](https://cloud.tencent.com/document/api/649/36052)查询已创建的镜像版本列表或登录控制台进行查看。
      */
     public $ImageTags;
 
@@ -38,7 +38,7 @@ class DeleteImageTagsRequest extends AbstractModel
     public $RepoType;
 
     /**
-     * @param array $ImageTags 镜像版本数组
+     * @param array $ImageTags 需要删除的镜像版本列表，可通过调用[DescribeImageTags](https://cloud.tencent.com/document/api/649/36052)查询已创建的镜像版本列表或登录控制台进行查看。
      * @param string $RepoType 企业: tcr ；个人: personal或者不填
      */
     function __construct()

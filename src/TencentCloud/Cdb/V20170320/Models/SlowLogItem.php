@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 结构化的慢日志详情
  *
- * @method integer getTimestamp() 获取Sql的执行时间。
- * @method void setTimestamp(integer $Timestamp) 设置Sql的执行时间。
+ * @method integer getTimestamp() 获取Sql的执行时间。秒级时间戳。
+ * @method void setTimestamp(integer $Timestamp) 设置Sql的执行时间。秒级时间戳。
  * @method float getQueryTime() 获取Sql的执行时长（秒）。
  * @method void setQueryTime(float $QueryTime) 设置Sql的执行时长（秒）。
  * @method string getSqlText() 获取Sql语句。
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class SlowLogItem extends AbstractModel
 {
     /**
-     * @var integer Sql的执行时间。
+     * @var integer Sql的执行时间。秒级时间戳。
      */
     public $Timestamp;
 
@@ -101,7 +101,7 @@ class SlowLogItem extends AbstractModel
     public $Md5;
 
     /**
-     * @param integer $Timestamp Sql的执行时间。
+     * @param integer $Timestamp Sql的执行时间。秒级时间戳。
      * @param float $QueryTime Sql的执行时长（秒）。
      * @param string $SqlText Sql语句。
      * @param string $UserHost 客户端地址。

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -104,8 +104,8 @@ use TencentCloud\Common\AbstractModel;
 
 <ul><li>1：启用（默认），表示模板处于启用状态，可以被用户正常使用。</li>
 <li>2：停用，表示模板处于停用状态，禁止用户使用该模板。</li></ul>
- * @method UserFlowType getUserFlowType() 获取模版的用户合同类型
- * @method void setUserFlowType(UserFlowType $UserFlowType) 设置模版的用户合同类型
+ * @method UserFlowType getUserFlowType() 获取模板的用户合同类型
+ * @method void setUserFlowType(UserFlowType $UserFlowType) 设置模板的用户合同类型
  */
 class TemplateInfo extends AbstractModel
 {
@@ -217,7 +217,7 @@ class TemplateInfo extends AbstractModel
     public $Available;
 
     /**
-     * @var UserFlowType 模版的用户合同类型
+     * @var UserFlowType 模板的用户合同类型
      */
     public $UserFlowType;
 
@@ -260,7 +260,7 @@ class TemplateInfo extends AbstractModel
 
 <ul><li>1：启用（默认），表示模板处于启用状态，可以被用户正常使用。</li>
 <li>2：停用，表示模板处于停用状态，禁止用户使用该模板。</li></ul>
-     * @param UserFlowType $UserFlowType 模版的用户合同类型
+     * @param UserFlowType $UserFlowType 模板的用户合同类型
      */
     function __construct()
     {

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 用户配置的信息
  *
- * @method string getLanguage() 获取语言, 如"zh"。
- * @method void setLanguage(string $Language) 设置语言, 如"zh"。
+ * @method string getLanguage() 获取语言类型, 包含“zh”-中文，“en”-英文。
+ * @method void setLanguage(string $Language) 设置语言类型, 包含“zh”-中文，“en”-英文。
  * @method MailConfiguration getMailConfiguration() 获取邮件模板的内容。
  * @method void setMailConfiguration(MailConfiguration $MailConfiguration) 设置邮件模板的内容。
  */
 class ProfileInfo extends AbstractModel
 {
     /**
-     * @var string 语言, 如"zh"。
+     * @var string 语言类型, 包含“zh”-中文，“en”-英文。
      */
     public $Language;
 
@@ -38,7 +38,7 @@ class ProfileInfo extends AbstractModel
     public $MailConfiguration;
 
     /**
-     * @param string $Language 语言, 如"zh"。
+     * @param string $Language 语言类型, 包含“zh”-中文，“en”-英文。
      * @param MailConfiguration $MailConfiguration 邮件模板的内容。
      */
     function __construct()

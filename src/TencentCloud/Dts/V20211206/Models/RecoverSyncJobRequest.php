@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,18 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RecoverSyncJob请求参数结构体
  *
- * @method string getJobId() 获取同步实例id（即标识一个同步作业），形如sync-werwfs23
- * @method void setJobId(string $JobId) 设置同步实例id（即标识一个同步作业），形如sync-werwfs23
+ * @method string getJobId() 获取同步实例id（即标识一个同步作业），形如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
+ * @method void setJobId(string $JobId) 设置同步实例id（即标识一个同步作业），形如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
  */
 class RecoverSyncJobRequest extends AbstractModel
 {
     /**
-     * @var string 同步实例id（即标识一个同步作业），形如sync-werwfs23
+     * @var string 同步实例id（即标识一个同步作业），形如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
      */
     public $JobId;
 
     /**
-     * @param string $JobId 同步实例id（即标识一个同步作业），形如sync-werwfs23
+     * @param string $JobId 同步实例id（即标识一个同步作业），形如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
      */
     function __construct()
     {

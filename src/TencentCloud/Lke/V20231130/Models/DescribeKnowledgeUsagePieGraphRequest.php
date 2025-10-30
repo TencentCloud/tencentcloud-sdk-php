@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getAppBizIds() 获取应用ID数组
  * @method void setAppBizIds(array $AppBizIds) 设置应用ID数组
+ * @method string getSpaceId() 获取空间列表
+ * @method void setSpaceId(string $SpaceId) 设置空间列表
  */
 class DescribeKnowledgeUsagePieGraphRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeKnowledgeUsagePieGraphRequest extends AbstractModel
     public $AppBizIds;
 
     /**
+     * @var string 空间列表
+     */
+    public $SpaceId;
+
+    /**
      * @param array $AppBizIds 应用ID数组
+     * @param string $SpaceId 空间列表
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeKnowledgeUsagePieGraphRequest extends AbstractModel
         }
         if (array_key_exists("AppBizIds",$param) and $param["AppBizIds"] !== null) {
             $this->AppBizIds = $param["AppBizIds"];
+        }
+
+        if (array_key_exists("SpaceId",$param) and $param["SpaceId"] !== null) {
+            $this->SpaceId = $param["SpaceId"];
         }
     }
 }

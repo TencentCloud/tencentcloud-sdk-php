@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getEnableGovernance() 获取是否开启服务注册治理
  * @method void setEnableGovernance(boolean $EnableGovernance) 设置是否开启服务注册治理
- * @method string getGovernanceType() 获取服务治理类型（枚举：SHARE、EXCLUSIVE）
- * @method void setGovernanceType(string $GovernanceType) 设置服务治理类型（枚举：SHARE、EXCLUSIVE）
+ * @method string getGovernanceType() 获取服务治理类型（枚举：SHARE表示共享型、EXCLUSIVE表示独占型）
+ * @method void setGovernanceType(string $GovernanceType) 设置服务治理类型（枚举：SHARE表示共享型、EXCLUSIVE表示独占型）
  * @method array getExclusiveInstances() 获取独享实例列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExclusiveInstances(array $ExclusiveInstances) 设置独享实例列表
@@ -37,7 +37,7 @@ class ServiceGovernanceConfig extends AbstractModel
     public $EnableGovernance;
 
     /**
-     * @var string 服务治理类型（枚举：SHARE、EXCLUSIVE）
+     * @var string 服务治理类型（枚举：SHARE表示共享型、EXCLUSIVE表示独占型）
      */
     public $GovernanceType;
 
@@ -49,7 +49,7 @@ class ServiceGovernanceConfig extends AbstractModel
 
     /**
      * @param boolean $EnableGovernance 是否开启服务注册治理
-     * @param string $GovernanceType 服务治理类型（枚举：SHARE、EXCLUSIVE）
+     * @param string $GovernanceType 服务治理类型（枚举：SHARE表示共享型、EXCLUSIVE表示独占型）
      * @param array $ExclusiveInstances 独享实例列表
 注意：此字段可能返回 null，表示取不到有效值。
      */

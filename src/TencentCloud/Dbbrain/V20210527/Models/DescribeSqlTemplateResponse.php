@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSqlText(string $SqlText) 设置SQL语句。
  * @method string getSqlType() 获取SQL类型。
  * @method void setSqlType(string $SqlType) 设置SQL类型。
- * @method string getSqlTemplate() 获取SQL模版内容。
- * @method void setSqlTemplate(string $SqlTemplate) 设置SQL模版内容。
- * @method integer getSqlId() 获取SQL模版ID。
- * @method void setSqlId(integer $SqlId) 设置SQL模版ID。
+ * @method string getSqlTemplate() 获取SQL模板内容。
+ * @method void setSqlTemplate(string $SqlTemplate) 设置SQL模板内容。
+ * @method integer getSqlId() 获取SQL模板ID。
+ * @method void setSqlId(integer $SqlId) 设置SQL模板ID。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -51,12 +51,12 @@ class DescribeSqlTemplateResponse extends AbstractModel
     public $SqlType;
 
     /**
-     * @var string SQL模版内容。
+     * @var string SQL模板内容。
      */
     public $SqlTemplate;
 
     /**
-     * @var integer SQL模版ID。
+     * @var integer SQL模板ID。
      */
     public $SqlId;
 
@@ -69,8 +69,8 @@ class DescribeSqlTemplateResponse extends AbstractModel
      * @param string $Schema 数据库名。
      * @param string $SqlText SQL语句。
      * @param string $SqlType SQL类型。
-     * @param string $SqlTemplate SQL模版内容。
-     * @param integer $SqlId SQL模版ID。
+     * @param string $SqlTemplate SQL模板内容。
+     * @param integer $SqlId SQL模板ID。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

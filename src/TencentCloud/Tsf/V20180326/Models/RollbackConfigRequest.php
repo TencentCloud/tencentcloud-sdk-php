@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RollbackConfig请求参数结构体
  *
- * @method string getConfigReleaseLogId() 获取配置项发布历史ID
- * @method void setConfigReleaseLogId(string $ConfigReleaseLogId) 设置配置项发布历史ID
- * @method string getReleaseDesc() 获取回滚描述
- * @method void setReleaseDesc(string $ReleaseDesc) 设置回滚描述
+ * @method string getConfigReleaseLogId() 获取配置项发布历史ID。该参数可以通过调用 [DescribeConfigReleaseLogs](https://cloud.tencent.com/document/product/649/38343) 的返回值中的 ConfigReleaseLogId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-发布情况页查看。
+ * @method void setConfigReleaseLogId(string $ConfigReleaseLogId) 设置配置项发布历史ID。该参数可以通过调用 [DescribeConfigReleaseLogs](https://cloud.tencent.com/document/product/649/38343) 的返回值中的 ConfigReleaseLogId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-发布情况页查看。
+ * @method string getReleaseDesc() 获取回滚描述，最多支持200个字符。
+ * @method void setReleaseDesc(string $ReleaseDesc) 设置回滚描述，最多支持200个字符。
  */
 class RollbackConfigRequest extends AbstractModel
 {
     /**
-     * @var string 配置项发布历史ID
+     * @var string 配置项发布历史ID。该参数可以通过调用 [DescribeConfigReleaseLogs](https://cloud.tencent.com/document/product/649/38343) 的返回值中的 ConfigReleaseLogId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-发布情况页查看。
      */
     public $ConfigReleaseLogId;
 
     /**
-     * @var string 回滚描述
+     * @var string 回滚描述，最多支持200个字符。
      */
     public $ReleaseDesc;
 
     /**
-     * @param string $ConfigReleaseLogId 配置项发布历史ID
-     * @param string $ReleaseDesc 回滚描述
+     * @param string $ConfigReleaseLogId 配置项发布历史ID。该参数可以通过调用 [DescribeConfigReleaseLogs](https://cloud.tencent.com/document/product/649/38343) 的返回值中的 ConfigReleaseLogId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-发布情况页查看。
+     * @param string $ReleaseDesc 回滚描述，最多支持200个字符。
      */
     function __construct()
     {

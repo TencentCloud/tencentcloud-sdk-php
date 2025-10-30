@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,9 +24,11 @@ use TencentCloud\Bi\V20220105\Models as Models;
 
 /**
  * @method Models\ApplyEmbedIntervalResponse ApplyEmbedInterval(Models\ApplyEmbedIntervalRequest $req) 申请延长Token可用时间接口-强鉴权
+ * @method Models\ClearEmbedTokenResponse ClearEmbedToken(Models\ClearEmbedTokenRequest $req) 强鉴权token 清理，只有企业管理员才能调用该接口
  * @method Models\CreateDatasourceResponse CreateDatasource(Models\CreateDatasourceRequest $req) 创建数据源
  * @method Models\CreateDatasourceCloudResponse CreateDatasourceCloud(Models\CreateDatasourceCloudRequest $req) 创建云数据库
  * @method Models\CreateEmbedTokenResponse CreateEmbedToken(Models\CreateEmbedTokenRequest $req) 创建嵌出报表-强鉴权
+ * @method Models\CreatePermissionRanksResponse CreatePermissionRanks(Models\CreatePermissionRanksRequest $req) 创建行列权限
  * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 创建项目
  * @method Models\CreateUserRoleResponse CreateUserRole(Models\CreateUserRoleRequest $req) 创建用户角色
  * @method Models\CreateUserRoleProjectResponse CreateUserRoleProject(Models\CreateUserRoleProjectRequest $req) 项目内-创建用户角色
@@ -36,6 +38,9 @@ use TencentCloud\Bi\V20220105\Models as Models;
  * @method Models\DeleteUserRoleProjectResponse DeleteUserRoleProject(Models\DeleteUserRoleProjectRequest $req) 项目内-删除用户角色
  * @method Models\DescribeDatasourceListResponse DescribeDatasourceList(Models\DescribeDatasourceListRequest $req) 查询数据源列表
  * @method Models\DescribePageWidgetListResponse DescribePageWidgetList(Models\DescribePageWidgetListRequest $req) 查询页面组件信息
+ * @method Models\DescribePermissionRanksInfoResponse DescribePermissionRanksInfo(Models\DescribePermissionRanksInfoRequest $req) 根据角色或标签查询行列权限配置
+ * @method Models\DescribePermissionRoleInfoResponse DescribePermissionRoleInfo(Models\DescribePermissionRoleInfoRequest $req) 行列权限项目内角色列表接口1
+ * @method Models\DescribePermissionStatusInfoResponse DescribePermissionStatusInfo(Models\DescribePermissionStatusInfoRequest $req) 查询行列权限初始状态1
  * @method Models\DescribeProjectInfoResponse DescribeProjectInfo(Models\DescribeProjectInfoRequest $req) 项目详情接口
  * @method Models\DescribeProjectListResponse DescribeProjectList(Models\DescribeProjectListRequest $req) 项目信息
  * @method Models\DescribeUserProjectListResponse DescribeUserProjectList(Models\DescribeUserProjectListRequest $req) 项目内-用户接口

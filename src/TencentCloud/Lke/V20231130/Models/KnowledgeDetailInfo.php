@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUser(UserBaseInfo $User) 设置用户信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getPermissionIds() 获取权限位信息
+ * @method void setPermissionIds(array $PermissionIds) 设置权限位信息
  */
 class KnowledgeDetailInfo extends AbstractModel
 {
@@ -54,12 +56,18 @@ class KnowledgeDetailInfo extends AbstractModel
     public $User;
 
     /**
+     * @var array 权限位信息
+     */
+    public $PermissionIds;
+
+    /**
      * @param KnowledgeBaseInfo $Knowledge 知识库信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AppList 应用列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UserBaseInfo $User 用户信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $PermissionIds 权限位信息
      */
     function __construct()
     {
@@ -91,6 +99,10 @@ class KnowledgeDetailInfo extends AbstractModel
         if (array_key_exists("User",$param) and $param["User"] !== null) {
             $this->User = new UserBaseInfo();
             $this->User->deserialize($param["User"]);
+        }
+
+        if (array_key_exists("PermissionIds",$param) and $param["PermissionIds"] !== null) {
+            $this->PermissionIds = $param["PermissionIds"];
         }
     }
 }

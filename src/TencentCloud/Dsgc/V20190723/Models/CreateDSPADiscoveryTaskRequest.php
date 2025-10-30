@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -56,8 +56,8 @@ selfbuilt-db 表示自建数据库
  * @method void setDescription(string $Description) 设置任务描述，最大长度为1024个字符
  * @method string getCondition() 获取用于传入的数据源的条件，目前只支持数据库，所以目前表示数据库的名称，选择多个数据库，之间通过逗号分隔，若不选，则默认选择全部数据库
  * @method void setCondition(string $Condition) 设置用于传入的数据源的条件，目前只支持数据库，所以目前表示数据库的名称，选择多个数据库，之间通过逗号分隔，若不选，则默认选择全部数据库
- * @method array getComplianceGroupIds() 获取合规组ID列表，最多支持添加5个
- * @method void setComplianceGroupIds(array $ComplianceGroupIds) 设置合规组ID列表，最多支持添加5个
+ * @method array getComplianceGroupIds() 获取此参数必选。合规组ID列表，最多支持添加5个
+ * @method void setComplianceGroupIds(array $ComplianceGroupIds) 设置此参数必选。合规组ID列表，最多支持添加5个
  * @method string getTimingStartTime() 获取任务定时启动时间，格式如：2006-01-02 15:04:05
 当执行计划（Plan字段）为”立即“时，定时启动时间不会生效，此场景下给该字段传值不会被保存。
  * @method void setTimingStartTime(string $TimingStartTime) 设置任务定时启动时间，格式如：2006-01-02 15:04:05
@@ -137,7 +137,7 @@ selfbuilt-db 表示自建数据库
     public $Condition;
 
     /**
-     * @var array 合规组ID列表，最多支持添加5个
+     * @var array 此参数必选。合规组ID列表，最多支持添加5个
      */
     public $ComplianceGroupIds;
 
@@ -186,7 +186,7 @@ selfbuilt-db 表示自建数据库
      * @param integer $GeneralRuleSetEnable 通用规则集开关，0 关闭，1 启用
      * @param string $Description 任务描述，最大长度为1024个字符
      * @param string $Condition 用于传入的数据源的条件，目前只支持数据库，所以目前表示数据库的名称，选择多个数据库，之间通过逗号分隔，若不选，则默认选择全部数据库
-     * @param array $ComplianceGroupIds 合规组ID列表，最多支持添加5个
+     * @param array $ComplianceGroupIds 此参数必选。合规组ID列表，最多支持添加5个
      * @param string $TimingStartTime 任务定时启动时间，格式如：2006-01-02 15:04:05
 当执行计划（Plan字段）为”立即“时，定时启动时间不会生效，此场景下给该字段传值不会被保存。
      * @param string $Order random-随机，asc生序，desc降序

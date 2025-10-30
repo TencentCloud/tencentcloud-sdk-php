@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getConditionColumn() 获取条件覆盖的列
  * @method void setConditionColumn(string $ConditionColumn) 设置条件覆盖的列
- * @method string getConditionOperator() 获取条件覆盖操作
- * @method void setConditionOperator(string $ConditionOperator) 设置条件覆盖操作
- * @method string getConditionOrderInSrcAndDst() 获取条件覆盖优先级处理
- * @method void setConditionOrderInSrcAndDst(string $ConditionOrderInSrcAndDst) 设置条件覆盖优先级处理
+ * @method string getConditionOperator() 获取条件覆盖操作，目前仅支持>
+ * @method void setConditionOperator(string $ConditionOperator) 设置条件覆盖操作，目前仅支持>
+ * @method string getConditionOrderInSrcAndDst() 获取条件覆盖优先级处理，支持类型有>,<,=
+ * @method void setConditionOrderInSrcAndDst(string $ConditionOrderInSrcAndDst) 设置条件覆盖优先级处理，支持类型有>,<,=
  */
 class ConflictHandleOption extends AbstractModel
 {
@@ -35,19 +35,19 @@ class ConflictHandleOption extends AbstractModel
     public $ConditionColumn;
 
     /**
-     * @var string 条件覆盖操作
+     * @var string 条件覆盖操作，目前仅支持>
      */
     public $ConditionOperator;
 
     /**
-     * @var string 条件覆盖优先级处理
+     * @var string 条件覆盖优先级处理，支持类型有>,<,=
      */
     public $ConditionOrderInSrcAndDst;
 
     /**
      * @param string $ConditionColumn 条件覆盖的列
-     * @param string $ConditionOperator 条件覆盖操作
-     * @param string $ConditionOrderInSrcAndDst 条件覆盖优先级处理
+     * @param string $ConditionOperator 条件覆盖操作，目前仅支持>
+     * @param string $ConditionOrderInSrcAndDst 条件覆盖优先级处理，支持类型有>,<,=
      */
     function __construct()
     {

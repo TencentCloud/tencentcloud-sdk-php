@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateMicroservice请求参数结构体
  *
- * @method string getNamespaceId() 获取命名空间ID
- * @method void setNamespaceId(string $NamespaceId) 设置命名空间ID
- * @method string getMicroserviceName() 获取微服务名称
- * @method void setMicroserviceName(string $MicroserviceName) 设置微服务名称
- * @method string getMicroserviceDesc() 获取微服务描述信息
- * @method void setMicroserviceDesc(string $MicroserviceDesc) 设置微服务描述信息
+ * @method string getNamespaceId() 获取命名空间ID。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
+ * @method void setNamespaceId(string $NamespaceId) 设置命名空间ID。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
+ * @method string getMicroserviceName() 获取微服务名称。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceName 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
+ * @method void setMicroserviceName(string $MicroserviceName) 设置微服务名称。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceName 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
+ * @method string getMicroserviceDesc() 获取微服务备注信息，最多支持200个字符。
+ * @method void setMicroserviceDesc(string $MicroserviceDesc) 设置微服务备注信息，最多支持200个字符。
  */
 class CreateMicroserviceRequest extends AbstractModel
 {
     /**
-     * @var string 命名空间ID
+     * @var string 命名空间ID。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
      */
     public $NamespaceId;
 
     /**
-     * @var string 微服务名称
+     * @var string 微服务名称。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceName 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
      */
     public $MicroserviceName;
 
     /**
-     * @var string 微服务描述信息
+     * @var string 微服务备注信息，最多支持200个字符。
      */
     public $MicroserviceDesc;
 
     /**
-     * @param string $NamespaceId 命名空间ID
-     * @param string $MicroserviceName 微服务名称
-     * @param string $MicroserviceDesc 微服务描述信息
+     * @param string $NamespaceId 命名空间ID。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
+     * @param string $MicroserviceName 微服务名称。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceName 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
+     * @param string $MicroserviceDesc 微服务备注信息，最多支持200个字符。
      */
     function __construct()
     {

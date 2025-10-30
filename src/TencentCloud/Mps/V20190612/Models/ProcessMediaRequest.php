@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) 设置视频内容识别类型任务参数。
  * @method AiQualityControlTaskInput getAiQualityControlTask() 获取媒体质检类型任务参数。
  * @method void setAiQualityControlTask(AiQualityControlTaskInput $AiQualityControlTask) 设置媒体质检类型任务参数。
+ * @method SmartSubtitlesTaskInput getSmartSubtitlesTask() 获取智能字幕
+ * @method void setSmartSubtitlesTask(SmartSubtitlesTaskInput $SmartSubtitlesTask) 设置智能字幕
+ * @method SmartEraseTaskInput getSmartEraseTask() 获取智能擦除类型任务参数
+ * @method void setSmartEraseTask(SmartEraseTaskInput $SmartEraseTask) 设置智能擦除类型任务参数
  * @method TaskNotifyConfig getTaskNotifyConfig() 获取任务的事件通知信息，不填代表不获取事件通知。
  * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) 设置任务的事件通知信息，不填代表不获取事件通知。
  * @method integer getTasksPriority() 获取任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
@@ -72,8 +76,6 @@ use TencentCloud\Common\AbstractModel;
 <li> Offline：闲时任务，不保证实效性，默认3天内处理完</li>
  * @method string getResourceId() 获取资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
  * @method void setResourceId(string $ResourceId) 设置资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
- * @method SmartSubtitlesTaskInput getSmartSubtitlesTask() 获取智能字幕
- * @method void setSmartSubtitlesTask(SmartSubtitlesTaskInput $SmartSubtitlesTask) 设置智能字幕
  * @method integer getSkipMateData() 获取是否跳过元信息获取，可选值： 
 0：表示不跳过 
 1：表示跳过 
@@ -140,6 +142,16 @@ class ProcessMediaRequest extends AbstractModel
     public $AiQualityControlTask;
 
     /**
+     * @var SmartSubtitlesTaskInput 智能字幕
+     */
+    public $SmartSubtitlesTask;
+
+    /**
+     * @var SmartEraseTaskInput 智能擦除类型任务参数
+     */
+    public $SmartEraseTask;
+
+    /**
      * @var TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
      */
     public $TaskNotifyConfig;
@@ -172,11 +184,6 @@ class ProcessMediaRequest extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var SmartSubtitlesTaskInput 智能字幕
-     */
-    public $SmartSubtitlesTask;
-
-    /**
      * @var integer 是否跳过元信息获取，可选值： 
 0：表示不跳过 
 1：表示跳过 
@@ -203,6 +210,8 @@ class ProcessMediaRequest extends AbstractModel
      * @param AiAnalysisTaskInput $AiAnalysisTask 视频内容分析类型任务参数。
      * @param AiRecognitionTaskInput $AiRecognitionTask 视频内容识别类型任务参数。
      * @param AiQualityControlTaskInput $AiQualityControlTask 媒体质检类型任务参数。
+     * @param SmartSubtitlesTaskInput $SmartSubtitlesTask 智能字幕
+     * @param SmartEraseTaskInput $SmartEraseTask 智能擦除类型任务参数
      * @param TaskNotifyConfig $TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
      * @param integer $TasksPriority 任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
      * @param string $SessionId 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不传该参数或者参数为空字符串则本次请求不做去重操作。
@@ -211,7 +220,6 @@ class ProcessMediaRequest extends AbstractModel
 <li> Online：实时任务</li>
 <li> Offline：闲时任务，不保证实效性，默认3天内处理完</li>
      * @param string $ResourceId 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
-     * @param SmartSubtitlesTaskInput $SmartSubtitlesTask 智能字幕
      * @param integer $SkipMateData 是否跳过元信息获取，可选值： 
 0：表示不跳过 
 1：表示跳过 
@@ -273,6 +281,16 @@ class ProcessMediaRequest extends AbstractModel
             $this->AiQualityControlTask->deserialize($param["AiQualityControlTask"]);
         }
 
+        if (array_key_exists("SmartSubtitlesTask",$param) and $param["SmartSubtitlesTask"] !== null) {
+            $this->SmartSubtitlesTask = new SmartSubtitlesTaskInput();
+            $this->SmartSubtitlesTask->deserialize($param["SmartSubtitlesTask"]);
+        }
+
+        if (array_key_exists("SmartEraseTask",$param) and $param["SmartEraseTask"] !== null) {
+            $this->SmartEraseTask = new SmartEraseTaskInput();
+            $this->SmartEraseTask->deserialize($param["SmartEraseTask"]);
+        }
+
         if (array_key_exists("TaskNotifyConfig",$param) and $param["TaskNotifyConfig"] !== null) {
             $this->TaskNotifyConfig = new TaskNotifyConfig();
             $this->TaskNotifyConfig->deserialize($param["TaskNotifyConfig"]);
@@ -296,11 +314,6 @@ class ProcessMediaRequest extends AbstractModel
 
         if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
             $this->ResourceId = $param["ResourceId"];
-        }
-
-        if (array_key_exists("SmartSubtitlesTask",$param) and $param["SmartSubtitlesTask"] !== null) {
-            $this->SmartSubtitlesTask = new SmartSubtitlesTaskInput();
-            $this->SmartSubtitlesTask->deserialize($param["SmartSubtitlesTask"]);
         }
 
         if (array_key_exists("SkipMateData",$param) and $param["SkipMateData"] !== null) {

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 客户端连接信息，包括客户端IP和连接数
  *
- * @method string getIP() 获取连接的客户端IP
- * @method void setIP(string $IP) 设置连接的客户端IP
- * @method integer getCount() 获取对应客户端IP的连接数
- * @method void setCount(integer $Count) 设置对应客户端IP的连接数
- * @method boolean getInternalService() 获取是否为内部ip
- * @method void setInternalService(boolean $InternalService) 设置是否为内部ip
+ * @method string getIP() 获取连接的客户端 IP。
+ * @method void setIP(string $IP) 设置连接的客户端 IP。
+ * @method integer getCount() 获取对应客户端 IP 的连接数。
+ * @method void setCount(integer $Count) 设置对应客户端 IP 的连接数。
+ * @method boolean getInternalService() 获取是否为内部 IP。
+ * @method void setInternalService(boolean $InternalService) 设置是否为内部 IP。
  */
 class ClientConnection extends AbstractModel
 {
     /**
-     * @var string 连接的客户端IP
+     * @var string 连接的客户端 IP。
      */
     public $IP;
 
     /**
-     * @var integer 对应客户端IP的连接数
+     * @var integer 对应客户端 IP 的连接数。
      */
     public $Count;
 
     /**
-     * @var boolean 是否为内部ip
+     * @var boolean 是否为内部 IP。
      */
     public $InternalService;
 
     /**
-     * @param string $IP 连接的客户端IP
-     * @param integer $Count 对应客户端IP的连接数
-     * @param boolean $InternalService 是否为内部ip
+     * @param string $IP 连接的客户端 IP。
+     * @param integer $Count 对应客户端 IP 的连接数。
+     * @param boolean $InternalService 是否为内部 IP。
      */
     function __construct()
     {

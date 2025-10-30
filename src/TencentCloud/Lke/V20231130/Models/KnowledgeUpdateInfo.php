@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQaExtractModel(string $QaExtractModel) 设置问答提取模型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOwnerStaffId() 获取拥有者id
+ * @method void setOwnerStaffId(string $OwnerStaffId) 设置拥有者id
  */
 class KnowledgeUpdateInfo extends AbstractModel
 {
@@ -51,14 +53,21 @@ class KnowledgeUpdateInfo extends AbstractModel
     /**
      * @var string Embedding模型
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $EmbeddingModel;
 
     /**
      * @var string 问答提取模型
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $QaExtractModel;
+
+    /**
+     * @var string 拥有者id
+     */
+    public $OwnerStaffId;
 
     /**
      * @param string $KnowledgeName 共享知识库名称
@@ -68,6 +77,7 @@ class KnowledgeUpdateInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $QaExtractModel 问答提取模型
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OwnerStaffId 拥有者id
      */
     function __construct()
     {
@@ -96,6 +106,10 @@ class KnowledgeUpdateInfo extends AbstractModel
 
         if (array_key_exists("QaExtractModel",$param) and $param["QaExtractModel"] !== null) {
             $this->QaExtractModel = $param["QaExtractModel"];
+        }
+
+        if (array_key_exists("OwnerStaffId",$param) and $param["OwnerStaffId"] !== null) {
+            $this->OwnerStaffId = $param["OwnerStaffId"];
         }
     }
 }

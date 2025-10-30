@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CNAME 接入，使用 DNS 解析验证时所需的信息。
+ * 站点 CNAME 模式接入验证归属权或域名申请免费证书时，使用 DNS 解析验证时所需的信息。
  *
  * @method string getSubdomain() 获取主机记录。
  * @method void setSubdomain(string $Subdomain) 设置主机记录。

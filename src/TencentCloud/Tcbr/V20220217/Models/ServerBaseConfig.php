@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -78,6 +78,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessionAffinity(string $SessionAffinity) 设置会话亲和性开关
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method VpcConf getVpcConf() 获取Vpc 配置参数
+ * @method void setVpcConf(VpcConf $VpcConf) 设置Vpc 配置参数
+ * @method array getVolumesConf() 获取存储配置信息
+ * @method void setVolumesConf(array $VolumesConf) 设置存储配置信息
  */
 class ServerBaseConfig extends AbstractModel
 {
@@ -223,6 +227,16 @@ class ServerBaseConfig extends AbstractModel
     public $SessionAffinity;
 
     /**
+     * @var VpcConf Vpc 配置参数
+     */
+    public $VpcConf;
+
+    /**
+     * @var array 存储配置信息
+     */
+    public $VolumesConf;
+
+    /**
      * @param string $EnvId 环境 Id
      * @param string $ServerName 服务名
      * @param array $OpenAccessTypes 是否开启公网访问
@@ -252,6 +266,8 @@ class ServerBaseConfig extends AbstractModel
      * @param array $Cmd Dockerfile Cmd 参数
      * @param string $SessionAffinity 会话亲和性开关
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpcConf $VpcConf Vpc 配置参数
+     * @param array $VolumesConf 存储配置信息
      */
     function __construct()
     {
@@ -386,6 +402,20 @@ class ServerBaseConfig extends AbstractModel
 
         if (array_key_exists("SessionAffinity",$param) and $param["SessionAffinity"] !== null) {
             $this->SessionAffinity = $param["SessionAffinity"];
+        }
+
+        if (array_key_exists("VpcConf",$param) and $param["VpcConf"] !== null) {
+            $this->VpcConf = new VpcConf();
+            $this->VpcConf->deserialize($param["VpcConf"]);
+        }
+
+        if (array_key_exists("VolumesConf",$param) and $param["VolumesConf"] !== null) {
+            $this->VolumesConf = [];
+            foreach ($param["VolumesConf"] as $key => $value){
+                $obj = new VolumeConf();
+                $obj->deserialize($value);
+                array_push($this->VolumesConf, $obj);
+            }
         }
     }
 }

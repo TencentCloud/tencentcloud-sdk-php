@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -82,6 +82,7 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\DescribeStreamAuthResponse DescribeStreamAuth(Models\DescribeStreamAuthRequest $req) 用于查询推拉流鉴权配置。
  * @method Models\DescribeTaskResponse DescribeTask(Models\DescribeTaskRequest $req) 用于查询任务详情
  * @method Models\DescribeUserDeviceResponse DescribeUserDevice(Models\DescribeUserDeviceRequest $req) 用于查询设备的详细信息。
+ * @method Models\DescribeUserDeviceListResponse DescribeUserDeviceList(Models\DescribeUserDeviceListRequest $req) 用于批量查询设备详细信息。
  * @method Models\DescribeVideoBitRateResponse DescribeVideoBitRate(Models\DescribeVideoBitRateRequest $req) 用于获取视频通道的码率信息
  * @method Models\DescribeVideoDownloadUrlResponse DescribeVideoDownloadUrl(Models\DescribeVideoDownloadUrlRequest $req) 用于获取云录像下载 url
  * @method Models\ListAITasksResponse ListAITasks(Models\ListAITasksRequest $req) 获取AI任务列表

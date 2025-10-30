@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,13 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * SearchBusinessLog请求参数结构体
  *
  * @method string getConfigId() 获取日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
  * @method void setConfigId(string $ConfigId) 设置日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
  * @method array getInstanceIds() 获取机器实例ID，不传表示全部实例
  * @method void setInstanceIds(array $InstanceIds) 设置机器实例ID，不传表示全部实例
- * @method string getStartTime() 获取开始时间
- * @method void setStartTime(string $StartTime) 设置开始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method string getStartTime() 获取开始时间，格式yyyy-MM-dd HH:mm:ss
+ * @method void setStartTime(string $StartTime) 设置开始时间，格式yyyy-MM-dd HH:mm:ss
+ * @method string getEndTime() 获取结束时间，格式yyyy-MM-dd HH:mm:ss
+ * @method void setEndTime(string $EndTime) 设置结束时间，格式yyyy-MM-dd HH:mm:ss
  * @method integer getOffset() 获取请求偏移量，取值范围大于等于0，默认值为0
  * @method void setOffset(integer $Offset) 设置请求偏移量，取值范围大于等于0，默认值为0
  * @method integer getLimit() 获取单页请求配置数量，取值范围[1, 200]，默认值为50
@@ -39,11 +41,13 @@ use TencentCloud\Common\AbstractModel;
  * @method array getSearchWords() 获取检索关键词
  * @method void setSearchWords(array $SearchWords) 设置检索关键词
  * @method array getGroupIds() 获取部署组ID列表，不传表示全部部署组
+可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)或[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-yo7kp9dv&tab=publish&subTab=group)进行查看
  * @method void setGroupIds(array $GroupIds) 设置部署组ID列表，不传表示全部部署组
- * @method string getSearchWordType() 获取检索类型，取值"LUCENE", "REGEXP", "NORMAL"
- * @method void setSearchWordType(string $SearchWordType) 设置检索类型，取值"LUCENE", "REGEXP", "NORMAL"
- * @method string getBatchType() 获取批量请求类型，取值"page"或"scroll"
- * @method void setBatchType(string $BatchType) 设置批量请求类型，取值"page"或"scroll"
+可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)或[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-yo7kp9dv&tab=publish&subTab=group)进行查看
+ * @method string getSearchWordType() 获取检索类型，取值 LUCENE：Lucene检索，REGEXP：正则检索，NORMAL：普通检索
+ * @method void setSearchWordType(string $SearchWordType) 设置检索类型，取值 LUCENE：Lucene检索，REGEXP：正则检索，NORMAL：普通检索
+ * @method string getBatchType() 获取批量请求类型，取值 PAGE：分页查询，SCROLL：滚动查询，SEARCHAFTER：游标查询，默认值PAGE
+ * @method void setBatchType(string $BatchType) 设置批量请求类型，取值 PAGE：分页查询，SCROLL：滚动查询，SEARCHAFTER：游标查询，默认值PAGE
  * @method string getScrollId() 获取游标ID
  * @method void setScrollId(string $ScrollId) 设置游标ID
  * @method array getSearchAfter() 获取查询es使用searchAfter时，游标
@@ -53,6 +57,7 @@ class SearchBusinessLogRequest extends AbstractModel
 {
     /**
      * @var string 日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
      */
     public $ConfigId;
 
@@ -62,12 +67,12 @@ class SearchBusinessLogRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var string 开始时间
+     * @var string 开始时间，格式yyyy-MM-dd HH:mm:ss
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string 结束时间，格式yyyy-MM-dd HH:mm:ss
      */
     public $EndTime;
 
@@ -98,16 +103,17 @@ class SearchBusinessLogRequest extends AbstractModel
 
     /**
      * @var array 部署组ID列表，不传表示全部部署组
+可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)或[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-yo7kp9dv&tab=publish&subTab=group)进行查看
      */
     public $GroupIds;
 
     /**
-     * @var string 检索类型，取值"LUCENE", "REGEXP", "NORMAL"
+     * @var string 检索类型，取值 LUCENE：Lucene检索，REGEXP：正则检索，NORMAL：普通检索
      */
     public $SearchWordType;
 
     /**
-     * @var string 批量请求类型，取值"page"或"scroll"
+     * @var string 批量请求类型，取值 PAGE：分页查询，SCROLL：滚动查询，SEARCHAFTER：游标查询，默认值PAGE
      */
     public $BatchType;
 
@@ -123,17 +129,19 @@ class SearchBusinessLogRequest extends AbstractModel
 
     /**
      * @param string $ConfigId 日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
      * @param array $InstanceIds 机器实例ID，不传表示全部实例
-     * @param string $StartTime 开始时间
-     * @param string $EndTime 结束时间
+     * @param string $StartTime 开始时间，格式yyyy-MM-dd HH:mm:ss
+     * @param string $EndTime 结束时间，格式yyyy-MM-dd HH:mm:ss
      * @param integer $Offset 请求偏移量，取值范围大于等于0，默认值为0
      * @param integer $Limit 单页请求配置数量，取值范围[1, 200]，默认值为50
      * @param string $OrderBy 排序规则，默认值"time"
      * @param string $OrderType 排序方式，取值"asc"或"desc"，默认值"desc"
      * @param array $SearchWords 检索关键词
      * @param array $GroupIds 部署组ID列表，不传表示全部部署组
-     * @param string $SearchWordType 检索类型，取值"LUCENE", "REGEXP", "NORMAL"
-     * @param string $BatchType 批量请求类型，取值"page"或"scroll"
+可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)或[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-yo7kp9dv&tab=publish&subTab=group)进行查看
+     * @param string $SearchWordType 检索类型，取值 LUCENE：Lucene检索，REGEXP：正则检索，NORMAL：普通检索
+     * @param string $BatchType 批量请求类型，取值 PAGE：分页查询，SCROLL：滚动查询，SEARCHAFTER：游标查询，默认值PAGE
      * @param string $ScrollId 游标ID
      * @param array $SearchAfter 查询es使用searchAfter时，游标
      */

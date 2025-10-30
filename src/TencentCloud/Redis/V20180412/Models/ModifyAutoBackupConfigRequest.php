@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimePeriod(string $TimePeriod) 设置备份时间段。可设置为每个整点。格式如：00:00-01:00, 01:00-02:00...... 23:00-00:00。
  * @method integer getAutoBackupType() 获取自动备份类型。目前仅能配置为：1 ，指定时备份。
  * @method void setAutoBackupType(integer $AutoBackupType) 设置自动备份类型。目前仅能配置为：1 ，指定时备份。
+ * @method integer getBackupStorageDays() 获取全量备份文件保存天数。 仅支持设置为 7，单位：天。如需更长天数，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
+ * @method void setBackupStorageDays(integer $BackupStorageDays) 设置全量备份文件保存天数。 仅支持设置为 7，单位：天。如需更长天数，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
  */
 class ModifyAutoBackupConfigRequest extends AbstractModel
 {
@@ -55,11 +57,17 @@ class ModifyAutoBackupConfigRequest extends AbstractModel
     public $AutoBackupType;
 
     /**
+     * @var integer 全量备份文件保存天数。 仅支持设置为 7，单位：天。如需更长天数，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
+     */
+    public $BackupStorageDays;
+
+    /**
      * @param string $InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
 
      * @param array $WeekDays 设置自动备份周期。可设置为Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。该参数暂不支持修改。
      * @param string $TimePeriod 备份时间段。可设置为每个整点。格式如：00:00-01:00, 01:00-02:00...... 23:00-00:00。
      * @param integer $AutoBackupType 自动备份类型。目前仅能配置为：1 ，指定时备份。
+     * @param integer $BackupStorageDays 全量备份文件保存天数。 仅支持设置为 7，单位：天。如需更长天数，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
      */
     function __construct()
     {
@@ -88,6 +96,10 @@ class ModifyAutoBackupConfigRequest extends AbstractModel
 
         if (array_key_exists("AutoBackupType",$param) and $param["AutoBackupType"] !== null) {
             $this->AutoBackupType = $param["AutoBackupType"];
+        }
+
+        if (array_key_exists("BackupStorageDays",$param) and $param["BackupStorageDays"] !== null) {
+            $this->BackupStorageDays = $param["BackupStorageDays"];
         }
     }
 }

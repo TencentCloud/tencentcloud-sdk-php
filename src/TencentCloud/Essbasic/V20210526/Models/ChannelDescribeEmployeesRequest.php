@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,21 +43,23 @@ use TencentCloud\Common\AbstractModel;
  * @method array getFilters() 获取查询的关键字段，支持Key-Values查询。可选键值如下：
 <ul>
   <li>Key:**"Status"**，Values: **["IsVerified"]**, 查询已实名的员工</li>
+  <li>Key:**"Status"**，Values: **["NotVerified"]**, 查询未实名的员工</li>
   <li>Key:**"Status"**，Values: **["QuiteJob"]**, 查询离职员工</li>
+  <li>Key:**"ExcludeQuiteJob"**，Values: **["true"]**, 查询排除离职员工</li>
   <li>Key:**"StaffOpenId"**，Values: **["OpenId1","OpenId2",...]**, 根据第三方系统用户OpenId查询员工</li>
 </ul>
 注: `同名字的Key的过滤条件会冲突,  只能填写一个`
  * @method void setFilters(array $Filters) 设置查询的关键字段，支持Key-Values查询。可选键值如下：
 <ul>
   <li>Key:**"Status"**，Values: **["IsVerified"]**, 查询已实名的员工</li>
+  <li>Key:**"Status"**，Values: **["NotVerified"]**, 查询未实名的员工</li>
   <li>Key:**"Status"**，Values: **["QuiteJob"]**, 查询离职员工</li>
+  <li>Key:**"ExcludeQuiteJob"**，Values: **["true"]**, 查询排除离职员工</li>
   <li>Key:**"StaffOpenId"**，Values: **["OpenId1","OpenId2",...]**, 根据第三方系统用户OpenId查询员工</li>
 </ul>
 注: `同名字的Key的过滤条件会冲突,  只能填写一个`
- * @method integer getOffset() 获取指定分页返回第几页的数据，如果不传默认返回第一页。
-页码从 0 开始，即首页为 0，最大20000。
- * @method void setOffset(integer $Offset) 设置指定分页返回第几页的数据，如果不传默认返回第一页。
-页码从 0 开始，即首页为 0，最大20000。
+ * @method integer getOffset() 获取偏移量:从 0 开始，最大20000。
+ * @method void setOffset(integer $Offset) 设置偏移量:从 0 开始，最大20000。
  * @method UserInfo getOperator() 获取暂未开放
  * @method void setOperator(UserInfo $Operator) 设置暂未开放
  */
@@ -85,7 +87,9 @@ class ChannelDescribeEmployeesRequest extends AbstractModel
      * @var array 查询的关键字段，支持Key-Values查询。可选键值如下：
 <ul>
   <li>Key:**"Status"**，Values: **["IsVerified"]**, 查询已实名的员工</li>
+  <li>Key:**"Status"**，Values: **["NotVerified"]**, 查询未实名的员工</li>
   <li>Key:**"Status"**，Values: **["QuiteJob"]**, 查询离职员工</li>
+  <li>Key:**"ExcludeQuiteJob"**，Values: **["true"]**, 查询排除离职员工</li>
   <li>Key:**"StaffOpenId"**，Values: **["OpenId1","OpenId2",...]**, 根据第三方系统用户OpenId查询员工</li>
 </ul>
 注: `同名字的Key的过滤条件会冲突,  只能填写一个`
@@ -93,8 +97,7 @@ class ChannelDescribeEmployeesRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer 指定分页返回第几页的数据，如果不传默认返回第一页。
-页码从 0 开始，即首页为 0，最大20000。
+     * @var integer 偏移量:从 0 开始，最大20000。
      */
     public $Offset;
 
@@ -118,12 +121,13 @@ class ChannelDescribeEmployeesRequest extends AbstractModel
      * @param array $Filters 查询的关键字段，支持Key-Values查询。可选键值如下：
 <ul>
   <li>Key:**"Status"**，Values: **["IsVerified"]**, 查询已实名的员工</li>
+  <li>Key:**"Status"**，Values: **["NotVerified"]**, 查询未实名的员工</li>
   <li>Key:**"Status"**，Values: **["QuiteJob"]**, 查询离职员工</li>
+  <li>Key:**"ExcludeQuiteJob"**，Values: **["true"]**, 查询排除离职员工</li>
   <li>Key:**"StaffOpenId"**，Values: **["OpenId1","OpenId2",...]**, 根据第三方系统用户OpenId查询员工</li>
 </ul>
 注: `同名字的Key的过滤条件会冲突,  只能填写一个`
-     * @param integer $Offset 指定分页返回第几页的数据，如果不传默认返回第一页。
-页码从 0 开始，即首页为 0，最大20000。
+     * @param integer $Offset 偏移量:从 0 开始，最大20000。
      * @param UserInfo $Operator 暂未开放
      */
     function __construct()

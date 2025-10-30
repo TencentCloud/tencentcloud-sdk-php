@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 人脸属性信息
  *
- * @method integer getType() 获取属性值
- * @method void setType(integer $Type) 设置属性值
- * @method float getProbability() 获取Type识别概率值,[0,1],代表判断正确的概率。
- * @method void setProbability(float $Probability) 设置Type识别概率值,[0,1],代表判断正确的概率。
+ * @method integer getType() 获取属性值。
+ * @method void setType(integer $Type) 设置属性值。
+ * @method float getProbability() 获取Type识别概率值。
+- 取值范围：[0,1]。
+- 代表判断正确的概率。
+ * @method void setProbability(float $Probability) 设置Type识别概率值。
+- 取值范围：[0,1]。
+- 代表判断正确的概率。
  */
 class AttributeItem extends AbstractModel
 {
     /**
-     * @var integer 属性值
+     * @var integer 属性值。
      */
     public $Type;
 
     /**
-     * @var float Type识别概率值,[0,1],代表判断正确的概率。
+     * @var float Type识别概率值。
+- 取值范围：[0,1]。
+- 代表判断正确的概率。
      */
     public $Probability;
 
     /**
-     * @param integer $Type 属性值
-     * @param float $Probability Type识别概率值,[0,1],代表判断正确的概率。
+     * @param integer $Type 属性值。
+     * @param float $Probability Type识别概率值。
+- 取值范围：[0,1]。
+- 代表判断正确的概率。
      */
     function __construct()
     {

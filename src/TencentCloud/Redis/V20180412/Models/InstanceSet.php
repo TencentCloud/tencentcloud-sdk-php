@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) 设置实例名称。
  * @method string getInstanceId() 获取实例 ID。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID。
- * @method integer getAppid() 获取用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
+ * @method integer getAppid() 获取用户AppId。AppId是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 AppId。
 
- * @method void setAppid(integer $Appid) 设置用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
+ * @method void setAppid(integer $Appid) 设置用户AppId。AppId是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 AppId。
 
  * @method integer getProjectId() 获取项目 ID。
  * @method void setProjectId(integer $ProjectId) 设置项目 ID。
@@ -63,6 +63,7 @@ use TencentCloud\Common\AbstractModel;
 - 16：Redis 6.2 内存版（集群架构）。
 - 17：Redis 7.0 内存版（标准架构）。
 - 18：Redis 7.0 内存版（集群架构）。
+- 200:Memcached 1.6 内存版（集群架构）。
  * @method void setType(integer $Type) 设置实例类型。
 - 2：Redis 2.8 内存版（标准架构）。
 - 3：CKV 3.2 内存版（标准架构）。
@@ -76,6 +77,7 @@ use TencentCloud\Common\AbstractModel;
 - 16：Redis 6.2 内存版（集群架构）。
 - 17：Redis 7.0 内存版（标准架构）。
 - 18：Redis 7.0 内存版（集群架构）。
+- 200:Memcached 1.6 内存版（集群架构）。
  * @method integer getAutoRenewFlag() 获取实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul>
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul>
  * @method string getDeadlineTime() 获取包年包月计费实例到期的时间。
@@ -115,7 +117,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCloseTime() 获取实例隔离开始的时间。
  * @method void setCloseTime(string $CloseTime) 设置实例隔离开始的时间。
  * @method integer getSlaveReadWeight() 获取从节点读取权重。
+- 0：表示关闭副本只读。
+- 100：表示开启副本只读。
  * @method void setSlaveReadWeight(integer $SlaveReadWeight) 设置从节点读取权重。
+- 0：表示关闭副本只读。
+- 100：表示开启副本只读。
  * @method array getInstanceTags() 获取实例关联的标签信息。
  * @method void setInstanceTags(array $InstanceTags) 设置实例关联的标签信息。
  * @method string getProjectName() 获取项目名称。
@@ -147,7 +153,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getClientLimitMax() 获取客户端最大连接数可设置的最大值。
  * @method void setClientLimitMax(integer $ClientLimitMax) 设置客户端最大连接数可设置的最大值。
  * @method array getNodeSet() 获取实例的节点详细信息。
+只有多可用区实例会返回。
  * @method void setNodeSet(array $NodeSet) 设置实例的节点详细信息。
+只有多可用区实例会返回。
  * @method string getRegion() 获取实例所在的地域信息，比如ap-guangzhou。
  * @method void setRegion(string $Region) 设置实例所在的地域信息，比如ap-guangzhou。
  * @method string getWanAddress() 获取外网地址。
@@ -170,6 +178,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpgradeRedisVersion(string $UpgradeRedisVersion) 设置实例可升级Cache小版本。
  * @method string getBackupMode() 获取备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
  * @method void setBackupMode(string $BackupMode) 设置备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
+ * @method integer getDeleteProtectionSwitch() 获取删除保护开关，0关闭，1开启
+ * @method void setDeleteProtectionSwitch(integer $DeleteProtectionSwitch) 设置删除保护开关，0关闭，1开启
  */
 class InstanceSet extends AbstractModel
 {
@@ -184,7 +194,7 @@ class InstanceSet extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
+     * @var integer 用户AppId。AppId是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 AppId。
 
      */
     public $Appid;
@@ -259,6 +269,7 @@ class InstanceSet extends AbstractModel
 - 16：Redis 6.2 内存版（集群架构）。
 - 17：Redis 7.0 内存版（标准架构）。
 - 18：Redis 7.0 内存版（集群架构）。
+- 200:Memcached 1.6 内存版（集群架构）。
      */
     public $Type;
 
@@ -351,6 +362,8 @@ class InstanceSet extends AbstractModel
 
     /**
      * @var integer 从节点读取权重。
+- 0：表示关闭副本只读。
+- 100：表示开启副本只读。
      */
     public $SlaveReadWeight;
 
@@ -431,6 +444,7 @@ class InstanceSet extends AbstractModel
 
     /**
      * @var array 实例的节点详细信息。
+只有多可用区实例会返回。
      */
     public $NodeSet;
 
@@ -490,9 +504,14 @@ class InstanceSet extends AbstractModel
     public $BackupMode;
 
     /**
+     * @var integer 删除保护开关，0关闭，1开启
+     */
+    public $DeleteProtectionSwitch;
+
+    /**
      * @param string $InstanceName 实例名称。
      * @param string $InstanceId 实例 ID。
-     * @param integer $Appid 用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
+     * @param integer $Appid 用户AppId。AppId是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 AppId。
 
      * @param integer $ProjectId 项目 ID。
      * @param integer $RegionId 地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>25：东京。</li></ul>
@@ -518,6 +537,7 @@ class InstanceSet extends AbstractModel
 - 16：Redis 6.2 内存版（集群架构）。
 - 17：Redis 7.0 内存版（标准架构）。
 - 18：Redis 7.0 内存版（集群架构）。
+- 200:Memcached 1.6 内存版（集群架构）。
      * @param integer $AutoRenewFlag 实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul>
      * @param string $DeadlineTime 包年包月计费实例到期的时间。
      * @param string $Engine 引擎：社区版Redis、腾讯云CKV。
@@ -538,6 +558,8 @@ class InstanceSet extends AbstractModel
      * @param integer $PriceId 计费 ID。
      * @param string $CloseTime 实例隔离开始的时间。
      * @param integer $SlaveReadWeight 从节点读取权重。
+- 0：表示关闭副本只读。
+- 100：表示开启副本只读。
      * @param array $InstanceTags 实例关联的标签信息。
      * @param string $ProjectName 项目名称。
      * @param boolean $NoAuth 是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
@@ -554,6 +576,7 @@ class InstanceSet extends AbstractModel
      * @param integer $ClientLimitMin 客户端最大连接数可设置的最小值。
      * @param integer $ClientLimitMax 客户端最大连接数可设置的最大值。
      * @param array $NodeSet 实例的节点详细信息。
+只有多可用区实例会返回。
      * @param string $Region 实例所在的地域信息，比如ap-guangzhou。
      * @param string $WanAddress 外网地址。
      * @param string $PolarisServer 北极星服务地址，内部使用。
@@ -565,6 +588,7 @@ class InstanceSet extends AbstractModel
      * @param string $UpgradeProxyVersion 实例可升级Proxy版本。
      * @param string $UpgradeRedisVersion 实例可升级Cache小版本。
      * @param string $BackupMode 备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
+     * @param integer $DeleteProtectionSwitch 删除保护开关，0关闭，1开启
      */
     function __construct()
     {
@@ -832,6 +856,10 @@ class InstanceSet extends AbstractModel
 
         if (array_key_exists("BackupMode",$param) and $param["BackupMode"] !== null) {
             $this->BackupMode = $param["BackupMode"];
+        }
+
+        if (array_key_exists("DeleteProtectionSwitch",$param) and $param["DeleteProtectionSwitch"] !== null) {
+            $this->DeleteProtectionSwitch = $param["DeleteProtectionSwitch"];
         }
     }
 }

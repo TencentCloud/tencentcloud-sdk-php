@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,8 +23,8 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Vtc\V20240223\Models as Models;
 
 /**
- * @method Models\ConfirmVideoTranslateJobResponse ConfirmVideoTranslateJob(Models\ConfirmVideoTranslateJobRequest $req) 确认视频翻译结果
- * @method Models\DescribeVideoTranslateJobResponse DescribeVideoTranslateJob(Models\DescribeVideoTranslateJobRequest $req) 查询视频翻译任务
+ * @method Models\ConfirmVideoTranslateJobResponse ConfirmVideoTranslateJob(Models\ConfirmVideoTranslateJobRequest $req) 确认视频转译结果
+ * @method Models\DescribeVideoTranslateJobResponse DescribeVideoTranslateJob(Models\DescribeVideoTranslateJobRequest $req) 查询视频转译任务
  * @method Models\SubmitVideoTranslateJobResponse SubmitVideoTranslateJob(Models\SubmitVideoTranslateJobRequest $req) ###### 支持音色种别列表
 | 音色名称                 | 性别 | 目标语言         | 音色ID |
 | ------------------------ | ---- | ---------------- | ------ |

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,45 +21,45 @@ use TencentCloud\Common\AbstractModel;
  * 头发信息
  *
  * @method AttributeItem getLength() 获取头发长度信息。
-AttributeItem对应的Type为 —— 0：光头，1：短发，2：中发，3：长发，4：绑发。
+- AttributeItem对应的Type为 —— 0：光头，1：短发，2：中发，3：长发，4：绑发。
  * @method void setLength(AttributeItem $Length) 设置头发长度信息。
-AttributeItem对应的Type为 —— 0：光头，1：短发，2：中发，3：长发，4：绑发。
+- AttributeItem对应的Type为 —— 0：光头，1：短发，2：中发，3：长发，4：绑发。
  * @method AttributeItem getBang() 获取刘海信息。
-AttributeItem对应的Type为 —— 0：无刘海，1：有刘海。
+- AttributeItem对应的Type为 —— 0：无刘海，1：有刘海。
  * @method void setBang(AttributeItem $Bang) 设置刘海信息。
-AttributeItem对应的Type为 —— 0：无刘海，1：有刘海。
+- AttributeItem对应的Type为 —— 0：无刘海，1：有刘海。
  * @method AttributeItem getColor() 获取头发颜色信息。
-AttributeItem对应的Type为 —— 0：黑色，1：金色，2：棕色，3：灰白色。
+- AttributeItem对应的Type为 —— 0：黑色，1：金色，2：棕色，3：灰白色。
  * @method void setColor(AttributeItem $Color) 设置头发颜色信息。
-AttributeItem对应的Type为 —— 0：黑色，1：金色，2：棕色，3：灰白色。
+- AttributeItem对应的Type为 —— 0：黑色，1：金色，2：棕色，3：灰白色。
  */
 class Hair extends AbstractModel
 {
     /**
      * @var AttributeItem 头发长度信息。
-AttributeItem对应的Type为 —— 0：光头，1：短发，2：中发，3：长发，4：绑发。
+- AttributeItem对应的Type为 —— 0：光头，1：短发，2：中发，3：长发，4：绑发。
      */
     public $Length;
 
     /**
      * @var AttributeItem 刘海信息。
-AttributeItem对应的Type为 —— 0：无刘海，1：有刘海。
+- AttributeItem对应的Type为 —— 0：无刘海，1：有刘海。
      */
     public $Bang;
 
     /**
      * @var AttributeItem 头发颜色信息。
-AttributeItem对应的Type为 —— 0：黑色，1：金色，2：棕色，3：灰白色。
+- AttributeItem对应的Type为 —— 0：黑色，1：金色，2：棕色，3：灰白色。
      */
     public $Color;
 
     /**
      * @param AttributeItem $Length 头发长度信息。
-AttributeItem对应的Type为 —— 0：光头，1：短发，2：中发，3：长发，4：绑发。
+- AttributeItem对应的Type为 —— 0：光头，1：短发，2：中发，3：长发，4：绑发。
      * @param AttributeItem $Bang 刘海信息。
-AttributeItem对应的Type为 —— 0：无刘海，1：有刘海。
+- AttributeItem对应的Type为 —— 0：无刘海，1：有刘海。
      * @param AttributeItem $Color 头发颜色信息。
-AttributeItem对应的Type为 —— 0：黑色，1：金色，2：棕色，3：灰白色。
+- AttributeItem对应的Type为 —— 0：黑色，1：金色，2：棕色，3：灰白色。
      */
     function __construct()
     {

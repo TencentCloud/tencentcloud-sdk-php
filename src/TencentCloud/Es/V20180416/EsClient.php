@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -59,6 +59,7 @@ use TencentCloud\Es\V20180416\Models as Models;
  * @method Models\DescribeUserCosSnapshotListResponse DescribeUserCosSnapshotList(Models\DescribeUserCosSnapshotListRequest $req) 查询快照信息接口
  * @method Models\DescribeViewsResponse DescribeViews(Models\DescribeViewsRequest $req) 查询集群各视图数据，包括集群维度、节点维度、Kibana维度
  * @method Models\DiagnoseInstanceResponse DiagnoseInstance(Models\DiagnoseInstanceRequest $req) 智能运维诊断集群
+ * @method Models\ExportIpTraceLogResponse ExportIpTraceLog(Models\ExportIpTraceLogRequest $req) 查询IP溯源日志原始数据
  * @method Models\GetDiagnoseSettingsResponse GetDiagnoseSettings(Models\GetDiagnoseSettingsRequest $req) 查看智能运维配置
  * @method Models\GetRequestTargetNodeTypesResponse GetRequestTargetNodeTypes(Models\GetRequestTargetNodeTypesRequest $req) 获取接收客户端请求的节点类型
  * @method Models\InquirePriceRenewInstanceResponse InquirePriceRenewInstance(Models\InquirePriceRenewInstanceRequest $req) 集群续费询价接口，续费前通过调用该接口，可获取集群续费的价格。

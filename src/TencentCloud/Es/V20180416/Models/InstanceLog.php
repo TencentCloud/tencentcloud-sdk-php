@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,6 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) 设置日志内容
  * @method string getNodeID() 获取集群节点ID
  * @method void setNodeID(string $NodeID) 设置集群节点ID
+ * @method string getIndexName() 获取慢日志索引名
+ * @method void setIndexName(string $IndexName) 设置慢日志索引名
+ * @method string getShard() 获取慢日志索引分片
+ * @method void setShard(string $Shard) 设置慢日志索引分片
+ * @method string getQueryCost() 获取慢日志索引查询耗时
+ * @method void setQueryCost(string $QueryCost) 设置慢日志索引查询耗时
  */
 class InstanceLog extends AbstractModel
 {
@@ -59,11 +65,29 @@ class InstanceLog extends AbstractModel
     public $NodeID;
 
     /**
+     * @var string 慢日志索引名
+     */
+    public $IndexName;
+
+    /**
+     * @var string 慢日志索引分片
+     */
+    public $Shard;
+
+    /**
+     * @var string 慢日志索引查询耗时
+     */
+    public $QueryCost;
+
+    /**
      * @param string $Time 日志时间
      * @param string $Level 日志级别
      * @param string $Ip 集群节点ip
      * @param string $Message 日志内容
      * @param string $NodeID 集群节点ID
+     * @param string $IndexName 慢日志索引名
+     * @param string $Shard 慢日志索引分片
+     * @param string $QueryCost 慢日志索引查询耗时
      */
     function __construct()
     {
@@ -96,6 +120,18 @@ class InstanceLog extends AbstractModel
 
         if (array_key_exists("NodeID",$param) and $param["NodeID"] !== null) {
             $this->NodeID = $param["NodeID"];
+        }
+
+        if (array_key_exists("IndexName",$param) and $param["IndexName"] !== null) {
+            $this->IndexName = $param["IndexName"];
+        }
+
+        if (array_key_exists("Shard",$param) and $param["Shard"] !== null) {
+            $this->Shard = $param["Shard"];
+        }
+
+        if (array_key_exists("QueryCost",$param) and $param["QueryCost"] !== null) {
+            $this->QueryCost = $param["QueryCost"];
         }
     }
 }

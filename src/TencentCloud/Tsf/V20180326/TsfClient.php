@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,19 +43,19 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\CreateConfigWithDetailRespResponse CreateConfigWithDetailResp(Models\CreateConfigWithDetailRespRequest $req) 创建配置项，返回详细信息
  * @method Models\CreateContainGroupResponse CreateContainGroup(Models\CreateContainGroupRequest $req) （已废弃，请使用 CreateGroup 和 DeployContainerGroup 创建和部署容器部署组）创建容器部署组
  * @method Models\CreateFileConfigResponse CreateFileConfig(Models\CreateFileConfigRequest $req) 创建文件配置项
- * @method Models\CreateFileConfigWithDetailRespResponse CreateFileConfigWithDetailResp(Models\CreateFileConfigWithDetailRespRequest $req) 创建文件配置项，返回详细信息
+ * @method Models\CreateFileConfigWithDetailRespResponse CreateFileConfigWithDetailResp(Models\CreateFileConfigWithDetailRespRequest $req) 创建文件配置项，返回详细信息。
  * @method Models\CreateGatewayApiResponse CreateGatewayApi(Models\CreateGatewayApiRequest $req) 批量导入API至api分组(也支持新建API到分组)
  * @method Models\CreateGroupResponse CreateGroup(Models\CreateGroupRequest $req) 创建虚拟机部署组
- * @method Models\CreateLaneResponse CreateLane(Models\CreateLaneRequest $req) 创建泳道
- * @method Models\CreateLaneRuleResponse CreateLaneRule(Models\CreateLaneRuleRequest $req) 创建泳道规则
+ * @method Models\CreateLaneResponse CreateLane(Models\CreateLaneRequest $req) 创建泳道配置
+ * @method Models\CreateLaneRuleResponse CreateLaneRule(Models\CreateLaneRuleRequest $req) 创建灰度发布规则
  * @method Models\CreateMicroserviceResponse CreateMicroservice(Models\CreateMicroserviceRequest $req) 新增微服务
- * @method Models\CreateMicroserviceWithDetailRespResponse CreateMicroserviceWithDetailResp(Models\CreateMicroserviceWithDetailRespRequest $req) 新增微服务返回id
+ * @method Models\CreateMicroserviceWithDetailRespResponse CreateMicroserviceWithDetailResp(Models\CreateMicroserviceWithDetailRespRequest $req) 新增微服务返回ID
  * @method Models\CreateNamespaceResponse CreateNamespace(Models\CreateNamespaceRequest $req) 创建命名空间
  * @method Models\CreatePathRewritesResponse CreatePathRewrites(Models\CreatePathRewritesRequest $req) 创建路径重写
  * @method Models\CreatePathRewritesWithDetailRespResponse CreatePathRewritesWithDetailResp(Models\CreatePathRewritesWithDetailRespRequest $req) 创建路径重写，并返回路径重写规则信息
  * @method Models\CreateProgramResponse CreateProgram(Models\CreateProgramRequest $req) 创建数据集
  * @method Models\CreatePublicConfigResponse CreatePublicConfig(Models\CreatePublicConfigRequest $req) 创建公共配置项
- * @method Models\CreatePublicConfigWithDetailRespResponse CreatePublicConfigWithDetailResp(Models\CreatePublicConfigWithDetailRespRequest $req) 创建公共配置项，并返回配置项详细信息
+ * @method Models\CreatePublicConfigWithDetailRespResponse CreatePublicConfigWithDetailResp(Models\CreatePublicConfigWithDetailRespRequest $req) 创建公共配置项，并返回配置项详细信息。
  * @method Models\CreateRepositoryResponse CreateRepository(Models\CreateRepositoryRequest $req) 创建仓库
  * @method Models\CreateTaskResponse CreateTask(Models\CreateTaskRequest $req) 创建任务
  * @method Models\CreateTaskFlowResponse CreateTaskFlow(Models\CreateTaskFlowRequest $req) 创建工作流
@@ -73,8 +73,8 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DeleteGatewayApiResponse DeleteGatewayApi(Models\DeleteGatewayApiRequest $req) 批量删除API
  * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) 删除容器部署组
  * @method Models\DeleteImageTagsResponse DeleteImageTags(Models\DeleteImageTagsRequest $req) 批量删除镜像版本
- * @method Models\DeleteLaneResponse DeleteLane(Models\DeleteLaneRequest $req) 删除泳道
- * @method Models\DeleteLaneRuleResponse DeleteLaneRule(Models\DeleteLaneRuleRequest $req) 删除泳道规则
+ * @method Models\DeleteLaneResponse DeleteLane(Models\DeleteLaneRequest $req) 删除泳道配置
+ * @method Models\DeleteLaneRuleResponse DeleteLaneRule(Models\DeleteLaneRuleRequest $req) 删除灰度发布规则
  * @method Models\DeleteMicroserviceResponse DeleteMicroservice(Models\DeleteMicroserviceRequest $req) 删除微服务
  * @method Models\DeleteNamespaceResponse DeleteNamespace(Models\DeleteNamespaceRequest $req) 删除命名空间
  * @method Models\DeletePathRewritesResponse DeletePathRewrites(Models\DeletePathRewritesRequest $req) 删除路径重写
@@ -88,6 +88,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DeleteTaskResponse DeleteTask(Models\DeleteTaskRequest $req) 删除任务
  * @method Models\DeleteUnitNamespacesResponse DeleteUnitNamespaces(Models\DeleteUnitNamespacesRequest $req) 删除单元化命名空间
  * @method Models\DeleteUnitRuleResponse DeleteUnitRule(Models\DeleteUnitRuleRequest $req) 删除单元化规则
+ * @method Models\DeployContainerApplicationResponse DeployContainerApplication(Models\DeployContainerApplicationRequest $req) 部署容器应用-更新
  * @method Models\DeployContainerGroupResponse DeployContainerGroup(Models\DeployContainerGroupRequest $req) 部署容器应用-更新
  * @method Models\DeployGroupResponse DeployGroup(Models\DeployGroupRequest $req) 部署虚拟机部署组应用
  * @method Models\DescribeApiDetailResponse DescribeApiDetail(Models\DescribeApiDetailRequest $req) 查询API详情
@@ -95,7 +96,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DescribeApiGroupsResponse DescribeApiGroups(Models\DescribeApiGroupsRequest $req) 查询API 分组信息列表
  * @method Models\DescribeApiRateLimitRulesResponse DescribeApiRateLimitRules(Models\DescribeApiRateLimitRulesRequest $req) 查询API限流规则
  * @method Models\DescribeApiUseDetailResponse DescribeApiUseDetail(Models\DescribeApiUseDetailRequest $req) 查询网关API监控明细数据
- * @method Models\DescribeApiVersionsResponse DescribeApiVersions(Models\DescribeApiVersionsRequest $req) 查询API 版本
+ * @method Models\DescribeApiVersionsResponse DescribeApiVersions(Models\DescribeApiVersionsRequest $req) 查询API版本
  * @method Models\DescribeApplicationResponse DescribeApplication(Models\DescribeApplicationRequest $req) 获取应用详情
  * @method Models\DescribeApplicationAttributeResponse DescribeApplicationAttribute(Models\DescribeApplicationAttributeRequest $req) 获取应用列表其它字段，如实例数量信息等
  * @method Models\DescribeApplicationsResponse DescribeApplications(Models\DescribeApplicationsRequest $req) 获取应用列表
@@ -116,14 +117,14 @@ use TencentCloud\Tsf\V20180326\Models as Models;
 - 当类型是 instance 时，GroupId是必填项
  * @method Models\DescribeContainerGroupAttributeResponse DescribeContainerGroupAttribute(Models\DescribeContainerGroupAttributeRequest $req) 获取部署组其他字段-用于前端并发调用
  * @method Models\DescribeContainerGroupDeployInfoResponse DescribeContainerGroupDeployInfo(Models\DescribeContainerGroupDeployInfoRequest $req) 获取部署组详情
- * @method Models\DescribeContainerGroupDetailResponse DescribeContainerGroupDetail(Models\DescribeContainerGroupDetailRequest $req) 容器部署组详情（已废弃，请使用  DescribeContainerGroupDeployInfo）
+ * @method Models\DescribeContainerGroupDetailResponse DescribeContainerGroupDetail(Models\DescribeContainerGroupDetailRequest $req) 容器部署组详情（已废弃，请使用  [DescribeContainerGroupDeployInfo](https://cloud.tencent.com/document/product/649/67221)）
  * @method Models\DescribeContainerGroupsResponse DescribeContainerGroups(Models\DescribeContainerGroupsRequest $req) 容器部署组列表
  * @method Models\DescribeCreateGatewayApiStatusResponse DescribeCreateGatewayApiStatus(Models\DescribeCreateGatewayApiStatusRequest $req) 查询一键导入API分组任务的状态
  * @method Models\DescribeDeliveryConfigResponse DescribeDeliveryConfig(Models\DescribeDeliveryConfigRequest $req) 获取单个投递项配置信息
  * @method Models\DescribeDeliveryConfigByGroupIdResponse DescribeDeliveryConfigByGroupId(Models\DescribeDeliveryConfigByGroupIdRequest $req) 用部署组id获取绑定信息
  * @method Models\DescribeDeliveryConfigsResponse DescribeDeliveryConfigs(Models\DescribeDeliveryConfigsRequest $req) 获取多个投递项配置
  * @method Models\DescribeDownloadInfoResponse DescribeDownloadInfo(Models\DescribeDownloadInfoRequest $req) TSF上传的程序包存放在腾讯云对象存储（COS）中，通过该API可以获取从COS下载程序包需要的信息，包括包所在的桶、存储路径、鉴权信息等，之后使用COS API（或SDK）进行下载。
-COS相关文档请查阅：https://cloud.tencent.com/document/product/436
+请查阅[COS相关文档](https://cloud.tencent.com/document/product/436)
  * @method Models\DescribeEnabledUnitRuleResponse DescribeEnabledUnitRule(Models\DescribeEnabledUnitRuleRequest $req) 查询生效的单元化规则
  * @method Models\DescribeFileConfigReleasesResponse DescribeFileConfigReleases(Models\DescribeFileConfigReleasesRequest $req) 查询文件配置项发布信息
  * @method Models\DescribeFileConfigsResponse DescribeFileConfigs(Models\DescribeFileConfigsRequest $req) 查询文件配置项列表
@@ -152,8 +153,10 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeInvocationMetricDataPointResponse DescribeInvocationMetricDataPoint(Models\DescribeInvocationMetricDataPointRequest $req) 查询单值指标维度
  * @method Models\DescribeInvocationMetricScatterPlotResponse DescribeInvocationMetricScatterPlot(Models\DescribeInvocationMetricScatterPlotRequest $req) 查询调用指标数据散点图
  * @method Models\DescribeJvmMonitorResponse DescribeJvmMonitor(Models\DescribeJvmMonitorRequest $req) 查询java实例jvm监控数据,返回数据可选
- * @method Models\DescribeLaneRulesResponse DescribeLaneRules(Models\DescribeLaneRulesRequest $req) 查询泳道规则列表
- * @method Models\DescribeLanesResponse DescribeLanes(Models\DescribeLanesRequest $req) 查询泳道列表
+ * @method Models\DescribeLaneRulesResponse DescribeLaneRules(Models\DescribeLaneRulesRequest $req) 查询灰度发布规则列表
+ * @method Models\DescribeLanesResponse DescribeLanes(Models\DescribeLanesRequest $req) 查询泳道配置列表
+ * @method Models\DescribeLicensesResponse DescribeLicenses(Models\DescribeLicensesRequest $req) 查询许可列表
+ * @method Models\DescribeLogCapacityResponse DescribeLogCapacity(Models\DescribeLogCapacityRequest $req) 获取用户日志使用量
  * @method Models\DescribeMicroserviceResponse DescribeMicroservice(Models\DescribeMicroserviceRequest $req) 查询微服务详情
  * @method Models\DescribeMicroservicesResponse DescribeMicroservices(Models\DescribeMicroservicesRequest $req) 获取微服务列表
  * @method Models\DescribeMicroservicesByGroupIdsResponse DescribeMicroservicesByGroupIds(Models\DescribeMicroservicesByGroupIdsRequest $req) 通过部署组ID获取微服务
@@ -170,9 +173,10 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribePublicConfigReleasesResponse DescribePublicConfigReleases(Models\DescribePublicConfigReleasesRequest $req) 查询公共配置发布信息
  * @method Models\DescribePublicConfigSummaryResponse DescribePublicConfigSummary(Models\DescribePublicConfigSummaryRequest $req) 查询公共配置汇总列表
  * @method Models\DescribePublicConfigsResponse DescribePublicConfigs(Models\DescribePublicConfigsRequest $req) 查询公共配置项列表
- * @method Models\DescribeReleasedConfigResponse DescribeReleasedConfig(Models\DescribeReleasedConfigRequest $req) 查询group发布的配置
+ * @method Models\DescribeReleasedConfigResponse DescribeReleasedConfig(Models\DescribeReleasedConfigRequest $req) 查询部署组发布的配置
  * @method Models\DescribeRepositoriesResponse DescribeRepositories(Models\DescribeRepositoriesRequest $req) 查询仓库列表
  * @method Models\DescribeRepositoryResponse DescribeRepository(Models\DescribeRepositoryRequest $req) 查询仓库信息
+ * @method Models\DescribeResourceConfigResponse DescribeResourceConfig(Models\DescribeResourceConfigRequest $req) 无
  * @method Models\DescribeResourceTaskStatusResponse DescribeResourceTaskStatus(Models\DescribeResourceTaskStatusRequest $req) 资源任务的执行状态描述接口
  * @method Models\DescribeSimpleApplicationsResponse DescribeSimpleApplications(Models\DescribeSimpleApplicationsRequest $req) 查询简单应用列表
  * @method Models\DescribeSimpleClustersResponse DescribeSimpleClusters(Models\DescribeSimpleClustersRequest $req) 查询简单集群列表
@@ -188,9 +192,9 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeUnitRulesResponse DescribeUnitRules(Models\DescribeUnitRulesRequest $req) 查询单元化规则列表
  * @method Models\DescribeUnitRulesV2Response DescribeUnitRulesV2(Models\DescribeUnitRulesV2Request $req) 查询单元化规则列表V2
  * @method Models\DescribeUploadInfoResponse DescribeUploadInfo(Models\DescribeUploadInfoRequest $req) TSF会将软件包上传到腾讯云对象存储（COS）。调用此接口获取上传信息，如目标地域，桶，包Id，存储路径，鉴权信息等，之后请使用COS API（或SDK）进行上传。
-COS相关文档请查阅：https://cloud.tencent.com/document/product/436
+请查阅[COS相关文档](https://cloud.tencent.com/document/product/436)
  * @method Models\DescribeUsableUnitNamespacesResponse DescribeUsableUnitNamespaces(Models\DescribeUsableUnitNamespacesRequest $req) 查询可用于被导入的命名空间列表
- * @method Models\DisableLaneRuleResponse DisableLaneRule(Models\DisableLaneRuleRequest $req) 禁用泳道规则
+ * @method Models\DisableLaneRuleResponse DisableLaneRule(Models\DisableLaneRuleRequest $req) 禁用灰度发布规则
  * @method Models\DisableTaskResponse DisableTask(Models\DisableTaskRequest $req) 停用任务
  * @method Models\DisableTaskFlowResponse DisableTaskFlow(Models\DisableTaskFlowRequest $req) 停用工作流
  * @method Models\DisableUnitRouteResponse DisableUnitRoute(Models\DisableUnitRouteRequest $req) 禁用单元化路由
@@ -198,7 +202,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DisassociateBusinessLogConfigResponse DisassociateBusinessLogConfig(Models\DisassociateBusinessLogConfigRequest $req) 取消关联业务日志配置项和应用
  * @method Models\DisassociateKafkaConfigResponse DisassociateKafkaConfig(Models\DisassociateKafkaConfigRequest $req) 取消关联投递信息和部署组
  * @method Models\DraftApiGroupResponse DraftApiGroup(Models\DraftApiGroupRequest $req) 下线Api分组
- * @method Models\EnableLaneRuleResponse EnableLaneRule(Models\EnableLaneRuleRequest $req) 启用泳道规则
+ * @method Models\EnableLaneRuleResponse EnableLaneRule(Models\EnableLaneRuleRequest $req) 启用灰度发布规则
  * @method Models\EnableTaskResponse EnableTask(Models\EnableTaskRequest $req) 启用任务
  * @method Models\EnableTaskFlowResponse EnableTaskFlow(Models\EnableTaskFlowRequest $req) 启用工作流
  * @method Models\EnableUnitRouteResponse EnableUnitRoute(Models\EnableUnitRouteRequest $req) 启用单元化路由
@@ -211,8 +215,8 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\ModifyContainerGroupResponse ModifyContainerGroup(Models\ModifyContainerGroupRequest $req) 修改容器部署组
  * @method Models\ModifyContainerReplicasResponse ModifyContainerReplicas(Models\ModifyContainerReplicasRequest $req) 修改容器部署组实例数
  * @method Models\ModifyGroupResponse ModifyGroup(Models\ModifyGroupRequest $req) 更新部署组信息
- * @method Models\ModifyLaneResponse ModifyLane(Models\ModifyLaneRequest $req) 更新泳道信息
- * @method Models\ModifyLaneRuleResponse ModifyLaneRule(Models\ModifyLaneRuleRequest $req) 更新泳道规则
+ * @method Models\ModifyLaneResponse ModifyLane(Models\ModifyLaneRequest $req) 更新泳道配置信息
+ * @method Models\ModifyLaneRuleResponse ModifyLaneRule(Models\ModifyLaneRuleRequest $req) 更新灰度发布规则
  * @method Models\ModifyMicroserviceResponse ModifyMicroservice(Models\ModifyMicroserviceRequest $req) 修改微服务详情
  * @method Models\ModifyNamespaceResponse ModifyNamespace(Models\ModifyNamespaceRequest $req) 修改命名空间
  * @method Models\ModifyPathRewriteResponse ModifyPathRewrite(Models\ModifyPathRewriteRequest $req) 修改路径重写
@@ -230,7 +234,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\RedoTaskFlowBatchResponse RedoTaskFlowBatch(Models\RedoTaskFlowBatchRequest $req) 重新执行工作流批次
  * @method Models\ReleaseApiGroupResponse ReleaseApiGroup(Models\ReleaseApiGroupRequest $req) 发布Api分组
  * @method Models\ReleaseConfigResponse ReleaseConfig(Models\ReleaseConfigRequest $req) 发布配置
- * @method Models\ReleaseConfigWithDetailRespResponse ReleaseConfigWithDetailResp(Models\ReleaseConfigWithDetailRespRequest $req) 发布配置,并且返回配置 ID
+ * @method Models\ReleaseConfigWithDetailRespResponse ReleaseConfigWithDetailResp(Models\ReleaseConfigWithDetailRespRequest $req) 发布配置，并且返回配置ID。
  * @method Models\ReleaseFileConfigResponse ReleaseFileConfig(Models\ReleaseFileConfigRequest $req) 发布文件配置
  * @method Models\ReleasePublicConfigResponse ReleasePublicConfig(Models\ReleasePublicConfigRequest $req) 发布公共配置
  * @method Models\RemoveInstancesResponse RemoveInstances(Models\RemoveInstancesRequest $req) 从 TSF 集群中批量移除云主机节点

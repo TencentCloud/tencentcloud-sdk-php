@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method string getDesc() 获取发布描述
  * @method void setDesc(string $Desc) 设置发布描述
+ * @method array getChannelBizIds() 获取渠道业务ID，从ListChannel接口的响应字段ChannelId获取
+ * @method void setChannelBizIds(array $ChannelBizIds) 设置渠道业务ID，从ListChannel接口的响应字段ChannelId获取
  */
 class CreateReleaseRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateReleaseRequest extends AbstractModel
     public $Desc;
 
     /**
+     * @var array 渠道业务ID，从ListChannel接口的响应字段ChannelId获取
+     */
+    public $ChannelBizIds;
+
+    /**
      * @param string $BotBizId 应用ID
      * @param string $Desc 发布描述
+     * @param array $ChannelBizIds 渠道业务ID，从ListChannel接口的响应字段ChannelId获取
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreateReleaseRequest extends AbstractModel
 
         if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {
             $this->Desc = $param["Desc"];
+        }
+
+        if (array_key_exists("ChannelBizIds",$param) and $param["ChannelBizIds"] !== null) {
+            $this->ChannelBizIds = $param["ChannelBizIds"];
         }
     }
 }

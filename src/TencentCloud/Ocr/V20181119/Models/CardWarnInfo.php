@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -50,6 +50,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPSCheck(integer $PSCheck) 设置证件是否有PS
 0：正常
 1：有PS
+ * @method integer getBlurCheck() 获取是否模糊：
+0:正常
+1:模糊
+ * @method void setBlurCheck(integer $BlurCheck) 设置是否模糊：
+0:正常
+1:模糊
+ * @method float getBlurScore() 获取模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5
+ * @method void setBlurScore(float $BlurScore) 设置模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5
+ * @method integer getElectronCheck() 获取是否电子身份证
+0：否
+1：是电子身份证
+ * @method void setElectronCheck(integer $ElectronCheck) 设置是否电子身份证
+0：否
+1：是电子身份证
  */
 class CardWarnInfo extends AbstractModel
 {
@@ -89,6 +103,25 @@ class CardWarnInfo extends AbstractModel
     public $PSCheck;
 
     /**
+     * @var integer 是否模糊：
+0:正常
+1:模糊
+     */
+    public $BlurCheck;
+
+    /**
+     * @var float 模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5
+     */
+    public $BlurScore;
+
+    /**
+     * @var integer 是否电子身份证
+0：否
+1：是电子身份证
+     */
+    public $ElectronCheck;
+
+    /**
      * @param integer $BorderCheck 证件边缘是否完整
 0：正常
 1：边缘不完整
@@ -104,6 +137,13 @@ class CardWarnInfo extends AbstractModel
      * @param integer $PSCheck 证件是否有PS
 0：正常
 1：有PS
+     * @param integer $BlurCheck 是否模糊：
+0:正常
+1:模糊
+     * @param float $BlurScore 模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5
+     * @param integer $ElectronCheck 是否电子身份证
+0：否
+1：是电子身份证
      */
     function __construct()
     {
@@ -136,6 +176,18 @@ class CardWarnInfo extends AbstractModel
 
         if (array_key_exists("PSCheck",$param) and $param["PSCheck"] !== null) {
             $this->PSCheck = $param["PSCheck"];
+        }
+
+        if (array_key_exists("BlurCheck",$param) and $param["BlurCheck"] !== null) {
+            $this->BlurCheck = $param["BlurCheck"];
+        }
+
+        if (array_key_exists("BlurScore",$param) and $param["BlurScore"] !== null) {
+            $this->BlurScore = $param["BlurScore"];
+        }
+
+        if (array_key_exists("ElectronCheck",$param) and $param["ElectronCheck"] !== null) {
+            $this->ElectronCheck = $param["ElectronCheck"];
         }
     }
 }

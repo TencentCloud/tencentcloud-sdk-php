@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidth(integer $Bandwidth) 设置公网带宽大小，单位 Mbps
  * @method boolean getEnablePublicAccess() 获取是否打开公网接入，不传默认为false
  * @method void setEnablePublicAccess(boolean $EnablePublicAccess) 设置是否打开公网接入，不传默认为false
+ * @method boolean getEnableDeletionProtection() 获取是否打开集群删除保护，不传默认为 false
+ * @method void setEnableDeletionProtection(boolean $EnableDeletionProtection) 设置是否打开集群删除保护，不传默认为 false
  */
 class CreateRabbitMQVipInstanceRequest extends AbstractModel
 {
@@ -163,6 +165,11 @@ class CreateRabbitMQVipInstanceRequest extends AbstractModel
     public $EnablePublicAccess;
 
     /**
+     * @var boolean 是否打开集群删除保护，不传默认为 false
+     */
+    public $EnableDeletionProtection;
+
+    /**
      * @param array $ZoneIds 可用区
      * @param string $VpcId 私有网络ID，形如 vpc-xxx。有效的 VpcId 可通过登录[私有网络](https://console.cloud.tencent.com/vpc/vpc?rid=1)控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)，从接口返回中的 unVpcId 字段获取。若在创建子机时 VpcId 与 SubnetId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
      * @param string $SubnetId 私有网络子网 ID，形如 subnet-xxx。有效的私有网络子网 ID 可通过登录[子网控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的 unSubnetId 字段获取。若在创建子机时 SubnetId 与 VpcId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
@@ -188,6 +195,7 @@ class CreateRabbitMQVipInstanceRequest extends AbstractModel
      * @param array $ResourceTags 资源标签列表
      * @param integer $Bandwidth 公网带宽大小，单位 Mbps
      * @param boolean $EnablePublicAccess 是否打开公网接入，不传默认为false
+     * @param boolean $EnableDeletionProtection 是否打开集群删除保护，不传默认为 false
      */
     function __construct()
     {
@@ -269,6 +277,10 @@ class CreateRabbitMQVipInstanceRequest extends AbstractModel
 
         if (array_key_exists("EnablePublicAccess",$param) and $param["EnablePublicAccess"] !== null) {
             $this->EnablePublicAccess = $param["EnablePublicAccess"];
+        }
+
+        if (array_key_exists("EnableDeletionProtection",$param) and $param["EnableDeletionProtection"] !== null) {
+            $this->EnableDeletionProtection = $param["EnableDeletionProtection"];
         }
     }
 }

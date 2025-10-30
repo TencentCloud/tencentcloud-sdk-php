@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -240,6 +240,8 @@ ToaClean: TOA（TCP Option Address）清理，清除TCP选项中的地址信息�
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTargetCount() 获取已绑定的后端服务数量。
  * @method void setTargetCount(integer $TargetCount) 设置已绑定的后端服务数量。
+ * @method string getAssociateEndpoint() 获取负载均衡实例关联的Endpoint id。
+ * @method void setAssociateEndpoint(string $AssociateEndpoint) 设置负载均衡实例关联的Endpoint id。
  */
 class LoadBalancer extends AbstractModel
 {
@@ -583,6 +585,11 @@ ToaClean: TOA（TCP Option Address）清理，清除TCP选项中的地址信息�
     public $TargetCount;
 
     /**
+     * @var string 负载均衡实例关联的Endpoint id。
+     */
+    public $AssociateEndpoint;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param string $LoadBalancerName 负载均衡实例的名称。
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
@@ -693,6 +700,7 @@ ToaClean: TOA（TCP Option Address）清理，清除TCP选项中的地址信息�
      * @param integer $Exclusive 实例类型是否为独占型。1：独占型实例。0：非独占型实例。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TargetCount 已绑定的后端服务数量。
+     * @param string $AssociateEndpoint 负载均衡实例关联的Endpoint id。
      */
     function __construct()
     {
@@ -954,6 +962,10 @@ ToaClean: TOA（TCP Option Address）清理，清除TCP选项中的地址信息�
 
         if (array_key_exists("TargetCount",$param) and $param["TargetCount"] !== null) {
             $this->TargetCount = $param["TargetCount"];
+        }
+
+        if (array_key_exists("AssociateEndpoint",$param) and $param["AssociateEndpoint"] !== null) {
+            $this->AssociateEndpoint = $param["AssociateEndpoint"];
         }
     }
 }

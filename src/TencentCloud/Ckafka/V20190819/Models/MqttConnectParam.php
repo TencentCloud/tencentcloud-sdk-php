@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,23 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MQTT连接源参数
  *
+ * @method integer getPort() 获取MQTT的连接port
+ * @method void setPort(integer $Port) 设置MQTT的连接port
  * @method string getUserName() 获取MQTT连接源的用户名
  * @method void setUserName(string $UserName) 设置MQTT连接源的用户名
  * @method string getPassword() 获取MQTT连接源的密码
  * @method void setPassword(string $Password) 设置MQTT连接源的密码
  * @method string getResource() 获取MQTT连接源的实例资源
  * @method void setResource(string $Resource) 设置MQTT连接源的实例资源
+ * @method string getServiceVip() 获取MQTT的连接ip
+ * @method void setServiceVip(string $ServiceVip) 设置MQTT的连接ip
  * @method string getUniqVpcId() 获取MQTT Instance vpc-id
  * @method void setUniqVpcId(string $UniqVpcId) 设置MQTT Instance vpc-id
  * @method boolean getSelfBuilt() 获取是否为自建集群
  * @method void setSelfBuilt(boolean $SelfBuilt) 设置是否为自建集群
  * @method boolean getIsUpdate() 获取是否更新到关联的Dip任务
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsUpdate(boolean $IsUpdate) 设置是否更新到关联的Dip任务
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取MQTT连接源的实例资源地域, 跨地域时必填
  * @method void setRegion(string $Region) 设置MQTT连接源的实例资源地域, 跨地域时必填
+ * @method string getIp() 获取IP
+ * @method void setIp(string $Ip) 设置IP
  */
 class MqttConnectParam extends AbstractModel
 {
+    /**
+     * @var integer MQTT的连接port
+     */
+    public $Port;
+
     /**
      * @var string MQTT连接源的用户名
      */
@@ -53,6 +66,11 @@ class MqttConnectParam extends AbstractModel
     public $Resource;
 
     /**
+     * @var string MQTT的连接ip
+     */
+    public $ServiceVip;
+
+    /**
      * @var string MQTT Instance vpc-id
      */
     public $UniqVpcId;
@@ -64,6 +82,7 @@ class MqttConnectParam extends AbstractModel
 
     /**
      * @var boolean 是否更新到关联的Dip任务
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsUpdate;
 
@@ -73,13 +92,22 @@ class MqttConnectParam extends AbstractModel
     public $Region;
 
     /**
+     * @var string IP
+     */
+    public $Ip;
+
+    /**
+     * @param integer $Port MQTT的连接port
      * @param string $UserName MQTT连接源的用户名
      * @param string $Password MQTT连接源的密码
      * @param string $Resource MQTT连接源的实例资源
+     * @param string $ServiceVip MQTT的连接ip
      * @param string $UniqVpcId MQTT Instance vpc-id
      * @param boolean $SelfBuilt 是否为自建集群
      * @param boolean $IsUpdate 是否更新到关联的Dip任务
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region MQTT连接源的实例资源地域, 跨地域时必填
+     * @param string $Ip IP
      */
     function __construct()
     {
@@ -94,6 +122,10 @@ class MqttConnectParam extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
+            $this->Port = $param["Port"];
+        }
+
         if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
             $this->UserName = $param["UserName"];
         }
@@ -104,6 +136,10 @@ class MqttConnectParam extends AbstractModel
 
         if (array_key_exists("Resource",$param) and $param["Resource"] !== null) {
             $this->Resource = $param["Resource"];
+        }
+
+        if (array_key_exists("ServiceVip",$param) and $param["ServiceVip"] !== null) {
+            $this->ServiceVip = $param["ServiceVip"];
         }
 
         if (array_key_exists("UniqVpcId",$param) and $param["UniqVpcId"] !== null) {
@@ -120,6 +156,10 @@ class MqttConnectParam extends AbstractModel
 
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
+            $this->Ip = $param["Ip"];
         }
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -63,6 +63,10 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getResourceStatus() 获取模型资源状态 1：资源可用；2：资源已用尽
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceStatus(integer $ResourceStatus) 设置模型资源状态 1：资源可用；2：资源已用尽
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ModelParams getModelParams() 获取模型参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModelParams(ModelParams $ModelParams) 设置模型参数
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AppModel extends AbstractModel
@@ -134,6 +138,12 @@ class AppModel extends AbstractModel
     public $ResourceStatus;
 
     /**
+     * @var ModelParams 模型参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ModelParams;
+
+    /**
      * @param string $Name 模型名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Desc 模型描述
@@ -155,6 +165,8 @@ class AppModel extends AbstractModel
      * @param string $TopP 模型TopP
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ResourceStatus 模型资源状态 1：资源可用；2：资源已用尽
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModelParams $ModelParams 模型参数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -212,6 +224,11 @@ class AppModel extends AbstractModel
 
         if (array_key_exists("ResourceStatus",$param) and $param["ResourceStatus"] !== null) {
             $this->ResourceStatus = $param["ResourceStatus"];
+        }
+
+        if (array_key_exists("ModelParams",$param) and $param["ModelParams"] !== null) {
+            $this->ModelParams = new ModelParams();
+            $this->ModelParams->deserialize($param["ModelParams"]);
         }
     }
 }

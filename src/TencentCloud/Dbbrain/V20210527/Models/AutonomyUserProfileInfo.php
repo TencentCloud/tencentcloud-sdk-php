@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,8 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 自治用户配置详情
  *
- * @method boolean getEnabled() 获取是否开启自治。
- * @method void setEnabled(boolean $Enabled) 设置是否开启自治。
+ * @method boolean getEnabled() 获取是否开启自治。枚举值：true，false。
+其中：
+true - 开启
+false - 关闭
+ * @method void setEnabled(boolean $Enabled) 设置是否开启自治。枚举值：true，false。
+其中：
+true - 开启
+false - 关闭
  * @method string getUin() 获取用户Uin。
  * @method void setUin(string $Uin) 设置用户Uin。
  * @method integer getMemoryUpperLimit() 获取内存上限。
@@ -34,7 +40,10 @@ use TencentCloud\Common\AbstractModel;
 class AutonomyUserProfileInfo extends AbstractModel
 {
     /**
-     * @var boolean 是否开启自治。
+     * @var boolean 是否开启自治。枚举值：true，false。
+其中：
+true - 开启
+false - 关闭
      */
     public $Enabled;
 
@@ -59,7 +68,10 @@ class AutonomyUserProfileInfo extends AbstractModel
     public $EnabledItems;
 
     /**
-     * @param boolean $Enabled 是否开启自治。
+     * @param boolean $Enabled 是否开启自治。枚举值：true，false。
+其中：
+true - 开启
+false - 关闭
      * @param string $Uin 用户Uin。
      * @param integer $MemoryUpperLimit 内存上限。
      * @param MetricThreshold $ThresholdRule 指标阈值规则。

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * DescribeEncryptionStatus返回参数结构体
  *
  * @method string getStatus() 获取加密状态
+- Opening: 开启中
+- Opened: 已开启
+- Closing: 关闭中
+- Closed: 已关闭
  * @method void setStatus(string $Status) 设置加密状态
+- Opening: 开启中
+- Opened: 已开启
+- Closing: 关闭中
+- Closed: 已关闭
  * @method string getErrorMsg() 获取加密错误信息
  * @method void setErrorMsg(string $ErrorMsg) 设置加密错误信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -31,6 +39,10 @@ class DescribeEncryptionStatusResponse extends AbstractModel
 {
     /**
      * @var string 加密状态
+- Opening: 开启中
+- Opened: 已开启
+- Closing: 关闭中
+- Closed: 已关闭
      */
     public $Status;
 
@@ -46,6 +58,10 @@ class DescribeEncryptionStatusResponse extends AbstractModel
 
     /**
      * @param string $Status 加密状态
+- Opening: 开启中
+- Opened: 已开启
+- Closing: 关闭中
+- Closed: 已关闭
      * @param string $ErrorMsg 加密错误信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

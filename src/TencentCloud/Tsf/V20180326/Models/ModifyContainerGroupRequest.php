@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyContainerGroup请求参数结构体
  *
- * @method string getGroupId() 获取部署组ID 必填项
- * @method void setGroupId(string $GroupId) 设置部署组ID 必填项
+ * @method string getGroupId() 获取部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
+ * @method void setGroupId(string $GroupId) 设置部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
  * @method integer getAccessType() 获取0:公网 1:集群内访问 2：NodePort
  * @method void setAccessType(integer $AccessType) 设置0:公网 1:集群内访问 2：NodePort
  * @method array getProtocolPorts() 获取ProtocolPorts数组
@@ -30,15 +30,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateType(integer $UpdateType) 设置更新方式：0:快速更新 1:滚动更新
  * @method integer getUpdateIvl() 获取更新间隔,单位秒
  * @method void setUpdateIvl(integer $UpdateIvl) 设置更新间隔,单位秒
- * @method string getSubnetId() 获取子网ID
- * @method void setSubnetId(string $SubnetId) 设置子网ID
+ * @method string getSubnetId() 获取子网ID，可通过调用[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)查询已创建的子网列表或登录控制台进行查看；也可以调用[CreateSubnet](https://cloud.tencent.com/document/product/1108/43594)创建新的子网。
+ * @method void setSubnetId(string $SubnetId) 设置子网ID，可通过调用[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)查询已创建的子网列表或登录控制台进行查看；也可以调用[CreateSubnet](https://cloud.tencent.com/document/product/1108/43594)创建新的子网。
  * @method string getAlias() 获取部署组备注
  * @method void setAlias(string $Alias) 设置部署组备注
  */
 class ModifyContainerGroupRequest extends AbstractModel
 {
     /**
-     * @var string 部署组ID 必填项
+     * @var string 部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
      */
     public $GroupId;
 
@@ -63,7 +63,7 @@ class ModifyContainerGroupRequest extends AbstractModel
     public $UpdateIvl;
 
     /**
-     * @var string 子网ID
+     * @var string 子网ID，可通过调用[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)查询已创建的子网列表或登录控制台进行查看；也可以调用[CreateSubnet](https://cloud.tencent.com/document/product/1108/43594)创建新的子网。
      */
     public $SubnetId;
 
@@ -73,12 +73,12 @@ class ModifyContainerGroupRequest extends AbstractModel
     public $Alias;
 
     /**
-     * @param string $GroupId 部署组ID 必填项
+     * @param string $GroupId 部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
      * @param integer $AccessType 0:公网 1:集群内访问 2：NodePort
      * @param array $ProtocolPorts ProtocolPorts数组
      * @param integer $UpdateType 更新方式：0:快速更新 1:滚动更新
      * @param integer $UpdateIvl 更新间隔,单位秒
-     * @param string $SubnetId 子网ID
+     * @param string $SubnetId 子网ID，可通过调用[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)查询已创建的子网列表或登录控制台进行查看；也可以调用[CreateSubnet](https://cloud.tencent.com/document/product/1108/43594)创建新的子网。
      * @param string $Alias 部署组备注
      */
     function __construct()

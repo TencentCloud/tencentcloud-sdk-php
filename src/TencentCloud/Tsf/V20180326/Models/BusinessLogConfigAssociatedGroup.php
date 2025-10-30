@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationId(string $ApplicationId) 设置部署组所属应用ID
  * @method string getApplicationName() 获取部署组所属应用名称
  * @method void setApplicationName(string $ApplicationName) 设置部署组所属应用名称
- * @method string getApplicationType() 获取部署组所属应用类型
- * @method void setApplicationType(string $ApplicationType) 设置部署组所属应用类型
+ * @method string getApplicationType() 获取部署组所属应用类型，C：容器应用，V：虚拟机应用
+ * @method void setApplicationType(string $ApplicationType) 设置部署组所属应用类型，C：容器应用，V：虚拟机应用
  * @method string getNamespaceId() 获取部署组所属命名空间ID
  * @method void setNamespaceId(string $NamespaceId) 设置部署组所属命名空间ID
  * @method string getNamespaceName() 获取部署组所属命名空间名称
@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置部署组所属集群ID
  * @method string getClusterName() 获取部署组所属集群名称
  * @method void setClusterName(string $ClusterName) 设置部署组所属集群名称
- * @method string getClusterType() 获取部署组所属集群类型
- * @method void setClusterType(string $ClusterType) 设置部署组所属集群类型
- * @method string getAssociatedTime() 获取部署组关联日志配置时间
- * @method void setAssociatedTime(string $AssociatedTime) 设置部署组关联日志配置时间
+ * @method string getClusterType() 获取部署组所属集群类型，C：容器集群，V：虚拟机集群
+ * @method void setClusterType(string $ClusterType) 设置部署组所属集群类型，C：容器集群，V：虚拟机集群
+ * @method string getAssociatedTime() 获取部署组关联日志配置时间，格式yyyy-MM-dd HH:mm:ss
+ * @method void setAssociatedTime(string $AssociatedTime) 设置部署组关联日志配置时间，格式yyyy-MM-dd HH:mm:ss
  */
 class BusinessLogConfigAssociatedGroup extends AbstractModel
 {
@@ -66,7 +66,7 @@ class BusinessLogConfigAssociatedGroup extends AbstractModel
     public $ApplicationName;
 
     /**
-     * @var string 部署组所属应用类型
+     * @var string 部署组所属应用类型，C：容器应用，V：虚拟机应用
      */
     public $ApplicationType;
 
@@ -91,12 +91,12 @@ class BusinessLogConfigAssociatedGroup extends AbstractModel
     public $ClusterName;
 
     /**
-     * @var string 部署组所属集群类型
+     * @var string 部署组所属集群类型，C：容器集群，V：虚拟机集群
      */
     public $ClusterType;
 
     /**
-     * @var string 部署组关联日志配置时间
+     * @var string 部署组关联日志配置时间，格式yyyy-MM-dd HH:mm:ss
      */
     public $AssociatedTime;
 
@@ -105,13 +105,13 @@ class BusinessLogConfigAssociatedGroup extends AbstractModel
      * @param string $GroupName 部署组名称
      * @param string $ApplicationId 部署组所属应用ID
      * @param string $ApplicationName 部署组所属应用名称
-     * @param string $ApplicationType 部署组所属应用类型
+     * @param string $ApplicationType 部署组所属应用类型，C：容器应用，V：虚拟机应用
      * @param string $NamespaceId 部署组所属命名空间ID
      * @param string $NamespaceName 部署组所属命名空间名称
      * @param string $ClusterId 部署组所属集群ID
      * @param string $ClusterName 部署组所属集群名称
-     * @param string $ClusterType 部署组所属集群类型
-     * @param string $AssociatedTime 部署组关联日志配置时间
+     * @param string $ClusterType 部署组所属集群类型，C：容器集群，V：虚拟机集群
+     * @param string $AssociatedTime 部署组关联日志配置时间，格式yyyy-MM-dd HH:mm:ss
      */
     function __construct()
     {

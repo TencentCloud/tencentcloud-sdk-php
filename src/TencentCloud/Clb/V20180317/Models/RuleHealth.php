@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置转发规则的Url
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRuleId() 获取高级路由规则ID
+ * @method void setRuleId(string $RuleId) 设置高级路由规则ID
  * @method array getTargets() 获取本规则上绑定的后端服务的健康检查状态
  * @method void setTargets(array $Targets) 设置本规则上绑定的后端服务的健康检查状态
  */
@@ -53,6 +55,11 @@ class RuleHealth extends AbstractModel
     public $Url;
 
     /**
+     * @var string 高级路由规则ID
+     */
+    public $RuleId;
+
+    /**
      * @var array 本规则上绑定的后端服务的健康检查状态
      */
     public $Targets;
@@ -63,6 +70,7 @@ class RuleHealth extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 转发规则的Url
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RuleId 高级路由规则ID
      * @param array $Targets 本规则上绑定的后端服务的健康检查状态
      */
     function __construct()
@@ -88,6 +96,10 @@ class RuleHealth extends AbstractModel
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
+            $this->RuleId = $param["RuleId"];
         }
 
         if (array_key_exists("Targets",$param) and $param["Targets"] !== null) {

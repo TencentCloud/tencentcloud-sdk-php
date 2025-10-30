@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLaneRules返回参数结构体
  *
- * @method LaneRules getResult() 获取泳道规则列表
- * @method void setResult(LaneRules $Result) 设置泳道规则列表
+ * @method LaneRules getResult() 获取灰度发布规则列表。
+ * @method void setResult(LaneRules $Result) 设置灰度发布规则列表。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeLaneRulesResponse extends AbstractModel
 {
     /**
-     * @var LaneRules 泳道规则列表
+     * @var LaneRules 灰度发布规则列表。
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class DescribeLaneRulesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param LaneRules $Result 泳道规则列表
+     * @param LaneRules $Result 灰度发布规则列表。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

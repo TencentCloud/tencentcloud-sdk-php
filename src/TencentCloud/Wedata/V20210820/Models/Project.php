@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -81,6 +81,10 @@ use TencentCloud\Common\AbstractModel;
  * @method BaseUser getOwner() 获取项目负责人
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOwner(BaseUser $Owner) 设置项目负责人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getWorkspaceExt() 获取项目扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWorkspaceExt(array $WorkspaceExt) 设置项目扩展信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Project extends AbstractModel
@@ -181,6 +185,12 @@ class Project extends AbstractModel
     public $Owner;
 
     /**
+     * @var array 项目扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WorkspaceExt;
+
+    /**
      * @param string $TenantId 项目的所在租户ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 项目id
@@ -211,6 +221,8 @@ class Project extends AbstractModel
      * @param array $SecondModuleList 二级菜单
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseUser $Owner 项目负责人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $WorkspaceExt 项目扩展信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -301,6 +313,15 @@ class Project extends AbstractModel
         if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
             $this->Owner = new BaseUser();
             $this->Owner->deserialize($param["Owner"]);
+        }
+
+        if (array_key_exists("WorkspaceExt",$param) and $param["WorkspaceExt"] !== null) {
+            $this->WorkspaceExt = [];
+            foreach ($param["WorkspaceExt"] as $key => $value){
+                $obj = new WorkspaceExt();
+                $obj->deserialize($value);
+                array_push($this->WorkspaceExt, $obj);
+            }
         }
     }
 }

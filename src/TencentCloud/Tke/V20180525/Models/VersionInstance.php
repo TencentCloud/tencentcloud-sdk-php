@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置版本名称
  * @method string getVersion() 获取版本信息
  * @method void setVersion(string $Version) 设置版本信息
- * @method string getRemark() 获取Remark
- * @method void setRemark(string $Remark) 设置Remark
+ * @method string getRemark() 获取备注
+ * @method void setRemark(string $Remark) 设置备注
  */
 class VersionInstance extends AbstractModel
 {
@@ -40,14 +40,14 @@ class VersionInstance extends AbstractModel
     public $Version;
 
     /**
-     * @var string Remark
+     * @var string 备注
      */
     public $Remark;
 
     /**
      * @param string $Name 版本名称
      * @param string $Version 版本信息
-     * @param string $Remark Remark
+     * @param string $Remark 备注
      */
     function __construct()
     {

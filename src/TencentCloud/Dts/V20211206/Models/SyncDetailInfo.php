@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepInfos(array $StepInfos) 设置详细步骤信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCauseOfCompareDisable() 获取不能发起一致性校验的原因
- * @method void setCauseOfCompareDisable(string $CauseOfCompareDisable) 设置不能发起一致性校验的原因
+ * @method string getCauseOfCompareDisable() 获取不能发起内置校验的原因
+ * @method void setCauseOfCompareDisable(string $CauseOfCompareDisable) 设置不能发起内置校验的原因
  * @method ErrInfo getErrInfo() 获取任务的错误和解决方案信息
  * @method void setErrInfo(ErrInfo $ErrInfo) 设置任务的错误和解决方案信息
  */
@@ -87,7 +87,7 @@ class SyncDetailInfo extends AbstractModel
     public $StepInfos;
 
     /**
-     * @var string 不能发起一致性校验的原因
+     * @var string 不能发起内置校验的原因
      */
     public $CauseOfCompareDisable;
 
@@ -106,7 +106,7 @@ class SyncDetailInfo extends AbstractModel
      * @param string $Message 总体描述信息
      * @param array $StepInfos 详细步骤信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CauseOfCompareDisable 不能发起一致性校验的原因
+     * @param string $CauseOfCompareDisable 不能发起内置校验的原因
      * @param ErrInfo $ErrInfo 任务的错误和解决方案信息
      */
     function __construct()

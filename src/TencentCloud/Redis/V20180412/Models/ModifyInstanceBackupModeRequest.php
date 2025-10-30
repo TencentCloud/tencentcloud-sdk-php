@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceBackupMode请求参数结构体
  *
- * @method string getInstanceId() 获取实例的ID，长度在12-36之间。
- * @method void setInstanceId(string $InstanceId) 设置实例的ID，长度在12-36之间。
+ * @method string getInstanceId() 获取实例的ID。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例的ID。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
  * @method string getBackupMode() 获取备份模式：
-- SecondLevelBackup   秒级备份
-- NormalLevelBackup    普通备份
+- SecondLevelBackup   秒级备份。
+- NormalLevelBackup    普通备份。
  * @method void setBackupMode(string $BackupMode) 设置备份模式：
-- SecondLevelBackup   秒级备份
-- NormalLevelBackup    普通备份
+- SecondLevelBackup   秒级备份。
+- NormalLevelBackup    普通备份。
  */
 class ModifyInstanceBackupModeRequest extends AbstractModel
 {
     /**
-     * @var string 实例的ID，长度在12-36之间。
+     * @var string 实例的ID。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
     /**
      * @var string 备份模式：
-- SecondLevelBackup   秒级备份
-- NormalLevelBackup    普通备份
+- SecondLevelBackup   秒级备份。
+- NormalLevelBackup    普通备份。
      */
     public $BackupMode;
 
     /**
-     * @param string $InstanceId 实例的ID，长度在12-36之间。
+     * @param string $InstanceId 实例的ID。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      * @param string $BackupMode 备份模式：
-- SecondLevelBackup   秒级备份
-- NormalLevelBackup    普通备份
+- SecondLevelBackup   秒级备份。
+- NormalLevelBackup    普通备份。
      */
     function __construct()
     {

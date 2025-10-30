@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -112,6 +112,12 @@ use TencentCloud\Common\AbstractModel;
 - 默认为0。
 - 本参数的作用为，当图片中的人脸被旋转且图片没有exif信息时，如果不开启图片旋转识别支持则无法正确检测、识别图片中的人脸。
 - 若您确认图片包含exif信息或者您确认输入图中人脸不会出现被旋转情况，请不要开启本参数。开启后，整体耗时将可能增加数百毫秒。
+ * @method integer getFaceMatchingStrategy() 获取若图片中包含多张人脸，指定选取策略，默认为0。
+- 0：选取其中置信度最高的人脸
+- 1：选取其中面积最大的人脸。
+ * @method void setFaceMatchingStrategy(integer $FaceMatchingStrategy) 设置若图片中包含多张人脸，指定选取策略，默认为0。
+- 0：选取其中置信度最高的人脸
+- 1：选取其中面积最大的人脸。
  */
 class CompareFaceRequest extends AbstractModel
 {
@@ -190,6 +196,13 @@ class CompareFaceRequest extends AbstractModel
     public $NeedRotateDetection;
 
     /**
+     * @var integer 若图片中包含多张人脸，指定选取策略，默认为0。
+- 0：选取其中置信度最高的人脸
+- 1：选取其中面积最大的人脸。
+     */
+    public $FaceMatchingStrategy;
+
+    /**
      * @param string $ImageA A 图片 base64 数据。
 - base64 编码后大小不可超过5M。
 - jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。所有格式的图片短边像素不小于64。
@@ -236,6 +249,9 @@ class CompareFaceRequest extends AbstractModel
 - 默认为0。
 - 本参数的作用为，当图片中的人脸被旋转且图片没有exif信息时，如果不开启图片旋转识别支持则无法正确检测、识别图片中的人脸。
 - 若您确认图片包含exif信息或者您确认输入图中人脸不会出现被旋转情况，请不要开启本参数。开启后，整体耗时将可能增加数百毫秒。
+     * @param integer $FaceMatchingStrategy 若图片中包含多张人脸，指定选取策略，默认为0。
+- 0：选取其中置信度最高的人脸
+- 1：选取其中面积最大的人脸。
      */
     function __construct()
     {
@@ -276,6 +292,10 @@ class CompareFaceRequest extends AbstractModel
 
         if (array_key_exists("NeedRotateDetection",$param) and $param["NeedRotateDetection"] !== null) {
             $this->NeedRotateDetection = $param["NeedRotateDetection"];
+        }
+
+        if (array_key_exists("FaceMatchingStrategy",$param) and $param["FaceMatchingStrategy"] !== null) {
+            $this->FaceMatchingStrategy = $param["FaceMatchingStrategy"];
         }
     }
 }

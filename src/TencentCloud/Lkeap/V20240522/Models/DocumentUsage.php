@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,6 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSplitTokens(integer $SplitTokens) 设置拆分消耗的token数
  * @method integer getMllmTokens() 获取mllm消耗的token数
  * @method void setMllmTokens(integer $MllmTokens) 设置mllm消耗的token数
+ * @method integer getSuccessPageNum() 获取解析成功页数
+ * @method void setSuccessPageNum(integer $SuccessPageNum) 设置解析成功页数
+ * @method integer getFailPageNum() 获取解析失败页数
+ * @method void setFailPageNum(integer $FailPageNum) 设置解析失败页数
+ * @method integer getFileSize() 获取文件大小，单位：字节
+ * @method void setFileSize(integer $FileSize) 设置文件大小，单位：字节
  */
 class DocumentUsage extends AbstractModel
 {
@@ -60,11 +66,29 @@ class DocumentUsage extends AbstractModel
     public $MllmTokens;
 
     /**
+     * @var integer 解析成功页数
+     */
+    public $SuccessPageNum;
+
+    /**
+     * @var integer 解析失败页数
+     */
+    public $FailPageNum;
+
+    /**
+     * @var integer 文件大小，单位：字节
+     */
+    public $FileSize;
+
+    /**
      * @param integer $PageNumber 文档拆分任务的页数
      * @param integer $TotalToken 文档拆分任务消耗的总token数
      * @param integer $TotalTokens 文档拆分任务消耗的总token数
      * @param integer $SplitTokens 拆分消耗的token数
      * @param integer $MllmTokens mllm消耗的token数
+     * @param integer $SuccessPageNum 解析成功页数
+     * @param integer $FailPageNum 解析失败页数
+     * @param integer $FileSize 文件大小，单位：字节
      */
     function __construct()
     {
@@ -97,6 +121,18 @@ class DocumentUsage extends AbstractModel
 
         if (array_key_exists("MllmTokens",$param) and $param["MllmTokens"] !== null) {
             $this->MllmTokens = $param["MllmTokens"];
+        }
+
+        if (array_key_exists("SuccessPageNum",$param) and $param["SuccessPageNum"] !== null) {
+            $this->SuccessPageNum = $param["SuccessPageNum"];
+        }
+
+        if (array_key_exists("FailPageNum",$param) and $param["FailPageNum"] !== null) {
+            $this->FailPageNum = $param["FailPageNum"];
+        }
+
+        if (array_key_exists("FileSize",$param) and $param["FileSize"] !== null) {
+            $this->FileSize = $param["FileSize"];
         }
     }
 }

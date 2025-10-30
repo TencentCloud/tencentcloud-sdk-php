@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,7 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceId() 获取网络组id(cynosdbmysql-grp-前缀开头)或集群id
  * @method void setInstanceId(string $InstanceId) 设置网络组id(cynosdbmysql-grp-前缀开头)或集群id
  * @method array getSecurityGroupIds() 获取要修改的安全组ID列表，一个或者多个安全组ID组成的数组。
+注意：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置要修改的安全组ID列表，一个或者多个安全组ID组成的数组。
+注意：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
  * @method string getZone() 获取可用区
  * @method void setZone(string $Zone) 设置可用区
  */
@@ -36,6 +38,7 @@ class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
 
     /**
      * @var array 要修改的安全组ID列表，一个或者多个安全组ID组成的数组。
+注意：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
      */
     public $SecurityGroupIds;
 
@@ -47,6 +50,7 @@ class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
     /**
      * @param string $InstanceId 网络组id(cynosdbmysql-grp-前缀开头)或集群id
      * @param array $SecurityGroupIds 要修改的安全组ID列表，一个或者多个安全组ID组成的数组。
+注意：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
      * @param string $Zone 可用区
      */
     function __construct()

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,20 +18,20 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 分片信息
+ * 分片信息。
  *
- * @method string getReplicaSetId() 获取副本集ID
- * @method void setReplicaSetId(string $ReplicaSetId) 设置副本集ID
+ * @method string getReplicaSetId() 获取副本集 ID。
+ * @method void setReplicaSetId(string $ReplicaSetId) 设置副本集 ID。
  */
 class ReplicaSetInfo extends AbstractModel
 {
     /**
-     * @var string 副本集ID
+     * @var string 副本集 ID。
      */
     public $ReplicaSetId;
 
     /**
-     * @param string $ReplicaSetId 副本集ID
+     * @param string $ReplicaSetId 副本集 ID。
      */
     function __construct()
     {

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,10 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterName() 获取集群名称
  * @method void setClusterName(string $ClusterName) 设置集群名称
- * @method string getClusterType() 获取集群类型
- * @method void setClusterType(string $ClusterType) 设置集群类型
- * @method string getVpcId() 获取私有网络ID
- * @method void setVpcId(string $VpcId) 设置私有网络ID
+ * @method string getClusterType() 获取指定集群类型，目前支持：
+- `V`：虚拟机集群
+- `C`：容器集群
+- `S`：Serverless 集群
+ * @method void setClusterType(string $ClusterType) 设置指定集群类型，目前支持：
+- `V`：虚拟机集群
+- `C`：容器集群
+- `S`：Serverless 集群
+ * @method string getVpcId() 获取私有网络ID，可通过调用[DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)查询已创建的私有网络列表或登录控制台进行查看；也可以调用[CreateVpc](https://cloud.tencent.com/document/api/215/1309)创建新的私有网络。
+ * @method void setVpcId(string $VpcId) 设置私有网络ID，可通过调用[DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)查询已创建的私有网络列表或登录控制台进行查看；也可以调用[CreateVpc](https://cloud.tencent.com/document/api/215/1309)创建新的私有网络。
  * @method string getClusterCIDR() 获取分配给集群容器和服务IP的CIDR
  * @method void setClusterCIDR(string $ClusterCIDR) 设置分配给集群容器和服务IP的CIDR
  * @method string getClusterDesc() 获取集群备注
@@ -48,10 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKuberneteApiServer(string $KuberneteApiServer) 设置api地址
  * @method string getKuberneteNativeType() 获取K : kubeconfig, S : service account
  * @method void setKuberneteNativeType(string $KuberneteNativeType) 设置K : kubeconfig, S : service account
- * @method string getKuberneteNativeSecret() 获取native secret
- * @method void setKuberneteNativeSecret(string $KuberneteNativeSecret) 设置native secret
- * @method array getProgramIdList() 获取无
- * @method void setProgramIdList(array $ProgramIdList) 设置无
+ * @method string getKuberneteNativeSecret() 获取Kubernetes 原生 Secret 资源对象
+ * @method void setKuberneteNativeSecret(string $KuberneteNativeSecret) 设置Kubernetes 原生 Secret 资源对象
+ * @method array getProgramIdList() 获取需要绑定的数据集ID。该参数可以通过调用 [DescribePrograms](https://cloud.tencent.com/document/product/649/73477) 的返回值中的 ProgramId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/privilege?tab=program&roleId=role-yrle4doy)查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
+ * @method void setProgramIdList(array $ProgramIdList) 设置需要绑定的数据集ID。该参数可以通过调用 [DescribePrograms](https://cloud.tencent.com/document/product/649/73477) 的返回值中的 ProgramId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/privilege?tab=program&roleId=role-yrle4doy)查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
  * @method boolean getEnableLogCollection() 获取是否开启cls日志功能
  * @method void setEnableLogCollection(boolean $EnableLogCollection) 设置是否开启cls日志功能
  */
@@ -63,12 +69,15 @@ class CreateClusterRequest extends AbstractModel
     public $ClusterName;
 
     /**
-     * @var string 集群类型
+     * @var string 指定集群类型，目前支持：
+- `V`：虚拟机集群
+- `C`：容器集群
+- `S`：Serverless 集群
      */
     public $ClusterType;
 
     /**
-     * @var string 私有网络ID
+     * @var string 私有网络ID，可通过调用[DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)查询已创建的私有网络列表或登录控制台进行查看；也可以调用[CreateVpc](https://cloud.tencent.com/document/api/215/1309)创建新的私有网络。
      */
     public $VpcId;
 
@@ -128,12 +137,12 @@ class CreateClusterRequest extends AbstractModel
     public $KuberneteNativeType;
 
     /**
-     * @var string native secret
+     * @var string Kubernetes 原生 Secret 资源对象
      */
     public $KuberneteNativeSecret;
 
     /**
-     * @var array 无
+     * @var array 需要绑定的数据集ID。该参数可以通过调用 [DescribePrograms](https://cloud.tencent.com/document/product/649/73477) 的返回值中的 ProgramId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/privilege?tab=program&roleId=role-yrle4doy)查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
      */
     public $ProgramIdList;
 
@@ -144,8 +153,11 @@ class CreateClusterRequest extends AbstractModel
 
     /**
      * @param string $ClusterName 集群名称
-     * @param string $ClusterType 集群类型
-     * @param string $VpcId 私有网络ID
+     * @param string $ClusterType 指定集群类型，目前支持：
+- `V`：虚拟机集群
+- `C`：容器集群
+- `S`：Serverless 集群
+     * @param string $VpcId 私有网络ID，可通过调用[DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)查询已创建的私有网络列表或登录控制台进行查看；也可以调用[CreateVpc](https://cloud.tencent.com/document/api/215/1309)创建新的私有网络。
      * @param string $ClusterCIDR 分配给集群容器和服务IP的CIDR
      * @param string $ClusterDesc 集群备注
      * @param string $TsfRegionId 集群所属TSF地域
@@ -157,8 +169,8 @@ class CreateClusterRequest extends AbstractModel
      * @param string $ProgramId 需要绑定的数据集ID
      * @param string $KuberneteApiServer api地址
      * @param string $KuberneteNativeType K : kubeconfig, S : service account
-     * @param string $KuberneteNativeSecret native secret
-     * @param array $ProgramIdList 无
+     * @param string $KuberneteNativeSecret Kubernetes 原生 Secret 资源对象
+     * @param array $ProgramIdList 需要绑定的数据集ID。该参数可以通过调用 [DescribePrograms](https://cloud.tencent.com/document/product/649/73477) 的返回值中的 ProgramId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/privilege?tab=program&roleId=role-yrle4doy)查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
      * @param boolean $EnableLogCollection 是否开启cls日志功能
      */
     function __construct()

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,9 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * 图片水印参数。
  *
  * @method string getWaterMarkUrl() 获取水印图片URL地址，支持png、jpg、jpeg格式。图片大小限制不超过5MB。
-注：您需要确保图片链接的可访问性，后台单次下载超时时间为10秒，最多重试3次，若最终图片下载失败，水印图片将不会生效。
+注：
+1，您需要确保图片链接的可访问性，后台单次下载超时时间为10秒，最多重试3次，若最终图片下载失败，水印图片将不会生效。
+2，url可支持字符集：【'0-9','a-z','A-Z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|'】，您需要确保url字符在可支持字符集内，若存在可支持字符集外的字符，水印图片将不会生效。
  * @method void setWaterMarkUrl(string $WaterMarkUrl) 设置水印图片URL地址，支持png、jpg、jpeg格式。图片大小限制不超过5MB。
-注：您需要确保图片链接的可访问性，后台单次下载超时时间为10秒，最多重试3次，若最终图片下载失败，水印图片将不会生效。
+注：
+1，您需要确保图片链接的可访问性，后台单次下载超时时间为10秒，最多重试3次，若最终图片下载失败，水印图片将不会生效。
+2，url可支持字符集：【'0-9','a-z','A-Z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|'】，您需要确保url字符在可支持字符集内，若存在可支持字符集外的字符，水印图片将不会生效。
  * @method integer getWaterMarkWidth() 获取水印在输出时的宽。单位为像素值。
  * @method void setWaterMarkWidth(integer $WaterMarkWidth) 设置水印在输出时的宽。单位为像素值。
  * @method integer getWaterMarkHeight() 获取水印在输出时的高。单位为像素值。
@@ -41,7 +45,9 @@ class McuWaterMarkImage extends AbstractModel
 {
     /**
      * @var string 水印图片URL地址，支持png、jpg、jpeg格式。图片大小限制不超过5MB。
-注：您需要确保图片链接的可访问性，后台单次下载超时时间为10秒，最多重试3次，若最终图片下载失败，水印图片将不会生效。
+注：
+1，您需要确保图片链接的可访问性，后台单次下载超时时间为10秒，最多重试3次，若最终图片下载失败，水印图片将不会生效。
+2，url可支持字符集：【'0-9','a-z','A-Z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|'】，您需要确保url字符在可支持字符集内，若存在可支持字符集外的字符，水印图片将不会生效。
      */
     public $WaterMarkUrl;
 
@@ -77,7 +83,9 @@ class McuWaterMarkImage extends AbstractModel
 
     /**
      * @param string $WaterMarkUrl 水印图片URL地址，支持png、jpg、jpeg格式。图片大小限制不超过5MB。
-注：您需要确保图片链接的可访问性，后台单次下载超时时间为10秒，最多重试3次，若最终图片下载失败，水印图片将不会生效。
+注：
+1，您需要确保图片链接的可访问性，后台单次下载超时时间为10秒，最多重试3次，若最终图片下载失败，水印图片将不会生效。
+2，url可支持字符集：【'0-9','a-z','A-Z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|'】，您需要确保url字符在可支持字符集内，若存在可支持字符集外的字符，水印图片将不会生效。
      * @param integer $WaterMarkWidth 水印在输出时的宽。单位为像素值。
      * @param integer $WaterMarkHeight 水印在输出时的高。单位为像素值。
      * @param integer $LocationX 水印在输出时的X偏移。单位为像素值。

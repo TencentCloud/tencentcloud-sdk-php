@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWorkflowRun请求参数结构体
  *
+ * @method string getAppBizId() 获取应用ID
+ * @method void setAppBizId(string $AppBizId) 设置应用ID
  * @method string getWorkflowRunId() 获取工作流运行实例ID
  * @method void setWorkflowRunId(string $WorkflowRunId) 设置工作流运行实例ID
  */
 class DescribeWorkflowRunRequest extends AbstractModel
 {
     /**
+     * @var string 应用ID
+     */
+    public $AppBizId;
+
+    /**
      * @var string 工作流运行实例ID
      */
     public $WorkflowRunId;
 
     /**
+     * @param string $AppBizId 应用ID
      * @param string $WorkflowRunId 工作流运行实例ID
      */
     function __construct()
@@ -46,6 +54,10 @@ class DescribeWorkflowRunRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("AppBizId",$param) and $param["AppBizId"] !== null) {
+            $this->AppBizId = $param["AppBizId"];
+        }
+
         if (array_key_exists("WorkflowRunId",$param) and $param["WorkflowRunId"] !== null) {
             $this->WorkflowRunId = $param["WorkflowRunId"];
         }

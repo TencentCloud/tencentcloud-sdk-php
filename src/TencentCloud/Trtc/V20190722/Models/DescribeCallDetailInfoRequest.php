@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -51,6 +51,7 @@ bigvHeight：上/下行分辨率高；
 aCapEnergy：音频采集能量；
 aPlayEnergy：音频播放能量；
 rtt：SDK到云端的往返延时；单位: ms
+bigvRecFps: 云端送达帧率；
  * @method void setDataType(array $DataType) 设置需查询的指标，不填则只返回用户列表，填all则返回所有指标。
 appCpu：APP CPU使用率；
 sysCpu：系统 CPU使用率；
@@ -68,6 +69,7 @@ bigvHeight：上/下行分辨率高；
 aCapEnergy：音频采集能量；
 aPlayEnergy：音频播放能量；
 rtt：SDK到云端的往返延时；单位: ms
+bigvRecFps: 云端送达帧率；
  * @method integer getPageNumber() 获取当前页数，默认为0，
 注意：PageNumber和PageSize 其中一个不填均默认返回6条数据。
  * @method void setPageNumber(integer $PageNumber) 设置当前页数，默认为0，
@@ -128,6 +130,7 @@ bigvHeight：上/下行分辨率高；
 aCapEnergy：音频采集能量；
 aPlayEnergy：音频播放能量；
 rtt：SDK到云端的往返延时；单位: ms
+bigvRecFps: 云端送达帧率；
      */
     public $DataType;
 
@@ -170,6 +173,7 @@ bigvHeight：上/下行分辨率高；
 aCapEnergy：音频采集能量；
 aPlayEnergy：音频播放能量；
 rtt：SDK到云端的往返延时；单位: ms
+bigvRecFps: 云端送达帧率；
      * @param integer $PageNumber 当前页数，默认为0，
 注意：PageNumber和PageSize 其中一个不填均默认返回6条数据。
      * @param integer $PageSize 每页个数，默认为6，

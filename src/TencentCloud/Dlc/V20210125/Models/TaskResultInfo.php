@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalTime(integer $TotalTime) 设置任务耗时，单位： ms
  * @method float getQueryResultTime() 获取获取结果消耗的时间
  * @method void setQueryResultTime(float $QueryResultTime) 设置获取结果消耗的时间
+ * @method string getResultSetEncode() 获取base64 编码结果集
+ * @method void setResultSetEncode(string $ResultSetEncode) 设置base64 编码结果集
  */
 class TaskResultInfo extends AbstractModel
 {
@@ -167,6 +169,11 @@ class TaskResultInfo extends AbstractModel
     public $QueryResultTime;
 
     /**
+     * @var string base64 编码结果集
+     */
+    public $ResultSetEncode;
+
+    /**
      * @param string $TaskId 任务唯一ID
      * @param string $DatasourceConnectionName 数据源名称，当前任务执行时候选中的默认数据源
      * @param string $DatabaseName 数据库名称，当前任务执行时候选中的默认数据库
@@ -188,6 +195,7 @@ class TaskResultInfo extends AbstractModel
      * @param string $DisplayFormat 控制台展示格式。table：表格展示 text：文本展示
      * @param integer $TotalTime 任务耗时，单位： ms
      * @param float $QueryResultTime 获取结果消耗的时间
+     * @param string $ResultSetEncode base64 编码结果集
      */
     function __construct()
     {
@@ -285,6 +293,10 @@ class TaskResultInfo extends AbstractModel
 
         if (array_key_exists("QueryResultTime",$param) and $param["QueryResultTime"] !== null) {
             $this->QueryResultTime = $param["QueryResultTime"];
+        }
+
+        if (array_key_exists("ResultSetEncode",$param) and $param["ResultSetEncode"] !== null) {
+            $this->ResultSetEncode = $param["ResultSetEncode"];
         }
     }
 }

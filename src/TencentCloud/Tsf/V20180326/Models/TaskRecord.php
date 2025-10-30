@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,22 +24,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskName(string $TaskName) 设置任务名称
  * @method string getTaskType() 获取任务类型
  * @method void setTaskType(string $TaskType) 设置任务类型
- * @method string getExecuteType() 获取执行类型
- * @method void setExecuteType(string $ExecuteType) 设置执行类型
+ * @method string getExecuteType() 获取任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
+ * @method void setExecuteType(string $ExecuteType) 设置任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
  * @method string getTaskContent() 获取任务内容，长度限制65535字节
  * @method void setTaskContent(string $TaskContent) 设置任务内容，长度限制65535字节
  * @method string getGroupId() 获取分组ID
  * @method void setGroupId(string $GroupId) 设置分组ID
- * @method integer getTimeOut() 获取超时时间
- * @method void setTimeOut(integer $TimeOut) 设置超时时间
+ * @method integer getTimeOut() 获取超时时间，单位：毫秒。
+ * @method void setTimeOut(integer $TimeOut) 设置超时时间，单位：毫秒。
  * @method integer getRetryCount() 获取重试次数
  * @method void setRetryCount(integer $RetryCount) 设置重试次数
- * @method integer getRetryInterval() 获取重试间隔
- * @method void setRetryInterval(integer $RetryInterval) 设置重试间隔
+ * @method integer getRetryInterval() 获取重试间隔，单位：毫秒。
+ * @method void setRetryInterval(integer $RetryInterval) 设置重试间隔，单位：毫秒。
  * @method TaskRule getTaskRule() 获取触发规则
  * @method void setTaskRule(TaskRule $TaskRule) 设置触发规则
- * @method string getTaskState() 获取是否启用任务,ENABLED/DISABLED
- * @method void setTaskState(string $TaskState) 设置是否启用任务,ENABLED/DISABLED
+ * @method string getTaskState() 获取任务启用状态。一共2种状态可选，ENABLED：启用，DISABLED：停用
+ * @method void setTaskState(string $TaskState) 设置任务启用状态。一共2种状态可选，ENABLED：启用，DISABLED：停用
  * @method string getTaskId() 获取任务ID
  * @method void setTaskId(string $TaskId) 设置任务ID
  * @method string getSuccessOperator() 获取判断任务成功的操作符
@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBelongFlowIds(array $BelongFlowIds) 设置所属工作流ID
  * @method string getTaskLogId() 获取任务历史ID
  * @method void setTaskLogId(string $TaskLogId) 设置任务历史ID
- * @method string getTriggerType() 获取触发类型
- * @method void setTriggerType(string $TriggerType) 设置触发类型
+ * @method string getTriggerType() 获取触发类型，一共3种类型，WorkFlow：工作流触发，Cron：定时触发，FixRate：周期触发
+ * @method void setTriggerType(string $TriggerType) 设置触发类型，一共3种类型，WorkFlow：工作流触发，Cron：定时触发，FixRate：周期触发
  * @method string getTaskArgument() 获取任务参数，长度限制10000个字符
  * @method void setTaskArgument(string $TaskArgument) 设置任务参数，长度限制10000个字符
  */
@@ -74,7 +74,7 @@ class TaskRecord extends AbstractModel
     public $TaskType;
 
     /**
-     * @var string 执行类型
+     * @var string 任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
      */
     public $ExecuteType;
 
@@ -89,7 +89,7 @@ class TaskRecord extends AbstractModel
     public $GroupId;
 
     /**
-     * @var integer 超时时间
+     * @var integer 超时时间，单位：毫秒。
      */
     public $TimeOut;
 
@@ -99,7 +99,7 @@ class TaskRecord extends AbstractModel
     public $RetryCount;
 
     /**
-     * @var integer 重试间隔
+     * @var integer 重试间隔，单位：毫秒。
      */
     public $RetryInterval;
 
@@ -109,7 +109,7 @@ class TaskRecord extends AbstractModel
     public $TaskRule;
 
     /**
-     * @var string 是否启用任务,ENABLED/DISABLED
+     * @var string 任务启用状态。一共2种状态可选，ENABLED：启用，DISABLED：停用
      */
     public $TaskState;
 
@@ -154,7 +154,7 @@ class TaskRecord extends AbstractModel
     public $TaskLogId;
 
     /**
-     * @var string 触发类型
+     * @var string 触发类型，一共3种类型，WorkFlow：工作流触发，Cron：定时触发，FixRate：周期触发
      */
     public $TriggerType;
 
@@ -166,14 +166,14 @@ class TaskRecord extends AbstractModel
     /**
      * @param string $TaskName 任务名称
      * @param string $TaskType 任务类型
-     * @param string $ExecuteType 执行类型
+     * @param string $ExecuteType 任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
      * @param string $TaskContent 任务内容，长度限制65535字节
      * @param string $GroupId 分组ID
-     * @param integer $TimeOut 超时时间
+     * @param integer $TimeOut 超时时间，单位：毫秒。
      * @param integer $RetryCount 重试次数
-     * @param integer $RetryInterval 重试间隔
+     * @param integer $RetryInterval 重试间隔，单位：毫秒。
      * @param TaskRule $TaskRule 触发规则
-     * @param string $TaskState 是否启用任务,ENABLED/DISABLED
+     * @param string $TaskState 任务启用状态。一共2种状态可选，ENABLED：启用，DISABLED：停用
      * @param string $TaskId 任务ID
      * @param string $SuccessOperator 判断任务成功的操作符
      * @param integer $SuccessRatio 判断任务成功的阈值
@@ -182,7 +182,7 @@ class TaskRecord extends AbstractModel
      * @param array $ShardArguments 分片参数
      * @param array $BelongFlowIds 所属工作流ID
      * @param string $TaskLogId 任务历史ID
-     * @param string $TriggerType 触发类型
+     * @param string $TriggerType 触发类型，一共3种类型，WorkFlow：工作流触发，Cron：定时触发，FixRate：周期触发
      * @param string $TaskArgument 任务参数，长度限制10000个字符
      */
     function __construct()

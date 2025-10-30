@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 某个地域可用区下的规格售卖状态。
  *
- * @method string getZone() 获取规格地域
- * @method void setZone(string $Zone) 设置规格地域
- * @method string getRegion() 获取规格可用区
- * @method void setRegion(string $Region) 设置规格可用区
+ * @method string getZone() 获取规格可用区
+ * @method void setZone(string $Zone) 设置规格可用区
+ * @method string getRegion() 获取规格地域
+ * @method void setRegion(string $Region) 设置规格地域
  * @method integer getStatus() 获取规格在该可用区的售卖状态 1-正常 2-关闭售卖但是可以升级 3-完全关闭售卖
  * @method void setStatus(integer $Status) 设置规格在该可用区的售卖状态 1-正常 2-关闭售卖但是可以升级 3-完全关闭售卖
  */
 class ZoneStatus extends AbstractModel
 {
     /**
-     * @var string 规格地域
+     * @var string 规格可用区
      */
     public $Zone;
 
     /**
-     * @var string 规格可用区
+     * @var string 规格地域
      */
     public $Region;
 
@@ -45,8 +45,8 @@ class ZoneStatus extends AbstractModel
     public $Status;
 
     /**
-     * @param string $Zone 规格地域
-     * @param string $Region 规格可用区
+     * @param string $Zone 规格可用区
+     * @param string $Region 规格地域
      * @param integer $Status 规格在该可用区的售卖状态 1-正常 2-关闭售卖但是可以升级 3-完全关闭售卖
      */
     function __construct()

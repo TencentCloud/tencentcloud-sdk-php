@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,14 +42,20 @@ use TencentCloud\Common\AbstractModel;
 
 <ul><li> **1** :  动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
 
+
+
 注：
-`使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
+1. `使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
+2. 此参数在嵌入式场景下无效。
  * @method void setFillType(integer $FillType) 设置签署人信息补充类型，默认无需补充。
 
 <ul><li> **1** :  动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
 
+
+
 注：
-`使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
+1. `使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
+2. 此参数在嵌入式场景下无效。
  * @method string getFlowReadLimit() 获取签署人阅读合同限制参数
  <br/>取值：
 <ul>
@@ -107,8 +113,11 @@ class ApproverOption extends AbstractModel
 
 <ul><li> **1** :  动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
 
+
+
 注：
-`使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
+1. `使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
+2. 此参数在嵌入式场景下无效。
      */
     public $FillType;
 
@@ -148,8 +157,11 @@ class ApproverOption extends AbstractModel
 
 <ul><li> **1** :  动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
 
+
+
 注：
-`使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
+1. `使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
+2. 此参数在嵌入式场景下无效。
      * @param string $FlowReadLimit 签署人阅读合同限制参数
  <br/>取值：
 <ul>

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -88,10 +88,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterName(string $ClusterName) 设置集群名字
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLatestJobConfigVersion() 获取最新配置版本号
+ * @method integer getLatestJobConfigVersion() 获取最新配置版本号，包括已经删除的版本
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLatestJobConfigVersion(integer $LatestJobConfigVersion) 设置最新配置版本号
+ * @method void setLatestJobConfigVersion(integer $LatestJobConfigVersion) 设置最新配置版本号，包括已经删除的版本
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLatestValidJobConfigVersion() 获取最新的版本号，不包括已经删除的版本号
+ * @method void setLatestValidJobConfigVersion(integer $LatestValidJobConfigVersion) 设置最新的版本号，不包括已经删除的版本号
  * @method integer getPublishedJobConfigVersion() 获取已发布的配置版本
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublishedJobConfigVersion(integer $PublishedJobConfigVersion) 设置已发布的配置版本
@@ -178,6 +180,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgressDesc(string $ProgressDesc) 设置操作中描述
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getContinueAlarm() 获取停止持续告警
+ * @method void setContinueAlarm(integer $ContinueAlarm) 设置停止持续告警
+ * @method integer getRestartCount() 获取作业重启次数
+ * @method void setRestartCount(integer $RestartCount) 设置作业重启次数
  */
 class JobV1 extends AbstractModel
 {
@@ -284,10 +290,15 @@ class JobV1 extends AbstractModel
     public $ClusterName;
 
     /**
-     * @var integer 最新配置版本号
+     * @var integer 最新配置版本号，包括已经删除的版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LatestJobConfigVersion;
+
+    /**
+     * @var integer 最新的版本号，不包括已经删除的版本号
+     */
+    public $LatestValidJobConfigVersion;
 
     /**
      * @var integer 已发布的配置版本
@@ -417,6 +428,16 @@ class JobV1 extends AbstractModel
     public $ProgressDesc;
 
     /**
+     * @var integer 停止持续告警
+     */
+    public $ContinueAlarm;
+
+    /**
+     * @var integer 作业重启次数
+     */
+    public $RestartCount;
+
+    /**
      * @param string $JobId 作业ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域
@@ -451,8 +472,9 @@ class JobV1 extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterName 集群名字
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $LatestJobConfigVersion 最新配置版本号
+     * @param integer $LatestJobConfigVersion 最新配置版本号，包括已经删除的版本
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LatestValidJobConfigVersion 最新的版本号，不包括已经删除的版本号
      * @param integer $PublishedJobConfigVersion 已发布的配置版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RunningCuNum 运行的CU数量
@@ -496,6 +518,8 @@ class JobV1 extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProgressDesc 操作中描述
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ContinueAlarm 停止持续告警
+     * @param integer $RestartCount 作业重启次数
      */
     function __construct()
     {
@@ -580,6 +604,10 @@ class JobV1 extends AbstractModel
 
         if (array_key_exists("LatestJobConfigVersion",$param) and $param["LatestJobConfigVersion"] !== null) {
             $this->LatestJobConfigVersion = $param["LatestJobConfigVersion"];
+        }
+
+        if (array_key_exists("LatestValidJobConfigVersion",$param) and $param["LatestValidJobConfigVersion"] !== null) {
+            $this->LatestValidJobConfigVersion = $param["LatestValidJobConfigVersion"];
         }
 
         if (array_key_exists("PublishedJobConfigVersion",$param) and $param["PublishedJobConfigVersion"] !== null) {
@@ -670,6 +698,14 @@ class JobV1 extends AbstractModel
 
         if (array_key_exists("ProgressDesc",$param) and $param["ProgressDesc"] !== null) {
             $this->ProgressDesc = $param["ProgressDesc"];
+        }
+
+        if (array_key_exists("ContinueAlarm",$param) and $param["ContinueAlarm"] !== null) {
+            $this->ContinueAlarm = $param["ContinueAlarm"];
+        }
+
+        if (array_key_exists("RestartCount",$param) and $param["RestartCount"] !== null) {
+            $this->RestartCount = $param["RestartCount"];
         }
     }
 }

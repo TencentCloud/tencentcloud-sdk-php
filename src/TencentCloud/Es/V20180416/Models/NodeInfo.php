@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -55,6 +55,10 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDiskEnhance() 获取/
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskEnhance(integer $DiskEnhance) 设置/
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method GpuInfo getGpuInfo() 获取节点Gpu信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGpuInfo(GpuInfo $GpuInfo) 设置节点Gpu信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodeInfo extends AbstractModel
@@ -122,6 +126,12 @@ class NodeInfo extends AbstractModel
     public $DiskEnhance;
 
     /**
+     * @var GpuInfo 节点Gpu信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GpuInfo;
+
+    /**
      * @param integer $NodeNum 节点数量
      * @param string $NodeType 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      * @param string $Type 节点类型<li>hotData: 热数据节点</li>
@@ -139,6 +149,8 @@ class NodeInfo extends AbstractModel
      * @param integer $MemSize 内存大小，单位GB
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DiskEnhance /
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GpuInfo $GpuInfo 节点Gpu信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -197,6 +209,11 @@ class NodeInfo extends AbstractModel
 
         if (array_key_exists("DiskEnhance",$param) and $param["DiskEnhance"] !== null) {
             $this->DiskEnhance = $param["DiskEnhance"];
+        }
+
+        if (array_key_exists("GpuInfo",$param) and $param["GpuInfo"] !== null) {
+            $this->GpuInfo = new GpuInfo();
+            $this->GpuInfo->deserialize($param["GpuInfo"]);
         }
     }
 }

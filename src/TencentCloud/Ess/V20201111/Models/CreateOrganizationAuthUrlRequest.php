@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -54,8 +54,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniformSocialCreditCode(string $UniformSocialCreditCode) 设置企业统一社会信用代码
  * @method string getLegalName() 获取企业法人的姓名
  * @method void setLegalName(string $LegalName) 设置企业法人的姓名
- * @method string getAutoJumpUrl() 获取认证完成跳回的链接，最长500个字符
- * @method void setAutoJumpUrl(string $AutoJumpUrl) 设置认证完成跳回的链接，最长500个字符
+ * @method string getAutoJumpUrl() 获取<font color="red">即将废弃</font>，入参请使用JumpEvents。
+认证完成跳回的链接，最长500个字符。
+
+ * @method void setAutoJumpUrl(string $AutoJumpUrl) 设置<font color="red">即将废弃</font>，入参请使用JumpEvents。
+认证完成跳回的链接，最长500个字符。
+
  * @method string getOrganizationAddress() 获取营业执照企业地址
  * @method void setOrganizationAddress(string $OrganizationAddress) 设置营业执照企业地址
  * @method string getAdminName() 获取认证人姓名
@@ -156,6 +160,40 @@ p.s. 如果上传授权书 ，需遵循以下条件
 p.s. 如果上传授权书 ，需遵循以下条件 
 1.  超管的信息（超管姓名，超管手机号）必须为必填参数。
 2.  认证方式AuthorizationTypes必须只能是上传授权书方式 
+ * @method string getUserData() 获取调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 4096长度。
+
+在. 企业引导企业实名认证后回调中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_staffs" target="_blank">回调通知</a>模块。
+ * @method void setUserData(string $UserData) 设置调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 4096长度。
+
+在. 企业引导企业实名认证后回调中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_staffs" target="_blank">回调通知</a>模块。
+ * @method string getBankAccountNumber() 获取组织机构对公打款账号，账户名跟企业名称一致。
+
+p.s.
+只有认证方式是授权书+对公打款时才生效。
+ * @method void setBankAccountNumber(string $BankAccountNumber) 设置组织机构对公打款账号，账户名跟企业名称一致。
+
+p.s.
+只有认证方式是授权书+对公打款时才生效。
+ * @method boolean getBankAccountNumberSame() 获取对方打开链接认证时，对公打款账号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+
+p.s. 仅在对公打款不为空时有效
+ * @method void setBankAccountNumberSame(boolean $BankAccountNumberSame) 设置对方打开链接认证时，对公打款账号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+
+p.s. 仅在对公打款不为空时有效
+ * @method array getJumpEvents() 获取跳转事件，其中包括认证期间收录，授权书审核，企业认证的回跳事件。
+p.s.
+Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font>
+如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 
+
+p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
+ * @method void setJumpEvents(array $JumpEvents) 设置跳转事件，其中包括认证期间收录，授权书审核，企业认证的回跳事件。
+p.s.
+Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font>
+如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 
+
+p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
  */
 class CreateOrganizationAuthUrlRequest extends AbstractModel
 {
@@ -197,7 +235,9 @@ class CreateOrganizationAuthUrlRequest extends AbstractModel
     public $LegalName;
 
     /**
-     * @var string 认证完成跳回的链接，最长500个字符
+     * @var string <font color="red">即将废弃</font>，入参请使用JumpEvents。
+认证完成跳回的链接，最长500个字符。
+
      */
     public $AutoJumpUrl;
 
@@ -312,6 +352,39 @@ p.s. 如果上传授权书 ，需遵循以下条件
     public $PowerOfAttorneys;
 
     /**
+     * @var string 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 4096长度。
+
+在. 企业引导企业实名认证后回调中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_staffs" target="_blank">回调通知</a>模块。
+     */
+    public $UserData;
+
+    /**
+     * @var string 组织机构对公打款账号，账户名跟企业名称一致。
+
+p.s.
+只有认证方式是授权书+对公打款时才生效。
+     */
+    public $BankAccountNumber;
+
+    /**
+     * @var boolean 对方打开链接认证时，对公打款账号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+
+p.s. 仅在对公打款不为空时有效
+     */
+    public $BankAccountNumberSame;
+
+    /**
+     * @var array 跳转事件，其中包括认证期间收录，授权书审核，企业认证的回跳事件。
+p.s.
+Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font>
+如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 
+
+p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
+     */
+    public $JumpEvents;
+
+    /**
      * @param UserInfo $Operator 操作人信息
      * @param array $AuthorizationTypes 指定授权方式 支持多选:
 
@@ -329,7 +402,9 @@ p.s. 如果上传授权书 ，需遵循以下条件
 
      * @param string $UniformSocialCreditCode 企业统一社会信用代码
      * @param string $LegalName 企业法人的姓名
-     * @param string $AutoJumpUrl 认证完成跳回的链接，最长500个字符
+     * @param string $AutoJumpUrl <font color="red">即将废弃</font>，入参请使用JumpEvents。
+认证完成跳回的链接，最长500个字符。
+
      * @param string $OrganizationAddress 营业执照企业地址
      * @param string $AdminName 认证人姓名
      * @param string $AdminMobile 认证人手机号
@@ -380,6 +455,23 @@ p.s. 仅在企业名称不为空时有效
 p.s. 如果上传授权书 ，需遵循以下条件 
 1.  超管的信息（超管姓名，超管手机号）必须为必填参数。
 2.  认证方式AuthorizationTypes必须只能是上传授权书方式 
+     * @param string $UserData 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 4096长度。
+
+在. 企业引导企业实名认证后回调中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_staffs" target="_blank">回调通知</a>模块。
+     * @param string $BankAccountNumber 组织机构对公打款账号，账户名跟企业名称一致。
+
+p.s.
+只有认证方式是授权书+对公打款时才生效。
+     * @param boolean $BankAccountNumberSame 对方打开链接认证时，对公打款账号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+
+p.s. 仅在对公打款不为空时有效
+     * @param array $JumpEvents 跳转事件，其中包括认证期间收录，授权书审核，企业认证的回跳事件。
+p.s.
+Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font>
+如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 
+
+p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
      */
     function __construct()
     {
@@ -477,6 +569,27 @@ p.s. 如果上传授权书 ，需遵循以下条件
 
         if (array_key_exists("PowerOfAttorneys",$param) and $param["PowerOfAttorneys"] !== null) {
             $this->PowerOfAttorneys = $param["PowerOfAttorneys"];
+        }
+
+        if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
+            $this->UserData = $param["UserData"];
+        }
+
+        if (array_key_exists("BankAccountNumber",$param) and $param["BankAccountNumber"] !== null) {
+            $this->BankAccountNumber = $param["BankAccountNumber"];
+        }
+
+        if (array_key_exists("BankAccountNumberSame",$param) and $param["BankAccountNumberSame"] !== null) {
+            $this->BankAccountNumberSame = $param["BankAccountNumberSame"];
+        }
+
+        if (array_key_exists("JumpEvents",$param) and $param["JumpEvents"] !== null) {
+            $this->JumpEvents = [];
+            foreach ($param["JumpEvents"] as $key => $value){
+                $obj = new JumpEvent();
+                $obj->deserialize($value);
+                array_push($this->JumpEvents, $obj);
+            }
         }
     }
 }

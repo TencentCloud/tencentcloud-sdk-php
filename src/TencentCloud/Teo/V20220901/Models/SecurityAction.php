@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,6 +27,7 @@ use TencentCloud\Common\AbstractModel;
 <li>Disabled：未启用，不启用指定规则；</li>
 <li>Allow：允许访问，但延迟处理请求；</li>
 <li>Challenge：挑战，响应挑战内容；</li>
+<li>Trans：放行，允许请求直接访问站点资源；</li>
 <li>BlockIP：待废弃，IP 封禁；</li>
 <li>ReturnCustomPage：待废弃，使用指定页面拦截；</li>
 <li>JSChallenge：待废弃，JavaScript 挑战；</li>
@@ -38,6 +39,7 @@ use TencentCloud\Common\AbstractModel;
 <li>Disabled：未启用，不启用指定规则；</li>
 <li>Allow：允许访问，但延迟处理请求；</li>
 <li>Challenge：挑战，响应挑战内容；</li>
+<li>Trans：放行，允许请求直接访问站点资源；</li>
 <li>BlockIP：待废弃，IP 封禁；</li>
 <li>ReturnCustomPage：待废弃，使用指定页面拦截；</li>
 <li>JSChallenge：待废弃，JavaScript 挑战；</li>
@@ -46,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDenyActionParameters(DenyActionParameters $DenyActionParameters) 设置当 Name 为 Deny 时的附加参数。
  * @method RedirectActionParameters getRedirectActionParameters() 获取当 Name 为 Redirect 时的附加参数。
  * @method void setRedirectActionParameters(RedirectActionParameters $RedirectActionParameters) 设置当 Name 为 Redirect 时的附加参数。
+ * @method AllowActionParameters getAllowActionParameters() 获取当 Name 为 Allow 时的附加参数。
+ * @method void setAllowActionParameters(AllowActionParameters $AllowActionParameters) 设置当 Name 为 Allow 时的附加参数。
  * @method ChallengeActionParameters getChallengeActionParameters() 获取当 Name 为 Challenge 时的附加参数。
  * @method void setChallengeActionParameters(ChallengeActionParameters $ChallengeActionParameters) 设置当 Name 为 Challenge 时的附加参数。
  * @method BlockIPActionParameters getBlockIPActionParameters() 获取待废弃，当 Name 为 BlockIP 时的附加参数。
@@ -63,6 +67,7 @@ class SecurityAction extends AbstractModel
 <li>Disabled：未启用，不启用指定规则；</li>
 <li>Allow：允许访问，但延迟处理请求；</li>
 <li>Challenge：挑战，响应挑战内容；</li>
+<li>Trans：放行，允许请求直接访问站点资源；</li>
 <li>BlockIP：待废弃，IP 封禁；</li>
 <li>ReturnCustomPage：待废弃，使用指定页面拦截；</li>
 <li>JSChallenge：待废弃，JavaScript 挑战；</li>
@@ -79,6 +84,11 @@ class SecurityAction extends AbstractModel
      * @var RedirectActionParameters 当 Name 为 Redirect 时的附加参数。
      */
     public $RedirectActionParameters;
+
+    /**
+     * @var AllowActionParameters 当 Name 为 Allow 时的附加参数。
+     */
+    public $AllowActionParameters;
 
     /**
      * @var ChallengeActionParameters 当 Name 为 Challenge 时的附加参数。
@@ -103,12 +113,14 @@ class SecurityAction extends AbstractModel
 <li>Disabled：未启用，不启用指定规则；</li>
 <li>Allow：允许访问，但延迟处理请求；</li>
 <li>Challenge：挑战，响应挑战内容；</li>
+<li>Trans：放行，允许请求直接访问站点资源；</li>
 <li>BlockIP：待废弃，IP 封禁；</li>
 <li>ReturnCustomPage：待废弃，使用指定页面拦截；</li>
 <li>JSChallenge：待废弃，JavaScript 挑战；</li>
 <li>ManagedChallenge：待废弃，托管挑战。</li>
      * @param DenyActionParameters $DenyActionParameters 当 Name 为 Deny 时的附加参数。
      * @param RedirectActionParameters $RedirectActionParameters 当 Name 为 Redirect 时的附加参数。
+     * @param AllowActionParameters $AllowActionParameters 当 Name 为 Allow 时的附加参数。
      * @param ChallengeActionParameters $ChallengeActionParameters 当 Name 为 Challenge 时的附加参数。
      * @param BlockIPActionParameters $BlockIPActionParameters 待废弃，当 Name 为 BlockIP 时的附加参数。
      * @param ReturnCustomPageActionParameters $ReturnCustomPageActionParameters 待废弃，当 Name 为 ReturnCustomPage 时的附加参数。
@@ -138,6 +150,11 @@ class SecurityAction extends AbstractModel
         if (array_key_exists("RedirectActionParameters",$param) and $param["RedirectActionParameters"] !== null) {
             $this->RedirectActionParameters = new RedirectActionParameters();
             $this->RedirectActionParameters->deserialize($param["RedirectActionParameters"]);
+        }
+
+        if (array_key_exists("AllowActionParameters",$param) and $param["AllowActionParameters"] !== null) {
+            $this->AllowActionParameters = new AllowActionParameters();
+            $this->AllowActionParameters->deserialize($param["AllowActionParameters"]);
         }
 
         if (array_key_exists("ChallengeActionParameters",$param) and $param["ChallengeActionParameters"] !== null) {

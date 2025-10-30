@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,10 +32,17 @@ use TencentCloud\Ctem\V20231128\Models as Models;
  * @method Models\DescribeDarkWebsResponse DescribeDarkWebs(Models\DescribeDarkWebsRequest $req) 查看暗网数据
  * @method Models\DescribeDomainsResponse DescribeDomains(Models\DescribeDomainsRequest $req) 查看主域名数据
  * @method Models\DescribeEnterprisesResponse DescribeEnterprises(Models\DescribeEnterprisesRequest $req) 查看企业架构数据
+ * @method Models\DescribeFakeAppsResponse DescribeFakeApps(Models\DescribeFakeAppsRequest $req) 查询仿冒应用
+ * @method Models\DescribeFakeMiniProgramsResponse DescribeFakeMiniPrograms(Models\DescribeFakeMiniProgramsRequest $req) 查询仿冒小程序
+ * @method Models\DescribeFakeWebsitesResponse DescribeFakeWebsites(Models\DescribeFakeWebsitesRequest $req) 查询仿冒网站
+ * @method Models\DescribeFakeWechatOfficialsResponse DescribeFakeWechatOfficials(Models\DescribeFakeWechatOfficialsRequest $req) 查询仿冒公众号
  * @method Models\DescribeGithubsResponse DescribeGithubs(Models\DescribeGithubsRequest $req) 查看Github泄露数据
  * @method Models\DescribeHttpsResponse DescribeHttps(Models\DescribeHttpsRequest $req) 查看http数据
  * @method Models\DescribeJobRecordDetailsResponse DescribeJobRecordDetails(Models\DescribeJobRecordDetailsRequest $req) 查看链路详情
  * @method Models\DescribeJobRecordsResponse DescribeJobRecords(Models\DescribeJobRecordsRequest $req) 查看任务运行记录列表
+ * @method Models\DescribeLeakageCodesResponse DescribeLeakageCodes(Models\DescribeLeakageCodesRequest $req) 获取代码泄露数据
+ * @method Models\DescribeLeakageDatasResponse DescribeLeakageDatas(Models\DescribeLeakageDatasRequest $req) 获取数据泄露事件
+ * @method Models\DescribeLeakageEmailsResponse DescribeLeakageEmails(Models\DescribeLeakageEmailsRequest $req) 获取邮箱泄露数据
  * @method Models\DescribeManagesResponse DescribeManages(Models\DescribeManagesRequest $req) 查看后台管理数据
  * @method Models\DescribeNetDisksResponse DescribeNetDisks(Models\DescribeNetDisksRequest $req) 查看网盘泄露数据
  * @method Models\DescribePortsResponse DescribePorts(Models\DescribePortsRequest $req) 查看端口数据
@@ -47,6 +54,7 @@ use TencentCloud\Ctem\V20231128\Models as Models;
  * @method Models\DescribeWechatAppletsResponse DescribeWechatApplets(Models\DescribeWechatAppletsRequest $req) 查看微信小程序
  * @method Models\DescribeWechatOfficialAccountsResponse DescribeWechatOfficialAccounts(Models\DescribeWechatOfficialAccountsRequest $req) 查看公众号数据
  * @method Models\ModifyCustomerResponse ModifyCustomer(Models\ModifyCustomerRequest $req) 编辑企业
+ * @method Models\ModifyLabelResponse ModifyLabel(Models\ModifyLabelRequest $req) 修改标签
  * @method Models\StopJobRecordResponse StopJobRecord(Models\StopJobRecordRequest $req) 停止扫描
  */
 

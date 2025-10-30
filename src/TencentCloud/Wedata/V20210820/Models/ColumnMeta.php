@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -71,6 +71,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInfluxCategory() 获取influxdb字段类别
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInfluxCategory(string $InfluxCategory) 设置influxdb字段类别
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSpecification() 获取字段使用说明
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSpecification(string $Specification) 设置字段使用说明
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ColumnMeta extends AbstractModel
@@ -154,6 +158,12 @@ class ColumnMeta extends AbstractModel
     public $InfluxCategory;
 
     /**
+     * @var string 字段使用说明
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Specification;
+
+    /**
      * @param string $NameEn 字段英文名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NameCn 字段中文名称
@@ -179,6 +189,8 @@ class ColumnMeta extends AbstractModel
      * @param integer $LevelRank 安全等级：值范围1-10
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InfluxCategory influxdb字段类别
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Specification 字段使用说明
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -249,6 +261,10 @@ class ColumnMeta extends AbstractModel
 
         if (array_key_exists("InfluxCategory",$param) and $param["InfluxCategory"] !== null) {
             $this->InfluxCategory = $param["InfluxCategory"];
+        }
+
+        if (array_key_exists("Specification",$param) and $param["Specification"] !== null) {
+            $this->Specification = $param["Specification"];
         }
     }
 }

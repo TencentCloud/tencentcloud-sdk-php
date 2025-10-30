@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据加工的资源信息
  *
- * @method string getTopicId() 获取目标主题id
- * @method void setTopicId(string $TopicId) 设置目标主题id
+ * @method string getTopicId() 获取日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+ * @method void setTopicId(string $TopicId) 设置日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  * @method string getAlias() 获取别名
+限制：不能包含字符 |。
  * @method void setAlias(string $Alias) 设置别名
+限制：不能包含字符 |。
  */
 class DataTransformResouceInfo extends AbstractModel
 {
     /**
-     * @var string 目标主题id
+     * @var string 日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public $TopicId;
 
     /**
      * @var string 别名
+限制：不能包含字符 |。
      */
     public $Alias;
 
     /**
-     * @param string $TopicId 目标主题id
+     * @param string $TopicId 日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      * @param string $Alias 别名
+限制：不能包含字符 |。
      */
     function __construct()
     {

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -41,6 +41,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\BatchStopWorkflowsByIdsResponse BatchStopWorkflowsByIds(Models\BatchStopWorkflowsByIdsRequest $req) 批量停止工作流
  * @method Models\BatchSuspendIntegrationTasksResponse BatchSuspendIntegrationTasks(Models\BatchSuspendIntegrationTasksRequest $req) 批量暂停集成任务
  * @method Models\BatchUpdateIntegrationTasksResponse BatchUpdateIntegrationTasks(Models\BatchUpdateIntegrationTasksRequest $req) 批量更新集成任务（暂时仅支持批量更新责任人）
+ * @method Models\BindProjectExecutorResourceResponse BindProjectExecutorResource(Models\BindProjectExecutorResourceRequest $req) 商业化版本：执行资源组-资源包绑定项目
  * @method Models\CheckAlarmRegularNameExistResponse CheckAlarmRegularNameExist(Models\CheckAlarmRegularNameExistRequest $req) 判断告警规则重名
  * @method Models\CheckIntegrationNodeNameExistsResponse CheckIntegrationNodeNameExists(Models\CheckIntegrationNodeNameExistsRequest $req) 判断集成节点名称是否存在
  * @method Models\CheckIntegrationTaskNameExistsResponse CheckIntegrationTaskNameExists(Models\CheckIntegrationTaskNameExistsRequest $req) 判断集成任务名称是否存在
@@ -48,6 +49,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\CommitIntegrationTaskResponse CommitIntegrationTask(Models\CommitIntegrationTaskRequest $req) 提交集成任务
  * @method Models\CommitRuleGroupTaskResponse CommitRuleGroupTask(Models\CommitRuleGroupTaskRequest $req) 提交规则组运行任务接口
  * @method Models\CountOpsInstanceStateResponse CountOpsInstanceState(Models\CountOpsInstanceStateRequest $req) 统计任务实例状态
+ * @method Models\CreateBaseProjectResponse CreateBaseProject(Models\CreateBaseProjectRequest $req) 创建项目 仅项目本身，不包含集群等信息
  * @method Models\CreateCodeTemplateResponse CreateCodeTemplate(Models\CreateCodeTemplateRequest $req) 创建代码模版
  * @method Models\CreateCodeTemplateVersionResponse CreateCodeTemplateVersion(Models\CreateCodeTemplateVersionRequest $req) 提交代码模版
  * @method Models\CreateCustomFunctionResponse CreateCustomFunction(Models\CreateCustomFunctionRequest $req) 创建用户自定义函数
@@ -89,6 +91,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DeleteRuleTemplateResponse DeleteRuleTemplate(Models\DeleteRuleTemplateRequest $req) 删除规则模板
  * @method Models\DeleteTaskAlarmRegularResponse DeleteTaskAlarmRegular(Models\DeleteTaskAlarmRegularRequest $req) 删除任务告警规则
  * @method Models\DeleteTaskDsResponse DeleteTaskDs(Models\DeleteTaskDsRequest $req) 删除编排空间任务
+ * @method Models\DeleteTaskLineageResponse DeleteTaskLineage(Models\DeleteTaskLineageRequest $req) 删除任务血缘信息
  * @method Models\DeleteWorkflowByIdResponse DeleteWorkflowById(Models\DeleteWorkflowByIdRequest $req) 通过工作流Id删除工作流
  * @method Models\DescribeAlarmEventsResponse DescribeAlarmEvents(Models\DescribeAlarmEventsRequest $req) 告警事件列表
  * @method Models\DescribeAlarmReceiverResponse DescribeAlarmReceiver(Models\DescribeAlarmReceiverRequest $req) 告警接收人详情
@@ -111,9 +114,6 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeDependOpsTasksResponse DescribeDependOpsTasks(Models\DescribeDependOpsTasksRequest $req) 根据层级查找上/下游任务节点
  * @method Models\DescribeDependTaskListsResponse DescribeDependTaskLists(Models\DescribeDependTaskListsRequest $req) 通过taskIds查询task详情列表
  * @method Models\DescribeDimensionScoreResponse DescribeDimensionScore(Models\DescribeDimensionScoreRequest $req) 质量报告-查询质量评分
- * @method Models\DescribeDrInstancePageResponse DescribeDrInstancePage(Models\DescribeDrInstancePageRequest $req) 无效API，没有上线过的业务功能
-
-分页查询试运行实例列表
  * @method Models\DescribeDsFolderTreeResponse DescribeDsFolderTree(Models\DescribeDsFolderTreeRequest $req) 查询目录树
  * @method Models\DescribeDsParentFolderTreeResponse DescribeDsParentFolderTree(Models\DescribeDsParentFolderTreeRequest $req) 查询父目录树，用于工作流、任务定位
  * @method Models\DescribeDsTaskVersionInfoResponse DescribeDsTaskVersionInfo(Models\DescribeDsTaskVersionInfoRequest $req) 查看任务版本详细信息
@@ -167,7 +167,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeRealTimeTaskSpeedResponse DescribeRealTimeTaskSpeed(Models\DescribeRealTimeTaskSpeedRequest $req) 实时任务同步速度趋势
  * @method Models\DescribeRealViewSchemaPageResponse DescribeRealViewSchemaPage(Models\DescribeRealViewSchemaPageRequest $req) 数据集成分页获取数据库SCHEMA信息
  * @method Models\DescribeRelatedTasksByTaskIdResponse DescribeRelatedTasksByTaskId(Models\DescribeRelatedTasksByTaskIdRequest $req) 根据任务ID分页查询任务绑定监听的事件
- * @method Models\DescribeReportTaskDetailResponse DescribeReportTaskDetail(Models\DescribeReportTaskDetailRequest $req) 查询上报任务详情
+ * @method Models\DescribeReportTaskDetailResponse DescribeReportTaskDetail(Models\DescribeReportTaskDetailRequest $req) 查询上报任务详情，注意：任务执行完后，任务详情上报存在10分钟的延迟，使用接口查询任务详情时需等待任务运行完10分钟后查询
  * @method Models\DescribeReportTaskListResponse DescribeReportTaskList(Models\DescribeReportTaskListRequest $req) 查询上报任务列表
  * @method Models\DescribeResourceManagePathTreesResponse DescribeResourceManagePathTrees(Models\DescribeResourceManagePathTreesRequest $req) 获取资源管理目录树
  * @method Models\DescribeRoleListResponse DescribeRoleList(Models\DescribeRoleListRequest $req) 获取角色列表信息
@@ -198,6 +198,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeStatisticInstanceStatusTrendOpsResponse DescribeStatisticInstanceStatusTrendOps(Models\DescribeStatisticInstanceStatusTrendOpsRequest $req) 任务状态趋势
  * @method Models\DescribeStreamTaskLogListResponse DescribeStreamTaskLogList(Models\DescribeStreamTaskLogListRequest $req) 查询实时任务日志列表
  * @method Models\DescribeSuccessorOpsTaskInfosResponse DescribeSuccessorOpsTaskInfos(Models\DescribeSuccessorOpsTaskInfosRequest $req) 获取下游任务信息
+ * @method Models\DescribeSuccessorTaskInfoListResponse DescribeSuccessorTaskInfoList(Models\DescribeSuccessorTaskInfoListRequest $req) 获取下游任务信息批量
  * @method Models\DescribeTableBasicInfoResponse DescribeTableBasicInfo(Models\DescribeTableBasicInfoRequest $req) 元数据模型-表基础信息查询接口
  * @method Models\DescribeTableInfoListResponse DescribeTableInfoList(Models\DescribeTableInfoListRequest $req) 获取数据表信息
  * @method Models\DescribeTableLineageResponse DescribeTableLineage(Models\DescribeTableLineageRequest $req) 列出表血缘信息
@@ -210,15 +211,11 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeTableScoreTrendResponse DescribeTableScoreTrend(Models\DescribeTableScoreTrendRequest $req) 查询表得分趋势
  * @method Models\DescribeTaskAlarmRegulationsResponse DescribeTaskAlarmRegulations(Models\DescribeTaskAlarmRegulationsRequest $req) 查询任务告警规则列表
  * @method Models\DescribeTaskByCycleResponse DescribeTaskByCycle(Models\DescribeTaskByCycleRequest $req) 根据周期类型 查询所有任务
- * @method Models\DescribeTaskByCycleReportResponse DescribeTaskByCycleReport(Models\DescribeTaskByCycleReportRequest $req) 能够调通但该API已经没有使用了，看北京数据最后一次上报是23年10月，有接近一千万条数据历史无效数据。当前策略，云API示例修订然后已经分析出来的无效API走预下线流程。
-https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20&action=DescribeTaskByCycleReport
-这两天在分析API的时候 有较多运维大屏的原始API当前已经没有使用了，但API没有下线。预计需要专项去梳理这一系列待下线API。
-
-任务状态周期增长趋势
  * @method Models\DescribeTaskByStatusReportResponse DescribeTaskByStatusReport(Models\DescribeTaskByStatusReportRequest $req) 任务状态趋势
  * @method Models\DescribeTaskDetailDsResponse DescribeTaskDetailDs(Models\DescribeTaskDetailDsRequest $req) 查询任务具体详情【新】
  * @method Models\DescribeTaskLineageResponse DescribeTaskLineage(Models\DescribeTaskLineageRequest $req) 通过任务查询表的血缘关系
  * @method Models\DescribeTaskLockStatusResponse DescribeTaskLockStatus(Models\DescribeTaskLockStatusRequest $req) 查看任务锁状态信息
+ * @method Models\DescribeTaskParamDsResponse DescribeTaskParamDs(Models\DescribeTaskParamDsRequest $req) 查询任务引用参数
  * @method Models\DescribeTaskRunHistoryResponse DescribeTaskRunHistory(Models\DescribeTaskRunHistoryRequest $req) 分页查询任务运行历史
  * @method Models\DescribeTaskScriptResponse DescribeTaskScript(Models\DescribeTaskScriptRequest $req) 查询任务脚本。本接口已废弃，请使用接口GetPaginationTaskScript。
  * @method Models\DescribeTaskTableMetricOverviewResponse DescribeTaskTableMetricOverview(Models\DescribeTaskTableMetricOverviewRequest $req) 查询实时任务表粒度指标概览
@@ -226,6 +223,7 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
  * @method Models\DescribeTasksForCodeTemplateResponse DescribeTasksForCodeTemplate(Models\DescribeTasksForCodeTemplateRequest $req) 分页查询引用模板的任务列表
  * @method Models\DescribeTemplateDimCountResponse DescribeTemplateDimCount(Models\DescribeTemplateDimCountRequest $req) 查询规则模板维度分布情况
  * @method Models\DescribeTenantProjectsResponse DescribeTenantProjects(Models\DescribeTenantProjectsRequest $req) 租户全局范围的项目列表，与用户查看范围无关.
+ * @method Models\DescribeTestRunningRecordResponse DescribeTestRunningRecord(Models\DescribeTestRunningRecordRequest $req) 获取编排空间试运行历史
  * @method Models\DescribeThirdTaskRunLogResponse DescribeThirdTaskRunLog(Models\DescribeThirdTaskRunLogRequest $req) 获取第三方运行日志
  * @method Models\DescribeTopTableStatResponse DescribeTopTableStat(Models\DescribeTopTableStatRequest $req) 数据质量概览页面表排行接口
  * @method Models\DescribeTrendStatResponse DescribeTrendStat(Models\DescribeTrendStatRequest $req) 数据质量概览页面趋势变化接口
@@ -237,8 +235,10 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
  * @method Models\DescribeWorkflowSchedulerInfoDsResponse DescribeWorkflowSchedulerInfoDs(Models\DescribeWorkflowSchedulerInfoDsRequest $req) 获取工作流调度信息
  * @method Models\DescribeWorkflowTaskCountResponse DescribeWorkflowTaskCount(Models\DescribeWorkflowTaskCountRequest $req) 查询工作流任务数
  * @method Models\DiagnoseProResponse DiagnosePro(Models\DiagnoseProRequest $req) 实例诊断，用于诊断 INITIAL、DEPENDENCE、ALLOCATED、LAUNCHED、EVENT_LISTENING、BEFORE_ASPECT、EXPIRED、FAILED状态的实例
+ * @method Models\DisableProjectResponse DisableProject(Models\DisableProjectRequest $req) 禁用项目
  * @method Models\DownloadLogByLineResponse DownloadLogByLine(Models\DownloadLogByLineRequest $req) 按行下载日志信息
  * @method Models\DryRunDIOfflineTaskResponse DryRunDIOfflineTask(Models\DryRunDIOfflineTaskRequest $req) 调试运行集成任务
+ * @method Models\EnableProjectResponse EnableProject(Models\EnableProjectRequest $req) 启用项目
  * @method Models\FindAllFolderResponse FindAllFolder(Models\FindAllFolderRequest $req) 编排空间批量操作页面查找全部的文件夹
  * @method Models\FreezeOpsTasksResponse FreezeOpsTasks(Models\FreezeOpsTasksRequest $req) 任务运维-批量暂停任务
  * @method Models\FreezeTasksByWorkflowIdsResponse FreezeTasksByWorkflowIds(Models\FreezeTasksByWorkflowIdsRequest $req) 暂停工作流下的所有任务
@@ -248,6 +248,7 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
  * @method Models\GetFileInfoResponse GetFileInfo(Models\GetFileInfoRequest $req) 开发空间-获取数据开发脚本信息
  * @method Models\GetInstanceLogResponse GetInstanceLog(Models\GetInstanceLogRequest $req) 获取实例列表
  * @method Models\GetIntegrationNodeColumnSchemaResponse GetIntegrationNodeColumnSchema(Models\GetIntegrationNodeColumnSchemaRequest $req) 提取数据集成节点字段Schema
+ * @method Models\GetJobStatusResponse GetJobStatus(Models\GetJobStatusRequest $req) 获取异步任务执行结果
  * @method Models\GetOfflineDIInstanceListResponse GetOfflineDIInstanceList(Models\GetOfflineDIInstanceListRequest $req) 获取离线任务实例列表(新)
  * @method Models\GetOfflineInstanceListResponse GetOfflineInstanceList(Models\GetOfflineInstanceListRequest $req) 获取离线任务实例
  * @method Models\GetPaginationTaskScriptResponse GetPaginationTaskScript(Models\GetPaginationTaskScriptRequest $req) 获取带分页的任务脚本
@@ -266,6 +267,7 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
  * @method Models\ModifyIntegrationNodeResponse ModifyIntegrationNode(Models\ModifyIntegrationNodeRequest $req) 更新集成节点
  * @method Models\ModifyIntegrationTaskResponse ModifyIntegrationTask(Models\ModifyIntegrationTaskRequest $req) 更新集成任务
  * @method Models\ModifyMonitorStatusResponse ModifyMonitorStatus(Models\ModifyMonitorStatusRequest $req) 更新监控状态
+ * @method Models\ModifyProjectResponse ModifyProject(Models\ModifyProjectRequest $req) 修改项目基础信息。
  * @method Models\ModifyRuleResponse ModifyRule(Models\ModifyRuleRequest $req) 更新质量规则接口
  * @method Models\ModifyRuleGroupSubscriptionResponse ModifyRuleGroupSubscription(Models\ModifyRuleGroupSubscriptionRequest $req) 更新规则组订阅信息
  * @method Models\ModifyRuleTemplateResponse ModifyRuleTemplate(Models\ModifyRuleTemplateRequest $req) 编辑规则模板
@@ -288,9 +290,15 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
 注册事件。本接口已废弃，请使用接口RegisterDsEvent。
  * @method Models\RegisterEventListenerResponse RegisterEventListener(Models\RegisterEventListenerRequest $req) <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
 注册事件监听器。本接口已废弃，请使用接口RegisterDsEventListener。
+ * @method Models\RemoveDatabaseResponse RemoveDatabase(Models\RemoveDatabaseRequest $req) 移除database元数据
+ * @method Models\RemoveSchemaResponse RemoveSchema(Models\RemoveSchemaRequest $req) 移除schema元数据
+ * @method Models\RemoveTableResponse RemoveTable(Models\RemoveTableRequest $req) 移除table元数据
  * @method Models\RemoveWorkflowDsResponse RemoveWorkflowDs(Models\RemoveWorkflowDsRequest $req) 删除编排空间工作流
  * @method Models\RenewWorkflowOwnerDsResponse RenewWorkflowOwnerDs(Models\RenewWorkflowOwnerDsRequest $req) 批量更新工作流下任务责任人
  * @method Models\RenewWorkflowSchedulerInfoDsResponse RenewWorkflowSchedulerInfoDs(Models\RenewWorkflowSchedulerInfoDsRequest $req) 更新工作流下任务调度信息
+ * @method Models\ReportDatabaseResponse ReportDatabase(Models\ReportDatabaseRequest $req) 上报database元数据
+ * @method Models\ReportSchemaResponse ReportSchema(Models\ReportSchemaRequest $req) 上报schema元数据
+ * @method Models\ReportTableResponse ReportTable(Models\ReportTableRequest $req) 上报table元数据
  * @method Models\ReportTaskLineageResponse ReportTaskLineage(Models\ReportTaskLineageRequest $req) 血缘上报接口
  * @method Models\ResumeIntegrationTaskResponse ResumeIntegrationTask(Models\ResumeIntegrationTaskRequest $req) 继续集成任务
  * @method Models\RobAndLockIntegrationTaskResponse RobAndLockIntegrationTask(Models\RobAndLockIntegrationTaskRequest $req) 抢占锁定集成任务
@@ -314,6 +322,7 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
  * @method Models\TriggerEventResponse TriggerEvent(Models\TriggerEventRequest $req) <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
 触发事件。本接口已废弃，请使用接口TriggerDsEvent。
  * @method Models\TriggerManualTasksResponse TriggerManualTasks(Models\TriggerManualTasksRequest $req) 手动任务触发运行
+ * @method Models\UnboundProjectExecutorResourceResponse UnboundProjectExecutorResource(Models\UnboundProjectExecutorResourceRequest $req) 商业化版本：执行资源组/资源包解除绑定项目
  * @method Models\UnlockIntegrationTaskResponse UnlockIntegrationTask(Models\UnlockIntegrationTaskRequest $req) 解锁集成任务
  * @method Models\UpdateCodeTemplateResponse UpdateCodeTemplate(Models\UpdateCodeTemplateRequest $req) 更新模版
  * @method Models\UpdateDataModelRegistryInfoResponse UpdateDataModelRegistryInfo(Models\UpdateDataModelRegistryInfoRequest $req) 数语向wedata注册，提供自身cam角色信息，跳转域名、ip、端口信息等

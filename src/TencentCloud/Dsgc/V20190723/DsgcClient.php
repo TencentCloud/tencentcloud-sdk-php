@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -88,7 +88,7 @@ use TencentCloud\Dsgc\V20190723\Models as Models;
  * @method Models\DescribeDSPAAssessmentRiskTemplateVulnerableListResponse DescribeDSPAAssessmentRiskTemplateVulnerableList(Models\DescribeDSPAAssessmentRiskTemplateVulnerableListRequest $req) 风险模板页面--查询风险模板中的脆弱项配置
  * @method Models\DescribeDSPAAssessmentRisksResponse DescribeDSPAAssessmentRisks(Models\DescribeDSPAAssessmentRisksRequest $req) 获取DSPA评估风险项列表
  * @method Models\DescribeDSPAAssessmentTasksResponse DescribeDSPAAssessmentTasks(Models\DescribeDSPAAssessmentTasksRequest $req) 获取DSPA评估任务列表
- * @method Models\DescribeDSPAAssessmentTemplateControlItemsResponse DescribeDSPAAssessmentTemplateControlItems(Models\DescribeDSPAAssessmentTemplateControlItemsRequest $req) 获取DSPA评估模版关联的评估控制项列表
+ * @method Models\DescribeDSPAAssessmentTemplateControlItemsResponse DescribeDSPAAssessmentTemplateControlItems(Models\DescribeDSPAAssessmentTemplateControlItemsRequest $req) 获取DSPA评估模板关联的评估控制项列表
  * @method Models\DescribeDSPAAssessmentTemplatesResponse DescribeDSPAAssessmentTemplates(Models\DescribeDSPAAssessmentTemplatesRequest $req) 获取DSPA评估模板列表
  * @method Models\DescribeDSPACOSDataAssetBucketsResponse DescribeDSPACOSDataAssetBuckets(Models\DescribeDSPACOSDataAssetBucketsRequest $req) 获取COS敏感数据资产桶列表
  * @method Models\DescribeDSPACOSDataAssetByComplianceIdResponse DescribeDSPACOSDataAssetByComplianceId(Models\DescribeDSPACOSDataAssetByComplianceIdRequest $req) 获取COS单个模板下的敏感数据资产

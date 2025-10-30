@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,14 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskId() 获取任务唯一标识
  * @method void setTaskId(string $TaskId) 设置任务唯一标识
- * @method string getCommand() 获取控制命令，目前支持命令如下：
-
-- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本
- * @method void setCommand(string $Command) 设置控制命令，目前支持命令如下：
-
-- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本
+ * @method string getCommand() 获取控制命令，目前支持命令如下：- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本. - InvokeLLM，服务端发送文本给大模型，触发对话
+ * @method void setCommand(string $Command) 设置控制命令，目前支持命令如下：- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本. - InvokeLLM，服务端发送文本给大模型，触发对话
  * @method ServerPushText getServerPushText() 获取服务端发送播报文本命令，当Command为ServerPushText时必填
  * @method void setServerPushText(ServerPushText $ServerPushText) 设置服务端发送播报文本命令，当Command为ServerPushText时必填
+ * @method InvokeLLM getInvokeLLM() 获取服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM="1"
+ * @method void setInvokeLLM(InvokeLLM $InvokeLLM) 设置服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM="1"
  */
 class ControlAIConversationRequest extends AbstractModel
 {
@@ -39,9 +37,7 @@ class ControlAIConversationRequest extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string 控制命令，目前支持命令如下：
-
-- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本
+     * @var string 控制命令，目前支持命令如下：- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本. - InvokeLLM，服务端发送文本给大模型，触发对话
      */
     public $Command;
 
@@ -51,11 +47,15 @@ class ControlAIConversationRequest extends AbstractModel
     public $ServerPushText;
 
     /**
-     * @param string $TaskId 任务唯一标识
-     * @param string $Command 控制命令，目前支持命令如下：
+     * @var InvokeLLM 服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM="1"
+     */
+    public $InvokeLLM;
 
-- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本
+    /**
+     * @param string $TaskId 任务唯一标识
+     * @param string $Command 控制命令，目前支持命令如下：- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本. - InvokeLLM，服务端发送文本给大模型，触发对话
      * @param ServerPushText $ServerPushText 服务端发送播报文本命令，当Command为ServerPushText时必填
+     * @param InvokeLLM $InvokeLLM 服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM="1"
      */
     function __construct()
     {
@@ -81,6 +81,11 @@ class ControlAIConversationRequest extends AbstractModel
         if (array_key_exists("ServerPushText",$param) and $param["ServerPushText"] !== null) {
             $this->ServerPushText = new ServerPushText();
             $this->ServerPushText->deserialize($param["ServerPushText"]);
+        }
+
+        if (array_key_exists("InvokeLLM",$param) and $param["InvokeLLM"] !== null) {
+            $this->InvokeLLM = new InvokeLLM();
+            $this->InvokeLLM->deserialize($param["InvokeLLM"]);
         }
     }
 }

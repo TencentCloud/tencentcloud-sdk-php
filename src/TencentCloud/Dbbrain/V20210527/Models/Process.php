@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,7 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getId() 获取会话 ID。
  * @method void setId(integer $Id) 设置会话 ID。
  * @method string getAddress() 获取访问来源，IP 地址和端口号。
+格式：IP:Port
  * @method void setAddress(string $Address) 设置访问来源，IP 地址和端口号。
+格式：IP:Port
  * @method integer getFileDescriptor() 获取文件描述符。
  * @method void setFileDescriptor(integer $FileDescriptor) 设置文件描述符。
  * @method string getName() 获取会话名称，使用 CLIENT SETNAME 命令设置。
@@ -46,6 +48,7 @@ class Process extends AbstractModel
 
     /**
      * @var string 访问来源，IP 地址和端口号。
+格式：IP:Port
      */
     public $Address;
 
@@ -82,6 +85,7 @@ class Process extends AbstractModel
     /**
      * @param integer $Id 会话 ID。
      * @param string $Address 访问来源，IP 地址和端口号。
+格式：IP:Port
      * @param integer $FileDescriptor 文件描述符。
      * @param string $Name 会话名称，使用 CLIENT SETNAME 命令设置。
      * @param string $LastCommand 最后一次执行的命令。

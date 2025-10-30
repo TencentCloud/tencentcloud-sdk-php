@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,25 +21,28 @@ use TencentCloud\Common\AbstractModel;
  * DescribeOverviewInvocation请求参数结构体
  *
  * @method string getNamespaceId() 获取命名空间ID， 此参数必填
+可通过[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已经创建的命名空间，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)查看
  * @method void setNamespaceId(string $NamespaceId) 设置命名空间ID， 此参数必填
- * @method string getType() 获取监控统计类型，必填，可选值：SumReqAmount、AvgFailureRate、AvgTimeCost，分别对应请求量、请求错误率、平均响应耗时
- * @method void setType(string $Type) 设置监控统计类型，必填，可选值：SumReqAmount、AvgFailureRate、AvgTimeCost，分别对应请求量、请求错误率、平均响应耗时
+可通过[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已经创建的命名空间，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)查看
+ * @method string getType() 获取监控统计类型，必填，取值范围 SumReqAmount：请求量，AvgFailureRate：请求错误率，AvgTimeCost：平均响应耗时
+ * @method void setType(string $Type) 设置监控统计类型，必填，取值范围 SumReqAmount：请求量，AvgFailureRate：请求错误率，AvgTimeCost：平均响应耗时
  * @method integer getPeriod() 获取监控统计数据粒度，可选值：60、3600、86400，分别对应1分钟、1小时、1天
  * @method void setPeriod(integer $Period) 设置监控统计数据粒度，可选值：60、3600、86400，分别对应1分钟、1小时、1天
- * @method string getStartTime() 获取查询开始时间，默认为当天的 00:00:00
- * @method void setStartTime(string $StartTime) 设置查询开始时间，默认为当天的 00:00:00
- * @method string getEndTime() 获取查询结束时间，默认为当前时间
- * @method void setEndTime(string $EndTime) 设置查询结束时间，默认为当前时间
+ * @method string getStartTime() 获取查询开始时间，格式为yyyy-MM-dd HH:mm:ss，默认为当天的 00:00:00
+ * @method void setStartTime(string $StartTime) 设置查询开始时间，格式为yyyy-MM-dd HH:mm:ss，默认为当天的 00:00:00
+ * @method string getEndTime() 获取查询结束时间，格式为yyyy-MM-dd HH:mm:ss，默认为当前时间
+ * @method void setEndTime(string $EndTime) 设置查询结束时间，格式为yyyy-MM-dd HH:mm:ss，默认为当前时间
  */
 class DescribeOverviewInvocationRequest extends AbstractModel
 {
     /**
      * @var string 命名空间ID， 此参数必填
+可通过[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已经创建的命名空间，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)查看
      */
     public $NamespaceId;
 
     /**
-     * @var string 监控统计类型，必填，可选值：SumReqAmount、AvgFailureRate、AvgTimeCost，分别对应请求量、请求错误率、平均响应耗时
+     * @var string 监控统计类型，必填，取值范围 SumReqAmount：请求量，AvgFailureRate：请求错误率，AvgTimeCost：平均响应耗时
      */
     public $Type;
 
@@ -49,21 +52,22 @@ class DescribeOverviewInvocationRequest extends AbstractModel
     public $Period;
 
     /**
-     * @var string 查询开始时间，默认为当天的 00:00:00
+     * @var string 查询开始时间，格式为yyyy-MM-dd HH:mm:ss，默认为当天的 00:00:00
      */
     public $StartTime;
 
     /**
-     * @var string 查询结束时间，默认为当前时间
+     * @var string 查询结束时间，格式为yyyy-MM-dd HH:mm:ss，默认为当前时间
      */
     public $EndTime;
 
     /**
      * @param string $NamespaceId 命名空间ID， 此参数必填
-     * @param string $Type 监控统计类型，必填，可选值：SumReqAmount、AvgFailureRate、AvgTimeCost，分别对应请求量、请求错误率、平均响应耗时
+可通过[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已经创建的命名空间，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)查看
+     * @param string $Type 监控统计类型，必填，取值范围 SumReqAmount：请求量，AvgFailureRate：请求错误率，AvgTimeCost：平均响应耗时
      * @param integer $Period 监控统计数据粒度，可选值：60、3600、86400，分别对应1分钟、1小时、1天
-     * @param string $StartTime 查询开始时间，默认为当天的 00:00:00
-     * @param string $EndTime 查询结束时间，默认为当前时间
+     * @param string $StartTime 查询开始时间，格式为yyyy-MM-dd HH:mm:ss，默认为当天的 00:00:00
+     * @param string $EndTime 查询结束时间，格式为yyyy-MM-dd HH:mm:ss，默认为当前时间
      */
     function __construct()
     {

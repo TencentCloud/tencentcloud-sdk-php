@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,6 +32,7 @@ use TencentCloud\Common\AbstractModel;
 <li>AIAnalysis：智能分析。</li>
 <li>AiQualityControl：媒体质检。</li>
 <li>SmartSubtitles：智能字幕。</li>
+<li>SmartErase：智能擦除。</li>
  * @method void setActivityType(string $ActivityType) 设置原子任务类型。
 <li>Transcode：转码。</li>
 <li>SampleSnapshot：采样截图。</li>
@@ -44,6 +45,7 @@ use TencentCloud\Common\AbstractModel;
 <li>AIAnalysis：智能分析。</li>
 <li>AiQualityControl：媒体质检。</li>
 <li>SmartSubtitles：智能字幕。</li>
+<li>SmartErase：智能擦除。</li>
  * @method ActivityResItem getActivityResItem() 获取原子任务输出。
  * @method void setActivityResItem(ActivityResItem $ActivityResItem) 设置原子任务输出。
  */
@@ -62,6 +64,7 @@ class ActivityResult extends AbstractModel
 <li>AIAnalysis：智能分析。</li>
 <li>AiQualityControl：媒体质检。</li>
 <li>SmartSubtitles：智能字幕。</li>
+<li>SmartErase：智能擦除。</li>
      */
     public $ActivityType;
 
@@ -83,6 +86,7 @@ class ActivityResult extends AbstractModel
 <li>AIAnalysis：智能分析。</li>
 <li>AiQualityControl：媒体质检。</li>
 <li>SmartSubtitles：智能字幕。</li>
+<li>SmartErase：智能擦除。</li>
      * @param ActivityResItem $ActivityResItem 原子任务输出。
      */
     function __construct()

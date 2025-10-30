@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLineHeight(integer $LineHeight) 设置行高
  * @method integer getSpamCode() 获取正常段落spam_code字段为0；如果存在spam_code字段且值大于0（1: 命中垃圾检查；2: 命中安全策略；3: 其他。），则命中安全检查被过滤。
  * @method void setSpamCode(integer $SpamCode) 设置正常段落spam_code字段为0；如果存在spam_code字段且值大于0（1: 命中垃圾检查；2: 命中安全策略；3: 其他。），则命中安全检查被过滤。
+ * @method RotateParagraphRect getRotateParagraphRect() 获取段落文本旋转信息，只在valid为true时表示坐标有效
+ * @method void setRotateParagraphRect(RotateParagraphRect $RotateParagraphRect) 设置段落文本旋转信息，只在valid为true时表示坐标有效
  */
 class TransDetail extends AbstractModel
 {
@@ -66,12 +68,18 @@ class TransDetail extends AbstractModel
     public $SpamCode;
 
     /**
+     * @var RotateParagraphRect 段落文本旋转信息，只在valid为true时表示坐标有效
+     */
+    public $RotateParagraphRect;
+
+    /**
      * @param string $SourceLineText 当前行的原文本
      * @param string $TargetLineText 当前行的译文
      * @param BoundingBox $BoundingBox 段落文本框位置
      * @param integer $LinesCount 行数
      * @param integer $LineHeight 行高
      * @param integer $SpamCode 正常段落spam_code字段为0；如果存在spam_code字段且值大于0（1: 命中垃圾检查；2: 命中安全策略；3: 其他。），则命中安全检查被过滤。
+     * @param RotateParagraphRect $RotateParagraphRect 段落文本旋转信息，只在valid为true时表示坐标有效
      */
     function __construct()
     {
@@ -109,6 +117,11 @@ class TransDetail extends AbstractModel
 
         if (array_key_exists("SpamCode",$param) and $param["SpamCode"] !== null) {
             $this->SpamCode = $param["SpamCode"];
+        }
+
+        if (array_key_exists("RotateParagraphRect",$param) and $param["RotateParagraphRect"] !== null) {
+            $this->RotateParagraphRect = new RotateParagraphRect();
+            $this->RotateParagraphRect->deserialize($param["RotateParagraphRect"]);
         }
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ApplyEmbedInterval请求参数结构体
  *
- * @method integer getProjectId() 获取分享项目id，必选
- * @method void setProjectId(integer $ProjectId) 设置分享项目id，必选
+ * @method integer getProjectId() 获取分享项目id
+ * @method void setProjectId(integer $ProjectId) 设置分享项目id
  * @method integer getPageId() 获取分享页面id，嵌出看板时此为空值0，ChatBI嵌出时不传
 
  * @method void setPageId(integer $PageId) 设置分享页面id，嵌出看板时此为空值0，ChatBI嵌出时不传
@@ -42,7 +42,7 @@ project，ChatBI嵌出时
 class ApplyEmbedIntervalRequest extends AbstractModel
 {
     /**
-     * @var integer 分享项目id，必选
+     * @var integer 分享项目id
      */
     public $ProjectId;
 
@@ -75,7 +75,7 @@ project，ChatBI嵌出时
     public $Scope;
 
     /**
-     * @param integer $ProjectId 分享项目id，必选
+     * @param integer $ProjectId 分享项目id
      * @param integer $PageId 分享页面id，嵌出看板时此为空值0，ChatBI嵌出时不传
 
      * @param string $BIToken 需要申请延期的Token

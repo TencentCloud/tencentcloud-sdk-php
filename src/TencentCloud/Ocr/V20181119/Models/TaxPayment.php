@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContent(array $Content) 设置识别出的字段名称(关键字)，支持以下字段：
 税号 、纳税人识别号 、纳税人名称 、金额合计大写 、金额合计小写 、填发日期 、税务机关 、填票人。
 示例值：纳税人识别号
+ * @method array getTableItems() 获取表格。
+ * @method void setTableItems(array $TableItems) 设置表格。
  */
 class TaxPayment extends AbstractModel
 {
@@ -44,10 +46,16 @@ class TaxPayment extends AbstractModel
     public $Content;
 
     /**
+     * @var array 表格。
+     */
+    public $TableItems;
+
+    /**
      * @param string $Title 发票名称
      * @param array $Content 识别出的字段名称(关键字)，支持以下字段：
 税号 、纳税人识别号 、纳税人名称 、金额合计大写 、金额合计小写 、填发日期 、税务机关 、填票人。
 示例值：纳税人识别号
+     * @param array $TableItems 表格。
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class TaxPayment extends AbstractModel
                 $obj = new OtherInvoiceItem();
                 $obj->deserialize($value);
                 array_push($this->Content, $obj);
+            }
+        }
+
+        if (array_key_exists("TableItems",$param) and $param["TableItems"] !== null) {
+            $this->TableItems = [];
+            foreach ($param["TableItems"] as $key => $value){
+                $obj = new OtherInvoiceList();
+                $obj->deserialize($value);
+                array_push($this->TableItems, $obj);
             }
         }
     }

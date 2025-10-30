@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -47,71 +47,43 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getApiAccessPort() 获取TcaplusDB SDK连接参数，接入端口
  * @method void setApiAccessPort(integer $ApiAccessPort) 设置TcaplusDB SDK连接参数，接入端口
  * @method string getOldPasswordExpireTime() 获取如果PasswordStatus是unmodifiable说明有旧密码还未过期，此字段将显示旧密码过期的时间，否则为空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOldPasswordExpireTime(string $OldPasswordExpireTime) 设置如果PasswordStatus是unmodifiable说明有旧密码还未过期，此字段将显示旧密码过期的时间，否则为空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApiAccessIpv6() 获取TcaplusDB SDK连接参数，接入ipv6地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApiAccessIpv6(string $ApiAccessIpv6) 设置TcaplusDB SDK连接参数，接入ipv6地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getClusterType() 获取集群类型，0,1:共享集群; 2:独立集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterType(integer $ClusterType) 设置集群类型，0,1:共享集群; 2:独立集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getClusterStatus() 获取集群状态, 0：表示正常运行中，1：表示冻结隔离一般欠费进入此状态，2：表示待回收，一般用户主动触发删除进入这个状态，3：待释放，进入这个状态，表示可以释放此表占用的资源了，4：变更中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterStatus(integer $ClusterStatus) 设置集群状态, 0：表示正常运行中，1：表示冻结隔离一般欠费进入此状态，2：表示待回收，一般用户主动触发删除进入这个状态，3：待释放，进入这个状态，表示可以释放此表占用的资源了，4：变更中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getReadCapacityUnit() 获取读CU
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReadCapacityUnit(integer $ReadCapacityUnit) 设置读CU
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWriteCapacityUnit() 获取写CU
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWriteCapacityUnit(integer $WriteCapacityUnit) 设置写CU
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDiskVolume() 获取磁盘容量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskVolume(integer $DiskVolume) 设置磁盘容量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getServerList() 获取独占server机器信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServerList(array $ServerList) 设置独占server机器信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getProxyList() 获取独占proxy机器信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyList(array $ProxyList) 设置独占proxy机器信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCensorship() 获取是否开启审核 0-不开启 1-开启
  * @method void setCensorship(integer $Censorship) 设置是否开启审核 0-不开启 1-开启
  * @method array getDbaUins() 获取审批人uin列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbaUins(array $DbaUins) 设置审批人uin列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDataFlowStatus() 获取是否开启了数据订阅
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataFlowStatus(integer $DataFlowStatus) 设置是否开启了数据订阅
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KafkaInfo getKafkaInfo() 获取数据订阅的kafka信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKafkaInfo(KafkaInfo $KafkaInfo) 设置数据订阅的kafka信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTxhBackupExpireDay() 获取集群Txh备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTxhBackupExpireDay(integer $TxhBackupExpireDay) 设置集群Txh备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUlogBackupExpireDay() 获取集群Ulog备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUlogBackupExpireDay(integer $UlogBackupExpireDay) 设置集群Ulog备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsReadOnlyUlogBackupExpireDay() 获取集群Ulog备份文件过期策略是否为只读， 0： UlogBackupExpire是只读，不可修改， 1： UlogBackupExpire可以修改（当前业务存在Svrid第二段等于clusterid的机器）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsReadOnlyUlogBackupExpireDay(integer $IsReadOnlyUlogBackupExpireDay) 设置集群Ulog备份文件过期策略是否为只读， 0： UlogBackupExpire是只读，不可修改， 1： UlogBackupExpire可以修改（当前业务存在Svrid第二段等于clusterid的机器）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRestProxyStatus() 获取restproxy状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRestProxyStatus(integer $RestProxyStatus) 设置restproxy状态
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getShardTotalNum() 获取该集群shard总数
+ * @method void setShardTotalNum(integer $ShardTotalNum) 设置该集群shard总数
+ * @method integer getShardUsedNum() 获取已使用的shard总数
+ * @method void setShardUsedNum(integer $ShardUsedNum) 设置已使用的shard总数
  */
 class ClusterInfo extends AbstractModel
 {
@@ -182,55 +154,46 @@ class ClusterInfo extends AbstractModel
 
     /**
      * @var string 如果PasswordStatus是unmodifiable说明有旧密码还未过期，此字段将显示旧密码过期的时间，否则为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OldPasswordExpireTime;
 
     /**
      * @var string TcaplusDB SDK连接参数，接入ipv6地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApiAccessIpv6;
 
     /**
      * @var integer 集群类型，0,1:共享集群; 2:独立集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterType;
 
     /**
      * @var integer 集群状态, 0：表示正常运行中，1：表示冻结隔离一般欠费进入此状态，2：表示待回收，一般用户主动触发删除进入这个状态，3：待释放，进入这个状态，表示可以释放此表占用的资源了，4：变更中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterStatus;
 
     /**
      * @var integer 读CU
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReadCapacityUnit;
 
     /**
      * @var integer 写CU
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WriteCapacityUnit;
 
     /**
      * @var integer 磁盘容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskVolume;
 
     /**
      * @var array 独占server机器信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServerList;
 
     /**
      * @var array 独占proxy机器信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyList;
 
@@ -241,45 +204,48 @@ class ClusterInfo extends AbstractModel
 
     /**
      * @var array 审批人uin列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DbaUins;
 
     /**
      * @var integer 是否开启了数据订阅
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataFlowStatus;
 
     /**
      * @var KafkaInfo 数据订阅的kafka信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KafkaInfo;
 
     /**
      * @var integer 集群Txh备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TxhBackupExpireDay;
 
     /**
      * @var integer 集群Ulog备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UlogBackupExpireDay;
 
     /**
      * @var integer 集群Ulog备份文件过期策略是否为只读， 0： UlogBackupExpire是只读，不可修改， 1： UlogBackupExpire可以修改（当前业务存在Svrid第二段等于clusterid的机器）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsReadOnlyUlogBackupExpireDay;
 
     /**
      * @var integer restproxy状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RestProxyStatus;
+
+    /**
+     * @var integer 该集群shard总数
+     */
+    public $ShardTotalNum;
+
+    /**
+     * @var integer 已使用的shard总数
+     */
+    public $ShardUsedNum;
 
     /**
      * @param string $ClusterName 集群名称
@@ -296,38 +262,24 @@ class ClusterInfo extends AbstractModel
      * @param string $ApiAccessIp TcaplusDB SDK连接参数，接入地址
      * @param integer $ApiAccessPort TcaplusDB SDK连接参数，接入端口
      * @param string $OldPasswordExpireTime 如果PasswordStatus是unmodifiable说明有旧密码还未过期，此字段将显示旧密码过期的时间，否则为空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApiAccessIpv6 TcaplusDB SDK连接参数，接入ipv6地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClusterType 集群类型，0,1:共享集群; 2:独立集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClusterStatus 集群状态, 0：表示正常运行中，1：表示冻结隔离一般欠费进入此状态，2：表示待回收，一般用户主动触发删除进入这个状态，3：待释放，进入这个状态，表示可以释放此表占用的资源了，4：变更中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReadCapacityUnit 读CU
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $WriteCapacityUnit 写CU
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DiskVolume 磁盘容量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ServerList 独占server机器信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ProxyList 独占proxy机器信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Censorship 是否开启审核 0-不开启 1-开启
      * @param array $DbaUins 审批人uin列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DataFlowStatus 是否开启了数据订阅
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KafkaInfo $KafkaInfo 数据订阅的kafka信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TxhBackupExpireDay 集群Txh备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UlogBackupExpireDay 集群Ulog备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsReadOnlyUlogBackupExpireDay 集群Ulog备份文件过期策略是否为只读， 0： UlogBackupExpire是只读，不可修改， 1： UlogBackupExpire可以修改（当前业务存在Svrid第二段等于clusterid的机器）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RestProxyStatus restproxy状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ShardTotalNum 该集群shard总数
+     * @param integer $ShardUsedNum 已使用的shard总数
      */
     function __construct()
     {
@@ -471,6 +423,14 @@ class ClusterInfo extends AbstractModel
 
         if (array_key_exists("RestProxyStatus",$param) and $param["RestProxyStatus"] !== null) {
             $this->RestProxyStatus = $param["RestProxyStatus"];
+        }
+
+        if (array_key_exists("ShardTotalNum",$param) and $param["ShardTotalNum"] !== null) {
+            $this->ShardTotalNum = $param["ShardTotalNum"];
+        }
+
+        if (array_key_exists("ShardUsedNum",$param) and $param["ShardUsedNum"] !== null) {
+            $this->ShardUsedNum = $param["ShardUsedNum"];
         }
     }
 }

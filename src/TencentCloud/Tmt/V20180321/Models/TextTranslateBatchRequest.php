@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -104,10 +104,10 @@ hi：印地语
  * @method void setProjectId(integer $ProjectId) 设置项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
  * @method array getSourceTextList() 获取待翻译的文本列表，批量接口可以以数组方式在一次请求中填写多个待翻译文本。文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败，请传入有效文本，html标记等非常规翻译文本可能会翻译失败。单次请求的文本长度总和需要低于6000字符。
  * @method void setSourceTextList(array $SourceTextList) 设置待翻译的文本列表，批量接口可以以数组方式在一次请求中填写多个待翻译文本。文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败，请传入有效文本，html标记等非常规翻译文本可能会翻译失败。单次请求的文本长度总和需要低于6000字符。
- * @method array getTermRepoIDList() 获取需要使用的术语库列表
- * @method void setTermRepoIDList(array $TermRepoIDList) 设置需要使用的术语库列表
- * @method array getSentRepoIDList() 获取需要使用的例句库列表
- * @method void setSentRepoIDList(array $SentRepoIDList) 设置需要使用的例句库列表
+ * @method array getTermRepoIDList() 获取需要使用的术语库列表，通过 [术语库操作指南](https://cloud.tencent.com/document/product/551/107926) 自行创建术语库获取。
+ * @method void setTermRepoIDList(array $TermRepoIDList) 设置需要使用的术语库列表，通过 [术语库操作指南](https://cloud.tencent.com/document/product/551/107926) 自行创建术语库获取。
+ * @method array getSentRepoIDList() 获取需要使用的例句库列表，通过 [例句库操作指南](https://cloud.tencent.com/document/product/551/107927) 自行创建例句库获取。
+ * @method void setSentRepoIDList(array $SentRepoIDList) 设置需要使用的例句库列表，通过 [例句库操作指南](https://cloud.tencent.com/document/product/551/107927) 自行创建例句库获取。
  */
 class TextTranslateBatchRequest extends AbstractModel
 {
@@ -170,12 +170,12 @@ hi：印地语
     public $SourceTextList;
 
     /**
-     * @var array 需要使用的术语库列表
+     * @var array 需要使用的术语库列表，通过 [术语库操作指南](https://cloud.tencent.com/document/product/551/107926) 自行创建术语库获取。
      */
     public $TermRepoIDList;
 
     /**
-     * @var array 需要使用的例句库列表
+     * @var array 需要使用的例句库列表，通过 [例句库操作指南](https://cloud.tencent.com/document/product/551/107927) 自行创建例句库获取。
      */
     public $SentRepoIDList;
 
@@ -222,8 +222,8 @@ hi：印地语
 <li>hi（印地语）：en（英语）</li>
      * @param integer $ProjectId 项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
      * @param array $SourceTextList 待翻译的文本列表，批量接口可以以数组方式在一次请求中填写多个待翻译文本。文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败，请传入有效文本，html标记等非常规翻译文本可能会翻译失败。单次请求的文本长度总和需要低于6000字符。
-     * @param array $TermRepoIDList 需要使用的术语库列表
-     * @param array $SentRepoIDList 需要使用的例句库列表
+     * @param array $TermRepoIDList 需要使用的术语库列表，通过 [术语库操作指南](https://cloud.tencent.com/document/product/551/107926) 自行创建术语库获取。
+     * @param array $SentRepoIDList 需要使用的例句库列表，通过 [例句库操作指南](https://cloud.tencent.com/document/product/551/107927) 自行创建例句库获取。
      */
     function __construct()
     {

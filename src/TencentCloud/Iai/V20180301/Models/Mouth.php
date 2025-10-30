@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,22 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 嘴巴信息。
  *
- * @method AttributeItem getMouthOpen() 获取是否张嘴信息。
-AttributeItem对应的Type为 —— 0：不张嘴，1：张嘴。
- * @method void setMouthOpen(AttributeItem $MouthOpen) 设置是否张嘴信息。
-AttributeItem对应的Type为 —— 0：不张嘴，1：张嘴。
+ * @method AttributeItem getMouthOpen() 获取是否张嘴信息。 
+
+- AttributeItem对应的Type为 —— 0：不张嘴，1：张嘴。
+ * @method void setMouthOpen(AttributeItem $MouthOpen) 设置是否张嘴信息。 
+
+- AttributeItem对应的Type为 —— 0：不张嘴，1：张嘴。
  */
 class Mouth extends AbstractModel
 {
     /**
-     * @var AttributeItem 是否张嘴信息。
-AttributeItem对应的Type为 —— 0：不张嘴，1：张嘴。
+     * @var AttributeItem 是否张嘴信息。 
+
+- AttributeItem对应的Type为 —— 0：不张嘴，1：张嘴。
      */
     public $MouthOpen;
 
     /**
-     * @param AttributeItem $MouthOpen 是否张嘴信息。
-AttributeItem对应的Type为 —— 0：不张嘴，1：张嘴。
+     * @param AttributeItem $MouthOpen 是否张嘴信息。 
+
+- AttributeItem对应的Type为 —— 0：不张嘴，1：张嘴。
      */
     function __construct()
     {

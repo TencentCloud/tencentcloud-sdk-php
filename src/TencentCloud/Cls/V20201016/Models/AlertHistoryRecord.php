@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,16 +36,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrigger(string $Trigger) 设置触发条件
  * @method integer getTriggerCount() 获取持续周期，持续满足触发条件TriggerCount个周期后，再进行告警
  * @method void setTriggerCount(integer $TriggerCount) 设置持续周期，持续满足触发条件TriggerCount个周期后，再进行告警
- * @method integer getAlarmPeriod() 获取告警通知发送频率，单位为分钟
- * @method void setAlarmPeriod(integer $AlarmPeriod) 设置告警通知发送频率，单位为分钟
+ * @method integer getAlarmPeriod() 获取告警通知发送频率，单位为分钟(min)
+ * @method void setAlarmPeriod(integer $AlarmPeriod) 设置告警通知发送频率，单位为分钟(min)
  * @method array getNotices() 获取通知渠道组
  * @method void setNotices(array $Notices) 设置通知渠道组
- * @method integer getDuration() 获取告警持续时间，单位为分钟
- * @method void setDuration(integer $Duration) 设置告警持续时间，单位为分钟
+ * @method integer getDuration() 获取告警持续时间，单位为分钟(min)
+ * @method void setDuration(integer $Duration) 设置告警持续时间，单位为分钟(min)
  * @method integer getStatus() 获取告警状态，0代表未恢复，1代表已恢复，2代表已失效
  * @method void setStatus(integer $Status) 设置告警状态，0代表未恢复，1代表已恢复，2代表已失效
- * @method integer getCreateTime() 获取告警发生时间，毫秒级Unix时间戳
- * @method void setCreateTime(integer $CreateTime) 设置告警发生时间，毫秒级Unix时间戳
+ * @method integer getCreateTime() 获取告警发生时间，毫秒级Unix时间戳(ms)
+ * @method void setCreateTime(integer $CreateTime) 设置告警发生时间，毫秒级Unix时间戳(ms)
  * @method array getGroupTriggerCondition() 获取告警分组触发时对应的分组信息
  * @method void setGroupTriggerCondition(array $GroupTriggerCondition) 设置告警分组触发时对应的分组信息
  * @method integer getAlarmLevel() 获取告警级别，0代表警告(Warn)，1代表提醒(Info)，2代表紧急 (Critical)
@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
 0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
  * @method void setMonitorObjectType(integer $MonitorObjectType) 设置监控对象类型。
 0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
+ * @method integer getSendType() 获取通知渠道类型，0默认代表cls内部通知渠道，1代表云监控通知渠道
+ * @method void setSendType(integer $SendType) 设置通知渠道类型，0默认代表cls内部通知渠道，1代表云监控通知渠道
  */
 class AlertHistoryRecord extends AbstractModel
 {
@@ -98,7 +100,7 @@ class AlertHistoryRecord extends AbstractModel
     public $TriggerCount;
 
     /**
-     * @var integer 告警通知发送频率，单位为分钟
+     * @var integer 告警通知发送频率，单位为分钟(min)
      */
     public $AlarmPeriod;
 
@@ -108,7 +110,7 @@ class AlertHistoryRecord extends AbstractModel
     public $Notices;
 
     /**
-     * @var integer 告警持续时间，单位为分钟
+     * @var integer 告警持续时间，单位为分钟(min)
      */
     public $Duration;
 
@@ -118,7 +120,7 @@ class AlertHistoryRecord extends AbstractModel
     public $Status;
 
     /**
-     * @var integer 告警发生时间，毫秒级Unix时间戳
+     * @var integer 告警发生时间，毫秒级Unix时间戳(ms)
      */
     public $CreateTime;
 
@@ -139,6 +141,11 @@ class AlertHistoryRecord extends AbstractModel
     public $MonitorObjectType;
 
     /**
+     * @var integer 通知渠道类型，0默认代表cls内部通知渠道，1代表云监控通知渠道
+     */
+    public $SendType;
+
+    /**
      * @param string $RecordId 告警历史ID
      * @param string $AlarmId 告警策略ID
      * @param string $AlarmName 告警策略名称
@@ -147,15 +154,16 @@ class AlertHistoryRecord extends AbstractModel
      * @param string $Region 监控对象所属地域
      * @param string $Trigger 触发条件
      * @param integer $TriggerCount 持续周期，持续满足触发条件TriggerCount个周期后，再进行告警
-     * @param integer $AlarmPeriod 告警通知发送频率，单位为分钟
+     * @param integer $AlarmPeriod 告警通知发送频率，单位为分钟(min)
      * @param array $Notices 通知渠道组
-     * @param integer $Duration 告警持续时间，单位为分钟
+     * @param integer $Duration 告警持续时间，单位为分钟(min)
      * @param integer $Status 告警状态，0代表未恢复，1代表已恢复，2代表已失效
-     * @param integer $CreateTime 告警发生时间，毫秒级Unix时间戳
+     * @param integer $CreateTime 告警发生时间，毫秒级Unix时间戳(ms)
      * @param array $GroupTriggerCondition 告警分组触发时对应的分组信息
      * @param integer $AlarmLevel 告警级别，0代表警告(Warn)，1代表提醒(Info)，2代表紧急 (Critical)
      * @param integer $MonitorObjectType 监控对象类型。
 0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
+     * @param integer $SendType 通知渠道类型，0默认代表cls内部通知渠道，1代表云监控通知渠道
      */
     function __construct()
     {
@@ -242,6 +250,10 @@ class AlertHistoryRecord extends AbstractModel
 
         if (array_key_exists("MonitorObjectType",$param) and $param["MonitorObjectType"] !== null) {
             $this->MonitorObjectType = $param["MonitorObjectType"];
+        }
+
+        if (array_key_exists("SendType",$param) and $param["SendType"] !== null) {
+            $this->SendType = $param["SendType"];
         }
     }
 }

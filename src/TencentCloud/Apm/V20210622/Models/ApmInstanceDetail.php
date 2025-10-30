@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -114,8 +114,36 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogIndexType(integer $LogIndexType) 设置CLS索引类型(0=全文索引，1=键值索引)
  * @method string getLogTraceIdKey() 获取traceId的索引key: 当CLS索引类型为键值索引时生效
  * @method void setLogTraceIdKey(string $LogTraceIdKey) 设置traceId的索引key: 当CLS索引类型为键值索引时生效
+ * @method integer getIsDeleteAnyFileAnalysis() 获取是否开启删除任意文件检测（0-关闭，1-开启）
+ * @method void setIsDeleteAnyFileAnalysis(integer $IsDeleteAnyFileAnalysis) 设置是否开启删除任意文件检测（0-关闭，1-开启）
+ * @method integer getIsReadAnyFileAnalysis() 获取是否开启读取任意文件检测（0-关闭，1-开启）
+ * @method void setIsReadAnyFileAnalysis(integer $IsReadAnyFileAnalysis) 设置是否开启读取任意文件检测（0-关闭，1-开启）
+ * @method integer getIsUploadAnyFileAnalysis() 获取是否开启上传任意文件检测（0-关闭，1-开启）
+ * @method void setIsUploadAnyFileAnalysis(integer $IsUploadAnyFileAnalysis) 设置是否开启上传任意文件检测（0-关闭，1-开启）
+ * @method integer getIsIncludeAnyFileAnalysis() 获取是否开启包含任意文件检测（0-关闭，1-开启）
+ * @method void setIsIncludeAnyFileAnalysis(integer $IsIncludeAnyFileAnalysis) 设置是否开启包含任意文件检测（0-关闭，1-开启）
+ * @method integer getIsDirectoryTraversalAnalysis() 获取是否开启目录遍历检测（0-关闭，1-开启）
+ * @method void setIsDirectoryTraversalAnalysis(integer $IsDirectoryTraversalAnalysis) 设置是否开启目录遍历检测（0-关闭，1-开启）
+ * @method integer getIsTemplateEngineInjectionAnalysis() 获取是否开启模板引擎注入检测（0-关闭，1-开启）
+ * @method void setIsTemplateEngineInjectionAnalysis(integer $IsTemplateEngineInjectionAnalysis) 设置是否开启模板引擎注入检测（0-关闭，1-开启）
+ * @method integer getIsScriptEngineInjectionAnalysis() 获取是否开启脚本引擎注入检测（0-关闭，1-开启）
+ * @method void setIsScriptEngineInjectionAnalysis(integer $IsScriptEngineInjectionAnalysis) 设置是否开启脚本引擎注入检测（0-关闭，1-开启）
+ * @method integer getIsExpressionInjectionAnalysis() 获取是否开启表达式注入检测（0-关闭，1-开启）
+ * @method void setIsExpressionInjectionAnalysis(integer $IsExpressionInjectionAnalysis) 设置是否开启表达式注入检测（0-关闭，1-开启）
+ * @method integer getIsJNDIInjectionAnalysis() 获取是否开启JNDI注入检测（0-关闭，1-开启）
+ * @method void setIsJNDIInjectionAnalysis(integer $IsJNDIInjectionAnalysis) 设置是否开启JNDI注入检测（0-关闭，1-开启）
+ * @method integer getIsJNIInjectionAnalysis() 获取是否开启JNI注入检测（0-关闭，1-开启）
+ * @method void setIsJNIInjectionAnalysis(integer $IsJNIInjectionAnalysis) 设置是否开启JNI注入检测（0-关闭，1-开启）
+ * @method integer getIsWebshellBackdoorAnalysis() 获取是否开启Webshell后门检测（0-关闭，1-开启）
+ * @method void setIsWebshellBackdoorAnalysis(integer $IsWebshellBackdoorAnalysis) 设置是否开启Webshell后门检测（0-关闭，1-开启）
+ * @method integer getIsDeserializationAnalysis() 获取是否开启反序列化检测（0-关闭，1-开启）
+ * @method void setIsDeserializationAnalysis(integer $IsDeserializationAnalysis) 设置是否开启反序列化检测（0-关闭，1-开启）
  * @method string getToken() 获取业务系统鉴权 token
  * @method void setToken(string $Token) 设置业务系统鉴权 token
+ * @method integer getUrlLongSegmentThreshold() 获取URL长分段收敛阈值
+ * @method void setUrlLongSegmentThreshold(integer $UrlLongSegmentThreshold) 设置URL长分段收敛阈值
+ * @method integer getUrlNumberSegmentThreshold() 获取URL数字分段收敛阈值
+ * @method void setUrlNumberSegmentThreshold(integer $UrlNumberSegmentThreshold) 设置URL数字分段收敛阈值
  */
 class ApmInstanceDetail extends AbstractModel
 {
@@ -331,9 +359,79 @@ class ApmInstanceDetail extends AbstractModel
     public $LogTraceIdKey;
 
     /**
+     * @var integer 是否开启删除任意文件检测（0-关闭，1-开启）
+     */
+    public $IsDeleteAnyFileAnalysis;
+
+    /**
+     * @var integer 是否开启读取任意文件检测（0-关闭，1-开启）
+     */
+    public $IsReadAnyFileAnalysis;
+
+    /**
+     * @var integer 是否开启上传任意文件检测（0-关闭，1-开启）
+     */
+    public $IsUploadAnyFileAnalysis;
+
+    /**
+     * @var integer 是否开启包含任意文件检测（0-关闭，1-开启）
+     */
+    public $IsIncludeAnyFileAnalysis;
+
+    /**
+     * @var integer 是否开启目录遍历检测（0-关闭，1-开启）
+     */
+    public $IsDirectoryTraversalAnalysis;
+
+    /**
+     * @var integer 是否开启模板引擎注入检测（0-关闭，1-开启）
+     */
+    public $IsTemplateEngineInjectionAnalysis;
+
+    /**
+     * @var integer 是否开启脚本引擎注入检测（0-关闭，1-开启）
+     */
+    public $IsScriptEngineInjectionAnalysis;
+
+    /**
+     * @var integer 是否开启表达式注入检测（0-关闭，1-开启）
+     */
+    public $IsExpressionInjectionAnalysis;
+
+    /**
+     * @var integer 是否开启JNDI注入检测（0-关闭，1-开启）
+     */
+    public $IsJNDIInjectionAnalysis;
+
+    /**
+     * @var integer 是否开启JNI注入检测（0-关闭，1-开启）
+     */
+    public $IsJNIInjectionAnalysis;
+
+    /**
+     * @var integer 是否开启Webshell后门检测（0-关闭，1-开启）
+     */
+    public $IsWebshellBackdoorAnalysis;
+
+    /**
+     * @var integer 是否开启反序列化检测（0-关闭，1-开启）
+     */
+    public $IsDeserializationAnalysis;
+
+    /**
      * @var string 业务系统鉴权 token
      */
     public $Token;
+
+    /**
+     * @var integer URL长分段收敛阈值
+     */
+    public $UrlLongSegmentThreshold;
+
+    /**
+     * @var integer URL数字分段收敛阈值
+     */
+    public $UrlNumberSegmentThreshold;
 
     /**
      * @param string $InstanceId 业务系统 ID
@@ -383,7 +481,21 @@ class ApmInstanceDetail extends AbstractModel
      * @param integer $IsMemoryHijackingAnalysis 是否开内存马执行检测（0=关， 1=开）
      * @param integer $LogIndexType CLS索引类型(0=全文索引，1=键值索引)
      * @param string $LogTraceIdKey traceId的索引key: 当CLS索引类型为键值索引时生效
+     * @param integer $IsDeleteAnyFileAnalysis 是否开启删除任意文件检测（0-关闭，1-开启）
+     * @param integer $IsReadAnyFileAnalysis 是否开启读取任意文件检测（0-关闭，1-开启）
+     * @param integer $IsUploadAnyFileAnalysis 是否开启上传任意文件检测（0-关闭，1-开启）
+     * @param integer $IsIncludeAnyFileAnalysis 是否开启包含任意文件检测（0-关闭，1-开启）
+     * @param integer $IsDirectoryTraversalAnalysis 是否开启目录遍历检测（0-关闭，1-开启）
+     * @param integer $IsTemplateEngineInjectionAnalysis 是否开启模板引擎注入检测（0-关闭，1-开启）
+     * @param integer $IsScriptEngineInjectionAnalysis 是否开启脚本引擎注入检测（0-关闭，1-开启）
+     * @param integer $IsExpressionInjectionAnalysis 是否开启表达式注入检测（0-关闭，1-开启）
+     * @param integer $IsJNDIInjectionAnalysis 是否开启JNDI注入检测（0-关闭，1-开启）
+     * @param integer $IsJNIInjectionAnalysis 是否开启JNI注入检测（0-关闭，1-开启）
+     * @param integer $IsWebshellBackdoorAnalysis 是否开启Webshell后门检测（0-关闭，1-开启）
+     * @param integer $IsDeserializationAnalysis 是否开启反序列化检测（0-关闭，1-开启）
      * @param string $Token 业务系统鉴权 token
+     * @param integer $UrlLongSegmentThreshold URL长分段收敛阈值
+     * @param integer $UrlNumberSegmentThreshold URL数字分段收敛阈值
      */
     function __construct()
     {
@@ -567,8 +679,64 @@ class ApmInstanceDetail extends AbstractModel
             $this->LogTraceIdKey = $param["LogTraceIdKey"];
         }
 
+        if (array_key_exists("IsDeleteAnyFileAnalysis",$param) and $param["IsDeleteAnyFileAnalysis"] !== null) {
+            $this->IsDeleteAnyFileAnalysis = $param["IsDeleteAnyFileAnalysis"];
+        }
+
+        if (array_key_exists("IsReadAnyFileAnalysis",$param) and $param["IsReadAnyFileAnalysis"] !== null) {
+            $this->IsReadAnyFileAnalysis = $param["IsReadAnyFileAnalysis"];
+        }
+
+        if (array_key_exists("IsUploadAnyFileAnalysis",$param) and $param["IsUploadAnyFileAnalysis"] !== null) {
+            $this->IsUploadAnyFileAnalysis = $param["IsUploadAnyFileAnalysis"];
+        }
+
+        if (array_key_exists("IsIncludeAnyFileAnalysis",$param) and $param["IsIncludeAnyFileAnalysis"] !== null) {
+            $this->IsIncludeAnyFileAnalysis = $param["IsIncludeAnyFileAnalysis"];
+        }
+
+        if (array_key_exists("IsDirectoryTraversalAnalysis",$param) and $param["IsDirectoryTraversalAnalysis"] !== null) {
+            $this->IsDirectoryTraversalAnalysis = $param["IsDirectoryTraversalAnalysis"];
+        }
+
+        if (array_key_exists("IsTemplateEngineInjectionAnalysis",$param) and $param["IsTemplateEngineInjectionAnalysis"] !== null) {
+            $this->IsTemplateEngineInjectionAnalysis = $param["IsTemplateEngineInjectionAnalysis"];
+        }
+
+        if (array_key_exists("IsScriptEngineInjectionAnalysis",$param) and $param["IsScriptEngineInjectionAnalysis"] !== null) {
+            $this->IsScriptEngineInjectionAnalysis = $param["IsScriptEngineInjectionAnalysis"];
+        }
+
+        if (array_key_exists("IsExpressionInjectionAnalysis",$param) and $param["IsExpressionInjectionAnalysis"] !== null) {
+            $this->IsExpressionInjectionAnalysis = $param["IsExpressionInjectionAnalysis"];
+        }
+
+        if (array_key_exists("IsJNDIInjectionAnalysis",$param) and $param["IsJNDIInjectionAnalysis"] !== null) {
+            $this->IsJNDIInjectionAnalysis = $param["IsJNDIInjectionAnalysis"];
+        }
+
+        if (array_key_exists("IsJNIInjectionAnalysis",$param) and $param["IsJNIInjectionAnalysis"] !== null) {
+            $this->IsJNIInjectionAnalysis = $param["IsJNIInjectionAnalysis"];
+        }
+
+        if (array_key_exists("IsWebshellBackdoorAnalysis",$param) and $param["IsWebshellBackdoorAnalysis"] !== null) {
+            $this->IsWebshellBackdoorAnalysis = $param["IsWebshellBackdoorAnalysis"];
+        }
+
+        if (array_key_exists("IsDeserializationAnalysis",$param) and $param["IsDeserializationAnalysis"] !== null) {
+            $this->IsDeserializationAnalysis = $param["IsDeserializationAnalysis"];
+        }
+
         if (array_key_exists("Token",$param) and $param["Token"] !== null) {
             $this->Token = $param["Token"];
+        }
+
+        if (array_key_exists("UrlLongSegmentThreshold",$param) and $param["UrlLongSegmentThreshold"] !== null) {
+            $this->UrlLongSegmentThreshold = $param["UrlLongSegmentThreshold"];
+        }
+
+        if (array_key_exists("UrlNumberSegmentThreshold",$param) and $param["UrlNumberSegmentThreshold"] !== null) {
+            $this->UrlNumberSegmentThreshold = $param["UrlNumberSegmentThreshold"];
         }
     }
 }

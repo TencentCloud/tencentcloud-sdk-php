@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getCertificateIds() 获取证书ID
  * @method void setCertificateIds(array $CertificateIds) 设置证书ID
- * @method string getResourceType() 获取资源类型:clb,cdn,live,waf,antiddos,teo
- * @method void setResourceType(string $ResourceType) 设置资源类型:clb,cdn,live,waf,antiddos,teo
+ * @method string getResourceType() 获取资源类型:clb,cdn,live,vod,waf,antiddos,teo
+ * @method void setResourceType(string $ResourceType) 设置资源类型:clb,cdn,live,vod,waf,antiddos,teo
  */
 class DescribeDeployedResourcesRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeDeployedResourcesRequest extends AbstractModel
     public $CertificateIds;
 
     /**
-     * @var string 资源类型:clb,cdn,live,waf,antiddos,teo
+     * @var string 资源类型:clb,cdn,live,vod,waf,antiddos,teo
      */
     public $ResourceType;
 
     /**
      * @param array $CertificateIds 证书ID
-     * @param string $ResourceType 资源类型:clb,cdn,live,waf,antiddos,teo
+     * @param string $ResourceType 资源类型:clb,cdn,live,vod,waf,antiddos,teo
      */
     function __construct()
     {

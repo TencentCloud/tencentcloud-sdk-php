@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,6 +43,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getDrZones() 获取多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
 
  * @method void setDrZones(array $DrZones) 设置多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+
+ * @method integer getUpgradeCompatLevel() 获取是否自动升级数据库的兼容性级别，默认0。0-否，1-是
+ * @method void setUpgradeCompatLevel(integer $UpgradeCompatLevel) 设置是否自动升级数据库的兼容性级别，默认0。0-否，1-是
  */
 class UpgradeDBInstanceRequest extends AbstractModel
 {
@@ -103,6 +106,11 @@ class UpgradeDBInstanceRequest extends AbstractModel
     public $DrZones;
 
     /**
+     * @var integer 是否自动升级数据库的兼容性级别，默认0。0-否，1-是
+     */
+    public $UpgradeCompatLevel;
+
+    /**
      * @param string $InstanceId 实例ID，形如mssql-j8kv137v
      * @param integer $Memory 实例升级后内存大小，单位GB，其值不能小于当前实例内存大小
      * @param integer $Storage 实例升级后磁盘大小，单位GB，其值不能小于当前实例磁盘大小
@@ -114,6 +122,8 @@ class UpgradeDBInstanceRequest extends AbstractModel
      * @param string $MultiZones 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为跨可用区
      * @param integer $WaitSwitch 执行变配的方式，默认为 1。支持值包括：0 - 立刻执行，1 - 维护时间窗执行
      * @param array $DrZones 多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+
+     * @param integer $UpgradeCompatLevel 是否自动升级数据库的兼容性级别，默认0。0-否，1-是
      */
     function __construct()
     {
@@ -175,6 +185,10 @@ class UpgradeDBInstanceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DrZones, $obj);
             }
+        }
+
+        if (array_key_exists("UpgradeCompatLevel",$param) and $param["UpgradeCompatLevel"] !== null) {
+            $this->UpgradeCompatLevel = $param["UpgradeCompatLevel"];
         }
     }
 }

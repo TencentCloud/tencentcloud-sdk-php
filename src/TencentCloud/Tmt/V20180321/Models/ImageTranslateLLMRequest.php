@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,8 +25,8 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTarget() 获取目标语言，支持语言列表：
 
 - 中文：zh
-- 繁体（台湾）：zh-TW
-- 繁体（香港）：zh-HK
+- 繁体（中国台湾）：zh-TW
+- 繁体（中国香港）：zh-HK
 - 英文：en
 - 日语：ja
 - 韩语：ko
@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTarget(string $Target) 设置目标语言，支持语言列表：
 
 - 中文：zh
-- 繁体（台湾）：zh-TW
-- 繁体（香港）：zh-HK
+- 繁体（中国台湾）：zh-TW
+- 繁体（中国香港）：zh-HK
 - 英文：en
 - 日语：ja
 - 韩语：ko
@@ -79,8 +79,8 @@ class ImageTranslateLLMRequest extends AbstractModel
      * @var string 目标语言，支持语言列表：
 
 - 中文：zh
-- 繁体（台湾）：zh-TW
-- 繁体（香港）：zh-HK
+- 繁体（中国台湾）：zh-TW
+- 繁体（中国香港）：zh-HK
 - 英文：en
 - 日语：ja
 - 韩语：ko
@@ -111,8 +111,8 @@ class ImageTranslateLLMRequest extends AbstractModel
      * @param string $Target 目标语言，支持语言列表：
 
 - 中文：zh
-- 繁体（台湾）：zh-TW
-- 繁体（香港）：zh-HK
+- 繁体（中国台湾）：zh-TW
+- 繁体（中国香港）：zh-HK
 - 英文：en
 - 日语：ja
 - 韩语：ko

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyServerUrl(string $KeyServerUrl) 设置DRM厂商访问地址，该字段内容从DRM厂商获取。
 
 注: 不同DRM厂商对子流的数量限制不一样，如 PallyCon 限制不能超过5条子流，DRMtoday厂商最多仅支持9条子流加密
- * @method string getVector() 获取加密初始化向量(32字节字符串)，该字段内容为用户自定义。
- * @method void setVector(string $Vector) 设置加密初始化向量(32字节字符串)，该字段内容为用户自定义。
+ * @method string getVector() 获取加密初始化向量(十六进制32字节字符串)，该字段内容为用户自定义。
+ * @method void setVector(string $Vector) 设置加密初始化向量(十六进制32字节字符串)，该字段内容为用户自定义。
  * @method string getEncryptionMethod() 获取加密方式，FairPlay 默认cbcs，PlayReady，Widevine 默认cenc
 
 cbcs：PlayReady，Widevine，FairPlay 支持；
@@ -64,7 +64,7 @@ class SpekeDrm extends AbstractModel
     public $KeyServerUrl;
 
     /**
-     * @var string 加密初始化向量(32字节字符串)，该字段内容为用户自定义。
+     * @var string 加密初始化向量(十六进制32字节字符串)，该字段内容为用户自定义。
      */
     public $Vector;
 
@@ -90,7 +90,7 @@ preset1：每个子流使用不同的key加密；
      * @param string $KeyServerUrl DRM厂商访问地址，该字段内容从DRM厂商获取。
 
 注: 不同DRM厂商对子流的数量限制不一样，如 PallyCon 限制不能超过5条子流，DRMtoday厂商最多仅支持9条子流加密
-     * @param string $Vector 加密初始化向量(32字节字符串)，该字段内容为用户自定义。
+     * @param string $Vector 加密初始化向量(十六进制32字节字符串)，该字段内容为用户自定义。
      * @param string $EncryptionMethod 加密方式，FairPlay 默认cbcs，PlayReady，Widevine 默认cenc
 
 cbcs：PlayReady，Widevine，FairPlay 支持；

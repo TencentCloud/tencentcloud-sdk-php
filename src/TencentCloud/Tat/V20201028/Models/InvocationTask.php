@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -84,6 +84,8 @@ use TencentCloud\Common\AbstractModel;
 
 - USER：来源于用户调用。
 - INVOKER：来源于定时执行。
+ * @method string getCommandName() 获取执行的命令的名称。
+ * @method void setCommandName(string $CommandName) 设置执行的命令的名称。
  */
 class InvocationTask extends AbstractModel
 {
@@ -172,6 +174,11 @@ class InvocationTask extends AbstractModel
     public $InvocationSource;
 
     /**
+     * @var string 执行的命令的名称。
+     */
+    public $CommandName;
+
+    /**
      * @param string $InvocationId 执行活动ID。
      * @param string $InvocationTaskId 执行任务ID。
      * @param string $CommandId 命令ID。
@@ -204,6 +211,7 @@ class InvocationTask extends AbstractModel
 
 - USER：来源于用户调用。
 - INVOKER：来源于定时执行。
+     * @param string $CommandName 执行的命令的名称。
      */
     function __construct()
     {
@@ -270,6 +278,10 @@ class InvocationTask extends AbstractModel
 
         if (array_key_exists("InvocationSource",$param) and $param["InvocationSource"] !== null) {
             $this->InvocationSource = $param["InvocationSource"];
+        }
+
+        if (array_key_exists("CommandName",$param) and $param["CommandName"] !== null) {
+            $this->CommandName = $param["CommandName"];
         }
     }
 }

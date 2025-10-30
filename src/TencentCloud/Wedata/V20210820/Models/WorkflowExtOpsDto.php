@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -75,6 +75,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getModifyTime() 获取最近更新时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置最近更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getModifyUser() 获取最近更新人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModifyUser(string $ModifyUser) 设置最近更新人
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWorkflowType() 获取工作流类型，周期cycle，手动manual
 注意：此字段可能返回 null，表示取不到有效值。
@@ -168,6 +172,12 @@ class WorkflowExtOpsDto extends AbstractModel
     public $ModifyTime;
 
     /**
+     * @var string 最近更新人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ModifyUser;
+
+    /**
      * @var string 工作流类型，周期cycle，手动manual
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -201,6 +211,8 @@ class WorkflowExtOpsDto extends AbstractModel
      * @param string $CreateTime 工作流创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 最近更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ModifyUser 最近更新人
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkflowType 工作流类型，周期cycle，手动manual
 注意：此字段可能返回 null，表示取不到有效值。
@@ -272,6 +284,10 @@ class WorkflowExtOpsDto extends AbstractModel
 
         if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
             $this->ModifyTime = $param["ModifyTime"];
+        }
+
+        if (array_key_exists("ModifyUser",$param) and $param["ModifyUser"] !== null) {
+            $this->ModifyUser = $param["ModifyUser"];
         }
 
         if (array_key_exists("WorkflowType",$param) and $param["WorkflowType"] !== null) {

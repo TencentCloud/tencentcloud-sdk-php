@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,9 +25,17 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getBackupMethod() 获取设置备份方式。
 - 0：逻辑备份。
 - 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
  * @method void setBackupMethod(integer $BackupMethod) 设置设置备份方式。
 - 0：逻辑备份。
 - 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
  * @method string getBackupRemark() 获取备份备注信息。
  * @method void setBackupRemark(string $BackupRemark) 设置备份备注信息。
  */
@@ -42,6 +50,10 @@ class CreateBackupDBInstanceRequest extends AbstractModel
      * @var integer 设置备份方式。
 - 0：逻辑备份。
 - 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
      */
     public $BackupMethod;
 
@@ -55,6 +67,10 @@ class CreateBackupDBInstanceRequest extends AbstractModel
      * @param integer $BackupMethod 设置备份方式。
 - 0：逻辑备份。
 - 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
      * @param string $BackupRemark 备份备注信息。
      */
     function __construct()

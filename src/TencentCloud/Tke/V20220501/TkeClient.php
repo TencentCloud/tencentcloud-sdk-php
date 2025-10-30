@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,6 +36,7 @@ use TencentCloud\Tke\V20220501\Models as Models;
  * @method Models\ModifyHealthCheckPolicyResponse ModifyHealthCheckPolicy(Models\ModifyHealthCheckPolicyRequest $req) 修改健康检测策略
  * @method Models\ModifyNodePoolResponse ModifyNodePool(Models\ModifyNodePoolRequest $req) 更新 TKE 节点池
  * @method Models\RebootMachinesResponse RebootMachines(Models\RebootMachinesRequest $req) 重启原生节点实例
+ * @method Models\SetMachineLoginResponse SetMachineLogin(Models\SetMachineLoginRequest $req) 设置是否开启节点登录
  * @method Models\StartMachinesResponse StartMachines(Models\StartMachinesRequest $req) 本接口 (StartMachines) 用于启动一个或多个原生节点实例。
 
 只有状态为 Stopped 的实例才可以进行此操作。

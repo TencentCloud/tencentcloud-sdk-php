@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRunInstanceCount(integer $RunInstanceCount) 设置部署组运行中实例数
  * @method integer getOffInstanceCount() 获取部署组中停止实例数
  * @method void setOffInstanceCount(integer $OffInstanceCount) 设置部署组中停止实例数
- * @method string getGroupStatus() 获取部署组状态
- * @method void setGroupStatus(string $GroupStatus) 设置部署组状态
+ * @method string getGroupStatus() 获取部署组状态，Running运行中，Waiting等待中，Paused暂停中，Updating更新中，RollingBack回滚中，Abnormal异常，Unknown未知
+ * @method void setGroupStatus(string $GroupStatus) 设置部署组状态，Running运行中，Waiting等待中，Paused暂停中，Updating更新中，RollingBack回滚中，Abnormal异常，Unknown未知
  * @method boolean getIsNotEqualServiceConfig() 获取服务配置信息是否匹配
  * @method void setIsNotEqualServiceConfig(boolean $IsNotEqualServiceConfig) 设置服务配置信息是否匹配
  * @method HealthCheckSettings getHealthCheckSettings() 获取HealthCheckSettings
@@ -90,7 +90,7 @@ class VmGroupOther extends AbstractModel
     public $OffInstanceCount;
 
     /**
-     * @var string 部署组状态
+     * @var string 部署组状态，Running运行中，Waiting等待中，Paused暂停中，Updating更新中，RollingBack回滚中，Abnormal异常，Unknown未知
      */
     public $GroupStatus;
 
@@ -116,7 +116,7 @@ class VmGroupOther extends AbstractModel
      * @param integer $InstanceCount 部署组实例数
      * @param integer $RunInstanceCount 部署组运行中实例数
      * @param integer $OffInstanceCount 部署组中停止实例数
-     * @param string $GroupStatus 部署组状态
+     * @param string $GroupStatus 部署组状态，Running运行中，Waiting等待中，Paused暂停中，Updating更新中，RollingBack回滚中，Abnormal异常，Unknown未知
      * @param boolean $IsNotEqualServiceConfig 服务配置信息是否匹配
      * @param HealthCheckSettings $HealthCheckSettings HealthCheckSettings
 注意：此字段可能返回 null，表示取不到有效值。

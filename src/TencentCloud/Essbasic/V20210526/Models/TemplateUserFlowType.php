@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,14 +18,14 @@ namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 模版对应的合同类型
+ * 模板对应的合同类型
  *
  * @method string getUserFlowTypeId() 获取合同类型id
  * @method void setUserFlowTypeId(string $UserFlowTypeId) 设置合同类型id
  * @method string getName() 获取用户合同类型名称
  * @method void setName(string $Name) 设置用户合同类型名称
- * @method integer getTemplateNum() 获取每个合同类型绑定的模版数量	
- * @method void setTemplateNum(integer $TemplateNum) 设置每个合同类型绑定的模版数量	
+ * @method integer getTemplateNum() 获取每个合同类型绑定的模板数量	
+ * @method void setTemplateNum(integer $TemplateNum) 设置每个合同类型绑定的模板数量	
  * @method string getDescription() 获取合同类型的具体描述
  * @method void setDescription(string $Description) 设置合同类型的具体描述
  */
@@ -42,7 +42,7 @@ class TemplateUserFlowType extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 每个合同类型绑定的模版数量	
+     * @var integer 每个合同类型绑定的模板数量	
      */
     public $TemplateNum;
 
@@ -54,7 +54,7 @@ class TemplateUserFlowType extends AbstractModel
     /**
      * @param string $UserFlowTypeId 合同类型id
      * @param string $Name 用户合同类型名称
-     * @param integer $TemplateNum 每个合同类型绑定的模版数量	
+     * @param integer $TemplateNum 每个合同类型绑定的模板数量	
      * @param string $Description 合同类型的具体描述
      */
     function __construct()

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,7 +36,9 @@ BarCode：条形码，
 LowVoice：低音，
 HighVoice：爆音，
 NoVoice：静音，
-LowEvaluation：无参考打分低于阈值。
+LowEvaluation：视频无参考评分（MOS）低于阈值，
+AudioEvaluation：音频无参考评分（MOS）低于阈值，
+AudioNoise：音频噪声。
  * @method void setType(string $Type) 设置异常类型，取值范围：
 Jitter：抖动，
 Blur：模糊，
@@ -53,7 +55,9 @@ BarCode：条形码，
 LowVoice：低音，
 HighVoice：爆音，
 NoVoice：静音，
-LowEvaluation：无参考打分低于阈值。
+LowEvaluation：视频无参考评分（MOS）低于阈值，
+AudioEvaluation：音频无参考评分（MOS）低于阈值，
+AudioNoise：音频噪声。
  * @method array getQualityControlItems() 获取质检结果项。
  * @method void setQualityControlItems(array $QualityControlItems) 设置质检结果项。
  */
@@ -76,7 +80,9 @@ BarCode：条形码，
 LowVoice：低音，
 HighVoice：爆音，
 NoVoice：静音，
-LowEvaluation：无参考打分低于阈值。
+LowEvaluation：视频无参考评分（MOS）低于阈值，
+AudioEvaluation：音频无参考评分（MOS）低于阈值，
+AudioNoise：音频噪声。
      */
     public $Type;
 
@@ -102,7 +108,9 @@ BarCode：条形码，
 LowVoice：低音，
 HighVoice：爆音，
 NoVoice：静音，
-LowEvaluation：无参考打分低于阈值。
+LowEvaluation：视频无参考评分（MOS）低于阈值，
+AudioEvaluation：音频无参考评分（MOS）低于阈值，
+AudioNoise：音频噪声。
      * @param array $QualityControlItems 质检结果项。
      */
     function __construct()

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateContainGroup请求参数结构体
  *
- * @method string getApplicationId() 获取分组所属应用ID
- * @method void setApplicationId(string $ApplicationId) 设置分组所属应用ID
- * @method string getNamespaceId() 获取分组所属命名空间ID
- * @method void setNamespaceId(string $NamespaceId) 设置分组所属命名空间ID
+ * @method string getApplicationId() 获取分组所属【应用ID】，可通过调用[DescribeApplications](https://cloud.tencent.com/document/product/649/36090)查询已创建的应用列表或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
+ * @method void setApplicationId(string $ApplicationId) 设置分组所属【应用ID】，可通过调用[DescribeApplications](https://cloud.tencent.com/document/product/649/36090)查询已创建的应用列表或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
+ * @method string getNamespaceId() 获取分组所属【命名空间ID】，可通过调用[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
+ * @method void setNamespaceId(string $NamespaceId) 设置分组所属【命名空间ID】，可通过调用[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
  * @method string getGroupName() 获取分组名称字段，长度1~60，字母或下划线开头，可包含字母数字下划线
  * @method void setGroupName(string $GroupName) 设置分组名称字段，长度1~60，字母或下划线开头，可包含字母数字下划线
  * @method integer getInstanceNum() 获取实例数量
@@ -48,14 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpuRequest(string $CpuRequest) 设置初始分配的 CPU 核数，对应 K8S request
  * @method string getMemRequest() 获取初始分配的内存 MiB 数，对应 K8S request
  * @method void setMemRequest(string $MemRequest) 设置初始分配的内存 MiB 数，对应 K8S request
- * @method string getGroupResourceType() 获取部署组资源类型；
-DEF — 默认资源类型；
-GW — 网关资源类型；
- * @method void setGroupResourceType(string $GroupResourceType) 设置部署组资源类型；
-DEF — 默认资源类型；
-GW — 网关资源类型；
- * @method string getSubnetId() 获取子网ID
- * @method void setSubnetId(string $SubnetId) 设置子网ID
+ * @method string getGroupResourceType() 获取部署组资源类型；DEF 表示默认资源类型
+ * @method void setGroupResourceType(string $GroupResourceType) 设置部署组资源类型；DEF 表示默认资源类型
+ * @method string getSubnetId() 获取分组所属【子网ID】，可前往私有网络[控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1&unVpcId=vpc-6bs8ytjd)进行获取
+ * @method void setSubnetId(string $SubnetId) 设置分组所属【子网ID】，可前往私有网络[控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1&unVpcId=vpc-6bs8ytjd)进行获取
  * @method string getAgentCpuRequest() 获取agent 容器分配的 CPU 核数，对应 K8S 的 request
  * @method void setAgentCpuRequest(string $AgentCpuRequest) 设置agent 容器分配的 CPU 核数，对应 K8S 的 request
  * @method string getAgentCpuLimit() 获取agent 容器最大的 CPU 核数，对应 K8S 的 limit
@@ -76,12 +72,12 @@ GW — 网关资源类型；
 class CreateContainGroupRequest extends AbstractModel
 {
     /**
-     * @var string 分组所属应用ID
+     * @var string 分组所属【应用ID】，可通过调用[DescribeApplications](https://cloud.tencent.com/document/product/649/36090)查询已创建的应用列表或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
      */
     public $ApplicationId;
 
     /**
-     * @var string 分组所属命名空间ID
+     * @var string 分组所属【命名空间ID】，可通过调用[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
      */
     public $NamespaceId;
 
@@ -146,14 +142,12 @@ class CreateContainGroupRequest extends AbstractModel
     public $MemRequest;
 
     /**
-     * @var string 部署组资源类型；
-DEF — 默认资源类型；
-GW — 网关资源类型；
+     * @var string 部署组资源类型；DEF 表示默认资源类型
      */
     public $GroupResourceType;
 
     /**
-     * @var string 子网ID
+     * @var string 分组所属【子网ID】，可前往私有网络[控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1&unVpcId=vpc-6bs8ytjd)进行获取
      */
     public $SubnetId;
 
@@ -198,8 +192,8 @@ GW — 网关资源类型；
     public $IstioMemLimit;
 
     /**
-     * @param string $ApplicationId 分组所属应用ID
-     * @param string $NamespaceId 分组所属命名空间ID
+     * @param string $ApplicationId 分组所属【应用ID】，可通过调用[DescribeApplications](https://cloud.tencent.com/document/product/649/36090)查询已创建的应用列表或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
+     * @param string $NamespaceId 分组所属【命名空间ID】，可通过调用[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
      * @param string $GroupName 分组名称字段，长度1~60，字母或下划线开头，可包含字母数字下划线
      * @param integer $InstanceNum 实例数量
      * @param integer $AccessType 0:公网 1:集群内访问 2：NodePort
@@ -212,10 +206,8 @@ GW — 网关资源类型；
      * @param integer $UpdateIvl 滚动更新必填，更新间隔
      * @param string $CpuRequest 初始分配的 CPU 核数，对应 K8S request
      * @param string $MemRequest 初始分配的内存 MiB 数，对应 K8S request
-     * @param string $GroupResourceType 部署组资源类型；
-DEF — 默认资源类型；
-GW — 网关资源类型；
-     * @param string $SubnetId 子网ID
+     * @param string $GroupResourceType 部署组资源类型；DEF 表示默认资源类型
+     * @param string $SubnetId 分组所属【子网ID】，可前往私有网络[控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1&unVpcId=vpc-6bs8ytjd)进行获取
      * @param string $AgentCpuRequest agent 容器分配的 CPU 核数，对应 K8S 的 request
      * @param string $AgentCpuLimit agent 容器最大的 CPU 核数，对应 K8S 的 limit
      * @param string $AgentMemRequest agent 容器分配的内存 MiB 数，对应 K8S 的 request

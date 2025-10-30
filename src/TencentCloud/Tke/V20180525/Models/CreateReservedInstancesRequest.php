@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,10 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceCount(integer $InstanceCount) 设置购买实例数量，一次最大购买数量为300。
  * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
- * @method string getInstanceName() 获取预留券名称。
- * @method void setInstanceName(string $InstanceName) 设置预留券名称。
+ * @method string getInstanceName() 获取预留券名称，名称不得超过60个字符。
+ * @method void setInstanceName(string $InstanceName) 设置预留券名称，名称不得超过60个字符。
  * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
  * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+ * @method boolean getDryRun() 获取是否只预检此次请求。
+true：只预检，不会创建实例。默认值为：false。
+ * @method void setDryRun(boolean $DryRun) 设置是否只预检此次请求。
+true：只预检，不会创建实例。默认值为：false。
  */
 class CreateReservedInstancesRequest extends AbstractModel
 {
@@ -49,7 +53,7 @@ class CreateReservedInstancesRequest extends AbstractModel
     public $InstanceChargePrepaid;
 
     /**
-     * @var string 预留券名称。
+     * @var string 预留券名称，名称不得超过60个字符。
      */
     public $InstanceName;
 
@@ -59,11 +63,19 @@ class CreateReservedInstancesRequest extends AbstractModel
     public $ClientToken;
 
     /**
+     * @var boolean 是否只预检此次请求。
+true：只预检，不会创建实例。默认值为：false。
+     */
+    public $DryRun;
+
+    /**
      * @param ReservedInstanceSpec $ReservedInstanceSpec 预留券实例规格。
      * @param integer $InstanceCount 购买实例数量，一次最大购买数量为300。
      * @param InstanceChargePrepaid $InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
-     * @param string $InstanceName 预留券名称。
+     * @param string $InstanceName 预留券名称，名称不得超过60个字符。
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     * @param boolean $DryRun 是否只预检此次请求。
+true：只预检，不会创建实例。默认值为：false。
      */
     function __construct()
     {
@@ -98,6 +110,10 @@ class CreateReservedInstancesRequest extends AbstractModel
 
         if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
             $this->ClientToken = $param["ClientToken"];
+        }
+
+        if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
+            $this->DryRun = $param["DryRun"];
         }
     }
 }

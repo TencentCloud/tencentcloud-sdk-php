@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,7 +33,6 @@ use TencentCloud\Common\AbstractModel;
 <li> ap-shenzhen-fsi-2 </li>
 <li> ap-shenzhen-fsi-3 </li>
 <li> ap-guangzhou-1（售罄）</li>
-<li> ap-guangzhou-2（售罄）</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
 <li> ap-guangzhou-6 </li>
@@ -76,7 +75,6 @@ use TencentCloud\Common\AbstractModel;
 <li> ap-shenzhen-fsi-2 </li>
 <li> ap-shenzhen-fsi-3 </li>
 <li> ap-guangzhou-1（售罄）</li>
-<li> ap-guangzhou-2（售罄）</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
 <li> ap-guangzhou-6 </li>
@@ -153,7 +151,6 @@ class ZoneInfo extends AbstractModel
 <li> ap-shenzhen-fsi-2 </li>
 <li> ap-shenzhen-fsi-3 </li>
 <li> ap-guangzhou-1（售罄）</li>
-<li> ap-guangzhou-2（售罄）</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
 <li> ap-guangzhou-6 </li>
@@ -251,7 +248,6 @@ class ZoneInfo extends AbstractModel
 <li> ap-shenzhen-fsi-2 </li>
 <li> ap-shenzhen-fsi-3 </li>
 <li> ap-guangzhou-1（售罄）</li>
-<li> ap-guangzhou-2（售罄）</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
 <li> ap-guangzhou-6 </li>

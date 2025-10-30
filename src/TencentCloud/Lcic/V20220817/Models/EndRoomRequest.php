@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EndRoom请求参数结构体
  *
- * @method integer getRoomId() 获取房间ID。
- * @method void setRoomId(integer $RoomId) 设置房间ID。
+ * @method integer getRoomId() 获取课堂ID
+ * @method void setRoomId(integer $RoomId) 设置课堂ID
  */
 class EndRoomRequest extends AbstractModel
 {
     /**
-     * @var integer 房间ID。
+     * @var integer 课堂ID
      */
     public $RoomId;
 
     /**
-     * @param integer $RoomId 房间ID。
+     * @param integer $RoomId 课堂ID
      */
     function __construct()
     {

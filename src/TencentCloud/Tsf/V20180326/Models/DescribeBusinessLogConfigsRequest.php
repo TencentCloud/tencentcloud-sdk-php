@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,12 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，取值范围大于等于0，默认值为0
  * @method integer getLimit() 获取单页请求配置数量，取值范围[1, 50]，默认值为10
  * @method void setLimit(integer $Limit) 设置单页请求配置数量，取值范围[1, 50]，默认值为10
- * @method string getSearchWord() 获取模糊匹配关键词
- * @method void setSearchWord(string $SearchWord) 设置模糊匹配关键词
- * @method boolean getDisableProgramAuthCheck() 获取无
- * @method void setDisableProgramAuthCheck(boolean $DisableProgramAuthCheck) 设置无
- * @method array getConfigIdList() 获取无
- * @method void setConfigIdList(array $ConfigIdList) 设置无
+ * @method string getSearchWord() 获取模糊匹配关键词，可搜索配置项ID或配置项名称
+ * @method void setSearchWord(string $SearchWord) 设置模糊匹配关键词，可搜索配置项ID或配置项名称
+ * @method boolean getDisableProgramAuthCheck() 获取是否禁用数据集鉴权
+ * @method void setDisableProgramAuthCheck(boolean $DisableProgramAuthCheck) 设置是否禁用数据集鉴权
+ * @method array getConfigIdList() 获取日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
+ * @method void setConfigIdList(array $ConfigIdList) 设置日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
  */
 class DescribeBusinessLogConfigsRequest extends AbstractModel
 {
@@ -44,26 +46,28 @@ class DescribeBusinessLogConfigsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 模糊匹配关键词
+     * @var string 模糊匹配关键词，可搜索配置项ID或配置项名称
      */
     public $SearchWord;
 
     /**
-     * @var boolean 无
+     * @var boolean 是否禁用数据集鉴权
      */
     public $DisableProgramAuthCheck;
 
     /**
-     * @var array 无
+     * @var array 日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
      */
     public $ConfigIdList;
 
     /**
      * @param integer $Offset 偏移量，取值范围大于等于0，默认值为0
      * @param integer $Limit 单页请求配置数量，取值范围[1, 50]，默认值为10
-     * @param string $SearchWord 模糊匹配关键词
-     * @param boolean $DisableProgramAuthCheck 无
-     * @param array $ConfigIdList 无
+     * @param string $SearchWord 模糊匹配关键词，可搜索配置项ID或配置项名称
+     * @param boolean $DisableProgramAuthCheck 是否禁用数据集鉴权
+     * @param array $ConfigIdList 日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
      */
     function __construct()
     {

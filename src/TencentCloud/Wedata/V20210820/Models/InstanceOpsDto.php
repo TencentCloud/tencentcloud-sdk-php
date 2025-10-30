@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -276,6 +276,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheduleRunType(integer $ScheduleRunType) 设置调度运行方式, 0: 周期调度, 1: 空跑调度
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAllowRedoType() 获取允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
+ * @method void setAllowRedoType(string $AllowRedoType) 设置允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
+ * @method string getInstanceCycleType() 获取实例生命周期
+ * @method void setInstanceCycleType(string $InstanceCycleType) 设置实例生命周期
+ * @method string getInstanceSchedulerDesc() 获取实例执行计划描述
+ * @method void setInstanceSchedulerDesc(string $InstanceSchedulerDesc) 设置实例执行计划描述
  */
 class InstanceOpsDto extends AbstractModel
 {
@@ -664,6 +670,21 @@ class InstanceOpsDto extends AbstractModel
     public $ScheduleRunType;
 
     /**
+     * @var string 允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
+     */
+    public $AllowRedoType;
+
+    /**
+     * @var string 实例生命周期
+     */
+    public $InstanceCycleType;
+
+    /**
+     * @var string 实例执行计划描述
+     */
+    public $InstanceSchedulerDesc;
+
+    /**
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName 任务名称
@@ -792,6 +813,9 @@ class InstanceOpsDto extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScheduleRunType 调度运行方式, 0: 周期调度, 1: 空跑调度
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AllowRedoType 允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
+     * @param string $InstanceCycleType 实例生命周期
+     * @param string $InstanceSchedulerDesc 实例执行计划描述
      */
     function __construct()
     {
@@ -1072,6 +1096,18 @@ class InstanceOpsDto extends AbstractModel
 
         if (array_key_exists("ScheduleRunType",$param) and $param["ScheduleRunType"] !== null) {
             $this->ScheduleRunType = $param["ScheduleRunType"];
+        }
+
+        if (array_key_exists("AllowRedoType",$param) and $param["AllowRedoType"] !== null) {
+            $this->AllowRedoType = $param["AllowRedoType"];
+        }
+
+        if (array_key_exists("InstanceCycleType",$param) and $param["InstanceCycleType"] !== null) {
+            $this->InstanceCycleType = $param["InstanceCycleType"];
+        }
+
+        if (array_key_exists("InstanceSchedulerDesc",$param) and $param["InstanceSchedulerDesc"] !== null) {
+            $this->InstanceSchedulerDesc = $param["InstanceSchedulerDesc"];
         }
     }
 }

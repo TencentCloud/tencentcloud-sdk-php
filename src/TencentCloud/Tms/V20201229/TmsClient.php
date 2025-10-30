@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,6 +23,8 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tms\V20201229\Models as Models;
 
 /**
+ * @method Models\CreateFinancialLLMTaskResponse CreateFinancialLLMTask(Models\CreateFinancialLLMTaskRequest $req) 创建金融大模型审校任务
+ * @method Models\GetFinancialLLMTaskResultResponse GetFinancialLLMTaskResult(Models\GetFinancialLLMTaskResultRequest $req) 获取金融大模型审校任务结果
  * @method Models\TextModerationResponse TextModeration(Models\TextModerationRequest $req) 本接口（Text Moderation）用于提交文本内容进行智能审核任务。使用前请您使用腾讯云主账号登录控制台 [开通文本内容安全服务](https://console.cloud.tencent.com/cms) 并调整好对应的业务配置。
 
 ### 接口使用说明
@@ -34,7 +36,8 @@ use TencentCloud\Tms\V20201229\Models as Models;
 - 支持识别多种违规场景，包括：低俗、谩骂、色情、广告等场景；
 - 支持根据不同的业务场景配置自定义的审核策略，可在控制台文本内容安全-策略管理中配置；
 - 支持用户自定义配置词库黑白名单，打击自定义识别类型的违规文本（目前仅支持黑名单配置）；
-- 支持在审核文本内容时同时关联账号或设备信息，可识别违规风险账号或设备。
+- 支持在审核文本内容时同时关联账号或设备信息，可识别违规风险账号或设备；
+- 支持大模型、聊天室等场景下的流式上下文审核。
 
 ### 接口调用说明：
 - 文本内容大小支持：文本原文长度不能超过unicode编码长度10000个字符；

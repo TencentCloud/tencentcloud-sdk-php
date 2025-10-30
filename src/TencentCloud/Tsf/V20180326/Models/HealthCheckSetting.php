@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,17 +24,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionType(string $ActionType) 设置健康检查方法。HTTP：通过 HTTP 接口检查；CMD：通过执行命令检查；TCP：通过建立 TCP 连接检查。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getInitialDelaySeconds() 获取容器延时启动健康检查的时间。
+ * @method integer getInitialDelaySeconds() 获取容器延时启动健康检查的时间，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInitialDelaySeconds(integer $InitialDelaySeconds) 设置容器延时启动健康检查的时间。
+ * @method void setInitialDelaySeconds(integer $InitialDelaySeconds) 设置容器延时启动健康检查的时间，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTimeoutSeconds() 获取每次健康检查响应的最大超时时间。
+ * @method integer getTimeoutSeconds() 获取每次健康检查响应的最大超时时间，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTimeoutSeconds(integer $TimeoutSeconds) 设置每次健康检查响应的最大超时时间。
+ * @method void setTimeoutSeconds(integer $TimeoutSeconds) 设置每次健康检查响应的最大超时时间，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPeriodSeconds() 获取进行健康检查的时间间隔。
+ * @method integer getPeriodSeconds() 获取进行健康检查的时间间隔，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPeriodSeconds(integer $PeriodSeconds) 设置进行健康检查的时间间隔。
+ * @method void setPeriodSeconds(integer $PeriodSeconds) 设置进行健康检查的时间间隔，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSuccessThreshold() 获取表示后端容器从失败到成功的连续健康检查成功次数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,19 +74,19 @@ class HealthCheckSetting extends AbstractModel
     public $ActionType;
 
     /**
-     * @var integer 容器延时启动健康检查的时间。
+     * @var integer 容器延时启动健康检查的时间，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InitialDelaySeconds;
 
     /**
-     * @var integer 每次健康检查响应的最大超时时间。
+     * @var integer 每次健康检查响应的最大超时时间，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeoutSeconds;
 
     /**
-     * @var integer 进行健康检查的时间间隔。
+     * @var integer 进行健康检查的时间间隔，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PeriodSeconds;
@@ -136,11 +136,11 @@ class HealthCheckSetting extends AbstractModel
     /**
      * @param string $ActionType 健康检查方法。HTTP：通过 HTTP 接口检查；CMD：通过执行命令检查；TCP：通过建立 TCP 连接检查。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $InitialDelaySeconds 容器延时启动健康检查的时间。
+     * @param integer $InitialDelaySeconds 容器延时启动健康检查的时间，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TimeoutSeconds 每次健康检查响应的最大超时时间。
+     * @param integer $TimeoutSeconds 每次健康检查响应的最大超时时间，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PeriodSeconds 进行健康检查的时间间隔。
+     * @param integer $PeriodSeconds 进行健康检查的时间间隔，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SuccessThreshold 表示后端容器从失败到成功的连续健康检查成功次数。
 注意：此字段可能返回 null，表示取不到有效值。

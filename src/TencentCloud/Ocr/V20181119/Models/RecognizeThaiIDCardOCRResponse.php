@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -64,24 +64,10 @@ use TencentCloud\Common\AbstractModel;
 -9107 证件反光告警
 -9108 证件模糊告警
 -9109 告警能力未开通
- * @method string getAdvancedInfo() 获取字段置信度：
-{
-    "ID": {
-        "Confidence": 0.9999
-    },
-    "ThaiName": {
-        "Confidence": 0.9996
-    }
-}
- * @method void setAdvancedInfo(string $AdvancedInfo) 设置字段置信度：
-{
-    "ID": {
-        "Confidence": 0.9999
-    },
-    "ThaiName": {
-        "Confidence": 0.9996
-    }
-}
+ * @method string getAdvancedInfo() 获取该字段已废弃， 将固定返回"1"，不建议使用。 
+ * @method void setAdvancedInfo(string $AdvancedInfo) 设置该字段已废弃， 将固定返回"1"，不建议使用。 
+ * @method integer getCardCount() 获取卡证正面图片中，证件主体的数量（仅请求曼谷地域[ap-bangkok]返回）
+ * @method void setCardCount(integer $CardCount) 设置卡证正面图片中，证件主体的数量（仅请求曼谷地域[ap-bangkok]返回）
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -174,17 +160,15 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
     public $WarnCardInfos;
 
     /**
-     * @var string 字段置信度：
-{
-    "ID": {
-        "Confidence": 0.9999
-    },
-    "ThaiName": {
-        "Confidence": 0.9996
-    }
-}
+     * @var string 该字段已废弃， 将固定返回"1"，不建议使用。 
+     * @deprecated
      */
     public $AdvancedInfo;
+
+    /**
+     * @var integer 卡证正面图片中，证件主体的数量（仅请求曼谷地域[ap-bangkok]返回）
+     */
+    public $CardCount;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -214,15 +198,8 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
 -9107 证件反光告警
 -9108 证件模糊告警
 -9109 告警能力未开通
-     * @param string $AdvancedInfo 字段置信度：
-{
-    "ID": {
-        "Confidence": 0.9999
-    },
-    "ThaiName": {
-        "Confidence": 0.9996
-    }
-}
+     * @param string $AdvancedInfo 该字段已废弃， 将固定返回"1"，不建议使用。 
+     * @param integer $CardCount 卡证正面图片中，证件主体的数量（仅请求曼谷地域[ap-bangkok]返回）
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -304,6 +281,10 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
 
         if (array_key_exists("AdvancedInfo",$param) and $param["AdvancedInfo"] !== null) {
             $this->AdvancedInfo = $param["AdvancedInfo"];
+        }
+
+        if (array_key_exists("CardCount",$param) and $param["CardCount"] !== null) {
+            $this->CardCount = $param["CardCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

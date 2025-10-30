@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPosition(integer $Position) 设置类目顺序
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNameEn() 获取类目名称英文
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNameEn(string $NameEn) 设置类目名称英文
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BizCatalogsInfo extends AbstractModel
 {
@@ -84,6 +88,12 @@ class BizCatalogsInfo extends AbstractModel
     public $Position;
 
     /**
+     * @var string 类目名称英文
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NameEn;
+
+    /**
      * @param string $AppId 应用id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Id 类目id
@@ -95,6 +105,8 @@ class BizCatalogsInfo extends AbstractModel
      * @param integer $ParentId 上级类目id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Position 类目顺序
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NameEn 类目名称英文
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -132,6 +144,10 @@ class BizCatalogsInfo extends AbstractModel
 
         if (array_key_exists("Position",$param) and $param["Position"] !== null) {
             $this->Position = $param["Position"];
+        }
+
+        if (array_key_exists("NameEn",$param) and $param["NameEn"] !== null) {
+            $this->NameEn = $param["NameEn"];
         }
     }
 }

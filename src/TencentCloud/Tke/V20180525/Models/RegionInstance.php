@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionName(string $RegionName) 设置地域名称
  * @method integer getRegionId() 获取地域ID
  * @method void setRegionId(integer $RegionId) 设置地域ID
- * @method string getStatus() 获取地域状态
- * @method void setStatus(string $Status) 设置地域状态
+ * @method string getStatus() 获取地域状态\n- alluser: 所有用户可见
+ * @method void setStatus(string $Status) 设置地域状态\n- alluser: 所有用户可见
  * @method string getFeatureGates() 获取地域特性开关(按照JSON的形式返回所有属性)
  * @method void setFeatureGates(string $FeatureGates) 设置地域特性开关(按照JSON的形式返回所有属性)
  * @method string getAlias() 获取地域简称
@@ -46,7 +46,7 @@ class RegionInstance extends AbstractModel
     public $RegionId;
 
     /**
-     * @var string 地域状态
+     * @var string 地域状态\n- alluser: 所有用户可见
      */
     public $Status;
 
@@ -68,7 +68,7 @@ class RegionInstance extends AbstractModel
     /**
      * @param string $RegionName 地域名称
      * @param integer $RegionId 地域ID
-     * @param string $Status 地域状态
+     * @param string $Status 地域状态\n- alluser: 所有用户可见
      * @param string $FeatureGates 地域特性开关(按照JSON的形式返回所有属性)
      * @param string $Alias 地域简称
      * @param string $Remark 地域白名单

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置限定数量（默认15）
  * @method string getVarType() 获取按变量类型过滤，默认查询所有类型(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO)
  * @method void setVarType(string $VarType) 设置按变量类型过滤，默认查询所有类型(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO)
+ * @method boolean getNeedInternalVar() 获取是否需要内部变量(默认false)
+ * @method void setNeedInternalVar(boolean $NeedInternalVar) 设置是否需要内部变量(默认false)
+ * @method integer getVarModuleType() 获取变量类型
+ * @method void setVarModuleType(integer $VarModuleType) 设置变量类型
  */
 class GetVarListRequest extends AbstractModel
 {
@@ -66,12 +70,24 @@ class GetVarListRequest extends AbstractModel
     public $VarType;
 
     /**
+     * @var boolean 是否需要内部变量(默认false)
+     */
+    public $NeedInternalVar;
+
+    /**
+     * @var integer 变量类型
+     */
+    public $VarModuleType;
+
+    /**
      * @param string $AppBizId 应用ID
      * @param array $VarIds 变量ID数组
      * @param string $Keyword 按变量名称关键词搜索
      * @param integer $Offset 起始偏移量（默认0）
      * @param integer $Limit 限定数量（默认15）
      * @param string $VarType 按变量类型过滤，默认查询所有类型(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO)
+     * @param boolean $NeedInternalVar 是否需要内部变量(默认false)
+     * @param integer $VarModuleType 变量类型
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class GetVarListRequest extends AbstractModel
 
         if (array_key_exists("VarType",$param) and $param["VarType"] !== null) {
             $this->VarType = $param["VarType"];
+        }
+
+        if (array_key_exists("NeedInternalVar",$param) and $param["NeedInternalVar"] !== null) {
+            $this->NeedInternalVar = $param["NeedInternalVar"];
+        }
+
+        if (array_key_exists("VarModuleType",$param) and $param["VarModuleType"] !== null) {
+            $this->VarModuleType = $param["VarModuleType"];
         }
     }
 }

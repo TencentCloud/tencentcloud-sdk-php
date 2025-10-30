@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,15 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyMigrateName请求参数结构体
  *
- * @method string getJobId() 获取迁移任务id
- * @method void setJobId(string $JobId) 设置迁移任务id
+ * @method string getJobId() 获取迁移任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
+ * @method void setJobId(string $JobId) 设置迁移任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
  * @method string getJobName() 获取修改后的迁移任务名
  * @method void setJobName(string $JobName) 设置修改后的迁移任务名
  */
 class ModifyMigrateNameRequest extends AbstractModel
 {
     /**
-     * @var string 迁移任务id
+     * @var string 迁移任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      */
     public $JobId;
 
@@ -38,7 +41,8 @@ class ModifyMigrateNameRequest extends AbstractModel
     public $JobName;
 
     /**
-     * @param string $JobId 迁移任务id
+     * @param string $JobId 迁移任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      * @param string $JobName 修改后的迁移任务名
      */
     function __construct()

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -74,7 +74,9 @@ use TencentCloud\Tcaplusdb\V20190823\Models as Models;
  * @method Models\ModifyTableTagsResponse ModifyTableTags(Models\ModifyTableTagsRequest $req) 修改表格标签
  * @method Models\ModifyTablesResponse ModifyTables(Models\ModifyTablesRequest $req) 根据用户选定的表定义IDL文件，批量修改指定的表
  * @method Models\RecoverRecycleTablesResponse RecoverRecycleTables(Models\RecoverRecycleTablesRequest $req) 恢复回收站中，用户自行删除的表。对欠费待释放的表无效。
- * @method Models\RollbackTablesResponse RollbackTables(Models\RollbackTablesRequest $req) 表格数据回档
+ * @method Models\RollbackTablesResponse RollbackTables(Models\RollbackTablesRequest $req) 不再使用
+
+表格数据回档
  * @method Models\SetBackupExpireRuleResponse SetBackupExpireRule(Models\SetBackupExpireRuleRequest $req) 新增、删除、修改备份过期策略， ClusterId必须为具体的集群Id（appid）
  * @method Models\SetTableDataFlowResponse SetTableDataFlow(Models\SetTableDataFlowRequest $req) 新增、修改表格数据订阅
  * @method Models\SetTableIndexResponse SetTableIndex(Models\SetTableIndexRequest $req) 设置表格分布式索引

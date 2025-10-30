@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPluginInfoType(integer $PluginInfoType) 设置插件信息类型; 0: 未指定类型; 1: 知识库问答插件
  * @method AgentKnowledgeQAPlugin getKnowledgeQa() 获取知识库问答插件配置
  * @method void setKnowledgeQa(AgentKnowledgeQAPlugin $KnowledgeQa) 设置知识库问答插件配置
+ * @method boolean getEnableRoleAuth() 获取是否使用一键授权
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableRoleAuth(boolean $EnableRoleAuth) 设置是否使用一键授权
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getQuery() 获取应用配置的插件query信息
+ * @method void setQuery(array $Query) 设置应用配置的插件query信息
+ * @method integer getMcpType() 获取MCP类型
+ * @method void setMcpType(integer $McpType) 设置MCP类型
  */
 class AgentPluginInfo extends AbstractModel
 {
@@ -59,11 +67,31 @@ class AgentPluginInfo extends AbstractModel
     public $KnowledgeQa;
 
     /**
+     * @var boolean 是否使用一键授权
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableRoleAuth;
+
+    /**
+     * @var array 应用配置的插件query信息
+     */
+    public $Query;
+
+    /**
+     * @var integer MCP类型
+     */
+    public $McpType;
+
+    /**
      * @param string $PluginId 插件id
      * @param array $Headers 应用配置的插件header信息
      * @param AgentModelInfo $Model 插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型
      * @param integer $PluginInfoType 插件信息类型; 0: 未指定类型; 1: 知识库问答插件
      * @param AgentKnowledgeQAPlugin $KnowledgeQa 知识库问答插件配置
+     * @param boolean $EnableRoleAuth 是否使用一键授权
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Query 应用配置的插件query信息
+     * @param integer $McpType MCP类型
      */
     function __construct()
     {
@@ -103,6 +131,23 @@ class AgentPluginInfo extends AbstractModel
         if (array_key_exists("KnowledgeQa",$param) and $param["KnowledgeQa"] !== null) {
             $this->KnowledgeQa = new AgentKnowledgeQAPlugin();
             $this->KnowledgeQa->deserialize($param["KnowledgeQa"]);
+        }
+
+        if (array_key_exists("EnableRoleAuth",$param) and $param["EnableRoleAuth"] !== null) {
+            $this->EnableRoleAuth = $param["EnableRoleAuth"];
+        }
+
+        if (array_key_exists("Query",$param) and $param["Query"] !== null) {
+            $this->Query = [];
+            foreach ($param["Query"] as $key => $value){
+                $obj = new AgentPluginQuery();
+                $obj->deserialize($value);
+                array_push($this->Query, $obj);
+            }
+        }
+
+        if (array_key_exists("McpType",$param) and $param["McpType"] !== null) {
+            $this->McpType = $param["McpType"];
         }
     }
 }

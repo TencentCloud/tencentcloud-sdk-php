@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeRepositoryImageAssets返回参数结构体
  *
  * @method array getData() 获取仓库镜像列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(array $Data) 设置仓库镜像列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotal() 获取总数
  * @method void setTotal(integer $Total) 设置总数
  * @method array getRegionList() 获取region列表
@@ -35,7 +33,6 @@ class DescribeRepositoryImageAssetsResponse extends AbstractModel
 {
     /**
      * @var array 仓库镜像列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
@@ -56,7 +53,6 @@ class DescribeRepositoryImageAssetsResponse extends AbstractModel
 
     /**
      * @param array $Data 仓库镜像列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Total 总数
      * @param array $RegionList region列表
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

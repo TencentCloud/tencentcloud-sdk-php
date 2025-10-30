@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppBizId(string $AppBizId) 设置应用ID
  * @method string getVarId() 获取变量ID
  * @method void setVarId(string $VarId) 设置变量ID
+ * @method integer getVarModuleType() 获取参数类型
+ * @method void setVarModuleType(integer $VarModuleType) 设置参数类型
  */
 class DeleteVarRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DeleteVarRequest extends AbstractModel
     public $VarId;
 
     /**
+     * @var integer 参数类型
+     */
+    public $VarModuleType;
+
+    /**
      * @param string $AppBizId 应用ID
      * @param string $VarId 变量ID
+     * @param integer $VarModuleType 参数类型
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DeleteVarRequest extends AbstractModel
 
         if (array_key_exists("VarId",$param) and $param["VarId"] !== null) {
             $this->VarId = $param["VarId"];
+        }
+
+        if (array_key_exists("VarModuleType",$param) and $param["VarModuleType"] !== null) {
+            $this->VarModuleType = $param["VarModuleType"];
         }
     }
 }

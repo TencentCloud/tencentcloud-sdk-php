@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCosRecharges请求参数结构体
  *
- * @method string getTopicId() 获取日志主题 ID
- * @method void setTopicId(string $TopicId) 设置日志主题 ID
+ * @method string getTopicId() 获取日志主题Id。
+-  通过[获取日志主题列表](https://cloud.tencent.com/document/api/614/56454)获取日志主题Id。
+ * @method void setTopicId(string $TopicId) 设置日志主题Id。
+-  通过[获取日志主题列表](https://cloud.tencent.com/document/api/614/56454)获取日志主题Id。
  * @method integer getStatus() 获取状态   status 0: 已创建, 1: 运行中, 2: 已停止, 3: 已完成, 4: 运行失败。
  * @method void setStatus(integer $Status) 设置状态   status 0: 已创建, 1: 运行中, 2: 已停止, 3: 已完成, 4: 运行失败。
  * @method integer getEnable() 获取是否启用:   0： 未启用  ， 1：启用
@@ -30,7 +32,8 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCosRechargesRequest extends AbstractModel
 {
     /**
-     * @var string 日志主题 ID
+     * @var string 日志主题Id。
+-  通过[获取日志主题列表](https://cloud.tencent.com/document/api/614/56454)获取日志主题Id。
      */
     public $TopicId;
 
@@ -45,7 +48,8 @@ class DescribeCosRechargesRequest extends AbstractModel
     public $Enable;
 
     /**
-     * @param string $TopicId 日志主题 ID
+     * @param string $TopicId 日志主题Id。
+-  通过[获取日志主题列表](https://cloud.tencent.com/document/api/614/56454)获取日志主题Id。
      * @param integer $Status 状态   status 0: 已创建, 1: 运行中, 2: 已停止, 3: 已完成, 4: 运行失败。
      * @param integer $Enable 是否启用:   0： 未启用  ， 1：启用
      */

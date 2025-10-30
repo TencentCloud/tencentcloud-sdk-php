@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getPartition() 获取Partition 分区ID
  * @method void setPartition(integer $Partition) 设置Partition 分区ID
- * @method integer getLeaderStatus() 获取Leader 运行状态
- * @method void setLeaderStatus(integer $LeaderStatus) 设置Leader 运行状态
+ * @method integer getLeaderStatus() 获取Leader 运行状态，0表示正常运行
+ * @method void setLeaderStatus(integer $LeaderStatus) 设置Leader 运行状态，0表示正常运行
  * @method integer getIsrNum() 获取ISR 个数
  * @method void setIsrNum(integer $IsrNum) 设置ISR 个数
  * @method integer getReplicaNum() 获取副本个数
@@ -37,7 +37,7 @@ class TopicPartitionDO extends AbstractModel
     public $Partition;
 
     /**
-     * @var integer Leader 运行状态
+     * @var integer Leader 运行状态，0表示正常运行
      */
     public $LeaderStatus;
 
@@ -53,7 +53,7 @@ class TopicPartitionDO extends AbstractModel
 
     /**
      * @param integer $Partition Partition 分区ID
-     * @param integer $LeaderStatus Leader 运行状态
+     * @param integer $LeaderStatus Leader 运行状态，0表示正常运行
      * @param integer $IsrNum ISR 个数
      * @param integer $ReplicaNum 副本个数
      */

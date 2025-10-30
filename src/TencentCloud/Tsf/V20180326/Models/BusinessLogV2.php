@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getContent() 获取日志内容
  * @method void setContent(string $Content) 设置日志内容
- * @method integer getTimestamp() 获取日志时间戳
- * @method void setTimestamp(integer $Timestamp) 设置日志时间戳
+ * @method integer getTimestamp() 获取日志时间戳，单位毫秒
+ * @method void setTimestamp(integer $Timestamp) 设置日志时间戳，单位毫秒
  * @method string getInstanceIp() 获取实例IP
  * @method void setInstanceIp(string $InstanceIp) 设置实例IP
  * @method string getLogId() 获取日志ID
@@ -46,7 +46,7 @@ class BusinessLogV2 extends AbstractModel
     public $Content;
 
     /**
-     * @var integer 日志时间戳
+     * @var integer 日志时间戳，单位毫秒
      */
     public $Timestamp;
 
@@ -68,7 +68,7 @@ class BusinessLogV2 extends AbstractModel
     /**
      * @param string $InstanceId 实例ID
      * @param string $Content 日志内容
-     * @param integer $Timestamp 日志时间戳
+     * @param integer $Timestamp 日志时间戳，单位毫秒
      * @param string $InstanceIp 实例IP
      * @param string $LogId 日志ID
      * @param string $GroupId 部署组ID

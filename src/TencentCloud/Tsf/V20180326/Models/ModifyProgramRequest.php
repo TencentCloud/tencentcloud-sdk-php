@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyProgram请求参数结构体
  *
- * @method string getProgramId() 获取数据集ID
- * @method void setProgramId(string $ProgramId) 设置数据集ID
+ * @method string getProgramId() 获取数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口会返回数据集信息，包括programId
+ * @method void setProgramId(string $ProgramId) 设置数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口会返回数据集信息，包括programId
  * @method string getProgramName() 获取数据集名称，不传入时不更新
  * @method void setProgramName(string $ProgramName) 设置数据集名称，不传入时不更新
  * @method string getProgramDesc() 获取数据集描述，不传入时不更新
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyProgramRequest extends AbstractModel
 {
     /**
-     * @var string 数据集ID
+     * @var string 数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口会返回数据集信息，包括programId
      */
     public $ProgramId;
 
@@ -59,7 +59,7 @@ class ModifyProgramRequest extends AbstractModel
     public $EmptyProgramItemList;
 
     /**
-     * @param string $ProgramId 数据集ID
+     * @param string $ProgramId 数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口会返回数据集信息，包括programId
      * @param string $ProgramName 数据集名称，不传入时不更新
      * @param string $ProgramDesc 数据集描述，不传入时不更新
      * @param array $ProgramItemList 数据项列表，传入null不更新，传入空数组全量删除

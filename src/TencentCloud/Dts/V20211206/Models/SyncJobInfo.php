@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -46,28 +46,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpireTime(string $ExpireTime) 设置过期时间，格式为 yyyy-mm-dd hh:mm:ss
  * @method string getSrcRegion() 获取源端地域，如：ap-guangzhou等
  * @method void setSrcRegion(string $SrcRegion) 设置源端地域，如：ap-guangzhou等
- * @method string getSrcDatabaseType() 获取源端数据库类型，mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
- * @method void setSrcDatabaseType(string $SrcDatabaseType) 设置源端数据库类型，mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
- * @method string getSrcAccessType() 获取源端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
- * @method void setSrcAccessType(string $SrcAccessType) 设置源端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
+ * @method string getSrcDatabaseType() 获取源端数据库类型，mysql,tdsqlmysql,mariadb,cynosdbmysql(表示tdsql-c实例),tdstore,percona,postgresql,mongodb等。
+ * @method void setSrcDatabaseType(string $SrcDatabaseType) 设置源端数据库类型，mysql,tdsqlmysql,mariadb,cynosdbmysql(表示tdsql-c实例),tdstore,percona,postgresql,mongodb等。
+ * @method string getSrcAccessType() 获取源端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
+ * @method void setSrcAccessType(string $SrcAccessType) 设置源端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
  * @method Endpoint getSrcInfo() 获取源端信息，单节点数据库使用
  * @method void setSrcInfo(Endpoint $SrcInfo) 设置源端信息，单节点数据库使用
  * @method string getSrcNodeType() 获取枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
  * @method void setSrcNodeType(string $SrcNodeType) 设置枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
- * @method SyncDBEndpointInfos getSrcInfos() 获取源端信息，多节点数据库使用
- * @method void setSrcInfos(SyncDBEndpointInfos $SrcInfos) 设置源端信息，多节点数据库使用
+ * @method SyncDBEndpointInfos getSrcInfos() 获取源端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
+ * @method void setSrcInfos(SyncDBEndpointInfos $SrcInfos) 设置源端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
  * @method string getDstRegion() 获取目标端地域，如：ap-guangzhou等
  * @method void setDstRegion(string $DstRegion) 设置目标端地域，如：ap-guangzhou等
- * @method string getDstDatabaseType() 获取目标端数据库类型，mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
- * @method void setDstDatabaseType(string $DstDatabaseType) 设置目标端数据库类型，mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
+ * @method string getDstDatabaseType() 获取目标端数据库类型，mysql,tdsqlmysql,mariadb,cynosdbmysql(表示tdsql-c实例),tdstore,percona,postgresql,mongodb等。
+ * @method void setDstDatabaseType(string $DstDatabaseType) 设置目标端数据库类型，mysql,tdsqlmysql,mariadb,cynosdbmysql(表示tdsql-c实例),tdstore,percona,postgresql,mongodb等。
  * @method string getDstAccessType() 获取目标端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
  * @method void setDstAccessType(string $DstAccessType) 设置目标端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
  * @method Endpoint getDstInfo() 获取目标端信息，单节点数据库使用
  * @method void setDstInfo(Endpoint $DstInfo) 设置目标端信息，单节点数据库使用
  * @method string getDstNodeType() 获取枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
  * @method void setDstNodeType(string $DstNodeType) 设置枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
- * @method SyncDBEndpointInfos getDstInfos() 获取目标端信息，多节点数据库使用
- * @method void setDstInfos(SyncDBEndpointInfos $DstInfos) 设置目标端信息，多节点数据库使用
+ * @method SyncDBEndpointInfos getDstInfos() 获取目标端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
+ * @method void setDstInfos(SyncDBEndpointInfos $DstInfos) 设置目标端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
  * @method string getCreateTime() 获取创建时间，格式为 yyyy-mm-dd hh:mm:ss
  * @method void setCreateTime(string $CreateTime) 设置创建时间，格式为 yyyy-mm-dd hh:mm:ss
  * @method string getStartTime() 获取开始时间，格式为 yyyy-mm-dd hh:mm:ss
@@ -159,12 +159,12 @@ class SyncJobInfo extends AbstractModel
     public $SrcRegion;
 
     /**
-     * @var string 源端数据库类型，mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
+     * @var string 源端数据库类型，mysql,tdsqlmysql,mariadb,cynosdbmysql(表示tdsql-c实例),tdstore,percona,postgresql,mongodb等。
      */
     public $SrcDatabaseType;
 
     /**
-     * @var string 源端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
+     * @var string 源端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
      */
     public $SrcAccessType;
 
@@ -179,7 +179,7 @@ class SyncJobInfo extends AbstractModel
     public $SrcNodeType;
 
     /**
-     * @var SyncDBEndpointInfos 源端信息，多节点数据库使用
+     * @var SyncDBEndpointInfos 源端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
      */
     public $SrcInfos;
 
@@ -189,7 +189,7 @@ class SyncJobInfo extends AbstractModel
     public $DstRegion;
 
     /**
-     * @var string 目标端数据库类型，mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
+     * @var string 目标端数据库类型，mysql,tdsqlmysql,mariadb,cynosdbmysql(表示tdsql-c实例),tdstore,percona,postgresql,mongodb等。
      */
     public $DstDatabaseType;
 
@@ -209,7 +209,7 @@ class SyncJobInfo extends AbstractModel
     public $DstNodeType;
 
     /**
-     * @var SyncDBEndpointInfos 目标端信息，多节点数据库使用
+     * @var SyncDBEndpointInfos 目标端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
      */
     public $DstInfos;
 
@@ -292,17 +292,17 @@ class SyncJobInfo extends AbstractModel
      * @param string $Specification 任务规格
      * @param string $ExpireTime 过期时间，格式为 yyyy-mm-dd hh:mm:ss
      * @param string $SrcRegion 源端地域，如：ap-guangzhou等
-     * @param string $SrcDatabaseType 源端数据库类型，mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
-     * @param string $SrcAccessType 源端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
+     * @param string $SrcDatabaseType 源端数据库类型，mysql,tdsqlmysql,mariadb,cynosdbmysql(表示tdsql-c实例),tdstore,percona,postgresql,mongodb等。
+     * @param string $SrcAccessType 源端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
      * @param Endpoint $SrcInfo 源端信息，单节点数据库使用
      * @param string $SrcNodeType 枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
-     * @param SyncDBEndpointInfos $SrcInfos 源端信息，多节点数据库使用
+     * @param SyncDBEndpointInfos $SrcInfos 源端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
      * @param string $DstRegion 目标端地域，如：ap-guangzhou等
-     * @param string $DstDatabaseType 目标端数据库类型，mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
+     * @param string $DstDatabaseType 目标端数据库类型，mysql,tdsqlmysql,mariadb,cynosdbmysql(表示tdsql-c实例),tdstore,percona,postgresql,mongodb等。
      * @param string $DstAccessType 目标端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
      * @param Endpoint $DstInfo 目标端信息，单节点数据库使用
      * @param string $DstNodeType 枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
-     * @param SyncDBEndpointInfos $DstInfos 目标端信息，多节点数据库使用
+     * @param SyncDBEndpointInfos $DstInfos 目标端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
      * @param string $CreateTime 创建时间，格式为 yyyy-mm-dd hh:mm:ss
      * @param string $StartTime 开始时间，格式为 yyyy-mm-dd hh:mm:ss
      * @param string $Status 任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已结束)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知)

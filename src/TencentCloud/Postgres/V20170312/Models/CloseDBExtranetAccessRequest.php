@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CloseDBExtranetAccess请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID，形如postgres-6r233v55
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-6r233v55
- * @method integer getIsIpv6() 获取是否关闭Ipv6外网，1：是，0：否
- * @method void setIsIpv6(integer $IsIpv6) 设置是否关闭Ipv6外网，1：是，0：否
+ * @method string getDBInstanceId() 获取实例ID，可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。形如postgres-6r233v55
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。形如postgres-6r233v55
+ * @method integer getIsIpv6() 获取是否关闭Ipv6外网，1：是，0：否。默认值：0。
+ * @method void setIsIpv6(integer $IsIpv6) 设置是否关闭Ipv6外网，1：是，0：否。默认值：0。
  */
 class CloseDBExtranetAccessRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，形如postgres-6r233v55
+     * @var string 实例ID，可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。形如postgres-6r233v55
      */
     public $DBInstanceId;
 
     /**
-     * @var integer 是否关闭Ipv6外网，1：是，0：否
+     * @var integer 是否关闭Ipv6外网，1：是，0：否。默认值：0。
      */
     public $IsIpv6;
 
     /**
-     * @param string $DBInstanceId 实例ID，形如postgres-6r233v55
-     * @param integer $IsIpv6 是否关闭Ipv6外网，1：是，0：否
+     * @param string $DBInstanceId 实例ID，可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。形如postgres-6r233v55
+     * @param integer $IsIpv6 是否关闭Ipv6外网，1：是，0：否。默认值：0。
      */
     function __construct()
     {

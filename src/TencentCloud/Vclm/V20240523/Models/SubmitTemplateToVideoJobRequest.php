@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,34 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SubmitTemplateToVideoJob请求参数结构体
  *
- * @method string getTemplate() 获取特效模板名称。
-枚举值：
-hug ：拥抱
-kiss ：亲吻
-heart ： 比心
-fuzzy ： 毛茸茸
-befigure：变手办风
-longhair：金色长发
-morphlab：膨胀
-bloom：万物生花
-pinch：捏捏
-balloonfly：飞走了
-dragme：被拽走了
-
- * @method void setTemplate(string $Template) 设置特效模板名称。
-枚举值：
-hug ：拥抱
-kiss ：亲吻
-heart ： 比心
-fuzzy ： 毛茸茸
-befigure：变手办风
-longhair：金色长发
-morphlab：膨胀
-bloom：万物生花
-pinch：捏捏
-balloonfly：飞走了
-dragme：被拽走了
-
+ * @method string getTemplate() 获取特效模板名称。请在 [视频特效模板列表](https://cloud.tencent.com/document/product/1616/119194)  中选择想要生成的特效对应的 template 名称。
+ * @method void setTemplate(string $Template) 设置特效模板名称。请在 [视频特效模板列表](https://cloud.tencent.com/document/product/1616/119194)  中选择想要生成的特效对应的 template 名称。
  * @method array getImages() 获取参考图像，最多输入2张图。
 - 支持传入图片Base64编码或图片URL（确保可访问）
 - 图片格式：支持png、jpg、jpeg、webp、bmp、tiff
@@ -72,24 +46,15 @@ dragme：被拽走了
 默认在生成视频的右下角添加“视频由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
  * @method void setLogoParam(LogoParam $LogoParam) 设置标识内容设置。
 默认在生成视频的右下角添加“视频由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+ * @method string getResolution() 获取视频输出分辨率，默认值：360p  - 枚举值：  720p  360p。
+ * @method void setResolution(string $Resolution) 设置视频输出分辨率，默认值：360p  - 枚举值：  720p  360p。
+ * @method boolean getBGM() 获取是否为生成的视频添加背景音乐。默认：false，  传 true 时系统将从预设 BGM 库中自动挑选合适的音乐并添加；不传或为 false 则不添加 BGM。
+ * @method void setBGM(boolean $BGM) 设置是否为生成的视频添加背景音乐。默认：false，  传 true 时系统将从预设 BGM 库中自动挑选合适的音乐并添加；不传或为 false 则不添加 BGM。
  */
 class SubmitTemplateToVideoJobRequest extends AbstractModel
 {
     /**
-     * @var string 特效模板名称。
-枚举值：
-hug ：拥抱
-kiss ：亲吻
-heart ： 比心
-fuzzy ： 毛茸茸
-befigure：变手办风
-longhair：金色长发
-morphlab：膨胀
-bloom：万物生花
-pinch：捏捏
-balloonfly：飞走了
-dragme：被拽走了
-
+     * @var string 特效模板名称。请在 [视频特效模板列表](https://cloud.tencent.com/document/product/1616/119194)  中选择想要生成的特效对应的 template 名称。
      */
     public $Template;
 
@@ -118,20 +83,17 @@ dragme：被拽走了
     public $LogoParam;
 
     /**
-     * @param string $Template 特效模板名称。
-枚举值：
-hug ：拥抱
-kiss ：亲吻
-heart ： 比心
-fuzzy ： 毛茸茸
-befigure：变手办风
-longhair：金色长发
-morphlab：膨胀
-bloom：万物生花
-pinch：捏捏
-balloonfly：飞走了
-dragme：被拽走了
+     * @var string 视频输出分辨率，默认值：360p  - 枚举值：  720p  360p。
+     */
+    public $Resolution;
 
+    /**
+     * @var boolean 是否为生成的视频添加背景音乐。默认：false，  传 true 时系统将从预设 BGM 库中自动挑选合适的音乐并添加；不传或为 false 则不添加 BGM。
+     */
+    public $BGM;
+
+    /**
+     * @param string $Template 特效模板名称。请在 [视频特效模板列表](https://cloud.tencent.com/document/product/1616/119194)  中选择想要生成的特效对应的 template 名称。
      * @param array $Images 参考图像，最多输入2张图。
 - 支持传入图片Base64编码或图片URL（确保可访问）
 - 图片格式：支持png、jpg、jpeg、webp、bmp、tiff
@@ -144,6 +106,8 @@ dragme：被拽走了
 建议您使用显著标识来提示，该视频是 AI 生成的视频。
      * @param LogoParam $LogoParam 标识内容设置。
 默认在生成视频的右下角添加“视频由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+     * @param string $Resolution 视频输出分辨率，默认值：360p  - 枚举值：  720p  360p。
+     * @param boolean $BGM 是否为生成的视频添加背景音乐。默认：false，  传 true 时系统将从预设 BGM 库中自动挑选合适的音乐并添加；不传或为 false 则不添加 BGM。
      */
     function __construct()
     {
@@ -178,6 +142,14 @@ dragme：被拽走了
         if (array_key_exists("LogoParam",$param) and $param["LogoParam"] !== null) {
             $this->LogoParam = new LogoParam();
             $this->LogoParam->deserialize($param["LogoParam"]);
+        }
+
+        if (array_key_exists("Resolution",$param) and $param["Resolution"] !== null) {
+            $this->Resolution = $param["Resolution"];
+        }
+
+        if (array_key_exists("BGM",$param) and $param["BGM"] !== null) {
+            $this->BGM = $param["BGM"];
         }
     }
 }

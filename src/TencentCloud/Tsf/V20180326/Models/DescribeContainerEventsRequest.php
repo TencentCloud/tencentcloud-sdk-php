@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,20 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeContainerEvents请求参数结构体
  *
- * @method string getResourceType() 获取event 的资源类型, group 或者 instance
- * @method void setResourceType(string $ResourceType) 设置event 的资源类型, group 或者 instance
- * @method string getResourceId() 获取event 的资源 id
- * @method void setResourceId(string $ResourceId) 设置event 的资源 id
+ * @method string getResourceType() 获取event 的资源类型, 仅支持 group
+ * @method void setResourceType(string $ResourceType) 设置event 的资源类型, 仅支持 group
+ * @method string getResourceId() 获取部署组ID，按照【部署组ID】进行过滤，可通过调用[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的项目列表或登录控制台进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的项目。
+ * @method void setResourceId(string $ResourceId) 设置部署组ID，按照【部署组ID】进行过滤，可通过调用[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的项目列表或登录控制台进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的项目。
  * @method integer getOffset() 获取偏移量，取值从0开始
  * @method void setOffset(integer $Offset) 设置偏移量，取值从0开始
  * @method integer getLimit() 获取分页个数，默认为20， 取值应为1~50
  * @method void setLimit(integer $Limit) 设置分页个数，默认为20， 取值应为1~50
- * @method string getGroupId() 获取当类型是 instance 时需要
- * @method void setGroupId(string $GroupId) 设置当类型是 instance 时需要
- * @method string getKind() 获取event的资源kind
- * @method void setKind(string $Kind) 设置event的资源kind
- * @method string getType() 获取event 的type
- * @method void setType(string $Type) 设置event 的type
+ * @method string getGroupId() 获取部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
+ * @method void setGroupId(string $GroupId) 设置部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
+ * @method string getKind() 获取event的资源种类
+ * @method void setKind(string $Kind) 设置event的资源种类
+ * @method string getType() 获取event 的事件级别
+ * @method void setType(string $Type) 设置event 的事件级别
  * @method string getResourceName() 获取资源名称
  * @method void setResourceName(string $ResourceName) 设置资源名称
  * @method string getSearchWord() 获取关键词查询
@@ -42,12 +42,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeContainerEventsRequest extends AbstractModel
 {
     /**
-     * @var string event 的资源类型, group 或者 instance
+     * @var string event 的资源类型, 仅支持 group
      */
     public $ResourceType;
 
     /**
-     * @var string event 的资源 id
+     * @var string 部署组ID，按照【部署组ID】进行过滤，可通过调用[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的项目列表或登录控制台进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的项目。
      */
     public $ResourceId;
 
@@ -62,17 +62,17 @@ class DescribeContainerEventsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 当类型是 instance 时需要
+     * @var string 部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
      */
     public $GroupId;
 
     /**
-     * @var string event的资源kind
+     * @var string event的资源种类
      */
     public $Kind;
 
     /**
-     * @var string event 的type
+     * @var string event 的事件级别
      */
     public $Type;
 
@@ -87,13 +87,13 @@ class DescribeContainerEventsRequest extends AbstractModel
     public $SearchWord;
 
     /**
-     * @param string $ResourceType event 的资源类型, group 或者 instance
-     * @param string $ResourceId event 的资源 id
+     * @param string $ResourceType event 的资源类型, 仅支持 group
+     * @param string $ResourceId 部署组ID，按照【部署组ID】进行过滤，可通过调用[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的项目列表或登录控制台进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的项目。
      * @param integer $Offset 偏移量，取值从0开始
      * @param integer $Limit 分页个数，默认为20， 取值应为1~50
-     * @param string $GroupId 当类型是 instance 时需要
-     * @param string $Kind event的资源kind
-     * @param string $Type event 的type
+     * @param string $GroupId 部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
+     * @param string $Kind event的资源种类
+     * @param string $Type event 的事件级别
      * @param string $ResourceName 资源名称
      * @param string $SearchWord 关键词查询
      */

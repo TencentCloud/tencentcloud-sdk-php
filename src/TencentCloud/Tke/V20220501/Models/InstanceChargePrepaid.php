@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,31 +21,31 @@ use TencentCloud\Common\AbstractModel;
  * 包年包月配置
  *
  * @method integer getPeriod() 获取后付费计费周期，单位（月）：
-1，2，3，4，5，，6，7， 8，9，10，11，12，24，36，48，60
+1，2，3，4，5，6，7， 8，9，10，11，12，24，36，48，60
  * @method void setPeriod(integer $Period) 设置后付费计费周期，单位（月）：
-1，2，3，4，5，，6，7， 8，9，10，11，12，24，36，48，60
+1，2，3，4，5，6，7， 8，9，10，11，12，24，36，48，60
  * @method string getRenewFlag() 获取预付费续费方式：
-- NOTIFY_AND_AUTO_RENEW：通知用户过期，且自动续费 (默认）
-- NOTIFY_AND_MANUAL_RENEW：通知用户过期，但不自动续费
+- NOTIFY_AND_AUTO_RENEW：通知用户过期，且自动续费 
+- NOTIFY_AND_MANUAL_RENEW：通知用户过期，但不自动续费(默认)
 - DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知用户过期，也不自动续费
 
  * @method void setRenewFlag(string $RenewFlag) 设置预付费续费方式：
-- NOTIFY_AND_AUTO_RENEW：通知用户过期，且自动续费 (默认）
-- NOTIFY_AND_MANUAL_RENEW：通知用户过期，但不自动续费
+- NOTIFY_AND_AUTO_RENEW：通知用户过期，且自动续费 
+- NOTIFY_AND_MANUAL_RENEW：通知用户过期，但不自动续费(默认)
 - DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知用户过期，也不自动续费
  */
 class InstanceChargePrepaid extends AbstractModel
 {
     /**
      * @var integer 后付费计费周期，单位（月）：
-1，2，3，4，5，，6，7， 8，9，10，11，12，24，36，48，60
+1，2，3，4，5，6，7， 8，9，10，11，12，24，36，48，60
      */
     public $Period;
 
     /**
      * @var string 预付费续费方式：
-- NOTIFY_AND_AUTO_RENEW：通知用户过期，且自动续费 (默认）
-- NOTIFY_AND_MANUAL_RENEW：通知用户过期，但不自动续费
+- NOTIFY_AND_AUTO_RENEW：通知用户过期，且自动续费 
+- NOTIFY_AND_MANUAL_RENEW：通知用户过期，但不自动续费(默认)
 - DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知用户过期，也不自动续费
 
      */
@@ -53,10 +53,10 @@ class InstanceChargePrepaid extends AbstractModel
 
     /**
      * @param integer $Period 后付费计费周期，单位（月）：
-1，2，3，4，5，，6，7， 8，9，10，11，12，24，36，48，60
+1，2，3，4，5，6，7， 8，9，10，11，12，24，36，48，60
      * @param string $RenewFlag 预付费续费方式：
-- NOTIFY_AND_AUTO_RENEW：通知用户过期，且自动续费 (默认）
-- NOTIFY_AND_MANUAL_RENEW：通知用户过期，但不自动续费
+- NOTIFY_AND_AUTO_RENEW：通知用户过期，且自动续费 
+- NOTIFY_AND_MANUAL_RENEW：通知用户过期，但不自动续费(默认)
 - DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知用户过期，也不自动续费
      */
     function __construct()

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopic(string $Topic) 设置主题名称
  * @method integer getResetTimestamp() 获取重置指定的时间戳，仅在 Type 为1是生效，以毫秒为单位
  * @method void setResetTimestamp(integer $ResetTimestamp) 设置重置指定的时间戳，仅在 Type 为1是生效，以毫秒为单位
+ * @method boolean getRetryFlag() 获取重置的是否是retry topic
+ * @method void setRetryFlag(boolean $RetryFlag) 设置重置的是否是retry topic
  */
 class ResetRocketMQConsumerOffSetRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ResetRocketMQConsumerOffSetRequest extends AbstractModel
     public $ResetTimestamp;
 
     /**
+     * @var boolean 重置的是否是retry topic
+     */
+    public $RetryFlag;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $NamespaceId 命名空间名称
      * @param string $GroupId 消费组名称
      * @param integer $Type 重置方式，0表示从最新位点开始，1表示从指定时间点开始
      * @param string $Topic 主题名称
      * @param integer $ResetTimestamp 重置指定的时间戳，仅在 Type 为1是生效，以毫秒为单位
+     * @param boolean $RetryFlag 重置的是否是retry topic
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class ResetRocketMQConsumerOffSetRequest extends AbstractModel
 
         if (array_key_exists("ResetTimestamp",$param) and $param["ResetTimestamp"] !== null) {
             $this->ResetTimestamp = $param["ResetTimestamp"];
+        }
+
+        if (array_key_exists("RetryFlag",$param) and $param["RetryFlag"] !== null) {
+            $this->RetryFlag = $param["RetryFlag"];
         }
     }
 }

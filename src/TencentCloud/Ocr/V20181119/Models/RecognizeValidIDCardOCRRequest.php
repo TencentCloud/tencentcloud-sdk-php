@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,14 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RecognizeValidIDCardOCR请求参数结构体
  *
- * @method string getImageBase64() 获取图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
- * @method void setImageBase64(string $ImageBase64) 设置图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
- * @method string getImageUrl() 获取图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
-建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
- * @method void setImageUrl(string $ImageUrl) 设置图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
-建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
+ * @method string getImageBase64() 获取图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+ * @method void setImageBase64(string $ImageBase64) 设置图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+ * @method string getImageUrl() 获取图片的 Url 地址。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
+ * @method void setImageUrl(string $ImageUrl) 设置图片的 Url 地址。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
  * @method integer getCardType() 获取0 自动，自动判断输入证件的类型
 1 身份证人像面，指定输入证件类型为二代身份证人像面
 2 身份证国徽面，指定输入证件类型为二代身份证国徽面
@@ -72,18 +68,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnablePSCheck(boolean $EnablePSCheck) 设置默认值为false，打开返回证件是否存在PS。类型为：临时、港澳台居住证、外国人居住证失效
  * @method boolean getEnableWordCheck() 获取默认值为false，打开返回字段级反光和字段级完整性告警。类型为：临时、港澳台居住证、外国人居住证失效
  * @method void setEnableWordCheck(boolean $EnableWordCheck) 设置默认值为false，打开返回字段级反光和字段级完整性告警。类型为：临时、港澳台居住证、外国人居住证失效
+ * @method boolean getEnableQualityCheck() 获取默认值为false，打开返回证件是否模糊。
+ * @method void setEnableQualityCheck(boolean $EnableQualityCheck) 设置默认值为false，打开返回证件是否模糊。
+ * @method boolean getEnableElectronCheck() 获取默认值为false，打开返回是否存在电子身份证判断。
+ * @method void setEnableElectronCheck(boolean $EnableElectronCheck) 设置默认值为false，打开返回是否存在电子身份证判断。
  */
 class RecognizeValidIDCardOCRRequest extends AbstractModel
 {
     /**
-     * @var string 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+     * @var string 图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      */
     public $ImageBase64;
 
     /**
-     * @var string 图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
-建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
+     * @var string 图片的 Url 地址。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
      */
     public $ImageUrl;
 
@@ -146,10 +144,18 @@ class RecognizeValidIDCardOCRRequest extends AbstractModel
     public $EnableWordCheck;
 
     /**
-     * @param string $ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
-     * @param string $ImageUrl 图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
-建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
+     * @var boolean 默认值为false，打开返回证件是否模糊。
+     */
+    public $EnableQualityCheck;
+
+    /**
+     * @var boolean 默认值为false，打开返回是否存在电子身份证判断。
+     */
+    public $EnableElectronCheck;
+
+    /**
+     * @param string $ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+     * @param string $ImageUrl 图片的 Url 地址。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
      * @param integer $CardType 0 自动，自动判断输入证件的类型
 1 身份证人像面，指定输入证件类型为二代身份证人像面
 2 身份证国徽面，指定输入证件类型为二代身份证国徽面
@@ -172,6 +178,8 @@ class RecognizeValidIDCardOCRRequest extends AbstractModel
      * @param boolean $EnableReshootCheck 默认值为false，打开返回证件是否存在屏幕翻拍。
      * @param boolean $EnablePSCheck 默认值为false，打开返回证件是否存在PS。类型为：临时、港澳台居住证、外国人居住证失效
      * @param boolean $EnableWordCheck 默认值为false，打开返回字段级反光和字段级完整性告警。类型为：临时、港澳台居住证、外国人居住证失效
+     * @param boolean $EnableQualityCheck 默认值为false，打开返回证件是否模糊。
+     * @param boolean $EnableElectronCheck 默认值为false，打开返回是否存在电子身份证判断。
      */
     function __construct()
     {
@@ -228,6 +236,14 @@ class RecognizeValidIDCardOCRRequest extends AbstractModel
 
         if (array_key_exists("EnableWordCheck",$param) and $param["EnableWordCheck"] !== null) {
             $this->EnableWordCheck = $param["EnableWordCheck"];
+        }
+
+        if (array_key_exists("EnableQualityCheck",$param) and $param["EnableQualityCheck"] !== null) {
+            $this->EnableQualityCheck = $param["EnableQualityCheck"];
+        }
+
+        if (array_key_exists("EnableElectronCheck",$param) and $param["EnableElectronCheck"] !== null) {
+            $this->EnableElectronCheck = $param["EnableElectronCheck"];
         }
     }
 }

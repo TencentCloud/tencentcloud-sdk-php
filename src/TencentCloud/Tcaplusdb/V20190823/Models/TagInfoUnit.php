@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTagKey() 获取标签键
  * @method void setTagKey(string $TagKey) 设置标签键
  * @method string getTagValue() 获取标签值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagValue(string $TagValue) 设置标签值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TagInfoUnit extends AbstractModel
 {
@@ -36,14 +34,12 @@ class TagInfoUnit extends AbstractModel
 
     /**
      * @var string 标签值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagValue;
 
     /**
      * @param string $TagKey 标签键
      * @param string $TagValue 标签值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

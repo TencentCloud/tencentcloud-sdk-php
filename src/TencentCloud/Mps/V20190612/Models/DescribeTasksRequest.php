@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,19 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTasks请求参数结构体
  *
- * @method string getStatus() 获取过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
- * @method void setStatus(string $Status) 设置过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+ * @method string getStatus() 获取任务状态过滤条件，可选值：
+- WAITING（等待中）
+- PROCESSING（处理中）
+- FINISH（已完成）。
+ * @method void setStatus(string $Status) 设置任务状态过滤条件，可选值：
+- WAITING（等待中）
+- PROCESSING（处理中）
+- FINISH（已完成）。
+ * @method boolean getSubTaskHasFailed() 获取任务结束时子任务是否有失败。如果不传则忽略。
+<li>false: 过滤子任务没有失败的任务；</li>
+<li>true: 过滤子任务有失败的任务。</li>
+ * @method void setSubTaskHasFailed(boolean $SubTaskHasFailed) 设置任务结束时子任务是否有失败。如果不传则忽略。
+<li>false: 过滤子任务没有失败的任务；</li>
+<li>true: 过滤子任务有失败的任务。</li>
  * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：100。
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：10，最大值：100。
  * @method string getScrollToken() 获取翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
  * @method void setScrollToken(string $ScrollToken) 设置翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
+ * @method string getStartTime() 获取查询任务开始时间
+ * @method void setStartTime(string $StartTime) 设置查询任务开始时间
+ * @method string getEndTime() 获取查询任务结束时间。
+ * @method void setEndTime(string $EndTime) 设置查询任务结束时间。
  */
 class DescribeTasksRequest extends AbstractModel
 {
     /**
-     * @var string 过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+     * @var string 任务状态过滤条件，可选值：
+- WAITING（等待中）
+- PROCESSING（处理中）
+- FINISH（已完成）。
      */
     public $Status;
+
+    /**
+     * @var boolean 任务结束时子任务是否有失败。如果不传则忽略。
+<li>false: 过滤子任务没有失败的任务；</li>
+<li>true: 过滤子任务有失败的任务。</li>
+     */
+    public $SubTaskHasFailed;
 
     /**
      * @var integer 返回记录条数，默认值：10，最大值：100。
@@ -45,9 +71,27 @@ class DescribeTasksRequest extends AbstractModel
     public $ScrollToken;
 
     /**
-     * @param string $Status 过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+     * @var string 查询任务开始时间
+     */
+    public $StartTime;
+
+    /**
+     * @var string 查询任务结束时间。
+     */
+    public $EndTime;
+
+    /**
+     * @param string $Status 任务状态过滤条件，可选值：
+- WAITING（等待中）
+- PROCESSING（处理中）
+- FINISH（已完成）。
+     * @param boolean $SubTaskHasFailed 任务结束时子任务是否有失败。如果不传则忽略。
+<li>false: 过滤子任务没有失败的任务；</li>
+<li>true: 过滤子任务有失败的任务。</li>
      * @param integer $Limit 返回记录条数，默认值：10，最大值：100。
      * @param string $ScrollToken 翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
+     * @param string $StartTime 查询任务开始时间
+     * @param string $EndTime 查询任务结束时间。
      */
     function __construct()
     {
@@ -66,12 +110,24 @@ class DescribeTasksRequest extends AbstractModel
             $this->Status = $param["Status"];
         }
 
+        if (array_key_exists("SubTaskHasFailed",$param) and $param["SubTaskHasFailed"] !== null) {
+            $this->SubTaskHasFailed = $param["SubTaskHasFailed"];
+        }
+
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
         }
 
         if (array_key_exists("ScrollToken",$param) and $param["ScrollToken"] !== null) {
             $this->ScrollToken = $param["ScrollToken"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -54,6 +54,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShareable(boolean $Shareable) 设置云盘是否为共享型云盘。
  * @method string getEmrResourceId() 获取emr节点ID
  * @method void setEmrResourceId(string $EmrResourceId) 设置emr节点ID
+ * @method string getUnderwriteExpiredTime() 获取包销到期时间
+ * @method void setUnderwriteExpiredTime(string $UnderwriteExpiredTime) 设置包销到期时间
+ * @method array getTags() 获取标签
+ * @method void setTags(array $Tags) 设置标签
+ * @method integer getThroughputPerformance() 获取云硬盘额外性能值，单位：MB/s
+ * @method void setThroughputPerformance(integer $ThroughputPerformance) 设置云硬盘额外性能值，单位：MB/s
  */
 class CBSInstance extends AbstractModel
 {
@@ -139,6 +145,21 @@ class CBSInstance extends AbstractModel
     public $EmrResourceId;
 
     /**
+     * @var string 包销到期时间
+     */
+    public $UnderwriteExpiredTime;
+
+    /**
+     * @var array 标签
+     */
+    public $Tags;
+
+    /**
+     * @var integer 云硬盘额外性能值，单位：MB/s
+     */
+    public $ThroughputPerformance;
+
+    /**
      * @param string $DiskId 云硬盘ID
      * @param string $DiskUsage 云硬盘类型
      * @param string $DiskName 云硬盘名称
@@ -156,6 +177,9 @@ class CBSInstance extends AbstractModel
      * @param string $InstanceId 云硬盘挂载的云主机ID
      * @param boolean $Shareable 云盘是否为共享型云盘。
      * @param string $EmrResourceId emr节点ID
+     * @param string $UnderwriteExpiredTime 包销到期时间
+     * @param array $Tags 标签
+     * @param integer $ThroughputPerformance 云硬盘额外性能值，单位：MB/s
      */
     function __construct()
     {
@@ -232,6 +256,23 @@ class CBSInstance extends AbstractModel
 
         if (array_key_exists("EmrResourceId",$param) and $param["EmrResourceId"] !== null) {
             $this->EmrResourceId = $param["EmrResourceId"];
+        }
+
+        if (array_key_exists("UnderwriteExpiredTime",$param) and $param["UnderwriteExpiredTime"] !== null) {
+            $this->UnderwriteExpiredTime = $param["UnderwriteExpiredTime"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("ThroughputPerformance",$param) and $param["ThroughputPerformance"] !== null) {
+            $this->ThroughputPerformance = $param["ThroughputPerformance"];
         }
     }
 }

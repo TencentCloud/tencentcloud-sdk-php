@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConfigs请求参数结构体
  *
+ * @method array getCustomerIdList() 获取企业ID列表，可多选
+ * @method void setCustomerIdList(array $CustomerIdList) 设置企业ID列表，可多选
  * @method boolean getIsAggregation() 获取是否聚合数据
  * @method void setIsAggregation(boolean $IsAggregation) 设置是否聚合数据
  * @method boolean getIsNew() 获取是否新增数据
@@ -46,9 +48,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) 设置查询数组
  * @method boolean getIgnored() 获取是否显示被忽略的数据
  * @method void setIgnored(boolean $Ignored) 设置是否显示被忽略的数据
+ * @method string getOrderBy() 获取支持按照响应长度排序，例如：+ContentLength或-ContentLength，+是递增，-是递减
+ * @method void setOrderBy(string $OrderBy) 设置支持按照响应长度排序，例如：+ContentLength或-ContentLength，+是递增，-是递减
  */
 class DescribeConfigsRequest extends AbstractModel
 {
+    /**
+     * @var array 企业ID列表，可多选
+     */
+    public $CustomerIdList;
+
     /**
      * @var boolean 是否聚合数据
      */
@@ -115,6 +124,12 @@ class DescribeConfigsRequest extends AbstractModel
     public $Ignored;
 
     /**
+     * @var string 支持按照响应长度排序，例如：+ContentLength或-ContentLength，+是递增，-是递减
+     */
+    public $OrderBy;
+
+    /**
+     * @param array $CustomerIdList 企业ID列表，可多选
      * @param boolean $IsAggregation 是否聚合数据
      * @param boolean $IsNew 是否新增数据
      * @param integer $CustomerId 企业ID
@@ -128,6 +143,7 @@ class DescribeConfigsRequest extends AbstractModel
      * @param string $UpdateAtEnd 更新时间-结束
      * @param array $Filters 查询数组
      * @param boolean $Ignored 是否显示被忽略的数据
+     * @param string $OrderBy 支持按照响应长度排序，例如：+ContentLength或-ContentLength，+是递增，-是递减
      */
     function __construct()
     {
@@ -142,6 +158,10 @@ class DescribeConfigsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("CustomerIdList",$param) and $param["CustomerIdList"] !== null) {
+            $this->CustomerIdList = $param["CustomerIdList"];
+        }
+
         if (array_key_exists("IsAggregation",$param) and $param["IsAggregation"] !== null) {
             $this->IsAggregation = $param["IsAggregation"];
         }
@@ -197,6 +217,10 @@ class DescribeConfigsRequest extends AbstractModel
 
         if (array_key_exists("Ignored",$param) and $param["Ignored"] !== null) {
             $this->Ignored = $param["Ignored"];
+        }
+
+        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
+            $this->OrderBy = $param["OrderBy"];
         }
     }
 }

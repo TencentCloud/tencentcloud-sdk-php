@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkflowId(string $WorkflowId) 设置WorkflowID，非空则当前Agent从workflow转换而来
  * @method string getName() 获取Agent名称，同一个应用内，Agent名称不能重复
  * @method void setName(string $Name) 设置Agent名称，同一个应用内，Agent名称不能重复
- * @method string getIconUrl() 获取插件图标url
- * @method void setIconUrl(string $IconUrl) 设置插件图标url
+ * @method string getIconUrl() 获取Agent图标url
+ * @method void setIconUrl(string $IconUrl) 设置Agent图标url
  * @method string getInstructions() 获取Agent指令；当该Agent被调用时，将作为“系统提示词”使用，描述Agent应执行的操作和响应方式
  * @method void setInstructions(string $Instructions) 设置Agent指令；当该Agent被调用时，将作为“系统提示词”使用，描述Agent应执行的操作和响应方式
  * @method string getHandoffDescription() 获取当Agent作为转交目标时的描述，用于让其他Agent的LLM理解其功能和转交时机
@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsStartingAgent(boolean $IsStartingAgent) 设置当前Agent是否是启动Agent
  * @method integer getAgentType() 获取Agent类型; 0: 未指定类型; 1: 知识库检索Agent
  * @method void setAgentType(integer $AgentType) 设置Agent类型; 0: 未指定类型; 1: 知识库检索Agent
+ * @method integer getAgentMode() 获取0 自由转交，1 计划与执行
+ * @method void setAgentMode(integer $AgentMode) 设置0 自由转交，1 计划与执行
+ * @method AgentAdvancedConfig getAdvancedConfig() 获取高级设置
+ * @method void setAdvancedConfig(AgentAdvancedConfig $AdvancedConfig) 设置高级设置
  */
 class Agent extends AbstractModel
 {
@@ -63,7 +67,7 @@ class Agent extends AbstractModel
     public $Name;
 
     /**
-     * @var string 插件图标url
+     * @var string Agent图标url
      */
     public $IconUrl;
 
@@ -108,10 +112,20 @@ class Agent extends AbstractModel
     public $AgentType;
 
     /**
+     * @var integer 0 自由转交，1 计划与执行
+     */
+    public $AgentMode;
+
+    /**
+     * @var AgentAdvancedConfig 高级设置
+     */
+    public $AdvancedConfig;
+
+    /**
      * @param string $AgentId AgentID
      * @param string $WorkflowId WorkflowID，非空则当前Agent从workflow转换而来
      * @param string $Name Agent名称，同一个应用内，Agent名称不能重复
-     * @param string $IconUrl 插件图标url
+     * @param string $IconUrl Agent图标url
      * @param string $Instructions Agent指令；当该Agent被调用时，将作为“系统提示词”使用，描述Agent应执行的操作和响应方式
      * @param string $HandoffDescription 当Agent作为转交目标时的描述，用于让其他Agent的LLM理解其功能和转交时机
      * @param array $Handoffs Agent可转交的子AgentId列表
@@ -120,6 +134,8 @@ class Agent extends AbstractModel
      * @param array $Plugins Agent可使用的插件列表
      * @param boolean $IsStartingAgent 当前Agent是否是启动Agent
      * @param integer $AgentType Agent类型; 0: 未指定类型; 1: 知识库检索Agent
+     * @param integer $AgentMode 0 自由转交，1 计划与执行
+     * @param AgentAdvancedConfig $AdvancedConfig 高级设置
      */
     function __construct()
     {
@@ -191,6 +207,15 @@ class Agent extends AbstractModel
 
         if (array_key_exists("AgentType",$param) and $param["AgentType"] !== null) {
             $this->AgentType = $param["AgentType"];
+        }
+
+        if (array_key_exists("AgentMode",$param) and $param["AgentMode"] !== null) {
+            $this->AgentMode = $param["AgentMode"];
+        }
+
+        if (array_key_exists("AdvancedConfig",$param) and $param["AdvancedConfig"] !== null) {
+            $this->AdvancedConfig = new AgentAdvancedConfig();
+            $this->AdvancedConfig->deserialize($param["AdvancedConfig"]);
         }
     }
 }

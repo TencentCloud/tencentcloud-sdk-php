@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,18 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteExport请求参数结构体
  *
- * @method string getExportId() 获取日志导出ID
- * @method void setExportId(string $ExportId) 设置日志导出ID
+ * @method string getExportId() 获取日志导出任务Id
+- 通过[获取日志下载任务列表](https://cloud.tencent.com/document/product/614/56449)获取日志导出任务Id。
+
+ * @method void setExportId(string $ExportId) 设置日志导出任务Id
+- 通过[获取日志下载任务列表](https://cloud.tencent.com/document/product/614/56449)获取日志导出任务Id。
  */
 class DeleteExportRequest extends AbstractModel
 {
     /**
-     * @var string 日志导出ID
+     * @var string 日志导出任务Id
+- 通过[获取日志下载任务列表](https://cloud.tencent.com/document/product/614/56449)获取日志导出任务Id。
+
      */
     public $ExportId;
 
     /**
-     * @param string $ExportId 日志导出ID
+     * @param string $ExportId 日志导出任务Id
+- 通过[获取日志下载任务列表](https://cloud.tencent.com/document/product/614/56449)获取日志导出任务Id。
      */
     function __construct()
     {

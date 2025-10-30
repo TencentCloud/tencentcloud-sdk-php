@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,18 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getRecordInterval() 获取录制间隔。
 单位秒，默认：1800。
-取值范围：30-7200。
+FLV、MP4取值范围： 60-43200， AAC取值范围： 60-7200 。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
  * @method void setRecordInterval(integer $RecordInterval) 设置录制间隔。
 单位秒，默认：1800。
-取值范围：30-7200。
+FLV、MP4取值范围： 60-43200， AAC取值范围： 60-7200 。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
  * @method integer getStorageTime() 获取录制存储时长。
 单位秒，取值范围： 0 - 1500天。
 0：表示永久存储。
+注：此参数只对录制到VOD有效。
  * @method void setStorageTime(integer $StorageTime) 设置录制存储时长。
 单位秒，取值范围： 0 - 1500天。
 0：表示永久存储。
+注：此参数只对录制到VOD有效。
  * @method integer getEnable() 获取是否开启当前格式录制，默认值为0，0：否， 1：是。
  * @method void setEnable(integer $Enable) 设置是否开启当前格式录制，默认值为0，0：否， 1：是。
  * @method integer getVodSubAppId() 获取点播子应用 ID。
@@ -112,7 +114,7 @@ class RecordParam extends AbstractModel
     /**
      * @var integer 录制间隔。
 单位秒，默认：1800。
-取值范围：30-7200。
+FLV、MP4取值范围： 60-43200， AAC取值范围： 60-7200 。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
      */
     public $RecordInterval;
@@ -121,6 +123,7 @@ class RecordParam extends AbstractModel
      * @var integer 录制存储时长。
 单位秒，取值范围： 0 - 1500天。
 0：表示永久存储。
+注：此参数只对录制到VOD有效。
      */
     public $StorageTime;
 
@@ -199,11 +202,12 @@ cold：低频存储。
     /**
      * @param integer $RecordInterval 录制间隔。
 单位秒，默认：1800。
-取值范围：30-7200。
+FLV、MP4取值范围： 60-43200， AAC取值范围： 60-7200 。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
      * @param integer $StorageTime 录制存储时长。
 单位秒，取值范围： 0 - 1500天。
 0：表示永久存储。
+注：此参数只对录制到VOD有效。
      * @param integer $Enable 是否开启当前格式录制，默认值为0，0：否， 1：是。
      * @param integer $VodSubAppId 点播子应用 ID。
      * @param string $VodFileName 录制文件名。

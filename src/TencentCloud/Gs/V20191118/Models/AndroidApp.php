@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,8 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserId(string $UserId) 设置用户 Id
  * @method string getAppMode() 获取应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）
  * @method void setAppMode(string $AppMode) 设置应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）
- * @method string getUpdateState() 获取应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、NORMAL 默认状态
- * @method void setUpdateState(string $UpdateState) 设置应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、NORMAL 默认状态
+ * @method string getUpdateState() 获取应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、PACKAGE_NAME_MISMATCH 包名不匹配、VERSION_ALREADY_EXISTS 版本已存在、APP_PARSE_FAIL app 解析失败、APP_EXISTS_SECURITY_RISK app 存在安全风险、NORMAL 默认状态
+ * @method void setUpdateState(string $UpdateState) 设置应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、PACKAGE_NAME_MISMATCH 包名不匹配、VERSION_ALREADY_EXISTS 版本已存在、APP_PARSE_FAIL app 解析失败、APP_EXISTS_SECURITY_RISK app 存在安全风险、NORMAL 默认状态
+ * @method string getPackageName() 获取安卓应用包名
+ * @method void setPackageName(string $PackageName) 设置安卓应用包名
  */
 class AndroidApp extends AbstractModel
 {
@@ -75,9 +77,14 @@ class AndroidApp extends AbstractModel
     public $AppMode;
 
     /**
-     * @var string 应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、NORMAL 默认状态
+     * @var string 应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、PACKAGE_NAME_MISMATCH 包名不匹配、VERSION_ALREADY_EXISTS 版本已存在、APP_PARSE_FAIL app 解析失败、APP_EXISTS_SECURITY_RISK app 存在安全风险、NORMAL 默认状态
      */
     public $UpdateState;
+
+    /**
+     * @var string 安卓应用包名
+     */
+    public $PackageName;
 
     /**
      * @param string $AndroidAppId 安卓应用 Id
@@ -87,7 +94,8 @@ class AndroidApp extends AbstractModel
      * @param string $CreateTime 安卓应用创建时间
      * @param string $UserId 用户 Id
      * @param string $AppMode 应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）
-     * @param string $UpdateState 应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、NORMAL 默认状态
+     * @param string $UpdateState 应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、PACKAGE_NAME_MISMATCH 包名不匹配、VERSION_ALREADY_EXISTS 版本已存在、APP_PARSE_FAIL app 解析失败、APP_EXISTS_SECURITY_RISK app 存在安全风险、NORMAL 默认状态
+     * @param string $PackageName 安卓应用包名
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class AndroidApp extends AbstractModel
 
         if (array_key_exists("UpdateState",$param) and $param["UpdateState"] !== null) {
             $this->UpdateState = $param["UpdateState"];
+        }
+
+        if (array_key_exists("PackageName",$param) and $param["PackageName"] !== null) {
+            $this->PackageName = $param["PackageName"];
         }
     }
 }

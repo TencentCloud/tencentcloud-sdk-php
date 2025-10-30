@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -268,21 +268,21 @@ null：用户上传证书（没有套餐类型），
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulnerabilityStatus(string $VulnerabilityStatus) 设置漏洞扫描状态。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCertBeginTime() 获取证书生效时间。
+ * @method string getCertBeginTime() 获取证书生效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCertBeginTime(string $CertBeginTime) 设置证书生效时间。
+ * @method void setCertBeginTime(string $CertBeginTime) 设置证书生效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCertEndTime() 获取证书失效时间。
+ * @method string getCertEndTime() 获取证书失效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCertEndTime(string $CertEndTime) 设置证书失效时间。
+ * @method void setCertEndTime(string $CertEndTime) 设置证书失效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValidityPeriod() 获取证书有效期：单位(月)。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValidityPeriod(string $ValidityPeriod) 设置证书有效期：单位(月)。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInsertTime() 获取申请时间。
+ * @method string getInsertTime() 获取申请时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInsertTime(string $InsertTime) 设置申请时间。
+ * @method void setInsertTime(string $InsertTime) 设置申请时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOrderId() 获取订单 ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -356,9 +356,9 @@ null：用户上传证书（没有套餐类型），
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCACommonNames(array $CACommonNames) 设置CA证书的所有通用名称。仅证书类型CertificateType为CA有效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getCAEndTimes() 获取CA证书所有的到期时间。仅证书类型CertificateType为CA有效
+ * @method array getCAEndTimes() 获取CA证书所有的到期时间。仅证书类型CertificateType为CA有效，时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCAEndTimes(array $CAEndTimes) 设置CA证书所有的到期时间。仅证书类型CertificateType为CA有效
+ * @method void setCAEndTimes(array $CAEndTimes) 设置CA证书所有的到期时间。仅证书类型CertificateType为CA有效，时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDvRevokeAuthDetail() 获取DV证书吊销验证值
 注意：此字段可能返回 null，表示取不到有效值。
@@ -542,13 +542,13 @@ null：用户上传证书（没有套餐类型），
     public $VulnerabilityStatus;
 
     /**
-     * @var string 证书生效时间。
+     * @var string 证书生效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertBeginTime;
 
     /**
-     * @var string 证书失效时间。
+     * @var string 证书失效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertEndTime;
@@ -560,7 +560,7 @@ null：用户上传证书（没有套餐类型），
     public $ValidityPeriod;
 
     /**
-     * @var string 申请时间。
+     * @var string 申请时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InsertTime;
@@ -674,7 +674,7 @@ null：用户上传证书（没有套餐类型），
     public $CACommonNames;
 
     /**
-     * @var array CA证书所有的到期时间。仅证书类型CertificateType为CA有效
+     * @var array CA证书所有的到期时间。仅证书类型CertificateType为CA有效，时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CAEndTimes;
@@ -815,13 +815,13 @@ null：用户上传证书（没有套餐类型），
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VulnerabilityStatus 漏洞扫描状态。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CertBeginTime 证书生效时间。
+     * @param string $CertBeginTime 证书生效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CertEndTime 证书失效时间。
+     * @param string $CertEndTime 证书失效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ValidityPeriod 证书有效期：单位(月)。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InsertTime 申请时间。
+     * @param string $InsertTime 申请时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OrderId 订单 ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -859,7 +859,7 @@ null：用户上传证书（没有套餐类型），
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CACommonNames CA证书的所有通用名称。仅证书类型CertificateType为CA有效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $CAEndTimes CA证书所有的到期时间。仅证书类型CertificateType为CA有效
+     * @param array $CAEndTimes CA证书所有的到期时间。仅证书类型CertificateType为CA有效，时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DvRevokeAuthDetail DV证书吊销验证值
 注意：此字段可能返回 null，表示取不到有效值。

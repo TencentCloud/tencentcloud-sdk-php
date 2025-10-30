@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteParamTemplate请求参数结构体
  *
- * @method string getTemplateId() 获取参数模板 ID。
- * @method void setTemplateId(string $TemplateId) 设置参数模板 ID。
+ * @method string getTemplateId() 获取参数模板 ID。请登录 [Redis 控制台的参数模板](https://console.cloud.tencent.com/redis/templates)页面获取模板 ID。
+ * @method void setTemplateId(string $TemplateId) 设置参数模板 ID。请登录 [Redis 控制台的参数模板](https://console.cloud.tencent.com/redis/templates)页面获取模板 ID。
  */
 class DeleteParamTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 参数模板 ID。
+     * @var string 参数模板 ID。请登录 [Redis 控制台的参数模板](https://console.cloud.tencent.com/redis/templates)页面获取模板 ID。
      */
     public $TemplateId;
 
     /**
-     * @param string $TemplateId 参数模板 ID。
+     * @param string $TemplateId 参数模板 ID。请登录 [Redis 控制台的参数模板](https://console.cloud.tencent.com/redis/templates)页面获取模板 ID。
      */
     function __construct()
     {

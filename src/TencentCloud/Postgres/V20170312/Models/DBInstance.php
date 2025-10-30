@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -158,6 +158,14 @@ mssql_compatible引擎：
 <li>0：否</li>
 <li>1：是</li>
 默认值：0
+ * @method integer getExpandedCpu() 获取实例已经弹性扩容的cpu核数
+ * @method void setExpandedCpu(integer $ExpandedCpu) 设置实例已经弹性扩容的cpu核数
+ * @method boolean getDeletionProtection() 获取实例是否开启删除保护，取值如下：
+- true：开启删除保护
+- false：关闭删除保护
+ * @method void setDeletionProtection(boolean $DeletionProtection) 设置实例是否开启删除保护，取值如下：
+- true：开启删除保护
+- false：关闭删除保护
  */
 class DBInstance extends AbstractModel
 {
@@ -387,6 +395,18 @@ mssql_compatible引擎：
     public $SupportIpv6;
 
     /**
+     * @var integer 实例已经弹性扩容的cpu核数
+     */
+    public $ExpandedCpu;
+
+    /**
+     * @var boolean 实例是否开启删除保护，取值如下：
+- true：开启删除保护
+- false：关闭删除保护
+     */
+    public $DeletionProtection;
+
+    /**
      * @param string $Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段。
      * @param string $Zone 实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段。
      * @param string $VpcId 私有网络ID，形如vpc-e6w23k31。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcs](https://cloud.tencent.com/document/api/215/15778) ，从接口返回中的unVpcId字段获取。
@@ -456,6 +476,10 @@ mssql_compatible引擎：
 <li>0：否</li>
 <li>1：是</li>
 默认值：0
+     * @param integer $ExpandedCpu 实例已经弹性扩容的cpu核数
+     * @param boolean $DeletionProtection 实例是否开启删除保护，取值如下：
+- true：开启删除保护
+- false：关闭删除保护
      */
     function __construct()
     {
@@ -644,6 +668,14 @@ mssql_compatible引擎：
 
         if (array_key_exists("SupportIpv6",$param) and $param["SupportIpv6"] !== null) {
             $this->SupportIpv6 = $param["SupportIpv6"];
+        }
+
+        if (array_key_exists("ExpandedCpu",$param) and $param["ExpandedCpu"] !== null) {
+            $this->ExpandedCpu = $param["ExpandedCpu"];
+        }
+
+        if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
+            $this->DeletionProtection = $param["DeletionProtection"];
         }
     }
 }

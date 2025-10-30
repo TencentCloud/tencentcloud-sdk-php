@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSearchWord() 获取模糊查询数据集ID，数据集名称，不传入时查询全量
  * @method void setSearchWord(string $SearchWord) 设置模糊查询数据集ID，数据集名称，不传入时查询全量
- * @method integer getLimit() 获取每页数量
- * @method void setLimit(integer $Limit) 设置每页数量
- * @method integer getOffset() 获取起始偏移量
- * @method void setOffset(integer $Offset) 设置起始偏移量
+ * @method integer getLimit() 获取每页数量，默认值20
+ * @method void setLimit(integer $Limit) 设置每页数量，默认值20
+ * @method integer getOffset() 获取起始偏移量，默认值0
+ * @method void setOffset(integer $Offset) 设置起始偏移量，默认值0
  */
 class DescribeProgramsRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DescribeProgramsRequest extends AbstractModel
     public $SearchWord;
 
     /**
-     * @var integer 每页数量
+     * @var integer 每页数量，默认值20
      */
     public $Limit;
 
     /**
-     * @var integer 起始偏移量
+     * @var integer 起始偏移量，默认值0
      */
     public $Offset;
 
     /**
      * @param string $SearchWord 模糊查询数据集ID，数据集名称，不传入时查询全量
-     * @param integer $Limit 每页数量
-     * @param integer $Offset 起始偏移量
+     * @param integer $Limit 每页数量，默认值20
+     * @param integer $Offset 起始偏移量，默认值0
      */
     function __construct()
     {

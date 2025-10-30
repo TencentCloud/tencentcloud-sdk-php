@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLabel(string $Label) 设置当前坐标 X轴的值 当前是日期格式:"yyyy-MM-dd HH:mm:ss"
  * @method string getValue() 获取当前坐标 Y轴的值
  * @method void setValue(string $Value) 设置当前坐标 Y轴的值
- * @method string getTimestamp() 获取该坐标点时间戳
- * @method void setTimestamp(string $Timestamp) 设置该坐标点时间戳
+ * @method string getTimestamp() 获取该坐标点时间戳，单位毫秒
+ * @method void setTimestamp(string $Timestamp) 设置该坐标点时间戳，单位毫秒
  */
 class CurvePoint extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CurvePoint extends AbstractModel
     public $Value;
 
     /**
-     * @var string 该坐标点时间戳
+     * @var string 该坐标点时间戳，单位毫秒
      */
     public $Timestamp;
 
     /**
      * @param string $Label 当前坐标 X轴的值 当前是日期格式:"yyyy-MM-dd HH:mm:ss"
      * @param string $Value 当前坐标 Y轴的值
-     * @param string $Timestamp 该坐标点时间戳
+     * @param string $Timestamp 该坐标点时间戳，单位毫秒
      */
     function __construct()
     {

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAddressChanged(boolean $IsAddressChanged) 设置登录地址是否改变
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method PodSSHInfo getPodSSHInfo() 获取POD访问信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPodSSHInfo(PodSSHInfo $PodSSHInfo) 设置POD访问信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SSHConfig extends AbstractModel
 {
@@ -74,6 +78,12 @@ class SSHConfig extends AbstractModel
     public $IsAddressChanged;
 
     /**
+     * @var PodSSHInfo POD访问信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PodSSHInfo;
+
+    /**
      * @param boolean $Enable 是否开启ssh
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicKey 公钥信息
@@ -83,6 +93,8 @@ class SSHConfig extends AbstractModel
      * @param string $LoginCommand 登录命令
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsAddressChanged 登录地址是否改变
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PodSSHInfo $PodSSHInfo POD访问信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -116,6 +128,11 @@ class SSHConfig extends AbstractModel
 
         if (array_key_exists("IsAddressChanged",$param) and $param["IsAddressChanged"] !== null) {
             $this->IsAddressChanged = $param["IsAddressChanged"];
+        }
+
+        if (array_key_exists("PodSSHInfo",$param) and $param["PodSSHInfo"] !== null) {
+            $this->PodSSHInfo = new PodSSHInfo();
+            $this->PodSSHInfo->deserialize($param["PodSSHInfo"]);
         }
     }
 }

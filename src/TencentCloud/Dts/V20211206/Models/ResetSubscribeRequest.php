@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,18 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ResetSubscribe请求参数结构体
  *
- * @method string getSubscribeId() 获取数据订阅实例的ID
- * @method void setSubscribeId(string $SubscribeId) 设置数据订阅实例的ID
+ * @method string getSubscribeId() 获取数据订阅实例的ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+
+ * @method void setSubscribeId(string $SubscribeId) 设置数据订阅实例的ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
  */
 class ResetSubscribeRequest extends AbstractModel
 {
     /**
-     * @var string 数据订阅实例的ID
+     * @var string 数据订阅实例的ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+
      */
     public $SubscribeId;
 
     /**
-     * @param string $SubscribeId 数据订阅实例的ID
+     * @param string $SubscribeId 数据订阅实例的ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
      */
     function __construct()
     {

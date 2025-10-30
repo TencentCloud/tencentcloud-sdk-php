@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateConfigTemplateWithDetailResp请求参数结构体
  *
- * @method string getConfigTemplateName() 获取配置模板名称
- * @method void setConfigTemplateName(string $ConfigTemplateName) 设置配置模板名称
- * @method string getConfigTemplateType() 获取配置模板对应的微服务框架
- * @method void setConfigTemplateType(string $ConfigTemplateType) 设置配置模板对应的微服务框架
- * @method string getConfigTemplateValue() 获取配置模板数据
- * @method void setConfigTemplateValue(string $ConfigTemplateValue) 设置配置模板数据
- * @method string getConfigTemplateDesc() 获取配置模板描述
- * @method void setConfigTemplateDesc(string $ConfigTemplateDesc) 设置配置模板描述
- * @method array getProgramIdList() 获取无
- * @method void setProgramIdList(array $ProgramIdList) 设置无
+ * @method string getConfigTemplateName() 获取配置模板名称，最多支持60个字符，只能包含字母、数字及分隔符（“-”），且不能以分隔符开头或结尾。
+ * @method void setConfigTemplateName(string $ConfigTemplateName) 设置配置模板名称，最多支持60个字符，只能包含字母、数字及分隔符（“-”），且不能以分隔符开头或结尾。
+ * @method string getConfigTemplateType() 获取配置模板对应的微服务框架。- Ribbon：Ribbon类型配置模板- Hystrix：Hystrix类型配置模板- Zuul：Zuul类型配置模板- customize：自定义类型配置模板。
+ * @method void setConfigTemplateType(string $ConfigTemplateType) 设置配置模板对应的微服务框架。- Ribbon：Ribbon类型配置模板- Hystrix：Hystrix类型配置模板- Zuul：Zuul类型配置模板- customize：自定义类型配置模板。
+ * @method string getConfigTemplateValue() 获取配置模板数据。
+ * @method void setConfigTemplateValue(string $ConfigTemplateValue) 设置配置模板数据。
+ * @method string getConfigTemplateDesc() 获取配置模板描述，最多支持200个字符。
+ * @method void setConfigTemplateDesc(string $ConfigTemplateDesc) 设置配置模板描述，最多支持200个字符。
+ * @method array getProgramIdList() 获取需要绑定的数据集ID。该参数可以通过调用 [DescribePrograms](https://cloud.tencent.com/document/product/649/73477) 的返回值中的 ProgramId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/privilege?tab=program&roleId=role-yrle4doy)查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
+ * @method void setProgramIdList(array $ProgramIdList) 设置需要绑定的数据集ID。该参数可以通过调用 [DescribePrograms](https://cloud.tencent.com/document/product/649/73477) 的返回值中的 ProgramId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/privilege?tab=program&roleId=role-yrle4doy)查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
  */
 class CreateConfigTemplateWithDetailRespRequest extends AbstractModel
 {
     /**
-     * @var string 配置模板名称
+     * @var string 配置模板名称，最多支持60个字符，只能包含字母、数字及分隔符（“-”），且不能以分隔符开头或结尾。
      */
     public $ConfigTemplateName;
 
     /**
-     * @var string 配置模板对应的微服务框架
+     * @var string 配置模板对应的微服务框架。- Ribbon：Ribbon类型配置模板- Hystrix：Hystrix类型配置模板- Zuul：Zuul类型配置模板- customize：自定义类型配置模板。
      */
     public $ConfigTemplateType;
 
     /**
-     * @var string 配置模板数据
+     * @var string 配置模板数据。
      */
     public $ConfigTemplateValue;
 
     /**
-     * @var string 配置模板描述
+     * @var string 配置模板描述，最多支持200个字符。
      */
     public $ConfigTemplateDesc;
 
     /**
-     * @var array 无
+     * @var array 需要绑定的数据集ID。该参数可以通过调用 [DescribePrograms](https://cloud.tencent.com/document/product/649/73477) 的返回值中的 ProgramId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/privilege?tab=program&roleId=role-yrle4doy)查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
      */
     public $ProgramIdList;
 
     /**
-     * @param string $ConfigTemplateName 配置模板名称
-     * @param string $ConfigTemplateType 配置模板对应的微服务框架
-     * @param string $ConfigTemplateValue 配置模板数据
-     * @param string $ConfigTemplateDesc 配置模板描述
-     * @param array $ProgramIdList 无
+     * @param string $ConfigTemplateName 配置模板名称，最多支持60个字符，只能包含字母、数字及分隔符（“-”），且不能以分隔符开头或结尾。
+     * @param string $ConfigTemplateType 配置模板对应的微服务框架。- Ribbon：Ribbon类型配置模板- Hystrix：Hystrix类型配置模板- Zuul：Zuul类型配置模板- customize：自定义类型配置模板。
+     * @param string $ConfigTemplateValue 配置模板数据。
+     * @param string $ConfigTemplateDesc 配置模板描述，最多支持200个字符。
+     * @param array $ProgramIdList 需要绑定的数据集ID。该参数可以通过调用 [DescribePrograms](https://cloud.tencent.com/document/product/649/73477) 的返回值中的 ProgramId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/privilege?tab=program&roleId=role-yrle4doy)查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
      */
     function __construct()
     {

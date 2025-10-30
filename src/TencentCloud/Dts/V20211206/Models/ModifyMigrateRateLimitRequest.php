@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyMigrateRateLimit请求参数结构体
  *
- * @method string getJobId() 获取迁移任务ID
- * @method void setJobId(string $JobId) 设置迁移任务ID
+ * @method string getJobId() 获取迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+ * @method void setJobId(string $JobId) 设置迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
  * @method integer getDumpThread() 获取迁移任务全量导出线程数、有效值为 1-16
  * @method void setDumpThread(integer $DumpThread) 设置迁移任务全量导出线程数、有效值为 1-16
  * @method integer getDumpRps() 获取迁移全量导出的 Rps 限制、需要大于 0
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyMigrateRateLimitRequest extends AbstractModel
 {
     /**
-     * @var string 迁移任务ID
+     * @var string 迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
      */
     public $JobId;
 
@@ -66,7 +66,7 @@ class ModifyMigrateRateLimitRequest extends AbstractModel
     public $LoadRps;
 
     /**
-     * @param string $JobId 迁移任务ID
+     * @param string $JobId 迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
      * @param integer $DumpThread 迁移任务全量导出线程数、有效值为 1-16
      * @param integer $DumpRps 迁移全量导出的 Rps 限制、需要大于 0
      * @param integer $LoadThread 迁移任务全量导入线程数、有效值为 1-16

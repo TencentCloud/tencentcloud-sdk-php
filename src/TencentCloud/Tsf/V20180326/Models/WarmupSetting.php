@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getEnabled() 获取是否开启预热
  * @method void setEnabled(boolean $Enabled) 设置是否开启预热
- * @method integer getWarmupTime() 获取预热时间
- * @method void setWarmupTime(integer $WarmupTime) 设置预热时间
+ * @method integer getWarmupTime() 获取预热时间，单位秒
+ * @method void setWarmupTime(integer $WarmupTime) 设置预热时间，单位秒
  * @method integer getCurvature() 获取预热曲率，取值 1~5
  * @method void setCurvature(integer $Curvature) 设置预热曲率，取值 1~5
  * @method boolean getEnabledProtection() 获取是否开启预热保护，在开启保护的情况下，超过 50% 的节点处于预热中，则会中止预热
@@ -37,7 +37,7 @@ class WarmupSetting extends AbstractModel
     public $Enabled;
 
     /**
-     * @var integer 预热时间
+     * @var integer 预热时间，单位秒
      */
     public $WarmupTime;
 
@@ -53,7 +53,7 @@ class WarmupSetting extends AbstractModel
 
     /**
      * @param boolean $Enabled 是否开启预热
-     * @param integer $WarmupTime 预热时间
+     * @param integer $WarmupTime 预热时间，单位秒
      * @param integer $Curvature 预热曲率，取值 1~5
      * @param boolean $EnabledProtection 是否开启预热保护，在开启保护的情况下，超过 50% 的节点处于预热中，则会中止预热
      */

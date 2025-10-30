@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -52,6 +52,8 @@ OFF/ON/CREATING/DELETING
  * @method void setWebConsoleDomainEndpoint(string $WebConsoleDomainEndpoint) 设置公网域名接入点
  * @method VpcEndpointInfo getControlPlaneEndpointInfo() 获取控制面所使用的VPC信息
  * @method void setControlPlaneEndpointInfo(VpcEndpointInfo $ControlPlaneEndpointInfo) 设置控制面所使用的VPC信息
+ * @method string getPublicTlsAccessEndpoint() 获取TLS加密的数据流公网接入点
+ * @method void setPublicTlsAccessEndpoint(string $PublicTlsAccessEndpoint) 设置TLS加密的数据流公网接入点
  */
 class RabbitMQClusterAccessInfo extends AbstractModel
 {
@@ -128,6 +130,11 @@ OFF/ON/CREATING/DELETING
     public $ControlPlaneEndpointInfo;
 
     /**
+     * @var string TLS加密的数据流公网接入点
+     */
+    public $PublicTlsAccessEndpoint;
+
+    /**
      * @param string $PublicAccessEndpoint 集群公网接入地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WebConsoleEndpoint 集群控制台访问地址
@@ -144,6 +151,7 @@ OFF/ON/CREATING/DELETING
      * @param PrometheusEndpointInfo $PrometheusEndpointInfo Prometheus信息
      * @param string $WebConsoleDomainEndpoint 公网域名接入点
      * @param VpcEndpointInfo $ControlPlaneEndpointInfo 控制面所使用的VPC信息
+     * @param string $PublicTlsAccessEndpoint TLS加密的数据流公网接入点
      */
     function __construct()
     {
@@ -214,6 +222,10 @@ OFF/ON/CREATING/DELETING
         if (array_key_exists("ControlPlaneEndpointInfo",$param) and $param["ControlPlaneEndpointInfo"] !== null) {
             $this->ControlPlaneEndpointInfo = new VpcEndpointInfo();
             $this->ControlPlaneEndpointInfo->deserialize($param["ControlPlaneEndpointInfo"]);
+        }
+
+        if (array_key_exists("PublicTlsAccessEndpoint",$param) and $param["PublicTlsAccessEndpoint"] !== null) {
+            $this->PublicTlsAccessEndpoint = $param["PublicTlsAccessEndpoint"];
         }
     }
 }

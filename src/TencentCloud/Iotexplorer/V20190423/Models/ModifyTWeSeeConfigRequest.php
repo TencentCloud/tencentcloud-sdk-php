@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableSearch(boolean $EnableSearch) 设置是否开启视频搜索，不传则不修改
  * @method string getConfig() 获取配置参数，不传则不修改
  * @method void setConfig(string $Config) 设置配置参数，不传则不修改
+ * @method VisionSummaryConfig getSummaryConfig() 获取视频摘要配置参数，不传则不修改
+ * @method void setSummaryConfig(VisionSummaryConfig $SummaryConfig) 设置视频摘要配置参数，不传则不修改
  */
 class ModifyTWeSeeConfigRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ModifyTWeSeeConfigRequest extends AbstractModel
     public $Config;
 
     /**
+     * @var VisionSummaryConfig 视频摘要配置参数，不传则不修改
+     */
+    public $SummaryConfig;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
      * @param string $UserId 用户ID
@@ -80,6 +87,7 @@ class ModifyTWeSeeConfigRequest extends AbstractModel
      * @param boolean $EnableSummary 是否开启视频摘要，不传则不修改
      * @param boolean $EnableSearch 是否开启视频搜索，不传则不修改
      * @param string $Config 配置参数，不传则不修改
+     * @param VisionSummaryConfig $SummaryConfig 视频摘要配置参数，不传则不修改
      */
     function __construct()
     {
@@ -120,6 +128,11 @@ class ModifyTWeSeeConfigRequest extends AbstractModel
 
         if (array_key_exists("Config",$param) and $param["Config"] !== null) {
             $this->Config = $param["Config"];
+        }
+
+        if (array_key_exists("SummaryConfig",$param) and $param["SummaryConfig"] !== null) {
+            $this->SummaryConfig = new VisionSummaryConfig();
+            $this->SummaryConfig->deserialize($param["SummaryConfig"]);
         }
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,14 +24,16 @@ use TencentCloud\Common\AbstractModel;
 - rename：表示实例重命名。
 - modifyProject：修改实例所属项目。
 - modifyAutoRenew：修改实例续费标记。
+- modifyDeleteProtectionSwitch：修改实例删除保护。
  * @method void setOperation(string $Operation) 设置修改实例操作。如填写：
 - rename：表示实例重命名。
 - modifyProject：修改实例所属项目。
 - modifyAutoRenew：修改实例续费标记。
+- modifyDeleteProtectionSwitch：修改实例删除保护。
  * @method array getInstanceIds() 获取实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。每次请求的实例数量的上限为10。
  * @method void setInstanceIds(array $InstanceIds) 设置实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。每次请求的实例数量的上限为10。
- * @method array getInstanceNames() 获取实例的新名称。
- * @method void setInstanceNames(array $InstanceNames) 设置实例的新名称。
+ * @method array getInstanceNames() 获取实例的新名称。名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符-。
+ * @method void setInstanceNames(array $InstanceNames) 设置实例的新名称。名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符-。
  * @method integer getProjectId() 获取项目 ID，请登录[Redis控制台的项目管理](https://console.cloud.tencent.com/project)页面，在**项目名称**中复制项目 ID。
  * @method void setProjectId(integer $ProjectId) 设置项目 ID，请登录[Redis控制台的项目管理](https://console.cloud.tencent.com/project)页面，在**项目名称**中复制项目 ID。
  * @method array getAutoRenews() 获取自动续费标识。
@@ -42,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
 - 0：默认状态，指手动续费。
 - 1：自动续费。
 - 2：明确不自动续费。
+ * @method array getDeleteProtectionSwitches() 获取删除保护开关。- 0：默认状态，指关闭。- 1：开关打开。
+ * @method void setDeleteProtectionSwitches(array $DeleteProtectionSwitches) 设置删除保护开关。- 0：默认状态，指关闭。- 1：开关打开。
  * @method string getInstanceId() 获取目前在废弃中，存量用户还可以使用，建议新用户使用 InstanceIds。
  * @method void setInstanceId(string $InstanceId) 设置目前在废弃中，存量用户还可以使用，建议新用户使用 InstanceIds。
  * @method string getInstanceName() 获取已经废弃
@@ -56,6 +60,7 @@ class ModifyInstanceRequest extends AbstractModel
 - rename：表示实例重命名。
 - modifyProject：修改实例所属项目。
 - modifyAutoRenew：修改实例续费标记。
+- modifyDeleteProtectionSwitch：修改实例删除保护。
      */
     public $Operation;
 
@@ -65,7 +70,7 @@ class ModifyInstanceRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var array 实例的新名称。
+     * @var array 实例的新名称。名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符-。
      */
     public $InstanceNames;
 
@@ -81,6 +86,11 @@ class ModifyInstanceRequest extends AbstractModel
 - 2：明确不自动续费。
      */
     public $AutoRenews;
+
+    /**
+     * @var array 删除保护开关。- 0：默认状态，指关闭。- 1：开关打开。
+     */
+    public $DeleteProtectionSwitches;
 
     /**
      * @var string 目前在废弃中，存量用户还可以使用，建议新用户使用 InstanceIds。
@@ -105,13 +115,15 @@ class ModifyInstanceRequest extends AbstractModel
 - rename：表示实例重命名。
 - modifyProject：修改实例所属项目。
 - modifyAutoRenew：修改实例续费标记。
+- modifyDeleteProtectionSwitch：修改实例删除保护。
      * @param array $InstanceIds 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。每次请求的实例数量的上限为10。
-     * @param array $InstanceNames 实例的新名称。
+     * @param array $InstanceNames 实例的新名称。名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符-。
      * @param integer $ProjectId 项目 ID，请登录[Redis控制台的项目管理](https://console.cloud.tencent.com/project)页面，在**项目名称**中复制项目 ID。
      * @param array $AutoRenews 自动续费标识。
 - 0：默认状态，指手动续费。
 - 1：自动续费。
 - 2：明确不自动续费。
+     * @param array $DeleteProtectionSwitches 删除保护开关。- 0：默认状态，指关闭。- 1：开关打开。
      * @param string $InstanceId 目前在废弃中，存量用户还可以使用，建议新用户使用 InstanceIds。
      * @param string $InstanceName 已经废弃
      * @param integer $AutoRenew 已经废弃。
@@ -147,6 +159,10 @@ class ModifyInstanceRequest extends AbstractModel
 
         if (array_key_exists("AutoRenews",$param) and $param["AutoRenews"] !== null) {
             $this->AutoRenews = $param["AutoRenews"];
+        }
+
+        if (array_key_exists("DeleteProtectionSwitches",$param) and $param["DeleteProtectionSwitches"] !== null) {
+            $this->DeleteProtectionSwitches = $param["DeleteProtectionSwitches"];
         }
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {

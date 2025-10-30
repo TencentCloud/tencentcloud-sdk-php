@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -48,6 +48,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderByType(integer $OrderByType) 设置时间排序方式，默认值为0
 <li>0, 降序</li>
 <li>1, 升序</li>
+ * @method array getLogLevels() 获取日志级别
+ * @method void setLogLevels(array $LogLevels) 设置日志级别
+ * @method array getNodeIds() 获取节点ID
+ * @method void setNodeIds(array $NodeIds) 设置节点ID
+ * @method string getIndexName() 获取慢日志索引名
+ * @method void setIndexName(string $IndexName) 设置慢日志索引名
+ * @method string getShardId() 获取慢日志索引分片
+ * @method void setShardId(string $ShardId) 设置慢日志索引分片
+ * @method integer getQueryCost() 获取慢日志查询耗时
+ * @method void setQueryCost(integer $QueryCost) 设置慢日志查询耗时
  */
 class DescribeInstanceLogsRequest extends AbstractModel
 {
@@ -98,6 +108,31 @@ class DescribeInstanceLogsRequest extends AbstractModel
     public $OrderByType;
 
     /**
+     * @var array 日志级别
+     */
+    public $LogLevels;
+
+    /**
+     * @var array 节点ID
+     */
+    public $NodeIds;
+
+    /**
+     * @var string 慢日志索引名
+     */
+    public $IndexName;
+
+    /**
+     * @var string 慢日志索引分片
+     */
+    public $ShardId;
+
+    /**
+     * @var integer 慢日志查询耗时
+     */
+    public $QueryCost;
+
+    /**
      * @param string $InstanceId 集群实例ID
      * @param integer $LogType 日志类型，默认值为1
 <li>1, 主日志</li>
@@ -112,6 +147,11 @@ class DescribeInstanceLogsRequest extends AbstractModel
      * @param integer $OrderByType 时间排序方式，默认值为0
 <li>0, 降序</li>
 <li>1, 升序</li>
+     * @param array $LogLevels 日志级别
+     * @param array $NodeIds 节点ID
+     * @param string $IndexName 慢日志索引名
+     * @param string $ShardId 慢日志索引分片
+     * @param integer $QueryCost 慢日志查询耗时
      */
     function __construct()
     {
@@ -156,6 +196,26 @@ class DescribeInstanceLogsRequest extends AbstractModel
 
         if (array_key_exists("OrderByType",$param) and $param["OrderByType"] !== null) {
             $this->OrderByType = $param["OrderByType"];
+        }
+
+        if (array_key_exists("LogLevels",$param) and $param["LogLevels"] !== null) {
+            $this->LogLevels = $param["LogLevels"];
+        }
+
+        if (array_key_exists("NodeIds",$param) and $param["NodeIds"] !== null) {
+            $this->NodeIds = $param["NodeIds"];
+        }
+
+        if (array_key_exists("IndexName",$param) and $param["IndexName"] !== null) {
+            $this->IndexName = $param["IndexName"];
+        }
+
+        if (array_key_exists("ShardId",$param) and $param["ShardId"] !== null) {
+            $this->ShardId = $param["ShardId"];
+        }
+
+        if (array_key_exists("QueryCost",$param) and $param["QueryCost"] !== null) {
+            $this->QueryCost = $param["QueryCost"];
         }
     }
 }

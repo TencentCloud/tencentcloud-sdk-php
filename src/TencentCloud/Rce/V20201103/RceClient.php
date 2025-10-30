@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@ use TencentCloud\Rce\V20201103\Models as Models;
  * @method Models\DescribeNameListDetailResponse DescribeNameListDetail(Models\DescribeNameListDetailRequest $req) 查询黑白名单列表详情
  * @method Models\DescribeUserUsageCntResponse DescribeUserUsageCnt(Models\DescribeUserUsageCntRequest $req) RCE控制台预付费和后付费次数展示
  * @method Models\ImportNameListDataResponse ImportNameListData(Models\ImportNameListDataRequest $req) 新增黑白名单数据，所有黑白名单数据总量上限为10000
- * @method Models\ManageMarketingRiskResponse ManageMarketingRisk(Models\ManageMarketingRiskRequest $req) 全栈式风控引擎（RiskControlEngine，RCE）是基于人工智能技术和腾讯20年风控实战沉淀，依托腾讯海量业务构建的风控引擎，以轻量级的 SaaS 服务方式接入，帮助您快速解决注册、登录、营销活动等关键场景遇到的欺诈问题，实时防御黑灰产作恶。
+ * @method Models\ManageMarketingRiskResponse ManageMarketingRisk(Models\ManageMarketingRiskRequest $req) 通用业务欺诈保护是基于人工智能技术和腾讯20年风控实战沉淀，依托腾讯海量业务构建的风控引擎，以轻量级的 SaaS 服务方式接入，帮助您快速解决注册、登录、营销活动等关键场景遇到的欺诈问题，实时防御黑灰产作恶。
  * @method Models\ModifyNameListResponse ModifyNameList(Models\ModifyNameListRequest $req) 修改列表数据 列表名称 列表类型 数据类型 状态 备注
  * @method Models\ModifyNameListDataResponse ModifyNameListData(Models\ModifyNameListDataRequest $req) 修改黑白名单列表详情 详情内容 开始和结束时间 状态 备注等
  */

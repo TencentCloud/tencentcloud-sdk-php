@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAclRule请求参数结构体
  *
- * @method string getInstanceId() 获取实例id信息
- * @method void setInstanceId(string $InstanceId) 设置实例id信息
- * @method string getRuleName() 获取acl规则名称
- * @method void setRuleName(string $RuleName) 设置acl规则名称
+ * @method string getInstanceId() 获取实例id信息，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+ * @method void setInstanceId(string $InstanceId) 设置实例id信息，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+ * @method string getRuleName() 获取acl规则名称，可通过DescribeAclRule接口获取。
+ * @method void setRuleName(string $RuleName) 设置acl规则名称，可通过DescribeAclRule接口获取。
  */
 class DeleteAclRuleRequest extends AbstractModel
 {
     /**
-     * @var string 实例id信息
+     * @var string 实例id信息，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public $InstanceId;
 
     /**
-     * @var string acl规则名称
+     * @var string acl规则名称，可通过DescribeAclRule接口获取。
      */
     public $RuleName;
 
     /**
-     * @param string $InstanceId 实例id信息
-     * @param string $RuleName acl规则名称
+     * @param string $InstanceId 实例id信息，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+     * @param string $RuleName acl规则名称，可通过DescribeAclRule接口获取。
      */
     function __construct()
     {

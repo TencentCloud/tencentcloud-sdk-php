@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,6 +36,10 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\CreateContentReviewTemplateResponse CreateContentReviewTemplate(Models\CreateContentReviewTemplateRequest $req) 创建用户自定义内容审核模板，数量上限：50。
  * @method Models\CreateImageSpriteTemplateResponse CreateImageSpriteTemplate(Models\CreateImageSpriteTemplateRequest $req) 创建用户自定义雪碧图模板，数量上限：16。
  * @method Models\CreateLiveRecordTemplateResponse CreateLiveRecordTemplate(Models\CreateLiveRecordTemplateRequest $req) 创建直播录制模板
+ * @method Models\CreateMediaEvaluationResponse CreateMediaEvaluation(Models\CreateMediaEvaluationRequest $req) 发起视频评测任务，功能包括：
+
+1. 对一个原视频和多个转码后的视频进行评分。
+2. 计算不同转码方式的 BD-Rate。
  * @method Models\CreatePersonSampleResponse CreatePersonSample(Models\CreatePersonSampleRequest $req) 该接口用于创建素材样本，用于通过五官定位等技术，进行内容识别、内容不适宜等视频处理。
  * @method Models\CreateQualityControlTemplateResponse CreateQualityControlTemplate(Models\CreateQualityControlTemplateRequest $req) 创建媒体质检模板，数量上限：50。
  * @method Models\CreateSampleSnapshotTemplateResponse CreateSampleSnapshotTemplate(Models\CreateSampleSnapshotTemplateRequest $req) 创建用户自定义采样截图模板，数量上限：16。
@@ -49,8 +53,12 @@ use TencentCloud\Mps\V20190612\Models as Models;
 7. 智能内容审核（鉴黄、敏感信息检测）；
 8. 智能内容分析（标签、分类、封面、按帧标签）；
 9. 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词）。
+10. 媒体质检（直播流格式诊断、音画内容检测（抖动、模糊、低光照、过曝光、黑边、白边、黑屏、白屏、花屏、噪点、马赛克、二维码等）、无参考打分）
+11. 智能字幕（语音全文、语音热词、语音翻译）
+12. 智能擦除（去水印、去字幕、隐私保护）；
 
 注意：创建编排成功后是禁用状态，需要手动启用。
+ * @method Models\CreateSmartEraseTemplateResponse CreateSmartEraseTemplate(Models\CreateSmartEraseTemplateRequest $req) 创建自定义智能擦除模板
  * @method Models\CreateSmartSubtitleTemplateResponse CreateSmartSubtitleTemplate(Models\CreateSmartSubtitleTemplateRequest $req) 创建自定义智能字幕模板
  * @method Models\CreateSnapshotByTimeOffsetTemplateResponse CreateSnapshotByTimeOffsetTemplate(Models\CreateSnapshotByTimeOffsetTemplateRequest $req) 创建用户自定义指定时间点截图模板，数量上限：16。
  * @method Models\CreateStreamLinkEventResponse CreateStreamLinkEvent(Models\CreateStreamLinkEventRequest $req) 创建媒体传输的事件Event。
@@ -90,6 +98,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DeleteQualityControlTemplateResponse DeleteQualityControlTemplate(Models\DeleteQualityControlTemplateRequest $req) 删除媒体质检模板
  * @method Models\DeleteSampleSnapshotTemplateResponse DeleteSampleSnapshotTemplate(Models\DeleteSampleSnapshotTemplateRequest $req) 删除用户自定义采样截图模板。
  * @method Models\DeleteScheduleResponse DeleteSchedule(Models\DeleteScheduleRequest $req) 删除编排
+ * @method Models\DeleteSmartEraseTemplateResponse DeleteSmartEraseTemplate(Models\DeleteSmartEraseTemplateRequest $req) 删除用户自定义智能擦除模板。
  * @method Models\DeleteSmartSubtitleTemplateResponse DeleteSmartSubtitleTemplate(Models\DeleteSmartSubtitleTemplateRequest $req) 删除用户自定义智能字幕模板。
  * @method Models\DeleteSnapshotByTimeOffsetTemplateResponse DeleteSnapshotByTimeOffsetTemplate(Models\DeleteSnapshotByTimeOffsetTemplateRequest $req) 删除用户自定义指定时间点截图模板。
  * @method Models\DeleteStreamLinkEventResponse DeleteStreamLinkEvent(Models\DeleteStreamLinkEventRequest $req) 删除媒体传输的事件配置。
@@ -117,6 +126,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DescribeQualityControlTemplatesResponse DescribeQualityControlTemplates(Models\DescribeQualityControlTemplatesRequest $req) 查询用户自定义媒体质检模板，支持根据条件，分页查询。
  * @method Models\DescribeSampleSnapshotTemplatesResponse DescribeSampleSnapshotTemplates(Models\DescribeSampleSnapshotTemplatesRequest $req) 查询采样截图模板，支持根据条件，分页查询。
  * @method Models\DescribeSchedulesResponse DescribeSchedules(Models\DescribeSchedulesRequest $req) 查询编排。
+ * @method Models\DescribeSmartEraseTemplatesResponse DescribeSmartEraseTemplates(Models\DescribeSmartEraseTemplatesRequest $req) 根据智能擦除模板唯一标识，获取智能擦除模板详情列表。返回结果包含符合条件的所有用户自定义智能擦除模板及系统预置智能擦除模板
  * @method Models\DescribeSmartSubtitleTemplatesResponse DescribeSmartSubtitleTemplates(Models\DescribeSmartSubtitleTemplatesRequest $req) 根据智能字幕 模板唯一标识，获取智能字幕模板详情列表。返回结果包含符合条件的所有用户自定义智能字幕模板及系统预置智能字幕模板
  * @method Models\DescribeSnapshotByTimeOffsetTemplatesResponse DescribeSnapshotByTimeOffsetTemplates(Models\DescribeSnapshotByTimeOffsetTemplatesRequest $req) 查询指定时间点截图模板，支持根据条件，分页查询。
  * @method Models\DescribeStreamLinkActivateStateResponse DescribeStreamLinkActivateState(Models\DescribeStreamLinkActivateStateRequest $req) 查询媒体传输开通状态。
@@ -176,6 +186,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\ModifyQualityControlTemplateResponse ModifyQualityControlTemplate(Models\ModifyQualityControlTemplateRequest $req) 修改媒体质检模板。
  * @method Models\ModifySampleSnapshotTemplateResponse ModifySampleSnapshotTemplate(Models\ModifySampleSnapshotTemplateRequest $req) 修改用户自定义采样截图模板。
  * @method Models\ModifyScheduleResponse ModifySchedule(Models\ModifyScheduleRequest $req) 修改编排
+ * @method Models\ModifySmartEraseTemplateResponse ModifySmartEraseTemplate(Models\ModifySmartEraseTemplateRequest $req) 修改用户自定义智能擦除模板。
  * @method Models\ModifySmartSubtitleTemplateResponse ModifySmartSubtitleTemplate(Models\ModifySmartSubtitleTemplateRequest $req) 修改用户自定义智能字幕模板。
  * @method Models\ModifySnapshotByTimeOffsetTemplateResponse ModifySnapshotByTimeOffsetTemplate(Models\ModifySnapshotByTimeOffsetTemplateRequest $req) 修改用户自定义指定时间点截图模板。
  * @method Models\ModifyStreamLinkEventResponse ModifyStreamLinkEvent(Models\ModifyStreamLinkEventRequest $req) 修改媒体传输的事件配置信息。
@@ -210,11 +221,12 @@ use TencentCloud\Mps\V20190612\Models as Models;
 4. 对视频采样截图；
 5. 对视频截图雪碧图；
 6. 对视频转自适应码流；
-7. 智能内容审核（鉴黄、敏感信息检测）；
-8. 智能内容分析（标签、分类、封面、按帧标签、拆条、集锦、片头片尾、游戏打点）；
-9. 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词、语音翻译、物体识别）。
-10. 媒体质检（直播流格式诊断、音画内容检测（抖动、模糊、低光照、过曝光、黑边、白边、黑屏、白屏、花屏、噪点、马赛克、二维码等）、无参考打分）
-11. 智能字幕（语音全文、语音热词、语音翻译）
+7. 智能内容审核（例如鉴黄、敏感信息检测）；
+8. 智能内容分析（例如标签、分类、封面、按帧标签、拆条、集锦、片头片尾、游戏打点）；
+9. 智能内容识别（例如人脸、文本全文、文本关键词、语音全文、语音关键词、语音翻译、物体识别）；
+10. 媒体质检（例如媒体格式诊断、音画内容检测、无参考打分，其中音画内容检测主要针对抖动、模糊、低光照、过曝光、花屏、噪点、马赛克、二维码等问题）;
+11. 智能字幕（例如语音全文、语音热词、语音翻译）；
+12.  智能擦除（去水印、去字幕、隐私保护）；
  * @method Models\RecognizeMediaForZhiXueResponse RecognizeMediaForZhiXue(Models\RecognizeMediaForZhiXueRequest $req) 智能媒体识别，包含表情和动作识别。仅用于智学，其他调用无效。
  * @method Models\ResetWorkflowResponse ResetWorkflow(Models\ResetWorkflowRequest $req) 重新设置一个已经存在且处于禁用状态的工作流。
  * @method Models\StartStreamLinkFlowResponse StartStreamLinkFlow(Models\StartStreamLinkFlowRequest $req) 启动媒体传输流。

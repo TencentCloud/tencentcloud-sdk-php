@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,8 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstances请求参数结构体
  *
- * @method array getFilters() 获取过滤条件
- * @method void setFilters(array $Filters) 设置过滤条件
+ * @method array getFilters() 获取过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。
+参考：[{"Name":"ip","Values":["172.16.16.139"]}]
+filter name 取值范围：
+- `id`：实例ID
+- ` name `：实例名
+- ` ip `：内网IP（可填wan_ip或lan_ip）
+ * @method void setFilters(array $Filters) 设置过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。
+参考：[{"Name":"ip","Values":["172.16.16.139"]}]
+filter name 取值范围：
+- `id`：实例ID
+- ` name `：实例名
+- ` ip `：内网IP（可填wan_ip或lan_ip）
  * @method integer getOffset() 获取偏移量，默认为0
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取分页个数，默认为20，最大100
@@ -30,7 +40,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInstancesRequest extends AbstractModel
 {
     /**
-     * @var array 过滤条件
+     * @var array 过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。
+参考：[{"Name":"ip","Values":["172.16.16.139"]}]
+filter name 取值范围：
+- `id`：实例ID
+- ` name `：实例名
+- ` ip `：内网IP（可填wan_ip或lan_ip）
      */
     public $Filters;
 
@@ -45,7 +60,12 @@ class DescribeInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $Filters 过滤条件
+     * @param array $Filters 过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。
+参考：[{"Name":"ip","Values":["172.16.16.139"]}]
+filter name 取值范围：
+- `id`：实例ID
+- ` name `：实例名
+- ` ip `：内网IP（可填wan_ip或lan_ip）
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 分页个数，默认为20，最大100
      */

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -128,7 +128,6 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
  * @method Models\ChannelCreateDynamicFlowApproverResponse ChannelCreateDynamicFlowApprover(Models\ChannelCreateDynamicFlowApproverRequest $req) 接口（ChannelCreateDynamicFlowApprover）用来补充<a href="https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles" target="_blank">用PDF文件创建签署流程</a>发起的动态合同的签署人信息
 **注**: 
 <ul>
-<li>此接口需要保证：渠道企业已开启：模块化计费能力，</li>
 <li>此接口需要保证：渠道应用已开启：动态签署人2.0能力</li>
 <li>此接口需要保证：合同发起时指定开启了动态合同</li>
 <li>此接口补充的动态签署人传参规则，请参考接口：<a href="https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles" target="_blank">用PDF文件创建签署流程</a>的签署人传参规则</li>
@@ -569,7 +568,9 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 适用场景1：更新当前企业的自定义角色的名称或描述等其他信息，更新时不进行权限的设置（PermissionGroups 参数不传）。
 
 适用场景2：更新当前企业的自定义角色的权限信息，更新时进行权限的设置（PermissionGroups 参数要传），权限树内容 PermissionGroups 可参考[查询角色列表接口](https://qian.tencent.com/developers/partnerApis/accounts/ChannelDescribeRoles) 的输出。此处注意权限树内容可能会更新，需尽量拉取最新的权限树内容，并且权限树内容 PermissionGroups 必须是一颗完整的权限树。
- * @method Models\ChannelRenewAutoSignLicenseResponse ChannelRenewAutoSignLicense(Models\ChannelRenewAutoSignLicenseRequest $req) 给医疗个人自动签许可续期。续期成功后，可对医疗自动签许可追加一年有效期，只可续期一次。
+ * @method Models\ChannelRenewAutoSignLicenseResponse ChannelRenewAutoSignLicense(Models\ChannelRenewAutoSignLicenseRequest $req) 已经不再使用
+
+给医疗个人自动签许可续期。续期成功后，可对医疗自动签许可追加一年有效期，只可续期一次。
 
 注意: `处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。`
  * @method Models\ChannelUpdateSealStatusResponse ChannelUpdateSealStatus(Models\ChannelUpdateSealStatusRequest $req) 此接口（ChannelUpdateSealStatus）用于第三方应用平台为子客企业更新印章状态。
@@ -591,7 +592,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 异步任务的处理完成时间视当前已提交的任务量、任务的复杂程度等因素决定，正常情况下 3~5 秒即可完成，但也可能需要更长的时间。
 此链接包含多条认证流程，使用该链接可以批量的对企业进行认证。
  * @method Models\CreateBatchOrganizationRegistrationTasksResponse CreateBatchOrganizationRegistrationTasks(Models\CreateBatchOrganizationRegistrationTasksRequest $req) 该接口用于批量创建企业认证链接， 可以支持PC浏览器，H5和小程序三种途径。
-此接口为异步提交任务接口，需要与[查询子企业批量认证链接](https://qcloudimg.tencent-cloud.cn/raw/1d3737991b2a3be78002bd78a47d6917.png)配合使用，整体流程如下图。
+此接口为异步提交任务接口，需要与[查询子企业批量认证链接](https://qian.tencent.com/developers/partnerApis/accounts/DescribeBatchOrganizationRegistrationTasks)配合使用，整体流程如下图。
 ![image](https://qcloudimg.tencent-cloud.cn/raw/654aa2a72ab7d42f06464ea33c50c3bb.png)
 
 
@@ -851,7 +852,7 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
  * @method Models\CreateModifyAdminAuthorizationUrlResponse CreateModifyAdminAuthorizationUrl(Models\CreateModifyAdminAuthorizationUrlRequest $req) 本接口（CreateModifyAdminAuthorizationUrl）用于重新上传超管授权书。
 
 注意:
-1. 重新上传超管授权书，必须是审核失败的情况下才能重新上传,可以通过回调[!授权书审核结果回调](https://qian.tencent.com/developers/partner/callback_types_staffs#%E5%9B%9B-%E6%8E%88%E6%9D%83%E4%B9%A6%E5%AE%A1%E6%A0%B8%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)得到
+1. 重新上传超管授权书，必须是审核失败的情况下才能重新上传,可以通过回调[!授权书失效回调](https://qian.tencent.com/developers/partner/callback_types_staffs#%E5%9B%9B-%E6%8E%88%E6%9D%83%E4%B9%A6%E5%AE%A1%E6%A0%B8%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)得到
  * @method Models\CreateOrganizationAuthFileResponse CreateOrganizationAuthFile(Models\CreateOrganizationAuthFileRequest $req) 生成合成后的各类企业授权书，包括：
 - 企业认证超管授权书
 - 超管变更授权书
@@ -1025,10 +1026,10 @@ Agent参数中的OpenId 必须为审批者的openId，且链接必须由审批�
 <font color="red">此接口即将下线， 请使用新接口</font>  [查询渠道计费消耗情况](https://qian.tencent.com/developers/partnerApis/fee/ChannelDescribeBillUsageDetail)
 
 注: 此接口**每日限频50次**，若要扩大限制次数,请提前与客服经理或邮件至e-contract@tencent.com进行联系。
- * @method Models\DescribeUserFlowTypeResponse DescribeUserFlowType(Models\DescribeUserFlowTypeRequest $req) 查询用户模版类型，分为两种模式：
+ * @method Models\DescribeUserFlowTypeResponse DescribeUserFlowType(Models\DescribeUserFlowTypeRequest $req) 查询用户模板类型，分为两种模式：
 <ul>
-<li>QueryBindTemplate:false，查询用户合同模版类型，返回用户合同模版类型ID，用户合同模版类型名称，用户合同模版类型描述信息</li>
-<li>QueryBindTemplate:false，查询用户合同模版类型，返回用户合同模版类型ID，用户合同模版类型名称，用户合同模版类型描述信息，被绑定的模版数量</li>
+<li>QueryBindTemplate:false，查询用户合同模板类型，返回用户合同模板类型ID，用户合同模板类型名称，用户合同模板类型描述信息</li>
+<li>QueryBindTemplate:false，查询用户合同模板类型，返回用户合同模板类型ID，用户合同模板类型名称，用户合同模板类型描述信息，被绑定的模板数量</li>
 </ul>
  * @method Models\GetDownloadFlowUrlResponse GetDownloadFlowUrl(Models\GetDownloadFlowUrlRequest $req) 此接口（GetDownloadFlowUrl）用户获取合同控制台下载页面链接,  点击链接后会跳转至本企业合同管理控制台(会筛选出传入的合同列表), 点击**下载**按钮后就会下载传入的合同列表, 下载页面如下图
 ![image](https://dyn.ess.tencent.cn/guide/capi/channel_GetDownloadFlowUrl.png)

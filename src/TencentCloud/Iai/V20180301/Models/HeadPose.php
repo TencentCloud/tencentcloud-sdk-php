@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,34 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 姿态信息
  *
- * @method integer getPitch() 获取上下偏移[-30,30]。
- * @method void setPitch(integer $Pitch) 设置上下偏移[-30,30]。
- * @method integer getYaw() 获取左右偏移[-30,30]。
- * @method void setYaw(integer $Yaw) 设置左右偏移[-30,30]。
- * @method integer getRoll() 获取平面旋转[-180,180]。
- * @method void setRoll(integer $Roll) 设置平面旋转[-180,180]。
+ * @method integer getPitch() 获取上下偏移。
+- 取值范围：[-30,30]。
+ * @method void setPitch(integer $Pitch) 设置上下偏移。
+- 取值范围：[-30,30]。
+ * @method integer getYaw() 获取左右偏移。
+- 取值范围：[-30,30]。
+ * @method void setYaw(integer $Yaw) 设置左右偏移。
+- 取值范围：[-30,30]。
+ * @method integer getRoll() 获取平面旋转。
+- 取值范围：[-180,180]。
+ * @method void setRoll(integer $Roll) 设置平面旋转。
+- 取值范围：[-180,180]。
  */
 class HeadPose extends AbstractModel
 {
     /**
-     * @var integer 上下偏移[-30,30]。
+     * @var integer 上下偏移。
+- 取值范围：[-30,30]。
      */
     public $Pitch;
 
     /**
-     * @var integer 左右偏移[-30,30]。
+     * @var integer 左右偏移。
+- 取值范围：[-30,30]。
      */
     public $Yaw;
 
     /**
-     * @var integer 平面旋转[-180,180]。
+     * @var integer 平面旋转。
+- 取值范围：[-180,180]。
      */
     public $Roll;
 
     /**
-     * @param integer $Pitch 上下偏移[-30,30]。
-     * @param integer $Yaw 左右偏移[-30,30]。
-     * @param integer $Roll 平面旋转[-180,180]。
+     * @param integer $Pitch 上下偏移。
+- 取值范围：[-30,30]。
+     * @param integer $Yaw 左右偏移。
+- 取值范围：[-30,30]。
+     * @param integer $Roll 平面旋转。
+- 取值范围：[-180,180]。
      */
     function __construct()
     {

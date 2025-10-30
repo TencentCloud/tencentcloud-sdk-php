@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExchangeQuota(ExchangeQuota $ExchangeQuota) 设置exchange配额信息
  * @method QueueQuota getQueueQuota() 获取queue配额信息
  * @method void setQueueQuota(QueueQuota $QueueQuota) 设置queue配额信息
+ * @method RabbitMQUserQuota getUserQuota() 获取用户配额信息
+ * @method void setUserQuota(RabbitMQUserQuota $UserQuota) 设置用户配额信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -75,6 +77,11 @@ class DescribeRabbitMQVipInstanceResponse extends AbstractModel
     public $QueueQuota;
 
     /**
+     * @var RabbitMQUserQuota 用户配额信息
+     */
+    public $UserQuota;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -87,6 +94,7 @@ class DescribeRabbitMQVipInstanceResponse extends AbstractModel
      * @param VirtualHostQuota $VirtualHostQuota vhost配额信息
      * @param ExchangeQuota $ExchangeQuota exchange配额信息
      * @param QueueQuota $QueueQuota queue配额信息
+     * @param RabbitMQUserQuota $UserQuota 用户配额信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -135,6 +143,11 @@ class DescribeRabbitMQVipInstanceResponse extends AbstractModel
         if (array_key_exists("QueueQuota",$param) and $param["QueueQuota"] !== null) {
             $this->QueueQuota = new QueueQuota();
             $this->QueueQuota->deserialize($param["QueueQuota"]);
+        }
+
+        if (array_key_exists("UserQuota",$param) and $param["UserQuota"] !== null) {
+            $this->UserQuota = new RabbitMQUserQuota();
+            $this->UserQuota->deserialize($param["UserQuota"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

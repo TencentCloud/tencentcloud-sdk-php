@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 智能字幕结果。
  *
- * @method string getType() 获取任务的类型，取值范围：
-<li>AsrFullTextRecognition：语音全文识别，</li>
+ * @method string getType() 获取任务的类型，取值范围： 
+<li>AsrFullTextRecognition：语音全文识别，</li> 
 <li>TransTextRecognition：语音翻译。</li>
- * @method void setType(string $Type) 设置任务的类型，取值范围：
-<li>AsrFullTextRecognition：语音全文识别，</li>
+ * @method void setType(string $Type) 设置任务的类型，取值范围： 
+<li>AsrFullTextRecognition：语音全文识别，</li> 
 <li>TransTextRecognition：语音翻译。</li>
  * @method SmartSubtitleTaskAsrFullTextResult getAsrFullTextTask() 获取语音全文识别结果，当 Type 为
  AsrFullTextRecognition 时有效。
@@ -44,8 +44,8 @@ TransTextRecognition 时有效。
 class SmartSubtitlesResult extends AbstractModel
 {
     /**
-     * @var string 任务的类型，取值范围：
-<li>AsrFullTextRecognition：语音全文识别，</li>
+     * @var string 任务的类型，取值范围： 
+<li>AsrFullTextRecognition：语音全文识别，</li> 
 <li>TransTextRecognition：语音翻译。</li>
      */
     public $Type;
@@ -66,8 +66,8 @@ TransTextRecognition 时有效。
     public $TransTextTask;
 
     /**
-     * @param string $Type 任务的类型，取值范围：
-<li>AsrFullTextRecognition：语音全文识别，</li>
+     * @param string $Type 任务的类型，取值范围： 
+<li>AsrFullTextRecognition：语音全文识别，</li> 
 <li>TransTextRecognition：语音翻译。</li>
      * @param SmartSubtitleTaskAsrFullTextResult $AsrFullTextTask 语音全文识别结果，当 Type 为
  AsrFullTextRecognition 时有效。

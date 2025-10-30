@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -54,6 +54,16 @@ use TencentCloud\Common\AbstractModel;
 
 - `minutely`：分钟级（默认值）
 - `immediate`：立即
+ * @method VisionSummaryConfig getSummaryConfig() 获取摘要输出配置
+ * @method void setSummaryConfig(VisionSummaryConfig $SummaryConfig) 设置摘要输出配置
+ * @method string getServiceType() 获取算法类型，可能取值：
+- `Summary`：视频/图片摘要
+- `ObjectDetect`：目标检测
+ * @method void setServiceType(string $ServiceType) 设置算法类型，可能取值：
+- `Summary`：视频/图片摘要
+- `ObjectDetect`：目标检测
+ * @method VisionObjectDetectConfig getObjectDetectConfig() 获取目标检测配置
+ * @method void setObjectDetectConfig(VisionObjectDetectConfig $ObjectDetectConfig) 设置目标检测配置
  */
 class CreateTWeSeeRecognitionTaskRequest extends AbstractModel
 {
@@ -119,6 +129,23 @@ class CreateTWeSeeRecognitionTaskRequest extends AbstractModel
     public $SummaryQOS;
 
     /**
+     * @var VisionSummaryConfig 摘要输出配置
+     */
+    public $SummaryConfig;
+
+    /**
+     * @var string 算法类型，可能取值：
+- `Summary`：视频/图片摘要
+- `ObjectDetect`：目标检测
+     */
+    public $ServiceType;
+
+    /**
+     * @var VisionObjectDetectConfig 目标检测配置
+     */
+    public $ObjectDetectConfig;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
      * @param string $InputURL 输入视频 / 图片的 URL
@@ -136,6 +163,11 @@ class CreateTWeSeeRecognitionTaskRequest extends AbstractModel
 
 - `minutely`：分钟级（默认值）
 - `immediate`：立即
+     * @param VisionSummaryConfig $SummaryConfig 摘要输出配置
+     * @param string $ServiceType 算法类型，可能取值：
+- `Summary`：视频/图片摘要
+- `ObjectDetect`：目标检测
+     * @param VisionObjectDetectConfig $ObjectDetectConfig 目标检测配置
      */
     function __construct()
     {
@@ -192,6 +224,20 @@ class CreateTWeSeeRecognitionTaskRequest extends AbstractModel
 
         if (array_key_exists("SummaryQOS",$param) and $param["SummaryQOS"] !== null) {
             $this->SummaryQOS = $param["SummaryQOS"];
+        }
+
+        if (array_key_exists("SummaryConfig",$param) and $param["SummaryConfig"] !== null) {
+            $this->SummaryConfig = new VisionSummaryConfig();
+            $this->SummaryConfig->deserialize($param["SummaryConfig"]);
+        }
+
+        if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
+            $this->ServiceType = $param["ServiceType"];
+        }
+
+        if (array_key_exists("ObjectDetectConfig",$param) and $param["ObjectDetectConfig"] !== null) {
+            $this->ObjectDetectConfig = new VisionObjectDetectConfig();
+            $this->ObjectDetectConfig->deserialize($param["ObjectDetectConfig"]);
         }
     }
 }

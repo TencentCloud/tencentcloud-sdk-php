@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,22 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyKafkaConsumer请求参数结构体
  *
- * @method string getFromTopicId() 获取日志主题ID
- * @method void setFromTopicId(string $FromTopicId) 设置日志主题ID
- * @method integer getCompression() 获取压缩方式[0:NONE；2:SNAPPY；3:LZ4]
- * @method void setCompression(integer $Compression) 设置压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+ * @method string getFromTopicId() 获取日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+ * @method void setFromTopicId(string $FromTopicId) 设置日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+ * @method integer getCompression() 获取压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩
+ * @method void setCompression(integer $Compression) 设置压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩
  * @method KafkaConsumerContent getConsumerContent() 获取kafka协议消费数据格式
  * @method void setConsumerContent(KafkaConsumerContent $ConsumerContent) 设置kafka协议消费数据格式
  */
 class ModifyKafkaConsumerRequest extends AbstractModel
 {
     /**
-     * @var string 日志主题ID
+     * @var string 日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
      */
     public $FromTopicId;
 
     /**
-     * @var integer 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+     * @var integer 压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩
      */
     public $Compression;
 
@@ -45,8 +51,10 @@ class ModifyKafkaConsumerRequest extends AbstractModel
     public $ConsumerContent;
 
     /**
-     * @param string $FromTopicId 日志主题ID
-     * @param integer $Compression 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+     * @param string $FromTopicId 日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+     * @param integer $Compression 压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩
      * @param KafkaConsumerContent $ConsumerContent kafka协议消费数据格式
      */
     function __construct()

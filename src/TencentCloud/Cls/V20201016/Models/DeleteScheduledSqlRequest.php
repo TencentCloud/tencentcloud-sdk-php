@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteScheduledSql请求参数结构体
  *
- * @method string getTaskId() 获取任务ID
- * @method void setTaskId(string $TaskId) 设置任务ID
- * @method string getSrcTopicId() 获取源日志主题ID
- * @method void setSrcTopicId(string $SrcTopicId) 设置源日志主题ID
+ * @method string getTaskId() 获取任务ID，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取
+ * @method void setTaskId(string $TaskId) 设置任务ID，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取
+ * @method string getSrcTopicId() 获取源日志主题ID，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取
+ * @method void setSrcTopicId(string $SrcTopicId) 设置源日志主题ID，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取
  */
 class DeleteScheduledSqlRequest extends AbstractModel
 {
     /**
-     * @var string 任务ID
+     * @var string 任务ID，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取
      */
     public $TaskId;
 
     /**
-     * @var string 源日志主题ID
+     * @var string 源日志主题ID，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取
      */
     public $SrcTopicId;
 
     /**
-     * @param string $TaskId 任务ID
-     * @param string $SrcTopicId 源日志主题ID
+     * @param string $TaskId 任务ID，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取
+     * @param string $SrcTopicId 源日志主题ID，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取
      */
     function __construct()
     {

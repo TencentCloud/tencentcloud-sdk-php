@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeployGroup请求参数结构体
  *
- * @method string getGroupId() 获取部署组ID
- * @method void setGroupId(string $GroupId) 设置部署组ID
- * @method string getPkgId() 获取程序包ID
- * @method void setPkgId(string $PkgId) 设置程序包ID
+ * @method string getGroupId() 获取部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
+ * @method void setGroupId(string $GroupId) 设置部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
+ * @method string getPkgId() 获取软件包ID，可通过调用DescribeUploadInfo接口时[获取上传程序包信息](https://cloud.tencent.com/document/api/649/36078)返回的COS上传信息获取，登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
+ * @method void setPkgId(string $PkgId) 设置软件包ID，可通过调用DescribeUploadInfo接口时[获取上传程序包信息](https://cloud.tencent.com/document/api/649/36078)返回的COS上传信息获取，登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
  * @method string getStartupParameters() 获取部署组启动参数
  * @method void setStartupParameters(string $StartupParameters) 设置部署组启动参数
  * @method string getDeployDesc() 获取部署应用描述信息
@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeployBatch(array $DeployBatch) 设置滚动发布每个批次参与的实例比率
  * @method string getDeployExeMode() 获取滚动发布的执行方式，auto表示自动， manual表示手动
  * @method void setDeployExeMode(string $DeployExeMode) 设置滚动发布的执行方式，auto表示自动， manual表示手动
- * @method integer getDeployWaitTime() 获取滚动发布每个批次的时间间隔
- * @method void setDeployWaitTime(integer $DeployWaitTime) 设置滚动发布每个批次的时间间隔
+ * @method integer getDeployWaitTime() 获取滚动发布每个批次的时间间隔，单位min。默认值是0，不等待。
+ * @method void setDeployWaitTime(integer $DeployWaitTime) 设置滚动发布每个批次的时间间隔，单位min。默认值是0，不等待。
  * @method string getStartScript() 获取启动脚本 base64编码
  * @method void setStartScript(string $StartScript) 设置启动脚本 base64编码
  * @method string getStopScript() 获取停止脚本 base64编码
@@ -66,12 +66,12 @@ openJDK版本：8、17
 class DeployGroupRequest extends AbstractModel
 {
     /**
-     * @var string 部署组ID
+     * @var string 部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
      */
     public $GroupId;
 
     /**
-     * @var string 程序包ID
+     * @var string 软件包ID，可通过调用DescribeUploadInfo接口时[获取上传程序包信息](https://cloud.tencent.com/document/api/649/36078)返回的COS上传信息获取，登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
      */
     public $PkgId;
 
@@ -121,7 +121,7 @@ class DeployGroupRequest extends AbstractModel
     public $DeployExeMode;
 
     /**
-     * @var integer 滚动发布每个批次的时间间隔
+     * @var integer 滚动发布每个批次的时间间隔，单位min。默认值是0，不等待。
      */
     public $DeployWaitTime;
 
@@ -167,8 +167,8 @@ openJDK版本：8、17
     public $EnableBatchHealthCheck;
 
     /**
-     * @param string $GroupId 部署组ID
-     * @param string $PkgId 程序包ID
+     * @param string $GroupId 部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
+     * @param string $PkgId 软件包ID，可通过调用DescribeUploadInfo接口时[获取上传程序包信息](https://cloud.tencent.com/document/api/649/36078)返回的COS上传信息获取，登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
      * @param string $StartupParameters 部署组启动参数
      * @param string $DeployDesc 部署应用描述信息
      * @param boolean $ForceStart 是否允许强制启动
@@ -178,7 +178,7 @@ openJDK版本：8、17
      * @param boolean $DeployBetaEnable 是否启用beta批次
      * @param array $DeployBatch 滚动发布每个批次参与的实例比率
      * @param string $DeployExeMode 滚动发布的执行方式，auto表示自动， manual表示手动
-     * @param integer $DeployWaitTime 滚动发布每个批次的时间间隔
+     * @param integer $DeployWaitTime 滚动发布每个批次的时间间隔，单位min。默认值是0，不等待。
      * @param string $StartScript 启动脚本 base64编码
      * @param string $StopScript 停止脚本 base64编码
      * @param boolean $IncrementalDeployment 是否进行增量部署，默认为false，全量更新

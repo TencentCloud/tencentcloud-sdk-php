@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQualityControlItemSet(array $QualityControlItemSet) 设置媒体质检控制参数。
  * @method string getComment() 获取媒体质检模板描述信息，长度限制：256 个字符。
  * @method void setComment(string $Comment) 设置媒体质检模板描述信息，长度限制：256 个字符。
+ * @method string getRecordFormat() 获取录制文件格式。可选值：
+<li>PNG: PNG图片</li>
+ * @method void setRecordFormat(string $RecordFormat) 设置录制文件格式。可选值：
+<li>PNG: PNG图片</li>
+ * @method QualityControlStrategy getStrategy() 获取媒体质检抽检策略。
+ * @method void setStrategy(QualityControlStrategy $Strategy) 设置媒体质检抽检策略。
  */
 class CreateQualityControlTemplateRequest extends AbstractModel
 {
@@ -45,9 +51,23 @@ class CreateQualityControlTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
+     * @var string 录制文件格式。可选值：
+<li>PNG: PNG图片</li>
+     */
+    public $RecordFormat;
+
+    /**
+     * @var QualityControlStrategy 媒体质检抽检策略。
+     */
+    public $Strategy;
+
+    /**
      * @param string $Name 媒体质检模板名称，长度限制：64 个字符。
      * @param array $QualityControlItemSet 媒体质检控制参数。
      * @param string $Comment 媒体质检模板描述信息，长度限制：256 个字符。
+     * @param string $RecordFormat 录制文件格式。可选值：
+<li>PNG: PNG图片</li>
+     * @param QualityControlStrategy $Strategy 媒体质检抽检策略。
      */
     function __construct()
     {
@@ -77,6 +97,15 @@ class CreateQualityControlTemplateRequest extends AbstractModel
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("RecordFormat",$param) and $param["RecordFormat"] !== null) {
+            $this->RecordFormat = $param["RecordFormat"];
+        }
+
+        if (array_key_exists("Strategy",$param) and $param["Strategy"] !== null) {
+            $this->Strategy = new QualityControlStrategy();
+            $this->Strategy->deserialize($param["Strategy"]);
         }
     }
 }

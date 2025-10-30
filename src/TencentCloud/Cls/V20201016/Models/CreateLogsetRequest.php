@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,17 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLogset请求参数结构体
  *
- * @method string getLogsetName() 获取日志集名字，不能重名
- * @method void setLogsetName(string $LogsetName) 设置日志集名字，不能重名
+ * @method string getLogsetName() 获取日志集名字。
+
+- 最大支持255个字符。不支持`|`字符。
+ * @method void setLogsetName(string $LogsetName) 设置日志集名字。
+
+- 最大支持255个字符。不支持`|`字符。
  * @method array getTags() 获取标签描述列表。最大支持10个标签键值对，并且不能有重复的键值对
  * @method void setTags(array $Tags) 设置标签描述列表。最大支持10个标签键值对，并且不能有重复的键值对
- * @method string getLogsetId() 获取日志集ID，格式为：用户自定义部分-用户appid，用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符，尾部需要使用-拼接用户appid
- * @method void setLogsetId(string $LogsetId) 设置日志集ID，格式为：用户自定义部分-用户appid，用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符，尾部需要使用-拼接用户appid
+ * @method string getLogsetId() 获取日志集ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。
+
+- 用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符。
+- 尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。
+- 如果指定该字段，需保证全地域唯一
+ * @method void setLogsetId(string $LogsetId) 设置日志集ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。
+
+- 用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符。
+- 尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。
+- 如果指定该字段，需保证全地域唯一
  */
 class CreateLogsetRequest extends AbstractModel
 {
     /**
-     * @var string 日志集名字，不能重名
+     * @var string 日志集名字。
+
+- 最大支持255个字符。不支持`|`字符。
      */
     public $LogsetName;
 
@@ -40,14 +54,24 @@ class CreateLogsetRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var string 日志集ID，格式为：用户自定义部分-用户appid，用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符，尾部需要使用-拼接用户appid
+     * @var string 日志集ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。
+
+- 用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符。
+- 尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。
+- 如果指定该字段，需保证全地域唯一
      */
     public $LogsetId;
 
     /**
-     * @param string $LogsetName 日志集名字，不能重名
+     * @param string $LogsetName 日志集名字。
+
+- 最大支持255个字符。不支持`|`字符。
      * @param array $Tags 标签描述列表。最大支持10个标签键值对，并且不能有重复的键值对
-     * @param string $LogsetId 日志集ID，格式为：用户自定义部分-用户appid，用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符，尾部需要使用-拼接用户appid
+     * @param string $LogsetId 日志集ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。
+
+- 用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符。
+- 尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。
+- 如果指定该字段，需保证全地域唯一
      */
     function __construct()
     {

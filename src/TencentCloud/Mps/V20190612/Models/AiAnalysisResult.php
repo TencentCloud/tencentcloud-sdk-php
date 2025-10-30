@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,6 +28,9 @@ use TencentCloud\Common\AbstractModel;
 <li>Highlight：智能精彩集锦</li>
 <li>DeLogo：智能擦除</li>
 <li>Description：大模型摘要</li>
+<li>Dubbing：智能译制</li>
+<li>VideoRemake: 视频去重</li>
+<li>VideoComprehension: 视频（音频）理解</li>
  * @method void setType(string $Type) 设置任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
@@ -36,6 +39,9 @@ use TencentCloud\Common\AbstractModel;
 <li>Highlight：智能精彩集锦</li>
 <li>DeLogo：智能擦除</li>
 <li>Description：大模型摘要</li>
+<li>Dubbing：智能译制</li>
+<li>VideoRemake: 视频去重</li>
+<li>VideoComprehension: 视频（音频）理解</li>
  * @method AiAnalysisTaskClassificationResult getClassificationTask() 获取视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClassificationTask(AiAnalysisTaskClassificationResult $ClassificationTask) 设置视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
@@ -76,6 +82,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHorizontalToVerticalTask(AiAnalysisTaskHorizontalToVerticalResult $HorizontalToVerticalTask) 设置视频内容分析横转竖任务的查询结果，当任务类型为 HorizontalToVertical 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AiAnalysisTaskDubbingResult getDubbingTask() 获取视频内容分析译制任务的查询结果，当任务类型为 Dubbing 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDubbingTask(AiAnalysisTaskDubbingResult $DubbingTask) 设置视频内容分析译制任务的查询结果，当任务类型为 Dubbing 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method AiAnalysisTaskVideoRemakeResult getVideoRemakeTask() 获取视频内容分析去重任务的查询结果，当任务类型为 VideoRemake 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVideoRemakeTask(AiAnalysisTaskVideoRemakeResult $VideoRemakeTask) 设置视频内容分析去重任务的查询结果，当任务类型为 VideoRemake 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method AiAnalysisTaskVideoComprehensionResult getVideoComprehensionTask() 获取视频（音频）理解任务的查询结果，当任务类型为 VideoComprehension 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVideoComprehensionTask(AiAnalysisTaskVideoComprehensionResult $VideoComprehensionTask) 设置视频（音频）理解任务的查询结果，当任务类型为 VideoComprehension 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AiAnalysisResult extends AbstractModel
 {
@@ -88,6 +106,9 @@ class AiAnalysisResult extends AbstractModel
 <li>Highlight：智能精彩集锦</li>
 <li>DeLogo：智能擦除</li>
 <li>Description：大模型摘要</li>
+<li>Dubbing：智能译制</li>
+<li>VideoRemake: 视频去重</li>
+<li>VideoComprehension: 视频（音频）理解</li>
      */
     public $Type;
 
@@ -152,6 +173,24 @@ class AiAnalysisResult extends AbstractModel
     public $HorizontalToVerticalTask;
 
     /**
+     * @var AiAnalysisTaskDubbingResult 视频内容分析译制任务的查询结果，当任务类型为 Dubbing 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DubbingTask;
+
+    /**
+     * @var AiAnalysisTaskVideoRemakeResult 视频内容分析去重任务的查询结果，当任务类型为 VideoRemake 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VideoRemakeTask;
+
+    /**
+     * @var AiAnalysisTaskVideoComprehensionResult 视频（音频）理解任务的查询结果，当任务类型为 VideoComprehension 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VideoComprehensionTask;
+
+    /**
      * @param string $Type 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
@@ -160,6 +199,9 @@ class AiAnalysisResult extends AbstractModel
 <li>Highlight：智能精彩集锦</li>
 <li>DeLogo：智能擦除</li>
 <li>Description：大模型摘要</li>
+<li>Dubbing：智能译制</li>
+<li>VideoRemake: 视频去重</li>
+<li>VideoComprehension: 视频（音频）理解</li>
      * @param AiAnalysisTaskClassificationResult $ClassificationTask 视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiAnalysisTaskCoverResult $CoverTask 视频内容分析智能封面任务的查询结果，当任务类型为 Cover 时有效。
@@ -179,6 +221,12 @@ class AiAnalysisResult extends AbstractModel
      * @param AiAnalysisTaskDescriptionResult $DescriptionTask 视频内容分析摘要任务的查询结果，当任务类型为 Description 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiAnalysisTaskHorizontalToVerticalResult $HorizontalToVerticalTask 视频内容分析横转竖任务的查询结果，当任务类型为 HorizontalToVertical 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AiAnalysisTaskDubbingResult $DubbingTask 视频内容分析译制任务的查询结果，当任务类型为 Dubbing 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AiAnalysisTaskVideoRemakeResult $VideoRemakeTask 视频内容分析去重任务的查询结果，当任务类型为 VideoRemake 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AiAnalysisTaskVideoComprehensionResult $VideoComprehensionTask 视频（音频）理解任务的查询结果，当任务类型为 VideoComprehension 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -246,6 +294,21 @@ class AiAnalysisResult extends AbstractModel
         if (array_key_exists("HorizontalToVerticalTask",$param) and $param["HorizontalToVerticalTask"] !== null) {
             $this->HorizontalToVerticalTask = new AiAnalysisTaskHorizontalToVerticalResult();
             $this->HorizontalToVerticalTask->deserialize($param["HorizontalToVerticalTask"]);
+        }
+
+        if (array_key_exists("DubbingTask",$param) and $param["DubbingTask"] !== null) {
+            $this->DubbingTask = new AiAnalysisTaskDubbingResult();
+            $this->DubbingTask->deserialize($param["DubbingTask"]);
+        }
+
+        if (array_key_exists("VideoRemakeTask",$param) and $param["VideoRemakeTask"] !== null) {
+            $this->VideoRemakeTask = new AiAnalysisTaskVideoRemakeResult();
+            $this->VideoRemakeTask->deserialize($param["VideoRemakeTask"]);
+        }
+
+        if (array_key_exists("VideoComprehensionTask",$param) and $param["VideoComprehensionTask"] !== null) {
+            $this->VideoComprehensionTask = new AiAnalysisTaskVideoComprehensionResult();
+            $this->VideoComprehensionTask->deserialize($param["VideoComprehensionTask"]);
         }
     }
 }

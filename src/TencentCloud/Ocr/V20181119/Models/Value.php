@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoord(Polygon $Coord) 设置四点坐标
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPageIndex() 获取页数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPageIndex(string $PageIndex) 设置页数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Value extends AbstractModel
 {
@@ -41,8 +45,16 @@ class Value extends AbstractModel
     public $Coord;
 
     /**
+     * @var string 页数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PageIndex;
+
+    /**
      * @param string $AutoContent 自动识别的字段内容
      * @param Polygon $Coord 四点坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PageIndex 页数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -65,6 +77,10 @@ class Value extends AbstractModel
         if (array_key_exists("Coord",$param) and $param["Coord"] !== null) {
             $this->Coord = new Polygon();
             $this->Coord->deserialize($param["Coord"]);
+        }
+
+        if (array_key_exists("PageIndex",$param) and $param["PageIndex"] !== null) {
+            $this->PageIndex = $param["PageIndex"];
         }
     }
 }

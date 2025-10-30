@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyOpenPolicyList请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method string getClusterId() 获取集群ID，请从容器服务集群控制台获取（https://console.cloud.tencent.com/tke2/cluster）。
+ * @method void setClusterId(string $ClusterId) 设置集群ID，请从容器服务集群控制台获取（https://console.cloud.tencent.com/tke2/cluster）。
  * @method array getOpenPolicyInfoList() 获取修改的策略列表，目前仅支持修改EnforcementAction字段
  * @method void setOpenPolicyInfoList(array $OpenPolicyInfoList) 设置修改的策略列表，目前仅支持修改EnforcementAction字段
  * @method string getCategory() 获取策略分类 基线：baseline 优选：priority 可选：optional
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyOpenPolicyListRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 集群ID，请从容器服务集群控制台获取（https://console.cloud.tencent.com/tke2/cluster）。
      */
     public $ClusterId;
 
@@ -45,7 +45,7 @@ class ModifyOpenPolicyListRequest extends AbstractModel
     public $Category;
 
     /**
-     * @param string $ClusterId 集群ID
+     * @param string $ClusterId 集群ID，请从容器服务集群控制台获取（https://console.cloud.tencent.com/tke2/cluster）。
      * @param array $OpenPolicyInfoList 修改的策略列表，目前仅支持修改EnforcementAction字段
      * @param string $Category 策略分类 基线：baseline 优选：priority 可选：optional
      */

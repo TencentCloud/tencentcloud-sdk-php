@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyNoticeContent请求参数结构体
  *
- * @method string getNoticeContentId() 获取通知内容模板ID。
- * @method void setNoticeContentId(string $NoticeContentId) 设置通知内容模板ID。
+ * @method string getNoticeContentId() 获取通知内容模板ID。-通过[获取通知内容模板](https://cloud.tencent.com/document/api/614/111714)获取通知内容模板ID
+ * @method void setNoticeContentId(string $NoticeContentId) 设置通知内容模板ID。-通过[获取通知内容模板](https://cloud.tencent.com/document/api/614/111714)获取通知内容模板ID
  * @method string getName() 获取通知内容模板名称。
  * @method void setName(string $Name) 设置通知内容模板名称。
  * @method integer getType() 获取通知内容语言。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyNoticeContentRequest extends AbstractModel
 {
     /**
-     * @var string 通知内容模板ID。
+     * @var string 通知内容模板ID。-通过[获取通知内容模板](https://cloud.tencent.com/document/api/614/111714)获取通知内容模板ID
      */
     public $NoticeContentId;
 
@@ -58,7 +58,7 @@ class ModifyNoticeContentRequest extends AbstractModel
     public $NoticeContents;
 
     /**
-     * @param string $NoticeContentId 通知内容模板ID。
+     * @param string $NoticeContentId 通知内容模板ID。-通过[获取通知内容模板](https://cloud.tencent.com/document/api/614/111714)获取通知内容模板ID
      * @param string $Name 通知内容模板名称。
      * @param integer $Type 通知内容语言。
 

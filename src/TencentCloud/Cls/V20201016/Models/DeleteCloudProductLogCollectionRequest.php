@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,7 +26,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAssumerName(string $AssumerName) 设置云产品标识，支持枚举：CDS、CWP、CDB、TDSQL-C、MongoDB、TDStore、DCDB、MariaDB、PostgreSQL、BH、APIS
  * @method string getLogType() 获取日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
  * @method void setLogType(string $LogType) 设置日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
- * @method string getCloudProductRegion() 获取云产品地域。 不同日志类型(LogType)地域入參格式存在差异， 请参考如下示例：
+ * @method string getCloudProductRegion() 获取云产品地域。 不同日志类型(LogType)地域入参格式存在差异， 请参考如下示例：
 - CDS所有日志类型：ap-guangzhou
 - CDB-AUDIT: gz
 - TDSQL-C-AUDIT: gz
@@ -37,9 +37,9 @@ use TencentCloud\Common\AbstractModel;
 - DCDB所有日志类型：gz
 - MariaDB所有日志类型：gz
 - PostgreSQL所有日志类型：gz
-- BH所有日志类型：overseas-polaris(国内站海外)/fsi-polaris(国内站金融)/general-polaris(国内站普通)/intl-sg-prod(国际站)
+- BH所有日志类型：overseas-polaris(中国香港地区和其他)/fsi-polaris(金融区)/general-polaris(普通区)/intl-sg-prod(国际站)
 - APIS所有日志类型：gz
- * @method void setCloudProductRegion(string $CloudProductRegion) 设置云产品地域。 不同日志类型(LogType)地域入參格式存在差异， 请参考如下示例：
+ * @method void setCloudProductRegion(string $CloudProductRegion) 设置云产品地域。 不同日志类型(LogType)地域入参格式存在差异， 请参考如下示例：
 - CDS所有日志类型：ap-guangzhou
 - CDB-AUDIT: gz
 - TDSQL-C-AUDIT: gz
@@ -50,7 +50,7 @@ use TencentCloud\Common\AbstractModel;
 - DCDB所有日志类型：gz
 - MariaDB所有日志类型：gz
 - PostgreSQL所有日志类型：gz
-- BH所有日志类型：overseas-polaris(国内站海外)/fsi-polaris(国内站金融)/general-polaris(国内站普通)/intl-sg-prod(国际站)
+- BH所有日志类型：overseas-polaris(中国香港地区和其他)/fsi-polaris(金融区)/general-polaris(普通区)/intl-sg-prod(国际站)
 - APIS所有日志类型：gz
  */
 class DeleteCloudProductLogCollectionRequest extends AbstractModel
@@ -71,7 +71,7 @@ class DeleteCloudProductLogCollectionRequest extends AbstractModel
     public $LogType;
 
     /**
-     * @var string 云产品地域。 不同日志类型(LogType)地域入參格式存在差异， 请参考如下示例：
+     * @var string 云产品地域。 不同日志类型(LogType)地域入参格式存在差异， 请参考如下示例：
 - CDS所有日志类型：ap-guangzhou
 - CDB-AUDIT: gz
 - TDSQL-C-AUDIT: gz
@@ -82,7 +82,7 @@ class DeleteCloudProductLogCollectionRequest extends AbstractModel
 - DCDB所有日志类型：gz
 - MariaDB所有日志类型：gz
 - PostgreSQL所有日志类型：gz
-- BH所有日志类型：overseas-polaris(国内站海外)/fsi-polaris(国内站金融)/general-polaris(国内站普通)/intl-sg-prod(国际站)
+- BH所有日志类型：overseas-polaris(中国香港地区和其他)/fsi-polaris(金融区)/general-polaris(普通区)/intl-sg-prod(国际站)
 - APIS所有日志类型：gz
      */
     public $CloudProductRegion;
@@ -91,7 +91,7 @@ class DeleteCloudProductLogCollectionRequest extends AbstractModel
      * @param string $InstanceId 实例ID
      * @param string $AssumerName 云产品标识，支持枚举：CDS、CWP、CDB、TDSQL-C、MongoDB、TDStore、DCDB、MariaDB、PostgreSQL、BH、APIS
      * @param string $LogType 日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
-     * @param string $CloudProductRegion 云产品地域。 不同日志类型(LogType)地域入參格式存在差异， 请参考如下示例：
+     * @param string $CloudProductRegion 云产品地域。 不同日志类型(LogType)地域入参格式存在差异， 请参考如下示例：
 - CDS所有日志类型：ap-guangzhou
 - CDB-AUDIT: gz
 - TDSQL-C-AUDIT: gz
@@ -102,7 +102,7 @@ class DeleteCloudProductLogCollectionRequest extends AbstractModel
 - DCDB所有日志类型：gz
 - MariaDB所有日志类型：gz
 - PostgreSQL所有日志类型：gz
-- BH所有日志类型：overseas-polaris(国内站海外)/fsi-polaris(国内站金融)/general-polaris(国内站普通)/intl-sg-prod(国际站)
+- BH所有日志类型：overseas-polaris(中国香港地区和其他)/fsi-polaris(金融区)/general-polaris(普通区)/intl-sg-prod(国际站)
 - APIS所有日志类型：gz
      */
     function __construct()

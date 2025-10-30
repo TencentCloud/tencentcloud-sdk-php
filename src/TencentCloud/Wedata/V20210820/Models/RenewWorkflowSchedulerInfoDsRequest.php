@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置时区
  * @method boolean getClearLink() 获取是否自动清理不支持的任务链接
  * @method void setClearLink(boolean $ClearLink) 设置是否自动清理不支持的任务链接
+ * @method string getMainCyclicConfig() 获取ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度
+ * @method void setMainCyclicConfig(string $MainCyclicConfig) 设置ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度
+ * @method string getSubordinateCyclicConfig() 获取ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围
+ * @method void setSubordinateCyclicConfig(string $SubordinateCyclicConfig) 设置ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围
  */
 class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel
 {
@@ -174,6 +178,16 @@ class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel
     public $ClearLink;
 
     /**
+     * @var string ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度
+     */
+    public $MainCyclicConfig;
+
+    /**
+     * @var string ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围
+     */
+    public $SubordinateCyclicConfig;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $WorkflowId 工作流ID
      * @param integer $DelayTime 延迟时间
@@ -196,6 +210,8 @@ class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel
      * @param string $CalendarId 日历id
      * @param string $ScheduleTimeZone 时区
      * @param boolean $ClearLink 是否自动清理不支持的任务链接
+     * @param string $MainCyclicConfig ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度
+     * @param string $SubordinateCyclicConfig ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围
      */
     function __construct()
     {
@@ -292,6 +308,14 @@ class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel
 
         if (array_key_exists("ClearLink",$param) and $param["ClearLink"] !== null) {
             $this->ClearLink = $param["ClearLink"];
+        }
+
+        if (array_key_exists("MainCyclicConfig",$param) and $param["MainCyclicConfig"] !== null) {
+            $this->MainCyclicConfig = $param["MainCyclicConfig"];
+        }
+
+        if (array_key_exists("SubordinateCyclicConfig",$param) and $param["SubordinateCyclicConfig"] !== null) {
+            $this->SubordinateCyclicConfig = $param["SubordinateCyclicConfig"];
         }
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDeliveryConfigs请求参数结构体
  *
- * @method string getSearchWord() 获取关键字
- * @method void setSearchWord(string $SearchWord) 设置关键字
- * @method integer getOffset() 获取偏移
- * @method void setOffset(integer $Offset) 设置偏移
- * @method integer getLimit() 获取搜索条数
- * @method void setLimit(integer $Limit) 设置搜索条数
- * @method array getProgramIdList() 获取数据集idList
- * @method void setProgramIdList(array $ProgramIdList) 设置数据集idList
- * @method array getConfigIdList() 获取ConfigIdList
- * @method void setConfigIdList(array $ConfigIdList) 设置ConfigIdList
+ * @method string getSearchWord() 获取搜索关键字，可搜索日志投递配置项ID或日志投递配置项名称
+ * @method void setSearchWord(string $SearchWord) 设置搜索关键字，可搜索日志投递配置项ID或日志投递配置项名称
+ * @method integer getOffset() 获取偏移量，取值范围大于等于0，默认值为0
+ * @method void setOffset(integer $Offset) 设置偏移量，取值范围大于等于0，默认值为0
+ * @method integer getLimit() 获取单页请求配置数量，取值范围[1, 50]，默认值为10
+ * @method void setLimit(integer $Limit) 设置单页请求配置数量，取值范围[1, 50]，默认值为10
+ * @method array getProgramIdList() 获取数据集ID列表
+可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a22gwdwa)进行查看
+ * @method void setProgramIdList(array $ProgramIdList) 设置数据集ID列表
+可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a22gwdwa)进行查看
+ * @method array getConfigIdList() 获取日志配置项ID列表
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
+ * @method void setConfigIdList(array $ConfigIdList) 设置日志配置项ID列表
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
  */
 class DescribeDeliveryConfigsRequest extends AbstractModel
 {
     /**
-     * @var string 关键字
+     * @var string 搜索关键字，可搜索日志投递配置项ID或日志投递配置项名称
      */
     public $SearchWord;
 
     /**
-     * @var integer 偏移
+     * @var integer 偏移量，取值范围大于等于0，默认值为0
      */
     public $Offset;
 
     /**
-     * @var integer 搜索条数
+     * @var integer 单页请求配置数量，取值范围[1, 50]，默认值为10
      */
     public $Limit;
 
     /**
-     * @var array 数据集idList
+     * @var array 数据集ID列表
+可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a22gwdwa)进行查看
      */
     public $ProgramIdList;
 
     /**
-     * @var array ConfigIdList
+     * @var array 日志配置项ID列表
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
      */
     public $ConfigIdList;
 
     /**
-     * @param string $SearchWord 关键字
-     * @param integer $Offset 偏移
-     * @param integer $Limit 搜索条数
-     * @param array $ProgramIdList 数据集idList
-     * @param array $ConfigIdList ConfigIdList
+     * @param string $SearchWord 搜索关键字，可搜索日志投递配置项ID或日志投递配置项名称
+     * @param integer $Offset 偏移量，取值范围大于等于0，默认值为0
+     * @param integer $Limit 单页请求配置数量，取值范围[1, 50]，默认值为10
+     * @param array $ProgramIdList 数据集ID列表
+可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a22gwdwa)进行查看
+     * @param array $ConfigIdList 日志配置项ID列表
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
      */
     function __construct()
     {

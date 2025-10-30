@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -54,6 +54,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsAllTime(boolean $IsAllTime) 设置用印申请是否为永久授权
  * @method array getAuthorizedUsers() 获取授权人列表
  * @method void setAuthorizedUsers(array $AuthorizedUsers) 设置授权人列表
+ * @method integer getRealWidth() 获取印章的真实宽度，单位毫米	
+ * @method void setRealWidth(integer $RealWidth) 设置印章的真实宽度，单位毫米	
+ * @method integer getRealHeight() 获取印章的真实高度，单位毫米	
+ * @method void setRealHeight(integer $RealHeight) 设置印章的真实高度，单位毫米	
+ * @method string getSealDescription() 获取印章描述
+ * @method void setSealDescription(string $SealDescription) 设置印章描述
  */
 class OccupiedSeal extends AbstractModel
 {
@@ -119,6 +125,21 @@ class OccupiedSeal extends AbstractModel
     public $AuthorizedUsers;
 
     /**
+     * @var integer 印章的真实宽度，单位毫米	
+     */
+    public $RealWidth;
+
+    /**
+     * @var integer 印章的真实高度，单位毫米	
+     */
+    public $RealHeight;
+
+    /**
+     * @var string 印章描述
+     */
+    public $SealDescription;
+
+    /**
      * @param string $SealId 电子印章编号
      * @param string $SealName 电子印章名称
      * @param integer $CreateOn 电子印章授权时间戳，单位秒
@@ -136,6 +157,9 @@ class OccupiedSeal extends AbstractModel
 </ul>
      * @param boolean $IsAllTime 用印申请是否为永久授权
      * @param array $AuthorizedUsers 授权人列表
+     * @param integer $RealWidth 印章的真实宽度，单位毫米	
+     * @param integer $RealHeight 印章的真实高度，单位毫米	
+     * @param string $SealDescription 印章描述
      */
     function __construct()
     {
@@ -197,6 +221,18 @@ class OccupiedSeal extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AuthorizedUsers, $obj);
             }
+        }
+
+        if (array_key_exists("RealWidth",$param) and $param["RealWidth"] !== null) {
+            $this->RealWidth = $param["RealWidth"];
+        }
+
+        if (array_key_exists("RealHeight",$param) and $param["RealHeight"] !== null) {
+            $this->RealHeight = $param["RealHeight"];
+        }
+
+        if (array_key_exists("SealDescription",$param) and $param["SealDescription"] !== null) {
+            $this->SealDescription = $param["SealDescription"];
         }
     }
 }

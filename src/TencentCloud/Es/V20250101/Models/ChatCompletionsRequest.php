@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOnlineSearch(boolean $OnlineSearch) 设置是否开启联网搜索。默认为 false。
  * @method OnlineSearchOptions getOnlineSearchOptions() 获取当 OnlineSearch 为 true 时，指定的搜索引擎，默认为 bing。
  * @method void setOnlineSearchOptions(OnlineSearchOptions $OnlineSearchOptions) 设置当 OnlineSearch 为 true 时，指定的搜索引擎，默认为 bing。
+ * @method array getTools() 获取可调用的工具列表，当前支持模型：hunyuan-turbo, deepseek-v3。
+ * @method void setTools(array $Tools) 设置可调用的工具列表，当前支持模型：hunyuan-turbo, deepseek-v3。
+ * @method string getToolChoice() 获取工具使用选项，可选值包括 none、auto、custom。说明：1. 仅对 hunyuan-turbo、deepseek-v3 模型生效。2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。3. 未设置时，默认值为auto
+ * @method void setToolChoice(string $ToolChoice) 设置工具使用选项，可选值包括 none、auto、custom。说明：1. 仅对 hunyuan-turbo、deepseek-v3 模型生效。2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。3. 未设置时，默认值为auto
+ * @method Tool getCustomTool() 获取强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
+ * @method void setCustomTool(Tool $CustomTool) 设置强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
  */
 class ChatCompletionsRequest extends AbstractModel
 {
@@ -73,6 +79,21 @@ class ChatCompletionsRequest extends AbstractModel
     public $OnlineSearchOptions;
 
     /**
+     * @var array 可调用的工具列表，当前支持模型：hunyuan-turbo, deepseek-v3。
+     */
+    public $Tools;
+
+    /**
+     * @var string 工具使用选项，可选值包括 none、auto、custom。说明：1. 仅对 hunyuan-turbo、deepseek-v3 模型生效。2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。3. 未设置时，默认值为auto
+     */
+    public $ToolChoice;
+
+    /**
+     * @var Tool 强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
+     */
+    public $CustomTool;
+
+    /**
      * @param array $Messages 会话内容，按对话时间从旧到新在数组中排列，长度受模型窗口大小限制。
      * @param string $ModelName 模型名称，可选模型列表：hunyuan-turbo，hunyuan-large，hunyuan-large-longcontext，hunyuan-standard，hunyuan-standard-256K，deepseek-r1，deepseek-v3，deepseek-r1-distill-qwen-32b。
      * @param boolean $Stream 是否以流式接口的形式返回数据，默认true。
@@ -80,6 +101,9 @@ class ChatCompletionsRequest extends AbstractModel
      * @param float $Temperature 取值区间为[0.0, 2.0], 非必要不建议使用, 不合理的取值会影响效果 。
      * @param boolean $OnlineSearch 是否开启联网搜索。默认为 false。
      * @param OnlineSearchOptions $OnlineSearchOptions 当 OnlineSearch 为 true 时，指定的搜索引擎，默认为 bing。
+     * @param array $Tools 可调用的工具列表，当前支持模型：hunyuan-turbo, deepseek-v3。
+     * @param string $ToolChoice 工具使用选项，可选值包括 none、auto、custom。说明：1. 仅对 hunyuan-turbo、deepseek-v3 模型生效。2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。3. 未设置时，默认值为auto
+     * @param Tool $CustomTool 强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
      */
     function __construct()
     {
@@ -126,6 +150,24 @@ class ChatCompletionsRequest extends AbstractModel
         if (array_key_exists("OnlineSearchOptions",$param) and $param["OnlineSearchOptions"] !== null) {
             $this->OnlineSearchOptions = new OnlineSearchOptions();
             $this->OnlineSearchOptions->deserialize($param["OnlineSearchOptions"]);
+        }
+
+        if (array_key_exists("Tools",$param) and $param["Tools"] !== null) {
+            $this->Tools = [];
+            foreach ($param["Tools"] as $key => $value){
+                $obj = new Tool();
+                $obj->deserialize($value);
+                array_push($this->Tools, $obj);
+            }
+        }
+
+        if (array_key_exists("ToolChoice",$param) and $param["ToolChoice"] !== null) {
+            $this->ToolChoice = $param["ToolChoice"];
+        }
+
+        if (array_key_exists("CustomTool",$param) and $param["CustomTool"] !== null) {
+            $this->CustomTool = new Tool();
+            $this->CustomTool->deserialize($param["CustomTool"]);
         }
     }
 }

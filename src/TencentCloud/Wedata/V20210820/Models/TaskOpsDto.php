@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -383,6 +383,12 @@ no：任务无需满足自依赖
  * @method void setSelfWorkFlowDependType(string $SelfWorkFlowDependType) 设置任务自依赖类型：
 yes： 任务需满足自依赖
 no：任务无需满足自依赖
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAllowRedoType() 获取允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
+ * @method void setAllowRedoType(string $AllowRedoType) 设置允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
+ * @method string getOwnerId() 获取负责人Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOwnerId(string $OwnerId) 设置负责人Id
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskOpsDto extends AbstractModel
@@ -930,6 +936,17 @@ no：任务无需满足自依赖
     public $SelfWorkFlowDependType;
 
     /**
+     * @var string 允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
+     */
+    public $AllowRedoType;
+
+    /**
+     * @var string 负责人Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OwnerId;
+
+    /**
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VirtualTaskId 虚拟任务id
@@ -1111,6 +1128,9 @@ no：任务无需满足自依赖
      * @param string $SelfWorkFlowDependType 任务自依赖类型：
 yes： 任务需满足自依赖
 no：任务无需满足自依赖
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AllowRedoType 允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
+     * @param string $OwnerId 负责人Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1500,6 +1520,14 @@ no：任务无需满足自依赖
 
         if (array_key_exists("SelfWorkFlowDependType",$param) and $param["SelfWorkFlowDependType"] !== null) {
             $this->SelfWorkFlowDependType = $param["SelfWorkFlowDependType"];
+        }
+
+        if (array_key_exists("AllowRedoType",$param) and $param["AllowRedoType"] !== null) {
+            $this->AllowRedoType = $param["AllowRedoType"];
+        }
+
+        if (array_key_exists("OwnerId",$param) and $param["OwnerId"] !== null) {
+            $this->OwnerId = $param["OwnerId"];
         }
     }
 }

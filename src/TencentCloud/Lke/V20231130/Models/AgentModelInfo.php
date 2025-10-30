@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelContextWordsLimit(string $ModelContextWordsLimit) 设置模型上下文长度字符限制
  * @method integer getInstructionsWordsLimit() 获取指令长度字符限制
  * @method void setInstructionsWordsLimit(integer $InstructionsWordsLimit) 设置指令长度字符限制
+ * @method integer getMaxReasoningRound() 获取单次会话最大推理轮数
+ * @method void setMaxReasoningRound(integer $MaxReasoningRound) 设置单次会话最大推理轮数
+ * @method ModelParams getModelParams() 获取模型参数
+ * @method void setModelParams(ModelParams $ModelParams) 设置模型参数
  */
 class AgentModelInfo extends AbstractModel
 {
@@ -80,6 +84,16 @@ class AgentModelInfo extends AbstractModel
     public $InstructionsWordsLimit;
 
     /**
+     * @var integer 单次会话最大推理轮数
+     */
+    public $MaxReasoningRound;
+
+    /**
+     * @var ModelParams 模型参数
+     */
+    public $ModelParams;
+
+    /**
      * @param string $ModelName 模型名称
      * @param string $ModelAliasName 模型别名
      * @param float $Temperature 模型温度
@@ -88,6 +102,8 @@ class AgentModelInfo extends AbstractModel
      * @param integer $HistoryLimit 对话历史条数限制
      * @param string $ModelContextWordsLimit 模型上下文长度字符限制
      * @param integer $InstructionsWordsLimit 指令长度字符限制
+     * @param integer $MaxReasoningRound 单次会话最大推理轮数
+     * @param ModelParams $ModelParams 模型参数
      */
     function __construct()
     {
@@ -132,6 +148,15 @@ class AgentModelInfo extends AbstractModel
 
         if (array_key_exists("InstructionsWordsLimit",$param) and $param["InstructionsWordsLimit"] !== null) {
             $this->InstructionsWordsLimit = $param["InstructionsWordsLimit"];
+        }
+
+        if (array_key_exists("MaxReasoningRound",$param) and $param["MaxReasoningRound"] !== null) {
+            $this->MaxReasoningRound = $param["MaxReasoningRound"];
+        }
+
+        if (array_key_exists("ModelParams",$param) and $param["ModelParams"] !== null) {
+            $this->ModelParams = new ModelParams();
+            $this->ModelParams->deserialize($param["ModelParams"]);
         }
     }
 }

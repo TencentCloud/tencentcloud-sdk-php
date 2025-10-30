@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,6 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxVirtualHost(integer $MaxVirtualHost) 设置允许创建最大vhost数
  * @method integer getUsedVirtualHost() 获取已创建vhost数
  * @method void setUsedVirtualHost(integer $UsedVirtualHost) 设置已创建vhost数
+ * @method integer getMaxConnectionPerVhost() 获取单个 vhost 下允许的最大连接数
+ * @method void setMaxConnectionPerVhost(integer $MaxConnectionPerVhost) 设置单个 vhost 下允许的最大连接数
+ * @method integer getMaxExchangePerVhost() 获取单个 vhost 下允许的最大交换机数
+ * @method void setMaxExchangePerVhost(integer $MaxExchangePerVhost) 设置单个 vhost 下允许的最大交换机数
+ * @method integer getMaxQueuePerVhost() 获取单个 vhost 下允许的最大队列机数
+ * @method void setMaxQueuePerVhost(integer $MaxQueuePerVhost) 设置单个 vhost 下允许的最大队列机数
  */
 class VirtualHostQuota extends AbstractModel
 {
@@ -38,8 +44,26 @@ class VirtualHostQuota extends AbstractModel
     public $UsedVirtualHost;
 
     /**
+     * @var integer 单个 vhost 下允许的最大连接数
+     */
+    public $MaxConnectionPerVhost;
+
+    /**
+     * @var integer 单个 vhost 下允许的最大交换机数
+     */
+    public $MaxExchangePerVhost;
+
+    /**
+     * @var integer 单个 vhost 下允许的最大队列机数
+     */
+    public $MaxQueuePerVhost;
+
+    /**
      * @param integer $MaxVirtualHost 允许创建最大vhost数
      * @param integer $UsedVirtualHost 已创建vhost数
+     * @param integer $MaxConnectionPerVhost 单个 vhost 下允许的最大连接数
+     * @param integer $MaxExchangePerVhost 单个 vhost 下允许的最大交换机数
+     * @param integer $MaxQueuePerVhost 单个 vhost 下允许的最大队列机数
      */
     function __construct()
     {
@@ -60,6 +84,18 @@ class VirtualHostQuota extends AbstractModel
 
         if (array_key_exists("UsedVirtualHost",$param) and $param["UsedVirtualHost"] !== null) {
             $this->UsedVirtualHost = $param["UsedVirtualHost"];
+        }
+
+        if (array_key_exists("MaxConnectionPerVhost",$param) and $param["MaxConnectionPerVhost"] !== null) {
+            $this->MaxConnectionPerVhost = $param["MaxConnectionPerVhost"];
+        }
+
+        if (array_key_exists("MaxExchangePerVhost",$param) and $param["MaxExchangePerVhost"] !== null) {
+            $this->MaxExchangePerVhost = $param["MaxExchangePerVhost"];
+        }
+
+        if (array_key_exists("MaxQueuePerVhost",$param) and $param["MaxQueuePerVhost"] !== null) {
+            $this->MaxQueuePerVhost = $param["MaxQueuePerVhost"];
         }
     }
 }

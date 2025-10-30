@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAlarmNotice请求参数结构体
  *
- * @method string getAlarmNoticeId() 获取通知渠道组ID
- * @method void setAlarmNoticeId(string $AlarmNoticeId) 设置通知渠道组ID
+ * @method string getAlarmNoticeId() 获取通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID
+ * @method void setAlarmNoticeId(string $AlarmNoticeId) 设置通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID
  */
 class DeleteAlarmNoticeRequest extends AbstractModel
 {
     /**
-     * @var string 通知渠道组ID
+     * @var string 通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID
      */
     public $AlarmNoticeId;
 
     /**
-     * @param string $AlarmNoticeId 通知渠道组ID
+     * @param string $AlarmNoticeId 通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID
      */
     function __construct()
     {

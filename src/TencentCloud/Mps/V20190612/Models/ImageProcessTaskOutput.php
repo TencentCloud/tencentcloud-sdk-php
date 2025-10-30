@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置输出文件的存储位置。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSignedUrl() 获取输出文件的URL。
+ * @method void setSignedUrl(string $SignedUrl) 设置输出文件的URL。
  */
 class ImageProcessTaskOutput extends AbstractModel
 {
@@ -44,10 +46,16 @@ class ImageProcessTaskOutput extends AbstractModel
     public $OutputStorage;
 
     /**
+     * @var string 输出文件的URL。
+     */
+    public $SignedUrl;
+
+    /**
      * @param string $Path 输出文件的路径。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskOutputStorage $OutputStorage 输出文件的存储位置。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SignedUrl 输出文件的URL。
      */
     function __construct()
     {
@@ -69,6 +77,10 @@ class ImageProcessTaskOutput extends AbstractModel
         if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {
             $this->OutputStorage = new TaskOutputStorage();
             $this->OutputStorage->deserialize($param["OutputStorage"]);
+        }
+
+        if (array_key_exists("SignedUrl",$param) and $param["SignedUrl"] !== null) {
+            $this->SignedUrl = $param["SignedUrl"];
         }
     }
 }

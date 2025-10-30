@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RemoveReplicationGroup请求参数结构体
  *
- * @method string getGroupId() 获取复制组ID
- * @method void setGroupId(string $GroupId) 设置复制组ID
+ * @method string getGroupId() 获取复制组ID。请登录 [Redis控制台的全球复制](https://console.cloud.tencent.com/redis/replication) 页面获取复制组 ID。
+ * @method void setGroupId(string $GroupId) 设置复制组ID。请登录 [Redis控制台的全球复制](https://console.cloud.tencent.com/redis/replication) 页面获取复制组 ID。
  */
 class RemoveReplicationGroupRequest extends AbstractModel
 {
     /**
-     * @var string 复制组ID
+     * @var string 复制组ID。请登录 [Redis控制台的全球复制](https://console.cloud.tencent.com/redis/replication) 页面获取复制组 ID。
      */
     public $GroupId;
 
     /**
-     * @param string $GroupId 复制组ID
+     * @param string $GroupId 复制组ID。请登录 [Redis控制台的全球复制](https://console.cloud.tencent.com/redis/replication) 页面获取复制组 ID。
      */
     function __construct()
     {

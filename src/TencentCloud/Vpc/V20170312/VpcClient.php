@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -66,7 +66,6 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * 将 EIP 绑定到实例（CVM）上，其本质是将 EIP 绑定到实例上主网卡的主内网 IP 上。
 * 将 EIP 绑定到主网卡的主内网IP时，如主内网IP已绑定普通公网IP，必须先退还才能绑定EIP。
 * 将 EIP 绑定到指定网卡的内网 IP上（非主网卡的主内网IP），则必须先解绑该 EIP，才能再绑定新的。
-* 将 EIP 绑定到内网型CLB实例的功能处于内测阶段，如需使用，请提交[内测申请](https://cloud.tencent.com/apply/p/4kxj7picqci)。
 * 将 EIP 绑定到NAT网关，请使用接口[AssociateNatGatewayAddress](https://cloud.tencent.com/document/product/215/36722)。
 * EIP 如果欠费或被封堵，则不能被绑定。
 * 只有状态为 UNBIND 的 EIP 才能够被绑定。
@@ -74,7 +73,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
 >
  * @method Models\AssociateDirectConnectGatewayNatGatewayResponse AssociateDirectConnectGatewayNatGateway(Models\AssociateDirectConnectGatewayNatGatewayRequest $req) 将专线网关与NAT网关绑定，专线网关默认路由指向NAT网关
- * @method Models\AssociateHaVipInstanceResponse AssociateHaVipInstance(Models\AssociateHaVipInstanceRequest $req) 本接口（AssociateHaVipInstance）用于HAVIP绑定子机或网卡（限制HaVip的飘移范围）。
+ * @method Models\AssociateHaVipInstanceResponse AssociateHaVipInstance(Models\AssociateHaVipInstanceRequest $req) 本接口（AssociateHaVipInstance）用于HAVIP绑定子机或网卡（限制HaVip的漂移范围）。
  * @method Models\AssociateIPv6AddressResponse AssociateIPv6Address(Models\AssociateIPv6AddressRequest $req) 本接口（AssociateIPv6Address）用于将弹性公网IPv6（简称EIPv6）实例绑定到 CVM 或弹性网卡配置的内网 IPv6 地址上。
 
 - 将 EIPv6 绑定到 CVM 上，其本质是将 EIPv6 绑定到 CVM 弹性网卡所配置的内网 IPv6 地址上。
@@ -178,6 +177,9 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\CreatePrivateNatGatewayTranslationAclRuleResponse CreatePrivateNatGatewayTranslationAclRule(Models\CreatePrivateNatGatewayTranslationAclRuleRequest $req) 本接口（ CreatePrivateNatGatewayTranslationAclRule）用于创建私网NAT网关源端转换访问控制规则
  * @method Models\CreatePrivateNatGatewayTranslationNatRuleResponse CreatePrivateNatGatewayTranslationNatRule(Models\CreatePrivateNatGatewayTranslationNatRuleRequest $req) 本接口（CreatePrivateNatGatewayTranslationNatRule）用于创建私网NAT网关源端转换规则。
  * @method Models\CreateReserveIpAddressesResponse CreateReserveIpAddresses(Models\CreateReserveIpAddressesRequest $req) 创建内网保留IP
+ * @method Models\CreateRoutePolicyResponse CreateRoutePolicy(Models\CreateRoutePolicyRequest $req) 创建VPC路由接收策略，包括名字，描述和策略条目。
+ * @method Models\CreateRoutePolicyAssociationsResponse CreateRoutePolicyAssociations(Models\CreateRoutePolicyAssociationsRequest $req) 本接口（CreateRoutePolicyAssociations）用于创建路由接收策略绑定(路由策略实例和路由表实例的绑定关系以及绑定优先级)。
+ * @method Models\CreateRoutePolicyEntriesResponse CreateRoutePolicyEntries(Models\CreateRoutePolicyEntriesRequest $req) 本接口（CreateRoutePolicyEntries）用于创建路由接收策略条目。
  * @method Models\CreateRouteTableResponse CreateRouteTable(Models\CreateRouteTableRequest $req) 本接口(CreateRouteTable)用于创建路由表。
 * 创建了VPC后，系统会创建一个默认路由表，所有新建的子网都会关联到默认路由表。默认情况下您可以直接使用默认路由表来管理您的路由策略。当您的路由策略较多时，您可以调用创建路由表接口创建更多路由表管理您的路由策略。
 * 创建路由表同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
@@ -304,6 +306,9 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DeletePrivateNatGatewayTranslationAclRuleResponse DeletePrivateNatGatewayTranslationAclRule(Models\DeletePrivateNatGatewayTranslationAclRuleRequest $req) 本接口（DeletePrivateNatGatewayTranslationAclRule）用于删除私网NAT网关源端转换访问控制规则
  * @method Models\DeletePrivateNatGatewayTranslationNatRuleResponse DeletePrivateNatGatewayTranslationNatRule(Models\DeletePrivateNatGatewayTranslationNatRuleRequest $req) 本接口（DeletePrivateNatGatewayTranslationNatRule）用于删除私网NAT网关源端转换规则
  * @method Models\DeleteReserveIpAddressesResponse DeleteReserveIpAddresses(Models\DeleteReserveIpAddressesRequest $req) 删除内网保留IP
+ * @method Models\DeleteRoutePolicyResponse DeleteRoutePolicy(Models\DeleteRoutePolicyRequest $req) 本接口（DeleteRoutePolicy）用于删除路由接收策略和条目。
+ * @method Models\DeleteRoutePolicyAssociationsResponse DeleteRoutePolicyAssociations(Models\DeleteRoutePolicyAssociationsRequest $req) 本接口(DeleteRoutePolicyAssociations)用于删除路由接收策略绑定（路由接收策略对象和路由表的绑定关系）。
+ * @method Models\DeleteRoutePolicyEntriesResponse DeleteRoutePolicyEntries(Models\DeleteRoutePolicyEntriesRequest $req) 本接口(DeleteRoutePolicyEntries)用于删除路由接收策略条目。
  * @method Models\DeleteRouteTableResponse DeleteRouteTable(Models\DeleteRouteTableRequest $req) 本接口（DeleteRouteTable）用于删除路由表。
  * @method Models\DeleteRoutesResponse DeleteRoutes(Models\DeleteRoutesRequest $req) 本接口(DeleteRoutes)用于对某个路由表批量删除路由策略（Route）。
  * @method Models\DeleteSecurityGroupResponse DeleteSecurityGroup(Models\DeleteSecurityGroupRequest $req) 本接口（DeleteSecurityGroup）用于删除安全组（SecurityGroup）。
@@ -341,7 +346,9 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DescribeAccountAttributesResponse DescribeAccountAttributes(Models\DescribeAccountAttributesRequest $req) 本接口（DescribeAccountAttributes）用于查询用户账号私有属性。
  * @method Models\DescribeAddressBandwidthRangeResponse DescribeAddressBandwidthRange(Models\DescribeAddressBandwidthRangeRequest $req) 本接口（DescribeAddressBandwidthRange）用于查询指定EIP的带宽上下限范围。
  * @method Models\DescribeAddressQuotaResponse DescribeAddressQuota(Models\DescribeAddressQuotaRequest $req) 本接口 (DescribeAddressQuota) 用于查询您账户的[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）在当前地域的配额信息。配额详情可参见 [EIP 产品简介](https://cloud.tencent.com/document/product/213/5733)。
+ * @method Models\DescribeAddressTemplateGroupInstancesResponse DescribeAddressTemplateGroupInstances(Models\DescribeAddressTemplateGroupInstancesRequest $req) 本接口（DescribeAddressTemplateGroupInstances）用于查询参数模板IP地址组口关联的实例列表。本接口不会返回查询的结果，需要根据返回的RequestId调用DescribeVpcTaskResult接口获取结果。
  * @method Models\DescribeAddressTemplateGroupsResponse DescribeAddressTemplateGroups(Models\DescribeAddressTemplateGroupsRequest $req) 本接口（DescribeAddressTemplateGroups）用于查询IP地址模板集合。
+ * @method Models\DescribeAddressTemplateInstancesResponse DescribeAddressTemplateInstances(Models\DescribeAddressTemplateInstancesRequest $req) 本接口（DescribeAddressTemplateInstances）用于查询参数模板IP地址关联的实例列表。本接口不会返回查询的结果，需要根据返回的RequestId调用DescribeVpcTaskResult接口获取结果。
  * @method Models\DescribeAddressTemplatesResponse DescribeAddressTemplates(Models\DescribeAddressTemplatesRequest $req) 本接口（DescribeAddressTemplates）用于查询IP地址模板。
  * @method Models\DescribeAddressesResponse DescribeAddresses(Models\DescribeAddressesRequest $req) 本接口 (DescribeAddresses) 用于查询一个或多个[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）的详细信息。
 * 如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的 EIP。
@@ -426,16 +433,20 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DescribeReserveIpAddressesResponse DescribeReserveIpAddresses(Models\DescribeReserveIpAddressesRequest $req) 查询内网保留 IP
  * @method Models\DescribeRouteConflictsResponse DescribeRouteConflicts(Models\DescribeRouteConflictsRequest $req) 本接口（DescribeRouteConflicts）用于查询自定义路由策略与云联网路由策略冲突列表。
  * @method Models\DescribeRouteListResponse DescribeRouteList(Models\DescribeRouteListRequest $req) 本接口（DescribeRouteList）用于查询路由条目列表。
+ * @method Models\DescribeRoutePolicyEntriesResponse DescribeRoutePolicyEntries(Models\DescribeRoutePolicyEntriesRequest $req) 本接口（DescribeRoutePolicyEntries）用于查询路由接收策略条目列表。
  * @method Models\DescribeRouteTableAssociatedInstancesResponse DescribeRouteTableAssociatedInstances(Models\DescribeRouteTableAssociatedInstancesRequest $req) 本接口（DescribeRouteTableAssociatedInstances）用于查询指定的云联网关联的实例所绑定的路由表信息。
  * @method Models\DescribeRouteTableSelectionPoliciesResponse DescribeRouteTableSelectionPolicies(Models\DescribeRouteTableSelectionPoliciesRequest $req) 本接口（DescribeRouteTableSelectionPolicies）用于查询云联网路由表选择策略。
  * @method Models\DescribeRouteTablesResponse DescribeRouteTables(Models\DescribeRouteTablesRequest $req) 本接口（DescribeRouteTables）用于查询路由表。
  * @method Models\DescribeRoutesResponse DescribeRoutes(Models\DescribeRoutesRequest $req) 本接口（DescribeRoutes）用于查询路由列表。
  * @method Models\DescribeSecurityGroupAssociationStatisticsResponse DescribeSecurityGroupAssociationStatistics(Models\DescribeSecurityGroupAssociationStatisticsRequest $req) 本接口（DescribeSecurityGroupAssociationStatistics）用于查询安全组关联的实例统计。
+ * @method Models\DescribeSecurityGroupExpandedPoliciesResponse DescribeSecurityGroupExpandedPolicies(Models\DescribeSecurityGroupExpandedPoliciesRequest $req) 本接口（DescribeSecurityGroupExpandedPolicies）用于查看参数模板展开后的安全组规则。本接口会通过缓存降低请求后端服务的调用次数，因此拉取结果会存在延迟（缓存超时时间为1分钟）。
  * @method Models\DescribeSecurityGroupLimitsResponse DescribeSecurityGroupLimits(Models\DescribeSecurityGroupLimitsRequest $req) 本接口(DescribeSecurityGroupLimits)用于查询用户安全组配额。
  * @method Models\DescribeSecurityGroupPoliciesResponse DescribeSecurityGroupPolicies(Models\DescribeSecurityGroupPoliciesRequest $req) 本接口（DescribeSecurityGroupPolicies）用于查询安全组规则。
  * @method Models\DescribeSecurityGroupReferencesResponse DescribeSecurityGroupReferences(Models\DescribeSecurityGroupReferencesRequest $req) 本接口（DescribeSecurityGroupReferences）用于查询安全组被引用信息。
  * @method Models\DescribeSecurityGroupsResponse DescribeSecurityGroups(Models\DescribeSecurityGroupsRequest $req) 本接口（DescribeSecurityGroups）用于查询安全组。
+ * @method Models\DescribeServiceTemplateGroupInstancesResponse DescribeServiceTemplateGroupInstances(Models\DescribeServiceTemplateGroupInstancesRequest $req) 本接口（DescribeServiceTemplateGroupInstances）用于查询参数模板协议端口组关联的实例列表。本接口不会返回查询的结果，需要根据返回的RequestId调用DescribeVpcTaskResult接口获取结果。
  * @method Models\DescribeServiceTemplateGroupsResponse DescribeServiceTemplateGroups(Models\DescribeServiceTemplateGroupsRequest $req) 本接口（DescribeServiceTemplateGroups）用于查询协议端口模板集合。
+ * @method Models\DescribeServiceTemplateInstancesResponse DescribeServiceTemplateInstances(Models\DescribeServiceTemplateInstancesRequest $req) 本接口（DescribeServiceTemplateInstances）用于查询参数模板协议端口关联的实例列表。本接口不会返回查询的结果，需要根据返回的RequestId调用DescribeVpcTaskResult接口获取结果。
  * @method Models\DescribeServiceTemplatesResponse DescribeServiceTemplates(Models\DescribeServiceTemplatesRequest $req) 本接口（DescribeServiceTemplates）用于查询协议端口模板。
  * @method Models\DescribeSgSnapshotFileContentResponse DescribeSgSnapshotFileContent(Models\DescribeSgSnapshotFileContentRequest $req) 本接口（DescribeSgSnapshotFileContent）用于查询安全组快照文件内容。
  * @method Models\DescribeSnapshotAttachedInstancesResponse DescribeSnapshotAttachedInstances(Models\DescribeSnapshotAttachedInstancesRequest $req) 本接口（DescribeSnapshotAttachedInstances）用于查询快照策略关联实例列表。
@@ -643,6 +654,7 @@ LimitTypes取值范围：
  * @method Models\ModifyPrivateNatGatewayTranslationAclRuleResponse ModifyPrivateNatGatewayTranslationAclRule(Models\ModifyPrivateNatGatewayTranslationAclRuleRequest $req) 本接口（ModifyPrivateNatGatewayTranslationAclRule）用于修改私网NAT网关源端转换访问控制规则
  * @method Models\ModifyPrivateNatGatewayTranslationNatRuleResponse ModifyPrivateNatGatewayTranslationNatRule(Models\ModifyPrivateNatGatewayTranslationNatRuleRequest $req) 本接口（ModifyPrivateNatGatewayTranslationNatRule）用于修改私网NAT网关源端转换规则
  * @method Models\ModifyReserveIpAddressResponse ModifyReserveIpAddress(Models\ModifyReserveIpAddressRequest $req) 修改内网保留 IP
+ * @method Models\ModifyRoutePolicyAttributeResponse ModifyRoutePolicyAttribute(Models\ModifyRoutePolicyAttributeRequest $req) 本接口（ModifyRoutePolicyAttribute）用于修改路由接收策略属性属性。
  * @method Models\ModifyRouteTableAttributeResponse ModifyRouteTableAttribute(Models\ModifyRouteTableAttributeRequest $req) 本接口（ModifyRouteTableAttribute）用于修改路由表（RouteTable）属性。
  * @method Models\ModifyRouteTableSelectionPoliciesResponse ModifyRouteTableSelectionPolicies(Models\ModifyRouteTableSelectionPoliciesRequest $req) 该接口用于编辑云联网路由表选择策略
  * @method Models\ModifySecurityGroupAttributeResponse ModifySecurityGroupAttribute(Models\ModifySecurityGroupAttributeRequest $req) 本接口（ModifySecurityGroupAttribute）用于修改安全组（SecurityGroupPolicy）属性。
@@ -745,6 +757,8 @@ LimitTypes取值范围：
  * @method Models\ReplaceDirectConnectGatewayCcnRoutesResponse ReplaceDirectConnectGatewayCcnRoutes(Models\ReplaceDirectConnectGatewayCcnRoutesRequest $req) 本接口（ReplaceDirectConnectGatewayCcnRoutes）根据路由ID（RouteId）修改指定的路由（Route），支持批量修改。
  * @method Models\ReplaceHighPriorityRouteTableAssociationResponse ReplaceHighPriorityRouteTableAssociation(Models\ReplaceHighPriorityRouteTableAssociationRequest $req) 替换高优路由表和子网绑定关系。
  * @method Models\ReplaceHighPriorityRoutesResponse ReplaceHighPriorityRoutes(Models\ReplaceHighPriorityRoutesRequest $req) 替换高优路由表条目信息。
+ * @method Models\ReplaceRoutePolicyAssociationsResponse ReplaceRoutePolicyAssociations(Models\ReplaceRoutePolicyAssociationsRequest $req) 本接口（ReplaceRoutePolicyAssociations）根据路由接收策略实例ID（RoutePolicyId）和路由表实例ID（RouteTableId）修改绑定优先级（Priority），支持批量修改。
+ * @method Models\ReplaceRoutePolicyEntriesResponse ReplaceRoutePolicyEntries(Models\ReplaceRoutePolicyEntriesRequest $req) 本接口（ReplaceRoutePolicyEntries）根据路由接收策略规则ID（RoutePolicyEntryId）修改指定的路由策略条目（RoutePolicyEntry），支持批量修改。
  * @method Models\ReplaceRouteTableAssociationResponse ReplaceRouteTableAssociation(Models\ReplaceRouteTableAssociationRequest $req) 本接口（ReplaceRouteTableAssociation）用于修改子网（Subnet）关联的路由表（RouteTable）。
 * 一个子网只能关联一个路由表。
  * @method Models\ReplaceRoutesResponse ReplaceRoutes(Models\ReplaceRoutesRequest $req) 本接口（ReplaceRoutes）根据路由策略ID（RouteId）修改指定的路由策略（Route），支持批量修改。
@@ -755,6 +769,8 @@ LimitTypes取值范围：
  * @method Models\ResetAttachCcnInstancesResponse ResetAttachCcnInstances(Models\ResetAttachCcnInstancesRequest $req) 本接口（ResetAttachCcnInstances）用于跨账号关联实例申请过期时，重新申请关联操作。
  * @method Models\ResetHighPriorityRoutesResponse ResetHighPriorityRoutes(Models\ResetHighPriorityRoutesRequest $req) 重置高优路由表。
  * @method Models\ResetNatGatewayConnectionResponse ResetNatGatewayConnection(Models\ResetNatGatewayConnectionRequest $req) 本接口（ResetNatGatewayConnection）用来NAT网关并发连接上限。
+ * @method Models\ResetRoutePolicyAssociationsResponse ResetRoutePolicyAssociations(Models\ResetRoutePolicyAssociationsRequest $req) 本接口（ResetRoutePolicyAssociations）用于对某个路由表实例已经绑定的路由策略实例解除绑定关系，并重新设置新的绑定路由策略及优先级。<br />
+ * @method Models\ResetRoutePolicyEntriesResponse ResetRoutePolicyEntries(Models\ResetRoutePolicyEntriesRequest $req) 本接口（ResetRoutePolicyEntries）根据路由接收策略规则ID（RoutePolicyId）重置指定的路由接收策略条目（RoutePolicyEntry），支持批量修改。
  * @method Models\ResetRoutesResponse ResetRoutes(Models\ResetRoutesRequest $req) 本接口（ResetRoutes）用于对某个路由表名称和所有路由策略（Route）进行重新设置。<br /> 注意: 调用本接口时先删除当前路由表中所有路由策略, 再保存新提交的路由策略内容, 会引起网络中断。
  * @method Models\ResetTrafficMirrorFilterResponse ResetTrafficMirrorFilter(Models\ResetTrafficMirrorFilterRequest $req) 本接口（ResetTrafficMirrorFilter）用于更新流量镜像实例过滤规则。
 注意：每一个流量镜像实例，不能同时支持按nat网关和五元组两种规则过滤

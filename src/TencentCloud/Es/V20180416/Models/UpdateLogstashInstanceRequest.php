@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskSize(integer $DiskSize) 设置节点磁盘容量
  * @method OperationDurationUpdated getOperationDuration() 获取可维护时间段
  * @method void setOperationDuration(OperationDurationUpdated $OperationDuration) 设置可维护时间段
+ * @method array getMultiZoneInfo() 获取多可用区部署
+ * @method void setMultiZoneInfo(array $MultiZoneInfo) 设置多可用区部署
  */
 class UpdateLogstashInstanceRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class UpdateLogstashInstanceRequest extends AbstractModel
     public $OperationDuration;
 
     /**
+     * @var array 多可用区部署
+     */
+    public $MultiZoneInfo;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param integer $NodeNum 实例节点数量
      * @param string $YMLConfig 实例YML配置
@@ -96,6 +103,7 @@ class UpdateLogstashInstanceRequest extends AbstractModel
      * @param string $NodeType 实例规格
      * @param integer $DiskSize 节点磁盘容量
      * @param OperationDurationUpdated $OperationDuration 可维护时间段
+     * @param array $MultiZoneInfo 多可用区部署
      */
     function __construct()
     {
@@ -151,6 +159,15 @@ class UpdateLogstashInstanceRequest extends AbstractModel
         if (array_key_exists("OperationDuration",$param) and $param["OperationDuration"] !== null) {
             $this->OperationDuration = new OperationDurationUpdated();
             $this->OperationDuration->deserialize($param["OperationDuration"]);
+        }
+
+        if (array_key_exists("MultiZoneInfo",$param) and $param["MultiZoneInfo"] !== null) {
+            $this->MultiZoneInfo = [];
+            foreach ($param["MultiZoneInfo"] as $key => $value){
+                $obj = new ZoneDetail();
+                $obj->deserialize($value);
+                array_push($this->MultiZoneInfo, $obj);
+            }
         }
     }
 }

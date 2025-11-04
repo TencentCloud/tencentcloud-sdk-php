@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNewDescription(string $NewDescription) 设置用户的描述。
  * @method string getNewEmail() 获取用户的电子邮箱。
  * @method void setNewEmail(string $NewEmail) 设置用户的电子邮箱。
+ * @method boolean getNeedResetPassword() 获取是否需要重置密码
+ * @method void setNeedResetPassword(boolean $NeedResetPassword) 设置是否需要重置密码
  */
 class UpdateUserRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class UpdateUserRequest extends AbstractModel
     public $NewEmail;
 
     /**
+     * @var boolean 是否需要重置密码
+     */
+    public $NeedResetPassword;
+
+    /**
      * @param string $ZoneId 空间 ID。
      * @param string $UserId 用户 ID。
      * @param string $NewFirstName 用户的名。
@@ -80,6 +87,7 @@ class UpdateUserRequest extends AbstractModel
      * @param string $NewDisplayName 用户的显示名称。
      * @param string $NewDescription 用户的描述。
      * @param string $NewEmail 用户的电子邮箱。
+     * @param boolean $NeedResetPassword 是否需要重置密码
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class UpdateUserRequest extends AbstractModel
 
         if (array_key_exists("NewEmail",$param) and $param["NewEmail"] !== null) {
             $this->NewEmail = $param["NewEmail"];
+        }
+
+        if (array_key_exists("NeedResetPassword",$param) and $param["NeedResetPassword"] !== null) {
+            $this->NeedResetPassword = $param["NeedResetPassword"];
         }
     }
 }

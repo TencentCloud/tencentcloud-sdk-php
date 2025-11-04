@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagSet(array $TagSet) 设置标签键值对。
  * @method array getDirectConnectGatewayIds() 获取专线网关唯一`ID`
  * @method void setDirectConnectGatewayIds(array $DirectConnectGatewayIds) 设置专线网关唯一`ID`
- * @method string getNatType() 获取私网网关类型
- * @method void setNatType(string $NatType) 设置私网网关类型
+ * @method string getNatType() 获取私网网关类型。可选类型："DCG","VPC","CCN"，分别对应专线网关、私有网络、云联网。
+ * @method void setNatType(string $NatType) 设置私网网关类型。可选类型："DCG","VPC","CCN"，分别对应专线网关、私有网络、云联网。
  * @method PrivateNatCrossDomainInfo getCrossDomainInfo() 获取私网NAT跨域信息
  * @method void setCrossDomainInfo(PrivateNatCrossDomainInfo $CrossDomainInfo) 设置私网NAT跨域信息
  * @method boolean getVpcType() 获取是否VPC型私网网关
@@ -90,7 +90,7 @@ class PrivateNatGateway extends AbstractModel
     public $DirectConnectGatewayIds;
 
     /**
-     * @var string 私网网关类型
+     * @var string 私网网关类型。可选类型："DCG","VPC","CCN"，分别对应专线网关、私有网络、云联网。
      */
     public $NatType;
 
@@ -123,7 +123,7 @@ class PrivateNatGateway extends AbstractModel
      * @param string $CreatedTime 创建时间
      * @param array $TagSet 标签键值对。
      * @param array $DirectConnectGatewayIds 专线网关唯一`ID`
-     * @param string $NatType 私网网关类型
+     * @param string $NatType 私网网关类型。可选类型："DCG","VPC","CCN"，分别对应专线网关、私有网络、云联网。
      * @param PrivateNatCrossDomainInfo $CrossDomainInfo 私网NAT跨域信息
      * @param boolean $VpcType 是否VPC型私网网关
      * @param string $CcnId 跨域私网NAT关联的云联网ID	

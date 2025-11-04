@@ -51,6 +51,7 @@ use TencentCloud\Gme\V20180711\Models as Models;
  * @method Models\DescribeAppStatisticsResponse DescribeAppStatistics(Models\DescribeAppStatisticsRequest $req) 本接口(DescribeAppStatistics)用于获取某个GME应用的用量数据。包括实时语音，语音消息及转文本，语音分析等。最长查询周期为最近60天。
  * @method Models\DescribeApplicationDataResponse DescribeApplicationData(Models\DescribeApplicationDataRequest $req) 本接口(DescribeApplicationData)用于获取数据详情信息，最多可拉取最近90天的数据。
  * @method Models\DescribeApplicationListResponse DescribeApplicationList(Models\DescribeApplicationListRequest $req) 本接口(DescribeApplicationList)用于查询自己账号下的应用列表
+ * @method Models\DescribeAuditResultExternalResponse DescribeAuditResultExternal(Models\DescribeAuditResultExternalRequest $req) 获审核结果明细（外部API）
  * @method Models\DescribeRealtimeScanConfigResponse DescribeRealtimeScanConfig(Models\DescribeRealtimeScanConfigRequest $req) 获取用户自定义送检信息。**接口使用前提**：目前 DescribeRealtimeScanConfig 接口通过白名单开放，如需使用，需要 [提交工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=438&level2_id=445&source=0&data_title=%E6%B8%B8%E6%88%8F%E5%A4%9A%E5%AA%92%E4%BD%93%E5%BC%95%E6%93%8EGME&step=1)。
  * @method Models\DescribeRecordInfoResponse DescribeRecordInfo(Models\DescribeRecordInfoRequest $req) 查询录制任务信息。
  * @method Models\DescribeRoomInfoResponse DescribeRoomInfo(Models\DescribeRoomInfoRequest $req) 获取房间内用户信息
@@ -206,7 +207,7 @@ use TencentCloud\Gme\V20180711\Models as Models;
 </code></pre>
  * @method Models\StartAIConversationResponse StartAIConversation(Models\StartAIConversationRequest $req) 启动AI对话任务，AI通道机器人进入GME房间，与房间内指定的成员进行AI对话，适用于智能客服，AI口语教师等场景
 
-GME AI对话功能内置语音转文本能力，同时提供通道服务，即客户可灵活指定第三方AI模型（LLM）服务和文本转音频（TTS)服务，更多[功能说明](https://cloud.tencent.com/document/product/647/108901)。
+GME AI对话功能内置语音转文本能力，同时提供通道服务，即客户可灵活指定第三方AI模型（LLM）服务和文本转音频（TTS）服务，更多[功能说明](https://cloud.tencent.com/document/product/647/108901)。
  * @method Models\StartRecordResponse StartRecord(Models\StartRecordRequest $req) 开启录制
  * @method Models\StopAIConversationResponse StopAIConversation(Models\StopAIConversationRequest $req) 停止AI对话任务
  * @method Models\StopRecordResponse StopRecord(Models\StopRecordRequest $req) 停止录制

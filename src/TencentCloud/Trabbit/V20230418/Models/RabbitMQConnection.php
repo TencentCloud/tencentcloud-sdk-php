@@ -34,6 +34,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) 设置连接协议
  * @method integer getChannels() 获取连接下的channel数
  * @method void setChannels(integer $Channels) 设置连接下的channel数
+ * @method float getIncomingBytes() 获取入流量大小，单位 bytes
+ * @method void setIncomingBytes(float $IncomingBytes) 设置入流量大小，单位 bytes
+ * @method float getOutgoingBytes() 获取出流量大小，单位bytes
+ * @method void setOutgoingBytes(float $OutgoingBytes) 设置出流量大小，单位bytes
+ * @method integer getHeartbeat() 获取心跳间隔时间，默认60s
+ * @method void setHeartbeat(integer $Heartbeat) 设置心跳间隔时间，默认60s
+ * @method integer getMaxChannel() 获取一个链接最大的channel数，默认1024
+ * @method void setMaxChannel(integer $MaxChannel) 设置一个链接最大的channel数，默认1024
+ * @method string getIdleSince() 获取空闲时间点
+ * @method void setIdleSince(string $IdleSince) 设置空闲时间点
  */
 class RabbitMQConnection extends AbstractModel
 {
@@ -73,6 +83,31 @@ class RabbitMQConnection extends AbstractModel
     public $Channels;
 
     /**
+     * @var float 入流量大小，单位 bytes
+     */
+    public $IncomingBytes;
+
+    /**
+     * @var float 出流量大小，单位bytes
+     */
+    public $OutgoingBytes;
+
+    /**
+     * @var integer 心跳间隔时间，默认60s
+     */
+    public $Heartbeat;
+
+    /**
+     * @var integer 一个链接最大的channel数，默认1024
+     */
+    public $MaxChannel;
+
+    /**
+     * @var string 空闲时间点
+     */
+    public $IdleSince;
+
+    /**
      * @param string $ConnectionName 连接名称
      * @param string $PeerHost 客户端ip
      * @param string $State 连接状态，包括 starting、tuning、opening、running、flow、blocking、blocked、closing 和 closed
@@ -80,6 +115,11 @@ class RabbitMQConnection extends AbstractModel
      * @param boolean $SSL 是否开启ssl
      * @param string $Protocol 连接协议
      * @param integer $Channels 连接下的channel数
+     * @param float $IncomingBytes 入流量大小，单位 bytes
+     * @param float $OutgoingBytes 出流量大小，单位bytes
+     * @param integer $Heartbeat 心跳间隔时间，默认60s
+     * @param integer $MaxChannel 一个链接最大的channel数，默认1024
+     * @param string $IdleSince 空闲时间点
      */
     function __construct()
     {
@@ -120,6 +160,26 @@ class RabbitMQConnection extends AbstractModel
 
         if (array_key_exists("Channels",$param) and $param["Channels"] !== null) {
             $this->Channels = $param["Channels"];
+        }
+
+        if (array_key_exists("IncomingBytes",$param) and $param["IncomingBytes"] !== null) {
+            $this->IncomingBytes = $param["IncomingBytes"];
+        }
+
+        if (array_key_exists("OutgoingBytes",$param) and $param["OutgoingBytes"] !== null) {
+            $this->OutgoingBytes = $param["OutgoingBytes"];
+        }
+
+        if (array_key_exists("Heartbeat",$param) and $param["Heartbeat"] !== null) {
+            $this->Heartbeat = $param["Heartbeat"];
+        }
+
+        if (array_key_exists("MaxChannel",$param) and $param["MaxChannel"] !== null) {
+            $this->MaxChannel = $param["MaxChannel"];
+        }
+
+        if (array_key_exists("IdleSince",$param) and $param["IdleSince"] !== null) {
+            $this->IdleSince = $param["IdleSince"];
         }
     }
 }

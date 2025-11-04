@@ -80,6 +80,16 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
 不传则表示不修改。
  * @method string getDataCompressMode() 获取数据压缩模式
  * @method void setDataCompressMode(string $DataCompressMode) 设置数据压缩模式
+ * @method boolean getRescheduleTargetZeroWeight() 获取重新调度功能，权重调为0开关，打开此开关，后端服务器权重调为0时触发重新调度。仅TCP/UDP监听器支持。
+ * @method void setRescheduleTargetZeroWeight(boolean $RescheduleTargetZeroWeight) 设置重新调度功能，权重调为0开关，打开此开关，后端服务器权重调为0时触发重新调度。仅TCP/UDP监听器支持。
+ * @method boolean getRescheduleUnhealthy() 获取重新调度功能，健康检查异常开关，打开此开关，后端服务器健康检查异常时触发重新调度。仅TCP/UDP监听器支持。 
+ * @method void setRescheduleUnhealthy(boolean $RescheduleUnhealthy) 设置重新调度功能，健康检查异常开关，打开此开关，后端服务器健康检查异常时触发重新调度。仅TCP/UDP监听器支持。 
+ * @method boolean getRescheduleExpandTarget() 获取重新调度功能，扩容后端服务开关，打开此开关，后端服务器增加或者减少时触发重新调度。仅TCP/UDP监听器支持。
+ * @method void setRescheduleExpandTarget(boolean $RescheduleExpandTarget) 设置重新调度功能，扩容后端服务开关，打开此开关，后端服务器增加或者减少时触发重新调度。仅TCP/UDP监听器支持。
+ * @method integer getRescheduleStartTime() 获取重新调度触发开始时间，取值0~3600s。仅TCP/UDP监听器支持。
+ * @method void setRescheduleStartTime(integer $RescheduleStartTime) 设置重新调度触发开始时间，取值0~3600s。仅TCP/UDP监听器支持。
+ * @method integer getRescheduleInterval() 获取重新调度触发持续时间，取值0~3600s。仅TCP/UDP监听器支持。
+ * @method void setRescheduleInterval(integer $RescheduleInterval) 设置重新调度触发持续时间，取值0~3600s。仅TCP/UDP监听器支持。
  */
 class ModifyListenerRequest extends AbstractModel
 {
@@ -190,6 +200,31 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
     public $DataCompressMode;
 
     /**
+     * @var boolean 重新调度功能，权重调为0开关，打开此开关，后端服务器权重调为0时触发重新调度。仅TCP/UDP监听器支持。
+     */
+    public $RescheduleTargetZeroWeight;
+
+    /**
+     * @var boolean 重新调度功能，健康检查异常开关，打开此开关，后端服务器健康检查异常时触发重新调度。仅TCP/UDP监听器支持。 
+     */
+    public $RescheduleUnhealthy;
+
+    /**
+     * @var boolean 重新调度功能，扩容后端服务开关，打开此开关，后端服务器增加或者减少时触发重新调度。仅TCP/UDP监听器支持。
+     */
+    public $RescheduleExpandTarget;
+
+    /**
+     * @var integer 重新调度触发开始时间，取值0~3600s。仅TCP/UDP监听器支持。
+     */
+    public $RescheduleStartTime;
+
+    /**
+     * @var integer 重新调度触发持续时间，取值0~3600s。仅TCP/UDP监听器支持。
+     */
+    public $RescheduleInterval;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
      * @param string $ListenerId 负载均衡监听器ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
      * @param string $ListenerName 新的监听器名称，最大长度255。
@@ -220,6 +255,11 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
      * @param boolean $SnatEnable 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
 不传则表示不修改。
      * @param string $DataCompressMode 数据压缩模式
+     * @param boolean $RescheduleTargetZeroWeight 重新调度功能，权重调为0开关，打开此开关，后端服务器权重调为0时触发重新调度。仅TCP/UDP监听器支持。
+     * @param boolean $RescheduleUnhealthy 重新调度功能，健康检查异常开关，打开此开关，后端服务器健康检查异常时触发重新调度。仅TCP/UDP监听器支持。 
+     * @param boolean $RescheduleExpandTarget 重新调度功能，扩容后端服务开关，打开此开关，后端服务器增加或者减少时触发重新调度。仅TCP/UDP监听器支持。
+     * @param integer $RescheduleStartTime 重新调度触发开始时间，取值0~3600s。仅TCP/UDP监听器支持。
+     * @param integer $RescheduleInterval 重新调度触发持续时间，取值0~3600s。仅TCP/UDP监听器支持。
      */
     function __construct()
     {
@@ -311,6 +351,26 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
 
         if (array_key_exists("DataCompressMode",$param) and $param["DataCompressMode"] !== null) {
             $this->DataCompressMode = $param["DataCompressMode"];
+        }
+
+        if (array_key_exists("RescheduleTargetZeroWeight",$param) and $param["RescheduleTargetZeroWeight"] !== null) {
+            $this->RescheduleTargetZeroWeight = $param["RescheduleTargetZeroWeight"];
+        }
+
+        if (array_key_exists("RescheduleUnhealthy",$param) and $param["RescheduleUnhealthy"] !== null) {
+            $this->RescheduleUnhealthy = $param["RescheduleUnhealthy"];
+        }
+
+        if (array_key_exists("RescheduleExpandTarget",$param) and $param["RescheduleExpandTarget"] !== null) {
+            $this->RescheduleExpandTarget = $param["RescheduleExpandTarget"];
+        }
+
+        if (array_key_exists("RescheduleStartTime",$param) and $param["RescheduleStartTime"] !== null) {
+            $this->RescheduleStartTime = $param["RescheduleStartTime"];
+        }
+
+        if (array_key_exists("RescheduleInterval",$param) and $param["RescheduleInterval"] !== null) {
+            $this->RescheduleInterval = $param["RescheduleInterval"];
         }
     }
 }

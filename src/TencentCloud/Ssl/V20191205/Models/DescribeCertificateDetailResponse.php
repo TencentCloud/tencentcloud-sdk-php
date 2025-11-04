@@ -344,6 +344,8 @@ null：用户上传证书（没有套餐类型），
  * @method void setDomainType(integer $DomainType) 设置证书域名类型， 1（单域名）；2（多域名）；3（泛域名）；4（多泛域名）
  * @method string getCertType() 获取证书类型，DV（域名型）；OV（企业型）；EV（增强型）
  * @method void setCertType(string $CertType) 设置证书类型，DV（域名型）；OV（企业型）；EV（增强型）
+ * @method boolean getUseCrossSignRoot() 获取是否使用交叉根
+ * @method void setUseCrossSignRoot(boolean $UseCrossSignRoot) 设置是否使用交叉根
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -688,6 +690,11 @@ null：用户上传证书（没有套餐类型），
     public $CertType;
 
     /**
+     * @var boolean 是否使用交叉根
+     */
+    public $UseCrossSignRoot;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -855,6 +862,7 @@ null：用户上传证书（没有套餐类型），
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DomainType 证书域名类型， 1（单域名）；2（多域名）；3（泛域名）；4（多泛域名）
      * @param string $CertType 证书类型，DV（域名型）；OV（企业型）；EV（增强型）
+     * @param boolean $UseCrossSignRoot 是否使用交叉根
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -1063,6 +1071,10 @@ null：用户上传证书（没有套餐类型），
 
         if (array_key_exists("CertType",$param) and $param["CertType"] !== null) {
             $this->CertType = $param["CertType"];
+        }
+
+        if (array_key_exists("UseCrossSignRoot",$param) and $param["UseCrossSignRoot"] !== null) {
+            $this->UseCrossSignRoot = $param["UseCrossSignRoot"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

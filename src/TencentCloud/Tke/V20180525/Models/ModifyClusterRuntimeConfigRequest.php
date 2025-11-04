@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID，必填
  * @method void setClusterId(string $ClusterId) 设置集群ID，必填
- * @method string getDstK8SVersion() 获取当需要修改运行时版本是根据另外的K8S版本获取时，需填写。例如升级校验有冲突后修改场景
- * @method void setDstK8SVersion(string $DstK8SVersion) 设置当需要修改运行时版本是根据另外的K8S版本获取时，需填写。例如升级校验有冲突后修改场景
- * @method RuntimeConfig getClusterRuntimeConfig() 获取需要修改集群运行时时填写
- * @method void setClusterRuntimeConfig(RuntimeConfig $ClusterRuntimeConfig) 设置需要修改集群运行时时填写
- * @method array getNodePoolRuntimeConfig() 获取需要修改节点池运行时时，填需要修改的部分
- * @method void setNodePoolRuntimeConfig(array $NodePoolRuntimeConfig) 设置需要修改节点池运行时时，填需要修改的部分
+ * @method string getDstK8SVersion() 获取运行时版本需依据指定的Kubernetes版本进行设置。典型情况为，在升级过程中因版本冲突而需要调整运行时版本时。
+ * @method void setDstK8SVersion(string $DstK8SVersion) 设置运行时版本需依据指定的Kubernetes版本进行设置。典型情况为，在升级过程中因版本冲突而需要调整运行时版本时。
+ * @method RuntimeConfig getClusterRuntimeConfig() 获取需要修改集群运行时填写
+ * @method void setClusterRuntimeConfig(RuntimeConfig $ClusterRuntimeConfig) 设置需要修改集群运行时填写
+ * @method array getNodePoolRuntimeConfig() 获取需要修改节点池运行时，填需要修改的部分
+ * @method void setNodePoolRuntimeConfig(array $NodePoolRuntimeConfig) 设置需要修改节点池运行时，填需要修改的部分
  */
 class ModifyClusterRuntimeConfigRequest extends AbstractModel
 {
@@ -37,25 +37,25 @@ class ModifyClusterRuntimeConfigRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 当需要修改运行时版本是根据另外的K8S版本获取时，需填写。例如升级校验有冲突后修改场景
+     * @var string 运行时版本需依据指定的Kubernetes版本进行设置。典型情况为，在升级过程中因版本冲突而需要调整运行时版本时。
      */
     public $DstK8SVersion;
 
     /**
-     * @var RuntimeConfig 需要修改集群运行时时填写
+     * @var RuntimeConfig 需要修改集群运行时填写
      */
     public $ClusterRuntimeConfig;
 
     /**
-     * @var array 需要修改节点池运行时时，填需要修改的部分
+     * @var array 需要修改节点池运行时，填需要修改的部分
      */
     public $NodePoolRuntimeConfig;
 
     /**
      * @param string $ClusterId 集群ID，必填
-     * @param string $DstK8SVersion 当需要修改运行时版本是根据另外的K8S版本获取时，需填写。例如升级校验有冲突后修改场景
-     * @param RuntimeConfig $ClusterRuntimeConfig 需要修改集群运行时时填写
-     * @param array $NodePoolRuntimeConfig 需要修改节点池运行时时，填需要修改的部分
+     * @param string $DstK8SVersion 运行时版本需依据指定的Kubernetes版本进行设置。典型情况为，在升级过程中因版本冲突而需要调整运行时版本时。
+     * @param RuntimeConfig $ClusterRuntimeConfig 需要修改集群运行时填写
+     * @param array $NodePoolRuntimeConfig 需要修改节点池运行时，填需要修改的部分
      */
     function __construct()
     {

@@ -152,6 +152,8 @@ FILE：手动添加域名文件验证。 需要用户手动在域名站点根目
  * @method void setCaType(string $CaType) 设置只针对Dnspod系列证书有效，ca机构类型可为sectigo和digicert
  * @method string getSignAlgo() 获取签名算法
  * @method void setSignAlgo(string $SignAlgo) 设置签名算法
+ * @method boolean getUseCrossSignRoot() 获取是否使用交叉根证书
+ * @method void setUseCrossSignRoot(boolean $UseCrossSignRoot) 设置是否使用交叉根证书
  */
 class CertificateInfoSubmitRequest extends AbstractModel
 {
@@ -386,6 +388,11 @@ FILE：手动添加域名文件验证。 需要用户手动在域名站点根目
     public $SignAlgo;
 
     /**
+     * @var boolean 是否使用交叉根证书
+     */
+    public $UseCrossSignRoot;
+
+    /**
      * @param string $CertId 待提交资料的付费证书 ID。	
      * @param string $GenCsrType 此字段必传。 CSR 生成方式， 取值为：
 - online：腾讯云提交的填写的参数信息生成CSR和私钥，并由腾讯云加密存储
@@ -452,6 +459,7 @@ FILE：手动添加域名文件验证。 需要用户手动在域名站点根目
      * @param integer $Type 证书类型
      * @param string $CaType 只针对Dnspod系列证书有效，ca机构类型可为sectigo和digicert
      * @param string $SignAlgo 签名算法
+     * @param boolean $UseCrossSignRoot 是否使用交叉根证书
      */
     function __construct()
     {
@@ -628,6 +636,10 @@ FILE：手动添加域名文件验证。 需要用户手动在域名站点根目
 
         if (array_key_exists("SignAlgo",$param) and $param["SignAlgo"] !== null) {
             $this->SignAlgo = $param["SignAlgo"];
+        }
+
+        if (array_key_exists("UseCrossSignRoot",$param) and $param["UseCrossSignRoot"] !== null) {
+            $this->UseCrossSignRoot = $param["UseCrossSignRoot"];
         }
     }
 }

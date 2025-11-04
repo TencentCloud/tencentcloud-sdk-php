@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 base-基础版本，common-通用版本，enterprise-企业版本
  * @method void setPackageVersion(string $PackageVersion) 设置资源包版本
 base-基础版本，common-通用版本，enterprise-企业版本
- * @method float getPackageSpec() 获取资源包大小，计算资源单位：万个；存储资源：GB
- * @method void setPackageSpec(float $PackageSpec) 设置资源包大小，计算资源单位：万个；存储资源：GB
+ * @method float getPackageSpec() 获取资源包大小，计算资源单位：个；存储资源：GB
+ * @method void setPackageSpec(float $PackageSpec) 设置资源包大小，计算资源单位：个；存储资源：GB
  * @method integer getExpireDay() 获取资源包有效期，单位:天
  * @method void setExpireDay(integer $ExpireDay) 设置资源包有效期，单位:天
  * @method integer getPackageCount() 获取购买资源包个数
@@ -63,7 +63,7 @@ base-基础版本，common-通用版本，enterprise-企业版本
     public $PackageVersion;
 
     /**
-     * @var float 资源包大小，计算资源单位：万个；存储资源：GB
+     * @var float 资源包大小，计算资源单位：个；存储资源：GB
      */
     public $PackageSpec;
 
@@ -88,7 +88,7 @@ base-基础版本，common-通用版本，enterprise-企业版本
      * @param string $PackageType 资源包类型：CCU-计算资源包，DISK-存储资源包
      * @param string $PackageVersion 资源包版本
 base-基础版本，common-通用版本，enterprise-企业版本
-     * @param float $PackageSpec 资源包大小，计算资源单位：万个；存储资源：GB
+     * @param float $PackageSpec 资源包大小，计算资源单位：个；存储资源：GB
      * @param integer $ExpireDay 资源包有效期，单位:天
      * @param integer $PackageCount 购买资源包个数
      * @param string $PackageName 资源包名称

@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsSelected(boolean $IsSelected) 设置是否选中
  * @method string getPassword() 获取用户密码
  * @method void setPassword(string $Password) 设置用户密码
+ * @method boolean getNeedResetPassword() 获取下次登录是否需要重置密码， true: 需要重置密码， false：不需要重置密码
+ * @method void setNeedResetPassword(boolean $NeedResetPassword) 设置下次登录是否需要重置密码， true: 需要重置密码， false：不需要重置密码
  */
 class UserInfo extends AbstractModel
 {
@@ -115,6 +117,11 @@ class UserInfo extends AbstractModel
     public $Password;
 
     /**
+     * @var boolean 下次登录是否需要重置密码， true: 需要重置密码， false：不需要重置密码
+     */
+    public $NeedResetPassword;
+
+    /**
      * @param string $UserName 查询username。
      * @param string $FirstName 用户的名。
      * @param string $LastName 用户的姓。
@@ -128,6 +135,7 @@ class UserInfo extends AbstractModel
      * @param string $UpdateTime 用户的修改时间
      * @param boolean $IsSelected 是否选中
      * @param string $Password 用户密码
+     * @param boolean $NeedResetPassword 下次登录是否需要重置密码， true: 需要重置密码， false：不需要重置密码
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class UserInfo extends AbstractModel
 
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
             $this->Password = $param["Password"];
+        }
+
+        if (array_key_exists("NeedResetPassword",$param) and $param["NeedResetPassword"] !== null) {
+            $this->NeedResetPassword = $param["NeedResetPassword"];
         }
     }
 }

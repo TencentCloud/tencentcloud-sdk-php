@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSignId(integer $SignId) 设置签名ID。
  * @method integer getInternational() 获取是否国际/港澳台短信，其中0表示国内短信，1表示国际/港澳台短信。
  * @method void setInternational(integer $International) 设置是否国际/港澳台短信，其中0表示国内短信，1表示国际/港澳台短信。
- * @method integer getStatusCode() 获取申请签名状态，其中0表示审核通过且已生效，1表示审核中，2表示审核通过待生效，-1表示审核未通过或审核失败。
- * @method void setStatusCode(integer $StatusCode) 设置申请签名状态，其中0表示审核通过且已生效，1表示审核中，2表示审核通过待生效，-1表示审核未通过或审核失败。
+ * @method integer getStatusCode() 获取签名状态，其中：
+国内短信0表示签名可用，1表示审核中，2表示审核通过待生效，-1表示审核未通过、审核失败或未完成首次报备等原因导致签名不可用。具体可参考 [国内短信签名状态值说明](https://cloud.tencent.com/document/product/382/39022#ea7b2b63-ee71-404f-a525-c5a572d12ccd)。
+国际短信0表示审核通过且已生效，1表示审核中，2表示审核通过待生效，-1表示审核未通过或审核失败。
+ * @method void setStatusCode(integer $StatusCode) 设置签名状态，其中：
+国内短信0表示签名可用，1表示审核中，2表示审核通过待生效，-1表示审核未通过、审核失败或未完成首次报备等原因导致签名不可用。具体可参考 [国内短信签名状态值说明](https://cloud.tencent.com/document/product/382/39022#ea7b2b63-ee71-404f-a525-c5a572d12ccd)。
+国际短信0表示审核通过且已生效，1表示审核中，2表示审核通过待生效，-1表示审核未通过或审核失败。
  * @method string getReviewReply() 获取审核回复，审核人员审核后给出的回复，通常是审核未通过的原因。
  * @method void setReviewReply(string $ReviewReply) 设置审核回复，审核人员审核后给出的回复，通常是审核未通过的原因。
  * @method string getSignName() 获取签名名称。
@@ -58,7 +62,9 @@ class DescribeSignListStatus extends AbstractModel
     public $International;
 
     /**
-     * @var integer 申请签名状态，其中0表示审核通过且已生效，1表示审核中，2表示审核通过待生效，-1表示审核未通过或审核失败。
+     * @var integer 签名状态，其中：
+国内短信0表示签名可用，1表示审核中，2表示审核通过待生效，-1表示审核未通过、审核失败或未完成首次报备等原因导致签名不可用。具体可参考 [国内短信签名状态值说明](https://cloud.tencent.com/document/product/382/39022#ea7b2b63-ee71-404f-a525-c5a572d12ccd)。
+国际短信0表示审核通过且已生效，1表示审核中，2表示审核通过待生效，-1表示审核未通过或审核失败。
      */
     public $StatusCode;
 
@@ -98,7 +104,9 @@ class DescribeSignListStatus extends AbstractModel
     /**
      * @param integer $SignId 签名ID。
      * @param integer $International 是否国际/港澳台短信，其中0表示国内短信，1表示国际/港澳台短信。
-     * @param integer $StatusCode 申请签名状态，其中0表示审核通过且已生效，1表示审核中，2表示审核通过待生效，-1表示审核未通过或审核失败。
+     * @param integer $StatusCode 签名状态，其中：
+国内短信0表示签名可用，1表示审核中，2表示审核通过待生效，-1表示审核未通过、审核失败或未完成首次报备等原因导致签名不可用。具体可参考 [国内短信签名状态值说明](https://cloud.tencent.com/document/product/382/39022#ea7b2b63-ee71-404f-a525-c5a572d12ccd)。
+国际短信0表示审核通过且已生效，1表示审核中，2表示审核通过待生效，-1表示审核未通过或审核失败。
      * @param string $ReviewReply 审核回复，审核人员审核后给出的回复，通常是审核未通过的原因。
      * @param string $SignName 签名名称。
      * @param integer $CreateTime 提交审核时间，UNIX 时间戳（单位：秒）。

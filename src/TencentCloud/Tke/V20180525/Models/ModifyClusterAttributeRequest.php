@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method integer getProjectId() 获取集群所属项目
  * @method void setProjectId(integer $ProjectId) 设置集群所属项目
- * @method string getClusterName() 获取集群名称
- * @method void setClusterName(string $ClusterName) 设置集群名称
+ * @method string getClusterName() 获取集群名称,字符长度50
+ * @method void setClusterName(string $ClusterName) 设置集群名称,字符长度50
  * @method string getClusterDesc() 获取集群描述
  * @method void setClusterDesc(string $ClusterDesc) 设置集群描述
- * @method string getClusterLevel() 获取集群等级
- * @method void setClusterLevel(string $ClusterLevel) 设置集群等级
+ * @method string getClusterLevel() 获取集群等级，等级类型：L20、L50、L100、L200、L500、L1000、L3000、L5000
+ * @method void setClusterLevel(string $ClusterLevel) 设置集群等级，等级类型：L20、L50、L100、L200、L500、L1000、L3000、L5000
  * @method AutoUpgradeClusterLevel getAutoUpgradeClusterLevel() 获取自动变配集群等级
  * @method void setAutoUpgradeClusterLevel(AutoUpgradeClusterLevel $AutoUpgradeClusterLevel) 设置自动变配集群等级
  * @method boolean getQGPUShareEnable() 获取是否开启QGPU共享
@@ -50,7 +50,7 @@ class ModifyClusterAttributeRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string 集群名称
+     * @var string 集群名称,字符长度50
      */
     public $ClusterName;
 
@@ -60,7 +60,7 @@ class ModifyClusterAttributeRequest extends AbstractModel
     public $ClusterDesc;
 
     /**
-     * @var string 集群等级
+     * @var string 集群等级，等级类型：L20、L50、L100、L200、L500、L1000、L3000、L5000
      */
     public $ClusterLevel;
 
@@ -82,9 +82,9 @@ class ModifyClusterAttributeRequest extends AbstractModel
     /**
      * @param string $ClusterId 集群ID
      * @param integer $ProjectId 集群所属项目
-     * @param string $ClusterName 集群名称
+     * @param string $ClusterName 集群名称,字符长度50
      * @param string $ClusterDesc 集群描述
-     * @param string $ClusterLevel 集群等级
+     * @param string $ClusterLevel 集群等级，等级类型：L20、L50、L100、L200、L500、L1000、L3000、L5000
      * @param AutoUpgradeClusterLevel $AutoUpgradeClusterLevel 自动变配集群等级
      * @param boolean $QGPUShareEnable 是否开启QGPU共享
      * @param ClusterProperty $ClusterProperty 集群属性

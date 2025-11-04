@@ -45,7 +45,7 @@ use TencentCloud\Common\AbstractModel;
 
 
 注：
-1. `使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
+1. `使用动态签署人能力前，需登录腾讯电子签控制台打开服务开关`
 2. 此参数在嵌入式场景下无效。
  * @method void setFillType(integer $FillType) 设置签署人信息补充类型，默认无需补充。
 
@@ -54,7 +54,7 @@ use TencentCloud\Common\AbstractModel;
 
 
 注：
-1. `使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
+1. `使用动态签署人能力前，需登录腾讯电子签控制台打开服务开关`
 2. 此参数在嵌入式场景下无效。
  * @method string getFlowReadLimit() 获取签署人阅读合同限制参数
  <br/>取值：
@@ -116,7 +116,7 @@ class ApproverOption extends AbstractModel
 
 
 注：
-1. `使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
+1. `使用动态签署人能力前，需登录腾讯电子签控制台打开服务开关`
 2. 此参数在嵌入式场景下无效。
      */
     public $FillType;
@@ -160,7 +160,7 @@ class ApproverOption extends AbstractModel
 
 
 注：
-1. `使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
+1. `使用动态签署人能力前，需登录腾讯电子签控制台打开服务开关`
 2. 此参数在嵌入式场景下无效。
      * @param string $FlowReadLimit 签署人阅读合同限制参数
  <br/>取值：

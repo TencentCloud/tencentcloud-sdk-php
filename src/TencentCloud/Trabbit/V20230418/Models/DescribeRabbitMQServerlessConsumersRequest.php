@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页Offset
  * @method string getSearchWord() 获取搜索关键词
  * @method void setSearchWord(string $SearchWord) 设置搜索关键词
+ * @method string getChannel() 获取channelId
+ * @method void setChannel(string $Channel) 设置channelId
  */
 class DescribeRabbitMQServerlessConsumersRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeRabbitMQServerlessConsumersRequest extends AbstractModel
     public $SearchWord;
 
     /**
+     * @var string channelId
+     */
+    public $Channel;
+
+    /**
      * @param string $InstanceId 实例Id
      * @param string $VirtualHost Vhost参数
      * @param string $QueueName 队列名
      * @param integer $Limit 分页Limit
      * @param integer $Offset 分页Offset
      * @param string $SearchWord 搜索关键词
+     * @param string $Channel channelId
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeRabbitMQServerlessConsumersRequest extends AbstractModel
 
         if (array_key_exists("SearchWord",$param) and $param["SearchWord"] !== null) {
             $this->SearchWord = $param["SearchWord"];
+        }
+
+        if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
+            $this->Channel = $param["Channel"];
         }
     }
 }

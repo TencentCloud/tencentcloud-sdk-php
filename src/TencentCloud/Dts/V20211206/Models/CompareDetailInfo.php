@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDifferenceData(DifferenceDataDetail $DifferenceData) 设置数据不一致的详情，mongodb业务用到
  * @method DifferenceRowDetail getDifferenceRow() 获取数据行不一致的详情，mongodb业务用到
  * @method void setDifferenceRow(DifferenceRowDetail $DifferenceRow) 设置数据行不一致的详情，mongodb业务用到
+ * @method DifferenceSchemaDetail getDifferenceSchema() 获取表结构不一致详情，pg用
+ * @method void setDifferenceSchema(DifferenceSchemaDetail $DifferenceSchema) 设置表结构不一致详情，pg用
+ * @method DifferenceOwnerDetail getDifferenceOwner() 获取对象owner不一致详情，pg用
+ * @method void setDifferenceOwner(DifferenceOwnerDetail $DifferenceOwner) 设置对象owner不一致详情，pg用
  */
 class CompareDetailInfo extends AbstractModel
 {
@@ -59,11 +63,23 @@ class CompareDetailInfo extends AbstractModel
     public $DifferenceRow;
 
     /**
+     * @var DifferenceSchemaDetail 表结构不一致详情，pg用
+     */
+    public $DifferenceSchema;
+
+    /**
+     * @var DifferenceOwnerDetail 对象owner不一致详情，pg用
+     */
+    public $DifferenceOwner;
+
+    /**
      * @param DifferenceDetail $Difference 数据不一致的表详情
      * @param SkippedDetail $Skipped 跳过校验的表详情
      * @param DifferenceAdvancedObjectsDetail $DifferenceAdvancedObjects 数据库不一致的详情，mongodb业务用到
      * @param DifferenceDataDetail $DifferenceData 数据不一致的详情，mongodb业务用到
      * @param DifferenceRowDetail $DifferenceRow 数据行不一致的详情，mongodb业务用到
+     * @param DifferenceSchemaDetail $DifferenceSchema 表结构不一致详情，pg用
+     * @param DifferenceOwnerDetail $DifferenceOwner 对象owner不一致详情，pg用
      */
     function __construct()
     {
@@ -101,6 +117,16 @@ class CompareDetailInfo extends AbstractModel
         if (array_key_exists("DifferenceRow",$param) and $param["DifferenceRow"] !== null) {
             $this->DifferenceRow = new DifferenceRowDetail();
             $this->DifferenceRow->deserialize($param["DifferenceRow"]);
+        }
+
+        if (array_key_exists("DifferenceSchema",$param) and $param["DifferenceSchema"] !== null) {
+            $this->DifferenceSchema = new DifferenceSchemaDetail();
+            $this->DifferenceSchema->deserialize($param["DifferenceSchema"]);
+        }
+
+        if (array_key_exists("DifferenceOwner",$param) and $param["DifferenceOwner"] !== null) {
+            $this->DifferenceOwner = new DifferenceOwnerDetail();
+            $this->DifferenceOwner->deserialize($param["DifferenceOwner"]);
         }
     }
 }

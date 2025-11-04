@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserName(string $UserName) 设置用户名
  * @method string getPassWord() 获取密码
  * @method void setPassWord(string $PassWord) 设置密码
+ * @method boolean getSyncPwd() 获取是否同步密码
+ * @method void setSyncPwd(boolean $SyncPwd) 设置是否同步密码
  */
 class ModifyUserManagerPwdRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyUserManagerPwdRequest extends AbstractModel
     public $PassWord;
 
     /**
+     * @var boolean 是否同步密码
+     */
+    public $SyncPwd;
+
+    /**
      * @param string $InstanceId 集群实例ID
      * @param string $UserName 用户名
      * @param string $PassWord 密码
+     * @param boolean $SyncPwd 是否同步密码
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifyUserManagerPwdRequest extends AbstractModel
 
         if (array_key_exists("PassWord",$param) and $param["PassWord"] !== null) {
             $this->PassWord = $param["PassWord"];
+        }
+
+        if (array_key_exists("SyncPwd",$param) and $param["SyncPwd"] !== null) {
+            $this->SyncPwd = $param["SyncPwd"];
         }
     }
 }

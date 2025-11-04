@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTitle() 获取发票名称
  * @method void setTitle(string $Title) 设置发票名称
- * @method array getContent() 获取识别出的字段名称(关键字)
- * @method void setContent(array $Content) 设置识别出的字段名称(关键字)
+ * @method array getContent() 获取识别出的字段名称
+ * @method void setContent(array $Content) 设置识别出的字段名称
  */
 class OnlineTaxiItinerary extends AbstractModel
 {
@@ -33,13 +33,13 @@ class OnlineTaxiItinerary extends AbstractModel
     public $Title;
 
     /**
-     * @var array 识别出的字段名称(关键字)
+     * @var array 识别出的字段名称
      */
     public $Content;
 
     /**
      * @param string $Title 发票名称
-     * @param array $Content 识别出的字段名称(关键字)
+     * @param array $Content 识别出的字段名称
      */
     function __construct()
     {
@@ -61,7 +61,7 @@ class OnlineTaxiItinerary extends AbstractModel
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = [];
             foreach ($param["Content"] as $key => $value){
-                $obj = new OtherInvoiceItem();
+                $obj = new OnlineTaxiItineraryInfo();
                 $obj->deserialize($value);
                 array_push($this->Content, $obj);
             }

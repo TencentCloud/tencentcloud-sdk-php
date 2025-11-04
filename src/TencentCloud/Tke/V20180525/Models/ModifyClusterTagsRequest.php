@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method array getTags() 获取集群标签
- * @method void setTags(array $Tags) 设置集群标签
+ * @method array getTags() 获取集群标签:
+[{"TagKey":"env","TagValue":"dev"}]}]
+ * @method void setTags(array $Tags) 设置集群标签:
+[{"TagKey":"env","TagValue":"dev"}]}]
  * @method boolean getSyncSubresource() 获取是否同步集群内子资源标签
  * @method void setSyncSubresource(boolean $SyncSubresource) 设置是否同步集群内子资源标签
  */
@@ -35,7 +37,8 @@ class ModifyClusterTagsRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array 集群标签
+     * @var array 集群标签:
+[{"TagKey":"env","TagValue":"dev"}]}]
      */
     public $Tags;
 
@@ -46,7 +49,8 @@ class ModifyClusterTagsRequest extends AbstractModel
 
     /**
      * @param string $ClusterId 集群ID
-     * @param array $Tags 集群标签
+     * @param array $Tags 集群标签:
+[{"TagKey":"env","TagValue":"dev"}]}]
      * @param boolean $SyncSubresource 是否同步集群内子资源标签
      */
     function __construct()

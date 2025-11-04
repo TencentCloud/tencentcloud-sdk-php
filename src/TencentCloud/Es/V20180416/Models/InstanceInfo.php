@@ -338,6 +338,8 @@ RENEW_FLAG_DEFAULT：不自动续费
  * @method void setShowKibanaIpPort(string $ShowKibanaIpPort) 设置kibana内网访问地址
  * @method boolean getIsCdzLite() 获取是否为CDZLite可用区
  * @method void setIsCdzLite(boolean $IsCdzLite) 设置是否为CDZLite可用区
+ * @method string getEsPrivateTcpUrl() 获取集群内网tcp地址
+ * @method void setEsPrivateTcpUrl(string $EsPrivateTcpUrl) 设置集群内网tcp地址
  */
 class InstanceInfo extends AbstractModel
 {
@@ -885,6 +887,11 @@ RENEW_FLAG_DEFAULT：不自动续费
     public $IsCdzLite;
 
     /**
+     * @var string 集群内网tcp地址
+     */
+    public $EsPrivateTcpUrl;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 地域
@@ -1044,6 +1051,7 @@ RENEW_FLAG_DEFAULT：不自动续费
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ShowKibanaIpPort kibana内网访问地址
      * @param boolean $IsCdzLite 是否为CDZLite可用区
+     * @param string $EsPrivateTcpUrl 集群内网tcp地址
      */
     function __construct()
     {
@@ -1479,6 +1487,10 @@ RENEW_FLAG_DEFAULT：不自动续费
 
         if (array_key_exists("IsCdzLite",$param) and $param["IsCdzLite"] !== null) {
             $this->IsCdzLite = $param["IsCdzLite"];
+        }
+
+        if (array_key_exists("EsPrivateTcpUrl",$param) and $param["EsPrivateTcpUrl"] !== null) {
+            $this->EsPrivateTcpUrl = $param["EsPrivateTcpUrl"];
         }
     }
 }

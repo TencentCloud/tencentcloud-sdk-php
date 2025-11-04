@@ -20,15 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 集群巡检统计结果
  *
- * @method string getHealthyLevel() 获取诊断结果的健康水平
- * @method void setHealthyLevel(string $HealthyLevel) 设置诊断结果的健康水平
+ * @method string getHealthyLevel() 获取诊断结果的健康水平，健康水平取值：
+serious：高风险
+risk：中风险
+warn：低风险
+good：健康
+failed：诊断流程异常
+ * @method void setHealthyLevel(string $HealthyLevel) 设置诊断结果的健康水平，健康水平取值：
+serious：高风险
+risk：中风险
+warn：低风险
+good：健康
+failed：诊断流程异常
  * @method integer getCount() 获取诊断结果的统计
  * @method void setCount(integer $Count) 设置诊断结果的统计
  */
 class KubeJarvisStateStatistic extends AbstractModel
 {
     /**
-     * @var string 诊断结果的健康水平
+     * @var string 诊断结果的健康水平，健康水平取值：
+serious：高风险
+risk：中风险
+warn：低风险
+good：健康
+failed：诊断流程异常
      */
     public $HealthyLevel;
 
@@ -38,7 +53,12 @@ class KubeJarvisStateStatistic extends AbstractModel
     public $Count;
 
     /**
-     * @param string $HealthyLevel 诊断结果的健康水平
+     * @param string $HealthyLevel 诊断结果的健康水平，健康水平取值：
+serious：高风险
+risk：中风险
+warn：低风险
+good：健康
+failed：诊断流程异常
      * @param integer $Count 诊断结果的统计
      */
     function __construct()

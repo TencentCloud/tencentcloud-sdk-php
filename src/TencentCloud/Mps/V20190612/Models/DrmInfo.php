@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 输出HLS：可以使用切片模式或singlefile模式
 输出DASH：只能singlefile模式
 
+- widevine+fairplay:
+ 只能用于HLS，切片格式只能是mp4
+ 可以使用切片模式或singfile模式
+
  * @method void setType(string $Type) 设置加密类型：
 
 - simpleaes
@@ -59,6 +63,10 @@ use TencentCloud\Common\AbstractModel;
 可以用于HLS和DASH，切片格式只能是mp4
 输出HLS：可以使用切片模式或singlefile模式
 输出DASH：只能singlefile模式
+
+- widevine+fairplay:
+ 只能用于HLS，切片格式只能是mp4
+ 可以使用切片模式或singfile模式
 
  * @method SimpleAesDrm getSimpleAesDrm() 获取SimpleAes 加密信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -89,6 +97,10 @@ class DrmInfo extends AbstractModel
 可以用于HLS和DASH，切片格式只能是mp4
 输出HLS：可以使用切片模式或singlefile模式
 输出DASH：只能singlefile模式
+
+- widevine+fairplay:
+ 只能用于HLS，切片格式只能是mp4
+ 可以使用切片模式或singfile模式
 
      */
     public $Type;
@@ -124,6 +136,10 @@ class DrmInfo extends AbstractModel
 可以用于HLS和DASH，切片格式只能是mp4
 输出HLS：可以使用切片模式或singlefile模式
 输出DASH：只能singlefile模式
+
+- widevine+fairplay:
+ 只能用于HLS，切片格式只能是mp4
+ 可以使用切片模式或singfile模式
 
      * @param SimpleAesDrm $SimpleAesDrm SimpleAes 加密信息。
 注意：此字段可能返回 null，表示取不到有效值。

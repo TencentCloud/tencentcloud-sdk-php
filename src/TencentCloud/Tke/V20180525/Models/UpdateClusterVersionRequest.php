@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDstVersion(string $DstVersion) 设置需要升级到的版本
  * @method ClusterExtraArgs getExtraArgs() 获取集群自定义参数
  * @method void setExtraArgs(ClusterExtraArgs $ExtraArgs) 设置集群自定义参数
- * @method float getMaxNotReadyPercent() 获取可容忍的最大不可用pod数目
- * @method void setMaxNotReadyPercent(float $MaxNotReadyPercent) 设置可容忍的最大不可用pod数目
- * @method boolean getSkipPreCheck() 获取是否跳过预检查阶段
- * @method void setSkipPreCheck(boolean $SkipPreCheck) 设置是否跳过预检查阶段
+ * @method float getMaxNotReadyPercent() 获取可容忍的最大不可用pod数目。默认0
+ * @method void setMaxNotReadyPercent(float $MaxNotReadyPercent) 设置可容忍的最大不可用pod数目。默认0
+ * @method boolean getSkipPreCheck() 获取是否跳过预检查阶段，默认false
+ * @method void setSkipPreCheck(boolean $SkipPreCheck) 设置是否跳过预检查阶段，默认false
  */
 class UpdateClusterVersionRequest extends AbstractModel
 {
@@ -49,12 +49,12 @@ class UpdateClusterVersionRequest extends AbstractModel
     public $ExtraArgs;
 
     /**
-     * @var float 可容忍的最大不可用pod数目
+     * @var float 可容忍的最大不可用pod数目。默认0
      */
     public $MaxNotReadyPercent;
 
     /**
-     * @var boolean 是否跳过预检查阶段
+     * @var boolean 是否跳过预检查阶段，默认false
      */
     public $SkipPreCheck;
 
@@ -62,8 +62,8 @@ class UpdateClusterVersionRequest extends AbstractModel
      * @param string $ClusterId 集群 Id
      * @param string $DstVersion 需要升级到的版本
      * @param ClusterExtraArgs $ExtraArgs 集群自定义参数
-     * @param float $MaxNotReadyPercent 可容忍的最大不可用pod数目
-     * @param boolean $SkipPreCheck 是否跳过预检查阶段
+     * @param float $MaxNotReadyPercent 可容忍的最大不可用pod数目。默认0
+     * @param boolean $SkipPreCheck 是否跳过预检查阶段，默认false
      */
     function __construct()
     {

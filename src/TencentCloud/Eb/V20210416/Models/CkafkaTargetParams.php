@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicName(string $TopicName) 设置要投递到的ckafka topic
  * @method RetryPolicy getRetryPolicy() 获取重试策略
  * @method void setRetryPolicy(RetryPolicy $RetryPolicy) 设置重试策略
+ * @method string getEventDeliveryFormat() 获取事件投递kafka时的协议格式；目前只支持两种格式：1.CloudEvent(完整的cloudevent消息协议)2.CloudEventDataKey(cloudevent协议中的data字段内容)
+ * @method void setEventDeliveryFormat(string $EventDeliveryFormat) 设置事件投递kafka时的协议格式；目前只支持两种格式：1.CloudEvent(完整的cloudevent消息协议)2.CloudEventDataKey(cloudevent协议中的data字段内容)
  */
 class CkafkaTargetParams extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CkafkaTargetParams extends AbstractModel
     public $RetryPolicy;
 
     /**
+     * @var string 事件投递kafka时的协议格式；目前只支持两种格式：1.CloudEvent(完整的cloudevent消息协议)2.CloudEventDataKey(cloudevent协议中的data字段内容)
+     */
+    public $EventDeliveryFormat;
+
+    /**
      * @param string $TopicName 要投递到的ckafka topic
      * @param RetryPolicy $RetryPolicy 重试策略
+     * @param string $EventDeliveryFormat 事件投递kafka时的协议格式；目前只支持两种格式：1.CloudEvent(完整的cloudevent消息协议)2.CloudEventDataKey(cloudevent协议中的data字段内容)
      */
     function __construct()
     {
@@ -61,6 +69,10 @@ class CkafkaTargetParams extends AbstractModel
         if (array_key_exists("RetryPolicy",$param) and $param["RetryPolicy"] !== null) {
             $this->RetryPolicy = new RetryPolicy();
             $this->RetryPolicy->deserialize($param["RetryPolicy"]);
+        }
+
+        if (array_key_exists("EventDeliveryFormat",$param) and $param["EventDeliveryFormat"] !== null) {
+            $this->EventDeliveryFormat = $param["EventDeliveryFormat"];
         }
     }
 }

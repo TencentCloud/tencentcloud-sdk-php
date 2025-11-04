@@ -21,9 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * FairPlay，WideVine，PlayReady 等Drm加密方式。
  *
  * @method string getResourceId() 获取资源标记，该字段内容为用户自定义；
-支持1-128个字符的数字、字母、下划线(_)、中划线(-)。
+支持1-128个字符的数字、字母、下划线(`_`)、中划线(-)。
+该字段对应Speke请求中的cid字段。
+注：不同DRM厂商对该字段的限制有所区别（如：华曦达不支持该字段带`_`），具体规则请与DRM厂商进行确认。
  * @method void setResourceId(string $ResourceId) 设置资源标记，该字段内容为用户自定义；
-支持1-128个字符的数字、字母、下划线(_)、中划线(-)。
+支持1-128个字符的数字、字母、下划线(`_`)、中划线(-)。
+该字段对应Speke请求中的cid字段。
+注：不同DRM厂商对该字段的限制有所区别（如：华曦达不支持该字段带`_`），具体规则请与DRM厂商进行确认。
  * @method string getKeyServerUrl() 获取DRM厂商访问地址，该字段内容从DRM厂商获取。
 
 注: 不同DRM厂商对子流的数量限制不一样，如 PallyCon 限制不能超过5条子流，DRMtoday厂商最多仅支持9条子流加密
@@ -33,12 +37,14 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVector() 获取加密初始化向量(十六进制32字节字符串)，该字段内容为用户自定义。
  * @method void setVector(string $Vector) 设置加密初始化向量(十六进制32字节字符串)，该字段内容为用户自定义。
  * @method string getEncryptionMethod() 获取加密方式，FairPlay 默认cbcs，PlayReady，Widevine 默认cenc
+加密方式选择WideVine+FairPlay时，仅支持cbcs
 
-cbcs：PlayReady，Widevine，FairPlay 支持；
+cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay 支持；
 cenc：PlayReady，Widevine支持；
  * @method void setEncryptionMethod(string $EncryptionMethod) 设置加密方式，FairPlay 默认cbcs，PlayReady，Widevine 默认cenc
+加密方式选择WideVine+FairPlay时，仅支持cbcs
 
-cbcs：PlayReady，Widevine，FairPlay 支持；
+cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay 支持；
 cenc：PlayReady，Widevine支持；
  * @method string getEncryptionPreset() 获取子流加密规则，默认 preset0
 preset0：全部子流使用同一个key加密；
@@ -52,7 +58,9 @@ class SpekeDrm extends AbstractModel
 {
     /**
      * @var string 资源标记，该字段内容为用户自定义；
-支持1-128个字符的数字、字母、下划线(_)、中划线(-)。
+支持1-128个字符的数字、字母、下划线(`_`)、中划线(-)。
+该字段对应Speke请求中的cid字段。
+注：不同DRM厂商对该字段的限制有所区别（如：华曦达不支持该字段带`_`），具体规则请与DRM厂商进行确认。
      */
     public $ResourceId;
 
@@ -70,8 +78,9 @@ class SpekeDrm extends AbstractModel
 
     /**
      * @var string 加密方式，FairPlay 默认cbcs，PlayReady，Widevine 默认cenc
+加密方式选择WideVine+FairPlay时，仅支持cbcs
 
-cbcs：PlayReady，Widevine，FairPlay 支持；
+cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay 支持；
 cenc：PlayReady，Widevine支持；
      */
     public $EncryptionMethod;
@@ -86,14 +95,17 @@ preset1：每个子流使用不同的key加密；
 
     /**
      * @param string $ResourceId 资源标记，该字段内容为用户自定义；
-支持1-128个字符的数字、字母、下划线(_)、中划线(-)。
+支持1-128个字符的数字、字母、下划线(`_`)、中划线(-)。
+该字段对应Speke请求中的cid字段。
+注：不同DRM厂商对该字段的限制有所区别（如：华曦达不支持该字段带`_`），具体规则请与DRM厂商进行确认。
      * @param string $KeyServerUrl DRM厂商访问地址，该字段内容从DRM厂商获取。
 
 注: 不同DRM厂商对子流的数量限制不一样，如 PallyCon 限制不能超过5条子流，DRMtoday厂商最多仅支持9条子流加密
      * @param string $Vector 加密初始化向量(十六进制32字节字符串)，该字段内容为用户自定义。
      * @param string $EncryptionMethod 加密方式，FairPlay 默认cbcs，PlayReady，Widevine 默认cenc
+加密方式选择WideVine+FairPlay时，仅支持cbcs
 
-cbcs：PlayReady，Widevine，FairPlay 支持；
+cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay 支持；
 cenc：PlayReady，Widevine支持；
      * @param string $EncryptionPreset 子流加密规则，默认 preset0
 preset0：全部子流使用同一个key加密；

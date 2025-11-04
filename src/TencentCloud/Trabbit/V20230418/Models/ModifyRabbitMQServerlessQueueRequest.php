@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueueName(string $QueueName) 设置队列名称
  * @method string getRemark() 获取新修改的备注
  * @method void setRemark(string $Remark) 设置新修改的备注
+ * @method integer getMessageTTL() 获取MessageTTL参数单位ms,classic类型专用	
+ * @method void setMessageTTL(integer $MessageTTL) 设置MessageTTL参数单位ms,classic类型专用	
+ * @method string getDeadLetterExchange() 获取DeadLetterExchange参数。可将过期或被拒绝的消息投往指定的死信 exchange。
+ * @method void setDeadLetterExchange(string $DeadLetterExchange) 设置DeadLetterExchange参数。可将过期或被拒绝的消息投往指定的死信 exchange。
+ * @method string getDeadLetterRoutingKey() 获取DeadLetterRoutingKey参数。只能包含字母、数字、"."、"-"，"@"，"_"
+ * @method void setDeadLetterRoutingKey(string $DeadLetterRoutingKey) 设置DeadLetterRoutingKey参数。只能包含字母、数字、"."、"-"，"@"，"_"
  */
 class ModifyRabbitMQServerlessQueueRequest extends AbstractModel
 {
@@ -52,10 +58,28 @@ class ModifyRabbitMQServerlessQueueRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var integer MessageTTL参数单位ms,classic类型专用	
+     */
+    public $MessageTTL;
+
+    /**
+     * @var string DeadLetterExchange参数。可将过期或被拒绝的消息投往指定的死信 exchange。
+     */
+    public $DeadLetterExchange;
+
+    /**
+     * @var string DeadLetterRoutingKey参数。只能包含字母、数字、"."、"-"，"@"，"_"
+     */
+    public $DeadLetterRoutingKey;
+
+    /**
      * @param string $InstanceId 实例Id
      * @param string $VirtualHost Vhost参数
      * @param string $QueueName 队列名称
      * @param string $Remark 新修改的备注
+     * @param integer $MessageTTL MessageTTL参数单位ms,classic类型专用	
+     * @param string $DeadLetterExchange DeadLetterExchange参数。可将过期或被拒绝的消息投往指定的死信 exchange。
+     * @param string $DeadLetterRoutingKey DeadLetterRoutingKey参数。只能包含字母、数字、"."、"-"，"@"，"_"
      */
     function __construct()
     {
@@ -84,6 +108,18 @@ class ModifyRabbitMQServerlessQueueRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("MessageTTL",$param) and $param["MessageTTL"] !== null) {
+            $this->MessageTTL = $param["MessageTTL"];
+        }
+
+        if (array_key_exists("DeadLetterExchange",$param) and $param["DeadLetterExchange"] !== null) {
+            $this->DeadLetterExchange = $param["DeadLetterExchange"];
+        }
+
+        if (array_key_exists("DeadLetterRoutingKey",$param) and $param["DeadLetterRoutingKey"] !== null) {
+            $this->DeadLetterRoutingKey = $param["DeadLetterRoutingKey"];
         }
     }
 }

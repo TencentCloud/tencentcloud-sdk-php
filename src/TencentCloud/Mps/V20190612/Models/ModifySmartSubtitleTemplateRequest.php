@@ -23,11 +23,15 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDefinition() 获取智能字幕模板唯一标识
  * @method void setDefinition(integer $Definition) 设置智能字幕模板唯一标识
  * @method string getTranslateSwitch() 获取字幕翻译开关
-ON: 开启翻译
-OFF: 关闭翻译
+`ON`: 开启翻译
+`OFF`: 关闭翻译
+
+**注意**：纯字幕翻译方式下，不传默认是打开的，不允许传空或`OFF`；
  * @method void setTranslateSwitch(string $TranslateSwitch) 设置字幕翻译开关
-ON: 开启翻译
-OFF: 关闭翻译
+`ON`: 开启翻译
+`OFF`: 关闭翻译
+
+**注意**：纯字幕翻译方式下，不传默认是打开的，不允许传空或`OFF`；
  * @method string getName() 获取智能字幕模板名称
 长度限制：64 个字符。
  * @method void setName(string $Name) 设置智能字幕模板名称
@@ -38,60 +42,88 @@ OFF: 关闭翻译
 长度限制：256 个字符。
  * @method string getVideoSrcLanguage() 获取智能字幕视频源语言
 当前支持以下语言：
-zh：简体中文
-en：英语
-ja：日语
-ko：韩语
-zh-PY：中英粤
-zh-medical：中文医疗
-yue：中文粤语
-vi：越南语
-ms：马来语
-id：印度尼西亚语
-fil：菲律宾语
-th：泰语
-pt：葡萄牙语
-tr：土耳其语
-ar：阿拉伯语
-es：西班牙语
-hi：印地语
-fr：法语
-de：德语
-zh_dialect：中文方言
-zh_en: 中英
-prime_zh: 中英方言
+
+`zh`：简体中文
+`yue`：中文粵语
+`zh-PY`：中英粤
+`zh_medical`：中文医疗
+`zh_dialect`：中文方言
+`prime_zh`：中英方言
+`zh_en`：中英
+`en`：英语
+`ja`：日语
+`ko`：韩语
+`fr`：法语
+`es`：西班牙语
+`it`：意大利语
+`de`：德语
+`tr`：土耳其语
+`ru`：俄语
+`pt`：葡萄牙语（巴西）
+`pt-PT`：葡萄牙语（葡萄牙）
+`vi`：越南语
+`id`：印度尼西亚语
+`ms`：马来语
+`th`：泰语
+`ar`：阿拉伯语
+`hi`：印地语
+`fil`：菲律宾语
+`auto`：自动识别（仅在纯字幕翻译中支持）
  * @method void setVideoSrcLanguage(string $VideoSrcLanguage) 设置智能字幕视频源语言
 当前支持以下语言：
-zh：简体中文
-en：英语
-ja：日语
-ko：韩语
-zh-PY：中英粤
-zh-medical：中文医疗
-yue：中文粤语
-vi：越南语
-ms：马来语
-id：印度尼西亚语
-fil：菲律宾语
-th：泰语
-pt：葡萄牙语
-tr：土耳其语
-ar：阿拉伯语
-es：西班牙语
-hi：印地语
-fr：法语
-de：德语
-zh_dialect：中文方言
-zh_en: 中英
-prime_zh: 中英方言
- * @method string getSubtitleFormat() 获取智能字幕文件格式
- vtt: WebVTT 格式
-srt: SRT格式
-不填或填空：不生成字幕文件
- * @method void setSubtitleFormat(string $SubtitleFormat) 设置智能字幕文件格式
- vtt: WebVTT 格式
-srt: SRT格式
-不填或填空：不生成字幕文件
+
+`zh`：简体中文
+`yue`：中文粵语
+`zh-PY`：中英粤
+`zh_medical`：中文医疗
+`zh_dialect`：中文方言
+`prime_zh`：中英方言
+`zh_en`：中英
+`en`：英语
+`ja`：日语
+`ko`：韩语
+`fr`：法语
+`es`：西班牙语
+`it`：意大利语
+`de`：德语
+`tr`：土耳其语
+`ru`：俄语
+`pt`：葡萄牙语（巴西）
+`pt-PT`：葡萄牙语（葡萄牙）
+`vi`：越南语
+`id`：印度尼西亚语
+`ms`：马来语
+`th`：泰语
+`ar`：阿拉伯语
+`hi`：印地语
+`fil`：菲律宾语
+`auto`：自动识别（仅在纯字幕翻译中支持）
+ * @method string getSubtitleFormat() 获取智能字幕文件格式:
+- ASR识别翻译处理类型下：
+     - vtt: WebVTT 格式字幕
+     - srt: SRT 格式字幕
+     - 不填或填空：不生成字幕文件
+- 纯字幕翻译处理类型下：
+    - original：与源文件一致
+    - vtt: WebVTT 格式字幕
+    - srt: SRT 格式字幕
+
+**注意**：
+- ASR识别方式下，翻译大于等于2种语言时不允许传空或不传；
+- 纯字幕翻译方式下，不允许传空或不传
+ * @method void setSubtitleFormat(string $SubtitleFormat) 设置智能字幕文件格式:
+- ASR识别翻译处理类型下：
+     - vtt: WebVTT 格式字幕
+     - srt: SRT 格式字幕
+     - 不填或填空：不生成字幕文件
+- 纯字幕翻译处理类型下：
+    - original：与源文件一致
+    - vtt: WebVTT 格式字幕
+    - srt: SRT 格式字幕
+
+**注意**：
+- ASR识别方式下，翻译大于等于2种语言时不允许传空或不传；
+- 纯字幕翻译方式下，不允许传空或不传
  * @method integer getSubtitleType() 获取智能字幕字幕语言类型
 0: 源语言
 1: 翻译语言
@@ -109,43 +141,65 @@ srt: SRT格式
  * @method string getTranslateDstLanguage() 获取字幕翻译目标语言
 当TranslateSwitch为ON的时候生效
 当前支持以下语言：
-zh：简体中文
-en：英语
-ja：日语
-ko：韩语
-fr：法语
-es：西班牙语
-it：意大利语
-de：德语
-tr：土耳其语
-ru：俄语
-pt：葡萄牙语
-vi：越南语
-id：印度尼西亚语
-ms：马来语
-th：泰语
-ar：阿拉伯语
-hi：印地语
+
+`zh`：简体中文
+`zh-TW`：繁体中文
+`en`：英语
+`ja`：日语
+`ko`：韩语
+`fr`：法语
+`es`：西班牙语 
+`it`：意大利语
+`de`：德语
+`tr`：土耳其语
+`ru`：俄语
+`pt`：葡萄牙语（巴西）
+`pt-PT`：葡萄牙语（葡萄牙）
+`vi`：越南语
+`id`：印度尼西亚语 
+`ms`：马来语
+`th`：泰语
+`ar`：阿拉伯语
+`hi`：印地语
+`fil`：菲律宾语
+
+**注意**：多语言方式，则使用 `/` 分割，如：`en/ja`，表示英语和日语。
  * @method void setTranslateDstLanguage(string $TranslateDstLanguage) 设置字幕翻译目标语言
 当TranslateSwitch为ON的时候生效
 当前支持以下语言：
-zh：简体中文
-en：英语
-ja：日语
-ko：韩语
-fr：法语
-es：西班牙语
-it：意大利语
-de：德语
-tr：土耳其语
-ru：俄语
-pt：葡萄牙语
-vi：越南语
-id：印度尼西亚语
-ms：马来语
-th：泰语
-ar：阿拉伯语
-hi：印地语
+
+`zh`：简体中文
+`zh-TW`：繁体中文
+`en`：英语
+`ja`：日语
+`ko`：韩语
+`fr`：法语
+`es`：西班牙语 
+`it`：意大利语
+`de`：德语
+`tr`：土耳其语
+`ru`：俄语
+`pt`：葡萄牙语（巴西）
+`pt-PT`：葡萄牙语（葡萄牙）
+`vi`：越南语
+`id`：印度尼西亚语 
+`ms`：马来语
+`th`：泰语
+`ar`：阿拉伯语
+`hi`：印地语
+`fil`：菲律宾语
+
+**注意**：多语言方式，则使用 `/` 分割，如：`en/ja`，表示英语和日语。
+ * @method integer getProcessType() 获取字幕处理类型：
+- 0：ASR识别字幕
+- 1：纯字幕翻译
+
+**注意**：不传的情况下，默认是ASR方式
+ * @method void setProcessType(integer $ProcessType) 设置字幕处理类型：
+- 0：ASR识别字幕
+- 1：纯字幕翻译
+
+**注意**：不传的情况下，默认是ASR方式
  */
 class ModifySmartSubtitleTemplateRequest extends AbstractModel
 {
@@ -156,8 +210,10 @@ class ModifySmartSubtitleTemplateRequest extends AbstractModel
 
     /**
      * @var string 字幕翻译开关
-ON: 开启翻译
-OFF: 关闭翻译
+`ON`: 开启翻译
+`OFF`: 关闭翻译
+
+**注意**：纯字幕翻译方式下，不传默认是打开的，不允许传空或`OFF`；
      */
     public $TranslateSwitch;
 
@@ -176,36 +232,50 @@ OFF: 关闭翻译
     /**
      * @var string 智能字幕视频源语言
 当前支持以下语言：
-zh：简体中文
-en：英语
-ja：日语
-ko：韩语
-zh-PY：中英粤
-zh-medical：中文医疗
-yue：中文粤语
-vi：越南语
-ms：马来语
-id：印度尼西亚语
-fil：菲律宾语
-th：泰语
-pt：葡萄牙语
-tr：土耳其语
-ar：阿拉伯语
-es：西班牙语
-hi：印地语
-fr：法语
-de：德语
-zh_dialect：中文方言
-zh_en: 中英
-prime_zh: 中英方言
+
+`zh`：简体中文
+`yue`：中文粵语
+`zh-PY`：中英粤
+`zh_medical`：中文医疗
+`zh_dialect`：中文方言
+`prime_zh`：中英方言
+`zh_en`：中英
+`en`：英语
+`ja`：日语
+`ko`：韩语
+`fr`：法语
+`es`：西班牙语
+`it`：意大利语
+`de`：德语
+`tr`：土耳其语
+`ru`：俄语
+`pt`：葡萄牙语（巴西）
+`pt-PT`：葡萄牙语（葡萄牙）
+`vi`：越南语
+`id`：印度尼西亚语
+`ms`：马来语
+`th`：泰语
+`ar`：阿拉伯语
+`hi`：印地语
+`fil`：菲律宾语
+`auto`：自动识别（仅在纯字幕翻译中支持）
      */
     public $VideoSrcLanguage;
 
     /**
-     * @var string 智能字幕文件格式
- vtt: WebVTT 格式
-srt: SRT格式
-不填或填空：不生成字幕文件
+     * @var string 智能字幕文件格式:
+- ASR识别翻译处理类型下：
+     - vtt: WebVTT 格式字幕
+     - srt: SRT 格式字幕
+     - 不填或填空：不生成字幕文件
+- 纯字幕翻译处理类型下：
+    - original：与源文件一致
+    - vtt: WebVTT 格式字幕
+    - srt: SRT 格式字幕
+
+**注意**：
+- ASR识别方式下，翻译大于等于2种语言时不允许传空或不传；
+- 纯字幕翻译方式下，不允许传空或不传
      */
     public $SubtitleFormat;
 
@@ -228,63 +298,94 @@ srt: SRT格式
      * @var string 字幕翻译目标语言
 当TranslateSwitch为ON的时候生效
 当前支持以下语言：
-zh：简体中文
-en：英语
-ja：日语
-ko：韩语
-fr：法语
-es：西班牙语
-it：意大利语
-de：德语
-tr：土耳其语
-ru：俄语
-pt：葡萄牙语
-vi：越南语
-id：印度尼西亚语
-ms：马来语
-th：泰语
-ar：阿拉伯语
-hi：印地语
+
+`zh`：简体中文
+`zh-TW`：繁体中文
+`en`：英语
+`ja`：日语
+`ko`：韩语
+`fr`：法语
+`es`：西班牙语 
+`it`：意大利语
+`de`：德语
+`tr`：土耳其语
+`ru`：俄语
+`pt`：葡萄牙语（巴西）
+`pt-PT`：葡萄牙语（葡萄牙）
+`vi`：越南语
+`id`：印度尼西亚语 
+`ms`：马来语
+`th`：泰语
+`ar`：阿拉伯语
+`hi`：印地语
+`fil`：菲律宾语
+
+**注意**：多语言方式，则使用 `/` 分割，如：`en/ja`，表示英语和日语。
      */
     public $TranslateDstLanguage;
 
     /**
+     * @var integer 字幕处理类型：
+- 0：ASR识别字幕
+- 1：纯字幕翻译
+
+**注意**：不传的情况下，默认是ASR方式
+     */
+    public $ProcessType;
+
+    /**
      * @param integer $Definition 智能字幕模板唯一标识
      * @param string $TranslateSwitch 字幕翻译开关
-ON: 开启翻译
-OFF: 关闭翻译
+`ON`: 开启翻译
+`OFF`: 关闭翻译
+
+**注意**：纯字幕翻译方式下，不传默认是打开的，不允许传空或`OFF`；
      * @param string $Name 智能字幕模板名称
 长度限制：64 个字符。
      * @param string $Comment 智能字幕模板描述信息
 长度限制：256 个字符。
      * @param string $VideoSrcLanguage 智能字幕视频源语言
 当前支持以下语言：
-zh：简体中文
-en：英语
-ja：日语
-ko：韩语
-zh-PY：中英粤
-zh-medical：中文医疗
-yue：中文粤语
-vi：越南语
-ms：马来语
-id：印度尼西亚语
-fil：菲律宾语
-th：泰语
-pt：葡萄牙语
-tr：土耳其语
-ar：阿拉伯语
-es：西班牙语
-hi：印地语
-fr：法语
-de：德语
-zh_dialect：中文方言
-zh_en: 中英
-prime_zh: 中英方言
-     * @param string $SubtitleFormat 智能字幕文件格式
- vtt: WebVTT 格式
-srt: SRT格式
-不填或填空：不生成字幕文件
+
+`zh`：简体中文
+`yue`：中文粵语
+`zh-PY`：中英粤
+`zh_medical`：中文医疗
+`zh_dialect`：中文方言
+`prime_zh`：中英方言
+`zh_en`：中英
+`en`：英语
+`ja`：日语
+`ko`：韩语
+`fr`：法语
+`es`：西班牙语
+`it`：意大利语
+`de`：德语
+`tr`：土耳其语
+`ru`：俄语
+`pt`：葡萄牙语（巴西）
+`pt-PT`：葡萄牙语（葡萄牙）
+`vi`：越南语
+`id`：印度尼西亚语
+`ms`：马来语
+`th`：泰语
+`ar`：阿拉伯语
+`hi`：印地语
+`fil`：菲律宾语
+`auto`：自动识别（仅在纯字幕翻译中支持）
+     * @param string $SubtitleFormat 智能字幕文件格式:
+- ASR识别翻译处理类型下：
+     - vtt: WebVTT 格式字幕
+     - srt: SRT 格式字幕
+     - 不填或填空：不生成字幕文件
+- 纯字幕翻译处理类型下：
+    - original：与源文件一致
+    - vtt: WebVTT 格式字幕
+    - srt: SRT 格式字幕
+
+**注意**：
+- ASR识别方式下，翻译大于等于2种语言时不允许传空或不传；
+- 纯字幕翻译方式下，不允许传空或不传
      * @param integer $SubtitleType 智能字幕字幕语言类型
 0: 源语言
 1: 翻译语言
@@ -295,23 +396,34 @@ srt: SRT格式
      * @param string $TranslateDstLanguage 字幕翻译目标语言
 当TranslateSwitch为ON的时候生效
 当前支持以下语言：
-zh：简体中文
-en：英语
-ja：日语
-ko：韩语
-fr：法语
-es：西班牙语
-it：意大利语
-de：德语
-tr：土耳其语
-ru：俄语
-pt：葡萄牙语
-vi：越南语
-id：印度尼西亚语
-ms：马来语
-th：泰语
-ar：阿拉伯语
-hi：印地语
+
+`zh`：简体中文
+`zh-TW`：繁体中文
+`en`：英语
+`ja`：日语
+`ko`：韩语
+`fr`：法语
+`es`：西班牙语 
+`it`：意大利语
+`de`：德语
+`tr`：土耳其语
+`ru`：俄语
+`pt`：葡萄牙语（巴西）
+`pt-PT`：葡萄牙语（葡萄牙）
+`vi`：越南语
+`id`：印度尼西亚语 
+`ms`：马来语
+`th`：泰语
+`ar`：阿拉伯语
+`hi`：印地语
+`fil`：菲律宾语
+
+**注意**：多语言方式，则使用 `/` 分割，如：`en/ja`，表示英语和日语。
+     * @param integer $ProcessType 字幕处理类型：
+- 0：ASR识别字幕
+- 1：纯字幕翻译
+
+**注意**：不传的情况下，默认是ASR方式
      */
     function __construct()
     {
@@ -361,6 +473,10 @@ hi：印地语
 
         if (array_key_exists("TranslateDstLanguage",$param) and $param["TranslateDstLanguage"] !== null) {
             $this->TranslateDstLanguage = $param["TranslateDstLanguage"];
+        }
+
+        if (array_key_exists("ProcessType",$param) and $param["ProcessType"] !== null) {
+            $this->ProcessType = $param["ProcessType"];
         }
     }
 }

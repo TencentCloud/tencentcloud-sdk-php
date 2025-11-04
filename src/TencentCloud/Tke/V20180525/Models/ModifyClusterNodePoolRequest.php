@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method string getNodePoolId() 获取节点池ID
  * @method void setNodePoolId(string $NodePoolId) 设置节点池ID
- * @method string getName() 获取名称
- * @method void setName(string $Name) 设置名称
+ * @method string getName() 获取名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾
+ * @method void setName(string $Name) 设置名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾
  * @method integer getMaxNodesNum() 获取最大节点数
  * @method void setMaxNodesNum(integer $MaxNodesNum) 设置最大节点数
  * @method integer getMinNodesNum() 获取最小节点数
@@ -74,7 +74,7 @@ class ModifyClusterNodePoolRequest extends AbstractModel
     public $NodePoolId;
 
     /**
-     * @var string 名称
+     * @var string 名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾
      */
     public $Name;
 
@@ -166,7 +166,7 @@ class ModifyClusterNodePoolRequest extends AbstractModel
     /**
      * @param string $ClusterId 集群ID
      * @param string $NodePoolId 节点池ID
-     * @param string $Name 名称
+     * @param string $Name 名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾
      * @param integer $MaxNodesNum 最大节点数
      * @param integer $MinNodesNum 最小节点数
      * @param array $Labels 标签

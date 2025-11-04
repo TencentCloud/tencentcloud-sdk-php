@@ -26,8 +26,44 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置工作流绑定的 COS Bucket 所属园区，如 ap-chongiqng。
  * @method string getDir() 获取工作流绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。
  * @method void setDir(string $Dir) 设置工作流绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。
- * @method array getFormats() 获取工作流允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。
- * @method void setFormats(array $Formats) 设置工作流允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。
+ * @method array getFormats() 获取支持的所有格式如下：
+
+- 视频文件扩展名，支持以下选择，共15种：
+`.mp4`、`.avi`、`.mov`、`.wmv`、`.flv`、`.mkv`、`.mpg`、`.mpeg`、`.rm`、`.rmvb`、`.asf`、`.3gp`、`.webm`、`.ts`、`.m4v`
+
+- 音频文件扩展名，支持以下选择，共7种：
+`.mp3`、`.wav`、`.aac`、`.flac`、`.ogg`、`.m4a`、`.amr`
+
+- 字幕文件扩展名，支持以下选择，共2种：
+`.vtt`、`.srt`
+
+- `*`：支持任意文件格式
+
+- 不传或者传空列表：支持系统预设文件格式（视频：`.mp4`、`.ts`、`.flv`、`.wmv`、`.asf`、`.rm`、`.rmvb`、`.mpg`、`.mpeg`、`.3gp`、`.mov`、`.webm`、`.mkv`、`.avi`、`.m4v`，音频：`.mp3`、`.m4a`、`.flac`、`.ogg`、`.wav`、`.amr`、`.aac`，字幕：`.vtt`、`.srt`）
+
+**注意**：
+1. 如果传入的格式列表中有`*`则表示为支持任意文件格式。
+2. 扩展名传入时带不带`.`都可以，比如 `.mp4` 或 `mp4` 均支持。
+3. 自定义文件扩展名需满足数字、字母字符，长度在[1,64]范围内。
+ * @method void setFormats(array $Formats) 设置支持的所有格式如下：
+
+- 视频文件扩展名，支持以下选择，共15种：
+`.mp4`、`.avi`、`.mov`、`.wmv`、`.flv`、`.mkv`、`.mpg`、`.mpeg`、`.rm`、`.rmvb`、`.asf`、`.3gp`、`.webm`、`.ts`、`.m4v`
+
+- 音频文件扩展名，支持以下选择，共7种：
+`.mp3`、`.wav`、`.aac`、`.flac`、`.ogg`、`.m4a`、`.amr`
+
+- 字幕文件扩展名，支持以下选择，共2种：
+`.vtt`、`.srt`
+
+- `*`：支持任意文件格式
+
+- 不传或者传空列表：支持系统预设文件格式（视频：`.mp4`、`.ts`、`.flv`、`.wmv`、`.asf`、`.rm`、`.rmvb`、`.mpg`、`.mpeg`、`.3gp`、`.mov`、`.webm`、`.mkv`、`.avi`、`.m4v`，音频：`.mp3`、`.m4a`、`.flac`、`.ogg`、`.wav`、`.amr`、`.aac`，字幕：`.vtt`、`.srt`）
+
+**注意**：
+1. 如果传入的格式列表中有`*`则表示为支持任意文件格式。
+2. 扩展名传入时带不带`.`都可以，比如 `.mp4` 或 `mp4` 均支持。
+3. 自定义文件扩展名需满足数字、字母字符，长度在[1,64]范围内。
  */
 class CosFileUploadTrigger extends AbstractModel
 {
@@ -47,7 +83,25 @@ class CosFileUploadTrigger extends AbstractModel
     public $Dir;
 
     /**
-     * @var array 工作流允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。
+     * @var array 支持的所有格式如下：
+
+- 视频文件扩展名，支持以下选择，共15种：
+`.mp4`、`.avi`、`.mov`、`.wmv`、`.flv`、`.mkv`、`.mpg`、`.mpeg`、`.rm`、`.rmvb`、`.asf`、`.3gp`、`.webm`、`.ts`、`.m4v`
+
+- 音频文件扩展名，支持以下选择，共7种：
+`.mp3`、`.wav`、`.aac`、`.flac`、`.ogg`、`.m4a`、`.amr`
+
+- 字幕文件扩展名，支持以下选择，共2种：
+`.vtt`、`.srt`
+
+- `*`：支持任意文件格式
+
+- 不传或者传空列表：支持系统预设文件格式（视频：`.mp4`、`.ts`、`.flv`、`.wmv`、`.asf`、`.rm`、`.rmvb`、`.mpg`、`.mpeg`、`.3gp`、`.mov`、`.webm`、`.mkv`、`.avi`、`.m4v`，音频：`.mp3`、`.m4a`、`.flac`、`.ogg`、`.wav`、`.amr`、`.aac`，字幕：`.vtt`、`.srt`）
+
+**注意**：
+1. 如果传入的格式列表中有`*`则表示为支持任意文件格式。
+2. 扩展名传入时带不带`.`都可以，比如 `.mp4` 或 `mp4` 均支持。
+3. 自定义文件扩展名需满足数字、字母字符，长度在[1,64]范围内。
      */
     public $Formats;
 
@@ -55,7 +109,25 @@ class CosFileUploadTrigger extends AbstractModel
      * @param string $Bucket 工作流绑定的 COS Bucket 名，如 TopRankVideo-125xxx88。
      * @param string $Region 工作流绑定的 COS Bucket 所属园区，如 ap-chongiqng。
      * @param string $Dir 工作流绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。
-     * @param array $Formats 工作流允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。
+     * @param array $Formats 支持的所有格式如下：
+
+- 视频文件扩展名，支持以下选择，共15种：
+`.mp4`、`.avi`、`.mov`、`.wmv`、`.flv`、`.mkv`、`.mpg`、`.mpeg`、`.rm`、`.rmvb`、`.asf`、`.3gp`、`.webm`、`.ts`、`.m4v`
+
+- 音频文件扩展名，支持以下选择，共7种：
+`.mp3`、`.wav`、`.aac`、`.flac`、`.ogg`、`.m4a`、`.amr`
+
+- 字幕文件扩展名，支持以下选择，共2种：
+`.vtt`、`.srt`
+
+- `*`：支持任意文件格式
+
+- 不传或者传空列表：支持系统预设文件格式（视频：`.mp4`、`.ts`、`.flv`、`.wmv`、`.asf`、`.rm`、`.rmvb`、`.mpg`、`.mpeg`、`.3gp`、`.mov`、`.webm`、`.mkv`、`.avi`、`.m4v`，音频：`.mp3`、`.m4a`、`.flac`、`.ogg`、`.wav`、`.amr`、`.aac`，字幕：`.vtt`、`.srt`）
+
+**注意**：
+1. 如果传入的格式列表中有`*`则表示为支持任意文件格式。
+2. 扩展名传入时带不带`.`都可以，比如 `.mp4` 或 `mp4` 均支持。
+3. 自定义文件扩展名需满足数字、字母字符，长度在[1,64]范围内。
      */
     function __construct()
     {

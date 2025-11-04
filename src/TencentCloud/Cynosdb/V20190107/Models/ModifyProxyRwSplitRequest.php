@@ -68,6 +68,10 @@ SessionConnectionPool
 可选范围:0~300（秒）
  * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) 设置连接池时间。
 可选范围:0~300（秒）
+ * @method boolean getApNodeAsRoNode() 获取是否将libra节点当作普通RO节点
+ * @method void setApNodeAsRoNode(boolean $ApNodeAsRoNode) 设置是否将libra节点当作普通RO节点
+ * @method boolean getApQueryToOtherNode() 获取libra节点故障，是否转发给其他节点
+ * @method void setApQueryToOtherNode(boolean $ApQueryToOtherNode) 设置libra节点故障，是否转发给其他节点
  */
 class ModifyProxyRwSplitRequest extends AbstractModel
 {
@@ -156,6 +160,16 @@ SessionConnectionPool
     public $ConnectionPoolTimeOut;
 
     /**
+     * @var boolean 是否将libra节点当作普通RO节点
+     */
+    public $ApNodeAsRoNode;
+
+    /**
+     * @var boolean libra节点故障，是否转发给其他节点
+     */
+    public $ApQueryToOtherNode;
+
+    /**
      * @param string $ClusterId 集群ID，例如cynosdbmysql-asd123
      * @param string $ProxyGroupId 数据库代理组ID，例如cynosdbmysql-proxy-qwe123
      * @param string $ConsistencyType 一致性类型；“eventual"-最终一致性, "session"-会话一致性, "global"-全局一致性
@@ -180,6 +194,8 @@ yes,no
 SessionConnectionPool
      * @param integer $ConnectionPoolTimeOut 连接池时间。
 可选范围:0~300（秒）
+     * @param boolean $ApNodeAsRoNode 是否将libra节点当作普通RO节点
+     * @param boolean $ApQueryToOtherNode libra节点故障，是否转发给其他节点
      */
     function __construct()
     {
@@ -257,6 +273,14 @@ SessionConnectionPool
 
         if (array_key_exists("ConnectionPoolTimeOut",$param) and $param["ConnectionPoolTimeOut"] !== null) {
             $this->ConnectionPoolTimeOut = $param["ConnectionPoolTimeOut"];
+        }
+
+        if (array_key_exists("ApNodeAsRoNode",$param) and $param["ApNodeAsRoNode"] !== null) {
+            $this->ApNodeAsRoNode = $param["ApNodeAsRoNode"];
+        }
+
+        if (array_key_exists("ApQueryToOtherNode",$param) and $param["ApQueryToOtherNode"] !== null) {
+            $this->ApQueryToOtherNode = $param["ApQueryToOtherNode"];
         }
     }
 }

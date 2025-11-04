@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDnsServers(array $DnsServers) 设置DNS地址，最多支持4个，第1个默认为主，其余为备。
  * @method string getDomainName() 获取域名。
  * @method void setDomainName(string $DomainName) 设置域名。
+ * @method boolean getEnableRouteVpcPublish() 获取vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
+ * @method void setEnableRouteVpcPublish(boolean $EnableRouteVpcPublish) 设置vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
  * @method boolean getEnableCdcPublish() 获取发布cdc 子网到云联网的开关。true: 发布, false: 不发布。
  * @method void setEnableCdcPublish(boolean $EnableCdcPublish) 设置发布cdc 子网到云联网的开关。true: 发布, false: 不发布。
  */
@@ -61,6 +63,11 @@ class ModifyVpcAttributeRequest extends AbstractModel
     public $DomainName;
 
     /**
+     * @var boolean vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
+     */
+    public $EnableRouteVpcPublish;
+
+    /**
      * @var boolean 发布cdc 子网到云联网的开关。true: 发布, false: 不发布。
      */
     public $EnableCdcPublish;
@@ -71,6 +78,7 @@ class ModifyVpcAttributeRequest extends AbstractModel
      * @param string $EnableMulticast 是否开启组播。true: 开启, false: 关闭。
      * @param array $DnsServers DNS地址，最多支持4个，第1个默认为主，其余为备。
      * @param string $DomainName 域名。
+     * @param boolean $EnableRouteVpcPublish vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
      * @param boolean $EnableCdcPublish 发布cdc 子网到云联网的开关。true: 发布, false: 不发布。
      */
     function __construct()
@@ -104,6 +112,10 @@ class ModifyVpcAttributeRequest extends AbstractModel
 
         if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
             $this->DomainName = $param["DomainName"];
+        }
+
+        if (array_key_exists("EnableRouteVpcPublish",$param) and $param["EnableRouteVpcPublish"] !== null) {
+            $this->EnableRouteVpcPublish = $param["EnableRouteVpcPublish"];
         }
 
         if (array_key_exists("EnableCdcPublish",$param) and $param["EnableCdcPublish"] !== null) {

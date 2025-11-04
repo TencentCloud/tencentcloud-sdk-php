@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProtocol() 获取协议
  * @method void setProtocol(string $Protocol) 设置协议
- * @method integer getOriginalPort() 获取原端口
- * @method void setOriginalPort(integer $OriginalPort) 设置原端口
- * @method string getOriginalIp() 获取原IP
- * @method void setOriginalIp(string $OriginalIp) 设置原IP
- * @method integer getTranslationPort() 获取映射端口
- * @method void setTranslationPort(integer $TranslationPort) 设置映射端口
- * @method string getTranslationIp() 获取映射IP
- * @method void setTranslationIp(string $TranslationIp) 设置映射IP
+ * @method integer getOriginalPort() 获取映射前端口
+ * @method void setOriginalPort(integer $OriginalPort) 设置映射前端口
+ * @method string getOriginalIp() 获取映射前IP
+ * @method void setOriginalIp(string $OriginalIp) 设置映射前IP
+ * @method integer getTranslationPort() 获取映射后端口
+ * @method void setTranslationPort(integer $TranslationPort) 设置映射后端口
+ * @method string getTranslationIp() 获取映射后IP
+ * @method void setTranslationIp(string $TranslationIp) 设置映射后IP
  * @method string getDescription() 获取描述
  * @method void setDescription(string $Description) 设置描述
  * @method string getCreateTime() 获取创建时间。
@@ -45,22 +45,22 @@ class PrivateNatDestinationIpPortTranslationNatRule extends AbstractModel
     public $Protocol;
 
     /**
-     * @var integer 原端口
+     * @var integer 映射前端口
      */
     public $OriginalPort;
 
     /**
-     * @var string 原IP
+     * @var string 映射前IP
      */
     public $OriginalIp;
 
     /**
-     * @var integer 映射端口
+     * @var integer 映射后端口
      */
     public $TranslationPort;
 
     /**
-     * @var string 映射IP
+     * @var string 映射后IP
      */
     public $TranslationIp;
 
@@ -81,10 +81,10 @@ class PrivateNatDestinationIpPortTranslationNatRule extends AbstractModel
 
     /**
      * @param string $Protocol 协议
-     * @param integer $OriginalPort 原端口
-     * @param string $OriginalIp 原IP
-     * @param integer $TranslationPort 映射端口
-     * @param string $TranslationIp 映射IP
+     * @param integer $OriginalPort 映射前端口
+     * @param string $OriginalIp 映射前IP
+     * @param integer $TranslationPort 映射后端口
+     * @param string $TranslationIp 映射后IP
      * @param string $Description 描述
      * @param string $CreateTime 创建时间。
      * @param string $UpdateTime 更新时间。

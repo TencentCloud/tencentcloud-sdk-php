@@ -24,11 +24,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLayoutIndex(integer $LayoutIndex) 设置布局Index。
  * @method integer getLayoutTemplateId() 获取布局模板Id。
 有效值[1，20，21，31，32，41]
-当使用布局模版时，无需LayoutParams参数，导播台将使用模版布局参数。
+当使用布局模板时，无需LayoutParams参数，导播台将使用模板布局参数。
 
  * @method void setLayoutTemplateId(integer $LayoutTemplateId) 设置布局模板Id。
 有效值[1，20，21，31，32，41]
-当使用布局模版时，无需LayoutParams参数，导播台将使用模版布局参数。
+当使用布局模板时，无需LayoutParams参数，导播台将使用模板布局参数。
 
  * @method string getInputIndexList() 获取布局绑定的输入列表。按布局LayerId从小到大，按顺序排列。
 已有两个画面的布局为例，输入1对应LayerId为1，输入2对应的LayerId为2，该字段应该填入"1|2"。
@@ -57,7 +57,7 @@ class CasterLayoutInfo extends AbstractModel
     /**
      * @var integer 布局模板Id。
 有效值[1，20，21，31，32，41]
-当使用布局模版时，无需LayoutParams参数，导播台将使用模版布局参数。
+当使用布局模板时，无需LayoutParams参数，导播台将使用模板布局参数。
 
      */
     public $LayoutTemplateId;
@@ -90,7 +90,7 @@ class CasterLayoutInfo extends AbstractModel
      * @param integer $LayoutIndex 布局Index。
      * @param integer $LayoutTemplateId 布局模板Id。
 有效值[1，20，21，31，32，41]
-当使用布局模版时，无需LayoutParams参数，导播台将使用模版布局参数。
+当使用布局模板时，无需LayoutParams参数，导播台将使用模板布局参数。
 
      * @param string $InputIndexList 布局绑定的输入列表。按布局LayerId从小到大，按顺序排列。
 已有两个画面的布局为例，输入1对应LayerId为1，输入2对应的LayerId为2，该字段应该填入"1|2"。

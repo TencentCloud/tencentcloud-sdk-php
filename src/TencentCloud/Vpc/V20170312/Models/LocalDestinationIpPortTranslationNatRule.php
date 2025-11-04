@@ -20,43 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 本端目的IP端口转换复杂结构
  *
- * @method string getProtocol() 获取协议
- * @method void setProtocol(string $Protocol) 设置协议
- * @method integer getOriginalPort() 获取源端口
- * @method void setOriginalPort(integer $OriginalPort) 设置源端口
- * @method string getOriginalIp() 获取源IP
- * @method void setOriginalIp(string $OriginalIp) 设置源IP
- * @method integer getTranslationPort() 获取目的端口
- * @method void setTranslationPort(integer $TranslationPort) 设置目的端口
- * @method string getTranslationIp() 获取目的IP
- * @method void setTranslationIp(string $TranslationIp) 设置目的IP
+ * @method string getProtocol() 获取协议，包含TCP和UDP
+ * @method void setProtocol(string $Protocol) 设置协议，包含TCP和UDP
+ * @method integer getOriginalPort() 获取映射前端口
+ * @method void setOriginalPort(integer $OriginalPort) 设置映射前端口
+ * @method string getOriginalIp() 获取映射前IP
+ * @method void setOriginalIp(string $OriginalIp) 设置映射前IP
+ * @method integer getTranslationPort() 获取映射后端口
+ * @method void setTranslationPort(integer $TranslationPort) 设置映射后端口
+ * @method string getTranslationIp() 获取映射后IP
+ * @method void setTranslationIp(string $TranslationIp) 设置映射后IP
  * @method string getDescription() 获取描述
  * @method void setDescription(string $Description) 设置描述
  */
 class LocalDestinationIpPortTranslationNatRule extends AbstractModel
 {
     /**
-     * @var string 协议
+     * @var string 协议，包含TCP和UDP
      */
     public $Protocol;
 
     /**
-     * @var integer 源端口
+     * @var integer 映射前端口
      */
     public $OriginalPort;
 
     /**
-     * @var string 源IP
+     * @var string 映射前IP
      */
     public $OriginalIp;
 
     /**
-     * @var integer 目的端口
+     * @var integer 映射后端口
      */
     public $TranslationPort;
 
     /**
-     * @var string 目的IP
+     * @var string 映射后IP
      */
     public $TranslationIp;
 
@@ -66,11 +66,11 @@ class LocalDestinationIpPortTranslationNatRule extends AbstractModel
     public $Description;
 
     /**
-     * @param string $Protocol 协议
-     * @param integer $OriginalPort 源端口
-     * @param string $OriginalIp 源IP
-     * @param integer $TranslationPort 目的端口
-     * @param string $TranslationIp 目的IP
+     * @param string $Protocol 协议，包含TCP和UDP
+     * @param integer $OriginalPort 映射前端口
+     * @param string $OriginalIp 映射前IP
+     * @param integer $TranslationPort 映射后端口
+     * @param string $TranslationIp 映射后IP
      * @param string $Description 描述
      */
     function __construct()

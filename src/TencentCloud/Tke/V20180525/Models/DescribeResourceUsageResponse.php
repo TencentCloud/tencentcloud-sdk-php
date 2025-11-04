@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method ResourceUsage getCRDUsage() 获取CRD使用量
  * @method void setCRDUsage(ResourceUsage $CRDUsage) 设置CRD使用量
- * @method integer getPodUsage() 获取Pod使用量
- * @method void setPodUsage(integer $PodUsage) 设置Pod使用量
- * @method integer getRSUsage() 获取ReplicaSet使用量
- * @method void setRSUsage(integer $RSUsage) 设置ReplicaSet使用量
- * @method integer getConfigMapUsage() 获取ConfigMap使用量
- * @method void setConfigMapUsage(integer $ConfigMapUsage) 设置ConfigMap使用量
+ * @method integer getPodUsage() 获取Pod使用量，单位：个数
+ * @method void setPodUsage(integer $PodUsage) 设置Pod使用量，单位：个数
+ * @method integer getRSUsage() 获取ReplicaSet使用量，单位：个数
+ * @method void setRSUsage(integer $RSUsage) 设置ReplicaSet使用量，单位：个数
+ * @method integer getConfigMapUsage() 获取ConfigMap使用量，单位：个数
+ * @method void setConfigMapUsage(integer $ConfigMapUsage) 设置ConfigMap使用量，单位：个数
  * @method ResourceUsage getOtherUsage() 获取其他资源使用量
  * @method void setOtherUsage(ResourceUsage $OtherUsage) 设置其他资源使用量
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -41,17 +41,17 @@ class DescribeResourceUsageResponse extends AbstractModel
     public $CRDUsage;
 
     /**
-     * @var integer Pod使用量
+     * @var integer Pod使用量，单位：个数
      */
     public $PodUsage;
 
     /**
-     * @var integer ReplicaSet使用量
+     * @var integer ReplicaSet使用量，单位：个数
      */
     public $RSUsage;
 
     /**
-     * @var integer ConfigMap使用量
+     * @var integer ConfigMap使用量，单位：个数
      */
     public $ConfigMapUsage;
 
@@ -67,9 +67,9 @@ class DescribeResourceUsageResponse extends AbstractModel
 
     /**
      * @param ResourceUsage $CRDUsage CRD使用量
-     * @param integer $PodUsage Pod使用量
-     * @param integer $RSUsage ReplicaSet使用量
-     * @param integer $ConfigMapUsage ConfigMap使用量
+     * @param integer $PodUsage Pod使用量，单位：个数
+     * @param integer $RSUsage ReplicaSet使用量，单位：个数
+     * @param integer $ConfigMapUsage ConfigMap使用量，单位：个数
      * @param ResourceUsage $OtherUsage 其他资源使用量
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

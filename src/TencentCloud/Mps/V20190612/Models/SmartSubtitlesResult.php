@@ -20,12 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 智能字幕结果。
  *
- * @method string getType() 获取任务的类型，取值范围： 
-<li>AsrFullTextRecognition：语音全文识别，</li> 
-<li>TransTextRecognition：语音翻译。</li>
- * @method void setType(string $Type) 设置任务的类型，取值范围： 
-<li>AsrFullTextRecognition：语音全文识别，</li> 
-<li>TransTextRecognition：语音翻译。</li>
+ * @method string getType() 获取任务的类型，取值范围：
+- AsrFullTextRecognition：语音全文识别
+- TransTextRecognition：语音翻译
+- PureSubtitleTrans:   纯字幕翻译
+ * @method void setType(string $Type) 设置任务的类型，取值范围：
+- AsrFullTextRecognition：语音全文识别
+- TransTextRecognition：语音翻译
+- PureSubtitleTrans:   纯字幕翻译
  * @method SmartSubtitleTaskAsrFullTextResult getAsrFullTextTask() 获取语音全文识别结果，当 Type 为
  AsrFullTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -40,13 +42,18 @@ TransTextRecognition 时有效。
 
 TransTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method PureSubtitleTransResult getPureSubtitleTransTask() 获取当翻译类型为：PureSubtitleTrans 是返回纯字幕文件翻译结果。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPureSubtitleTransTask(PureSubtitleTransResult $PureSubtitleTransTask) 设置当翻译类型为：PureSubtitleTrans 是返回纯字幕文件翻译结果。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SmartSubtitlesResult extends AbstractModel
 {
     /**
-     * @var string 任务的类型，取值范围： 
-<li>AsrFullTextRecognition：语音全文识别，</li> 
-<li>TransTextRecognition：语音翻译。</li>
+     * @var string 任务的类型，取值范围：
+- AsrFullTextRecognition：语音全文识别
+- TransTextRecognition：语音翻译
+- PureSubtitleTrans:   纯字幕翻译
      */
     public $Type;
 
@@ -66,15 +73,24 @@ TransTextRecognition 时有效。
     public $TransTextTask;
 
     /**
-     * @param string $Type 任务的类型，取值范围： 
-<li>AsrFullTextRecognition：语音全文识别，</li> 
-<li>TransTextRecognition：语音翻译。</li>
+     * @var PureSubtitleTransResult 当翻译类型为：PureSubtitleTrans 是返回纯字幕文件翻译结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PureSubtitleTransTask;
+
+    /**
+     * @param string $Type 任务的类型，取值范围：
+- AsrFullTextRecognition：语音全文识别
+- TransTextRecognition：语音翻译
+- PureSubtitleTrans:   纯字幕翻译
      * @param SmartSubtitleTaskAsrFullTextResult $AsrFullTextTask 语音全文识别结果，当 Type 为
  AsrFullTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SmartSubtitleTaskTransTextResult $TransTextTask 翻译结果，当 Type 为
 
 TransTextRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PureSubtitleTransResult $PureSubtitleTransTask 当翻译类型为：PureSubtitleTrans 是返回纯字幕文件翻译结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -102,6 +118,11 @@ TransTextRecognition 时有效。
         if (array_key_exists("TransTextTask",$param) and $param["TransTextTask"] !== null) {
             $this->TransTextTask = new SmartSubtitleTaskTransTextResult();
             $this->TransTextTask->deserialize($param["TransTextTask"]);
+        }
+
+        if (array_key_exists("PureSubtitleTransTask",$param) and $param["PureSubtitleTransTask"] !== null) {
+            $this->PureSubtitleTransTask = new PureSubtitleTransResult();
+            $this->PureSubtitleTransTask->deserialize($param["PureSubtitleTransTask"]);
         }
     }
 }

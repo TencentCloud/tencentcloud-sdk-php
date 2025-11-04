@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cdb-XXXX。与云数据库控制台页面中显示的实例 ID 相同。
  * @method string getEncryptionStatus() 获取设置实例新增的自动物理备份文件默认加密状态。可选值为 on或者off。
  * @method void setEncryptionStatus(string $EncryptionStatus) 设置设置实例新增的自动物理备份文件默认加密状态。可选值为 on或者off。
+ * @method string getBinlogEncryptionStatus() 获取设置实例新增的自动日志备份文件默认加密状态。可选值为 on或者off。
+ * @method void setBinlogEncryptionStatus(string $BinlogEncryptionStatus) 设置设置实例新增的自动日志备份文件默认加密状态。可选值为 on或者off。
  */
 class ModifyBackupEncryptionStatusRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ModifyBackupEncryptionStatusRequest extends AbstractModel
     public $EncryptionStatus;
 
     /**
+     * @var string 设置实例新增的自动日志备份文件默认加密状态。可选值为 on或者off。
+     */
+    public $BinlogEncryptionStatus;
+
+    /**
      * @param string $InstanceId 实例ID，格式如：cdb-XXXX。与云数据库控制台页面中显示的实例 ID 相同。
      * @param string $EncryptionStatus 设置实例新增的自动物理备份文件默认加密状态。可选值为 on或者off。
+     * @param string $BinlogEncryptionStatus 设置实例新增的自动日志备份文件默认加密状态。可选值为 on或者off。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyBackupEncryptionStatusRequest extends AbstractModel
 
         if (array_key_exists("EncryptionStatus",$param) and $param["EncryptionStatus"] !== null) {
             $this->EncryptionStatus = $param["EncryptionStatus"];
+        }
+
+        if (array_key_exists("BinlogEncryptionStatus",$param) and $param["BinlogEncryptionStatus"] !== null) {
+            $this->BinlogEncryptionStatus = $param["BinlogEncryptionStatus"];
         }
     }
 }

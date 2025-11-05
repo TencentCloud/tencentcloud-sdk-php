@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群 ID。调用[DescribeSimpleClusters](https://cloud.tencent.com/document/api/649/36047)查询已创建的集群或通过[CreateCluster](https://cloud.tencent.com/document/api/649/36049)接口创建新的集群。
  * @method void setClusterId(string $ClusterId) 设置集群 ID。调用[DescribeSimpleClusters](https://cloud.tencent.com/document/api/649/36047)查询已创建的集群或通过[CreateCluster](https://cloud.tencent.com/document/api/649/36049)接口创建新的集群。
- * @method array getInstanceIdList() 获取云主机 ID 列表
- * @method void setInstanceIdList(array $InstanceIdList) 设置云主机 ID 列表
+ * @method array getInstanceIdList() 获取云主机 ID 列表，调用[DescribeInstances](https://cloud.tencent.com/document/api/649/72342)查询已有的云主机列表
+ * @method void setInstanceIdList(array $InstanceIdList) 设置云主机 ID 列表，调用[DescribeInstances](https://cloud.tencent.com/document/api/649/72342)查询已有的云主机列表
  */
 class RemoveInstancesRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class RemoveInstancesRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array 云主机 ID 列表
+     * @var array 云主机 ID 列表，调用[DescribeInstances](https://cloud.tencent.com/document/api/649/72342)查询已有的云主机列表
      */
     public $InstanceIdList;
 
     /**
      * @param string $ClusterId 集群 ID。调用[DescribeSimpleClusters](https://cloud.tencent.com/document/api/649/36047)查询已创建的集群或通过[CreateCluster](https://cloud.tencent.com/document/api/649/36049)接口创建新的集群。
-     * @param array $InstanceIdList 云主机 ID 列表
+     * @param array $InstanceIdList 云主机 ID 列表，调用[DescribeInstances](https://cloud.tencent.com/document/api/649/72342)查询已有的云主机列表
      */
     function __construct()
     {

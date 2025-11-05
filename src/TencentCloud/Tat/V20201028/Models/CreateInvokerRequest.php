@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScheduleSettings(ScheduleSettings $ScheduleSettings) 设置周期执行器设置。
 
 当执行器类型为 `SCHEDULE` 时，必须指定此参数。
+ * @method array getTags() 获取为命令关联的标签，列表长度不超过10
+ * @method void setTags(array $Tags) 设置为命令关联的标签，列表长度不超过10
  */
 class CreateInvokerRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class CreateInvokerRequest extends AbstractModel
     public $ScheduleSettings;
 
     /**
+     * @var array 为命令关联的标签，列表长度不超过10
+     */
+    public $Tags;
+
+    /**
      * @param string $Name 执行器名称。长度不超过 120 字符。
      * @param string $Type 执行器类型。
 
@@ -136,6 +143,7 @@ class CreateInvokerRequest extends AbstractModel
      * @param ScheduleSettings $ScheduleSettings 周期执行器设置。
 
 当执行器类型为 `SCHEDULE` 时，必须指定此参数。
+     * @param array $Tags 为命令关联的标签，列表长度不超过10
      */
     function __construct()
     {
@@ -177,6 +185,15 @@ class CreateInvokerRequest extends AbstractModel
         if (array_key_exists("ScheduleSettings",$param) and $param["ScheduleSettings"] !== null) {
             $this->ScheduleSettings = new ScheduleSettings();
             $this->ScheduleSettings->deserialize($param["ScheduleSettings"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

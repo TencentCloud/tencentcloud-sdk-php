@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrpcFunc(string $TrpcFunc) 设置TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放。
  * @method OAuth getOAuth() 获取OAuth配置信息。
  * @method void setOAuth(OAuth $OAuth) 设置OAuth配置信息。
+ * @method string getCookieName() 获取自定义cookie名
+ * @method void setCookieName(string $CookieName) 设置自定义cookie名
  */
 class ModifyRuleRequest extends AbstractModel
 {
@@ -107,6 +109,11 @@ class ModifyRuleRequest extends AbstractModel
     public $OAuth;
 
     /**
+     * @var string 自定义cookie名
+     */
+    public $CookieName;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
      * @param string $ListenerId 负载均衡监听器 ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口获取。
      * @param string $LocationId 要修改的转发规则的 ID， 可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口获取。
@@ -120,6 +127,7 @@ class ModifyRuleRequest extends AbstractModel
      * @param string $TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。
      * @param string $TrpcFunc TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放。
      * @param OAuth $OAuth OAuth配置信息。
+     * @param string $CookieName 自定义cookie名
      */
     function __construct()
     {
@@ -178,6 +186,10 @@ class ModifyRuleRequest extends AbstractModel
         if (array_key_exists("OAuth",$param) and $param["OAuth"] !== null) {
             $this->OAuth = new OAuth();
             $this->OAuth->deserialize($param["OAuth"]);
+        }
+
+        if (array_key_exists("CookieName",$param) and $param["CookieName"] !== null) {
+            $this->CookieName = $param["CookieName"];
         }
     }
 }

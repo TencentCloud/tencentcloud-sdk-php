@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gme\V20180711\Models;
+namespace TencentCloud\Ccc\V20200210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAuditResultExternal返回参数结构体
+ * DescribeAIAgentInfoList返回参数结构体
  *
- * @method integer getTotalCount() 获取总数
- * @method void setTotalCount(integer $TotalCount) 设置总数
- * @method array getData() 获取明细列表
- * @method void setData(array $Data) 设置明细列表
+ * @method array getAIAgentInfoList() 获取智能体信息列表
+ * @method void setAIAgentInfoList(array $AIAgentInfoList) 设置智能体信息列表
+ * @method integer getTotalCount() 获取智能体总数量
+ * @method void setTotalCount(integer $TotalCount) 设置智能体总数量
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeAuditResultExternalResponse extends AbstractModel
+class DescribeAIAgentInfoListResponse extends AbstractModel
 {
     /**
-     * @var integer 总数
+     * @var array 智能体信息列表
      */
-    public $TotalCount;
+    public $AIAgentInfoList;
 
     /**
-     * @var array 明细列表
+     * @var integer 智能体总数量
      */
-    public $Data;
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class DescribeAuditResultExternalResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 总数
-     * @param array $Data 明细列表
+     * @param array $AIAgentInfoList 智能体信息列表
+     * @param integer $TotalCount 智能体总数量
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +62,17 @@ class DescribeAuditResultExternalResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("AIAgentInfoList",$param) and $param["AIAgentInfoList"] !== null) {
+            $this->AIAgentInfoList = [];
+            foreach ($param["AIAgentInfoList"] as $key => $value){
+                $obj = new AIAgentInfo();
+                $obj->deserialize($value);
+                array_push($this->AIAgentInfoList, $obj);
+            }
         }
 
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new AuditResultDetailExternal();
-                $obj->deserialize($value);
-                array_push($this->Data, $obj);
-            }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

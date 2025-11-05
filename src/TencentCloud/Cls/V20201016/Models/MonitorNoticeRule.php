@@ -18,7 +18,7 @@ namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 云监控通知渠道组信息
+ * 腾讯云可观测平台通知渠道组信息
  *
  * @method string getNoticeId() 获取腾讯云可观测平台通知模板 ID
  * @method void setNoticeId(string $NoticeId) 设置腾讯云可观测平台通知模板 ID

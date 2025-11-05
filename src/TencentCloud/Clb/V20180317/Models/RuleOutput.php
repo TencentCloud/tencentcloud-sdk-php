@@ -76,6 +76,8 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
 注意：此字段可能返回 null，表示取不到有效值。
  * @method OAuth getOAuth() 获取OAuth配置状态信息。
  * @method void setOAuth(OAuth $OAuth) 设置OAuth配置状态信息。
+ * @method string getCookieName() 获取自定义cookie名。
+ * @method void setCookieName(string $CookieName) 设置自定义cookie名。
  */
 class RuleOutput extends AbstractModel
 {
@@ -204,6 +206,11 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
     public $OAuth;
 
     /**
+     * @var string 自定义cookie名。
+     */
+    public $CookieName;
+
+    /**
      * @param string $LocationId 转发规则的 ID
      * @param string $Domain 转发规则的域名。
      * @param string $Url 转发规则的路径。
@@ -232,6 +239,7 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
      * @param array $TargetGroupList 绑定的目标组列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OAuth $OAuth OAuth配置状态信息。
+     * @param string $CookieName 自定义cookie名。
      */
     function __construct()
     {
@@ -350,6 +358,10 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
         if (array_key_exists("OAuth",$param) and $param["OAuth"] !== null) {
             $this->OAuth = new OAuth();
             $this->OAuth->deserialize($param["OAuth"]);
+        }
+
+        if (array_key_exists("CookieName",$param) and $param["CookieName"] !== null) {
+            $this->CookieName = $param["CookieName"];
         }
     }
 }

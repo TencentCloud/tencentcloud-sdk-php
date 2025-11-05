@@ -56,7 +56,7 @@ use TencentCloud\Cfs\V20190719\Models as Models;
  * @method Models\DescribeCfsSnapshotOverviewResponse DescribeCfsSnapshotOverview(Models\DescribeCfsSnapshotOverviewRequest $req) 文件系统快照概览
  * @method Models\DescribeCfsSnapshotsResponse DescribeCfsSnapshots(Models\DescribeCfsSnapshotsRequest $req) 查询文件系统快照列表
  * @method Models\DescribeDataFlowResponse DescribeDataFlow(Models\DescribeDataFlowRequest $req) 查询数据流动信息接口
- * @method Models\DescribeLifecycleDataTaskResponse DescribeLifecycleDataTask(Models\DescribeLifecycleDataTaskRequest $req) 查询生命周期任务的接口
+ * @method Models\DescribeLifecycleDataTaskResponse DescribeLifecycleDataTask(Models\DescribeLifecycleDataTaskRequest $req) 查询生命周期任务的接口。仅支持查询最近三个月内的任务数据。
  * @method Models\DescribeLifecyclePoliciesResponse DescribeLifecyclePolicies(Models\DescribeLifecyclePoliciesRequest $req) 查询生命周期管理策略
  * @method Models\DescribeMigrationTasksResponse DescribeMigrationTasks(Models\DescribeMigrationTasksRequest $req) 用于获取迁移任务列表。
 此接口需提交工单，开启白名单之后才能使用。

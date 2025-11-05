@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置MCP Server备注。最大长度：2048
  * @method array getEnvs() 获取MCP Server环境变量。最大长度：10
  * @method void setEnvs(array $Envs) 设置MCP Server环境变量。最大长度：10
+ * @method string getTransportType() 获取传输类型。枚举值如下：
+
+<li>STREAMABLE_HTTP：HTTP协议的流式传输方式。未传传输类型字段时，默认创建此类型的MCP Server</li>
+<li>SSE：Server-Sent Events，服务器发送事件</li>
+ * @method void setTransportType(string $TransportType) 设置传输类型。枚举值如下：
+
+<li>STREAMABLE_HTTP：HTTP协议的流式传输方式。未传传输类型字段时，默认创建此类型的MCP Server</li>
+<li>SSE：Server-Sent Events，服务器发送事件</li>
  */
 class CreateMcpServerRequest extends AbstractModel
 {
@@ -59,11 +67,23 @@ class CreateMcpServerRequest extends AbstractModel
     public $Envs;
 
     /**
+     * @var string 传输类型。枚举值如下：
+
+<li>STREAMABLE_HTTP：HTTP协议的流式传输方式。未传传输类型字段时，默认创建此类型的MCP Server</li>
+<li>SSE：Server-Sent Events，服务器发送事件</li>
+     */
+    public $TransportType;
+
+    /**
      * @param string $InstanceId 实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
      * @param string $Name MCP Server名称。最大长度：64
      * @param string $Command Base64编码后的MCP Server启动命令。最大长度：2048
      * @param string $Description MCP Server备注。最大长度：2048
      * @param array $Envs MCP Server环境变量。最大长度：10
+     * @param string $TransportType 传输类型。枚举值如下：
+
+<li>STREAMABLE_HTTP：HTTP协议的流式传输方式。未传传输类型字段时，默认创建此类型的MCP Server</li>
+<li>SSE：Server-Sent Events，服务器发送事件</li>
      */
     function __construct()
     {
@@ -101,6 +121,10 @@ class CreateMcpServerRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Envs, $obj);
             }
+        }
+
+        if (array_key_exists("TransportType",$param) and $param["TransportType"] !== null) {
+            $this->TransportType = $param["TransportType"];
         }
     }
 }

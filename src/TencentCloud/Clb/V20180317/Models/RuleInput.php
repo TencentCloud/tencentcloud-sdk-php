@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomains(array $Domains) 设置转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
  * @method MultiCertInfo getMultiCertInfo() 获取证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。
  * @method void setMultiCertInfo(MultiCertInfo $MultiCertInfo) 设置证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。
+ * @method string getCookieName() 获取自定义cookie名
+ * @method void setCookieName(string $CookieName) 设置自定义cookie名
  */
 class RuleInput extends AbstractModel
 {
@@ -132,6 +134,11 @@ class RuleInput extends AbstractModel
     public $MultiCertInfo;
 
     /**
+     * @var string 自定义cookie名
+     */
+    public $CookieName;
+
+    /**
      * @param string $Url 转发规则的路径。长度限制为：1~200。
      * @param string $Domain 转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
      * @param integer $SessionExpireTime 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。
@@ -148,6 +155,7 @@ class RuleInput extends AbstractModel
      * @param boolean $Quic 是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
      * @param array $Domains 转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
      * @param MultiCertInfo $MultiCertInfo 证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。
+     * @param string $CookieName 自定义cookie名
      */
     function __construct()
     {
@@ -223,6 +231,10 @@ class RuleInput extends AbstractModel
         if (array_key_exists("MultiCertInfo",$param) and $param["MultiCertInfo"] !== null) {
             $this->MultiCertInfo = new MultiCertInfo();
             $this->MultiCertInfo->deserialize($param["MultiCertInfo"]);
+        }
+
+        if (array_key_exists("CookieName",$param) and $param["CookieName"] !== null) {
+            $this->CookieName = $param["CookieName"];
         }
     }
 }

@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpaceCount(integer $SpaceCount) 设置购买工作空间实例的数量
  * @method string getSpaceName() 获取工作空间显示名称
  * @method void setSpaceName(string $SpaceName) 设置工作空间显示名称
- * @method LoginSettings getLoginSettings() 获取工作空间登陆设置
- * @method void setLoginSettings(LoginSettings $LoginSettings) 设置工作空间登陆设置
+ * @method LoginSettings getLoginSettings() 获取工作空间登录设置
+ * @method void setLoginSettings(LoginSettings $LoginSettings) 设置工作空间登录设置
  * @method array getSecurityGroupIds() 获取工作空间所属安全组
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置工作空间所属安全组
  * @method EnhancedService getEnhancedService() 获取增强服务
@@ -128,7 +128,7 @@ class CreateWorkspacesRequest extends AbstractModel
     public $SpaceName;
 
     /**
-     * @var LoginSettings 工作空间登陆设置
+     * @var LoginSettings 工作空间登录设置
      */
     public $LoginSettings;
 
@@ -190,7 +190,7 @@ class CreateWorkspacesRequest extends AbstractModel
      * @param SpaceInternetAccessible $InternetAccessible 公网带宽相关信息设置
      * @param integer $SpaceCount 购买工作空间实例的数量
      * @param string $SpaceName 工作空间显示名称
-     * @param LoginSettings $LoginSettings 工作空间登陆设置
+     * @param LoginSettings $LoginSettings 工作空间登录设置
      * @param array $SecurityGroupIds 工作空间所属安全组
      * @param EnhancedService $EnhancedService 增强服务
      * @param boolean $DryRun 是否只预检此次请求

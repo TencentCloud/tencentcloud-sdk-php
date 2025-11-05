@@ -57,6 +57,7 @@ use TencentCloud\Ccc\V20200210\Models as Models;
  * @method Models\DeleteExtensionResponse DeleteExtension(Models\DeleteExtensionRequest $req) 删除话机账号
  * @method Models\DeletePredictiveDialingCampaignResponse DeletePredictiveDialingCampaign(Models\DeletePredictiveDialingCampaignRequest $req) 删除预测式外呼任务
  * @method Models\DeleteStaffResponse DeleteStaff(Models\DeleteStaffRequest $req) 删除坐席信息
+ * @method Models\DescribeAIAgentInfoListResponse DescribeAIAgentInfoList(Models\DescribeAIAgentInfoListRequest $req) 获取智能体列表
  * @method Models\DescribeAIAnalysisResultResponse DescribeAIAnalysisResult(Models\DescribeAIAnalysisResultRequest $req) 获取 AI 会话分析结果
  * @method Models\DescribeAICallExtractResultResponse DescribeAICallExtractResult(Models\DescribeAICallExtractResultRequest $req) 获取 AI 通话内容提取结果。
  * @method Models\DescribeAILatencyResponse DescribeAILatency(Models\DescribeAILatencyRequest $req) 获取 AI 时延信息

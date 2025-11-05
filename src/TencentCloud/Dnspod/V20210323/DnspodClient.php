@@ -27,8 +27,6 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\CheckSnapshotRollbackResponse CheckSnapshotRollback(Models\CheckSnapshotRollbackRequest $req) 快照回滚前检查
  * @method Models\CreateDealResponse CreateDeal(Models\CreateDealRequest $req) DNSPod商品下单
  * @method Models\CreateDomainResponse CreateDomain(Models\CreateDomainRequest $req) 添加域名
-
-备注：该接口不支持添加子域名。
  * @method Models\CreateDomainAliasResponse CreateDomainAlias(Models\CreateDomainAliasRequest $req) 创建域名别名
  * @method Models\CreateDomainBatchResponse CreateDomainBatch(Models\CreateDomainBatchRequest $req) 批量添加域名
  * @method Models\CreateDomainCustomLineResponse CreateDomainCustomLine(Models\CreateDomainCustomLineRequest $req) 创建域名的自定义线路
@@ -102,9 +100,11 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\DescribeVASStatisticResponse DescribeVASStatistic(Models\DescribeVASStatisticRequest $req) 获取域名增值服务用量
  * @method Models\DescribeVasListResponse DescribeVasList(Models\DescribeVasListRequest $req) 获取增值服务列表
  * @method Models\DownloadSnapshotResponse DownloadSnapshot(Models\DownloadSnapshotRequest $req) 下载快照
+ * @method Models\ModifyDomainCNAMESpeedupStatusBatchResponse ModifyDomainCNAMESpeedupStatusBatch(Models\ModifyDomainCNAMESpeedupStatusBatchRequest $req) 批量修改域名CNAME加速状态
  * @method Models\ModifyDomainCustomLineResponse ModifyDomainCustomLine(Models\ModifyDomainCustomLineRequest $req) 修改域名的自定义线路
  * @method Models\ModifyDomainLockResponse ModifyDomainLock(Models\ModifyDomainLockRequest $req) 锁定域名
  * @method Models\ModifyDomainOwnerResponse ModifyDomainOwner(Models\ModifyDomainOwnerRequest $req) 域名过户
+ * @method Models\ModifyDomainRecursiveStatusBatchResponse ModifyDomainRecursiveStatusBatch(Models\ModifyDomainRecursiveStatusBatchRequest $req) 批量修改域名递归解析加速状态
  * @method Models\ModifyDomainRemarkResponse ModifyDomainRemark(Models\ModifyDomainRemarkRequest $req) 设置域名备注
  * @method Models\ModifyDomainStatusResponse ModifyDomainStatus(Models\ModifyDomainStatusRequest $req) 修改域名状态
  * @method Models\ModifyDomainToGroupResponse ModifyDomainToGroup(Models\ModifyDomainToGroupRequest $req) 修改域名所属分组

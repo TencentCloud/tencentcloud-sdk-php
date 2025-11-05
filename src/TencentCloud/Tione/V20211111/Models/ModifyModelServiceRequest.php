@@ -132,8 +132,8 @@ HYBRID_PAID:
  * @method void setSidecar(SidecarSpec $Sidecar) 设置sidecar配置
  * @method string getResourceGroupId() 获取资源组 id
  * @method void setResourceGroupId(string $ResourceGroupId) 设置资源组 id
- * @method array getVolumeMounts() 获取数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-资源组缓存”。
- * @method void setVolumeMounts(array $VolumeMounts) 设置数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-资源组缓存”。
+ * @method array getVolumeMounts() 获取数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。
+ * @method void setVolumeMounts(array $VolumeMounts) 设置数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。
  */
 class ModifyModelServiceRequest extends AbstractModel
 {
@@ -326,7 +326,7 @@ HYBRID_PAID:
     public $ResourceGroupId;
 
     /**
-     * @var array 数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-资源组缓存”。
+     * @var array 数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。
      */
     public $VolumeMounts;
 
@@ -387,7 +387,7 @@ HYBRID_PAID:
      * @param RollingUpdate $RollingUpdate 滚动更新策略
      * @param SidecarSpec $Sidecar sidecar配置
      * @param string $ResourceGroupId 资源组 id
-     * @param array $VolumeMounts 数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-资源组缓存”。
+     * @param array $VolumeMounts 数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。
      */
     function __construct()
     {

@@ -20,24 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteClusterInstances请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method array getInstanceIds() 获取主机InstanceId列表
- * @method void setInstanceIds(array $InstanceIds) 设置主机InstanceId列表
+ * @method string getClusterId() 获取集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
+ * @method void setClusterId(string $ClusterId) 设置集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
+ * @method array getInstanceIds() 获取主机 InstanceId 列表
+ * @method void setInstanceIds(array $InstanceIds) 设置主机 InstanceId 列表
  * @method string getInstanceDeleteMode() 获取集群实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例）
  * @method void setInstanceDeleteMode(string $InstanceDeleteMode) 设置集群实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例）
  * @method boolean getForceDelete() 获取是否强制删除(当节点在初始化时，可以指定参数为TRUE)
  * @method void setForceDelete(boolean $ForceDelete) 设置是否强制删除(当节点在初始化时，可以指定参数为TRUE)
+ * @method array getResourceDeleteOptions() 获取集群删除时资源的删除策略，目前支持CBS（默认保留CBS）
+ * @method void setResourceDeleteOptions(array $ResourceDeleteOptions) 设置集群删除时资源的删除策略，目前支持CBS（默认保留CBS）
  */
 class DeleteClusterInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
      */
     public $ClusterId;
 
     /**
-     * @var array 主机InstanceId列表
+     * @var array 主机 InstanceId 列表
      */
     public $InstanceIds;
 
@@ -52,10 +54,16 @@ class DeleteClusterInstancesRequest extends AbstractModel
     public $ForceDelete;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param array $InstanceIds 主机InstanceId列表
+     * @var array 集群删除时资源的删除策略，目前支持CBS（默认保留CBS）
+     */
+    public $ResourceDeleteOptions;
+
+    /**
+     * @param string $ClusterId 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
+     * @param array $InstanceIds 主机 InstanceId 列表
      * @param string $InstanceDeleteMode 集群实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例）
      * @param boolean $ForceDelete 是否强制删除(当节点在初始化时，可以指定参数为TRUE)
+     * @param array $ResourceDeleteOptions 集群删除时资源的删除策略，目前支持CBS（默认保留CBS）
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class DeleteClusterInstancesRequest extends AbstractModel
 
         if (array_key_exists("ForceDelete",$param) and $param["ForceDelete"] !== null) {
             $this->ForceDelete = $param["ForceDelete"];
+        }
+
+        if (array_key_exists("ResourceDeleteOptions",$param) and $param["ResourceDeleteOptions"] !== null) {
+            $this->ResourceDeleteOptions = [];
+            foreach ($param["ResourceDeleteOptions"] as $key => $value){
+                $obj = new ResourceDeleteOption();
+                $obj->deserialize($value);
+                array_push($this->ResourceDeleteOptions, $obj);
+            }
         }
     }
 }

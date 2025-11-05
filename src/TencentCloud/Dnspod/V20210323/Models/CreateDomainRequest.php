@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置域名
  * @method integer getGroupId() 获取域名分组ID。可以通过接口DescribeDomainGroupList查看当前域名分组信息
  * @method void setGroupId(integer $GroupId) 设置域名分组ID。可以通过接口DescribeDomainGroupList查看当前域名分组信息
- * @method string getIsMark() 获取是否星标域名，”yes”、”no” 分别代表是和否。
- * @method void setIsMark(string $IsMark) 设置是否星标域名，”yes”、”no” 分别代表是和否。
+ * @method string getIsMark() 获取是否星标域名，"yes"、"no" 分别代表是和否。
+ * @method void setIsMark(string $IsMark) 设置是否星标域名，"yes"、"no" 分别代表是和否。
  * @method boolean getTransferSubDomain() 获取添加子域名时，是否迁移相关父域名的解析记录。不传默认为 true
  * @method void setTransferSubDomain(boolean $TransferSubDomain) 设置添加子域名时，是否迁移相关父域名的解析记录。不传默认为 true
  * @method array getTags() 获取域名绑定的标签
@@ -44,7 +44,7 @@ class CreateDomainRequest extends AbstractModel
     public $GroupId;
 
     /**
-     * @var string 是否星标域名，”yes”、”no” 分别代表是和否。
+     * @var string 是否星标域名，"yes"、"no" 分别代表是和否。
      */
     public $IsMark;
 
@@ -61,7 +61,7 @@ class CreateDomainRequest extends AbstractModel
     /**
      * @param string $Domain 域名
      * @param integer $GroupId 域名分组ID。可以通过接口DescribeDomainGroupList查看当前域名分组信息
-     * @param string $IsMark 是否星标域名，”yes”、”no” 分别代表是和否。
+     * @param string $IsMark 是否星标域名，"yes"、"no" 分别代表是和否。
      * @param boolean $TransferSubDomain 添加子域名时，是否迁移相关父域名的解析记录。不传默认为 true
      * @param array $Tags 域名绑定的标签
      */

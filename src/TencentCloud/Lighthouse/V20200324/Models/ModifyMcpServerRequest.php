@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID。可以通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
  * @method void setInstanceId(string $InstanceId) 设置实例ID。可以通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
- * @method string getMcpServerId() 获取MCP Server ID。可以通过DescribeMcpServers接口返回值中的McpServerId获取。
- * @method void setMcpServerId(string $McpServerId) 设置MCP Server ID。可以通过DescribeMcpServers接口返回值中的McpServerId获取。
+ * @method string getMcpServerId() 获取MCP Server ID。可以通[DescribeMcpServers](https://cloud.tencent.com/document/product/1207/122837)接口返回值中的McpServerId获取。
+ * @method void setMcpServerId(string $McpServerId) 设置MCP Server ID。可以通[DescribeMcpServers](https://cloud.tencent.com/document/product/1207/122837)接口返回值中的McpServerId获取。
  * @method string getName() 获取MCP Server名称。最大长度：64
  * @method void setName(string $Name) 设置MCP Server名称。最大长度：64
  * @method string getCommand() 获取Base64编码后的MCP Server启动命令。最大长度：2048
@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置MCP Server备注。最大长度：2048
  * @method array getEnvs() 获取MCP Server环境变量。最大长度：10。用于完整替换MCP Server的环境变量。当该字段为空时，系统将清除当前所有环境变量。若无需修改环境变量，请勿传递该字段。
  * @method void setEnvs(array $Envs) 设置MCP Server环境变量。最大长度：10。用于完整替换MCP Server的环境变量。当该字段为空时，系统将清除当前所有环境变量。若无需修改环境变量，请勿传递该字段。
+ * @method string getTransportType() 获取传输类型。枚举值如下：
+
+<li>STREAMABLE_HTTP：HTTP协议的流式传输方式</li>
+<li>SSE：Server-Sent Events，服务器发送事件</li>
+ * @method void setTransportType(string $TransportType) 设置传输类型。枚举值如下：
+
+<li>STREAMABLE_HTTP：HTTP协议的流式传输方式</li>
+<li>SSE：Server-Sent Events，服务器发送事件</li>
  */
 class ModifyMcpServerRequest extends AbstractModel
 {
@@ -41,7 +49,7 @@ class ModifyMcpServerRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string MCP Server ID。可以通过DescribeMcpServers接口返回值中的McpServerId获取。
+     * @var string MCP Server ID。可以通[DescribeMcpServers](https://cloud.tencent.com/document/product/1207/122837)接口返回值中的McpServerId获取。
      */
     public $McpServerId;
 
@@ -66,12 +74,24 @@ class ModifyMcpServerRequest extends AbstractModel
     public $Envs;
 
     /**
+     * @var string 传输类型。枚举值如下：
+
+<li>STREAMABLE_HTTP：HTTP协议的流式传输方式</li>
+<li>SSE：Server-Sent Events，服务器发送事件</li>
+     */
+    public $TransportType;
+
+    /**
      * @param string $InstanceId 实例ID。可以通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
-     * @param string $McpServerId MCP Server ID。可以通过DescribeMcpServers接口返回值中的McpServerId获取。
+     * @param string $McpServerId MCP Server ID。可以通[DescribeMcpServers](https://cloud.tencent.com/document/product/1207/122837)接口返回值中的McpServerId获取。
      * @param string $Name MCP Server名称。最大长度：64
      * @param string $Command Base64编码后的MCP Server启动命令。最大长度：2048
      * @param string $Description MCP Server备注。最大长度：2048
      * @param array $Envs MCP Server环境变量。最大长度：10。用于完整替换MCP Server的环境变量。当该字段为空时，系统将清除当前所有环境变量。若无需修改环境变量，请勿传递该字段。
+     * @param string $TransportType 传输类型。枚举值如下：
+
+<li>STREAMABLE_HTTP：HTTP协议的流式传输方式</li>
+<li>SSE：Server-Sent Events，服务器发送事件</li>
      */
     function __construct()
     {
@@ -113,6 +133,10 @@ class ModifyMcpServerRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Envs, $obj);
             }
+        }
+
+        if (array_key_exists("TransportType",$param) and $param["TransportType"] !== null) {
+            $this->TransportType = $param["TransportType"];
         }
     }
 }

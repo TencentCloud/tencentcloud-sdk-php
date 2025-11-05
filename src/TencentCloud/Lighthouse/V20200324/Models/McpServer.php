@@ -20,42 +20,48 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MCP Server信息
  *
- * @method string getMcpServerId() 获取MCP Server ID。
- * @method void setMcpServerId(string $McpServerId) 设置MCP Server ID。
+ * @method string getMcpServerId() 获取MCP Server ID
+ * @method void setMcpServerId(string $McpServerId) 设置MCP Server ID
  * @method string getName() 获取MCP Server名称。最大长度：64
  * @method void setName(string $Name) 设置MCP Server名称。最大长度：64
- * @method string getMcpServerType() 获取MCP Server类型。枚举值：PUBLIC_PACKAGE，公共包安装；AGENT_GENERATED，AI生成。
- * @method void setMcpServerType(string $McpServerType) 设置MCP Server类型。枚举值：PUBLIC_PACKAGE，公共包安装；AGENT_GENERATED，AI生成。
+ * @method string getMcpServerType() 获取MCP Server类型。枚举值如下：
+
+<li>PUBLIC_PACKAGE：公共包安装</li>
+<li>AGENT_GENERATED：AI生成</li>
+ * @method void setMcpServerType(string $McpServerType) 设置MCP Server类型。枚举值如下：
+
+<li>PUBLIC_PACKAGE：公共包安装</li>
+<li>AGENT_GENERATED：AI生成</li>
  * @method string getIconUrl() 获取MCP Server图标地址
  * @method void setIconUrl(string $IconUrl) 设置MCP Server图标地址
  * @method string getCommand() 获取Base64编码后的MCP Server启动命令。最大长度：2048
  * @method void setCommand(string $Command) 设置Base64编码后的MCP Server启动命令。最大长度：2048
  * @method string getState() 获取MCP Server状态。枚举值如下：
 
-PENDING：表示创建中
-LAUNCH_FAILED：表示创建失败
-RUNNING：表示运行中
-STOPPED：表示关闭
-STARTING：表示开启中
-STOPPING：表示关闭中
-RESTARTING：表示重启中
-REMOVING：表示删除中
-UNKNOWN：表示未知
-ENV_ERROR：表示环境错误
+<li>PENDING：表示创建中</li>
+<li>LAUNCH_FAILED：表示创建失败</li>
+<li>RUNNING：表示运行中</li>
+<li>STOPPED：表示关闭</li>
+<li>STARTING：表示开启中</li>
+<li>STOPPING：表示关闭中</li>
+<li>RESTARTING：表示重启中</li>
+<li>REMOVING：表示删除中</li>
+<li>UNKNOWN：表示未知</li>
+<li>ENV_ERROR：表示环境错误</li>
  * @method void setState(string $State) 设置MCP Server状态。枚举值如下：
 
-PENDING：表示创建中
-LAUNCH_FAILED：表示创建失败
-RUNNING：表示运行中
-STOPPED：表示关闭
-STARTING：表示开启中
-STOPPING：表示关闭中
-RESTARTING：表示重启中
-REMOVING：表示删除中
-UNKNOWN：表示未知
-ENV_ERROR：表示环境错误
- * @method string getServerUrl() 获取MCP Server访问地址。
- * @method void setServerUrl(string $ServerUrl) 设置MCP Server访问地址。
+<li>PENDING：表示创建中</li>
+<li>LAUNCH_FAILED：表示创建失败</li>
+<li>RUNNING：表示运行中</li>
+<li>STOPPED：表示关闭</li>
+<li>STARTING：表示开启中</li>
+<li>STOPPING：表示关闭中</li>
+<li>RESTARTING：表示重启中</li>
+<li>REMOVING：表示删除中</li>
+<li>UNKNOWN：表示未知</li>
+<li>ENV_ERROR：表示环境错误</li>
+ * @method string getServerUrl() 获取MCP Server访问地址。传输类型 TransportType 为 STREAMABLE_HTTP 时以 /mcp结尾，为 SSE 时以 /sse结尾。
+ * @method void setServerUrl(string $ServerUrl) 设置MCP Server访问地址。传输类型 TransportType 为 STREAMABLE_HTTP 时以 /mcp结尾，为 SSE 时以 /sse结尾。
  * @method string getConfig() 获取MCP Server配置
  * @method void setConfig(string $Config) 设置MCP Server配置
  * @method string getDescription() 获取MCP Server备注
@@ -70,11 +76,19 @@ ENV_ERROR：表示环境错误
 格式为： YYYY-MM-DDThh:mm:ssZ。
  * @method array getEnvSet() 获取MCP Server环境变量
  * @method void setEnvSet(array $EnvSet) 设置MCP Server环境变量
+ * @method string getTransportType() 获取传输类型。枚举值如下：
+
+<li>STREAMABLE_HTTP：HTTP协议的流式传输方式</li>
+<li>SSE：Server-Sent Events，服务器发送事件</li>
+ * @method void setTransportType(string $TransportType) 设置传输类型。枚举值如下：
+
+<li>STREAMABLE_HTTP：HTTP协议的流式传输方式</li>
+<li>SSE：Server-Sent Events，服务器发送事件</li>
  */
 class McpServer extends AbstractModel
 {
     /**
-     * @var string MCP Server ID。
+     * @var string MCP Server ID
      */
     public $McpServerId;
 
@@ -84,7 +98,10 @@ class McpServer extends AbstractModel
     public $Name;
 
     /**
-     * @var string MCP Server类型。枚举值：PUBLIC_PACKAGE，公共包安装；AGENT_GENERATED，AI生成。
+     * @var string MCP Server类型。枚举值如下：
+
+<li>PUBLIC_PACKAGE：公共包安装</li>
+<li>AGENT_GENERATED：AI生成</li>
      */
     public $McpServerType;
 
@@ -101,21 +118,21 @@ class McpServer extends AbstractModel
     /**
      * @var string MCP Server状态。枚举值如下：
 
-PENDING：表示创建中
-LAUNCH_FAILED：表示创建失败
-RUNNING：表示运行中
-STOPPED：表示关闭
-STARTING：表示开启中
-STOPPING：表示关闭中
-RESTARTING：表示重启中
-REMOVING：表示删除中
-UNKNOWN：表示未知
-ENV_ERROR：表示环境错误
+<li>PENDING：表示创建中</li>
+<li>LAUNCH_FAILED：表示创建失败</li>
+<li>RUNNING：表示运行中</li>
+<li>STOPPED：表示关闭</li>
+<li>STARTING：表示开启中</li>
+<li>STOPPING：表示关闭中</li>
+<li>RESTARTING：表示重启中</li>
+<li>REMOVING：表示删除中</li>
+<li>UNKNOWN：表示未知</li>
+<li>ENV_ERROR：表示环境错误</li>
      */
     public $State;
 
     /**
-     * @var string MCP Server访问地址。
+     * @var string MCP Server访问地址。传输类型 TransportType 为 STREAMABLE_HTTP 时以 /mcp结尾，为 SSE 时以 /sse结尾。
      */
     public $ServerUrl;
 
@@ -147,24 +164,35 @@ ENV_ERROR：表示环境错误
     public $EnvSet;
 
     /**
-     * @param string $McpServerId MCP Server ID。
+     * @var string 传输类型。枚举值如下：
+
+<li>STREAMABLE_HTTP：HTTP协议的流式传输方式</li>
+<li>SSE：Server-Sent Events，服务器发送事件</li>
+     */
+    public $TransportType;
+
+    /**
+     * @param string $McpServerId MCP Server ID
      * @param string $Name MCP Server名称。最大长度：64
-     * @param string $McpServerType MCP Server类型。枚举值：PUBLIC_PACKAGE，公共包安装；AGENT_GENERATED，AI生成。
+     * @param string $McpServerType MCP Server类型。枚举值如下：
+
+<li>PUBLIC_PACKAGE：公共包安装</li>
+<li>AGENT_GENERATED：AI生成</li>
      * @param string $IconUrl MCP Server图标地址
      * @param string $Command Base64编码后的MCP Server启动命令。最大长度：2048
      * @param string $State MCP Server状态。枚举值如下：
 
-PENDING：表示创建中
-LAUNCH_FAILED：表示创建失败
-RUNNING：表示运行中
-STOPPED：表示关闭
-STARTING：表示开启中
-STOPPING：表示关闭中
-RESTARTING：表示重启中
-REMOVING：表示删除中
-UNKNOWN：表示未知
-ENV_ERROR：表示环境错误
-     * @param string $ServerUrl MCP Server访问地址。
+<li>PENDING：表示创建中</li>
+<li>LAUNCH_FAILED：表示创建失败</li>
+<li>RUNNING：表示运行中</li>
+<li>STOPPED：表示关闭</li>
+<li>STARTING：表示开启中</li>
+<li>STOPPING：表示关闭中</li>
+<li>RESTARTING：表示重启中</li>
+<li>REMOVING：表示删除中</li>
+<li>UNKNOWN：表示未知</li>
+<li>ENV_ERROR：表示环境错误</li>
+     * @param string $ServerUrl MCP Server访问地址。传输类型 TransportType 为 STREAMABLE_HTTP 时以 /mcp结尾，为 SSE 时以 /sse结尾。
      * @param string $Config MCP Server配置
      * @param string $Description MCP Server备注
      * @param string $CreatedTime MCP Server创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
@@ -172,6 +200,10 @@ ENV_ERROR：表示环境错误
      * @param string $UpdatedTime MCP Server修改时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。
      * @param array $EnvSet MCP Server环境变量
+     * @param string $TransportType 传输类型。枚举值如下：
+
+<li>STREAMABLE_HTTP：HTTP协议的流式传输方式</li>
+<li>SSE：Server-Sent Events，服务器发送事件</li>
      */
     function __construct()
     {
@@ -237,6 +269,10 @@ ENV_ERROR：表示环境错误
                 $obj->deserialize($value);
                 array_push($this->EnvSet, $obj);
             }
+        }
+
+        if (array_key_exists("TransportType",$param) and $param["TransportType"] !== null) {
+            $this->TransportType = $param["TransportType"];
         }
     }
 }

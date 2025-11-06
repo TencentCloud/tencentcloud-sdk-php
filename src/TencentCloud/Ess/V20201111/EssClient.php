@@ -140,7 +140,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
  * @method Models\CreateBatchSignUrlResponse CreateBatchSignUrl(Models\CreateBatchSignUrlRequest $req) 通过此接口，可以创建小程序批量签署链接，个人/企业员工可通过此链接跳转至小程序进行批量签署。请确保生成链接时的身份信息与签署合同参与方的信息保持一致。
 
 注意事项：
-- 使用此接口生成链接，需要贵企业先开通 <font color="red">个人签署方仅校验手机号 </font>功能。您可以在 <b>【腾讯电子签网页端】->【企业设置】->【拓展服务】</b>中找到该功能。
+- 使用此接口生成链接，需要贵企业先开通 <font color="red">个人签署方仅校验手机号 </font>功能。您可以在 <b>【腾讯电子签网页端控制台】->【更多】->【高级签署能力】</b>中找到该功能。
 - 生成批量签署链接时，<font color="red">合同目标参与方的状态必须为<b>待签署</b>状态</font>。签署人点击链接后需要输入短信验证码才能查看合同内容。
 - 企业员工批量签署链接：需要传入签署方所在企业名称，用户名字和手机号（或者身份证件信息）参数来生成签署链接。<font color="red">该签署方企业必须已完成腾讯电子签企业认证</font>
 - 个人批量签署链接：需要传入签署方用户名字和手机号（或者身份证件信息）参数来生成签署链接。个人批量签署进行的合同的签名区， 全部变成<font color="red">手写签名</font>（不管合同里边设置的签名限制）来进行。
@@ -889,9 +889,9 @@ use TencentCloud\Ess\V20201111\Models as Models;
 13. **限制企业员工网页端登录**
 
 
-对应能力开通页面在Web控制台-更多-企业设置-拓展服务，如下图所示:
+对应能力开通页面在【Web控制台】-> 【更多】->【高级签署能力】，如下图所示:
 
-![image](https://qcloudimg.tencent-cloud.cn/raw/7d79746ecca1c5fe878a2ec36ed69c23.jpg)
+![image](https://qcloudimg.tencent-cloud.cn/raw/bc1414ed8c257cbc408201579cff72cd/a1111.png)
 
 注: <font color='red'>所在企业的超管、法人才有权限调用此接口</font>(Operator.UserId需要传递超管或者法人的UserId)
  * @method Models\DescribeFileCounterSignResultResponse DescribeFileCounterSignResult(Models\DescribeFileCounterSignResultRequest $req) 文件CA加签任务结果查询接口，用于查询 CreateFileCounterSign接口 发起的异步加签任务。
@@ -1052,16 +1052,18 @@ use TencentCloud\Ess\V20201111\Models as Models;
 更多回调相关的说明参考文档[回调通知能力](https://qian.tencent.com/developers/company/callback_types_v2)
  * @method Models\ModifyExtendedServiceResponse ModifyExtendedService(Models\ModifyExtendedServiceRequest $req) 管理企业扩展服务
 
-- **直接开通的情形：** 若在操作过程中接口没有返回跳转链接，这表明无需进行任何跳转操作。此时，相应的企业拓展服务将会直接被开通或关闭。
+- **直接开通的情形：** 若在操作过程中接口没有返回跳转链接，这表明无需进行任何跳转操作。此时，相应的企业高级签署能力将会直接被开通或关闭。
 
-- **需要法人或者超管签署开通协议的情形：** 当需要开通以下企业拓展服务时， 系统将返回一个操作链接。贵方需要主动联系并通知企业的超级管理员（超管）或法人。由他们点击该链接，完成服务的开通操作。
+- **需要法人或者超管签署开通协议的情形：** 当需要开通以下企业高级签署能力时， 系统将返回一个操作链接。贵方需要主动联系并通知企业的超级管理员（超管）或法人。由他们点击该链接，完成服务的开通操作。
   - **OPEN_SERVER_SIGN（企业自动签）**
 
 注意： `在调用此接口以管理企业扩展服务时，操作者（入参中的Operator）必须是企业的超级管理员（超管）或法人`
 
 
-对应的扩展服务能力可以在控制台的【扩展服务】中找到
-![image](https://qcloudimg.tencent-cloud.cn/raw/7eb35d2473d6c29784f3b35617bca9a9.png)
+对应的扩展服务能力可以在控制台的【高级签署能力】中找到
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/70750ae61500bb9ef6c6be6ecd18cd0e/a2222.png)
+![image](https://qcloudimg.tencent-cloud.cn/raw/8cb6c8707a3b8c86b55e47fd8d23b30a/a3333.png)
  * @method Models\ModifyFlowDeadlineResponse ModifyFlowDeadline(Models\ModifyFlowDeadlineRequest $req) 在已启动的签署流程中，可对签署截止日期进行延期操作，主要分为以下两个层面：
 1. <b> 合同（流程）层面</b>：仅需提供签署流程ID。此操作将对整个签署流程以及未单独设置签署截止时间的签署人进行延期。
 2. <b> 签署人层面</b>  ：需提供流程ID和签署人ID。此操作针对特定签署人进行延期，特别是对于有序合同（流程），签署截止时间不得超过后续签署人的流程截止时间。

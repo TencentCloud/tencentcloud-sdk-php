@@ -104,6 +104,7 @@ use TencentCloud\Ccc\V20200210\Models as Models;
  * @method Models\ResetExtensionPasswordResponse ResetExtensionPassword(Models\ResetExtensionPasswordRequest $req) 重置话机注册密码
  * @method Models\RestoreMemberOnlineResponse RestoreMemberOnline(Models\RestoreMemberOnlineRequest $req) 恢复客服上线
  * @method Models\ResumePredictiveDialingCampaignResponse ResumePredictiveDialingCampaign(Models\ResumePredictiveDialingCampaignRequest $req) 恢复预测式外呼任务
+ * @method Models\SetStaffStatusResponse SetStaffStatus(Models\SetStaffStatusRequest $req) 设置 staff 状态
  * @method Models\StopAutoCalloutTaskResponse StopAutoCalloutTask(Models\StopAutoCalloutTaskRequest $req) 停止自动外呼任务
  * @method Models\TransferToManualResponse TransferToManual(Models\TransferToManualRequest $req) 特定场景下讲会话转接到人工坐席
  * @method Models\UnbindNumberCallOutSkillGroupResponse UnbindNumberCallOutSkillGroup(Models\UnbindNumberCallOutSkillGroupRequest $req) 解绑号码外呼技能组

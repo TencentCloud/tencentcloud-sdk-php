@@ -30,8 +30,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置应用名称
  * @method string getNamespace() 获取应用命名空间
  * @method void setNamespace(string $Namespace) 设置应用命名空间
- * @method string getStatus() 获取应用状态(参考helm的发布状态： unknown, deployed, uninstalled, superseded, failed, uninstalling, pending-install, pending-upgrade 或 pending-rollback)
- * @method void setStatus(string $Status) 设置应用状态(参考helm的发布状态： unknown, deployed, uninstalled, superseded, failed, uninstalling, pending-install, pending-upgrade 或 pending-rollback)
+ * @method string getStatus() 获取应用状态，参考 Helm 发布状态。
+可选值及其释义如下：
+• ​​unknown​​: 状态未知
+• ​​deployed​​: 已成功部署
+• ​​uninstalled​​: 已卸载
+• ​​superseded​​: 已被新版本替代
+• ​​failed​​: 部署失败
+• ​​uninstalling​​: 正在卸载中
+• ​​pending-install​​: 等待安装/安装进行中
+• ​​pending-upgrade​​: 等待升级/升级进行中
+• ​​pending-rollback​​: 等待回滚/回滚进行中
+ * @method void setStatus(string $Status) 设置应用状态，参考 Helm 发布状态。
+可选值及其释义如下：
+• ​​unknown​​: 状态未知
+• ​​deployed​​: 已成功部署
+• ​​uninstalled​​: 已卸载
+• ​​superseded​​: 已被新版本替代
+• ​​failed​​: 部署失败
+• ​​uninstalling​​: 正在卸载中
+• ​​pending-install​​: 等待安装/安装进行中
+• ​​pending-upgrade​​: 等待升级/升级进行中
+• ​​pending-rollback​​: 等待回滚/回滚进行中
  * @method string getUpdatedTime() 获取更新时间
  * @method void setUpdatedTime(string $UpdatedTime) 设置更新时间
  */
@@ -63,7 +83,17 @@ class PendingRelease extends AbstractModel
     public $Namespace;
 
     /**
-     * @var string 应用状态(参考helm的发布状态： unknown, deployed, uninstalled, superseded, failed, uninstalling, pending-install, pending-upgrade 或 pending-rollback)
+     * @var string 应用状态，参考 Helm 发布状态。
+可选值及其释义如下：
+• ​​unknown​​: 状态未知
+• ​​deployed​​: 已成功部署
+• ​​uninstalled​​: 已卸载
+• ​​superseded​​: 已被新版本替代
+• ​​failed​​: 部署失败
+• ​​uninstalling​​: 正在卸载中
+• ​​pending-install​​: 等待安装/安装进行中
+• ​​pending-upgrade​​: 等待升级/升级进行中
+• ​​pending-rollback​​: 等待回滚/回滚进行中
      */
     public $Status;
 
@@ -78,7 +108,17 @@ class PendingRelease extends AbstractModel
      * @param string $ID 应用ID
      * @param string $Name 应用名称
      * @param string $Namespace 应用命名空间
-     * @param string $Status 应用状态(参考helm的发布状态： unknown, deployed, uninstalled, superseded, failed, uninstalling, pending-install, pending-upgrade 或 pending-rollback)
+     * @param string $Status 应用状态，参考 Helm 发布状态。
+可选值及其释义如下：
+• ​​unknown​​: 状态未知
+• ​​deployed​​: 已成功部署
+• ​​uninstalled​​: 已卸载
+• ​​superseded​​: 已被新版本替代
+• ​​failed​​: 部署失败
+• ​​uninstalling​​: 正在卸载中
+• ​​pending-install​​: 等待安装/安装进行中
+• ​​pending-upgrade​​: 等待升级/升级进行中
+• ​​pending-rollback​​: 等待回滚/回滚进行中
      * @param string $UpdatedTime 更新时间
      */
     function __construct()

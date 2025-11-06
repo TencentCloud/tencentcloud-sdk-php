@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyId(string $KeyId) 设置秘钥Id
  * @method string getKeyRegion() 获取秘钥地域
  * @method void setKeyRegion(string $KeyRegion) 设置秘钥地域
+ * @method boolean getIsOpenGlobalEncryption() 获取是否开启全局加密
+ * @method void setIsOpenGlobalEncryption(boolean $IsOpenGlobalEncryption) 设置是否开启全局加密
  */
 class OpenClusterTransparentEncryptRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class OpenClusterTransparentEncryptRequest extends AbstractModel
     public $KeyRegion;
 
     /**
+     * @var boolean 是否开启全局加密
+     */
+    public $IsOpenGlobalEncryption;
+
+    /**
      * @param string $ClusterId 集群id
      * @param string $KeyType 秘钥类型(cloud,custom)
      * @param string $KeyId 秘钥Id
      * @param string $KeyRegion 秘钥地域
+     * @param boolean $IsOpenGlobalEncryption 是否开启全局加密
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class OpenClusterTransparentEncryptRequest extends AbstractModel
 
         if (array_key_exists("KeyRegion",$param) and $param["KeyRegion"] !== null) {
             $this->KeyRegion = $param["KeyRegion"];
+        }
+
+        if (array_key_exists("IsOpenGlobalEncryption",$param) and $param["IsOpenGlobalEncryption"] !== null) {
+            $this->IsOpenGlobalEncryption = $param["IsOpenGlobalEncryption"];
         }
     }
 }

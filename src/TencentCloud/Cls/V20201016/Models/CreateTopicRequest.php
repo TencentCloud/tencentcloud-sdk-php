@@ -82,6 +82,8 @@ use TencentCloud\Common\AbstractModel;
 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。指标主题不支持该配置。
  * @method TopicExtendInfo getExtends() 获取主题扩展信息
  * @method void setExtends(TopicExtendInfo $Extends) 设置主题扩展信息
+ * @method boolean getIsSourceFrom() 获取开启记录公网来源ip和服务端接收时间
+ * @method void setIsSourceFrom(boolean $IsSourceFrom) 设置开启记录公网来源ip和服务端接收时间
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -173,6 +175,11 @@ class CreateTopicRequest extends AbstractModel
     public $Extends;
 
     /**
+     * @var boolean 开启记录公网来源ip和服务端接收时间
+     */
+    public $IsSourceFrom;
+
+    /**
      * @param string $LogsetId 日志集ID
 - 通过[获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
      * @param string $TopicName 主题名称
@@ -204,6 +211,7 @@ class CreateTopicRequest extends AbstractModel
      * @param boolean $IsWebTracking 免鉴权开关。 false：关闭； true：开启。默认为false。
 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。指标主题不支持该配置。
      * @param TopicExtendInfo $Extends 主题扩展信息
+     * @param boolean $IsSourceFrom 开启记录公网来源ip和服务端接收时间
      */
     function __construct()
     {
@@ -278,6 +286,10 @@ class CreateTopicRequest extends AbstractModel
         if (array_key_exists("Extends",$param) and $param["Extends"] !== null) {
             $this->Extends = new TopicExtendInfo();
             $this->Extends->deserialize($param["Extends"]);
+        }
+
+        if (array_key_exists("IsSourceFrom",$param) and $param["IsSourceFrom"] !== null) {
+            $this->IsSourceFrom = $param["IsSourceFrom"];
         }
     }
 }

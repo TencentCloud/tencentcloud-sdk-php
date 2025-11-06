@@ -20,69 +20,69 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 生命周期管理策略关联的管理规则
  *
- * @method string getStorageType() 获取数据转储后的存储类型
- * @method void setStorageType(string $StorageType) 设置数据转储后的存储类型
- * @method string getFileType() 获取数据转储文件类型
- * @method void setFileType(string $FileType) 设置数据转储文件类型
- * @method string getAction() 获取数据转储行为
- * @method void setAction(string $Action) 设置数据转储行为
- * @method string getInterval() 获取数据转储触发时间
+ * @method string getStorageType() 获取数据转储后的存储类型。其中：InfrequentAccess：低频介质存储；ColdStorage：冷存储。
+ * @method void setStorageType(string $StorageType) 设置数据转储后的存储类型。其中：InfrequentAccess：低频介质存储；ColdStorage：冷存储。
+ * @method string getFileType() 获取数据转储文件类型。其中，BIG_FILE：超大文件；STD_FILE：普通文件；SMALL_FILE：小文件；ALL：所有文件。
+ * @method void setFileType(string $FileType) 设置数据转储文件类型。其中，BIG_FILE：超大文件；STD_FILE：普通文件；SMALL_FILE：小文件；ALL：所有文件。
+ * @method string getAction() 获取数据转储行为。其中，Archive：沉降；Noarchive：不沉降。
+ * @method void setAction(string $Action) 设置数据转储行为。其中，Archive：沉降；Noarchive：不沉降。
+ * @method string getInterval() 获取数据转储触发时间。由“DEFAULT_ATIME_”与“数字”组成，单位为天。当 Action 为 Noarchive，请保持为空。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInterval(string $Interval) 设置数据转储触发时间
+ * @method void setInterval(string $Interval) 设置数据转储触发时间。由“DEFAULT_ATIME_”与“数字”组成，单位为天。当 Action 为 Noarchive，请保持为空。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFileMaxSize() 获取数据转储文件最大规格
+ * @method string getFileMaxSize() 获取数据转储文件最大规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileMaxSize(string $FileMaxSize) 设置数据转储文件最大规格
+ * @method void setFileMaxSize(string $FileMaxSize) 设置数据转储文件最大规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFileMinSize() 获取数据转储文件最小规格
+ * @method string getFileMinSize() 获取数据转储文件最小规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileMinSize(string $FileMinSize) 设置数据转储文件最小规格
+ * @method void setFileMinSize(string $FileMinSize) 设置数据转储文件最小规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class LifecycleRule extends AbstractModel
 {
     /**
-     * @var string 数据转储后的存储类型
+     * @var string 数据转储后的存储类型。其中：InfrequentAccess：低频介质存储；ColdStorage：冷存储。
      */
     public $StorageType;
 
     /**
-     * @var string 数据转储文件类型
+     * @var string 数据转储文件类型。其中，BIG_FILE：超大文件；STD_FILE：普通文件；SMALL_FILE：小文件；ALL：所有文件。
      */
     public $FileType;
 
     /**
-     * @var string 数据转储行为
+     * @var string 数据转储行为。其中，Archive：沉降；Noarchive：不沉降。
      */
     public $Action;
 
     /**
-     * @var string 数据转储触发时间
+     * @var string 数据转储触发时间。由“DEFAULT_ATIME_”与“数字”组成，单位为天。当 Action 为 Noarchive，请保持为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Interval;
 
     /**
-     * @var string 数据转储文件最大规格
+     * @var string 数据转储文件最大规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileMaxSize;
 
     /**
-     * @var string 数据转储文件最小规格
+     * @var string 数据转储文件最小规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileMinSize;
 
     /**
-     * @param string $StorageType 数据转储后的存储类型
-     * @param string $FileType 数据转储文件类型
-     * @param string $Action 数据转储行为
-     * @param string $Interval 数据转储触发时间
+     * @param string $StorageType 数据转储后的存储类型。其中：InfrequentAccess：低频介质存储；ColdStorage：冷存储。
+     * @param string $FileType 数据转储文件类型。其中，BIG_FILE：超大文件；STD_FILE：普通文件；SMALL_FILE：小文件；ALL：所有文件。
+     * @param string $Action 数据转储行为。其中，Archive：沉降；Noarchive：不沉降。
+     * @param string $Interval 数据转储触发时间。由“DEFAULT_ATIME_”与“数字”组成，单位为天。当 Action 为 Noarchive，请保持为空。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FileMaxSize 数据转储文件最大规格
+     * @param string $FileMaxSize 数据转储文件最大规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FileMinSize 数据转储文件最小规格
+     * @param string $FileMinSize 数据转储文件最小规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

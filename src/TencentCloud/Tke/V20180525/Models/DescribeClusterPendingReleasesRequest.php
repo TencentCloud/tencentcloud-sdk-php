@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回数量限制，默认20，最大100
  * @method integer getOffset() 获取偏移量，默认0
  * @method void setOffset(integer $Offset) 设置偏移量，默认0
- * @method string getClusterType() 获取集群类型
- * @method void setClusterType(string $ClusterType) 设置集群类型
+ * @method string getClusterType() 获取集群类型，支持传入tke（标准集群），eks（Serverless集群)，external（注册集群）
+ * @method void setClusterType(string $ClusterType) 设置集群类型，支持传入tke（标准集群），eks（Serverless集群)，external（注册集群）
  */
 class DescribeClusterPendingReleasesRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeClusterPendingReleasesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string 集群类型
+     * @var string 集群类型，支持传入tke（标准集群），eks（Serverless集群)，external（注册集群）
      */
     public $ClusterType;
 
@@ -55,7 +55,7 @@ class DescribeClusterPendingReleasesRequest extends AbstractModel
      * @param string $ClusterId 集群ID
      * @param integer $Limit 返回数量限制，默认20，最大100
      * @param integer $Offset 偏移量，默认0
-     * @param string $ClusterType 集群类型
+     * @param string $ClusterType 集群类型，支持传入tke（标准集群），eks（Serverless集群)，external（注册集群）
      */
     function __construct()
     {

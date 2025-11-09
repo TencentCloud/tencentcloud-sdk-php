@@ -56,8 +56,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdminPassword(string $AdminPassword) 设置账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种)
  * @method integer getPort() 获取端口，默认3306，取值范围[0, 65535)
  * @method void setPort(integer $Port) 设置端口，默认3306，取值范围[0, 65535)
- * @method integer getPayMode() 获取计费模式，按量计费：0，包年包月：1。默认按量计费。
- * @method void setPayMode(integer $PayMode) 设置计费模式，按量计费：0，包年包月：1。默认按量计费。
+ * @method integer getPayMode() 获取计费模式，支持值为0和1，默认值为0。
+取值为0，表示按量计费。
+取值为1，表示包年包月。
+ * @method void setPayMode(integer $PayMode) 设置计费模式，支持值为0和1，默认值为0。
+取值为0，表示按量计费。
+取值为1，表示包年包月。
  * @method integer getCount() 获取购买集群数，可选值范围[1,50]，默认为1
  * @method void setCount(integer $Count) 设置购买集群数，可选值范围[1,50]，默认为1
  * @method string getRollbackStrategy() 获取回档类型：
@@ -228,7 +232,9 @@ class CreateClustersRequest extends AbstractModel
     public $Port;
 
     /**
-     * @var integer 计费模式，按量计费：0，包年包月：1。默认按量计费。
+     * @var integer 计费模式，支持值为0和1，默认值为0。
+取值为0，表示按量计费。
+取值为1，表示包年包月。
      */
     public $PayMode;
 
@@ -423,7 +429,9 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      * @param string $ClusterName 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
      * @param string $AdminPassword 账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种)
      * @param integer $Port 端口，默认3306，取值范围[0, 65535)
-     * @param integer $PayMode 计费模式，按量计费：0，包年包月：1。默认按量计费。
+     * @param integer $PayMode 计费模式，支持值为0和1，默认值为0。
+取值为0，表示按量计费。
+取值为1，表示包年包月。
      * @param integer $Count 购买集群数，可选值范围[1,50]，默认为1
      * @param string $RollbackStrategy 回档类型：
 noneRollback：不回档；

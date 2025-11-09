@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询参数过滤器
  *
- * @method array getNames() 获取搜索字段，目前支持："InstanceId", "ProjectId", "InstanceName", "Vip"
- * @method void setNames(array $Names) 设置搜索字段，目前支持："InstanceId", "ProjectId", "InstanceName", "Vip"
+ * @method array getNames() 获取搜索字段，目前支持：ProxyGroupId
+ * @method void setNames(array $Names) 设置搜索字段，目前支持：ProxyGroupId
  * @method array getValues() 获取搜索字符串
  * @method void setValues(array $Values) 设置搜索字符串
  * @method boolean getExactMatch() 获取是否精确匹配
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class QueryParamFilter extends AbstractModel
 {
     /**
-     * @var array 搜索字段，目前支持："InstanceId", "ProjectId", "InstanceName", "Vip"
+     * @var array 搜索字段，目前支持：ProxyGroupId
      */
     public $Names;
 
@@ -45,7 +45,7 @@ class QueryParamFilter extends AbstractModel
     public $ExactMatch;
 
     /**
-     * @param array $Names 搜索字段，目前支持："InstanceId", "ProjectId", "InstanceName", "Vip"
+     * @param array $Names 搜索字段，目前支持：ProxyGroupId
      * @param array $Values 搜索字符串
      * @param boolean $ExactMatch 是否精确匹配
      */

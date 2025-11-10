@@ -142,11 +142,9 @@ second：表示秒
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHlsTime() 获取分片平均时长，范围：（0-10]，单位：秒
 不填表示自动，将根据视频的GOP等特征自动选择合适的分片时长。
-注意：只能在封装格式hls的情况下使用
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHlsTime(integer $HlsTime) 设置分片平均时长，范围：（0-10]，单位：秒
 不填表示自动，将根据视频的GOP等特征自动选择合适的分片时长。
-注意：只能在封装格式hls的情况下使用
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSegmentType() 获取hls 分片类型，可选值 ：
 <li>0：HLS+TS 切片</li>
@@ -422,7 +420,6 @@ second：表示秒
     /**
      * @var integer 分片平均时长，范围：（0-10]，单位：秒
 不填表示自动，将根据视频的GOP等特征自动选择合适的分片时长。
-注意：只能在封装格式hls的情况下使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HlsTime;
@@ -638,7 +635,6 @@ second：表示秒
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HlsTime 分片平均时长，范围：（0-10]，单位：秒
 不填表示自动，将根据视频的GOP等特征自动选择合适的分片时长。
-注意：只能在封装格式hls的情况下使用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SegmentType hls 分片类型，可选值 ：
 <li>0：HLS+TS 切片</li>

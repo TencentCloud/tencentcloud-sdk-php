@@ -94,6 +94,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserData(string $UserData) 设置调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 1000 长度。
 
 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
+ * @method array getHides() 获取生成的签署链接在签署页面隐藏的按钮列表，可设置如下：
+
+<ul><li> **0** :合同签署页面更多操作按钮</li>
+<li> **1** :合同签署页面更多操作的拒绝签署按钮</li>
+<li> **2** :合同签署页面更多操作的转他人处理按钮</li>
+<li> **3** :签署成功页的查看详情按钮</li>
+<li> **4** :合同签署页面更多操作的查看合同基本信息按钮</li>
+<li> **5** :合同签署页面更多操作的撤销按钮</li></ul>
+
+注:  `字段为数组, 可以传值隐藏多个按钮`
+ * @method void setHides(array $Hides) 设置生成的签署链接在签署页面隐藏的按钮列表，可设置如下：
+
+<ul><li> **0** :合同签署页面更多操作按钮</li>
+<li> **1** :合同签署页面更多操作的拒绝签署按钮</li>
+<li> **2** :合同签署页面更多操作的转他人处理按钮</li>
+<li> **3** :签署成功页的查看详情按钮</li>
+<li> **4** :合同签署页面更多操作的查看合同基本信息按钮</li>
+<li> **5** :合同签署页面更多操作的撤销按钮</li></ul>
+
+注:  `字段为数组, 可以传值隐藏多个按钮`
  */
 class CreateMiniAppPrepareFlowRequest extends AbstractModel
 {
@@ -187,6 +207,20 @@ class CreateMiniAppPrepareFlowRequest extends AbstractModel
     public $UserData;
 
     /**
+     * @var array 生成的签署链接在签署页面隐藏的按钮列表，可设置如下：
+
+<ul><li> **0** :合同签署页面更多操作按钮</li>
+<li> **1** :合同签署页面更多操作的拒绝签署按钮</li>
+<li> **2** :合同签署页面更多操作的转他人处理按钮</li>
+<li> **3** :签署成功页的查看详情按钮</li>
+<li> **4** :合同签署页面更多操作的查看合同基本信息按钮</li>
+<li> **5** :合同签署页面更多操作的撤销按钮</li></ul>
+
+注:  `字段为数组, 可以传值隐藏多个按钮`
+     */
+    public $Hides;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。使用此接口时，必须填写userId。
 支持填入集团子公司经办人 userId 代发合同。
 
@@ -224,6 +258,16 @@ class CreateMiniAppPrepareFlowRequest extends AbstractModel
      * @param string $UserData 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 1000 长度。
 
 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
+     * @param array $Hides 生成的签署链接在签署页面隐藏的按钮列表，可设置如下：
+
+<ul><li> **0** :合同签署页面更多操作按钮</li>
+<li> **1** :合同签署页面更多操作的拒绝签署按钮</li>
+<li> **2** :合同签署页面更多操作的转他人处理按钮</li>
+<li> **3** :签署成功页的查看详情按钮</li>
+<li> **4** :合同签署页面更多操作的查看合同基本信息按钮</li>
+<li> **5** :合同签署页面更多操作的撤销按钮</li></ul>
+
+注:  `字段为数组, 可以传值隐藏多个按钮`
      */
     function __construct()
     {
@@ -302,6 +346,10 @@ class CreateMiniAppPrepareFlowRequest extends AbstractModel
 
         if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
             $this->UserData = $param["UserData"];
+        }
+
+        if (array_key_exists("Hides",$param) and $param["Hides"] !== null) {
+            $this->Hides = $param["Hides"];
         }
     }
 }

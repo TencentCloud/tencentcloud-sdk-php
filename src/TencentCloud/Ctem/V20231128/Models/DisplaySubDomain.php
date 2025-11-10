@@ -36,6 +36,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsp(string $Isp) 设置互联网服务提供商
  * @method DisplayToolCommon getDisplayToolCommon() 获取公共字段
  * @method void setDisplayToolCommon(DisplayToolCommon $DisplayToolCommon) 设置公共字段
+ * @method integer getIsCloudAsset() 获取是否为云资产：0-非云资产 1-是云资产
+ * @method void setIsCloudAsset(integer $IsCloudAsset) 设置是否为云资产：0-非云资产 1-是云资产
+ * @method integer getCloudAssetStatus() 获取云资产是否下线：-1-已下线 0-正常
+ * @method void setCloudAssetStatus(integer $CloudAssetStatus) 设置云资产是否下线：-1-已下线 0-正常
+ * @method integer getAvailabilityRate() 获取可用率（百分比）
+ * @method void setAvailabilityRate(integer $AvailabilityRate) 设置可用率（百分比）
+ * @method integer getAvailabilityState() 获取可用状态 1:异常 0:正常
+ * @method void setAvailabilityState(integer $AvailabilityState) 设置可用状态 1:异常 0:正常
+ * @method integer getAnalysisState() 获取域名解析状态 1:异常 0:正常
+ * @method void setAnalysisState(integer $AnalysisState) 设置域名解析状态 1:异常 0:正常
+ * @method integer getAverageDelay() 获取平均时延：单位ms
+ * @method void setAverageDelay(integer $AverageDelay) 设置平均时延：单位ms
+ * @method integer getLossRate() 获取丢包率（百分比）
+ * @method void setLossRate(integer $LossRate) 设置丢包率（百分比）
  */
 class DisplaySubDomain extends AbstractModel
 {
@@ -80,6 +94,41 @@ class DisplaySubDomain extends AbstractModel
     public $DisplayToolCommon;
 
     /**
+     * @var integer 是否为云资产：0-非云资产 1-是云资产
+     */
+    public $IsCloudAsset;
+
+    /**
+     * @var integer 云资产是否下线：-1-已下线 0-正常
+     */
+    public $CloudAssetStatus;
+
+    /**
+     * @var integer 可用率（百分比）
+     */
+    public $AvailabilityRate;
+
+    /**
+     * @var integer 可用状态 1:异常 0:正常
+     */
+    public $AvailabilityState;
+
+    /**
+     * @var integer 域名解析状态 1:异常 0:正常
+     */
+    public $AnalysisState;
+
+    /**
+     * @var integer 平均时延：单位ms
+     */
+    public $AverageDelay;
+
+    /**
+     * @var integer 丢包率（百分比）
+     */
+    public $LossRate;
+
+    /**
      * @param integer $Id 主键ID
      * @param string $SubDomain 子域名
      * @param string $Ip Ip
@@ -88,6 +137,13 @@ class DisplaySubDomain extends AbstractModel
      * @param string $City 城市
      * @param string $Isp 互联网服务提供商
      * @param DisplayToolCommon $DisplayToolCommon 公共字段
+     * @param integer $IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
+     * @param integer $CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
+     * @param integer $AvailabilityRate 可用率（百分比）
+     * @param integer $AvailabilityState 可用状态 1:异常 0:正常
+     * @param integer $AnalysisState 域名解析状态 1:异常 0:正常
+     * @param integer $AverageDelay 平均时延：单位ms
+     * @param integer $LossRate 丢包率（百分比）
      */
     function __construct()
     {
@@ -133,6 +189,34 @@ class DisplaySubDomain extends AbstractModel
         if (array_key_exists("DisplayToolCommon",$param) and $param["DisplayToolCommon"] !== null) {
             $this->DisplayToolCommon = new DisplayToolCommon();
             $this->DisplayToolCommon->deserialize($param["DisplayToolCommon"]);
+        }
+
+        if (array_key_exists("IsCloudAsset",$param) and $param["IsCloudAsset"] !== null) {
+            $this->IsCloudAsset = $param["IsCloudAsset"];
+        }
+
+        if (array_key_exists("CloudAssetStatus",$param) and $param["CloudAssetStatus"] !== null) {
+            $this->CloudAssetStatus = $param["CloudAssetStatus"];
+        }
+
+        if (array_key_exists("AvailabilityRate",$param) and $param["AvailabilityRate"] !== null) {
+            $this->AvailabilityRate = $param["AvailabilityRate"];
+        }
+
+        if (array_key_exists("AvailabilityState",$param) and $param["AvailabilityState"] !== null) {
+            $this->AvailabilityState = $param["AvailabilityState"];
+        }
+
+        if (array_key_exists("AnalysisState",$param) and $param["AnalysisState"] !== null) {
+            $this->AnalysisState = $param["AnalysisState"];
+        }
+
+        if (array_key_exists("AverageDelay",$param) and $param["AverageDelay"] !== null) {
+            $this->AverageDelay = $param["AverageDelay"];
+        }
+
+        if (array_key_exists("LossRate",$param) and $param["LossRate"] !== null) {
+            $this->LossRate = $param["LossRate"];
         }
     }
 }

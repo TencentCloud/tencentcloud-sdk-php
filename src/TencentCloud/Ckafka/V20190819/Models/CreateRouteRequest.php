@@ -20,106 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRoute请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
- * @method integer getVipType() 获取路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)
- * @method void setVipType(integer $VipType) 设置路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)
- * @method string getVpcId() 获取vpc网络Id,当vipType为3时必填
- * @method void setVpcId(string $VpcId) 设置vpc网络Id,当vipType为3时必填
- * @method string getSubnetId() 获取vpc子网id,当vipType为3时必填
- * @method void setSubnetId(string $SubnetId) 设置vpc子网id,当vipType为3时必填
- * @method integer getAccessType() 获取访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0
-vipType=3,支持 0,1,3,4,5
-vipType=7,支持0,1,3
-vipType=1,支持1,3
-
- * @method void setAccessType(integer $AccessType) 设置访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0
-vipType=3,支持 0,1,3,4,5
-vipType=7,支持0,1,3
-vipType=1,支持1,3
-
- * @method integer getAuthFlag() 获取是否需要权限管理,该字段已废弃
- * @method void setAuthFlag(integer $AuthFlag) 设置是否需要权限管理,该字段已废弃
- * @method integer getCallerAppid() 获取调用方appId
- * @method void setCallerAppid(integer $CallerAppid) 设置调用方appId
- * @method integer getPublicNetwork() 获取公网带宽,公网路由必传,且是3的倍数,无默认值
- * @method void setPublicNetwork(integer $PublicNetwork) 设置公网带宽,公网路由必传,且是3的倍数,无默认值
- * @method string getIp() 获取vip地址
- * @method void setIp(string $Ip) 设置vip地址
- * @method string getNote() 获取备注信息
- * @method void setNote(string $Note) 设置备注信息
+ * @method string getInstanceId() 获取<p>ckafka集群实例id,可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>ckafka集群实例id,可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
+ * @method integer getVipType() 获取<p>路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)</p>
+ * @method void setVipType(integer $VipType) 设置<p>路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)</p>
+ * @method string getVpcId() 获取<p>vpc网络Id,当vipType为3时必填</p>
+ * @method void setVpcId(string $VpcId) 设置<p>vpc网络Id,当vipType为3时必填</p>
+ * @method string getSubnetId() 获取<p>vpc子网id,当vipType为3时必填</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>vpc子网id,当vipType为3时必填</p>
+ * @method integer getAccessType() 获取<p>访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0vipType=3,支持 0,1,3,4,5vipType=7,支持0,1,3vipType=1,支持1,3</p>
+ * @method void setAccessType(integer $AccessType) 设置<p>访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0vipType=3,支持 0,1,3,4,5vipType=7,支持0,1,3vipType=1,支持1,3</p>
+ * @method integer getAuthFlag() 获取<p>是否需要权限管理,该字段已废弃</p>
+ * @method void setAuthFlag(integer $AuthFlag) 设置<p>是否需要权限管理,该字段已废弃</p>
+ * @method integer getCallerAppid() 获取<p>调用方appId</p>
+ * @method void setCallerAppid(integer $CallerAppid) 设置<p>调用方appId</p>
+ * @method integer getPublicNetwork() 获取<p>公网带宽,公网路由必传,且是3的倍数,无默认值</p>
+ * @method void setPublicNetwork(integer $PublicNetwork) 设置<p>公网带宽,公网路由必传,且是3的倍数,无默认值</p>
+ * @method string getIp() 获取<p>vip地址</p>
+ * @method void setIp(string $Ip) 设置<p>vip地址</p>
+ * @method string getNote() 获取<p>备注信息</p>
+ * @method void setNote(string $Note) 设置<p>备注信息</p>
+ * @method array getSecurityGroupIds() 获取<p>关联安全组有序列表</p>
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置<p>关联安全组有序列表</p>
  */
 class CreateRouteRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+     * @var string <p>ckafka集群实例id,可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)
+     * @var integer <p>路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)</p>
      */
     public $VipType;
 
     /**
-     * @var string vpc网络Id,当vipType为3时必填
+     * @var string <p>vpc网络Id,当vipType为3时必填</p>
      */
     public $VpcId;
 
     /**
-     * @var string vpc子网id,当vipType为3时必填
+     * @var string <p>vpc子网id,当vipType为3时必填</p>
      */
     public $SubnetId;
 
     /**
-     * @var integer 访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0
-vipType=3,支持 0,1,3,4,5
-vipType=7,支持0,1,3
-vipType=1,支持1,3
-
+     * @var integer <p>访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0vipType=3,支持 0,1,3,4,5vipType=7,支持0,1,3vipType=1,支持1,3</p>
      */
     public $AccessType;
 
     /**
-     * @var integer 是否需要权限管理,该字段已废弃
+     * @var integer <p>是否需要权限管理,该字段已废弃</p>
      */
     public $AuthFlag;
 
     /**
-     * @var integer 调用方appId
+     * @var integer <p>调用方appId</p>
      */
     public $CallerAppid;
 
     /**
-     * @var integer 公网带宽,公网路由必传,且是3的倍数,无默认值
+     * @var integer <p>公网带宽,公网路由必传,且是3的倍数,无默认值</p>
      */
     public $PublicNetwork;
 
     /**
-     * @var string vip地址
+     * @var string <p>vip地址</p>
      */
     public $Ip;
 
     /**
-     * @var string 备注信息
+     * @var string <p>备注信息</p>
      */
     public $Note;
 
     /**
-     * @param string $InstanceId ckafka集群实例id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
-     * @param integer $VipType 路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)
-     * @param string $VpcId vpc网络Id,当vipType为3时必填
-     * @param string $SubnetId vpc子网id,当vipType为3时必填
-     * @param integer $AccessType 访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0
-vipType=3,支持 0,1,3,4,5
-vipType=7,支持0,1,3
-vipType=1,支持1,3
+     * @var array <p>关联安全组有序列表</p>
+     */
+    public $SecurityGroupIds;
 
-     * @param integer $AuthFlag 是否需要权限管理,该字段已废弃
-     * @param integer $CallerAppid 调用方appId
-     * @param integer $PublicNetwork 公网带宽,公网路由必传,且是3的倍数,无默认值
-     * @param string $Ip vip地址
-     * @param string $Note 备注信息
+    /**
+     * @param string $InstanceId <p>ckafka集群实例id,可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
+     * @param integer $VipType <p>路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)</p>
+     * @param string $VpcId <p>vpc网络Id,当vipType为3时必填</p>
+     * @param string $SubnetId <p>vpc子网id,当vipType为3时必填</p>
+     * @param integer $AccessType <p>访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0vipType=3,支持 0,1,3,4,5vipType=7,支持0,1,3vipType=1,支持1,3</p>
+     * @param integer $AuthFlag <p>是否需要权限管理,该字段已废弃</p>
+     * @param integer $CallerAppid <p>调用方appId</p>
+     * @param integer $PublicNetwork <p>公网带宽,公网路由必传,且是3的倍数,无默认值</p>
+     * @param string $Ip <p>vip地址</p>
+     * @param string $Note <p>备注信息</p>
+     * @param array $SecurityGroupIds <p>关联安全组有序列表</p>
      */
     function __construct()
     {
@@ -172,6 +164,10 @@ vipType=1,支持1,3
 
         if (array_key_exists("Note",$param) and $param["Note"] !== null) {
             $this->Note = $param["Note"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
     }
 }

@@ -42,6 +42,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLastCheckTime(string $LastCheckTime) 设置上次检测时间
  * @method string getStatus() 获取状态，close:连接超时，端口可能已关闭，open:端口开放, checking:复测中, ignore:已忽略
  * @method void setStatus(string $Status) 设置状态，close:连接超时，端口可能已关闭，open:端口开放, checking:复测中, ignore:已忽略
+ * @method integer getIsCloudAsset() 获取是否为云资产：0-非云资产 1-是云资产
+ * @method void setIsCloudAsset(integer $IsCloudAsset) 设置是否为云资产：0-非云资产 1-是云资产
+ * @method integer getCloudAssetStatus() 获取云资产是否下线：-1-已下线 0-正常
+ * @method void setCloudAssetStatus(integer $CloudAssetStatus) 设置云资产是否下线：-1-已下线 0-正常
+ * @method integer getAnalysisState() 获取域名解析状态 1:异常 0:正常
+ * @method void setAnalysisState(integer $AnalysisState) 设置域名解析状态 1:异常 0:正常
  */
 class DisplayPort extends AbstractModel
 {
@@ -101,6 +107,21 @@ class DisplayPort extends AbstractModel
     public $Status;
 
     /**
+     * @var integer 是否为云资产：0-非云资产 1-是云资产
+     */
+    public $IsCloudAsset;
+
+    /**
+     * @var integer 云资产是否下线：-1-已下线 0-正常
+     */
+    public $CloudAssetStatus;
+
+    /**
+     * @var integer 域名解析状态 1:异常 0:正常
+     */
+    public $AnalysisState;
+
+    /**
      * @param integer $Id 主键ID
      * @param DisplayToolCommon $DisplayToolCommon 公共字段
      * @param string $Asset IP或域名地址
@@ -112,6 +133,9 @@ class DisplayPort extends AbstractModel
      * @param string $Banner 端口响应详情
      * @param string $LastCheckTime 上次检测时间
      * @param string $Status 状态，close:连接超时，端口可能已关闭，open:端口开放, checking:复测中, ignore:已忽略
+     * @param integer $IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
+     * @param integer $CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
+     * @param integer $AnalysisState 域名解析状态 1:异常 0:正常
      */
     function __construct()
     {
@@ -169,6 +193,18 @@ class DisplayPort extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("IsCloudAsset",$param) and $param["IsCloudAsset"] !== null) {
+            $this->IsCloudAsset = $param["IsCloudAsset"];
+        }
+
+        if (array_key_exists("CloudAssetStatus",$param) and $param["CloudAssetStatus"] !== null) {
+            $this->CloudAssetStatus = $param["CloudAssetStatus"];
+        }
+
+        if (array_key_exists("AnalysisState",$param) and $param["AnalysisState"] !== null) {
+            $this->AnalysisState = $param["AnalysisState"];
         }
     }
 }

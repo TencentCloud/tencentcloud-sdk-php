@@ -46,6 +46,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置状态：unrepaired:未修复，repaired:已修复, offline:资产已下线, ignore:已忽略
  * @method string getLastCheckTime() 获取上次复测时间
  * @method void setLastCheckTime(string $LastCheckTime) 设置上次复测时间
+ * @method integer getIsCloudAsset() 获取是否为云资产：0-非云资产 1-是云资产
+ * @method void setIsCloudAsset(integer $IsCloudAsset) 设置是否为云资产：0-非云资产 1-是云资产
+ * @method integer getCloudAssetStatus() 获取云资产是否下线：-1-已下线 0-正常
+ * @method void setCloudAssetStatus(integer $CloudAssetStatus) 设置云资产是否下线：-1-已下线 0-正常
+ * @method integer getAnalysisState() 获取域名解析状态 1:异常 0:正常
+ * @method void setAnalysisState(integer $AnalysisState) 设置域名解析状态 1:异常 0:正常
  */
 class DisplayVul extends AbstractModel
 {
@@ -115,6 +121,21 @@ class DisplayVul extends AbstractModel
     public $LastCheckTime;
 
     /**
+     * @var integer 是否为云资产：0-非云资产 1-是云资产
+     */
+    public $IsCloudAsset;
+
+    /**
+     * @var integer 云资产是否下线：-1-已下线 0-正常
+     */
+    public $CloudAssetStatus;
+
+    /**
+     * @var integer 域名解析状态 1:异常 0:正常
+     */
+    public $AnalysisState;
+
+    /**
      * @param integer $Id 主键ID
      * @param DisplayToolCommon $DisplayToolCommon 公共字段
      * @param string $Ip 解析的IP
@@ -128,6 +149,9 @@ class DisplayVul extends AbstractModel
      * @param string $AiJudge AI研判
      * @param string $Status 状态：unrepaired:未修复，repaired:已修复, offline:资产已下线, ignore:已忽略
      * @param string $LastCheckTime 上次复测时间
+     * @param integer $IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
+     * @param integer $CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
+     * @param integer $AnalysisState 域名解析状态 1:异常 0:正常
      */
     function __construct()
     {
@@ -193,6 +217,18 @@ class DisplayVul extends AbstractModel
 
         if (array_key_exists("LastCheckTime",$param) and $param["LastCheckTime"] !== null) {
             $this->LastCheckTime = $param["LastCheckTime"];
+        }
+
+        if (array_key_exists("IsCloudAsset",$param) and $param["IsCloudAsset"] !== null) {
+            $this->IsCloudAsset = $param["IsCloudAsset"];
+        }
+
+        if (array_key_exists("CloudAssetStatus",$param) and $param["CloudAssetStatus"] !== null) {
+            $this->CloudAssetStatus = $param["CloudAssetStatus"];
+        }
+
+        if (array_key_exists("AnalysisState",$param) and $param["AnalysisState"] !== null) {
+            $this->AnalysisState = $param["AnalysisState"];
         }
     }
 }

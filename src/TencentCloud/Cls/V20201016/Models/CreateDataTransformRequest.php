@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 目标日志主题ID通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  * @method integer getDataTransformType() 获取数据加工类型。0：标准加工任务； 1：前置加工任务。前置加工任务将采集的日志处理完成后，再写入日志主题。
  * @method void setDataTransformType(integer $DataTransformType) 设置数据加工类型。0：标准加工任务； 1：前置加工任务。前置加工任务将采集的日志处理完成后，再写入日志主题。
+ * @method integer getKeepFailureLog() 获取保留失败日志状态，1:不保留(默认)，2:保留。
+ * @method void setKeepFailureLog(integer $KeepFailureLog) 设置保留失败日志状态，1:不保留(默认)，2:保留。
+ * @method string getFailureLogKey() 获取失败日志的字段名称
+ * @method void setFailureLogKey(string $FailureLogKey) 设置失败日志的字段名称
  */
 class CreateDataTransformRequest extends AbstractModel
 {
@@ -132,6 +136,16 @@ class CreateDataTransformRequest extends AbstractModel
     public $DataTransformType;
 
     /**
+     * @var integer 保留失败日志状态，1:不保留(默认)，2:保留。
+     */
+    public $KeepFailureLog;
+
+    /**
+     * @var string 失败日志的字段名称
+     */
+    public $FailureLogKey;
+
+    /**
      * @param integer $FuncType 任务类型. 1: 指定主题；2:动态创建。详情请参考[创建加工任务文档](https://cloud.tencent.com/document/product/614/63940)。
      * @param string $SrcTopicId 日志主题ID
 - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
@@ -156,6 +170,8 @@ class CreateDataTransformRequest extends AbstractModel
      * @param array $PreviewLogStatistics 用于预览加工结果的测试数据
 目标日志主题ID通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      * @param integer $DataTransformType 数据加工类型。0：标准加工任务； 1：前置加工任务。前置加工任务将采集的日志处理完成后，再写入日志主题。
+     * @param integer $KeepFailureLog 保留失败日志状态，1:不保留(默认)，2:保留。
+     * @param string $FailureLogKey 失败日志的字段名称
      */
     function __construct()
     {
@@ -214,6 +230,14 @@ class CreateDataTransformRequest extends AbstractModel
 
         if (array_key_exists("DataTransformType",$param) and $param["DataTransformType"] !== null) {
             $this->DataTransformType = $param["DataTransformType"];
+        }
+
+        if (array_key_exists("KeepFailureLog",$param) and $param["KeepFailureLog"] !== null) {
+            $this->KeepFailureLog = $param["KeepFailureLog"];
+        }
+
+        if (array_key_exists("FailureLogKey",$param) and $param["FailureLogKey"] !== null) {
+            $this->FailureLogKey = $param["FailureLogKey"];
         }
     }
 }

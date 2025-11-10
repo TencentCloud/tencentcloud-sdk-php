@@ -36,14 +36,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccount(string $Account) 设置弱口令账号
  * @method string getPassword() 获取弱口令密码
  * @method void setPassword(string $Password) 设置弱口令密码
- * @method boolean getIsHoneypot() 获取是否蜜罐
- * @method void setIsHoneypot(boolean $IsHoneypot) 设置是否蜜罐
+ * @method boolean getIsHoneypot() 获取是否为蜜罐
+ * @method void setIsHoneypot(boolean $IsHoneypot) 设置是否为蜜罐
  * @method string getScreenshotUrl() 获取截图
  * @method void setScreenshotUrl(string $ScreenshotUrl) 设置截图
  * @method string getStatus() 获取状态：unrepaired:未修复，repaired:已修复, offline:资产已下线, ignore:已忽略, checking:复测中
  * @method void setStatus(string $Status) 设置状态：unrepaired:未修复，repaired:已修复, offline:资产已下线, ignore:已忽略, checking:复测中
  * @method string getLastCheckTime() 获取上次复测时间
  * @method void setLastCheckTime(string $LastCheckTime) 设置上次复测时间
+ * @method integer getIsCloudAsset() 获取是否为云资产：0-非云资产 1-是云资产
+ * @method void setIsCloudAsset(integer $IsCloudAsset) 设置是否为云资产：0-非云资产 1-是云资产
+ * @method integer getCloudAssetStatus() 获取云资产是否下线：-1-已下线 0-正常
+ * @method void setCloudAssetStatus(integer $CloudAssetStatus) 设置云资产是否下线：-1-已下线 0-正常
  */
 class DisplayWeakPassword extends AbstractModel
 {
@@ -88,7 +92,7 @@ class DisplayWeakPassword extends AbstractModel
     public $Password;
 
     /**
-     * @var boolean 是否蜜罐
+     * @var boolean 是否为蜜罐
      */
     public $IsHoneypot;
 
@@ -108,6 +112,16 @@ class DisplayWeakPassword extends AbstractModel
     public $LastCheckTime;
 
     /**
+     * @var integer 是否为云资产：0-非云资产 1-是云资产
+     */
+    public $IsCloudAsset;
+
+    /**
+     * @var integer 云资产是否下线：-1-已下线 0-正常
+     */
+    public $CloudAssetStatus;
+
+    /**
      * @param integer $Id 主键ID
      * @param DisplayToolCommon $DisplayToolCommon 公共字段
      * @param string $Ip 解析的IP
@@ -116,10 +130,12 @@ class DisplayWeakPassword extends AbstractModel
      * @param string $Type 弱口令类型
      * @param string $Account 弱口令账号
      * @param string $Password 弱口令密码
-     * @param boolean $IsHoneypot 是否蜜罐
+     * @param boolean $IsHoneypot 是否为蜜罐
      * @param string $ScreenshotUrl 截图
      * @param string $Status 状态：unrepaired:未修复，repaired:已修复, offline:资产已下线, ignore:已忽略, checking:复测中
      * @param string $LastCheckTime 上次复测时间
+     * @param integer $IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
+     * @param integer $CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
      */
     function __construct()
     {
@@ -181,6 +197,14 @@ class DisplayWeakPassword extends AbstractModel
 
         if (array_key_exists("LastCheckTime",$param) and $param["LastCheckTime"] !== null) {
             $this->LastCheckTime = $param["LastCheckTime"];
+        }
+
+        if (array_key_exists("IsCloudAsset",$param) and $param["IsCloudAsset"] !== null) {
+            $this->IsCloudAsset = $param["IsCloudAsset"];
+        }
+
+        if (array_key_exists("CloudAssetStatus",$param) and $param["CloudAssetStatus"] !== null) {
+            $this->CloudAssetStatus = $param["CloudAssetStatus"];
         }
     }
 }

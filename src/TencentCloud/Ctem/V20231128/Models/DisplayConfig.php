@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRiskLevel(integer $RiskLevel) 设置风险等级: 1-低危, 2-中危, 3-高危, 4-危级, 5-误报
  * @method string getSuggestion() 获取建议
  * @method void setSuggestion(string $Suggestion) 设置建议
+ * @method integer getIsCloudAsset() 获取是否为云资产
+ * @method void setIsCloudAsset(integer $IsCloudAsset) 设置是否为云资产
+ * @method integer getCloudAssetStatus() 获取云资产状态，-1为下线
+ * @method void setCloudAssetStatus(integer $CloudAssetStatus) 设置云资产状态，-1为下线
  */
 class DisplayConfig extends AbstractModel
 {
@@ -101,6 +105,16 @@ class DisplayConfig extends AbstractModel
     public $Suggestion;
 
     /**
+     * @var integer 是否为云资产
+     */
+    public $IsCloudAsset;
+
+    /**
+     * @var integer 云资产状态，-1为下线
+     */
+    public $CloudAssetStatus;
+
+    /**
      * @param integer $Id 主键Id
      * @param string $Url 地址
      * @param string $Title 站点标题
@@ -112,6 +126,8 @@ class DisplayConfig extends AbstractModel
      * @param string $AIAnalysis AI分析
      * @param integer $RiskLevel 风险等级: 1-低危, 2-中危, 3-高危, 4-危级, 5-误报
      * @param string $Suggestion 建议
+     * @param integer $IsCloudAsset 是否为云资产
+     * @param integer $CloudAssetStatus 云资产状态，-1为下线
      */
     function __construct()
     {
@@ -169,6 +185,14 @@ class DisplayConfig extends AbstractModel
 
         if (array_key_exists("Suggestion",$param) and $param["Suggestion"] !== null) {
             $this->Suggestion = $param["Suggestion"];
+        }
+
+        if (array_key_exists("IsCloudAsset",$param) and $param["IsCloudAsset"] !== null) {
+            $this->IsCloudAsset = $param["IsCloudAsset"];
+        }
+
+        if (array_key_exists("CloudAssetStatus",$param) and $param["CloudAssetStatus"] !== null) {
+            $this->CloudAssetStatus = $param["CloudAssetStatus"];
         }
     }
 }

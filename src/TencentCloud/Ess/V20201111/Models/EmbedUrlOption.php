@@ -36,18 +36,34 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShowTemplateComponent(boolean $ShowTemplateComponent) 设置模板预览，允许展示模板控件信息
 <ul><li> <b>true</b> :允许在模板预览页展示控件</li>
 <li> <b>false</b> :（默认）不允许在模板预览页展示控件</li></ul>
- * @method boolean getSkipUploadFile() 获取跳过上传文件，默认为false(展示上传文件页）![image](https://qcloudimg.tencent-cloud.cn/raw/8ca33745cf772e79831dbe5a70e82400.png)
+ * @method boolean getSkipUploadFile() 获取跳过上传文件，默认为false(展示上传文件页)![image](https://qcloudimg.tencent-cloud.cn/raw/8ca33745cf772e79831dbe5a70e82400.png)
 - false: 展示上传文件页
 - true: 不展示上传文件页
  
 
 注意: 此参数仅针对**EmbedType=CREATE_TEMPLATE(创建模板)和EmbedType=CREATE_CONTRACT_DRAFT_COOPEDIT(创建起草合同)有效**，
- * @method void setSkipUploadFile(boolean $SkipUploadFile) 设置跳过上传文件，默认为false(展示上传文件页）![image](https://qcloudimg.tencent-cloud.cn/raw/8ca33745cf772e79831dbe5a70e82400.png)
+ * @method void setSkipUploadFile(boolean $SkipUploadFile) 设置跳过上传文件，默认为false(展示上传文件页)![image](https://qcloudimg.tencent-cloud.cn/raw/8ca33745cf772e79831dbe5a70e82400.png)
 - false: 展示上传文件页
 - true: 不展示上传文件页
  
 
 注意: 此参数仅针对**EmbedType=CREATE_TEMPLATE(创建模板)和EmbedType=CREATE_CONTRACT_DRAFT_COOPEDIT(创建起草合同)有效**，
+ * @method boolean getSkipDownloadFile() 获取隐藏下载文件按钮，默认为false(展示下载文件按钮)
+
+- false: 展示下载文件按钮
+- true: 不展示下载文件按钮
+
+ 
+
+注意: 此参数仅针对**EmbedType=PREVIEW_FLOW_DETAIL(查看合同详情)**有效
+ * @method void setSkipDownloadFile(boolean $SkipDownloadFile) 设置隐藏下载文件按钮，默认为false(展示下载文件按钮)
+
+- false: 展示下载文件按钮
+- true: 不展示下载文件按钮
+
+ 
+
+注意: 此参数仅针对**EmbedType=PREVIEW_FLOW_DETAIL(查看合同详情)**有效
  * @method boolean getForbidEditWatermark() 获取是否禁止编辑（展示）水印控件属性
 <ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
 
@@ -80,7 +96,7 @@ class EmbedUrlOption extends AbstractModel
     public $ShowTemplateComponent;
 
     /**
-     * @var boolean 跳过上传文件，默认为false(展示上传文件页）![image](https://qcloudimg.tencent-cloud.cn/raw/8ca33745cf772e79831dbe5a70e82400.png)
+     * @var boolean 跳过上传文件，默认为false(展示上传文件页)![image](https://qcloudimg.tencent-cloud.cn/raw/8ca33745cf772e79831dbe5a70e82400.png)
 - false: 展示上传文件页
 - true: 不展示上传文件页
  
@@ -88,6 +104,18 @@ class EmbedUrlOption extends AbstractModel
 注意: 此参数仅针对**EmbedType=CREATE_TEMPLATE(创建模板)和EmbedType=CREATE_CONTRACT_DRAFT_COOPEDIT(创建起草合同)有效**，
      */
     public $SkipUploadFile;
+
+    /**
+     * @var boolean 隐藏下载文件按钮，默认为false(展示下载文件按钮)
+
+- false: 展示下载文件按钮
+- true: 不展示下载文件按钮
+
+ 
+
+注意: 此参数仅针对**EmbedType=PREVIEW_FLOW_DETAIL(查看合同详情)**有效
+     */
+    public $SkipDownloadFile;
 
     /**
      * @var boolean 是否禁止编辑（展示）水印控件属性
@@ -116,12 +144,20 @@ class EmbedUrlOption extends AbstractModel
      * @param boolean $ShowTemplateComponent 模板预览，允许展示模板控件信息
 <ul><li> <b>true</b> :允许在模板预览页展示控件</li>
 <li> <b>false</b> :（默认）不允许在模板预览页展示控件</li></ul>
-     * @param boolean $SkipUploadFile 跳过上传文件，默认为false(展示上传文件页）![image](https://qcloudimg.tencent-cloud.cn/raw/8ca33745cf772e79831dbe5a70e82400.png)
+     * @param boolean $SkipUploadFile 跳过上传文件，默认为false(展示上传文件页)![image](https://qcloudimg.tencent-cloud.cn/raw/8ca33745cf772e79831dbe5a70e82400.png)
 - false: 展示上传文件页
 - true: 不展示上传文件页
  
 
 注意: 此参数仅针对**EmbedType=CREATE_TEMPLATE(创建模板)和EmbedType=CREATE_CONTRACT_DRAFT_COOPEDIT(创建起草合同)有效**，
+     * @param boolean $SkipDownloadFile 隐藏下载文件按钮，默认为false(展示下载文件按钮)
+
+- false: 展示下载文件按钮
+- true: 不展示下载文件按钮
+
+ 
+
+注意: 此参数仅针对**EmbedType=PREVIEW_FLOW_DETAIL(查看合同详情)**有效
      * @param boolean $ForbidEditWatermark 是否禁止编辑（展示）水印控件属性
 <ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
 
@@ -152,6 +188,10 @@ class EmbedUrlOption extends AbstractModel
 
         if (array_key_exists("SkipUploadFile",$param) and $param["SkipUploadFile"] !== null) {
             $this->SkipUploadFile = $param["SkipUploadFile"];
+        }
+
+        if (array_key_exists("SkipDownloadFile",$param) and $param["SkipDownloadFile"] !== null) {
+            $this->SkipDownloadFile = $param["SkipDownloadFile"];
         }
 
         if (array_key_exists("ForbidEditWatermark",$param) and $param["ForbidEditWatermark"] !== null) {

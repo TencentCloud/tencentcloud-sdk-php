@@ -40,10 +40,14 @@ use TencentCloud\Common\AbstractModel;
 输出HLS：可以使用切片模式或singlefile模式
 输出DASH：只能singlefile模式
 
-- widevine+fairplay:
+- widevine+fairplay，playready+fairplay，widevine+playready+fairplay:
  只能用于HLS，切片格式只能是mp4
  可以使用切片模式或singfile模式
 
+- widevine+playready:
+ 可用于HLS、MPEG-DASH，切片格式只能是mp4
+ HLS格式时，可以使用切片模式或singfile模式
+ MPEG-DASH时，只能使用singlefile模式
  * @method void setType(string $Type) 设置加密类型：
 
 - simpleaes
@@ -64,10 +68,14 @@ use TencentCloud\Common\AbstractModel;
 输出HLS：可以使用切片模式或singlefile模式
 输出DASH：只能singlefile模式
 
-- widevine+fairplay:
+- widevine+fairplay，playready+fairplay，widevine+playready+fairplay:
  只能用于HLS，切片格式只能是mp4
  可以使用切片模式或singfile模式
 
+- widevine+playready:
+ 可用于HLS、MPEG-DASH，切片格式只能是mp4
+ HLS格式时，可以使用切片模式或singfile模式
+ MPEG-DASH时，只能使用singlefile模式
  * @method SimpleAesDrm getSimpleAesDrm() 获取SimpleAes 加密信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSimpleAesDrm(SimpleAesDrm $SimpleAesDrm) 设置SimpleAes 加密信息。
@@ -98,10 +106,14 @@ class DrmInfo extends AbstractModel
 输出HLS：可以使用切片模式或singlefile模式
 输出DASH：只能singlefile模式
 
-- widevine+fairplay:
+- widevine+fairplay，playready+fairplay，widevine+playready+fairplay:
  只能用于HLS，切片格式只能是mp4
  可以使用切片模式或singfile模式
 
+- widevine+playready:
+ 可用于HLS、MPEG-DASH，切片格式只能是mp4
+ HLS格式时，可以使用切片模式或singfile模式
+ MPEG-DASH时，只能使用singlefile模式
      */
     public $Type;
 
@@ -137,10 +149,14 @@ class DrmInfo extends AbstractModel
 输出HLS：可以使用切片模式或singlefile模式
 输出DASH：只能singlefile模式
 
-- widevine+fairplay:
+- widevine+fairplay，playready+fairplay，widevine+playready+fairplay:
  只能用于HLS，切片格式只能是mp4
  可以使用切片模式或singfile模式
 
+- widevine+playready:
+ 可用于HLS、MPEG-DASH，切片格式只能是mp4
+ HLS格式时，可以使用切片模式或singfile模式
+ MPEG-DASH时，只能使用singlefile模式
      * @param SimpleAesDrm $SimpleAesDrm SimpleAes 加密信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SpekeDrm $SpekeDrm FairPlay，WideVine，PlayReady 加密信息。

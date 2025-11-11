@@ -68,6 +68,10 @@ PureAudio：纯音频类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStdExtInfo() 获取转码参数扩展字段
  * @method void setStdExtInfo(string $StdExtInfo) 设置转码参数扩展字段
+ * @method array getKeyPTSList() 获取指定pts时间的帧设为关键帧，并切片。单位毫秒（允许相对偏差<=1ms）。当同时指定gop和切片时长时，会共同作用。注意需开启RawPts，保持帧率随源，并确保传入的pts时间在源中是有对应帧的。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKeyPTSList(array $KeyPTSList) 设置指定pts时间的帧设为关键帧，并切片。单位毫秒（允许相对偏差<=1ms）。当同时指定gop和切片时长时，会共同作用。注意需开启RawPts，保持帧率随源，并确保传入的pts时间在源中是有对应帧的。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AdaptiveDynamicStreamingTaskInput extends AbstractModel
 {
@@ -140,6 +144,12 @@ PureAudio：纯音频类型
     public $StdExtInfo;
 
     /**
+     * @var array 指定pts时间的帧设为关键帧，并切片。单位毫秒（允许相对偏差<=1ms）。当同时指定gop和切片时长时，会共同作用。注意需开启RawPts，保持帧率随源，并确保传入的pts时间在源中是有对应帧的。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KeyPTSList;
+
+    /**
      * @param integer $Definition 转自适应码流模板 ID。
      * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
      * @param TaskOutputStorage $OutputStorage 转自适应码流后文件的目标存储，不填则继承上层的 OutputStorage 值。
@@ -164,6 +174,8 @@ PureAudio：纯音频类型
      * @param SubtitleTemplate $SubtitleTemplate 硬字幕（压制字幕）功能，指定字幕来源、字体大小、位置等字幕参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StdExtInfo 转码参数扩展字段
+     * @param array $KeyPTSList 指定pts时间的帧设为关键帧，并切片。单位毫秒（允许相对偏差<=1ms）。当同时指定gop和切片时长时，会共同作用。注意需开启RawPts，保持帧率随源，并确保传入的pts时间在源中是有对应帧的。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -233,6 +245,10 @@ PureAudio：纯音频类型
 
         if (array_key_exists("StdExtInfo",$param) and $param["StdExtInfo"] !== null) {
             $this->StdExtInfo = $param["StdExtInfo"];
+        }
+
+        if (array_key_exists("KeyPTSList",$param) and $param["KeyPTSList"] !== null) {
+            $this->KeyPTSList = $param["KeyPTSList"];
         }
     }
 }

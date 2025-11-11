@@ -108,6 +108,18 @@ AnycastEIP是否用于绑定负载均衡。
  * @method void setAntiDDoSPackageId(string $AntiDDoSPackageId) 设置高防包ID， 申请高防IP时，该字段必传。
  * @method string getClientToken() 获取保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
  * @method void setClientToken(string $ClientToken) 设置保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
+ * @method string getIPChargeType() 获取原生EIP IP资源的计费方式。
+<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
+<li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
+<li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
+</ul></li>
+</ul>
+ * @method void setIPChargeType(string $IPChargeType) 设置原生EIP IP资源的计费方式。
+<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
+<li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
+<li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
+</ul></li>
+</ul>
  */
 class AllocateAddressesRequest extends AbstractModel
 {
@@ -225,6 +237,16 @@ AnycastEIP是否用于绑定负载均衡。
     public $ClientToken;
 
     /**
+     * @var string 原生EIP IP资源的计费方式。
+<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
+<li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
+<li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
+</ul></li>
+</ul>
+     */
+    public $IPChargeType;
+
+    /**
      * @param integer $AddressCount EIP数量。可申请的数量限制参考：[EIP 配额限制](https://cloud.tencent.com/document/product/1199/41648)。默认值：1。
      * @param string $InternetServiceProvider EIP线路类型。各种线路类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
 <ul style="margin:0"><li>BGP：常规 BGP 线路</li>
@@ -269,6 +291,12 @@ AnycastEIP是否用于绑定负载均衡。
      * @param string $Egress 网络出口，当前仅支持精品BGP、静态单线，这2种IP 地址类型的指定出口传入，默认值：center_egress1，其它可选值：center_egress2、center_egress3
      * @param string $AntiDDoSPackageId 高防包ID， 申请高防IP时，该字段必传。
      * @param string $ClientToken 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
+     * @param string $IPChargeType 原生EIP IP资源的计费方式。
+<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
+<li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
+<li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
+</ul></li>
+</ul>
      */
     function __construct()
     {
@@ -355,6 +383,10 @@ AnycastEIP是否用于绑定负载均衡。
 
         if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
             $this->ClientToken = $param["ClientToken"];
+        }
+
+        if (array_key_exists("IPChargeType",$param) and $param["IPChargeType"] !== null) {
+            $this->IPChargeType = $param["IPChargeType"];
         }
     }
 }

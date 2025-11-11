@@ -58,6 +58,18 @@ use TencentCloud\Common\AbstractModel;
 <ul style="margin:0"><li>弹性公网IP，可选值：<ul><li>EIP：弹性公网IP</li></ul></li></ul>
 <ul style="margin:0"><li>精品IP，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅新加坡和中国香港支持精品IP。</li></ul>
 <ul style="margin:0"><li>高防IP，可选值：<ul><li>AntiDDoSEIP：高防IP</li></ul>注意：仅部分地域支持高防IP，详情可见弹性公网IP[产品概述](https://cloud.tencent.com/document/product/1199/41646)。</li></ul>
+ * @method string getIPChargeType() 获取原生EIP IP资源的计费方式。
+<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
+<li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
+<li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
+</ul></li>
+</ul>
+ * @method void setIPChargeType(string $IPChargeType) 设置原生EIP IP资源的计费方式。
+<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
+<li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
+<li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
+</ul></li>
+</ul>
  */
 class InquiryPriceAllocateAddressesRequest extends AbstractModel
 {
@@ -97,6 +109,16 @@ class InquiryPriceAllocateAddressesRequest extends AbstractModel
     public $AddressType;
 
     /**
+     * @var string 原生EIP IP资源的计费方式。
+<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
+<li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
+<li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
+</ul></li>
+</ul>
+     */
+    public $IPChargeType;
+
+    /**
      * @param string $InternetChargeType EIP计费方式。
 <ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
 <li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li>
@@ -116,6 +138,12 @@ class InquiryPriceAllocateAddressesRequest extends AbstractModel
 <ul style="margin:0"><li>弹性公网IP，可选值：<ul><li>EIP：弹性公网IP</li></ul></li></ul>
 <ul style="margin:0"><li>精品IP，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅新加坡和中国香港支持精品IP。</li></ul>
 <ul style="margin:0"><li>高防IP，可选值：<ul><li>AntiDDoSEIP：高防IP</li></ul>注意：仅部分地域支持高防IP，详情可见弹性公网IP[产品概述](https://cloud.tencent.com/document/product/1199/41646)。</li></ul>
+     * @param string $IPChargeType 原生EIP IP资源的计费方式。
+<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
+<li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
+<li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
+</ul></li>
+</ul>
      */
     function __construct()
     {
@@ -145,6 +173,10 @@ class InquiryPriceAllocateAddressesRequest extends AbstractModel
 
         if (array_key_exists("AddressType",$param) and $param["AddressType"] !== null) {
             $this->AddressType = $param["AddressType"];
+        }
+
+        if (array_key_exists("IPChargeType",$param) and $param["IPChargeType"] !== null) {
+            $this->IPChargeType = $param["IPChargeType"];
         }
     }
 }

@@ -36,16 +36,20 @@ use TencentCloud\Common\AbstractModel;
 注: 不同DRM厂商对子流的数量限制不一样，如 PallyCon 限制不能超过5条子流，DRMtoday厂商最多仅支持9条子流加密
  * @method string getVector() 获取加密初始化向量(十六进制32字节字符串)，该字段内容为用户自定义。
  * @method void setVector(string $Vector) 设置加密初始化向量(十六进制32字节字符串)，该字段内容为用户自定义。
- * @method string getEncryptionMethod() 获取加密方式，FairPlay 默认cbcs，PlayReady，Widevine 默认cenc
-加密方式选择WideVine+FairPlay时，仅支持cbcs
+ * @method string getEncryptionMethod() 获取加密方式，FairPlay 默认cbcs
+加密方式，PlayReady，Widevine 默认cenc
+加密方式，WideVine+FairPlay，Playready+Fairplay，Widevine+Playready+Fairplay默认cbcs
+加密方式，Widevine+Playready默认cenc
 
-cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay 支持；
-cenc：PlayReady，Widevine支持；
- * @method void setEncryptionMethod(string $EncryptionMethod) 设置加密方式，FairPlay 默认cbcs，PlayReady，Widevine 默认cenc
-加密方式选择WideVine+FairPlay时，仅支持cbcs
+cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay，Widevine+Playready，Playready+Fairplay，Widevine+Playready+Fairplay支持；
+cenc：PlayReady，Widevine，Widevine+Playready支持；
+ * @method void setEncryptionMethod(string $EncryptionMethod) 设置加密方式，FairPlay 默认cbcs
+加密方式，PlayReady，Widevine 默认cenc
+加密方式，WideVine+FairPlay，Playready+Fairplay，Widevine+Playready+Fairplay默认cbcs
+加密方式，Widevine+Playready默认cenc
 
-cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay 支持；
-cenc：PlayReady，Widevine支持；
+cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay，Widevine+Playready，Playready+Fairplay，Widevine+Playready+Fairplay支持；
+cenc：PlayReady，Widevine，Widevine+Playready支持；
  * @method string getEncryptionPreset() 获取子流加密规则，默认 preset0
 preset0：全部子流使用同一个key加密；
 preset1：每个子流使用不同的key加密；
@@ -77,11 +81,13 @@ class SpekeDrm extends AbstractModel
     public $Vector;
 
     /**
-     * @var string 加密方式，FairPlay 默认cbcs，PlayReady，Widevine 默认cenc
-加密方式选择WideVine+FairPlay时，仅支持cbcs
+     * @var string 加密方式，FairPlay 默认cbcs
+加密方式，PlayReady，Widevine 默认cenc
+加密方式，WideVine+FairPlay，Playready+Fairplay，Widevine+Playready+Fairplay默认cbcs
+加密方式，Widevine+Playready默认cenc
 
-cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay 支持；
-cenc：PlayReady，Widevine支持；
+cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay，Widevine+Playready，Playready+Fairplay，Widevine+Playready+Fairplay支持；
+cenc：PlayReady，Widevine，Widevine+Playready支持；
      */
     public $EncryptionMethod;
 
@@ -102,11 +108,13 @@ preset1：每个子流使用不同的key加密；
 
 注: 不同DRM厂商对子流的数量限制不一样，如 PallyCon 限制不能超过5条子流，DRMtoday厂商最多仅支持9条子流加密
      * @param string $Vector 加密初始化向量(十六进制32字节字符串)，该字段内容为用户自定义。
-     * @param string $EncryptionMethod 加密方式，FairPlay 默认cbcs，PlayReady，Widevine 默认cenc
-加密方式选择WideVine+FairPlay时，仅支持cbcs
+     * @param string $EncryptionMethod 加密方式，FairPlay 默认cbcs
+加密方式，PlayReady，Widevine 默认cenc
+加密方式，WideVine+FairPlay，Playready+Fairplay，Widevine+Playready+Fairplay默认cbcs
+加密方式，Widevine+Playready默认cenc
 
-cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay 支持；
-cenc：PlayReady，Widevine支持；
+cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay，Widevine+Playready，Playready+Fairplay，Widevine+Playready+Fairplay支持；
+cenc：PlayReady，Widevine，Widevine+Playready支持；
      * @param string $EncryptionPreset 子流加密规则，默认 preset0
 preset0：全部子流使用同一个key加密；
 preset1：每个子流使用不同的key加密；

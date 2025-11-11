@@ -66,12 +66,42 @@ use TencentCloud\Common\AbstractModel;
 目标日志主题ID通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  * @method void setPreviewLogStatistics(array $PreviewLogStatistics) 设置用于预览加工结果的测试数据
 目标日志主题ID通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+ * @method boolean getBackupGiveUpData() 获取当FuncType为2时，动态创建的日志集、日志主题的个数超出产品规格限制是否丢弃数据， 默认为false。
+
+false：创建兜底日志集、日志主题并将日志写入兜底主题；
+true：丢弃日志数据。
+ * @method void setBackupGiveUpData(boolean $BackupGiveUpData) 设置当FuncType为2时，动态创建的日志集、日志主题的个数超出产品规格限制是否丢弃数据， 默认为false。
+
+false：创建兜底日志集、日志主题并将日志写入兜底主题；
+true：丢弃日志数据。
+ * @method integer getHasServicesLog() 获取是否开启投递服务日志。1：关闭，2：开启。
+ * @method void setHasServicesLog(integer $HasServicesLog) 设置是否开启投递服务日志。1：关闭，2：开启。
  * @method integer getDataTransformType() 获取数据加工类型。0：标准加工任务； 1：前置加工任务。前置加工任务将采集的日志处理完成后，再写入日志主题。
  * @method void setDataTransformType(integer $DataTransformType) 设置数据加工类型。0：标准加工任务； 1：前置加工任务。前置加工任务将采集的日志处理完成后，再写入日志主题。
  * @method integer getKeepFailureLog() 获取保留失败日志状态，1:不保留(默认)，2:保留。
  * @method void setKeepFailureLog(integer $KeepFailureLog) 设置保留失败日志状态，1:不保留(默认)，2:保留。
  * @method string getFailureLogKey() 获取失败日志的字段名称
  * @method void setFailureLogKey(string $FailureLogKey) 设置失败日志的字段名称
+ * @method integer getProcessFromTimestamp() 获取指定加工数据的开始时间, 秒级时间戳。
+ - 日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。
+ * @method void setProcessFromTimestamp(integer $ProcessFromTimestamp) 设置指定加工数据的开始时间, 秒级时间戳。
+ - 日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。
+ * @method integer getProcessToTimestamp() 获取指定加工数据的结束时间，秒级时间戳。
+
+-  不可指定未来的时间
+-  不填则表示持续执行
+ * @method void setProcessToTimestamp(integer $ProcessToTimestamp) 设置指定加工数据的结束时间，秒级时间戳。
+
+-  不可指定未来的时间
+-  不填则表示持续执行
+ * @method string getTaskId() 获取对已经创建的并且使用了关联外部数据库能力的任务预览（TaskType 为 1 或 2）时，该值必传
+数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
+ * @method void setTaskId(string $TaskId) 设置对已经创建的并且使用了关联外部数据库能力的任务预览（TaskType 为 1 或 2）时，该值必传
+数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
+ * @method array getDataTransformSqlDataSources() 获取关联的数据源信息
+ * @method void setDataTransformSqlDataSources(array $DataTransformSqlDataSources) 设置关联的数据源信息
+ * @method array getEnvInfos() 获取设置的环境变量
+ * @method void setEnvInfos(array $EnvInfos) 设置设置的环境变量
  */
 class CreateDataTransformRequest extends AbstractModel
 {
@@ -131,6 +161,19 @@ class CreateDataTransformRequest extends AbstractModel
     public $PreviewLogStatistics;
 
     /**
+     * @var boolean 当FuncType为2时，动态创建的日志集、日志主题的个数超出产品规格限制是否丢弃数据， 默认为false。
+
+false：创建兜底日志集、日志主题并将日志写入兜底主题；
+true：丢弃日志数据。
+     */
+    public $BackupGiveUpData;
+
+    /**
+     * @var integer 是否开启投递服务日志。1：关闭，2：开启。
+     */
+    public $HasServicesLog;
+
+    /**
      * @var integer 数据加工类型。0：标准加工任务； 1：前置加工任务。前置加工任务将采集的日志处理完成后，再写入日志主题。
      */
     public $DataTransformType;
@@ -144,6 +187,36 @@ class CreateDataTransformRequest extends AbstractModel
      * @var string 失败日志的字段名称
      */
     public $FailureLogKey;
+
+    /**
+     * @var integer 指定加工数据的开始时间, 秒级时间戳。
+ - 日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。
+     */
+    public $ProcessFromTimestamp;
+
+    /**
+     * @var integer 指定加工数据的结束时间，秒级时间戳。
+
+-  不可指定未来的时间
+-  不填则表示持续执行
+     */
+    public $ProcessToTimestamp;
+
+    /**
+     * @var string 对已经创建的并且使用了关联外部数据库能力的任务预览（TaskType 为 1 或 2）时，该值必传
+数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
+     */
+    public $TaskId;
+
+    /**
+     * @var array 关联的数据源信息
+     */
+    public $DataTransformSqlDataSources;
+
+    /**
+     * @var array 设置的环境变量
+     */
+    public $EnvInfos;
 
     /**
      * @param integer $FuncType 任务类型. 1: 指定主题；2:动态创建。详情请参考[创建加工任务文档](https://cloud.tencent.com/document/product/614/63940)。
@@ -169,9 +242,24 @@ class CreateDataTransformRequest extends AbstractModel
      * @param integer $EnableFlag 任务启动状态.   默认为1:开启,  2:关闭
      * @param array $PreviewLogStatistics 用于预览加工结果的测试数据
 目标日志主题ID通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * @param boolean $BackupGiveUpData 当FuncType为2时，动态创建的日志集、日志主题的个数超出产品规格限制是否丢弃数据， 默认为false。
+
+false：创建兜底日志集、日志主题并将日志写入兜底主题；
+true：丢弃日志数据。
+     * @param integer $HasServicesLog 是否开启投递服务日志。1：关闭，2：开启。
      * @param integer $DataTransformType 数据加工类型。0：标准加工任务； 1：前置加工任务。前置加工任务将采集的日志处理完成后，再写入日志主题。
      * @param integer $KeepFailureLog 保留失败日志状态，1:不保留(默认)，2:保留。
      * @param string $FailureLogKey 失败日志的字段名称
+     * @param integer $ProcessFromTimestamp 指定加工数据的开始时间, 秒级时间戳。
+ - 日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。
+     * @param integer $ProcessToTimestamp 指定加工数据的结束时间，秒级时间戳。
+
+-  不可指定未来的时间
+-  不填则表示持续执行
+     * @param string $TaskId 对已经创建的并且使用了关联外部数据库能力的任务预览（TaskType 为 1 或 2）时，该值必传
+数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
+     * @param array $DataTransformSqlDataSources 关联的数据源信息
+     * @param array $EnvInfos 设置的环境变量
      */
     function __construct()
     {
@@ -228,6 +316,14 @@ class CreateDataTransformRequest extends AbstractModel
             }
         }
 
+        if (array_key_exists("BackupGiveUpData",$param) and $param["BackupGiveUpData"] !== null) {
+            $this->BackupGiveUpData = $param["BackupGiveUpData"];
+        }
+
+        if (array_key_exists("HasServicesLog",$param) and $param["HasServicesLog"] !== null) {
+            $this->HasServicesLog = $param["HasServicesLog"];
+        }
+
         if (array_key_exists("DataTransformType",$param) and $param["DataTransformType"] !== null) {
             $this->DataTransformType = $param["DataTransformType"];
         }
@@ -238,6 +334,36 @@ class CreateDataTransformRequest extends AbstractModel
 
         if (array_key_exists("FailureLogKey",$param) and $param["FailureLogKey"] !== null) {
             $this->FailureLogKey = $param["FailureLogKey"];
+        }
+
+        if (array_key_exists("ProcessFromTimestamp",$param) and $param["ProcessFromTimestamp"] !== null) {
+            $this->ProcessFromTimestamp = $param["ProcessFromTimestamp"];
+        }
+
+        if (array_key_exists("ProcessToTimestamp",$param) and $param["ProcessToTimestamp"] !== null) {
+            $this->ProcessToTimestamp = $param["ProcessToTimestamp"];
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("DataTransformSqlDataSources",$param) and $param["DataTransformSqlDataSources"] !== null) {
+            $this->DataTransformSqlDataSources = [];
+            foreach ($param["DataTransformSqlDataSources"] as $key => $value){
+                $obj = new DataTransformSqlDataSource();
+                $obj->deserialize($value);
+                array_push($this->DataTransformSqlDataSources, $obj);
+            }
+        }
+
+        if (array_key_exists("EnvInfos",$param) and $param["EnvInfos"] !== null) {
+            $this->EnvInfos = [];
+            foreach ($param["EnvInfos"] as $key => $value){
+                $obj = new EnvInfo();
+                $obj->deserialize($value);
+                array_push($this->EnvInfos, $obj);
+            }
         }
     }
 }

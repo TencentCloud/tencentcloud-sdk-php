@@ -100,6 +100,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeClusterAsGroupOptionResponse DescribeClusterAsGroupOption(Models\DescribeClusterAsGroupOptionRequest $req) 集群弹性伸缩配置
  * @method Models\DescribeClusterAsGroupsResponse DescribeClusterAsGroups(Models\DescribeClusterAsGroupsRequest $req) 集群关联的伸缩组列表
  * @method Models\DescribeClusterAuthenticationOptionsResponse DescribeClusterAuthenticationOptions(Models\DescribeClusterAuthenticationOptionsRequest $req) 查看集群认证配置
+ * @method Models\DescribeClusterAvailableExtraArgsResponse DescribeClusterAvailableExtraArgs(Models\DescribeClusterAvailableExtraArgsRequest $req) 查询集群可用的自定义参数
  * @method Models\DescribeClusterCommonNamesResponse DescribeClusterCommonNames(Models\DescribeClusterCommonNamesRequest $req) 获取指定子账户在RBAC授权模式中对应kube-apiserver客户端证书的CommonName字段，如果没有客户端证书，将会签发一个，此接口有最大传入子账户数量上限，当前为50
  * @method Models\DescribeClusterControllersResponse DescribeClusterControllers(Models\DescribeClusterControllersRequest $req) 用于查询Kubernetes的各个原生控制器是否开启
  * @method Models\DescribeClusterEndpointStatusResponse DescribeClusterEndpointStatus(Models\DescribeClusterEndpointStatusRequest $req) 查询集群访问端口状态(独立集群开启内网/外网访问，托管集群支持开启内网访问)
@@ -184,6 +185,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeTKEEdgeClustersResponse DescribeTKEEdgeClusters(Models\DescribeTKEEdgeClustersRequest $req) 查询边缘集群列表
  * @method Models\DescribeTKEEdgeExternalKubeconfigResponse DescribeTKEEdgeExternalKubeconfig(Models\DescribeTKEEdgeExternalKubeconfigRequest $req) 获取边缘计算外部访问的kubeconfig
  * @method Models\DescribeTKEEdgeScriptResponse DescribeTKEEdgeScript(Models\DescribeTKEEdgeScriptRequest $req) 获取边缘脚本链接，此接口用于添加第三方节点，通过下载脚本从而将节点添加到边缘集群。
+ * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 查询任务相关信息，只会查询对应任务类型的最新的一条任务状态
  * @method Models\DescribeVersionsResponse DescribeVersions(Models\DescribeVersionsRequest $req) 获取集群版本信息
  * @method Models\DescribeVpcCniPodLimitsResponse DescribeVpcCniPodLimits(Models\DescribeVpcCniPodLimitsRequest $req) 本接口查询当前用户和地域在指定可用区下的机型可支持的最大 TKE VPC-CNI 网络模式的 Pod 数量
  * @method Models\DisableClusterAuditResponse DisableClusterAudit(Models\DisableClusterAuditRequest $req) 关闭集群审计
@@ -212,6 +214,8 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\ModifyClusterAttributeResponse ModifyClusterAttribute(Models\ModifyClusterAttributeRequest $req) 修改集群属性，至少选择一个参数更新
  * @method Models\ModifyClusterAuthenticationOptionsResponse ModifyClusterAuthenticationOptions(Models\ModifyClusterAuthenticationOptionsRequest $req) 修改集群认证配置
  * @method Models\ModifyClusterEndpointSPResponse ModifyClusterEndpointSP(Models\ModifyClusterEndpointSPRequest $req) 修改托管集群外网端口的安全策略（老的方式，仅支持托管集群外网端口）
+ * @method Models\ModifyClusterExtraArgsResponse ModifyClusterExtraArgs(Models\ModifyClusterExtraArgsRequest $req) 更新集群自定义参数，只支持托管集群
+ * @method Models\ModifyClusterExtraArgsTaskStateResponse ModifyClusterExtraArgsTaskState(Models\ModifyClusterExtraArgsTaskStateRequest $req) 暂停或者取消集群更新参数任务
  * @method Models\ModifyClusterImageResponse ModifyClusterImage(Models\ModifyClusterImageRequest $req) 修改集群镜像
  * @method Models\ModifyClusterNodePoolResponse ModifyClusterNodePool(Models\ModifyClusterNodePoolRequest $req) 编辑节点池
  * @method Models\ModifyClusterRuntimeConfigResponse ModifyClusterRuntimeConfig(Models\ModifyClusterRuntimeConfigRequest $req) 修改集群及节点池维度运行时配置

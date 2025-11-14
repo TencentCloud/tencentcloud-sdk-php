@@ -52,6 +52,8 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
 - 消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。
  * @method void setConsumerGroupName(string $ConsumerGroupName) 设置用户Kafka消费组名称。
 - 消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。
+ * @method UserKafkaMeta getUserKafkaMeta() 获取用户kafka拓展信息
+ * @method void setUserKafkaMeta(UserKafkaMeta $UserKafkaMeta) 设置用户kafka拓展信息
  */
 class CreateKafkaRechargeRequest extends AbstractModel
 {
@@ -116,6 +118,11 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
     public $ConsumerGroupName;
 
     /**
+     * @var UserKafkaMeta 用户kafka拓展信息
+     */
+    public $UserKafkaMeta;
+
+    /**
      * @param string $TopicId 导入CLS目标TopicId。
 - 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
 - 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
@@ -132,6 +139,7 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
 KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
      * @param string $ConsumerGroupName 用户Kafka消费组名称。
 - 消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。
+     * @param UserKafkaMeta $UserKafkaMeta 用户kafka拓展信息
      */
     function __construct()
     {
@@ -190,6 +198,11 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
 
         if (array_key_exists("ConsumerGroupName",$param) and $param["ConsumerGroupName"] !== null) {
             $this->ConsumerGroupName = $param["ConsumerGroupName"];
+        }
+
+        if (array_key_exists("UserKafkaMeta",$param) and $param["UserKafkaMeta"] !== null) {
+            $this->UserKafkaMeta = new UserKafkaMeta();
+            $this->UserKafkaMeta->deserialize($param["UserKafkaMeta"]);
         }
     }
 }

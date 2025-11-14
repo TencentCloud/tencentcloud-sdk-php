@@ -76,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
 - ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
 样例：
 `{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
+ * @method string getInputType() 获取日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file
+ * @method void setInputType(string $InputType) 设置日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file
  */
 class ModifyConfigRequest extends AbstractModel
 {
@@ -144,6 +146,11 @@ class ModifyConfigRequest extends AbstractModel
     public $AdvancedConfig;
 
     /**
+     * @var string 日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file
+     */
+    public $InputType;
+
+    /**
      * @param string $ConfigId 采集规则配置ID，通过[获取采集规则配置](https://cloud.tencent.com/document/product/614/58616)返回信息获取。
      * @param string $Name 采集规则配置名称
 - 不能包含特殊字符｜
@@ -172,6 +179,7 @@ class ModifyConfigRequest extends AbstractModel
 - ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
 样例：
 `{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
+     * @param string $InputType 日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file
      */
     function __construct()
     {
@@ -226,6 +234,10 @@ class ModifyConfigRequest extends AbstractModel
 
         if (array_key_exists("AdvancedConfig",$param) and $param["AdvancedConfig"] !== null) {
             $this->AdvancedConfig = $param["AdvancedConfig"];
+        }
+
+        if (array_key_exists("InputType",$param) and $param["InputType"] !== null) {
+            $this->InputType = $param["InputType"];
         }
     }
 }

@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 格式:YYYY-MM-DD HH:mm:ss
  * @method void setPayEndTime(string $PayEndTime) 设置支付结束时间
 格式:YYYY-MM-DD HH:mm:ss
+ * @method string getModifyOwnerEndTime() 获取交割时间
+格式:YYYY-MM-DD HH:mm:ss
+ * @method void setModifyOwnerEndTime(string $ModifyOwnerEndTime) 设置交割时间
+格式:YYYY-MM-DD HH:mm:ss
  */
 class BiddingSuccessfulResult extends AbstractModel
 {
@@ -34,7 +38,15 @@ class BiddingSuccessfulResult extends AbstractModel
     public $PayEndTime;
 
     /**
+     * @var string 交割时间
+格式:YYYY-MM-DD HH:mm:ss
+     */
+    public $ModifyOwnerEndTime;
+
+    /**
      * @param string $PayEndTime 支付结束时间
+格式:YYYY-MM-DD HH:mm:ss
+     * @param string $ModifyOwnerEndTime 交割时间
 格式:YYYY-MM-DD HH:mm:ss
      */
     function __construct()
@@ -52,6 +64,10 @@ class BiddingSuccessfulResult extends AbstractModel
         }
         if (array_key_exists("PayEndTime",$param) and $param["PayEndTime"] !== null) {
             $this->PayEndTime = $param["PayEndTime"];
+        }
+
+        if (array_key_exists("ModifyOwnerEndTime",$param) and $param["ModifyOwnerEndTime"] !== null) {
+            $this->ModifyOwnerEndTime = $param["ModifyOwnerEndTime"];
         }
     }
 }

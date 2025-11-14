@@ -38,6 +38,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSSLCert(string $SSLCert) 设置SSL证书，EnableSSL时必填
  * @method string getSSLCertName() 获取SSL证书名称，EnableSSL时必填
  * @method void setSSLCertName(string $SSLCertName) 设置SSL证书名称，EnableSSL时必填
+ * @method string getInstanceId() 获取资产实例id
+ * @method void setInstanceId(string $InstanceId) 设置资产实例id
+ * @method string getApCode() 获取资产所属地域
+ * @method void setApCode(string $ApCode) 设置资产所属地域
+ * @method string getApName() 获取地域名称
+ * @method void setApName(string $ApName) 设置地域名称
+ * @method string getVpcId() 获取资产所属VPC
+ * @method void setVpcId(string $VpcId) 设置资产所属VPC
+ * @method string getSubnetId() 获取资产所属子网
+ * @method void setSubnetId(string $SubnetId) 设置资产所属子网
+ * @method string getPublicIp() 获取公网IP
+ * @method void setPublicIp(string $PublicIp) 设置公网IP
  */
 class ExternalDevice extends AbstractModel
 {
@@ -87,6 +99,36 @@ class ExternalDevice extends AbstractModel
     public $SSLCertName;
 
     /**
+     * @var string 资产实例id
+     */
+    public $InstanceId;
+
+    /**
+     * @var string 资产所属地域
+     */
+    public $ApCode;
+
+    /**
+     * @var string 地域名称
+     */
+    public $ApName;
+
+    /**
+     * @var string 资产所属VPC
+     */
+    public $VpcId;
+
+    /**
+     * @var string 资产所属子网
+     */
+    public $SubnetId;
+
+    /**
+     * @var string 公网IP
+     */
+    public $PublicIp;
+
+    /**
      * @param string $OsName 操作系统名称，只能是Linux、Windows或MySQL
      * @param string $Ip IP地址
      * @param integer $Port 管理端口
@@ -96,6 +138,12 @@ class ExternalDevice extends AbstractModel
      * @param integer $EnableSSL 是否启用SSL,1:启用 0：禁用，仅支持Redis资产
      * @param string $SSLCert SSL证书，EnableSSL时必填
      * @param string $SSLCertName SSL证书名称，EnableSSL时必填
+     * @param string $InstanceId 资产实例id
+     * @param string $ApCode 资产所属地域
+     * @param string $ApName 地域名称
+     * @param string $VpcId 资产所属VPC
+     * @param string $SubnetId 资产所属子网
+     * @param string $PublicIp 公网IP
      */
     function __construct()
     {
@@ -144,6 +192,30 @@ class ExternalDevice extends AbstractModel
 
         if (array_key_exists("SSLCertName",$param) and $param["SSLCertName"] !== null) {
             $this->SSLCertName = $param["SSLCertName"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("ApCode",$param) and $param["ApCode"] !== null) {
+            $this->ApCode = $param["ApCode"];
+        }
+
+        if (array_key_exists("ApName",$param) and $param["ApName"] !== null) {
+            $this->ApName = $param["ApName"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("PublicIp",$param) and $param["PublicIp"] !== null) {
+            $this->PublicIp = $param["PublicIp"];
         }
     }
 }

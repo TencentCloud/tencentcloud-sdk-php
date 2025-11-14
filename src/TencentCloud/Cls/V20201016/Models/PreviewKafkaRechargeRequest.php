@@ -54,6 +54,8 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
 - 消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。
  * @method LogRechargeRuleInfo getLogRechargeRule() 获取日志导入规则
  * @method void setLogRechargeRule(LogRechargeRuleInfo $LogRechargeRule) 设置日志导入规则
+ * @method UserKafkaMeta getUserKafkaMeta() 获取用户kafka拓展信息
+ * @method void setUserKafkaMeta(UserKafkaMeta $UserKafkaMeta) 设置用户kafka拓展信息
  */
 class PreviewKafkaRechargeRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
     public $LogRechargeRule;
 
     /**
+     * @var UserKafkaMeta 用户kafka拓展信息
+     */
+    public $UserKafkaMeta;
+
+    /**
      * @param integer $PreviewType 预览类型，1：源数据预览；2：导出结果预览。
      * @param integer $KafkaType 导入Kafka类型，0：腾讯云CKafka；1：用户自建Kafka。
      * @param string $UserKafkaTopics 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
@@ -132,6 +139,7 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
 
 - 消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。
      * @param LogRechargeRuleInfo $LogRechargeRule 日志导入规则
+     * @param UserKafkaMeta $UserKafkaMeta 用户kafka拓展信息
      */
     function __construct()
     {
@@ -186,6 +194,11 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
         if (array_key_exists("LogRechargeRule",$param) and $param["LogRechargeRule"] !== null) {
             $this->LogRechargeRule = new LogRechargeRuleInfo();
             $this->LogRechargeRule->deserialize($param["LogRechargeRule"]);
+        }
+
+        if (array_key_exists("UserKafkaMeta",$param) and $param["UserKafkaMeta"] !== null) {
+            $this->UserKafkaMeta = new UserKafkaMeta();
+            $this->UserKafkaMeta->deserialize($param["UserKafkaMeta"]);
         }
     }
 }

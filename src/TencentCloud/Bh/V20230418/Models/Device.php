@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivateIp(string $PrivateIp) 设置内网IP
  * @method string getApCode() 获取地域编码
  * @method void setApCode(string $ApCode) 设置地域编码
+ * @method string getApName() 获取地域名称
+ * @method void setApName(string $ApName) 设置地域名称
  * @method string getOsName() 获取操作系统名称
  * @method void setOsName(string $OsName) 设置操作系统名称
  * @method integer getKind() 获取资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
@@ -74,6 +76,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSyncPodCount(integer $SyncPodCount) 设置K8S集群pod已同步数量
  * @method integer getTotalPodCount() 获取K8S集群pod总数量	
  * @method void setTotalPodCount(integer $TotalPodCount) 设置K8S集群pod总数量	
+ * @method integer getCloudAccountId() 获取云账号id
+ * @method void setCloudAccountId(integer $CloudAccountId) 设置云账号id
+ * @method string getCloudAccountName() 获取云账号名称
+ * @method void setCloudAccountName(string $CloudAccountName) 设置云账号名称
+ * @method integer getProviderType() 获取云厂商类型1-腾讯云，2-阿里云
+ * @method void setProviderType(integer $ProviderType) 设置云厂商类型1-腾讯云，2-阿里云
+ * @method string getProviderName() 获取云厂商名称
+ * @method void setProviderName(string $ProviderName) 设置云厂商名称
+ * @method integer getSyncCloudDeviceStatus() 获取同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
+ * @method void setSyncCloudDeviceStatus(integer $SyncCloudDeviceStatus) 设置同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
  */
 class Device extends AbstractModel
 {
@@ -106,6 +118,11 @@ class Device extends AbstractModel
      * @var string 地域编码
      */
     public $ApCode;
+
+    /**
+     * @var string 地域名称
+     */
+    public $ApName;
 
     /**
      * @var string 操作系统名称
@@ -213,12 +230,38 @@ class Device extends AbstractModel
     public $TotalPodCount;
 
     /**
+     * @var integer 云账号id
+     */
+    public $CloudAccountId;
+
+    /**
+     * @var string 云账号名称
+     */
+    public $CloudAccountName;
+
+    /**
+     * @var integer 云厂商类型1-腾讯云，2-阿里云
+     */
+    public $ProviderType;
+
+    /**
+     * @var string 云厂商名称
+     */
+    public $ProviderName;
+
+    /**
+     * @var integer 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
+     */
+    public $SyncCloudDeviceStatus;
+
+    /**
      * @param integer $Id 资产ID
      * @param string $InstanceId 实例ID，对应CVM、CDB等实例ID
      * @param string $Name 资产名
      * @param string $PublicIp 公网IP
      * @param string $PrivateIp 内网IP
      * @param string $ApCode 地域编码
+     * @param string $ApName 地域名称
      * @param string $OsName 操作系统名称
      * @param integer $Kind 资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
      * @param integer $Port 管理端口
@@ -240,6 +283,11 @@ class Device extends AbstractModel
      * @param string $Workload K8S集群工作负载	
      * @param integer $SyncPodCount K8S集群pod已同步数量
      * @param integer $TotalPodCount K8S集群pod总数量	
+     * @param integer $CloudAccountId 云账号id
+     * @param string $CloudAccountName 云账号名称
+     * @param integer $ProviderType 云厂商类型1-腾讯云，2-阿里云
+     * @param string $ProviderName 云厂商名称
+     * @param integer $SyncCloudDeviceStatus 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
      */
     function __construct()
     {
@@ -276,6 +324,10 @@ class Device extends AbstractModel
 
         if (array_key_exists("ApCode",$param) and $param["ApCode"] !== null) {
             $this->ApCode = $param["ApCode"];
+        }
+
+        if (array_key_exists("ApName",$param) and $param["ApName"] !== null) {
+            $this->ApName = $param["ApName"];
         }
 
         if (array_key_exists("OsName",$param) and $param["OsName"] !== null) {
@@ -367,6 +419,26 @@ class Device extends AbstractModel
 
         if (array_key_exists("TotalPodCount",$param) and $param["TotalPodCount"] !== null) {
             $this->TotalPodCount = $param["TotalPodCount"];
+        }
+
+        if (array_key_exists("CloudAccountId",$param) and $param["CloudAccountId"] !== null) {
+            $this->CloudAccountId = $param["CloudAccountId"];
+        }
+
+        if (array_key_exists("CloudAccountName",$param) and $param["CloudAccountName"] !== null) {
+            $this->CloudAccountName = $param["CloudAccountName"];
+        }
+
+        if (array_key_exists("ProviderType",$param) and $param["ProviderType"] !== null) {
+            $this->ProviderType = $param["ProviderType"];
+        }
+
+        if (array_key_exists("ProviderName",$param) and $param["ProviderName"] !== null) {
+            $this->ProviderName = $param["ProviderName"];
+        }
+
+        if (array_key_exists("SyncCloudDeviceStatus",$param) and $param["SyncCloudDeviceStatus"] !== null) {
+            $this->SyncCloudDeviceStatus = $param["SyncCloudDeviceStatus"];
         }
     }
 }

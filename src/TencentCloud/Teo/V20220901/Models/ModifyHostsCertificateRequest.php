@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
 不填，默认取值为none。
  * @method MutualTLS getClientCertInfo() 获取在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 节点内，用于客户端对 EO 节点进行认证。默认关闭，不填写表示保持原有配置。
  * @method void setClientCertInfo(MutualTLS $ClientCertInfo) 设置在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 节点内，用于客户端对 EO 节点进行认证。默认关闭，不填写表示保持原有配置。
- * @method UpstreamCertInfo getUpstreamCertInfo() 获取用于配置 EO 节点回源时携带的证书，用于回源双向认证握手，默认关闭，不填写表示保持原有配置。该配置当前为白名单内测中，如需使用，请[联系我们](https://cloud.tencent.com/online-service)。
- * @method void setUpstreamCertInfo(UpstreamCertInfo $UpstreamCertInfo) 设置用于配置 EO 节点回源时携带的证书，用于回源双向认证握手，默认关闭，不填写表示保持原有配置。该配置当前为白名单内测中，如需使用，请[联系我们](https://cloud.tencent.com/online-service)。
+ * @method UpstreamCertInfo getUpstreamCertInfo() 获取用于分别开启/关闭回源双向认证和源站证书校验。默认关闭，不填写表示保持原有配置。回源双向认证配置当前为白名单内侧中，如需使用，请[联系我们](https://cloud.tencent.com/online-service)。
+ * @method void setUpstreamCertInfo(UpstreamCertInfo $UpstreamCertInfo) 设置用于分别开启/关闭回源双向认证和源站证书校验。默认关闭，不填写表示保持原有配置。回源双向认证配置当前为白名单内侧中，如需使用，请[联系我们](https://cloud.tencent.com/online-service)。
  */
 class ModifyHostsCertificateRequest extends AbstractModel
 {
@@ -102,7 +102,7 @@ class ModifyHostsCertificateRequest extends AbstractModel
     public $ClientCertInfo;
 
     /**
-     * @var UpstreamCertInfo 用于配置 EO 节点回源时携带的证书，用于回源双向认证握手，默认关闭，不填写表示保持原有配置。该配置当前为白名单内测中，如需使用，请[联系我们](https://cloud.tencent.com/online-service)。
+     * @var UpstreamCertInfo 用于分别开启/关闭回源双向认证和源站证书校验。默认关闭，不填写表示保持原有配置。回源双向认证配置当前为白名单内侧中，如需使用，请[联系我们](https://cloud.tencent.com/online-service)。
      */
     public $UpstreamCertInfo;
 
@@ -124,7 +124,7 @@ class ModifyHostsCertificateRequest extends AbstractModel
 <li>apply：托管EO</li>
 不填，默认取值为none。
      * @param MutualTLS $ClientCertInfo 在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 节点内，用于客户端对 EO 节点进行认证。默认关闭，不填写表示保持原有配置。
-     * @param UpstreamCertInfo $UpstreamCertInfo 用于配置 EO 节点回源时携带的证书，用于回源双向认证握手，默认关闭，不填写表示保持原有配置。该配置当前为白名单内测中，如需使用，请[联系我们](https://cloud.tencent.com/online-service)。
+     * @param UpstreamCertInfo $UpstreamCertInfo 用于分别开启/关闭回源双向认证和源站证书校验。默认关闭，不填写表示保持原有配置。回源双向认证配置当前为白名单内侧中，如需使用，请[联系我们](https://cloud.tencent.com/online-service)。
      */
     function __construct()
     {

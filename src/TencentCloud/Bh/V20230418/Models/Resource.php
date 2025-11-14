@@ -100,6 +100,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIntranetVpcId(string $IntranetVpcId) 设置开通内网访问的vpc
  * @method string getIntranetVpcCidr() 获取开通内网访问vpc的网段
  * @method void setIntranetVpcCidr(string $IntranetVpcCidr) 设置开通内网访问vpc的网段
+ * @method string getDomainName() 获取堡垒机内网ip自定义域名
+ * @method void setDomainName(string $DomainName) 设置堡垒机内网ip自定义域名
  * @method boolean getShareClb() 获取是否共享clb，true-共享clb，false-独享clb
  * @method void setShareClb(boolean $ShareClb) 设置是否共享clb，true-共享clb，false-独享clb
  * @method string getOpenClbId() 获取共享clb id
@@ -328,6 +330,11 @@ class Resource extends AbstractModel
     public $IntranetVpcCidr;
 
     /**
+     * @var string 堡垒机内网ip自定义域名
+     */
+    public $DomainName;
+
+    /**
      * @var boolean 是否共享clb，true-共享clb，false-独享clb
      */
     public $ShareClb;
@@ -428,6 +435,7 @@ class Resource extends AbstractModel
      * @param array $IntranetPrivateIpSet 内网访问的ip
      * @param string $IntranetVpcId 开通内网访问的vpc
      * @param string $IntranetVpcCidr 开通内网访问vpc的网段
+     * @param string $DomainName 堡垒机内网ip自定义域名
      * @param boolean $ShareClb 是否共享clb，true-共享clb，false-独享clb
      * @param string $OpenClbId 共享clb id
      * @param string $LbVipIsp 运营商信息
@@ -617,6 +625,10 @@ class Resource extends AbstractModel
 
         if (array_key_exists("IntranetVpcCidr",$param) and $param["IntranetVpcCidr"] !== null) {
             $this->IntranetVpcCidr = $param["IntranetVpcCidr"];
+        }
+
+        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
+            $this->DomainName = $param["DomainName"];
         }
 
         if (array_key_exists("ShareClb",$param) and $param["ShareClb"] !== null) {

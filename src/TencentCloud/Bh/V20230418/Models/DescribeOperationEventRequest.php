@@ -32,8 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceIp(string $SourceIp) 设置来源IP，模糊查询
  * @method integer getKind() 获取操作类型，参考DescribeOperationType返回结果
  * @method void setKind(integer $Kind) 设置操作类型，参考DescribeOperationType返回结果
+ * @method array getKindSet() 获取操作类型，参考DescribeOperationType返回结果
+ * @method void setKindSet(array $KindSet) 设置操作类型，参考DescribeOperationType返回结果
  * @method integer getResult() 获取操作结果，1-成功，2-失败
  * @method void setResult(integer $Result) 设置操作结果，1-成功，2-失败
+ * @method array getResultSet() 获取操作结果，1-成功，2-失败
+ * @method void setResultSet(array $ResultSet) 设置操作结果，1-成功，2-失败
  * @method integer getOffset() 获取分页偏移位置，默认值为0
  * @method void setOffset(integer $Offset) 设置分页偏移位置，默认值为0
  * @method integer getLimit() 获取分页每页记录数，默认20
@@ -72,9 +76,19 @@ class DescribeOperationEventRequest extends AbstractModel
     public $Kind;
 
     /**
+     * @var array 操作类型，参考DescribeOperationType返回结果
+     */
+    public $KindSet;
+
+    /**
      * @var integer 操作结果，1-成功，2-失败
      */
     public $Result;
+
+    /**
+     * @var array 操作结果，1-成功，2-失败
+     */
+    public $ResultSet;
 
     /**
      * @var integer 分页偏移位置，默认值为0
@@ -93,7 +107,9 @@ class DescribeOperationEventRequest extends AbstractModel
      * @param string $EndTime 查询时间范围，结束时间
      * @param string $SourceIp 来源IP，模糊查询
      * @param integer $Kind 操作类型，参考DescribeOperationType返回结果
+     * @param array $KindSet 操作类型，参考DescribeOperationType返回结果
      * @param integer $Result 操作结果，1-成功，2-失败
+     * @param array $ResultSet 操作结果，1-成功，2-失败
      * @param integer $Offset 分页偏移位置，默认值为0
      * @param integer $Limit 分页每页记录数，默认20
      */
@@ -134,8 +150,16 @@ class DescribeOperationEventRequest extends AbstractModel
             $this->Kind = $param["Kind"];
         }
 
+        if (array_key_exists("KindSet",$param) and $param["KindSet"] !== null) {
+            $this->KindSet = $param["KindSet"];
+        }
+
         if (array_key_exists("Result",$param) and $param["Result"] !== null) {
             $this->Result = $param["Result"];
+        }
+
+        if (array_key_exists("ResultSet",$param) and $param["ResultSet"] !== null) {
+            $this->ResultSet = $param["ResultSet"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {

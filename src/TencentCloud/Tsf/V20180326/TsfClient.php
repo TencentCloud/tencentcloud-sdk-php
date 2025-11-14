@@ -215,6 +215,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\ModifyContainerGroupResponse ModifyContainerGroup(Models\ModifyContainerGroupRequest $req) 修改容器部署组
  * @method Models\ModifyContainerReplicasResponse ModifyContainerReplicas(Models\ModifyContainerReplicasRequest $req) 修改容器部署组实例数
  * @method Models\ModifyGroupResponse ModifyGroup(Models\ModifyGroupRequest $req) 更新部署组信息
+ * @method Models\ModifyGroupLaneResponse ModifyGroupLane(Models\ModifyGroupLaneRequest $req) 更新部署组泳道信息
  * @method Models\ModifyLaneResponse ModifyLane(Models\ModifyLaneRequest $req) 更新泳道配置信息
  * @method Models\ModifyLaneRuleResponse ModifyLaneRule(Models\ModifyLaneRuleRequest $req) 更新灰度发布规则
  * @method Models\ModifyMicroserviceResponse ModifyMicroservice(Models\ModifyMicroserviceRequest $req) 修改微服务详情

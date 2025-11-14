@@ -56,6 +56,7 @@ use TencentCloud\Bh\V20230418\Models as Models;
  * @method Models\DeployResourceResponse DeployResource(Models\DeployResourceRequest $req) 开通服务，初始化资源，只针对新购资源
  * @method Models\DescribeAccessWhiteListRulesResponse DescribeAccessWhiteListRules(Models\DescribeAccessWhiteListRulesRequest $req) 查询访问白名单规则列表
  * @method Models\DescribeAclsResponse DescribeAcls(Models\DescribeAclsRequest $req) 查询访问权限列表
+ * @method Models\DescribeAssetSyncFlagResponse DescribeAssetSyncFlag(Models\DescribeAssetSyncFlagRequest $req) 查询资产自动同步开关
  * @method Models\DescribeAssetSyncStatusResponse DescribeAssetSyncStatus(Models\DescribeAssetSyncStatusRequest $req) 查询资产同步状态
  * @method Models\DescribeChangePwdTaskResponse DescribeChangePwdTask(Models\DescribeChangePwdTaskRequest $req) 查询改密任务列表
  * @method Models\DescribeChangePwdTaskDetailResponse DescribeChangePwdTaskDetail(Models\DescribeChangePwdTaskDetailRequest $req) 查询改密任务详情
@@ -70,11 +71,21 @@ use TencentCloud\Bh\V20230418\Models as Models;
  * @method Models\DescribeOperationEventResponse DescribeOperationEvent(Models\DescribeOperationEventRequest $req) 查询操作日志
  * @method Models\DescribeOperationTaskResponse DescribeOperationTask(Models\DescribeOperationTaskRequest $req) 获取运维任务列表
  * @method Models\DescribeResourcesResponse DescribeResources(Models\DescribeResourcesRequest $req) 查询用户购买的堡垒机服务信息，包括资源ID、授权点数、VPC、过期时间等。
+ * @method Models\DescribeSecuritySettingResponse DescribeSecuritySetting(Models\DescribeSecuritySettingRequest $req) 查询安全配置信息
  * @method Models\DescribeUserGroupMembersResponse DescribeUserGroupMembers(Models\DescribeUserGroupMembersRequest $req) 查询用户组成员列表
  * @method Models\DescribeUserGroupsResponse DescribeUserGroups(Models\DescribeUserGroupsRequest $req) 查询用户组列表
  * @method Models\DescribeUsersResponse DescribeUsers(Models\DescribeUsersRequest $req) 查询用户列表
+ * @method Models\DisableExternalAccessResponse DisableExternalAccess(Models\DisableExternalAccessRequest $req) 关闭公网访问堡垒机
+ * @method Models\DisableIntranetAccessResponse DisableIntranetAccess(Models\DisableIntranetAccessRequest $req) 关闭内网访问
+ * @method Models\EnableExternalAccessResponse EnableExternalAccess(Models\EnableExternalAccessRequest $req) 开启公网访问堡垒机
+ * @method Models\EnableIntranetAccessResponse EnableIntranetAccess(Models\EnableIntranetAccessRequest $req) 开通内网访问
  * @method Models\ImportExternalDeviceResponse ImportExternalDevice(Models\ImportExternalDeviceRequest $req) 导入外部资产信息
+ * @method Models\ModifyAccessWhiteListAutoStatusResponse ModifyAccessWhiteListAutoStatus(Models\ModifyAccessWhiteListAutoStatusRequest $req) 修改访问白名单自动添加IP状态：开启或关闭自动添加IP
+ * @method Models\ModifyAccessWhiteListRuleResponse ModifyAccessWhiteListRule(Models\ModifyAccessWhiteListRuleRequest $req) 修改访问白名单规则
+ * @method Models\ModifyAccessWhiteListStatusResponse ModifyAccessWhiteListStatus(Models\ModifyAccessWhiteListStatusRequest $req) 修改访问白名单状态：开启或关闭放开全部来源IP。
  * @method Models\ModifyAclResponse ModifyAcl(Models\ModifyAclRequest $req) 修改访问权限
+ * @method Models\ModifyAssetSyncFlagResponse ModifyAssetSyncFlag(Models\ModifyAssetSyncFlagRequest $req) 修改资产自动同步开关
+ * @method Models\ModifyAuthModeSettingResponse ModifyAuthModeSetting(Models\ModifyAuthModeSettingRequest $req) 修改认证方式配置信息
  * @method Models\ModifyChangePwdTaskResponse ModifyChangePwdTask(Models\ModifyChangePwdTaskRequest $req) 更新修改密码任务
  * @method Models\ModifyCmdTemplateResponse ModifyCmdTemplate(Models\ModifyCmdTemplateRequest $req) 修改高危命令模板
  * @method Models\ModifyDeviceResponse ModifyDevice(Models\ModifyDeviceRequest $req) 修改资产信息
@@ -82,6 +93,7 @@ use TencentCloud\Bh\V20230418\Models as Models;
  * @method Models\ModifyLDAPSettingResponse ModifyLDAPSetting(Models\ModifyLDAPSettingRequest $req) 修改LDAP配置信息
  * @method Models\ModifyOAuthSettingResponse ModifyOAuthSetting(Models\ModifyOAuthSettingRequest $req) 设置OAuth认证参数
  * @method Models\ModifyOperationTaskResponse ModifyOperationTask(Models\ModifyOperationTaskRequest $req) 修改运维任务
+ * @method Models\ModifyReconnectionSettingResponse ModifyReconnectionSetting(Models\ModifyReconnectionSettingRequest $req) 修改运维资产连接重连次数
  * @method Models\ModifyResourceResponse ModifyResource(Models\ModifyResourceRequest $req) 资源变配
  * @method Models\ModifyUserResponse ModifyUser(Models\ModifyUserRequest $req) 修改用户信息
  * @method Models\ModifyUserGroupResponse ModifyUserGroup(Models\ModifyUserGroupRequest $req) 修改用户组

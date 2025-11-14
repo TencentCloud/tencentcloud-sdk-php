@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceName(string $DeviceName) 设置主机名，长度不超过64
  * @method integer getStatus() 获取状态，1为活跃，2为结束，3为强制离线，4为其他错误
  * @method void setStatus(integer $Status) 设置状态，1为活跃，2为结束，3为强制离线，4为其他错误
+ * @method array getStatusSet() 获取状态，1为活跃，2为结束，3为强制离线
+ * @method void setStatusSet(array $StatusSet) 设置状态，1为活跃，2为结束，3为强制离线
  * @method string getId() 获取若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话
  * @method void setId(string $Id) 设置若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话
  * @method array getAppAssetKindSet() 获取应用资产类型, 1-web
@@ -54,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppAssetUrl(string $AppAssetUrl) 设置应用资产Url
  * @method string getDeviceKind() 获取资产类型
  * @method void setDeviceKind(string $DeviceKind) 设置资产类型
+ * @method array getDeviceKindSet() 获取资产类型 Linux, EKS,TKE
+ * @method void setDeviceKindSet(array $DeviceKindSet) 设置资产类型 Linux, EKS,TKE
  */
 class SearchSessionRequest extends AbstractModel
 {
@@ -123,6 +127,11 @@ class SearchSessionRequest extends AbstractModel
     public $Status;
 
     /**
+     * @var array 状态，1为活跃，2为结束，3为强制离线
+     */
+    public $StatusSet;
+
+    /**
      * @var string 若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话
      */
     public $Id;
@@ -143,6 +152,11 @@ class SearchSessionRequest extends AbstractModel
     public $DeviceKind;
 
     /**
+     * @var array 资产类型 Linux, EKS,TKE
+     */
+    public $DeviceKindSet;
+
+    /**
      * @param string $PrivateIp 内部Ip
      * @param string $PublicIp 外部Ip
      * @param string $UserName 用户名，长度不超过20
@@ -156,10 +170,12 @@ class SearchSessionRequest extends AbstractModel
      * @param string $RealName 姓名，长度不超过20
      * @param string $DeviceName 主机名，长度不超过64
      * @param integer $Status 状态，1为活跃，2为结束，3为强制离线，4为其他错误
+     * @param array $StatusSet 状态，1为活跃，2为结束，3为强制离线
      * @param string $Id 若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话
      * @param array $AppAssetKindSet 应用资产类型, 1-web
      * @param string $AppAssetUrl 应用资产Url
      * @param string $DeviceKind 资产类型
+     * @param array $DeviceKindSet 资产类型 Linux, EKS,TKE
      */
     function __construct()
     {
@@ -226,6 +242,10 @@ class SearchSessionRequest extends AbstractModel
             $this->Status = $param["Status"];
         }
 
+        if (array_key_exists("StatusSet",$param) and $param["StatusSet"] !== null) {
+            $this->StatusSet = $param["StatusSet"];
+        }
+
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
         }
@@ -240,6 +260,10 @@ class SearchSessionRequest extends AbstractModel
 
         if (array_key_exists("DeviceKind",$param) and $param["DeviceKind"] !== null) {
             $this->DeviceKind = $param["DeviceKind"];
+        }
+
+        if (array_key_exists("DeviceKindSet",$param) and $param["DeviceKindSet"] !== null) {
+            $this->DeviceKindSet = $param["DeviceKindSet"];
         }
     }
 }

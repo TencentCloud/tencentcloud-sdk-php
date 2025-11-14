@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ai3d\V20250513\Models;
+namespace TencentCloud\Bh\V20230418\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * QueryHunyuanTo3DJob请求参数结构体
+ * EnableExternalAccess请求参数结构体
  *
- * @method string getJobId() 获取任务ID。
- * @method void setJobId(string $JobId) 设置任务ID。
+ * @method string getResourceId() 获取堡垒机id
+ * @method void setResourceId(string $ResourceId) 设置堡垒机id
  */
-class QueryHunyuanTo3DJobRequest extends AbstractModel
+class EnableExternalAccessRequest extends AbstractModel
 {
     /**
-     * @var string 任务ID。
+     * @var string 堡垒机id
      */
-    public $JobId;
+    public $ResourceId;
 
     /**
-     * @param string $JobId 任务ID。
+     * @param string $ResourceId 堡垒机id
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class QueryHunyuanTo3DJobRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
         }
     }
 }

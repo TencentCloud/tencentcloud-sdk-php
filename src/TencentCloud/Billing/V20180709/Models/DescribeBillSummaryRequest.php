@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupType(string $GroupType) 设置账单维度类型，枚举值如下：business、project、region、payMode、tag
  * @method array getTagKey() 获取标签键，GroupType=tag获取标签维度账单时传
  * @method void setTagKey(array $TagKey) 设置标签键，GroupType=tag获取标签维度账单时传
+ * @method string getOperateUin() 获取操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
+ * @method void setOperateUin(string $OperateUin) 设置操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
  */
 class DescribeBillSummaryRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeBillSummaryRequest extends AbstractModel
     public $TagKey;
 
     /**
+     * @var string 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
+     */
+    public $OperateUin;
+
+    /**
      * @param string $Month 账单月份，格式为2023-04
      * @param string $GroupType 账单维度类型，枚举值如下：business、project、region、payMode、tag
      * @param array $TagKey 标签键，GroupType=tag获取标签维度账单时传
+     * @param string $OperateUin 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeBillSummaryRequest extends AbstractModel
 
         if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
             $this->TagKey = $param["TagKey"];
+        }
+
+        if (array_key_exists("OperateUin",$param) and $param["OperateUin"] !== null) {
+            $this->OperateUin = $param["OperateUin"];
         }
     }
 }

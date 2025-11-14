@@ -132,6 +132,14 @@ PLATINUM 铂金版
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getZoneIds() 获取所属可用区列表，参考 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口返回中的 [ZoneInfo](https://cloud.tencent.com/document/api/1596/77932#ZoneInfo) 数据结构。
  * @method void setZoneIds(array $ZoneIds) 设置所属可用区列表，参考 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口返回中的 [ZoneInfo](https://cloud.tencent.com/document/api/1596/77932#ZoneInfo) 数据结构。
+ * @method integer getNodeCount() 获取proxy节点数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNodeCount(integer $NodeCount) 设置proxy节点数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getZoneScheduledList() 获取proxy调度详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZoneScheduledList(array $ZoneScheduledList) 设置proxy调度详情
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -318,6 +326,18 @@ PLATINUM 铂金版
     public $ZoneIds;
 
     /**
+     * @var integer proxy节点数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NodeCount;
+
+    /**
+     * @var array proxy调度详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ZoneScheduledList;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -379,6 +399,10 @@ PLATINUM 铂金版
      * @param integer $TopicNumUpperLimit 最大可设置的topic个数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ZoneIds 所属可用区列表，参考 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口返回中的 [ZoneInfo](https://cloud.tencent.com/document/api/1596/77932#ZoneInfo) 数据结构。
+     * @param integer $NodeCount proxy节点数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ZoneScheduledList proxy调度详情
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -526,6 +550,19 @@ PLATINUM 铂金版
 
         if (array_key_exists("ZoneIds",$param) and $param["ZoneIds"] !== null) {
             $this->ZoneIds = $param["ZoneIds"];
+        }
+
+        if (array_key_exists("NodeCount",$param) and $param["NodeCount"] !== null) {
+            $this->NodeCount = $param["NodeCount"];
+        }
+
+        if (array_key_exists("ZoneScheduledList",$param) and $param["ZoneScheduledList"] !== null) {
+            $this->ZoneScheduledList = [];
+            foreach ($param["ZoneScheduledList"] as $key => $value){
+                $obj = new ZoneScheduledItem();
+                $obj->deserialize($value);
+                array_push($this->ZoneScheduledList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

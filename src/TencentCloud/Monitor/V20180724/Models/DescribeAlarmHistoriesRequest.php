@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConvergenceHistoryIDs(array $ConvergenceHistoryIDs) 设置收敛历史的唯一id
  * @method array getAlarmTypes() 获取告警类型
  * @method void setAlarmTypes(array $AlarmTypes) 设置告警类型
+ * @method array getShieldStatus() 获取是否已屏蔽
+ * @method void setShieldStatus(array $ShieldStatus) 设置是否已屏蔽
  */
 class DescribeAlarmHistoriesRequest extends AbstractModel
 {
@@ -180,6 +182,11 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
     public $AlarmTypes;
 
     /**
+     * @var array 是否已屏蔽
+     */
+    public $ShieldStatus;
+
+    /**
      * @param string $Module 固定值，为"monitor"
      * @param integer $PageNumber 页数，从 1 开始计数，默认 1
      * @param integer $PageSize 每页的数量，取值1~100，默认20
@@ -204,6 +211,7 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
      * @param array $AlarmLevels 告警等级,取值范围：Remind、Serious、Warn
      * @param array $ConvergenceHistoryIDs 收敛历史的唯一id
      * @param array $AlarmTypes 告警类型
+     * @param array $ShieldStatus 是否已屏蔽
      */
     function __construct()
     {
@@ -305,6 +313,10 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
 
         if (array_key_exists("AlarmTypes",$param) and $param["AlarmTypes"] !== null) {
             $this->AlarmTypes = $param["AlarmTypes"];
+        }
+
+        if (array_key_exists("ShieldStatus",$param) and $param["ShieldStatus"] !== null) {
+            $this->ShieldStatus = $param["ShieldStatus"];
         }
     }
 }

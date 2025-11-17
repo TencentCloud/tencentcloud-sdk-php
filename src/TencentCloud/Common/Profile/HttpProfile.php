@@ -87,6 +87,11 @@ class HttpProfile
     private $keepAlive;
 
     /**
+     * @var boolean 是否使用流式传输
+     */
+    private $stream;
+
+    /**
      * HttpProfile constructor.
      * @param string $protocol  请求协议
      * @param string $endpoint  请求接入点域名(xx.[region.]tencentcloudapi.com)
@@ -101,6 +106,7 @@ class HttpProfile
         $this->protocol = $protocol ? $protocol : HttpProfile::$REQ_HTTPS;
         $this->rootDomain = "tencentcloudapi.com";
         $this->keepAlive = false;
+        $this->stream = true;
     }
 
     /**
@@ -211,5 +217,21 @@ class HttpProfile
 
     public function getKeepAlive() {
         return $this->keepAlive;
+    }
+
+    /**
+     * 设置是否使用流式传输
+     * @param boolean $stream 是否使用流式传输
+     */
+    public function setStream($stream) {
+        $this->stream = $stream;
+    }
+
+    /**
+     * 获取是否使用流式传输
+     * @return boolean 是否使用流式传输
+     */
+    public function getStream() {
+        return $this->stream;
     }
 }

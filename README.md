@@ -13,7 +13,7 @@
 
 安装Composer：
     windows环境请访问[Composer官网](https://getcomposer.org/download/)下载安装包安装。
-    
+
     unix环境在命令行中执行以下命令安装。
     > curl -sS https://getcomposer.org/installer | php
 
@@ -38,7 +38,7 @@ composer require tencentcloud/tencentcloud-sdk-php
 - 无法使用官方源的的用户可以设置镜像源，例如：`composer config -g repos.packagist composer https://mirrors.tencent.com/composer/`
 - 推荐使用固定的 SDK 版本开发测试和发布应用，例如 `composer require tencentcloud/cvm=xx.yy.zz`。如果不需要 phpunit 等开发依赖，可以指定 `--update-no-dev` 选项。
 - 在代码中添加以下引用代码。注意：如下仅为示例，composer 会在项目根目录下生成 vendor 目录，`/path/to/`为项目根目录的实际绝对路径，如果是在当前目录执行，可以省略绝对路径。
-    
+
     > require '/path/to/vendor/autoload.php';
 
 # 示例
@@ -106,6 +106,7 @@ try {
     // $httpProfile->setProxy("https://ip:port");
     $httpProfile->setReqMethod("GET");  // post请求(默认为post请求)
     $httpProfile->setReqTimeout(30);    // 请求超时时间，单位为秒(默认60秒)
+    $httpProfile->setStream(fasle);    // 关闭流式传输(默认开启)
     $httpProfile->setEndpoint("cvm.ap-shanghai.tencentcloudapi.com");  // 指定接入地域域名(默认就近接入)
 
     // 实例化一个client选项，可选的，没有特殊需求可以跳过

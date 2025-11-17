@@ -23,12 +23,12 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() 获取内容类型
 注意：
 需包含至少一个 Type 为"text"的参数。
-参数值可选范围：[text", "image_url"]
+参数值可选范围：[text", "image_url","video_url"]
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置内容类型
 注意：
 需包含至少一个 Type 为"text"的参数。
-参数值可选范围：[text", "image_url"]
+参数值可选范围：[text", "image_url","video_url"]
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getText() 获取当 Type 为 text 时使用，表示具体的文本内容。当 Type 为 image_url 时，当前字段内容需保持为空，传递内容不生效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -40,6 +40,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageUrl(ImageUrl $ImageUrl) 设置图片的url，当 Type 为 image_url 时使用，表示具体的图片内容
 如"https://example.com/1.png" 或 图片的base64（注意 "data:image/jpeg;base64," 为必要部分）："data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAA......"。当 Type 为 text 时，当前字段内容需保持为空，传递内容不生效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method VideoUrl getVideoUrl() 获取当type为video_url时使用，标识具体的视频链接内容
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVideoUrl(VideoUrl $VideoUrl) 设置当type为video_url时使用，标识具体的视频链接内容
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method VideoFrames getVideoFrames() 获取当type为video_frames时使用，标识具体的视频内图像帧内容
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVideoFrames(VideoFrames $VideoFrames) 设置当type为video_frames时使用，标识具体的视频内图像帧内容
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Content extends AbstractModel
 {
@@ -47,7 +55,7 @@ class Content extends AbstractModel
      * @var string 内容类型
 注意：
 需包含至少一个 Type 为"text"的参数。
-参数值可选范围：[text", "image_url"]
+参数值可选范围：[text", "image_url","video_url"]
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
@@ -66,15 +74,31 @@ class Content extends AbstractModel
     public $ImageUrl;
 
     /**
+     * @var VideoUrl 当type为video_url时使用，标识具体的视频链接内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VideoUrl;
+
+    /**
+     * @var VideoFrames 当type为video_frames时使用，标识具体的视频内图像帧内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VideoFrames;
+
+    /**
      * @param string $Type 内容类型
 注意：
 需包含至少一个 Type 为"text"的参数。
-参数值可选范围：[text", "image_url"]
+参数值可选范围：[text", "image_url","video_url"]
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Text 当 Type 为 text 时使用，表示具体的文本内容。当 Type 为 image_url 时，当前字段内容需保持为空，传递内容不生效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageUrl $ImageUrl 图片的url，当 Type 为 image_url 时使用，表示具体的图片内容
 如"https://example.com/1.png" 或 图片的base64（注意 "data:image/jpeg;base64," 为必要部分）："data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAA......"。当 Type 为 text 时，当前字段内容需保持为空，传递内容不生效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VideoUrl $VideoUrl 当type为video_url时使用，标识具体的视频链接内容
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VideoFrames $VideoFrames 当type为video_frames时使用，标识具体的视频内图像帧内容
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -101,6 +125,16 @@ class Content extends AbstractModel
         if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
             $this->ImageUrl = new ImageUrl();
             $this->ImageUrl->deserialize($param["ImageUrl"]);
+        }
+
+        if (array_key_exists("VideoUrl",$param) and $param["VideoUrl"] !== null) {
+            $this->VideoUrl = new VideoUrl();
+            $this->VideoUrl->deserialize($param["VideoUrl"]);
+        }
+
+        if (array_key_exists("VideoFrames",$param) and $param["VideoFrames"] !== null) {
+            $this->VideoFrames = new VideoFrames();
+            $this->VideoFrames->deserialize($param["VideoFrames"]);
         }
     }
 }

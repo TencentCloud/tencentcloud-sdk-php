@@ -21,7 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * ListClusterInspectionResultsItems请求参数结构体
  *
  * @method string getClusterId() 获取目标集群ID
+
+取值可参考：
+[查询TKE集群列表](https://cloud.tencent.com/document/api/457/31862)
  * @method void setClusterId(string $ClusterId) 设置目标集群ID
+
+取值可参考：
+[查询TKE集群列表](https://cloud.tencent.com/document/api/457/31862)
  * @method string getStartTime() 获取查询历史结果的开始时间，Unix时间戳
  * @method void setStartTime(string $StartTime) 设置查询历史结果的开始时间，Unix时间戳
  * @method string getEndTime() 获取查询历史结果的结束时间，默认当前距离开始时间3天，Unix时间戳
@@ -31,6 +37,9 @@ class ListClusterInspectionResultsItemsRequest extends AbstractModel
 {
     /**
      * @var string 目标集群ID
+
+取值可参考：
+[查询TKE集群列表](https://cloud.tencent.com/document/api/457/31862)
      */
     public $ClusterId;
 
@@ -46,6 +55,9 @@ class ListClusterInspectionResultsItemsRequest extends AbstractModel
 
     /**
      * @param string $ClusterId 目标集群ID
+
+取值可参考：
+[查询TKE集群列表](https://cloud.tencent.com/document/api/457/31862)
      * @param string $StartTime 查询历史结果的开始时间，Unix时间戳
      * @param string $EndTime 查询历史结果的结束时间，默认当前距离开始时间3天，Unix时间戳
      */

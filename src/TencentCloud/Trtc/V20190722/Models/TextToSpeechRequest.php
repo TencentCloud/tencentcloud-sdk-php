@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioFormat(AudioFormat $AudioFormat) 设置文本转语音的输出音频的格式
  * @method string getAPIKey() 获取TTS的API密钥
  * @method void setAPIKey(string $APIKey) 设置TTS的API密钥
+ * @method string getModel() 获取TTS的模型：flow_01_turbo，flow_01_ex
+ * @method void setModel(string $Model) 设置TTS的模型：flow_01_turbo，flow_01_ex
+ * @method string getLanguage() 获取语言参数，默认为空， 参考： (ISO 639-1) 
+ * @method void setLanguage(string $Language) 设置语言参数，默认为空， 参考： (ISO 639-1) 
  */
 class TextToSpeechRequest extends AbstractModel
 {
@@ -55,8 +59,19 @@ class TextToSpeechRequest extends AbstractModel
 
     /**
      * @var string TTS的API密钥
+     * @deprecated
      */
     public $APIKey;
+
+    /**
+     * @var string TTS的模型：flow_01_turbo，flow_01_ex
+     */
+    public $Model;
+
+    /**
+     * @var string 语言参数，默认为空， 参考： (ISO 639-1) 
+     */
+    public $Language;
 
     /**
      * @param string $Text 需要转语音的文字内容，长度范围：[1, 255]
@@ -64,6 +79,8 @@ class TextToSpeechRequest extends AbstractModel
      * @param integer $SdkAppId TRTC的SdkAppId
      * @param AudioFormat $AudioFormat 文本转语音的输出音频的格式
      * @param string $APIKey TTS的API密钥
+     * @param string $Model TTS的模型：flow_01_turbo，flow_01_ex
+     * @param string $Language 语言参数，默认为空， 参考： (ISO 639-1) 
      */
     function __construct()
     {
@@ -98,6 +115,14 @@ class TextToSpeechRequest extends AbstractModel
 
         if (array_key_exists("APIKey",$param) and $param["APIKey"] !== null) {
             $this->APIKey = $param["APIKey"];
+        }
+
+        if (array_key_exists("Model",$param) and $param["Model"] !== null) {
+            $this->Model = $param["Model"];
+        }
+
+        if (array_key_exists("Language",$param) and $param["Language"] !== null) {
+            $this->Language = $param["Language"];
         }
     }
 }

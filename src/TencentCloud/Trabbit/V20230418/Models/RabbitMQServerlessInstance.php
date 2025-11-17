@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsolatedTime(integer $IsolatedTime) 设置隔离时间
  * @method string getServerlessExt() 获取Serverless 扩展字段
  * @method void setServerlessExt(string $ServerlessExt) 设置Serverless 扩展字段
+ * @method array getTags() 获取实例标签列表
+ * @method void setTags(array $Tags) 设置实例标签列表
  */
 class RabbitMQServerlessInstance extends AbstractModel
 {
@@ -174,6 +176,11 @@ class RabbitMQServerlessInstance extends AbstractModel
     public $ServerlessExt;
 
     /**
+     * @var array 实例标签列表
+     */
+    public $Tags;
+
+    /**
      * @param string $InstanceId 实例Id
      * @param string $InstanceName 实例名称
      * @param string $InstanceVersion 实例版本号
@@ -196,6 +203,7 @@ class RabbitMQServerlessInstance extends AbstractModel
      * @param integer $MaxStorage 为了兼容托管版，固定值 0
      * @param integer $IsolatedTime 隔离时间
      * @param string $ServerlessExt Serverless 扩展字段
+     * @param array $Tags 实例标签列表
      */
     function __construct()
     {
@@ -297,6 +305,15 @@ class RabbitMQServerlessInstance extends AbstractModel
 
         if (array_key_exists("ServerlessExt",$param) and $param["ServerlessExt"] !== null) {
             $this->ServerlessExt = $param["ServerlessExt"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new RabbitMQServerlessTag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

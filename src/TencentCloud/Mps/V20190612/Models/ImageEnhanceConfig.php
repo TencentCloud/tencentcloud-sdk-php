@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuperResolution(SuperResolutionConfig $SuperResolution) 设置超分配置。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AdvancedSuperResolutionConfig getAdvancedSuperResolutionConfig() 获取高级超分配置。
+ * @method void setAdvancedSuperResolutionConfig(AdvancedSuperResolutionConfig $AdvancedSuperResolutionConfig) 设置高级超分配置。
  * @method ImageDenoiseConfig getDenoise() 获取降噪配置。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDenoise(ImageDenoiseConfig $Denoise) 设置降噪配置。
@@ -56,6 +58,11 @@ class ImageEnhanceConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SuperResolution;
+
+    /**
+     * @var AdvancedSuperResolutionConfig 高级超分配置。
+     */
+    public $AdvancedSuperResolutionConfig;
 
     /**
      * @var ImageDenoiseConfig 降噪配置。
@@ -96,6 +103,7 @@ class ImageEnhanceConfig extends AbstractModel
     /**
      * @param SuperResolutionConfig $SuperResolution 超分配置。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdvancedSuperResolutionConfig $AdvancedSuperResolutionConfig 高级超分配置。
      * @param ImageDenoiseConfig $Denoise 降噪配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageQualityEnhanceConfig $ImageQualityEnhance 综合增强配置。
@@ -125,6 +133,11 @@ class ImageEnhanceConfig extends AbstractModel
         if (array_key_exists("SuperResolution",$param) and $param["SuperResolution"] !== null) {
             $this->SuperResolution = new SuperResolutionConfig();
             $this->SuperResolution->deserialize($param["SuperResolution"]);
+        }
+
+        if (array_key_exists("AdvancedSuperResolutionConfig",$param) and $param["AdvancedSuperResolutionConfig"] !== null) {
+            $this->AdvancedSuperResolutionConfig = new AdvancedSuperResolutionConfig();
+            $this->AdvancedSuperResolutionConfig->deserialize($param["AdvancedSuperResolutionConfig"]);
         }
 
         if (array_key_exists("Denoise",$param) and $param["Denoise"] !== null) {

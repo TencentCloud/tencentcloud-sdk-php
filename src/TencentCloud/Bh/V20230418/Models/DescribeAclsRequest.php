@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthorizedAppAssetIdSet(array $AuthorizedAppAssetIdSet) 设置有访问权限的应用资产ID集合
  * @method integer getStatus() 获取访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
  * @method void setStatus(integer $Status) 设置访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
+ * @method array getStatusSet() 获取访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
+ * @method void setStatusSet(array $StatusSet) 设置访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
  * @method string getDepartmentId() 获取部门ID，用于过滤属于某个部门的访问权限
  * @method void setDepartmentId(string $DepartmentId) 设置部门ID，用于过滤属于某个部门的访问权限
  * @method boolean getExactAccount() 获取是否根据AuthorizedDeviceIdSet,对资产账号进行精确匹配，默认false, 设置true时，确保AuthorizedDeviceIdSet只有一个元素
@@ -93,6 +95,11 @@ class DescribeAclsRequest extends AbstractModel
     public $Status;
 
     /**
+     * @var array 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
+     */
+    public $StatusSet;
+
+    /**
      * @var string 部门ID，用于过滤属于某个部门的访问权限
      */
     public $DepartmentId;
@@ -117,6 +124,7 @@ class DescribeAclsRequest extends AbstractModel
      * @param array $AuthorizedDeviceIdSet 有访问权限的资产ID集合
      * @param array $AuthorizedAppAssetIdSet 有访问权限的应用资产ID集合
      * @param integer $Status 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
+     * @param array $StatusSet 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
      * @param string $DepartmentId 部门ID，用于过滤属于某个部门的访问权限
      * @param boolean $ExactAccount 是否根据AuthorizedDeviceIdSet,对资产账号进行精确匹配，默认false, 设置true时，确保AuthorizedDeviceIdSet只有一个元素
      * @param array $Filters 过滤数组
@@ -168,6 +176,10 @@ class DescribeAclsRequest extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("StatusSet",$param) and $param["StatusSet"] !== null) {
+            $this->StatusSet = $param["StatusSet"];
         }
 
         if (array_key_exists("DepartmentId",$param) and $param["DepartmentId"] !== null) {

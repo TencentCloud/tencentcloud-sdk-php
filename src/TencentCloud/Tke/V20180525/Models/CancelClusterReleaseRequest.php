@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setID(string $ID) 设置应用ID
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getClusterType() 获取集群类型
- * @method void setClusterType(string $ClusterType) 设置集群类型
+ * @method string getClusterType() 获取集群类型，支持传入 tke(标准集群), eks(Serverless集群), external(注册集群）
+ * @method void setClusterType(string $ClusterType) 设置集群类型，支持传入 tke(标准集群), eks(Serverless集群), external(注册集群）
  */
 class CancelClusterReleaseRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CancelClusterReleaseRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 集群类型
+     * @var string 集群类型，支持传入 tke(标准集群), eks(Serverless集群), external(注册集群）
      */
     public $ClusterType;
 
     /**
      * @param string $ID 应用ID
      * @param string $ClusterId 集群ID
-     * @param string $ClusterType 集群类型
+     * @param string $ClusterType 集群类型，支持传入 tke(标准集群), eks(Serverless集群), external(注册集群）
      */
     function __construct()
     {

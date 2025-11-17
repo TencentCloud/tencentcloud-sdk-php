@@ -222,10 +222,14 @@ use TencentCloud\Common\AbstractModel;
 ```
  * @method array getMetadata() 获取元数据信息，Kafka导入支持kafka_topic,kafka_partition,kafka_offset,kafka_timestamp
  * @method void setMetadata(array $Metadata) 设置元数据信息，Kafka导入支持kafka_topic,kafka_partition,kafka_offset,kafka_timestamp
- * @method array getKeys() 获取日志Key列表，RechargeType为full_regex_log时必填
- * @method void setKeys(array $Keys) 设置日志Key列表，RechargeType为full_regex_log时必填
+ * @method array getKeys() 获取日志Key列表，RechargeType为full_regex_log、delimiter_log时必填
+ * @method void setKeys(array $Keys) 设置日志Key列表，RechargeType为full_regex_log、delimiter_log时必填
  * @method boolean getParseArray() 获取json解析模式，开启首层数据解析
  * @method void setParseArray(boolean $ParseArray) 设置json解析模式，开启首层数据解析
+ * @method string getDelimiter() 获取分隔符解析模式-分隔符
+当解析格式为分隔符提取时，该字段必填
+ * @method void setDelimiter(string $Delimiter) 设置分隔符解析模式-分隔符
+当解析格式为分隔符提取时，该字段必填
  */
 class LogRechargeRuleInfo extends AbstractModel
 {
@@ -383,7 +387,7 @@ class LogRechargeRuleInfo extends AbstractModel
     public $Metadata;
 
     /**
-     * @var array 日志Key列表，RechargeType为full_regex_log时必填
+     * @var array 日志Key列表，RechargeType为full_regex_log、delimiter_log时必填
      */
     public $Keys;
 
@@ -391,6 +395,12 @@ class LogRechargeRuleInfo extends AbstractModel
      * @var boolean json解析模式，开启首层数据解析
      */
     public $ParseArray;
+
+    /**
+     * @var string 分隔符解析模式-分隔符
+当解析格式为分隔符提取时，该字段必填
+     */
+    public $Delimiter;
 
     /**
      * @param string $RechargeType 导入类型，支持json_log：json格式日志，minimalist_log: 单行全文，fullregex_log: 单行完全正则
@@ -494,8 +504,10 @@ class LogRechargeRuleInfo extends AbstractModel
 "UTC+13:00"
 ```
      * @param array $Metadata 元数据信息，Kafka导入支持kafka_topic,kafka_partition,kafka_offset,kafka_timestamp
-     * @param array $Keys 日志Key列表，RechargeType为full_regex_log时必填
+     * @param array $Keys 日志Key列表，RechargeType为full_regex_log、delimiter_log时必填
      * @param boolean $ParseArray json解析模式，开启首层数据解析
+     * @param string $Delimiter 分隔符解析模式-分隔符
+当解析格式为分隔符提取时，该字段必填
      */
     function __construct()
     {
@@ -568,6 +580,10 @@ class LogRechargeRuleInfo extends AbstractModel
 
         if (array_key_exists("ParseArray",$param) and $param["ParseArray"] !== null) {
             $this->ParseArray = $param["ParseArray"];
+        }
+
+        if (array_key_exists("Delimiter",$param) and $param["Delimiter"] !== null) {
+            $this->Delimiter = $param["Delimiter"];
         }
     }
 }

@@ -57,6 +57,7 @@ use TencentCloud\Ccc\V20200210\Models as Models;
  * @method Models\DeleteExtensionResponse DeleteExtension(Models\DeleteExtensionRequest $req) 删除话机账号
  * @method Models\DeletePredictiveDialingCampaignResponse DeletePredictiveDialingCampaign(Models\DeletePredictiveDialingCampaignRequest $req) 删除预测式外呼任务
  * @method Models\DeleteStaffResponse DeleteStaff(Models\DeleteStaffRequest $req) 删除坐席信息
+ * @method Models\DescribeAIAgentInfoListResponse DescribeAIAgentInfoList(Models\DescribeAIAgentInfoListRequest $req) 获取智能体列表
  * @method Models\DescribeAIAnalysisResultResponse DescribeAIAnalysisResult(Models\DescribeAIAnalysisResultRequest $req) 获取 AI 会话分析结果
  * @method Models\DescribeAICallExtractResultResponse DescribeAICallExtractResult(Models\DescribeAICallExtractResultRequest $req) 获取 AI 通话内容提取结果。
  * @method Models\DescribeAILatencyResponse DescribeAILatency(Models\DescribeAILatencyRequest $req) 获取 AI 时延信息
@@ -103,6 +104,7 @@ use TencentCloud\Ccc\V20200210\Models as Models;
  * @method Models\ResetExtensionPasswordResponse ResetExtensionPassword(Models\ResetExtensionPasswordRequest $req) 重置话机注册密码
  * @method Models\RestoreMemberOnlineResponse RestoreMemberOnline(Models\RestoreMemberOnlineRequest $req) 恢复客服上线
  * @method Models\ResumePredictiveDialingCampaignResponse ResumePredictiveDialingCampaign(Models\ResumePredictiveDialingCampaignRequest $req) 恢复预测式外呼任务
+ * @method Models\SetStaffStatusResponse SetStaffStatus(Models\SetStaffStatusRequest $req) 设置 staff 状态
  * @method Models\StopAutoCalloutTaskResponse StopAutoCalloutTask(Models\StopAutoCalloutTaskRequest $req) 停止自动外呼任务
  * @method Models\TransferToManualResponse TransferToManual(Models\TransferToManualRequest $req) 特定场景下讲会话转接到人工坐席
  * @method Models\UnbindNumberCallOutSkillGroupResponse UnbindNumberCallOutSkillGroup(Models\UnbindNumberCallOutSkillGroupRequest $req) 解绑号码外呼技能组

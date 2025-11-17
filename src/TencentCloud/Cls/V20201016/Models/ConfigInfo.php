@@ -82,6 +82,8 @@ use TencentCloud\Common\AbstractModel;
 `{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
 
 控制台默认占位值：`{\"ClsAgentDefault\":0}`
+ * @method string getInputType() 获取日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file
+ * @method void setInputType(string $InputType) 设置日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file
  */
 class ConfigInfo extends AbstractModel
 {
@@ -165,6 +167,11 @@ class ConfigInfo extends AbstractModel
     public $AdvancedConfig;
 
     /**
+     * @var string 日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file
+     */
+    public $InputType;
+
+    /**
      * @param string $ConfigId 采集规则配置ID
      * @param string $Name 采集规则配置名称
      * @param string $LogFormat 日志格式化方式
@@ -196,6 +203,7 @@ class ConfigInfo extends AbstractModel
 `{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
 
 控制台默认占位值：`{\"ClsAgentDefault\":0}`
+     * @param string $InputType 日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file
      */
     function __construct()
     {
@@ -262,6 +270,10 @@ class ConfigInfo extends AbstractModel
 
         if (array_key_exists("AdvancedConfig",$param) and $param["AdvancedConfig"] !== null) {
             $this->AdvancedConfig = $param["AdvancedConfig"];
+        }
+
+        if (array_key_exists("InputType",$param) and $param["InputType"] !== null) {
+            $this->InputType = $param["InputType"];
         }
     }
 }

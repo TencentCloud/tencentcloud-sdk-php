@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getResourceId() 获取资源ID，如果ResourceType为USERDEFINED，可以为空字符串
  * @method void setResourceId(string $ResourceId) 设置资源ID，如果ResourceType为USERDEFINED，可以为空字符串
- * @method string getResourceType() 获取资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
- * @method void setResourceType(string $ResourceType) 设置资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
+ * @method string getResourceType() 获取资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED，分别表示子网、网卡、自定义网段
+ * @method void setResourceType(string $ResourceType) 设置资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED，分别表示子网、网卡、自定义网段
  * @method string getPrivateIpAddress() 获取源IP/网段
  * @method void setPrivateIpAddress(string $PrivateIpAddress) 设置源IP/网段
  * @method array getPublicIpAddresses() 获取弹性IP地址池
@@ -47,7 +47,7 @@ class SourceIpTranslationNatRule extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var string 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
+     * @var string 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED，分别表示子网、网卡、自定义网段
      */
     public $ResourceType;
 
@@ -88,7 +88,7 @@ class SourceIpTranslationNatRule extends AbstractModel
 
     /**
      * @param string $ResourceId 资源ID，如果ResourceType为USERDEFINED，可以为空字符串
-     * @param string $ResourceType 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
+     * @param string $ResourceType 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED，分别表示子网、网卡、自定义网段
      * @param string $PrivateIpAddress 源IP/网段
      * @param array $PublicIpAddresses 弹性IP地址池
      * @param string $Description 规则描述

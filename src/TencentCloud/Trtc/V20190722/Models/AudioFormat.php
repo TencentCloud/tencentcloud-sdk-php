@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TTS音频输出的格式
  *
- * @method string getFormat() 获取生成的音频格式，默认pcm，目前支持的格式列表：[pcm]。
- * @method void setFormat(string $Format) 设置生成的音频格式，默认pcm，目前支持的格式列表：[pcm]。
+ * @method string getFormat() 获取生成的音频格式，默认pcm，目前支持的格式列表：流式：[pcm]，非流式 [pcm，wav]
+ * @method void setFormat(string $Format) 设置生成的音频格式，默认pcm，目前支持的格式列表：流式：[pcm]，非流式 [pcm，wav]
+ * @method integer getSampleRate() 获取采样率，默认24000， 可选16000, 24000 
+ * @method void setSampleRate(integer $SampleRate) 设置采样率，默认24000， 可选16000, 24000 
  */
 class AudioFormat extends AbstractModel
 {
     /**
-     * @var string 生成的音频格式，默认pcm，目前支持的格式列表：[pcm]。
+     * @var string 生成的音频格式，默认pcm，目前支持的格式列表：流式：[pcm]，非流式 [pcm，wav]
      */
     public $Format;
 
     /**
-     * @param string $Format 生成的音频格式，默认pcm，目前支持的格式列表：[pcm]。
+     * @var integer 采样率，默认24000， 可选16000, 24000 
+     */
+    public $SampleRate;
+
+    /**
+     * @param string $Format 生成的音频格式，默认pcm，目前支持的格式列表：流式：[pcm]，非流式 [pcm，wav]
+     * @param integer $SampleRate 采样率，默认24000， 可选16000, 24000 
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class AudioFormat extends AbstractModel
         }
         if (array_key_exists("Format",$param) and $param["Format"] !== null) {
             $this->Format = $param["Format"];
+        }
+
+        if (array_key_exists("SampleRate",$param) and $param["SampleRate"] !== null) {
+            $this->SampleRate = $param["SampleRate"];
         }
     }
 }

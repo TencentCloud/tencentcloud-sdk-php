@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFullMatch(boolean $FullMatch) 设置指定是全路径配置还是任意匹配
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getRegex() 获取pattern是否支持正则
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegex(boolean $Regex) 设置pattern是否支持正则
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UrlRedirectRule extends AbstractModel
 {
@@ -65,12 +69,20 @@ class UrlRedirectRule extends AbstractModel
     public $FullMatch;
 
     /**
+     * @var boolean pattern是否支持正则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Regex;
+
+    /**
      * @param integer $RedirectStatusCode 重定向状态码，301 | 302
      * @param string $Pattern 待匹配的Url，仅支持Url路径，不支持参数。默认完全匹配，支持通配符 *，最多支持5个通配符，最大长度1024字符。
      * @param string $RedirectUrl 目标URL，必须以“/”开头，不包含参数部分。最大长度1024字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号，最多支持10个捕获值。
      * @param string $RedirectHost 目标host，必须以http://或https://开头，并填写标准格式域名，如果不填写，默认为http:// + 当前域名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $FullMatch 指定是全路径配置还是任意匹配
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $Regex pattern是否支持正则
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -104,6 +116,10 @@ class UrlRedirectRule extends AbstractModel
 
         if (array_key_exists("FullMatch",$param) and $param["FullMatch"] !== null) {
             $this->FullMatch = $param["FullMatch"];
+        }
+
+        if (array_key_exists("Regex",$param) and $param["Regex"] !== null) {
+            $this->Regex = $param["Regex"];
         }
     }
 }

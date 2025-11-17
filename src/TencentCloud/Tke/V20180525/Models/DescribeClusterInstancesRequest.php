@@ -20,23 +20,35 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusterInstances请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method string getClusterId() 获取集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
+ * @method void setClusterId(string $ClusterId) 设置集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
  * @method integer getOffset() 获取偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
- * @method array getInstanceIds() 获取需要获取的节点实例Id列表。如果为空，表示拉取集群下所有节点实例。
- * @method void setInstanceIds(array $InstanceIds) 设置需要获取的节点实例Id列表。如果为空，表示拉取集群下所有节点实例。
- * @method string getInstanceRole() 获取节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER。默认为WORKER类型。
- * @method void setInstanceRole(string $InstanceRole) 设置节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER。默认为WORKER类型。
+ * @method array getInstanceIds() 获取需要获取的节点实例 ID 列表。如果为空，表示拉取集群下所有节点实例。普通节点用 CVM ID（如 ins-1cghhuuu ），原生节点用节点池内机器 ID （如 np-1ade4uid-0a2dc ）。
+ * @method void setInstanceIds(array $InstanceIds) 设置需要获取的节点实例 ID 列表。如果为空，表示拉取集群下所有节点实例。普通节点用 CVM ID（如 ins-1cghhuuu ），原生节点用节点池内机器 ID （如 np-1ade4uid-0a2dc ）。
+ * @method string getInstanceRole() 获取节点角色，默认为WORKER类型
+
+- WOKRER 集群内常规计算节点
+- MASTER 独立集群控制面组件节点
+- ETCD 独立集群 etcd 存储节点
+- MASTER_ETCD 独立集群控制面、etcd 共同部署的 master 节点
+
+ * @method void setInstanceRole(string $InstanceRole) 设置节点角色，默认为WORKER类型
+
+- WOKRER 集群内常规计算节点
+- MASTER 独立集群控制面组件节点
+- ETCD 独立集群 etcd 存储节点
+- MASTER_ETCD 独立集群控制面、etcd 共同部署的 master 节点
+
  * @method array getFilters() 获取过滤条件列表；Name的可选值为nodepool-id、nodepool-instance-type；Name为nodepool-id表示根据节点池id过滤机器，Value的值为具体的节点池id，Name为nodepool-instance-type表示节点加入节点池的方式，Value的值为MANUALLY_ADDED（手动加入节点池）、AUTOSCALING_ADDED（伸缩组扩容方式加入节点池）、ALL（手动加入节点池 和 伸缩组扩容方式加入节点池）
  * @method void setFilters(array $Filters) 设置过滤条件列表；Name的可选值为nodepool-id、nodepool-instance-type；Name为nodepool-id表示根据节点池id过滤机器，Value的值为具体的节点池id，Name为nodepool-instance-type表示节点加入节点池的方式，Value的值为MANUALLY_ADDED（手动加入节点池）、AUTOSCALING_ADDED（伸缩组扩容方式加入节点池）、ALL（手动加入节点池 和 伸缩组扩容方式加入节点池）
  */
 class DescribeClusterInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
      */
     public $ClusterId;
 
@@ -51,12 +63,18 @@ class DescribeClusterInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array 需要获取的节点实例Id列表。如果为空，表示拉取集群下所有节点实例。
+     * @var array 需要获取的节点实例 ID 列表。如果为空，表示拉取集群下所有节点实例。普通节点用 CVM ID（如 ins-1cghhuuu ），原生节点用节点池内机器 ID （如 np-1ade4uid-0a2dc ）。
      */
     public $InstanceIds;
 
     /**
-     * @var string 节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER。默认为WORKER类型。
+     * @var string 节点角色，默认为WORKER类型
+
+- WOKRER 集群内常规计算节点
+- MASTER 独立集群控制面组件节点
+- ETCD 独立集群 etcd 存储节点
+- MASTER_ETCD 独立集群控制面、etcd 共同部署的 master 节点
+
      */
     public $InstanceRole;
 
@@ -66,11 +84,17 @@ class DescribeClusterInstancesRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param string $ClusterId 集群ID
+     * @param string $ClusterId 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
      * @param integer $Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      * @param integer $Limit 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
-     * @param array $InstanceIds 需要获取的节点实例Id列表。如果为空，表示拉取集群下所有节点实例。
-     * @param string $InstanceRole 节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER。默认为WORKER类型。
+     * @param array $InstanceIds 需要获取的节点实例 ID 列表。如果为空，表示拉取集群下所有节点实例。普通节点用 CVM ID（如 ins-1cghhuuu ），原生节点用节点池内机器 ID （如 np-1ade4uid-0a2dc ）。
+     * @param string $InstanceRole 节点角色，默认为WORKER类型
+
+- WOKRER 集群内常规计算节点
+- MASTER 独立集群控制面组件节点
+- ETCD 独立集群 etcd 存储节点
+- MASTER_ETCD 独立集群控制面、etcd 共同部署的 master 节点
+
      * @param array $Filters 过滤条件列表；Name的可选值为nodepool-id、nodepool-instance-type；Name为nodepool-id表示根据节点池id过滤机器，Value的值为具体的节点池id，Name为nodepool-instance-type表示节点加入节点池的方式，Value的值为MANUALLY_ADDED（手动加入节点池）、AUTOSCALING_ADDED（伸缩组扩容方式加入节点池）、ALL（手动加入节点池 和 伸缩组扩容方式加入节点池）
      */
     function __construct()

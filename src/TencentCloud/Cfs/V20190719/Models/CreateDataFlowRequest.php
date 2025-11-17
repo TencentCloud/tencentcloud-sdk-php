@@ -36,6 +36,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecretKey(string $SecretKey) 设置密钥 key
  * @method string getDataFlowName() 获取数据流动名称；支持不超过64字符长度，支持中文、数字、_、-
  * @method void setDataFlowName(string $DataFlowName) 设置数据流动名称；支持不超过64字符长度，支持中文、数字、_、-
+ * @method integer getAutoRefresh() 获取 0：不开启自动更新  1：开启自动更新
+ * @method void setAutoRefresh(integer $AutoRefresh) 设置 0：不开启自动更新  1：开启自动更新
+ * @method string getUserKafkaTopic() 获取KafkaConsumer 消费时使用的Topic参数
+ * @method void setUserKafkaTopic(string $UserKafkaTopic) 设置KafkaConsumer 消费时使用的Topic参数
+ * @method string getServerAddr() 获取	服务地址 示例值：kafkaconsumer-ap-beijing.cls.tencentyun.com:9095
+ * @method void setServerAddr(string $ServerAddr) 设置	服务地址 示例值：kafkaconsumer-ap-beijing.cls.tencentyun.com:9095
+ * @method string getUserName() 获取Kafka消费用户名.示例值：name
+ * @method void setUserName(string $UserName) 设置Kafka消费用户名.示例值：name
+ * @method string getPassword() 获取Kafka消费用户密码。默认${SecretId}#${SecretKey}。
+ * @method void setPassword(string $Password) 设置Kafka消费用户密码。默认${SecretId}#${SecretKey}。
  */
 class CreateDataFlowRequest extends AbstractModel
 {
@@ -80,6 +90,31 @@ class CreateDataFlowRequest extends AbstractModel
     public $DataFlowName;
 
     /**
+     * @var integer  0：不开启自动更新  1：开启自动更新
+     */
+    public $AutoRefresh;
+
+    /**
+     * @var string KafkaConsumer 消费时使用的Topic参数
+     */
+    public $UserKafkaTopic;
+
+    /**
+     * @var string 	服务地址 示例值：kafkaconsumer-ap-beijing.cls.tencentyun.com:9095
+     */
+    public $ServerAddr;
+
+    /**
+     * @var string Kafka消费用户名.示例值：name
+     */
+    public $UserName;
+
+    /**
+     * @var string Kafka消费用户密码。默认${SecretId}#${SecretKey}。
+     */
+    public $Password;
+
+    /**
      * @param string $FileSystemId 文件系统 ID ，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
      * @param string $SourceStorageType 源端数据类型；包含S3_COS，S3_L5 
      * @param string $SourceStorageAddress 源端存储地址
@@ -88,6 +123,11 @@ class CreateDataFlowRequest extends AbstractModel
      * @param string $SecretId 密钥 ID
      * @param string $SecretKey 密钥 key
      * @param string $DataFlowName 数据流动名称；支持不超过64字符长度，支持中文、数字、_、-
+     * @param integer $AutoRefresh  0：不开启自动更新  1：开启自动更新
+     * @param string $UserKafkaTopic KafkaConsumer 消费时使用的Topic参数
+     * @param string $ServerAddr 	服务地址 示例值：kafkaconsumer-ap-beijing.cls.tencentyun.com:9095
+     * @param string $UserName Kafka消费用户名.示例值：name
+     * @param string $Password Kafka消费用户密码。默认${SecretId}#${SecretKey}。
      */
     function __construct()
     {
@@ -132,6 +172,26 @@ class CreateDataFlowRequest extends AbstractModel
 
         if (array_key_exists("DataFlowName",$param) and $param["DataFlowName"] !== null) {
             $this->DataFlowName = $param["DataFlowName"];
+        }
+
+        if (array_key_exists("AutoRefresh",$param) and $param["AutoRefresh"] !== null) {
+            $this->AutoRefresh = $param["AutoRefresh"];
+        }
+
+        if (array_key_exists("UserKafkaTopic",$param) and $param["UserKafkaTopic"] !== null) {
+            $this->UserKafkaTopic = $param["UserKafkaTopic"];
+        }
+
+        if (array_key_exists("ServerAddr",$param) and $param["ServerAddr"] !== null) {
+            $this->ServerAddr = $param["ServerAddr"];
+        }
+
+        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
+            $this->UserName = $param["UserName"];
+        }
+
+        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
+            $this->Password = $param["Password"];
         }
     }
 }

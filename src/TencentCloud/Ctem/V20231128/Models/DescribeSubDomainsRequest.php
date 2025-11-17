@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) 设置查询数组
  * @method boolean getIgnored() 获取是否显示被忽略的数据
  * @method void setIgnored(boolean $Ignored) 设置是否显示被忽略的数据
+ * @method boolean getOnlyOffline() 获取是否只查询离线子域名
+ * @method void setOnlyOffline(boolean $OnlyOffline) 设置是否只查询离线子域名
  */
 class DescribeSubDomainsRequest extends AbstractModel
 {
@@ -122,6 +124,11 @@ class DescribeSubDomainsRequest extends AbstractModel
     public $Ignored;
 
     /**
+     * @var boolean 是否只查询离线子域名
+     */
+    public $OnlyOffline;
+
+    /**
      * @param array $CustomerIdList 企业ID列表，可多选
      * @param boolean $IsNew 是否新增数据
      * @param integer $CustomerId 企业ID
@@ -136,6 +143,7 @@ class DescribeSubDomainsRequest extends AbstractModel
      * @param string $UpdateAtEnd 更新时间-结束
      * @param array $Filters 查询数组
      * @param boolean $Ignored 是否显示被忽略的数据
+     * @param boolean $OnlyOffline 是否只查询离线子域名
      */
     function __construct()
     {
@@ -209,6 +217,10 @@ class DescribeSubDomainsRequest extends AbstractModel
 
         if (array_key_exists("Ignored",$param) and $param["Ignored"] !== null) {
             $this->Ignored = $param["Ignored"];
+        }
+
+        if (array_key_exists("OnlyOffline",$param) and $param["OnlyOffline"] !== null) {
+            $this->OnlyOffline = $param["OnlyOffline"];
         }
     }
 }

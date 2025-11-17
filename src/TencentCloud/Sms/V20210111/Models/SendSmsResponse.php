@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * SendSms返回参数结构体
  *
  * @method array getSendStatusSet() 获取短信发送状态。
+注：可参考 <a href="#4.-.E7.A4.BA.E4.BE.8B">示例</a> ，包含短信发送成功和发送失败的输出示例。
  * @method void setSendStatusSet(array $SendStatusSet) 设置短信发送状态。
+注：可参考 <a href="#4.-.E7.A4.BA.E4.BE.8B">示例</a> ，包含短信发送成功和发送失败的输出示例。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -29,6 +31,7 @@ class SendSmsResponse extends AbstractModel
 {
     /**
      * @var array 短信发送状态。
+注：可参考 <a href="#4.-.E7.A4.BA.E4.BE.8B">示例</a> ，包含短信发送成功和发送失败的输出示例。
      */
     public $SendStatusSet;
 
@@ -39,6 +42,7 @@ class SendSmsResponse extends AbstractModel
 
     /**
      * @param array $SendStatusSet 短信发送状态。
+注：可参考 <a href="#4.-.E7.A4.BA.E4.BE.8B">示例</a> ，包含短信发送成功和发送失败的输出示例。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

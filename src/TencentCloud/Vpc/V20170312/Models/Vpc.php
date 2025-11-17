@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagSet(array $TagSet) 设置标签键值对
  * @method array getAssistantCidrSet() 获取辅助CIDR
  * @method void setAssistantCidrSet(array $AssistantCidrSet) 设置辅助CIDR
+ * @method boolean getEnableRouteVpcPublish() 获取vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
+ * @method void setEnableRouteVpcPublish(boolean $EnableRouteVpcPublish) 设置vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
  * @method array getIpv6CidrBlockSet() 获取返回多运营商IPv6 Cidr Block
  * @method void setIpv6CidrBlockSet(array $Ipv6CidrBlockSet) 设置返回多运营商IPv6 Cidr Block
  */
@@ -117,6 +119,11 @@ class Vpc extends AbstractModel
     public $AssistantCidrSet;
 
     /**
+     * @var boolean vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
+     */
+    public $EnableRouteVpcPublish;
+
+    /**
      * @var array 返回多运营商IPv6 Cidr Block
      */
     public $Ipv6CidrBlockSet;
@@ -135,6 +142,7 @@ class Vpc extends AbstractModel
      * @param string $Ipv6CidrBlock `VPC`的`IPv6` `CIDR`。
      * @param array $TagSet 标签键值对
      * @param array $AssistantCidrSet 辅助CIDR
+     * @param boolean $EnableRouteVpcPublish vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
      * @param array $Ipv6CidrBlockSet 返回多运营商IPv6 Cidr Block
      */
     function __construct()
@@ -210,6 +218,10 @@ class Vpc extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AssistantCidrSet, $obj);
             }
+        }
+
+        if (array_key_exists("EnableRouteVpcPublish",$param) and $param["EnableRouteVpcPublish"] !== null) {
+            $this->EnableRouteVpcPublish = $param["EnableRouteVpcPublish"];
         }
 
         if (array_key_exists("Ipv6CidrBlockSet",$param) and $param["Ipv6CidrBlockSet"] !== null) {

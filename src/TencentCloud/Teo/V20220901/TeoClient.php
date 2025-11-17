@@ -23,10 +23,23 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Teo\V20220901\Models as Models;
 
 /**
+ * @method Models\ApplyFreeCertificateResponse ApplyFreeCertificate(Models\ApplyFreeCertificateRequest $req) 申请免费证书时，如果您需要通过使用 DNS 委派验证或者文件验证进行申请，您可以调用该接口来进行发起证书申请并根据申请方式来获取对应的验证内容。调用接口的顺序如下：
+第一步：调用 ApplyFreeCertificate，指定申请免费证书的校验方式，获取验证内容；
+第二步：为相应域名按照验证内容配置；
+第三步：调用CheckFreeCertificateVerification 验证，验证通过后即完成免费证书申请；
+第四步：调用ModifyHostsCertificate，下发域名证书为使用 EdgeOne 免费证书配置。
+
+申请方式的介绍可参考文档：[免费证书申请说明](https://cloud.tencent.com/document/product/1552/90437) 
+说明：
+- 仅 CNAME 接入模式可调用该接口来指定免费证书申请方式。NS/DNSPod 托管接入模式都是使用自动验证来申请免费证书，无需调用该接口。
+- 如果您需要切换免费证书验证方式，您可以重新调用本接口通过修改 VerificationMethod 字段来进行变更。
+- 同个域名只能申请一本免费证书，在调用本接口后，后台会触发申请免费证书相关任务，您需要在2 天内，完成域名验证信息的相关配置，然后完成证书验证。
  * @method Models\BindSecurityTemplateToEntityResponse BindSecurityTemplateToEntity(Models\BindSecurityTemplateToEntityRequest $req) 操作安全策略模板，支持将域名绑定或换绑到指定的策略模板，或者从指定的策略模板解绑。
  * @method Models\BindSharedCNAMEResponse BindSharedCNAME(Models\BindSharedCNAMERequest $req) 用于加速域名绑定或解绑共享 CNAME，该功能白名单内测中。
  * @method Models\BindZoneToPlanResponse BindZoneToPlan(Models\BindZoneToPlanRequest $req) 将未绑定套餐的站点绑定到已有套餐
  * @method Models\CheckCnameStatusResponse CheckCnameStatus(Models\CheckCnameStatusRequest $req) 校验域名 CNAME 状态
+ * @method Models\CheckFreeCertificateVerificationResponse CheckFreeCertificateVerification(Models\CheckFreeCertificateVerificationRequest $req) 该接口用于验证免费证书并获取免费证书申请结果。如果验证通过，可通过该接口查询到对应域名申请的免费证书信息，如果申请失败，该接口将返回对应的验证失败信息。
+在触发[申请免费证书接口](https://cloud.tencent.com/document/product/1552/90437)后，您可以通过本接口检查免费证书申请结果。在免费证书申请成功后， 还需要通过[配置域名证书](https://tcloud4api.woa.com/document/product/1657/80723?!preview)接口配置，才能将免费证书部署至加速域上。
  * @method Models\ConfirmMultiPathGatewayOriginACLResponse ConfirmMultiPathGatewayOriginACL(Models\ConfirmMultiPathGatewayOriginACLRequest $req) 本接口用于多通道安全加速网关回源 IP 网段发生变更时，确认已将最新回源 IP 网段更新至源站防火墙。
  * @method Models\ConfirmOriginACLUpdateResponse ConfirmOriginACLUpdate(Models\ConfirmOriginACLUpdateRequest $req) 本接口用于回源 IP 网段发生变更时，确认已将最新回源 IP 网段更新至源站防火墙。确认已更新至最新的回源 IP 网段后，相关变更通知将会停止推送。
  * @method Models\CreateAccelerationDomainResponse CreateAccelerationDomain(Models\CreateAccelerationDomainRequest $req) 在创建完站点之后，您可以通过本接口创建加速域名。 
@@ -67,6 +80,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     - 一个推送至腾讯云  CLS 的任务，加上另一个推送至自定义 HTTP(S) 地址的任务；
     - 一个推送至腾讯云  CLS 的任务，加上另一个推送至 AWS S3 兼容对象存储的任务；
 - 当数据投递类型（LogType）为速率限制和 CC 攻击防护日志、托管规则日志、自定义规则日志、Bot 管理日志时，同一个实体在同种数据投递类型（LogType）和数据投递区域（Area）的组合下，只能被添加到一个实时日志投递任务中。
+- 当实时日志投递任务类型（TaskType）为 EdgeOne 日志分析（log_analysis）时，只支持数据投递类型（LogType）为站点加速日志（domain）；在同一站点（ZoneId）和数据投递区域（Area）的组合下，只能添加一个推送至 EdgeOne 日志分析的实时日志投递任务；。
 
 建议先通过 [DescribeRealtimeLogDeliveryTasks](https://cloud.tencent.com/document/product/1552/104110)  接口根据实体查询实时日志投递任务列表，检查实体是否已经被添加到另一实时日志投递任务中。
  * @method Models\CreateRuleResponse CreateRule(Models\CreateRuleRequest $req) 本接口为旧版本创建规则引擎接口，EdgeOne 于 2025 年 1 月 21 日已对规则引擎相关接口全面升级，新版本创建七层加速规则接口详情请参考 [CreateL7AccRules](https://cloud.tencent.com/document/product/1552/115822)。

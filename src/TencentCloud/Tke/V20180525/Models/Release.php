@@ -26,8 +26,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespace(string $Namespace) 设置应用命名空间
  * @method string getRevision() 获取应用当前版本
  * @method void setRevision(string $Revision) 设置应用当前版本
- * @method string getStatus() 获取应用状态
- * @method void setStatus(string $Status) 设置应用状态
+ * @method string getStatus() 获取应用状态，参考 Helm 发布状态。
+可选值及其释义如下：
+• ​​unknown​​: 状态未知
+• ​​deployed​​: 已成功部署
+• ​​uninstalled​​: 已卸载
+• ​​superseded​​: 已被新版本替代
+• ​​failed​​: 部署失败
+• ​​uninstalling​​: 正在卸载中
+• ​​pending-install​​: 等待安装/安装进行中
+• ​​pending-upgrade​​: 等待升级/升级进行中
+• ​​pending-rollback​​: 等待回滚/回滚进行中
+ * @method void setStatus(string $Status) 设置应用状态，参考 Helm 发布状态。
+可选值及其释义如下：
+• ​​unknown​​: 状态未知
+• ​​deployed​​: 已成功部署
+• ​​uninstalled​​: 已卸载
+• ​​superseded​​: 已被新版本替代
+• ​​failed​​: 部署失败
+• ​​uninstalling​​: 正在卸载中
+• ​​pending-install​​: 等待安装/安装进行中
+• ​​pending-upgrade​​: 等待升级/升级进行中
+• ​​pending-rollback​​: 等待回滚/回滚进行中
  * @method string getChartName() 获取制品名称
  * @method void setChartName(string $ChartName) 设置制品名称
  * @method string getChartVersion() 获取制品版本
@@ -57,7 +77,17 @@ class Release extends AbstractModel
     public $Revision;
 
     /**
-     * @var string 应用状态
+     * @var string 应用状态，参考 Helm 发布状态。
+可选值及其释义如下：
+• ​​unknown​​: 状态未知
+• ​​deployed​​: 已成功部署
+• ​​uninstalled​​: 已卸载
+• ​​superseded​​: 已被新版本替代
+• ​​failed​​: 部署失败
+• ​​uninstalling​​: 正在卸载中
+• ​​pending-install​​: 等待安装/安装进行中
+• ​​pending-upgrade​​: 等待升级/升级进行中
+• ​​pending-rollback​​: 等待回滚/回滚进行中
      */
     public $Status;
 
@@ -90,7 +120,17 @@ class Release extends AbstractModel
      * @param string $Name 应用名称
      * @param string $Namespace 应用命名空间
      * @param string $Revision 应用当前版本
-     * @param string $Status 应用状态
+     * @param string $Status 应用状态，参考 Helm 发布状态。
+可选值及其释义如下：
+• ​​unknown​​: 状态未知
+• ​​deployed​​: 已成功部署
+• ​​uninstalled​​: 已卸载
+• ​​superseded​​: 已被新版本替代
+• ​​failed​​: 部署失败
+• ​​uninstalling​​: 正在卸载中
+• ​​pending-install​​: 等待安装/安装进行中
+• ​​pending-upgrade​​: 等待升级/升级进行中
+• ​​pending-rollback​​: 等待回滚/回滚进行中
      * @param string $ChartName 制品名称
      * @param string $ChartVersion 制品版本
      * @param string $AppVersion 制品应用版本

@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogRechargeRule(LogRechargeRuleInfo $LogRechargeRule) 设置日志导入规则
  * @method integer getStatusControl() 获取导入控制，1：暂停；2：启动。
  * @method void setStatusControl(integer $StatusControl) 设置导入控制，1：暂停；2：启动。
+ * @method UserKafkaMeta getUserKafkaMeta() 获取用户kafka拓展信息
+ * @method void setUserKafkaMeta(UserKafkaMeta $UserKafkaMeta) 设置用户kafka拓展信息
  */
 class ModifyKafkaRechargeRequest extends AbstractModel
 {
@@ -129,6 +131,11 @@ class ModifyKafkaRechargeRequest extends AbstractModel
     public $StatusControl;
 
     /**
+     * @var UserKafkaMeta 用户kafka拓展信息
+     */
+    public $UserKafkaMeta;
+
+    /**
      * @param string $Id 导入配置Id。
 - 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
 - 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
@@ -148,6 +155,7 @@ class ModifyKafkaRechargeRequest extends AbstractModel
      * @param string $ConsumerGroupName 用户Kafka消费组名称
      * @param LogRechargeRuleInfo $LogRechargeRule 日志导入规则
      * @param integer $StatusControl 导入控制，1：暂停；2：启动。
+     * @param UserKafkaMeta $UserKafkaMeta 用户kafka拓展信息
      */
     function __construct()
     {
@@ -210,6 +218,11 @@ class ModifyKafkaRechargeRequest extends AbstractModel
 
         if (array_key_exists("StatusControl",$param) and $param["StatusControl"] !== null) {
             $this->StatusControl = $param["StatusControl"];
+        }
+
+        if (array_key_exists("UserKafkaMeta",$param) and $param["UserKafkaMeta"] !== null) {
+            $this->UserKafkaMeta = new UserKafkaMeta();
+            $this->UserKafkaMeta->deserialize($param["UserKafkaMeta"]);
         }
     }
 }

@@ -62,13 +62,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxTotalUnreadyPercentage(integer $MaxTotalUnreadyPercentage) 设置未就绪节点的最大百分比，此后CA会停止操作
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getScaleDownUnreadyTime() 获取表示未准备就绪的节点在有资格进行缩减之前应该停留多长时间
+ * @method integer getScaleDownUnreadyTime() 获取表示未准备就绪的节点在有资格进行缩减之前应该停留多少分钟
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScaleDownUnreadyTime(integer $ScaleDownUnreadyTime) 设置表示未准备就绪的节点在有资格进行缩减之前应该停留多长时间
+ * @method void setScaleDownUnreadyTime(integer $ScaleDownUnreadyTime) 设置表示未准备就绪的节点在有资格进行缩减之前应该停留多少分钟
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getUnregisteredNodeRemovalTime() 获取CA删除未在Kubernetes中注册的节点之前等待的时间
+ * @method integer getUnregisteredNodeRemovalTime() 获取CA删除未在Kubernetes中注册的节点之前等待的分钟数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUnregisteredNodeRemovalTime(integer $UnregisteredNodeRemovalTime) 设置CA删除未在Kubernetes中注册的节点之前等待的时间
+ * @method void setUnregisteredNodeRemovalTime(integer $UnregisteredNodeRemovalTime) 设置CA删除未在Kubernetes中注册的节点之前等待的分钟数
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterAsGroupOption extends AbstractModel
@@ -139,13 +139,13 @@ class ClusterAsGroupOption extends AbstractModel
     public $MaxTotalUnreadyPercentage;
 
     /**
-     * @var integer 表示未准备就绪的节点在有资格进行缩减之前应该停留多长时间
+     * @var integer 表示未准备就绪的节点在有资格进行缩减之前应该停留多少分钟
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScaleDownUnreadyTime;
 
     /**
-     * @var integer CA删除未在Kubernetes中注册的节点之前等待的时间
+     * @var integer CA删除未在Kubernetes中注册的节点之前等待的分钟数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnregisteredNodeRemovalTime;
@@ -172,9 +172,9 @@ class ClusterAsGroupOption extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxTotalUnreadyPercentage 未就绪节点的最大百分比，此后CA会停止操作
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ScaleDownUnreadyTime 表示未准备就绪的节点在有资格进行缩减之前应该停留多长时间
+     * @param integer $ScaleDownUnreadyTime 表示未准备就绪的节点在有资格进行缩减之前应该停留多少分钟
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $UnregisteredNodeRemovalTime CA删除未在Kubernetes中注册的节点之前等待的时间
+     * @param integer $UnregisteredNodeRemovalTime CA删除未在Kubernetes中注册的节点之前等待的分钟数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getDeviceSet() 获取资产参数列表
  * @method void setDeviceSet(array $DeviceSet) 设置资产参数列表
+ * @method integer getAccountId() 获取 资产所属云账号id
+ * @method void setAccountId(integer $AccountId) 设置 资产所属云账号id
  */
 class ImportExternalDeviceRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class ImportExternalDeviceRequest extends AbstractModel
     public $DeviceSet;
 
     /**
+     * @var integer  资产所属云账号id
+     */
+    public $AccountId;
+
+    /**
      * @param array $DeviceSet 资产参数列表
+     * @param integer $AccountId  资产所属云账号id
      */
     function __construct()
     {
@@ -53,6 +61,10 @@ class ImportExternalDeviceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DeviceSet, $obj);
             }
+        }
+
+        if (array_key_exists("AccountId",$param) and $param["AccountId"] !== null) {
+            $this->AccountId = $param["AccountId"];
         }
     }
 }

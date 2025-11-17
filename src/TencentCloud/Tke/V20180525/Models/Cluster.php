@@ -56,16 +56,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContainerRuntime(string $ContainerRuntime) 设置集群运行环境docker或container
  * @method string getCreatedTime() 获取创建时间
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间
- * @method boolean getDeletionProtection() 获取删除保护开关
- * @method void setDeletionProtection(boolean $DeletionProtection) 设置删除保护开关
- * @method boolean getEnableExternalNode() 获取集群是否开启第三方节点支持
- * @method void setEnableExternalNode(boolean $EnableExternalNode) 设置集群是否开启第三方节点支持
+ * @method boolean getDeletionProtection() 获取集群删除保护开关，打开：true，关闭：false
+ * @method void setDeletionProtection(boolean $DeletionProtection) 设置集群删除保护开关，打开：true，关闭：false
+ * @method boolean getEnableExternalNode() 获取集群是否开启第三方节点支持，开启：true，关闭：false
+ * @method void setEnableExternalNode(boolean $EnableExternalNode) 设置集群是否开启第三方节点支持，开启：true，关闭：false
  * @method string getClusterLevel() 获取集群等级，针对托管集群生效
  * @method void setClusterLevel(string $ClusterLevel) 设置集群等级，针对托管集群生效
- * @method boolean getAutoUpgradeClusterLevel() 获取自动变配集群等级，针对托管集群生效
- * @method void setAutoUpgradeClusterLevel(boolean $AutoUpgradeClusterLevel) 设置自动变配集群等级，针对托管集群生效
- * @method boolean getQGPUShareEnable() 获取是否开启QGPU共享
- * @method void setQGPUShareEnable(boolean $QGPUShareEnable) 设置是否开启QGPU共享
+ * @method boolean getAutoUpgradeClusterLevel() 获取自动变配集群等级，针对托管集群生效。开启：true，关闭：false
+ * @method void setAutoUpgradeClusterLevel(boolean $AutoUpgradeClusterLevel) 设置自动变配集群等级，针对托管集群生效。开启：true，关闭：false
+ * @method boolean getQGPUShareEnable() 获取是否开启QGPU共享，开启：true，关闭：false
+ * @method void setQGPUShareEnable(boolean $QGPUShareEnable) 设置是否开启QGPU共享，开启：true，关闭：false
  * @method string getRuntimeVersion() 获取运行时版本
  * @method void setRuntimeVersion(string $RuntimeVersion) 设置运行时版本
  * @method integer getClusterEtcdNodeNum() 获取集群当前etcd数量
@@ -162,12 +162,12 @@ class Cluster extends AbstractModel
     public $CreatedTime;
 
     /**
-     * @var boolean 删除保护开关
+     * @var boolean 集群删除保护开关，打开：true，关闭：false
      */
     public $DeletionProtection;
 
     /**
-     * @var boolean 集群是否开启第三方节点支持
+     * @var boolean 集群是否开启第三方节点支持，开启：true，关闭：false
      */
     public $EnableExternalNode;
 
@@ -177,12 +177,12 @@ class Cluster extends AbstractModel
     public $ClusterLevel;
 
     /**
-     * @var boolean 自动变配集群等级，针对托管集群生效
+     * @var boolean 自动变配集群等级，针对托管集群生效。开启：true，关闭：false
      */
     public $AutoUpgradeClusterLevel;
 
     /**
-     * @var boolean 是否开启QGPU共享
+     * @var boolean 是否开启QGPU共享，开启：true，关闭：false
      */
     public $QGPUShareEnable;
 
@@ -220,11 +220,11 @@ class Cluster extends AbstractModel
      * @param string $OsCustomizeType OsCustomizeType 系统定制类型
      * @param string $ContainerRuntime 集群运行环境docker或container
      * @param string $CreatedTime 创建时间
-     * @param boolean $DeletionProtection 删除保护开关
-     * @param boolean $EnableExternalNode 集群是否开启第三方节点支持
+     * @param boolean $DeletionProtection 集群删除保护开关，打开：true，关闭：false
+     * @param boolean $EnableExternalNode 集群是否开启第三方节点支持，开启：true，关闭：false
      * @param string $ClusterLevel 集群等级，针对托管集群生效
-     * @param boolean $AutoUpgradeClusterLevel 自动变配集群等级，针对托管集群生效
-     * @param boolean $QGPUShareEnable 是否开启QGPU共享
+     * @param boolean $AutoUpgradeClusterLevel 自动变配集群等级，针对托管集群生效。开启：true，关闭：false
+     * @param boolean $QGPUShareEnable 是否开启QGPU共享，开启：true，关闭：false
      * @param string $RuntimeVersion 运行时版本
      * @param integer $ClusterEtcdNodeNum 集群当前etcd数量
      * @param string $CdcId 本地专用集群Id

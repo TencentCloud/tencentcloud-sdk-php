@@ -29,18 +29,18 @@ use TencentCloud\Common\AbstractModel;
 <li>eofreecert：通过自动验证申请免费证书并部署。验证方式详见：[申请免费证书支持的验证方式](https://cloud.tencent.com/document/product/1552/90437)
 
 - 在 NS 或者 DNSPod 托管接入模式下，仅支持自动验证的方式申请免费证书。
-- 当免费证书申请失败时会导致证书部署失败，您可以通过<a href = 'https://tcloud4api.woa.com/document/product/1657/927938?!preview&!document=1'>检查免费证书申请结果</a>接口获取申请失败原因。</li>
-</ul><li>eofreecert_manual：部署 DNS 委派验证或者文件验证申请的免费证书。在部署免费证书前，您需要触发<a href = 'https://tcloud4api.woa.com/document/product/1657/927322?!preview&!document=1'>申请免费证书</a>接口申请免费证书。在免费证书申请成功后，你可以通过该枚举值对免费证书进行部署；</li>
-<ul><li>注意：在对免费证书部署时，需要保证当前已存在申请成功的免费证书。您可以通过<a href = 'https://tcloud4api.woa.com/document/product/1657/927938?!preview&!document=1'>检查免费证书申请结果</a>接口检查当前是否已存在申请成功的免费证书。</li>
+- 当免费证书申请失败时会导致证书部署失败，您可以通过<a href = 'https://cloud.tencent.com/document/product/1552/124806'>检查免费证书申请结果</a>接口获取申请失败原因。</li>
+</ul><li>eofreecert_manual：部署 DNS 委派验证或者文件验证申请的免费证书。在部署免费证书前，您需要触发<a href = 'https://cloud.tencent.com/document/product/1552/124807'>申请免费证书</a>接口申请免费证书。在免费证书申请成功后，你可以通过该枚举值对免费证书进行部署；</li>
+<ul><li>注意：在对免费证书部署时，需要保证当前已存在申请成功的免费证书。您可以通过<a href = 'https://cloud.tencent.com/document/product/1552/124806'>检查免费证书申请结果</a>接口检查当前是否已存在申请成功的免费证书。</li>
 </ul><li>sslcert：配置 SSL 托管服务端证书。</li>
  * @method void setMode(string $Mode) 设置配置服务端证书的模式，取值有：
 <ul><li>disable：不配置服务端证书；</li>
 <li>eofreecert：通过自动验证申请免费证书并部署。验证方式详见：[申请免费证书支持的验证方式](https://cloud.tencent.com/document/product/1552/90437)
 
 - 在 NS 或者 DNSPod 托管接入模式下，仅支持自动验证的方式申请免费证书。
-- 当免费证书申请失败时会导致证书部署失败，您可以通过<a href = 'https://tcloud4api.woa.com/document/product/1657/927938?!preview&!document=1'>检查免费证书申请结果</a>接口获取申请失败原因。</li>
-</ul><li>eofreecert_manual：部署 DNS 委派验证或者文件验证申请的免费证书。在部署免费证书前，您需要触发<a href = 'https://tcloud4api.woa.com/document/product/1657/927322?!preview&!document=1'>申请免费证书</a>接口申请免费证书。在免费证书申请成功后，你可以通过该枚举值对免费证书进行部署；</li>
-<ul><li>注意：在对免费证书部署时，需要保证当前已存在申请成功的免费证书。您可以通过<a href = 'https://tcloud4api.woa.com/document/product/1657/927938?!preview&!document=1'>检查免费证书申请结果</a>接口检查当前是否已存在申请成功的免费证书。</li>
+- 当免费证书申请失败时会导致证书部署失败，您可以通过<a href = 'https://cloud.tencent.com/document/product/1552/124806'>检查免费证书申请结果</a>接口获取申请失败原因。</li>
+</ul><li>eofreecert_manual：部署 DNS 委派验证或者文件验证申请的免费证书。在部署免费证书前，您需要触发<a href = 'https://cloud.tencent.com/document/product/1552/124807'>申请免费证书</a>接口申请免费证书。在免费证书申请成功后，你可以通过该枚举值对免费证书进行部署；</li>
+<ul><li>注意：在对免费证书部署时，需要保证当前已存在申请成功的免费证书。您可以通过<a href = 'https://cloud.tencent.com/document/product/1552/124806'>检查免费证书申请结果</a>接口检查当前是否已存在申请成功的免费证书。</li>
 </ul><li>sslcert：配置 SSL 托管服务端证书。</li>
  * @method array getServerCertInfo() 获取SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
  * @method void setServerCertInfo(array $ServerCertInfo) 设置SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
 不填，默认取值为none。
  * @method MutualTLS getClientCertInfo() 获取在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 节点内，用于客户端对 EO 节点进行认证。默认关闭，不填写表示保持原有配置。
  * @method void setClientCertInfo(MutualTLS $ClientCertInfo) 设置在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 节点内，用于客户端对 EO 节点进行认证。默认关闭，不填写表示保持原有配置。
- * @method UpstreamCertInfo getUpstreamCertInfo() 获取用于配置 EO 节点回源时携带的证书，用于回源双向认证握手，默认关闭，不填写表示保持原有配置。该配置当前为白名单内测中，如需使用，请[联系我们](https://cloud.tencent.com/online-service)。
- * @method void setUpstreamCertInfo(UpstreamCertInfo $UpstreamCertInfo) 设置用于配置 EO 节点回源时携带的证书，用于回源双向认证握手，默认关闭，不填写表示保持原有配置。该配置当前为白名单内测中，如需使用，请[联系我们](https://cloud.tencent.com/online-service)。
+ * @method UpstreamCertInfo getUpstreamCertInfo() 获取用于分别开启/关闭回源双向认证和源站证书校验。默认关闭，不填写表示保持原有配置。回源双向认证配置当前为白名单内侧中，如需使用，请[联系我们](https://cloud.tencent.com/online-service)。
+ * @method void setUpstreamCertInfo(UpstreamCertInfo $UpstreamCertInfo) 设置用于分别开启/关闭回源双向认证和源站证书校验。默认关闭，不填写表示保持原有配置。回源双向认证配置当前为白名单内侧中，如需使用，请[联系我们](https://cloud.tencent.com/online-service)。
  */
 class ModifyHostsCertificateRequest extends AbstractModel
 {
@@ -75,9 +75,9 @@ class ModifyHostsCertificateRequest extends AbstractModel
 <li>eofreecert：通过自动验证申请免费证书并部署。验证方式详见：[申请免费证书支持的验证方式](https://cloud.tencent.com/document/product/1552/90437)
 
 - 在 NS 或者 DNSPod 托管接入模式下，仅支持自动验证的方式申请免费证书。
-- 当免费证书申请失败时会导致证书部署失败，您可以通过<a href = 'https://tcloud4api.woa.com/document/product/1657/927938?!preview&!document=1'>检查免费证书申请结果</a>接口获取申请失败原因。</li>
-</ul><li>eofreecert_manual：部署 DNS 委派验证或者文件验证申请的免费证书。在部署免费证书前，您需要触发<a href = 'https://tcloud4api.woa.com/document/product/1657/927322?!preview&!document=1'>申请免费证书</a>接口申请免费证书。在免费证书申请成功后，你可以通过该枚举值对免费证书进行部署；</li>
-<ul><li>注意：在对免费证书部署时，需要保证当前已存在申请成功的免费证书。您可以通过<a href = 'https://tcloud4api.woa.com/document/product/1657/927938?!preview&!document=1'>检查免费证书申请结果</a>接口检查当前是否已存在申请成功的免费证书。</li>
+- 当免费证书申请失败时会导致证书部署失败，您可以通过<a href = 'https://cloud.tencent.com/document/product/1552/124806'>检查免费证书申请结果</a>接口获取申请失败原因。</li>
+</ul><li>eofreecert_manual：部署 DNS 委派验证或者文件验证申请的免费证书。在部署免费证书前，您需要触发<a href = 'https://cloud.tencent.com/document/product/1552/124807'>申请免费证书</a>接口申请免费证书。在免费证书申请成功后，你可以通过该枚举值对免费证书进行部署；</li>
+<ul><li>注意：在对免费证书部署时，需要保证当前已存在申请成功的免费证书。您可以通过<a href = 'https://cloud.tencent.com/document/product/1552/124806'>检查免费证书申请结果</a>接口检查当前是否已存在申请成功的免费证书。</li>
 </ul><li>sslcert：配置 SSL 托管服务端证书。</li>
      */
     public $Mode;
@@ -102,7 +102,7 @@ class ModifyHostsCertificateRequest extends AbstractModel
     public $ClientCertInfo;
 
     /**
-     * @var UpstreamCertInfo 用于配置 EO 节点回源时携带的证书，用于回源双向认证握手，默认关闭，不填写表示保持原有配置。该配置当前为白名单内测中，如需使用，请[联系我们](https://cloud.tencent.com/online-service)。
+     * @var UpstreamCertInfo 用于分别开启/关闭回源双向认证和源站证书校验。默认关闭，不填写表示保持原有配置。回源双向认证配置当前为白名单内侧中，如需使用，请[联系我们](https://cloud.tencent.com/online-service)。
      */
     public $UpstreamCertInfo;
 
@@ -114,9 +114,9 @@ class ModifyHostsCertificateRequest extends AbstractModel
 <li>eofreecert：通过自动验证申请免费证书并部署。验证方式详见：[申请免费证书支持的验证方式](https://cloud.tencent.com/document/product/1552/90437)
 
 - 在 NS 或者 DNSPod 托管接入模式下，仅支持自动验证的方式申请免费证书。
-- 当免费证书申请失败时会导致证书部署失败，您可以通过<a href = 'https://tcloud4api.woa.com/document/product/1657/927938?!preview&!document=1'>检查免费证书申请结果</a>接口获取申请失败原因。</li>
-</ul><li>eofreecert_manual：部署 DNS 委派验证或者文件验证申请的免费证书。在部署免费证书前，您需要触发<a href = 'https://tcloud4api.woa.com/document/product/1657/927322?!preview&!document=1'>申请免费证书</a>接口申请免费证书。在免费证书申请成功后，你可以通过该枚举值对免费证书进行部署；</li>
-<ul><li>注意：在对免费证书部署时，需要保证当前已存在申请成功的免费证书。您可以通过<a href = 'https://tcloud4api.woa.com/document/product/1657/927938?!preview&!document=1'>检查免费证书申请结果</a>接口检查当前是否已存在申请成功的免费证书。</li>
+- 当免费证书申请失败时会导致证书部署失败，您可以通过<a href = 'https://cloud.tencent.com/document/product/1552/124806'>检查免费证书申请结果</a>接口获取申请失败原因。</li>
+</ul><li>eofreecert_manual：部署 DNS 委派验证或者文件验证申请的免费证书。在部署免费证书前，您需要触发<a href = 'https://cloud.tencent.com/document/product/1552/124807'>申请免费证书</a>接口申请免费证书。在免费证书申请成功后，你可以通过该枚举值对免费证书进行部署；</li>
+<ul><li>注意：在对免费证书部署时，需要保证当前已存在申请成功的免费证书。您可以通过<a href = 'https://cloud.tencent.com/document/product/1552/124806'>检查免费证书申请结果</a>接口检查当前是否已存在申请成功的免费证书。</li>
 </ul><li>sslcert：配置 SSL 托管服务端证书。</li>
      * @param array $ServerCertInfo SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
      * @param string $ApplyType 托管类型，取值有：
@@ -124,7 +124,7 @@ class ModifyHostsCertificateRequest extends AbstractModel
 <li>apply：托管EO</li>
 不填，默认取值为none。
      * @param MutualTLS $ClientCertInfo 在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 节点内，用于客户端对 EO 节点进行认证。默认关闭，不填写表示保持原有配置。
-     * @param UpstreamCertInfo $UpstreamCertInfo 用于配置 EO 节点回源时携带的证书，用于回源双向认证握手，默认关闭，不填写表示保持原有配置。该配置当前为白名单内测中，如需使用，请[联系我们](https://cloud.tencent.com/online-service)。
+     * @param UpstreamCertInfo $UpstreamCertInfo 用于分别开启/关闭回源双向认证和源站证书校验。默认关闭，不填写表示保持原有配置。回源双向认证配置当前为白名单内侧中，如需使用，请[联系我们](https://cloud.tencent.com/online-service)。
      */
     function __construct()
     {

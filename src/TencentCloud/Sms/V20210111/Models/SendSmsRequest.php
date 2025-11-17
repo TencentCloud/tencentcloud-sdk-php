@@ -44,10 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtendCode(string $ExtendCode) 设置短信码号扩展号，默认未开通，如需开通请联系 [腾讯云短信小助手](https://cloud.tencent.com/document/product/382/3773#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81)。
  * @method string getSessionContext() 获取用户的 session 内容，可以携带用户侧 ID 等上下文信息，server 会原样返回。注意长度需小于512字节。
  * @method void setSessionContext(string $SessionContext) 设置用户的 session 内容，可以携带用户侧 ID 等上下文信息，server 会原样返回。注意长度需小于512字节。
- * @method string getSenderId() 获取国内短信无需填写该项；国际/港澳台短信已申请独立 SenderId 需要填写该字段，默认使用公共 SenderId，无需填写该字段。
-注：月度使用量达到指定量级可申请独立 SenderId 使用，详情请联系 [腾讯云短信小助手](https://cloud.tencent.com/document/product/382/3773#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81)。
- * @method void setSenderId(string $SenderId) 设置国内短信无需填写该项；国际/港澳台短信已申请独立 SenderId 需要填写该字段，默认使用公共 SenderId，无需填写该字段。
-注：月度使用量达到指定量级可申请独立 SenderId 使用，详情请联系 [腾讯云短信小助手](https://cloud.tencent.com/document/product/382/3773#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81)。
+ * @method string getSenderId() 获取国际/港澳台短信 Sender ID。可参考 [Sender ID 说明](https://cloud.tencent.com/document/product/382/102831)。
+注：国内短信无需填写该项；国际/港澳台短信已申请独立 SenderId 需要填写该字段，默认使用公共 SenderId，无需填写该字段。
+ * @method void setSenderId(string $SenderId) 设置国际/港澳台短信 Sender ID。可参考 [Sender ID 说明](https://cloud.tencent.com/document/product/382/102831)。
+注：国内短信无需填写该项；国际/港澳台短信已申请独立 SenderId 需要填写该字段，默认使用公共 SenderId，无需填写该字段。
  */
 class SendSmsRequest extends AbstractModel
 {
@@ -92,8 +92,8 @@ class SendSmsRequest extends AbstractModel
     public $SessionContext;
 
     /**
-     * @var string 国内短信无需填写该项；国际/港澳台短信已申请独立 SenderId 需要填写该字段，默认使用公共 SenderId，无需填写该字段。
-注：月度使用量达到指定量级可申请独立 SenderId 使用，详情请联系 [腾讯云短信小助手](https://cloud.tencent.com/document/product/382/3773#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81)。
+     * @var string 国际/港澳台短信 Sender ID。可参考 [Sender ID 说明](https://cloud.tencent.com/document/product/382/102831)。
+注：国内短信无需填写该项；国际/港澳台短信已申请独立 SenderId 需要填写该字段，默认使用公共 SenderId，无需填写该字段。
      */
     public $SenderId;
 
@@ -110,8 +110,8 @@ class SendSmsRequest extends AbstractModel
 <dx-alert infotype="notice" title="注意">模板参数的个数需要与 TemplateId 对应模板的变量个数保持一致。</dx-alert>
      * @param string $ExtendCode 短信码号扩展号，默认未开通，如需开通请联系 [腾讯云短信小助手](https://cloud.tencent.com/document/product/382/3773#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81)。
      * @param string $SessionContext 用户的 session 内容，可以携带用户侧 ID 等上下文信息，server 会原样返回。注意长度需小于512字节。
-     * @param string $SenderId 国内短信无需填写该项；国际/港澳台短信已申请独立 SenderId 需要填写该字段，默认使用公共 SenderId，无需填写该字段。
-注：月度使用量达到指定量级可申请独立 SenderId 使用，详情请联系 [腾讯云短信小助手](https://cloud.tencent.com/document/product/382/3773#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81)。
+     * @param string $SenderId 国际/港澳台短信 Sender ID。可参考 [Sender ID 说明](https://cloud.tencent.com/document/product/382/102831)。
+注：国内短信无需填写该项；国际/港澳台短信已申请独立 SenderId 需要填写该字段，默认使用公共 SenderId，无需填写该字段。
      */
     function __construct()
     {

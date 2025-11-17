@@ -70,10 +70,10 @@ use TencentCloud\Common\AbstractModel;
 2. StreamInfos.N.Video.Fps不能为null
 注意：
 此值只是区分模板类型，任务使用RemoveAudio和RemoveVideo的值
- * @method string getSegmentType() 获取hls 分片类型，可选值： <li>ts-segment：HLS+TS 切片</li> <li>ts-byterange：HLS+TS byte range</li> <li>mp4-segment：HLS+MP4 切片</li> <li>mp4-byterange：HLS+MP4 byte range</li> <li>ts-packed-audio：TS+Packed Audio</li> <li>mp4-packed-audio：MP4+Packed Audio</li> 默认值：ts-segment 
-注：自适应码流的hls分片格式已此字段为准
- * @method void setSegmentType(string $SegmentType) 设置hls 分片类型，可选值： <li>ts-segment：HLS+TS 切片</li> <li>ts-byterange：HLS+TS byte range</li> <li>mp4-segment：HLS+MP4 切片</li> <li>mp4-byterange：HLS+MP4 byte range</li> <li>ts-packed-audio：TS+Packed Audio</li> <li>mp4-packed-audio：MP4+Packed Audio</li> 默认值：ts-segment 
-注：自适应码流的hls分片格式已此字段为准
+ * @method string getSegmentType() 获取分片类型，可选值： <li>ts-segment：HLS+TS 切片</li> <li>ts-byterange：HLS+TS byte range</li> <li>mp4-segment：HLS+MP4 切片</li> <li>mp4-byterange：HLS+MP4 byte range</li> <li>ts-packed-audio：TS+Packed Audio</li> <li>mp4-packed-audio：MP4+Packed Audio</li> 默认值：ts-segment 
+注：自适应码流的分片格式以此字段为准
+ * @method void setSegmentType(string $SegmentType) 设置分片类型，可选值： <li>ts-segment：HLS+TS 切片</li> <li>ts-byterange：HLS+TS byte range</li> <li>mp4-segment：HLS+MP4 切片</li> <li>mp4-byterange：HLS+MP4 byte range</li> <li>ts-packed-audio：TS+Packed Audio</li> <li>mp4-packed-audio：MP4+Packed Audio</li> 默认值：ts-segment 
+注：自适应码流的分片格式以此字段为准
  */
 class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 {
@@ -131,8 +131,8 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
     public $PureAudio;
 
     /**
-     * @var string hls 分片类型，可选值： <li>ts-segment：HLS+TS 切片</li> <li>ts-byterange：HLS+TS byte range</li> <li>mp4-segment：HLS+MP4 切片</li> <li>mp4-byterange：HLS+MP4 byte range</li> <li>ts-packed-audio：TS+Packed Audio</li> <li>mp4-packed-audio：MP4+Packed Audio</li> 默认值：ts-segment 
-注：自适应码流的hls分片格式已此字段为准
+     * @var string 分片类型，可选值： <li>ts-segment：HLS+TS 切片</li> <li>ts-byterange：HLS+TS byte range</li> <li>mp4-segment：HLS+MP4 切片</li> <li>mp4-byterange：HLS+MP4 byte range</li> <li>ts-packed-audio：TS+Packed Audio</li> <li>mp4-packed-audio：MP4+Packed Audio</li> 默认值：ts-segment 
+注：自适应码流的分片格式以此字段为准
      */
     public $SegmentType;
 
@@ -162,8 +162,8 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 2. StreamInfos.N.Video.Fps不能为null
 注意：
 此值只是区分模板类型，任务使用RemoveAudio和RemoveVideo的值
-     * @param string $SegmentType hls 分片类型，可选值： <li>ts-segment：HLS+TS 切片</li> <li>ts-byterange：HLS+TS byte range</li> <li>mp4-segment：HLS+MP4 切片</li> <li>mp4-byterange：HLS+MP4 byte range</li> <li>ts-packed-audio：TS+Packed Audio</li> <li>mp4-packed-audio：MP4+Packed Audio</li> 默认值：ts-segment 
-注：自适应码流的hls分片格式已此字段为准
+     * @param string $SegmentType 分片类型，可选值： <li>ts-segment：HLS+TS 切片</li> <li>ts-byterange：HLS+TS byte range</li> <li>mp4-segment：HLS+MP4 切片</li> <li>mp4-byterange：HLS+MP4 byte range</li> <li>ts-packed-audio：TS+Packed Audio</li> <li>mp4-packed-audio：MP4+Packed Audio</li> 默认值：ts-segment 
+注：自适应码流的分片格式以此字段为准
      */
     function __construct()
     {

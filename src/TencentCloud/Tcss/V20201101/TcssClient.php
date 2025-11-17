@@ -362,6 +362,7 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\StopVulScanTaskResponse StopVulScanTask(Models\StopVulScanTaskRequest $req) 停止漏洞扫描任务
  * @method Models\SwitchImageAutoAuthorizedRuleResponse SwitchImageAutoAuthorizedRule(Models\SwitchImageAutoAuthorizedRuleRequest $req) 编辑本地镜像自动授权开关
  * @method Models\SyncAssetImageRegistryAssetResponse SyncAssetImageRegistryAsset(Models\SyncAssetImageRegistryAssetRequest $req) 镜像仓库资产刷新
+ * @method Models\UninstallClusterContainerSecurityResponse UninstallClusterContainerSecurity(Models\UninstallClusterContainerSecurityRequest $req) 卸载集群容器安全
  * @method Models\UpdateAndPublishNetworkFirewallPolicyDetailResponse UpdateAndPublishNetworkFirewallPolicyDetail(Models\UpdateAndPublishNetworkFirewallPolicyDetailRequest $req) 容器网络创建网络策略更新并发布任务
  * @method Models\UpdateAndPublishNetworkFirewallPolicyYamlDetailResponse UpdateAndPublishNetworkFirewallPolicyYamlDetail(Models\UpdateAndPublishNetworkFirewallPolicyYamlDetailRequest $req) 容器网络更新Yaml网络策略并发布任务
  * @method Models\UpdateAssetImageRegistryRegistryDetailResponse UpdateAssetImageRegistryRegistryDetail(Models\UpdateAssetImageRegistryRegistryDetailRequest $req) 更新单个镜像仓库详细信息

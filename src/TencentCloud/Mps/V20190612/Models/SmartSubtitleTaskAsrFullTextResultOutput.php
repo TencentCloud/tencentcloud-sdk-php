@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSegmentSet(array $SegmentSet) 设置语音全文识别片段列表。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPath() 获取字幕文件路径
+ * @method void setPath(string $Path) 设置字幕文件路径
  * @method string getSubtitlePath() 获取字幕文件地址。
  * @method void setSubtitlePath(string $SubtitlePath) 设置字幕文件地址。
  * @method TaskOutputStorage getOutputStorage() 获取字幕文件存储位置。
@@ -38,6 +40,11 @@ class SmartSubtitleTaskAsrFullTextResultOutput extends AbstractModel
     public $SegmentSet;
 
     /**
+     * @var string 字幕文件路径
+     */
+    public $Path;
+
+    /**
      * @var string 字幕文件地址。
      */
     public $SubtitlePath;
@@ -50,6 +57,7 @@ class SmartSubtitleTaskAsrFullTextResultOutput extends AbstractModel
     /**
      * @param array $SegmentSet 语音全文识别片段列表。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Path 字幕文件路径
      * @param string $SubtitlePath 字幕文件地址。
      * @param TaskOutputStorage $OutputStorage 字幕文件存储位置。
      */
@@ -73,6 +81,10 @@ class SmartSubtitleTaskAsrFullTextResultOutput extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SegmentSet, $obj);
             }
+        }
+
+        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
+            $this->Path = $param["Path"];
         }
 
         if (array_key_exists("SubtitlePath",$param) and $param["SubtitlePath"] !== null) {

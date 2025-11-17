@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFee(integer $Fee) 设置计费条数，计费规则请查询 [计费策略](https://cloud.tencent.com/document/product/382/36135)。
  * @method string getSessionContext() 获取用户 session 内容。
  * @method void setSessionContext(string $SessionContext) 设置用户 session 内容。
- * @method string getCode() 获取短信请求错误码，具体含义请参考 [错误码](https://cloud.tencent.com/document/api/382/55981#6.-.E9.94.99.E8.AF.AF.E7.A0.81)，发送成功返回 "Ok"。
- * @method void setCode(string $Code) 设置短信请求错误码，具体含义请参考 [错误码](https://cloud.tencent.com/document/api/382/55981#6.-.E9.94.99.E8.AF.AF.E7.A0.81)，发送成功返回 "Ok"。
+ * @method string getCode() 获取短信请求错误码，具体含义请参考 [错误码](https://cloud.tencent.com/document/product/382/59177#.E7.9F.AD.E4.BF.A1-API-3.0-.E5.8F.91.E9.80.81.E9.94.99.E8.AF.AF.E7.A0.81)，发送成功返回 "Ok"。
+ * @method void setCode(string $Code) 设置短信请求错误码，具体含义请参考 [错误码](https://cloud.tencent.com/document/product/382/59177#.E7.9F.AD.E4.BF.A1-API-3.0-.E5.8F.91.E9.80.81.E9.94.99.E8.AF.AF.E7.A0.81)，发送成功返回 "Ok"。
  * @method string getMessage() 获取短信请求错误码描述。
  * @method void setMessage(string $Message) 设置短信请求错误码描述。
  * @method string getIsoCode() 获取国家码或地区码，例如 CN、US 等，对于未识别出国家码或者地区码，默认返回 DEF，具体支持列表请参考 [国际/港澳台短信价格总览](https://cloud.tencent.com/document/product/382/18051)。
@@ -58,7 +58,7 @@ class SendStatus extends AbstractModel
     public $SessionContext;
 
     /**
-     * @var string 短信请求错误码，具体含义请参考 [错误码](https://cloud.tencent.com/document/api/382/55981#6.-.E9.94.99.E8.AF.AF.E7.A0.81)，发送成功返回 "Ok"。
+     * @var string 短信请求错误码，具体含义请参考 [错误码](https://cloud.tencent.com/document/product/382/59177#.E7.9F.AD.E4.BF.A1-API-3.0-.E5.8F.91.E9.80.81.E9.94.99.E8.AF.AF.E7.A0.81)，发送成功返回 "Ok"。
      */
     public $Code;
 
@@ -77,7 +77,7 @@ class SendStatus extends AbstractModel
      * @param string $PhoneNumber 手机号码，E.164标准，+[国家或地区码][手机号] ，示例如：+8618501234444， 其中前面有一个+号 ，86为国家码，18501234444为手机号。
      * @param integer $Fee 计费条数，计费规则请查询 [计费策略](https://cloud.tencent.com/document/product/382/36135)。
      * @param string $SessionContext 用户 session 内容。
-     * @param string $Code 短信请求错误码，具体含义请参考 [错误码](https://cloud.tencent.com/document/api/382/55981#6.-.E9.94.99.E8.AF.AF.E7.A0.81)，发送成功返回 "Ok"。
+     * @param string $Code 短信请求错误码，具体含义请参考 [错误码](https://cloud.tencent.com/document/product/382/59177#.E7.9F.AD.E4.BF.A1-API-3.0-.E5.8F.91.E9.80.81.E9.94.99.E8.AF.AF.E7.A0.81)，发送成功返回 "Ok"。
      * @param string $Message 短信请求错误码描述。
      * @param string $IsoCode 国家码或地区码，例如 CN、US 等，对于未识别出国家码或者地区码，默认返回 DEF，具体支持列表请参考 [国际/港澳台短信价格总览](https://cloud.tencent.com/document/product/382/18051)。
      */

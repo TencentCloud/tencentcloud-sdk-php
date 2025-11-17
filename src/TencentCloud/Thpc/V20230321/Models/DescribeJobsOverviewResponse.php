@@ -20,17 +20,41 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeJobsOverview返回参数结构体
  *
+ * @method integer getJobTotal() 获取作业任务数量
+ * @method void setJobTotal(integer $JobTotal) 设置作业任务数量
+ * @method integer getQueuingJobTotal() 获取排队中的作业任务数量
+ * @method void setQueuingJobTotal(integer $QueuingJobTotal) 设置排队中的作业任务数量
+ * @method integer getRunningJobTotal() 获取运行中的作业数量
+ * @method void setRunningJobTotal(integer $RunningJobTotal) 设置运行中的作业数量
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeJobsOverviewResponse extends AbstractModel
 {
     /**
+     * @var integer 作业任务数量
+     */
+    public $JobTotal;
+
+    /**
+     * @var integer 排队中的作业任务数量
+     */
+    public $QueuingJobTotal;
+
+    /**
+     * @var integer 运行中的作业数量
+     */
+    public $RunningJobTotal;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param integer $JobTotal 作业任务数量
+     * @param integer $QueuingJobTotal 排队中的作业任务数量
+     * @param integer $RunningJobTotal 运行中的作业数量
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +70,18 @@ class DescribeJobsOverviewResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("JobTotal",$param) and $param["JobTotal"] !== null) {
+            $this->JobTotal = $param["JobTotal"];
+        }
+
+        if (array_key_exists("QueuingJobTotal",$param) and $param["QueuingJobTotal"] !== null) {
+            $this->QueuingJobTotal = $param["QueuingJobTotal"];
+        }
+
+        if (array_key_exists("RunningJobTotal",$param) and $param["RunningJobTotal"] !== null) {
+            $this->RunningJobTotal = $param["RunningJobTotal"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

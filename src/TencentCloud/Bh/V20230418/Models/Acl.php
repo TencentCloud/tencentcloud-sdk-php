@@ -88,6 +88,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAllowKeyboardLogger(boolean $AllowKeyboardLogger) 设置是否允许记录键盘
  * @method array getAppAssetSet() 获取关联的应用资产列表
  * @method void setAppAssetSet(array $AppAssetSet) 设置关联的应用资产列表
+ * @method integer getAclType() 获取权限类型 0-默认普通权限 1-工单权限,2-权限工单权限
+ * @method void setAclType(integer $AclType) 设置权限类型 0-默认普通权限 1-工单权限,2-权限工单权限
+ * @method string getTicketId() 获取权限所属工单id
+ * @method void setTicketId(string $TicketId) 设置权限所属工单id
+ * @method string getTicketName() 获取权限所属工单名称
+ * @method void setTicketName(string $TicketName) 设置权限所属工单名称
  */
 class Acl extends AbstractModel
 {
@@ -254,6 +260,21 @@ class Acl extends AbstractModel
     public $AppAssetSet;
 
     /**
+     * @var integer 权限类型 0-默认普通权限 1-工单权限,2-权限工单权限
+     */
+    public $AclType;
+
+    /**
+     * @var string 权限所属工单id
+     */
+    public $TicketId;
+
+    /**
+     * @var string 权限所属工单名称
+     */
+    public $TicketName;
+
+    /**
      * @param integer $Id 访问权限ID
      * @param string $Name 访问权限名称
      * @param boolean $AllowDiskRedirect 是否开启磁盘映射
@@ -288,6 +309,9 @@ class Acl extends AbstractModel
      * @param array $WhiteCmds 关联的白命令命令
      * @param boolean $AllowKeyboardLogger 是否允许记录键盘
      * @param array $AppAssetSet 关联的应用资产列表
+     * @param integer $AclType 权限类型 0-默认普通权限 1-工单权限,2-权限工单权限
+     * @param string $TicketId 权限所属工单id
+     * @param string $TicketName 权限所属工单名称
      */
     function __construct()
     {
@@ -464,6 +488,18 @@ class Acl extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AppAssetSet, $obj);
             }
+        }
+
+        if (array_key_exists("AclType",$param) and $param["AclType"] !== null) {
+            $this->AclType = $param["AclType"];
+        }
+
+        if (array_key_exists("TicketId",$param) and $param["TicketId"] !== null) {
+            $this->TicketId = $param["TicketId"];
+        }
+
+        if (array_key_exists("TicketName",$param) and $param["TicketName"] !== null) {
+            $this->TicketName = $param["TicketName"];
         }
     }
 }

@@ -44,6 +44,26 @@ deleting：删除中
  * @method void setCreationTime(string $CreationTime) 设置创建时间
  * @method string getFileSystemId() 获取文件系统 ID
  * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID
+ * @method integer getAutoRefresh() 获取0：不开启自动更新
+
+1：开启自动更新
+ * @method void setAutoRefresh(integer $AutoRefresh) 设置0：不开启自动更新
+
+1：开启自动更新
+ * @method string getUserKafkaTopic() 获取KafkaConsumer 消费时使用的Topic参数
+ * @method void setUserKafkaTopic(string $UserKafkaTopic) 设置KafkaConsumer 消费时使用的Topic参数
+ * @method string getServerAddr() 获取服务地址
+ * @method void setServerAddr(string $ServerAddr) 设置服务地址
+ * @method string getUserName() 获取Kafka消费用户名
+ * @method void setUserName(string $UserName) 设置Kafka消费用户名
+ * @method string getAutoRefreshStatus() 获取自动刷新的状态，available：已生效
+pending：配置中
+unavailable：失效
+ * @method void setAutoRefreshStatus(string $AutoRefreshStatus) 设置自动刷新的状态，available：已生效
+pending：配置中
+unavailable：失效
+ * @method string getAutoRefreshTime() 获取自动刷新开启时间
+ * @method void setAutoRefreshTime(string $AutoRefreshTime) 设置自动刷新开启时间
  */
 class DataFlowInfo extends AbstractModel
 {
@@ -96,6 +116,40 @@ deleting：删除中
     public $FileSystemId;
 
     /**
+     * @var integer 0：不开启自动更新
+
+1：开启自动更新
+     */
+    public $AutoRefresh;
+
+    /**
+     * @var string KafkaConsumer 消费时使用的Topic参数
+     */
+    public $UserKafkaTopic;
+
+    /**
+     * @var string 服务地址
+     */
+    public $ServerAddr;
+
+    /**
+     * @var string Kafka消费用户名
+     */
+    public $UserName;
+
+    /**
+     * @var string 自动刷新的状态，available：已生效
+pending：配置中
+unavailable：失效
+     */
+    public $AutoRefreshStatus;
+
+    /**
+     * @var string 自动刷新开启时间
+     */
+    public $AutoRefreshTime;
+
+    /**
      * @param string $DataFlowId 数据流动管理 ID
      * @param string $DataFlowName 数据流动名称
      * @param string $SourceStorageType 源端数据类型
@@ -108,6 +162,16 @@ unavailable：失效
 deleting：删除中
      * @param string $CreationTime 创建时间
      * @param string $FileSystemId 文件系统 ID
+     * @param integer $AutoRefresh 0：不开启自动更新
+
+1：开启自动更新
+     * @param string $UserKafkaTopic KafkaConsumer 消费时使用的Topic参数
+     * @param string $ServerAddr 服务地址
+     * @param string $UserName Kafka消费用户名
+     * @param string $AutoRefreshStatus 自动刷新的状态，available：已生效
+pending：配置中
+unavailable：失效
+     * @param string $AutoRefreshTime 自动刷新开启时间
      */
     function __construct()
     {
@@ -156,6 +220,30 @@ deleting：删除中
 
         if (array_key_exists("FileSystemId",$param) and $param["FileSystemId"] !== null) {
             $this->FileSystemId = $param["FileSystemId"];
+        }
+
+        if (array_key_exists("AutoRefresh",$param) and $param["AutoRefresh"] !== null) {
+            $this->AutoRefresh = $param["AutoRefresh"];
+        }
+
+        if (array_key_exists("UserKafkaTopic",$param) and $param["UserKafkaTopic"] !== null) {
+            $this->UserKafkaTopic = $param["UserKafkaTopic"];
+        }
+
+        if (array_key_exists("ServerAddr",$param) and $param["ServerAddr"] !== null) {
+            $this->ServerAddr = $param["ServerAddr"];
+        }
+
+        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
+            $this->UserName = $param["UserName"];
+        }
+
+        if (array_key_exists("AutoRefreshStatus",$param) and $param["AutoRefreshStatus"] !== null) {
+            $this->AutoRefreshStatus = $param["AutoRefreshStatus"];
+        }
+
+        if (array_key_exists("AutoRefreshTime",$param) and $param["AutoRefreshTime"] !== null) {
+            $this->AutoRefreshTime = $param["AutoRefreshTime"];
         }
     }
 }

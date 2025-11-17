@@ -22,16 +22,25 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getDealIds() 获取订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/1520/86207) 的输出参数DealId。
  * @method void setDealIds(array $DealIds) 设置订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/1520/86207) 的输出参数DealId。
+ * @method string getDealName() 获取订单号，订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/1520/86207) 的输出参数DealName。
+ * @method void setDealName(string $DealName) 设置订单号，订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/1520/86207) 的输出参数DealName。
  */
 class DescribeInstanceDealDetailRequest extends AbstractModel
 {
     /**
      * @var array 订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/1520/86207) 的输出参数DealId。
+     * @deprecated
      */
     public $DealIds;
 
     /**
+     * @var string 订单号，订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/1520/86207) 的输出参数DealName。
+     */
+    public $DealName;
+
+    /**
      * @param array $DealIds 订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/1520/86207) 的输出参数DealId。
+     * @param string $DealName 订单号，订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/1520/86207) 的输出参数DealName。
      */
     function __construct()
     {
@@ -48,6 +57,10 @@ class DescribeInstanceDealDetailRequest extends AbstractModel
         }
         if (array_key_exists("DealIds",$param) and $param["DealIds"] !== null) {
             $this->DealIds = $param["DealIds"];
+        }
+
+        if (array_key_exists("DealName",$param) and $param["DealName"] !== null) {
+            $this->DealName = $param["DealName"];
         }
     }
 }

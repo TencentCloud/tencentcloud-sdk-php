@@ -46,57 +46,73 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsrHotWordsLibraryName(string $AsrHotWordsLibraryName) 设置模板关联热词库名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVideoSrcLanguage() 获取智能字幕视频源语言
-当前支持以下语言：
-zh：简体中文
-en：英语
-ja：日语
-ko：韩语
-zh-PY：中英粤
-zh-medical：中文医疗
-yue：中文粤语
-vi：越南语
-ms：马来语
-id：印度尼西亚语
-fil：菲律宾语
-th：泰语
-pt：葡萄牙语
-tr：土耳其语
-ar：阿拉伯语
-es：西班牙语
-hi：印地语
-fr：法语
-de：德语
-zh_dialect：中文方言
- * @method void setVideoSrcLanguage(string $VideoSrcLanguage) 设置智能字幕视频源语言
-当前支持以下语言：
-zh：简体中文
-en：英语
-ja：日语
-ko：韩语
-zh-PY：中英粤
-zh-medical：中文医疗
-yue：中文粤语
-vi：越南语
-ms：马来语
-id：印度尼西亚语
-fil：菲律宾语
-th：泰语
-pt：葡萄牙语
-tr：土耳其语
-ar：阿拉伯语
-es：西班牙语
-hi：印地语
-fr：法语
-de：德语
-zh_dialect：中文方言
+ * @method string getVideoSrcLanguage() 获取智能字幕视频源语言列表：
+
+`zh`：简体中文
+`yue`：中文粵语
+`zh-PY`：中英粤
+`zh_medical`：中文医疗
+`zh_dialect`：中文方言
+`prime_zh`：中英方言
+`zh_en`：中英
+`en`：英语
+`ja`：日语
+`ko`：韩语
+`fr`：法语
+`es`：西班牙语
+`it`：意大利语
+`de`：德语
+`tr`：土耳其语
+`ru`：俄语
+`pt`：葡萄牙语（巴西）
+`pt-PT`：葡萄牙语（葡萄牙）
+`vi`：越南语
+`id`：印度尼西亚语
+`ms`：马来语
+`th`：泰语
+`ar`：阿拉伯语
+`hi`：印地语
+`fil`：菲律宾语
+`auto`：自动识别（仅在纯字幕翻译中支持）
+ * @method void setVideoSrcLanguage(string $VideoSrcLanguage) 设置智能字幕视频源语言列表：
+
+`zh`：简体中文
+`yue`：中文粵语
+`zh-PY`：中英粤
+`zh_medical`：中文医疗
+`zh_dialect`：中文方言
+`prime_zh`：中英方言
+`zh_en`：中英
+`en`：英语
+`ja`：日语
+`ko`：韩语
+`fr`：法语
+`es`：西班牙语
+`it`：意大利语
+`de`：德语
+`tr`：土耳其语
+`ru`：俄语
+`pt`：葡萄牙语（巴西）
+`pt-PT`：葡萄牙语（葡萄牙）
+`vi`：越南语
+`id`：印度尼西亚语
+`ms`：马来语
+`th`：泰语
+`ar`：阿拉伯语
+`hi`：印地语
+`fil`：菲律宾语
+`auto`：自动识别（仅在纯字幕翻译中支持）
  * @method string getSubtitleFormat() 获取智能字幕文件格式
- vtt: WebVTT 格式
-不填或填空：不生成字幕文件
+- vtt: WebVTT 格式
+- srt: SRT格式
+- original：与源字幕文件一致（用于纯字幕翻译模版）
+- 不填或填空：不生成字幕文件
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubtitleFormat(string $SubtitleFormat) 设置智能字幕文件格式
- vtt: WebVTT 格式
-不填或填空：不生成字幕文件
+- vtt: WebVTT 格式
+- srt: SRT格式
+- original：与源字幕文件一致（用于纯字幕翻译模版）
+- 不填或填空：不生成字幕文件
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSubtitleType() 获取智能字幕字幕语言类型
 0: 源语言
@@ -120,45 +136,57 @@ OFF: 关闭翻译
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTranslateDstLanguage() 获取字幕翻译目标语言
 当TranslateSwitch为ON的时候生效
-当前支持以下语言：
-zh：简体中文
-en：英语
-ja：日语
-ko：韩语
-fr：法语
-es：西班牙语
-it：意大利语
-de：德语
-tr：土耳其语
-ru：俄语
-pt：葡萄牙语
-vi：越南语
-id：印度尼西亚语
-ms：马来语
-th：泰语
-ar：阿拉伯语
-hi：印地语
+`zh`：简体中文
+`zh-TW`：繁体中文
+`en`：英语
+`ja`：日语
+`ko`：韩语
+`fr`：法语
+`es`：西班牙语 
+`it`：意大利语
+`de`：德语
+`tr`：土耳其语
+`ru`：俄语
+`pt`：葡萄牙语（巴西）
+`pt-PT`：葡萄牙语（葡萄牙）
+`vi`：越南语
+`id`：印度尼西亚语 
+`ms`：马来语
+`th`：泰语
+`ar`：阿拉伯语
+`hi`：印地语
+`fil`：菲律宾语
+
+
+**注意**：多语言方式，则使用 `/` 分割，如：`en/ja`，表示英语和日语。
+
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTranslateDstLanguage(string $TranslateDstLanguage) 设置字幕翻译目标语言
 当TranslateSwitch为ON的时候生效
-当前支持以下语言：
-zh：简体中文
-en：英语
-ja：日语
-ko：韩语
-fr：法语
-es：西班牙语
-it：意大利语
-de：德语
-tr：土耳其语
-ru：俄语
-pt：葡萄牙语
-vi：越南语
-id：印度尼西亚语
-ms：马来语
-th：泰语
-ar：阿拉伯语
-hi：印地语
+`zh`：简体中文
+`zh-TW`：繁体中文
+`en`：英语
+`ja`：日语
+`ko`：韩语
+`fr`：法语
+`es`：西班牙语 
+`it`：意大利语
+`de`：德语
+`tr`：土耳其语
+`ru`：俄语
+`pt`：葡萄牙语（巴西）
+`pt-PT`：葡萄牙语（葡萄牙）
+`vi`：越南语
+`id`：印度尼西亚语 
+`ms`：马来语
+`th`：泰语
+`ar`：阿拉伯语
+`hi`：印地语
+`fil`：菲律宾语
+
+
+**注意**：多语言方式，则使用 `/` 分割，如：`en/ja`，表示英语和日语。
+
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
  * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
@@ -168,6 +196,12 @@ hi：印地语
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAliasName(string $AliasName) 设置智能字幕预设模板别名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getProcessType() 获取字幕处理类型：
+- 0：ASR识别字幕
+- 1：纯字幕翻译
+ * @method void setProcessType(integer $ProcessType) 设置字幕处理类型：
+- 0：ASR识别字幕
+- 1：纯字幕翻译
  */
 class SmartSubtitleTemplateItem extends AbstractModel
 {
@@ -209,35 +243,43 @@ class SmartSubtitleTemplateItem extends AbstractModel
     public $AsrHotWordsLibraryName;
 
     /**
-     * @var string 智能字幕视频源语言
-当前支持以下语言：
-zh：简体中文
-en：英语
-ja：日语
-ko：韩语
-zh-PY：中英粤
-zh-medical：中文医疗
-yue：中文粤语
-vi：越南语
-ms：马来语
-id：印度尼西亚语
-fil：菲律宾语
-th：泰语
-pt：葡萄牙语
-tr：土耳其语
-ar：阿拉伯语
-es：西班牙语
-hi：印地语
-fr：法语
-de：德语
-zh_dialect：中文方言
+     * @var string 智能字幕视频源语言列表：
+
+`zh`：简体中文
+`yue`：中文粵语
+`zh-PY`：中英粤
+`zh_medical`：中文医疗
+`zh_dialect`：中文方言
+`prime_zh`：中英方言
+`zh_en`：中英
+`en`：英语
+`ja`：日语
+`ko`：韩语
+`fr`：法语
+`es`：西班牙语
+`it`：意大利语
+`de`：德语
+`tr`：土耳其语
+`ru`：俄语
+`pt`：葡萄牙语（巴西）
+`pt-PT`：葡萄牙语（葡萄牙）
+`vi`：越南语
+`id`：印度尼西亚语
+`ms`：马来语
+`th`：泰语
+`ar`：阿拉伯语
+`hi`：印地语
+`fil`：菲律宾语
+`auto`：自动识别（仅在纯字幕翻译中支持）
      */
     public $VideoSrcLanguage;
 
     /**
      * @var string 智能字幕文件格式
- vtt: WebVTT 格式
-不填或填空：不生成字幕文件
+- vtt: WebVTT 格式
+- srt: SRT格式
+- original：与源字幕文件一致（用于纯字幕翻译模版）
+- 不填或填空：不生成字幕文件
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubtitleFormat;
@@ -263,24 +305,30 @@ OFF: 关闭翻译
     /**
      * @var string 字幕翻译目标语言
 当TranslateSwitch为ON的时候生效
-当前支持以下语言：
-zh：简体中文
-en：英语
-ja：日语
-ko：韩语
-fr：法语
-es：西班牙语
-it：意大利语
-de：德语
-tr：土耳其语
-ru：俄语
-pt：葡萄牙语
-vi：越南语
-id：印度尼西亚语
-ms：马来语
-th：泰语
-ar：阿拉伯语
-hi：印地语
+`zh`：简体中文
+`zh-TW`：繁体中文
+`en`：英语
+`ja`：日语
+`ko`：韩语
+`fr`：法语
+`es`：西班牙语 
+`it`：意大利语
+`de`：德语
+`tr`：土耳其语
+`ru`：俄语
+`pt`：葡萄牙语（巴西）
+`pt-PT`：葡萄牙语（葡萄牙）
+`vi`：越南语
+`id`：印度尼西亚语 
+`ms`：马来语
+`th`：泰语
+`ar`：阿拉伯语
+`hi`：印地语
+`fil`：菲律宾语
+
+
+**注意**：多语言方式，则使用 `/` 分割，如：`en/ja`，表示英语和日语。
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TranslateDstLanguage;
@@ -302,6 +350,13 @@ hi：印地语
     public $AliasName;
 
     /**
+     * @var integer 字幕处理类型：
+- 0：ASR识别字幕
+- 1：纯字幕翻译
+     */
+    public $ProcessType;
+
+    /**
      * @param integer $Definition 智能字幕模板唯一标识
      * @param string $Name 智能字幕模板名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -315,31 +370,39 @@ hi：印地语
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AsrHotWordsLibraryName 模板关联热词库名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VideoSrcLanguage 智能字幕视频源语言
-当前支持以下语言：
-zh：简体中文
-en：英语
-ja：日语
-ko：韩语
-zh-PY：中英粤
-zh-medical：中文医疗
-yue：中文粤语
-vi：越南语
-ms：马来语
-id：印度尼西亚语
-fil：菲律宾语
-th：泰语
-pt：葡萄牙语
-tr：土耳其语
-ar：阿拉伯语
-es：西班牙语
-hi：印地语
-fr：法语
-de：德语
-zh_dialect：中文方言
+     * @param string $VideoSrcLanguage 智能字幕视频源语言列表：
+
+`zh`：简体中文
+`yue`：中文粵语
+`zh-PY`：中英粤
+`zh_medical`：中文医疗
+`zh_dialect`：中文方言
+`prime_zh`：中英方言
+`zh_en`：中英
+`en`：英语
+`ja`：日语
+`ko`：韩语
+`fr`：法语
+`es`：西班牙语
+`it`：意大利语
+`de`：德语
+`tr`：土耳其语
+`ru`：俄语
+`pt`：葡萄牙语（巴西）
+`pt-PT`：葡萄牙语（葡萄牙）
+`vi`：越南语
+`id`：印度尼西亚语
+`ms`：马来语
+`th`：泰语
+`ar`：阿拉伯语
+`hi`：印地语
+`fil`：菲律宾语
+`auto`：自动识别（仅在纯字幕翻译中支持）
      * @param string $SubtitleFormat 智能字幕文件格式
- vtt: WebVTT 格式
-不填或填空：不生成字幕文件
+- vtt: WebVTT 格式
+- srt: SRT格式
+- original：与源字幕文件一致（用于纯字幕翻译模版）
+- 不填或填空：不生成字幕文件
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SubtitleType 智能字幕字幕语言类型
 0: 源语言
@@ -353,29 +416,38 @@ OFF: 关闭翻译
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TranslateDstLanguage 字幕翻译目标语言
 当TranslateSwitch为ON的时候生效
-当前支持以下语言：
-zh：简体中文
-en：英语
-ja：日语
-ko：韩语
-fr：法语
-es：西班牙语
-it：意大利语
-de：德语
-tr：土耳其语
-ru：俄语
-pt：葡萄牙语
-vi：越南语
-id：印度尼西亚语
-ms：马来语
-th：泰语
-ar：阿拉伯语
-hi：印地语
+`zh`：简体中文
+`zh-TW`：繁体中文
+`en`：英语
+`ja`：日语
+`ko`：韩语
+`fr`：法语
+`es`：西班牙语 
+`it`：意大利语
+`de`：德语
+`tr`：土耳其语
+`ru`：俄语
+`pt`：葡萄牙语（巴西）
+`pt-PT`：葡萄牙语（葡萄牙）
+`vi`：越南语
+`id`：印度尼西亚语 
+`ms`：马来语
+`th`：泰语
+`ar`：阿拉伯语
+`hi`：印地语
+`fil`：菲律宾语
+
+
+**注意**：多语言方式，则使用 `/` 分割，如：`en/ja`，表示英语和日语。
+
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      * @param string $AliasName 智能字幕预设模板别名
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ProcessType 字幕处理类型：
+- 0：ASR识别字幕
+- 1：纯字幕翻译
      */
     function __construct()
     {
@@ -445,6 +517,10 @@ hi：印地语
 
         if (array_key_exists("AliasName",$param) and $param["AliasName"] !== null) {
             $this->AliasName = $param["AliasName"];
+        }
+
+        if (array_key_exists("ProcessType",$param) and $param["ProcessType"] !== null) {
+            $this->ProcessType = $param["ProcessType"];
         }
     }
 }

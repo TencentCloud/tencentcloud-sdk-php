@@ -86,10 +86,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdleConnectTimeout(integer $IdleConnectTimeout) 设置空闲连接超时时间，仅支持TCP监听器。默认值:900；共享型实例和独占型实例取值范围：300～900，性能容量型实例取值范围:300～1980。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRescheduleInterval() 获取调度时间。触发强制重新调度后，长连接将会在设置的调度时间内断开并完成重新分配
- * @method void setRescheduleInterval(integer $RescheduleInterval) 设置调度时间。触发强制重新调度后，长连接将会在设置的调度时间内断开并完成重新分配
+ * @method integer getRescheduleInterval() 获取重新调度触发持续时间，取值0~3600s。仅TCP/UDP监听器支持。触发重新调度后，长连接将会在设置的调度时间内断开并完成重新分配。
+ * @method void setRescheduleInterval(integer $RescheduleInterval) 设置重新调度触发持续时间，取值0~3600s。仅TCP/UDP监听器支持。触发重新调度后，长连接将会在设置的调度时间内断开并完成重新分配。
  * @method string getDataCompressMode() 获取数据压缩模式
  * @method void setDataCompressMode(string $DataCompressMode) 设置数据压缩模式
+ * @method integer getRescheduleStartTime() 获取重新调度启动时间，配置了重新调度启动时间后，会在启动时间到达时触发重新调度。
+ * @method void setRescheduleStartTime(integer $RescheduleStartTime) 设置重新调度启动时间，配置了重新调度启动时间后，会在启动时间到达时触发重新调度。
  */
 class Listener extends AbstractModel
 {
@@ -219,7 +221,7 @@ class Listener extends AbstractModel
     public $IdleConnectTimeout;
 
     /**
-     * @var integer 调度时间。触发强制重新调度后，长连接将会在设置的调度时间内断开并完成重新分配
+     * @var integer 重新调度触发持续时间，取值0~3600s。仅TCP/UDP监听器支持。触发重新调度后，长连接将会在设置的调度时间内断开并完成重新分配。
      */
     public $RescheduleInterval;
 
@@ -227,6 +229,11 @@ class Listener extends AbstractModel
      * @var string 数据压缩模式
      */
     public $DataCompressMode;
+
+    /**
+     * @var integer 重新调度启动时间，配置了重新调度启动时间后，会在启动时间到达时触发重新调度。
+     */
+    public $RescheduleStartTime;
 
     /**
      * @param string $ListenerId 负载均衡监听器 ID
@@ -262,8 +269,9 @@ class Listener extends AbstractModel
      * @param integer $MaxCps 监听器最大新增连接数，-1表示监听器维度不限速。
      * @param integer $IdleConnectTimeout 空闲连接超时时间，仅支持TCP监听器。默认值:900；共享型实例和独占型实例取值范围：300～900，性能容量型实例取值范围:300～1980。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RescheduleInterval 调度时间。触发强制重新调度后，长连接将会在设置的调度时间内断开并完成重新分配
+     * @param integer $RescheduleInterval 重新调度触发持续时间，取值0~3600s。仅TCP/UDP监听器支持。触发重新调度后，长连接将会在设置的调度时间内断开并完成重新分配。
      * @param string $DataCompressMode 数据压缩模式
+     * @param integer $RescheduleStartTime 重新调度启动时间，配置了重新调度启动时间后，会在启动时间到达时触发重新调度。
      */
     function __construct()
     {
@@ -389,6 +397,10 @@ class Listener extends AbstractModel
 
         if (array_key_exists("DataCompressMode",$param) and $param["DataCompressMode"] !== null) {
             $this->DataCompressMode = $param["DataCompressMode"];
+        }
+
+        if (array_key_exists("RescheduleStartTime",$param) and $param["RescheduleStartTime"] !== null) {
+            $this->RescheduleStartTime = $param["RescheduleStartTime"];
         }
     }
 }

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVoiceId() 获取音色ID
  * @method void setVoiceId(string $VoiceId) 设置音色ID
+ * @method string getModel() 获取TTS 的模型，默认是：flow_01_turbo, 可选: [ flow_01_turbo, flow_01_ex]
+ * @method void setModel(string $Model) 设置TTS 的模型，默认是：flow_01_turbo, 可选: [ flow_01_turbo, flow_01_ex]
  */
 class TTSConfig extends AbstractModel
 {
@@ -31,7 +33,13 @@ class TTSConfig extends AbstractModel
     public $VoiceId;
 
     /**
+     * @var string TTS 的模型，默认是：flow_01_turbo, 可选: [ flow_01_turbo, flow_01_ex]
+     */
+    public $Model;
+
+    /**
      * @param string $VoiceId 音色ID
+     * @param string $Model TTS 的模型，默认是：flow_01_turbo, 可选: [ flow_01_turbo, flow_01_ex]
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class TTSConfig extends AbstractModel
         }
         if (array_key_exists("VoiceId",$param) and $param["VoiceId"] !== null) {
             $this->VoiceId = $param["VoiceId"];
+        }
+
+        if (array_key_exists("Model",$param) and $param["Model"] !== null) {
+            $this->Model = $param["Model"];
         }
     }
 }

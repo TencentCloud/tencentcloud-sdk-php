@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyUserGroup请求参数结构体
  *
+ * @method string getInstanceId() 获取集群字符串ID
+ * @method void setInstanceId(string $InstanceId) 设置集群字符串ID
  * @method array getUsers() 获取用户信息列表
  * @method void setUsers(array $Users) 设置用户信息列表
  * @method string getUserGroup() 获取用户主组，cvm集群为必填参数，tke集群选填
@@ -31,6 +33,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class ModifyUserGroupRequest extends AbstractModel
 {
+    /**
+     * @var string 集群字符串ID
+     */
+    public $InstanceId;
+
     /**
      * @var array 用户信息列表
      */
@@ -52,6 +59,7 @@ class ModifyUserGroupRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @param string $InstanceId 集群字符串ID
      * @param array $Users 用户信息列表
      * @param string $UserGroup 用户主组，cvm集群为必填参数，tke集群选填
      * @param array $Groups 用户副组
@@ -70,6 +78,10 @@ class ModifyUserGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
         if (array_key_exists("Users",$param) and $param["Users"] !== null) {
             $this->Users = $param["Users"];
         }

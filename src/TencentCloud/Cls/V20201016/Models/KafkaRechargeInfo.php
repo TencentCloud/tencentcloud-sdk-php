@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间。格式`YYYY-MM-DD HH:MM:SS`
  * @method LogRechargeRuleInfo getLogRechargeRule() 获取日志导入规则
  * @method void setLogRechargeRule(LogRechargeRuleInfo $LogRechargeRule) 设置日志导入规则
+ * @method UserKafkaMeta getUserKafkaMeta() 获取用户kafka拓展信息
+ * @method void setUserKafkaMeta(UserKafkaMeta $UserKafkaMeta) 设置用户kafka拓展信息
  */
 class KafkaRechargeInfo extends AbstractModel
 {
@@ -129,6 +131,11 @@ class KafkaRechargeInfo extends AbstractModel
     public $LogRechargeRule;
 
     /**
+     * @var UserKafkaMeta 用户kafka拓展信息
+     */
+    public $UserKafkaMeta;
+
+    /**
      * @param string $Id Kafka数据订阅配置的ID。
      * @param string $TopicId 日志主题ID
      * @param string $Name Kafka导入任务名称
@@ -144,6 +151,7 @@ class KafkaRechargeInfo extends AbstractModel
      * @param string $CreateTime 创建时间。格式`YYYY-MM-DD HH:MM:SS`
      * @param string $UpdateTime 更新时间。格式`YYYY-MM-DD HH:MM:SS`
      * @param LogRechargeRuleInfo $LogRechargeRule 日志导入规则
+     * @param UserKafkaMeta $UserKafkaMeta 用户kafka拓展信息
      */
     function __construct()
     {
@@ -218,6 +226,11 @@ class KafkaRechargeInfo extends AbstractModel
         if (array_key_exists("LogRechargeRule",$param) and $param["LogRechargeRule"] !== null) {
             $this->LogRechargeRule = new LogRechargeRuleInfo();
             $this->LogRechargeRule->deserialize($param["LogRechargeRule"]);
+        }
+
+        if (array_key_exists("UserKafkaMeta",$param) and $param["UserKafkaMeta"] !== null) {
+            $this->UserKafkaMeta = new UserKafkaMeta();
+            $this->UserKafkaMeta->deserialize($param["UserKafkaMeta"]);
         }
     }
 }

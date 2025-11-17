@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetClusterLevelPrice请求参数结构体
  *
- * @method string getClusterLevel() 获取集群规格，托管集群询价
- * @method void setClusterLevel(string $ClusterLevel) 设置集群规格，托管集群询价
+ * @method string getClusterLevel() 获取集群规格，托管集群询价，集群等级：L20、L50、L100、L200、L500、L1000、L3000、L5000
+ * @method void setClusterLevel(string $ClusterLevel) 设置集群规格，托管集群询价，集群等级：L20、L50、L100、L200、L500、L1000、L3000、L5000
  */
 class GetClusterLevelPriceRequest extends AbstractModel
 {
     /**
-     * @var string 集群规格，托管集群询价
+     * @var string 集群规格，托管集群询价，集群等级：L20、L50、L100、L200、L500、L1000、L3000、L5000
      */
     public $ClusterLevel;
 
     /**
-     * @param string $ClusterLevel 集群规格，托管集群询价
+     * @param string $ClusterLevel 集群规格，托管集群询价，集群等级：L20、L50、L100、L200、L500、L1000、L3000、L5000
      */
     function __construct()
     {

@@ -353,12 +353,6 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\ImageEnhancementResponse ImageEnhancement(Models\ImageEnhancementRequest $req) 文本图像增强是面向文档类图片提供的图像增强处理能力，包括切边增强、图像矫正、阴影去除、摩尔纹去除等；可以有效优化文档类的图片质量，提升文字的清晰度。
 
 默认接口请求频率限制：10次/秒。
- * @method Models\InstitutionOCRResponse InstitutionOCR(Models\InstitutionOCRRequest $req) 不再维护，功能已切到其它接口
-
-<b>因技术原因，本接口将不再迭代升级。文档抽取(基础版)可支持此类证书的识别抽取，效果、功能更强并将持续迭代优化，建议使用<a href="https://cloud.tencent.com/document/product/866/119452">文档抽取（基础版）</a>。</b>
-本接口支持事业单位法人证书关键字段识别，包括注册号、有效期、住所、名称、法定代表人等。
-
-默认接口请求频率限制：5次/秒。
  * @method Models\InsuranceBillOCRResponse InsuranceBillOCR(Models\InsuranceBillOCRRequest $req) 本接口支持病案首页、费用清单、结算单、医疗发票四种保险理赔单据的文本识别和结构化输出。
 
 默认接口请求频率限制：1次/秒。
@@ -383,12 +377,6 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\MixedInvoiceOCRResponse MixedInvoiceOCR(Models\MixedInvoiceOCRRequest $req) 本接口支持 单张、多张、多类型 票据的混合识别，同时支持自选需要识别的票据类型，已支持票种包括：增值税发票（专票、普票、卷票）、全电发票、非税发票、定额发票、通用机打发票、购车发票、火车票、出租车发票、机票行程单、汽车票、轮船票、过路过桥费发票共14种标准报销发票，并支持其他类发票的识别。
 
 默认接口请求频率限制：5次/秒。
- * @method Models\OrgCodeCertOCRResponse OrgCodeCertOCR(Models\OrgCodeCertOCRRequest $req) 不再维护，功能已切到其它接口
-
-<b>因技术原因，本接口将不再迭代升级。文档抽取(基础版)可支持此类证书的识别抽取，效果、功能更强并将持续迭代优化，建议使用<a href="https://cloud.tencent.com/document/product/866/119452">文档抽取（基础版）</a>。</b>
-本接口支持组织机构代码证关键字段的识别，包括代码、有效期、地址、机构名称等。
-
-默认接口请求频率限制：5次/秒。
  * @method Models\PassportOCRResponse PassportOCR(Models\PassportOCRRequest $req) <b>此接口为护照识别（中国大陆地区护照）的旧版本服务，不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/37657">护照识别（多国多地区护照）</a>。</b>
 
 本接口支持中国大陆地区护照个人资料页多个字段的检测与识别。已支持字段包括英文姓名、中文姓名、国家码、护照号、出生地、出生日期、国籍英文、性别英文、有效期、签发地点英文、签发日期、持证人签名、护照机读码（MRZ码）等。
@@ -397,13 +385,6 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\PermitOCRResponse PermitOCR(Models\PermitOCRRequest $req) 本接口支持对卡式港澳台通行证的识别，包括签发地点、签发机关、有效期限、性别、出生日期、英文姓名、姓名、证件号等字段。
 
 默认接口请求频率限制：10次/秒。
- * @method Models\PropOwnerCertOCRResponse PropOwnerCertOCR(Models\PropOwnerCertOCRRequest $req) 不再维护，功能已切到其它接口
-
-<b>因技术原因，本接口将不再迭代升级。文档抽取(基础版)可支持此类证书的识别抽取，效果、功能更强并将持续迭代优化，建议使用<a href="https://cloud.tencent.com/document/product/866/119452">文档抽取（基础版）</a>。</b>
-本接口支持房产证关键字段的识别，包括房地产权利人、共有情况、登记时间、规划用途、房屋性质、房屋坐落等。
-目前接口对合肥、成都、佛山三个城市的房产证版式识别较好。
-
-默认接口请求频率限制：5次/秒。
  * @method Models\QrcodeOCRResponse QrcodeOCR(Models\QrcodeOCRRequest $req) 本接口支持条形码和二维码的识别（包括 DataMatrix 和 PDF417）。
 
 默认接口请求频率限制：5次/秒。
@@ -474,10 +455,6 @@ use TencentCloud\Ocr\V20181119\Models as Models;
     </table>
 
 默认接口请求频率限制：20次/秒。
- * @method Models\RecognizeForeignPermanentResidentIdCardResponse RecognizeForeignPermanentResidentIdCard(Models\RecognizeForeignPermanentResidentIdCardRequest $req) 不再维护，功能已切到其它接口
-
-<b>因技术原因，本接口将不再迭代升级。有效身份证件识别（鉴伪版）可支持此类证件的识别，并包含质量和PS告警，效果、功能更强并将持续迭代优化，建议使用<a href="https://cloud.tencent.com/document/product/866/112345">有效身份证件识别（鉴伪版）</a>。</b>
-外国人永久居留身份证识别
  * @method Models\RecognizeFormulaOCRResponse RecognizeFormulaOCR(Models\RecognizeFormulaOCRRequest $req) 公式识别是教育的基础OCR识别能力，可支持理科（数学、物理、化学、生物）的印刷体和手写体的公式识别。
 
 默认接口请求频率限制：2次/秒。
@@ -686,10 +663,6 @@ use TencentCloud\Ocr\V20181119\Models as Models;
         </tr>
       </tbody>
     </table>
- * @method Models\RecognizeGeneralTextImageWarnResponse RecognizeGeneralTextImageWarn(Models\RecognizeGeneralTextImageWarnRequest $req) 不再维护，功能已切到其它接口
-
-<b>因技术原因，本接口将不再迭代升级。通用卡证鉴伪可支持更多告警类型，效果、功能更强并将持续迭代优化，建议使用<a href="https://cloud.tencent.com/document/product/866/115916">通用卡证鉴伪</a>。</b>
-本接口支持多种类型证件有效性检测告警，包括卡证复印件告警、卡证翻拍告警等功能。可以应用于各种证件信息有效性校验场景，例如银行开户、用户注册等场景。
  * @method Models\RecognizeHealthCodeOCRResponse RecognizeHealthCodeOCR(Models\RecognizeHealthCodeOCRRequest $req) 本接口支持北京、上海、广东、江苏、吉林、黑龙江、天津、辽宁、浙江、河南、四川、贵州、山东、安徽、福建、江西、湖北、湖南等省份健康码的识别，包括持码人姓名、持码人身份证号、健康码更新时间、健康码颜色、核酸检测结果、核酸检测间隔时长、核酸检测时间，疫苗接种信息，八个字段的识别结果输出。不同省市健康码显示的字段信息有所不同，上述字段的识别结果可能为空，以图片上具体展示的信息为准。
 
 默认接口请求频率限制：10次/秒。

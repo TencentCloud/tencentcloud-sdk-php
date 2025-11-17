@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
 注:
 `1. 签署人只能有手写签名、时间类型、印章类型、签批类型的签署控件和内容填写控件，其他类型的签署控件暂时未支持。`
 `2. 生成发起方预览链接时，该字段（FlowApproverInfos）传空或者不传`
+ * @method integer getVideoVerifyTimesLimit() 获取用于指定进入视频签署的限制次数，次数取值范围：1 - 10，不设置则默认为5次，仅视频签署时生效。
+ * @method void setVideoVerifyTimesLimit(integer $VideoVerifyTimesLimit) 设置用于指定进入视频签署的限制次数，次数取值范围：1 - 10，不设置则默认为5次，仅视频签署时生效。
  * @method UserInfo getOperator() 获取用户信息，暂未开放
  * @method void setOperator(UserInfo $Operator) 设置用户信息，暂未开放
  * @method OrganizationInfo getOrganization() 获取机构信息，暂未开放
@@ -131,6 +133,11 @@ class ChannelCreateFlowSignUrlRequest extends AbstractModel
     public $FlowApproverInfos;
 
     /**
+     * @var integer 用于指定进入视频签署的限制次数，次数取值范围：1 - 10，不设置则默认为5次，仅视频签署时生效。
+     */
+    public $VideoVerifyTimesLimit;
+
+    /**
      * @var UserInfo 用户信息，暂未开放
      * @deprecated
      */
@@ -184,6 +191,7 @@ class ChannelCreateFlowSignUrlRequest extends AbstractModel
 注:
 `1. 签署人只能有手写签名、时间类型、印章类型、签批类型的签署控件和内容填写控件，其他类型的签署控件暂时未支持。`
 `2. 生成发起方预览链接时，该字段（FlowApproverInfos）传空或者不传`
+     * @param integer $VideoVerifyTimesLimit 用于指定进入视频签署的限制次数，次数取值范围：1 - 10，不设置则默认为5次，仅视频签署时生效。
      * @param UserInfo $Operator 用户信息，暂未开放
      * @param OrganizationInfo $Organization 机构信息，暂未开放
      * @param string $JumpUrl 签署完之后的H5页面的跳转链接，最大长度1000个字符。链接类型请参考 <a href="https://qian.tencent.com/developers/company/openqianh5" target="_blank">跳转电子签H5</a>
@@ -224,6 +232,10 @@ class ChannelCreateFlowSignUrlRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->FlowApproverInfos, $obj);
             }
+        }
+
+        if (array_key_exists("VideoVerifyTimesLimit",$param) and $param["VideoVerifyTimesLimit"] !== null) {
+            $this->VideoVerifyTimesLimit = $param["VideoVerifyTimesLimit"];
         }
 
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {

@@ -20,14 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SubmitJob请求参数结构体
  *
-
+ * @method string getClusterId() 获取集群id
+ * @method void setClusterId(string $ClusterId) 设置集群id
+ * @method Job getJob() 获取作业任务参数配置
+ * @method void setJob(Job $Job) 设置作业任务参数配置
+ * @method string getQueueName() 获取队列名称。不指定则为默认队列：
+SLURM默认队列为：compute。 
+SGE默认队列为：all.q。
+ * @method void setQueueName(string $QueueName) 设置队列名称。不指定则为默认队列：
+SLURM默认队列为：compute。 
+SGE默认队列为：all.q。
  */
 class SubmitJobRequest extends AbstractModel
 {
-
+    /**
+     * @var string 集群id
+     */
+    public $ClusterId;
 
     /**
+     * @var Job 作业任务参数配置
+     */
+    public $Job;
 
+    /**
+     * @var string 队列名称。不指定则为默认队列：
+SLURM默认队列为：compute。 
+SGE默认队列为：all.q。
+     */
+    public $QueueName;
+
+    /**
+     * @param string $ClusterId 集群id
+     * @param Job $Job 作业任务参数配置
+     * @param string $QueueName 队列名称。不指定则为默认队列：
+SLURM默认队列为：compute。 
+SGE默认队列为：all.q。
      */
     function __construct()
     {
@@ -42,6 +70,17 @@ class SubmitJobRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
 
+        if (array_key_exists("Job",$param) and $param["Job"] !== null) {
+            $this->Job = new Job();
+            $this->Job->deserialize($param["Job"]);
+        }
+
+        if (array_key_exists("QueueName",$param) and $param["QueueName"] !== null) {
+            $this->QueueName = $param["QueueName"];
+        }
     }
 }

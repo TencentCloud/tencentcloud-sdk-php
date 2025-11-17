@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 集群资源使用量
  *
- * @method string getName() 获取资源类型
- * @method void setName(string $Name) 设置资源类型
- * @method integer getUsage() 获取资源使用量
- * @method void setUsage(integer $Usage) 设置资源使用量
+ * @method string getName() 获取资源类型，参考k8s 官方资源
+ * @method void setName(string $Name) 设置资源类型，参考k8s 官方资源
+ * @method integer getUsage() 获取资源使用量，单位：个数
+ * @method void setUsage(integer $Usage) 设置资源使用量，单位：个数
  * @method array getDetails() 获取资源使用详情
  * @method void setDetails(array $Details) 设置资源使用详情
  */
 class ResourceUsage extends AbstractModel
 {
     /**
-     * @var string 资源类型
+     * @var string 资源类型，参考k8s 官方资源
      */
     public $Name;
 
     /**
-     * @var integer 资源使用量
+     * @var integer 资源使用量，单位：个数
      */
     public $Usage;
 
@@ -45,8 +45,8 @@ class ResourceUsage extends AbstractModel
     public $Details;
 
     /**
-     * @param string $Name 资源类型
-     * @param integer $Usage 资源使用量
+     * @param string $Name 资源类型，参考k8s 官方资源
+     * @param integer $Usage 资源使用量，单位：个数
      * @param array $Details 资源使用详情
      */
     function __construct()

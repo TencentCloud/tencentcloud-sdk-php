@@ -42,6 +42,18 @@ use TencentCloud\Common\AbstractModel;
 - Custom：表示用户自定义作业
 
 默认参数为：Custom
+ * @method string getTaskType() 获取表示所选训练框架，支持可选参数
+ 
+- PyTorch：表示提交PyTorch训练作业
+- Custom：表示用户自定义作业
+
+默认参数为：Custom
+ * @method void setTaskType(string $TaskType) 设置表示所选训练框架，支持可选参数
+ 
+- PyTorch：表示提交PyTorch训练作业
+- Custom：表示用户自定义作业
+
+默认参数为：Custom
  */
 class Application extends AbstractModel
 {
@@ -77,8 +89,19 @@ class Application extends AbstractModel
 - Custom：表示用户自定义作业
 
 默认参数为：Custom
+     * @deprecated
      */
     public $JobType;
+
+    /**
+     * @var string 表示所选训练框架，支持可选参数
+ 
+- PyTorch：表示提交PyTorch训练作业
+- Custom：表示用户自定义作业
+
+默认参数为：Custom
+     */
+    public $TaskType;
 
     /**
      * @param array $Commands 待执行脚本命令。
@@ -87,6 +110,12 @@ class Application extends AbstractModel
      * @param Docker $Docker 容器配置信息。
      * @param OutputRedirect $OutputRedirect 无
      * @param string $JobType 表示所选训练框架，支持可选参数
+ 
+- PyTorch：表示提交PyTorch训练作业
+- Custom：表示用户自定义作业
+
+默认参数为：Custom
+     * @param string $TaskType 表示所选训练框架，支持可选参数
  
 - PyTorch：表示提交PyTorch训练作业
 - Custom：表示用户自定义作业
@@ -145,6 +174,10 @@ class Application extends AbstractModel
 
         if (array_key_exists("JobType",$param) and $param["JobType"] !== null) {
             $this->JobType = $param["JobType"];
+        }
+
+        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
+            $this->TaskType = $param["TaskType"];
         }
     }
 }

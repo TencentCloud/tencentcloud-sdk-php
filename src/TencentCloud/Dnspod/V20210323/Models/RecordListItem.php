@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置记录备注说明
  * @method integer getTTL() 获取记录缓存时间
  * @method void setTTL(integer $TTL) 设置记录缓存时间
- * @method integer getMX() 获取MX值，只有MX记录有
- * @method void setMX(integer $MX) 设置MX值，只有MX记录有
+ * @method integer getMX() 获取MX值
+ * @method void setMX(integer $MX) 设置MX值
  * @method boolean getDefaultNS() 获取是否是默认的ns记录
  * @method void setDefaultNS(boolean $DefaultNS) 设置是否是默认的ns记录
  */
@@ -115,7 +115,7 @@ class RecordListItem extends AbstractModel
     public $TTL;
 
     /**
-     * @var integer MX值，只有MX记录有
+     * @var integer MX值
      */
     public $MX;
 
@@ -138,7 +138,7 @@ class RecordListItem extends AbstractModel
      * @param string $MonitorStatus 记录监控状态，正常：OK，告警：WARN，宕机：DOWN，未设置监控或监控暂停则为空
      * @param string $Remark 记录备注说明
      * @param integer $TTL 记录缓存时间
-     * @param integer $MX MX值，只有MX记录有
+     * @param integer $MX MX值
      * @param boolean $DefaultNS 是否是默认的ns记录
      */
     function __construct()

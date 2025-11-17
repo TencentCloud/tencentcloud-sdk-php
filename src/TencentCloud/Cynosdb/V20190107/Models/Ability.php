@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNoSupportTransparentDataEncryptionReason(string $NoSupportTransparentDataEncryptionReason) 设置不支持透明数据加密原因
  * @method string getIsSupportManualLogic() 获取是否支持手动发起逻辑备份
  * @method void setIsSupportManualLogic(string $IsSupportManualLogic) 设置是否支持手动发起逻辑备份
+ * @method string getIsSupportGlobalEncryption() 获取是否支持开启全局加密
+ * @method void setIsSupportGlobalEncryption(string $IsSupportGlobalEncryption) 设置是否支持开启全局加密
+ * @method string getNoSupportGlobalEncryptionReason() 获取不支持全局加密的原因
+ * @method void setNoSupportGlobalEncryptionReason(string $NoSupportGlobalEncryptionReason) 设置不支持全局加密的原因
+ * @method string getNoSupportTransparentDataEncryptionReasonCode() 获取不支持透明加密原因状态码
+ * @method void setNoSupportTransparentDataEncryptionReasonCode(string $NoSupportTransparentDataEncryptionReasonCode) 设置不支持透明加密原因状态码
+ * @method string getNoSupportGlobalEncryptionReasonCode() 获取不支持全局加密原因状态码
+ * @method void setNoSupportGlobalEncryptionReasonCode(string $NoSupportGlobalEncryptionReasonCode) 设置不支持全局加密原因状态码
  */
 class Ability extends AbstractModel
 {
@@ -80,6 +88,26 @@ class Ability extends AbstractModel
     public $IsSupportManualLogic;
 
     /**
+     * @var string 是否支持开启全局加密
+     */
+    public $IsSupportGlobalEncryption;
+
+    /**
+     * @var string 不支持全局加密的原因
+     */
+    public $NoSupportGlobalEncryptionReason;
+
+    /**
+     * @var string 不支持透明加密原因状态码
+     */
+    public $NoSupportTransparentDataEncryptionReasonCode;
+
+    /**
+     * @var string 不支持全局加密原因状态码
+     */
+    public $NoSupportGlobalEncryptionReasonCode;
+
+    /**
      * @param string $IsSupportSlaveZone 是否支持从可用区
      * @param string $NonsupportSlaveZoneReason 不支持从可用区的原因
      * @param string $IsSupportRo 是否支持RO实例
@@ -88,6 +116,10 @@ class Ability extends AbstractModel
      * @param string $IsSupportTransparentDataEncryption 是否支持透明数据加密
      * @param string $NoSupportTransparentDataEncryptionReason 不支持透明数据加密原因
      * @param string $IsSupportManualLogic 是否支持手动发起逻辑备份
+     * @param string $IsSupportGlobalEncryption 是否支持开启全局加密
+     * @param string $NoSupportGlobalEncryptionReason 不支持全局加密的原因
+     * @param string $NoSupportTransparentDataEncryptionReasonCode 不支持透明加密原因状态码
+     * @param string $NoSupportGlobalEncryptionReasonCode 不支持全局加密原因状态码
      */
     function __construct()
     {
@@ -132,6 +164,22 @@ class Ability extends AbstractModel
 
         if (array_key_exists("IsSupportManualLogic",$param) and $param["IsSupportManualLogic"] !== null) {
             $this->IsSupportManualLogic = $param["IsSupportManualLogic"];
+        }
+
+        if (array_key_exists("IsSupportGlobalEncryption",$param) and $param["IsSupportGlobalEncryption"] !== null) {
+            $this->IsSupportGlobalEncryption = $param["IsSupportGlobalEncryption"];
+        }
+
+        if (array_key_exists("NoSupportGlobalEncryptionReason",$param) and $param["NoSupportGlobalEncryptionReason"] !== null) {
+            $this->NoSupportGlobalEncryptionReason = $param["NoSupportGlobalEncryptionReason"];
+        }
+
+        if (array_key_exists("NoSupportTransparentDataEncryptionReasonCode",$param) and $param["NoSupportTransparentDataEncryptionReasonCode"] !== null) {
+            $this->NoSupportTransparentDataEncryptionReasonCode = $param["NoSupportTransparentDataEncryptionReasonCode"];
+        }
+
+        if (array_key_exists("NoSupportGlobalEncryptionReasonCode",$param) and $param["NoSupportGlobalEncryptionReasonCode"] !== null) {
+            $this->NoSupportGlobalEncryptionReasonCode = $param["NoSupportGlobalEncryptionReasonCode"];
         }
     }
 }

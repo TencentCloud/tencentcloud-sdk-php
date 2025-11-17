@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTraceFlag(boolean $TraceFlag) 设置是否开启trace
  * @method float getSendReceiveRatio() 获取限流生产消费比例
  * @method void setSendReceiveRatio(float $SendReceiveRatio) 设置限流生产消费比例
+ * @method boolean getDeleteAllTags() 获取是否删除所有标签，默认为false
+ * @method void setDeleteAllTags(boolean $DeleteAllTags) 设置是否删除所有标签，默认为false
+ * @method array getInstanceTags() 获取修改的实例标签列表
+ * @method void setInstanceTags(array $InstanceTags) 设置修改的实例标签列表
  */
 class ModifyRabbitMQServerlessInstanceRequest extends AbstractModel
 {
@@ -59,11 +63,23 @@ class ModifyRabbitMQServerlessInstanceRequest extends AbstractModel
     public $SendReceiveRatio;
 
     /**
+     * @var boolean 是否删除所有标签，默认为false
+     */
+    public $DeleteAllTags;
+
+    /**
+     * @var array 修改的实例标签列表
+     */
+    public $InstanceTags;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $ClusterName 集群名
      * @param string $Remark 备注信息
      * @param boolean $TraceFlag 是否开启trace
      * @param float $SendReceiveRatio 限流生产消费比例
+     * @param boolean $DeleteAllTags 是否删除所有标签，默认为false
+     * @param array $InstanceTags 修改的实例标签列表
      */
     function __construct()
     {
@@ -96,6 +112,19 @@ class ModifyRabbitMQServerlessInstanceRequest extends AbstractModel
 
         if (array_key_exists("SendReceiveRatio",$param) and $param["SendReceiveRatio"] !== null) {
             $this->SendReceiveRatio = $param["SendReceiveRatio"];
+        }
+
+        if (array_key_exists("DeleteAllTags",$param) and $param["DeleteAllTags"] !== null) {
+            $this->DeleteAllTags = $param["DeleteAllTags"];
+        }
+
+        if (array_key_exists("InstanceTags",$param) and $param["InstanceTags"] !== null) {
+            $this->InstanceTags = [];
+            foreach ($param["InstanceTags"] as $key => $value){
+                $obj = new RabbitMQServerlessTag();
+                $obj->deserialize($value);
+                array_push($this->InstanceTags, $obj);
+            }
         }
     }
 }

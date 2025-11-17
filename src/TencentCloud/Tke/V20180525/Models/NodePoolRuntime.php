@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getNodePoolId() 获取节点池ID
  * @method void setNodePoolId(string $NodePoolId) 设置节点池ID
- * @method string getRuntimeType() 获取运行时类型
- * @method void setRuntimeType(string $RuntimeType) 设置运行时类型
- * @method string getRuntimeVersion() 获取运行时版本
- * @method void setRuntimeVersion(string $RuntimeVersion) 设置运行时版本
- * @method string getNodePoolName() 获取节点池名称
- * @method void setNodePoolName(string $NodePoolName) 设置节点池名称
+ * @method string getRuntimeType() 获取运行时类型，参考：https://cloud.tencent.com/document/api/457/105241
+ * @method void setRuntimeType(string $RuntimeType) 设置运行时类型，参考：https://cloud.tencent.com/document/api/457/105241
+ * @method string getRuntimeVersion() 获取运行时版本，参考：https://cloud.tencent.com/document/api/457/105241
+ * @method void setRuntimeVersion(string $RuntimeVersion) 设置运行时版本，参考：https://cloud.tencent.com/document/api/457/105241
+ * @method string getNodePoolName() 获取节点池名称，限制 255 字符
+ * @method void setNodePoolName(string $NodePoolName) 设置节点池名称，限制 255 字符
  */
 class NodePoolRuntime extends AbstractModel
 {
@@ -37,25 +37,25 @@ class NodePoolRuntime extends AbstractModel
     public $NodePoolId;
 
     /**
-     * @var string 运行时类型
+     * @var string 运行时类型，参考：https://cloud.tencent.com/document/api/457/105241
      */
     public $RuntimeType;
 
     /**
-     * @var string 运行时版本
+     * @var string 运行时版本，参考：https://cloud.tencent.com/document/api/457/105241
      */
     public $RuntimeVersion;
 
     /**
-     * @var string 节点池名称
+     * @var string 节点池名称，限制 255 字符
      */
     public $NodePoolName;
 
     /**
      * @param string $NodePoolId 节点池ID
-     * @param string $RuntimeType 运行时类型
-     * @param string $RuntimeVersion 运行时版本
-     * @param string $NodePoolName 节点池名称
+     * @param string $RuntimeType 运行时类型，参考：https://cloud.tencent.com/document/api/457/105241
+     * @param string $RuntimeVersion 运行时版本，参考：https://cloud.tencent.com/document/api/457/105241
+     * @param string $NodePoolName 节点池名称，限制 255 字符
      */
     function __construct()
     {

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method array getClusterCIDRs() 获取增加的ClusterCIDR
  * @method void setClusterCIDRs(array $ClusterCIDRs) 设置增加的ClusterCIDR
- * @method boolean getIgnoreClusterCIDRConflict() 获取是否忽略ClusterCIDR与VPC路由表的冲突
- * @method void setIgnoreClusterCIDRConflict(boolean $IgnoreClusterCIDRConflict) 设置是否忽略ClusterCIDR与VPC路由表的冲突
+ * @method boolean getIgnoreClusterCIDRConflict() 获取是否忽略ClusterCIDR与VPC路由表的冲突，默认false，为true时忽略冲突
+ * @method void setIgnoreClusterCIDRConflict(boolean $IgnoreClusterCIDRConflict) 设置是否忽略ClusterCIDR与VPC路由表的冲突，默认false，为true时忽略冲突
  */
 class AddClusterCIDRRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class AddClusterCIDRRequest extends AbstractModel
     public $ClusterCIDRs;
 
     /**
-     * @var boolean 是否忽略ClusterCIDR与VPC路由表的冲突
+     * @var boolean 是否忽略ClusterCIDR与VPC路由表的冲突，默认false，为true时忽略冲突
      */
     public $IgnoreClusterCIDRConflict;
 
     /**
      * @param string $ClusterId 集群ID
      * @param array $ClusterCIDRs 增加的ClusterCIDR
-     * @param boolean $IgnoreClusterCIDRConflict 是否忽略ClusterCIDR与VPC路由表的冲突
+     * @param boolean $IgnoreClusterCIDRConflict 是否忽略ClusterCIDR与VPC路由表的冲突，默认false，为true时忽略冲突
      */
     function __construct()
     {

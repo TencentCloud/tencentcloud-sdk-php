@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConnected(integer $Connected) 设置服务状态。
 - 0：down。
 - 1：on。
+ * @method string getZoneId() 获取可用区信息。
+ * @method void setZoneId(string $ZoneId) 设置可用区信息。
+ * @method integer getReplicasNodeId() 获取节点组 ID。
+ * @method void setReplicasNodeId(integer $ReplicasNodeId) 设置节点组 ID。
  */
 class InstanceClusterShard extends AbstractModel
 {
@@ -106,6 +110,16 @@ class InstanceClusterShard extends AbstractModel
     public $Connected;
 
     /**
+     * @var string 可用区信息。
+     */
+    public $ZoneId;
+
+    /**
+     * @var integer 节点组 ID。
+     */
+    public $ReplicasNodeId;
+
+    /**
      * @param string $ShardName 分片节点名称。
      * @param string $ShardId 分片节点序号。
      * @param integer $Role 分片节点的角色。
@@ -120,6 +134,8 @@ class InstanceClusterShard extends AbstractModel
      * @param integer $Connected 服务状态。
 - 0：down。
 - 1：on。
+     * @param string $ZoneId 可用区信息。
+     * @param integer $ReplicasNodeId 节点组 ID。
      */
     function __construct()
     {
@@ -172,6 +188,14 @@ class InstanceClusterShard extends AbstractModel
 
         if (array_key_exists("Connected",$param) and $param["Connected"] !== null) {
             $this->Connected = $param["Connected"];
+        }
+
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("ReplicasNodeId",$param) and $param["ReplicasNodeId"] !== null) {
+            $this->ReplicasNodeId = $param["ReplicasNodeId"];
         }
     }
 }

@@ -78,6 +78,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置公网IP地址列表
  * @method boolean getDeleteProtect() 获取是否开启删除保护
  * @method void setDeleteProtect(boolean $DeleteProtect) 设置是否开启删除保护
+ * @method array getAvailableVersions() 获取表示可以升级的版本号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAvailableVersions(array $AvailableVersions) 设置表示可以升级的版本号
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeCloudNativeAPIGatewayResult extends AbstractModel
 {
@@ -215,6 +219,12 @@ class DescribeCloudNativeAPIGatewayResult extends AbstractModel
     public $DeleteProtect;
 
     /**
+     * @var array 表示可以升级的版本号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AvailableVersions;
+
+    /**
      * @param string $GatewayId 云原生API网关ID。
      * @param string $Status 云原生API网关状态。
      * @param string $Name 云原生API网关名。
@@ -244,6 +254,8 @@ class DescribeCloudNativeAPIGatewayResult extends AbstractModel
      * @param string $LoadBalancerType 公网CLB默认类型
      * @param array $PublicIpAddresses 公网IP地址列表
      * @param boolean $DeleteProtect 是否开启删除保护
+     * @param array $AvailableVersions 表示可以升级的版本号
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -368,6 +380,10 @@ class DescribeCloudNativeAPIGatewayResult extends AbstractModel
 
         if (array_key_exists("DeleteProtect",$param) and $param["DeleteProtect"] !== null) {
             $this->DeleteProtect = $param["DeleteProtect"];
+        }
+
+        if (array_key_exists("AvailableVersions",$param) and $param["AvailableVersions"] !== null) {
+            $this->AvailableVersions = $param["AvailableVersions"];
         }
     }
 }

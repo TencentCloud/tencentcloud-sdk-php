@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeExport请求参数结构体
  *
-
+ * @method string getExportId() 获取日志下载任务的ID
+ * @method void setExportId(string $ExportId) 设置日志下载任务的ID
  */
 class DescribeExportRequest extends AbstractModel
 {
-
+    /**
+     * @var string 日志下载任务的ID
+     */
+    public $ExportId;
 
     /**
-
+     * @param string $ExportId 日志下载任务的ID
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeExportRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("ExportId",$param) and $param["ExportId"] !== null) {
+            $this->ExportId = $param["ExportId"];
+        }
     }
 }

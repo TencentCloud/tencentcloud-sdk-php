@@ -74,6 +74,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeepPartition(boolean $KeepPartition) 设置数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false
  * @method string getTopicRegularExpression() 获取正则匹配Topic列表
  * @method void setTopicRegularExpression(string $TopicRegularExpression) 设置正则匹配Topic列表
+ * @method string getPrefix() 获取Topic 前缀
+ * @method void setPrefix(string $Prefix) 设置Topic 前缀
+ * @method string getSeparator() 获取Topic前缀分隔符
+ * @method void setSeparator(string $Separator) 设置Topic前缀分隔符
  */
 class KafkaParam extends AbstractModel
 {
@@ -181,6 +185,16 @@ class KafkaParam extends AbstractModel
     public $TopicRegularExpression;
 
     /**
+     * @var string Topic 前缀
+     */
+    public $Prefix;
+
+    /**
+     * @var string Topic前缀分隔符
+     */
+    public $Separator;
+
+    /**
      * @param boolean $SelfBuilt 是否为自建集群
      * @param string $Resource ckafka集群实例Id
      * @param string $Topic 主题名，多个以“,”分隔
@@ -208,6 +222,8 @@ class KafkaParam extends AbstractModel
      * @param string $ConnectorSyncType 数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写"META_SYNC_INSTANCE_TYPE", 同步元数据及全部topic内消息的填写"META_AND_DATA_SYNC_INSTANCE_TYPE"; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写"DATA_SYNC_TYPE"
      * @param boolean $KeepPartition 数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false
      * @param string $TopicRegularExpression 正则匹配Topic列表
+     * @param string $Prefix Topic 前缀
+     * @param string $Separator Topic前缀分隔符
      */
     function __construct()
     {
@@ -301,6 +317,14 @@ class KafkaParam extends AbstractModel
 
         if (array_key_exists("TopicRegularExpression",$param) and $param["TopicRegularExpression"] !== null) {
             $this->TopicRegularExpression = $param["TopicRegularExpression"];
+        }
+
+        if (array_key_exists("Prefix",$param) and $param["Prefix"] !== null) {
+            $this->Prefix = $param["Prefix"];
+        }
+
+        if (array_key_exists("Separator",$param) and $param["Separator"] !== null) {
+            $this->Separator = $param["Separator"];
         }
     }
 }

@@ -38,6 +38,8 @@ KafkaType为1时，ServerAddr必填
  * @method void setIsEncryptionAddr(boolean $IsEncryptionAddr) 设置ServerAddr是否为加密连接，默认值false。当KafkaType为1用户自建kafka时生效。
  * @method KafkaProtocolInfo getProtocol() 获取加密访问协议。KafkaType参数为1并且IsEncryptionAddr参数为true时必填。
  * @method void setProtocol(KafkaProtocolInfo $Protocol) 设置加密访问协议。KafkaType参数为1并且IsEncryptionAddr参数为true时必填。
+ * @method UserKafkaMeta getUserKafkaMeta() 获取用户kafka拓展信息
+ * @method void setUserKafkaMeta(UserKafkaMeta $UserKafkaMeta) 设置用户kafka拓展信息
  */
 class CheckRechargeKafkaServerRequest extends AbstractModel
 {
@@ -71,6 +73,11 @@ KafkaType为1时，ServerAddr必填
     public $Protocol;
 
     /**
+     * @var UserKafkaMeta 用户kafka拓展信息
+     */
+    public $UserKafkaMeta;
+
+    /**
      * @param integer $KafkaType 导入Kafka类型，0: 腾讯云CKafka；1: 用户自建Kafka。
      * @param string $KafkaInstance 腾讯云CKafka实例ID。
 KafkaType为0时，KafkaInstance必填
@@ -80,6 +87,7 @@ KafkaType为0时，KafkaInstance必填
 KafkaType为1时，ServerAddr必填
      * @param boolean $IsEncryptionAddr ServerAddr是否为加密连接，默认值false。当KafkaType为1用户自建kafka时生效。
      * @param KafkaProtocolInfo $Protocol 加密访问协议。KafkaType参数为1并且IsEncryptionAddr参数为true时必填。
+     * @param UserKafkaMeta $UserKafkaMeta 用户kafka拓展信息
      */
     function __construct()
     {
@@ -113,6 +121,11 @@ KafkaType为1时，ServerAddr必填
         if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
             $this->Protocol = new KafkaProtocolInfo();
             $this->Protocol->deserialize($param["Protocol"]);
+        }
+
+        if (array_key_exists("UserKafkaMeta",$param) and $param["UserKafkaMeta"] !== null) {
+            $this->UserKafkaMeta = new UserKafkaMeta();
+            $this->UserKafkaMeta->deserialize($param["UserKafkaMeta"]);
         }
     }
 }

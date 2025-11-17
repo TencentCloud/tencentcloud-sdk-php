@@ -58,6 +58,8 @@ OverseasCheques -- 海外支票
 RegistrationCertificate -- 备案证
 ​GridPhoto -- 电网系统照片
 ​SignaturePage -- 签署页
+​SalesDeliveryNote -- 销售发货单
+
 
 
  * @method void setConfigId(string $ConfigId) 设置配置id支持：
@@ -82,6 +84,8 @@ OverseasCheques -- 海外支票
 RegistrationCertificate -- 备案证
 ​GridPhoto -- 电网系统照片
 ​SignaturePage -- 签署页
+​SalesDeliveryNote -- 销售发货单
+
 
 
  * @method boolean getEnableCoord() 获取是否开启全文字段坐标值的识别
@@ -152,6 +156,8 @@ OverseasCheques -- 海外支票
 RegistrationCertificate -- 备案证
 ​GridPhoto -- 电网系统照片
 ​SignaturePage -- 签署页
+​SalesDeliveryNote -- 销售发货单
+
 
 
      */
@@ -209,6 +215,8 @@ OverseasCheques -- 海外支票
 RegistrationCertificate -- 备案证
 ​GridPhoto -- 电网系统照片
 ​SignaturePage -- 签署页
+​SalesDeliveryNote -- 销售发货单
+
 
 
      * @param boolean $EnableCoord 是否开启全文字段坐标值的识别

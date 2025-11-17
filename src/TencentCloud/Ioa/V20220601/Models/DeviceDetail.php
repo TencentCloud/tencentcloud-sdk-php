@@ -116,6 +116,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccountName(string $AccountName) 设置最近登录账户的姓名(账号系统用户姓名)
  * @method integer getAccountGroupId() 获取账号组id
  * @method void setAccountGroupId(integer $AccountGroupId) 设置账号组id
+ * @method integer getScreenRecordingPermission() 获取是否开启录屏权限，仅macOS， 0： 未开启 、1： 开启
+ * @method void setScreenRecordingPermission(integer $ScreenRecordingPermission) 设置是否开启录屏权限，仅macOS， 0： 未开启 、1： 开启
+ * @method integer getDiskAccessPermission() 获取是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启
+ * @method void setDiskAccessPermission(integer $DiskAccessPermission) 设置是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启
  * @method string getRemarkName() 获取终端备注名
  * @method void setRemarkName(string $RemarkName) 设置终端备注名
  */
@@ -362,6 +366,16 @@ class DeviceDetail extends AbstractModel
     public $AccountGroupId;
 
     /**
+     * @var integer 是否开启录屏权限，仅macOS， 0： 未开启 、1： 开启
+     */
+    public $ScreenRecordingPermission;
+
+    /**
+     * @var integer 是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启
+     */
+    public $DiskAccessPermission;
+
+    /**
      * @var string 终端备注名
      */
     public $RemarkName;
@@ -415,6 +429,8 @@ class DeviceDetail extends AbstractModel
      * @param string $AccountGroupName 最近登录账号部门
      * @param string $AccountName 最近登录账户的姓名(账号系统用户姓名)
      * @param integer $AccountGroupId 账号组id
+     * @param integer $ScreenRecordingPermission 是否开启录屏权限，仅macOS， 0： 未开启 、1： 开启
+     * @param integer $DiskAccessPermission 是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启
      * @param string $RemarkName 终端备注名
      */
     function __construct()
@@ -620,6 +636,14 @@ class DeviceDetail extends AbstractModel
 
         if (array_key_exists("AccountGroupId",$param) and $param["AccountGroupId"] !== null) {
             $this->AccountGroupId = $param["AccountGroupId"];
+        }
+
+        if (array_key_exists("ScreenRecordingPermission",$param) and $param["ScreenRecordingPermission"] !== null) {
+            $this->ScreenRecordingPermission = $param["ScreenRecordingPermission"];
+        }
+
+        if (array_key_exists("DiskAccessPermission",$param) and $param["DiskAccessPermission"] !== null) {
+            $this->DiskAccessPermission = $param["DiskAccessPermission"];
         }
 
         if (array_key_exists("RemarkName",$param) and $param["RemarkName"] !== null) {

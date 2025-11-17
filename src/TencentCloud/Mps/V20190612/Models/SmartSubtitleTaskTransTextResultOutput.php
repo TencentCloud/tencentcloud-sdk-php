@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubtitlePath(string $SubtitlePath) 设置字幕文件地址。
  * @method TaskOutputStorage getOutputStorage() 获取字幕文件存储位置。
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置字幕文件存储位置。
+ * @method string getPath() 获取字幕文件地址
+ * @method void setPath(string $Path) 设置字幕文件地址
+ * @method array getSubtitleResults() 获取多语言翻译时返回翻译结果。	
+ * @method void setSubtitleResults(array $SubtitleResults) 设置多语言翻译时返回翻译结果。	
  */
 class SmartSubtitleTaskTransTextResultOutput extends AbstractModel
 {
@@ -48,10 +52,22 @@ class SmartSubtitleTaskTransTextResultOutput extends AbstractModel
     public $OutputStorage;
 
     /**
+     * @var string 字幕文件地址
+     */
+    public $Path;
+
+    /**
+     * @var array 多语言翻译时返回翻译结果。	
+     */
+    public $SubtitleResults;
+
+    /**
      * @param array $SegmentSet 翻译片段列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubtitlePath 字幕文件地址。
      * @param TaskOutputStorage $OutputStorage 字幕文件存储位置。
+     * @param string $Path 字幕文件地址
+     * @param array $SubtitleResults 多语言翻译时返回翻译结果。	
      */
     function __construct()
     {
@@ -82,6 +98,19 @@ class SmartSubtitleTaskTransTextResultOutput extends AbstractModel
         if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {
             $this->OutputStorage = new TaskOutputStorage();
             $this->OutputStorage->deserialize($param["OutputStorage"]);
+        }
+
+        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
+            $this->Path = $param["Path"];
+        }
+
+        if (array_key_exists("SubtitleResults",$param) and $param["SubtitleResults"] !== null) {
+            $this->SubtitleResults = [];
+            foreach ($param["SubtitleResults"] as $key => $value){
+                $obj = new SubtitleTransResultItem();
+                $obj->deserialize($value);
+                array_push($this->SubtitleResults, $obj);
+            }
         }
     }
 }

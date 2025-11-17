@@ -25,19 +25,25 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDone() 获取已升级节点总数
  * @method void setDone(integer $Done) 设置已升级节点总数
  * @method string getLifeState() 获取升级任务生命周期
+
+pending 还未开始
 process 运行中
 paused 已停止
 pauing 正在停止
 done  已完成
 timeout 已超时
 aborted 已取消
+
  * @method void setLifeState(string $LifeState) 设置升级任务生命周期
+
+pending 还未开始
 process 运行中
 paused 已停止
 pauing 正在停止
 done  已完成
 timeout 已超时
 aborted 已取消
+
  * @method array getInstances() 获取各节点升级进度详情
  * @method void setInstances(array $Instances) 设置各节点升级进度详情
  * @method InstanceUpgradeClusterStatus getClusterStatus() 获取集群当前状态
@@ -59,12 +65,15 @@ class GetUpgradeInstanceProgressResponse extends AbstractModel
 
     /**
      * @var string 升级任务生命周期
+
+pending 还未开始
 process 运行中
 paused 已停止
 pauing 正在停止
 done  已完成
 timeout 已超时
 aborted 已取消
+
      */
     public $LifeState;
 
@@ -87,12 +96,15 @@ aborted 已取消
      * @param integer $Total 升级节点总数
      * @param integer $Done 已升级节点总数
      * @param string $LifeState 升级任务生命周期
+
+pending 还未开始
 process 运行中
 paused 已停止
 pauing 正在停止
 done  已完成
 timeout 已超时
 aborted 已取消
+
      * @param array $Instances 各节点升级进度详情
      * @param InstanceUpgradeClusterStatus $ClusterStatus 集群当前状态
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

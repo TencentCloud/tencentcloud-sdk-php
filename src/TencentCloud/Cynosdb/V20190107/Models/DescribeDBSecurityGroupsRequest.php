@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID（InstanceId与InstanceGroupId必须任选一个传入）
  * @method void setInstanceId(string $InstanceId) 设置实例ID（InstanceId与InstanceGroupId必须任选一个传入）
- * @method string getInstanceGroupId() 获取实例组ID（InstanceId与InstanceGroupId必须任选一个传入）
- * @method void setInstanceGroupId(string $InstanceGroupId) 设置实例组ID（InstanceId与InstanceGroupId必须任选一个传入）
+ * @method string getInstanceGroupId() 获取实例组 ID，可通过 [DescribeClusterInstanceGroups](https://cloud.tencent.com/document/product/1003/103934) 接口查询。
+ * @method void setInstanceGroupId(string $InstanceGroupId) 设置实例组 ID，可通过 [DescribeClusterInstanceGroups](https://cloud.tencent.com/document/product/1003/103934) 接口查询。
  */
 class DescribeDBSecurityGroupsRequest extends AbstractModel
 {
@@ -34,13 +34,13 @@ class DescribeDBSecurityGroupsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 实例组ID（InstanceId与InstanceGroupId必须任选一个传入）
+     * @var string 实例组 ID，可通过 [DescribeClusterInstanceGroups](https://cloud.tencent.com/document/product/1003/103934) 接口查询。
      */
     public $InstanceGroupId;
 
     /**
      * @param string $InstanceId 实例ID（InstanceId与InstanceGroupId必须任选一个传入）
-     * @param string $InstanceGroupId 实例组ID（InstanceId与InstanceGroupId必须任选一个传入）
+     * @param string $InstanceGroupId 实例组 ID，可通过 [DescribeClusterInstanceGroups](https://cloud.tencent.com/document/product/1003/103934) 接口查询。
      */
     function __construct()
     {

@@ -22,6 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVoiceId() 获取TTS的声音的ID
  * @method void setVoiceId(string $VoiceId) 设置TTS的声音的ID
+ * @method float getSpeed() 获取语速，范围 0.5-2.0，默认 1.0
+ * @method void setSpeed(float $Speed) 设置语速，范围 0.5-2.0，默认 1.0
+ * @method float getVolume() 获取(0, 10]   默认值1.0 
+ * @method void setVolume(float $Volume) 设置(0, 10]   默认值1.0 
+ * @method integer getPitch() 获取取值[-12,12],默认0
+ * @method void setPitch(integer $Pitch) 设置取值[-12,12],默认0
  */
 class Voice extends AbstractModel
 {
@@ -31,7 +37,25 @@ class Voice extends AbstractModel
     public $VoiceId;
 
     /**
+     * @var float 语速，范围 0.5-2.0，默认 1.0
+     */
+    public $Speed;
+
+    /**
+     * @var float (0, 10]   默认值1.0 
+     */
+    public $Volume;
+
+    /**
+     * @var integer 取值[-12,12],默认0
+     */
+    public $Pitch;
+
+    /**
      * @param string $VoiceId TTS的声音的ID
+     * @param float $Speed 语速，范围 0.5-2.0，默认 1.0
+     * @param float $Volume (0, 10]   默认值1.0 
+     * @param integer $Pitch 取值[-12,12],默认0
      */
     function __construct()
     {
@@ -48,6 +72,18 @@ class Voice extends AbstractModel
         }
         if (array_key_exists("VoiceId",$param) and $param["VoiceId"] !== null) {
             $this->VoiceId = $param["VoiceId"];
+        }
+
+        if (array_key_exists("Speed",$param) and $param["Speed"] !== null) {
+            $this->Speed = $param["Speed"];
+        }
+
+        if (array_key_exists("Volume",$param) and $param["Volume"] !== null) {
+            $this->Volume = $param["Volume"];
+        }
+
+        if (array_key_exists("Pitch",$param) and $param["Pitch"] !== null) {
+            $this->Pitch = $param["Pitch"];
         }
     }
 }

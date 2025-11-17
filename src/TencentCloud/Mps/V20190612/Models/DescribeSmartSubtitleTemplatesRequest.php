@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
 * Custom：用户自定义模板。
  * @method string getName() 获取智能字幕模板标识过滤条件，长度限制：64 个字符。
  * @method void setName(string $Name) 设置智能字幕模板标识过滤条件，长度限制：64 个字符。
+ * @method integer getProcessType() 获取字幕处理类型：
+- 0：ASR识别字幕
+- 1：纯字幕翻译
+ * @method void setProcessType(integer $ProcessType) 设置字幕处理类型：
+- 0：ASR识别字幕
+- 1：纯字幕翻译
  */
 class DescribeSmartSubtitleTemplatesRequest extends AbstractModel
 {
@@ -65,6 +71,13 @@ class DescribeSmartSubtitleTemplatesRequest extends AbstractModel
     public $Name;
 
     /**
+     * @var integer 字幕处理类型：
+- 0：ASR识别字幕
+- 1：纯字幕翻译
+     */
+    public $ProcessType;
+
+    /**
      * @param array $Definitions 智能字幕模板唯一标识过滤条件，数组长度限制：100。
      * @param integer $Offset 分页偏移量，默认值：0。
      * @param integer $Limit 返回记录条数，默认值：10，最大值：100。
@@ -72,6 +85,9 @@ class DescribeSmartSubtitleTemplatesRequest extends AbstractModel
 * Preset：系统预置模板；
 * Custom：用户自定义模板。
      * @param string $Name 智能字幕模板标识过滤条件，长度限制：64 个字符。
+     * @param integer $ProcessType 字幕处理类型：
+- 0：ASR识别字幕
+- 1：纯字幕翻译
      */
     function __construct()
     {
@@ -104,6 +120,10 @@ class DescribeSmartSubtitleTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("ProcessType",$param) and $param["ProcessType"] !== null) {
+            $this->ProcessType = $param["ProcessType"];
         }
     }
 }

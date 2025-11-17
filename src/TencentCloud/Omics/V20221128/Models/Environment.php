@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLastWorkflowUuid(string $LastWorkflowUuid) 设置上个工作流UUID。
  * @method string getCreationTime() 获取创建时间。
  * @method void setCreationTime(string $CreationTime) 设置创建时间。
+ * @method EnvironmentRuntimeConfig getRuntimeConfig() 获取运行时配置。
+ * @method void setRuntimeConfig(EnvironmentRuntimeConfig $RuntimeConfig) 设置运行时配置。
  */
 class Environment extends AbstractModel
 {
@@ -139,6 +141,11 @@ class Environment extends AbstractModel
     public $CreationTime;
 
     /**
+     * @var EnvironmentRuntimeConfig 运行时配置。
+     */
+    public $RuntimeConfig;
+
+    /**
      * @param string $EnvironmentId 环境ID。
      * @param string $Name 环境名称。
      * @param string $Description 环境描述信息。
@@ -160,6 +167,7 @@ class Environment extends AbstractModel
      * @param ResourceIds $ResourceIds 云资源ID。
      * @param string $LastWorkflowUuid 上个工作流UUID。
      * @param string $CreationTime 创建时间。
+     * @param EnvironmentRuntimeConfig $RuntimeConfig 运行时配置。
      */
     function __construct()
     {
@@ -225,6 +233,11 @@ class Environment extends AbstractModel
 
         if (array_key_exists("CreationTime",$param) and $param["CreationTime"] !== null) {
             $this->CreationTime = $param["CreationTime"];
+        }
+
+        if (array_key_exists("RuntimeConfig",$param) and $param["RuntimeConfig"] !== null) {
+            $this->RuntimeConfig = new EnvironmentRuntimeConfig();
+            $this->RuntimeConfig->deserialize($param["RuntimeConfig"]);
         }
     }
 }

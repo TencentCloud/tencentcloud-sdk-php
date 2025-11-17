@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
  * @method void setInstanceId(string $InstanceId) 设置腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
+ * @method array getTagFilters() 获取标签过滤器
+ * @method void setTagFilters(array $TagFilters) 设置标签过滤器
  * @method array getFilters() 获取过滤查询条件列表，请在引用此参数的API说明中了解使用方法。
  * @method void setFilters(array $Filters) 设置过滤查询条件列表，请在引用此参数的API说明中了解使用方法。
  * @method integer getOffset() 获取查询起始位置，默认为0。
@@ -37,6 +39,11 @@ class DescribeTopicListRequest extends AbstractModel
      * @var string 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      */
     public $InstanceId;
+
+    /**
+     * @var array 标签过滤器
+     */
+    public $TagFilters;
 
     /**
      * @var array 过滤查询条件列表，请在引用此参数的API说明中了解使用方法。
@@ -60,6 +67,7 @@ class DescribeTopicListRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
+     * @param array $TagFilters 标签过滤器
      * @param array $Filters 过滤查询条件列表，请在引用此参数的API说明中了解使用方法。
      * @param integer $Offset 查询起始位置，默认为0。
      * @param integer $Limit 查询结果限制数量，默认20。
@@ -80,6 +88,15 @@ class DescribeTopicListRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("TagFilters",$param) and $param["TagFilters"] !== null) {
+            $this->TagFilters = [];
+            foreach ($param["TagFilters"] as $key => $value){
+                $obj = new TagFilter();
+                $obj->deserialize($value);
+                array_push($this->TagFilters, $obj);
+            }
         }
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {

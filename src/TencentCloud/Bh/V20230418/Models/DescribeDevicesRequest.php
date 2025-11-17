@@ -44,6 +44,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setManagedAccount(string $ManagedAccount) 设置资产是否包含托管账号。1，包含；0，不包含
  * @method string getDepartmentId() 获取过滤条件，可按照部门ID进行过滤
  * @method void setDepartmentId(string $DepartmentId) 设置过滤条件，可按照部门ID进行过滤
+ * @method array getAccountIdSet() 获取资产所属云账号id
+ * @method void setAccountIdSet(array $AccountIdSet) 设置资产所属云账号id
+ * @method array getProviderTypeSet() 获取云厂商类型，1-腾讯云，2-阿里云
+ * @method void setProviderTypeSet(array $ProviderTypeSet) 设置云厂商类型，1-腾讯云，2-阿里云
+ * @method array getCloudDeviceStatusSet() 获取同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
+ * @method void setCloudDeviceStatusSet(array $CloudDeviceStatusSet) 设置同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
  * @method array getTagFilters() 获取过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系
  * @method void setTagFilters(array $TagFilters) 设置过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系
  * @method array getFilters() 获取过滤数组。支持的Name：
@@ -114,6 +120,21 @@ class DescribeDevicesRequest extends AbstractModel
     public $DepartmentId;
 
     /**
+     * @var array 资产所属云账号id
+     */
+    public $AccountIdSet;
+
+    /**
+     * @var array 云厂商类型，1-腾讯云，2-阿里云
+     */
+    public $ProviderTypeSet;
+
+    /**
+     * @var array 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
+     */
+    public $CloudDeviceStatusSet;
+
+    /**
      * @var array 过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系
      */
     public $TagFilters;
@@ -137,6 +158,9 @@ BindingStatus 绑定状态
      * @param array $KindSet 可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
      * @param string $ManagedAccount 资产是否包含托管账号。1，包含；0，不包含
      * @param string $DepartmentId 过滤条件，可按照部门ID进行过滤
+     * @param array $AccountIdSet 资产所属云账号id
+     * @param array $ProviderTypeSet 云厂商类型，1-腾讯云，2-阿里云
+     * @param array $CloudDeviceStatusSet 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
      * @param array $TagFilters 过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系
      * @param array $Filters 过滤数组。支持的Name：
 BindingStatus 绑定状态
@@ -200,6 +224,18 @@ BindingStatus 绑定状态
 
         if (array_key_exists("DepartmentId",$param) and $param["DepartmentId"] !== null) {
             $this->DepartmentId = $param["DepartmentId"];
+        }
+
+        if (array_key_exists("AccountIdSet",$param) and $param["AccountIdSet"] !== null) {
+            $this->AccountIdSet = $param["AccountIdSet"];
+        }
+
+        if (array_key_exists("ProviderTypeSet",$param) and $param["ProviderTypeSet"] !== null) {
+            $this->ProviderTypeSet = $param["ProviderTypeSet"];
+        }
+
+        if (array_key_exists("CloudDeviceStatusSet",$param) and $param["CloudDeviceStatusSet"] !== null) {
+            $this->CloudDeviceStatusSet = $param["CloudDeviceStatusSet"];
         }
 
         if (array_key_exists("TagFilters",$param) and $param["TagFilters"] !== null) {

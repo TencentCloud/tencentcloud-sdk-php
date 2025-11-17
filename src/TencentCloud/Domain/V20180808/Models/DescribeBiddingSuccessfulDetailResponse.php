@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBiddingBondPrice(float $BiddingBondPrice) 设置保证金 单位元
  * @method integer getStatus() 获取状态：5 等待支付 6 等待转移， 7 转移中，8 交易成功，11 尾款阶段持有者索回，12 已违约
  * @method void setStatus(integer $Status) 设置状态：5 等待支付 6 等待转移， 7 转移中，8 交易成功，11 尾款阶段持有者索回，12 已违约
+ * @method string getModifyOwnerEndTime() 获取交割时间
+格式:YYYY-MM-DD HH:mm:ss
+ * @method void setModifyOwnerEndTime(string $ModifyOwnerEndTime) 设置交割时间
+格式:YYYY-MM-DD HH:mm:ss
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -111,6 +115,12 @@ class DescribeBiddingSuccessfulDetailResponse extends AbstractModel
     public $Status;
 
     /**
+     * @var string 交割时间
+格式:YYYY-MM-DD HH:mm:ss
+     */
+    public $ModifyOwnerEndTime;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -131,6 +141,8 @@ class DescribeBiddingSuccessfulDetailResponse extends AbstractModel
      * @param string $BiddingBondRefund 保证金，是否退款，yes表示退款，no表示不退款
      * @param float $BiddingBondPrice 保证金 单位元
      * @param integer $Status 状态：5 等待支付 6 等待转移， 7 转移中，8 交易成功，11 尾款阶段持有者索回，12 已违约
+     * @param string $ModifyOwnerEndTime 交割时间
+格式:YYYY-MM-DD HH:mm:ss
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -184,6 +196,10 @@ class DescribeBiddingSuccessfulDetailResponse extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ModifyOwnerEndTime",$param) and $param["ModifyOwnerEndTime"] !== null) {
+            $this->ModifyOwnerEndTime = $param["ModifyOwnerEndTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

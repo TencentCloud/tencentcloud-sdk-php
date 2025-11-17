@@ -22,24 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProtocol() 获取协议
  * @method void setProtocol(string $Protocol) 设置协议
- * @method integer getOriginalPort() 获取源端口
- * @method void setOriginalPort(integer $OriginalPort) 设置源端口
- * @method string getOriginalIp() 获取源IP
- * @method void setOriginalIp(string $OriginalIp) 设置源IP
- * @method integer getTranslationPort() 获取目的端口
- * @method void setTranslationPort(integer $TranslationPort) 设置目的端口
- * @method string getTranslationIp() 获取目的IP
- * @method void setTranslationIp(string $TranslationIp) 设置目的IP
+ * @method integer getOriginalPort() 获取映射前端口
+ * @method void setOriginalPort(integer $OriginalPort) 设置映射前端口
+ * @method string getOriginalIp() 获取映射前IP
+ * @method void setOriginalIp(string $OriginalIp) 设置映射前IP
+ * @method integer getTranslationPort() 获取映射后端口
+ * @method void setTranslationPort(integer $TranslationPort) 设置映射后端口
+ * @method string getTranslationIp() 获取映射后IP
+ * @method void setTranslationIp(string $TranslationIp) 设置映射后IP
  * @method string getOldProtocol() 获取旧协议。
  * @method void setOldProtocol(string $OldProtocol) 设置旧协议。
- * @method integer getOldOriginalPort() 获取旧源端口
- * @method void setOldOriginalPort(integer $OldOriginalPort) 设置旧源端口
- * @method string getOldOriginalIp() 获取旧源IP
- * @method void setOldOriginalIp(string $OldOriginalIp) 设置旧源IP
- * @method integer getOldTranslationPort() 获取旧目的端口
- * @method void setOldTranslationPort(integer $OldTranslationPort) 设置旧目的端口
- * @method string getOldTranslationIp() 获取旧目的IP
- * @method void setOldTranslationIp(string $OldTranslationIp) 设置旧目的IP
+ * @method integer getOldOriginalPort() 获取旧映射前端口
+ * @method void setOldOriginalPort(integer $OldOriginalPort) 设置旧映射前端口
+ * @method string getOldOriginalIp() 获取旧映射前IP
+ * @method void setOldOriginalIp(string $OldOriginalIp) 设置旧映射前IP
+ * @method integer getOldTranslationPort() 获取旧映射后端口
+ * @method void setOldTranslationPort(integer $OldTranslationPort) 设置旧映射后端口
+ * @method string getOldTranslationIp() 获取旧映射后IP
+ * @method void setOldTranslationIp(string $OldTranslationIp) 设置旧映射后IP
  * @method string getDescription() 获取描述
  * @method void setDescription(string $Description) 设置描述
  */
@@ -51,22 +51,22 @@ class DestinationIpPortTranslationNatRuleDiff extends AbstractModel
     public $Protocol;
 
     /**
-     * @var integer 源端口
+     * @var integer 映射前端口
      */
     public $OriginalPort;
 
     /**
-     * @var string 源IP
+     * @var string 映射前IP
      */
     public $OriginalIp;
 
     /**
-     * @var integer 目的端口
+     * @var integer 映射后端口
      */
     public $TranslationPort;
 
     /**
-     * @var string 目的IP
+     * @var string 映射后IP
      */
     public $TranslationIp;
 
@@ -76,22 +76,22 @@ class DestinationIpPortTranslationNatRuleDiff extends AbstractModel
     public $OldProtocol;
 
     /**
-     * @var integer 旧源端口
+     * @var integer 旧映射前端口
      */
     public $OldOriginalPort;
 
     /**
-     * @var string 旧源IP
+     * @var string 旧映射前IP
      */
     public $OldOriginalIp;
 
     /**
-     * @var integer 旧目的端口
+     * @var integer 旧映射后端口
      */
     public $OldTranslationPort;
 
     /**
-     * @var string 旧目的IP
+     * @var string 旧映射后IP
      */
     public $OldTranslationIp;
 
@@ -102,15 +102,15 @@ class DestinationIpPortTranslationNatRuleDiff extends AbstractModel
 
     /**
      * @param string $Protocol 协议
-     * @param integer $OriginalPort 源端口
-     * @param string $OriginalIp 源IP
-     * @param integer $TranslationPort 目的端口
-     * @param string $TranslationIp 目的IP
+     * @param integer $OriginalPort 映射前端口
+     * @param string $OriginalIp 映射前IP
+     * @param integer $TranslationPort 映射后端口
+     * @param string $TranslationIp 映射后IP
      * @param string $OldProtocol 旧协议。
-     * @param integer $OldOriginalPort 旧源端口
-     * @param string $OldOriginalIp 旧源IP
-     * @param integer $OldTranslationPort 旧目的端口
-     * @param string $OldTranslationIp 旧目的IP
+     * @param integer $OldOriginalPort 旧映射前端口
+     * @param string $OldOriginalIp 旧映射前IP
+     * @param integer $OldTranslationPort 旧映射后端口
+     * @param string $OldTranslationIp 旧映射后IP
      * @param string $Description 描述
      */
     function __construct()

@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群id
  * @method void setClusterId(string $ClusterId) 设置集群id
- * @method integer getLimit() 获取每页数量限制
- * @method void setLimit(integer $Limit) 设置每页数量限制
- * @method integer getOffset() 获取页偏移量
- * @method void setOffset(integer $Offset) 设置页偏移量
- * @method string getClusterType() 获取集群类型, 目前支持传入 tke, eks, tkeedge, external 
- * @method void setClusterType(string $ClusterType) 设置集群类型, 目前支持传入 tke, eks, tkeedge, external 
+ * @method integer getLimit() 获取每页数量限制，默认值为20
+ * @method void setLimit(integer $Limit) 设置每页数量限制，默认值为20
+ * @method integer getOffset() 获取页偏移量，默认值为0
+ * @method void setOffset(integer $Offset) 设置页偏移量，默认值为0
+ * @method string getClusterType() 获取集群类型，传入 tke(标准集群)，eks(Serverless集群)，external(注册集群）
+ * @method void setClusterType(string $ClusterType) 设置集群类型，传入 tke(标准集群)，eks(Serverless集群)，external(注册集群）
  * @method string getNamespace() 获取helm Release 安装的namespace
  * @method void setNamespace(string $Namespace) 设置helm Release 安装的namespace
  * @method string getReleaseName() 获取helm Release 的名字
@@ -43,17 +43,17 @@ class DescribeClusterReleasesRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var integer 每页数量限制
+     * @var integer 每页数量限制，默认值为20
      */
     public $Limit;
 
     /**
-     * @var integer 页偏移量
+     * @var integer 页偏移量，默认值为0
      */
     public $Offset;
 
     /**
-     * @var string 集群类型, 目前支持传入 tke, eks, tkeedge, external 
+     * @var string 集群类型，传入 tke(标准集群)，eks(Serverless集群)，external(注册集群）
      */
     public $ClusterType;
 
@@ -74,9 +74,9 @@ class DescribeClusterReleasesRequest extends AbstractModel
 
     /**
      * @param string $ClusterId 集群id
-     * @param integer $Limit 每页数量限制
-     * @param integer $Offset 页偏移量
-     * @param string $ClusterType 集群类型, 目前支持传入 tke, eks, tkeedge, external 
+     * @param integer $Limit 每页数量限制，默认值为20
+     * @param integer $Offset 页偏移量，默认值为0
+     * @param string $ClusterType 集群类型，传入 tke(标准集群)，eks(Serverless集群)，external(注册集群）
      * @param string $Namespace helm Release 安装的namespace
      * @param string $ReleaseName helm Release 的名字
      * @param string $ChartName helm Chart 的名字

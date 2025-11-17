@@ -66,8 +66,8 @@ use TencentCloud\Common\AbstractModel;
 Condition互斥。
  * @method void setMultiConditions(array $MultiConditions) 设置多触发条件。与
 Condition互斥。
- * @method MonitorNotice getMonitorNotice() 获取云监控通知渠道相关信息，和AlarmNoticeIds互斥
- * @method void setMonitorNotice(MonitorNotice $MonitorNotice) 设置云监控通知渠道相关信息，和AlarmNoticeIds互斥
+ * @method MonitorNotice getMonitorNotice() 获取腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥
+ * @method void setMonitorNotice(MonitorNotice $MonitorNotice) 设置腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥
  */
 class AlarmInfo extends AbstractModel
 {
@@ -179,7 +179,7 @@ Condition互斥。
     public $MultiConditions;
 
     /**
-     * @var MonitorNotice 云监控通知渠道相关信息，和AlarmNoticeIds互斥
+     * @var MonitorNotice 腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥
      */
     public $MonitorNotice;
 
@@ -207,7 +207,7 @@ Condition互斥。
      * @param array $Classifications 告警附加分类字段。
      * @param array $MultiConditions 多触发条件。与
 Condition互斥。
-     * @param MonitorNotice $MonitorNotice 云监控通知渠道相关信息，和AlarmNoticeIds互斥
+     * @param MonitorNotice $MonitorNotice 腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥
      */
     function __construct()
     {

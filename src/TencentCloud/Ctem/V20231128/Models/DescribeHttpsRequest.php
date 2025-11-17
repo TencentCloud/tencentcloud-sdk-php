@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsShowChange(boolean $IsShowChange) 设置是否显示变更
  * @method boolean getHasExpirationRisk() 获取是否仅显示过期风险资产
  * @method void setHasExpirationRisk(boolean $HasExpirationRisk) 设置是否仅显示过期风险资产
+ * @method boolean getOnlyOffline() 获取是否只查询离线网站
+ * @method void setOnlyOffline(boolean $OnlyOffline) 设置是否只查询离线网站
  */
 class DescribeHttpsRequest extends AbstractModel
 {
@@ -136,6 +138,11 @@ class DescribeHttpsRequest extends AbstractModel
     public $HasExpirationRisk;
 
     /**
+     * @var boolean 是否只查询离线网站
+     */
+    public $OnlyOffline;
+
+    /**
      * @param array $CustomerIdList 企业ID列表，可多选
      * @param boolean $IsAggregation 是否聚合数据
      * @param boolean $IsNew 是否新增数据
@@ -152,6 +159,7 @@ class DescribeHttpsRequest extends AbstractModel
      * @param boolean $Ignored 是否显示被忽略的数据
      * @param boolean $IsShowChange 是否显示变更
      * @param boolean $HasExpirationRisk 是否仅显示过期风险资产
+     * @param boolean $OnlyOffline 是否只查询离线网站
      */
     function __construct()
     {
@@ -233,6 +241,10 @@ class DescribeHttpsRequest extends AbstractModel
 
         if (array_key_exists("HasExpirationRisk",$param) and $param["HasExpirationRisk"] !== null) {
             $this->HasExpirationRisk = $param["HasExpirationRisk"];
+        }
+
+        if (array_key_exists("OnlyOffline",$param) and $param["OnlyOffline"] !== null) {
+            $this->OnlyOffline = $param["OnlyOffline"];
         }
     }
 }

@@ -27,13 +27,13 @@ use TencentCloud\Privatedns\V20201028\Models as Models;
  * @method Models\CreateExtendEndpointResponse CreateExtendEndpoint(Models\CreateExtendEndpointRequest $req) 创建终端节点
  * @method Models\CreateForwardRuleResponse CreateForwardRule(Models\CreateForwardRuleRequest $req) 创建自定义转发规则
  * @method Models\CreateInboundEndpointResponse CreateInboundEndpoint(Models\CreateInboundEndpointRequest $req) 删除入站终端节点
- * @method Models\CreatePrivateDNSAccountResponse CreatePrivateDNSAccount(Models\CreatePrivateDNSAccountRequest $req) 跨账号关联VPC时绑定其他账号
+ * @method Models\CreatePrivateDNSAccountResponse CreatePrivateDNSAccount(Models\CreatePrivateDNSAccountRequest $req) 跨账号关联VPC时，可通过该API接口添加关联账号
  * @method Models\CreatePrivateZoneResponse CreatePrivateZone(Models\CreatePrivateZoneRequest $req) 创建私有域
  * @method Models\CreatePrivateZoneRecordResponse CreatePrivateZoneRecord(Models\CreatePrivateZoneRecordRequest $req) 添加私有域解析记录
  * @method Models\DeleteEndPointResponse DeleteEndPoint(Models\DeleteEndPointRequest $req) 删除终端节点
  * @method Models\DeleteForwardRuleResponse DeleteForwardRule(Models\DeleteForwardRuleRequest $req) 删除转发规则并停止转发
  * @method Models\DeleteInboundEndpointResponse DeleteInboundEndpoint(Models\DeleteInboundEndpointRequest $req) 删除入站终端节点
- * @method Models\DeletePrivateDNSAccountResponse DeletePrivateDNSAccount(Models\DeletePrivateDNSAccountRequest $req) 删除私有域解析账号
+ * @method Models\DeletePrivateDNSAccountResponse DeletePrivateDNSAccount(Models\DeletePrivateDNSAccountRequest $req) 适用于跨账号绑定VPC时需要移除关联账号的场景，解除账号关联后，将无法获取对应账号下的 VPC资源。
  * @method Models\DeletePrivateZoneResponse DeletePrivateZone(Models\DeletePrivateZoneRequest $req) 删除私有域并停止解析
  * @method Models\DeletePrivateZoneRecordResponse DeletePrivateZoneRecord(Models\DeletePrivateZoneRecordRequest $req) 删除私有域解析记录
  * @method Models\DeleteSpecifyPrivateZoneVpcResponse DeleteSpecifyPrivateZoneVpc(Models\DeleteSpecifyPrivateZoneVpcRequest $req) 删除与私有域关联的VPC
@@ -43,7 +43,7 @@ use TencentCloud\Privatedns\V20201028\Models as Models;
  * @method Models\DescribeExtendEndpointListResponse DescribeExtendEndpointList(Models\DescribeExtendEndpointListRequest $req) 获取终端节点列表
  * @method Models\DescribeForwardRuleListResponse DescribeForwardRuleList(Models\DescribeForwardRuleListRequest $req) 查询转发规则列表
  * @method Models\DescribeInboundEndpointListResponse DescribeInboundEndpointList(Models\DescribeInboundEndpointListRequest $req) 获取入站终端节点列表
- * @method Models\DescribePrivateDNSAccountListResponse DescribePrivateDNSAccountList(Models\DescribePrivateDNSAccountListRequest $req) 获取私有域解析账号列表
+ * @method Models\DescribePrivateDNSAccountListResponse DescribePrivateDNSAccountList(Models\DescribePrivateDNSAccountListRequest $req) 在跨账号绑定VPC的场景下，可通过该API接口获取所有已关联账号的列表
  * @method Models\DescribePrivateZoneResponse DescribePrivateZone(Models\DescribePrivateZoneRequest $req) 获取私有域信息
  * @method Models\DescribePrivateZoneListResponse DescribePrivateZoneList(Models\DescribePrivateZoneListRequest $req) 获取私有域列表
  * @method Models\DescribePrivateZoneRecordListResponse DescribePrivateZoneRecordList(Models\DescribePrivateZoneRecordListRequest $req) 获取私有域记录列表

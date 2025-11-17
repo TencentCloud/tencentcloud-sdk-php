@@ -32,8 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceIp(string $SourceIp) 设置来源IP，模糊查询
  * @method integer getEntry() 获取登录入口：1-字符界面,2-图形界面，3-web页面, 4-API
  * @method void setEntry(integer $Entry) 设置登录入口：1-字符界面,2-图形界面，3-web页面, 4-API
+ * @method array getEntrySet() 获取登录入口：1-字符界面,2-图形界面，3-web页面, 4-API
+ * @method void setEntrySet(array $EntrySet) 设置登录入口：1-字符界面,2-图形界面，3-web页面, 4-API
  * @method integer getResult() 获取操作结果，1-成功，2-失败
  * @method void setResult(integer $Result) 设置操作结果，1-成功，2-失败
+ * @method array getResultSet() 获取操作结果，1-成功，2-失败
+ * @method void setResultSet(array $ResultSet) 设置操作结果，1-成功，2-失败
  * @method integer getOffset() 获取分页偏移位置，默认值为0
  * @method void setOffset(integer $Offset) 设置分页偏移位置，默认值为0
  * @method integer getLimit() 获取分页每页记录数，默认20
@@ -72,9 +76,19 @@ class DescribeLoginEventRequest extends AbstractModel
     public $Entry;
 
     /**
+     * @var array 登录入口：1-字符界面,2-图形界面，3-web页面, 4-API
+     */
+    public $EntrySet;
+
+    /**
      * @var integer 操作结果，1-成功，2-失败
      */
     public $Result;
+
+    /**
+     * @var array 操作结果，1-成功，2-失败
+     */
+    public $ResultSet;
 
     /**
      * @var integer 分页偏移位置，默认值为0
@@ -93,7 +107,9 @@ class DescribeLoginEventRequest extends AbstractModel
      * @param string $EndTime 查询时间范围，结束时间
      * @param string $SourceIp 来源IP，模糊查询
      * @param integer $Entry 登录入口：1-字符界面,2-图形界面，3-web页面, 4-API
+     * @param array $EntrySet 登录入口：1-字符界面,2-图形界面，3-web页面, 4-API
      * @param integer $Result 操作结果，1-成功，2-失败
+     * @param array $ResultSet 操作结果，1-成功，2-失败
      * @param integer $Offset 分页偏移位置，默认值为0
      * @param integer $Limit 分页每页记录数，默认20
      */
@@ -134,8 +150,16 @@ class DescribeLoginEventRequest extends AbstractModel
             $this->Entry = $param["Entry"];
         }
 
+        if (array_key_exists("EntrySet",$param) and $param["EntrySet"] !== null) {
+            $this->EntrySet = $param["EntrySet"];
+        }
+
         if (array_key_exists("Result",$param) and $param["Result"] !== null) {
             $this->Result = $param["Result"];
+        }
+
+        if (array_key_exists("ResultSet",$param) and $param["ResultSet"] !== null) {
+            $this->ResultSet = $param["ResultSet"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {

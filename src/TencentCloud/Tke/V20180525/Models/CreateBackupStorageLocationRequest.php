@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStorageRegion() 获取存储仓库所属地域，比如COS广州(ap-guangzhou)
  * @method void setStorageRegion(string $StorageRegion) 设置存储仓库所属地域，比如COS广州(ap-guangzhou)
- * @method string getBucket() 获取对象存储桶名称，如果是COS必须是tke-backup前缀开头
- * @method void setBucket(string $Bucket) 设置对象存储桶名称，如果是COS必须是tke-backup前缀开头
- * @method string getName() 获取备份仓库名称
- * @method void setName(string $Name) 设置备份仓库名称
+ * @method string getBucket() 获取对象存储桶名称，如果是COS必须是tke-backup前缀开头，字符长度是19
+ * @method void setBucket(string $Bucket) 设置对象存储桶名称，如果是COS必须是tke-backup前缀开头，字符长度是19
+ * @method string getName() 获取备份仓库名称，字符长度为63
+ * @method void setName(string $Name) 设置备份仓库名称，字符长度为63
  * @method string getProvider() 获取存储服务提供方，默认腾讯云
  * @method void setProvider(string $Provider) 设置存储服务提供方，默认腾讯云
  * @method string getPath() 获取对象存储桶路径
@@ -39,12 +39,12 @@ class CreateBackupStorageLocationRequest extends AbstractModel
     public $StorageRegion;
 
     /**
-     * @var string 对象存储桶名称，如果是COS必须是tke-backup前缀开头
+     * @var string 对象存储桶名称，如果是COS必须是tke-backup前缀开头，字符长度是19
      */
     public $Bucket;
 
     /**
-     * @var string 备份仓库名称
+     * @var string 备份仓库名称，字符长度为63
      */
     public $Name;
 
@@ -60,8 +60,8 @@ class CreateBackupStorageLocationRequest extends AbstractModel
 
     /**
      * @param string $StorageRegion 存储仓库所属地域，比如COS广州(ap-guangzhou)
-     * @param string $Bucket 对象存储桶名称，如果是COS必须是tke-backup前缀开头
-     * @param string $Name 备份仓库名称
+     * @param string $Bucket 对象存储桶名称，如果是COS必须是tke-backup前缀开头，字符长度是19
+     * @param string $Name 备份仓库名称，字符长度为63
      * @param string $Provider 存储服务提供方，默认腾讯云
      * @param string $Path 对象存储桶路径
      */

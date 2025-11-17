@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSkillGroupId(integer $SkillGroupId) 设置使用的座席技能组 ID
  * @method integer getPriority() 获取相同应用内多个任务运行优先级，从高到底 1 - 5
  * @method void setPriority(integer $Priority) 设置相同应用内多个任务运行优先级，从高到底 1 - 5
- * @method integer getExpectedAbandonRate() 获取预期呼损率，百分比，5 - 50
- * @method void setExpectedAbandonRate(integer $ExpectedAbandonRate) 设置预期呼损率，百分比，5 - 50
+ * @method integer getExpectedAbandonRate() 获取预期呼损率，百分比，0 - 50
+ * @method void setExpectedAbandonRate(integer $ExpectedAbandonRate) 设置预期呼损率，百分比，0 - 50
  * @method integer getRetryInterval() 获取呼叫重试间隔时间，单位秒，60 - 86400
  * @method void setRetryInterval(integer $RetryInterval) 设置呼叫重试间隔时间，单位秒，60 - 86400
  * @method integer getStartTime() 获取任务启动时间，Unix 时间戳，到此时间后会自动启动任务
@@ -95,7 +95,7 @@ class CreatePredictiveDialingCampaignRequest extends AbstractModel
     public $Priority;
 
     /**
-     * @var integer 预期呼损率，百分比，5 - 50
+     * @var integer 预期呼损率，百分比，0 - 50
      */
     public $ExpectedAbandonRate;
 
@@ -157,7 +157,7 @@ class CreatePredictiveDialingCampaignRequest extends AbstractModel
      * @param integer $CallOrder 被叫呼叫顺序 0 随机 1 顺序
      * @param integer $SkillGroupId 使用的座席技能组 ID
      * @param integer $Priority 相同应用内多个任务运行优先级，从高到底 1 - 5
-     * @param integer $ExpectedAbandonRate 预期呼损率，百分比，5 - 50
+     * @param integer $ExpectedAbandonRate 预期呼损率，百分比，0 - 50
      * @param integer $RetryInterval 呼叫重试间隔时间，单位秒，60 - 86400
      * @param integer $StartTime 任务启动时间，Unix 时间戳，到此时间后会自动启动任务
      * @param integer $EndTime 任务结束时间，Unix 时间戳，到此时间后会自动终止任务

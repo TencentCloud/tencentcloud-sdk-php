@@ -52,10 +52,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSubscribeTopicNum() 获取订阅的主题个数
  * @method void setSubscribeTopicNum(integer $SubscribeTopicNum) 设置订阅的主题个数
- * @method integer getCreateTime() 获取1753153590
+ * @method integer getCreateTime() 获取创建时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(integer $CreateTime) 设置1753153590
+ * @method void setCreateTime(integer $CreateTime) 设置创建时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTagList() 获取绑定的标签列表
+ * @method void setTagList(array $TagList) 设置绑定的标签列表
  */
 class ConsumeGroupItem extends AbstractModel
 {
@@ -120,10 +122,15 @@ class ConsumeGroupItem extends AbstractModel
     public $SubscribeTopicNum;
 
     /**
-     * @var integer 1753153590
+     * @var integer 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
+
+    /**
+     * @var array 绑定的标签列表
+     */
+    public $TagList;
 
     /**
      * @param string $InstanceId 实例ID
@@ -142,8 +149,9 @@ class ConsumeGroupItem extends AbstractModel
      * @param string $FullNamespaceV4 4.x的完整命名空间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SubscribeTopicNum 订阅的主题个数
-     * @param integer $CreateTime 1753153590
+     * @param integer $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TagList 绑定的标签列表
      */
     function __construct()
     {
@@ -204,6 +212,15 @@ class ConsumeGroupItem extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
         }
     }
 }

@@ -22,24 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDomainId() 获取域名ID
  * @method void setDomainId(integer $DomainId) 设置域名ID
- * @method string getStatus() 获取域名状态
- * @method void setStatus(string $Status) 设置域名状态
+ * @method string getStatus() 获取域名状态，正常：ENABLE，暂停：PAUSE，封禁：SPAM
+ * @method void setStatus(string $Status) 设置域名状态，正常：ENABLE，暂停：PAUSE，封禁：SPAM
  * @method string getGrade() 获取域名套餐等级
  * @method void setGrade(string $Grade) 设置域名套餐等级
  * @method integer getGroupId() 获取域名分组ID
  * @method void setGroupId(integer $GroupId) 设置域名分组ID
  * @method string getIsMark() 获取是否星标域名
  * @method void setIsMark(string $IsMark) 设置是否星标域名
- * @method integer getTTL() 获取TTL(DNS记录缓存时间)
- * @method void setTTL(integer $TTL) 设置TTL(DNS记录缓存时间)
+ * @method integer getTTL() 获取TTL(DNS记录缓存时间)，单位：秒
+ * @method void setTTL(integer $TTL) 设置TTL(DNS记录缓存时间)，单位：秒
  * @method string getCnameSpeedup() 获取cname加速启用状态
  * @method void setCnameSpeedup(string $CnameSpeedup) 设置cname加速启用状态
  * @method string getRemark() 获取域名备注
  * @method void setRemark(string $Remark) 设置域名备注
  * @method string getPunycode() 获取域名Punycode
  * @method void setPunycode(string $Punycode) 设置域名Punycode
- * @method string getDnsStatus() 获取域名DNS状态
- * @method void setDnsStatus(string $DnsStatus) 设置域名DNS状态
+ * @method string getDnsStatus() 获取域名DNS状态，错误：dnserror，正常：空字符串
+ * @method void setDnsStatus(string $DnsStatus) 设置域名DNS状态，错误：dnserror，正常：空字符串
  * @method array getDnspodNsList() 获取域名的NS列表
  * @method void setDnspodNsList(array $DnspodNsList) 设置域名的NS列表
  * @method string getDomain() 获取域名
@@ -103,7 +103,7 @@ class DomainInfo extends AbstractModel
     public $DomainId;
 
     /**
-     * @var string 域名状态
+     * @var string 域名状态，正常：ENABLE，暂停：PAUSE，封禁：SPAM
      */
     public $Status;
 
@@ -123,7 +123,7 @@ class DomainInfo extends AbstractModel
     public $IsMark;
 
     /**
-     * @var integer TTL(DNS记录缓存时间)
+     * @var integer TTL(DNS记录缓存时间)，单位：秒
      */
     public $TTL;
 
@@ -143,7 +143,7 @@ class DomainInfo extends AbstractModel
     public $Punycode;
 
     /**
-     * @var string 域名DNS状态
+     * @var string 域名DNS状态，错误：dnserror，正常：空字符串
      */
     public $DnsStatus;
 
@@ -268,15 +268,15 @@ class DomainInfo extends AbstractModel
 
     /**
      * @param integer $DomainId 域名ID
-     * @param string $Status 域名状态
+     * @param string $Status 域名状态，正常：ENABLE，暂停：PAUSE，封禁：SPAM
      * @param string $Grade 域名套餐等级
      * @param integer $GroupId 域名分组ID
      * @param string $IsMark 是否星标域名
-     * @param integer $TTL TTL(DNS记录缓存时间)
+     * @param integer $TTL TTL(DNS记录缓存时间)，单位：秒
      * @param string $CnameSpeedup cname加速启用状态
      * @param string $Remark 域名备注
      * @param string $Punycode 域名Punycode
-     * @param string $DnsStatus 域名DNS状态
+     * @param string $DnsStatus 域名DNS状态，错误：dnserror，正常：空字符串
      * @param array $DnspodNsList 域名的NS列表
      * @param string $Domain 域名
      * @param integer $GradeLevel 域名等级代号

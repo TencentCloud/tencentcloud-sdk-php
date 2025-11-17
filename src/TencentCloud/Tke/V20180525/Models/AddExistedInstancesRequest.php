@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddExistedInstances请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method array getInstanceIds() 获取实例列表，不支持竞价实例
- * @method void setInstanceIds(array $InstanceIds) 设置实例列表，不支持竞价实例
+ * @method string getClusterId() 获取集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
+ * @method void setClusterId(string $ClusterId) 设置集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
+ * @method array getInstanceIds() 获取实例列表，不支持竞价实例（请登录 [CVM控制台](https://console.cloud.tencent.com/cvm) 获取待添加节点ID ）
+ * @method void setInstanceIds(array $InstanceIds) 设置实例列表，不支持竞价实例（请登录 [CVM控制台](https://console.cloud.tencent.com/cvm) 获取待添加节点ID ）
  * @method InstanceAdvancedSettings getInstanceAdvancedSettings() 获取实例额外需要设置参数信息(默认值)
  * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) 设置实例额外需要设置参数信息(默认值)
  * @method EnhancedService getEnhancedService() 获取增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
@@ -46,12 +46,12 @@ use TencentCloud\Common\AbstractModel;
 class AddExistedInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
      */
     public $ClusterId;
 
     /**
-     * @var array 实例列表，不支持竞价实例
+     * @var array 实例列表，不支持竞价实例（请登录 [CVM控制台](https://console.cloud.tencent.com/cvm) 获取待添加节点ID ）
      */
     public $InstanceIds;
 
@@ -101,8 +101,8 @@ class AddExistedInstancesRequest extends AbstractModel
     public $ImageId;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param array $InstanceIds 实例列表，不支持竞价实例
+     * @param string $ClusterId 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
+     * @param array $InstanceIds 实例列表，不支持竞价实例（请登录 [CVM控制台](https://console.cloud.tencent.com/cvm) 获取待添加节点ID ）
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings 实例额外需要设置参数信息(默认值)
      * @param EnhancedService $EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
      * @param LoginSettings $LoginSettings 节点登录信息（目前仅支持使用Password或者单个KeyIds）

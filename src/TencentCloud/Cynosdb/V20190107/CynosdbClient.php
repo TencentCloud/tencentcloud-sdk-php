@@ -42,6 +42,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\CreateCLSDeliveryResponse CreateCLSDelivery(Models\CreateCLSDeliveryRequest $req) 本接口（CreateCLSDelivery）用于创建日志投递。
  * @method Models\CreateClusterDatabaseResponse CreateClusterDatabase(Models\CreateClusterDatabaseRequest $req) 本接口（CreateClusterDatabase）用于创建数据库。
  * @method Models\CreateClustersResponse CreateClusters(Models\CreateClustersRequest $req) 本接口（CreateClusters）用于新购集群。
+ * @method Models\CreateIntegrateClusterResponse CreateIntegrateCluster(Models\CreateIntegrateClusterRequest $req) 本接口（CreateClusters）用于新购集群。
  * @method Models\CreateParamTemplateResponse CreateParamTemplate(Models\CreateParamTemplateRequest $req) 本接口（CreateParamTemplate）用于创建参数模板。
  * @method Models\CreateProxyResponse CreateProxy(Models\CreateProxyRequest $req) 本接口（CreateProxy）用于开启集群的数据库代理。
  * @method Models\CreateProxyEndPointResponse CreateProxyEndPoint(Models\CreateProxyEndPointRequest $req) 本接口（CreateProxyEndPoint）用于创建数据库代理连接点。
@@ -93,6 +94,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeInstanceSpecsResponse DescribeInstanceSpecs(Models\DescribeInstanceSpecsRequest $req) 本接口（DescribeInstanceSpecs）用于查询购买页可购买的实例规格。
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 本接口(DescribeInstances)用于查询实例列表。
  * @method Models\DescribeInstancesWithinSameClusterResponse DescribeInstancesWithinSameCluster(Models\DescribeInstancesWithinSameClusterRequest $req) 本接口（DescribeInstancesWithinSameCluster）用于查询同一集群下实例列表
+ * @method Models\DescribeIntegrateTaskResponse DescribeIntegrateTask(Models\DescribeIntegrateTaskRequest $req) 本接口（DescribeIntegrateTask）用于查询集群任务。
  * @method Models\DescribeIsolatedInstancesResponse DescribeIsolatedInstances(Models\DescribeIsolatedInstancesRequest $req) 本接口（DescribeIsolatedInstances）用于查询回收站实例列表。
  * @method Models\DescribeMaintainPeriodResponse DescribeMaintainPeriod(Models\DescribeMaintainPeriodRequest $req) 本接口（DescribeMaintainPeriod）用于查询实例维护时间窗。
  * @method Models\DescribeParamTemplateDetailResponse DescribeParamTemplateDetail(Models\DescribeParamTemplateDetailRequest $req) 本接口（DescribeParamTemplateDetail）用于查询用户参数模板详情。
@@ -120,6 +122,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\GrantAccountPrivilegesResponse GrantAccountPrivileges(Models\GrantAccountPrivilegesRequest $req) 本接口（GrantAccountPrivileges）用于批量授权账号权限。
  * @method Models\InquirePriceCreateResponse InquirePriceCreate(Models\InquirePriceCreateRequest $req) 本接口（InquirePriceCreate）用于新购集群的价格查询。
  * @method Models\InquirePriceModifyResponse InquirePriceModify(Models\InquirePriceModifyRequest $req) 变配预付费集群询价
+ * @method Models\InquirePriceMultiSpecResponse InquirePriceMultiSpec(Models\InquirePriceMultiSpecRequest $req) 此接口（InquirePriceMultiSpec）用于批量询价
  * @method Models\InquirePriceRenewResponse InquirePriceRenew(Models\InquirePriceRenewRequest $req) 本接口（InquirePriceRenew）用于查询续费集群价格。
  * @method Models\IsolateClusterResponse IsolateCluster(Models\IsolateClusterRequest $req) 本接口（IsolateCluster）用于隔离集群。
  * @method Models\IsolateInstanceResponse IsolateInstance(Models\IsolateInstanceRequest $req) 本接口(IsolateInstance)用于隔离实例。

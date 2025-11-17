@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCompany(string $Company) 设置公司
  * @method DisplayToolCommon getDisplayToolCommon() 获取公共字段
  * @method void setDisplayToolCommon(DisplayToolCommon $DisplayToolCommon) 设置公共字段
+ * @method integer getIsCloudAsset() 获取是否为云资产
+ * @method void setIsCloudAsset(integer $IsCloudAsset) 设置是否为云资产
+ * @method integer getCloudAssetStatus() 获取云资产状态，-1为下线
+ * @method void setCloudAssetStatus(integer $CloudAssetStatus) 设置云资产状态，-1为下线
  */
 class DisplayDomain extends AbstractModel
 {
@@ -73,6 +77,16 @@ class DisplayDomain extends AbstractModel
     public $DisplayToolCommon;
 
     /**
+     * @var integer 是否为云资产
+     */
+    public $IsCloudAsset;
+
+    /**
+     * @var integer 云资产状态，-1为下线
+     */
+    public $CloudAssetStatus;
+
+    /**
      * @param integer $Id 主键ID
      * @param string $Domain 主域名
      * @param string $ICP ICP
@@ -80,6 +94,8 @@ class DisplayDomain extends AbstractModel
      * @param string $ExpiredTime 过期时间
      * @param string $Company 公司
      * @param DisplayToolCommon $DisplayToolCommon 公共字段
+     * @param integer $IsCloudAsset 是否为云资产
+     * @param integer $CloudAssetStatus 云资产状态，-1为下线
      */
     function __construct()
     {
@@ -121,6 +137,14 @@ class DisplayDomain extends AbstractModel
         if (array_key_exists("DisplayToolCommon",$param) and $param["DisplayToolCommon"] !== null) {
             $this->DisplayToolCommon = new DisplayToolCommon();
             $this->DisplayToolCommon->deserialize($param["DisplayToolCommon"]);
+        }
+
+        if (array_key_exists("IsCloudAsset",$param) and $param["IsCloudAsset"] !== null) {
+            $this->IsCloudAsset = $param["IsCloudAsset"];
+        }
+
+        if (array_key_exists("CloudAssetStatus",$param) and $param["CloudAssetStatus"] !== null) {
+            $this->CloudAssetStatus = $param["CloudAssetStatus"];
         }
     }
 }

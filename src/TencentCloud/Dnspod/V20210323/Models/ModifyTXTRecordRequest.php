@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainId(integer $DomainId) 设置域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
  * @method string getSubDomain() 获取主机记录，如 www，如果不传，默认为 @。
  * @method void setSubDomain(string $SubDomain) 设置主机记录，如 www，如果不传，默认为 @。
- * @method string getRecordLineId() 获取线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
- * @method void setRecordLineId(string $RecordLineId) 设置线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
- * @method integer getTTL() 获取TTL，范围1-604800，不同等级域名最小值不同。
- * @method void setTTL(integer $TTL) 设置TTL，范围1-604800，不同等级域名最小值不同。
+ * @method string getRecordLineId() 获取线路的 ID，通过 API 记录线路获得，字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+ * @method void setRecordLineId(string $RecordLineId) 设置线路的 ID，通过 API 记录线路获得，字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+ * @method integer getTTL() 获取TTL，范围1-604800，不同等级域名最小值不同。单位：秒
+ * @method void setTTL(integer $TTL) 设置TTL，范围1-604800，不同等级域名最小值不同。单位：秒
  * @method string getStatus() 获取记录初始状态，取值范围为 ENABLE 和 DISABLE 。默认为 ENABLE ，如果传入 DISABLE，解析不会生效，也不会验证负载均衡的限制。
  * @method void setStatus(string $Status) 设置记录初始状态，取值范围为 ENABLE 和 DISABLE 。默认为 ENABLE ，如果传入 DISABLE，解析不会生效，也不会验证负载均衡的限制。
  * @method string getRemark() 获取记录的备注信息。传空删除备注。
@@ -74,12 +74,12 @@ class ModifyTXTRecordRequest extends AbstractModel
     public $SubDomain;
 
     /**
-     * @var string 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+     * @var string 线路的 ID，通过 API 记录线路获得，字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
      */
     public $RecordLineId;
 
     /**
-     * @var integer TTL，范围1-604800，不同等级域名最小值不同。
+     * @var integer TTL，范围1-604800，不同等级域名最小值不同。单位：秒
      */
     public $TTL;
 
@@ -100,8 +100,8 @@ class ModifyTXTRecordRequest extends AbstractModel
      * @param integer $RecordId 记录 ID 。
      * @param integer $DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
      * @param string $SubDomain 主机记录，如 www，如果不传，默认为 @。
-     * @param string $RecordLineId 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
-     * @param integer $TTL TTL，范围1-604800，不同等级域名最小值不同。
+     * @param string $RecordLineId 线路的 ID，通过 API 记录线路获得，字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+     * @param integer $TTL TTL，范围1-604800，不同等级域名最小值不同。单位：秒
      * @param string $Status 记录初始状态，取值范围为 ENABLE 和 DISABLE 。默认为 ENABLE ，如果传入 DISABLE，解析不会生效，也不会验证负载均衡的限制。
      * @param string $Remark 记录的备注信息。传空删除备注。
      */

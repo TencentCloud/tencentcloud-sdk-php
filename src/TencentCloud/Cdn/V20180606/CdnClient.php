@@ -38,6 +38,8 @@ CreateDiagnoseUrl 用于添加域名诊断任务URL。
  * @method Models\DeleteCdnDomainResponse DeleteCdnDomain(Models\DeleteCdnDomainRequest $req) DeleteCdnDomain 用于删除指定加速域名
  * @method Models\DeleteClsLogTopicResponse DeleteClsLogTopic(Models\DeleteClsLogTopicRequest $req) DeleteClsLogTopic 用于删除日志主题。注意：删除后，所有该日志主题下绑定域名的日志将不再继续投递至该主题，已经投递的日志将会被全部清空。生效时间约为 5~15 分钟。
  * @method Models\DescribeBillingDataResponse DescribeBillingData(Models\DescribeBillingDataRequest $req) DescribeBillingData 用于查询实际计费数据明细。
+注意:
+受计费算法的影响，计费数据接口返回的数据均存在一定延时。小时结算客户预计延时3-5小时。月结算客户预计延迟4-28小时，在凌晨4点（不含4点）之前，仅能查询到前2天数据，4点（含）之后，能查询到前1天数据。若您对数据及时性较强的诉求，建议使用[监控访问数据](https://cloud.tencent.com/document/product/228/30986)。
  * @method Models\DescribeCdnDataResponse DescribeCdnData(Models\DescribeCdnDataRequest $req) DescribeCdnData 用于查询 CDN 实时访问监控数据，支持以下指标查询：
 
 + 流量（单位为 byte）

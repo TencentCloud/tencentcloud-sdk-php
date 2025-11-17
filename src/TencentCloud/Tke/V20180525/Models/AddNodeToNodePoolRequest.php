@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群id
  * @method string getNodePoolId() 获取节点池id
  * @method void setNodePoolId(string $NodePoolId) 设置节点池id
- * @method array getInstanceIds() 获取节点id
- * @method void setInstanceIds(array $InstanceIds) 设置节点id
+ * @method array getInstanceIds() 获取节点id，获取参考 https://cloud.tencent.com/document/product/213/15728
+ * @method void setInstanceIds(array $InstanceIds) 设置节点id，获取参考 https://cloud.tencent.com/document/product/213/15728
  */
 class AddNodeToNodePoolRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class AddNodeToNodePoolRequest extends AbstractModel
     public $NodePoolId;
 
     /**
-     * @var array 节点id
+     * @var array 节点id，获取参考 https://cloud.tencent.com/document/product/213/15728
      */
     public $InstanceIds;
 
     /**
      * @param string $ClusterId 集群id
      * @param string $NodePoolId 节点池id
-     * @param array $InstanceIds 节点id
+     * @param array $InstanceIds 节点id，获取参考 https://cloud.tencent.com/document/product/213/15728
      */
     function __construct()
     {

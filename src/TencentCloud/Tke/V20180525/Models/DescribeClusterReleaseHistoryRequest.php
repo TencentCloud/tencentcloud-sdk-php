@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置应用名称
  * @method string getNamespace() 获取应用所在命名空间
  * @method void setNamespace(string $Namespace) 设置应用所在命名空间
- * @method string getClusterType() 获取集群类型
- * @method void setClusterType(string $ClusterType) 设置集群类型
+ * @method string getClusterType() 获取集群类型，传入 tke(标准集群), eks(Serverless集群), external(注册集群）
+ * @method void setClusterType(string $ClusterType) 设置集群类型，传入 tke(标准集群), eks(Serverless集群), external(注册集群）
  */
 class DescribeClusterReleaseHistoryRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeClusterReleaseHistoryRequest extends AbstractModel
     public $Namespace;
 
     /**
-     * @var string 集群类型
+     * @var string 集群类型，传入 tke(标准集群), eks(Serverless集群), external(注册集群）
      */
     public $ClusterType;
 
@@ -55,7 +55,7 @@ class DescribeClusterReleaseHistoryRequest extends AbstractModel
      * @param string $ClusterId 集群ID
      * @param string $Name 应用名称
      * @param string $Namespace 应用所在命名空间
-     * @param string $ClusterType 集群类型
+     * @param string $ClusterType 集群类型，传入 tke(标准集群), eks(Serverless集群), external(注册集群）
      */
     function __construct()
     {

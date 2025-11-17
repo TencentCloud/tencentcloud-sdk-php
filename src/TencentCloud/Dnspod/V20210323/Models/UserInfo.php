@@ -26,20 +26,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(integer $Id) 设置用户ID
  * @method string getEmail() 获取用户账号, 邮箱格式
  * @method void setEmail(string $Email) 设置用户账号, 邮箱格式
- * @method string getStatus() 获取账号状态：”enabled”: 正常；”disabled”: 被封禁
- * @method void setStatus(string $Status) 设置账号状态：”enabled”: 正常；”disabled”: 被封禁
+ * @method string getStatus() 获取账号状态: "enabled": 正常; "disabled": 被封禁
+ * @method void setStatus(string $Status) 设置账号状态: "enabled": 正常; "disabled": 被封禁
  * @method string getTelephone() 获取电话号码
  * @method void setTelephone(string $Telephone) 设置电话号码
- * @method string getEmailVerified() 获取邮箱是否通过验证：”yes”: 通过；”no”: 未通过
- * @method void setEmailVerified(string $EmailVerified) 设置邮箱是否通过验证：”yes”: 通过；”no”: 未通过
- * @method string getTelephoneVerified() 获取手机是否通过验证：”yes”: 通过；”no”: 未通过
- * @method void setTelephoneVerified(string $TelephoneVerified) 设置手机是否通过验证：”yes”: 通过；”no”: 未通过
+ * @method string getEmailVerified() 获取邮箱是否通过验证："yes": 通过; "no": 未通过
+ * @method void setEmailVerified(string $EmailVerified) 设置邮箱是否通过验证："yes": 通过; "no": 未通过
+ * @method string getTelephoneVerified() 获取手机是否通过验证："yes": 通过； "no": 未通过
+ * @method void setTelephoneVerified(string $TelephoneVerified) 设置手机是否通过验证："yes": 通过； "no": 未通过
  * @method string getUserGrade() 获取账号等级, 按照用户账号下域名等级排序, 选取一个最高等级为账号等级, 具体对应情况参见域名等级。
  * @method void setUserGrade(string $UserGrade) 设置账号等级, 按照用户账号下域名等级排序, 选取一个最高等级为账号等级, 具体对应情况参见域名等级。
  * @method string getRealName() 获取用户名称, 企业用户对应为公司名称
  * @method void setRealName(string $RealName) 设置用户名称, 企业用户对应为公司名称
- * @method string getWechatBinded() 获取是否绑定微信：”yes”: 通过；”no”: 未通过
- * @method void setWechatBinded(string $WechatBinded) 设置是否绑定微信：”yes”: 通过；”no”: 未通过
+ * @method string getWechatBinded() 获取是否绑定微信： "yes": 通过； "no": 未通过
+ * @method void setWechatBinded(string $WechatBinded) 设置是否绑定微信： "yes": 通过； "no": 未通过
  * @method integer getUin() 获取用户UIN
  * @method void setUin(integer $Uin) 设置用户UIN
  * @method array getFreeNs() 获取所属 DNS 服务器
@@ -65,7 +65,7 @@ class UserInfo extends AbstractModel
     public $Email;
 
     /**
-     * @var string 账号状态：”enabled”: 正常；”disabled”: 被封禁
+     * @var string 账号状态: "enabled": 正常; "disabled": 被封禁
      */
     public $Status;
 
@@ -75,12 +75,12 @@ class UserInfo extends AbstractModel
     public $Telephone;
 
     /**
-     * @var string 邮箱是否通过验证：”yes”: 通过；”no”: 未通过
+     * @var string 邮箱是否通过验证："yes": 通过; "no": 未通过
      */
     public $EmailVerified;
 
     /**
-     * @var string 手机是否通过验证：”yes”: 通过；”no”: 未通过
+     * @var string 手机是否通过验证："yes": 通过； "no": 未通过
      */
     public $TelephoneVerified;
 
@@ -95,7 +95,7 @@ class UserInfo extends AbstractModel
     public $RealName;
 
     /**
-     * @var string 是否绑定微信：”yes”: 通过；”no”: 未通过
+     * @var string 是否绑定微信： "yes": 通过； "no": 未通过
      */
     public $WechatBinded;
 
@@ -118,13 +118,13 @@ class UserInfo extends AbstractModel
      * @param string $Nick 用户昵称
      * @param integer $Id 用户ID
      * @param string $Email 用户账号, 邮箱格式
-     * @param string $Status 账号状态：”enabled”: 正常；”disabled”: 被封禁
+     * @param string $Status 账号状态: "enabled": 正常; "disabled": 被封禁
      * @param string $Telephone 电话号码
-     * @param string $EmailVerified 邮箱是否通过验证：”yes”: 通过；”no”: 未通过
-     * @param string $TelephoneVerified 手机是否通过验证：”yes”: 通过；”no”: 未通过
+     * @param string $EmailVerified 邮箱是否通过验证："yes": 通过; "no": 未通过
+     * @param string $TelephoneVerified 手机是否通过验证："yes": 通过； "no": 未通过
      * @param string $UserGrade 账号等级, 按照用户账号下域名等级排序, 选取一个最高等级为账号等级, 具体对应情况参见域名等级。
      * @param string $RealName 用户名称, 企业用户对应为公司名称
-     * @param string $WechatBinded 是否绑定微信：”yes”: 通过；”no”: 未通过
+     * @param string $WechatBinded 是否绑定微信： "yes": 通过； "no": 未通过
      * @param integer $Uin 用户UIN
      * @param array $FreeNs 所属 DNS 服务器
      * @param boolean $AllowTransferIn 用户是否允许任何人转移域名到本账号

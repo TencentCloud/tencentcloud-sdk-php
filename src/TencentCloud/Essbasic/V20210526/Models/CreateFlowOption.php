@@ -92,6 +92,32 @@ use TencentCloud\Common\AbstractModel;
 <ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
  * @method void setForbidEditWatermark(boolean $ForbidEditWatermark) 设置是否禁止编辑（展示）水印控件属性
 <ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+ * @method boolean getPreviewAfterStart() 获取发起成功后是否预览合同
+<ul><li>（默认） false -否</li> <li> true - 展示预览按钮</li></ul>
+ * @method void setPreviewAfterStart(boolean $PreviewAfterStart) 设置发起成功后是否预览合同
+<ul><li>（默认） false -否</li> <li> true - 展示预览按钮</li></ul>
+ * @method boolean getSignAfterStart() 获取发起成功之后是否签署合同，仅当前经办人作为签署人时生效
+<ul><li>（默认） false -否</li> <li> true - 展示签署按钮</li></ul>
+ * @method void setSignAfterStart(boolean $SignAfterStart) 设置发起成功之后是否签署合同，仅当前经办人作为签署人时生效
+<ul><li>（默认） false -否</li> <li> true - 展示签署按钮</li></ul>
+ * @method array getHideOperationSteps() 获取隐藏操作步骤: 具体的控件类型如下
+
+<ul><li>1 : 选择文件及签署方</li>
+<li>2 : 补充文件内容</li>
+<li>4 : 发起前合同信息与设置确认</li>
+</ul>
+注：仅对新版页面生效
+ * @method void setHideOperationSteps(array $HideOperationSteps) 设置隐藏操作步骤: 具体的控件类型如下
+
+<ul><li>1 : 选择文件及签署方</li>
+<li>2 : 补充文件内容</li>
+<li>4 : 发起前合同信息与设置确认</li>
+</ul>
+注：仅对新版页面生效
+ * @method string getSelfName() 获取本企业简称，注：仅对新版页面生效
+ * @method void setSelfName(string $SelfName) 设置本企业简称，注：仅对新版页面生效
+ * @method boolean getHideSignCodeAfterStart() 获取发起后签署码隐藏，默认false，注：仅对新版页面生效
+ * @method void setHideSignCodeAfterStart(boolean $HideSignCodeAfterStart) 设置发起后签署码隐藏，默认false，注：仅对新版页面生效
  */
 class CreateFlowOption extends AbstractModel
 {
@@ -176,6 +202,39 @@ class CreateFlowOption extends AbstractModel
     public $ForbidEditWatermark;
 
     /**
+     * @var boolean 发起成功后是否预览合同
+<ul><li>（默认） false -否</li> <li> true - 展示预览按钮</li></ul>
+     */
+    public $PreviewAfterStart;
+
+    /**
+     * @var boolean 发起成功之后是否签署合同，仅当前经办人作为签署人时生效
+<ul><li>（默认） false -否</li> <li> true - 展示签署按钮</li></ul>
+     */
+    public $SignAfterStart;
+
+    /**
+     * @var array 隐藏操作步骤: 具体的控件类型如下
+
+<ul><li>1 : 选择文件及签署方</li>
+<li>2 : 补充文件内容</li>
+<li>4 : 发起前合同信息与设置确认</li>
+</ul>
+注：仅对新版页面生效
+     */
+    public $HideOperationSteps;
+
+    /**
+     * @var string 本企业简称，注：仅对新版页面生效
+     */
+    public $SelfName;
+
+    /**
+     * @var boolean 发起后签署码隐藏，默认false，注：仅对新版页面生效
+     */
+    public $HideSignCodeAfterStart;
+
+    /**
      * @param boolean $CanEditFlow 是否允许修改合同信息，
 **true**：可以
 **false**：（默认）不可以
@@ -212,6 +271,19 @@ class CreateFlowOption extends AbstractModel
  - 签署控件 是否默认展示日期.
      * @param boolean $ForbidEditWatermark 是否禁止编辑（展示）水印控件属性
 <ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+     * @param boolean $PreviewAfterStart 发起成功后是否预览合同
+<ul><li>（默认） false -否</li> <li> true - 展示预览按钮</li></ul>
+     * @param boolean $SignAfterStart 发起成功之后是否签署合同，仅当前经办人作为签署人时生效
+<ul><li>（默认） false -否</li> <li> true - 展示签署按钮</li></ul>
+     * @param array $HideOperationSteps 隐藏操作步骤: 具体的控件类型如下
+
+<ul><li>1 : 选择文件及签署方</li>
+<li>2 : 补充文件内容</li>
+<li>4 : 发起前合同信息与设置确认</li>
+</ul>
+注：仅对新版页面生效
+     * @param string $SelfName 本企业简称，注：仅对新版页面生效
+     * @param boolean $HideSignCodeAfterStart 发起后签署码隐藏，默认false，注：仅对新版页面生效
      */
     function __construct()
     {
@@ -269,6 +341,26 @@ class CreateFlowOption extends AbstractModel
 
         if (array_key_exists("ForbidEditWatermark",$param) and $param["ForbidEditWatermark"] !== null) {
             $this->ForbidEditWatermark = $param["ForbidEditWatermark"];
+        }
+
+        if (array_key_exists("PreviewAfterStart",$param) and $param["PreviewAfterStart"] !== null) {
+            $this->PreviewAfterStart = $param["PreviewAfterStart"];
+        }
+
+        if (array_key_exists("SignAfterStart",$param) and $param["SignAfterStart"] !== null) {
+            $this->SignAfterStart = $param["SignAfterStart"];
+        }
+
+        if (array_key_exists("HideOperationSteps",$param) and $param["HideOperationSteps"] !== null) {
+            $this->HideOperationSteps = $param["HideOperationSteps"];
+        }
+
+        if (array_key_exists("SelfName",$param) and $param["SelfName"] !== null) {
+            $this->SelfName = $param["SelfName"];
+        }
+
+        if (array_key_exists("HideSignCodeAfterStart",$param) and $param["HideSignCodeAfterStart"] !== null) {
+            $this->HideSignCodeAfterStart = $param["HideSignCodeAfterStart"];
         }
     }
 }

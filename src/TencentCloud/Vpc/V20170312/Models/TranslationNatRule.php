@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTranslationDirection() 获取转换规则目标，可选值"LOCAL","PEER"。
  * @method void setTranslationDirection(string $TranslationDirection) 设置转换规则目标，可选值"LOCAL","PEER"。
- * @method string getTranslationType() 获取转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。
- * @method void setTranslationType(string $TranslationType) 设置转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。
- * @method string getTranslationIp() 获取转换`IP`,当转换规则类型为四层时为`IP`池。
- * @method void setTranslationIp(string $TranslationIp) 设置转换`IP`,当转换规则类型为四层时为`IP`池。
+ * @method string getTranslationType() 获取转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。分别对应三层和四层。
+ * @method void setTranslationType(string $TranslationType) 设置转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。分别对应三层和四层。
+ * @method string getTranslationIp() 获取映射后IP,当转换规则类型为四层时为`IP`池。
+ * @method void setTranslationIp(string $TranslationIp) 设置映射后IP,当转换规则类型为四层时为`IP`池。
  * @method string getDescription() 获取转换规则描述。
  * @method void setDescription(string $Description) 设置转换规则描述。
- * @method string getOriginalIp() 获取源`IP`,当转换规则类型为三层时有效。
- * @method void setOriginalIp(string $OriginalIp) 设置源`IP`,当转换规则类型为三层时有效。
+ * @method string getOriginalIp() 获取映射前IP,当转换规则类型为三层时有效。
+ * @method void setOriginalIp(string $OriginalIp) 设置映射前IP,当转换规则类型为三层时有效。
  * @method string getCreateTime() 获取创建时间。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
  * @method string getUpdateTime() 获取更新时间。
@@ -43,12 +43,12 @@ class TranslationNatRule extends AbstractModel
     public $TranslationDirection;
 
     /**
-     * @var string 转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。
+     * @var string 转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。分别对应三层和四层。
      */
     public $TranslationType;
 
     /**
-     * @var string 转换`IP`,当转换规则类型为四层时为`IP`池。
+     * @var string 映射后IP,当转换规则类型为四层时为`IP`池。
      */
     public $TranslationIp;
 
@@ -58,7 +58,7 @@ class TranslationNatRule extends AbstractModel
     public $Description;
 
     /**
-     * @var string 源`IP`,当转换规则类型为三层时有效。
+     * @var string 映射前IP,当转换规则类型为三层时有效。
      */
     public $OriginalIp;
 
@@ -74,10 +74,10 @@ class TranslationNatRule extends AbstractModel
 
     /**
      * @param string $TranslationDirection 转换规则目标，可选值"LOCAL","PEER"。
-     * @param string $TranslationType 转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。
-     * @param string $TranslationIp 转换`IP`,当转换规则类型为四层时为`IP`池。
+     * @param string $TranslationType 转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。分别对应三层和四层。
+     * @param string $TranslationIp 映射后IP,当转换规则类型为四层时为`IP`池。
      * @param string $Description 转换规则描述。
-     * @param string $OriginalIp 源`IP`,当转换规则类型为三层时有效。
+     * @param string $OriginalIp 映射前IP,当转换规则类型为三层时有效。
      * @param string $CreateTime 创建时间。
      * @param string $UpdateTime 更新时间。
      */

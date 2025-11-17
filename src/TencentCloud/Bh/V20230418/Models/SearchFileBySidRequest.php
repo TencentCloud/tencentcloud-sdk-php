@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页用偏移量
  * @method integer getAuditAction() 获取1-已执行，  2-被阻断
  * @method void setAuditAction(integer $AuditAction) 设置1-已执行，  2-被阻断
+ * @method array getAuditActionSet() 获取1-已执行，  2-被阻断
+ * @method void setAuditActionSet(array $AuditActionSet) 设置1-已执行，  2-被阻断
  * @method array getTypeFilters() 获取以Protocol和Method为条件查询
  * @method void setTypeFilters(array $TypeFilters) 设置以Protocol和Method为条件查询
  */
@@ -68,6 +70,11 @@ class SearchFileBySidRequest extends AbstractModel
     public $AuditAction;
 
     /**
+     * @var array 1-已执行，  2-被阻断
+     */
+    public $AuditActionSet;
+
+    /**
      * @var array 以Protocol和Method为条件查询
      */
     public $TypeFilters;
@@ -79,6 +86,7 @@ class SearchFileBySidRequest extends AbstractModel
      * @param string $FileName 可填写路径名或文件名
      * @param integer $Offset 分页用偏移量
      * @param integer $AuditAction 1-已执行，  2-被阻断
+     * @param array $AuditActionSet 1-已执行，  2-被阻断
      * @param array $TypeFilters 以Protocol和Method为条件查询
      */
     function __construct()
@@ -116,6 +124,10 @@ class SearchFileBySidRequest extends AbstractModel
 
         if (array_key_exists("AuditAction",$param) and $param["AuditAction"] !== null) {
             $this->AuditAction = $param["AuditAction"];
+        }
+
+        if (array_key_exists("AuditActionSet",$param) and $param["AuditActionSet"] !== null) {
+            $this->AuditActionSet = $param["AuditActionSet"];
         }
 
         if (array_key_exists("TypeFilters",$param) and $param["TypeFilters"] !== null) {

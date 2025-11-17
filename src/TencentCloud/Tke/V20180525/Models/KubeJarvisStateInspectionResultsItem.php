@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置巡检结果名称
  * @method array getStatistics() 获取诊断结果统计
  * @method void setStatistics(array $Statistics) 设置诊断结果统计
+ * @method string getStartTime() 获取诊断数据开始时间
+ * @method void setStartTime(string $StartTime) 设置诊断数据开始时间
+ * @method string getEndTime() 获取诊断数据结束时间
+ * @method void setEndTime(string $EndTime) 设置诊断数据结束时间
  */
 class KubeJarvisStateInspectionResultsItem extends AbstractModel
 {
@@ -38,8 +42,20 @@ class KubeJarvisStateInspectionResultsItem extends AbstractModel
     public $Statistics;
 
     /**
+     * @var string 诊断数据开始时间
+     */
+    public $StartTime;
+
+    /**
+     * @var string 诊断数据结束时间
+     */
+    public $EndTime;
+
+    /**
      * @param string $Name 巡检结果名称
      * @param array $Statistics 诊断结果统计
+     * @param string $StartTime 诊断数据开始时间
+     * @param string $EndTime 诊断数据结束时间
      */
     function __construct()
     {
@@ -65,6 +81,14 @@ class KubeJarvisStateInspectionResultsItem extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Statistics, $obj);
             }
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }

@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
 0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
  * @method void setMonitorObjectType(integer $MonitorObjectType) 设置监控对象类型。
 0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
- * @method integer getSendType() 获取通知渠道类型，0默认代表cls内部通知渠道，1代表云监控通知渠道
- * @method void setSendType(integer $SendType) 设置通知渠道类型，0默认代表cls内部通知渠道，1代表云监控通知渠道
+ * @method integer getSendType() 获取通知渠道类型，0默认代表cls内部通知渠道，1代表腾讯云可观测平台通知渠道
+ * @method void setSendType(integer $SendType) 设置通知渠道类型，0默认代表cls内部通知渠道，1代表腾讯云可观测平台通知渠道
  */
 class AlertHistoryRecord extends AbstractModel
 {
@@ -141,7 +141,7 @@ class AlertHistoryRecord extends AbstractModel
     public $MonitorObjectType;
 
     /**
-     * @var integer 通知渠道类型，0默认代表cls内部通知渠道，1代表云监控通知渠道
+     * @var integer 通知渠道类型，0默认代表cls内部通知渠道，1代表腾讯云可观测平台通知渠道
      */
     public $SendType;
 
@@ -163,7 +163,7 @@ class AlertHistoryRecord extends AbstractModel
      * @param integer $AlarmLevel 告警级别，0代表警告(Warn)，1代表提醒(Info)，2代表紧急 (Critical)
      * @param integer $MonitorObjectType 监控对象类型。
 0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-     * @param integer $SendType 通知渠道类型，0默认代表cls内部通知渠道，1代表云监控通知渠道
+     * @param integer $SendType 通知渠道类型，0默认代表cls内部通知渠道，1代表腾讯云可观测平台通知渠道
      */
     function __construct()
     {

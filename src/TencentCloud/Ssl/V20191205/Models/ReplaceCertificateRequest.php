@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertCSRKeyParameter(string $CertCSRKeyParameter) 设置CSR加密参数，CsrEncryptAlgo为RSA时， 可选2048、4096等默认为2048；CsrEncryptAlgo为ECC时，可选prime256v1，secp384r1等，默认为prime256v1; 
  * @method string getSignAlgo() 获取签名算法
  * @method void setSignAlgo(string $SignAlgo) 设置签名算法
+ * @method boolean getUseCrossSignRoot() 获取是否使用交叉根证书，默认为true
+ * @method void setUseCrossSignRoot(boolean $UseCrossSignRoot) 设置是否使用交叉根证书，默认为true
  */
 class ReplaceCertificateRequest extends AbstractModel
 {
@@ -90,6 +92,11 @@ class ReplaceCertificateRequest extends AbstractModel
     public $SignAlgo;
 
     /**
+     * @var boolean 是否使用交叉根证书，默认为true
+     */
+    public $UseCrossSignRoot;
+
+    /**
      * @param string $CertificateId 证书 ID。
      * @param string $ValidType 验证类型：DNS_AUTO = 自动DNS验证（仅支持在腾讯云解析且解析状态正常的域名使用该验证类型），DNS = 手动DNS验证，FILE = 文件验证。
      * @param string $CsrType 类型，默认 original。可选项：original = 原证书 CSR，upload = 手动上传，online = 在线生成。
@@ -100,6 +107,7 @@ class ReplaceCertificateRequest extends AbstractModel
 （CsrType为Online才可选）， 默认为RSA
      * @param string $CertCSRKeyParameter CSR加密参数，CsrEncryptAlgo为RSA时， 可选2048、4096等默认为2048；CsrEncryptAlgo为ECC时，可选prime256v1，secp384r1等，默认为prime256v1; 
      * @param string $SignAlgo 签名算法
+     * @param boolean $UseCrossSignRoot 是否使用交叉根证书，默认为true
      */
     function __construct()
     {
@@ -148,6 +156,10 @@ class ReplaceCertificateRequest extends AbstractModel
 
         if (array_key_exists("SignAlgo",$param) and $param["SignAlgo"] !== null) {
             $this->SignAlgo = $param["SignAlgo"];
+        }
+
+        if (array_key_exists("UseCrossSignRoot",$param) and $param["UseCrossSignRoot"] !== null) {
+            $this->UseCrossSignRoot = $param["UseCrossSignRoot"];
         }
     }
 }

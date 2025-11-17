@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomains(string $Domains) 设置域名数据
  * @method string getLastModify() 获取端口和服务最近更新时间
  * @method void setLastModify(string $LastModify) 设置端口和服务最近更新时间
+ * @method integer getIsCloudAsset() 获取是否为云资产
+ * @method void setIsCloudAsset(integer $IsCloudAsset) 设置是否为云资产
+ * @method integer getCloudAssetStatus() 获取云资产状态，-1为下线
+ * @method void setCloudAssetStatus(integer $CloudAssetStatus) 设置云资产状态，-1为下线
  */
 class DisplayAsset extends AbstractModel
 {
@@ -108,6 +112,16 @@ class DisplayAsset extends AbstractModel
     public $LastModify;
 
     /**
+     * @var integer 是否为云资产
+     */
+    public $IsCloudAsset;
+
+    /**
+     * @var integer 云资产状态，-1为下线
+     */
+    public $CloudAssetStatus;
+
+    /**
      * @param integer $Id 主机资产Id
      * @param string $Os 操作系统类型
      * @param string $Ip 主机地址
@@ -120,6 +134,8 @@ class DisplayAsset extends AbstractModel
      * @param string $Services 服务数据
      * @param string $Domains 域名数据
      * @param string $LastModify 端口和服务最近更新时间
+     * @param integer $IsCloudAsset 是否为云资产
+     * @param integer $CloudAssetStatus 云资产状态，-1为下线
      */
     function __construct()
     {
@@ -181,6 +197,14 @@ class DisplayAsset extends AbstractModel
 
         if (array_key_exists("LastModify",$param) and $param["LastModify"] !== null) {
             $this->LastModify = $param["LastModify"];
+        }
+
+        if (array_key_exists("IsCloudAsset",$param) and $param["IsCloudAsset"] !== null) {
+            $this->IsCloudAsset = $param["IsCloudAsset"];
+        }
+
+        if (array_key_exists("CloudAssetStatus",$param) and $param["CloudAssetStatus"] !== null) {
+            $this->CloudAssetStatus = $param["CloudAssetStatus"];
         }
     }
 }

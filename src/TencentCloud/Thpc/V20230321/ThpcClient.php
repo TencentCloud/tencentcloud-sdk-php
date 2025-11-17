@@ -53,6 +53,7 @@ use TencentCloud\Thpc\V20230321\Models as Models;
  * @method Models\DescribeQueuesResponse DescribeQueues(Models\DescribeQueuesRequest $req) 本接口(DescribeQueues)用于查询指定集群队列概览信息列表。
  * @method Models\DescribeWorkspacesResponse DescribeWorkspaces(Models\DescribeWorkspacesRequest $req) 本接口（DescribeWorkspaces）用于查询工作空间列表。
  * @method Models\DetachNodesResponse DetachNodes(Models\DetachNodesRequest $req) 本接口 (DetachNodes) 用于将一个或者多个计算节点从集群中移除，但是不销毁指定计算资源。
+ * @method Models\ModifyClusterDeletionProtectionResponse ModifyClusterDeletionProtection(Models\ModifyClusterDeletionProtectionRequest $req) 修改集群删除保护状态
  * @method Models\ModifyInitNodeScriptsResponse ModifyInitNodeScripts(Models\ModifyInitNodeScriptsRequest $req) 本接口 (ModifyInitNodeScripts) 用于修改节点初始化脚本。
  * @method Models\ModifyWorkspacesAttributeResponse ModifyWorkspacesAttribute(Models\ModifyWorkspacesAttributeRequest $req) 本接口 (ModifyWorkspacesAttribute) 用于修改工作空间的属性（目前只支持修改工作空间的名称）。
  * @method Models\ModifyWorkspacesRenewFlagResponse ModifyWorkspacesRenewFlag(Models\ModifyWorkspacesRenewFlagRequest $req) 本接口 (ModifyWorkspacesAttribute) 用于修改工作空间的属性（目前只支持修改工作空间的名称）。

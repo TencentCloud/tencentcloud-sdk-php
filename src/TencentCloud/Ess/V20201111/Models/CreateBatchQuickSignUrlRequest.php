@@ -120,6 +120,8 @@ use TencentCloud\Common\AbstractModel;
 1. 视频认证为<b>白名单功能，使用前请联系对接的客户经理沟通</b>。
 2. 使用视频认证时，<b>生成H5签署链接的时候必须将签署认证方式指定为人脸</b>（即ApproverSignTypes设置成人脸签署）。 
 3. 签署完成后，可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelDescribeSignFaceVideo" target="_blank">查询签署认证人脸视频</a>获取到当时的视频。
+ * @method integer getVideoVerifyTimesLimit() 获取用于指定进入视频签署的限制次数，次数取值范围：1 - 10，不设置则默认为5次，仅视频签署时生效。
+ * @method void setVideoVerifyTimesLimit(integer $VideoVerifyTimesLimit) 设置用于指定进入视频签署的限制次数，次数取值范围：1 - 10，不设置则默认为5次，仅视频签署时生效。
  * @method boolean getCacheApproverInfo() 获取缓存签署人信息。在H5签署链接动态领取场景，首次填写后，选择缓存签署人信息，在下次签署人点击领取链接时，会自动将个人信息（姓名、身份证号、手机号）填入，否则需要每次手动填写。
 
 注: `若参与方为企业员工时，暂不支持对参与方信息进行缓存`
@@ -236,6 +238,11 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
     public $Intention;
 
     /**
+     * @var integer 用于指定进入视频签署的限制次数，次数取值范围：1 - 10，不设置则默认为5次，仅视频签署时生效。
+     */
+    public $VideoVerifyTimesLimit;
+
+    /**
      * @var boolean 缓存签署人信息。在H5签署链接动态领取场景，首次填写后，选择缓存签署人信息，在下次签署人点击领取链接时，会自动将个人信息（姓名、身份证号、手机号）填入，否则需要每次手动填写。
 
 注: `若参与方为企业员工时，暂不支持对参与方信息进行缓存`
@@ -307,6 +314,7 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
 1. 视频认证为<b>白名单功能，使用前请联系对接的客户经理沟通</b>。
 2. 使用视频认证时，<b>生成H5签署链接的时候必须将签署认证方式指定为人脸</b>（即ApproverSignTypes设置成人脸签署）。 
 3. 签署完成后，可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelDescribeSignFaceVideo" target="_blank">查询签署认证人脸视频</a>获取到当时的视频。
+     * @param integer $VideoVerifyTimesLimit 用于指定进入视频签署的限制次数，次数取值范围：1 - 10，不设置则默认为5次，仅视频签署时生效。
      * @param boolean $CacheApproverInfo 缓存签署人信息。在H5签署链接动态领取场景，首次填写后，选择缓存签署人信息，在下次签署人点击领取链接时，会自动将个人信息（姓名、身份证号、手机号）填入，否则需要每次手动填写。
 
 注: `若参与方为企业员工时，暂不支持对参与方信息进行缓存`
@@ -377,6 +385,10 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
         if (array_key_exists("Intention",$param) and $param["Intention"] !== null) {
             $this->Intention = new Intention();
             $this->Intention->deserialize($param["Intention"]);
+        }
+
+        if (array_key_exists("VideoVerifyTimesLimit",$param) and $param["VideoVerifyTimesLimit"] !== null) {
+            $this->VideoVerifyTimesLimit = $param["VideoVerifyTimesLimit"];
         }
 
         if (array_key_exists("CacheApproverInfo",$param) and $param["CacheApproverInfo"] !== null) {

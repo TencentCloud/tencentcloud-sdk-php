@@ -50,6 +50,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsChange(boolean $IsChange) 设置资产是否发生变动
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsCloudAsset() 获取是否为云资产：0-非云资产 1-是云资产
+ * @method void setIsCloudAsset(integer $IsCloudAsset) 设置是否为云资产：0-非云资产 1-是云资产
+ * @method integer getCloudAssetStatus() 获取云资产是否下线：-1-已下线 0-正常
+ * @method void setCloudAssetStatus(integer $CloudAssetStatus) 设置云资产是否下线：-1-已下线 0-正常
+ * @method integer getAvailabilityRate() 获取可用率（百分比）
+ * @method void setAvailabilityRate(integer $AvailabilityRate) 设置可用率（百分比）
+ * @method integer getAvailabilityState() 获取可用状态 1:异常 0:正常
+ * @method void setAvailabilityState(integer $AvailabilityState) 设置可用状态 1:异常 0:正常
+ * @method integer getResponseTime() 获取平均响应时间：单位ms
+ * @method void setResponseTime(integer $ResponseTime) 设置平均响应时间：单位ms
+ * @method integer getAnalysisState() 获取域名解析状态 1:异常 0:正常
+ * @method void setAnalysisState(integer $AnalysisState) 设置域名解析状态 1:异常 0:正常
  */
 class DisplayHttp extends AbstractModel
 {
@@ -125,6 +137,36 @@ class DisplayHttp extends AbstractModel
     public $IsChange;
 
     /**
+     * @var integer 是否为云资产：0-非云资产 1-是云资产
+     */
+    public $IsCloudAsset;
+
+    /**
+     * @var integer 云资产是否下线：-1-已下线 0-正常
+     */
+    public $CloudAssetStatus;
+
+    /**
+     * @var integer 可用率（百分比）
+     */
+    public $AvailabilityRate;
+
+    /**
+     * @var integer 可用状态 1:异常 0:正常
+     */
+    public $AvailabilityState;
+
+    /**
+     * @var integer 平均响应时间：单位ms
+     */
+    public $ResponseTime;
+
+    /**
+     * @var integer 域名解析状态 1:异常 0:正常
+     */
+    public $AnalysisState;
+
+    /**
      * @param integer $Id 主键ID
      * @param DisplayToolCommon $DisplayToolCommon 公共字段
      * @param string $Url Url
@@ -140,6 +182,12 @@ class DisplayHttp extends AbstractModel
      * @param string $SslExpiredTime ssl证书过期时间
      * @param boolean $IsChange 资产是否发生变动
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
+     * @param integer $CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
+     * @param integer $AvailabilityRate 可用率（百分比）
+     * @param integer $AvailabilityState 可用状态 1:异常 0:正常
+     * @param integer $ResponseTime 平均响应时间：单位ms
+     * @param integer $AnalysisState 域名解析状态 1:异常 0:正常
      */
     function __construct()
     {
@@ -209,6 +257,30 @@ class DisplayHttp extends AbstractModel
 
         if (array_key_exists("IsChange",$param) and $param["IsChange"] !== null) {
             $this->IsChange = $param["IsChange"];
+        }
+
+        if (array_key_exists("IsCloudAsset",$param) and $param["IsCloudAsset"] !== null) {
+            $this->IsCloudAsset = $param["IsCloudAsset"];
+        }
+
+        if (array_key_exists("CloudAssetStatus",$param) and $param["CloudAssetStatus"] !== null) {
+            $this->CloudAssetStatus = $param["CloudAssetStatus"];
+        }
+
+        if (array_key_exists("AvailabilityRate",$param) and $param["AvailabilityRate"] !== null) {
+            $this->AvailabilityRate = $param["AvailabilityRate"];
+        }
+
+        if (array_key_exists("AvailabilityState",$param) and $param["AvailabilityState"] !== null) {
+            $this->AvailabilityState = $param["AvailabilityState"];
+        }
+
+        if (array_key_exists("ResponseTime",$param) and $param["ResponseTime"] !== null) {
+            $this->ResponseTime = $param["ResponseTime"];
+        }
+
+        if (array_key_exists("AnalysisState",$param) and $param["AnalysisState"] !== null) {
+            $this->AnalysisState = $param["AnalysisState"];
         }
     }
 }

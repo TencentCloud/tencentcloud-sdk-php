@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskType(string $DiskType) 设置磁盘类型
  * @method integer getDefaultDiskSize() 获取指定磁盘大小
  * @method void setDefaultDiskSize(integer $DefaultDiskSize) 设置指定磁盘大小
+ * @method boolean getIsSpecialDisk() 获取是否为特殊的数据盘，如：单副本盘
+ * @method void setIsSpecialDisk(boolean $IsSpecialDisk) 设置是否为特殊的数据盘，如：单副本盘
  */
 class NodeSpecDisk extends AbstractModel
 {
@@ -52,10 +54,16 @@ class NodeSpecDisk extends AbstractModel
     public $DefaultDiskSize;
 
     /**
+     * @var boolean 是否为特殊的数据盘，如：单副本盘
+     */
+    public $IsSpecialDisk;
+
+    /**
      * @param integer $Count 数量
      * @param string $Name 名字
      * @param string $DiskType 磁盘类型
      * @param integer $DefaultDiskSize 指定磁盘大小
+     * @param boolean $IsSpecialDisk 是否为特殊的数据盘，如：单副本盘
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class NodeSpecDisk extends AbstractModel
 
         if (array_key_exists("DefaultDiskSize",$param) and $param["DefaultDiskSize"] !== null) {
             $this->DefaultDiskSize = $param["DefaultDiskSize"];
+        }
+
+        if (array_key_exists("IsSpecialDisk",$param) and $param["IsSpecialDisk"] !== null) {
+            $this->IsSpecialDisk = $param["IsSpecialDisk"];
         }
     }
 }

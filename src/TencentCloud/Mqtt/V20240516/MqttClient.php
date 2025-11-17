@@ -77,6 +77,7 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
  * @method Models\DescribeUserListResponse DescribeUserList(Models\DescribeUserListRequest $req) 查询用户列表，Filter参数使用说明如下：
 
 1. Username，用户名称模糊搜索
+ * @method Models\KickOutClientResponse KickOutClient(Models\KickOutClientRequest $req) 踢出客户端
  * @method Models\ModifyAuthorizationPolicyResponse ModifyAuthorizationPolicy(Models\ModifyAuthorizationPolicyRequest $req) 修改策略规则，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)
  * @method Models\ModifyDeviceIdentityResponse ModifyDeviceIdentity(Models\ModifyDeviceIdentityRequest $req) 修改一机一密设备签名
  * @method Models\ModifyHttpAuthenticatorResponse ModifyHttpAuthenticator(Models\ModifyHttpAuthenticatorRequest $req) 修改MQTT HTTP 认证器

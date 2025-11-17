@@ -122,6 +122,14 @@ DELETING，删除中
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnableDeletionProtection() 获取是否开启删除保护
  * @method void setEnableDeletionProtection(boolean $EnableDeletionProtection) 设置是否开启删除保护
+ * @method integer getCreateTime() 获取实例创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(integer $CreateTime) 设置实例创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getScaledTpsEnabled() 获取弹性TPS开关
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScaledTpsEnabled(boolean $ScaledTpsEnabled) 设置弹性TPS开关
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FusionInstanceItem extends AbstractModel
 {
@@ -269,6 +277,18 @@ DELETING，删除中
     public $EnableDeletionProtection;
 
     /**
+     * @var integer 实例创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
+     * @var boolean 弹性TPS开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScaledTpsEnabled;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Version 实例版本
@@ -320,6 +340,10 @@ DELETING，删除中
      * @param array $ZoneIds 所属可用区列表，参考 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口返回中的 [ZoneInfo](https://cloud.tencent.com/document/api/1596/77932#ZoneInfo) 数据结构。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableDeletionProtection 是否开启删除保护
+     * @param integer $CreateTime 实例创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ScaledTpsEnabled 弹性TPS开关
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -430,6 +454,14 @@ DELETING，删除中
 
         if (array_key_exists("EnableDeletionProtection",$param) and $param["EnableDeletionProtection"] !== null) {
             $this->EnableDeletionProtection = $param["EnableDeletionProtection"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("ScaledTpsEnabled",$param) and $param["ScaledTpsEnabled"] !== null) {
+            $this->ScaledTpsEnabled = $param["ScaledTpsEnabled"];
         }
     }
 }

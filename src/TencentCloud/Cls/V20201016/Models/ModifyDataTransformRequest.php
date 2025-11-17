@@ -54,8 +54,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableFlag(integer $EnableFlag) 设置任务启动状态. 默认为1，开启,  2关闭
  * @method array getDstResources() 获取加工任务目的topic_id以及别名
  * @method void setDstResources(array $DstResources) 设置加工任务目的topic_id以及别名
+ * @method boolean getBackupGiveUpData() 获取超限之后是否丢弃日志数据
+ * @method void setBackupGiveUpData(boolean $BackupGiveUpData) 设置超限之后是否丢弃日志数据
  * @method integer getHasServicesLog() 获取是否开启投递服务日志。1关闭，2开启
  * @method void setHasServicesLog(integer $HasServicesLog) 设置是否开启投递服务日志。1关闭，2开启
+ * @method integer getKeepFailureLog() 获取保留失败日志状态。 1:不保留，2:保留
+ * @method void setKeepFailureLog(integer $KeepFailureLog) 设置保留失败日志状态。 1:不保留，2:保留
+ * @method string getFailureLogKey() 获取失败日志的字段名称
+ * @method void setFailureLogKey(string $FailureLogKey) 设置失败日志的字段名称
+ * @method array getDataTransformSqlDataSources() 获取外部数据源信息
+ * @method void setDataTransformSqlDataSources(array $DataTransformSqlDataSources) 设置外部数据源信息
+ * @method array getEnvInfos() 获取设置的环境变量
+ * @method void setEnvInfos(array $EnvInfos) 设置设置的环境变量
  */
 class ModifyDataTransformRequest extends AbstractModel
 {
@@ -97,9 +107,34 @@ class ModifyDataTransformRequest extends AbstractModel
     public $DstResources;
 
     /**
+     * @var boolean 超限之后是否丢弃日志数据
+     */
+    public $BackupGiveUpData;
+
+    /**
      * @var integer 是否开启投递服务日志。1关闭，2开启
      */
     public $HasServicesLog;
+
+    /**
+     * @var integer 保留失败日志状态。 1:不保留，2:保留
+     */
+    public $KeepFailureLog;
+
+    /**
+     * @var string 失败日志的字段名称
+     */
+    public $FailureLogKey;
+
+    /**
+     * @var array 外部数据源信息
+     */
+    public $DataTransformSqlDataSources;
+
+    /**
+     * @var array 设置的环境变量
+     */
+    public $EnvInfos;
 
     /**
      * @param string $TaskId 数据加工任务ID
@@ -119,7 +154,12 @@ class ModifyDataTransformRequest extends AbstractModel
 -  [函数总览](https://cloud.tencent.com/document/product/614/70395)
      * @param integer $EnableFlag 任务启动状态. 默认为1，开启,  2关闭
      * @param array $DstResources 加工任务目的topic_id以及别名
+     * @param boolean $BackupGiveUpData 超限之后是否丢弃日志数据
      * @param integer $HasServicesLog 是否开启投递服务日志。1关闭，2开启
+     * @param integer $KeepFailureLog 保留失败日志状态。 1:不保留，2:保留
+     * @param string $FailureLogKey 失败日志的字段名称
+     * @param array $DataTransformSqlDataSources 外部数据源信息
+     * @param array $EnvInfos 设置的环境变量
      */
     function __construct()
     {
@@ -159,8 +199,38 @@ class ModifyDataTransformRequest extends AbstractModel
             }
         }
 
+        if (array_key_exists("BackupGiveUpData",$param) and $param["BackupGiveUpData"] !== null) {
+            $this->BackupGiveUpData = $param["BackupGiveUpData"];
+        }
+
         if (array_key_exists("HasServicesLog",$param) and $param["HasServicesLog"] !== null) {
             $this->HasServicesLog = $param["HasServicesLog"];
+        }
+
+        if (array_key_exists("KeepFailureLog",$param) and $param["KeepFailureLog"] !== null) {
+            $this->KeepFailureLog = $param["KeepFailureLog"];
+        }
+
+        if (array_key_exists("FailureLogKey",$param) and $param["FailureLogKey"] !== null) {
+            $this->FailureLogKey = $param["FailureLogKey"];
+        }
+
+        if (array_key_exists("DataTransformSqlDataSources",$param) and $param["DataTransformSqlDataSources"] !== null) {
+            $this->DataTransformSqlDataSources = [];
+            foreach ($param["DataTransformSqlDataSources"] as $key => $value){
+                $obj = new DataTransformSqlDataSource();
+                $obj->deserialize($value);
+                array_push($this->DataTransformSqlDataSources, $obj);
+            }
+        }
+
+        if (array_key_exists("EnvInfos",$param) and $param["EnvInfos"] !== null) {
+            $this->EnvInfos = [];
+            foreach ($param["EnvInfos"] as $key => $value){
+                $obj = new EnvInfo();
+                $obj->deserialize($value);
+                array_push($this->EnvInfos, $obj);
+            }
         }
     }
 }

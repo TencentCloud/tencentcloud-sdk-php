@@ -48,12 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeepaliveEnable(integer $KeepaliveEnable) 设置是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
 默认值0表示不开启，1表示开启。
 若后端服务对连接数上限有限制，则建议谨慎开启。此功能目前处于内测中，如需使用，请提交 [内测申请](https://cloud.tencent.com/apply/p/tsodp6qm21)。
- * @method boolean getDeregisterTargetRst() 获取解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
-True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
-不传则表示不修改。
- * @method void setDeregisterTargetRst(boolean $DeregisterTargetRst) 设置解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
-True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
-不传则表示不修改。
+ * @method boolean getDeregisterTargetRst() 获取重新调度功能，解绑后端服务开关，打开此开关，当解绑后端服务时触发重新调度。仅TCP/UDP监听器支持。
+ * @method void setDeregisterTargetRst(boolean $DeregisterTargetRst) 设置重新调度功能，解绑后端服务开关，打开此开关，当解绑后端服务时触发重新调度。仅TCP/UDP监听器支持。
  * @method string getSessionType() 获取会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
 使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。
 默认为 NORMAL。
@@ -74,10 +70,8 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
  * @method void setIdleConnectTimeout(integer $IdleConnectTimeout) 设置空闲连接超时时间，此参数仅适用于TCP/UDP监听器，单位：秒。TCP监听器默认值：900，UDP监听器默认值：300s。取值范围：共享型实例和独占型实例支持：10～900，性能容量型实例支持：10~1980。如需设置超过1980s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。
  * @method boolean getProxyProtocol() 获取TCP_SSL和QUIC是否支持PP
  * @method void setProxyProtocol(boolean $ProxyProtocol) 设置TCP_SSL和QUIC是否支持PP
- * @method boolean getSnatEnable() 获取是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
-不传则表示不修改。
- * @method void setSnatEnable(boolean $SnatEnable) 设置是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
-不传则表示不修改。
+ * @method boolean getSnatEnable() 获取是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时`透传客户端源IP`选项关闭，反之亦然。
+ * @method void setSnatEnable(boolean $SnatEnable) 设置是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时`透传客户端源IP`选项关闭，反之亦然。
  * @method string getDataCompressMode() 获取数据压缩模式
  * @method void setDataCompressMode(string $DataCompressMode) 设置数据压缩模式
  * @method boolean getRescheduleTargetZeroWeight() 获取重新调度功能，权重调为0开关，打开此开关，后端服务器权重调为0时触发重新调度。仅TCP/UDP监听器支持。
@@ -148,9 +142,7 @@ class ModifyListenerRequest extends AbstractModel
     public $KeepaliveEnable;
 
     /**
-     * @var boolean 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
-True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
-不传则表示不修改。
+     * @var boolean 重新调度功能，解绑后端服务开关，打开此开关，当解绑后端服务时触发重新调度。仅TCP/UDP监听器支持。
      */
     public $DeregisterTargetRst;
 
@@ -189,8 +181,7 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
     public $ProxyProtocol;
 
     /**
-     * @var boolean 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
-不传则表示不修改。
+     * @var boolean 是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时`透传客户端源IP`选项关闭，反之亦然。
      */
     public $SnatEnable;
 
@@ -239,9 +230,7 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
      * @param integer $KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
 默认值0表示不开启，1表示开启。
 若后端服务对连接数上限有限制，则建议谨慎开启。此功能目前处于内测中，如需使用，请提交 [内测申请](https://cloud.tencent.com/apply/p/tsodp6qm21)。
-     * @param boolean $DeregisterTargetRst 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
-True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
-不传则表示不修改。
+     * @param boolean $DeregisterTargetRst 重新调度功能，解绑后端服务开关，打开此开关，当解绑后端服务时触发重新调度。仅TCP/UDP监听器支持。
      * @param string $SessionType 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
 使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。
 默认为 NORMAL。
@@ -252,8 +241,7 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
 默认为 -1 表示不限速。
      * @param integer $IdleConnectTimeout 空闲连接超时时间，此参数仅适用于TCP/UDP监听器，单位：秒。TCP监听器默认值：900，UDP监听器默认值：300s。取值范围：共享型实例和独占型实例支持：10～900，性能容量型实例支持：10~1980。如需设置超过1980s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。
      * @param boolean $ProxyProtocol TCP_SSL和QUIC是否支持PP
-     * @param boolean $SnatEnable 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
-不传则表示不修改。
+     * @param boolean $SnatEnable 是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时`透传客户端源IP`选项关闭，反之亦然。
      * @param string $DataCompressMode 数据压缩模式
      * @param boolean $RescheduleTargetZeroWeight 重新调度功能，权重调为0开关，打开此开关，后端服务器权重调为0时触发重新调度。仅TCP/UDP监听器支持。
      * @param boolean $RescheduleUnhealthy 重新调度功能，健康检查异常开关，打开此开关，后端服务器健康检查异常时触发重新调度。仅TCP/UDP监听器支持。 

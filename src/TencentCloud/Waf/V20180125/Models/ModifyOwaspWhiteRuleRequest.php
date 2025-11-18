@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpireTime(integer $ExpireTime) 设置如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）
  * @method integer getStatus() 获取规则状态，0：关闭、1：开启，默认为开启
  * @method void setStatus(integer $Status) 设置规则状态，0：关闭、1：开启，默认为开启
+ * @method string getLogicalOp() 获取匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+ * @method void setLogicalOp(string $LogicalOp) 设置匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
  */
 class ModifyOwaspWhiteRuleRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class ModifyOwaspWhiteRuleRequest extends AbstractModel
     public $Status;
 
     /**
+     * @var string 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+     */
+    public $LogicalOp;
+
+    /**
      * @param integer $RuleId 规则ID
      * @param string $Name 规则名称
      * @param string $Domain 域名
@@ -104,6 +111,7 @@ class ModifyOwaspWhiteRuleRequest extends AbstractModel
      * @param JobDateTime $JobDateTime 定时任务配置
      * @param integer $ExpireTime 如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）
      * @param integer $Status 规则状态，0：关闭、1：开启，默认为开启
+     * @param string $LogicalOp 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
      */
     function __construct()
     {
@@ -162,6 +170,10 @@ class ModifyOwaspWhiteRuleRequest extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("LogicalOp",$param) and $param["LogicalOp"] !== null) {
+            $this->LogicalOp = $param["LogicalOp"];
         }
     }
 }

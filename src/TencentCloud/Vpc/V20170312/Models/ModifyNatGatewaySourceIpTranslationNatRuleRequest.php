@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getNatGatewayId() 获取NAT网关的ID，形如：`nat-df453454`。
  * @method void setNatGatewayId(string $NatGatewayId) 设置NAT网关的ID，形如：`nat-df453454`。
- * @method SourceIpTranslationNatRule getSourceIpTranslationNatRule() 获取NAT网关的SNAT转换规则。
- * @method void setSourceIpTranslationNatRule(SourceIpTranslationNatRule $SourceIpTranslationNatRule) 设置NAT网关的SNAT转换规则。
+ * @method SourceIpTranslationNatRule getSourceIpTranslationNatRule() 获取NAT网关的SNAT转换规则。仅支持根据指定的NatGatewaySnatId修改PublicIpAddresses或Description。
+ * @method void setSourceIpTranslationNatRule(SourceIpTranslationNatRule $SourceIpTranslationNatRule) 设置NAT网关的SNAT转换规则。仅支持根据指定的NatGatewaySnatId修改PublicIpAddresses或Description。
  */
 class ModifyNatGatewaySourceIpTranslationNatRuleRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyNatGatewaySourceIpTranslationNatRuleRequest extends AbstractModel
     public $NatGatewayId;
 
     /**
-     * @var SourceIpTranslationNatRule NAT网关的SNAT转换规则。
+     * @var SourceIpTranslationNatRule NAT网关的SNAT转换规则。仅支持根据指定的NatGatewaySnatId修改PublicIpAddresses或Description。
      */
     public $SourceIpTranslationNatRule;
 
     /**
      * @param string $NatGatewayId NAT网关的ID，形如：`nat-df453454`。
-     * @param SourceIpTranslationNatRule $SourceIpTranslationNatRule NAT网关的SNAT转换规则。
+     * @param SourceIpTranslationNatRule $SourceIpTranslationNatRule NAT网关的SNAT转换规则。仅支持根据指定的NatGatewaySnatId修改PublicIpAddresses或Description。
      */
     function __construct()
     {

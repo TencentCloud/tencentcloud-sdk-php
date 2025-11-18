@@ -32,7 +32,7 @@ use TencentCloud\Dataagent\V20250513\Models as Models;
  * @method Models\GetSessionDetailsResponse GetSessionDetails(Models\GetSessionDetailsRequest $req) 获取用户会话记录详情列表
  * @method Models\ModifyChunkResponse ModifyChunk(Models\ModifyChunkRequest $req) 编辑修改分片
  * @method Models\ModifyKnowledgeBaseResponse ModifyKnowledgeBase(Models\ModifyKnowledgeBaseRequest $req) 操作知识库
- * @method Models\QueryChunkListResponse QueryChunkList(Models\QueryChunkListRequest $req) 分配查询
+ * @method Models\QueryChunkListResponse QueryChunkList(Models\QueryChunkListRequest $req) 文档切片查询
  * @method Models\StopChatAIResponse StopChatAI(Models\StopChatAIRequest $req) 中断DataAgent的回答输出
  */
 

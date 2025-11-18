@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getNatGatewayId() 获取NAT网关的ID，形如：`nat-df45454`。
  * @method void setNatGatewayId(string $NatGatewayId) 设置NAT网关的ID，形如：`nat-df45454`。
+ * @method boolean getIgnoreOperationRisk() 获取忽略操作风险
+ * @method void setIgnoreOperationRisk(boolean $IgnoreOperationRisk) 设置忽略操作风险
  */
 class DeleteNatGatewayRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DeleteNatGatewayRequest extends AbstractModel
     public $NatGatewayId;
 
     /**
+     * @var boolean 忽略操作风险
+     */
+    public $IgnoreOperationRisk;
+
+    /**
      * @param string $NatGatewayId NAT网关的ID，形如：`nat-df45454`。
+     * @param boolean $IgnoreOperationRisk 忽略操作风险
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteNatGatewayRequest extends AbstractModel
         }
         if (array_key_exists("NatGatewayId",$param) and $param["NatGatewayId"] !== null) {
             $this->NatGatewayId = $param["NatGatewayId"];
+        }
+
+        if (array_key_exists("IgnoreOperationRisk",$param) and $param["IgnoreOperationRisk"] !== null) {
+            $this->IgnoreOperationRisk = $param["IgnoreOperationRisk"];
         }
     }
 }

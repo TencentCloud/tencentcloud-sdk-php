@@ -82,8 +82,14 @@ use TencentCloud\Common\AbstractModel;
 `{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
 
 控制台默认占位值：`{\"ClsAgentDefault\":0}`
- * @method string getInputType() 获取日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file
- * @method void setInputType(string $InputType) 设置日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file
+ * @method string getInputType() 获取日志输入类型（<span style="color:red; font-weight:bold">注：windows场景必填且仅支持file和windows_event类型</span>）
+- file: 文件类型采集
+- windows_event：windows事件采集
+- syslog：系统日志采集
+ * @method void setInputType(string $InputType) 设置日志输入类型（<span style="color:red; font-weight:bold">注：windows场景必填且仅支持file和windows_event类型</span>）
+- file: 文件类型采集
+- windows_event：windows事件采集
+- syslog：系统日志采集
  */
 class ConfigInfo extends AbstractModel
 {
@@ -167,7 +173,10 @@ class ConfigInfo extends AbstractModel
     public $AdvancedConfig;
 
     /**
-     * @var string 日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file
+     * @var string 日志输入类型（<span style="color:red; font-weight:bold">注：windows场景必填且仅支持file和windows_event类型</span>）
+- file: 文件类型采集
+- windows_event：windows事件采集
+- syslog：系统日志采集
      */
     public $InputType;
 
@@ -203,7 +212,10 @@ class ConfigInfo extends AbstractModel
 `{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
 
 控制台默认占位值：`{\"ClsAgentDefault\":0}`
-     * @param string $InputType 日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file
+     * @param string $InputType 日志输入类型（<span style="color:red; font-weight:bold">注：windows场景必填且仅支持file和windows_event类型</span>）
+- file: 文件类型采集
+- windows_event：windows事件采集
+- syslog：系统日志采集
      */
     function __construct()
     {

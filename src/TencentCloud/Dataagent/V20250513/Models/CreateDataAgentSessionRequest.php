@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDataAgentSession请求参数结构体
  *
-
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
  */
 class CreateDataAgentSessionRequest extends AbstractModel
 {
-
+    /**
+     * @var string 实例ID
+     */
+    public $InstanceId;
 
     /**
-
+     * @param string $InstanceId 实例ID
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class CreateDataAgentSessionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
     }
 }

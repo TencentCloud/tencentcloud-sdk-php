@@ -21,22 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * DescribePrivateNatGateways请求参数结构体
  *
  * @method array getNatGatewayIds() 获取私网网关唯一`ID`，形如：`intranat-0g3blj80`。
+注意：NatGatewayIds和Filters参数互斥，不能同时传入。
  * @method void setNatGatewayIds(array $NatGatewayIds) 设置私网网关唯一`ID`，形如：`intranat-0g3blj80`。
+注意：NatGatewayIds和Filters参数互斥，不能同时传入。
  * @method array getFilters() 获取过滤条件。<li>NatGatewayId - String - 私网网关唯一`ID`，形如：`intranat-0g3blj80`。</li><li>NatGatewayName - String - 专线网关名称，默认模糊查询。</li><li>VpcId - String - 私网网关所在`VpcId`。</li><li>TagKey - Tag数组 - 私网网关标签键值对数组</li><li>intranat-status - String - （过滤条件）NAT实例当前状态，形如：`AVAILABLE`。</li>
  * @method void setFilters(array $Filters) 设置过滤条件。<li>NatGatewayId - String - 私网网关唯一`ID`，形如：`intranat-0g3blj80`。</li><li>NatGatewayName - String - 专线网关名称，默认模糊查询。</li><li>VpcId - String - 私网网关所在`VpcId`。</li><li>TagKey - Tag数组 - 私网网关标签键值对数组</li><li>intranat-status - String - （过滤条件）NAT实例当前状态，形如：`AVAILABLE`。</li>
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取返回数量，默认为20。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20。
- * @method string getOrderField() 获取排序字段。可选值："NatGatewayId"、"NatGatewayName"、"CreatedTime"
- * @method void setOrderField(string $OrderField) 设置排序字段。可选值："NatGatewayId"、"NatGatewayName"、"CreatedTime"
- * @method string getOrderDirection() 获取排序方式。可选值："ASC"、"DESC"。
- * @method void setOrderDirection(string $OrderDirection) 设置排序方式。可选值："ASC"、"DESC"。
+ * @method string getOrderField() 获取排序字段。可选值：NatGatewayId、NatGatewayName、CreatedTime。
+ * @method void setOrderField(string $OrderField) 设置排序字段。可选值：NatGatewayId、NatGatewayName、CreatedTime。
+ * @method string getOrderDirection() 获取排序方式。可选值：ASC、DESC。分别表示升序、降序。
+ * @method void setOrderDirection(string $OrderDirection) 设置排序方式。可选值：ASC、DESC。分别表示升序、降序。
  */
 class DescribePrivateNatGatewaysRequest extends AbstractModel
 {
     /**
      * @var array 私网网关唯一`ID`，形如：`intranat-0g3blj80`。
+注意：NatGatewayIds和Filters参数互斥，不能同时传入。
      */
     public $NatGatewayIds;
 
@@ -56,22 +59,23 @@ class DescribePrivateNatGatewaysRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 排序字段。可选值："NatGatewayId"、"NatGatewayName"、"CreatedTime"
+     * @var string 排序字段。可选值：NatGatewayId、NatGatewayName、CreatedTime。
      */
     public $OrderField;
 
     /**
-     * @var string 排序方式。可选值："ASC"、"DESC"。
+     * @var string 排序方式。可选值：ASC、DESC。分别表示升序、降序。
      */
     public $OrderDirection;
 
     /**
      * @param array $NatGatewayIds 私网网关唯一`ID`，形如：`intranat-0g3blj80`。
+注意：NatGatewayIds和Filters参数互斥，不能同时传入。
      * @param array $Filters 过滤条件。<li>NatGatewayId - String - 私网网关唯一`ID`，形如：`intranat-0g3blj80`。</li><li>NatGatewayName - String - 专线网关名称，默认模糊查询。</li><li>VpcId - String - 私网网关所在`VpcId`。</li><li>TagKey - Tag数组 - 私网网关标签键值对数组</li><li>intranat-status - String - （过滤条件）NAT实例当前状态，形如：`AVAILABLE`。</li>
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 返回数量，默认为20。
-     * @param string $OrderField 排序字段。可选值："NatGatewayId"、"NatGatewayName"、"CreatedTime"
-     * @param string $OrderDirection 排序方式。可选值："ASC"、"DESC"。
+     * @param string $OrderField 排序字段。可选值：NatGatewayId、NatGatewayName、CreatedTime。
+     * @param string $OrderDirection 排序方式。可选值：ASC、DESC。分别表示升序、降序。
      */
     function __construct()
     {

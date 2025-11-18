@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateNatGateway请求参数结构体
  *
- * @method string getNatGatewayName() 获取NAT网关名称
- * @method void setNatGatewayName(string $NatGatewayName) 设置NAT网关名称
+ * @method string getNatGatewayName() 获取NAT网关名称，限制60字符
+ * @method void setNatGatewayName(string $NatGatewayName) 设置NAT网关名称，限制60字符
  * @method string getVpcId() 获取VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
  * @method void setVpcId(string $VpcId) 设置VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
  * @method integer getInternetMaxBandwidthOut() 获取NAT网关最大外网出带宽(单位：Mbps)，支持的参数值：20, 50, 100, 200, 500, 1000, 2000, 5000，默认: 100Mbps。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为5000Mbps。
@@ -52,7 +52,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateNatGatewayRequest extends AbstractModel
 {
     /**
-     * @var string NAT网关名称
+     * @var string NAT网关名称，限制60字符
      */
     public $NatGatewayName;
 
@@ -123,7 +123,7 @@ class CreateNatGatewayRequest extends AbstractModel
     public $DeletionProtectionEnabled;
 
     /**
-     * @param string $NatGatewayName NAT网关名称
+     * @param string $NatGatewayName NAT网关名称，限制60字符
      * @param string $VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @param integer $InternetMaxBandwidthOut NAT网关最大外网出带宽(单位：Mbps)，支持的参数值：20, 50, 100, 200, 500, 1000, 2000, 5000，默认: 100Mbps。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为5000Mbps。
      * @param integer $MaxConcurrentConnection NAT网关并发连接数上限，支持参数值：1000000、3000000、10000000，默认值为1000000。 当NatProductVersion参数值为2即标准型时，此参数无需填写，默认为2000000。

@@ -25,6 +25,7 @@ use TencentCloud\Postgres\V20170312\Models as Models;
 /**
  * @method Models\AddDBInstanceToReadOnlyGroupResponse AddDBInstanceToReadOnlyGroup(Models\AddDBInstanceToReadOnlyGroupRequest $req) 本接口（AddDBInstanceToReadOnlyGroup）用于添加只读实例到只读组
  * @method Models\CloneDBInstanceResponse CloneDBInstance(Models\CloneDBInstanceRequest $req) 用于克隆实例，支持指定备份集、指定时间点进行克隆。
+ * @method Models\CloseAccountCAMResponse CloseAccountCAM(Models\CloseAccountCAMRequest $req) 本接口用于关闭数据库账户的CAM验证服务。
  * @method Models\CloseDBExtranetAccessResponse CloseDBExtranetAccess(Models\CloseDBExtranetAccessRequest $req) 本接口（CloseDBExtranetAccess）用于关闭实例公网地址。
  * @method Models\CreateAccountResponse CreateAccount(Models\CreateAccountRequest $req) 此接口用于创建数据账号，返回的Oid为账号唯一标识。与数据库系统表pg_roles中记录的oid一致。
  * @method Models\CreateBackupPlanResponse CreateBackupPlan(Models\CreateBackupPlanRequest $req) 此接口用于创建备份策略。
@@ -101,6 +102,7 @@ use TencentCloud\Postgres\V20170312\Models as Models;
  * @method Models\ModifyBackupPlanResponse ModifyBackupPlan(Models\ModifyBackupPlanRequest $req) 本接口 (ModifyBackupPlan) 用于实例备份计划的修改，默认是在每天的凌晨开始全量备份，备份保留时长是7天。可以根据此接口指定时间进行实例的备份。
  * @method Models\ModifyBaseBackupExpireTimeResponse ModifyBaseBackupExpireTime(Models\ModifyBaseBackupExpireTimeRequest $req) 本接口（ModifyBaseBackupExpireTime）用于修改实例指定数据备份的过期时间。
  * @method Models\ModifyDBInstanceChargeTypeResponse ModifyDBInstanceChargeType(Models\ModifyDBInstanceChargeTypeRequest $req) 支持实例的计费类型转换（目前仅支持按量计费转包年包月）
+ * @method Models\ModifyDBInstanceDeletionProtectionResponse ModifyDBInstanceDeletionProtection(Models\ModifyDBInstanceDeletionProtectionRequest $req) 本接口（DeletionProtection）用于开启或关闭实例销毁保护
  * @method Models\ModifyDBInstanceDeploymentResponse ModifyDBInstanceDeployment(Models\ModifyDBInstanceDeploymentRequest $req) 本接口（ModifyDBInstanceDeployment）用于修改节点可用区部署方式，仅支持主实例。
  * @method Models\ModifyDBInstanceHAConfigResponse ModifyDBInstanceHAConfig(Models\ModifyDBInstanceHAConfigRequest $req) 本接口（ModifyDBInstanceHAConfig）用于修改实例HA配置信息。其中HA配置信息包括：
 <li>允许备节点切换为主节点的条件配置</li>
@@ -118,8 +120,10 @@ use TencentCloud\Postgres\V20170312\Models as Models;
  * @method Models\ModifyReadOnlyDBInstanceWeightResponse ModifyReadOnlyDBInstanceWeight(Models\ModifyReadOnlyDBInstanceWeightRequest $req) 本接口（ModifyReadOnlyDBInstanceWeight）用于修改只读实例权重
  * @method Models\ModifyReadOnlyGroupConfigResponse ModifyReadOnlyGroupConfig(Models\ModifyReadOnlyGroupConfigRequest $req) 本接口(ModifyReadOnlyGroupConfig)用于更新只读组配置信息
  * @method Models\ModifySwitchTimePeriodResponse ModifySwitchTimePeriod(Models\ModifySwitchTimePeriodRequest $req) 当升级完成后，对处于等待切换状态下的实例，强制实例立即切换。
+ * @method Models\OpenAccountCAMResponse OpenAccountCAM(Models\OpenAccountCAMRequest $req) 本接口用于开启数据库账户的CAM验证服务。
  * @method Models\OpenDBExtranetAccessResponse OpenDBExtranetAccess(Models\OpenDBExtranetAccessRequest $req) 本接口（OpenDBExtranetAccess）用于开通实例公网地址。
  * @method Models\RebalanceReadOnlyGroupResponse RebalanceReadOnlyGroup(Models\RebalanceReadOnlyGroupRequest $req) 本接口(RebalanceReadOnlyGroup)用于重新均衡 RO 组内实例的负载。注意，RO 组内 RO 实例会有一次数据库连接瞬断，请确保应用程序能重连数据库，谨慎操作。
+ * @method Models\RefreshAccountPasswordResponse RefreshAccountPassword(Models\RefreshAccountPasswordRequest $req) 本接口用于对开启CAM验证的账户执行手动刷新密码。
  * @method Models\RemoveDBInstanceFromReadOnlyGroupResponse RemoveDBInstanceFromReadOnlyGroup(Models\RemoveDBInstanceFromReadOnlyGroupRequest $req) 本接口（RemoveDBInstanceFromReadOnlyGroup）用户将只读实例从只读组中移除
  * @method Models\RenewInstanceResponse RenewInstance(Models\RenewInstanceRequest $req) 本接口（RenewInstance）用于续费实例。
  * @method Models\ResetAccountPasswordResponse ResetAccountPassword(Models\ResetAccountPasswordRequest $req) 本接口（ResetAccountPassword）用于重置实例的账户密码。

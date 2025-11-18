@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置vpc的ID
  * @method string getNatGatewayId() 获取NAT网关ID
  * @method void setNatGatewayId(string $NatGatewayId) 设置NAT网关ID
- * @method boolean getDryRun() 获取是否是预刷新；True:是， False:否
- * @method void setDryRun(boolean $DryRun) 设置是否是预刷新；True:是， False:否
+ * @method boolean getDryRun() 获取是否是预刷新；true:是， false:否
+ * @method void setDryRun(boolean $DryRun) 设置是否是预刷新；true:是， false:否
  */
 class RefreshDirectConnectGatewayRouteToNatGatewayRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class RefreshDirectConnectGatewayRouteToNatGatewayRequest extends AbstractModel
     public $NatGatewayId;
 
     /**
-     * @var boolean 是否是预刷新；True:是， False:否
+     * @var boolean 是否是预刷新；true:是， false:否
      */
     public $DryRun;
 
     /**
      * @param string $VpcId vpc的ID
      * @param string $NatGatewayId NAT网关ID
-     * @param boolean $DryRun 是否是预刷新；True:是， False:否
+     * @param boolean $DryRun 是否是预刷新；true:是， false:否
      */
     function __construct()
     {

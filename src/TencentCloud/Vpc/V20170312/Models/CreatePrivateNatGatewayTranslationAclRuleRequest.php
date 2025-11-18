@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getNatGatewayId() 获取私网网关唯一`ID`，形如：`intranat-xxxxxxxx`。
  * @method void setNatGatewayId(string $NatGatewayId) 设置私网网关唯一`ID`，形如：`intranat-xxxxxxxx`。
- * @method string getTranslationDirection() 获取转换规则目标，可选值"LOCAL"。
- * @method void setTranslationDirection(string $TranslationDirection) 设置转换规则目标，可选值"LOCAL"。
- * @method string getTranslationType() 获取转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。
- * @method void setTranslationType(string $TranslationType) 设置转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。
- * @method string getTranslationIp() 获取转换`IP`,当转换规则类型为四层时为`IP`池。
- * @method void setTranslationIp(string $TranslationIp) 设置转换`IP`,当转换规则类型为四层时为`IP`池。
+ * @method string getTranslationDirection() 获取转换规则目标，可选值LOCAL。
+ * @method void setTranslationDirection(string $TranslationDirection) 设置转换规则目标，可选值LOCAL。
+ * @method string getTranslationType() 获取转换规则类型，可选值NETWORK_LAYER、TRANSPORT_LAYER。分别对应三层、四层。
+ * @method void setTranslationType(string $TranslationType) 设置转换规则类型，可选值NETWORK_LAYER、TRANSPORT_LAYER。分别对应三层、四层。
+ * @method string getTranslationIp() 获取映射后`IP`,当转换规则类型为四层时为`IP`池。
+ * @method void setTranslationIp(string $TranslationIp) 设置映射后`IP`,当转换规则类型为四层时为`IP`池。
  * @method array getTranslationAclRules() 获取访问控制列表。
  * @method void setTranslationAclRules(array $TranslationAclRules) 设置访问控制列表。
- * @method string getOriginalIp() 获取源`IP`,当转换规则类型为三层时有效。
- * @method void setOriginalIp(string $OriginalIp) 设置源`IP`,当转换规则类型为三层时有效。
+ * @method string getOriginalIp() 获取映射前`IP`,当转换规则类型为三层时有效。
+ * @method void setOriginalIp(string $OriginalIp) 设置映射前`IP`,当转换规则类型为三层时有效。
  */
 class CreatePrivateNatGatewayTranslationAclRuleRequest extends AbstractModel
 {
@@ -41,17 +41,17 @@ class CreatePrivateNatGatewayTranslationAclRuleRequest extends AbstractModel
     public $NatGatewayId;
 
     /**
-     * @var string 转换规则目标，可选值"LOCAL"。
+     * @var string 转换规则目标，可选值LOCAL。
      */
     public $TranslationDirection;
 
     /**
-     * @var string 转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。
+     * @var string 转换规则类型，可选值NETWORK_LAYER、TRANSPORT_LAYER。分别对应三层、四层。
      */
     public $TranslationType;
 
     /**
-     * @var string 转换`IP`,当转换规则类型为四层时为`IP`池。
+     * @var string 映射后`IP`,当转换规则类型为四层时为`IP`池。
      */
     public $TranslationIp;
 
@@ -61,17 +61,17 @@ class CreatePrivateNatGatewayTranslationAclRuleRequest extends AbstractModel
     public $TranslationAclRules;
 
     /**
-     * @var string 源`IP`,当转换规则类型为三层时有效。
+     * @var string 映射前`IP`,当转换规则类型为三层时有效。
      */
     public $OriginalIp;
 
     /**
      * @param string $NatGatewayId 私网网关唯一`ID`，形如：`intranat-xxxxxxxx`。
-     * @param string $TranslationDirection 转换规则目标，可选值"LOCAL"。
-     * @param string $TranslationType 转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。
-     * @param string $TranslationIp 转换`IP`,当转换规则类型为四层时为`IP`池。
+     * @param string $TranslationDirection 转换规则目标，可选值LOCAL。
+     * @param string $TranslationType 转换规则类型，可选值NETWORK_LAYER、TRANSPORT_LAYER。分别对应三层、四层。
+     * @param string $TranslationIp 映射后`IP`,当转换规则类型为四层时为`IP`池。
      * @param array $TranslationAclRules 访问控制列表。
-     * @param string $OriginalIp 源`IP`,当转换规则类型为三层时有效。
+     * @param string $OriginalIp 映射前`IP`,当转换规则类型为三层时有效。
      */
     function __construct()
     {

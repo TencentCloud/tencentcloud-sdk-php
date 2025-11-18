@@ -35,7 +35,7 @@ use TencentCloud\Common\AbstractModel;
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
-注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。
+注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。且要求输入源为全景视频（带多视角）。
  * @method void setCodec(string $Codec) 设置视频流的编码格式，可选值：
 <li>h264：H.264 编码</li>
 <li>h265：H.265 编码</li>
@@ -51,7 +51,7 @@ use TencentCloud\Common\AbstractModel;
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
-注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。
+注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。且要求输入源为全景视频（带多视角）。
  * @method integer getFps() 获取视频帧率，取值范围：
 当FpsDenominator的值为空时，范围：[0, 120]，单位：Hz；
 当FpsDenominator的值不为空时，Fps/FpsDenominator的范围：[0,120]
@@ -333,7 +333,7 @@ class VideoTemplateInfo extends AbstractModel
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
-注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。
+注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。且要求输入源为全景视频（带多视角）。
      */
     public $Codec;
 
@@ -588,7 +588,7 @@ low_compress：画质优先：优先保证画质，压缩出来的文件体积�
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
-注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。
+注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。且要求输入源为全景视频（带多视角）。
      * @param integer $Fps 视频帧率，取值范围：
 当FpsDenominator的值为空时，范围：[0, 120]，单位：Hz；
 当FpsDenominator的值不为空时，Fps/FpsDenominator的范围：[0,120]

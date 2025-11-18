@@ -25,6 +25,7 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
 /**
  * @method Models\ActivateCaCertificateResponse ActivateCaCertificate(Models\ActivateCaCertificateRequest $req) 激活Ca证书
  * @method Models\ActivateDeviceCertificateResponse ActivateDeviceCertificate(Models\ActivateDeviceCertificateRequest $req) 生效设备证书
+ * @method Models\AddClientSubscriptionResponse AddClientSubscription(Models\AddClientSubscriptionRequest $req) 为MQTT客户端增加一条订阅
  * @method Models\ApplyRegistrationCodeResponse ApplyRegistrationCode(Models\ApplyRegistrationCodeRequest $req) 申请ca注册码
  * @method Models\CreateAuthorizationPolicyResponse CreateAuthorizationPolicy(Models\CreateAuthorizationPolicyRequest $req) 创建MQTT实例的性能测试任务
  * @method Models\CreateDeviceIdentityResponse CreateDeviceIdentity(Models\CreateDeviceIdentityRequest $req) 创建一机一密设备签名
@@ -40,6 +41,7 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
  * @method Models\DeleteAuthenticatorResponse DeleteAuthenticator(Models\DeleteAuthenticatorRequest $req) 根据认证器类型删除一个MQTT认证器
  * @method Models\DeleteAuthorizationPolicyResponse DeleteAuthorizationPolicy(Models\DeleteAuthorizationPolicyRequest $req) 删除策略规则
  * @method Models\DeleteCaCertificateResponse DeleteCaCertificate(Models\DeleteCaCertificateRequest $req) 删除Ca证书
+ * @method Models\DeleteClientSubscriptionResponse DeleteClientSubscription(Models\DeleteClientSubscriptionRequest $req) 删除MQTT客户端下的一条订阅
  * @method Models\DeleteDeviceCertificateResponse DeleteDeviceCertificate(Models\DeleteDeviceCertificateRequest $req) 删除设备证书
  * @method Models\DeleteDeviceIdentityResponse DeleteDeviceIdentity(Models\DeleteDeviceIdentityRequest $req) 删除一机一密设备签名
  * @method Models\DeleteInsPublicEndpointResponse DeleteInsPublicEndpoint(Models\DeleteInsPublicEndpointRequest $req) 删除MQTT实例的公网接入点

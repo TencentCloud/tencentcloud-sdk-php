@@ -40,29 +40,29 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setYarnQueue(string $YarnQueue) 设置资源池队列名称，需要通过 DescribeProjectClusterQueues 获取
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSourceServiceId() 获取来源数据源ID, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+ * @method string getSourceServiceId() 获取来源数据源ID,  需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSourceServiceId(string $SourceServiceId) 设置来源数据源ID, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+ * @method void setSourceServiceId(string $SourceServiceId) 设置来源数据源ID,  需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSourceServiceType() 获取来源数据源类型, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+ * @method string getSourceServiceType() 获取来源数据源类型,  需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSourceServiceType(string $SourceServiceType) 设置来源数据源类型, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+ * @method void setSourceServiceType(string $SourceServiceType) 设置来源数据源类型,  需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSourceServiceName() 获取来源数据源名称, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+ * @method string getSourceServiceName() 获取来源数据源名称, 需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSourceServiceName(string $SourceServiceName) 设置来源数据源名称, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+ * @method void setSourceServiceName(string $SourceServiceName) 设置来源数据源名称, 需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTargetServiceId() 获取目标数据源ID, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+ * @method string getTargetServiceId() 获取目标数据源ID, 需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTargetServiceId(string $TargetServiceId) 设置目标数据源ID, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+ * @method void setTargetServiceId(string $TargetServiceId) 设置目标数据源ID, 需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTargetServiceType() 获取目标数据源类型, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+ * @method string getTargetServiceType() 获取目标数据源类型,  需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTargetServiceType(string $TargetServiceType) 设置目标数据源类型, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+ * @method void setTargetServiceType(string $TargetServiceType) 设置目标数据源类型,  需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTargetServiceName() 获取目标数据源名称, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+ * @method string getTargetServiceName() 获取目标数据源名称, 需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTargetServiceName(string $TargetServiceName) 设置目标数据源名称, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+ * @method void setTargetServiceName(string $TargetServiceName) 设置目标数据源名称, 需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceGroup() 获取资源组ID： 需要通过 DescribeNormalSchedulerExecutorGroups 获取 ExecutorGroupId
 注意：此字段可能返回 null，表示取不到有效值。
@@ -118,37 +118,37 @@ class TaskConfiguration extends AbstractModel
     public $YarnQueue;
 
     /**
-     * @var string 来源数据源ID, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * @var string 来源数据源ID,  需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceServiceId;
 
     /**
-     * @var string 来源数据源类型, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * @var string 来源数据源类型,  需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceServiceType;
 
     /**
-     * @var string 来源数据源名称, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * @var string 来源数据源名称, 需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceServiceName;
 
     /**
-     * @var string 目标数据源ID, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * @var string 目标数据源ID, 需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetServiceId;
 
     /**
-     * @var string 目标数据源类型, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * @var string 目标数据源类型,  需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetServiceType;
 
     /**
-     * @var string 目标数据源名称, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * @var string 目标数据源名称, 需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetServiceName;
@@ -194,17 +194,17 @@ class TaskConfiguration extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $YarnQueue 资源池队列名称，需要通过 DescribeProjectClusterQueues 获取
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SourceServiceId 来源数据源ID, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * @param string $SourceServiceId 来源数据源ID,  需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SourceServiceType 来源数据源类型, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * @param string $SourceServiceType 来源数据源类型,  需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SourceServiceName 来源数据源名称, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * @param string $SourceServiceName 来源数据源名称, 需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TargetServiceId 目标数据源ID, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * @param string $TargetServiceId 目标数据源ID, 需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TargetServiceType 目标数据源类型, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * @param string $TargetServiceType 目标数据源类型,  需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TargetServiceName 目标数据源名称, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * @param string $TargetServiceName 目标数据源名称, 需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceGroup 资源组ID： 需要通过 DescribeNormalSchedulerExecutorGroups 获取 ExecutorGroupId
 注意：此字段可能返回 null，表示取不到有效值。

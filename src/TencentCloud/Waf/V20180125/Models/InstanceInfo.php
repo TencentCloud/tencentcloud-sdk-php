@@ -142,6 +142,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLLMPkg(LLMPkg $LLMPkg) 设置大模型安全信息包
  * @method string getElasticResourceId() 获取弹性资源Id
  * @method void setElasticResourceId(string $ElasticResourceId) 设置弹性资源Id
+ * @method LLMMonPkg getLLMMonPkg() 获取预付费大模型安全信息包
+ * @method void setLLMMonPkg(LLMMonPkg $LLMMonPkg) 设置预付费大模型安全信息包
+ * @method integer getRegionId() 获取地域id
+ * @method void setRegionId(integer $RegionId) 设置地域id
  */
 class InstanceInfo extends AbstractModel
 {
@@ -407,6 +411,16 @@ class InstanceInfo extends AbstractModel
     public $ElasticResourceId;
 
     /**
+     * @var LLMMonPkg 预付费大模型安全信息包
+     */
+    public $LLMMonPkg;
+
+    /**
+     * @var integer 地域id
+     */
+    public $RegionId;
+
+    /**
      * @param string $InstanceId 实例唯一ID
      * @param string $InstanceName 实例名称
      * @param string $ResourceIds 实例对应资源ID，计费使用
@@ -468,6 +482,8 @@ class InstanceInfo extends AbstractModel
 1：超量限流
      * @param LLMPkg $LLMPkg 大模型安全信息包
      * @param string $ElasticResourceId 弹性资源Id
+     * @param LLMMonPkg $LLMMonPkg 预付费大模型安全信息包
+     * @param integer $RegionId 地域id
      */
     function __construct()
     {
@@ -694,6 +710,15 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("ElasticResourceId",$param) and $param["ElasticResourceId"] !== null) {
             $this->ElasticResourceId = $param["ElasticResourceId"];
+        }
+
+        if (array_key_exists("LLMMonPkg",$param) and $param["LLMMonPkg"] !== null) {
+            $this->LLMMonPkg = new LLMMonPkg();
+            $this->LLMMonPkg->deserialize($param["LLMMonPkg"]);
+        }
+
+        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
+            $this->RegionId = $param["RegionId"];
         }
     }
 }

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) 设置发起流程的web页面链接，有效期5分钟
  * @method string getFlowId() 获取创建的合同id（还未实际发起），每次调用会生成新的id，用户可以记录此字段对应后续页面发起的合同，若在页面上未成功发起，则此字段无效。
  * @method void setFlowId(string $FlowId) 设置创建的合同id（还未实际发起），每次调用会生成新的id，用户可以记录此字段对应后续页面发起的合同，若在页面上未成功发起，则此字段无效。
+ * @method string getDraftId() 获取临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。
+ * @method void setDraftId(string $DraftId) 设置临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class CreatePrepareFlowResponse extends AbstractModel
     public $FlowId;
 
     /**
+     * @var string 临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。
+     */
+    public $DraftId;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class CreatePrepareFlowResponse extends AbstractModel
     /**
      * @param string $Url 发起流程的web页面链接，有效期5分钟
      * @param string $FlowId 创建的合同id（还未实际发起），每次调用会生成新的id，用户可以记录此字段对应后续页面发起的合同，若在页面上未成功发起，则此字段无效。
+     * @param string $DraftId 临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +76,10 @@ class CreatePrepareFlowResponse extends AbstractModel
 
         if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
             $this->FlowId = $param["FlowId"];
+        }
+
+        if (array_key_exists("DraftId",$param) and $param["DraftId"] !== null) {
+            $this->DraftId = $param["DraftId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

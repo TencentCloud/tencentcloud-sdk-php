@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryChunkList请求参数结构体
  *
- * @method integer getPage() 获取默认 1 表示第一页
- * @method void setPage(integer $Page) 设置默认 1 表示第一页
- * @method integer getPageSize() 获取	 默认 10 一页展示 10 条
- * @method void setPageSize(integer $PageSize) 设置	 默认 10 一页展示 10 条
+ * @method integer getPage() 获取表示第一页
+ * @method void setPage(integer $Page) 设置表示第一页
+ * @method integer getPageSize() 获取默认一页展示 10 条
+ * @method void setPageSize(integer $PageSize) 设置默认一页展示 10 条
  */
 class QueryChunkListRequest extends AbstractModel
 {
     /**
-     * @var integer 默认 1 表示第一页
+     * @var integer 表示第一页
      */
     public $Page;
 
     /**
-     * @var integer 	 默认 10 一页展示 10 条
+     * @var integer 默认一页展示 10 条
      */
     public $PageSize;
 
     /**
-     * @param integer $Page 默认 1 表示第一页
-     * @param integer $PageSize 	 默认 10 一页展示 10 条
+     * @param integer $Page 表示第一页
+     * @param integer $PageSize 默认一页展示 10 条
      */
     function __construct()
     {

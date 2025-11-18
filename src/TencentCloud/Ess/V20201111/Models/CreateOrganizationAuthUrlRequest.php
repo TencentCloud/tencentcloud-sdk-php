@@ -194,6 +194,8 @@ Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font
 如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 
 
 p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
+ * @method string getOrganizationIdCardType() 获取企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li></ul>
+ * @method void setOrganizationIdCardType(string $OrganizationIdCardType) 设置企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li></ul>
  */
 class CreateOrganizationAuthUrlRequest extends AbstractModel
 {
@@ -385,6 +387,11 @@ p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，
     public $JumpEvents;
 
     /**
+     * @var string 企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li></ul>
+     */
+    public $OrganizationIdCardType;
+
+    /**
      * @param UserInfo $Operator 操作人信息
      * @param array $AuthorizationTypes 指定授权方式 支持多选:
 
@@ -472,6 +479,7 @@ Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font
 如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 
 
 p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
+     * @param string $OrganizationIdCardType 企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li></ul>
      */
     function __construct()
     {
@@ -590,6 +598,10 @@ p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，
                 $obj->deserialize($value);
                 array_push($this->JumpEvents, $obj);
             }
+        }
+
+        if (array_key_exists("OrganizationIdCardType",$param) and $param["OrganizationIdCardType"] !== null) {
+            $this->OrganizationIdCardType = $param["OrganizationIdCardType"];
         }
     }
 }

@@ -48,8 +48,12 @@ GWLB可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/p
  * @method void setEndPointServiceIds(array $EndPointServiceIds) 设置终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。不支持同时传入参数 EndPointServiceIds and Filters。
  * @method boolean getIsListAuthorizedEndPointService() 获取<li>不支持同时传入参数 Filters 。</li> <li>列出授权给当前账号的终端节点服务信息。可以配合EndPointServiceIds参数进行过滤，哪些终端节点服务授权了该账户。</li>
  * @method void setIsListAuthorizedEndPointService(boolean $IsListAuthorizedEndPointService) 设置<li>不支持同时传入参数 Filters 。</li> <li>列出授权给当前账号的终端节点服务信息。可以配合EndPointServiceIds参数进行过滤，哪些终端节点服务授权了该账户。</li>
- * @method string getIpAddressType() 获取协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
- * @method void setIpAddressType(string $IpAddressType) 设置协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+ * @method string getIpAddressType() 获取协议类型，支持 Ipv4，Ipv6， DualStack，默认 Ipv4。使用DualStack查询双栈的时候，必须要使用MaxResult配合NextToken查询。第1次查询的时候只需要携带MaxResult，如果返回NextToken非空，表示有更多可用数据。第2次查询的时候就需要携带NextToken进行分页查询。
+ * @method void setIpAddressType(string $IpAddressType) 设置协议类型，支持 Ipv4，Ipv6， DualStack，默认 Ipv4。使用DualStack查询双栈的时候，必须要使用MaxResult配合NextToken查询。第1次查询的时候只需要携带MaxResult，如果返回NextToken非空，表示有更多可用数据。第2次查询的时候就需要携带NextToken进行分页查询。
+ * @method integer getMaxResults() 获取每次调用返回的最大结果数。如果查询返回的时候有NextToken返回，您可以使用NextToken值获取更多页结果， 当NextToke返回空或者返回的结果数量小于MaxResults时，表示没有更多数据了。允许的最大页面大小为 100。
+ * @method void setMaxResults(integer $MaxResults) 设置每次调用返回的最大结果数。如果查询返回的时候有NextToken返回，您可以使用NextToken值获取更多页结果， 当NextToke返回空或者返回的结果数量小于MaxResults时，表示没有更多数据了。允许的最大页面大小为 100。
+ * @method string getNextToken() 获取如果NextToken返回 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。
+ * @method void setNextToken(string $NextToken) 设置如果NextToken返回 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。
  */
 class DescribeVpcEndPointServiceRequest extends AbstractModel
 {
@@ -88,9 +92,19 @@ GWLB可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/p
     public $IsListAuthorizedEndPointService;
 
     /**
-     * @var string 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+     * @var string 协议类型，支持 Ipv4，Ipv6， DualStack，默认 Ipv4。使用DualStack查询双栈的时候，必须要使用MaxResult配合NextToken查询。第1次查询的时候只需要携带MaxResult，如果返回NextToken非空，表示有更多可用数据。第2次查询的时候就需要携带NextToken进行分页查询。
      */
     public $IpAddressType;
+
+    /**
+     * @var integer 每次调用返回的最大结果数。如果查询返回的时候有NextToken返回，您可以使用NextToken值获取更多页结果， 当NextToke返回空或者返回的结果数量小于MaxResults时，表示没有更多数据了。允许的最大页面大小为 100。
+     */
+    public $MaxResults;
+
+    /**
+     * @var string 如果NextToken返回 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。
+     */
+    public $NextToken;
 
     /**
      * @param array $Filters 过滤条件。不支持同时传入参数 EndPointServiceIds and Filters。
@@ -107,7 +121,9 @@ GWLB可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/p
      * @param integer $Limit 单页返回数量，默认为20，最大值为100。
      * @param array $EndPointServiceIds 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。不支持同时传入参数 EndPointServiceIds and Filters。
      * @param boolean $IsListAuthorizedEndPointService <li>不支持同时传入参数 Filters 。</li> <li>列出授权给当前账号的终端节点服务信息。可以配合EndPointServiceIds参数进行过滤，哪些终端节点服务授权了该账户。</li>
-     * @param string $IpAddressType 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+     * @param string $IpAddressType 协议类型，支持 Ipv4，Ipv6， DualStack，默认 Ipv4。使用DualStack查询双栈的时候，必须要使用MaxResult配合NextToken查询。第1次查询的时候只需要携带MaxResult，如果返回NextToken非空，表示有更多可用数据。第2次查询的时候就需要携带NextToken进行分页查询。
+     * @param integer $MaxResults 每次调用返回的最大结果数。如果查询返回的时候有NextToken返回，您可以使用NextToken值获取更多页结果， 当NextToke返回空或者返回的结果数量小于MaxResults时，表示没有更多数据了。允许的最大页面大小为 100。
+     * @param string $NextToken 如果NextToken返回 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。
      */
     function __construct()
     {
@@ -149,6 +165,14 @@ GWLB可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/p
 
         if (array_key_exists("IpAddressType",$param) and $param["IpAddressType"] !== null) {
             $this->IpAddressType = $param["IpAddressType"];
+        }
+
+        if (array_key_exists("MaxResults",$param) and $param["MaxResults"] !== null) {
+            $this->MaxResults = $param["MaxResults"];
+        }
+
+        if (array_key_exists("NextToken",$param) and $param["NextToken"] !== null) {
+            $this->NextToken = $param["NextToken"];
         }
     }
 }

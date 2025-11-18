@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageId(string $PageId) 设置页面ID
  * @method integer getActionRatio() 获取动作灰度比例，默认值100
  * @method void setActionRatio(integer $ActionRatio) 设置动作灰度比例，默认值100
+ * @method string getSource() 获取规则来源
+ * @method void setSource(string $Source) 设置规则来源
  */
 class UpsertCCRuleRequest extends AbstractModel
 {
@@ -192,6 +194,11 @@ class UpsertCCRuleRequest extends AbstractModel
     public $ActionRatio;
 
     /**
+     * @var string 规则来源
+     */
+    public $Source;
+
+    /**
      * @param string $Domain 域名
      * @param string $Name 名称
      * @param integer $Status 状态
@@ -216,6 +223,7 @@ class UpsertCCRuleRequest extends AbstractModel
      * @param string $LogicalOp 配置方式的逻辑操作符，and或者or
      * @param string $PageId 页面ID
      * @param integer $ActionRatio 动作灰度比例，默认值100
+     * @param string $Source 规则来源
      */
     function __construct()
     {
@@ -324,6 +332,10 @@ class UpsertCCRuleRequest extends AbstractModel
 
         if (array_key_exists("ActionRatio",$param) and $param["ActionRatio"] !== null) {
             $this->ActionRatio = $param["ActionRatio"];
+        }
+
+        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
+            $this->Source = $param["Source"];
         }
     }
 }

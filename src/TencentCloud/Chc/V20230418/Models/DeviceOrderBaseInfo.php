@@ -52,6 +52,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomerReceipt(CustomerReceipt $CustomerReceipt) 设置客户上门自提信息
  * @method LogisticsReceipt getLogisticsReceipt() 获取物流上门收货信息
  * @method void setLogisticsReceipt(LogisticsReceipt $LogisticsReceipt) 设置物流上门收货信息
+ * @method string getBuilding() 获取涉及物资放行时的楼宇
+ * @method void setBuilding(string $Building) 设置涉及物资放行时的楼宇
+ * @method array getEmailSet() 获取物资放行抄送邮箱
+ * @method void setEmailSet(array $EmailSet) 设置物资放行抄送邮箱
+ * @method array getFactorSet() 获取物资放行到访原因
+ * @method void setFactorSet(array $FactorSet) 设置物资放行到访原因
  */
 class DeviceOrderBaseInfo extends AbstractModel
 {
@@ -136,6 +142,21 @@ class DeviceOrderBaseInfo extends AbstractModel
     public $LogisticsReceipt;
 
     /**
+     * @var string 涉及物资放行时的楼宇
+     */
+    public $Building;
+
+    /**
+     * @var array 物资放行抄送邮箱
+     */
+    public $EmailSet;
+
+    /**
+     * @var array 物资放行到访原因
+     */
+    public $FactorSet;
+
+    /**
      * @param integer $IdcId 机房id
      * @param string $IdcName 机房名称
      * @param string $DeviceType 设备类型
@@ -152,6 +173,9 @@ class DeviceOrderBaseInfo extends AbstractModel
      * @param string $HandoverMethod 退出交接方式 1.物流上门收货 2.客户上门自提
      * @param CustomerReceipt $CustomerReceipt 客户上门自提信息
      * @param LogisticsReceipt $LogisticsReceipt 物流上门收货信息
+     * @param string $Building 涉及物资放行时的楼宇
+     * @param array $EmailSet 物资放行抄送邮箱
+     * @param array $FactorSet 物资放行到访原因
      */
     function __construct()
     {
@@ -233,6 +257,18 @@ class DeviceOrderBaseInfo extends AbstractModel
         if (array_key_exists("LogisticsReceipt",$param) and $param["LogisticsReceipt"] !== null) {
             $this->LogisticsReceipt = new LogisticsReceipt();
             $this->LogisticsReceipt->deserialize($param["LogisticsReceipt"]);
+        }
+
+        if (array_key_exists("Building",$param) and $param["Building"] !== null) {
+            $this->Building = $param["Building"];
+        }
+
+        if (array_key_exists("EmailSet",$param) and $param["EmailSet"] !== null) {
+            $this->EmailSet = $param["EmailSet"];
+        }
+
+        if (array_key_exists("FactorSet",$param) and $param["FactorSet"] !== null) {
+            $this->FactorSet = $param["FactorSet"];
         }
     }
 }

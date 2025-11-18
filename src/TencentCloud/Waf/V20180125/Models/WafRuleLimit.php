@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientMsg(integer $ClientMsg) 设置客户端流量标记的规格
  * @method integer getTrafficMarking() 获取流量标记的规格
  * @method void setTrafficMarking(integer $TrafficMarking) 设置流量标记的规格
+ * @method integer getBatchCC() 获取批量cc
+ * @method void setBatchCC(integer $BatchCC) 设置批量cc
+ * @method integer getBatchSession() 获取批量session
+ * @method void setBatchSession(integer $BatchSession) 设置批量session
  */
 class WafRuleLimit extends AbstractModel
 {
@@ -115,6 +119,16 @@ class WafRuleLimit extends AbstractModel
     public $TrafficMarking;
 
     /**
+     * @var integer 批量cc
+     */
+    public $BatchCC;
+
+    /**
+     * @var integer 批量session
+     */
+    public $BatchSession;
+
+    /**
      * @param integer $CC 自定义CC的规格
      * @param integer $CustomRule 自定义策略的规格
      * @param integer $IPControl 黑白名单的规格
@@ -128,6 +142,8 @@ class WafRuleLimit extends AbstractModel
      * @param integer $ApiSecurity api安全的规格
      * @param integer $ClientMsg 客户端流量标记的规格
      * @param integer $TrafficMarking 流量标记的规格
+     * @param integer $BatchCC 批量cc
+     * @param integer $BatchSession 批量session
      */
     function __construct()
     {
@@ -192,6 +208,14 @@ class WafRuleLimit extends AbstractModel
 
         if (array_key_exists("TrafficMarking",$param) and $param["TrafficMarking"] !== null) {
             $this->TrafficMarking = $param["TrafficMarking"];
+        }
+
+        if (array_key_exists("BatchCC",$param) and $param["BatchCC"] !== null) {
+            $this->BatchCC = $param["BatchCC"];
+        }
+
+        if (array_key_exists("BatchSession",$param) and $param["BatchSession"] !== null) {
+            $this->BatchSession = $param["BatchSession"];
         }
     }
 }

@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 (3) 点赞或者点踩之后，如果想要取消状态，传值为0即可
  * @method array getReasons() 获取原因，只有Score参数为2即点踩的时候才需要输入
  * @method void setReasons(array $Reasons) 设置原因，只有Score参数为2即点踩的时候才需要输入
+ * @method string getFeedbackContent() 获取用户自定义反馈内容
+ * @method void setFeedbackContent(string $FeedbackContent) 设置用户自定义反馈内容
  */
 class RateMsgRecordRequest extends AbstractModel
 {
@@ -64,6 +66,11 @@ class RateMsgRecordRequest extends AbstractModel
     public $Reasons;
 
     /**
+     * @var string 用户自定义反馈内容
+     */
+    public $FeedbackContent;
+
+    /**
      * @param string $BotAppKey 应用appKey
      * @param string $RecordId 消息ID 【大模型回复答案的RecordID】
      * @param integer $Score 0: 取消前置状态 ; 1: 点赞;   2: 点踩;   
@@ -72,6 +79,7 @@ class RateMsgRecordRequest extends AbstractModel
 (2) 消息回复类型为欢迎语、并发超限、实时文档，不支持点赞、点踩
 (3) 点赞或者点踩之后，如果想要取消状态，传值为0即可
      * @param array $Reasons 原因，只有Score参数为2即点踩的时候才需要输入
+     * @param string $FeedbackContent 用户自定义反馈内容
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class RateMsgRecordRequest extends AbstractModel
 
         if (array_key_exists("Reasons",$param) and $param["Reasons"] !== null) {
             $this->Reasons = $param["Reasons"];
+        }
+
+        if (array_key_exists("FeedbackContent",$param) and $param["FeedbackContent"] !== null) {
+            $this->FeedbackContent = $param["FeedbackContent"];
         }
     }
 }

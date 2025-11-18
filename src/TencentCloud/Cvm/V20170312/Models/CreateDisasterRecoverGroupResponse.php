@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCvmQuotaTotal(integer $CvmQuotaTotal) 设置置放群组内可容纳的云服务器数量。
  * @method integer getCurrentNum() 获取置放群组内已有的云服务器数量。
  * @method void setCurrentNum(integer $CurrentNum) 设置置放群组内已有的云服务器数量。
- * @method string getCreateTime() 获取置放群组创建时间。
- * @method void setCreateTime(string $CreateTime) 设置置放群组创建时间。
+ * @method string getCreateTime() 获取分散置放群组创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+ * @method void setCreateTime(string $CreateTime) 设置分散置放群组创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -63,7 +63,7 @@ class CreateDisasterRecoverGroupResponse extends AbstractModel
     public $CurrentNum;
 
     /**
-     * @var string 置放群组创建时间。
+     * @var string 分散置放群组创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
      */
     public $CreateTime;
 
@@ -78,7 +78,7 @@ class CreateDisasterRecoverGroupResponse extends AbstractModel
      * @param string $Name 分散置放群组名称，长度1-60个字符，支持中、英文。
      * @param integer $CvmQuotaTotal 置放群组内可容纳的云服务器数量。
      * @param integer $CurrentNum 置放群组内已有的云服务器数量。
-     * @param string $CreateTime 置放群组创建时间。
+     * @param string $CreateTime 分散置放群组创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -22,20 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceIds() 获取实例 ID 列表。每次请求批量实例的上限为 100。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
  * @method void setInstanceIds(array $InstanceIds) 设置实例 ID 列表。每次请求批量实例的上限为 100。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
- * @method string getStopType() 获取关机类型。
-取值范围： 
-
-- SOFT：表示软关机
-- HARD：表示硬关机 
-- SOFT_FIRST：表示优先软关机，失败再执行硬关机  
+ * @method string getStopType() 获取关机类型。取值范围： 
+<li>SOFT：表示软关机</li>
+<li>HARD：表示硬关机 </li>
+<li>SOFT_FIRST：表示优先软关机，失败再执行硬关机 </li>
 
 默认取值：SOFT_FIRST
- * @method void setStopType(string $StopType) 设置关机类型。
-取值范围： 
-
-- SOFT：表示软关机
-- HARD：表示硬关机 
-- SOFT_FIRST：表示优先软关机，失败再执行硬关机  
+ * @method void setStopType(string $StopType) 设置关机类型。取值范围： 
+<li>SOFT：表示软关机</li>
+<li>HARD：表示硬关机 </li>
+<li>SOFT_FIRST：表示优先软关机，失败再执行硬关机 </li>
 
 默认取值：SOFT_FIRST
  */
@@ -47,12 +43,10 @@ class StopInstancesRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var string 关机类型。
-取值范围： 
-
-- SOFT：表示软关机
-- HARD：表示硬关机 
-- SOFT_FIRST：表示优先软关机，失败再执行硬关机  
+     * @var string 关机类型。取值范围： 
+<li>SOFT：表示软关机</li>
+<li>HARD：表示硬关机 </li>
+<li>SOFT_FIRST：表示优先软关机，失败再执行硬关机 </li>
 
 默认取值：SOFT_FIRST
      */
@@ -60,12 +54,10 @@ class StopInstancesRequest extends AbstractModel
 
     /**
      * @param array $InstanceIds 实例 ID 列表。每次请求批量实例的上限为 100。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
-     * @param string $StopType 关机类型。
-取值范围： 
-
-- SOFT：表示软关机
-- HARD：表示硬关机 
-- SOFT_FIRST：表示优先软关机，失败再执行硬关机  
+     * @param string $StopType 关机类型。取值范围： 
+<li>SOFT：表示软关机</li>
+<li>HARD：表示硬关机 </li>
+<li>SOFT_FIRST：表示优先软关机，失败再执行硬关机 </li>
 
 默认取值：SOFT_FIRST
      */

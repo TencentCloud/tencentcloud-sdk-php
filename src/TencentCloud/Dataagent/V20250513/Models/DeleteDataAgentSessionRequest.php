@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteDataAgentSession请求参数结构体
  *
-
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getSessionId() 获取会话ID
+ * @method void setSessionId(string $SessionId) 设置会话ID
  */
 class DeleteDataAgentSessionRequest extends AbstractModel
 {
-
+    /**
+     * @var string 实例ID
+     */
+    public $InstanceId;
 
     /**
+     * @var string 会话ID
+     */
+    public $SessionId;
 
+    /**
+     * @param string $InstanceId 实例ID
+     * @param string $SessionId 会话ID
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class DeleteDataAgentSessionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
 
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
+        }
     }
 }

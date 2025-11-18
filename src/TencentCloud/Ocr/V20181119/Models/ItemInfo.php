@@ -18,7 +18,7 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 智能结构化元素组
+ * 文档智能元素组
  *
  * @method Key getKey() 获取key信息组
 注意：此字段可能返回 null，表示取不到有效值。

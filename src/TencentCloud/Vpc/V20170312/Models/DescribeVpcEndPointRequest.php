@@ -44,8 +44,12 @@ use TencentCloud\Common\AbstractModel;
 获取。
  * @method void setEndPointId(array $EndPointId) 设置终端节点ID列表。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 
 获取。
- * @method string getIpAddressType() 获取协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
- * @method void setIpAddressType(string $IpAddressType) 设置协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+ * @method string getIpAddressType() 获取协议类型，支持 Ipv4，Ipv6， DualStack，默认 Ipv4。使用DualStack查询双栈的时候，必须要使用MaxResult配合NextToken查询。第1次查询的时候只需要携带MaxResult，如果返回NextToken非空，表示有更多可用数据。第2次查询的时候就需要携带NextToken进行分页查询。
+ * @method void setIpAddressType(string $IpAddressType) 设置协议类型，支持 Ipv4，Ipv6， DualStack，默认 Ipv4。使用DualStack查询双栈的时候，必须要使用MaxResult配合NextToken查询。第1次查询的时候只需要携带MaxResult，如果返回NextToken非空，表示有更多可用数据。第2次查询的时候就需要携带NextToken进行分页查询。
+ * @method integer getMaxResults() 获取每次调用返回的最大结果数。如果查询返回的时候有NextToken返回，您可以使用NextToken值获取更多页结果， 当NextToke返回空或者返回的结果数量小于MaxResults时，表示没有更多数据了。允许的最大页面大小为 100。
+ * @method void setMaxResults(integer $MaxResults) 设置每次调用返回的最大结果数。如果查询返回的时候有NextToken返回，您可以使用NextToken值获取更多页结果， 当NextToke返回空或者返回的结果数量小于MaxResults时，表示没有更多数据了。允许的最大页面大小为 100。
+ * @method string getNextToken() 获取如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。
+ * @method void setNextToken(string $NextToken) 设置如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。
  */
 class DescribeVpcEndPointRequest extends AbstractModel
 {
@@ -78,9 +82,19 @@ class DescribeVpcEndPointRequest extends AbstractModel
     public $EndPointId;
 
     /**
-     * @var string 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+     * @var string 协议类型，支持 Ipv4，Ipv6， DualStack，默认 Ipv4。使用DualStack查询双栈的时候，必须要使用MaxResult配合NextToken查询。第1次查询的时候只需要携带MaxResult，如果返回NextToken非空，表示有更多可用数据。第2次查询的时候就需要携带NextToken进行分页查询。
      */
     public $IpAddressType;
+
+    /**
+     * @var integer 每次调用返回的最大结果数。如果查询返回的时候有NextToken返回，您可以使用NextToken值获取更多页结果， 当NextToke返回空或者返回的结果数量小于MaxResults时，表示没有更多数据了。允许的最大页面大小为 100。
+     */
+    public $MaxResults;
+
+    /**
+     * @var string 如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。
+     */
+    public $NextToken;
 
     /**
      * @param array $Filters 过滤条件。当前支持如下过滤条件：
@@ -95,7 +109,9 @@ class DescribeVpcEndPointRequest extends AbstractModel
      * @param integer $Limit 单页返回数量，默认为20，最大值为100。
      * @param array $EndPointId 终端节点ID列表。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 
 获取。
-     * @param string $IpAddressType 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+     * @param string $IpAddressType 协议类型，支持 Ipv4，Ipv6， DualStack，默认 Ipv4。使用DualStack查询双栈的时候，必须要使用MaxResult配合NextToken查询。第1次查询的时候只需要携带MaxResult，如果返回NextToken非空，表示有更多可用数据。第2次查询的时候就需要携带NextToken进行分页查询。
+     * @param integer $MaxResults 每次调用返回的最大结果数。如果查询返回的时候有NextToken返回，您可以使用NextToken值获取更多页结果， 当NextToke返回空或者返回的结果数量小于MaxResults时，表示没有更多数据了。允许的最大页面大小为 100。
+     * @param string $NextToken 如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。
      */
     function __construct()
     {
@@ -133,6 +149,14 @@ class DescribeVpcEndPointRequest extends AbstractModel
 
         if (array_key_exists("IpAddressType",$param) and $param["IpAddressType"] !== null) {
             $this->IpAddressType = $param["IpAddressType"];
+        }
+
+        if (array_key_exists("MaxResults",$param) and $param["MaxResults"] !== null) {
+            $this->MaxResults = $param["MaxResults"];
+        }
+
+        if (array_key_exists("NextToken",$param) and $param["NextToken"] !== null) {
+            $this->NextToken = $param["NextToken"];
         }
     }
 }

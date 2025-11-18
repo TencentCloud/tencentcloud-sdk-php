@@ -25,6 +25,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
 /**
  * @method Models\AssignProjectResponse AssignProject(Models\AssignProjectRequest $req) 本接口(AssignProject)用于指定云数据库实例的所属项目。
  * @method Models\CreateAccountUserResponse CreateAccountUser(Models\CreateAccountUserRequest $req) 本接口（CreateAccountUser）用于自定义实例访问账号。
+ * @method Models\CreateAuditLogFileResponse CreateAuditLogFile(Models\CreateAuditLogFileRequest $req) 本接口(CreateAuditLogFile)用于创建云数据库实例的审计日志文件。
  * @method Models\CreateBackupDBInstanceResponse CreateBackupDBInstance(Models\CreateBackupDBInstanceRequest $req) 本接口（CreateBackupDBInstance）用于备份实例。
  * @method Models\CreateBackupDownloadTaskResponse CreateBackupDownloadTask(Models\CreateBackupDownloadTaskRequest $req) 本接口用来创建某个备份文件的下载任务
  * @method Models\CreateDBInstanceResponse CreateDBInstance(Models\CreateDBInstanceRequest $req) 本接口(CreateDBInstance)用于创建包年包月的MongoDB云数据库实例。接口支持的售卖规格，可通过接口查询 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/35767) 获取。
@@ -33,9 +34,11 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
 **说明：CreateDBInstanceParamTpl API正在公测中，在此期间，该接口仅对公测用户开放**
  * @method Models\CreateLogDownloadTaskResponse CreateLogDownloadTask(Models\CreateLogDownloadTaskRequest $req) 创建日志下载任务
  * @method Models\DeleteAccountUserResponse DeleteAccountUser(Models\DeleteAccountUserRequest $req) 本接口（DeleteAccountUser）用于删除实例的自定义账号。
+ * @method Models\DeleteAuditLogFileResponse DeleteAuditLogFile(Models\DeleteAuditLogFileRequest $req) 本接口(DeleteAuditLogFile)用于删除云数据库实例的审计日志文件。
  * @method Models\DeleteLogDownloadTaskResponse DeleteLogDownloadTask(Models\DeleteLogDownloadTaskRequest $req) 删除日志下载任务
  * @method Models\DescribeAccountUsersResponse DescribeAccountUsers(Models\DescribeAccountUsersRequest $req) 本接口（DescribeAccountUsers）用于获取当前实例的全部账号。
  * @method Models\DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfo(Models\DescribeAsyncRequestInfoRequest $req) 本接口（DescribeAsyncRequestInfo）用于查询异步任务状态接口。
+ * @method Models\DescribeAuditInstanceListResponse DescribeAuditInstanceList(Models\DescribeAuditInstanceListRequest $req) 本接口（DescribeAuditInstanceList）用于查询开通或未开通数据库审计的实例列表。
  * @method Models\DescribeBackupDownloadTaskResponse DescribeBackupDownloadTask(Models\DescribeBackupDownloadTaskRequest $req) 本接口（DescribeBackupDownloadTask）用于查询备份下载任务信息。
  * @method Models\DescribeBackupRulesResponse DescribeBackupRules(Models\DescribeBackupRulesRequest $req) 本接口（DescribeBackupRules）用于获取实例自动备份配置信息。
  * @method Models\DescribeClientConnectionsResponse DescribeClientConnections(Models\DescribeClientConnectionsRequest $req) 本接口（DescribeClientConnections）用于查询实例客户端连接信息，包括连接 IP 和连接数量。
@@ -70,6 +73,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\InquirePriceRenewDBInstancesResponse InquirePriceRenewDBInstances(Models\InquirePriceRenewDBInstancesRequest $req) 本接口 (InquiryPriceRenewDBInstances) 用于续费包年包月实例询价。
  * @method Models\IsolateDBInstanceResponse IsolateDBInstance(Models\IsolateDBInstanceRequest $req) 本接口（IsolateDBInstance）用于隔离 MongoDB 云数据库按量计费实例。隔离后实例保留在回收站中，不能再写入数据。隔离一定时间后，实例会彻底删除，回收站保存时间请参考按量计费的服务条款。已删除的按量计费实例无法恢复，请谨慎操作。
  * @method Models\KillOpsResponse KillOps(Models\KillOpsRequest $req) 本接口（KillOps）用于终止 MongoDB 云数据库实例上执行的特定操作。
+ * @method Models\ModifyAuditServiceResponse ModifyAuditService(Models\ModifyAuditServiceRequest $req) 本接口(ModifyAuditService)用于修改云数据库审计策略的服务配置，包括审计日志保存时长等。
  * @method Models\ModifyDBInstanceNetworkAddressResponse ModifyDBInstanceNetworkAddress(Models\ModifyDBInstanceNetworkAddressRequest $req) 本接口（ModifyDBInstanceNetworkAddress）用于修改云数据库实例的网络信息，支持基础网络切换为私有网络、私有网络切换私有网络。
  * @method Models\ModifyDBInstanceParamTplResponse ModifyDBInstanceParamTpl(Models\ModifyDBInstanceParamTplRequest $req) 本接口(ModifyDBInstanceParamTpl )用于修改MongoDB云数据库实例的参数模板。
 **说明：ModifyDBInstanceParamTpl  API正在公测中，在此期间，该接口仅对公测用户开放**
@@ -77,6 +81,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\ModifyDBInstanceSpecResponse ModifyDBInstanceSpec(Models\ModifyDBInstanceSpecRequest $req) 本接口（ModifyDBInstanceSpec）用于调整MongoDB云数据库实例配置。接口支持的售卖规格，可从查询云数据库的售卖规格（[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)）获取。
  * @method Models\ModifyInstanceParamsResponse ModifyInstanceParams(Models\ModifyInstanceParamsRequest $req) 本接口（ModifyInstanceParams）用于修改mongoDB实例的参数配置。
  * @method Models\OfflineIsolatedDBInstanceResponse OfflineIsolatedDBInstance(Models\OfflineIsolatedDBInstanceRequest $req) 本接口(OfflineIsolatedDBInstance)用于立即下线隔离状态的云数据库实例。进行操作的实例状态必须为隔离状态。
+ * @method Models\OpenAuditServiceResponse OpenAuditService(Models\OpenAuditServiceRequest $req) 本接口(OpenAuditService)用于开通云数据库实例的审计。
  * @method Models\RenameInstanceResponse RenameInstance(Models\RenameInstanceRequest $req) 本接口(RenameInstance)用于修改云数据库实例的名称。
  * @method Models\RenewDBInstancesResponse RenewDBInstances(Models\RenewDBInstancesRequest $req) 本接口(RenewDBInstance)用于续费云数据库实例，仅支持付费模式为包年包月的实例。按量计费实例不需要续费。
  * @method Models\ResetDBInstancePasswordResponse ResetDBInstancePassword(Models\ResetDBInstancePasswordRequest $req) 本接口（ResetDBInstancePassword）用于重置实例访问密码。

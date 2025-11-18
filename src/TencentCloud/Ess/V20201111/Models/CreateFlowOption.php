@@ -268,6 +268,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPreviewAfterStart(boolean $PreviewAfterStart) 设置发起成功后是否预览合同 <ul><li>（默认） false -否</li> <li> true - 展示预览按钮</li></ul>	
  * @method boolean getSignAfterStart() 获取发起成功之后是否签署合同，仅当前经办人作为签署人时生效 <ul><li>（默认） false -否</li> <li> true - 展示签署按钮</li></ul>	
  * @method void setSignAfterStart(boolean $SignAfterStart) 设置发起成功之后是否签署合同，仅当前经办人作为签署人时生效 <ul><li>（默认） false -否</li> <li> true - 展示签署按钮</li></ul>	
+ * @method boolean getNeedFlowDraft() 获取发起过程中是否保存草稿
+ * @method void setNeedFlowDraft(boolean $NeedFlowDraft) 设置发起过程中是否保存草稿
  */
 class CreateFlowOption extends AbstractModel
 {
@@ -489,6 +491,11 @@ class CreateFlowOption extends AbstractModel
     public $SignAfterStart;
 
     /**
+     * @var boolean 发起过程中是否保存草稿
+     */
+    public $NeedFlowDraft;
+
+    /**
      * @param boolean $CanEditFlow 是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。
 <br/>true：允许编辑<br/>false：不允许编辑（默认值）<br/>
      * @param boolean $CanEditFormField 是否允许编辑模板控件
@@ -613,6 +620,7 @@ class CreateFlowOption extends AbstractModel
      * @param boolean $HideSignCodeAfterStart 发起后签署码隐藏，默认false，注：仅对新版页面生效
      * @param boolean $PreviewAfterStart 发起成功后是否预览合同 <ul><li>（默认） false -否</li> <li> true - 展示预览按钮</li></ul>	
      * @param boolean $SignAfterStart 发起成功之后是否签署合同，仅当前经办人作为签署人时生效 <ul><li>（默认） false -否</li> <li> true - 展示签署按钮</li></ul>	
+     * @param boolean $NeedFlowDraft 发起过程中是否保存草稿
      */
     function __construct()
     {
@@ -723,6 +731,10 @@ class CreateFlowOption extends AbstractModel
 
         if (array_key_exists("SignAfterStart",$param) and $param["SignAfterStart"] !== null) {
             $this->SignAfterStart = $param["SignAfterStart"];
+        }
+
+        if (array_key_exists("NeedFlowDraft",$param) and $param["NeedFlowDraft"] !== null) {
+            $this->NeedFlowDraft = $param["NeedFlowDraft"];
         }
     }
 }

@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPositions(array $Positions) 设置审查出的PDF段落位置信息
  * @method string getRiskBasis() 获取审查依据
  * @method void setRiskBasis(string $RiskBasis) 设置审查依据
+ * @method integer getRiskLevelId() 获取风险等级id
+ * @method void setRiskLevelId(integer $RiskLevelId) 设置风险等级id
  */
 class OutputRisk extends AbstractModel
 {
@@ -105,6 +107,11 @@ class OutputRisk extends AbstractModel
     public $RiskBasis;
 
     /**
+     * @var integer 风险等级id
+     */
+    public $RiskLevelId;
+
+    /**
      * @param string $RiskId 合同审查风险结果ID
      * @param string $RiskName 风险名称
      * @param string $RiskDescription 风险描述
@@ -120,6 +127,7 @@ class OutputRisk extends AbstractModel
      * @param string $Content PDF风险原文内容
      * @param array $Positions 审查出的PDF段落位置信息
      * @param string $RiskBasis 审查依据
+     * @param integer $RiskLevelId 风险等级id
      */
     function __construct()
     {
@@ -173,6 +181,10 @@ class OutputRisk extends AbstractModel
 
         if (array_key_exists("RiskBasis",$param) and $param["RiskBasis"] !== null) {
             $this->RiskBasis = $param["RiskBasis"];
+        }
+
+        if (array_key_exists("RiskLevelId",$param) and $param["RiskLevelId"] !== null) {
+            $this->RiskLevelId = $param["RiskLevelId"];
         }
     }
 }

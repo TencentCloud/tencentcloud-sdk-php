@@ -226,6 +226,48 @@ https：使用https协议回源
  * @method void setUseCase(integer $UseCase) 设置业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
  * @method integer getGzip() 获取gzip开关。0：关闭 1：默认值，打开。
  * @method void setGzip(integer $Gzip) 设置gzip开关。0：关闭 1：默认值，打开。
+ * @method integer getState() 获取SAAS型WAF域名状态：
+-2：配置下发失败
+-1：配置下发中
+0：DNS解析中
+1：无DNS解析记录，请接入WAF
+10：DNS解析未知，域名启用了代理
+11：DNS解析异常，使用A记录接入WAF IP
+200：检测源站不可达
+220：源站不支持长连接
+311：证书过期
+312：证书即将过期
+310：证书异常
+316：备案异常
+5：WAF回源已变更
+负载均衡型WAF域名LB监听器状态：
+0：操作成功 
+4：正在绑定LB 
+6：正在解绑LB 
+7：解绑LB失败 
+8：绑定LB失败 
+10：内部错误
+ * @method void setState(integer $State) 设置SAAS型WAF域名状态：
+-2：配置下发失败
+-1：配置下发中
+0：DNS解析中
+1：无DNS解析记录，请接入WAF
+10：DNS解析未知，域名启用了代理
+11：DNS解析异常，使用A记录接入WAF IP
+200：检测源站不可达
+220：源站不支持长连接
+311：证书过期
+312：证书即将过期
+310：证书异常
+316：备案异常
+5：WAF回源已变更
+负载均衡型WAF域名LB监听器状态：
+0：操作成功 
+4：正在绑定LB 
+6：正在解绑LB 
+7：解绑LB失败 
+8：绑定LB失败 
+10：内部错误
  */
 class DomainsPartInfo extends AbstractModel
 {
@@ -558,6 +600,31 @@ https：使用https协议回源
     public $Gzip;
 
     /**
+     * @var integer SAAS型WAF域名状态：
+-2：配置下发失败
+-1：配置下发中
+0：DNS解析中
+1：无DNS解析记录，请接入WAF
+10：DNS解析未知，域名启用了代理
+11：DNS解析异常，使用A记录接入WAF IP
+200：检测源站不可达
+220：源站不支持长连接
+311：证书过期
+312：证书即将过期
+310：证书异常
+316：备案异常
+5：WAF回源已变更
+负载均衡型WAF域名LB监听器状态：
+0：操作成功 
+4：正在绑定LB 
+6：正在解绑LB 
+7：解绑LB失败 
+8：绑定LB失败 
+10：内部错误
+     */
+    public $State;
+
+    /**
      * @param string $Domain 域名
      * @param string $DomainId 域名唯一ID
      * @param string $InstanceId 域名所属实例唯一ID
@@ -661,6 +728,27 @@ https：使用https协议回源
      * @param array $UpstreamRules 分流回源策略
      * @param integer $UseCase 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
      * @param integer $Gzip gzip开关。0：关闭 1：默认值，打开。
+     * @param integer $State SAAS型WAF域名状态：
+-2：配置下发失败
+-1：配置下发中
+0：DNS解析中
+1：无DNS解析记录，请接入WAF
+10：DNS解析未知，域名启用了代理
+11：DNS解析异常，使用A记录接入WAF IP
+200：检测源站不可达
+220：源站不支持长连接
+311：证书过期
+312：证书即将过期
+310：证书异常
+316：备案异常
+5：WAF回源已变更
+负载均衡型WAF域名LB监听器状态：
+0：操作成功 
+4：正在绑定LB 
+6：正在解绑LB 
+7：解绑LB失败 
+8：绑定LB失败 
+10：内部错误
      */
     function __construct()
     {
@@ -907,6 +995,10 @@ https：使用https协议回源
 
         if (array_key_exists("Gzip",$param) and $param["Gzip"] !== null) {
             $this->Gzip = $param["Gzip"];
+        }
+
+        if (array_key_exists("State",$param) and $param["State"] !== null) {
+            $this->State = $param["State"];
         }
     }
 }

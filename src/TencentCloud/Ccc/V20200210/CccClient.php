@@ -100,9 +100,11 @@ use TencentCloud\Ccc\V20200210\Models as Models;
  * @method Models\ModifyOwnNumberApplyResponse ModifyOwnNumberApply(Models\ModifyOwnNumberApplyRequest $req) 修改客户自携号码审批单
  * @method Models\ModifyStaffResponse ModifyStaff(Models\ModifyStaffRequest $req) 修改客服账号
  * @method Models\ModifyStaffPasswordResponse ModifyStaffPassword(Models\ModifyStaffPasswordRequest $req) 修改座席的密码
+ * @method Models\PauseAutoCalloutTaskResponse PauseAutoCalloutTask(Models\PauseAutoCalloutTaskRequest $req) 暂停未完成的自动外呼任务
  * @method Models\PausePredictiveDialingCampaignResponse PausePredictiveDialingCampaign(Models\PausePredictiveDialingCampaignRequest $req) 暂停预测式外呼任务
  * @method Models\ResetExtensionPasswordResponse ResetExtensionPassword(Models\ResetExtensionPasswordRequest $req) 重置话机注册密码
  * @method Models\RestoreMemberOnlineResponse RestoreMemberOnline(Models\RestoreMemberOnlineRequest $req) 恢复客服上线
+ * @method Models\ResumeAutoCalloutTaskResponse ResumeAutoCalloutTask(Models\ResumeAutoCalloutTaskRequest $req) 暂停未完成的自动外呼任务
  * @method Models\ResumePredictiveDialingCampaignResponse ResumePredictiveDialingCampaign(Models\ResumePredictiveDialingCampaignRequest $req) 恢复预测式外呼任务
  * @method Models\SetStaffStatusResponse SetStaffStatus(Models\SetStaffStatusRequest $req) 设置 staff 状态
  * @method Models\StopAutoCalloutTaskResponse StopAutoCalloutTask(Models\StopAutoCalloutTaskRequest $req) 停止自动外呼任务

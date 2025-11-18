@@ -26,14 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLaunchTemplateVersions(array $LaunchTemplateVersions) 设置实例启动模板列表。
  * @method integer getMinVersion() 获取通过范围指定版本时的最小版本号，默认为0。
  * @method void setMinVersion(integer $MinVersion) 设置通过范围指定版本时的最小版本号，默认为0。
- * @method integer getMaxVersion() 获取过范围指定版本时的最大版本号，默认为30。
- * @method void setMaxVersion(integer $MaxVersion) 设置过范围指定版本时的最大版本号，默认为30。
+ * @method integer getMaxVersion() 获取通过范围指定版本时的最大版本号，默认为30。
+ * @method void setMaxVersion(integer $MaxVersion) 设置通过范围指定版本时的最大版本号，默认为30。
  * @method integer getOffset() 获取偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
- * @method boolean getDefaultVersion() 获取是否查询默认版本。该参数不可与LaunchTemplateVersions同时指定。
- * @method void setDefaultVersion(boolean $DefaultVersion) 设置是否查询默认版本。该参数不可与LaunchTemplateVersions同时指定。
+ * @method boolean getDefaultVersion() 获取是否查询默认版本。默认值：false
+ * @method void setDefaultVersion(boolean $DefaultVersion) 设置是否查询默认版本。默认值：false
  */
 class DescribeLaunchTemplateVersionsRequest extends AbstractModel
 {
@@ -53,7 +53,7 @@ class DescribeLaunchTemplateVersionsRequest extends AbstractModel
     public $MinVersion;
 
     /**
-     * @var integer 过范围指定版本时的最大版本号，默认为30。
+     * @var integer 通过范围指定版本时的最大版本号，默认为30。
      */
     public $MaxVersion;
 
@@ -68,7 +68,7 @@ class DescribeLaunchTemplateVersionsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var boolean 是否查询默认版本。该参数不可与LaunchTemplateVersions同时指定。
+     * @var boolean 是否查询默认版本。默认值：false
      */
     public $DefaultVersion;
 
@@ -76,10 +76,10 @@ class DescribeLaunchTemplateVersionsRequest extends AbstractModel
      * @param string $LaunchTemplateId 启动模板ID。
      * @param array $LaunchTemplateVersions 实例启动模板列表。
      * @param integer $MinVersion 通过范围指定版本时的最小版本号，默认为0。
-     * @param integer $MaxVersion 过范围指定版本时的最大版本号，默认为30。
+     * @param integer $MaxVersion 通过范围指定版本时的最大版本号，默认为30。
      * @param integer $Offset 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      * @param integer $Limit 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
-     * @param boolean $DefaultVersion 是否查询默认版本。该参数不可与LaunchTemplateVersions同时指定。
+     * @param boolean $DefaultVersion 是否查询默认版本。默认值：false
      */
     function __construct()
     {

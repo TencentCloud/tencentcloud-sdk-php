@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) 设置实例名
  * @method string getVpcId() 获取VPC ID (私有网络 ID)
  * @method void setVpcId(string $VpcId) 设置VPC ID (私有网络 ID)
- * @method array getSubnetIds() 获取子网 ID 数组(VPC ID下的子网 ID，只取第一个)
- * @method void setSubnetIds(array $SubnetIds) 设置子网 ID 数组(VPC ID下的子网 ID，只取第一个)
+ * @method array getSubnetIds() 获取子网 ID 数组(VPC ID下的子网 ID，只取第一个)。
+注意：并不是所有可用区都可用（可通过 monitor:DescribePrometheusZones 接口获取可用区状态，选择 ZoneState 和ZoneResourceState 都为1的可用区）
+ * @method void setSubnetIds(array $SubnetIds) 设置子网 ID 数组(VPC ID下的子网 ID，只取第一个)。
+注意：并不是所有可用区都可用（可通过 monitor:DescribePrometheusZones 接口获取可用区状态，选择 ZoneState 和ZoneResourceState 都为1的可用区）
  * @method boolean getEnableInternet() 获取是否启用外网
  * @method void setEnableInternet(boolean $EnableInternet) 设置是否启用外网
  * @method string getGrafanaInitPassword() 获取Grafana 初始密码(国际站用户必填，国内站用户可不填，不填时会生成随机密码并给主账号发送通知)
@@ -48,7 +50,8 @@ class CreateGrafanaInstanceRequest extends AbstractModel
     public $VpcId;
 
     /**
-     * @var array 子网 ID 数组(VPC ID下的子网 ID，只取第一个)
+     * @var array 子网 ID 数组(VPC ID下的子网 ID，只取第一个)。
+注意：并不是所有可用区都可用（可通过 monitor:DescribePrometheusZones 接口获取可用区状态，选择 ZoneState 和ZoneResourceState 都为1的可用区）
      */
     public $SubnetIds;
 
@@ -75,7 +78,8 @@ class CreateGrafanaInstanceRequest extends AbstractModel
     /**
      * @param string $InstanceName 实例名
      * @param string $VpcId VPC ID (私有网络 ID)
-     * @param array $SubnetIds 子网 ID 数组(VPC ID下的子网 ID，只取第一个)
+     * @param array $SubnetIds 子网 ID 数组(VPC ID下的子网 ID，只取第一个)。
+注意：并不是所有可用区都可用（可通过 monitor:DescribePrometheusZones 接口获取可用区状态，选择 ZoneState 和ZoneResourceState 都为1的可用区）
      * @param boolean $EnableInternet 是否启用外网
      * @param string $GrafanaInitPassword Grafana 初始密码(国际站用户必填，国内站用户可不填，不填时会生成随机密码并给主账号发送通知)
      * @param array $TagSpecification 标签

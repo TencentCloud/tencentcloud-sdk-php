@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
 若后端服务对连接数上限有限制，则建议谨慎开启。此功能目前处于内测中，如需使用，请提交 [内测申请](https://cloud.tencent.com/apply/p/tsodp6qm21)。
  * @method integer getEndPort() 获取创建端口段监听器时必须传入此参数，用以标识结束端口。同时，入参Ports只允许传入一个成员，用以标识开始端口。【如果您需要体验端口段功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)】。
  * @method void setEndPort(integer $EndPort) 设置创建端口段监听器时必须传入此参数，用以标识结束端口。同时，入参Ports只允许传入一个成员，用以标识开始端口。【如果您需要体验端口段功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)】。
- * @method boolean getDeregisterTargetRst() 获取解绑后端目标时，是否发RST给两端（客户端和服务器），此参数仅适用于TCP监听器。
- * @method void setDeregisterTargetRst(boolean $DeregisterTargetRst) 设置解绑后端目标时，是否发RST给两端（客户端和服务器），此参数仅适用于TCP监听器。
+ * @method boolean getDeregisterTargetRst() 获取重新调度功能，解绑后端服务开关，打开此开关，当解绑后端服务时触发重新调度。仅TCP/UDP监听器支持。
+ * @method void setDeregisterTargetRst(boolean $DeregisterTargetRst) 设置重新调度功能，解绑后端服务开关，打开此开关，当解绑后端服务时触发重新调度。仅TCP/UDP监听器支持。
  * @method MultiCertInfo getMultiCertInfo() 获取证书信息，支持同时传入不同算法类型的多本服务端证书，参数限制如下：
 <li>此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。</li>
 <li>创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数Certificate至少需要传一个， 但不能同时传入。</li>
@@ -72,10 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdleConnectTimeout(integer $IdleConnectTimeout) 设置空闲连接超时时间，此参数仅适用于TCP/UDP监听器，单位：秒。默认值：TCP监听器默认值为900s，UDP监听器默认值为300s。取值范围：共享型实例和独占型实例支持：10-900，性能容量型实例支持：10-1980。如需设置超过取值范围的值请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)。
  * @method boolean getProxyProtocol() 获取TCP_SSL和QUIC是否支持PP
  * @method void setProxyProtocol(boolean $ProxyProtocol) 设置TCP_SSL和QUIC是否支持PP
- * @method boolean getSnatEnable() 获取是否开启SNAT，True（开启）、False（关闭）。
-默认为关闭。
- * @method void setSnatEnable(boolean $SnatEnable) 设置是否开启SNAT，True（开启）、False（关闭）。
-默认为关闭。
+ * @method boolean getSnatEnable() 获取是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时`透传客户端源IP`选项关闭，反之亦然。
+ * @method void setSnatEnable(boolean $SnatEnable) 设置是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时`透传客户端源IP`选项关闭，反之亦然。
  * @method array getFullEndPorts() 获取全端口段监听器的结束端口，端口范围：2 - 65535
  * @method void setFullEndPorts(array $FullEndPorts) 设置全端口段监听器的结束端口，端口范围：2 - 65535
  * @method boolean getH2cSwitch() 获取内网http监听器开启h2c开关，True（开启）、False（关闭）。
@@ -172,7 +170,7 @@ class CreateListenerRequest extends AbstractModel
     public $EndPort;
 
     /**
-     * @var boolean 解绑后端目标时，是否发RST给两端（客户端和服务器），此参数仅适用于TCP监听器。
+     * @var boolean 重新调度功能，解绑后端服务开关，打开此开关，当解绑后端服务时触发重新调度。仅TCP/UDP监听器支持。
      */
     public $DeregisterTargetRst;
 
@@ -204,8 +202,7 @@ class CreateListenerRequest extends AbstractModel
     public $ProxyProtocol;
 
     /**
-     * @var boolean 是否开启SNAT，True（开启）、False（关闭）。
-默认为关闭。
+     * @var boolean 是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时`透传客户端源IP`选项关闭，反之亦然。
      */
     public $SnatEnable;
 
@@ -275,7 +272,7 @@ class CreateListenerRequest extends AbstractModel
      * @param integer $KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器，0:关闭；1:开启， 默认关闭。
 若后端服务对连接数上限有限制，则建议谨慎开启。此功能目前处于内测中，如需使用，请提交 [内测申请](https://cloud.tencent.com/apply/p/tsodp6qm21)。
      * @param integer $EndPort 创建端口段监听器时必须传入此参数，用以标识结束端口。同时，入参Ports只允许传入一个成员，用以标识开始端口。【如果您需要体验端口段功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)】。
-     * @param boolean $DeregisterTargetRst 解绑后端目标时，是否发RST给两端（客户端和服务器），此参数仅适用于TCP监听器。
+     * @param boolean $DeregisterTargetRst 重新调度功能，解绑后端服务开关，打开此开关，当解绑后端服务时触发重新调度。仅TCP/UDP监听器支持。
      * @param MultiCertInfo $MultiCertInfo 证书信息，支持同时传入不同算法类型的多本服务端证书，参数限制如下：
 <li>此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。</li>
 <li>创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数Certificate至少需要传一个， 但不能同时传入。</li>
@@ -283,8 +280,7 @@ class CreateListenerRequest extends AbstractModel
      * @param integer $MaxCps 监听器最大新增连接数，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。基础网络实例不支持该参数。
      * @param integer $IdleConnectTimeout 空闲连接超时时间，此参数仅适用于TCP/UDP监听器，单位：秒。默认值：TCP监听器默认值为900s，UDP监听器默认值为300s。取值范围：共享型实例和独占型实例支持：10-900，性能容量型实例支持：10-1980。如需设置超过取值范围的值请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)。
      * @param boolean $ProxyProtocol TCP_SSL和QUIC是否支持PP
-     * @param boolean $SnatEnable 是否开启SNAT，True（开启）、False（关闭）。
-默认为关闭。
+     * @param boolean $SnatEnable 是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时`透传客户端源IP`选项关闭，反之亦然。
      * @param array $FullEndPorts 全端口段监听器的结束端口，端口范围：2 - 65535
      * @param boolean $H2cSwitch 内网http监听器开启h2c开关，True（开启）、False（关闭）。
 默认为关闭。

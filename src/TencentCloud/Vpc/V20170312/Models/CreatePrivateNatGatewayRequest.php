@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePrivateNatGateway请求参数结构体
  *
- * @method string getNatGatewayName() 获取私网网关名称
- * @method void setNatGatewayName(string $NatGatewayName) 设置私网网关名称
+ * @method string getNatGatewayName() 获取私网网关名称，限制60个字符
+ * @method void setNatGatewayName(string $NatGatewayName) 设置私网网关名称，限制60个字符
  * @method string getVpcId() 获取私有网络实例ID。当创建VPC类型私网NAT网关或者专线网关类型私网NAT网关时，此参数必填。
  * @method void setVpcId(string $VpcId) 设置私有网络实例ID。当创建VPC类型私网NAT网关或者专线网关类型私网NAT网关时，此参数必填。
  * @method boolean getCrossDomain() 获取跨域参数。仅当取值为True时，才会支持跨域绑定VPC。
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class CreatePrivateNatGatewayRequest extends AbstractModel
 {
     /**
-     * @var string 私网网关名称
+     * @var string 私网网关名称，限制60个字符
      */
     public $NatGatewayName;
 
@@ -73,7 +73,7 @@ class CreatePrivateNatGatewayRequest extends AbstractModel
     public $DeletionProtectionEnabled;
 
     /**
-     * @param string $NatGatewayName 私网网关名称
+     * @param string $NatGatewayName 私网网关名称，限制60个字符
      * @param string $VpcId 私有网络实例ID。当创建VPC类型私网NAT网关或者专线网关类型私网NAT网关时，此参数必填。
      * @param boolean $CrossDomain 跨域参数。仅当取值为True时，才会支持跨域绑定VPC。
      * @param array $Tags 实例标签

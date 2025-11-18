@@ -62,7 +62,8 @@ use TencentCloud\Cvm\V20170312\Models as Models;
  * @method Models\DeleteHpcClustersResponse DeleteHpcClusters(Models\DeleteHpcClustersRequest $req) 当高性能计算集群为空, 即集群内没有任何设备时候, 可以删除该集群。
  * @method Models\DeleteImagesResponse DeleteImages(Models\DeleteImagesRequest $req) 本接口（DeleteImages）用于删除一个或多个镜像。
 
-* 当[镜像状态](https://cloud.tencent.com/document/product/213/15753#Image)为`创建中`和`使用中`时, 不允许删除。镜像状态可以通过[DescribeImages](https://cloud.tencent.com/document/api/213/9418)获取。
+* 当[镜像状态](https://cloud.tencent.com/document/product/213/15753#Image) 为`创建中`、`复制中`、`导入中`时, 不允许删除。镜像状态可以通过[DescribeImages](https://cloud.tencent.com/document/api/213/9418)获取。
+* 被共享的镜像，需要先取消共享关系，才能删除。
 * 每个地域最多只支持创建500个自定义镜像，删除镜像可以释放账户的配额。
 * 当镜像正在被其它账户分享时，不允许删除。
  * @method Models\DeleteInstancesActionTimerResponse DeleteInstancesActionTimer(Models\DeleteInstancesActionTimerRequest $req) 本接口 (DeleteInstancesActionTimer) 用于删除定时任务。
@@ -134,6 +135,8 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 
 * 密钥对是通过一种算法生成的一对密钥，在生成的密钥对中，一个向外界公开，称为公钥；另一个用户自己保留，称为私钥。密钥对的公钥内容可以通过这个接口查询，但私钥内容系统不保留。
  * @method Models\DescribeLaunchTemplateVersionsResponse DescribeLaunchTemplateVersions(Models\DescribeLaunchTemplateVersionsRequest $req) 本接口（DescribeLaunchTemplateVersions）用于查询实例模板版本信息。
+
+- 不支持参数`LaunchTemplateVersions`与以下参数同时指定，包括 `MaxVersion`、`MinVersion`、`Limit`、`Offset`和`DefaultVersion`。
  * @method Models\DescribeLaunchTemplatesResponse DescribeLaunchTemplates(Models\DescribeLaunchTemplatesRequest $req) 本接口（DescribeLaunchTemplates）用于查询一个或者多个实例启动模板。
  * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 本接口(DescribeRegions)用于查询地域信息。因平台策略原因，该接口暂时停止更新，为确保您正常调用，可切换至新链接：https://cloud.tencent.com/document/product/1596/77930。
  * @method Models\DescribeTaskInfoResponse DescribeTaskInfo(Models\DescribeTaskInfoRequest $req) 本接口 (DescribeTaskInfo) 用于查询云服务器维修任务列表及详细信息。

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPickUpStuff(string $PickUpStuff) 设置自提人员姓名
  * @method string getPickUpStuffContact() 获取自提人电话
  * @method void setPickUpStuffContact(string $PickUpStuffContact) 设置自提人电话
- * @method string getPickUpStuffIDCard() 获取自提人证件号码
- * @method void setPickUpStuffIDCard(string $PickUpStuffIDCard) 设置自提人证件号码
+ * @method string getPickUpStuffIDCard() 获取到访人证件号码
+ * @method void setPickUpStuffIDCard(string $PickUpStuffIDCard) 设置到访人证件号码
  * @method string getPickUpTime() 获取自提时间
  * @method void setPickUpTime(string $PickUpTime) 设置自提时间
  * @method string getIDCardType() 获取证件类型，非必传，默认为IDENTITY_CARD。
@@ -54,7 +54,7 @@ class CustomerReceipt extends AbstractModel
     public $PickUpStuffContact;
 
     /**
-     * @var string 自提人证件号码
+     * @var string 到访人证件号码
      */
     public $PickUpStuffIDCard;
 
@@ -76,7 +76,7 @@ OTHER: 其他
     /**
      * @param string $PickUpStuff 自提人员姓名
      * @param string $PickUpStuffContact 自提人电话
-     * @param string $PickUpStuffIDCard 自提人证件号码
+     * @param string $PickUpStuffIDCard 到访人证件号码
      * @param string $PickUpTime 自提时间
      * @param string $IDCardType 证件类型，非必传，默认为IDENTITY_CARD。
 对应关系如下：IDENTITY_CARD: 身份证,

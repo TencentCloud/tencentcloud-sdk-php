@@ -68,22 +68,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setWarningCode(array $WarningCode) 设置该字段已废弃， 将固定返回空数组，不建议使用。
 
- * @method array getWarnCardInfos() 获取告警码
--9101 证件边框不完整告警
--9102 证件复印件告警
--9103 证件翻拍告警
--9104 证件PS告警
--9107 证件反光告警
--9108 证件模糊告警
--9109 告警能力未开通
- * @method void setWarnCardInfos(array $WarnCardInfos) 设置告警码
--9101 证件边框不完整告警
--9102 证件复印件告警
--9103 证件翻拍告警
--9104 证件PS告警
--9107 证件反光告警
--9108 证件模糊告警
--9109 告警能力未开通
+ * @method array getWarnCardInfos() 获取该字段仅对国际站请求起作用，国内站该字段将固定返回空数组。国际站告警码如下：    告警码-9101 证件边框不完整告警-9102 证件复印件告警-9103 证件翻拍告警-9104 证件PS告警-9107 证件反光告警-9108 证件模糊告警-9109 告警能力未开通
+ * @method void setWarnCardInfos(array $WarnCardInfos) 设置该字段仅对国际站请求起作用，国内站该字段将固定返回空数组。国际站告警码如下：    告警码-9101 证件边框不完整告警-9102 证件复印件告警-9103 证件翻拍告警-9104 证件PS告警-9107 证件反光告警-9108 证件模糊告警-9109 告警能力未开通
  * @method string getWindowEmbeddedText() 获取证件透明视窗内的文本信息
  * @method void setWindowEmbeddedText(string $WindowEmbeddedText) 设置证件透明视窗内的文本信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -174,14 +160,7 @@ class HKIDCardOCRResponse extends AbstractModel
     public $WarningCode;
 
     /**
-     * @var array 告警码
--9101 证件边框不完整告警
--9102 证件复印件告警
--9103 证件翻拍告警
--9104 证件PS告警
--9107 证件反光告警
--9108 证件模糊告警
--9109 告警能力未开通
+     * @var array 该字段仅对国际站请求起作用，国内站该字段将固定返回空数组。国际站告警码如下：    告警码-9101 证件边框不完整告警-9102 证件复印件告警-9103 证件翻拍告警-9104 证件PS告警-9107 证件反光告警-9108 证件模糊告警-9109 告警能力未开通
      */
     public $WarnCardInfos;
 
@@ -220,14 +199,7 @@ class HKIDCardOCRResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WarningCode 该字段已废弃， 将固定返回空数组，不建议使用。
 
-     * @param array $WarnCardInfos 告警码
--9101 证件边框不完整告警
--9102 证件复印件告警
--9103 证件翻拍告警
--9104 证件PS告警
--9107 证件反光告警
--9108 证件模糊告警
--9109 告警能力未开通
+     * @param array $WarnCardInfos 该字段仅对国际站请求起作用，国内站该字段将固定返回空数组。国际站告警码如下：    告警码-9101 证件边框不完整告警-9102 证件复印件告警-9103 证件翻拍告警-9104 证件PS告警-9107 证件反光告警-9108 证件模糊告警-9109 告警能力未开通
      * @param string $WindowEmbeddedText 证件透明视窗内的文本信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

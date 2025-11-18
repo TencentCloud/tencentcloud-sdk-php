@@ -32,12 +32,14 @@ use TencentCloud\Common\AbstractModel;
 <ul>
 <li>文件Id（通过UploadFiles获取文件资源Id）</li>
 <li>模板Id（通过控制台创建模板后获取模板Id）</li>
+<li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li>
 </ul>
 注意：需要同时设置 ResourceType 参数指定资源类型
  * @method void setResourceId(string $ResourceId) 设置资源id，与ResourceType相对应，取值范围：
 <ul>
 <li>文件Id（通过UploadFiles获取文件资源Id）</li>
 <li>模板Id（通过控制台创建模板后获取模板Id）</li>
+<li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li>
 </ul>
 注意：需要同时设置 ResourceType 参数指定资源类型
  * @method string getFlowName() 获取自定义的合同流程的名称，长度不能超过200个字符，只能由中文汉字、中文标点、英文字母、阿拉伯数字、空格、小括号、中括号、中划线、下划线以及（,）、（;）、（.）、(&)、（+）组成。
@@ -48,10 +50,14 @@ use TencentCloud\Common\AbstractModel;
 该名称还将用于合同签署完成后文件下载的默认文件名称。
  * @method integer getResourceType() 获取资源类型，取值有：
 <ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li></ul>
+<li> **2**：文件（默认值）</li>
+<li> **3**：草稿</li>
+</ul>
  * @method void setResourceType(integer $ResourceType) 设置资源类型，取值有：
 <ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li></ul>
+<li> **2**：文件（默认值）</li>
+<li> **3**：草稿</li>
+</ul>
  * @method boolean getUnordered() 获取合同流程的签署顺序类型：
 <ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
 <li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
@@ -166,6 +172,7 @@ class CreatePrepareFlowRequest extends AbstractModel
 <ul>
 <li>文件Id（通过UploadFiles获取文件资源Id）</li>
 <li>模板Id（通过控制台创建模板后获取模板Id）</li>
+<li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li>
 </ul>
 注意：需要同时设置 ResourceType 参数指定资源类型
      */
@@ -181,7 +188,9 @@ class CreatePrepareFlowRequest extends AbstractModel
     /**
      * @var integer 资源类型，取值有：
 <ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li></ul>
+<li> **2**：文件（默认值）</li>
+<li> **3**：草稿</li>
+</ul>
      */
     public $ResourceType;
 
@@ -312,6 +321,7 @@ class CreatePrepareFlowRequest extends AbstractModel
 <ul>
 <li>文件Id（通过UploadFiles获取文件资源Id）</li>
 <li>模板Id（通过控制台创建模板后获取模板Id）</li>
+<li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li>
 </ul>
 注意：需要同时设置 ResourceType 参数指定资源类型
      * @param string $FlowName 自定义的合同流程的名称，长度不能超过200个字符，只能由中文汉字、中文标点、英文字母、阿拉伯数字、空格、小括号、中括号、中划线、下划线以及（,）、（;）、（.）、(&)、（+）组成。
@@ -319,7 +329,9 @@ class CreatePrepareFlowRequest extends AbstractModel
 该名称还将用于合同签署完成后文件下载的默认文件名称。
      * @param integer $ResourceType 资源类型，取值有：
 <ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li></ul>
+<li> **2**：文件（默认值）</li>
+<li> **3**：草稿</li>
+</ul>
      * @param boolean $Unordered 合同流程的签署顺序类型：
 <ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
 <li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>

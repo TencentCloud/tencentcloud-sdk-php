@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCLSNotices(array $CLSNotices) 设置告警通知推送到CLS服务 最多1个
  * @method array getPolicyIds() 获取告警通知模板绑定的告警策略ID列表
  * @method void setPolicyIds(array $PolicyIds) 设置告警通知模板绑定的告警策略ID列表
+ * @method integer getIsLoginFree() 获取是否免登录，0-否，1-是
+ * @method void setIsLoginFree(integer $IsLoginFree) 设置是否免登录，0-否，1-是
  */
 class ModifyAlarmNoticeRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class ModifyAlarmNoticeRequest extends AbstractModel
     public $PolicyIds;
 
     /**
+     * @var integer 是否免登录，0-否，1-是
+     */
+    public $IsLoginFree;
+
+    /**
      * @param string $Module 模块名，这里填“monitor”
      * @param string $Name 告警通知规则名称 60字符以内
      * @param string $NoticeType 通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=都通知
@@ -96,6 +103,7 @@ class ModifyAlarmNoticeRequest extends AbstractModel
      * @param array $URLNotices 回调通知 最多6个
      * @param array $CLSNotices 告警通知推送到CLS服务 最多1个
      * @param array $PolicyIds 告警通知模板绑定的告警策略ID列表
+     * @param integer $IsLoginFree 是否免登录，0-否，1-是
      */
     function __construct()
     {
@@ -159,6 +167,10 @@ class ModifyAlarmNoticeRequest extends AbstractModel
 
         if (array_key_exists("PolicyIds",$param) and $param["PolicyIds"] !== null) {
             $this->PolicyIds = $param["PolicyIds"];
+        }
+
+        if (array_key_exists("IsLoginFree",$param) and $param["IsLoginFree"] !== null) {
+            $this->IsLoginFree = $param["IsLoginFree"];
         }
     }
 }

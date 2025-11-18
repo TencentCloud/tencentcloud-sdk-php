@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getResourceType() 获取资源类型，取值有：
 <ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li></ul>
+<li> **2**：文件（默认值）</li>
+<li> **3**：草稿</li>
+</ul>
  * @method void setResourceType(integer $ResourceType) 设置资源类型，取值有：
 <ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li></ul>
+<li> **2**：文件（默认值）</li>
+<li> **3**：草稿</li>
+</ul>
  * @method BaseFlowInfo getFlowInfo() 获取要创建的合同信息
  * @method void setFlowInfo(BaseFlowInfo $FlowInfo) 设置要创建的合同信息
  * @method Agent getAgent() 获取关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
@@ -50,12 +54,14 @@ use TencentCloud\Common\AbstractModel;
 <ul>
 <li>文件Id（通过UploadFiles获取文件资源Id）</li>
 <li>模板Id（通过控制台创建模板后获取模板Id）</li>
+<li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li>
 </ul>
 注意：需要同时设置 ResourceType 参数指定资源类型
  * @method void setResourceId(string $ResourceId) 设置资源id，与ResourceType相对应，取值范围：
 <ul>
 <li>文件Id（通过UploadFiles获取文件资源Id）</li>
 <li>模板Id（通过控制台创建模板后获取模板Id）</li>
+<li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li>
 </ul>
 注意：需要同时设置 ResourceType 参数指定资源类型
  * @method CreateFlowOption getFlowOption() 获取合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
@@ -86,7 +92,9 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
     /**
      * @var integer 资源类型，取值有：
 <ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li></ul>
+<li> **2**：文件（默认值）</li>
+<li> **3**：草稿</li>
+</ul>
      */
     public $ResourceType;
 
@@ -113,6 +121,7 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
 <ul>
 <li>文件Id（通过UploadFiles获取文件资源Id）</li>
 <li>模板Id（通过控制台创建模板后获取模板Id）</li>
+<li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li>
 </ul>
 注意：需要同时设置 ResourceType 参数指定资源类型
      */
@@ -165,7 +174,9 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
     /**
      * @param integer $ResourceType 资源类型，取值有：
 <ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li></ul>
+<li> **2**：文件（默认值）</li>
+<li> **3**：草稿</li>
+</ul>
      * @param BaseFlowInfo $FlowInfo 要创建的合同信息
      * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
@@ -180,6 +191,7 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
 <ul>
 <li>文件Id（通过UploadFiles获取文件资源Id）</li>
 <li>模板Id（通过控制台创建模板后获取模板Id）</li>
+<li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li>
 </ul>
 注意：需要同时设置 ResourceType 参数指定资源类型
      * @param CreateFlowOption $FlowOption 合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑

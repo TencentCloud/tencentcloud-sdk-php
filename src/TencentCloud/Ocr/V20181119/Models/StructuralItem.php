@@ -18,7 +18,7 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 智能结构化识别
+ * 文档智能识别
  *
  * @method string getName() 获取识别出的字段名称(关键字)。
  * @method void setName(string $Name) 设置识别出的字段名称(关键字)。

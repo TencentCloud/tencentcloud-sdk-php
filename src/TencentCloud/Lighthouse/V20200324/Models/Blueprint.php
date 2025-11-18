@@ -44,10 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRequiredSystemDiskSize(integer $RequiredSystemDiskSize) 设置镜像所需系统盘大小，单位 GB。
  * @method string getBlueprintState() 获取镜像状态。
 可选值：
-NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、ISOLATED（已隔离）、CREATEFAILED（创建失败）、SYNCING_FAILED（目的地域同步失败）、ISOLATING（隔离中）、ISOLATED（已隔离）、DELETING（删除中）、DESTROYING（销毁中）。
+NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、CREATEFAILED（创建失败）、SYNCING_FAILED（目的地域同步失败）、ISOLATING（隔离中）、ISOLATED（已隔离）、DELETING（删除中）、DESTROYING（销毁中）。
  * @method void setBlueprintState(string $BlueprintState) 设置镜像状态。
 可选值：
-NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、ISOLATED（已隔离）、CREATEFAILED（创建失败）、SYNCING_FAILED（目的地域同步失败）、ISOLATING（隔离中）、ISOLATED（已隔离）、DELETING（删除中）、DESTROYING（销毁中）。
+NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、CREATEFAILED（创建失败）、SYNCING_FAILED（目的地域同步失败）、ISOLATING（隔离中）、ISOLATED（已隔离）、DELETING（删除中）、DESTROYING（销毁中）。
  * @method string getCreatedTime() 获取创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -133,7 +133,7 @@ class Blueprint extends AbstractModel
     /**
      * @var string 镜像状态。
 可选值：
-NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、ISOLATED（已隔离）、CREATEFAILED（创建失败）、SYNCING_FAILED（目的地域同步失败）、ISOLATING（隔离中）、ISOLATED（已隔离）、DELETING（删除中）、DESTROYING（销毁中）。
+NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、CREATEFAILED（创建失败）、SYNCING_FAILED（目的地域同步失败）、ISOLATING（隔离中）、ISOLATED（已隔离）、DELETING（删除中）、DESTROYING（销毁中）。
      */
     public $BlueprintState;
 
@@ -209,7 +209,7 @@ NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、ISOLATED（�
      * @param integer $RequiredSystemDiskSize 镜像所需系统盘大小，单位 GB。
      * @param string $BlueprintState 镜像状态。
 可选值：
-NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、ISOLATED（已隔离）、CREATEFAILED（创建失败）、SYNCING_FAILED（目的地域同步失败）、ISOLATING（隔离中）、ISOLATED（已隔离）、DELETING（删除中）、DESTROYING（销毁中）。
+NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、CREATEFAILED（创建失败）、SYNCING_FAILED（目的地域同步失败）、ISOLATING（隔离中）、ISOLATED（已隔离）、DELETING（删除中）、DESTROYING（销毁中）。
      * @param string $CreatedTime 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。

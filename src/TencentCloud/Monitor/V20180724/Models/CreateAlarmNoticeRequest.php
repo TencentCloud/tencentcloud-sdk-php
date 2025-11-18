@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCLSNotices(array $CLSNotices) 设置推送CLS日志服务的操作 最多1个
  * @method array getTags() 获取模板绑定的标签
  * @method void setTags(array $Tags) 设置模板绑定的标签
+ * @method integer getIsLoginFree() 获取是否免登录，0-否，1-是
+ * @method void setIsLoginFree(integer $IsLoginFree) 设置是否免登录，0-否，1-是
  */
 class CreateAlarmNoticeRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateAlarmNoticeRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var integer 是否免登录，0-否，1-是
+     */
+    public $IsLoginFree;
+
+    /**
      * @param string $Module 模块名，这里填“monitor”
      * @param string $Name 通知模板名称 60字符以内
      * @param string $NoticeType 通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=都通知
@@ -88,6 +95,7 @@ class CreateAlarmNoticeRequest extends AbstractModel
      * @param array $URLNotices 回调通知 最多6个
      * @param array $CLSNotices 推送CLS日志服务的操作 最多1个
      * @param array $Tags 模板绑定的标签
+     * @param integer $IsLoginFree 是否免登录，0-否，1-是
      */
     function __construct()
     {
@@ -152,6 +160,10 @@ class CreateAlarmNoticeRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("IsLoginFree",$param) and $param["IsLoginFree"] !== null) {
+            $this->IsLoginFree = $param["IsLoginFree"];
         }
     }
 }

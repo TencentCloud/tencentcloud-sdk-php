@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCount(integer $TotalCount) 设置总数
  * @method array getRes() 获取规则
  * @method void setRes(array $Res) 设置规则
+ * @method integer getLimit() 获取规则限制总数
+ * @method void setLimit(integer $Limit) 设置规则限制总数
+ * @method integer getAvailable() 获取规则剩余多少可用
+ * @method void setAvailable(integer $Available) 设置规则剩余多少可用
  */
 class CCRuleLists extends AbstractModel
 {
@@ -38,8 +42,20 @@ class CCRuleLists extends AbstractModel
     public $Res;
 
     /**
+     * @var integer 规则限制总数
+     */
+    public $Limit;
+
+    /**
+     * @var integer 规则剩余多少可用
+     */
+    public $Available;
+
+    /**
      * @param integer $TotalCount 总数
      * @param array $Res 规则
+     * @param integer $Limit 规则限制总数
+     * @param integer $Available 规则剩余多少可用
      */
     function __construct()
     {
@@ -65,6 +81,14 @@ class CCRuleLists extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Res, $obj);
             }
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Available",$param) and $param["Available"] !== null) {
+            $this->Available = $param["Available"];
         }
     }
 }

@@ -62,6 +62,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageId(string $PageId) 设置页面ID
  * @method integer getActionRatio() 获取动作灰度比例，默认值100
  * @method void setActionRatio(integer $ActionRatio) 设置动作灰度比例，默认值100
+ * @method array getDomains() 获取批量cc规则配置的批量域名
+ * @method void setDomains(array $Domains) 设置批量cc规则配置的批量域名
+ * @method array getGroupIds() 获取批量cc规则使用的批量防护组
+ * @method void setGroupIds(array $GroupIds) 设置批量cc规则使用的批量防护组
+ * @method string getJobType() 获取定时任务类型
+ * @method void setJobType(string $JobType) 设置定时任务类型
+ * @method JobDateTime getJobDateTime() 获取定时任务配置
+ * @method void setJobDateTime(JobDateTime $JobDateTime) 设置定时任务配置
+ * @method string getCronType() 获取定时任务类型：month or week
+ * @method void setCronType(string $CronType) 设置定时任务类型：month or week
+ * @method integer getExpireTime() 获取过期时间
+ * @method void setExpireTime(integer $ExpireTime) 设置过期时间
+ * @method integer getValidStatus() 获取是否生效
+ * @method void setValidStatus(integer $ValidStatus) 设置是否生效
+ * @method string getSource() 获取来源：批量还是单个规则
+ * @method void setSource(string $Source) 设置来源：批量还是单个规则
  */
 class CCRuleItems extends AbstractModel
 {
@@ -171,6 +187,46 @@ class CCRuleItems extends AbstractModel
     public $ActionRatio;
 
     /**
+     * @var array 批量cc规则配置的批量域名
+     */
+    public $Domains;
+
+    /**
+     * @var array 批量cc规则使用的批量防护组
+     */
+    public $GroupIds;
+
+    /**
+     * @var string 定时任务类型
+     */
+    public $JobType;
+
+    /**
+     * @var JobDateTime 定时任务配置
+     */
+    public $JobDateTime;
+
+    /**
+     * @var string 定时任务类型：month or week
+     */
+    public $CronType;
+
+    /**
+     * @var integer 过期时间
+     */
+    public $ExpireTime;
+
+    /**
+     * @var integer 是否生效
+     */
+    public $ValidStatus;
+
+    /**
+     * @var string 来源：批量还是单个规则
+     */
+    public $Source;
+
+    /**
      * @param string $Name 名字
      * @param integer $Status 状态
      * @param integer $Advance 模式
@@ -192,6 +248,14 @@ class CCRuleItems extends AbstractModel
      * @param string $LogicalOp 逻辑操作符
      * @param string $PageId 页面ID
      * @param integer $ActionRatio 动作灰度比例，默认值100
+     * @param array $Domains 批量cc规则配置的批量域名
+     * @param array $GroupIds 批量cc规则使用的批量防护组
+     * @param string $JobType 定时任务类型
+     * @param JobDateTime $JobDateTime 定时任务配置
+     * @param string $CronType 定时任务类型：month or week
+     * @param integer $ExpireTime 过期时间
+     * @param integer $ValidStatus 是否生效
+     * @param string $Source 来源：批量还是单个规则
      */
     function __construct()
     {
@@ -288,6 +352,39 @@ class CCRuleItems extends AbstractModel
 
         if (array_key_exists("ActionRatio",$param) and $param["ActionRatio"] !== null) {
             $this->ActionRatio = $param["ActionRatio"];
+        }
+
+        if (array_key_exists("Domains",$param) and $param["Domains"] !== null) {
+            $this->Domains = $param["Domains"];
+        }
+
+        if (array_key_exists("GroupIds",$param) and $param["GroupIds"] !== null) {
+            $this->GroupIds = $param["GroupIds"];
+        }
+
+        if (array_key_exists("JobType",$param) and $param["JobType"] !== null) {
+            $this->JobType = $param["JobType"];
+        }
+
+        if (array_key_exists("JobDateTime",$param) and $param["JobDateTime"] !== null) {
+            $this->JobDateTime = new JobDateTime();
+            $this->JobDateTime->deserialize($param["JobDateTime"]);
+        }
+
+        if (array_key_exists("CronType",$param) and $param["CronType"] !== null) {
+            $this->CronType = $param["CronType"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("ValidStatus",$param) and $param["ValidStatus"] !== null) {
+            $this->ValidStatus = $param["ValidStatus"];
+        }
+
+        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
+            $this->Source = $param["Source"];
         }
     }
 }

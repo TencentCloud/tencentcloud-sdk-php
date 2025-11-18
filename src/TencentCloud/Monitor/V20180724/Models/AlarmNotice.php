@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置通知模板绑定的标签
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsLoginFree() 获取是否免登录，0-否，1-是
+ * @method void setIsLoginFree(integer $IsLoginFree) 设置是否免登录，0-否，1-是
  */
 class AlarmNotice extends AbstractModel
 {
@@ -154,6 +156,11 @@ class AlarmNotice extends AbstractModel
     public $Tags;
 
     /**
+     * @var integer 是否免登录，0-否，1-是
+     */
+    public $IsLoginFree;
+
+    /**
      * @param string $Id 告警通知模板 ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 告警通知模板名称
@@ -180,6 +187,7 @@ class AlarmNotice extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 通知模板绑定的标签
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsLoginFree 是否免登录，0-否，1-是
      */
     function __construct()
     {
@@ -264,6 +272,10 @@ class AlarmNotice extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("IsLoginFree",$param) and $param["IsLoginFree"] !== null) {
+            $this->IsLoginFree = $param["IsLoginFree"];
         }
     }
 }

@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间,秒级时间戳
  * @method string getOperator() 获取操作人
  * @method void setOperator(string $Operator) 设置操作人
+ * @method string getFeedbackContent() 获取自定义反馈
+ * @method void setFeedbackContent(string $FeedbackContent) 设置自定义反馈
  */
 class UnsatisfiedReply extends AbstractModel
 {
@@ -105,6 +107,11 @@ class UnsatisfiedReply extends AbstractModel
     public $Operator;
 
     /**
+     * @var string 自定义反馈
+     */
+    public $FeedbackContent;
+
+    /**
      * @param string $ReplyBizId 不满意回复ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordBizId 消息记录ID
@@ -120,6 +127,7 @@ class UnsatisfiedReply extends AbstractModel
      * @param string $CreateTime 创建时间，秒级时间戳
      * @param string $UpdateTime 更新时间,秒级时间戳
      * @param string $Operator 操作人
+     * @param string $FeedbackContent 自定义反馈
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class UnsatisfiedReply extends AbstractModel
 
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = $param["Operator"];
+        }
+
+        if (array_key_exists("FeedbackContent",$param) and $param["FeedbackContent"] !== null) {
+            $this->FeedbackContent = $param["FeedbackContent"];
         }
     }
 }

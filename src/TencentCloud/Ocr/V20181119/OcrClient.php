@@ -663,7 +663,9 @@ use TencentCloud\Ocr\V20181119\Models as Models;
         </tr>
       </tbody>
     </table>
- * @method Models\RecognizeHealthCodeOCRResponse RecognizeHealthCodeOCR(Models\RecognizeHealthCodeOCRRequest $req) 本接口支持北京、上海、广东、江苏、吉林、黑龙江、天津、辽宁、浙江、河南、四川、贵州、山东、安徽、福建、江西、湖北、湖南等省份健康码的识别，包括持码人姓名、持码人身份证号、健康码更新时间、健康码颜色、核酸检测结果、核酸检测间隔时长、核酸检测时间，疫苗接种信息，八个字段的识别结果输出。不同省市健康码显示的字段信息有所不同，上述字段的识别结果可能为空，以图片上具体展示的信息为准。
+ * @method Models\RecognizeHealthCodeOCRResponse RecognizeHealthCodeOCR(Models\RecognizeHealthCodeOCRRequest $req) 产品规划
+
+本接口支持北京、上海、广东、江苏、吉林、黑龙江、天津、辽宁、浙江、河南、四川、贵州、山东、安徽、福建、江西、湖北、湖南等省份健康码的识别，包括持码人姓名、持码人身份证号、健康码更新时间、健康码颜色、核酸检测结果、核酸检测间隔时长、核酸检测时间，疫苗接种信息，八个字段的识别结果输出。不同省市健康码显示的字段信息有所不同，上述字段的识别结果可能为空，以图片上具体展示的信息为准。
 
 默认接口请求频率限制：10次/秒。
  * @method Models\RecognizeMedicalInvoiceOCRResponse RecognizeMedicalInvoiceOCR(Models\RecognizeMedicalInvoiceOCRRequest $req) 医疗发票识别目前支持全国统一门诊发票、全国统一住院发票、以及部分地方的门诊和住院发票的识别。
@@ -687,7 +689,9 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 本接口暂未完全对外开放，如需咨询，请[联系商务](https://cloud.tencent.com/about/connect)
 
 默认接口请求频率限制：10次/秒
- * @method Models\RecognizeTravelCardOCRResponse RecognizeTravelCardOCR(Models\RecognizeTravelCardOCRRequest $req) 本接口支持通信大数据行程卡识别，包括行程卡颜色、更新时间、途经地、存在中高风险地区的城市、电话号码，五个字段的识别结果输出。
+ * @method Models\RecognizeTravelCardOCRResponse RecognizeTravelCardOCR(Models\RecognizeTravelCardOCRRequest $req) 产品规划
+
+本接口支持通信大数据行程卡识别，包括行程卡颜色、更新时间、途经地、存在中高风险地区的城市、电话号码，五个字段的识别结果输出。
 
 默认接口请求频率限制：20次/秒。
  * @method Models\RecognizeValidIDCardOCRResponse RecognizeValidIDCardOCR(Models\RecognizeValidIDCardOCRRequest $req) 本接口支持二代身份证、临时身份证、港澳台居住证、外国人永久居留证，字段内容识别功能，包括姓名、性别、民族、出生、出生日期、住址、公民身份号码、签发机关、有效期限、国籍、通行证号码、持证人持有号码；支持返回证件类型；支持翻拍、复印、边框不完整、遮挡、字段级反光和字段级完整性告警；支持卡片主体框裁剪和头像裁剪。

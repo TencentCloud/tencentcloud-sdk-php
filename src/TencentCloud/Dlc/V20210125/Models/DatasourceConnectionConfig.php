@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method TccHive getTccHive() 获取TccHive数据目录连接信息
  * @method void setTccHive(TccHive $TccHive) 设置TccHive数据目录连接信息
+ * @method DataSourceInfo getMongoDB() 获取MongoDB 数据源
+ * @method void setMongoDB(DataSourceInfo $MongoDB) 设置MongoDB 数据源
  */
 class DatasourceConnectionConfig extends AbstractModel
 {
@@ -131,6 +133,11 @@ class DatasourceConnectionConfig extends AbstractModel
     public $TccHive;
 
     /**
+     * @var DataSourceInfo MongoDB 数据源
+     */
+    public $MongoDB;
+
+    /**
      * @param MysqlInfo $Mysql Mysql数据源连接的属性
 注意：此字段可能返回 null，表示取不到有效值。
      * @param HiveInfo $Hive Hive数据源连接的属性
@@ -152,6 +159,7 @@ class DatasourceConnectionConfig extends AbstractModel
      * @param TCHouseD $TCHouseD Doris数据源连接的属性
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TccHive $TccHive TccHive数据目录连接信息
+     * @param DataSourceInfo $MongoDB MongoDB 数据源
      */
     function __construct()
     {
@@ -219,6 +227,11 @@ class DatasourceConnectionConfig extends AbstractModel
         if (array_key_exists("TccHive",$param) and $param["TccHive"] !== null) {
             $this->TccHive = new TccHive();
             $this->TccHive->deserialize($param["TccHive"]);
+        }
+
+        if (array_key_exists("MongoDB",$param) and $param["MongoDB"] !== null) {
+            $this->MongoDB = new DataSourceInfo();
+            $this->MongoDB->deserialize($param["MongoDB"]);
         }
     }
 }

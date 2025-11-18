@@ -70,8 +70,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getToa() 获取仅支持Nat64 CLB TCP监听器
  * @method void setToa(boolean $Toa) 设置仅支持Nat64 CLB TCP监听器
- * @method boolean getDeregisterTargetRst() 获取解绑后端目标时，是否发RST给客户端，（此参数仅对于TCP监听器有意义）。
- * @method void setDeregisterTargetRst(boolean $DeregisterTargetRst) 设置解绑后端目标时，是否发RST给客户端，（此参数仅对于TCP监听器有意义）。
+ * @method boolean getDeregisterTargetRst() 获取重新调度功能，解绑后端服务开关，打开此开关，当解绑后端服务时触发重新调度。仅TCP/UDP监听器支持。
+ * @method void setDeregisterTargetRst(boolean $DeregisterTargetRst) 设置重新调度功能，解绑后端服务开关，打开此开关，当解绑后端服务时触发重新调度。仅TCP/UDP监听器支持。
  * @method array getAttrFlags() 获取监听器的属性
  * @method void setAttrFlags(array $AttrFlags) 设置监听器的属性
  * @method array getTargetGroupList() 获取绑定的目标组列表
@@ -189,7 +189,7 @@ class Listener extends AbstractModel
     public $Toa;
 
     /**
-     * @var boolean 解绑后端目标时，是否发RST给客户端，（此参数仅对于TCP监听器有意义）。
+     * @var boolean 重新调度功能，解绑后端服务开关，打开此开关，当解绑后端服务时触发重新调度。仅TCP/UDP监听器支持。
      */
     public $DeregisterTargetRst;
 
@@ -261,7 +261,7 @@ class Listener extends AbstractModel
      * @param integer $KeepaliveEnable 是否开启长连接，1开启，0关闭，（本参数仅对于HTTP/HTTPS监听器有意义）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Toa 仅支持Nat64 CLB TCP监听器
-     * @param boolean $DeregisterTargetRst 解绑后端目标时，是否发RST给客户端，（此参数仅对于TCP监听器有意义）。
+     * @param boolean $DeregisterTargetRst 重新调度功能，解绑后端服务开关，打开此开关，当解绑后端服务时触发重新调度。仅TCP/UDP监听器支持。
      * @param array $AttrFlags 监听器的属性
      * @param array $TargetGroupList 绑定的目标组列表
 注意：此字段可能返回 null，表示取不到有效值。

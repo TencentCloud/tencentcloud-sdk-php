@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoiceId(string $VoiceId) 设置音色ID
  * @method string getModel() 获取TTS 的模型，默认是：flow_01_turbo, 可选: [ flow_01_turbo, flow_01_ex]
  * @method void setModel(string $Model) 设置TTS 的模型，默认是：flow_01_turbo, 可选: [ flow_01_turbo, flow_01_ex]
+ * @method float getSpeed() 获取语速，范围 0.5-2.0，默认 1.0
+ * @method void setSpeed(float $Speed) 设置语速，范围 0.5-2.0，默认 1.0
+ * @method float getVolume() 获取(0, 10] 默认值1.0
+ * @method void setVolume(float $Volume) 设置(0, 10] 默认值1.0
  */
 class TTSConfig extends AbstractModel
 {
@@ -38,8 +42,20 @@ class TTSConfig extends AbstractModel
     public $Model;
 
     /**
+     * @var float 语速，范围 0.5-2.0，默认 1.0
+     */
+    public $Speed;
+
+    /**
+     * @var float (0, 10] 默认值1.0
+     */
+    public $Volume;
+
+    /**
      * @param string $VoiceId 音色ID
      * @param string $Model TTS 的模型，默认是：flow_01_turbo, 可选: [ flow_01_turbo, flow_01_ex]
+     * @param float $Speed 语速，范围 0.5-2.0，默认 1.0
+     * @param float $Volume (0, 10] 默认值1.0
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class TTSConfig extends AbstractModel
 
         if (array_key_exists("Model",$param) and $param["Model"] !== null) {
             $this->Model = $param["Model"];
+        }
+
+        if (array_key_exists("Speed",$param) and $param["Speed"] !== null) {
+            $this->Speed = $param["Speed"];
+        }
+
+        if (array_key_exists("Volume",$param) and $param["Volume"] !== null) {
+            $this->Volume = $param["Volume"];
         }
     }
 }

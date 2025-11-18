@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getNatGatewayId() 获取私网网关唯一`ID`，形如"intranat-xxxxxxxx)
  * @method void setNatGatewayId(string $NatGatewayId) 设置私网网关唯一`ID`，形如"intranat-xxxxxxxx)
- * @method array getFilters() 获取过滤条件，Name可选值"OriginalIp",  "TranslationIp", "OriginalPort","TranslationPort",  "Protocol", "Description"
- * @method void setFilters(array $Filters) 设置过滤条件，Name可选值"OriginalIp",  "TranslationIp", "OriginalPort","TranslationPort",  "Protocol", "Description"
+ * @method array getFilters() 获取过滤条件，Name可选值：OriginalIp、TranslationIp、OriginalPort、TranslationPort、Protocol、Description，分别表示映射前IP、映射后IP、映射前端口、映射后端口、协议类型、描述
+ * @method void setFilters(array $Filters) 设置过滤条件，Name可选值：OriginalIp、TranslationIp、OriginalPort、TranslationPort、Protocol、Description，分别表示映射前IP、映射后IP、映射前端口、映射后端口、协议类型、描述
  * @method integer getOffset() 获取偏移量，默认值为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认值为0。
  * @method integer getLimit() 获取返回数目，默认值为20。
@@ -37,7 +37,7 @@ class DescribePrivateNatGatewayDestinationIpPortTranslationNatRulesRequest exten
     public $NatGatewayId;
 
     /**
-     * @var array 过滤条件，Name可选值"OriginalIp",  "TranslationIp", "OriginalPort","TranslationPort",  "Protocol", "Description"
+     * @var array 过滤条件，Name可选值：OriginalIp、TranslationIp、OriginalPort、TranslationPort、Protocol、Description，分别表示映射前IP、映射后IP、映射前端口、映射后端口、协议类型、描述
      */
     public $Filters;
 
@@ -53,7 +53,7 @@ class DescribePrivateNatGatewayDestinationIpPortTranslationNatRulesRequest exten
 
     /**
      * @param string $NatGatewayId 私网网关唯一`ID`，形如"intranat-xxxxxxxx)
-     * @param array $Filters 过滤条件，Name可选值"OriginalIp",  "TranslationIp", "OriginalPort","TranslationPort",  "Protocol", "Description"
+     * @param array $Filters 过滤条件，Name可选值：OriginalIp、TranslationIp、OriginalPort、TranslationPort、Protocol、Description，分别表示映射前IP、映射后IP、映射前端口、映射后端口、协议类型、描述
      * @param integer $Offset 偏移量，默认值为0。
      * @param integer $Limit 返回数目，默认值为20。
      */

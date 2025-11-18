@@ -76,8 +76,14 @@ use TencentCloud\Common\AbstractModel;
 - ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
 样例：
 `{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
- * @method string getInputType() 获取日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file
- * @method void setInputType(string $InputType) 设置日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file
+ * @method string getInputType() 获取日志输入类型（<span style="color:red; font-weight:bold">注：windows场景必填且仅支持file和windows_event类型</span>）
+- file: 文件类型采集
+- windows_event：windows事件采集
+- syslog：系统日志采集
+ * @method void setInputType(string $InputType) 设置日志输入类型（<span style="color:red; font-weight:bold">注：windows场景必填且仅支持file和windows_event类型</span>）
+- file: 文件类型采集
+- windows_event：windows事件采集
+- syslog：系统日志采集
  */
 class ModifyConfigRequest extends AbstractModel
 {
@@ -146,7 +152,10 @@ class ModifyConfigRequest extends AbstractModel
     public $AdvancedConfig;
 
     /**
-     * @var string 日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file
+     * @var string 日志输入类型（<span style="color:red; font-weight:bold">注：windows场景必填且仅支持file和windows_event类型</span>）
+- file: 文件类型采集
+- windows_event：windows事件采集
+- syslog：系统日志采集
      */
     public $InputType;
 
@@ -179,7 +188,10 @@ class ModifyConfigRequest extends AbstractModel
 - ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
 样例：
 `{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
-     * @param string $InputType 日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file
+     * @param string $InputType 日志输入类型（<span style="color:red; font-weight:bold">注：windows场景必填且仅支持file和windows_event类型</span>）
+- file: 文件类型采集
+- windows_event：windows事件采集
+- syslog：系统日志采集
      */
     function __construct()
     {

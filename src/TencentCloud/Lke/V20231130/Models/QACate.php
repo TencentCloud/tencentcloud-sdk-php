@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChildren(array $Children) 设置子分类
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsLeaf() 获取是否是叶子节点
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsLeaf(boolean $IsLeaf) 设置是否是叶子节点
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class QACate extends AbstractModel
 {
@@ -109,6 +113,12 @@ class QACate extends AbstractModel
     public $Children;
 
     /**
+     * @var boolean 是否是叶子节点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsLeaf;
+
+    /**
      * @param string $CateBizId QA分类的业务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 分类名称
@@ -127,6 +137,8 @@ class QACate extends AbstractModel
 
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Children 子分类
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsLeaf 是否是叶子节点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -173,6 +185,10 @@ class QACate extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Children, $obj);
             }
+        }
+
+        if (array_key_exists("IsLeaf",$param) and $param["IsLeaf"] !== null) {
+            $this->IsLeaf = $param["IsLeaf"];
         }
     }
 }

@@ -146,14 +146,42 @@ cdc-clb-waf：CDC环境下负载均衡型WAF实例
  * @method void setLoadBalancerSet(array $LoadBalancerSet) 设置负载均衡器相关配置
  * @method integer getAppId() 获取用户id
  * @method void setAppId(integer $AppId) 设置用户id
- * @method integer getState() 获取负载均衡型WAF域名LB监听器状态。
+ * @method integer getState() 获取SAAS型WAF域名状态：
+-2：配置下发失败
+-1：配置下发中
+0：DNS解析中
+1：无DNS解析记录，请接入WAF
+10：DNS解析未知，域名启用了代理
+11：DNS解析异常，使用A记录接入WAF IP
+200：检测源站不可达
+220：源站不支持长连接
+311：证书过期
+312：证书即将过期
+310：证书异常
+316：备案异常
+5：WAF回源已变更
+负载均衡型WAF域名LB监听器状态：
 0：操作成功 
 4：正在绑定LB 
 6：正在解绑LB 
 7：解绑LB失败 
 8：绑定LB失败 
 10：内部错误
- * @method void setState(integer $State) 设置负载均衡型WAF域名LB监听器状态。
+ * @method void setState(integer $State) 设置SAAS型WAF域名状态：
+-2：配置下发失败
+-1：配置下发中
+0：DNS解析中
+1：无DNS解析记录，请接入WAF
+10：DNS解析未知，域名启用了代理
+11：DNS解析异常，使用A记录接入WAF IP
+200：检测源站不可达
+220：源站不支持长连接
+311：证书过期
+312：证书即将过期
+310：证书异常
+316：备案异常
+5：WAF回源已变更
+负载均衡型WAF域名LB监听器状态：
 0：操作成功 
 4：正在绑定LB 
 6：正在解绑LB 
@@ -381,7 +409,21 @@ cdc-clb-waf：CDC环境下负载均衡型WAF实例
     public $AppId;
 
     /**
-     * @var integer 负载均衡型WAF域名LB监听器状态。
+     * @var integer SAAS型WAF域名状态：
+-2：配置下发失败
+-1：配置下发中
+0：DNS解析中
+1：无DNS解析记录，请接入WAF
+10：DNS解析未知，域名启用了代理
+11：DNS解析异常，使用A记录接入WAF IP
+200：检测源站不可达
+220：源站不支持长连接
+311：证书过期
+312：证书即将过期
+310：证书异常
+316：备案异常
+5：WAF回源已变更
+负载均衡型WAF域名LB监听器状态：
 0：操作成功 
 4：正在绑定LB 
 6：正在解绑LB 
@@ -570,7 +612,21 @@ cdc-clb-waf：CDC环境下负载均衡型WAF实例
      * @param array $Ports 服务端口配置
      * @param array $LoadBalancerSet 负载均衡器相关配置
      * @param integer $AppId 用户id
-     * @param integer $State 负载均衡型WAF域名LB监听器状态。
+     * @param integer $State SAAS型WAF域名状态：
+-2：配置下发失败
+-1：配置下发中
+0：DNS解析中
+1：无DNS解析记录，请接入WAF
+10：DNS解析未知，域名启用了代理
+11：DNS解析异常，使用A记录接入WAF IP
+200：检测源站不可达
+220：源站不支持长连接
+311：证书过期
+312：证书即将过期
+310：证书异常
+316：备案异常
+5：WAF回源已变更
+负载均衡型WAF域名LB监听器状态：
 0：操作成功 
 4：正在绑定LB 
 6：正在解绑LB 

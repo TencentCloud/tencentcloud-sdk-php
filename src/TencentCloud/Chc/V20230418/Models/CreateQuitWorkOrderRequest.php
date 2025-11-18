@@ -42,6 +42,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogisticsReceipt(LogisticsReceipt $LogisticsReceipt) 设置物流上门收货必传
  * @method CustomerReceipt getCustomerReceipt() 获取客户上门自提必传
  * @method void setCustomerReceipt(CustomerReceipt $CustomerReceipt) 设置客户上门自提必传
+ * @method string getBuilding() 获取楼宇名
+ * @method void setBuilding(string $Building) 设置楼宇名
+ * @method string getIdcUnitId() 获取机房管理单元id
+ * @method void setIdcUnitId(string $IdcUnitId) 设置机房管理单元id
+ * @method string getIsp() 获取运营商
+ * @method void setIsp(string $Isp) 设置运营商
+ * @method array getEmailSet() 获取放行邮件目的邮箱
+ * @method void setEmailSet(array $EmailSet) 设置放行邮件目的邮箱
+ * @method array getFactorSet() 获取到访原因
+ * @method void setFactorSet(array $FactorSet) 设置到访原因
  */
 class CreateQuitWorkOrderRequest extends AbstractModel
 {
@@ -101,6 +111,31 @@ class CreateQuitWorkOrderRequest extends AbstractModel
     public $CustomerReceipt;
 
     /**
+     * @var string 楼宇名
+     */
+    public $Building;
+
+    /**
+     * @var string 机房管理单元id
+     */
+    public $IdcUnitId;
+
+    /**
+     * @var string 运营商
+     */
+    public $Isp;
+
+    /**
+     * @var array 放行邮件目的邮箱
+     */
+    public $EmailSet;
+
+    /**
+     * @var array 到访原因
+     */
+    public $FactorSet;
+
+    /**
      * @param integer $IdcId 机房id
      * @param string $DeviceType 设备类型，server, netDevice, otherDevice
      * @param string $StuffOption 下架选择 1.自行解决 2.由腾讯IDC负责
@@ -112,6 +147,11 @@ class CreateQuitWorkOrderRequest extends AbstractModel
      * @param string $Remark 备注
      * @param LogisticsReceipt $LogisticsReceipt 物流上门收货必传
      * @param CustomerReceipt $CustomerReceipt 客户上门自提必传
+     * @param string $Building 楼宇名
+     * @param string $IdcUnitId 机房管理单元id
+     * @param string $Isp 运营商
+     * @param array $EmailSet 放行邮件目的邮箱
+     * @param array $FactorSet 到访原因
      */
     function __construct()
     {
@@ -172,6 +212,26 @@ class CreateQuitWorkOrderRequest extends AbstractModel
         if (array_key_exists("CustomerReceipt",$param) and $param["CustomerReceipt"] !== null) {
             $this->CustomerReceipt = new CustomerReceipt();
             $this->CustomerReceipt->deserialize($param["CustomerReceipt"]);
+        }
+
+        if (array_key_exists("Building",$param) and $param["Building"] !== null) {
+            $this->Building = $param["Building"];
+        }
+
+        if (array_key_exists("IdcUnitId",$param) and $param["IdcUnitId"] !== null) {
+            $this->IdcUnitId = $param["IdcUnitId"];
+        }
+
+        if (array_key_exists("Isp",$param) and $param["Isp"] !== null) {
+            $this->Isp = $param["Isp"];
+        }
+
+        if (array_key_exists("EmailSet",$param) and $param["EmailSet"] !== null) {
+            $this->EmailSet = $param["EmailSet"];
+        }
+
+        if (array_key_exists("FactorSet",$param) and $param["FactorSet"] !== null) {
+            $this->FactorSet = $param["FactorSet"];
         }
     }
 }

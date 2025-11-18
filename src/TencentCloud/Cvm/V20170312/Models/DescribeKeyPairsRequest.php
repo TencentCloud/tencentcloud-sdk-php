@@ -23,14 +23,14 @@ use TencentCloud\Common\AbstractModel;
  * @method array getKeyIds() 获取密钥对ID，密钥对ID形如：`skey-11112222`（此接口支持同时传入多个ID进行过滤。此参数的具体格式可参考 API [简介](https://cloud.tencent.com/document/api/213/15688)的 `id.N` 一节）。参数不支持同时指定 `KeyIds` 和 `Filters`。密钥对ID可以通过登录[控制台](https://console.cloud.tencent.com/cvm/index)查询。
  * @method void setKeyIds(array $KeyIds) 设置密钥对ID，密钥对ID形如：`skey-11112222`（此接口支持同时传入多个ID进行过滤。此参数的具体格式可参考 API [简介](https://cloud.tencent.com/document/api/213/15688)的 `id.N` 一节）。参数不支持同时指定 `KeyIds` 和 `Filters`。密钥对ID可以通过登录[控制台](https://console.cloud.tencent.com/cvm/index)查询。
  * @method array getFilters() 获取过滤条件。
-<li> project-id - Integer - 是否必填：否 -（过滤条件）按照项目ID过滤。可以通过[项目列表](https://console.cloud.tencent.com/project)查询项目ID，或者调用接口 [DescribeProject](https://cloud.tencent.com/document/api/378/4400)，取返回信息中的projectId获取项目ID。</li>
+<li> project-id - Integer - 是否必填：否 -（过滤条件）按照项目ID过滤。可以通过[项目列表](https://console.cloud.tencent.com/project)查询项目ID，或者调用接口 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725)，取返回信息中的projectId获取项目ID。</li>
 <li> key-name - String - 是否必填：否 -（过滤条件）按照密钥对名称过滤。</li>
 <li> tag-key - String - 是否必填：否 -（过滤条件）按照标签键过滤。</li>
 <li> tag-value - String - 是否必填：否 -（过滤条件）按照标签值过滤。</li>
 <li> tag:tag-key - String - 是否必填：否 -（过滤条件）按照标签键值对过滤。tag-key使用具体的标签键进行替换。</li>
 参数不支持同时指定 `KeyIds` 和 `Filters`。
  * @method void setFilters(array $Filters) 设置过滤条件。
-<li> project-id - Integer - 是否必填：否 -（过滤条件）按照项目ID过滤。可以通过[项目列表](https://console.cloud.tencent.com/project)查询项目ID，或者调用接口 [DescribeProject](https://cloud.tencent.com/document/api/378/4400)，取返回信息中的projectId获取项目ID。</li>
+<li> project-id - Integer - 是否必填：否 -（过滤条件）按照项目ID过滤。可以通过[项目列表](https://console.cloud.tencent.com/project)查询项目ID，或者调用接口 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725)，取返回信息中的projectId获取项目ID。</li>
 <li> key-name - String - 是否必填：否 -（过滤条件）按照密钥对名称过滤。</li>
 <li> tag-key - String - 是否必填：否 -（过滤条件）按照标签键过滤。</li>
 <li> tag-value - String - 是否必填：否 -（过滤条件）按照标签值过滤。</li>
@@ -50,7 +50,7 @@ class DescribeKeyPairsRequest extends AbstractModel
 
     /**
      * @var array 过滤条件。
-<li> project-id - Integer - 是否必填：否 -（过滤条件）按照项目ID过滤。可以通过[项目列表](https://console.cloud.tencent.com/project)查询项目ID，或者调用接口 [DescribeProject](https://cloud.tencent.com/document/api/378/4400)，取返回信息中的projectId获取项目ID。</li>
+<li> project-id - Integer - 是否必填：否 -（过滤条件）按照项目ID过滤。可以通过[项目列表](https://console.cloud.tencent.com/project)查询项目ID，或者调用接口 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725)，取返回信息中的projectId获取项目ID。</li>
 <li> key-name - String - 是否必填：否 -（过滤条件）按照密钥对名称过滤。</li>
 <li> tag-key - String - 是否必填：否 -（过滤条件）按照标签键过滤。</li>
 <li> tag-value - String - 是否必填：否 -（过滤条件）按照标签值过滤。</li>
@@ -72,7 +72,7 @@ class DescribeKeyPairsRequest extends AbstractModel
     /**
      * @param array $KeyIds 密钥对ID，密钥对ID形如：`skey-11112222`（此接口支持同时传入多个ID进行过滤。此参数的具体格式可参考 API [简介](https://cloud.tencent.com/document/api/213/15688)的 `id.N` 一节）。参数不支持同时指定 `KeyIds` 和 `Filters`。密钥对ID可以通过登录[控制台](https://console.cloud.tencent.com/cvm/index)查询。
      * @param array $Filters 过滤条件。
-<li> project-id - Integer - 是否必填：否 -（过滤条件）按照项目ID过滤。可以通过[项目列表](https://console.cloud.tencent.com/project)查询项目ID，或者调用接口 [DescribeProject](https://cloud.tencent.com/document/api/378/4400)，取返回信息中的projectId获取项目ID。</li>
+<li> project-id - Integer - 是否必填：否 -（过滤条件）按照项目ID过滤。可以通过[项目列表](https://console.cloud.tencent.com/project)查询项目ID，或者调用接口 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725)，取返回信息中的projectId获取项目ID。</li>
 <li> key-name - String - 是否必填：否 -（过滤条件）按照密钥对名称过滤。</li>
 <li> tag-key - String - 是否必填：否 -（过滤条件）按照标签键过滤。</li>
 <li> tag-value - String - 是否必填：否 -（过滤条件）按照标签值过滤。</li>

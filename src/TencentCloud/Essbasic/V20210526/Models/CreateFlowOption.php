@@ -118,6 +118,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSelfName(string $SelfName) 设置本企业简称，注：仅对新版页面生效
  * @method boolean getHideSignCodeAfterStart() 获取发起后签署码隐藏，默认false，注：仅对新版页面生效
  * @method void setHideSignCodeAfterStart(boolean $HideSignCodeAfterStart) 设置发起后签署码隐藏，默认false，注：仅对新版页面生效
+ * @method boolean getNeedFlowDraft() 获取发起过程中是否保存草稿	
+ * @method void setNeedFlowDraft(boolean $NeedFlowDraft) 设置发起过程中是否保存草稿	
  */
 class CreateFlowOption extends AbstractModel
 {
@@ -235,6 +237,11 @@ class CreateFlowOption extends AbstractModel
     public $HideSignCodeAfterStart;
 
     /**
+     * @var boolean 发起过程中是否保存草稿	
+     */
+    public $NeedFlowDraft;
+
+    /**
      * @param boolean $CanEditFlow 是否允许修改合同信息，
 **true**：可以
 **false**：（默认）不可以
@@ -284,6 +291,7 @@ class CreateFlowOption extends AbstractModel
 注：仅对新版页面生效
      * @param string $SelfName 本企业简称，注：仅对新版页面生效
      * @param boolean $HideSignCodeAfterStart 发起后签署码隐藏，默认false，注：仅对新版页面生效
+     * @param boolean $NeedFlowDraft 发起过程中是否保存草稿	
      */
     function __construct()
     {
@@ -361,6 +369,10 @@ class CreateFlowOption extends AbstractModel
 
         if (array_key_exists("HideSignCodeAfterStart",$param) and $param["HideSignCodeAfterStart"] !== null) {
             $this->HideSignCodeAfterStart = $param["HideSignCodeAfterStart"];
+        }
+
+        if (array_key_exists("NeedFlowDraft",$param) and $param["NeedFlowDraft"] !== null) {
+            $this->NeedFlowDraft = $param["NeedFlowDraft"];
         }
     }
 }

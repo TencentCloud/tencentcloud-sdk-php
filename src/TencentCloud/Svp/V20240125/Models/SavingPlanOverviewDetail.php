@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 节省计划总览明细数据
  *
+ * @method string getSpId() 获取节省计划资源id
+ * @method void setSpId(string $SpId) 设置节省计划资源id
  * @method string getSpType() 获取节省计划类型
  * @method void setSpType(string $SpType) 设置节省计划类型
  * @method string getPayAmount() 获取支付金额（单位：元）
@@ -45,6 +47,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class SavingPlanOverviewDetail extends AbstractModel
 {
+    /**
+     * @var string 节省计划资源id
+     */
+    public $SpId;
+
     /**
      * @var string 节省计划类型
      */
@@ -97,6 +104,7 @@ class SavingPlanOverviewDetail extends AbstractModel
     public $PromiseAmount;
 
     /**
+     * @param string $SpId 节省计划资源id
      * @param string $SpType 节省计划类型
      * @param string $PayAmount 支付金额（单位：元）
      * @param string $StartTime 开始时间 yyyy-mm-dd HH:mm:ss格式
@@ -122,6 +130,10 @@ class SavingPlanOverviewDetail extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SpId",$param) and $param["SpId"] !== null) {
+            $this->SpId = $param["SpId"];
+        }
+
         if (array_key_exists("SpType",$param) and $param["SpType"] !== null) {
             $this->SpType = $param["SpType"];
         }

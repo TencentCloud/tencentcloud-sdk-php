@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCronType(string $CronType) 设置周期任务粒度
  * @method boolean getValidStatus() 获取当前是否有效
  * @method void setValidStatus(boolean $ValidStatus) 设置当前是否有效
+ * @method string getLogicalOp() 获取匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+ * @method void setLogicalOp(string $LogicalOp) 设置匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
  */
 class OwaspWhiteRule extends AbstractModel
 {
@@ -108,6 +110,11 @@ class OwaspWhiteRule extends AbstractModel
     public $ValidStatus;
 
     /**
+     * @var string 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+     */
+    public $LogicalOp;
+
+    /**
      * @param integer $RuleId 白名单的规则ID
      * @param string $Name 规则名
      * @param array $Ids 加白的规则ID列表
@@ -120,6 +127,7 @@ class OwaspWhiteRule extends AbstractModel
      * @param JobDateTime $JobDateTime 定时任务配置
      * @param string $CronType 周期任务粒度
      * @param boolean $ValidStatus 当前是否有效
+     * @param string $LogicalOp 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
      */
     function __construct()
     {
@@ -186,6 +194,10 @@ class OwaspWhiteRule extends AbstractModel
 
         if (array_key_exists("ValidStatus",$param) and $param["ValidStatus"] !== null) {
             $this->ValidStatus = $param["ValidStatus"];
+        }
+
+        if (array_key_exists("LogicalOp",$param) and $param["LogicalOp"] !== null) {
+            $this->LogicalOp = $param["LogicalOp"];
         }
     }
 }

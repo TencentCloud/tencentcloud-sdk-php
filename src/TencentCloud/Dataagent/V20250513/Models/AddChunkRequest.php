@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInsertPos(integer $InsertPos) 设置显式指定的位置,实际的位置。从 0 开始计算。0 代表插到最前面，chunk total 代表插到最后面。
  * @method string getContent() 获取chunk内容
  * @method void setContent(string $Content) 设置chunk内容
- * @method string getAfterChunkId() 获取	 新 Chunk 插入到目标 Chunk ​之后的位置。插入位置的上一个 chunkId
- * @method void setAfterChunkId(string $AfterChunkId) 设置	 新 Chunk 插入到目标 Chunk ​之后的位置。插入位置的上一个 chunkId
+ * @method string getAfterChunkId() 获取新 Chunk 插入到目标 Chunk ​之后的位置。插入位置的上一个 chunkId
+ * @method void setAfterChunkId(string $AfterChunkId) 设置新 Chunk 插入到目标 Chunk ​之后的位置。插入位置的上一个 chunkId
  */
 class AddChunkRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class AddChunkRequest extends AbstractModel
     public $Content;
 
     /**
-     * @var string 	 新 Chunk 插入到目标 Chunk ​之后的位置。插入位置的上一个 chunkId
+     * @var string 新 Chunk 插入到目标 Chunk ​之后的位置。插入位置的上一个 chunkId
      */
     public $AfterChunkId;
 
@@ -71,7 +71,7 @@ class AddChunkRequest extends AbstractModel
      * @param string $BeforeChunkId 新增chunk的后面一个ChunkID。如果是空就是插到队尾。插入位置的下一个 chunkId。如果插到最前面，传入原切片的第一个。
      * @param integer $InsertPos 显式指定的位置,实际的位置。从 0 开始计算。0 代表插到最前面，chunk total 代表插到最后面。
      * @param string $Content chunk内容
-     * @param string $AfterChunkId 	 新 Chunk 插入到目标 Chunk ​之后的位置。插入位置的上一个 chunkId
+     * @param string $AfterChunkId 新 Chunk 插入到目标 Chunk ​之后的位置。插入位置的上一个 chunkId
      */
     function __construct()
     {

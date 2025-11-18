@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDestinationPath(string $DestinationPath) 设置目的端路径
  * @method string getMountOptionParameter() 获取挂载配置项参数
  * @method void setMountOptionParameter(string $MountOptionParameter) 设置挂载配置项参数
+ * @method string getMountType() 获取挂载COS存储时支持的挂载工具；当前可选值：COSFS、GooseFS-Lite。
+ * @method void setMountType(string $MountType) 设置挂载COS存储时支持的挂载工具；当前可选值：COSFS、GooseFS-Lite。
  */
 class InputMapping extends AbstractModel
 {
@@ -45,9 +47,15 @@ class InputMapping extends AbstractModel
     public $MountOptionParameter;
 
     /**
+     * @var string 挂载COS存储时支持的挂载工具；当前可选值：COSFS、GooseFS-Lite。
+     */
+    public $MountType;
+
+    /**
      * @param string $SourcePath 源端路径
      * @param string $DestinationPath 目的端路径
      * @param string $MountOptionParameter 挂载配置项参数
+     * @param string $MountType 挂载COS存储时支持的挂载工具；当前可选值：COSFS、GooseFS-Lite。
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class InputMapping extends AbstractModel
 
         if (array_key_exists("MountOptionParameter",$param) and $param["MountOptionParameter"] !== null) {
             $this->MountOptionParameter = $param["MountOptionParameter"];
+        }
+
+        if (array_key_exists("MountType",$param) and $param["MountType"] !== null) {
+            $this->MountType = $param["MountType"];
         }
     }
 }

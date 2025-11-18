@@ -20,138 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询kafka的zone信息返回的实体
  *
- * @method array getZoneList() 获取zone列表
- * @method void setZoneList(array $ZoneList) 设置zone列表
- * @method integer getMaxBuyInstanceNum() 获取最大购买实例个数
- * @method void setMaxBuyInstanceNum(integer $MaxBuyInstanceNum) 设置最大购买实例个数
- * @method integer getMaxBandwidth() 获取最大购买带宽 单位Mb/s
- * @method void setMaxBandwidth(integer $MaxBandwidth) 设置最大购买带宽 单位Mb/s
- * @method Price getUnitPrice() 获取后付费单位价格
- * @method void setUnitPrice(Price $UnitPrice) 设置后付费单位价格
- * @method Price getMessagePrice() 获取后付费消息单价
- * @method void setMessagePrice(Price $MessagePrice) 设置后付费消息单价
- * @method array getClusterInfo() 获取用户独占集群信息
- * @method void setClusterInfo(array $ClusterInfo) 设置用户独占集群信息
- * @method string getStandard() 获取购买标准版配置
- * @method void setStandard(string $Standard) 设置购买标准版配置
- * @method string getStandardS2() 获取购买标准版S2配置
- * @method void setStandardS2(string $StandardS2) 设置购买标准版S2配置
- * @method string getProfession() 获取购买专业版配置
- * @method void setProfession(string $Profession) 设置购买专业版配置
- * @method string getPhysical() 获取购买物理独占版配置
- * @method void setPhysical(string $Physical) 设置购买物理独占版配置
- * @method string getPublicNetwork() 获取公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义
- * @method void setPublicNetwork(string $PublicNetwork) 设置公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义
- * @method string getPublicNetworkLimit() 获取公网带宽配置
- * @method void setPublicNetworkLimit(string $PublicNetworkLimit) 设置公网带宽配置
- * @method string getRequestId() 获取请求Id
- * @method void setRequestId(string $RequestId) 设置请求Id
- * @method integer getOffset() 获取分页offset
- * @method void setOffset(integer $Offset) 设置分页offset
- * @method integer getLimit() 获取分页limit
- * @method void setLimit(integer $Limit) 设置分页limit
- * @method boolean getForceCheckTag() 获取是否必须录入tag
- * @method void setForceCheckTag(boolean $ForceCheckTag) 设置是否必须录入tag
+ * @method array getZoneList() 获取<p>zone列表</p>
+ * @method void setZoneList(array $ZoneList) 设置<p>zone列表</p>
+ * @method integer getMaxBuyInstanceNum() 获取<p>最大购买实例个数</p>
+ * @method void setMaxBuyInstanceNum(integer $MaxBuyInstanceNum) 设置<p>最大购买实例个数</p>
+ * @method integer getMaxBandwidth() 获取<p>最大购买带宽 单位Mb/s</p>
+ * @method void setMaxBandwidth(integer $MaxBandwidth) 设置<p>最大购买带宽 单位Mb/s</p>
+ * @method Price getUnitPrice() 获取<p>后付费单位价格</p>
+ * @method void setUnitPrice(Price $UnitPrice) 设置<p>后付费单位价格</p>
+ * @method Price getMessagePrice() 获取<p>后付费消息单价</p>
+ * @method void setMessagePrice(Price $MessagePrice) 设置<p>后付费消息单价</p>
+ * @method array getClusterInfo() 获取<p>用户独占集群信息</p>
+ * @method void setClusterInfo(array $ClusterInfo) 设置<p>用户独占集群信息</p>
+ * @method string getStandard() 获取<p>购买标准版配置</p>
+ * @method void setStandard(string $Standard) 设置<p>购买标准版配置</p>
+ * @method string getStandardS2() 获取<p>购买标准版S2配置</p>
+ * @method void setStandardS2(string $StandardS2) 设置<p>购买标准版S2配置</p>
+ * @method string getProfession() 获取<p>购买专业版配置</p>
+ * @method void setProfession(string $Profession) 设置<p>购买专业版配置</p>
+ * @method string getPhysical() 获取<p>购买物理独占版配置</p>
+ * @method void setPhysical(string $Physical) 设置<p>购买物理独占版配置</p>
+ * @method string getPublicNetwork() 获取<p>公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义</p>
+ * @method void setPublicNetwork(string $PublicNetwork) 设置<p>公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义</p>
+ * @method string getPublicNetworkLimit() 获取<p>公网带宽配置</p>
+ * @method void setPublicNetworkLimit(string $PublicNetworkLimit) 设置<p>公网带宽配置</p>
+ * @method string getRequestId() 获取<p>请求Id</p>
+ * @method void setRequestId(string $RequestId) 设置<p>请求Id</p>
+ * @method integer getOffset() 获取<p>分页offset</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页offset</p>
+ * @method integer getLimit() 获取<p>分页limit</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页limit</p>
+ * @method boolean getForceCheckTag() 获取<p>是否必须录入tag</p>
+ * @method void setForceCheckTag(boolean $ForceCheckTag) 设置<p>是否必须录入tag</p>
  */
 class ZoneResponse extends AbstractModel
 {
     /**
-     * @var array zone列表
+     * @var array <p>zone列表</p>
      */
     public $ZoneList;
 
     /**
-     * @var integer 最大购买实例个数
+     * @var integer <p>最大购买实例个数</p>
      */
     public $MaxBuyInstanceNum;
 
     /**
-     * @var integer 最大购买带宽 单位Mb/s
+     * @var integer <p>最大购买带宽 单位Mb/s</p>
      */
     public $MaxBandwidth;
 
     /**
-     * @var Price 后付费单位价格
+     * @var Price <p>后付费单位价格</p>
      */
     public $UnitPrice;
 
     /**
-     * @var Price 后付费消息单价
+     * @var Price <p>后付费消息单价</p>
      */
     public $MessagePrice;
 
     /**
-     * @var array 用户独占集群信息
+     * @var array <p>用户独占集群信息</p>
      */
     public $ClusterInfo;
 
     /**
-     * @var string 购买标准版配置
+     * @var string <p>购买标准版配置</p>
      */
     public $Standard;
 
     /**
-     * @var string 购买标准版S2配置
+     * @var string <p>购买标准版S2配置</p>
      */
     public $StandardS2;
 
     /**
-     * @var string 购买专业版配置
+     * @var string <p>购买专业版配置</p>
      */
     public $Profession;
 
     /**
-     * @var string 购买物理独占版配置
+     * @var string <p>购买物理独占版配置</p>
      */
     public $Physical;
 
     /**
-     * @var string 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义
+     * @var string <p>公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义</p>
      */
     public $PublicNetwork;
 
     /**
-     * @var string 公网带宽配置
+     * @var string <p>公网带宽配置</p>
      */
     public $PublicNetworkLimit;
 
     /**
-     * @var string 请求Id
+     * @var string <p>请求Id</p>
      */
     public $RequestId;
 
     /**
-     * @var integer 分页offset
+     * @var integer <p>分页offset</p>
      */
     public $Offset;
 
     /**
-     * @var integer 分页limit
+     * @var integer <p>分页limit</p>
      */
     public $Limit;
 
     /**
-     * @var boolean 是否必须录入tag
+     * @var boolean <p>是否必须录入tag</p>
      */
     public $ForceCheckTag;
 
     /**
-     * @param array $ZoneList zone列表
-     * @param integer $MaxBuyInstanceNum 最大购买实例个数
-     * @param integer $MaxBandwidth 最大购买带宽 单位Mb/s
-     * @param Price $UnitPrice 后付费单位价格
-     * @param Price $MessagePrice 后付费消息单价
-     * @param array $ClusterInfo 用户独占集群信息
-     * @param string $Standard 购买标准版配置
-     * @param string $StandardS2 购买标准版S2配置
-     * @param string $Profession 购买专业版配置
-     * @param string $Physical 购买物理独占版配置
-     * @param string $PublicNetwork 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义
-     * @param string $PublicNetworkLimit 公网带宽配置
-     * @param string $RequestId 请求Id
-     * @param integer $Offset 分页offset
-     * @param integer $Limit 分页limit
-     * @param boolean $ForceCheckTag 是否必须录入tag
+     * @param array $ZoneList <p>zone列表</p>
+     * @param integer $MaxBuyInstanceNum <p>最大购买实例个数</p>
+     * @param integer $MaxBandwidth <p>最大购买带宽 单位Mb/s</p>
+     * @param Price $UnitPrice <p>后付费单位价格</p>
+     * @param Price $MessagePrice <p>后付费消息单价</p>
+     * @param array $ClusterInfo <p>用户独占集群信息</p>
+     * @param string $Standard <p>购买标准版配置</p>
+     * @param string $StandardS2 <p>购买标准版S2配置</p>
+     * @param string $Profession <p>购买专业版配置</p>
+     * @param string $Physical <p>购买物理独占版配置</p>
+     * @param string $PublicNetwork <p>公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义</p>
+     * @param string $PublicNetworkLimit <p>公网带宽配置</p>
+     * @param string $RequestId <p>请求Id</p>
+     * @param integer $Offset <p>分页offset</p>
+     * @param integer $Limit <p>分页limit</p>
+     * @param boolean $ForceCheckTag <p>是否必须录入tag</p>
      */
     function __construct()
     {

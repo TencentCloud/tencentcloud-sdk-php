@@ -24,9 +24,16 @@ use TencentCloud\Apm\V20210622\Models as Models;
 
 /**
  * @method Models\CreateApmInstanceResponse CreateApmInstance(Models\CreateApmInstanceRequest $req) 业务购买 APM 业务系统，调用该接口创建
+ * @method Models\CreateApmPrometheusRuleResponse CreateApmPrometheusRule(Models\CreateApmPrometheusRuleRequest $req) 用于创建apm业务系统与Prometheus实例的指标匹配规则
+ * @method Models\CreateApmSampleConfigResponse CreateApmSampleConfig(Models\CreateApmSampleConfigRequest $req) 创建采样配置接口
  * @method Models\CreateProfileTaskResponse CreateProfileTask(Models\CreateProfileTaskRequest $req) 创建事件任务
+ * @method Models\DeleteApmSampleConfigResponse DeleteApmSampleConfig(Models\DeleteApmSampleConfigRequest $req) 删除采样配置接口
  * @method Models\DescribeApmAgentResponse DescribeApmAgent(Models\DescribeApmAgentRequest $req) 获取 APM 接入点
+ * @method Models\DescribeApmApplicationConfigResponse DescribeApmApplicationConfig(Models\DescribeApmApplicationConfigRequest $req) 查询应用配置接口
+ * @method Models\DescribeApmAssociationResponse DescribeApmAssociation(Models\DescribeApmAssociationRequest $req) 用于查询apm业务系统与其他产品的关联关系
  * @method Models\DescribeApmInstancesResponse DescribeApmInstances(Models\DescribeApmInstancesRequest $req) 获取 APM 业务系统列表
+ * @method Models\DescribeApmPrometheusRuleResponse DescribeApmPrometheusRule(Models\DescribeApmPrometheusRuleRequest $req) 用于查询apm业务系统与Prometheus实例的指标匹配规则
+ * @method Models\DescribeApmSampleConfigResponse DescribeApmSampleConfig(Models\DescribeApmSampleConfigRequest $req) 查询采样配置接口
  * @method Models\DescribeApmServiceMetricResponse DescribeApmServiceMetric(Models\DescribeApmServiceMetricRequest $req) 获取 APM 应用指标列表
  * @method Models\DescribeGeneralApmApplicationConfigResponse DescribeGeneralApmApplicationConfig(Models\DescribeGeneralApmApplicationConfigRequest $req) 查询应用配置信息
  * @method Models\DescribeGeneralMetricDataResponse DescribeGeneralMetricData(Models\DescribeGeneralMetricDataRequest $req) 获取指标数据通用接口。用户根据需要上送请求参数，返回对应的指标数据。
@@ -36,7 +43,11 @@ use TencentCloud\Apm\V20210622\Models as Models;
  * @method Models\DescribeMetricRecordsResponse DescribeMetricRecords(Models\DescribeMetricRecordsRequest $req) 查询指标列表接口，查询指标更推荐使用DescribeGeneralMetricData接口
  * @method Models\DescribeServiceOverviewResponse DescribeServiceOverview(Models\DescribeServiceOverviewRequest $req) 应用概览数据拉取
  * @method Models\DescribeTagValuesResponse DescribeTagValues(Models\DescribeTagValuesRequest $req) 根据维度名和过滤条件，查询维度数据.
+ * @method Models\ModifyApmApplicationConfigResponse ModifyApmApplicationConfig(Models\ModifyApmApplicationConfigRequest $req) 修改应用配置接口
+ * @method Models\ModifyApmAssociationResponse ModifyApmAssociation(Models\ModifyApmAssociationRequest $req) 用于修改apm业务系统与其他产品的关联关系（包括创建和删除）
  * @method Models\ModifyApmInstanceResponse ModifyApmInstance(Models\ModifyApmInstanceRequest $req) 修改APM业务系统接口
+ * @method Models\ModifyApmPrometheusRuleResponse ModifyApmPrometheusRule(Models\ModifyApmPrometheusRuleRequest $req) 用于修改apm业务系统与Prometheus实例的指标匹配规则
+ * @method Models\ModifyApmSampleConfigResponse ModifyApmSampleConfig(Models\ModifyApmSampleConfigRequest $req) 修改采样配置接口
  * @method Models\ModifyGeneralApmApplicationConfigResponse ModifyGeneralApmApplicationConfig(Models\ModifyGeneralApmApplicationConfigRequest $req) 对外开放的openApi，客户可以灵活的指定需要修改的字段，再加入需要修改的服务列表.
  * @method Models\TerminateApmInstanceResponse TerminateApmInstance(Models\TerminateApmInstanceRequest $req) 销毁 APM 业务系统
  */

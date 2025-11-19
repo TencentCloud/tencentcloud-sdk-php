@@ -18,40 +18,19 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDeviceLocationSolve返回参数结构体
+ * BatchCreateTWeSeeRecognitionTask返回参数结构体
  *
- * @method float getLongitude() 获取经度
- * @method void setLongitude(float $Longitude) 设置经度
- * @method float getLatitude() 获取纬度
- * @method void setLatitude(float $Latitude) 设置纬度
- * @method string getLocationType() 获取类型
- * @method void setLocationType(string $LocationType) 设置类型
- * @method float getAccuracy() 获取误差精度预估，单位为米
- * @method void setAccuracy(float $Accuracy) 设置误差精度预估，单位为米
+ * @method array getOutputs() 获取TWeSee 语义理解任务的创建结果。与入参 Inputs 一一对应。
+ * @method void setOutputs(array $Outputs) 设置TWeSee 语义理解任务的创建结果。与入参 Inputs 一一对应。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeDeviceLocationSolveResponse extends AbstractModel
+class BatchCreateTWeSeeRecognitionTaskResponse extends AbstractModel
 {
     /**
-     * @var float 经度
+     * @var array TWeSee 语义理解任务的创建结果。与入参 Inputs 一一对应。
      */
-    public $Longitude;
-
-    /**
-     * @var float 纬度
-     */
-    public $Latitude;
-
-    /**
-     * @var string 类型
-     */
-    public $LocationType;
-
-    /**
-     * @var float 误差精度预估，单位为米
-     */
-    public $Accuracy;
+    public $Outputs;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -59,10 +38,7 @@ class DescribeDeviceLocationSolveResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param float $Longitude 经度
-     * @param float $Latitude 纬度
-     * @param string $LocationType 类型
-     * @param float $Accuracy 误差精度预估，单位为米
+     * @param array $Outputs TWeSee 语义理解任务的创建结果。与入参 Inputs 一一对应。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -78,20 +54,13 @@ class DescribeDeviceLocationSolveResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Longitude",$param) and $param["Longitude"] !== null) {
-            $this->Longitude = $param["Longitude"];
-        }
-
-        if (array_key_exists("Latitude",$param) and $param["Latitude"] !== null) {
-            $this->Latitude = $param["Latitude"];
-        }
-
-        if (array_key_exists("LocationType",$param) and $param["LocationType"] !== null) {
-            $this->LocationType = $param["LocationType"];
-        }
-
-        if (array_key_exists("Accuracy",$param) and $param["Accuracy"] !== null) {
-            $this->Accuracy = $param["Accuracy"];
+        if (array_key_exists("Outputs",$param) and $param["Outputs"] !== null) {
+            $this->Outputs = [];
+            foreach ($param["Outputs"] as $key => $value){
+                $obj = new CreateVisionRecognitionTaskOutput();
+                $obj->deserialize($value);
+                array_push($this->Outputs, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

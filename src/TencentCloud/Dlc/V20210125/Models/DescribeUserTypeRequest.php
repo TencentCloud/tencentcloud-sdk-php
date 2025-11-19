@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUserId() 获取用户ID（UIN），如果不填默认为调用方的子UIN
  * @method void setUserId(string $UserId) 设置用户ID（UIN），如果不填默认为调用方的子UIN
+ * @method string getAccountType() 获取用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+ * @method void setAccountType(string $AccountType) 设置用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
  */
 class DescribeUserTypeRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeUserTypeRequest extends AbstractModel
     public $UserId;
 
     /**
+     * @var string 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     */
+    public $AccountType;
+
+    /**
      * @param string $UserId 用户ID（UIN），如果不填默认为调用方的子UIN
+     * @param string $AccountType 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeUserTypeRequest extends AbstractModel
         }
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
+            $this->AccountType = $param["AccountType"];
         }
     }
 }

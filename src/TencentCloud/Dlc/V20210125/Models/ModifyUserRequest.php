@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserId(string $UserId) 设置用户Id，和CAM侧Uin匹配
  * @method string getUserDescription() 获取用户描述
  * @method void setUserDescription(string $UserDescription) 设置用户描述
+ * @method string getAccountType() 获取用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+ * @method void setAccountType(string $AccountType) 设置用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
  */
 class ModifyUserRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ModifyUserRequest extends AbstractModel
     public $UserDescription;
 
     /**
+     * @var string 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     */
+    public $AccountType;
+
+    /**
      * @param string $UserId 用户Id，和CAM侧Uin匹配
      * @param string $UserDescription 用户描述
+     * @param string $AccountType 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyUserRequest extends AbstractModel
 
         if (array_key_exists("UserDescription",$param) and $param["UserDescription"] !== null) {
             $this->UserDescription = $param["UserDescription"];
+        }
+
+        if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
+            $this->AccountType = $param["AccountType"];
         }
     }
 }

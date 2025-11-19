@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置当前用户的创建时间，形如2021-07-28 16:19:32
  * @method string getUserAlias() 获取用户别名
  * @method void setUserAlias(string $UserAlias) 设置用户别名
+ * @method string getAccountType() 获取用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+ * @method void setAccountType(string $AccountType) 设置用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
  */
 class UserMessage extends AbstractModel
 {
@@ -62,12 +64,18 @@ class UserMessage extends AbstractModel
     public $UserAlias;
 
     /**
+     * @var string 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     */
+    public $AccountType;
+
+    /**
      * @param string $UserId 用户Id，和CAM侧子用户Uin匹配
      * @param string $UserDescription 用户描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Creator 当前用户的创建者
      * @param string $CreateTime 当前用户的创建时间，形如2021-07-28 16:19:32
      * @param string $UserAlias 用户别名
+     * @param string $AccountType 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class UserMessage extends AbstractModel
 
         if (array_key_exists("UserAlias",$param) and $param["UserAlias"] !== null) {
             $this->UserAlias = $param["UserAlias"];
+        }
+
+        if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
+            $this->AccountType = $param["AccountType"];
         }
     }
 }

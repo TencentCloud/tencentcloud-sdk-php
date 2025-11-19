@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDDLTopicName(string $DDLTopicName) 设置用于存储ddl的topic
  * @method array getTopicRules() 获取单topic和自定义topic的描述
  * @method void setTopicRules(array $TopicRules) 设置单topic和自定义topic的描述
+ * @method array getDataOption() 获取其他附加信息，对于特定数据类型可设置额外参数，比如针对Canal兼容的功能支持："canalOfficialFormat":"on"表示打开Canal兼容功能，默认不带。
+ * @method void setDataOption(array $DataOption) 设置其他附加信息，对于特定数据类型可设置额外参数，比如针对Canal兼容的功能支持："canalOfficialFormat":"on"表示打开Canal兼容功能，默认不带。
  */
 class KafkaOption extends AbstractModel
 {
@@ -52,10 +54,16 @@ class KafkaOption extends AbstractModel
     public $TopicRules;
 
     /**
+     * @var array 其他附加信息，对于特定数据类型可设置额外参数，比如针对Canal兼容的功能支持："canalOfficialFormat":"on"表示打开Canal兼容功能，默认不带。
+     */
+    public $DataOption;
+
+    /**
      * @param string $DataType 投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json,debezium
      * @param string $TopicType 同步topic策略，如Single（集中投递到单topic）,Multi (自定义topic名称)
      * @param string $DDLTopicName 用于存储ddl的topic
      * @param array $TopicRules 单topic和自定义topic的描述
+     * @param array $DataOption 其他附加信息，对于特定数据类型可设置额外参数，比如针对Canal兼容的功能支持："canalOfficialFormat":"on"表示打开Canal兼容功能，默认不带。
      */
     function __construct()
     {
@@ -88,6 +96,15 @@ class KafkaOption extends AbstractModel
                 $obj = new TopicRule();
                 $obj->deserialize($value);
                 array_push($this->TopicRules, $obj);
+            }
+        }
+
+        if (array_key_exists("DataOption",$param) and $param["DataOption"] !== null) {
+            $this->DataOption = [];
+            foreach ($param["DataOption"] as $key => $value){
+                $obj = new KeyValuePairOption();
+                $obj->deserialize($value);
+                array_push($this->DataOption, $obj);
             }
         }
     }

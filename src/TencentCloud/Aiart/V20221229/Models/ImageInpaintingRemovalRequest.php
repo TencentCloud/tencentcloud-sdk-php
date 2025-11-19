@@ -48,8 +48,8 @@ Mask 的 Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 Mask 为单通道灰度图，待消除部分呈白色区域，原图保持部分呈黑色区域。
 Mask 的 Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：Mask 分辨率需要和输入原图保持一致，转成 Base64 字符串后小于 6MB。
- * @method string getRspImgType() 获取返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
- * @method void setRspImgType(string $RspImgType) 设置返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
+ * @method string getRspImgType() 获取返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。
+ * @method void setRspImgType(string $RspImgType) 设置返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。
  * @method integer getLogoAdd() 获取为生成结果图添加标识的开关，默认为1。
 1：添加标识。
 0：不添加标识。
@@ -98,7 +98,7 @@ Mask 的 Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
     public $MaskUrl;
 
     /**
-     * @var string 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
+     * @var string 返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。
      */
     public $RspImgType;
 
@@ -132,7 +132,7 @@ Mask 的 Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 Mask 为单通道灰度图，待消除部分呈白色区域，原图保持部分呈黑色区域。
 Mask 的 Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：Mask 分辨率需要和输入原图保持一致，转成 Base64 字符串后小于 6MB。
-     * @param string $RspImgType 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
+     * @param string $RspImgType 返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。
      * @param integer $LogoAdd 为生成结果图添加标识的开关，默认为1。
 1：添加标识。
 0：不添加标识。

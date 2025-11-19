@@ -82,6 +82,8 @@ engine-name：库表的模糊搜索。
  * @method void setLimit(integer $Limit) 设置返回数量，默认20，最大值100
  * @method integer getOffset() 获取偏移量，默认为0
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
+ * @method string getAccountType() 获取用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+ * @method void setAccountType(string $AccountType) 设置用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
  */
 class DescribeUserInfoRequest extends AbstractModel
 {
@@ -145,6 +147,11 @@ engine-name：库表的模糊搜索。
     public $Offset;
 
     /**
+     * @var string 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     */
+    public $AccountType;
+
+    /**
      * @param string $UserId 用户Id
      * @param string $Type 必传字段，查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限 RowFilter：行级别权限
      * @param array $Filters 查询的过滤条件。
@@ -176,6 +183,7 @@ engine-name：库表的模糊搜索。
      * @param string $Sorting 排序方式，desc表示正序，asc表示反序， 默认为asc
      * @param integer $Limit 返回数量，默认20，最大值100
      * @param integer $Offset 偏移量，默认为0
+     * @param string $AccountType 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
      */
     function __construct()
     {
@@ -221,6 +229,10 @@ engine-name：库表的模糊搜索。
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
+            $this->AccountType = $param["AccountType"];
         }
     }
 }

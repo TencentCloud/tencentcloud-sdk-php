@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getUserIds() 获取需要删除的用户的Id
  * @method void setUserIds(array $UserIds) 设置需要删除的用户的Id
+ * @method string getAccountType() 获取用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+ * @method void setAccountType(string $AccountType) 设置用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
  */
 class DeleteUserRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DeleteUserRequest extends AbstractModel
     public $UserIds;
 
     /**
+     * @var string 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     */
+    public $AccountType;
+
+    /**
      * @param array $UserIds 需要删除的用户的Id
+     * @param string $AccountType 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteUserRequest extends AbstractModel
         }
         if (array_key_exists("UserIds",$param) and $param["UserIds"] !== null) {
             $this->UserIds = $param["UserIds"];
+        }
+
+        if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
+            $this->AccountType = $param["AccountType"];
         }
     }
 }

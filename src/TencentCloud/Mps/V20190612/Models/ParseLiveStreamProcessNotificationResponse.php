@@ -25,12 +25,14 @@ use TencentCloud\Common\AbstractModel;
 <li>AiRecognitionResult：内容识别结果；</li>
 <li>LiveRecordResult：直播录制结果；</li>
 <li>AiQualityControlResult：媒体质检结果；</li>
+<li>AiAnalysisResult：内容分析结果；</li>
 <li>ProcessEof：直播流处理结束。</li>
  * @method void setNotificationType(string $NotificationType) 设置直播流处理结果类型，包含：
 <li>AiReviewResult：内容审核结果；</li>
 <li>AiRecognitionResult：内容识别结果；</li>
 <li>LiveRecordResult：直播录制结果；</li>
 <li>AiQualityControlResult：媒体质检结果；</li>
+<li>AiAnalysisResult：内容分析结果；</li>
 <li>ProcessEof：直播流处理结束。</li>
  * @method string getTaskId() 获取视频处理任务 ID。
  * @method void setTaskId(string $TaskId) 设置视频处理任务 ID。
@@ -77,6 +79,7 @@ class ParseLiveStreamProcessNotificationResponse extends AbstractModel
 <li>AiRecognitionResult：内容识别结果；</li>
 <li>LiveRecordResult：直播录制结果；</li>
 <li>AiQualityControlResult：媒体质检结果；</li>
+<li>AiAnalysisResult：内容分析结果；</li>
 <li>ProcessEof：直播流处理结束。</li>
      */
     public $NotificationType;
@@ -153,6 +156,7 @@ class ParseLiveStreamProcessNotificationResponse extends AbstractModel
 <li>AiRecognitionResult：内容识别结果；</li>
 <li>LiveRecordResult：直播录制结果；</li>
 <li>AiQualityControlResult：媒体质检结果；</li>
+<li>AiAnalysisResult：内容分析结果；</li>
 <li>ProcessEof：直播流处理结束。</li>
      * @param string $TaskId 视频处理任务 ID。
      * @param LiveStreamProcessErrorInfo $ProcessEofInfo 直播流处理错误信息，当 NotificationType 为 ProcessEof 时有效。

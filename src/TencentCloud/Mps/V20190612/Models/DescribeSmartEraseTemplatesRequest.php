@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置模板类型过滤条件，不填则返回所有，可选值：
 * Preset：系统预置模板；
 * Custom：用户自定义模板。
+ * @method string getEraseType() 获取智能擦除模板擦除类型过滤条件。
+- subtitle 去字幕
+- watermark 去水印
+- privacy 隐私保护
+ * @method void setEraseType(string $EraseType) 设置智能擦除模板擦除类型过滤条件。
+- subtitle 去字幕
+- watermark 去水印
+- privacy 隐私保护
  * @method string getName() 获取智能擦除模板名过滤条件，长度限制：64 个字符。
  * @method void setName(string $Name) 设置智能擦除模板名过滤条件，长度限制：64 个字符。
  */
@@ -60,6 +68,14 @@ class DescribeSmartEraseTemplatesRequest extends AbstractModel
     public $Type;
 
     /**
+     * @var string 智能擦除模板擦除类型过滤条件。
+- subtitle 去字幕
+- watermark 去水印
+- privacy 隐私保护
+     */
+    public $EraseType;
+
+    /**
      * @var string 智能擦除模板名过滤条件，长度限制：64 个字符。
      */
     public $Name;
@@ -71,6 +87,10 @@ class DescribeSmartEraseTemplatesRequest extends AbstractModel
      * @param string $Type 模板类型过滤条件，不填则返回所有，可选值：
 * Preset：系统预置模板；
 * Custom：用户自定义模板。
+     * @param string $EraseType 智能擦除模板擦除类型过滤条件。
+- subtitle 去字幕
+- watermark 去水印
+- privacy 隐私保护
      * @param string $Name 智能擦除模板名过滤条件，长度限制：64 个字符。
      */
     function __construct()
@@ -100,6 +120,10 @@ class DescribeSmartEraseTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("EraseType",$param) and $param["EraseType"] !== null) {
+            $this->EraseType = $param["EraseType"];
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {

@@ -18,20 +18,16 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDeviceLocationSolve请求参数结构体
+ * DeleteTWeTalkProductConfigV2请求参数结构体
  *
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
- * @method string getLocationType() 获取定位解析类型，wifi或GNSSNavigation
- * @method void setLocationType(string $LocationType) 设置定位解析类型，wifi或GNSSNavigation
- * @method string getGNSSNavigation() 获取LoRaEdge卫星导航电文
- * @method void setGNSSNavigation(string $GNSSNavigation) 设置LoRaEdge卫星导航电文
- * @method array getWiFiInfo() 获取wifi信息
- * @method void setWiFiInfo(array $WiFiInfo) 设置wifi信息
+ * @method string getTargetLanguage() 获取支持的语言，zh-中文；en-英文；默认zh
+ * @method void setTargetLanguage(string $TargetLanguage) 设置支持的语言，zh-中文；en-英文；默认zh
  */
-class DescribeDeviceLocationSolveRequest extends AbstractModel
+class DeleteTWeTalkProductConfigV2Request extends AbstractModel
 {
     /**
      * @var string 产品ID
@@ -44,26 +40,14 @@ class DescribeDeviceLocationSolveRequest extends AbstractModel
     public $DeviceName;
 
     /**
-     * @var string 定位解析类型，wifi或GNSSNavigation
+     * @var string 支持的语言，zh-中文；en-英文；默认zh
      */
-    public $LocationType;
-
-    /**
-     * @var string LoRaEdge卫星导航电文
-     */
-    public $GNSSNavigation;
-
-    /**
-     * @var array wifi信息
-     */
-    public $WiFiInfo;
+    public $TargetLanguage;
 
     /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
-     * @param string $LocationType 定位解析类型，wifi或GNSSNavigation
-     * @param string $GNSSNavigation LoRaEdge卫星导航电文
-     * @param array $WiFiInfo wifi信息
+     * @param string $TargetLanguage 支持的语言，zh-中文；en-英文；默认zh
      */
     function __construct()
     {
@@ -86,21 +70,8 @@ class DescribeDeviceLocationSolveRequest extends AbstractModel
             $this->DeviceName = $param["DeviceName"];
         }
 
-        if (array_key_exists("LocationType",$param) and $param["LocationType"] !== null) {
-            $this->LocationType = $param["LocationType"];
-        }
-
-        if (array_key_exists("GNSSNavigation",$param) and $param["GNSSNavigation"] !== null) {
-            $this->GNSSNavigation = $param["GNSSNavigation"];
-        }
-
-        if (array_key_exists("WiFiInfo",$param) and $param["WiFiInfo"] !== null) {
-            $this->WiFiInfo = [];
-            foreach ($param["WiFiInfo"] as $key => $value){
-                $obj = new WifiInfo();
-                $obj->deserialize($value);
-                array_push($this->WiFiInfo, $obj);
-            }
+        if (array_key_exists("TargetLanguage",$param) and $param["TargetLanguage"] !== null) {
+            $this->TargetLanguage = $param["TargetLanguage"];
         }
     }
 }

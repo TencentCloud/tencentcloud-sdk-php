@@ -32,8 +32,8 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
  * @method void setInputImage(string $InputImage) 设置输入图 Base64 数据。
 Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
- * @method string getRspImgType() 获取返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。 示例值：url
- * @method void setRspImgType(string $RspImgType) 设置返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。 示例值：url
+ * @method string getRspImgType() 获取返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。 示例值：url
+ * @method void setRspImgType(string $RspImgType) 设置返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。 示例值：url
  */
 class RefineImageRequest extends AbstractModel
 {
@@ -52,7 +52,7 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
     public $InputImage;
 
     /**
-     * @var string 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。 示例值：url
+     * @var string 返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。 示例值：url
      */
     public $RspImgType;
 
@@ -63,7 +63,7 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
      * @param string $InputImage 输入图 Base64 数据。
 Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
-     * @param string $RspImgType 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。 示例值：url
+     * @param string $RspImgType 返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。 示例值：url
      */
     function __construct()
     {

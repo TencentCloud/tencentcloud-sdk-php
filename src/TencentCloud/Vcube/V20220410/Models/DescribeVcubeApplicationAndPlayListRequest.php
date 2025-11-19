@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMacBundleId(string $MacBundleId) 设置Mac 进程名
  * @method string getWinProcessName() 获取Windows 进程名
  * @method void setWinProcessName(string $WinProcessName) 设置Windows 进程名
+ * @method integer getLicenseId() 获取license唯一标识
+ * @method void setLicenseId(integer $LicenseId) 设置license唯一标识
  */
 class DescribeVcubeApplicationAndPlayListRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class DescribeVcubeApplicationAndPlayListRequest extends AbstractModel
     public $WinProcessName;
 
     /**
+     * @var integer license唯一标识
+     */
+    public $LicenseId;
+
+    /**
      * @param string $BizType 查询对应业务方的license，直播:live 点播：vod
      * @param string $AppType 应用类型测试：test，正式：formal
      * @param string $AppName 应用名称，模糊查询
@@ -88,6 +95,7 @@ class DescribeVcubeApplicationAndPlayListRequest extends AbstractModel
      * @param string $Platform 平台信息，pc 或者 mobile
      * @param string $MacBundleId Mac 进程名
      * @param string $WinProcessName Windows 进程名
+     * @param integer $LicenseId license唯一标识
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class DescribeVcubeApplicationAndPlayListRequest extends AbstractModel
 
         if (array_key_exists("WinProcessName",$param) and $param["WinProcessName"] !== null) {
             $this->WinProcessName = $param["WinProcessName"];
+        }
+
+        if (array_key_exists("LicenseId",$param) and $param["LicenseId"] !== null) {
+            $this->LicenseId = $param["LicenseId"];
         }
     }
 }

@@ -18,35 +18,23 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 直播流分析结果
+ * 直播摘要结果信息。
  *
- * @method array getResultSet() 获取直播分析子任务结果，支持：
-<li>直播拆条</li>
-<li>直播高光集锦</li>
-<li>直播摘要</li>
+ * @method array getParagraphs() 获取分段结果。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResultSet(array $ResultSet) 设置直播分析子任务结果，支持：
-<li>直播拆条</li>
-<li>直播高光集锦</li>
-<li>直播摘要</li>
+ * @method void setParagraphs(array $Paragraphs) 设置分段结果。
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class LiveStreamAiAnalysisResultInfo extends AbstractModel
+class LiveAiAnalysisDescriptionItem extends AbstractModel
 {
     /**
-     * @var array 直播分析子任务结果，支持：
-<li>直播拆条</li>
-<li>直播高光集锦</li>
-<li>直播摘要</li>
+     * @var array 分段结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ResultSet;
+    public $Paragraphs;
 
     /**
-     * @param array $ResultSet 直播分析子任务结果，支持：
-<li>直播拆条</li>
-<li>直播高光集锦</li>
-<li>直播摘要</li>
+     * @param array $Paragraphs 分段结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,12 +50,12 @@ class LiveStreamAiAnalysisResultInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResultSet",$param) and $param["ResultSet"] !== null) {
-            $this->ResultSet = [];
-            foreach ($param["ResultSet"] as $key => $value){
-                $obj = new LiveStreamAiAnalysisResultItem();
+        if (array_key_exists("Paragraphs",$param) and $param["Paragraphs"] !== null) {
+            $this->Paragraphs = [];
+            foreach ($param["Paragraphs"] as $key => $value){
+                $obj = new LiveAiParagraphInfo();
                 $obj->deserialize($value);
-                array_push($this->ResultSet, $obj);
+                array_push($this->Paragraphs, $obj);
             }
         }
     }

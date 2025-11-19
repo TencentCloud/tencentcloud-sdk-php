@@ -18,28 +18,20 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * wifi定位信息
+ * BatchInvokeTWeSeeRecognitionTask请求参数结构体
  *
- * @method string getMAC() 获取mac地址
- * @method void setMAC(string $MAC) 设置mac地址
- * @method integer getRSSI() 获取信号强度
- * @method void setRSSI(integer $RSSI) 设置信号强度
+ * @method array getInputs() 获取待执行的 TWeSee 语义理解任务列表
+ * @method void setInputs(array $Inputs) 设置待执行的 TWeSee 语义理解任务列表
  */
-class WifiInfo extends AbstractModel
+class BatchInvokeTWeSeeRecognitionTaskRequest extends AbstractModel
 {
     /**
-     * @var string mac地址
+     * @var array 待执行的 TWeSee 语义理解任务列表
      */
-    public $MAC;
+    public $Inputs;
 
     /**
-     * @var integer 信号强度
-     */
-    public $RSSI;
-
-    /**
-     * @param string $MAC mac地址
-     * @param integer $RSSI 信号强度
+     * @param array $Inputs 待执行的 TWeSee 语义理解任务列表
      */
     function __construct()
     {
@@ -54,12 +46,13 @@ class WifiInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MAC",$param) and $param["MAC"] !== null) {
-            $this->MAC = $param["MAC"];
-        }
-
-        if (array_key_exists("RSSI",$param) and $param["RSSI"] !== null) {
-            $this->RSSI = $param["RSSI"];
+        if (array_key_exists("Inputs",$param) and $param["Inputs"] !== null) {
+            $this->Inputs = [];
+            foreach ($param["Inputs"] as $key => $value){
+                $obj = new CreateVisionRecognitionTaskInput();
+                $obj->deserialize($value);
+                array_push($this->Inputs, $obj);
+            }
         }
     }
 }

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserId(string $UserId) 设置用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。
  * @method array getPolicySet() 获取鉴权策略集合
  * @method void setPolicySet(array $PolicySet) 设置鉴权策略集合
+ * @method string getAccountType() 获取用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+ * @method void setAccountType(string $AccountType) 设置用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
  */
 class AttachUserPolicyRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class AttachUserPolicyRequest extends AbstractModel
     public $PolicySet;
 
     /**
+     * @var string 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     */
+    public $AccountType;
+
+    /**
      * @param string $UserId 用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。
      * @param array $PolicySet 鉴权策略集合
+     * @param string $AccountType 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
      */
     function __construct()
     {
@@ -65,6 +73,10 @@ class AttachUserPolicyRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PolicySet, $obj);
             }
+        }
+
+        if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
+            $this->AccountType = $param["AccountType"];
         }
     }
 }

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkGroupIds(array $WorkGroupIds) 设置绑定到用户的工作组ID集合。
  * @method string getUserAlias() 获取用户别名，字符长度小50
  * @method void setUserAlias(string $UserAlias) 设置用户别名，字符长度小50
+ * @method string getAccountType() 获取账号类型，UserAccount：用户账号 RoleAccount：角色账号，默认为用户账号
+ * @method void setAccountType(string $AccountType) 设置账号类型，UserAccount：用户账号 RoleAccount：角色账号，默认为用户账号
  */
 class CreateUserRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateUserRequest extends AbstractModel
     public $UserAlias;
 
     /**
+     * @var string 账号类型，UserAccount：用户账号 RoleAccount：角色账号，默认为用户账号
+     */
+    public $AccountType;
+
+    /**
      * @param string $UserId 需要授权的子用户uin，可以通过腾讯云控制台右上角 → “账号信息” → “账号ID进行查看”。
      * @param string $UserDescription 用户描述信息，方便区分不同用户
      * @param array $PolicySet 绑定到用户的权限集合
      * @param string $UserType 用户类型。ADMIN：管理员 COMMON：一般用户。当用户类型为管理员的时候，不能设置权限集合和绑定的工作组集合，管理员默认拥有所有权限。该参数不填默认为COMMON
      * @param array $WorkGroupIds 绑定到用户的工作组ID集合。
      * @param string $UserAlias 用户别名，字符长度小50
+     * @param string $AccountType 账号类型，UserAccount：用户账号 RoleAccount：角色账号，默认为用户账号
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class CreateUserRequest extends AbstractModel
 
         if (array_key_exists("UserAlias",$param) and $param["UserAlias"] !== null) {
             $this->UserAlias = $param["UserAlias"];
+        }
+
+        if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
+            $this->AccountType = $param["AccountType"];
         }
     }
 }

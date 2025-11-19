@@ -52,12 +52,16 @@ use TencentCloud\Common\AbstractModel;
 默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
  * @method void setLogoParam(LogoParam $LogoParam) 设置标识内容设置。
 默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
- * @method integer getRevise() 获取是否开启prompt改写，默认开启，改写预计会增加20s左右耗时。
-
-如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：[改写](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE)
- * @method void setRevise(integer $Revise) 设置是否开启prompt改写，默认开启，改写预计会增加20s左右耗时。
-
-如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：[改写](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE)
+ * @method integer getRevise() 获取是否开启prompt改写，为空时默认开启，改写预计会增加20s左右耗时。
+0：关闭改写
+1：开启改写
+建议默认开启，如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：[改写](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE)
+示例值：1
+ * @method void setRevise(integer $Revise) 设置是否开启prompt改写，为空时默认开启，改写预计会增加20s左右耗时。
+0：关闭改写
+1：开启改写
+建议默认开启，如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：[改写](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE)
+示例值：1
  */
 class SubmitTextToImageJobRequest extends AbstractModel
 {
@@ -98,9 +102,11 @@ class SubmitTextToImageJobRequest extends AbstractModel
     public $LogoParam;
 
     /**
-     * @var integer 是否开启prompt改写，默认开启，改写预计会增加20s左右耗时。
-
-如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：[改写](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE)
+     * @var integer 是否开启prompt改写，为空时默认开启，改写预计会增加20s左右耗时。
+0：关闭改写
+1：开启改写
+建议默认开启，如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：[改写](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE)
+示例值：1
      */
     public $Revise;
 
@@ -121,9 +127,11 @@ class SubmitTextToImageJobRequest extends AbstractModel
 建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。
      * @param LogoParam $LogoParam 标识内容设置。
 默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
-     * @param integer $Revise 是否开启prompt改写，默认开启，改写预计会增加20s左右耗时。
-
-如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：[改写](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE)
+     * @param integer $Revise 是否开启prompt改写，为空时默认开启，改写预计会增加20s左右耗时。
+0：关闭改写
+1：开启改写
+建议默认开启，如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：[改写](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE)
+示例值：1
      */
     function __construct()
     {

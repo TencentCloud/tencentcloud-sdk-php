@@ -130,8 +130,8 @@ use TencentCloud\Common\AbstractModel;
 默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
  * @method void setLogoParam(LogoParam $LogoParam) 设置标识内容设置。
 默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
- * @method string getRspImgType() 获取返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
- * @method void setRspImgType(string $RspImgType) 设置返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
+ * @method string getRspImgType() 获取返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。
+ * @method void setRspImgType(string $RspImgType) 设置返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。
  */
 class TextToImageRapidRequest extends AbstractModel
 {
@@ -219,7 +219,7 @@ class TextToImageRapidRequest extends AbstractModel
     public $LogoParam;
 
     /**
-     * @var string 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
+     * @var string 返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。
      */
     public $RspImgType;
 
@@ -279,7 +279,7 @@ class TextToImageRapidRequest extends AbstractModel
 建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。
      * @param LogoParam $LogoParam 标识内容设置。
 默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
-     * @param string $RspImgType 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
+     * @param string $RspImgType 返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。
      */
     function __construct()
     {

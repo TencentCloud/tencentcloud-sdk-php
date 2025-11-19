@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getNatGatewayId() 获取私网网关唯一`ID`，形如"intranat-xxxxxxxx"。
  * @method void setNatGatewayId(string $NatGatewayId) 设置私网网关唯一`ID`，形如"intranat-xxxxxxxx"。
+ * @method boolean getIgnoreOperationRisk() 获取忽略操作风险
+ * @method void setIgnoreOperationRisk(boolean $IgnoreOperationRisk) 设置忽略操作风险
  */
 class DeletePrivateNatGatewayRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DeletePrivateNatGatewayRequest extends AbstractModel
     public $NatGatewayId;
 
     /**
+     * @var boolean 忽略操作风险
+     */
+    public $IgnoreOperationRisk;
+
+    /**
      * @param string $NatGatewayId 私网网关唯一`ID`，形如"intranat-xxxxxxxx"。
+     * @param boolean $IgnoreOperationRisk 忽略操作风险
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeletePrivateNatGatewayRequest extends AbstractModel
         }
         if (array_key_exists("NatGatewayId",$param) and $param["NatGatewayId"] !== null) {
             $this->NatGatewayId = $param["NatGatewayId"];
+        }
+
+        if (array_key_exists("IgnoreOperationRisk",$param) and $param["IgnoreOperationRisk"] !== null) {
+            $this->IgnoreOperationRisk = $param["IgnoreOperationRisk"];
         }
     }
 }

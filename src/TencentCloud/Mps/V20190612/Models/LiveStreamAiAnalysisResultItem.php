@@ -23,9 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() 获取结果的类型，取值范围：
 <li>SegmentRecognition：拆条。</li>
 <li>Highlight ：集锦。</li>
+<li> Description：摘要。</li>
  * @method void setType(string $Type) 设置结果的类型，取值范围：
 <li>SegmentRecognition：拆条。</li>
 <li>Highlight ：集锦。</li>
+<li> Description：摘要。</li>
  * @method array getSegmentResultSet() 获取拆条结果，当 Type 为
 SegmentRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,6 +38,8 @@ SegmentRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHighlightResultSet(array $HighlightResultSet) 设置集锦结果，当Type 为 Highlight 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method LiveAiAnalysisDescriptionItem getDescriptionResult() 获取摘要结果，当Type 为 Description 时有效。
+ * @method void setDescriptionResult(LiveAiAnalysisDescriptionItem $DescriptionResult) 设置摘要结果，当Type 为 Description 时有效。
  */
 class LiveStreamAiAnalysisResultItem extends AbstractModel
 {
@@ -43,6 +47,7 @@ class LiveStreamAiAnalysisResultItem extends AbstractModel
      * @var string 结果的类型，取值范围：
 <li>SegmentRecognition：拆条。</li>
 <li>Highlight ：集锦。</li>
+<li> Description：摘要。</li>
      */
     public $Type;
 
@@ -60,14 +65,21 @@ SegmentRecognition 时有效。
     public $HighlightResultSet;
 
     /**
+     * @var LiveAiAnalysisDescriptionItem 摘要结果，当Type 为 Description 时有效。
+     */
+    public $DescriptionResult;
+
+    /**
      * @param string $Type 结果的类型，取值范围：
 <li>SegmentRecognition：拆条。</li>
 <li>Highlight ：集锦。</li>
+<li> Description：摘要。</li>
      * @param array $SegmentResultSet 拆条结果，当 Type 为
 SegmentRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $HighlightResultSet 集锦结果，当Type 为 Highlight 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param LiveAiAnalysisDescriptionItem $DescriptionResult 摘要结果，当Type 为 Description 时有效。
      */
     function __construct()
     {
@@ -102,6 +114,11 @@ SegmentRecognition 时有效。
                 $obj->deserialize($value);
                 array_push($this->HighlightResultSet, $obj);
             }
+        }
+
+        if (array_key_exists("DescriptionResult",$param) and $param["DescriptionResult"] !== null) {
+            $this->DescriptionResult = new LiveAiAnalysisDescriptionItem();
+            $this->DescriptionResult->deserialize($param["DescriptionResult"]);
         }
     }
 }

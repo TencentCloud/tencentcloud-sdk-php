@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserId(string $UserId) 设置用户ID
  * @method string getUserType() 获取用户要修改到的类型，ADMIN：管理员，COMMON：一般用户。
  * @method void setUserType(string $UserType) 设置用户要修改到的类型，ADMIN：管理员，COMMON：一般用户。
+ * @method string getAccountType() 获取用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+ * @method void setAccountType(string $AccountType) 设置用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
  */
 class ModifyUserTypeRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ModifyUserTypeRequest extends AbstractModel
     public $UserType;
 
     /**
+     * @var string 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     */
+    public $AccountType;
+
+    /**
      * @param string $UserId 用户ID
      * @param string $UserType 用户要修改到的类型，ADMIN：管理员，COMMON：一般用户。
+     * @param string $AccountType 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyUserTypeRequest extends AbstractModel
 
         if (array_key_exists("UserType",$param) and $param["UserType"] !== null) {
             $this->UserType = $param["UserType"];
+        }
+
+        if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
+            $this->AccountType = $param["AccountType"];
         }
     }
 }

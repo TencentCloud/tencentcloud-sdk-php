@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCatalogPolicyInfo(Policys $CatalogPolicyInfo) 设置数据源权限集合
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method Policys getModelPolicyInfo() 获取模型权限集合
+ * @method void setModelPolicyInfo(Policys $ModelPolicyInfo) 设置模型权限集合
  */
 class UserDetailInfo extends AbstractModel
 {
@@ -116,6 +118,11 @@ class UserDetailInfo extends AbstractModel
     public $CatalogPolicyInfo;
 
     /**
+     * @var Policys 模型权限集合
+     */
+    public $ModelPolicyInfo;
+
+    /**
      * @param string $UserId 用户Id
      * @param string $Type 返回的信息类型，Group：返回的当前用户的工作组信息；DataAuth：返回的当前用户的数据权限信息；EngineAuth：返回的当前用户的引擎权限信息
      * @param string $UserType 用户类型：ADMIN：管理员 COMMON：一般用户
@@ -132,6 +139,7 @@ class UserDetailInfo extends AbstractModel
      * @param string $AccountType 账号类型
      * @param Policys $CatalogPolicyInfo 数据源权限集合
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param Policys $ModelPolicyInfo 模型权限集合
      */
     function __construct()
     {
@@ -193,6 +201,11 @@ class UserDetailInfo extends AbstractModel
         if (array_key_exists("CatalogPolicyInfo",$param) and $param["CatalogPolicyInfo"] !== null) {
             $this->CatalogPolicyInfo = new Policys();
             $this->CatalogPolicyInfo->deserialize($param["CatalogPolicyInfo"]);
+        }
+
+        if (array_key_exists("ModelPolicyInfo",$param) and $param["ModelPolicyInfo"] !== null) {
+            $this->ModelPolicyInfo = new Policys();
+            $this->ModelPolicyInfo->deserialize($param["ModelPolicyInfo"]);
         }
     }
 }

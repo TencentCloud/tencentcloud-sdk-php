@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRetentionBytes(integer $RetentionBytes) 设置可选, 保留文件大小. 默认为-1,单位Byte, 当前最小值为1073741824。
  * @method array getTags() 获取标签列表
  * @method void setTags(array $Tags) 设置标签列表
+ * @method string getLogMsgTimestampType() 获取消息保存的时间类型:CreateTime/LogAppendTime
+ * @method void setLogMsgTimestampType(string $LogMsgTimestampType) 设置消息保存的时间类型:CreateTime/LogAppendTime
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -143,6 +145,11 @@ class CreateTopicRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 消息保存的时间类型:CreateTime/LogAppendTime
+     */
+    public $LogMsgTimestampType;
+
+    /**
      * @param string $InstanceId 实例Id，可通过DescribeInstances接口获取。
      * @param string $TopicName 只能包含字母、数字、下划线、“-”、“.”
      * @param integer $PartitionNum Partition个数，大于0
@@ -160,6 +167,7 @@ class CreateTopicRequest extends AbstractModel
      * @param string $AclRuleName 预设ACL规则的名称
      * @param integer $RetentionBytes 可选, 保留文件大小. 默认为-1,单位Byte, 当前最小值为1073741824。
      * @param array $Tags 标签列表
+     * @param string $LogMsgTimestampType 消息保存的时间类型:CreateTime/LogAppendTime
      */
     function __construct()
     {
@@ -245,6 +253,10 @@ class CreateTopicRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("LogMsgTimestampType",$param) and $param["LogMsgTimestampType"] !== null) {
+            $this->LogMsgTimestampType = $param["LogMsgTimestampType"];
         }
     }
 }

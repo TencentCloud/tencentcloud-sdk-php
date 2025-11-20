@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 绝对路径示例：
 <li>/自定义路径/文件名_{变量名}.{format}</li>
 如果不填，则默认为相对路径：{inputName}.{format}。
+ * @method integer getDefinition() 获取图片处理模板唯一标识。
+ * @method void setDefinition(integer $Definition) 设置图片处理模板唯一标识。
+ * @method string getResourceId() 获取资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+ * @method void setResourceId(string $ResourceId) 设置资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
  * @method ImageTaskInput getImageTask() 获取图片处理参数。
  * @method void setImageTask(ImageTaskInput $ImageTask) 设置图片处理参数。
  */
@@ -75,6 +79,16 @@ class ProcessImageRequest extends AbstractModel
     public $OutputPath;
 
     /**
+     * @var integer 图片处理模板唯一标识。
+     */
+    public $Definition;
+
+    /**
+     * @var string 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+     */
+    public $ResourceId;
+
+    /**
      * @var ImageTaskInput 图片处理参数。
      */
     public $ImageTask;
@@ -91,6 +105,8 @@ class ProcessImageRequest extends AbstractModel
 绝对路径示例：
 <li>/自定义路径/文件名_{变量名}.{format}</li>
 如果不填，则默认为相对路径：{inputName}.{format}。
+     * @param integer $Definition 图片处理模板唯一标识。
+     * @param string $ResourceId 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
      * @param ImageTaskInput $ImageTask 图片处理参数。
      */
     function __construct()
@@ -122,6 +138,14 @@ class ProcessImageRequest extends AbstractModel
 
         if (array_key_exists("OutputPath",$param) and $param["OutputPath"] !== null) {
             $this->OutputPath = $param["OutputPath"];
+        }
+
+        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
+            $this->Definition = $param["Definition"];
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
         }
 
         if (array_key_exists("ImageTask",$param) and $param["ImageTask"] !== null) {

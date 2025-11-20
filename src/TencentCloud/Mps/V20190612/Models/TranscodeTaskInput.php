@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getWatermarkSet() 获取水印列表，支持多张图片或文字水印，最大可支持 10 张。
  * @method void setWatermarkSet(array $WatermarkSet) 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
+ * @method BlindWatermarkInput getBlindWatermark() 获取数字水印参数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBlindWatermark(BlindWatermarkInput $BlindWatermark) 设置数字水印参数。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMosaicSet() 获取马赛克列表，最大可支持 10 张。
  * @method void setMosaicSet(array $MosaicSet) 设置马赛克列表，最大可支持 10 张。
  * @method float getStartTimeOffset() 获取转码后的视频的起始时间偏移，单位：秒。
@@ -114,6 +118,12 @@ class TranscodeTaskInput extends AbstractModel
     public $WatermarkSet;
 
     /**
+     * @var BlindWatermarkInput 数字水印参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BlindWatermark;
+
+    /**
      * @var array 马赛克列表，最大可支持 10 张。
      */
     public $MosaicSet;
@@ -179,6 +189,8 @@ class TranscodeTaskInput extends AbstractModel
 该参数用于高度定制场景，建议您仅使用 Definition 指定转码参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+     * @param BlindWatermarkInput $BlindWatermark 数字水印参数。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MosaicSet 马赛克列表，最大可支持 10 张。
      * @param float $StartTimeOffset 转码后的视频的起始时间偏移，单位：秒。
 <li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>
@@ -239,6 +251,11 @@ class TranscodeTaskInput extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->WatermarkSet, $obj);
             }
+        }
+
+        if (array_key_exists("BlindWatermark",$param) and $param["BlindWatermark"] !== null) {
+            $this->BlindWatermark = new BlindWatermarkInput();
+            $this->BlindWatermark->deserialize($param["BlindWatermark"]);
         }
 
         if (array_key_exists("MosaicSet",$param) and $param["MosaicSet"] !== null) {

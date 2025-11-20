@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例诊断历史事件
  *
- * @method string getDiagType() 获取诊断类型。
- * @method void setDiagType(string $DiagType) 设置诊断类型。
+ * @method string getDiagType() 获取诊断类型。支持值包括"高危账号","自增键耗尽","连接性检查","CPU利用率","死锁","全表扫描","高并发/压力请求","预编译语句过多","内存利用率","Metadata lock","磁盘超限","内存超限","只读锁","只读实例剔除","行锁","活跃会话","慢SQL","数据库快照","磁盘空间利用率","执行计划变化","主从切换","Table open cache命中率低","大表","事务未提交","事务导致复制延迟"等。
+ * @method void setDiagType(string $DiagType) 设置诊断类型。支持值包括"高危账号","自增键耗尽","连接性检查","CPU利用率","死锁","全表扫描","高并发/压力请求","预编译语句过多","内存利用率","Metadata lock","磁盘超限","内存超限","只读锁","只读实例剔除","行锁","活跃会话","慢SQL","数据库快照","磁盘空间利用率","执行计划变化","主从切换","Table open cache命中率低","大表","事务未提交","事务导致复制延迟"等。
  * @method string getEndTime() 获取结束时间。
  * @method void setEndTime(string $EndTime) 设置结束时间。
  * @method string getStartTime() 获取开始时间。
@@ -52,7 +52,7 @@ use TencentCloud\Common\AbstractModel;
 class DiagHistoryEventItem extends AbstractModel
 {
     /**
-     * @var string 诊断类型。
+     * @var string 诊断类型。支持值包括"高危账号","自增键耗尽","连接性检查","CPU利用率","死锁","全表扫描","高并发/压力请求","预编译语句过多","内存利用率","Metadata lock","磁盘超限","内存超限","只读锁","只读实例剔除","行锁","活跃会话","慢SQL","数据库快照","磁盘空间利用率","执行计划变化","主从切换","Table open cache命中率低","大表","事务未提交","事务导致复制延迟"等。
      */
     public $DiagType;
 
@@ -122,7 +122,7 @@ class DiagHistoryEventItem extends AbstractModel
     public $Vport;
 
     /**
-     * @param string $DiagType 诊断类型。
+     * @param string $DiagType 诊断类型。支持值包括"高危账号","自增键耗尽","连接性检查","CPU利用率","死锁","全表扫描","高并发/压力请求","预编译语句过多","内存利用率","Metadata lock","磁盘超限","内存超限","只读锁","只读实例剔除","行锁","活跃会话","慢SQL","数据库快照","磁盘空间利用率","执行计划变化","主从切换","Table open cache命中率低","大表","事务未提交","事务导致复制延迟"等。
      * @param string $EndTime 结束时间。
      * @param string $StartTime 开始时间。
      * @param integer $EventId 事件唯一ID 。

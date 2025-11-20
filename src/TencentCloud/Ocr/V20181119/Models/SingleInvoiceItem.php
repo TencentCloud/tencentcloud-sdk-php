@@ -168,6 +168,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsedCarPurchaseInvoiceElectronic(UsedCarPurchaseInvoice $UsedCarPurchaseInvoiceElectronic) 设置二手车销售统一发票（电子）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ElectronicTollSummary getElectronicTollSummary() 获取通行费电子票据汇总单
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setElectronicTollSummary(ElectronicTollSummary $ElectronicTollSummary) 设置通行费电子票据汇总单
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SingleInvoiceItem extends AbstractModel
 {
@@ -394,6 +398,12 @@ class SingleInvoiceItem extends AbstractModel
     public $UsedCarPurchaseInvoiceElectronic;
 
     /**
+     * @var ElectronicTollSummary 通行费电子票据汇总单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ElectronicTollSummary;
+
+    /**
      * @param VatInvoiceInfo $VatSpecialInvoice 增值税专用发票
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VatInvoiceInfo $VatCommonInvoice 增值税普通发票
@@ -467,6 +477,8 @@ class SingleInvoiceItem extends AbstractModel
      * @param MotorVehicleSaleInvoice $MotorVehicleSaleInvoiceElectronic 机动车销售统一发票（电子）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UsedCarPurchaseInvoice $UsedCarPurchaseInvoiceElectronic 二手车销售统一发票（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ElectronicTollSummary $ElectronicTollSummary 通行费电子票据汇总单
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -665,6 +677,11 @@ class SingleInvoiceItem extends AbstractModel
         if (array_key_exists("UsedCarPurchaseInvoiceElectronic",$param) and $param["UsedCarPurchaseInvoiceElectronic"] !== null) {
             $this->UsedCarPurchaseInvoiceElectronic = new UsedCarPurchaseInvoice();
             $this->UsedCarPurchaseInvoiceElectronic->deserialize($param["UsedCarPurchaseInvoiceElectronic"]);
+        }
+
+        if (array_key_exists("ElectronicTollSummary",$param) and $param["ElectronicTollSummary"] !== null) {
+            $this->ElectronicTollSummary = new ElectronicTollSummary();
+            $this->ElectronicTollSummary->deserialize($param["ElectronicTollSummary"]);
         }
     }
 }

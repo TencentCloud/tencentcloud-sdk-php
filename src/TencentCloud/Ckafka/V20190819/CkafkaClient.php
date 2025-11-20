@@ -60,6 +60,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) 删除用户
  * @method Models\DescribeACLResponse DescribeACL(Models\DescribeACLRequest $req) 枚举ACL
  * @method Models\DescribeAclRuleResponse DescribeAclRule(Models\DescribeAclRuleRequest $req) 查询ACL规则列表
+ * @method Models\DescribeCkafkaVersionResponse DescribeCkafkaVersion(Models\DescribeCkafkaVersionRequest $req) 查询实例版本信息
  * @method Models\DescribeCkafkaZoneResponse DescribeCkafkaZone(Models\DescribeCkafkaZoneRequest $req) 用于查看ckafka的可用区列表
  * @method Models\DescribeConnectResourceResponse DescribeConnectResource(Models\DescribeConnectResourceRequest $req) 查询Datahub连接源
  * @method Models\DescribeConnectResourcesResponse DescribeConnectResources(Models\DescribeConnectResourcesRequest $req) 查询Datahub连接源列表
@@ -113,6 +114,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\RestartDatahubTaskResponse RestartDatahubTask(Models\RestartDatahubTaskRequest $req) Datahub任务异常时，重启Datahub任务
  * @method Models\ResumeDatahubTaskResponse ResumeDatahubTask(Models\ResumeDatahubTaskRequest $req) 恢复Dip任务
  * @method Models\SendMessageResponse SendMessage(Models\SendMessageRequest $req) 通过HTTP接入层发送消息
+ * @method Models\UpgradeBrokerVersionResponse UpgradeBrokerVersion(Models\UpgradeBrokerVersionRequest $req) broker版本升级
  */
 
 class CkafkaClient extends AbstractClient

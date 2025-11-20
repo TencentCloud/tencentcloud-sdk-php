@@ -98,6 +98,10 @@ serverless  :serverless版
  * @method void setRemainingTopics(integer $RemainingTopics) 设置剩余创建主题数
  * @method DynamicDiskConfig getDynamicDiskConfig() 获取动态硬盘扩容策略
  * @method void setDynamicDiskConfig(DynamicDiskConfig $DynamicDiskConfig) 设置动态硬盘扩容策略
+ * @method string getSystemMaintenanceTime() 获取系统维护时间
+ * @method void setSystemMaintenanceTime(string $SystemMaintenanceTime) 设置系统维护时间
+ * @method integer getMaxMessageByte() 获取实例级别消息最大大小
+ * @method void setMaxMessageByte(integer $MaxMessageByte) 设置实例级别消息最大大小
  * @method string getInstanceChargeType() 获取实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
  * @method integer getElasticBandwidthSwitch() 获取是否开启弹性带宽白名单   
@@ -329,6 +333,16 @@ serverless  :serverless版
     public $DynamicDiskConfig;
 
     /**
+     * @var string 系统维护时间
+     */
+    public $SystemMaintenanceTime;
+
+    /**
+     * @var integer 实例级别消息最大大小
+     */
+    public $MaxMessageByte;
+
+    /**
      * @var string 实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
      */
     public $InstanceChargeType;
@@ -428,6 +442,8 @@ serverless  :serverless版
      * @param integer $RemainingPartitions 剩余创建分区数
      * @param integer $RemainingTopics 剩余创建主题数
      * @param DynamicDiskConfig $DynamicDiskConfig 动态硬盘扩容策略
+     * @param string $SystemMaintenanceTime 系统维护时间
+     * @param integer $MaxMessageByte 实例级别消息最大大小
      * @param string $InstanceChargeType 实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
      * @param integer $ElasticBandwidthSwitch 是否开启弹性带宽白名单   
 1:已开启弹性带宽白名单;
@@ -617,6 +633,14 @@ CLOUD_EKS_TSE EKS集群
         if (array_key_exists("DynamicDiskConfig",$param) and $param["DynamicDiskConfig"] !== null) {
             $this->DynamicDiskConfig = new DynamicDiskConfig();
             $this->DynamicDiskConfig->deserialize($param["DynamicDiskConfig"]);
+        }
+
+        if (array_key_exists("SystemMaintenanceTime",$param) and $param["SystemMaintenanceTime"] !== null) {
+            $this->SystemMaintenanceTime = $param["SystemMaintenanceTime"];
+        }
+
+        if (array_key_exists("MaxMessageByte",$param) and $param["MaxMessageByte"] !== null) {
+            $this->MaxMessageByte = $param["MaxMessageByte"];
         }
 
         if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {

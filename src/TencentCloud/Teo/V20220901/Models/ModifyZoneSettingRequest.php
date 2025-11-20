@@ -94,6 +94,8 @@ use TencentCloud\Common\AbstractModel;
 不填写表示保持原有配置。
  * @method void setGrpc(Grpc $Grpc) 设置Grpc 协议支持配置。
 不填写表示保持原有配置。
+ * @method NetworkErrorLogging getNetworkErrorLogging() 获取网络错误日志记录配置。不填写表示保持原有配置。
+ * @method void setNetworkErrorLogging(NetworkErrorLogging $NetworkErrorLogging) 设置网络错误日志记录配置。不填写表示保持原有配置。
  * @method ImageOptimize getImageOptimize() 获取图片优化配置。
 不填写表示关闭。
  * @method void setImageOptimize(ImageOptimize $ImageOptimize) 设置图片优化配置。
@@ -219,6 +221,11 @@ class ModifyZoneSettingRequest extends AbstractModel
     public $Grpc;
 
     /**
+     * @var NetworkErrorLogging 网络错误日志记录配置。不填写表示保持原有配置。
+     */
+    public $NetworkErrorLogging;
+
+    /**
      * @var ImageOptimize 图片优化配置。
 不填写表示关闭。
      */
@@ -272,6 +279,7 @@ class ModifyZoneSettingRequest extends AbstractModel
 不填写表示保持原有配置。
      * @param Grpc $Grpc Grpc 协议支持配置。
 不填写表示保持原有配置。
+     * @param NetworkErrorLogging $NetworkErrorLogging 网络错误日志记录配置。不填写表示保持原有配置。
      * @param ImageOptimize $ImageOptimize 图片优化配置。
 不填写表示关闭。
      * @param StandardDebug $StandardDebug 标准 Debug 配置。
@@ -382,6 +390,11 @@ class ModifyZoneSettingRequest extends AbstractModel
         if (array_key_exists("Grpc",$param) and $param["Grpc"] !== null) {
             $this->Grpc = new Grpc();
             $this->Grpc->deserialize($param["Grpc"]);
+        }
+
+        if (array_key_exists("NetworkErrorLogging",$param) and $param["NetworkErrorLogging"] !== null) {
+            $this->NetworkErrorLogging = new NetworkErrorLogging();
+            $this->NetworkErrorLogging->deserialize($param["NetworkErrorLogging"]);
         }
 
         if (array_key_exists("ImageOptimize",$param) and $param["ImageOptimize"] !== null) {

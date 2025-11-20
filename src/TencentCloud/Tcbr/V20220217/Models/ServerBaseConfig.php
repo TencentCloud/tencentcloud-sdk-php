@@ -82,6 +82,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcConf(VpcConf $VpcConf) 设置Vpc 配置参数
  * @method array getVolumesConf() 获取存储配置信息
  * @method void setVolumesConf(array $VolumesConf) 设置存储配置信息
+ * @method string getLinkImageRegistry() 获取关联镜像密钥
+ * @method void setLinkImageRegistry(string $LinkImageRegistry) 设置关联镜像密钥
  */
 class ServerBaseConfig extends AbstractModel
 {
@@ -237,6 +239,11 @@ class ServerBaseConfig extends AbstractModel
     public $VolumesConf;
 
     /**
+     * @var string 关联镜像密钥
+     */
+    public $LinkImageRegistry;
+
+    /**
      * @param string $EnvId 环境 Id
      * @param string $ServerName 服务名
      * @param array $OpenAccessTypes 是否开启公网访问
@@ -268,6 +275,7 @@ class ServerBaseConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcConf $VpcConf Vpc 配置参数
      * @param array $VolumesConf 存储配置信息
+     * @param string $LinkImageRegistry 关联镜像密钥
      */
     function __construct()
     {
@@ -416,6 +424,10 @@ class ServerBaseConfig extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->VolumesConf, $obj);
             }
+        }
+
+        if (array_key_exists("LinkImageRegistry",$param) and $param["LinkImageRegistry"] !== null) {
+            $this->LinkImageRegistry = $param["LinkImageRegistry"];
         }
     }
 }

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
  * @method integer getRouteId() 获取路由Id
  * @method void setRouteId(integer $RouteId) 设置路由Id
+ * @method boolean getMainRouteFlag() 获取是否显示主路由，true时会在返回原路由列表的基础上,再额外展示实例创建时的主路由信息(且不被InternalFlag/UsedFor等参数过滤影响)	
+ * @method void setMainRouteFlag(boolean $MainRouteFlag) 设置是否显示主路由，true时会在返回原路由列表的基础上,再额外展示实例创建时的主路由信息(且不被InternalFlag/UsedFor等参数过滤影响)	
  */
 class DescribeRouteRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeRouteRequest extends AbstractModel
     public $RouteId;
 
     /**
+     * @var boolean 是否显示主路由，true时会在返回原路由列表的基础上,再额外展示实例创建时的主路由信息(且不被InternalFlag/UsedFor等参数过滤影响)	
+     */
+    public $MainRouteFlag;
+
+    /**
      * @param string $InstanceId ckafka集群实例Id
      * @param integer $RouteId 路由Id
+     * @param boolean $MainRouteFlag 是否显示主路由，true时会在返回原路由列表的基础上,再额外展示实例创建时的主路由信息(且不被InternalFlag/UsedFor等参数过滤影响)	
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeRouteRequest extends AbstractModel
 
         if (array_key_exists("RouteId",$param) and $param["RouteId"] !== null) {
             $this->RouteId = $param["RouteId"];
+        }
+
+        if (array_key_exists("MainRouteFlag",$param) and $param["MainRouteFlag"] !== null) {
+            $this->MainRouteFlag = $param["MainRouteFlag"];
         }
     }
 }

@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuotaConsumerByteRate(integer $QuotaConsumerByteRate) 设置消费限流，单位 MB/s；设置为-1，则消费不限流
  * @method integer getReplicaNum() 获取topic副本数  最小值 1,最大值 3
  * @method void setReplicaNum(integer $ReplicaNum) 设置topic副本数  最小值 1,最大值 3
+ * @method string getLogMsgTimestampType() 获取消息保存的时间类型：CreateTime/LogAppendTime
+ * @method void setLogMsgTimestampType(string $LogMsgTimestampType) 设置消息保存的时间类型：CreateTime/LogAppendTime
  */
 class ModifyTopicAttributesRequest extends AbstractModel
 {
@@ -150,6 +152,11 @@ class ModifyTopicAttributesRequest extends AbstractModel
     public $ReplicaNum;
 
     /**
+     * @var string 消息保存的时间类型：CreateTime/LogAppendTime
+     */
+    public $LogMsgTimestampType;
+
+    /**
      * @param string $InstanceId ckafka集群实例Id
      * @param string $TopicName 主题名
      * @param string $Note 主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
@@ -168,6 +175,7 @@ class ModifyTopicAttributesRequest extends AbstractModel
      * @param integer $QuotaProducerByteRate 生产限流，单位 MB/s；设置为-1，则生产不限流
      * @param integer $QuotaConsumerByteRate 消费限流，单位 MB/s；设置为-1，则消费不限流
      * @param integer $ReplicaNum topic副本数  最小值 1,最大值 3
+     * @param string $LogMsgTimestampType 消息保存的时间类型：CreateTime/LogAppendTime
      */
     function __construct()
     {
@@ -257,6 +265,10 @@ class ModifyTopicAttributesRequest extends AbstractModel
 
         if (array_key_exists("ReplicaNum",$param) and $param["ReplicaNum"] !== null) {
             $this->ReplicaNum = $param["ReplicaNum"];
+        }
+
+        if (array_key_exists("LogMsgTimestampType",$param) and $param["LogMsgTimestampType"] !== null) {
+            $this->LogMsgTimestampType = $param["LogMsgTimestampType"];
         }
     }
 }

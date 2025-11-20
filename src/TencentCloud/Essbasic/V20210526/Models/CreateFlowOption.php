@@ -120,6 +120,134 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHideSignCodeAfterStart(boolean $HideSignCodeAfterStart) 设置发起后签署码隐藏，默认false，注：仅对新版页面生效
  * @method boolean getNeedFlowDraft() 获取发起过程中是否保存草稿	
  * @method void setNeedFlowDraft(boolean $NeedFlowDraft) 设置发起过程中是否保存草稿	
+ * @method array getHideComponentTypes() 获取在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用（注: 
+<font color='red'>空数组代表未指定</font>），具体的控件类型如下
+
+<ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
+<li>SIGN_SEAL : 企业印章</li>
+<li>SIGN_PAGING_SEAL : 骑缝章</li>
+<li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
+<li>SIGN_APPROVE : 签批</li>
+<li>SIGN_OPINION : 签署意见</li>
+<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
+<li>BUSI-FULL-NAME  : 企业全称</li>
+<li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
+<li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
+<li>PERSONAL-NAME : 签署人姓名</li>
+<li>PERSONAL-MOBILE : 签署人手机号</li>
+<li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li>
+<li>PERSONAL-IDCARD : 签署人证件号</li>
+<li>TEXT : 单行文本</li>
+<li>MULTI_LINE_TEXT : 多行文本</li>
+<li>CHECK_BOX : 勾选框</li>
+<li>SELECTOR : 选择器</li>
+<li>DIGIT : 数字</li>
+<li>DATE : 日期</li>
+<li>FILL_IMAGE : 图片</li>
+<li>ATTACHMENT : 附件</li>
+<li>EMAIL : 邮箱</li>
+<li>LOCATION : 地址</li>
+<li>EDUCATION : 学历</li>
+<li>GENDER : 性别</li>
+<li>DISTRICT : 省市区</li></ul>
+ * @method void setHideComponentTypes(array $HideComponentTypes) 设置在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用（注: 
+<font color='red'>空数组代表未指定</font>），具体的控件类型如下
+
+<ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
+<li>SIGN_SEAL : 企业印章</li>
+<li>SIGN_PAGING_SEAL : 骑缝章</li>
+<li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
+<li>SIGN_APPROVE : 签批</li>
+<li>SIGN_OPINION : 签署意见</li>
+<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
+<li>BUSI-FULL-NAME  : 企业全称</li>
+<li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
+<li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
+<li>PERSONAL-NAME : 签署人姓名</li>
+<li>PERSONAL-MOBILE : 签署人手机号</li>
+<li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li>
+<li>PERSONAL-IDCARD : 签署人证件号</li>
+<li>TEXT : 单行文本</li>
+<li>MULTI_LINE_TEXT : 多行文本</li>
+<li>CHECK_BOX : 勾选框</li>
+<li>SELECTOR : 选择器</li>
+<li>DIGIT : 数字</li>
+<li>DATE : 日期</li>
+<li>FILL_IMAGE : 图片</li>
+<li>ATTACHMENT : 附件</li>
+<li>EMAIL : 邮箱</li>
+<li>LOCATION : 地址</li>
+<li>EDUCATION : 学历</li>
+<li>GENDER : 性别</li>
+<li>DISTRICT : 省市区</li></ul>
+ * @method array getShowComponentTypes() 获取在发起流程的可嵌入页面要显示的控件列表，和 HideComponentTypes 参数 只能二选一使用（注: 
+<font color='red'>空数组代表未指定</font>），具体的控件类型如下
+<ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
+<li>SIGN_SEAL : 企业印章</li>
+<li>SIGN_PAGING_SEAL : 骑缝章</li>
+<li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
+<li>SIGN_APPROVE : 签批</li>
+<li>SIGN_OPINION : 签署意见</li>
+<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
+<li>BUSI-FULL-NAME  : 企业全称</li>
+<li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
+<li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
+<li>PERSONAL-NAME : 签署人姓名</li>
+<li>PERSONAL-MOBILE : 签署人手机号</li>
+<li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li>
+<li>PERSONAL-IDCARD : 签署人证件号</li>
+<li>TEXT : 单行文本</li>
+<li>MULTI_LINE_TEXT : 多行文本</li>
+<li>CHECK_BOX : 勾选框</li>
+<li>SELECTOR : 选择器</li>
+<li>DIGIT : 数字</li>
+<li>DATE : 日期</li>
+<li>FILL_IMAGE : 图片</li>
+<li>ATTACHMENT : 附件</li>
+<li>EMAIL : 邮箱</li>
+<li>LOCATION : 地址</li>
+<li>EDUCATION : 学历</li>
+<li>GENDER : 性别</li>
+<li>DISTRICT : 省市区</li></ul>
+ * @method void setShowComponentTypes(array $ShowComponentTypes) 设置在发起流程的可嵌入页面要显示的控件列表，和 HideComponentTypes 参数 只能二选一使用（注: 
+<font color='red'>空数组代表未指定</font>），具体的控件类型如下
+<ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
+<li>SIGN_SEAL : 企业印章</li>
+<li>SIGN_PAGING_SEAL : 骑缝章</li>
+<li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
+<li>SIGN_APPROVE : 签批</li>
+<li>SIGN_OPINION : 签署意见</li>
+<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
+<li>BUSI-FULL-NAME  : 企业全称</li>
+<li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
+<li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
+<li>PERSONAL-NAME : 签署人姓名</li>
+<li>PERSONAL-MOBILE : 签署人手机号</li>
+<li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li>
+<li>PERSONAL-IDCARD : 签署人证件号</li>
+<li>TEXT : 单行文本</li>
+<li>MULTI_LINE_TEXT : 多行文本</li>
+<li>CHECK_BOX : 勾选框</li>
+<li>SELECTOR : 选择器</li>
+<li>DIGIT : 数字</li>
+<li>DATE : 日期</li>
+<li>FILL_IMAGE : 图片</li>
+<li>ATTACHMENT : 附件</li>
+<li>EMAIL : 邮箱</li>
+<li>LOCATION : 地址</li>
+<li>EDUCATION : 学历</li>
+<li>GENDER : 性别</li>
+<li>DISTRICT : 省市区</li></ul>
+ * @method boolean getForbidAddApprover() 获取 禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
+
+ * @method void setForbidAddApprover(boolean $ForbidAddApprover) 设置 禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
+
+ * @method boolean getForbidEditFlowProperties() 获取  禁止设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
+
+ * @method void setForbidEditFlowProperties(boolean $ForbidEditFlowProperties) 设置  禁止设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
+
+ * @method CreateResultPageConfig getResultPageConfig() 获取发起流程的可嵌入页面结果页配置
+ * @method void setResultPageConfig(CreateResultPageConfig $ResultPageConfig) 设置发起流程的可嵌入页面结果页配置
  */
 class CreateFlowOption extends AbstractModel
 {
@@ -242,6 +370,90 @@ class CreateFlowOption extends AbstractModel
     public $NeedFlowDraft;
 
     /**
+     * @var array 在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用（注: 
+<font color='red'>空数组代表未指定</font>），具体的控件类型如下
+
+<ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
+<li>SIGN_SEAL : 企业印章</li>
+<li>SIGN_PAGING_SEAL : 骑缝章</li>
+<li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
+<li>SIGN_APPROVE : 签批</li>
+<li>SIGN_OPINION : 签署意见</li>
+<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
+<li>BUSI-FULL-NAME  : 企业全称</li>
+<li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
+<li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
+<li>PERSONAL-NAME : 签署人姓名</li>
+<li>PERSONAL-MOBILE : 签署人手机号</li>
+<li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li>
+<li>PERSONAL-IDCARD : 签署人证件号</li>
+<li>TEXT : 单行文本</li>
+<li>MULTI_LINE_TEXT : 多行文本</li>
+<li>CHECK_BOX : 勾选框</li>
+<li>SELECTOR : 选择器</li>
+<li>DIGIT : 数字</li>
+<li>DATE : 日期</li>
+<li>FILL_IMAGE : 图片</li>
+<li>ATTACHMENT : 附件</li>
+<li>EMAIL : 邮箱</li>
+<li>LOCATION : 地址</li>
+<li>EDUCATION : 学历</li>
+<li>GENDER : 性别</li>
+<li>DISTRICT : 省市区</li></ul>
+     */
+    public $HideComponentTypes;
+
+    /**
+     * @var array 在发起流程的可嵌入页面要显示的控件列表，和 HideComponentTypes 参数 只能二选一使用（注: 
+<font color='red'>空数组代表未指定</font>），具体的控件类型如下
+<ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
+<li>SIGN_SEAL : 企业印章</li>
+<li>SIGN_PAGING_SEAL : 骑缝章</li>
+<li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
+<li>SIGN_APPROVE : 签批</li>
+<li>SIGN_OPINION : 签署意见</li>
+<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
+<li>BUSI-FULL-NAME  : 企业全称</li>
+<li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
+<li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
+<li>PERSONAL-NAME : 签署人姓名</li>
+<li>PERSONAL-MOBILE : 签署人手机号</li>
+<li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li>
+<li>PERSONAL-IDCARD : 签署人证件号</li>
+<li>TEXT : 单行文本</li>
+<li>MULTI_LINE_TEXT : 多行文本</li>
+<li>CHECK_BOX : 勾选框</li>
+<li>SELECTOR : 选择器</li>
+<li>DIGIT : 数字</li>
+<li>DATE : 日期</li>
+<li>FILL_IMAGE : 图片</li>
+<li>ATTACHMENT : 附件</li>
+<li>EMAIL : 邮箱</li>
+<li>LOCATION : 地址</li>
+<li>EDUCATION : 学历</li>
+<li>GENDER : 性别</li>
+<li>DISTRICT : 省市区</li></ul>
+     */
+    public $ShowComponentTypes;
+
+    /**
+     * @var boolean  禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
+
+     */
+    public $ForbidAddApprover;
+
+    /**
+     * @var boolean   禁止设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
+
+     */
+    public $ForbidEditFlowProperties;
+
+    /**
+     * @var CreateResultPageConfig 发起流程的可嵌入页面结果页配置
+     */
+    public $ResultPageConfig;
+
+    /**
      * @param boolean $CanEditFlow 是否允许修改合同信息，
 **true**：可以
 **false**：（默认）不可以
@@ -292,6 +504,70 @@ class CreateFlowOption extends AbstractModel
      * @param string $SelfName 本企业简称，注：仅对新版页面生效
      * @param boolean $HideSignCodeAfterStart 发起后签署码隐藏，默认false，注：仅对新版页面生效
      * @param boolean $NeedFlowDraft 发起过程中是否保存草稿	
+     * @param array $HideComponentTypes 在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用（注: 
+<font color='red'>空数组代表未指定</font>），具体的控件类型如下
+
+<ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
+<li>SIGN_SEAL : 企业印章</li>
+<li>SIGN_PAGING_SEAL : 骑缝章</li>
+<li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
+<li>SIGN_APPROVE : 签批</li>
+<li>SIGN_OPINION : 签署意见</li>
+<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
+<li>BUSI-FULL-NAME  : 企业全称</li>
+<li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
+<li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
+<li>PERSONAL-NAME : 签署人姓名</li>
+<li>PERSONAL-MOBILE : 签署人手机号</li>
+<li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li>
+<li>PERSONAL-IDCARD : 签署人证件号</li>
+<li>TEXT : 单行文本</li>
+<li>MULTI_LINE_TEXT : 多行文本</li>
+<li>CHECK_BOX : 勾选框</li>
+<li>SELECTOR : 选择器</li>
+<li>DIGIT : 数字</li>
+<li>DATE : 日期</li>
+<li>FILL_IMAGE : 图片</li>
+<li>ATTACHMENT : 附件</li>
+<li>EMAIL : 邮箱</li>
+<li>LOCATION : 地址</li>
+<li>EDUCATION : 学历</li>
+<li>GENDER : 性别</li>
+<li>DISTRICT : 省市区</li></ul>
+     * @param array $ShowComponentTypes 在发起流程的可嵌入页面要显示的控件列表，和 HideComponentTypes 参数 只能二选一使用（注: 
+<font color='red'>空数组代表未指定</font>），具体的控件类型如下
+<ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
+<li>SIGN_SEAL : 企业印章</li>
+<li>SIGN_PAGING_SEAL : 骑缝章</li>
+<li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
+<li>SIGN_APPROVE : 签批</li>
+<li>SIGN_OPINION : 签署意见</li>
+<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
+<li>BUSI-FULL-NAME  : 企业全称</li>
+<li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
+<li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
+<li>PERSONAL-NAME : 签署人姓名</li>
+<li>PERSONAL-MOBILE : 签署人手机号</li>
+<li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li>
+<li>PERSONAL-IDCARD : 签署人证件号</li>
+<li>TEXT : 单行文本</li>
+<li>MULTI_LINE_TEXT : 多行文本</li>
+<li>CHECK_BOX : 勾选框</li>
+<li>SELECTOR : 选择器</li>
+<li>DIGIT : 数字</li>
+<li>DATE : 日期</li>
+<li>FILL_IMAGE : 图片</li>
+<li>ATTACHMENT : 附件</li>
+<li>EMAIL : 邮箱</li>
+<li>LOCATION : 地址</li>
+<li>EDUCATION : 学历</li>
+<li>GENDER : 性别</li>
+<li>DISTRICT : 省市区</li></ul>
+     * @param boolean $ForbidAddApprover  禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
+
+     * @param boolean $ForbidEditFlowProperties   禁止设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
+
+     * @param CreateResultPageConfig $ResultPageConfig 发起流程的可嵌入页面结果页配置
      */
     function __construct()
     {
@@ -373,6 +649,27 @@ class CreateFlowOption extends AbstractModel
 
         if (array_key_exists("NeedFlowDraft",$param) and $param["NeedFlowDraft"] !== null) {
             $this->NeedFlowDraft = $param["NeedFlowDraft"];
+        }
+
+        if (array_key_exists("HideComponentTypes",$param) and $param["HideComponentTypes"] !== null) {
+            $this->HideComponentTypes = $param["HideComponentTypes"];
+        }
+
+        if (array_key_exists("ShowComponentTypes",$param) and $param["ShowComponentTypes"] !== null) {
+            $this->ShowComponentTypes = $param["ShowComponentTypes"];
+        }
+
+        if (array_key_exists("ForbidAddApprover",$param) and $param["ForbidAddApprover"] !== null) {
+            $this->ForbidAddApprover = $param["ForbidAddApprover"];
+        }
+
+        if (array_key_exists("ForbidEditFlowProperties",$param) and $param["ForbidEditFlowProperties"] !== null) {
+            $this->ForbidEditFlowProperties = $param["ForbidEditFlowProperties"];
+        }
+
+        if (array_key_exists("ResultPageConfig",$param) and $param["ResultPageConfig"] !== null) {
+            $this->ResultPageConfig = new CreateResultPageConfig();
+            $this->ResultPageConfig->deserialize($param["ResultPageConfig"]);
         }
     }
 }

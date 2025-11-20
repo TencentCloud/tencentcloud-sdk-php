@@ -67,6 +67,7 @@ use TencentCloud\Dbbrain\V20210527\Models as Models;
  * @method Models\DescribeIndexRecommendInfoResponse DescribeIndexRecommendInfo(Models\DescribeIndexRecommendInfoRequest $req) 查询实例的索引推荐信息，包括索引统计相关信息，推荐索引列表，无效索引列表等。
  * @method Models\DescribeMailProfileResponse DescribeMailProfile(Models\DescribeMailProfileRequest $req) 获取发送邮件的配置， 包括数据库巡检的邮件配置以及定期生成健康报告的邮件发送配置。
  * @method Models\DescribeMetricTopProxiesResponse DescribeMetricTopProxies(Models\DescribeMetricTopProxiesRequest $req) 获取指定时间段内Redis Proxy 指标
+ * @method Models\DescribeMongoDBProcessListResponse DescribeMongoDBProcessList(Models\DescribeMongoDBProcessListRequest $req) 查询MongoDB实时会话列表
  * @method Models\DescribeMySqlProcessListResponse DescribeMySqlProcessList(Models\DescribeMySqlProcessListRequest $req) 查询关系型数据库的实时线程列表。
  * @method Models\DescribeNoPrimaryKeyTablesResponse DescribeNoPrimaryKeyTables(Models\DescribeNoPrimaryKeyTablesRequest $req) 查询实例无主键表。
  * @method Models\DescribeProxyProcessStatisticsResponse DescribeProxyProcessStatistics(Models\DescribeProxyProcessStatisticsRequest $req) 获取当前实例下的单个proxy的会话统计详情信息， 返回数据为单个 proxy 的会话统计信息。【注意】该接口仅限部分环境调用。

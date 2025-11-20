@@ -24,12 +24,15 @@ use TencentCloud\Vclm\V20240523\Models as Models;
 
 /**
  * @method Models\CheckAnimateImageJobResponse CheckAnimateImageJob(Models\CheckAnimateImageJobRequest $req) 检查图片跳舞输入图
+ * @method Models\DescribeHumanActorJobResponse DescribeHumanActorJob(Models\DescribeHumanActorJobRequest $req) 通过JobId提交请求，获取人像驱动任务的结果信息。
  * @method Models\DescribeImageAnimateJobResponse DescribeImageAnimateJob(Models\DescribeImageAnimateJobRequest $req) 用于查询图片跳舞任务。图片跳舞能力支持舞蹈动作结合图片生成跳舞视频，满足社交娱乐、互动营销等场景的需求。
  * @method Models\DescribeImageToVideoGeneralJobResponse DescribeImageToVideoGeneralJob(Models\DescribeImageToVideoGeneralJobRequest $req) 查询图生视频通用能力任务接口
  * @method Models\DescribePortraitSingJobResponse DescribePortraitSingJob(Models\DescribePortraitSingJobRequest $req) 用于查询图片唱演任务。
 支持提交音频和图片生成唱演视频，满足社交娱乐、互动营销等场景的需求。
  * @method Models\DescribeTemplateToVideoJobResponse DescribeTemplateToVideoJob(Models\DescribeTemplateToVideoJobRequest $req) 用于查询视频特效任务。
  * @method Models\DescribeVideoStylizationJobResponse DescribeVideoStylizationJob(Models\DescribeVideoStylizationJobRequest $req) 用于查询视频风格化任务。视频风格化支持将输入视频生成特定风格的视频。生成后的视频画面风格多样、流畅自然，能够满足社交娱乐、互动营销、视频素材制作等场景的需求。
+ * @method Models\SubmitHumanActorJobResponse SubmitHumanActorJob(Models\SubmitHumanActorJobRequest $req) 用于提交人像驱动任务
+支持提交音频和图文来生成对应视频，满足动态交互、内容生产等场景需求。
  * @method Models\SubmitImageAnimateJobResponse SubmitImageAnimateJob(Models\SubmitImageAnimateJobRequest $req) 用于提交图片跳舞任务。图片跳舞能力支持舞蹈动作结合图片生成跳舞视频，满足社交娱乐、互动营销等场景的需求。
  * @method Models\SubmitImageToVideoGeneralJobResponse SubmitImageToVideoGeneralJob(Models\SubmitImageToVideoGeneralJobRequest $req) 图生视频通用能力接口
  * @method Models\SubmitPortraitSingJobResponse SubmitPortraitSingJob(Models\SubmitPortraitSingJobRequest $req) 用于提交图片唱演任务。

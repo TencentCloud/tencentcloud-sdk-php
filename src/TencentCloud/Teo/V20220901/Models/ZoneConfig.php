@@ -100,6 +100,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGrpc(GrpcParameters $Grpc) 设置gRPC 协议支持配置。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method NetworkErrorLoggingParameters getNetworkErrorLogging() 获取网络错误日志记录配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNetworkErrorLogging(NetworkErrorLoggingParameters $NetworkErrorLogging) 设置网络错误日志记录配置。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method AccelerateMainlandParameters getAccelerateMainland() 获取中国大陆加速优化配置。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccelerateMainland(AccelerateMainlandParameters $AccelerateMainland) 设置中国大陆加速优化配置。
@@ -232,6 +236,12 @@ class ZoneConfig extends AbstractModel
     public $Grpc;
 
     /**
+     * @var NetworkErrorLoggingParameters 网络错误日志记录配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NetworkErrorLogging;
+
+    /**
      * @var AccelerateMainlandParameters 中国大陆加速优化配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -283,6 +293,8 @@ class ZoneConfig extends AbstractModel
      * @param ClientIPCountryParameters $ClientIPCountry 回源时是否携带客户端 IP 所属地域信息的配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GrpcParameters $Grpc gRPC 协议支持配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NetworkErrorLoggingParameters $NetworkErrorLogging 网络错误日志记录配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AccelerateMainlandParameters $AccelerateMainland 中国大陆加速优化配置。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -400,6 +412,11 @@ class ZoneConfig extends AbstractModel
         if (array_key_exists("Grpc",$param) and $param["Grpc"] !== null) {
             $this->Grpc = new GrpcParameters();
             $this->Grpc->deserialize($param["Grpc"]);
+        }
+
+        if (array_key_exists("NetworkErrorLogging",$param) and $param["NetworkErrorLogging"] !== null) {
+            $this->NetworkErrorLogging = new NetworkErrorLoggingParameters();
+            $this->NetworkErrorLogging->deserialize($param["NetworkErrorLogging"]);
         }
 
         if (array_key_exists("AccelerateMainland",$param) and $param["AccelerateMainland"] !== null) {

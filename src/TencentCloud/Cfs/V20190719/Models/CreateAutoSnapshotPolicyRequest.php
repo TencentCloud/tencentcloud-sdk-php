@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDayOfMonth(string $DayOfMonth) 设置快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照；例如1 代表1号；与DayOfWeek，IntervalDays 三者选一
  * @method integer getIntervalDays() 获取间隔天数，与DayOfWeek，DayOfMonth 三者选一
  * @method void setIntervalDays(integer $IntervalDays) 设置间隔天数，与DayOfWeek，DayOfMonth 三者选一
+ * @method array getResourceTags() 获取快照策略标签
+ * @method void setResourceTags(array $ResourceTags) 设置快照策略标签
  */
 class CreateAutoSnapshotPolicyRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateAutoSnapshotPolicyRequest extends AbstractModel
     public $IntervalDays;
 
     /**
+     * @var array 快照策略标签
+     */
+    public $ResourceTags;
+
+    /**
      * @param string $Hour 快照重复时间点,0-23，小时
      * @param string $PolicyName 策略名称,限制64个字符数量仅支持输入中文、字母、数字、_或-
      * @param string $DayOfWeek 快照重复日期，星期一到星期日。 1代表星期一、7代表星期天，与DayOfMonth，IntervalDays 三者选一
      * @param integer $AliveDays 快照保留时长，单位天，默认永久0
      * @param string $DayOfMonth 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照；例如1 代表1号；与DayOfWeek，IntervalDays 三者选一
      * @param integer $IntervalDays 间隔天数，与DayOfWeek，DayOfMonth 三者选一
+     * @param array $ResourceTags 快照策略标签
      */
     function __construct()
     {
@@ -108,6 +116,15 @@ class CreateAutoSnapshotPolicyRequest extends AbstractModel
 
         if (array_key_exists("IntervalDays",$param) and $param["IntervalDays"] !== null) {
             $this->IntervalDays = $param["IntervalDays"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
     }
 }

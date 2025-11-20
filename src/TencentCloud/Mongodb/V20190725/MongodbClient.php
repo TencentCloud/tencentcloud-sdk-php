@@ -55,6 +55,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\DescribeDBInstancesResponse DescribeDBInstances(Models\DescribeDBInstancesRequest $req) 本接口（DescribeDBInstances）用于查询云数据库实例列表，支持通过项目ID、实例ID、实例状态等过滤条件来筛选主实例、灾备实例和只读实例信息列表。
  * @method Models\DescribeDetailedSlowLogsResponse DescribeDetailedSlowLogs(Models\DescribeDetailedSlowLogsRequest $req) 本接口（DescribeDetailedSlowLogs）用于查询实例慢日志详情。
  * @method Models\DescribeInstanceParamsResponse DescribeInstanceParams(Models\DescribeInstanceParamsRequest $req) 本接口（DescribeInstanceParams）用于查询当前实例可修改的参数列表。
+ * @method Models\DescribeInstanceSSLResponse DescribeInstanceSSL(Models\DescribeInstanceSSLRequest $req) 查看实例SSL开启状态
  * @method Models\DescribeLogDownloadTasksResponse DescribeLogDownloadTasks(Models\DescribeLogDownloadTasksRequest $req) 日志下载任务查询
  * @method Models\DescribeMongodbLogsResponse DescribeMongodbLogs(Models\DescribeMongodbLogsRequest $req) 该接口（DescribeMongodbLogs）用于查询运行日志。
  * @method Models\DescribeSecurityGroupResponse DescribeSecurityGroup(Models\DescribeSecurityGroupRequest $req) 本接口（DescribeSecurityGroup）用于查询实例绑定的安全组。
@@ -71,6 +72,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\InquirePriceCreateDBInstancesResponse InquirePriceCreateDBInstances(Models\InquirePriceCreateDBInstancesRequest $req) 本接口（InquirePriceCreateDBInstances）用于创建数据库实例询价。本接口参数中必须传入region参数，否则无法通过校验。本接口仅允许针对购买限制范围内的实例配置进行询价。
  * @method Models\InquirePriceModifyDBInstanceSpecResponse InquirePriceModifyDBInstanceSpec(Models\InquirePriceModifyDBInstanceSpecRequest $req) 本接口 (InquirePriceModifyDBInstanceSpec) 用于查询实例配置变更后的价格。
  * @method Models\InquirePriceRenewDBInstancesResponse InquirePriceRenewDBInstances(Models\InquirePriceRenewDBInstancesRequest $req) 本接口 (InquiryPriceRenewDBInstances) 用于续费包年包月实例询价。
+ * @method Models\InstanceEnableSSLResponse InstanceEnableSSL(Models\InstanceEnableSSLRequest $req) 本接口（InstanceEnableSSL）用于设置实例SSL状态。
  * @method Models\IsolateDBInstanceResponse IsolateDBInstance(Models\IsolateDBInstanceRequest $req) 本接口（IsolateDBInstance）用于隔离 MongoDB 云数据库按量计费实例。隔离后实例保留在回收站中，不能再写入数据。隔离一定时间后，实例会彻底删除，回收站保存时间请参考按量计费的服务条款。已删除的按量计费实例无法恢复，请谨慎操作。
  * @method Models\KillOpsResponse KillOps(Models\KillOpsRequest $req) 本接口（KillOps）用于终止 MongoDB 云数据库实例上执行的特定操作。
  * @method Models\ModifyAuditServiceResponse ModifyAuditService(Models\ModifyAuditServiceRequest $req) 本接口(ModifyAuditService)用于修改云数据库审计策略的服务配置，包括审计日志保存时长等。

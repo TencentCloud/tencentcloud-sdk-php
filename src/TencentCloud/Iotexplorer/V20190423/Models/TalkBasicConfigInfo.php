@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGreetingMessage(string $GreetingMessage) 设置欢迎语，支持多个欢迎语随机切换，格式：字符串数组，JSON字符串。
  * @method integer getDefaultVoiceType() 获取音色，支持的音色列表：100510000-阅读男声智逍遥；101001-情感女声智瑜；101002-通用女声智聆；101003-客服女声智美；101004-通用男声智云；101005-通用女声智莉；101006-助手女声智言；101008-客服女声智琪；101009-知性女声智芸；101010-通用男声智华；101011-新闻女声智燕；101012-新闻女声智丹；101013-新闻男声智辉；101014 -新闻男声智宁；101015-男童声智萌；101016-女童声智甜；101017-情感女声智蓉；101018-情感男声智靖；101019-粤语女声智彤。
  * @method void setDefaultVoiceType(integer $DefaultVoiceType) 设置音色，支持的音色列表：100510000-阅读男声智逍遥；101001-情感女声智瑜；101002-通用女声智聆；101003-客服女声智美；101004-通用男声智云；101005-通用女声智莉；101006-助手女声智言；101008-客服女声智琪；101009-知性女声智芸；101010-通用男声智华；101011-新闻女声智燕；101012-新闻女声智丹；101013-新闻男声智辉；101014 -新闻男声智宁；101015-男童声智萌；101016-女童声智甜；101017-情感女声智蓉；101018-情感男声智靖；101019-粤语女声智彤。
+ * @method string getFastVoiceType() 获取复刻音色ID，当不为空时，DefaultVoiceType为200000000
+ * @method void setFastVoiceType(string $FastVoiceType) 设置复刻音色ID，当不为空时，DefaultVoiceType为200000000
  */
 class TalkBasicConfigInfo extends AbstractModel
 {
@@ -45,9 +47,15 @@ class TalkBasicConfigInfo extends AbstractModel
     public $DefaultVoiceType;
 
     /**
+     * @var string 复刻音色ID，当不为空时，DefaultVoiceType为200000000
+     */
+    public $FastVoiceType;
+
+    /**
      * @param string $SystemPrompt 系统提示词
      * @param string $GreetingMessage 欢迎语，支持多个欢迎语随机切换，格式：字符串数组，JSON字符串。
      * @param integer $DefaultVoiceType 音色，支持的音色列表：100510000-阅读男声智逍遥；101001-情感女声智瑜；101002-通用女声智聆；101003-客服女声智美；101004-通用男声智云；101005-通用女声智莉；101006-助手女声智言；101008-客服女声智琪；101009-知性女声智芸；101010-通用男声智华；101011-新闻女声智燕；101012-新闻女声智丹；101013-新闻男声智辉；101014 -新闻男声智宁；101015-男童声智萌；101016-女童声智甜；101017-情感女声智蓉；101018-情感男声智靖；101019-粤语女声智彤。
+     * @param string $FastVoiceType 复刻音色ID，当不为空时，DefaultVoiceType为200000000
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class TalkBasicConfigInfo extends AbstractModel
 
         if (array_key_exists("DefaultVoiceType",$param) and $param["DefaultVoiceType"] !== null) {
             $this->DefaultVoiceType = $param["DefaultVoiceType"];
+        }
+
+        if (array_key_exists("FastVoiceType",$param) and $param["FastVoiceType"] !== null) {
+            $this->FastVoiceType = $param["FastVoiceType"];
         }
     }
 }

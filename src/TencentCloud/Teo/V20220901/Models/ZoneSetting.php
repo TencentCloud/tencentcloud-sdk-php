@@ -100,6 +100,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGrpc(Grpc $Grpc) 设置Grpc协议支持配置。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method NetworkErrorLogging getNetworkErrorLogging() 获取网络错误日志记录配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNetworkErrorLogging(NetworkErrorLogging $NetworkErrorLogging) 设置网络错误日志记录配置。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method ImageOptimize getImageOptimize() 获取图片优化相关配置。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageOptimize(ImageOptimize $ImageOptimize) 设置图片优化相关配置。
@@ -240,6 +244,12 @@ class ZoneSetting extends AbstractModel
     public $Grpc;
 
     /**
+     * @var NetworkErrorLogging 网络错误日志记录配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NetworkErrorLogging;
+
+    /**
      * @var ImageOptimize 图片优化相关配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -303,6 +313,8 @@ class ZoneSetting extends AbstractModel
      * @param ClientIpCountry $ClientIpCountry 回源时是否携带客户端IP所属地域信息的配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Grpc $Grpc Grpc协议支持配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NetworkErrorLogging $NetworkErrorLogging 网络错误日志记录配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageOptimize $ImageOptimize 图片优化相关配置。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -422,6 +434,11 @@ class ZoneSetting extends AbstractModel
         if (array_key_exists("Grpc",$param) and $param["Grpc"] !== null) {
             $this->Grpc = new Grpc();
             $this->Grpc->deserialize($param["Grpc"]);
+        }
+
+        if (array_key_exists("NetworkErrorLogging",$param) and $param["NetworkErrorLogging"] !== null) {
+            $this->NetworkErrorLogging = new NetworkErrorLogging();
+            $this->NetworkErrorLogging->deserialize($param["NetworkErrorLogging"]);
         }
 
         if (array_key_exists("ImageOptimize",$param) and $param["ImageOptimize"] !== null) {

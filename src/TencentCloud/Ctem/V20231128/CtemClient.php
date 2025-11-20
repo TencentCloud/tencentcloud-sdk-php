@@ -24,7 +24,9 @@ use TencentCloud\Ctem\V20231128\Models as Models;
 
 /**
  * @method Models\CreateCustomerResponse CreateCustomer(Models\CreateCustomerRequest $req) 创建企业
+ * @method Models\CreateEnterpriseResponse CreateEnterprise(Models\CreateEnterpriseRequest $req) 添加企业架构数据
  * @method Models\CreateJobRecordResponse CreateJobRecord(Models\CreateJobRecordRequest $req) 启动测绘
+ * @method Models\DescribeApiSecsResponse DescribeApiSecs(Models\DescribeApiSecsRequest $req) 查看API安全数据
  * @method Models\DescribeAppsResponse DescribeApps(Models\DescribeAppsRequest $req) 查看移动端资产
  * @method Models\DescribeAssetsResponse DescribeAssets(Models\DescribeAssetsRequest $req) 查看主机资产
  * @method Models\DescribeConfigsResponse DescribeConfigs(Models\DescribeConfigsRequest $req) 查看目录爆破数据

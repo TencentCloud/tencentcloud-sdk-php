@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserData(string $UserData) 设置调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 1024长度。
 
 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
+ * @method ContractReviewWebUrlOption getOption() 获取个性化参数，用于控制页面展示内容
+ * @method void setOption(ContractReviewWebUrlOption $Option) 设置个性化参数，用于控制页面展示内容
  */
 class CreateContractReviewWebUrlRequest extends AbstractModel
 {
@@ -63,6 +65,11 @@ class CreateContractReviewWebUrlRequest extends AbstractModel
     public $UserData;
 
     /**
+     * @var ContractReviewWebUrlOption 个性化参数，用于控制页面展示内容
+     */
+    public $Option;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。使用此接口时，必须填写userId。
 
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
@@ -72,6 +79,7 @@ class CreateContractReviewWebUrlRequest extends AbstractModel
      * @param string $UserData 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 1024长度。
 
 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
+     * @param ContractReviewWebUrlOption $Option 个性化参数，用于控制页面展示内容
      */
     function __construct()
     {
@@ -97,6 +105,11 @@ class CreateContractReviewWebUrlRequest extends AbstractModel
 
         if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
             $this->UserData = $param["UserData"];
+        }
+
+        if (array_key_exists("Option",$param) and $param["Option"] !== null) {
+            $this->Option = new ContractReviewWebUrlOption();
+            $this->Option->deserialize($param["Option"]);
         }
     }
 }

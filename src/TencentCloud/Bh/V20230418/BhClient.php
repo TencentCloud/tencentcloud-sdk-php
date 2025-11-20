@@ -39,7 +39,9 @@ use TencentCloud\Bh\V20230418\Models as Models;
  * @method Models\CreateDeviceGroupResponse CreateDeviceGroup(Models\CreateDeviceGroupRequest $req) 新建资产组
  * @method Models\CreateOperationTaskResponse CreateOperationTask(Models\CreateOperationTaskRequest $req) 创建运维任务
  * @method Models\CreateResourceResponse CreateResource(Models\CreateResourceRequest $req) 创建堡垒机实例
+ * @method Models\CreateSyncUserTaskResponse CreateSyncUserTask(Models\CreateSyncUserTaskRequest $req) 创建用户同步任务
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 新建用户
+ * @method Models\CreateUserDirectoryResponse CreateUserDirectory(Models\CreateUserDirectoryRequest $req) 创建用户目录
  * @method Models\CreateUserGroupResponse CreateUserGroup(Models\CreateUserGroupRequest $req) 新建用户组
  * @method Models\DeleteAccessWhiteListRulesResponse DeleteAccessWhiteListRules(Models\DeleteAccessWhiteListRulesRequest $req) 删除访问白名单规则
  * @method Models\DeleteAclsResponse DeleteAcls(Models\DeleteAclsRequest $req) 删除访问权限
@@ -50,11 +52,13 @@ use TencentCloud\Bh\V20230418\Models as Models;
  * @method Models\DeleteDeviceGroupsResponse DeleteDeviceGroups(Models\DeleteDeviceGroupsRequest $req) 删除资产组
  * @method Models\DeleteDevicesResponse DeleteDevices(Models\DeleteDevicesRequest $req) 删除主机
  * @method Models\DeleteOperationTasksResponse DeleteOperationTasks(Models\DeleteOperationTasksRequest $req) 删除运维任务
+ * @method Models\DeleteUserDirectoryResponse DeleteUserDirectory(Models\DeleteUserDirectoryRequest $req) 删除用户目录
  * @method Models\DeleteUserGroupMembersResponse DeleteUserGroupMembers(Models\DeleteUserGroupMembersRequest $req) 删除用户组成员
  * @method Models\DeleteUserGroupsResponse DeleteUserGroups(Models\DeleteUserGroupsRequest $req) 删除用户组
  * @method Models\DeleteUsersResponse DeleteUsers(Models\DeleteUsersRequest $req) 删除用户
  * @method Models\DeployResourceResponse DeployResource(Models\DeployResourceRequest $req) 开通服务，初始化资源，只针对新购资源
  * @method Models\DescribeAccessWhiteListRulesResponse DescribeAccessWhiteListRules(Models\DescribeAccessWhiteListRulesRequest $req) 查询访问白名单规则列表
+ * @method Models\DescribeAccountGroupsResponse DescribeAccountGroups(Models\DescribeAccountGroupsRequest $req) 获取账号组信息
  * @method Models\DescribeAclsResponse DescribeAcls(Models\DescribeAclsRequest $req) 查询访问权限列表
  * @method Models\DescribeAssetSyncFlagResponse DescribeAssetSyncFlag(Models\DescribeAssetSyncFlagRequest $req) 查询资产自动同步开关
  * @method Models\DescribeAssetSyncStatusResponse DescribeAssetSyncStatus(Models\DescribeAssetSyncStatusRequest $req) 查询资产同步状态
@@ -72,8 +76,11 @@ use TencentCloud\Bh\V20230418\Models as Models;
  * @method Models\DescribeOperationTaskResponse DescribeOperationTask(Models\DescribeOperationTaskRequest $req) 获取运维任务列表
  * @method Models\DescribeResourcesResponse DescribeResources(Models\DescribeResourcesRequest $req) 查询用户购买的堡垒机服务信息，包括资源ID、授权点数、VPC、过期时间等。
  * @method Models\DescribeSecuritySettingResponse DescribeSecuritySetting(Models\DescribeSecuritySettingRequest $req) 查询安全配置信息
+ * @method Models\DescribeSourceTypesResponse DescribeSourceTypes(Models\DescribeSourceTypesRequest $req) 获取认证源信息
+ * @method Models\DescribeUserDirectoryResponse DescribeUserDirectory(Models\DescribeUserDirectoryRequest $req) 获取用户目录
  * @method Models\DescribeUserGroupMembersResponse DescribeUserGroupMembers(Models\DescribeUserGroupMembersRequest $req) 查询用户组成员列表
  * @method Models\DescribeUserGroupsResponse DescribeUserGroups(Models\DescribeUserGroupsRequest $req) 查询用户组列表
+ * @method Models\DescribeUserSyncStatusResponse DescribeUserSyncStatus(Models\DescribeUserSyncStatusRequest $req) 获取用户同步状态
  * @method Models\DescribeUsersResponse DescribeUsers(Models\DescribeUsersRequest $req) 查询用户列表
  * @method Models\DisableExternalAccessResponse DisableExternalAccess(Models\DisableExternalAccessRequest $req) 关闭公网访问堡垒机
  * @method Models\DisableIntranetAccessResponse DisableIntranetAccess(Models\DisableIntranetAccessRequest $req) 关闭内网访问
@@ -96,6 +103,7 @@ use TencentCloud\Bh\V20230418\Models as Models;
  * @method Models\ModifyReconnectionSettingResponse ModifyReconnectionSetting(Models\ModifyReconnectionSettingRequest $req) 修改运维资产连接重连次数
  * @method Models\ModifyResourceResponse ModifyResource(Models\ModifyResourceRequest $req) 资源变配
  * @method Models\ModifyUserResponse ModifyUser(Models\ModifyUserRequest $req) 修改用户信息
+ * @method Models\ModifyUserDirectoryResponse ModifyUserDirectory(Models\ModifyUserDirectoryRequest $req) 修改用户目录信息
  * @method Models\ModifyUserGroupResponse ModifyUserGroup(Models\ModifyUserGroupRequest $req) 修改用户组
  * @method Models\ReplaySessionResponse ReplaySession(Models\ReplaySessionRequest $req) 会话回放
  * @method Models\ResetDeviceAccountPasswordResponse ResetDeviceAccountPassword(Models\ResetDeviceAccountPasswordRequest $req) 清除设备账号绑定密码
@@ -113,6 +121,8 @@ use TencentCloud\Bh\V20230418\Models as Models;
  * @method Models\SearchSubtaskResultByIdResponse SearchSubtaskResultById(Models\SearchSubtaskResultByIdRequest $req) 查询运维子任务执行结果
  * @method Models\SearchTaskResultResponse SearchTaskResult(Models\SearchTaskResultRequest $req) 搜索运维任务执行结果
  * @method Models\SetLDAPSyncFlagResponse SetLDAPSyncFlag(Models\SetLDAPSyncFlagRequest $req) 设置LDAP 立即同步标记
+ * @method Models\SyncDevicesToIOAResponse SyncDevicesToIOA(Models\SyncDevicesToIOARequest $req) 同步资产到IOA
+ * @method Models\SyncUserToIOAResponse SyncUserToIOA(Models\SyncUserToIOARequest $req) 同步堡垒机本地用户到IOA
  * @method Models\UnlockUserResponse UnlockUser(Models\UnlockUserRequest $req) 解锁用户
  */
 

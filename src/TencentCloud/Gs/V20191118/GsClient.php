@@ -35,6 +35,7 @@ use TencentCloud\Gs\V20191118\Models as Models;
  * @method Models\CreateAndroidAppResponse CreateAndroidApp(Models\CreateAndroidAppRequest $req) 创建安卓应用
  * @method Models\CreateAndroidAppVersionResponse CreateAndroidAppVersion(Models\CreateAndroidAppVersionRequest $req) 创建安卓应用版本
  * @method Models\CreateAndroidInstanceADBResponse CreateAndroidInstanceADB(Models\CreateAndroidInstanceADBRequest $req) 创建云手机实例 ADB 连接信息，请将返回结果的 PrivateKey 字段保存为 pem 文件，并将 pem 文件权限设置为 600，再参考返回结果的 ConnectCommand 使用 adb 连接实例。
+ * @method Models\CreateAndroidInstanceAcceleratorTokenResponse CreateAndroidInstanceAcceleratorToken(Models\CreateAndroidInstanceAcceleratorTokenRequest $req) 创建安卓实例加速Token
  * @method Models\CreateAndroidInstanceImageResponse CreateAndroidInstanceImage(Models\CreateAndroidInstanceImageRequest $req) 使用指定的安卓实例创建镜像，创建镜像时指定的实例会关机，镜像创建完成后实例会自动开机。当镜像的 AndroidInstanceImageState 为 NORMAL 时，镜像创建完成处于可用状态。
  * @method Models\CreateAndroidInstanceLabelResponse CreateAndroidInstanceLabel(Models\CreateAndroidInstanceLabelRequest $req) 创建安卓实例标签
  * @method Models\CreateAndroidInstanceSSHResponse CreateAndroidInstanceSSH(Models\CreateAndroidInstanceSSHRequest $req) 创建安卓实例 SSH 连接信息，请将返回结果的 PrivateKey 字段保存为 pem 文件，并将 pem 文件权限设置为 600，再参考返回结果的 ConnectCommand 使用 ssh 连接实例。
@@ -63,6 +64,7 @@ use TencentCloud\Gs\V20191118\Models as Models;
  * @method Models\DestroyAndroidInstancesResponse DestroyAndroidInstances(Models\DestroyAndroidInstancesRequest $req) 销毁安卓实例
  * @method Models\DisableAndroidInstancesAppResponse DisableAndroidInstancesApp(Models\DisableAndroidInstancesAppRequest $req) 批量禁用安卓实例应用
  * @method Models\DisconnectAndroidInstanceResponse DisconnectAndroidInstance(Models\DisconnectAndroidInstanceRequest $req) 断开安卓实例
+ * @method Models\DisconnectAndroidInstanceAcceleratorResponse DisconnectAndroidInstanceAccelerator(Models\DisconnectAndroidInstanceAcceleratorRequest $req) 断开安卓实例加速节点
  * @method Models\DistributeAndroidInstanceImageToHostsResponse DistributeAndroidInstanceImageToHosts(Models\DistributeAndroidInstanceImageToHostsRequest $req) 分发安卓实例镜像至宿主机
  * @method Models\DistributeFileToAndroidInstancesResponse DistributeFileToAndroidInstances(Models\DistributeFileToAndroidInstancesRequest $req) 将一个文件批量分发到多个实例，一次接口调用触发一次文件分发，一次文件分发只会从公网下载一次，然后文件会走内网分发到实例列表中的实例。
  * @method Models\DistributePhotoToAndroidInstancesResponse DistributePhotoToAndroidInstances(Models\DistributePhotoToAndroidInstancesRequest $req) 将一张照片批量分发到多个实例的相册中，一次接口调用触发一次照片分发，一次照片分发只会从公网下载一次，然后照片会走内网分发到实例列表中的实例。

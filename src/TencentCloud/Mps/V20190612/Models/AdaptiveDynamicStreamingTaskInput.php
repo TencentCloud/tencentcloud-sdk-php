@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefinition(integer $Definition) 设置转自适应码流模板 ID。
  * @method array getWatermarkSet() 获取水印列表，支持多张图片或文字水印，最大可支持 10 张。
  * @method void setWatermarkSet(array $WatermarkSet) 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
+ * @method BlindWatermarkInput getBlindWatermark() 获取数字水印参数	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBlindWatermark(BlindWatermarkInput $BlindWatermark) 设置数字水印参数	
+注意：此字段可能返回 null，表示取不到有效值。
  * @method TaskOutputStorage getOutputStorage() 获取转自适应码流后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置转自适应码流后文件的目标存储，不填则继承上层的 OutputStorage 值。
@@ -84,6 +88,12 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
      * @var array 水印列表，支持多张图片或文字水印，最大可支持 10 张。
      */
     public $WatermarkSet;
+
+    /**
+     * @var BlindWatermarkInput 数字水印参数	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BlindWatermark;
 
     /**
      * @var TaskOutputStorage 转自适应码流后文件的目标存储，不填则继承上层的 OutputStorage 值。
@@ -152,6 +162,8 @@ PureAudio：纯音频类型
     /**
      * @param integer $Definition 转自适应码流模板 ID。
      * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+     * @param BlindWatermarkInput $BlindWatermark 数字水印参数	
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskOutputStorage $OutputStorage 转自适应码流后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OutputObjectPath 转自适应码流后，manifest 文件的输出路径，可以为相对路径或者绝对路径。
@@ -201,6 +213,11 @@ PureAudio：纯音频类型
                 $obj->deserialize($value);
                 array_push($this->WatermarkSet, $obj);
             }
+        }
+
+        if (array_key_exists("BlindWatermark",$param) and $param["BlindWatermark"] !== null) {
+            $this->BlindWatermark = new BlindWatermarkInput();
+            $this->BlindWatermark->deserialize($param["BlindWatermark"]);
         }
 
         if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {

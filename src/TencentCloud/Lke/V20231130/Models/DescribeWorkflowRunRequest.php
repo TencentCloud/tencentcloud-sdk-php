@@ -24,6 +24,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppBizId(string $AppBizId) 设置应用ID
  * @method string getWorkflowRunId() 获取工作流运行实例ID
  * @method void setWorkflowRunId(string $WorkflowRunId) 设置工作流运行实例ID
+ * @method string getSubWorkflowNodePath() 获取指定的子工作流对应的NodePath。
+格式：`[<node_id>[<index>].]*<node_id>[<index>]`
+- 此路径用于定位一个具体的工作流实例（Workflow Run），可以是主工作流实例或某个子工作流节点产生的子实例。
+- 路径由点号（.）分隔的节点标识符组成，每个节点标识符格式为 `节点ID[实例索引]`。
+- **节点ID (node_id)**：子工作流所属的节点的ID。
+- **实例索引 (index)**：“实例索引” 在工作流节点的时候为空，循环、批处理节点非空，从1开始。
+示例：
+- "" 或 不设置 -> 查询主工作流实例 (父工作流)
+- "node_id_a" -> 查询由主工作流中工作流节点`node_id_a`对应的子工作流实例
+- "node_id_a.node_id_b[1]" -> 查询工作流节点`node_id_a`对应的子工作流的循环节点node_id_b的第1轮循环的子工作流运行状态
+ * @method void setSubWorkflowNodePath(string $SubWorkflowNodePath) 设置指定的子工作流对应的NodePath。
+格式：`[<node_id>[<index>].]*<node_id>[<index>]`
+- 此路径用于定位一个具体的工作流实例（Workflow Run），可以是主工作流实例或某个子工作流节点产生的子实例。
+- 路径由点号（.）分隔的节点标识符组成，每个节点标识符格式为 `节点ID[实例索引]`。
+- **节点ID (node_id)**：子工作流所属的节点的ID。
+- **实例索引 (index)**：“实例索引” 在工作流节点的时候为空，循环、批处理节点非空，从1开始。
+示例：
+- "" 或 不设置 -> 查询主工作流实例 (父工作流)
+- "node_id_a" -> 查询由主工作流中工作流节点`node_id_a`对应的子工作流实例
+- "node_id_a.node_id_b[1]" -> 查询工作流节点`node_id_a`对应的子工作流的循环节点node_id_b的第1轮循环的子工作流运行状态
+ * @method boolean getIncludeWorkflowGraph() 获取是否需要返回工作流的流程图配置
+ * @method void setIncludeWorkflowGraph(boolean $IncludeWorkflowGraph) 设置是否需要返回工作流的流程图配置
  */
 class DescribeWorkflowRunRequest extends AbstractModel
 {
@@ -38,8 +60,38 @@ class DescribeWorkflowRunRequest extends AbstractModel
     public $WorkflowRunId;
 
     /**
+     * @var string 指定的子工作流对应的NodePath。
+格式：`[<node_id>[<index>].]*<node_id>[<index>]`
+- 此路径用于定位一个具体的工作流实例（Workflow Run），可以是主工作流实例或某个子工作流节点产生的子实例。
+- 路径由点号（.）分隔的节点标识符组成，每个节点标识符格式为 `节点ID[实例索引]`。
+- **节点ID (node_id)**：子工作流所属的节点的ID。
+- **实例索引 (index)**：“实例索引” 在工作流节点的时候为空，循环、批处理节点非空，从1开始。
+示例：
+- "" 或 不设置 -> 查询主工作流实例 (父工作流)
+- "node_id_a" -> 查询由主工作流中工作流节点`node_id_a`对应的子工作流实例
+- "node_id_a.node_id_b[1]" -> 查询工作流节点`node_id_a`对应的子工作流的循环节点node_id_b的第1轮循环的子工作流运行状态
+     */
+    public $SubWorkflowNodePath;
+
+    /**
+     * @var boolean 是否需要返回工作流的流程图配置
+     */
+    public $IncludeWorkflowGraph;
+
+    /**
      * @param string $AppBizId 应用ID
      * @param string $WorkflowRunId 工作流运行实例ID
+     * @param string $SubWorkflowNodePath 指定的子工作流对应的NodePath。
+格式：`[<node_id>[<index>].]*<node_id>[<index>]`
+- 此路径用于定位一个具体的工作流实例（Workflow Run），可以是主工作流实例或某个子工作流节点产生的子实例。
+- 路径由点号（.）分隔的节点标识符组成，每个节点标识符格式为 `节点ID[实例索引]`。
+- **节点ID (node_id)**：子工作流所属的节点的ID。
+- **实例索引 (index)**：“实例索引” 在工作流节点的时候为空，循环、批处理节点非空，从1开始。
+示例：
+- "" 或 不设置 -> 查询主工作流实例 (父工作流)
+- "node_id_a" -> 查询由主工作流中工作流节点`node_id_a`对应的子工作流实例
+- "node_id_a.node_id_b[1]" -> 查询工作流节点`node_id_a`对应的子工作流的循环节点node_id_b的第1轮循环的子工作流运行状态
+     * @param boolean $IncludeWorkflowGraph 是否需要返回工作流的流程图配置
      */
     function __construct()
     {
@@ -60,6 +112,14 @@ class DescribeWorkflowRunRequest extends AbstractModel
 
         if (array_key_exists("WorkflowRunId",$param) and $param["WorkflowRunId"] !== null) {
             $this->WorkflowRunId = $param["WorkflowRunId"];
+        }
+
+        if (array_key_exists("SubWorkflowNodePath",$param) and $param["SubWorkflowNodePath"] !== null) {
+            $this->SubWorkflowNodePath = $param["SubWorkflowNodePath"];
+        }
+
+        if (array_key_exists("IncludeWorkflowGraph",$param) and $param["IncludeWorkflowGraph"] !== null) {
+            $this->IncludeWorkflowGraph = $param["IncludeWorkflowGraph"];
         }
     }
 }

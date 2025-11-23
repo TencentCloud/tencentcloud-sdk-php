@@ -166,7 +166,10 @@ use TencentCloud\Ess\V20201111\Models as Models;
  * @method Models\CreateContractComparisonTaskResponse CreateContractComparisonTask(Models\CreateContractComparisonTaskRequest $req) 此接口（CreateContractComparisonTask）用于创建合同对比任务。
 适用场景：对比两份合同中字段（如：金额、日期、甲方名称等）的内容差异。
  * @method Models\CreateContractDiffTaskWebUrlResponse CreateContractDiffTaskWebUrl(Models\CreateContractDiffTaskWebUrlRequest $req) 接口（CreateContractDiffTaskWebUrl）用于创建合同对比的可嵌入web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
-注：本接口生成的web页面暂不支持<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreateWebThemeConfig" target="_blank">设置本企业嵌入式页面主题配置</a>
+注：
+
+1. 对比仅支持pdf、word格式，限制大小为60M以下
+2. 本接口生成的web页面暂不支持<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreateWebThemeConfig" target="_blank">设置本企业嵌入式页面主题配置</a>
 
 未跳过上传确认的嵌入页面长相如下：
 ![image](https://qcloudimg.tencent-cloud.cn/raw/32f3526ad7152757202a7e4e760356db.jpg)

@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 <br>取值：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。
  * @method void setStatus(string $Status) 设置该字段用于返回所查询内容的任务状态。
 <br>取值：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。
- * @method string getType() 获取该字段用于返回调用视频审核接口时输入的视频审核类型，取值为：**VIDEO**（点播视频）和**LIVE_VIDEO**（直播视频），默认值为VIDEO。
- * @method void setType(string $Type) 设置该字段用于返回调用视频审核接口时输入的视频审核类型，取值为：**VIDEO**（点播视频）和**LIVE_VIDEO**（直播视频），默认值为VIDEO。
+ * @method string getType() 获取该字段用于返回调用视频审核接口时输入的视频审核类型，取值为：**VIDEO**（点播视频）、**LIVE_VIDEO**（直播视频）和**VIDEO_AIGC**（AI生成检测），默认值为VIDEO。
+ * @method void setType(string $Type) 设置该字段用于返回调用视频审核接口时输入的视频审核类型，取值为：**VIDEO**（点播视频）、**LIVE_VIDEO**（直播视频）和**VIDEO_AIGC**（AI生成检测），默认值为VIDEO。
  * @method string getSuggestion() 获取该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
  * @method void setSuggestion(string $Suggestion) 设置该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
  * @method array getLabels() 获取该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
@@ -110,7 +110,7 @@ class DescribeTaskDetailResponse extends AbstractModel
     public $Status;
 
     /**
-     * @var string 该字段用于返回调用视频审核接口时输入的视频审核类型，取值为：**VIDEO**（点播视频）和**LIVE_VIDEO**（直播视频），默认值为VIDEO。
+     * @var string 该字段用于返回调用视频审核接口时输入的视频审核类型，取值为：**VIDEO**（点播视频）、**LIVE_VIDEO**（直播视频）和**VIDEO_AIGC**（AI生成检测），默认值为VIDEO。
      */
     public $Type;
 
@@ -208,7 +208,7 @@ class DescribeTaskDetailResponse extends AbstractModel
      * @param string $Name 该字段用于返回调用视频审核接口时传入的TaskInput参数中的任务名称，方便任务的识别与管理。
      * @param string $Status 该字段用于返回所查询内容的任务状态。
 <br>取值：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。
-     * @param string $Type 该字段用于返回调用视频审核接口时输入的视频审核类型，取值为：**VIDEO**（点播视频）和**LIVE_VIDEO**（直播视频），默认值为VIDEO。
+     * @param string $Type 该字段用于返回调用视频审核接口时输入的视频审核类型，取值为：**VIDEO**（点播视频）、**LIVE_VIDEO**（直播视频）和**VIDEO_AIGC**（AI生成检测），默认值为VIDEO。
      * @param string $Suggestion 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
      * @param array $Labels 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
      * @param MediaInfo $MediaInfo 该字段用于返回输入媒体文件的详细信息，包括编解码格式、分片时长等信息。详细内容敬请参考MediaInfo数据结构的描述。

@@ -29,7 +29,9 @@ use TencentCloud\Privatedns\V20201028\Models as Models;
  * @method Models\CreateInboundEndpointResponse CreateInboundEndpoint(Models\CreateInboundEndpointRequest $req) 删除入站终端节点
  * @method Models\CreatePrivateDNSAccountResponse CreatePrivateDNSAccount(Models\CreatePrivateDNSAccountRequest $req) 跨账号关联VPC时，可通过该API接口添加关联账号
  * @method Models\CreatePrivateZoneResponse CreatePrivateZone(Models\CreatePrivateZoneRequest $req) 创建私有域
+ * @method Models\CreatePrivateZoneListResponse CreatePrivateZoneList(Models\CreatePrivateZoneListRequest $req) 批量创建私有域
  * @method Models\CreatePrivateZoneRecordResponse CreatePrivateZoneRecord(Models\CreatePrivateZoneRecordRequest $req) 添加私有域解析记录
+ * @method Models\CreatePrivateZoneRecordListResponse CreatePrivateZoneRecordList(Models\CreatePrivateZoneRecordListRequest $req) 批量添加私有域解析记录
  * @method Models\DeleteEndPointResponse DeleteEndPoint(Models\DeleteEndPointRequest $req) 删除终端节点
  * @method Models\DeleteForwardRuleResponse DeleteForwardRule(Models\DeleteForwardRuleRequest $req) 删除转发规则并停止转发
  * @method Models\DeleteInboundEndpointResponse DeleteInboundEndpoint(Models\DeleteInboundEndpointRequest $req) 删除入站终端节点
@@ -37,8 +39,10 @@ use TencentCloud\Privatedns\V20201028\Models as Models;
  * @method Models\DeletePrivateZoneResponse DeletePrivateZone(Models\DeletePrivateZoneRequest $req) 删除私有域并停止解析
  * @method Models\DeletePrivateZoneRecordResponse DeletePrivateZoneRecord(Models\DeletePrivateZoneRecordRequest $req) 删除私有域解析记录
  * @method Models\DeleteSpecifyPrivateZoneVpcResponse DeleteSpecifyPrivateZoneVpc(Models\DeleteSpecifyPrivateZoneVpcRequest $req) 删除与私有域关联的VPC
- * @method Models\DescribeAccountVpcListResponse DescribeAccountVpcList(Models\DescribeAccountVpcListRequest $req) 获取私有域解析账号的VPC列表
+ * @method Models\DescribeAccountVpcListResponse DescribeAccountVpcList(Models\DescribeAccountVpcListRequest $req) 获取关联账号的VPC列表
  * @method Models\DescribeAuditLogResponse DescribeAuditLog(Models\DescribeAuditLogRequest $req) 获取操作日志列表
+ * @method Models\DescribeCreateRecordListResultResponse DescribeCreateRecordListResult(Models\DescribeCreateRecordListResultRequest $req) 查询批量添加私有域解析记录结果
+ * @method Models\DescribeCreateZoneListResultResponse DescribeCreateZoneListResult(Models\DescribeCreateZoneListResultRequest $req) 查询批量添加私有域结果
  * @method Models\DescribeDashboardResponse DescribeDashboard(Models\DescribeDashboardRequest $req) 获取私有域解析概览
  * @method Models\DescribeExtendEndpointListResponse DescribeExtendEndpointList(Models\DescribeExtendEndpointListRequest $req) 获取终端节点列表
  * @method Models\DescribeForwardRuleListResponse DescribeForwardRuleList(Models\DescribeForwardRuleListRequest $req) 查询转发规则列表

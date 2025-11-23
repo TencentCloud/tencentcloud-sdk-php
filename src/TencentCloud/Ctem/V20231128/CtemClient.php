@@ -23,9 +23,32 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Ctem\V20231128\Models as Models;
 
 /**
+ * @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) 添加APP资产
+ * @method Models\CreateAssetResponse CreateAsset(Models\CreateAssetRequest $req) 添加主机资产
  * @method Models\CreateCustomerResponse CreateCustomer(Models\CreateCustomerRequest $req) 创建企业
- * @method Models\CreateEnterpriseResponse CreateEnterprise(Models\CreateEnterpriseRequest $req) 添加企业架构数据
+ * @method Models\CreateDomainResponse CreateDomain(Models\CreateDomainRequest $req) 添加主域名数据
+ * @method Models\CreateEnterpriseResponse CreateEnterprise(Models\CreateEnterpriseRequest $req) 添加企业架构资产
+ * @method Models\CreateHttpResponse CreateHttp(Models\CreateHttpRequest $req) 添加网站资产
  * @method Models\CreateJobRecordResponse CreateJobRecord(Models\CreateJobRecordRequest $req) 启动测绘
+ * @method Models\CreateManageResponse CreateManage(Models\CreateManageRequest $req) 添加后台数据
+ * @method Models\CreatePortResponse CreatePort(Models\CreatePortRequest $req) 添加端口服务资产
+ * @method Models\CreateSeedsResponse CreateSeeds(Models\CreateSeedsRequest $req) 创建种子
+ * @method Models\CreateSubDomainResponse CreateSubDomain(Models\CreateSubDomainRequest $req) 添加子域名数据
+ * @method Models\CreateSuspiciousAssetResponse CreateSuspiciousAsset(Models\CreateSuspiciousAssetRequest $req) 添加影子资产
+ * @method Models\CreateWechatAppletResponse CreateWechatApplet(Models\CreateWechatAppletRequest $req) 添加微信小程序资产
+ * @method Models\CreateWechatOfficialAccountResponse CreateWechatOfficialAccount(Models\CreateWechatOfficialAccountRequest $req) 添加微信公众号资产
+ * @method Models\DeleteAppsResponse DeleteApps(Models\DeleteAppsRequest $req) 删除APP数据
+ * @method Models\DeleteAssetsResponse DeleteAssets(Models\DeleteAssetsRequest $req) 删除主机资产数据
+ * @method Models\DeleteDomainsResponse DeleteDomains(Models\DeleteDomainsRequest $req) 删除主域名数据
+ * @method Models\DeleteEnterprisesResponse DeleteEnterprises(Models\DeleteEnterprisesRequest $req) 删除企业架构数据
+ * @method Models\DeleteHttpsResponse DeleteHttps(Models\DeleteHttpsRequest $req) 删除网站资产数据
+ * @method Models\DeleteManagesResponse DeleteManages(Models\DeleteManagesRequest $req) 删除后台数据
+ * @method Models\DeletePortsResponse DeletePorts(Models\DeletePortsRequest $req) 删除端口数据
+ * @method Models\DeleteSeedsResponse DeleteSeeds(Models\DeleteSeedsRequest $req) 删除种子
+ * @method Models\DeleteSubDomainsResponse DeleteSubDomains(Models\DeleteSubDomainsRequest $req) 删除子域名数据
+ * @method Models\DeleteSuspiciousAssetsResponse DeleteSuspiciousAssets(Models\DeleteSuspiciousAssetsRequest $req) 删除影子资产数据
+ * @method Models\DeleteWechatAppletsResponse DeleteWechatApplets(Models\DeleteWechatAppletsRequest $req) 删除微信小程序数据
+ * @method Models\DeleteWechatOfficialAccountsResponse DeleteWechatOfficialAccounts(Models\DeleteWechatOfficialAccountsRequest $req) 删除微信公众号数据
  * @method Models\DescribeApiSecsResponse DescribeApiSecs(Models\DescribeApiSecsRequest $req) 查看API安全数据
  * @method Models\DescribeAppsResponse DescribeApps(Models\DescribeAppsRequest $req) 查看移动端资产
  * @method Models\DescribeAssetsResponse DescribeAssets(Models\DescribeAssetsRequest $req) 查看主机资产
@@ -48,6 +71,7 @@ use TencentCloud\Ctem\V20231128\Models as Models;
  * @method Models\DescribeManagesResponse DescribeManages(Models\DescribeManagesRequest $req) 查看后台管理数据
  * @method Models\DescribeNetDisksResponse DescribeNetDisks(Models\DescribeNetDisksRequest $req) 查看网盘泄露数据
  * @method Models\DescribePortsResponse DescribePorts(Models\DescribePortsRequest $req) 查看端口数据
+ * @method Models\DescribeSeedsResponse DescribeSeeds(Models\DescribeSeedsRequest $req) 查看种子列表
  * @method Models\DescribeSensitiveInfosResponse DescribeSensitiveInfos(Models\DescribeSensitiveInfosRequest $req) 查看敏感信息泄露数据
  * @method Models\DescribeSubDomainsResponse DescribeSubDomains(Models\DescribeSubDomainsRequest $req) 查看子域名数据
  * @method Models\DescribeSuspiciousAssetsResponse DescribeSuspiciousAssets(Models\DescribeSuspiciousAssetsRequest $req) 查看影子资产
@@ -55,8 +79,10 @@ use TencentCloud\Ctem\V20231128\Models as Models;
  * @method Models\DescribeWeakPasswordsResponse DescribeWeakPasswords(Models\DescribeWeakPasswordsRequest $req) 查看弱口令数据
  * @method Models\DescribeWechatAppletsResponse DescribeWechatApplets(Models\DescribeWechatAppletsRequest $req) 查看微信小程序
  * @method Models\DescribeWechatOfficialAccountsResponse DescribeWechatOfficialAccounts(Models\DescribeWechatOfficialAccountsRequest $req) 查看公众号数据
+ * @method Models\IgnoreDataResponse IgnoreData(Models\IgnoreDataRequest $req) 忽略数据
  * @method Models\ModifyCustomerResponse ModifyCustomer(Models\ModifyCustomerRequest $req) 编辑企业
  * @method Models\ModifyLabelResponse ModifyLabel(Models\ModifyLabelRequest $req) 修改标签
+ * @method Models\ModifySeedStatusResponse ModifySeedStatus(Models\ModifySeedStatusRequest $req) 修改种子状态
  * @method Models\StopJobRecordResponse StopJobRecord(Models\StopJobRecordRequest $req) 停止扫描
  */
 

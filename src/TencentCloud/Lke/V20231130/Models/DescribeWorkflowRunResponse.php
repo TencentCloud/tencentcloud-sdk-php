@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkflowRun(WorkflowRunDetail $WorkflowRun) 设置工作流的详情
  * @method array getNodeRuns() 获取节点列表
  * @method void setNodeRuns(array $NodeRuns) 设置节点列表
+ * @method string getSubWorkflowNodePath() 获取子工作流对应的NodePath
+ * @method void setSubWorkflowNodePath(string $SubWorkflowNodePath) 设置子工作流对应的NodePath
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class DescribeWorkflowRunResponse extends AbstractModel
     public $NodeRuns;
 
     /**
+     * @var string 子工作流对应的NodePath
+     */
+    public $SubWorkflowNodePath;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class DescribeWorkflowRunResponse extends AbstractModel
     /**
      * @param WorkflowRunDetail $WorkflowRun 工作流的详情
      * @param array $NodeRuns 节点列表
+     * @param string $SubWorkflowNodePath 子工作流对应的NodePath
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -74,6 +82,10 @@ class DescribeWorkflowRunResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->NodeRuns, $obj);
             }
+        }
+
+        if (array_key_exists("SubWorkflowNodePath",$param) and $param["SubWorkflowNodePath"] !== null) {
+            $this->SubWorkflowNodePath = $param["SubWorkflowNodePath"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

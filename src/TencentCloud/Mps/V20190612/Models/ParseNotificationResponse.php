@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBatchTaskEvent(BatchSubTaskResult $BatchTaskEvent) 设置批量处理任务信息，仅当 EventType 为 BatchTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ExtractBlindWatermarkTask getExtractBlindWatermarkTask() 获取数字水印提取任务信息，仅当 EventType 为 ExtractBlindWatermark，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExtractBlindWatermarkTask(ExtractBlindWatermarkTask $ExtractBlindWatermarkTask) 设置数字水印提取任务信息，仅当 EventType 为 ExtractBlindWatermark，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -119,6 +123,12 @@ class ParseNotificationResponse extends AbstractModel
     public $BatchTaskEvent;
 
     /**
+     * @var ExtractBlindWatermarkTask 数字水印提取任务信息，仅当 EventType 为 ExtractBlindWatermark，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExtractBlindWatermarkTask;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -142,6 +152,8 @@ class ParseNotificationResponse extends AbstractModel
 
      * @param string $Sign 事件通知安全签名 Sign = MD5（Timestamp + NotifyKey）。说明：媒体处理把Timestamp 和 TaskNotifyConfig 里面的NotifyKey 进行字符串拼接后通过 MD5 计算得出 Sign 值，并将其放在通知消息里，您的后台服务器在收到通知消息后可以根据同样的算法确认 Sign 是否正确，进而确认消息是否确实来自媒体处理后台。
      * @param BatchSubTaskResult $BatchTaskEvent 批量处理任务信息，仅当 EventType 为 BatchTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtractBlindWatermarkTask $ExtractBlindWatermarkTask 数字水印提取任务信息，仅当 EventType 为 ExtractBlindWatermark，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -196,6 +208,11 @@ class ParseNotificationResponse extends AbstractModel
         if (array_key_exists("BatchTaskEvent",$param) and $param["BatchTaskEvent"] !== null) {
             $this->BatchTaskEvent = new BatchSubTaskResult();
             $this->BatchTaskEvent->deserialize($param["BatchTaskEvent"]);
+        }
+
+        if (array_key_exists("ExtractBlindWatermarkTask",$param) and $param["ExtractBlindWatermarkTask"] !== null) {
+            $this->ExtractBlindWatermarkTask = new ExtractBlindWatermarkTask();
+            $this->ExtractBlindWatermarkTask->deserialize($param["ExtractBlindWatermarkTask"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -44,6 +44,14 @@ use TencentCloud\Common\AbstractModel;
 非首次开启实例名称序号：若不指定该参数，沿用历史序号。
 下调初始序号可能会造成伸缩组内实例名称序号重复。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIndexLength() 获取实例名称递增序号位数，默认为0，表示不指定序号位数。不指定序号时，采用默认值0。 取值范围：0-8，最大为整数8。 采用取值1-8时，会检查序号是否超过此序号位数的最大数字。
+
+假设设置为3，那么序号形如：000、001、002 ... 010、011 ... 100 ... 999，序号上限为999; 
+假设设置为0，对应的序号为0、1、2 ... 10、11 ... 100 ... 1000 ...10000 ... 99999999，序号上限为99999999。
+ * @method void setIndexLength(integer $IndexLength) 设置实例名称递增序号位数，默认为0，表示不指定序号位数。不指定序号时，采用默认值0。 取值范围：0-8，最大为整数8。 采用取值1-8时，会检查序号是否超过此序号位数的最大数字。
+
+假设设置为3，那么序号形如：000、001、002 ... 010、011 ... 100 ... 999，序号上限为999; 
+假设设置为0，对应的序号为0、1、2 ... 10、11 ... 100 ... 1000 ...10000 ... 99999999，序号上限为99999999。
  */
 class InstanceNameIndexSettings extends AbstractModel
 {
@@ -68,6 +76,14 @@ class InstanceNameIndexSettings extends AbstractModel
     public $BeginIndex;
 
     /**
+     * @var integer 实例名称递增序号位数，默认为0，表示不指定序号位数。不指定序号时，采用默认值0。 取值范围：0-8，最大为整数8。 采用取值1-8时，会检查序号是否超过此序号位数的最大数字。
+
+假设设置为3，那么序号形如：000、001、002 ... 010、011 ... 100 ... 999，序号上限为999; 
+假设设置为0，对应的序号为0、1、2 ... 10、11 ... 100 ... 1000 ...10000 ... 99999999，序号上限为99999999。
+     */
+    public $IndexLength;
+
+    /**
      * @param boolean $Enabled 是否开启实例创建序号，默认不开启。取值范围：
 
 **TRUE**：表示开启实例创建序号; **FALSE**：表示不开启实例创建序号
@@ -80,6 +96,10 @@ class InstanceNameIndexSettings extends AbstractModel
 非首次开启实例名称序号：若不指定该参数，沿用历史序号。
 下调初始序号可能会造成伸缩组内实例名称序号重复。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IndexLength 实例名称递增序号位数，默认为0，表示不指定序号位数。不指定序号时，采用默认值0。 取值范围：0-8，最大为整数8。 采用取值1-8时，会检查序号是否超过此序号位数的最大数字。
+
+假设设置为3，那么序号形如：000、001、002 ... 010、011 ... 100 ... 999，序号上限为999; 
+假设设置为0，对应的序号为0、1、2 ... 10、11 ... 100 ... 1000 ...10000 ... 99999999，序号上限为99999999。
      */
     function __construct()
     {
@@ -100,6 +120,10 @@ class InstanceNameIndexSettings extends AbstractModel
 
         if (array_key_exists("BeginIndex",$param) and $param["BeginIndex"] !== null) {
             $this->BeginIndex = $param["BeginIndex"];
+        }
+
+        if (array_key_exists("IndexLength",$param) and $param["IndexLength"] !== null) {
+            $this->IndexLength = $param["IndexLength"];
         }
     }
 }

@@ -64,6 +64,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserData(string $UserData) 设置调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 1024长度。
 
 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
+ * @method integer getEnableGeneralChecklist() 获取启用附加通用风险审查清单。默认为启用状态
+可选值如下：
+
+- 1: 启用系统提供的附加通用风险审查清单
+- 2:不启用系统提供的附加通用风险审查清单
+ * @method void setEnableGeneralChecklist(integer $EnableGeneralChecklist) 设置启用附加通用风险审查清单。默认为启用状态
+可选值如下：
+
+- 1: 启用系统提供的附加通用风险审查清单
+- 2:不启用系统提供的附加通用风险审查清单
  */
 class CreateBatchContractReviewTaskRequest extends AbstractModel
 {
@@ -122,6 +132,15 @@ class CreateBatchContractReviewTaskRequest extends AbstractModel
     public $UserData;
 
     /**
+     * @var integer 启用附加通用风险审查清单。默认为启用状态
+可选值如下：
+
+- 1: 启用系统提供的附加通用风险审查清单
+- 2:不启用系统提供的附加通用风险审查清单
+     */
+    public $EnableGeneralChecklist;
+
+    /**
      * @param UserInfo $Operator 执行合同审查任务的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param array $ResourceIds 合同审查的PDF文件资源编号列表，通过[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获取PDF文件资源编号。 
@@ -144,6 +163,11 @@ class CreateBatchContractReviewTaskRequest extends AbstractModel
      * @param string $UserData 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 1024长度。
 
 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
+     * @param integer $EnableGeneralChecklist 启用附加通用风险审查清单。默认为启用状态
+可选值如下：
+
+- 1: 启用系统提供的附加通用风险审查清单
+- 2:不启用系统提供的附加通用风险审查清单
      */
     function __construct()
     {
@@ -191,6 +215,10 @@ class CreateBatchContractReviewTaskRequest extends AbstractModel
 
         if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
             $this->UserData = $param["UserData"];
+        }
+
+        if (array_key_exists("EnableGeneralChecklist",$param) and $param["EnableGeneralChecklist"] !== null) {
+            $this->EnableGeneralChecklist = $param["EnableGeneralChecklist"];
         }
     }
 }

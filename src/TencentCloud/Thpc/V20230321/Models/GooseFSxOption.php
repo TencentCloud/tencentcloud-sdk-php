@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMasters(array $Masters) 设置文件系统master的ip和端口列表。
  * @method string getLocalPath() 获取文件系统的本地挂载路径。GooseFSx目前只支持挂载在/goosefsx/{文件系统ID}_proxy/目录下。
  * @method void setLocalPath(string $LocalPath) 设置文件系统的本地挂载路径。GooseFSx目前只支持挂载在/goosefsx/{文件系统ID}_proxy/目录下。
+ * @method string getFileSystemId() 获取GooseFSx文件系统ID 文件系统ID通过调用接口[DescribeFileSystems](https://cloud.tencent.com/document/api/1424/95789)获取。
+ * @method void setFileSystemId(string $FileSystemId) 设置GooseFSx文件系统ID 文件系统ID通过调用接口[DescribeFileSystems](https://cloud.tencent.com/document/api/1424/95789)获取。
  */
 class GooseFSxOption extends AbstractModel
 {
@@ -38,8 +40,14 @@ class GooseFSxOption extends AbstractModel
     public $LocalPath;
 
     /**
+     * @var string GooseFSx文件系统ID 文件系统ID通过调用接口[DescribeFileSystems](https://cloud.tencent.com/document/api/1424/95789)获取。
+     */
+    public $FileSystemId;
+
+    /**
      * @param array $Masters 文件系统master的ip和端口列表。
      * @param string $LocalPath 文件系统的本地挂载路径。GooseFSx目前只支持挂载在/goosefsx/{文件系统ID}_proxy/目录下。
+     * @param string $FileSystemId GooseFSx文件系统ID 文件系统ID通过调用接口[DescribeFileSystems](https://cloud.tencent.com/document/api/1424/95789)获取。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class GooseFSxOption extends AbstractModel
 
         if (array_key_exists("LocalPath",$param) and $param["LocalPath"] !== null) {
             $this->LocalPath = $param["LocalPath"];
+        }
+
+        if (array_key_exists("FileSystemId",$param) and $param["FileSystemId"] !== null) {
+            $this->FileSystemId = $param["FileSystemId"];
         }
     }
 }

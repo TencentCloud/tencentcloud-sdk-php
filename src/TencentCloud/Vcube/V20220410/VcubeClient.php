@@ -32,6 +32,8 @@ use TencentCloud\Vcube\V20220410\Models as Models;
  * @method Models\CreateTrialApplicationAndLicenseResponse CreateTrialApplicationAndLicense(Models\CreateTrialApplicationAndLicenseRequest $req) 创建测试应用并开通测试 license
  * @method Models\CreateTrialLicenseResponse CreateTrialLicense(Models\CreateTrialLicenseRequest $req) 开通测试license
  * @method Models\CreateXMagicResponse CreateXMagic(Models\CreateXMagicRequest $req) x08开通正式版优图美视功能，针对已经有Application的情况
+ * @method Models\DeleteApplicationAndVideoLicenseResponse DeleteApplicationAndVideoLicense(Models\DeleteApplicationAndVideoLicenseRequest $req) 删除视频播放器 License 和相关应用
+ * @method Models\DeleteApplicationAndWebPlayerLicenseResponse DeleteApplicationAndWebPlayerLicense(Models\DeleteApplicationAndWebPlayerLicenseRequest $req) 删除web播放器license和应用
  * @method Models\DescribeFeatureListResponse DescribeFeatureList(Models\DescribeFeatureListRequest $req) 查询功能列表
  * @method Models\DescribeLicenseListResponse DescribeLicenseList(Models\DescribeLicenseListRequest $req) 总览页查询临期License列表，和统计数据
  * @method Models\DescribeNewsResponse DescribeNews(Models\DescribeNewsRequest $req) 查询产品动态

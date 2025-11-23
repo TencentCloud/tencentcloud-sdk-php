@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页偏移量，从0开始
  * @method integer getLimit() 获取分页限制数目， 最大100，默认20
  * @method void setLimit(integer $Limit) 设置分页限制数目， 最大100，默认20
- * @method array getFilters() 获取过滤参数，支持EndPointName，EndpointName，EndpointId
- * @method void setFilters(array $Filters) 设置过滤参数，支持EndPointName，EndpointName，EndpointId
+ * @method array getFilters() 获取过滤参数，支持EndPointName，EndpointName，EndPointId
+ * @method void setFilters(array $Filters) 设置过滤参数，支持EndPointName，EndpointName，EndPointId
  */
 class DescribeInboundEndpointListRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeInboundEndpointListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array 过滤参数，支持EndPointName，EndpointName，EndpointId
+     * @var array 过滤参数，支持EndPointName，EndpointName，EndPointId
      */
     public $Filters;
 
     /**
      * @param integer $Offset 分页偏移量，从0开始
      * @param integer $Limit 分页限制数目， 最大100，默认20
-     * @param array $Filters 过滤参数，支持EndPointName，EndpointName，EndpointId
+     * @param array $Filters 过滤参数，支持EndPointName，EndpointName，EndPointId
      */
     function __construct()
     {

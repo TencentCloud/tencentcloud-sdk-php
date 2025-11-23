@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMainModelName(string $MainModelName) 设置主模型名称
  * @method array getCustomVariables() 获取API参数配置
  * @method void setCustomVariables(array $CustomVariables) 设置API参数配置
+ * @method string getWorkflowGraph() 获取工作流的流程图
+ * @method void setWorkflowGraph(string $WorkflowGraph) 设置工作流的流程图
  */
 class WorkflowRunDetail extends AbstractModel
 {
@@ -117,6 +119,7 @@ class WorkflowRunDetail extends AbstractModel
 
     /**
      * @var string 工作流画布Json
+     * @deprecated
      */
     public $DialogJson;
 
@@ -136,6 +139,11 @@ class WorkflowRunDetail extends AbstractModel
     public $CustomVariables;
 
     /**
+     * @var string 工作流的流程图
+     */
+    public $WorkflowGraph;
+
+    /**
      * @param integer $RunEnv 运行环境。0: 测试环境； 1: 正式环境
      * @param string $AppBizId 应用ID
      * @param string $WorkflowRunId 工作流运行实例的ID
@@ -152,6 +160,7 @@ class WorkflowRunDetail extends AbstractModel
      * @param string $Query 用户的输入
      * @param string $MainModelName 主模型名称
      * @param array $CustomVariables API参数配置
+     * @param string $WorkflowGraph 工作流的流程图
      */
     function __construct()
     {
@@ -233,6 +242,10 @@ class WorkflowRunDetail extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CustomVariables, $obj);
             }
+        }
+
+        if (array_key_exists("WorkflowGraph",$param) and $param["WorkflowGraph"] !== null) {
+            $this->WorkflowGraph = $param["WorkflowGraph"];
         }
     }
 }

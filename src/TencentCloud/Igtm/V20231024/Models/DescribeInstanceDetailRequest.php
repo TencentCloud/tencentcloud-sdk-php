@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceDetail请求参数结构体
  *
-
+ * @method string getInstanceId() 获取实例id
+ * @method void setInstanceId(string $InstanceId) 设置实例id
  */
 class DescribeInstanceDetailRequest extends AbstractModel
 {
-
+    /**
+     * @var string 实例id
+     */
+    public $InstanceId;
 
     /**
-
+     * @param string $InstanceId 实例id
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeInstanceDetailRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
     }
 }

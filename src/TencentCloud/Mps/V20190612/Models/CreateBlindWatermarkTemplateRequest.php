@@ -1,0 +1,89 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Mps\V20190612\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * CreateBlindWatermarkTemplate请求参数结构体
+ *
+ * @method string getType() 获取数字水印类型，可选值：<li>blind-basic：基础版权数字水印；</li><li>blind-nagra：NAGRA水印；</li>
+ * @method void setType(string $Type) 设置数字水印类型，可选值：<li>blind-basic：基础版权数字水印；</li><li>blind-nagra：NAGRA水印；</li>
+ * @method string getTextContent() 获取数字水印文字内容，长度不超过64个字符，NAGRA水印类型的模板创建后不支持修改文字内容。
+ * @method void setTextContent(string $TextContent) 设置数字水印文字内容，长度不超过64个字符，NAGRA水印类型的模板创建后不支持修改文字内容。
+ * @method string getName() 获取数字水印模板名称，支持中文、英文、数字、_、-和. 六种格式，长度限制：64 个字符。
+ * @method void setName(string $Name) 设置数字水印模板名称，支持中文、英文、数字、_、-和. 六种格式，长度限制：64 个字符。
+ * @method string getComment() 获取数字水印模板描述信息，长度限制：256 个字符。
+ * @method void setComment(string $Comment) 设置数字水印模板描述信息，长度限制：256 个字符。
+ */
+class CreateBlindWatermarkTemplateRequest extends AbstractModel
+{
+    /**
+     * @var string 数字水印类型，可选值：<li>blind-basic：基础版权数字水印；</li><li>blind-nagra：NAGRA水印；</li>
+     */
+    public $Type;
+
+    /**
+     * @var string 数字水印文字内容，长度不超过64个字符，NAGRA水印类型的模板创建后不支持修改文字内容。
+     */
+    public $TextContent;
+
+    /**
+     * @var string 数字水印模板名称，支持中文、英文、数字、_、-和. 六种格式，长度限制：64 个字符。
+     */
+    public $Name;
+
+    /**
+     * @var string 数字水印模板描述信息，长度限制：256 个字符。
+     */
+    public $Comment;
+
+    /**
+     * @param string $Type 数字水印类型，可选值：<li>blind-basic：基础版权数字水印；</li><li>blind-nagra：NAGRA水印；</li>
+     * @param string $TextContent 数字水印文字内容，长度不超过64个字符，NAGRA水印类型的模板创建后不支持修改文字内容。
+     * @param string $Name 数字水印模板名称，支持中文、英文、数字、_、-和. 六种格式，长度限制：64 个字符。
+     * @param string $Comment 数字水印模板描述信息，长度限制：256 个字符。
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("TextContent",$param) and $param["TextContent"] !== null) {
+            $this->TextContent = $param["TextContent"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
+            $this->Comment = $param["Comment"];
+        }
+    }
+}

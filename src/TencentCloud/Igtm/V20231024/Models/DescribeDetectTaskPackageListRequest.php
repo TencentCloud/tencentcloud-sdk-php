@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDetectTaskPackageList请求参数结构体
  *
+ * @method integer getOffset() 获取偏移量
+ * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取每页条数
  * @method void setLimit(integer $Limit) 设置每页条数
  * @method array getFilters() 获取探测任务过滤条件：ResourceId 探测任务的资源id，PeriodStart 最小过期时间,PeriodEnd 最大过期时间
@@ -27,6 +29,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeDetectTaskPackageListRequest extends AbstractModel
 {
+    /**
+     * @var integer 偏移量
+     */
+    public $Offset;
+
     /**
      * @var integer 每页条数
      */
@@ -38,6 +45,7 @@ class DescribeDetectTaskPackageListRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @param integer $Offset 偏移量
      * @param integer $Limit 每页条数
      * @param array $Filters 探测任务过滤条件：ResourceId 探测任务的资源id，PeriodStart 最小过期时间,PeriodEnd 最大过期时间
      */
@@ -54,6 +62,10 @@ class DescribeDetectTaskPackageListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
         }

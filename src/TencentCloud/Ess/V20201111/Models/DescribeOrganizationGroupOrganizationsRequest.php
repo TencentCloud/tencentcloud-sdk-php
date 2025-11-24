@@ -73,6 +73,7 @@ class DescribeOrganizationGroupOrganizationsRequest extends AbstractModel
 
     /**
      * @var string 查询成员企业的企业名，模糊匹配
+     * @deprecated
      */
     public $Name;
 

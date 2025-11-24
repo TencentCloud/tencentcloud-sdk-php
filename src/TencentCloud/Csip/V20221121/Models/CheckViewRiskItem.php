@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAssetType(string $AssetType) 设置资产类型
  * @method string getEventType() 获取事件类型
  * @method void setEventType(string $EventType) 设置事件类型
+ * @method string getClassify() 获取处置分类
+ * @method void setClassify(string $Classify) 设置处置分类
  */
 class CheckViewRiskItem extends AbstractModel
 {
@@ -115,6 +117,11 @@ class CheckViewRiskItem extends AbstractModel
     public $EventType;
 
     /**
+     * @var string 处置分类
+     */
+    public $Classify;
+
+    /**
      * @param string $RiskRuleId 检查项规则ID
      * @param string $RiskTitle 风险名称
      * @param string $CheckType 检查类型
@@ -128,6 +135,7 @@ class CheckViewRiskItem extends AbstractModel
      * @param integer $RiskCount 风险数量
      * @param string $AssetType 资产类型
      * @param string $EventType 事件类型
+     * @param string $Classify 处置分类
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class CheckViewRiskItem extends AbstractModel
 
         if (array_key_exists("EventType",$param) and $param["EventType"] !== null) {
             $this->EventType = $param["EventType"];
+        }
+
+        if (array_key_exists("Classify",$param) and $param["Classify"] !== null) {
+            $this->Classify = $param["Classify"];
         }
     }
 }

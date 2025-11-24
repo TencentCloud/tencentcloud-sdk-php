@@ -84,6 +84,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPortDetectCount(integer $PortDetectCount) 设置端口开放数量
  * @method string getPortDetectResult() 获取端口开放结果
  * @method void setPortDetectResult(string $PortDetectResult) 设置端口开放结果
+ * @method string getTag() 获取标签
+ * @method void setTag(string $Tag) 设置标签
+ * @method string getComment() 获取备注
+ * @method void setComment(string $Comment) 设置备注
+ * @method integer getToGovernedRiskCount() 获取待治理风险数量
+ * @method void setToGovernedRiskCount(integer $ToGovernedRiskCount) 设置待治理风险数量
+ * @method string getToGovernedRiskContent() 获取待治理风险内容
+ * @method void setToGovernedRiskContent(string $ToGovernedRiskContent) 设置待治理风险内容
  */
 class ExposesItem extends AbstractModel
 {
@@ -248,6 +256,26 @@ class ExposesItem extends AbstractModel
     public $PortDetectResult;
 
     /**
+     * @var string 标签
+     */
+    public $Tag;
+
+    /**
+     * @var string 备注
+     */
+    public $Comment;
+
+    /**
+     * @var integer 待治理风险数量
+     */
+    public $ToGovernedRiskCount;
+
+    /**
+     * @var string 待治理风险内容
+     */
+    public $ToGovernedRiskContent;
+
+    /**
      * @param string $Provider 云厂商
      * @param string $CloudAccountName 云账号名称
      * @param string $CloudAccountId 云账号
@@ -280,6 +308,10 @@ class ExposesItem extends AbstractModel
      * @param integer $ExposureID 记录ID
      * @param integer $PortDetectCount 端口开放数量
      * @param string $PortDetectResult 端口开放结果
+     * @param string $Tag 标签
+     * @param string $Comment 备注
+     * @param integer $ToGovernedRiskCount 待治理风险数量
+     * @param string $ToGovernedRiskContent 待治理风险内容
      */
     function __construct()
     {
@@ -420,6 +452,22 @@ class ExposesItem extends AbstractModel
 
         if (array_key_exists("PortDetectResult",$param) and $param["PortDetectResult"] !== null) {
             $this->PortDetectResult = $param["PortDetectResult"];
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = $param["Tag"];
+        }
+
+        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
+            $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("ToGovernedRiskCount",$param) and $param["ToGovernedRiskCount"] !== null) {
+            $this->ToGovernedRiskCount = $param["ToGovernedRiskCount"];
+        }
+
+        if (array_key_exists("ToGovernedRiskContent",$param) and $param["ToGovernedRiskContent"] !== null) {
+            $this->ToGovernedRiskContent = $param["ToGovernedRiskContent"];
         }
     }
 }

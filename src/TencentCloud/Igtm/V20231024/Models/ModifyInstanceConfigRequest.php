@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceConfig请求参数结构体
  *
+ * @method string getInstanceId() 获取实例id	
+ * @method void setInstanceId(string $InstanceId) 设置实例id	
  * @method InstanceConfig getInstanceConfig() 获取实例配置详情
  * @method void setInstanceConfig(InstanceConfig $InstanceConfig) 设置实例配置详情
  */
 class ModifyInstanceConfigRequest extends AbstractModel
 {
     /**
+     * @var string 实例id	
+     */
+    public $InstanceId;
+
+    /**
      * @var InstanceConfig 实例配置详情
      */
     public $InstanceConfig;
 
     /**
+     * @param string $InstanceId 实例id	
      * @param InstanceConfig $InstanceConfig 实例配置详情
      */
     function __construct()
@@ -46,6 +54,10 @@ class ModifyInstanceConfigRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
         if (array_key_exists("InstanceConfig",$param) and $param["InstanceConfig"] !== null) {
             $this->InstanceConfig = new InstanceConfig();
             $this->InstanceConfig->deserialize($param["InstanceConfig"]);

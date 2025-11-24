@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 意愿核身（点头确认模式）配置
  *
- * @method string getText() 获取点头确认模式下，系统语音播报使用的问题文本，问题最大长度为150个字符。
- * @method void setText(string $Text) 设置点头确认模式下，系统语音播报使用的问题文本，问题最大长度为150个字符。
+ * @method string getText() 获取点头确认模式下，系统语音播报使用的问题文本，问题最大长度为250个字符。
+ * @method void setText(string $Text) 设置点头确认模式下，系统语音播报使用的问题文本，问题最大长度为250个字符。
  */
 class IntentionActionConfig extends AbstractModel
 {
     /**
-     * @var string 点头确认模式下，系统语音播报使用的问题文本，问题最大长度为150个字符。
+     * @var string 点头确认模式下，系统语音播报使用的问题文本，问题最大长度为250个字符。
      */
     public $Text;
 
     /**
-     * @param string $Text 点头确认模式下，系统语音播报使用的问题文本，问题最大长度为150个字符。
+     * @param string $Text 点头确认模式下，系统语音播报使用的问题文本，问题最大长度为250个字符。
      */
     function __construct()
     {

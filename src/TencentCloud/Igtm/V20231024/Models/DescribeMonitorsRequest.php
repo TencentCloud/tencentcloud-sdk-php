@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页，偏移值
  * @method integer getLimit() 获取分页，当前分页记录数
  * @method void setLimit(integer $Limit) 设置分页，当前分页记录数
+ * @method array getFilters() 获取查询过滤条件：MonitorName：监控器名称；MonitorId：监控器id
+ * @method void setFilters(array $Filters) 设置查询过滤条件：MonitorName：监控器名称；MonitorId：监控器id
  * @method integer getIsDetectNum() 获取是否查探测次数0否1是
  * @method void setIsDetectNum(integer $IsDetectNum) 设置是否查探测次数0否1是
  */
@@ -40,6 +42,11 @@ class DescribeMonitorsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array 查询过滤条件：MonitorName：监控器名称；MonitorId：监控器id
+     */
+    public $Filters;
+
+    /**
      * @var integer 是否查探测次数0否1是
      */
     public $IsDetectNum;
@@ -47,6 +54,7 @@ class DescribeMonitorsRequest extends AbstractModel
     /**
      * @param integer $Offset 分页，偏移值
      * @param integer $Limit 分页，当前分页记录数
+     * @param array $Filters 查询过滤条件：MonitorName：监控器名称；MonitorId：监控器id
      * @param integer $IsDetectNum 是否查探测次数0否1是
      */
     function __construct()
@@ -68,6 +76,15 @@ class DescribeMonitorsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new ResourceFilter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
 
         if (array_key_exists("IsDetectNum",$param) and $param["IsDetectNum"] !== null) {

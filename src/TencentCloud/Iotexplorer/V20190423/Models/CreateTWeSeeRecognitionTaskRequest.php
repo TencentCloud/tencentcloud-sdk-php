@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceName(string $DeviceName) 设置设备名称
  * @method string getInputURL() 获取输入视频 / 图片的 URL
  * @method void setInputURL(string $InputURL) 设置输入视频 / 图片的 URL
+ * @method integer getChannelId() 获取通道 ID
+ * @method void setChannelId(integer $ChannelId) 设置通道 ID
  * @method string getCustomId() 获取自定义事件 ID
  * @method void setCustomId(string $CustomId) 设置自定义事件 ID
  * @method boolean getEnableSearch() 获取是否保存该事件使其可被搜索
@@ -81,6 +83,11 @@ class CreateTWeSeeRecognitionTaskRequest extends AbstractModel
      * @var string 输入视频 / 图片的 URL
      */
     public $InputURL;
+
+    /**
+     * @var integer 通道 ID
+     */
+    public $ChannelId;
 
     /**
      * @var string 自定义事件 ID
@@ -149,6 +156,7 @@ class CreateTWeSeeRecognitionTaskRequest extends AbstractModel
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
      * @param string $InputURL 输入视频 / 图片的 URL
+     * @param integer $ChannelId 通道 ID
      * @param string $CustomId 自定义事件 ID
      * @param boolean $EnableSearch 是否保存该事件使其可被搜索
      * @param integer $StartTimeMs 事件起始时间事件起始时间（毫秒级 UNIX 时间戳，若不传则默认为接口调用时间）
@@ -192,6 +200,10 @@ class CreateTWeSeeRecognitionTaskRequest extends AbstractModel
 
         if (array_key_exists("InputURL",$param) and $param["InputURL"] !== null) {
             $this->InputURL = $param["InputURL"];
+        }
+
+        if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
+            $this->ChannelId = $param["ChannelId"];
         }
 
         if (array_key_exists("CustomId",$param) and $param["CustomId"] !== null) {

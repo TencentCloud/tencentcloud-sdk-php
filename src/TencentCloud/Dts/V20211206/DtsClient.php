@@ -41,9 +41,11 @@ use TencentCloud\Dts\V20211206\Models as Models;
  * @method Models\CreateModifyCheckSyncJobResponse CreateModifyCheckSyncJob(Models\CreateModifyCheckSyncJobRequest $req) 在修改同步任务的配置后、通过该接口校验当前任务是否支持修改对象操作
  * @method Models\CreateSubscribeResponse CreateSubscribe(Models\CreateSubscribeRequest $req) 本接口(CreateSubscribe)用于创建一个数据订阅任务。
  * @method Models\CreateSubscribeCheckJobResponse CreateSubscribeCheckJob(Models\CreateSubscribeCheckJobRequest $req) 本接口(CreateSubscribeCheckJob)用于创建一个订阅校验任务。任务必须已经成功调用ConfigureSubscribeJob接口配置了所有的必要信息才能启动校验。
+ * @method Models\CreateSyncCompareTaskResponse CreateSyncCompareTask(Models\CreateSyncCompareTaskRequest $req) 本接口用于创建数据对比任务，创建成功后会返回数据对比任务 ID，形如：sync-8yv4w2i1-cmp-37skmii9，创建成功后可通过StartSyncCompare启动一致性校验任务
  * @method Models\CreateSyncJobResponse CreateSyncJob(Models\CreateSyncJobRequest $req) 创建一个同步任务
  * @method Models\DeleteCompareTaskResponse DeleteCompareTask(Models\DeleteCompareTaskRequest $req) 删除一致性校验任务。当一致性校验任务状态为success、failed、canceled 时可以执行此操作。
  * @method Models\DeleteConsumerGroupResponse DeleteConsumerGroup(Models\DeleteConsumerGroupRequest $req) 本接口(DeleteConsumerGroup)用于删除一个订阅任务的消费组。
+ * @method Models\DeleteSyncCompareTaskResponse DeleteSyncCompareTask(Models\DeleteSyncCompareTaskRequest $req) 删除一致性校验任务。当一致性校验任务状态为success、failed、canceled 时可以执行此操作。
  * @method Models\DescribeCheckSyncJobResultResponse DescribeCheckSyncJobResult(Models\DescribeCheckSyncJobResultRequest $req) 查询同步校验任务结果，检查必要参数和周边配置
  * @method Models\DescribeCompareReportResponse DescribeCompareReport(Models\DescribeCompareReportRequest $req) 查询一致性校验任务详情
  * @method Models\DescribeCompareTasksResponse DescribeCompareTasks(Models\DescribeCompareTasksRequest $req) 查询一致性校验任务列表。
@@ -64,6 +66,8 @@ use TencentCloud\Dts\V20211206\Models as Models;
  * @method Models\DescribeSubscribeDetailResponse DescribeSubscribeDetail(Models\DescribeSubscribeDetailRequest $req) 本接口(DescribeSubscribeDetail)获取数据订阅实例的配置信息。
  * @method Models\DescribeSubscribeJobsResponse DescribeSubscribeJobs(Models\DescribeSubscribeJobsRequest $req) 本接口(DescribeSubscribes)获取数据订阅实例信息列表，默认分页，每次返回20条
  * @method Models\DescribeSubscribeReturnableResponse DescribeSubscribeReturnable(Models\DescribeSubscribeReturnableRequest $req) 本接口(DescribeSubscribeReturnable)用于查询订阅任务是否可以销毁和退货。
+ * @method Models\DescribeSyncCompareReportResponse DescribeSyncCompareReport(Models\DescribeSyncCompareReportRequest $req) 查询一致性校验任务详情
+ * @method Models\DescribeSyncCompareTasksResponse DescribeSyncCompareTasks(Models\DescribeSyncCompareTasksRequest $req) 查询一致性校验任务列表。通过该接口可查看改任务下所有一致性校验任务。
  * @method Models\DescribeSyncJobsResponse DescribeSyncJobs(Models\DescribeSyncJobsRequest $req) 查询同步任务信息
  * @method Models\DestroyIsolatedSubscribeResponse DestroyIsolatedSubscribe(Models\DestroyIsolatedSubscribeRequest $req) 本接口（DestroyIsolatedSubscribe）用于下线已隔离的数据订阅实例
  * @method Models\DestroyMigrateJobResponse DestroyMigrateJob(Models\DestroyMigrateJobRequest $req) 下线数据迁移任务。计费任务必须先调用隔离(IsolateMigrateJob)接口，且只有是**已隔离**状态下，才能调用此接口销毁任务。对于不计费任务，调用隔离(IsolateMigrateJob)接口删除任务操作。
@@ -83,6 +87,8 @@ use TencentCloud\Dts\V20211206\Models as Models;
  * @method Models\ModifySubscribeAutoRenewFlagResponse ModifySubscribeAutoRenewFlag(Models\ModifySubscribeAutoRenewFlagRequest $req) 修改订阅实例自动续费标识。只有包年包月的任务修改才有意义，按量计费任务修改后无影响。
  * @method Models\ModifySubscribeNameResponse ModifySubscribeName(Models\ModifySubscribeNameRequest $req) 本接口(ModifySubscribeName)用于修改数据订阅实例的名称
  * @method Models\ModifySubscribeObjectsResponse ModifySubscribeObjects(Models\ModifySubscribeObjectsRequest $req) 本接口(ModifySubscribeObjects)用于修改数据订阅对象和kafka分区规则，如果是mongo订阅，还可以修改输出聚合规则。
+ * @method Models\ModifySyncCompareTaskResponse ModifySyncCompareTask(Models\ModifySyncCompareTaskRequest $req) 修改一致性校验任务，在任务创建后启动之前，可修改一致性校验参数
+ * @method Models\ModifySyncCompareTaskNameResponse ModifySyncCompareTaskName(Models\ModifySyncCompareTaskNameRequest $req) 修改同步一致性校验任务名称
  * @method Models\ModifySyncJobConfigResponse ModifySyncJobConfig(Models\ModifySyncJobConfigRequest $req) 该接口支持在同步任务启动后修改任务的配置
 修改同步配置的完整流程：修改同步任务配置->创建修改同步任务配置的校验任务->查询修改配置的校验任务的结果->启动修改配置任务
  * @method Models\ModifySyncRateLimitResponse ModifySyncRateLimit(Models\ModifySyncRateLimitRequest $req) 用户在发现同步任务对用户的数据库的负载影响较大时、可通过该接口限制任务的传输速率
@@ -104,10 +110,12 @@ use TencentCloud\Dts\V20211206\Models as Models;
  * @method Models\StartMigrateJobResponse StartMigrateJob(Models\StartMigrateJobRequest $req) 本接口（StartMigrateJob）用于启动迁移任务。调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。
  * @method Models\StartModifySyncJobResponse StartModifySyncJob(Models\StartModifySyncJobRequest $req) 在查询修改对象的校验任务的结果中的status为success后、通过该接口开始修改配置流程
  * @method Models\StartSubscribeResponse StartSubscribe(Models\StartSubscribeRequest $req) 本接口(StartSubscribe)用于启动一个kafka版本的数据订阅实例。只有当订阅任务的状态为checkPass时，才能调用本接口。
+ * @method Models\StartSyncCompareResponse StartSyncCompare(Models\StartSyncCompareRequest $req) 启动一致性校验任务，启动之前需要先通过接口`CreateSyncCompareTask` 创建一致性校验任务，启动后可通过接口`DescribeSyncCompareTasks` 查询一致性校验任务列表来获得启动后的状态
  * @method Models\StartSyncJobResponse StartSyncJob(Models\StartSyncJobRequest $req) 启动同步任务
  * @method Models\StopCompareResponse StopCompare(Models\StopCompareRequest $req) 终止一致性校验任务
  * @method Models\StopMigrateJobResponse StopMigrateJob(Models\StopMigrateJobRequest $req) 本接口（StopMigrateJob）用于终止数据迁移任务。当任务状态为运行中、准备运行、准备完成、错误、暂停、未知等状态时可调用此接口终止任务。
 调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。
+ * @method Models\StopSyncCompareResponse StopSyncCompare(Models\StopSyncCompareRequest $req) 终止一致性校验任务
  * @method Models\StopSyncJobResponse StopSyncJob(Models\StopSyncJobRequest $req) 结束同步任务，操作后可通过查询同步任务信息接口DescribeSyncJobs，获取操作后的状态。
  */
 

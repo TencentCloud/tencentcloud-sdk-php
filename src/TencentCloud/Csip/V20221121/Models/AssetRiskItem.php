@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSeverity(string $Severity) 设置风险等级
  * @method string getRiskRuleId() 获取风险规则ID
  * @method void setRiskRuleId(string $RiskRuleId) 设置风险规则ID
+ * @method string getClassify() 获取处置分类
+ * @method void setClassify(string $Classify) 设置处置分类
  */
 class AssetRiskItem extends AbstractModel
 {
@@ -122,6 +124,11 @@ class AssetRiskItem extends AbstractModel
     public $RiskRuleId;
 
     /**
+     * @var string 处置分类
+     */
+    public $Classify;
+
+    /**
      * @param integer $AppId 租户ID
      * @param string $Provider 云厂商
      * @param string $ProviderName 云厂商名称
@@ -136,6 +143,7 @@ class AssetRiskItem extends AbstractModel
      * @param string $CheckType 检查类型
      * @param string $Severity 风险等级
      * @param string $RiskRuleId 风险规则ID
+     * @param string $Classify 处置分类
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class AssetRiskItem extends AbstractModel
 
         if (array_key_exists("RiskRuleId",$param) and $param["RiskRuleId"] !== null) {
             $this->RiskRuleId = $param["RiskRuleId"];
+        }
+
+        if (array_key_exists("Classify",$param) and $param["Classify"] !== null) {
+            $this->Classify = $param["Classify"];
         }
     }
 }

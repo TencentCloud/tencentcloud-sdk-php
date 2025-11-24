@@ -33,6 +33,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplate(Models\CreateAdaptiveDynamicStreamingTemplateRequest $req) 创建转自适应码流模板，数量上限：100。
  * @method Models\CreateAnimatedGraphicsTemplateResponse CreateAnimatedGraphicsTemplate(Models\CreateAnimatedGraphicsTemplateRequest $req) 创建用户自定义转动图模板，数量上限：16。
  * @method Models\CreateAsrHotwordsResponse CreateAsrHotwords(Models\CreateAsrHotwordsRequest $req) 智能字幕新建热词库接口
+ * @method Models\CreateBlindWatermarkTemplateResponse CreateBlindWatermarkTemplate(Models\CreateBlindWatermarkTemplateRequest $req) 创建用户自定义数字水印模板，数量上限：1000。
  * @method Models\CreateContentReviewTemplateResponse CreateContentReviewTemplate(Models\CreateContentReviewTemplateRequest $req) 创建用户自定义内容审核模板，数量上限：50。
  * @method Models\CreateImageSpriteTemplateResponse CreateImageSpriteTemplate(Models\CreateImageSpriteTemplateRequest $req) 创建用户自定义雪碧图模板，数量上限：16。
  * @method Models\CreateLiveRecordTemplateResponse CreateLiveRecordTemplate(Models\CreateLiveRecordTemplateRequest $req) 创建直播录制模板
@@ -41,6 +42,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
 1. 对一个原视频和多个转码后的视频进行评分。
 2. 计算不同转码方式的 BD-Rate。
  * @method Models\CreatePersonSampleResponse CreatePersonSample(Models\CreatePersonSampleRequest $req) 该接口用于创建素材样本，用于通过五官定位等技术，进行内容识别、内容不适宜等视频处理。
+ * @method Models\CreateProcessImageTemplateResponse CreateProcessImageTemplate(Models\CreateProcessImageTemplateRequest $req) 创建图片处理模板
  * @method Models\CreateQualityControlTemplateResponse CreateQualityControlTemplate(Models\CreateQualityControlTemplateRequest $req) 创建媒体质检模板，数量上限：50。
  * @method Models\CreateSampleSnapshotTemplateResponse CreateSampleSnapshotTemplate(Models\CreateSampleSnapshotTemplateRequest $req) 创建用户自定义采样截图模板，数量上限：16。
  * @method Models\CreateScheduleResponse CreateSchedule(Models\CreateScheduleRequest $req) 对 COS 中指定 Bucket 的目录下上传的媒体文件，设置处理规则，包括：
@@ -91,10 +93,12 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DeleteAdaptiveDynamicStreamingTemplateResponse DeleteAdaptiveDynamicStreamingTemplate(Models\DeleteAdaptiveDynamicStreamingTemplateRequest $req) 删除转自适应码流模板
  * @method Models\DeleteAnimatedGraphicsTemplateResponse DeleteAnimatedGraphicsTemplate(Models\DeleteAnimatedGraphicsTemplateRequest $req) 删除用户自定义转动图模板。
  * @method Models\DeleteAsrHotwordsResponse DeleteAsrHotwords(Models\DeleteAsrHotwordsRequest $req) 删除智能字幕热词库
+ * @method Models\DeleteBlindWatermarkTemplateResponse DeleteBlindWatermarkTemplate(Models\DeleteBlindWatermarkTemplateRequest $req) 删除用户自定义数字水印模板。
  * @method Models\DeleteContentReviewTemplateResponse DeleteContentReviewTemplate(Models\DeleteContentReviewTemplateRequest $req) 删除用户自定义内容审核模板。
  * @method Models\DeleteImageSpriteTemplateResponse DeleteImageSpriteTemplate(Models\DeleteImageSpriteTemplateRequest $req) 删除雪碧图模板。
  * @method Models\DeleteLiveRecordTemplateResponse DeleteLiveRecordTemplate(Models\DeleteLiveRecordTemplateRequest $req) 删除直播录制模板
  * @method Models\DeletePersonSampleResponse DeletePersonSample(Models\DeletePersonSampleRequest $req) 该接口用于根据素材 ID，删除素材样本。
+ * @method Models\DeleteProcessImageTemplateResponse DeleteProcessImageTemplate(Models\DeleteProcessImageTemplateRequest $req) 删除图片处理模板
  * @method Models\DeleteQualityControlTemplateResponse DeleteQualityControlTemplate(Models\DeleteQualityControlTemplateRequest $req) 删除媒体质检模板
  * @method Models\DeleteSampleSnapshotTemplateResponse DeleteSampleSnapshotTemplate(Models\DeleteSampleSnapshotTemplateRequest $req) 删除用户自定义采样截图模板。
  * @method Models\DeleteScheduleResponse DeleteSchedule(Models\DeleteScheduleRequest $req) 删除编排
@@ -116,6 +120,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DescribeAsrHotwordsResponse DescribeAsrHotwords(Models\DescribeAsrHotwordsRequest $req) 查询智能字幕热词库
  * @method Models\DescribeAsrHotwordsListResponse DescribeAsrHotwordsList(Models\DescribeAsrHotwordsListRequest $req) 获取热词库列表
  * @method Models\DescribeBatchTaskDetailResponse DescribeBatchTaskDetail(Models\DescribeBatchTaskDetailRequest $req) 通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询7天之内提交的任务）。
+ * @method Models\DescribeBlindWatermarkTemplatesResponse DescribeBlindWatermarkTemplates(Models\DescribeBlindWatermarkTemplatesRequest $req) 查询用户自定义数字水印模板，支持根据条件，分页查询。
  * @method Models\DescribeContentReviewTemplatesResponse DescribeContentReviewTemplates(Models\DescribeContentReviewTemplatesRequest $req) 根据智能审核模板唯一标识，获取智能审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及系统预置智能审核模板。
  * @method Models\DescribeGroupAttachFlowsByIdResponse DescribeGroupAttachFlowsById(Models\DescribeGroupAttachFlowsByIdRequest $req) 根据安全组反差关联的Flow信息。
  * @method Models\DescribeImageSpriteTemplatesResponse DescribeImageSpriteTemplates(Models\DescribeImageSpriteTemplatesRequest $req) 查询雪碧图模板，支持根据条件，分页查询。
@@ -123,6 +128,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DescribeLiveRecordTemplatesResponse DescribeLiveRecordTemplates(Models\DescribeLiveRecordTemplatesRequest $req) 获取直播录制模板
  * @method Models\DescribeMediaMetaDataResponse DescribeMediaMetaData(Models\DescribeMediaMetaDataRequest $req) 获取媒体的元信息，包括视频画面宽、高、编码格式、时长、帧率等。
  * @method Models\DescribePersonSamplesResponse DescribePersonSamples(Models\DescribePersonSamplesRequest $req) 该接口用于查询素材样本信息，支持根据素材 ID、名称、标签，分页查询。
+ * @method Models\DescribeProcessImageTemplatesResponse DescribeProcessImageTemplates(Models\DescribeProcessImageTemplatesRequest $req) 查询图片处理模板列表。
  * @method Models\DescribeQualityControlTemplatesResponse DescribeQualityControlTemplates(Models\DescribeQualityControlTemplatesRequest $req) 查询用户自定义媒体质检模板，支持根据条件，分页查询。
  * @method Models\DescribeSampleSnapshotTemplatesResponse DescribeSampleSnapshotTemplates(Models\DescribeSampleSnapshotTemplatesRequest $req) 查询采样截图模板，支持根据条件，分页查询。
  * @method Models\DescribeSchedulesResponse DescribeSchedules(Models\DescribeSchedulesRequest $req) 查询编排。
@@ -171,6 +177,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\EnableScheduleResponse EnableSchedule(Models\EnableScheduleRequest $req) 启用自动化触发编排任务。
  * @method Models\EnableWorkflowResponse EnableWorkflow(Models\EnableWorkflowRequest $req) 启用工作流。
  * @method Models\ExecuteFunctionResponse ExecuteFunction(Models\ExecuteFunctionRequest $req) 本接口仅用于定制开发的特殊场景，除非云媒体处理客服人员主动告知您需要使用本接口，其它情况请勿调用。
+ * @method Models\ExtractBlindWatermarkResponse ExtractBlindWatermark(Models\ExtractBlindWatermarkRequest $req) 用于发起提取视频数字水印任务，提取结果可以通过DescribeTaskDetail查询。
  * @method Models\ManageTaskResponse ManageTask(Models\ManageTaskRequest $req) 对已发起的任务进行管理。
  * @method Models\ModifyAIAnalysisTemplateResponse ModifyAIAnalysisTemplate(Models\ModifyAIAnalysisTemplateRequest $req) 修改用户自定义内容分析模板。
 
@@ -179,10 +186,12 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\ModifyAdaptiveDynamicStreamingTemplateResponse ModifyAdaptiveDynamicStreamingTemplate(Models\ModifyAdaptiveDynamicStreamingTemplateRequest $req) 修改转自适应码流模板
  * @method Models\ModifyAnimatedGraphicsTemplateResponse ModifyAnimatedGraphicsTemplate(Models\ModifyAnimatedGraphicsTemplateRequest $req) 修改用户自定义转动图模板。
  * @method Models\ModifyAsrHotwordsResponse ModifyAsrHotwords(Models\ModifyAsrHotwordsRequest $req) 智能字幕更新热词库接口
+ * @method Models\ModifyBlindWatermarkTemplateResponse ModifyBlindWatermarkTemplate(Models\ModifyBlindWatermarkTemplateRequest $req) 修改用户自定义数字水印模板，数字水印类型不允许修改。
  * @method Models\ModifyContentReviewTemplateResponse ModifyContentReviewTemplate(Models\ModifyContentReviewTemplateRequest $req) 修改用户自定义内容审核模板。
  * @method Models\ModifyImageSpriteTemplateResponse ModifyImageSpriteTemplate(Models\ModifyImageSpriteTemplateRequest $req) 修改用户自定义雪碧图模板。
  * @method Models\ModifyLiveRecordTemplateResponse ModifyLiveRecordTemplate(Models\ModifyLiveRecordTemplateRequest $req) 修改直播录制模板
  * @method Models\ModifyPersonSampleResponse ModifyPersonSample(Models\ModifyPersonSampleRequest $req) 该接口用于根据素材 ID，修改素材样本信息，包括名称、描述的修改，以及五官、标签的添加、删除、重置操作。五官删除操作需保证至少剩余 1 张图片，否则，请使用重置操作。
+ * @method Models\ModifyProcessImageTemplateResponse ModifyProcessImageTemplate(Models\ModifyProcessImageTemplateRequest $req) 修改图片处理模板。
  * @method Models\ModifyQualityControlTemplateResponse ModifyQualityControlTemplate(Models\ModifyQualityControlTemplateRequest $req) 修改媒体质检模板。
  * @method Models\ModifySampleSnapshotTemplateResponse ModifySampleSnapshotTemplate(Models\ModifySampleSnapshotTemplateRequest $req) 修改用户自定义采样截图模板。
  * @method Models\ModifyScheduleResponse ModifySchedule(Models\ModifyScheduleRequest $req) 修改编排

@@ -122,12 +122,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSim() 获取本次流程活体一比一的分数。
 - 取值范围 [0.00, 100.00]。
-- 相似度大于等于70时才判断为同一人，也可根据具体场景自行调整阈值。
+- 相似度大于等于70时才判断为同一人，阈值不支持自定义。
 - 阈值70的误通过率为千分之一，阈值80的误通过率是万分之一。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSim(string $Sim) 设置本次流程活体一比一的分数。
 - 取值范围 [0.00, 100.00]。
-- 相似度大于等于70时才判断为同一人，也可根据具体场景自行调整阈值。
+- 相似度大于等于70时才判断为同一人，阈值不支持自定义。
 - 阈值70的误通过率为千分之一，阈值80的误通过率是万分之一。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLocation() 获取地理位置经纬度。
@@ -227,6 +227,26 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVisaNum() 获取港澳台居住证签发次数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVisaNum(string $VisaNum) 设置港澳台居住证签发次数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLivenessActionSequence() 获取活体检测的动作顺序，多动作以“,”分隔。
+输出格式如：“1,2”表示“张嘴+眨眼”。
+- 详细序列值含义如下： 
+   1：张嘴
+2：眨眼
+3：点头
+4：摇头
+5：静默
+注：仅浮层H5产品返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLivenessActionSequence(string $LivenessActionSequence) 设置活体检测的动作顺序，多动作以“,”分隔。
+输出格式如：“1,2”表示“张嘴+眨眼”。
+- 详细序列值含义如下： 
+   1：张嘴
+2：眨眼
+3：点头
+4：摇头
+5：静默
+注：仅浮层H5产品返回
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetectInfoText extends AbstractModel
@@ -356,7 +376,7 @@ class DetectInfoText extends AbstractModel
     /**
      * @var string 本次流程活体一比一的分数。
 - 取值范围 [0.00, 100.00]。
-- 相似度大于等于70时才判断为同一人，也可根据具体场景自行调整阈值。
+- 相似度大于等于70时才判断为同一人，阈值不支持自定义。
 - 阈值70的误通过率为千分之一，阈值80的误通过率是万分之一。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -456,6 +476,20 @@ class DetectInfoText extends AbstractModel
     public $VisaNum;
 
     /**
+     * @var string 活体检测的动作顺序，多动作以“,”分隔。
+输出格式如：“1,2”表示“张嘴+眨眼”。
+- 详细序列值含义如下： 
+   1：张嘴
+2：眨眼
+3：点头
+4：摇头
+5：静默
+注：仅浮层H5产品返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LivenessActionSequence;
+
+    /**
      * @param integer $ErrCode 本次流程最终验证结果。
 - 取值范围：0为成功。
 - 仅包含活体人脸核身结果，不包含意愿核身结果。
@@ -508,7 +542,7 @@ class DetectInfoText extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Sim 本次流程活体一比一的分数。
 - 取值范围 [0.00, 100.00]。
-- 相似度大于等于70时才判断为同一人，也可根据具体场景自行调整阈值。
+- 相似度大于等于70时才判断为同一人，阈值不支持自定义。
 - 阈值70的误通过率为千分之一，阈值80的误通过率是万分之一。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Location 地理位置经纬度。
@@ -559,6 +593,16 @@ class DetectInfoText extends AbstractModel
      * @param string $PassNo 港澳台居住证通行证号码。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VisaNum 港澳台居住证签发次数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LivenessActionSequence 活体检测的动作顺序，多动作以“,”分隔。
+输出格式如：“1,2”表示“张嘴+眨眼”。
+- 详细序列值含义如下： 
+   1：张嘴
+2：眨眼
+3：点头
+4：摇头
+5：静默
+注：仅浮层H5产品返回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -697,6 +741,10 @@ class DetectInfoText extends AbstractModel
 
         if (array_key_exists("VisaNum",$param) and $param["VisaNum"] !== null) {
             $this->VisaNum = $param["VisaNum"];
+        }
+
+        if (array_key_exists("LivenessActionSequence",$param) and $param["LivenessActionSequence"] !== null) {
+            $this->LivenessActionSequence = $param["LivenessActionSequence"];
         }
     }
 }

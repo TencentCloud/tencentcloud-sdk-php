@@ -78,6 +78,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置网关状态
  * @method string getEngineRegion() 获取TSE的网关真实地域
  * @method void setEngineRegion(string $EngineRegion) 设置TSE的网关真实地域
+ * @method integer getWeakPasswordRisk() 获取弱口令风险
+ * @method void setWeakPasswordRisk(integer $WeakPasswordRisk) 设置弱口令风险
  */
 class GateWayAsset extends AbstractModel
 {
@@ -227,6 +229,11 @@ class GateWayAsset extends AbstractModel
     public $EngineRegion;
 
     /**
+     * @var integer 弱口令风险
+     */
+    public $WeakPasswordRisk;
+
+    /**
      * @param string $AppId appid
      * @param string $Uin uin
      * @param string $AssetId 资产ID
@@ -256,6 +263,7 @@ class GateWayAsset extends AbstractModel
      * @param integer $IsNewAsset 是否新资产 1新
      * @param string $Status 网关状态
      * @param string $EngineRegion TSE的网关真实地域
+     * @param integer $WeakPasswordRisk 弱口令风险
      */
     function __construct()
     {
@@ -389,6 +397,10 @@ class GateWayAsset extends AbstractModel
 
         if (array_key_exists("EngineRegion",$param) and $param["EngineRegion"] !== null) {
             $this->EngineRegion = $param["EngineRegion"];
+        }
+
+        if (array_key_exists("WeakPasswordRisk",$param) and $param["WeakPasswordRisk"] !== null) {
+            $this->WeakPasswordRisk = $param["WeakPasswordRisk"];
         }
     }
 }

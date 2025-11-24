@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstancePackageList请求参数结构体
  *
+ * @method integer getOffset() 获取偏移量
+ * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取每页条数
  * @method void setLimit(integer $Limit) 设置每页条数
  * @method array getFilters() 获取InstanceId实例Id，InstanceName实例名称，ResourceId套餐Id，PackageType套餐类型 
@@ -29,6 +31,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeInstancePackageListRequest extends AbstractModel
 {
+    /**
+     * @var integer 偏移量
+     */
+    public $Offset;
+
     /**
      * @var integer 每页条数
      */
@@ -45,6 +52,7 @@ class DescribeInstancePackageListRequest extends AbstractModel
     public $IsUsed;
 
     /**
+     * @param integer $Offset 偏移量
      * @param integer $Limit 每页条数
      * @param array $Filters InstanceId实例Id，InstanceName实例名称，ResourceId套餐Id，PackageType套餐类型 
      * @param integer $IsUsed 是否使用：0未使用1已使用
@@ -62,6 +70,10 @@ class DescribeInstancePackageListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
         }

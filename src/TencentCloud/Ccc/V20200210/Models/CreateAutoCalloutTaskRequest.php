@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAvailableTime(array $AvailableTime) 设置可用时间段
  * @method integer getAIAgentId() 获取智能体 ID，不填写时需要填写 IvrId
  * @method void setAIAgentId(integer $AIAgentId) 设置智能体 ID，不填写时需要填写 IvrId
+ * @method integer getRetryInterval() 获取任务失败重试时间间隔，重试间隔 600秒～86400 秒
+ * @method void setRetryInterval(integer $RetryInterval) 设置任务失败重试时间间隔，重试间隔 600秒～86400 秒
  */
 class CreateAutoCalloutTaskRequest extends AbstractModel
 {
@@ -129,6 +131,11 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
     public $AIAgentId;
 
     /**
+     * @var integer 任务失败重试时间间隔，重试间隔 600秒～86400 秒
+     */
+    public $RetryInterval;
+
+    /**
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param integer $NotBefore 任务起始时间戳，Unix 秒级时间戳
      * @param array $Callees 被叫号码列表
@@ -144,6 +151,7 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
      * @param string $TimeZone IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
      * @param array $AvailableTime 可用时间段
      * @param integer $AIAgentId 智能体 ID，不填写时需要填写 IvrId
+     * @param integer $RetryInterval 任务失败重试时间间隔，重试间隔 600秒～86400 秒
      */
     function __construct()
     {
@@ -231,6 +239,10 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
 
         if (array_key_exists("AIAgentId",$param) and $param["AIAgentId"] !== null) {
             $this->AIAgentId = $param["AIAgentId"];
+        }
+
+        if (array_key_exists("RetryInterval",$param) and $param["RetryInterval"] !== null) {
+            $this->RetryInterval = $param["RetryInterval"];
         }
     }
 }

@@ -42,10 +42,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthTag(string $AuthTag) 设置模板可见范围:
 **all**: 所有本第三方应用合作企业可见
 **part**: 指定的本第三方应用合作企业
- * @method array getProxyOrganizationOpenIds() 获取第三方平台子客企业标识列表
- * @method void setProxyOrganizationOpenIds(array $ProxyOrganizationOpenIds) 设置第三方平台子客企业标识列表
+ * @method array getProxyOrganizationOpenIds() 获取第三方平台子客企业标识列表，仅在select 模式下返回
+ * @method void setProxyOrganizationOpenIds(array $ProxyOrganizationOpenIds) 设置第三方平台子客企业标识列表，仅在select 模式下返回
  * @method array getFailMessageList() 获取操作失败信息数组
  * @method void setFailMessageList(array $FailMessageList) 设置操作失败信息数组
+ * @method integer getTotal() 获取授权的平台子企业数量，OperateType 为select 时返回。
+ * @method void setTotal(integer $Total) 设置授权的平台子企业数量，OperateType 为select 时返回。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -79,7 +81,7 @@ class OperateChannelTemplateResponse extends AbstractModel
     public $AuthTag;
 
     /**
-     * @var array 第三方平台子客企业标识列表
+     * @var array 第三方平台子客企业标识列表，仅在select 模式下返回
      */
     public $ProxyOrganizationOpenIds;
 
@@ -87,6 +89,11 @@ class OperateChannelTemplateResponse extends AbstractModel
      * @var array 操作失败信息数组
      */
     public $FailMessageList;
+
+    /**
+     * @var integer 授权的平台子企业数量，OperateType 为select 时返回。
+     */
+    public $Total;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -105,8 +112,9 @@ class OperateChannelTemplateResponse extends AbstractModel
      * @param string $AuthTag 模板可见范围:
 **all**: 所有本第三方应用合作企业可见
 **part**: 指定的本第三方应用合作企业
-     * @param array $ProxyOrganizationOpenIds 第三方平台子客企业标识列表
+     * @param array $ProxyOrganizationOpenIds 第三方平台子客企业标识列表，仅在select 模式下返回
      * @param array $FailMessageList 操作失败信息数组
+     * @param integer $Total 授权的平台子企业数量，OperateType 为select 时返回。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -149,6 +157,10 @@ class OperateChannelTemplateResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->FailMessageList, $obj);
             }
+        }
+
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

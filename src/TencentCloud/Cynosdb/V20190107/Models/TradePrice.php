@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUnitPriceDiscount(integer $UnitPriceDiscount) 设置优惠后后付费模式下的单位资源价格, 单位: 分,例如用户享有折扣=UnitPricet × Discount
  * @method string getChargeUnit() 获取计费价格单位
  * @method void setChargeUnit(string $ChargeUnit) 设置计费价格单位
+ * @method string getUnitPriceHighPrecision() 获取高精度下不包含优惠价格
+ * @method void setUnitPriceHighPrecision(string $UnitPriceHighPrecision) 设置高精度下不包含优惠价格
+ * @method string getUnitPriceDiscountHighPrecision() 获取高精度下优惠后价格
+ * @method void setUnitPriceDiscountHighPrecision(string $UnitPriceDiscountHighPrecision) 设置高精度下优惠后价格
+ * @method string getAmountUnit() 获取货币单位
+ * @method void setAmountUnit(string $AmountUnit) 设置货币单位
  */
 class TradePrice extends AbstractModel
 {
@@ -66,12 +72,30 @@ class TradePrice extends AbstractModel
     public $ChargeUnit;
 
     /**
+     * @var string 高精度下不包含优惠价格
+     */
+    public $UnitPriceHighPrecision;
+
+    /**
+     * @var string 高精度下优惠后价格
+     */
+    public $UnitPriceDiscountHighPrecision;
+
+    /**
+     * @var string 货币单位
+     */
+    public $AmountUnit;
+
+    /**
      * @param integer $TotalPrice 预付费模式下资源总价，不包含优惠，单位:分
      * @param float $Discount 总的折扣，100表示100%不打折
      * @param integer $TotalPriceDiscount 预付费模式下的优惠后总价, 单位: 分,例如用户享有折扣 =TotalPrice × Discount
      * @param integer $UnitPrice 后付费模式下的单位资源价格，不包含优惠，单位:分
      * @param integer $UnitPriceDiscount 优惠后后付费模式下的单位资源价格, 单位: 分,例如用户享有折扣=UnitPricet × Discount
      * @param string $ChargeUnit 计费价格单位
+     * @param string $UnitPriceHighPrecision 高精度下不包含优惠价格
+     * @param string $UnitPriceDiscountHighPrecision 高精度下优惠后价格
+     * @param string $AmountUnit 货币单位
      */
     function __construct()
     {
@@ -108,6 +132,18 @@ class TradePrice extends AbstractModel
 
         if (array_key_exists("ChargeUnit",$param) and $param["ChargeUnit"] !== null) {
             $this->ChargeUnit = $param["ChargeUnit"];
+        }
+
+        if (array_key_exists("UnitPriceHighPrecision",$param) and $param["UnitPriceHighPrecision"] !== null) {
+            $this->UnitPriceHighPrecision = $param["UnitPriceHighPrecision"];
+        }
+
+        if (array_key_exists("UnitPriceDiscountHighPrecision",$param) and $param["UnitPriceDiscountHighPrecision"] !== null) {
+            $this->UnitPriceDiscountHighPrecision = $param["UnitPriceDiscountHighPrecision"];
+        }
+
+        if (array_key_exists("AmountUnit",$param) and $param["AmountUnit"] !== null) {
+            $this->AmountUnit = $param["AmountUnit"];
         }
     }
 }

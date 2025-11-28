@@ -46,26 +46,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayMode(integer $PayMode) 设置1 表示预付费，0 表示后付费
  * @method string getRemark() 获取备注信息
  * @method void setRemark(string $Remark) 设置备注信息
- * @method string getSpecName() 获取集群的节点规格，需要输入对应的规格标识：
-2C8G：rabbit-vip-basic-2c8g
-4C16G：rabbit-vip-basic-4c16g
-8C32G：rabbit-vip-basic-8c32g
+ * @method string getSpecName() 获取集群的节点规格，对应的规格标识：
+2C8G：rabbit-vip-profession-2c8g
+4C16G：rabbit-vip-profession-4c16g
+8C32G：rabbit-vip-profession-8c32g
 16C32G：rabbit-vip-basic-4
-16C64G：rabbit-vip-basic-16c64g
+16C64G：rabbit-vip-profession-16c64g
 2C4G：rabbit-vip-basic-5
 4C8G：rabbit-vip-basic-1
 8C16G（已售罄）：rabbit-vip-basic-2
-不传默认为4C8G：rabbit-vip-basic-1
- * @method void setSpecName(string $SpecName) 设置集群的节点规格，需要输入对应的规格标识：
-2C8G：rabbit-vip-basic-2c8g
-4C16G：rabbit-vip-basic-4c16g
-8C32G：rabbit-vip-basic-8c32g
+不传默认为 4C8G：rabbit-vip-basic-1
+ * @method void setSpecName(string $SpecName) 设置集群的节点规格，对应的规格标识：
+2C8G：rabbit-vip-profession-2c8g
+4C16G：rabbit-vip-profession-4c16g
+8C32G：rabbit-vip-profession-8c32g
 16C32G：rabbit-vip-basic-4
-16C64G：rabbit-vip-basic-16c64g
+16C64G：rabbit-vip-profession-16c64g
 2C4G：rabbit-vip-basic-5
 4C8G：rabbit-vip-basic-1
 8C16G（已售罄）：rabbit-vip-basic-2
-不传默认为4C8G：rabbit-vip-basic-1
+不传默认为 4C8G：rabbit-vip-basic-1
  * @method string getExceptionInformation() 获取集群异常信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExceptionInformation(string $ExceptionInformation) 设置集群异常信息
@@ -159,16 +159,16 @@ class RabbitMQVipInstance extends AbstractModel
     public $Remark;
 
     /**
-     * @var string 集群的节点规格，需要输入对应的规格标识：
-2C8G：rabbit-vip-basic-2c8g
-4C16G：rabbit-vip-basic-4c16g
-8C32G：rabbit-vip-basic-8c32g
+     * @var string 集群的节点规格，对应的规格标识：
+2C8G：rabbit-vip-profession-2c8g
+4C16G：rabbit-vip-profession-4c16g
+8C32G：rabbit-vip-profession-8c32g
 16C32G：rabbit-vip-basic-4
-16C64G：rabbit-vip-basic-16c64g
+16C64G：rabbit-vip-profession-16c64g
 2C4G：rabbit-vip-basic-5
 4C8G：rabbit-vip-basic-1
 8C16G（已售罄）：rabbit-vip-basic-2
-不传默认为4C8G：rabbit-vip-basic-1
+不传默认为 4C8G：rabbit-vip-basic-1
      */
     public $SpecName;
 
@@ -234,16 +234,16 @@ class RabbitMQVipInstance extends AbstractModel
      * @param integer $AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
      * @param integer $PayMode 1 表示预付费，0 表示后付费
      * @param string $Remark 备注信息
-     * @param string $SpecName 集群的节点规格，需要输入对应的规格标识：
-2C8G：rabbit-vip-basic-2c8g
-4C16G：rabbit-vip-basic-4c16g
-8C32G：rabbit-vip-basic-8c32g
+     * @param string $SpecName 集群的节点规格，对应的规格标识：
+2C8G：rabbit-vip-profession-2c8g
+4C16G：rabbit-vip-profession-4c16g
+8C32G：rabbit-vip-profession-8c32g
 16C32G：rabbit-vip-basic-4
-16C64G：rabbit-vip-basic-16c64g
+16C64G：rabbit-vip-profession-16c64g
 2C4G：rabbit-vip-basic-5
 4C8G：rabbit-vip-basic-1
 8C16G（已售罄）：rabbit-vip-basic-2
-不传默认为4C8G：rabbit-vip-basic-1
+不传默认为 4C8G：rabbit-vip-basic-1
      * @param string $ExceptionInformation 集群异常信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClusterStatus 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败

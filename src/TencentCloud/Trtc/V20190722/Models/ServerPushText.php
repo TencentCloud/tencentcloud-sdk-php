@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method boolean getAddHistory() 获取是否将文本加入到llm历史上下文中
  * @method void setAddHistory(boolean $AddHistory) 设置是否将文本加入到llm历史上下文中
+ * @method string getMetaInfo() 获取如果填写，会和字幕绑定发送到端上，注意确保内容为json字符串
+ * @method void setMetaInfo(string $MetaInfo) 设置如果填写，会和字幕绑定发送到端上，注意确保内容为json字符串
  */
 class ServerPushText extends AbstractModel
 {
@@ -106,6 +108,11 @@ class ServerPushText extends AbstractModel
     public $AddHistory;
 
     /**
+     * @var string 如果填写，会和字幕绑定发送到端上，注意确保内容为json字符串
+     */
+    public $MetaInfo;
+
+    /**
      * @param string $Text 服务端推送播报文本
      * @param boolean $Interrupt 是否允许该文本打断机器人说话
      * @param boolean $StopAfterPlay 播报完文本后，是否自动关闭对话任务
@@ -124,6 +131,7 @@ class ServerPushText extends AbstractModel
 - Priority=1、Interrupt=false、DropMode=1，会等待当前交互结束，再进行播报，播报过程中不会被打断
 
      * @param boolean $AddHistory 是否将文本加入到llm历史上下文中
+     * @param string $MetaInfo 如果填写，会和字幕绑定发送到端上，注意确保内容为json字符串
      */
     function __construct()
     {
@@ -164,6 +172,10 @@ class ServerPushText extends AbstractModel
 
         if (array_key_exists("AddHistory",$param) and $param["AddHistory"] !== null) {
             $this->AddHistory = $param["AddHistory"];
+        }
+
+        if (array_key_exists("MetaInfo",$param) and $param["MetaInfo"] !== null) {
+            $this->MetaInfo = $param["MetaInfo"];
         }
     }
 }

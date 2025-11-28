@@ -66,6 +66,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setManufacturer(string $Manufacturer) 设置厂商
  * @method integer getAlarmStatus() 获取告警状态，0：停用，1：启用
  * @method void setAlarmStatus(integer $AlarmStatus) 设置告警状态，0：停用，1：启用
+ * @method integer getPqcStatus() 获取0不支持
+1关闭
+2开启
+ * @method void setPqcStatus(integer $PqcStatus) 设置0不支持
+1关闭
+2开启
+ * @method integer getPqcFlag() 获取0关闭，1开启
+ * @method void setPqcFlag(integer $PqcFlag) 设置0关闭，1开启
  */
 class ResourceInfo extends AbstractModel
 {
@@ -185,6 +193,18 @@ class ResourceInfo extends AbstractModel
     public $AlarmStatus;
 
     /**
+     * @var integer 0不支持
+1关闭
+2开启
+     */
+    public $PqcStatus;
+
+    /**
+     * @var integer 0关闭，1开启
+     */
+    public $PqcFlag;
+
+    /**
      * @param string $ResourceId 资源Id
      * @param string $ResourceName 资源名称
      * @param integer $Status 资源状态，1-正常，2-隔离，3-销毁
@@ -208,6 +228,10 @@ class ResourceInfo extends AbstractModel
      * @param array $Tags 标签列表
      * @param string $Manufacturer 厂商
      * @param integer $AlarmStatus 告警状态，0：停用，1：启用
+     * @param integer $PqcStatus 0不支持
+1关闭
+2开启
+     * @param integer $PqcFlag 0关闭，1开启
      */
     function __construct()
     {
@@ -322,6 +346,14 @@ class ResourceInfo extends AbstractModel
 
         if (array_key_exists("AlarmStatus",$param) and $param["AlarmStatus"] !== null) {
             $this->AlarmStatus = $param["AlarmStatus"];
+        }
+
+        if (array_key_exists("PqcStatus",$param) and $param["PqcStatus"] !== null) {
+            $this->PqcStatus = $param["PqcStatus"];
+        }
+
+        if (array_key_exists("PqcFlag",$param) and $param["PqcFlag"] !== null) {
+            $this->PqcFlag = $param["PqcFlag"];
         }
     }
 }

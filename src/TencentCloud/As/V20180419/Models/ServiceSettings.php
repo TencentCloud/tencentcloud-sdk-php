@@ -48,6 +48,8 @@ RESET：对原有不健康实例进行重装系统操作，可保持数据盘、
  * @method void setDesiredCapacitySyncWithMaxMinSize(boolean $DesiredCapacitySyncWithMaxMinSize) 设置期望实例数同步最大最小值。默认值为 False。该参数仅对修改伸缩组接口未传入期望数的场景生效。
 <li>True: 修改最大值或最小值时，如与当前期望数存在冲突，则同步调整期望数。例如修改时传入最小值 2，当前期望数为 1，则同步调整期望数为 2。</li>
 <li>False: 修改最大值或最小值时，如与当前期望数存在冲突，报错提示不允许修改。</li>
+ * @method boolean getPriorityScaleInUnhealthy() 获取优先缩容不健康实例。若开启，缩容时会优先选择不健康实例。默认值为 False。
+ * @method void setPriorityScaleInUnhealthy(boolean $PriorityScaleInUnhealthy) 设置优先缩容不健康实例。若开启，缩容时会优先选择不健康实例。默认值为 False。
  */
 class ServiceSettings extends AbstractModel
 {
@@ -90,6 +92,11 @@ RESET：对原有不健康实例进行重装系统操作，可保持数据盘、
     public $DesiredCapacitySyncWithMaxMinSize;
 
     /**
+     * @var boolean 优先缩容不健康实例。若开启，缩容时会优先选择不健康实例。默认值为 False。
+     */
+    public $PriorityScaleInUnhealthy;
+
+    /**
      * @param boolean $ReplaceMonitorUnhealthy 开启监控不健康替换服务。若开启则对于云监控标记为不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。
      * @param string $ScalingMode 取值范围： 
 CLASSIC_SCALING：经典方式，使用创建、销毁实例来实现扩缩容； 
@@ -104,6 +111,7 @@ RESET：对原有不健康实例进行重装系统操作，可保持数据盘、
      * @param boolean $DesiredCapacitySyncWithMaxMinSize 期望实例数同步最大最小值。默认值为 False。该参数仅对修改伸缩组接口未传入期望数的场景生效。
 <li>True: 修改最大值或最小值时，如与当前期望数存在冲突，则同步调整期望数。例如修改时传入最小值 2，当前期望数为 1，则同步调整期望数为 2。</li>
 <li>False: 修改最大值或最小值时，如与当前期望数存在冲突，报错提示不允许修改。</li>
+     * @param boolean $PriorityScaleInUnhealthy 优先缩容不健康实例。若开启，缩容时会优先选择不健康实例。默认值为 False。
      */
     function __construct()
     {
@@ -140,6 +148,10 @@ RESET：对原有不健康实例进行重装系统操作，可保持数据盘、
 
         if (array_key_exists("DesiredCapacitySyncWithMaxMinSize",$param) and $param["DesiredCapacitySyncWithMaxMinSize"] !== null) {
             $this->DesiredCapacitySyncWithMaxMinSize = $param["DesiredCapacitySyncWithMaxMinSize"];
+        }
+
+        if (array_key_exists("PriorityScaleInUnhealthy",$param) and $param["PriorityScaleInUnhealthy"] !== null) {
+            $this->PriorityScaleInUnhealthy = $param["PriorityScaleInUnhealthy"];
         }
     }
 }

@@ -199,9 +199,6 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
 由于 Referer 信息包含在 http 协议中，在开启配置后，播放协议为 rtmp 或 WebRTC 不会校验 Referer 配置，仍可正常播放。如需配置 Referer 鉴权建议使用 http-flv 或 http-hls 协议播放。
  * @method Models\DescribeLiveDomainsResponse DescribeLiveDomains(Models\DescribeLiveDomainsRequest $req) 根据域名状态、类型等信息查询用户的域名信息。
  * @method Models\DescribeLiveEnhanceInfoListResponse DescribeLiveEnhanceInfoList(Models\DescribeLiveEnhanceInfoListRequest $req) 查询直播增强用量明细信息。
- * @method Models\DescribeLiveForbidStreamListResponse DescribeLiveForbidStreamList(Models\DescribeLiveForbidStreamListRequest $req) 获取禁推流列表。
-
-注意：该接口仅作为直播辅助查询接口，重要业务场景不可强依赖该接口。
  * @method Models\DescribeLivePackageInfoResponse DescribeLivePackageInfo(Models\DescribeLivePackageInfoRequest $req) 查询用户套餐包总量、使用量、剩余量、包状态、购买时间和过期时间等。
  * @method Models\DescribeLivePadRulesResponse DescribeLivePadRules(Models\DescribeLivePadRulesRequest $req) 获取直播垫片规则列表。
  * @method Models\DescribeLivePadStreamListResponse DescribeLivePadStreamList(Models\DescribeLivePadStreamListRequest $req) 使用该接口查询垫片流列表。垫片流状态更新存在一定延迟，可间隔30秒以上查询，避免频繁查询该接口。

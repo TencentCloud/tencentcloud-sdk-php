@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterOneGroup(string $FilterOneGroup) 设置订阅组名称，指定此参数后将只返回该订阅组信息
  * @method array getTypes() 获取group类型
  * @method void setTypes(array $Types) 设置group类型
+ * @method array getTagFilters() 获取标签过滤器
+ * @method void setTagFilters(array $TagFilters) 设置标签过滤器
  */
 class DescribeRocketMQGroupsRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class DescribeRocketMQGroupsRequest extends AbstractModel
     public $Types;
 
     /**
+     * @var array 标签过滤器
+     */
+    public $TagFilters;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $NamespaceId 命名空间
      * @param integer $Offset 偏移量
@@ -104,6 +111,7 @@ class DescribeRocketMQGroupsRequest extends AbstractModel
      * @param string $SortOrder 按升序或降序排列，可选值为asc，desc
      * @param string $FilterOneGroup 订阅组名称，指定此参数后将只返回该订阅组信息
      * @param array $Types group类型
+     * @param array $TagFilters 标签过滤器
      */
     function __construct()
     {
@@ -156,6 +164,15 @@ class DescribeRocketMQGroupsRequest extends AbstractModel
 
         if (array_key_exists("Types",$param) and $param["Types"] !== null) {
             $this->Types = $param["Types"];
+        }
+
+        if (array_key_exists("TagFilters",$param) and $param["TagFilters"] !== null) {
+            $this->TagFilters = [];
+            foreach ($param["TagFilters"] as $key => $value){
+                $obj = new TagFilter();
+                $obj->deserialize($value);
+                array_push($this->TagFilters, $obj);
+            }
         }
     }
 }

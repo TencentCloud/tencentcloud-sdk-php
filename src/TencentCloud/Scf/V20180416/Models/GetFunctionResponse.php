@@ -122,6 +122,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocolParams(ProtocolParams $ProtocolParams) 设置HTTP函数配置ProtocolType访问协议，当前协议配置的参数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method InstanceConcurrencyConfig getInstanceConcurrencyConfig() 获取单实例多并发配置。只支持Web函数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceConcurrencyConfig(InstanceConcurrencyConfig $InstanceConcurrencyConfig) 设置单实例多并发配置。只支持Web函数。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDnsCache() 获取是否开启DNS缓存
  * @method void setDnsCache(string $DnsCache) 设置是否开启DNS缓存
  * @method IntranetConfigOut getIntranetConfig() 获取内网访问配置
@@ -365,6 +369,12 @@ class GetFunctionResponse extends AbstractModel
     public $ProtocolParams;
 
     /**
+     * @var InstanceConcurrencyConfig 单实例多并发配置。只支持Web函数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceConcurrencyConfig;
+
+    /**
      * @var string 是否开启DNS缓存
      */
     public $DnsCache;
@@ -431,6 +441,8 @@ class GetFunctionResponse extends AbstractModel
      * @param string $ProtocolType HTTP函数支持的访问协议。当前支持WebSockets协议。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProtocolParams $ProtocolParams HTTP函数配置ProtocolType访问协议，当前协议配置的参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceConcurrencyConfig $InstanceConcurrencyConfig 单实例多并发配置。只支持Web函数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DnsCache 是否开启DNS缓存
      * @param IntranetConfigOut $IntranetConfig 内网访问配置
@@ -657,6 +669,11 @@ class GetFunctionResponse extends AbstractModel
         if (array_key_exists("ProtocolParams",$param) and $param["ProtocolParams"] !== null) {
             $this->ProtocolParams = new ProtocolParams();
             $this->ProtocolParams->deserialize($param["ProtocolParams"]);
+        }
+
+        if (array_key_exists("InstanceConcurrencyConfig",$param) and $param["InstanceConcurrencyConfig"] !== null) {
+            $this->InstanceConcurrencyConfig = new InstanceConcurrencyConfig();
+            $this->InstanceConcurrencyConfig->deserialize($param["InstanceConcurrencyConfig"]);
         }
 
         if (array_key_exists("DnsCache",$param) and $param["DnsCache"] !== null) {

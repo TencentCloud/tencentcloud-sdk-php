@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessageRetention(integer $MessageRetention) 设置实例消息保留时间，小时为单位
  * @method boolean getEnableDeletionProtection() 获取是否开启删除保护
  * @method void setEnableDeletionProtection(boolean $EnableDeletionProtection) 设置是否开启删除保护
+ * @method float getSendReceiveRatio() 获取控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
+ * @method void setSendReceiveRatio(float $SendReceiveRatio) 设置控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
  */
 class ModifyRocketMQInstanceRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ModifyRocketMQInstanceRequest extends AbstractModel
     public $EnableDeletionProtection;
 
     /**
+     * @var float 控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
+     */
+    public $SendReceiveRatio;
+
+    /**
      * @param string $InstanceId 专享实例ID
      * @param string $Name 实例名称
      * @param string $Remark 实例备注信息
      * @param integer $MessageRetention 实例消息保留时间，小时为单位
      * @param boolean $EnableDeletionProtection 是否开启删除保护
+     * @param float $SendReceiveRatio 控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ModifyRocketMQInstanceRequest extends AbstractModel
 
         if (array_key_exists("EnableDeletionProtection",$param) and $param["EnableDeletionProtection"] !== null) {
             $this->EnableDeletionProtection = $param["EnableDeletionProtection"];
+        }
+
+        if (array_key_exists("SendReceiveRatio",$param) and $param["SendReceiveRatio"] !== null) {
+            $this->SendReceiveRatio = $param["SendReceiveRatio"];
         }
     }
 }

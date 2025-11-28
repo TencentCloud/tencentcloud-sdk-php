@@ -42,14 +42,8 @@ WEWORKAPP: 企业微信
 <br/>当ApproverSource为WEWORKAPP的企微或签场景下，必须指企业自有应用获取企业微信的UserId
  * @method void setCustomUserId(string $CustomUserId) 设置企业微信UserId
 <br/>当ApproverSource为WEWORKAPP的企微或签场景下，必须指企业自有应用获取企业微信的UserId
- * @method string getApproverName() 获取补充企业签署人员工姓名
-<ul>
-<li>ApproverSource!=WEWORKAPP时，必传</li>
-</ul>
- * @method void setApproverName(string $ApproverName) 设置补充企业签署人员工姓名
-<ul>
-<li>ApproverSource!=WEWORKAPP时，必传</li>
-</ul>
+ * @method string getApproverName() 获取企业签署人的员工姓名。除企业微信应用场景（ApproverSource设置为WEWORKAPP）外，本字段为必填。
+ * @method void setApproverName(string $ApproverName) 设置企业签署人的员工姓名。除企业微信应用场景（ApproverSource设置为WEWORKAPP）外，本字段为必填。
  * @method string getApproverMobile() 获取补充企业签署人员工手机号
 <ul>
 <li>ApproverSource!=WEWORKAPP时，必传</li>
@@ -138,10 +132,7 @@ WEWORKAPP: 企业微信
     public $CustomUserId;
 
     /**
-     * @var string 补充企业签署人员工姓名
-<ul>
-<li>ApproverSource!=WEWORKAPP时，必传</li>
-</ul>
+     * @var string 企业签署人的员工姓名。除企业微信应用场景（ApproverSource设置为WEWORKAPP）外，本字段为必填。
      */
     public $ApproverName;
 
@@ -212,10 +203,7 @@ WEWORKAPP: 企业微信
 <br/>仅【企微或签】时指定WEWORKAPP
      * @param string $CustomUserId 企业微信UserId
 <br/>当ApproverSource为WEWORKAPP的企微或签场景下，必须指企业自有应用获取企业微信的UserId
-     * @param string $ApproverName 补充企业签署人员工姓名
-<ul>
-<li>ApproverSource!=WEWORKAPP时，必传</li>
-</ul>
+     * @param string $ApproverName 企业签署人的员工姓名。除企业微信应用场景（ApproverSource设置为WEWORKAPP）外，本字段为必填。
      * @param string $ApproverMobile 补充企业签署人员工手机号
 <ul>
 <li>ApproverSource!=WEWORKAPP时，必传</li>

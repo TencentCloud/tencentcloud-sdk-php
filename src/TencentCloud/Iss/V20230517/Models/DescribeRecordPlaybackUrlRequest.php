@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(integer $EndTime) 设置回放结束时间，UTC秒数，例如：1662114246，开始和结束时间段最长为一天，且不能跨天
  * @method boolean getIsInternal() 获取是否获取内网地址
  * @method void setIsInternal(boolean $IsInternal) 设置是否获取内网地址
- * @method boolean getCorrectTimestamp() 获取云录像回放时，是否需要开启时间戳矫正，主要解决时间戳反转，会退等问题导致无法播放
- * @method void setCorrectTimestamp(boolean $CorrectTimestamp) 设置云录像回放时，是否需要开启时间戳矫正，主要解决时间戳反转，会退等问题导致无法播放
+ * @method boolean getCorrectTimestamp() 获取云录像回放时，是否需要开启时间戳矫正，主要解决时间戳反转、回退等问题导致无法播放
+ * @method void setCorrectTimestamp(boolean $CorrectTimestamp) 设置云录像回放时，是否需要开启时间戳矫正，主要解决时间戳反转、回退等问题导致无法播放
  */
 class DescribeRecordPlaybackUrlRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeRecordPlaybackUrlRequest extends AbstractModel
     public $IsInternal;
 
     /**
-     * @var boolean 云录像回放时，是否需要开启时间戳矫正，主要解决时间戳反转，会退等问题导致无法播放
+     * @var boolean 云录像回放时，是否需要开启时间戳矫正，主要解决时间戳反转、回退等问题导致无法播放
      */
     public $CorrectTimestamp;
 
@@ -63,7 +63,7 @@ class DescribeRecordPlaybackUrlRequest extends AbstractModel
      * @param integer $StartTime 回放开始时间，UTC秒数，例如：1662114146，开始和结束时间段最长为一天，且不能跨天
      * @param integer $EndTime 回放结束时间，UTC秒数，例如：1662114246，开始和结束时间段最长为一天，且不能跨天
      * @param boolean $IsInternal 是否获取内网地址
-     * @param boolean $CorrectTimestamp 云录像回放时，是否需要开启时间戳矫正，主要解决时间戳反转，会退等问题导致无法播放
+     * @param boolean $CorrectTimestamp 云录像回放时，是否需要开启时间戳矫正，主要解决时间戳反转、回退等问题导致无法播放
      */
     function __construct()
     {

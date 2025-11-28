@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSubscribeTopicNum() 获取订阅的主题个数
  * @method void setSubscribeTopicNum(integer $SubscribeTopicNum) 设置订阅的主题个数
+ * @method array getTagList() 获取绑定的标签列表
+ * @method void setTagList(array $TagList) 设置绑定的标签列表
  */
 class RocketMQGroup extends AbstractModel
 {
@@ -173,6 +175,11 @@ class RocketMQGroup extends AbstractModel
     public $SubscribeTopicNum;
 
     /**
+     * @var array 绑定的标签列表
+     */
+    public $TagList;
+
+    /**
      * @param string $Name 消费组名称
      * @param integer $ConsumerNum 在线消费者数量
      * @param integer $TPS 消费TPS
@@ -198,6 +205,7 @@ class RocketMQGroup extends AbstractModel
      * @param string $Namespace 命名空间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SubscribeTopicNum 订阅的主题个数
+     * @param array $TagList 绑定的标签列表
      */
     function __construct()
     {
@@ -282,6 +290,15 @@ class RocketMQGroup extends AbstractModel
 
         if (array_key_exists("SubscribeTopicNum",$param) and $param["SubscribeTopicNum"] !== null) {
             $this->SubscribeTopicNum = $param["SubscribeTopicNum"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
         }
     }
 }

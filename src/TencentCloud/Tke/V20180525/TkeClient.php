@@ -29,6 +29,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\AddNodeToNodePoolResponse AddNodeToNodePool(Models\AddNodeToNodePoolRequest $req) 将集群内节点移入节点池
  * @method Models\AddVpcCniSubnetsResponse AddVpcCniSubnets(Models\AddVpcCniSubnetsRequest $req) 针对VPC-CNI模式的集群，增加集群容器网络可使用的子网
  * @method Models\CancelClusterReleaseResponse CancelClusterRelease(Models\CancelClusterReleaseRequest $req) 在应用市场中取消安装失败的应用
+ * @method Models\CancelUpgradePlanResponse CancelUpgradePlan(Models\CancelUpgradePlanRequest $req) 取消升级计划
  * @method Models\CheckEdgeClusterCIDRResponse CheckEdgeClusterCIDR(Models\CheckEdgeClusterCIDRRequest $req) 检查边缘计算集群的CIDR是否冲突
  * @method Models\CheckInstancesUpgradeAbleResponse CheckInstancesUpgradeAble(Models\CheckInstancesUpgradeAbleRequest $req) 检查给定节点列表中哪些是可升级的
  * @method Models\CreateBackupStorageLocationResponse CreateBackupStorageLocation(Models\CreateBackupStorageLocationRequest $req) 创建备份仓库，指定了存储仓库类型（如COS）、COS桶地区、名称等信息，当前最多允许创建100个仓库， 注意此接口当前是全局接口，多个地域的TKE集群如果要备份到相同的备份仓库中，不需要重复创建备份仓库
@@ -37,6 +38,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\CreateClusterEndpointResponse CreateClusterEndpoint(Models\CreateClusterEndpointRequest $req) 创建集群访问端口
  * @method Models\CreateClusterEndpointVipResponse CreateClusterEndpointVip(Models\CreateClusterEndpointVipRequest $req) 创建托管集群外网访问端口（不再维护，准备下线）请使用新接口：CreateClusterEndpoint
  * @method Models\CreateClusterInstancesResponse CreateClusterInstances(Models\CreateClusterInstancesRequest $req) 扩展(新建)集群节点
+ * @method Models\CreateClusterMaintenanceWindowAndExclusionsResponse CreateClusterMaintenanceWindowAndExclusions(Models\CreateClusterMaintenanceWindowAndExclusionsRequest $req) 创建集群维护时间窗口和排除项
  * @method Models\CreateClusterNodePoolResponse CreateClusterNodePool(Models\CreateClusterNodePoolRequest $req) 创建节点池
  * @method Models\CreateClusterReleaseResponse CreateClusterRelease(Models\CreateClusterReleaseRequest $req) 集群创建应用
  * @method Models\CreateClusterRouteResponse CreateClusterRoute(Models\CreateClusterRouteRequest $req) 创建集群路由
@@ -49,6 +51,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\CreateEdgeCVMInstancesResponse CreateEdgeCVMInstances(Models\CreateEdgeCVMInstancesRequest $req) 创建边缘容器CVM机器
  * @method Models\CreateEdgeLogConfigResponse CreateEdgeLogConfig(Models\CreateEdgeLogConfigRequest $req) 创建边缘集群日志采集配置
  * @method Models\CreateEksLogConfigResponse CreateEksLogConfig(Models\CreateEksLogConfigRequest $req) 为弹性集群创建日志采集配置
+ * @method Models\CreateGlobalMaintenanceWindowAndExclusionsResponse CreateGlobalMaintenanceWindowAndExclusions(Models\CreateGlobalMaintenanceWindowAndExclusionsRequest $req) 创建全局维护时间窗口和排除项
  * @method Models\CreateImageCacheResponse CreateImageCache(Models\CreateImageCacheRequest $req) 创建镜像缓存的接口。创建过程中，请勿删除EKSCI实例和云盘，否则镜像缓存将创建失败。
  * @method Models\CreatePrometheusAlertPolicyResponse CreatePrometheusAlertPolicy(Models\CreatePrometheusAlertPolicyRequest $req) 创建告警策略
  * @method Models\CreatePrometheusAlertRuleResponse CreatePrometheusAlertRule(Models\CreatePrometheusAlertRuleRequest $req) 创建告警规则
@@ -60,6 +63,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\CreatePrometheusTempResponse CreatePrometheusTemp(Models\CreatePrometheusTempRequest $req) 创建一个云原生Prometheus模板
  * @method Models\CreatePrometheusTemplateResponse CreatePrometheusTemplate(Models\CreatePrometheusTemplateRequest $req) 创建一个云原生Prometheus模板实例
  * @method Models\CreateReservedInstancesResponse CreateReservedInstances(Models\CreateReservedInstancesRequest $req) 预留券实例的购买会预先扣除本次实例购买所需金额，在调用本接口前请确保账户余额充足。
+ * @method Models\CreateRollOutSequenceResponse CreateRollOutSequence(Models\CreateRollOutSequenceRequest $req) 创建集群发布序列
  * @method Models\CreateTKEEdgeClusterResponse CreateTKEEdgeCluster(Models\CreateTKEEdgeClusterRequest $req) 创建边缘计算集群
  * @method Models\DeleteAddonResponse DeleteAddon(Models\DeleteAddonRequest $req) 删除一个addon
  * @method Models\DeleteBackupStorageLocationResponse DeleteBackupStorageLocation(Models\DeleteBackupStorageLocationRequest $req) 删除备份仓库
@@ -68,6 +72,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DeleteClusterEndpointResponse DeleteClusterEndpoint(Models\DeleteClusterEndpointRequest $req) 删除集群访问端口
  * @method Models\DeleteClusterEndpointVipResponse DeleteClusterEndpointVip(Models\DeleteClusterEndpointVipRequest $req) 删除托管集群外网访问端口（老的方式，仅支持托管集群外网端口）
  * @method Models\DeleteClusterInstancesResponse DeleteClusterInstances(Models\DeleteClusterInstancesRequest $req) 删除集群中的实例
+ * @method Models\DeleteClusterMaintenanceWindowAndExclusionResponse DeleteClusterMaintenanceWindowAndExclusion(Models\DeleteClusterMaintenanceWindowAndExclusionRequest $req) 删除集群维护时间窗口和排除项
  * @method Models\DeleteClusterNodePoolResponse DeleteClusterNodePool(Models\DeleteClusterNodePoolRequest $req) 删除节点池
  * @method Models\DeleteClusterRouteResponse DeleteClusterRoute(Models\DeleteClusterRouteRequest $req) 删除集群路由
  * @method Models\DeleteClusterRouteTableResponse DeleteClusterRouteTable(Models\DeleteClusterRouteTableRequest $req) 删除集群路由表
@@ -78,6 +83,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DeleteEKSContainerInstancesResponse DeleteEKSContainerInstances(Models\DeleteEKSContainerInstancesRequest $req) 删除容器实例，可批量删除
  * @method Models\DeleteEdgeCVMInstancesResponse DeleteEdgeCVMInstances(Models\DeleteEdgeCVMInstancesRequest $req) 删除边缘容器CVM实例
  * @method Models\DeleteEdgeClusterInstancesResponse DeleteEdgeClusterInstances(Models\DeleteEdgeClusterInstancesRequest $req) 删除边缘计算实例
+ * @method Models\DeleteGlobalMaintenanceWindowAndExclusionResponse DeleteGlobalMaintenanceWindowAndExclusion(Models\DeleteGlobalMaintenanceWindowAndExclusionRequest $req) 删除全集维护时间窗口和排除项
  * @method Models\DeleteImageCachesResponse DeleteImageCaches(Models\DeleteImageCachesRequest $req) 批量删除镜像缓存
  * @method Models\DeleteLogConfigsResponse DeleteLogConfigs(Models\DeleteLogConfigsRequest $req) 删除集群内采集规则
  * @method Models\DeletePrometheusAlertPolicyResponse DeletePrometheusAlertPolicy(Models\DeletePrometheusAlertPolicyRequest $req) 删除2.0实例告警策略
@@ -90,6 +96,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DeletePrometheusTemplateResponse DeletePrometheusTemplate(Models\DeletePrometheusTemplateRequest $req) 删除一个云原生Prometheus配置模板
  * @method Models\DeletePrometheusTemplateSyncResponse DeletePrometheusTemplateSync(Models\DeletePrometheusTemplateSyncRequest $req) 取消模板同步，这将会删除目标中该模板所生产的配置
  * @method Models\DeleteReservedInstancesResponse DeleteReservedInstances(Models\DeleteReservedInstancesRequest $req) 预留券实例如符合退还规则，可通过本接口主动退还。
+ * @method Models\DeleteRollOutSequenceResponse DeleteRollOutSequence(Models\DeleteRollOutSequenceRequest $req) 删除集群发布序列
  * @method Models\DeleteTKEEdgeClusterResponse DeleteTKEEdgeCluster(Models\DeleteTKEEdgeClusterRequest $req) 删除边缘计算集群
  * @method Models\DescribeAddonResponse DescribeAddon(Models\DescribeAddonRequest $req) 获取addon列表
  * @method Models\DescribeAddonValuesResponse DescribeAddonValues(Models\DescribeAddonValuesRequest $req) 获取一个addon的参数
@@ -112,12 +119,14 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeClusterKubeconfigResponse DescribeClusterKubeconfig(Models\DescribeClusterKubeconfigRequest $req) 获取集群的kubeconfig文件，不同子账户获取自己的kubeconfig文件，该文件中有每个子账户自己的kube-apiserver的客户端证书，默认首次调此接口时候创建客户端证书，时效20年，未授予任何权限，如果是集群所有者或者主账户，则默认是cluster-admin权限。
  * @method Models\DescribeClusterLevelAttributeResponse DescribeClusterLevelAttribute(Models\DescribeClusterLevelAttributeRequest $req) 获取集群规模
  * @method Models\DescribeClusterLevelChangeRecordsResponse DescribeClusterLevelChangeRecords(Models\DescribeClusterLevelChangeRecordsRequest $req) 查询集群变配记录
+ * @method Models\DescribeClusterMaintenanceWindowAndExclusionsResponse DescribeClusterMaintenanceWindowAndExclusions(Models\DescribeClusterMaintenanceWindowAndExclusionsRequest $req) 获取集群维护时间窗口和排除项
  * @method Models\DescribeClusterNodePoolDetailResponse DescribeClusterNodePoolDetail(Models\DescribeClusterNodePoolDetailRequest $req) 查询节点池详情
  * @method Models\DescribeClusterNodePoolsResponse DescribeClusterNodePools(Models\DescribeClusterNodePoolsRequest $req) 查询节点池列表
  * @method Models\DescribeClusterPendingReleasesResponse DescribeClusterPendingReleases(Models\DescribeClusterPendingReleasesRequest $req) 在应用市场中查询正在安装中的应用列表
  * @method Models\DescribeClusterReleaseDetailsResponse DescribeClusterReleaseDetails(Models\DescribeClusterReleaseDetailsRequest $req) 查询通过应用市场安装的某个应用详情
  * @method Models\DescribeClusterReleaseHistoryResponse DescribeClusterReleaseHistory(Models\DescribeClusterReleaseHistoryRequest $req) 查询集群在应用市场中某个已安装应用的版本历史
  * @method Models\DescribeClusterReleasesResponse DescribeClusterReleases(Models\DescribeClusterReleasesRequest $req) 查询集群在应用市场中已安装应用列表
+ * @method Models\DescribeClusterRollOutSequenceTagsResponse DescribeClusterRollOutSequenceTags(Models\DescribeClusterRollOutSequenceTagsRequest $req) 查询集群发布序列标签
  * @method Models\DescribeClusterRouteTablesResponse DescribeClusterRouteTables(Models\DescribeClusterRouteTablesRequest $req) 查询集群路由表
  * @method Models\DescribeClusterRoutesResponse DescribeClusterRoutes(Models\DescribeClusterRoutesRequest $req) 查询集群路由
  * @method Models\DescribeClusterSecurityResponse DescribeClusterSecurity(Models\DescribeClusterSecurityRequest $req) 集群的密钥信息
@@ -142,6 +151,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeEncryptionStatusResponse DescribeEncryptionStatus(Models\DescribeEncryptionStatusRequest $req) 查询etcd数据是否进行加密
  * @method Models\DescribeExistedInstancesResponse DescribeExistedInstances(Models\DescribeExistedInstancesRequest $req) 查询已经存在的节点，判断是否可以加入集群
  * @method Models\DescribeExternalNodeSupportConfigResponse DescribeExternalNodeSupportConfig(Models\DescribeExternalNodeSupportConfigRequest $req) 查看开启第三方节点池配置信息
+ * @method Models\DescribeGlobalMaintenanceWindowAndExclusionsResponse DescribeGlobalMaintenanceWindowAndExclusions(Models\DescribeGlobalMaintenanceWindowAndExclusionsRequest $req) 获取全局维护时间窗口和排除项
  * @method Models\DescribeIPAMDResponse DescribeIPAMD(Models\DescribeIPAMDRequest $req) 获取eniipamd组件信息
  * @method Models\DescribeImageCachesResponse DescribeImageCaches(Models\DescribeImageCachesRequest $req) 查询镜像缓存信息接口
  * @method Models\DescribeImagesResponse DescribeImages(Models\DescribeImagesRequest $req) 获取镜像信息
@@ -178,6 +188,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeReservedInstanceUtilizationRateResponse DescribeReservedInstanceUtilizationRate(Models\DescribeReservedInstanceUtilizationRateRequest $req) 查询各种规格类型的预留券使用率
  * @method Models\DescribeReservedInstancesResponse DescribeReservedInstances(Models\DescribeReservedInstancesRequest $req) 查询预留实例列表
  * @method Models\DescribeResourceUsageResponse DescribeResourceUsage(Models\DescribeResourceUsageRequest $req) 获取集群资源使用量
+ * @method Models\DescribeRollOutSequencesResponse DescribeRollOutSequences(Models\DescribeRollOutSequencesRequest $req) 查询集群发布序列
  * @method Models\DescribeRouteTableConflictsResponse DescribeRouteTableConflicts(Models\DescribeRouteTableConflictsRequest $req) 查询路由表冲突列表
  * @method Models\DescribeSupportedRuntimeResponse DescribeSupportedRuntime(Models\DescribeSupportedRuntimeRequest $req) 根据K8S版本获取可选运行时版本
  * @method Models\DescribeTKEEdgeClusterCredentialResponse DescribeTKEEdgeClusterCredential(Models\DescribeTKEEdgeClusterCredentialRequest $req) 获取边缘计算集群的认证信息
@@ -186,6 +197,8 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeTKEEdgeExternalKubeconfigResponse DescribeTKEEdgeExternalKubeconfig(Models\DescribeTKEEdgeExternalKubeconfigRequest $req) 获取边缘计算外部访问的kubeconfig
  * @method Models\DescribeTKEEdgeScriptResponse DescribeTKEEdgeScript(Models\DescribeTKEEdgeScriptRequest $req) 获取边缘脚本链接，此接口用于添加第三方节点，通过下载脚本从而将节点添加到边缘集群。
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 查询任务相关信息，只会查询对应任务类型的最新的一条任务状态
+ * @method Models\DescribeUpgradeTaskDetailResponse DescribeUpgradeTaskDetail(Models\DescribeUpgradeTaskDetailRequest $req) 查询计划升级任务详情
+ * @method Models\DescribeUpgradeTasksResponse DescribeUpgradeTasks(Models\DescribeUpgradeTasksRequest $req) 查询计划升级任务
  * @method Models\DescribeVersionsResponse DescribeVersions(Models\DescribeVersionsRequest $req) 获取集群版本信息
  * @method Models\DescribeVpcCniPodLimitsResponse DescribeVpcCniPodLimits(Models\DescribeVpcCniPodLimitsRequest $req) 本接口查询当前用户和地域在指定可用区下的机型可支持的最大 TKE VPC-CNI 网络模式的 Pod 数量
  * @method Models\DisableClusterAuditResponse DisableClusterAudit(Models\DisableClusterAuditRequest $req) 关闭集群审计
@@ -217,10 +230,13 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\ModifyClusterExtraArgsResponse ModifyClusterExtraArgs(Models\ModifyClusterExtraArgsRequest $req) 更新集群自定义参数，只支持托管集群
  * @method Models\ModifyClusterExtraArgsTaskStateResponse ModifyClusterExtraArgsTaskState(Models\ModifyClusterExtraArgsTaskStateRequest $req) 暂停或者取消集群更新参数任务
  * @method Models\ModifyClusterImageResponse ModifyClusterImage(Models\ModifyClusterImageRequest $req) 修改集群镜像
+ * @method Models\ModifyClusterMaintenanceWindowAndExclusionsResponse ModifyClusterMaintenanceWindowAndExclusions(Models\ModifyClusterMaintenanceWindowAndExclusionsRequest $req) 更新集群维护时间窗口和排除项
  * @method Models\ModifyClusterNodePoolResponse ModifyClusterNodePool(Models\ModifyClusterNodePoolRequest $req) 编辑节点池
+ * @method Models\ModifyClusterRollOutSequenceTagsResponse ModifyClusterRollOutSequenceTags(Models\ModifyClusterRollOutSequenceTagsRequest $req) 更新集群发布序列标签
  * @method Models\ModifyClusterRuntimeConfigResponse ModifyClusterRuntimeConfig(Models\ModifyClusterRuntimeConfigRequest $req) 修改集群及节点池维度运行时配置
  * @method Models\ModifyClusterTagsResponse ModifyClusterTags(Models\ModifyClusterTagsRequest $req) 修改集群标签
  * @method Models\ModifyClusterVirtualNodePoolResponse ModifyClusterVirtualNodePool(Models\ModifyClusterVirtualNodePoolRequest $req) 修改超级节点池
+ * @method Models\ModifyGlobalMaintenanceWindowAndExclusionsResponse ModifyGlobalMaintenanceWindowAndExclusions(Models\ModifyGlobalMaintenanceWindowAndExclusionsRequest $req) 更新全局维护时间窗口和排除项
  * @method Models\ModifyMasterComponentResponse ModifyMasterComponent(Models\ModifyMasterComponentRequest $req) 修改master组件，支持kube-apiserver、kube-scheduler、kube-controller-manager副本数调整为0和恢复
  * @method Models\ModifyNodePoolDesiredCapacityAboutAsgResponse ModifyNodePoolDesiredCapacityAboutAsg(Models\ModifyNodePoolDesiredCapacityAboutAsgRequest $req) 修改节点池关联伸缩组的期望实例数
  * @method Models\ModifyNodePoolInstanceTypesResponse ModifyNodePoolInstanceTypes(Models\ModifyNodePoolInstanceTypesRequest $req) 修改节点池的机型配置
@@ -234,6 +250,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\ModifyPrometheusTempResponse ModifyPrometheusTemp(Models\ModifyPrometheusTempRequest $req) 修改模板内容
  * @method Models\ModifyPrometheusTemplateResponse ModifyPrometheusTemplate(Models\ModifyPrometheusTemplateRequest $req) 修改模板内容
  * @method Models\ModifyReservedInstanceScopeResponse ModifyReservedInstanceScope(Models\ModifyReservedInstanceScopeRequest $req) 修改预留券的抵扣范围，抵扣范围取值：Region、Zone 和 Node。
+ * @method Models\ModifyRollOutSequenceResponse ModifyRollOutSequence(Models\ModifyRollOutSequenceRequest $req) 更新集群发布序列
  * @method Models\RemoveNodeFromNodePoolResponse RemoveNodeFromNodePool(Models\RemoveNodeFromNodePoolRequest $req) 移出节点池节点，但保留在集群内
  * @method Models\RenewReservedInstancesResponse RenewReservedInstances(Models\RenewReservedInstancesRequest $req) 续费时请确保账户余额充足。
  * @method Models\RestartEKSContainerInstancesResponse RestartEKSContainerInstances(Models\RestartEKSContainerInstancesRequest $req) 重启弹性容器实例，支持批量操作
@@ -242,6 +259,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\ScaleInClusterMasterResponse ScaleInClusterMaster(Models\ScaleInClusterMasterRequest $req) 缩容独立集群master节点，本功能为内测能力，使用之前请先提单联系我们。
  * @method Models\ScaleOutClusterMasterResponse ScaleOutClusterMaster(Models\ScaleOutClusterMasterRequest $req) 扩容独立集群master节点
  * @method Models\SetNodePoolNodeProtectionResponse SetNodePoolNodeProtection(Models\SetNodePoolNodeProtectionRequest $req) 仅能设置节点池中处于伸缩组的节点
+ * @method Models\SwitchClusterEndpointResponse SwitchClusterEndpoint(Models\SwitchClusterEndpointRequest $req) 切换集群网络访问链路为直连
  * @method Models\SyncPrometheusTempResponse SyncPrometheusTemp(Models\SyncPrometheusTempRequest $req) 同步模板到实例或者集群，针对V2版本实例
  * @method Models\SyncPrometheusTemplateResponse SyncPrometheusTemplate(Models\SyncPrometheusTemplateRequest $req) 同步模板到实例或者集群
  * @method Models\UninstallClusterReleaseResponse UninstallClusterRelease(Models\UninstallClusterReleaseRequest $req) 在应用市场中集群删除某个应用

@@ -29,21 +29,21 @@ use TencentCloud\Common\AbstractModel;
  * @method string getClusterName() 获取集群名称
  * @method void setClusterName(string $ClusterName) 设置集群名称
  * @method string getNodeSpec() 获取集群的节点规格，需要输入对应的规格标识：
-2C8G：rabbit-vip-basic-2c8g
-4C16G：rabbit-vip-basic-4c16g
-8C32G：rabbit-vip-basic-8c32g
+2C8G：rabbit-vip-profession-2c8g
+4C16G：rabbit-vip-profession-4c16g
+8C32G：rabbit-vip-profession-8c32g
 16C32G：rabbit-vip-basic-4
-16C64G：rabbit-vip-basic-16c64g
+16C64G：rabbit-vip-profession-16c64g
 2C4G：rabbit-vip-basic-5
 4C8G：rabbit-vip-basic-1
 8C16G（已售罄）：rabbit-vip-basic-2
 不传默认为 4C8G：rabbit-vip-basic-1
  * @method void setNodeSpec(string $NodeSpec) 设置集群的节点规格，需要输入对应的规格标识：
-2C8G：rabbit-vip-basic-2c8g
-4C16G：rabbit-vip-basic-4c16g
-8C32G：rabbit-vip-basic-8c32g
+2C8G：rabbit-vip-profession-2c8g
+4C16G：rabbit-vip-profession-4c16g
+8C32G：rabbit-vip-profession-8c32g
 16C32G：rabbit-vip-basic-4
-16C64G：rabbit-vip-basic-16c64g
+16C64G：rabbit-vip-profession-16c64g
 2C4G：rabbit-vip-basic-5
 4C8G：rabbit-vip-basic-1
 8C16G（已售罄）：rabbit-vip-basic-2
@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeSpan(integer $TimeSpan) 设置购买时长,不传默认为1(月)
  * @method integer getPayMode() 获取付费方式，0 为后付费，即按量计费；1 为预付费，即包年包月。默认包年包月
  * @method void setPayMode(integer $PayMode) 设置付费方式，0 为后付费，即按量计费；1 为预付费，即包年包月。默认包年包月
- * @method string getClusterVersion() 获取集群版本，不传默认为 3.8.30，可选值为 3.8.30 和 3.11.8
- * @method void setClusterVersion(string $ClusterVersion) 设置集群版本，不传默认为 3.8.30，可选值为 3.8.30 和 3.11.8
+ * @method string getClusterVersion() 获取集群版本，不传默认为 3.8.30，可选值为 3.8.30、3.11.8和3.13.7
+ * @method void setClusterVersion(string $ClusterVersion) 设置集群版本，不传默认为 3.8.30，可选值为 3.8.30、3.11.8和3.13.7
  * @method boolean getIsIntl() 获取是否国际站请求，默认 false
  * @method void setIsIntl(boolean $IsIntl) 设置是否国际站请求，默认 false
  * @method array getResourceTags() 获取资源标签列表
@@ -97,11 +97,11 @@ class CreateRabbitMQVipInstanceRequest extends AbstractModel
 
     /**
      * @var string 集群的节点规格，需要输入对应的规格标识：
-2C8G：rabbit-vip-basic-2c8g
-4C16G：rabbit-vip-basic-4c16g
-8C32G：rabbit-vip-basic-8c32g
+2C8G：rabbit-vip-profession-2c8g
+4C16G：rabbit-vip-profession-4c16g
+8C32G：rabbit-vip-profession-8c32g
 16C32G：rabbit-vip-basic-4
-16C64G：rabbit-vip-basic-16c64g
+16C64G：rabbit-vip-profession-16c64g
 2C4G：rabbit-vip-basic-5
 4C8G：rabbit-vip-basic-1
 8C16G（已售罄）：rabbit-vip-basic-2
@@ -140,7 +140,7 @@ class CreateRabbitMQVipInstanceRequest extends AbstractModel
     public $PayMode;
 
     /**
-     * @var string 集群版本，不传默认为 3.8.30，可选值为 3.8.30 和 3.11.8
+     * @var string 集群版本，不传默认为 3.8.30，可选值为 3.8.30、3.11.8和3.13.7
      */
     public $ClusterVersion;
 
@@ -175,11 +175,11 @@ class CreateRabbitMQVipInstanceRequest extends AbstractModel
      * @param string $SubnetId 私有网络子网 ID，形如 subnet-xxx。有效的私有网络子网 ID 可通过登录[子网控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的 unSubnetId 字段获取。若在创建子机时 SubnetId 与 VpcId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
      * @param string $ClusterName 集群名称
      * @param string $NodeSpec 集群的节点规格，需要输入对应的规格标识：
-2C8G：rabbit-vip-basic-2c8g
-4C16G：rabbit-vip-basic-4c16g
-8C32G：rabbit-vip-basic-8c32g
+2C8G：rabbit-vip-profession-2c8g
+4C16G：rabbit-vip-profession-4c16g
+8C32G：rabbit-vip-profession-8c32g
 16C32G：rabbit-vip-basic-4
-16C64G：rabbit-vip-basic-16c64g
+16C64G：rabbit-vip-profession-16c64g
 2C4G：rabbit-vip-basic-5
 4C8G：rabbit-vip-basic-1
 8C16G（已售罄）：rabbit-vip-basic-2
@@ -190,7 +190,7 @@ class CreateRabbitMQVipInstanceRequest extends AbstractModel
      * @param boolean $AutoRenewFlag 仅预付费集群（PayMode 参数为 1 时）使用该参数，表示是否自动续费，true 表示打开自动续费。不传默认为 true
      * @param integer $TimeSpan 购买时长,不传默认为1(月)
      * @param integer $PayMode 付费方式，0 为后付费，即按量计费；1 为预付费，即包年包月。默认包年包月
-     * @param string $ClusterVersion 集群版本，不传默认为 3.8.30，可选值为 3.8.30 和 3.11.8
+     * @param string $ClusterVersion 集群版本，不传默认为 3.8.30，可选值为 3.8.30、3.11.8和3.13.7
      * @param boolean $IsIntl 是否国际站请求，默认 false
      * @param array $ResourceTags 资源标签列表
      * @param integer $Bandwidth 公网带宽大小，单位 Mbps

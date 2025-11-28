@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 合同对比差异结果详情。
  *
+ * @method string getComparisonPointId() 获取合同对比差异点唯一ID。
+ * @method void setComparisonPointId(string $ComparisonPointId) 设置合同对比差异点唯一ID。
  * @method string getComparisonType() 获取对比前后差异类型，具体如下：
 <ul><li> **add**：新增</li>
 <li> **change**：变更</li>
@@ -47,6 +49,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class ComparisonDetail extends AbstractModel
 {
+    /**
+     * @var string 合同对比差异点唯一ID。
+     */
+    public $ComparisonPointId;
+
     /**
      * @var string 对比前后差异类型，具体如下：
 <ul><li> **add**：新增</li>
@@ -76,6 +83,7 @@ class ComparisonDetail extends AbstractModel
     public $DiffText;
 
     /**
+     * @param string $ComparisonPointId 合同对比差异点唯一ID。
      * @param string $ComparisonType 对比前后差异类型，具体如下：
 <ul><li> **add**：新增</li>
 <li> **change**：变更</li>
@@ -102,6 +110,10 @@ class ComparisonDetail extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ComparisonPointId",$param) and $param["ComparisonPointId"] !== null) {
+            $this->ComparisonPointId = $param["ComparisonPointId"];
+        }
+
         if (array_key_exists("ComparisonType",$param) and $param["ComparisonType"] !== null) {
             $this->ComparisonType = $param["ComparisonType"];
         }

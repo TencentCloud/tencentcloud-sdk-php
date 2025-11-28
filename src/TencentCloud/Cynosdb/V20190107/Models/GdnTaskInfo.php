@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStandbyClusterRegion(string $StandbyClusterRegion) 设置从集群所在地域
  * @method string getStandbyClusterId() 获取从集群ID
  * @method void setStandbyClusterId(string $StandbyClusterId) 设置从集群ID
- * @method string getStandbyClusterName() 获取从集群别名
- * @method void setStandbyClusterName(string $StandbyClusterName) 设置从集群别名
+ * @method string getStandbyClusterName() 获取从集群名称
+ * @method void setStandbyClusterName(string $StandbyClusterName) 设置从集群名称
  */
 class GdnTaskInfo extends AbstractModel
 {
@@ -68,7 +68,7 @@ class GdnTaskInfo extends AbstractModel
     public $StandbyClusterId;
 
     /**
-     * @var string 从集群别名
+     * @var string 从集群名称
      */
     public $StandbyClusterName;
 
@@ -79,7 +79,7 @@ class GdnTaskInfo extends AbstractModel
      * @param string $PrimaryClusterRegion 主集群所在地域
      * @param string $StandbyClusterRegion 从集群所在地域
      * @param string $StandbyClusterId 从集群ID
-     * @param string $StandbyClusterName 从集群别名
+     * @param string $StandbyClusterName 从集群名称
      */
     function __construct()
     {

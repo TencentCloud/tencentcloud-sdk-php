@@ -27,6 +27,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\AddAntiInfoLeakRulesResponse AddAntiInfoLeakRules(Models\AddAntiInfoLeakRulesRequest $req) 添加信息防泄漏规则
  * @method Models\AddAreaBanAreasResponse AddAreaBanAreas(Models\AddAreaBanAreasRequest $req) 添加地域封禁中的地域信息
  * @method Models\AddAttackWhiteRuleResponse AddAttackWhiteRule(Models\AddAttackWhiteRuleRequest $req) 供用户控制台调用，增加Tiga规则引擎白名单。
+ * @method Models\AddBypassAllRuleResponse AddBypassAllRule(Models\AddBypassAllRuleRequest $req) 添加一键bypass能力支持,直接添加APPID
  * @method Models\AddCustomRuleResponse AddCustomRule(Models\AddCustomRuleRequest $req) 增加访问控制（自定义策略）
  * @method Models\AddCustomWhiteRuleResponse AddCustomWhiteRule(Models\AddCustomWhiteRuleRequest $req) 增加精准白名单规则
  * @method Models\AddDomainWhiteRuleResponse AddDomainWhiteRule(Models\AddDomainWhiteRuleRequest $req) 增加域名规则白名单
@@ -206,7 +207,9 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\ModifyWafThreatenIntelligenceResponse ModifyWafThreatenIntelligence(Models\ModifyWafThreatenIntelligenceRequest $req) 配置WAF威胁情报封禁模块详情
  * @method Models\ModifyWebshellStatusResponse ModifyWebshellStatus(Models\ModifyWebshellStatusRequest $req) 设置域名的webshell状态。
  * @method Models\PostAttackDownloadTaskResponse PostAttackDownloadTask(Models\PostAttackDownloadTaskRequest $req) 创建搜索下载攻击日志任务，使用CLS新版本的搜索下载getlog接口
+ * @method Models\QueryBypassAllStatusResponse QueryBypassAllStatus(Models\QueryBypassAllStatusRequest $req) 查询该用户是否被加入了全局的bypass列表
  * @method Models\RefreshAccessCheckResultResponse RefreshAccessCheckResult(Models\RefreshAccessCheckResultRequest $req) 刷新接入检查的结果，后台会生成接入检查任务
+ * @method Models\RemoveBypassAllRuleResponse RemoveBypassAllRule(Models\RemoveBypassAllRuleRequest $req) 删除一键bypass规则
  * @method Models\SearchAccessLogResponse SearchAccessLog(Models\SearchAccessLogRequest $req) 本接口用于搜索WAF访问日志
  * @method Models\SearchAttackLogResponse SearchAttackLog(Models\SearchAttackLogRequest $req) 新版本CLS接口存在参数变化，query改成了query_string支持lucence语法接口搜索查询。
  * @method Models\SearchLogResponse SearchLog(Models\SearchLogRequest $req) 本接口用于检索分析日志，使用该接口时请注意如下事项：

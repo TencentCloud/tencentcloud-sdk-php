@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMsgId(string $MsgId) 设置消息ID。
  * @method string getProducerName() 获取生产者名称。
  * @method void setProducerName(string $ProducerName) 设置生产者名称。
+ * @method string getKey() 获取消息 key
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKey(string $Key) 设置消息 key
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMetadata() 获取消息的元数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMetadata(string $Metadata) 设置消息的元数据信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -68,6 +76,18 @@ class DescribeMsgResponse extends AbstractModel
     public $ProducerName;
 
     /**
+     * @var string 消息 key
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Key;
+
+    /**
+     * @var string 消息的元数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Metadata;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -79,6 +99,10 @@ class DescribeMsgResponse extends AbstractModel
      * @param string $ProduceTime 生产时间。
      * @param string $MsgId 消息ID。
      * @param string $ProducerName 生产者名称。
+     * @param string $Key 消息 key
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Metadata 消息的元数据信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -116,6 +140,14 @@ class DescribeMsgResponse extends AbstractModel
 
         if (array_key_exists("ProducerName",$param) and $param["ProducerName"] !== null) {
             $this->ProducerName = $param["ProducerName"];
+        }
+
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
+        }
+
+        if (array_key_exists("Metadata",$param) and $param["Metadata"] !== null) {
+            $this->Metadata = $param["Metadata"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

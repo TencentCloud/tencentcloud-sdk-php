@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) 设置升级时间 ：no（升级完成时）yes（实例维护时间）
  * @method array getProxyZones() 获取数据库代理节点信息
  * @method void setProxyZones(array $ProxyZones) 设置数据库代理节点信息
+ * @method string getIsRollUpgrade() 获取是否滚动升级
+ * @method void setIsRollUpgrade(string $IsRollUpgrade) 设置是否滚动升级
+ * @method integer getRollUpgradeWaitingTime() 获取滚动升级等待时间，单位：秒
+ * @method void setRollUpgradeWaitingTime(integer $RollUpgradeWaitingTime) 设置滚动升级等待时间，单位：秒
  */
 class UpgradeProxyRequest extends AbstractModel
 {
@@ -80,6 +84,16 @@ class UpgradeProxyRequest extends AbstractModel
     public $ProxyZones;
 
     /**
+     * @var string 是否滚动升级
+     */
+    public $IsRollUpgrade;
+
+    /**
+     * @var integer 滚动升级等待时间，单位：秒
+     */
+    public $RollUpgradeWaitingTime;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param integer $Cpu cpu核数
      * @param integer $Mem 内存
@@ -88,6 +102,8 @@ class UpgradeProxyRequest extends AbstractModel
      * @param string $ReloadBalance 重新负载均衡：auto（自动），manual（手动）
      * @param string $IsInMaintainPeriod 升级时间 ：no（升级完成时）yes（实例维护时间）
      * @param array $ProxyZones 数据库代理节点信息
+     * @param string $IsRollUpgrade 是否滚动升级
+     * @param integer $RollUpgradeWaitingTime 滚动升级等待时间，单位：秒
      */
     function __construct()
     {
@@ -137,6 +153,14 @@ class UpgradeProxyRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ProxyZones, $obj);
             }
+        }
+
+        if (array_key_exists("IsRollUpgrade",$param) and $param["IsRollUpgrade"] !== null) {
+            $this->IsRollUpgrade = $param["IsRollUpgrade"];
+        }
+
+        if (array_key_exists("RollUpgradeWaitingTime",$param) and $param["RollUpgradeWaitingTime"] !== null) {
+            $this->RollUpgradeWaitingTime = $param["RollUpgradeWaitingTime"];
         }
     }
 }

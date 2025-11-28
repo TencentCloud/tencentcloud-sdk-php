@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 入侵防御日志rule_threatinfo
 访问控制日志：互联网边界规则rule_acl，NAT边界规则rule_acl，内网间规则rule_vpcacl，企业安全组rule_sg
 操作日志：防火墙开关-开关操作operate_switch，防火墙开关-实例配置operate_instance，资产中心操作operate_assetgroup，访问控制操作operate_acl，零信任防护操作operate_identity，入侵防御操作-入侵防御operate_ids，入侵防御操作-安全基线operate_baseline，常用工具操作operate_tool，网络蜜罐操作operate_honeypot，日志投递操作operate_logdelivery，通用设置操作operate_logstorage，登录日志operate_login
- * @method integer getLimit() 获取每页条数，最大支持2000
- * @method void setLimit(integer $Limit) 设置每页条数，最大支持2000
+ * @method integer getLimit() 获取每页条数，最大支持1000
+ * @method void setLimit(integer $Limit) 设置每页条数，最大支持1000
  * @method integer getOffset() 获取偏移值，最大支持60000
  * @method void setOffset(integer $Offset) 设置偏移值，最大支持60000
  * @method string getStartTime() 获取筛选开始时间
@@ -53,7 +53,7 @@ class DescribeLogsRequest extends AbstractModel
     public $Index;
 
     /**
-     * @var integer 每页条数，最大支持2000
+     * @var integer 每页条数，最大支持1000
      */
     public $Limit;
 
@@ -83,7 +83,7 @@ class DescribeLogsRequest extends AbstractModel
 入侵防御日志rule_threatinfo
 访问控制日志：互联网边界规则rule_acl，NAT边界规则rule_acl，内网间规则rule_vpcacl，企业安全组rule_sg
 操作日志：防火墙开关-开关操作operate_switch，防火墙开关-实例配置operate_instance，资产中心操作operate_assetgroup，访问控制操作operate_acl，零信任防护操作operate_identity，入侵防御操作-入侵防御operate_ids，入侵防御操作-安全基线operate_baseline，常用工具操作operate_tool，网络蜜罐操作operate_honeypot，日志投递操作operate_logdelivery，通用设置操作operate_logstorage，登录日志operate_login
-     * @param integer $Limit 每页条数，最大支持2000
+     * @param integer $Limit 每页条数，最大支持1000
      * @param integer $Offset 偏移值，最大支持60000
      * @param string $StartTime 筛选开始时间
      * @param string $EndTime 筛选结束时间

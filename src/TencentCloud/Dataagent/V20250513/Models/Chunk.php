@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContent(string $Content) 设置切片内容
  * @method integer getSize() 获取切片的字数
  * @method void setSize(integer $Size) 设置切片的字数
+ * @method string getSummary() 获取切片概要
+ * @method void setSummary(string $Summary) 设置切片概要
  */
 class Chunk extends AbstractModel
 {
@@ -45,9 +47,15 @@ class Chunk extends AbstractModel
     public $Size;
 
     /**
+     * @var string 切片概要
+     */
+    public $Summary;
+
+    /**
      * @param string $Id 切片ID
      * @param string $Content 切片内容
      * @param integer $Size 切片的字数
+     * @param string $Summary 切片概要
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class Chunk extends AbstractModel
 
         if (array_key_exists("Size",$param) and $param["Size"] !== null) {
             $this->Size = $param["Size"];
+        }
+
+        if (array_key_exists("Summary",$param) and $param["Summary"] !== null) {
+            $this->Summary = $param["Summary"];
         }
     }
 }

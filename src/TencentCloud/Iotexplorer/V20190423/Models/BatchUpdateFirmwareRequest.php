@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFwType(string $FwType) 设置固件模块
  * @method string getTaskUserDefine() 获取用户自定义信息
  * @method void setTaskUserDefine(string $TaskUserDefine) 设置用户自定义信息
+ * @method integer getRateLimit() 获取每分钟下发设备量
+ * @method void setRateLimit(integer $RateLimit) 设置每分钟下发设备量
  */
 class BatchUpdateFirmwareRequest extends AbstractModel
 {
@@ -136,6 +138,11 @@ class BatchUpdateFirmwareRequest extends AbstractModel
     public $TaskUserDefine;
 
     /**
+     * @var integer 每分钟下发设备量
+     */
+    public $RateLimit;
+
+    /**
      * @param string $ProductID 产品ID
      * @param string $FirmwareVersion 固件新版本号
      * @param string $FirmwareOriVersion 固件原版本号
@@ -152,6 +159,7 @@ class BatchUpdateFirmwareRequest extends AbstractModel
      * @param integer $RetryInterval 重试间隔min
      * @param string $FwType 固件模块
      * @param string $TaskUserDefine 用户自定义信息
+     * @param integer $RateLimit 每分钟下发设备量
      */
     function __construct()
     {
@@ -228,6 +236,10 @@ class BatchUpdateFirmwareRequest extends AbstractModel
 
         if (array_key_exists("TaskUserDefine",$param) and $param["TaskUserDefine"] !== null) {
             $this->TaskUserDefine = $param["TaskUserDefine"];
+        }
+
+        if (array_key_exists("RateLimit",$param) and $param["RateLimit"] !== null) {
+            $this->RateLimit = $param["RateLimit"];
         }
     }
 }

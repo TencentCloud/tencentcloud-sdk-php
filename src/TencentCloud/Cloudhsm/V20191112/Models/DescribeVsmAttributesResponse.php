@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRenewFlag(integer $RenewFlag) 设置资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
  * @method string getManufacturer() 获取厂商
  * @method void setManufacturer(string $Manufacturer) 设置厂商
+ * @method integer getPqcFlag() 获取0-关闭，1-开启
+ * @method void setPqcFlag(integer $PqcFlag) 设置0-关闭，1-开启
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -187,6 +189,11 @@ class DescribeVsmAttributesResponse extends AbstractModel
     public $Manufacturer;
 
     /**
+     * @var integer 0-关闭，1-开启
+     */
+    public $PqcFlag;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -215,6 +222,7 @@ class DescribeVsmAttributesResponse extends AbstractModel
      * @param array $Tags 资源所关联的标签Tag
      * @param integer $RenewFlag 资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
      * @param string $Manufacturer 厂商
+     * @param integer $PqcFlag 0-关闭，1-开启
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -330,6 +338,10 @@ class DescribeVsmAttributesResponse extends AbstractModel
 
         if (array_key_exists("Manufacturer",$param) and $param["Manufacturer"] !== null) {
             $this->Manufacturer = $param["Manufacturer"];
+        }
+
+        if (array_key_exists("PqcFlag",$param) and $param["PqcFlag"] !== null) {
+            $this->PqcFlag = $param["PqcFlag"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

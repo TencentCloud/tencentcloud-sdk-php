@@ -120,17 +120,9 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\DescribeRocketMQPublicAccessPointResponse DescribeRocketMQPublicAccessPoint(Models\DescribeRocketMQPublicAccessPointRequest $req) 接口用于查询RocketMQ实例的公网接入信息
  * @method Models\DescribeRocketMQRolesResponse DescribeRocketMQRoles(Models\DescribeRocketMQRolesRequest $req) 获取角色列表
  * @method Models\DescribeRocketMQSmoothMigrationTaskResponse DescribeRocketMQSmoothMigrationTask(Models\DescribeRocketMQSmoothMigrationTaskRequest $req) 用于获取RocketMQ平滑迁移任务详情
- * @method Models\DescribeRocketMQSmoothMigrationTaskListResponse DescribeRocketMQSmoothMigrationTaskList(Models\DescribeRocketMQSmoothMigrationTaskListRequest $req) 平滑迁移相关接口已迁移至trocket产品下，该接口已废弃
-
-用于查询RocketMQ平滑迁移任务列表
- * @method Models\DescribeRocketMQSourceClusterGroupListResponse DescribeRocketMQSourceClusterGroupList(Models\DescribeRocketMQSourceClusterGroupListRequest $req) 平滑迁移相关接口已迁移至trocket产品下，该接口已废弃
-
-平滑迁移过程获取源集群group列表接口
- * @method Models\DescribeRocketMQSourceClusterTopicListResponse DescribeRocketMQSourceClusterTopicList(Models\DescribeRocketMQSourceClusterTopicListRequest $req) 平滑迁移相关接口已迁移至trocket产品下，该接口已废弃
-
-平滑迁移过程获取源集群topic列表接口
  * @method Models\DescribeRocketMQSubscriptionsResponse DescribeRocketMQSubscriptions(Models\DescribeRocketMQSubscriptionsRequest $req) 用于获取RocketMQ消费组订阅关系数据
  * @method Models\DescribeRocketMQTopUsagesResponse DescribeRocketMQTopUsages(Models\DescribeRocketMQTopUsagesRequest $req) 用于获取RocketMQ指标排序列表，比如集群实例下占用存储空间最多的主题排序。
+ * @method Models\DescribeRocketMQTopicResponse DescribeRocketMQTopic(Models\DescribeRocketMQTopicRequest $req) 获取RocketMQ主题详情
  * @method Models\DescribeRocketMQTopicMsgsResponse DescribeRocketMQTopicMsgs(Models\DescribeRocketMQTopicMsgsRequest $req) rocketmq 消息查询
  * @method Models\DescribeRocketMQTopicStatsResponse DescribeRocketMQTopicStats(Models\DescribeRocketMQTopicStatsRequest $req) 获取Topic生产详情列表
  * @method Models\DescribeRocketMQTopicsResponse DescribeRocketMQTopics(Models\DescribeRocketMQTopicsRequest $req) 获取RocketMQ主题列表

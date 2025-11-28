@@ -51,6 +51,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DeleteDatahubTaskResponse DeleteDatahubTask(Models\DeleteDatahubTaskRequest $req) 删除Dip任务
  * @method Models\DeleteDatahubTopicResponse DeleteDatahubTopic(Models\DeleteDatahubTopicRequest $req) 删除DIP主题
  * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) 删除消费组
+ * @method Models\DeleteGroupSubscribeTopicResponse DeleteGroupSubscribeTopic(Models\DeleteGroupSubscribeTopicRequest $req) 删除消费分组订阅的topic(消费分组必须是Empty 状态)
  * @method Models\DeleteInstancePostResponse DeleteInstancePost(Models\DeleteInstancePostRequest $req) 删除后付费实例，通过调用API删除不会对连接器和任务进行关联预检查，直接进行实例销毁。
  * @method Models\DeleteInstancePreResponse DeleteInstancePre(Models\DeleteInstancePreRequest $req) 删除预付费实例，该接口会对实例执行隔离并删除的动作，执行成功后实例会被直接删除销毁。通过调用API删除不会对连接器和任务进行关联预检查，直接进行实例销毁。
  * @method Models\DeleteRouteResponse DeleteRoute(Models\DeleteRouteRequest $req) 删除路由
@@ -77,6 +78,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DescribeInstanceAttributesResponse DescribeInstanceAttributes(Models\DescribeInstanceAttributesRequest $req) 获取实例属性
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 本接口（DescribeInstances）用于在用户账户下获取消息队列 CKafka 实例列表
  * @method Models\DescribeInstancesDetailResponse DescribeInstancesDetail(Models\DescribeInstancesDetailRequest $req) 用户账户下获取实例列表详情
+ * @method Models\DescribeModifyTypeResponse DescribeModifyType(Models\DescribeModifyTypeRequest $req) 查询实例变配类型
  * @method Models\DescribePrometheusResponse DescribePrometheus(Models\DescribePrometheusRequest $req) 获取实例Prometheus信息
  * @method Models\DescribeRegionResponse DescribeRegion(Models\DescribeRegionRequest $req) 枚举地域,只支持广州地域
  * @method Models\DescribeRouteResponse DescribeRoute(Models\DescribeRouteRequest $req) 查看路由信息

@@ -54,6 +54,8 @@ OFF/ON/CREATING/DELETING
  * @method void setControlPlaneEndpointInfo(VpcEndpointInfo $ControlPlaneEndpointInfo) 设置控制面所使用的VPC信息
  * @method string getPublicTlsAccessEndpoint() 获取TLS加密的数据流公网接入点
  * @method void setPublicTlsAccessEndpoint(string $PublicTlsAccessEndpoint) 设置TLS加密的数据流公网接入点
+ * @method boolean getPublicIpReused() 获取公网IP是否复用
+ * @method void setPublicIpReused(boolean $PublicIpReused) 设置公网IP是否复用
  */
 class RabbitMQClusterAccessInfo extends AbstractModel
 {
@@ -135,6 +137,11 @@ OFF/ON/CREATING/DELETING
     public $PublicTlsAccessEndpoint;
 
     /**
+     * @var boolean 公网IP是否复用
+     */
+    public $PublicIpReused;
+
+    /**
      * @param string $PublicAccessEndpoint 集群公网接入地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WebConsoleEndpoint 集群控制台访问地址
@@ -152,6 +159,7 @@ OFF/ON/CREATING/DELETING
      * @param string $WebConsoleDomainEndpoint 公网域名接入点
      * @param VpcEndpointInfo $ControlPlaneEndpointInfo 控制面所使用的VPC信息
      * @param string $PublicTlsAccessEndpoint TLS加密的数据流公网接入点
+     * @param boolean $PublicIpReused 公网IP是否复用
      */
     function __construct()
     {
@@ -226,6 +234,10 @@ OFF/ON/CREATING/DELETING
 
         if (array_key_exists("PublicTlsAccessEndpoint",$param) and $param["PublicTlsAccessEndpoint"] !== null) {
             $this->PublicTlsAccessEndpoint = $param["PublicTlsAccessEndpoint"];
+        }
+
+        if (array_key_exists("PublicIpReused",$param) and $param["PublicIpReused"] !== null) {
+            $this->PublicIpReused = $param["PublicIpReused"];
         }
     }
 }

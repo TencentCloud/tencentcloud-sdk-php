@@ -153,6 +153,9 @@ use TencentCloud\Mps\V20190612\Models as Models;
 * 当列表数据比较多时，单次接口调用无法拉取整个列表，可通过 ScrollToken 参数，分批拉取；
 * 只能查询到最近七天（168小时）内的任务。
  * @method Models\DescribeTranscodeTemplatesResponse DescribeTranscodeTemplates(Models\DescribeTranscodeTemplatesRequest $req) 根据转码模板唯一标识，获取转码模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置转码模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+ * @method Models\DescribeUsageDataResponse DescribeUsageData(Models\DescribeUsageDataRequest $req) 该接口返回查询时间范围内每天使用的媒体处理用量信息。
+   1. 可以查询最近365天内的媒体处理统计数据。
+   2. 查询时间跨度不超过90天。
  * @method Models\DescribeVideoDatabaseEntryTaskDetailResponse DescribeVideoDatabaseEntryTaskDetail(Models\DescribeVideoDatabaseEntryTaskDetailRequest $req) 根据任务ID查询视频入库任务的状态。
  * @method Models\DescribeVideoSearchTaskDetailResponse DescribeVideoSearchTaskDetail(Models\DescribeVideoSearchTaskDetailRequest $req) 根据任务ID查询视频检索任务的状态。
  * @method Models\DescribeWatermarkTemplatesResponse DescribeWatermarkTemplates(Models\DescribeWatermarkTemplatesRequest $req) 查询用户自定义水印模板，支持根据条件，分页查询。

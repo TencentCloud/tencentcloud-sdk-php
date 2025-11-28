@@ -48,8 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注: ` 此处为第三方应用平台模板库模板ID，非子客模板ID`
  * @method void setTemplateId(string $TemplateId) 设置合同模板ID，为32位字符串。
 注: ` 此处为第三方应用平台模板库模板ID，非子客模板ID`
- * @method string getProxyOrganizationOpenIds() 获取第三方平台子客企业的唯一标识，支持批量(用,分割)，
- * @method void setProxyOrganizationOpenIds(string $ProxyOrganizationOpenIds) 设置第三方平台子客企业的唯一标识，支持批量(用,分割)，
+ * @method string getProxyOrganizationOpenIds() 获取第三方平台子客企业的唯一标识，支持批量(用,分割) 
+一次批量操作最多支持100个第三方平台子客
+ * @method void setProxyOrganizationOpenIds(string $ProxyOrganizationOpenIds) 设置第三方平台子客企业的唯一标识，支持批量(用,分割) 
+一次批量操作最多支持100个第三方平台子客
  * @method string getAuthTag() 获取模板可见范围, 可以设置的值如下:
 
 **all**: 所有本第三方应用合作企业可见
@@ -88,6 +90,12 @@ use TencentCloud\Common\AbstractModel;
 如果Available更新失败，会直接返回错误。
  * @method UserInfo getOperator() 获取暂未开放
  * @method void setOperator(UserInfo $Operator) 设置暂未开放
+ * @method integer getLimit() 获取指定分页每页返回的数据条数，单页最大支持 100。
+不传默认值为 20
+ * @method void setLimit(integer $Limit) 设置指定分页每页返回的数据条数，单页最大支持 100。
+不传默认值为 20
+ * @method integer getOffset() 获取分页查询偏移量，默认为0
+ * @method void setOffset(integer $Offset) 设置分页查询偏移量，默认为0
  */
 class OperateChannelTemplateRequest extends AbstractModel
 {
@@ -118,7 +126,8 @@ class OperateChannelTemplateRequest extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var string 第三方平台子客企业的唯一标识，支持批量(用,分割)，
+     * @var string 第三方平台子客企业的唯一标识，支持批量(用,分割) 
+一次批量操作最多支持100个第三方平台子客
      */
     public $ProxyOrganizationOpenIds;
 
@@ -155,6 +164,17 @@ class OperateChannelTemplateRequest extends AbstractModel
     public $Operator;
 
     /**
+     * @var integer 指定分页每页返回的数据条数，单页最大支持 100。
+不传默认值为 20
+     */
+    public $Limit;
+
+    /**
+     * @var integer 分页查询偏移量，默认为0
+     */
+    public $Offset;
+
+    /**
      * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -169,7 +189,8 @@ class OperateChannelTemplateRequest extends AbstractModel
 </ul>
      * @param string $TemplateId 合同模板ID，为32位字符串。
 注: ` 此处为第三方应用平台模板库模板ID，非子客模板ID`
-     * @param string $ProxyOrganizationOpenIds 第三方平台子客企业的唯一标识，支持批量(用,分割)，
+     * @param string $ProxyOrganizationOpenIds 第三方平台子客企业的唯一标识，支持批量(用,分割) 
+一次批量操作最多支持100个第三方平台子客
      * @param string $AuthTag 模板可见范围, 可以设置的值如下:
 
 **all**: 所有本第三方应用合作企业可见
@@ -189,6 +210,9 @@ class OperateChannelTemplateRequest extends AbstractModel
 停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。
 如果Available更新失败，会直接返回错误。
      * @param UserInfo $Operator 暂未开放
+     * @param integer $Limit 指定分页每页返回的数据条数，单页最大支持 100。
+不传默认值为 20
+     * @param integer $Offset 分页查询偏移量，默认为0
      */
     function __construct()
     {
@@ -231,6 +255,14 @@ class OperateChannelTemplateRequest extends AbstractModel
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

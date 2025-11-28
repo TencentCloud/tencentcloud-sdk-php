@@ -18,7 +18,7 @@ namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ResourceInfo
+ * 数据优化资源信息结构
  *
  * @method string getAttributionType() 获取归属类型
  * @method void setAttributionType(string $AttributionType) 设置归属类型
@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置状态
  * @method string getResourceGroupName() 获取标准引擎资源组信息
  * @method void setResourceGroupName(string $ResourceGroupName) 设置标准引擎资源组信息
+ * @method ResourceConf getResourceConf() 获取资源配置信息
+ * @method void setResourceConf(ResourceConf $ResourceConf) 设置资源配置信息
  */
 class ResourceInfo extends AbstractModel
 {
@@ -76,6 +78,11 @@ class ResourceInfo extends AbstractModel
     public $ResourceGroupName;
 
     /**
+     * @var ResourceConf 资源配置信息
+     */
+    public $ResourceConf;
+
+    /**
      * @param string $AttributionType 归属类型
      * @param string $ResourceType 资源类型
      * @param string $Name 引擎名称
@@ -84,6 +91,7 @@ class ResourceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态
      * @param string $ResourceGroupName 标准引擎资源组信息
+     * @param ResourceConf $ResourceConf 资源配置信息
      */
     function __construct()
     {
@@ -129,6 +137,11 @@ class ResourceInfo extends AbstractModel
 
         if (array_key_exists("ResourceGroupName",$param) and $param["ResourceGroupName"] !== null) {
             $this->ResourceGroupName = $param["ResourceGroupName"];
+        }
+
+        if (array_key_exists("ResourceConf",$param) and $param["ResourceConf"] !== null) {
+            $this->ResourceConf = new ResourceConf();
+            $this->ResourceConf->deserialize($param["ResourceConf"]);
         }
     }
 }

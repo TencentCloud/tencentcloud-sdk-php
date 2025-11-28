@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置备注，不填则不修改
  * @method boolean getEnableDeletionProtection() 获取是否开启删除保护，不填则不修改
  * @method void setEnableDeletionProtection(boolean $EnableDeletionProtection) 设置是否开启删除保护，不填则不修改
+ * @method boolean getRemoveAllTags() 获取是否删除所有标签，默认为false
+ * @method void setRemoveAllTags(boolean $RemoveAllTags) 设置是否删除所有标签，默认为false
+ * @method array getTags() 获取修改实例的标签信息，全量标签信息，非增量
+ * @method void setTags(array $Tags) 设置修改实例的标签信息，全量标签信息，非增量
  */
 class ModifyRabbitMQVipInstanceRequest extends AbstractModel
 {
@@ -52,10 +56,22 @@ class ModifyRabbitMQVipInstanceRequest extends AbstractModel
     public $EnableDeletionProtection;
 
     /**
+     * @var boolean 是否删除所有标签，默认为false
+     */
+    public $RemoveAllTags;
+
+    /**
+     * @var array 修改实例的标签信息，全量标签信息，非增量
+     */
+    public $Tags;
+
+    /**
      * @param string $InstanceId 实例Id
      * @param string $ClusterName 集群名称，不填则不修改。非空字符串时必须 3-64 个字符，只能包含数字、字母、“-”和“_”
      * @param string $Remark 备注，不填则不修改
      * @param boolean $EnableDeletionProtection 是否开启删除保护，不填则不修改
+     * @param boolean $RemoveAllTags 是否删除所有标签，默认为false
+     * @param array $Tags 修改实例的标签信息，全量标签信息，非增量
      */
     function __construct()
     {
@@ -84,6 +100,19 @@ class ModifyRabbitMQVipInstanceRequest extends AbstractModel
 
         if (array_key_exists("EnableDeletionProtection",$param) and $param["EnableDeletionProtection"] !== null) {
             $this->EnableDeletionProtection = $param["EnableDeletionProtection"];
+        }
+
+        if (array_key_exists("RemoveAllTags",$param) and $param["RemoveAllTags"] !== null) {
+            $this->RemoveAllTags = $param["RemoveAllTags"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

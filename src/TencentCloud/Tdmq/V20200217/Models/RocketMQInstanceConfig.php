@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicNumUpperLimit(integer $TopicNumUpperLimit) 设置Topic个数最大配额，默认为集群规格单节点最大配额*节点个数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getSendReceiveRatio() 获取控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
+ * @method void setSendReceiveRatio(float $SendReceiveRatio) 设置控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
  */
 class RocketMQInstanceConfig extends AbstractModel
 {
@@ -161,6 +163,11 @@ class RocketMQInstanceConfig extends AbstractModel
     public $TopicNumUpperLimit;
 
     /**
+     * @var float 控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
+     */
+    public $SendReceiveRatio;
+
+    /**
      * @param integer $MaxTpsPerNamespace 单命名空间TPS上线
      * @param integer $MaxNamespaceNum 最大命名空间数量
      * @param integer $UsedNamespaceNum 已使用命名空间数量
@@ -184,6 +191,7 @@ class RocketMQInstanceConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TopicNumUpperLimit Topic个数最大配额，默认为集群规格单节点最大配额*节点个数
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $SendReceiveRatio 控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
      */
     function __construct()
     {
@@ -274,6 +282,10 @@ class RocketMQInstanceConfig extends AbstractModel
 
         if (array_key_exists("TopicNumUpperLimit",$param) and $param["TopicNumUpperLimit"] !== null) {
             $this->TopicNumUpperLimit = $param["TopicNumUpperLimit"];
+        }
+
+        if (array_key_exists("SendReceiveRatio",$param) and $param["SendReceiveRatio"] !== null) {
+            $this->SendReceiveRatio = $param["SendReceiveRatio"];
         }
     }
 }

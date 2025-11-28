@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * LLM配置信息。
  *
- * @method string getLLMType() 获取支持的LLM类型，tencent-腾讯；openai-OPENAI格式；anthropic-ANTHROPIC；gemini-GEMINI;gemini-GEMINI;coze-扣子;dify-DIFY；tencent_lke-腾讯智能体平台；系统默认-openai。
- * @method void setLLMType(string $LLMType) 设置支持的LLM类型，tencent-腾讯；openai-OPENAI格式；anthropic-ANTHROPIC；gemini-GEMINI;gemini-GEMINI;coze-扣子;dify-DIFY；tencent_lke-腾讯智能体平台；系统默认-openai。
+ * @method string getLLMType() 获取支持的LLM类型，openai-OPENAI格式。
+ * @method void setLLMType(string $LLMType) 设置支持的LLM类型，openai-OPENAI格式。
  * @method boolean getEnabled() 获取是否开启
  * @method void setEnabled(boolean $Enabled) 设置是否开启
  * @method string getModel() 获取模型
@@ -41,54 +41,6 @@ use TencentCloud\Common\AbstractModel;
   "MetaInfo":{}
 }
 ```
-
-## anthropic
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "ApiUrl": "https://api.openai.com/v1",
-   "SystemPrompt": "一个小小助手"
-}
-```
-## gemini
-```
-{
-  "AppId": 123456,
-  "AccessToken": "*****",
-  "ResourceId": "SecretKey****",
-  "ModelName": "16k_zh",
-  "Language":""
-}
-```
-## coze
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "BotId": "v1",
-   "UserId": "xxx",
-  "ApiUrl": "https://api.coze.cn/v3/chat"
-}
-```
-## dify
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "ApiUrl": "https://api.openai.com/v1",
-   "User": "xxx",
-  "Inputs":{},
-  "ConversationId":"c1"
-}
-```
-## tencent_lke
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "ApiUrl": "https://api.openai.com/v1",
-   "SystemRole": "一个小小助手",
-  "SessionId":"123456"
-}
-```
-
  * @method void setConfig(string $Config) 设置配置信息JSON字符串，根据`LLMType`进行不同的值匹配。例如`LLMType`是`openai`，`Config`值是`{\"ApiKey\":\"sk-09***\",\"ApiUrl\":\"base_url\",\"SystemPrompt\":\"你是一个语音助手\",\"Timeout\":30,\"History\":0,\"MetaInfo\":{\"productID\":\"test\"}}`
 
 ## openai
@@ -102,65 +54,19 @@ use TencentCloud\Common\AbstractModel;
   "MetaInfo":{}
 }
 ```
-
-## anthropic
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "ApiUrl": "https://api.openai.com/v1",
-   "SystemPrompt": "一个小小助手"
-}
-```
-## gemini
-```
-{
-  "AppId": 123456,
-  "AccessToken": "*****",
-  "ResourceId": "SecretKey****",
-  "ModelName": "16k_zh",
-  "Language":""
-}
-```
-## coze
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "BotId": "v1",
-   "UserId": "xxx",
-  "ApiUrl": "https://api.coze.cn/v3/chat"
-}
-```
-## dify
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "ApiUrl": "https://api.openai.com/v1",
-   "User": "xxx",
-  "Inputs":{},
-  "ConversationId":"c1"
-}
-```
-## tencent_lke
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "ApiUrl": "https://api.openai.com/v1",
-   "SystemRole": "一个小小助手",
-  "SessionId":"123456"
-}
-```
-
  * @method float getTemperature() 获取温度
  * @method void setTemperature(float $Temperature) 设置温度
  * @method integer getMaxTokens() 获取最大token数
  * @method void setMaxTokens(integer $MaxTokens) 设置最大token数
  * @method float getTopP() 获取topP
  * @method void setTopP(float $TopP) 设置topP
+ * @method array getTools() 获取工具ID列表
+ * @method void setTools(array $Tools) 设置工具ID列表
  */
 class TalkLLMConfigInfo extends AbstractModel
 {
     /**
-     * @var string 支持的LLM类型，tencent-腾讯；openai-OPENAI格式；anthropic-ANTHROPIC；gemini-GEMINI;gemini-GEMINI;coze-扣子;dify-DIFY；tencent_lke-腾讯智能体平台；系统默认-openai。
+     * @var string 支持的LLM类型，openai-OPENAI格式。
      */
     public $LLMType;
 
@@ -193,54 +99,6 @@ class TalkLLMConfigInfo extends AbstractModel
   "MetaInfo":{}
 }
 ```
-
-## anthropic
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "ApiUrl": "https://api.openai.com/v1",
-   "SystemPrompt": "一个小小助手"
-}
-```
-## gemini
-```
-{
-  "AppId": 123456,
-  "AccessToken": "*****",
-  "ResourceId": "SecretKey****",
-  "ModelName": "16k_zh",
-  "Language":""
-}
-```
-## coze
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "BotId": "v1",
-   "UserId": "xxx",
-  "ApiUrl": "https://api.coze.cn/v3/chat"
-}
-```
-## dify
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "ApiUrl": "https://api.openai.com/v1",
-   "User": "xxx",
-  "Inputs":{},
-  "ConversationId":"c1"
-}
-```
-## tencent_lke
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "ApiUrl": "https://api.openai.com/v1",
-   "SystemRole": "一个小小助手",
-  "SessionId":"123456"
-}
-```
-
      */
     public $Config;
 
@@ -260,7 +118,12 @@ class TalkLLMConfigInfo extends AbstractModel
     public $TopP;
 
     /**
-     * @param string $LLMType 支持的LLM类型，tencent-腾讯；openai-OPENAI格式；anthropic-ANTHROPIC；gemini-GEMINI;gemini-GEMINI;coze-扣子;dify-DIFY；tencent_lke-腾讯智能体平台；系统默认-openai。
+     * @var array 工具ID列表
+     */
+    public $Tools;
+
+    /**
+     * @param string $LLMType 支持的LLM类型，openai-OPENAI格式。
      * @param boolean $Enabled 是否开启
      * @param string $Model 模型
      * @param boolean $Streaming 是否开启
@@ -277,57 +140,10 @@ class TalkLLMConfigInfo extends AbstractModel
   "MetaInfo":{}
 }
 ```
-
-## anthropic
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "ApiUrl": "https://api.openai.com/v1",
-   "SystemPrompt": "一个小小助手"
-}
-```
-## gemini
-```
-{
-  "AppId": 123456,
-  "AccessToken": "*****",
-  "ResourceId": "SecretKey****",
-  "ModelName": "16k_zh",
-  "Language":""
-}
-```
-## coze
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "BotId": "v1",
-   "UserId": "xxx",
-  "ApiUrl": "https://api.coze.cn/v3/chat"
-}
-```
-## dify
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "ApiUrl": "https://api.openai.com/v1",
-   "User": "xxx",
-  "Inputs":{},
-  "ConversationId":"c1"
-}
-```
-## tencent_lke
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "ApiUrl": "https://api.openai.com/v1",
-   "SystemRole": "一个小小助手",
-  "SessionId":"123456"
-}
-```
-
      * @param float $Temperature 温度
      * @param integer $MaxTokens 最大token数
      * @param float $TopP topP
+     * @param array $Tools 工具ID列表
      */
     function __construct()
     {
@@ -372,6 +188,10 @@ class TalkLLMConfigInfo extends AbstractModel
 
         if (array_key_exists("TopP",$param) and $param["TopP"] !== null) {
             $this->TopP = $param["TopP"];
+        }
+
+        if (array_key_exists("Tools",$param) and $param["Tools"] !== null) {
+            $this->Tools = $param["Tools"];
         }
     }
 }

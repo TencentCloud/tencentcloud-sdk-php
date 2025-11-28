@@ -34,6 +34,8 @@ SLURM默认队列为：compute。
  * @method void setImageId(string $ImageId) 设置指定有效的镜像ID，格式形如img-xxx。目前仅支持公有镜像和特定自定义镜像。如不指定，则该字段是默认镜像。
  * @method string getResourceType() 获取要新增节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。
  * @method void setResourceType(string $ResourceType) 设置要新增节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。
+ * @method string getUserData() 获取提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅[Windows](https://cloud.tencent.com/document/product/213/17526)和[Linux](https://cloud.tencent.com/document/product/213/17525)启动时运行命令。
+ * @method void setUserData(string $UserData) 设置提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅[Windows](https://cloud.tencent.com/document/product/213/17526)和[Linux](https://cloud.tencent.com/document/product/213/17525)启动时运行命令。
  */
 class AttachNodesRequest extends AbstractModel
 {
@@ -65,6 +67,11 @@ SLURM默认队列为：compute。
     public $ResourceType;
 
     /**
+     * @var string 提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅[Windows](https://cloud.tencent.com/document/product/213/17526)和[Linux](https://cloud.tencent.com/document/product/213/17525)启动时运行命令。
+     */
+    public $UserData;
+
+    /**
      * @param string $ClusterId 集群id
      * @param array $ResourceSet 节点的实例id列表
      * @param string $QueueName 队列名称。不指定则为默认队列：
@@ -72,6 +79,7 @@ SLURM默认队列为：compute。
 
      * @param string $ImageId 指定有效的镜像ID，格式形如img-xxx。目前仅支持公有镜像和特定自定义镜像。如不指定，则该字段是默认镜像。
      * @param string $ResourceType 要新增节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。
+     * @param string $UserData 提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅[Windows](https://cloud.tencent.com/document/product/213/17526)和[Linux](https://cloud.tencent.com/document/product/213/17525)启动时运行命令。
      */
     function __construct()
     {
@@ -104,6 +112,10 @@ SLURM默认队列为：compute。
 
         if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
             $this->ResourceType = $param["ResourceType"];
+        }
+
+        if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
+            $this->UserData = $param["UserData"];
         }
     }
 }

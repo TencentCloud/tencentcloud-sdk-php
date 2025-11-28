@@ -62,6 +62,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHotPeriod(integer $HotPeriod) 设置0：日志主题关闭日志沉降。
 非0：日志主题开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
 仅在StorageType为 hot 时生效，指标主题不支持该配置。
+ * @method integer getEncryption() 获取加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
+0或者不传： 不加密
+1：kms-cls 云产品密钥加密
+
+支持地域：ap-beijing,ap-guangzhou,ap-shanghai,ap-singapore,ap-bangkok,ap-jakarta,eu-frankfurt,ap-seoul,ap-tokyo
+ * @method void setEncryption(integer $Encryption) 设置加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
+0或者不传： 不加密
+1：kms-cls 云产品密钥加密
+
+支持地域：ap-beijing,ap-guangzhou,ap-shanghai,ap-singapore,ap-bangkok,ap-jakarta,eu-frankfurt,ap-seoul,ap-tokyo
  * @method integer getBizType() 获取主题类型
 - 0:日志主题，默认值
 - 1:指标主题
@@ -149,6 +159,15 @@ class CreateTopicRequest extends AbstractModel
     public $HotPeriod;
 
     /**
+     * @var integer 加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
+0或者不传： 不加密
+1：kms-cls 云产品密钥加密
+
+支持地域：ap-beijing,ap-guangzhou,ap-shanghai,ap-singapore,ap-bangkok,ap-jakarta,eu-frankfurt,ap-seoul,ap-tokyo
+     */
+    public $Encryption;
+
+    /**
      * @var integer 主题类型
 - 0:日志主题，默认值
 - 1:指标主题
@@ -201,6 +220,11 @@ class CreateTopicRequest extends AbstractModel
      * @param integer $HotPeriod 0：日志主题关闭日志沉降。
 非0：日志主题开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
 仅在StorageType为 hot 时生效，指标主题不支持该配置。
+     * @param integer $Encryption 加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
+0或者不传： 不加密
+1：kms-cls 云产品密钥加密
+
+支持地域：ap-beijing,ap-guangzhou,ap-shanghai,ap-singapore,ap-bangkok,ap-jakarta,eu-frankfurt,ap-seoul,ap-tokyo
      * @param integer $BizType 主题类型
 - 0:日志主题，默认值
 - 1:指标主题
@@ -269,6 +293,10 @@ class CreateTopicRequest extends AbstractModel
 
         if (array_key_exists("HotPeriod",$param) and $param["HotPeriod"] !== null) {
             $this->HotPeriod = $param["HotPeriod"];
+        }
+
+        if (array_key_exists("Encryption",$param) and $param["Encryption"] !== null) {
+            $this->Encryption = $param["Encryption"];
         }
 
         if (array_key_exists("BizType",$param) and $param["BizType"] !== null) {

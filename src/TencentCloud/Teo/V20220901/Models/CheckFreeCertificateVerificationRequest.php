@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() 获取站点 ID。
  * @method void setZoneId(string $ZoneId) 设置站点 ID。
- * @method string getDomain() 获取加速域名，该域名为[申请免费证书](https://tcloud4api.woa.com/document/product/1657/927654?!preview&!document=1)时使用的域名。
- * @method void setDomain(string $Domain) 设置加速域名，该域名为[申请免费证书](https://tcloud4api.woa.com/document/product/1657/927654?!preview&!document=1)时使用的域名。
+ * @method string getDomain() 获取加速域名，该域名为[申请免费证书](https://cloud.tencent.com/document/product/1552/124807)时使用的域名。
+ * @method void setDomain(string $Domain) 设置加速域名，该域名为[申请免费证书](https://cloud.tencent.com/document/product/1552/124807)时使用的域名。
  */
 class CheckFreeCertificateVerificationRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class CheckFreeCertificateVerificationRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string 加速域名，该域名为[申请免费证书](https://tcloud4api.woa.com/document/product/1657/927654?!preview&!document=1)时使用的域名。
+     * @var string 加速域名，该域名为[申请免费证书](https://cloud.tencent.com/document/product/1552/124807)时使用的域名。
      */
     public $Domain;
 
     /**
      * @param string $ZoneId 站点 ID。
-     * @param string $Domain 加速域名，该域名为[申请免费证书](https://tcloud4api.woa.com/document/product/1657/927654?!preview&!document=1)时使用的域名。
+     * @param string $Domain 加速域名，该域名为[申请免费证书](https://cloud.tencent.com/document/product/1552/124807)时使用的域名。
      */
     function __construct()
     {

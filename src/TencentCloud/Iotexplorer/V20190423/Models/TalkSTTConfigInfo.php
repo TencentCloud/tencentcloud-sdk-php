@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * STT配置信息。
  *
- * @method string getSTTType() 获取支持的STT类型，tencent-腾讯；azure-亚马逊；volcengine-火山引擎；deepgram-Deepgram;系统默认-tencent。
- * @method void setSTTType(string $STTType) 设置支持的STT类型，tencent-腾讯；azure-亚马逊；volcengine-火山引擎；deepgram-Deepgram;系统默认-tencent。
+ * @method string getSTTType() 获取支持的STT类型，tencent-腾讯；azure-亚马逊；deepgram-Deepgram;系统默认-tencent。
+ * @method void setSTTType(string $STTType) 设置支持的STT类型，tencent-腾讯；azure-亚马逊；deepgram-Deepgram;系统默认-tencent。
  * @method boolean getEnabled() 获取是否开启
  * @method void setEnabled(boolean $Enabled) 设置是否开启
  * @method string getConfig() 获取配置信息JSON字符串，根据STTType进行不同的值匹配。例如`STTType`是`tencent`，`Config`值是`{\"AppId\":123456,\"SecretId\":\"secretId*****\",\"SecretKey\":\"SecretKey****\",\"EngineType\":\"16k_zh\"}`
@@ -45,16 +45,7 @@ use TencentCloud\Common\AbstractModel;
   "SubscriptionKey": "*****"
 }
 ```
-## volcengine
-```
-{
-  "AppId": 123456,
-  "AccessToken": "*****",
-  "ResourceId": "SecretKey****",
-  "ModelName": "16k_zh",
-  "Language":""
-}
-```
+
 ## deepgram
 ```
 {
@@ -86,16 +77,7 @@ use TencentCloud\Common\AbstractModel;
   "SubscriptionKey": "*****"
 }
 ```
-## volcengine
-```
-{
-  "AppId": 123456,
-  "AccessToken": "*****",
-  "ResourceId": "SecretKey****",
-  "ModelName": "16k_zh",
-  "Language":""
-}
-```
+
 ## deepgram
 ```
 {
@@ -109,7 +91,7 @@ use TencentCloud\Common\AbstractModel;
 class TalkSTTConfigInfo extends AbstractModel
 {
     /**
-     * @var string 支持的STT类型，tencent-腾讯；azure-亚马逊；volcengine-火山引擎；deepgram-Deepgram;系统默认-tencent。
+     * @var string 支持的STT类型，tencent-腾讯；azure-亚马逊；deepgram-Deepgram;系统默认-tencent。
      */
     public $STTType;
 
@@ -140,16 +122,7 @@ class TalkSTTConfigInfo extends AbstractModel
   "SubscriptionKey": "*****"
 }
 ```
-## volcengine
-```
-{
-  "AppId": 123456,
-  "AccessToken": "*****",
-  "ResourceId": "SecretKey****",
-  "ModelName": "16k_zh",
-  "Language":""
-}
-```
+
 ## deepgram
 ```
 {
@@ -164,7 +137,7 @@ class TalkSTTConfigInfo extends AbstractModel
     public $Config;
 
     /**
-     * @param string $STTType 支持的STT类型，tencent-腾讯；azure-亚马逊；volcengine-火山引擎；deepgram-Deepgram;系统默认-tencent。
+     * @param string $STTType 支持的STT类型，tencent-腾讯；azure-亚马逊；deepgram-Deepgram;系统默认-tencent。
      * @param boolean $Enabled 是否开启
      * @param string $Config 配置信息JSON字符串，根据STTType进行不同的值匹配。例如`STTType`是`tencent`，`Config`值是`{\"AppId\":123456,\"SecretId\":\"secretId*****\",\"SecretKey\":\"SecretKey****\",\"EngineType\":\"16k_zh\"}`
 
@@ -187,16 +160,7 @@ class TalkSTTConfigInfo extends AbstractModel
   "SubscriptionKey": "*****"
 }
 ```
-## volcengine
-```
-{
-  "AppId": 123456,
-  "AccessToken": "*****",
-  "ResourceId": "SecretKey****",
-  "ModelName": "16k_zh",
-  "Language":""
-}
-```
+
 ## deepgram
 ```
 {

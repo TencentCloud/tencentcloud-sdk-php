@@ -330,6 +330,22 @@ use TencentCloud\Common\AbstractModel;
 <ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
  * @method void setSignEndpoints(array $SignEndpoints) 设置进入签署流程的限制，目前支持以下选项：
 <ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
+ * @method boolean getNotSaveContact() 获取是否不保存联系人
+默认 false 保存联系人  true 不保存联系人
+
+设置这个参数为保存联系人的时候,他方企业签署人会被保存进发起人的联系人中。
+联系人查看可登录[电子签控制台](https://test.qian.tencent.cn/console/) 进行查看。
+如下图位置：
+![](https://qcloudimg.tencent-cloud.cn/raw/fb8a22cd615d24c21acfa0e37e2cd873.png)
+
+
+ * @method void setNotSaveContact(boolean $NotSaveContact) 设置是否不保存联系人
+默认 false 保存联系人  true 不保存联系人
+
+设置这个参数为保存联系人的时候,他方企业签署人会被保存进发起人的联系人中。
+联系人查看可登录[电子签控制台](https://test.qian.tencent.cn/console/) 进行查看。
+如下图位置：
+![](https://qcloudimg.tencent-cloud.cn/raw/fb8a22cd615d24c21acfa0e37e2cd873.png)
  */
 class FlowCreateApprover extends AbstractModel
 {
@@ -606,6 +622,19 @@ class FlowCreateApprover extends AbstractModel
     public $SignEndpoints;
 
     /**
+     * @var boolean 是否不保存联系人
+默认 false 保存联系人  true 不保存联系人
+
+设置这个参数为保存联系人的时候,他方企业签署人会被保存进发起人的联系人中。
+联系人查看可登录[电子签控制台](https://test.qian.tencent.cn/console/) 进行查看。
+如下图位置：
+![](https://qcloudimg.tencent-cloud.cn/raw/fb8a22cd615d24c21acfa0e37e2cd873.png)
+
+
+     */
+    public $NotSaveContact;
+
+    /**
      * @param integer $ApproverType 在指定签署方时，可以选择企业B端或个人C端等不同的参与者类型，可选类型如下：
 
 <ul><li> <b>0</b> :企业B端。</li>
@@ -761,6 +790,13 @@ class FlowCreateApprover extends AbstractModel
 3. 签署完成后，可以通过<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeSignFaceVideo" target="_blank">查询签署认证人脸视频</a>获取到当时的视频。
      * @param array $SignEndpoints 进入签署流程的限制，目前支持以下选项：
 <ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
+     * @param boolean $NotSaveContact 是否不保存联系人
+默认 false 保存联系人  true 不保存联系人
+
+设置这个参数为保存联系人的时候,他方企业签署人会被保存进发起人的联系人中。
+联系人查看可登录[电子签控制台](https://test.qian.tencent.cn/console/) 进行查看。
+如下图位置：
+![](https://qcloudimg.tencent-cloud.cn/raw/fb8a22cd615d24c21acfa0e37e2cd873.png)
      */
     function __construct()
     {
@@ -902,6 +938,10 @@ class FlowCreateApprover extends AbstractModel
 
         if (array_key_exists("SignEndpoints",$param) and $param["SignEndpoints"] !== null) {
             $this->SignEndpoints = $param["SignEndpoints"];
+        }
+
+        if (array_key_exists("NotSaveContact",$param) and $param["NotSaveContact"] !== null) {
+            $this->NotSaveContact = $param["NotSaveContact"];
         }
     }
 }

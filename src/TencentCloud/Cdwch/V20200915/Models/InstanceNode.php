@@ -38,18 +38,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeGroups(array $NodeGroups) 设置节点所属的分组信息
  * @method string getRip() 获取VPC IP
  * @method void setRip(string $Rip) 设置VPC IP
- * @method boolean getIsCHProxy() 获取ture的时候表示该节点上部署了chproxy进程
- * @method void setIsCHProxy(boolean $IsCHProxy) 设置ture的时候表示该节点上部署了chproxy进程
+ * @method boolean getIsCHProxy() 获取ture的时候表示该节点上部署了chPROXY进程
+ * @method void setIsCHProxy(boolean $IsCHProxy) 设置ture的时候表示该节点上部署了chPROXY进程
  * @method string getStatus() 获取节点状态
  * @method void setStatus(string $Status) 设置节点状态
  * @method string getUUID() 获取节点uuid
  * @method void setUUID(string $UUID) 设置节点uuid
  * @method string getZone() 获取区
  * @method void setZone(string $Zone) 设置区
- * @method string getZoneDesc() 获取区描述
- * @method void setZoneDesc(string $ZoneDesc) 设置区描述
+ * @method string getZoneDesc() 获取去描述
+ * @method void setZoneDesc(string $ZoneDesc) 设置去描述
  * @method string getRealResourceId() 获取真实资源id
  * @method void setRealResourceId(string $RealResourceId) 设置真实资源id
+ * @method string getSubnetId() 获取子网信息
+ * @method void setSubnetId(string $SubnetId) 设置子网信息
  */
 class InstanceNode extends AbstractModel
 {
@@ -99,7 +101,7 @@ class InstanceNode extends AbstractModel
     public $Rip;
 
     /**
-     * @var boolean ture的时候表示该节点上部署了chproxy进程
+     * @var boolean ture的时候表示该节点上部署了chPROXY进程
      */
     public $IsCHProxy;
 
@@ -119,7 +121,7 @@ class InstanceNode extends AbstractModel
     public $Zone;
 
     /**
-     * @var string 区描述
+     * @var string 去描述
      */
     public $ZoneDesc;
 
@@ -127,6 +129,11 @@ class InstanceNode extends AbstractModel
      * @var string 真实资源id
      */
     public $RealResourceId;
+
+    /**
+     * @var string 子网信息
+     */
+    public $SubnetId;
 
     /**
      * @param string $Ip IP地址
@@ -138,12 +145,13 @@ class InstanceNode extends AbstractModel
      * @param string $Cluster 所属clickhouse cluster名称
      * @param array $NodeGroups 节点所属的分组信息
      * @param string $Rip VPC IP
-     * @param boolean $IsCHProxy ture的时候表示该节点上部署了chproxy进程
+     * @param boolean $IsCHProxy ture的时候表示该节点上部署了chPROXY进程
      * @param string $Status 节点状态
      * @param string $UUID 节点uuid
      * @param string $Zone 区
-     * @param string $ZoneDesc 区描述
+     * @param string $ZoneDesc 去描述
      * @param string $RealResourceId 真实资源id
+     * @param string $SubnetId 子网信息
      */
     function __construct()
     {
@@ -221,6 +229,10 @@ class InstanceNode extends AbstractModel
 
         if (array_key_exists("RealResourceId",$param) and $param["RealResourceId"] !== null) {
             $this->RealResourceId = $param["RealResourceId"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

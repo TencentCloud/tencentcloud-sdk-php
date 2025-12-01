@@ -25,7 +25,7 @@ use TencentCloud\Tdai\V20250717\Models as Models;
 /**
  * @method Models\ContinueAgentWorkResponse ContinueAgentWork(Models\ContinueAgentWorkRequest $req) 本接口（ContinueAgentWork）用于重启智能体实例的值守任务，通常在用户需要重启时使用。
  * @method Models\CreateAgentInstanceResponse CreateAgentInstance(Models\CreateAgentInstanceRequest $req) 本接口（CreateAgentInstance）用于创建一个智能体实例，通常在用户购买一个智能体实例时使用。
- * @method Models\CreateChatCompletionResponse CreateChatCompletion(Models\CreateChatCompletionRequest $req) 用于创建一次回话的SSE接口
+ * @method Models\CreateChatCompletionResponse CreateChatCompletion(Models\CreateChatCompletionRequest $req) 用于创建一次会话的SSE接口
  * @method Models\DescribeAgentDutyTaskDetailResponse DescribeAgentDutyTaskDetail(Models\DescribeAgentDutyTaskDetailRequest $req) 查询智能体值守任务详情
  * @method Models\DescribeAgentDutyTasksResponse DescribeAgentDutyTasks(Models\DescribeAgentDutyTasksRequest $req) 查询智能体值守任务列表
  * @method Models\DescribeAgentInstanceResponse DescribeAgentInstance(Models\DescribeAgentInstanceRequest $req) 本接口（DescribeAgentInstance）用于查询智能体实例详情，通常在用户查询所购买的所有智能体实例详情时使用。

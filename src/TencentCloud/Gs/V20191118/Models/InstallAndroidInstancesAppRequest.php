@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAndroidAppId(string $AndroidAppId) 设置应用ID
  * @method string getAndroidAppVersion() 获取应用版本
  * @method void setAndroidAppVersion(string $AndroidAppVersion) 设置应用版本
+ * @method string getInstallationMethod() 获取安装方式。
+CLEAR_DATA 默认，清理数据
+KEEP_DATA 保留数据
+ * @method void setInstallationMethod(string $InstallationMethod) 设置安装方式。
+CLEAR_DATA 默认，清理数据
+KEEP_DATA 保留数据
  */
 class InstallAndroidInstancesAppRequest extends AbstractModel
 {
@@ -45,9 +51,19 @@ class InstallAndroidInstancesAppRequest extends AbstractModel
     public $AndroidAppVersion;
 
     /**
+     * @var string 安装方式。
+CLEAR_DATA 默认，清理数据
+KEEP_DATA 保留数据
+     */
+    public $InstallationMethod;
+
+    /**
      * @param array $AndroidInstanceIds 实例ID
      * @param string $AndroidAppId 应用ID
      * @param string $AndroidAppVersion 应用版本
+     * @param string $InstallationMethod 安装方式。
+CLEAR_DATA 默认，清理数据
+KEEP_DATA 保留数据
      */
     function __construct()
     {
@@ -72,6 +88,10 @@ class InstallAndroidInstancesAppRequest extends AbstractModel
 
         if (array_key_exists("AndroidAppVersion",$param) and $param["AndroidAppVersion"] !== null) {
             $this->AndroidAppVersion = $param["AndroidAppVersion"];
+        }
+
+        if (array_key_exists("InstallationMethod",$param) and $param["InstallationMethod"] !== null) {
+            $this->InstallationMethod = $param["InstallationMethod"];
         }
     }
 }

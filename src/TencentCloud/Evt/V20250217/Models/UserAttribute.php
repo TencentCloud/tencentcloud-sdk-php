@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tdai\V20250717\Models;
+namespace TencentCloud\Evt\V20250217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateChatCompletion请求参数结构体
+ * 人员属性
  *
- * @method boolean getIsHidden() 获取是否隐藏
- * @method void setIsHidden(boolean $IsHidden) 设置是否隐藏
- * @method boolean getIsChatHidden() 获取是否隐藏会话
- * @method void setIsChatHidden(boolean $IsChatHidden) 设置是否隐藏会话
+ * @method string getKey() 获取属性键名
+ * @method void setKey(string $Key) 设置属性键名
+ * @method array getValue() 获取属性值
+ * @method void setValue(array $Value) 设置属性值
  */
-class CreateChatCompletionRequest extends AbstractModel
+class UserAttribute extends AbstractModel
 {
     /**
-     * @var boolean 是否隐藏
+     * @var string 属性键名
      */
-    public $IsHidden;
+    public $Key;
 
     /**
-     * @var boolean 是否隐藏会话
+     * @var array 属性值
      */
-    public $IsChatHidden;
+    public $Value;
 
     /**
-     * @param boolean $IsHidden 是否隐藏
-     * @param boolean $IsChatHidden 是否隐藏会话
+     * @param string $Key 属性键名
+     * @param array $Value 属性值
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class CreateChatCompletionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IsHidden",$param) and $param["IsHidden"] !== null) {
-            $this->IsHidden = $param["IsHidden"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
         }
 
-        if (array_key_exists("IsChatHidden",$param) and $param["IsChatHidden"] !== null) {
-            $this->IsChatHidden = $param["IsChatHidden"];
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

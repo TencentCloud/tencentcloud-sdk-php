@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDspaId(string $DspaId) 设置DSPA实例ID。
  * @method string getMetaType() 获取资源类型，支持：cdb（云数据库 MySQL）、dcdb（TDSQL MySQL版）、mariadb（云数据库 MariaDB）、postgres（云数据库 PostgreSQL）、cynosdbpg（TDSQL-C PostgreSQL版）、cynosdbmysql（TDSQL-C MySQL版）
  * @method void setMetaType(string $MetaType) 设置资源类型，支持：cdb（云数据库 MySQL）、dcdb（TDSQL MySQL版）、mariadb（云数据库 MariaDB）、postgres（云数据库 PostgreSQL）、cynosdbpg（TDSQL-C PostgreSQL版）、cynosdbmysql（TDSQL-C MySQL版）
+ * @method array getCloudResourceItems() 获取必填，云数据库资源列表。
+ * @method void setCloudResourceItems(array $CloudResourceItems) 设置必填，云数据库资源列表。
  * @method string getResourceRegion() 获取资源所处地域。
  * @method void setResourceRegion(string $ResourceRegion) 设置资源所处地域。
  * @method string getUpdateStatus() 获取用来标记本次更新是否已经是最后一次，可选值：continue（后续还需要更新）、finished（本次是最后一次更新）。
@@ -32,8 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateId(string $UpdateId) 设置本次更新的ID号，用来标记一次完整的更新过程。
  * @method array getItems() 获取云上资源列表。
  * @method void setItems(array $Items) 设置云上资源列表。
- * @method array getCloudResourceItems() 获取必填，云数据库资源列表。
- * @method void setCloudResourceItems(array $CloudResourceItems) 设置必填，云数据库资源列表。
  */
 class CreateDSPADbMetaResourcesRequest extends AbstractModel
 {
@@ -46,6 +46,11 @@ class CreateDSPADbMetaResourcesRequest extends AbstractModel
      * @var string 资源类型，支持：cdb（云数据库 MySQL）、dcdb（TDSQL MySQL版）、mariadb（云数据库 MariaDB）、postgres（云数据库 PostgreSQL）、cynosdbpg（TDSQL-C PostgreSQL版）、cynosdbmysql（TDSQL-C MySQL版）
      */
     public $MetaType;
+
+    /**
+     * @var array 必填，云数据库资源列表。
+     */
+    public $CloudResourceItems;
 
     /**
      * @var string 资源所处地域。
@@ -72,18 +77,13 @@ class CreateDSPADbMetaResourcesRequest extends AbstractModel
     public $Items;
 
     /**
-     * @var array 必填，云数据库资源列表。
-     */
-    public $CloudResourceItems;
-
-    /**
      * @param string $DspaId DSPA实例ID。
      * @param string $MetaType 资源类型，支持：cdb（云数据库 MySQL）、dcdb（TDSQL MySQL版）、mariadb（云数据库 MariaDB）、postgres（云数据库 PostgreSQL）、cynosdbpg（TDSQL-C PostgreSQL版）、cynosdbmysql（TDSQL-C MySQL版）
+     * @param array $CloudResourceItems 必填，云数据库资源列表。
      * @param string $ResourceRegion 资源所处地域。
      * @param string $UpdateStatus 用来标记本次更新是否已经是最后一次，可选值：continue（后续还需要更新）、finished（本次是最后一次更新）。
      * @param string $UpdateId 本次更新的ID号，用来标记一次完整的更新过程。
      * @param array $Items 云上资源列表。
-     * @param array $CloudResourceItems 必填，云数据库资源列表。
      */
     function __construct()
     {
@@ -106,6 +106,15 @@ class CreateDSPADbMetaResourcesRequest extends AbstractModel
             $this->MetaType = $param["MetaType"];
         }
 
+        if (array_key_exists("CloudResourceItems",$param) and $param["CloudResourceItems"] !== null) {
+            $this->CloudResourceItems = [];
+            foreach ($param["CloudResourceItems"] as $key => $value){
+                $obj = new CloudResourceItem();
+                $obj->deserialize($value);
+                array_push($this->CloudResourceItems, $obj);
+            }
+        }
+
         if (array_key_exists("ResourceRegion",$param) and $param["ResourceRegion"] !== null) {
             $this->ResourceRegion = $param["ResourceRegion"];
         }
@@ -124,15 +133,6 @@ class CreateDSPADbMetaResourcesRequest extends AbstractModel
                 $obj = new DspaCloudResourceMeta();
                 $obj->deserialize($value);
                 array_push($this->Items, $obj);
-            }
-        }
-
-        if (array_key_exists("CloudResourceItems",$param) and $param["CloudResourceItems"] !== null) {
-            $this->CloudResourceItems = [];
-            foreach ($param["CloudResourceItems"] as $key => $value){
-                $obj = new CloudResourceItem();
-                $obj->deserialize($value);
-                array_push($this->CloudResourceItems, $obj);
             }
         }
     }

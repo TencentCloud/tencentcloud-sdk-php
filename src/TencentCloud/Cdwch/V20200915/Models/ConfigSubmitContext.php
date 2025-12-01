@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNewConfValue(string $NewConfValue) 设置配置文件新内容，base64编码
  * @method string getFilePath() 获取保存配置文件的路径
  * @method void setFilePath(string $FilePath) 设置保存配置文件的路径
+ * @method string getIp() 获取节点ip信息，可选参数，当修改集群节点级配置（例如keeper_config.xml）时此参数必填；
+ * @method void setIp(string $Ip) 设置节点ip信息，可选参数，当修改集群节点级配置（例如keeper_config.xml）时此参数必填；
  */
 class ConfigSubmitContext extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ConfigSubmitContext extends AbstractModel
     public $FilePath;
 
     /**
+     * @var string 节点ip信息，可选参数，当修改集群节点级配置（例如keeper_config.xml）时此参数必填；
+     */
+    public $Ip;
+
+    /**
      * @param string $FileName 配置文件名称
      * @param string $OldConfValue 配置文件旧内容，base64编码
      * @param string $NewConfValue 配置文件新内容，base64编码
      * @param string $FilePath 保存配置文件的路径
+     * @param string $Ip 节点ip信息，可选参数，当修改集群节点级配置（例如keeper_config.xml）时此参数必填；
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ConfigSubmitContext extends AbstractModel
 
         if (array_key_exists("FilePath",$param) and $param["FilePath"] !== null) {
             $this->FilePath = $param["FilePath"];
+        }
+
+        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
+            $this->Ip = $param["Ip"];
         }
     }
 }

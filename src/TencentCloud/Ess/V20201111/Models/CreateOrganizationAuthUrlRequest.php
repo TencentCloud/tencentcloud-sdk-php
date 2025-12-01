@@ -195,7 +195,55 @@ Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font
 
 p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
  * @method string getOrganizationIdCardType() 获取企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li></ul>
+
+注意 ：
+如果企业证照类型是医疗机构，则参数设置企业授权方式(AuthorizationTypes)和企业认证方式(AuthorizationMethods)都无效.
+医疗机构的企业授权方式  仅有授权书的方式。企业认证仅有上传营业执照的方式。
  * @method void setOrganizationIdCardType(string $OrganizationIdCardType) 设置企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li></ul>
+
+注意 ：
+如果企业证照类型是医疗机构，则参数设置企业授权方式(AuthorizationTypes)和企业认证方式(AuthorizationMethods)都无效.
+医疗机构的企业授权方式  仅有授权书的方式。企业认证仅有上传营业执照的方式。
+ * @method boolean getOrganizationIdCardTypeSame() 获取是否允许编辑企业注册时的证照类型
+
+true:不允许编辑。
+
+false:允许编辑（默认值）。
+
+
+注意：
+入参中的OrganizationIdCardType值不为空的时候，才可设置为不可编辑。
+ * @method void setOrganizationIdCardTypeSame(boolean $OrganizationIdCardTypeSame) 设置是否允许编辑企业注册时的证照类型
+
+true:不允许编辑。
+
+false:允许编辑（默认值）。
+
+
+注意：
+入参中的OrganizationIdCardType值不为空的时候，才可设置为不可编辑。
+ * @method array getAuthorizationMethod() 获取指定企业认证的授权方式 支持多选:
+
+<ul>
+<li><strong>1</strong>: 上传营业执照</li>
+<li><strong>2</strong>: 腾讯云快速认证</li>
+<li><strong>3</strong>: 腾讯商户号授权<font color="red">（仅支持小程序端）</font></li>
+</ul>
+
+注意：
+1.如果没有指定，则默认是1,仅有上传营业执照。
+2.H5 仅支持上传营业执照。
+ * @method void setAuthorizationMethod(array $AuthorizationMethod) 设置指定企业认证的授权方式 支持多选:
+
+<ul>
+<li><strong>1</strong>: 上传营业执照</li>
+<li><strong>2</strong>: 腾讯云快速认证</li>
+<li><strong>3</strong>: 腾讯商户号授权<font color="red">（仅支持小程序端）</font></li>
+</ul>
+
+注意：
+1.如果没有指定，则默认是1,仅有上传营业执照。
+2.H5 仅支持上传营业执照。
  */
 class CreateOrganizationAuthUrlRequest extends AbstractModel
 {
@@ -388,8 +436,40 @@ p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，
 
     /**
      * @var string 企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li></ul>
+
+注意 ：
+如果企业证照类型是医疗机构，则参数设置企业授权方式(AuthorizationTypes)和企业认证方式(AuthorizationMethods)都无效.
+医疗机构的企业授权方式  仅有授权书的方式。企业认证仅有上传营业执照的方式。
      */
     public $OrganizationIdCardType;
+
+    /**
+     * @var boolean 是否允许编辑企业注册时的证照类型
+
+true:不允许编辑。
+
+false:允许编辑（默认值）。
+
+
+注意：
+入参中的OrganizationIdCardType值不为空的时候，才可设置为不可编辑。
+     */
+    public $OrganizationIdCardTypeSame;
+
+    /**
+     * @var array 指定企业认证的授权方式 支持多选:
+
+<ul>
+<li><strong>1</strong>: 上传营业执照</li>
+<li><strong>2</strong>: 腾讯云快速认证</li>
+<li><strong>3</strong>: 腾讯商户号授权<font color="red">（仅支持小程序端）</font></li>
+</ul>
+
+注意：
+1.如果没有指定，则默认是1,仅有上传营业执照。
+2.H5 仅支持上传营业执照。
+     */
+    public $AuthorizationMethod;
 
     /**
      * @param UserInfo $Operator 操作人信息
@@ -480,6 +560,30 @@ Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font
 
 p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
      * @param string $OrganizationIdCardType 企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li></ul>
+
+注意 ：
+如果企业证照类型是医疗机构，则参数设置企业授权方式(AuthorizationTypes)和企业认证方式(AuthorizationMethods)都无效.
+医疗机构的企业授权方式  仅有授权书的方式。企业认证仅有上传营业执照的方式。
+     * @param boolean $OrganizationIdCardTypeSame 是否允许编辑企业注册时的证照类型
+
+true:不允许编辑。
+
+false:允许编辑（默认值）。
+
+
+注意：
+入参中的OrganizationIdCardType值不为空的时候，才可设置为不可编辑。
+     * @param array $AuthorizationMethod 指定企业认证的授权方式 支持多选:
+
+<ul>
+<li><strong>1</strong>: 上传营业执照</li>
+<li><strong>2</strong>: 腾讯云快速认证</li>
+<li><strong>3</strong>: 腾讯商户号授权<font color="red">（仅支持小程序端）</font></li>
+</ul>
+
+注意：
+1.如果没有指定，则默认是1,仅有上传营业执照。
+2.H5 仅支持上传营业执照。
      */
     function __construct()
     {
@@ -602,6 +706,14 @@ p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，
 
         if (array_key_exists("OrganizationIdCardType",$param) and $param["OrganizationIdCardType"] !== null) {
             $this->OrganizationIdCardType = $param["OrganizationIdCardType"];
+        }
+
+        if (array_key_exists("OrganizationIdCardTypeSame",$param) and $param["OrganizationIdCardTypeSame"] !== null) {
+            $this->OrganizationIdCardTypeSame = $param["OrganizationIdCardTypeSame"];
+        }
+
+        if (array_key_exists("AuthorizationMethod",$param) and $param["AuthorizationMethod"] !== null) {
+            $this->AuthorizationMethod = $param["AuthorizationMethod"];
         }
     }
 }

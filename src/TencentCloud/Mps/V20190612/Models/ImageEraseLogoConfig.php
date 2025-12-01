@@ -39,10 +39,12 @@ use TencentCloud\Common\AbstractModel;
  * @method array getDetectTypes() 获取图片框选区域类型，可选值：
 <li>logo：图标；</li>
 <li>text：文字；</li>
+<li>watermark：水印；</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetectTypes(array $DetectTypes) 设置图片框选区域类型，可选值：
 <li>logo：图标；</li>
 <li>text：文字；</li>
+<li>watermark：水印；</li>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageEraseLogoConfig extends AbstractModel
@@ -67,6 +69,7 @@ class ImageEraseLogoConfig extends AbstractModel
      * @var array 图片框选区域类型，可选值：
 <li>logo：图标；</li>
 <li>text：文字；</li>
+<li>watermark：水印；</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DetectTypes;
@@ -83,6 +86,7 @@ class ImageEraseLogoConfig extends AbstractModel
      * @param array $DetectTypes 图片框选区域类型，可选值：
 <li>logo：图标；</li>
 <li>text：文字；</li>
+<li>watermark：水印；</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

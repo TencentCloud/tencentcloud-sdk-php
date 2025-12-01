@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置智能体ID
  * @method string getChatId() 获取会话Id
  * @method void setChatId(string $ChatId) 设置会话Id
- * @method integer getLastStreamingTokenId() 获取最后一条流式TokenID
- * @method void setLastStreamingTokenId(integer $LastStreamingTokenId) 设置最后一条流式TokenID
+ * @method string getStreamingId() 获取流ID
+ * @method void setStreamingId(string $StreamingId) 设置流ID
+ * @method string getBeginStreamingTokenId() 获取开始拉取的流式TokenID。0表示从该流最早的TokenID开始获取
+ * @method void setBeginStreamingTokenId(string $BeginStreamingTokenId) 设置开始拉取的流式TokenID。0表示从该流最早的TokenID开始获取
+ * @method integer getTokenLimit() 获取单次获取的token数量，默认2000
+ * @method void setTokenLimit(integer $TokenLimit) 设置单次获取的token数量，默认2000
  */
 class DescribeChatDetailRequest extends AbstractModel
 {
@@ -40,14 +44,26 @@ class DescribeChatDetailRequest extends AbstractModel
     public $ChatId;
 
     /**
-     * @var integer 最后一条流式TokenID
+     * @var string 流ID
      */
-    public $LastStreamingTokenId;
+    public $StreamingId;
+
+    /**
+     * @var string 开始拉取的流式TokenID。0表示从该流最早的TokenID开始获取
+     */
+    public $BeginStreamingTokenId;
+
+    /**
+     * @var integer 单次获取的token数量，默认2000
+     */
+    public $TokenLimit;
 
     /**
      * @param string $InstanceId 智能体ID
      * @param string $ChatId 会话Id
-     * @param integer $LastStreamingTokenId 最后一条流式TokenID
+     * @param string $StreamingId 流ID
+     * @param string $BeginStreamingTokenId 开始拉取的流式TokenID。0表示从该流最早的TokenID开始获取
+     * @param integer $TokenLimit 单次获取的token数量，默认2000
      */
     function __construct()
     {
@@ -70,8 +86,16 @@ class DescribeChatDetailRequest extends AbstractModel
             $this->ChatId = $param["ChatId"];
         }
 
-        if (array_key_exists("LastStreamingTokenId",$param) and $param["LastStreamingTokenId"] !== null) {
-            $this->LastStreamingTokenId = $param["LastStreamingTokenId"];
+        if (array_key_exists("StreamingId",$param) and $param["StreamingId"] !== null) {
+            $this->StreamingId = $param["StreamingId"];
+        }
+
+        if (array_key_exists("BeginStreamingTokenId",$param) and $param["BeginStreamingTokenId"] !== null) {
+            $this->BeginStreamingTokenId = $param["BeginStreamingTokenId"];
+        }
+
+        if (array_key_exists("TokenLimit",$param) and $param["TokenLimit"] !== null) {
+            $this->TokenLimit = $param["TokenLimit"];
         }
     }
 }

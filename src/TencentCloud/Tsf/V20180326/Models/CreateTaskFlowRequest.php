@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTriggerRule(TaskRule $TriggerRule) 设置触发方式
  * @method array getFlowEdges() 获取工作流任务节点列表
  * @method void setFlowEdges(array $FlowEdges) 设置工作流任务节点列表
- * @method integer getTimeOut() 获取工作流执行超时时间
- * @method void setTimeOut(integer $TimeOut) 设置工作流执行超时时间
- * @method array getProgramIdList() 获取无
- * @method void setProgramIdList(array $ProgramIdList) 设置无
+ * @method integer getTimeOut() 获取工作流执行超时时间，单位：毫秒
+ * @method void setTimeOut(integer $TimeOut) 设置工作流执行超时时间，单位：毫秒
+ * @method array getProgramIdList() 获取数据集列表
+ * @method void setProgramIdList(array $ProgramIdList) 设置数据集列表
  */
 class CreateTaskFlowRequest extends AbstractModel
 {
@@ -49,12 +49,12 @@ class CreateTaskFlowRequest extends AbstractModel
     public $FlowEdges;
 
     /**
-     * @var integer 工作流执行超时时间
+     * @var integer 工作流执行超时时间，单位：毫秒
      */
     public $TimeOut;
 
     /**
-     * @var array 无
+     * @var array 数据集列表
      */
     public $ProgramIdList;
 
@@ -62,8 +62,8 @@ class CreateTaskFlowRequest extends AbstractModel
      * @param string $FlowName 工作流名称
      * @param TaskRule $TriggerRule 触发方式
      * @param array $FlowEdges 工作流任务节点列表
-     * @param integer $TimeOut 工作流执行超时时间
-     * @param array $ProgramIdList 无
+     * @param integer $TimeOut 工作流执行超时时间，单位：毫秒
+     * @param array $ProgramIdList 数据集列表
      */
     function __construct()
     {

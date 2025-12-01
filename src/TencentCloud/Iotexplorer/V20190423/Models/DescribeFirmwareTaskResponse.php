@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOverrideMode(integer $OverrideMode) 设置是否覆盖任务
  * @method string getTaskUserDefine() 获取用户自定义消息
  * @method void setTaskUserDefine(string $TaskUserDefine) 设置用户自定义消息
+ * @method integer getRateLimit() 获取每分钟发送设备量
+ * @method void setRateLimit(integer $RateLimit) 设置每分钟发送设备量
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -152,6 +154,11 @@ class DescribeFirmwareTaskResponse extends AbstractModel
     public $TaskUserDefine;
 
     /**
+     * @var integer 每分钟发送设备量
+     */
+    public $RateLimit;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -175,6 +182,7 @@ class DescribeFirmwareTaskResponse extends AbstractModel
      * @param integer $RetryInterval 重试间隔时间单位min
      * @param integer $OverrideMode 是否覆盖任务
      * @param string $TaskUserDefine 用户自定义消息
+     * @param integer $RateLimit 每分钟发送设备量
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -260,6 +268,10 @@ class DescribeFirmwareTaskResponse extends AbstractModel
 
         if (array_key_exists("TaskUserDefine",$param) and $param["TaskUserDefine"] !== null) {
             $this->TaskUserDefine = $param["TaskUserDefine"];
+        }
+
+        if (array_key_exists("RateLimit",$param) and $param["RateLimit"] !== null) {
+            $this->RateLimit = $param["RateLimit"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

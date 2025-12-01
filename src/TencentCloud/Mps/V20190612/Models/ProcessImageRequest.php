@@ -43,9 +43,11 @@ use TencentCloud\Common\AbstractModel;
 <li>/自定义路径/文件名_{变量名}.{format}</li>
 如果不填，则默认为相对路径：{inputName}.{format}。
  * @method integer getDefinition() 获取图片处理模板唯一标识。
+图片模板功能内测中，如需使用请提交工单申请。
  * @method void setDefinition(integer $Definition) 设置图片处理模板唯一标识。
- * @method string getResourceId() 获取资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
- * @method void setResourceId(string $ResourceId) 设置资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+图片模板功能内测中，如需使用请提交工单申请。
+ * @method string getResourceId() 获取资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
+ * @method void setResourceId(string $ResourceId) 设置资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
  * @method ImageTaskInput getImageTask() 获取图片处理参数。
  * @method void setImageTask(ImageTaskInput $ImageTask) 设置图片处理参数。
  */
@@ -80,11 +82,12 @@ class ProcessImageRequest extends AbstractModel
 
     /**
      * @var integer 图片处理模板唯一标识。
+图片模板功能内测中，如需使用请提交工单申请。
      */
     public $Definition;
 
     /**
-     * @var string 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+     * @var string 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
      */
     public $ResourceId;
 
@@ -106,7 +109,8 @@ class ProcessImageRequest extends AbstractModel
 <li>/自定义路径/文件名_{变量名}.{format}</li>
 如果不填，则默认为相对路径：{inputName}.{format}。
      * @param integer $Definition 图片处理模板唯一标识。
-     * @param string $ResourceId 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+图片模板功能内测中，如需使用请提交工单申请。
+     * @param string $ResourceId 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
      * @param ImageTaskInput $ImageTask 图片处理参数。
      */
     function __construct()

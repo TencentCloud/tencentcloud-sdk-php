@@ -9,18 +9,18 @@ use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Profile\HttpProfile;
 
 try {
-    // 实例化一个证书对象，入参需要传入腾讯云账户secretId，secretKey
+    // Create a credential object. You need to pass in the Tencent Cloud account secretId and secretKey.
     $cred = new Credential("********************************", "********************************");
 
-    // 实例化一个http选项，可选的，没有特殊需求可以跳过
+    // Create an HTTP option. This is optional. You can skip it if you have no special needs.
     $httpProfile = new HttpProfile();
-    $httpProfile->setReqMethod("POST");  // post请求(默认为post请求)
-    $httpProfile->setReqTimeout(30);    // 请求超时时间，单位为秒(默认60秒)
-    $httpProfile->setEndpoint("ess.tencentcloudapi.com");  // 指定接入地域域名(默认就近接入)
+    $httpProfile->setReqMethod("POST");  // POST request (default is POST)
+    $httpProfile->setReqTimeout(30);    // Request timeout in seconds (default is 60 seconds)
+    $httpProfile->setEndpoint("ess.tencentcloudapi.com");  // Specify the regional domain (default is nearest access)
 
-    // 实例化一个client选项，可选的，没有特殊需求可以跳过
+    // Create a client option. This is optional. You can skip it if you have no special needs.
     $clientProfile = new ClientProfile();
-    $clientProfile->setSignMethod("TC3-HMAC-SHA256");  // 指定签名算法(默认为HmacSHA256)
+    $clientProfile->setSignMethod("TC3-HMAC-SHA256");  // Specify the signature algorithm (default is HmacSHA256)
     $clientProfile->setHttpProfile($httpProfile);
 
     $client = new EssClient($cred, "ap-guangzhou", $clientProfile);
@@ -35,7 +35,7 @@ try {
 
     $resp = $client->StartFlow($req);
 
-    // 输出json格式的字符串回包
+    // Output the response as a JSON string
     print_r($resp->toJsonString());
 }
 catch(TencentCloudSDKException $e) {

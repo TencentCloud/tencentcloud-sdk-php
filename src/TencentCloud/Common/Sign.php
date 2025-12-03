@@ -20,7 +20,7 @@ namespace TencentCloud\Common;
 
 use TencentCloud\Common\Exception\TencentCloudSDKException;
 /**
- * 签名类，禁止client引用
+ * Signing class, do not use directly by client
  * @package TencentCloud\Common
  * @throws TencentCloudSDKException
  */

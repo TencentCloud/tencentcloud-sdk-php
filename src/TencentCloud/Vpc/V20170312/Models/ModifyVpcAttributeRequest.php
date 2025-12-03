@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableRouteVpcPublish(boolean $EnableRouteVpcPublish) 设置vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
  * @method boolean getEnableCdcPublish() 获取发布cdc 子网到云联网的开关。true: 发布, false: 不发布。
  * @method void setEnableCdcPublish(boolean $EnableCdcPublish) 设置发布cdc 子网到云联网的开关。true: 发布, false: 不发布。
+ * @method boolean getEnableRouteVpcPublishIpv6() 获取vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
+ * @method void setEnableRouteVpcPublishIpv6(boolean $EnableRouteVpcPublishIpv6) 设置vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
  */
 class ModifyVpcAttributeRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ModifyVpcAttributeRequest extends AbstractModel
     public $EnableCdcPublish;
 
     /**
+     * @var boolean vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
+     */
+    public $EnableRouteVpcPublishIpv6;
+
+    /**
      * @param string $VpcId VPC实例ID。形如：vpc-f49l6u0z。
      * @param string $VpcName 私有网络名称，可任意命名，但不得超过60个字符。
      * @param string $EnableMulticast 是否开启组播。true: 开启, false: 关闭。
@@ -80,6 +87,7 @@ class ModifyVpcAttributeRequest extends AbstractModel
      * @param string $DomainName 域名。
      * @param boolean $EnableRouteVpcPublish vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
      * @param boolean $EnableCdcPublish 发布cdc 子网到云联网的开关。true: 发布, false: 不发布。
+     * @param boolean $EnableRouteVpcPublishIpv6 vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class ModifyVpcAttributeRequest extends AbstractModel
 
         if (array_key_exists("EnableCdcPublish",$param) and $param["EnableCdcPublish"] !== null) {
             $this->EnableCdcPublish = $param["EnableCdcPublish"];
+        }
+
+        if (array_key_exists("EnableRouteVpcPublishIpv6",$param) and $param["EnableRouteVpcPublishIpv6"] !== null) {
+            $this->EnableRouteVpcPublishIpv6 = $param["EnableRouteVpcPublishIpv6"];
         }
     }
 }

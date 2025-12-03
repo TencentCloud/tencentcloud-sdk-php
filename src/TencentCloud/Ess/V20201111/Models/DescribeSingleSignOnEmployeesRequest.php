@@ -26,9 +26,9 @@ use TencentCloud\Common\AbstractModel;
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
  * @method string getSsoApplicationId() 获取单点登录应用号的id,获取位置如下图![image](https://qcloudimg.tencent-cloud.cn/raw/9e61aaf390a5f90ea7606fe29b9a65fd.png)
  * @method void setSsoApplicationId(string $SsoApplicationId) 设置单点登录应用号的id,获取位置如下图![image](https://qcloudimg.tencent-cloud.cn/raw/9e61aaf390a5f90ea7606fe29b9a65fd.png)
- * @method array getOpenIds() 获取需要删除的单点登录员工的唯一Id 值.不能超过 200 个。
+ * @method array getOpenIds() 获取需要查询的单点登录员工的唯一Id 值.不能超过 200 个。
 如果传递了 openIds，limit 和 offset 参数无效，
- * @method void setOpenIds(array $OpenIds) 设置需要删除的单点登录员工的唯一Id 值.不能超过 200 个。
+ * @method void setOpenIds(array $OpenIds) 设置需要查询的单点登录员工的唯一Id 值.不能超过 200 个。
 如果传递了 openIds，limit 和 offset 参数无效，
  * @method Agent getAgent() 获取代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
@@ -53,7 +53,7 @@ class DescribeSingleSignOnEmployeesRequest extends AbstractModel
     public $SsoApplicationId;
 
     /**
-     * @var array 需要删除的单点登录员工的唯一Id 值.不能超过 200 个。
+     * @var array 需要查询的单点登录员工的唯一Id 值.不能超过 200 个。
 如果传递了 openIds，limit 和 offset 参数无效，
      */
     public $OpenIds;
@@ -78,7 +78,7 @@ class DescribeSingleSignOnEmployeesRequest extends AbstractModel
      * @param UserInfo $Operator 执行本接口操作的员工信息。使用此接口时，必须填写userId。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param string $SsoApplicationId 单点登录应用号的id,获取位置如下图![image](https://qcloudimg.tencent-cloud.cn/raw/9e61aaf390a5f90ea7606fe29b9a65fd.png)
-     * @param array $OpenIds 需要删除的单点登录员工的唯一Id 值.不能超过 200 个。
+     * @param array $OpenIds 需要查询的单点登录员工的唯一Id 值.不能超过 200 个。
 如果传递了 openIds，limit 和 offset 参数无效，
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。

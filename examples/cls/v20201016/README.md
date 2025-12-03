@@ -1,19 +1,19 @@
 CLS Demo
 ---
 
-## 日志上报demo
+## Log Upload Demo
 
 ```
 <?php
 require_once __DIR__.'/../../../vendor/autoload.php';
-// 导入对应产品模块的client
+// Import the client for the corresponding product module
 use TencentCloud\Cls\V20201016\ClsClient;
-// 导入要请求接口对应的Request类
+// Import the Request class for the interface to be requested
 use TencentCloud\Cls\V20201016\Models\UploadLogRequest;
 
 use TencentCloud\Common\Exception\TencentCloudSDKException;
 use TencentCloud\Common\Credential;
-// 导入可选配置类
+// Import the optional configuration class
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Profile\HttpProfile;
 
@@ -40,28 +40,28 @@ $logGroupList ->setLogGroupList([$logGroup]);
 $pb_str = $logGroupList->serializeToString();
 
 try {
-    // 实例化一个证书对象，入参需要传入腾讯云账户secretId，secretKey
+    // Create a credential object. You need to pass in the Tencent Cloud account secretId and secretKey.
     $cred = new Credential("【secretId】", "【secretKey】");
 
-    // 实例化一个http选项，可选的，没有特殊需求可以跳过
+    // Create an HTTP option. This is optional. You can skip it if you have no special needs.
     $httpProfile = new HttpProfile();
-    $httpProfile->setReqMethod("POST");  // post请求(默认为post请求)
-    $httpProfile->setReqTimeout(60);    // 请求超时时间，单位为秒(默认60秒)
-    $httpProfile->setEndpoint("cls.tencentcloudapi.com");  // 指定接入地域域名(默认就近接入)
+    $httpProfile->setReqMethod("POST");  // POST request (default is POST)
+    $httpProfile->setReqTimeout(60);    // Request timeout in seconds (default is 60 seconds)
+    $httpProfile->setEndpoint("cls.tencentcloudapi.com");  // Specify the regional domain (default is nearest access)
 
-    // 实例化一个client选项，可选的，没有特殊需求可以跳过
+    // Create a client option. This is optional. You can skip it if you have no special needs.
     $clientProfile = new ClientProfile();
-    $clientProfile->setSignMethod("TC3-HMAC-SHA256");  // 指定签名算法(默认为HmacSHA256)
+    $clientProfile->setSignMethod("TC3-HMAC-SHA256");  // Specify the signature algorithm (default is HmacSHA256)
     $clientProfile->setHttpProfile($httpProfile);
 
-    // 实例化要请求产品(以cls为例)的client对象,clientProfile是可选的
+    // Create the client object for the product to be requested (take cls as an example), clientProfile is optional
     $client = new ClsClient($cred, "ap-guangzhou", $clientProfile);
 
     $resp = $client->call_octet_stream("UploadLog", array(
         "X-CLS-TopicId" => "[TopicID]",
     ), $pb_str);
 
-    // 输出json格式的字符串回包
+    // Output the response as a JSON string
     print_r($resp->toJsonString());
 }
 catch(TencentCloudSDKException $e) {
@@ -71,11 +71,11 @@ catch(TencentCloudSDKException $e) {
 
 ```
 
-## php项目中如何使用protobuf
+## How to use protobuf in PHP projects
 
-1、官网下载安装最新版protoc： https://github.com/protocolbuffers/protobuf/releases （具体根据自己的操作系统去选择） 
+1. Download and install the latest version of protoc from the official website: https://github.com/protocolbuffers/protobuf/releases (Choose according to your operating system)
 
-根据pb文件，生成对应的php实现代码 
+Generate corresponding PHP implementation code based on pb files
 
 
 ```
@@ -83,13 +83,13 @@ protoc --php_out=./ cls.proto
 
 ```
 
-2、 composer.json中引入pb生成好的文件
+2. Include the pb-generated files in composer.json
 
 ```
 {
-    ...此处省略
+    ...omitted here
     "autoload": {
-        ...此处省略
+        ...omitted here
         "psr-4": {
             "GPBMetadata\\": "./examples/cls/v20201016/proto/GPBMetadata",
             "Cls\\": "./examples/cls/v20201016/proto/Cls"
@@ -99,7 +99,7 @@ protoc --php_out=./ cls.proto
 
 ```
 
-3、 引入google probuf 依赖
+3. Include google protobuf dependency
 
 ```
 composer require "google/protobuf"
@@ -107,9 +107,9 @@ composer require "google/protobuf"
 ```
 
 
-## protoc文件
+## protoc files
 
-php protoc 仅支持pb3.0语法
+php protoc only supports pb3.0 syntax
 
 
 ```
@@ -149,7 +149,6 @@ message LogGroupList
 }
 
 ```
-
 
 
 

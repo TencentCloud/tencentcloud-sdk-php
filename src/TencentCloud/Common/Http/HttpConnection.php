@@ -21,7 +21,7 @@ namespace TencentCloud\Common\Http;
 use GuzzleHttp\Client;
 
 /**
- * http连接类
+ * HTTP connection class
  * @package TencentCloud\Common\http
  */
 class HttpConnection
@@ -83,4 +83,3 @@ class HttpConnection
         return $this->client->post($uri, $options);
     }
 }
-

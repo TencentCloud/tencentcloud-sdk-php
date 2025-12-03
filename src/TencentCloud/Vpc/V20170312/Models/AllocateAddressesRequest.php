@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 <li>BANDWIDTH_PREPAID_BY_MONTH：包月按带宽预付费</li>
 <li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li></ul>默认值：TRAFFIC_POSTPAID_BY_HOUR。</li>
 <li>传统账户类型，无需传递此参数，EIP计费方式与其绑定的实例的计费方式一致，无需传递此参数。</li></ul>
+ * @method string getIPChargeType() 获取IP 资源计费模式，当前仅支持原生 IP。
+<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul><li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li><li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li></ul></li></ul>
+ * @method void setIPChargeType(string $IPChargeType) 设置IP 资源计费模式，当前仅支持原生 IP。
+<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul><li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li><li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li></ul></li></ul>
  * @method integer getInternetMaxBandwidthOut() 获取EIP出带宽上限，单位：Mbps。
 <ul style="margin:0"><li>标准账户类型EIP出带宽上限，可选值范围取决于EIP计费方式：<ul><li>BANDWIDTH_PACKAGE：1 Mbps 至 2000 Mbps</li>
 <li>BANDWIDTH_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li>
@@ -64,12 +68,16 @@ use TencentCloud\Common\AbstractModel;
 <li>EIP：弹性公网 IP。 </li>
 <li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP，详情可见Anycast公网加速[购买指南](https://cloud.tencent.com/document/product/644/12617)。</li>
 <li>HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li>
-<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP，详情可见弹性公网IP[产品概述](https://cloud.tencent.com/document/product/1199/41646)。</li>
+<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP。</li>
+<li>ResidentialEIP：原生 IP。仅部分地域支持原生IP。</li>
+关于弹性公网 IP 支持的 IP 类型，请见[产品概述](https://cloud.tencent.com/document/product/1199/41646)。
  * @method void setAddressType(string $AddressType) 设置EIP类型。各种EIP类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：EIP。
 <li>EIP：弹性公网 IP。 </li>
 <li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP，详情可见Anycast公网加速[购买指南](https://cloud.tencent.com/document/product/644/12617)。</li>
 <li>HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li>
-<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP，详情可见弹性公网IP[产品概述](https://cloud.tencent.com/document/product/1199/41646)。</li>
+<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP。</li>
+<li>ResidentialEIP：原生 IP。仅部分地域支持原生IP。</li>
+关于弹性公网 IP 支持的 IP 类型，请见[产品概述](https://cloud.tencent.com/document/product/1199/41646)。
  * @method string getAnycastZone() 获取Anycast发布域。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：境外发布域</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul>
  * @method void setAnycastZone(string $AnycastZone) 设置Anycast发布域。
@@ -108,18 +116,6 @@ AnycastEIP是否用于绑定负载均衡。
  * @method void setAntiDDoSPackageId(string $AntiDDoSPackageId) 设置高防包ID， 申请高防IP时，该字段必传。
  * @method string getClientToken() 获取保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
  * @method void setClientToken(string $ClientToken) 设置保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
- * @method string getIPChargeType() 获取原生EIP IP资源的计费方式。
-<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
-<li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
-<li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
-</ul></li>
-</ul>
- * @method void setIPChargeType(string $IPChargeType) 设置原生EIP IP资源的计费方式。
-<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
-<li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
-<li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
-</ul></li>
-</ul>
  */
 class AllocateAddressesRequest extends AbstractModel
 {
@@ -149,6 +145,12 @@ class AllocateAddressesRequest extends AbstractModel
     public $InternetChargeType;
 
     /**
+     * @var string IP 资源计费模式，当前仅支持原生 IP。
+<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul><li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li><li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li></ul></li></ul>
+     */
+    public $IPChargeType;
+
+    /**
      * @var integer EIP出带宽上限，单位：Mbps。
 <ul style="margin:0"><li>标准账户类型EIP出带宽上限，可选值范围取决于EIP计费方式：<ul><li>BANDWIDTH_PACKAGE：1 Mbps 至 2000 Mbps</li>
 <li>BANDWIDTH_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li>
@@ -168,7 +170,9 @@ class AllocateAddressesRequest extends AbstractModel
 <li>EIP：弹性公网 IP。 </li>
 <li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP，详情可见Anycast公网加速[购买指南](https://cloud.tencent.com/document/product/644/12617)。</li>
 <li>HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li>
-<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP，详情可见弹性公网IP[产品概述](https://cloud.tencent.com/document/product/1199/41646)。</li>
+<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP。</li>
+<li>ResidentialEIP：原生 IP。仅部分地域支持原生IP。</li>
+关于弹性公网 IP 支持的 IP 类型，请见[产品概述](https://cloud.tencent.com/document/product/1199/41646)。
      */
     public $AddressType;
 
@@ -237,16 +241,6 @@ AnycastEIP是否用于绑定负载均衡。
     public $ClientToken;
 
     /**
-     * @var string 原生EIP IP资源的计费方式。
-<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
-<li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
-<li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
-</ul></li>
-</ul>
-     */
-    public $IPChargeType;
-
-    /**
      * @param integer $AddressCount EIP数量。可申请的数量限制参考：[EIP 配额限制](https://cloud.tencent.com/document/product/1199/41648)。默认值：1。
      * @param string $InternetServiceProvider EIP线路类型。各种线路类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
 <ul style="margin:0"><li>BGP：常规 BGP 线路</li>
@@ -260,6 +254,8 @@ AnycastEIP是否用于绑定负载均衡。
 <li>BANDWIDTH_PREPAID_BY_MONTH：包月按带宽预付费</li>
 <li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li></ul>默认值：TRAFFIC_POSTPAID_BY_HOUR。</li>
 <li>传统账户类型，无需传递此参数，EIP计费方式与其绑定的实例的计费方式一致，无需传递此参数。</li></ul>
+     * @param string $IPChargeType IP 资源计费模式，当前仅支持原生 IP。
+<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul><li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li><li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li></ul></li></ul>
      * @param integer $InternetMaxBandwidthOut EIP出带宽上限，单位：Mbps。
 <ul style="margin:0"><li>标准账户类型EIP出带宽上限，可选值范围取决于EIP计费方式：<ul><li>BANDWIDTH_PACKAGE：1 Mbps 至 2000 Mbps</li>
 <li>BANDWIDTH_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li>
@@ -271,7 +267,9 @@ AnycastEIP是否用于绑定负载均衡。
 <li>EIP：弹性公网 IP。 </li>
 <li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP，详情可见Anycast公网加速[购买指南](https://cloud.tencent.com/document/product/644/12617)。</li>
 <li>HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li>
-<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP，详情可见弹性公网IP[产品概述](https://cloud.tencent.com/document/product/1199/41646)。</li>
+<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP。</li>
+<li>ResidentialEIP：原生 IP。仅部分地域支持原生IP。</li>
+关于弹性公网 IP 支持的 IP 类型，请见[产品概述](https://cloud.tencent.com/document/product/1199/41646)。
      * @param string $AnycastZone Anycast发布域。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：境外发布域</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul>
      * @param array $VipCluster 指定IP地址申请EIP，每个账户每个月只有三次配额
@@ -291,12 +289,6 @@ AnycastEIP是否用于绑定负载均衡。
      * @param string $Egress 网络出口，当前仅支持精品BGP、静态单线，这2种IP 地址类型的指定出口传入，默认值：center_egress1，其它可选值：center_egress2、center_egress3
      * @param string $AntiDDoSPackageId 高防包ID， 申请高防IP时，该字段必传。
      * @param string $ClientToken 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
-     * @param string $IPChargeType 原生EIP IP资源的计费方式。
-<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
-<li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
-<li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
-</ul></li>
-</ul>
      */
     function __construct()
     {
@@ -321,6 +313,10 @@ AnycastEIP是否用于绑定负载均衡。
 
         if (array_key_exists("InternetChargeType",$param) and $param["InternetChargeType"] !== null) {
             $this->InternetChargeType = $param["InternetChargeType"];
+        }
+
+        if (array_key_exists("IPChargeType",$param) and $param["IPChargeType"] !== null) {
+            $this->IPChargeType = $param["IPChargeType"];
         }
 
         if (array_key_exists("InternetMaxBandwidthOut",$param) and $param["InternetMaxBandwidthOut"] !== null) {
@@ -383,10 +379,6 @@ AnycastEIP是否用于绑定负载均衡。
 
         if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
             $this->ClientToken = $param["ClientToken"];
-        }
-
-        if (array_key_exists("IPChargeType",$param) and $param["IPChargeType"] !== null) {
-            $this->IPChargeType = $param["IPChargeType"];
         }
     }
 }

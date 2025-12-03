@@ -4,3 +4,4 @@ tests/ export-ignore
 CHANGELOG.md export-ignore
 SERVICE_CHANGELOG.md export-ignore
 .gitattributes export-ignore
+* text=auto eol=lf

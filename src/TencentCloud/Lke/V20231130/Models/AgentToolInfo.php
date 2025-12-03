@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFinanceStatus(integer $FinanceStatus) 设置工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等）
  * @method integer getToolSource() 获取工具来源: 0-来自插件，1-来自工作流
  * @method void setToolSource(integer $ToolSource) 设置工具来源: 0-来自插件，1-来自工作流
+ * @method integer getFinanceType() 获取计费状态；0-不计费，1-限时免费，2-官方收费
+ * @method void setFinanceType(integer $FinanceType) 设置计费状态；0-不计费，1-限时免费，2-官方收费
  */
 class AgentToolInfo extends AbstractModel
 {
@@ -159,6 +161,11 @@ class AgentToolInfo extends AbstractModel
     public $ToolSource;
 
     /**
+     * @var integer 计费状态；0-不计费，1-限时免费，2-官方收费
+     */
+    public $FinanceType;
+
+    /**
      * @param string $PluginId 插件id
      * @param string $PluginName 插件名称
      * @param string $IconUrl 插件图标url
@@ -180,6 +187,7 @@ class AgentToolInfo extends AbstractModel
      * @param array $Query query信息
      * @param integer $FinanceStatus 工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等）
      * @param integer $ToolSource 工具来源: 0-来自插件，1-来自工作流
+     * @param integer $FinanceType 计费状态；0-不计费，1-限时免费，2-官方收费
      */
     function __construct()
     {
@@ -285,6 +293,10 @@ class AgentToolInfo extends AbstractModel
 
         if (array_key_exists("ToolSource",$param) and $param["ToolSource"] !== null) {
             $this->ToolSource = $param["ToolSource"];
+        }
+
+        if (array_key_exists("FinanceType",$param) and $param["FinanceType"] !== null) {
+            $this->FinanceType = $param["FinanceType"];
         }
     }
 }

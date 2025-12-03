@@ -1,25 +1,25 @@
 <?php
 require_once __DIR__.'/../../../vendor/autoload.php';
-// 导入对应产品模块的client
+// Import the client of the corresponding product module
 use TencentCloud\Cvm\V20170312\CvmClient;
-// 导入要请求接口对应的Request类
+// Import the Request class of the interface to be requested
 use TencentCloud\Cvm\V20170312\Models\DescribeZonesRequest;
 use TencentCloud\Common\Exception\TencentCloudSDKException;
 use TencentCloud\Common\Credential;
 use TencentCloud\Common\Profile\ClientProfile;
 try {
-    // 实例化一个证书对象，入参需要传入腾讯云账户secretId，secretKey
+    // Create a credential object. You need to pass in the Tencent Cloud account secretId and secretKey.
     $cred = new Credential(getenv("TENCENTCLOUD_SECRET_ID"), getenv("TENCENTCLOUD_SECRET_KEY"));
     $clientProfile = new ClientProfile();
     //$clientProfile->setLanguage(ClientProfile::$ZH_CN);
     $clientProfile->setSignMethod(ClientProfile::$SIGN_HMAC_SHA256);
-    // # 实例化要请求产品(以cvm为例)的client对象
+    // # Create a client object for the product to be requested (take cvm as an example)
     $client = new CvmClient($cred, "ap-guangzhou", $clientProfile);
 
-    // 实例化一个请求对象
+    // Create a request object
     $req = new DescribeZonesRequest();
 
-    // 通过client对象调用想要访问的接口，需要传入请求对象
+    // Call the interface you want to access through the client object. You need to pass in the request object.
     $resp = $client->DescribeZones($req);
 
     print_r($resp->toJsonString());

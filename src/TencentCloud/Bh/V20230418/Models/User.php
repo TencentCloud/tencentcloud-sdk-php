@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 用户信息
  *
- * @method string getUserName() 获取用户名, 3-20个字符 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符
- * @method void setUserName(string $UserName) 设置用户名, 3-20个字符 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符
+ * @method string getUserName() 获取用户名,1 - 128个字符 必须以英文字母开头，只能由a-zA-Z0-9以及+=,.@_-组成，支持邮箱格式
+
+ * @method void setUserName(string $UserName) 设置用户名,1 - 128个字符 必须以英文字母开头，只能由a-zA-Z0-9以及+=,.@_-组成，支持邮箱格式
+
  * @method string getRealName() 获取用户姓名， 最大20个字符，不能包含空白字符
  * @method void setRealName(string $RealName) 设置用户姓名， 最大20个字符，不能包含空白字符
  * @method integer getId() 获取用户ID
@@ -62,11 +64,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserFrom(integer $UserFrom) 设置用户来源，0-bh,1-ioa
  * @method IOAUserGroup getIOAUserGroup() 获取ioa同步过来的用户相关信息
  * @method void setIOAUserGroup(IOAUserGroup $IOAUserGroup) 设置ioa同步过来的用户相关信息
+ * @method string getRoleArn() 获取cam角色用户载体
+ * @method void setRoleArn(string $RoleArn) 设置cam角色用户载体
  */
 class User extends AbstractModel
 {
     /**
-     * @var string 用户名, 3-20个字符 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符
+     * @var string 用户名,1 - 128个字符 必须以英文字母开头，只能由a-zA-Z0-9以及+=,.@_-组成，支持邮箱格式
+
      */
     public $UserName;
 
@@ -163,7 +168,13 @@ class User extends AbstractModel
     public $IOAUserGroup;
 
     /**
-     * @param string $UserName 用户名, 3-20个字符 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符
+     * @var string cam角色用户载体
+     */
+    public $RoleArn;
+
+    /**
+     * @param string $UserName 用户名,1 - 128个字符 必须以英文字母开头，只能由a-zA-Z0-9以及+=,.@_-组成，支持邮箱格式
+
      * @param string $RealName 用户姓名， 最大20个字符，不能包含空白字符
      * @param integer $Id 用户ID
      * @param string $Phone 手机号码， 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
@@ -184,6 +195,7 @@ class User extends AbstractModel
      * @param integer $AclVersion 权限版本
      * @param integer $UserFrom 用户来源，0-bh,1-ioa
      * @param IOAUserGroup $IOAUserGroup ioa同步过来的用户相关信息
+     * @param string $RoleArn cam角色用户载体
      */
     function __construct()
     {
@@ -279,6 +291,10 @@ class User extends AbstractModel
         if (array_key_exists("IOAUserGroup",$param) and $param["IOAUserGroup"] !== null) {
             $this->IOAUserGroup = new IOAUserGroup();
             $this->IOAUserGroup->deserialize($param["IOAUserGroup"]);
+        }
+
+        if (array_key_exists("RoleArn",$param) and $param["RoleArn"] !== null) {
+            $this->RoleArn = $param["RoleArn"];
         }
     }
 }

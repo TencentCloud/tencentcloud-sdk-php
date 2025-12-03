@@ -13,20 +13,20 @@ class Aes
         }
     }
 
-    //解密
+    //Decrypt
     public function aesDe($data){
         return openssl_decrypt(base64_decode($data),  $this->method, $this->key, OPENSSL_RAW_DATA, $this->key);
     }
 }
 
 $config = [
-    'key'	=>	'********************', // 此处填入CallbackUrlKey
-    'method'	=> 'AES-256-CBC' //加密方式
+    'key'	=>	'********************', // Fill in CallbackUrlKey here
+    'method'	=> 'AES-256-CBC' //Encryption method
 ];
 
 $obj = new Aes($config);
 
-// 此处填入收到的密文
+// Fill in received ciphertext here
 $data = '*****************************';
 
-echo $obj->aesDe($data);//解密
+echo $obj->aesDe($data);//Decrypt

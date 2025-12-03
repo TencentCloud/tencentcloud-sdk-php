@@ -10,14 +10,14 @@ class Counter
     public $total = 0;
     public $consecutiveSuccesses = 0;
     public $consecutiveFailures = 0;
-    
+
     public function onSuccess()
     {
         $this->total++;
         $this->consecutiveSuccesses++;
         $this->consecutiveFailures = 0;
     }
-    
+
     public function onFailure()
     {
         $this->total++;
@@ -25,7 +25,7 @@ class Counter
         $this->consecutiveFailures++;
         $this->consecutiveSuccesses = 0;
     }
-    
+
     public function clear()
     {
         $this->failures = 0;
@@ -33,7 +33,7 @@ class Counter
         $this->consecutiveSuccesses = 0;
         $this->consecutiveFailures = 0;
     }
-    
+
     public function getFailureRate()
     {
         if ($this->total == 0) {
@@ -50,7 +50,7 @@ class CircuitBreaker
     public $state;
     public $expiry;
     public $generation;
-    
+
     public function __construct($breakerSetting)
     {
         $this->breakerSetting = $breakerSetting;
@@ -59,14 +59,14 @@ class CircuitBreaker
         $this->expiry = time() + $breakerSetting->windowInterval;
         $this->generation = 0;
     }
-    
+
     public function readyToOpen()
     {
         return ($this->counter->failures >= $this->breakerSetting->maxFailNum &&
                 $this->counter->getFailureRate() >= $this->breakerSetting->maxFailPercent) ||
             $this->counter->consecutiveFailures >= 5;
     }
-    
+
     public function currentState($now)
     {
         if ($this->state == STATE_CLOSED) {
@@ -75,13 +75,13 @@ class CircuitBreaker
             }
         } elseif ($this->state == STATE_OPEN) {
             if ($this->expiry <= $now) {
-                
+
                 $this->switchState(STATE_HALF_OPEN, $now);
             }
         }
         return array($this->state, $this->generation);
     }
-    
+
     public function switchState($newState, $now)
     {
         if ($this->state == $newState) {
@@ -90,7 +90,7 @@ class CircuitBreaker
         $this->state = $newState;
         $this->toNewGeneration($now);
     }
-    
+
     public function toNewGeneration($now)
     {
         $this->generation = ($this->generation + 1) % 10;
@@ -103,7 +103,7 @@ class CircuitBreaker
             $this->expiry = time();
         }
     }
-    
+
     public function beforeRequests()
     {
         $now = time();
@@ -113,7 +113,7 @@ class CircuitBreaker
         }
         return array($generation, false);
     }
-    
+
     public function afterRequests($before, $success)
     {
         $now = time();
@@ -127,7 +127,7 @@ class CircuitBreaker
             $this->onFailure($state, $now);
         }
     }
-    
+
     public function onSuccess($state, $now)
     {
         if ($state == STATE_CLOSED) {
@@ -139,7 +139,7 @@ class CircuitBreaker
             }
         }
     }
-    
+
     public function onFailure($state, $now)
     {
         if ($state == STATE_CLOSED) {

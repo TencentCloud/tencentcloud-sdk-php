@@ -1,61 +1,61 @@
 <?php
 require_once __DIR__.'/../../../vendor/autoload.php';
-// 导入对应产品模块的client
+// Import the client for the corresponding product module
 use TencentCloud\Hunyuan\V20230901\HunyuanClient;
-// 导入要请求接口对应的Request类
+// Import the Request class for the interface to be requested
 use TencentCloud\Hunyuan\V20230901\Models\ChatCompletionsRequest;
 use TencentCloud\Hunyuan\V20230901\Models\Message;
 
 use TencentCloud\Common\Exception\TencentCloudSDKException;
 use TencentCloud\Common\Credential;
-// 导入可选配置类
+// Import the optional configuration class
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Profile\HttpProfile;
 
 
 function streamProcessResult($result)
 {
-    // 处理每个事件流
+    // Process each event stream
     echo $result;
 }
 
 try {
-    // 实例化一个证书对象，入参需要传入腾讯云账户secretId，secretKey
+    // Create a credential object. You need to pass in the Tencent Cloud account secretId and secretKey.
     // $cred = new Credential("【secretId】", "【secretKey】");
     $cred = new Credential(getenv("TENCENTCLOUD_SECRET_ID"),
         getenv("TENCENTCLOUD_SECRET_KEY"));
-    
-    // 实例化一个http选项，可选的，没有特殊需求可以跳过
+
+    // Create an HTTP option. This is optional. You can skip it if you have no special needs.
     $httpProfile = new HttpProfile();
-    $httpProfile->setReqMethod("POST");  // post请求(默认为post请求)
-    $httpProfile->setReqTimeout(60);    // 请求超时时间，单位为秒(默认60秒)
-    $httpProfile->setEndpoint("hunyuan.tencentcloudapi.com");  // 指定接入地域域名(默认就近接入)
-    
-    // 实例化一个client选项，可选的，没有特殊需求可以跳过
+    $httpProfile->setReqMethod("POST");  // POST request (default is POST)
+    $httpProfile->setReqTimeout(60);    // Request timeout in seconds (default is 60 seconds)
+    $httpProfile->setEndpoint("hunyuan.tencentcloudapi.com");  // Specify the regional domain (default is nearest access)
+
+    // Create a client option. This is optional. You can skip it if you have no special needs.
     $clientProfile = new ClientProfile();
-    $clientProfile->setSignMethod("TC3-HMAC-SHA256");  // 指定签名算法(默认为HmacSHA256)
+    $clientProfile->setSignMethod("TC3-HMAC-SHA256");  // Specify the signature algorithm (default is HmacSHA256)
     $clientProfile->setHttpProfile($httpProfile);
-    
-    // 实例化要请求产品的client对象,clientProfile是可选的
+
+    // Create the client object for the product to be requested, clientProfile is optional
     $client = new HunyuanClient($cred, "ap-guangzhou", $clientProfile);
-    
-    // 如果响应是SSE-event流，可以设置回调函数逐个处理事件流，否则一次返回所有响应内容
+
+    // If the response is an SSE-event stream, you can set a callback function to process each event stream one by one, otherwise return all response content at once
     $client->setSseResponseCallbackFunc('streamProcessResult');
-    
-    
-    // 实例化一个hunyuan实例信息查询请求对象,每个接口都会对应一个request对象。
+
+
+    // Create a hunyuan instance information query request object, each interface corresponds to a request object.
     $req = new ChatCompletionsRequest();
     $req->TopP = 0;
     $req->Temperature = 0;
     $req->Model = "hunyuan-standard";
     $reqMessage = new Message();
     $reqMessage->Role = "user";
-    $reqMessage->Content = "计算1+1";
+    $reqMessage->Content = "Calculate 1+1";
     $req->Messages = [$reqMessage];
-    
-    // 通过client对象调用ChatCompletions方法发起请求。注意请求方法名与请求对象是对应的
+
+    // Call the ChatCompletions method through the client object to initiate the request. Note that the request method name corresponds to the request object.
     $client->ChatCompletions($req);
-    
+
 }
 catch(TencentCloudSDKException $e) {
     echo $e;

@@ -21,7 +21,7 @@ namespace TencentCloud\Common\Profile;
 use TencentCloud\Common\Exception\TencentCloudSDKException;
 
 /**
- * client可选参数类
+ * Client optional parameters class
  * Class ClientProfile
  * @package TencentCloud\Common\Profile
  */
@@ -29,17 +29,17 @@ class ClientProfile
 {
 
     /**
-     * @var string  hmacsha1算法
+     * @var string  HMAC SHA1 algorithm
      */
     public static $SIGN_HMAC_SHA1 = "HmacSHA1";
 
     /**
-     * @var string hmacsha256算法
+     * @var string HMAC SHA256 algorithm
      */
     public static $SIGN_HMAC_SHA256 = "HmacSHA256";
 
     /**
-     * @var string 签名V3
+     * @var string Signature V3
      */
     public static $SIGN_TC3_SHA256 = "TC3-HMAC-SHA256";
 
@@ -52,24 +52,24 @@ class ClientProfile
      * @var string English
      */
     public static $EN_US = "en-US";
-    
+
     /**
-     * @var boolean 开启地域容器
+     * @var boolean Enable region breaker
      */
     public $enableRegionBreaker;
-    
+
     /**
-     * @var HttpProfile http相关参数
+     * @var HttpProfile HTTP related parameters
      */
     private $httpProfile;
 
     /**
-     * @var string 签名方法
+     * @var string Signature method
      */
     private $signMethod;
 
     /**
-     * @var string 忽略内容签名
+     * @var string Unsigned payload
      */
     private $unsignedPayload;
 
@@ -82,18 +82,18 @@ class ClientProfile
      * @var string
      */
     private $language;
-    
+
     /**
-     * @var RegionBreakerProfile 地域容灾相关参数
+     * @var RegionBreakerProfile Region breaker related parameters
      */
     private $regionBreakerProfile;
 
     /**
      * ClientProfile constructor.
-     * @param string $signMethod  签名算法，目前支持SHA256，SHA1
-     * @param HttpProfile $httpProfile http参数类
-     * @param boolean $enableRegionBreaker  开启地域容灾
-     * @param RegionBreakerProfile $regionBreakerProfile  地域容灾相关参数
+     * @param string $signMethod  Signature algorithm, currently supports SHA256, SHA1
+     * @param HttpProfile $httpProfile HTTP parameters class
+     * @param boolean $enableRegionBreaker  Enable region breaker
+     * @param RegionBreakerProfile $regionBreakerProfile  Region breaker related parameters
      */
     public function __construct($signMethod = null, $httpProfile = null, $enableRegionBreaker = false, $regionBreakerProfile = null)
     {
@@ -107,8 +107,8 @@ class ClientProfile
     }
 
     /**
-     * 设置签名算法
-     * @param string $signMethod 签名方法，目前支持SHA256，SHA1, TC3
+     * Set signature algorithm
+     * @param string $signMethod Signature method, currently supports SHA256, SHA1, TC3
      */
     public function setSignMethod($signMethod)
     {
@@ -116,8 +116,8 @@ class ClientProfile
     }
 
     /**
-     * 设置http相关参数
-     * @param HttpProfile $httpProfile http相关参数
+     * Set HTTP related parameters
+     * @param HttpProfile $httpProfile HTTP related parameters
      */
     public function setHttpProfile($httpProfile)
     {
@@ -125,8 +125,8 @@ class ClientProfile
     }
 
     /**
-     * 获取签名方法
-     * @return null|string 签名方法
+     * Get signature method
+     * @return null|string Signature method
      */
     public function getSignMethod()
     {
@@ -134,8 +134,8 @@ class ClientProfile
     }
 
     /**
-     * 设置是否忽略内容签名
-     * @param bool $flag true表示忽略签名
+     * Set whether to ignore content signature
+     * @param bool $flag true means ignore signature
      */
     public function setUnsignedPayload($flag)
     {
@@ -143,7 +143,7 @@ class ClientProfile
     }
 
     /**
-     * 获取是否忽略内容签名标志位
+     * Get whether to ignore content signature flag
      * @return bool
      */
     public function getUnsignedPayload()
@@ -173,24 +173,24 @@ class ClientProfile
     {
 	$this->language = $language;
     }
-    
+
     public function getRegionBreakerProfile()
     {
         return $this->regionBreakerProfile;
     }
-    
+
     /**
-     * 设置地域容灾相关参数
-     * @param RegionBreakerProfile $regionBreakerProfile 地域容灾相关参数
+     * Set region breaker related parameters
+     * @param RegionBreakerProfile $regionBreakerProfile Region breaker related parameters
      */
     public function setRegionBreakerProfile($regionBreakerProfile)
     {
         $this->regionBreakerProfile = $regionBreakerProfile;
     }
-    
+
     /**
-     * 获取http选项实例
-     * @return null|HttpProfile http选项实例
+     * Get HTTP profile instance
+     * @return null|HttpProfile HTTP profile instance
      */
     public function getHttpProfile()
     {
@@ -199,7 +199,7 @@ class ClientProfile
 }
 
 class RegionBreakerProfile {
-    
+
     public function __construct($masterEndpoint,
                                 $slaveEndpoint,
                                 $maxFailNum = 5,

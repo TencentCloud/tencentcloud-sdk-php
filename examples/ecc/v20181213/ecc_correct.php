@@ -1,49 +1,49 @@
 <?php
 require_once __DIR__.'/../../../vendor/autoload.php';
-// 导入对应产品模块的client
+// Import the client for the corresponding product module
 use TencentCloud\Ecc\V20181213\EccClient;
 
-// 导入要请求接口对应的Request类
+// Import the Request class for the interface to be requested
 use TencentCloud\Ecc\V20181213\Models\ECCRequest;
 use TencentCloud\Ecc\V20181213\Models\ECCResponse;
 
 use TencentCloud\Common\Exception\TencentCloudSDKException;
 use TencentCloud\Common\Credential;
-// 导入可选配置类
+// Import the optional configuration class
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Profile\HttpProfile;
 
 try {
-    // 实例化一个证书对象，入参需要传入腾讯云账户secretId，secretKey
-    // 为了保护密钥安全，建议将密钥设置在环境变量中或者配置文件中。
-    // 硬编码密钥到代码中有可能随代码泄露而暴露，有安全隐患，并不推荐。
+    // Create a credential object. You need to pass in the Tencent Cloud account secretId and secretKey.
+    // To protect the security of the keys, it is recommended to set the keys in environment variables or configuration files.
+    // Hardcoding keys into the code may expose them if the code is leaked, which is a security risk and is not recommended.
     // $cred = new Credential("", "");
     $cred = new Credential(getenv("TENCENTCLOUD_SECRET_ID"), getenv("TENCENTCLOUD_SECRET_KEY"));
 
-    // 实例化一个http选项，可选的，没有特殊需求可以跳过
+    // Create an HTTP option. This is optional. You can skip it if you have no special needs.
     $httpProfile = new HttpProfile();
-    //$httpProfile->setReqMethod("post");  // post请求(默认为post请求)
-    $httpProfile->setReqTimeout(30);    // 请求超时时间，单位为秒(默认60秒)
-    $httpProfile->setEndpoint("ecc.ap-shanghai.tencentcloudapi.com");  // 指定接入地域域名(默认就近接入)
+    //$httpProfile->setReqMethod("post");  // POST request (default is POST)
+    $httpProfile->setReqTimeout(30);    // Request timeout in seconds (default is 60 seconds)
+    $httpProfile->setEndpoint("ecc.ap-shanghai.tencentcloudapi.com");  // Specify the regional domain (default is nearest access)
 
-    // 实例化一个client选项，可选的，没有特殊需求可以跳过
+    // Create a client option. This is optional. You can skip it if you have no special needs.
     $clientProfile = new ClientProfile();
-    $clientProfile->setSignMethod("HmacSHA256");  // 指定签名算法(默认为HmacSHA256)
+    $clientProfile->setSignMethod("HmacSHA256");  // Specify the signature algorithm (default is HmacSHA256)
     $clientProfile->setHttpProfile($httpProfile);
 
     $client = new EccClient($cred, "ap-shanghai", $clientProfile);
 
-    // 实例化一个ecc实例信息查询请求对象,每个接口都会对应一个request对象。
+    // Create a request object for querying ECC instance information. Each interface corresponds to a request object.
     $req = new ECCRequest();
     $req->Content = "this composition content";
 
     $resp = $client->ECC($req);
 
-    // 输出json格式的字符串回包
+    // Output the response as a JSON string
     print_r($resp->toJsonString());
 
-    // 也可以取出单个值。
-    // 你可以通过官网接口文档或跳转到response对象的定义处查看返回字段的定义
+    // You can also extract a single value.
+    // You can check the definition of the return fields by referring to the official interface documentation or jumping to the definition of the response object.
     print_r($resp->TotalCount);
 }
 catch(TencentCloudSDKException $e) {

@@ -1,48 +1,48 @@
 <?php
 require_once __DIR__.'/../../../vendor/autoload.php';
-// 导入对应产品模块的client
+// Import the client for the corresponding product module
 use TencentCloud\Cvm\V20170312\CvmClient;
-// 导入要请求接口对应的Request类
+// Import the Request class for the interface to be requested
 use TencentCloud\Cvm\V20170312\Models\DescribeInstancesRequest;
 use TencentCloud\Cvm\V20170312\Models\Filter;
 use TencentCloud\Common\Exception\TencentCloudSDKException;
 use TencentCloud\Common\Credential;
-// 导入可选配置类
+// Import the optional configuration class
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Profile\HttpProfile;
 
 try {
-    // 实例化一个证书对象，入参需要传入腾讯云账户secretId，secretKey
+    // Create a credential object. You need to pass in the Tencent Cloud account secretId and secretKey.
     //$cred = new Credential("secretId", "secretKey");
     $cred = new Credential(getenv("TENCENTCLOUD_SECRET_ID"), getenv("TENCENTCLOUD_SECRET_KEY"));
 
-    // 实例化一个http选项，可选的，没有特殊需求可以跳过
+    // Create an HTTP option. This is optional. You can skip it if you have no special needs.
     $httpProfile = new HttpProfile();
-    $httpProfile->setReqMethod("GET");  // post请求(默认为post请求)
-    $httpProfile->setReqTimeout(30);    // 请求超时时间，单位为秒(默认60秒)
-    $httpProfile->setEndpoint("cvm.ap-shanghai.tencentcloudapi.com");  // 指定接入地域域名(默认就近接入)
-    //$httpProfile->setRootDomain("ap-shanghai.tencentcloudapi.com");  // 指定根域名，默认为tencentcloudapi.com
+    $httpProfile->setReqMethod("GET");  // GET request (default is POST)
+    $httpProfile->setReqTimeout(30);    // Request timeout in seconds (default is 60 seconds)
+    $httpProfile->setEndpoint("cvm.ap-shanghai.tencentcloudapi.com");  // Specify the regional domain (default is nearest access)
+    //$httpProfile->setRootDomain("ap-shanghai.tencentcloudapi.com");  // Specify the root domain, default is tencentcloudapi.com
     //$httpProfile->setKeepAlive(true);
 
-    // 实例化一个client选项，可选的，没有特殊需求可以跳过
+    // Create a client option. This is optional. You can skip it if you have no special needs.
     $clientProfile = new ClientProfile();
-    $clientProfile->setSignMethod("TC3-HMAC-SHA256");  // 指定签名算法(默认为HmacSHA256)
+    $clientProfile->setSignMethod("TC3-HMAC-SHA256");  // Specify the signature algorithm (default is HmacSHA256)
     $clientProfile->setHttpProfile($httpProfile);
 
-    // 实例化要请求产品(以cvm为例)的client对象,clientProfile是可选的
+    // Create the client object for the product to be requested (CVM in this case). The clientProfile is optional.
     $client = new CvmClient($cred, "ap-shanghai", $clientProfile);
 
-    // 实例化一个cvm实例信息查询请求对象,每个接口都会对应一个request对象。
+    // Create a request object for querying CVM instance information. Each interface corresponds to a request object.
     $req = new DescribeInstancesRequest();
 
-    // 填充请求参数,这里request对象的成员变量即对应接口的入参
-    // 你可以通过官网接口文档或跳转到request对象的定义处查看请求参数的定义
-    $respFilter = new Filter();  // 创建Filter对象, 以zone的维度来查询cvm实例
+    // Fill in the request parameters. The member variables of the request object correspond to the input parameters of the interface.
+    // You can check the definition of the request parameters by referring to the official interface documentation or jumping to the definition of the request object.
+    $respFilter = new Filter();  // Create a Filter object to query CVM instances by zone
     $respFilter->Name = "zone";
     $respFilter->Values = ["ap-shanghai-1", "ap-shanghai-2"];
-    $req->Filters = [$respFilter];  // Filters 是成员为Filter对象的列表
+    $req->Filters = [$respFilter];  // Filters is a list of Filter objects
 
-    // 这里还支持以标准json格式的string来赋值请求参数的方式。下面的代码跟上面的参数赋值是等效的
+    // You can also assign request parameters using a standard JSON formatted string. The following code is equivalent to the parameter assignment above.
     $params = [
         "Filters" => [
             [
@@ -53,15 +53,15 @@ try {
     ];
     $req->fromJsonString(json_encode($params));
 
-    // 通过client对象调用DescribeInstances方法发起请求。注意请求方法名与请求对象是对应的
-    // 返回的resp是一个DescribeInstancesResponse类的实例，与请求对象对应
+    // Call the DescribeInstances method through the client object to initiate the request. Note that the request method name corresponds to the request object.
+    // The returned resp is an instance of the DescribeInstancesResponse class, which corresponds to the request object.
     $resp = $client->DescribeInstances($req);
 
-    // 输出json格式的字符串回包
+    // Output the response as a JSON string
     print_r($resp->toJsonString());
 
-    // 也可以取出单个值。
-    // 你可以通过官网接口文档或跳转到response对象的定义处查看返回字段的定义
+    // You can also extract a single value.
+    // You can check the definition of the return fields by referring to the official interface documentation or jumping to the definition of the response object.
     print_r($resp->TotalCount);
 }
 catch(TencentCloudSDKException $e) {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDomainShareId() 获取共享记录ID
  * @method void setDomainShareId(integer $DomainShareId) 设置共享记录ID
- * @method string getMode() 获取共享模式。r-只读；w-可写；rw-可读写。
- * @method void setMode(string $Mode) 设置共享模式。r-只读；w-可写；rw-可读写。
+ * @method string getMode() 获取共享模式。r-只读；rw-可读写。
+ * @method void setMode(string $Mode) 设置共享模式。r-只读；rw-可读写。
  * @method string getNickname() 获取共享到的用户昵称
  * @method void setNickname(string $Nickname) 设置共享到的用户昵称
  * @method string getQCloudUIN() 获取共享到的用户UIN
@@ -41,7 +41,7 @@ class DomainShareUserInfo extends AbstractModel
     public $DomainShareId;
 
     /**
-     * @var string 共享模式。r-只读；w-可写；rw-可读写。
+     * @var string 共享模式。r-只读；rw-可读写。
      */
     public $Mode;
 
@@ -67,7 +67,7 @@ class DomainShareUserInfo extends AbstractModel
 
     /**
      * @param integer $DomainShareId 共享记录ID
-     * @param string $Mode 共享模式。r-只读；w-可写；rw-可读写。
+     * @param string $Mode 共享模式。r-只读；rw-可读写。
      * @param string $Nickname 共享到的用户昵称
      * @param string $QCloudUIN 共享到的用户UIN
      * @param string $Status 共享状态。enabled-有效；pause-无效。

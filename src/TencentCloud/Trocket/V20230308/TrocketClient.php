@@ -101,7 +101,8 @@ Filters示例：
  * @method Models\DescribeMQTTUserListResponse DescribeMQTTUserList(Models\DescribeMQTTUserListRequest $req) 查询用户列表，Filter参数使用说明如下：
 
 1. Username，用户名称模糊搜索
- * @method Models\DescribeMessageResponse DescribeMessage(Models\DescribeMessageRequest $req) 查询消息详情
+ * @method Models\DescribeMessageResponse DescribeMessage(Models\DescribeMessageRequest $req) 查询消息详情。
+当前 API 适用集群：5.x 集群。4.x 集群的查询消息详情接口文档见 [DescribeRocketMQMsg](https://cloud.tencent.com/document/product/1179/91055)。
  * @method Models\DescribeMessageListResponse DescribeMessageList(Models\DescribeMessageListRequest $req) 查询消息列表。如果查询死信消息，请设置ConsumerGroup参数。
  * @method Models\DescribeMessageTraceResponse DescribeMessageTrace(Models\DescribeMessageTraceRequest $req) 根据消息 ID 查询消息轨迹。
  * @method Models\DescribeMigratingGroupStatsResponse DescribeMigratingGroupStats(Models\DescribeMigratingGroupStatsRequest $req) 查看迁移消费组的实时信息

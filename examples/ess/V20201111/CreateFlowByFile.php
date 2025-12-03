@@ -11,18 +11,18 @@ use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Profile\HttpProfile;
 
 try {
-    // 实例化一个证书对象，入参需要传入腾讯云账户secretId，secretKey
+    // Create a credential object. You need to pass in the Tencent Cloud account secretId and secretKey.
     $cred = new Credential("********************************", "********************************");
 
-    // 实例化一个http选项，可选的，没有特殊需求可以跳过
+    // Create an HTTP option. This is optional. You can skip it if you have no special needs.
     $httpProfile = new HttpProfile();
-    $httpProfile->setReqMethod("POST");  // post请求(默认为post请求)
-    $httpProfile->setReqTimeout(30);    // 请求超时时间，单位为秒(默认60秒)
-    $httpProfile->setEndpoint("ess.tencentcloudapi.com");  // 指定接入地域域名(默认就近接入)
+    $httpProfile->setReqMethod("POST");  // POST request (default is POST)
+    $httpProfile->setReqTimeout(30);    // Request timeout in seconds (default is 60 seconds)
+    $httpProfile->setEndpoint("ess.tencentcloudapi.com");  // Specify the regional domain (default is nearest access)
 
-    // 实例化一个client选项，可选的，没有特殊需求可以跳过
+    // Create a client option. This is optional. You can skip it if you have no special needs.
     $clientProfile = new ClientProfile();
-    $clientProfile->setSignMethod("TC3-HMAC-SHA256");  // 指定签名算法(默认为HmacSHA256)
+    $clientProfile->setSignMethod("TC3-HMAC-SHA256");  // Specify the signature algorithm (default is HmacSHA256)
     $clientProfile->setHttpProfile($httpProfile);
 
     $client = new EssClient($cred, "ap-guangzhou", $clientProfile);
@@ -36,7 +36,7 @@ try {
     $req->FileIds = [];
     array_push($req->FileIds, "********************************");
 
-    // 企业方 静默签署时type为3/非静默签署type为0
+    // Company party: When silent signing, type is 3 / non-silent signing type is 0
     $approver1 = new ApproverInfo();
     $approver1->setApproverType(3);
     $approver1->setApproverName("********************************");
@@ -56,7 +56,7 @@ try {
     $approver1->SignComponents = [];
     array_push($approver1->SignComponents, $component1);
 
-    // 客户个人
+    // Individual customer
     $approver2 = new ApproverInfo();
     $approver2->setApproverType(1);
     $approver2->setApproverName("********************************");
@@ -74,18 +74,18 @@ try {
     $approver2->SignComponents = [];
     array_push($approver2->SignComponents, $component2);
 
-    // 注：当进行B2B签署时，允许指向未注册的企业，此时签署人可以查看合同并按照指引注册企业
+    // Note: When doing B2B signing, it allows pointing to unregistered companies, at which point signers can view the contract and register the company according to the guidance
     $req->Approvers = [];
     array_push($req->Approvers, $approver1);
     array_push($req->Approvers, $approver2);
 
     $req->setFlowName("********************************");
-    // 请设置合理的时间，否则容易造成合同过期
+    // Please set a reasonable time, otherwise the contract may expire easily
     $req->setDeadLine(time() + 7 * 24 * 3600);
 
     $resp = $client->CreateFlowByFiles($req);
 
-    // 输出json格式的字符串回包
+    // Output the response as a JSON string
     print_r($resp->toJsonString());
 }
 catch(TencentCloudSDKException $e) {

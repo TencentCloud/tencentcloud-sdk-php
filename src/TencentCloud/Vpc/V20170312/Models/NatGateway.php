@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置NAT实例归属的专属集群id
  * @method boolean getDeletionProtectionEnabled() 获取NAT实例是否开启删除保护
  * @method void setDeletionProtectionEnabled(boolean $DeletionProtectionEnabled) 设置NAT实例是否开启删除保护
+ * @method ConnectionStateTimeouts getConnectionStateTimeouts() 获取NAT实例连接超时时间
+ * @method void setConnectionStateTimeouts(ConnectionStateTimeouts $ConnectionStateTimeouts) 设置NAT实例连接超时时间
+ * @method string getExclusiveType() 获取独享实例规格。取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
+ * @method void setExclusiveType(string $ExclusiveType) 设置独享实例规格。取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
  */
 class NatGateway extends AbstractModel
 {
@@ -191,6 +195,16 @@ class NatGateway extends AbstractModel
     public $DeletionProtectionEnabled;
 
     /**
+     * @var ConnectionStateTimeouts NAT实例连接超时时间
+     */
+    public $ConnectionStateTimeouts;
+
+    /**
+     * @var string 独享实例规格。取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
+     */
+    public $ExclusiveType;
+
+    /**
      * @param string $NatGatewayId NAT网关的ID。
      * @param string $NatGatewayName NAT网关的名称。
      * @param string $CreatedTime NAT网关创建的时间。
@@ -216,6 +230,8 @@ class NatGateway extends AbstractModel
      * @param boolean $SmartScheduleMode 是否启用根据目的网段选择SNAT使用的EIP功能	
      * @param string $DedicatedClusterId NAT实例归属的专属集群id
      * @param boolean $DeletionProtectionEnabled NAT实例是否开启删除保护
+     * @param ConnectionStateTimeouts $ConnectionStateTimeouts NAT实例连接超时时间
+     * @param string $ExclusiveType 独享实例规格。取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
      */
     function __construct()
     {
@@ -340,6 +356,15 @@ class NatGateway extends AbstractModel
 
         if (array_key_exists("DeletionProtectionEnabled",$param) and $param["DeletionProtectionEnabled"] !== null) {
             $this->DeletionProtectionEnabled = $param["DeletionProtectionEnabled"];
+        }
+
+        if (array_key_exists("ConnectionStateTimeouts",$param) and $param["ConnectionStateTimeouts"] !== null) {
+            $this->ConnectionStateTimeouts = new ConnectionStateTimeouts();
+            $this->ConnectionStateTimeouts->deserialize($param["ConnectionStateTimeouts"]);
+        }
+
+        if (array_key_exists("ExclusiveType",$param) and $param["ExclusiveType"] !== null) {
+            $this->ExclusiveType = $param["ExclusiveType"];
         }
     }
 }

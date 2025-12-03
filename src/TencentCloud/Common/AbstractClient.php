@@ -29,54 +29,54 @@ use TencentCloud\Common\Exception\TencentCloudSDKException;
 
 
 /**
- * 抽象api类，禁止client引用
+ * Abstract API class, do not use directly by client
  * @package TencentCloud\Common
  */
 abstract class AbstractClient
 {
     /**
-     * @var string SDK版本
+     * @var string SDK version
      */
-    public static $SDK_VERSION = "SDK_PHP_3.0.1497";
+    public static $SDK_VERSION = "SDK_PHP_3.0.1498";
 
     /**
-     * @var integer http响应码200
+     * @var integer HTTP response code 200
      */
     public static $HTTP_RSP_OK = 200;
 
     private $PHP_VERSION_MINIMUM = "5.6.0";
 
     /**
-     * @var Credential 认证类实例，保存认证相关字段
+     * @var Credential Credential instance to store authentication fields
      */
     private $credential;
-    
+
     private $sseResponseCallbackFunc;
-    
+
     /**
-     * @var ClientProfile 会话配置信息类
+     * @var ClientProfile Client profile instance for session configuration
      */
     private $profile;
 
     private $regionBreakerProfile;
     private $circuitBreaker;
     /**
-     * @var string 产品地域
+     * @var string Product region
      */
     private $region;
 
     /**
-     * @var string 请求路径
+     * @var string Request path
      */
     private $path;
 
     /**
-     * @var string sdk版本号
+     * @var string SDK version
      */
     private $sdkVersion;
 
     /**
-     * @var string api版本号
+     * @var string API version
      */
     private $apiVersion;
 
@@ -86,11 +86,11 @@ abstract class AbstractClient
     private $httpConn;
 
     /**
-     * 基础client类
+     * Basic client class
      * @param string $endpoint Deprecated, we use service+rootdomain instead
-     * @param string $version api版本
-     * @param Credential $credential 认证信息实例
-     * @param string $region 产品地域
+     * @param string $version API version
+     * @param Credential $credential Credential instance
+     * @param string $region Product region
      * @param ClientProfile $profile
      */
     function __construct($endpoint, $version, $credential, $region, $profile=null)
@@ -124,8 +124,8 @@ abstract class AbstractClient
     }
 
     /**
-     * 设置产品地域
-     * @param string $region 地域
+     * Set product region
+     * @param string $region Region
      */
     public function setRegion($region)
     {
@@ -133,26 +133,26 @@ abstract class AbstractClient
     }
 
     /**
-     * 获取产品地域
+     * Get product region
      * @return string
      */
     public function getRegion()
     {
         return $this->region;
     }
-    
+
     /**
-     * 设置sse
-     * @param string $funcName sse响应回调函数名
+     * Set SSE
+     * @param string $funcName SSE response callback function name
      */
     public function setSseResponseCallbackFunc($funcName)
     {
         $this->sseResponseCallbackFunc = $funcName;
     }
-    
+
     /**
-     * 设置认证信息实例
-     * @param Credential $credential 认证信息实例
+     * Set credential instance
+     * @param Credential $credential Credential instance
      */
     public function setCredential($credential)
     {
@@ -160,7 +160,7 @@ abstract class AbstractClient
     }
 
     /**
-     * 返回认证信息实例
+     * Get credential instance
      * @return Credential
      */
     public function getCredential()
@@ -169,8 +169,8 @@ abstract class AbstractClient
     }
 
     /**
-     * 设置配置实例
-     * @param ClientProfile $profile 配置实例
+     * Set profile instance
+     * @param ClientProfile $profile Profile instance
      */
     public function setClientProfile($profile)
     {
@@ -178,7 +178,7 @@ abstract class AbstractClient
     }
 
     /**
-     * 返回配置实例
+     * Get profile instance
      * @return ClientProfile
      */
     public function getClientProfile()
@@ -187,8 +187,8 @@ abstract class AbstractClient
     }
 
     /**
-     * @param string $action  方法名
-     * @param array $request  参数列表
+     * @param string $action  Method name
+     * @param array $request  Parameters
      * @return mixed
      * @throws TencentCloudSDKException
      */
@@ -238,7 +238,7 @@ abstract class AbstractClient
             }
         }
     }
-    
+
     /**
      * @param string $action
      * @param array  $headers
@@ -266,7 +266,7 @@ abstract class AbstractClient
             $contentType = $responseData->getHeaderLine('Content-Type');
             if ($contentType === 'text/event-stream') {
                 $body = $responseData->getBody();
-                $buffer = '';                
+                $buffer = '';
                 if (isset($callback) && is_callable($callback)) {
                     while (!$body->eof()) {
                         $buffer .= $body->read(1024);
@@ -274,7 +274,7 @@ abstract class AbstractClient
                         while ($delimiterPosition !== false) {
                             $chunk = substr($buffer, 0, $delimiterPosition + 2);
                             $buffer = substr($buffer, $delimiterPosition + 2);
-                            
+
                             $callback($chunk);
                             $delimiterPosition = strpos($buffer, "\n\n");
                         }
@@ -292,9 +292,9 @@ abstract class AbstractClient
                 $resp = json_decode($responseData->getBody()->getContents(), true)["Response"];
                 if (array_key_exists("Error", $resp)) {
                     throw new TencentCloudSDKException($resp["Error"]["Code"], $resp["Error"]["Message"], $resp["RequestId"]);
-                }                
+                }
                 return $resp;
-            }            
+            }
 
         } catch (\Exception $e) {
             if (!($e instanceof TencentCloudSDKException)) {
@@ -304,10 +304,10 @@ abstract class AbstractClient
             }
         }
     }
-    
+
     /**
-     * @param string $action  方法名
-     * @param array  $headers  自定义headers
+     * @param string $action  Method name
+     * @param array  $headers  Custom headers
      * @param string $body     content
      * @return mixed
      * @throws TencentCloudSDKException
@@ -351,11 +351,11 @@ abstract class AbstractClient
             $method = $this->getPrivateMethod($request, "arrayMerge");
             $serializeRequest = $method->invoke($request, $serializeRequest);
             $responseData = $this->getResponseData($action, $request, $options);
-            
+
             if ($responseData->getStatusCode() !== AbstractClient::$HTTP_RSP_OK) {
                 throw new TencentCloudSDKException($responseData->getReasonPhrase(), $responseData->getBody()->getContents());
             }
-            
+
             $contentType = $responseData->getHeaderLine('Content-Type');
             if ($contentType === 'text/event-stream') {
                 return $this->handleEventStreamResponse($responseData);
@@ -399,7 +399,7 @@ abstract class AbstractClient
             if ($responseData->getStatusCode() !== AbstractClient::$HTTP_RSP_OK) {
                 throw new TencentCloudSDKException($responseData->getReasonPhrase(), $responseData->getBody()->getContents());
             }
-            
+
             $contentType = $responseData->getHeaderLine('Content-Type');
             if ($contentType === 'text/event-stream') {
                 return $this->handleEventStreamResponse($responseData);
@@ -412,8 +412,8 @@ abstract class AbstractClient
                 $this->circuitBreaker->afterRequests($generation, True);
                 return $this->returnResponse($action, $tmpResp);
             }
-            
-            
+
+
         } catch (\Exception $e) {
             $this->circuitBreaker->afterRequests($generation, False);
             if (!($e instanceof TencentCloudSDKException)) {
@@ -423,7 +423,7 @@ abstract class AbstractClient
             }
         }
     }
-    
+
     private function getResponseData($action, $request, $options)
     {
         switch ($this->profile->getSignMethod()) {
@@ -436,13 +436,13 @@ abstract class AbstractClient
                 throw new TencentCloudSDKException("ClientError", "Invalid sign method");
         }
     }
-    
+
     private function handleEventStreamResponse($responseData)
     {
         $body = $responseData->getBody();
         $buffer = '';
         $temp_func = $this->sseResponseCallbackFunc;
-        
+
         if (isset($temp_func) && is_callable($temp_func)) {
             while (!$body->eof()) {
                 $buffer .= $body->read(1024);
@@ -450,7 +450,7 @@ abstract class AbstractClient
                 while ($delimiterPosition !== false) {
                     $chunk = substr($buffer, 0, $delimiterPosition + 2);
                     $buffer = substr($buffer, $delimiterPosition + 2);
-                    
+
                     $temp_func($chunk);
                     $delimiterPosition = strpos($buffer, "\n\n");
                 }
@@ -465,19 +465,19 @@ abstract class AbstractClient
             return $buffer;
         }
     }
-    
+
     private function handleJsonResponse($action, $responseData)
     {
         $tmpResp = json_decode($responseData->getBody()->getContents(), true)["Response"];
         if (array_key_exists("Error", $tmpResp)) {
             throw new TencentCloudSDKException($tmpResp["Error"]["Code"], $tmpResp["Error"]["Message"], $tmpResp["RequestId"]);
         }
-        
+
         return $this->returnResponse($action, $tmpResp);
     }
-    
-    
-    
+
+
+
     private function doRequest($action, $request)
     {
         switch ($this->profile->getHttpProfile()->getReqMethod()) {
@@ -708,8 +708,8 @@ abstract class AbstractClient
     }
 
     /**
-     * User might call httpProfile.SetEndpoint after client is initialized,
-     * so everytime we get the enpoint we need to check it.
+     * Users might call httpProfile.SetEndpoint after client initialization,
+     * so every time we get the endpoint we need to check it.
      * Or we must find a way to disable such usage.
      */
     private function getRefreshedEndpoint() {

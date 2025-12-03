@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableRouteVpcPublish(boolean $EnableRouteVpcPublish) 设置vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
  * @method array getIpv6CidrBlockSet() 获取返回多运营商IPv6 Cidr Block
  * @method void setIpv6CidrBlockSet(array $Ipv6CidrBlockSet) 设置返回多运营商IPv6 Cidr Block
+ * @method boolean getEnableRouteVpcPublishIpv6() 获取vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
+ * @method void setEnableRouteVpcPublishIpv6(boolean $EnableRouteVpcPublishIpv6) 设置vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
  */
 class Vpc extends AbstractModel
 {
@@ -129,6 +131,11 @@ class Vpc extends AbstractModel
     public $Ipv6CidrBlockSet;
 
     /**
+     * @var boolean vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
+     */
+    public $EnableRouteVpcPublishIpv6;
+
+    /**
      * @param string $VpcName `VPC`名称。
      * @param string $VpcId `VPC`实例`ID`，例如：vpc-azd4dt1c。
      * @param string $CidrBlock `VPC`的`IPv4` `CIDR`。
@@ -144,6 +151,7 @@ class Vpc extends AbstractModel
      * @param array $AssistantCidrSet 辅助CIDR
      * @param boolean $EnableRouteVpcPublish vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
      * @param array $Ipv6CidrBlockSet 返回多运营商IPv6 Cidr Block
+     * @param boolean $EnableRouteVpcPublishIpv6 vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
      */
     function __construct()
     {
@@ -231,6 +239,10 @@ class Vpc extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Ipv6CidrBlockSet, $obj);
             }
+        }
+
+        if (array_key_exists("EnableRouteVpcPublishIpv6",$param) and $param["EnableRouteVpcPublishIpv6"] !== null) {
+            $this->EnableRouteVpcPublishIpv6 = $param["EnableRouteVpcPublishIpv6"];
         }
     }
 }

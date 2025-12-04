@@ -769,7 +769,7 @@ LimitTypes取值范围：
 单个请求中只能替换单个方向的一条规则, 必须要指定索引（PolicyIndex）。
  * @method Models\ResetAttachCcnInstancesResponse ResetAttachCcnInstances(Models\ResetAttachCcnInstancesRequest $req) 本接口（ResetAttachCcnInstances）用于跨账号关联实例申请过期时，重新申请关联操作。
  * @method Models\ResetHighPriorityRoutesResponse ResetHighPriorityRoutes(Models\ResetHighPriorityRoutesRequest $req) 重置高优路由表。
- * @method Models\ResetNatGatewayConnectionResponse ResetNatGatewayConnection(Models\ResetNatGatewayConnectionRequest $req) 本接口（ResetNatGatewayConnection）用来NAT网关并发连接上限。
+ * @method Models\ResetNatGatewayConnectionResponse ResetNatGatewayConnection(Models\ResetNatGatewayConnectionRequest $req) 本接口（ResetNatGatewayConnection）用于调整传统型NAT网关并发连接数上限。
  * @method Models\ResetRoutePolicyAssociationsResponse ResetRoutePolicyAssociations(Models\ResetRoutePolicyAssociationsRequest $req) 本接口（ResetRoutePolicyAssociations）用于对某个路由表实例已经绑定的路由策略实例解除绑定关系，并重新设置新的绑定路由策略及优先级。<br />
  * @method Models\ResetRoutePolicyEntriesResponse ResetRoutePolicyEntries(Models\ResetRoutePolicyEntriesRequest $req) 本接口（ResetRoutePolicyEntries）根据路由接收策略规则ID（RoutePolicyId）重置指定的路由接收策略条目（RoutePolicyEntry），支持批量修改。
  * @method Models\ResetRoutesResponse ResetRoutes(Models\ResetRoutesRequest $req) 本接口（ResetRoutes）用于对某个路由表名称和所有路由策略（Route）进行重新设置。<br /> 注意: 调用本接口时先删除当前路由表中所有路由策略, 再保存新提交的路由策略内容, 会引起网络中断。

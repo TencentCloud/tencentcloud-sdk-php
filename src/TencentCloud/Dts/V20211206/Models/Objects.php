@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdvancedObjects(array $AdvancedObjects) 设置高级对象类型，如function、procedure。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型。当需要同步高级对象时，初始化类型必须包含结构初始化类型，即任务的Options.InitType字段值为Structure或Full
  * @method OnlineDDL getOnlineDDL() 获取OnlineDDL类型，冗余字段不做配置用途
  * @method void setOnlineDDL(OnlineDDL $OnlineDDL) 设置OnlineDDL类型，冗余字段不做配置用途
+ * @method array getDatabasesOpFilter() 获取库/表/视图级 DML/DDL 白名单
+ * @method void setDatabasesOpFilter(array $DatabasesOpFilter) 设置库/表/视图级 DML/DDL 白名单
  */
 class Objects extends AbstractModel
 {
@@ -55,11 +57,17 @@ class Objects extends AbstractModel
     public $OnlineDDL;
 
     /**
+     * @var array 库/表/视图级 DML/DDL 白名单
+     */
+    public $DatabasesOpFilter;
+
+    /**
      * @param string $Mode 同步对象类型 Partial(部分对象)
      * @param array $Databases 同步对象，当 Mode 为 Partial 时，不为空
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AdvancedObjects 高级对象类型，如function、procedure。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型。当需要同步高级对象时，初始化类型必须包含结构初始化类型，即任务的Options.InitType字段值为Structure或Full
      * @param OnlineDDL $OnlineDDL OnlineDDL类型，冗余字段不做配置用途
+     * @param array $DatabasesOpFilter 库/表/视图级 DML/DDL 白名单
      */
     function __construct()
     {
@@ -94,6 +102,15 @@ class Objects extends AbstractModel
         if (array_key_exists("OnlineDDL",$param) and $param["OnlineDDL"] !== null) {
             $this->OnlineDDL = new OnlineDDL();
             $this->OnlineDDL->deserialize($param["OnlineDDL"]);
+        }
+
+        if (array_key_exists("DatabasesOpFilter",$param) and $param["DatabasesOpFilter"] !== null) {
+            $this->DatabasesOpFilter = [];
+            foreach ($param["DatabasesOpFilter"] as $key => $value){
+                $obj = new DBOpFilter();
+                $obj->deserialize($value);
+                array_push($this->DatabasesOpFilter, $obj);
+            }
         }
     }
 }

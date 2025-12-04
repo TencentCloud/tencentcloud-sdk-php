@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataKeyId(string $DataKeyId) 设置DataKey的全局唯一标识
  * @method string getKeyId() 获取CMK的全局唯一标识
  * @method void setKeyId(string $KeyId) 设置CMK的全局唯一标识
+ * @method string getKeyName() 获取CMK的名称
+ * @method void setKeyName(string $KeyName) 设置CMK的名称
  * @method string getDataKeyName() 获取作为密钥更容易辨识，更容易被人看懂的数据密钥名称
  * @method void setDataKeyName(string $DataKeyName) 设置作为密钥更容易辨识，更容易被人看懂的数据密钥名称
  * @method integer getNumberOfBytes() 获取数据密钥的长度,单位字节
@@ -72,6 +74,11 @@ class DataKeyMetadata extends AbstractModel
      * @var string CMK的全局唯一标识
      */
     public $KeyId;
+
+    /**
+     * @var string CMK的名称
+     */
+    public $KeyName;
 
     /**
      * @var string 作为密钥更容易辨识，更容易被人看懂的数据密钥名称
@@ -166,6 +173,7 @@ class DataKeyMetadata extends AbstractModel
     /**
      * @param string $DataKeyId DataKey的全局唯一标识
      * @param string $KeyId CMK的全局唯一标识
+     * @param string $KeyName CMK的名称
      * @param string $DataKeyName 作为密钥更容易辨识，更容易被人看懂的数据密钥名称
      * @param integer $NumberOfBytes 数据密钥的长度,单位字节
      * @param integer $CreateTime 密钥创建时间
@@ -204,6 +212,10 @@ class DataKeyMetadata extends AbstractModel
 
         if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
             $this->KeyId = $param["KeyId"];
+        }
+
+        if (array_key_exists("KeyName",$param) and $param["KeyName"] !== null) {
+            $this->KeyName = $param["KeyName"];
         }
 
         if (array_key_exists("DataKeyName",$param) and $param["DataKeyName"] !== null) {

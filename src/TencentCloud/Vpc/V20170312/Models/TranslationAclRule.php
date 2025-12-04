@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) 设置ACL协议类型，可选值:"ALL","TCP","UDP"
  * @method string getSourcePort() 获取源端口。
  * @method void setSourcePort(string $SourcePort) 设置源端口。
- * @method string getSourceCidr() 获取源地址。支持`ip`或`cidr`格式"xxx.xxx.xxx.000/xx"
- * @method void setSourceCidr(string $SourceCidr) 设置源地址。支持`ip`或`cidr`格式"xxx.xxx.xxx.000/xx"
  * @method string getDestinationPort() 获取目的端口。
  * @method void setDestinationPort(string $DestinationPort) 设置目的端口。
  * @method string getDestinationCidr() 获取目的地址。
  * @method void setDestinationCidr(string $DestinationCidr) 设置目的地址。
+ * @method string getSourceCidr() 获取源地址。支持`ip`或`cidr`格式"xxx.xxx.xxx.000/xx"
+ * @method void setSourceCidr(string $SourceCidr) 设置源地址。支持`ip`或`cidr`格式"xxx.xxx.xxx.000/xx"
  * @method integer getAclRuleId() 获取ACL规则`ID`。
  * @method void setAclRuleId(integer $AclRuleId) 设置ACL规则`ID`。
  * @method integer getAction() 获取是否匹配。
@@ -50,11 +50,6 @@ class TranslationAclRule extends AbstractModel
     public $SourcePort;
 
     /**
-     * @var string 源地址。支持`ip`或`cidr`格式"xxx.xxx.xxx.000/xx"
-     */
-    public $SourceCidr;
-
-    /**
      * @var string 目的端口。
      */
     public $DestinationPort;
@@ -63,6 +58,11 @@ class TranslationAclRule extends AbstractModel
      * @var string 目的地址。
      */
     public $DestinationCidr;
+
+    /**
+     * @var string 源地址。支持`ip`或`cidr`格式"xxx.xxx.xxx.000/xx"
+     */
+    public $SourceCidr;
 
     /**
      * @var integer ACL规则`ID`。
@@ -82,9 +82,9 @@ class TranslationAclRule extends AbstractModel
     /**
      * @param string $Protocol ACL协议类型，可选值:"ALL","TCP","UDP"
      * @param string $SourcePort 源端口。
-     * @param string $SourceCidr 源地址。支持`ip`或`cidr`格式"xxx.xxx.xxx.000/xx"
      * @param string $DestinationPort 目的端口。
      * @param string $DestinationCidr 目的地址。
+     * @param string $SourceCidr 源地址。支持`ip`或`cidr`格式"xxx.xxx.xxx.000/xx"
      * @param integer $AclRuleId ACL规则`ID`。
      * @param integer $Action 是否匹配。
      * @param string $Description ACL规则描述
@@ -110,16 +110,16 @@ class TranslationAclRule extends AbstractModel
             $this->SourcePort = $param["SourcePort"];
         }
 
-        if (array_key_exists("SourceCidr",$param) and $param["SourceCidr"] !== null) {
-            $this->SourceCidr = $param["SourceCidr"];
-        }
-
         if (array_key_exists("DestinationPort",$param) and $param["DestinationPort"] !== null) {
             $this->DestinationPort = $param["DestinationPort"];
         }
 
         if (array_key_exists("DestinationCidr",$param) and $param["DestinationCidr"] !== null) {
             $this->DestinationCidr = $param["DestinationCidr"];
+        }
+
+        if (array_key_exists("SourceCidr",$param) and $param["SourceCidr"] !== null) {
+            $this->SourceCidr = $param["SourceCidr"];
         }
 
         if (array_key_exists("AclRuleId",$param) and $param["AclRuleId"] !== null) {

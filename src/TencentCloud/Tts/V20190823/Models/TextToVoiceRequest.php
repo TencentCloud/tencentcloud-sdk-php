@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoiceType(integer $VoiceType) 设置音色 ID，包括精品音色、大模型音色与基础版复刻音色。不同音色价格有差异，详情请参见[购买指南](https://cloud.tencent.com/document/product/1073/34112)。完整的音色 ID 列表请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)。<br>若使用一句话版声音复刻，请填入固定值“200000000”。
  * @method string getFastVoiceType() 获取一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。
  * @method void setFastVoiceType(string $FastVoiceType) 设置一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。
- * @method integer getPrimaryLanguage() 获取主语言类型：<li>1-中文（默认）</li><li>2-英文</li><li>3-日文</li>
- * @method void setPrimaryLanguage(integer $PrimaryLanguage) 设置主语言类型：<li>1-中文（默认）</li><li>2-英文</li><li>3-日文</li>
+ * @method integer getPrimaryLanguage() 获取主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
+ * @method void setPrimaryLanguage(integer $PrimaryLanguage) 设置主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
  * @method integer getSampleRate() 获取音频采样率：
 <li>24000：24k（部分音色支持，请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)）</li>
 <li>16000：16k（默认）</li>
@@ -105,7 +105,7 @@ class TextToVoiceRequest extends AbstractModel
     public $FastVoiceType;
 
     /**
-     * @var integer 主语言类型：<li>1-中文（默认）</li><li>2-英文</li><li>3-日文</li>
+     * @var integer 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
      */
     public $PrimaryLanguage;
 
@@ -153,7 +153,7 @@ class TextToVoiceRequest extends AbstractModel
      * @param integer $ModelType 模型类型，1-默认模型。
      * @param integer $VoiceType 音色 ID，包括精品音色、大模型音色与基础版复刻音色。不同音色价格有差异，详情请参见[购买指南](https://cloud.tencent.com/document/product/1073/34112)。完整的音色 ID 列表请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)。<br>若使用一句话版声音复刻，请填入固定值“200000000”。
      * @param string $FastVoiceType 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。
-     * @param integer $PrimaryLanguage 主语言类型：<li>1-中文（默认）</li><li>2-英文</li><li>3-日文</li>
+     * @param integer $PrimaryLanguage 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
      * @param integer $SampleRate 音频采样率：
 <li>24000：24k（部分音色支持，请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)）</li>
 <li>16000：16k（默认）</li>

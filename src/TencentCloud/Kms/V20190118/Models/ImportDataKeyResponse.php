@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyId(string $KeyId) 设置CMK的全局唯一标识
  * @method string getDataKeyId() 获取DataKey的全局唯一标识  否  官网/国内&国际站展示
  * @method void setDataKeyId(string $DataKeyId) 设置DataKey的全局唯一标识  否  官网/国内&国际站展示
+ * @method integer getTagCode() 获取标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+ * @method void setTagCode(integer $TagCode) 设置标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+ * @method string getTagMsg() 获取标签操作的返回信息
+ * @method void setTagMsg(string $TagMsg) 设置标签操作的返回信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +44,16 @@ class ImportDataKeyResponse extends AbstractModel
     public $DataKeyId;
 
     /**
+     * @var integer 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+     */
+    public $TagCode;
+
+    /**
+     * @var string 标签操作的返回信息
+     */
+    public $TagMsg;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +61,8 @@ class ImportDataKeyResponse extends AbstractModel
     /**
      * @param string $KeyId CMK的全局唯一标识
      * @param string $DataKeyId DataKey的全局唯一标识  否  官网/国内&国际站展示
+     * @param integer $TagCode 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+     * @param string $TagMsg 标签操作的返回信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +84,14 @@ class ImportDataKeyResponse extends AbstractModel
 
         if (array_key_exists("DataKeyId",$param) and $param["DataKeyId"] !== null) {
             $this->DataKeyId = $param["DataKeyId"];
+        }
+
+        if (array_key_exists("TagCode",$param) and $param["TagCode"] !== null) {
+            $this->TagCode = $param["TagCode"];
+        }
+
+        if (array_key_exists("TagMsg",$param) and $param["TagMsg"] !== null) {
+            $this->TagMsg = $param["TagMsg"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

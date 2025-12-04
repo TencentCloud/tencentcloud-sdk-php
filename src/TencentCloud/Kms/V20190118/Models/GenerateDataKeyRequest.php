@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置数据密钥 的描述，最大100字节
  * @method string getHsmClusterId() 获取KMS 独享版对应的 HSM 集群 ID。如果指定HsmClusterId，表明根密钥在此集群里，会校验KeyId是否和HsmClusterId对应。
  * @method void setHsmClusterId(string $HsmClusterId) 设置KMS 独享版对应的 HSM 集群 ID。如果指定HsmClusterId，表明根密钥在此集群里，会校验KeyId是否和HsmClusterId对应。
+ * @method array getTags() 获取标签列表,当参数IsHostedByKms=1，数据密钥托管到kms时有效.
+ * @method void setTags(array $Tags) 设置标签列表,当参数IsHostedByKms=1，数据密钥托管到kms时有效.
  */
 class GenerateDataKeyRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class GenerateDataKeyRequest extends AbstractModel
     public $HsmClusterId;
 
     /**
+     * @var array 标签列表,当参数IsHostedByKms=1，数据密钥托管到kms时有效.
+     */
+    public $Tags;
+
+    /**
      * @param string $KeyId CMK全局唯一标识符
      * @param string $KeySpec 指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。KeySpec 和 NumberOfBytes 必须指定一个
      * @param integer $NumberOfBytes 生成的DataKey的长度，同时指定NumberOfBytes和KeySpec时，以NumberOfBytes为准。最小值为1， 最大值为1024。KeySpec 和 NumberOfBytes 必须指定一个
@@ -104,6 +111,7 @@ class GenerateDataKeyRequest extends AbstractModel
      * @param string $DataKeyName 数据密钥的名称，当IsHostedByKms为1时,必须填写。当IsHostedByKms为0时,可以不填，KMS不托管。
      * @param string $Description 数据密钥 的描述，最大100字节
      * @param string $HsmClusterId KMS 独享版对应的 HSM 集群 ID。如果指定HsmClusterId，表明根密钥在此集群里，会校验KeyId是否和HsmClusterId对应。
+     * @param array $Tags 标签列表,当参数IsHostedByKms=1，数据密钥托管到kms时有效.
      */
     function __construct()
     {
@@ -156,6 +164,15 @@ class GenerateDataKeyRequest extends AbstractModel
 
         if (array_key_exists("HsmClusterId",$param) and $param["HsmClusterId"] !== null) {
             $this->HsmClusterId = $param["HsmClusterId"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

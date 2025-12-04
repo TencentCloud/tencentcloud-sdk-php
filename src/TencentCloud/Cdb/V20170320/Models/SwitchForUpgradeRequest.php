@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+ * @method boolean getIsRelatedSwitch() 获取是否开启关联切换，true为开启，false为关闭，默认false
+ * @method void setIsRelatedSwitch(boolean $IsRelatedSwitch) 设置是否开启关联切换，true为开启，false为关闭，默认false
  */
 class SwitchForUpgradeRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class SwitchForUpgradeRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var boolean 是否开启关联切换，true为开启，false为关闭，默认false
+     */
+    public $IsRelatedSwitch;
+
+    /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @param boolean $IsRelatedSwitch 是否开启关联切换，true为开启，false为关闭，默认false
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class SwitchForUpgradeRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("IsRelatedSwitch",$param) and $param["IsRelatedSwitch"] !== null) {
+            $this->IsRelatedSwitch = $param["IsRelatedSwitch"];
         }
     }
 }

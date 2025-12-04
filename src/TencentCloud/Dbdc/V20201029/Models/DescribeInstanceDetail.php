@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFenceId(string $FenceId) 设置金融围笼ID
  * @method string getClusterId() 获取所属集群ID(默认集群为空)
  * @method void setClusterId(string $ClusterId) 设置所属集群ID(默认集群为空)
+ * @method array getResourceTags() 获取实例标签
+ * @method void setResourceTags(array $ResourceTags) 设置实例标签
+ * @method string getCpuType() 获取CPU类型：Intel/AMD,Hygon
+ * @method void setCpuType(string $CpuType) 设置CPU类型：Intel/AMD,Hygon
  */
 class DescribeInstanceDetail extends AbstractModel
 {
@@ -206,6 +210,16 @@ class DescribeInstanceDetail extends AbstractModel
     public $ClusterId;
 
     /**
+     * @var array 实例标签
+     */
+    public $ResourceTags;
+
+    /**
+     * @var string CPU类型：Intel/AMD,Hygon
+     */
+    public $CpuType;
+
+    /**
      * @param string $InstanceId 独享集群实例Id
      * @param string $InstanceName 独享集群实例名称
      * @param string $Region 地域
@@ -232,6 +246,8 @@ class DescribeInstanceDetail extends AbstractModel
      * @param string $Zone 可用区
      * @param string $FenceId 金融围笼ID
      * @param string $ClusterId 所属集群ID(默认集群为空)
+     * @param array $ResourceTags 实例标签
+     * @param string $CpuType CPU类型：Intel/AMD,Hygon
      */
     function __construct()
     {
@@ -348,6 +364,19 @@ class DescribeInstanceDetail extends AbstractModel
 
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new ResourceTag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
+        }
+
+        if (array_key_exists("CpuType",$param) and $param["CpuType"] !== null) {
+            $this->CpuType = $param["CpuType"];
         }
     }
 }

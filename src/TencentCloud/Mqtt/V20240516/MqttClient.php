@@ -34,6 +34,7 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 购买新的MQTT实例
  * @method Models\CreateJWKSAuthenticatorResponse CreateJWKSAuthenticator(Models\CreateJWKSAuthenticatorRequest $req) 创建一个jwks的认证
  * @method Models\CreateJWTAuthenticatorResponse CreateJWTAuthenticator(Models\CreateJWTAuthenticatorRequest $req) 创建一个jwks的认证
+ * @method Models\CreateMessageEnrichmentRuleResponse CreateMessageEnrichmentRule(Models\CreateMessageEnrichmentRuleRequest $req) 创建一条消息属性增强规则
  * @method Models\CreateTopicResponse CreateTopic(Models\CreateTopicRequest $req) 创建主题
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 添加mqtt角色
  * @method Models\DeactivateCaCertificateResponse DeactivateCaCertificate(Models\DeactivateCaCertificateRequest $req) 失效Ca证书
@@ -46,6 +47,7 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
  * @method Models\DeleteDeviceIdentityResponse DeleteDeviceIdentity(Models\DeleteDeviceIdentityRequest $req) 删除一机一密设备签名
  * @method Models\DeleteInsPublicEndpointResponse DeleteInsPublicEndpoint(Models\DeleteInsPublicEndpointRequest $req) 删除MQTT实例的公网接入点
  * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) 删除MQTT实例
+ * @method Models\DeleteMessageEnrichmentRuleResponse DeleteMessageEnrichmentRule(Models\DeleteMessageEnrichmentRuleRequest $req) 删除消息属性增强规则
  * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) 删除MQTT主题
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) 删除MQTT访问用户
  * @method Models\DescribeAuthenticatorResponse DescribeAuthenticator(Models\DescribeAuthenticatorRequest $req) 查询MQTT认证器
@@ -68,6 +70,7 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
 当使用TagFilters查询时，Filters参数失效。
  * @method Models\DescribeMessageByTopicResponse DescribeMessageByTopic(Models\DescribeMessageByTopicRequest $req) 根据订阅查询消息
  * @method Models\DescribeMessageDetailsResponse DescribeMessageDetails(Models\DescribeMessageDetailsRequest $req) 查询MQTT消息详情
+ * @method Models\DescribeMessageEnrichmentRulesResponse DescribeMessageEnrichmentRules(Models\DescribeMessageEnrichmentRulesRequest $req) 查询消息属性增强规则
  * @method Models\DescribeMessageListResponse DescribeMessageList(Models\DescribeMessageListRequest $req) 根据一级Topic查询消息列表
  * @method Models\DescribeProductSKUListResponse DescribeProductSKUList(Models\DescribeProductSKUListRequest $req) 获取产品售卖规格
  * @method Models\DescribeSharedSubscriptionLagResponse DescribeSharedSubscriptionLag(Models\DescribeSharedSubscriptionLagRequest $req) 查询共享订阅消息堆积量
@@ -89,6 +92,8 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
 参数传空，则为删除证书
  * @method Models\ModifyJWKSAuthenticatorResponse ModifyJWKSAuthenticator(Models\ModifyJWKSAuthenticatorRequest $req) 修改MQTT JWKS 认证器，全量配置修改，需要提交完整的修改后配置。
  * @method Models\ModifyJWTAuthenticatorResponse ModifyJWTAuthenticator(Models\ModifyJWTAuthenticatorRequest $req) 修改MQTT JWKS 认证器
+ * @method Models\ModifyMessageEnrichmentRuleResponse ModifyMessageEnrichmentRule(Models\ModifyMessageEnrichmentRuleRequest $req) 修改消息属性增强规则
+注意：需要提交当前规则的所有属性，即使某些字段没有修改。
  * @method Models\ModifyTopicResponse ModifyTopic(Models\ModifyTopicRequest $req) 修改主题属性
  * @method Models\ModifyUserResponse ModifyUser(Models\ModifyUserRequest $req) 修改MQTT角色
  * @method Models\PublishMessageResponse PublishMessage(Models\PublishMessageRequest $req) 发布 MQTT 消息到消息主题或客户端
@@ -96,6 +101,7 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
  * @method Models\RegisterDeviceCertificateResponse RegisterDeviceCertificate(Models\RegisterDeviceCertificateRequest $req) 注册设备证书（仅一机一证场景生效），可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817#6cb39d46-efad-4220-8f11-2e7fab207bc8)
  * @method Models\RevokedDeviceCertificateResponse RevokedDeviceCertificate(Models\RevokedDeviceCertificateRequest $req) 吊销设备证书
  * @method Models\UpdateAuthorizationPolicyPriorityResponse UpdateAuthorizationPolicyPriority(Models\UpdateAuthorizationPolicyPriorityRequest $req) 修改策略规则优先级
+ * @method Models\UpdateMessageEnrichmentRulePriorityResponse UpdateMessageEnrichmentRulePriority(Models\UpdateMessageEnrichmentRulePriorityRequest $req) 修改消息属性增强规则优先级
  */
 
 class MqttClient extends AbstractClient

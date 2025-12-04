@@ -186,6 +186,10 @@ Public：公网属性，Private：内网属性；对于内网属性的负载均�
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExclusive(integer $Exclusive) 设置0：表示非独占型实例，1：表示独占型态实例。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AvailableZoneAffinityInfo getAvailableZoneAffinityInfo() 获取可用区转发亲和信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAvailableZoneAffinityInfo(AvailableZoneAffinityInfo $AvailableZoneAffinityInfo) 设置可用区转发亲和信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LoadBalancerDetail extends AbstractModel
 {
@@ -441,6 +445,12 @@ Public：公网属性，Private：内网属性；对于内网属性的负载均�
     public $Exclusive;
 
     /**
+     * @var AvailableZoneAffinityInfo 可用区转发亲和信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AvailableZoneAffinityInfo;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param string $LoadBalancerName 负载均衡实例的名称。
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
@@ -523,6 +533,8 @@ Public：公网属性，Private：内网属性；对于内网属性的负载均�
 
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Exclusive 0：表示非独占型实例，1：表示独占型态实例。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AvailableZoneAffinityInfo $AvailableZoneAffinityInfo 可用区转发亲和信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -712,6 +724,11 @@ Public：公网属性，Private：内网属性；对于内网属性的负载均�
 
         if (array_key_exists("Exclusive",$param) and $param["Exclusive"] !== null) {
             $this->Exclusive = $param["Exclusive"];
+        }
+
+        if (array_key_exists("AvailableZoneAffinityInfo",$param) and $param["AvailableZoneAffinityInfo"] !== null) {
+            $this->AvailableZoneAffinityInfo = new AvailableZoneAffinityInfo();
+            $this->AvailableZoneAffinityInfo->deserialize($param["AvailableZoneAffinityInfo"]);
         }
     }
 }

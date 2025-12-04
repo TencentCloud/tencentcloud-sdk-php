@@ -242,6 +242,8 @@ ToaClean: TOA（TCP Option Address）清理，清除TCP选项中的地址信息�
  * @method void setTargetCount(integer $TargetCount) 设置已绑定的后端服务数量。
  * @method string getAssociateEndpoint() 获取负载均衡实例关联的Endpoint id。
  * @method void setAssociateEndpoint(string $AssociateEndpoint) 设置负载均衡实例关联的Endpoint id。
+ * @method AvailableZoneAffinityInfo getAvailableZoneAffinityInfo() 获取可用区转发亲和信息
+ * @method void setAvailableZoneAffinityInfo(AvailableZoneAffinityInfo $AvailableZoneAffinityInfo) 设置可用区转发亲和信息
  */
 class LoadBalancer extends AbstractModel
 {
@@ -590,6 +592,11 @@ ToaClean: TOA（TCP Option Address）清理，清除TCP选项中的地址信息�
     public $AssociateEndpoint;
 
     /**
+     * @var AvailableZoneAffinityInfo 可用区转发亲和信息
+     */
+    public $AvailableZoneAffinityInfo;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param string $LoadBalancerName 负载均衡实例的名称。
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
@@ -701,6 +708,7 @@ ToaClean: TOA（TCP Option Address）清理，清除TCP选项中的地址信息�
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TargetCount 已绑定的后端服务数量。
      * @param string $AssociateEndpoint 负载均衡实例关联的Endpoint id。
+     * @param AvailableZoneAffinityInfo $AvailableZoneAffinityInfo 可用区转发亲和信息
      */
     function __construct()
     {
@@ -966,6 +974,11 @@ ToaClean: TOA（TCP Option Address）清理，清除TCP选项中的地址信息�
 
         if (array_key_exists("AssociateEndpoint",$param) and $param["AssociateEndpoint"] !== null) {
             $this->AssociateEndpoint = $param["AssociateEndpoint"];
+        }
+
+        if (array_key_exists("AvailableZoneAffinityInfo",$param) and $param["AvailableZoneAffinityInfo"] !== null) {
+            $this->AvailableZoneAffinityInfo = new AvailableZoneAffinityInfo();
+            $this->AvailableZoneAffinityInfo->deserialize($param["AvailableZoneAffinityInfo"]);
         }
     }
 }

@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyId(string $KeyId) 设置根密钥全局唯一标识符
  * @method integer getDataKeyLen() 获取数据密钥的长度
  * @method void setDataKeyLen(integer $DataKeyLen) 设置数据密钥的长度
+ * @method array getTagFilters() 获取标签过滤条件
+ * @method void setTagFilters(array $TagFilters) 设置标签过滤条件
  */
 class ListDataKeyDetailRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class ListDataKeyDetailRequest extends AbstractModel
     public $DataKeyLen;
 
     /**
+     * @var array 标签过滤条件
+     */
+    public $TagFilters;
+
+    /**
      * @param integer $Offset 含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0
      * @param integer $Limit 含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为10，最大值为200
      * @param integer $Role 根据创建者角色筛选，默认 0 表示用户自己创建的数据密钥， 1 表示授权其它云产品自动创建的数据密钥
@@ -104,6 +111,7 @@ class ListDataKeyDetailRequest extends AbstractModel
      * @param string $HsmClusterId KMS 高级版对应的 HSM 集群 ID。
      * @param string $KeyId 根密钥全局唯一标识符
      * @param integer $DataKeyLen 数据密钥的长度
+     * @param array $TagFilters 标签过滤条件
      */
     function __construct()
     {
@@ -156,6 +164,15 @@ class ListDataKeyDetailRequest extends AbstractModel
 
         if (array_key_exists("DataKeyLen",$param) and $param["DataKeyLen"] !== null) {
             $this->DataKeyLen = $param["DataKeyLen"];
+        }
+
+        if (array_key_exists("TagFilters",$param) and $param["TagFilters"] !== null) {
+            $this->TagFilters = [];
+            foreach ($param["TagFilters"] as $key => $value){
+                $obj = new TagFilter();
+                $obj->deserialize($value);
+                array_push($this->TagFilters, $obj);
+            }
         }
     }
 }

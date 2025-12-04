@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStaringAgentId(string $StaringAgentId) 设置入口启动AgentID
  * @method array getAgents() 获取应用Agent信息列表
  * @method void setAgents(array $Agents) 设置应用Agent信息列表
+ * @method AgentHandoffAdvancedSetting getHandoffAdvancedSetting() 获取Agent转交高级设置
+ * @method void setHandoffAdvancedSetting(AgentHandoffAdvancedSetting $HandoffAdvancedSetting) 设置Agent转交高级设置
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class DescribeAppAgentListResponse extends AbstractModel
     public $Agents;
 
     /**
+     * @var AgentHandoffAdvancedSetting Agent转交高级设置
+     */
+    public $HandoffAdvancedSetting;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class DescribeAppAgentListResponse extends AbstractModel
     /**
      * @param string $StaringAgentId 入口启动AgentID
      * @param array $Agents 应用Agent信息列表
+     * @param AgentHandoffAdvancedSetting $HandoffAdvancedSetting Agent转交高级设置
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -73,6 +81,11 @@ class DescribeAppAgentListResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Agents, $obj);
             }
+        }
+
+        if (array_key_exists("HandoffAdvancedSetting",$param) and $param["HandoffAdvancedSetting"] !== null) {
+            $this->HandoffAdvancedSetting = new AgentHandoffAdvancedSetting();
+            $this->HandoffAdvancedSetting->deserialize($param["HandoffAdvancedSetting"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

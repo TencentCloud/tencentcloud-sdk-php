@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCiphertextBlob(string $CiphertextBlob) 设置数据密钥DataKey加密后的密文，用户需要自行保存该密文，KMS不托管用户的数据密钥。可以通过Decrypt接口从CiphertextBlob中获取数据密钥DataKey明文
  * @method string getDataKeyId() 获取DataKey的全局唯一标识,当KMS托管数据密钥时返回。
  * @method void setDataKeyId(string $DataKeyId) 设置DataKey的全局唯一标识,当KMS托管数据密钥时返回。
+ * @method integer getTagCode() 获取标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+ * @method void setTagCode(integer $TagCode) 设置标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+ * @method string getTagMsg() 获取标签操作的返回信息
+ * @method void setTagMsg(string $TagMsg) 设置标签操作的返回信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -57,6 +61,16 @@ class GenerateDataKeyResponse extends AbstractModel
     public $DataKeyId;
 
     /**
+     * @var integer 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+     */
+    public $TagCode;
+
+    /**
+     * @var string 标签操作的返回信息
+     */
+    public $TagMsg;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -67,6 +81,8 @@ class GenerateDataKeyResponse extends AbstractModel
 若调用时提供了 EncryptionPublicKey，则该字段值为使用 EncryptionPublicKey 公钥进行非对称加密后的 Base64 编码的密文。需在 Base64 解码后，使用用户上传的公钥对应的私钥进行进一步解密，以获取 DataKey 明文。
      * @param string $CiphertextBlob 数据密钥DataKey加密后的密文，用户需要自行保存该密文，KMS不托管用户的数据密钥。可以通过Decrypt接口从CiphertextBlob中获取数据密钥DataKey明文
      * @param string $DataKeyId DataKey的全局唯一标识,当KMS托管数据密钥时返回。
+     * @param integer $TagCode 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+     * @param string $TagMsg 标签操作的返回信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -96,6 +112,14 @@ class GenerateDataKeyResponse extends AbstractModel
 
         if (array_key_exists("DataKeyId",$param) and $param["DataKeyId"] !== null) {
             $this->DataKeyId = $param["DataKeyId"];
+        }
+
+        if (array_key_exists("TagCode",$param) and $param["TagCode"] !== null) {
+            $this->TagCode = $param["TagCode"];
+        }
+
+        if (array_key_exists("TagMsg",$param) and $param["TagMsg"] !== null) {
+            $this->TagMsg = $param["TagMsg"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

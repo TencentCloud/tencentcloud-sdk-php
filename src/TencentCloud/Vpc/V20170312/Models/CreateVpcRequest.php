@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
  * @method boolean getEnableRouteVpcPublish() 获取vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
  * @method void setEnableRouteVpcPublish(boolean $EnableRouteVpcPublish) 设置vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
+ * @method boolean getEnableRouteVpcPublishIpv6() 获取vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
+ * @method void setEnableRouteVpcPublishIpv6(boolean $EnableRouteVpcPublishIpv6) 设置vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
  */
 class CreateVpcRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateVpcRequest extends AbstractModel
     public $EnableRouteVpcPublish;
 
     /**
+     * @var boolean vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
+     */
+    public $EnableRouteVpcPublishIpv6;
+
+    /**
      * @param string $VpcName vpc名称，最大长度不能超过60个字节。
      * @param string $CidrBlock vpc的cidr，仅能在10.0.0.0/12，172.16.0.0/12，192.168.0.0/16这三个内网网段内。
      * @param string $EnableMulticast 是否开启组播。true: 开启, false: 不开启。
@@ -80,6 +87,7 @@ class CreateVpcRequest extends AbstractModel
      * @param string $DomainName DHCP使用的域名。
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
      * @param boolean $EnableRouteVpcPublish vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
+     * @param boolean $EnableRouteVpcPublishIpv6 vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class CreateVpcRequest extends AbstractModel
 
         if (array_key_exists("EnableRouteVpcPublish",$param) and $param["EnableRouteVpcPublish"] !== null) {
             $this->EnableRouteVpcPublish = $param["EnableRouteVpcPublish"];
+        }
+
+        if (array_key_exists("EnableRouteVpcPublishIpv6",$param) and $param["EnableRouteVpcPublishIpv6"] !== null) {
+            $this->EnableRouteVpcPublishIpv6 = $param["EnableRouteVpcPublishIpv6"];
         }
     }
 }

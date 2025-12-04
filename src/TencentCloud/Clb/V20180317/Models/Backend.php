@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTag() 获取标签。
  * @method void setTag(string $Tag) 设置标签。
+ * @method string getZone() 获取后端服务所在的可用区，如ap-guangzhou-1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZone(string $Zone) 设置后端服务所在的可用区，如ap-guangzhou-1
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Backend extends AbstractModel
 {
@@ -103,6 +107,12 @@ class Backend extends AbstractModel
     public $Tag;
 
     /**
+     * @var string 后端服务所在的可用区，如ap-guangzhou-1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Zone;
+
+    /**
      * @param string $Type 后端服务的类型，可取：CVM、ENI、CCN、EVM、GLOBALROUTE、NAT、SRV等
      * @param string $InstanceId 后端服务的唯一 ID，如 ins-abcd1234
      * @param integer $Port 后端服务的监听端口，如果是全端口段监听器绑定的全监听目标组场景，此端口返回0，表示无效端口，绑定的后端服务的端口随监听器端口。
@@ -116,6 +126,8 @@ class Backend extends AbstractModel
      * @param string $EniId 弹性网卡唯一ID，如 eni-1234abcd
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Tag 标签。
+     * @param string $Zone 后端服务所在的可用区，如ap-guangzhou-1
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -168,6 +180,10 @@ class Backend extends AbstractModel
 
         if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
             $this->Tag = $param["Tag"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
     }
 }

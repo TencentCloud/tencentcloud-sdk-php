@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 当导入明文数据密钥，KeyId 不能为空，会根据指定的根密钥加密数据密钥。
  * @method string getHsmClusterId() 获取KMS 独享版对应的 HSM 集群 ID。如果指定HsmClusterId，表明根密钥在此集群里，会校验KeyId是否和HsmClusterId对应。
  * @method void setHsmClusterId(string $HsmClusterId) 设置KMS 独享版对应的 HSM 集群 ID。如果指定HsmClusterId，表明根密钥在此集群里，会校验KeyId是否和HsmClusterId对应。
+ * @method array getTags() 获取标签列表
+ * @method void setTags(array $Tags) 设置标签列表
  */
 class ImportDataKeyRequest extends AbstractModel
 {
@@ -69,6 +71,11 @@ class ImportDataKeyRequest extends AbstractModel
     public $HsmClusterId;
 
     /**
+     * @var array 标签列表
+     */
+    public $Tags;
+
+    /**
      * @param string $DataKeyName 数据密钥的名称
      * @param string $ImportKeyMaterial 如果导入的是明文数据密钥，则是base64 转换后的明文数据密钥，  如果导入的是密文数据密钥，则是由KMS GenerateDataKey接口生成的密文数据密钥。
      * @param integer $ImportType 1:密文导入(由KMS接口生成的密文数据密钥)，2:明文导入。
@@ -76,6 +83,7 @@ class ImportDataKeyRequest extends AbstractModel
      * @param string $KeyId 当导入密文数据密钥时，无需传入根密钥,如果传入会校验此KeyId是否和密文中一致。
 当导入明文数据密钥，KeyId 不能为空，会根据指定的根密钥加密数据密钥。
      * @param string $HsmClusterId KMS 独享版对应的 HSM 集群 ID。如果指定HsmClusterId，表明根密钥在此集群里，会校验KeyId是否和HsmClusterId对应。
+     * @param array $Tags 标签列表
      */
     function __construct()
     {
@@ -112,6 +120,15 @@ class ImportDataKeyRequest extends AbstractModel
 
         if (array_key_exists("HsmClusterId",$param) and $param["HsmClusterId"] !== null) {
             $this->HsmClusterId = $param["HsmClusterId"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

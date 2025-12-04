@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNatProductVersion(integer $NatProductVersion) 设置NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关，默认值是1。
  * @method boolean getDeletionProtectionEnabled() 获取NAT实例是否开启删除保护
  * @method void setDeletionProtectionEnabled(boolean $DeletionProtectionEnabled) 设置NAT实例是否开启删除保护
+ * @method string getExclusiveType() 获取独享实例规格。取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
+ * @method void setExclusiveType(string $ExclusiveType) 设置独享实例规格。取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
  */
 class CreateNatGatewayRequest extends AbstractModel
 {
@@ -123,6 +125,11 @@ class CreateNatGatewayRequest extends AbstractModel
     public $DeletionProtectionEnabled;
 
     /**
+     * @var string 独享实例规格。取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
+     */
+    public $ExclusiveType;
+
+    /**
      * @param string $NatGatewayName NAT网关名称，限制60字符
      * @param string $VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @param integer $InternetMaxBandwidthOut NAT网关最大外网出带宽(单位：Mbps)，支持的参数值：20, 50, 100, 200, 500, 1000, 2000, 5000，默认: 100Mbps。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为5000Mbps。
@@ -137,6 +144,7 @@ class CreateNatGatewayRequest extends AbstractModel
      * @param boolean $PublicIpFromSameZone 公网IP是否强制与NAT网关来自同可用区，true表示需要与NAT网关同可用区；false表示可与NAT网关不是同一个可用区。此参数只有当参数Zone存在时才能生效。
      * @param integer $NatProductVersion NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关，默认值是1。
      * @param boolean $DeletionProtectionEnabled NAT实例是否开启删除保护
+     * @param string $ExclusiveType 独享实例规格。取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
      */
     function __construct()
     {
@@ -210,6 +218,10 @@ class CreateNatGatewayRequest extends AbstractModel
 
         if (array_key_exists("DeletionProtectionEnabled",$param) and $param["DeletionProtectionEnabled"] !== null) {
             $this->DeletionProtectionEnabled = $param["DeletionProtectionEnabled"];
+        }
+
+        if (array_key_exists("ExclusiveType",$param) and $param["ExclusiveType"] !== null) {
+            $this->ExclusiveType = $param["ExclusiveType"];
         }
     }
 }

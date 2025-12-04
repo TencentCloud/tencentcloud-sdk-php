@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNeedRestart(integer $NeedRestart) 设置用于表示当前配置文件是不是有过修改后没有重启，提醒用户需要重启
  * @method string getFilePath() 获取保存配置文件的路径
  * @method void setFilePath(string $FilePath) 设置保存配置文件的路径
+ * @method string getIp() 获取节点级配置的ip，当ConfigLevel取值为node时，此参数必选；
+ * @method void setIp(string $Ip) 设置节点级配置的ip，当ConfigLevel取值为node时，此参数必选；
+ * @method string getConfigLevel() 获取可选参数，参数取值：node,cluster; node: 节点级参数配置，cluster: 实例级参数配置；
+ * @method void setConfigLevel(string $ConfigLevel) 设置可选参数，参数取值：node,cluster; node: 节点级参数配置，cluster: 实例级参数配置；
  */
 class ClusterConfigsInfoFromEMR extends AbstractModel
 {
@@ -66,12 +70,24 @@ class ClusterConfigsInfoFromEMR extends AbstractModel
     public $FilePath;
 
     /**
+     * @var string 节点级配置的ip，当ConfigLevel取值为node时，此参数必选；
+     */
+    public $Ip;
+
+    /**
+     * @var string 可选参数，参数取值：node,cluster; node: 节点级参数配置，cluster: 实例级参数配置；
+     */
+    public $ConfigLevel;
+
+    /**
      * @param string $FileName 配置文件名称
      * @param string $FileConf 配置文件对应的相关属性信息
      * @param string $KeyConf 配置文件对应的其他属性信息
      * @param string $OriParam 配置文件的内容，base64编码
      * @param integer $NeedRestart 用于表示当前配置文件是不是有过修改后没有重启，提醒用户需要重启
      * @param string $FilePath 保存配置文件的路径
+     * @param string $Ip 节点级配置的ip，当ConfigLevel取值为node时，此参数必选；
+     * @param string $ConfigLevel 可选参数，参数取值：node,cluster; node: 节点级参数配置，cluster: 实例级参数配置；
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class ClusterConfigsInfoFromEMR extends AbstractModel
 
         if (array_key_exists("FilePath",$param) and $param["FilePath"] !== null) {
             $this->FilePath = $param["FilePath"];
+        }
+
+        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
+            $this->Ip = $param["Ip"];
+        }
+
+        if (array_key_exists("ConfigLevel",$param) and $param["ConfigLevel"] !== null) {
+            $this->ConfigLevel = $param["ConfigLevel"];
         }
     }
 }

@@ -20,10 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRocketMQPublicAccessMonitorData请求参数结构体
  *
- * @method string getInstanceId() 获取专享集群ID
- * @method void setInstanceId(string $InstanceId) 设置专享集群ID
- * @method string getMetricName() 获取指标名称，仅支持单指标拉取。目前仅支持：ClientIntraffic; ClientOuttraffic
- * @method void setMetricName(string $MetricName) 设置指标名称，仅支持单指标拉取。目前仅支持：ClientIntraffic; ClientOuttraffic
+ * @method string getInstanceId() 获取集群 ID
+ * @method void setInstanceId(string $InstanceId) 设置集群 ID
+ * @method string getMetricName() 获取指标名称，仅支持单指标拉取。指标枚举如下：
+
+- ClientIntraffic：入流量
+- ClientOuttraffic：出流量
+ * @method void setMetricName(string $MetricName) 设置指标名称，仅支持单指标拉取。指标枚举如下：
+
+- ClientIntraffic：入流量
+- ClientOuttraffic：出流量
  * @method string getStartTime() 获取起始时间
  * @method void setStartTime(string $StartTime) 设置起始时间
  * @method string getEndTime() 获取结束时间，默认为当前时间
@@ -34,12 +40,15 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRocketMQPublicAccessMonitorDataRequest extends AbstractModel
 {
     /**
-     * @var string 专享集群ID
+     * @var string 集群 ID
      */
     public $InstanceId;
 
     /**
-     * @var string 指标名称，仅支持单指标拉取。目前仅支持：ClientIntraffic; ClientOuttraffic
+     * @var string 指标名称，仅支持单指标拉取。指标枚举如下：
+
+- ClientIntraffic：入流量
+- ClientOuttraffic：出流量
      */
     public $MetricName;
 
@@ -59,8 +68,11 @@ class DescribeRocketMQPublicAccessMonitorDataRequest extends AbstractModel
     public $Period;
 
     /**
-     * @param string $InstanceId 专享集群ID
-     * @param string $MetricName 指标名称，仅支持单指标拉取。目前仅支持：ClientIntraffic; ClientOuttraffic
+     * @param string $InstanceId 集群 ID
+     * @param string $MetricName 指标名称，仅支持单指标拉取。指标枚举如下：
+
+- ClientIntraffic：入流量
+- ClientOuttraffic：出流量
      * @param string $StartTime 起始时间
      * @param string $EndTime 结束时间，默认为当前时间
      * @param integer $Period 监控统计周期，如60。默认为取值为300，单位为s。

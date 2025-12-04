@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNatGatewayId(string $NatGatewayId) 设置NAT网关ID。
  * @method integer getMaxConcurrentConnection() 获取NAT网关并发连接上限，形如：1000000、3000000、10000000。
  * @method void setMaxConcurrentConnection(integer $MaxConcurrentConnection) 设置NAT网关并发连接上限，形如：1000000、3000000、10000000。
+ * @method string getExclusiveType() 获取独享实例规格。如果要变配到独享实例，此参数必选，取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
+ * @method void setExclusiveType(string $ExclusiveType) 设置独享实例规格。如果要变配到独享实例，此参数必选，取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
  */
 class ResetNatGatewayConnectionRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ResetNatGatewayConnectionRequest extends AbstractModel
     public $MaxConcurrentConnection;
 
     /**
+     * @var string 独享实例规格。如果要变配到独享实例，此参数必选，取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
+     */
+    public $ExclusiveType;
+
+    /**
      * @param string $NatGatewayId NAT网关ID。
      * @param integer $MaxConcurrentConnection NAT网关并发连接上限，形如：1000000、3000000、10000000。
+     * @param string $ExclusiveType 独享实例规格。如果要变配到独享实例，此参数必选，取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ResetNatGatewayConnectionRequest extends AbstractModel
 
         if (array_key_exists("MaxConcurrentConnection",$param) and $param["MaxConcurrentConnection"] !== null) {
             $this->MaxConcurrentConnection = $param["MaxConcurrentConnection"];
+        }
+
+        if (array_key_exists("ExclusiveType",$param) and $param["ExclusiveType"] !== null) {
+            $this->ExclusiveType = $param["ExclusiveType"];
         }
     }
 }

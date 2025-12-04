@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNewPassword(string $NewPassword) 设置数据库账号的新密码。密码应至少包含字母、数字和字符（_+-&=!@#$%^*()）中的两种，长度为8-64个字符。
  * @method array getAccounts() 获取云数据库账号。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
  * @method void setAccounts(array $Accounts) 设置云数据库账号。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
+ * @method boolean getSkipValidatePassword() 获取是否跳过校验密码复杂度
+ * @method void setSkipValidatePassword(boolean $SkipValidatePassword) 设置是否跳过校验密码复杂度
  */
 class ModifyAccountPasswordRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyAccountPasswordRequest extends AbstractModel
     public $Accounts;
 
     /**
+     * @var boolean 是否跳过校验密码复杂度
+     */
+    public $SkipValidatePassword;
+
+    /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param string $NewPassword 数据库账号的新密码。密码应至少包含字母、数字和字符（_+-&=!@#$%^*()）中的两种，长度为8-64个字符。
      * @param array $Accounts 云数据库账号。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
+     * @param boolean $SkipValidatePassword 是否跳过校验密码复杂度
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class ModifyAccountPasswordRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Accounts, $obj);
             }
+        }
+
+        if (array_key_exists("SkipValidatePassword",$param) and $param["SkipValidatePassword"] !== null) {
+            $this->SkipValidatePassword = $param["SkipValidatePassword"];
         }
     }
 }

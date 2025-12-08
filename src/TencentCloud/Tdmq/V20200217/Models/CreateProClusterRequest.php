@@ -30,10 +30,6 @@ use TencentCloud\Common\AbstractModel;
 参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
  * @method void setProductName(string $ProductName) 设置集群规格代号
 参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
- * @method integer getStorageSize() 获取存储规格
-参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
- * @method void setStorageSize(integer $StorageSize) 设置存储规格
-参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
  * @method integer getAutoRenewFlag() 获取1: true，开启自动按月续费
 
 0: false，关闭自动按月续费
@@ -46,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterName(string $ClusterName) 设置集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
  * @method integer getAutoVoucher() 获取是否自动选择代金券 1是 0否 默认为0
  * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动选择代金券 1是 0否 默认为0
+ * @method integer getStorageSize() 获取存储规格
+参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
+ * @method void setStorageSize(integer $StorageSize) 设置存储规格
+参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
  * @method VpcInfo getVpc() 获取vpc网络标签
  * @method void setVpc(VpcInfo $Vpc) 设置vpc网络标签
  * @method array getTags() 获取集群的标签列表(已废弃)
@@ -65,12 +65,6 @@ class CreateProClusterRequest extends AbstractModel
 参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
      */
     public $ProductName;
-
-    /**
-     * @var integer 存储规格
-参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
-     */
-    public $StorageSize;
 
     /**
      * @var integer 1: true，开启自动按月续费
@@ -95,6 +89,12 @@ class CreateProClusterRequest extends AbstractModel
     public $AutoVoucher;
 
     /**
+     * @var integer 存储规格
+参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
+     */
+    public $StorageSize;
+
+    /**
      * @var VpcInfo vpc网络标签
      */
     public $Vpc;
@@ -110,14 +110,14 @@ class CreateProClusterRequest extends AbstractModel
 单可用区部署选择一个可用区，示例[200002]
      * @param string $ProductName 集群规格代号
 参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
-     * @param integer $StorageSize 存储规格
-参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
      * @param integer $AutoRenewFlag 1: true，开启自动按月续费
 
 0: false，关闭自动按月续费
      * @param integer $TimeSpan 购买时长，取值范围：1～50
      * @param string $ClusterName 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
      * @param integer $AutoVoucher 是否自动选择代金券 1是 0否 默认为0
+     * @param integer $StorageSize 存储规格
+参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
      * @param VpcInfo $Vpc vpc网络标签
      * @param array $Tags 集群的标签列表(已废弃)
      */
@@ -142,10 +142,6 @@ class CreateProClusterRequest extends AbstractModel
             $this->ProductName = $param["ProductName"];
         }
 
-        if (array_key_exists("StorageSize",$param) and $param["StorageSize"] !== null) {
-            $this->StorageSize = $param["StorageSize"];
-        }
-
         if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
             $this->AutoRenewFlag = $param["AutoRenewFlag"];
         }
@@ -160,6 +156,10 @@ class CreateProClusterRequest extends AbstractModel
 
         if (array_key_exists("AutoVoucher",$param) and $param["AutoVoucher"] !== null) {
             $this->AutoVoucher = $param["AutoVoucher"];
+        }
+
+        if (array_key_exists("StorageSize",$param) and $param["StorageSize"] !== null) {
+            $this->StorageSize = $param["StorageSize"];
         }
 
         if (array_key_exists("Vpc",$param) and $param["Vpc"] !== null) {

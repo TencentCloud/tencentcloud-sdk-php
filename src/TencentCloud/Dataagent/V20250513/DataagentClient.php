@@ -28,6 +28,7 @@ use TencentCloud\Dataagent\V20250513\Models as Models;
  * @method Models\CreateDataAgentSessionResponse CreateDataAgentSession(Models\CreateDataAgentSessionRequest $req) 生成DataAgent 会话ID
  * @method Models\DeleteChunkResponse DeleteChunk(Models\DeleteChunkRequest $req) 文档切片删除
  * @method Models\DeleteDataAgentSessionResponse DeleteDataAgentSession(Models\DeleteDataAgentSessionRequest $req) 删除会话
+ * @method Models\GetKnowledgeBaseFileListResponse GetKnowledgeBaseFileList(Models\GetKnowledgeBaseFileListRequest $req) 获取知识库文件信息列表
  * @method Models\GetKnowledgeBaseListResponse GetKnowledgeBaseList(Models\GetKnowledgeBaseListRequest $req) 获取知识库列表
  * @method Models\GetSessionDetailsResponse GetSessionDetails(Models\GetSessionDetailsRequest $req) 获取用户会话记录详情列表
  * @method Models\GetUploadJobDetailsResponse GetUploadJobDetails(Models\GetUploadJobDetailsRequest $req) 查询上传任务

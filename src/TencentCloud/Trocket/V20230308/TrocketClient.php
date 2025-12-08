@@ -198,6 +198,8 @@ Filters示例：
  * @method Models\ResendDeadLetterMessageResponse ResendDeadLetterMessage(Models\ResendDeadLetterMessageRequest $req) 重新发送死信消息
  * @method Models\ResetConsumerGroupOffsetResponse ResetConsumerGroupOffset(Models\ResetConsumerGroupOffsetRequest $req) 重置消费位点
  * @method Models\RollbackMigratingTopicStageResponse RollbackMigratingTopicStage(Models\RollbackMigratingTopicStageRequest $req) 回滚正在迁移的主题至前一个阶段
+ * @method Models\SendMessageResponse SendMessage(Models\SendMessageRequest $req) 发送 RocketMQ 消息，该接口仅用于控制台发送少量测试消息，不保证SLA，且云 API 存在限流，在真实业务场景下，请使用 RocketMQ SDK 发送消息。
+ * @method Models\VerifyMessageConsumptionResponse VerifyMessageConsumption(Models\VerifyMessageConsumptionRequest $req) 消息消费验证
  */
 
 class TrocketClient extends AbstractClient

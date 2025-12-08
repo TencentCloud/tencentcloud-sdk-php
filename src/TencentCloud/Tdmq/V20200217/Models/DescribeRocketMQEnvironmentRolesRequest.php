@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取必填字段，RocketMQ集群的ID
  * @method void setClusterId(string $ClusterId) 设置必填字段，RocketMQ集群的ID
- * @method string getEnvironmentId() 获取命名空间
- * @method void setEnvironmentId(string $EnvironmentId) 设置命名空间
+ * @method string getEnvironmentId() 获取命名空间，4.x 通用集群命名空间固定为: tdmq_default
+
+ * @method void setEnvironmentId(string $EnvironmentId) 设置命名空间，4.x 通用集群命名空间固定为: tdmq_default
+
  * @method integer getOffset() 获取起始下标，不填默认为0。
  * @method void setOffset(integer $Offset) 设置起始下标，不填默认为0。
  * @method integer getLimit() 获取返回数量，不填则默认为10，最大值为20。
@@ -41,7 +43,8 @@ class DescribeRocketMQEnvironmentRolesRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 命名空间
+     * @var string 命名空间，4.x 通用集群命名空间固定为: tdmq_default
+
      */
     public $EnvironmentId;
 
@@ -67,7 +70,8 @@ class DescribeRocketMQEnvironmentRolesRequest extends AbstractModel
 
     /**
      * @param string $ClusterId 必填字段，RocketMQ集群的ID
-     * @param string $EnvironmentId 命名空间
+     * @param string $EnvironmentId 命名空间，4.x 通用集群命名空间固定为: tdmq_default
+
      * @param integer $Offset 起始下标，不填默认为0。
      * @param integer $Limit 返回数量，不填则默认为10，最大值为20。
      * @param string $RoleName 角色名称

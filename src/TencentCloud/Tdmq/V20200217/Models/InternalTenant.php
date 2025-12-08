@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicAccessEnabled(boolean $PublicAccessEnabled) 设置public Access Enabled
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTagList() 获取实例标签列表
+ * @method void setTagList(array $TagList) 设置实例标签列表
+ * @method string getTenantSpec() 获取实例规格
+ * @method void setTenantSpec(string $TenantSpec) 设置实例规格
  */
 class InternalTenant extends AbstractModel
 {
@@ -190,6 +194,16 @@ class InternalTenant extends AbstractModel
     public $PublicAccessEnabled;
 
     /**
+     * @var array 实例标签列表
+     */
+    public $TagList;
+
+    /**
+     * @var string 实例规格
+     */
+    public $TenantSpec;
+
+    /**
      * @param string $TenantId 虚拟集群ID
      * @param string $TenantName 虚拟集群名称
      * @param string $CustomerUin 客户UIN
@@ -216,6 +230,8 @@ class InternalTenant extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $PublicAccessEnabled public Access Enabled
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TagList 实例标签列表
+     * @param string $TenantSpec 实例规格
      */
     function __construct()
     {
@@ -316,6 +332,14 @@ class InternalTenant extends AbstractModel
 
         if (array_key_exists("PublicAccessEnabled",$param) and $param["PublicAccessEnabled"] !== null) {
             $this->PublicAccessEnabled = $param["PublicAccessEnabled"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = $param["TagList"];
+        }
+
+        if (array_key_exists("TenantSpec",$param) and $param["TenantSpec"] !== null) {
+            $this->TenantSpec = $param["TenantSpec"];
         }
     }
 }

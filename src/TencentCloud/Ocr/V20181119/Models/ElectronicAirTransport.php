@@ -88,6 +88,14 @@ use TencentCloud\Common\AbstractModel;
 
 
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFare() 获取票价
+ * @method void setFare(string $Fare) 设置票价
+ * @method string getFuelSurcharge() 获取燃油附加费
+ * @method void setFuelSurcharge(string $FuelSurcharge) 设置燃油附加费
+ * @method string getTaxAmount() 获取增值税税额
+ * @method void setTaxAmount(string $TaxAmount) 设置增值税税额
+ * @method string getDevelopmentFund() 获取民航发展基金
+ * @method void setDevelopmentFund(string $DevelopmentFund) 设置民航发展基金
  */
 class ElectronicAirTransport extends AbstractModel
 {
@@ -190,6 +198,26 @@ class ElectronicAirTransport extends AbstractModel
     public $ElectronicAirTransportDetails;
 
     /**
+     * @var string 票价
+     */
+    public $Fare;
+
+    /**
+     * @var string 燃油附加费
+     */
+    public $FuelSurcharge;
+
+    /**
+     * @var string 增值税税额
+     */
+    public $TaxAmount;
+
+    /**
+     * @var string 民航发展基金
+     */
+    public $DevelopmentFund;
+
+    /**
      * @param string $Code 发票代码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Number 发票号码
@@ -224,6 +252,10 @@ class ElectronicAirTransport extends AbstractModel
 
 
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Fare 票价
+     * @param string $FuelSurcharge 燃油附加费
+     * @param string $TaxAmount 增值税税额
+     * @param string $DevelopmentFund 民航发展基金
      */
     function __construct()
     {
@@ -305,6 +337,22 @@ class ElectronicAirTransport extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ElectronicAirTransportDetails, $obj);
             }
+        }
+
+        if (array_key_exists("Fare",$param) and $param["Fare"] !== null) {
+            $this->Fare = $param["Fare"];
+        }
+
+        if (array_key_exists("FuelSurcharge",$param) and $param["FuelSurcharge"] !== null) {
+            $this->FuelSurcharge = $param["FuelSurcharge"];
+        }
+
+        if (array_key_exists("TaxAmount",$param) and $param["TaxAmount"] !== null) {
+            $this->TaxAmount = $param["TaxAmount"];
+        }
+
+        if (array_key_exists("DevelopmentFund",$param) and $param["DevelopmentFund"] !== null) {
+            $this->DevelopmentFund = $param["DevelopmentFund"];
         }
     }
 }

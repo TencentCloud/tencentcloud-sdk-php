@@ -64,8 +64,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpv6Flag(boolean $Ipv6Flag) 设置是否支持ipv6路由表
  * @method boolean getMrtbAggregatePolicyFlag() 获取是否支持路由表聚合策略
  * @method void setMrtbAggregatePolicyFlag(boolean $MrtbAggregatePolicyFlag) 设置是否支持路由表聚合策略
- * @method boolean getMrtbPolicyValueFlag() 获取是否支持策略值
- * @method void setMrtbPolicyValueFlag(boolean $MrtbPolicyValueFlag) 设置是否支持策略值
+ * @method boolean getMrtbPolicyValueFlag() 获取是否支持AsPath策略值
+ * @method void setMrtbPolicyValueFlag(boolean $MrtbPolicyValueFlag) 设置是否支持AsPath策略值
+ * @method boolean getRouteTablePolicyValueCommunityFlag() 获取是否支持Community策略值
+ * @method void setRouteTablePolicyValueCommunityFlag(boolean $RouteTablePolicyValueCommunityFlag) 设置是否支持Community策略值
+ * @method boolean getPolicyBasedRoutingFlag() 获取是否支持策略路由
+ * @method void setPolicyBasedRoutingFlag(boolean $PolicyBasedRoutingFlag) 设置是否支持策略路由
  */
 class CCN extends AbstractModel
 {
@@ -180,9 +184,19 @@ class CCN extends AbstractModel
     public $MrtbAggregatePolicyFlag;
 
     /**
-     * @var boolean 是否支持策略值
+     * @var boolean 是否支持AsPath策略值
      */
     public $MrtbPolicyValueFlag;
+
+    /**
+     * @var boolean 是否支持Community策略值
+     */
+    public $RouteTablePolicyValueCommunityFlag;
+
+    /**
+     * @var boolean 是否支持策略路由
+     */
+    public $PolicyBasedRoutingFlag;
 
     /**
      * @param string $CcnId 云联网唯一ID
@@ -207,7 +221,9 @@ class CCN extends AbstractModel
      * @param boolean $DirectConnectAccelerateChannelFlag 是否开启二层云联网通道。
      * @param boolean $Ipv6Flag 是否支持ipv6路由表
      * @param boolean $MrtbAggregatePolicyFlag 是否支持路由表聚合策略
-     * @param boolean $MrtbPolicyValueFlag 是否支持策略值
+     * @param boolean $MrtbPolicyValueFlag 是否支持AsPath策略值
+     * @param boolean $RouteTablePolicyValueCommunityFlag 是否支持Community策略值
+     * @param boolean $PolicyBasedRoutingFlag 是否支持策略路由
      */
     function __construct()
     {
@@ -317,6 +333,14 @@ class CCN extends AbstractModel
 
         if (array_key_exists("MrtbPolicyValueFlag",$param) and $param["MrtbPolicyValueFlag"] !== null) {
             $this->MrtbPolicyValueFlag = $param["MrtbPolicyValueFlag"];
+        }
+
+        if (array_key_exists("RouteTablePolicyValueCommunityFlag",$param) and $param["RouteTablePolicyValueCommunityFlag"] !== null) {
+            $this->RouteTablePolicyValueCommunityFlag = $param["RouteTablePolicyValueCommunityFlag"];
+        }
+
+        if (array_key_exists("PolicyBasedRoutingFlag",$param) and $param["PolicyBasedRoutingFlag"] !== null) {
+            $this->PolicyBasedRoutingFlag = $param["PolicyBasedRoutingFlag"];
         }
     }
 }

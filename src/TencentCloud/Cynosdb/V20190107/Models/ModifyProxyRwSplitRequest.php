@@ -33,9 +33,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getWeightMode() 获取读写权重分配模式；系统自动分配："system"， 自定义："custom"
  * @method void setWeightMode(string $WeightMode) 设置读写权重分配模式；系统自动分配："system"， 自定义："custom"
  * @method array getInstanceWeights() 获取实例只读权重。
-该参数必填。
+
  * @method void setInstanceWeights(array $InstanceWeights) 设置实例只读权重。
-该参数必填。
+
  * @method string getFailOver() 获取是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值："yes" , "no"
  * @method void setFailOver(string $FailOver) 设置是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值："yes" , "no"
  * @method string getAutoAddRo() 获取是否自动添加只读实例，取值："yes" , "no"
@@ -103,7 +103,7 @@ class ModifyProxyRwSplitRequest extends AbstractModel
 
     /**
      * @var array 实例只读权重。
-该参数必填。
+
      */
     public $InstanceWeights;
 
@@ -177,7 +177,7 @@ SessionConnectionPool
 取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。
      * @param string $WeightMode 读写权重分配模式；系统自动分配："system"， 自定义："custom"
      * @param array $InstanceWeights 实例只读权重。
-该参数必填。
+
      * @param string $FailOver 是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值："yes" , "no"
      * @param string $AutoAddRo 是否自动添加只读实例，取值："yes" , "no"
      * @param string $OpenRw 是否打开读写分离。

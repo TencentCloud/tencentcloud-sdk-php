@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopicName() 获取主题名字，在单个地域同一账号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
  * @method void setTopicName(string $TopicName) 设置主题名字，在单个地域同一账号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
- * @method string getSubscriptionName() 获取订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
- * @method void setSubscriptionName(string $SubscriptionName) 设置订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+ * @method string getSubscriptionName() 获取订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称以字母起始，只能包含字母、数字、“-”及“_”，最大64字符，创建后不能修改。
+ * @method void setSubscriptionName(string $SubscriptionName) 设置订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称以字母起始，只能包含字母、数字、“-”及“_”，最大64字符，创建后不能修改。
  * @method string getProtocol() 获取订阅的协议，目前支持两种协议：http、queue。使用http协议，用户需自己搭建接受消息的web server。使用queue，消息会自动推送到CMQ queue，用户可以并发地拉取消息。
  * @method void setProtocol(string $Protocol) 设置订阅的协议，目前支持两种协议：http、queue。使用http协议，用户需自己搭建接受消息的web server。使用queue，消息会自动推送到CMQ queue，用户可以并发地拉取消息。
  * @method string getEndpoint() 获取接收通知的Endpoint，根据协议Protocol区分：对于http，Endpoint必须以“`http://`”开头，host可以是域名或IP；对于Queue，则填QueueName。 请注意，目前推送服务不能推送到私有网络中，因此Endpoint填写为私有网络域名或地址将接收不到推送的消息，目前支持推送到公网和基础网络。
@@ -45,7 +45,7 @@ class CreateCmqSubscribeRequest extends AbstractModel
     public $TopicName;
 
     /**
-     * @var string 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+     * @var string 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称以字母起始，只能包含字母、数字、“-”及“_”，最大64字符，创建后不能修改。
      */
     public $SubscriptionName;
 
@@ -81,7 +81,7 @@ class CreateCmqSubscribeRequest extends AbstractModel
 
     /**
      * @param string $TopicName 主题名字，在单个地域同一账号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
-     * @param string $SubscriptionName 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+     * @param string $SubscriptionName 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称以字母起始，只能包含字母、数字、“-”及“_”，最大64字符，创建后不能修改。
      * @param string $Protocol 订阅的协议，目前支持两种协议：http、queue。使用http协议，用户需自己搭建接受消息的web server。使用queue，消息会自动推送到CMQ queue，用户可以并发地拉取消息。
      * @param string $Endpoint 接收通知的Endpoint，根据协议Protocol区分：对于http，Endpoint必须以“`http://`”开头，host可以是域名或IP；对于Queue，则填QueueName。 请注意，目前推送服务不能推送到私有网络中，因此Endpoint填写为私有网络域名或地址将接收不到推送的消息，目前支持推送到公网和基础网络。
      * @param string $NotifyStrategy 向Endpoint推送消息出现错误时，CMQ推送服务器的重试策略。取值有：1）BACKOFF_RETRY，退避重试。每隔一定时间重试一次，重试够一定次数后，就把该消息丢弃，继续推送下一条消息；2）EXPONENTIAL_DECAY_RETRY，指数衰退重试。每次重试的间隔是指数递增的，例如开始1s，后面是2s，4s，8s...由于Topic消息的周期是一天，所以最多重试一天就把消息丢弃。默认值是EXPONENTIAL_DECAY_RETRY。

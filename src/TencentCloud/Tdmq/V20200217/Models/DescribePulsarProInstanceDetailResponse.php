@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterSpecInfo(PulsarProClusterSpecInfo $ClusterSpecInfo) 设置集群规格信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCertificateList() 获取集群的证书列表
+ * @method void setCertificateList(array $CertificateList) 设置集群的证书列表
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -53,6 +55,11 @@ class DescribePulsarProInstanceDetailResponse extends AbstractModel
     public $ClusterSpecInfo;
 
     /**
+     * @var array 集群的证书列表
+     */
+    public $CertificateList;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -63,6 +70,7 @@ class DescribePulsarProInstanceDetailResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PulsarProClusterSpecInfo $ClusterSpecInfo 集群规格信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CertificateList 集群的证书列表
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -95,6 +103,15 @@ class DescribePulsarProInstanceDetailResponse extends AbstractModel
         if (array_key_exists("ClusterSpecInfo",$param) and $param["ClusterSpecInfo"] !== null) {
             $this->ClusterSpecInfo = new PulsarProClusterSpecInfo();
             $this->ClusterSpecInfo->deserialize($param["ClusterSpecInfo"]);
+        }
+
+        if (array_key_exists("CertificateList",$param) and $param["CertificateList"] !== null) {
+            $this->CertificateList = [];
+            foreach ($param["CertificateList"] as $key => $value){
+                $obj = new CertificateInfo();
+                $obj->deserialize($value);
+                array_push($this->CertificateList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

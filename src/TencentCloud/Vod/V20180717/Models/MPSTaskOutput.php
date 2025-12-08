@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getOutputFiles() 获取任务返回结果中的文件类型结果。如智能擦除中，擦除后的视频文件将被存入媒资，并在此字段中给出 FileId；基于画面提取的字幕文件 Url 将在此字段中给出。
  * @method void setOutputFiles(array $OutputFiles) 设置任务返回结果中的文件类型结果。如智能擦除中，擦除后的视频文件将被存入媒资，并在此字段中给出 FileId；基于画面提取的字幕文件 Url 将在此字段中给出。
+ * @method string getOutputText() 获取任务返回的结果JSON
+ * @method void setOutputText(string $OutputText) 设置任务返回的结果JSON
  */
 class MPSTaskOutput extends AbstractModel
 {
@@ -31,7 +33,13 @@ class MPSTaskOutput extends AbstractModel
     public $OutputFiles;
 
     /**
+     * @var string 任务返回的结果JSON
+     */
+    public $OutputText;
+
+    /**
      * @param array $OutputFiles 任务返回结果中的文件类型结果。如智能擦除中，擦除后的视频文件将被存入媒资，并在此字段中给出 FileId；基于画面提取的字幕文件 Url 将在此字段中给出。
+     * @param string $OutputText 任务返回的结果JSON
      */
     function __construct()
     {
@@ -53,6 +61,10 @@ class MPSTaskOutput extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->OutputFiles, $obj);
             }
+        }
+
+        if (array_key_exists("OutputText",$param) and $param["OutputText"] !== null) {
+            $this->OutputText = $param["OutputText"];
         }
     }
 }

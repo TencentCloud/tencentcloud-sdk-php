@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method string getStaffEmail() 获取座席邮箱
  * @method void setStaffEmail(string $StaffEmail) 设置座席邮箱
- * @method array getSkillGroupList() 获取绑定技能组列表
- * @method void setSkillGroupList(array $SkillGroupList) 设置绑定技能组列表
  * @method array getStaffSkillGroupList() 获取绑定技能组列表(必填)
  * @method void setStaffSkillGroupList(array $StaffSkillGroupList) 设置绑定技能组列表(必填)
+ * @method array getSkillGroupList() 获取绑定技能组列表
+ * @method void setSkillGroupList(array $SkillGroupList) 设置绑定技能组列表
  */
 class BindStaffSkillGroupListRequest extends AbstractModel
 {
@@ -42,21 +42,21 @@ class BindStaffSkillGroupListRequest extends AbstractModel
     public $StaffEmail;
 
     /**
+     * @var array 绑定技能组列表(必填)
+     */
+    public $StaffSkillGroupList;
+
+    /**
      * @var array 绑定技能组列表
      * @deprecated
      */
     public $SkillGroupList;
 
     /**
-     * @var array 绑定技能组列表(必填)
-     */
-    public $StaffSkillGroupList;
-
-    /**
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param string $StaffEmail 座席邮箱
-     * @param array $SkillGroupList 绑定技能组列表
      * @param array $StaffSkillGroupList 绑定技能组列表(必填)
+     * @param array $SkillGroupList 绑定技能组列表
      */
     function __construct()
     {
@@ -79,10 +79,6 @@ class BindStaffSkillGroupListRequest extends AbstractModel
             $this->StaffEmail = $param["StaffEmail"];
         }
 
-        if (array_key_exists("SkillGroupList",$param) and $param["SkillGroupList"] !== null) {
-            $this->SkillGroupList = $param["SkillGroupList"];
-        }
-
         if (array_key_exists("StaffSkillGroupList",$param) and $param["StaffSkillGroupList"] !== null) {
             $this->StaffSkillGroupList = [];
             foreach ($param["StaffSkillGroupList"] as $key => $value){
@@ -90,6 +86,10 @@ class BindStaffSkillGroupListRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->StaffSkillGroupList, $obj);
             }
+        }
+
+        if (array_key_exists("SkillGroupList",$param) and $param["SkillGroupList"] !== null) {
+            $this->SkillGroupList = $param["SkillGroupList"];
         }
     }
 }

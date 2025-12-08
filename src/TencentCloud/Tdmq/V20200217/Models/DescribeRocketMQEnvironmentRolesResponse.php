@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRocketMQEnvironmentRoles返回参数结构体
  *
- * @method integer getTotalCount() 获取记录数。
- * @method void setTotalCount(integer $TotalCount) 设置记录数。
- * @method array getEnvironmentRoleSets() 获取命名空间角色集合。
- * @method void setEnvironmentRoleSets(array $EnvironmentRoleSets) 设置命名空间角色集合。
+ * @method integer getTotalCount() 获取总数
+ * @method void setTotalCount(integer $TotalCount) 设置总数
+ * @method array getEnvironmentRoleSets() 获取角色授权列表
+ * @method void setEnvironmentRoleSets(array $EnvironmentRoleSets) 设置角色授权列表
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeRocketMQEnvironmentRolesResponse extends AbstractModel
 {
     /**
-     * @var integer 记录数。
+     * @var integer 总数
      */
     public $TotalCount;
 
     /**
-     * @var array 命名空间角色集合。
+     * @var array 角色授权列表
      */
     public $EnvironmentRoleSets;
 
@@ -45,8 +45,8 @@ class DescribeRocketMQEnvironmentRolesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 记录数。
-     * @param array $EnvironmentRoleSets 命名空间角色集合。
+     * @param integer $TotalCount 总数
+     * @param array $EnvironmentRoleSets 角色授权列表
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

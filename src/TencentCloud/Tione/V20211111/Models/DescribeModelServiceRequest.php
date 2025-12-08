@@ -34,6 +34,7 @@ class DescribeModelServiceRequest extends AbstractModel
 
     /**
      * @var string 服务分类
+     * @deprecated
      */
     public $ServiceCategory;
 

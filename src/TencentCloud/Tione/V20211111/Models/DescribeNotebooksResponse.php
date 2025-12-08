@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNotebooks返回参数结构体
  *
- * @method array getNotebookSet() 获取详情
- * @method void setNotebookSet(array $NotebookSet) 设置详情
+ * @method array getNotebookSet() 获取notebook详情
+ * @method void setNotebookSet(array $NotebookSet) 设置notebook详情
  * @method integer getTotalCount() 获取总条数
  * @method void setTotalCount(integer $TotalCount) 设置总条数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeNotebooksResponse extends AbstractModel
 {
     /**
-     * @var array 详情
+     * @var array notebook详情
      */
     public $NotebookSet;
 
@@ -45,7 +45,7 @@ class DescribeNotebooksResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $NotebookSet 详情
+     * @param array $NotebookSet notebook详情
      * @param integer $TotalCount 总条数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

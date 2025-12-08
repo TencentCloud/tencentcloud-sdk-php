@@ -26,14 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRiskName(string $RiskName) 设置风险名称
  * @method string getRiskDescription() 获取风险描述
  * @method void setRiskDescription(string $RiskDescription) 设置风险描述
- * @method string getRiskLevel() 获取风险等级。
+ * @method string getRiskLevel() 获取风险等级别名。
 
 等级描述如下：
 <ul>
     <li>**HIGH** - 高风险</li> 
     <li>**NORMAL** - 风险</li>   
 </ul>
- * @method void setRiskLevel(string $RiskLevel) 设置风险等级。
+ * @method void setRiskLevel(string $RiskLevel) 设置风险等级别名。
 
 等级描述如下：
 <ul>
@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPositions(array $Positions) 设置审查出的PDF段落位置信息
  * @method string getRiskBasis() 获取审查依据
  * @method void setRiskBasis(string $RiskBasis) 设置审查依据
- * @method integer getRiskLevelId() 获取风险等级id
- * @method void setRiskLevelId(integer $RiskLevelId) 设置风险等级id
+ * @method integer getRiskLevelId() 获取风险等级id。1 为最高风险等级，0 为最低风险等级，从[2,n]数字越大风险等级逐渐降低。
+ * @method void setRiskLevelId(integer $RiskLevelId) 设置风险等级id。1 为最高风险等级，0 为最低风险等级，从[2,n]数字越大风险等级逐渐降低。
  */
 class OutputRisk extends AbstractModel
 {
@@ -71,7 +71,7 @@ class OutputRisk extends AbstractModel
     public $RiskDescription;
 
     /**
-     * @var string 风险等级。
+     * @var string 风险等级别名。
 
 等级描述如下：
 <ul>
@@ -107,7 +107,7 @@ class OutputRisk extends AbstractModel
     public $RiskBasis;
 
     /**
-     * @var integer 风险等级id
+     * @var integer 风险等级id。1 为最高风险等级，0 为最低风险等级，从[2,n]数字越大风险等级逐渐降低。
      */
     public $RiskLevelId;
 
@@ -115,7 +115,7 @@ class OutputRisk extends AbstractModel
      * @param string $RiskId 合同审查风险结果ID
      * @param string $RiskName 风险名称
      * @param string $RiskDescription 风险描述
-     * @param string $RiskLevel 风险等级。
+     * @param string $RiskLevel 风险等级别名。
 
 等级描述如下：
 <ul>
@@ -127,7 +127,7 @@ class OutputRisk extends AbstractModel
      * @param string $Content PDF风险原文内容
      * @param array $Positions 审查出的PDF段落位置信息
      * @param string $RiskBasis 审查依据
-     * @param integer $RiskLevelId 风险等级id
+     * @param integer $RiskLevelId 风险等级id。1 为最高风险等级，0 为最低风险等级，从[2,n]数字越大风险等级逐渐降低。
      */
     function __construct()
     {

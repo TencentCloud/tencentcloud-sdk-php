@@ -32,6 +32,7 @@ use TencentCloud\Common\AbstractModel;
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
  * @method void setMongoVersion(string $MongoVersion) 设置参数模板适用的数据库版本。
 - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
@@ -40,6 +41,7 @@ use TencentCloud\Common\AbstractModel;
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
  * @method string getClusterType() 获取参数模板适用的数据库类型。
 - REPLSET：副本集实例。
 - SHARD：分片实例。
@@ -78,6 +80,7 @@ class ParamTpl extends AbstractModel
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
      */
     public $MongoVersion;
 
@@ -112,6 +115,7 @@ class ParamTpl extends AbstractModel
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
      * @param string $ClusterType 参数模板适用的数据库类型。
 - REPLSET：副本集实例。
 - SHARD：分片实例。

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyApmAssociation请求参数结构体
  *
- * @method string getProductName() 获取关联的产品名，当前只支持Prometheus
- * @method void setProductName(string $ProductName) 设置关联的产品名，当前只支持Prometheus
- * @method integer getStatus() 获取关联关系的状态：// 关联关系状态：1（启用）、2（不启用）、4（已删除）
- * @method void setStatus(integer $Status) 设置关联关系的状态：// 关联关系状态：1（启用）、2（不启用）、4（已删除）
+ * @method string getProductName() 获取关联的产品名，当前只支持Prometheus、CKafka
+ * @method void setProductName(string $ProductName) 设置关联的产品名，当前只支持Prometheus、CKafka
+ * @method integer getStatus() 获取关联关系的状态：// 关联关系状态：1（启用）、2（不启用）
+ * @method void setStatus(integer $Status) 设置关联关系的状态：// 关联关系状态：1（启用）、2（不启用）
  * @method string getInstanceId() 获取业务系统ID
  * @method void setInstanceId(string $InstanceId) 设置业务系统ID
  * @method string getPeerId() 获取关联的产品实例ID
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 class ModifyApmAssociationRequest extends AbstractModel
 {
     /**
-     * @var string 关联的产品名，当前只支持Prometheus
+     * @var string 关联的产品名，当前只支持Prometheus、CKafka
      */
     public $ProductName;
 
     /**
-     * @var integer 关联关系的状态：// 关联关系状态：1（启用）、2（不启用）、4（已删除）
+     * @var integer 关联关系的状态：// 关联关系状态：1（启用）、2（不启用）
      */
     public $Status;
 
@@ -59,8 +59,8 @@ class ModifyApmAssociationRequest extends AbstractModel
     public $Topic;
 
     /**
-     * @param string $ProductName 关联的产品名，当前只支持Prometheus
-     * @param integer $Status 关联关系的状态：// 关联关系状态：1（启用）、2（不启用）、4（已删除）
+     * @param string $ProductName 关联的产品名，当前只支持Prometheus、CKafka
+     * @param integer $Status 关联关系的状态：// 关联关系状态：1（启用）、2（不启用）
      * @param string $InstanceId 业务系统ID
      * @param string $PeerId 关联的产品实例ID
      * @param string $Topic CKafka消息主题

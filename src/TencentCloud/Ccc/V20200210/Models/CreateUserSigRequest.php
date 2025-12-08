@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method string getUid() 获取用户 ID，该值必须与 ClientData 字段中 Uid 的值一致
  * @method void setUid(string $Uid) 设置用户 ID，该值必须与 ClientData 字段中 Uid 的值一致
- * @method integer getExpiredTime() 获取有效期，单位秒，不超过 1 小时
- * @method void setExpiredTime(integer $ExpiredTime) 设置有效期，单位秒，不超过 1 小时
  * @method string getClientData() 获取用户签名数据，必填字段，为标准 JSON 格式
  * @method void setClientData(string $ClientData) 设置用户签名数据，必填字段，为标准 JSON 格式
+ * @method integer getExpiredTime() 获取有效期，单位秒，不超过 1 小时
+ * @method void setExpiredTime(integer $ExpiredTime) 设置有效期，单位秒，不超过 1 小时
  */
 class CreateUserSigRequest extends AbstractModel
 {
@@ -42,20 +42,20 @@ class CreateUserSigRequest extends AbstractModel
     public $Uid;
 
     /**
-     * @var integer 有效期，单位秒，不超过 1 小时
-     */
-    public $ExpiredTime;
-
-    /**
      * @var string 用户签名数据，必填字段，为标准 JSON 格式
      */
     public $ClientData;
 
     /**
+     * @var integer 有效期，单位秒，不超过 1 小时
+     */
+    public $ExpiredTime;
+
+    /**
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param string $Uid 用户 ID，该值必须与 ClientData 字段中 Uid 的值一致
-     * @param integer $ExpiredTime 有效期，单位秒，不超过 1 小时
      * @param string $ClientData 用户签名数据，必填字段，为标准 JSON 格式
+     * @param integer $ExpiredTime 有效期，单位秒，不超过 1 小时
      */
     function __construct()
     {
@@ -78,12 +78,12 @@ class CreateUserSigRequest extends AbstractModel
             $this->Uid = $param["Uid"];
         }
 
-        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
-            $this->ExpiredTime = $param["ExpiredTime"];
-        }
-
         if (array_key_exists("ClientData",$param) and $param["ClientData"] !== null) {
             $this->ClientData = $param["ClientData"];
+        }
+
+        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
+            $this->ExpiredTime = $param["ExpiredTime"];
         }
     }
 }

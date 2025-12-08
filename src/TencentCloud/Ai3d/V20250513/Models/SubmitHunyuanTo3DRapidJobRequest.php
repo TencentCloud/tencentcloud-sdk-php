@@ -22,26 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPrompt() 获取文生3D，3D内容的描述，中文正向提示词。
 最多支持200个 utf-8 字符。
-文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。
+文生3D, ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
  * @method void setPrompt(string $Prompt) 设置文生3D，3D内容的描述，中文正向提示词。
 最多支持200个 utf-8 字符。
-文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。
+文生3D, ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
  * @method string getImageBase64() 获取输入图 Base64 数据。
-大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
 格式：jpg，png，jpeg，webp。
 ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
  * @method void setImageBase64(string $ImageBase64) 设置输入图 Base64 数据。
-大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
 格式：jpg，png，jpeg，webp。
 ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
  * @method string getImageUrl() 获取输入图Url。
-大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
 格式：jpg，png，jpeg，webp。
-ImageBase64/ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
+ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
  * @method void setImageUrl(string $ImageUrl) 设置输入图Url。
-大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
 格式：jpg，png，jpeg，webp。
-ImageBase64/ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
+ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
  * @method string getResultFormat() 获取生成模型的格式，仅限制生成一种格式。
 生成模型文件组默认返回obj格式。
 可选值：OBJ，GLB，STL，USDZ，FBX，MP4。
@@ -50,19 +50,21 @@ ImageBase64/ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不
 可选值：OBJ，GLB，STL，USDZ，FBX，MP4。
  * @method boolean getEnablePBR() 获取是否开启 PBR材质生成，默认 false。
  * @method void setEnablePBR(boolean $EnablePBR) 设置是否开启 PBR材质生成，默认 false。
+ * @method boolean getEnableGeometry() 获取是否开启单几何生成选项，开启后会生成不带纹理的3D模型（白模）； 开启时，生成模型文件不支持OBJ格式，默认生成模型文件为GLB格式。
+ * @method void setEnableGeometry(boolean $EnableGeometry) 设置是否开启单几何生成选项，开启后会生成不带纹理的3D模型（白模）； 开启时，生成模型文件不支持OBJ格式，默认生成模型文件为GLB格式。
  */
 class SubmitHunyuanTo3DRapidJobRequest extends AbstractModel
 {
     /**
      * @var string 文生3D，3D内容的描述，中文正向提示词。
 最多支持200个 utf-8 字符。
-文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。
+文生3D, ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
      */
     public $Prompt;
 
     /**
      * @var string 输入图 Base64 数据。
-大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
 格式：jpg，png，jpeg，webp。
 ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
      */
@@ -70,9 +72,9 @@ ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl�
 
     /**
      * @var string 输入图Url。
-大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
 格式：jpg，png，jpeg，webp。
-ImageBase64/ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
+ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
      */
     public $ImageUrl;
 
@@ -89,21 +91,27 @@ ImageBase64/ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不
     public $EnablePBR;
 
     /**
+     * @var boolean 是否开启单几何生成选项，开启后会生成不带纹理的3D模型（白模）； 开启时，生成模型文件不支持OBJ格式，默认生成模型文件为GLB格式。
+     */
+    public $EnableGeometry;
+
+    /**
      * @param string $Prompt 文生3D，3D内容的描述，中文正向提示词。
 最多支持200个 utf-8 字符。
-文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。
+文生3D, ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
      * @param string $ImageBase64 输入图 Base64 数据。
-大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
 格式：jpg，png，jpeg，webp。
 ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
      * @param string $ImageUrl 输入图Url。
-大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
 格式：jpg，png，jpeg，webp。
-ImageBase64/ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
+ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
      * @param string $ResultFormat 生成模型的格式，仅限制生成一种格式。
 生成模型文件组默认返回obj格式。
 可选值：OBJ，GLB，STL，USDZ，FBX，MP4。
      * @param boolean $EnablePBR 是否开启 PBR材质生成，默认 false。
+     * @param boolean $EnableGeometry 是否开启单几何生成选项，开启后会生成不带纹理的3D模型（白模）； 开启时，生成模型文件不支持OBJ格式，默认生成模型文件为GLB格式。
      */
     function __construct()
     {
@@ -136,6 +144,10 @@ ImageBase64/ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不
 
         if (array_key_exists("EnablePBR",$param) and $param["EnablePBR"] !== null) {
             $this->EnablePBR = $param["EnablePBR"];
+        }
+
+        if (array_key_exists("EnableGeometry",$param) and $param["EnableGeometry"] !== null) {
+            $this->EnableGeometry = $param["EnableGeometry"];
         }
     }
 }

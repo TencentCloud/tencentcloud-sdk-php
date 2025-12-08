@@ -104,6 +104,8 @@ use TencentCloud\Common\AbstractModel;
 
 电话呼出        221     callerCancelWithoutRing      **未振铃被叫号码异常**
 
+电话呼出        222     voiceMailReached      **语音信箱挂断**
+
 音频呼入        501     callConflict      **VoIP用户呼叫冲突终止**
 
 音频呼入        502     clientTimeout      **VoIP用户客户端超时**
@@ -178,6 +180,8 @@ use TencentCloud\Common\AbstractModel;
 电话呼出        220     callerCancelWhileRing      **振铃中主叫取消**
 
 电话呼出        221     callerCancelWithoutRing      **未振铃被叫号码异常**
+
+电话呼出        222     voiceMailReached      **语音信箱挂断**
 
 音频呼入        501     callConflict      **VoIP用户呼叫冲突终止**
 
@@ -370,6 +374,8 @@ class TelCdrInfo extends AbstractModel
 电话呼出        220     callerCancelWhileRing      **振铃中主叫取消**
 
 电话呼出        221     callerCancelWithoutRing      **未振铃被叫号码异常**
+
+电话呼出        222     voiceMailReached      **语音信箱挂断**
 
 音频呼入        501     callConflict      **VoIP用户呼叫冲突终止**
 
@@ -605,6 +611,8 @@ NotExists
 电话呼出        220     callerCancelWhileRing      **振铃中主叫取消**
 
 电话呼出        221     callerCancelWithoutRing      **未振铃被叫号码异常**
+
+电话呼出        222     voiceMailReached      **语音信箱挂断**
 
 音频呼入        501     callConflict      **VoIP用户呼叫冲突终止**
 

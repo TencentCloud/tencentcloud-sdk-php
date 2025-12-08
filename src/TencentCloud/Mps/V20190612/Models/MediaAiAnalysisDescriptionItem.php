@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMindMapUrl(string $MindMapUrl) 设置摘要思维导图地址
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMindMapPath() 获取摘要思维导图路径。
+ * @method void setMindMapPath(string $MindMapPath) 设置摘要思维导图路径。
+ * @method string getSubtitlePath() 获取视频字幕文件路径。
+ * @method void setSubtitlePath(string $SubtitlePath) 设置视频字幕文件路径。
+ * @method TaskOutputStorage getOutputStorage() 获取摘要文件存储位置。
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置摘要文件存储位置。
  */
 class MediaAiAnalysisDescriptionItem extends AbstractModel
 {
@@ -72,6 +78,21 @@ class MediaAiAnalysisDescriptionItem extends AbstractModel
     public $MindMapUrl;
 
     /**
+     * @var string 摘要思维导图路径。
+     */
+    public $MindMapPath;
+
+    /**
+     * @var string 视频字幕文件路径。
+     */
+    public $SubtitlePath;
+
+    /**
+     * @var TaskOutputStorage 摘要文件存储位置。
+     */
+    public $OutputStorage;
+
+    /**
      * @param string $Description 智能描述。
      * @param float $Confidence 智能描述的可信度，取值范围是 0 到 100。
      * @param string $Title 智能描述标题
@@ -80,6 +101,9 @@ class MediaAiAnalysisDescriptionItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MindMapUrl 摘要思维导图地址
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MindMapPath 摘要思维导图路径。
+     * @param string $SubtitlePath 视频字幕文件路径。
+     * @param TaskOutputStorage $OutputStorage 摘要文件存储位置。
      */
     function __construct()
     {
@@ -121,6 +145,19 @@ class MediaAiAnalysisDescriptionItem extends AbstractModel
 
         if (array_key_exists("MindMapUrl",$param) and $param["MindMapUrl"] !== null) {
             $this->MindMapUrl = $param["MindMapUrl"];
+        }
+
+        if (array_key_exists("MindMapPath",$param) and $param["MindMapPath"] !== null) {
+            $this->MindMapPath = $param["MindMapPath"];
+        }
+
+        if (array_key_exists("SubtitlePath",$param) and $param["SubtitlePath"] !== null) {
+            $this->SubtitlePath = $param["SubtitlePath"];
+        }
+
+        if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {
+            $this->OutputStorage = new TaskOutputStorage();
+            $this->OutputStorage->deserialize($param["OutputStorage"]);
         }
     }
 }

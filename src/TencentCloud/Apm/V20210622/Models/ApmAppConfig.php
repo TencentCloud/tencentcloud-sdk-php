@@ -170,6 +170,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisableMemoryUsed(integer $DisableMemoryUsed) 设置探针熔断内存阈值
  * @method integer getDisableCpuUsed() 获取探针熔断CPU阈值
  * @method void setDisableCpuUsed(integer $DisableCpuUsed) 设置探针熔断CPU阈值
+ * @method boolean getDbStatementParametersEnabled() 获取是否开启SQL参数获取
+ * @method void setDbStatementParametersEnabled(boolean $DbStatementParametersEnabled) 设置是否开启SQL参数获取
+ * @method array getSlowSQLThresholds() 获取慢SQL阈值
+ * @method void setSlowSQLThresholds(array $SlowSQLThresholds) 设置慢SQL阈值
  */
 class ApmAppConfig extends AbstractModel
 {
@@ -457,6 +461,16 @@ class ApmAppConfig extends AbstractModel
     public $DisableCpuUsed;
 
     /**
+     * @var boolean 是否开启SQL参数获取
+     */
+    public $DbStatementParametersEnabled;
+
+    /**
+     * @var array 慢SQL阈值
+     */
+    public $SlowSQLThresholds;
+
+    /**
      * @param string $InstanceKey 实例ID
      * @param string $ServiceName 服务名
      * @param integer $UrlConvergenceSwitch URL收敛开关
@@ -532,6 +546,8 @@ class ApmAppConfig extends AbstractModel
      * @param integer $UrlNumberSegmentThreshold URL数字分段收敛阈值
      * @param integer $DisableMemoryUsed 探针熔断内存阈值
      * @param integer $DisableCpuUsed 探针熔断CPU阈值
+     * @param boolean $DbStatementParametersEnabled 是否开启SQL参数获取
+     * @param array $SlowSQLThresholds 慢SQL阈值
      */
     function __construct()
     {
@@ -758,6 +774,19 @@ class ApmAppConfig extends AbstractModel
 
         if (array_key_exists("DisableCpuUsed",$param) and $param["DisableCpuUsed"] !== null) {
             $this->DisableCpuUsed = $param["DisableCpuUsed"];
+        }
+
+        if (array_key_exists("DbStatementParametersEnabled",$param) and $param["DbStatementParametersEnabled"] !== null) {
+            $this->DbStatementParametersEnabled = $param["DbStatementParametersEnabled"];
+        }
+
+        if (array_key_exists("SlowSQLThresholds",$param) and $param["SlowSQLThresholds"] !== null) {
+            $this->SlowSQLThresholds = [];
+            foreach ($param["SlowSQLThresholds"] as $key => $value){
+                $obj = new ApmTag();
+                $obj->deserialize($value);
+                array_push($this->SlowSQLThresholds, $obj);
+            }
         }
     }
 }

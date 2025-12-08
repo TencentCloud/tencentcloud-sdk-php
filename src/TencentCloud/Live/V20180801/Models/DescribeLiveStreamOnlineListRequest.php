@@ -26,12 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。多路径用户需要填写 AppName。
  * @method integer getPageNum() 获取取得第几页，默认1。
  * @method void setPageNum(integer $PageNum) 设置取得第几页，默认1。
- * @method integer getPageSize() 获取每页大小，最大100。 
-取值：10~100之间的任意整数。
+ * @method integer getPageSize() 获取每页大小，最大300000。 
+取值：10~300000之间的任意整数。
 默认值：10。
- * @method void setPageSize(integer $PageSize) 设置每页大小，最大100。 
-取值：10~100之间的任意整数。
+注意：尽量传入比当前总流数大的PageSize, 一次性拉走全部在线流，减少访问频次，推荐1分钟拉取一次。
+ * @method void setPageSize(integer $PageSize) 设置每页大小，最大300000。 
+取值：10~300000之间的任意整数。
 默认值：10。
+注意：尽量传入比当前总流数大的PageSize, 一次性拉走全部在线流，减少访问频次，推荐1分钟拉取一次。
  * @method string getStreamName() 获取流名称，用于精确查询。
  * @method void setStreamName(string $StreamName) 设置流名称，用于精确查询。
  */
@@ -53,9 +55,10 @@ class DescribeLiveStreamOnlineListRequest extends AbstractModel
     public $PageNum;
 
     /**
-     * @var integer 每页大小，最大100。 
-取值：10~100之间的任意整数。
+     * @var integer 每页大小，最大300000。 
+取值：10~300000之间的任意整数。
 默认值：10。
+注意：尽量传入比当前总流数大的PageSize, 一次性拉走全部在线流，减少访问频次，推荐1分钟拉取一次。
      */
     public $PageSize;
 
@@ -68,9 +71,10 @@ class DescribeLiveStreamOnlineListRequest extends AbstractModel
      * @param string $DomainName 推流域名。多域名用户需要填写 DomainName。
      * @param string $AppName 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。多路径用户需要填写 AppName。
      * @param integer $PageNum 取得第几页，默认1。
-     * @param integer $PageSize 每页大小，最大100。 
-取值：10~100之间的任意整数。
+     * @param integer $PageSize 每页大小，最大300000。 
+取值：10~300000之间的任意整数。
 默认值：10。
+注意：尽量传入比当前总流数大的PageSize, 一次性拉走全部在线流，减少访问频次，推荐1分钟拉取一次。
      * @param string $StreamName 流名称，用于精确查询。
      */
     function __construct()

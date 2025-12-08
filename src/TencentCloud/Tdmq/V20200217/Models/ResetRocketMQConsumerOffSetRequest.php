@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getNamespaceId() 获取命名空间名称
- * @method void setNamespaceId(string $NamespaceId) 设置命名空间名称
+ * @method string getNamespaceId() 获取命名空间，4.x 通用集群命名空间固定为: tdmq_default
+ * @method void setNamespaceId(string $NamespaceId) 设置命名空间，4.x 通用集群命名空间固定为: tdmq_default
  * @method string getGroupId() 获取消费组名称
  * @method void setGroupId(string $GroupId) 设置消费组名称
  * @method integer getType() 获取重置方式，0表示从最新位点开始，1表示从指定时间点开始
  * @method void setType(integer $Type) 设置重置方式，0表示从最新位点开始，1表示从指定时间点开始
  * @method string getTopic() 获取主题名称
  * @method void setTopic(string $Topic) 设置主题名称
- * @method integer getResetTimestamp() 获取重置指定的时间戳，仅在 Type 为1是生效，以毫秒为单位
- * @method void setResetTimestamp(integer $ResetTimestamp) 设置重置指定的时间戳，仅在 Type 为1是生效，以毫秒为单位
+ * @method integer getResetTimestamp() 获取重置指定的时间戳，仅在 Type 为1时生效，以毫秒为单位
+ * @method void setResetTimestamp(integer $ResetTimestamp) 设置重置指定的时间戳，仅在 Type 为1时生效，以毫秒为单位
  * @method boolean getRetryFlag() 获取重置的是否是retry topic
  * @method void setRetryFlag(boolean $RetryFlag) 设置重置的是否是retry topic
  */
@@ -43,7 +43,7 @@ class ResetRocketMQConsumerOffSetRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 命名空间名称
+     * @var string 命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public $NamespaceId;
 
@@ -63,7 +63,7 @@ class ResetRocketMQConsumerOffSetRequest extends AbstractModel
     public $Topic;
 
     /**
-     * @var integer 重置指定的时间戳，仅在 Type 为1是生效，以毫秒为单位
+     * @var integer 重置指定的时间戳，仅在 Type 为1时生效，以毫秒为单位
      */
     public $ResetTimestamp;
 
@@ -74,11 +74,11 @@ class ResetRocketMQConsumerOffSetRequest extends AbstractModel
 
     /**
      * @param string $ClusterId 集群ID
-     * @param string $NamespaceId 命名空间名称
+     * @param string $NamespaceId 命名空间，4.x 通用集群命名空间固定为: tdmq_default
      * @param string $GroupId 消费组名称
      * @param integer $Type 重置方式，0表示从最新位点开始，1表示从指定时间点开始
      * @param string $Topic 主题名称
-     * @param integer $ResetTimestamp 重置指定的时间戳，仅在 Type 为1是生效，以毫秒为单位
+     * @param integer $ResetTimestamp 重置指定的时间戳，仅在 Type 为1时生效，以毫秒为单位
      * @param boolean $RetryFlag 重置的是否是retry topic
      */
     function __construct()

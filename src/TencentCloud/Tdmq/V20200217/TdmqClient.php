@@ -38,10 +38,12 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\CreateRabbitMQVipInstanceResponse CreateRabbitMQVipInstance(Models\CreateRabbitMQVipInstanceRequest $req) 创建 RabbitMQ 托管版实例
  * @method Models\CreateRabbitMQVirtualHostResponse CreateRabbitMQVirtualHost(Models\CreateRabbitMQVirtualHostRequest $req) 创建RabbitMQ的vhost
  * @method Models\CreateRocketMQClusterResponse CreateRocketMQCluster(Models\CreateRocketMQClusterRequest $req) 此接口用于创建一个RocketMQ集群
- * @method Models\CreateRocketMQEnvironmentRoleResponse CreateRocketMQEnvironmentRole(Models\CreateRocketMQEnvironmentRoleRequest $req) 创建环境角色授权
+ * @method Models\CreateRocketMQEnvironmentRoleResponse CreateRocketMQEnvironmentRole(Models\CreateRocketMQEnvironmentRoleRequest $req) 创建角色授权。
+当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的创建角色接口文档见 [CreateRole](https://cloud.tencent.com/document/api/1493/98864)。
  * @method Models\CreateRocketMQGroupResponse CreateRocketMQGroup(Models\CreateRocketMQGroupRequest $req) 创建RocketMQ消费组
  * @method Models\CreateRocketMQNamespaceResponse CreateRocketMQNamespace(Models\CreateRocketMQNamespaceRequest $req) 创建RocketMQ命名空间
- * @method Models\CreateRocketMQRoleResponse CreateRocketMQRole(Models\CreateRocketMQRoleRequest $req) 创建角色
+ * @method Models\CreateRocketMQRoleResponse CreateRocketMQRole(Models\CreateRocketMQRoleRequest $req) 创建角色。
+当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的创建角色接口文档见 [CreateRole](https://cloud.tencent.com/document/api/1493/98864)。
  * @method Models\CreateRocketMQTopicResponse CreateRocketMQTopic(Models\CreateRocketMQTopicRequest $req) 创建RocketMQ主题
  * @method Models\CreateRocketMQTopicV2Response CreateRocketMQTopicV2(Models\CreateRocketMQTopicV2Request $req) 创建RocketMQ主题
  * @method Models\CreateRocketMQVipInstanceResponse CreateRocketMQVipInstance(Models\CreateRocketMQVipInstanceRequest $req) 创建RocketMQ专享实例
@@ -61,10 +63,12 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\DeleteRabbitMQVipInstanceResponse DeleteRabbitMQVipInstance(Models\DeleteRabbitMQVipInstanceRequest $req) 删除 RabbitMQ 托管版实例
  * @method Models\DeleteRabbitMQVirtualHostResponse DeleteRabbitMQVirtualHost(Models\DeleteRabbitMQVirtualHostRequest $req) 删除RabbitMQ的vhost
  * @method Models\DeleteRocketMQClusterResponse DeleteRocketMQCluster(Models\DeleteRocketMQClusterRequest $req) 删除RocketMQ集群
- * @method Models\DeleteRocketMQEnvironmentRolesResponse DeleteRocketMQEnvironmentRoles(Models\DeleteRocketMQEnvironmentRolesRequest $req) 删除环境角色授权。
+ * @method Models\DeleteRocketMQEnvironmentRolesResponse DeleteRocketMQEnvironmentRoles(Models\DeleteRocketMQEnvironmentRolesRequest $req) 批量删除角色授权。
+当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的删除角色接口文档见 [DeleteRole](https://cloud.tencent.com/document/api/1493/98863)。
  * @method Models\DeleteRocketMQGroupResponse DeleteRocketMQGroup(Models\DeleteRocketMQGroupRequest $req) 删除RocketMQ消费组
  * @method Models\DeleteRocketMQNamespaceResponse DeleteRocketMQNamespace(Models\DeleteRocketMQNamespaceRequest $req) 删除RocketMQ命名空间
- * @method Models\DeleteRocketMQRolesResponse DeleteRocketMQRoles(Models\DeleteRocketMQRolesRequest $req) 删除角色，支持批量。
+ * @method Models\DeleteRocketMQRolesResponse DeleteRocketMQRoles(Models\DeleteRocketMQRolesRequest $req) 批量删除角色。
+当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的删除角色接口文档见 [DeleteRole](https://cloud.tencent.com/document/api/1493/98863)。
  * @method Models\DeleteRocketMQTopicResponse DeleteRocketMQTopic(Models\DeleteRocketMQTopicRequest $req) 删除RocketMQ主题
  * @method Models\DeleteRocketMQVipInstanceResponse DeleteRocketMQVipInstance(Models\DeleteRocketMQVipInstanceRequest $req) 删除RocketMQ专享实例
  * @method Models\DeleteRolesResponse DeleteRoles(Models\DeleteRolesRequest $req) 删除角色，支持批量。
@@ -88,7 +92,7 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\DescribeEnvironmentsResponse DescribeEnvironments(Models\DescribeEnvironmentsRequest $req) 获取租户下命名空间列表
  * @method Models\DescribeMqMsgTraceResponse DescribeMqMsgTrace(Models\DescribeMqMsgTraceRequest $req) 查询消息轨迹
  * @method Models\DescribeMsgResponse DescribeMsg(Models\DescribeMsgRequest $req) 消息详情
- * @method Models\DescribeMsgTraceResponse DescribeMsgTrace(Models\DescribeMsgTraceRequest $req) 查询消息轨迹
+ * @method Models\DescribeMsgTraceResponse DescribeMsgTrace(Models\DescribeMsgTraceRequest $req) 查询单条消息的消息轨迹
  * @method Models\DescribeNamespaceBundlesOptResponse DescribeNamespaceBundlesOpt(Models\DescribeNamespaceBundlesOptRequest $req) 运营端获取命名空间bundle列表
  * @method Models\DescribeNodeHealthOptResponse DescribeNodeHealthOpt(Models\DescribeNodeHealthOptRequest $req) 运营端获节点健康状态
  * @method Models\DescribePublisherSummaryResponse DescribePublisherSummary(Models\DescribePublisherSummaryRequest $req) 获取消息生产概览信息
@@ -110,7 +114,8 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\DescribeRocketMQConsumeStatsResponse DescribeRocketMQConsumeStats(Models\DescribeRocketMQConsumeStatsRequest $req) 获取消费详情列表
  * @method Models\DescribeRocketMQConsumerConnectionDetailResponse DescribeRocketMQConsumerConnectionDetail(Models\DescribeRocketMQConsumerConnectionDetailRequest $req) 获取在线消费端详情
  * @method Models\DescribeRocketMQConsumerConnectionsResponse DescribeRocketMQConsumerConnections(Models\DescribeRocketMQConsumerConnectionsRequest $req) 获取指定消费组下当前客户端的连接情况
- * @method Models\DescribeRocketMQEnvironmentRolesResponse DescribeRocketMQEnvironmentRoles(Models\DescribeRocketMQEnvironmentRolesRequest $req) 获取命名空间角色列表
+ * @method Models\DescribeRocketMQEnvironmentRolesResponse DescribeRocketMQEnvironmentRoles(Models\DescribeRocketMQEnvironmentRolesRequest $req) 查询角色授权列表。
+当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的查询角色列表接口文档见 [DescribeRoleList](https://cloud.tencent.com/document/api/1493/98862)。
  * @method Models\DescribeRocketMQGroupsResponse DescribeRocketMQGroups(Models\DescribeRocketMQGroupsRequest $req) 获取RocketMQ消费组列表
  * @method Models\DescribeRocketMQMigratingTopicListResponse DescribeRocketMQMigratingTopicList(Models\DescribeRocketMQMigratingTopicListRequest $req) 查询Topic迁移状态列表，源集群和目标集群客户端数量信息需要配合DescribeRocketMQSmoothMigrationTaskTopicInsNum接口查询
  * @method Models\DescribeRocketMQMsgResponse DescribeRocketMQMsg(Models\DescribeRocketMQMsgRequest $req) rocketmq消息详情
@@ -120,7 +125,8 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\DescribeRocketMQPublicAccessMonitorDataResponse DescribeRocketMQPublicAccessMonitorData(Models\DescribeRocketMQPublicAccessMonitorDataRequest $req) 查询公网指标监控数据，目前仅支持客户端到 LB 的入带宽和出宽带指标。
 当前 API 适用集群：4.x 专享集群 和 4.x 通用集群。5.x 集群暂不支持该功能。
  * @method Models\DescribeRocketMQPublicAccessPointResponse DescribeRocketMQPublicAccessPoint(Models\DescribeRocketMQPublicAccessPointRequest $req) 接口用于查询RocketMQ实例的公网接入信息
- * @method Models\DescribeRocketMQRolesResponse DescribeRocketMQRoles(Models\DescribeRocketMQRolesRequest $req) 获取角色列表
+ * @method Models\DescribeRocketMQRolesResponse DescribeRocketMQRoles(Models\DescribeRocketMQRolesRequest $req) 查询角色列表。
+当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的查询角色列表接口文档见 [DescribeRoleList](https://cloud.tencent.com/document/api/1493/98862)。
  * @method Models\DescribeRocketMQSmoothMigrationTaskResponse DescribeRocketMQSmoothMigrationTask(Models\DescribeRocketMQSmoothMigrationTaskRequest $req) 用于获取RocketMQ平滑迁移任务详情
  * @method Models\DescribeRocketMQSubscriptionsResponse DescribeRocketMQSubscriptions(Models\DescribeRocketMQSubscriptionsRequest $req) 用于获取RocketMQ消费组订阅关系数据
  * @method Models\DescribeRocketMQTopUsagesResponse DescribeRocketMQTopUsages(Models\DescribeRocketMQTopUsagesRequest $req) 用于获取RocketMQ指标排序列表，比如集群实例下占用存储空间最多的主题排序。
@@ -152,12 +158,14 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\ModifyRabbitMQVipInstanceResponse ModifyRabbitMQVipInstance(Models\ModifyRabbitMQVipInstanceRequest $req) 修改RabbitMQ专享版实例
  * @method Models\ModifyRabbitMQVirtualHostResponse ModifyRabbitMQVirtualHost(Models\ModifyRabbitMQVirtualHostRequest $req) 修改RabbitMQ的vhost
  * @method Models\ModifyRocketMQClusterResponse ModifyRocketMQCluster(Models\ModifyRocketMQClusterRequest $req) 更新RocketMQ集群信息
- * @method Models\ModifyRocketMQEnvironmentRoleResponse ModifyRocketMQEnvironmentRole(Models\ModifyRocketMQEnvironmentRoleRequest $req) 修改环境角色授权。
+ * @method Models\ModifyRocketMQEnvironmentRoleResponse ModifyRocketMQEnvironmentRole(Models\ModifyRocketMQEnvironmentRoleRequest $req) 修改角色授权。
+当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的修改角色接口文档见 [ModifyRole](https://cloud.tencent.com/document/api/1493/98861)。
  * @method Models\ModifyRocketMQGroupResponse ModifyRocketMQGroup(Models\ModifyRocketMQGroupRequest $req) 更新RocketMQ消费组信息
  * @method Models\ModifyRocketMQInstanceResponse ModifyRocketMQInstance(Models\ModifyRocketMQInstanceRequest $req) 修改RocketMQ专享实例
  * @method Models\ModifyRocketMQInstanceSpecResponse ModifyRocketMQInstanceSpec(Models\ModifyRocketMQInstanceSpecRequest $req) 本API用于修改RocketMQ专享实例配置，可以支持实例规格、节点数和存储的升配和实例规格的降配。本API发起订单并成功支付后进入实例配置变更的流程，可通过DescribeRocketMQVipInstances查询实例是否已变更完成。
  * @method Models\ModifyRocketMQNamespaceResponse ModifyRocketMQNamespace(Models\ModifyRocketMQNamespaceRequest $req) 更新RocketMQ命名空间
- * @method Models\ModifyRocketMQRoleResponse ModifyRocketMQRole(Models\ModifyRocketMQRoleRequest $req) 角色修改
+ * @method Models\ModifyRocketMQRoleResponse ModifyRocketMQRole(Models\ModifyRocketMQRoleRequest $req) 修改角色。
+当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的修改角色接口文档见 [ModifyRole](https://cloud.tencent.com/document/api/1493/98861)。
  * @method Models\ModifyRocketMQTopicResponse ModifyRocketMQTopic(Models\ModifyRocketMQTopicRequest $req) 更新RocketMQ主题信息
  * @method Models\ModifyRoleResponse ModifyRole(Models\ModifyRoleRequest $req) 角色修改
  * @method Models\ModifyTopicResponse ModifyTopic(Models\ModifyTopicRequest $req) 修改主题备注和分区数
@@ -183,7 +191,8 @@ BatchReceivePolicy 的接口会一次性返回多条消息：
 1. 多条消息的内容之间使用特殊字符 '###' 来进行分割，业务侧接收到消息之后，可以利用不同语言提供的 Split 工具分割不同的消息。
 2. 多条消息的 MessageID 之间使用特殊字符 '###' 来进行分割，业务侧接收到消息之后，可以利用不同语言提供的 Split 工具分割不同的消息。（用于在调用 AcknowledgeMessage 接口中填入所需要的 MessageID 字段信息）
  * @method Models\ResetMsgSubOffsetByTimestampResponse ResetMsgSubOffsetByTimestamp(Models\ResetMsgSubOffsetByTimestampRequest $req) 根据时间戳进行消息回溯，精确到毫秒
- * @method Models\ResetRocketMQConsumerOffSetResponse ResetRocketMQConsumerOffSet(Models\ResetRocketMQConsumerOffSetRequest $req) 重置指定Group的消费位点到指定时间戳
+ * @method Models\ResetRocketMQConsumerOffSetResponse ResetRocketMQConsumerOffSet(Models\ResetRocketMQConsumerOffSetRequest $req) 重置消费位点。
+当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的重置消费位点接口文档见 [ResetConsumerGroupOffset](https://cloud.tencent.com/document/api/1493/116942)。
  * @method Models\RetryRocketMQDlqMessageResponse RetryRocketMQDlqMessage(Models\RetryRocketMQDlqMessageRequest $req) 重发RocketMQ死信消息
  * @method Models\RewindCmqQueueResponse RewindCmqQueue(Models\RewindCmqQueueRequest $req) 回溯cmq队列
  * @method Models\SendBatchMessagesResponse SendBatchMessages(Models\SendBatchMessagesRequest $req) 批量发送消息

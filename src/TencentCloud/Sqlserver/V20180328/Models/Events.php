@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSize(integer $Size) 设置扩展事件文件大小
  * @method string getEventType() 获取事件类型，slow-慢SQL事件，blocked-阻塞事件，deadlock-死锁事件
  * @method void setEventType(string $EventType) 设置事件类型，slow-慢SQL事件，blocked-阻塞事件，deadlock-死锁事件
- * @method integer getStatus() 获取事件记录状态，1-成功，2-失败，3-文件待删除，4-写入中
- * @method void setStatus(integer $Status) 设置事件记录状态，1-成功，2-失败，3-文件待删除，4-写入中
+ * @method integer getStatus() 获取事件记录状态，1-成功，4-写入中
+ * @method void setStatus(integer $Status) 设置事件记录状态，1-成功，4-写入中
  * @method string getStartTime() 获取扩展文件生成开始时间
  * @method void setStartTime(string $StartTime) 设置扩展文件生成开始时间
  * @method string getEndTime() 获取扩展文件最后更新时间
@@ -62,7 +62,7 @@ class Events extends AbstractModel
     public $EventType;
 
     /**
-     * @var integer 事件记录状态，1-成功，2-失败，3-文件待删除，4-写入中
+     * @var integer 事件记录状态，1-成功，4-写入中
      */
     public $Status;
 
@@ -91,7 +91,7 @@ class Events extends AbstractModel
      * @param string $FileName 扩展事件文件名称
      * @param integer $Size 扩展事件文件大小
      * @param string $EventType 事件类型，slow-慢SQL事件，blocked-阻塞事件，deadlock-死锁事件
-     * @param integer $Status 事件记录状态，1-成功，2-失败，3-文件待删除，4-写入中
+     * @param integer $Status 事件记录状态，1-成功，4-写入中
      * @param string $StartTime 扩展文件生成开始时间
      * @param string $EndTime 扩展文件最后更新时间
      * @param string $InternalAddr 内网下载地址

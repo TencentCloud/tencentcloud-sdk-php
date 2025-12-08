@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsolateConsumerEnable(boolean $IsolateConsumerEnable) 设置是否开启异常消费者隔离
  * @method integer getAckTimeOut() 获取消费者 Ack 超时时间，单位：秒，范围60-（3600*24）
  * @method void setAckTimeOut(integer $AckTimeOut) 设置消费者 Ack 超时时间，单位：秒，范围60-（3600*24）
+ * @method integer getPulsarTopicMessageType() 获取Pulsar主题消息类型0: 混合消息1:普通消息2:延迟消息
+ * @method void setPulsarTopicMessageType(integer $PulsarTopicMessageType) 设置Pulsar主题消息类型0: 混合消息1:普通消息2:延迟消息
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -128,6 +130,11 @@ class CreateTopicRequest extends AbstractModel
     public $AckTimeOut;
 
     /**
+     * @var integer Pulsar主题消息类型0: 混合消息1:普通消息2:延迟消息
+     */
+    public $PulsarTopicMessageType;
+
+    /**
      * @param string $EnvironmentId 环境（命名空间）名称。
      * @param string $TopicName 主题名，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
      * @param integer $Partitions 入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过32。
@@ -148,6 +155,7 @@ class CreateTopicRequest extends AbstractModel
      * @param string $UnackPolicy 不传默认是原生策略，DefaultPolicy表示当订阅下达到最大未确认消息数 5000 时，服务端将不再向当前订阅下的所有消费者推送消息，DynamicPolicy表示动态调整订阅下的最大未确认消息数，具体配额是在 5000 和消费者数量*20之间取最大值。每个消费者默认最大 unack 消息数为 20，超过该限制时仅影响该消费者，不影响其他消费者。
      * @param boolean $IsolateConsumerEnable 是否开启异常消费者隔离
      * @param integer $AckTimeOut 消费者 Ack 超时时间，单位：秒，范围60-（3600*24）
+     * @param integer $PulsarTopicMessageType Pulsar主题消息类型0: 混合消息1:普通消息2:延迟消息
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class CreateTopicRequest extends AbstractModel
 
         if (array_key_exists("AckTimeOut",$param) and $param["AckTimeOut"] !== null) {
             $this->AckTimeOut = $param["AckTimeOut"];
+        }
+
+        if (array_key_exists("PulsarTopicMessageType",$param) and $param["PulsarTopicMessageType"] !== null) {
+            $this->PulsarTopicMessageType = $param["PulsarTopicMessageType"];
         }
     }
 }

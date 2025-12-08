@@ -26,8 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPermWrite(boolean $PermWrite) 设置是否开启生产权限
  * @method boolean getPermRead() 获取是否开启消费权限
  * @method void setPermRead(boolean $PermRead) 设置是否开启消费权限
- * @method string getResourceType() 获取授权资源类型（Topic:主题; Group:消费组）
- * @method void setResourceType(string $ResourceType) 设置授权资源类型（Topic:主题; Group:消费组）
+ * @method string getResourceType() 获取授权资源类型，枚举值如下：
+- Topic：主题维度
+- Group：消费组维度
+- Cluster：集群维度（默认值）
+ * @method void setResourceType(string $ResourceType) 设置授权资源类型，枚举值如下：
+- Topic：主题维度
+- Group：消费组维度
+- Cluster：集群维度（默认值）
  * @method string getRemark() 获取资源备注
  * @method void setRemark(string $Remark) 设置资源备注
  */
@@ -49,7 +55,10 @@ class DetailedRolePerm extends AbstractModel
     public $PermRead;
 
     /**
-     * @var string 授权资源类型（Topic:主题; Group:消费组）
+     * @var string 授权资源类型，枚举值如下：
+- Topic：主题维度
+- Group：消费组维度
+- Cluster：集群维度（默认值）
      */
     public $ResourceType;
 
@@ -62,7 +71,10 @@ class DetailedRolePerm extends AbstractModel
      * @param string $Resource 权限对应的资源
      * @param boolean $PermWrite 是否开启生产权限
      * @param boolean $PermRead 是否开启消费权限
-     * @param string $ResourceType 授权资源类型（Topic:主题; Group:消费组）
+     * @param string $ResourceType 授权资源类型，枚举值如下：
+- Topic：主题维度
+- Group：消费组维度
+- Cluster：集群维度（默认值）
      * @param string $Remark 资源备注
      */
     function __construct()

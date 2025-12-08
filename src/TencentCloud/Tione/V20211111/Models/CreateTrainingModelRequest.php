@@ -38,8 +38,8 @@ EXIST：导入现有版本
  * @method void setTrainingJobName(string $TrainingJobName) 设置训练任务名称
  * @method CosPathInfo getTrainingModelCosPath() 获取模型来源cos目录，以/结尾
  * @method void setTrainingModelCosPath(CosPathInfo $TrainingModelCosPath) 设置模型来源cos目录，以/结尾
- * @method string getAlgorithmFramework() 获取算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML/MMDETECTION)
- * @method void setAlgorithmFramework(string $AlgorithmFramework) 设置算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML/MMDETECTION)
+ * @method string getAlgorithmFramework() 获取算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML/MMDETECTION/ONNX)
+ * @method void setAlgorithmFramework(string $AlgorithmFramework) 设置算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML/MMDETECTION/ONNX)
  * @method string getReasoningEnvironment() 获取推理环境
  * @method void setReasoningEnvironment(string $ReasoningEnvironment) 设置推理环境
  * @method string getTrainingModelIndex() 获取训练指标，最多支持1000字符
@@ -70,8 +70,8 @@ EXIST：导入现有版本
  * @method void setModelVersionType(string $ModelVersionType) 设置模型版本类型；
 枚举值：NORMAL(通用)  ACCELERATE(加速)
 注意:  默认为NORMAL
- * @method string getModelFormat() 获取模型格式 （PYTORCH/TORCH_SCRIPT/DETECTRON2/SAVED_MODEL/FROZEN_GRAPH/PMML/MMDETECTION/ONNX/HUGGING_FACE）
- * @method void setModelFormat(string $ModelFormat) 设置模型格式 （PYTORCH/TORCH_SCRIPT/DETECTRON2/SAVED_MODEL/FROZEN_GRAPH/PMML/MMDETECTION/ONNX/HUGGING_FACE）
+ * @method string getModelFormat() 获取模型格式 （PYTORCH/TORCH_SCRIPT/DETECTRON2/SAVED_MODEL/FROZEN_GRAPH/PMML/MMDETECTION/ONNX/HUGGING_FACE_BERT/HUGGING_FACE_STABLE_DIFFUSION/HUGGING_FACE_STABLE_DIFFUSION_LORA/WEB_UI_STABLE_DIFFUSION）
+ * @method void setModelFormat(string $ModelFormat) 设置模型格式 （PYTORCH/TORCH_SCRIPT/DETECTRON2/SAVED_MODEL/FROZEN_GRAPH/PMML/MMDETECTION/ONNX/HUGGING_FACE_BERT/HUGGING_FACE_STABLE_DIFFUSION/HUGGING_FACE_STABLE_DIFFUSION_LORA/WEB_UI_STABLE_DIFFUSION）
  * @method string getReasoningEnvironmentId() 获取推理镜像ID
  * @method void setReasoningEnvironmentId(string $ReasoningEnvironmentId) 设置推理镜像ID
  * @method string getAutoClean() 获取模型自动清理开关(true/false)，当前版本仅支持SAVED_MODEL格式模型
@@ -119,7 +119,7 @@ EXIST：导入现有版本
     public $TrainingModelCosPath;
 
     /**
-     * @var string 算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML/MMDETECTION)
+     * @var string 算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML/MMDETECTION/ONNX)
      */
     public $AlgorithmFramework;
 
@@ -191,7 +191,7 @@ EXIST：导入现有版本
     public $ModelVersionType;
 
     /**
-     * @var string 模型格式 （PYTORCH/TORCH_SCRIPT/DETECTRON2/SAVED_MODEL/FROZEN_GRAPH/PMML/MMDETECTION/ONNX/HUGGING_FACE）
+     * @var string 模型格式 （PYTORCH/TORCH_SCRIPT/DETECTRON2/SAVED_MODEL/FROZEN_GRAPH/PMML/MMDETECTION/ONNX/HUGGING_FACE_BERT/HUGGING_FACE_STABLE_DIFFUSION/HUGGING_FACE_STABLE_DIFFUSION_LORA/WEB_UI_STABLE_DIFFUSION）
      */
     public $ModelFormat;
 
@@ -230,7 +230,7 @@ EXIST：导入现有版本
      * @param array $Tags 标签配置
      * @param string $TrainingJobName 训练任务名称
      * @param CosPathInfo $TrainingModelCosPath 模型来源cos目录，以/结尾
-     * @param string $AlgorithmFramework 算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML/MMDETECTION)
+     * @param string $AlgorithmFramework 算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML/MMDETECTION/ONNX)
      * @param string $ReasoningEnvironment 推理环境
      * @param string $TrainingModelIndex 训练指标，最多支持1000字符
      * @param string $TrainingModelVersion 模型版本
@@ -246,7 +246,7 @@ EXIST：导入现有版本
      * @param string $ModelVersionType 模型版本类型；
 枚举值：NORMAL(通用)  ACCELERATE(加速)
 注意:  默认为NORMAL
-     * @param string $ModelFormat 模型格式 （PYTORCH/TORCH_SCRIPT/DETECTRON2/SAVED_MODEL/FROZEN_GRAPH/PMML/MMDETECTION/ONNX/HUGGING_FACE）
+     * @param string $ModelFormat 模型格式 （PYTORCH/TORCH_SCRIPT/DETECTRON2/SAVED_MODEL/FROZEN_GRAPH/PMML/MMDETECTION/ONNX/HUGGING_FACE_BERT/HUGGING_FACE_STABLE_DIFFUSION/HUGGING_FACE_STABLE_DIFFUSION_LORA/WEB_UI_STABLE_DIFFUSION）
      * @param string $ReasoningEnvironmentId 推理镜像ID
      * @param string $AutoClean 模型自动清理开关(true/false)，当前版本仅支持SAVED_MODEL格式模型
      * @param integer $MaxReservedModels 模型数量保留上限(默认值为24个，上限为24，下限为1，步长为1)

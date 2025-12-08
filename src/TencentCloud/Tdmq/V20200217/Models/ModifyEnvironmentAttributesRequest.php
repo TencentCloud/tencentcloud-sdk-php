@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRetentionPolicy(RetentionPolicy $RetentionPolicy) 设置消息保留策略
  * @method boolean getAutoSubscriptionCreation() 获取是否开启自动创建订阅
  * @method void setAutoSubscriptionCreation(boolean $AutoSubscriptionCreation) 设置是否开启自动创建订阅
+ * @method integer getSubscriptionExpirationTime() 获取离线订阅过期自动清理时间
+ * @method void setSubscriptionExpirationTime(integer $SubscriptionExpirationTime) 设置离线订阅过期自动清理时间
+ * @method boolean getSubscriptionExpirationTimeEnable() 获取离线订阅过期自动清理时间开关
+ * @method void setSubscriptionExpirationTimeEnable(boolean $SubscriptionExpirationTimeEnable) 设置离线订阅过期自动清理时间开关
  */
 class ModifyEnvironmentAttributesRequest extends AbstractModel
 {
@@ -66,12 +70,24 @@ class ModifyEnvironmentAttributesRequest extends AbstractModel
     public $AutoSubscriptionCreation;
 
     /**
+     * @var integer 离线订阅过期自动清理时间
+     */
+    public $SubscriptionExpirationTime;
+
+    /**
+     * @var boolean 离线订阅过期自动清理时间开关
+     */
+    public $SubscriptionExpirationTimeEnable;
+
+    /**
      * @param string $EnvironmentId 命名空间名称。
      * @param integer $MsgTTL 未消费消息过期时间，单位：秒，范围60秒~15天。
      * @param string $ClusterId 集群ID
      * @param string $Remark 备注，字符串最长不超过128。
      * @param RetentionPolicy $RetentionPolicy 消息保留策略
      * @param boolean $AutoSubscriptionCreation 是否开启自动创建订阅
+     * @param integer $SubscriptionExpirationTime 离线订阅过期自动清理时间
+     * @param boolean $SubscriptionExpirationTimeEnable 离线订阅过期自动清理时间开关
      */
     function __construct()
     {
@@ -109,6 +125,14 @@ class ModifyEnvironmentAttributesRequest extends AbstractModel
 
         if (array_key_exists("AutoSubscriptionCreation",$param) and $param["AutoSubscriptionCreation"] !== null) {
             $this->AutoSubscriptionCreation = $param["AutoSubscriptionCreation"];
+        }
+
+        if (array_key_exists("SubscriptionExpirationTime",$param) and $param["SubscriptionExpirationTime"] !== null) {
+            $this->SubscriptionExpirationTime = $param["SubscriptionExpirationTime"];
+        }
+
+        if (array_key_exists("SubscriptionExpirationTimeEnable",$param) and $param["SubscriptionExpirationTimeEnable"] !== null) {
+            $this->SubscriptionExpirationTimeEnable = $param["SubscriptionExpirationTimeEnable"];
         }
     }
 }

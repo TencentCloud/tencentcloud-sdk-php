@@ -130,6 +130,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(string $AppId) 设置AppId
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ExposePortConfig getExposePortConfig() 获取容器服务暴露端口配置
+ * @method void setExposePortConfig(ExposePortConfig $ExposePortConfig) 设置容器服务暴露端口配置
  */
 class NotebookSetItem extends AbstractModel
 {
@@ -309,6 +311,11 @@ class NotebookSetItem extends AbstractModel
     public $AppId;
 
     /**
+     * @var ExposePortConfig 容器服务暴露端口配置
+     */
+    public $ExposePortConfig;
+
+    /**
      * @param string $Id notebook ID
      * @param string $Name notebook 名称
      * @param string $ChargeType 计费模式
@@ -364,6 +371,7 @@ class NotebookSetItem extends AbstractModel
      * @param string $SubUinName 子用户名称
      * @param string $AppId AppId
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExposePortConfig $ExposePortConfig 容器服务暴露端口配置
      */
     function __construct()
     {
@@ -505,6 +513,11 @@ class NotebookSetItem extends AbstractModel
 
         if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
             $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("ExposePortConfig",$param) and $param["ExposePortConfig"] !== null) {
+            $this->ExposePortConfig = new ExposePortConfig();
+            $this->ExposePortConfig->deserialize($param["ExposePortConfig"]);
         }
     }
 }

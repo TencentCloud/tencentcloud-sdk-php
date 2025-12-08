@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRocketMQEnvironmentRole请求参数结构体
  *
- * @method string getEnvironmentId() 获取环境（命名空间）名称。
- * @method void setEnvironmentId(string $EnvironmentId) 设置环境（命名空间）名称。
+ * @method string getEnvironmentId() 获取命名空间，4.x 通用集群命名空间固定为: tdmq_default
+ * @method void setEnvironmentId(string $EnvironmentId) 设置命名空间，4.x 通用集群命名空间固定为: tdmq_default
  * @method string getRoleName() 获取角色名称。
  * @method void setRoleName(string $RoleName) 设置角色名称。
  * @method array getPermissions() 获取授权项，最多只能包含produce、consume两项的非空字符串数组。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyRocketMQEnvironmentRoleRequest extends AbstractModel
 {
     /**
-     * @var string 环境（命名空间）名称。
+     * @var string 命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public $EnvironmentId;
 
@@ -59,7 +59,7 @@ class ModifyRocketMQEnvironmentRoleRequest extends AbstractModel
     public $DetailedPerms;
 
     /**
-     * @param string $EnvironmentId 环境（命名空间）名称。
+     * @param string $EnvironmentId 命名空间，4.x 通用集群命名空间固定为: tdmq_default
      * @param string $RoleName 角色名称。
      * @param array $Permissions 授权项，最多只能包含produce、consume两项的非空字符串数组。
      * @param string $ClusterId 必填字段，集群的ID

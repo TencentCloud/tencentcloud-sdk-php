@@ -112,6 +112,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\ModifyDynamicDNSResponse ModifyDynamicDNS(Models\ModifyDynamicDNSRequest $req) 更新动态 DNS 记录
  * @method Models\ModifyLineGroupResponse ModifyLineGroup(Models\ModifyLineGroupRequest $req) 修改域名的线路分组
  * @method Models\ModifyPackageAutoRenewResponse ModifyPackageAutoRenew(Models\ModifyPackageAutoRenewRequest $req) DNS 解析套餐自动续费设置
+ * @method Models\ModifyPackageDomainResponse ModifyPackageDomain(Models\ModifyPackageDomainRequest $req) 套餐绑定、解绑、更换域名
  * @method Models\ModifyRecordResponse ModifyRecord(Models\ModifyRecordRequest $req) 修改记录
  * @method Models\ModifyRecordBatchResponse ModifyRecordBatch(Models\ModifyRecordBatchRequest $req) 批量修改记录
  * @method Models\ModifyRecordFieldsResponse ModifyRecordFields(Models\ModifyRecordFieldsRequest $req) 修改记录可选字段

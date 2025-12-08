@@ -76,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTls(boolean $Tls) 设置是否开启TLS加密
  * @method string getCustomUrl() 获取接入点自定义域名
  * @method void setCustomUrl(string $CustomUrl) 设置接入点自定义域名
+ * @method array getSecurityGroupIds() 获取接入点绑定的安全组id列表，仅限vpc接入点有效
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置接入点绑定的安全组id列表，仅限vpc接入点有效
  */
 class PulsarNetworkAccessPointInfo extends AbstractModel
 {
@@ -160,6 +162,11 @@ class PulsarNetworkAccessPointInfo extends AbstractModel
     public $CustomUrl;
 
     /**
+     * @var array 接入点绑定的安全组id列表，仅限vpc接入点有效
+     */
+    public $SecurityGroupIds;
+
+    /**
      * @param string $VpcId vpc的id，支撑网和公网接入点，该字段为空
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网id，支撑网和公网接入点，该字段为空
@@ -188,6 +195,7 @@ class PulsarNetworkAccessPointInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Tls 是否开启TLS加密
      * @param string $CustomUrl 接入点自定义域名
+     * @param array $SecurityGroupIds 接入点绑定的安全组id列表，仅限vpc接入点有效
      */
     function __construct()
     {
@@ -257,6 +265,10 @@ class PulsarNetworkAccessPointInfo extends AbstractModel
 
         if (array_key_exists("CustomUrl",$param) and $param["CustomUrl"] !== null) {
             $this->CustomUrl = $param["CustomUrl"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
     }
 }

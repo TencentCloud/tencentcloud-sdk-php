@@ -32,6 +32,7 @@ use TencentCloud\Common\AbstractModel;
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
  * @method void setMongoVersion(array $MongoVersion) 设置指定所需查询的参数模板的数据库版本号。具体支持的版本信息，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
 - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
@@ -40,6 +41,7 @@ use TencentCloud\Common\AbstractModel;
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
  * @method string getTplType() 获取指定查询的模板类型。
 - DEFAULT：系统默认模板。
 - CUSTOMIZE：自定义模板。
@@ -68,6 +70,7 @@ class DescribeDBInstanceParamTplRequest extends AbstractModel
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
      */
     public $MongoVersion;
 
@@ -89,6 +92,7 @@ class DescribeDBInstanceParamTplRequest extends AbstractModel
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
      * @param string $TplType 指定查询的模板类型。
 - DEFAULT：系统默认模板。
 - CUSTOMIZE：自定义模板。

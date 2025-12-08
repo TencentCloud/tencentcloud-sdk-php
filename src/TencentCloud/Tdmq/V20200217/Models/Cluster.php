@@ -56,10 +56,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicEndPoint(string $PublicEndPoint) 设置公网访问接入点
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOldPublicEndPoint() 获取旧的公网访问接入点
+ * @method void setOldPublicEndPoint(string $OldPublicEndPoint) 设置旧的公网访问接入点
  * @method string getVpcEndPoint() 获取VPC访问接入点
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcEndPoint(string $VpcEndPoint) 设置VPC访问接入点
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOldVpcEndPoint() 获取旧的VPC访问接入点
+ * @method void setOldVpcEndPoint(string $OldVpcEndPoint) 设置旧的VPC访问接入点
  * @method integer getNamespaceNum() 获取命名空间数量
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespaceNum(integer $NamespaceNum) 设置命名空间数量
@@ -100,6 +104,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOldInternalPulsarEndPoint() 获取旧的支撑网 Pulsar 接入点
+ * @method void setOldInternalPulsarEndPoint(string $OldInternalPulsarEndPoint) 设置旧的支撑网 Pulsar 接入点
+ * @method string getOldInternalHttpEndPoint() 获取旧的支撑网 HTTP 接入点
+ * @method void setOldInternalHttpEndPoint(string $OldInternalHttpEndPoint) 设置旧的支撑网 HTTP 接入点
  * @method integer getPayMode() 获取计费模式：
 0: 按量计费
 1: 包年包月
@@ -200,10 +208,20 @@ class Cluster extends AbstractModel
     public $PublicEndPoint;
 
     /**
+     * @var string 旧的公网访问接入点
+     */
+    public $OldPublicEndPoint;
+
+    /**
      * @var string VPC访问接入点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcEndPoint;
+
+    /**
+     * @var string 旧的VPC访问接入点
+     */
+    public $OldVpcEndPoint;
 
     /**
      * @var integer 命名空间数量
@@ -266,6 +284,16 @@ class Cluster extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 旧的支撑网 Pulsar 接入点
+     */
+    public $OldInternalPulsarEndPoint;
+
+    /**
+     * @var string 旧的支撑网 HTTP 接入点
+     */
+    public $OldInternalHttpEndPoint;
+
+    /**
      * @var integer 计费模式：
 0: 按量计费
 1: 包年包月
@@ -309,8 +337,10 @@ class Cluster extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicEndPoint 公网访问接入点
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OldPublicEndPoint 旧的公网访问接入点
      * @param string $VpcEndPoint VPC访问接入点
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OldVpcEndPoint 旧的VPC访问接入点
      * @param integer $NamespaceNum 命名空间数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UsedStorageBudget 已使用存储限制，MB为单位
@@ -331,6 +361,8 @@ class Cluster extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OldInternalPulsarEndPoint 旧的支撑网 Pulsar 接入点
+     * @param string $OldInternalHttpEndPoint 旧的支撑网 HTTP 接入点
      * @param integer $PayMode 计费模式：
 0: 按量计费
 1: 包年包月
@@ -414,8 +446,16 @@ class Cluster extends AbstractModel
             $this->PublicEndPoint = $param["PublicEndPoint"];
         }
 
+        if (array_key_exists("OldPublicEndPoint",$param) and $param["OldPublicEndPoint"] !== null) {
+            $this->OldPublicEndPoint = $param["OldPublicEndPoint"];
+        }
+
         if (array_key_exists("VpcEndPoint",$param) and $param["VpcEndPoint"] !== null) {
             $this->VpcEndPoint = $param["VpcEndPoint"];
+        }
+
+        if (array_key_exists("OldVpcEndPoint",$param) and $param["OldVpcEndPoint"] !== null) {
+            $this->OldVpcEndPoint = $param["OldVpcEndPoint"];
         }
 
         if (array_key_exists("NamespaceNum",$param) and $param["NamespaceNum"] !== null) {
@@ -461,6 +501,14 @@ class Cluster extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("OldInternalPulsarEndPoint",$param) and $param["OldInternalPulsarEndPoint"] !== null) {
+            $this->OldInternalPulsarEndPoint = $param["OldInternalPulsarEndPoint"];
+        }
+
+        if (array_key_exists("OldInternalHttpEndPoint",$param) and $param["OldInternalHttpEndPoint"] !== null) {
+            $this->OldInternalHttpEndPoint = $param["OldInternalHttpEndPoint"];
         }
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {

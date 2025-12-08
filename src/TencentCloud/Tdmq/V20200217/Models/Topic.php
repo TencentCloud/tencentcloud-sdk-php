@@ -142,6 +142,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsolateConsumerEnable(boolean $IsolateConsumerEnable) 设置是否开启异常消费者隔离
  * @method integer getAckTimeOut() 获取消费者 Ack 超时时间，单位：秒
  * @method void setAckTimeOut(integer $AckTimeOut) 设置消费者 Ack 超时时间，单位：秒
+ * @method integer getPulsarTopicMessageType() 获取Pulsar主题消息类型0: 混合消息1:普通消息2:延迟消息
+ * @method void setPulsarTopicMessageType(integer $PulsarTopicMessageType) 设置Pulsar主题消息类型0: 混合消息1:普通消息2:延迟消息
  */
 class Topic extends AbstractModel
 {
@@ -315,6 +317,11 @@ class Topic extends AbstractModel
     public $AckTimeOut;
 
     /**
+     * @var integer Pulsar主题消息类型0: 混合消息1:普通消息2:延迟消息
+     */
+    public $PulsarTopicMessageType;
+
+    /**
      * @param string $AverageMsgSize 最后一次间隔内发布消息的平均byte大小。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConsumerCount 消费者数量。
@@ -376,6 +383,7 @@ class Topic extends AbstractModel
 
      * @param boolean $IsolateConsumerEnable 是否开启异常消费者隔离
      * @param integer $AckTimeOut 消费者 Ack 超时时间，单位：秒
+     * @param integer $PulsarTopicMessageType Pulsar主题消息类型0: 混合消息1:普通消息2:延迟消息
      */
     function __construct()
     {
@@ -501,6 +509,10 @@ class Topic extends AbstractModel
 
         if (array_key_exists("AckTimeOut",$param) and $param["AckTimeOut"] !== null) {
             $this->AckTimeOut = $param["AckTimeOut"];
+        }
+
+        if (array_key_exists("PulsarTopicMessageType",$param) and $param["PulsarTopicMessageType"] !== null) {
+            $this->PulsarTopicMessageType = $param["PulsarTopicMessageType"];
         }
     }
 }

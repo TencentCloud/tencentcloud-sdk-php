@@ -29,10 +29,10 @@ use TencentCloud\Common\AbstractModel;
 - 规格类型：**HIO10G**，指通用高HIO万兆型；**HCD**：指云盘版类型。
 - 内存规格：支持4、8、16、32、64、128、240、512。单位g：表示GB。128g 则表示128GB。
  * @method integer getStatus() 获取售卖规格有效标志，取值范围如下：
-- 0：停止售卖，
+- 0：停止售卖。
 - 1：开放售卖。
  * @method void setStatus(integer $Status) 设置售卖规格有效标志，取值范围如下：
-- 0：停止售卖，
+- 0：停止售卖。
 - 1：开放售卖。
  * @method integer getCpu() 获取计算资源规格，CPU核数。
  * @method void setCpu(integer $Cpu) 设置计算资源规格，CPU核数。
@@ -55,6 +55,7 @@ use TencentCloud\Common\AbstractModel;
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
  * @method void setMongoVersionCode(string $MongoVersionCode) 设置实例存储引擎版本信息。
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
@@ -62,12 +63,31 @@ use TencentCloud\Common\AbstractModel;
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
  * @method integer getMongoVersionValue() 获取实例版本对应的数字版本。
+- MongoDB 3.2 版本：2。
+- MongoDB 3.6 版本：4。
+- MongoDB 4.0 版本：5。
+- MongoDB 4.2 版本：9。
+- MongoDB 4.4 版本：10。
+- MongoDB 5.0 版本：11。
+- MongoDB 6.0 版本：12。
+- MongoDB 7.0 版本：13。
+- MongoDB 8.0 版本：14。
  * @method void setMongoVersionValue(integer $MongoVersionValue) 设置实例版本对应的数字版本。
- * @method string getVersion() 获取实例版本信息。支持：4.2、4.4、5.0、6.0、7.0。
- * @method void setVersion(string $Version) 设置实例版本信息。支持：4.2、4.4、5.0、6.0、7.0。
- * @method string getEngineName() 获取存储引擎。
- * @method void setEngineName(string $EngineName) 设置存储引擎。
+- MongoDB 3.2 版本：2。
+- MongoDB 3.6 版本：4。
+- MongoDB 4.0 版本：5。
+- MongoDB 4.2 版本：9。
+- MongoDB 4.4 版本：10。
+- MongoDB 5.0 版本：11。
+- MongoDB 6.0 版本：12。
+- MongoDB 7.0 版本：13。
+- MongoDB 8.0 版本：14。
+ * @method string getVersion() 获取实例版本信息。支持：4.2、4.4、5.0、6.0、7.0、8.0。
+ * @method void setVersion(string $Version) 设置实例版本信息。支持：4.2、4.4、5.0、6.0、7.0、8.0。
+ * @method string getEngineName() 获取存储引擎，仅支持 WiredTiger。
+ * @method void setEngineName(string $EngineName) 设置存储引擎，仅支持 WiredTiger。
  * @method integer getClusterType() 获取集群类型，取值如下：
 - 1：分片集群。
 - 0：副本集集群。
@@ -105,7 +125,7 @@ class SpecItem extends AbstractModel
 
     /**
      * @var integer 售卖规格有效标志，取值范围如下：
-- 0：停止售卖，
+- 0：停止售卖。
 - 1：开放售卖。
      */
     public $Status;
@@ -153,21 +173,31 @@ class SpecItem extends AbstractModel
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
      */
     public $MongoVersionCode;
 
     /**
      * @var integer 实例版本对应的数字版本。
+- MongoDB 3.2 版本：2。
+- MongoDB 3.6 版本：4。
+- MongoDB 4.0 版本：5。
+- MongoDB 4.2 版本：9。
+- MongoDB 4.4 版本：10。
+- MongoDB 5.0 版本：11。
+- MongoDB 6.0 版本：12。
+- MongoDB 7.0 版本：13。
+- MongoDB 8.0 版本：14。
      */
     public $MongoVersionValue;
 
     /**
-     * @var string 实例版本信息。支持：4.2、4.4、5.0、6.0、7.0。
+     * @var string 实例版本信息。支持：4.2、4.4、5.0、6.0、7.0、8.0。
      */
     public $Version;
 
     /**
-     * @var string 存储引擎。
+     * @var string 存储引擎，仅支持 WiredTiger。
      */
     public $EngineName;
 
@@ -221,7 +251,7 @@ class SpecItem extends AbstractModel
 - 规格类型：**HIO10G**，指通用高HIO万兆型；**HCD**：指云盘版类型。
 - 内存规格：支持4、8、16、32、64、128、240、512。单位g：表示GB。128g 则表示128GB。
      * @param integer $Status 售卖规格有效标志，取值范围如下：
-- 0：停止售卖，
+- 0：停止售卖。
 - 1：开放售卖。
      * @param integer $Cpu 计算资源规格，CPU核数。
      * @param integer $Memory 内存规格，单位为：MB。
@@ -237,9 +267,19 @@ class SpecItem extends AbstractModel
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
      * @param integer $MongoVersionValue 实例版本对应的数字版本。
-     * @param string $Version 实例版本信息。支持：4.2、4.4、5.0、6.0、7.0。
-     * @param string $EngineName 存储引擎。
+- MongoDB 3.2 版本：2。
+- MongoDB 3.6 版本：4。
+- MongoDB 4.0 版本：5。
+- MongoDB 4.2 版本：9。
+- MongoDB 4.4 版本：10。
+- MongoDB 5.0 版本：11。
+- MongoDB 6.0 版本：12。
+- MongoDB 7.0 版本：13。
+- MongoDB 8.0 版本：14。
+     * @param string $Version 实例版本信息。支持：4.2、4.4、5.0、6.0、7.0、8.0。
+     * @param string $EngineName 存储引擎，仅支持 WiredTiger。
      * @param integer $ClusterType 集群类型，取值如下：
 - 1：分片集群。
 - 0：副本集集群。

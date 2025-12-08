@@ -39,6 +39,7 @@ use TencentCloud\Common\AbstractModel;
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
  * @method void setMongoVersion(string $MongoVersion) 设置指版本信息。具体支持的版本信息 ，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
@@ -46,6 +47,7 @@ use TencentCloud\Common\AbstractModel;
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
  * @method string getMachineCode() 获取产品规格类型。
 - HIO10G：通用高HIO万兆型。
 - HCD：云盘版类型。
@@ -195,6 +197,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
      */
     public $MongoVersion;
 
@@ -358,6 +361,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
      * @param string $MachineCode 产品规格类型。
 - HIO10G：通用高HIO万兆型。
 - HCD：云盘版类型。

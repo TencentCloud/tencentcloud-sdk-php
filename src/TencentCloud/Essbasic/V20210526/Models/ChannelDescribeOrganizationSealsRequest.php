@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 <li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
 </ul>
 第三方平台子客企业和员工必须已经经过实名认证
- * @method integer getLimit() 获取指定分页每页返回的数据条数，单页最大支持 100。
- * @method void setLimit(integer $Limit) 设置指定分页每页返回的数据条数，单页最大支持 100。
+ * @method integer getLimit() 获取指定分页每页返回的数据条数，单页最大支持 100。默认值为20
+ * @method void setLimit(integer $Limit) 设置指定分页每页返回的数据条数，单页最大支持 100。默认值为20
  * @method integer getOffset() 获取分页查询偏移量，默认为0，最大为20000
  * @method void setOffset(integer $Offset) 设置分页查询偏移量，默认为0，最大为20000
  * @method integer getInfoType() 获取查询授权用户信息类型，取值如下：
@@ -81,7 +81,7 @@ class ChannelDescribeOrganizationSealsRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var integer 指定分页每页返回的数据条数，单页最大支持 100。
+     * @var integer 指定分页每页返回的数据条数，单页最大支持 100。默认值为20
      */
     public $Limit;
 
@@ -127,7 +127,7 @@ class ChannelDescribeOrganizationSealsRequest extends AbstractModel
 <li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
 </ul>
 第三方平台子客企业和员工必须已经经过实名认证
-     * @param integer $Limit 指定分页每页返回的数据条数，单页最大支持 100。
+     * @param integer $Limit 指定分页每页返回的数据条数，单页最大支持 100。默认值为20
      * @param integer $Offset 分页查询偏移量，默认为0，最大为20000
      * @param integer $InfoType 查询授权用户信息类型，取值如下：
 

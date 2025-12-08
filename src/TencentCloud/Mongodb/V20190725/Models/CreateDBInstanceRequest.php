@@ -35,6 +35,7 @@ use TencentCloud\Common\AbstractModel;
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
  * @method void setMongoVersion(string $MongoVersion) 设置指版本信息。具体支持的版本信息 ，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
@@ -42,6 +43,7 @@ use TencentCloud\Common\AbstractModel;
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
  * @method integer getGoodsNum() 获取实例数量, 最小值1，最大值为30。
  * @method void setGoodsNum(integer $GoodsNum) 设置实例数量, 最小值1，最大值为30。
  * @method string getZone() 获取可用区信息，输入格式如：ap-guangzhou-2。
@@ -199,6 +201,7 @@ class CreateDBInstanceRequest extends AbstractModel
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
      */
     public $MongoVersion;
 
@@ -383,6 +386,7 @@ class CreateDBInstanceRequest extends AbstractModel
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
      * @param integer $GoodsNum 实例数量, 最小值1，最大值为30。
      * @param string $Zone 可用区信息，输入格式如：ap-guangzhou-2。
 - 具体信息，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。

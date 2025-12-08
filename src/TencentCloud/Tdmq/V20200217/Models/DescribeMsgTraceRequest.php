@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubscriptionName(string $SubscriptionName) 设置消费组名称模糊匹配。
  * @method string getClusterId() 获取Pulsar 集群的ID
  * @method void setClusterId(string $ClusterId) 设置Pulsar 集群的ID
+ * @method string getTopicName() 获取topic 名字
+ * @method void setTopicName(string $TopicName) 设置topic 名字
  */
 class DescribeMsgTraceRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeMsgTraceRequest extends AbstractModel
     public $ClusterId;
 
     /**
+     * @var string topic 名字
+     */
+    public $TopicName;
+
+    /**
      * @param string $EnvironmentId 环境（命名空间）。
      * @param string $MsgId 消息ID。
      * @param string $ProduceTime 消息生产时间。
@@ -80,6 +87,7 @@ class DescribeMsgTraceRequest extends AbstractModel
      * @param integer $Limit 返回数量，不填则默认为10，最大值为20。
      * @param string $SubscriptionName 消费组名称模糊匹配。
      * @param string $ClusterId Pulsar 集群的ID
+     * @param string $TopicName topic 名字
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DescribeMsgTraceRequest extends AbstractModel
 
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
+            $this->TopicName = $param["TopicName"];
         }
     }
 }

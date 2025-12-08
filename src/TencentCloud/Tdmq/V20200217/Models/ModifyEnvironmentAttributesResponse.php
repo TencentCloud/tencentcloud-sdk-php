@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespaceId(string $NamespaceId) 设置命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSubscriptionExpirationTime() 获取离线订阅过期自动清理时间
+ * @method void setSubscriptionExpirationTime(integer $SubscriptionExpirationTime) 设置离线订阅过期自动清理时间
+ * @method boolean getSubscriptionExpirationTimeEnable() 获取离线订阅过期自动清理时间开关
+ * @method void setSubscriptionExpirationTimeEnable(boolean $SubscriptionExpirationTimeEnable) 设置离线订阅过期自动清理时间开关
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -60,6 +64,16 @@ class ModifyEnvironmentAttributesResponse extends AbstractModel
     public $NamespaceId;
 
     /**
+     * @var integer 离线订阅过期自动清理时间
+     */
+    public $SubscriptionExpirationTime;
+
+    /**
+     * @var boolean 离线订阅过期自动清理时间开关
+     */
+    public $SubscriptionExpirationTimeEnable;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -71,6 +85,8 @@ class ModifyEnvironmentAttributesResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NamespaceId 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SubscriptionExpirationTime 离线订阅过期自动清理时间
+     * @param boolean $SubscriptionExpirationTimeEnable 离线订阅过期自动清理时间开关
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -100,6 +116,14 @@ class ModifyEnvironmentAttributesResponse extends AbstractModel
 
         if (array_key_exists("NamespaceId",$param) and $param["NamespaceId"] !== null) {
             $this->NamespaceId = $param["NamespaceId"];
+        }
+
+        if (array_key_exists("SubscriptionExpirationTime",$param) and $param["SubscriptionExpirationTime"] !== null) {
+            $this->SubscriptionExpirationTime = $param["SubscriptionExpirationTime"];
+        }
+
+        if (array_key_exists("SubscriptionExpirationTimeEnable",$param) and $param["SubscriptionExpirationTimeEnable"] !== null) {
+            $this->SubscriptionExpirationTimeEnable = $param["SubscriptionExpirationTimeEnable"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

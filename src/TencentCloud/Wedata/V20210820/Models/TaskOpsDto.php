@@ -390,6 +390,18 @@ no：任务无需满足自依赖
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOwnerId(string $OwnerId) 设置负责人Id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getPrivileges() 获取当前用户对该任务的权限列表， 当前支持
+CAN_MANAGE : 有权限管理操作
+ * @method void setPrivileges(array $Privileges) 设置当前用户对该任务的权限列表， 当前支持
+CAN_MANAGE : 有权限管理操作
+ * @method string getBundleId() 获取bundle客户端唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBundleId(string $BundleId) 设置bundle客户端唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBundleInfo() 获取bundle客户端信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBundleInfo(string $BundleInfo) 设置bundle客户端信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskOpsDto extends AbstractModel
 {
@@ -947,6 +959,24 @@ no：任务无需满足自依赖
     public $OwnerId;
 
     /**
+     * @var array 当前用户对该任务的权限列表， 当前支持
+CAN_MANAGE : 有权限管理操作
+     */
+    public $Privileges;
+
+    /**
+     * @var string bundle客户端唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BundleId;
+
+    /**
+     * @var string bundle客户端信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BundleInfo;
+
+    /**
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VirtualTaskId 虚拟任务id
@@ -1131,6 +1161,12 @@ no：任务无需满足自依赖
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AllowRedoType 允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
      * @param string $OwnerId 负责人Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Privileges 当前用户对该任务的权限列表， 当前支持
+CAN_MANAGE : 有权限管理操作
+     * @param string $BundleId bundle客户端唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BundleInfo bundle客户端信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1528,6 +1564,18 @@ no：任务无需满足自依赖
 
         if (array_key_exists("OwnerId",$param) and $param["OwnerId"] !== null) {
             $this->OwnerId = $param["OwnerId"];
+        }
+
+        if (array_key_exists("Privileges",$param) and $param["Privileges"] !== null) {
+            $this->Privileges = $param["Privileges"];
+        }
+
+        if (array_key_exists("BundleId",$param) and $param["BundleId"] !== null) {
+            $this->BundleId = $param["BundleId"];
+        }
+
+        if (array_key_exists("BundleInfo",$param) and $param["BundleInfo"] !== null) {
+            $this->BundleInfo = $param["BundleInfo"];
         }
     }
 }

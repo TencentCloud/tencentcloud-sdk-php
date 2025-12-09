@@ -52,6 +52,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskTypeDesc(string $TaskTypeDesc) 设置任务类型描述
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getPrivileges() 获取当前用户对该资源的权限列表
+CAN_MANAGE 有修改操作权限
+NO_PERMISSION 无权限
+ * @method void setPrivileges(array $Privileges) 设置当前用户对该资源的权限列表
+CAN_MANAGE 有修改操作权限
+NO_PERMISSION 无权限
  */
 class SuccessorTaskInfo extends AbstractModel
 {
@@ -124,6 +130,13 @@ class SuccessorTaskInfo extends AbstractModel
     public $TaskTypeDesc;
 
     /**
+     * @var array 当前用户对该资源的权限列表
+CAN_MANAGE 有修改操作权限
+NO_PERMISSION 无权限
+     */
+    public $Privileges;
+
+    /**
      * @param string $TaskId 任务id
      * @param string $WorkflowId 所属工作流id
      * @param string $TaskName 任务名
@@ -140,6 +153,9 @@ class SuccessorTaskInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskTypeDesc 任务类型描述
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Privileges 当前用户对该资源的权限列表
+CAN_MANAGE 有修改操作权限
+NO_PERMISSION 无权限
      */
     function __construct()
     {
@@ -204,6 +220,10 @@ class SuccessorTaskInfo extends AbstractModel
 
         if (array_key_exists("TaskTypeDesc",$param) and $param["TaskTypeDesc"] !== null) {
             $this->TaskTypeDesc = $param["TaskTypeDesc"];
+        }
+
+        if (array_key_exists("Privileges",$param) and $param["Privileges"] !== null) {
+            $this->Privileges = $param["Privileges"];
         }
     }
 }

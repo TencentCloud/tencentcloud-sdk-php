@@ -35,7 +35,9 @@ use TencentCloud\Common\AbstractModel;
  * @method CosPathInfo getCosPathInfo() 获取cos路径信息
  * @method void setCosPathInfo(CosPathInfo $CosPathInfo) 设置cos路径信息
  * @method GooseFSx getGooseFSx() 获取GooseFSx的配置，ModelSource为GooseFSx时有效
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGooseFSx(GooseFSx $GooseFSx) 设置GooseFSx的配置，ModelSource为GooseFSx时有效
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAlgorithmFramework() 获取模型对应的算法框架，预留
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlgorithmFramework(string $AlgorithmFramework) 设置模型对应的算法框架，预留
@@ -92,6 +94,7 @@ class ModelInfo extends AbstractModel
 
     /**
      * @var GooseFSx GooseFSx的配置，ModelSource为GooseFSx时有效
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GooseFSx;
 
@@ -138,6 +141,7 @@ class ModelInfo extends AbstractModel
      * @param string $ModelSource 模型来源
      * @param CosPathInfo $CosPathInfo cos路径信息
      * @param GooseFSx $GooseFSx GooseFSx的配置，ModelSource为GooseFSx时有效
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AlgorithmFramework 模型对应的算法框架，预留
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModelType 默认为 NORMAL, 已加速模型: ACCELERATE, 自动学习模型 AUTO_ML

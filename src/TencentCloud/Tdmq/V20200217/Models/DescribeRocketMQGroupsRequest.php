@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getNamespaceId() 获取命名空间
- * @method void setNamespaceId(string $NamespaceId) 设置命名空间
+ * @method string getNamespaceId() 获取消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
+ * @method void setNamespaceId(string $NamespaceId) 设置消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取限制条数
@@ -51,7 +51,7 @@ class DescribeRocketMQGroupsRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 命名空间
+     * @var string 消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public $NamespaceId;
 
@@ -102,7 +102,7 @@ class DescribeRocketMQGroupsRequest extends AbstractModel
 
     /**
      * @param string $ClusterId 集群ID
-     * @param string $NamespaceId 命名空间
+     * @param string $NamespaceId 消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      * @param integer $Offset 偏移量
      * @param integer $Limit 限制条数
      * @param string $FilterTopic 主题名称，输入此参数可查询该主题下所有的订阅组

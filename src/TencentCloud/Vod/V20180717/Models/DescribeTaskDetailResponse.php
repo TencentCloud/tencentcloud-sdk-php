@@ -128,6 +128,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method ProcessMediaByMPS getProcessMediaByMPSTask() 获取MPS 视频处理任务信息，仅当 TaskType 为 ProcessMediaByMPS，该字段有值。
  * @method void setProcessMediaByMPSTask(ProcessMediaByMPS $ProcessMediaByMPSTask) 设置MPS 视频处理任务信息，仅当 TaskType 为 ProcessMediaByMPS，该字段有值。
+ * @method AigcImageTask getAigcImageTask() 获取AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。
+ * @method void setAigcImageTask(AigcImageTask $AigcImageTask) 设置AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。
+ * @method AigcVideoTask getAigcVideoTask() 获取AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。
+ * @method void setAigcVideoTask(AigcVideoTask $AigcVideoTask) 设置AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -300,6 +304,16 @@ class DescribeTaskDetailResponse extends AbstractModel
     public $ProcessMediaByMPSTask;
 
     /**
+     * @var AigcImageTask AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。
+     */
+    public $AigcImageTask;
+
+    /**
+     * @var AigcVideoTask AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。
+     */
+    public $AigcVideoTask;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -359,6 +373,8 @@ class DescribeTaskDetailResponse extends AbstractModel
      * @param ComplexAdaptiveDynamicStreamingTask $ComplexAdaptiveDynamicStreamingTask 复杂自适应码流任务信息，仅当 TaskType 为 ComplexAdaptiveDynamicStreaming，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcessMediaByMPS $ProcessMediaByMPSTask MPS 视频处理任务信息，仅当 TaskType 为 ProcessMediaByMPS，该字段有值。
+     * @param AigcImageTask $AigcImageTask AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。
+     * @param AigcVideoTask $AigcVideoTask AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -507,6 +523,16 @@ class DescribeTaskDetailResponse extends AbstractModel
         if (array_key_exists("ProcessMediaByMPSTask",$param) and $param["ProcessMediaByMPSTask"] !== null) {
             $this->ProcessMediaByMPSTask = new ProcessMediaByMPS();
             $this->ProcessMediaByMPSTask->deserialize($param["ProcessMediaByMPSTask"]);
+        }
+
+        if (array_key_exists("AigcImageTask",$param) and $param["AigcImageTask"] !== null) {
+            $this->AigcImageTask = new AigcImageTask();
+            $this->AigcImageTask->deserialize($param["AigcImageTask"]);
+        }
+
+        if (array_key_exists("AigcVideoTask",$param) and $param["AigcVideoTask"] !== null) {
+            $this->AigcVideoTask = new AigcVideoTask();
+            $this->AigcVideoTask->deserialize($param["AigcVideoTask"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置主题类型，可选值为Normal, GlobalOrder, PartitionedOrder, Transaction, DelayScheduled。Transaction仅在专享版支持。
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getNamespace() 获取命名空间
- * @method void setNamespace(string $Namespace) 设置命名空间
+ * @method string getNamespace() 获取主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
+ * @method void setNamespace(string $Namespace) 设置主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
  * @method integer getPartitionNum() 获取分区数，全局顺序无效
@@ -53,7 +53,7 @@ class CreateRocketMQTopicV2Request extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 命名空间
+     * @var string 主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public $Namespace;
 
@@ -76,7 +76,7 @@ class CreateRocketMQTopicV2Request extends AbstractModel
      * @param string $Topic 主题名称
      * @param string $Type 主题类型，可选值为Normal, GlobalOrder, PartitionedOrder, Transaction, DelayScheduled。Transaction仅在专享版支持。
      * @param string $ClusterId 集群ID
-     * @param string $Namespace 命名空间
+     * @param string $Namespace 主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      * @param string $Remark 备注
      * @param integer $PartitionNum 分区数，全局顺序无效
      * @param array $TagList 标签列表

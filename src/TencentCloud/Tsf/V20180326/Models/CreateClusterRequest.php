@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProgramId(string $ProgramId) 设置需要绑定的数据集ID
  * @method string getKuberneteApiServer() 获取api地址
  * @method void setKuberneteApiServer(string $KuberneteApiServer) 设置api地址
- * @method string getKuberneteNativeType() 获取K : kubeconfig, S : service account
- * @method void setKuberneteNativeType(string $KuberneteNativeType) 设置K : kubeconfig, S : service account
+ * @method string getKuberneteNativeType() 获取K : kubeconfig, S : service account (公有云不支持通过kubeconfig和service account的方式创建集群)
+ * @method void setKuberneteNativeType(string $KuberneteNativeType) 设置K : kubeconfig, S : service account (公有云不支持通过kubeconfig和service account的方式创建集群)
  * @method string getKuberneteNativeSecret() 获取Kubernetes 原生 Secret 资源对象
  * @method void setKuberneteNativeSecret(string $KuberneteNativeSecret) 设置Kubernetes 原生 Secret 资源对象
  * @method array getProgramIdList() 获取需要绑定的数据集ID。该参数可以通过调用 [DescribePrograms](https://cloud.tencent.com/document/product/649/73477) 的返回值中的 ProgramId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/privilege?tab=program&roleId=role-yrle4doy)查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
@@ -132,7 +132,7 @@ class CreateClusterRequest extends AbstractModel
     public $KuberneteApiServer;
 
     /**
-     * @var string K : kubeconfig, S : service account
+     * @var string K : kubeconfig, S : service account (公有云不支持通过kubeconfig和service account的方式创建集群)
      */
     public $KuberneteNativeType;
 
@@ -168,7 +168,7 @@ class CreateClusterRequest extends AbstractModel
      * @param integer $MaxClusterServiceNum 集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。
      * @param string $ProgramId 需要绑定的数据集ID
      * @param string $KuberneteApiServer api地址
-     * @param string $KuberneteNativeType K : kubeconfig, S : service account
+     * @param string $KuberneteNativeType K : kubeconfig, S : service account (公有云不支持通过kubeconfig和service account的方式创建集群)
      * @param string $KuberneteNativeSecret Kubernetes 原生 Secret 资源对象
      * @param array $ProgramIdList 需要绑定的数据集ID。该参数可以通过调用 [DescribePrograms](https://cloud.tencent.com/document/product/649/73477) 的返回值中的 ProgramId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/privilege?tab=program&roleId=role-yrle4doy)查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
      * @param boolean $EnableLogCollection 是否开启cls日志功能

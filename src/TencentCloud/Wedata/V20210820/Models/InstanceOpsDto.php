@@ -282,6 +282,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceCycleType(string $InstanceCycleType) 设置实例生命周期
  * @method string getInstanceSchedulerDesc() 获取实例执行计划描述
  * @method void setInstanceSchedulerDesc(string $InstanceSchedulerDesc) 设置实例执行计划描述
+ * @method array getPrivileges() 获取当前用户对该实例的权限列表
+ * @method void setPrivileges(array $Privileges) 设置当前用户对该实例的权限列表
  */
 class InstanceOpsDto extends AbstractModel
 {
@@ -685,6 +687,11 @@ class InstanceOpsDto extends AbstractModel
     public $InstanceSchedulerDesc;
 
     /**
+     * @var array 当前用户对该实例的权限列表
+     */
+    public $Privileges;
+
+    /**
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName 任务名称
@@ -816,6 +823,7 @@ class InstanceOpsDto extends AbstractModel
      * @param string $AllowRedoType 允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
      * @param string $InstanceCycleType 实例生命周期
      * @param string $InstanceSchedulerDesc 实例执行计划描述
+     * @param array $Privileges 当前用户对该实例的权限列表
      */
     function __construct()
     {
@@ -1108,6 +1116,10 @@ class InstanceOpsDto extends AbstractModel
 
         if (array_key_exists("InstanceSchedulerDesc",$param) and $param["InstanceSchedulerDesc"] !== null) {
             $this->InstanceSchedulerDesc = $param["InstanceSchedulerDesc"];
+        }
+
+        if (array_key_exists("Privileges",$param) and $param["Privileges"] !== null) {
+            $this->Privileges = $param["Privileges"];
         }
     }
 }

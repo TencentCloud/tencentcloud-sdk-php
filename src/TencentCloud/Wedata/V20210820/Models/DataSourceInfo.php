@@ -186,6 +186,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatasourceType(string $DatasourceType) 设置数据源类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getTcCatalogOpen() 获取是否开通tccatalog,默认没有开启
+ * @method void setTcCatalogOpen(boolean $TcCatalogOpen) 设置是否开通tccatalog,默认没有开启
  */
 class DataSourceInfo extends AbstractModel
 {
@@ -441,6 +443,11 @@ class DataSourceInfo extends AbstractModel
     public $DatasourceType;
 
     /**
+     * @var boolean 是否开通tccatalog,默认没有开启
+     */
+    public $TcCatalogOpen;
+
+    /**
      * @param string $DatabaseName 若数据源列表为绑定数据库，则为db名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 数据源描述信息
@@ -524,6 +531,7 @@ class DataSourceInfo extends AbstractModel
      * @param boolean $ForbidProbe 禁止数据探查
      * @param string $DatasourceType 数据源类型
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $TcCatalogOpen 是否开通tccatalog,默认没有开启
      */
     function __construct()
     {
@@ -710,6 +718,10 @@ class DataSourceInfo extends AbstractModel
 
         if (array_key_exists("DatasourceType",$param) and $param["DatasourceType"] !== null) {
             $this->DatasourceType = $param["DatasourceType"];
+        }
+
+        if (array_key_exists("TcCatalogOpen",$param) and $param["TcCatalogOpen"] !== null) {
+            $this->TcCatalogOpen = $param["TcCatalogOpen"];
         }
     }
 }

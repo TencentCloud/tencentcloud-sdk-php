@@ -43,8 +43,8 @@ use TencentCloud\Common\AbstractModel;
 <li>PersistenceComplete：剪辑固化完成；</li>
 <li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
 <li>ProcessMediaByMPSComplete：MPS视频处理完成。</li>
-<li>AigcImageComplete：AIGC 生图任务完成。</li>
-<li>AigcVideoComplete：AIGC 生视频任务完成。</li>
+<li>AigcImageTaskComplete：AIGC 生图任务完成。</li>
+<li>AigcVideoTaskComplete：AIGC 生视频任务完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -72,8 +72,8 @@ use TencentCloud\Common\AbstractModel;
 <li>PersistenceComplete：剪辑固化完成；</li>
 <li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
 <li>ProcessMediaByMPSComplete：MPS视频处理完成。</li>
-<li>AigcImageComplete：AIGC 生图任务完成。</li>
-<li>AigcVideoComplete：AIGC 生视频任务完成。</li>
+<li>AigcImageTaskComplete：AIGC 生图任务完成。</li>
+<li>AigcVideoTaskComplete：AIGC 生视频任务完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -190,6 +190,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method ProcessMediaByMPS getProcessMediaByMPSCompleteEvent() 获取MPS 视频处理任务信息，仅当 EventType 为 ProcessMediaByMPSComplete 时有效。
  * @method void setProcessMediaByMPSCompleteEvent(ProcessMediaByMPS $ProcessMediaByMPSCompleteEvent) 设置MPS 视频处理任务信息，仅当 EventType 为 ProcessMediaByMPSComplete 时有效。
+ * @method AigcImageTask getAigcImageCompleteEvent() 获取AIGC 生图任务信息，仅当 EventType 为 AigcImageTaskComplete 时有效。
+ * @method void setAigcImageCompleteEvent(AigcImageTask $AigcImageCompleteEvent) 设置AIGC 生图任务信息，仅当 EventType 为 AigcImageTaskComplete 时有效。
+ * @method AigcVideoTask getAigcVideoCompleteEvent() 获取AIGC 生视频任务信息，仅当 EventType 为 AigcVideoTaskComplete 时有效。
+ * @method void setAigcVideoCompleteEvent(AigcVideoTask $AigcVideoCompleteEvent) 设置AIGC 生视频任务信息，仅当 EventType 为 AigcVideoTaskComplete 时有效。
  */
 class EventContent extends AbstractModel
 {
@@ -220,8 +224,8 @@ class EventContent extends AbstractModel
 <li>PersistenceComplete：剪辑固化完成；</li>
 <li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
 <li>ProcessMediaByMPSComplete：MPS视频处理完成。</li>
-<li>AigcImageComplete：AIGC 生图任务完成。</li>
-<li>AigcVideoComplete：AIGC 生视频任务完成。</li>
+<li>AigcImageTaskComplete：AIGC 生图任务完成。</li>
+<li>AigcVideoTaskComplete：AIGC 生视频任务完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -399,6 +403,16 @@ class EventContent extends AbstractModel
     public $ProcessMediaByMPSCompleteEvent;
 
     /**
+     * @var AigcImageTask AIGC 生图任务信息，仅当 EventType 为 AigcImageTaskComplete 时有效。
+     */
+    public $AigcImageCompleteEvent;
+
+    /**
+     * @var AigcVideoTask AIGC 生视频任务信息，仅当 EventType 为 AigcVideoTaskComplete 时有效。
+     */
+    public $AigcVideoCompleteEvent;
+
+    /**
      * @param string $EventHandle 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
      * @param string $EventType <b>支持事件类型：</b>
 <li>NewFileUpload：视频上传完成；</li>
@@ -421,8 +435,8 @@ class EventContent extends AbstractModel
 <li>PersistenceComplete：剪辑固化完成；</li>
 <li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
 <li>ProcessMediaByMPSComplete：MPS视频处理完成。</li>
-<li>AigcImageComplete：AIGC 生图任务完成。</li>
-<li>AigcVideoComplete：AIGC 生视频任务完成。</li>
+<li>AigcImageTaskComplete：AIGC 生图任务完成。</li>
+<li>AigcVideoTaskComplete：AIGC 生视频任务完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -484,6 +498,8 @@ class EventContent extends AbstractModel
      * @param ComplexAdaptiveDynamicStreamingTask $ComplexAdaptiveDynamicStreamingCompleteEvent 自适应码流任务信息，仅当 EventType 为ComplexAdaptiveDynamicStreamingComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcessMediaByMPS $ProcessMediaByMPSCompleteEvent MPS 视频处理任务信息，仅当 EventType 为 ProcessMediaByMPSComplete 时有效。
+     * @param AigcImageTask $AigcImageCompleteEvent AIGC 生图任务信息，仅当 EventType 为 AigcImageTaskComplete 时有效。
+     * @param AigcVideoTask $AigcVideoCompleteEvent AIGC 生视频任务信息，仅当 EventType 为 AigcVideoTaskComplete 时有效。
      */
     function __construct()
     {
@@ -644,6 +660,16 @@ class EventContent extends AbstractModel
         if (array_key_exists("ProcessMediaByMPSCompleteEvent",$param) and $param["ProcessMediaByMPSCompleteEvent"] !== null) {
             $this->ProcessMediaByMPSCompleteEvent = new ProcessMediaByMPS();
             $this->ProcessMediaByMPSCompleteEvent->deserialize($param["ProcessMediaByMPSCompleteEvent"]);
+        }
+
+        if (array_key_exists("AigcImageCompleteEvent",$param) and $param["AigcImageCompleteEvent"] !== null) {
+            $this->AigcImageCompleteEvent = new AigcImageTask();
+            $this->AigcImageCompleteEvent->deserialize($param["AigcImageCompleteEvent"]);
+        }
+
+        if (array_key_exists("AigcVideoCompleteEvent",$param) and $param["AigcVideoCompleteEvent"] !== null) {
+            $this->AigcVideoCompleteEvent = new AigcVideoTask();
+            $this->AigcVideoCompleteEvent->deserialize($param["AigcVideoCompleteEvent"]);
         }
     }
 }

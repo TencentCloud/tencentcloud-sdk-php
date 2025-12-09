@@ -43,21 +43,19 @@ creating：创建中
 running：运行中
 isolating：隔离中
 isolated：已隔离
-activating：解隔离中
+activating：恢复中
 offlining：下线中
 offlined：已下线
-deleting：删除中
-deleted：已删除
+
  * @method void setStatus(string $Status) 设置实例状态
 creating：创建中
 running：运行中
 isolating：隔离中
 isolated：已隔离
-activating：解隔离中
+activating：恢复中
 offlining：下线中
 offlined：已下线
-deleting：删除中
-deleted：已删除
+
  * @method string getStatusDesc() 获取实例状态中文描述
  * @method void setStatusDesc(string $StatusDesc) 设置实例状态中文描述
  * @method string getServerlessStatus() 获取serverless实例状态, 可能值：
@@ -166,11 +164,10 @@ creating：创建中
 running：运行中
 isolating：隔离中
 isolated：已隔离
-activating：解隔离中
+activating：恢复中
 offlining：下线中
 offlined：已下线
-deleting：删除中
-deleted：已删除
+
      */
     public $Status;
 
@@ -316,11 +313,10 @@ creating：创建中
 running：运行中
 isolating：隔离中
 isolated：已隔离
-activating：解隔离中
+activating：恢复中
 offlining：下线中
 offlined：已下线
-deleting：删除中
-deleted：已删除
+
      * @param string $StatusDesc 实例状态中文描述
      * @param string $ServerlessStatus serverless实例状态, 可能值：
 resume

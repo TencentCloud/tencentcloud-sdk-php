@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群 ID
  * @method void setClusterId(string $ClusterId) 设置集群 ID
- * @method string getEnvironmentId() 获取命名空间
- * @method void setEnvironmentId(string $EnvironmentId) 设置命名空间
+ * @method string getEnvironmentId() 获取命名空间，4.x 通用集群命名空间固定为: tdmq_default
+ * @method void setEnvironmentId(string $EnvironmentId) 设置命名空间，4.x 通用集群命名空间固定为: tdmq_default
  * @method string getTopicName() 获取主题名称，查询死信时为groupId
  * @method void setTopicName(string $TopicName) 设置主题名称，查询死信时为groupId
  * @method string getStartTime() 获取开始时间
@@ -57,7 +57,7 @@ class DescribeRocketMQTopicMsgsRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 命名空间
+     * @var string 命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public $EnvironmentId;
 
@@ -124,7 +124,7 @@ class DescribeRocketMQTopicMsgsRequest extends AbstractModel
 
     /**
      * @param string $ClusterId 集群 ID
-     * @param string $EnvironmentId 命名空间
+     * @param string $EnvironmentId 命名空间，4.x 通用集群命名空间固定为: tdmq_default
      * @param string $TopicName 主题名称，查询死信时为groupId
      * @param string $StartTime 开始时间
      * @param string $EndTime 结束时间

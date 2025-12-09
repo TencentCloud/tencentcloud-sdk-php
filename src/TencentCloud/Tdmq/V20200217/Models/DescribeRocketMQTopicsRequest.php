@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置查询限制数
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getNamespaceId() 获取命名空间
- * @method void setNamespaceId(string $NamespaceId) 设置命名空间
+ * @method string getNamespaceId() 获取主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
+ * @method void setNamespaceId(string $NamespaceId) 设置主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
  * @method array getFilterType() 获取按主题类型过滤查询结果，可选择Normal, GlobalOrder, PartitionedOrder, Transaction
  * @method void setFilterType(array $FilterType) 设置按主题类型过滤查询结果，可选择Normal, GlobalOrder, PartitionedOrder, Transaction
  * @method string getFilterName() 获取按主题名称搜索，支持模糊查询
@@ -55,7 +55,7 @@ class DescribeRocketMQTopicsRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 命名空间
+     * @var string 主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public $NamespaceId;
 
@@ -83,7 +83,7 @@ class DescribeRocketMQTopicsRequest extends AbstractModel
      * @param integer $Offset 查询偏移量
      * @param integer $Limit 查询限制数
      * @param string $ClusterId 集群ID
-     * @param string $NamespaceId 命名空间
+     * @param string $NamespaceId 主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      * @param array $FilterType 按主题类型过滤查询结果，可选择Normal, GlobalOrder, PartitionedOrder, Transaction
      * @param string $FilterName 按主题名称搜索，支持模糊查询
      * @param string $FilterGroup 按订阅消费组名称过滤

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群id
  * @method void setClusterId(string $ClusterId) 设置集群id
- * @method string getEnvironmentId() 获取命名空间
- * @method void setEnvironmentId(string $EnvironmentId) 设置命名空间
+ * @method string getEnvironmentId() 获取命名空间，4.x 通用集群命名空间固定为: tdmq_default
+ * @method void setEnvironmentId(string $EnvironmentId) 设置命名空间，4.x 通用集群命名空间固定为: tdmq_default
  * @method string getTopicName() 获取主题，rocketmq查询死信时值为groupId
  * @method void setTopicName(string $TopicName) 设置主题，rocketmq查询死信时值为groupId
  * @method string getMsgId() 获取消息id
@@ -43,7 +43,7 @@ class DescribeRocketMQMsgTraceRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 命名空间
+     * @var string 命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public $EnvironmentId;
 
@@ -75,7 +75,7 @@ class DescribeRocketMQMsgTraceRequest extends AbstractModel
 
     /**
      * @param string $ClusterId 集群id
-     * @param string $EnvironmentId 命名空间
+     * @param string $EnvironmentId 命名空间，4.x 通用集群命名空间固定为: tdmq_default
      * @param string $TopicName 主题，rocketmq查询死信时值为groupId
      * @param string $MsgId 消息id
      * @param string $GroupName 消费组、订阅

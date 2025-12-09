@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeUnit(string $TimeUnit) 设置周期类型为天和小时为HOURS ，周期类型为分钟 ：MINUTES,周期类型为秒：SECONDS
  * @method string getOwner() 获取事件所属人
  * @method void setOwner(string $Owner) 设置事件所属人
- * @method string getEventType() 获取必填，事件类型，默认值：TIME_SERIES
- * @method void setEventType(string $EventType) 设置必填，事件类型，默认值：TIME_SERIES
- * @method string getDimensionFormat() 获取必填，对应day： yyyyMMdd，对应HOUR：yyyyMMddHH，对应MIN：yyyyMMddHHmm，对应SECOND：yyyyMMddHHmmss，默认值：yyyyMMdd
- * @method void setDimensionFormat(string $DimensionFormat) 设置必填，对应day： yyyyMMdd，对应HOUR：yyyyMMddHH，对应MIN：yyyyMMddHHmm，对应SECOND：yyyyMMddHHmmss，默认值：yyyyMMdd
+ * @method string getEventType() 获取事件类型，不填会使用默认值 TIME_SERIES 填充
+ * @method void setEventType(string $EventType) 设置事件类型，不填会使用默认值 TIME_SERIES 填充
+ * @method string getDimensionFormat() 获取对应day： yyyyMMdd，对应HOUR：yyyyMMddHH，对应MIN：yyyyMMddHHmm，对应SECOND：yyyyMMddHHmmss，默认值：yyyyMMdd
+ * @method void setDimensionFormat(string $DimensionFormat) 设置对应day： yyyyMMdd，对应HOUR：yyyyMMddHH，对应MIN：yyyyMMddHHmm，对应SECOND：yyyyMMddHHmmss，默认值：yyyyMMdd
  * @method integer getTimeToLive() 获取存活时间
  * @method void setTimeToLive(integer $TimeToLive) 设置存活时间
  * @method string getDescription() 获取事件描述
@@ -74,12 +74,12 @@ class RegisterEventRequest extends AbstractModel
     public $Owner;
 
     /**
-     * @var string 必填，事件类型，默认值：TIME_SERIES
+     * @var string 事件类型，不填会使用默认值 TIME_SERIES 填充
      */
     public $EventType;
 
     /**
-     * @var string 必填，对应day： yyyyMMdd，对应HOUR：yyyyMMddHH，对应MIN：yyyyMMddHHmm，对应SECOND：yyyyMMddHHmmss，默认值：yyyyMMdd
+     * @var string 对应day： yyyyMMdd，对应HOUR：yyyyMMddHH，对应MIN：yyyyMMddHHmm，对应SECOND：yyyyMMddHHmmss，默认值：yyyyMMdd
      */
     public $DimensionFormat;
 
@@ -100,8 +100,8 @@ class RegisterEventRequest extends AbstractModel
      * @param string $EventBroadcastType 广播：BROADCAST,单播：SINGLE
      * @param string $TimeUnit 周期类型为天和小时为HOURS ，周期类型为分钟 ：MINUTES,周期类型为秒：SECONDS
      * @param string $Owner 事件所属人
-     * @param string $EventType 必填，事件类型，默认值：TIME_SERIES
-     * @param string $DimensionFormat 必填，对应day： yyyyMMdd，对应HOUR：yyyyMMddHH，对应MIN：yyyyMMddHHmm，对应SECOND：yyyyMMddHHmmss，默认值：yyyyMMdd
+     * @param string $EventType 事件类型，不填会使用默认值 TIME_SERIES 填充
+     * @param string $DimensionFormat 对应day： yyyyMMdd，对应HOUR：yyyyMMddHH，对应MIN：yyyyMMddHHmm，对应SECOND：yyyyMMddHHmmss，默认值：yyyyMMdd
      * @param integer $TimeToLive 存活时间
      * @param string $Description 事件描述
      */

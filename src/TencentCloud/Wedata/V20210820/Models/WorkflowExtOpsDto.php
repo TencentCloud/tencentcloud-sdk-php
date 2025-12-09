@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkflowType(string $WorkflowType) 设置工作流类型，周期cycle，手动manual
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBundleId() 获取bundle客户端绑定唯一id
+ * @method void setBundleId(string $BundleId) 设置bundle客户端绑定唯一id
+ * @method string getBundleInfo() 获取bundle客户端扩展信息，json格式
+ * @method void setBundleInfo(string $BundleInfo) 设置bundle客户端扩展信息，json格式
  */
 class WorkflowExtOpsDto extends AbstractModel
 {
@@ -184,6 +188,16 @@ class WorkflowExtOpsDto extends AbstractModel
     public $WorkflowType;
 
     /**
+     * @var string bundle客户端绑定唯一id
+     */
+    public $BundleId;
+
+    /**
+     * @var string bundle客户端扩展信息，json格式
+     */
+    public $BundleInfo;
+
+    /**
      * @param integer $TaskCount 任务数量count
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FolderName 文件名
@@ -216,6 +230,8 @@ class WorkflowExtOpsDto extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkflowType 工作流类型，周期cycle，手动manual
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BundleId bundle客户端绑定唯一id
+     * @param string $BundleInfo bundle客户端扩展信息，json格式
      */
     function __construct()
     {
@@ -292,6 +308,14 @@ class WorkflowExtOpsDto extends AbstractModel
 
         if (array_key_exists("WorkflowType",$param) and $param["WorkflowType"] !== null) {
             $this->WorkflowType = $param["WorkflowType"];
+        }
+
+        if (array_key_exists("BundleId",$param) and $param["BundleId"] !== null) {
+            $this->BundleId = $param["BundleId"];
+        }
+
+        if (array_key_exists("BundleInfo",$param) and $param["BundleInfo"] !== null) {
+            $this->BundleInfo = $param["BundleInfo"];
         }
     }
 }

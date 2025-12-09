@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getNamespaceId() 获取命名空间名称
- * @method void setNamespaceId(string $NamespaceId) 设置命名空间名称
+ * @method string getNamespaceId() 获取主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
+ * @method void setNamespaceId(string $NamespaceId) 设置主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
  * @method string getTopic() 获取主题名称
  * @method void setTopic(string $Topic) 设置主题名称
  * @method string getRemark() 获取说明信息，最大128个字符
@@ -39,7 +39,7 @@ class ModifyRocketMQTopicRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 命名空间名称
+     * @var string 主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public $NamespaceId;
 
@@ -60,7 +60,7 @@ class ModifyRocketMQTopicRequest extends AbstractModel
 
     /**
      * @param string $ClusterId 集群ID
-     * @param string $NamespaceId 命名空间名称
+     * @param string $NamespaceId 主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      * @param string $Topic 主题名称
      * @param string $Remark 说明信息，最大128个字符
      * @param integer $PartitionNum 分区数，全局类型无效，不可小于当前分区数

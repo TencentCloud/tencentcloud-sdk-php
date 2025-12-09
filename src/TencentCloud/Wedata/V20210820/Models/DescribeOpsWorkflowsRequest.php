@@ -54,6 +54,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyWord(string $KeyWord) 设置工作流过滤keyword，支持工作流 id/name 模糊匹配， 多个用|分割
  * @method string getScheduleTimeZone() 获取**时区** timeZone, 默认UTC+8
  * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置**时区** timeZone, 默认UTC+8
+ * @method boolean getCheckPrivilege() 获取是否过滤无权限的工作流
+true: 过滤无权限的仅返回有权限的工作流列表(默认)
+false： 返回所有的工作流列表
+ * @method void setCheckPrivilege(boolean $CheckPrivilege) 设置是否过滤无权限的工作流
+true: 过滤无权限的仅返回有权限的工作流列表(默认)
+false： 返回所有的工作流列表
  */
 class DescribeOpsWorkflowsRequest extends AbstractModel
 {
@@ -143,6 +149,13 @@ class DescribeOpsWorkflowsRequest extends AbstractModel
     public $ScheduleTimeZone;
 
     /**
+     * @var boolean 是否过滤无权限的工作流
+true: 过滤无权限的仅返回有权限的工作流列表(默认)
+false： 返回所有的工作流列表
+     */
+    public $CheckPrivilege;
+
+    /**
      * @param string $ProjectId 项目id
      * @param string $ProductNameList 任务产品类型名称列表，以 ',' 号分割
      * @param string $FolderIdList 文件id列表，以 ',' 号分割
@@ -160,6 +173,9 @@ class DescribeOpsWorkflowsRequest extends AbstractModel
      * @param array $WorkflowTypeList 工作流类型列表 多个用英文逗号连接 cycle,manual. 默认只查询 cycle
      * @param string $KeyWord 工作流过滤keyword，支持工作流 id/name 模糊匹配， 多个用|分割
      * @param string $ScheduleTimeZone **时区** timeZone, 默认UTC+8
+     * @param boolean $CheckPrivilege 是否过滤无权限的工作流
+true: 过滤无权限的仅返回有权限的工作流列表(默认)
+false： 返回所有的工作流列表
      */
     function __construct()
     {
@@ -240,6 +256,10 @@ class DescribeOpsWorkflowsRequest extends AbstractModel
 
         if (array_key_exists("ScheduleTimeZone",$param) and $param["ScheduleTimeZone"] !== null) {
             $this->ScheduleTimeZone = $param["ScheduleTimeZone"];
+        }
+
+        if (array_key_exists("CheckPrivilege",$param) and $param["CheckPrivilege"] !== null) {
+            $this->CheckPrivilege = $param["CheckPrivilege"];
         }
     }
 }

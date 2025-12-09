@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopic() 获取主题名称，3-64个字符，只能包含字母、数字、“-”及“_”
  * @method void setTopic(string $Topic) 设置主题名称，3-64个字符，只能包含字母、数字、“-”及“_”
- * @method array getNamespaces() 获取主题所在的命名空间，目前支持在单个命名空间下创建主题
- * @method void setNamespaces(array $Namespaces) 设置主题所在的命名空间，目前支持在单个命名空间下创建主题
+ * @method array getNamespaces() 获取主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
+ * @method void setNamespaces(array $Namespaces) 设置主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
  * @method string getType() 获取主题类型，可选值为Normal, GlobalOrder, PartitionedOrder, Transaction, DelayScheduled。Transaction仅在专享版支持。
  * @method void setType(string $Type) 设置主题类型，可选值为Normal, GlobalOrder, PartitionedOrder, Transaction, DelayScheduled。Transaction仅在专享版支持。
  * @method string getClusterId() 获取集群ID
@@ -41,7 +41,7 @@ class CreateRocketMQTopicRequest extends AbstractModel
     public $Topic;
 
     /**
-     * @var array 主题所在的命名空间，目前支持在单个命名空间下创建主题
+     * @var array 主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public $Namespaces;
 
@@ -67,7 +67,7 @@ class CreateRocketMQTopicRequest extends AbstractModel
 
     /**
      * @param string $Topic 主题名称，3-64个字符，只能包含字母、数字、“-”及“_”
-     * @param array $Namespaces 主题所在的命名空间，目前支持在单个命名空间下创建主题
+     * @param array $Namespaces 主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      * @param string $Type 主题类型，可选值为Normal, GlobalOrder, PartitionedOrder, Transaction, DelayScheduled。Transaction仅在专享版支持。
      * @param string $ClusterId 集群ID
      * @param string $Remark 主题说明，最大128个字符

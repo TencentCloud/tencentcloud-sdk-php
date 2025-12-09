@@ -44,6 +44,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置时区
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getInChargeIdList() 获取负责人id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInChargeIdList(array $InChargeIdList) 设置负责人id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getInChargeNameList() 获取负责人name
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInChargeNameList(array $InChargeNameList) 设置负责人name
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProdSchedulerTask extends AbstractModel
 {
@@ -84,6 +92,18 @@ class ProdSchedulerTask extends AbstractModel
     public $ScheduleTimeZone;
 
     /**
+     * @var array 负责人id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InChargeIdList;
+
+    /**
+     * @var array 负责人name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InChargeNameList;
+
+    /**
      * @param string $WorkflowId 生产调度任务工作流ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskId 生产调度任务Id
@@ -95,6 +115,10 @@ class ProdSchedulerTask extends AbstractModel
      * @param string $TaskType 生产任务类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScheduleTimeZone 时区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $InChargeIdList 负责人id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $InChargeNameList 负责人name
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -132,6 +156,14 @@ class ProdSchedulerTask extends AbstractModel
 
         if (array_key_exists("ScheduleTimeZone",$param) and $param["ScheduleTimeZone"] !== null) {
             $this->ScheduleTimeZone = $param["ScheduleTimeZone"];
+        }
+
+        if (array_key_exists("InChargeIdList",$param) and $param["InChargeIdList"] !== null) {
+            $this->InChargeIdList = $param["InChargeIdList"];
+        }
+
+        if (array_key_exists("InChargeNameList",$param) and $param["InChargeNameList"] !== null) {
+            $this->InChargeNameList = $param["InChargeNameList"];
         }
     }
 }

@@ -76,6 +76,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpecification(string $Specification) 设置字段使用说明
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCategoryName() 获取目录名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCategoryName(string $CategoryName) 设置目录名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOriginType() 获取源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOriginType(string $OriginType) 设置源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method IndicatorBaseSimpleInfo getIndicatorBase() 获取列绑定的指标信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIndicatorBase(IndicatorBaseSimpleInfo $IndicatorBase) 设置列绑定的指标信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method AssetDim getAssetDim() 获取列绑定的维度信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAssetDim(AssetDim $AssetDim) 设置列绑定的维度信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ColumnMeta extends AbstractModel
 {
@@ -164,6 +180,30 @@ class ColumnMeta extends AbstractModel
     public $Specification;
 
     /**
+     * @var string 目录名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CategoryName;
+
+    /**
+     * @var string 源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OriginType;
+
+    /**
+     * @var IndicatorBaseSimpleInfo 列绑定的指标信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IndicatorBase;
+
+    /**
+     * @var AssetDim 列绑定的维度信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AssetDim;
+
+    /**
      * @param string $NameEn 字段英文名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NameCn 字段中文名称
@@ -191,6 +231,14 @@ class ColumnMeta extends AbstractModel
      * @param string $InfluxCategory influxdb字段类别
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Specification 字段使用说明
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CategoryName 目录名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OriginType 源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IndicatorBaseSimpleInfo $IndicatorBase 列绑定的指标信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssetDim $AssetDim 列绑定的维度信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -265,6 +313,24 @@ class ColumnMeta extends AbstractModel
 
         if (array_key_exists("Specification",$param) and $param["Specification"] !== null) {
             $this->Specification = $param["Specification"];
+        }
+
+        if (array_key_exists("CategoryName",$param) and $param["CategoryName"] !== null) {
+            $this->CategoryName = $param["CategoryName"];
+        }
+
+        if (array_key_exists("OriginType",$param) and $param["OriginType"] !== null) {
+            $this->OriginType = $param["OriginType"];
+        }
+
+        if (array_key_exists("IndicatorBase",$param) and $param["IndicatorBase"] !== null) {
+            $this->IndicatorBase = new IndicatorBaseSimpleInfo();
+            $this->IndicatorBase->deserialize($param["IndicatorBase"]);
+        }
+
+        if (array_key_exists("AssetDim",$param) and $param["AssetDim"] !== null) {
+            $this->AssetDim = new AssetDim();
+            $this->AssetDim->deserialize($param["AssetDim"]);
         }
     }
 }

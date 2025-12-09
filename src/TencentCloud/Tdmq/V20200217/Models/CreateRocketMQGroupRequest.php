@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGroupId() 获取Group名称，8~64个字符
  * @method void setGroupId(string $GroupId) 设置Group名称，8~64个字符
- * @method array getNamespaces() 获取命名空间，目前只支持单个命名空间
- * @method void setNamespaces(array $Namespaces) 设置命名空间，目前只支持单个命名空间
+ * @method array getNamespaces() 获取消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
+ * @method void setNamespaces(array $Namespaces) 设置消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
  * @method boolean getReadEnable() 获取是否开启消费
  * @method void setReadEnable(boolean $ReadEnable) 设置是否开启消费
  * @method boolean getBroadcastEnable() 获取是否开启广播消费
@@ -45,7 +45,7 @@ class CreateRocketMQGroupRequest extends AbstractModel
     public $GroupId;
 
     /**
-     * @var array 命名空间，目前只支持单个命名空间
+     * @var array 消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public $Namespaces;
 
@@ -81,7 +81,7 @@ class CreateRocketMQGroupRequest extends AbstractModel
 
     /**
      * @param string $GroupId Group名称，8~64个字符
-     * @param array $Namespaces 命名空间，目前只支持单个命名空间
+     * @param array $Namespaces 消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      * @param boolean $ReadEnable 是否开启消费
      * @param boolean $BroadcastEnable 是否开启广播消费
      * @param string $ClusterId 集群ID

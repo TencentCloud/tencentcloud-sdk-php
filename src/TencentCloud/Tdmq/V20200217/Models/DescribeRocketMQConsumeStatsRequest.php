@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取实例ID
  * @method void setClusterId(string $ClusterId) 设置实例ID
- * @method string getNamespaceId() 获取命名空间
- * @method void setNamespaceId(string $NamespaceId) 设置命名空间
+ * @method string getNamespaceId() 获取消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
+ * @method void setNamespaceId(string $NamespaceId) 设置消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
  * @method string getConsumerGroup() 获取消费组
  * @method void setConsumerGroup(string $ConsumerGroup) 设置消费组
  */
@@ -35,7 +35,7 @@ class DescribeRocketMQConsumeStatsRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 命名空间
+     * @var string 消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public $NamespaceId;
 
@@ -46,7 +46,7 @@ class DescribeRocketMQConsumeStatsRequest extends AbstractModel
 
     /**
      * @param string $ClusterId 实例ID
-     * @param string $NamespaceId 命名空间
+     * @param string $NamespaceId 消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      * @param string $ConsumerGroup 消费组
      */
     function __construct()

@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBizParams(string $BizParams) 设置配置信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getTcCatalogOpen() 获取是否支持tccatalog
+ * @method void setTcCatalogOpen(boolean $TcCatalogOpen) 设置是否支持tccatalog
  */
 class DataSourceEnvInfo extends AbstractModel
 {
@@ -104,6 +106,11 @@ class DataSourceEnvInfo extends AbstractModel
     public $BizParams;
 
     /**
+     * @var boolean 是否支持tccatalog
+     */
+    public $TcCatalogOpen;
+
+    /**
      * @param string $Env 环境
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataSourceType 数据源类型
@@ -120,6 +127,7 @@ class DataSourceEnvInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BizParams 配置信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $TcCatalogOpen 是否支持tccatalog
      */
     function __construct()
     {
@@ -164,6 +172,10 @@ class DataSourceEnvInfo extends AbstractModel
 
         if (array_key_exists("BizParams",$param) and $param["BizParams"] !== null) {
             $this->BizParams = $param["BizParams"];
+        }
+
+        if (array_key_exists("TcCatalogOpen",$param) and $param["TcCatalogOpen"] !== null) {
+            $this->TcCatalogOpen = $param["TcCatalogOpen"];
         }
     }
 }

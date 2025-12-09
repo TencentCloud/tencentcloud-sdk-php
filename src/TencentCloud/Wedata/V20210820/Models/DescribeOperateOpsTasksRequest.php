@@ -78,6 +78,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置时区
  * @method array getRunPriorityList() 获取根据任务优先级筛选
  * @method void setRunPriorityList(array $RunPriorityList) 设置根据任务优先级筛选
+ * @method string getIncludeManualTask() 获取是否包含手动工作流
+ * @method void setIncludeManualTask(string $IncludeManualTask) 设置是否包含手动工作流
+ * @method boolean getCheckPrivilege() 获取是否检查权限
+ * @method void setCheckPrivilege(boolean $CheckPrivilege) 设置是否检查权限
  */
 class DescribeOperateOpsTasksRequest extends AbstractModel
 {
@@ -227,6 +231,16 @@ class DescribeOperateOpsTasksRequest extends AbstractModel
     public $RunPriorityList;
 
     /**
+     * @var string 是否包含手动工作流
+     */
+    public $IncludeManualTask;
+
+    /**
+     * @var boolean 是否检查权限
+     */
+    public $CheckPrivilege;
+
+    /**
      * @param string $ProjectId 项目id
      * @param string $FolderIdList 文件夹id，多个文件夹以逗号分隔
      * @param string $WorkFlowIdList 工作流id，多个工作流id之间以英文字符逗号分隔
@@ -256,6 +270,8 @@ class DescribeOperateOpsTasksRequest extends AbstractModel
      * @param array $BlackTaskIdList 黑名单任务ID列表，传了该值在筛选的时候会将列表中的任务ID剔除
      * @param string $ScheduleTimeZone 时区
      * @param array $RunPriorityList 根据任务优先级筛选
+     * @param string $IncludeManualTask 是否包含手动工作流
+     * @param boolean $CheckPrivilege 是否检查权限
      */
     function __construct()
     {
@@ -389,6 +405,14 @@ class DescribeOperateOpsTasksRequest extends AbstractModel
 
         if (array_key_exists("RunPriorityList",$param) and $param["RunPriorityList"] !== null) {
             $this->RunPriorityList = $param["RunPriorityList"];
+        }
+
+        if (array_key_exists("IncludeManualTask",$param) and $param["IncludeManualTask"] !== null) {
+            $this->IncludeManualTask = $param["IncludeManualTask"];
+        }
+
+        if (array_key_exists("CheckPrivilege",$param) and $param["CheckPrivilege"] !== null) {
+            $this->CheckPrivilege = $param["CheckPrivilege"];
         }
     }
 }

@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置返回补录计划名称_ok
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMakeId() 获取补录计划Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMakeId(string $MakeId) 设置补录计划Id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CommonIdOpsDto extends AbstractModel
 {
@@ -34,7 +38,15 @@ class CommonIdOpsDto extends AbstractModel
     public $Id;
 
     /**
+     * @var string 补录计划Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MakeId;
+
+    /**
      * @param string $Id 返回补录计划名称_ok
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MakeId 补录计划Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -52,6 +64,10 @@ class CommonIdOpsDto extends AbstractModel
         }
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("MakeId",$param) and $param["MakeId"] !== null) {
+            $this->MakeId = $param["MakeId"];
         }
     }
 }

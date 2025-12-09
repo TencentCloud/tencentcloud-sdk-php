@@ -140,6 +140,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method PresetApproverInfo getPresetApproverInfo() 获取	 预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。
  * @method void setPresetApproverInfo(PresetApproverInfo $PresetApproverInfo) 设置	 预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。
+ * @method boolean getCanSkipReadFlow() 获取是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 若批量签署的合同中第一份待签署合同所选择的印章或者签名无法完全覆盖后续合同要求，或者当前签署人没有指定印章使用权限，则无法使用此功能，会自动退化为逐份确认。`
+ * @method void setCanSkipReadFlow(boolean $CanSkipReadFlow) 设置是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 若批量签署的合同中第一份待签署合同所选择的印章或者签名无法完全覆盖后续合同要求，或者当前签署人没有指定印章使用权限，则无法使用此功能，会自动退化为逐份确认。`
  */
 class CreateBatchQuickSignUrlRequest extends AbstractModel
 {
@@ -264,6 +266,11 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
     public $PresetApproverInfo;
 
     /**
+     * @var boolean 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 若批量签署的合同中第一份待签署合同所选择的印章或者签名无法完全覆盖后续合同要求，或者当前签署人没有指定印章使用权限，则无法使用此功能，会自动退化为逐份确认。`
+     */
+    public $CanSkipReadFlow;
+
+    /**
      * @param FlowCreateApprover $FlowApproverInfo 批量签署的流程签署人，其中姓名(ApproverName)、参与人类型(ApproverType)必传，手机号(ApproverMobile)和证件信息(ApproverIdCardType、ApproverIdCardNumber)可任选一种或全部传入。
 <ul>
 <li>若为个人参与方：ApproverType=1</li>
@@ -324,6 +331,7 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
 注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。`
 
      * @param PresetApproverInfo $PresetApproverInfo 	 预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。
+     * @param boolean $CanSkipReadFlow 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 若批量签署的合同中第一份待签署合同所选择的印章或者签名无法完全覆盖后续合同要求，或者当前签署人没有指定印章使用权限，则无法使用此功能，会自动退化为逐份确认。`
      */
     function __construct()
     {
@@ -402,6 +410,10 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
         if (array_key_exists("PresetApproverInfo",$param) and $param["PresetApproverInfo"] !== null) {
             $this->PresetApproverInfo = new PresetApproverInfo();
             $this->PresetApproverInfo->deserialize($param["PresetApproverInfo"]);
+        }
+
+        if (array_key_exists("CanSkipReadFlow",$param) and $param["CanSkipReadFlow"] !== null) {
+            $this->CanSkipReadFlow = $param["CanSkipReadFlow"];
         }
     }
 }

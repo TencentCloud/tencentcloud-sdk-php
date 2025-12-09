@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getNamespaceId() 获取命名空间
- * @method void setNamespaceId(string $NamespaceId) 设置命名空间
+ * @method string getNamespaceId() 获取消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
+ * @method void setNamespaceId(string $NamespaceId) 设置消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
  * @method string getGroupId() 获取消费组名称
  * @method void setGroupId(string $GroupId) 设置消费组名称
  * @method string getRemark() 获取说明信息，最长128个字符
@@ -43,7 +43,7 @@ class ModifyRocketMQGroupRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 命名空间
+     * @var string 消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public $NamespaceId;
 
@@ -74,7 +74,7 @@ class ModifyRocketMQGroupRequest extends AbstractModel
 
     /**
      * @param string $ClusterId 集群ID
-     * @param string $NamespaceId 命名空间
+     * @param string $NamespaceId 消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      * @param string $GroupId 消费组名称
      * @param string $Remark 说明信息，最长128个字符
      * @param boolean $ReadEnable 是否开启消费

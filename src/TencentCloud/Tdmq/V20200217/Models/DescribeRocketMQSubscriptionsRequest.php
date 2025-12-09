@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getNamespace() 获取命名空间名称
- * @method void setNamespace(string $Namespace) 设置命名空间名称
+ * @method string getNamespace() 获取消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
+ * @method void setNamespace(string $Namespace) 设置消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
  * @method string getGroup() 获取消费组名称
  * @method void setGroup(string $Group) 设置消费组名称
  * @method integer getOffset() 获取查询起始位置
@@ -39,7 +39,7 @@ class DescribeRocketMQSubscriptionsRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 命名空间名称
+     * @var string 消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public $Namespace;
 
@@ -60,7 +60,7 @@ class DescribeRocketMQSubscriptionsRequest extends AbstractModel
 
     /**
      * @param string $ClusterId 集群ID
-     * @param string $Namespace 命名空间名称
+     * @param string $Namespace 消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      * @param string $Group 消费组名称
      * @param integer $Offset 查询起始位置
      * @param integer $Limit 查询限制条数

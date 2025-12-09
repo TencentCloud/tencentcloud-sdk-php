@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群id
  * @method void setClusterId(string $ClusterId) 设置集群id
- * @method string getNamespaceId() 获取命名空间名称
- * @method void setNamespaceId(string $NamespaceId) 设置命名空间名称
+ * @method string getNamespaceId() 获取命名空间，4.x 通用集群命名空间固定为: tdmq_default
+ * @method void setNamespaceId(string $NamespaceId) 设置命名空间，4.x 通用集群命名空间固定为: tdmq_default
  * @method string getGroupName() 获取group名称
  * @method void setGroupName(string $GroupName) 设置group名称
  * @method array getMessageIds() 获取死信消息ID
@@ -37,7 +37,7 @@ class RetryRocketMQDlqMessageRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 命名空间名称
+     * @var string 命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public $NamespaceId;
 
@@ -53,7 +53,7 @@ class RetryRocketMQDlqMessageRequest extends AbstractModel
 
     /**
      * @param string $ClusterId 集群id
-     * @param string $NamespaceId 命名空间名称
+     * @param string $NamespaceId 命名空间，4.x 通用集群命名空间固定为: tdmq_default
      * @param string $GroupName group名称
      * @param array $MessageIds 死信消息ID
      */

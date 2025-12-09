@@ -20,76 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFinancialLLMTask请求参数结构体
  *
- * @method string getBizType() 获取审核策略BizType
- * @method void setBizType(string $BizType) 设置审核策略BizType
- * @method string getFileType() 获取待审文件类型，目前支持：PDF, DOC, DOCX
- * @method void setFileType(string $FileType) 设置待审文件类型，目前支持：PDF, DOC, DOCX
- * @method integer getContentType() 获取送审内容类型：1-文档，2-文本
- * @method void setContentType(integer $ContentType) 设置送审内容类型：1-文档，2-文本
- * @method string getContent() 获取送审内容，根据ContentType字段的取值，传入送审文档的Url链接，或送审文本的Base64编码
+ * @method string getBizType() 获取接口使用的识别策略 ID，请参考 [快速指引](https://cloud.tencent.com/document/product/1124/124604) 获取该值。  
+示例值：TencentCloudFinancialLLMDefault
+ * @method void setBizType(string $BizType) 设置接口使用的识别策略 ID，请参考 [快速指引](https://cloud.tencent.com/document/product/1124/124604) 获取该值。  
+示例值：TencentCloudFinancialLLMDefault
+ * @method integer getContentType() 获取送审内容的格式，有两个可选值：
+- 1：代表送审内容为**文档**，如DOC文档
+- 2：代表送审内容为**纯文本**
 
-文档限制：
+示例值：1
+ * @method void setContentType(integer $ContentType) 设置送审内容的格式，有两个可选值：
+- 1：代表送审内容为**文档**，如DOC文档
+- 2：代表送审内容为**纯文本**
 
-- 文件下载时间不超过15秒（文件存储于腾讯云的Url可保障更高的下载速度和稳定性，建议文件存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。）
-- 所下载文件经 Base64 编码后不超过支持的文件大小：PDF/DOC/DOCX - 200M
-- 文档解析后的纯文本长度不超过 10000字
+示例值：1
+ * @method string getFileType() 获取若送审内容为文档（ContentType=1），需要传入具体格式，当前支持：DOC、DOCX、PDF。  
+说明：若送审内容为纯文本（ContentType=2），则本字段传空（FileType=""）。
+ * @method void setFileType(string $FileType) 设置若送审内容为文档（ContentType=1），需要传入具体格式，当前支持：DOC、DOCX、PDF。  
+说明：若送审内容为纯文本（ContentType=2），则本字段传空（FileType=""）。
+ * @method string getContent() 获取送审内容的传入方式如下：
+- 若为文档类，需传入文档的URL（原文档文字数不超过10,000字），例如：http://xxxxxxxxxxxx/financial_test.doc
+- 若为纯文本类，请以UTF-8格式进行Base64编码后传入（编码后字符数不超过10,000字），例如：5piO5aSpNjAz5LiA5a6a5rao
 
-文本限制：Base64解码后的文本长度不超过10000字
+示例值：5piO5aSpNjAz5LiA5a6a5rao
+ * @method void setContent(string $Content) 设置送审内容的传入方式如下：
+- 若为文档类，需传入文档的URL（原文档文字数不超过10,000字），例如：http://xxxxxxxxxxxx/financial_test.doc
+- 若为纯文本类，请以UTF-8格式进行Base64编码后传入（编码后字符数不超过10,000字），例如：5piO5aSpNjAz5LiA5a6a5rao
 
- * @method void setContent(string $Content) 设置送审内容，根据ContentType字段的取值，传入送审文档的Url链接，或送审文本的Base64编码
-
-文档限制：
-
-- 文件下载时间不超过15秒（文件存储于腾讯云的Url可保障更高的下载速度和稳定性，建议文件存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。）
-- 所下载文件经 Base64 编码后不超过支持的文件大小：PDF/DOC/DOCX - 200M
-- 文档解析后的纯文本长度不超过 10000字
-
-文本限制：Base64解码后的文本长度不超过10000字
+示例值：5piO5aSpNjAz5LiA5a6a5rao
  */
 class CreateFinancialLLMTaskRequest extends AbstractModel
 {
     /**
-     * @var string 审核策略BizType
+     * @var string 接口使用的识别策略 ID，请参考 [快速指引](https://cloud.tencent.com/document/product/1124/124604) 获取该值。  
+示例值：TencentCloudFinancialLLMDefault
      */
     public $BizType;
 
     /**
-     * @var string 待审文件类型，目前支持：PDF, DOC, DOCX
-     */
-    public $FileType;
+     * @var integer 送审内容的格式，有两个可选值：
+- 1：代表送审内容为**文档**，如DOC文档
+- 2：代表送审内容为**纯文本**
 
-    /**
-     * @var integer 送审内容类型：1-文档，2-文本
+示例值：1
      */
     public $ContentType;
 
     /**
-     * @var string 送审内容，根据ContentType字段的取值，传入送审文档的Url链接，或送审文本的Base64编码
+     * @var string 若送审内容为文档（ContentType=1），需要传入具体格式，当前支持：DOC、DOCX、PDF。  
+说明：若送审内容为纯文本（ContentType=2），则本字段传空（FileType=""）。
+     */
+    public $FileType;
 
-文档限制：
+    /**
+     * @var string 送审内容的传入方式如下：
+- 若为文档类，需传入文档的URL（原文档文字数不超过10,000字），例如：http://xxxxxxxxxxxx/financial_test.doc
+- 若为纯文本类，请以UTF-8格式进行Base64编码后传入（编码后字符数不超过10,000字），例如：5piO5aSpNjAz5LiA5a6a5rao
 
-- 文件下载时间不超过15秒（文件存储于腾讯云的Url可保障更高的下载速度和稳定性，建议文件存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。）
-- 所下载文件经 Base64 编码后不超过支持的文件大小：PDF/DOC/DOCX - 200M
-- 文档解析后的纯文本长度不超过 10000字
-
-文本限制：Base64解码后的文本长度不超过10000字
-
+示例值：5piO5aSpNjAz5LiA5a6a5rao
      */
     public $Content;
 
     /**
-     * @param string $BizType 审核策略BizType
-     * @param string $FileType 待审文件类型，目前支持：PDF, DOC, DOCX
-     * @param integer $ContentType 送审内容类型：1-文档，2-文本
-     * @param string $Content 送审内容，根据ContentType字段的取值，传入送审文档的Url链接，或送审文本的Base64编码
+     * @param string $BizType 接口使用的识别策略 ID，请参考 [快速指引](https://cloud.tencent.com/document/product/1124/124604) 获取该值。  
+示例值：TencentCloudFinancialLLMDefault
+     * @param integer $ContentType 送审内容的格式，有两个可选值：
+- 1：代表送审内容为**文档**，如DOC文档
+- 2：代表送审内容为**纯文本**
 
-文档限制：
+示例值：1
+     * @param string $FileType 若送审内容为文档（ContentType=1），需要传入具体格式，当前支持：DOC、DOCX、PDF。  
+说明：若送审内容为纯文本（ContentType=2），则本字段传空（FileType=""）。
+     * @param string $Content 送审内容的传入方式如下：
+- 若为文档类，需传入文档的URL（原文档文字数不超过10,000字），例如：http://xxxxxxxxxxxx/financial_test.doc
+- 若为纯文本类，请以UTF-8格式进行Base64编码后传入（编码后字符数不超过10,000字），例如：5piO5aSpNjAz5LiA5a6a5rao
 
-- 文件下载时间不超过15秒（文件存储于腾讯云的Url可保障更高的下载速度和稳定性，建议文件存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。）
-- 所下载文件经 Base64 编码后不超过支持的文件大小：PDF/DOC/DOCX - 200M
-- 文档解析后的纯文本长度不超过 10000字
-
-文本限制：Base64解码后的文本长度不超过10000字
+示例值：5piO5aSpNjAz5LiA5a6a5rao
      */
     function __construct()
     {
@@ -108,12 +114,12 @@ class CreateFinancialLLMTaskRequest extends AbstractModel
             $this->BizType = $param["BizType"];
         }
 
-        if (array_key_exists("FileType",$param) and $param["FileType"] !== null) {
-            $this->FileType = $param["FileType"];
-        }
-
         if (array_key_exists("ContentType",$param) and $param["ContentType"] !== null) {
             $this->ContentType = $param["ContentType"];
+        }
+
+        if (array_key_exists("FileType",$param) and $param["FileType"] !== null) {
+            $this->FileType = $param["FileType"];
         }
 
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {

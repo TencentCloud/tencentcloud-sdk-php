@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取实例ID
  * @method void setClusterId(string $ClusterId) 设置实例ID
- * @method string getNamespaceId() 获取命名空间
- * @method void setNamespaceId(string $NamespaceId) 设置命名空间
+ * @method string getNamespaceId() 获取主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
+ * @method void setNamespaceId(string $NamespaceId) 设置主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
  * @method string getTopicName() 获取主题名
  * @method void setTopicName(string $TopicName) 设置主题名
  */
@@ -35,7 +35,7 @@ class DescribeRocketMQTopicStatsRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 命名空间
+     * @var string 主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public $NamespaceId;
 
@@ -46,7 +46,7 @@ class DescribeRocketMQTopicStatsRequest extends AbstractModel
 
     /**
      * @param string $ClusterId 实例ID
-     * @param string $NamespaceId 命名空间
+     * @param string $NamespaceId 主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      * @param string $TopicName 主题名
      */
     function __construct()

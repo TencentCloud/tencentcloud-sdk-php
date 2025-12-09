@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyDescription(string $PolicyDescription) 设置安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
  * @method string getModifyTime() 获取安全组最近修改时间。
  * @method void setModifyTime(string $ModifyTime) 设置安全组最近修改时间。
+ * @method integer getPriority() 获取安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用`DescribeSecurityGroupPolicies`获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。
+ * @method void setPriority(integer $Priority) 设置安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用`DescribeSecurityGroupPolicies`获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。
  */
 class SecurityGroupPolicy extends AbstractModel
 {
@@ -104,6 +106,11 @@ class SecurityGroupPolicy extends AbstractModel
     public $ModifyTime;
 
     /**
+     * @var integer 安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用`DescribeSecurityGroupPolicies`获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。
+     */
+    public $Priority;
+
+    /**
      * @param integer $PolicyIndex 安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。
      * @param string $Protocol 协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
      * @param string $Port 端口(all, 离散port,  range)。
@@ -116,6 +123,7 @@ class SecurityGroupPolicy extends AbstractModel
      * @param string $Action ACCEPT 或 DROP。
      * @param string $PolicyDescription 安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
      * @param string $ModifyTime 安全组最近修改时间。
+     * @param integer $Priority 安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用`DescribeSecurityGroupPolicies`获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。
      */
     function __construct()
     {
@@ -174,6 +182,10 @@ class SecurityGroupPolicy extends AbstractModel
 
         if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
             $this->ModifyTime = $param["ModifyTime"];
+        }
+
+        if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
+            $this->Priority = $param["Priority"];
         }
     }
 }

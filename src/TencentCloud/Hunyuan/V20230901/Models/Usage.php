@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCompletionTokens(integer $CompletionTokens) 设置输出 Token 数量。
  * @method integer getTotalTokens() 获取总 Token 数量。
  * @method void setTotalTokens(integer $TotalTokens) 设置总 Token 数量。
+ * @method PromptTokensDetails getPromptTokensDetails() 获取输入 token 的详情。
+ * @method void setPromptTokensDetails(PromptTokensDetails $PromptTokensDetails) 设置输入 token 的详情。
  */
 class Usage extends AbstractModel
 {
@@ -45,9 +47,15 @@ class Usage extends AbstractModel
     public $TotalTokens;
 
     /**
+     * @var PromptTokensDetails 输入 token 的详情。
+     */
+    public $PromptTokensDetails;
+
+    /**
      * @param integer $PromptTokens 输入 Token 数量。
      * @param integer $CompletionTokens 输出 Token 数量。
      * @param integer $TotalTokens 总 Token 数量。
+     * @param PromptTokensDetails $PromptTokensDetails 输入 token 的详情。
      */
     function __construct()
     {
@@ -72,6 +80,11 @@ class Usage extends AbstractModel
 
         if (array_key_exists("TotalTokens",$param) and $param["TotalTokens"] !== null) {
             $this->TotalTokens = $param["TotalTokens"];
+        }
+
+        if (array_key_exists("PromptTokensDetails",$param) and $param["PromptTokensDetails"] !== null) {
+            $this->PromptTokensDetails = new PromptTokensDetails();
+            $this->PromptTokensDetails->deserialize($param["PromptTokensDetails"]);
         }
     }
 }

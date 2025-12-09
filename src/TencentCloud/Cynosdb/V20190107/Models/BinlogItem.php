@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFinishTime(string $FinishTime) 设置事务最晚时间
  * @method integer getBinlogId() 获取Binlog文件ID
  * @method void setBinlogId(integer $BinlogId) 设置Binlog文件ID
+ * @method array getCrossRegions() 获取binlog所跨地域
+ * @method void setCrossRegions(array $CrossRegions) 设置binlog所跨地域
  */
 class BinlogItem extends AbstractModel
 {
@@ -59,11 +61,17 @@ class BinlogItem extends AbstractModel
     public $BinlogId;
 
     /**
+     * @var array binlog所跨地域
+     */
+    public $CrossRegions;
+
+    /**
      * @param string $FileName Binlog文件名称
      * @param integer $FileSize 文件大小，单位：字节
      * @param string $StartTime 事务最早时间
      * @param string $FinishTime 事务最晚时间
      * @param integer $BinlogId Binlog文件ID
+     * @param array $CrossRegions binlog所跨地域
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class BinlogItem extends AbstractModel
 
         if (array_key_exists("BinlogId",$param) and $param["BinlogId"] !== null) {
             $this->BinlogId = $param["BinlogId"];
+        }
+
+        if (array_key_exists("CrossRegions",$param) and $param["CrossRegions"] !== null) {
+            $this->CrossRegions = $param["CrossRegions"];
         }
     }
 }

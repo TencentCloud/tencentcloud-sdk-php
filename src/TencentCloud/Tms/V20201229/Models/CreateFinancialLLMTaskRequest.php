@@ -21,19 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * CreateFinancialLLMTask请求参数结构体
  *
  * @method string getBizType() 获取接口使用的识别策略 ID，请参考 [快速指引](https://cloud.tencent.com/document/product/1124/124604) 获取该值。  
-示例值：TencentCloudFinancialLLMDefault
  * @method void setBizType(string $BizType) 设置接口使用的识别策略 ID，请参考 [快速指引](https://cloud.tencent.com/document/product/1124/124604) 获取该值。  
-示例值：TencentCloudFinancialLLMDefault
  * @method integer getContentType() 获取送审内容的格式，有两个可选值：
 - 1：代表送审内容为**文档**，如DOC文档
 - 2：代表送审内容为**纯文本**
-
-示例值：1
  * @method void setContentType(integer $ContentType) 设置送审内容的格式，有两个可选值：
 - 1：代表送审内容为**文档**，如DOC文档
 - 2：代表送审内容为**纯文本**
-
-示例值：1
  * @method string getFileType() 获取若送审内容为文档（ContentType=1），需要传入具体格式，当前支持：DOC、DOCX、PDF。  
 说明：若送审内容为纯文本（ContentType=2），则本字段传空（FileType=""）。
  * @method void setFileType(string $FileType) 设置若送审内容为文档（ContentType=1），需要传入具体格式，当前支持：DOC、DOCX、PDF。  
@@ -41,19 +35,14 @@ use TencentCloud\Common\AbstractModel;
  * @method string getContent() 获取送审内容的传入方式如下：
 - 若为文档类，需传入文档的URL（原文档文字数不超过10,000字），例如：http://xxxxxxxxxxxx/financial_test.doc
 - 若为纯文本类，请以UTF-8格式进行Base64编码后传入（编码后字符数不超过10,000字），例如：5piO5aSpNjAz5LiA5a6a5rao
-
-示例值：5piO5aSpNjAz5LiA5a6a5rao
  * @method void setContent(string $Content) 设置送审内容的传入方式如下：
 - 若为文档类，需传入文档的URL（原文档文字数不超过10,000字），例如：http://xxxxxxxxxxxx/financial_test.doc
 - 若为纯文本类，请以UTF-8格式进行Base64编码后传入（编码后字符数不超过10,000字），例如：5piO5aSpNjAz5LiA5a6a5rao
-
-示例值：5piO5aSpNjAz5LiA5a6a5rao
  */
 class CreateFinancialLLMTaskRequest extends AbstractModel
 {
     /**
      * @var string 接口使用的识别策略 ID，请参考 [快速指引](https://cloud.tencent.com/document/product/1124/124604) 获取该值。  
-示例值：TencentCloudFinancialLLMDefault
      */
     public $BizType;
 
@@ -61,8 +50,6 @@ class CreateFinancialLLMTaskRequest extends AbstractModel
      * @var integer 送审内容的格式，有两个可选值：
 - 1：代表送审内容为**文档**，如DOC文档
 - 2：代表送审内容为**纯文本**
-
-示例值：1
      */
     public $ContentType;
 
@@ -76,26 +63,19 @@ class CreateFinancialLLMTaskRequest extends AbstractModel
      * @var string 送审内容的传入方式如下：
 - 若为文档类，需传入文档的URL（原文档文字数不超过10,000字），例如：http://xxxxxxxxxxxx/financial_test.doc
 - 若为纯文本类，请以UTF-8格式进行Base64编码后传入（编码后字符数不超过10,000字），例如：5piO5aSpNjAz5LiA5a6a5rao
-
-示例值：5piO5aSpNjAz5LiA5a6a5rao
      */
     public $Content;
 
     /**
      * @param string $BizType 接口使用的识别策略 ID，请参考 [快速指引](https://cloud.tencent.com/document/product/1124/124604) 获取该值。  
-示例值：TencentCloudFinancialLLMDefault
      * @param integer $ContentType 送审内容的格式，有两个可选值：
 - 1：代表送审内容为**文档**，如DOC文档
 - 2：代表送审内容为**纯文本**
-
-示例值：1
      * @param string $FileType 若送审内容为文档（ContentType=1），需要传入具体格式，当前支持：DOC、DOCX、PDF。  
 说明：若送审内容为纯文本（ContentType=2），则本字段传空（FileType=""）。
      * @param string $Content 送审内容的传入方式如下：
 - 若为文档类，需传入文档的URL（原文档文字数不超过10,000字），例如：http://xxxxxxxxxxxx/financial_test.doc
 - 若为纯文本类，请以UTF-8格式进行Base64编码后传入（编码后字符数不超过10,000字），例如：5piO5aSpNjAz5LiA5a6a5rao
-
-示例值：5piO5aSpNjAz5LiA5a6a5rao
      */
     function __construct()
     {

@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetIds(array $SubnetIds) 设置子网 ID。
  * @method array getCdbErrors() 获取是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。
  * @method void setCdbErrors(array $CdbErrors) 设置是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。
- * @method string getOrderBy() 获取返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
- * @method void setOrderBy(string $OrderBy) 设置返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
+ * @method string getOrderBy() 获取返回结果集排序的字段，目前支持："instanceId"，"instanceName"，"createTime"，"deadlineTime"。
+ * @method void setOrderBy(string $OrderBy) 设置返回结果集排序的字段，目前支持："instanceId"，"instanceName"，"createTime"，"deadlineTime"。
  * @method string getOrderDirection() 获取返回结果集排序方式。目前支持值："ASC" - 表示升序，"DESC" - 表示降序，默认为 "DESC"。
  * @method void setOrderDirection(string $OrderDirection) 设置返回结果集排序方式。目前支持值："ASC" - 表示升序，"DESC" - 表示降序，默认为 "DESC"。
  * @method integer getWithSecurityGroup() 获取是否以安全组 ID 为过滤条件。
@@ -94,8 +94,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxyIds(array $ProxyIds) 设置数据库代理 ID 。
  * @method array getEngineTypes() 获取数据库引擎类型。可选值为：InnoDB、RocksDB。
  * @method void setEngineTypes(array $EngineTypes) 设置数据库引擎类型。可选值为：InnoDB、RocksDB。
- * @method boolean getQueryClusterInfo() 获取是否获取集群版实例节点信息，可填：true 或 false。默认为 false。
- * @method void setQueryClusterInfo(boolean $QueryClusterInfo) 设置是否获取集群版实例节点信息，可填：true 或 false。默认为 false。
+ * @method boolean getQueryClusterInfo() 获取是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。
+ * @method void setQueryClusterInfo(boolean $QueryClusterInfo) 设置是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -175,7 +175,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $CdbErrors;
 
     /**
-     * @var string 返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
+     * @var string 返回结果集排序的字段，目前支持："instanceId"，"instanceName"，"createTime"，"deadlineTime"。
      */
     public $OrderBy;
 
@@ -277,7 +277,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $EngineTypes;
 
     /**
-     * @var boolean 是否获取集群版实例节点信息，可填：true 或 false。默认为 false。
+     * @var boolean 是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。
      */
     public $QueryClusterInfo;
 
@@ -297,7 +297,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param array $ZoneIds 可用区的 ID。
      * @param array $SubnetIds 子网 ID。
      * @param array $CdbErrors 是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。
-     * @param string $OrderBy 返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
+     * @param string $OrderBy 返回结果集排序的字段，目前支持："instanceId"，"instanceName"，"createTime"，"deadlineTime"。
      * @param string $OrderDirection 返回结果集排序方式。目前支持值："ASC" - 表示升序，"DESC" - 表示降序，默认为 "DESC"。
      * @param integer $WithSecurityGroup 是否以安全组 ID 为过滤条件。
 说明：0表示否，1表示是。
@@ -319,7 +319,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param array $ProxyVips 数据库代理 IP 。
      * @param array $ProxyIds 数据库代理 ID 。
      * @param array $EngineTypes 数据库引擎类型。可选值为：InnoDB、RocksDB。
-     * @param boolean $QueryClusterInfo 是否获取集群版实例节点信息，可填：true 或 false。默认为 false。
+     * @param boolean $QueryClusterInfo 是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。
      */
     function __construct()
     {

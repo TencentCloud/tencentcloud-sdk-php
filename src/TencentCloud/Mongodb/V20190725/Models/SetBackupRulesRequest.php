@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetBackupRules请求参数结构体
  *
- * @method string getInstanceId() 获取实例id，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置实例id，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+ * @method string getInstanceId() 获取实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
  * @method integer getBackupMethod() 获取备份方式。
 - 0：逻辑备份。
 - 1：物理备份。
@@ -38,35 +38,77 @@ use TencentCloud\Common\AbstractModel;
 2. 实例开通存储加密，则备份方式不能为物理备份。
  * @method integer getBackupTime() 获取设置自动备份开始时间。取值范围为：[0,23]，例如：该参数设置为2，表示02:00开始备份。
  * @method void setBackupTime(integer $BackupTime) 设置设置自动备份开始时间。取值范围为：[0,23]，例如：该参数设置为2，表示02:00开始备份。
- * @method integer getBackupFrequency() 获取自动备份频率，内部展示，默认取值为24h。
- * @method void setBackupFrequency(integer $BackupFrequency) 设置自动备份频率，内部展示，默认取值为24h。
+ * @method integer getBackupFrequency() 获取指定每日自动备份频率。
+- 12: 每日备份2次，间隔约12小时。
+- 24: 每日备份1次（默认），间隔约24小时。
+ * @method void setBackupFrequency(integer $BackupFrequency) 设置指定每日自动备份频率。
+- 12: 每日备份2次，间隔约12小时。
+- 24: 每日备份1次（默认），间隔约24小时。
  * @method boolean getNotify() 获取设置自动备份发生错误时，是否发送失败告警。
 - true：发送。
 - false：不发送。
  * @method void setNotify(boolean $Notify) 设置设置自动备份发生错误时，是否发送失败告警。
 - true：发送。
 - false：不发送。
- * @method integer getBackupRetentionPeriod() 获取指定备份数据保存天数。默认为 7 天，支持设置为7、30、90、180、365。
- * @method void setBackupRetentionPeriod(integer $BackupRetentionPeriod) 设置指定备份数据保存天数。默认为 7 天，支持设置为7、30、90、180、365。
- * @method string getActiveWeekdays() 获取周几备份，0-6，逗号分割。仅对高级备份生效
- * @method void setActiveWeekdays(string $ActiveWeekdays) 设置周几备份，0-6，逗号分割。仅对高级备份生效
- * @method string getLongTermUnit() 获取长期保留周期，周weekly，月monthly，空不开启
- * @method void setLongTermUnit(string $LongTermUnit) 设置长期保留周期，周weekly，月monthly，空不开启
- * @method string getLongTermActiveDays() 获取长期保留哪些天的，周0-6，月1-31，逗号分割
- * @method void setLongTermActiveDays(string $LongTermActiveDays) 设置长期保留哪些天的，周0-6，月1-31，逗号分割
- * @method integer getLongTermExpiredDays() 获取长期备份保留多少天
- * @method void setLongTermExpiredDays(integer $LongTermExpiredDays) 设置长期备份保留多少天
- * @method integer getOplogExpiredDays() 获取增量保留多少天
- * @method void setOplogExpiredDays(integer $OplogExpiredDays) 设置增量保留多少天
- * @method integer getBackupVersion() 获取备份版本。旧版本备份为0，高级备份为1。开启高级备份此值传1
- * @method void setBackupVersion(integer $BackupVersion) 设置备份版本。旧版本备份为0，高级备份为1。开启高级备份此值传1
- * @method integer getAlarmWaterLevel() 获取告警额度。50-300
- * @method void setAlarmWaterLevel(integer $AlarmWaterLevel) 设置告警额度。50-300
+ * @method integer getBackupRetentionPeriod() 获取指定备份数据保留时长。
+- 单位：天，默认为 7 天。
+- 取值范围：[7,365]。
+ * @method void setBackupRetentionPeriod(integer $BackupRetentionPeriod) 设置指定备份数据保留时长。
+- 单位：天，默认为 7 天。
+- 取值范围：[7,365]。
+ * @method string getActiveWeekdays() 获取指定每周内执行自动备份的具体日期。
+- 格式：请输入 0-6 之间的数字代表周日至周六（例如：1 代表周一），多个日期请用英文逗号 , 分隔。
+- 示例：输入 1,3,5 表示系统将在每周的周一、周三、周五执行备份。
+- 默认值：不设置，则默认为全周期 (0,1,2,3,4,5,6)，即每日执行备份。
+ * @method void setActiveWeekdays(string $ActiveWeekdays) 设置指定每周内执行自动备份的具体日期。
+- 格式：请输入 0-6 之间的数字代表周日至周六（例如：1 代表周一），多个日期请用英文逗号 , 分隔。
+- 示例：输入 1,3,5 表示系统将在每周的周一、周三、周五执行备份。
+- 默认值：不设置，则默认为全周期 (0,1,2,3,4,5,6)，即每日执行备份。
+ * @method string getLongTermUnit() 获取长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。
+- 不开启（默认）：不启用长期保留功能。
+- 按周保留： 指定为 weekly。
+- 按月保留： 指定为 monthly。
+ * @method void setLongTermUnit(string $LongTermUnit) 设置长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。
+- 不开启（默认）：不启用长期保留功能。
+- 按周保留： 指定为 weekly。
+- 按月保留： 指定为 monthly。
+ * @method string getLongTermActiveDays() 获取指定用于长期保留的具体备份日期。此设置仅在 **LongTermUnit** 被设为**weekly** 或 **monthly** 时生效。
+- 按周（weekly）保留：请输入 0-6 之间的数字来代表周日至周六。多个日期请用英文逗号 , 分隔。
+- 按月（monthly）保留：请输入 1-31 之间的数字来代表月份中的具体日期。多个日期请用英文逗号 , 分隔。
+ * @method void setLongTermActiveDays(string $LongTermActiveDays) 设置指定用于长期保留的具体备份日期。此设置仅在 **LongTermUnit** 被设为**weekly** 或 **monthly** 时生效。
+- 按周（weekly）保留：请输入 0-6 之间的数字来代表周日至周六。多个日期请用英文逗号 , 分隔。
+- 按月（monthly）保留：请输入 1-31 之间的数字来代表月份中的具体日期。多个日期请用英文逗号 , 分隔。
+ * @method integer getLongTermExpiredDays() 获取长期备份保留时长。取值范围[30,1075]。
+ * @method void setLongTermExpiredDays(integer $LongTermExpiredDays) 设置长期备份保留时长。取值范围[30,1075]。
+ * @method integer getOplogExpiredDays() 获取增量备份保留时长。
+- 单位：天。
+- 默认值：7天。
+- 取值范围：[7,365]。
+
+ * @method void setOplogExpiredDays(integer $OplogExpiredDays) 设置增量备份保留时长。
+- 单位：天。
+- 默认值：7天。
+- 取值范围：[7,365]。
+
+ * @method integer getBackupVersion() 获取指定备份版本。
+- 旧版本备份：0。
+- 开启高级备份：1。
+ * @method void setBackupVersion(integer $BackupVersion) 设置指定备份版本。
+- 旧版本备份：0。
+- 开启高级备份：1。
+ * @method integer getAlarmWaterLevel() 获取设置备份数据集存储空间使用率的告警阈值。
+- 单位：%。
+-  默认值：100。
+- 取值范围：[50,300]。
+ * @method void setAlarmWaterLevel(integer $AlarmWaterLevel) 设置设置备份数据集存储空间使用率的告警阈值。
+- 单位：%。
+-  默认值：100。
+- 取值范围：[50,300]。
  */
 class SetBackupRulesRequest extends AbstractModel
 {
     /**
-     * @var string 实例id，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @var string 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
@@ -87,7 +129,9 @@ class SetBackupRulesRequest extends AbstractModel
     public $BackupTime;
 
     /**
-     * @var integer 自动备份频率，内部展示，默认取值为24h。
+     * @var integer 指定每日自动备份频率。
+- 12: 每日备份2次，间隔约12小时。
+- 24: 每日备份1次（默认），间隔约24小时。
      */
     public $BackupFrequency;
 
@@ -99,47 +143,66 @@ class SetBackupRulesRequest extends AbstractModel
     public $Notify;
 
     /**
-     * @var integer 指定备份数据保存天数。默认为 7 天，支持设置为7、30、90、180、365。
+     * @var integer 指定备份数据保留时长。
+- 单位：天，默认为 7 天。
+- 取值范围：[7,365]。
      */
     public $BackupRetentionPeriod;
 
     /**
-     * @var string 周几备份，0-6，逗号分割。仅对高级备份生效
+     * @var string 指定每周内执行自动备份的具体日期。
+- 格式：请输入 0-6 之间的数字代表周日至周六（例如：1 代表周一），多个日期请用英文逗号 , 分隔。
+- 示例：输入 1,3,5 表示系统将在每周的周一、周三、周五执行备份。
+- 默认值：不设置，则默认为全周期 (0,1,2,3,4,5,6)，即每日执行备份。
      */
     public $ActiveWeekdays;
 
     /**
-     * @var string 长期保留周期，周weekly，月monthly，空不开启
+     * @var string 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。
+- 不开启（默认）：不启用长期保留功能。
+- 按周保留： 指定为 weekly。
+- 按月保留： 指定为 monthly。
      */
     public $LongTermUnit;
 
     /**
-     * @var string 长期保留哪些天的，周0-6，月1-31，逗号分割
+     * @var string 指定用于长期保留的具体备份日期。此设置仅在 **LongTermUnit** 被设为**weekly** 或 **monthly** 时生效。
+- 按周（weekly）保留：请输入 0-6 之间的数字来代表周日至周六。多个日期请用英文逗号 , 分隔。
+- 按月（monthly）保留：请输入 1-31 之间的数字来代表月份中的具体日期。多个日期请用英文逗号 , 分隔。
      */
     public $LongTermActiveDays;
 
     /**
-     * @var integer 长期备份保留多少天
+     * @var integer 长期备份保留时长。取值范围[30,1075]。
      */
     public $LongTermExpiredDays;
 
     /**
-     * @var integer 增量保留多少天
+     * @var integer 增量备份保留时长。
+- 单位：天。
+- 默认值：7天。
+- 取值范围：[7,365]。
+
      */
     public $OplogExpiredDays;
 
     /**
-     * @var integer 备份版本。旧版本备份为0，高级备份为1。开启高级备份此值传1
+     * @var integer 指定备份版本。
+- 旧版本备份：0。
+- 开启高级备份：1。
      */
     public $BackupVersion;
 
     /**
-     * @var integer 告警额度。50-300
+     * @var integer 设置备份数据集存储空间使用率的告警阈值。
+- 单位：%。
+-  默认值：100。
+- 取值范围：[50,300]。
      */
     public $AlarmWaterLevel;
 
     /**
-     * @param string $InstanceId 实例id，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param string $InstanceId 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      * @param integer $BackupMethod 备份方式。
 - 0：逻辑备份。
 - 1：物理备份。
@@ -148,18 +211,39 @@ class SetBackupRulesRequest extends AbstractModel
 1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
 2. 实例开通存储加密，则备份方式不能为物理备份。
      * @param integer $BackupTime 设置自动备份开始时间。取值范围为：[0,23]，例如：该参数设置为2，表示02:00开始备份。
-     * @param integer $BackupFrequency 自动备份频率，内部展示，默认取值为24h。
+     * @param integer $BackupFrequency 指定每日自动备份频率。
+- 12: 每日备份2次，间隔约12小时。
+- 24: 每日备份1次（默认），间隔约24小时。
      * @param boolean $Notify 设置自动备份发生错误时，是否发送失败告警。
 - true：发送。
 - false：不发送。
-     * @param integer $BackupRetentionPeriod 指定备份数据保存天数。默认为 7 天，支持设置为7、30、90、180、365。
-     * @param string $ActiveWeekdays 周几备份，0-6，逗号分割。仅对高级备份生效
-     * @param string $LongTermUnit 长期保留周期，周weekly，月monthly，空不开启
-     * @param string $LongTermActiveDays 长期保留哪些天的，周0-6，月1-31，逗号分割
-     * @param integer $LongTermExpiredDays 长期备份保留多少天
-     * @param integer $OplogExpiredDays 增量保留多少天
-     * @param integer $BackupVersion 备份版本。旧版本备份为0，高级备份为1。开启高级备份此值传1
-     * @param integer $AlarmWaterLevel 告警额度。50-300
+     * @param integer $BackupRetentionPeriod 指定备份数据保留时长。
+- 单位：天，默认为 7 天。
+- 取值范围：[7,365]。
+     * @param string $ActiveWeekdays 指定每周内执行自动备份的具体日期。
+- 格式：请输入 0-6 之间的数字代表周日至周六（例如：1 代表周一），多个日期请用英文逗号 , 分隔。
+- 示例：输入 1,3,5 表示系统将在每周的周一、周三、周五执行备份。
+- 默认值：不设置，则默认为全周期 (0,1,2,3,4,5,6)，即每日执行备份。
+     * @param string $LongTermUnit 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。
+- 不开启（默认）：不启用长期保留功能。
+- 按周保留： 指定为 weekly。
+- 按月保留： 指定为 monthly。
+     * @param string $LongTermActiveDays 指定用于长期保留的具体备份日期。此设置仅在 **LongTermUnit** 被设为**weekly** 或 **monthly** 时生效。
+- 按周（weekly）保留：请输入 0-6 之间的数字来代表周日至周六。多个日期请用英文逗号 , 分隔。
+- 按月（monthly）保留：请输入 1-31 之间的数字来代表月份中的具体日期。多个日期请用英文逗号 , 分隔。
+     * @param integer $LongTermExpiredDays 长期备份保留时长。取值范围[30,1075]。
+     * @param integer $OplogExpiredDays 增量备份保留时长。
+- 单位：天。
+- 默认值：7天。
+- 取值范围：[7,365]。
+
+     * @param integer $BackupVersion 指定备份版本。
+- 旧版本备份：0。
+- 开启高级备份：1。
+     * @param integer $AlarmWaterLevel 设置备份数据集存储空间使用率的告警阈值。
+- 单位：%。
+-  默认值：100。
+- 取值范围：[50,300]。
      */
     function __construct()
     {

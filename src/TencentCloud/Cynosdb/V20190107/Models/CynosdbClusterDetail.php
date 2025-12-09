@@ -30,8 +30,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置可用区
  * @method string getPhysicalZone() 获取物理可用区
  * @method void setPhysicalZone(string $PhysicalZone) 设置物理可用区
- * @method string getStatus() 获取状态
- * @method void setStatus(string $Status) 设置状态
+ * @method string getStatus() 获取状态，支持的值如下：
+- creating：创建中
+- running：运行中
+- isolating：隔离中
+- isolated：已隔离
+- activating：从回收站重新恢复
+- offlining：下线中
+- offlined：已下线
+- deleting：删除中
+- deleted：已删除
+ * @method void setStatus(string $Status) 设置状态，支持的值如下：
+- creating：创建中
+- running：运行中
+- isolating：隔离中
+- isolated：已隔离
+- activating：从回收站重新恢复
+- offlining：下线中
+- offlined：已下线
+- deleting：删除中
+- deleted：已删除
  * @method string getStatusDesc() 获取状态描述
  * @method void setStatusDesc(string $StatusDesc) 设置状态描述
  * @method string getServerlessStatus() 获取当Db类型为SERVERLESS时，serverless集群状态，可选值:
@@ -175,7 +193,16 @@ class CynosdbClusterDetail extends AbstractModel
     public $PhysicalZone;
 
     /**
-     * @var string 状态
+     * @var string 状态，支持的值如下：
+- creating：创建中
+- running：运行中
+- isolating：隔离中
+- isolated：已隔离
+- activating：从回收站重新恢复
+- offlining：下线中
+- offlined：已下线
+- deleting：删除中
+- deleted：已删除
      */
     public $Status;
 
@@ -442,7 +469,16 @@ pausing
      * @param string $Region 地域
      * @param string $Zone 可用区
      * @param string $PhysicalZone 物理可用区
-     * @param string $Status 状态
+     * @param string $Status 状态，支持的值如下：
+- creating：创建中
+- running：运行中
+- isolating：隔离中
+- isolated：已隔离
+- activating：从回收站重新恢复
+- offlining：下线中
+- offlined：已下线
+- deleting：删除中
+- deleted：已删除
      * @param string $StatusDesc 状态描述
      * @param string $ServerlessStatus 当Db类型为SERVERLESS时，serverless集群状态，可选值:
 resume

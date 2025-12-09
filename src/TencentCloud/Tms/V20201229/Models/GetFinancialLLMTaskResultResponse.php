@@ -35,13 +35,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getReviewedLabels() 获取本次检测的违规点列表
  * @method void setReviewedLabels(array $ReviewedLabels) 设置本次检测的违规点列表
  * @method string getStartTime() 获取审校任务的开始时间
-示例值：2025-09-25 19:42:35
  * @method void setStartTime(string $StartTime) 设置审校任务的开始时间
-示例值：2025-09-25 19:42:35
  * @method string getFailureReason() 获取若审校任务失败（Status="Failed"），该字段返回失败的具体原因。
-示例值：文档解析失败
  * @method void setFailureReason(string $FailureReason) 设置若审校任务失败（Status="Failed"），该字段返回失败的具体原因。
-示例值：文档解析失败
  * @method string getModerationResult() 获取该字段为历史结构字段，不再推荐使用。
  * @method void setModerationResult(string $ModerationResult) 设置该字段为历史结构字段，不再推荐使用。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -70,13 +66,11 @@ class GetFinancialLLMTaskResultResponse extends AbstractModel
 
     /**
      * @var string 审校任务的开始时间
-示例值：2025-09-25 19:42:35
      */
     public $StartTime;
 
     /**
      * @var string 若审校任务失败（Status="Failed"），该字段返回失败的具体原因。
-示例值：文档解析失败
      */
     public $FailureReason;
 
@@ -99,9 +93,7 @@ class GetFinancialLLMTaskResultResponse extends AbstractModel
      * @param array $Details 该字段标识服务检测到的违规点，具体内容参阅数据结构[FinancialLLMViolationDetail](https://cloud.tencent.com/document/api/1124/51861#FinancialLLMViolationDetail)
      * @param array $ReviewedLabels 本次检测的违规点列表
      * @param string $StartTime 审校任务的开始时间
-示例值：2025-09-25 19:42:35
      * @param string $FailureReason 若审校任务失败（Status="Failed"），该字段返回失败的具体原因。
-示例值：文档解析失败
      * @param string $ModerationResult 该字段为历史结构字段，不再推荐使用。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

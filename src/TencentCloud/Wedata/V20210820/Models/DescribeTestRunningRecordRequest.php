@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageSize(integer $PageSize) 设置分页大小
  * @method integer getPageIndex() 获取分页索引
  * @method void setPageIndex(integer $PageIndex) 设置分页索引
+ * @method array getStatusList() 获取状态列表  LAUNCHED:等待运行 RUNNING:运行中 KILLING:终止中 KILLED:已终止 SUCCESS:成功 FAILED:失败 SKIP_RUNNING 跳过运行 NEVER_RUN:未运行
+ * @method void setStatusList(array $StatusList) 设置状态列表  LAUNCHED:等待运行 RUNNING:运行中 KILLING:终止中 KILLED:已终止 SUCCESS:成功 FAILED:失败 SKIP_RUNNING 跳过运行 NEVER_RUN:未运行
+ * @method array getOrderConditionList() 获取排序条件 排序的key：timeCost,startTime
+ * @method void setOrderConditionList(array $OrderConditionList) 设置排序条件 排序的key：timeCost,startTime
  */
 class DescribeTestRunningRecordRequest extends AbstractModel
 {
@@ -87,6 +91,16 @@ class DescribeTestRunningRecordRequest extends AbstractModel
     public $PageIndex;
 
     /**
+     * @var array 状态列表  LAUNCHED:等待运行 RUNNING:运行中 KILLING:终止中 KILLED:已终止 SUCCESS:成功 FAILED:失败 SKIP_RUNNING 跳过运行 NEVER_RUN:未运行
+     */
+    public $StatusList;
+
+    /**
+     * @var array 排序条件 排序的key：timeCost,startTime
+     */
+    public $OrderConditionList;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $TaskId 任务id
      * @param string $SearchWord 搜索关键词
@@ -96,6 +110,8 @@ class DescribeTestRunningRecordRequest extends AbstractModel
      * @param array $RecordIdList 试运行记录id
      * @param integer $PageSize 分页大小
      * @param integer $PageIndex 分页索引
+     * @param array $StatusList 状态列表  LAUNCHED:等待运行 RUNNING:运行中 KILLING:终止中 KILLED:已终止 SUCCESS:成功 FAILED:失败 SKIP_RUNNING 跳过运行 NEVER_RUN:未运行
+     * @param array $OrderConditionList 排序条件 排序的key：timeCost,startTime
      */
     function __construct()
     {
@@ -144,6 +160,19 @@ class DescribeTestRunningRecordRequest extends AbstractModel
 
         if (array_key_exists("PageIndex",$param) and $param["PageIndex"] !== null) {
             $this->PageIndex = $param["PageIndex"];
+        }
+
+        if (array_key_exists("StatusList",$param) and $param["StatusList"] !== null) {
+            $this->StatusList = $param["StatusList"];
+        }
+
+        if (array_key_exists("OrderConditionList",$param) and $param["OrderConditionList"] !== null) {
+            $this->OrderConditionList = [];
+            foreach ($param["OrderConditionList"] as $key => $value){
+                $obj = new OrderCondition();
+                $obj->deserialize($value);
+                array_push($this->OrderConditionList, $obj);
+            }
         }
     }
 }

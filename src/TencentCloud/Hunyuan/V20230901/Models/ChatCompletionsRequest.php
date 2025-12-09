@@ -305,6 +305,7 @@ class ChatCompletionsRequest extends AbstractModel
 
     /**
      * @var boolean 是否开启深度研究该问题，默认是false，在值为true且命中深度研究该问题时，会返回深度研究该问题信息。
+     * @deprecated
      */
     public $EnableDeepSearch;
 
@@ -343,6 +344,7 @@ class ChatCompletionsRequest extends AbstractModel
 
     /**
      * @var boolean 是否开启深度阅读，默认是false，在值为true时，会返回深度阅读的结果信息。说明:1.深度阅读需要开启插件增强,即设置EnableEnhancement为true,当设置EnableDeepRead为true时EnableEnhancement默认为true；2.目前暂时只支持单文档单轮的深度阅读；3.深度阅读功能的文件上传可以使用FilesUploads接口，具体参数详见FilesUploads接口文档
+     * @deprecated
      */
     public $EnableDeepRead;
 

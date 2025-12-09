@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkflowParams(array $WorkflowParams) 设置工作流参数列表
  * @method array getGeneralTaskParams() 获取用于配置优化参数（线程、内存、CPU核数等），仅作用于Spark SQL节点。多个参数用英文分号分隔。
  * @method void setGeneralTaskParams(array $GeneralTaskParams) 设置用于配置优化参数（线程、内存、CPU核数等），仅作用于Spark SQL节点。多个参数用英文分号分隔。
+ * @method string getDependencyWorkflow() 获取工作流依赖，yes/no。开启后表示当前任务依赖本工作流上个周期的所有任务。仅支持当前任务所在工作流的任务全部为同周期的情况，如果非同周期则不生效，请在工作流-统一调度上进行配置。
+ * @method void setDependencyWorkflow(string $DependencyWorkflow) 设置工作流依赖，yes/no。开启后表示当前任务依赖本工作流上个周期的所有任务。仅支持当前任务所在工作流的任务全部为同周期的情况，如果非同周期则不生效，请在工作流-统一调度上进行配置。
  */
 class UpdateWorkflowInfoRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class UpdateWorkflowInfoRequest extends AbstractModel
     public $GeneralTaskParams;
 
     /**
+     * @var string 工作流依赖，yes/no。开启后表示当前任务依赖本工作流上个周期的所有任务。仅支持当前任务所在工作流的任务全部为同周期的情况，如果非同周期则不生效，请在工作流-统一调度上进行配置。
+     */
+    public $DependencyWorkflow;
+
+    /**
      * @param string $ProjectId 项目Id
      * @param string $OperatorName 操作者名称
      * @param string $WorkflowId 工作流id
@@ -120,6 +127,7 @@ class UpdateWorkflowInfoRequest extends AbstractModel
      * @param string $UserGroupName 工作流所属用户分组名称  若有多个,分号隔开: a;b;c
      * @param array $WorkflowParams 工作流参数列表
      * @param array $GeneralTaskParams 用于配置优化参数（线程、内存、CPU核数等），仅作用于Spark SQL节点。多个参数用英文分号分隔。
+     * @param string $DependencyWorkflow 工作流依赖，yes/no。开启后表示当前任务依赖本工作流上个周期的所有任务。仅支持当前任务所在工作流的任务全部为同周期的情况，如果非同周期则不生效，请在工作流-统一调度上进行配置。
      */
     function __construct()
     {
@@ -190,6 +198,10 @@ class UpdateWorkflowInfoRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->GeneralTaskParams, $obj);
             }
+        }
+
+        if (array_key_exists("DependencyWorkflow",$param) and $param["DependencyWorkflow"] !== null) {
+            $this->DependencyWorkflow = $param["DependencyWorkflow"];
         }
     }
 }

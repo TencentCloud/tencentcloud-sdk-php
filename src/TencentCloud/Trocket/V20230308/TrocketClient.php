@@ -26,18 +26,34 @@ use TencentCloud\Trocket\V20230308\Models as Models;
  * @method Models\ChangeMigratingTopicToNextStageResponse ChangeMigratingTopicToNextStage(Models\ChangeMigratingTopicToNextStageRequest $req) 修改迁移中的Topic状态进入下一步
  * @method Models\CreateConsumerGroupResponse CreateConsumerGroup(Models\CreateConsumerGroupRequest $req) 创建消费组
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 创建 RocketMQ 5.x 集群
- * @method Models\CreateMQTTInsPublicEndpointResponse CreateMQTTInsPublicEndpoint(Models\CreateMQTTInsPublicEndpointRequest $req) 为MQTT实例创建公网接入点
- * @method Models\CreateMQTTInstanceResponse CreateMQTTInstance(Models\CreateMQTTInstanceRequest $req) 购买新的MQTT实例
- * @method Models\CreateMQTTTopicResponse CreateMQTTTopic(Models\CreateMQTTTopicRequest $req) 创建主题
- * @method Models\CreateMQTTUserResponse CreateMQTTUser(Models\CreateMQTTUserRequest $req) 添加mqtt角色
+ * @method Models\CreateMQTTInsPublicEndpointResponse CreateMQTTInsPublicEndpoint(Models\CreateMQTTInsPublicEndpointRequest $req) 下线trocket下mqtt接口
+
+为MQTT实例创建公网接入点
+ * @method Models\CreateMQTTInstanceResponse CreateMQTTInstance(Models\CreateMQTTInstanceRequest $req) 下线trocket下mqtt接口
+
+购买新的MQTT实例
+ * @method Models\CreateMQTTTopicResponse CreateMQTTTopic(Models\CreateMQTTTopicRequest $req) 下线trocket下mqtt接口
+
+创建主题
+ * @method Models\CreateMQTTUserResponse CreateMQTTUser(Models\CreateMQTTUserRequest $req) 下线trocket下mqtt接口
+
+添加mqtt角色
  * @method Models\CreateRoleResponse CreateRole(Models\CreateRoleRequest $req) 添加角色
  * @method Models\CreateTopicResponse CreateTopic(Models\CreateTopicRequest $req) 创建主题
  * @method Models\DeleteConsumerGroupResponse DeleteConsumerGroup(Models\DeleteConsumerGroupRequest $req) 删除消费组。消费者组删除后，消费者组的所有配置和相关数据都会被清空，且无法找回。删除后，在线的消费者客户端会出现报错，建议您提前下线客户端。
  * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) 删除 RocketMQ 5.x 集群，删除前请先删除正在使用的主题、消费组和角色信息。
- * @method Models\DeleteMQTTInsPublicEndpointResponse DeleteMQTTInsPublicEndpoint(Models\DeleteMQTTInsPublicEndpointRequest $req) 删除MQTT实例的公网接入点
- * @method Models\DeleteMQTTInstanceResponse DeleteMQTTInstance(Models\DeleteMQTTInstanceRequest $req) 删除MQTT实例
- * @method Models\DeleteMQTTTopicResponse DeleteMQTTTopic(Models\DeleteMQTTTopicRequest $req) 删除MQTT主题
- * @method Models\DeleteMQTTUserResponse DeleteMQTTUser(Models\DeleteMQTTUserRequest $req) 删除MQTT访问用户
+ * @method Models\DeleteMQTTInsPublicEndpointResponse DeleteMQTTInsPublicEndpoint(Models\DeleteMQTTInsPublicEndpointRequest $req) 下线trocket下mqtt接口
+
+删除MQTT实例的公网接入点
+ * @method Models\DeleteMQTTInstanceResponse DeleteMQTTInstance(Models\DeleteMQTTInstanceRequest $req) 下线trocket下mqtt接口
+
+删除MQTT实例
+ * @method Models\DeleteMQTTTopicResponse DeleteMQTTTopic(Models\DeleteMQTTTopicRequest $req) 下线trocket下mqtt接口
+
+删除MQTT主题
+ * @method Models\DeleteMQTTUserResponse DeleteMQTTUser(Models\DeleteMQTTUserRequest $req) 下线trocket下mqtt接口
+
+删除MQTT访问用户
  * @method Models\DeleteRoleResponse DeleteRole(Models\DeleteRoleRequest $req) 删除角色。请确保该角色相关信息不在当前代码中被使用。删除角色后，原先使用该角色进行生产或消费消息的密钥（AccessKey 和 SecretKey）将立即失效。
  * @method Models\DeleteSmoothMigrationTaskResponse DeleteSmoothMigrationTask(Models\DeleteSmoothMigrationTaskRequest $req) 删除平滑迁移任务，只有被取消的任务才可删除
  * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) 删除主题。主题删除后，主题的所有配置和相关数据都会被清空，且无法找回。
@@ -78,27 +94,51 @@ Filters示例：
     "Name": "InstanceId",
     "Values": ["rmq-72mo3a9o"]
 }]
- * @method Models\DescribeMQTTClientResponse DescribeMQTTClient(Models\DescribeMQTTClientRequest $req) 查询 MQTT 客户端详情
- * @method Models\DescribeMQTTInsPublicEndpointsResponse DescribeMQTTInsPublicEndpoints(Models\DescribeMQTTInsPublicEndpointsRequest $req) 查询MQTT实例公网接入点
- * @method Models\DescribeMQTTInsVPCEndpointsResponse DescribeMQTTInsVPCEndpoints(Models\DescribeMQTTInsVPCEndpointsRequest $req) 查询MQTT实例公网接入点
- * @method Models\DescribeMQTTInstanceResponse DescribeMQTTInstance(Models\DescribeMQTTInstanceRequest $req) 查询实例信息
- * @method Models\DescribeMQTTInstanceCertResponse DescribeMQTTInstanceCert(Models\DescribeMQTTInstanceCertRequest $req) 查询MQTT集群证书列表
- * @method Models\DescribeMQTTInstanceListResponse DescribeMQTTInstanceList(Models\DescribeMQTTInstanceListRequest $req) 获取实例列表，Filters参数使用说明如下：
+ * @method Models\DescribeMQTTClientResponse DescribeMQTTClient(Models\DescribeMQTTClientRequest $req) 下线trocket下mqtt接口
+
+查询 MQTT 客户端详情
+ * @method Models\DescribeMQTTInsPublicEndpointsResponse DescribeMQTTInsPublicEndpoints(Models\DescribeMQTTInsPublicEndpointsRequest $req) 下线trocket下mqtt接口
+
+查询MQTT实例公网接入点
+ * @method Models\DescribeMQTTInsVPCEndpointsResponse DescribeMQTTInsVPCEndpoints(Models\DescribeMQTTInsVPCEndpointsRequest $req) 下线trocket下mqtt接口
+
+查询MQTT实例公网接入点
+ * @method Models\DescribeMQTTInstanceResponse DescribeMQTTInstance(Models\DescribeMQTTInstanceRequest $req) 下线trocket下mqtt接口
+
+查询实例信息
+ * @method Models\DescribeMQTTInstanceCertResponse DescribeMQTTInstanceCert(Models\DescribeMQTTInstanceCertRequest $req) 下线trocket下mqtt接口
+
+查询MQTT集群证书列表
+ * @method Models\DescribeMQTTInstanceListResponse DescribeMQTTInstanceList(Models\DescribeMQTTInstanceListRequest $req) 下线trocket下mqtt接口
+
+获取实例列表，Filters参数使用说明如下：
 1. InstanceName, 名称模糊查询
 2. InstanceId，实例ID查询
 3. InstanceType, 实例类型查询，支持多选
 3. InstanceStatus，实例状态查询，支持多选
 
 当使用TagFilters查询时，Filters参数失效。
- * @method Models\DescribeMQTTMessageResponse DescribeMQTTMessage(Models\DescribeMQTTMessageRequest $req) 查询MQTT消息详情
- * @method Models\DescribeMQTTMessageListResponse DescribeMQTTMessageList(Models\DescribeMQTTMessageListRequest $req) 查询消息列表，如查询死信，请设置ConsumerGroup参数
- * @method Models\DescribeMQTTProductSKUListResponse DescribeMQTTProductSKUList(Models\DescribeMQTTProductSKUListRequest $req) 获取产品售卖规格
- * @method Models\DescribeMQTTTopicResponse DescribeMQTTTopic(Models\DescribeMQTTTopicRequest $req) 查询mqtt主题详情
- * @method Models\DescribeMQTTTopicListResponse DescribeMQTTTopicList(Models\DescribeMQTTTopicListRequest $req) 获取主题列表，Filter参数使用说明如下：
+ * @method Models\DescribeMQTTMessageResponse DescribeMQTTMessage(Models\DescribeMQTTMessageRequest $req) 下线trocket下mqtt接口
+
+查询MQTT消息详情
+ * @method Models\DescribeMQTTMessageListResponse DescribeMQTTMessageList(Models\DescribeMQTTMessageListRequest $req) 下线trocket下mqtt接口
+
+查询消息列表，如查询死信，请设置ConsumerGroup参数
+ * @method Models\DescribeMQTTProductSKUListResponse DescribeMQTTProductSKUList(Models\DescribeMQTTProductSKUListRequest $req) 下线trocket下mqtt接口
+
+获取产品售卖规格
+ * @method Models\DescribeMQTTTopicResponse DescribeMQTTTopic(Models\DescribeMQTTTopicRequest $req) 下线trocket下mqtt接口
+
+查询mqtt主题详情
+ * @method Models\DescribeMQTTTopicListResponse DescribeMQTTTopicList(Models\DescribeMQTTTopicListRequest $req) 下线trocket下mqtt接口
+
+获取主题列表，Filter参数使用说明如下：
 
 1. TopicName，主题名称模糊搜索
 2. TopicType，主题类型查询，支持多选，可选值：Normal,Order,Transaction,DelayScheduled
- * @method Models\DescribeMQTTUserListResponse DescribeMQTTUserList(Models\DescribeMQTTUserListRequest $req) 查询用户列表，Filter参数使用说明如下：
+ * @method Models\DescribeMQTTUserListResponse DescribeMQTTUserList(Models\DescribeMQTTUserListRequest $req) 下线trocket下mqtt接口
+
+查询用户列表，Filter参数使用说明如下：
 
 1. Username，用户名称模糊搜索
  * @method Models\DescribeMessageResponse DescribeMessage(Models\DescribeMessageRequest $req) 查询消息详情。
@@ -127,6 +167,7 @@ Type，根据任务类型精确查找
  * @method Models\DescribeProducerListResponse DescribeProducerList(Models\DescribeProducerListRequest $req) 查询主题关联的生产者列表信息，Filters支持以下筛选条件：
 - ClientIP，客户端IP
 - ClientID，客户端ID
+当前 API 适用集群：5.x 集群。4.x 集群的查询生产者客户端列表接口文档见 [DescribeRocketMQProducers](https://cloud.tencent.com/document/api/1179/122749)。
  * @method Models\DescribeProductSKUsResponse DescribeProductSKUs(Models\DescribeProductSKUsRequest $req) 查询产品售卖规格，针对 RocketMQ 5.x 集群。
  * @method Models\DescribeRoleListResponse DescribeRoleList(Models\DescribeRoleListRequest $req) 查询角色列表，Filter参数使用说明如下：
 
@@ -186,20 +227,33 @@ Filters示例：
  * @method Models\ModifyConsumerGroupResponse ModifyConsumerGroup(Models\ModifyConsumerGroupRequest $req) 修改消费组属性
  * @method Models\ModifyInstanceResponse ModifyInstance(Models\ModifyInstanceRequest $req) 修改 RocketMQ 5.x 集群属性，仅支持修改运行中的集群。
  * @method Models\ModifyInstanceEndpointResponse ModifyInstanceEndpoint(Models\ModifyInstanceEndpointRequest $req) 修改 RocketMQ 5.x 集群接入点，操作前请先确认接入点已存在。
- * @method Models\ModifyMQTTInsPublicEndpointResponse ModifyMQTTInsPublicEndpoint(Models\ModifyMQTTInsPublicEndpointRequest $req) 更新MQTT实例公网接入点
- * @method Models\ModifyMQTTInstanceResponse ModifyMQTTInstance(Models\ModifyMQTTInstanceRequest $req) 修改实例属性
- * @method Models\ModifyMQTTInstanceCertBindingResponse ModifyMQTTInstanceCertBinding(Models\ModifyMQTTInstanceCertBindingRequest $req) 更新MQTT集群绑定证书
+ * @method Models\ModifyMQTTInsPublicEndpointResponse ModifyMQTTInsPublicEndpoint(Models\ModifyMQTTInsPublicEndpointRequest $req) 下线trocket下mqtt接口
+
+更新MQTT实例公网接入点
+ * @method Models\ModifyMQTTInstanceResponse ModifyMQTTInstance(Models\ModifyMQTTInstanceRequest $req) 下线trocket下mqtt接口
+
+修改实例属性
+ * @method Models\ModifyMQTTInstanceCertBindingResponse ModifyMQTTInstanceCertBinding(Models\ModifyMQTTInstanceCertBindingRequest $req) 下线trocket下mqtt接口
+
+更新MQTT集群绑定证书
 参数传空，则为删除证书
- * @method Models\ModifyMQTTTopicResponse ModifyMQTTTopic(Models\ModifyMQTTTopicRequest $req) 修改主题属性
- * @method Models\ModifyMQTTUserResponse ModifyMQTTUser(Models\ModifyMQTTUserRequest $req) 修改MQTT角色
+ * @method Models\ModifyMQTTTopicResponse ModifyMQTTTopic(Models\ModifyMQTTTopicRequest $req) 下线trocket下mqtt接口
+
+修改主题属性
+ * @method Models\ModifyMQTTUserResponse ModifyMQTTUser(Models\ModifyMQTTUserRequest $req) 下线trocket下mqtt接口
+
+修改MQTT角色
  * @method Models\ModifyRoleResponse ModifyRole(Models\ModifyRoleRequest $req) 修改角色
  * @method Models\ModifyTopicResponse ModifyTopic(Models\ModifyTopicRequest $req) 修改主题属性
  * @method Models\RemoveMigratingTopicResponse RemoveMigratingTopic(Models\RemoveMigratingTopicRequest $req) 从迁移列表中移除主题，仅当主题处于初始状态时有效
- * @method Models\ResendDeadLetterMessageResponse ResendDeadLetterMessage(Models\ResendDeadLetterMessageRequest $req) 重新发送死信消息
+ * @method Models\ResendDeadLetterMessageResponse ResendDeadLetterMessage(Models\ResendDeadLetterMessageRequest $req) 重新发送死信消息。
+当前 API 适用集群：5.x集群。4.x 集群的重发死信消息接口文档见 [RetryRocketMQDlqMessage](https://cloud.tencent.com/document/api/1179/114595)。
  * @method Models\ResetConsumerGroupOffsetResponse ResetConsumerGroupOffset(Models\ResetConsumerGroupOffsetRequest $req) 重置消费位点
  * @method Models\RollbackMigratingTopicStageResponse RollbackMigratingTopicStage(Models\RollbackMigratingTopicStageRequest $req) 回滚正在迁移的主题至前一个阶段
- * @method Models\SendMessageResponse SendMessage(Models\SendMessageRequest $req) 发送 RocketMQ 消息，该接口仅用于控制台发送少量测试消息，不保证SLA，且云 API 存在限流，在真实业务场景下，请使用 RocketMQ SDK 发送消息。
- * @method Models\VerifyMessageConsumptionResponse VerifyMessageConsumption(Models\VerifyMessageConsumptionRequest $req) 消息消费验证
+ * @method Models\SendMessageResponse SendMessage(Models\SendMessageRequest $req) 发送 RocketMQ 消息，该接口仅用于控制台发送少量测试消息，不保证 SLA，且云 API 存在限流，在真实业务场景下，请使用 RocketMQ SDK 发送消息。
+当前 API 适用集群：5.x 集群。4.x 集群的发送消息接口文档见 [SendRocketMQMessage](https://cloud.tencent.com/document/api/1179/94179)。
+ * @method Models\VerifyMessageConsumptionResponse VerifyMessageConsumption(Models\VerifyMessageConsumptionRequest $req) 消息消费验证。
+当前 API 适用集群：5.x 集群。4.x 集群的消息消费验证接口文档见 [VerifyRocketMQConsume](https://cloud.tencent.com/document/api/1179/101061)。
  */
 
 class TrocketClient extends AbstractClient

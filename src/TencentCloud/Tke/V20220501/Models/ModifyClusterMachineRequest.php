@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineNames(array $MachineNames) 设置节点名列表
  * @method string getDisplayName() 获取machine的display name
  * @method void setDisplayName(string $DisplayName) 设置machine的display name
+ * @method Disk getSystemDisk() 获取系统盘的信息
+ * @method void setSystemDisk(Disk $SystemDisk) 设置系统盘的信息
  * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取节点预付费信息
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置节点预付费信息
  */
@@ -47,6 +49,11 @@ class ModifyClusterMachineRequest extends AbstractModel
     public $DisplayName;
 
     /**
+     * @var Disk 系统盘的信息
+     */
+    public $SystemDisk;
+
+    /**
      * @var InstanceChargePrepaid 节点预付费信息
      */
     public $InstanceChargePrepaid;
@@ -55,6 +62,7 @@ class ModifyClusterMachineRequest extends AbstractModel
      * @param string $ClusterId 集群 ID
      * @param array $MachineNames 节点名列表
      * @param string $DisplayName machine的display name
+     * @param Disk $SystemDisk 系统盘的信息
      * @param InstanceChargePrepaid $InstanceChargePrepaid 节点预付费信息
      */
     function __construct()
@@ -80,6 +88,11 @@ class ModifyClusterMachineRequest extends AbstractModel
 
         if (array_key_exists("DisplayName",$param) and $param["DisplayName"] !== null) {
             $this->DisplayName = $param["DisplayName"];
+        }
+
+        if (array_key_exists("SystemDisk",$param) and $param["SystemDisk"] !== null) {
+            $this->SystemDisk = new Disk();
+            $this->SystemDisk->deserialize($param["SystemDisk"]);
         }
 
         if (array_key_exists("InstanceChargePrepaid",$param) and $param["InstanceChargePrepaid"] !== null) {

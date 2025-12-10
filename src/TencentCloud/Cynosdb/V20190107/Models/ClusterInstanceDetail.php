@@ -51,11 +51,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceDeviceType() 获取实例机器类型
  * @method void setInstanceDeviceType(string $InstanceDeviceType) 设置实例机器类型
  * @method string getInstanceStorageType() 获取实例存储类型
+说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
  * @method void setInstanceStorageType(string $InstanceStorageType) 设置实例存储类型
+说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
  * @method string getDbMode() 获取数据库类型
  * @method void setDbMode(string $DbMode) 设置数据库类型
  * @method array getNodeList() 获取节点列表
+说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
  * @method void setNodeList(array $NodeList) 设置节点列表
+说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
  */
 class ClusterInstanceDetail extends AbstractModel
 {
@@ -136,6 +140,7 @@ class ClusterInstanceDetail extends AbstractModel
 
     /**
      * @var string 实例存储类型
+说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
      */
     public $InstanceStorageType;
 
@@ -146,6 +151,7 @@ class ClusterInstanceDetail extends AbstractModel
 
     /**
      * @var array 节点列表
+说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
      */
     public $NodeList;
 
@@ -166,8 +172,10 @@ class ClusterInstanceDetail extends AbstractModel
      * @param array $InstanceTasks 实例任务信息
      * @param string $InstanceDeviceType 实例机器类型
      * @param string $InstanceStorageType 实例存储类型
+说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
      * @param string $DbMode 数据库类型
      * @param array $NodeList 节点列表
+说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
      */
     function __construct()
     {

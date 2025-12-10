@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置结束时间
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取限制条数
- * @method void setLimit(integer $Limit) 设置限制条数
+ * @method integer getLimit() 获取限制条数，默认值为20
+ * @method void setLimit(integer $Limit) 设置限制条数，默认值为20
  */
 class DescribeBinlogsRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeBinlogsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 限制条数
+     * @var integer 限制条数，默认值为20
      */
     public $Limit;
 
@@ -63,7 +63,7 @@ class DescribeBinlogsRequest extends AbstractModel
      * @param string $StartTime 开始时间
      * @param string $EndTime 结束时间
      * @param integer $Offset 偏移量
-     * @param integer $Limit 限制条数
+     * @param integer $Limit 限制条数，默认值为20
      */
     function __construct()
     {

@@ -146,6 +146,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLLMMonPkg(LLMMonPkg $LLMMonPkg) 设置预付费大模型安全信息包
  * @method integer getRegionId() 获取地域id
  * @method void setRegionId(integer $RegionId) 设置地域id
+ * @method BotSecurityPkg getBotSecurityPkg() 获取BOT安全护航信息
+ * @method void setBotSecurityPkg(BotSecurityPkg $BotSecurityPkg) 设置BOT安全护航信息
+ * @method BotMonitorPkg getBotMonitorPkg() 获取BOT安全监测资源信息
+ * @method void setBotMonitorPkg(BotMonitorPkg $BotMonitorPkg) 设置BOT安全监测资源信息
  */
 class InstanceInfo extends AbstractModel
 {
@@ -421,6 +425,16 @@ class InstanceInfo extends AbstractModel
     public $RegionId;
 
     /**
+     * @var BotSecurityPkg BOT安全护航信息
+     */
+    public $BotSecurityPkg;
+
+    /**
+     * @var BotMonitorPkg BOT安全监测资源信息
+     */
+    public $BotMonitorPkg;
+
+    /**
      * @param string $InstanceId 实例唯一ID
      * @param string $InstanceName 实例名称
      * @param string $ResourceIds 实例对应资源ID，计费使用
@@ -484,6 +498,8 @@ class InstanceInfo extends AbstractModel
      * @param string $ElasticResourceId 弹性资源Id
      * @param LLMMonPkg $LLMMonPkg 预付费大模型安全信息包
      * @param integer $RegionId 地域id
+     * @param BotSecurityPkg $BotSecurityPkg BOT安全护航信息
+     * @param BotMonitorPkg $BotMonitorPkg BOT安全监测资源信息
      */
     function __construct()
     {
@@ -719,6 +735,16 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
             $this->RegionId = $param["RegionId"];
+        }
+
+        if (array_key_exists("BotSecurityPkg",$param) and $param["BotSecurityPkg"] !== null) {
+            $this->BotSecurityPkg = new BotSecurityPkg();
+            $this->BotSecurityPkg->deserialize($param["BotSecurityPkg"]);
+        }
+
+        if (array_key_exists("BotMonitorPkg",$param) and $param["BotMonitorPkg"] !== null) {
+            $this->BotMonitorPkg = new BotMonitorPkg();
+            $this->BotMonitorPkg->deserialize($param["BotMonitorPkg"]);
         }
     }
 }

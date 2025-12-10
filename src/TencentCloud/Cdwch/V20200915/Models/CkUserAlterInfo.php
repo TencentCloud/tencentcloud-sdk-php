@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassWord(string $PassWord) 设置base64加密后的密码
  * @method string getDescribe() 获取描述
  * @method void setDescribe(string $Describe) 设置描述
+ * @method string getOriginalPassword() 获取账户的当前密码
+ * @method void setOriginalPassword(string $OriginalPassword) 设置账户的当前密码
  */
 class CkUserAlterInfo extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CkUserAlterInfo extends AbstractModel
     public $Describe;
 
     /**
+     * @var string 账户的当前密码
+     */
+    public $OriginalPassword;
+
+    /**
      * @param string $InstanceId 集群实例id
      * @param string $UserName 用户名
      * @param string $PassWord base64加密后的密码
      * @param string $Describe 描述
+     * @param string $OriginalPassword 账户的当前密码
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class CkUserAlterInfo extends AbstractModel
 
         if (array_key_exists("Describe",$param) and $param["Describe"] !== null) {
             $this->Describe = $param["Describe"];
+        }
+
+        if (array_key_exists("OriginalPassword",$param) and $param["OriginalPassword"] !== null) {
+            $this->OriginalPassword = $param["OriginalPassword"];
         }
     }
 }

@@ -84,6 +84,12 @@ presto
  * @method void setCycleUnitList(array $CycleUnitList) 设置调度单位类型列表
  * @method boolean getCanSubmit() 获取是否筛选出可提交的任务
  * @method void setCanSubmit(boolean $CanSubmit) 设置是否筛选出可提交的任务
+ * @method string getTimeZone() 获取返回时间字段需要转换的时区
+ * @method void setTimeZone(string $TimeZone) 设置返回时间字段需要转换的时区
+ * @method string getMinUpdateTime() 获取任务最后更新时间最小值，ISO8601格式，如2025-07-16T15:00:00+08:00
+ * @method void setMinUpdateTime(string $MinUpdateTime) 设置任务最后更新时间最小值，ISO8601格式，如2025-07-16T15:00:00+08:00
+ * @method string getMaxUpdateTime() 获取任务最后更新时间最大值，ISO8601格式，如2025-07-17T15:00:00+08:00
+ * @method void setMaxUpdateTime(string $MaxUpdateTime) 设置任务最后更新时间最大值，ISO8601格式，如2025-07-17T15:00:00+08:00
  */
 class DescribeBatchOperateTaskRequest extends AbstractModel
 {
@@ -204,6 +210,21 @@ presto
     public $CanSubmit;
 
     /**
+     * @var string 返回时间字段需要转换的时区
+     */
+    public $TimeZone;
+
+    /**
+     * @var string 任务最后更新时间最小值，ISO8601格式，如2025-07-16T15:00:00+08:00
+     */
+    public $MinUpdateTime;
+
+    /**
+     * @var string 任务最后更新时间最大值，ISO8601格式，如2025-07-17T15:00:00+08:00
+     */
+    public $MaxUpdateTime;
+
+    /**
      * @param string $ProjectId 项目Id
      * @param string $Page 页码
      * @param string $Size 页号
@@ -236,6 +257,9 @@ presto
      * @param array $DatasourceTypeList 数据源类型列表
      * @param array $CycleUnitList 调度单位类型列表
      * @param boolean $CanSubmit 是否筛选出可提交的任务
+     * @param string $TimeZone 返回时间字段需要转换的时区
+     * @param string $MinUpdateTime 任务最后更新时间最小值，ISO8601格式，如2025-07-16T15:00:00+08:00
+     * @param string $MaxUpdateTime 任务最后更新时间最大值，ISO8601格式，如2025-07-17T15:00:00+08:00
      */
     function __construct()
     {
@@ -332,6 +356,18 @@ presto
 
         if (array_key_exists("CanSubmit",$param) and $param["CanSubmit"] !== null) {
             $this->CanSubmit = $param["CanSubmit"];
+        }
+
+        if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
+            $this->TimeZone = $param["TimeZone"];
+        }
+
+        if (array_key_exists("MinUpdateTime",$param) and $param["MinUpdateTime"] !== null) {
+            $this->MinUpdateTime = $param["MinUpdateTime"];
+        }
+
+        if (array_key_exists("MaxUpdateTime",$param) and $param["MaxUpdateTime"] !== null) {
+            $this->MaxUpdateTime = $param["MaxUpdateTime"];
         }
     }
 }

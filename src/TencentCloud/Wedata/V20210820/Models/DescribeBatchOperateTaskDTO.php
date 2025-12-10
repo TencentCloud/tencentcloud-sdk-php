@@ -78,9 +78,25 @@ presto\SparkJob\SparkSql
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创造时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCycleUnit() 获取周期类型
+ * @method string getCycleUnit() 获取周期类型D天周期
+H小时
+Ccrontab类型
+I分钟
+O一次性
+Y年
+R用户驱动
+W周
+M月
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCycleUnit(string $CycleUnit) 设置周期类型
+ * @method void setCycleUnit(string $CycleUnit) 设置周期类型D天周期
+H小时
+Ccrontab类型
+I分钟
+O一次性
+Y年
+R用户驱动
+W周
+M月
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScheduleDesc() 获取调度计划
 注意：此字段可能返回 null，表示取不到有效值。
@@ -93,6 +109,18 @@ presto\SparkJob\SparkSql
  * @method string getDatasourceType() 获取数据源类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatasourceType(string $DatasourceType) 设置数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getComputeResource() 获取引擎名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setComputeResource(string $ComputeResource) 设置引擎名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDlcRegion() 获取dlc地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDlcRegion(string $DlcRegion) 设置dlc地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIsInherit() 获取资源组或自定义
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsInherit(string $IsInherit) 设置资源组或自定义
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeBatchOperateTaskDTO extends AbstractModel
@@ -183,7 +211,15 @@ presto\SparkJob\SparkSql
     public $CreateTime;
 
     /**
-     * @var string 周期类型
+     * @var string 周期类型D天周期
+H小时
+Ccrontab类型
+I分钟
+O一次性
+Y年
+R用户驱动
+W周
+M月
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CycleUnit;
@@ -205,6 +241,24 @@ presto\SparkJob\SparkSql
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatasourceType;
+
+    /**
+     * @var string 引擎名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ComputeResource;
+
+    /**
+     * @var string dlc地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DlcRegion;
+
+    /**
+     * @var string 资源组或自定义
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsInherit;
 
     /**
      * @param string $TaskId 任务ID
@@ -236,13 +290,27 @@ presto\SparkJob\SparkSql
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创造时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CycleUnit 周期类型
+     * @param string $CycleUnit 周期类型D天周期
+H小时
+Ccrontab类型
+I分钟
+O一次性
+Y年
+R用户驱动
+W周
+M月
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScheduleDesc 调度计划
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatasourceId 数据源ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatasourceType 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ComputeResource 引擎名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DlcRegion dlc地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IsInherit 资源组或自定义
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -328,6 +396,18 @@ presto\SparkJob\SparkSql
 
         if (array_key_exists("DatasourceType",$param) and $param["DatasourceType"] !== null) {
             $this->DatasourceType = $param["DatasourceType"];
+        }
+
+        if (array_key_exists("ComputeResource",$param) and $param["ComputeResource"] !== null) {
+            $this->ComputeResource = $param["ComputeResource"];
+        }
+
+        if (array_key_exists("DlcRegion",$param) and $param["DlcRegion"] !== null) {
+            $this->DlcRegion = $param["DlcRegion"];
+        }
+
+        if (array_key_exists("IsInherit",$param) and $param["IsInherit"] !== null) {
+            $this->IsInherit = $param["IsInherit"];
         }
     }
 }

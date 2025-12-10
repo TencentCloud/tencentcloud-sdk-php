@@ -112,12 +112,16 @@ day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数�
 all：所有协议
 http：指定查询 HTTP 对应指标
 https：指定查询 HTTPS 对应指标
+quic：指定查询 QUIC 对应指标
  * @method void setProtocol(string $Protocol) 设置指定协议查询，不填充表示查询所有协议
 all：所有协议
 http：指定查询 HTTP 对应指标
 https：指定查询 HTTPS 对应指标
- * @method string getDataSource() 获取指定数据源查询，白名单功能
- * @method void setDataSource(string $DataSource) 设置指定数据源查询，白名单功能
+quic：指定查询 QUIC 对应指标
+ * @method string getDataSource() 获取指定数据源查询
+monitor：监控数据
+ * @method void setDataSource(string $DataSource) 设置指定数据源查询
+monitor：监控数据
  * @method string getIpProtocol() 获取指定IP协议查询，不填充表示查询所有协议
 all：所有协议
 ipv4：指定查询 ipv4 对应指标
@@ -234,11 +238,13 @@ day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数�
 all：所有协议
 http：指定查询 HTTP 对应指标
 https：指定查询 HTTPS 对应指标
+quic：指定查询 QUIC 对应指标
      */
     public $Protocol;
 
     /**
-     * @var string 指定数据源查询，白名单功能
+     * @var string 指定数据源查询
+monitor：监控数据
      */
     public $DataSource;
 
@@ -325,7 +331,9 @@ day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数�
 all：所有协议
 http：指定查询 HTTP 对应指标
 https：指定查询 HTTPS 对应指标
-     * @param string $DataSource 指定数据源查询，白名单功能
+quic：指定查询 QUIC 对应指标
+     * @param string $DataSource 指定数据源查询
+monitor：监控数据
      * @param string $IpProtocol 指定IP协议查询，不填充表示查询所有协议
 all：所有协议
 ipv4：指定查询 ipv4 对应指标

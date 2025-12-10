@@ -24,10 +24,12 @@ use TencentCloud\Common\AbstractModel;
 - AsrFullTextRecognition：语音全文识别
 - TransTextRecognition：语音翻译
 - PureSubtitleTrans:   纯字幕翻译
+- OcrFullTextRecognition：文字提取字幕
  * @method void setType(string $Type) 设置任务的类型，取值范围：
 - AsrFullTextRecognition：语音全文识别
 - TransTextRecognition：语音翻译
 - PureSubtitleTrans:   纯字幕翻译
+- OcrFullTextRecognition：文字提取字幕
  * @method SmartSubtitleTaskAsrFullTextResult getAsrFullTextTask() 获取语音全文识别结果，当 Type 为
  AsrFullTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -46,6 +48,12 @@ TransTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPureSubtitleTransTask(PureSubtitleTransResult $PureSubtitleTransTask) 设置当翻译类型为：PureSubtitleTrans 是返回纯字幕文件翻译结果。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method SmartSubtitleTaskFullTextResult getOcrFullTextTask() 获取文字提取字幕结果，当 Type 为
+ OcrFullTextRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOcrFullTextTask(SmartSubtitleTaskFullTextResult $OcrFullTextTask) 设置文字提取字幕结果，当 Type 为
+ OcrFullTextRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SmartSubtitlesResult extends AbstractModel
 {
@@ -54,6 +62,7 @@ class SmartSubtitlesResult extends AbstractModel
 - AsrFullTextRecognition：语音全文识别
 - TransTextRecognition：语音翻译
 - PureSubtitleTrans:   纯字幕翻译
+- OcrFullTextRecognition：文字提取字幕
      */
     public $Type;
 
@@ -79,10 +88,18 @@ TransTextRecognition 时有效。
     public $PureSubtitleTransTask;
 
     /**
+     * @var SmartSubtitleTaskFullTextResult 文字提取字幕结果，当 Type 为
+ OcrFullTextRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OcrFullTextTask;
+
+    /**
      * @param string $Type 任务的类型，取值范围：
 - AsrFullTextRecognition：语音全文识别
 - TransTextRecognition：语音翻译
 - PureSubtitleTrans:   纯字幕翻译
+- OcrFullTextRecognition：文字提取字幕
      * @param SmartSubtitleTaskAsrFullTextResult $AsrFullTextTask 语音全文识别结果，当 Type 为
  AsrFullTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -91,6 +108,9 @@ TransTextRecognition 时有效。
 TransTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PureSubtitleTransResult $PureSubtitleTransTask 当翻译类型为：PureSubtitleTrans 是返回纯字幕文件翻译结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SmartSubtitleTaskFullTextResult $OcrFullTextTask 文字提取字幕结果，当 Type 为
+ OcrFullTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -123,6 +143,11 @@ TransTextRecognition 时有效。
         if (array_key_exists("PureSubtitleTransTask",$param) and $param["PureSubtitleTransTask"] !== null) {
             $this->PureSubtitleTransTask = new PureSubtitleTransResult();
             $this->PureSubtitleTransTask->deserialize($param["PureSubtitleTransTask"]);
+        }
+
+        if (array_key_exists("OcrFullTextTask",$param) and $param["OcrFullTextTask"] !== null) {
+            $this->OcrFullTextTask = new SmartSubtitleTaskFullTextResult();
+            $this->OcrFullTextTask->deserialize($param["OcrFullTextTask"]);
         }
     }
 }

@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioFormat(AudioFormat $AudioFormat) 设置文本转语音的输出音频的格式
  * @method string getAPIKey() 获取TTS的API密钥
  * @method void setAPIKey(string $APIKey) 设置TTS的API密钥
- * @method string getModel() 获取TTS的模型：flow_01_turbo，flow_01_ex
- * @method void setModel(string $Model) 设置TTS的模型：flow_01_turbo，flow_01_ex
- * @method string getLanguage() 获取语言参数，默认为空， 参考： (ISO 639-1) 
- * @method void setLanguage(string $Language) 设置语言参数，默认为空， 参考： (ISO 639-1) 
+ * @method string getModel() 获取TTS的模型，当前固定为：flow_01_turbo
+ * @method void setModel(string $Model) 设置TTS的模型，当前固定为：flow_01_turbo
+ * @method string getLanguage() 获取 需要合成的语言（ISO 639-1），支持 zh（中文）、en（英文）、yue（粤语）、ja（日语）、ko（韩语），默认自动识别
+ * @method void setLanguage(string $Language) 设置 需要合成的语言（ISO 639-1），支持 zh（中文）、en（英文）、yue（粤语）、ja（日语）、ko（韩语），默认自动识别
  */
 class TextToSpeechRequest extends AbstractModel
 {
@@ -64,12 +64,12 @@ class TextToSpeechRequest extends AbstractModel
     public $APIKey;
 
     /**
-     * @var string TTS的模型：flow_01_turbo，flow_01_ex
+     * @var string TTS的模型，当前固定为：flow_01_turbo
      */
     public $Model;
 
     /**
-     * @var string 语言参数，默认为空， 参考： (ISO 639-1) 
+     * @var string  需要合成的语言（ISO 639-1），支持 zh（中文）、en（英文）、yue（粤语）、ja（日语）、ko（韩语），默认自动识别
      */
     public $Language;
 
@@ -79,8 +79,8 @@ class TextToSpeechRequest extends AbstractModel
      * @param integer $SdkAppId TRTC的SdkAppId
      * @param AudioFormat $AudioFormat 文本转语音的输出音频的格式
      * @param string $APIKey TTS的API密钥
-     * @param string $Model TTS的模型：flow_01_turbo，flow_01_ex
-     * @param string $Language 语言参数，默认为空， 参考： (ISO 639-1) 
+     * @param string $Model TTS的模型，当前固定为：flow_01_turbo
+     * @param string $Language  需要合成的语言（ISO 639-1），支持 zh（中文）、en（英文）、yue（粤语）、ja（日语）、ko（韩语），默认自动识别
      */
     function __construct()
     {

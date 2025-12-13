@@ -18,44 +18,44 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TTS的声音参数
+ * TTS的声音参数配置
  *
- * @method string getVoiceId() 获取TTS的声音的ID
- * @method void setVoiceId(string $VoiceId) 设置TTS的声音的ID
- * @method float getSpeed() 获取语速，范围 0.5-2.0，默认 1.0
- * @method void setSpeed(float $Speed) 设置语速，范围 0.5-2.0，默认 1.0
- * @method float getVolume() 获取(0, 10]   默认值1.0 
- * @method void setVolume(float $Volume) 设置(0, 10]   默认值1.0 
- * @method integer getPitch() 获取取值[-12,12],默认0
- * @method void setPitch(integer $Pitch) 设置取值[-12,12],默认0
+ * @method string getVoiceId() 获取 音色 ID，可从音色列表获取，或使用声音克隆生成的自定义音色 ID
+ * @method void setVoiceId(string $VoiceId) 设置 音色 ID，可从音色列表获取，或使用声音克隆生成的自定义音色 ID
+ * @method float getSpeed() 获取语速调节，0.5 为半速慢放，2.0 为两倍速快放，1.0 为正常语速，区间：[0.5, 2.0]，默认1.0
+ * @method void setSpeed(float $Speed) 设置语速调节，0.5 为半速慢放，2.0 为两倍速快放，1.0 为正常语速，区间：[0.5, 2.0]，默认1.0
+ * @method float getVolume() 获取 音量调节，0 为静音，10 为最大音量，建议保持默认值 1.0，区间：[0, 10]，默认1.0
+ * @method void setVolume(float $Volume) 设置 音量调节，0 为静音，10 为最大音量，建议保持默认值 1.0，区间：[0, 10]，默认1.0
+ * @method integer getPitch() 获取 音高调节，负值声音更低沉，正值声音更尖锐，0 为原始音高，区间 [-12, 12],  默认0
+ * @method void setPitch(integer $Pitch) 设置 音高调节，负值声音更低沉，正值声音更尖锐，0 为原始音高，区间 [-12, 12],  默认0
  */
 class Voice extends AbstractModel
 {
     /**
-     * @var string TTS的声音的ID
+     * @var string  音色 ID，可从音色列表获取，或使用声音克隆生成的自定义音色 ID
      */
     public $VoiceId;
 
     /**
-     * @var float 语速，范围 0.5-2.0，默认 1.0
+     * @var float 语速调节，0.5 为半速慢放，2.0 为两倍速快放，1.0 为正常语速，区间：[0.5, 2.0]，默认1.0
      */
     public $Speed;
 
     /**
-     * @var float (0, 10]   默认值1.0 
+     * @var float  音量调节，0 为静音，10 为最大音量，建议保持默认值 1.0，区间：[0, 10]，默认1.0
      */
     public $Volume;
 
     /**
-     * @var integer 取值[-12,12],默认0
+     * @var integer  音高调节，负值声音更低沉，正值声音更尖锐，0 为原始音高，区间 [-12, 12],  默认0
      */
     public $Pitch;
 
     /**
-     * @param string $VoiceId TTS的声音的ID
-     * @param float $Speed 语速，范围 0.5-2.0，默认 1.0
-     * @param float $Volume (0, 10]   默认值1.0 
-     * @param integer $Pitch 取值[-12,12],默认0
+     * @param string $VoiceId  音色 ID，可从音色列表获取，或使用声音克隆生成的自定义音色 ID
+     * @param float $Speed 语速调节，0.5 为半速慢放，2.0 为两倍速快放，1.0 为正常语速，区间：[0.5, 2.0]，默认1.0
+     * @param float $Volume  音量调节，0 为静音，10 为最大音量，建议保持默认值 1.0，区间：[0, 10]，默认1.0
+     * @param integer $Pitch  音高调节，负值声音更低沉，正值声音更尖锐，0 为原始音高，区间 [-12, 12],  默认0
      */
     function __construct()
     {

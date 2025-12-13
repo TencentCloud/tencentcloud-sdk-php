@@ -48,6 +48,7 @@ class ModifyAccountPasswordRequest extends AbstractModel
 
     /**
      * @var boolean 是否跳过校验密码复杂度
+     * @deprecated
      */
     public $SkipValidatePassword;
 

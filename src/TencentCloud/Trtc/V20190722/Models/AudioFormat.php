@@ -20,26 +20,70 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TTS音频输出的格式
  *
- * @method string getFormat() 获取生成的音频格式，默认pcm，目前支持的格式列表：流式：[pcm]，非流式 [pcm，wav]
- * @method void setFormat(string $Format) 设置生成的音频格式，默认pcm，目前支持的格式列表：流式：[pcm]，非流式 [pcm，wav]
- * @method integer getSampleRate() 获取采样率，默认24000， 可选16000, 24000 
- * @method void setSampleRate(integer $SampleRate) 设置采样率，默认24000， 可选16000, 24000 
+ * @method string getFormat() 获取生成的音频格式
+
+- TextToSpeech流式接口
+
+ 支持 pcm, 默认: pcm
+
+- TextToSpeech非流式接口
+
+ 支持 pcm,wav,  默认: pcm
+ * @method void setFormat(string $Format) 设置生成的音频格式
+
+- TextToSpeech流式接口
+
+ 支持 pcm, 默认: pcm
+
+- TextToSpeech非流式接口
+
+ 支持 pcm,wav,  默认: pcm
+ * @method integer getSampleRate() 获取生成的音频采样率，默认24000
+可选
+- 16000
+- 24000 
+ * @method void setSampleRate(integer $SampleRate) 设置生成的音频采样率，默认24000
+可选
+- 16000
+- 24000 
  */
 class AudioFormat extends AbstractModel
 {
     /**
-     * @var string 生成的音频格式，默认pcm，目前支持的格式列表：流式：[pcm]，非流式 [pcm，wav]
+     * @var string 生成的音频格式
+
+- TextToSpeech流式接口
+
+ 支持 pcm, 默认: pcm
+
+- TextToSpeech非流式接口
+
+ 支持 pcm,wav,  默认: pcm
      */
     public $Format;
 
     /**
-     * @var integer 采样率，默认24000， 可选16000, 24000 
+     * @var integer 生成的音频采样率，默认24000
+可选
+- 16000
+- 24000 
      */
     public $SampleRate;
 
     /**
-     * @param string $Format 生成的音频格式，默认pcm，目前支持的格式列表：流式：[pcm]，非流式 [pcm，wav]
-     * @param integer $SampleRate 采样率，默认24000， 可选16000, 24000 
+     * @param string $Format 生成的音频格式
+
+- TextToSpeech流式接口
+
+ 支持 pcm, 默认: pcm
+
+- TextToSpeech非流式接口
+
+ 支持 pcm,wav,  默认: pcm
+     * @param integer $SampleRate 生成的音频采样率，默认24000
+可选
+- 16000
+- 24000 
      */
     function __construct()
     {

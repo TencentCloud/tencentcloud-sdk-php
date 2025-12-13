@@ -64,21 +64,21 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncryptedBody(string $EncryptedBody) 设置加密后的数据。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getIsVerifyIntention() 获取本次请求是否配置开启意愿校验。 
-false：未开启意愿校验 
-true：已开启意愿校验 
-说明：若请求开启了意愿校验，可结合IntentionVerifyType中具体使用的校验模式从对应的出参Result中获取最终的核验结果；若请求没有开启意愿校验，则可在出参Text中获取最终的核验结果。
- * @method void setIsVerifyIntention(boolean $IsVerifyIntention) 设置本次请求是否配置开启意愿校验。 
-false：未开启意愿校验 
-true：已开启意愿校验 
-说明：若请求开启了意愿校验，可结合IntentionVerifyType中具体使用的校验模式从对应的出参Result中获取最终的核验结果；若请求没有开启意愿校验，则可在出参Text中获取最终的核验结果。
- * @method string getIntentionVerifyType() 获取本次请求意愿校验使用的具体模式。
+ * @method boolean getIsVerifyIntention() 获取本次请求是否配置开启意愿核身校验。 
+false：未开启意愿核身校验 
+true：已开启意愿核身校验 
+说明：若请求开启了意愿核身校验，可结合IntentionVerifyType中具体使用的校验模式从对应的出参Result中获取最终的核验结果；若请求没有开启意愿核身校验，则可在出参Text中获取最终的核验结果。
+ * @method void setIsVerifyIntention(boolean $IsVerifyIntention) 设置本次请求是否配置开启意愿核身校验。 
+false：未开启意愿核身校验 
+true：已开启意愿核身校验 
+说明：若请求开启了意愿核身校验，可结合IntentionVerifyType中具体使用的校验模式从对应的出参Result中获取最终的核验结果；若请求没有开启意愿核身校验，则可在出参Text中获取最终的核验结果。
+ * @method string getIntentionVerifyType() 获取本次请求意愿核身校验使用的具体模式。
 0：问答模式
 1：点头确认模式
 2：朗读模式
 若未使用意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值
- * @method void setIntentionVerifyType(string $IntentionVerifyType) 设置本次请求意愿校验使用的具体模式。
+ * @method void setIntentionVerifyType(string $IntentionVerifyType) 设置本次请求意愿核身校验使用的具体模式。
 0：问答模式
 1：点头确认模式
 2：朗读模式
@@ -148,15 +148,15 @@ class GetDetectInfoEnhancedResponse extends AbstractModel
     public $EncryptedBody;
 
     /**
-     * @var boolean 本次请求是否配置开启意愿校验。 
-false：未开启意愿校验 
-true：已开启意愿校验 
-说明：若请求开启了意愿校验，可结合IntentionVerifyType中具体使用的校验模式从对应的出参Result中获取最终的核验结果；若请求没有开启意愿校验，则可在出参Text中获取最终的核验结果。
+     * @var boolean 本次请求是否配置开启意愿核身校验。 
+false：未开启意愿核身校验 
+true：已开启意愿核身校验 
+说明：若请求开启了意愿核身校验，可结合IntentionVerifyType中具体使用的校验模式从对应的出参Result中获取最终的核验结果；若请求没有开启意愿核身校验，则可在出参Text中获取最终的核验结果。
      */
     public $IsVerifyIntention;
 
     /**
-     * @var string 本次请求意愿校验使用的具体模式。
+     * @var string 本次请求意愿核身校验使用的具体模式。
 0：问答模式
 1：点头确认模式
 2：朗读模式
@@ -193,11 +193,11 @@ true：已开启意愿校验
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EncryptedBody 加密后的数据。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $IsVerifyIntention 本次请求是否配置开启意愿校验。 
-false：未开启意愿校验 
-true：已开启意愿校验 
-说明：若请求开启了意愿校验，可结合IntentionVerifyType中具体使用的校验模式从对应的出参Result中获取最终的核验结果；若请求没有开启意愿校验，则可在出参Text中获取最终的核验结果。
-     * @param string $IntentionVerifyType 本次请求意愿校验使用的具体模式。
+     * @param boolean $IsVerifyIntention 本次请求是否配置开启意愿核身校验。 
+false：未开启意愿核身校验 
+true：已开启意愿核身校验 
+说明：若请求开启了意愿核身校验，可结合IntentionVerifyType中具体使用的校验模式从对应的出参Result中获取最终的核验结果；若请求没有开启意愿核身校验，则可在出参Text中获取最终的核验结果。
+     * @param string $IntentionVerifyType 本次请求意愿核身校验使用的具体模式。
 0：问答模式
 1：点头确认模式
 2：朗读模式

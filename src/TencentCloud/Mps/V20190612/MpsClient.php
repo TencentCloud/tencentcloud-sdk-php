@@ -243,6 +243,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\ResetWorkflowResponse ResetWorkflow(Models\ResetWorkflowRequest $req) 重新设置一个已经存在且处于禁用状态的工作流。
  * @method Models\StartStreamLinkFlowResponse StartStreamLinkFlow(Models\StartStreamLinkFlowRequest $req) 启动媒体传输流。
  * @method Models\StopStreamLinkFlowResponse StopStreamLinkFlow(Models\StopStreamLinkFlowRequest $req) 停止媒体传输流。
+ * @method Models\TextTranslationResponse TextTranslation(Models\TextTranslationRequest $req) 文本翻译
  * @method Models\WithdrawsWatermarkResponse WithdrawsWatermark(Models\WithdrawsWatermarkRequest $req) 提取视频中的盲水印。
  */
 

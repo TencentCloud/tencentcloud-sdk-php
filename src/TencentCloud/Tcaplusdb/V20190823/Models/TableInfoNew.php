@@ -78,6 +78,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTxhBackupExpireDay(integer $TxhBackupExpireDay) 设置表格Txh备份文件多少天后过期删除
  * @method SyncTableInfo getSyncTableInfo() 获取表格的缓写信息
  * @method void setSyncTableInfo(SyncTableInfo $SyncTableInfo) 设置表格的缓写信息
+ * @method integer getShardNum() 获取表格分片数量
+ * @method void setShardNum(integer $ShardNum) 设置表格分片数量
  */
 class TableInfoNew extends AbstractModel
 {
@@ -227,6 +229,11 @@ class TableInfoNew extends AbstractModel
     public $SyncTableInfo;
 
     /**
+     * @var integer 表格分片数量
+     */
+    public $ShardNum;
+
+    /**
      * @param string $TableName 表格名称
      * @param string $TableInstanceId 表格实例ID
      * @param string $TableType 表格数据结构类型，如：`GENERIC`或`LIST`
@@ -256,6 +263,7 @@ class TableInfoNew extends AbstractModel
      * @param string $DbClusterInfoStruct 表格分布式索引/缓写、kafka数据订阅信息
      * @param integer $TxhBackupExpireDay 表格Txh备份文件多少天后过期删除
      * @param SyncTableInfo $SyncTableInfo 表格的缓写信息
+     * @param integer $ShardNum 表格分片数量
      */
     function __construct()
     {
@@ -391,6 +399,10 @@ class TableInfoNew extends AbstractModel
         if (array_key_exists("SyncTableInfo",$param) and $param["SyncTableInfo"] !== null) {
             $this->SyncTableInfo = new SyncTableInfo();
             $this->SyncTableInfo->deserialize($param["SyncTableInfo"]);
+        }
+
+        if (array_key_exists("ShardNum",$param) and $param["ShardNum"] !== null) {
+            $this->ShardNum = $param["ShardNum"];
         }
     }
 }

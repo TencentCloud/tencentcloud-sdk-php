@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ReplaceRouteTableAssociation请求参数结构体
  *
- * @method string getSubnetId() 获取子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
- * @method void setSubnetId(string $SubnetId) 设置子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
  * @method string getRouteTableId() 获取路由表实例ID，例如：rtb-azd4dt1c。
  * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID，例如：rtb-azd4dt1c。
+ * @method string getSubnetId() 获取子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。对于存在子网唯一ID的子网，该参数为必选；否则， SubnetId和CidrBlock必选二选一。
+ * @method void setSubnetId(string $SubnetId) 设置子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。对于存在子网唯一ID的子网，该参数为必选；否则， SubnetId和CidrBlock必选二选一。
  */
 class ReplaceRouteTableAssociationRequest extends AbstractModel
 {
-    /**
-     * @var string 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
-     */
-    public $SubnetId;
-
     /**
      * @var string 路由表实例ID，例如：rtb-azd4dt1c。
      */
     public $RouteTableId;
 
     /**
-     * @param string $SubnetId 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
+     * @var string 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。对于存在子网唯一ID的子网，该参数为必选；否则， SubnetId和CidrBlock必选二选一。
+     */
+    public $SubnetId;
+
+    /**
      * @param string $RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
+     * @param string $SubnetId 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。对于存在子网唯一ID的子网，该参数为必选；否则， SubnetId和CidrBlock必选二选一。
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class ReplaceRouteTableAssociationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
-        }
-
         if (array_key_exists("RouteTableId",$param) and $param["RouteTableId"] !== null) {
             $this->RouteTableId = $param["RouteTableId"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

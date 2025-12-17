@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWorkflowRun请求参数结构体
  *
- * @method string getAppBizId() 获取应用ID
- * @method void setAppBizId(string $AppBizId) 设置应用ID
+ * @method string getAppBizId() 获取应用ID, 获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
+ * @method void setAppBizId(string $AppBizId) 设置应用ID, 获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
  * @method string getWorkflowRunId() 获取工作流运行实例ID
  * @method void setWorkflowRunId(string $WorkflowRunId) 设置工作流运行实例ID
  * @method string getSubWorkflowNodePath() 获取指定的子工作流对应的NodePath。
@@ -50,7 +50,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeWorkflowRunRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string 应用ID, 获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
      */
     public $AppBizId;
 
@@ -79,7 +79,7 @@ class DescribeWorkflowRunRequest extends AbstractModel
     public $IncludeWorkflowGraph;
 
     /**
-     * @param string $AppBizId 应用ID
+     * @param string $AppBizId 应用ID, 获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
      * @param string $WorkflowRunId 工作流运行实例ID
      * @param string $SubWorkflowNodePath 指定的子工作流对应的NodePath。
 格式：`[<node_id>[<index>].]*<node_id>[<index>]`

@@ -22,16 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUin() 获取用户uin
  * @method void setUin(string $Uin) 设置用户uin
+ * @method string getEnvId() 获取环境ID
+ * @method void setEnvId(string $EnvId) 设置环境ID
  * @method integer getActivityId() 获取活动id
  * @method void setActivityId(integer $ActivityId) 设置活动id
+ * @method string getActivityName() 获取活动名称（唯一英文标识）
+ * @method void setActivityName(string $ActivityName) 设置活动名称（唯一英文标识）
  * @method integer getStatus() 获取自定义状态码
  * @method void setStatus(integer $Status) 设置自定义状态码
  * @method string getSubStatus() 获取自定义子状态码
  * @method void setSubStatus(string $SubStatus) 设置自定义子状态码
  * @method integer getSubStatusInt() 获取整型子状态码
  * @method void setSubStatusInt(integer $SubStatusInt) 设置整型子状态码
- * @method boolean getIsDeleted() 获取是否软删除
- * @method void setIsDeleted(boolean $IsDeleted) 设置是否软删除
+ * @method boolean getIsDeleted() 获取是否已删除
+ * @method void setIsDeleted(boolean $IsDeleted) 设置是否已删除
+ * @method string getCreateTime() 获取活动参与时间
+ * @method void setCreateTime(string $CreateTime) 设置活动参与时间
  */
 class ActivityRecordItem extends AbstractModel
 {
@@ -41,9 +47,19 @@ class ActivityRecordItem extends AbstractModel
     public $Uin;
 
     /**
+     * @var string 环境ID
+     */
+    public $EnvId;
+
+    /**
      * @var integer 活动id
      */
     public $ActivityId;
+
+    /**
+     * @var string 活动名称（唯一英文标识）
+     */
+    public $ActivityName;
 
     /**
      * @var integer 自定义状态码
@@ -61,17 +77,25 @@ class ActivityRecordItem extends AbstractModel
     public $SubStatusInt;
 
     /**
-     * @var boolean 是否软删除
+     * @var boolean 是否已删除
      */
     public $IsDeleted;
 
     /**
+     * @var string 活动参与时间
+     */
+    public $CreateTime;
+
+    /**
      * @param string $Uin 用户uin
+     * @param string $EnvId 环境ID
      * @param integer $ActivityId 活动id
+     * @param string $ActivityName 活动名称（唯一英文标识）
      * @param integer $Status 自定义状态码
      * @param string $SubStatus 自定义子状态码
      * @param integer $SubStatusInt 整型子状态码
-     * @param boolean $IsDeleted 是否软删除
+     * @param boolean $IsDeleted 是否已删除
+     * @param string $CreateTime 活动参与时间
      */
     function __construct()
     {
@@ -90,8 +114,16 @@ class ActivityRecordItem extends AbstractModel
             $this->Uin = $param["Uin"];
         }
 
+        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
+            $this->EnvId = $param["EnvId"];
+        }
+
         if (array_key_exists("ActivityId",$param) and $param["ActivityId"] !== null) {
             $this->ActivityId = $param["ActivityId"];
+        }
+
+        if (array_key_exists("ActivityName",$param) and $param["ActivityName"] !== null) {
+            $this->ActivityName = $param["ActivityName"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
@@ -108,6 +140,10 @@ class ActivityRecordItem extends AbstractModel
 
         if (array_key_exists("IsDeleted",$param) and $param["IsDeleted"] !== null) {
             $this->IsDeleted = $param["IsDeleted"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

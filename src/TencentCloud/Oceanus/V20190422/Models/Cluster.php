@@ -202,6 +202,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogCOSBucket() 获取集群的日志cos存储
  * @method void setLogCOSBucket(string $LogCOSBucket) 设置集群的日志cos存储
+ * @method string getCdcId() 获取Cdc集群Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCdcId(string $CdcId) 设置Cdc集群Id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -525,6 +529,12 @@ class Cluster extends AbstractModel
     public $LogCOSBucket;
 
     /**
+     * @var string Cdc集群Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CdcId;
+
+    /**
      * @param string $ClusterId 集群 ID
      * @param string $Name 集群名称
      * @param string $Region 地域
@@ -616,6 +626,8 @@ class Cluster extends AbstractModel
      * @param array $SlaveZones 备可用区
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogCOSBucket 集群的日志cos存储
+     * @param string $CdcId Cdc集群Id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -899,6 +911,10 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("LogCOSBucket",$param) and $param["LogCOSBucket"] !== null) {
             $this->LogCOSBucket = $param["LogCOSBucket"];
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
         }
     }
 }

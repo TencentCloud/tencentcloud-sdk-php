@@ -64,6 +64,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlarmShieldStatus(integer $AlarmShieldStatus) 设置免登录操作告警开关。可取值如下：
 -      1：关闭
 -      2：开启（默认值）
+ * @method boolean getCallbackPrioritize() 获取统一设定自定义回调参数。
+-  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
+-  false:优先使用告警策略中单独配置的请求头及请求内容。
+ * @method void setCallbackPrioritize(boolean $CallbackPrioritize) 设置统一设定自定义回调参数。
+-  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
+-  false:优先使用告警策略中单独配置的请求头及请求内容。
  */
 class CreateAlarmNoticeRequest extends AbstractModel
 {
@@ -130,6 +136,13 @@ class CreateAlarmNoticeRequest extends AbstractModel
     public $AlarmShieldStatus;
 
     /**
+     * @var boolean 统一设定自定义回调参数。
+-  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
+-  false:优先使用告警策略中单独配置的请求头及请求内容。
+     */
+    public $CallbackPrioritize;
+
+    /**
      * @param string $Name 通知渠道组名称。最大支持255个字节。 不支持 '|'。
      * @param array $Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。
      * @param string $Type 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
@@ -152,6 +165,9 @@ class CreateAlarmNoticeRequest extends AbstractModel
      * @param integer $AlarmShieldStatus 免登录操作告警开关。可取值如下：
 -      1：关闭
 -      2：开启（默认值）
+     * @param boolean $CallbackPrioritize 统一设定自定义回调参数。
+-  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
+-  false:优先使用告警策略中单独配置的请求头及请求内容。
      */
     function __construct()
     {
@@ -225,6 +241,10 @@ class CreateAlarmNoticeRequest extends AbstractModel
 
         if (array_key_exists("AlarmShieldStatus",$param) and $param["AlarmShieldStatus"] !== null) {
             $this->AlarmShieldStatus = $param["AlarmShieldStatus"];
+        }
+
+        if (array_key_exists("CallbackPrioritize",$param) and $param["CallbackPrioritize"] !== null) {
+            $this->CallbackPrioritize = $param["CallbackPrioritize"];
         }
     }
 }

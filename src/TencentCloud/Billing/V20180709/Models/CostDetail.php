@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComponentSet(array $ComponentSet) 设置组件明细
  * @method string getProductCode() 获取子产品名称代码
  * @method void setProductCode(string $ProductCode) 设置子产品名称代码
+ * @method array getTags() 获取标签信息	
+ * @method void setTags(array $Tags) 设置标签信息	
  */
 class CostDetail extends AbstractModel
 {
@@ -136,6 +138,11 @@ class CostDetail extends AbstractModel
     public $ProductCode;
 
     /**
+     * @var array 标签信息	
+     */
+    public $Tags;
+
+    /**
      * @param string $PayerUin 支付者uin
      * @param string $BusinessCodeName 产品名称
      * @param string $ProductCodeName 子产品名称
@@ -152,6 +159,7 @@ class CostDetail extends AbstractModel
      * @param string $FeeEndTime 费用结束时间
      * @param array $ComponentSet 组件明细
      * @param string $ProductCode 子产品名称代码
+     * @param array $Tags 标签信息	
      */
     function __construct()
     {
@@ -233,6 +241,15 @@ class CostDetail extends AbstractModel
 
         if (array_key_exists("ProductCode",$param) and $param["ProductCode"] !== null) {
             $this->ProductCode = $param["ProductCode"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new BillTagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

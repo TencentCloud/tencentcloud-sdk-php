@@ -20,86 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 导播台布局参数。
  *
- * @method integer getLayoutIndex() 获取布局Index。
- * @method void setLayoutIndex(integer $LayoutIndex) 设置布局Index。
- * @method integer getLayoutTemplateId() 获取布局模板Id。
-有效值[1，20，21，31，32，41]
-当使用布局模板时，无需LayoutParams参数，导播台将使用模板布局参数。
-
- * @method void setLayoutTemplateId(integer $LayoutTemplateId) 设置布局模板Id。
-有效值[1，20，21，31，32，41]
-当使用布局模板时，无需LayoutParams参数，导播台将使用模板布局参数。
-
- * @method string getInputIndexList() 获取布局绑定的输入列表。按布局LayerId从小到大，按顺序排列。
-已有两个画面的布局为例，输入1对应LayerId为1，输入2对应的LayerId为2，该字段应该填入"1|2"。
- * @method void setInputIndexList(string $InputIndexList) 设置布局绑定的输入列表。按布局LayerId从小到大，按顺序排列。
-已有两个画面的布局为例，输入1对应LayerId为1，输入2对应的LayerId为2，该字段应该填入"1|2"。
- * @method array getLayoutParams() 获取详细的布局参数列表。
- * @method void setLayoutParams(array $LayoutParams) 设置详细的布局参数列表。
- * @method integer getLayoutWidth() 获取布局输出的宽度，单位为像素。
-默认为1280像素。
-注：该值仅在画中画布局，且未设置PgmWidth时生效。
- * @method void setLayoutWidth(integer $LayoutWidth) 设置布局输出的宽度，单位为像素。
-默认为1280像素。
-注：该值仅在画中画布局，且未设置PgmWidth时生效。
- * @method integer getLayoutHeight() 获取布局输出的高度，单位为像素。
-注：该参数仅在画中画布局，且未设置PgmHeight时生效。
- * @method void setLayoutHeight(integer $LayoutHeight) 设置布局输出的高度，单位为像素。
-注：该参数仅在画中画布局，且未设置PgmHeight时生效。
+ * @method integer getLayoutIndex() 获取<p>布局Index。</p>取值范围：[1, 1000]
+ * @method void setLayoutIndex(integer $LayoutIndex) 设置<p>布局Index。</p>取值范围：[1, 1000]
+ * @method integer getLayoutTemplateId() 获取<p>布局模板Id。有效值[1，20，21，31，32，41]当使用布局模板时，无需LayoutParams参数，导播台将使用模板布局参数。</p>
+ * @method void setLayoutTemplateId(integer $LayoutTemplateId) 设置<p>布局模板Id。有效值[1，20，21，31，32，41]当使用布局模板时，无需LayoutParams参数，导播台将使用模板布局参数。</p>
+ * @method string getInputIndexList() 获取<p>布局绑定的输入列表。按布局LayerId从小到大，按顺序排列。已有两个画面的布局为例，输入1对应LayerId为1，输入2对应的LayerId为2，该字段应该填入"1|2"。</p>
+ * @method void setInputIndexList(string $InputIndexList) 设置<p>布局绑定的输入列表。按布局LayerId从小到大，按顺序排列。已有两个画面的布局为例，输入1对应LayerId为1，输入2对应的LayerId为2，该字段应该填入"1|2"。</p>
+ * @method array getLayoutParams() 获取<p>详细的布局参数列表。</p>
+ * @method void setLayoutParams(array $LayoutParams) 设置<p>详细的布局参数列表。</p>
+ * @method integer getLayoutWidth() 获取<p>布局输出的宽度，单位为像素。默认为1280像素。注：该值仅在画中画布局，且未设置PgmWidth时生效。</p>
+ * @method void setLayoutWidth(integer $LayoutWidth) 设置<p>布局输出的宽度，单位为像素。默认为1280像素。注：该值仅在画中画布局，且未设置PgmWidth时生效。</p>
+ * @method integer getLayoutHeight() 获取<p>布局输出的高度，单位为像素。注：该参数仅在画中画布局，且未设置PgmHeight时生效。</p>
+ * @method void setLayoutHeight(integer $LayoutHeight) 设置<p>布局输出的高度，单位为像素。注：该参数仅在画中画布局，且未设置PgmHeight时生效。</p>
  */
 class CasterLayoutInfo extends AbstractModel
 {
     /**
-     * @var integer 布局Index。
+     * @var integer <p>布局Index。</p>取值范围：[1, 1000]
      */
     public $LayoutIndex;
 
     /**
-     * @var integer 布局模板Id。
-有效值[1，20，21，31，32，41]
-当使用布局模板时，无需LayoutParams参数，导播台将使用模板布局参数。
-
+     * @var integer <p>布局模板Id。有效值[1，20，21，31，32，41]当使用布局模板时，无需LayoutParams参数，导播台将使用模板布局参数。</p>
      */
     public $LayoutTemplateId;
 
     /**
-     * @var string 布局绑定的输入列表。按布局LayerId从小到大，按顺序排列。
-已有两个画面的布局为例，输入1对应LayerId为1，输入2对应的LayerId为2，该字段应该填入"1|2"。
+     * @var string <p>布局绑定的输入列表。按布局LayerId从小到大，按顺序排列。已有两个画面的布局为例，输入1对应LayerId为1，输入2对应的LayerId为2，该字段应该填入"1|2"。</p>
      */
     public $InputIndexList;
 
     /**
-     * @var array 详细的布局参数列表。
+     * @var array <p>详细的布局参数列表。</p>
      */
     public $LayoutParams;
 
     /**
-     * @var integer 布局输出的宽度，单位为像素。
-默认为1280像素。
-注：该值仅在画中画布局，且未设置PgmWidth时生效。
+     * @var integer <p>布局输出的宽度，单位为像素。默认为1280像素。注：该值仅在画中画布局，且未设置PgmWidth时生效。</p>
      */
     public $LayoutWidth;
 
     /**
-     * @var integer 布局输出的高度，单位为像素。
-注：该参数仅在画中画布局，且未设置PgmHeight时生效。
+     * @var integer <p>布局输出的高度，单位为像素。注：该参数仅在画中画布局，且未设置PgmHeight时生效。</p>
      */
     public $LayoutHeight;
 
     /**
-     * @param integer $LayoutIndex 布局Index。
-     * @param integer $LayoutTemplateId 布局模板Id。
-有效值[1，20，21，31，32，41]
-当使用布局模板时，无需LayoutParams参数，导播台将使用模板布局参数。
-
-     * @param string $InputIndexList 布局绑定的输入列表。按布局LayerId从小到大，按顺序排列。
-已有两个画面的布局为例，输入1对应LayerId为1，输入2对应的LayerId为2，该字段应该填入"1|2"。
-     * @param array $LayoutParams 详细的布局参数列表。
-     * @param integer $LayoutWidth 布局输出的宽度，单位为像素。
-默认为1280像素。
-注：该值仅在画中画布局，且未设置PgmWidth时生效。
-     * @param integer $LayoutHeight 布局输出的高度，单位为像素。
-注：该参数仅在画中画布局，且未设置PgmHeight时生效。
+     * @param integer $LayoutIndex <p>布局Index。</p>取值范围：[1, 1000]
+     * @param integer $LayoutTemplateId <p>布局模板Id。有效值[1，20，21，31，32，41]当使用布局模板时，无需LayoutParams参数，导播台将使用模板布局参数。</p>
+     * @param string $InputIndexList <p>布局绑定的输入列表。按布局LayerId从小到大，按顺序排列。已有两个画面的布局为例，输入1对应LayerId为1，输入2对应的LayerId为2，该字段应该填入"1|2"。</p>
+     * @param array $LayoutParams <p>详细的布局参数列表。</p>
+     * @param integer $LayoutWidth <p>布局输出的宽度，单位为像素。默认为1280像素。注：该值仅在画中画布局，且未设置PgmWidth时生效。</p>
+     * @param integer $LayoutHeight <p>布局输出的高度，单位为像素。注：该参数仅在画中画布局，且未设置PgmHeight时生效。</p>
      */
     function __construct()
     {

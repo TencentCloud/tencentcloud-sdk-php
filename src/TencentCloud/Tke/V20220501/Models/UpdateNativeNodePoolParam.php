@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyIds(array $KeyIds) 设置ssh公钥id数组
  * @method array getGPUConfigs() 获取节点池 GPU 配置
  * @method void setGPUConfigs(array $GPUConfigs) 设置节点池 GPU 配置
+ * @method string getPassword() 获取原生节点池密码
+ * @method void setPassword(string $Password) 设置原生节点池密码
  */
 class UpdateNativeNodePoolParam extends AbstractModel
 {
@@ -180,6 +182,11 @@ class UpdateNativeNodePoolParam extends AbstractModel
     public $GPUConfigs;
 
     /**
+     * @var string 原生节点池密码
+     */
+    public $Password;
+
+    /**
      * @param MachineSetScaling $Scaling 伸缩配置
      * @param array $SubnetIds 子网列表
      * @param array $SecurityGroupIds 安全组列表
@@ -204,6 +211,7 @@ class UpdateNativeNodePoolParam extends AbstractModel
      * @param array $DataDisks 数据盘列表
      * @param array $KeyIds ssh公钥id数组
      * @param array $GPUConfigs 节点池 GPU 配置
+     * @param string $Password 原生节点池密码
      */
     function __construct()
     {
@@ -316,6 +324,10 @@ class UpdateNativeNodePoolParam extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->GPUConfigs, $obj);
             }
+        }
+
+        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
+            $this->Password = $param["Password"];
         }
     }
 }

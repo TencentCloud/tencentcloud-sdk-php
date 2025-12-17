@@ -213,6 +213,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeTaskByCycleResponse DescribeTaskByCycle(Models\DescribeTaskByCycleRequest $req) 根据周期类型 查询所有任务
  * @method Models\DescribeTaskByStatusReportResponse DescribeTaskByStatusReport(Models\DescribeTaskByStatusReportRequest $req) 任务状态趋势
  * @method Models\DescribeTaskDetailDsResponse DescribeTaskDetailDs(Models\DescribeTaskDetailDsRequest $req) 查询任务具体详情【新】
+ * @method Models\DescribeTaskInstancesStatusResponse DescribeTaskInstancesStatus(Models\DescribeTaskInstancesStatusRequest $req) 分组获取编排空间调试任务实例状态信息
  * @method Models\DescribeTaskLineageResponse DescribeTaskLineage(Models\DescribeTaskLineageRequest $req) 通过任务查询表的血缘关系
  * @method Models\DescribeTaskLockStatusResponse DescribeTaskLockStatus(Models\DescribeTaskLockStatusRequest $req) 查看任务锁状态信息
  * @method Models\DescribeTaskParamDsResponse DescribeTaskParamDs(Models\DescribeTaskParamDsRequest $req) 查询任务引用参数

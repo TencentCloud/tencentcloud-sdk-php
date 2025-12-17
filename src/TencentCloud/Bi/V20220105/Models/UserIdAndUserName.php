@@ -40,9 +40,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置停启用状态
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getFirstModify() 获取首次登陆是否修改密码
+ * @method integer getFirstModify() 获取首次登录是否修改密码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFirstModify(integer $FirstModify) 设置首次登陆是否修改密码
+ * @method void setFirstModify(integer $FirstModify) 设置首次登录是否修改密码
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPhoneNumber() 获取手机号码
 注意：此字段可能返回 null，表示取不到有效值。
@@ -60,21 +60,21 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedAt(string $CreatedAt) 设置创建时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdatedUser() 获取更改人
+ * @method string getUpdatedUser() 获取修改人
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdatedUser(string $UpdatedUser) 设置更改人
+ * @method void setUpdatedUser(string $UpdatedUser) 设置修改人
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdatedAt() 获取更改时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedAt(string $UpdatedAt) 设置更改时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getGlobalUserName() 获取全局角色
+ * @method string getGlobalUserName() 获取系统全局角色
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGlobalUserName(string $GlobalUserName) 设置全局角色
+ * @method void setGlobalUserName(string $GlobalUserName) 设置系统全局角色
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getGlobalUserCode() 获取全局角色编码
+ * @method string getGlobalUserCode() 获取系统全局角色编码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGlobalUserCode(string $GlobalUserCode) 设置全局角色编码
+ * @method void setGlobalUserCode(string $GlobalUserCode) 设置系统全局角色编码
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMobile() 获取手机号
 注意：此字段可能返回 null，表示取不到有效值。
@@ -146,7 +146,7 @@ class UserIdAndUserName extends AbstractModel
     public $Status;
 
     /**
-     * @var integer 首次登陆是否修改密码
+     * @var integer 首次登录是否修改密码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FirstModify;
@@ -176,7 +176,7 @@ class UserIdAndUserName extends AbstractModel
     public $CreatedAt;
 
     /**
-     * @var string 更改人
+     * @var string 修改人
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedUser;
@@ -188,13 +188,13 @@ class UserIdAndUserName extends AbstractModel
     public $UpdatedAt;
 
     /**
-     * @var string 全局角色
+     * @var string 系统全局角色
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GlobalUserName;
 
     /**
-     * @var string 全局角色编码
+     * @var string 系统全局角色编码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GlobalUserCode;
@@ -258,7 +258,7 @@ class UserIdAndUserName extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 停启用状态
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $FirstModify 首次登陆是否修改密码
+     * @param integer $FirstModify 首次登录是否修改密码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PhoneNumber 手机号码
 注意：此字段可能返回 null，表示取不到有效值。
@@ -268,13 +268,13 @@ class UserIdAndUserName extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedAt 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdatedUser 更改人
+     * @param string $UpdatedUser 修改人
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdatedAt 更改时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $GlobalUserName 全局角色
+     * @param string $GlobalUserName 系统全局角色
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $GlobalUserCode 全局角色编码
+     * @param string $GlobalUserCode 系统全局角色编码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Mobile 手机号
 注意：此字段可能返回 null，表示取不到有效值。

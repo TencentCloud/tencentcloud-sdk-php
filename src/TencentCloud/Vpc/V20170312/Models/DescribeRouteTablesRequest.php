@@ -27,6 +27,7 @@ use TencentCloud\Common\AbstractModel;
 <li>association.main - String - （过滤条件）是否主路由表。</li>
 <li>tag-key - String -是否必填：否 - （过滤条件）按照标签键进行过滤。</li>
 <li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
+<li>visible - String - （过滤条件）是否可见。</li>
 <li>next-hop-type - String - 是否必填：否 - （过滤条件）按下一跳类型进行过滤。使用next-hop-type进行过滤时，必须同时携带route-table-id与vpc-id。
 目前我们支持的类型有：
 LOCAL: 本地路由
@@ -40,6 +41,7 @@ NORMAL_CVM：普通云服务器；
 EIP：云服务器的公网IP；
 CCN：云联网；
 LOCAL_GATEWAY：本地网关。
+GWLB_ENDPOINT：网关负载均衡终端节点。
 </li>
  * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定RouteTableIds和Filters。
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>
@@ -48,6 +50,7 @@ LOCAL_GATEWAY：本地网关。
 <li>association.main - String - （过滤条件）是否主路由表。</li>
 <li>tag-key - String -是否必填：否 - （过滤条件）按照标签键进行过滤。</li>
 <li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
+<li>visible - String - （过滤条件）是否可见。</li>
 <li>next-hop-type - String - 是否必填：否 - （过滤条件）按下一跳类型进行过滤。使用next-hop-type进行过滤时，必须同时携带route-table-id与vpc-id。
 目前我们支持的类型有：
 LOCAL: 本地路由
@@ -61,6 +64,7 @@ NORMAL_CVM：普通云服务器；
 EIP：云服务器的公网IP；
 CCN：云联网；
 LOCAL_GATEWAY：本地网关。
+GWLB_ENDPOINT：网关负载均衡终端节点。
 </li>
  * @method array getRouteTableIds() 获取路由表实例ID，例如：rtb-azd4dt1c。
  * @method void setRouteTableIds(array $RouteTableIds) 设置路由表实例ID，例如：rtb-azd4dt1c。
@@ -81,6 +85,7 @@ class DescribeRouteTablesRequest extends AbstractModel
 <li>association.main - String - （过滤条件）是否主路由表。</li>
 <li>tag-key - String -是否必填：否 - （过滤条件）按照标签键进行过滤。</li>
 <li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
+<li>visible - String - （过滤条件）是否可见。</li>
 <li>next-hop-type - String - 是否必填：否 - （过滤条件）按下一跳类型进行过滤。使用next-hop-type进行过滤时，必须同时携带route-table-id与vpc-id。
 目前我们支持的类型有：
 LOCAL: 本地路由
@@ -94,6 +99,7 @@ NORMAL_CVM：普通云服务器；
 EIP：云服务器的公网IP；
 CCN：云联网；
 LOCAL_GATEWAY：本地网关。
+GWLB_ENDPOINT：网关负载均衡终端节点。
 </li>
      */
     public $Filters;
@@ -126,6 +132,7 @@ LOCAL_GATEWAY：本地网关。
 <li>association.main - String - （过滤条件）是否主路由表。</li>
 <li>tag-key - String -是否必填：否 - （过滤条件）按照标签键进行过滤。</li>
 <li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
+<li>visible - String - （过滤条件）是否可见。</li>
 <li>next-hop-type - String - 是否必填：否 - （过滤条件）按下一跳类型进行过滤。使用next-hop-type进行过滤时，必须同时携带route-table-id与vpc-id。
 目前我们支持的类型有：
 LOCAL: 本地路由
@@ -139,6 +146,7 @@ NORMAL_CVM：普通云服务器；
 EIP：云服务器的公网IP；
 CCN：云联网；
 LOCAL_GATEWAY：本地网关。
+GWLB_ENDPOINT：网关负载均衡终端节点。
 </li>
      * @param array $RouteTableIds 路由表实例ID，例如：rtb-azd4dt1c。
      * @param string $Offset 偏移量。

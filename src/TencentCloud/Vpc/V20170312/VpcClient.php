@@ -167,7 +167,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\CreateNetworkInterfaceResponse CreateNetworkInterface(Models\CreateNetworkInterfaceRequest $req) 本接口（CreateNetworkInterface）用于创建弹性网卡。
 * 创建弹性网卡时可以指定内网IP，并且可以指定一个主IP，指定的内网IP必须在弹性网卡所在子网内，而且不能被占用。
 * 创建弹性网卡时可以指定需要申请的内网IP数量，系统会随机生成内网IP地址。
-* 一个弹性网卡支持绑定的IP地址是有限制的，更多资源限制信息详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
+* 一个弹性网卡支持绑定的IP地址是有限制的，更多资源限制信息详见<a href="https://cloud.tencent.com/document/product/576/18527">弹性网卡使用限制</a>。
 * 创建弹性网卡同时可以绑定已有安全组。
 * 创建弹性网卡同时可以绑定标签, 响应里的标签列表代表添加成功的标签。
 >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
@@ -434,6 +434,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DescribeReserveIpAddressesResponse DescribeReserveIpAddresses(Models\DescribeReserveIpAddressesRequest $req) 查询内网保留 IP
  * @method Models\DescribeRouteConflictsResponse DescribeRouteConflicts(Models\DescribeRouteConflictsRequest $req) 本接口（DescribeRouteConflicts）用于查询自定义路由策略与云联网路由策略冲突列表。
  * @method Models\DescribeRouteListResponse DescribeRouteList(Models\DescribeRouteListRequest $req) 本接口（DescribeRouteList）用于查询路由条目列表。
+ * @method Models\DescribeRoutePoliciesResponse DescribeRoutePolicies(Models\DescribeRoutePoliciesRequest $req) 本接口（DescribeRoutePolicies）用于查询路由策略列表。
  * @method Models\DescribeRoutePolicyEntriesResponse DescribeRoutePolicyEntries(Models\DescribeRoutePolicyEntriesRequest $req) 本接口（DescribeRoutePolicyEntries）用于查询路由接收策略条目列表。
  * @method Models\DescribeRouteTableAssociatedInstancesResponse DescribeRouteTableAssociatedInstances(Models\DescribeRouteTableAssociatedInstancesRequest $req) 本接口（DescribeRouteTableAssociatedInstances）用于查询指定的云联网关联的实例所绑定的路由表信息。
  * @method Models\DescribeRouteTableSelectionPoliciesResponse DescribeRouteTableSelectionPolicies(Models\DescribeRouteTableSelectionPoliciesRequest $req) 本接口（DescribeRouteTableSelectionPolicies）用于查询云联网路由表选择策略。

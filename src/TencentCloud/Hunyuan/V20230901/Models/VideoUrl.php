@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 当type为video_url时使用，标识具体的视频链接内容
  *
- * @method string getUrl() 获取视频的url，如"https://your-video-path.mp/4"
- * @method void setUrl(string $Url) 设置视频的url，如"https://your-video-path.mp/4"
+ * @method string getUrl() 获取视频的url，如"https://your-video-path.mp4"，视频文件大小不超过100M。
+ * @method void setUrl(string $Url) 设置视频的url，如"https://your-video-path.mp4"，视频文件大小不超过100M。
  * @method float getFps() 获取控制视频抽帧频率，取值范围为 0.1 ~5，表示每隔 1/fps 秒抽取一帧，默认为 1s抽取一帧
  * @method void setFps(float $Fps) 设置控制视频抽帧频率，取值范围为 0.1 ~5，表示每隔 1/fps 秒抽取一帧，默认为 1s抽取一帧
  */
 class VideoUrl extends AbstractModel
 {
     /**
-     * @var string 视频的url，如"https://your-video-path.mp/4"
+     * @var string 视频的url，如"https://your-video-path.mp4"，视频文件大小不超过100M。
      */
     public $Url;
 
@@ -38,7 +38,7 @@ class VideoUrl extends AbstractModel
     public $Fps;
 
     /**
-     * @param string $Url 视频的url，如"https://your-video-path.mp/4"
+     * @param string $Url 视频的url，如"https://your-video-path.mp4"，视频文件大小不超过100M。
      * @param float $Fps 控制视频抽帧频率，取值范围为 0.1 ~5，表示每隔 1/fps 秒抽取一帧，默认为 1s抽取一帧
      */
     function __construct()

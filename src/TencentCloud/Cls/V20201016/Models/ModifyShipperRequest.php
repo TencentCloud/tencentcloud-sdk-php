@@ -78,6 +78,10 @@ use TencentCloud\Common\AbstractModel;
 - MAZ_STANDARD_IA：低频存储（多 AZ）
 - INTELLIGENT_TIERING：智能分层存储
 - MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
+ * @method string getRoleArn() 获取角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+ * @method void setRoleArn(string $RoleArn) 设置角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+ * @method string getExternalId() 获取外部ID
+ * @method void setExternalId(string $ExternalId) 设置外部ID
  */
 class ModifyShipperRequest extends AbstractModel
 {
@@ -163,6 +167,16 @@ class ModifyShipperRequest extends AbstractModel
     public $StorageType;
 
     /**
+     * @var string 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     */
+    public $RoleArn;
+
+    /**
+     * @var string 外部ID
+     */
+    public $ExternalId;
+
+    /**
      * @param string $ShipperId 投递规则Id。
 
 - 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745)获取ShipperId。
@@ -192,6 +206,8 @@ class ModifyShipperRequest extends AbstractModel
 - MAZ_STANDARD_IA：低频存储（多 AZ）
 - INTELLIGENT_TIERING：智能分层存储
 - MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
+     * @param string $RoleArn 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     * @param string $ExternalId 外部ID
      */
     function __construct()
     {
@@ -263,6 +279,14 @@ class ModifyShipperRequest extends AbstractModel
 
         if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
             $this->StorageType = $param["StorageType"];
+        }
+
+        if (array_key_exists("RoleArn",$param) and $param["RoleArn"] !== null) {
+            $this->RoleArn = $param["RoleArn"];
+        }
+
+        if (array_key_exists("ExternalId",$param) and $param["ExternalId"] !== null) {
+            $this->ExternalId = $param["ExternalId"];
         }
     }
 }

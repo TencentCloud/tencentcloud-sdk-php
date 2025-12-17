@@ -33,6 +33,7 @@ class DescribeVpcEndPointServiceWhiteListResponse extends AbstractModel
 {
     /**
      * @var array 白名单对象数组。已废弃
+     * @deprecated
      */
     public $VpcEndpointServiceUserSet;
 

@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
 * 0:仅包含开启键值索引的元数据字段
 * 1:包含所有元数据字段
 * 2:不包含任何元数据字段
+ * @method string getCoverageField() 获取自定义日志解析异常存储字段。
+ * @method void setCoverageField(string $CoverageField) 设置自定义日志解析异常存储字段。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -89,6 +91,11 @@ class DescribeIndexResponse extends AbstractModel
     public $MetadataFlag;
 
     /**
+     * @var string 自定义日志解析异常存储字段。
+     */
+    public $CoverageField;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -107,6 +114,7 @@ class DescribeIndexResponse extends AbstractModel
 * 0:仅包含开启键值索引的元数据字段
 * 1:包含所有元数据字段
 * 2:不包含任何元数据字段
+     * @param string $CoverageField 自定义日志解析异常存储字段。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -145,6 +153,10 @@ class DescribeIndexResponse extends AbstractModel
 
         if (array_key_exists("MetadataFlag",$param) and $param["MetadataFlag"] !== null) {
             $this->MetadataFlag = $param["MetadataFlag"];
+        }
+
+        if (array_key_exists("CoverageField",$param) and $param["CoverageField"] !== null) {
+            $this->CoverageField = $param["CoverageField"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

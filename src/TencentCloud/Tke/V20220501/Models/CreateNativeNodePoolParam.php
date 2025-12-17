@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineType(string $MachineType) 设置节点池类型
  * @method boolean getAutomationService() 获取原生节点池安装节点自动化助手开关
  * @method void setAutomationService(boolean $AutomationService) 设置原生节点池安装节点自动化助手开关
+ * @method string getPassword() 获取原生节点池密码
+ * @method void setPassword(string $Password) 设置原生节点池密码
  */
 class CreateNativeNodePoolParam extends AbstractModel
 {
@@ -185,6 +187,11 @@ class CreateNativeNodePoolParam extends AbstractModel
     public $AutomationService;
 
     /**
+     * @var string 原生节点池密码
+     */
+    public $Password;
+
+    /**
      * @param MachineSetScaling $Scaling 节点池伸缩配置
      * @param array $SubnetIds 子网列表
      * @param string $InstanceChargeType 节点计费类型。PREPAID：包年包月；POSTPAID_BY_HOUR：按量计费（默认）；
@@ -208,6 +215,7 @@ class CreateNativeNodePoolParam extends AbstractModel
      * @param array $KeyIds 节点池ssh公钥id数组
      * @param string $MachineType 节点池类型
      * @param boolean $AutomationService 原生节点池安装节点自动化助手开关
+     * @param string $Password 原生节点池密码
      */
     function __construct()
     {
@@ -324,6 +332,10 @@ class CreateNativeNodePoolParam extends AbstractModel
 
         if (array_key_exists("AutomationService",$param) and $param["AutomationService"] !== null) {
             $this->AutomationService = $param["AutomationService"];
+        }
+
+        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
+            $this->Password = $param["Password"];
         }
     }
 }

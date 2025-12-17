@@ -26,6 +26,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapshotName(string $SnapshotName) 设置快照名称
  * @method string getIndices() 获取索引名称
  * @method void setIndices(string $Indices) 设置索引名称
+ * @method integer getEsRepositoryType() 获取0 腾讯云仓库; 1 客户仓库
+ * @method void setEsRepositoryType(integer $EsRepositoryType) 设置0 腾讯云仓库; 1 客户仓库
+ * @method string getUserEsRepository() 获取客户快照仓库名称
+ * @method void setUserEsRepository(string $UserEsRepository) 设置客户快照仓库名称
+ * @method integer getStorageDuration() 获取快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+ * @method void setStorageDuration(integer $StorageDuration) 设置快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+ * @method integer getCosRetention() 获取备份锁定 0 不锁定; 1 锁定
+ * @method void setCosRetention(integer $CosRetention) 设置备份锁定 0 不锁定; 1 锁定
+ * @method string getRetainUntilDate() 获取锁定截止日期 2022-12-10T08:34:48.000Z
+ * @method void setRetainUntilDate(string $RetainUntilDate) 设置锁定截止日期 2022-12-10T08:34:48.000Z
+ * @method integer getRetentionGraceTime() 获取锁定宽限期,单位天
+ * @method void setRetentionGraceTime(integer $RetentionGraceTime) 设置锁定宽限期,单位天
+ * @method integer getRemoteCos() 获取跨地域备份 0 不跨地域; 1 跨地域
+ * @method void setRemoteCos(integer $RemoteCos) 设置跨地域备份 0 不跨地域; 1 跨地域
+ * @method string getRemoteCosRegion() 获取跨地域备份地域名称 ap-guangzhou
+ * @method void setRemoteCosRegion(string $RemoteCosRegion) 设置跨地域备份地域名称 ap-guangzhou
  */
 class CreateClusterSnapshotRequest extends AbstractModel
 {
@@ -45,9 +61,57 @@ class CreateClusterSnapshotRequest extends AbstractModel
     public $Indices;
 
     /**
+     * @var integer 0 腾讯云仓库; 1 客户仓库
+     */
+    public $EsRepositoryType;
+
+    /**
+     * @var string 客户快照仓库名称
+     */
+    public $UserEsRepository;
+
+    /**
+     * @var integer 快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+     */
+    public $StorageDuration;
+
+    /**
+     * @var integer 备份锁定 0 不锁定; 1 锁定
+     */
+    public $CosRetention;
+
+    /**
+     * @var string 锁定截止日期 2022-12-10T08:34:48.000Z
+     */
+    public $RetainUntilDate;
+
+    /**
+     * @var integer 锁定宽限期,单位天
+     */
+    public $RetentionGraceTime;
+
+    /**
+     * @var integer 跨地域备份 0 不跨地域; 1 跨地域
+     */
+    public $RemoteCos;
+
+    /**
+     * @var string 跨地域备份地域名称 ap-guangzhou
+     */
+    public $RemoteCosRegion;
+
+    /**
      * @param string $InstanceId 实例名称
      * @param string $SnapshotName 快照名称
      * @param string $Indices 索引名称
+     * @param integer $EsRepositoryType 0 腾讯云仓库; 1 客户仓库
+     * @param string $UserEsRepository 客户快照仓库名称
+     * @param integer $StorageDuration 快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+     * @param integer $CosRetention 备份锁定 0 不锁定; 1 锁定
+     * @param string $RetainUntilDate 锁定截止日期 2022-12-10T08:34:48.000Z
+     * @param integer $RetentionGraceTime 锁定宽限期,单位天
+     * @param integer $RemoteCos 跨地域备份 0 不跨地域; 1 跨地域
+     * @param string $RemoteCosRegion 跨地域备份地域名称 ap-guangzhou
      */
     function __construct()
     {
@@ -72,6 +136,38 @@ class CreateClusterSnapshotRequest extends AbstractModel
 
         if (array_key_exists("Indices",$param) and $param["Indices"] !== null) {
             $this->Indices = $param["Indices"];
+        }
+
+        if (array_key_exists("EsRepositoryType",$param) and $param["EsRepositoryType"] !== null) {
+            $this->EsRepositoryType = $param["EsRepositoryType"];
+        }
+
+        if (array_key_exists("UserEsRepository",$param) and $param["UserEsRepository"] !== null) {
+            $this->UserEsRepository = $param["UserEsRepository"];
+        }
+
+        if (array_key_exists("StorageDuration",$param) and $param["StorageDuration"] !== null) {
+            $this->StorageDuration = $param["StorageDuration"];
+        }
+
+        if (array_key_exists("CosRetention",$param) and $param["CosRetention"] !== null) {
+            $this->CosRetention = $param["CosRetention"];
+        }
+
+        if (array_key_exists("RetainUntilDate",$param) and $param["RetainUntilDate"] !== null) {
+            $this->RetainUntilDate = $param["RetainUntilDate"];
+        }
+
+        if (array_key_exists("RetentionGraceTime",$param) and $param["RetentionGraceTime"] !== null) {
+            $this->RetentionGraceTime = $param["RetentionGraceTime"];
+        }
+
+        if (array_key_exists("RemoteCos",$param) and $param["RemoteCos"] !== null) {
+            $this->RemoteCos = $param["RemoteCos"];
+        }
+
+        if (array_key_exists("RemoteCosRegion",$param) and $param["RemoteCosRegion"] !== null) {
+            $this->RemoteCosRegion = $param["RemoteCosRegion"];
         }
     }
 }

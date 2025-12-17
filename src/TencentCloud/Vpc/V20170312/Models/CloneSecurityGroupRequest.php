@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 若指定Tags入参且指定IsCloneTags为true，会合并源安全组的标签和新增的标签。
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
 若指定Tags入参且指定IsCloneTags为true，会合并源安全组的标签和新增的标签。
+ * @method boolean getIsCloneTags() 获取是否克隆标签。
+ * @method void setIsCloneTags(boolean $IsCloneTags) 设置是否克隆标签。
  */
 class CloneSecurityGroupRequest extends AbstractModel
 {
@@ -69,6 +71,11 @@ class CloneSecurityGroupRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var boolean 是否克隆标签。
+     */
+    public $IsCloneTags;
+
+    /**
      * @param string $SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。
      * @param string $GroupName 安全组名称，可任意命名，但不得超过60个字符。未提供参数时，克隆后的安全组名称和SecurityGroupId对应的安全组名称相同。
      * @param string $GroupDescription 安全组备注，最多100个字符。未提供参数时，克隆后的安全组备注和SecurityGroupId对应的安全组备注相同。
@@ -76,6 +83,7 @@ class CloneSecurityGroupRequest extends AbstractModel
      * @param string $RemoteRegion 源Region,跨地域克隆安全组时，需要传入源安全组所属地域信息，例如：克隆广州的安全组到上海，则这里需要传入广州安全的地域信息：ap-guangzhou。
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
 若指定Tags入参且指定IsCloneTags为true，会合并源安全组的标签和新增的标签。
+     * @param boolean $IsCloneTags 是否克隆标签。
      */
     function __construct()
     {
@@ -117,6 +125,10 @@ class CloneSecurityGroupRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("IsCloneTags",$param) and $param["IsCloneTags"] !== null) {
+            $this->IsCloneTags = $param["IsCloneTags"];
         }
     }
 }

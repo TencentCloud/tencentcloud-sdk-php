@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRejectedQuestion请求参数结构体
  *
- * @method string getBotBizId() 获取应用ID
- * @method void setBotBizId(string $BotBizId) 设置应用ID
+ * @method string getBotBizId() 获取应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
+ * @method void setBotBizId(string $BotBizId) 设置应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
  * @method array getRejectedBizIds() 获取拒答问题来源的数据源唯一id
 
 
@@ -31,7 +31,7 @@ use TencentCloud\Common\AbstractModel;
 class DeleteRejectedQuestionRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
      */
     public $BotBizId;
 
@@ -44,7 +44,7 @@ class DeleteRejectedQuestionRequest extends AbstractModel
     public $RejectedBizIds;
 
     /**
-     * @param string $BotBizId 应用ID
+     * @param string $BotBizId 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
      * @param array $RejectedBizIds 拒答问题来源的数据源唯一id
      */
     function __construct()

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAttributeLabel请求参数结构体
  *
- * @method string getBotBizId() 获取应用ID
- * @method void setBotBizId(string $BotBizId) 设置应用ID
+ * @method string getBotBizId() 获取应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+ * @method void setBotBizId(string $BotBizId) 设置应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
  * @method array getAttributeBizIds() 获取标签ID
  * @method void setAttributeBizIds(array $AttributeBizIds) 设置标签ID
  * @method string getLoginUin() 获取登录用户主账号(集成商模式必填)
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DeleteAttributeLabelRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public $BotBizId;
 
@@ -52,7 +52,7 @@ class DeleteAttributeLabelRequest extends AbstractModel
     public $LoginSubAccountUin;
 
     /**
-     * @param string $BotBizId 应用ID
+     * @param string $BotBizId 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      * @param array $AttributeBizIds 标签ID
      * @param string $LoginUin 登录用户主账号(集成商模式必填)
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)

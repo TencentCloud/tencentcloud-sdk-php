@@ -26,6 +26,7 @@ use TencentCloud\Igtm\V20231024\Models as Models;
  * @method Models\CreateAddressPoolResponse CreateAddressPool(Models\CreateAddressPoolRequest $req) 创建地址池
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 创建实例接口，仅供免费实例使用
  * @method Models\CreateMonitorResponse CreateMonitor(Models\CreateMonitorRequest $req) 新增监控器
+ * @method Models\CreatePackageAndPayResponse CreatePackageAndPay(Models\CreatePackageAndPayRequest $req) 购买套餐并支付，此接口会在余额扣费，谨慎调用
  * @method Models\CreateStrategyResponse CreateStrategy(Models\CreateStrategyRequest $req) 新建策略接口
  * @method Models\DeleteAddressPoolResponse DeleteAddressPool(Models\DeleteAddressPoolRequest $req) 删除地址池
  * @method Models\DeleteMonitorResponse DeleteMonitor(Models\DeleteMonitorRequest $req) 删除监控器
@@ -48,6 +49,7 @@ use TencentCloud\Igtm\V20231024\Models as Models;
  * @method Models\ModifyAddressPoolResponse ModifyAddressPool(Models\ModifyAddressPoolRequest $req) 修改地址池
  * @method Models\ModifyInstanceConfigResponse ModifyInstanceConfig(Models\ModifyInstanceConfigRequest $req) 修改实例配置
  * @method Models\ModifyMonitorResponse ModifyMonitor(Models\ModifyMonitorRequest $req) 修改监控器
+ * @method Models\ModifyPackageAutoRenewResponse ModifyPackageAutoRenew(Models\ModifyPackageAutoRenewRequest $req) 设置自动续费接口
  * @method Models\ModifyStrategyResponse ModifyStrategy(Models\ModifyStrategyRequest $req) 修改策略接口
  */
 

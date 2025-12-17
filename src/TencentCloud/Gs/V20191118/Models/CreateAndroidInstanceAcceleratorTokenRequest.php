@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAndroidInstanceAcceleratorToken请求参数结构体
  *
- * @method string getUserIP() 获取用户IP，用户客户端的公网IP，用于就近选择起始加速节点
- * @method void setUserIP(string $UserIP) 设置用户IP，用户客户端的公网IP，用于就近选择起始加速节点
  * @method array getAndroidInstanceIds() 获取实例 ID 列表。每次请求的实例的上限为 500。
  * @method void setAndroidInstanceIds(array $AndroidInstanceIds) 设置实例 ID 列表。每次请求的实例的上限为 500。
+ * @method string getUserIP() 获取用户IP，可以根据该 IP 选择就近加速点。如果不填，将自动选择就近加速点。
+ * @method void setUserIP(string $UserIP) 设置用户IP，可以根据该 IP 选择就近加速点。如果不填，将自动选择就近加速点。
  */
 class CreateAndroidInstanceAcceleratorTokenRequest extends AbstractModel
 {
-    /**
-     * @var string 用户IP，用户客户端的公网IP，用于就近选择起始加速节点
-     */
-    public $UserIP;
-
     /**
      * @var array 实例 ID 列表。每次请求的实例的上限为 500。
      */
     public $AndroidInstanceIds;
 
     /**
-     * @param string $UserIP 用户IP，用户客户端的公网IP，用于就近选择起始加速节点
+     * @var string 用户IP，可以根据该 IP 选择就近加速点。如果不填，将自动选择就近加速点。
+     */
+    public $UserIP;
+
+    /**
      * @param array $AndroidInstanceIds 实例 ID 列表。每次请求的实例的上限为 500。
+     * @param string $UserIP 用户IP，可以根据该 IP 选择就近加速点。如果不填，将自动选择就近加速点。
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class CreateAndroidInstanceAcceleratorTokenRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UserIP",$param) and $param["UserIP"] !== null) {
-            $this->UserIP = $param["UserIP"];
-        }
-
         if (array_key_exists("AndroidInstanceIds",$param) and $param["AndroidInstanceIds"] !== null) {
             $this->AndroidInstanceIds = $param["AndroidInstanceIds"];
+        }
+
+        if (array_key_exists("UserIP",$param) and $param["UserIP"] !== null) {
+            $this->UserIP = $param["UserIP"];
         }
     }
 }

@@ -88,6 +88,20 @@ MAZ_STANDARD：标准存储（多 AZ）
 MAZ_STANDARD_IA：低频存储（多 AZ）
 INTELLIGENT_TIERING：智能分层存储
 MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
+ * @method string getRoleArn() 获取角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+ * @method void setRoleArn(string $RoleArn) 设置角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+ * @method string getExternalId() 获取外部ID
+ * @method void setExternalId(string $ExternalId) 设置外部ID
+ * @method integer getTaskStatus() 获取任务运行状态。支持`0`,`1`,`2`
+
+- `0`: 停止
+- `1`: 运行中
+- `2`: 异常
+ * @method void setTaskStatus(integer $TaskStatus) 设置任务运行状态。支持`0`,`1`,`2`
+
+- `0`: 停止
+- `1`: 运行中
+- `2`: 异常
  */
 class ShipperInfo extends AbstractModel
 {
@@ -206,6 +220,25 @@ MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
     public $StorageType;
 
     /**
+     * @var string 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     */
+    public $RoleArn;
+
+    /**
+     * @var string 外部ID
+     */
+    public $ExternalId;
+
+    /**
+     * @var integer 任务运行状态。支持`0`,`1`,`2`
+
+- `0`: 停止
+- `1`: 运行中
+- `2`: 异常
+     */
+    public $TaskStatus;
+
+    /**
      * @param string $ShipperId 投递规则ID
      * @param string $TopicId 日志主题ID
      * @param string $Bucket 投递的bucket地址
@@ -240,6 +273,13 @@ MAZ_STANDARD：标准存储（多 AZ）
 MAZ_STANDARD_IA：低频存储（多 AZ）
 INTELLIGENT_TIERING：智能分层存储
 MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
+     * @param string $RoleArn 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     * @param string $ExternalId 外部ID
+     * @param integer $TaskStatus 任务运行状态。支持`0`,`1`,`2`
+
+- `0`: 停止
+- `1`: 运行中
+- `2`: 异常
      */
     function __construct()
     {
@@ -339,6 +379,18 @@ MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
 
         if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
             $this->StorageType = $param["StorageType"];
+        }
+
+        if (array_key_exists("RoleArn",$param) and $param["RoleArn"] !== null) {
+            $this->RoleArn = $param["RoleArn"];
+        }
+
+        if (array_key_exists("ExternalId",$param) and $param["ExternalId"] !== null) {
+            $this->ExternalId = $param["ExternalId"];
+        }
+
+        if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
+            $this->TaskStatus = $param["TaskStatus"];
         }
     }
 }

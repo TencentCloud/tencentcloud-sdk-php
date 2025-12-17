@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogsetName(string $LogsetName) 设置日志集名称
  * @method string getCreateTime() 获取创建时间。格式 `YYYY-MM-DD HH:MM:SS`
  * @method void setCreateTime(string $CreateTime) 设置创建时间。格式 `YYYY-MM-DD HH:MM:SS`
+ * @method integer getAssumerUin() 获取若AssumerUin非空，则表示创建该日志集的服务方Uin
+ * @method void setAssumerUin(integer $AssumerUin) 设置若AssumerUin非空，则表示创建该日志集的服务方Uin
  * @method string getAssumerName() 获取云产品标识，日志集由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
  * @method void setAssumerName(string $AssumerName) 设置云产品标识，日志集由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
  * @method array getTags() 获取日志集绑定的标签
@@ -34,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicCount(integer $TopicCount) 设置日志集下日志主题的数目
  * @method string getRoleName() 获取若AssumerName非空，则表示创建该日志集的服务方角色
  * @method void setRoleName(string $RoleName) 设置若AssumerName非空，则表示创建该日志集的服务方角色
+ * @method integer getMetricTopicCount() 获取日志集下指标主题的数目
+ * @method void setMetricTopicCount(integer $MetricTopicCount) 设置日志集下指标主题的数目
  */
 class LogsetInfo extends AbstractModel
 {
@@ -51,6 +55,11 @@ class LogsetInfo extends AbstractModel
      * @var string 创建时间。格式 `YYYY-MM-DD HH:MM:SS`
      */
     public $CreateTime;
+
+    /**
+     * @var integer 若AssumerUin非空，则表示创建该日志集的服务方Uin
+     */
+    public $AssumerUin;
 
     /**
      * @var string 云产品标识，日志集由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
@@ -73,13 +82,20 @@ class LogsetInfo extends AbstractModel
     public $RoleName;
 
     /**
+     * @var integer 日志集下指标主题的数目
+     */
+    public $MetricTopicCount;
+
+    /**
      * @param string $LogsetId 日志集ID
      * @param string $LogsetName 日志集名称
      * @param string $CreateTime 创建时间。格式 `YYYY-MM-DD HH:MM:SS`
+     * @param integer $AssumerUin 若AssumerUin非空，则表示创建该日志集的服务方Uin
      * @param string $AssumerName 云产品标识，日志集由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
      * @param array $Tags 日志集绑定的标签
      * @param integer $TopicCount 日志集下日志主题的数目
      * @param string $RoleName 若AssumerName非空，则表示创建该日志集的服务方角色
+     * @param integer $MetricTopicCount 日志集下指标主题的数目
      */
     function __construct()
     {
@@ -106,6 +122,10 @@ class LogsetInfo extends AbstractModel
             $this->CreateTime = $param["CreateTime"];
         }
 
+        if (array_key_exists("AssumerUin",$param) and $param["AssumerUin"] !== null) {
+            $this->AssumerUin = $param["AssumerUin"];
+        }
+
         if (array_key_exists("AssumerName",$param) and $param["AssumerName"] !== null) {
             $this->AssumerName = $param["AssumerName"];
         }
@@ -125,6 +145,10 @@ class LogsetInfo extends AbstractModel
 
         if (array_key_exists("RoleName",$param) and $param["RoleName"] !== null) {
             $this->RoleName = $param["RoleName"];
+        }
+
+        if (array_key_exists("MetricTopicCount",$param) and $param["MetricTopicCount"] !== null) {
+            $this->MetricTopicCount = $param["MetricTopicCount"];
         }
     }
 }

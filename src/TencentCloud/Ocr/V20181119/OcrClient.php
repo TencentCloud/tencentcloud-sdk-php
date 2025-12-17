@@ -83,6 +83,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\EstateCertOCRResponse EstateCertOCR(Models\EstateCertOCRRequest $req) 本接口支持不动产权证关键字段的识别，包括使用期限、面积、用途、权利性质、权利类型、坐落、共有情况、权利人、权利其他状况等。
 
 默认接口请求频率限制：5次/秒。
+ * @method Models\ExtractDocAgentResponse ExtractDocAgent(Models\ExtractDocAgentRequest $req) 用于查询文档处理任务。文档处理领域里常见的通用Agent 如抽取、比对之类的，目前我们提供的抽取，但未来可以根据实际情况和客户需求扩展。
  * @method Models\ExtractDocBasicResponse ExtractDocBasic(Models\ExtractDocBasicRequest $req) 本接口支持识别并提取制式卡证、票据、表单等结构化场景的字段信息。无需任何配置，灵活高效。适用于各类结构化信息录入场景。点击[立即体验](https://ocrdemo.cloud.tencent.com/?action=ExtractDocBasic)。
 
 接口别名：SmartStructuralOCRV2

@@ -69,7 +69,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\DescribeTokenUsageGraphResponse DescribeTokenUsageGraph(Models\DescribeTokenUsageGraphRequest $req) 接口调用token折线图
  * @method Models\DescribeUnsatisfiedReplyContextResponse DescribeUnsatisfiedReplyContext(Models\DescribeUnsatisfiedReplyContextRequest $req) 获取不满意回复上下文
  * @method Models\DescribeWorkflowRunResponse DescribeWorkflowRun(Models\DescribeWorkflowRunRequest $req) 创建了工作流的异步运行实例后，通过本接口可以查询整体的运行详情。
- * @method Models\ExportAttributeLabelResponse ExportAttributeLabel(Models\ExportAttributeLabelRequest $req) 导出属性标签
+ * @method Models\ExportAttributeLabelResponse ExportAttributeLabel(Models\ExportAttributeLabelRequest $req) 导出标签
  * @method Models\ExportQAListResponse ExportQAList(Models\ExportQAListRequest $req) 导出QA列表
  * @method Models\ExportUnsatisfiedReplyResponse ExportUnsatisfiedReply(Models\ExportUnsatisfiedReplyRequest $req) 导出不满意回复
  * @method Models\GenerateQAResponse GenerateQA(Models\GenerateQARequest $req) 文档生成问答
@@ -103,7 +103,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\ListReleaseConfigPreviewResponse ListReleaseConfigPreview(Models\ListReleaseConfigPreviewRequest $req) 发布配置项预览
  * @method Models\ListReleaseDocPreviewResponse ListReleaseDocPreview(Models\ListReleaseDocPreviewRequest $req) 发布文档预览
  * @method Models\ListReleaseQAPreviewResponse ListReleaseQAPreview(Models\ListReleaseQAPreviewRequest $req) 文档列表
- * @method Models\ListSelectDocResponse ListSelectDoc(Models\ListSelectDocRequest $req) 文档生成问答时，可通过该接口获得当前支持生成问答的文档列表，当前不支持xlsx、xls、csv格式的文档生成问答，且文档需处于待发布或已发布状态才可生成问答。
+ * @method Models\ListSelectDocResponse ListSelectDoc(Models\ListSelectDocRequest $req) 获取文档下拉列表。
  * @method Models\ListSharedKnowledgeResponse ListSharedKnowledge(Models\ListSharedKnowledgeRequest $req) 列举共享知识库。
  * @method Models\ListUnsatisfiedReplyResponse ListUnsatisfiedReply(Models\ListUnsatisfiedReplyRequest $req) 查询不满意回复列表
  * @method Models\ListUsageCallDetailResponse ListUsageCallDetail(Models\ListUsageCallDetailRequest $req) 列表查询单次调用明细

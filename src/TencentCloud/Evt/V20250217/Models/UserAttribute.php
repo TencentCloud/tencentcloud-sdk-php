@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 人员属性
  *
- * @method string getKey() 获取属性键名
- * @method void setKey(string $Key) 设置属性键名
- * @method array getValue() 获取属性值
- * @method void setValue(array $Value) 设置属性值
+ * @method string getKey() 获取<p>自定义角色体系中用户属性的ID</p><p>属性键名</p>
+ * @method void setKey(string $Key) 设置<p>自定义角色体系中用户属性的ID</p><p>属性键名</p>
+ * @method array getValue() 获取<p>自定义角色体系中的用户属性值，只支持传入对应用户属性支持的角色ID</p><p>属性值</p>
+ * @method void setValue(array $Value) 设置<p>自定义角色体系中的用户属性值，只支持传入对应用户属性支持的角色ID</p><p>属性值</p>
  */
 class UserAttribute extends AbstractModel
 {
     /**
-     * @var string 属性键名
+     * @var string <p>自定义角色体系中用户属性的ID</p><p>属性键名</p>
      */
     public $Key;
 
     /**
-     * @var array 属性值
+     * @var array <p>自定义角色体系中的用户属性值，只支持传入对应用户属性支持的角色ID</p><p>属性值</p>
      */
     public $Value;
 
     /**
-     * @param string $Key 属性键名
-     * @param array $Value 属性值
+     * @param string $Key <p>自定义角色体系中用户属性的ID</p><p>属性键名</p>
+     * @param array $Value <p>自定义角色体系中的用户属性值，只支持传入对应用户属性支持的角色ID</p><p>属性值</p>
      */
     function __construct()
     {

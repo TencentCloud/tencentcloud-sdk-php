@@ -38,6 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCkafka(Ckafka $Ckafka) 设置CKafka的描述
  * @method integer getCompression() 获取投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]
  * @method void setCompression(integer $Compression) 设置投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]
+ * @method string getRoleArn() 获取角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+ * @method void setRoleArn(string $RoleArn) 设置角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+ * @method string getExternalId() 获取外部ID
+ * @method void setExternalId(string $ExternalId) 设置外部ID
+ * @method AdvancedConsumerConfiguration getAdvancedConfig() 获取高级配置项
+ * @method void setAdvancedConfig(AdvancedConsumerConfiguration $AdvancedConfig) 设置高级配置项
  */
 class CreateConsumerRequest extends AbstractModel
 {
@@ -71,6 +77,21 @@ class CreateConsumerRequest extends AbstractModel
     public $Compression;
 
     /**
+     * @var string 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     */
+    public $RoleArn;
+
+    /**
+     * @var string 外部ID
+     */
+    public $ExternalId;
+
+    /**
+     * @var AdvancedConsumerConfiguration 高级配置项
+     */
+    public $AdvancedConfig;
+
+    /**
      * @param string $TopicId 投递任务绑定的日志主题Id。
 - 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
 - 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
@@ -80,6 +101,9 @@ class CreateConsumerRequest extends AbstractModel
      * @param ConsumerContent $Content 如果需要投递元数据信息，元数据信息的描述
      * @param Ckafka $Ckafka CKafka的描述
      * @param integer $Compression 投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]
+     * @param string $RoleArn 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     * @param string $ExternalId 外部ID
+     * @param AdvancedConsumerConfiguration $AdvancedConfig 高级配置项
      */
     function __construct()
     {
@@ -114,6 +138,19 @@ class CreateConsumerRequest extends AbstractModel
 
         if (array_key_exists("Compression",$param) and $param["Compression"] !== null) {
             $this->Compression = $param["Compression"];
+        }
+
+        if (array_key_exists("RoleArn",$param) and $param["RoleArn"] !== null) {
+            $this->RoleArn = $param["RoleArn"];
+        }
+
+        if (array_key_exists("ExternalId",$param) and $param["ExternalId"] !== null) {
+            $this->ExternalId = $param["ExternalId"];
+        }
+
+        if (array_key_exists("AdvancedConfig",$param) and $param["AdvancedConfig"] !== null) {
+            $this->AdvancedConfig = new AdvancedConsumerConfiguration();
+            $this->AdvancedConfig->deserialize($param["AdvancedConfig"]);
         }
     }
 }

@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组实例ID，例如sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。
  * @method SecurityGroupPolicySet getSecurityGroupPolicySet() 获取安全组规则集合对象。
  * @method void setSecurityGroupPolicySet(SecurityGroupPolicySet $SecurityGroupPolicySet) 设置安全组规则集合对象。
- * @method SecurityGroupPolicySet getOriginalSecurityGroupPolicySet() 获取旧的安全组规则集合对象，可选，日志记录用。
- * @method void setOriginalSecurityGroupPolicySet(SecurityGroupPolicySet $OriginalSecurityGroupPolicySet) 设置旧的安全组规则集合对象，可选，日志记录用。
+ * @method SecurityGroupPolicySet getOriginalSecurityGroupPolicySet() 获取旧的安全组规则集合对象，当更新优先级时为必选，且修改顺序与SecurityGroupPolicySet参数顺序一一对应，入参长度需要与SecurityGroupPolicySet参数保持一致。
+ * @method void setOriginalSecurityGroupPolicySet(SecurityGroupPolicySet $OriginalSecurityGroupPolicySet) 设置旧的安全组规则集合对象，当更新优先级时为必选，且修改顺序与SecurityGroupPolicySet参数顺序一一对应，入参长度需要与SecurityGroupPolicySet参数保持一致。
+ * @method string getUpdateType() 获取更新类型，默认 Policy  Policy：只更新内容  Priority：只更新优先级  Both：内容和优先级都更新
+ * @method void setUpdateType(string $UpdateType) 设置更新类型，默认 Policy  Policy：只更新内容  Priority：只更新优先级  Both：内容和优先级都更新
  */
 class ReplaceSecurityGroupPoliciesRequest extends AbstractModel
 {
@@ -40,14 +42,20 @@ class ReplaceSecurityGroupPoliciesRequest extends AbstractModel
     public $SecurityGroupPolicySet;
 
     /**
-     * @var SecurityGroupPolicySet 旧的安全组规则集合对象，可选，日志记录用。
+     * @var SecurityGroupPolicySet 旧的安全组规则集合对象，当更新优先级时为必选，且修改顺序与SecurityGroupPolicySet参数顺序一一对应，入参长度需要与SecurityGroupPolicySet参数保持一致。
      */
     public $OriginalSecurityGroupPolicySet;
 
     /**
+     * @var string 更新类型，默认 Policy  Policy：只更新内容  Priority：只更新优先级  Both：内容和优先级都更新
+     */
+    public $UpdateType;
+
+    /**
      * @param string $SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。
      * @param SecurityGroupPolicySet $SecurityGroupPolicySet 安全组规则集合对象。
-     * @param SecurityGroupPolicySet $OriginalSecurityGroupPolicySet 旧的安全组规则集合对象，可选，日志记录用。
+     * @param SecurityGroupPolicySet $OriginalSecurityGroupPolicySet 旧的安全组规则集合对象，当更新优先级时为必选，且修改顺序与SecurityGroupPolicySet参数顺序一一对应，入参长度需要与SecurityGroupPolicySet参数保持一致。
+     * @param string $UpdateType 更新类型，默认 Policy  Policy：只更新内容  Priority：只更新优先级  Both：内容和优先级都更新
      */
     function __construct()
     {
@@ -74,6 +82,10 @@ class ReplaceSecurityGroupPoliciesRequest extends AbstractModel
         if (array_key_exists("OriginalSecurityGroupPolicySet",$param) and $param["OriginalSecurityGroupPolicySet"] !== null) {
             $this->OriginalSecurityGroupPolicySet = new SecurityGroupPolicySet();
             $this->OriginalSecurityGroupPolicySet->deserialize($param["OriginalSecurityGroupPolicySet"]);
+        }
+
+        if (array_key_exists("UpdateType",$param) and $param["UpdateType"] !== null) {
+            $this->UpdateType = $param["UpdateType"];
         }
     }
 }

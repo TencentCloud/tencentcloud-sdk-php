@@ -64,6 +64,7 @@ class CreateVpcEndPointServiceRequest extends AbstractModel
 
     /**
      * @var boolean ~~是否是PassService类型。该字段已废弃，请不要使用该字段。~~
+     * @deprecated
      */
     public $IsPassService;
 

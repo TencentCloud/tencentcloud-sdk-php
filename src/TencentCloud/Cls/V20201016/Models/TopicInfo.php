@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPartitionCount(integer $PartitionCount) 设置主题分区个数
  * @method boolean getIndex() 获取主题是否开启索引（主题类型需为日志主题）
  * @method void setIndex(boolean $Index) 设置主题是否开启索引（主题类型需为日志主题）
+ * @method integer getAssumerUin() 获取AssumerUin非空则表示创建该日志主题的服务方Uin
+ * @method void setAssumerUin(integer $AssumerUin) 设置AssumerUin非空则表示创建该日志主题的服务方Uin
  * @method string getAssumerName() 获取云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
  * @method void setAssumerName(string $AssumerName) 设置云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
- * @method string getCreateTime() 获取创建时间
-时间格式：yyyy-MM-dd HH:mm:ss
- * @method void setCreateTime(string $CreateTime) 设置创建时间
-时间格式：yyyy-MM-dd HH:mm:ss
+ * @method string getCreateTime() 获取创建时间。格式：yyyy-MM-dd HH:mm:ss
+ * @method void setCreateTime(string $CreateTime) 设置创建时间。格式：yyyy-MM-dd HH:mm:ss
  * @method boolean getStatus() 获取主题是否开启采集，true：开启采集；false：关闭采集。
 创建日志主题时默认开启，可通过SDK调用ModifyTopic修改此字段。
 控制台目前不支持修改此参数。
@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
 控制台目前不支持修改此参数。
  * @method array getTags() 获取主题绑定的标签信息
  * @method void setTags(array $Tags) 设置主题绑定的标签信息
+ * @method string getRoleName() 获取RoleName非空则表示创建该日志主题的服务方使用的角色
+ * @method void setRoleName(string $RoleName) 设置RoleName非空则表示创建该日志主题的服务方使用的角色
  * @method boolean getAutoSplit() 获取该主题是否开启自动分裂
  * @method void setAutoSplit(boolean $AutoSplit) 设置该主题是否开启自动分裂
  * @method integer getMaxSplitPartitions() 获取若开启自动分裂的话，该主题能够允许的最大分区数
@@ -96,6 +98,8 @@ HotPeriod=0为没有开启日志沉降。
 时间格式：yyyy-MM-dd HH:mm:ss
  * @method void setEffectiveDate(string $EffectiveDate) 设置异步迁移完成后，预计生效日期
 时间格式：yyyy-MM-dd HH:mm:ss
+ * @method boolean getIsSourceFrom() 获取IsSourceFrom 开启记录公网来源ip和服务端接收时间
+ * @method void setIsSourceFrom(boolean $IsSourceFrom) 设置IsSourceFrom 开启记录公网来源ip和服务端接收时间
  */
 class TopicInfo extends AbstractModel
 {
@@ -125,13 +129,17 @@ class TopicInfo extends AbstractModel
     public $Index;
 
     /**
+     * @var integer AssumerUin非空则表示创建该日志主题的服务方Uin
+     */
+    public $AssumerUin;
+
+    /**
      * @var string 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
      */
     public $AssumerName;
 
     /**
-     * @var string 创建时间
-时间格式：yyyy-MM-dd HH:mm:ss
+     * @var string 创建时间。格式：yyyy-MM-dd HH:mm:ss
      */
     public $CreateTime;
 
@@ -146,6 +154,11 @@ class TopicInfo extends AbstractModel
      * @var array 主题绑定的标签信息
      */
     public $Tags;
+
+    /**
+     * @var string RoleName非空则表示创建该日志主题的服务方使用的角色
+     */
+    public $RoleName;
 
     /**
      * @var boolean 该主题是否开启自动分裂
@@ -226,18 +239,24 @@ HotPeriod=0为没有开启日志沉降。
     public $EffectiveDate;
 
     /**
+     * @var boolean IsSourceFrom 开启记录公网来源ip和服务端接收时间
+     */
+    public $IsSourceFrom;
+
+    /**
      * @param string $LogsetId 日志集ID
      * @param string $TopicId 主题ID
      * @param string $TopicName 主题名称
      * @param integer $PartitionCount 主题分区个数
      * @param boolean $Index 主题是否开启索引（主题类型需为日志主题）
+     * @param integer $AssumerUin AssumerUin非空则表示创建该日志主题的服务方Uin
      * @param string $AssumerName 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
-     * @param string $CreateTime 创建时间
-时间格式：yyyy-MM-dd HH:mm:ss
+     * @param string $CreateTime 创建时间。格式：yyyy-MM-dd HH:mm:ss
      * @param boolean $Status 主题是否开启采集，true：开启采集；false：关闭采集。
 创建日志主题时默认开启，可通过SDK调用ModifyTopic修改此字段。
 控制台目前不支持修改此参数。
      * @param array $Tags 主题绑定的标签信息
+     * @param string $RoleName RoleName非空则表示创建该日志主题的服务方使用的角色
      * @param boolean $AutoSplit 该主题是否开启自动分裂
      * @param integer $MaxSplitPartitions 若开启自动分裂的话，该主题能够允许的最大分区数
      * @param string $StorageType 主题的存储类型
@@ -264,6 +283,7 @@ HotPeriod=0为没有开启日志沉降。
 - 4：已取消
      * @param string $EffectiveDate 异步迁移完成后，预计生效日期
 时间格式：yyyy-MM-dd HH:mm:ss
+     * @param boolean $IsSourceFrom IsSourceFrom 开启记录公网来源ip和服务端接收时间
      */
     function __construct()
     {
@@ -298,6 +318,10 @@ HotPeriod=0为没有开启日志沉降。
             $this->Index = $param["Index"];
         }
 
+        if (array_key_exists("AssumerUin",$param) and $param["AssumerUin"] !== null) {
+            $this->AssumerUin = $param["AssumerUin"];
+        }
+
         if (array_key_exists("AssumerName",$param) and $param["AssumerName"] !== null) {
             $this->AssumerName = $param["AssumerName"];
         }
@@ -317,6 +341,10 @@ HotPeriod=0为没有开启日志沉降。
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("RoleName",$param) and $param["RoleName"] !== null) {
+            $this->RoleName = $param["RoleName"];
         }
 
         if (array_key_exists("AutoSplit",$param) and $param["AutoSplit"] !== null) {
@@ -370,6 +398,10 @@ HotPeriod=0为没有开启日志沉降。
 
         if (array_key_exists("EffectiveDate",$param) and $param["EffectiveDate"] !== null) {
             $this->EffectiveDate = $param["EffectiveDate"];
+        }
+
+        if (array_key_exists("IsSourceFrom",$param) and $param["IsSourceFrom"] !== null) {
+            $this->IsSourceFrom = $param["IsSourceFrom"];
         }
     }
 }

@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRoleUser请求参数结构体
  *
- * @method integer getRoleSystemId() 获取角色体系ID
- * @method void setRoleSystemId(integer $RoleSystemId) 设置角色体系ID
- * @method string getUserId() 获取人员ID
- * @method void setUserId(string $UserId) 设置人员ID
- * @method string getUsername() 获取人员名称
- * @method void setUsername(string $Username) 设置人员名称
- * @method integer getEnabled() 获取是否启用
- * @method void setEnabled(integer $Enabled) 设置是否启用
- * @method string getPhone() 获取手机号
- * @method void setPhone(string $Phone) 设置手机号
- * @method array getAttributes() 获取属性列表
- * @method void setAttributes(array $Attributes) 设置属性列表
+ * @method integer getRoleSystemId() 获取<p>自定义角色体系的ID</p><p>角色体系ID</p>
+ * @method void setRoleSystemId(integer $RoleSystemId) 设置<p>自定义角色体系的ID</p><p>角色体系ID</p>
+ * @method string getUserId() 获取<p>要添加的自定义用户ID，建议与腾讯云-子用户的用户名称保持一致</p><p>人员ID</p>
+ * @method void setUserId(string $UserId) 设置<p>要添加的自定义用户ID，建议与腾讯云-子用户的用户名称保持一致</p><p>人员ID</p>
+ * @method string getUsername() 获取<p>自定义用户的名称</p><p>人员名称</p>
+ * @method void setUsername(string $Username) 设置<p>自定义用户的名称</p><p>人员名称</p>
+ * @method integer getEnabled() 获取<p>是否启用当前用户</p>枚举值：<ul><li> 1： 启用</li><li> 2： 禁用</li></ul><p>是否启用</p>
+ * @method void setEnabled(integer $Enabled) 设置<p>是否启用当前用户</p>枚举值：<ul><li> 1： 启用</li><li> 2： 禁用</li></ul><p>是否启用</p>
+ * @method string getPhone() 获取<p>自定义用户的手机号</p><p>手机号</p>
+ * @method void setPhone(string $Phone) 设置<p>自定义用户的手机号</p><p>手机号</p>
+ * @method array getAttributes() 获取<p>自定义用户的身份属性列表</p><p>属性列表</p>
+ * @method void setAttributes(array $Attributes) 设置<p>自定义用户的身份属性列表</p><p>属性列表</p>
+ * @method integer getTencentUin() 获取<p>自定义用户与腾讯云-子用户关联，如果不传默认按照子用户名称进行匹配</p>
+ * @method void setTencentUin(integer $TencentUin) 设置<p>自定义用户与腾讯云-子用户关联，如果不传默认按照子用户名称进行匹配</p>
  */
 class CreateRoleUserRequest extends AbstractModel
 {
     /**
-     * @var integer 角色体系ID
+     * @var integer <p>自定义角色体系的ID</p><p>角色体系ID</p>
      */
     public $RoleSystemId;
 
     /**
-     * @var string 人员ID
+     * @var string <p>要添加的自定义用户ID，建议与腾讯云-子用户的用户名称保持一致</p><p>人员ID</p>
      */
     public $UserId;
 
     /**
-     * @var string 人员名称
+     * @var string <p>自定义用户的名称</p><p>人员名称</p>
      */
     public $Username;
 
     /**
-     * @var integer 是否启用
+     * @var integer <p>是否启用当前用户</p>枚举值：<ul><li> 1： 启用</li><li> 2： 禁用</li></ul><p>是否启用</p>
      */
     public $Enabled;
 
     /**
-     * @var string 手机号
+     * @var string <p>自定义用户的手机号</p><p>手机号</p>
      */
     public $Phone;
 
     /**
-     * @var array 属性列表
+     * @var array <p>自定义用户的身份属性列表</p><p>属性列表</p>
      */
     public $Attributes;
 
     /**
-     * @param integer $RoleSystemId 角色体系ID
-     * @param string $UserId 人员ID
-     * @param string $Username 人员名称
-     * @param integer $Enabled 是否启用
-     * @param string $Phone 手机号
-     * @param array $Attributes 属性列表
+     * @var integer <p>自定义用户与腾讯云-子用户关联，如果不传默认按照子用户名称进行匹配</p>
+     */
+    public $TencentUin;
+
+    /**
+     * @param integer $RoleSystemId <p>自定义角色体系的ID</p><p>角色体系ID</p>
+     * @param string $UserId <p>要添加的自定义用户ID，建议与腾讯云-子用户的用户名称保持一致</p><p>人员ID</p>
+     * @param string $Username <p>自定义用户的名称</p><p>人员名称</p>
+     * @param integer $Enabled <p>是否启用当前用户</p>枚举值：<ul><li> 1： 启用</li><li> 2： 禁用</li></ul><p>是否启用</p>
+     * @param string $Phone <p>自定义用户的手机号</p><p>手机号</p>
+     * @param array $Attributes <p>自定义用户的身份属性列表</p><p>属性列表</p>
+     * @param integer $TencentUin <p>自定义用户与腾讯云-子用户关联，如果不传默认按照子用户名称进行匹配</p>
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class CreateRoleUserRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Attributes, $obj);
             }
+        }
+
+        if (array_key_exists("TencentUin",$param) and $param["TencentUin"] !== null) {
+            $this->TencentUin = $param["TencentUin"];
         }
     }
 }

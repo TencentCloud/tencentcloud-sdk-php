@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRejectedQuestion请求参数结构体
  *
- * @method string getBotBizId() 获取应用ID
- * @method void setBotBizId(string $BotBizId) 设置应用ID
+ * @method string getBotBizId() 获取应用ID, 获取方式参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+ * @method void setBotBizId(string $BotBizId) 设置应用ID, 获取方式参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
  * @method string getQuestion() 获取拒答问题
 
 
  * @method void setQuestion(string $Question) 设置拒答问题
 
 
- * @method integer getBusinessSource() 获取拒答问题来源的数据源唯一id， - 拒答来源于不满意回复  2 - 拒答来源于手动添加
- * @method void setBusinessSource(integer $BusinessSource) 设置拒答问题来源的数据源唯一id， - 拒答来源于不满意回复  2 - 拒答来源于手动添加
+ * @method integer getBusinessSource() 获取拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加
+ * @method void setBusinessSource(integer $BusinessSource) 设置拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加
  * @method string getBusinessId() 获取拒答问题来源的数据源唯一id
 
 
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateRejectedQuestionRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string 应用ID, 获取方式参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public $BotBizId;
 
@@ -50,7 +50,7 @@ class CreateRejectedQuestionRequest extends AbstractModel
     public $Question;
 
     /**
-     * @var integer 拒答问题来源的数据源唯一id， - 拒答来源于不满意回复  2 - 拒答来源于手动添加
+     * @var integer 拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加
      */
     public $BusinessSource;
 
@@ -62,11 +62,11 @@ class CreateRejectedQuestionRequest extends AbstractModel
     public $BusinessId;
 
     /**
-     * @param string $BotBizId 应用ID
+     * @param string $BotBizId 应用ID, 获取方式参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      * @param string $Question 拒答问题
 
 
-     * @param integer $BusinessSource 拒答问题来源的数据源唯一id， - 拒答来源于不满意回复  2 - 拒答来源于手动添加
+     * @param integer $BusinessSource 拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加
      * @param string $BusinessId 拒答问题来源的数据源唯一id
      */
     function __construct()

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWorkflowRun返回参数结构体
  *
- * @method WorkflowRunDetail getWorkflowRun() 获取工作流的详情
- * @method void setWorkflowRun(WorkflowRunDetail $WorkflowRun) 设置工作流的详情
+ * @method WorkflowRunDetail getWorkflowRun() 获取工作流运行实例详情
+ * @method void setWorkflowRun(WorkflowRunDetail $WorkflowRun) 设置工作流运行实例详情
  * @method array getNodeRuns() 获取节点列表
  * @method void setNodeRuns(array $NodeRuns) 设置节点列表
  * @method string getSubWorkflowNodePath() 获取子工作流对应的NodePath
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeWorkflowRunResponse extends AbstractModel
 {
     /**
-     * @var WorkflowRunDetail 工作流的详情
+     * @var WorkflowRunDetail 工作流运行实例详情
      */
     public $WorkflowRun;
 
@@ -52,7 +52,7 @@ class DescribeWorkflowRunResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param WorkflowRunDetail $WorkflowRun 工作流的详情
+     * @param WorkflowRunDetail $WorkflowRun 工作流运行实例详情
      * @param array $NodeRuns 节点列表
      * @param string $SubWorkflowNodePath 子工作流对应的NodePath
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

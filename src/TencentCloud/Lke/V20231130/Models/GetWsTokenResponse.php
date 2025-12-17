@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPattern(string $Pattern) 设置应用模式，standard:标准模式, agent: agent模式，single_workflow：单工作流模式
  * @method KnowledgeQaSingleWorkflow getSingleWorkflow() 获取SingleWorkflow
  * @method void setSingleWorkflow(KnowledgeQaSingleWorkflow $SingleWorkflow) 设置SingleWorkflow
+ * @method integer getVisionModelInputLimit() 获取使用视觉模型时对话窗口输入字符限制
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVisionModelInputLimit(integer $VisionModelInputLimit) 设置使用视觉模型时对话窗口输入字符限制
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -64,6 +68,12 @@ class GetWsTokenResponse extends AbstractModel
     public $SingleWorkflow;
 
     /**
+     * @var integer 使用视觉模型时对话窗口输入字符限制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VisionModelInputLimit;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -75,6 +85,8 @@ class GetWsTokenResponse extends AbstractModel
      * @param integer $InputLenLimit 对话窗输入字符限制
      * @param string $Pattern 应用模式，standard:标准模式, agent: agent模式，single_workflow：单工作流模式
      * @param KnowledgeQaSingleWorkflow $SingleWorkflow SingleWorkflow
+     * @param integer $VisionModelInputLimit 使用视觉模型时对话窗口输入字符限制
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -109,6 +121,10 @@ class GetWsTokenResponse extends AbstractModel
         if (array_key_exists("SingleWorkflow",$param) and $param["SingleWorkflow"] !== null) {
             $this->SingleWorkflow = new KnowledgeQaSingleWorkflow();
             $this->SingleWorkflow->deserialize($param["SingleWorkflow"]);
+        }
+
+        if (array_key_exists("VisionModelInputLimit",$param) and $param["VisionModelInputLimit"] !== null) {
+            $this->VisionModelInputLimit = $param["VisionModelInputLimit"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

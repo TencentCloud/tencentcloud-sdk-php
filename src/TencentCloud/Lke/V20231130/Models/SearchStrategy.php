@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRerankModel(string $RerankModel) 设置结果重排序模型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method NL2SQLModelConfig getNatureLanguageToSqlModelConfig() 获取NL2SQL模型配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNatureLanguageToSqlModelConfig(NL2SQLModelConfig $NatureLanguageToSqlModelConfig) 设置NL2SQL模型配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SearchStrategy extends AbstractModel
 {
@@ -74,6 +78,12 @@ class SearchStrategy extends AbstractModel
     public $RerankModel;
 
     /**
+     * @var NL2SQLModelConfig NL2SQL模型配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NatureLanguageToSqlModelConfig;
+
+    /**
      * @param integer $StrategyType 检索策略类型 0:混合检索，1：语义检索
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $TableEnhancement Excel检索增强开关, false关闭，true打开
@@ -83,6 +93,8 @@ class SearchStrategy extends AbstractModel
      * @param string $RerankModelSwitch 结果重排序开关， on打开，off关闭
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RerankModel 结果重排序模型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NL2SQLModelConfig $NatureLanguageToSqlModelConfig NL2SQL模型配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -116,6 +128,11 @@ class SearchStrategy extends AbstractModel
 
         if (array_key_exists("RerankModel",$param) and $param["RerankModel"] !== null) {
             $this->RerankModel = $param["RerankModel"];
+        }
+
+        if (array_key_exists("NatureLanguageToSqlModelConfig",$param) and $param["NatureLanguageToSqlModelConfig"] !== null) {
+            $this->NatureLanguageToSqlModelConfig = new NL2SQLModelConfig();
+            $this->NatureLanguageToSqlModelConfig->deserialize($param["NatureLanguageToSqlModelConfig"]);
         }
     }
 }

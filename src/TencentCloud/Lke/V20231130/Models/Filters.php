@@ -25,6 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getReasons() 获取错误类型检索
 
  * @method void setReasons(array $Reasons) 设置错误类型检索
+
+ * @method array getHandlingStatuses() 获取处理状态 0-待处理 1-已拒答 2-已忽略 3-已添加为新问答 4-已添加为相似问
+ * @method void setHandlingStatuses(array $HandlingStatuses) 设置处理状态 0-待处理 1-已拒答 2-已忽略 3-已添加为新问答 4-已添加为相似问
  */
 class Filters extends AbstractModel
 {
@@ -40,8 +43,15 @@ class Filters extends AbstractModel
     public $Reasons;
 
     /**
+     * @var array 处理状态 0-待处理 1-已拒答 2-已忽略 3-已添加为新问答 4-已添加为相似问
+     */
+    public $HandlingStatuses;
+
+    /**
      * @param string $Query 检索，用户问题或答案
      * @param array $Reasons 错误类型检索
+
+     * @param array $HandlingStatuses 处理状态 0-待处理 1-已拒答 2-已忽略 3-已添加为新问答 4-已添加为相似问
      */
     function __construct()
     {
@@ -62,6 +72,10 @@ class Filters extends AbstractModel
 
         if (array_key_exists("Reasons",$param) and $param["Reasons"] !== null) {
             $this->Reasons = $param["Reasons"];
+        }
+
+        if (array_key_exists("HandlingStatuses",$param) and $param["HandlingStatuses"] !== null) {
+            $this->HandlingStatuses = $param["HandlingStatuses"];
         }
     }
 }

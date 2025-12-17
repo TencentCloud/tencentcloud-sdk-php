@@ -74,8 +74,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskType(string $TaskType) 设置任务类型，默认Online
 <li> Online：实时任务</li>
 <li> Offline：闲时任务，不保证实效性，默认3天内处理完</li>
- * @method string getResourceId() 获取资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
- * @method void setResourceId(string $ResourceId) 设置资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+ * @method string getResourceId() 获取资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
+ * @method void setResourceId(string $ResourceId) 设置资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
  * @method integer getSkipMateData() 获取是否跳过元信息获取，可选值： 
 0：表示不跳过 
 1：表示跳过 
@@ -179,7 +179,7 @@ class ProcessMediaRequest extends AbstractModel
     public $TaskType;
 
     /**
-     * @var string 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+     * @var string 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
      */
     public $ResourceId;
 
@@ -219,7 +219,7 @@ class ProcessMediaRequest extends AbstractModel
      * @param string $TaskType 任务类型，默认Online
 <li> Online：实时任务</li>
 <li> Offline：闲时任务，不保证实效性，默认3天内处理完</li>
-     * @param string $ResourceId 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+     * @param string $ResourceId 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
      * @param integer $SkipMateData 是否跳过元信息获取，可选值： 
 0：表示不跳过 
 1：表示跳过 

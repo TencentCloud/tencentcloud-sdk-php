@@ -40,9 +40,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsUpdating(boolean $IsUpdating) 设置标签是否在更新中
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取状态
+ * @method integer getStatus() 获取发布状态(1 待发布 2 发布中 3 已发布 4 发布失败)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置状态
+ * @method void setStatus(integer $Status) 设置发布状态(1 待发布 2 发布中 3 已发布 4 发布失败)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatusDesc() 获取状态描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -62,6 +62,7 @@ class AttrLabelDetail extends AbstractModel
     /**
      * @var string 标签标识
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $AttrKey;
 
@@ -84,7 +85,7 @@ class AttrLabelDetail extends AbstractModel
     public $IsUpdating;
 
     /**
-     * @var integer 状态
+     * @var integer 发布状态(1 待发布 2 发布中 3 已发布 4 发布失败)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -111,7 +112,7 @@ class AttrLabelDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsUpdating 标签是否在更新中
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 状态
+     * @param integer $Status 发布状态(1 待发布 2 发布中 3 已发布 4 发布失败)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StatusDesc 状态描述
 注意：此字段可能返回 null，表示取不到有效值。

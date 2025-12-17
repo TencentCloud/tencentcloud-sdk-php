@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAndroidInstanceAcceleratorToken返回参数结构体
  *
+ * @method string getToken() 获取token
+ * @method void setToken(string $Token) 设置token
  * @method string getAcceleratorInfo() 获取加速信息
  * @method void setAcceleratorInfo(string $AcceleratorInfo) 设置加速信息
  * @method array getAndroidInstanceErrors() 获取安卓实例错误列表。列表包含有问题的安卓实例 ID 以及发生的错误信息。
@@ -29,6 +31,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class CreateAndroidInstanceAcceleratorTokenResponse extends AbstractModel
 {
+    /**
+     * @var string token
+     */
+    public $Token;
+
     /**
      * @var string 加速信息
      */
@@ -45,6 +52,7 @@ class CreateAndroidInstanceAcceleratorTokenResponse extends AbstractModel
     public $RequestId;
 
     /**
+     * @param string $Token token
      * @param string $AcceleratorInfo 加速信息
      * @param array $AndroidInstanceErrors 安卓实例错误列表。列表包含有问题的安卓实例 ID 以及发生的错误信息。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -62,6 +70,10 @@ class CreateAndroidInstanceAcceleratorTokenResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Token",$param) and $param["Token"] !== null) {
+            $this->Token = $param["Token"];
+        }
+
         if (array_key_exists("AcceleratorInfo",$param) and $param["AcceleratorInfo"] !== null) {
             $this->AcceleratorInfo = $param["AcceleratorInfo"];
         }

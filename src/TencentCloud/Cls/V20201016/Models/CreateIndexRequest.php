@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
 * 0:仅包含开启键值索引的元数据字段
 * 1:包含所有元数据字段
 * 2:不包含任何元数据字段
+ * @method string getCoverageField() 获取自定义日志解析异常存储字段。
+ * @method void setCoverageField(string $CoverageField) 设置自定义日志解析异常存储字段。
  */
 class CreateIndexRequest extends AbstractModel
 {
@@ -77,6 +79,11 @@ class CreateIndexRequest extends AbstractModel
     public $MetadataFlag;
 
     /**
+     * @var string 自定义日志解析异常存储字段。
+     */
+    public $CoverageField;
+
+    /**
      * @param string $TopicId 日志主题Id。
 - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      * @param RuleInfo $Rule 索引规则
@@ -88,6 +95,7 @@ class CreateIndexRequest extends AbstractModel
 * 0:仅包含开启键值索引的元数据字段
 * 1:包含所有元数据字段
 * 2:不包含任何元数据字段
+     * @param string $CoverageField 自定义日志解析异常存储字段。
      */
     function __construct()
     {
@@ -121,6 +129,10 @@ class CreateIndexRequest extends AbstractModel
 
         if (array_key_exists("MetadataFlag",$param) and $param["MetadataFlag"] !== null) {
             $this->MetadataFlag = $param["MetadataFlag"];
+        }
+
+        if (array_key_exists("CoverageField",$param) and $param["CoverageField"] !== null) {
+            $this->CoverageField = $param["CoverageField"];
         }
     }
 }

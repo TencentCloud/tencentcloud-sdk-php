@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 当type为video_frames时使用，标识具体的视频内图像帧内容
  *
- * @method array getFrames() 获取视频图像帧列表，图像帧传url
- * @method void setFrames(array $Frames) 设置视频图像帧列表，图像帧传url
+ * @method array getFrames() 获取视频图像帧列表，图像帧传url，最大支持传入数量为512帧
+ * @method void setFrames(array $Frames) 设置视频图像帧列表，图像帧传url，最大支持传入数量为512帧
  */
 class VideoFrames extends AbstractModel
 {
     /**
-     * @var array 视频图像帧列表，图像帧传url
+     * @var array 视频图像帧列表，图像帧传url，最大支持传入数量为512帧
      */
     public $Frames;
 
     /**
-     * @param array $Frames 视频图像帧列表，图像帧传url
+     * @param array $Frames 视频图像帧列表，图像帧传url，最大支持传入数量为512帧
      */
     function __construct()
     {

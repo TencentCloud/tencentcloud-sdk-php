@@ -65,6 +65,7 @@ use TencentCloud\Bh\V20230418\Models as Models;
  * @method Models\DescribeChangePwdTaskResponse DescribeChangePwdTask(Models\DescribeChangePwdTaskRequest $req) 查询改密任务列表
  * @method Models\DescribeChangePwdTaskDetailResponse DescribeChangePwdTaskDetail(Models\DescribeChangePwdTaskDetailRequest $req) 查询改密任务详情
  * @method Models\DescribeCmdTemplatesResponse DescribeCmdTemplates(Models\DescribeCmdTemplatesRequest $req) 查询命令模板列表
+ * @method Models\DescribeDepartmentsResponse DescribeDepartments(Models\DescribeDepartmentsRequest $req) 查询部门信息
  * @method Models\DescribeDeviceAccountsResponse DescribeDeviceAccounts(Models\DescribeDeviceAccountsRequest $req) 查询主机账号列表
  * @method Models\DescribeDeviceGroupMembersResponse DescribeDeviceGroupMembers(Models\DescribeDeviceGroupMembersRequest $req) 查询资产组成员列表
  * @method Models\DescribeDeviceGroupsResponse DescribeDeviceGroups(Models\DescribeDeviceGroupsRequest $req) 查询资产组列表

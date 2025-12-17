@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportAttributeLabel请求参数结构体
  *
- * @method string getBotBizId() 获取应用ID
- * @method void setBotBizId(string $BotBizId) 设置应用ID
+ * @method string getBotBizId() 获取应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+ * @method void setBotBizId(string $BotBizId) 设置应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
  * @method string getLoginUin() 获取登录用户主账号(集成商模式必填)
  * @method void setLoginUin(string $LoginUin) 设置登录用户主账号(集成商模式必填)
  * @method string getLoginSubAccountUin() 获取登录用户子账号(集成商模式必填)
  * @method void setLoginSubAccountUin(string $LoginSubAccountUin) 设置登录用户子账号(集成商模式必填)
- * @method array getAttributeBizIds() 获取属性ID
- * @method void setAttributeBizIds(array $AttributeBizIds) 设置属性ID
+ * @method array getAttributeBizIds() 获取标签ID
+ * @method void setAttributeBizIds(array $AttributeBizIds) 设置标签ID
  * @method AttributeFilters getFilters() 获取根据筛选数据导出
  * @method void setFilters(AttributeFilters $Filters) 设置根据筛选数据导出
  */
 class ExportAttributeLabelRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public $BotBizId;
 
@@ -49,7 +49,7 @@ class ExportAttributeLabelRequest extends AbstractModel
     public $LoginSubAccountUin;
 
     /**
-     * @var array 属性ID
+     * @var array 标签ID
      */
     public $AttributeBizIds;
 
@@ -59,10 +59,10 @@ class ExportAttributeLabelRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param string $BotBizId 应用ID
+     * @param string $BotBizId 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      * @param string $LoginUin 登录用户主账号(集成商模式必填)
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)
-     * @param array $AttributeBizIds 属性ID
+     * @param array $AttributeBizIds 标签ID
      * @param AttributeFilters $Filters 根据筛选数据导出
      */
     function __construct()

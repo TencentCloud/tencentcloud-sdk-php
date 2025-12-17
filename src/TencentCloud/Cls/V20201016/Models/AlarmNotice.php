@@ -54,6 +54,50 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间。格式： YYYY-MM-DD HH:MM:SS
  * @method string getUpdateTime() 获取最近更新时间。格式： YYYY-MM-DD HH:MM:SS
  * @method void setUpdateTime(string $UpdateTime) 设置最近更新时间。格式： YYYY-MM-DD HH:MM:SS
+ * @method integer getDeliverStatus() 获取投递日志开关。
+
+参数值：
+
+1：关闭
+
+2：开启 
+
+ * @method void setDeliverStatus(integer $DeliverStatus) 设置投递日志开关。
+
+参数值：
+
+1：关闭
+
+2：开启 
+
+ * @method integer getDeliverFlag() 获取投递日志标识。
+
+参数值：
+
+1：未启用
+
+2：已启用
+
+3：投递异常
+ * @method void setDeliverFlag(integer $DeliverFlag) 设置投递日志标识。
+
+参数值：
+
+1：未启用
+
+2：已启用
+
+3：投递异常
+ * @method AlarmShieldCount getAlarmShieldCount() 获取通知渠道组配置的告警屏蔽统计状态数量信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlarmShieldCount(AlarmShieldCount $AlarmShieldCount) 设置通知渠道组配置的告警屏蔽统计状态数量信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getCallbackPrioritize() 获取统一设定自定义回调参数。
+-  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
+-  false:优先使用告警策略中单独配置的请求头及请求内容。
+ * @method void setCallbackPrioritize(boolean $CallbackPrioritize) 设置统一设定自定义回调参数。
+-  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
+-  false:优先使用告警策略中单独配置的请求头及请求内容。
  */
 class AlarmNotice extends AbstractModel
 {
@@ -123,6 +167,44 @@ class AlarmNotice extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var integer 投递日志开关。
+
+参数值：
+
+1：关闭
+
+2：开启 
+
+     */
+    public $DeliverStatus;
+
+    /**
+     * @var integer 投递日志标识。
+
+参数值：
+
+1：未启用
+
+2：已启用
+
+3：投递异常
+     */
+    public $DeliverFlag;
+
+    /**
+     * @var AlarmShieldCount 通知渠道组配置的告警屏蔽统计状态数量信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AlarmShieldCount;
+
+    /**
+     * @var boolean 统一设定自定义回调参数。
+-  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
+-  false:优先使用告警策略中单独配置的请求头及请求内容。
+     */
+    public $CallbackPrioritize;
+
+    /**
      * @param string $Name 告警通知渠道组名称。
      * @param array $Tags 告警通知渠道组绑定的标签信息。
      * @param string $Type 告警模板的类型。可选值：
@@ -140,6 +222,28 @@ class AlarmNotice extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间。格式： YYYY-MM-DD HH:MM:SS
      * @param string $UpdateTime 最近更新时间。格式： YYYY-MM-DD HH:MM:SS
+     * @param integer $DeliverStatus 投递日志开关。
+
+参数值：
+
+1：关闭
+
+2：开启 
+
+     * @param integer $DeliverFlag 投递日志标识。
+
+参数值：
+
+1：未启用
+
+2：已启用
+
+3：投递异常
+     * @param AlarmShieldCount $AlarmShieldCount 通知渠道组配置的告警屏蔽统计状态数量信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $CallbackPrioritize 统一设定自定义回调参数。
+-  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
+-  false:优先使用告警策略中单独配置的请求头及请求内容。
      */
     function __construct()
     {
@@ -221,6 +325,23 @@ class AlarmNotice extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("DeliverStatus",$param) and $param["DeliverStatus"] !== null) {
+            $this->DeliverStatus = $param["DeliverStatus"];
+        }
+
+        if (array_key_exists("DeliverFlag",$param) and $param["DeliverFlag"] !== null) {
+            $this->DeliverFlag = $param["DeliverFlag"];
+        }
+
+        if (array_key_exists("AlarmShieldCount",$param) and $param["AlarmShieldCount"] !== null) {
+            $this->AlarmShieldCount = new AlarmShieldCount();
+            $this->AlarmShieldCount->deserialize($param["AlarmShieldCount"]);
+        }
+
+        if (array_key_exists("CallbackPrioritize",$param) and $param["CallbackPrioritize"] !== null) {
+            $this->CallbackPrioritize = $param["CallbackPrioritize"];
         }
     }
 }

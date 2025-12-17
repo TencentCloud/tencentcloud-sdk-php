@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GenerateQA请求参数结构体
  *
- * @method string getBotBizId() 获取应用ID
- * @method void setBotBizId(string $BotBizId) 设置应用ID
+ * @method string getBotBizId() 获取应用ID,获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+ * @method void setBotBizId(string $BotBizId) 设置应用ID,获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
  * @method array getDocBizIds() 获取文档ID
  * @method void setDocBizIds(array $DocBizIds) 设置文档ID
  */
 class GenerateQARequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string 应用ID,获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public $BotBizId;
 
@@ -38,7 +38,7 @@ class GenerateQARequest extends AbstractModel
     public $DocBizIds;
 
     /**
-     * @param string $BotBizId 应用ID
+     * @param string $BotBizId 应用ID,获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      * @param array $DocBizIds 文档ID
      */
     function __construct()

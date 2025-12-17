@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTopic请求参数结构体
  *
- * @method string getTopicId() 获取主题ID
-- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
- * @method void setTopicId(string $TopicId) 设置主题ID
-- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
+ * @method string getTopicId() 获取 主题ID- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
+ * @method void setTopicId(string $TopicId) 设置 主题ID- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
  * @method string getTopicName() 获取主题名称
 输入限制：
 - 不能为空字符串
@@ -48,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
 默认为50；必须为正数
  * @method integer getPeriod() 获取生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600。取值为3640时代表永久保存
  * @method void setPeriod(integer $Period) 设置生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600。取值为3640时代表永久保存
+ * @method string getStorageType() 获取存储类型：cold 低频存储，hot 标准存储
+ * @method void setStorageType(string $StorageType) 设置存储类型：cold 低频存储，hot 标准存储
  * @method string getDescribes() 获取主题描述
  * @method void setDescribes(string $Describes) 设置主题描述
  * @method integer getHotPeriod() 获取0：日志主题关闭日志沉降。
@@ -78,12 +78,17 @@ use TencentCloud\Common\AbstractModel;
 - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。
  * @method void setCancelTopicAsyncTaskID(string $CancelTopicAsyncTaskID) 设置取消切换存储任务的id
 - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。
+ * @method integer getEncryption() 获取加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
+只支持传入1：kms-cls 云产品秘钥加密
+ * @method void setEncryption(integer $Encryption) 设置加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
+只支持传入1：kms-cls 云产品秘钥加密
+ * @method boolean getIsSourceFrom() 获取开启记录公网来源ip和服务端接收时间
+ * @method void setIsSourceFrom(boolean $IsSourceFrom) 设置开启记录公网来源ip和服务端接收时间
  */
 class ModifyTopicRequest extends AbstractModel
 {
     /**
-     * @var string 主题ID
-- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
+     * @var string  主题ID- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
      */
     public $TopicId;
 
@@ -122,6 +127,11 @@ class ModifyTopicRequest extends AbstractModel
      * @var integer 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600。取值为3640时代表永久保存
      */
     public $Period;
+
+    /**
+     * @var string 存储类型：cold 低频存储，hot 标准存储
+     */
+    public $StorageType;
 
     /**
      * @var string 主题描述
@@ -163,8 +173,18 @@ class ModifyTopicRequest extends AbstractModel
     public $CancelTopicAsyncTaskID;
 
     /**
-     * @param string $TopicId 主题ID
-- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
+     * @var integer 加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
+只支持传入1：kms-cls 云产品秘钥加密
+     */
+    public $Encryption;
+
+    /**
+     * @var boolean 开启记录公网来源ip和服务端接收时间
+     */
+    public $IsSourceFrom;
+
+    /**
+     * @param string $TopicId  主题ID- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
      * @param string $TopicName 主题名称
 输入限制：
 - 不能为空字符串
@@ -177,6 +197,7 @@ class ModifyTopicRequest extends AbstractModel
      * @param integer $MaxSplitPartitions 若开启最大分裂，该主题能够允许的最大分区数；
 默认为50；必须为正数
      * @param integer $Period 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600。取值为3640时代表永久保存
+     * @param string $StorageType 存储类型：cold 低频存储，hot 标准存储
      * @param string $Describes 主题描述
      * @param integer $HotPeriod 0：日志主题关闭日志沉降。
 非0：日志主题开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。
@@ -192,6 +213,9 @@ class ModifyTopicRequest extends AbstractModel
 - 如果传递了MaxSplitPartitions，需要PartitionCount<=MaxSplitPartitions；
      * @param string $CancelTopicAsyncTaskID 取消切换存储任务的id
 - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。
+     * @param integer $Encryption 加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
+只支持传入1：kms-cls 云产品秘钥加密
+     * @param boolean $IsSourceFrom 开启记录公网来源ip和服务端接收时间
      */
     function __construct()
     {
@@ -239,6 +263,10 @@ class ModifyTopicRequest extends AbstractModel
             $this->Period = $param["Period"];
         }
 
+        if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
+            $this->StorageType = $param["StorageType"];
+        }
+
         if (array_key_exists("Describes",$param) and $param["Describes"] !== null) {
             $this->Describes = $param["Describes"];
         }
@@ -262,6 +290,14 @@ class ModifyTopicRequest extends AbstractModel
 
         if (array_key_exists("CancelTopicAsyncTaskID",$param) and $param["CancelTopicAsyncTaskID"] !== null) {
             $this->CancelTopicAsyncTaskID = $param["CancelTopicAsyncTaskID"];
+        }
+
+        if (array_key_exists("Encryption",$param) and $param["Encryption"] !== null) {
+            $this->Encryption = $param["Encryption"];
+        }
+
+        if (array_key_exists("IsSourceFrom",$param) and $param["IsSourceFrom"] !== null) {
+            $this->IsSourceFrom = $param["IsSourceFrom"];
         }
     }
 }

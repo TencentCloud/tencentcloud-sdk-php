@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckAttributeLabelExist请求参数结构体
  *
- * @method string getBotBizId() 获取应用ID
- * @method void setBotBizId(string $BotBizId) 设置应用ID
- * @method string getLabelName() 获取属性名称
- * @method void setLabelName(string $LabelName) 设置属性名称
- * @method string getAttributeBizId() 获取属性ID
- * @method void setAttributeBizId(string $AttributeBizId) 设置属性ID
+ * @method string getBotBizId() 获取应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+ * @method void setBotBizId(string $BotBizId) 设置应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+ * @method string getLabelName() 获取标签名称
+ * @method void setLabelName(string $LabelName) 设置标签名称
+ * @method string getAttributeBizId() 获取标签ID
+ * @method void setAttributeBizId(string $AttributeBizId) 设置标签ID
  * @method string getLoginUin() 获取登录用户主账号(集成商模式必填)
  * @method void setLoginUin(string $LoginUin) 设置登录用户主账号(集成商模式必填)
  * @method string getLoginSubAccountUin() 获取登录用户子账号(集成商模式必填)
  * @method void setLoginSubAccountUin(string $LoginSubAccountUin) 设置登录用户子账号(集成商模式必填)
- * @method string getLastLabelBizId() 获取滚动加载，最后一个属性标签ID
- * @method void setLastLabelBizId(string $LastLabelBizId) 设置滚动加载，最后一个属性标签ID
+ * @method string getLastLabelBizId() 获取最后一个标签ID。用于滚动加载：是一种分批、滚动式的存在性检查机制。客户端需要持续调用接口，并每次传入上一次返回的最后一个记录的ID，直到接口明确返回“存在”或“已检查全部数据且不存在”为止。
+ * @method void setLastLabelBizId(string $LastLabelBizId) 设置最后一个标签ID。用于滚动加载：是一种分批、滚动式的存在性检查机制。客户端需要持续调用接口，并每次传入上一次返回的最后一个记录的ID，直到接口明确返回“存在”或“已检查全部数据且不存在”为止。
  */
 class CheckAttributeLabelExistRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public $BotBizId;
 
     /**
-     * @var string 属性名称
+     * @var string 标签名称
      */
     public $LabelName;
 
     /**
-     * @var string 属性ID
+     * @var string 标签ID
      */
     public $AttributeBizId;
 
@@ -61,17 +61,17 @@ class CheckAttributeLabelExistRequest extends AbstractModel
     public $LoginSubAccountUin;
 
     /**
-     * @var string 滚动加载，最后一个属性标签ID
+     * @var string 最后一个标签ID。用于滚动加载：是一种分批、滚动式的存在性检查机制。客户端需要持续调用接口，并每次传入上一次返回的最后一个记录的ID，直到接口明确返回“存在”或“已检查全部数据且不存在”为止。
      */
     public $LastLabelBizId;
 
     /**
-     * @param string $BotBizId 应用ID
-     * @param string $LabelName 属性名称
-     * @param string $AttributeBizId 属性ID
+     * @param string $BotBizId 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+     * @param string $LabelName 标签名称
+     * @param string $AttributeBizId 标签ID
      * @param string $LoginUin 登录用户主账号(集成商模式必填)
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)
-     * @param string $LastLabelBizId 滚动加载，最后一个属性标签ID
+     * @param string $LastLabelBizId 最后一个标签ID。用于滚动加载：是一种分批、滚动式的存在性检查机制。客户端需要持续调用接口，并每次传入上一次返回的最后一个记录的ID，直到接口明确返回“存在”或“已检查全部数据且不存在”为止。
      */
     function __construct()
     {

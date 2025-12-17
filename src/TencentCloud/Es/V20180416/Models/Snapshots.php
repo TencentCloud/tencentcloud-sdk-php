@@ -96,6 +96,62 @@ SUCCESS     备份成功
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserBackUp(string $UserBackUp) 设置是否用户备份
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEsRepositoryType() 获取0 腾讯云仓库; 1 客户仓库
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEsRepositoryType(integer $EsRepositoryType) 设置0 腾讯云仓库; 1 客户仓库
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPaasEsRepository() 获取托管快照仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPaasEsRepository(string $PaasEsRepository) 设置托管快照仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUserEsRepository() 获取客户快照仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserEsRepository(string $UserEsRepository) 设置客户快照仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStorageDuration() 获取快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStorageDuration(integer $StorageDuration) 设置快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAutoBackupInterval() 获取自动备份频率, 如果是0,则等效24
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoBackupInterval(integer $AutoBackupInterval) 设置自动备份频率, 如果是0,则等效24
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCosRetention() 获取备份锁定 0 不锁定; 1 锁定
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCosRetention(integer $CosRetention) 设置备份锁定 0 不锁定; 1 锁定
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRetainUntilDate() 获取锁定截止日期 2022-12-10T08:34:48.000Z
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRetainUntilDate(string $RetainUntilDate) 设置锁定截止日期 2022-12-10T08:34:48.000Z
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRetentionGraceTime() 获取锁定宽限期,单位天
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRetentionGraceTime(integer $RetentionGraceTime) 设置锁定宽限期,单位天
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsLocked() 获取是否已经备份锁定 0 不锁定; 1 锁定
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsLocked(integer $IsLocked) 设置是否已经备份锁定 0 不锁定; 1 锁定
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRemoteCos() 获取跨地域备份 0 不跨地域; 1 跨地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemoteCos(integer $RemoteCos) 设置跨地域备份 0 不跨地域; 1 跨地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRemoteCosRegion() 获取跨地域备份地域名称 ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemoteCosRegion(string $RemoteCosRegion) 设置跨地域备份地域名称 ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCosEncryption() 获取备份加密 0 不加密; 1 加密
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCosEncryption(integer $CosEncryption) 设置备份加密 0 不加密; 1 加密
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getKmsKey() 获取kms密钥
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKmsKey(string $KmsKey) 设置kms密钥
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStrategyName() 获取策略名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStrategyName(string $StrategyName) 设置策略名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Snapshots extends AbstractModel
 {
@@ -198,6 +254,90 @@ SUCCESS     备份成功
     public $UserBackUp;
 
     /**
+     * @var integer 0 腾讯云仓库; 1 客户仓库
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EsRepositoryType;
+
+    /**
+     * @var string 托管快照仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PaasEsRepository;
+
+    /**
+     * @var string 客户快照仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserEsRepository;
+
+    /**
+     * @var integer 快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StorageDuration;
+
+    /**
+     * @var integer 自动备份频率, 如果是0,则等效24
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoBackupInterval;
+
+    /**
+     * @var integer 备份锁定 0 不锁定; 1 锁定
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CosRetention;
+
+    /**
+     * @var string 锁定截止日期 2022-12-10T08:34:48.000Z
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RetainUntilDate;
+
+    /**
+     * @var integer 锁定宽限期,单位天
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RetentionGraceTime;
+
+    /**
+     * @var integer 是否已经备份锁定 0 不锁定; 1 锁定
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsLocked;
+
+    /**
+     * @var integer 跨地域备份 0 不跨地域; 1 跨地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RemoteCos;
+
+    /**
+     * @var string 跨地域备份地域名称 ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RemoteCosRegion;
+
+    /**
+     * @var integer 备份加密 0 不加密; 1 加密
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CosEncryption;
+
+    /**
+     * @var string kms密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KmsKey;
+
+    /**
+     * @var string 策略名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StrategyName;
+
+    /**
      * @param string $SnapshotName 快照名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uuid 快照Uuid
@@ -235,6 +375,34 @@ SUCCESS     备份成功
      * @param array $Failures 备份失败的索引分片和失败原因
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserBackUp 是否用户备份
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EsRepositoryType 0 腾讯云仓库; 1 客户仓库
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PaasEsRepository 托管快照仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UserEsRepository 客户快照仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $StorageDuration 快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AutoBackupInterval 自动备份频率, 如果是0,则等效24
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CosRetention 备份锁定 0 不锁定; 1 锁定
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RetainUntilDate 锁定截止日期 2022-12-10T08:34:48.000Z
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RetentionGraceTime 锁定宽限期,单位天
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsLocked 是否已经备份锁定 0 不锁定; 1 锁定
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RemoteCos 跨地域备份 0 不跨地域; 1 跨地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RemoteCosRegion 跨地域备份地域名称 ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CosEncryption 备份加密 0 不加密; 1 加密
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $KmsKey kms密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StrategyName 策略名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -313,6 +481,62 @@ SUCCESS     备份成功
 
         if (array_key_exists("UserBackUp",$param) and $param["UserBackUp"] !== null) {
             $this->UserBackUp = $param["UserBackUp"];
+        }
+
+        if (array_key_exists("EsRepositoryType",$param) and $param["EsRepositoryType"] !== null) {
+            $this->EsRepositoryType = $param["EsRepositoryType"];
+        }
+
+        if (array_key_exists("PaasEsRepository",$param) and $param["PaasEsRepository"] !== null) {
+            $this->PaasEsRepository = $param["PaasEsRepository"];
+        }
+
+        if (array_key_exists("UserEsRepository",$param) and $param["UserEsRepository"] !== null) {
+            $this->UserEsRepository = $param["UserEsRepository"];
+        }
+
+        if (array_key_exists("StorageDuration",$param) and $param["StorageDuration"] !== null) {
+            $this->StorageDuration = $param["StorageDuration"];
+        }
+
+        if (array_key_exists("AutoBackupInterval",$param) and $param["AutoBackupInterval"] !== null) {
+            $this->AutoBackupInterval = $param["AutoBackupInterval"];
+        }
+
+        if (array_key_exists("CosRetention",$param) and $param["CosRetention"] !== null) {
+            $this->CosRetention = $param["CosRetention"];
+        }
+
+        if (array_key_exists("RetainUntilDate",$param) and $param["RetainUntilDate"] !== null) {
+            $this->RetainUntilDate = $param["RetainUntilDate"];
+        }
+
+        if (array_key_exists("RetentionGraceTime",$param) and $param["RetentionGraceTime"] !== null) {
+            $this->RetentionGraceTime = $param["RetentionGraceTime"];
+        }
+
+        if (array_key_exists("IsLocked",$param) and $param["IsLocked"] !== null) {
+            $this->IsLocked = $param["IsLocked"];
+        }
+
+        if (array_key_exists("RemoteCos",$param) and $param["RemoteCos"] !== null) {
+            $this->RemoteCos = $param["RemoteCos"];
+        }
+
+        if (array_key_exists("RemoteCosRegion",$param) and $param["RemoteCosRegion"] !== null) {
+            $this->RemoteCosRegion = $param["RemoteCosRegion"];
+        }
+
+        if (array_key_exists("CosEncryption",$param) and $param["CosEncryption"] !== null) {
+            $this->CosEncryption = $param["CosEncryption"];
+        }
+
+        if (array_key_exists("KmsKey",$param) and $param["KmsKey"] !== null) {
+            $this->KmsKey = $param["KmsKey"];
+        }
+
+        if (array_key_exists("StrategyName",$param) and $param["StrategyName"] !== null) {
+            $this->StrategyName = $param["StrategyName"];
         }
     }
 }

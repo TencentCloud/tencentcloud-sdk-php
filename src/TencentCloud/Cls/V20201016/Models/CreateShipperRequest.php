@@ -82,6 +82,10 @@ use TencentCloud\Common\AbstractModel;
 - MAZ_STANDARD_IA：低频存储（多 AZ）
 - INTELLIGENT_TIERING：智能分层存储
 - MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
+ * @method string getRoleArn() 获取角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+ * @method void setRoleArn(string $RoleArn) 设置角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+ * @method string getExternalId() 获取外部ID
+ * @method void setExternalId(string $ExternalId) 设置外部ID
  */
 class CreateShipperRequest extends AbstractModel
 {
@@ -173,6 +177,16 @@ class CreateShipperRequest extends AbstractModel
     public $StorageType;
 
     /**
+     * @var string 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     */
+    public $RoleArn;
+
+    /**
+     * @var string 外部ID
+     */
+    public $ExternalId;
+
+    /**
      * @param string $TopicId 创建的投递规则所属的日志主题Id。
 - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      * @param string $Bucket COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	
@@ -204,6 +218,8 @@ class CreateShipperRequest extends AbstractModel
 - MAZ_STANDARD_IA：低频存储（多 AZ）
 - INTELLIGENT_TIERING：智能分层存储
 - MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
+     * @param string $RoleArn 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     * @param string $ExternalId 外部ID
      */
     function __construct()
     {
@@ -279,6 +295,14 @@ class CreateShipperRequest extends AbstractModel
 
         if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
             $this->StorageType = $param["StorageType"];
+        }
+
+        if (array_key_exists("RoleArn",$param) and $param["RoleArn"] !== null) {
+            $this->RoleArn = $param["RoleArn"];
+        }
+
+        if (array_key_exists("ExternalId",$param) and $param["ExternalId"] !== null) {
+            $this->ExternalId = $param["ExternalId"];
         }
     }
 }

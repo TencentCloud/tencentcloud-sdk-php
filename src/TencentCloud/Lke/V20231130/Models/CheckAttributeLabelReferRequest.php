@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckAttributeLabelRefer请求参数结构体
  *
- * @method string getBotBizId() 获取应用ID
- * @method void setBotBizId(string $BotBizId) 设置应用ID
+ * @method string getBotBizId() 获取应用ID,获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+ * @method void setBotBizId(string $BotBizId) 设置应用ID,获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
  * @method string getLoginUin() 获取登录用户主账号(集成商模式必填)
  * @method void setLoginUin(string $LoginUin) 设置登录用户主账号(集成商模式必填)
  * @method string getLoginSubAccountUin() 获取登录用户子账号(集成商模式必填)
  * @method void setLoginSubAccountUin(string $LoginSubAccountUin) 设置登录用户子账号(集成商模式必填)
- * @method string getLabelBizId() 获取属性标签
- * @method void setLabelBizId(string $LabelBizId) 设置属性标签
- * @method array getAttributeBizId() 获取属性ID
- * @method void setAttributeBizId(array $AttributeBizId) 设置属性ID
+ * @method string getLabelBizId() 获取属性标签ID
+ * @method void setLabelBizId(string $LabelBizId) 设置属性标签ID
+ * @method array getAttributeBizId() 获取标签ID
+ * @method void setAttributeBizId(array $AttributeBizId) 设置标签ID
  */
 class CheckAttributeLabelReferRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string 应用ID,获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public $BotBizId;
 
@@ -49,21 +49,21 @@ class CheckAttributeLabelReferRequest extends AbstractModel
     public $LoginSubAccountUin;
 
     /**
-     * @var string 属性标签
+     * @var string 属性标签ID
      */
     public $LabelBizId;
 
     /**
-     * @var array 属性ID
+     * @var array 标签ID
      */
     public $AttributeBizId;
 
     /**
-     * @param string $BotBizId 应用ID
+     * @param string $BotBizId 应用ID,获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      * @param string $LoginUin 登录用户主账号(集成商模式必填)
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)
-     * @param string $LabelBizId 属性标签
-     * @param array $AttributeBizId 属性ID
+     * @param string $LabelBizId 属性标签ID
+     * @param array $AttributeBizId 标签ID
      */
     function __construct()
     {

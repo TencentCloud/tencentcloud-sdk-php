@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getHighPriorityRouteTableId() 获取高优路由表唯一 ID。
  * @method void setHighPriorityRouteTableId(string $HighPriorityRouteTableId) 设置高优路由表唯一 ID。
- * @method string getSubnetId() 获取子网唯一 ID
- * @method void setSubnetId(string $SubnetId) 设置子网唯一 ID
+ * @method string getSubnetId() 获取子网唯一 ID。对于存在子网唯一ID的场景，该参数为必选。对于不存在子网ID的特殊场景，SubnetId和CidrBlock参数至少提供一个，二选一。
+ * @method void setSubnetId(string $SubnetId) 设置子网唯一 ID。对于存在子网唯一ID的场景，该参数为必选。对于不存在子网ID的特殊场景，SubnetId和CidrBlock参数至少提供一个，二选一。
  */
 class ReplaceHighPriorityRouteTableAssociationRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ReplaceHighPriorityRouteTableAssociationRequest extends AbstractModel
     public $HighPriorityRouteTableId;
 
     /**
-     * @var string 子网唯一 ID
+     * @var string 子网唯一 ID。对于存在子网唯一ID的场景，该参数为必选。对于不存在子网ID的特殊场景，SubnetId和CidrBlock参数至少提供一个，二选一。
      */
     public $SubnetId;
 
     /**
      * @param string $HighPriorityRouteTableId 高优路由表唯一 ID。
-     * @param string $SubnetId 子网唯一 ID
+     * @param string $SubnetId 子网唯一 ID。对于存在子网唯一ID的场景，该参数为必选。对于不存在子网ID的特殊场景，SubnetId和CidrBlock参数至少提供一个，二选一。
      */
     function __construct()
     {

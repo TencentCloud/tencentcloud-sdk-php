@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAttributeLabel请求参数结构体
  *
- * @method string getBotBizId() 获取应用ID
- * @method void setBotBizId(string $BotBizId) 设置应用ID
+ * @method string getBotBizId() 获取应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+ * @method void setBotBizId(string $BotBizId) 设置应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
  * @method string getAttrName() 获取标签名
  * @method void setAttrName(string $AttrName) 设置标签名
  * @method array getLabels() 获取标签值
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateAttributeLabelRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public $BotBizId;
 
@@ -66,7 +66,7 @@ class CreateAttributeLabelRequest extends AbstractModel
     public $LoginSubAccountUin;
 
     /**
-     * @param string $BotBizId 应用ID
+     * @param string $BotBizId 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      * @param string $AttrName 标签名
      * @param array $Labels 标签值
      * @param string $AttrKey 标签标识（不生效，无需填写） 已作废

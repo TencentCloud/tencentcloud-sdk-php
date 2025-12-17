@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostStandbyCount(integer $HostStandbyCount) 设置热备宿主机数量
  * @method integer getHostNormalCount() 获取普通宿主机数量
  * @method void setHostNormalCount(integer $HostNormalCount) 设置普通宿主机数量
+ * @method integer getHostAbnormalCount() 获取异常宿主机数量
+ * @method void setHostAbnormalCount(integer $HostAbnormalCount) 设置异常宿主机数量
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -89,6 +91,11 @@ class DescribeDedicatedClusterOverviewResponse extends AbstractModel
     public $HostNormalCount;
 
     /**
+     * @var integer 异常宿主机数量
+     */
+    public $HostAbnormalCount;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -103,6 +110,7 @@ class DescribeDedicatedClusterOverviewResponse extends AbstractModel
      * @param array $HostDetailInfo 宿主机资源概览信息
      * @param integer $HostStandbyCount 热备宿主机数量
      * @param integer $HostNormalCount 普通宿主机数量
+     * @param integer $HostAbnormalCount 异常宿主机数量
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -164,6 +172,10 @@ class DescribeDedicatedClusterOverviewResponse extends AbstractModel
 
         if (array_key_exists("HostNormalCount",$param) and $param["HostNormalCount"] !== null) {
             $this->HostNormalCount = $param["HostNormalCount"];
+        }
+
+        if (array_key_exists("HostAbnormalCount",$param) and $param["HostAbnormalCount"] !== null) {
+            $this->HostAbnormalCount = $param["HostAbnormalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

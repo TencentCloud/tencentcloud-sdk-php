@@ -140,6 +140,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbSourceType(string $DbSourceType) 设置DB来源类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getStagingSwitch() 获取模型预览状态开关
+ * @method void setStagingSwitch(boolean $StagingSwitch) 设置模型预览状态开关
  */
 class DataSourceDetail extends AbstractModel
 {
@@ -357,6 +359,11 @@ class DataSourceDetail extends AbstractModel
     public $DbSourceType;
 
     /**
+     * @var boolean 模型预览状态开关
+     */
+    public $StagingSwitch;
+
+    /**
      * @param string $Id 数据源 ID
      * @param string $Title 数据源名称
      * @param string $Name 数据源标识
@@ -417,6 +424,7 @@ class DataSourceDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DbSourceType DB来源类型
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $StagingSwitch 模型预览状态开关
      */
     function __construct()
     {
@@ -592,6 +600,10 @@ class DataSourceDetail extends AbstractModel
 
         if (array_key_exists("DbSourceType",$param) and $param["DbSourceType"] !== null) {
             $this->DbSourceType = $param["DbSourceType"];
+        }
+
+        if (array_key_exists("StagingSwitch",$param) and $param["StagingSwitch"] !== null) {
+            $this->StagingSwitch = $param["StagingSwitch"];
         }
     }
 }

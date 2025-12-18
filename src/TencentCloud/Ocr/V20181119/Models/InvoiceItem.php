@@ -83,7 +83,9 @@ FailedOperation.UnKnowError：表示识别失败；
  * @method string getSubTypeDescription() 获取发票详细类型描述，详见上方 SubType 返回值说明
  * @method void setSubTypeDescription(string $SubTypeDescription) 设置发票详细类型描述，详见上方 SubType 返回值说明
  * @method array getItemPolygon() 获取该发票中所有字段坐标信息。包括字段英文名称、字段值所在位置四点坐标、字段所属行号，具体内容请点击左侧链接。
+字段在原始图的坐标可以根据Polygon转换得出。
  * @method void setItemPolygon(array $ItemPolygon) 设置该发票中所有字段坐标信息。包括字段英文名称、字段值所在位置四点坐标、字段所属行号，具体内容请点击左侧链接。
+字段在原始图的坐标可以根据Polygon转换得出。
  * @method string getQRCode() 获取二维码数据。
  * @method void setQRCode(string $QRCode) 设置二维码数据。
  * @method InvoiceSealInfo getInvoiceSealInfo() 获取印章信息
@@ -164,6 +166,7 @@ FailedOperation.UnKnowError：表示识别失败；
 
     /**
      * @var array 该发票中所有字段坐标信息。包括字段英文名称、字段值所在位置四点坐标、字段所属行号，具体内容请点击左侧链接。
+字段在原始图的坐标可以根据Polygon转换得出。
      */
     public $ItemPolygon;
 
@@ -210,6 +213,7 @@ FailedOperation.UnKnowError：表示识别失败；
      * @param string $CutImage 切割单图文件，Base64编码后的切图后的图片文件，开启 EnableCutImage 后进行返回
      * @param string $SubTypeDescription 发票详细类型描述，详见上方 SubType 返回值说明
      * @param array $ItemPolygon 该发票中所有字段坐标信息。包括字段英文名称、字段值所在位置四点坐标、字段所属行号，具体内容请点击左侧链接。
+字段在原始图的坐标可以根据Polygon转换得出。
      * @param string $QRCode 二维码数据。
      * @param InvoiceSealInfo $InvoiceSealInfo 印章信息
      */

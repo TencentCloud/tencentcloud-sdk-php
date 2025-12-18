@@ -177,6 +177,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getSpeakerDiarization() 获取是否开启说话人分离
 0：不开启；
 1：开启（仅支持以下引擎：8k_zh/8k_zh_large/16k_zh/16k_ms/16k_en/16k_id/16k_zh_large/16k_zh_dialect/16k_zh_en，且ChannelNum=1时可用）；
+3: 开启角色分离，需配合SpeakerRoles参数使用（增值服务，仅支持16k_zh_en引擎，可支持传入声纹对录音文件内的说话人进行角色认证）
 默认值为 0
 
 注意：
@@ -184,6 +185,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpeakerDiarization(integer $SpeakerDiarization) 设置是否开启说话人分离
 0：不开启；
 1：开启（仅支持以下引擎：8k_zh/8k_zh_large/16k_zh/16k_ms/16k_en/16k_id/16k_zh_large/16k_zh_dialect/16k_zh_en，且ChannelNum=1时可用）；
+3: 开启角色分离，需配合SpeakerRoles参数使用（增值服务，仅支持16k_zh_en引擎，可支持传入声纹对录音文件内的说话人进行角色认证）
 默认值为 0
 
 注意：
@@ -359,6 +361,21 @@ use TencentCloud\Common\AbstractModel;
 
 注意：
 1. 本功能配置完成后，预计在10分钟后生效
+
+ * @method array getSpeakerRoles() 获取开启角色分离能力
+配合SpeakerDiarization: 3 使用，ASR增值服务，可传入一组声纹信息进行角色认证，仅支持16k_zh_en引擎。
+需传入SpeakerRoleInfo数据组，确定说话人的角色信息，涉及RoleAudioUrl和RoleName两个参数。 
+RoleAudioUrl：需要认证角色的声纹音频地址，建议30s内的纯净人声，最长不能超过45s。 
+RoleName：需要认证角色的名称，若匹配成功，会替换话者分离中的SpeakerID。 
+示例： 
+"{\"EngineModelType\":\"16k_zh_en\",\"ChannelNum\":1,\"ResTextFormat\":1,\"SourceType\":0,\"Url\":\"需要进行ASR识别的音频链接\",\"SpeakerDiarization\":3,\"SpeakerRoles\":[{\"RoleAudioUrl\":\"需要认证角色的声纹音频地址\",\"RoleName\":\"需要认证角色的名称\"}]}"
+ * @method void setSpeakerRoles(array $SpeakerRoles) 设置开启角色分离能力
+配合SpeakerDiarization: 3 使用，ASR增值服务，可传入一组声纹信息进行角色认证，仅支持16k_zh_en引擎。
+需传入SpeakerRoleInfo数据组，确定说话人的角色信息，涉及RoleAudioUrl和RoleName两个参数。 
+RoleAudioUrl：需要认证角色的声纹音频地址，建议30s内的纯净人声，最长不能超过45s。 
+RoleName：需要认证角色的名称，若匹配成功，会替换话者分离中的SpeakerID。 
+示例： 
+"{\"EngineModelType\":\"16k_zh_en\",\"ChannelNum\":1,\"ResTextFormat\":1,\"SourceType\":0,\"Url\":\"需要进行ASR识别的音频链接\",\"SpeakerDiarization\":3,\"SpeakerRoles\":[{\"RoleAudioUrl\":\"需要认证角色的声纹音频地址\",\"RoleName\":\"需要认证角色的名称\"}]}"
  */
 class CreateRecTaskRequest extends AbstractModel
 {
@@ -475,6 +492,7 @@ class CreateRecTaskRequest extends AbstractModel
      * @var integer 是否开启说话人分离
 0：不开启；
 1：开启（仅支持以下引擎：8k_zh/8k_zh_large/16k_zh/16k_ms/16k_en/16k_id/16k_zh_large/16k_zh_dialect/16k_zh_en，且ChannelNum=1时可用）；
+3: 开启角色分离，需配合SpeakerRoles参数使用（增值服务，仅支持16k_zh_en引擎，可支持传入声纹对录音文件内的说话人进行角色认证）
 默认值为 0
 
 注意：
@@ -630,6 +648,17 @@ class CreateRecTaskRequest extends AbstractModel
     public $ReplaceTextId;
 
     /**
+     * @var array 开启角色分离能力
+配合SpeakerDiarization: 3 使用，ASR增值服务，可传入一组声纹信息进行角色认证，仅支持16k_zh_en引擎。
+需传入SpeakerRoleInfo数据组，确定说话人的角色信息，涉及RoleAudioUrl和RoleName两个参数。 
+RoleAudioUrl：需要认证角色的声纹音频地址，建议30s内的纯净人声，最长不能超过45s。 
+RoleName：需要认证角色的名称，若匹配成功，会替换话者分离中的SpeakerID。 
+示例： 
+"{\"EngineModelType\":\"16k_zh_en\",\"ChannelNum\":1,\"ResTextFormat\":1,\"SourceType\":0,\"Url\":\"需要进行ASR识别的音频链接\",\"SpeakerDiarization\":3,\"SpeakerRoles\":[{\"RoleAudioUrl\":\"需要认证角色的声纹音频地址\",\"RoleName\":\"需要认证角色的名称\"}]}"
+     */
+    public $SpeakerRoles;
+
+    /**
      * @param string $EngineModelType 引擎模型类型
 识别引擎采用分级计费方案，标记为“大模型版”的引擎适用大模型计费方案，[点击这里](https://cloud.tencent.com/document/product/1093/35686) 查看产品计费说明
 
@@ -710,6 +739,7 @@ class CreateRecTaskRequest extends AbstractModel
      * @param integer $SpeakerDiarization 是否开启说话人分离
 0：不开启；
 1：开启（仅支持以下引擎：8k_zh/8k_zh_large/16k_zh/16k_ms/16k_en/16k_id/16k_zh_large/16k_zh_dialect/16k_zh_en，且ChannelNum=1时可用）；
+3: 开启角色分离，需配合SpeakerRoles参数使用（增值服务，仅支持16k_zh_en引擎，可支持传入声纹对录音文件内的说话人进行角色认证）
 默认值为 0
 
 注意：
@@ -799,6 +829,14 @@ class CreateRecTaskRequest extends AbstractModel
 
 注意：
 1. 本功能配置完成后，预计在10分钟后生效
+
+     * @param array $SpeakerRoles 开启角色分离能力
+配合SpeakerDiarization: 3 使用，ASR增值服务，可传入一组声纹信息进行角色认证，仅支持16k_zh_en引擎。
+需传入SpeakerRoleInfo数据组，确定说话人的角色信息，涉及RoleAudioUrl和RoleName两个参数。 
+RoleAudioUrl：需要认证角色的声纹音频地址，建议30s内的纯净人声，最长不能超过45s。 
+RoleName：需要认证角色的名称，若匹配成功，会替换话者分离中的SpeakerID。 
+示例： 
+"{\"EngineModelType\":\"16k_zh_en\",\"ChannelNum\":1,\"ResTextFormat\":1,\"SourceType\":0,\"Url\":\"需要进行ASR识别的音频链接\",\"SpeakerDiarization\":3,\"SpeakerRoles\":[{\"RoleAudioUrl\":\"需要认证角色的声纹音频地址\",\"RoleName\":\"需要认证角色的名称\"}]}"
      */
     function __construct()
     {
@@ -907,6 +945,15 @@ class CreateRecTaskRequest extends AbstractModel
 
         if (array_key_exists("ReplaceTextId",$param) and $param["ReplaceTextId"] !== null) {
             $this->ReplaceTextId = $param["ReplaceTextId"];
+        }
+
+        if (array_key_exists("SpeakerRoles",$param) and $param["SpeakerRoles"] !== null) {
+            $this->SpeakerRoles = [];
+            foreach ($param["SpeakerRoles"] as $key => $value){
+                $obj = new SpeakerRoleInfo();
+                $obj->deserialize($value);
+                array_push($this->SpeakerRoles, $obj);
+            }
         }
     }
 }

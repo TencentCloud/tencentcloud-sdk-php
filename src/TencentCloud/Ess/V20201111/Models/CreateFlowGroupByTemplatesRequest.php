@@ -44,6 +44,14 @@ use TencentCloud\Common\AbstractModel;
 <li>是否通知本企业签署方</li>
 <li>是否通知其他签署方</li>
 </ul>
+ * @method UserFlowType getUserFlowType() 获取用户自定义合同类型。  
+自定义合同类型配置的地方如链接图所示。[点击查看自定义合同类型管理的位置](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)  
+
+注意： 如果传递了自定义合同类型，则每一个子合同对应模板上面的自定义合同类型将会失效，已最外层定义的为准。 例如： 这份合同组有三个子合同，设置合同类型为<font color="blue">人事/劳务</font> 第一份子合同选择的模板的合同自定义合同类型是<font color="blue">采购</font> 第二份和第三份子合同选择的模板的合同自定义合同类型是<font color="blue">人事/劳务</font> 但最终这个合同组的合同类型是<font color="blue">人事/劳务</font>
+ * @method void setUserFlowType(UserFlowType $UserFlowType) 设置用户自定义合同类型。  
+自定义合同类型配置的地方如链接图所示。[点击查看自定义合同类型管理的位置](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)  
+
+注意： 如果传递了自定义合同类型，则每一个子合同对应模板上面的自定义合同类型将会失效，已最外层定义的为准。 例如： 这份合同组有三个子合同，设置合同类型为<font color="blue">人事/劳务</font> 第一份子合同选择的模板的合同自定义合同类型是<font color="blue">采购</font> 第二份和第三份子合同选择的模板的合同自定义合同类型是<font color="blue">人事/劳务</font> 但最终这个合同组的合同类型是<font color="blue">人事/劳务</font>
  */
 class CreateFlowGroupByTemplatesRequest extends AbstractModel
 {
@@ -80,6 +88,14 @@ class CreateFlowGroupByTemplatesRequest extends AbstractModel
     public $FlowGroupOptions;
 
     /**
+     * @var UserFlowType 用户自定义合同类型。  
+自定义合同类型配置的地方如链接图所示。[点击查看自定义合同类型管理的位置](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)  
+
+注意： 如果传递了自定义合同类型，则每一个子合同对应模板上面的自定义合同类型将会失效，已最外层定义的为准。 例如： 这份合同组有三个子合同，设置合同类型为<font color="blue">人事/劳务</font> 第一份子合同选择的模板的合同自定义合同类型是<font color="blue">采购</font> 第二份和第三份子合同选择的模板的合同自定义合同类型是<font color="blue">人事/劳务</font> 但最终这个合同组的合同类型是<font color="blue">人事/劳务</font>
+     */
+    public $UserFlowType;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param string $FlowGroupName 合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
@@ -92,6 +108,10 @@ class CreateFlowGroupByTemplatesRequest extends AbstractModel
 <li>是否通知本企业签署方</li>
 <li>是否通知其他签署方</li>
 </ul>
+     * @param UserFlowType $UserFlowType 用户自定义合同类型。  
+自定义合同类型配置的地方如链接图所示。[点击查看自定义合同类型管理的位置](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)  
+
+注意： 如果传递了自定义合同类型，则每一个子合同对应模板上面的自定义合同类型将会失效，已最外层定义的为准。 例如： 这份合同组有三个子合同，设置合同类型为<font color="blue">人事/劳务</font> 第一份子合同选择的模板的合同自定义合同类型是<font color="blue">采购</font> 第二份和第三份子合同选择的模板的合同自定义合同类型是<font color="blue">人事/劳务</font> 但最终这个合同组的合同类型是<font color="blue">人事/劳务</font>
      */
     function __construct()
     {
@@ -132,6 +152,11 @@ class CreateFlowGroupByTemplatesRequest extends AbstractModel
         if (array_key_exists("FlowGroupOptions",$param) and $param["FlowGroupOptions"] !== null) {
             $this->FlowGroupOptions = new FlowGroupOptions();
             $this->FlowGroupOptions->deserialize($param["FlowGroupOptions"]);
+        }
+
+        if (array_key_exists("UserFlowType",$param) and $param["UserFlowType"] !== null) {
+            $this->UserFlowType = new UserFlowType();
+            $this->UserFlowType->deserialize($param["UserFlowType"]);
         }
     }
 }

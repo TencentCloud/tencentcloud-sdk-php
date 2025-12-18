@@ -98,6 +98,8 @@ postMoveIn 按量计费迁入资源
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(array $ResourceId) 设置订单对应的资源id, 查询参数Limit超过200，将返回null
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getZoneCode() 获取订单对应的可用区Id
+ * @method void setZoneCode(string $ZoneCode) 设置订单对应的可用区Id
  */
 class Deal extends AbstractModel
 {
@@ -245,6 +247,11 @@ postMoveIn 按量计费迁入资源
     public $ResourceId;
 
     /**
+     * @var string 订单对应的可用区Id
+     */
+    public $ZoneCode;
+
+    /**
      * @param string $OrderId 订单号
      * @param integer $Status 订单的状态 1：未支付 2：已支付3：发货中 4：已发货 5：发货失败 6：已退款 7：已关单 8：订单过期 9：订单已失效 10：产品已失效 11：代付拒绝 12：支付中
      * @param string $Payer 支付者
@@ -284,6 +291,7 @@ postMoveIn 按量计费迁入资源
      * @param string $SubProductName 子产品编码中文名称
      * @param array $ResourceId 订单对应的资源id, 查询参数Limit超过200，将返回null
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ZoneCode 订单对应的可用区Id
      */
     function __construct()
     {
@@ -405,6 +413,10 @@ postMoveIn 按量计费迁入资源
 
         if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
             $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("ZoneCode",$param) and $param["ZoneCode"] !== null) {
+            $this->ZoneCode = $param["ZoneCode"];
         }
     }
 }

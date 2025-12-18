@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPaasEsRepository(string $PaasEsRepository) 设置托管快照仓库名称
  * @method string getUserEsRepository() 获取客户快照仓库名称
  * @method void setUserEsRepository(string $UserEsRepository) 设置客户快照仓库名称
+ * @method string getCosBasePath() 获取cos存储文件夹目录
+ * @method void setCosBasePath(string $CosBasePath) 设置cos存储文件夹目录
  * @method integer getStorageDuration() 获取快照存储周期 单位天
  * @method void setStorageDuration(integer $StorageDuration) 设置快照存储周期 单位天
  * @method integer getAutoBackupInterval() 获取自动备份频率单位小时
@@ -84,6 +86,11 @@ class CosBackup extends AbstractModel
      * @var string 客户快照仓库名称
      */
     public $UserEsRepository;
+
+    /**
+     * @var string cos存储文件夹目录
+     */
+    public $CosBasePath;
 
     /**
      * @var integer 快照存储周期 单位天
@@ -142,6 +149,7 @@ class CosBackup extends AbstractModel
      * @param integer $EsRepositoryType 0 腾讯云仓库; 1 客户仓库
      * @param string $PaasEsRepository 托管快照仓库名称
      * @param string $UserEsRepository 客户快照仓库名称
+     * @param string $CosBasePath cos存储文件夹目录
      * @param integer $StorageDuration 快照存储周期 单位天
      * @param integer $AutoBackupInterval 自动备份频率单位小时
      * @param integer $CosRetention 备份锁定 0 不锁定; 1 锁定
@@ -188,6 +196,10 @@ class CosBackup extends AbstractModel
 
         if (array_key_exists("UserEsRepository",$param) and $param["UserEsRepository"] !== null) {
             $this->UserEsRepository = $param["UserEsRepository"];
+        }
+
+        if (array_key_exists("CosBasePath",$param) and $param["CosBasePath"] !== null) {
+            $this->CosBasePath = $param["CosBasePath"];
         }
 
         if (array_key_exists("StorageDuration",$param) and $param["StorageDuration"] !== null) {

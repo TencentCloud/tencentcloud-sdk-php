@@ -14,31 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cynosdb\V20190107\Models;
+namespace TencentCloud\Antiddos\V20200309\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyServerlessStrategy返回参数结构体
+ * DescribeBgpInstances返回参数结构体
  *
- * @method integer getFlowId() 获取异步流程id
- * @method void setFlowId(integer $FlowId) 设置异步流程id
- * @method integer getTaskId() 获取任务id
- * @method void setTaskId(integer $TaskId) 设置任务id
+ * @method integer getTotal() 获取返回数量
+ * @method void setTotal(integer $Total) 设置返回数量
+ * @method array getBGPInstanceList() 获取返回购买高防包信息
+ * @method void setBGPInstanceList(array $BGPInstanceList) 设置返回购买高防包信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyServerlessStrategyResponse extends AbstractModel
+class DescribeBgpInstancesResponse extends AbstractModel
 {
     /**
-     * @var integer 异步流程id
-     * @deprecated
+     * @var integer 返回数量
      */
-    public $FlowId;
+    public $Total;
 
     /**
-     * @var integer 任务id
+     * @var array 返回购买高防包信息
      */
-    public $TaskId;
+    public $BGPInstanceList;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -46,8 +45,8 @@ class ModifyServerlessStrategyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $FlowId 异步流程id
-     * @param integer $TaskId 任务id
+     * @param integer $Total 返回数量
+     * @param array $BGPInstanceList 返回购买高防包信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -63,12 +62,17 @@ class ModifyServerlessStrategyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
-            $this->FlowId = $param["FlowId"];
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
         }
 
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("BGPInstanceList",$param) and $param["BGPInstanceList"] !== null) {
+            $this->BGPInstanceList = [];
+            foreach ($param["BGPInstanceList"] as $key => $value){
+                $obj = new BGPInstanceInfo();
+                $obj->deserialize($value);
+                array_push($this->BGPInstanceList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

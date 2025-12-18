@@ -25,6 +25,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
 /**
  * @method Models\AssociateDDoSEipAddressResponse AssociateDDoSEipAddress(Models\AssociateDDoSEipAddressRequest $req) 本接口 (AssociateDDoSEipAddress) 用于将高防弹性公网IP绑定到实例或弹性网卡的指定内网 IP 上。
  * @method Models\AssociateDDoSEipLoadBalancerResponse AssociateDDoSEipLoadBalancer(Models\AssociateDDoSEipLoadBalancerRequest $req) 本接口 (AssociateDDoSEipLoadBalancer) 用于将高防弹性公网IP绑定到负载均衡指定内网 IP 上。
+ * @method Models\CreateBgpInstanceResponse CreateBgpInstance(Models\CreateBgpInstanceRequest $req) 通过API 购买高防包接口
  * @method Models\CreateBlackWhiteIpListResponse CreateBlackWhiteIpList(Models\CreateBlackWhiteIpListRequest $req) 添加DDoS防护的IP黑白名单
  * @method Models\CreateBoundIPResponse CreateBoundIP(Models\CreateBoundIPRequest $req) 绑定IP到高防包实例，支持独享包、共享包（新版）；需要注意的是此接口绑定或解绑IP是异步接口，当处于绑定或解绑中时，则不允许再进行绑定或解绑，需要等待当前绑定或解绑完成。
  * @method Models\CreateCCPrecisionPolicyResponse CreateCCPrecisionPolicy(Models\CreateCCPrecisionPolicyRequest $req) 新增CC精准防护策略
@@ -63,6 +64,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DescribeBGPIPL7RulesResponse DescribeBGPIPL7Rules(Models\DescribeBGPIPL7RulesRequest $req) 高防IP获取7层规则
  * @method Models\DescribeBasicDeviceStatusResponse DescribeBasicDeviceStatus(Models\DescribeBasicDeviceStatusRequest $req) 获取基础防护攻击状态
  * @method Models\DescribeBgpBizTrendResponse DescribeBgpBizTrend(Models\DescribeBgpBizTrendRequest $req) 获取高防包流量折线图
+ * @method Models\DescribeBgpInstancesResponse DescribeBgpInstances(Models\DescribeBgpInstancesRequest $req) 购买后，查询购买的高防包实例信息
  * @method Models\DescribeBizHttpStatusResponse DescribeBizHttpStatus(Models\DescribeBizHttpStatusRequest $req) 获取业务流量状态码统计列表
  * @method Models\DescribeBizMonitorTrendResponse DescribeBizMonitorTrend(Models\DescribeBizMonitorTrendRequest $req) 获取高防IP业务监控流量曲线
  * @method Models\DescribeBizTrendResponse DescribeBizTrend(Models\DescribeBizTrendRequest $req) 获取业务流量曲线

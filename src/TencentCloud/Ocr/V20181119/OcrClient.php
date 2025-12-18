@@ -23,9 +23,9 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Ocr\V20181119\Models as Models;
 
 /**
- * @method Models\AdvertiseOCRResponse AdvertiseOCR(Models\AdvertiseOCRRequest $req) 本接口支持广告商品图片内文字的检测和识别，返回文本框位置与文字内容。
+ * @method Models\AdvertiseOCRResponse AdvertiseOCR(Models\AdvertiseOCRRequest $req) <b>此接口不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/33526">通用印刷体识别</a>。</b>
 
-产品优势：针对广告商品图片普遍存在较多繁体字、艺术字的特点，进行了识别能力的增强。支持中英文、横排、竖排以及倾斜场景文字识别。文字识别的召回率和准确率能达到96%以上。
+支持广告商品图片内文字的检测和识别，返回文本框位置与文字内容。支持中英文、横排、竖排以及倾斜场景文字识别，支持90度、180度、270度翻转以及倾斜场景文字识别，具有较高召回率和准确率。
 
 默认接口请求频率限制：20次/秒。
  * @method Models\ArithmeticOCRResponse ArithmeticOCR(Models\ArithmeticOCRRequest $req) 本接口支持作业算式题目的自动识别和判分，目前覆盖 K12 学力范围内的 11 种题型，包括加减乘除四则、加减乘除已知结果求运算因子、判断大小、约等于估算、带余数除法、分数四则运算、单位换算、竖式加减法、竖式乘除法、脱式计算和解方程，平均识别精度达到93%以上。
@@ -406,7 +406,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 默认接口请求频率限制：5次/秒。
  * @method Models\RecognizeEncryptedIDCardOCRResponse RecognizeEncryptedIDCardOCR(Models\RecognizeEncryptedIDCardOCRRequest $req) 身份证识别（安全加密版）接口实现了数据加密传输，能够有效防止个人身份证隐私信息不被窃取泄露。
 
-本接口支持中国大陆居民二代身份证正反面所有字段的识别，包括姓名、性别、民族、出生日期、住址、公民身份证号、签发机关、有效期限，识别准确度达到99%以上。
+本接口支持中国大陆居民二代身份证正反面所有字段的识别，包括姓名、性别、民族、出生日期、住址、公民身份证号、签发机关、有效期限，识别速度快、准确度高。
 
 另外，本接口还支持多种扩展能力，满足不同场景的需求。如身份证照片、人像照片的裁剪功能，同时具备9种告警功能，如下表所示。
 
@@ -658,7 +658,12 @@ use TencentCloud\Ocr\V20181119\Models as Models;
           <td> 25 </td>
         </tr>
         <tr>
-          <td> OtherInvoice </td>
+           <td> ElectronicTollSummary </td>
+          <td> 通行费电子票据汇总单 </td>
+          <td> 26 </td>
+        </tr>
+        <tr>
+           <td> OtherInvoice </td>
           <td> 其他发票 </td>
           <td> -1 </td>
         </tr>

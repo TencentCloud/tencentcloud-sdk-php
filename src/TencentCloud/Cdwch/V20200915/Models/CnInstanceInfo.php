@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceID(string $InstanceID) 设置-
  * @method array getResources() 获取无
  * @method void setResources(array $Resources) 设置无
+ * @method string getIsSecondaryZone() 获取desc
+ * @method void setIsSecondaryZone(string $IsSecondaryZone) 设置desc
+ * @method string getSecondaryZoneInfo() 获取desc
+ * @method void setSecondaryZoneInfo(string $SecondaryZoneInfo) 设置desc
  */
 class CnInstanceInfo extends AbstractModel
 {
@@ -80,6 +84,16 @@ class CnInstanceInfo extends AbstractModel
     public $Resources;
 
     /**
+     * @var string desc
+     */
+    public $IsSecondaryZone;
+
+    /**
+     * @var string desc
+     */
+    public $SecondaryZoneInfo;
+
+    /**
      * @param integer $ID ID值
      * @param string $InstanceType cdwch-cn或者其他
      * @param string $InstanceName cdwch-cn或者其他
@@ -88,6 +102,8 @@ class CnInstanceInfo extends AbstractModel
      * @param InstanceStateInfo $InstanceStateInfo 无
      * @param string $InstanceID -
      * @param array $Resources 无
+     * @param string $IsSecondaryZone desc
+     * @param string $SecondaryZoneInfo desc
      */
     function __construct()
     {
@@ -138,6 +154,14 @@ class CnInstanceInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Resources, $obj);
             }
+        }
+
+        if (array_key_exists("IsSecondaryZone",$param) and $param["IsSecondaryZone"] !== null) {
+            $this->IsSecondaryZone = $param["IsSecondaryZone"];
+        }
+
+        if (array_key_exists("SecondaryZoneInfo",$param) and $param["SecondaryZoneInfo"] !== null) {
+            $this->SecondaryZoneInfo = $param["SecondaryZoneInfo"];
         }
     }
 }

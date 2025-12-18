@@ -70,6 +70,8 @@ HotPeriod=0为没有开启日志沉降。
  * @method void setHotPeriod(integer $HotPeriod) 设置开启日志沉降，标准存储的生命周期， hotPeriod < Period。
 标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
 HotPeriod=0为没有开启日志沉降。
+ * @method string getKeyId() 获取kms-cls服务秘钥id
+ * @method void setKeyId(string $KeyId) 设置kms-cls服务秘钥id
  * @method integer getBizType() 获取主题类型。
 - 0: 日志主题 
 - 1: 指标主题
@@ -201,6 +203,11 @@ HotPeriod=0为没有开启日志沉降。
     public $HotPeriod;
 
     /**
+     * @var string kms-cls服务秘钥id
+     */
+    public $KeyId;
+
+    /**
      * @var integer 主题类型。
 - 0: 日志主题 
 - 1: 指标主题
@@ -269,6 +276,7 @@ HotPeriod=0为没有开启日志沉降。
      * @param integer $HotPeriod 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
 标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
 HotPeriod=0为没有开启日志沉降。
+     * @param string $KeyId kms-cls服务秘钥id
      * @param integer $BizType 主题类型。
 - 0: 日志主题 
 - 1: 指标主题
@@ -373,6 +381,10 @@ HotPeriod=0为没有开启日志沉降。
 
         if (array_key_exists("HotPeriod",$param) and $param["HotPeriod"] !== null) {
             $this->HotPeriod = $param["HotPeriod"];
+        }
+
+        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
+            $this->KeyId = $param["KeyId"];
         }
 
         if (array_key_exists("BizType",$param) and $param["BizType"] !== null) {

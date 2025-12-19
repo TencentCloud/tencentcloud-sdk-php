@@ -20,35 +20,35 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListAttributeLabel请求参数结构体
  *
- * @method string getBotBizId() 获取应用ID
- * @method void setBotBizId(string $BotBizId) 设置应用ID
- * @method integer getPageNumber() 获取页码
- * @method void setPageNumber(integer $PageNumber) 设置页码
- * @method integer getPageSize() 获取每页数量
- * @method void setPageSize(integer $PageSize) 设置每页数量
+ * @method string getBotBizId() 获取应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+ * @method void setBotBizId(string $BotBizId) 设置应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+ * @method integer getPageNumber() 获取页码，取值范围：大于0
+ * @method void setPageNumber(integer $PageNumber) 设置页码，取值范围：大于0
+ * @method integer getPageSize() 获取每页数量，取值范围：大于0
+ * @method void setPageSize(integer $PageSize) 设置每页数量，取值范围：大于0
  * @method string getLoginUin() 获取登录用户主账号(集成商模式必填)
  * @method void setLoginUin(string $LoginUin) 设置登录用户主账号(集成商模式必填)
  * @method string getLoginSubAccountUin() 获取登录用户子账号(集成商模式必填)
  * @method void setLoginSubAccountUin(string $LoginSubAccountUin) 设置登录用户子账号(集成商模式必填)
- * @method string getQuery() 获取查询内容
- * @method void setQuery(string $Query) 设置查询内容
- * @method integer getLabelSize() 获取每个属性同步拉取的标签值数量
- * @method void setLabelSize(integer $LabelSize) 设置每个属性同步拉取的标签值数量
+ * @method string getQuery() 获取查询内容，同时匹配标签内容和标签值内容
+ * @method void setQuery(string $Query) 设置查询内容，同时匹配标签内容和标签值内容
+ * @method integer getLabelSize() 获取每个标签同步拉取的标签值数量。即在展示标签列表时，为每一个标签加载多少个具体的标签值。
+ * @method void setLabelSize(integer $LabelSize) 设置每个标签同步拉取的标签值数量。即在展示标签列表时，为每一个标签加载多少个具体的标签值。
  */
 class ListAttributeLabelRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public $BotBizId;
 
     /**
-     * @var integer 页码
+     * @var integer 页码，取值范围：大于0
      */
     public $PageNumber;
 
     /**
-     * @var integer 每页数量
+     * @var integer 每页数量，取值范围：大于0
      */
     public $PageSize;
 
@@ -63,23 +63,23 @@ class ListAttributeLabelRequest extends AbstractModel
     public $LoginSubAccountUin;
 
     /**
-     * @var string 查询内容
+     * @var string 查询内容，同时匹配标签内容和标签值内容
      */
     public $Query;
 
     /**
-     * @var integer 每个属性同步拉取的标签值数量
+     * @var integer 每个标签同步拉取的标签值数量。即在展示标签列表时，为每一个标签加载多少个具体的标签值。
      */
     public $LabelSize;
 
     /**
-     * @param string $BotBizId 应用ID
-     * @param integer $PageNumber 页码
-     * @param integer $PageSize 每页数量
+     * @param string $BotBizId 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+     * @param integer $PageNumber 页码，取值范围：大于0
+     * @param integer $PageSize 每页数量，取值范围：大于0
      * @param string $LoginUin 登录用户主账号(集成商模式必填)
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)
-     * @param string $Query 查询内容
-     * @param integer $LabelSize 每个属性同步拉取的标签值数量
+     * @param string $Query 查询内容，同时匹配标签内容和标签值内容
+     * @param integer $LabelSize 每个标签同步拉取的标签值数量。即在展示标签列表时，为每一个标签加载多少个具体的标签值。
      */
     function __construct()
     {

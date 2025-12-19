@@ -25,6 +25,7 @@ use TencentCloud\Evt\V20250217\Models as Models;
 /**
  * @method Models\CompleteApprovalResponse CompleteApproval(Models\CompleteApprovalRequest $req) 执行审批
  * @method Models\CreateRoleUserResponse CreateRoleUser(Models\CreateRoleUserRequest $req) 创建人员
+ * @method Models\DeleteRoleUserResponse DeleteRoleUser(Models\DeleteRoleUserRequest $req) 删除自定义用户
  */
 
 class EvtClient extends AbstractClient

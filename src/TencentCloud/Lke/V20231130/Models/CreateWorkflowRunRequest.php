@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateWorkflowRun请求参数结构体
  *
- * @method string getAppBizId() 获取应用ID
- * @method void setAppBizId(string $AppBizId) 设置应用ID
+ * @method string getAppBizId() 获取应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+ * @method void setAppBizId(string $AppBizId) 设置应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
  * @method integer getRunEnv() 获取运行环境。0: 测试环境； 1: 正式环境
  * @method void setRunEnv(integer $RunEnv) 设置运行环境。0: 测试环境； 1: 正式环境
  * @method string getQuery() 获取用户输入的内容
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateWorkflowRunRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public $AppBizId;
 
@@ -52,7 +52,7 @@ class CreateWorkflowRunRequest extends AbstractModel
     public $CustomVariables;
 
     /**
-     * @param string $AppBizId 应用ID
+     * @param string $AppBizId 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      * @param integer $RunEnv 运行环境。0: 测试环境； 1: 正式环境
      * @param string $Query 用户输入的内容
      * @param array $CustomVariables API参数配置

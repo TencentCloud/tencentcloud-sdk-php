@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoginUin(string $LoginUin) 设置登录用户主账号(集成商模式必填)
  * @method string getLoginSubAccountUin() 获取登录用户子账号(集成商模式必填)
  * @method void setLoginSubAccountUin(string $LoginSubAccountUin) 设置登录用户子账号(集成商模式必填)
+ * @method string getKnowledgeBizId() 获取用于操作共享知识库
+ * @method void setKnowledgeBizId(string $KnowledgeBizId) 设置用于操作共享知识库
  */
 class VerifyQARequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class VerifyQARequest extends AbstractModel
     public $LoginSubAccountUin;
 
     /**
+     * @var string 用于操作共享知识库
+     */
+    public $KnowledgeBizId;
+
+    /**
      * @param array $List 问答列表
      * @param string $BotBizId 应用ID
      * @param string $LoginUin 登录用户主账号(集成商模式必填)
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)
+     * @param string $KnowledgeBizId 用于操作共享知识库
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class VerifyQARequest extends AbstractModel
 
         if (array_key_exists("LoginSubAccountUin",$param) and $param["LoginSubAccountUin"] !== null) {
             $this->LoginSubAccountUin = $param["LoginSubAccountUin"];
+        }
+
+        if (array_key_exists("KnowledgeBizId",$param) and $param["KnowledgeBizId"] !== null) {
+            $this->KnowledgeBizId = $param["KnowledgeBizId"];
         }
     }
 }

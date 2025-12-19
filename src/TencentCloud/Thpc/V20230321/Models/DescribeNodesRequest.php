@@ -22,42 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID。
  * @method void setClusterId(string $ClusterId) 设置集群ID。
- * @method array getFilters() 获取<ul>
-    <li><strong>queue-name</strong>
-        <p style="padding-left: 30px;">按照【<strong>队列名称</strong>】进行过滤。队列名称形如：compute。</p>
-        <p style="padding-left: 30px;">类型：String</p>
-        <p style="padding-left: 30px;">必选：否</p>
-    </li>
-    <li><strong>node-role</strong>
-        <p style="padding-left: 30px;">按照【<strong>节点角色</strong>】进行过滤。节点角色形如：Manager。（Manager：管控节点。Compute：计算节点。Login：登录节点。ManagerBackup：备用管控节点。）</p>
-        <p style="padding-left: 30px;">类型：String</p>
-        <p style="padding-left: 30px;">必选：否</p>
-    </li>
-    <li><strong>node-type</strong>
-        <p style="padding-left: 30px;">按照【<strong>节点类型</strong>】进行过滤。节点类型形如：STATIC。(STATIC：静态节点。DYNAMIC：弹性节点。)</p>
-        <p style="padding-left: 30px;">类型：String</p>
-        <p style="padding-left: 30px;">必选：否</p>
-    </li>
-</ul>
-<p style="padding-left: 30px;">每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。</p>
- * @method void setFilters(array $Filters) 设置<ul>
-    <li><strong>queue-name</strong>
-        <p style="padding-left: 30px;">按照【<strong>队列名称</strong>】进行过滤。队列名称形如：compute。</p>
-        <p style="padding-left: 30px;">类型：String</p>
-        <p style="padding-left: 30px;">必选：否</p>
-    </li>
-    <li><strong>node-role</strong>
-        <p style="padding-left: 30px;">按照【<strong>节点角色</strong>】进行过滤。节点角色形如：Manager。（Manager：管控节点。Compute：计算节点。Login：登录节点。ManagerBackup：备用管控节点。）</p>
-        <p style="padding-left: 30px;">类型：String</p>
-        <p style="padding-left: 30px;">必选：否</p>
-    </li>
-    <li><strong>node-type</strong>
-        <p style="padding-left: 30px;">按照【<strong>节点类型</strong>】进行过滤。节点类型形如：STATIC。(STATIC：静态节点。DYNAMIC：弹性节点。)</p>
-        <p style="padding-left: 30px;">类型：String</p>
-        <p style="padding-left: 30px;">必选：否</p>
-    </li>
-</ul>
-<p style="padding-left: 30px;">每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。</p>
+ * @method array getFilters() 获取<ul>    <li><strong>queue-name</strong>        <p style="padding-left: 30px;">按照【<strong>队列名称</strong>】进行过滤。队列名称形如：compute。</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li>    <li><strong>node-role</strong>        <p style="padding-left: 30px;">按照【<strong>节点角色</strong>】进行过滤。节点角色形如：Manager。（Manager：管控节点。Compute：计算节点。Login：登录节点。ManagerBackup：备用管控节点。）</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li>    <li><strong>node-type</strong>        <p style="padding-left: 30px;">按照【<strong>节点类型</strong>】进行过滤。节点类型形如：STATIC。(STATIC：静态节点。DYNAMIC：弹性节点。)</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li>  <li><strong>instance-id</strong>        <p style="padding-left: 30px;">按照【<strong>CVM实例资源ID</strong>】进行过滤。资源ID名称形如：ins-xxx。</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li> </ul><p style="padding-left: 30px;">每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。</p>
+ * @method void setFilters(array $Filters) 设置<ul>    <li><strong>queue-name</strong>        <p style="padding-left: 30px;">按照【<strong>队列名称</strong>】进行过滤。队列名称形如：compute。</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li>    <li><strong>node-role</strong>        <p style="padding-left: 30px;">按照【<strong>节点角色</strong>】进行过滤。节点角色形如：Manager。（Manager：管控节点。Compute：计算节点。Login：登录节点。ManagerBackup：备用管控节点。）</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li>    <li><strong>node-type</strong>        <p style="padding-left: 30px;">按照【<strong>节点类型</strong>】进行过滤。节点类型形如：STATIC。(STATIC：静态节点。DYNAMIC：弹性节点。)</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li>  <li><strong>instance-id</strong>        <p style="padding-left: 30px;">按照【<strong>CVM实例资源ID</strong>】进行过滤。资源ID名称形如：ins-xxx。</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li> </ul><p style="padding-left: 30px;">每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。</p>
  * @method integer getOffset() 获取偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
@@ -71,24 +37,7 @@ class DescribeNodesRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array <ul>
-    <li><strong>queue-name</strong>
-        <p style="padding-left: 30px;">按照【<strong>队列名称</strong>】进行过滤。队列名称形如：compute。</p>
-        <p style="padding-left: 30px;">类型：String</p>
-        <p style="padding-left: 30px;">必选：否</p>
-    </li>
-    <li><strong>node-role</strong>
-        <p style="padding-left: 30px;">按照【<strong>节点角色</strong>】进行过滤。节点角色形如：Manager。（Manager：管控节点。Compute：计算节点。Login：登录节点。ManagerBackup：备用管控节点。）</p>
-        <p style="padding-left: 30px;">类型：String</p>
-        <p style="padding-left: 30px;">必选：否</p>
-    </li>
-    <li><strong>node-type</strong>
-        <p style="padding-left: 30px;">按照【<strong>节点类型</strong>】进行过滤。节点类型形如：STATIC。(STATIC：静态节点。DYNAMIC：弹性节点。)</p>
-        <p style="padding-left: 30px;">类型：String</p>
-        <p style="padding-left: 30px;">必选：否</p>
-    </li>
-</ul>
-<p style="padding-left: 30px;">每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。</p>
+     * @var array <ul>    <li><strong>queue-name</strong>        <p style="padding-left: 30px;">按照【<strong>队列名称</strong>】进行过滤。队列名称形如：compute。</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li>    <li><strong>node-role</strong>        <p style="padding-left: 30px;">按照【<strong>节点角色</strong>】进行过滤。节点角色形如：Manager。（Manager：管控节点。Compute：计算节点。Login：登录节点。ManagerBackup：备用管控节点。）</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li>    <li><strong>node-type</strong>        <p style="padding-left: 30px;">按照【<strong>节点类型</strong>】进行过滤。节点类型形如：STATIC。(STATIC：静态节点。DYNAMIC：弹性节点。)</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li>  <li><strong>instance-id</strong>        <p style="padding-left: 30px;">按照【<strong>CVM实例资源ID</strong>】进行过滤。资源ID名称形如：ins-xxx。</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li> </ul><p style="padding-left: 30px;">每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。</p>
      */
     public $Filters;
 
@@ -104,24 +53,7 @@ class DescribeNodesRequest extends AbstractModel
 
     /**
      * @param string $ClusterId 集群ID。
-     * @param array $Filters <ul>
-    <li><strong>queue-name</strong>
-        <p style="padding-left: 30px;">按照【<strong>队列名称</strong>】进行过滤。队列名称形如：compute。</p>
-        <p style="padding-left: 30px;">类型：String</p>
-        <p style="padding-left: 30px;">必选：否</p>
-    </li>
-    <li><strong>node-role</strong>
-        <p style="padding-left: 30px;">按照【<strong>节点角色</strong>】进行过滤。节点角色形如：Manager。（Manager：管控节点。Compute：计算节点。Login：登录节点。ManagerBackup：备用管控节点。）</p>
-        <p style="padding-left: 30px;">类型：String</p>
-        <p style="padding-left: 30px;">必选：否</p>
-    </li>
-    <li><strong>node-type</strong>
-        <p style="padding-left: 30px;">按照【<strong>节点类型</strong>】进行过滤。节点类型形如：STATIC。(STATIC：静态节点。DYNAMIC：弹性节点。)</p>
-        <p style="padding-left: 30px;">类型：String</p>
-        <p style="padding-left: 30px;">必选：否</p>
-    </li>
-</ul>
-<p style="padding-left: 30px;">每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。</p>
+     * @param array $Filters <ul>    <li><strong>queue-name</strong>        <p style="padding-left: 30px;">按照【<strong>队列名称</strong>】进行过滤。队列名称形如：compute。</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li>    <li><strong>node-role</strong>        <p style="padding-left: 30px;">按照【<strong>节点角色</strong>】进行过滤。节点角色形如：Manager。（Manager：管控节点。Compute：计算节点。Login：登录节点。ManagerBackup：备用管控节点。）</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li>    <li><strong>node-type</strong>        <p style="padding-left: 30px;">按照【<strong>节点类型</strong>】进行过滤。节点类型形如：STATIC。(STATIC：静态节点。DYNAMIC：弹性节点。)</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li>  <li><strong>instance-id</strong>        <p style="padding-left: 30px;">按照【<strong>CVM实例资源ID</strong>】进行过滤。资源ID名称形如：ins-xxx。</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li> </ul><p style="padding-left: 30px;">每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。</p>
      * @param integer $Offset 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      * @param integer $Limit 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */

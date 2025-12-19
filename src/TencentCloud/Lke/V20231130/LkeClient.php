@@ -135,6 +135,9 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\UpdateVarResponse UpdateVar(Models\UpdateVarRequest $req) 更新变量
  * @method Models\UploadAttributeLabelResponse UploadAttributeLabel(Models\UploadAttributeLabelRequest $req) 上传导入属性标签
  * @method Models\VerifyQAResponse VerifyQA(Models\VerifyQARequest $req) 校验问答
+知识库相关背景知识介绍
+“知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
+“标签”文档：https://cloud.tencent.com/document/product/1759/112956
  */
 
 class LkeClient extends AbstractClient

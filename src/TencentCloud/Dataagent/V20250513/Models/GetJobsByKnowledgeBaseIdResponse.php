@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Weilingwith\V20230427\Models;
+namespace TencentCloud\Dataagent\V20250513\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeVideoRecordStream返回参数结构体
+ * GetJobsByKnowledgeBaseId返回参数结构体
  *
- * @method VideoRecordStreamRes getResult() 获取获取历史流结果
- * @method void setResult(VideoRecordStreamRes $Result) 设置获取历史流结果
+ * @method array getJobs() 获取任务列表详情
+ * @method void setJobs(array $Jobs) 设置任务列表详情
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeVideoRecordStreamResponse extends AbstractModel
+class GetJobsByKnowledgeBaseIdResponse extends AbstractModel
 {
     /**
-     * @var VideoRecordStreamRes 获取历史流结果
+     * @var array 任务列表详情
      */
-    public $Result;
+    public $Jobs;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class DescribeVideoRecordStreamResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param VideoRecordStreamRes $Result 获取历史流结果
+     * @param array $Jobs 任务列表详情
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +54,13 @@ class DescribeVideoRecordStreamResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = new VideoRecordStreamRes();
-            $this->Result->deserialize($param["Result"]);
+        if (array_key_exists("Jobs",$param) and $param["Jobs"] !== null) {
+            $this->Jobs = [];
+            foreach ($param["Jobs"] as $key => $value){
+                $obj = new UploadJob();
+                $obj->deserialize($value);
+                array_push($this->Jobs, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

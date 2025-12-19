@@ -21,11 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * 过滤条件
  *
  * @method string getName() 获取搜索字段，目前支持：
-"InstanceId"：实例Id，例如：cmgo-****）
+"InstanceId"：实例Id，例如：cmgo-****
 "InstanceName"：实例名称
 "ClusterId"：实例组Id，例如：cmgo-****
  * @method void setName(string $Name) 设置搜索字段，目前支持：
-"InstanceId"：实例Id，例如：cmgo-****）
+"InstanceId"：实例Id，例如：cmgo-****
 "InstanceName"：实例名称
 "ClusterId"：实例组Id，例如：cmgo-****
  * @method array getValues() 获取筛选值
@@ -35,7 +35,7 @@ class Filters extends AbstractModel
 {
     /**
      * @var string 搜索字段，目前支持：
-"InstanceId"：实例Id，例如：cmgo-****）
+"InstanceId"：实例Id，例如：cmgo-****
 "InstanceName"：实例名称
 "ClusterId"：实例组Id，例如：cmgo-****
      */
@@ -48,7 +48,7 @@ class Filters extends AbstractModel
 
     /**
      * @param string $Name 搜索字段，目前支持：
-"InstanceId"：实例Id，例如：cmgo-****）
+"InstanceId"：实例Id，例如：cmgo-****
 "InstanceName"：实例名称
 "ClusterId"：实例组Id，例如：cmgo-****
      * @param array $Values 筛选值

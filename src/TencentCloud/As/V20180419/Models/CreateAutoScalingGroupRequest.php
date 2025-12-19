@@ -122,6 +122,10 @@ use TencentCloud\Common\AbstractModel;
 默认取 FALSE。
  * @method InstanceNameIndexSettings getInstanceNameIndexSettings() 获取实例名称序号相关设置。若不指定该参数，则默认不开启。开启后为伸缩组内自动创建的实例名称添加递增的数字序号。
  * @method void setInstanceNameIndexSettings(InstanceNameIndexSettings $InstanceNameIndexSettings) 设置实例名称序号相关设置。若不指定该参数，则默认不开启。开启后为伸缩组内自动创建的实例名称添加递增的数字序号。
+ * @method HostNameIndexSettings getHostNameIndexSettings() 获取实例主机名序号相关设置。若不指定该参数，则默认不开启。开启后为伸缩组内自动创建的实例主机名添加递增的数字序号。
+ * @method void setHostNameIndexSettings(HostNameIndexSettings $HostNameIndexSettings) 设置实例主机名序号相关设置。若不指定该参数，则默认不开启。开启后为伸缩组内自动创建的实例主机名添加递增的数字序号。
+ * @method boolean getConcurrentScaleOutForDesiredCapacity() 获取匹配期望数并发扩容功能，不能在InstanceAllocationPolicy为竞价混合模式时设置，也不能在ScalingMode为扩容优先开机模式时设置。目前仅支持两个匹配期望数扩容活动并发进行，不支持指定数量扩容、缩容等其他类型活动并发。默认值为FALSE，表示不开启。
+ * @method void setConcurrentScaleOutForDesiredCapacity(boolean $ConcurrentScaleOutForDesiredCapacity) 设置匹配期望数并发扩容功能，不能在InstanceAllocationPolicy为竞价混合模式时设置，也不能在ScalingMode为扩容优先开机模式时设置。目前仅支持两个匹配期望数扩容活动并发进行，不支持指定数量扩容、缩容等其他类型活动并发。默认值为FALSE，表示不开启。
  */
 class CreateAutoScalingGroupRequest extends AbstractModel
 {
@@ -277,6 +281,16 @@ class CreateAutoScalingGroupRequest extends AbstractModel
     public $InstanceNameIndexSettings;
 
     /**
+     * @var HostNameIndexSettings 实例主机名序号相关设置。若不指定该参数，则默认不开启。开启后为伸缩组内自动创建的实例主机名添加递增的数字序号。
+     */
+    public $HostNameIndexSettings;
+
+    /**
+     * @var boolean 匹配期望数并发扩容功能，不能在InstanceAllocationPolicy为竞价混合模式时设置，也不能在ScalingMode为扩容优先开机模式时设置。目前仅支持两个匹配期望数扩容活动并发进行，不支持指定数量扩容、缩容等其他类型活动并发。默认值为FALSE，表示不开启。
+     */
+    public $ConcurrentScaleOutForDesiredCapacity;
+
+    /**
      * @param string $AutoScalingGroupName 伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
      * @param string $LaunchConfigurationId 启动配置ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 或调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。
      * @param integer $MaxSize 最大实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
@@ -328,6 +342,8 @@ class CreateAutoScalingGroupRequest extends AbstractModel
 <li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。</li>
 默认取 FALSE。
      * @param InstanceNameIndexSettings $InstanceNameIndexSettings 实例名称序号相关设置。若不指定该参数，则默认不开启。开启后为伸缩组内自动创建的实例名称添加递增的数字序号。
+     * @param HostNameIndexSettings $HostNameIndexSettings 实例主机名序号相关设置。若不指定该参数，则默认不开启。开启后为伸缩组内自动创建的实例主机名添加递增的数字序号。
+     * @param boolean $ConcurrentScaleOutForDesiredCapacity 匹配期望数并发扩容功能，不能在InstanceAllocationPolicy为竞价混合模式时设置，也不能在ScalingMode为扩容优先开机模式时设置。目前仅支持两个匹配期望数扩容活动并发进行，不支持指定数量扩容、缩容等其他类型活动并发。默认值为FALSE，表示不开启。
      */
     function __construct()
     {
@@ -453,6 +469,15 @@ class CreateAutoScalingGroupRequest extends AbstractModel
         if (array_key_exists("InstanceNameIndexSettings",$param) and $param["InstanceNameIndexSettings"] !== null) {
             $this->InstanceNameIndexSettings = new InstanceNameIndexSettings();
             $this->InstanceNameIndexSettings->deserialize($param["InstanceNameIndexSettings"]);
+        }
+
+        if (array_key_exists("HostNameIndexSettings",$param) and $param["HostNameIndexSettings"] !== null) {
+            $this->HostNameIndexSettings = new HostNameIndexSettings();
+            $this->HostNameIndexSettings->deserialize($param["HostNameIndexSettings"]);
+        }
+
+        if (array_key_exists("ConcurrentScaleOutForDesiredCapacity",$param) and $param["ConcurrentScaleOutForDesiredCapacity"] !== null) {
+            $this->ConcurrentScaleOutForDesiredCapacity = $param["ConcurrentScaleOutForDesiredCapacity"];
         }
     }
 }

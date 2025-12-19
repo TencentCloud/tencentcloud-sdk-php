@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRejectedQuestion请求参数结构体
  *
- * @method string getBotBizId() 获取应用ID
- * @method void setBotBizId(string $BotBizId) 设置应用ID
+ * @method string getBotBizId() 获取应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+ * @method void setBotBizId(string $BotBizId) 设置应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
  * @method string getQuestion() 获取拒答问题
 
 
  * @method void setQuestion(string $Question) 设置拒答问题
 
 
- * @method string getRejectedBizId() 获取拒答问题来源的数据源唯一id
+ * @method string getRejectedBizId() 获取拒答问题来源的数据源唯一id, 通过[ListRejectedQuestion](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListRejectedQuestion)接口获取
 
 
 
- * @method void setRejectedBizId(string $RejectedBizId) 设置拒答问题来源的数据源唯一id
+ * @method void setRejectedBizId(string $RejectedBizId) 设置拒答问题来源的数据源唯一id, 通过[ListRejectedQuestion](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListRejectedQuestion)接口获取
  */
 class ModifyRejectedQuestionRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public $BotBizId;
 
@@ -49,7 +49,7 @@ class ModifyRejectedQuestionRequest extends AbstractModel
     public $Question;
 
     /**
-     * @var string 拒答问题来源的数据源唯一id
+     * @var string 拒答问题来源的数据源唯一id, 通过[ListRejectedQuestion](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListRejectedQuestion)接口获取
 
 
 
@@ -57,11 +57,11 @@ class ModifyRejectedQuestionRequest extends AbstractModel
     public $RejectedBizId;
 
     /**
-     * @param string $BotBizId 应用ID
+     * @param string $BotBizId 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      * @param string $Question 拒答问题
 
 
-     * @param string $RejectedBizId 拒答问题来源的数据源唯一id
+     * @param string $RejectedBizId 拒答问题来源的数据源唯一id, 通过[ListRejectedQuestion](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListRejectedQuestion)接口获取
      */
     function __construct()
     {

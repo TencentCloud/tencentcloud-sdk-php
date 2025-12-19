@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Weilingwith\V20230427\Models;
+namespace TencentCloud\Antiddos\V20200309\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeVideoRecordStream返回参数结构体
+ * DescribeListProtectThresholdConfigNew返回参数结构体
  *
- * @method VideoRecordStreamRes getResult() 获取获取历史流结果
- * @method void setResult(VideoRecordStreamRes $Result) 设置获取历史流结果
+ * @method integer getTotal() 获取总记录数
+ * @method void setTotal(integer $Total) 设置总记录数
+ * @method array getConfigList() 获取防护阈值配置列表
+ * @method void setConfigList(array $ConfigList) 设置防护阈值配置列表
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeVideoRecordStreamResponse extends AbstractModel
+class DescribeListProtectThresholdConfigNewResponse extends AbstractModel
 {
     /**
-     * @var VideoRecordStreamRes 获取历史流结果
+     * @var integer 总记录数
      */
-    public $Result;
+    public $Total;
+
+    /**
+     * @var array 防护阈值配置列表
+     */
+    public $ConfigList;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class DescribeVideoRecordStreamResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param VideoRecordStreamRes $Result 获取历史流结果
+     * @param integer $Total 总记录数
+     * @param array $ConfigList 防护阈值配置列表
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +62,17 @@ class DescribeVideoRecordStreamResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = new VideoRecordStreamRes();
-            $this->Result->deserialize($param["Result"]);
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("ConfigList",$param) and $param["ConfigList"] !== null) {
+            $this->ConfigList = [];
+            foreach ($param["ConfigList"] as $key => $value){
+                $obj = new ProtectThresholdRelationNew();
+                $obj->deserialize($value);
+                array_push($this->ConfigList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

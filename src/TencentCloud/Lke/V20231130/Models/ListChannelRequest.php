@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListChannel请求参数结构体
  *
- * @method string getAppBizId() 获取应用ID
- * @method void setAppBizId(string $AppBizId) 设置应用ID
+ * @method string getAppBizId() 获取应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)）
+ * @method void setAppBizId(string $AppBizId) 设置应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)）
  * @method string getBotBizId() 获取应用ID
  * @method void setBotBizId(string $BotBizId) 设置应用ID
- * @method integer getPageNumber() 获取页码
- * @method void setPageNumber(integer $PageNumber) 设置页码
- * @method integer getPageSize() 获取分页数量
- * @method void setPageSize(integer $PageSize) 设置分页数量
- * @method array getChannelType() 获取渠道类型, 10000: 微信订阅号，10001: 微信服务号，10002：企微应用，10004：微信客服，10005：小程序，10009：企微智能机器人 
- * @method void setChannelType(array $ChannelType) 设置渠道类型, 10000: 微信订阅号，10001: 微信服务号，10002：企微应用，10004：微信客服，10005：小程序，10009：企微智能机器人 
- * @method array getChannelStatus() 获取渠道状态 1未发布 2运行中 3已下线
- * @method void setChannelStatus(array $ChannelStatus) 设置渠道状态 1未发布 2运行中 3已下线
+ * @method integer getPageNumber() 获取页码（必须大于0）
+ * @method void setPageNumber(integer $PageNumber) 设置页码（必须大于0）
+ * @method integer getPageSize() 获取分页数量（取值范围为1-200）
+ * @method void setPageSize(integer $PageSize) 设置分页数量（取值范围为1-200）
+ * @method array getChannelType() 获取渠道类型, 10000: 微信订阅号，10001: 微信服务号，10002：企微应用，10004：微信客服，10005：小程序，10009：企微智能机器人 。（默认为[]）
+ * @method void setChannelType(array $ChannelType) 设置渠道类型, 10000: 微信订阅号，10001: 微信服务号，10002：企微应用，10004：微信客服，10005：小程序，10009：企微智能机器人 。（默认为[]）
+ * @method array getChannelStatus() 获取渠道状态 1未发布 2运行中 3已下线 （默认为[]）
+ * @method void setChannelStatus(array $ChannelStatus) 设置渠道状态 1未发布 2运行中 3已下线 （默认为[]）
  */
 class ListChannelRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string 应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)）
      */
     public $AppBizId;
 
@@ -47,32 +47,32 @@ class ListChannelRequest extends AbstractModel
     public $BotBizId;
 
     /**
-     * @var integer 页码
+     * @var integer 页码（必须大于0）
      */
     public $PageNumber;
 
     /**
-     * @var integer 分页数量
+     * @var integer 分页数量（取值范围为1-200）
      */
     public $PageSize;
 
     /**
-     * @var array 渠道类型, 10000: 微信订阅号，10001: 微信服务号，10002：企微应用，10004：微信客服，10005：小程序，10009：企微智能机器人 
+     * @var array 渠道类型, 10000: 微信订阅号，10001: 微信服务号，10002：企微应用，10004：微信客服，10005：小程序，10009：企微智能机器人 。（默认为[]）
      */
     public $ChannelType;
 
     /**
-     * @var array 渠道状态 1未发布 2运行中 3已下线
+     * @var array 渠道状态 1未发布 2运行中 3已下线 （默认为[]）
      */
     public $ChannelStatus;
 
     /**
-     * @param string $AppBizId 应用ID
+     * @param string $AppBizId 应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)）
      * @param string $BotBizId 应用ID
-     * @param integer $PageNumber 页码
-     * @param integer $PageSize 分页数量
-     * @param array $ChannelType 渠道类型, 10000: 微信订阅号，10001: 微信服务号，10002：企微应用，10004：微信客服，10005：小程序，10009：企微智能机器人 
-     * @param array $ChannelStatus 渠道状态 1未发布 2运行中 3已下线
+     * @param integer $PageNumber 页码（必须大于0）
+     * @param integer $PageSize 分页数量（取值范围为1-200）
+     * @param array $ChannelType 渠道类型, 10000: 微信订阅号，10001: 微信服务号，10002：企微应用，10004：微信客服，10005：小程序，10009：企微智能机器人 。（默认为[]）
+     * @param array $ChannelStatus 渠道状态 1未发布 2运行中 3已下线 （默认为[]）
      */
     function __construct()
     {

@@ -32,6 +32,7 @@ use TencentCloud\Common\AbstractModel;
 -9: 没有记录。
 -11: 验证中心服务繁忙。
 -12: 认证次数超过当日限制，请次日重试。
+-13：该号段不支持验证
  * @method void setResult(string $Result) 设置认证结果码。
 - 收费结果码
 0: 三要素信息一致。
@@ -44,6 +45,7 @@ use TencentCloud\Common\AbstractModel;
 -9: 没有记录。
 -11: 验证中心服务繁忙。
 -12: 认证次数超过当日限制，请次日重试。
+-13：该号段不支持验证
  * @method string getDescription() 获取业务结果描述。
  * @method void setDescription(string $Description) 设置业务结果描述。
  * @method string getIsp() 获取运营商名称。
@@ -84,6 +86,7 @@ class PhoneVerificationResponse extends AbstractModel
 -9: 没有记录。
 -11: 验证中心服务繁忙。
 -12: 认证次数超过当日限制，请次日重试。
+-13：该号段不支持验证
      */
     public $Result;
 
@@ -128,6 +131,7 @@ OtherMismatch：其他不一致。
 -9: 没有记录。
 -11: 验证中心服务繁忙。
 -12: 认证次数超过当日限制，请次日重试。
+-13：该号段不支持验证
      * @param string $Description 业务结果描述。
      * @param string $Isp 运营商名称。
 - 取值范围为["","移动","电信","联通"]

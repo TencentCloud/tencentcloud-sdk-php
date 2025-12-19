@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListWorkflowRuns请求参数结构体
  *
- * @method string getAppBizId() 获取应用ID
- * @method void setAppBizId(string $AppBizId) 设置应用ID
- * @method integer getPageSize() 获取每页数量
- * @method void setPageSize(integer $PageSize) 设置每页数量
+ * @method string getAppBizId() 获取应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+ * @method void setAppBizId(string $AppBizId) 设置应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+ * @method integer getPageSize() 获取每页数量(取值范围1-200)
+ * @method void setPageSize(integer $PageSize) 设置每页数量(取值范围1-200)
  * @method integer getRunEnv() 获取运行环境。0: 测试环境； 1: 正式环境
  * @method void setRunEnv(integer $RunEnv) 设置运行环境。0: 测试环境； 1: 正式环境
- * @method integer getPage() 获取页码
- * @method void setPage(integer $Page) 设置页码
+ * @method integer getPage() 获取页码(必须大于0)
+ * @method void setPage(integer $Page) 设置页码(必须大于0)
  * @method string getLoginUin() 获取登录用户主账号(集成商模式必填)
  * @method void setLoginUin(string $LoginUin) 设置登录用户主账号(集成商模式必填)
  * @method string getLoginSubAccountUin() 获取登录用户子账号(集成商模式必填)
@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class ListWorkflowRunsRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public $AppBizId;
 
     /**
-     * @var integer 每页数量
+     * @var integer 每页数量(取值范围1-200)
      */
     public $PageSize;
 
@@ -51,7 +51,7 @@ class ListWorkflowRunsRequest extends AbstractModel
     public $RunEnv;
 
     /**
-     * @var integer 页码
+     * @var integer 页码(必须大于0)
      */
     public $Page;
 
@@ -66,10 +66,10 @@ class ListWorkflowRunsRequest extends AbstractModel
     public $LoginSubAccountUin;
 
     /**
-     * @param string $AppBizId 应用ID
-     * @param integer $PageSize 每页数量
+     * @param string $AppBizId 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+     * @param integer $PageSize 每页数量(取值范围1-200)
      * @param integer $RunEnv 运行环境。0: 测试环境； 1: 正式环境
-     * @param integer $Page 页码
+     * @param integer $Page 页码(必须大于0)
      * @param string $LoginUin 登录用户主账号(集成商模式必填)
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)
      */

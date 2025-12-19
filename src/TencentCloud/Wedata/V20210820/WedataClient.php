@@ -147,6 +147,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeIntegrationTaskResponse DescribeIntegrationTask(Models\DescribeIntegrationTaskRequest $req) 查询集成任务
  * @method Models\DescribeIntegrationTasksResponse DescribeIntegrationTasks(Models\DescribeIntegrationTasksRequest $req) 查询集成任务列表
  * @method Models\DescribeIntegrationVersionNodesInfoResponse DescribeIntegrationVersionNodesInfo(Models\DescribeIntegrationVersionNodesInfoRequest $req) 查询集成任务版本节点信息
+ * @method Models\DescribeLineageInfoResponse DescribeLineageInfo(Models\DescribeLineageInfoRequest $req) 通用血缘查询接口
  * @method Models\DescribeManualTriggerRecordPageResponse DescribeManualTriggerRecordPage(Models\DescribeManualTriggerRecordPageRequest $req) 查询手动任务触发记录
  * @method Models\DescribeOfflineTaskTokenResponse DescribeOfflineTaskToken(Models\DescribeOfflineTaskTokenRequest $req) 获取离线任务长连接Token
  * @method Models\DescribeOperateOpsTasksResponse DescribeOperateOpsTasks(Models\DescribeOperateOpsTasksRequest $req) 任务运维列表组合条件查询

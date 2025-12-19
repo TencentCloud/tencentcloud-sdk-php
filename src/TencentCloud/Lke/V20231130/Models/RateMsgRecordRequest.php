@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBotAppKey() 获取应用appKey
  * @method void setBotAppKey(string $BotAppKey) 设置应用appKey
- * @method string getRecordId() 获取消息ID 【大模型回复答案的RecordID】
- * @method void setRecordId(string $RecordId) 设置消息ID 【大模型回复答案的RecordID】
+ * @method string getRecordId() 获取消息ID 【大模型回复答案的RecordID】可以通过[GetMsgRecord](https://cloud.tencent.com/document/product/1759/105090)接口获取
+ * @method void setRecordId(string $RecordId) 设置消息ID 【大模型回复答案的RecordID】可以通过[GetMsgRecord](https://cloud.tencent.com/document/product/1759/105090)接口获取
  * @method integer getScore() 获取0: 取消前置状态 ; 1: 点赞;   2: 点踩;   
 注：
 (1) 评测端不支持点赞、点踩
@@ -47,7 +47,7 @@ class RateMsgRecordRequest extends AbstractModel
     public $BotAppKey;
 
     /**
-     * @var string 消息ID 【大模型回复答案的RecordID】
+     * @var string 消息ID 【大模型回复答案的RecordID】可以通过[GetMsgRecord](https://cloud.tencent.com/document/product/1759/105090)接口获取
      */
     public $RecordId;
 
@@ -72,7 +72,7 @@ class RateMsgRecordRequest extends AbstractModel
 
     /**
      * @param string $BotAppKey 应用appKey
-     * @param string $RecordId 消息ID 【大模型回复答案的RecordID】
+     * @param string $RecordId 消息ID 【大模型回复答案的RecordID】可以通过[GetMsgRecord](https://cloud.tencent.com/document/product/1759/105090)接口获取
      * @param integer $Score 0: 取消前置状态 ; 1: 点赞;   2: 点踩;   
 注：
 (1) 评测端不支持点赞、点踩

@@ -33,19 +33,19 @@ ORIGINAL，AS 直接将入参中所填的 InstanceName 传递给 CVM，CVM 可�
 
 UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会对其进行拓展，伸缩组中实例的 InstanceName 可以保证唯一。
  * @method string getInstanceNameSuffix() 获取云服务器实例名后缀。字符长度为[1,105]，且与 InstanceName 的长度和不能超过107。
-
-假设后缀名称为 suffix，原实例名为 test.0，最终实例名为 test.0.suffix。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceNameSuffix(string $InstanceNameSuffix) 设置云服务器实例名后缀。字符长度为[1,105]，且与 InstanceName 的长度和不能超过107。
-
-假设后缀名称为 suffix，原实例名为 test.0，最终实例名为 test.0.suffix。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceNameDelimiter() 获取云服务器实例名分隔符。 默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为实例名的分隔符。如果不设置，则默认采用点号（.）分隔符。 通过分割符连接多段。
-
-假设原实例名为“product-as-instance”，分隔符InstanceNameDelimiter为“-”，设置实例名后缀"suffix"，那么最终实例名为“product-as-instance-suffix”。
- * @method void setInstanceNameDelimiter(string $InstanceNameDelimiter) 设置云服务器实例名分隔符。 默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为实例名的分隔符。如果不设置，则默认采用点号（.）分隔符。 通过分割符连接多段。
-
-假设原实例名为“product-as-instance”，分隔符InstanceNameDelimiter为“-”，设置实例名后缀"suffix"，那么最终实例名为“product-as-instance-suffix”。
+ * @method string getInstanceNameDelimiter() 获取云服务器的实例名分隔符。默认的分隔符是点号（.），可选短横线（-）或空字符串。
+分隔符用于拼接实例名，递增序号，后缀。假设实例名为 testGpu4090 ，递增序号为 0007，后缀为 server：
+- 分隔符为英文点号（.），最终拼接为 testGpu4090.007.server
+- 分隔符为短横线（-），最终拼接为 testGpu4090-007-server
+- 分隔符为空字符串，最终拼接为 testGpu4090007server
+ * @method void setInstanceNameDelimiter(string $InstanceNameDelimiter) 设置云服务器的实例名分隔符。默认的分隔符是点号（.），可选短横线（-）或空字符串。
+分隔符用于拼接实例名，递增序号，后缀。假设实例名为 testGpu4090 ，递增序号为 0007，后缀为 server：
+- 分隔符为英文点号（.），最终拼接为 testGpu4090.007.server
+- 分隔符为短横线（-），最终拼接为 testGpu4090-007-server
+- 分隔符为空字符串，最终拼接为 testGpu4090007server
  */
 class InstanceNameSettings extends AbstractModel
 {
@@ -65,16 +65,16 @@ UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会�
 
     /**
      * @var string 云服务器实例名后缀。字符长度为[1,105]，且与 InstanceName 的长度和不能超过107。
-
-假设后缀名称为 suffix，原实例名为 test.0，最终实例名为 test.0.suffix。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceNameSuffix;
 
     /**
-     * @var string 云服务器实例名分隔符。 默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为实例名的分隔符。如果不设置，则默认采用点号（.）分隔符。 通过分割符连接多段。
-
-假设原实例名为“product-as-instance”，分隔符InstanceNameDelimiter为“-”，设置实例名后缀"suffix"，那么最终实例名为“product-as-instance-suffix”。
+     * @var string 云服务器的实例名分隔符。默认的分隔符是点号（.），可选短横线（-）或空字符串。
+分隔符用于拼接实例名，递增序号，后缀。假设实例名为 testGpu4090 ，递增序号为 0007，后缀为 server：
+- 分隔符为英文点号（.），最终拼接为 testGpu4090.007.server
+- 分隔符为短横线（-），最终拼接为 testGpu4090-007-server
+- 分隔符为空字符串，最终拼接为 testGpu4090007server
      */
     public $InstanceNameDelimiter;
 
@@ -86,12 +86,12 @@ ORIGINAL，AS 直接将入参中所填的 InstanceName 传递给 CVM，CVM 可�
 
 UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会对其进行拓展，伸缩组中实例的 InstanceName 可以保证唯一。
      * @param string $InstanceNameSuffix 云服务器实例名后缀。字符长度为[1,105]，且与 InstanceName 的长度和不能超过107。
-
-假设后缀名称为 suffix，原实例名为 test.0，最终实例名为 test.0.suffix。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceNameDelimiter 云服务器实例名分隔符。 默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为实例名的分隔符。如果不设置，则默认采用点号（.）分隔符。 通过分割符连接多段。
-
-假设原实例名为“product-as-instance”，分隔符InstanceNameDelimiter为“-”，设置实例名后缀"suffix"，那么最终实例名为“product-as-instance-suffix”。
+     * @param string $InstanceNameDelimiter 云服务器的实例名分隔符。默认的分隔符是点号（.），可选短横线（-）或空字符串。
+分隔符用于拼接实例名，递增序号，后缀。假设实例名为 testGpu4090 ，递增序号为 0007，后缀为 server：
+- 分隔符为英文点号（.），最终拼接为 testGpu4090.007.server
+- 分隔符为短横线（-），最终拼接为 testGpu4090-007-server
+- 分隔符为空字符串，最终拼接为 testGpu4090007server
      */
     function __construct()
     {

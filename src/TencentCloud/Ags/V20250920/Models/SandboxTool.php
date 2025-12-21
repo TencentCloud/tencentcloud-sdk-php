@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置沙箱工具创建时间，格式：ISO8601
  * @method string getUpdateTime() 获取沙箱工具更新时间，格式：ISO8601
  * @method void setUpdateTime(string $UpdateTime) 设置沙箱工具更新时间，格式：ISO8601
+ * @method string getRoleArn() 获取沙箱工具绑定角色ARN
+ * @method void setRoleArn(string $RoleArn) 设置沙箱工具绑定角色ARN
+ * @method array getStorageMounts() 获取沙箱工具中实例存储挂载配置
+ * @method void setStorageMounts(array $StorageMounts) 设置沙箱工具中实例存储挂载配置
  */
 class SandboxTool extends AbstractModel
 {
@@ -94,6 +98,16 @@ class SandboxTool extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 沙箱工具绑定角色ARN
+     */
+    public $RoleArn;
+
+    /**
+     * @var array 沙箱工具中实例存储挂载配置
+     */
+    public $StorageMounts;
+
+    /**
      * @param string $ToolId 沙箱工具唯一标识符
      * @param string $ToolName 沙箱工具名称，长度 1-50 字符，支持中英文、数字、下划线。同一 AppId 下沙箱工具名称必须唯一
      * @param string $ToolType 沙箱工具类型，取值：browser（浏览器工具）、code-interpreter（代码解释器工具）、computer（计算机控制工具）、mobile（移动设备工具）
@@ -104,6 +118,8 @@ class SandboxTool extends AbstractModel
      * @param array $Tags 标签规格，包含资源标签绑定关系。用于为沙箱工具绑定标签，支持多种资源类型的标签绑定
      * @param string $CreateTime 沙箱工具创建时间，格式：ISO8601
      * @param string $UpdateTime 沙箱工具更新时间，格式：ISO8601
+     * @param string $RoleArn 沙箱工具绑定角色ARN
+     * @param array $StorageMounts 沙箱工具中实例存储挂载配置
      */
     function __construct()
     {
@@ -162,6 +178,19 @@ class SandboxTool extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("RoleArn",$param) and $param["RoleArn"] !== null) {
+            $this->RoleArn = $param["RoleArn"];
+        }
+
+        if (array_key_exists("StorageMounts",$param) and $param["StorageMounts"] !== null) {
+            $this->StorageMounts = [];
+            foreach ($param["StorageMounts"] as $key => $value){
+                $obj = new StorageMount();
+                $obj->deserialize($value);
+                array_push($this->StorageMounts, $obj);
+            }
         }
     }
 }

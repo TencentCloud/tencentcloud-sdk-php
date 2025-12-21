@@ -26,22 +26,30 @@ use TencentCloud\Common\AbstractModel;
 <li>GEM：Gemini；</li>
 <li>Jimeng：即梦；</li>
 <li>Qwen：千问。</li>
+<li>Hunyuan：混元。</li>
+<li>Mingmou：明眸。</li>
  * @method void setModelName(string $ModelName) 设置模型名称。取值：
 <li>GEM：Gemini；</li>
 <li>Jimeng：即梦；</li>
 <li>Qwen：千问。</li>
+<li>Hunyuan：混元。</li>
+<li>Mingmou：明眸。</li>
  * @method string getModelVersion() 获取模型版本。取值：
 <li>当 ModelName 是 GEM，可选值为 2.5、3.0；</li>
 <li>当 ModelName 是 Jimeng，可选值为 4.0；</li>
 <li>当 ModelName 是 Qwen，可选值为 0925；</li>
+<li>当 ModelName 是 Hunyuan，可选值为 3.0；</li>
+<li>当 ModelName 是 Mingmou，可选值为 1.0；</li>
  * @method void setModelVersion(string $ModelVersion) 设置模型版本。取值：
 <li>当 ModelName 是 GEM，可选值为 2.5、3.0；</li>
 <li>当 ModelName 是 Jimeng，可选值为 4.0；</li>
 <li>当 ModelName 是 Qwen，可选值为 0925；</li>
+<li>当 ModelName 是 Hunyuan，可选值为 3.0；</li>
+<li>当 ModelName 是 Mingmou，可选值为 1.0；</li>
  * @method array getFileInfos() 获取AIGC 生图任务的输入图片的文件信息。默认只支持指定1个，使用模型 GEM 时最多指定3个。
  * @method void setFileInfos(array $FileInfos) 设置AIGC 生图任务的输入图片的文件信息。默认只支持指定1个，使用模型 GEM 时最多指定3个。
- * @method string getPrompt() 获取生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。
- * @method void setPrompt(string $Prompt) 设置生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。
+ * @method string getPrompt() 获取生成图片的提示词。最大支持2000字符，当 FileInfos 为空时，此参数必填。
+ * @method void setPrompt(string $Prompt) 设置生成图片的提示词。最大支持2000字符，当 FileInfos 为空时，此参数必填。
  * @method string getNegativePrompt() 获取要阻止模型生成图片的提示词。最大支持500个字符。
  * @method void setNegativePrompt(string $NegativePrompt) 设置要阻止模型生成图片的提示词。最大支持500个字符。
  * @method string getEnhancePrompt() 获取是否自动优化提示词。开启时将自动优化传入的 Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
@@ -69,6 +77,8 @@ class CreateAigcImageTaskRequest extends AbstractModel
 <li>GEM：Gemini；</li>
 <li>Jimeng：即梦；</li>
 <li>Qwen：千问。</li>
+<li>Hunyuan：混元。</li>
+<li>Mingmou：明眸。</li>
      */
     public $ModelName;
 
@@ -77,6 +87,8 @@ class CreateAigcImageTaskRequest extends AbstractModel
 <li>当 ModelName 是 GEM，可选值为 2.5、3.0；</li>
 <li>当 ModelName 是 Jimeng，可选值为 4.0；</li>
 <li>当 ModelName 是 Qwen，可选值为 0925；</li>
+<li>当 ModelName 是 Hunyuan，可选值为 3.0；</li>
+<li>当 ModelName 是 Mingmou，可选值为 1.0；</li>
      */
     public $ModelVersion;
 
@@ -86,7 +98,7 @@ class CreateAigcImageTaskRequest extends AbstractModel
     public $FileInfos;
 
     /**
-     * @var string 生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。
+     * @var string 生成图片的提示词。最大支持2000字符，当 FileInfos 为空时，此参数必填。
      */
     public $Prompt;
 
@@ -131,12 +143,16 @@ class CreateAigcImageTaskRequest extends AbstractModel
 <li>GEM：Gemini；</li>
 <li>Jimeng：即梦；</li>
 <li>Qwen：千问。</li>
+<li>Hunyuan：混元。</li>
+<li>Mingmou：明眸。</li>
      * @param string $ModelVersion 模型版本。取值：
 <li>当 ModelName 是 GEM，可选值为 2.5、3.0；</li>
 <li>当 ModelName 是 Jimeng，可选值为 4.0；</li>
 <li>当 ModelName 是 Qwen，可选值为 0925；</li>
+<li>当 ModelName 是 Hunyuan，可选值为 3.0；</li>
+<li>当 ModelName 是 Mingmou，可选值为 1.0；</li>
      * @param array $FileInfos AIGC 生图任务的输入图片的文件信息。默认只支持指定1个，使用模型 GEM 时最多指定3个。
-     * @param string $Prompt 生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。
+     * @param string $Prompt 生成图片的提示词。最大支持2000字符，当 FileInfos 为空时，此参数必填。
      * @param string $NegativePrompt 要阻止模型生成图片的提示词。最大支持500个字符。
      * @param string $EnhancePrompt 是否自动优化提示词。开启时将自动优化传入的 Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
      * @param AigcImageOutputConfig $OutputConfig 生图任务的输出媒体文件配置。

@@ -40,6 +40,7 @@ use TencentCloud\Tdai\V20250717\Models as Models;
  * @method Models\PauseAgentWorkResponse PauseAgentWork(Models\PauseAgentWorkRequest $req) 本接口（PauseAgentWork）用于暂停智能体实例的值守任务，通常在用户需要暂停时使用。
  * @method Models\RecoverAgentInstanceResponse RecoverAgentInstance(Models\RecoverAgentInstanceRequest $req) 本接口（RecoverAgentInstance）用于解隔离智能体实例，通常在用户需要解隔离智能体实例时使用。
  * @method Models\RemoveChatResponse RemoveChat(Models\RemoveChatRequest $req) 本接口（RemoveChat）用于删除会话，通常在用户删除会话时使用。
+ * @method Models\StartAgentTaskResponse StartAgentTask(Models\StartAgentTaskRequest $req) 该接口用于启动一个智能体的任务
  * @method Models\TerminateAgentInstanceResponse TerminateAgentInstance(Models\TerminateAgentInstanceRequest $req) 本接口（TerminateAgentInstance）用于下线智能体实例，通常在用户需要下线智能体实例时使用。
  */
 

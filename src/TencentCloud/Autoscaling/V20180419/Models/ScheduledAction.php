@@ -46,6 +46,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScheduledType(string $ScheduledType) 设置定时任务的执行类型。取值范围：
 <li>CRONTAB：代表定时任务为重复执行。</li>
 <li>ONCE：代表定时任务为单次执行。</li>
+ * @method boolean getDisableUpdateDesiredCapacity() 获取停用期望数更新。表示定时任务触发时期望实例数正常更新。
+该值为 True 时，定时任务触发时不会主动修改期望实例数，但可能会因最大最小值机制修改期望实例数。
+以下案例的前提都是停用期望数更新为 True：
+
+- 定时任务触发时，原期望数为 5，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，但原期望数 5 小于最小值 10，最终新期望数为 10。
+- 定时任务触发时，原期望数为 25，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，但原期望数 25 大于最大值 20，最终新期望数为 20。
+- 定时任务触发时，原期望数为 13，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，期望数保持为 13 。
+ * @method void setDisableUpdateDesiredCapacity(boolean $DisableUpdateDesiredCapacity) 设置停用期望数更新。表示定时任务触发时期望实例数正常更新。
+该值为 True 时，定时任务触发时不会主动修改期望实例数，但可能会因最大最小值机制修改期望实例数。
+以下案例的前提都是停用期望数更新为 True：
+
+- 定时任务触发时，原期望数为 5，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，但原期望数 5 小于最小值 10，最终新期望数为 10。
+- 定时任务触发时，原期望数为 25，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，但原期望数 25 大于最大值 20，最终新期望数为 20。
+- 定时任务触发时，原期望数为 13，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，期望数保持为 13 。
  */
 class ScheduledAction extends AbstractModel
 {
@@ -107,6 +121,17 @@ class ScheduledAction extends AbstractModel
     public $ScheduledType;
 
     /**
+     * @var boolean 停用期望数更新。表示定时任务触发时期望实例数正常更新。
+该值为 True 时，定时任务触发时不会主动修改期望实例数，但可能会因最大最小值机制修改期望实例数。
+以下案例的前提都是停用期望数更新为 True：
+
+- 定时任务触发时，原期望数为 5，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，但原期望数 5 小于最小值 10，最终新期望数为 10。
+- 定时任务触发时，原期望数为 25，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，但原期望数 25 大于最大值 20，最终新期望数为 20。
+- 定时任务触发时，原期望数为 13，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，期望数保持为 13 。
+     */
+    public $DisableUpdateDesiredCapacity;
+
+    /**
      * @param string $ScheduledActionId 定时任务ID。
      * @param string $ScheduledActionName 定时任务名称。
      * @param string $AutoScalingGroupId 定时任务所在伸缩组ID。
@@ -120,6 +145,13 @@ class ScheduledAction extends AbstractModel
      * @param string $ScheduledType 定时任务的执行类型。取值范围：
 <li>CRONTAB：代表定时任务为重复执行。</li>
 <li>ONCE：代表定时任务为单次执行。</li>
+     * @param boolean $DisableUpdateDesiredCapacity 停用期望数更新。表示定时任务触发时期望实例数正常更新。
+该值为 True 时，定时任务触发时不会主动修改期望实例数，但可能会因最大最小值机制修改期望实例数。
+以下案例的前提都是停用期望数更新为 True：
+
+- 定时任务触发时，原期望数为 5，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，但原期望数 5 小于最小值 10，最终新期望数为 10。
+- 定时任务触发时，原期望数为 25，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，但原期望数 25 大于最大值 20，最终新期望数为 20。
+- 定时任务触发时，原期望数为 13，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，期望数保持为 13 。
      */
     function __construct()
     {
@@ -176,6 +208,10 @@ class ScheduledAction extends AbstractModel
 
         if (array_key_exists("ScheduledType",$param) and $param["ScheduledType"] !== null) {
             $this->ScheduledType = $param["ScheduledType"];
+        }
+
+        if (array_key_exists("DisableUpdateDesiredCapacity",$param) and $param["DisableUpdateDesiredCapacity"] !== null) {
+            $this->DisableUpdateDesiredCapacity = $param["DisableUpdateDesiredCapacity"];
         }
     }
 }

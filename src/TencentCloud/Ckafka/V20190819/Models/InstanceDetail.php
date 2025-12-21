@@ -20,266 +20,266 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例详情
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
- * @method string getInstanceName() 获取ckafka集群实例名称
- * @method void setInstanceName(string $InstanceName) 设置ckafka集群实例名称
- * @method string getVip() 获取访问实例的vip 信息
- * @method void setVip(string $Vip) 设置访问实例的vip 信息
- * @method string getVport() 获取访问实例的端口信息
- * @method void setVport(string $Vport) 设置访问实例的端口信息
- * @method array getVipList() 获取虚拟IP列表
- * @method void setVipList(array $VipList) 设置虚拟IP列表
- * @method integer getStatus() 获取实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
- * @method void setStatus(integer $Status) 设置实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
- * @method integer getBandwidth() 获取实例带宽，单位Mbps
- * @method void setBandwidth(integer $Bandwidth) 设置实例带宽，单位Mbps
- * @method integer getDiskSize() 获取ckafka集群实例磁盘大小，单位G
- * @method void setDiskSize(integer $DiskSize) 设置ckafka集群实例磁盘大小，单位G
- * @method integer getZoneId() 获取可用区域ID
- * @method void setZoneId(integer $ZoneId) 设置可用区域ID
- * @method string getVpcId() 获取vpcId，如果为空，说明是基础网络
- * @method void setVpcId(string $VpcId) 设置vpcId，如果为空，说明是基础网络
- * @method string getSubnetId() 获取子网id
- * @method void setSubnetId(string $SubnetId) 设置子网id
- * @method integer getRenewFlag() 获取实例是否续费，int  枚举值：1表示自动续费，2表示明确不自动续费
- * @method void setRenewFlag(integer $RenewFlag) 设置实例是否续费，int  枚举值：1表示自动续费，2表示明确不自动续费
- * @method integer getHealthy() 获取实例状态 int：1表示健康，2表示告警，3 表示实例状态异常
- * @method void setHealthy(integer $Healthy) 设置实例状态 int：1表示健康，2表示告警，3 表示实例状态异常
- * @method string getHealthyMessage() 获取实例状态信息
- * @method void setHealthyMessage(string $HealthyMessage) 设置实例状态信息
- * @method integer getCreateTime() 获取实例创建时间
- * @method void setCreateTime(integer $CreateTime) 设置实例创建时间
- * @method integer getExpireTime() 获取实例过期时间
- * @method void setExpireTime(integer $ExpireTime) 设置实例过期时间
- * @method integer getIsInternal() 获取是否为内部客户。值为1 表示内部客户
- * @method void setIsInternal(integer $IsInternal) 设置是否为内部客户。值为1 表示内部客户
- * @method integer getTopicNum() 获取Topic个数
- * @method void setTopicNum(integer $TopicNum) 设置Topic个数
- * @method array getTags() 获取标识tag
- * @method void setTags(array $Tags) 设置标识tag
- * @method string getVersion() 获取kafka版本信息
- * @method void setVersion(string $Version) 设置kafka版本信息
- * @method array getZoneIds() 获取跨可用区
- * @method void setZoneIds(array $ZoneIds) 设置跨可用区
- * @method integer getCvm() 获取ckafka售卖类型
- * @method void setCvm(integer $Cvm) 设置ckafka售卖类型
- * @method string getInstanceType() 获取ckafka集群实例类型
- * @method void setInstanceType(string $InstanceType) 设置ckafka集群实例类型
- * @method string getDiskType() 获取ckafka集群实例磁盘类型
- * @method void setDiskType(string $DiskType) 设置ckafka集群实例磁盘类型
- * @method integer getMaxTopicNumber() 获取当前规格最大Topic数
- * @method void setMaxTopicNumber(integer $MaxTopicNumber) 设置当前规格最大Topic数
- * @method integer getMaxPartitionNumber() 获取当前规格最大Partition数
- * @method void setMaxPartitionNumber(integer $MaxPartitionNumber) 设置当前规格最大Partition数
- * @method string getRebalanceTime() 获取计划升级配置时间
- * @method void setRebalanceTime(string $RebalanceTime) 设置计划升级配置时间
- * @method integer getPartitionNumber() 获取实例当前partition数量
- * @method void setPartitionNumber(integer $PartitionNumber) 设置实例当前partition数量
- * @method string getPublicNetworkChargeType() 获取ckafka集群实例公网带宽类型
- * @method void setPublicNetworkChargeType(string $PublicNetworkChargeType) 设置ckafka集群实例公网带宽类型
- * @method integer getPublicNetwork() 获取公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
- * @method void setPublicNetwork(integer $PublicNetwork) 设置公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
- * @method string getClusterType() 获取ckafka集群实例底层集群类型
- * @method void setClusterType(string $ClusterType) 设置ckafka集群实例底层集群类型
- * @method array getFeatures() 获取实例功能列表
- * @method void setFeatures(array $Features) 设置实例功能列表
+ * @method string getInstanceId() 获取<p>ckafka集群实例Id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>ckafka集群实例Id</p>
+ * @method string getInstanceName() 获取<p>ckafka集群实例名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>ckafka集群实例名称</p>
+ * @method string getVip() 获取<p>访问实例的vip 信息</p>
+ * @method void setVip(string $Vip) 设置<p>访问实例的vip 信息</p>
+ * @method string getVport() 获取<p>访问实例的端口信息</p>
+ * @method void setVport(string $Vport) 设置<p>访问实例的端口信息</p>
+ * @method array getVipList() 获取<p>虚拟IP列表</p>
+ * @method void setVipList(array $VipList) 设置<p>虚拟IP列表</p>
+ * @method integer getStatus() 获取<p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
+ * @method void setStatus(integer $Status) 设置<p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
+ * @method integer getBandwidth() 获取<p>实例带宽，单位Mbps</p>
+ * @method void setBandwidth(integer $Bandwidth) 设置<p>实例带宽，单位Mbps</p>
+ * @method integer getDiskSize() 获取<p>ckafka集群实例磁盘大小，单位G</p>
+ * @method void setDiskSize(integer $DiskSize) 设置<p>ckafka集群实例磁盘大小，单位G</p>
+ * @method integer getZoneId() 获取<p>可用区域ID</p>
+ * @method void setZoneId(integer $ZoneId) 设置<p>可用区域ID</p>
+ * @method string getVpcId() 获取<p>vpcId，如果为空，说明是基础网络</p>
+ * @method void setVpcId(string $VpcId) 设置<p>vpcId，如果为空，说明是基础网络</p>
+ * @method string getSubnetId() 获取<p>子网id</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网id</p>
+ * @method integer getRenewFlag() 获取<p>实例是否续费，int  枚举值：1表示自动续费，2表示明确不自动续费</p>
+ * @method void setRenewFlag(integer $RenewFlag) 设置<p>实例是否续费，int  枚举值：1表示自动续费，2表示明确不自动续费</p>
+ * @method integer getHealthy() 获取<p>实例状态 int：1表示健康，2表示告警，3 表示实例状态异常</p>
+ * @method void setHealthy(integer $Healthy) 设置<p>实例状态 int：1表示健康，2表示告警，3 表示实例状态异常</p>
+ * @method string getHealthyMessage() 获取<p>实例状态信息</p>
+ * @method void setHealthyMessage(string $HealthyMessage) 设置<p>实例状态信息</p>
+ * @method integer getCreateTime() 获取<p>实例创建时间</p>
+ * @method void setCreateTime(integer $CreateTime) 设置<p>实例创建时间</p>
+ * @method integer getExpireTime() 获取<p>实例过期时间</p>
+ * @method void setExpireTime(integer $ExpireTime) 设置<p>实例过期时间</p>
+ * @method integer getIsInternal() 获取<p>是否为内部客户。值为1 表示内部客户</p>
+ * @method void setIsInternal(integer $IsInternal) 设置<p>是否为内部客户。值为1 表示内部客户</p>
+ * @method integer getTopicNum() 获取<p>Topic个数</p>
+ * @method void setTopicNum(integer $TopicNum) 设置<p>Topic个数</p>
+ * @method array getTags() 获取<p>标识tag</p>
+ * @method void setTags(array $Tags) 设置<p>标识tag</p>
+ * @method string getVersion() 获取<p>kafka版本信息</p>
+ * @method void setVersion(string $Version) 设置<p>kafka版本信息</p>
+ * @method array getZoneIds() 获取<p>跨可用区</p>
+ * @method void setZoneIds(array $ZoneIds) 设置<p>跨可用区</p>
+ * @method integer getCvm() 获取<p>ckafka售卖类型</p>
+ * @method void setCvm(integer $Cvm) 设置<p>ckafka售卖类型</p>
+ * @method string getInstanceType() 获取<p>ckafka集群实例类型</p>
+ * @method void setInstanceType(string $InstanceType) 设置<p>ckafka集群实例类型</p>
+ * @method string getDiskType() 获取<p>ckafka集群实例磁盘类型</p>
+ * @method void setDiskType(string $DiskType) 设置<p>ckafka集群实例磁盘类型</p>
+ * @method integer getMaxTopicNumber() 获取<p>当前规格最大Topic数</p>
+ * @method void setMaxTopicNumber(integer $MaxTopicNumber) 设置<p>当前规格最大Topic数</p>
+ * @method integer getMaxPartitionNumber() 获取<p>当前规格最大Partition数</p>
+ * @method void setMaxPartitionNumber(integer $MaxPartitionNumber) 设置<p>当前规格最大Partition数</p>
+ * @method string getRebalanceTime() 获取<p>计划升级配置时间</p>
+ * @method void setRebalanceTime(string $RebalanceTime) 设置<p>计划升级配置时间</p>
+ * @method integer getPartitionNumber() 获取<p>实例当前partition数量</p>
+ * @method void setPartitionNumber(integer $PartitionNumber) 设置<p>实例当前partition数量</p>
+ * @method string getPublicNetworkChargeType() 获取<p>ckafka集群实例公网带宽类型</p>
+ * @method void setPublicNetworkChargeType(string $PublicNetworkChargeType) 设置<p>ckafka集群实例公网带宽类型</p>
+ * @method integer getPublicNetwork() 获取<p>公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写</p>
+ * @method void setPublicNetwork(integer $PublicNetwork) 设置<p>公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写</p>
+ * @method string getClusterType() 获取<p>ckafka集群实例底层集群类型</p>
+ * @method void setClusterType(string $ClusterType) 设置<p>ckafka集群实例底层集群类型</p>
+ * @method array getFeatures() 获取<p>实例功能列表</p>
+ * @method void setFeatures(array $Features) 设置<p>实例功能列表</p>
  */
 class InstanceDetail extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string <p>ckafka集群实例Id</p>
      */
     public $InstanceId;
 
     /**
-     * @var string ckafka集群实例名称
+     * @var string <p>ckafka集群实例名称</p>
      */
     public $InstanceName;
 
     /**
-     * @var string 访问实例的vip 信息
+     * @var string <p>访问实例的vip 信息</p>
      */
     public $Vip;
 
     /**
-     * @var string 访问实例的端口信息
+     * @var string <p>访问实例的端口信息</p>
      */
     public $Vport;
 
     /**
-     * @var array 虚拟IP列表
+     * @var array <p>虚拟IP列表</p>
      */
     public $VipList;
 
     /**
-     * @var integer 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
+     * @var integer <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
      */
     public $Status;
 
     /**
-     * @var integer 实例带宽，单位Mbps
+     * @var integer <p>实例带宽，单位Mbps</p>
      */
     public $Bandwidth;
 
     /**
-     * @var integer ckafka集群实例磁盘大小，单位G
+     * @var integer <p>ckafka集群实例磁盘大小，单位G</p>
      */
     public $DiskSize;
 
     /**
-     * @var integer 可用区域ID
+     * @var integer <p>可用区域ID</p>
      */
     public $ZoneId;
 
     /**
-     * @var string vpcId，如果为空，说明是基础网络
+     * @var string <p>vpcId，如果为空，说明是基础网络</p>
      */
     public $VpcId;
 
     /**
-     * @var string 子网id
+     * @var string <p>子网id</p>
      */
     public $SubnetId;
 
     /**
-     * @var integer 实例是否续费，int  枚举值：1表示自动续费，2表示明确不自动续费
+     * @var integer <p>实例是否续费，int  枚举值：1表示自动续费，2表示明确不自动续费</p>
      */
     public $RenewFlag;
 
     /**
-     * @var integer 实例状态 int：1表示健康，2表示告警，3 表示实例状态异常
+     * @var integer <p>实例状态 int：1表示健康，2表示告警，3 表示实例状态异常</p>
      */
     public $Healthy;
 
     /**
-     * @var string 实例状态信息
+     * @var string <p>实例状态信息</p>
      */
     public $HealthyMessage;
 
     /**
-     * @var integer 实例创建时间
+     * @var integer <p>实例创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer 实例过期时间
+     * @var integer <p>实例过期时间</p>
      */
     public $ExpireTime;
 
     /**
-     * @var integer 是否为内部客户。值为1 表示内部客户
+     * @var integer <p>是否为内部客户。值为1 表示内部客户</p>
      */
     public $IsInternal;
 
     /**
-     * @var integer Topic个数
+     * @var integer <p>Topic个数</p>
      */
     public $TopicNum;
 
     /**
-     * @var array 标识tag
+     * @var array <p>标识tag</p>
      */
     public $Tags;
 
     /**
-     * @var string kafka版本信息
+     * @var string <p>kafka版本信息</p>
      */
     public $Version;
 
     /**
-     * @var array 跨可用区
+     * @var array <p>跨可用区</p>
      */
     public $ZoneIds;
 
     /**
-     * @var integer ckafka售卖类型
+     * @var integer <p>ckafka售卖类型</p>
      */
     public $Cvm;
 
     /**
-     * @var string ckafka集群实例类型
+     * @var string <p>ckafka集群实例类型</p>
      */
     public $InstanceType;
 
     /**
-     * @var string ckafka集群实例磁盘类型
+     * @var string <p>ckafka集群实例磁盘类型</p>
      */
     public $DiskType;
 
     /**
-     * @var integer 当前规格最大Topic数
+     * @var integer <p>当前规格最大Topic数</p>
      */
     public $MaxTopicNumber;
 
     /**
-     * @var integer 当前规格最大Partition数
+     * @var integer <p>当前规格最大Partition数</p>
      */
     public $MaxPartitionNumber;
 
     /**
-     * @var string 计划升级配置时间
+     * @var string <p>计划升级配置时间</p>
      */
     public $RebalanceTime;
 
     /**
-     * @var integer 实例当前partition数量
+     * @var integer <p>实例当前partition数量</p>
      */
     public $PartitionNumber;
 
     /**
-     * @var string ckafka集群实例公网带宽类型
+     * @var string <p>ckafka集群实例公网带宽类型</p>
      */
     public $PublicNetworkChargeType;
 
     /**
-     * @var integer 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
+     * @var integer <p>公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写</p>
      */
     public $PublicNetwork;
 
     /**
-     * @var string ckafka集群实例底层集群类型
+     * @var string <p>ckafka集群实例底层集群类型</p>
      */
     public $ClusterType;
 
     /**
-     * @var array 实例功能列表
+     * @var array <p>实例功能列表</p>
      */
     public $Features;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
-     * @param string $InstanceName ckafka集群实例名称
-     * @param string $Vip 访问实例的vip 信息
-     * @param string $Vport 访问实例的端口信息
-     * @param array $VipList 虚拟IP列表
-     * @param integer $Status 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
-     * @param integer $Bandwidth 实例带宽，单位Mbps
-     * @param integer $DiskSize ckafka集群实例磁盘大小，单位G
-     * @param integer $ZoneId 可用区域ID
-     * @param string $VpcId vpcId，如果为空，说明是基础网络
-     * @param string $SubnetId 子网id
-     * @param integer $RenewFlag 实例是否续费，int  枚举值：1表示自动续费，2表示明确不自动续费
-     * @param integer $Healthy 实例状态 int：1表示健康，2表示告警，3 表示实例状态异常
-     * @param string $HealthyMessage 实例状态信息
-     * @param integer $CreateTime 实例创建时间
-     * @param integer $ExpireTime 实例过期时间
-     * @param integer $IsInternal 是否为内部客户。值为1 表示内部客户
-     * @param integer $TopicNum Topic个数
-     * @param array $Tags 标识tag
-     * @param string $Version kafka版本信息
-     * @param array $ZoneIds 跨可用区
-     * @param integer $Cvm ckafka售卖类型
-     * @param string $InstanceType ckafka集群实例类型
-     * @param string $DiskType ckafka集群实例磁盘类型
-     * @param integer $MaxTopicNumber 当前规格最大Topic数
-     * @param integer $MaxPartitionNumber 当前规格最大Partition数
-     * @param string $RebalanceTime 计划升级配置时间
-     * @param integer $PartitionNumber 实例当前partition数量
-     * @param string $PublicNetworkChargeType ckafka集群实例公网带宽类型
-     * @param integer $PublicNetwork 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
-     * @param string $ClusterType ckafka集群实例底层集群类型
-     * @param array $Features 实例功能列表
+     * @param string $InstanceId <p>ckafka集群实例Id</p>
+     * @param string $InstanceName <p>ckafka集群实例名称</p>
+     * @param string $Vip <p>访问实例的vip 信息</p>
+     * @param string $Vport <p>访问实例的端口信息</p>
+     * @param array $VipList <p>虚拟IP列表</p>
+     * @param integer $Status <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
+     * @param integer $Bandwidth <p>实例带宽，单位Mbps</p>
+     * @param integer $DiskSize <p>ckafka集群实例磁盘大小，单位G</p>
+     * @param integer $ZoneId <p>可用区域ID</p>
+     * @param string $VpcId <p>vpcId，如果为空，说明是基础网络</p>
+     * @param string $SubnetId <p>子网id</p>
+     * @param integer $RenewFlag <p>实例是否续费，int  枚举值：1表示自动续费，2表示明确不自动续费</p>
+     * @param integer $Healthy <p>实例状态 int：1表示健康，2表示告警，3 表示实例状态异常</p>
+     * @param string $HealthyMessage <p>实例状态信息</p>
+     * @param integer $CreateTime <p>实例创建时间</p>
+     * @param integer $ExpireTime <p>实例过期时间</p>
+     * @param integer $IsInternal <p>是否为内部客户。值为1 表示内部客户</p>
+     * @param integer $TopicNum <p>Topic个数</p>
+     * @param array $Tags <p>标识tag</p>
+     * @param string $Version <p>kafka版本信息</p>
+     * @param array $ZoneIds <p>跨可用区</p>
+     * @param integer $Cvm <p>ckafka售卖类型</p>
+     * @param string $InstanceType <p>ckafka集群实例类型</p>
+     * @param string $DiskType <p>ckafka集群实例磁盘类型</p>
+     * @param integer $MaxTopicNumber <p>当前规格最大Topic数</p>
+     * @param integer $MaxPartitionNumber <p>当前规格最大Partition数</p>
+     * @param string $RebalanceTime <p>计划升级配置时间</p>
+     * @param integer $PartitionNumber <p>实例当前partition数量</p>
+     * @param string $PublicNetworkChargeType <p>ckafka集群实例公网带宽类型</p>
+     * @param integer $PublicNetwork <p>公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写</p>
+     * @param string $ClusterType <p>ckafka集群实例底层集群类型</p>
+     * @param array $Features <p>实例功能列表</p>
      */
     function __construct()
     {

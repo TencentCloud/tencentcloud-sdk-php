@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAgentPayDealsV2返回参数结构体
  *
- * @method array getAgentPayDealSet() 获取订单数组
- * @method void setAgentPayDealSet(array $AgentPayDealSet) 设置订单数组
- * @method integer getTotalCount() 获取符合条件的订单总数量
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的订单总数量
+ * @method array getAgentPayDealSet() 获取<p>订单数组</p>
+ * @method void setAgentPayDealSet(array $AgentPayDealSet) 设置<p>订单数组</p>
+ * @method integer getTotalCount() 获取<p>符合条件的订单总数量</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>符合条件的订单总数量</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAgentPayDealsV2Response extends AbstractModel
 {
     /**
-     * @var array 订单数组
+     * @var array <p>订单数组</p>
      */
     public $AgentPayDealSet;
 
     /**
-     * @var integer 符合条件的订单总数量
+     * @var integer <p>符合条件的订单总数量</p>
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeAgentPayDealsV2Response extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $AgentPayDealSet 订单数组
-     * @param integer $TotalCount 符合条件的订单总数量
+     * @param array $AgentPayDealSet <p>订单数组</p>
+     * @param integer $TotalCount <p>符合条件的订单总数量</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

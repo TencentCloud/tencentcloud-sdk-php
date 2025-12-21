@@ -20,34 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddCasterInputInfo返回参数结构体
  *
- * @method string getInputPlayUrl() 获取rtmp协议输入源播放地址。
-注：仅可作为预览使用，不可分发。
- * @method void setInputPlayUrl(string $InputPlayUrl) 设置rtmp协议输入源播放地址。
-注：仅可作为预览使用，不可分发。
- * @method string getInputWebRTCPlayUrl() 获取webrtc协议播放地址。
-注：
-1. 需配合使用腾讯云快直播播放SDK使用才可正常播放。
-2. 仅作为预览使用，不可分发。
- * @method void setInputWebRTCPlayUrl(string $InputWebRTCPlayUrl) 设置webrtc协议播放地址。
-注：
-1. 需配合使用腾讯云快直播播放SDK使用才可正常播放。
-2. 仅作为预览使用，不可分发。
+ * @method string getInputPlayUrl() 获取<p>rtmp协议输入源播放地址。注：仅可作为预览使用，不可分发。</p>
+ * @method void setInputPlayUrl(string $InputPlayUrl) 设置<p>rtmp协议输入源播放地址。注：仅可作为预览使用，不可分发。</p>
+ * @method string getInputWebRTCPlayUrl() 获取<p>webrtc协议播放地址。注：1. 需配合使用腾讯云快直播播放SDK使用才可正常播放。2. 仅作为预览使用，不可分发。</p>
+ * @method void setInputWebRTCPlayUrl(string $InputWebRTCPlayUrl) 设置<p>webrtc协议播放地址。注：1. 需配合使用腾讯云快直播播放SDK使用才可正常播放。2. 仅作为预览使用，不可分发。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class AddCasterInputInfoResponse extends AbstractModel
 {
     /**
-     * @var string rtmp协议输入源播放地址。
-注：仅可作为预览使用，不可分发。
+     * @var string <p>rtmp协议输入源播放地址。注：仅可作为预览使用，不可分发。</p>
      */
     public $InputPlayUrl;
 
     /**
-     * @var string webrtc协议播放地址。
-注：
-1. 需配合使用腾讯云快直播播放SDK使用才可正常播放。
-2. 仅作为预览使用，不可分发。
+     * @var string <p>webrtc协议播放地址。注：1. 需配合使用腾讯云快直播播放SDK使用才可正常播放。2. 仅作为预览使用，不可分发。</p>
      */
     public $InputWebRTCPlayUrl;
 
@@ -57,12 +45,8 @@ class AddCasterInputInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $InputPlayUrl rtmp协议输入源播放地址。
-注：仅可作为预览使用，不可分发。
-     * @param string $InputWebRTCPlayUrl webrtc协议播放地址。
-注：
-1. 需配合使用腾讯云快直播播放SDK使用才可正常播放。
-2. 仅作为预览使用，不可分发。
+     * @param string $InputPlayUrl <p>rtmp协议输入源播放地址。注：仅可作为预览使用，不可分发。</p>
+     * @param string $InputWebRTCPlayUrl <p>webrtc协议播放地址。注：1. 需配合使用腾讯云快直播播放SDK使用才可正常播放。2. 仅作为预览使用，不可分发。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

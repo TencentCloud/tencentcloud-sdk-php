@@ -20,182 +20,230 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateProxyEndPoint请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getUniqueVpcId() 获取私有网络ID，默认与集群私有网络ID保持一致
- * @method void setUniqueVpcId(string $UniqueVpcId) 设置私有网络ID，默认与集群私有网络ID保持一致
- * @method string getUniqueSubnetId() 获取私有网络子网ID，默认与集群子网ID保持一致
- * @method void setUniqueSubnetId(string $UniqueSubnetId) 设置私有网络子网ID，默认与集群子网ID保持一致
- * @method string getConnectionPoolType() 获取连接池类型：SessionConnectionPool(会话级别连接池 )
- * @method void setConnectionPoolType(string $ConnectionPoolType) 设置连接池类型：SessionConnectionPool(会话级别连接池 )
- * @method string getOpenConnectionPool() 获取是否开启连接池,yes-开启，no-不开启
- * @method void setOpenConnectionPool(string $OpenConnectionPool) 设置是否开启连接池,yes-开启，no-不开启
- * @method integer getConnectionPoolTimeOut() 获取连接池阈值：单位（秒）
- * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) 设置连接池阈值：单位（秒）
- * @method array getSecurityGroupIds() 获取绑定的安全组ID数组
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置绑定的安全组ID数组
- * @method string getDescription() 获取描述说明
- * @method void setDescription(string $Description) 设置描述说明
- * @method string getVip() 获取想要绑定的vip信息，需与UniqueVpcId对应。
- * @method void setVip(string $Vip) 设置想要绑定的vip信息，需与UniqueVpcId对应。
+ * @method string getClusterId() 获取集群 ID。
+ * @method void setClusterId(string $ClusterId) 设置集群 ID。
+ * @method string getUniqueVpcId() 获取私有网络 ID，默认与集群私有网络 ID 保持一致。
+ * @method void setUniqueVpcId(string $UniqueVpcId) 设置私有网络 ID，默认与集群私有网络 ID 保持一致。
+ * @method string getUniqueSubnetId() 获取私有网络子网 ID，默认与集群子网 ID 保持一致。
+ * @method void setUniqueSubnetId(string $UniqueSubnetId) 设置私有网络子网 ID，默认与集群子网 ID 保持一致。
+ * @method string getConnectionPoolType() 获取连接池类型：SessionConnectionPool（会话级别连接池）。
+ * @method void setConnectionPoolType(string $ConnectionPoolType) 设置连接池类型：SessionConnectionPool（会话级别连接池）。
+ * @method string getOpenConnectionPool() 获取是否开启连接池。
+yes：表示开启。
+no：表示不开启。
+ * @method void setOpenConnectionPool(string $OpenConnectionPool) 设置是否开启连接池。
+yes：表示开启。
+no：表示不开启。
+ * @method integer getConnectionPoolTimeOut() 获取连接池阈值：单位（秒），可选范围：0 - 300秒。
+ * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) 设置连接池阈值：单位（秒），可选范围：0 - 300秒。
+ * @method array getSecurityGroupIds() 获取绑定的安全组 ID 数组。
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置绑定的安全组 ID 数组。
+ * @method string getDescription() 获取描述说明。
+ * @method void setDescription(string $Description) 设置描述说明。
+ * @method string getVip() 获取想要绑定的 vip 信息，需与 UniqueVpcId 对应。
+ * @method void setVip(string $Vip) 设置想要绑定的 vip 信息，需与 UniqueVpcId 对应。
  * @method string getWeightMode() 获取权重模式：
-system-系统分配，custom-自定义
+system：系统分配。
+custom：自定义。
  * @method void setWeightMode(string $WeightMode) 设置权重模式：
-system-系统分配，custom-自定义
- * @method string getAutoAddRo() 获取是否自动添加只读实例，yes-是，no-不自动添加
- * @method void setAutoAddRo(string $AutoAddRo) 设置是否自动添加只读实例，yes-是，no-不自动添加
+system：系统分配。
+custom：自定义。
+ * @method string getAutoAddRo() 获取是否自动添加只读实例。
+yes：表示自动添加只读实例。
+no：表示不自动添加只读实例。
+ * @method void setAutoAddRo(string $AutoAddRo) 设置是否自动添加只读实例。
+yes：表示自动添加只读实例。
+no：表示不自动添加只读实例。
  * @method string getFailOver() 获取是否开启故障转移。
-yes：开启
-no：不开启。
-数据库代理出现故障时，链接地址将会路由到主实例
+yes：表示开启，开启后，当数据库代理出现故障时，连接地址将会路由到主实例。
+no：表示不开启。
+说明：
+仅当 RwType 参数值为 READWRITE 时，才支持设置此项。
  * @method void setFailOver(string $FailOver) 设置是否开启故障转移。
-yes：开启
-no：不开启。
-数据库代理出现故障时，链接地址将会路由到主实例
+yes：表示开启，开启后，当数据库代理出现故障时，连接地址将会路由到主实例。
+no：表示不开启。
+说明：
+仅当 RwType 参数值为 READWRITE 时，才支持设置此项。
  * @method string getConsistencyType() 获取一致性类型：
-eventual,global,session
+eventual：最终一致性。
+global：全局一致性。
+session：会话一致性。
+说明：
+仅当 RwType 参数值为 READWRITE 时，才支持设置此项。
  * @method void setConsistencyType(string $ConsistencyType) 设置一致性类型：
-eventual,global,session
+eventual：最终一致性。
+global：全局一致性。
+session：会话一致性。
+说明：
+仅当 RwType 参数值为 READWRITE 时，才支持设置此项。
  * @method string getRwType() 获取读写属性：
-READWRITE,READONLY
+READWRITE：表示读写分离。当此参数值为 READWRITE 时，才支持设置 FailOver、ConsistencyType 参数。
+READONLY：表示只读。
  * @method void setRwType(string $RwType) 设置读写属性：
-READWRITE,READONLY
- * @method integer getConsistencyTimeOut() 获取一致性超时时间。取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待
- * @method void setConsistencyTimeOut(integer $ConsistencyTimeOut) 设置一致性超时时间。取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待
- * @method boolean getTransSplit() 获取是否开启事务拆分。在一个事务中拆分读和写到不同的实例上去执行
- * @method void setTransSplit(boolean $TransSplit) 设置是否开启事务拆分。在一个事务中拆分读和写到不同的实例上去执行
- * @method string getAccessMode() 获取连接模式：
-nearby,balance
- * @method void setAccessMode(string $AccessMode) 设置连接模式：
-nearby,balance
- * @method array getInstanceWeights() 获取实例权重
- * @method void setInstanceWeights(array $InstanceWeights) 设置实例权重
+READWRITE：表示读写分离。当此参数值为 READWRITE 时，才支持设置 FailOver、ConsistencyType 参数。
+READONLY：表示只读。
+ * @method integer getConsistencyTimeOut() 获取一致性超时时间。取值范围：0 ~ 1000000（微秒）。设置为0时，表示若只读实例出现延迟导致一致性策略不满足时，请求将一直等待。
+ * @method void setConsistencyTimeOut(integer $ConsistencyTimeOut) 设置一致性超时时间。取值范围：0 ~ 1000000（微秒）。设置为0时，表示若只读实例出现延迟导致一致性策略不满足时，请求将一直等待。
+ * @method boolean getTransSplit() 获取是否开启事务拆分。开启后，在一个事务中拆分读和写到不同的实例上去执行。
+ * @method void setTransSplit(boolean $TransSplit) 设置是否开启事务拆分。开启后，在一个事务中拆分读和写到不同的实例上去执行。
+ * @method string getAccessMode() 获取接入模式：
+nearby：就近访问。
+balance：均衡分配。
+ * @method void setAccessMode(string $AccessMode) 设置接入模式：
+nearby：就近访问。
+balance：均衡分配。
+ * @method array getInstanceWeights() 获取实例权重。
+ * @method void setInstanceWeights(array $InstanceWeights) 设置实例权重。
  */
 class CreateProxyEndPointRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 集群 ID。
      */
     public $ClusterId;
 
     /**
-     * @var string 私有网络ID，默认与集群私有网络ID保持一致
+     * @var string 私有网络 ID，默认与集群私有网络 ID 保持一致。
      */
     public $UniqueVpcId;
 
     /**
-     * @var string 私有网络子网ID，默认与集群子网ID保持一致
+     * @var string 私有网络子网 ID，默认与集群子网 ID 保持一致。
      */
     public $UniqueSubnetId;
 
     /**
-     * @var string 连接池类型：SessionConnectionPool(会话级别连接池 )
+     * @var string 连接池类型：SessionConnectionPool（会话级别连接池）。
      */
     public $ConnectionPoolType;
 
     /**
-     * @var string 是否开启连接池,yes-开启，no-不开启
+     * @var string 是否开启连接池。
+yes：表示开启。
+no：表示不开启。
      */
     public $OpenConnectionPool;
 
     /**
-     * @var integer 连接池阈值：单位（秒）
+     * @var integer 连接池阈值：单位（秒），可选范围：0 - 300秒。
      */
     public $ConnectionPoolTimeOut;
 
     /**
-     * @var array 绑定的安全组ID数组
+     * @var array 绑定的安全组 ID 数组。
      */
     public $SecurityGroupIds;
 
     /**
-     * @var string 描述说明
+     * @var string 描述说明。
      */
     public $Description;
 
     /**
-     * @var string 想要绑定的vip信息，需与UniqueVpcId对应。
+     * @var string 想要绑定的 vip 信息，需与 UniqueVpcId 对应。
      */
     public $Vip;
 
     /**
      * @var string 权重模式：
-system-系统分配，custom-自定义
+system：系统分配。
+custom：自定义。
      */
     public $WeightMode;
 
     /**
-     * @var string 是否自动添加只读实例，yes-是，no-不自动添加
+     * @var string 是否自动添加只读实例。
+yes：表示自动添加只读实例。
+no：表示不自动添加只读实例。
      */
     public $AutoAddRo;
 
     /**
      * @var string 是否开启故障转移。
-yes：开启
-no：不开启。
-数据库代理出现故障时，链接地址将会路由到主实例
+yes：表示开启，开启后，当数据库代理出现故障时，连接地址将会路由到主实例。
+no：表示不开启。
+说明：
+仅当 RwType 参数值为 READWRITE 时，才支持设置此项。
      */
     public $FailOver;
 
     /**
      * @var string 一致性类型：
-eventual,global,session
+eventual：最终一致性。
+global：全局一致性。
+session：会话一致性。
+说明：
+仅当 RwType 参数值为 READWRITE 时，才支持设置此项。
      */
     public $ConsistencyType;
 
     /**
      * @var string 读写属性：
-READWRITE,READONLY
+READWRITE：表示读写分离。当此参数值为 READWRITE 时，才支持设置 FailOver、ConsistencyType 参数。
+READONLY：表示只读。
      */
     public $RwType;
 
     /**
-     * @var integer 一致性超时时间。取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待
+     * @var integer 一致性超时时间。取值范围：0 ~ 1000000（微秒）。设置为0时，表示若只读实例出现延迟导致一致性策略不满足时，请求将一直等待。
      */
     public $ConsistencyTimeOut;
 
     /**
-     * @var boolean 是否开启事务拆分。在一个事务中拆分读和写到不同的实例上去执行
+     * @var boolean 是否开启事务拆分。开启后，在一个事务中拆分读和写到不同的实例上去执行。
      */
     public $TransSplit;
 
     /**
-     * @var string 连接模式：
-nearby,balance
+     * @var string 接入模式：
+nearby：就近访问。
+balance：均衡分配。
      */
     public $AccessMode;
 
     /**
-     * @var array 实例权重
+     * @var array 实例权重。
      */
     public $InstanceWeights;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param string $UniqueVpcId 私有网络ID，默认与集群私有网络ID保持一致
-     * @param string $UniqueSubnetId 私有网络子网ID，默认与集群子网ID保持一致
-     * @param string $ConnectionPoolType 连接池类型：SessionConnectionPool(会话级别连接池 )
-     * @param string $OpenConnectionPool 是否开启连接池,yes-开启，no-不开启
-     * @param integer $ConnectionPoolTimeOut 连接池阈值：单位（秒）
-     * @param array $SecurityGroupIds 绑定的安全组ID数组
-     * @param string $Description 描述说明
-     * @param string $Vip 想要绑定的vip信息，需与UniqueVpcId对应。
+     * @param string $ClusterId 集群 ID。
+     * @param string $UniqueVpcId 私有网络 ID，默认与集群私有网络 ID 保持一致。
+     * @param string $UniqueSubnetId 私有网络子网 ID，默认与集群子网 ID 保持一致。
+     * @param string $ConnectionPoolType 连接池类型：SessionConnectionPool（会话级别连接池）。
+     * @param string $OpenConnectionPool 是否开启连接池。
+yes：表示开启。
+no：表示不开启。
+     * @param integer $ConnectionPoolTimeOut 连接池阈值：单位（秒），可选范围：0 - 300秒。
+     * @param array $SecurityGroupIds 绑定的安全组 ID 数组。
+     * @param string $Description 描述说明。
+     * @param string $Vip 想要绑定的 vip 信息，需与 UniqueVpcId 对应。
      * @param string $WeightMode 权重模式：
-system-系统分配，custom-自定义
-     * @param string $AutoAddRo 是否自动添加只读实例，yes-是，no-不自动添加
+system：系统分配。
+custom：自定义。
+     * @param string $AutoAddRo 是否自动添加只读实例。
+yes：表示自动添加只读实例。
+no：表示不自动添加只读实例。
      * @param string $FailOver 是否开启故障转移。
-yes：开启
-no：不开启。
-数据库代理出现故障时，链接地址将会路由到主实例
+yes：表示开启，开启后，当数据库代理出现故障时，连接地址将会路由到主实例。
+no：表示不开启。
+说明：
+仅当 RwType 参数值为 READWRITE 时，才支持设置此项。
      * @param string $ConsistencyType 一致性类型：
-eventual,global,session
+eventual：最终一致性。
+global：全局一致性。
+session：会话一致性。
+说明：
+仅当 RwType 参数值为 READWRITE 时，才支持设置此项。
      * @param string $RwType 读写属性：
-READWRITE,READONLY
-     * @param integer $ConsistencyTimeOut 一致性超时时间。取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待
-     * @param boolean $TransSplit 是否开启事务拆分。在一个事务中拆分读和写到不同的实例上去执行
-     * @param string $AccessMode 连接模式：
-nearby,balance
-     * @param array $InstanceWeights 实例权重
+READWRITE：表示读写分离。当此参数值为 READWRITE 时，才支持设置 FailOver、ConsistencyType 参数。
+READONLY：表示只读。
+     * @param integer $ConsistencyTimeOut 一致性超时时间。取值范围：0 ~ 1000000（微秒）。设置为0时，表示若只读实例出现延迟导致一致性策略不满足时，请求将一直等待。
+     * @param boolean $TransSplit 是否开启事务拆分。开启后，在一个事务中拆分读和写到不同的实例上去执行。
+     * @param string $AccessMode 接入模式：
+nearby：就近访问。
+balance：均衡分配。
+     * @param array $InstanceWeights 实例权重。
      */
     function __construct()
     {

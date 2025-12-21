@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间（ISO 8601 格式）
  * @method string getUpdateTime() 获取更新时间（ISO 8601 格式）
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间（ISO 8601 格式）
+ * @method array getMountOptions() 获取存储挂载选项
+ * @method void setMountOptions(array $MountOptions) 设置存储挂载选项
  */
 class SandboxInstance extends AbstractModel
 {
@@ -87,6 +89,11 @@ class SandboxInstance extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var array 存储挂载选项
+     */
+    public $MountOptions;
+
+    /**
      * @param string $InstanceId 沙箱实例唯一标识符
      * @param string $ToolId 所属沙箱工具 ID
      * @param string $ToolName 所属沙箱工具名称
@@ -96,6 +103,7 @@ class SandboxInstance extends AbstractModel
      * @param string $StopReason 停止原因：manual（手动）、timeout（超时）、error（错误）、system（系统），仅在状态为 STOPPED、STOP_FAILED 或 FAILED 时有值。当 provider 停止失败时，状态为 STOP_FAILED，原因为 error
      * @param string $CreateTime 创建时间（ISO 8601 格式）
      * @param string $UpdateTime 更新时间（ISO 8601 格式）
+     * @param array $MountOptions 存储挂载选项
      */
     function __construct()
     {
@@ -144,6 +152,15 @@ class SandboxInstance extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("MountOptions",$param) and $param["MountOptions"] !== null) {
+            $this->MountOptions = [];
+            foreach ($param["MountOptions"] as $key => $value){
+                $obj = new MountOption();
+                $obj->deserialize($value);
+                array_push($this->MountOptions, $obj);
+            }
         }
     }
 }

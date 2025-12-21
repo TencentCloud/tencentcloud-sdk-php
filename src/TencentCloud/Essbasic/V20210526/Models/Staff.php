@@ -23,15 +23,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUserId() 获取员工在电子签平台的用户ID
  * @method void setUserId(string $UserId) 设置员工在电子签平台的用户ID
  * @method string getDisplayName() 获取显示的员工名
-注意：2024-07-08 及之后创建的应用号，该字段返回的是打码信息
+注意：该字段返回的是打码信息
  * @method void setDisplayName(string $DisplayName) 设置显示的员工名
-注意：2024-07-08 及之后创建的应用号，该字段返回的是打码信息
+注意：该字段返回的是打码信息
  * @method string getMobile() 获取员工手机号
-注意：2024-07-08 及之后创建的应用号，该字段返回的是打码信息
+注意：该字段返回的是打码信息
  * @method void setMobile(string $Mobile) 设置员工手机号
-注意：2024-07-08 及之后创建的应用号，该字段返回的是打码信息
+注意：该字段返回的是打码信息
  * @method string getEmail() 获取员工邮箱
+注意：该字段返回的是打码信息
  * @method void setEmail(string $Email) 设置员工邮箱
+注意：该字段返回的是打码信息
  * @method string getOpenId() 获取员工在第三方应用平台的用户ID
  * @method void setOpenId(string $OpenId) 设置员工在第三方应用平台的用户ID
  * @method array getRoles() 获取员工角色
@@ -56,18 +58,19 @@ class Staff extends AbstractModel
 
     /**
      * @var string 显示的员工名
-注意：2024-07-08 及之后创建的应用号，该字段返回的是打码信息
+注意：该字段返回的是打码信息
      */
     public $DisplayName;
 
     /**
      * @var string 员工手机号
-注意：2024-07-08 及之后创建的应用号，该字段返回的是打码信息
+注意：该字段返回的是打码信息
      */
     public $Mobile;
 
     /**
      * @var string 员工邮箱
+注意：该字段返回的是打码信息
      */
     public $Email;
 
@@ -109,10 +112,11 @@ class Staff extends AbstractModel
     /**
      * @param string $UserId 员工在电子签平台的用户ID
      * @param string $DisplayName 显示的员工名
-注意：2024-07-08 及之后创建的应用号，该字段返回的是打码信息
+注意：该字段返回的是打码信息
      * @param string $Mobile 员工手机号
-注意：2024-07-08 及之后创建的应用号，该字段返回的是打码信息
+注意：该字段返回的是打码信息
      * @param string $Email 员工邮箱
+注意：该字段返回的是打码信息
      * @param string $OpenId 员工在第三方应用平台的用户ID
      * @param array $Roles 员工角色
      * @param Department $Department 员工部门

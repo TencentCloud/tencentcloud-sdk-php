@@ -53,6 +53,8 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\DescribeGlobalConfigResponse DescribeGlobalConfig(Models\DescribeGlobalConfigRequest $req) 查询YARN资源调度的全局配置
  * @method Models\DescribeGroupsSTDResponse DescribeGroupsSTD(Models\DescribeGroupsSTDRequest $req) 查询用户组
  * @method Models\DescribeHBaseTableOverviewResponse DescribeHBaseTableOverview(Models\DescribeHBaseTableOverviewRequest $req) 获取Hbase表级监控数据概览接口
+ * @method Models\DescribeHBaseTableRequestMetricResponse DescribeHBaseTableRequestMetric(Models\DescribeHBaseTableRequestMetricRequest $req) Hbase的表粒度读取和写入速率
+ * @method Models\DescribeHBaseTableStoreSizeMetricResponse DescribeHBaseTableStoreSizeMetric(Models\DescribeHBaseTableStoreSizeMetricRequest $req) 查询Hbase的表粒度StoreSize大小监控指标数据
  * @method Models\DescribeHDFSStorageInfoResponse DescribeHDFSStorageInfo(Models\DescribeHDFSStorageInfoRequest $req) 查询HDFS存储文件信息
  * @method Models\DescribeHiveQueriesResponse DescribeHiveQueries(Models\DescribeHiveQueriesRequest $req) 获取hive查询信息
  * @method Models\DescribeImpalaQueriesResponse DescribeImpalaQueries(Models\DescribeImpalaQueriesRequest $req) DescribeImpalaQueries

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRebateInfosNew请求参数结构体
  *
- * @method string getRebateMonth() 获取返佣月份，如2018-02
- * @method void setRebateMonth(string $RebateMonth) 设置返佣月份，如2018-02
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取限制数目
- * @method void setLimit(integer $Limit) 设置限制数目
+ * @method string getRebateMonth() 获取<p>返佣月份，如2018-02</p>
+ * @method void setRebateMonth(string $RebateMonth) 设置<p>返佣月份，如2018-02</p>
+ * @method integer getOffset() 获取<p>偏移量</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量</p>
+ * @method integer getLimit() 获取<p>限制数目</p>
+ * @method void setLimit(integer $Limit) 设置<p>限制数目</p>
  */
 class DescribeRebateInfosNewRequest extends AbstractModel
 {
     /**
-     * @var string 返佣月份，如2018-02
+     * @var string <p>返佣月份，如2018-02</p>
      */
     public $RebateMonth;
 
     /**
-     * @var integer 偏移量
+     * @var integer <p>偏移量</p>
      */
     public $Offset;
 
     /**
-     * @var integer 限制数目
+     * @var integer <p>限制数目</p>
      */
     public $Limit;
 
     /**
-     * @param string $RebateMonth 返佣月份，如2018-02
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 限制数目
+     * @param string $RebateMonth <p>返佣月份，如2018-02</p>
+     * @param integer $Offset <p>偏移量</p>
+     * @param integer $Limit <p>限制数目</p>
      */
     function __construct()
     {

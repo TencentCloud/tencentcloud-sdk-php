@@ -20,30 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteCasterLayoutInfo请求参数结构体
  *
- * @method integer getCasterId() 获取导播台ID。
- * @method void setCasterId(integer $CasterId) 设置导播台ID。
- * @method integer getLayoutIndex() 获取要删除的布局Index。
-注：待删除的Index对应的布局需存在。
- * @method void setLayoutIndex(integer $LayoutIndex) 设置要删除的布局Index。
-注：待删除的Index对应的布局需存在。
+ * @method integer getCasterId() 获取<p>导播台ID。</p>
+ * @method void setCasterId(integer $CasterId) 设置<p>导播台ID。</p>
+ * @method integer getLayoutIndex() 获取<p>要删除的布局Index。注：待删除的Index对应的布局需存在。</p>
+ * @method void setLayoutIndex(integer $LayoutIndex) 设置<p>要删除的布局Index。注：待删除的Index对应的布局需存在。</p>
  */
 class DeleteCasterLayoutInfoRequest extends AbstractModel
 {
     /**
-     * @var integer 导播台ID。
+     * @var integer <p>导播台ID。</p>
      */
     public $CasterId;
 
     /**
-     * @var integer 要删除的布局Index。
-注：待删除的Index对应的布局需存在。
+     * @var integer <p>要删除的布局Index。注：待删除的Index对应的布局需存在。</p>
      */
     public $LayoutIndex;
 
     /**
-     * @param integer $CasterId 导播台ID。
-     * @param integer $LayoutIndex 要删除的布局Index。
-注：待删除的Index对应的布局需存在。
+     * @param integer $CasterId <p>导播台ID。</p>
+     * @param integer $LayoutIndex <p>要删除的布局Index。注：待删除的Index对应的布局需存在。</p>
      */
     function __construct()
     {

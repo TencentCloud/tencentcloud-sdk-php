@@ -20,454 +20,378 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例属性返回结果对象
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
- * @method string getInstanceName() 获取ckafka集群实例Name
- * @method void setInstanceName(string $InstanceName) 设置ckafka集群实例Name
- * @method array getVipList() 获取接入点 VIP 列表信息
- * @method void setVipList(array $VipList) 设置接入点 VIP 列表信息
- * @method string getVip() 获取虚拟IP
- * @method void setVip(string $Vip) 设置虚拟IP
- * @method string getVport() 获取虚拟端口
- * @method void setVport(string $Vport) 设置虚拟端口
- * @method integer getStatus() 获取实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
- * @method void setStatus(integer $Status) 设置实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
- * @method integer getBandwidth() 获取实例带宽，单位：Mbps
- * @method void setBandwidth(integer $Bandwidth) 设置实例带宽，单位：Mbps
- * @method integer getDiskSize() 获取实例的存储大小，单位：GB
- * @method void setDiskSize(integer $DiskSize) 设置实例的存储大小，单位：GB
- * @method integer getZoneId() 获取可用区
- * @method void setZoneId(integer $ZoneId) 设置可用区
- * @method string getVpcId() 获取VPC 的 ID，为空表示是基础网络
- * @method void setVpcId(string $VpcId) 设置VPC 的 ID，为空表示是基础网络
- * @method string getSubnetId() 获取子网 ID， 为空表示基础网络
- * @method void setSubnetId(string $SubnetId) 设置子网 ID， 为空表示基础网络
- * @method integer getHealthy() 获取实例健康状态， 1：健康，2：告警，3：异常
- * @method void setHealthy(integer $Healthy) 设置实例健康状态， 1：健康，2：告警，3：异常
- * @method string getHealthyMessage() 获取实例健康信息，当前会展示磁盘利用率，最大长度为256
- * @method void setHealthyMessage(string $HealthyMessage) 设置实例健康信息，当前会展示磁盘利用率，最大长度为256
- * @method integer getCreateTime() 获取创建时间
- * @method void setCreateTime(integer $CreateTime) 设置创建时间
- * @method integer getMsgRetentionTime() 获取消息保存时间,单位为分钟
- * @method void setMsgRetentionTime(integer $MsgRetentionTime) 设置消息保存时间,单位为分钟
- * @method InstanceConfigDO getConfig() 获取自动创建 Topic 配置， 若该字段为空，则表示未开启自动创建
- * @method void setConfig(InstanceConfigDO $Config) 设置自动创建 Topic 配置， 若该字段为空，则表示未开启自动创建
- * @method integer getRemainderPartitions() 获取剩余创建分区数
- * @method void setRemainderPartitions(integer $RemainderPartitions) 设置剩余创建分区数
- * @method integer getRemainderTopics() 获取剩余创建主题数
- * @method void setRemainderTopics(integer $RemainderTopics) 设置剩余创建主题数
- * @method integer getCreatedPartitions() 获取当前创建分区数
- * @method void setCreatedPartitions(integer $CreatedPartitions) 设置当前创建分区数
- * @method integer getCreatedTopics() 获取当前创建主题数
- * @method void setCreatedTopics(integer $CreatedTopics) 设置当前创建主题数
- * @method array getTags() 获取标签数组
- * @method void setTags(array $Tags) 设置标签数组
- * @method integer getExpireTime() 获取过期时间
- * @method void setExpireTime(integer $ExpireTime) 设置过期时间
- * @method array getZoneIds() 获取可用区列表
- * @method void setZoneIds(array $ZoneIds) 设置可用区列表
- * @method string getVersion() 获取ckafka集群实例版本
- * @method void setVersion(string $Version) 设置ckafka集群实例版本
- * @method integer getMaxGroupNum() 获取最大分组数
- * @method void setMaxGroupNum(integer $MaxGroupNum) 设置最大分组数
- * @method integer getCvm() 获取售卖类型,0:标准版,1:专业版
- * @method void setCvm(integer $Cvm) 设置售卖类型,0:标准版,1:专业版
- * @method string getInstanceType() 获取实例类型  枚举列表: 
-profession  :专业版    
-standards2  :标准版
-premium   :高级版
-serverless  :serverless版
- * @method void setInstanceType(string $InstanceType) 设置实例类型  枚举列表: 
-profession  :专业版    
-standards2  :标准版
-premium   :高级版
-serverless  :serverless版
- * @method array getFeatures() 获取表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
- * @method void setFeatures(array $Features) 设置表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
- * @method DynamicRetentionTime getRetentionTimeConfig() 获取动态消息保留策略
- * @method void setRetentionTimeConfig(DynamicRetentionTime $RetentionTimeConfig) 设置动态消息保留策略
- * @method integer getMaxConnection() 获取最大连接数
- * @method void setMaxConnection(integer $MaxConnection) 设置最大连接数
- * @method integer getPublicNetwork() 获取公网带宽
- * @method void setPublicNetwork(integer $PublicNetwork) 设置公网带宽
- * @method string getDeleteRouteTimestamp() 获取该字段已废弃,无实际含义
- * @method void setDeleteRouteTimestamp(string $DeleteRouteTimestamp) 设置该字段已废弃,无实际含义
- * @method integer getRemainingPartitions() 获取剩余创建分区数
- * @method void setRemainingPartitions(integer $RemainingPartitions) 设置剩余创建分区数
- * @method integer getRemainingTopics() 获取剩余创建主题数
- * @method void setRemainingTopics(integer $RemainingTopics) 设置剩余创建主题数
- * @method DynamicDiskConfig getDynamicDiskConfig() 获取动态硬盘扩容策略
- * @method void setDynamicDiskConfig(DynamicDiskConfig $DynamicDiskConfig) 设置动态硬盘扩容策略
- * @method string getSystemMaintenanceTime() 获取系统维护时间
- * @method void setSystemMaintenanceTime(string $SystemMaintenanceTime) 设置系统维护时间
- * @method integer getMaxMessageByte() 获取实例级别消息最大大小
- * @method void setMaxMessageByte(integer $MaxMessageByte) 设置实例级别消息最大大小
- * @method string getInstanceChargeType() 获取实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
- * @method integer getElasticBandwidthSwitch() 获取是否开启弹性带宽白名单   
-1:已开启弹性带宽白名单;
-0:未开启弹性带宽白名单;
- * @method void setElasticBandwidthSwitch(integer $ElasticBandwidthSwitch) 设置是否开启弹性带宽白名单   
-1:已开启弹性带宽白名单;
-0:未开启弹性带宽白名单;
- * @method integer getElasticBandwidthOpenStatus() 获取弹性带宽开通状态
-1:未开启弹性带宽;
-16: 开启弹性带宽中;
-32:开启弹性带宽成功;
-33:关闭弹性带宽中;
-34:关闭弹性带宽成功;
-64:开启弹性带宽失败;
-65:关闭弹性带宽失败;
- * @method void setElasticBandwidthOpenStatus(integer $ElasticBandwidthOpenStatus) 设置弹性带宽开通状态
-1:未开启弹性带宽;
-16: 开启弹性带宽中;
-32:开启弹性带宽成功;
-33:关闭弹性带宽中;
-34:关闭弹性带宽成功;
-64:开启弹性带宽失败;
-65:关闭弹性带宽失败;
- * @method string getClusterType() 获取集群类型  
-CLOUD_IDC IDC集群
-CLOUD_CVM_SHARE CVM共享集群
-CLOUD_CVM_YUNTI 云梯CVM集群
-CLOUD_CVM    CVM集群
-CLOUD_CDC CDC集群
-CLOUD_EKS_TSE EKS集群
- * @method void setClusterType(string $ClusterType) 设置集群类型  
-CLOUD_IDC IDC集群
-CLOUD_CVM_SHARE CVM共享集群
-CLOUD_CVM_YUNTI 云梯CVM集群
-CLOUD_CVM    CVM集群
-CLOUD_CDC CDC集群
-CLOUD_EKS_TSE EKS集群
- * @method integer getFreePartitionNumber() 获取免费分区数量
- * @method void setFreePartitionNumber(integer $FreePartitionNumber) 设置免费分区数量
- * @method integer getElasticFloatBandwidth() 获取弹性带宽上浮值
- * @method void setElasticFloatBandwidth(integer $ElasticFloatBandwidth) 设置弹性带宽上浮值
- * @method string getCustomCertId() 获取ssl自定义证书id  仅自定义证书实例集群返回
- * @method void setCustomCertId(string $CustomCertId) 设置ssl自定义证书id  仅自定义证书实例集群返回
- * @method integer getUncleanLeaderElectionEnable() 获取集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
- * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) 设置集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
- * @method integer getDeleteProtectionEnable() 获取实例删除保护开关: 1 开启 0 关闭
- * @method void setDeleteProtectionEnable(integer $DeleteProtectionEnable) 设置实例删除保护开关: 1 开启 0 关闭
+ * @method string getInstanceId() 获取<p>ckafka集群实例Id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>ckafka集群实例Id</p>
+ * @method string getInstanceName() 获取<p>ckafka集群实例Name</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>ckafka集群实例Name</p>
+ * @method array getVipList() 获取<p>接入点 VIP 列表信息</p>
+ * @method void setVipList(array $VipList) 设置<p>接入点 VIP 列表信息</p>
+ * @method string getVip() 获取<p>虚拟IP</p>
+ * @method void setVip(string $Vip) 设置<p>虚拟IP</p>
+ * @method string getVport() 获取<p>虚拟端口</p>
+ * @method void setVport(string $Vport) 设置<p>虚拟端口</p>
+ * @method integer getStatus() 获取<p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
+ * @method void setStatus(integer $Status) 设置<p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
+ * @method integer getBandwidth() 获取<p>实例带宽，单位：Mbps</p>
+ * @method void setBandwidth(integer $Bandwidth) 设置<p>实例带宽，单位：Mbps</p>
+ * @method integer getDiskSize() 获取<p>实例的存储大小，单位：GB</p>
+ * @method void setDiskSize(integer $DiskSize) 设置<p>实例的存储大小，单位：GB</p>
+ * @method integer getZoneId() 获取<p>可用区</p>
+ * @method void setZoneId(integer $ZoneId) 设置<p>可用区</p>
+ * @method string getVpcId() 获取<p>VPC 的 ID，为空表示是基础网络</p>
+ * @method void setVpcId(string $VpcId) 设置<p>VPC 的 ID，为空表示是基础网络</p>
+ * @method string getSubnetId() 获取<p>子网 ID， 为空表示基础网络</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网 ID， 为空表示基础网络</p>
+ * @method integer getHealthy() 获取<p>实例健康状态， 1：健康，2：告警，3：异常</p>
+ * @method void setHealthy(integer $Healthy) 设置<p>实例健康状态， 1：健康，2：告警，3：异常</p>
+ * @method string getHealthyMessage() 获取<p>实例健康信息，当前会展示磁盘利用率，最大长度为256</p>
+ * @method void setHealthyMessage(string $HealthyMessage) 设置<p>实例健康信息，当前会展示磁盘利用率，最大长度为256</p>
+ * @method integer getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(integer $CreateTime) 设置<p>创建时间</p>
+ * @method integer getMsgRetentionTime() 获取<p>消息保存时间,单位为分钟</p>
+ * @method void setMsgRetentionTime(integer $MsgRetentionTime) 设置<p>消息保存时间,单位为分钟</p>
+ * @method InstanceConfigDO getConfig() 获取<p>自动创建 Topic 配置， 若该字段为空，则表示未开启自动创建</p>
+ * @method void setConfig(InstanceConfigDO $Config) 设置<p>自动创建 Topic 配置， 若该字段为空，则表示未开启自动创建</p>
+ * @method integer getRemainderPartitions() 获取<p>剩余创建分区数</p>
+ * @method void setRemainderPartitions(integer $RemainderPartitions) 设置<p>剩余创建分区数</p>
+ * @method integer getRemainderTopics() 获取<p>剩余创建主题数</p>
+ * @method void setRemainderTopics(integer $RemainderTopics) 设置<p>剩余创建主题数</p>
+ * @method integer getCreatedPartitions() 获取<p>当前创建分区数</p>
+ * @method void setCreatedPartitions(integer $CreatedPartitions) 设置<p>当前创建分区数</p>
+ * @method integer getCreatedTopics() 获取<p>当前创建主题数</p>
+ * @method void setCreatedTopics(integer $CreatedTopics) 设置<p>当前创建主题数</p>
+ * @method array getTags() 获取<p>标签数组</p>
+ * @method void setTags(array $Tags) 设置<p>标签数组</p>
+ * @method integer getExpireTime() 获取<p>过期时间</p>
+ * @method void setExpireTime(integer $ExpireTime) 设置<p>过期时间</p>
+ * @method array getZoneIds() 获取<p>可用区列表</p>
+ * @method void setZoneIds(array $ZoneIds) 设置<p>可用区列表</p>
+ * @method string getVersion() 获取<p>ckafka集群实例版本</p>
+ * @method void setVersion(string $Version) 设置<p>ckafka集群实例版本</p>
+ * @method integer getMaxGroupNum() 获取<p>最大分组数</p>
+ * @method void setMaxGroupNum(integer $MaxGroupNum) 设置<p>最大分组数</p>
+ * @method integer getCvm() 获取<p>售卖类型,0:标准版,1:专业版</p>
+ * @method void setCvm(integer $Cvm) 设置<p>售卖类型,0:标准版,1:专业版</p>
+ * @method string getInstanceType() 获取<p>实例类型  枚举列表: profession  :专业版  <br />standards2  :标准版premium   :高级版serverless  :serverless版</p>
+ * @method void setInstanceType(string $InstanceType) 设置<p>实例类型  枚举列表: profession  :专业版  <br />standards2  :标准版premium   :高级版serverless  :serverless版</p>
+ * @method array getFeatures() 获取<p>表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。</p>
+ * @method void setFeatures(array $Features) 设置<p>表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。</p>
+ * @method DynamicRetentionTime getRetentionTimeConfig() 获取<p>动态消息保留策略</p>
+ * @method void setRetentionTimeConfig(DynamicRetentionTime $RetentionTimeConfig) 设置<p>动态消息保留策略</p>
+ * @method integer getMaxConnection() 获取<p>最大连接数</p>
+ * @method void setMaxConnection(integer $MaxConnection) 设置<p>最大连接数</p>
+ * @method integer getPublicNetwork() 获取<p>公网带宽</p>
+ * @method void setPublicNetwork(integer $PublicNetwork) 设置<p>公网带宽</p>
+ * @method string getDeleteRouteTimestamp() 获取<p>该字段已废弃,无实际含义</p>
+ * @method void setDeleteRouteTimestamp(string $DeleteRouteTimestamp) 设置<p>该字段已废弃,无实际含义</p>
+ * @method integer getRemainingPartitions() 获取<p>剩余创建分区数</p>
+ * @method void setRemainingPartitions(integer $RemainingPartitions) 设置<p>剩余创建分区数</p>
+ * @method integer getRemainingTopics() 获取<p>剩余创建主题数</p>
+ * @method void setRemainingTopics(integer $RemainingTopics) 设置<p>剩余创建主题数</p>
+ * @method DynamicDiskConfig getDynamicDiskConfig() 获取<p>动态硬盘扩容策略</p>
+ * @method void setDynamicDiskConfig(DynamicDiskConfig $DynamicDiskConfig) 设置<p>动态硬盘扩容策略</p>
+ * @method string getSystemMaintenanceTime() 获取<p>系统维护时间</p>
+ * @method void setSystemMaintenanceTime(string $SystemMaintenanceTime) 设置<p>系统维护时间</p>
+ * @method integer getMaxMessageByte() 获取<p>实例级别消息最大大小</p>
+ * @method void setMaxMessageByte(integer $MaxMessageByte) 设置<p>实例级别消息最大大小</p>
+ * @method string getInstanceChargeType() 获取<p>实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月</p>
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置<p>实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月</p>
+ * @method integer getElasticBandwidthSwitch() 获取<p>是否开启弹性带宽白名单 <br />1:已开启弹性带宽白名单;0:未开启弹性带宽白名单;</p>
+ * @method void setElasticBandwidthSwitch(integer $ElasticBandwidthSwitch) 设置<p>是否开启弹性带宽白名单 <br />1:已开启弹性带宽白名单;0:未开启弹性带宽白名单;</p>
+ * @method integer getElasticBandwidthOpenStatus() 获取<p>弹性带宽开通状态1:未开启弹性带宽;16: 开启弹性带宽中;32:开启弹性带宽成功;33:关闭弹性带宽中;34:关闭弹性带宽成功;64:开启弹性带宽失败;65:关闭弹性带宽失败;</p>
+ * @method void setElasticBandwidthOpenStatus(integer $ElasticBandwidthOpenStatus) 设置<p>弹性带宽开通状态1:未开启弹性带宽;16: 开启弹性带宽中;32:开启弹性带宽成功;33:关闭弹性带宽中;34:关闭弹性带宽成功;64:开启弹性带宽失败;65:关闭弹性带宽失败;</p>
+ * @method string getClusterType() 获取<p>集群类型<br />CLOUD_IDC IDC集群CLOUD_CVM_SHARE CVM共享集群CLOUD_CVM_YUNTI 云梯CVM集群CLOUD_CVM    CVM集群CLOUD_CDC CDC集群CLOUD_EKS_TSE EKS集群</p>
+ * @method void setClusterType(string $ClusterType) 设置<p>集群类型<br />CLOUD_IDC IDC集群CLOUD_CVM_SHARE CVM共享集群CLOUD_CVM_YUNTI 云梯CVM集群CLOUD_CVM    CVM集群CLOUD_CDC CDC集群CLOUD_EKS_TSE EKS集群</p>
+ * @method integer getFreePartitionNumber() 获取<p>免费分区数量</p>
+ * @method void setFreePartitionNumber(integer $FreePartitionNumber) 设置<p>免费分区数量</p>
+ * @method integer getElasticFloatBandwidth() 获取<p>弹性带宽上浮值</p>
+ * @method void setElasticFloatBandwidth(integer $ElasticFloatBandwidth) 设置<p>弹性带宽上浮值</p>
+ * @method string getCustomCertId() 获取<p>ssl自定义证书id  仅自定义证书实例集群返回</p>
+ * @method void setCustomCertId(string $CustomCertId) 设置<p>ssl自定义证书id  仅自定义证书实例集群返回</p>
+ * @method integer getUncleanLeaderElectionEnable() 获取<p>集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭</p>
+ * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) 设置<p>集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭</p>
+ * @method integer getDeleteProtectionEnable() 获取<p>实例删除保护开关: 1 开启 0 关闭</p>
+ * @method void setDeleteProtectionEnable(integer $DeleteProtectionEnable) 设置<p>实例删除保护开关: 1 开启 0 关闭</p>
  */
 class InstanceAttributesResponse extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string <p>ckafka集群实例Id</p>
      */
     public $InstanceId;
 
     /**
-     * @var string ckafka集群实例Name
+     * @var string <p>ckafka集群实例Name</p>
      */
     public $InstanceName;
 
     /**
-     * @var array 接入点 VIP 列表信息
+     * @var array <p>接入点 VIP 列表信息</p>
      */
     public $VipList;
 
     /**
-     * @var string 虚拟IP
+     * @var string <p>虚拟IP</p>
      */
     public $Vip;
 
     /**
-     * @var string 虚拟端口
+     * @var string <p>虚拟端口</p>
      */
     public $Vport;
 
     /**
-     * @var integer 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
+     * @var integer <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
      */
     public $Status;
 
     /**
-     * @var integer 实例带宽，单位：Mbps
+     * @var integer <p>实例带宽，单位：Mbps</p>
      */
     public $Bandwidth;
 
     /**
-     * @var integer 实例的存储大小，单位：GB
+     * @var integer <p>实例的存储大小，单位：GB</p>
      */
     public $DiskSize;
 
     /**
-     * @var integer 可用区
+     * @var integer <p>可用区</p>
      */
     public $ZoneId;
 
     /**
-     * @var string VPC 的 ID，为空表示是基础网络
+     * @var string <p>VPC 的 ID，为空表示是基础网络</p>
      */
     public $VpcId;
 
     /**
-     * @var string 子网 ID， 为空表示基础网络
+     * @var string <p>子网 ID， 为空表示基础网络</p>
      */
     public $SubnetId;
 
     /**
-     * @var integer 实例健康状态， 1：健康，2：告警，3：异常
+     * @var integer <p>实例健康状态， 1：健康，2：告警，3：异常</p>
      */
     public $Healthy;
 
     /**
-     * @var string 实例健康信息，当前会展示磁盘利用率，最大长度为256
+     * @var string <p>实例健康信息，当前会展示磁盘利用率，最大长度为256</p>
      */
     public $HealthyMessage;
 
     /**
-     * @var integer 创建时间
+     * @var integer <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer 消息保存时间,单位为分钟
+     * @var integer <p>消息保存时间,单位为分钟</p>
      */
     public $MsgRetentionTime;
 
     /**
-     * @var InstanceConfigDO 自动创建 Topic 配置， 若该字段为空，则表示未开启自动创建
+     * @var InstanceConfigDO <p>自动创建 Topic 配置， 若该字段为空，则表示未开启自动创建</p>
      */
     public $Config;
 
     /**
-     * @var integer 剩余创建分区数
+     * @var integer <p>剩余创建分区数</p>
      */
     public $RemainderPartitions;
 
     /**
-     * @var integer 剩余创建主题数
+     * @var integer <p>剩余创建主题数</p>
      */
     public $RemainderTopics;
 
     /**
-     * @var integer 当前创建分区数
+     * @var integer <p>当前创建分区数</p>
      */
     public $CreatedPartitions;
 
     /**
-     * @var integer 当前创建主题数
+     * @var integer <p>当前创建主题数</p>
      */
     public $CreatedTopics;
 
     /**
-     * @var array 标签数组
+     * @var array <p>标签数组</p>
      */
     public $Tags;
 
     /**
-     * @var integer 过期时间
+     * @var integer <p>过期时间</p>
      */
     public $ExpireTime;
 
     /**
-     * @var array 可用区列表
+     * @var array <p>可用区列表</p>
      */
     public $ZoneIds;
 
     /**
-     * @var string ckafka集群实例版本
+     * @var string <p>ckafka集群实例版本</p>
      */
     public $Version;
 
     /**
-     * @var integer 最大分组数
+     * @var integer <p>最大分组数</p>
      */
     public $MaxGroupNum;
 
     /**
-     * @var integer 售卖类型,0:标准版,1:专业版
+     * @var integer <p>售卖类型,0:标准版,1:专业版</p>
      */
     public $Cvm;
 
     /**
-     * @var string 实例类型  枚举列表: 
-profession  :专业版    
-standards2  :标准版
-premium   :高级版
-serverless  :serverless版
+     * @var string <p>实例类型  枚举列表: profession  :专业版  <br />standards2  :标准版premium   :高级版serverless  :serverless版</p>
      */
     public $InstanceType;
 
     /**
-     * @var array 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
+     * @var array <p>表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。</p>
      */
     public $Features;
 
     /**
-     * @var DynamicRetentionTime 动态消息保留策略
+     * @var DynamicRetentionTime <p>动态消息保留策略</p>
      */
     public $RetentionTimeConfig;
 
     /**
-     * @var integer 最大连接数
+     * @var integer <p>最大连接数</p>
      */
     public $MaxConnection;
 
     /**
-     * @var integer 公网带宽
+     * @var integer <p>公网带宽</p>
      */
     public $PublicNetwork;
 
     /**
-     * @var string 该字段已废弃,无实际含义
+     * @var string <p>该字段已废弃,无实际含义</p>
      */
     public $DeleteRouteTimestamp;
 
     /**
-     * @var integer 剩余创建分区数
+     * @var integer <p>剩余创建分区数</p>
      */
     public $RemainingPartitions;
 
     /**
-     * @var integer 剩余创建主题数
+     * @var integer <p>剩余创建主题数</p>
      */
     public $RemainingTopics;
 
     /**
-     * @var DynamicDiskConfig 动态硬盘扩容策略
+     * @var DynamicDiskConfig <p>动态硬盘扩容策略</p>
      */
     public $DynamicDiskConfig;
 
     /**
-     * @var string 系统维护时间
+     * @var string <p>系统维护时间</p>
      */
     public $SystemMaintenanceTime;
 
     /**
-     * @var integer 实例级别消息最大大小
+     * @var integer <p>实例级别消息最大大小</p>
      */
     public $MaxMessageByte;
 
     /**
-     * @var string 实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
+     * @var string <p>实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月</p>
      */
     public $InstanceChargeType;
 
     /**
-     * @var integer 是否开启弹性带宽白名单   
-1:已开启弹性带宽白名单;
-0:未开启弹性带宽白名单;
+     * @var integer <p>是否开启弹性带宽白名单 <br />1:已开启弹性带宽白名单;0:未开启弹性带宽白名单;</p>
      */
     public $ElasticBandwidthSwitch;
 
     /**
-     * @var integer 弹性带宽开通状态
-1:未开启弹性带宽;
-16: 开启弹性带宽中;
-32:开启弹性带宽成功;
-33:关闭弹性带宽中;
-34:关闭弹性带宽成功;
-64:开启弹性带宽失败;
-65:关闭弹性带宽失败;
+     * @var integer <p>弹性带宽开通状态1:未开启弹性带宽;16: 开启弹性带宽中;32:开启弹性带宽成功;33:关闭弹性带宽中;34:关闭弹性带宽成功;64:开启弹性带宽失败;65:关闭弹性带宽失败;</p>
      */
     public $ElasticBandwidthOpenStatus;
 
     /**
-     * @var string 集群类型  
-CLOUD_IDC IDC集群
-CLOUD_CVM_SHARE CVM共享集群
-CLOUD_CVM_YUNTI 云梯CVM集群
-CLOUD_CVM    CVM集群
-CLOUD_CDC CDC集群
-CLOUD_EKS_TSE EKS集群
+     * @var string <p>集群类型<br />CLOUD_IDC IDC集群CLOUD_CVM_SHARE CVM共享集群CLOUD_CVM_YUNTI 云梯CVM集群CLOUD_CVM    CVM集群CLOUD_CDC CDC集群CLOUD_EKS_TSE EKS集群</p>
      */
     public $ClusterType;
 
     /**
-     * @var integer 免费分区数量
+     * @var integer <p>免费分区数量</p>
      */
     public $FreePartitionNumber;
 
     /**
-     * @var integer 弹性带宽上浮值
+     * @var integer <p>弹性带宽上浮值</p>
      */
     public $ElasticFloatBandwidth;
 
     /**
-     * @var string ssl自定义证书id  仅自定义证书实例集群返回
+     * @var string <p>ssl自定义证书id  仅自定义证书实例集群返回</p>
      */
     public $CustomCertId;
 
     /**
-     * @var integer 集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
+     * @var integer <p>集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭</p>
      */
     public $UncleanLeaderElectionEnable;
 
     /**
-     * @var integer 实例删除保护开关: 1 开启 0 关闭
+     * @var integer <p>实例删除保护开关: 1 开启 0 关闭</p>
      */
     public $DeleteProtectionEnable;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
-     * @param string $InstanceName ckafka集群实例Name
-     * @param array $VipList 接入点 VIP 列表信息
-     * @param string $Vip 虚拟IP
-     * @param string $Vport 虚拟端口
-     * @param integer $Status 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
-     * @param integer $Bandwidth 实例带宽，单位：Mbps
-     * @param integer $DiskSize 实例的存储大小，单位：GB
-     * @param integer $ZoneId 可用区
-     * @param string $VpcId VPC 的 ID，为空表示是基础网络
-     * @param string $SubnetId 子网 ID， 为空表示基础网络
-     * @param integer $Healthy 实例健康状态， 1：健康，2：告警，3：异常
-     * @param string $HealthyMessage 实例健康信息，当前会展示磁盘利用率，最大长度为256
-     * @param integer $CreateTime 创建时间
-     * @param integer $MsgRetentionTime 消息保存时间,单位为分钟
-     * @param InstanceConfigDO $Config 自动创建 Topic 配置， 若该字段为空，则表示未开启自动创建
-     * @param integer $RemainderPartitions 剩余创建分区数
-     * @param integer $RemainderTopics 剩余创建主题数
-     * @param integer $CreatedPartitions 当前创建分区数
-     * @param integer $CreatedTopics 当前创建主题数
-     * @param array $Tags 标签数组
-     * @param integer $ExpireTime 过期时间
-     * @param array $ZoneIds 可用区列表
-     * @param string $Version ckafka集群实例版本
-     * @param integer $MaxGroupNum 最大分组数
-     * @param integer $Cvm 售卖类型,0:标准版,1:专业版
-     * @param string $InstanceType 实例类型  枚举列表: 
-profession  :专业版    
-standards2  :标准版
-premium   :高级版
-serverless  :serverless版
-     * @param array $Features 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
-     * @param DynamicRetentionTime $RetentionTimeConfig 动态消息保留策略
-     * @param integer $MaxConnection 最大连接数
-     * @param integer $PublicNetwork 公网带宽
-     * @param string $DeleteRouteTimestamp 该字段已废弃,无实际含义
-     * @param integer $RemainingPartitions 剩余创建分区数
-     * @param integer $RemainingTopics 剩余创建主题数
-     * @param DynamicDiskConfig $DynamicDiskConfig 动态硬盘扩容策略
-     * @param string $SystemMaintenanceTime 系统维护时间
-     * @param integer $MaxMessageByte 实例级别消息最大大小
-     * @param string $InstanceChargeType 实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
-     * @param integer $ElasticBandwidthSwitch 是否开启弹性带宽白名单   
-1:已开启弹性带宽白名单;
-0:未开启弹性带宽白名单;
-     * @param integer $ElasticBandwidthOpenStatus 弹性带宽开通状态
-1:未开启弹性带宽;
-16: 开启弹性带宽中;
-32:开启弹性带宽成功;
-33:关闭弹性带宽中;
-34:关闭弹性带宽成功;
-64:开启弹性带宽失败;
-65:关闭弹性带宽失败;
-     * @param string $ClusterType 集群类型  
-CLOUD_IDC IDC集群
-CLOUD_CVM_SHARE CVM共享集群
-CLOUD_CVM_YUNTI 云梯CVM集群
-CLOUD_CVM    CVM集群
-CLOUD_CDC CDC集群
-CLOUD_EKS_TSE EKS集群
-     * @param integer $FreePartitionNumber 免费分区数量
-     * @param integer $ElasticFloatBandwidth 弹性带宽上浮值
-     * @param string $CustomCertId ssl自定义证书id  仅自定义证书实例集群返回
-     * @param integer $UncleanLeaderElectionEnable 集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
-     * @param integer $DeleteProtectionEnable 实例删除保护开关: 1 开启 0 关闭
+     * @param string $InstanceId <p>ckafka集群实例Id</p>
+     * @param string $InstanceName <p>ckafka集群实例Name</p>
+     * @param array $VipList <p>接入点 VIP 列表信息</p>
+     * @param string $Vip <p>虚拟IP</p>
+     * @param string $Vport <p>虚拟端口</p>
+     * @param integer $Status <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
+     * @param integer $Bandwidth <p>实例带宽，单位：Mbps</p>
+     * @param integer $DiskSize <p>实例的存储大小，单位：GB</p>
+     * @param integer $ZoneId <p>可用区</p>
+     * @param string $VpcId <p>VPC 的 ID，为空表示是基础网络</p>
+     * @param string $SubnetId <p>子网 ID， 为空表示基础网络</p>
+     * @param integer $Healthy <p>实例健康状态， 1：健康，2：告警，3：异常</p>
+     * @param string $HealthyMessage <p>实例健康信息，当前会展示磁盘利用率，最大长度为256</p>
+     * @param integer $CreateTime <p>创建时间</p>
+     * @param integer $MsgRetentionTime <p>消息保存时间,单位为分钟</p>
+     * @param InstanceConfigDO $Config <p>自动创建 Topic 配置， 若该字段为空，则表示未开启自动创建</p>
+     * @param integer $RemainderPartitions <p>剩余创建分区数</p>
+     * @param integer $RemainderTopics <p>剩余创建主题数</p>
+     * @param integer $CreatedPartitions <p>当前创建分区数</p>
+     * @param integer $CreatedTopics <p>当前创建主题数</p>
+     * @param array $Tags <p>标签数组</p>
+     * @param integer $ExpireTime <p>过期时间</p>
+     * @param array $ZoneIds <p>可用区列表</p>
+     * @param string $Version <p>ckafka集群实例版本</p>
+     * @param integer $MaxGroupNum <p>最大分组数</p>
+     * @param integer $Cvm <p>售卖类型,0:标准版,1:专业版</p>
+     * @param string $InstanceType <p>实例类型  枚举列表: profession  :专业版  <br />standards2  :标准版premium   :高级版serverless  :serverless版</p>
+     * @param array $Features <p>表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。</p>
+     * @param DynamicRetentionTime $RetentionTimeConfig <p>动态消息保留策略</p>
+     * @param integer $MaxConnection <p>最大连接数</p>
+     * @param integer $PublicNetwork <p>公网带宽</p>
+     * @param string $DeleteRouteTimestamp <p>该字段已废弃,无实际含义</p>
+     * @param integer $RemainingPartitions <p>剩余创建分区数</p>
+     * @param integer $RemainingTopics <p>剩余创建主题数</p>
+     * @param DynamicDiskConfig $DynamicDiskConfig <p>动态硬盘扩容策略</p>
+     * @param string $SystemMaintenanceTime <p>系统维护时间</p>
+     * @param integer $MaxMessageByte <p>实例级别消息最大大小</p>
+     * @param string $InstanceChargeType <p>实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月</p>
+     * @param integer $ElasticBandwidthSwitch <p>是否开启弹性带宽白名单 <br />1:已开启弹性带宽白名单;0:未开启弹性带宽白名单;</p>
+     * @param integer $ElasticBandwidthOpenStatus <p>弹性带宽开通状态1:未开启弹性带宽;16: 开启弹性带宽中;32:开启弹性带宽成功;33:关闭弹性带宽中;34:关闭弹性带宽成功;64:开启弹性带宽失败;65:关闭弹性带宽失败;</p>
+     * @param string $ClusterType <p>集群类型<br />CLOUD_IDC IDC集群CLOUD_CVM_SHARE CVM共享集群CLOUD_CVM_YUNTI 云梯CVM集群CLOUD_CVM    CVM集群CLOUD_CDC CDC集群CLOUD_EKS_TSE EKS集群</p>
+     * @param integer $FreePartitionNumber <p>免费分区数量</p>
+     * @param integer $ElasticFloatBandwidth <p>弹性带宽上浮值</p>
+     * @param string $CustomCertId <p>ssl自定义证书id  仅自定义证书实例集群返回</p>
+     * @param integer $UncleanLeaderElectionEnable <p>集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭</p>
+     * @param integer $DeleteProtectionEnable <p>实例删除保护开关: 1 开启 0 关闭</p>
      */
     function __construct()
     {

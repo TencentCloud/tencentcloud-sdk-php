@@ -20,98 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAgentDealsByCache请求参数结构体
  *
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取限制数目 最大200
- * @method void setLimit(integer $Limit) 设置限制数目 最大200
- * @method string getCreatTimeRangeStart() 获取下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】
- * @method void setCreatTimeRangeStart(string $CreatTimeRangeStart) 设置下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】
- * @method string getCreatTimeRangeEnd() 获取下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】
- * @method void setCreatTimeRangeEnd(string $CreatTimeRangeEnd) 设置下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】
- * @method integer getOrder() 获取0:下单时间降序；其他：下单时间升序
- * @method void setOrder(integer $Order) 设置0:下单时间降序；其他：下单时间升序
- * @method integer getStatus() 获取子订单状态(1-待支付,2-已支付,3-发货中,4-已发货,5-发货失败,6-已退款,7-已取消,8-已过期,9-已失效,12-支付中,13-退款中,30-处理中)
-
-控制台订单状态为以上状态的组合：未支付(1) 处理中(2,3,5,12,13,30) 已取消(7) 交易成功(4) 已过期(8) 已退款(6) 订单错误(9)
- * @method void setStatus(integer $Status) 设置子订单状态(1-待支付,2-已支付,3-发货中,4-已发货,5-发货失败,6-已退款,7-已取消,8-已过期,9-已失效,12-支付中,13-退款中,30-处理中)
-
-控制台订单状态为以上状态的组合：未支付(1) 处理中(2,3,5,12,13,30) 已取消(7) 交易成功(4) 已过期(8) 已退款(6) 订单错误(9)
- * @method array getOwnerUins() 获取下单人账号ID列表
- * @method void setOwnerUins(array $OwnerUins) 设置下单人账号ID列表
- * @method array getDealNames() 获取子订单号列表
- * @method void setDealNames(array $DealNames) 设置子订单号列表
- * @method array getBigDealIds() 获取大订单号列表
- * @method void setBigDealIds(array $BigDealIds) 设置大订单号列表
- * @method integer getPayerMode() 获取支付方式，0：自付；1：代付
- * @method void setPayerMode(integer $PayerMode) 设置支付方式，0：自付；1：代付
+ * @method integer getOffset() 获取<p>偏移量</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量</p>
+ * @method integer getLimit() 获取<p>限制数目 最大200</p>
+ * @method void setLimit(integer $Limit) 设置<p>限制数目 最大200</p>
+ * @method string getCreatTimeRangeStart() 获取<p>下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】</p>
+ * @method void setCreatTimeRangeStart(string $CreatTimeRangeStart) 设置<p>下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】</p>
+ * @method string getCreatTimeRangeEnd() 获取<p>下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】</p>
+ * @method void setCreatTimeRangeEnd(string $CreatTimeRangeEnd) 设置<p>下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】</p>
+ * @method integer getOrder() 获取<p>0:下单时间降序；其他：下单时间升序</p>
+ * @method void setOrder(integer $Order) 设置<p>0:下单时间降序；其他：下单时间升序</p>
+ * @method integer getStatus() 获取<p>子订单状态(1-待支付,2-已支付,3-发货中,4-已发货,5-发货失败,6-已退款,7-已取消,8-已过期,9-已失效,12-支付中,13-退款中,30-处理中)</p><p>控制台订单状态为以上状态的组合：未支付(1) 处理中(2,3,5,12,13,30) 已取消(7) 交易成功(4) 已过期(8) 已退款(6) 订单错误(9)</p>
+ * @method void setStatus(integer $Status) 设置<p>子订单状态(1-待支付,2-已支付,3-发货中,4-已发货,5-发货失败,6-已退款,7-已取消,8-已过期,9-已失效,12-支付中,13-退款中,30-处理中)</p><p>控制台订单状态为以上状态的组合：未支付(1) 处理中(2,3,5,12,13,30) 已取消(7) 交易成功(4) 已过期(8) 已退款(6) 订单错误(9)</p>
+ * @method array getOwnerUins() 获取<p>下单人账号ID列表</p>
+ * @method void setOwnerUins(array $OwnerUins) 设置<p>下单人账号ID列表</p>
+ * @method array getDealNames() 获取<p>子订单号列表</p>
+ * @method void setDealNames(array $DealNames) 设置<p>子订单号列表</p>
+ * @method array getBigDealIds() 获取<p>大订单号列表</p>
+ * @method void setBigDealIds(array $BigDealIds) 设置<p>大订单号列表</p>
+ * @method integer getPayerMode() 获取<p>支付方式，0：自付；1：代付</p>
+ * @method void setPayerMode(integer $PayerMode) 设置<p>支付方式，0：自付；1：代付</p>
  */
 class DescribeAgentDealsByCacheRequest extends AbstractModel
 {
     /**
-     * @var integer 偏移量
+     * @var integer <p>偏移量</p>
      */
     public $Offset;
 
     /**
-     * @var integer 限制数目 最大200
+     * @var integer <p>限制数目 最大200</p>
      */
     public $Limit;
 
     /**
-     * @var string 下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】
+     * @var string <p>下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】</p>
      */
     public $CreatTimeRangeStart;
 
     /**
-     * @var string 下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】
+     * @var string <p>下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】</p>
      */
     public $CreatTimeRangeEnd;
 
     /**
-     * @var integer 0:下单时间降序；其他：下单时间升序
+     * @var integer <p>0:下单时间降序；其他：下单时间升序</p>
      */
     public $Order;
 
     /**
-     * @var integer 子订单状态(1-待支付,2-已支付,3-发货中,4-已发货,5-发货失败,6-已退款,7-已取消,8-已过期,9-已失效,12-支付中,13-退款中,30-处理中)
-
-控制台订单状态为以上状态的组合：未支付(1) 处理中(2,3,5,12,13,30) 已取消(7) 交易成功(4) 已过期(8) 已退款(6) 订单错误(9)
+     * @var integer <p>子订单状态(1-待支付,2-已支付,3-发货中,4-已发货,5-发货失败,6-已退款,7-已取消,8-已过期,9-已失效,12-支付中,13-退款中,30-处理中)</p><p>控制台订单状态为以上状态的组合：未支付(1) 处理中(2,3,5,12,13,30) 已取消(7) 交易成功(4) 已过期(8) 已退款(6) 订单错误(9)</p>
      */
     public $Status;
 
     /**
-     * @var array 下单人账号ID列表
+     * @var array <p>下单人账号ID列表</p>
      */
     public $OwnerUins;
 
     /**
-     * @var array 子订单号列表
+     * @var array <p>子订单号列表</p>
      */
     public $DealNames;
 
     /**
-     * @var array 大订单号列表
+     * @var array <p>大订单号列表</p>
      */
     public $BigDealIds;
 
     /**
-     * @var integer 支付方式，0：自付；1：代付
+     * @var integer <p>支付方式，0：自付；1：代付</p>
      */
     public $PayerMode;
 
     /**
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 限制数目 最大200
-     * @param string $CreatTimeRangeStart 下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】
-     * @param string $CreatTimeRangeEnd 下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】
-     * @param integer $Order 0:下单时间降序；其他：下单时间升序
-     * @param integer $Status 子订单状态(1-待支付,2-已支付,3-发货中,4-已发货,5-发货失败,6-已退款,7-已取消,8-已过期,9-已失效,12-支付中,13-退款中,30-处理中)
-
-控制台订单状态为以上状态的组合：未支付(1) 处理中(2,3,5,12,13,30) 已取消(7) 交易成功(4) 已过期(8) 已退款(6) 订单错误(9)
-     * @param array $OwnerUins 下单人账号ID列表
-     * @param array $DealNames 子订单号列表
-     * @param array $BigDealIds 大订单号列表
-     * @param integer $PayerMode 支付方式，0：自付；1：代付
+     * @param integer $Offset <p>偏移量</p>
+     * @param integer $Limit <p>限制数目 最大200</p>
+     * @param string $CreatTimeRangeStart <p>下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】</p>
+     * @param string $CreatTimeRangeEnd <p>下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】</p>
+     * @param integer $Order <p>0:下单时间降序；其他：下单时间升序</p>
+     * @param integer $Status <p>子订单状态(1-待支付,2-已支付,3-发货中,4-已发货,5-发货失败,6-已退款,7-已取消,8-已过期,9-已失效,12-支付中,13-退款中,30-处理中)</p><p>控制台订单状态为以上状态的组合：未支付(1) 处理中(2,3,5,12,13,30) 已取消(7) 交易成功(4) 已过期(8) 已退款(6) 订单错误(9)</p>
+     * @param array $OwnerUins <p>下单人账号ID列表</p>
+     * @param array $DealNames <p>子订单号列表</p>
+     * @param array $BigDealIds <p>大订单号列表</p>
+     * @param integer $PayerMode <p>支付方式，0：自付；1：代付</p>
      */
     function __construct()
     {

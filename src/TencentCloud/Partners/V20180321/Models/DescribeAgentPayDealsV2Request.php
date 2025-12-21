@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAgentPayDealsV2请求参数结构体
  *
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取限制数目 最大100
- * @method void setLimit(integer $Limit) 设置限制数目 最大100
- * @method string getCreatTimeRangeStart() 获取下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)
- * @method void setCreatTimeRangeStart(string $CreatTimeRangeStart) 设置下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)
- * @method string getCreatTimeRangeEnd() 获取下单时间范围终止点
- * @method void setCreatTimeRangeEnd(string $CreatTimeRangeEnd) 设置下单时间范围终止点
- * @method integer getOrder() 获取0:下单时间降序；其他：下单时间升序
- * @method void setOrder(integer $Order) 设置0:下单时间降序；其他：下单时间升序
- * @method integer getStatus() 获取订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
- * @method void setStatus(integer $Status) 设置订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
- * @method array getOwnerUins() 获取下单人账号ID列表
- * @method void setOwnerUins(array $OwnerUins) 设置下单人账号ID列表
- * @method array getDealNames() 获取子订单号列表
- * @method void setDealNames(array $DealNames) 设置子订单号列表
- * @method array getBigDealIds() 获取大订单号列表
- * @method void setBigDealIds(array $BigDealIds) 设置大订单号列表
+ * @method integer getOffset() 获取<p>偏移量</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量</p>
+ * @method integer getLimit() 获取<p>限制数目 最大100</p>
+ * @method void setLimit(integer $Limit) 设置<p>限制数目 最大100</p>
+ * @method string getCreatTimeRangeStart() 获取<p>下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)</p>
+ * @method void setCreatTimeRangeStart(string $CreatTimeRangeStart) 设置<p>下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)</p>
+ * @method string getCreatTimeRangeEnd() 获取<p>下单时间范围终止点</p>
+ * @method void setCreatTimeRangeEnd(string $CreatTimeRangeEnd) 设置<p>下单时间范围终止点</p>
+ * @method integer getOrder() 获取<p>0:下单时间降序；其他：下单时间升序</p>
+ * @method void setOrder(integer $Order) 设置<p>0:下单时间降序；其他：下单时间升序</p>
+ * @method integer getStatus() 获取<p>订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)</p>
+ * @method void setStatus(integer $Status) 设置<p>订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)</p>
+ * @method array getOwnerUins() 获取<p>下单人账号ID列表</p>
+ * @method void setOwnerUins(array $OwnerUins) 设置<p>下单人账号ID列表</p>
+ * @method array getDealNames() 获取<p>子订单号列表</p>
+ * @method void setDealNames(array $DealNames) 设置<p>子订单号列表</p>
+ * @method array getBigDealIds() 获取<p>大订单号列表</p>
+ * @method void setBigDealIds(array $BigDealIds) 设置<p>大订单号列表</p>
  */
 class DescribeAgentPayDealsV2Request extends AbstractModel
 {
     /**
-     * @var integer 偏移量
+     * @var integer <p>偏移量</p>
      */
     public $Offset;
 
     /**
-     * @var integer 限制数目 最大100
+     * @var integer <p>限制数目 最大100</p>
      */
     public $Limit;
 
     /**
-     * @var string 下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)
+     * @var string <p>下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)</p>
      */
     public $CreatTimeRangeStart;
 
     /**
-     * @var string 下单时间范围终止点
+     * @var string <p>下单时间范围终止点</p>
      */
     public $CreatTimeRangeEnd;
 
     /**
-     * @var integer 0:下单时间降序；其他：下单时间升序
+     * @var integer <p>0:下单时间降序；其他：下单时间升序</p>
      */
     public $Order;
 
     /**
-     * @var integer 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
+     * @var integer <p>订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)</p>
      */
     public $Status;
 
     /**
-     * @var array 下单人账号ID列表
+     * @var array <p>下单人账号ID列表</p>
      */
     public $OwnerUins;
 
     /**
-     * @var array 子订单号列表
+     * @var array <p>子订单号列表</p>
      */
     public $DealNames;
 
     /**
-     * @var array 大订单号列表
+     * @var array <p>大订单号列表</p>
      */
     public $BigDealIds;
 
     /**
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 限制数目 最大100
-     * @param string $CreatTimeRangeStart 下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)
-     * @param string $CreatTimeRangeEnd 下单时间范围终止点
-     * @param integer $Order 0:下单时间降序；其他：下单时间升序
-     * @param integer $Status 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
-     * @param array $OwnerUins 下单人账号ID列表
-     * @param array $DealNames 子订单号列表
-     * @param array $BigDealIds 大订单号列表
+     * @param integer $Offset <p>偏移量</p>
+     * @param integer $Limit <p>限制数目 最大100</p>
+     * @param string $CreatTimeRangeStart <p>下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)</p>
+     * @param string $CreatTimeRangeEnd <p>下单时间范围终止点</p>
+     * @param integer $Order <p>0:下单时间降序；其他：下单时间升序</p>
+     * @param integer $Status <p>订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)</p>
+     * @param array $OwnerUins <p>下单人账号ID列表</p>
+     * @param array $DealNames <p>子订单号列表</p>
+     * @param array $BigDealIds <p>大订单号列表</p>
      */
     function __construct()
     {

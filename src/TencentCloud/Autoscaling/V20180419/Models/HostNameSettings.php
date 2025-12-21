@@ -39,29 +39,25 @@ use TencentCloud\Common\AbstractModel;
 <li> UNIQUE，入参所填的 HostName 相当于主机名前缀，AS 和 CVM 会对其进行拓展，伸缩组中实例的 HostName 可以保证唯一。</li> 
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHostNameSuffix() 获取云服务器的主机名后缀。
-HostNameSettings的该入参非必选，未选时不设置主机名后缀。
-<li> 点号（.）和短横线（-）不能作为 HostNameSuffix 的首尾字符，不能连续使用。</li> 
+<li> 点号（.）和短横线（-）不能作为 HostNameSuffix 的尾字符，不能连续使用。</li> 
 <li> 不支持 Windows 实例。</li> 
 <li>其他类型（Linux 等）实例：字符长度为[1, 39]，且与 HostName 的长度和不能超过 41，允许支持多个点号，点之间为一段，每段允许字母（不限制大小写）、数字和短横线（-）组成。</li> 
-假设后缀名称为 suffix，原主机名为 test.0，最终主机名为 test.0.suffix。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostNameSuffix(string $HostNameSuffix) 设置云服务器的主机名后缀。
-HostNameSettings的该入参非必选，未选时不设置主机名后缀。
-<li> 点号（.）和短横线（-）不能作为 HostNameSuffix 的首尾字符，不能连续使用。</li> 
+<li> 点号（.）和短横线（-）不能作为 HostNameSuffix 的尾字符，不能连续使用。</li> 
 <li> 不支持 Windows 实例。</li> 
 <li>其他类型（Linux 等）实例：字符长度为[1, 39]，且与 HostName 的长度和不能超过 41，允许支持多个点号，点之间为一段，每段允许字母（不限制大小写）、数字和短横线（-）组成。</li> 
-假设后缀名称为 suffix，原主机名为 test.0，最终主机名为 test.0.suffix。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHostNameDelimiter() 获取云服务器的主机名分隔符。
-默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为主机名的分隔符。如果不设置，则默认采用点号（.）分隔符。
-通过分割符连接多段。
-
-假设原主机名为“product-as-host”，分隔符HostNameDelimiter为“-”，设置主机名后缀"suffix"，那么最终主机名为“product-as-host-suffix”。
- * @method void setHostNameDelimiter(string $HostNameDelimiter) 设置云服务器的主机名分隔符。
-默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为主机名的分隔符。如果不设置，则默认采用点号（.）分隔符。
-通过分割符连接多段。
-
-假设原主机名为“product-as-host”，分隔符HostNameDelimiter为“-”，设置主机名后缀"suffix"，那么最终主机名为“product-as-host-suffix”。
+ * @method string getHostNameDelimiter() 获取云服务器的主机名分隔符。默认的分隔符是点号（.），可选短横线（-）或空字符串。
+分隔符用于拼接主机名，递增序号，后缀。假设主机名为 testGpu4090 ，递增序号为 0007，后缀为 server：
+- 分隔符为英文点号（.），最终拼接为 testGpu4090.007.server
+- 分隔符为短横线（-），最终拼接为 testGpu4090-007-server
+- 分隔符为空字符串，最终拼接为 testGpu4090007server
+ * @method void setHostNameDelimiter(string $HostNameDelimiter) 设置云服务器的主机名分隔符。默认的分隔符是点号（.），可选短横线（-）或空字符串。
+分隔符用于拼接主机名，递增序号，后缀。假设主机名为 testGpu4090 ，递增序号为 0007，后缀为 server：
+- 分隔符为英文点号（.），最终拼接为 testGpu4090.007.server
+- 分隔符为短横线（-），最终拼接为 testGpu4090-007-server
+- 分隔符为空字符串，最终拼接为 testGpu4090007server
  */
 class HostNameSettings extends AbstractModel
 {
@@ -84,21 +80,19 @@ class HostNameSettings extends AbstractModel
 
     /**
      * @var string 云服务器的主机名后缀。
-HostNameSettings的该入参非必选，未选时不设置主机名后缀。
-<li> 点号（.）和短横线（-）不能作为 HostNameSuffix 的首尾字符，不能连续使用。</li> 
+<li> 点号（.）和短横线（-）不能作为 HostNameSuffix 的尾字符，不能连续使用。</li> 
 <li> 不支持 Windows 实例。</li> 
 <li>其他类型（Linux 等）实例：字符长度为[1, 39]，且与 HostName 的长度和不能超过 41，允许支持多个点号，点之间为一段，每段允许字母（不限制大小写）、数字和短横线（-）组成。</li> 
-假设后缀名称为 suffix，原主机名为 test.0，最终主机名为 test.0.suffix。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostNameSuffix;
 
     /**
-     * @var string 云服务器的主机名分隔符。
-默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为主机名的分隔符。如果不设置，则默认采用点号（.）分隔符。
-通过分割符连接多段。
-
-假设原主机名为“product-as-host”，分隔符HostNameDelimiter为“-”，设置主机名后缀"suffix"，那么最终主机名为“product-as-host-suffix”。
+     * @var string 云服务器的主机名分隔符。默认的分隔符是点号（.），可选短横线（-）或空字符串。
+分隔符用于拼接主机名，递增序号，后缀。假设主机名为 testGpu4090 ，递增序号为 0007，后缀为 server：
+- 分隔符为英文点号（.），最终拼接为 testGpu4090.007.server
+- 分隔符为短横线（-），最终拼接为 testGpu4090-007-server
+- 分隔符为空字符串，最终拼接为 testGpu4090007server
      */
     public $HostNameDelimiter;
 
@@ -113,17 +107,15 @@ HostNameSettings的该入参非必选，未选时不设置主机名后缀。
 <li> UNIQUE，入参所填的 HostName 相当于主机名前缀，AS 和 CVM 会对其进行拓展，伸缩组中实例的 HostName 可以保证唯一。</li> 
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostNameSuffix 云服务器的主机名后缀。
-HostNameSettings的该入参非必选，未选时不设置主机名后缀。
-<li> 点号（.）和短横线（-）不能作为 HostNameSuffix 的首尾字符，不能连续使用。</li> 
+<li> 点号（.）和短横线（-）不能作为 HostNameSuffix 的尾字符，不能连续使用。</li> 
 <li> 不支持 Windows 实例。</li> 
 <li>其他类型（Linux 等）实例：字符长度为[1, 39]，且与 HostName 的长度和不能超过 41，允许支持多个点号，点之间为一段，每段允许字母（不限制大小写）、数字和短横线（-）组成。</li> 
-假设后缀名称为 suffix，原主机名为 test.0，最终主机名为 test.0.suffix。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $HostNameDelimiter 云服务器的主机名分隔符。
-默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为主机名的分隔符。如果不设置，则默认采用点号（.）分隔符。
-通过分割符连接多段。
-
-假设原主机名为“product-as-host”，分隔符HostNameDelimiter为“-”，设置主机名后缀"suffix"，那么最终主机名为“product-as-host-suffix”。
+     * @param string $HostNameDelimiter 云服务器的主机名分隔符。默认的分隔符是点号（.），可选短横线（-）或空字符串。
+分隔符用于拼接主机名，递增序号，后缀。假设主机名为 testGpu4090 ，递增序号为 0007，后缀为 server：
+- 分隔符为英文点号（.），最终拼接为 testGpu4090.007.server
+- 分隔符为短横线（-），最终拼接为 testGpu4090-007-server
+- 分隔符为空字符串，最终拼接为 testGpu4090007server
      */
     function __construct()
     {

@@ -20,31 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCasterInputInfo返回参数结构体
  *
- * @method string getInputPlayUrl() 获取修改输入源后的预览地址。
-注：该地址仅作为预览使用，不可分发。
- * @method void setInputPlayUrl(string $InputPlayUrl) 设置修改输入源后的预览地址。
-注：该地址仅作为预览使用，不可分发。
- * @method string getInputWebRTCPlayUrl() 获取修改后的输入源webrtc预览地址。
-该地址需配合腾讯云快直播播放SDK使用。
-注：该地址仅做预览使用，不可分发。
- * @method void setInputWebRTCPlayUrl(string $InputWebRTCPlayUrl) 设置修改后的输入源webrtc预览地址。
-该地址需配合腾讯云快直播播放SDK使用。
-注：该地址仅做预览使用，不可分发。
+ * @method string getInputPlayUrl() 获取<p>修改输入源后的预览地址。注：该地址仅作为预览使用，不可分发。</p>
+ * @method void setInputPlayUrl(string $InputPlayUrl) 设置<p>修改输入源后的预览地址。注：该地址仅作为预览使用，不可分发。</p>
+ * @method string getInputWebRTCPlayUrl() 获取<p>修改后的输入源webrtc预览地址。该地址需配合腾讯云快直播播放SDK使用。注：该地址仅做预览使用，不可分发。</p>
+ * @method void setInputWebRTCPlayUrl(string $InputWebRTCPlayUrl) 设置<p>修改后的输入源webrtc预览地址。该地址需配合腾讯云快直播播放SDK使用。注：该地址仅做预览使用，不可分发。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyCasterInputInfoResponse extends AbstractModel
 {
     /**
-     * @var string 修改输入源后的预览地址。
-注：该地址仅作为预览使用，不可分发。
+     * @var string <p>修改输入源后的预览地址。注：该地址仅作为预览使用，不可分发。</p>
      */
     public $InputPlayUrl;
 
     /**
-     * @var string 修改后的输入源webrtc预览地址。
-该地址需配合腾讯云快直播播放SDK使用。
-注：该地址仅做预览使用，不可分发。
+     * @var string <p>修改后的输入源webrtc预览地址。该地址需配合腾讯云快直播播放SDK使用。注：该地址仅做预览使用，不可分发。</p>
      */
     public $InputWebRTCPlayUrl;
 
@@ -54,11 +45,8 @@ class ModifyCasterInputInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $InputPlayUrl 修改输入源后的预览地址。
-注：该地址仅作为预览使用，不可分发。
-     * @param string $InputWebRTCPlayUrl 修改后的输入源webrtc预览地址。
-该地址需配合腾讯云快直播播放SDK使用。
-注：该地址仅做预览使用，不可分发。
+     * @param string $InputPlayUrl <p>修改输入源后的预览地址。注：该地址仅作为预览使用，不可分发。</p>
+     * @param string $InputWebRTCPlayUrl <p>修改后的输入源webrtc预览地址。该地址需配合腾讯云快直播播放SDK使用。注：该地址仅做预览使用，不可分发。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

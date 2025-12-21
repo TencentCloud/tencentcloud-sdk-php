@@ -74,8 +74,8 @@ SPAM：封禁
  * @method void setRecordCountBegin(integer $RecordCountBegin) 设置要获取域名的记录数查询区间起点。
  * @method integer getRecordCountEnd() 获取要获取域名的记录数查询区间终点。
  * @method void setRecordCountEnd(integer $RecordCountEnd) 设置要获取域名的记录数查询区间终点。
- * @method integer getProjectId() 获取项目ID
- * @method void setProjectId(integer $ProjectId) 设置项目ID
+ * @method integer getProjectId() 获取项目ID，"帐号中心-项目管理"拿到项目ID
+ * @method void setProjectId(integer $ProjectId) 设置项目ID，"帐号中心-项目管理"拿到项目ID
  * @method array getTags() 获取标签过滤
  * @method void setTags(array $Tags) 设置标签过滤
  */
@@ -165,7 +165,7 @@ SPAM：封禁
     public $RecordCountEnd;
 
     /**
-     * @var integer 项目ID
+     * @var integer 项目ID，"帐号中心-项目管理"拿到项目ID
      */
     public $ProjectId;
 
@@ -202,7 +202,7 @@ SPAM：封禁
      * @param string $UpdatedAtEnd 要获取域名的更新时间终止时间点，如 '2021-05-10 20:00:00'。
      * @param integer $RecordCountBegin 要获取域名的记录数查询区间起点。
      * @param integer $RecordCountEnd 要获取域名的记录数查询区间终点。
-     * @param integer $ProjectId 项目ID
+     * @param integer $ProjectId 项目ID，"帐号中心-项目管理"拿到项目ID
      * @param array $Tags 标签过滤
      */
     function __construct()

@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 沙箱网络配置
  *
- * @method string getNetworkMode() 获取网络模式（当前支持 PUBLIC）
- * @method void setNetworkMode(string $NetworkMode) 设置网络模式（当前支持 PUBLIC）
+ * @method string getNetworkMode() 获取网络模式（当前支持 PUBLIC, VPC, SANDBOX）
+ * @method void setNetworkMode(string $NetworkMode) 设置网络模式（当前支持 PUBLIC, VPC, SANDBOX）
+ * @method VPCConfig getVpcConfig() 获取VPC网络相关配置
+ * @method void setVpcConfig(VPCConfig $VpcConfig) 设置VPC网络相关配置
  */
 class NetworkConfiguration extends AbstractModel
 {
     /**
-     * @var string 网络模式（当前支持 PUBLIC）
+     * @var string 网络模式（当前支持 PUBLIC, VPC, SANDBOX）
      */
     public $NetworkMode;
 
     /**
-     * @param string $NetworkMode 网络模式（当前支持 PUBLIC）
+     * @var VPCConfig VPC网络相关配置
+     */
+    public $VpcConfig;
+
+    /**
+     * @param string $NetworkMode 网络模式（当前支持 PUBLIC, VPC, SANDBOX）
+     * @param VPCConfig $VpcConfig VPC网络相关配置
      */
     function __construct()
     {
@@ -48,6 +56,11 @@ class NetworkConfiguration extends AbstractModel
         }
         if (array_key_exists("NetworkMode",$param) and $param["NetworkMode"] !== null) {
             $this->NetworkMode = $param["NetworkMode"];
+        }
+
+        if (array_key_exists("VpcConfig",$param) and $param["VpcConfig"] !== null) {
+            $this->VpcConfig = new VPCConfig();
+            $this->VpcConfig->deserialize($param["VpcConfig"]);
         }
     }
 }

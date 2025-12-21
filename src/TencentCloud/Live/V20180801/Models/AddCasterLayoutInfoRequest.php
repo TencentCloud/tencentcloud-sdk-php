@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddCasterLayoutInfo请求参数结构体
  *
- * @method integer getCasterId() 获取导播台ID
- * @method void setCasterId(integer $CasterId) 设置导播台ID
- * @method CasterLayoutInfo getLayoutInfo() 获取导播台布局参数信息。
- * @method void setLayoutInfo(CasterLayoutInfo $LayoutInfo) 设置导播台布局参数信息。
+ * @method integer getCasterId() 获取<p>导播台ID</p>
+ * @method void setCasterId(integer $CasterId) 设置<p>导播台ID</p>
+ * @method CasterLayoutInfo getLayoutInfo() 获取<p>导播台布局参数信息。</p>
+ * @method void setLayoutInfo(CasterLayoutInfo $LayoutInfo) 设置<p>导播台布局参数信息。</p>
  */
 class AddCasterLayoutInfoRequest extends AbstractModel
 {
     /**
-     * @var integer 导播台ID
+     * @var integer <p>导播台ID</p>
      */
     public $CasterId;
 
     /**
-     * @var CasterLayoutInfo 导播台布局参数信息。
+     * @var CasterLayoutInfo <p>导播台布局参数信息。</p>
      */
     public $LayoutInfo;
 
     /**
-     * @param integer $CasterId 导播台ID
-     * @param CasterLayoutInfo $LayoutInfo 导播台布局参数信息。
+     * @param integer $CasterId <p>导播台ID</p>
+     * @param CasterLayoutInfo $LayoutInfo <p>导播台布局参数信息。</p>
      */
     function __construct()
     {

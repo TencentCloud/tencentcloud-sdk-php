@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置域名的原始格式
  * @method string getStatus() 获取域名的状态，正常：ENABLE，暂停：PAUSE，封禁：SPAM
  * @method void setStatus(string $Status) 设置域名的状态，正常：ENABLE，暂停：PAUSE，封禁：SPAM
- * @method integer getTTL() 获取域名默认的解析记录默认TTL值
- * @method void setTTL(integer $TTL) 设置域名默认的解析记录默认TTL值
+ * @method integer getTTL() 获取域名默认的解析记录默认TTL值，单位：秒
+ * @method void setTTL(integer $TTL) 设置域名默认的解析记录默认TTL值，单位：秒
  * @method string getCNAMESpeedup() 获取是否开启CNAME加速，开启：ENABLE，未开启：DISABLE
  * @method void setCNAMESpeedup(string $CNAMESpeedup) 设置是否开启CNAME加速，开启：ENABLE，未开启：DISABLE
  * @method string getDNSStatus() 获取DNS 设置状态，错误：DNSERROR，正常：空字符串
@@ -87,7 +87,7 @@ class DomainListItem extends AbstractModel
     public $Status;
 
     /**
-     * @var integer 域名默认的解析记录默认TTL值
+     * @var integer 域名默认的解析记录默认TTL值，单位：秒
      */
     public $TTL;
 
@@ -191,7 +191,7 @@ class DomainListItem extends AbstractModel
      * @param integer $DomainId 系统分配给域名的唯一标识
      * @param string $Name 域名的原始格式
      * @param string $Status 域名的状态，正常：ENABLE，暂停：PAUSE，封禁：SPAM
-     * @param integer $TTL 域名默认的解析记录默认TTL值
+     * @param integer $TTL 域名默认的解析记录默认TTL值，单位：秒
      * @param string $CNAMESpeedup 是否开启CNAME加速，开启：ENABLE，未开启：DISABLE
      * @param string $DNSStatus DNS 设置状态，错误：DNSERROR，正常：空字符串
      * @param string $Grade 域名的套餐等级代码

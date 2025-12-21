@@ -62,6 +62,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\DeleteNamespaceResponse DeleteNamespace(Models\DeleteNamespaceRequest $req) 删除命名空间
  * @method Models\DeleteNamespacePersonalResponse DeleteNamespacePersonal(Models\DeleteNamespacePersonalRequest $req) 删除共享版命名空间
  * @method Models\DeleteReplicationInstanceResponse DeleteReplicationInstance(Models\DeleteReplicationInstanceRequest $req) 删除从实例
+ * @method Models\DeleteReplicationRuleResponse DeleteReplicationRule(Models\DeleteReplicationRuleRequest $req) 删除实例同步规则
  * @method Models\DeleteRepositoryResponse DeleteRepository(Models\DeleteRepositoryRequest $req) 删除镜像仓库
  * @method Models\DeleteRepositoryPersonalResponse DeleteRepositoryPersonal(Models\DeleteRepositoryPersonalRequest $req) 用于个人版镜像仓库中删除
  * @method Models\DeleteRepositoryTagsResponse DeleteRepositoryTags(Models\DeleteRepositoryTagsRequest $req) 用于企业版批量删除Repository Tag
@@ -99,6 +100,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\DescribeReplicationInstanceCreateTasksResponse DescribeReplicationInstanceCreateTasks(Models\DescribeReplicationInstanceCreateTasksRequest $req) 查询创建从实例任务状态
  * @method Models\DescribeReplicationInstanceSyncStatusResponse DescribeReplicationInstanceSyncStatus(Models\DescribeReplicationInstanceSyncStatusRequest $req) 查询从实例同步状态
  * @method Models\DescribeReplicationInstancesResponse DescribeReplicationInstances(Models\DescribeReplicationInstancesRequest $req) 查询从实例列表
+ * @method Models\DescribeReplicationPoliciesResponse DescribeReplicationPolicies(Models\DescribeReplicationPoliciesRequest $req) 获取实例同步规则列表
  * @method Models\DescribeRepositoriesResponse DescribeRepositories(Models\DescribeRepositoriesRequest $req) 查询镜像仓库列表或指定镜像仓库信息
  * @method Models\DescribeRepositoryFilterPersonalResponse DescribeRepositoryFilterPersonal(Models\DescribeRepositoryFilterPersonalRequest $req) 用于在个人版镜像仓库中，获取满足输入搜索条件的用户镜像仓库
  * @method Models\DescribeRepositoryOwnerPersonalResponse DescribeRepositoryOwnerPersonal(Models\DescribeRepositoryOwnerPersonalRequest $req) 用于在个人版中获取用户全部的镜像仓库列表

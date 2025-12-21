@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置标签规格，为沙箱工具绑定标签，支持多种资源类型的标签绑定
  * @method string getClientToken() 获取幂等性 Token，长度不超过 64 字符
  * @method void setClientToken(string $ClientToken) 设置幂等性 Token，长度不超过 64 字符
+ * @method string getRoleArn() 获取角色ARN
+ * @method void setRoleArn(string $RoleArn) 设置角色ARN
+ * @method array getStorageMounts() 获取沙箱工具存储配置
+ * @method void setStorageMounts(array $StorageMounts) 设置沙箱工具存储配置
  */
 class CreateSandboxToolRequest extends AbstractModel
 {
@@ -73,6 +77,16 @@ class CreateSandboxToolRequest extends AbstractModel
     public $ClientToken;
 
     /**
+     * @var string 角色ARN
+     */
+    public $RoleArn;
+
+    /**
+     * @var array 沙箱工具存储配置
+     */
+    public $StorageMounts;
+
+    /**
      * @param string $ToolName 沙箱工具名称，长度 1-50 字符，支持英文、数字、下划线和连接线。同一 AppId 下沙箱工具名称必须唯一
      * @param string $ToolType 沙箱工具类型，目前支持：browser、code-interpreter
      * @param NetworkConfiguration $NetworkConfiguration 网络配置
@@ -80,6 +94,8 @@ class CreateSandboxToolRequest extends AbstractModel
      * @param string $DefaultTimeout 默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时
      * @param array $Tags 标签规格，为沙箱工具绑定标签，支持多种资源类型的标签绑定
      * @param string $ClientToken 幂等性 Token，长度不超过 64 字符
+     * @param string $RoleArn 角色ARN
+     * @param array $StorageMounts 沙箱工具存储配置
      */
     function __construct()
     {
@@ -126,6 +142,19 @@ class CreateSandboxToolRequest extends AbstractModel
 
         if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
             $this->ClientToken = $param["ClientToken"];
+        }
+
+        if (array_key_exists("RoleArn",$param) and $param["RoleArn"] !== null) {
+            $this->RoleArn = $param["RoleArn"];
+        }
+
+        if (array_key_exists("StorageMounts",$param) and $param["StorageMounts"] !== null) {
+            $this->StorageMounts = [];
+            foreach ($param["StorageMounts"] as $key => $value){
+                $obj = new StorageMount();
+                $obj->deserialize($value);
+                array_push($this->StorageMounts, $obj);
+            }
         }
     }
 }

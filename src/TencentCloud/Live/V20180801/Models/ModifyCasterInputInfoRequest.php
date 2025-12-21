@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCasterInputInfo请求参数结构体
  *
- * @method integer getCasterId() 获取导播台ID。
- * @method void setCasterId(integer $CasterId) 设置导播台ID。
- * @method CasterInputInfo getInputInfo() 获取修改的导播台输入源信息
- * @method void setInputInfo(CasterInputInfo $InputInfo) 设置修改的导播台输入源信息
+ * @method integer getCasterId() 获取<p>导播台ID。</p>
+ * @method void setCasterId(integer $CasterId) 设置<p>导播台ID。</p>
+ * @method CasterInputInfo getInputInfo() 获取<p>修改的导播台输入源信息</p>
+ * @method void setInputInfo(CasterInputInfo $InputInfo) 设置<p>修改的导播台输入源信息</p>
  */
 class ModifyCasterInputInfoRequest extends AbstractModel
 {
     /**
-     * @var integer 导播台ID。
+     * @var integer <p>导播台ID。</p>
      */
     public $CasterId;
 
     /**
-     * @var CasterInputInfo 修改的导播台输入源信息
+     * @var CasterInputInfo <p>修改的导播台输入源信息</p>
      */
     public $InputInfo;
 
     /**
-     * @param integer $CasterId 导播台ID。
-     * @param CasterInputInfo $InputInfo 修改的导播台输入源信息
+     * @param integer $CasterId <p>导播台ID。</p>
+     * @param CasterInputInfo $InputInfo <p>修改的导播台输入源信息</p>
      */
     function __construct()
     {

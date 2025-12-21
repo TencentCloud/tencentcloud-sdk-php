@@ -27,23 +27,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getConfigPath() 获取配置项日志路径
  * @method void setConfigPath(string $ConfigPath) 设置配置项日志路径
  * @method string getConfigDesc() 获取配置项描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigDesc(string $ConfigDesc) 设置配置项描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfigTags() 获取配置项标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigTags(string $ConfigTags) 设置配置项标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfigPipeline() 获取配置项对应的ES管道
  * @method void setConfigPipeline(string $ConfigPipeline) 设置配置项对应的ES管道
  * @method string getConfigCreateTime() 获取配置项创建时间，格式为yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigCreateTime(string $ConfigCreateTime) 设置配置项创建时间，格式为yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfigUpdateTime() 获取配置项更新时间，格式为yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigUpdateTime(string $ConfigUpdateTime) 设置配置项更新时间，格式为yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BusinessLogConfigSchema getConfigSchema() 获取配置项解析规则
  * @method void setConfigSchema(BusinessLogConfigSchema $ConfigSchema) 设置配置项解析规则
  * @method array getConfigAssociatedGroups() 获取配置项关联部署组
@@ -64,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilebeatCloseInactive(integer $FilebeatCloseInactive) 设置filebeat close_inactive参数
  * @method integer getFilebeatCleanInactive() 获取filebeat clean_inactive参数
  * @method void setFilebeatCleanInactive(integer $FilebeatCleanInactive) 设置filebeat clean_inactive参数
+ * @method boolean getCustomMultilinePattern() 获取是否开启自定义pattern
+ * @method void setCustomMultilinePattern(boolean $CustomMultilinePattern) 设置是否开启自定义pattern
  */
 class BusinessLogConfig extends AbstractModel
 {
@@ -84,13 +78,11 @@ class BusinessLogConfig extends AbstractModel
 
     /**
      * @var string 配置项描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigDesc;
 
     /**
      * @var string 配置项标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigTags;
 
@@ -101,13 +93,11 @@ class BusinessLogConfig extends AbstractModel
 
     /**
      * @var string 配置项创建时间，格式为yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigCreateTime;
 
     /**
      * @var string 配置项更新时间，格式为yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigUpdateTime;
 
@@ -159,18 +149,19 @@ class BusinessLogConfig extends AbstractModel
     public $FilebeatCleanInactive;
 
     /**
+     * @var boolean 是否开启自定义pattern
+     */
+    public $CustomMultilinePattern;
+
+    /**
      * @param string $ConfigId 配置项ID
      * @param string $ConfigName 配置项名称
      * @param string $ConfigPath 配置项日志路径
      * @param string $ConfigDesc 配置项描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigTags 配置项标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigPipeline 配置项对应的ES管道
      * @param string $ConfigCreateTime 配置项创建时间，格式为yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigUpdateTime 配置项更新时间，格式为yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessLogConfigSchema $ConfigSchema 配置项解析规则
      * @param array $ConfigAssociatedGroups 配置项关联部署组
 注意：此字段可能返回 null，表示取不到有效值。
@@ -181,6 +172,7 @@ class BusinessLogConfig extends AbstractModel
      * @param integer $FilebeatHarvesterLimit filebeat harvester_limit参数
      * @param integer $FilebeatCloseInactive filebeat close_inactive参数
      * @param integer $FilebeatCleanInactive filebeat clean_inactive参数
+     * @param boolean $CustomMultilinePattern 是否开启自定义pattern
      */
     function __construct()
     {
@@ -272,6 +264,10 @@ class BusinessLogConfig extends AbstractModel
 
         if (array_key_exists("FilebeatCleanInactive",$param) and $param["FilebeatCleanInactive"] !== null) {
             $this->FilebeatCleanInactive = $param["FilebeatCleanInactive"];
+        }
+
+        if (array_key_exists("CustomMultilinePattern",$param) and $param["CustomMultilinePattern"] !== null) {
+            $this->CustomMultilinePattern = $param["CustomMultilinePattern"];
         }
     }
 }

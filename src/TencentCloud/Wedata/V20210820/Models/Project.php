@@ -86,6 +86,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkspaceExt(array $WorkspaceExt) 设置项目扩展信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCreateTimestamp() 获取创建时间时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTimestamp(integer $CreateTimestamp) 设置创建时间时间戳
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Project extends AbstractModel
 {
@@ -191,6 +195,12 @@ class Project extends AbstractModel
     public $WorkspaceExt;
 
     /**
+     * @var integer 创建时间时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTimestamp;
+
+    /**
      * @param string $TenantId 项目的所在租户ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 项目id
@@ -223,6 +233,8 @@ class Project extends AbstractModel
      * @param BaseUser $Owner 项目负责人
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WorkspaceExt 项目扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CreateTimestamp 创建时间时间戳
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -322,6 +334,10 @@ class Project extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->WorkspaceExt, $obj);
             }
+        }
+
+        if (array_key_exists("CreateTimestamp",$param) and $param["CreateTimestamp"] !== null) {
+            $this->CreateTimestamp = $param["CreateTimestamp"];
         }
     }
 }

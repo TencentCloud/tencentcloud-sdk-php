@@ -27,21 +27,21 @@ use TencentCloud\Common\AbstractModel;
 最多支持200个 utf-8 字符。
 文生3D, ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
  * @method string getImageBase64() 获取输入图 Base64 数据。
-大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
-格式：jpg，png，jpeg，webp。
-ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
+大小: 单边分辨率要求不小于128，不大于5000，大小≤6m (因base64编码后会大30%左右)
+格式: jpg，png，jpeg，webp.
+lmageBase64、lmageUr和 Prompt必填其一，且Prompt和lmageBase64/mageUr不能同时存在。
  * @method void setImageBase64(string $ImageBase64) 设置输入图 Base64 数据。
-大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
-格式：jpg，png，jpeg，webp。
-ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
- * @method string getImageUrl() 获取输入图Url。
-大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
-格式：jpg，png，jpeg，webp。
-ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
- * @method void setImageUrl(string $ImageUrl) 设置输入图Url。
-大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
-格式：jpg，png，jpeg，webp。
-ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
+大小: 单边分辨率要求不小于128，不大于5000，大小≤6m (因base64编码后会大30%左右)
+格式: jpg，png，jpeg，webp.
+lmageBase64、lmageUr和 Prompt必填其一，且Prompt和lmageBase64/mageUr不能同时存在。
+ * @method string getImageUrl() 获取输入图Url
+大小: 单边分辨率要求不小于128，不大于5000，大小≤8m
+格式: jpg，png，jpeg，webp.
+lmageBase64、lmageUr和 Prompt必填其一，且Prompt和lmageBase64/mageUr不能同时存在。
+ * @method void setImageUrl(string $ImageUrl) 设置输入图Url
+大小: 单边分辨率要求不小于128，不大于5000，大小≤8m
+格式: jpg，png，jpeg，webp.
+lmageBase64、lmageUr和 Prompt必填其一，且Prompt和lmageBase64/mageUr不能同时存在。
  * @method string getResultFormat() 获取生成模型的格式，仅限制生成一种格式。
 生成模型文件组默认返回obj格式。
 可选值：OBJ，GLB，STL，USDZ，FBX，MP4。
@@ -64,17 +64,17 @@ class SubmitHunyuanTo3DRapidJobRequest extends AbstractModel
 
     /**
      * @var string 输入图 Base64 数据。
-大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
-格式：jpg，png，jpeg，webp。
-ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
+大小: 单边分辨率要求不小于128，不大于5000，大小≤6m (因base64编码后会大30%左右)
+格式: jpg，png，jpeg，webp.
+lmageBase64、lmageUr和 Prompt必填其一，且Prompt和lmageBase64/mageUr不能同时存在。
      */
     public $ImageBase64;
 
     /**
-     * @var string 输入图Url。
-大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
-格式：jpg，png，jpeg，webp。
-ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
+     * @var string 输入图Url
+大小: 单边分辨率要求不小于128，不大于5000，大小≤8m
+格式: jpg，png，jpeg，webp.
+lmageBase64、lmageUr和 Prompt必填其一，且Prompt和lmageBase64/mageUr不能同时存在。
      */
     public $ImageUrl;
 
@@ -100,13 +100,13 @@ ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl�
 最多支持200个 utf-8 字符。
 文生3D, ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
      * @param string $ImageBase64 输入图 Base64 数据。
-大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
-格式：jpg，png，jpeg，webp。
-ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
-     * @param string $ImageUrl 输入图Url。
-大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
-格式：jpg，png，jpeg，webp。
-ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
+大小: 单边分辨率要求不小于128，不大于5000，大小≤6m (因base64编码后会大30%左右)
+格式: jpg，png，jpeg，webp.
+lmageBase64、lmageUr和 Prompt必填其一，且Prompt和lmageBase64/mageUr不能同时存在。
+     * @param string $ImageUrl 输入图Url
+大小: 单边分辨率要求不小于128，不大于5000，大小≤8m
+格式: jpg，png，jpeg，webp.
+lmageBase64、lmageUr和 Prompt必填其一，且Prompt和lmageBase64/mageUr不能同时存在。
      * @param string $ResultFormat 生成模型的格式，仅限制生成一种格式。
 生成模型文件组默认返回obj格式。
 可选值：OBJ，GLB，STL，USDZ，FBX，MP4。

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 0-不限制，或使用TypeFilters过滤；
 1-备份恢复（包括周期备份和一次性备份）；
 2-数据迁移（包括跨集群迁移和cos迁移）
+ * @method array getEncryptionFilters() 获取0-未加密；1-已加密
+ * @method void setEncryptionFilters(array $EncryptionFilters) 设置0-未加密；1-已加密
  */
 class DescribeBackUpSchedulesRequest extends AbstractModel
 {
@@ -40,10 +42,16 @@ class DescribeBackUpSchedulesRequest extends AbstractModel
     public $ApplicationType;
 
     /**
+     * @var array 0-未加密；1-已加密
+     */
+    public $EncryptionFilters;
+
+    /**
      * @param integer $ApplicationType 任务类型
 0-不限制，或使用TypeFilters过滤；
 1-备份恢复（包括周期备份和一次性备份）；
 2-数据迁移（包括跨集群迁移和cos迁移）
+     * @param array $EncryptionFilters 0-未加密；1-已加密
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeBackUpSchedulesRequest extends AbstractModel
         }
         if (array_key_exists("ApplicationType",$param) and $param["ApplicationType"] !== null) {
             $this->ApplicationType = $param["ApplicationType"];
+        }
+
+        if (array_key_exists("EncryptionFilters",$param) and $param["EncryptionFilters"] !== null) {
+            $this->EncryptionFilters = $param["EncryptionFilters"];
         }
     }
 }

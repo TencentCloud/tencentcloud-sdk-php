@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置结束时间
  * @method string getJobIdFiltersStr() 获取jobid的string类型
  * @method void setJobIdFiltersStr(string $JobIdFiltersStr) 设置jobid的string类型
+ * @method array getEncryptionFilters() 获取0-未加密；1-已加密
+ * @method void setEncryptionFilters(array $EncryptionFilters) 设置0-未加密；1-已加密
  */
 class DescribeBackUpJobRequest extends AbstractModel
 {
@@ -82,6 +84,11 @@ class DescribeBackUpJobRequest extends AbstractModel
     public $JobIdFiltersStr;
 
     /**
+     * @var array 0-未加密；1-已加密
+     */
+    public $EncryptionFilters;
+
+    /**
      * @param string $InstanceId 集群id
      * @param integer $ApplicationType 任务类型：
 0-不限制，或使用TypeFilters过滤；
@@ -92,6 +99,7 @@ class DescribeBackUpJobRequest extends AbstractModel
      * @param string $BeginTime 开始时间
      * @param string $EndTime 结束时间
      * @param string $JobIdFiltersStr jobid的string类型
+     * @param array $EncryptionFilters 0-未加密；1-已加密
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class DescribeBackUpJobRequest extends AbstractModel
 
         if (array_key_exists("JobIdFiltersStr",$param) and $param["JobIdFiltersStr"] !== null) {
             $this->JobIdFiltersStr = $param["JobIdFiltersStr"];
+        }
+
+        if (array_key_exists("EncryptionFilters",$param) and $param["EncryptionFilters"] !== null) {
+            $this->EncryptionFilters = $param["EncryptionFilters"];
         }
     }
 }

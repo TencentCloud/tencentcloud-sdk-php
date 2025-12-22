@@ -82,6 +82,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatePeriodInfo(UpdatePeriodInfo $UpdatePeriodInfo) 设置文档更新频率
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCateBizIdPath() 获取从根节点开始的路径分类ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCateBizIdPath(array $CateBizIdPath) 设置从根节点开始的路径分类ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCateNamePath() 获取从根节点开始的路径分类名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCateNamePath(array $CateNamePath) 设置从根节点开始的路径分类名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEnableScope() 获取文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+ * @method void setEnableScope(integer $EnableScope) 设置文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -231,6 +241,23 @@ class DescribeDocResponse extends AbstractModel
     public $UpdatePeriodInfo;
 
     /**
+     * @var array 从根节点开始的路径分类ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CateBizIdPath;
+
+    /**
+     * @var array 从根节点开始的路径分类名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CateNamePath;
+
+    /**
+     * @var integer 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     */
+    public $EnableScope;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -267,6 +294,11 @@ class DescribeDocResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatePeriodInfo $UpdatePeriodInfo 文档更新频率
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CateBizIdPath 从根节点开始的路径分类ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CateNamePath 从根节点开始的路径分类名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EnableScope 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -398,6 +430,18 @@ class DescribeDocResponse extends AbstractModel
         if (array_key_exists("UpdatePeriodInfo",$param) and $param["UpdatePeriodInfo"] !== null) {
             $this->UpdatePeriodInfo = new UpdatePeriodInfo();
             $this->UpdatePeriodInfo->deserialize($param["UpdatePeriodInfo"]);
+        }
+
+        if (array_key_exists("CateBizIdPath",$param) and $param["CateBizIdPath"] !== null) {
+            $this->CateBizIdPath = $param["CateBizIdPath"];
+        }
+
+        if (array_key_exists("CateNamePath",$param) and $param["CateNamePath"] !== null) {
+            $this->CateNamePath = $param["CateNamePath"];
+        }
+
+        if (array_key_exists("EnableScope",$param) and $param["EnableScope"] !== null) {
+            $this->EnableScope = $param["EnableScope"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

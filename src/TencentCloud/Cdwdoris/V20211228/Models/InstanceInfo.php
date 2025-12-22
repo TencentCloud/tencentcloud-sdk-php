@@ -152,6 +152,12 @@ Changing  变更中
  * @method void setCosPkgCapacity(integer $CosPkgCapacity) 设置Cos容量包大小
  * @method boolean getUseManagedBucket() 获取集群是否使用托管桶
  * @method void setUseManagedBucket(boolean $UseManagedBucket) 设置集群是否使用托管桶
+ * @method string getInstanceType() 获取集群类型
+ * @method void setInstanceType(string $InstanceType) 设置集群类型
+ * @method string getMasterInstance() 获取对应主集群
+ * @method void setMasterInstance(string $MasterInstance) 设置对应主集群
+ * @method array getSlaveInstances() 获取对应备集群
+ * @method void setSlaveInstances(array $SlaveInstances) 设置对应备集群
  */
 class InstanceInfo extends AbstractModel
 {
@@ -451,6 +457,21 @@ Changing  变更中
     public $UseManagedBucket;
 
     /**
+     * @var string 集群类型
+     */
+    public $InstanceType;
+
+    /**
+     * @var string 对应主集群
+     */
+    public $MasterInstance;
+
+    /**
+     * @var array 对应备集群
+     */
+    public $SlaveInstances;
+
+    /**
      * @param string $InstanceId 集群实例ID, "cdwdoris-xxxx" 字符串类型
      * @param string $InstanceName 集群实例名称
      * @param string $Status 状态,
@@ -517,6 +538,9 @@ Changing  变更中
      * @param boolean $IsMasterNonVM 存算分离的指标 当是true 不支持新建计算组
      * @param integer $CosPkgCapacity Cos容量包大小
      * @param boolean $UseManagedBucket 集群是否使用托管桶
+     * @param string $InstanceType 集群类型
+     * @param string $MasterInstance 对应主集群
+     * @param array $SlaveInstances 对应备集群
      */
     function __construct()
     {
@@ -766,6 +790,18 @@ Changing  变更中
 
         if (array_key_exists("UseManagedBucket",$param) and $param["UseManagedBucket"] !== null) {
             $this->UseManagedBucket = $param["UseManagedBucket"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("MasterInstance",$param) and $param["MasterInstance"] !== null) {
+            $this->MasterInstance = $param["MasterInstance"];
+        }
+
+        if (array_key_exists("SlaveInstances",$param) and $param["SlaveInstances"] !== null) {
+            $this->SlaveInstances = $param["SlaveInstances"];
         }
     }
 }

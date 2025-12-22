@@ -88,6 +88,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCdwUserName(string $CdwUserName) 设置cdw账号（用于展示）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCreateTimestamp() 获取创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTimestamp(integer $CreateTimestamp) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUpdateTimestamp() 获取修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdateTimestamp(integer $UpdateTimestamp) 设置修改时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BaseClusterInfo extends AbstractModel
 {
@@ -194,6 +202,18 @@ class BaseClusterInfo extends AbstractModel
     public $CdwUserName;
 
     /**
+     * @var integer 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTimestamp;
+
+    /**
+     * @var integer 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdateTimestamp;
+
+    /**
      * @param string $ClusterId 集群id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterType 集群类型，EMR/CDW等
@@ -227,6 +247,10 @@ class BaseClusterInfo extends AbstractModel
      * @param string $RangerUserName ranger账号名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CdwUserName cdw账号（用于展示）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CreateTimestamp 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UpdateTimestamp 修改时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -308,6 +332,14 @@ class BaseClusterInfo extends AbstractModel
 
         if (array_key_exists("CdwUserName",$param) and $param["CdwUserName"] !== null) {
             $this->CdwUserName = $param["CdwUserName"];
+        }
+
+        if (array_key_exists("CreateTimestamp",$param) and $param["CreateTimestamp"] !== null) {
+            $this->CreateTimestamp = $param["CreateTimestamp"];
+        }
+
+        if (array_key_exists("UpdateTimestamp",$param) and $param["UpdateTimestamp"] !== null) {
+            $this->UpdateTimestamp = $param["UpdateTimestamp"];
         }
     }
 }

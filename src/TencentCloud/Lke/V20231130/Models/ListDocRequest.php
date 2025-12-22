@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListDoc请求参数结构体
  *
- * @method string getBotBizId() 获取应用ID
- * @method void setBotBizId(string $BotBizId) 设置应用ID
- * @method integer getPageNumber() 获取页码
- * @method void setPageNumber(integer $PageNumber) 设置页码
- * @method integer getPageSize() 获取每页数量
- * @method void setPageSize(integer $PageSize) 设置每页数量
+ * @method string getBotBizId() 获取应用ID, 获取方式参看 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+ * @method void setBotBizId(string $BotBizId) 设置应用ID, 获取方式参看 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+ * @method integer getPageNumber() 获取页码(必须大于0)
+ * @method void setPageNumber(integer $PageNumber) 设置页码(必须大于0)
+ * @method integer getPageSize() 获取每页数量(取值范围1-200)
+ * @method void setPageSize(integer $PageSize) 设置每页数量(取值范围1-200)
  * @method string getQuery() 获取查询内容
 
 输入特定标识 lke:system:untagged  将查询所有未关联标签的文档
@@ -36,29 +36,31 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(array $Status) 设置文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10-待发布  11-发布中  12-已发布  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复
  * @method string getQueryType() 获取查询类型 filename 文档、 attribute 标签
  * @method void setQueryType(string $QueryType) 设置查询类型 filename 文档、 attribute 标签
- * @method string getCateBizId() 获取分类ID
- * @method void setCateBizId(string $CateBizId) 设置分类ID
+ * @method string getCateBizId() 获取分类ID, 调用接口[ListDocCate](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListDocCate)获取
+ * @method void setCateBizId(string $CateBizId) 设置分类ID, 调用接口[ListDocCate](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListDocCate)获取
  * @method array getFileTypes() 获取文件类型分类筛选
  * @method void setFileTypes(array $FileTypes) 设置文件类型分类筛选
  * @method array getFilterFlag() 获取文档列表筛选标识位
  * @method void setFilterFlag(array $FilterFlag) 设置文档列表筛选标识位
  * @method integer getShowCurrCate() 获取是否只展示当前分类的数据 0不是，1是
  * @method void setShowCurrCate(integer $ShowCurrCate) 设置是否只展示当前分类的数据 0不是，1是
+ * @method integer getEnableScope() 获取文档生效域；不检索默认为0
+ * @method void setEnableScope(integer $EnableScope) 设置文档生效域；不检索默认为0
  */
 class ListDocRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string 应用ID, 获取方式参看 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public $BotBizId;
 
     /**
-     * @var integer 页码
+     * @var integer 页码(必须大于0)
      */
     public $PageNumber;
 
     /**
-     * @var integer 每页数量
+     * @var integer 每页数量(取值范围1-200)
      */
     public $PageSize;
 
@@ -80,7 +82,7 @@ class ListDocRequest extends AbstractModel
     public $QueryType;
 
     /**
-     * @var string 分类ID
+     * @var string 分类ID, 调用接口[ListDocCate](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListDocCate)获取
      */
     public $CateBizId;
 
@@ -100,18 +102,24 @@ class ListDocRequest extends AbstractModel
     public $ShowCurrCate;
 
     /**
-     * @param string $BotBizId 应用ID
-     * @param integer $PageNumber 页码
-     * @param integer $PageSize 每页数量
+     * @var integer 文档生效域；不检索默认为0
+     */
+    public $EnableScope;
+
+    /**
+     * @param string $BotBizId 应用ID, 获取方式参看 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+     * @param integer $PageNumber 页码(必须大于0)
+     * @param integer $PageSize 每页数量(取值范围1-200)
      * @param string $Query 查询内容
 
 输入特定标识 lke:system:untagged  将查询所有未关联标签的文档
      * @param array $Status 文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10-待发布  11-发布中  12-已发布  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复
      * @param string $QueryType 查询类型 filename 文档、 attribute 标签
-     * @param string $CateBizId 分类ID
+     * @param string $CateBizId 分类ID, 调用接口[ListDocCate](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListDocCate)获取
      * @param array $FileTypes 文件类型分类筛选
      * @param array $FilterFlag 文档列表筛选标识位
      * @param integer $ShowCurrCate 是否只展示当前分类的数据 0不是，1是
+     * @param integer $EnableScope 文档生效域；不检索默认为0
      */
     function __construct()
     {
@@ -169,6 +177,10 @@ class ListDocRequest extends AbstractModel
 
         if (array_key_exists("ShowCurrCate",$param) and $param["ShowCurrCate"] !== null) {
             $this->ShowCurrCate = $param["ShowCurrCate"];
+        }
+
+        if (array_key_exists("EnableScope",$param) and $param["EnableScope"] !== null) {
+            $this->EnableScope = $param["EnableScope"];
         }
     }
 }

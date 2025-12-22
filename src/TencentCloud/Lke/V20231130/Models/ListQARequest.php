@@ -21,11 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * ListQA请求参数结构体
  *
  * @method string getBotBizId() 获取应用ID
+若要操作共享知识库，传KnowledgeBizId
  * @method void setBotBizId(string $BotBizId) 设置应用ID
- * @method integer getPageNumber() 获取页码
- * @method void setPageNumber(integer $PageNumber) 设置页码
- * @method integer getPageSize() 获取每页大小
- * @method void setPageSize(integer $PageSize) 设置每页大小
+若要操作共享知识库，传KnowledgeBizId
+ * @method integer getPageNumber() 获取页码（取值范围>0）
+ * @method void setPageNumber(integer $PageNumber) 设置页码（取值范围>0）
+ * @method integer getPageSize() 获取每页大小(取值范围1-200)
+ * @method void setPageSize(integer $PageSize) 设置每页大小(取值范围1-200)
  * @method string getQuery() 获取查询问题
 
 输入特定标识 lke:system:untagged  将查询所有未关联标签的问答
@@ -33,13 +35,19 @@ use TencentCloud\Common\AbstractModel;
 
 输入特定标识 lke:system:untagged  将查询所有未关联标签的问答
  * @method array getAcceptStatus() 获取校验状态(1未校验2采纳3不采纳)
+如果不填默认值为空数组，表示不筛选，返回所有状态
  * @method void setAcceptStatus(array $AcceptStatus) 设置校验状态(1未校验2采纳3不采纳)
+如果不填默认值为空数组，表示不筛选，返回所有状态
  * @method array getReleaseStatus() 获取发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
+如果不填默认值为空数组，表示不筛选返回所有状态
  * @method void setReleaseStatus(array $ReleaseStatus) 设置发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
+如果不填默认值为空数组，表示不筛选返回所有状态
  * @method string getDocBizId() 获取文档ID
  * @method void setDocBizId(string $DocBizId) 设置文档ID
  * @method integer getSource() 获取来源(1 文档生成 2 批量导入 3 手动添加)
+不填默认值为0，表示不过滤，返回所有状态
  * @method void setSource(integer $Source) 设置来源(1 文档生成 2 批量导入 3 手动添加)
+不填默认值为0，表示不过滤，返回所有状态
  * @method string getQueryAnswer() 获取查询答案
  * @method void setQueryAnswer(string $QueryAnswer) 设置查询答案
  * @method string getCateBizId() 获取分类ID
@@ -47,24 +55,29 @@ use TencentCloud\Common\AbstractModel;
  * @method array getQaBizIds() 获取QA业务ID列表
  * @method void setQaBizIds(array $QaBizIds) 设置QA业务ID列表
  * @method string getQueryType() 获取查询类型 filename 名称、 attribute 标签
+如果不填默认值为"filename"
  * @method void setQueryType(string $QueryType) 设置查询类型 filename 名称、 attribute 标签
+如果不填默认值为"filename"
  * @method integer getShowCurrCate() 获取是否只展示当前分类的数据 0不是，1是
  * @method void setShowCurrCate(integer $ShowCurrCate) 设置是否只展示当前分类的数据 0不是，1是
+ * @method integer getEnableScope() 获取// 知识生效作用域枚举值 enum RetrievalEnableScope {   ENABLE_SCOPE_TYPE_UNKNOWN = 0; // 未知类型   ENABLE_SCOPE_TYPE_NONE = 1; // 停用   ENABLE_SCOPE_TYPE_DEV = 2; // 仅开发域   ENABLE_SCOPE_TYPE_RELEASE = 3; // 仅发布域   ENABLE_SCOPE_TYPE_ALL = 4; // 全域 }  问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+ * @method void setEnableScope(integer $EnableScope) 设置// 知识生效作用域枚举值 enum RetrievalEnableScope {   ENABLE_SCOPE_TYPE_UNKNOWN = 0; // 未知类型   ENABLE_SCOPE_TYPE_NONE = 1; // 停用   ENABLE_SCOPE_TYPE_DEV = 2; // 仅开发域   ENABLE_SCOPE_TYPE_RELEASE = 3; // 仅发布域   ENABLE_SCOPE_TYPE_ALL = 4; // 全域 }  问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
  */
 class ListQARequest extends AbstractModel
 {
     /**
      * @var string 应用ID
+若要操作共享知识库，传KnowledgeBizId
      */
     public $BotBizId;
 
     /**
-     * @var integer 页码
+     * @var integer 页码（取值范围>0）
      */
     public $PageNumber;
 
     /**
-     * @var integer 每页大小
+     * @var integer 每页大小(取值范围1-200)
      */
     public $PageSize;
 
@@ -77,11 +90,13 @@ class ListQARequest extends AbstractModel
 
     /**
      * @var array 校验状态(1未校验2采纳3不采纳)
+如果不填默认值为空数组，表示不筛选，返回所有状态
      */
     public $AcceptStatus;
 
     /**
      * @var array 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
+如果不填默认值为空数组，表示不筛选返回所有状态
      */
     public $ReleaseStatus;
 
@@ -92,6 +107,7 @@ class ListQARequest extends AbstractModel
 
     /**
      * @var integer 来源(1 文档生成 2 批量导入 3 手动添加)
+不填默认值为0，表示不过滤，返回所有状态
      */
     public $Source;
 
@@ -112,6 +128,7 @@ class ListQARequest extends AbstractModel
 
     /**
      * @var string 查询类型 filename 名称、 attribute 标签
+如果不填默认值为"filename"
      */
     public $QueryType;
 
@@ -121,21 +138,32 @@ class ListQARequest extends AbstractModel
     public $ShowCurrCate;
 
     /**
+     * @var integer // 知识生效作用域枚举值 enum RetrievalEnableScope {   ENABLE_SCOPE_TYPE_UNKNOWN = 0; // 未知类型   ENABLE_SCOPE_TYPE_NONE = 1; // 停用   ENABLE_SCOPE_TYPE_DEV = 2; // 仅开发域   ENABLE_SCOPE_TYPE_RELEASE = 3; // 仅发布域   ENABLE_SCOPE_TYPE_ALL = 4; // 全域 }  问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     */
+    public $EnableScope;
+
+    /**
      * @param string $BotBizId 应用ID
-     * @param integer $PageNumber 页码
-     * @param integer $PageSize 每页大小
+若要操作共享知识库，传KnowledgeBizId
+     * @param integer $PageNumber 页码（取值范围>0）
+     * @param integer $PageSize 每页大小(取值范围1-200)
      * @param string $Query 查询问题
 
 输入特定标识 lke:system:untagged  将查询所有未关联标签的问答
      * @param array $AcceptStatus 校验状态(1未校验2采纳3不采纳)
+如果不填默认值为空数组，表示不筛选，返回所有状态
      * @param array $ReleaseStatus 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
+如果不填默认值为空数组，表示不筛选返回所有状态
      * @param string $DocBizId 文档ID
      * @param integer $Source 来源(1 文档生成 2 批量导入 3 手动添加)
+不填默认值为0，表示不过滤，返回所有状态
      * @param string $QueryAnswer 查询答案
      * @param string $CateBizId 分类ID
      * @param array $QaBizIds QA业务ID列表
      * @param string $QueryType 查询类型 filename 名称、 attribute 标签
+如果不填默认值为"filename"
      * @param integer $ShowCurrCate 是否只展示当前分类的数据 0不是，1是
+     * @param integer $EnableScope // 知识生效作用域枚举值 enum RetrievalEnableScope {   ENABLE_SCOPE_TYPE_UNKNOWN = 0; // 未知类型   ENABLE_SCOPE_TYPE_NONE = 1; // 停用   ENABLE_SCOPE_TYPE_DEV = 2; // 仅开发域   ENABLE_SCOPE_TYPE_RELEASE = 3; // 仅发布域   ENABLE_SCOPE_TYPE_ALL = 4; // 全域 }  问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
      */
     function __construct()
     {
@@ -200,6 +228,10 @@ class ListQARequest extends AbstractModel
 
         if (array_key_exists("ShowCurrCate",$param) and $param["ShowCurrCate"] !== null) {
             $this->ShowCurrCate = $param["ShowCurrCate"];
+        }
+
+        if (array_key_exists("EnableScope",$param) and $param["EnableScope"] !== null) {
+            $this->EnableScope = $param["EnableScope"];
         }
     }
 }

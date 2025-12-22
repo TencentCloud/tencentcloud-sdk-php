@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChatId(string $ChatId) 设置会话Id
  * @method string getStreamingId() 获取流ID
  * @method void setStreamingId(string $StreamingId) 设置流ID
- * @method string getBeginStreamingTokenId() 获取开始拉取的流式TokenID。0表示从该流最早的TokenID开始获取
- * @method void setBeginStreamingTokenId(string $BeginStreamingTokenId) 设置开始拉取的流式TokenID。0表示从该流最早的TokenID开始获取
+ * @method integer getBeginStreamingTokenId() 获取开始拉取的流式TokenID。0表示从该流最早的TokenID开始获取
+ * @method void setBeginStreamingTokenId(integer $BeginStreamingTokenId) 设置开始拉取的流式TokenID。0表示从该流最早的TokenID开始获取
  * @method integer getTokenLimit() 获取单次获取的token数量，默认2000
  * @method void setTokenLimit(integer $TokenLimit) 设置单次获取的token数量，默认2000
  */
@@ -49,7 +49,7 @@ class DescribeChatDetailRequest extends AbstractModel
     public $StreamingId;
 
     /**
-     * @var string 开始拉取的流式TokenID。0表示从该流最早的TokenID开始获取
+     * @var integer 开始拉取的流式TokenID。0表示从该流最早的TokenID开始获取
      */
     public $BeginStreamingTokenId;
 
@@ -62,7 +62,7 @@ class DescribeChatDetailRequest extends AbstractModel
      * @param string $InstanceId 智能体ID
      * @param string $ChatId 会话Id
      * @param string $StreamingId 流ID
-     * @param string $BeginStreamingTokenId 开始拉取的流式TokenID。0表示从该流最早的TokenID开始获取
+     * @param integer $BeginStreamingTokenId 开始拉取的流式TokenID。0表示从该流最早的TokenID开始获取
      * @param integer $TokenLimit 单次获取的token数量，默认2000
      */
     function __construct()

@@ -46,6 +46,16 @@ use TencentCloud\Common\AbstractModel;
 注：目前该功能暂不支持，请勿使用。
  * @method void setPreprocessOperation(MediaPreprocessOperation $PreprocessOperation) 设置预处理操作。
 注：目前该功能暂不支持，请勿使用。
+ * @method string getMuteSwitch() 获取静音开关，仅对视频类型媒体生效。取值有：
+<li>ON：视频媒体开启静音，该段媒体在导出中会屏蔽音频；</li>
+<li>OFF：视频媒体关闭静音；</li>
+
+注：默认为 OFF，即不对视频媒体的音频做静音处理。
+ * @method void setMuteSwitch(string $MuteSwitch) 设置静音开关，仅对视频类型媒体生效。取值有：
+<li>ON：视频媒体开启静音，该段媒体在导出中会屏蔽音频；</li>
+<li>OFF：视频媒体关闭静音；</li>
+
+注：默认为 OFF，即不对视频媒体的音频做静音处理。
  */
 class MediaReplacementInfo extends AbstractModel
 {
@@ -83,6 +93,15 @@ class MediaReplacementInfo extends AbstractModel
     public $PreprocessOperation;
 
     /**
+     * @var string 静音开关，仅对视频类型媒体生效。取值有：
+<li>ON：视频媒体开启静音，该段媒体在导出中会屏蔽音频；</li>
+<li>OFF：视频媒体关闭静音；</li>
+
+注：默认为 OFF，即不对视频媒体的音频做静音处理。
+     */
+    public $MuteSwitch;
+
+    /**
      * @param string $MediaType 替换的媒体类型，取值有：
 <li>CMEMaterialId：替换的媒体类型为媒体 ID；</li>
 <li>ImageUrl：替换的媒体类型为图片 URL；</li>
@@ -96,6 +115,11 @@ class MediaReplacementInfo extends AbstractModel
      * @param float $StartTimeOffset 替换媒体选取的开始时间，单位为秒，默认为 0。
      * @param MediaPreprocessOperation $PreprocessOperation 预处理操作。
 注：目前该功能暂不支持，请勿使用。
+     * @param string $MuteSwitch 静音开关，仅对视频类型媒体生效。取值有：
+<li>ON：视频媒体开启静音，该段媒体在导出中会屏蔽音频；</li>
+<li>OFF：视频媒体关闭静音；</li>
+
+注：默认为 OFF，即不对视频媒体的音频做静音处理。
      */
     function __construct()
     {
@@ -129,6 +153,10 @@ class MediaReplacementInfo extends AbstractModel
         if (array_key_exists("PreprocessOperation",$param) and $param["PreprocessOperation"] !== null) {
             $this->PreprocessOperation = new MediaPreprocessOperation();
             $this->PreprocessOperation->deserialize($param["PreprocessOperation"]);
+        }
+
+        if (array_key_exists("MuteSwitch",$param) and $param["MuteSwitch"] !== null) {
+            $this->MuteSwitch = $param["MuteSwitch"];
         }
     }
 }

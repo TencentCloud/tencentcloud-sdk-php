@@ -25,9 +25,9 @@ use TencentCloud\Ai3d\V20250513\Models as Models;
 /**
  * @method Models\Convert3DFormatResponse Convert3DFormat(Models\Convert3DFormatRequest $req) 输入3D模型文件后，可进行3D模型文件格式转换。
  * @method Models\DescribeHunyuanTo3DUVJobResponse DescribeHunyuanTo3DUVJob(Models\DescribeHunyuanTo3DUVJobRequest $req) 查询组件拆分任务。
- * @method Models\DescribeReduceFaceJobResponse DescribeReduceFaceJob(Models\DescribeReduceFaceJobRequest $req) 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
+ * @method Models\DescribeReduceFaceJobResponse DescribeReduceFaceJob(Models\DescribeReduceFaceJobRequest $req) 混元生3D接口，采用 Polygon 1.5模型，输入3D 高模后，可生成布线规整，较低面数的3D 模型。
 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
- * @method Models\DescribeTextureTo3DJobResponse DescribeTextureTo3DJob(Models\DescribeTextureTo3DJobRequest $req) 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
+ * @method Models\DescribeTextureTo3DJobResponse DescribeTextureTo3DJob(Models\DescribeTextureTo3DJobRequest $req) 混元生3D接口，输入单几何模型和参考图或文字描述后，可生成对应的纹理贴图。
 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
  * @method Models\QueryHunyuan3DPartJobResponse QueryHunyuan3DPartJob(Models\QueryHunyuan3DPartJobRequest $req) 查询组件生成任务。
  * @method Models\QueryHunyuanTo3DProJobResponse QueryHunyuanTo3DProJob(Models\QueryHunyuanTo3DProJobRequest $req) 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
@@ -40,9 +40,9 @@ use TencentCloud\Ai3d\V20250513\Models as Models;
  * @method Models\SubmitHunyuanTo3DRapidJobResponse SubmitHunyuanTo3DRapidJob(Models\SubmitHunyuanTo3DRapidJobRequest $req) 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
  * @method Models\SubmitHunyuanTo3DUVJobResponse SubmitHunyuanTo3DUVJob(Models\SubmitHunyuanTo3DUVJobRequest $req) 输入模型后，可根据模型纹理进行UV展开，输出对应UV贴图。
- * @method Models\SubmitReduceFaceJobResponse SubmitReduceFaceJob(Models\SubmitReduceFaceJobRequest $req) 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
+ * @method Models\SubmitReduceFaceJobResponse SubmitReduceFaceJob(Models\SubmitReduceFaceJobRequest $req) 混元生3D接口，采用 Polygon 1.5模型，输入3D 高模后，可生成布线规整，较低面数的3D 模型。
 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
- * @method Models\SubmitTextureTo3DJobResponse SubmitTextureTo3DJob(Models\SubmitTextureTo3DJobRequest $req) 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
+ * @method Models\SubmitTextureTo3DJobResponse SubmitTextureTo3DJob(Models\SubmitTextureTo3DJobRequest $req) 混元生3D接口，输入单几何模型和参考图或文字描述后，可生成对应的纹理贴图。
 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
  */
 

@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRIp(string $RIp) 设置rip
  * @method string getVirtualZone() 获取虚拟可用区
  * @method void setVirtualZone(string $VirtualZone) 设置虚拟可用区
+ * @method boolean getHasFDB() 获取是否有fdb
+ * @method void setHasFDB(boolean $HasFDB) 设置是否有fdb
  */
 class NodeInfos extends AbstractModel
 {
@@ -108,6 +110,11 @@ class NodeInfos extends AbstractModel
     public $VirtualZone;
 
     /**
+     * @var boolean 是否有fdb
+     */
+    public $HasFDB;
+
+    /**
      * @param string $NodeName 节点名称
      * @param integer $Status 节点状态
      * @param string $Ip 节点ip
@@ -120,6 +127,7 @@ class NodeInfos extends AbstractModel
      * @param string $ComputeGroupId 计算组id
      * @param string $RIp rip
      * @param string $VirtualZone 虚拟可用区
+     * @param boolean $HasFDB 是否有fdb
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class NodeInfos extends AbstractModel
 
         if (array_key_exists("VirtualZone",$param) and $param["VirtualZone"] !== null) {
             $this->VirtualZone = $param["VirtualZone"];
+        }
+
+        if (array_key_exists("HasFDB",$param) and $param["HasFDB"] !== null) {
+            $this->HasFDB = $param["HasFDB"];
         }
     }
 }

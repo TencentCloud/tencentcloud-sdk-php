@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackUpSchedules返回参数结构体
  *
+ * @method string getCurrentTime() 获取当前系统时间
+ * @method void setCurrentTime(string $CurrentTime) 设置当前系统时间
+ * @method BucketEncryptionInfo getBucketEncryption() 获取桶加密状态信息
+ * @method void setBucketEncryption(BucketEncryptionInfo $BucketEncryption) 设置桶加密状态信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBackUpSchedulesResponse extends AbstractModel
 {
     /**
+     * @var string 当前系统时间
+     */
+    public $CurrentTime;
+
+    /**
+     * @var BucketEncryptionInfo 桶加密状态信息
+     */
+    public $BucketEncryption;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param string $CurrentTime 当前系统时间
+     * @param BucketEncryptionInfo $BucketEncryption 桶加密状态信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +62,15 @@ class DescribeBackUpSchedulesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("CurrentTime",$param) and $param["CurrentTime"] !== null) {
+            $this->CurrentTime = $param["CurrentTime"];
+        }
+
+        if (array_key_exists("BucketEncryption",$param) and $param["BucketEncryption"] !== null) {
+            $this->BucketEncryption = new BucketEncryptionInfo();
+            $this->BucketEncryption->deserialize($param["BucketEncryption"]);
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

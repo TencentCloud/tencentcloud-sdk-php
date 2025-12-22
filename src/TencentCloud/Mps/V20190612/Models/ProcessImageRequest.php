@@ -50,6 +50,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceId(string $ResourceId) 设置资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
  * @method ImageTaskInput getImageTask() 获取图片处理参数。
  * @method void setImageTask(ImageTaskInput $ImageTask) 设置图片处理参数。
+ * @method integer getScheduleId() 获取图片处理编排场景 ID。
+
+- 30000：文字水印擦除
+- 30010：图片扩展
+- 30100：换装场景
+ * @method void setScheduleId(integer $ScheduleId) 设置图片处理编排场景 ID。
+
+- 30000：文字水印擦除
+- 30010：图片扩展
+- 30100：换装场景
+ * @method AddOnParameter getAddOnParameter() 获取图片处理附加参数。
+ * @method void setAddOnParameter(AddOnParameter $AddOnParameter) 设置图片处理附加参数。
  */
 class ProcessImageRequest extends AbstractModel
 {
@@ -97,6 +109,20 @@ class ProcessImageRequest extends AbstractModel
     public $ImageTask;
 
     /**
+     * @var integer 图片处理编排场景 ID。
+
+- 30000：文字水印擦除
+- 30010：图片扩展
+- 30100：换装场景
+     */
+    public $ScheduleId;
+
+    /**
+     * @var AddOnParameter 图片处理附加参数。
+     */
+    public $AddOnParameter;
+
+    /**
      * @param MediaInputInfo $InputInfo 图片处理的文件输入信息。
      * @param TaskOutputStorage $OutputStorage 图片处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
      * @param string $OutputDir 图片处理生成的文件输出的路径。如果不填表示与 InputInfo 中文件所在的目录一致。如果是目录，如`/image/201907/`，表示继承原文件名输出到该目录。
@@ -112,6 +138,12 @@ class ProcessImageRequest extends AbstractModel
 图片模板功能内测中，如需使用请提交工单申请。
      * @param string $ResourceId 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
      * @param ImageTaskInput $ImageTask 图片处理参数。
+     * @param integer $ScheduleId 图片处理编排场景 ID。
+
+- 30000：文字水印擦除
+- 30010：图片扩展
+- 30100：换装场景
+     * @param AddOnParameter $AddOnParameter 图片处理附加参数。
      */
     function __construct()
     {
@@ -155,6 +187,15 @@ class ProcessImageRequest extends AbstractModel
         if (array_key_exists("ImageTask",$param) and $param["ImageTask"] !== null) {
             $this->ImageTask = new ImageTaskInput();
             $this->ImageTask->deserialize($param["ImageTask"]);
+        }
+
+        if (array_key_exists("ScheduleId",$param) and $param["ScheduleId"] !== null) {
+            $this->ScheduleId = $param["ScheduleId"];
+        }
+
+        if (array_key_exists("AddOnParameter",$param) and $param["AddOnParameter"] !== null) {
+            $this->AddOnParameter = new AddOnParameter();
+            $this->AddOnParameter->deserialize($param["AddOnParameter"]);
         }
     }
 }

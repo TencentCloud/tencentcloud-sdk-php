@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Convert3DFormat请求参数结构体
  *
- * @method string getFile3D() 获取3D文件url地址。
- * @method void setFile3D(string $File3D) 设置3D文件url地址。
+ * @method string getFile3D() 获取3D文件url地址，模型文件大小≤60m，支持fbx，obj，glb格式3D文件输入。
+ * @method void setFile3D(string $File3D) 设置3D文件url地址，模型文件大小≤60m，支持fbx，obj，glb格式3D文件输入。
  * @method string getFormat() 获取返回的3D文件格式，参考值：STL, USDZ, FBX, MP4, GIF。
  * @method void setFormat(string $Format) 设置返回的3D文件格式，参考值：STL, USDZ, FBX, MP4, GIF。
  */
 class Convert3DFormatRequest extends AbstractModel
 {
     /**
-     * @var string 3D文件url地址。
+     * @var string 3D文件url地址，模型文件大小≤60m，支持fbx，obj，glb格式3D文件输入。
      */
     public $File3D;
 
@@ -38,7 +38,7 @@ class Convert3DFormatRequest extends AbstractModel
     public $Format;
 
     /**
-     * @param string $File3D 3D文件url地址。
+     * @param string $File3D 3D文件url地址，模型文件大小≤60m，支持fbx，obj，glb格式3D文件输入。
      * @param string $Format 返回的3D文件格式，参考值：STL, USDZ, FBX, MP4, GIF。
      */
     function __construct()

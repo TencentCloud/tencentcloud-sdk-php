@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPage(integer $Page) 设置页码
  * @method integer getSize() 获取页号
  * @method void setSize(integer $Size) 设置页号
+ * @method string getSource() 获取来源 studio(Studio脚本)/codeTemplate(代码模版)
+ * @method void setSource(string $Source) 设置来源 studio(Studio脚本)/codeTemplate(代码模版)
  */
 class DescribeFormVersionParamRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeFormVersionParamRequest extends AbstractModel
     public $Size;
 
     /**
+     * @var string 来源 studio(Studio脚本)/codeTemplate(代码模版)
+     */
+    public $Source;
+
+    /**
      * @param string $ProjectId 项目Id
      * @param string $CodeTemplateId 模版Id
      * @param array $OriginalParams 脚本中的参数
      * @param integer $Page 页码
      * @param integer $Size 页号
+     * @param string $Source 来源 studio(Studio脚本)/codeTemplate(代码模版)
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeFormVersionParamRequest extends AbstractModel
 
         if (array_key_exists("Size",$param) and $param["Size"] !== null) {
             $this->Size = $param["Size"];
+        }
+
+        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
+            $this->Source = $param["Source"];
         }
     }
 }

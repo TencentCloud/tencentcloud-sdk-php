@@ -73,10 +73,12 @@ use TencentCloud\Common\AbstractModel;
 
 USCC :(默认)工商组织营业执照
 PRACTICELICENSEOFMEDICALINSTITUTION :医疗机构执业许可证
+CLINICFILLINGCERTIFICATE:诊所备案证
  * @method void setOrganizationIdCardType(string $OrganizationIdCardType) 设置企业证照类型：
 
 USCC :(默认)工商组织营业执照
 PRACTICELICENSEOFMEDICALINSTITUTION :医疗机构执业许可证
+CLINICFILLINGCERTIFICATE:诊所备案证
  * @method RegisterInfoOption getRegisterInfoOption() 获取企业创建时候的个性化参数。
 其中，包括一下内容：
 LegalNameSame  是否可以编辑法人。
@@ -149,6 +151,7 @@ class RegisterInfo extends AbstractModel
 
 USCC :(默认)工商组织营业执照
 PRACTICELICENSEOFMEDICALINSTITUTION :医疗机构执业许可证
+CLINICFILLINGCERTIFICATE:诊所备案证
      */
     public $OrganizationIdCardType;
 
@@ -190,6 +193,7 @@ OrganizationIdCardTypeSame  是否可以更改证照类型。
 
 USCC :(默认)工商组织营业执照
 PRACTICELICENSEOFMEDICALINSTITUTION :医疗机构执业许可证
+CLINICFILLINGCERTIFICATE:诊所备案证
      * @param RegisterInfoOption $RegisterInfoOption 企业创建时候的个性化参数。
 其中，包括一下内容：
 LegalNameSame  是否可以编辑法人。

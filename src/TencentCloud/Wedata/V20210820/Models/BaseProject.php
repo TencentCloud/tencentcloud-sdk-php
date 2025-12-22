@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModel(string $Model) 设置项目类型，SIMPLE：简单模式 STANDARD：标准模式
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getScheduleMode() 获取项目调度模式，task：任务模式 workflow：工作流模式
+ * @method void setScheduleMode(string $ScheduleMode) 设置项目调度模式，task：任务模式 workflow：工作流模式
  */
 class BaseProject extends AbstractModel
 {
@@ -114,6 +116,11 @@ class BaseProject extends AbstractModel
     public $Model;
 
     /**
+     * @var string 项目调度模式，task：任务模式 workflow：工作流模式
+     */
+    public $ScheduleMode;
+
+    /**
      * @param string $ProjectName 项目标识，英文名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DisplayName 项目显示名称，可以为中文名
@@ -132,6 +139,7 @@ class BaseProject extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Model 项目类型，SIMPLE：简单模式 STANDARD：标准模式
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ScheduleMode 项目调度模式，task：任务模式 workflow：工作流模式
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class BaseProject extends AbstractModel
 
         if (array_key_exists("Model",$param) and $param["Model"] !== null) {
             $this->Model = $param["Model"];
+        }
+
+        if (array_key_exists("ScheduleMode",$param) and $param["ScheduleMode"] !== null) {
+            $this->ScheduleMode = $param["ScheduleMode"];
         }
     }
 }

@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setL4UsedList(array $L4UsedList) 设置该负载均衡实例绑的四层代理实例的列表。
  * @method array getL7UsedList() 获取该负载均衡实例绑定的七层域名列表。
  * @method void setL7UsedList(array $L7UsedList) 设置该负载均衡实例绑定的七层域名列表。
+ * @method array getReferences() 获取负载均衡被引用实例的列表。
+ * @method void setReferences(array $References) 设置负载均衡被引用实例的列表。
  */
 class LoadBalancer extends AbstractModel
 {
@@ -118,6 +120,11 @@ class LoadBalancer extends AbstractModel
     public $L7UsedList;
 
     /**
+     * @var array 负载均衡被引用实例的列表。
+     */
+    public $References;
+
+    /**
      * @param string $InstanceId 实例 ID。
      * @param string $Name 实例名称，可输入 1-200 个字符，允许字符为 a-z，A-Z，0-9，_，-。	
      * @param string $Type 实例类型，取值有：
@@ -136,6 +143,7 @@ class LoadBalancer extends AbstractModel
 <li>Running：已生效。</li>
      * @param array $L4UsedList 该负载均衡实例绑的四层代理实例的列表。
      * @param array $L7UsedList 该负载均衡实例绑定的七层域名列表。
+     * @param array $References 负载均衡被引用实例的列表。
      */
     function __construct()
     {
@@ -194,6 +202,15 @@ class LoadBalancer extends AbstractModel
 
         if (array_key_exists("L7UsedList",$param) and $param["L7UsedList"] !== null) {
             $this->L7UsedList = $param["L7UsedList"];
+        }
+
+        if (array_key_exists("References",$param) and $param["References"] !== null) {
+            $this->References = [];
+            foreach ($param["References"] as $key => $value){
+                $obj = new OriginGroupReference();
+                $obj->deserialize($value);
+                array_push($this->References, $obj);
+            }
         }
     }
 }

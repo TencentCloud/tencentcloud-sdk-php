@@ -154,6 +154,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsDisabled(boolean $IsDisabled) 设置false:未停用，ture:已停用
  * @method string getStaffName() 获取员工名称
  * @method void setStaffName(string $StaffName) 设置员工名称
+ * @method integer getEnableScope() 获取文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableScope(integer $EnableScope) 设置文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ListDocItem extends AbstractModel
 {
@@ -369,6 +373,12 @@ class ListDocItem extends AbstractModel
     public $StaffName;
 
     /**
+     * @var integer 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableScope;
+
+    /**
      * @param string $DocBizId 文档ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileName 文件名称
@@ -436,6 +446,8 @@ class ListDocItem extends AbstractModel
      * @param array $AttributeFlags 文档的属性标记，0: 不做用户外部权限校验
      * @param boolean $IsDisabled false:未停用，ture:已停用
      * @param string $StaffName 员工名称
+     * @param integer $EnableScope 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -597,6 +609,10 @@ class ListDocItem extends AbstractModel
 
         if (array_key_exists("StaffName",$param) and $param["StaffName"] !== null) {
             $this->StaffName = $param["StaffName"];
+        }
+
+        if (array_key_exists("EnableScope",$param) and $param["EnableScope"] !== null) {
+            $this->EnableScope = $param["EnableScope"];
         }
     }
 }

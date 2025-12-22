@@ -68,6 +68,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsProjectOwner(boolean $IsProjectOwner) 设置是否项目负责人
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCreateTimestamp() 获取创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTimestamp(integer $CreateTimestamp) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStatus() 获取用户状态 0:历史 1:正常 2:已删除
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(integer $Status) 设置用户状态 0:历史 1:正常 2:已删除
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProjectUserRole extends AbstractModel
 {
@@ -144,6 +152,18 @@ class ProjectUserRole extends AbstractModel
     public $IsProjectOwner;
 
     /**
+     * @var integer 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTimestamp;
+
+    /**
+     * @var integer 用户状态 0:历史 1:正常 2:已删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
      * @param array $Roles 用户角色对象
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserName mc
@@ -167,6 +187,10 @@ class ProjectUserRole extends AbstractModel
      * @param string $AppId 租户iD
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsProjectOwner 是否项目负责人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CreateTimestamp 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Status 用户状态 0:历史 1:正常 2:已删除
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -233,6 +257,14 @@ class ProjectUserRole extends AbstractModel
 
         if (array_key_exists("IsProjectOwner",$param) and $param["IsProjectOwner"] !== null) {
             $this->IsProjectOwner = $param["IsProjectOwner"];
+        }
+
+        if (array_key_exists("CreateTimestamp",$param) and $param["CreateTimestamp"] !== null) {
+            $this->CreateTimestamp = $param["CreateTimestamp"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

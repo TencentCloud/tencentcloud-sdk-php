@@ -31,10 +31,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getParentFolderPath() 获取项目中资源文件上传的路径, 取值示例: /wedata/qxxxm/, 根目录,请使用/即可
  * @method void setParentFolderPath(string $ParentFolderPath) 设置项目中资源文件上传的路径, 取值示例: /wedata/qxxxm/, 根目录,请使用/即可
  * @method string getResourceFile() 获取- 上传文件及手填两种方式只能选择其一，如果两者均提供，取值顺序为文件>手填值
--   手填值必须是存在的cos路径, /datastudio/resource/ 为固定前缀, projectId 为项目ID,需传入具体值, parentFolderPath为父文件夹路径, name为文件名, 手填值取值示例:     /datastudio/resource/projectId/parentFolderPath/name 
+-   手填值必须是存在的cos路径, parentFolderPath为父文件夹路径, name为文件名, 手填值取值示例:     /datastudio/resource/projectId/parentFolderPath/name 
 
  * @method void setResourceFile(string $ResourceFile) 设置- 上传文件及手填两种方式只能选择其一，如果两者均提供，取值顺序为文件>手填值
--   手填值必须是存在的cos路径, /datastudio/resource/ 为固定前缀, projectId 为项目ID,需传入具体值, parentFolderPath为父文件夹路径, name为文件名, 手填值取值示例:     /datastudio/resource/projectId/parentFolderPath/name 
+-   手填值必须是存在的cos路径, parentFolderPath为父文件夹路径, name为文件名, 手填值取值示例:     /datastudio/resource/projectId/parentFolderPath/name 
 
  * @method string getBundleId() 获取bundle客户端ID
  * @method void setBundleId(string $BundleId) 设置bundle客户端ID
@@ -70,7 +70,7 @@ class CreateResourceFileRequest extends AbstractModel
 
     /**
      * @var string - 上传文件及手填两种方式只能选择其一，如果两者均提供，取值顺序为文件>手填值
--   手填值必须是存在的cos路径, /datastudio/resource/ 为固定前缀, projectId 为项目ID,需传入具体值, parentFolderPath为父文件夹路径, name为文件名, 手填值取值示例:     /datastudio/resource/projectId/parentFolderPath/name 
+-   手填值必须是存在的cos路径, parentFolderPath为父文件夹路径, name为文件名, 手填值取值示例:     /datastudio/resource/projectId/parentFolderPath/name 
 
      */
     public $ResourceFile;
@@ -92,7 +92,7 @@ class CreateResourceFileRequest extends AbstractModel
      * @param string $CosRegion BucketName桶对应的cos存储桶区域
      * @param string $ParentFolderPath 项目中资源文件上传的路径, 取值示例: /wedata/qxxxm/, 根目录,请使用/即可
      * @param string $ResourceFile - 上传文件及手填两种方式只能选择其一，如果两者均提供，取值顺序为文件>手填值
--   手填值必须是存在的cos路径, /datastudio/resource/ 为固定前缀, projectId 为项目ID,需传入具体值, parentFolderPath为父文件夹路径, name为文件名, 手填值取值示例:     /datastudio/resource/projectId/parentFolderPath/name 
+-   手填值必须是存在的cos路径, parentFolderPath为父文件夹路径, name为文件名, 手填值取值示例:     /datastudio/resource/projectId/parentFolderPath/name 
 
      * @param string $BundleId bundle客户端ID
      * @param string $BundleInfo bundle客户端信息

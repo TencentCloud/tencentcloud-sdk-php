@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventType(string $EventType) 设置事件类型
  * @method string getClassify() 获取处置分类
  * @method void setClassify(string $Classify) 设置处置分类
+ * @method array getStandardTerms() 获取cspm规范条款
+ * @method void setStandardTerms(array $StandardTerms) 设置cspm规范条款
  */
 class CheckViewRiskItem extends AbstractModel
 {
@@ -122,6 +124,11 @@ class CheckViewRiskItem extends AbstractModel
     public $Classify;
 
     /**
+     * @var array cspm规范条款
+     */
+    public $StandardTerms;
+
+    /**
      * @param string $RiskRuleId 检查项规则ID
      * @param string $RiskTitle 风险名称
      * @param string $CheckType 检查类型
@@ -136,6 +143,7 @@ class CheckViewRiskItem extends AbstractModel
      * @param string $AssetType 资产类型
      * @param string $EventType 事件类型
      * @param string $Classify 处置分类
+     * @param array $StandardTerms cspm规范条款
      */
     function __construct()
     {
@@ -204,6 +212,15 @@ class CheckViewRiskItem extends AbstractModel
 
         if (array_key_exists("Classify",$param) and $param["Classify"] !== null) {
             $this->Classify = $param["Classify"];
+        }
+
+        if (array_key_exists("StandardTerms",$param) and $param["StandardTerms"] !== null) {
+            $this->StandardTerms = [];
+            foreach ($param["StandardTerms"] as $key => $value){
+                $obj = new StandardTerm();
+                $obj->deserialize($value);
+                array_push($this->StandardTerms, $obj);
+            }
         }
     }
 }

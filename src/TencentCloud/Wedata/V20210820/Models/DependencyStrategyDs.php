@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskDependencyExecutingTimeoutValue(integer $TaskDependencyExecutingTimeoutValue) 设置仅当TaskDependencyExecutingStrategies中包含PARENT_TIMEOUT时才需要填本字段，下游任务依赖父实例执行超时时间，单位：分钟。
 
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDependencyConfigTimeoutTypeList() 获取超时依赖策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDependencyConfigTimeoutTypeList(array $DependencyConfigTimeoutTypeList) 设置超时依赖策略
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DependencyStrategyDs extends AbstractModel
 {
@@ -63,6 +67,12 @@ class DependencyStrategyDs extends AbstractModel
     public $TaskDependencyExecutingTimeoutValue;
 
     /**
+     * @var array 超时依赖策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DependencyConfigTimeoutTypeList;
+
+    /**
      * @param string $PollingNullStrategy 等待上游任务实例策略：EXECUTING（执行）；WAITING（等待）
 
 注意：此字段可能返回 null，表示取不到有效值。
@@ -71,6 +81,8 @@ class DependencyStrategyDs extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskDependencyExecutingTimeoutValue 仅当TaskDependencyExecutingStrategies中包含PARENT_TIMEOUT时才需要填本字段，下游任务依赖父实例执行超时时间，单位：分钟。
 
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DependencyConfigTimeoutTypeList 超时依赖策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -96,6 +108,15 @@ class DependencyStrategyDs extends AbstractModel
 
         if (array_key_exists("TaskDependencyExecutingTimeoutValue",$param) and $param["TaskDependencyExecutingTimeoutValue"] !== null) {
             $this->TaskDependencyExecutingTimeoutValue = $param["TaskDependencyExecutingTimeoutValue"];
+        }
+
+        if (array_key_exists("DependencyConfigTimeoutTypeList",$param) and $param["DependencyConfigTimeoutTypeList"] !== null) {
+            $this->DependencyConfigTimeoutTypeList = [];
+            foreach ($param["DependencyConfigTimeoutTypeList"] as $key => $value){
+                $obj = new DependencyConfigTimeoutDTO();
+                $obj->deserialize($value);
+                array_push($this->DependencyConfigTimeoutTypeList, $obj);
+            }
         }
     }
 }

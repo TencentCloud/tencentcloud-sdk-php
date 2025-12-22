@@ -66,10 +66,6 @@ CRONTAB_CYCLE: crontab表达式类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutionEndTime(string $ExecutionEndTime) 设置执行时间 右闭区间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getScheduleRunType() 获取调度类型: 0 正常调度 1 空跑调度
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScheduleRunType(integer $ScheduleRunType) 设置调度类型: 0 正常调度 1 空跑调度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCalendarOpen() 获取日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCalendarOpen(string $CalendarOpen) 设置日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0
@@ -90,33 +86,13 @@ CRONTAB_CYCLE: crontab表达式类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpstreamDependencyConfigList(array $UpstreamDependencyConfigList) 设置上游依赖数组
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDownStreamDependencyConfigList() 获取下游依赖数组
+ * @method array getDownstreamDependencyConfigList() 获取下游依赖数组
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDownStreamDependencyConfigList(array $DownStreamDependencyConfigList) 设置下游依赖数组
+ * @method void setDownstreamDependencyConfigList(array $DownstreamDependencyConfigList) 设置下游依赖数组
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getEventListenerList() 获取事件数组
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventListenerList(array $EventListenerList) 设置事件数组
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRunPriority() 获取任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRunPriority(integer $RunPriority) 设置任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRetryWait() 获取重试策略 重试等待时间,单位分钟: 默认: 5
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRetryWait(integer $RetryWait) 设置重试策略 重试等待时间,单位分钟: 默认: 5
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxRetryAttempts() 获取重试策略 最大尝试次数, 默认: 4
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxRetryAttempts(integer $MaxRetryAttempts) 设置重试策略 最大尝试次数, 默认: 4
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getExecutionTTL() 获取超时处理策略 运行耗时超时（单位：分钟）默认为 -1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecutionTTL(integer $ExecutionTTL) 设置超时处理策略 运行耗时超时（单位：分钟）默认为 -1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWaitExecutionTotalTTL() 获取超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWaitExecutionTotalTTL(string $WaitExecutionTotalTTL) 设置超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAllowRedoType() 获取重跑&补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;
 注意：此字段可能返回 null，表示取不到有效值。
@@ -141,6 +117,58 @@ CRONTAB_CYCLE: crontab表达式类型
  * @method void setInitStrategy(string $InitStrategy) 设置**实例生成策略**
 * T_PLUS_0: T+0生成,默认策略
 * T_PLUS_1: T+1生成
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getScheduleRunType() 获取调度类型: 0 正常调度 1 空跑调度，默认为 0
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScheduleRunType(integer $ScheduleRunType) 设置调度类型: 0 正常调度 1 空跑调度，默认为 0
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDownStreamDependencyConfigList() 获取（废弃，建议使用 DownstreamDependencyConfigList）下游依赖数组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDownStreamDependencyConfigList(array $DownStreamDependencyConfigList) 设置（废弃，建议使用 DownstreamDependencyConfigList）下游依赖数组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRunPriority() 获取任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRunPriority(integer $RunPriority) 设置任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRetryWait() 获取重试策略 重试等待时间,单位分钟: 默认: 5
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRetryWait(integer $RetryWait) 设置重试策略 重试等待时间,单位分钟: 默认: 5
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxRetryAttempts() 获取重试策略 最大尝试次数, 默认: 4
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxRetryAttempts(integer $MaxRetryAttempts) 设置重试策略 最大尝试次数, 默认: 4
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getExecutionTTL() 获取超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExecutionTTL(integer $ExecutionTTL) 设置超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWaitExecutionTotalTTL() 获取超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWaitExecutionTotalTTL(string $WaitExecutionTotalTTL) 设置超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getScheduleType() 获取调度类型: 0 正常调度 1 空跑调度，默认为 0
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScheduleType(integer $ScheduleType) 设置调度类型: 0 正常调度 1 空跑调度，默认为 0
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRunPriorityType() 获取任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRunPriorityType(integer $RunPriorityType) 设置任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRetryWaitMinute() 获取重试策略 重试等待时间,单位分钟: 默认: 5
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRetryWaitMinute(integer $RetryWaitMinute) 设置重试策略 重试等待时间,单位分钟: 默认: 5
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxRetryNumber() 获取重试策略 最大尝试次数, 默认: 4
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxRetryNumber(integer $MaxRetryNumber) 设置重试策略 最大尝试次数, 默认: 4
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getExecutionTTLMinute() 获取超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExecutionTTLMinute(integer $ExecutionTTLMinute) 设置超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWaitExecutionTotalTTLMinute() 获取超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWaitExecutionTotalTTLMinute(integer $WaitExecutionTotalTTLMinute) 设置超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskSchedulerConfiguration extends AbstractModel
@@ -197,12 +225,6 @@ CRONTAB_CYCLE: crontab表达式类型
     public $ExecutionEndTime;
 
     /**
-     * @var integer 调度类型: 0 正常调度 1 空跑调度
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $ScheduleRunType;
-
-    /**
      * @var string 日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -236,43 +258,13 @@ CRONTAB_CYCLE: crontab表达式类型
      * @var array 下游依赖数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $DownStreamDependencyConfigList;
+    public $DownstreamDependencyConfigList;
 
     /**
      * @var array 事件数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventListenerList;
-
-    /**
-     * @var integer 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $RunPriority;
-
-    /**
-     * @var integer 重试策略 重试等待时间,单位分钟: 默认: 5
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $RetryWait;
-
-    /**
-     * @var integer 重试策略 最大尝试次数, 默认: 4
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $MaxRetryAttempts;
-
-    /**
-     * @var integer 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $ExecutionTTL;
-
-    /**
-     * @var string 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $WaitExecutionTotalTTL;
 
     /**
      * @var string 重跑&补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;
@@ -307,6 +299,91 @@ CRONTAB_CYCLE: crontab表达式类型
     public $InitStrategy;
 
     /**
+     * @var integer 调度类型: 0 正常调度 1 空跑调度，默认为 0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    public $ScheduleRunType;
+
+    /**
+     * @var array （废弃，建议使用 DownstreamDependencyConfigList）下游依赖数组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    public $DownStreamDependencyConfigList;
+
+    /**
+     * @var integer 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    public $RunPriority;
+
+    /**
+     * @var integer 重试策略 重试等待时间,单位分钟: 默认: 5
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    public $RetryWait;
+
+    /**
+     * @var integer 重试策略 最大尝试次数, 默认: 4
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    public $MaxRetryAttempts;
+
+    /**
+     * @var integer 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    public $ExecutionTTL;
+
+    /**
+     * @var string 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    public $WaitExecutionTotalTTL;
+
+    /**
+     * @var integer 调度类型: 0 正常调度 1 空跑调度，默认为 0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScheduleType;
+
+    /**
+     * @var integer 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RunPriorityType;
+
+    /**
+     * @var integer 重试策略 重试等待时间,单位分钟: 默认: 5
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RetryWaitMinute;
+
+    /**
+     * @var integer 重试策略 最大尝试次数, 默认: 4
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxRetryNumber;
+
+    /**
+     * @var integer 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExecutionTTLMinute;
+
+    /**
+     * @var integer 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WaitExecutionTotalTTLMinute;
+
+    /**
      * @param string $CycleType 周期类型：支持的类型为
 
 ONEOFF_CYCLE: 一次性
@@ -330,8 +407,6 @@ CRONTAB_CYCLE: crontab表达式类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutionEndTime 执行时间 右闭区间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ScheduleRunType 调度类型: 0 正常调度 1 空跑调度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CalendarOpen 日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CalendarId 日历调度 日历 ID
@@ -342,19 +417,9 @@ CRONTAB_CYCLE: crontab表达式类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $UpstreamDependencyConfigList 上游依赖数组
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DownStreamDependencyConfigList 下游依赖数组
+     * @param array $DownstreamDependencyConfigList 下游依赖数组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $EventListenerList 事件数组
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RunPriority 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RetryWait 重试策略 重试等待时间,单位分钟: 默认: 5
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxRetryAttempts 重试策略 最大尝试次数, 默认: 4
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ExecutionTTL 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WaitExecutionTotalTTL 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AllowRedoType 重跑&补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;
 注意：此字段可能返回 null，表示取不到有效值。
@@ -367,6 +432,32 @@ CRONTAB_CYCLE: crontab表达式类型
      * @param string $InitStrategy **实例生成策略**
 * T_PLUS_0: T+0生成,默认策略
 * T_PLUS_1: T+1生成
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ScheduleRunType 调度类型: 0 正常调度 1 空跑调度，默认为 0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DownStreamDependencyConfigList （废弃，建议使用 DownstreamDependencyConfigList）下游依赖数组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RunPriority 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RetryWait 重试策略 重试等待时间,单位分钟: 默认: 5
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxRetryAttempts 重试策略 最大尝试次数, 默认: 4
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ExecutionTTL 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WaitExecutionTotalTTL 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ScheduleType 调度类型: 0 正常调度 1 空跑调度，默认为 0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RunPriorityType 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RetryWaitMinute 重试策略 重试等待时间,单位分钟: 默认: 5
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxRetryNumber 重试策略 最大尝试次数, 默认: 4
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ExecutionTTLMinute 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $WaitExecutionTotalTTLMinute 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -410,10 +501,6 @@ CRONTAB_CYCLE: crontab表达式类型
             $this->ExecutionEndTime = $param["ExecutionEndTime"];
         }
 
-        if (array_key_exists("ScheduleRunType",$param) and $param["ScheduleRunType"] !== null) {
-            $this->ScheduleRunType = $param["ScheduleRunType"];
-        }
-
         if (array_key_exists("CalendarOpen",$param) and $param["CalendarOpen"] !== null) {
             $this->CalendarOpen = $param["CalendarOpen"];
         }
@@ -439,12 +526,12 @@ CRONTAB_CYCLE: crontab表达式类型
             }
         }
 
-        if (array_key_exists("DownStreamDependencyConfigList",$param) and $param["DownStreamDependencyConfigList"] !== null) {
-            $this->DownStreamDependencyConfigList = [];
-            foreach ($param["DownStreamDependencyConfigList"] as $key => $value){
+        if (array_key_exists("DownstreamDependencyConfigList",$param) and $param["DownstreamDependencyConfigList"] !== null) {
+            $this->DownstreamDependencyConfigList = [];
+            foreach ($param["DownstreamDependencyConfigList"] as $key => $value){
                 $obj = new DependencyTaskBrief();
                 $obj->deserialize($value);
-                array_push($this->DownStreamDependencyConfigList, $obj);
+                array_push($this->DownstreamDependencyConfigList, $obj);
             }
         }
 
@@ -455,26 +542,6 @@ CRONTAB_CYCLE: crontab表达式类型
                 $obj->deserialize($value);
                 array_push($this->EventListenerList, $obj);
             }
-        }
-
-        if (array_key_exists("RunPriority",$param) and $param["RunPriority"] !== null) {
-            $this->RunPriority = $param["RunPriority"];
-        }
-
-        if (array_key_exists("RetryWait",$param) and $param["RetryWait"] !== null) {
-            $this->RetryWait = $param["RetryWait"];
-        }
-
-        if (array_key_exists("MaxRetryAttempts",$param) and $param["MaxRetryAttempts"] !== null) {
-            $this->MaxRetryAttempts = $param["MaxRetryAttempts"];
-        }
-
-        if (array_key_exists("ExecutionTTL",$param) and $param["ExecutionTTL"] !== null) {
-            $this->ExecutionTTL = $param["ExecutionTTL"];
-        }
-
-        if (array_key_exists("WaitExecutionTotalTTL",$param) and $param["WaitExecutionTotalTTL"] !== null) {
-            $this->WaitExecutionTotalTTL = $param["WaitExecutionTotalTTL"];
         }
 
         if (array_key_exists("AllowRedoType",$param) and $param["AllowRedoType"] !== null) {
@@ -510,6 +577,63 @@ CRONTAB_CYCLE: crontab表达式类型
 
         if (array_key_exists("InitStrategy",$param) and $param["InitStrategy"] !== null) {
             $this->InitStrategy = $param["InitStrategy"];
+        }
+
+        if (array_key_exists("ScheduleRunType",$param) and $param["ScheduleRunType"] !== null) {
+            $this->ScheduleRunType = $param["ScheduleRunType"];
+        }
+
+        if (array_key_exists("DownStreamDependencyConfigList",$param) and $param["DownStreamDependencyConfigList"] !== null) {
+            $this->DownStreamDependencyConfigList = [];
+            foreach ($param["DownStreamDependencyConfigList"] as $key => $value){
+                $obj = new DependencyTaskBrief();
+                $obj->deserialize($value);
+                array_push($this->DownStreamDependencyConfigList, $obj);
+            }
+        }
+
+        if (array_key_exists("RunPriority",$param) and $param["RunPriority"] !== null) {
+            $this->RunPriority = $param["RunPriority"];
+        }
+
+        if (array_key_exists("RetryWait",$param) and $param["RetryWait"] !== null) {
+            $this->RetryWait = $param["RetryWait"];
+        }
+
+        if (array_key_exists("MaxRetryAttempts",$param) and $param["MaxRetryAttempts"] !== null) {
+            $this->MaxRetryAttempts = $param["MaxRetryAttempts"];
+        }
+
+        if (array_key_exists("ExecutionTTL",$param) and $param["ExecutionTTL"] !== null) {
+            $this->ExecutionTTL = $param["ExecutionTTL"];
+        }
+
+        if (array_key_exists("WaitExecutionTotalTTL",$param) and $param["WaitExecutionTotalTTL"] !== null) {
+            $this->WaitExecutionTotalTTL = $param["WaitExecutionTotalTTL"];
+        }
+
+        if (array_key_exists("ScheduleType",$param) and $param["ScheduleType"] !== null) {
+            $this->ScheduleType = $param["ScheduleType"];
+        }
+
+        if (array_key_exists("RunPriorityType",$param) and $param["RunPriorityType"] !== null) {
+            $this->RunPriorityType = $param["RunPriorityType"];
+        }
+
+        if (array_key_exists("RetryWaitMinute",$param) and $param["RetryWaitMinute"] !== null) {
+            $this->RetryWaitMinute = $param["RetryWaitMinute"];
+        }
+
+        if (array_key_exists("MaxRetryNumber",$param) and $param["MaxRetryNumber"] !== null) {
+            $this->MaxRetryNumber = $param["MaxRetryNumber"];
+        }
+
+        if (array_key_exists("ExecutionTTLMinute",$param) and $param["ExecutionTTLMinute"] !== null) {
+            $this->ExecutionTTLMinute = $param["ExecutionTTLMinute"];
+        }
+
+        if (array_key_exists("WaitExecutionTotalTTLMinute",$param) and $param["WaitExecutionTotalTTLMinute"] !== null) {
+            $this->WaitExecutionTotalTTLMinute = $param["WaitExecutionTotalTTLMinute"];
         }
     }
 }

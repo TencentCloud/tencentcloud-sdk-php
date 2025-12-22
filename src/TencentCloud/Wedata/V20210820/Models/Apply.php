@@ -73,7 +73,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplyId(string $ApplyId) 设置审批id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMetadata() 获取扩展字段
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetadata(string $Metadata) 设置扩展字段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCreateTimestamp() 获取创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTimestamp(integer $CreateTimestamp) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getApproveTimestamp() 获取审批时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApproveTimestamp(integer $ApproveTimestamp) 设置审批时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Apply extends AbstractModel
 {
@@ -177,8 +187,21 @@ class Apply extends AbstractModel
 
     /**
      * @var string 扩展字段
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Metadata;
+
+    /**
+     * @var integer 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTimestamp;
+
+    /**
+     * @var integer 审批时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApproveTimestamp;
 
     /**
      * @param string $ApplicantId 申请人id
@@ -208,6 +231,11 @@ class Apply extends AbstractModel
      * @param string $ApplyId 审批id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Metadata 扩展字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CreateTimestamp 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ApproveTimestamp 审批时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -296,6 +324,14 @@ class Apply extends AbstractModel
 
         if (array_key_exists("Metadata",$param) and $param["Metadata"] !== null) {
             $this->Metadata = $param["Metadata"];
+        }
+
+        if (array_key_exists("CreateTimestamp",$param) and $param["CreateTimestamp"] !== null) {
+            $this->CreateTimestamp = $param["CreateTimestamp"];
+        }
+
+        if (array_key_exists("ApproveTimestamp",$param) and $param["ApproveTimestamp"] !== null) {
+            $this->ApproveTimestamp = $param["ApproveTimestamp"];
         }
     }
 }

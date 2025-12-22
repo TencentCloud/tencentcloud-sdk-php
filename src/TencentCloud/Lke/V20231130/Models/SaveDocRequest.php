@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SaveDoc请求参数结构体
  *
- * @method string getBotBizId() 获取应用ID
- * @method void setBotBizId(string $BotBizId) 设置应用ID
- * @method string getFileName() 获取文件名
- * @method void setFileName(string $FileName) 设置文件名
+ * @method string getBotBizId() 获取应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+ * @method void setBotBizId(string $BotBizId) 设置应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+ * @method string getFileName() 获取文件名，需要包含文件扩展名
+ * @method void setFileName(string $FileName) 设置文件名，需要包含文件扩展名
  * @method string getFileType() 获取文档支持下面类型
 pdf、doc、docx、ppt、mhtml、pptx、wps、ppsx，单个文件不超过200MB；
 xlsx、xls、md、txt、csv、html，单个文件不超过20MB；
@@ -52,8 +52,8 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
 cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判定为重复文档
  * @method string getSize() 获取文件大小
  * @method void setSize(string $Size) 设置文件大小
- * @method integer getAttrRange() 获取标签适用范围，需要传参为1
- * @method void setAttrRange(integer $AttrRange) 设置标签适用范围，需要传参为1
+ * @method integer getAttrRange() 获取标签适用范围，1:全部，2:按条件。默认为1。
+ * @method void setAttrRange(integer $AttrRange) 设置标签适用范围，1:全部，2:按条件。默认为1。
  * @method integer getSource() 获取来源（0 从本地文档导入），默认值为0
  * @method void setSource(integer $Source) 设置来源（0 从本地文档导入），默认值为0
  * @method string getWebUrl() 获取自定义链接地址, IsRefer为true的时候，该值才有意义
@@ -64,14 +64,14 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
 值为1时，WebUrl 字段不能为空，否则不生效。
  * @method void setReferUrlType(integer $ReferUrlType) 设置外部引用链接类型 0：系统链接 1：自定义链接
 值为1时，WebUrl 字段不能为空，否则不生效。
- * @method string getExpireStart() 获取有效开始时间，unix秒级时间戳
- * @method void setExpireStart(string $ExpireStart) 设置有效开始时间，unix秒级时间戳
- * @method string getExpireEnd() 获取有效结束时间，unix秒级时间戳，0代表永久有效
- * @method void setExpireEnd(string $ExpireEnd) 设置有效结束时间，unix秒级时间戳，0代表永久有效
- * @method boolean getIsRefer() 获取是否引用链接
- * @method void setIsRefer(boolean $IsRefer) 设置是否引用链接
- * @method integer getOpt() 获取文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为1  <br> 请注意，opt=1的时候请从腾讯云智能体开发平台页面下载excel模板
- * @method void setOpt(integer $Opt) 设置文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为1  <br> 请注意，opt=1的时候请从腾讯云智能体开发平台页面下载excel模板
+ * @method string getExpireStart() 获取有效开始时间，unix秒级时间戳，默认为0
+ * @method void setExpireStart(string $ExpireStart) 设置有效开始时间，unix秒级时间戳，默认为0
+ * @method string getExpireEnd() 获取有效结束时间，unix秒级时间戳，默认为0代表永久有效
+ * @method void setExpireEnd(string $ExpireEnd) 设置有效结束时间，unix秒级时间戳，默认为0代表永久有效
+ * @method boolean getIsRefer() 获取是否显示引用的文档来源(false不显示 true显示）默认false
+ * @method void setIsRefer(boolean $IsRefer) 设置是否显示引用的文档来源(false不显示 true显示）默认false
+ * @method integer getOpt() 获取文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为2 <br> 请注意，opt=1的时候请从腾讯云智能体开发平台页面下载excel模板
+ * @method void setOpt(integer $Opt) 设置文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为2 <br> 请注意，opt=1的时候请从腾讯云智能体开发平台页面下载excel模板
  * @method string getCateBizId() 获取分类ID
  * @method void setCateBizId(string $CateBizId) 设置分类ID
  * @method boolean getIsDownload() 获取是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义
@@ -248,18 +248,20 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
 | 字段名       | 类型   | 说明                                                                 |
 |--------------|--------|----------------------------------------------------------------------|
 | `table_style` | String | 指定表格内容的输出格式。可用值：<br>• `"html"`：以 HTML 表格形式返回，适合网页展示。<br>• `"md"`：以 Markdown 表格语法返回，适合文档或 Markdown 渲染环境。|
- * @method UpdatePeriodInfo getUpdatePeriodInfo() 获取文档更新频率
- * @method void setUpdatePeriodInfo(UpdatePeriodInfo $UpdatePeriodInfo) 设置文档更新频率
+ * @method UpdatePeriodInfo getUpdatePeriodInfo() 获取文档更新频率，默认值为0不更新
+ * @method void setUpdatePeriodInfo(UpdatePeriodInfo $UpdatePeriodInfo) 设置文档更新频率，默认值为0不更新
+ * @method integer getEnableScope() 获取文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+ * @method void setEnableScope(integer $EnableScope) 设置文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
  */
 class SaveDocRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public $BotBizId;
 
     /**
-     * @var string 文件名
+     * @var string 文件名，需要包含文件扩展名
      */
     public $FileName;
 
@@ -298,7 +300,7 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
     public $Size;
 
     /**
-     * @var integer 标签适用范围，需要传参为1
+     * @var integer 标签适用范围，1:全部，2:按条件。默认为1。
      */
     public $AttrRange;
 
@@ -324,22 +326,22 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
     public $ReferUrlType;
 
     /**
-     * @var string 有效开始时间，unix秒级时间戳
+     * @var string 有效开始时间，unix秒级时间戳，默认为0
      */
     public $ExpireStart;
 
     /**
-     * @var string 有效结束时间，unix秒级时间戳，0代表永久有效
+     * @var string 有效结束时间，unix秒级时间戳，默认为0代表永久有效
      */
     public $ExpireEnd;
 
     /**
-     * @var boolean 是否引用链接
+     * @var boolean 是否显示引用的文档来源(false不显示 true显示）默认false
      */
     public $IsRefer;
 
     /**
-     * @var integer 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为1  <br> 请注意，opt=1的时候请从腾讯云智能体开发平台页面下载excel模板
+     * @var integer 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为2 <br> 请注意，opt=1的时候请从腾讯云智能体开发平台页面下载excel模板
      */
     public $Opt;
 
@@ -448,13 +450,18 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
     public $SplitRule;
 
     /**
-     * @var UpdatePeriodInfo 文档更新频率
+     * @var UpdatePeriodInfo 文档更新频率，默认值为0不更新
      */
     public $UpdatePeriodInfo;
 
     /**
-     * @param string $BotBizId 应用ID
-     * @param string $FileName 文件名
+     * @var integer 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     */
+    public $EnableScope;
+
+    /**
+     * @param string $BotBizId 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+     * @param string $FileName 文件名，需要包含文件扩展名
      * @param string $FileType 文档支持下面类型
 pdf、doc、docx、ppt、mhtml、pptx、wps、ppsx，单个文件不超过200MB；
 xlsx、xls、md、txt、csv、html，单个文件不超过20MB；
@@ -469,16 +476,16 @@ jpg、png、jpeg、tiff、bmp、gif，单个文件不超过50MB
 请注意：
 cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判定为重复文档
      * @param string $Size 文件大小
-     * @param integer $AttrRange 标签适用范围，需要传参为1
+     * @param integer $AttrRange 标签适用范围，1:全部，2:按条件。默认为1。
      * @param integer $Source 来源（0 从本地文档导入），默认值为0
      * @param string $WebUrl 自定义链接地址, IsRefer为true的时候，该值才有意义
      * @param array $AttrLabels 标签引用
      * @param integer $ReferUrlType 外部引用链接类型 0：系统链接 1：自定义链接
 值为1时，WebUrl 字段不能为空，否则不生效。
-     * @param string $ExpireStart 有效开始时间，unix秒级时间戳
-     * @param string $ExpireEnd 有效结束时间，unix秒级时间戳，0代表永久有效
-     * @param boolean $IsRefer 是否引用链接
-     * @param integer $Opt 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为1  <br> 请注意，opt=1的时候请从腾讯云智能体开发平台页面下载excel模板
+     * @param string $ExpireStart 有效开始时间，unix秒级时间戳，默认为0
+     * @param string $ExpireEnd 有效结束时间，unix秒级时间戳，默认为0代表永久有效
+     * @param boolean $IsRefer 是否显示引用的文档来源(false不显示 true显示）默认false
+     * @param integer $Opt 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为2 <br> 请注意，opt=1的时候请从腾讯云智能体开发平台页面下载excel模板
      * @param string $CateBizId 分类ID
      * @param boolean $IsDownload 是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义
      * @param array $DuplicateFileHandles 重复文档处理方式，按顺序匹配第一个满足条件的方式处理
@@ -567,7 +574,8 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
 | 字段名       | 类型   | 说明                                                                 |
 |--------------|--------|----------------------------------------------------------------------|
 | `table_style` | String | 指定表格内容的输出格式。可用值：<br>• `"html"`：以 HTML 表格形式返回，适合网页展示。<br>• `"md"`：以 Markdown 表格语法返回，适合文档或 Markdown 渲染环境。|
-     * @param UpdatePeriodInfo $UpdatePeriodInfo 文档更新频率
+     * @param UpdatePeriodInfo $UpdatePeriodInfo 文档更新频率，默认值为0不更新
+     * @param integer $EnableScope 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
      */
     function __construct()
     {
@@ -675,6 +683,10 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
         if (array_key_exists("UpdatePeriodInfo",$param) and $param["UpdatePeriodInfo"] !== null) {
             $this->UpdatePeriodInfo = new UpdatePeriodInfo();
             $this->UpdatePeriodInfo->deserialize($param["UpdatePeriodInfo"]);
+        }
+
+        if (array_key_exists("EnableScope",$param) and $param["EnableScope"] !== null) {
+            $this->EnableScope = $param["EnableScope"];
         }
     }
 }

@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * CreateQA请求参数结构体
  *
  * @method string getBotBizId() 获取应用ID
+若要操作共享知识库，传KnowledgeBizId
  * @method void setBotBizId(string $BotBizId) 设置应用ID
+若要操作共享知识库，传KnowledgeBizId
  * @method string getQuestion() 获取问题
  * @method void setQuestion(string $Question) 设置问题
  * @method string getAnswer() 获取答案
@@ -36,19 +38,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDocBizId(string $DocBizId) 设置文档ID
  * @method string getCateBizId() 获取分类ID
  * @method void setCateBizId(string $CateBizId) 设置分类ID
- * @method string getExpireStart() 获取有效开始时间，unix时间戳
- * @method void setExpireStart(string $ExpireStart) 设置有效开始时间，unix时间戳
+ * @method string getExpireStart() 获取有效开始时间，单位是unix时间戳。默认值为0，表示问答为永久有效.
+ * @method void setExpireStart(string $ExpireStart) 设置有效开始时间，单位是unix时间戳。默认值为0，表示问答为永久有效.
  * @method string getExpireEnd() 获取有效结束时间，unix时间戳，0代表永久有效
  * @method void setExpireEnd(string $ExpireEnd) 设置有效结束时间，unix时间戳，0代表永久有效
  * @method array getSimilarQuestions() 获取相似问内容
  * @method void setSimilarQuestions(array $SimilarQuestions) 设置相似问内容
  * @method string getQuestionDesc() 获取问题描述
  * @method void setQuestionDesc(string $QuestionDesc) 设置问题描述
+ * @method integer getEnableScope() 获取问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+ * @method void setEnableScope(integer $EnableScope) 设置问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
  */
 class CreateQARequest extends AbstractModel
 {
     /**
      * @var string 应用ID
+若要操作共享知识库，传KnowledgeBizId
      */
     public $BotBizId;
 
@@ -88,7 +93,7 @@ class CreateQARequest extends AbstractModel
     public $CateBizId;
 
     /**
-     * @var string 有效开始时间，unix时间戳
+     * @var string 有效开始时间，单位是unix时间戳。默认值为0，表示问答为永久有效.
      */
     public $ExpireStart;
 
@@ -108,7 +113,13 @@ class CreateQARequest extends AbstractModel
     public $QuestionDesc;
 
     /**
+     * @var integer 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     */
+    public $EnableScope;
+
+    /**
      * @param string $BotBizId 应用ID
+若要操作共享知识库，传KnowledgeBizId
      * @param string $Question 问题
      * @param string $Answer 答案
      * @param integer $AttrRange 标签适用范围 1：全部，2：按条件
@@ -116,10 +127,11 @@ class CreateQARequest extends AbstractModel
      * @param array $AttrLabels 标签引用
      * @param string $DocBizId 文档ID
      * @param string $CateBizId 分类ID
-     * @param string $ExpireStart 有效开始时间，unix时间戳
+     * @param string $ExpireStart 有效开始时间，单位是unix时间戳。默认值为0，表示问答为永久有效.
      * @param string $ExpireEnd 有效结束时间，unix时间戳，0代表永久有效
      * @param array $SimilarQuestions 相似问内容
      * @param string $QuestionDesc 问题描述
+     * @param integer $EnableScope 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
      */
     function __construct()
     {
@@ -185,6 +197,10 @@ class CreateQARequest extends AbstractModel
 
         if (array_key_exists("QuestionDesc",$param) and $param["QuestionDesc"] !== null) {
             $this->QuestionDesc = $param["QuestionDesc"];
+        }
+
+        if (array_key_exists("EnableScope",$param) and $param["EnableScope"] !== null) {
+            $this->EnableScope = $param["EnableScope"];
         }
     }
 }

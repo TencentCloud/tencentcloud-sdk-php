@@ -25,11 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getResourceId() 获取资源文件ID,可通过ListResourceFiles接口获取
  * @method void setResourceId(string $ResourceId) 设置资源文件ID,可通过ListResourceFiles接口获取
  * @method string getResourceFile() 获取- 上传文件及手填两种方式只能选择其一，如果两者均提供，取值顺序为文件>手填值
--  手填值必须是存在的cos路径, /datastudio/resource/ 为固定前缀, projectId 为项目ID,需传入具体值, parentFolderPath为父文件夹路径, name为文件名, 手填值取值示例:
+-  手填值必须是存在的cos路径, parentFolderPath为父文件夹路径, name为文件名, 手填值取值示例:
      /datastudio/resource/projectId/parentFolderPath/name 
 
  * @method void setResourceFile(string $ResourceFile) 设置- 上传文件及手填两种方式只能选择其一，如果两者均提供，取值顺序为文件>手填值
--  手填值必须是存在的cos路径, /datastudio/resource/ 为固定前缀, projectId 为项目ID,需传入具体值, parentFolderPath为父文件夹路径, name为文件名, 手填值取值示例:
+-  手填值必须是存在的cos路径, parentFolderPath为父文件夹路径, name为文件名, 手填值取值示例:
      /datastudio/resource/projectId/parentFolderPath/name 
 
  * @method string getResourceName() 获取资源名称, 尽可能和文件名保持一致
@@ -53,7 +53,7 @@ class UpdateResourceFileRequest extends AbstractModel
 
     /**
      * @var string - 上传文件及手填两种方式只能选择其一，如果两者均提供，取值顺序为文件>手填值
--  手填值必须是存在的cos路径, /datastudio/resource/ 为固定前缀, projectId 为项目ID,需传入具体值, parentFolderPath为父文件夹路径, name为文件名, 手填值取值示例:
+-  手填值必须是存在的cos路径, parentFolderPath为父文件夹路径, name为文件名, 手填值取值示例:
      /datastudio/resource/projectId/parentFolderPath/name 
 
      */
@@ -78,7 +78,7 @@ class UpdateResourceFileRequest extends AbstractModel
      * @param string $ProjectId 项目ID
      * @param string $ResourceId 资源文件ID,可通过ListResourceFiles接口获取
      * @param string $ResourceFile - 上传文件及手填两种方式只能选择其一，如果两者均提供，取值顺序为文件>手填值
--  手填值必须是存在的cos路径, /datastudio/resource/ 为固定前缀, projectId 为项目ID,需传入具体值, parentFolderPath为父文件夹路径, name为文件名, 手填值取值示例:
+-  手填值必须是存在的cos路径, parentFolderPath为父文件夹路径, name为文件名, 手填值取值示例:
      /datastudio/resource/projectId/parentFolderPath/name 
 
      * @param string $ResourceName 资源名称, 尽可能和文件名保持一致

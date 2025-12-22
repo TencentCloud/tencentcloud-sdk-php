@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupJobId(integer $BackupJobId) 设置备份实例id
  * @method integer getTaskId() 获取实例对应Snapshot的id
  * @method void setTaskId(integer $TaskId) 设置实例对应Snapshot的id
+ * @method integer getUploadBytes() 获取上传大小
+ * @method void setUploadBytes(integer $UploadBytes) 设置上传大小
  */
 class BackupStatus extends AbstractModel
 {
@@ -136,6 +138,11 @@ class BackupStatus extends AbstractModel
     public $TaskId;
 
     /**
+     * @var integer 上传大小
+     */
+    public $UploadBytes;
+
+    /**
      * @param integer $JobId 备份任务id
      * @param string $SnapshotName 快照名称
      * @param string $DbName 库名
@@ -152,6 +159,7 @@ class BackupStatus extends AbstractModel
      * @param integer $Timeout 超时信息
      * @param integer $BackupJobId 备份实例id
      * @param integer $TaskId 实例对应Snapshot的id
+     * @param integer $UploadBytes 上传大小
      */
     function __construct()
     {
@@ -228,6 +236,10 @@ class BackupStatus extends AbstractModel
 
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("UploadBytes",$param) and $param["UploadBytes"] !== null) {
+            $this->UploadBytes = $param["UploadBytes"];
         }
     }
 }

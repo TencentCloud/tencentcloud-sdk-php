@@ -194,16 +194,16 @@ Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font
 如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 
 
 p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
- * @method string getOrganizationIdCardType() 获取企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li></ul>
+ * @method string getOrganizationIdCardType() 获取企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li><li> **CLINICFILLINGCERTIFICATE** :诊所备案证</li></ul>
 
 注意 ：
-如果企业证照类型是医疗机构，则参数设置企业授权方式(AuthorizationTypes)和企业认证方式(AuthorizationMethods)都无效.
-医疗机构的企业授权方式  仅有授权书的方式。企业认证仅有上传营业执照的方式。
- * @method void setOrganizationIdCardType(string $OrganizationIdCardType) 设置企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li></ul>
+如果企业证照类型是医疗机构执业许可证或者诊所备案证，则参数设置企业授权方式(AuthorizationTypes)和企业认证方式(AuthorizationMethods)都无效.
+医疗机构执业许可证和诊所备案证的企业授权方式  仅有授权书的方式。企业认证仅有上传营业执照的方式。
+ * @method void setOrganizationIdCardType(string $OrganizationIdCardType) 设置企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li><li> **CLINICFILLINGCERTIFICATE** :诊所备案证</li></ul>
 
 注意 ：
-如果企业证照类型是医疗机构，则参数设置企业授权方式(AuthorizationTypes)和企业认证方式(AuthorizationMethods)都无效.
-医疗机构的企业授权方式  仅有授权书的方式。企业认证仅有上传营业执照的方式。
+如果企业证照类型是医疗机构执业许可证或者诊所备案证，则参数设置企业授权方式(AuthorizationTypes)和企业认证方式(AuthorizationMethods)都无效.
+医疗机构执业许可证和诊所备案证的企业授权方式  仅有授权书的方式。企业认证仅有上传营业执照的方式。
  * @method boolean getOrganizationIdCardTypeSame() 获取是否允许编辑企业注册时的证照类型
 
 true:不允许编辑。
@@ -435,11 +435,11 @@ p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，
     public $JumpEvents;
 
     /**
-     * @var string 企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li></ul>
+     * @var string 企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li><li> **CLINICFILLINGCERTIFICATE** :诊所备案证</li></ul>
 
 注意 ：
-如果企业证照类型是医疗机构，则参数设置企业授权方式(AuthorizationTypes)和企业认证方式(AuthorizationMethods)都无效.
-医疗机构的企业授权方式  仅有授权书的方式。企业认证仅有上传营业执照的方式。
+如果企业证照类型是医疗机构执业许可证或者诊所备案证，则参数设置企业授权方式(AuthorizationTypes)和企业认证方式(AuthorizationMethods)都无效.
+医疗机构执业许可证和诊所备案证的企业授权方式  仅有授权书的方式。企业认证仅有上传营业执照的方式。
      */
     public $OrganizationIdCardType;
 
@@ -559,11 +559,11 @@ Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font
 如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 
 
 p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
-     * @param string $OrganizationIdCardType 企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li></ul>
+     * @param string $OrganizationIdCardType 企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li><li> **CLINICFILLINGCERTIFICATE** :诊所备案证</li></ul>
 
 注意 ：
-如果企业证照类型是医疗机构，则参数设置企业授权方式(AuthorizationTypes)和企业认证方式(AuthorizationMethods)都无效.
-医疗机构的企业授权方式  仅有授权书的方式。企业认证仅有上传营业执照的方式。
+如果企业证照类型是医疗机构执业许可证或者诊所备案证，则参数设置企业授权方式(AuthorizationTypes)和企业认证方式(AuthorizationMethods)都无效.
+医疗机构执业许可证和诊所备案证的企业授权方式  仅有授权书的方式。企业认证仅有上传营业执照的方式。
      * @param boolean $OrganizationIdCardTypeSame 是否允许编辑企业注册时的证照类型
 
 true:不允许编辑。

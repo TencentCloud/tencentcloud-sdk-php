@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * ModifyQA请求参数结构体
  *
  * @method string getBotBizId() 获取应用ID
+若要操作共享知识库，传KnowledgeBizId
  * @method void setBotBizId(string $BotBizId) 设置应用ID
+若要操作共享知识库，传KnowledgeBizId
  * @method string getQaBizId() 获取问答ID
  * @method void setQaBizId(string $QaBizId) 设置问答ID
  * @method string getQuestion() 获取问题
@@ -31,26 +33,33 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCustomParam() 获取自定义参数
  * @method void setCustomParam(string $CustomParam) 设置自定义参数
  * @method integer getAttrRange() 获取标签适用范围 1：全部，2：按条件
+默认值：当没有属性标签，labelRefers为空时，默认值为1
+有属性标签，labelRefers不为空，默认值为2
  * @method void setAttrRange(integer $AttrRange) 设置标签适用范围 1：全部，2：按条件
+默认值：当没有属性标签，labelRefers为空时，默认值为1
+有属性标签，labelRefers不为空，默认值为2
  * @method array getAttrLabels() 获取标签引用
  * @method void setAttrLabels(array $AttrLabels) 设置标签引用
  * @method string getDocBizId() 获取文档ID
  * @method void setDocBizId(string $DocBizId) 设置文档ID
  * @method string getCateBizId() 获取分类ID
  * @method void setCateBizId(string $CateBizId) 设置分类ID
- * @method string getExpireStart() 获取有效开始时间，unix时间戳
- * @method void setExpireStart(string $ExpireStart) 设置有效开始时间，unix时间戳
- * @method string getExpireEnd() 获取有效结束时间，unix时间戳，0代表永久有效
- * @method void setExpireEnd(string $ExpireEnd) 设置有效结束时间，unix时间戳，0代表永久有效
+ * @method string getExpireStart() 获取有效开始时间，单位是unix时间戳，默认值为0，代表永久有效
+ * @method void setExpireStart(string $ExpireStart) 设置有效开始时间，单位是unix时间戳，默认值为0，代表永久有效
+ * @method string getExpireEnd() 获取有效结束时间，单位是unix时间戳，默认值为0，代表永久有效
+ * @method void setExpireEnd(string $ExpireEnd) 设置有效结束时间，单位是unix时间戳，默认值为0，代表永久有效
  * @method SimilarQuestionModify getSimilarQuestionModify() 获取相似问修改信息(相似问没有修改则不传)
  * @method void setSimilarQuestionModify(SimilarQuestionModify $SimilarQuestionModify) 设置相似问修改信息(相似问没有修改则不传)
  * @method string getQuestionDesc() 获取问题描述
  * @method void setQuestionDesc(string $QuestionDesc) 设置问题描述
+ * @method integer getEnableScope() 获取问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+ * @method void setEnableScope(integer $EnableScope) 设置问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
  */
 class ModifyQARequest extends AbstractModel
 {
     /**
      * @var string 应用ID
+若要操作共享知识库，传KnowledgeBizId
      */
     public $BotBizId;
 
@@ -76,6 +85,8 @@ class ModifyQARequest extends AbstractModel
 
     /**
      * @var integer 标签适用范围 1：全部，2：按条件
+默认值：当没有属性标签，labelRefers为空时，默认值为1
+有属性标签，labelRefers不为空，默认值为2
      */
     public $AttrRange;
 
@@ -95,12 +106,12 @@ class ModifyQARequest extends AbstractModel
     public $CateBizId;
 
     /**
-     * @var string 有效开始时间，unix时间戳
+     * @var string 有效开始时间，单位是unix时间戳，默认值为0，代表永久有效
      */
     public $ExpireStart;
 
     /**
-     * @var string 有效结束时间，unix时间戳，0代表永久有效
+     * @var string 有效结束时间，单位是unix时间戳，默认值为0，代表永久有效
      */
     public $ExpireEnd;
 
@@ -115,19 +126,28 @@ class ModifyQARequest extends AbstractModel
     public $QuestionDesc;
 
     /**
+     * @var integer 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     */
+    public $EnableScope;
+
+    /**
      * @param string $BotBizId 应用ID
+若要操作共享知识库，传KnowledgeBizId
      * @param string $QaBizId 问答ID
      * @param string $Question 问题
      * @param string $Answer 答案
      * @param string $CustomParam 自定义参数
      * @param integer $AttrRange 标签适用范围 1：全部，2：按条件
+默认值：当没有属性标签，labelRefers为空时，默认值为1
+有属性标签，labelRefers不为空，默认值为2
      * @param array $AttrLabels 标签引用
      * @param string $DocBizId 文档ID
      * @param string $CateBizId 分类ID
-     * @param string $ExpireStart 有效开始时间，unix时间戳
-     * @param string $ExpireEnd 有效结束时间，unix时间戳，0代表永久有效
+     * @param string $ExpireStart 有效开始时间，单位是unix时间戳，默认值为0，代表永久有效
+     * @param string $ExpireEnd 有效结束时间，单位是unix时间戳，默认值为0，代表永久有效
      * @param SimilarQuestionModify $SimilarQuestionModify 相似问修改信息(相似问没有修改则不传)
      * @param string $QuestionDesc 问题描述
+     * @param integer $EnableScope 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
      */
     function __construct()
     {
@@ -198,6 +218,10 @@ class ModifyQARequest extends AbstractModel
 
         if (array_key_exists("QuestionDesc",$param) and $param["QuestionDesc"] !== null) {
             $this->QuestionDesc = $param["QuestionDesc"];
+        }
+
+        if (array_key_exists("EnableScope",$param) and $param["EnableScope"] !== null) {
+            $this->EnableScope = $param["EnableScope"];
         }
     }
 }

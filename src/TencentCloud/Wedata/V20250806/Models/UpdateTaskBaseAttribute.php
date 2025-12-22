@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOwnerUin(string $OwnerUin) 设置任务负责人ID
  * @method string getTaskDescription() 获取任务描述
  * @method void setTaskDescription(string $TaskDescription) 设置任务描述
+ * @method string getTaskFolderPath() 获取注意：
+- 路径上不要填写任务节点类型；例如，在 一个名为 wf01 的工作流，“通用” 分类下，现在想要在这个分类下的 tf_01 文件夹下，新建一个 shell 任务；则 填写 /tf_01 即可；
+- 如果 tf_01 文件夹不存在，则需要先创建这个文件夹（使用 CreateTaskFolder 接口）才能操作成功；
+ * @method void setTaskFolderPath(string $TaskFolderPath) 设置注意：
+- 路径上不要填写任务节点类型；例如，在 一个名为 wf01 的工作流，“通用” 分类下，现在想要在这个分类下的 tf_01 文件夹下，新建一个 shell 任务；则 填写 /tf_01 即可；
+- 如果 tf_01 文件夹不存在，则需要先创建这个文件夹（使用 CreateTaskFolder 接口）才能操作成功；
  */
 class UpdateTaskBaseAttribute extends AbstractModel
 {
@@ -45,9 +51,19 @@ class UpdateTaskBaseAttribute extends AbstractModel
     public $TaskDescription;
 
     /**
+     * @var string 注意：
+- 路径上不要填写任务节点类型；例如，在 一个名为 wf01 的工作流，“通用” 分类下，现在想要在这个分类下的 tf_01 文件夹下，新建一个 shell 任务；则 填写 /tf_01 即可；
+- 如果 tf_01 文件夹不存在，则需要先创建这个文件夹（使用 CreateTaskFolder 接口）才能操作成功；
+     */
+    public $TaskFolderPath;
+
+    /**
      * @param string $TaskName 任务名称
      * @param string $OwnerUin 任务负责人ID
      * @param string $TaskDescription 任务描述
+     * @param string $TaskFolderPath 注意：
+- 路径上不要填写任务节点类型；例如，在 一个名为 wf01 的工作流，“通用” 分类下，现在想要在这个分类下的 tf_01 文件夹下，新建一个 shell 任务；则 填写 /tf_01 即可；
+- 如果 tf_01 文件夹不存在，则需要先创建这个文件夹（使用 CreateTaskFolder 接口）才能操作成功；
      */
     function __construct()
     {
@@ -72,6 +88,10 @@ class UpdateTaskBaseAttribute extends AbstractModel
 
         if (array_key_exists("TaskDescription",$param) and $param["TaskDescription"] !== null) {
             $this->TaskDescription = $param["TaskDescription"];
+        }
+
+        if (array_key_exists("TaskFolderPath",$param) and $param["TaskFolderPath"] !== null) {
+            $this->TaskFolderPath = $param["TaskFolderPath"];
         }
     }
 }

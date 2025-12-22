@@ -31,6 +31,7 @@ use TencentCloud\Vclm\V20240523\Models as Models;
  * @method Models\DescribePortraitSingJobResponse DescribePortraitSingJob(Models\DescribePortraitSingJobRequest $req) 用于查询图片唱演任务。
 支持提交音频和图片生成唱演视频，满足社交娱乐、互动营销等场景的需求。
  * @method Models\DescribeTemplateToVideoJobResponse DescribeTemplateToVideoJob(Models\DescribeTemplateToVideoJobRequest $req) 用于查询视频特效任务。
+ * @method Models\DescribeVideoEditJobResponse DescribeVideoEditJob(Models\DescribeVideoEditJobRequest $req) 用于提交视频编辑任务，支持上传视频、文本及图片素材开展编辑操作，涵盖风格迁移、元素替换、内容增减等核心能力。
  * @method Models\DescribeVideoFaceFusionJobResponse DescribeVideoFaceFusionJob(Models\DescribeVideoFaceFusionJobRequest $req) 查询视频人脸融合任务
  * @method Models\DescribeVideoStylizationJobResponse DescribeVideoStylizationJob(Models\DescribeVideoStylizationJobRequest $req) 用于查询视频风格化任务。视频风格化支持将输入视频生成特定风格的视频。生成后的视频画面风格多样、流畅自然，能够满足社交娱乐、互动营销、视频素材制作等场景的需求。
  * @method Models\DescribeVideoVoiceJobResponse DescribeVideoVoiceJob(Models\DescribeVideoVoiceJobRequest $req) 通过JobId提交请求，获取视频配音频任务的结果信息。
@@ -44,6 +45,7 @@ use TencentCloud\Vclm\V20240523\Models as Models;
  * @method Models\SubmitPortraitSingJobResponse SubmitPortraitSingJob(Models\SubmitPortraitSingJobRequest $req) 用于提交图片唱演任务。
 支持提交音频和图片生成唱演视频，满足社交娱乐、互动营销等场景的需求。
  * @method Models\SubmitTemplateToVideoJobResponse SubmitTemplateToVideoJob(Models\SubmitTemplateToVideoJobRequest $req) 提交视频特效任务接口
+ * @method Models\SubmitVideoEditJobResponse SubmitVideoEditJob(Models\SubmitVideoEditJobRequest $req) 用于提交视频编辑任务，支持上传视频、文本及图片素材开展编辑操作，涵盖风格迁移、元素替换、内容增减等核心能力。
  * @method Models\SubmitVideoFaceFusionJobResponse SubmitVideoFaceFusionJob(Models\SubmitVideoFaceFusionJobRequest $req) 提交视频人脸融合任务
  * @method Models\SubmitVideoStylizationJobResponse SubmitVideoStylizationJob(Models\SubmitVideoStylizationJobRequest $req) 用于提交视频风格化任务。支持将输入视频生成特定风格的视频。生成后的视频画面风格多样、流畅自然，能够满足社交娱乐、互动营销、视频素材制作等场景的需求。
  * @method Models\SubmitVideoVoiceJobResponse SubmitVideoVoiceJob(Models\SubmitVideoVoiceJobRequest $req) 提交视频配音效任务，输入视频后提交请求，会返回一个JobId，用于查询视频配音效的处理进度。

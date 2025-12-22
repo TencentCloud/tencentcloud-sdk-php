@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthModeGM(AuthModeSetting $AuthModeGM) 设置国密认证方式设置
  * @method ReconnectionSetting getReconnection() 获取资产重连次数
  * @method void setReconnection(ReconnectionSetting $Reconnection) 设置资产重连次数
+ * @method EnvInternetAccessSetting getEnvInternetAccess() 获取大区环境网络设置
+ * @method void setEnvInternetAccess(EnvInternetAccessSetting $EnvInternetAccess) 设置大区环境网络设置
  */
 class SecuritySetting extends AbstractModel
 {
@@ -38,8 +40,14 @@ class SecuritySetting extends AbstractModel
     public $Reconnection;
 
     /**
+     * @var EnvInternetAccessSetting 大区环境网络设置
+     */
+    public $EnvInternetAccess;
+
+    /**
      * @param AuthModeSetting $AuthModeGM 国密认证方式设置
      * @param ReconnectionSetting $Reconnection 资产重连次数
+     * @param EnvInternetAccessSetting $EnvInternetAccess 大区环境网络设置
      */
     function __construct()
     {
@@ -62,6 +70,11 @@ class SecuritySetting extends AbstractModel
         if (array_key_exists("Reconnection",$param) and $param["Reconnection"] !== null) {
             $this->Reconnection = new ReconnectionSetting();
             $this->Reconnection->deserialize($param["Reconnection"]);
+        }
+
+        if (array_key_exists("EnvInternetAccess",$param) and $param["EnvInternetAccess"] !== null) {
+            $this->EnvInternetAccess = new EnvInternetAccessSetting();
+            $this->EnvInternetAccess->deserialize($param["EnvInternetAccess"]);
         }
     }
 }

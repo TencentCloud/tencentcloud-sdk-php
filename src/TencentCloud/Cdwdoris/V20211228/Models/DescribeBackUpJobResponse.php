@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrorMsg(string $ErrorMsg) 设置错误信息
  * @method integer getTotalCount() 获取总数
  * @method void setTotalCount(integer $TotalCount) 设置总数
+ * @method string getCurrentTime() 获取当前时间
+ * @method void setCurrentTime(string $CurrentTime) 设置当前时间
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,6 +49,11 @@ class DescribeBackUpJobResponse extends AbstractModel
     public $TotalCount;
 
     /**
+     * @var string 当前时间
+     */
+    public $CurrentTime;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +62,7 @@ class DescribeBackUpJobResponse extends AbstractModel
      * @param array $BackUpJobs 任务列表
      * @param string $ErrorMsg 错误信息
      * @param integer $TotalCount 总数
+     * @param string $CurrentTime 当前时间
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -85,6 +93,10 @@ class DescribeBackUpJobResponse extends AbstractModel
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("CurrentTime",$param) and $param["CurrentTime"] !== null) {
+            $this->CurrentTime = $param["CurrentTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

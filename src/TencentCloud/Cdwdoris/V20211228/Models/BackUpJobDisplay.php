@@ -52,6 +52,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapshotRemainPolicy(SnapshotRemainPolicy $SnapshotRemainPolicy) 设置快照保留策略
  * @method integer getIsolationCount() 获取隔离次数
  * @method void setIsolationCount(integer $IsolationCount) 设置隔离次数
+ * @method integer getEnableSecurityLock() 获取是否开启安全锁
+ * @method void setEnableSecurityLock(integer $EnableSecurityLock) 设置是否开启安全锁
+ * @method integer getGracePeriod() 获取宽限期天数
+ * @method void setGracePeriod(integer $GracePeriod) 设置宽限期天数
+ * @method string getGraceStartTime() 获取宽限期开始时间
+ * @method void setGraceStartTime(string $GraceStartTime) 设置宽限期开始时间
+ * @method boolean getIsWithinGracePeriod() 获取是否在宽限期内
+ * @method void setIsWithinGracePeriod(boolean $IsWithinGracePeriod) 设置是否在宽限期内
+ * @method boolean getUseManagedBucket() 获取是否使用托管桶
+ * @method void setUseManagedBucket(boolean $UseManagedBucket) 设置是否使用托管桶
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceName() 获取实例名称
+ * @method void setInstanceName(string $InstanceName) 设置实例名称
+ * @method string getInstanceStatus() 获取实例状态
+ * @method void setInstanceStatus(string $InstanceStatus) 设置实例状态
+ * @method string getInstanceStatusDesc() 获取实例状态描述
+ * @method void setInstanceStatusDesc(string $InstanceStatusDesc) 设置实例状态描述
+ * @method string getDataRemoteRegion() 获取备份远程桶地域
+ * @method void setDataRemoteRegion(string $DataRemoteRegion) 设置备份远程桶地域
+ * @method BucketEncryptionInfo getBucketEncryption() 获取桶加密状态信息
+ * @method void setBucketEncryption(BucketEncryptionInfo $BucketEncryption) 设置桶加密状态信息
+ * @method string getEncryption() 获取备份任务创建时记录的加密类型：SSE-COS/SSE-KMS/disabled
+ * @method void setEncryption(string $Encryption) 设置备份任务创建时记录的加密类型：SSE-COS/SSE-KMS/disabled
+ * @method boolean getEncryptionEnabled() 获取是否开通加密存储：0-未开通，1-已开通
+ * @method void setEncryptionEnabled(boolean $EncryptionEnabled) 设置是否开通加密存储：0-未开通，1-已开通
  */
 class BackUpJobDisplay extends AbstractModel
 {
@@ -136,6 +162,71 @@ class BackUpJobDisplay extends AbstractModel
     public $IsolationCount;
 
     /**
+     * @var integer 是否开启安全锁
+     */
+    public $EnableSecurityLock;
+
+    /**
+     * @var integer 宽限期天数
+     */
+    public $GracePeriod;
+
+    /**
+     * @var string 宽限期开始时间
+     */
+    public $GraceStartTime;
+
+    /**
+     * @var boolean 是否在宽限期内
+     */
+    public $IsWithinGracePeriod;
+
+    /**
+     * @var boolean 是否使用托管桶
+     */
+    public $UseManagedBucket;
+
+    /**
+     * @var string 实例ID
+     */
+    public $InstanceId;
+
+    /**
+     * @var string 实例名称
+     */
+    public $InstanceName;
+
+    /**
+     * @var string 实例状态
+     */
+    public $InstanceStatus;
+
+    /**
+     * @var string 实例状态描述
+     */
+    public $InstanceStatusDesc;
+
+    /**
+     * @var string 备份远程桶地域
+     */
+    public $DataRemoteRegion;
+
+    /**
+     * @var BucketEncryptionInfo 桶加密状态信息
+     */
+    public $BucketEncryption;
+
+    /**
+     * @var string 备份任务创建时记录的加密类型：SSE-COS/SSE-KMS/disabled
+     */
+    public $Encryption;
+
+    /**
+     * @var boolean 是否开通加密存储：0-未开通，1-已开通
+     */
+    public $EncryptionEnabled;
+
+    /**
      * @param integer $JobId 备份实例id
      * @param string $Snapshot 备份实例名
      * @param integer $BackUpSize 备份数据量
@@ -152,6 +243,19 @@ class BackUpJobDisplay extends AbstractModel
      * @param string $ErrorReason 错误原因
      * @param SnapshotRemainPolicy $SnapshotRemainPolicy 快照保留策略
      * @param integer $IsolationCount 隔离次数
+     * @param integer $EnableSecurityLock 是否开启安全锁
+     * @param integer $GracePeriod 宽限期天数
+     * @param string $GraceStartTime 宽限期开始时间
+     * @param boolean $IsWithinGracePeriod 是否在宽限期内
+     * @param boolean $UseManagedBucket 是否使用托管桶
+     * @param string $InstanceId 实例ID
+     * @param string $InstanceName 实例名称
+     * @param string $InstanceStatus 实例状态
+     * @param string $InstanceStatusDesc 实例状态描述
+     * @param string $DataRemoteRegion 备份远程桶地域
+     * @param BucketEncryptionInfo $BucketEncryption 桶加密状态信息
+     * @param string $Encryption 备份任务创建时记录的加密类型：SSE-COS/SSE-KMS/disabled
+     * @param boolean $EncryptionEnabled 是否开通加密存储：0-未开通，1-已开通
      */
     function __construct()
     {
@@ -231,6 +335,59 @@ class BackUpJobDisplay extends AbstractModel
 
         if (array_key_exists("IsolationCount",$param) and $param["IsolationCount"] !== null) {
             $this->IsolationCount = $param["IsolationCount"];
+        }
+
+        if (array_key_exists("EnableSecurityLock",$param) and $param["EnableSecurityLock"] !== null) {
+            $this->EnableSecurityLock = $param["EnableSecurityLock"];
+        }
+
+        if (array_key_exists("GracePeriod",$param) and $param["GracePeriod"] !== null) {
+            $this->GracePeriod = $param["GracePeriod"];
+        }
+
+        if (array_key_exists("GraceStartTime",$param) and $param["GraceStartTime"] !== null) {
+            $this->GraceStartTime = $param["GraceStartTime"];
+        }
+
+        if (array_key_exists("IsWithinGracePeriod",$param) and $param["IsWithinGracePeriod"] !== null) {
+            $this->IsWithinGracePeriod = $param["IsWithinGracePeriod"];
+        }
+
+        if (array_key_exists("UseManagedBucket",$param) and $param["UseManagedBucket"] !== null) {
+            $this->UseManagedBucket = $param["UseManagedBucket"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
+            $this->InstanceName = $param["InstanceName"];
+        }
+
+        if (array_key_exists("InstanceStatus",$param) and $param["InstanceStatus"] !== null) {
+            $this->InstanceStatus = $param["InstanceStatus"];
+        }
+
+        if (array_key_exists("InstanceStatusDesc",$param) and $param["InstanceStatusDesc"] !== null) {
+            $this->InstanceStatusDesc = $param["InstanceStatusDesc"];
+        }
+
+        if (array_key_exists("DataRemoteRegion",$param) and $param["DataRemoteRegion"] !== null) {
+            $this->DataRemoteRegion = $param["DataRemoteRegion"];
+        }
+
+        if (array_key_exists("BucketEncryption",$param) and $param["BucketEncryption"] !== null) {
+            $this->BucketEncryption = new BucketEncryptionInfo();
+            $this->BucketEncryption->deserialize($param["BucketEncryption"]);
+        }
+
+        if (array_key_exists("Encryption",$param) and $param["Encryption"] !== null) {
+            $this->Encryption = $param["Encryption"];
+        }
+
+        if (array_key_exists("EncryptionEnabled",$param) and $param["EncryptionEnabled"] !== null) {
+            $this->EncryptionEnabled = $param["EncryptionEnabled"];
         }
     }
 }

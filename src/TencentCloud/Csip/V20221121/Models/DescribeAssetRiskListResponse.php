@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCount(integer $TotalCount) 设置资产视角下风险数量
  * @method array getAssetRiskList() 获取资产视角下风险列表
  * @method void setAssetRiskList(array $AssetRiskList) 设置资产视角下风险列表
+ * @method array getStandardNameList() 获取等保规范名称集合
+ * @method void setStandardNameList(array $StandardNameList) 设置等保规范名称集合
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class DescribeAssetRiskListResponse extends AbstractModel
     public $AssetRiskList;
 
     /**
+     * @var array 等保规范名称集合
+     */
+    public $StandardNameList;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class DescribeAssetRiskListResponse extends AbstractModel
     /**
      * @param integer $TotalCount 资产视角下风险数量
      * @param array $AssetRiskList 资产视角下风险列表
+     * @param array $StandardNameList 等保规范名称集合
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -72,6 +80,15 @@ class DescribeAssetRiskListResponse extends AbstractModel
                 $obj = new AssetRiskItem();
                 $obj->deserialize($value);
                 array_push($this->AssetRiskList, $obj);
+            }
+        }
+
+        if (array_key_exists("StandardNameList",$param) and $param["StandardNameList"] !== null) {
+            $this->StandardNameList = [];
+            foreach ($param["StandardNameList"] as $key => $value){
+                $obj = new StandardItem();
+                $obj->deserialize($value);
+                array_push($this->StandardNameList, $obj);
             }
         }
 

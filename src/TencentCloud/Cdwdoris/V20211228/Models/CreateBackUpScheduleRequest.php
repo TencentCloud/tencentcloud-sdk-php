@@ -66,6 +66,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapshotRemainPolicy(SnapshotRemainPolicy $SnapshotRemainPolicy) 设置快照保留策略
  * @method string getDataRemoteRegion() 获取备份数据所在地域，当前地域应该为空
  * @method void setDataRemoteRegion(string $DataRemoteRegion) 设置备份数据所在地域，当前地域应该为空
+ * @method string getBucketType() 获取托管桶类型：standard-标准，maz-多可用区
+ * @method void setBucketType(string $BucketType) 设置托管桶类型：standard-标准，maz-多可用区
+ * @method integer getEnableSecurityLock() 获取是否开启安全锁：0-未开启，1-开启
+ * @method void setEnableSecurityLock(integer $EnableSecurityLock) 设置是否开启安全锁：0-未开启，1-开启
+ * @method integer getGracePeriod() 获取宽限期（天数）
+ * @method void setGracePeriod(integer $GracePeriod) 设置宽限期（天数）
  */
 class CreateBackUpScheduleRequest extends AbstractModel
 {
@@ -172,6 +178,21 @@ class CreateBackUpScheduleRequest extends AbstractModel
     public $DataRemoteRegion;
 
     /**
+     * @var string 托管桶类型：standard-标准，maz-多可用区
+     */
+    public $BucketType;
+
+    /**
+     * @var integer 是否开启安全锁：0-未开启，1-开启
+     */
+    public $EnableSecurityLock;
+
+    /**
+     * @var integer 宽限期（天数）
+     */
+    public $GracePeriod;
+
+    /**
      * @param string $InstanceId 集群id
      * @param string $OperationType 操作类型 create(创建) update(编辑修改)
      * @param integer $ScheduleId 编辑时需要传
@@ -195,6 +216,9 @@ class CreateBackUpScheduleRequest extends AbstractModel
      * @param string $CosBucket 当前任务的cos桶信息
      * @param SnapshotRemainPolicy $SnapshotRemainPolicy 快照保留策略
      * @param string $DataRemoteRegion 备份数据所在地域，当前地域应该为空
+     * @param string $BucketType 托管桶类型：standard-标准，maz-多可用区
+     * @param integer $EnableSecurityLock 是否开启安全锁：0-未开启，1-开启
+     * @param integer $GracePeriod 宽限期（天数）
      */
     function __construct()
     {
@@ -288,6 +312,18 @@ class CreateBackUpScheduleRequest extends AbstractModel
 
         if (array_key_exists("DataRemoteRegion",$param) and $param["DataRemoteRegion"] !== null) {
             $this->DataRemoteRegion = $param["DataRemoteRegion"];
+        }
+
+        if (array_key_exists("BucketType",$param) and $param["BucketType"] !== null) {
+            $this->BucketType = $param["BucketType"];
+        }
+
+        if (array_key_exists("EnableSecurityLock",$param) and $param["EnableSecurityLock"] !== null) {
+            $this->EnableSecurityLock = $param["EnableSecurityLock"];
+        }
+
+        if (array_key_exists("GracePeriod",$param) and $param["GracePeriod"] !== null) {
+            $this->GracePeriod = $param["GracePeriod"];
         }
     }
 }

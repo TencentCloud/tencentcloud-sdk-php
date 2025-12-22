@@ -68,6 +68,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsDisabled(boolean $IsDisabled) 设置问答是否停用，false:未停用，ture:已停用
  * @method string getStaffName() 获取员工名称
  * @method void setStaffName(string $StaffName) 设置员工名称
+ * @method integer getEnableScope() 获取问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableScope(integer $EnableScope) 设置问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDocEnableScope() 获取问答关联的文档生效域
+ * @method void setDocEnableScope(integer $DocEnableScope) 设置问答关联的文档生效域
  */
 class ListQaItem extends AbstractModel
 {
@@ -192,6 +198,17 @@ class ListQaItem extends AbstractModel
     public $StaffName;
 
     /**
+     * @var integer 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableScope;
+
+    /**
+     * @var integer 问答关联的文档生效域
+     */
+    public $DocEnableScope;
+
+    /**
      * @param string $QaBizId 问答ID
      * @param string $Question 问题
      * @param string $Answer 答案
@@ -216,6 +233,9 @@ class ListQaItem extends AbstractModel
      * @param string $SimilarQuestionTips 返回问答关联的相似问,联动搜索,仅展示一条
      * @param boolean $IsDisabled 问答是否停用，false:未停用，ture:已停用
      * @param string $StaffName 员工名称
+     * @param integer $EnableScope 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DocEnableScope 问答关联的文档生效域
      */
     function __construct()
     {
@@ -329,6 +349,14 @@ class ListQaItem extends AbstractModel
 
         if (array_key_exists("StaffName",$param) and $param["StaffName"] !== null) {
             $this->StaffName = $param["StaffName"];
+        }
+
+        if (array_key_exists("EnableScope",$param) and $param["EnableScope"] !== null) {
+            $this->EnableScope = $param["EnableScope"];
+        }
+
+        if (array_key_exists("DocEnableScope",$param) and $param["DocEnableScope"] !== null) {
+            $this->DocEnableScope = $param["DocEnableScope"];
         }
     }
 }

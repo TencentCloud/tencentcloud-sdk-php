@@ -98,6 +98,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIntranetPrivateIpSet(array $IntranetPrivateIpSet) 设置内网访问的ip
  * @method string getIntranetVpcId() 获取开通内网访问的vpc
  * @method void setIntranetVpcId(string $IntranetVpcId) 设置开通内网访问的vpc
+ * @method string getIntranetSubnetId() 获取开通内网访问的subnetId
+ * @method void setIntranetSubnetId(string $IntranetSubnetId) 设置开通内网访问的subnetId
  * @method string getIntranetVpcCidr() 获取开通内网访问vpc的网段
  * @method void setIntranetVpcCidr(string $IntranetVpcCidr) 设置开通内网访问vpc的网段
  * @method string getDomainName() 获取堡垒机内网ip自定义域名
@@ -325,6 +327,11 @@ class Resource extends AbstractModel
     public $IntranetVpcId;
 
     /**
+     * @var string 开通内网访问的subnetId
+     */
+    public $IntranetSubnetId;
+
+    /**
      * @var string 开通内网访问vpc的网段
      */
     public $IntranetVpcCidr;
@@ -434,6 +441,7 @@ class Resource extends AbstractModel
      * @param integer $IntranetAccess 0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中
      * @param array $IntranetPrivateIpSet 内网访问的ip
      * @param string $IntranetVpcId 开通内网访问的vpc
+     * @param string $IntranetSubnetId 开通内网访问的subnetId
      * @param string $IntranetVpcCidr 开通内网访问vpc的网段
      * @param string $DomainName 堡垒机内网ip自定义域名
      * @param boolean $ShareClb 是否共享clb，true-共享clb，false-独享clb
@@ -621,6 +629,10 @@ class Resource extends AbstractModel
 
         if (array_key_exists("IntranetVpcId",$param) and $param["IntranetVpcId"] !== null) {
             $this->IntranetVpcId = $param["IntranetVpcId"];
+        }
+
+        if (array_key_exists("IntranetSubnetId",$param) and $param["IntranetSubnetId"] !== null) {
+            $this->IntranetSubnetId = $param["IntranetSubnetId"];
         }
 
         if (array_key_exists("IntranetVpcCidr",$param) and $param["IntranetVpcCidr"] !== null) {

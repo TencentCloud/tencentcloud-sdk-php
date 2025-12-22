@@ -160,6 +160,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateUserUin(string $CreateUserUin) 设置创建用户ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTaskFolderPath() 获取任务文件夹路径
+
+注意：
+- 路径上不要填写任务节点类型；例如，在 一个名为 wf01 的工作流，“通用” 分类下，现在想要在这个分类下的 tf_01 文件夹下，新建一个 shell 任务；则 填写 /tf_01 即可；
+- 如果 tf_01 文件夹不存在，则需要先创建这个文件夹（使用 CreateTaskFolder 接口）才能操作成功；
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskFolderPath(string $TaskFolderPath) 设置任务文件夹路径
+
+注意：
+- 路径上不要填写任务节点类型；例如，在 一个名为 wf01 的工作流，“通用” 分类下，现在想要在这个分类下的 tf_01 文件夹下，新建一个 shell 任务；则 填写 /tf_01 即可；
+- 如果 tf_01 文件夹不存在，则需要先创建这个文件夹（使用 CreateTaskFolder 接口）才能操作成功；
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskBaseAttribute extends AbstractModel
 {
@@ -306,6 +318,16 @@ class TaskBaseAttribute extends AbstractModel
     public $CreateUserUin;
 
     /**
+     * @var string 任务文件夹路径
+
+注意：
+- 路径上不要填写任务节点类型；例如，在 一个名为 wf01 的工作流，“通用” 分类下，现在想要在这个分类下的 tf_01 文件夹下，新建一个 shell 任务；则 填写 /tf_01 即可；
+- 如果 tf_01 文件夹不存在，则需要先创建这个文件夹（使用 CreateTaskFolder 接口）才能操作成功；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskFolderPath;
+
+    /**
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskTypeId 任务类型ID：
@@ -375,6 +397,12 @@ class TaskBaseAttribute extends AbstractModel
      * @param string $UpdateUserUin 最近一次更新用户ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateUserUin 创建用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaskFolderPath 任务文件夹路径
+
+注意：
+- 路径上不要填写任务节点类型；例如，在 一个名为 wf01 的工作流，“通用” 分类下，现在想要在这个分类下的 tf_01 文件夹下，新建一个 shell 任务；则 填写 /tf_01 即可；
+- 如果 tf_01 文件夹不存在，则需要先创建这个文件夹（使用 CreateTaskFolder 接口）才能操作成功；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -460,6 +488,10 @@ class TaskBaseAttribute extends AbstractModel
 
         if (array_key_exists("CreateUserUin",$param) and $param["CreateUserUin"] !== null) {
             $this->CreateUserUin = $param["CreateUserUin"];
+        }
+
+        if (array_key_exists("TaskFolderPath",$param) and $param["TaskFolderPath"] !== null) {
+            $this->TaskFolderPath = $param["TaskFolderPath"];
         }
     }
 }

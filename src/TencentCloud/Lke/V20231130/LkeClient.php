@@ -29,6 +29,9 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\CreateAttributeLabelResponse CreateAttributeLabel(Models\CreateAttributeLabelRequest $req) 创建标签
  * @method Models\CreateDocCateResponse CreateDocCate(Models\CreateDocCateRequest $req) 创建Doc分类
  * @method Models\CreateQAResponse CreateQA(Models\CreateQARequest $req) 录入问答
+知识库相关背景知识介绍
+“知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
+“标签”文档：https://cloud.tencent.com/document/product/1759/112956
  * @method Models\CreateQACateResponse CreateQACate(Models\CreateQACateRequest $req) 创建QA分类
  * @method Models\CreateRejectedQuestionResponse CreateRejectedQuestion(Models\CreateRejectedQuestionRequest $req) 创建拒答问题
  * @method Models\CreateReleaseResponse CreateRelease(Models\CreateReleaseRequest $req) 创建发布
@@ -95,6 +98,9 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\ListDocCateResponse ListDocCate(Models\ListDocCateRequest $req) 获取Doc分类
  * @method Models\ListModelResponse ListModel(Models\ListModelRequest $req) 获取模型列表
  * @method Models\ListQAResponse ListQA(Models\ListQARequest $req) 问答列表
+知识库相关背景知识介绍
+“知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
+“标签”文档：https://cloud.tencent.com/document/product/1759/112956
  * @method Models\ListQACateResponse ListQACate(Models\ListQACateRequest $req) 获取QA分类
  * @method Models\ListReferShareKnowledgeResponse ListReferShareKnowledge(Models\ListReferShareKnowledgeRequest $req) 查看应用引用了哪些共享知识库，可以看到共享知识库的基础信息，包括名称，id等
  * @method Models\ListRejectedQuestionResponse ListRejectedQuestion(Models\ListRejectedQuestionRequest $req) 获取拒答问题

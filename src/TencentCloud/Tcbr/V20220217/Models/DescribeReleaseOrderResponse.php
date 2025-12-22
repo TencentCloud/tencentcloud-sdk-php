@@ -1,0 +1,90 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Tcbr\V20220217\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * DescribeReleaseOrder返回参数结构体
+ *
+ * @method boolean getIsExist() 获取是否存在
+ * @method void setIsExist(boolean $IsExist) 设置是否存在
+ * @method ReleaseOrderInfo getReleaseOrderInfo() 获取发布单信息
+ * @method void setReleaseOrderInfo(ReleaseOrderInfo $ReleaseOrderInfo) 设置发布单信息
+ * @method string getLastReleasedSuccessTime() 获取上一次成功发布时间
+ * @method void setLastReleasedSuccessTime(string $LastReleasedSuccessTime) 设置上一次成功发布时间
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ */
+class DescribeReleaseOrderResponse extends AbstractModel
+{
+    /**
+     * @var boolean 是否存在
+     */
+    public $IsExist;
+
+    /**
+     * @var ReleaseOrderInfo 发布单信息
+     */
+    public $ReleaseOrderInfo;
+
+    /**
+     * @var string 上一次成功发布时间
+     */
+    public $LastReleasedSuccessTime;
+
+    /**
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+     */
+    public $RequestId;
+
+    /**
+     * @param boolean $IsExist 是否存在
+     * @param ReleaseOrderInfo $ReleaseOrderInfo 发布单信息
+     * @param string $LastReleasedSuccessTime 上一次成功发布时间
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("IsExist",$param) and $param["IsExist"] !== null) {
+            $this->IsExist = $param["IsExist"];
+        }
+
+        if (array_key_exists("ReleaseOrderInfo",$param) and $param["ReleaseOrderInfo"] !== null) {
+            $this->ReleaseOrderInfo = new ReleaseOrderInfo();
+            $this->ReleaseOrderInfo->deserialize($param["ReleaseOrderInfo"]);
+        }
+
+        if (array_key_exists("LastReleasedSuccessTime",$param) and $param["LastReleasedSuccessTime"] !== null) {
+            $this->LastReleasedSuccessTime = $param["LastReleasedSuccessTime"];
+        }
+
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
+        }
+    }
+}

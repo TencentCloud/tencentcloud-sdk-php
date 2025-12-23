@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccountBalance请求参数结构体
  *
-
+ * @method boolean getTempCredit() 获取是否查询临时额度
+ * @method void setTempCredit(boolean $TempCredit) 设置是否查询临时额度
  */
 class DescribeAccountBalanceRequest extends AbstractModel
 {
-
+    /**
+     * @var boolean 是否查询临时额度
+     */
+    public $TempCredit;
 
     /**
-
+     * @param boolean $TempCredit 是否查询临时额度
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeAccountBalanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("TempCredit",$param) and $param["TempCredit"] !== null) {
+            $this->TempCredit = $param["TempCredit"];
+        }
     }
 }

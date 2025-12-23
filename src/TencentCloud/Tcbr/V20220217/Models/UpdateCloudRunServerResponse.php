@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateCloudRunServer返回参数结构体
  *
- * @method string getEnvId() 获取环境Id
- * @method void setEnvId(string $EnvId) 设置环境Id
- * @method integer getTaskId() 获取一键部署任务Id，暂时用不到
- * @method void setTaskId(integer $TaskId) 设置一键部署任务Id，暂时用不到
+ * @method string getEnvId() 获取<p>环境Id</p>
+ * @method void setEnvId(string $EnvId) 设置<p>环境Id</p>
+ * @method integer getTaskId() 获取<p>一键部署任务Id，暂时用不到</p>
+ * @method void setTaskId(integer $TaskId) 设置<p>一键部署任务Id，暂时用不到</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class UpdateCloudRunServerResponse extends AbstractModel
 {
     /**
-     * @var string 环境Id
+     * @var string <p>环境Id</p>
      */
     public $EnvId;
 
     /**
-     * @var integer 一键部署任务Id，暂时用不到
+     * @var integer <p>一键部署任务Id，暂时用不到</p>
      */
     public $TaskId;
 
@@ -45,8 +45,8 @@ class UpdateCloudRunServerResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $EnvId 环境Id
-     * @param integer $TaskId 一键部署任务Id，暂时用不到
+     * @param string $EnvId <p>环境Id</p>
+     * @param integer $TaskId <p>一键部署任务Id，暂时用不到</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

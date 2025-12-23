@@ -20,98 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCloudRunEnv请求参数结构体
  *
- * @method string getPackageType() 获取Trial,Standard,Professional,Enterprise
- * @method void setPackageType(string $PackageType) 设置Trial,Standard,Professional,Enterprise
- * @method string getAlias() 获取环境别名，要以a-z开头，不能包含 a-z,0-9,- 以外的字符
- * @method void setAlias(string $Alias) 设置环境别名，要以a-z开头，不能包含 a-z,0-9,- 以外的字符
- * @method string getFreeQuota() 获取用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
- * @method void setFreeQuota(string $FreeQuota) 设置用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
- * @method string getFlag() 获取订单标记。建议使用方统一转大小写之后再判断。
-QuickStart：快速启动来源
-Activity：活动来源
- * @method void setFlag(string $Flag) 设置订单标记。建议使用方统一转大小写之后再判断。
-QuickStart：快速启动来源
-Activity：活动来源
- * @method string getVpcId() 获取私有网络Id
- * @method void setVpcId(string $VpcId) 设置私有网络Id
- * @method array getSubNetIds() 获取子网列表
- * @method void setSubNetIds(array $SubNetIds) 设置子网列表
- * @method string getReqKey() 获取请求key 用于防重
- * @method void setReqKey(string $ReqKey) 设置请求key 用于防重
- * @method string getSource() 获取来源：wechat | cloud | weda
- * @method void setSource(string $Source) 设置来源：wechat | cloud | weda
- * @method string getChannel() 获取渠道：wechat | cloud | weda
- * @method void setChannel(string $Channel) 设置渠道：wechat | cloud | weda
- * @method string getEnvId() 获取环境ID 云开发平台必填
- * @method void setEnvId(string $EnvId) 设置环境ID 云开发平台必填
+ * @method string getPackageType() 获取<p>Trial,Standard,Professional,Enterprise</p>
+ * @method void setPackageType(string $PackageType) 设置<p>Trial,Standard,Professional,Enterprise</p>
+ * @method string getAlias() 获取<p>环境别名，要以a-z开头，不能包含 a-z,0-9,- 以外的字符</p>
+ * @method void setAlias(string $Alias) 设置<p>环境别名，要以a-z开头，不能包含 a-z,0-9,- 以外的字符</p>
+ * @method string getFreeQuota() 获取<p>用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。</p>
+ * @method void setFreeQuota(string $FreeQuota) 设置<p>用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。</p>
+ * @method string getFlag() 获取<p>订单标记。建议使用方统一转大小写之后再判断。QuickStart：快速启动来源Activity：活动来源</p>
+ * @method void setFlag(string $Flag) 设置<p>订单标记。建议使用方统一转大小写之后再判断。QuickStart：快速启动来源Activity：活动来源</p>
+ * @method string getVpcId() 获取<p>私有网络Id</p>
+ * @method void setVpcId(string $VpcId) 设置<p>私有网络Id</p>
+ * @method array getSubNetIds() 获取<p>子网列表</p>
+ * @method void setSubNetIds(array $SubNetIds) 设置<p>子网列表</p>
+ * @method string getReqKey() 获取<p>请求key 用于防重</p>
+ * @method void setReqKey(string $ReqKey) 设置<p>请求key 用于防重</p>
+ * @method string getSource() 获取<p>来源：wechat | cloud | weda</p>
+ * @method void setSource(string $Source) 设置<p>来源：wechat | cloud | weda</p>
+ * @method string getChannel() 获取<p>渠道：wechat | cloud | weda</p>
+ * @method void setChannel(string $Channel) 设置<p>渠道：wechat | cloud | weda</p>
+ * @method string getEnvId() 获取<p>环境ID 云开发平台必填</p>
+ * @method void setEnvId(string $EnvId) 设置<p>环境ID 云开发平台必填</p>
  */
 class CreateCloudRunEnvRequest extends AbstractModel
 {
     /**
-     * @var string Trial,Standard,Professional,Enterprise
+     * @var string <p>Trial,Standard,Professional,Enterprise</p>
      */
     public $PackageType;
 
     /**
-     * @var string 环境别名，要以a-z开头，不能包含 a-z,0-9,- 以外的字符
+     * @var string <p>环境别名，要以a-z开头，不能包含 a-z,0-9,- 以外的字符</p>
      */
     public $Alias;
 
     /**
-     * @var string 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
+     * @var string <p>用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。</p>
      */
     public $FreeQuota;
 
     /**
-     * @var string 订单标记。建议使用方统一转大小写之后再判断。
-QuickStart：快速启动来源
-Activity：活动来源
+     * @var string <p>订单标记。建议使用方统一转大小写之后再判断。QuickStart：快速启动来源Activity：活动来源</p>
      */
     public $Flag;
 
     /**
-     * @var string 私有网络Id
+     * @var string <p>私有网络Id</p>
      */
     public $VpcId;
 
     /**
-     * @var array 子网列表
+     * @var array <p>子网列表</p>
      */
     public $SubNetIds;
 
     /**
-     * @var string 请求key 用于防重
+     * @var string <p>请求key 用于防重</p>
      */
     public $ReqKey;
 
     /**
-     * @var string 来源：wechat | cloud | weda
+     * @var string <p>来源：wechat | cloud | weda</p>
      */
     public $Source;
 
     /**
-     * @var string 渠道：wechat | cloud | weda
+     * @var string <p>渠道：wechat | cloud | weda</p>
      */
     public $Channel;
 
     /**
-     * @var string 环境ID 云开发平台必填
+     * @var string <p>环境ID 云开发平台必填</p>
      */
     public $EnvId;
 
     /**
-     * @param string $PackageType Trial,Standard,Professional,Enterprise
-     * @param string $Alias 环境别名，要以a-z开头，不能包含 a-z,0-9,- 以外的字符
-     * @param string $FreeQuota 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
-     * @param string $Flag 订单标记。建议使用方统一转大小写之后再判断。
-QuickStart：快速启动来源
-Activity：活动来源
-     * @param string $VpcId 私有网络Id
-     * @param array $SubNetIds 子网列表
-     * @param string $ReqKey 请求key 用于防重
-     * @param string $Source 来源：wechat | cloud | weda
-     * @param string $Channel 渠道：wechat | cloud | weda
-     * @param string $EnvId 环境ID 云开发平台必填
+     * @param string $PackageType <p>Trial,Standard,Professional,Enterprise</p>
+     * @param string $Alias <p>环境别名，要以a-z开头，不能包含 a-z,0-9,- 以外的字符</p>
+     * @param string $FreeQuota <p>用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。</p>
+     * @param string $Flag <p>订单标记。建议使用方统一转大小写之后再判断。QuickStart：快速启动来源Activity：活动来源</p>
+     * @param string $VpcId <p>私有网络Id</p>
+     * @param array $SubNetIds <p>子网列表</p>
+     * @param string $ReqKey <p>请求key 用于防重</p>
+     * @param string $Source <p>来源：wechat | cloud | weda</p>
+     * @param string $Channel <p>渠道：wechat | cloud | weda</p>
+     * @param string $EnvId <p>环境ID 云开发平台必填</p>
      */
     function __construct()
     {

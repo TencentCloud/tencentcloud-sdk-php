@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreditBalance(float $CreditBalance) 设置可用信用额度,单位 分
  * @method float getRealCreditBalance() 获取真实可用信用额度,单位 分
  * @method void setRealCreditBalance(float $RealCreditBalance) 设置真实可用信用额度,单位 分
+ * @method float getTempCredit() 获取临时额度，单位 分
+ * @method void setTempCredit(float $TempCredit) 设置临时额度，单位 分
+ * @method array getTempAmountInfoList() 获取临时额度详情
+ * @method void setTempAmountInfoList(array $TempAmountInfoList) 设置临时额度详情
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -119,6 +123,16 @@ class DescribeAccountBalanceResponse extends AbstractModel
     public $RealCreditBalance;
 
     /**
+     * @var float 临时额度，单位 分
+     */
+    public $TempCredit;
+
+    /**
+     * @var array 临时额度详情
+     */
+    public $TempAmountInfoList;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -137,6 +151,8 @@ class DescribeAccountBalanceResponse extends AbstractModel
      * @param float $CreditAmount 信用额度,单位 分
      * @param float $CreditBalance 可用信用额度,单位 分
      * @param float $RealCreditBalance 真实可用信用额度,单位 分
+     * @param float $TempCredit 临时额度，单位 分
+     * @param array $TempAmountInfoList 临时额度详情
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -202,6 +218,19 @@ class DescribeAccountBalanceResponse extends AbstractModel
 
         if (array_key_exists("RealCreditBalance",$param) and $param["RealCreditBalance"] !== null) {
             $this->RealCreditBalance = $param["RealCreditBalance"];
+        }
+
+        if (array_key_exists("TempCredit",$param) and $param["TempCredit"] !== null) {
+            $this->TempCredit = $param["TempCredit"];
+        }
+
+        if (array_key_exists("TempAmountInfoList",$param) and $param["TempAmountInfoList"] !== null) {
+            $this->TempAmountInfoList = [];
+            foreach ($param["TempAmountInfoList"] as $key => $value){
+                $obj = new UinTempAmountModel();
+                $obj->deserialize($value);
+                array_push($this->TempAmountInfoList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

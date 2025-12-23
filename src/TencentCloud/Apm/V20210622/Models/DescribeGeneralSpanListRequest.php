@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
 - asc(升序排序)
  * @method string getBusinessName() 获取业务自身服务名，控制台用户请填写taw
  * @method void setBusinessName(string $BusinessName) 设置业务自身服务名，控制台用户请填写taw
- * @method integer getLimit() 获取单页项目个数，默认为10000，合法取值范围为0～10000
- * @method void setLimit(integer $Limit) 设置单页项目个数，默认为10000，合法取值范围为0～10000
+ * @method integer getLimit() 获取单页项目个数，默认为1000，合法取值范围为1～1000
+ * @method void setLimit(integer $Limit) 设置单页项目个数，默认为1000，合法取值范围为1～1000
  * @method integer getOffset() 获取分页
  * @method void setOffset(integer $Offset) 设置分页
  */
@@ -100,7 +100,7 @@ class DescribeGeneralSpanListRequest extends AbstractModel
     public $BusinessName;
 
     /**
-     * @var integer 单页项目个数，默认为10000，合法取值范围为0～10000
+     * @var integer 单页项目个数，默认为1000，合法取值范围为1～1000
      */
     public $Limit;
 
@@ -126,7 +126,7 @@ class DescribeGeneralSpanListRequest extends AbstractModel
 - desc(降序排序)
 - asc(升序排序)
      * @param string $BusinessName 业务自身服务名，控制台用户请填写taw
-     * @param integer $Limit 单页项目个数，默认为10000，合法取值范围为0～10000
+     * @param integer $Limit 单页项目个数，默认为1000，合法取值范围为1～1000
      * @param integer $Offset 分页
      */
     function __construct()

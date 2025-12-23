@@ -233,12 +233,13 @@ Filters示例：
 Filters示例：
  [{ "Name": "TopicName", "Values": ["test_topic"] }]
 当前 API 适用集群：5.x 集群。4.x 集群的获取主题列表接口文档见 [DescribeRocketMQTopics](https://cloud.tencent.com/document/api/1179/63418)。
- * @method Models\DescribeTopicListByGroupResponse DescribeTopicListByGroup(Models\DescribeTopicListByGroupRequest $req) 根据消费组获取主题列表，Filter参数使用说明如下：
+ * @method Models\DescribeTopicListByGroupResponse DescribeTopicListByGroup(Models\DescribeTopicListByGroupRequest $req) 查询消费组订阅的主题列表，Filter参数使用说明如下：
 
 - TopicName 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
 
 Filters示例： 
 [{ "Name": "TopicName", "Values": ["test_topic"] }]
+当前 API 适用集群：5.x 集群。4.x 集群的查询消费组订阅的主题列表接口文档见 [DescribeRocketMQTopicsByGroup](https://cloud.tencent.com/document/product/1179/108863)。
  * @method Models\DoHealthCheckOnMigratingTopicResponse DoHealthCheckOnMigratingTopic(Models\DoHealthCheckOnMigratingTopicRequest $req) 检查迁移中的主题是否处于正常状态，只有处于正常状态的主题，才可以进入下一个迁移阶段
  * @method Models\ImportSourceClusterConsumerGroupsResponse ImportSourceClusterConsumerGroups(Models\ImportSourceClusterConsumerGroupsRequest $req) 导入消费者组列表
  * @method Models\ImportSourceClusterTopicsResponse ImportSourceClusterTopics(Models\ImportSourceClusterTopicsRequest $req) 导入topic列表

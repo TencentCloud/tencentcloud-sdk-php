@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCloudRunEnv返回参数结构体
  *
- * @method string getEnvId() 获取环境Id
- * @method void setEnvId(string $EnvId) 设置环境Id
- * @method string getTranId() 获取后付费订单号
- * @method void setTranId(string $TranId) 设置后付费订单号
+ * @method string getEnvId() 获取<p>环境Id</p>
+ * @method void setEnvId(string $EnvId) 设置<p>环境Id</p>
+ * @method string getTranId() 获取<p>后付费订单号</p>
+ * @method void setTranId(string $TranId) 设置<p>后付费订单号</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateCloudRunEnvResponse extends AbstractModel
 {
     /**
-     * @var string 环境Id
+     * @var string <p>环境Id</p>
      */
     public $EnvId;
 
     /**
-     * @var string 后付费订单号
+     * @var string <p>后付费订单号</p>
      */
     public $TranId;
 
@@ -45,8 +45,8 @@ class CreateCloudRunEnvResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $EnvId 环境Id
-     * @param string $TranId 后付费订单号
+     * @param string $EnvId <p>环境Id</p>
+     * @param string $TranId <p>后付费订单号</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

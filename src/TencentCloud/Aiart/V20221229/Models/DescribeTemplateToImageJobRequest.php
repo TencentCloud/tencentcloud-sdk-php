@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcbr\V20220217\Models;
+namespace TencentCloud\Aiart\V20221229\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeEnvBaseInfo请求参数结构体
+ * DescribeTemplateToImageJob请求参数结构体
  *
- * @method string getEnvId() 获取<p>环境 Id</p>
- * @method void setEnvId(string $EnvId) 设置<p>环境 Id</p>
+ * @method string getJobId() 获取任务 ID。
+ * @method void setJobId(string $JobId) 设置任务 ID。
  */
-class DescribeEnvBaseInfoRequest extends AbstractModel
+class DescribeTemplateToImageJobRequest extends AbstractModel
 {
     /**
-     * @var string <p>环境 Id</p>
+     * @var string 任务 ID。
      */
-    public $EnvId;
+    public $JobId;
 
     /**
-     * @param string $EnvId <p>环境 Id</p>
+     * @param string $JobId 任务 ID。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeEnvBaseInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
-            $this->EnvId = $param["EnvId"];
+        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
+            $this->JobId = $param["JobId"];
         }
     }
 }

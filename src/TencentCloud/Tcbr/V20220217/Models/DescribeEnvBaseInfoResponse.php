@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeEnvBaseInfo返回参数结构体
  *
- * @method EnvBaseInfo getEnvBaseInfo() 获取环境基础信息
- * @method void setEnvBaseInfo(EnvBaseInfo $EnvBaseInfo) 设置环境基础信息
- * @method boolean getIsExist() 获取是否存在
- * @method void setIsExist(boolean $IsExist) 设置是否存在
+ * @method EnvBaseInfo getEnvBaseInfo() 获取<p>环境基础信息</p>
+ * @method void setEnvBaseInfo(EnvBaseInfo $EnvBaseInfo) 设置<p>环境基础信息</p>
+ * @method boolean getIsExist() 获取<p>是否存在</p>
+ * @method void setIsExist(boolean $IsExist) 设置<p>是否存在</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeEnvBaseInfoResponse extends AbstractModel
 {
     /**
-     * @var EnvBaseInfo 环境基础信息
+     * @var EnvBaseInfo <p>环境基础信息</p>
      */
     public $EnvBaseInfo;
 
     /**
-     * @var boolean 是否存在
+     * @var boolean <p>是否存在</p>
      */
     public $IsExist;
 
@@ -45,8 +45,8 @@ class DescribeEnvBaseInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param EnvBaseInfo $EnvBaseInfo 环境基础信息
-     * @param boolean $IsExist 是否存在
+     * @param EnvBaseInfo $EnvBaseInfo <p>环境基础信息</p>
+     * @param boolean $IsExist <p>是否存在</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

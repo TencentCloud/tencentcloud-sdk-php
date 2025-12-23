@@ -171,6 +171,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
 <p style="color: red;">注意：自 2025 年 6 月 27 日起，旧版接口停止更新迭代，后续新增功能将仅在新版接口中提供。为避免在使用旧版接口时出现数据字段冲突，建议您尽早迁移到新版源站防护接口。</p>
  * @method Models\DescribeOverviewL7DataResponse DescribeOverviewL7Data(Models\DescribeOverviewL7DataRequest $req) 本接口（DescribeOverviewL7Data）用于查询七层监控类时序流量数据。此接口待废弃，请使用 <a href="https://cloud.tencent.com/document/product/1552/80648">DescribeTimingL7AnalysisData</a> 接口。
  * @method Models\DescribePlansResponse DescribePlans(Models\DescribePlansRequest $req) 查询套餐信息列表，支持分页。
+ * @method Models\DescribePrefetchOriginLimitResponse DescribePrefetchOriginLimit(Models\DescribePrefetchOriginLimitRequest $req) 本接口用于查询回源限速限制，该功能白名单内测中。
  * @method Models\DescribePrefetchTasksResponse DescribePrefetchTasks(Models\DescribePrefetchTasksRequest $req) DescribePrefetchTasks 用于查询预热任务提交历史记录及执行进度，通过 CreatePrefetchTasks 接口提交的任务可通过此接口进行查询。
  * @method Models\DescribePurgeTasksResponse DescribePurgeTasks(Models\DescribePurgeTasksRequest $req) DescribePurgeTasks 用于查询提交的 URL 刷新、目录刷新记录及执行进度，通过 CreatePurgeTasks 接口提交的任务均可通过此接口进行查询。
  * @method Models\DescribeRealtimeLogDeliveryTasksResponse DescribeRealtimeLogDeliveryTasks(Models\DescribeRealtimeLogDeliveryTasksRequest $req) 通过本接口查询实时日志投递任务列表。
@@ -268,6 +269,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\ModifyOriginACLResponse ModifyOriginACL(Models\ModifyOriginACLRequest $req) 本接口用于对七层加速域名/四层代理实例启用/关闭特定回源 IP 网段回源。单次支持提交的七层加速域名的数量最大为 200，四层代理实例的数量最大为 100，支持七层加速域名/四层代理实例混合提交，总实例个数最大为 200。如需变更超过 200 个实例，请通过本接口分批提交。
  * @method Models\ModifyOriginGroupResponse ModifyOriginGroup(Models\ModifyOriginGroupRequest $req) 修改源站组配置，新提交的源站记录将会覆盖原有源站组中的源站记录。
  * @method Models\ModifyPlanResponse ModifyPlan(Models\ModifyPlanRequest $req) 修改套餐配置。目前仅支持修改预付费套餐的自动续费开关。
+ * @method Models\ModifyPrefetchOriginLimitResponse ModifyPrefetchOriginLimit(Models\ModifyPrefetchOriginLimitRequest $req) 本接口用于配置回源限速限制，该功能白名单内测中。
+可通过此接口创建、修改与删除预热回源限速限制，每个账号最多支持 100 条限制。
  * @method Models\ModifyRealtimeLogDeliveryTaskResponse ModifyRealtimeLogDeliveryTask(Models\ModifyRealtimeLogDeliveryTaskRequest $req) 通过本接口修改实时日志投递任务配置。本接口有如下限制：<li>不支持修改实时日志投递任务目的地类型（TaskType）；</li><li>不支持修改数据投递类型（LogType）</li><li>不支持修改数据投递区域（Area）</li><li>当原实时日志投递任务的目的地为腾讯云 CLS 时，不支持修改目的地详细配置，如日志集、日志主题。</li>
  * @method Models\ModifyRuleResponse ModifyRule(Models\ModifyRuleRequest $req) 本接口为旧版本修改规则引擎接口，EdgeOne 于 2025 年 1 月 21 日已对规则引擎相关接口全面升级，新版本修改七层加速规则接口详情请参考 [ModifyL7AccRule](https://cloud.tencent.com/document/product/1552/115818)。
 <p style="color: red;">注意：自 2025 年 1 月 21 日起，旧版接口停止更新迭代，后续新增功能将仅在新版接口中提供，旧版接口支持的原有能力将不受影响。为避免在使用旧版接口时出现数据字段冲突，建议您尽早迁移到新版规则引擎接口。</p>

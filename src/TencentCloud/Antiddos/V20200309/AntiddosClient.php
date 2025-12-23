@@ -92,7 +92,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DescribeListListenerResponse DescribeListListener(Models\DescribeListListenerRequest $req) 获取转发监听器列表
  * @method Models\DescribeListPacketFilterConfigResponse DescribeListPacketFilterConfig(Models\DescribeListPacketFilterConfigRequest $req) 获取DDoS防护的特征过滤规则列表
  * @method Models\DescribeListPortAclListResponse DescribeListPortAclList(Models\DescribeListPortAclListRequest $req) 获取DDoS防护的端口acl策略列表
- * @method Models\DescribeListProtectThresholdConfigNewResponse DescribeListProtectThresholdConfigNew(Models\DescribeListProtectThresholdConfigNewRequest $req) 获取防护阈值配置列表，包括DDoS的AI、等级、CC阈值开关等等
+ * @method Models\DescribeListProtectThresholdConfigNewResponse DescribeListProtectThresholdConfigNew(Models\DescribeListProtectThresholdConfigNewRequest $req) 获取防护阈值配置列表，包括DDoS的AI、等级、CC阈值开关等。
  * @method Models\DescribeListProtocolBlockConfigResponse DescribeListProtocolBlockConfig(Models\DescribeListProtocolBlockConfigRequest $req) 获取DDoS防护的协议封禁配置列表
  * @method Models\DescribeListSchedulingDomainResponse DescribeListSchedulingDomain(Models\DescribeListSchedulingDomainRequest $req) 获取智能调度域名列表
  * @method Models\DescribeListWaterPrintConfigResponse DescribeListWaterPrintConfig(Models\DescribeListWaterPrintConfigRequest $req) 获取DDoS防护的水印防护配置列表

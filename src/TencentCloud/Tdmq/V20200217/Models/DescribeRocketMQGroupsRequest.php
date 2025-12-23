@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespaceId(string $NamespaceId) 设置消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取限制条数
- * @method void setLimit(integer $Limit) 设置限制条数
+ * @method integer getLimit() 获取单次查询最大条数。取值范围：[0~100]，默认值为20
+ * @method void setLimit(integer $Limit) 设置单次查询最大条数。取值范围：[0~100]，默认值为20
  * @method string getFilterTopic() 获取主题名称，输入此参数可查询该主题下所有的订阅组
  * @method void setFilterTopic(string $FilterTopic) 设置主题名称，输入此参数可查询该主题下所有的订阅组
  * @method string getFilterGroup() 获取按消费组名称查询消费组，支持模糊查询
@@ -61,7 +61,7 @@ class DescribeRocketMQGroupsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 限制条数
+     * @var integer 单次查询最大条数。取值范围：[0~100]，默认值为20
      */
     public $Limit;
 
@@ -104,7 +104,7 @@ class DescribeRocketMQGroupsRequest extends AbstractModel
      * @param string $ClusterId 集群ID
      * @param string $NamespaceId 消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      * @param integer $Offset 偏移量
-     * @param integer $Limit 限制条数
+     * @param integer $Limit 单次查询最大条数。取值范围：[0~100]，默认值为20
      * @param string $FilterTopic 主题名称，输入此参数可查询该主题下所有的订阅组
      * @param string $FilterGroup 按消费组名称查询消费组，支持模糊查询
      * @param string $SortedBy 按照指定字段排序，可选值为 subscribeNum: 订阅 Topic 个数

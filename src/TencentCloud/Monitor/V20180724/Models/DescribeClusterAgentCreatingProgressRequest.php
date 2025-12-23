@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusterAgentCreatingProgress请求参数结构体
  *
-
+ * @method string getInstanceId() 获取prom实例id
+ * @method void setInstanceId(string $InstanceId) 设置prom实例id
+ * @method array getClusterIds() 获取集群ids
+ * @method void setClusterIds(array $ClusterIds) 设置集群ids
  */
 class DescribeClusterAgentCreatingProgressRequest extends AbstractModel
 {
-
+    /**
+     * @var string prom实例id
+     */
+    public $InstanceId;
 
     /**
+     * @var array 集群ids
+     */
+    public $ClusterIds;
 
+    /**
+     * @param string $InstanceId prom实例id
+     * @param array $ClusterIds 集群ids
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class DescribeClusterAgentCreatingProgressRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
 
+        if (array_key_exists("ClusterIds",$param) and $param["ClusterIds"] !== null) {
+            $this->ClusterIds = $param["ClusterIds"];
+        }
     }
 }

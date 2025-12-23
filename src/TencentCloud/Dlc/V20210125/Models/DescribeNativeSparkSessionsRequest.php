@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataEngineId(string $DataEngineId) 设置引擎ID
  * @method string getResourceGroupId() 获取资源组ID
  * @method void setResourceGroupId(string $ResourceGroupId) 设置资源组ID
+ * @method string getProjectId() 获取项目ID
+ * @method void setProjectId(string $ProjectId) 设置项目ID
+ * @method string getUserUin() 获取用户Uin
+ * @method void setUserUin(string $UserUin) 设置用户Uin
  */
 class DescribeNativeSparkSessionsRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class DescribeNativeSparkSessionsRequest extends AbstractModel
     public $ResourceGroupId;
 
     /**
+     * @var string 项目ID
+     */
+    public $ProjectId;
+
+    /**
+     * @var string 用户Uin
+     */
+    public $UserUin;
+
+    /**
      * @param string $DataEngineId 引擎ID
      * @param string $ResourceGroupId 资源组ID
+     * @param string $ProjectId 项目ID
+     * @param string $UserUin 用户Uin
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class DescribeNativeSparkSessionsRequest extends AbstractModel
 
         if (array_key_exists("ResourceGroupId",$param) and $param["ResourceGroupId"] !== null) {
             $this->ResourceGroupId = $param["ResourceGroupId"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("UserUin",$param) and $param["UserUin"] !== null) {
+            $this->UserUin = $param["UserUin"];
         }
     }
 }

@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Monitor\V20180724\Models;
+namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeClusterAgentCreatingProgress返回参数结构体
+ * DescribePrefetchOriginLimit返回参数结构体
  *
- * @method array getResponse() 获取绑定状态response
- * @method void setResponse(array $Response) 设置绑定状态response
+ * @method integer getTotalCount() 获取回源限速限制总数。
+ * @method void setTotalCount(integer $TotalCount) 设置回源限速限制总数。
+ * @method array getLimits() 获取回源限速限制详情List。
+ * @method void setLimits(array $Limits) 设置回源限速限制详情List。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeClusterAgentCreatingProgressResponse extends AbstractModel
+class DescribePrefetchOriginLimitResponse extends AbstractModel
 {
     /**
-     * @var array 绑定状态response
+     * @var integer 回源限速限制总数。
      */
-    public $Response;
+    public $TotalCount;
+
+    /**
+     * @var array 回源限速限制详情List。
+     */
+    public $Limits;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class DescribeClusterAgentCreatingProgressResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Response 绑定状态response
+     * @param integer $TotalCount 回源限速限制总数。
+     * @param array $Limits 回源限速限制详情List。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,12 +62,16 @@ class DescribeClusterAgentCreatingProgressResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Response",$param) and $param["Response"] !== null) {
-            $this->Response = [];
-            foreach ($param["Response"] as $key => $value){
-                $obj = new BindProgressResponse();
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Limits",$param) and $param["Limits"] !== null) {
+            $this->Limits = [];
+            foreach ($param["Limits"] as $key => $value){
+                $obj = new PrefetchOriginLimit();
                 $obj->deserialize($value);
-                array_push($this->Response, $obj);
+                array_push($this->Limits, $obj);
             }
         }
 

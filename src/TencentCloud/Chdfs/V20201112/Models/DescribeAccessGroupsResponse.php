@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getAccessGroups() 获取权限组列表
  * @method void setAccessGroups(array $AccessGroups) 设置权限组列表
+ * @method boolean getIsOver() 获取标识是否已获取全量
+ * @method void setIsOver(boolean $IsOver) 设置标识是否已获取全量
+ * @method string getNextAccessGroupIdMarker() 获取下一次请求起始权限组ID标记
+ * @method void setNextAccessGroupIdMarker(string $NextAccessGroupIdMarker) 设置下一次请求起始权限组ID标记
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +37,24 @@ class DescribeAccessGroupsResponse extends AbstractModel
     public $AccessGroups;
 
     /**
+     * @var boolean 标识是否已获取全量
+     */
+    public $IsOver;
+
+    /**
+     * @var string 下一次请求起始权限组ID标记
+     */
+    public $NextAccessGroupIdMarker;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $AccessGroups 权限组列表
+     * @param boolean $IsOver 标识是否已获取全量
+     * @param string $NextAccessGroupIdMarker 下一次请求起始权限组ID标记
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -61,6 +77,14 @@ class DescribeAccessGroupsResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AccessGroups, $obj);
             }
+        }
+
+        if (array_key_exists("IsOver",$param) and $param["IsOver"] !== null) {
+            $this->IsOver = $param["IsOver"];
+        }
+
+        if (array_key_exists("NextAccessGroupIdMarker",$param) and $param["NextAccessGroupIdMarker"] !== null) {
+            $this->NextAccessGroupIdMarker = $param["NextAccessGroupIdMarker"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

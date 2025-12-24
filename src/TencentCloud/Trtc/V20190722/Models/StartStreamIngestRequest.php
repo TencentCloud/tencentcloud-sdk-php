@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxDuration(integer $MaxDuration) 设置循环播放最大时长,仅支持RepeatNum设置-1时生效，取值范围[1, 10080]，单位分钟。
  * @method integer getVolume() 获取音量，取值范围[0, 100]，默认100，表示原音量。
  * @method void setVolume(integer $Volume) 设置音量，取值范围[0, 100]，默认100，表示原音量。
+ * @method boolean getEnableProgress() 获取开启播放进度回调, 默认false，当开启后，播放进度会通过trtc custom data 回调给播放端
+ * @method void setEnableProgress(boolean $EnableProgress) 设置开启播放进度回调, 默认false，当开启后，播放进度会通过trtc custom data 回调给播放端
+ * @method float getTempo() 获取播放倍速，默认1.0，可取[0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0]
+ * @method void setTempo(float $Tempo) 设置播放倍速，默认1.0，可取[0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0]
  */
 class StartStreamIngestRequest extends AbstractModel
 {
@@ -150,6 +154,16 @@ class StartStreamIngestRequest extends AbstractModel
     public $Volume;
 
     /**
+     * @var boolean 开启播放进度回调, 默认false，当开启后，播放进度会通过trtc custom data 回调给播放端
+     */
+    public $EnableProgress;
+
+    /**
+     * @var float 播放倍速，默认1.0，可取[0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0]
+     */
+    public $Tempo;
+
+    /**
      * @param integer $SdkAppId TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和TRTC的房间所对应的SdkAppId相同。
      * @param string $RoomId TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，录制的TRTC房间所对应的RoomId。
      * @param integer $RoomIdType TRTC房间号的类型。
@@ -171,6 +185,8 @@ class StartStreamIngestRequest extends AbstractModel
 
      * @param integer $MaxDuration 循环播放最大时长,仅支持RepeatNum设置-1时生效，取值范围[1, 10080]，单位分钟。
      * @param integer $Volume 音量，取值范围[0, 100]，默认100，表示原音量。
+     * @param boolean $EnableProgress 开启播放进度回调, 默认false，当开启后，播放进度会通过trtc custom data 回调给播放端
+     * @param float $Tempo 播放倍速，默认1.0，可取[0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0]
      */
     function __construct()
     {
@@ -245,6 +261,14 @@ class StartStreamIngestRequest extends AbstractModel
 
         if (array_key_exists("Volume",$param) and $param["Volume"] !== null) {
             $this->Volume = $param["Volume"];
+        }
+
+        if (array_key_exists("EnableProgress",$param) and $param["EnableProgress"] !== null) {
+            $this->EnableProgress = $param["EnableProgress"];
+        }
+
+        if (array_key_exists("Tempo",$param) and $param["Tempo"] !== null) {
+            $this->Tempo = $param["Tempo"];
         }
     }
 }

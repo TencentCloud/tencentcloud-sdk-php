@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
 未防护: UnDefended
  * @method integer getCoresCnt() 获取核数
  * @method void setCoresCnt(integer $CoresCnt) 设置核数
+ * @method string getLastOnlineTime() 获取最近在线时间
+ * @method void setLastOnlineTime(string $LastOnlineTime) 设置最近在线时间
  */
 class HostInfo extends AbstractModel
 {
@@ -191,6 +193,11 @@ class HostInfo extends AbstractModel
     public $CoresCnt;
 
     /**
+     * @var string 最近在线时间
+     */
+    public $LastOnlineTime;
+
+    /**
      * @param string $HostID 主机id
      * @param string $HostIP 主机ip即内网ip
      * @param string $HostName 主机名称
@@ -216,6 +223,7 @@ class HostInfo extends AbstractModel
 已防护: Defended
 未防护: UnDefended
      * @param integer $CoresCnt 核数
+     * @param string $LastOnlineTime 最近在线时间
      */
     function __construct()
     {
@@ -326,6 +334,10 @@ class HostInfo extends AbstractModel
 
         if (array_key_exists("CoresCnt",$param) and $param["CoresCnt"] !== null) {
             $this->CoresCnt = $param["CoresCnt"];
+        }
+
+        if (array_key_exists("LastOnlineTime",$param) and $param["LastOnlineTime"] !== null) {
+            $this->LastOnlineTime = $param["LastOnlineTime"];
         }
     }
 }

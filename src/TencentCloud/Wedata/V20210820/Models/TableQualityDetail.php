@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleGroupTableId(string $RuleGroupTableId) 设置规则表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCatalogName() 获取catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCatalogName(string $CatalogName) 设置catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableQualityDetail extends AbstractModel
 {
@@ -144,6 +148,12 @@ class TableQualityDetail extends AbstractModel
     public $RuleGroupTableId;
 
     /**
+     * @var string catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CatalogName;
+
+    /**
      * @param string $DatabaseId 数据库id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatabaseName 数据库名称
@@ -167,6 +177,8 @@ class TableQualityDetail extends AbstractModel
      * @param string $SchemaName 模式名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleGroupTableId 规则表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CatalogName catalog名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -228,6 +240,10 @@ class TableQualityDetail extends AbstractModel
 
         if (array_key_exists("RuleGroupTableId",$param) and $param["RuleGroupTableId"] !== null) {
             $this->RuleGroupTableId = $param["RuleGroupTableId"];
+        }
+
+        if (array_key_exists("CatalogName",$param) and $param["CatalogName"] !== null) {
+            $this->CatalogName = $param["CatalogName"];
         }
     }
 }

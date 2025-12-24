@@ -43,6 +43,7 @@ use TencentCloud\Apm\V20210622\Models as Models;
  * @method Models\DescribeMetricRecordsResponse DescribeMetricRecords(Models\DescribeMetricRecordsRequest $req) 查询指标列表接口，查询指标更推荐使用DescribeGeneralMetricData接口
  * @method Models\DescribeServiceOverviewResponse DescribeServiceOverview(Models\DescribeServiceOverviewRequest $req) 应用概览数据拉取
  * @method Models\DescribeTagValuesResponse DescribeTagValues(Models\DescribeTagValuesRequest $req) 根据维度名和过滤条件，查询维度数据.
+ * @method Models\DescribeTopologyNewResponse DescribeTopologyNew(Models\DescribeTopologyNewRequest $req) 根据应用名查询服务拓扑图
  * @method Models\ModifyApmApplicationConfigResponse ModifyApmApplicationConfig(Models\ModifyApmApplicationConfigRequest $req) 修改应用配置接口
  * @method Models\ModifyApmAssociationResponse ModifyApmAssociation(Models\ModifyApmAssociationRequest $req) 用于修改apm业务系统与其他产品的关联关系（包括创建和删除）
  * @method Models\ModifyApmInstanceResponse ModifyApmInstance(Models\ModifyApmInstanceRequest $req) 修改APM业务系统接口

@@ -64,6 +64,8 @@ Block 确认违规
  * @method void setRecognitionResults(array $RecognitionResults) 设置场景结果
  * @method string getHitType() 获取审核命中类型
  * @method void setHitType(string $HitType) 设置审核命中类型
+ * @method string getRequestId() 获取截帧请求ID
+ * @method void setRequestId(string $RequestId) 设置截帧请求ID
  */
 class ImageResult extends AbstractModel
 {
@@ -130,6 +132,11 @@ Block 确认违规
     public $HitType;
 
     /**
+     * @var string 截帧请求ID
+     */
+    public $RequestId;
+
+    /**
      * @param integer $HitFlag 违规标志
 0 未命中
 1 命中
@@ -152,6 +159,7 @@ Block 确认违规
      * @param string $SubLabel 二级标签
      * @param array $RecognitionResults 场景结果
      * @param string $HitType 审核命中类型
+     * @param string $RequestId 截帧请求ID
      */
     function __construct()
     {
@@ -214,6 +222,10 @@ Block 确认违规
 
         if (array_key_exists("HitType",$param) and $param["HitType"] !== null) {
             $this->HitType = $param["HitType"];
+        }
+
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

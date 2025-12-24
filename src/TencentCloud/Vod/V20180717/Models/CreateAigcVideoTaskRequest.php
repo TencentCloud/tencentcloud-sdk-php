@@ -40,6 +40,14 @@ use TencentCloud\Common\AbstractModel;
 1. 只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。
 2. 图片大小需小于5M。
 3. 图片格式的取值为：jpeg，jpg, png, webp。
+ * @method string getLastFrameUrl() 获取用于作为尾帧画面来生成视频的媒体文件 URL。说明：
+1. 只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。
+2. 图片大小需小于5M。
+3. 3. 图片格式的取值为：jpeg，jpg, png, webp。
+ * @method void setLastFrameUrl(string $LastFrameUrl) 设置用于作为尾帧画面来生成视频的媒体文件 URL。说明：
+1. 只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。
+2. 图片大小需小于5M。
+3. 3. 图片格式的取值为：jpeg，jpg, png, webp。
  * @method string getPrompt() 获取生成图片的提示词。当 FileInfos 为空时，此参数必填。
  * @method void setPrompt(string $Prompt) 设置生成图片的提示词。当 FileInfos 为空时，此参数必填。
  * @method string getNegativePrompt() 获取要阻止模型生成图片的提示词。
@@ -88,6 +96,14 @@ class CreateAigcVideoTaskRequest extends AbstractModel
 3. 图片格式的取值为：jpeg，jpg, png, webp。
      */
     public $LastFrameFileId;
+
+    /**
+     * @var string 用于作为尾帧画面来生成视频的媒体文件 URL。说明：
+1. 只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。
+2. 图片大小需小于5M。
+3. 3. 图片格式的取值为：jpeg，jpg, png, webp。
+     */
+    public $LastFrameUrl;
 
     /**
      * @var string 生成图片的提示词。当 FileInfos 为空时，此参数必填。
@@ -140,6 +156,10 @@ class CreateAigcVideoTaskRequest extends AbstractModel
 1. 只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。
 2. 图片大小需小于5M。
 3. 图片格式的取值为：jpeg，jpg, png, webp。
+     * @param string $LastFrameUrl 用于作为尾帧画面来生成视频的媒体文件 URL。说明：
+1. 只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。
+2. 图片大小需小于5M。
+3. 3. 图片格式的取值为：jpeg，jpg, png, webp。
      * @param string $Prompt 生成图片的提示词。当 FileInfos 为空时，此参数必填。
      * @param string $NegativePrompt 要阻止模型生成图片的提示词。
      * @param string $EnhancePrompt 是否自动优化提示词。开启时将自动优化传入的 Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
@@ -185,6 +205,10 @@ class CreateAigcVideoTaskRequest extends AbstractModel
 
         if (array_key_exists("LastFrameFileId",$param) and $param["LastFrameFileId"] !== null) {
             $this->LastFrameFileId = $param["LastFrameFileId"];
+        }
+
+        if (array_key_exists("LastFrameUrl",$param) and $param["LastFrameUrl"] !== null) {
+            $this->LastFrameUrl = $param["LastFrameUrl"];
         }
 
         if (array_key_exists("Prompt",$param) and $param["Prompt"] !== null) {

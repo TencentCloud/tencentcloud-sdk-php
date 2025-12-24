@@ -270,6 +270,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
 查询某省份某运营商下行播放数据，包括带宽，流量，请求数，并发连接数信息。
  * @method Models\DescribePullStreamConfigsResponse DescribePullStreamConfigs(Models\DescribePullStreamConfigsRequest $req) 查询直播拉流配置。该接口已下线,请使用新接口 DescribeLivePullStreamTasks。
  * @method Models\DescribePullTransformPushInfoResponse DescribePullTransformPushInfo(Models\DescribePullTransformPushInfoRequest $req) 查询拉流转推任务的时长信息。
+ * @method Models\DescribePullTransformPushInfoListResponse DescribePullTransformPushInfoList(Models\DescribePullTransformPushInfoListRequest $req) 查询拉流转推任务流数据统计信息。
  * @method Models\DescribePushBandwidthAndFluxListResponse DescribePushBandwidthAndFluxList(Models\DescribePushBandwidthAndFluxListRequest $req) 直播推流带宽和流量数据查询。
 推流计费会先取全球推流用量和全球播放用量进行比较，满足计费条件后再按各地区用量出账。详情参见[计费文档](https://cloud.tencent.com/document/product/267/34175)。
  * @method Models\DescribeRecordTaskResponse DescribeRecordTask(Models\DescribeRecordTaskRequest $req) 查询指定时间段范围内启动和结束的录制任务列表。

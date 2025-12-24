@@ -36,9 +36,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuccessPercent(integer $SuccessPercent) 设置补录任务实例成功百分数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getInstanceTotalCount() 获取预计生成的总实例个数，由于是异步生成，-1代表实例还未完完全生成
+ * @method integer getInstanceTotalCount() 获取预计生成的总实例个数，由于是异步生成，-1代表实例还未完全生成
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceTotalCount(integer $InstanceTotalCount) 设置预计生成的总实例个数，由于是异步生成，-1代表实例还未完完全生成
+ * @method void setInstanceTotalCount(integer $InstanceTotalCount) 设置预计生成的总实例个数，由于是异步生成，-1代表实例还未完全生成
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFailurePercent() 获取补录任务实例失败百分数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFailurePercent(integer $FailurePercent) 设置补录任务实例失败百分数
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class MakePlanTaskOpsDto extends AbstractModel
@@ -68,10 +72,16 @@ class MakePlanTaskOpsDto extends AbstractModel
     public $SuccessPercent;
 
     /**
-     * @var integer 预计生成的总实例个数，由于是异步生成，-1代表实例还未完完全生成
+     * @var integer 预计生成的总实例个数，由于是异步生成，-1代表实例还未完全生成
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceTotalCount;
+
+    /**
+     * @var integer 补录任务实例失败百分数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FailurePercent;
 
     /**
      * @param TaskOpsDto $TaskBaseInfo 任务基本信息
@@ -82,7 +92,9 @@ class MakePlanTaskOpsDto extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SuccessPercent 补录任务实例成功百分数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $InstanceTotalCount 预计生成的总实例个数，由于是异步生成，-1代表实例还未完完全生成
+     * @param integer $InstanceTotalCount 预计生成的总实例个数，由于是异步生成，-1代表实例还未完全生成
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FailurePercent 补录任务实例失败百分数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -117,6 +129,10 @@ class MakePlanTaskOpsDto extends AbstractModel
 
         if (array_key_exists("InstanceTotalCount",$param) and $param["InstanceTotalCount"] !== null) {
             $this->InstanceTotalCount = $param["InstanceTotalCount"];
+        }
+
+        if (array_key_exists("FailurePercent",$param) and $param["FailurePercent"] !== null) {
+            $this->FailurePercent = $param["FailurePercent"];
         }
     }
 }

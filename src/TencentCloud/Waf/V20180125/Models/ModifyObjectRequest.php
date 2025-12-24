@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxy(integer $Proxy) 设置是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)
  * @method array getIpHeaders() 获取IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)
  * @method void setIpHeaders(array $IpHeaders) 设置IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)
+ * @method integer getMemberAppId() 获取对象所属集团成员appid
+ * @method void setMemberAppId(integer $MemberAppId) 设置对象所属集团成员appid
+ * @method string getMemberUin() 获取对象所属集团成员uin
+ * @method void setMemberUin(string $MemberUin) 设置对象所属集团成员uin
  */
 class ModifyObjectRequest extends AbstractModel
 {
@@ -66,12 +70,24 @@ class ModifyObjectRequest extends AbstractModel
     public $IpHeaders;
 
     /**
+     * @var integer 对象所属集团成员appid
+     */
+    public $MemberAppId;
+
+    /**
+     * @var string 对象所属集团成员uin
+     */
+    public $MemberUin;
+
+    /**
      * @param string $ObjectId 修改对象标识
      * @param string $OpType 改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态
      * @param integer $Status 新的Waf开关状态，如果和已有状态相同认为修改成功
      * @param string $InstanceId 新的实例ID，如果和已绑定的实例相同认为修改成功
      * @param integer $Proxy 是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)
      * @param array $IpHeaders IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)
+     * @param integer $MemberAppId 对象所属集团成员appid
+     * @param string $MemberUin 对象所属集团成员uin
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class ModifyObjectRequest extends AbstractModel
 
         if (array_key_exists("IpHeaders",$param) and $param["IpHeaders"] !== null) {
             $this->IpHeaders = $param["IpHeaders"];
+        }
+
+        if (array_key_exists("MemberAppId",$param) and $param["MemberAppId"] !== null) {
+            $this->MemberAppId = $param["MemberAppId"];
+        }
+
+        if (array_key_exists("MemberUin",$param) and $param["MemberUin"] !== null) {
+            $this->MemberUin = $param["MemberUin"];
         }
     }
 }

@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerType(string $LoadBalancerType) 设置负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网
  * @method string getLoadBalancerDomain() 获取负载均衡的域名
  * @method void setLoadBalancerDomain(string $LoadBalancerDomain) 设置负载均衡的域名
+ * @method integer getMemberAppId() 获取监听器所属成员id
+ * @method void setMemberAppId(integer $MemberAppId) 设置监听器所属成员id
+ * @method string getMemberUin() 获取监听器所属成员的uin
+ * @method void setMemberUin(string $MemberUin) 设置监听器所属成员的uin
  */
 class LoadBalancer extends AbstractModel
 {
@@ -108,6 +112,16 @@ class LoadBalancer extends AbstractModel
     public $LoadBalancerDomain;
 
     /**
+     * @var integer 监听器所属成员id
+     */
+    public $MemberAppId;
+
+    /**
+     * @var string 监听器所属成员的uin
+     */
+    public $MemberUin;
+
+    /**
      * @param string $LoadBalancerId 负载均衡LD的ID
      * @param string $LoadBalancerName 负载均衡LD的名称
      * @param string $ListenerId 负载均衡监听器的ID
@@ -120,6 +134,8 @@ class LoadBalancer extends AbstractModel
      * @param integer $NumericalVpcId 负载均衡的VPCID，公网为-1，内网按实际填写
      * @param string $LoadBalancerType 负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网
      * @param string $LoadBalancerDomain 负载均衡的域名
+     * @param integer $MemberAppId 监听器所属成员id
+     * @param string $MemberUin 监听器所属成员的uin
      */
     function __construct()
     {
@@ -180,6 +196,14 @@ class LoadBalancer extends AbstractModel
 
         if (array_key_exists("LoadBalancerDomain",$param) and $param["LoadBalancerDomain"] !== null) {
             $this->LoadBalancerDomain = $param["LoadBalancerDomain"];
+        }
+
+        if (array_key_exists("MemberAppId",$param) and $param["MemberAppId"] !== null) {
+            $this->MemberAppId = $param["MemberAppId"];
+        }
+
+        if (array_key_exists("MemberUin",$param) and $param["MemberUin"] !== null) {
+            $this->MemberUin = $param["MemberUin"];
         }
     }
 }

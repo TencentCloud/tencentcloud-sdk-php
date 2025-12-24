@@ -298,6 +298,50 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setColumnCount(integer $ColumnCount) 设置字段数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getTablePermissionFlag() 获取权限标记
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTablePermissionFlag(boolean $TablePermissionFlag) 设置权限标记
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAssetStatus() 获取资产状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAssetStatus(integer $AssetStatus) 设置资产状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAssetLevel() 获取资产等级
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAssetLevel(integer $AssetLevel) 设置资产等级
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAssetCode() 获取资产code
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAssetCode(string $AssetCode) 设置资产code
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAssetAuditStatus() 获取审批状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAssetAuditStatus(string $AssetAuditStatus) 设置审批状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPublishedTime() 获取发布时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPublishedTime(string $PublishedTime) 设置发布时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTagInfoList() 获取标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagInfoList(array $TagInfoList) 设置标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getLabelValueSelections() 获取标签值选择列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLabelValueSelections(array $LabelValueSelections) 设置标签值选择列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNamespace() 获取命名空间 - 对应TC-Catalog
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNamespace(string $Namespace) 设置命名空间 - 对应TC-Catalog
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMetaFrom() 获取Catalog来源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMetaFrom(string $MetaFrom) 设置Catalog来源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEngineCreator() 获取引擎侧创建者
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEngineCreator(string $EngineCreator) 设置引擎侧创建者
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableMeta extends AbstractModel
 {
@@ -717,6 +761,72 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
     public $ColumnCount;
 
     /**
+     * @var boolean 权限标记
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TablePermissionFlag;
+
+    /**
+     * @var integer 资产状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AssetStatus;
+
+    /**
+     * @var integer 资产等级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AssetLevel;
+
+    /**
+     * @var string 资产code
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AssetCode;
+
+    /**
+     * @var string 审批状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AssetAuditStatus;
+
+    /**
+     * @var string 发布时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PublishedTime;
+
+    /**
+     * @var array 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagInfoList;
+
+    /**
+     * @var array 标签值选择列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LabelValueSelections;
+
+    /**
+     * @var string 命名空间 - 对应TC-Catalog
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Namespace;
+
+    /**
+     * @var string Catalog来源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MetaFrom;
+
+    /**
+     * @var string 引擎侧创建者
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EngineCreator;
+
+    /**
      * @param string $TableId 表的全局唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableName 表名称
@@ -855,6 +965,28 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
      * @param string $DataLayerName 数据分层名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ColumnCount 字段数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $TablePermissionFlag 权限标记
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AssetStatus 资产状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AssetLevel 资产等级
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AssetCode 资产code
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AssetAuditStatus 审批状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PublishedTime 发布时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TagInfoList 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $LabelValueSelections 标签值选择列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Namespace 命名空间 - 对应TC-Catalog
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MetaFrom Catalog来源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EngineCreator 引擎侧创建者
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1162,6 +1294,60 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
 
         if (array_key_exists("ColumnCount",$param) and $param["ColumnCount"] !== null) {
             $this->ColumnCount = $param["ColumnCount"];
+        }
+
+        if (array_key_exists("TablePermissionFlag",$param) and $param["TablePermissionFlag"] !== null) {
+            $this->TablePermissionFlag = $param["TablePermissionFlag"];
+        }
+
+        if (array_key_exists("AssetStatus",$param) and $param["AssetStatus"] !== null) {
+            $this->AssetStatus = $param["AssetStatus"];
+        }
+
+        if (array_key_exists("AssetLevel",$param) and $param["AssetLevel"] !== null) {
+            $this->AssetLevel = $param["AssetLevel"];
+        }
+
+        if (array_key_exists("AssetCode",$param) and $param["AssetCode"] !== null) {
+            $this->AssetCode = $param["AssetCode"];
+        }
+
+        if (array_key_exists("AssetAuditStatus",$param) and $param["AssetAuditStatus"] !== null) {
+            $this->AssetAuditStatus = $param["AssetAuditStatus"];
+        }
+
+        if (array_key_exists("PublishedTime",$param) and $param["PublishedTime"] !== null) {
+            $this->PublishedTime = $param["PublishedTime"];
+        }
+
+        if (array_key_exists("TagInfoList",$param) and $param["TagInfoList"] !== null) {
+            $this->TagInfoList = [];
+            foreach ($param["TagInfoList"] as $key => $value){
+                $obj = new LabelTag();
+                $obj->deserialize($value);
+                array_push($this->TagInfoList, $obj);
+            }
+        }
+
+        if (array_key_exists("LabelValueSelections",$param) and $param["LabelValueSelections"] !== null) {
+            $this->LabelValueSelections = [];
+            foreach ($param["LabelValueSelections"] as $key => $value){
+                $obj = new LabelValueSelection();
+                $obj->deserialize($value);
+                array_push($this->LabelValueSelections, $obj);
+            }
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("MetaFrom",$param) and $param["MetaFrom"] !== null) {
+            $this->MetaFrom = $param["MetaFrom"];
+        }
+
+        if (array_key_exists("EngineCreator",$param) and $param["EngineCreator"] !== null) {
+            $this->EngineCreator = $param["EngineCreator"];
         }
     }
 }

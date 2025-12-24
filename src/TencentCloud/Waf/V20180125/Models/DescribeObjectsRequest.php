@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrder(string $Order) 设置排序方式，支持asc或者desc
  * @method string getBy() 获取根据哪个字段排序
  * @method void setBy(string $By) 设置根据哪个字段排序
+ * @method array getMemberAppIdList() 获取集团成员列表
+ * @method void setMemberAppIdList(array $MemberAppIdList) 设置集团成员列表
+ * @method integer getIsCrossAccount() 获取1代表跨账号情况，0代表单账号情况
+ * @method void setIsCrossAccount(integer $IsCrossAccount) 设置1代表跨账号情况，0代表单账号情况
  */
 class DescribeObjectsRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class DescribeObjectsRequest extends AbstractModel
     public $By;
 
     /**
+     * @var array 集团成员列表
+     */
+    public $MemberAppIdList;
+
+    /**
+     * @var integer 1代表跨账号情况，0代表单账号情况
+     */
+    public $IsCrossAccount;
+
+    /**
      * @param array $Filters 支持的过滤器:	ObjectId: clb实例ID	VIP: clb实例的公网IP	InstanceId: waf实例ID	Domain: 精准域名	Status: waf防护开关状态: 0关闭，1开启	ClsStatus: waf日志开关: 0关闭，1开启   
      * @param string $Order 排序方式，支持asc或者desc
      * @param string $By 根据哪个字段排序
+     * @param array $MemberAppIdList 集团成员列表
+     * @param integer $IsCrossAccount 1代表跨账号情况，0代表单账号情况
      */
     function __construct()
     {
@@ -77,6 +93,14 @@ class DescribeObjectsRequest extends AbstractModel
 
         if (array_key_exists("By",$param) and $param["By"] !== null) {
             $this->By = $param["By"];
+        }
+
+        if (array_key_exists("MemberAppIdList",$param) and $param["MemberAppIdList"] !== null) {
+            $this->MemberAppIdList = $param["MemberAppIdList"];
+        }
+
+        if (array_key_exists("IsCrossAccount",$param) and $param["IsCrossAccount"] !== null) {
+            $this->IsCrossAccount = $param["IsCrossAccount"];
         }
     }
 }

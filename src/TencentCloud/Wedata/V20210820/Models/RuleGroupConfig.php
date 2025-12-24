@@ -20,9 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 任务配置
  *
- * @method string getModelMonitorType() 获取模型检测类型
+ * @method string getAnalysisType() 获取分析类型，可选值：
+INFERENCE-推理表
+TIME_SERIES-时序表
+SNAPSHOT-快照表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModelMonitorType(string $ModelMonitorType) 设置模型检测类型
+ * @method void setAnalysisType(string $AnalysisType) 设置分析类型，可选值：
+INFERENCE-推理表
+TIME_SERIES-时序表
+SNAPSHOT-快照表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getModelMonitorType() 获取模型检测类型，分析类型为推理表（INFERENCE）时必填，可选值：
+CLAASSIFICATION-分类
+REGRESSION-回归
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModelMonitorType(string $ModelMonitorType) 设置模型检测类型，分析类型为推理表（INFERENCE）时必填，可选值：
+CLAASSIFICATION-分类
+REGRESSION-回归
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPredictColumn() 获取预测列
 注意：此字段可能返回 null，表示取不到有效值。
@@ -88,15 +102,34 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPositiveValue(string $PositiveValue) 设置正类值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFeatureColumn() 获取特征列
+ * @method string getFeatureColumn() 获取数值型特征列
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFeatureColumn(string $FeatureColumn) 设置特征列
+ * @method void setFeatureColumn(string $FeatureColumn) 设置数值型特征列
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCategoricalFeatureColumn() 获取分类型特征列
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCategoricalFeatureColumn(string $CategoricalFeatureColumn) 设置分类型特征列
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBaseCatalog() 获取目录
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBaseCatalog(string $BaseCatalog) 设置目录
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleGroupConfig extends AbstractModel
 {
     /**
-     * @var string 模型检测类型
+     * @var string 分析类型，可选值：
+INFERENCE-推理表
+TIME_SERIES-时序表
+SNAPSHOT-快照表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AnalysisType;
+
+    /**
+     * @var string 模型检测类型，分析类型为推理表（INFERENCE）时必填，可选值：
+CLAASSIFICATION-分类
+REGRESSION-回归
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModelMonitorType;
@@ -198,13 +231,32 @@ class RuleGroupConfig extends AbstractModel
     public $PositiveValue;
 
     /**
-     * @var string 特征列
+     * @var string 数值型特征列
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FeatureColumn;
 
     /**
-     * @param string $ModelMonitorType 模型检测类型
+     * @var string 分类型特征列
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CategoricalFeatureColumn;
+
+    /**
+     * @var string 目录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BaseCatalog;
+
+    /**
+     * @param string $AnalysisType 分析类型，可选值：
+INFERENCE-推理表
+TIME_SERIES-时序表
+SNAPSHOT-快照表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ModelMonitorType 模型检测类型，分析类型为推理表（INFERENCE）时必填，可选值：
+CLAASSIFICATION-分类
+REGRESSION-回归
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PredictColumn 预测列
 注意：此字段可能返回 null，表示取不到有效值。
@@ -238,7 +290,11 @@ class RuleGroupConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PositiveValue 正类值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FeatureColumn 特征列
+     * @param string $FeatureColumn 数值型特征列
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CategoricalFeatureColumn 分类型特征列
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BaseCatalog 目录
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -254,6 +310,10 @@ class RuleGroupConfig extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("AnalysisType",$param) and $param["AnalysisType"] !== null) {
+            $this->AnalysisType = $param["AnalysisType"];
+        }
+
         if (array_key_exists("ModelMonitorType",$param) and $param["ModelMonitorType"] !== null) {
             $this->ModelMonitorType = $param["ModelMonitorType"];
         }
@@ -324,6 +384,14 @@ class RuleGroupConfig extends AbstractModel
 
         if (array_key_exists("FeatureColumn",$param) and $param["FeatureColumn"] !== null) {
             $this->FeatureColumn = $param["FeatureColumn"];
+        }
+
+        if (array_key_exists("CategoricalFeatureColumn",$param) and $param["CategoricalFeatureColumn"] !== null) {
+            $this->CategoricalFeatureColumn = $param["CategoricalFeatureColumn"];
+        }
+
+        if (array_key_exists("BaseCatalog",$param) and $param["BaseCatalog"] !== null) {
+            $this->BaseCatalog = $param["BaseCatalog"];
         }
     }
 }

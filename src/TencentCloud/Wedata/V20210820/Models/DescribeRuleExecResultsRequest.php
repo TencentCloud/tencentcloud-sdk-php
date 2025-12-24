@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleGroupExecId(integer $RuleGroupExecId) 设置规则组执行Id
  * @method string getProjectId() 获取项目Id
  * @method void setProjectId(string $ProjectId) 设置项目Id
+ * @method array getFilters() 获取过滤条件	
+ * @method void setFilters(array $Filters) 设置过滤条件	
+ * @method array getOrderFields() 获取排序字段
+ * @method void setOrderFields(array $OrderFields) 设置排序字段
  */
 class DescribeRuleExecResultsRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class DescribeRuleExecResultsRequest extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var array 过滤条件	
+     */
+    public $Filters;
+
+    /**
+     * @var array 排序字段
+     */
+    public $OrderFields;
+
+    /**
      * @param integer $RuleGroupExecId 规则组执行Id
      * @param string $ProjectId 项目Id
+     * @param array $Filters 过滤条件	
+     * @param array $OrderFields 排序字段
      */
     function __construct()
     {
@@ -60,6 +76,24 @@ class DescribeRuleExecResultsRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
+
+        if (array_key_exists("OrderFields",$param) and $param["OrderFields"] !== null) {
+            $this->OrderFields = [];
+            foreach ($param["OrderFields"] as $key => $value){
+                $obj = new OrderField();
+                $obj->deserialize($value);
+                array_push($this->OrderFields, $obj);
+            }
         }
     }
 }

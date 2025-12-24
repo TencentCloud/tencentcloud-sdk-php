@@ -70,6 +70,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
  * @method string getAddTime() 获取创建时间
  * @method void setAddTime(string $AddTime) 设置创建时间
+ * @method integer getMemberAppId() 获取跨账号时，表示成员账号的appid
+ * @method void setMemberAppId(integer $MemberAppId) 设置跨账号时，表示成员账号的appid
+ * @method string getMemberUin() 获取跨账号时，表示成员账号的uin
+ * @method void setMemberUin(string $MemberUin) 设置跨账号时，表示成员账号的uin
+ * @method string getMemberNickName() 获取跨账号时，表示成员账号的昵称
+ * @method void setMemberNickName(string $MemberNickName) 设置跨账号时，表示成员账号的昵称
  */
 class ClbObject extends AbstractModel
 {
@@ -199,6 +205,21 @@ class ClbObject extends AbstractModel
     public $AddTime;
 
     /**
+     * @var integer 跨账号时，表示成员账号的appid
+     */
+    public $MemberAppId;
+
+    /**
+     * @var string 跨账号时，表示成员账号的uin
+     */
+    public $MemberUin;
+
+    /**
+     * @var string 跨账号时，表示成员账号的昵称
+     */
+    public $MemberNickName;
+
+    /**
      * @param string $ObjectId 对象ID
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
@@ -224,6 +245,9 @@ class ClbObject extends AbstractModel
      * @param integer $NumericalVpcId 数值形式的私有网络 ID
      * @param string $ModifyTime 修改时间
      * @param string $AddTime 创建时间
+     * @param integer $MemberAppId 跨账号时，表示成员账号的appid
+     * @param string $MemberUin 跨账号时，表示成员账号的uin
+     * @param string $MemberNickName 跨账号时，表示成员账号的昵称
      */
     function __construct()
     {
@@ -336,6 +360,18 @@ class ClbObject extends AbstractModel
 
         if (array_key_exists("AddTime",$param) and $param["AddTime"] !== null) {
             $this->AddTime = $param["AddTime"];
+        }
+
+        if (array_key_exists("MemberAppId",$param) and $param["MemberAppId"] !== null) {
+            $this->MemberAppId = $param["MemberAppId"];
+        }
+
+        if (array_key_exists("MemberUin",$param) and $param["MemberUin"] !== null) {
+            $this->MemberUin = $param["MemberUin"];
+        }
+
+        if (array_key_exists("MemberNickName",$param) and $param["MemberNickName"] !== null) {
+            $this->MemberNickName = $param["MemberNickName"];
         }
     }
 }

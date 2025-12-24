@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(integer $Id) 设置列表Id(只支持32位)
  * @method integer getPiracyRisk() 获取盗版风险（0:未支持，1:风险，2:未发现，3:未开启）
  * @method void setPiracyRisk(integer $PiracyRisk) 设置盗版风险（0:未支持，1:风险，2:未发现，3:未开启）
+ * @method integer getDeviceId() 获取设备id
+ * @method void setDeviceId(integer $DeviceId) 设置设备id
+ * @method integer getOsType() 获取平台类型
+ * @method void setOsType(integer $OsType) 设置平台类型
  */
 class SoftwareInformationData extends AbstractModel
 {
@@ -80,6 +84,16 @@ class SoftwareInformationData extends AbstractModel
     public $PiracyRisk;
 
     /**
+     * @var integer 设备id
+     */
+    public $DeviceId;
+
+    /**
+     * @var integer 平台类型
+     */
+    public $OsType;
+
+    /**
      * @param string $Name 软件名称
      * @param string $InstallDate 安装时间
      * @param integer $SoftwareId 软件列表id(只支持32位)
@@ -88,6 +102,8 @@ class SoftwareInformationData extends AbstractModel
      * @param string $CorpName 公司名
      * @param integer $Id 列表Id(只支持32位)
      * @param integer $PiracyRisk 盗版风险（0:未支持，1:风险，2:未发现，3:未开启）
+     * @param integer $DeviceId 设备id
+     * @param integer $OsType 平台类型
      */
     function __construct()
     {
@@ -132,6 +148,14 @@ class SoftwareInformationData extends AbstractModel
 
         if (array_key_exists("PiracyRisk",$param) and $param["PiracyRisk"] !== null) {
             $this->PiracyRisk = $param["PiracyRisk"];
+        }
+
+        if (array_key_exists("DeviceId",$param) and $param["DeviceId"] !== null) {
+            $this->DeviceId = $param["DeviceId"];
+        }
+
+        if (array_key_exists("OsType",$param) and $param["OsType"] !== null) {
+            $this->OsType = $param["OsType"];
         }
     }
 }

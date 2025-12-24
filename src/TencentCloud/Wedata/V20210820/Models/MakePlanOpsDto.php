@@ -150,6 +150,26 @@ REVERSE： 实例数据时间逆序
 DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
  * @method void setTimeType(string $TimeType) 设置补录计划时间范围的类型： 
 DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
+ * @method string getStartTime() 获取开始时间
+ * @method void setStartTime(string $StartTime) 设置开始时间
+ * @method string getEndTime() 获取结束时间
+ * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method integer getFailurePercent() 获取失败百分比
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFailurePercent(integer $FailurePercent) 设置失败百分比
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method MakePlanAlarmRule getAlarmRule() 获取补录计划的告警规则
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlarmRule(MakePlanAlarmRule $AlarmRule) 设置补录计划的告警规则
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRunType() 获取运行类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRunType(integer $RunType) 设置运行类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRunDateTime() 获取定时运行时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRunDateTime(string $RunDateTime) 设置定时运行时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MakePlanOpsDto extends AbstractModel
 {
@@ -343,6 +363,40 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     public $TimeType;
 
     /**
+     * @var string 开始时间
+     */
+    public $StartTime;
+
+    /**
+     * @var string 结束时间
+     */
+    public $EndTime;
+
+    /**
+     * @var integer 失败百分比
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FailurePercent;
+
+    /**
+     * @var MakePlanAlarmRule 补录计划的告警规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AlarmRule;
+
+    /**
+     * @var integer 运行类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RunType;
+
+    /**
+     * @var string 定时运行时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RunDateTime;
+
+    /**
      * @param string $PlanId 补录计划ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MakeName 补录计划名称
@@ -408,6 +462,16 @@ REVERSE： 实例数据时间逆序
      * @param string $AppParam 执行应用参数
      * @param string $TimeType 补录计划时间范围的类型： 
 DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
+     * @param string $StartTime 开始时间
+     * @param string $EndTime 结束时间
+     * @param integer $FailurePercent 失败百分比
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MakePlanAlarmRule $AlarmRule 补录计划的告警规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RunType 运行类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RunDateTime 定时运行时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -554,6 +618,31 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
 
         if (array_key_exists("TimeType",$param) and $param["TimeType"] !== null) {
             $this->TimeType = $param["TimeType"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("FailurePercent",$param) and $param["FailurePercent"] !== null) {
+            $this->FailurePercent = $param["FailurePercent"];
+        }
+
+        if (array_key_exists("AlarmRule",$param) and $param["AlarmRule"] !== null) {
+            $this->AlarmRule = new MakePlanAlarmRule();
+            $this->AlarmRule->deserialize($param["AlarmRule"]);
+        }
+
+        if (array_key_exists("RunType",$param) and $param["RunType"] !== null) {
+            $this->RunType = $param["RunType"];
+        }
+
+        if (array_key_exists("RunDateTime",$param) and $param["RunDateTime"] !== null) {
+            $this->RunDateTime = $param["RunDateTime"];
         }
     }
 }

@@ -128,6 +128,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineParam(string $EngineParam) 设置引擎参数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCatalogName() 获取catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCatalogName(string $CatalogName) 设置catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleGroupExecStrategy extends AbstractModel
 {
@@ -294,6 +298,12 @@ class RuleGroupExecStrategy extends AbstractModel
     public $EngineParam;
 
     /**
+     * @var string catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CatalogName;
+
+    /**
      * @param integer $RuleGroupId 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MonitorType 监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
@@ -347,6 +357,8 @@ class RuleGroupExecStrategy extends AbstractModel
      * @param RuleGroupConfig $GroupConfig 任务监控参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineParam 引擎参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CatalogName catalog名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -474,6 +486,10 @@ class RuleGroupExecStrategy extends AbstractModel
 
         if (array_key_exists("EngineParam",$param) and $param["EngineParam"] !== null) {
             $this->EngineParam = $param["EngineParam"];
+        }
+
+        if (array_key_exists("CatalogName",$param) and $param["CatalogName"] !== null) {
+            $this->CatalogName = $param["CatalogName"];
         }
     }
 }

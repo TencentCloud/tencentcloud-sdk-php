@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatabaseName(string $DatabaseName) 设置库名
  * @method string getTableName() 获取表名
  * @method void setTableName(string $TableName) 设置表名
+ * @method string getDatasourceConnectionName() 获取catalog名称
+ * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置catalog名称
  */
 class QueryInternalTableWarehouseRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class QueryInternalTableWarehouseRequest extends AbstractModel
     public $TableName;
 
     /**
+     * @var string catalog名称
+     */
+    public $DatasourceConnectionName;
+
+    /**
      * @param string $DatabaseName 库名
      * @param string $TableName 表名
+     * @param string $DatasourceConnectionName catalog名称
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class QueryInternalTableWarehouseRequest extends AbstractModel
 
         if (array_key_exists("TableName",$param) and $param["TableName"] !== null) {
             $this->TableName = $param["TableName"];
+        }
+
+        if (array_key_exists("DatasourceConnectionName",$param) and $param["DatasourceConnectionName"] !== null) {
+            $this->DatasourceConnectionName = $param["DatasourceConnectionName"];
         }
     }
 }

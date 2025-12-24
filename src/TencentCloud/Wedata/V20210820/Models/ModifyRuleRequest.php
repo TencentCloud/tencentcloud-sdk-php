@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetSchemaName(string $TargetSchemaName) 设置目标模式名
  * @method string getTargetTableName() 获取目标表名
  * @method void setTargetTableName(string $TargetTableName) 设置目标表名
+ * @method string getCatalogName() 获取目录
+ * @method void setCatalogName(string $CatalogName) 设置目录
+ * @method string getTargetCatalogName() 获取目标目录
+ * @method void setTargetCatalogName(string $TargetCatalogName) 设置目标目录
  */
 class ModifyRuleRequest extends AbstractModel
 {
@@ -206,6 +210,16 @@ class ModifyRuleRequest extends AbstractModel
     public $TargetTableName;
 
     /**
+     * @var string 目录
+     */
+    public $CatalogName;
+
+    /**
+     * @var string 目标目录
+     */
+    public $TargetCatalogName;
+
+    /**
      * @param string $ProjectId 项目Id
      * @param integer $RuleId 规则ID
      * @param integer $RuleGroupId 规则组ID
@@ -232,6 +246,8 @@ class ModifyRuleRequest extends AbstractModel
      * @param string $TargetDatabaseName 目标库名
      * @param string $TargetSchemaName 目标模式名
      * @param string $TargetTableName 目标表名
+     * @param string $CatalogName 目录
+     * @param string $TargetCatalogName 目标目录
      */
     function __construct()
     {
@@ -350,6 +366,14 @@ class ModifyRuleRequest extends AbstractModel
 
         if (array_key_exists("TargetTableName",$param) and $param["TargetTableName"] !== null) {
             $this->TargetTableName = $param["TargetTableName"];
+        }
+
+        if (array_key_exists("CatalogName",$param) and $param["CatalogName"] !== null) {
+            $this->CatalogName = $param["CatalogName"];
+        }
+
+        if (array_key_exists("TargetCatalogName",$param) and $param["TargetCatalogName"] !== null) {
+            $this->TargetCatalogName = $param["TargetCatalogName"];
         }
     }
 }

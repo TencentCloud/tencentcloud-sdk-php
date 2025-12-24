@@ -86,6 +86,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpgradeSoftId(integer $UpgradeSoftId) 设置该软件对应运营配置的可升级id
  * @method string getRemarkName() 获取终端备注名
  * @method void setRemarkName(string $RemarkName) 设置终端备注名
+ * @method integer getSoftwareId() 获取软件id
+ * @method void setSoftwareId(integer $SoftwareId) 设置软件id
+ * @method integer getOsType() 获取0:win 2:mac
+ * @method void setOsType(integer $OsType) 设置0:win 2:mac
  */
 class AggrSoftDeviceRow extends AbstractModel
 {
@@ -195,6 +199,16 @@ class AggrSoftDeviceRow extends AbstractModel
     public $RemarkName;
 
     /**
+     * @var integer 软件id
+     */
+    public $SoftwareId;
+
+    /**
+     * @var integer 0:win 2:mac
+     */
+    public $OsType;
+
+    /**
      * @param string $DeviceName 终端名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastLoginAccount 最近登录账号
@@ -228,6 +242,8 @@ class AggrSoftDeviceRow extends AbstractModel
      * @param string $NewVersion 该终端此款软件可升级到的目标版本号
      * @param integer $UpgradeSoftId 该软件对应运营配置的可升级id
      * @param string $RemarkName 终端备注名
+     * @param integer $SoftwareId 软件id
+     * @param integer $OsType 0:win 2:mac
      */
     function __construct()
     {
@@ -312,6 +328,14 @@ class AggrSoftDeviceRow extends AbstractModel
 
         if (array_key_exists("RemarkName",$param) and $param["RemarkName"] !== null) {
             $this->RemarkName = $param["RemarkName"];
+        }
+
+        if (array_key_exists("SoftwareId",$param) and $param["SoftwareId"] !== null) {
+            $this->SoftwareId = $param["SoftwareId"];
+        }
+
+        if (array_key_exists("OsType",$param) and $param["OsType"] !== null) {
+            $this->OsType = $param["OsType"];
         }
     }
 }

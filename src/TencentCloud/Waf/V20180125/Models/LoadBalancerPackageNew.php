@@ -102,6 +102,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerType(string $LoadBalancerType) 设置CLB类型
  * @method string getLoadBalancerDomain() 获取负载均衡器的域名
  * @method void setLoadBalancerDomain(string $LoadBalancerDomain) 设置负载均衡器的域名
+ * @method integer getMemberAppId() 获取监听器所属appid
+ * @method void setMemberAppId(integer $MemberAppId) 设置监听器所属appid
+ * @method string getMemberUin() 获取监听器自身所属uin
+ * @method void setMemberUin(string $MemberUin) 设置监听器自身所属uin
+ * @method integer getAppid() 获取监听器被接入的waf账号
+ * @method void setAppid(integer $Appid) 设置监听器被接入的waf账号
+ * @method string getMemberNickName() 获取集团账号昵称
+ * @method void setMemberNickName(string $MemberNickName) 设置集团账号昵称
  */
 class LoadBalancerPackageNew extends AbstractModel
 {
@@ -195,6 +203,26 @@ class LoadBalancerPackageNew extends AbstractModel
     public $LoadBalancerDomain;
 
     /**
+     * @var integer 监听器所属appid
+     */
+    public $MemberAppId;
+
+    /**
+     * @var string 监听器自身所属uin
+     */
+    public $MemberUin;
+
+    /**
+     * @var integer 监听器被接入的waf账号
+     */
+    public $Appid;
+
+    /**
+     * @var string 集团账号昵称
+     */
+    public $MemberNickName;
+
+    /**
      * @param string $ListenerId 监听id
      * @param string $ListenerName 监听名
      * @param string $LoadBalancerId 负载均衡id
@@ -236,6 +264,10 @@ class LoadBalancerPackageNew extends AbstractModel
      * @param integer $NumericalVpcId VPCID
      * @param string $LoadBalancerType CLB类型
      * @param string $LoadBalancerDomain 负载均衡器的域名
+     * @param integer $MemberAppId 监听器所属appid
+     * @param string $MemberUin 监听器自身所属uin
+     * @param integer $Appid 监听器被接入的waf账号
+     * @param string $MemberNickName 集团账号昵称
      */
     function __construct()
     {
@@ -296,6 +328,22 @@ class LoadBalancerPackageNew extends AbstractModel
 
         if (array_key_exists("LoadBalancerDomain",$param) and $param["LoadBalancerDomain"] !== null) {
             $this->LoadBalancerDomain = $param["LoadBalancerDomain"];
+        }
+
+        if (array_key_exists("MemberAppId",$param) and $param["MemberAppId"] !== null) {
+            $this->MemberAppId = $param["MemberAppId"];
+        }
+
+        if (array_key_exists("MemberUin",$param) and $param["MemberUin"] !== null) {
+            $this->MemberUin = $param["MemberUin"];
+        }
+
+        if (array_key_exists("Appid",$param) and $param["Appid"] !== null) {
+            $this->Appid = $param["Appid"];
+        }
+
+        if (array_key_exists("MemberNickName",$param) and $param["MemberNickName"] !== null) {
+            $this->MemberNickName = $param["MemberNickName"];
         }
     }
 }

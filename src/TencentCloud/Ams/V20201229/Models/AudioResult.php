@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHitType(string $HitType) 设置审核检测类型
  * @method array getSentences() 获取ASR句子的起止时间
  * @method void setSentences(array $Sentences) 设置ASR句子的起止时间
+ * @method string getRequestId() 获取切片请求ID
+ * @method void setRequestId(string $RequestId) 设置切片请求ID
  */
 class AudioResult extends AbstractModel
 {
@@ -167,6 +169,11 @@ class AudioResult extends AbstractModel
     public $Sentences;
 
     /**
+     * @var string 切片请求ID
+     */
+    public $RequestId;
+
+    /**
      * @param integer $HitFlag 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
      * @param string $Label 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
      * @param string $Suggestion 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
@@ -188,6 +195,7 @@ class AudioResult extends AbstractModel
      * @param string $SubTagCode 三级标签码
      * @param string $HitType 审核检测类型
      * @param array $Sentences ASR句子的起止时间
+     * @param string $RequestId 切片请求ID
      */
     function __construct()
     {
@@ -320,6 +328,10 @@ class AudioResult extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Sentences, $obj);
             }
+        }
+
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupPlanId(string $BackupPlanId) 设置备份计划 ID。
  * @method string getBackupPlanName() 获取备份计划名称。支持数字、英文大小写字母、中文以及特殊字符_-./()（）[]+=：:@,且长度不能超过60。
  * @method void setBackupPlanName(string $BackupPlanName) 设置备份计划名称。支持数字、英文大小写字母、中文以及特殊字符_-./()（）[]+=：:@,且长度不能超过60。
+ * @method integer getUpperParallel() 获取全量备份并发数上限。
+ * @method void setUpperParallel(integer $UpperParallel) 设置全量备份并发数上限。
  * @method BackupEndpoint getSourceEndPoint() 获取备份源实例信息。
  * @method void setSourceEndPoint(BackupEndpoint $SourceEndPoint) 设置备份源实例信息。
  * @method BackupObject getBackupObject() 获取备份对象信息。
@@ -44,6 +46,11 @@ class ConfigureBackupPlanRequest extends AbstractModel
      * @var string 备份计划名称。支持数字、英文大小写字母、中文以及特殊字符_-./()（）[]+=：:@,且长度不能超过60。
      */
     public $BackupPlanName;
+
+    /**
+     * @var integer 全量备份并发数上限。
+     */
+    public $UpperParallel;
 
     /**
      * @var BackupEndpoint 备份源实例信息。
@@ -68,6 +75,7 @@ class ConfigureBackupPlanRequest extends AbstractModel
     /**
      * @param string $BackupPlanId 备份计划 ID。
      * @param string $BackupPlanName 备份计划名称。支持数字、英文大小写字母、中文以及特殊字符_-./()（）[]+=：:@,且长度不能超过60。
+     * @param integer $UpperParallel 全量备份并发数上限。
      * @param BackupEndpoint $SourceEndPoint 备份源实例信息。
      * @param BackupObject $BackupObject 备份对象信息。
      * @param BackupStrategy $BackupStrategy 备份策略。
@@ -92,6 +100,10 @@ class ConfigureBackupPlanRequest extends AbstractModel
 
         if (array_key_exists("BackupPlanName",$param) and $param["BackupPlanName"] !== null) {
             $this->BackupPlanName = $param["BackupPlanName"];
+        }
+
+        if (array_key_exists("UpperParallel",$param) and $param["UpperParallel"] !== null) {
+            $this->UpperParallel = $param["UpperParallel"];
         }
 
         if (array_key_exists("SourceEndPoint",$param) and $param["SourceEndPoint"] !== null) {

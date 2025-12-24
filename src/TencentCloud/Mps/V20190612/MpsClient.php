@@ -239,6 +239,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
 - 智能内容审核（例如鉴黄、敏感信息检测）；
 - 智能内容分析（例如标签、分类、封面、按帧标签、拆条、集锦、片头片尾、游戏打点）；
 - 智能内容识别（例如人脸、文本全文、文本关键词、语音全文、语音关键词、语音翻译、物体识别）；
+ * @method Models\RecognizeAudioResponse RecognizeAudio(Models\RecognizeAudioRequest $req) 同步接口，返回语音识别结果
  * @method Models\RecognizeMediaForZhiXueResponse RecognizeMediaForZhiXue(Models\RecognizeMediaForZhiXueRequest $req) 智能媒体识别，包含表情和动作识别。仅用于智学，其他调用无效。
  * @method Models\ResetWorkflowResponse ResetWorkflow(Models\ResetWorkflowRequest $req) 重新设置一个已经存在且处于禁用状态的工作流。
  * @method Models\StartStreamLinkFlowResponse StartStreamLinkFlow(Models\StartStreamLinkFlowRequest $req) 启动媒体传输流。

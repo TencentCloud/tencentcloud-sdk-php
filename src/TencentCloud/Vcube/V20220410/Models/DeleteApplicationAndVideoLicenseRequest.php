@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteApplicationAndVideoLicense请求参数结构体
  *
-
+ * @method integer getLicenseId() 获取license唯一标识
+ * @method void setLicenseId(integer $LicenseId) 设置license唯一标识
  */
 class DeleteApplicationAndVideoLicenseRequest extends AbstractModel
 {
-
+    /**
+     * @var integer license唯一标识
+     */
+    public $LicenseId;
 
     /**
-
+     * @param integer $LicenseId license唯一标识
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DeleteApplicationAndVideoLicenseRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("LicenseId",$param) and $param["LicenseId"] !== null) {
+            $this->LicenseId = $param["LicenseId"];
+        }
     }
 }

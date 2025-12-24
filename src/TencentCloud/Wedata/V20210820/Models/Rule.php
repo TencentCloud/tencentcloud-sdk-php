@@ -236,6 +236,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailMsg(string $FailMsg) 设置失败原因
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGroupType() 获取任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupType(string $GroupType) 设置任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAspectTaskId() 获取编排任务id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAspectTaskId(string $AspectTaskId) 设置编排任务id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCatalogName() 获取目录
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCatalogName(string $CatalogName) 设置目录
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTargetCatalogName() 获取目标目录
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTargetCatalogName(string $TargetCatalogName) 设置目标目录
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Rule extends AbstractModel
 {
@@ -564,6 +580,30 @@ class Rule extends AbstractModel
     public $FailMsg;
 
     /**
+     * @var string 任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupType;
+
+    /**
+     * @var string 编排任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AspectTaskId;
+
+    /**
+     * @var string 目录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CatalogName;
+
+    /**
+     * @var string 目标目录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TargetCatalogName;
+
+    /**
      * @param integer $RuleId 规则ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleGroupId 规则组ID
@@ -671,6 +711,14 @@ class Rule extends AbstractModel
      * @param string $DatabaseName 数据库名称 
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FailMsg 失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GroupType 任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AspectTaskId 编排任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CatalogName 目录
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TargetCatalogName 目标目录
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -904,6 +952,22 @@ class Rule extends AbstractModel
 
         if (array_key_exists("FailMsg",$param) and $param["FailMsg"] !== null) {
             $this->FailMsg = $param["FailMsg"];
+        }
+
+        if (array_key_exists("GroupType",$param) and $param["GroupType"] !== null) {
+            $this->GroupType = $param["GroupType"];
+        }
+
+        if (array_key_exists("AspectTaskId",$param) and $param["AspectTaskId"] !== null) {
+            $this->AspectTaskId = $param["AspectTaskId"];
+        }
+
+        if (array_key_exists("CatalogName",$param) and $param["CatalogName"] !== null) {
+            $this->CatalogName = $param["CatalogName"];
+        }
+
+        if (array_key_exists("TargetCatalogName",$param) and $param["TargetCatalogName"] !== null) {
+            $this->TargetCatalogName = $param["TargetCatalogName"];
         }
     }
 }

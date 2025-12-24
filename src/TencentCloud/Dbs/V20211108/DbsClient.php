@@ -24,8 +24,11 @@ use TencentCloud\Dbs\V20211108\Models as Models;
 
 /**
  * @method Models\ConfigureBackupPlanResponse ConfigureBackupPlan(Models\ConfigureBackupPlanRequest $req) 本接口（ConfigureBackupPlan）用于配置备份计划。包括配置备份源实例信息、备份对象以及备份策略等。
+ * @method Models\CreateBackupPlanResponse CreateBackupPlan(Models\CreateBackupPlanRequest $req) 该接口用于创建备份计划。
  * @method Models\CreateConnectTestJobResponse CreateConnectTestJob(Models\CreateConnectTestJobRequest $req) 该接口用于创建连通性检测任务，请在创建备份计划前，通过该接口来检测你的源端实例是否连通性正常。
  * @method Models\DescribeBackupCheckJobResponse DescribeBackupCheckJob(Models\DescribeBackupCheckJobRequest $req) 本接口（DescribeBackupCheckJob）用于查询备份计划预校验任务的结果。仅对于预校验通过的任务，才能启动备份计划。
+ * @method Models\DescribeBackupPlansResponse DescribeBackupPlans(Models\DescribeBackupPlansRequest $req) 本接口（DescribeBackupPlans）用于查询备份计划列表。
+ * @method Models\DescribeConnectTestResultResponse DescribeConnectTestResult(Models\DescribeConnectTestResultRequest $req) 该接口用于查询连通性检测任务的结果
  * @method Models\StartBackupCheckJobResponse StartBackupCheckJob(Models\StartBackupCheckJobRequest $req) 本接口（StartBackupCheckJob）用于创建备份计划预校验任务。
  * @method Models\StartBackupPlanResponse StartBackupPlan(Models\StartBackupPlanRequest $req) 本接口（StartBackupPlan）用于启动备份计划。调用此接口前，请务必先使用 StartBackupCheckJob 创建备份计划预校验任务，并通过 DescribeBackupCheckJob 接口查询到任务状态为校验通过时，才能启动备份计划。
  */

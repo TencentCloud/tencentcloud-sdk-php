@@ -402,6 +402,14 @@ CAN_MANAGE : 有权限管理操作
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBundleInfo(string $BundleInfo) 设置bundle客户端信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWorkflowType() 获取工作流类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWorkflowType(string $WorkflowType) 设置工作流类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method TaskExtOpsDto getTaskExtDTO() 获取任务扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskExtDTO(TaskExtOpsDto $TaskExtDTO) 设置任务扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskOpsDto extends AbstractModel
 {
@@ -977,6 +985,18 @@ CAN_MANAGE : 有权限管理操作
     public $BundleInfo;
 
     /**
+     * @var string 工作流类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WorkflowType;
+
+    /**
+     * @var TaskExtOpsDto 任务扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskExtDTO;
+
+    /**
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VirtualTaskId 虚拟任务id
@@ -1167,6 +1187,10 @@ CAN_MANAGE : 有权限管理操作
      * @param string $BundleId bundle客户端唯一id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BundleInfo bundle客户端信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WorkflowType 工作流类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskExtOpsDto $TaskExtDTO 任务扩展信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1576,6 +1600,15 @@ CAN_MANAGE : 有权限管理操作
 
         if (array_key_exists("BundleInfo",$param) and $param["BundleInfo"] !== null) {
             $this->BundleInfo = $param["BundleInfo"];
+        }
+
+        if (array_key_exists("WorkflowType",$param) and $param["WorkflowType"] !== null) {
+            $this->WorkflowType = $param["WorkflowType"];
+        }
+
+        if (array_key_exists("TaskExtDTO",$param) and $param["TaskExtDTO"] !== null) {
+            $this->TaskExtDTO = new TaskExtOpsDto();
+            $this->TaskExtDTO->deserialize($param["TaskExtDTO"]);
         }
     }
 }

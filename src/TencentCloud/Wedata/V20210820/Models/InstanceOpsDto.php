@@ -284,6 +284,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceSchedulerDesc(string $InstanceSchedulerDesc) 设置实例执行计划描述
  * @method array getPrivileges() 获取当前用户对该实例的权限列表
  * @method void setPrivileges(array $Privileges) 设置当前用户对该实例的权限列表
+ * @method string getTaskExecutionId() 获取任务执行id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskExecutionId(string $TaskExecutionId) 设置任务执行id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDlcTaskId() 获取dlc taskid
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDlcTaskId(string $DlcTaskId) 设置dlc taskid
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDlcSparkJobId() 获取dlc jobid
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDlcSparkJobId(string $DlcSparkJobId) 设置dlc jobid
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method StrToStrMap getExt() 获取扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExt(StrToStrMap $Ext) 设置扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceOpsDto extends AbstractModel
 {
@@ -692,6 +708,30 @@ class InstanceOpsDto extends AbstractModel
     public $Privileges;
 
     /**
+     * @var string 任务执行id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskExecutionId;
+
+    /**
+     * @var string dlc taskid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DlcTaskId;
+
+    /**
+     * @var string dlc jobid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DlcSparkJobId;
+
+    /**
+     * @var StrToStrMap 扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Ext;
+
+    /**
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName 任务名称
@@ -824,6 +864,14 @@ class InstanceOpsDto extends AbstractModel
      * @param string $InstanceCycleType 实例生命周期
      * @param string $InstanceSchedulerDesc 实例执行计划描述
      * @param array $Privileges 当前用户对该实例的权限列表
+     * @param string $TaskExecutionId 任务执行id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DlcTaskId dlc taskid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DlcSparkJobId dlc jobid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StrToStrMap $Ext 扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -1120,6 +1168,23 @@ class InstanceOpsDto extends AbstractModel
 
         if (array_key_exists("Privileges",$param) and $param["Privileges"] !== null) {
             $this->Privileges = $param["Privileges"];
+        }
+
+        if (array_key_exists("TaskExecutionId",$param) and $param["TaskExecutionId"] !== null) {
+            $this->TaskExecutionId = $param["TaskExecutionId"];
+        }
+
+        if (array_key_exists("DlcTaskId",$param) and $param["DlcTaskId"] !== null) {
+            $this->DlcTaskId = $param["DlcTaskId"];
+        }
+
+        if (array_key_exists("DlcSparkJobId",$param) and $param["DlcSparkJobId"] !== null) {
+            $this->DlcSparkJobId = $param["DlcSparkJobId"];
+        }
+
+        if (array_key_exists("Ext",$param) and $param["Ext"] !== null) {
+            $this->Ext = new StrToStrMap();
+            $this->Ext->deserialize($param["Ext"]);
         }
     }
 }

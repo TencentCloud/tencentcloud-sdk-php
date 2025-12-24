@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSchemaName(string $SchemaName) 设置模式名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getShowEnableCatalog() 获取是否展示目录
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setShowEnableCatalog(boolean $ShowEnableCatalog) 设置是否展示目录
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatabaseInfo extends AbstractModel
 {
@@ -134,6 +138,12 @@ class DatabaseInfo extends AbstractModel
     public $SchemaName;
 
     /**
+     * @var boolean 是否展示目录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ShowEnableCatalog;
+
+    /**
      * @param string $DatasourceName 数据源名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatasourceId 数据源Id
@@ -155,6 +165,8 @@ class DatabaseInfo extends AbstractModel
      * @param string $ClusterDeployType EMR引擎部署方式：CVM/TKE
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SchemaName 模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ShowEnableCatalog 是否展示目录
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -212,6 +224,10 @@ class DatabaseInfo extends AbstractModel
 
         if (array_key_exists("SchemaName",$param) and $param["SchemaName"] !== null) {
             $this->SchemaName = $param["SchemaName"];
+        }
+
+        if (array_key_exists("ShowEnableCatalog",$param) and $param["ShowEnableCatalog"] !== null) {
+            $this->ShowEnableCatalog = $param["ShowEnableCatalog"];
         }
     }
 }

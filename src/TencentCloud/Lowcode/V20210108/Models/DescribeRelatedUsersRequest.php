@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageSize(integer $PageSize) 设置页面含量
  * @method string getEnvType() 获取环境类型
  * @method void setEnvType(string $EnvType) 设置环境类型
+ * @method string getRoleStringId() 获取新角色id
+ * @method void setRoleStringId(string $RoleStringId) 设置新角色id
  */
 class DescribeRelatedUsersRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeRelatedUsersRequest extends AbstractModel
     public $EnvType;
 
     /**
+     * @var string 新角色id
+     */
+    public $RoleStringId;
+
+    /**
      * @param integer $RoleId 角色id
      * @param string $EnvId 环境id
      * @param integer $PageNo 页码
      * @param integer $PageSize 页面含量
      * @param string $EnvType 环境类型
+     * @param string $RoleStringId 新角色id
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeRelatedUsersRequest extends AbstractModel
 
         if (array_key_exists("EnvType",$param) and $param["EnvType"] !== null) {
             $this->EnvType = $param["EnvType"];
+        }
+
+        if (array_key_exists("RoleStringId",$param) and $param["RoleStringId"] !== null) {
+            $this->RoleStringId = $param["RoleStringId"];
         }
     }
 }

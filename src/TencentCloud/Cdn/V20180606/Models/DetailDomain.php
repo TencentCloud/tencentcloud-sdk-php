@@ -326,6 +326,10 @@ off：不支持
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParamFilter(ParamFilter $ParamFilter) 设置参数黑名单
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AutoGuard getAutoGuard() 获取流量一键防盗刷配置
+ * @method void setAutoGuard(AutoGuard $AutoGuard) 设置流量一键防盗刷配置
+ * @method GeoBlocker getGeoBlocker() 获取区域访问控制配置
+ * @method void setGeoBlocker(GeoBlocker $GeoBlocker) 设置区域访问控制配置
  */
 class DetailDomain extends AbstractModel
 {
@@ -751,6 +755,16 @@ off：不支持
     public $ParamFilter;
 
     /**
+     * @var AutoGuard 流量一键防盗刷配置
+     */
+    public $AutoGuard;
+
+    /**
+     * @var GeoBlocker 区域访问控制配置
+     */
+    public $GeoBlocker;
+
+    /**
      * @param string $ResourceId 域名 ID
      * @param integer $AppId 腾讯云账号ID
      * @param string $Domain 加速域名
@@ -904,6 +918,8 @@ off：不支持
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ParamFilter $ParamFilter 参数黑名单
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoGuard $AutoGuard 流量一键防盗刷配置
+     * @param GeoBlocker $GeoBlocker 区域访问控制配置
      */
     function __construct()
     {
@@ -1244,6 +1260,16 @@ off：不支持
         if (array_key_exists("ParamFilter",$param) and $param["ParamFilter"] !== null) {
             $this->ParamFilter = new ParamFilter();
             $this->ParamFilter->deserialize($param["ParamFilter"]);
+        }
+
+        if (array_key_exists("AutoGuard",$param) and $param["AutoGuard"] !== null) {
+            $this->AutoGuard = new AutoGuard();
+            $this->AutoGuard->deserialize($param["AutoGuard"]);
+        }
+
+        if (array_key_exists("GeoBlocker",$param) and $param["GeoBlocker"] !== null) {
+            $this->GeoBlocker = new GeoBlocker();
+            $this->GeoBlocker->deserialize($param["GeoBlocker"]);
         }
     }
 }

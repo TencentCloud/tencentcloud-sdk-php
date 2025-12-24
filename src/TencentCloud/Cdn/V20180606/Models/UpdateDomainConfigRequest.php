@@ -136,6 +136,10 @@ global：全球加速
  * @method void setHttpsBilling(HttpsBilling $HttpsBilling) 设置HTTPS服务（收费服务，详见计费说明和产品文档）
  * @method ParamFilter getParamFilter() 获取参数黑名单
  * @method void setParamFilter(ParamFilter $ParamFilter) 设置参数黑名单
+ * @method AutoGuard getAutoGuard() 获取流量防盗刷配置
+ * @method void setAutoGuard(AutoGuard $AutoGuard) 设置流量防盗刷配置
+ * @method GeoBlocker getGeoBlocker() 获取区域访问控制配置
+ * @method void setGeoBlocker(GeoBlocker $GeoBlocker) 设置区域访问控制配置
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -398,6 +402,16 @@ global：全球加速
     public $ParamFilter;
 
     /**
+     * @var AutoGuard 流量防盗刷配置
+     */
+    public $AutoGuard;
+
+    /**
+     * @var GeoBlocker 区域访问控制配置
+     */
+    public $GeoBlocker;
+
+    /**
      * @param string $Domain 域名
      * @param integer $ProjectId 项目 ID
      * @param Origin $Origin 源站配置
@@ -456,6 +470,8 @@ global：全球加速
      * @param OthersPrivateAccess $OthersPrivateAccess 其他厂商对象存储回源鉴权
      * @param HttpsBilling $HttpsBilling HTTPS服务（收费服务，详见计费说明和产品文档）
      * @param ParamFilter $ParamFilter 参数黑名单
+     * @param AutoGuard $AutoGuard 流量防盗刷配置
+     * @param GeoBlocker $GeoBlocker 区域访问控制配置
      */
     function __construct()
     {
@@ -713,6 +729,16 @@ global：全球加速
         if (array_key_exists("ParamFilter",$param) and $param["ParamFilter"] !== null) {
             $this->ParamFilter = new ParamFilter();
             $this->ParamFilter->deserialize($param["ParamFilter"]);
+        }
+
+        if (array_key_exists("AutoGuard",$param) and $param["AutoGuard"] !== null) {
+            $this->AutoGuard = new AutoGuard();
+            $this->AutoGuard->deserialize($param["AutoGuard"]);
+        }
+
+        if (array_key_exists("GeoBlocker",$param) and $param["GeoBlocker"] !== null) {
+            $this->GeoBlocker = new GeoBlocker();
+            $this->GeoBlocker->deserialize($param["GeoBlocker"]);
         }
     }
 }

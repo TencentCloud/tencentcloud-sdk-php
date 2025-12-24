@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
 备注：入参只能指定VpcId和OwnerUin的其中一个
  * @method integer getOwnerUin() 获取资源所属者Uin
  * @method void setOwnerUin(integer $OwnerUin) 设置资源所属者Uin
+ * @method string getAccessGroupIdMarker() 获取起始权限组ID标记
+ * @method void setAccessGroupIdMarker(string $AccessGroupIdMarker) 设置起始权限组ID标记
  */
 class DescribeAccessGroupsRequest extends AbstractModel
 {
@@ -41,9 +43,15 @@ class DescribeAccessGroupsRequest extends AbstractModel
     public $OwnerUin;
 
     /**
+     * @var string 起始权限组ID标记
+     */
+    public $AccessGroupIdMarker;
+
+    /**
      * @param string $VpcId VPC网络ID
 备注：入参只能指定VpcId和OwnerUin的其中一个
      * @param integer $OwnerUin 资源所属者Uin
+     * @param string $AccessGroupIdMarker 起始权限组ID标记
      */
     function __construct()
     {
@@ -64,6 +72,10 @@ class DescribeAccessGroupsRequest extends AbstractModel
 
         if (array_key_exists("OwnerUin",$param) and $param["OwnerUin"] !== null) {
             $this->OwnerUin = $param["OwnerUin"];
+        }
+
+        if (array_key_exists("AccessGroupIdMarker",$param) and $param["AccessGroupIdMarker"] !== null) {
+            $this->AccessGroupIdMarker = $param["AccessGroupIdMarker"];
         }
     }
 }

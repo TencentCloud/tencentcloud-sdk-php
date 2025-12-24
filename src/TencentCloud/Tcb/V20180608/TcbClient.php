@@ -33,8 +33,6 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\CreateHostingDomainResponse CreateHostingDomain(Models\CreateHostingDomainRequest $req) 创建托管域名
  * @method Models\CreatePostpayPackageResponse CreatePostpayPackage(Models\CreatePostpayPackageRequest $req) 开通后付费资源
  * @method Models\CreateStaticStoreResponse CreateStaticStore(Models\CreateStaticStoreRequest $req) 创建静态托管资源，包括COS和CDN，异步任务创建，查看创建结果需要根据DescribeStaticStore接口来查看
- * @method Models\CreateWxCloudBaseRunEnvResponse CreateWxCloudBaseRunEnv(Models\CreateWxCloudBaseRunEnvRequest $req) 创建微信云托管
- * @method Models\CreateWxCloudBaseRunServerDBClusterResponse CreateWxCloudBaseRunServerDBCluster(Models\CreateWxCloudBaseRunServerDBClusterRequest $req) 开通微信云托管MySQL数据库服务
  * @method Models\DeleteCloudBaseProjectLatestVersionResponse DeleteCloudBaseProjectLatestVersion(Models\DeleteCloudBaseProjectLatestVersionRequest $req) 删除云项目
  * @method Models\DeleteCloudBaseRunServerVersionResponse DeleteCloudBaseRunServerVersion(Models\DeleteCloudBaseRunServerVersionRequest $req) 删除服务版本
  * @method Models\DeleteGatewayVersionResponse DeleteGatewayVersion(Models\DeleteGatewayVersionRequest $req) 删除网关某版本
@@ -47,18 +45,11 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DescribeCloudBaseBuildServiceResponse DescribeCloudBaseBuildService(Models\DescribeCloudBaseBuildServiceRequest $req) 获取云托管代码上传url
  * @method Models\DescribeCloudBaseProjectLatestVersionListResponse DescribeCloudBaseProjectLatestVersionList(Models\DescribeCloudBaseProjectLatestVersionListRequest $req) 获取云开发项目列表
  * @method Models\DescribeCloudBaseProjectVersionListResponse DescribeCloudBaseProjectVersionList(Models\DescribeCloudBaseProjectVersionListRequest $req) 云项目部署列表
- * @method Models\DescribeCloudBaseRunAllVpcsResponse DescribeCloudBaseRunAllVpcs(Models\DescribeCloudBaseRunAllVpcsRequest $req) 查询环境下所有的vpc列表
- * @method Models\DescribeCloudBaseRunConfForGateWayResponse DescribeCloudBaseRunConfForGateWay(Models\DescribeCloudBaseRunConfForGateWayRequest $req) 独立网关中拉取云托管服务对应的配置信息
- * @method Models\DescribeCloudBaseRunOneClickTaskExternalResponse DescribeCloudBaseRunOneClickTaskExternal(Models\DescribeCloudBaseRunOneClickTaskExternalRequest $req) 查询一键部署任务 （特定接口：外部查询使用）
- * @method Models\DescribeCloudBaseRunOperationTypesResponse DescribeCloudBaseRunOperationTypes(Models\DescribeCloudBaseRunOperationTypesRequest $req) 查询服务、版本和操作类型
- * @method Models\DescribeCloudBaseRunPodListResponse DescribeCloudBaseRunPodList(Models\DescribeCloudBaseRunPodListRequest $req) 查询云托管服务版本容器列表
  * @method Models\DescribeCloudBaseRunResourceResponse DescribeCloudBaseRunResource(Models\DescribeCloudBaseRunResourceRequest $req) 查看容器托管的集群状态
  * @method Models\DescribeCloudBaseRunResourceForExtendResponse DescribeCloudBaseRunResourceForExtend(Models\DescribeCloudBaseRunResourceForExtendRequest $req) 查看容器托管的集群状态扩展使用
  * @method Models\DescribeCloudBaseRunServerResponse DescribeCloudBaseRunServer(Models\DescribeCloudBaseRunServerRequest $req) 查询单个服务的详情，版本以及详情
- * @method Models\DescribeCloudBaseRunServerDomainNameResponse DescribeCloudBaseRunServerDomainName(Models\DescribeCloudBaseRunServerDomainNameRequest $req) 查询微信云托管服务域名
  * @method Models\DescribeCloudBaseRunServerVersionResponse DescribeCloudBaseRunServerVersion(Models\DescribeCloudBaseRunServerVersionRequest $req) 查询服务版本的详情，CPU和MEM  请使用CPUSize和MemSize
  * @method Models\DescribeCloudBaseRunVersionResponse DescribeCloudBaseRunVersion(Models\DescribeCloudBaseRunVersionRequest $req) 查询服务版本详情(新)
- * @method Models\DescribeCloudBaseRunVersionRsByConditionResponse DescribeCloudBaseRunVersionRsByCondition(Models\DescribeCloudBaseRunVersionRsByConditionRequest $req) DescribeCloudBaseRunVersionRsByCondition 获取云托管详情
  * @method Models\DescribeCloudBaseRunVersionSnapshotResponse DescribeCloudBaseRunVersionSnapshot(Models\DescribeCloudBaseRunVersionSnapshotRequest $req) 查询版本历史
  * @method Models\DescribeCurveDataResponse DescribeCurveData(Models\DescribeCurveDataRequest $req) 根据用户传入的指标, 拉取一段时间内的监控数据。
  * @method Models\DescribeDatabaseACLResponse DescribeDatabaseACL(Models\DescribeDatabaseACLRequest $req) 获取数据库权限
@@ -84,8 +75,6 @@ use TencentCloud\Tcb\V20180608\Models as Models;
 3 都没有返回为空数组
  * @method Models\DescribeSpecialCostItemsResponse DescribeSpecialCostItems(Models\DescribeSpecialCostItemsRequest $req) 查询环境1分钱抵扣信息
  * @method Models\DescribeUserActivityInfoResponse DescribeUserActivityInfo(Models\DescribeUserActivityInfoRequest $req) 查询用户活动信息
- * @method Models\DescribeWxCloudBaseRunEnvsResponse DescribeWxCloudBaseRunEnvs(Models\DescribeWxCloudBaseRunEnvsRequest $req) 查询微信云托管环境信息
- * @method Models\DescribeWxCloudBaseRunSubNetsResponse DescribeWxCloudBaseRunSubNets(Models\DescribeWxCloudBaseRunSubNetsRequest $req) 查询微信云托管子网
  * @method Models\DescribeWxGatewayRoutesResponse DescribeWxGatewayRoutes(Models\DescribeWxGatewayRoutesRequest $req) 查看安全网关路由
  * @method Models\DescribeWxGatewaysResponse DescribeWxGateways(Models\DescribeWxGatewaysRequest $req) 查看安全网关
  * @method Models\DestroyEnvResponse DestroyEnv(Models\DestroyEnvRequest $req) 销毁环境
@@ -102,7 +91,6 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\ModifyGatewayVersionTrafficResponse ModifyGatewayVersionTraffic(Models\ModifyGatewayVersionTrafficRequest $req) 设置网关版本的流量比例
  * @method Models\ReinstateEnvResponse ReinstateEnv(Models\ReinstateEnvRequest $req) 针对已隔离的免费环境，可以通过本接口将其恢复访问。
  * @method Models\ReplaceActivityRecordResponse ReplaceActivityRecord(Models\ReplaceActivityRecordRequest $req) 更新活动详情
- * @method Models\RollUpdateCloudBaseRunServerVersionResponse RollUpdateCloudBaseRunServerVersion(Models\RollUpdateCloudBaseRunServerVersionRequest $req) 针对特定的版本，进行滚动更新
  * @method Models\SearchClsLogResponse SearchClsLog(Models\SearchClsLogRequest $req) 搜索CLS日志，TCB角色密钥访问
  * @method Models\UnfreezeCloudBaseRunServersResponse UnfreezeCloudBaseRunServers(Models\UnfreezeCloudBaseRunServersRequest $req) 批量解冻服务
  */

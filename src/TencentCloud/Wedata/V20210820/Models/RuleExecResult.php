@@ -152,6 +152,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFinishTime(string $FinishTime) 设置执行结束时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGroupType() 获取任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupType(string $GroupType) 设置任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAspectTaskId() 获取编排任务id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAspectTaskId(string $AspectTaskId) 设置编排任务id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCatalogName() 获取目录
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCatalogName(string $CatalogName) 设置目录
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleExecResult extends AbstractModel
 {
@@ -354,6 +366,24 @@ class RuleExecResult extends AbstractModel
     public $FinishTime;
 
     /**
+     * @var string 任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupType;
+
+    /**
+     * @var string 编排任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AspectTaskId;
+
+    /**
+     * @var string 目录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CatalogName;
+
+    /**
      * @param integer $RuleExecId 规则执行ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleGroupExecId 规则组执行ID
@@ -419,6 +449,12 @@ class RuleExecResult extends AbstractModel
      * @param integer $MonitorType 监控方式 1.未配置, 2.关联生产调度, 3.离线周期检测
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FinishTime 执行结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GroupType 任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AspectTaskId 编排任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CatalogName 目录
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -566,6 +602,18 @@ class RuleExecResult extends AbstractModel
 
         if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
             $this->FinishTime = $param["FinishTime"];
+        }
+
+        if (array_key_exists("GroupType",$param) and $param["GroupType"] !== null) {
+            $this->GroupType = $param["GroupType"];
+        }
+
+        if (array_key_exists("AspectTaskId",$param) and $param["AspectTaskId"] !== null) {
+            $this->AspectTaskId = $param["AspectTaskId"];
+        }
+
+        if (array_key_exists("CatalogName",$param) and $param["CatalogName"] !== null) {
+            $this->CatalogName = $param["CatalogName"];
         }
     }
 }

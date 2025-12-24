@@ -140,6 +140,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateUserName(string $CreateUserName) 设置监控创建人
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGroupType() 获取任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupType(string $GroupType) 设置任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAspectTaskId() 获取任务id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAspectTaskId(string $AspectTaskId) 设置任务id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCatalogName() 获取catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCatalogName(string $CatalogName) 设置catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleGroup extends AbstractModel
 {
@@ -324,6 +336,24 @@ class RuleGroup extends AbstractModel
     public $CreateUserName;
 
     /**
+     * @var string 任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupType;
+
+    /**
+     * @var string 任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AspectTaskId;
+
+    /**
+     * @var string catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CatalogName;
+
+    /**
      * @param integer $RuleGroupId 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatasourceId 数据源Id
@@ -383,6 +413,12 @@ class RuleGroup extends AbstractModel
      * @param string $Description 任务描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateUserName 监控创建人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GroupType 任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AspectTaskId 任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CatalogName catalog名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -518,6 +554,18 @@ class RuleGroup extends AbstractModel
 
         if (array_key_exists("CreateUserName",$param) and $param["CreateUserName"] !== null) {
             $this->CreateUserName = $param["CreateUserName"];
+        }
+
+        if (array_key_exists("GroupType",$param) and $param["GroupType"] !== null) {
+            $this->GroupType = $param["GroupType"];
+        }
+
+        if (array_key_exists("AspectTaskId",$param) and $param["AspectTaskId"] !== null) {
+            $this->AspectTaskId = $param["AspectTaskId"];
+        }
+
+        if (array_key_exists("CatalogName",$param) and $param["CatalogName"] !== null) {
+            $this->CatalogName = $param["CatalogName"];
         }
     }
 }

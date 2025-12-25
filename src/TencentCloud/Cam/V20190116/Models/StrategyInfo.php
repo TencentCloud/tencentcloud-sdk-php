@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPolicyName() 获取策略名称。
  * @method void setPolicyName(string $PolicyName) 设置策略名称。
  * @method string getAddTime() 获取策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddTime(string $AddTime) 设置策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getType() 获取策略类型。1 表示自定义策略，2 表示预设策略。
  * @method void setType(integer $Type) 设置策略类型。1 表示自定义策略，2 表示预设策略。
  * @method string getDescription() 获取策略描述。
@@ -70,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置最后编辑时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取标签列表
+ * @method void setTags(array $Tags) 设置标签列表
  */
 class StrategyInfo extends AbstractModel
 {
@@ -85,7 +85,6 @@ class StrategyInfo extends AbstractModel
 
     /**
      * @var string 策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddTime;
 
@@ -159,10 +158,14 @@ class StrategyInfo extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var array 标签列表
+     */
+    public $Tags;
+
+    /**
      * @param integer $PolicyId 策略ID。
      * @param string $PolicyName 策略名称。
      * @param string $AddTime 策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Type 策略类型。1 表示自定义策略，2 表示预设策略。
      * @param string $Description 策略描述。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -184,6 +187,7 @@ class StrategyInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 最后编辑时间
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 标签列表
      */
     function __construct()
     {
@@ -256,6 +260,15 @@ class StrategyInfo extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

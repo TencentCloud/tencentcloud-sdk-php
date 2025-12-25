@@ -158,6 +158,8 @@ Changing  变更中
  * @method void setMasterInstance(string $MasterInstance) 设置对应主集群
  * @method array getSlaveInstances() 获取对应备集群
  * @method void setSlaveInstances(array $SlaveInstances) 设置对应备集群
+ * @method string getSyncerIp() 获取ccr服务部署节点ip
+ * @method void setSyncerIp(string $SyncerIp) 设置ccr服务部署节点ip
  */
 class InstanceInfo extends AbstractModel
 {
@@ -472,6 +474,11 @@ Changing  变更中
     public $SlaveInstances;
 
     /**
+     * @var string ccr服务部署节点ip
+     */
+    public $SyncerIp;
+
+    /**
      * @param string $InstanceId 集群实例ID, "cdwdoris-xxxx" 字符串类型
      * @param string $InstanceName 集群实例名称
      * @param string $Status 状态,
@@ -541,6 +548,7 @@ Changing  变更中
      * @param string $InstanceType 集群类型
      * @param string $MasterInstance 对应主集群
      * @param array $SlaveInstances 对应备集群
+     * @param string $SyncerIp ccr服务部署节点ip
      */
     function __construct()
     {
@@ -802,6 +810,10 @@ Changing  变更中
 
         if (array_key_exists("SlaveInstances",$param) and $param["SlaveInstances"] !== null) {
             $this->SlaveInstances = $param["SlaveInstances"];
+        }
+
+        if (array_key_exists("SyncerIp",$param) and $param["SyncerIp"] !== null) {
+            $this->SyncerIp = $param["SyncerIp"];
         }
     }
 }

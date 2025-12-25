@@ -190,6 +190,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\ModifyIpAccessControlResponse ModifyIpAccessControl(Models\ModifyIpAccessControlRequest $req) Waf IP黑白名单编辑接口
  * @method Models\ModifyModuleStatusResponse ModifyModuleStatus(Models\ModifyModuleStatusRequest $req) 设置某个domain下基础安全模块的开关
  * @method Models\ModifyObjectResponse ModifyObject(Models\ModifyObjectRequest $req) 修改防护对象
+ * @method Models\ModifyObjectsResponse ModifyObjects(Models\ModifyObjectsRequest $req) 批量修改防护对象
  * @method Models\ModifyOwaspRuleStatusResponse ModifyOwaspRuleStatus(Models\ModifyOwaspRuleStatusRequest $req) 更新规则的开关
  * @method Models\ModifyOwaspRuleTypeActionResponse ModifyOwaspRuleTypeAction(Models\ModifyOwaspRuleTypeActionRequest $req) 更新规则类型的防护模式
  * @method Models\ModifyOwaspRuleTypeLevelResponse ModifyOwaspRuleTypeLevel(Models\ModifyOwaspRuleTypeLevelRequest $req) 更新规则类型的防护等级

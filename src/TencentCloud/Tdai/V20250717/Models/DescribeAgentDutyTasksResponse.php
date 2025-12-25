@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() 获取查询结果总数量
  * @method void setTotalCount(integer $TotalCount) 设置查询结果总数量
+ * @method array getDutyTasks() 获取任务详细信息
+ * @method void setDutyTasks(array $DutyTasks) 设置任务详细信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +35,18 @@ class DescribeAgentDutyTasksResponse extends AbstractModel
     public $TotalCount;
 
     /**
+     * @var array 任务详细信息
+     */
+    public $DutyTasks;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param integer $TotalCount 查询结果总数量
+     * @param array $DutyTasks 任务详细信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,15 @@ class DescribeAgentDutyTasksResponse extends AbstractModel
         }
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("DutyTasks",$param) and $param["DutyTasks"] !== null) {
+            $this->DutyTasks = [];
+            foreach ($param["DutyTasks"] as $key => $value){
+                $obj = new AgentDutyTask();
+                $obj->deserialize($value);
+                array_push($this->DutyTasks, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Autoscaling\V20180419\Models;
+namespace TencentCloud\Evt\V20250217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ExecuteScalingPolicy返回参数结构体
+ * PutMessage返回参数结构体
  *
- * @method string getActivityId() 获取<p>伸缩活动ID</p>
- * @method void setActivityId(string $ActivityId) 设置<p>伸缩活动ID</p>
+ * @method string getTicketId() 获取<p>满足条件时生成的事件单id，不满足条件时为空</p>
+ * @method void setTicketId(string $TicketId) 设置<p>满足条件时生成的事件单id，不满足条件时为空</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class ExecuteScalingPolicyResponse extends AbstractModel
+class PutMessageResponse extends AbstractModel
 {
     /**
-     * @var string <p>伸缩活动ID</p>
+     * @var string <p>满足条件时生成的事件单id，不满足条件时为空</p>
      */
-    public $ActivityId;
+    public $TicketId;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class ExecuteScalingPolicyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ActivityId <p>伸缩活动ID</p>
+     * @param string $TicketId <p>满足条件时生成的事件单id，不满足条件时为空</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class ExecuteScalingPolicyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ActivityId",$param) and $param["ActivityId"] !== null) {
-            $this->ActivityId = $param["ActivityId"];
+        if (array_key_exists("TicketId",$param) and $param["TicketId"] !== null) {
+            $this->TicketId = $param["TicketId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

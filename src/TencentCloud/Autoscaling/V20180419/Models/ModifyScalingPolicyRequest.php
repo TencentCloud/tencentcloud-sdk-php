@@ -20,102 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyScalingPolicy请求参数结构体
  *
- * @method string getAutoScalingPolicyId() 获取告警策略ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeScalingPolicies](https://cloud.tencent.com/document/api/377/33178) ，取返回信息中的 AutoScalingPolicyId 获取告警策略ID。
- * @method void setAutoScalingPolicyId(string $AutoScalingPolicyId) 设置告警策略ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeScalingPolicies](https://cloud.tencent.com/document/api/377/33178) ，取返回信息中的 AutoScalingPolicyId 获取告警策略ID。
- * @method string getScalingPolicyName() 获取告警策略名称，在您账号中必须唯一。名称长度不能超过60，名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点。
- * @method void setScalingPolicyName(string $ScalingPolicyName) 设置告警策略名称，在您账号中必须唯一。名称长度不能超过60，名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点。
- * @method string getAdjustmentType() 获取告警触发后，期望实例数修改方式，仅适用于简单策略。取值范围：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
- * @method void setAdjustmentType(string $AdjustmentType) 设置告警触发后，期望实例数修改方式，仅适用于简单策略。取值范围：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
- * @method integer getAdjustmentValue() 获取告警触发后，期望实例数的调整值，仅适用于简单策略。<li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。</li>
- * @method void setAdjustmentValue(integer $AdjustmentValue) 设置告警触发后，期望实例数的调整值，仅适用于简单策略。<li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。</li>
- * @method integer getCooldown() 获取冷却时间，仅适用于简单策略，单位为秒。
- * @method void setCooldown(integer $Cooldown) 设置冷却时间，仅适用于简单策略，单位为秒。
- * @method MetricAlarm getMetricAlarm() 获取告警监控指标，仅适用于简单策略。
- * @method void setMetricAlarm(MetricAlarm $MetricAlarm) 设置告警监控指标，仅适用于简单策略。
- * @method string getPredefinedMetricType() 获取预定义监控项，仅适用于目标追踪策略。取值范围：<br><li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li><li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li><li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li><li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li><li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li>
- * @method void setPredefinedMetricType(string $PredefinedMetricType) 设置预定义监控项，仅适用于目标追踪策略。取值范围：<br><li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li><li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li><li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li><li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li><li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li>
- * @method integer getTargetValue() 获取目标值，仅适用于目标追踪策略。<br><li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li><li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_IN：>0，单位：Mbps</li>
- * @method void setTargetValue(integer $TargetValue) 设置目标值，仅适用于目标追踪策略。<br><li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li><li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_IN：>0，单位：Mbps</li>
- * @method integer getEstimatedInstanceWarmup() 获取实例预热时间，单位为秒，仅适用于目标追踪策略。取值范围为0-3600。
- * @method void setEstimatedInstanceWarmup(integer $EstimatedInstanceWarmup) 设置实例预热时间，单位为秒，仅适用于目标追踪策略。取值范围为0-3600。
- * @method boolean getDisableScaleIn() 获取是否禁用缩容，仅适用于目标追踪策略。取值范围：<br><li>true：目标追踪策略仅触发扩容</li><li>false：目标追踪策略触发扩容和缩容</li>
- * @method void setDisableScaleIn(boolean $DisableScaleIn) 设置是否禁用缩容，仅适用于目标追踪策略。取值范围：<br><li>true：目标追踪策略仅触发扩容</li><li>false：目标追踪策略触发扩容和缩容</li>
- * @method array getNotificationUserGroupIds() 获取此参数已不再生效，请使用[创建通知](https://cloud.tencent.com/document/api/377/33185)。
-通知组ID，即为用户组ID集合。
- * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) 设置此参数已不再生效，请使用[创建通知](https://cloud.tencent.com/document/api/377/33185)。
-通知组ID，即为用户组ID集合。
+ * @method string getAutoScalingPolicyId() 获取<p>告警策略ID。可通过登录 <a href="https://console.cloud.tencent.com/autoscaling/group">控制台</a> 或调用接口 <a href="https://cloud.tencent.com/document/api/377/33178">DescribeScalingPolicies</a> ，取返回信息中的 AutoScalingPolicyId 获取告警策略ID。</p>
+ * @method void setAutoScalingPolicyId(string $AutoScalingPolicyId) 设置<p>告警策略ID。可通过登录 <a href="https://console.cloud.tencent.com/autoscaling/group">控制台</a> 或调用接口 <a href="https://cloud.tencent.com/document/api/377/33178">DescribeScalingPolicies</a> ，取返回信息中的 AutoScalingPolicyId 获取告警策略ID。</p>
+ * @method string getScalingPolicyName() 获取<p>告警策略名称，在您账号中必须唯一。名称长度不能超过60，名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点。</p>
+ * @method void setScalingPolicyName(string $ScalingPolicyName) 设置<p>告警策略名称，在您账号中必须唯一。名称长度不能超过60，名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点。</p>
+ * @method string getAdjustmentType() 获取<p>告警触发后，期望实例数修改方式，仅适用于简单策略。取值范围：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li></p>
+ * @method void setAdjustmentType(string $AdjustmentType) 设置<p>告警触发后，期望实例数修改方式，仅适用于简单策略。取值范围：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li></p>
+ * @method integer getAdjustmentValue() 获取<p>告警触发后，期望实例数的调整值，仅适用于简单策略。<li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。</li></p>
+ * @method void setAdjustmentValue(integer $AdjustmentValue) 设置<p>告警触发后，期望实例数的调整值，仅适用于简单策略。<li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。</li></p>
+ * @method integer getCooldown() 获取<p>冷却时间，仅适用于简单策略，单位为秒。</p>
+ * @method void setCooldown(integer $Cooldown) 设置<p>冷却时间，仅适用于简单策略，单位为秒。</p>
+ * @method MetricAlarm getMetricAlarm() 获取<p>告警监控指标，仅适用于简单策略。</p>
+ * @method void setMetricAlarm(MetricAlarm $MetricAlarm) 设置<p>告警监控指标，仅适用于简单策略。</p>
+ * @method string getPredefinedMetricType() 获取<p>预定义监控项，仅适用于目标追踪策略。取值范围：<br><li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li><li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li><li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li><li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li><li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li></p>
+ * @method void setPredefinedMetricType(string $PredefinedMetricType) 设置<p>预定义监控项，仅适用于目标追踪策略。取值范围：<br><li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li><li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li><li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li><li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li><li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li></p>
+ * @method integer getTargetValue() 获取<p>目标值，仅适用于目标追踪策略。<br><li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li><li>ASG_AVG_LAN_TRAFFIC_OUT：&gt;0，单位：Mbps</li><li>ASG_AVG_LAN_TRAFFIC_IN：&gt;0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_OUT：&gt;0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_IN：&gt;0，单位：Mbps</li></p>
+ * @method void setTargetValue(integer $TargetValue) 设置<p>目标值，仅适用于目标追踪策略。<br><li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li><li>ASG_AVG_LAN_TRAFFIC_OUT：&gt;0，单位：Mbps</li><li>ASG_AVG_LAN_TRAFFIC_IN：&gt;0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_OUT：&gt;0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_IN：&gt;0，单位：Mbps</li></p>
+ * @method integer getEstimatedInstanceWarmup() 获取<p>实例预热时间，单位为秒，仅适用于目标追踪策略。取值范围为0-3600。</p>
+ * @method void setEstimatedInstanceWarmup(integer $EstimatedInstanceWarmup) 设置<p>实例预热时间，单位为秒，仅适用于目标追踪策略。取值范围为0-3600。</p>
+ * @method boolean getDisableScaleIn() 获取<p>是否禁用缩容，仅适用于目标追踪策略。取值范围：<br><li>true：目标追踪策略仅触发扩容</li><li>false：目标追踪策略触发扩容和缩容</li></p>
+ * @method void setDisableScaleIn(boolean $DisableScaleIn) 设置<p>是否禁用缩容，仅适用于目标追踪策略。取值范围：<br><li>true：目标追踪策略仅触发扩容</li><li>false：目标追踪策略触发扩容和缩容</li></p>
+ * @method array getNotificationUserGroupIds() 获取<p>此参数已不再生效，请使用<a href="https://cloud.tencent.com/document/api/377/33185">创建通知</a>。通知组ID，即为用户组ID集合。</p>
+ * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) 设置<p>此参数已不再生效，请使用<a href="https://cloud.tencent.com/document/api/377/33185">创建通知</a>。通知组ID，即为用户组ID集合。</p>
  */
 class ModifyScalingPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 告警策略ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeScalingPolicies](https://cloud.tencent.com/document/api/377/33178) ，取返回信息中的 AutoScalingPolicyId 获取告警策略ID。
+     * @var string <p>告警策略ID。可通过登录 <a href="https://console.cloud.tencent.com/autoscaling/group">控制台</a> 或调用接口 <a href="https://cloud.tencent.com/document/api/377/33178">DescribeScalingPolicies</a> ，取返回信息中的 AutoScalingPolicyId 获取告警策略ID。</p>
      */
     public $AutoScalingPolicyId;
 
     /**
-     * @var string 告警策略名称，在您账号中必须唯一。名称长度不能超过60，名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点。
+     * @var string <p>告警策略名称，在您账号中必须唯一。名称长度不能超过60，名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点。</p>
      */
     public $ScalingPolicyName;
 
     /**
-     * @var string 告警触发后，期望实例数修改方式，仅适用于简单策略。取值范围：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
+     * @var string <p>告警触发后，期望实例数修改方式，仅适用于简单策略。取值范围：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li></p>
      */
     public $AdjustmentType;
 
     /**
-     * @var integer 告警触发后，期望实例数的调整值，仅适用于简单策略。<li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。</li>
+     * @var integer <p>告警触发后，期望实例数的调整值，仅适用于简单策略。<li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。</li></p>
      */
     public $AdjustmentValue;
 
     /**
-     * @var integer 冷却时间，仅适用于简单策略，单位为秒。
+     * @var integer <p>冷却时间，仅适用于简单策略，单位为秒。</p>
      */
     public $Cooldown;
 
     /**
-     * @var MetricAlarm 告警监控指标，仅适用于简单策略。
+     * @var MetricAlarm <p>告警监控指标，仅适用于简单策略。</p>
      */
     public $MetricAlarm;
 
     /**
-     * @var string 预定义监控项，仅适用于目标追踪策略。取值范围：<br><li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li><li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li><li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li><li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li><li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li>
+     * @var string <p>预定义监控项，仅适用于目标追踪策略。取值范围：<br><li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li><li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li><li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li><li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li><li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li></p>
      */
     public $PredefinedMetricType;
 
     /**
-     * @var integer 目标值，仅适用于目标追踪策略。<br><li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li><li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_IN：>0，单位：Mbps</li>
+     * @var integer <p>目标值，仅适用于目标追踪策略。<br><li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li><li>ASG_AVG_LAN_TRAFFIC_OUT：&gt;0，单位：Mbps</li><li>ASG_AVG_LAN_TRAFFIC_IN：&gt;0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_OUT：&gt;0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_IN：&gt;0，单位：Mbps</li></p>
      */
     public $TargetValue;
 
     /**
-     * @var integer 实例预热时间，单位为秒，仅适用于目标追踪策略。取值范围为0-3600。
+     * @var integer <p>实例预热时间，单位为秒，仅适用于目标追踪策略。取值范围为0-3600。</p>
      */
     public $EstimatedInstanceWarmup;
 
     /**
-     * @var boolean 是否禁用缩容，仅适用于目标追踪策略。取值范围：<br><li>true：目标追踪策略仅触发扩容</li><li>false：目标追踪策略触发扩容和缩容</li>
+     * @var boolean <p>是否禁用缩容，仅适用于目标追踪策略。取值范围：<br><li>true：目标追踪策略仅触发扩容</li><li>false：目标追踪策略触发扩容和缩容</li></p>
      */
     public $DisableScaleIn;
 
     /**
-     * @var array 此参数已不再生效，请使用[创建通知](https://cloud.tencent.com/document/api/377/33185)。
-通知组ID，即为用户组ID集合。
+     * @var array <p>此参数已不再生效，请使用<a href="https://cloud.tencent.com/document/api/377/33185">创建通知</a>。通知组ID，即为用户组ID集合。</p>
      */
     public $NotificationUserGroupIds;
 
     /**
-     * @param string $AutoScalingPolicyId 告警策略ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeScalingPolicies](https://cloud.tencent.com/document/api/377/33178) ，取返回信息中的 AutoScalingPolicyId 获取告警策略ID。
-     * @param string $ScalingPolicyName 告警策略名称，在您账号中必须唯一。名称长度不能超过60，名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点。
-     * @param string $AdjustmentType 告警触发后，期望实例数修改方式，仅适用于简单策略。取值范围：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
-     * @param integer $AdjustmentValue 告警触发后，期望实例数的调整值，仅适用于简单策略。<li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。</li>
-     * @param integer $Cooldown 冷却时间，仅适用于简单策略，单位为秒。
-     * @param MetricAlarm $MetricAlarm 告警监控指标，仅适用于简单策略。
-     * @param string $PredefinedMetricType 预定义监控项，仅适用于目标追踪策略。取值范围：<br><li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li><li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li><li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li><li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li><li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li>
-     * @param integer $TargetValue 目标值，仅适用于目标追踪策略。<br><li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li><li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_IN：>0，单位：Mbps</li>
-     * @param integer $EstimatedInstanceWarmup 实例预热时间，单位为秒，仅适用于目标追踪策略。取值范围为0-3600。
-     * @param boolean $DisableScaleIn 是否禁用缩容，仅适用于目标追踪策略。取值范围：<br><li>true：目标追踪策略仅触发扩容</li><li>false：目标追踪策略触发扩容和缩容</li>
-     * @param array $NotificationUserGroupIds 此参数已不再生效，请使用[创建通知](https://cloud.tencent.com/document/api/377/33185)。
-通知组ID，即为用户组ID集合。
+     * @param string $AutoScalingPolicyId <p>告警策略ID。可通过登录 <a href="https://console.cloud.tencent.com/autoscaling/group">控制台</a> 或调用接口 <a href="https://cloud.tencent.com/document/api/377/33178">DescribeScalingPolicies</a> ，取返回信息中的 AutoScalingPolicyId 获取告警策略ID。</p>
+     * @param string $ScalingPolicyName <p>告警策略名称，在您账号中必须唯一。名称长度不能超过60，名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点。</p>
+     * @param string $AdjustmentType <p>告警触发后，期望实例数修改方式，仅适用于简单策略。取值范围：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li></p>
+     * @param integer $AdjustmentValue <p>告警触发后，期望实例数的调整值，仅适用于简单策略。<li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。</li></p>
+     * @param integer $Cooldown <p>冷却时间，仅适用于简单策略，单位为秒。</p>
+     * @param MetricAlarm $MetricAlarm <p>告警监控指标，仅适用于简单策略。</p>
+     * @param string $PredefinedMetricType <p>预定义监控项，仅适用于目标追踪策略。取值范围：<br><li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li><li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li><li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li><li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li><li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li></p>
+     * @param integer $TargetValue <p>目标值，仅适用于目标追踪策略。<br><li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li><li>ASG_AVG_LAN_TRAFFIC_OUT：&gt;0，单位：Mbps</li><li>ASG_AVG_LAN_TRAFFIC_IN：&gt;0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_OUT：&gt;0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_IN：&gt;0，单位：Mbps</li></p>
+     * @param integer $EstimatedInstanceWarmup <p>实例预热时间，单位为秒，仅适用于目标追踪策略。取值范围为0-3600。</p>
+     * @param boolean $DisableScaleIn <p>是否禁用缩容，仅适用于目标追踪策略。取值范围：<br><li>true：目标追踪策略仅触发扩容</li><li>false：目标追踪策略触发扩容和缩容</li></p>
+     * @param array $NotificationUserGroupIds <p>此参数已不再生效，请使用<a href="https://cloud.tencent.com/document/api/377/33185">创建通知</a>。通知组ID，即为用户组ID集合。</p>
      */
     function __construct()
     {

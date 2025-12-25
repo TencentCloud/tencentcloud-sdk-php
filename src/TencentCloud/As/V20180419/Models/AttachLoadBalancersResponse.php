@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AttachLoadBalancers返回参数结构体
  *
- * @method string getActivityId() 获取伸缩活动ID
- * @method void setActivityId(string $ActivityId) 设置伸缩活动ID
+ * @method string getActivityId() 获取<p>伸缩活动ID</p>
+ * @method void setActivityId(string $ActivityId) 设置<p>伸缩活动ID</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class AttachLoadBalancersResponse extends AbstractModel
 {
     /**
-     * @var string 伸缩活动ID
+     * @var string <p>伸缩活动ID</p>
      */
     public $ActivityId;
 
@@ -38,7 +38,7 @@ class AttachLoadBalancersResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ActivityId 伸缩活动ID
+     * @param string $ActivityId <p>伸缩活动ID</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

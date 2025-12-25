@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyDocument(string $PolicyDocument) 设置策略文档
  * @method string getDescription() 获取策略描述
  * @method void setDescription(string $Description) 设置策略描述
+ * @method array getTags() 获取策略关联的标签列表
+ * @method void setTags(array $Tags) 设置策略关联的标签列表
  */
 class CreatePolicyRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreatePolicyRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var array 策略关联的标签列表
+     */
+    public $Tags;
+
+    /**
      * @param string $PolicyName 策略名称。长度为1~128个字符，可包含英文字母、数字和+=,.@-_。
      * @param string $PolicyDocument 策略文档
      * @param string $Description 策略描述
+     * @param array $Tags 策略关联的标签列表
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class CreatePolicyRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

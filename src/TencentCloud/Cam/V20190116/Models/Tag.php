@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Bh\V20230418\Models;
+namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateAssetSyncJob请求参数结构体
+ * 标签
  *
- * @method integer getCategory() 获取同步资产类别，1 - 主机资产, 2 - 数据库资产，3-容器资产
- * @method void setCategory(integer $Category) 设置同步资产类别，1 - 主机资产, 2 - 数据库资产，3-容器资产
+ * @method string getKey() 获取标签键
+ * @method void setKey(string $Key) 设置标签键
+ * @method string getValue() 获取标签值
+ * @method void setValue(string $Value) 设置标签值
  */
-class CreateAssetSyncJobRequest extends AbstractModel
+class Tag extends AbstractModel
 {
     /**
-     * @var integer 同步资产类别，1 - 主机资产, 2 - 数据库资产，3-容器资产
+     * @var string 标签键
      */
-    public $Category;
+    public $Key;
 
     /**
-     * @param integer $Category 同步资产类别，1 - 主机资产, 2 - 数据库资产，3-容器资产
+     * @var string 标签值
+     */
+    public $Value;
+
+    /**
+     * @param string $Key 标签键
+     * @param string $Value 标签值
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class CreateAssetSyncJobRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
-            $this->Category = $param["Category"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
+        }
+
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

@@ -213,7 +213,7 @@ use TencentCloud\As\V20180419\Models as Models;
 * 扩容如果失败或者部分成功，最后期望实例数只会增加实际成功的实例数量
 * 竞价混合模式中一次扩容可能触发多个伸缩活动，该接口仅返回第一个伸缩活动的 ActivityId
  * @method Models\SetInstancesProtectionResponse SetInstancesProtection(Models\SetInstancesProtectionRequest $req) 本接口（SetInstancesProtection）用于设置实例保护。
-实例设置保护之后，当发生不健康替换、报警策略、期望值变更等触发缩容时，将不对此实例缩容操作。
+实例设置保护之后，当发生不健康替换、报警策略、期望值变更等自动缩容时，将不对此实例缩容操作；对于 [DetachInstances](https://cloud.tencent.com/document/api/377/20436) 和 [RemoveInstances](https://cloud.tencent.com/document/api/377/20431) 接口，允许指定移出被保护的实例。
  * @method Models\StartAutoScalingInstancesResponse StartAutoScalingInstances(Models\StartAutoScalingInstancesRequest $req) 本接口（StartAutoScalingInstances）用于开启伸缩组内 CVM 实例。
 * 开机成功，实例转为`IN_SERVICE`状态后，会增加期望实例数，期望实例数不可超过设置的最大值
 * 本接口支持批量操作，每次请求开机实例的上限为100

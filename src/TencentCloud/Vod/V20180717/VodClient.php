@@ -162,7 +162,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 * 中国境内的数据支持查询指定地区、运营商的统计数据。
 * 播放统计仅针对 VOD 域名（即 EdgeOne 域名的分发不计入播放统计）。
  * @method Models\DescribeCDNUsageDataResponse DescribeCDNUsageData(Models\DescribeCDNUsageDataRequest $req) 该接口用于查询点播 CDN 的流量、带宽等统计数据。
-   1. 可以查询最近365天内的 CDN 用量数据。
+   1. CDN 用量数据系统侧保留 13 个月，您通过接口仅可查询最近 365 天内的用量数据。如需调取超出 365 天的历史用量数据，请联系我们。
    2. 查询时间跨度不超过90天。
    3. 可以指定用量数据的时间粒度，支持5分钟、1小时、1天的时间粒度。
    4. 流量为查询时间粒度内的总流量，带宽为查询时间粒度内的峰值带宽。
@@ -251,7 +251,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 * 时间粒度为天，结束时间和起始时间的跨度最大为90天。
 * 播放统计仅针对 VOD 域名（即 EdgeOne 域名的分发不计入播放统计）。
  * @method Models\DescribeMediaProcessUsageDataResponse DescribeMediaProcessUsageData(Models\DescribeMediaProcessUsageDataRequest $req) 该接口返回查询时间范围内每天使用的视频处理用量信息。
-   1. 可以查询最近365天内的视频处理统计数据。
+   1. 视频处理用量数据系统侧保留 13 个月，您通过接口仅可查询最近 365 天内的用量数据。如需调取超出 365 天的历史用量数据，请联系我们。
    2. 查询时间跨度不超过90天。
  * @method Models\DescribePersonSamplesResponse DescribePersonSamples(Models\DescribePersonSamplesRequest $req) 该接口用于查询素材样本信息，支持根据素材 ID、名称、标签，分页查询。
  * @method Models\DescribePrepaidProductsResponse DescribePrepaidProducts(Models\DescribePrepaidProductsRequest $req) 该接口可以查询用户已经购买的预付费商品的信息，包括：
@@ -274,7 +274,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
  * @method Models\DescribeSnapshotByTimeOffsetTemplatesResponse DescribeSnapshotByTimeOffsetTemplates(Models\DescribeSnapshotByTimeOffsetTemplatesRequest $req) 查询指定时间点截图模板，支持根据条件，分页查询。
  * @method Models\DescribeStorageDataResponse DescribeStorageData(Models\DescribeStorageDataRequest $req) 查询存储空间使用情况和文件数量。
  * @method Models\DescribeStorageDetailsResponse DescribeStorageDetails(Models\DescribeStorageDetailsRequest $req) 该接口返回查询时间范围内使用的点播存储空间，单位：字节。
-    1. 可以查询最近365天内的存储空间数据；
+    1. 存储用量数据系统侧保留 13 个月，您通过接口仅可查询最近 365 天内的用量数据。如需调取超出 365 天的历史用量数据，请联系我们；
     2. 查询时间跨度不超过90天；
     3. 分钟粒度查询跨度不超过7天；
  * @method Models\DescribeStorageRegionsResponse DescribeStorageRegions(Models\DescribeStorageRegionsRequest $req) 该接口用于：

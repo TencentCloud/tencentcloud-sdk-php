@@ -58,6 +58,19 @@ use TencentCloud\Common\AbstractModel;
 <li>Mingmou1.0_2K</li>
 <li>Mingmou1.0_4K</li>
 <li>Mingmou1.0_720P</li>
+<li>Seedance1.5ProAudioOn_480P</li>
+<li>Seedance1.5ProAudioOff_480P</li>
+<li>Seedance1.5ProAudioOn_720P</li>
+<li>Seedance1.5ProAudioOff_720P</li>
+<li>Seedance1.0Pro_480P</li>
+<li>Seedance1.0Pro_720P</li>
+<li>Seedance1.0Pro_1080P</li>
+<li>Seedance1.0ProFast480P</li>
+<li>Seedance1.0ProFast720P</li>
+<li>Seedance1.0ProFast1080P</li>
+<li>Seedance1.0Lite480P</li>
+<li>Seedance1.0Lite720P</li>
+<li>Seedance1.0Lite1080P</li>
 <li> unknown</li>
  * @method void setSpecification(string $Specification) 设置AIGC规格。
 取值有：
@@ -97,6 +110,19 @@ use TencentCloud\Common\AbstractModel;
 <li>Mingmou1.0_2K</li>
 <li>Mingmou1.0_4K</li>
 <li>Mingmou1.0_720P</li>
+<li>Seedance1.5ProAudioOn_480P</li>
+<li>Seedance1.5ProAudioOff_480P</li>
+<li>Seedance1.5ProAudioOn_720P</li>
+<li>Seedance1.5ProAudioOff_720P</li>
+<li>Seedance1.0Pro_480P</li>
+<li>Seedance1.0Pro_720P</li>
+<li>Seedance1.0Pro_1080P</li>
+<li>Seedance1.0ProFast480P</li>
+<li>Seedance1.0ProFast720P</li>
+<li>Seedance1.0ProFast1080P</li>
+<li>Seedance1.0Lite480P</li>
+<li>Seedance1.0Lite720P</li>
+<li>Seedance1.0Lite1080P</li>
 <li> unknown</li>
  * @method array getDataSet() 获取用量数据。
  * @method void setDataSet(array $DataSet) 设置用量数据。
@@ -142,6 +168,19 @@ class AigcUsageDataItem extends AbstractModel
 <li>Mingmou1.0_2K</li>
 <li>Mingmou1.0_4K</li>
 <li>Mingmou1.0_720P</li>
+<li>Seedance1.5ProAudioOn_480P</li>
+<li>Seedance1.5ProAudioOff_480P</li>
+<li>Seedance1.5ProAudioOn_720P</li>
+<li>Seedance1.5ProAudioOff_720P</li>
+<li>Seedance1.0Pro_480P</li>
+<li>Seedance1.0Pro_720P</li>
+<li>Seedance1.0Pro_1080P</li>
+<li>Seedance1.0ProFast480P</li>
+<li>Seedance1.0ProFast720P</li>
+<li>Seedance1.0ProFast1080P</li>
+<li>Seedance1.0Lite480P</li>
+<li>Seedance1.0Lite720P</li>
+<li>Seedance1.0Lite1080P</li>
 <li> unknown</li>
      */
     public $Specification;
@@ -190,6 +229,19 @@ class AigcUsageDataItem extends AbstractModel
 <li>Mingmou1.0_2K</li>
 <li>Mingmou1.0_4K</li>
 <li>Mingmou1.0_720P</li>
+<li>Seedance1.5ProAudioOn_480P</li>
+<li>Seedance1.5ProAudioOff_480P</li>
+<li>Seedance1.5ProAudioOn_720P</li>
+<li>Seedance1.5ProAudioOff_720P</li>
+<li>Seedance1.0Pro_480P</li>
+<li>Seedance1.0Pro_720P</li>
+<li>Seedance1.0Pro_1080P</li>
+<li>Seedance1.0ProFast480P</li>
+<li>Seedance1.0ProFast720P</li>
+<li>Seedance1.0ProFast1080P</li>
+<li>Seedance1.0Lite480P</li>
+<li>Seedance1.0Lite720P</li>
+<li>Seedance1.0Lite1080P</li>
 <li> unknown</li>
      * @param array $DataSet 用量数据。
      */

@@ -18,35 +18,47 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 流量防盗刷配置（仅限大陆地区）
+ * 防盗刷配置规则
  *
- * @method string getSwitch() 获取流量防盗刷配置开关，取值有： on：开启 off：关闭
+ * @method string getFilterType() 获取封禁类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置流量防盗刷配置开关，取值有： on：开启 off：关闭
+ * @method void setFilterType(string $FilterType) 设置封禁类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getFilterRules() 获取流量防盗刷配置规则
+ * @method string getRuleType() 获取封禁规则类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFilterRules(array $FilterRules) 设置流量防盗刷配置规则
+ * @method void setRuleType(string $RuleType) 设置封禁规则类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRulePaths() 获取封禁规则路径
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRulePaths(array $RulePaths) 设置封禁规则路径
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class AutoGuard extends AbstractModel
+class FilterRules extends AbstractModel
 {
     /**
-     * @var string 流量防盗刷配置开关，取值有： on：开启 off：关闭
+     * @var string 封禁类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Switch;
+    public $FilterType;
 
     /**
-     * @var array 流量防盗刷配置规则
+     * @var string 封禁规则类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $FilterRules;
+    public $RuleType;
 
     /**
-     * @param string $Switch 流量防盗刷配置开关，取值有： on：开启 off：关闭
+     * @var array 封禁规则路径
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $FilterRules 流量防盗刷配置规则
+     */
+    public $RulePaths;
+
+    /**
+     * @param string $FilterType 封禁类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RuleType 封禁规则类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RulePaths 封禁规则路径
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,17 +74,16 @@ class AutoGuard extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists("FilterType",$param) and $param["FilterType"] !== null) {
+            $this->FilterType = $param["FilterType"];
         }
 
-        if (array_key_exists("FilterRules",$param) and $param["FilterRules"] !== null) {
-            $this->FilterRules = [];
-            foreach ($param["FilterRules"] as $key => $value){
-                $obj = new FilterRules();
-                $obj->deserialize($value);
-                array_push($this->FilterRules, $obj);
-            }
+        if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {
+            $this->RuleType = $param["RuleType"];
+        }
+
+        if (array_key_exists("RulePaths",$param) and $param["RulePaths"] !== null) {
+            $this->RulePaths = $param["RulePaths"];
         }
     }
 }

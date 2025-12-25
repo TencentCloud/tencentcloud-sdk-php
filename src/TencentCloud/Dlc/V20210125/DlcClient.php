@@ -190,6 +190,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\RestartDataEngineResponse RestartDataEngine(Models\RestartDataEngineRequest $req) 重启引擎
  * @method Models\RevokeDLCCatalogAccessResponse RevokeDLCCatalogAccess(Models\RevokeDLCCatalogAccessRequest $req) 撤销DLC Catalog访问权限
  * @method Models\RollbackDataEngineImageResponse RollbackDataEngineImage(Models\RollbackDataEngineImageRequest $req) 回滚引擎镜像版本
+ * @method Models\SetOptimizerPolicyResponse SetOptimizerPolicy(Models\SetOptimizerPolicyRequest $req) 设置优化策略的接口
  * @method Models\SuspendResumeDataEngineResponse SuspendResumeDataEngine(Models\SuspendResumeDataEngineRequest $req) 本接口用于控制挂起或启动数据引擎
  * @method Models\SwitchDataEngineResponse SwitchDataEngine(Models\SwitchDataEngineRequest $req) 切换主备集群
  * @method Models\SwitchDataEngineImageResponse SwitchDataEngineImage(Models\SwitchDataEngineImageRequest $req) 切换引擎镜像版本

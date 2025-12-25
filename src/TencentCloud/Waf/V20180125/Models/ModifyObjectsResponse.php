@@ -14,31 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Autoscaling\V20180419\Models;
+namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ExecuteScalingPolicy返回参数结构体
+ * ModifyObjects返回参数结构体
  *
- * @method string getActivityId() 获取<p>伸缩活动ID</p>
- * @method void setActivityId(string $ActivityId) 设置<p>伸缩活动ID</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class ExecuteScalingPolicyResponse extends AbstractModel
+class ModifyObjectsResponse extends AbstractModel
 {
-    /**
-     * @var string <p>伸缩活动ID</p>
-     */
-    public $ActivityId;
-
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param string $ActivityId <p>伸缩活动ID</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,10 +46,6 @@ class ExecuteScalingPolicyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ActivityId",$param) and $param["ActivityId"] !== null) {
-            $this->ActivityId = $param["ActivityId"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

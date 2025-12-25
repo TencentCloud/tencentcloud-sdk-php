@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLaunchConfiguration返回参数结构体
  *
- * @method string getLaunchConfigurationId() 获取当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。
- * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。
+ * @method string getLaunchConfigurationId() 获取<p>当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。</p>
+ * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置<p>当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateLaunchConfigurationResponse extends AbstractModel
 {
     /**
-     * @var string 当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。
+     * @var string <p>当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。</p>
      */
     public $LaunchConfigurationId;
 
@@ -38,7 +38,7 @@ class CreateLaunchConfigurationResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $LaunchConfigurationId 当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。
+     * @param string $LaunchConfigurationId <p>当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

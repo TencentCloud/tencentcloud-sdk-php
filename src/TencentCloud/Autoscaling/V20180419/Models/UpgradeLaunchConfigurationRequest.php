@@ -20,226 +20,186 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeLaunchConfiguration请求参数结构体
  *
- * @method string getLaunchConfigurationId() 获取启动配置ID。
- * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置启动配置ID。
- * @method string getImageId() 获取指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li>
- * @method void setImageId(string $ImageId) 设置指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li>
- * @method array getInstanceTypes() 获取实例机型列表，不同实例机型指定了不同的资源规格，最多支持5种实例机型。
- * @method void setInstanceTypes(array $InstanceTypes) 设置实例机型列表，不同实例机型指定了不同的资源规格，最多支持5种实例机型。
- * @method string getLaunchConfigurationName() 获取启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
- * @method void setLaunchConfigurationName(string $LaunchConfigurationName) 设置启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
- * @method array getDataDisks() 获取实例数据盘配置信息。若不指定该参数，则默认不购买数据盘，最多支持指定11块数据盘。
- * @method void setDataDisks(array $DataDisks) 设置实例数据盘配置信息。若不指定该参数，则默认不购买数据盘，最多支持指定11块数据盘。
- * @method EnhancedService getEnhancedService() 获取增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
- * @method void setEnhancedService(EnhancedService $EnhancedService) 设置增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
- * @method string getInstanceChargeType() 获取实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
-<br><li>POSTPAID_BY_HOUR：按小时后付费
-<br><li>SPOTPAID：竞价付费
-<br><li>PREPAID：预付费，即包年包月
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
-<br><li>POSTPAID_BY_HOUR：按小时后付费
-<br><li>SPOTPAID：竞价付费
-<br><li>PREPAID：预付费，即包年包月
- * @method InstanceMarketOptionsRequest getInstanceMarketOptions() 获取实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
- * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) 设置实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
- * @method string getInstanceTypesCheckPolicy() 获取实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
-<br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。
-<br><li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。
-
-实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。
-如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
- * @method void setInstanceTypesCheckPolicy(string $InstanceTypesCheckPolicy) 设置实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
-<br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。
-<br><li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。
-
-实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。
-如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
- * @method InternetAccessible getInternetAccessible() 获取公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。
- * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。
- * @method LoginSettings getLoginSettings() 获取该参数已失效，请勿使用。升级启动配置接口无法修改或覆盖 LoginSettings 参数，升级后 LoginSettings 不会发生变化。
- * @method void setLoginSettings(LoginSettings $LoginSettings) 设置该参数已失效，请勿使用。升级启动配置接口无法修改或覆盖 LoginSettings 参数，升级后 LoginSettings 不会发生变化。
- * @method integer getProjectId() 获取实例所属项目ID。不填为默认项目。
- * @method void setProjectId(integer $ProjectId) 设置实例所属项目ID。不填为默认项目。
- * @method array getSecurityGroupIds() 获取实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的`SecurityGroupId`字段来获取。若不指定该参数，则默认不绑定安全组。
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的`SecurityGroupId`字段来获取。若不指定该参数，则默认不绑定安全组。
- * @method SystemDisk getSystemDisk() 获取实例系统盘配置信息。若不指定该参数，则按照系统默认值进行分配。
- * @method void setSystemDisk(SystemDisk $SystemDisk) 设置实例系统盘配置信息。若不指定该参数，则按照系统默认值进行分配。
- * @method string getUserData() 获取经过 Base64 编码后的自定义数据，最大长度不超过16KB。
- * @method void setUserData(string $UserData) 设置经过 Base64 编码后的自定义数据，最大长度不超过16KB。
- * @method array getInstanceTags() 获取标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
- * @method void setInstanceTags(array $InstanceTags) 设置标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
- * @method string getCamRoleName() 获取CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
- * @method void setCamRoleName(string $CamRoleName) 设置CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
- * @method HostNameSettings getHostNameSettings() 获取云服务器主机名（HostName）的相关设置。
- * @method void setHostNameSettings(HostNameSettings $HostNameSettings) 设置云服务器主机名（HostName）的相关设置。
- * @method InstanceNameSettings getInstanceNameSettings() 获取云服务器实例名（InstanceName）的相关设置。
- * @method void setInstanceNameSettings(InstanceNameSettings $InstanceNameSettings) 设置云服务器实例名（InstanceName）的相关设置。
- * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
- * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
- * @method string getDiskTypePolicy() 获取云盘类型选择策略，取值范围：
-<br><li>ORIGINAL：使用设置的云盘类型
-<br><li>AUTOMATIC：自动选择当前可用的云盘类型
- * @method void setDiskTypePolicy(string $DiskTypePolicy) 设置云盘类型选择策略，取值范围：
-<br><li>ORIGINAL：使用设置的云盘类型
-<br><li>AUTOMATIC：自动选择当前可用的云盘类型
- * @method IPv6InternetAccessible getIPv6InternetAccessible() 获取IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。
- * @method void setIPv6InternetAccessible(IPv6InternetAccessible $IPv6InternetAccessible) 设置IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。
+ * @method string getLaunchConfigurationId() 获取<p>启动配置ID。</p>
+ * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置<p>启动配置ID。</p>
+ * @method string getImageId() 获取<p>指定有效的<a href="https://cloud.tencent.com/document/product/213/4940">镜像</a>ID，格式形如<code>img-8toqc6s3</code>。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li><code>公共镜像</code>、<code>自定义镜像</code>、<code>共享镜像</code>的镜像ID可通过登录<a href="https://console.cloud.tencent.com/cvm/image?rid=1&amp;imageType=PUBLIC_IMAGE">控制台</a>查询；<code>服务镜像市场</code>的镜像ID可通过<a href="https://market.cloud.tencent.com/list">云市场</a>查询。</li><li>通过调用接口 <a href="https://cloud.tencent.com/document/api/213/15715">DescribeImages</a> ，取返回信息中的<code>ImageId</code>字段。</li></p>
+ * @method void setImageId(string $ImageId) 设置<p>指定有效的<a href="https://cloud.tencent.com/document/product/213/4940">镜像</a>ID，格式形如<code>img-8toqc6s3</code>。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li><code>公共镜像</code>、<code>自定义镜像</code>、<code>共享镜像</code>的镜像ID可通过登录<a href="https://console.cloud.tencent.com/cvm/image?rid=1&amp;imageType=PUBLIC_IMAGE">控制台</a>查询；<code>服务镜像市场</code>的镜像ID可通过<a href="https://market.cloud.tencent.com/list">云市场</a>查询。</li><li>通过调用接口 <a href="https://cloud.tencent.com/document/api/213/15715">DescribeImages</a> ，取返回信息中的<code>ImageId</code>字段。</li></p>
+ * @method array getInstanceTypes() 获取<p>实例机型列表，不同实例机型指定了不同的资源规格，最多支持5种实例机型。</p>
+ * @method void setInstanceTypes(array $InstanceTypes) 设置<p>实例机型列表，不同实例机型指定了不同的资源规格，最多支持5种实例机型。</p>
+ * @method string getLaunchConfigurationName() 获取<p>启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。</p>
+ * @method void setLaunchConfigurationName(string $LaunchConfigurationName) 设置<p>启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。</p>
+ * @method array getDataDisks() 获取<p>实例数据盘配置信息。若不指定该参数，则默认不购买数据盘，最多支持指定11块数据盘。</p>
+ * @method void setDataDisks(array $DataDisks) 设置<p>实例数据盘配置信息。若不指定该参数，则默认不购买数据盘，最多支持指定11块数据盘。</p>
+ * @method EnhancedService getEnhancedService() 获取<p>增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。</p>
+ * @method void setEnhancedService(EnhancedService $EnhancedService) 设置<p>增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。</p>
+ * @method string getInstanceChargeType() 获取<p>实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br><li>PREPAID：预付费，即包年包月</p>
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置<p>实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br><li>PREPAID：预付费，即包年包月</p>
+ * @method InstanceMarketOptionsRequest getInstanceMarketOptions() 获取<p>实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。</p>
+ * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) 设置<p>实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。</p>
+ * @method string getInstanceTypesCheckPolicy() 获取<p>实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。<br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。<br><li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</p><p>实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。</p>
+ * @method void setInstanceTypesCheckPolicy(string $InstanceTypesCheckPolicy) 设置<p>实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。<br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。<br><li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</p><p>实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。</p>
+ * @method InternetAccessible getInternetAccessible() 获取<p>公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。</p>
+ * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置<p>公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。</p>
+ * @method LoginSettings getLoginSettings() 获取<p>该参数已失效，请勿使用。升级启动配置接口无法修改或覆盖 LoginSettings 参数，升级后 LoginSettings 不会发生变化。</p>
+ * @method void setLoginSettings(LoginSettings $LoginSettings) 设置<p>该参数已失效，请勿使用。升级启动配置接口无法修改或覆盖 LoginSettings 参数，升级后 LoginSettings 不会发生变化。</p>
+ * @method integer getProjectId() 获取<p>实例所属项目ID。不填为默认项目。</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>实例所属项目ID。不填为默认项目。</p>
+ * @method array getSecurityGroupIds() 获取<p>实例所属安全组。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的<code>SecurityGroupId</code>字段来获取。若不指定该参数，则默认不绑定安全组。</p>
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置<p>实例所属安全组。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的<code>SecurityGroupId</code>字段来获取。若不指定该参数，则默认不绑定安全组。</p>
+ * @method SystemDisk getSystemDisk() 获取<p>实例系统盘配置信息。若不指定该参数，则按照系统默认值进行分配。</p>
+ * @method void setSystemDisk(SystemDisk $SystemDisk) 设置<p>实例系统盘配置信息。若不指定该参数，则按照系统默认值进行分配。</p>
+ * @method string getUserData() 获取<p>经过 Base64 编码后的自定义数据，最大长度不超过16KB。</p>
+ * @method void setUserData(string $UserData) 设置<p>经过 Base64 编码后的自定义数据，最大长度不超过16KB。</p>
+ * @method array getInstanceTags() 获取<p>标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。</p>
+ * @method void setInstanceTags(array $InstanceTags) 设置<p>标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。</p>
+ * @method string getCamRoleName() 获取<p>CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。</p>
+ * @method void setCamRoleName(string $CamRoleName) 设置<p>CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。</p>
+ * @method HostNameSettings getHostNameSettings() 获取<p>云服务器主机名（HostName）的相关设置。</p>
+ * @method void setHostNameSettings(HostNameSettings $HostNameSettings) 设置<p>云服务器主机名（HostName）的相关设置。</p>
+ * @method InstanceNameSettings getInstanceNameSettings() 获取<p>云服务器实例名（InstanceName）的相关设置。</p>
+ * @method void setInstanceNameSettings(InstanceNameSettings $InstanceNameSettings) 设置<p>云服务器实例名（InstanceName）的相关设置。</p>
+ * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取<p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
+ * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置<p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
+ * @method string getDiskTypePolicy() 获取<p>云盘类型选择策略，取值范围：<br><li>ORIGINAL：使用设置的云盘类型<br><li>AUTOMATIC：自动选择当前可用的云盘类型</p>
+ * @method void setDiskTypePolicy(string $DiskTypePolicy) 设置<p>云盘类型选择策略，取值范围：<br><li>ORIGINAL：使用设置的云盘类型<br><li>AUTOMATIC：自动选择当前可用的云盘类型</p>
+ * @method IPv6InternetAccessible getIPv6InternetAccessible() 获取<p>IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。</p>
+ * @method void setIPv6InternetAccessible(IPv6InternetAccessible $IPv6InternetAccessible) 设置<p>IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。</p>
  */
 class UpgradeLaunchConfigurationRequest extends AbstractModel
 {
     /**
-     * @var string 启动配置ID。
+     * @var string <p>启动配置ID。</p>
      */
     public $LaunchConfigurationId;
 
     /**
-     * @var string 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li>
+     * @var string <p>指定有效的<a href="https://cloud.tencent.com/document/product/213/4940">镜像</a>ID，格式形如<code>img-8toqc6s3</code>。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li><code>公共镜像</code>、<code>自定义镜像</code>、<code>共享镜像</code>的镜像ID可通过登录<a href="https://console.cloud.tencent.com/cvm/image?rid=1&amp;imageType=PUBLIC_IMAGE">控制台</a>查询；<code>服务镜像市场</code>的镜像ID可通过<a href="https://market.cloud.tencent.com/list">云市场</a>查询。</li><li>通过调用接口 <a href="https://cloud.tencent.com/document/api/213/15715">DescribeImages</a> ，取返回信息中的<code>ImageId</code>字段。</li></p>
      */
     public $ImageId;
 
     /**
-     * @var array 实例机型列表，不同实例机型指定了不同的资源规格，最多支持5种实例机型。
+     * @var array <p>实例机型列表，不同实例机型指定了不同的资源规格，最多支持5种实例机型。</p>
      */
     public $InstanceTypes;
 
     /**
-     * @var string 启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
+     * @var string <p>启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。</p>
      */
     public $LaunchConfigurationName;
 
     /**
-     * @var array 实例数据盘配置信息。若不指定该参数，则默认不购买数据盘，最多支持指定11块数据盘。
+     * @var array <p>实例数据盘配置信息。若不指定该参数，则默认不购买数据盘，最多支持指定11块数据盘。</p>
      */
     public $DataDisks;
 
     /**
-     * @var EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
+     * @var EnhancedService <p>增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。</p>
      */
     public $EnhancedService;
 
     /**
-     * @var string 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
-<br><li>POSTPAID_BY_HOUR：按小时后付费
-<br><li>SPOTPAID：竞价付费
-<br><li>PREPAID：预付费，即包年包月
+     * @var string <p>实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br><li>PREPAID：预付费，即包年包月</p>
      */
     public $InstanceChargeType;
 
     /**
-     * @var InstanceMarketOptionsRequest 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+     * @var InstanceMarketOptionsRequest <p>实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。</p>
      */
     public $InstanceMarketOptions;
 
     /**
-     * @var string 实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
-<br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。
-<br><li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。
-
-实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。
-如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
+     * @var string <p>实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。<br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。<br><li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</p><p>实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。</p>
      */
     public $InstanceTypesCheckPolicy;
 
     /**
-     * @var InternetAccessible 公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。
+     * @var InternetAccessible <p>公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。</p>
      */
     public $InternetAccessible;
 
     /**
-     * @var LoginSettings 该参数已失效，请勿使用。升级启动配置接口无法修改或覆盖 LoginSettings 参数，升级后 LoginSettings 不会发生变化。
+     * @var LoginSettings <p>该参数已失效，请勿使用。升级启动配置接口无法修改或覆盖 LoginSettings 参数，升级后 LoginSettings 不会发生变化。</p>
      */
     public $LoginSettings;
 
     /**
-     * @var integer 实例所属项目ID。不填为默认项目。
+     * @var integer <p>实例所属项目ID。不填为默认项目。</p>
      */
     public $ProjectId;
 
     /**
-     * @var array 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的`SecurityGroupId`字段来获取。若不指定该参数，则默认不绑定安全组。
+     * @var array <p>实例所属安全组。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的<code>SecurityGroupId</code>字段来获取。若不指定该参数，则默认不绑定安全组。</p>
      */
     public $SecurityGroupIds;
 
     /**
-     * @var SystemDisk 实例系统盘配置信息。若不指定该参数，则按照系统默认值进行分配。
+     * @var SystemDisk <p>实例系统盘配置信息。若不指定该参数，则按照系统默认值进行分配。</p>
      */
     public $SystemDisk;
 
     /**
-     * @var string 经过 Base64 编码后的自定义数据，最大长度不超过16KB。
+     * @var string <p>经过 Base64 编码后的自定义数据，最大长度不超过16KB。</p>
      */
     public $UserData;
 
     /**
-     * @var array 标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
+     * @var array <p>标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。</p>
      */
     public $InstanceTags;
 
     /**
-     * @var string CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     * @var string <p>CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。</p>
      */
     public $CamRoleName;
 
     /**
-     * @var HostNameSettings 云服务器主机名（HostName）的相关设置。
+     * @var HostNameSettings <p>云服务器主机名（HostName）的相关设置。</p>
      */
     public $HostNameSettings;
 
     /**
-     * @var InstanceNameSettings 云服务器实例名（InstanceName）的相关设置。
+     * @var InstanceNameSettings <p>云服务器实例名（InstanceName）的相关设置。</p>
      */
     public $InstanceNameSettings;
 
     /**
-     * @var InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+     * @var InstanceChargePrepaid <p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
      */
     public $InstanceChargePrepaid;
 
     /**
-     * @var string 云盘类型选择策略，取值范围：
-<br><li>ORIGINAL：使用设置的云盘类型
-<br><li>AUTOMATIC：自动选择当前可用的云盘类型
+     * @var string <p>云盘类型选择策略，取值范围：<br><li>ORIGINAL：使用设置的云盘类型<br><li>AUTOMATIC：自动选择当前可用的云盘类型</p>
      */
     public $DiskTypePolicy;
 
     /**
-     * @var IPv6InternetAccessible IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。
+     * @var IPv6InternetAccessible <p>IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。</p>
      */
     public $IPv6InternetAccessible;
 
     /**
-     * @param string $LaunchConfigurationId 启动配置ID。
-     * @param string $ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li>
-     * @param array $InstanceTypes 实例机型列表，不同实例机型指定了不同的资源规格，最多支持5种实例机型。
-     * @param string $LaunchConfigurationName 启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
-     * @param array $DataDisks 实例数据盘配置信息。若不指定该参数，则默认不购买数据盘，最多支持指定11块数据盘。
-     * @param EnhancedService $EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
-     * @param string $InstanceChargeType 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
-<br><li>POSTPAID_BY_HOUR：按小时后付费
-<br><li>SPOTPAID：竞价付费
-<br><li>PREPAID：预付费，即包年包月
-     * @param InstanceMarketOptionsRequest $InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
-     * @param string $InstanceTypesCheckPolicy 实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
-<br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。
-<br><li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。
-
-实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。
-如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
-     * @param InternetAccessible $InternetAccessible 公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。
-     * @param LoginSettings $LoginSettings 该参数已失效，请勿使用。升级启动配置接口无法修改或覆盖 LoginSettings 参数，升级后 LoginSettings 不会发生变化。
-     * @param integer $ProjectId 实例所属项目ID。不填为默认项目。
-     * @param array $SecurityGroupIds 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的`SecurityGroupId`字段来获取。若不指定该参数，则默认不绑定安全组。
-     * @param SystemDisk $SystemDisk 实例系统盘配置信息。若不指定该参数，则按照系统默认值进行分配。
-     * @param string $UserData 经过 Base64 编码后的自定义数据，最大长度不超过16KB。
-     * @param array $InstanceTags 标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
-     * @param string $CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
-     * @param HostNameSettings $HostNameSettings 云服务器主机名（HostName）的相关设置。
-     * @param InstanceNameSettings $InstanceNameSettings 云服务器实例名（InstanceName）的相关设置。
-     * @param InstanceChargePrepaid $InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
-     * @param string $DiskTypePolicy 云盘类型选择策略，取值范围：
-<br><li>ORIGINAL：使用设置的云盘类型
-<br><li>AUTOMATIC：自动选择当前可用的云盘类型
-     * @param IPv6InternetAccessible $IPv6InternetAccessible IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。
+     * @param string $LaunchConfigurationId <p>启动配置ID。</p>
+     * @param string $ImageId <p>指定有效的<a href="https://cloud.tencent.com/document/product/213/4940">镜像</a>ID，格式形如<code>img-8toqc6s3</code>。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li><code>公共镜像</code>、<code>自定义镜像</code>、<code>共享镜像</code>的镜像ID可通过登录<a href="https://console.cloud.tencent.com/cvm/image?rid=1&amp;imageType=PUBLIC_IMAGE">控制台</a>查询；<code>服务镜像市场</code>的镜像ID可通过<a href="https://market.cloud.tencent.com/list">云市场</a>查询。</li><li>通过调用接口 <a href="https://cloud.tencent.com/document/api/213/15715">DescribeImages</a> ，取返回信息中的<code>ImageId</code>字段。</li></p>
+     * @param array $InstanceTypes <p>实例机型列表，不同实例机型指定了不同的资源规格，最多支持5种实例机型。</p>
+     * @param string $LaunchConfigurationName <p>启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。</p>
+     * @param array $DataDisks <p>实例数据盘配置信息。若不指定该参数，则默认不购买数据盘，最多支持指定11块数据盘。</p>
+     * @param EnhancedService $EnhancedService <p>增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。</p>
+     * @param string $InstanceChargeType <p>实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br><li>PREPAID：预付费，即包年包月</p>
+     * @param InstanceMarketOptionsRequest $InstanceMarketOptions <p>实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。</p>
+     * @param string $InstanceTypesCheckPolicy <p>实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。<br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。<br><li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</p><p>实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。</p>
+     * @param InternetAccessible $InternetAccessible <p>公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。</p>
+     * @param LoginSettings $LoginSettings <p>该参数已失效，请勿使用。升级启动配置接口无法修改或覆盖 LoginSettings 参数，升级后 LoginSettings 不会发生变化。</p>
+     * @param integer $ProjectId <p>实例所属项目ID。不填为默认项目。</p>
+     * @param array $SecurityGroupIds <p>实例所属安全组。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的<code>SecurityGroupId</code>字段来获取。若不指定该参数，则默认不绑定安全组。</p>
+     * @param SystemDisk $SystemDisk <p>实例系统盘配置信息。若不指定该参数，则按照系统默认值进行分配。</p>
+     * @param string $UserData <p>经过 Base64 编码后的自定义数据，最大长度不超过16KB。</p>
+     * @param array $InstanceTags <p>标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。</p>
+     * @param string $CamRoleName <p>CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。</p>
+     * @param HostNameSettings $HostNameSettings <p>云服务器主机名（HostName）的相关设置。</p>
+     * @param InstanceNameSettings $InstanceNameSettings <p>云服务器实例名（InstanceName）的相关设置。</p>
+     * @param InstanceChargePrepaid $InstanceChargePrepaid <p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
+     * @param string $DiskTypePolicy <p>云盘类型选择策略，取值范围：<br><li>ORIGINAL：使用设置的云盘类型<br><li>AUTOMATIC：自动选择当前可用的云盘类型</p>
+     * @param IPv6InternetAccessible $IPv6InternetAccessible <p>IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。</p>
      */
     function __construct()
     {

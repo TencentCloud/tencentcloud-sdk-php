@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExecuteScalingPolicy请求参数结构体
  *
- * @method string getAutoScalingPolicyId() 获取告警伸缩策略ID，不支持目标追踪策略。可通过 [DescribeScalingPolicies](https://cloud.tencent.com/document/api/377/33178) 接口返回的 `ScalingPolicyType ` 参数获取告警策略类型。
- * @method void setAutoScalingPolicyId(string $AutoScalingPolicyId) 设置告警伸缩策略ID，不支持目标追踪策略。可通过 [DescribeScalingPolicies](https://cloud.tencent.com/document/api/377/33178) 接口返回的 `ScalingPolicyType ` 参数获取告警策略类型。
- * @method boolean getHonorCooldown() 获取是否检查伸缩组活动处于冷却时间内，默认值为false
- * @method void setHonorCooldown(boolean $HonorCooldown) 设置是否检查伸缩组活动处于冷却时间内，默认值为false
- * @method string getTriggerSource() 获取执行伸缩策略的触发来源，取值包括 API 和 CLOUD_MONITOR，默认值为 API。CLOUD_MONITOR 专门供云监控触发调用。
- * @method void setTriggerSource(string $TriggerSource) 设置执行伸缩策略的触发来源，取值包括 API 和 CLOUD_MONITOR，默认值为 API。CLOUD_MONITOR 专门供云监控触发调用。
+ * @method string getAutoScalingPolicyId() 获取<p>告警伸缩策略ID，不支持目标追踪策略。可通过 <a href="https://cloud.tencent.com/document/api/377/33178">DescribeScalingPolicies</a> 接口返回的 <code>ScalingPolicyType</code> 参数获取告警策略类型。</p>
+ * @method void setAutoScalingPolicyId(string $AutoScalingPolicyId) 设置<p>告警伸缩策略ID，不支持目标追踪策略。可通过 <a href="https://cloud.tencent.com/document/api/377/33178">DescribeScalingPolicies</a> 接口返回的 <code>ScalingPolicyType</code> 参数获取告警策略类型。</p>
+ * @method boolean getHonorCooldown() 获取<p>是否检查伸缩组活动处于冷却时间内，默认值为false</p>
+ * @method void setHonorCooldown(boolean $HonorCooldown) 设置<p>是否检查伸缩组活动处于冷却时间内，默认值为false</p>
+ * @method string getTriggerSource() 获取<p>执行伸缩策略的触发来源，取值包括 API 和 CLOUD_MONITOR，默认值为 API。CLOUD_MONITOR 专门供云监控触发调用。</p>
+ * @method void setTriggerSource(string $TriggerSource) 设置<p>执行伸缩策略的触发来源，取值包括 API 和 CLOUD_MONITOR，默认值为 API。CLOUD_MONITOR 专门供云监控触发调用。</p>
  */
 class ExecuteScalingPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 告警伸缩策略ID，不支持目标追踪策略。可通过 [DescribeScalingPolicies](https://cloud.tencent.com/document/api/377/33178) 接口返回的 `ScalingPolicyType ` 参数获取告警策略类型。
+     * @var string <p>告警伸缩策略ID，不支持目标追踪策略。可通过 <a href="https://cloud.tencent.com/document/api/377/33178">DescribeScalingPolicies</a> 接口返回的 <code>ScalingPolicyType</code> 参数获取告警策略类型。</p>
      */
     public $AutoScalingPolicyId;
 
     /**
-     * @var boolean 是否检查伸缩组活动处于冷却时间内，默认值为false
+     * @var boolean <p>是否检查伸缩组活动处于冷却时间内，默认值为false</p>
      */
     public $HonorCooldown;
 
     /**
-     * @var string 执行伸缩策略的触发来源，取值包括 API 和 CLOUD_MONITOR，默认值为 API。CLOUD_MONITOR 专门供云监控触发调用。
+     * @var string <p>执行伸缩策略的触发来源，取值包括 API 和 CLOUD_MONITOR，默认值为 API。CLOUD_MONITOR 专门供云监控触发调用。</p>
      */
     public $TriggerSource;
 
     /**
-     * @param string $AutoScalingPolicyId 告警伸缩策略ID，不支持目标追踪策略。可通过 [DescribeScalingPolicies](https://cloud.tencent.com/document/api/377/33178) 接口返回的 `ScalingPolicyType ` 参数获取告警策略类型。
-     * @param boolean $HonorCooldown 是否检查伸缩组活动处于冷却时间内，默认值为false
-     * @param string $TriggerSource 执行伸缩策略的触发来源，取值包括 API 和 CLOUD_MONITOR，默认值为 API。CLOUD_MONITOR 专门供云监控触发调用。
+     * @param string $AutoScalingPolicyId <p>告警伸缩策略ID，不支持目标追踪策略。可通过 <a href="https://cloud.tencent.com/document/api/377/33178">DescribeScalingPolicies</a> 接口返回的 <code>ScalingPolicyType</code> 参数获取告警策略类型。</p>
+     * @param boolean $HonorCooldown <p>是否检查伸缩组活动处于冷却时间内，默认值为false</p>
+     * @param string $TriggerSource <p>执行伸缩策略的触发来源，取值包括 API 和 CLOUD_MONITOR，默认值为 API。CLOUD_MONITOR 专门供云监控触发调用。</p>
      */
     function __construct()
     {

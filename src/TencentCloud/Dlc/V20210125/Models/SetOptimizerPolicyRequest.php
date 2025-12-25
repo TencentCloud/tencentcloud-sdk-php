@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Bh\V20230418\Models;
+namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateAssetSyncJob请求参数结构体
+ * SetOptimizerPolicy请求参数结构体
  *
- * @method integer getCategory() 获取同步资产类别，1 - 主机资产, 2 - 数据库资产，3-容器资产
- * @method void setCategory(integer $Category) 设置同步资产类别，1 - 主机资产, 2 - 数据库资产，3-容器资产
+ * @method SmartPolicy getSmartPolicy() 获取优化策略
+ * @method void setSmartPolicy(SmartPolicy $SmartPolicy) 设置优化策略
  */
-class CreateAssetSyncJobRequest extends AbstractModel
+class SetOptimizerPolicyRequest extends AbstractModel
 {
     /**
-     * @var integer 同步资产类别，1 - 主机资产, 2 - 数据库资产，3-容器资产
+     * @var SmartPolicy 优化策略
      */
-    public $Category;
+    public $SmartPolicy;
 
     /**
-     * @param integer $Category 同步资产类别，1 - 主机资产, 2 - 数据库资产，3-容器资产
+     * @param SmartPolicy $SmartPolicy 优化策略
      */
     function __construct()
     {
@@ -46,8 +46,9 @@ class CreateAssetSyncJobRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
-            $this->Category = $param["Category"];
+        if (array_key_exists("SmartPolicy",$param) and $param["SmartPolicy"] !== null) {
+            $this->SmartPolicy = new SmartPolicy();
+            $this->SmartPolicy->deserialize($param["SmartPolicy"]);
         }
     }
 }

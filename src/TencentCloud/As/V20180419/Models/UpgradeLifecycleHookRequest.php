@@ -20,98 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeLifecycleHook请求参数结构体
  *
- * @method string getLifecycleHookId() 获取生命周期挂钩ID。可以通过调用接口 [DescribeLifecycleHooks](https://cloud.tencent.com/document/api/377/34452) ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。
- * @method void setLifecycleHookId(string $LifecycleHookId) 设置生命周期挂钩ID。可以通过调用接口 [DescribeLifecycleHooks](https://cloud.tencent.com/document/api/377/34452) ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。
- * @method string getLifecycleHookName() 获取生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128个字符。
- * @method void setLifecycleHookName(string $LifecycleHookName) 设置生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128个字符。
- * @method string getLifecycleTransition() 获取进行生命周期挂钩的场景，取值范围如下:
-* INSTANCE_LAUNCHING: 扩容生命周期挂钩
-* INSTANCE_TERMINATING: 缩容生命周期挂钩
- * @method void setLifecycleTransition(string $LifecycleTransition) 设置进行生命周期挂钩的场景，取值范围如下:
-* INSTANCE_LAUNCHING: 扩容生命周期挂钩
-* INSTANCE_TERMINATING: 缩容生命周期挂钩
- * @method string getDefaultResult() 获取定义伸缩组在生命周期挂钩超时或 LifecycleCommand 执行失败时应采取的操作，取值范围是如下：
-* CONTINUE: 默认值，表示继续执行扩缩容活动
-* ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。
- * @method void setDefaultResult(string $DefaultResult) 设置定义伸缩组在生命周期挂钩超时或 LifecycleCommand 执行失败时应采取的操作，取值范围是如下：
-* CONTINUE: 默认值，表示继续执行扩缩容活动
-* ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。
- * @method integer getHeartbeatTimeout() 获取生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从30到7200秒，默认值为300秒
- * @method void setHeartbeatTimeout(integer $HeartbeatTimeout) 设置生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从30到7200秒，默认值为300秒
- * @method string getNotificationMetadata() 获取弹性伸缩向通知目标发送的附加信息，配置通知时使用，默认值为空字符串。NotificationMetadata 和 LifecycleCommand参数互斥，二者不可同时指定。
- * @method void setNotificationMetadata(string $NotificationMetadata) 设置弹性伸缩向通知目标发送的附加信息，配置通知时使用，默认值为空字符串。NotificationMetadata 和 LifecycleCommand参数互斥，二者不可同时指定。
- * @method NotificationTarget getNotificationTarget() 获取通知目标。NotificationTarget和LifecycleCommand参数互斥，二者不可同时指定。
- * @method void setNotificationTarget(NotificationTarget $NotificationTarget) 设置通知目标。NotificationTarget和LifecycleCommand参数互斥，二者不可同时指定。
- * @method string getLifecycleTransitionType() 获取进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
- * @method void setLifecycleTransitionType(string $LifecycleTransitionType) 设置进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
- * @method LifecycleCommand getLifecycleCommand() 获取远程命令执行对象。通知参数 NotificationMetadata、NotificationTarget 与 LifecycleCommand 互斥，不可同时指定。
- * @method void setLifecycleCommand(LifecycleCommand $LifecycleCommand) 设置远程命令执行对象。通知参数 NotificationMetadata、NotificationTarget 与 LifecycleCommand 互斥，不可同时指定。
+ * @method string getLifecycleHookId() 获取<p>生命周期挂钩ID。可以通过调用接口 <a href="https://cloud.tencent.com/document/api/377/34452">DescribeLifecycleHooks</a> ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。</p>
+ * @method void setLifecycleHookId(string $LifecycleHookId) 设置<p>生命周期挂钩ID。可以通过调用接口 <a href="https://cloud.tencent.com/document/api/377/34452">DescribeLifecycleHooks</a> ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。</p>
+ * @method string getLifecycleHookName() 获取<p>生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128个字符。</p>
+ * @method void setLifecycleHookName(string $LifecycleHookName) 设置<p>生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128个字符。</p>
+ * @method string getLifecycleTransition() 获取<p>进行生命周期挂钩的场景，取值范围如下:<em> INSTANCE_LAUNCHING: 扩容生命周期挂钩</em> INSTANCE_TERMINATING: 缩容生命周期挂钩</p>
+ * @method void setLifecycleTransition(string $LifecycleTransition) 设置<p>进行生命周期挂钩的场景，取值范围如下:<em> INSTANCE_LAUNCHING: 扩容生命周期挂钩</em> INSTANCE_TERMINATING: 缩容生命周期挂钩</p>
+ * @method string getDefaultResult() 获取<p>定义伸缩组在生命周期挂钩超时或 LifecycleCommand 执行失败时应采取的操作，取值范围是如下：<em> CONTINUE: 默认值，表示继续执行扩缩容活动</em> ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。</p>
+ * @method void setDefaultResult(string $DefaultResult) 设置<p>定义伸缩组在生命周期挂钩超时或 LifecycleCommand 执行失败时应采取的操作，取值范围是如下：<em> CONTINUE: 默认值，表示继续执行扩缩容活动</em> ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。</p>
+ * @method integer getHeartbeatTimeout() 获取<p>生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从30到7200秒，默认值为300秒</p>
+ * @method void setHeartbeatTimeout(integer $HeartbeatTimeout) 设置<p>生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从30到7200秒，默认值为300秒</p>
+ * @method string getNotificationMetadata() 获取<p>弹性伸缩向通知目标发送的附加信息，配置通知时使用，默认值为空字符串。NotificationMetadata 和 LifecycleCommand参数互斥，二者不可同时指定。</p>
+ * @method void setNotificationMetadata(string $NotificationMetadata) 设置<p>弹性伸缩向通知目标发送的附加信息，配置通知时使用，默认值为空字符串。NotificationMetadata 和 LifecycleCommand参数互斥，二者不可同时指定。</p>
+ * @method NotificationTarget getNotificationTarget() 获取<p>通知目标。NotificationTarget和LifecycleCommand参数互斥，二者不可同时指定。</p>
+ * @method void setNotificationTarget(NotificationTarget $NotificationTarget) 设置<p>通知目标。NotificationTarget和LifecycleCommand参数互斥，二者不可同时指定。</p>
+ * @method string getLifecycleTransitionType() 获取<p>进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。</p>
+ * @method void setLifecycleTransitionType(string $LifecycleTransitionType) 设置<p>进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。</p>
+ * @method LifecycleCommand getLifecycleCommand() 获取<p>远程命令执行对象。通知参数 NotificationMetadata、NotificationTarget 与 LifecycleCommand 互斥，不可同时指定。</p>
+ * @method void setLifecycleCommand(LifecycleCommand $LifecycleCommand) 设置<p>远程命令执行对象。通知参数 NotificationMetadata、NotificationTarget 与 LifecycleCommand 互斥，不可同时指定。</p>
  */
 class UpgradeLifecycleHookRequest extends AbstractModel
 {
     /**
-     * @var string 生命周期挂钩ID。可以通过调用接口 [DescribeLifecycleHooks](https://cloud.tencent.com/document/api/377/34452) ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。
+     * @var string <p>生命周期挂钩ID。可以通过调用接口 <a href="https://cloud.tencent.com/document/api/377/34452">DescribeLifecycleHooks</a> ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。</p>
      */
     public $LifecycleHookId;
 
     /**
-     * @var string 生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128个字符。
+     * @var string <p>生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128个字符。</p>
      */
     public $LifecycleHookName;
 
     /**
-     * @var string 进行生命周期挂钩的场景，取值范围如下:
-* INSTANCE_LAUNCHING: 扩容生命周期挂钩
-* INSTANCE_TERMINATING: 缩容生命周期挂钩
+     * @var string <p>进行生命周期挂钩的场景，取值范围如下:<em> INSTANCE_LAUNCHING: 扩容生命周期挂钩</em> INSTANCE_TERMINATING: 缩容生命周期挂钩</p>
      */
     public $LifecycleTransition;
 
     /**
-     * @var string 定义伸缩组在生命周期挂钩超时或 LifecycleCommand 执行失败时应采取的操作，取值范围是如下：
-* CONTINUE: 默认值，表示继续执行扩缩容活动
-* ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。
+     * @var string <p>定义伸缩组在生命周期挂钩超时或 LifecycleCommand 执行失败时应采取的操作，取值范围是如下：<em> CONTINUE: 默认值，表示继续执行扩缩容活动</em> ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。</p>
      */
     public $DefaultResult;
 
     /**
-     * @var integer 生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从30到7200秒，默认值为300秒
+     * @var integer <p>生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从30到7200秒，默认值为300秒</p>
      */
     public $HeartbeatTimeout;
 
     /**
-     * @var string 弹性伸缩向通知目标发送的附加信息，配置通知时使用，默认值为空字符串。NotificationMetadata 和 LifecycleCommand参数互斥，二者不可同时指定。
+     * @var string <p>弹性伸缩向通知目标发送的附加信息，配置通知时使用，默认值为空字符串。NotificationMetadata 和 LifecycleCommand参数互斥，二者不可同时指定。</p>
      */
     public $NotificationMetadata;
 
     /**
-     * @var NotificationTarget 通知目标。NotificationTarget和LifecycleCommand参数互斥，二者不可同时指定。
+     * @var NotificationTarget <p>通知目标。NotificationTarget和LifecycleCommand参数互斥，二者不可同时指定。</p>
      */
     public $NotificationTarget;
 
     /**
-     * @var string 进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
+     * @var string <p>进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。</p>
      */
     public $LifecycleTransitionType;
 
     /**
-     * @var LifecycleCommand 远程命令执行对象。通知参数 NotificationMetadata、NotificationTarget 与 LifecycleCommand 互斥，不可同时指定。
+     * @var LifecycleCommand <p>远程命令执行对象。通知参数 NotificationMetadata、NotificationTarget 与 LifecycleCommand 互斥，不可同时指定。</p>
      */
     public $LifecycleCommand;
 
     /**
-     * @param string $LifecycleHookId 生命周期挂钩ID。可以通过调用接口 [DescribeLifecycleHooks](https://cloud.tencent.com/document/api/377/34452) ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。
-     * @param string $LifecycleHookName 生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128个字符。
-     * @param string $LifecycleTransition 进行生命周期挂钩的场景，取值范围如下:
-* INSTANCE_LAUNCHING: 扩容生命周期挂钩
-* INSTANCE_TERMINATING: 缩容生命周期挂钩
-     * @param string $DefaultResult 定义伸缩组在生命周期挂钩超时或 LifecycleCommand 执行失败时应采取的操作，取值范围是如下：
-* CONTINUE: 默认值，表示继续执行扩缩容活动
-* ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。
-     * @param integer $HeartbeatTimeout 生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从30到7200秒，默认值为300秒
-     * @param string $NotificationMetadata 弹性伸缩向通知目标发送的附加信息，配置通知时使用，默认值为空字符串。NotificationMetadata 和 LifecycleCommand参数互斥，二者不可同时指定。
-     * @param NotificationTarget $NotificationTarget 通知目标。NotificationTarget和LifecycleCommand参数互斥，二者不可同时指定。
-     * @param string $LifecycleTransitionType 进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
-     * @param LifecycleCommand $LifecycleCommand 远程命令执行对象。通知参数 NotificationMetadata、NotificationTarget 与 LifecycleCommand 互斥，不可同时指定。
+     * @param string $LifecycleHookId <p>生命周期挂钩ID。可以通过调用接口 <a href="https://cloud.tencent.com/document/api/377/34452">DescribeLifecycleHooks</a> ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。</p>
+     * @param string $LifecycleHookName <p>生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128个字符。</p>
+     * @param string $LifecycleTransition <p>进行生命周期挂钩的场景，取值范围如下:<em> INSTANCE_LAUNCHING: 扩容生命周期挂钩</em> INSTANCE_TERMINATING: 缩容生命周期挂钩</p>
+     * @param string $DefaultResult <p>定义伸缩组在生命周期挂钩超时或 LifecycleCommand 执行失败时应采取的操作，取值范围是如下：<em> CONTINUE: 默认值，表示继续执行扩缩容活动</em> ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。</p>
+     * @param integer $HeartbeatTimeout <p>生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从30到7200秒，默认值为300秒</p>
+     * @param string $NotificationMetadata <p>弹性伸缩向通知目标发送的附加信息，配置通知时使用，默认值为空字符串。NotificationMetadata 和 LifecycleCommand参数互斥，二者不可同时指定。</p>
+     * @param NotificationTarget $NotificationTarget <p>通知目标。NotificationTarget和LifecycleCommand参数互斥，二者不可同时指定。</p>
+     * @param string $LifecycleTransitionType <p>进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。</p>
+     * @param LifecycleCommand $LifecycleCommand <p>远程命令执行对象。通知参数 NotificationMetadata、NotificationTarget 与 LifecycleCommand 互斥，不可同时指定。</p>
      */
     function __construct()
     {

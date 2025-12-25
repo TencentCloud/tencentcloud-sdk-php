@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVersionDetail请求参数结构体
  *
- * @method string getEnvId() 获取环境Id
- * @method void setEnvId(string $EnvId) 设置环境Id
- * @method string getServerName() 获取服务名
- * @method void setServerName(string $ServerName) 设置服务名
- * @method string getVersionName() 获取版本名
- * @method void setVersionName(string $VersionName) 设置版本名
- * @method string getChannel() 获取channel
- * @method void setChannel(string $Channel) 设置channel
+ * @method string getEnvId() 获取<p>环境Id</p>
+ * @method void setEnvId(string $EnvId) 设置<p>环境Id</p>
+ * @method string getServerName() 获取<p>服务名</p>
+ * @method void setServerName(string $ServerName) 设置<p>服务名</p>
+ * @method string getVersionName() 获取<p>版本名</p>
+ * @method void setVersionName(string $VersionName) 设置<p>版本名</p>
+ * @method string getChannel() 获取<p>channel</p>
+ * @method void setChannel(string $Channel) 设置<p>channel</p>
  */
 class DescribeVersionDetailRequest extends AbstractModel
 {
     /**
-     * @var string 环境Id
+     * @var string <p>环境Id</p>
      */
     public $EnvId;
 
     /**
-     * @var string 服务名
+     * @var string <p>服务名</p>
      */
     public $ServerName;
 
     /**
-     * @var string 版本名
+     * @var string <p>版本名</p>
      */
     public $VersionName;
 
     /**
-     * @var string channel
+     * @var string <p>channel</p>
      */
     public $Channel;
 
     /**
-     * @param string $EnvId 环境Id
-     * @param string $ServerName 服务名
-     * @param string $VersionName 版本名
-     * @param string $Channel channel
+     * @param string $EnvId <p>环境Id</p>
+     * @param string $ServerName <p>服务名</p>
+     * @param string $VersionName <p>版本名</p>
+     * @param string $Channel <p>channel</p>
      */
     function __construct()
     {

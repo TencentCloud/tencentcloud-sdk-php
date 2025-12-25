@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 主机参数，导入外部主机时使用
  *
- * @method string getOsName() 获取操作系统名称，只能是Linux、Windows或MySQL
- * @method void setOsName(string $OsName) 设置操作系统名称，只能是Linux、Windows或MySQL
+ * @method string getOsName() 获取操作系统名称，只能是主机（Linux、Windows）、数据库（MySQL、SQL Server、MariaDB、PostgreSQL、MongoDBReplicaSet、MongoDBSharded、Redis）、容器（TKE、EKS）
+ * @method void setOsName(string $OsName) 设置操作系统名称，只能是主机（Linux、Windows）、数据库（MySQL、SQL Server、MariaDB、PostgreSQL、MongoDBReplicaSet、MongoDBSharded、Redis）、容器（TKE、EKS）
  * @method string getIp() 获取IP地址
  * @method void setIp(string $Ip) 设置IP地址
  * @method integer getPort() 获取管理端口
@@ -54,7 +54,7 @@ use TencentCloud\Common\AbstractModel;
 class ExternalDevice extends AbstractModel
 {
     /**
-     * @var string 操作系统名称，只能是Linux、Windows或MySQL
+     * @var string 操作系统名称，只能是主机（Linux、Windows）、数据库（MySQL、SQL Server、MariaDB、PostgreSQL、MongoDBReplicaSet、MongoDBSharded、Redis）、容器（TKE、EKS）
      */
     public $OsName;
 
@@ -129,7 +129,7 @@ class ExternalDevice extends AbstractModel
     public $PublicIp;
 
     /**
-     * @param string $OsName 操作系统名称，只能是Linux、Windows或MySQL
+     * @param string $OsName 操作系统名称，只能是主机（Linux、Windows）、数据库（MySQL、SQL Server、MariaDB、PostgreSQL、MongoDBReplicaSet、MongoDBSharded、Redis）、容器（TKE、EKS）
      * @param string $Ip IP地址
      * @param integer $Port 管理端口
      * @param string $Name 主机名，可为空

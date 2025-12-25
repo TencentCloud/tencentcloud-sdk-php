@@ -20,49 +20,53 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVersionDetail返回参数结构体
  *
- * @method string getName() 获取版本名
- * @method void setName(string $Name) 设置版本名
- * @method integer getPort() 获取端口号
- * @method void setPort(integer $Port) 设置端口号
- * @method float getCpu() 获取cpu 规格
- * @method void setCpu(float $Cpu) 设置cpu 规格
- * @method float getMem() 获取mem 规格
- * @method void setMem(float $Mem) 设置mem 规格
- * @method integer getMinNum() 获取最小副本数
- * @method void setMinNum(integer $MinNum) 设置最小副本数
- * @method integer getMaxNum() 获取最大副本数
- * @method void setMaxNum(integer $MaxNum) 设置最大副本数
- * @method array getPolicyDetails() 获取扩缩容策略
- * @method void setPolicyDetails(array $PolicyDetails) 设置扩缩容策略
- * @method string getDockerfile() 获取Dockerfile path
- * @method void setDockerfile(string $Dockerfile) 设置Dockerfile path
- * @method string getBuildDir() 获取目标目录
- * @method void setBuildDir(string $BuildDir) 设置目标目录
- * @method string getEnvParams() 获取环境变量
- * @method void setEnvParams(string $EnvParams) 设置环境变量
- * @method string getStatus() 获取状态
- * @method void setStatus(string $Status) 设置状态
- * @method string getCreatedTime() 获取创建时间
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间
- * @method string getUpdatedTime() 获取更新时间
- * @method void setUpdatedTime(string $UpdatedTime) 设置更新时间
- * @method string getLogPath() 获取日志采集路径
- * @method void setLogPath(string $LogPath) 设置日志采集路径
- * @method string getEntryPoint() 获取entryPoint
+ * @method string getName() 获取<p>版本名</p>
+ * @method void setName(string $Name) 设置<p>版本名</p>
+ * @method integer getPort() 获取<p>端口号</p>
+ * @method void setPort(integer $Port) 设置<p>端口号</p>
+ * @method float getCpu() 获取<p>cpu 规格</p>
+ * @method void setCpu(float $Cpu) 设置<p>cpu 规格</p>
+ * @method float getMem() 获取<p>mem 规格</p>
+ * @method void setMem(float $Mem) 设置<p>mem 规格</p>
+ * @method integer getMinNum() 获取<p>最小副本数</p>
+ * @method void setMinNum(integer $MinNum) 设置<p>最小副本数</p>
+ * @method integer getMaxNum() 获取<p>最大副本数</p>
+ * @method void setMaxNum(integer $MaxNum) 设置<p>最大副本数</p>
+ * @method array getPolicyDetails() 获取<p>扩缩容策略</p>
+ * @method void setPolicyDetails(array $PolicyDetails) 设置<p>扩缩容策略</p>
+ * @method string getDockerfile() 获取<p>Dockerfile path</p>
+ * @method void setDockerfile(string $Dockerfile) 设置<p>Dockerfile path</p>
+ * @method string getBuildDir() 获取<p>目标目录</p>
+ * @method void setBuildDir(string $BuildDir) 设置<p>目标目录</p>
+ * @method string getEnvParams() 获取<p>环境变量</p>
+ * @method void setEnvParams(string $EnvParams) 设置<p>环境变量</p>
+ * @method string getStatus() 获取<p>状态</p>
+ * @method void setStatus(string $Status) 设置<p>状态</p>
+ * @method string getCreatedTime() 获取<p>创建时间</p>
+ * @method void setCreatedTime(string $CreatedTime) 设置<p>创建时间</p>
+ * @method string getUpdatedTime() 获取<p>更新时间</p>
+ * @method void setUpdatedTime(string $UpdatedTime) 设置<p>更新时间</p>
+ * @method string getLogPath() 获取<p>日志采集路径</p>
+ * @method void setLogPath(string $LogPath) 设置<p>日志采集路径</p>
+ * @method string getEntryPoint() 获取<p>entryPoint</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEntryPoint(string $EntryPoint) 设置entryPoint
+ * @method void setEntryPoint(string $EntryPoint) 设置<p>entryPoint</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCmd() 获取Cmd
+ * @method string getCmd() 获取<p>Cmd</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCmd(string $Cmd) 设置Cmd
+ * @method void setCmd(string $Cmd) 设置<p>Cmd</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method VpcConf getVpcConf() 获取vpc conf
+ * @method VpcConf getVpcConf() 获取<p>vpc conf</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVpcConf(VpcConf $VpcConf) 设置vpc conf
+ * @method void setVpcConf(VpcConf $VpcConf) 设置<p>vpc conf</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getVolumesConf() 获取volume conf
+ * @method array getVolumesConf() 获取<p>volume conf</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVolumesConf(array $VolumesConf) 设置volume conf
+ * @method void setVolumesConf(array $VolumesConf) 设置<p>volume conf</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method BuildPacksInfo getBuildPacks() 获取<p>buildpack 信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBuildPacks(BuildPacksInfo $BuildPacks) 设置<p>buildpack 信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -70,98 +74,104 @@ use TencentCloud\Common\AbstractModel;
 class DescribeVersionDetailResponse extends AbstractModel
 {
     /**
-     * @var string 版本名
+     * @var string <p>版本名</p>
      */
     public $Name;
 
     /**
-     * @var integer 端口号
+     * @var integer <p>端口号</p>
      */
     public $Port;
 
     /**
-     * @var float cpu 规格
+     * @var float <p>cpu 规格</p>
      */
     public $Cpu;
 
     /**
-     * @var float mem 规格
+     * @var float <p>mem 规格</p>
      */
     public $Mem;
 
     /**
-     * @var integer 最小副本数
+     * @var integer <p>最小副本数</p>
      */
     public $MinNum;
 
     /**
-     * @var integer 最大副本数
+     * @var integer <p>最大副本数</p>
      */
     public $MaxNum;
 
     /**
-     * @var array 扩缩容策略
+     * @var array <p>扩缩容策略</p>
      */
     public $PolicyDetails;
 
     /**
-     * @var string Dockerfile path
+     * @var string <p>Dockerfile path</p>
      */
     public $Dockerfile;
 
     /**
-     * @var string 目标目录
+     * @var string <p>目标目录</p>
      */
     public $BuildDir;
 
     /**
-     * @var string 环境变量
+     * @var string <p>环境变量</p>
      */
     public $EnvParams;
 
     /**
-     * @var string 状态
+     * @var string <p>状态</p>
      */
     public $Status;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreatedTime;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
      */
     public $UpdatedTime;
 
     /**
-     * @var string 日志采集路径
+     * @var string <p>日志采集路径</p>
      */
     public $LogPath;
 
     /**
-     * @var string entryPoint
+     * @var string <p>entryPoint</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EntryPoint;
 
     /**
-     * @var string Cmd
+     * @var string <p>Cmd</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cmd;
 
     /**
-     * @var VpcConf vpc conf
+     * @var VpcConf <p>vpc conf</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcConf;
 
     /**
-     * @var array volume conf
+     * @var array <p>volume conf</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VolumesConf;
+
+    /**
+     * @var BuildPacksInfo <p>buildpack 信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BuildPacks;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -169,27 +179,29 @@ class DescribeVersionDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Name 版本名
-     * @param integer $Port 端口号
-     * @param float $Cpu cpu 规格
-     * @param float $Mem mem 规格
-     * @param integer $MinNum 最小副本数
-     * @param integer $MaxNum 最大副本数
-     * @param array $PolicyDetails 扩缩容策略
-     * @param string $Dockerfile Dockerfile path
-     * @param string $BuildDir 目标目录
-     * @param string $EnvParams 环境变量
-     * @param string $Status 状态
-     * @param string $CreatedTime 创建时间
-     * @param string $UpdatedTime 更新时间
-     * @param string $LogPath 日志采集路径
-     * @param string $EntryPoint entryPoint
+     * @param string $Name <p>版本名</p>
+     * @param integer $Port <p>端口号</p>
+     * @param float $Cpu <p>cpu 规格</p>
+     * @param float $Mem <p>mem 规格</p>
+     * @param integer $MinNum <p>最小副本数</p>
+     * @param integer $MaxNum <p>最大副本数</p>
+     * @param array $PolicyDetails <p>扩缩容策略</p>
+     * @param string $Dockerfile <p>Dockerfile path</p>
+     * @param string $BuildDir <p>目标目录</p>
+     * @param string $EnvParams <p>环境变量</p>
+     * @param string $Status <p>状态</p>
+     * @param string $CreatedTime <p>创建时间</p>
+     * @param string $UpdatedTime <p>更新时间</p>
+     * @param string $LogPath <p>日志采集路径</p>
+     * @param string $EntryPoint <p>entryPoint</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Cmd Cmd
+     * @param string $Cmd <p>Cmd</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VpcConf $VpcConf vpc conf
+     * @param VpcConf $VpcConf <p>vpc conf</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $VolumesConf volume conf
+     * @param array $VolumesConf <p>volume conf</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BuildPacksInfo $BuildPacks <p>buildpack 信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -287,6 +299,11 @@ class DescribeVersionDetailResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->VolumesConf, $obj);
             }
+        }
+
+        if (array_key_exists("BuildPacks",$param) and $param["BuildPacks"] !== null) {
+            $this->BuildPacks = new BuildPacksInfo();
+            $this->BuildPacks->deserialize($param["BuildPacks"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

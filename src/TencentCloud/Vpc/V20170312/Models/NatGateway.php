@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRestrictState(string $RestrictState) 设置NAT网关是否被封禁。“NORMAL”：未被封禁，“RESTRICTED”：已被封禁。
  * @method integer getNatProductVersion() 获取NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关
  * @method void setNatProductVersion(integer $NatProductVersion) 设置NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关
+ * @method boolean getStrictSnatMode() 获取true代表仅允许匹配SNAT规则的内网IP的流量进行转发，false代表所有内网IP发起的流量都进行转发。默认为false。
+ * @method void setStrictSnatMode(boolean $StrictSnatMode) 设置true代表仅允许匹配SNAT规则的内网IP的流量进行转发，false代表所有内网IP发起的流量都进行转发。默认为false。
  * @method boolean getSmartScheduleMode() 获取是否启用根据目的网段选择SNAT使用的EIP功能	
  * @method void setSmartScheduleMode(boolean $SmartScheduleMode) 设置是否启用根据目的网段选择SNAT使用的EIP功能	
  * @method string getDedicatedClusterId() 获取NAT实例归属的专属集群id
@@ -74,6 +76,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConnectionStateTimeouts(ConnectionStateTimeouts $ConnectionStateTimeouts) 设置NAT实例连接超时时间
  * @method string getExclusiveType() 获取独享实例规格。取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
  * @method void setExclusiveType(string $ExclusiveType) 设置独享实例规格。取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
+ * @method boolean getAutoScaling() 获取标准型NAT网关自动扩容
+ * @method void setAutoScaling(boolean $AutoScaling) 设置标准型NAT网关自动扩容
+ * @method boolean getICMPProxy() 获取是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，当前适用于标准型NAT网关
+ * @method void setICMPProxy(boolean $ICMPProxy) 设置是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，当前适用于标准型NAT网关
+ * @method boolean getPublicAddressAffinity() 获取true代表同一个私网IP访问同一个公网目的IP时，固定使用同一个NAT网关上的弹性公网IP；false代表这种情况下使用的弹性公网IP不固定。默认为true。
+ * @method void setPublicAddressAffinity(boolean $PublicAddressAffinity) 设置true代表同一个私网IP访问同一个公网目的IP时，固定使用同一个NAT网关上的弹性公网IP；false代表这种情况下使用的弹性公网IP不固定。默认为true。
  */
 class NatGateway extends AbstractModel
 {
@@ -180,6 +188,11 @@ class NatGateway extends AbstractModel
     public $NatProductVersion;
 
     /**
+     * @var boolean true代表仅允许匹配SNAT规则的内网IP的流量进行转发，false代表所有内网IP发起的流量都进行转发。默认为false。
+     */
+    public $StrictSnatMode;
+
+    /**
      * @var boolean 是否启用根据目的网段选择SNAT使用的EIP功能	
      */
     public $SmartScheduleMode;
@@ -205,6 +218,21 @@ class NatGateway extends AbstractModel
     public $ExclusiveType;
 
     /**
+     * @var boolean 标准型NAT网关自动扩容
+     */
+    public $AutoScaling;
+
+    /**
+     * @var boolean 是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，当前适用于标准型NAT网关
+     */
+    public $ICMPProxy;
+
+    /**
+     * @var boolean true代表同一个私网IP访问同一个公网目的IP时，固定使用同一个NAT网关上的弹性公网IP；false代表这种情况下使用的弹性公网IP不固定。默认为true。
+     */
+    public $PublicAddressAffinity;
+
+    /**
      * @param string $NatGatewayId NAT网关的ID。
      * @param string $NatGatewayName NAT网关的名称。
      * @param string $CreatedTime NAT网关创建的时间。
@@ -227,11 +255,15 @@ class NatGateway extends AbstractModel
      * @param integer $ExclusiveGatewayBandwidth 独享型NAT所在的网关集群的带宽(单位:Mbps)，当IsExclusive为false时无此字段。
      * @param string $RestrictState NAT网关是否被封禁。“NORMAL”：未被封禁，“RESTRICTED”：已被封禁。
      * @param integer $NatProductVersion NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关
+     * @param boolean $StrictSnatMode true代表仅允许匹配SNAT规则的内网IP的流量进行转发，false代表所有内网IP发起的流量都进行转发。默认为false。
      * @param boolean $SmartScheduleMode 是否启用根据目的网段选择SNAT使用的EIP功能	
      * @param string $DedicatedClusterId NAT实例归属的专属集群id
      * @param boolean $DeletionProtectionEnabled NAT实例是否开启删除保护
      * @param ConnectionStateTimeouts $ConnectionStateTimeouts NAT实例连接超时时间
      * @param string $ExclusiveType 独享实例规格。取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
+     * @param boolean $AutoScaling 标准型NAT网关自动扩容
+     * @param boolean $ICMPProxy 是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，当前适用于标准型NAT网关
+     * @param boolean $PublicAddressAffinity true代表同一个私网IP访问同一个公网目的IP时，固定使用同一个NAT网关上的弹性公网IP；false代表这种情况下使用的弹性公网IP不固定。默认为true。
      */
     function __construct()
     {
@@ -346,6 +378,10 @@ class NatGateway extends AbstractModel
             $this->NatProductVersion = $param["NatProductVersion"];
         }
 
+        if (array_key_exists("StrictSnatMode",$param) and $param["StrictSnatMode"] !== null) {
+            $this->StrictSnatMode = $param["StrictSnatMode"];
+        }
+
         if (array_key_exists("SmartScheduleMode",$param) and $param["SmartScheduleMode"] !== null) {
             $this->SmartScheduleMode = $param["SmartScheduleMode"];
         }
@@ -365,6 +401,18 @@ class NatGateway extends AbstractModel
 
         if (array_key_exists("ExclusiveType",$param) and $param["ExclusiveType"] !== null) {
             $this->ExclusiveType = $param["ExclusiveType"];
+        }
+
+        if (array_key_exists("AutoScaling",$param) and $param["AutoScaling"] !== null) {
+            $this->AutoScaling = $param["AutoScaling"];
+        }
+
+        if (array_key_exists("ICMPProxy",$param) and $param["ICMPProxy"] !== null) {
+            $this->ICMPProxy = $param["ICMPProxy"];
+        }
+
+        if (array_key_exists("PublicAddressAffinity",$param) and $param["PublicAddressAffinity"] !== null) {
+            $this->PublicAddressAffinity = $param["PublicAddressAffinity"];
         }
     }
 }

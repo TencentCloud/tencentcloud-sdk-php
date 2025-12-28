@@ -22,8 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProxyGroupId() 获取代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
  * @method void setProxyGroupId(string $ProxyGroupId) 设置代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
- * @method string getProxyAddressId() 获取代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。如果不传则会对所有代理组地址进行负载均衡。
- * @method void setProxyAddressId(string $ProxyAddressId) 设置代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。如果不传则会对所有代理组地址进行负载均衡。
+ * @method string getProxyAddressId() 获取代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+说明：
+1. 对于双节点实例而言，此参数为非必填，如果不传则会对所有代理组地址进行负载均衡。
+2. 对于云盘版实例而言，此参数为必填。
+ * @method void setProxyAddressId(string $ProxyAddressId) 设置代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+说明：
+1. 对于双节点实例而言，此参数为非必填，如果不传则会对所有代理组地址进行负载均衡。
+2. 对于云盘版实例而言，此参数为必填。
  */
 class ReloadBalanceProxyNodeRequest extends AbstractModel
 {
@@ -33,13 +39,19 @@ class ReloadBalanceProxyNodeRequest extends AbstractModel
     public $ProxyGroupId;
 
     /**
-     * @var string 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。如果不传则会对所有代理组地址进行负载均衡。
+     * @var string 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+说明：
+1. 对于双节点实例而言，此参数为非必填，如果不传则会对所有代理组地址进行负载均衡。
+2. 对于云盘版实例而言，此参数为必填。
      */
     public $ProxyAddressId;
 
     /**
      * @param string $ProxyGroupId 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
-     * @param string $ProxyAddressId 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。如果不传则会对所有代理组地址进行负载均衡。
+     * @param string $ProxyAddressId 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+说明：
+1. 对于双节点实例而言，此参数为非必填，如果不传则会对所有代理组地址进行负载均衡。
+2. 对于云盘版实例而言，此参数为必填。
      */
     function __construct()
     {

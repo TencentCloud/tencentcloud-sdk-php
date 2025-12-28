@@ -31,6 +31,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Dubbing：智能译制</li>
 <li>VideoRemake: 视频去重</li>
 <li>VideoComprehension: 视频（音频）理解</li>
+<li>Cutout：视频抠图</li>
+<li>Reel：智能成片</li>
  * @method void setType(string $Type) 设置任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
@@ -42,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Dubbing：智能译制</li>
 <li>VideoRemake: 视频去重</li>
 <li>VideoComprehension: 视频（音频）理解</li>
+<li>Cutout：视频抠图</li>
+<li>Reel：智能成片</li>
  * @method AiAnalysisTaskClassificationResult getClassificationTask() 获取视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClassificationTask(AiAnalysisTaskClassificationResult $ClassificationTask) 设置视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
@@ -94,6 +98,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVideoComprehensionTask(AiAnalysisTaskVideoComprehensionResult $VideoComprehensionTask) 设置视频（音频）理解任务的查询结果，当任务类型为 VideoComprehension 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AiAnalysisTaskCutoutResult getCutoutTask() 获取视频内容分析抠图任务的查询结果，当任务类型为Cutout时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCutoutTask(AiAnalysisTaskCutoutResult $CutoutTask) 设置视频内容分析抠图任务的查询结果，当任务类型为Cutout时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method AiAnalysisTaskReelResult getReelTask() 获取视频内容分析成片任务的查询结果，当任务类型为Reel时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReelTask(AiAnalysisTaskReelResult $ReelTask) 设置视频内容分析成片任务的查询结果，当任务类型为Reel时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AiAnalysisResult extends AbstractModel
 {
@@ -109,6 +121,8 @@ class AiAnalysisResult extends AbstractModel
 <li>Dubbing：智能译制</li>
 <li>VideoRemake: 视频去重</li>
 <li>VideoComprehension: 视频（音频）理解</li>
+<li>Cutout：视频抠图</li>
+<li>Reel：智能成片</li>
      */
     public $Type;
 
@@ -191,6 +205,18 @@ class AiAnalysisResult extends AbstractModel
     public $VideoComprehensionTask;
 
     /**
+     * @var AiAnalysisTaskCutoutResult 视频内容分析抠图任务的查询结果，当任务类型为Cutout时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CutoutTask;
+
+    /**
+     * @var AiAnalysisTaskReelResult 视频内容分析成片任务的查询结果，当任务类型为Reel时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReelTask;
+
+    /**
      * @param string $Type 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
@@ -202,6 +228,8 @@ class AiAnalysisResult extends AbstractModel
 <li>Dubbing：智能译制</li>
 <li>VideoRemake: 视频去重</li>
 <li>VideoComprehension: 视频（音频）理解</li>
+<li>Cutout：视频抠图</li>
+<li>Reel：智能成片</li>
      * @param AiAnalysisTaskClassificationResult $ClassificationTask 视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiAnalysisTaskCoverResult $CoverTask 视频内容分析智能封面任务的查询结果，当任务类型为 Cover 时有效。
@@ -227,6 +255,10 @@ class AiAnalysisResult extends AbstractModel
      * @param AiAnalysisTaskVideoRemakeResult $VideoRemakeTask 视频内容分析去重任务的查询结果，当任务类型为 VideoRemake 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiAnalysisTaskVideoComprehensionResult $VideoComprehensionTask 视频（音频）理解任务的查询结果，当任务类型为 VideoComprehension 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AiAnalysisTaskCutoutResult $CutoutTask 视频内容分析抠图任务的查询结果，当任务类型为Cutout时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AiAnalysisTaskReelResult $ReelTask 视频内容分析成片任务的查询结果，当任务类型为Reel时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -309,6 +341,16 @@ class AiAnalysisResult extends AbstractModel
         if (array_key_exists("VideoComprehensionTask",$param) and $param["VideoComprehensionTask"] !== null) {
             $this->VideoComprehensionTask = new AiAnalysisTaskVideoComprehensionResult();
             $this->VideoComprehensionTask->deserialize($param["VideoComprehensionTask"]);
+        }
+
+        if (array_key_exists("CutoutTask",$param) and $param["CutoutTask"] !== null) {
+            $this->CutoutTask = new AiAnalysisTaskCutoutResult();
+            $this->CutoutTask->deserialize($param["CutoutTask"]);
+        }
+
+        if (array_key_exists("ReelTask",$param) and $param["ReelTask"] !== null) {
+            $this->ReelTask = new AiAnalysisTaskReelResult();
+            $this->ReelTask->deserialize($param["ReelTask"]);
         }
     }
 }

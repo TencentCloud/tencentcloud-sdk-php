@@ -105,13 +105,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSubtitleFormat() 获取智能字幕文件格式
 - vtt: WebVTT 格式
 - srt: SRT格式
-- original：与源字幕文件一致（用于纯字幕翻译模版）
+- original：与源字幕文件一致（用于纯字幕翻译模板）
 - 不填或填空：不生成字幕文件
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubtitleFormat(string $SubtitleFormat) 设置智能字幕文件格式
 - vtt: WebVTT 格式
 - srt: SRT格式
-- original：与源字幕文件一致（用于纯字幕翻译模版）
+- original：与源字幕文件一致（用于纯字幕翻译模板）
 - 不填或填空：不生成字幕文件
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSubtitleType() 获取智能字幕字幕语言类型
@@ -199,9 +199,15 @@ OFF: 关闭翻译
  * @method integer getProcessType() 获取字幕处理类型：
 - 0：ASR识别字幕
 - 1：纯字幕翻译
+- 2:  OCR识别字幕
  * @method void setProcessType(integer $ProcessType) 设置字幕处理类型：
 - 0：ASR识别字幕
 - 1：纯字幕翻译
+- 2:  OCR识别字幕
+ * @method SelectingSubtitleAreasConfig getSelectingSubtitleAreasConfig() 获取字幕OCR提取框选区域配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSelectingSubtitleAreasConfig(SelectingSubtitleAreasConfig $SelectingSubtitleAreasConfig) 设置字幕OCR提取框选区域配置信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SmartSubtitleTemplateItem extends AbstractModel
 {
@@ -278,7 +284,7 @@ class SmartSubtitleTemplateItem extends AbstractModel
      * @var string 智能字幕文件格式
 - vtt: WebVTT 格式
 - srt: SRT格式
-- original：与源字幕文件一致（用于纯字幕翻译模版）
+- original：与源字幕文件一致（用于纯字幕翻译模板）
 - 不填或填空：不生成字幕文件
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -353,8 +359,15 @@ OFF: 关闭翻译
      * @var integer 字幕处理类型：
 - 0：ASR识别字幕
 - 1：纯字幕翻译
+- 2:  OCR识别字幕
      */
     public $ProcessType;
+
+    /**
+     * @var SelectingSubtitleAreasConfig 字幕OCR提取框选区域配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SelectingSubtitleAreasConfig;
 
     /**
      * @param integer $Definition 智能字幕模板唯一标识
@@ -401,7 +414,7 @@ OFF: 关闭翻译
      * @param string $SubtitleFormat 智能字幕文件格式
 - vtt: WebVTT 格式
 - srt: SRT格式
-- original：与源字幕文件一致（用于纯字幕翻译模版）
+- original：与源字幕文件一致（用于纯字幕翻译模板）
 - 不填或填空：不生成字幕文件
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SubtitleType 智能字幕字幕语言类型
@@ -448,6 +461,9 @@ OFF: 关闭翻译
      * @param integer $ProcessType 字幕处理类型：
 - 0：ASR识别字幕
 - 1：纯字幕翻译
+- 2:  OCR识别字幕
+     * @param SelectingSubtitleAreasConfig $SelectingSubtitleAreasConfig 字幕OCR提取框选区域配置信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -521,6 +537,11 @@ OFF: 关闭翻译
 
         if (array_key_exists("ProcessType",$param) and $param["ProcessType"] !== null) {
             $this->ProcessType = $param["ProcessType"];
+        }
+
+        if (array_key_exists("SelectingSubtitleAreasConfig",$param) and $param["SelectingSubtitleAreasConfig"] !== null) {
+            $this->SelectingSubtitleAreasConfig = new SelectingSubtitleAreasConfig();
+            $this->SelectingSubtitleAreasConfig->deserialize($param["SelectingSubtitleAreasConfig"]);
         }
     }
 }

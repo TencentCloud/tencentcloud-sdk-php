@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRect(Rect $Rect) 设置文本行在原图片中的像素坐标框。
  * @method string getColor() 获取识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。
  * @method void setColor(string $Color) 设置识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。
+ * @method string getLicensePlateCategory() 获取车牌类别， 如： 实体车牌、非实体车牌
+ * @method void setLicensePlateCategory(string $LicensePlateCategory) 设置车牌类别， 如： 实体车牌、非实体车牌
  */
 class LicensePlateInfo extends AbstractModel
 {
@@ -52,10 +54,16 @@ class LicensePlateInfo extends AbstractModel
     public $Color;
 
     /**
+     * @var string 车牌类别， 如： 实体车牌、非实体车牌
+     */
+    public $LicensePlateCategory;
+
+    /**
      * @param string $Number 识别出的车牌号码。
      * @param integer $Confidence 置信度，0 - 100 之间。
      * @param Rect $Rect 文本行在原图片中的像素坐标框。
      * @param string $Color 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。
+     * @param string $LicensePlateCategory 车牌类别， 如： 实体车牌、非实体车牌
      */
     function __construct()
     {
@@ -85,6 +93,10 @@ class LicensePlateInfo extends AbstractModel
 
         if (array_key_exists("Color",$param) and $param["Color"] !== null) {
             $this->Color = $param["Color"];
+        }
+
+        if (array_key_exists("LicensePlateCategory",$param) and $param["LicensePlateCategory"] !== null) {
+            $this->LicensePlateCategory = $param["LicensePlateCategory"];
         }
     }
 }

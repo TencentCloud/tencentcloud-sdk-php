@@ -42,9 +42,6 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\CreateVpcFwGroupResponse CreateVpcFwGroup(Models\CreateVpcFwGroupRequest $req) 创建VPC间防火墙(防火墙组)
  * @method Models\DeleteAcRuleResponse DeleteAcRule(Models\DeleteAcRuleRequest $req) 删除规则
  * @method Models\DeleteAddressTemplateResponse DeleteAddressTemplate(Models\DeleteAddressTemplateRequest $req) 删除地址模板规则
- * @method Models\DeleteAllAccessControlRuleResponse DeleteAllAccessControlRule(Models\DeleteAllAccessControlRuleRequest $req) 业务废弃
-
-全部删除规则
  * @method Models\DeleteBlockIgnoreRuleListResponse DeleteBlockIgnoreRuleList(Models\DeleteBlockIgnoreRuleListRequest $req) 批量删除入侵防御封禁列表、放通列表规则
  * @method Models\DeleteBlockIgnoreRuleNewResponse DeleteBlockIgnoreRuleNew(Models\DeleteBlockIgnoreRuleNewRequest $req) 批量删除入侵防御封禁列表、放通列表规则（新）
  * @method Models\DeleteNatFwInstanceResponse DeleteNatFwInstance(Models\DeleteNatFwInstanceRequest $req) 销毁防火墙实例

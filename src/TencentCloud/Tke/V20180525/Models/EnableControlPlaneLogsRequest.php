@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method string getClusterType() 获取集群类型。当前只支持tke
  * @method void setClusterType(string $ClusterType) 设置集群类型。当前只支持tke
- * @method array getComponents() 获取各组件日志采集配置，目前支持的组件有：kube-apiserver、kube-controller-manager、kube-scheduler、cluster-autoscaler、kapenter
- * @method void setComponents(array $Components) 设置各组件日志采集配置，目前支持的组件有：kube-apiserver、kube-controller-manager、kube-scheduler、cluster-autoscaler、kapenter
+ * @method array getComponents() 获取组件名称列表，目前支持的组件有：cluster-autoscaler、kapenter
+ * @method void setComponents(array $Components) 设置组件名称列表，目前支持的组件有：cluster-autoscaler、kapenter
  */
 class EnableControlPlaneLogsRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class EnableControlPlaneLogsRequest extends AbstractModel
     public $ClusterType;
 
     /**
-     * @var array 各组件日志采集配置，目前支持的组件有：kube-apiserver、kube-controller-manager、kube-scheduler、cluster-autoscaler、kapenter
+     * @var array 组件名称列表，目前支持的组件有：cluster-autoscaler、kapenter
      */
     public $Components;
 
     /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterType 集群类型。当前只支持tke
-     * @param array $Components 各组件日志采集配置，目前支持的组件有：kube-apiserver、kube-controller-manager、kube-scheduler、cluster-autoscaler、kapenter
+     * @param array $Components 组件名称列表，目前支持的组件有：cluster-autoscaler、kapenter
      */
     function __construct()
     {

@@ -36,6 +36,24 @@ use TencentCloud\Common\AbstractModel;
 说明：
 1. 推荐使用小于10M的图片；
 2. 图片格式的取值为：jpeg，jpg, png。
+ * @method string getReferenceType() 获取参考类型，GV模型适用。
+注意：
+
+当使用GV模型时，可作为参考方式,可选asset(素材)、style(风格)。
+ * @method void setReferenceType(string $ReferenceType) 设置参考类型，GV模型适用。
+注意：
+
+当使用GV模型时，可作为参考方式,可选asset(素材)、style(风格)。
+ * @method string getObjectId() 获取主体id.
+适用模型：Vidu-q2.
+当需要对图片标识主体时，需要每个图片都带主体id，后续生成时可以通过@主体id的方式使用。
+ * @method void setObjectId(string $ObjectId) 设置主体id.
+适用模型：Vidu-q2.
+当需要对图片标识主体时，需要每个图片都带主体id，后续生成时可以通过@主体id的方式使用。
+ * @method string getVoiceId() 获取适用于Vidu-q2模型。
+当全部图片携带主体id时，可针对主体设置音色id。 音色列表：https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg
+ * @method void setVoiceId(string $VoiceId) 设置适用于Vidu-q2模型。
+当全部图片携带主体id时，可针对主体设置音色id。 音色列表：https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg
  */
 class AigcVideoTaskInputFileInfo extends AbstractModel
 {
@@ -60,6 +78,27 @@ class AigcVideoTaskInputFileInfo extends AbstractModel
     public $Url;
 
     /**
+     * @var string 参考类型，GV模型适用。
+注意：
+
+当使用GV模型时，可作为参考方式,可选asset(素材)、style(风格)。
+     */
+    public $ReferenceType;
+
+    /**
+     * @var string 主体id.
+适用模型：Vidu-q2.
+当需要对图片标识主体时，需要每个图片都带主体id，后续生成时可以通过@主体id的方式使用。
+     */
+    public $ObjectId;
+
+    /**
+     * @var string 适用于Vidu-q2模型。
+当全部图片携带主体id时，可针对主体设置音色id。 音色列表：https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg
+     */
+    public $VoiceId;
+
+    /**
      * @param string $Type 输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 URL；</li> 
      * @param string $FileId 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。当 Type 取值为 File 时，本参数有效。说明：
 1. 推荐使用小于10M的图片；
@@ -68,6 +107,15 @@ class AigcVideoTaskInputFileInfo extends AbstractModel
 说明：
 1. 推荐使用小于10M的图片；
 2. 图片格式的取值为：jpeg，jpg, png。
+     * @param string $ReferenceType 参考类型，GV模型适用。
+注意：
+
+当使用GV模型时，可作为参考方式,可选asset(素材)、style(风格)。
+     * @param string $ObjectId 主体id.
+适用模型：Vidu-q2.
+当需要对图片标识主体时，需要每个图片都带主体id，后续生成时可以通过@主体id的方式使用。
+     * @param string $VoiceId 适用于Vidu-q2模型。
+当全部图片携带主体id时，可针对主体设置音色id。 音色列表：https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg
      */
     function __construct()
     {
@@ -92,6 +140,18 @@ class AigcVideoTaskInputFileInfo extends AbstractModel
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("ReferenceType",$param) and $param["ReferenceType"] !== null) {
+            $this->ReferenceType = $param["ReferenceType"];
+        }
+
+        if (array_key_exists("ObjectId",$param) and $param["ObjectId"] !== null) {
+            $this->ObjectId = $param["ObjectId"];
+        }
+
+        if (array_key_exists("VoiceId",$param) and $param["VoiceId"] !== null) {
+            $this->VoiceId = $param["VoiceId"];
         }
     }
 }

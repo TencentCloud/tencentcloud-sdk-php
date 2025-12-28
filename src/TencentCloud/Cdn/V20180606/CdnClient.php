@@ -26,10 +26,6 @@ use TencentCloud\Cdn\V20180606\Models as Models;
  * @method Models\AddCLSTopicDomainsResponse AddCLSTopicDomains(Models\AddCLSTopicDomainsRequest $req) AddCLSTopicDomains 用于新增域名到某日志主题下
  * @method Models\AddCdnDomainResponse AddCdnDomain(Models\AddCdnDomainRequest $req) AddCdnDomain 用于新增内容分发网络加速域名。1分钟内最多可新增100个域名。
  * @method Models\CreateClsLogTopicResponse CreateClsLogTopic(Models\CreateClsLogTopicRequest $req) CreateClsLogTopic 用于创建日志主题。注意：一个日志集下至多可创建10个日志主题。
- * @method Models\CreateDiagnoseUrlResponse CreateDiagnoseUrl(Models\CreateDiagnoseUrlRequest $req) 以上诊断报告, 域名版本管理相关接口功能均废弃,  已确认现网0调用, 申请预下线,(预下线不会影响调用, 只会在接口中添加提示信息, 正式下线仍需人工确认)
-
-### <font color=red>**该接口已废弃** </font><br>
-CreateDiagnoseUrl 用于添加域名诊断任务URL。
  * @method Models\CreateEdgePackTaskResponse CreateEdgePackTask(Models\CreateEdgePackTaskRequest $req) 动态打包任务提交接口
  * @method Models\CreateVerifyRecordResponse CreateVerifyRecord(Models\CreateVerifyRecordRequest $req) CreateVerifyRecord 用于生成一条子域名解析，提示客户添加到域名解析上，用于泛域名及域名取回校验归属权。
 生成的解析记录可通过 [VerifyDomainRecord](https://cloud.tencent.com/document/product/228/48117) 完成归属权校验。
@@ -59,10 +55,6 @@ CreateDiagnoseUrl 用于添加域名诊断任务URL。
  * @method Models\DescribeCdnOriginIpResponse DescribeCdnOriginIp(Models\DescribeCdnOriginIpRequest $req) ### <font color=red>**该接口已废弃** </font><br>
 本接口（DescribeCdnOriginIp）用于查询 CDN 回源节点的IP信息。（注：替换接口为DescribeIpStatus）
  * @method Models\DescribeCertDomainsResponse DescribeCertDomains(Models\DescribeCertDomainsRequest $req) DescribeCertDomains 用于校验SSL证书并提取证书中包含的域名。
- * @method Models\DescribeDiagnoseReportResponse DescribeDiagnoseReport(Models\DescribeDiagnoseReportRequest $req) 以上诊断报告, 域名版本管理相关接口功能均废弃,  已确认现网0调用, 申请预下线,(预下线不会影响调用, 只会在接口中添加提示信息, 正式下线仍需人工确认)
-
-### <font color=red>**该接口已废弃** </font><br>
-DescribeDiagnoseReport 用于获取指定报告id的内容。
  * @method Models\DescribeDistrictIspDataResponse DescribeDistrictIspData(Models\DescribeDistrictIspDataRequest $req) 查询指定域名的区域、运营商明细数据
 注意事项：接口尚未全面开放，未在内测名单中的账号不支持调用
  * @method Models\DescribeDomainsResponse DescribeDomains(Models\DescribeDomainsRequest $req) DescribeDomains 用于查询内容分发网络加速域名（含境内、境外）基本配置信息，包括项目ID、服务状态，业务类型、创建时间、更新时间等信息。
@@ -114,10 +106,6 @@ DescribeDiagnoseReport 用于获取指定报告id的内容。
  * @method Models\EnableClsLogTopicResponse EnableClsLogTopic(Models\EnableClsLogTopicRequest $req) EnableClsLogTopic 用于启动日志主题投递。注意：启动后，所有绑定该日志主题域名的日志将继续投递至该主题。生效时间约为 5~15 分钟。
  * @method Models\ListClsLogTopicsResponse ListClsLogTopics(Models\ListClsLogTopicsRequest $req) ListClsLogTopics 用于显示日志主题列表。注意：一个日志集下至多含10个日志主题。
  * @method Models\ListClsTopicDomainsResponse ListClsTopicDomains(Models\ListClsTopicDomainsRequest $req) ListClsTopicDomains 用于获取某日志主题下绑定的域名列表。
- * @method Models\ListDiagnoseReportResponse ListDiagnoseReport(Models\ListDiagnoseReportRequest $req) 以上诊断报告, 域名版本管理相关接口功能均废弃,  已确认现网0调用, 申请预下线,(预下线不会影响调用, 只会在接口中添加提示信息, 正式下线仍需人工确认)
-
-### <font color=red>**该接口已废弃** </font><br>
-ListDiagnoseReport 用于获取用户诊断URL访问后各个子任务的简要详情。
  * @method Models\ListTopClsLogDataResponse ListTopClsLogData(Models\ListTopClsLogDataRequest $req) 通过CLS日志计算Top信息。支持近7天的日志数据。
  * @method Models\ListTopDataResponse ListTopData(Models\ListTopDataRequest $req) ListTopData 通过入参 Metric 和 Filter 组合不同，可以查询以下排序数据：
 

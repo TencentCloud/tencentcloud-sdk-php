@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdn\V20180606\Models;
+namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ListDiagnoseReport返回参数结构体
+ * RenewLoadBalancers返回参数结构体
  *
- * @method array getData() 获取诊断信息。
- * @method void setData(array $Data) 设置诊断信息。
+ * @method string getDealName() 获取订单号。
+ * @method void setDealName(string $DealName) 设置订单号。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class ListDiagnoseReportResponse extends AbstractModel
+class RenewLoadBalancersResponse extends AbstractModel
 {
     /**
-     * @var array 诊断信息。
+     * @var string 订单号。
      */
-    public $Data;
+    public $DealName;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class ListDiagnoseReportResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data 诊断信息。
+     * @param string $DealName 订单号。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,13 +54,8 @@ class ListDiagnoseReportResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new DiagnoseInfo();
-                $obj->deserialize($value);
-                array_push($this->Data, $obj);
-            }
+        if (array_key_exists("DealName",$param) and $param["DealName"] !== null) {
+            $this->DealName = $param["DealName"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

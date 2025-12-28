@@ -174,6 +174,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDbStatementParametersEnabled(boolean $DbStatementParametersEnabled) 设置是否开启SQL参数获取
  * @method array getSlowSQLThresholds() 获取慢SQL阈值
  * @method void setSlowSQLThresholds(array $SlowSQLThresholds) 设置慢SQL阈值
+ * @method integer getEnableDesensitizationRule() 获取是否开启脱敏规则
+ * @method void setEnableDesensitizationRule(integer $EnableDesensitizationRule) 设置是否开启脱敏规则
+ * @method string getDesensitizationRule() 获取脱敏规则
+ * @method void setDesensitizationRule(string $DesensitizationRule) 设置脱敏规则
  */
 class ApmAppConfig extends AbstractModel
 {
@@ -471,6 +475,16 @@ class ApmAppConfig extends AbstractModel
     public $SlowSQLThresholds;
 
     /**
+     * @var integer 是否开启脱敏规则
+     */
+    public $EnableDesensitizationRule;
+
+    /**
+     * @var string 脱敏规则
+     */
+    public $DesensitizationRule;
+
+    /**
      * @param string $InstanceKey 实例ID
      * @param string $ServiceName 服务名
      * @param integer $UrlConvergenceSwitch URL收敛开关
@@ -548,6 +562,8 @@ class ApmAppConfig extends AbstractModel
      * @param integer $DisableCpuUsed 探针熔断CPU阈值
      * @param boolean $DbStatementParametersEnabled 是否开启SQL参数获取
      * @param array $SlowSQLThresholds 慢SQL阈值
+     * @param integer $EnableDesensitizationRule 是否开启脱敏规则
+     * @param string $DesensitizationRule 脱敏规则
      */
     function __construct()
     {
@@ -787,6 +803,14 @@ class ApmAppConfig extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SlowSQLThresholds, $obj);
             }
+        }
+
+        if (array_key_exists("EnableDesensitizationRule",$param) and $param["EnableDesensitizationRule"] !== null) {
+            $this->EnableDesensitizationRule = $param["EnableDesensitizationRule"];
+        }
+
+        if (array_key_exists("DesensitizationRule",$param) and $param["DesensitizationRule"] !== null) {
+            $this->DesensitizationRule = $param["DesensitizationRule"];
         }
     }
 }

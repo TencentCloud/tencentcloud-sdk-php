@@ -26,12 +26,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelName(string $ModelName) 设置模型名称。取值：<li>Hailuo：海螺；</li><li>Kling：可灵；</li><li> Jimeng：即梦；</li><li>Vidu；</li><li>GV：Google Veo；</li><li>OS：OpenAI Sora；</li><li>Hunyuan：混元；</li><li>Mingmou：明眸；</li>
  * @method string getModelVersion() 获取模型版本。取值：<li>当 ModelName 是 Hailuo，可选值为 02、2.3、2.3-fast；</li><li>当 ModelName 是 Kling，可选值为 1.6、2.0、2.1、2.5、O1；</li><li>当 ModelName 是 Jimeng，可选值为 3.0pro；</li><li>当 ModelName 是 Vidu，可选值为 q2、q2-pro、q2-turbo；</li><li>当 ModelName 是 GV，可选值为 3.1、3.1-Fast；</li><li>当 ModelName 是 OS，可选值为 2.0；</li><li>当 ModelName 是 Hunyuan，可选值为 1.5；</li><li>当 ModelName 是 Mingmou，可选值为 1.0；</li>
  * @method void setModelVersion(string $ModelVersion) 设置模型版本。取值：<li>当 ModelName 是 Hailuo，可选值为 02、2.3、2.3-fast；</li><li>当 ModelName 是 Kling，可选值为 1.6、2.0、2.1、2.5、O1；</li><li>当 ModelName 是 Jimeng，可选值为 3.0pro；</li><li>当 ModelName 是 Vidu，可选值为 q2、q2-pro、q2-turbo；</li><li>当 ModelName 是 GV，可选值为 3.1、3.1-Fast；</li><li>当 ModelName 是 OS，可选值为 2.0；</li><li>当 ModelName 是 Hunyuan，可选值为 1.5；</li><li>当 ModelName 是 Mingmou，可选值为 1.0；</li>
- * @method array getFileInfos() 获取AIGC 生视频任务的输入图片的文件信息。说明
-1. 当 ModelName 是 GV 时，最大长度为 3；其他情况下最大长度为1。
-2. 当 ModelName 是 GV 时，并且长度大于1时，则不能再指定 LastFrameFileId 参数。
- * @method void setFileInfos(array $FileInfos) 设置AIGC 生视频任务的输入图片的文件信息。说明
-1. 当 ModelName 是 GV 时，最大长度为 3；其他情况下最大长度为1。
-2. 当 ModelName 是 GV 时，并且长度大于1时，则不能再指定 LastFrameFileId 参数。
+ * @method array getFileInfos() 获取最多包含三张素材资源图片的列表，用于描述模型在生成视频时要使用的资源图片。
+
+支持多图输入的模型：
+1. GV，使用多图输入时，不可使用LastFrameFileId和LastFrameUrl。
+2. Vidu，支持多图参考生视频。q2模型1-7张图片，可通过FileInfos里面的ObjectId作为主体id来传入。
+
+注意：
+1. 图片大小不超过10M。
+2. 支持的图片格式：jpeg、png。
+ * @method void setFileInfos(array $FileInfos) 设置最多包含三张素材资源图片的列表，用于描述模型在生成视频时要使用的资源图片。
+
+支持多图输入的模型：
+1. GV，使用多图输入时，不可使用LastFrameFileId和LastFrameUrl。
+2. Vidu，支持多图参考生视频。q2模型1-7张图片，可通过FileInfos里面的ObjectId作为主体id来传入。
+
+注意：
+1. 图片大小不超过10M。
+2. 支持的图片格式：jpeg、png。
  * @method string getLastFrameFileId() 获取用于作为尾帧画面来生成视频的媒体文件 ID。该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。说明：
 1. 只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。
 2. 图片大小需小于5M。
@@ -48,10 +60,12 @@ use TencentCloud\Common\AbstractModel;
 1. 只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。
 2. 图片大小需小于5M。
 3. 3. 图片格式的取值为：jpeg，jpg, png, webp。
- * @method string getPrompt() 获取生成图片的提示词。当 FileInfos 为空时，此参数必填。
- * @method void setPrompt(string $Prompt) 设置生成图片的提示词。当 FileInfos 为空时，此参数必填。
- * @method string getNegativePrompt() 获取要阻止模型生成图片的提示词。
- * @method void setNegativePrompt(string $NegativePrompt) 设置要阻止模型生成图片的提示词。
+ * @method string getPrompt() 获取生成视频的提示词。当 FileInfos 为空时，此参数必填。
+示例值：move the picture
+ * @method void setPrompt(string $Prompt) 设置生成视频的提示词。当 FileInfos 为空时，此参数必填。
+示例值：move the picture
+ * @method string getNegativePrompt() 获取要阻止模型生成视频的提示词。
+ * @method void setNegativePrompt(string $NegativePrompt) 设置要阻止模型生成视频的提示词。
  * @method string getEnhancePrompt() 获取是否自动优化提示词。开启时将自动优化传入的 Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
  * @method void setEnhancePrompt(string $EnhancePrompt) 设置是否自动优化提示词。开启时将自动优化传入的 Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
  * @method AigcVideoOutputConfig getOutputConfig() 获取生视频任务的输出媒体文件配置。
@@ -64,6 +78,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTasksPriority(integer $TasksPriority) 设置任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
  * @method string getExtInfo() 获取保留字段，特殊用途时使用。
  * @method void setExtInfo(string $ExtInfo) 设置保留字段，特殊用途时使用。
+ * @method string getInputRegion() 获取输入图片的区域信息。当图片url是国外地址时候，可选Oversea。默认Mainland。
+ * @method void setInputRegion(string $InputRegion) 设置输入图片的区域信息。当图片url是国外地址时候，可选Oversea。默认Mainland。
  */
 class CreateAigcVideoTaskRequest extends AbstractModel
 {
@@ -83,9 +99,15 @@ class CreateAigcVideoTaskRequest extends AbstractModel
     public $ModelVersion;
 
     /**
-     * @var array AIGC 生视频任务的输入图片的文件信息。说明
-1. 当 ModelName 是 GV 时，最大长度为 3；其他情况下最大长度为1。
-2. 当 ModelName 是 GV 时，并且长度大于1时，则不能再指定 LastFrameFileId 参数。
+     * @var array 最多包含三张素材资源图片的列表，用于描述模型在生成视频时要使用的资源图片。
+
+支持多图输入的模型：
+1. GV，使用多图输入时，不可使用LastFrameFileId和LastFrameUrl。
+2. Vidu，支持多图参考生视频。q2模型1-7张图片，可通过FileInfos里面的ObjectId作为主体id来传入。
+
+注意：
+1. 图片大小不超过10M。
+2. 支持的图片格式：jpeg、png。
      */
     public $FileInfos;
 
@@ -106,12 +128,13 @@ class CreateAigcVideoTaskRequest extends AbstractModel
     public $LastFrameUrl;
 
     /**
-     * @var string 生成图片的提示词。当 FileInfos 为空时，此参数必填。
+     * @var string 生成视频的提示词。当 FileInfos 为空时，此参数必填。
+示例值：move the picture
      */
     public $Prompt;
 
     /**
-     * @var string 要阻止模型生成图片的提示词。
+     * @var string 要阻止模型生成视频的提示词。
      */
     public $NegativePrompt;
 
@@ -146,12 +169,23 @@ class CreateAigcVideoTaskRequest extends AbstractModel
     public $ExtInfo;
 
     /**
+     * @var string 输入图片的区域信息。当图片url是国外地址时候，可选Oversea。默认Mainland。
+     */
+    public $InputRegion;
+
+    /**
      * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      * @param string $ModelName 模型名称。取值：<li>Hailuo：海螺；</li><li>Kling：可灵；</li><li> Jimeng：即梦；</li><li>Vidu；</li><li>GV：Google Veo；</li><li>OS：OpenAI Sora；</li><li>Hunyuan：混元；</li><li>Mingmou：明眸；</li>
      * @param string $ModelVersion 模型版本。取值：<li>当 ModelName 是 Hailuo，可选值为 02、2.3、2.3-fast；</li><li>当 ModelName 是 Kling，可选值为 1.6、2.0、2.1、2.5、O1；</li><li>当 ModelName 是 Jimeng，可选值为 3.0pro；</li><li>当 ModelName 是 Vidu，可选值为 q2、q2-pro、q2-turbo；</li><li>当 ModelName 是 GV，可选值为 3.1、3.1-Fast；</li><li>当 ModelName 是 OS，可选值为 2.0；</li><li>当 ModelName 是 Hunyuan，可选值为 1.5；</li><li>当 ModelName 是 Mingmou，可选值为 1.0；</li>
-     * @param array $FileInfos AIGC 生视频任务的输入图片的文件信息。说明
-1. 当 ModelName 是 GV 时，最大长度为 3；其他情况下最大长度为1。
-2. 当 ModelName 是 GV 时，并且长度大于1时，则不能再指定 LastFrameFileId 参数。
+     * @param array $FileInfos 最多包含三张素材资源图片的列表，用于描述模型在生成视频时要使用的资源图片。
+
+支持多图输入的模型：
+1. GV，使用多图输入时，不可使用LastFrameFileId和LastFrameUrl。
+2. Vidu，支持多图参考生视频。q2模型1-7张图片，可通过FileInfos里面的ObjectId作为主体id来传入。
+
+注意：
+1. 图片大小不超过10M。
+2. 支持的图片格式：jpeg、png。
      * @param string $LastFrameFileId 用于作为尾帧画面来生成视频的媒体文件 ID。该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。说明：
 1. 只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。
 2. 图片大小需小于5M。
@@ -160,14 +194,16 @@ class CreateAigcVideoTaskRequest extends AbstractModel
 1. 只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。
 2. 图片大小需小于5M。
 3. 3. 图片格式的取值为：jpeg，jpg, png, webp。
-     * @param string $Prompt 生成图片的提示词。当 FileInfos 为空时，此参数必填。
-     * @param string $NegativePrompt 要阻止模型生成图片的提示词。
+     * @param string $Prompt 生成视频的提示词。当 FileInfos 为空时，此参数必填。
+示例值：move the picture
+     * @param string $NegativePrompt 要阻止模型生成视频的提示词。
      * @param string $EnhancePrompt 是否自动优化提示词。开启时将自动优化传入的 Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
      * @param AigcVideoOutputConfig $OutputConfig 生视频任务的输出媒体文件配置。
      * @param string $SessionId 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。
      * @param integer $TasksPriority 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
      * @param string $ExtInfo 保留字段，特殊用途时使用。
+     * @param string $InputRegion 输入图片的区域信息。当图片url是国外地址时候，可选Oversea。默认Mainland。
      */
     function __construct()
     {
@@ -242,6 +278,10 @@ class CreateAigcVideoTaskRequest extends AbstractModel
 
         if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
             $this->ExtInfo = $param["ExtInfo"];
+        }
+
+        if (array_key_exists("InputRegion",$param) and $param["InputRegion"] !== null) {
+            $this->InputRegion = $param["InputRegion"];
         }
     }
 }

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method string getClusterType() 获取集群类型。当前只支持tke
  * @method void setClusterType(string $ClusterType) 设置集群类型。当前只支持tke
- * @method array getComponentNames() 获取组件名称列表，目前支持的组件有：kube-apiserver、kube-controller-manager、kube-scheduler、cluster-autoscaler、kapenter
- * @method void setComponentNames(array $ComponentNames) 设置组件名称列表，目前支持的组件有：kube-apiserver、kube-controller-manager、kube-scheduler、cluster-autoscaler、kapenter
+ * @method array getComponentNames() 获取组件名称列表，目前支持的组件有：cluster-autoscaler、kapenter
+ * @method void setComponentNames(array $ComponentNames) 设置组件名称列表，目前支持的组件有：cluster-autoscaler、kapenter
  * @method boolean getDeleteLogSetAndTopic() 获取是否删除日志集和topic。 如果日志集和topic被其他采集规则使用，则不会被删除
  * @method void setDeleteLogSetAndTopic(boolean $DeleteLogSetAndTopic) 设置是否删除日志集和topic。 如果日志集和topic被其他采集规则使用，则不会被删除
  */
@@ -42,7 +42,7 @@ class DisableControlPlaneLogsRequest extends AbstractModel
     public $ClusterType;
 
     /**
-     * @var array 组件名称列表，目前支持的组件有：kube-apiserver、kube-controller-manager、kube-scheduler、cluster-autoscaler、kapenter
+     * @var array 组件名称列表，目前支持的组件有：cluster-autoscaler、kapenter
      */
     public $ComponentNames;
 
@@ -54,7 +54,7 @@ class DisableControlPlaneLogsRequest extends AbstractModel
     /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterType 集群类型。当前只支持tke
-     * @param array $ComponentNames 组件名称列表，目前支持的组件有：kube-apiserver、kube-controller-manager、kube-scheduler、cluster-autoscaler、kapenter
+     * @param array $ComponentNames 组件名称列表，目前支持的组件有：cluster-autoscaler、kapenter
      * @param boolean $DeleteLogSetAndTopic 是否删除日志集和topic。 如果日志集和topic被其他采集规则使用，则不会被删除
      */
     function __construct()

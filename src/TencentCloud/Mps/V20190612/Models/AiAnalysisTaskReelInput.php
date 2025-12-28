@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdn\V20180606\Models;
+namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDiagnoseReport请求参数结构体
+ * 智能成片任务输入类型
  *
- * @method string getReportId() 获取报告ID
- * @method void setReportId(string $ReportId) 设置报告ID
+ * @method integer getDefinition() 获取智能成片模板 ID。
+ * @method void setDefinition(integer $Definition) 设置智能成片模板 ID。
  */
-class DescribeDiagnoseReportRequest extends AbstractModel
+class AiAnalysisTaskReelInput extends AbstractModel
 {
     /**
-     * @var string 报告ID
+     * @var integer 智能成片模板 ID。
      */
-    public $ReportId;
+    public $Definition;
 
     /**
-     * @param string $ReportId 报告ID
+     * @param integer $Definition 智能成片模板 ID。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeDiagnoseReportRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ReportId",$param) and $param["ReportId"] !== null) {
-            $this->ReportId = $param["ReportId"];
+        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
+            $this->Definition = $param["Definition"];
         }
     }
 }

@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSuccessCount(integer $SuccessCount) 设置发布成功数
  * @method integer getFailCount() 获取发布失败数
  * @method void setFailCount(integer $FailCount) 设置发布失败数
+ * @method string getReleaseVersion() 获取版本号，格式是 v{date}{time}
+ * @method void setReleaseVersion(string $ReleaseVersion) 设置版本号，格式是 v{date}{time}
+ * @method boolean getCanRollback() 获取是否可还原
+ * @method void setCanRollback(boolean $CanRollback) 设置是否可还原
  */
 class ListReleaseItem extends AbstractModel
 {
@@ -87,6 +91,16 @@ class ListReleaseItem extends AbstractModel
     public $FailCount;
 
     /**
+     * @var string 版本号，格式是 v{date}{time}
+     */
+    public $ReleaseVersion;
+
+    /**
+     * @var boolean 是否可还原
+     */
+    public $CanRollback;
+
+    /**
      * @param string $ReleaseBizId 版本ID
      * @param string $Operator 发布人
      * @param string $Desc 发布描述
@@ -96,6 +110,8 @@ class ListReleaseItem extends AbstractModel
      * @param string $Reason 失败原因
      * @param integer $SuccessCount 发布成功数
      * @param integer $FailCount 发布失败数
+     * @param string $ReleaseVersion 版本号，格式是 v{date}{time}
+     * @param boolean $CanRollback 是否可还原
      */
     function __construct()
     {
@@ -144,6 +160,14 @@ class ListReleaseItem extends AbstractModel
 
         if (array_key_exists("FailCount",$param) and $param["FailCount"] !== null) {
             $this->FailCount = $param["FailCount"];
+        }
+
+        if (array_key_exists("ReleaseVersion",$param) and $param["ReleaseVersion"] !== null) {
+            $this->ReleaseVersion = $param["ReleaseVersion"];
+        }
+
+        if (array_key_exists("CanRollback",$param) and $param["CanRollback"] !== null) {
+            $this->CanRollback = $param["CanRollback"];
         }
     }
 }

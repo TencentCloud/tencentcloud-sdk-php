@@ -124,6 +124,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkFlow(WorkflowInfo $WorkFlow) 设置工作流信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getWidgets() 获取Widget信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWidgets(array $Widgets) 设置Widget信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method WidgetAction getWidgetAction() 获取Widget动作信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWidgetAction(WidgetAction $WidgetAction) 设置Widget动作信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MsgRecord extends AbstractModel
 {
@@ -284,6 +292,18 @@ class MsgRecord extends AbstractModel
     public $WorkFlow;
 
     /**
+     * @var array Widget信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Widgets;
+
+    /**
+     * @var WidgetAction Widget动作信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WidgetAction;
+
+    /**
      * @param string $Content 内容
      * @param string $SessionId 当前记录所对应的 Session ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -335,6 +355,10 @@ class MsgRecord extends AbstractModel
      * @param ExtraInfo $ExtraInfo 扩展信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkflowInfo $WorkFlow 工作流信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Widgets Widget信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WidgetAction $WidgetAction Widget动作信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -472,6 +496,20 @@ class MsgRecord extends AbstractModel
         if (array_key_exists("WorkFlow",$param) and $param["WorkFlow"] !== null) {
             $this->WorkFlow = new WorkflowInfo();
             $this->WorkFlow->deserialize($param["WorkFlow"]);
+        }
+
+        if (array_key_exists("Widgets",$param) and $param["Widgets"] !== null) {
+            $this->Widgets = [];
+            foreach ($param["Widgets"] as $key => $value){
+                $obj = new Widget();
+                $obj->deserialize($value);
+                array_push($this->Widgets, $obj);
+            }
+        }
+
+        if (array_key_exists("WidgetAction",$param) and $param["WidgetAction"] !== null) {
+            $this->WidgetAction = new WidgetAction();
+            $this->WidgetAction->deserialize($param["WidgetAction"]);
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTokenUsage请求参数结构体
  *
- * @method array getUinAccount() 获取腾讯云主账号
- * @method void setUinAccount(array $UinAccount) 设置腾讯云主账号
+ * @method array getUinAccount() 获取子账号标识列表，用于筛选指定子账号的统计数据，不填时查询主账号下所有子账号的汇总数据
+ * @method void setUinAccount(array $UinAccount) 设置子账号标识列表，用于筛选指定子账号的统计数据，不填时查询主账号下所有子账号的汇总数据
  * @method string getLoginUin() 获取登录用户主账号(集成商模式必填)
  * @method void setLoginUin(string $LoginUin) 设置登录用户主账号(集成商模式必填)
  * @method string getLoginSubAccountUin() 获取登录用户子账号(集成商模式必填)
@@ -40,17 +40,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubScenes(array $SubScenes) 设置筛选子场景(文档解析场景使用)
  * @method string getAppType() 获取应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
  * @method void setAppType(string $AppType) 设置应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
- * @method string getSpaceId() 获取空间id
- * @method void setSpaceId(string $SpaceId) 设置空间id
- * @method integer getStatStartTime() 获取开始时间戳, 单位为秒
- * @method void setStatStartTime(integer $StatStartTime) 设置开始时间戳, 单位为秒
- * @method integer getStatEndTime() 获取结束时间戳, 单位为秒
- * @method void setStatEndTime(integer $StatEndTime) 设置结束时间戳, 单位为秒
+ * @method string getSpaceId() 获取空间ID，用于限定查询范围。不填时查询所有空间的数据
+ * @method void setSpaceId(string $SpaceId) 设置空间ID，用于限定查询范围。不填时查询所有空间的数据
+ * @method integer getStatStartTime() 获取开始时间。Unix 时间戳，单位是秒，默认为空。
+ * @method void setStatStartTime(integer $StatStartTime) 设置开始时间。Unix 时间戳，单位是秒，默认为空。
+ * @method integer getStatEndTime() 获取结束时间。Unix 时间戳，单位是秒，默认为空。
+ * @method void setStatEndTime(integer $StatEndTime) 设置结束时间。Unix 时间戳，单位是秒，默认为空。
  */
 class DescribeTokenUsageRequest extends AbstractModel
 {
     /**
-     * @var array 腾讯云主账号
+     * @var array 子账号标识列表，用于筛选指定子账号的统计数据，不填时查询主账号下所有子账号的汇总数据
      */
     public $UinAccount;
 
@@ -76,11 +76,13 @@ class DescribeTokenUsageRequest extends AbstractModel
 
     /**
      * @var string 开始时间戳, 单位为秒(默认值0)(废弃)
+     * @deprecated
      */
     public $StartTime;
 
     /**
      * @var string 结束时间戳, 单位为秒(默认值0， 必须大于开始时间戳)(废弃)
+     * @deprecated
      */
     public $EndTime;
 
@@ -100,22 +102,22 @@ class DescribeTokenUsageRequest extends AbstractModel
     public $AppType;
 
     /**
-     * @var string 空间id
+     * @var string 空间ID，用于限定查询范围。不填时查询所有空间的数据
      */
     public $SpaceId;
 
     /**
-     * @var integer 开始时间戳, 单位为秒
+     * @var integer 开始时间。Unix 时间戳，单位是秒，默认为空。
      */
     public $StatStartTime;
 
     /**
-     * @var integer 结束时间戳, 单位为秒
+     * @var integer 结束时间。Unix 时间戳，单位是秒，默认为空。
      */
     public $StatEndTime;
 
     /**
-     * @param array $UinAccount 腾讯云主账号
+     * @param array $UinAccount 子账号标识列表，用于筛选指定子账号的统计数据，不填时查询主账号下所有子账号的汇总数据
      * @param string $LoginUin 登录用户主账号(集成商模式必填)
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)
      * @param string $SubBizType 知识引擎子业务类型:  FileParse(文档解析)、Embedding、Rewrite(多轮改写)、 Concurrency(并发)、KnowledgeSummary(知识总结)   KnowledgeQA(知识问答)、KnowledgeCapacity(知识库容量)、SearchEngine(搜索引擎)
@@ -125,9 +127,9 @@ class DescribeTokenUsageRequest extends AbstractModel
      * @param array $AppBizIds 应用id列表
      * @param array $SubScenes 筛选子场景(文档解析场景使用)
      * @param string $AppType 应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
-     * @param string $SpaceId 空间id
-     * @param integer $StatStartTime 开始时间戳, 单位为秒
-     * @param integer $StatEndTime 结束时间戳, 单位为秒
+     * @param string $SpaceId 空间ID，用于限定查询范围。不填时查询所有空间的数据
+     * @param integer $StatStartTime 开始时间。Unix 时间戳，单位是秒，默认为空。
+     * @param integer $StatEndTime 结束时间。Unix 时间戳，单位是秒，默认为空。
      */
     function __construct()
     {

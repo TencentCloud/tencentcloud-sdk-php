@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSimilarQuestionModify(SimilarQuestionModify $SimilarQuestionModify) 设置相似问修改信息(相似问没有修改则不传)
  * @method string getQuestionDesc() 获取问题描述
  * @method void setQuestionDesc(string $QuestionDesc) 设置问题描述
- * @method integer getEnableScope() 获取问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
- * @method void setEnableScope(integer $EnableScope) 设置问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+ * @method integer getEnableScope() 获取问答生效范围: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。若不传该字段，则不修改问答的生效范围。
+ * @method void setEnableScope(integer $EnableScope) 设置问答生效范围: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。若不传该字段，则不修改问答的生效范围。
  */
 class ModifyQARequest extends AbstractModel
 {
@@ -126,7 +126,7 @@ class ModifyQARequest extends AbstractModel
     public $QuestionDesc;
 
     /**
-     * @var integer 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * @var integer 问答生效范围: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。若不传该字段，则不修改问答的生效范围。
      */
     public $EnableScope;
 
@@ -147,7 +147,7 @@ class ModifyQARequest extends AbstractModel
      * @param string $ExpireEnd 有效结束时间，单位是unix时间戳，默认值为0，代表永久有效
      * @param SimilarQuestionModify $SimilarQuestionModify 相似问修改信息(相似问没有修改则不传)
      * @param string $QuestionDesc 问题描述
-     * @param integer $EnableScope 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * @param integer $EnableScope 问答生效范围: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。若不传该字段，则不修改问答的生效范围。
      */
     function __construct()
     {

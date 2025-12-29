@@ -38,6 +38,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStopSequences(array $StopSequences) 设置停止序列
  * @method string getReplyFormat() 获取输出格式
  * @method void setReplyFormat(string $ReplyFormat) 设置输出格式
+ * @method string getDeepThinking() 获取深度思考值
+disabled
+enabled
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeepThinking(string $DeepThinking) 设置深度思考值
+disabled
+enabled
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getReasoningEffort() 获取效果 disabled low medium high
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReasoningEffort(string $ReasoningEffort) 设置效果 disabled low medium high
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ModelParams extends AbstractModel
 {
@@ -87,6 +99,20 @@ class ModelParams extends AbstractModel
     public $ReplyFormat;
 
     /**
+     * @var string 深度思考值
+disabled
+enabled
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeepThinking;
+
+    /**
+     * @var string 效果 disabled low medium high
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReasoningEffort;
+
+    /**
      * @param float $Temperature 温度
      * @param float $TopP Top_P
      * @param integer $Seed 随机种子
@@ -96,6 +122,12 @@ class ModelParams extends AbstractModel
      * @param integer $MaxTokens 最大输出长度
      * @param array $StopSequences 停止序列
      * @param string $ReplyFormat 输出格式
+     * @param string $DeepThinking 深度思考值
+disabled
+enabled
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ReasoningEffort 效果 disabled low medium high
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -144,6 +176,14 @@ class ModelParams extends AbstractModel
 
         if (array_key_exists("ReplyFormat",$param) and $param["ReplyFormat"] !== null) {
             $this->ReplyFormat = $param["ReplyFormat"];
+        }
+
+        if (array_key_exists("DeepThinking",$param) and $param["DeepThinking"] !== null) {
+            $this->DeepThinking = $param["DeepThinking"];
+        }
+
+        if (array_key_exists("ReasoningEffort",$param) and $param["ReasoningEffort"] !== null) {
+            $this->ReasoningEffort = $param["ReasoningEffort"];
         }
     }
 }

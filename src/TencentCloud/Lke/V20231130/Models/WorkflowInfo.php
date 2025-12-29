@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkflowReleaseTime(string $WorkflowReleaseTime) 设置工作流发布时间，unix时间戳
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getContents() 获取工作流多气泡输出
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContents(array $Contents) 设置工作流多气泡输出
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowInfo extends AbstractModel
 {
@@ -84,6 +88,12 @@ class WorkflowInfo extends AbstractModel
     public $WorkflowReleaseTime;
 
     /**
+     * @var array 工作流多气泡输出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Contents;
+
+    /**
      * @param string $WorkflowId 工作流ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkflowName 工作流名称
@@ -95,6 +105,8 @@ class WorkflowInfo extends AbstractModel
      * @param array $Outputs 多气泡的输出结果
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkflowReleaseTime 工作流发布时间，unix时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Contents 工作流多气泡输出
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -132,6 +144,15 @@ class WorkflowInfo extends AbstractModel
 
         if (array_key_exists("WorkflowReleaseTime",$param) and $param["WorkflowReleaseTime"] !== null) {
             $this->WorkflowReleaseTime = $param["WorkflowReleaseTime"];
+        }
+
+        if (array_key_exists("Contents",$param) and $param["Contents"] !== null) {
+            $this->Contents = [];
+            foreach ($param["Contents"] as $key => $value){
+                $obj = new Content();
+                $obj->deserialize($value);
+                array_push($this->Contents, $obj);
+            }
         }
     }
 }

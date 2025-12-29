@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置代表vpc子网唯一id
  * @method string getPodName() 获取pod name
  * @method void setPodName(string $PodName) 设置pod name
+ * @method OtherAccountInfo getOtherAccountInfo() 获取其他账号授权信息
+ * @method void setOtherAccountInfo(OtherAccountInfo $OtherAccountInfo) 设置其他账号授权信息
  */
 class PodNewSpec extends AbstractModel
 {
@@ -117,6 +119,11 @@ class PodNewSpec extends AbstractModel
     public $PodName;
 
     /**
+     * @var OtherAccountInfo 其他账号授权信息
+     */
+    public $OtherAccountInfo;
+
+    /**
      * @param string $ResourceProviderIdentifier 外部资源提供者的标识符，例如"cls-a1cd23fa"。
      * @param string $ResourceProviderType 外部资源提供者类型，例如"tke",当前仅支持"tke"。
      * @param string $NodeFlag 资源的用途，即节点类型，当前仅支持"TASK"。
@@ -132,6 +139,7 @@ class PodNewSpec extends AbstractModel
      * @param string $VpcId 代表vpc网络唯一id
      * @param string $SubnetId 代表vpc子网唯一id
      * @param string $PodName pod name
+     * @param OtherAccountInfo $OtherAccountInfo 其他账号授权信息
      */
     function __construct()
     {
@@ -198,6 +206,11 @@ class PodNewSpec extends AbstractModel
 
         if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
             $this->PodName = $param["PodName"];
+        }
+
+        if (array_key_exists("OtherAccountInfo",$param) and $param["OtherAccountInfo"] !== null) {
+            $this->OtherAccountInfo = new OtherAccountInfo();
+            $this->OtherAccountInfo->deserialize($param["OtherAccountInfo"]);
         }
     }
 }

@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回数目，默认值为20。
  * @method string getDescription() 获取ACL规则描述
  * @method void setDescription(string $Description) 设置ACL规则描述
+ * @method array getFilters() 获取过滤条件。<li>AclRuleId - Integer - ACL规则ID。</li>
+ * @method void setFilters(array $Filters) 设置过滤条件。<li>AclRuleId - Integer - ACL规则ID。</li>
  */
 class DescribePrivateNatGatewayTranslationAclRulesRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class DescribePrivateNatGatewayTranslationAclRulesRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var array 过滤条件。<li>AclRuleId - Integer - ACL规则ID。</li>
+     */
+    public $Filters;
+
+    /**
      * @param string $NatGatewayId 私网网关唯一`ID`，形如：`intranat-xxxxxxxx`。
      * @param string $TranslationDirection 转换规则目标，可选值LOCAL。
      * @param string $TranslationType 转换规则类型，可选值NETWORK_LAYER、TRANSPORT_LAYER。分别对应三层、四层。
@@ -88,6 +95,7 @@ class DescribePrivateNatGatewayTranslationAclRulesRequest extends AbstractModel
      * @param integer $Offset 偏移量。默认值为0。
      * @param integer $Limit 返回数目，默认值为20。
      * @param string $Description ACL规则描述
+     * @param array $Filters 过滤条件。<li>AclRuleId - Integer - ACL规则ID。</li>
      */
     function __construct()
     {
@@ -132,6 +140,15 @@ class DescribePrivateNatGatewayTranslationAclRulesRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

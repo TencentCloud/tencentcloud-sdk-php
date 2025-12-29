@@ -51,29 +51,17 @@ HYBRID_PAID:
  * @method void setResources(ResourceInfo $Resources) 设置资源信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceType() 获取后付费实例对应的机型规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置后付费实例对应的机型规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ModelInfo getModelInfo() 获取模型信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModelInfo(ModelInfo $ModelInfo) 设置模型信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getLogEnable() 获取是否启用日志
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogEnable(boolean $LogEnable) 设置是否启用日志
-注意：此字段可能返回 null，表示取不到有效值。
  * @method LogConfig getLogConfig() 获取日志配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogConfig(LogConfig $LogConfig) 设置日志配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAuthorizationEnable() 获取是否开启鉴权
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthorizationEnable(boolean $AuthorizationEnable) 设置是否开启鉴权
-注意：此字段可能返回 null，表示取不到有效值。
  * @method HorizontalPodAutoscaler getHorizontalPodAutoscaler() 获取hpa配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHorizontalPodAutoscaler(HorizontalPodAutoscaler $HorizontalPodAutoscaler) 设置hpa配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method WorkloadStatus getStatus() 获取服务的状态描述
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(WorkloadStatus $Status) 设置服务的状态描述
@@ -176,6 +164,10 @@ HYBRID_PAID:
  * @method void setInstancePerReplicas(integer $InstancePerReplicas) 设置单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1
  * @method array getVolumeMounts() 获取批量数据盘挂载配置
  * @method void setVolumeMounts(array $VolumeMounts) 设置批量数据盘挂载配置
+ * @method string getSchedulingStrategy() 获取调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
+ * @method void setSchedulingStrategy(string $SchedulingStrategy) 设置调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
+ * @method integer getNodeCount() 获取服务实际运行的节点数
+ * @method void setNodeCount(integer $NodeCount) 设置服务实际运行的节点数
  */
 class ServiceInfo extends AbstractModel
 {
@@ -212,37 +204,31 @@ HYBRID_PAID:
 
     /**
      * @var string 后付费实例对应的机型规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
     /**
      * @var ModelInfo 模型信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModelInfo;
 
     /**
      * @var boolean 是否启用日志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogEnable;
 
     /**
      * @var LogConfig 日志配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogConfig;
 
     /**
      * @var boolean 是否开启鉴权
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthorizationEnable;
 
     /**
      * @var HorizontalPodAutoscaler hpa配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HorizontalPodAutoscaler;
 
@@ -416,6 +402,16 @@ HYBRID_PAID:
     public $VolumeMounts;
 
     /**
+     * @var string 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
+     */
+    public $SchedulingStrategy;
+
+    /**
+     * @var integer 服务实际运行的节点数
+     */
+    public $NodeCount;
+
+    /**
      * @param integer $Replicas 期望运行的Pod数量，停止状态是0
 不同计费模式和调节模式下对应关系如下
 PREPAID 和 POSTPAID_BY_HOUR:
@@ -432,17 +428,11 @@ HYBRID_PAID:
      * @param ResourceInfo $Resources 资源信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceType 后付费实例对应的机型规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModelInfo $ModelInfo 模型信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $LogEnable 是否启用日志
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogConfig $LogConfig 日志配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AuthorizationEnable 是否开启鉴权
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HorizontalPodAutoscaler $HorizontalPodAutoscaler hpa配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkloadStatus $Status 服务的状态描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Weight 权重
@@ -494,6 +484,8 @@ HYBRID_PAID:
      * @param RollingUpdate $RollingUpdate 滚动更新配置
      * @param integer $InstancePerReplicas 单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1
      * @param array $VolumeMounts 批量数据盘挂载配置
+     * @param string $SchedulingStrategy 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
+     * @param integer $NodeCount 服务实际运行的节点数
      */
     function __construct()
     {
@@ -697,6 +689,14 @@ HYBRID_PAID:
                 $obj->deserialize($value);
                 array_push($this->VolumeMounts, $obj);
             }
+        }
+
+        if (array_key_exists("SchedulingStrategy",$param) and $param["SchedulingStrategy"] !== null) {
+            $this->SchedulingStrategy = $param["SchedulingStrategy"];
+        }
+
+        if (array_key_exists("NodeCount",$param) and $param["NodeCount"] !== null) {
+            $this->NodeCount = $param["NodeCount"];
         }
     }
 }

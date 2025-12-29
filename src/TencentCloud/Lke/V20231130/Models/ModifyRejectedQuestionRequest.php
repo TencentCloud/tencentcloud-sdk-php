@@ -28,11 +28,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuestion(string $Question) 设置拒答问题
 
 
- * @method string getRejectedBizId() 获取拒答问题来源的数据源唯一id, 通过[ListRejectedQuestion](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListRejectedQuestion)接口获取
+ * @method string getRejectedBizId() 获取拒答问题来源的数据源唯一id, 通过调用ListRejectedQuestion接口获取
 
 
 
- * @method void setRejectedBizId(string $RejectedBizId) 设置拒答问题来源的数据源唯一id, 通过[ListRejectedQuestion](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListRejectedQuestion)接口获取
+ * @method void setRejectedBizId(string $RejectedBizId) 设置拒答问题来源的数据源唯一id, 通过调用ListRejectedQuestion接口获取
  */
 class ModifyRejectedQuestionRequest extends AbstractModel
 {
@@ -49,7 +49,7 @@ class ModifyRejectedQuestionRequest extends AbstractModel
     public $Question;
 
     /**
-     * @var string 拒答问题来源的数据源唯一id, 通过[ListRejectedQuestion](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListRejectedQuestion)接口获取
+     * @var string 拒答问题来源的数据源唯一id, 通过调用ListRejectedQuestion接口获取
 
 
 
@@ -61,7 +61,7 @@ class ModifyRejectedQuestionRequest extends AbstractModel
      * @param string $Question 拒答问题
 
 
-     * @param string $RejectedBizId 拒答问题来源的数据源唯一id, 通过[ListRejectedQuestion](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListRejectedQuestion)接口获取
+     * @param string $RejectedBizId 拒答问题来源的数据源唯一id, 通过调用ListRejectedQuestion接口获取
      */
     function __construct()
     {

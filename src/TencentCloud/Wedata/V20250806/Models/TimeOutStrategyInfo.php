@@ -50,6 +50,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置超时时间对应的时区配置， 如 UTC+7, 默认为UTC+8
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSecond() 获取秒（用于 Spark Streaming 策略）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecond(integer $Second) 设置秒（用于 Spark Streaming 策略）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTimes() 获取次数（用于 Spark Streaming 重试次数超限策略，ruleType=10）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTimes(integer $Times) 设置次数（用于 Spark Streaming 重试次数超限策略，ruleType=10）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAlarmTriggerFrequency() 获取告警触发频率（用于 Spark Streaming 策略 ruleType=8/9/10）
+         * 单位：分钟，范围：5-1440
+         * 告警触发后，在该时间内暂停检测，避免告警风暴
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlarmTriggerFrequency(integer $AlarmTriggerFrequency) 设置告警触发频率（用于 Spark Streaming 策略 ruleType=8/9/10）
+         * 单位：分钟，范围：5-1440
+         * 告警触发后，在该时间内暂停检测，避免告警风暴
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TimeOutStrategyInfo extends AbstractModel
 {
@@ -89,6 +105,26 @@ class TimeOutStrategyInfo extends AbstractModel
     public $ScheduleTimeZone;
 
     /**
+     * @var integer 秒（用于 Spark Streaming 策略）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Second;
+
+    /**
+     * @var integer 次数（用于 Spark Streaming 重试次数超限策略，ruleType=10）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Times;
+
+    /**
+     * @var integer 告警触发频率（用于 Spark Streaming 策略 ruleType=8/9/10）
+         * 单位：分钟，范围：5-1440
+         * 告警触发后，在该时间内暂停检测，避免告警风暴
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AlarmTriggerFrequency;
+
+    /**
      * @param integer $RuleType 超时告警超时配置：
 
 1.预计运行耗时超时，2.预计完成时间超时，3.预计等待调度耗时超时，4.预计周期内完成但实际未完成
@@ -103,6 +139,14 @@ class TimeOutStrategyInfo extends AbstractModel
      * @param integer $Min 超时指定值分钟， 默认为1
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScheduleTimeZone 超时时间对应的时区配置， 如 UTC+7, 默认为UTC+8
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Second 秒（用于 Spark Streaming 策略）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Times 次数（用于 Spark Streaming 重试次数超限策略，ruleType=10）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AlarmTriggerFrequency 告警触发频率（用于 Spark Streaming 策略 ruleType=8/9/10）
+         * 单位：分钟，范围：5-1440
+         * 告警触发后，在该时间内暂停检测，避免告警风暴
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -136,6 +180,18 @@ class TimeOutStrategyInfo extends AbstractModel
 
         if (array_key_exists("ScheduleTimeZone",$param) and $param["ScheduleTimeZone"] !== null) {
             $this->ScheduleTimeZone = $param["ScheduleTimeZone"];
+        }
+
+        if (array_key_exists("Second",$param) and $param["Second"] !== null) {
+            $this->Second = $param["Second"];
+        }
+
+        if (array_key_exists("Times",$param) and $param["Times"] !== null) {
+            $this->Times = $param["Times"];
+        }
+
+        if (array_key_exists("AlarmTriggerFrequency",$param) and $param["AlarmTriggerFrequency"] !== null) {
+            $this->AlarmTriggerFrequency = $param["AlarmTriggerFrequency"];
         }
     }
 }

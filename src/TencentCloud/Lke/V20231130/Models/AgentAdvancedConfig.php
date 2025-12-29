@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableStructuredOutput(boolean $EnableStructuredOutput) 设置是否开启结构化输出
  * @method StructuredOutputConfig getStructuredOutputConfig() 获取结构化输出配置
  * @method void setStructuredOutputConfig(StructuredOutputConfig $StructuredOutputConfig) 设置结构化输出配置
+ * @method AgentOutputConfig getAgentOutputConfig() 获取Agent输出配置
+ * @method void setAgentOutputConfig(AgentOutputConfig $AgentOutputConfig) 设置Agent输出配置
+ * @method ClarificationConfig getClarificationConfig() 获取澄清询问配置
+ * @method void setClarificationConfig(ClarificationConfig $ClarificationConfig) 设置澄清询问配置
  */
 class AgentAdvancedConfig extends AbstractModel
 {
@@ -66,12 +70,24 @@ class AgentAdvancedConfig extends AbstractModel
     public $StructuredOutputConfig;
 
     /**
+     * @var AgentOutputConfig Agent输出配置
+     */
+    public $AgentOutputConfig;
+
+    /**
+     * @var ClarificationConfig 澄清询问配置
+     */
+    public $ClarificationConfig;
+
+    /**
      * @param boolean $EnableClarification 是否开启澄清询问
      * @param integer $ThinkingMode 思考模式，0为效果优先，1为速度优先
      * @param integer $MaxReasoningRound 最大推理轮数
      * @param integer $HistoryLimit 上下文轮数
      * @param boolean $EnableStructuredOutput 是否开启结构化输出
      * @param StructuredOutputConfig $StructuredOutputConfig 结构化输出配置
+     * @param AgentOutputConfig $AgentOutputConfig Agent输出配置
+     * @param ClarificationConfig $ClarificationConfig 澄清询问配置
      */
     function __construct()
     {
@@ -109,6 +125,16 @@ class AgentAdvancedConfig extends AbstractModel
         if (array_key_exists("StructuredOutputConfig",$param) and $param["StructuredOutputConfig"] !== null) {
             $this->StructuredOutputConfig = new StructuredOutputConfig();
             $this->StructuredOutputConfig->deserialize($param["StructuredOutputConfig"]);
+        }
+
+        if (array_key_exists("AgentOutputConfig",$param) and $param["AgentOutputConfig"] !== null) {
+            $this->AgentOutputConfig = new AgentOutputConfig();
+            $this->AgentOutputConfig->deserialize($param["AgentOutputConfig"]);
+        }
+
+        if (array_key_exists("ClarificationConfig",$param) and $param["ClarificationConfig"] !== null) {
+            $this->ClarificationConfig = new ClarificationConfig();
+            $this->ClarificationConfig->deserialize($param["ClarificationConfig"]);
         }
     }
 }

@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ManageIPPortraitRisk请求参数结构体
  *
-
+ * @method integer getPostTime() 获取请求秒级时间戳
+ * @method void setPostTime(integer $PostTime) 设置请求秒级时间戳
+ * @method ManageIPPortraitRiskInput getBusinessSecurityData() 获取业务入参
+ * @method void setBusinessSecurityData(ManageIPPortraitRiskInput $BusinessSecurityData) 设置业务入参
  */
 class ManageIPPortraitRiskRequest extends AbstractModel
 {
-
+    /**
+     * @var integer 请求秒级时间戳
+     */
+    public $PostTime;
 
     /**
+     * @var ManageIPPortraitRiskInput 业务入参
+     */
+    public $BusinessSecurityData;
 
+    /**
+     * @param integer $PostTime 请求秒级时间戳
+     * @param ManageIPPortraitRiskInput $BusinessSecurityData 业务入参
      */
     function __construct()
     {
@@ -42,6 +54,13 @@ class ManageIPPortraitRiskRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("PostTime",$param) and $param["PostTime"] !== null) {
+            $this->PostTime = $param["PostTime"];
+        }
 
+        if (array_key_exists("BusinessSecurityData",$param) and $param["BusinessSecurityData"] !== null) {
+            $this->BusinessSecurityData = new ManageIPPortraitRiskInput();
+            $this->BusinessSecurityData->deserialize($param["BusinessSecurityData"]);
+        }
     }
 }

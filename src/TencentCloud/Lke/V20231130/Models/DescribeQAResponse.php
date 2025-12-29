@@ -118,12 +118,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCateNamePath(array $CateNamePath) 设置从根节点开始的路径分类名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getEnableScope() 获取问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+ * @method integer getEnableScope() 获取问答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnableScope(integer $EnableScope) 设置问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+ * @method void setEnableScope(integer $EnableScope) 设置问答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDocEnableScope() 获取问答关联的文档生效域
- * @method void setDocEnableScope(integer $DocEnableScope) 设置问答关联的文档生效域
+ * @method integer getDocEnableScope() 获取问答关联的文档生效域:1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效.
+若问答未关联文档，则该字段值同问答生效域
+ * @method void setDocEnableScope(integer $DocEnableScope) 设置问答关联的文档生效域:1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效.
+若问答未关联文档，则该字段值同问答生效域
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -307,13 +309,14 @@ class DescribeQAResponse extends AbstractModel
     public $CateNamePath;
 
     /**
-     * @var integer 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * @var integer 问答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableScope;
 
     /**
-     * @var integer 问答关联的文档生效域
+     * @var integer 问答关联的文档生效域:1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效.
+若问答未关联文档，则该字段值同问答生效域
      */
     public $DocEnableScope;
 
@@ -372,9 +375,10 @@ class DescribeQAResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CateNamePath 从根节点开始的路径分类名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $EnableScope 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * @param integer $EnableScope 问答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DocEnableScope 问答关联的文档生效域
+     * @param integer $DocEnableScope 问答关联的文档生效域:1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效.
+若问答未关联文档，则该字段值同问答生效域
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

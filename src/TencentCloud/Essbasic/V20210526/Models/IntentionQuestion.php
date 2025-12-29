@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 意愿核身语音问答模式（即语音播报+语音回答）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。当前仅支持1轮问答。
  *
- * @method string getQuestion() 获取当选择语音问答模式时，系统自动播报的问题文本，最大长度为150个字符。
- * @method void setQuestion(string $Question) 设置当选择语音问答模式时，系统自动播报的问题文本，最大长度为150个字符。
+ * @method string getQuestion() 获取当选择语音问答模式时，系统自动播报的问题文本，最大长度为250个字符。
+ * @method void setQuestion(string $Question) 设置当选择语音问答模式时，系统自动播报的问题文本，最大长度为250个字符。
  * @method array getAnswers() 获取 当选择语音问答模式时，用于判断用户回答是否通过的标准答案列表，传入后可自动判断用户回答文本是否在标准文本列表中。
  * @method void setAnswers(array $Answers) 设置 当选择语音问答模式时，用于判断用户回答是否通过的标准答案列表，传入后可自动判断用户回答文本是否在标准文本列表中。
  */
 class IntentionQuestion extends AbstractModel
 {
     /**
-     * @var string 当选择语音问答模式时，系统自动播报的问题文本，最大长度为150个字符。
+     * @var string 当选择语音问答模式时，系统自动播报的问题文本，最大长度为250个字符。
      */
     public $Question;
 
@@ -38,7 +38,7 @@ class IntentionQuestion extends AbstractModel
     public $Answers;
 
     /**
-     * @param string $Question 当选择语音问答模式时，系统自动播报的问题文本，最大长度为150个字符。
+     * @param string $Question 当选择语音问答模式时，系统自动播报的问题文本，最大长度为250个字符。
      * @param array $Answers  当选择语音问答模式时，用于判断用户回答是否通过的标准答案列表，传入后可自动判断用户回答文本是否在标准文本列表中。
      */
     function __construct()

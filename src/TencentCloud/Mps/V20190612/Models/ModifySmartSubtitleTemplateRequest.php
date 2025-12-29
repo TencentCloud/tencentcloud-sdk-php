@@ -511,7 +511,6 @@ ASR识别和纯字幕翻译当前支持以下语言：
 `iw`：希伯来语
 `ja`：日语
 `jv`：爪哇语
-`jw`：爪哇语
 `ka`：格鲁吉亚语
 `kk`：哈萨克语
 `km`：高棉语
@@ -598,7 +597,6 @@ ASR识别和纯字幕翻译当前支持以下语言：
 `th`：泰语
 `ti`：提格里尼亚语
 `tk`：土库曼语
-`tl`：菲律宾语（塔加拉语）
 `tn`：茨瓦纳语
 `tr`：土耳其语
 `ts`：聪加语
@@ -707,7 +705,6 @@ ASR识别和纯字幕翻译当前支持以下语言：
 `iw`：希伯来语
 `ja`：日语
 `jv`：爪哇语
-`jw`：爪哇语
 `ka`：格鲁吉亚语
 `kk`：哈萨克语
 `km`：高棉语
@@ -794,7 +791,6 @@ ASR识别和纯字幕翻译当前支持以下语言：
 `th`：泰语
 `ti`：提格里尼亚语
 `tk`：土库曼语
-`tl`：菲律宾语（塔加拉语）
 `tn`：茨瓦纳语
 `tr`：土耳其语
 `ts`：聪加语
@@ -826,6 +822,8 @@ ASR识别和纯字幕翻译当前支持以下语言：
 - 2：OCR识别字幕
 
 **注意**：不传的情况下，默认是ASR方式
+ * @method SelectingSubtitleAreasConfig getSelectingSubtitleAreasConfig() 获取字幕OCR提取框选区域配置
+ * @method void setSelectingSubtitleAreasConfig(SelectingSubtitleAreasConfig $SelectingSubtitleAreasConfig) 设置字幕OCR提取框选区域配置
  */
 class ModifySmartSubtitleTemplateRequest extends AbstractModel
 {
@@ -1152,7 +1150,6 @@ ASR识别和纯字幕翻译当前支持以下语言：
 `iw`：希伯来语
 `ja`：日语
 `jv`：爪哇语
-`jw`：爪哇语
 `ka`：格鲁吉亚语
 `kk`：哈萨克语
 `km`：高棉语
@@ -1239,7 +1236,6 @@ ASR识别和纯字幕翻译当前支持以下语言：
 `th`：泰语
 `ti`：提格里尼亚语
 `tk`：土库曼语
-`tl`：菲律宾语（塔加拉语）
 `tn`：茨瓦纳语
 `tr`：土耳其语
 `ts`：聪加语
@@ -1271,6 +1267,11 @@ ASR识别和纯字幕翻译当前支持以下语言：
 **注意**：不传的情况下，默认是ASR方式
      */
     public $ProcessType;
+
+    /**
+     * @var SelectingSubtitleAreasConfig 字幕OCR提取框选区域配置
+     */
+    public $SelectingSubtitleAreasConfig;
 
     /**
      * @param integer $Definition 智能字幕模板唯一标识
@@ -1563,7 +1564,6 @@ ASR识别和纯字幕翻译当前支持以下语言：
 `iw`：希伯来语
 `ja`：日语
 `jv`：爪哇语
-`jw`：爪哇语
 `ka`：格鲁吉亚语
 `kk`：哈萨克语
 `km`：高棉语
@@ -1650,7 +1650,6 @@ ASR识别和纯字幕翻译当前支持以下语言：
 `th`：泰语
 `ti`：提格里尼亚语
 `tk`：土库曼语
-`tl`：菲律宾语（塔加拉语）
 `tn`：茨瓦纳语
 `tr`：土耳其语
 `ts`：聪加语
@@ -1676,6 +1675,7 @@ ASR识别和纯字幕翻译当前支持以下语言：
 - 2：OCR识别字幕
 
 **注意**：不传的情况下，默认是ASR方式
+     * @param SelectingSubtitleAreasConfig $SelectingSubtitleAreasConfig 字幕OCR提取框选区域配置
      */
     function __construct()
     {
@@ -1729,6 +1729,11 @@ ASR识别和纯字幕翻译当前支持以下语言：
 
         if (array_key_exists("ProcessType",$param) and $param["ProcessType"] !== null) {
             $this->ProcessType = $param["ProcessType"];
+        }
+
+        if (array_key_exists("SelectingSubtitleAreasConfig",$param) and $param["SelectingSubtitleAreasConfig"] !== null) {
+            $this->SelectingSubtitleAreasConfig = new SelectingSubtitleAreasConfig();
+            $this->SelectingSubtitleAreasConfig->deserialize($param["SelectingSubtitleAreasConfig"]);
         }
     }
 }

@@ -21,9 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * ExportUnsatisfiedReply请求参数结构体
  *
  * @method string getBotBizId() 获取应用ID
+若要操作共享知识库，传KnowledgeBizId
  * @method void setBotBizId(string $BotBizId) 设置应用ID
- * @method array getReplyBizIds() 获取勾选导出ID列表
- * @method void setReplyBizIds(array $ReplyBizIds) 设置勾选导出ID列表
+若要操作共享知识库，传KnowledgeBizId
+ * @method array getReplyBizIds() 获取勾选导出不满意回复的ID列表
+ * @method void setReplyBizIds(array $ReplyBizIds) 设置勾选导出不满意回复的ID列表
  * @method string getLoginUin() 获取登录用户主账号(集成商模式必填)
  * @method void setLoginUin(string $LoginUin) 设置登录用户主账号(集成商模式必填)
  * @method string getLoginSubAccountUin() 获取登录用户子账号(集成商模式必填)
@@ -35,11 +37,12 @@ class ExportUnsatisfiedReplyRequest extends AbstractModel
 {
     /**
      * @var string 应用ID
+若要操作共享知识库，传KnowledgeBizId
      */
     public $BotBizId;
 
     /**
-     * @var array 勾选导出ID列表
+     * @var array 勾选导出不满意回复的ID列表
      */
     public $ReplyBizIds;
 
@@ -60,7 +63,8 @@ class ExportUnsatisfiedReplyRequest extends AbstractModel
 
     /**
      * @param string $BotBizId 应用ID
-     * @param array $ReplyBizIds 勾选导出ID列表
+若要操作共享知识库，传KnowledgeBizId
+     * @param array $ReplyBizIds 勾选导出不满意回复的ID列表
      * @param string $LoginUin 登录用户主账号(集成商模式必填)
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)
      * @param Filters $Filters 检索过滤器

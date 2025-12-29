@@ -23,9 +23,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getGroupId() 获取分组ID
  * @method void setGroupId(string $GroupId) 设置分组ID
  * @method integer getPageSize() 获取每页显示记录数，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备	
+示例值：1
+
  * @method void setPageSize(integer $PageSize) 设置每页显示记录数，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备	
+示例值：1
+
  * @method integer getPageNumber() 获取每页显示记录数，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备	
+示例值：10
+
  * @method void setPageNumber(integer $PageNumber) 设置每页显示记录数，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备	
+示例值：10
+
  * @method string getKeyWord() 获取搜索关键字
  * @method void setKeyWord(string $KeyWord) 设置搜索关键字
  */
@@ -38,11 +46,15 @@ class GetGroupDetailRequest extends AbstractModel
 
     /**
      * @var integer 每页显示记录数，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备	
+示例值：1
+
      */
     public $PageSize;
 
     /**
      * @var integer 每页显示记录数，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备	
+示例值：10
+
      */
     public $PageNumber;
 
@@ -54,7 +66,11 @@ class GetGroupDetailRequest extends AbstractModel
     /**
      * @param string $GroupId 分组ID
      * @param integer $PageSize 每页显示记录数，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备	
+示例值：1
+
      * @param integer $PageNumber 每页显示记录数，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备	
+示例值：10
+
      * @param string $KeyWord 搜索关键字
      */
     function __construct()

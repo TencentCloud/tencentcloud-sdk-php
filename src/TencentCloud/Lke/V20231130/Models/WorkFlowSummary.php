@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPendingMessages(array $PendingMessages) 设置中间消息
  * @method OptionCardIndex getOptionCardIndex() 获取选项卡索引
  * @method void setOptionCardIndex(OptionCardIndex $OptionCardIndex) 设置选项卡索引
+ * @method array getContents() 获取工作流多气泡输出
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContents(array $Contents) 设置工作流多气泡输出
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkFlowSummary extends AbstractModel
 {
@@ -108,6 +112,12 @@ class WorkFlowSummary extends AbstractModel
     public $OptionCardIndex;
 
     /**
+     * @var array 工作流多气泡输出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Contents;
+
+    /**
      * @param string $WorkflowId 工作流ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkflowName 工作流名称
@@ -124,6 +134,8 @@ class WorkFlowSummary extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PendingMessages 中间消息
      * @param OptionCardIndex $OptionCardIndex 选项卡索引
+     * @param array $Contents 工作流多气泡输出
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -178,6 +190,15 @@ class WorkFlowSummary extends AbstractModel
         if (array_key_exists("OptionCardIndex",$param) and $param["OptionCardIndex"] !== null) {
             $this->OptionCardIndex = new OptionCardIndex();
             $this->OptionCardIndex->deserialize($param["OptionCardIndex"]);
+        }
+
+        if (array_key_exists("Contents",$param) and $param["Contents"] !== null) {
+            $this->Contents = [];
+            foreach ($param["Contents"] as $key => $value){
+                $obj = new Content();
+                $obj->deserialize($value);
+                array_push($this->Contents, $obj);
+            }
         }
     }
 }

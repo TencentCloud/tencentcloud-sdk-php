@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListRelease请求参数结构体
  *
- * @method string getBotBizId() 获取应用ID
- * @method void setBotBizId(string $BotBizId) 设置应用ID
- * @method integer getPageNumber() 获取页码
- * @method void setPageNumber(integer $PageNumber) 设置页码
- * @method integer getPageSize() 获取每页数量
- * @method void setPageSize(integer $PageSize) 设置每页数量
+ * @method string getBotBizId() 获取应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)）
+ * @method void setBotBizId(string $BotBizId) 设置应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)）
+ * @method integer getPageNumber() 获取页码(必须大于0)
+ * @method void setPageNumber(integer $PageNumber) 设置页码(必须大于0)
+ * @method integer getPageSize() 获取每页数量（取值范围为1-200）
+ * @method void setPageSize(integer $PageSize) 设置每页数量（取值范围为1-200）
  */
 class ListReleaseRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string 应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)）
      */
     public $BotBizId;
 
     /**
-     * @var integer 页码
+     * @var integer 页码(必须大于0)
      */
     public $PageNumber;
 
     /**
-     * @var integer 每页数量
+     * @var integer 每页数量（取值范围为1-200）
      */
     public $PageSize;
 
     /**
-     * @param string $BotBizId 应用ID
-     * @param integer $PageNumber 页码
-     * @param integer $PageSize 每页数量
+     * @param string $BotBizId 应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)）
+     * @param integer $PageNumber 页码(必须大于0)
+     * @param integer $PageSize 每页数量（取值范围为1-200）
      */
     function __construct()
     {

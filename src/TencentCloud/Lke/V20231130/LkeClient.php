@@ -33,6 +33,9 @@ use TencentCloud\Lke\V20231130\Models as Models;
 “知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
 “标签”文档：https://cloud.tencent.com/document/product/1759/112956
  * @method Models\CreateQACateResponse CreateQACate(Models\CreateQACateRequest $req) 创建QA分类
+知识库相关背景知识介绍
+“知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
+“标签”文档：https://cloud.tencent.com/document/product/1759/112956
  * @method Models\CreateRejectedQuestionResponse CreateRejectedQuestion(Models\CreateRejectedQuestionRequest $req) 创建拒答问题
  * @method Models\CreateReleaseResponse CreateRelease(Models\CreateReleaseRequest $req) 创建发布
  * @method Models\CreateSharedKnowledgeResponse CreateSharedKnowledge(Models\CreateSharedKnowledgeRequest $req) 创建共享知识库。
@@ -74,7 +77,13 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\DescribeWorkflowRunResponse DescribeWorkflowRun(Models\DescribeWorkflowRunRequest $req) 创建了工作流的异步运行实例后，通过本接口可以查询整体的运行详情。
  * @method Models\ExportAttributeLabelResponse ExportAttributeLabel(Models\ExportAttributeLabelRequest $req) 导出标签
  * @method Models\ExportQAListResponse ExportQAList(Models\ExportQAListRequest $req) 导出QA列表
+知识库相关背景知识介绍
+“知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
+“标签”文档：https://cloud.tencent.com/document/product/1759/112956
  * @method Models\ExportUnsatisfiedReplyResponse ExportUnsatisfiedReply(Models\ExportUnsatisfiedReplyRequest $req) 导出不满意回复
+知识库相关背景知识介绍
+“知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
+“标签”文档：https://cloud.tencent.com/document/product/1759/112956
  * @method Models\GenerateQAResponse GenerateQA(Models\GenerateQARequest $req) 文档生成问答
  * @method Models\GetAnswerTypeDataCountResponse GetAnswerTypeDataCount(Models\GetAnswerTypeDataCountRequest $req) 回答类型数据统计
  * @method Models\GetAppKnowledgeCountResponse GetAppKnowledgeCount(Models\GetAppKnowledgeCountRequest $req) 获取模型列表
@@ -87,7 +96,10 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\GetVarListResponse GetVarList(Models\GetVarListRequest $req) 查询自定义变量列表
  * @method Models\GetWsTokenResponse GetWsToken(Models\GetWsTokenRequest $req) 获取ws token
  * @method Models\GroupDocResponse GroupDoc(Models\GroupDocRequest $req) Doc分组
- * @method Models\GroupQAResponse GroupQA(Models\GroupQARequest $req) QA分组
+ * @method Models\GroupQAResponse GroupQA(Models\GroupQARequest $req) 用户将多个问答批量的分类到知识库的具体分类
+知识库相关背景知识介绍
+“知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
+“标签”文档：https://cloud.tencent.com/document/product/1759/112956
  * @method Models\IgnoreUnsatisfiedReplyResponse IgnoreUnsatisfiedReply(Models\IgnoreUnsatisfiedReplyRequest $req) 忽略不满意回复
  * @method Models\IsTransferIntentResponse IsTransferIntent(Models\IsTransferIntentRequest $req) 是否意图转人工
  * @method Models\ListAppResponse ListApp(Models\ListAppRequest $req) 获取企业下应用列表
@@ -102,6 +114,9 @@ use TencentCloud\Lke\V20231130\Models as Models;
 “知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
 “标签”文档：https://cloud.tencent.com/document/product/1759/112956
  * @method Models\ListQACateResponse ListQACate(Models\ListQACateRequest $req) 获取QA分类
+知识库相关背景知识介绍
+“知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
+“标签”文档：https://cloud.tencent.com/document/product/1759/112956
  * @method Models\ListReferShareKnowledgeResponse ListReferShareKnowledge(Models\ListReferShareKnowledgeRequest $req) 查看应用引用了哪些共享知识库，可以看到共享知识库的基础信息，包括名称，id等
  * @method Models\ListRejectedQuestionResponse ListRejectedQuestion(Models\ListRejectedQuestionRequest $req) 获取拒答问题
  * @method Models\ListRejectedQuestionPreviewResponse ListRejectedQuestionPreview(Models\ListRejectedQuestionPreviewRequest $req) 发布拒答问题预览

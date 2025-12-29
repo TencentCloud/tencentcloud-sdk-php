@@ -54,6 +54,10 @@ RealGpu=100表示实际使用了一张gpu卡, 对应实际的实例机型, 有�
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableRDMA(boolean $EnableRDMA) 设置是否开启rdma
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRootDisk() 获取root disk size(GB)
+ * @method void setRootDisk(integer $RootDisk) 设置root disk size(GB)
+ * @method integer getDataDisk() 获取data disk size(GB)
+ * @method void setDataDisk(integer $DataDisk) 设置data disk size(GB)
  */
 class ResourceInfo extends AbstractModel
 {
@@ -103,6 +107,16 @@ RealGpu=100表示实际使用了一张gpu卡, 对应实际的实例机型, 有�
     public $EnableRDMA;
 
     /**
+     * @var integer root disk size(GB)
+     */
+    public $RootDisk;
+
+    /**
+     * @var integer data disk size(GB)
+     */
+    public $DataDisk;
+
+    /**
      * @param integer $Cpu 处理器资源, 单位为1/1000核
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Memory 内存资源, 单位为1M
@@ -120,6 +134,8 @@ RealGpu=100表示实际使用了一张gpu卡, 对应实际的实例机型, 有�
      * @param array $RealGpuDetailSet 创建或更新时无需填写，仅展示需要关注。详细的GPU使用信息。
      * @param boolean $EnableRDMA 是否开启rdma
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RootDisk root disk size(GB)
+     * @param integer $DataDisk data disk size(GB)
      */
     function __construct()
     {
@@ -165,6 +181,14 @@ RealGpu=100表示实际使用了一张gpu卡, 对应实际的实例机型, 有�
 
         if (array_key_exists("EnableRDMA",$param) and $param["EnableRDMA"] !== null) {
             $this->EnableRDMA = $param["EnableRDMA"];
+        }
+
+        if (array_key_exists("RootDisk",$param) and $param["RootDisk"] !== null) {
+            $this->RootDisk = $param["RootDisk"];
+        }
+
+        if (array_key_exists("DataDisk",$param) and $param["DataDisk"] !== null) {
+            $this->DataDisk = $param["DataDisk"];
         }
     }
 }

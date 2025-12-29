@@ -260,6 +260,10 @@ NotExists
  * @method void setVoicemailRecordURL(array $VoicemailRecordURL) 设置通话中语音留言录音URL
  * @method array getVoicemailAsrURL() 获取通话中语音留言ASR文本信息地址
  * @method void setVoicemailAsrURL(array $VoicemailAsrURL) 设置通话中语音留言ASR文本信息地址
+ * @method integer getAIAgentId() 获取如果是智能体相关通话，这里是智能体 ID
+ * @method void setAIAgentId(integer $AIAgentId) 设置如果是智能体相关通话，这里是智能体 ID
+ * @method string getAIAgentName() 获取如果是智能体相关通话，这里是智能体名称
+ * @method void setAIAgentName(string $AIAgentName) 设置如果是智能体相关通话，这里是智能体名称
  */
 class TelCdrInfo extends AbstractModel
 {
@@ -537,6 +541,16 @@ NotExists
     public $VoicemailAsrURL;
 
     /**
+     * @var integer 如果是智能体相关通话，这里是智能体 ID
+     */
+    public $AIAgentId;
+
+    /**
+     * @var string 如果是智能体相关通话，这里是智能体名称
+     */
+    public $AIAgentName;
+
+    /**
      * @param string $Caller 主叫号码
      * @param string $Callee 被叫号码
      * @param integer $Time 呼叫发起时间戳，Unix 时间戳
@@ -657,6 +671,8 @@ NotExists
      * @param string $QueuedSkillGroupName 排队技能组名称
      * @param array $VoicemailRecordURL 通话中语音留言录音URL
      * @param array $VoicemailAsrURL 通话中语音留言ASR文本信息地址
+     * @param integer $AIAgentId 如果是智能体相关通话，这里是智能体 ID
+     * @param string $AIAgentName 如果是智能体相关通话，这里是智能体名称
      */
     function __construct()
     {
@@ -837,6 +853,14 @@ NotExists
 
         if (array_key_exists("VoicemailAsrURL",$param) and $param["VoicemailAsrURL"] !== null) {
             $this->VoicemailAsrURL = $param["VoicemailAsrURL"];
+        }
+
+        if (array_key_exists("AIAgentId",$param) and $param["AIAgentId"] !== null) {
+            $this->AIAgentId = $param["AIAgentId"];
+        }
+
+        if (array_key_exists("AIAgentName",$param) and $param["AIAgentName"] !== null) {
+            $this->AIAgentName = $param["AIAgentName"];
         }
     }
 }

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppVarId(string $AppVarId) 设置应用变量参数
  * @method AgentInputSystemVariable getSystemVariable() 获取系统参数
  * @method void setSystemVariable(AgentInputSystemVariable $SystemVariable) 设置系统参数
+ * @method string getToolParam() 获取工具参数
+ * @method void setToolParam(string $ToolParam) 设置工具参数
  */
 class AgentInput extends AbstractModel
 {
@@ -66,12 +68,18 @@ class AgentInput extends AbstractModel
     public $SystemVariable;
 
     /**
+     * @var string 工具参数
+     */
+    public $ToolParam;
+
+    /**
      * @param integer $InputType 输入来源类型：0 用户输入，3 自定义变量（API参数）
      * @param AgentInputUserInputValue $UserInputValue 用户手写输入
      * @param string $CustomVarId 自定义变量（API参数）
      * @param string $EnvVarId 环境变量参数
      * @param string $AppVarId 应用变量参数
      * @param AgentInputSystemVariable $SystemVariable 系统参数
+     * @param string $ToolParam 工具参数
      */
     function __construct()
     {
@@ -110,6 +118,10 @@ class AgentInput extends AbstractModel
         if (array_key_exists("SystemVariable",$param) and $param["SystemVariable"] !== null) {
             $this->SystemVariable = new AgentInputSystemVariable();
             $this->SystemVariable->deserialize($param["SystemVariable"]);
+        }
+
+        if (array_key_exists("ToolParam",$param) and $param["ToolParam"] !== null) {
+            $this->ToolParam = $param["ToolParam"];
         }
     }
 }

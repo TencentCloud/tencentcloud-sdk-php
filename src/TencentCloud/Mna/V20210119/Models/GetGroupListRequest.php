@@ -21,9 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * GetGroupList请求参数结构体
  *
  * @method integer getPageSize() 获取每页显示记录数，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备
+示例值：10
  * @method void setPageSize(integer $PageSize) 设置每页显示记录数，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备
+示例值：10
  * @method integer getPageNumber() 获取当前查看页码，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备
+示例值：1
  * @method void setPageNumber(integer $PageNumber) 设置当前查看页码，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备
+示例值：1
  * @method string getKeyword() 获取搜索分组的关键字，为空时匹配所有分组
  * @method void setKeyword(string $Keyword) 设置搜索分组的关键字，为空时匹配所有分组
  */
@@ -31,11 +35,13 @@ class GetGroupListRequest extends AbstractModel
 {
     /**
      * @var integer 每页显示记录数，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备
+示例值：10
      */
     public $PageSize;
 
     /**
      * @var integer 当前查看页码，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备
+示例值：1
      */
     public $PageNumber;
 
@@ -46,7 +52,9 @@ class GetGroupListRequest extends AbstractModel
 
     /**
      * @param integer $PageSize 每页显示记录数，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备
+示例值：10
      * @param integer $PageNumber 当前查看页码，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备
+示例值：1
      * @param string $Keyword 搜索分组的关键字，为空时匹配所有分组
      */
     function __construct()

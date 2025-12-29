@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RetryRelease请求参数结构体
  *
- * @method string getBotBizId() 获取机器人ID
- * @method void setBotBizId(string $BotBizId) 设置机器人ID
- * @method string getReleaseBizId() 获取发布业务ID
- * @method void setReleaseBizId(string $ReleaseBizId) 设置发布业务ID
+ * @method string getBotBizId() 获取应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)）
+ * @method void setBotBizId(string $BotBizId) 设置应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)）
+ * @method string getReleaseBizId() 获取发布单ID（可以通过[ListRelease](https://cloud.tencent.com/document/product/1759/105077)获得）
+ * @method void setReleaseBizId(string $ReleaseBizId) 设置发布单ID（可以通过[ListRelease](https://cloud.tencent.com/document/product/1759/105077)获得）
  */
 class RetryReleaseRequest extends AbstractModel
 {
     /**
-     * @var string 机器人ID
+     * @var string 应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)）
      */
     public $BotBizId;
 
     /**
-     * @var string 发布业务ID
+     * @var string 发布单ID（可以通过[ListRelease](https://cloud.tencent.com/document/product/1759/105077)获得）
      */
     public $ReleaseBizId;
 
     /**
-     * @param string $BotBizId 机器人ID
-     * @param string $ReleaseBizId 发布业务ID
+     * @param string $BotBizId 应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)）
+     * @param string $ReleaseBizId 发布单ID（可以通过[ListRelease](https://cloud.tencent.com/document/product/1759/105077)获得）
      */
     function __construct()
     {

@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * ListQACate请求参数结构体
  *
  * @method string getBotBizId() 获取应用ID
+若要操作共享知识库，传KnowledgeBizId
  * @method void setBotBizId(string $BotBizId) 设置应用ID
+若要操作共享知识库，传KnowledgeBizId
  * @method integer getQueryType() 获取分类查询类型：0-全量查询整棵标签树，1-根据父节点BizId分页查询子节点，2-关键词检索所有匹配的分类链路
  * @method void setQueryType(integer $QueryType) 设置分类查询类型：0-全量查询整棵标签树，1-根据父节点BizId分页查询子节点，2-关键词检索所有匹配的分类链路
  * @method string getParentCateBizId() 获取QueryType=1时，父节点分类ID
@@ -37,6 +39,7 @@ class ListQACateRequest extends AbstractModel
 {
     /**
      * @var string 应用ID
+若要操作共享知识库，传KnowledgeBizId
      */
     public $BotBizId;
 
@@ -67,6 +70,7 @@ class ListQACateRequest extends AbstractModel
 
     /**
      * @param string $BotBizId 应用ID
+若要操作共享知识库，传KnowledgeBizId
      * @param integer $QueryType 分类查询类型：0-全量查询整棵标签树，1-根据父节点BizId分页查询子节点，2-关键词检索所有匹配的分类链路
      * @param string $ParentCateBizId QueryType=1时，父节点分类ID
      * @param integer $PageNumber QueryType=1时，页码（从1开始）

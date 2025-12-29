@@ -95,13 +95,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBusinessStatus(string $BusinessStatus) 设置服务的业务状态
 注意：此字段可能返回 null，表示取不到有效值。
  * @method ServiceLimit getServiceLimit() 获取已废弃,以ServiceInfo中的对应为准
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceLimit(ServiceLimit $ServiceLimit) 设置已废弃,以ServiceInfo中的对应为准
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ScheduledAction getScheduledAction() 获取已废弃,以ServiceInfo中的对应为准
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheduledAction(ScheduledAction $ScheduledAction) 设置已废弃,以ServiceInfo中的对应为准
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateFailedReason() 获取服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateFailedReason(string $CreateFailedReason) 设置服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
@@ -298,14 +294,12 @@ class Service extends AbstractModel
 
     /**
      * @var ServiceLimit 已废弃,以ServiceInfo中的对应为准
-注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     public $ServiceLimit;
 
     /**
      * @var ScheduledAction 已废弃,以ServiceInfo中的对应为准
-注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     public $ScheduledAction;
@@ -446,9 +440,7 @@ DEFAULT: 其他来源
      * @param string $BusinessStatus 服务的业务状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceLimit $ServiceLimit 已废弃,以ServiceInfo中的对应为准
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScheduledAction $ScheduledAction 已废弃,以ServiceInfo中的对应为准
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateFailedReason 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 服务状态

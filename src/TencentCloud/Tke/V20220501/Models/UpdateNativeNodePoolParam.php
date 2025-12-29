@@ -66,8 +66,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataDisks(array $DataDisks) 设置数据盘列表
  * @method array getKeyIds() 获取ssh公钥id数组
  * @method void setKeyIds(array $KeyIds) 设置ssh公钥id数组
+ * @method string getDeletePolicy() 获取节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest
+ * @method void setDeletePolicy(string $DeletePolicy) 设置节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest
  * @method array getGPUConfigs() 获取节点池 GPU 配置
  * @method void setGPUConfigs(array $GPUConfigs) 设置节点池 GPU 配置
+ * @method boolean getAutomationService() 获取原生节点池安装自动化助手开关状态
+ * @method void setAutomationService(boolean $AutomationService) 设置原生节点池安装自动化助手开关状态
  * @method string getPassword() 获取原生节点池密码
  * @method void setPassword(string $Password) 设置原生节点池密码
  */
@@ -177,9 +181,19 @@ class UpdateNativeNodePoolParam extends AbstractModel
     public $KeyIds;
 
     /**
+     * @var string 节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest
+     */
+    public $DeletePolicy;
+
+    /**
      * @var array 节点池 GPU 配置
      */
     public $GPUConfigs;
+
+    /**
+     * @var boolean 原生节点池安装自动化助手开关状态
+     */
+    public $AutomationService;
 
     /**
      * @var string 原生节点池密码
@@ -210,7 +224,9 @@ class UpdateNativeNodePoolParam extends AbstractModel
      * @param boolean $UpdateExistedNode 是否更新存量节点
      * @param array $DataDisks 数据盘列表
      * @param array $KeyIds ssh公钥id数组
+     * @param string $DeletePolicy 节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest
      * @param array $GPUConfigs 节点池 GPU 配置
+     * @param boolean $AutomationService 原生节点池安装自动化助手开关状态
      * @param string $Password 原生节点池密码
      */
     function __construct()
@@ -317,6 +333,10 @@ class UpdateNativeNodePoolParam extends AbstractModel
             $this->KeyIds = $param["KeyIds"];
         }
 
+        if (array_key_exists("DeletePolicy",$param) and $param["DeletePolicy"] !== null) {
+            $this->DeletePolicy = $param["DeletePolicy"];
+        }
+
         if (array_key_exists("GPUConfigs",$param) and $param["GPUConfigs"] !== null) {
             $this->GPUConfigs = [];
             foreach ($param["GPUConfigs"] as $key => $value){
@@ -324,6 +344,10 @@ class UpdateNativeNodePoolParam extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->GPUConfigs, $obj);
             }
+        }
+
+        if (array_key_exists("AutomationService",$param) and $param["AutomationService"] !== null) {
+            $this->AutomationService = $param["AutomationService"];
         }
 
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {

@@ -109,6 +109,7 @@ use TencentCloud\Ccc\V20200210\Models as Models;
  * @method Models\PauseAutoCalloutTaskResponse PauseAutoCalloutTask(Models\PauseAutoCalloutTaskRequest $req) 用于通过 TaskId **暂停一个正在执行的自动外呼任务**。调用该接口后，任务将被临时中断，不再发起新的外呼请求；已发起的通话不受影响。
 暂停后的任务可通过 [恢复暂停的自动外呼任务](https://cloud.tencent.com/document/product/679/125356) 接口继续执行。如需永久终止任务，请参考 [停止自动外呼任务](https://cloud.tencent.com/document/product/679/69192)。
  * @method Models\PausePredictiveDialingCampaignResponse PausePredictiveDialingCampaign(Models\PausePredictiveDialingCampaignRequest $req) 暂停预测式外呼任务
+ * @method Models\PlaySoundCallResponse PlaySoundCall(Models\PlaySoundCallRequest $req) 对与座席通话中的会话，进行放音
  * @method Models\ResetExtensionPasswordResponse ResetExtensionPassword(Models\ResetExtensionPasswordRequest $req) 重置话机注册密码
  * @method Models\RestoreMemberOnlineResponse RestoreMemberOnline(Models\RestoreMemberOnlineRequest $req) 恢复客服上线
  * @method Models\ResumeAutoCalloutTaskResponse ResumeAutoCalloutTask(Models\ResumeAutoCalloutTaskRequest $req) 用于通过 TaskId **恢复一个已被暂停的自动外呼任务**。该接口适用于在调用 [暂停自动外呼任务](https://cloud.tencent.com/document/product/679/125357) 后，需继续执行剩余外呼计划的场景。调用成功后，任务将从暂停状态恢复，重新发起未完成的外呼请求。

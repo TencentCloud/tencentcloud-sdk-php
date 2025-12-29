@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getWrittenEnable() 获取none/enable/disable/default
  * @method void setWrittenEnable(string $WrittenEnable) 设置none/enable/disable/default
+ * @method WrittenAdvancePolicy getAdvancePolicy() 获取用户自定义高级参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdvancePolicy(WrittenAdvancePolicy $AdvancePolicy) 设置用户自定义高级参数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SmartOptimizerWrittenPolicy extends AbstractModel
 {
@@ -31,7 +35,15 @@ class SmartOptimizerWrittenPolicy extends AbstractModel
     public $WrittenEnable;
 
     /**
+     * @var WrittenAdvancePolicy 用户自定义高级参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdvancePolicy;
+
+    /**
      * @param string $WrittenEnable none/enable/disable/default
+     * @param WrittenAdvancePolicy $AdvancePolicy 用户自定义高级参数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -48,6 +60,11 @@ class SmartOptimizerWrittenPolicy extends AbstractModel
         }
         if (array_key_exists("WrittenEnable",$param) and $param["WrittenEnable"] !== null) {
             $this->WrittenEnable = $param["WrittenEnable"];
+        }
+
+        if (array_key_exists("AdvancePolicy",$param) and $param["AdvancePolicy"] !== null) {
+            $this->AdvancePolicy = new WrittenAdvancePolicy();
+            $this->AdvancePolicy->deserialize($param["AdvancePolicy"]);
         }
     }
 }

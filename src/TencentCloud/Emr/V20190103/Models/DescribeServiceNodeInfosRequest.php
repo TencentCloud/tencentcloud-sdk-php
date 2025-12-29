@@ -62,8 +62,8 @@ use TencentCloud\Common\AbstractModel;
 "-99"代表所有
 "-3"代表存在隐患
 "-4"代表未探测
- * @method string getServiceName() 获取服务组件名称，都是大写例如YARN
- * @method void setServiceName(string $ServiceName) 设置服务组件名称，都是大写例如YARN
+ * @method string getServiceName() 获取服务组件名称应采用全大写形式（例如：YARN），api调用时须与 ServiceGroupType 在两者之中任选其一并保证必填。
+ * @method void setServiceName(string $ServiceName) 设置服务组件名称应采用全大写形式（例如：YARN），api调用时须与 ServiceGroupType 在两者之中任选其一并保证必填。
  * @method string getNodeTypeName() 获取节点名称master,core,task,common,router
  * @method void setNodeTypeName(string $NodeTypeName) 设置节点名称master,core,task,common,router
  * @method integer getDataNodeMaintenanceId() 获取过滤条件：dn是否处于维护状态
@@ -131,7 +131,7 @@ class DescribeServiceNodeInfosRequest extends AbstractModel
     public $HealthStateId;
 
     /**
-     * @var string 服务组件名称，都是大写例如YARN
+     * @var string 服务组件名称应采用全大写形式（例如：YARN），api调用时须与 ServiceGroupType 在两者之中任选其一并保证必填。
      */
     public $ServiceName;
 
@@ -174,7 +174,7 @@ class DescribeServiceNodeInfosRequest extends AbstractModel
 "-99"代表所有
 "-3"代表存在隐患
 "-4"代表未探测
-     * @param string $ServiceName 服务组件名称，都是大写例如YARN
+     * @param string $ServiceName 服务组件名称应采用全大写形式（例如：YARN），api调用时须与 ServiceGroupType 在两者之中任选其一并保证必填。
      * @param string $NodeTypeName 节点名称master,core,task,common,router
      * @param integer $DataNodeMaintenanceId 过滤条件：dn是否处于维护状态
 0代表所有状态

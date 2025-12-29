@@ -28,12 +28,8 @@ use TencentCloud\Common\AbstractModel;
 支持填入集团子公司经办人 userId 代发合同。
 
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method array getFlowIds() 获取请指定需执行批量签署的流程ID，数量范围为1-100。
-您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。
-用户将利用链接对这些合同实施批量操作。
- * @method void setFlowIds(array $FlowIds) 设置请指定需执行批量签署的流程ID，数量范围为1-100。
-您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。
-用户将利用链接对这些合同实施批量操作。
+ * @method array getFlowIds() 获取请指定需执行批量签署的流程ID，数量范围为1-100。您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。用户将利用链接对这些合同实施批量操作。  注：生成动态签署方领取时此参数必传。 
+ * @method void setFlowIds(array $FlowIds) 设置请指定需执行批量签署的流程ID，数量范围为1-100。您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。用户将利用链接对这些合同实施批量操作。  注：生成动态签署方领取时此参数必传。 
  * @method Agent getAgent() 获取代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
@@ -62,16 +58,14 @@ UserId必须是传入合同（FlowId）中的签署人。
  如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
  * @method void setMobile(string $Mobile) 设置员工手机号，必须与姓名一起使用。
  如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
- * @method array getRecipientIds() 获取为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。
-您可以通过查询合同接口（DescribeFlowInfo）查询此参数。
-若传了此参数，则可以不传 UserId, Name, Mobile等参数
- * @method void setRecipientIds(array $RecipientIds) 设置为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。
-您可以通过查询合同接口（DescribeFlowInfo）查询此参数。
-若传了此参数，则可以不传 UserId, Name, Mobile等参数
+ * @method array getRecipientIds() 获取为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。您可以通过查询合同接口（DescribeFlowInfo）查询此参数。若传了此参数，则可以不传 UserId, Name, Mobile等参数  注：生成动态签署方领取时此参数必传。
+ * @method void setRecipientIds(array $RecipientIds) 设置为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。您可以通过查询合同接口（DescribeFlowInfo）查询此参数。若传了此参数，则可以不传 UserId, Name, Mobile等参数  注：生成动态签署方领取时此参数必传。
  * @method string getFlowGroupId() 获取合同组Id，传入此参数则可以不传FlowIds
  * @method void setFlowGroupId(string $FlowGroupId) 设置合同组Id，传入此参数则可以不传FlowIds
  * @method boolean getCanBatchReject() 获取是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。`
  * @method void setCanBatchReject(boolean $CanBatchReject) 设置是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。`
+ * @method DynamicSignOption getDynamicSignOption() 获取动态签署方领取链接配置。
+ * @method void setDynamicSignOption(DynamicSignOption $DynamicSignOption) 设置动态签署方领取链接配置。
  */
 class CreateOrganizationBatchSignUrlRequest extends AbstractModel
 {
@@ -84,9 +78,7 @@ class CreateOrganizationBatchSignUrlRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var array 请指定需执行批量签署的流程ID，数量范围为1-100。
-您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。
-用户将利用链接对这些合同实施批量操作。
+     * @var array 请指定需执行批量签署的流程ID，数量范围为1-100。您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。用户将利用链接对这些合同实施批量操作。  注：生成动态签署方领取时此参数必传。 
      */
     public $FlowIds;
 
@@ -121,9 +113,7 @@ UserId必须是传入合同（FlowId）中的签署人。
     public $Mobile;
 
     /**
-     * @var array 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。
-您可以通过查询合同接口（DescribeFlowInfo）查询此参数。
-若传了此参数，则可以不传 UserId, Name, Mobile等参数
+     * @var array 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。您可以通过查询合同接口（DescribeFlowInfo）查询此参数。若传了此参数，则可以不传 UserId, Name, Mobile等参数  注：生成动态签署方领取时此参数必传。
      */
     public $RecipientIds;
 
@@ -138,13 +128,16 @@ UserId必须是传入合同（FlowId）中的签署人。
     public $CanBatchReject;
 
     /**
+     * @var DynamicSignOption 动态签署方领取链接配置。
+     */
+    public $DynamicSignOption;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。使用此接口时，必须填写userId。
 支持填入集团子公司经办人 userId 代发合同。
 
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param array $FlowIds 请指定需执行批量签署的流程ID，数量范围为1-100。
-您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。
-用户将利用链接对这些合同实施批量操作。
+     * @param array $FlowIds 请指定需执行批量签署的流程ID，数量范围为1-100。您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。用户将利用链接对这些合同实施批量操作。  注：生成动态签署方领取时此参数必传。 
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      * @param string $UserId 员工在腾讯电子签平台的独特身份标识，为32位字符串。
@@ -159,11 +152,10 @@ UserId必须是传入合同（FlowId）中的签署人。
 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
      * @param string $Mobile 员工手机号，必须与姓名一起使用。
  如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
-     * @param array $RecipientIds 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。
-您可以通过查询合同接口（DescribeFlowInfo）查询此参数。
-若传了此参数，则可以不传 UserId, Name, Mobile等参数
+     * @param array $RecipientIds 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。您可以通过查询合同接口（DescribeFlowInfo）查询此参数。若传了此参数，则可以不传 UserId, Name, Mobile等参数  注：生成动态签署方领取时此参数必传。
      * @param string $FlowGroupId 合同组Id，传入此参数则可以不传FlowIds
      * @param boolean $CanBatchReject 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。`
+     * @param DynamicSignOption $DynamicSignOption 动态签署方领取链接配置。
      */
     function __construct()
     {
@@ -214,6 +206,11 @@ UserId必须是传入合同（FlowId）中的签署人。
 
         if (array_key_exists("CanBatchReject",$param) and $param["CanBatchReject"] !== null) {
             $this->CanBatchReject = $param["CanBatchReject"];
+        }
+
+        if (array_key_exists("DynamicSignOption",$param) and $param["DynamicSignOption"] !== null) {
+            $this->DynamicSignOption = new DynamicSignOption();
+            $this->DynamicSignOption->deserialize($param["DynamicSignOption"]);
         }
     }
 }

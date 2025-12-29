@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRelease请求参数结构体
  *
- * @method string getBotBizId() 获取应用ID
- * @method void setBotBizId(string $BotBizId) 设置应用ID
- * @method string getReleaseBizId() 获取发布详情
- * @method void setReleaseBizId(string $ReleaseBizId) 设置发布详情
+ * @method string getBotBizId() 获取应用ID。获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)  
+ * @method void setBotBizId(string $BotBizId) 设置应用ID。获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)  
+ * @method string getReleaseBizId() 获取发布ID
+ * @method void setReleaseBizId(string $ReleaseBizId) 设置发布ID
  */
 class DescribeReleaseRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string 应用ID。获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)  
      */
     public $BotBizId;
 
     /**
-     * @var string 发布详情
+     * @var string 发布ID
      */
     public $ReleaseBizId;
 
     /**
-     * @param string $BotBizId 应用ID
-     * @param string $ReleaseBizId 发布详情
+     * @param string $BotBizId 应用ID。获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)  
+     * @param string $ReleaseBizId 发布ID
      */
     function __construct()
     {

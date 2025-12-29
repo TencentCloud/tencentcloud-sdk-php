@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getAppBizIds() 获取应用ID数组
  * @method void setAppBizIds(array $AppBizIds) 设置应用ID数组
- * @method string getSpaceId() 获取空间列表
- * @method void setSpaceId(string $SpaceId) 设置空间列表
+ * @method string getSpaceId() 获取空间ID，用于限定查询范围。不填时查询所有空间的数据
+ * @method void setSpaceId(string $SpaceId) 设置空间ID，用于限定查询范围。不填时查询所有空间的数据
  */
 class DescribeKnowledgeUsagePieGraphRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeKnowledgeUsagePieGraphRequest extends AbstractModel
     public $AppBizIds;
 
     /**
-     * @var string 空间列表
+     * @var string 空间ID，用于限定查询范围。不填时查询所有空间的数据
      */
     public $SpaceId;
 
     /**
      * @param array $AppBizIds 应用ID数组
-     * @param string $SpaceId 空间列表
+     * @param string $SpaceId 空间ID，用于限定查询范围。不填时查询所有空间的数据
      */
     function __construct()
     {

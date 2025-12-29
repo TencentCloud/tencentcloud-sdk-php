@@ -54,8 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdatePeriodInfo(UpdatePeriodInfo $UpdatePeriodInfo) 设置文档更新频率
  * @method string getSplitRule() 获取自定义切分规则
  * @method void setSplitRule(string $SplitRule) 设置自定义切分规则
- * @method integer getEnableScope() 获取文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
- * @method void setEnableScope(integer $EnableScope) 设置文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+ * @method integer getEnableScope() 获取文档生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
+若不传，则不会修改文档生效域。
+ * @method void setEnableScope(integer $EnableScope) 设置文档生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
+若不传，则不会修改文档生效域。
  */
 class ModifyDocRequest extends AbstractModel
 {
@@ -141,7 +143,8 @@ class ModifyDocRequest extends AbstractModel
     public $SplitRule;
 
     /**
-     * @var integer 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * @var integer 文档生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
+若不传，则不会修改文档生效域。
      */
     public $EnableScope;
 
@@ -163,7 +166,8 @@ class ModifyDocRequest extends AbstractModel
      * @param array $ModifyTypes 需要修改的内容类型  0  无效 1 更新文档cos信息 2 更新文档引用信息 3 更新文档刷新频率 4 腾讯文档刷新
      * @param UpdatePeriodInfo $UpdatePeriodInfo 文档更新频率
      * @param string $SplitRule 自定义切分规则
-     * @param integer $EnableScope 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * @param integer $EnableScope 文档生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
+若不传，则不会修改文档生效域。
      */
     function __construct()
     {

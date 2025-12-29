@@ -1,0 +1,77 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Rce\V20250425\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * 业务出参
+ *
+ * @method string getUserIp() 获取对应的IP
+ * @method void setUserIp(string $UserIp) 设置对应的IP
+ * @method integer getRiskScore() 获取返回风险等级, 0 - 4，0代表无风险，数值越大，风险越高
+ * @method void setRiskScore(integer $RiskScore) 设置返回风险等级, 0 - 4，0代表无风险，数值越大，风险越高
+ * @method array getRiskType() 获取风险类型
+ * @method void setRiskType(array $RiskType) 设置风险类型
+ */
+class ManageIPPortraitRiskValueOutput extends AbstractModel
+{
+    /**
+     * @var string 对应的IP
+     */
+    public $UserIp;
+
+    /**
+     * @var integer 返回风险等级, 0 - 4，0代表无风险，数值越大，风险越高
+     */
+    public $RiskScore;
+
+    /**
+     * @var array 风险类型
+     */
+    public $RiskType;
+
+    /**
+     * @param string $UserIp 对应的IP
+     * @param integer $RiskScore 返回风险等级, 0 - 4，0代表无风险，数值越大，风险越高
+     * @param array $RiskType 风险类型
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("UserIp",$param) and $param["UserIp"] !== null) {
+            $this->UserIp = $param["UserIp"];
+        }
+
+        if (array_key_exists("RiskScore",$param) and $param["RiskScore"] !== null) {
+            $this->RiskScore = $param["RiskScore"];
+        }
+
+        if (array_key_exists("RiskType",$param) and $param["RiskType"] !== null) {
+            $this->RiskType = $param["RiskType"];
+        }
+    }
+}

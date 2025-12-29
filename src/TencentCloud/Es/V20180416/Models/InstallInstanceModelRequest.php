@@ -28,6 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelNames(array $ModelNames) 设置客户指定安装的模型名称，可为空，默认为模型文件名
  * @method array getTaskTypes() 获取模型使用的任务类型，包括：fill_mask, ner, question_answering, text_classification, text_embedding, text_expansion, text_similarity和zero_shot_classification，默认为text_embedding
  * @method void setTaskTypes(array $TaskTypes) 设置模型使用的任务类型，包括：fill_mask, ner, question_answering, text_classification, text_embedding, text_expansion, text_similarity和zero_shot_classification，默认为text_embedding
+ * @method array getHuggingFaceModelNames() 获取HuggingFace模型名称
+ * @method void setHuggingFaceModelNames(array $HuggingFaceModelNames) 设置HuggingFace模型名称
+ * @method string getModelDescription() 获取模型描述
+ * @method void setModelDescription(string $ModelDescription) 设置模型描述
+ * @method string getModelSourceType() 获取模型来源：UserModel、HuggingFace和PlatformModel
+ * @method void setModelSourceType(string $ModelSourceType) 设置模型来源：UserModel、HuggingFace和PlatformModel
+ * @method array getUploadedCosPaths() 获取已上传的模型路径
+ * @method void setUploadedCosPaths(array $UploadedCosPaths) 设置已上传的模型路径
  */
 class InstallInstanceModelRequest extends AbstractModel
 {
@@ -52,10 +60,34 @@ class InstallInstanceModelRequest extends AbstractModel
     public $TaskTypes;
 
     /**
+     * @var array HuggingFace模型名称
+     */
+    public $HuggingFaceModelNames;
+
+    /**
+     * @var string 模型描述
+     */
+    public $ModelDescription;
+
+    /**
+     * @var string 模型来源：UserModel、HuggingFace和PlatformModel
+     */
+    public $ModelSourceType;
+
+    /**
+     * @var array 已上传的模型路径
+     */
+    public $UploadedCosPaths;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param array $UsrCosModelUrlList 客户上传到cos的模型地址，单次请求限制一个。cos文件为压缩文件，格式包括：zip、tgz和tar.gz
      * @param array $ModelNames 客户指定安装的模型名称，可为空，默认为模型文件名
      * @param array $TaskTypes 模型使用的任务类型，包括：fill_mask, ner, question_answering, text_classification, text_embedding, text_expansion, text_similarity和zero_shot_classification，默认为text_embedding
+     * @param array $HuggingFaceModelNames HuggingFace模型名称
+     * @param string $ModelDescription 模型描述
+     * @param string $ModelSourceType 模型来源：UserModel、HuggingFace和PlatformModel
+     * @param array $UploadedCosPaths 已上传的模型路径
      */
     function __construct()
     {
@@ -84,6 +116,22 @@ class InstallInstanceModelRequest extends AbstractModel
 
         if (array_key_exists("TaskTypes",$param) and $param["TaskTypes"] !== null) {
             $this->TaskTypes = $param["TaskTypes"];
+        }
+
+        if (array_key_exists("HuggingFaceModelNames",$param) and $param["HuggingFaceModelNames"] !== null) {
+            $this->HuggingFaceModelNames = $param["HuggingFaceModelNames"];
+        }
+
+        if (array_key_exists("ModelDescription",$param) and $param["ModelDescription"] !== null) {
+            $this->ModelDescription = $param["ModelDescription"];
+        }
+
+        if (array_key_exists("ModelSourceType",$param) and $param["ModelSourceType"] !== null) {
+            $this->ModelSourceType = $param["ModelSourceType"];
+        }
+
+        if (array_key_exists("UploadedCosPaths",$param) and $param["UploadedCosPaths"] !== null) {
+            $this->UploadedCosPaths = $param["UploadedCosPaths"];
         }
     }
 }

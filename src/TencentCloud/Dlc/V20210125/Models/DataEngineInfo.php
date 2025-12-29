@@ -232,6 +232,20 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method ScheduleElasticityConf getScheduleElasticityConf() 获取引擎资源弹性伸缩策略
  * @method void setScheduleElasticityConf(ScheduleElasticityConf $ScheduleElasticityConf) 设置引擎资源弹性伸缩策略
+ * @method GPUInfo getGPUInfo() 获取GPU 信息
+ * @method void setGPUInfo(GPUInfo $GPUInfo) 设置GPU 信息
+ * @method integer getEngineResourceUsedGPU() 获取GPU 使用量
+ * @method void setEngineResourceUsedGPU(integer $EngineResourceUsedGPU) 设置GPU 使用量
+ * @method integer getGPUTotalSize() 获取GPU 总规格
+ * @method void setGPUTotalSize(integer $GPUTotalSize) 设置GPU 总规格
+ * @method string getInstanceModel() 获取GPU 机型
+ * @method void setInstanceModel(string $InstanceModel) 设置GPU 机型
+ * @method integer getNodeNum() 获取节点数量
+ * @method void setNodeNum(integer $NodeNum) 设置节点数量
+ * @method integer getSizeWithElastic() 获取引擎规格，包含负载弹性或分时弹性
+ * @method void setSizeWithElastic(integer $SizeWithElastic) 设置引擎规格，包含负载弹性或分时弹性
+ * @method integer getMaxElasticSize() 获取最大弹性值，包含负载弹性或分时弹性
+ * @method void setMaxElasticSize(integer $MaxElasticSize) 设置最大弹性值，包含负载弹性或分时弹性
  */
 class DataEngineInfo extends AbstractModel
 {
@@ -582,6 +596,41 @@ class DataEngineInfo extends AbstractModel
     public $ScheduleElasticityConf;
 
     /**
+     * @var GPUInfo GPU 信息
+     */
+    public $GPUInfo;
+
+    /**
+     * @var integer GPU 使用量
+     */
+    public $EngineResourceUsedGPU;
+
+    /**
+     * @var integer GPU 总规格
+     */
+    public $GPUTotalSize;
+
+    /**
+     * @var string GPU 机型
+     */
+    public $InstanceModel;
+
+    /**
+     * @var integer 节点数量
+     */
+    public $NodeNum;
+
+    /**
+     * @var integer 引擎规格，包含负载弹性或分时弹性
+     */
+    public $SizeWithElastic;
+
+    /**
+     * @var integer 最大弹性值，包含负载弹性或分时弹性
+     */
+    public $MaxElasticSize;
+
+    /**
      * @param string $DataEngineName DataEngine名称
      * @param string $EngineType 引擎类型 spark/presto
      * @param string $ClusterType 集群资源类型 spark_private/presto_private/presto_cu/spark_cu
@@ -688,6 +737,13 @@ class DataEngineInfo extends AbstractModel
      * @param integer $IsAIEngine 1:AI引擎，0:非AI引擎
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ScheduleElasticityConf $ScheduleElasticityConf 引擎资源弹性伸缩策略
+     * @param GPUInfo $GPUInfo GPU 信息
+     * @param integer $EngineResourceUsedGPU GPU 使用量
+     * @param integer $GPUTotalSize GPU 总规格
+     * @param string $InstanceModel GPU 机型
+     * @param integer $NodeNum 节点数量
+     * @param integer $SizeWithElastic 引擎规格，包含负载弹性或分时弹性
+     * @param integer $MaxElasticSize 最大弹性值，包含负载弹性或分时弹性
      */
     function __construct()
     {
@@ -958,6 +1014,35 @@ class DataEngineInfo extends AbstractModel
         if (array_key_exists("ScheduleElasticityConf",$param) and $param["ScheduleElasticityConf"] !== null) {
             $this->ScheduleElasticityConf = new ScheduleElasticityConf();
             $this->ScheduleElasticityConf->deserialize($param["ScheduleElasticityConf"]);
+        }
+
+        if (array_key_exists("GPUInfo",$param) and $param["GPUInfo"] !== null) {
+            $this->GPUInfo = new GPUInfo();
+            $this->GPUInfo->deserialize($param["GPUInfo"]);
+        }
+
+        if (array_key_exists("EngineResourceUsedGPU",$param) and $param["EngineResourceUsedGPU"] !== null) {
+            $this->EngineResourceUsedGPU = $param["EngineResourceUsedGPU"];
+        }
+
+        if (array_key_exists("GPUTotalSize",$param) and $param["GPUTotalSize"] !== null) {
+            $this->GPUTotalSize = $param["GPUTotalSize"];
+        }
+
+        if (array_key_exists("InstanceModel",$param) and $param["InstanceModel"] !== null) {
+            $this->InstanceModel = $param["InstanceModel"];
+        }
+
+        if (array_key_exists("NodeNum",$param) and $param["NodeNum"] !== null) {
+            $this->NodeNum = $param["NodeNum"];
+        }
+
+        if (array_key_exists("SizeWithElastic",$param) and $param["SizeWithElastic"] !== null) {
+            $this->SizeWithElastic = $param["SizeWithElastic"];
+        }
+
+        if (array_key_exists("MaxElasticSize",$param) and $param["MaxElasticSize"] !== null) {
+            $this->MaxElasticSize = $param["MaxElasticSize"];
         }
     }
 }

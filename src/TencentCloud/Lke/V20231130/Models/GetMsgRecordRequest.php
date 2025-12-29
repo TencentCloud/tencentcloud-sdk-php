@@ -20,36 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetMsgRecord请求参数结构体
  *
- * @method integer getType() 获取类型
- * @method void setType(integer $Type) 设置类型
+ * @method integer getType() 获取接入类型， 5-API 访客，目前仅支持传5
+ * @method void setType(integer $Type) 设置接入类型， 5-API 访客，目前仅支持传5
  * @method integer getCount() 获取数量,  数量需大于2, 最大1000
  * @method void setCount(integer $Count) 设置数量,  数量需大于2, 最大1000
- * @method string getSessionId() 获取会话sessionid
- * @method void setSessionId(string $SessionId) 设置会话sessionid
+ * @method string getSessionId() 获取会话sessionid。
+ * @method void setSessionId(string $SessionId) 设置会话sessionid。
  * @method string getBotAppKey() 获取应用AppKey, 当Type=5[API访客]时, 该字段必填  :</br>  获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
  * @method void setBotAppKey(string $BotAppKey) 设置应用AppKey, 当Type=5[API访客]时, 该字段必填  :</br>  获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
- * @method integer getScene() 获取场景, 体验: 1; 正式: 2
- * @method void setScene(integer $Scene) 设置场景, 体验: 1; 正式: 2
+ * @method integer getScene() 获取场景, 体验: 1; 正式: 2 。
+
+体验用于创建应用测试的时候使用，正式是应用发布后对外的时候使用
+ * @method void setScene(integer $Scene) 设置场景, 体验: 1; 正式: 2 。
+
+体验用于创建应用测试的时候使用，正式是应用发布后对外的时候使用
  * @method string getLastRecordId() 获取最后一条记录ID， 消息从后往前获取
 
 MidRecordId与LastRecordId只能选择一个
 
+LastRecordId 和MidRecordId都不填的时候，默认从最新的消息ID开始取。
  * @method void setLastRecordId(string $LastRecordId) 设置最后一条记录ID， 消息从后往前获取
 
 MidRecordId与LastRecordId只能选择一个
 
+LastRecordId 和MidRecordId都不填的时候，默认从最新的消息ID开始取。
  * @method string getMidRecordId() 获取传该值，代表拉取该记录id的前后总共count条消息记录
 
 MidRecordId与LastRecordId只能选择一个
 
+LastRecordId 和MidRecordId都不填的时候，默认从最新的消息Id开始取
+
  * @method void setMidRecordId(string $MidRecordId) 设置传该值，代表拉取该记录id的前后总共count条消息记录
 
 MidRecordId与LastRecordId只能选择一个
+
+LastRecordId 和MidRecordId都不填的时候，默认从最新的消息Id开始取
  */
 class GetMsgRecordRequest extends AbstractModel
 {
     /**
-     * @var integer 类型
+     * @var integer 接入类型， 5-API 访客，目前仅支持传5
      */
     public $Type;
 
@@ -59,7 +69,7 @@ class GetMsgRecordRequest extends AbstractModel
     public $Count;
 
     /**
-     * @var string 会话sessionid
+     * @var string 会话sessionid。
      */
     public $SessionId;
 
@@ -69,7 +79,9 @@ class GetMsgRecordRequest extends AbstractModel
     public $BotAppKey;
 
     /**
-     * @var integer 场景, 体验: 1; 正式: 2
+     * @var integer 场景, 体验: 1; 正式: 2 。
+
+体验用于创建应用测试的时候使用，正式是应用发布后对外的时候使用
      */
     public $Scene;
 
@@ -78,6 +90,7 @@ class GetMsgRecordRequest extends AbstractModel
 
 MidRecordId与LastRecordId只能选择一个
 
+LastRecordId 和MidRecordId都不填的时候，默认从最新的消息ID开始取。
      */
     public $LastRecordId;
 
@@ -86,22 +99,29 @@ MidRecordId与LastRecordId只能选择一个
 
 MidRecordId与LastRecordId只能选择一个
 
+LastRecordId 和MidRecordId都不填的时候，默认从最新的消息Id开始取
+
      */
     public $MidRecordId;
 
     /**
-     * @param integer $Type 类型
+     * @param integer $Type 接入类型， 5-API 访客，目前仅支持传5
      * @param integer $Count 数量,  数量需大于2, 最大1000
-     * @param string $SessionId 会话sessionid
+     * @param string $SessionId 会话sessionid。
      * @param string $BotAppKey 应用AppKey, 当Type=5[API访客]时, 该字段必填  :</br>  获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
-     * @param integer $Scene 场景, 体验: 1; 正式: 2
+     * @param integer $Scene 场景, 体验: 1; 正式: 2 。
+
+体验用于创建应用测试的时候使用，正式是应用发布后对外的时候使用
      * @param string $LastRecordId 最后一条记录ID， 消息从后往前获取
 
 MidRecordId与LastRecordId只能选择一个
 
+LastRecordId 和MidRecordId都不填的时候，默认从最新的消息ID开始取。
      * @param string $MidRecordId 传该值，代表拉取该记录id的前后总共count条消息记录
 
 MidRecordId与LastRecordId只能选择一个
+
+LastRecordId 和MidRecordId都不填的时候，默认从最新的消息Id开始取
      */
     function __construct()
     {

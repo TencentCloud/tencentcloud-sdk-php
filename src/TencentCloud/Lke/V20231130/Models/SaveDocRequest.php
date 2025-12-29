@@ -250,8 +250,10 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
 | `table_style` | String | 指定表格内容的输出格式。可用值：<br>• `"html"`：以 HTML 表格形式返回，适合网页展示。<br>• `"md"`：以 Markdown 表格语法返回，适合文档或 Markdown 渲染环境。|
  * @method UpdatePeriodInfo getUpdatePeriodInfo() 获取文档更新频率，默认值为0不更新
  * @method void setUpdatePeriodInfo(UpdatePeriodInfo $UpdatePeriodInfo) 设置文档更新频率，默认值为0不更新
- * @method integer getEnableScope() 获取文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
- * @method void setEnableScope(integer $EnableScope) 设置文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+ * @method integer getEnableScope() 获取文档生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+默认值：应用内默认知识库为2，共享知识库为4。
+ * @method void setEnableScope(integer $EnableScope) 设置文档生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+默认值：应用内默认知识库为2，共享知识库为4。
  */
 class SaveDocRequest extends AbstractModel
 {
@@ -455,7 +457,8 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
     public $UpdatePeriodInfo;
 
     /**
-     * @var integer 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * @var integer 文档生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+默认值：应用内默认知识库为2，共享知识库为4。
      */
     public $EnableScope;
 
@@ -575,7 +578,8 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
 |--------------|--------|----------------------------------------------------------------------|
 | `table_style` | String | 指定表格内容的输出格式。可用值：<br>• `"html"`：以 HTML 表格形式返回，适合网页展示。<br>• `"md"`：以 Markdown 表格语法返回，适合文档或 Markdown 渲染环境。|
      * @param UpdatePeriodInfo $UpdatePeriodInfo 文档更新频率，默认值为0不更新
-     * @param integer $EnableScope 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * @param integer $EnableScope 文档生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+默认值：应用内默认知识库为2，共享知识库为4。
      */
     function __construct()
     {

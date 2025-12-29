@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisks(array $Disks) 设置所选数据盘信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTolerations() 获取容忍
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTolerations(array $Tolerations) 设置容忍
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudResource extends AbstractModel
 {
@@ -99,6 +103,12 @@ class CloudResource extends AbstractModel
     public $Disks;
 
     /**
+     * @var array 容忍
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tolerations;
+
+    /**
      * @param string $ComponentName 组件角色名
      * @param integer $PodNumber pod请求数量
      * @param integer $LimitCpu Cpu请求数量最大值
@@ -111,6 +121,8 @@ class CloudResource extends AbstractModel
      * @param NodeAffinity $Affinity 节点亲和性设置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Disks 所选数据盘信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tolerations 容忍
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -167,6 +179,15 @@ class CloudResource extends AbstractModel
                 $obj = new Disk();
                 $obj->deserialize($value);
                 array_push($this->Disks, $obj);
+            }
+        }
+
+        if (array_key_exists("Tolerations",$param) and $param["Tolerations"] !== null) {
+            $this->Tolerations = [];
+            foreach ($param["Tolerations"] as $key => $value){
+                $obj = new Toleration();
+                $obj->deserialize($value);
+                array_push($this->Tolerations, $obj);
             }
         }
     }

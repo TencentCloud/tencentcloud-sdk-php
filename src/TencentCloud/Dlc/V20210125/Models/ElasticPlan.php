@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始时间，Once格式：yyyy-MM-dd HH:mm:ss; 非Once格式： HH:mm:ss
  * @method string getEndTime() 获取结束时间，Once格式：yyyy-MM-dd HH:mm:ss; 非Once格式： HH:mm:ss
  * @method void setEndTime(string $EndTime) 设置结束时间，Once格式：yyyy-MM-dd HH:mm:ss; 非Once格式： HH:mm:ss
+ * @method integer getElasticLimit() 获取分时弹性上限
+ * @method void setElasticLimit(integer $ElasticLimit) 设置分时弹性上限
  */
 class ElasticPlan extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ElasticPlan extends AbstractModel
     public $EndTime;
 
     /**
+     * @var integer 分时弹性上限
+     */
+    public $ElasticLimit;
+
+    /**
      * @param integer $MinElasticClusters 最小集群数
      * @param integer $MaxElasticClusters 最大集群数
      * @param integer $TolerableQueueTime 最大排队时间
      * @param string $StartTime 开始时间，Once格式：yyyy-MM-dd HH:mm:ss; 非Once格式： HH:mm:ss
      * @param string $EndTime 结束时间，Once格式：yyyy-MM-dd HH:mm:ss; 非Once格式： HH:mm:ss
+     * @param integer $ElasticLimit 分时弹性上限
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ElasticPlan extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("ElasticLimit",$param) and $param["ElasticLimit"] !== null) {
+            $this->ElasticLimit = $param["ElasticLimit"];
         }
     }
 }

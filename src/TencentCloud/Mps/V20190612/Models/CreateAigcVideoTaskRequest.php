@@ -22,6 +22,7 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModelName() 获取模型名称。
 当前支持的模型列表:
+Hunyuan,
 Hailuo，
 Kling，
 Jimeng，
@@ -30,6 +31,7 @@ OS，
 GV。
  * @method void setModelName(string $ModelName) 设置模型名称。
 当前支持的模型列表:
+Hunyuan,
 Hailuo，
 Kling，
 Jimeng，
@@ -140,6 +142,7 @@ class CreateAigcVideoTaskRequest extends AbstractModel
     /**
      * @var string 模型名称。
 当前支持的模型列表:
+Hunyuan,
 Hailuo，
 Kling，
 Jimeng，
@@ -245,6 +248,7 @@ GV。
     /**
      * @param string $ModelName 模型名称。
 当前支持的模型列表:
+Hunyuan,
 Hailuo，
 Kling，
 Jimeng，

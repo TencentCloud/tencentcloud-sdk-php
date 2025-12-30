@@ -20,162 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySiteDeviceInfo请求参数结构体
  *
- * @method string getSiteId() 获取机房ID
- * @method void setSiteId(string $SiteId) 设置机房ID
- * @method string getFiberType() 获取您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。
- * @method void setFiberType(string $FiberType) 设置您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。
- * @method string getOpticalStandard() 获取您将CDC连接到网络时采用的光学标准。此字段取决于上行链路速度、光纤类型和到上游设备的距离。
- * @method void setOpticalStandard(string $OpticalStandard) 设置您将CDC连接到网络时采用的光学标准。此字段取决于上行链路速度、光纤类型和到上游设备的距离。
- * @method string getPowerConnectors() 获取电源连接器类型
- * @method void setPowerConnectors(string $PowerConnectors) 设置电源连接器类型
- * @method string getPowerFeedDrop() 获取从机架上方还是下方供电。取值范围：["UP","DOWN"]
- * @method void setPowerFeedDrop(string $PowerFeedDrop) 设置从机架上方还是下方供电。取值范围：["UP","DOWN"]
- * @method integer getMaxWeight() 获取最大承重(KG)
- * @method void setMaxWeight(integer $MaxWeight) 设置最大承重(KG)
- * @method integer getPowerDrawKva() 获取功耗(KW)
- * @method void setPowerDrawKva(integer $PowerDrawKva) 设置功耗(KW)
- * @method integer getUplinkSpeedGbps() 获取网络到腾讯云Region区域的上行链路速度(Gbps)
- * @method void setUplinkSpeedGbps(integer $UplinkSpeedGbps) 设置网络到腾讯云Region区域的上行链路速度(Gbps)
- * @method integer getUplinkCount() 获取将CDC连接到网络时，每台CDC网络设备(每个机架 2 台设备)使用的上行链路数量。
- * @method void setUplinkCount(integer $UplinkCount) 设置将CDC连接到网络时，每台CDC网络设备(每个机架 2 台设备)使用的上行链路数量。
- * @method boolean getConditionRequirement() 获取是否满足下面环境条件：
-1、场地没有材料要求或验收标准会影响 CDC 设备配送和安装。
-2、确定的机架位置包含:
-温度范围为 41 到 104°F (5 到 40°C)。
-湿度范围为 10°F (-12°C)和 8% RH (相对湿度)到 70°F(21°C)和 80% RH。
-机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)，散热功率须达到CDC运行功率值的 145.8 倍以上。
- * @method void setConditionRequirement(boolean $ConditionRequirement) 设置是否满足下面环境条件：
-1、场地没有材料要求或验收标准会影响 CDC 设备配送和安装。
-2、确定的机架位置包含:
-温度范围为 41 到 104°F (5 到 40°C)。
-湿度范围为 10°F (-12°C)和 8% RH (相对湿度)到 70°F(21°C)和 80% RH。
-机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)，散热功率须达到CDC运行功率值的 145.8 倍以上。
- * @method boolean getDimensionRequirement() 获取是否满足下面的尺寸条件：
-您的装货站台可以容纳一个机架箱(高 x 宽 x 深 = 94" x 54" x 48")。
-您可以提供从机架(高 x 宽 x 深 = 80" x 24" x 48")交货地点到机架最终安置位置的明确通道。测量深度时，应包括站台、走廊通道、门、转弯、坡道、货梯，并将其他通道限制考虑在内。
-在最终的 CDC安置位置，前部间隙可以为 48" 或更大，后部间隙可以为 24" 或更大。
- * @method void setDimensionRequirement(boolean $DimensionRequirement) 设置是否满足下面的尺寸条件：
-您的装货站台可以容纳一个机架箱(高 x 宽 x 深 = 94" x 54" x 48")。
-您可以提供从机架(高 x 宽 x 深 = 80" x 24" x 48")交货地点到机架最终安置位置的明确通道。测量深度时，应包括站台、走廊通道、门、转弯、坡道、货梯，并将其他通道限制考虑在内。
-在最终的 CDC安置位置，前部间隙可以为 48" 或更大，后部间隙可以为 24" 或更大。
- * @method boolean getRedundantNetworking() 获取是否提供冗余的上游设备(交换机或路由器)，以便实现网络出口的高可用。
- * @method void setRedundantNetworking(boolean $RedundantNetworking) 设置是否提供冗余的上游设备(交换机或路由器)，以便实现网络出口的高可用。
- * @method boolean getNeedHelp() 获取是否需要腾讯云团队协助完成机架支撑工作
- * @method void setNeedHelp(boolean $NeedHelp) 设置是否需要腾讯云团队协助完成机架支撑工作
- * @method boolean getRedundantPower() 获取是否电源冗余
- * @method void setRedundantPower(boolean $RedundantPower) 设置是否电源冗余
- * @method boolean getBreakerRequirement() 获取上游断路器是否具备
- * @method void setBreakerRequirement(boolean $BreakerRequirement) 设置上游断路器是否具备
+ * @method string getSiteId() 获取<p>机房ID</p>
+ * @method void setSiteId(string $SiteId) 设置<p>机房ID</p>
+ * @method string getFiberType() 获取<p>您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。</p>
+ * @method void setFiberType(string $FiberType) 设置<p>您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。</p>
+ * @method string getOpticalStandard() 获取<p>您将CDC连接到网络时采用的光学标准。此字段取决于上行链路速度、光纤类型和到上游设备的距离。</p>
+ * @method void setOpticalStandard(string $OpticalStandard) 设置<p>您将CDC连接到网络时采用的光学标准。此字段取决于上行链路速度、光纤类型和到上游设备的距离。</p>
+ * @method string getPowerConnectors() 获取<p>电源连接器类型</p>
+ * @method void setPowerConnectors(string $PowerConnectors) 设置<p>电源连接器类型</p>
+ * @method string getPowerFeedDrop() 获取<p>从机架上方还是下方供电。取值范围：["UP","DOWN"]</p>
+ * @method void setPowerFeedDrop(string $PowerFeedDrop) 设置<p>从机架上方还是下方供电。取值范围：["UP","DOWN"]</p>
+ * @method integer getMaxWeight() 获取<p>最大承重(KG)</p>
+ * @method void setMaxWeight(integer $MaxWeight) 设置<p>最大承重(KG)</p>
+ * @method integer getPowerDrawKva() 获取<p>功耗(KW)</p>
+ * @method void setPowerDrawKva(integer $PowerDrawKva) 设置<p>功耗(KW)</p>
+ * @method integer getUplinkSpeedGbps() 获取<p>网络到腾讯云Region区域的上行链路速度(Gbps)</p>
+ * @method void setUplinkSpeedGbps(integer $UplinkSpeedGbps) 设置<p>网络到腾讯云Region区域的上行链路速度(Gbps)</p>
+ * @method integer getUplinkCount() 获取<p>将CDC连接到网络时，每台CDC网络设备(每个机架 2 台设备)使用的上行链路数量。</p>
+ * @method void setUplinkCount(integer $UplinkCount) 设置<p>将CDC连接到网络时，每台CDC网络设备(每个机架 2 台设备)使用的上行链路数量。</p>
+ * @method boolean getConditionRequirement() 获取<p>是否满足下面环境条件：1、场地没有材料要求或验收标准会影响 CDC 设备配送和安装。2、确定的机架位置包含:温度范围为 41 到 104°F (5 到 40°C)。湿度范围为 10°F (-12°C)和 8% RH (相对湿度)到 70°F(21°C)和 80% RH。机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)，散热功率须达到CDC运行功率值的 145.8 倍以上。</p>
+ * @method void setConditionRequirement(boolean $ConditionRequirement) 设置<p>是否满足下面环境条件：1、场地没有材料要求或验收标准会影响 CDC 设备配送和安装。2、确定的机架位置包含:温度范围为 41 到 104°F (5 到 40°C)。湿度范围为 10°F (-12°C)和 8% RH (相对湿度)到 70°F(21°C)和 80% RH。机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)，散热功率须达到CDC运行功率值的 145.8 倍以上。</p>
+ * @method boolean getDimensionRequirement() 获取<p>是否满足下面的尺寸条件：您的装货站台可以容纳一个机架箱(高 x 宽 x 深 = 94" x 54" x 48")。您可以提供从机架(高 x 宽 x 深 = 80" x 24" x 48")交货地点到机架最终安置位置的明确通道。测量深度时，应包括站台、走廊通道、门、转弯、坡道、货梯，并将其他通道限制考虑在内。在最终的 CDC安置位置，前部间隙可以为 48" 或更大，后部间隙可以为 24" 或更大。</p>
+ * @method void setDimensionRequirement(boolean $DimensionRequirement) 设置<p>是否满足下面的尺寸条件：您的装货站台可以容纳一个机架箱(高 x 宽 x 深 = 94" x 54" x 48")。您可以提供从机架(高 x 宽 x 深 = 80" x 24" x 48")交货地点到机架最终安置位置的明确通道。测量深度时，应包括站台、走廊通道、门、转弯、坡道、货梯，并将其他通道限制考虑在内。在最终的 CDC安置位置，前部间隙可以为 48" 或更大，后部间隙可以为 24" 或更大。</p>
+ * @method boolean getRedundantNetworking() 获取<p>是否提供冗余的上游设备(交换机或路由器)，以便实现网络出口的高可用。</p>
+ * @method void setRedundantNetworking(boolean $RedundantNetworking) 设置<p>是否提供冗余的上游设备(交换机或路由器)，以便实现网络出口的高可用。</p>
+ * @method boolean getNeedHelp() 获取<p>是否需要腾讯云团队协助完成机架支撑工作</p>
+ * @method void setNeedHelp(boolean $NeedHelp) 设置<p>是否需要腾讯云团队协助完成机架支撑工作</p>
+ * @method boolean getRedundantPower() 获取<p>是否电源冗余</p>
+ * @method void setRedundantPower(boolean $RedundantPower) 设置<p>是否电源冗余</p>
+ * @method boolean getBreakerRequirement() 获取<p>上游断路器是否具备</p>
+ * @method void setBreakerRequirement(boolean $BreakerRequirement) 设置<p>上游断路器是否具备</p>
  */
 class ModifySiteDeviceInfoRequest extends AbstractModel
 {
     /**
-     * @var string 机房ID
+     * @var string <p>机房ID</p>
      */
     public $SiteId;
 
     /**
-     * @var string 您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。
+     * @var string <p>您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。</p>
      */
     public $FiberType;
 
     /**
-     * @var string 您将CDC连接到网络时采用的光学标准。此字段取决于上行链路速度、光纤类型和到上游设备的距离。
+     * @var string <p>您将CDC连接到网络时采用的光学标准。此字段取决于上行链路速度、光纤类型和到上游设备的距离。</p>
      */
     public $OpticalStandard;
 
     /**
-     * @var string 电源连接器类型
+     * @var string <p>电源连接器类型</p>
      */
     public $PowerConnectors;
 
     /**
-     * @var string 从机架上方还是下方供电。取值范围：["UP","DOWN"]
+     * @var string <p>从机架上方还是下方供电。取值范围：["UP","DOWN"]</p>
      */
     public $PowerFeedDrop;
 
     /**
-     * @var integer 最大承重(KG)
+     * @var integer <p>最大承重(KG)</p>
      */
     public $MaxWeight;
 
     /**
-     * @var integer 功耗(KW)
+     * @var integer <p>功耗(KW)</p>
      */
     public $PowerDrawKva;
 
     /**
-     * @var integer 网络到腾讯云Region区域的上行链路速度(Gbps)
+     * @var integer <p>网络到腾讯云Region区域的上行链路速度(Gbps)</p>
      */
     public $UplinkSpeedGbps;
 
     /**
-     * @var integer 将CDC连接到网络时，每台CDC网络设备(每个机架 2 台设备)使用的上行链路数量。
+     * @var integer <p>将CDC连接到网络时，每台CDC网络设备(每个机架 2 台设备)使用的上行链路数量。</p>
      */
     public $UplinkCount;
 
     /**
-     * @var boolean 是否满足下面环境条件：
-1、场地没有材料要求或验收标准会影响 CDC 设备配送和安装。
-2、确定的机架位置包含:
-温度范围为 41 到 104°F (5 到 40°C)。
-湿度范围为 10°F (-12°C)和 8% RH (相对湿度)到 70°F(21°C)和 80% RH。
-机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)，散热功率须达到CDC运行功率值的 145.8 倍以上。
+     * @var boolean <p>是否满足下面环境条件：1、场地没有材料要求或验收标准会影响 CDC 设备配送和安装。2、确定的机架位置包含:温度范围为 41 到 104°F (5 到 40°C)。湿度范围为 10°F (-12°C)和 8% RH (相对湿度)到 70°F(21°C)和 80% RH。机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)，散热功率须达到CDC运行功率值的 145.8 倍以上。</p>
      */
     public $ConditionRequirement;
 
     /**
-     * @var boolean 是否满足下面的尺寸条件：
-您的装货站台可以容纳一个机架箱(高 x 宽 x 深 = 94" x 54" x 48")。
-您可以提供从机架(高 x 宽 x 深 = 80" x 24" x 48")交货地点到机架最终安置位置的明确通道。测量深度时，应包括站台、走廊通道、门、转弯、坡道、货梯，并将其他通道限制考虑在内。
-在最终的 CDC安置位置，前部间隙可以为 48" 或更大，后部间隙可以为 24" 或更大。
+     * @var boolean <p>是否满足下面的尺寸条件：您的装货站台可以容纳一个机架箱(高 x 宽 x 深 = 94" x 54" x 48")。您可以提供从机架(高 x 宽 x 深 = 80" x 24" x 48")交货地点到机架最终安置位置的明确通道。测量深度时，应包括站台、走廊通道、门、转弯、坡道、货梯，并将其他通道限制考虑在内。在最终的 CDC安置位置，前部间隙可以为 48" 或更大，后部间隙可以为 24" 或更大。</p>
      */
     public $DimensionRequirement;
 
     /**
-     * @var boolean 是否提供冗余的上游设备(交换机或路由器)，以便实现网络出口的高可用。
+     * @var boolean <p>是否提供冗余的上游设备(交换机或路由器)，以便实现网络出口的高可用。</p>
      */
     public $RedundantNetworking;
 
     /**
-     * @var boolean 是否需要腾讯云团队协助完成机架支撑工作
+     * @var boolean <p>是否需要腾讯云团队协助完成机架支撑工作</p>
      */
     public $NeedHelp;
 
     /**
-     * @var boolean 是否电源冗余
+     * @var boolean <p>是否电源冗余</p>
      */
     public $RedundantPower;
 
     /**
-     * @var boolean 上游断路器是否具备
+     * @var boolean <p>上游断路器是否具备</p>
      */
     public $BreakerRequirement;
 
     /**
-     * @param string $SiteId 机房ID
-     * @param string $FiberType 您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。
-     * @param string $OpticalStandard 您将CDC连接到网络时采用的光学标准。此字段取决于上行链路速度、光纤类型和到上游设备的距离。
-     * @param string $PowerConnectors 电源连接器类型
-     * @param string $PowerFeedDrop 从机架上方还是下方供电。取值范围：["UP","DOWN"]
-     * @param integer $MaxWeight 最大承重(KG)
-     * @param integer $PowerDrawKva 功耗(KW)
-     * @param integer $UplinkSpeedGbps 网络到腾讯云Region区域的上行链路速度(Gbps)
-     * @param integer $UplinkCount 将CDC连接到网络时，每台CDC网络设备(每个机架 2 台设备)使用的上行链路数量。
-     * @param boolean $ConditionRequirement 是否满足下面环境条件：
-1、场地没有材料要求或验收标准会影响 CDC 设备配送和安装。
-2、确定的机架位置包含:
-温度范围为 41 到 104°F (5 到 40°C)。
-湿度范围为 10°F (-12°C)和 8% RH (相对湿度)到 70°F(21°C)和 80% RH。
-机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)，散热功率须达到CDC运行功率值的 145.8 倍以上。
-     * @param boolean $DimensionRequirement 是否满足下面的尺寸条件：
-您的装货站台可以容纳一个机架箱(高 x 宽 x 深 = 94" x 54" x 48")。
-您可以提供从机架(高 x 宽 x 深 = 80" x 24" x 48")交货地点到机架最终安置位置的明确通道。测量深度时，应包括站台、走廊通道、门、转弯、坡道、货梯，并将其他通道限制考虑在内。
-在最终的 CDC安置位置，前部间隙可以为 48" 或更大，后部间隙可以为 24" 或更大。
-     * @param boolean $RedundantNetworking 是否提供冗余的上游设备(交换机或路由器)，以便实现网络出口的高可用。
-     * @param boolean $NeedHelp 是否需要腾讯云团队协助完成机架支撑工作
-     * @param boolean $RedundantPower 是否电源冗余
-     * @param boolean $BreakerRequirement 上游断路器是否具备
+     * @param string $SiteId <p>机房ID</p>
+     * @param string $FiberType <p>您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。</p>
+     * @param string $OpticalStandard <p>您将CDC连接到网络时采用的光学标准。此字段取决于上行链路速度、光纤类型和到上游设备的距离。</p>
+     * @param string $PowerConnectors <p>电源连接器类型</p>
+     * @param string $PowerFeedDrop <p>从机架上方还是下方供电。取值范围：["UP","DOWN"]</p>
+     * @param integer $MaxWeight <p>最大承重(KG)</p>
+     * @param integer $PowerDrawKva <p>功耗(KW)</p>
+     * @param integer $UplinkSpeedGbps <p>网络到腾讯云Region区域的上行链路速度(Gbps)</p>
+     * @param integer $UplinkCount <p>将CDC连接到网络时，每台CDC网络设备(每个机架 2 台设备)使用的上行链路数量。</p>
+     * @param boolean $ConditionRequirement <p>是否满足下面环境条件：1、场地没有材料要求或验收标准会影响 CDC 设备配送和安装。2、确定的机架位置包含:温度范围为 41 到 104°F (5 到 40°C)。湿度范围为 10°F (-12°C)和 8% RH (相对湿度)到 70°F(21°C)和 80% RH。机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)，散热功率须达到CDC运行功率值的 145.8 倍以上。</p>
+     * @param boolean $DimensionRequirement <p>是否满足下面的尺寸条件：您的装货站台可以容纳一个机架箱(高 x 宽 x 深 = 94" x 54" x 48")。您可以提供从机架(高 x 宽 x 深 = 80" x 24" x 48")交货地点到机架最终安置位置的明确通道。测量深度时，应包括站台、走廊通道、门、转弯、坡道、货梯，并将其他通道限制考虑在内。在最终的 CDC安置位置，前部间隙可以为 48" 或更大，后部间隙可以为 24" 或更大。</p>
+     * @param boolean $RedundantNetworking <p>是否提供冗余的上游设备(交换机或路由器)，以便实现网络出口的高可用。</p>
+     * @param boolean $NeedHelp <p>是否需要腾讯云团队协助完成机架支撑工作</p>
+     * @param boolean $RedundantPower <p>是否电源冗余</p>
+     * @param boolean $BreakerRequirement <p>上游断路器是否具备</p>
      */
     function __construct()
     {

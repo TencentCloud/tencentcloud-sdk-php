@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOldAlgorithm(string $OldAlgorithm) 设置原证书加密算法
  * @method string getInstanceStatus() 获取实例状态，不同云产品状态不一样
  * @method void setInstanceStatus(string $InstanceStatus) 设置实例状态，不同云产品状态不一样
+ * @method string getListenerStatus() 获取监听器状态
+ * @method void setListenerStatus(string $ListenerStatus) 设置监听器状态
  */
 class DeployRecordDetail extends AbstractModel
 {
@@ -199,6 +201,11 @@ class DeployRecordDetail extends AbstractModel
     public $InstanceStatus;
 
     /**
+     * @var string 监听器状态
+     */
+    public $ListenerStatus;
+
+    /**
      * @param integer $Id 部署记录详情ID
      * @param string $CertId 部署证书ID
      * @param string $OldCertId 原绑定证书ID
@@ -224,6 +231,7 @@ class DeployRecordDetail extends AbstractModel
      * @param string $Algorithm 当前部署证书加密算法
      * @param string $OldAlgorithm 原证书加密算法
      * @param string $InstanceStatus 实例状态，不同云产品状态不一样
+     * @param string $ListenerStatus 监听器状态
      */
     function __construct()
     {
@@ -336,6 +344,10 @@ class DeployRecordDetail extends AbstractModel
 
         if (array_key_exists("InstanceStatus",$param) and $param["InstanceStatus"] !== null) {
             $this->InstanceStatus = $param["InstanceStatus"];
+        }
+
+        if (array_key_exists("ListenerStatus",$param) and $param["ListenerStatus"] !== null) {
+            $this->ListenerStatus = $param["ListenerStatus"];
         }
     }
 }

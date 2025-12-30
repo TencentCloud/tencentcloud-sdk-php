@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertificateId(string $CertificateId) 设置一键更新的新证书ID。 不传该参数，则公钥证书和私钥证书必传
  * @method array getRegions() 获取需要部署的地域列表（废弃）
  * @method void setRegions(array $Regions) 设置需要部署的地域列表（废弃）
- * @method array getResourceTypesRegions() 获取云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos
- * @method void setResourceTypesRegions(array $ResourceTypesRegions) 设置云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos
+ * @method array getResourceTypesRegions() 获取云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos、mqtt
+ * @method void setResourceTypesRegions(array $ResourceTypesRegions) 设置云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos、mqtt
  * @method string getCertificatePublicKey() 获取公钥证书， 若上传公钥证书，那么私钥证书必传。  则CertificateId不用传
  * @method void setCertificatePublicKey(string $CertificatePublicKey) 设置公钥证书， 若上传公钥证书，那么私钥证书必传。  则CertificateId不用传
  * @method string getCertificatePrivateKey() 获取私钥证书，若上传私钥证书， 那么公钥证书必传；  则CertificateId不用传
@@ -69,7 +69,7 @@ class UpdateCertificateInstanceRequest extends AbstractModel
     public $Regions;
 
     /**
-     * @var array 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos
+     * @var array 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos、mqtt
      */
     public $ResourceTypesRegions;
 
@@ -113,7 +113,7 @@ class UpdateCertificateInstanceRequest extends AbstractModel
      * @param array $ResourceTypes 需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse、cos
      * @param string $CertificateId 一键更新的新证书ID。 不传该参数，则公钥证书和私钥证书必传
      * @param array $Regions 需要部署的地域列表（废弃）
-     * @param array $ResourceTypesRegions 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos
+     * @param array $ResourceTypesRegions 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos、mqtt
      * @param string $CertificatePublicKey 公钥证书， 若上传公钥证书，那么私钥证书必传。  则CertificateId不用传
      * @param string $CertificatePrivateKey 私钥证书，若上传私钥证书， 那么公钥证书必传；  则CertificateId不用传
      * @param integer $ExpiringNotificationSwitch 旧证书是否忽略到期提醒  0:不忽略通知。1:忽略通知，忽略OldCertificateId到期提醒

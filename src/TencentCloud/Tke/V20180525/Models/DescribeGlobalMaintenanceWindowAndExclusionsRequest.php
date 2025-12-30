@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取最大输出条目数，默认为20
  * @method void setLimit(integer $Limit) 设置最大输出条目数，默认为20
- * @method array getFilters() 获取筛选项
- * @method void setFilters(array $Filters) 设置筛选项
+ * @method array getFilters() 获取筛选项，支持按照以下字段过滤：
+- "ID"：维护窗口ID，如：10
+ * @method void setFilters(array $Filters) 设置筛选项，支持按照以下字段过滤：
+- "ID"：维护窗口ID，如：10
  */
 class DescribeGlobalMaintenanceWindowAndExclusionsRequest extends AbstractModel
 {
@@ -40,14 +42,16 @@ class DescribeGlobalMaintenanceWindowAndExclusionsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array 筛选项
+     * @var array 筛选项，支持按照以下字段过滤：
+- "ID"：维护窗口ID，如：10
      */
     public $Filters;
 
     /**
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 最大输出条目数，默认为20
-     * @param array $Filters 筛选项
+     * @param array $Filters 筛选项，支持按照以下字段过滤：
+- "ID"：维护窗口ID，如：10
      */
     function __construct()
     {

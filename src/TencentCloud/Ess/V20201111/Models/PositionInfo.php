@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageIndex(integer $PageIndex) 设置PDF文件页码索引，此值加1就是对应PDF文件的页码。
  * @method string getId() 获取系统生成的唯一ID值
  * @method void setId(string $Id) 设置系统生成的唯一ID值
+ * @method integer getBegin() 获取开始位置
+ * @method void setBegin(integer $Begin) 设置开始位置
+ * @method integer getEnd() 获取结束位置
+ * @method void setEnd(integer $End) 设置结束位置
+ * @method integer getDocType() 获取文档类型，1：pdf，2：doc 文档
+ * @method void setDocType(integer $DocType) 设置文档类型，1：pdf，2：doc 文档
  */
 class PositionInfo extends AbstractModel
 {
@@ -66,12 +72,30 @@ class PositionInfo extends AbstractModel
     public $Id;
 
     /**
+     * @var integer 开始位置
+     */
+    public $Begin;
+
+    /**
+     * @var integer 结束位置
+     */
+    public $End;
+
+    /**
+     * @var integer 文档类型，1：pdf，2：doc 文档
+     */
+    public $DocType;
+
+    /**
      * @param float $X PDF文件页X坐标位置,以PDF单页左上角为坐标原点
      * @param float $Y PDF文件页Y坐标位置,以PDF单页左上角为坐标原点
      * @param float $Width 距离X坐标的宽度，用于在PDF文件进行画框。
      * @param float $Height 距离Y坐标的高度，用于在PDF文件进行画框。
      * @param integer $PageIndex PDF文件页码索引，此值加1就是对应PDF文件的页码。
      * @param string $Id 系统生成的唯一ID值
+     * @param integer $Begin 开始位置
+     * @param integer $End 结束位置
+     * @param integer $DocType 文档类型，1：pdf，2：doc 文档
      */
     function __construct()
     {
@@ -108,6 +132,18 @@ class PositionInfo extends AbstractModel
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Begin",$param) and $param["Begin"] !== null) {
+            $this->Begin = $param["Begin"];
+        }
+
+        if (array_key_exists("End",$param) and $param["End"] !== null) {
+            $this->End = $param["End"];
+        }
+
+        if (array_key_exists("DocType",$param) and $param["DocType"] !== null) {
+            $this->DocType = $param["DocType"];
         }
     }
 }

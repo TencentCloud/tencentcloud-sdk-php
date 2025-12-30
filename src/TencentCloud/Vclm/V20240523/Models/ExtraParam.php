@@ -22,6 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUserDesignatedUrl() 获取预签名的上传url，支持把视频直接传到客户指定的地址。
  * @method void setUserDesignatedUrl(string $UserDesignatedUrl) 设置预签名的上传url，支持把视频直接传到客户指定的地址。
+ * @method string getCallbackUrl() 获取回调地址
+需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。
+数据格式如下：
+{
+    "JobId": "1397428070633955328",
+    "Status": "DONE",
+    "ErrorCode": "",
+    "ErrorMessage": "",
+    "ResultVideoUrl": "https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4"
+}
+ * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址
+需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。
+数据格式如下：
+{
+    "JobId": "1397428070633955328",
+    "Status": "DONE",
+    "ErrorCode": "",
+    "ErrorMessage": "",
+    "ResultVideoUrl": "https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4"
+}
  */
 class ExtraParam extends AbstractModel
 {
@@ -31,7 +51,31 @@ class ExtraParam extends AbstractModel
     public $UserDesignatedUrl;
 
     /**
+     * @var string 回调地址
+需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。
+数据格式如下：
+{
+    "JobId": "1397428070633955328",
+    "Status": "DONE",
+    "ErrorCode": "",
+    "ErrorMessage": "",
+    "ResultVideoUrl": "https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4"
+}
+     */
+    public $CallbackUrl;
+
+    /**
      * @param string $UserDesignatedUrl 预签名的上传url，支持把视频直接传到客户指定的地址。
+     * @param string $CallbackUrl 回调地址
+需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。
+数据格式如下：
+{
+    "JobId": "1397428070633955328",
+    "Status": "DONE",
+    "ErrorCode": "",
+    "ErrorMessage": "",
+    "ResultVideoUrl": "https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4"
+}
      */
     function __construct()
     {
@@ -48,6 +92,10 @@ class ExtraParam extends AbstractModel
         }
         if (array_key_exists("UserDesignatedUrl",$param) and $param["UserDesignatedUrl"] !== null) {
             $this->UserDesignatedUrl = $param["UserDesignatedUrl"];
+        }
+
+        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
+            $this->CallbackUrl = $param["CallbackUrl"];
         }
     }
 }

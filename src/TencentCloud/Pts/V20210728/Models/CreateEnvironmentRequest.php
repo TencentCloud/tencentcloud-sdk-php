@@ -20,14 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateEnvironment请求参数结构体
  *
-
+ * @method string getProjectId() 获取项目ID
+ * @method void setProjectId(string $ProjectId) 设置项目ID
+ * @method string getName() 获取环境名
+ * @method void setName(string $Name) 设置环境名
+ * @method array getEnvVars() 获取环境变量
+ * @method void setEnvVars(array $EnvVars) 设置环境变量
+ * @method string getDescription() 获取环境描述
+ * @method void setDescription(string $Description) 设置环境描述
  */
 class CreateEnvironmentRequest extends AbstractModel
 {
-
+    /**
+     * @var string 项目ID
+     */
+    public $ProjectId;
 
     /**
+     * @var string 环境名
+     */
+    public $Name;
 
+    /**
+     * @var array 环境变量
+     */
+    public $EnvVars;
+
+    /**
+     * @var string 环境描述
+     */
+    public $Description;
+
+    /**
+     * @param string $ProjectId 项目ID
+     * @param string $Name 环境名
+     * @param array $EnvVars 环境变量
+     * @param string $Description 环境描述
      */
     function __construct()
     {
@@ -42,6 +70,25 @@ class CreateEnvironmentRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
 
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("EnvVars",$param) and $param["EnvVars"] !== null) {
+            $this->EnvVars = [];
+            foreach ($param["EnvVars"] as $key => $value){
+                $obj = new EnvVar();
+                $obj->deserialize($value);
+                array_push($this->EnvVars, $obj);
+            }
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
     }
 }

@@ -22,11 +22,13 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModelName() 获取模型名称。
 当前支持的模型列表：
+Hunyuan,
 GEM，
 Jimeng，
 Qwen。
  * @method void setModelName(string $ModelName) 设置模型名称。
 当前支持的模型列表：
+Hunyuan,
 GEM，
 Jimeng，
 Qwen。
@@ -72,6 +74,7 @@ class CreateAigcImageTaskRequest extends AbstractModel
     /**
      * @var string 模型名称。
 当前支持的模型列表：
+Hunyuan,
 GEM，
 Jimeng，
 Qwen。
@@ -131,6 +134,7 @@ Qwen。
     /**
      * @param string $ModelName 模型名称。
 当前支持的模型列表：
+Hunyuan,
 GEM，
 Jimeng，
 Qwen。

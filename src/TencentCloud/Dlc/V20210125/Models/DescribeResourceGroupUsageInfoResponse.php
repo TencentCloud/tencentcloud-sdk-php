@@ -14,23 +14,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLiveTranscodeTotalInfo返回参数结构体
+ * DescribeResourceGroupUsageInfo返回参数结构体
  *
- * @method array getDataInfoList() 获取<p>统计数据列表。</p>
- * @method void setDataInfoList(array $DataInfoList) 设置<p>统计数据列表。</p>
+ * @method integer getTotal() 获取资源上限
+ * @method void setTotal(integer $Total) 设置资源上限
+ * @method integer getUsed() 获取已占用资源
+ * @method void setUsed(integer $Used) 设置已占用资源
+ * @method integer getAvailable() 获取剩余可用资源
+ * @method void setAvailable(integer $Available) 设置剩余可用资源
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeLiveTranscodeTotalInfoResponse extends AbstractModel
+class DescribeResourceGroupUsageInfoResponse extends AbstractModel
 {
     /**
-     * @var array <p>统计数据列表。</p>
+     * @var integer 资源上限
      */
-    public $DataInfoList;
+    public $Total;
+
+    /**
+     * @var integer 已占用资源
+     */
+    public $Used;
+
+    /**
+     * @var integer 剩余可用资源
+     */
+    public $Available;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +52,9 @@ class DescribeLiveTranscodeTotalInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DataInfoList <p>统计数据列表。</p>
+     * @param integer $Total 资源上限
+     * @param integer $Used 已占用资源
+     * @param integer $Available 剩余可用资源
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,13 +70,16 @@ class DescribeLiveTranscodeTotalInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DataInfoList",$param) and $param["DataInfoList"] !== null) {
-            $this->DataInfoList = [];
-            foreach ($param["DataInfoList"] as $key => $value){
-                $obj = new TranscodeTotalInfo();
-                $obj->deserialize($value);
-                array_push($this->DataInfoList, $obj);
-            }
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("Used",$param) and $param["Used"] !== null) {
+            $this->Used = $param["Used"];
+        }
+
+        if (array_key_exists("Available",$param) and $param["Available"] !== null) {
+            $this->Available = $param["Available"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

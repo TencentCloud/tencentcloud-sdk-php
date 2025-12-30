@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Lke\V20231130\Models as Models;
 
 /**
+ * @method Models\CallbackWorkflowToolNodeResponse CallbackWorkflowToolNode(Models\CallbackWorkflowToolNodeRequest $req) 工作流工具节点异步回调
  * @method Models\CheckAttributeLabelExistResponse CheckAttributeLabelExist(Models\CheckAttributeLabelExistRequest $req) 检查属性下的标签名是否存在
  * @method Models\CheckAttributeLabelReferResponse CheckAttributeLabelRefer(Models\CheckAttributeLabelReferRequest $req) 检查属性标签引用
  * @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) 创建知识引擎应用。

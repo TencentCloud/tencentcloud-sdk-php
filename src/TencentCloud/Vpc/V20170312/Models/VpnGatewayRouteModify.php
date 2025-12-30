@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRouteId(string $RouteId) 设置VPN网关路由ID。
  * @method string getStatus() 获取VPN网关状态, ENABLE 启用, DISABLE禁用。
  * @method void setStatus(string $Status) 设置VPN网关状态, ENABLE 启用, DISABLE禁用。
+ * @method string getDescription() 获取VPN路由备注
+ * @method void setDescription(string $Description) 设置VPN路由备注
  */
 class VpnGatewayRouteModify extends AbstractModel
 {
@@ -38,8 +40,14 @@ class VpnGatewayRouteModify extends AbstractModel
     public $Status;
 
     /**
+     * @var string VPN路由备注
+     */
+    public $Description;
+
+    /**
      * @param string $RouteId VPN网关路由ID。
      * @param string $Status VPN网关状态, ENABLE 启用, DISABLE禁用。
+     * @param string $Description VPN路由备注
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class VpnGatewayRouteModify extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSessionId() 获取会话ID，用于后续继续对话
  * @method void setSessionId(string $SessionId) 设置会话ID，用于后续继续对话
- * @method integer getTimestamp() 获取unix时间戳
- * @method void setTimestamp(integer $Timestamp) 设置unix时间戳
+ * @method integer getTimestamp() 获取Unix 时间戳
+ * @method void setTimestamp(integer $Timestamp) 设置Unix 时间戳
  * @method ChatContent getContent() 获取诊断内容
  * @method void setContent(ChatContent $Content) 设置诊断内容
  * @method boolean getPartial() 获取是否为部分内容（流式场景）
@@ -45,7 +45,7 @@ class CloudMateAgentResponse extends AbstractModel
     public $SessionId;
 
     /**
-     * @var integer unix时间戳
+     * @var integer Unix 时间戳
      */
     public $Timestamp;
 
@@ -81,7 +81,7 @@ class CloudMateAgentResponse extends AbstractModel
 
     /**
      * @param string $SessionId 会话ID，用于后续继续对话
-     * @param integer $Timestamp unix时间戳
+     * @param integer $Timestamp Unix 时间戳
      * @param ChatContent $Content 诊断内容
      * @param boolean $Partial 是否为部分内容（流式场景）
      * @param boolean $TurnComplete 本轮对话是否完成

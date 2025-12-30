@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
  * @method string getUpdateTime() 获取更新时间。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间。
+ * @method string getDescription() 获取路由备注
+ * @method void setDescription(string $Description) 设置路由备注
  */
 class VpnGatewayRoute extends AbstractModel
 {
@@ -87,6 +89,11 @@ class VpnGatewayRoute extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 路由备注
+     */
+    public $Description;
+
+    /**
      * @param string $DestinationCidrBlock 目的端IDC网段。
      * @param string $InstanceType 下一跳类型（关联实例类型）可选值："VPNCONN"（VPN通道）， "CCN"（CCN实例）。
      * @param string $InstanceId 下一跳实例ID。
@@ -96,6 +103,7 @@ class VpnGatewayRoute extends AbstractModel
      * @param string $Type 路由类型，可选值："VPC"（VPC路由），"CCN"（云联网传播路由），"Static"（静态路由），"BGP"（BGP路由）。
      * @param string $CreateTime 创建时间。
      * @param string $UpdateTime 更新时间。
+     * @param string $Description 路由备注
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class VpnGatewayRoute extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

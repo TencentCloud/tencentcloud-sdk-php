@@ -20,108 +20,136 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCertificateBindResourceTaskDetail返回参数结构体
  *
- * @method array getCLB() 获取关联clb资源详情	
- * @method void setCLB(array $CLB) 设置关联clb资源详情	
- * @method array getCDN() 获取关联cdn资源详情	
- * @method void setCDN(array $CDN) 设置关联cdn资源详情	
- * @method array getWAF() 获取关联waf资源详情	
- * @method void setWAF(array $WAF) 设置关联waf资源详情	
- * @method array getDDOS() 获取关联ddos资源详情	
- * @method void setDDOS(array $DDOS) 设置关联ddos资源详情	
- * @method array getLIVE() 获取关联live资源详情	
- * @method void setLIVE(array $LIVE) 设置关联live资源详情	
- * @method array getVOD() 获取关联vod资源详情	
- * @method void setVOD(array $VOD) 设置关联vod资源详情	
- * @method array getTKE() 获取关联tke资源详情	
- * @method void setTKE(array $TKE) 设置关联tke资源详情	
- * @method array getAPIGATEWAY() 获取关联apigateway资源详情	
- * @method void setAPIGATEWAY(array $APIGATEWAY) 设置关联apigateway资源详情	
- * @method array getTCB() 获取关联tcb资源详情	
- * @method void setTCB(array $TCB) 设置关联tcb资源详情	
- * @method array getTEO() 获取关联teo资源详情	
- * @method void setTEO(array $TEO) 设置关联teo资源详情	
- * @method integer getStatus() 获取关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因
- * @method void setStatus(integer $Status) 设置关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因
- * @method string getCacheTime() 获取当前结果缓存时间
- * @method void setCacheTime(string $CacheTime) 设置当前结果缓存时间
- * @method array getTSE() 获取关联tse资源详情	
- * @method void setTSE(array $TSE) 设置关联tse资源详情	
- * @method array getCOS() 获取关联的COS资源详情
- * @method void setCOS(array $COS) 设置关联的COS资源详情
+ * @method array getCLB() 获取<p>关联clb资源详情   </p>
+ * @method void setCLB(array $CLB) 设置<p>关联clb资源详情   </p>
+ * @method array getCDN() 获取<p>关联cdn资源详情   </p>
+ * @method void setCDN(array $CDN) 设置<p>关联cdn资源详情   </p>
+ * @method array getWAF() 获取<p>关联waf资源详情   </p>
+ * @method void setWAF(array $WAF) 设置<p>关联waf资源详情   </p>
+ * @method array getDDOS() 获取<p>关联ddos资源详情  </p>
+ * @method void setDDOS(array $DDOS) 设置<p>关联ddos资源详情  </p>
+ * @method array getLIVE() 获取<p>关联live资源详情  </p>
+ * @method void setLIVE(array $LIVE) 设置<p>关联live资源详情  </p>
+ * @method array getVOD() 获取<p>关联vod资源详情   </p>
+ * @method void setVOD(array $VOD) 设置<p>关联vod资源详情   </p>
+ * @method array getTKE() 获取<p>关联tke资源详情   </p>
+ * @method void setTKE(array $TKE) 设置<p>关联tke资源详情   </p>
+ * @method array getAPIGATEWAY() 获取<p>关联apigateway资源详情    </p>
+ * @method void setAPIGATEWAY(array $APIGATEWAY) 设置<p>关联apigateway资源详情    </p>
+ * @method array getTCB() 获取<p>关联tcb资源详情   </p>
+ * @method void setTCB(array $TCB) 设置<p>关联tcb资源详情   </p>
+ * @method array getTEO() 获取<p>关联teo资源详情   </p>
+ * @method void setTEO(array $TEO) 设置<p>关联teo资源详情   </p>
+ * @method integer getStatus() 获取<p>关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因</p>
+ * @method void setStatus(integer $Status) 设置<p>关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因</p>
+ * @method string getCacheTime() 获取<p>当前结果缓存时间</p>
+ * @method void setCacheTime(string $CacheTime) 设置<p>当前结果缓存时间</p>
+ * @method array getTSE() 获取<p>关联tse资源详情   </p>
+ * @method void setTSE(array $TSE) 设置<p>关联tse资源详情   </p>
+ * @method array getCOS() 获取<p>关联的COS资源详情</p>
+ * @method void setCOS(array $COS) 设置<p>关联的COS资源详情</p>
+ * @method array getTDMQ() 获取<p>关联的TDMQ - Rabbit资源详情</p>
+ * @method void setTDMQ(array $TDMQ) 设置<p>关联的TDMQ - Rabbit资源详情</p>
+ * @method array getMQTT() 获取<p>关联的MQTT资源详情</p>
+ * @method void setMQTT(array $MQTT) 设置<p>关联的MQTT资源详情</p>
+ * @method array getGAAP() 获取<p>关联的GAAP资源详情</p>
+ * @method void setGAAP(array $GAAP) 设置<p>关联的GAAP资源详情</p>
+ * @method array getSCF() 获取<p>关联的SCF资源详情</p>
+ * @method void setSCF(array $SCF) 设置<p>关联的SCF资源详情</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCertificateBindResourceTaskDetailResponse extends AbstractModel
 {
     /**
-     * @var array 关联clb资源详情	
+     * @var array <p>关联clb资源详情   </p>
      */
     public $CLB;
 
     /**
-     * @var array 关联cdn资源详情	
+     * @var array <p>关联cdn资源详情   </p>
      */
     public $CDN;
 
     /**
-     * @var array 关联waf资源详情	
+     * @var array <p>关联waf资源详情   </p>
      */
     public $WAF;
 
     /**
-     * @var array 关联ddos资源详情	
+     * @var array <p>关联ddos资源详情  </p>
      */
     public $DDOS;
 
     /**
-     * @var array 关联live资源详情	
+     * @var array <p>关联live资源详情  </p>
      */
     public $LIVE;
 
     /**
-     * @var array 关联vod资源详情	
+     * @var array <p>关联vod资源详情   </p>
      */
     public $VOD;
 
     /**
-     * @var array 关联tke资源详情	
+     * @var array <p>关联tke资源详情   </p>
      */
     public $TKE;
 
     /**
-     * @var array 关联apigateway资源详情	
+     * @var array <p>关联apigateway资源详情    </p>
      */
     public $APIGATEWAY;
 
     /**
-     * @var array 关联tcb资源详情	
+     * @var array <p>关联tcb资源详情   </p>
      */
     public $TCB;
 
     /**
-     * @var array 关联teo资源详情	
+     * @var array <p>关联teo资源详情   </p>
      */
     public $TEO;
 
     /**
-     * @var integer 关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因
+     * @var integer <p>关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因</p>
      */
     public $Status;
 
     /**
-     * @var string 当前结果缓存时间
+     * @var string <p>当前结果缓存时间</p>
      */
     public $CacheTime;
 
     /**
-     * @var array 关联tse资源详情	
+     * @var array <p>关联tse资源详情   </p>
      */
     public $TSE;
 
     /**
-     * @var array 关联的COS资源详情
+     * @var array <p>关联的COS资源详情</p>
      */
     public $COS;
+
+    /**
+     * @var array <p>关联的TDMQ - Rabbit资源详情</p>
+     */
+    public $TDMQ;
+
+    /**
+     * @var array <p>关联的MQTT资源详情</p>
+     */
+    public $MQTT;
+
+    /**
+     * @var array <p>关联的GAAP资源详情</p>
+     */
+    public $GAAP;
+
+    /**
+     * @var array <p>关联的SCF资源详情</p>
+     */
+    public $SCF;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -129,20 +157,24 @@ class DescribeCertificateBindResourceTaskDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $CLB 关联clb资源详情	
-     * @param array $CDN 关联cdn资源详情	
-     * @param array $WAF 关联waf资源详情	
-     * @param array $DDOS 关联ddos资源详情	
-     * @param array $LIVE 关联live资源详情	
-     * @param array $VOD 关联vod资源详情	
-     * @param array $TKE 关联tke资源详情	
-     * @param array $APIGATEWAY 关联apigateway资源详情	
-     * @param array $TCB 关联tcb资源详情	
-     * @param array $TEO 关联teo资源详情	
-     * @param integer $Status 关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因
-     * @param string $CacheTime 当前结果缓存时间
-     * @param array $TSE 关联tse资源详情	
-     * @param array $COS 关联的COS资源详情
+     * @param array $CLB <p>关联clb资源详情   </p>
+     * @param array $CDN <p>关联cdn资源详情   </p>
+     * @param array $WAF <p>关联waf资源详情   </p>
+     * @param array $DDOS <p>关联ddos资源详情  </p>
+     * @param array $LIVE <p>关联live资源详情  </p>
+     * @param array $VOD <p>关联vod资源详情   </p>
+     * @param array $TKE <p>关联tke资源详情   </p>
+     * @param array $APIGATEWAY <p>关联apigateway资源详情    </p>
+     * @param array $TCB <p>关联tcb资源详情   </p>
+     * @param array $TEO <p>关联teo资源详情   </p>
+     * @param integer $Status <p>关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因</p>
+     * @param string $CacheTime <p>当前结果缓存时间</p>
+     * @param array $TSE <p>关联tse资源详情   </p>
+     * @param array $COS <p>关联的COS资源详情</p>
+     * @param array $TDMQ <p>关联的TDMQ - Rabbit资源详情</p>
+     * @param array $MQTT <p>关联的MQTT资源详情</p>
+     * @param array $GAAP <p>关联的GAAP资源详情</p>
+     * @param array $SCF <p>关联的SCF资源详情</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -271,6 +303,42 @@ class DescribeCertificateBindResourceTaskDetailResponse extends AbstractModel
                 $obj = new COSInstanceList();
                 $obj->deserialize($value);
                 array_push($this->COS, $obj);
+            }
+        }
+
+        if (array_key_exists("TDMQ",$param) and $param["TDMQ"] !== null) {
+            $this->TDMQ = [];
+            foreach ($param["TDMQ"] as $key => $value){
+                $obj = new TDMQInstanceList();
+                $obj->deserialize($value);
+                array_push($this->TDMQ, $obj);
+            }
+        }
+
+        if (array_key_exists("MQTT",$param) and $param["MQTT"] !== null) {
+            $this->MQTT = [];
+            foreach ($param["MQTT"] as $key => $value){
+                $obj = new MQTTInstanceList();
+                $obj->deserialize($value);
+                array_push($this->MQTT, $obj);
+            }
+        }
+
+        if (array_key_exists("GAAP",$param) and $param["GAAP"] !== null) {
+            $this->GAAP = [];
+            foreach ($param["GAAP"] as $key => $value){
+                $obj = new GAAPInstanceList();
+                $obj->deserialize($value);
+                array_push($this->GAAP, $obj);
+            }
+        }
+
+        if (array_key_exists("SCF",$param) and $param["SCF"] !== null) {
+            $this->SCF = [];
+            foreach ($param["SCF"] as $key => $value){
+                $obj = new SCFInstanceList();
+                $obj->deserialize($value);
+                array_push($this->SCF, $obj);
             }
         }
 

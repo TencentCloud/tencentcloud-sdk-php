@@ -121,6 +121,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeNotebookSessionStatementsResponse DescribeNotebookSessionStatements(Models\DescribeNotebookSessionStatementsRequest $req) 本接口（DescribeNotebookSessionStatements）用于查询Session中执行的任务列表
  * @method Models\DescribeNotebookSessionsResponse DescribeNotebookSessions(Models\DescribeNotebookSessionsRequest $req) 本接口（DescribeNotebookSessions）用于查询交互式 session列表
  * @method Models\DescribeOtherCHDFSBindingListResponse DescribeOtherCHDFSBindingList(Models\DescribeOtherCHDFSBindingListRequest $req) 此接口（DescribeOtherCHDFSBindingList）用于查询其他产品元数据加速桶绑定列表
+ * @method Models\DescribeResourceGroupUsageInfoResponse DescribeResourceGroupUsageInfo(Models\DescribeResourceGroupUsageInfoRequest $req) 本接口根据资源组ID查询资源组CU使用情况
  * @method Models\DescribeResultDownloadResponse DescribeResultDownload(Models\DescribeResultDownloadRequest $req) 查询结果下载任务
  * @method Models\DescribeScriptsResponse DescribeScripts(Models\DescribeScriptsRequest $req) 该接口（DescribeScripts）用于查询SQL脚本列表
  * @method Models\DescribeSessionImageVersionResponse DescribeSessionImageVersion(Models\DescribeSessionImageVersionRequest $req) 获取指定大版本下所有小版本的所有内置镜像

@@ -134,6 +134,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlgorithm(string $Algorithm) 设置新证书加密算法
  * @method string getOldAlgorithm() 获取旧证书加密算法
  * @method void setOldAlgorithm(string $OldAlgorithm) 设置旧证书加密算法
+ * @method string getInstanceStatus() 获取实例状态，不同云产品状态不一样	
+ * @method void setInstanceStatus(string $InstanceStatus) 设置实例状态，不同云产品状态不一样	
+ * @method string getListenerStatus() 获取监听器状态
+ * @method void setListenerStatus(string $ListenerStatus) 设置监听器状态
  */
 class UpdateRecordDetail extends AbstractModel
 {
@@ -295,6 +299,16 @@ class UpdateRecordDetail extends AbstractModel
     public $OldAlgorithm;
 
     /**
+     * @var string 实例状态，不同云产品状态不一样	
+     */
+    public $InstanceStatus;
+
+    /**
+     * @var string 监听器状态
+     */
+    public $ListenerStatus;
+
+    /**
      * @param integer $Id 更新详情记录id
      * @param string $CertId 新旧证书更新 - 新证书ID
      * @param string $OldCertId 新旧证书更新 - 旧证书ID
@@ -352,6 +366,8 @@ class UpdateRecordDetail extends AbstractModel
      * @param string $Url 监听器Url(clb专属)
      * @param string $Algorithm 新证书加密算法
      * @param string $OldAlgorithm 旧证书加密算法
+     * @param string $InstanceStatus 实例状态，不同云产品状态不一样	
+     * @param string $ListenerStatus 监听器状态
      */
     function __construct()
     {
@@ -464,6 +480,14 @@ class UpdateRecordDetail extends AbstractModel
 
         if (array_key_exists("OldAlgorithm",$param) and $param["OldAlgorithm"] !== null) {
             $this->OldAlgorithm = $param["OldAlgorithm"];
+        }
+
+        if (array_key_exists("InstanceStatus",$param) and $param["InstanceStatus"] !== null) {
+            $this->InstanceStatus = $param["InstanceStatus"];
+        }
+
+        if (array_key_exists("ListenerStatus",$param) and $param["ListenerStatus"] !== null) {
+            $this->ListenerStatus = $param["ListenerStatus"];
         }
     }
 }

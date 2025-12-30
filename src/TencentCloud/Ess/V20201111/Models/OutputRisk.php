@@ -52,6 +52,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRiskBasis(string $RiskBasis) 设置审查依据
  * @method integer getRiskLevelId() 获取风险等级id。1 为最高风险等级，0 为最低风险等级，从[2,n]数字越大风险等级逐渐降低。
  * @method void setRiskLevelId(integer $RiskLevelId) 设置风险等级id。1 为最高风险等级，0 为最低风险等级，从[2,n]数字越大风险等级逐渐降低。
+ * @method array getRiskLabels() 获取风险标签
+ * @method void setRiskLabels(array $RiskLabels) 设置风险标签
+ * @method integer getRiskOrigin() 获取风险来源 0:模型标注的风险 1:人工标注的风险
+ * @method void setRiskOrigin(integer $RiskOrigin) 设置风险来源 0:模型标注的风险 1:人工标注的风险
+ * @method string getCreator() 获取创建人
+ * @method void setCreator(string $Creator) 设置创建人
+ * @method string getCreatorId() 获取创建人ID
+ * @method void setCreatorId(string $CreatorId) 设置创建人ID
+ * @method integer getCreatedOn() 获取创建时间
+ * @method void setCreatedOn(integer $CreatedOn) 设置创建时间
  */
 class OutputRisk extends AbstractModel
 {
@@ -112,6 +122,31 @@ class OutputRisk extends AbstractModel
     public $RiskLevelId;
 
     /**
+     * @var array 风险标签
+     */
+    public $RiskLabels;
+
+    /**
+     * @var integer 风险来源 0:模型标注的风险 1:人工标注的风险
+     */
+    public $RiskOrigin;
+
+    /**
+     * @var string 创建人
+     */
+    public $Creator;
+
+    /**
+     * @var string 创建人ID
+     */
+    public $CreatorId;
+
+    /**
+     * @var integer 创建时间
+     */
+    public $CreatedOn;
+
+    /**
      * @param string $RiskId 合同审查风险结果ID
      * @param string $RiskName 风险名称
      * @param string $RiskDescription 风险描述
@@ -128,6 +163,11 @@ class OutputRisk extends AbstractModel
      * @param array $Positions 审查出的PDF段落位置信息
      * @param string $RiskBasis 审查依据
      * @param integer $RiskLevelId 风险等级id。1 为最高风险等级，0 为最低风险等级，从[2,n]数字越大风险等级逐渐降低。
+     * @param array $RiskLabels 风险标签
+     * @param integer $RiskOrigin 风险来源 0:模型标注的风险 1:人工标注的风险
+     * @param string $Creator 创建人
+     * @param string $CreatorId 创建人ID
+     * @param integer $CreatedOn 创建时间
      */
     function __construct()
     {
@@ -185,6 +225,26 @@ class OutputRisk extends AbstractModel
 
         if (array_key_exists("RiskLevelId",$param) and $param["RiskLevelId"] !== null) {
             $this->RiskLevelId = $param["RiskLevelId"];
+        }
+
+        if (array_key_exists("RiskLabels",$param) and $param["RiskLabels"] !== null) {
+            $this->RiskLabels = $param["RiskLabels"];
+        }
+
+        if (array_key_exists("RiskOrigin",$param) and $param["RiskOrigin"] !== null) {
+            $this->RiskOrigin = $param["RiskOrigin"];
+        }
+
+        if (array_key_exists("Creator",$param) and $param["Creator"] !== null) {
+            $this->Creator = $param["Creator"];
+        }
+
+        if (array_key_exists("CreatorId",$param) and $param["CreatorId"] !== null) {
+            $this->CreatorId = $param["CreatorId"];
+        }
+
+        if (array_key_exists("CreatedOn",$param) and $param["CreatedOn"] !== null) {
+            $this->CreatedOn = $param["CreatedOn"];
         }
     }
 }

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 支持风格迁移、替换、元素增加、删除控制
  * @method void setPrompt(string $Prompt) 设置视频内容的描述，中文正向提示词。最多支持200个 utf-8 字符（首尾空格不计入字符数）。
 支持风格迁移、替换、元素增加、删除控制
+ * @method array getImages() 获取图片数组
+ * @method void setImages(array $Images) 设置图片数组
  * @method Image getImage() 获取图片base64或者图片url
 
 - Base64 和 Url 必须提供一个，如果都提供以Url为准。
@@ -69,6 +71,11 @@ class SubmitVideoEditJobRequest extends AbstractModel
     public $Prompt;
 
     /**
+     * @var array 图片数组
+     */
+    public $Images;
+
+    /**
      * @var Image 图片base64或者图片url
 
 - Base64 和 Url 必须提供一个，如果都提供以Url为准。
@@ -96,6 +103,7 @@ class SubmitVideoEditJobRequest extends AbstractModel
 - 视频分辨率：无限制（待验证是否可以无损输出）
      * @param string $Prompt 视频内容的描述，中文正向提示词。最多支持200个 utf-8 字符（首尾空格不计入字符数）。
 支持风格迁移、替换、元素增加、删除控制
+     * @param array $Images 图片数组
      * @param Image $Image 图片base64或者图片url
 
 - Base64 和 Url 必须提供一个，如果都提供以Url为准。
@@ -124,6 +132,15 @@ class SubmitVideoEditJobRequest extends AbstractModel
 
         if (array_key_exists("Prompt",$param) and $param["Prompt"] !== null) {
             $this->Prompt = $param["Prompt"];
+        }
+
+        if (array_key_exists("Images",$param) and $param["Images"] !== null) {
+            $this->Images = [];
+            foreach ($param["Images"] as $key => $value){
+                $obj = new Image();
+                $obj->deserialize($value);
+                array_push($this->Images, $obj);
+            }
         }
 
         if (array_key_exists("Image",$param) and $param["Image"] !== null) {

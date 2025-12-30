@@ -20,98 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCertificateBindResourceTaskDetail请求参数结构体
  *
- * @method string getTaskId() 获取任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果
- * @method void setTaskId(string $TaskId) 设置任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果
- * @method string getLimit() 获取每页展示数量， 默认10，最大值100; 分页总数为云资源地域下实例总数， 即第一页会拉群每个云资源的地域下面Limit数量实例
- * @method void setLimit(string $Limit) 设置每页展示数量， 默认10，最大值100; 分页总数为云资源地域下实例总数， 即第一页会拉群每个云资源的地域下面Limit数量实例
- * @method string getOffset() 获取当前偏移量，默认为0
- * @method void setOffset(string $Offset) 设置当前偏移量，默认为0
- * @method array getResourceTypes() 获取查询资源类型的结果详情， 不传则查询所有，取值支持：
-- clb
-- cdn
-- ddos
-- live
-- vod
-- waf
-- apigateway
-- teo
-- tke
-- cos
-- tse
-- tcb
- * @method void setResourceTypes(array $ResourceTypes) 设置查询资源类型的结果详情， 不传则查询所有，取值支持：
-- clb
-- cdn
-- ddos
-- live
-- vod
-- waf
-- apigateway
-- teo
-- tke
-- cos
-- tse
-- tcb
- * @method array getRegions() 获取查询地域列表的数据，clb、tke、waf、apigateway、tcb、cos、tse支持地域查询， 其他资源类型不支持
- * @method void setRegions(array $Regions) 设置查询地域列表的数据，clb、tke、waf、apigateway、tcb、cos、tse支持地域查询， 其他资源类型不支持
+ * @method string getTaskId() 获取<p>任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果</p>
+ * @method string getLimit() 获取<p>每页展示数量， 默认10，最大值100; 分页总数为云资源地域下实例总数， 即第一页会拉群每个云资源的地域下面Limit数量实例</p>
+ * @method void setLimit(string $Limit) 设置<p>每页展示数量， 默认10，最大值100; 分页总数为云资源地域下实例总数， 即第一页会拉群每个云资源的地域下面Limit数量实例</p>
+ * @method string getOffset() 获取<p>当前偏移量，默认为0</p>
+ * @method void setOffset(string $Offset) 设置<p>当前偏移量，默认为0</p>
+ * @method array getResourceTypes() 获取<p>查询资源类型的结果详情， 不传则查询所有，取值支持：- clb- cdn- ddos- live- vod- waf- apigateway- teo- tke- cos- tse- tcb</p>
+ * @method void setResourceTypes(array $ResourceTypes) 设置<p>查询资源类型的结果详情， 不传则查询所有，取值支持：- clb- cdn- ddos- live- vod- waf- apigateway- teo- tke- cos- tse- tcb</p>
+ * @method array getRegions() 获取<p>查询地域列表的数据，clb、tke、waf、apigateway、tcb、cos、tse支持地域查询， 其他资源类型不支持</p>
+ * @method void setRegions(array $Regions) 设置<p>查询地域列表的数据，clb、tke、waf、apigateway、tcb、cos、tse支持地域查询， 其他资源类型不支持</p>
  */
 class DescribeCertificateBindResourceTaskDetailRequest extends AbstractModel
 {
     /**
-     * @var string 任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果
+     * @var string <p>任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果</p>
      */
     public $TaskId;
 
     /**
-     * @var string 每页展示数量， 默认10，最大值100; 分页总数为云资源地域下实例总数， 即第一页会拉群每个云资源的地域下面Limit数量实例
+     * @var string <p>每页展示数量， 默认10，最大值100; 分页总数为云资源地域下实例总数， 即第一页会拉群每个云资源的地域下面Limit数量实例</p>
      */
     public $Limit;
 
     /**
-     * @var string 当前偏移量，默认为0
+     * @var string <p>当前偏移量，默认为0</p>
      */
     public $Offset;
 
     /**
-     * @var array 查询资源类型的结果详情， 不传则查询所有，取值支持：
-- clb
-- cdn
-- ddos
-- live
-- vod
-- waf
-- apigateway
-- teo
-- tke
-- cos
-- tse
-- tcb
+     * @var array <p>查询资源类型的结果详情， 不传则查询所有，取值支持：- clb- cdn- ddos- live- vod- waf- apigateway- teo- tke- cos- tse- tcb</p>
      */
     public $ResourceTypes;
 
     /**
-     * @var array 查询地域列表的数据，clb、tke、waf、apigateway、tcb、cos、tse支持地域查询， 其他资源类型不支持
+     * @var array <p>查询地域列表的数据，clb、tke、waf、apigateway、tcb、cos、tse支持地域查询， 其他资源类型不支持</p>
      */
     public $Regions;
 
     /**
-     * @param string $TaskId 任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果
-     * @param string $Limit 每页展示数量， 默认10，最大值100; 分页总数为云资源地域下实例总数， 即第一页会拉群每个云资源的地域下面Limit数量实例
-     * @param string $Offset 当前偏移量，默认为0
-     * @param array $ResourceTypes 查询资源类型的结果详情， 不传则查询所有，取值支持：
-- clb
-- cdn
-- ddos
-- live
-- vod
-- waf
-- apigateway
-- teo
-- tke
-- cos
-- tse
-- tcb
-     * @param array $Regions 查询地域列表的数据，clb、tke、waf、apigateway、tcb、cos、tse支持地域查询， 其他资源类型不支持
+     * @param string $TaskId <p>任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果</p>
+     * @param string $Limit <p>每页展示数量， 默认10，最大值100; 分页总数为云资源地域下实例总数， 即第一页会拉群每个云资源的地域下面Limit数量实例</p>
+     * @param string $Offset <p>当前偏移量，默认为0</p>
+     * @param array $ResourceTypes <p>查询资源类型的结果详情， 不传则查询所有，取值支持：- clb- cdn- ddos- live- vod- waf- apigateway- teo- tke- cos- tse- tcb</p>
+     * @param array $Regions <p>查询地域列表的数据，clb、tke、waf、apigateway、tcb、cos、tse支持地域查询， 其他资源类型不支持</p>
      */
     function __construct()
     {

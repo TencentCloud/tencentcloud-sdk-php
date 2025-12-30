@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLiveTranscodeTotalInfo返回参数结构体
+ * CallbackWorkflowToolNode返回参数结构体
  *
- * @method array getDataInfoList() 获取<p>统计数据列表。</p>
- * @method void setDataInfoList(array $DataInfoList) 设置<p>统计数据列表。</p>
+ * @method integer getCode() 获取状态码
+ * @method void setCode(integer $Code) 设置状态码
+ * @method string getMsg() 获取状态详情
+ * @method void setMsg(string $Msg) 设置状态详情
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeLiveTranscodeTotalInfoResponse extends AbstractModel
+class CallbackWorkflowToolNodeResponse extends AbstractModel
 {
     /**
-     * @var array <p>统计数据列表。</p>
+     * @var integer 状态码
      */
-    public $DataInfoList;
+    public $Code;
+
+    /**
+     * @var string 状态详情
+     */
+    public $Msg;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class DescribeLiveTranscodeTotalInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DataInfoList <p>统计数据列表。</p>
+     * @param integer $Code 状态码
+     * @param string $Msg 状态详情
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,13 +62,12 @@ class DescribeLiveTranscodeTotalInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DataInfoList",$param) and $param["DataInfoList"] !== null) {
-            $this->DataInfoList = [];
-            foreach ($param["DataInfoList"] as $key => $value){
-                $obj = new TranscodeTotalInfo();
-                $obj->deserialize($value);
-                array_push($this->DataInfoList, $obj);
-            }
+        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
+            $this->Code = $param["Code"];
+        }
+
+        if (array_key_exists("Msg",$param) and $param["Msg"] !== null) {
+            $this->Msg = $param["Msg"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

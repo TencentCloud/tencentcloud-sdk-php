@@ -90,6 +90,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApprovedLists(array $ApprovedLists) 设置通过项信息(详细引文信息)
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSummaries() 获取摘要信息
+ * @method void setSummaries(array $Summaries) 设置摘要信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -187,6 +189,11 @@ class DescribeContractReviewTaskResponse extends AbstractModel
     public $ApprovedLists;
 
     /**
+     * @var array 摘要信息
+     */
+    public $Summaries;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -227,6 +234,7 @@ class DescribeContractReviewTaskResponse extends AbstractModel
      * @param integer $TotalRiskCount 合同审查出的风险总数
      * @param array $ApprovedLists 通过项信息(详细引文信息)
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Summaries 摘要信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -306,6 +314,15 @@ class DescribeContractReviewTaskResponse extends AbstractModel
                 $obj = new OutputReference();
                 $obj->deserialize($value);
                 array_push($this->ApprovedLists, $obj);
+            }
+        }
+
+        if (array_key_exists("Summaries",$param) and $param["Summaries"] !== null) {
+            $this->Summaries = [];
+            foreach ($param["Summaries"] as $key => $value){
+                $obj = new ContractSummary();
+                $obj->deserialize($value);
+                array_push($this->Summaries, $obj);
             }
         }
 

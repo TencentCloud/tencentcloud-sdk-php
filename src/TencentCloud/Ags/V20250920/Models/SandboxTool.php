@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoleArn(string $RoleArn) 设置沙箱工具绑定角色ARN
  * @method array getStorageMounts() 获取沙箱工具中实例存储挂载配置
  * @method void setStorageMounts(array $StorageMounts) 设置沙箱工具中实例存储挂载配置
+ * @method CustomConfigurationDetail getCustomConfiguration() 获取沙箱工具自定义配置
+ * @method void setCustomConfiguration(CustomConfigurationDetail $CustomConfiguration) 设置沙箱工具自定义配置
  */
 class SandboxTool extends AbstractModel
 {
@@ -108,6 +110,11 @@ class SandboxTool extends AbstractModel
     public $StorageMounts;
 
     /**
+     * @var CustomConfigurationDetail 沙箱工具自定义配置
+     */
+    public $CustomConfiguration;
+
+    /**
      * @param string $ToolId 沙箱工具唯一标识符
      * @param string $ToolName 沙箱工具名称，长度 1-50 字符，支持中英文、数字、下划线。同一 AppId 下沙箱工具名称必须唯一
      * @param string $ToolType 沙箱工具类型，取值：browser（浏览器工具）、code-interpreter（代码解释器工具）、computer（计算机控制工具）、mobile（移动设备工具）
@@ -120,6 +127,7 @@ class SandboxTool extends AbstractModel
      * @param string $UpdateTime 沙箱工具更新时间，格式：ISO8601
      * @param string $RoleArn 沙箱工具绑定角色ARN
      * @param array $StorageMounts 沙箱工具中实例存储挂载配置
+     * @param CustomConfigurationDetail $CustomConfiguration 沙箱工具自定义配置
      */
     function __construct()
     {
@@ -191,6 +199,11 @@ class SandboxTool extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->StorageMounts, $obj);
             }
+        }
+
+        if (array_key_exists("CustomConfiguration",$param) and $param["CustomConfiguration"] !== null) {
+            $this->CustomConfiguration = new CustomConfigurationDetail();
+            $this->CustomConfiguration->deserialize($param["CustomConfiguration"]);
         }
     }
 }

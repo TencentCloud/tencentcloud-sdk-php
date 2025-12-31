@@ -18,28 +18,28 @@ namespace TencentCloud\Ags\V20250920\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 挂载存储配置
+ * 资源配置
  *
- * @method CosStorageSource getCos() 获取对象存储桶配置
- * @method void setCos(CosStorageSource $Cos) 设置对象存储桶配置
- * @method ImageStorageSource getImage() 获取镜像卷配置
- * @method void setImage(ImageStorageSource $Image) 设置镜像卷配置
+ * @method string getCPU() 获取cpu 资源量
+ * @method void setCPU(string $CPU) 设置cpu 资源量
+ * @method string getMemory() 获取内存资源量
+ * @method void setMemory(string $Memory) 设置内存资源量
  */
-class StorageSource extends AbstractModel
+class ResourceConfiguration extends AbstractModel
 {
     /**
-     * @var CosStorageSource 对象存储桶配置
+     * @var string cpu 资源量
      */
-    public $Cos;
+    public $CPU;
 
     /**
-     * @var ImageStorageSource 镜像卷配置
+     * @var string 内存资源量
      */
-    public $Image;
+    public $Memory;
 
     /**
-     * @param CosStorageSource $Cos 对象存储桶配置
-     * @param ImageStorageSource $Image 镜像卷配置
+     * @param string $CPU cpu 资源量
+     * @param string $Memory 内存资源量
      */
     function __construct()
     {
@@ -54,14 +54,12 @@ class StorageSource extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Cos",$param) and $param["Cos"] !== null) {
-            $this->Cos = new CosStorageSource();
-            $this->Cos->deserialize($param["Cos"]);
+        if (array_key_exists("CPU",$param) and $param["CPU"] !== null) {
+            $this->CPU = $param["CPU"];
         }
 
-        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
-            $this->Image = new ImageStorageSource();
-            $this->Image->deserialize($param["Image"]);
+        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
+            $this->Memory = $param["Memory"];
         }
     }
 }

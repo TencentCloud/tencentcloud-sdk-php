@@ -22,8 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileType() 获取文件类型。用于标识 MPS 视频处理任务执行结果中的特定返回文件。
 取值：<li>AiAnalysis.DeLogo.Video: 智能擦除任务中产生的擦除后视频文件，默认以原文件类型存储；</li><li>AiAnalysis.DeLogo.OriginSubtitle: 智能擦除任务中基于画面提取的字幕文件；</li><li>AiAnalysis.DeLogo.TranslateSubtitle: 智能擦除任务中基于画面提取的字幕翻译文件。</li><li>MediaProcess.Transcode.Video: 音视频增强任务中增强后的音视频文件，默认以转码文件类型存储。</li>
+<li>AiAnalysis.HorizontalToVerticalTask.Video: 横转竖任务中生成的视频文件，默认以智能媒体文件类型存储。</li>
+<li>AiAnalysis.VideoRemakeTaskk.Video: 智能去重任务中生成的视频文件，默认以智能媒体文件类型存储。</li>
+<li>AiAnalysis.SegmentTask.Video: 智能拆条任务中生成的视频文件，默认以智能媒体文件类型存储。</li>
+<li>SmartErase.Video: 智能擦除任务中生成的视频文件，默认以智能媒体文件类型存储。</li>
+
  * @method void setFileType(string $FileType) 设置文件类型。用于标识 MPS 视频处理任务执行结果中的特定返回文件。
 取值：<li>AiAnalysis.DeLogo.Video: 智能擦除任务中产生的擦除后视频文件，默认以原文件类型存储；</li><li>AiAnalysis.DeLogo.OriginSubtitle: 智能擦除任务中基于画面提取的字幕文件；</li><li>AiAnalysis.DeLogo.TranslateSubtitle: 智能擦除任务中基于画面提取的字幕翻译文件。</li><li>MediaProcess.Transcode.Video: 音视频增强任务中增强后的音视频文件，默认以转码文件类型存储。</li>
+<li>AiAnalysis.HorizontalToVerticalTask.Video: 横转竖任务中生成的视频文件，默认以智能媒体文件类型存储。</li>
+<li>AiAnalysis.VideoRemakeTaskk.Video: 智能去重任务中生成的视频文件，默认以智能媒体文件类型存储。</li>
+<li>AiAnalysis.SegmentTask.Video: 智能拆条任务中生成的视频文件，默认以智能媒体文件类型存储。</li>
+<li>SmartErase.Video: 智能擦除任务中生成的视频文件，默认以智能媒体文件类型存储。</li>
+
  * @method string getStorageMode() 获取存储形式。用于表示该结果文件的存储形式，取值有：<li> Permanent：永久存储；</li><li> Temporary：临时存储。</li>
  * @method void setStorageMode(string $StorageMode) 设置存储形式。用于表示该结果文件的存储形式，取值有：<li> Permanent：永久存储；</li><li> Temporary：临时存储。</li>
  * @method string getFileId() 获取媒体文件 ID。当 Type 为 Permanent 时有效，表示该结果文件以视频媒资形式存储在点播平台中，字段值为视频媒资的 FileId。
@@ -40,6 +50,11 @@ class MPSOutputFile extends AbstractModel
     /**
      * @var string 文件类型。用于标识 MPS 视频处理任务执行结果中的特定返回文件。
 取值：<li>AiAnalysis.DeLogo.Video: 智能擦除任务中产生的擦除后视频文件，默认以原文件类型存储；</li><li>AiAnalysis.DeLogo.OriginSubtitle: 智能擦除任务中基于画面提取的字幕文件；</li><li>AiAnalysis.DeLogo.TranslateSubtitle: 智能擦除任务中基于画面提取的字幕翻译文件。</li><li>MediaProcess.Transcode.Video: 音视频增强任务中增强后的音视频文件，默认以转码文件类型存储。</li>
+<li>AiAnalysis.HorizontalToVerticalTask.Video: 横转竖任务中生成的视频文件，默认以智能媒体文件类型存储。</li>
+<li>AiAnalysis.VideoRemakeTaskk.Video: 智能去重任务中生成的视频文件，默认以智能媒体文件类型存储。</li>
+<li>AiAnalysis.SegmentTask.Video: 智能拆条任务中生成的视频文件，默认以智能媒体文件类型存储。</li>
+<li>SmartErase.Video: 智能擦除任务中生成的视频文件，默认以智能媒体文件类型存储。</li>
+
      */
     public $FileType;
 
@@ -71,6 +86,11 @@ class MPSOutputFile extends AbstractModel
     /**
      * @param string $FileType 文件类型。用于标识 MPS 视频处理任务执行结果中的特定返回文件。
 取值：<li>AiAnalysis.DeLogo.Video: 智能擦除任务中产生的擦除后视频文件，默认以原文件类型存储；</li><li>AiAnalysis.DeLogo.OriginSubtitle: 智能擦除任务中基于画面提取的字幕文件；</li><li>AiAnalysis.DeLogo.TranslateSubtitle: 智能擦除任务中基于画面提取的字幕翻译文件。</li><li>MediaProcess.Transcode.Video: 音视频增强任务中增强后的音视频文件，默认以转码文件类型存储。</li>
+<li>AiAnalysis.HorizontalToVerticalTask.Video: 横转竖任务中生成的视频文件，默认以智能媒体文件类型存储。</li>
+<li>AiAnalysis.VideoRemakeTaskk.Video: 智能去重任务中生成的视频文件，默认以智能媒体文件类型存储。</li>
+<li>AiAnalysis.SegmentTask.Video: 智能拆条任务中生成的视频文件，默认以智能媒体文件类型存储。</li>
+<li>SmartErase.Video: 智能擦除任务中生成的视频文件，默认以智能媒体文件类型存储。</li>
+
      * @param string $StorageMode 存储形式。用于表示该结果文件的存储形式，取值有：<li> Permanent：永久存储；</li><li> Temporary：临时存储。</li>
      * @param string $FileId 媒体文件 ID。当 Type 为 Permanent 时有效，表示该结果文件以视频媒资形式存储在点播平台中，字段值为视频媒资的 FileId。
      * @param string $Url 结果文件的可下载 Url。

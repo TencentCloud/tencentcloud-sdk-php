@@ -62,10 +62,10 @@ use TencentCloud\Common\AbstractModel;
 <li>当 ModelName 是 GV，则可选值为 16:9、9:16，默认为 16:9；</li>
 <li>当 ModelName 是 OS，当文生视频时，则可选值为 16:9、9:16，默认为 16:9；</li>
 <li>当 ModelName 是 Hailuo，则暂不支持。</li>
- * @method string getAudioGeneration() 获取是否生成音频。支持的模型包括 GV、OS。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li>
-默认值：Enabled
- * @method void setAudioGeneration(string $AudioGeneration) 设置是否生成音频。支持的模型包括 GV、OS。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li>
-默认值：Enabled
+ * @method string getAudioGeneration() 获取是否生成音频。支持的模型包括 GV、OS、Vidu。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li>
+默认值：Disabled
+ * @method void setAudioGeneration(string $AudioGeneration) 设置是否生成音频。支持的模型包括 GV、OS、Vidu。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li>
+默认值：Disabled
  * @method string getPersonGeneration() 获取是否允许人物或人脸生成。取值有： <li>AllowAdult：允许生成成人；</li> <li>Disallowed：禁止在图片中包含人物或人脸；</li> 
  * @method void setPersonGeneration(string $PersonGeneration) 设置是否允许人物或人脸生成。取值有： <li>AllowAdult：允许生成成人；</li> <li>Disallowed：禁止在图片中包含人物或人脸；</li> 
  * @method string getInputComplianceCheck() 获取是否开启输入内容的合规性检查。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
@@ -133,8 +133,8 @@ class AigcVideoOutputConfig extends AbstractModel
     public $AspectRatio;
 
     /**
-     * @var string 是否生成音频。支持的模型包括 GV、OS。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li>
-默认值：Enabled
+     * @var string 是否生成音频。支持的模型包括 GV、OS、Vidu。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li>
+默认值：Disabled
      */
     public $AudioGeneration;
 
@@ -183,8 +183,8 @@ class AigcVideoOutputConfig extends AbstractModel
 <li>当 ModelName 是 GV，则可选值为 16:9、9:16，默认为 16:9；</li>
 <li>当 ModelName 是 OS，当文生视频时，则可选值为 16:9、9:16，默认为 16:9；</li>
 <li>当 ModelName 是 Hailuo，则暂不支持。</li>
-     * @param string $AudioGeneration 是否生成音频。支持的模型包括 GV、OS。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li>
-默认值：Enabled
+     * @param string $AudioGeneration 是否生成音频。支持的模型包括 GV、OS、Vidu。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li>
+默认值：Disabled
      * @param string $PersonGeneration 是否允许人物或人脸生成。取值有： <li>AllowAdult：允许生成成人；</li> <li>Disallowed：禁止在图片中包含人物或人脸；</li> 
      * @param string $InputComplianceCheck 是否开启输入内容的合规性检查。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
      * @param string $OutputComplianceCheck 是否开启输出内容的合规性检查。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 

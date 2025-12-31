@@ -18,28 +18,36 @@ namespace TencentCloud\Ags\V20250920\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 挂载存储配置
+ * 端口配置
  *
- * @method CosStorageSource getCos() 获取对象存储桶配置
- * @method void setCos(CosStorageSource $Cos) 设置对象存储桶配置
- * @method ImageStorageSource getImage() 获取镜像卷配置
- * @method void setImage(ImageStorageSource $Image) 设置镜像卷配置
+ * @method string getName() 获取端口名
+ * @method void setName(string $Name) 设置端口名
+ * @method integer getPort() 获取端口
+ * @method void setPort(integer $Port) 设置端口
+ * @method string getProtocol() 获取协议
+ * @method void setProtocol(string $Protocol) 设置协议
  */
-class StorageSource extends AbstractModel
+class PortConfiguration extends AbstractModel
 {
     /**
-     * @var CosStorageSource 对象存储桶配置
+     * @var string 端口名
      */
-    public $Cos;
+    public $Name;
 
     /**
-     * @var ImageStorageSource 镜像卷配置
+     * @var integer 端口
      */
-    public $Image;
+    public $Port;
 
     /**
-     * @param CosStorageSource $Cos 对象存储桶配置
-     * @param ImageStorageSource $Image 镜像卷配置
+     * @var string 协议
+     */
+    public $Protocol;
+
+    /**
+     * @param string $Name 端口名
+     * @param integer $Port 端口
+     * @param string $Protocol 协议
      */
     function __construct()
     {
@@ -54,14 +62,16 @@ class StorageSource extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Cos",$param) and $param["Cos"] !== null) {
-            $this->Cos = new CosStorageSource();
-            $this->Cos->deserialize($param["Cos"]);
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
-            $this->Image = new ImageStorageSource();
-            $this->Image->deserialize($param["Image"]);
+        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
+            $this->Port = $param["Port"];
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
         }
     }
 }

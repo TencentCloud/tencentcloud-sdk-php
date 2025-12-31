@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkConfiguration(NetworkConfiguration $NetworkConfiguration) 设置网络配置
  * @method array getTags() 获取标签
  * @method void setTags(array $Tags) 设置标签
+ * @method CustomConfiguration getCustomConfiguration() 获取沙箱工具自定义配置
+ * @method void setCustomConfiguration(CustomConfiguration $CustomConfiguration) 设置沙箱工具自定义配置
  */
 class UpdateSandboxToolRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class UpdateSandboxToolRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var CustomConfiguration 沙箱工具自定义配置
+     */
+    public $CustomConfiguration;
+
+    /**
      * @param string $ToolId 沙箱工具ID
      * @param string $Description 沙箱工具描述，最大长度200字符
      * @param NetworkConfiguration $NetworkConfiguration 网络配置
      * @param array $Tags 标签
+     * @param CustomConfiguration $CustomConfiguration 沙箱工具自定义配置
      */
     function __construct()
     {
@@ -90,6 +98,11 @@ class UpdateSandboxToolRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("CustomConfiguration",$param) and $param["CustomConfiguration"] !== null) {
+            $this->CustomConfiguration = new CustomConfiguration();
+            $this->CustomConfiguration->deserialize($param["CustomConfiguration"]);
         }
     }
 }

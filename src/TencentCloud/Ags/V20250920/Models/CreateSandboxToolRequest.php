@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getToolName() 获取沙箱工具名称，长度 1-50 字符，支持英文、数字、下划线和连接线。同一 AppId 下沙箱工具名称必须唯一
  * @method void setToolName(string $ToolName) 设置沙箱工具名称，长度 1-50 字符，支持英文、数字、下划线和连接线。同一 AppId 下沙箱工具名称必须唯一
- * @method string getToolType() 获取沙箱工具类型，目前支持：browser、code-interpreter
- * @method void setToolType(string $ToolType) 设置沙箱工具类型，目前支持：browser、code-interpreter
+ * @method string getToolType() 获取沙箱工具类型，目前支持：browser、code-interpreter、custom
+ * @method void setToolType(string $ToolType) 设置沙箱工具类型，目前支持：browser、code-interpreter、custom
  * @method NetworkConfiguration getNetworkConfiguration() 获取网络配置
  * @method void setNetworkConfiguration(NetworkConfiguration $NetworkConfiguration) 设置网络配置
  * @method string getDescription() 获取沙箱工具描述，最大长度 200 字符
@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoleArn(string $RoleArn) 设置角色ARN
  * @method array getStorageMounts() 获取沙箱工具存储配置
  * @method void setStorageMounts(array $StorageMounts) 设置沙箱工具存储配置
+ * @method CustomConfiguration getCustomConfiguration() 获取沙箱工具自定义配置
+ * @method void setCustomConfiguration(CustomConfiguration $CustomConfiguration) 设置沙箱工具自定义配置
  */
 class CreateSandboxToolRequest extends AbstractModel
 {
@@ -47,7 +49,7 @@ class CreateSandboxToolRequest extends AbstractModel
     public $ToolName;
 
     /**
-     * @var string 沙箱工具类型，目前支持：browser、code-interpreter
+     * @var string 沙箱工具类型，目前支持：browser、code-interpreter、custom
      */
     public $ToolType;
 
@@ -87,8 +89,13 @@ class CreateSandboxToolRequest extends AbstractModel
     public $StorageMounts;
 
     /**
+     * @var CustomConfiguration 沙箱工具自定义配置
+     */
+    public $CustomConfiguration;
+
+    /**
      * @param string $ToolName 沙箱工具名称，长度 1-50 字符，支持英文、数字、下划线和连接线。同一 AppId 下沙箱工具名称必须唯一
-     * @param string $ToolType 沙箱工具类型，目前支持：browser、code-interpreter
+     * @param string $ToolType 沙箱工具类型，目前支持：browser、code-interpreter、custom
      * @param NetworkConfiguration $NetworkConfiguration 网络配置
      * @param string $Description 沙箱工具描述，最大长度 200 字符
      * @param string $DefaultTimeout 默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时
@@ -96,6 +103,7 @@ class CreateSandboxToolRequest extends AbstractModel
      * @param string $ClientToken 幂等性 Token，长度不超过 64 字符
      * @param string $RoleArn 角色ARN
      * @param array $StorageMounts 沙箱工具存储配置
+     * @param CustomConfiguration $CustomConfiguration 沙箱工具自定义配置
      */
     function __construct()
     {
@@ -155,6 +163,11 @@ class CreateSandboxToolRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->StorageMounts, $obj);
             }
+        }
+
+        if (array_key_exists("CustomConfiguration",$param) and $param["CustomConfiguration"] !== null) {
+            $this->CustomConfiguration = new CustomConfiguration();
+            $this->CustomConfiguration->deserialize($param["CustomConfiguration"]);
         }
     }
 }

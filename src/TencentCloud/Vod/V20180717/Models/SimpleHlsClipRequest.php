@@ -107,6 +107,7 @@ class SimpleHlsClipRequest extends AbstractModel
 
     /**
      * @var string 该字段已废弃。
+     * @deprecated
      */
     public $Precision;
 

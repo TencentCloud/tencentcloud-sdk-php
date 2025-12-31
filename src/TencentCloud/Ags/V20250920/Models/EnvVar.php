@@ -18,28 +18,28 @@ namespace TencentCloud\Ags\V20250920\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 挂载存储配置
+ * 环境变量
  *
- * @method CosStorageSource getCos() 获取对象存储桶配置
- * @method void setCos(CosStorageSource $Cos) 设置对象存储桶配置
- * @method ImageStorageSource getImage() 获取镜像卷配置
- * @method void setImage(ImageStorageSource $Image) 设置镜像卷配置
+ * @method string getName() 获取环境变量名
+ * @method void setName(string $Name) 设置环境变量名
+ * @method string getValue() 获取环境变量值
+ * @method void setValue(string $Value) 设置环境变量值
  */
-class StorageSource extends AbstractModel
+class EnvVar extends AbstractModel
 {
     /**
-     * @var CosStorageSource 对象存储桶配置
+     * @var string 环境变量名
      */
-    public $Cos;
+    public $Name;
 
     /**
-     * @var ImageStorageSource 镜像卷配置
+     * @var string 环境变量值
      */
-    public $Image;
+    public $Value;
 
     /**
-     * @param CosStorageSource $Cos 对象存储桶配置
-     * @param ImageStorageSource $Image 镜像卷配置
+     * @param string $Name 环境变量名
+     * @param string $Value 环境变量值
      */
     function __construct()
     {
@@ -54,14 +54,12 @@ class StorageSource extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Cos",$param) and $param["Cos"] !== null) {
-            $this->Cos = new CosStorageSource();
-            $this->Cos->deserialize($param["Cos"]);
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
-            $this->Image = new ImageStorageSource();
-            $this->Image->deserialize($param["Image"]);
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

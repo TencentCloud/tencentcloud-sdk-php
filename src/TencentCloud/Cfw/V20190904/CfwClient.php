@@ -57,6 +57,11 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DescribeBlockByIpTimesListResponse DescribeBlockByIpTimesList(Models\DescribeBlockByIpTimesListRequest $req) DescribeBlockByIpTimesList 告警中心阻断IP折线图
  * @method Models\DescribeBlockIgnoreListResponse DescribeBlockIgnoreList(Models\DescribeBlockIgnoreListRequest $req) 查询入侵防御放通封禁列表
  * @method Models\DescribeBlockStaticListResponse DescribeBlockStaticList(Models\DescribeBlockStaticListRequest $req) DescribeBlockStaticList 告警中心柱形图
+ * @method Models\DescribeCcnAssociatedInstancesResponse DescribeCcnAssociatedInstances(Models\DescribeCcnAssociatedInstancesRequest $req) 查询云联网关联的实例信息
+ * @method Models\DescribeCcnInstanceRegionStatusResponse DescribeCcnInstanceRegionStatus(Models\DescribeCcnInstanceRegionStatusRequest $req) 查询CCN关联实例的地域防火墙引流网络部署状态
+1.根据CCN ID和实例ID列表，返回实例对应地域的防火墙引流网络部署状态
+2.如果传入实例ID列表为空，则返回CCN关联的所有实例的地域防火墙引流网络部署状态
+ * @method Models\DescribeCcnVpcFwSwitchResponse DescribeCcnVpcFwSwitch(Models\DescribeCcnVpcFwSwitchRequest $req) 查询CCN VPC防火墙开关配置
  * @method Models\DescribeCfwEipsResponse DescribeCfwEips(Models\DescribeCfwEipsRequest $req) 查询防火墙弹性公网IP
  * @method Models\DescribeCfwInsStatusResponse DescribeCfwInsStatus(Models\DescribeCfwInsStatusRequest $req) cfw实例运行状态查询
  * @method Models\DescribeDefenseSwitchResponse DescribeDefenseSwitch(Models\DescribeDefenseSwitchRequest $req) 获取入侵防御按钮列表
@@ -83,12 +88,14 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DescribeRuleOverviewResponse DescribeRuleOverview(Models\DescribeRuleOverviewRequest $req) 查询规则列表概况
  * @method Models\DescribeSecurityGroupListResponse DescribeSecurityGroupList(Models\DescribeSecurityGroupListRequest $req) 查询安全组规则列表
  * @method Models\DescribeSourceAssetResponse DescribeSourceAsset(Models\DescribeSourceAssetRequest $req) DescribeSourceAsset-查询全部资产信息
+ * @method Models\DescribeSwitchErrorResponse DescribeSwitchError(Models\DescribeSwitchErrorRequest $req) 互联网边界防火墙开关横幅错误信息
  * @method Models\DescribeSwitchListsResponse DescribeSwitchLists(Models\DescribeSwitchListsRequest $req) 防火墙开关列表，请换用DescribeFwEdgeIps
  * @method Models\DescribeTLogInfoResponse DescribeTLogInfo(Models\DescribeTLogInfoRequest $req) DescribeTLogInfo告警中心概况查询
  * @method Models\DescribeTLogIpListResponse DescribeTLogIpList(Models\DescribeTLogIpListRequest $req) DescribeTLogIpList告警中心IP柱形图
  * @method Models\DescribeTableStatusResponse DescribeTableStatus(Models\DescribeTableStatusRequest $req) 查询规则表状态
  * @method Models\DescribeUnHandleEventTabListResponse DescribeUnHandleEventTabList(Models\DescribeUnHandleEventTabListRequest $req) DescribeUnHandleEventTabList 告警中心伪攻击链事件未处置接口
  * @method Models\DescribeVpcAcRuleResponse DescribeVpcAcRule(Models\DescribeVpcAcRuleRequest $req) 查询内网间访问控制列表
+ * @method Models\DescribeVpcFwCcnPolicyWhiteListResponse DescribeVpcFwCcnPolicyWhiteList(Models\DescribeVpcFwCcnPolicyWhiteListRequest $req) 查询VPC防火墙策略路由功能开白的CCN列表
  * @method Models\DescribeVpcFwGroupSwitchResponse DescribeVpcFwGroupSwitch(Models\DescribeVpcFwGroupSwitchRequest $req) VPC防火墙(组)开关列表
  * @method Models\ExpandCfwVerticalResponse ExpandCfwVertical(Models\ExpandCfwVerticalRequest $req) 防火墙垂直扩容
  * @method Models\ModifyAcRuleResponse ModifyAcRule(Models\ModifyAcRuleRequest $req) 修改规则
@@ -105,6 +112,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\ModifyBlockIgnoreRuleResponse ModifyBlockIgnoreRule(Models\ModifyBlockIgnoreRuleRequest $req) 编辑单条入侵防御封禁列表、放通列表规则
  * @method Models\ModifyBlockIgnoreRuleNewResponse ModifyBlockIgnoreRuleNew(Models\ModifyBlockIgnoreRuleNewRequest $req) 编辑单条入侵防御封禁列表、放通列表规则（新）
  * @method Models\ModifyBlockTopResponse ModifyBlockTop(Models\ModifyBlockTopRequest $req) ModifyBlockTop取消置顶接口
+ * @method Models\ModifyClusterVpcFwSwitchResponse ModifyClusterVpcFwSwitch(Models\ModifyClusterVpcFwSwitchRequest $req) 修改集群模式VPC防火墙开关
  * @method Models\ModifyEWRuleStatusResponse ModifyEWRuleStatus(Models\ModifyEWRuleStatusRequest $req) 启用停用VPC间规则或Nat边界规则
 VPC间规则需指定EdgeId。Nat边界规则需指定地域Region与Direction。
  * @method Models\ModifyEdgeIpSwitchResponse ModifyEdgeIpSwitch(Models\ModifyEdgeIpSwitchRequest $req) 修改边界防火墙开关(旁路、串行)
@@ -142,6 +150,8 @@ VPC间规则需指定EdgeId。Nat边界规则需指定地域Region与Direction�
  * @method Models\SetNatFwEipResponse SetNatFwEip(Models\SetNatFwEipRequest $req) 设置防火墙实例弹性公网ip，目前仅支持新增模式的防火墙实例
  * @method Models\StopSecurityGroupRuleDispatchResponse StopSecurityGroupRuleDispatch(Models\StopSecurityGroupRuleDispatchRequest $req) 中止安全组规则下发
  * @method Models\SyncFwOperateResponse SyncFwOperate(Models\SyncFwOperateRequest $req) 同步防火墙操作，包括同步防火墙路由（若vpc，专线网关等增加了Cidr，需要手动同步一下路由使之在防火墙上生效）等。
+ * @method Models\UpdateCheckCcnNonDirectFlagResponse UpdateCheckCcnNonDirectFlag(Models\UpdateCheckCcnNonDirectFlagRequest $req) 重新检测CCN中接入VPC防火墙的VPC实例非同城直通标记
+ * @method Models\UpdateClusterVpcFwResponse UpdateClusterVpcFw(Models\UpdateClusterVpcFwRequest $req) 修改更新CCN中VPC防火墙策略配置
  */
 
 class CfwClient extends AbstractClient

@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间（ISO 8601 格式）
  * @method array getMountOptions() 获取存储挂载选项
  * @method void setMountOptions(array $MountOptions) 设置存储挂载选项
+ * @method CustomConfigurationDetail getCustomConfiguration() 获取沙箱实例自定义配置
+ * @method void setCustomConfiguration(CustomConfigurationDetail $CustomConfiguration) 设置沙箱实例自定义配置
  */
 class SandboxInstance extends AbstractModel
 {
@@ -94,6 +96,11 @@ class SandboxInstance extends AbstractModel
     public $MountOptions;
 
     /**
+     * @var CustomConfigurationDetail 沙箱实例自定义配置
+     */
+    public $CustomConfiguration;
+
+    /**
      * @param string $InstanceId 沙箱实例唯一标识符
      * @param string $ToolId 所属沙箱工具 ID
      * @param string $ToolName 所属沙箱工具名称
@@ -104,6 +111,7 @@ class SandboxInstance extends AbstractModel
      * @param string $CreateTime 创建时间（ISO 8601 格式）
      * @param string $UpdateTime 更新时间（ISO 8601 格式）
      * @param array $MountOptions 存储挂载选项
+     * @param CustomConfigurationDetail $CustomConfiguration 沙箱实例自定义配置
      */
     function __construct()
     {
@@ -161,6 +169,11 @@ class SandboxInstance extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->MountOptions, $obj);
             }
+        }
+
+        if (array_key_exists("CustomConfiguration",$param) and $param["CustomConfiguration"] !== null) {
+            $this->CustomConfiguration = new CustomConfigurationDetail();
+            $this->CustomConfiguration->deserialize($param["CustomConfiguration"]);
         }
     }
 }

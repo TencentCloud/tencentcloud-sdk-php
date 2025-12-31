@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientToken(string $ClientToken) 设置幂等性 Token，长度不超过 64 字符
  * @method array getMountOptions() 获取沙箱实例存储挂载配置
  * @method void setMountOptions(array $MountOptions) 设置沙箱实例存储挂载配置
+ * @method CustomConfiguration getCustomConfiguration() 获取沙箱实例自定义配置
+ * @method void setCustomConfiguration(CustomConfiguration $CustomConfiguration) 设置沙箱实例自定义配置
  */
 class StartSandboxInstanceRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class StartSandboxInstanceRequest extends AbstractModel
     public $MountOptions;
 
     /**
+     * @var CustomConfiguration 沙箱实例自定义配置
+     */
+    public $CustomConfiguration;
+
+    /**
      * @param string $ToolId 沙箱工具 ID，与 ToolName 至少有一个要填
      * @param string $ToolName 沙箱工具名称，与 ToolId 至少有一个要填
      * @param string $Timeout 超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h
      * @param string $ClientToken 幂等性 Token，长度不超过 64 字符
      * @param array $MountOptions 沙箱实例存储挂载配置
+     * @param CustomConfiguration $CustomConfiguration 沙箱实例自定义配置
      */
     function __construct()
     {
@@ -101,6 +109,11 @@ class StartSandboxInstanceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->MountOptions, $obj);
             }
+        }
+
+        if (array_key_exists("CustomConfiguration",$param) and $param["CustomConfiguration"] !== null) {
+            $this->CustomConfiguration = new CustomConfiguration();
+            $this->CustomConfiguration->deserialize($param["CustomConfiguration"]);
         }
     }
 }

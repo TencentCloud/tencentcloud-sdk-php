@@ -20,8 +20,48 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MPS 具体子任务查询结果类型。
  *
- * @method string getTaskType() 获取任务类型。MPS 的 WorkflowTask 结构中的具体子任务类型。取值：<li>AiAnalysis.DeLogo：智能擦除任务。</li><li>MediaProcess.Transcode：音视频增强任务。</li>
- * @method void setTaskType(string $TaskType) 设置任务类型。MPS 的 WorkflowTask 结构中的具体子任务类型。取值：<li>AiAnalysis.DeLogo：智能擦除任务。</li><li>MediaProcess.Transcode：音视频增强任务。</li>
+ * @method string getTaskType() 获取任务类型。MPS 的 WorkflowTask 结构中的具体子任务类型。取值：
+<li>MediaProcess.Transcode：音视频转码任务。</li>
+<li>AiAnalysis.DeLogo：智能擦除任务。</li>
+<li>AiAnalysis.ClassificationTask：智能分类任务。</li>
+<li>AiAnalysis.CoverTask：智能封面任务。</li>
+<li>AiAnalysis.TagTask：智能标签任务。</li>
+<li>AiAnalysis.FrameTagTask：智能按帧标签任务。</li>
+<li>AiAnalysis.HighlightTask：智能高光任务。</li>
+<li>AiAnalysis.SegmentTask：智能拆条任务。</li>
+<li>AiAnalysis.HeadTailTask：智能片头片尾任务。</li>
+<li>AiAnalysis.DescriptionTask：智能摘要任务。</li>
+<li>AiAnalysis.HorizontalToVerticalTask：智能横转竖任务。</li>
+<li>AiAnalysis.DubbingTask：智能译制任务。</li>
+<li>AiAnalysis.VideoRemakeTask：智能去重任务。</li>
+<li>AiAnalysis.VideoComprehensionTask：视频理解任务。</li>
+<li>SmartSubtitle.AsrFullTextTask：智能语音全文识别任务。</li>
+<li>SmartSubtitle.TransTextTask：	翻译结果。</li>
+<li>SmartSubtitle.PureSubtitleTransTask：返回纯字幕文件翻译结果。</li>
+<li>SmartSubtitle.OcrFullTextTask：智能文字提取字幕任务。</li>
+<li>SmartErase：智能擦除任务。</li>
+
+ * @method void setTaskType(string $TaskType) 设置任务类型。MPS 的 WorkflowTask 结构中的具体子任务类型。取值：
+<li>MediaProcess.Transcode：音视频转码任务。</li>
+<li>AiAnalysis.DeLogo：智能擦除任务。</li>
+<li>AiAnalysis.ClassificationTask：智能分类任务。</li>
+<li>AiAnalysis.CoverTask：智能封面任务。</li>
+<li>AiAnalysis.TagTask：智能标签任务。</li>
+<li>AiAnalysis.FrameTagTask：智能按帧标签任务。</li>
+<li>AiAnalysis.HighlightTask：智能高光任务。</li>
+<li>AiAnalysis.SegmentTask：智能拆条任务。</li>
+<li>AiAnalysis.HeadTailTask：智能片头片尾任务。</li>
+<li>AiAnalysis.DescriptionTask：智能摘要任务。</li>
+<li>AiAnalysis.HorizontalToVerticalTask：智能横转竖任务。</li>
+<li>AiAnalysis.DubbingTask：智能译制任务。</li>
+<li>AiAnalysis.VideoRemakeTask：智能去重任务。</li>
+<li>AiAnalysis.VideoComprehensionTask：视频理解任务。</li>
+<li>SmartSubtitle.AsrFullTextTask：智能语音全文识别任务。</li>
+<li>SmartSubtitle.TransTextTask：	翻译结果。</li>
+<li>SmartSubtitle.PureSubtitleTransTask：返回纯字幕文件翻译结果。</li>
+<li>SmartSubtitle.OcrFullTextTask：智能文字提取字幕任务。</li>
+<li>SmartErase：智能擦除任务。</li>
+
  * @method string getStatus() 获取任务状态。有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method void setStatus(string $Status) 设置任务状态。有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method string getErrCode() 获取错误码。返回0时成功，其他值为失败。
@@ -36,7 +76,27 @@ use TencentCloud\Common\AbstractModel;
 class MPSSubTaskResult extends AbstractModel
 {
     /**
-     * @var string 任务类型。MPS 的 WorkflowTask 结构中的具体子任务类型。取值：<li>AiAnalysis.DeLogo：智能擦除任务。</li><li>MediaProcess.Transcode：音视频增强任务。</li>
+     * @var string 任务类型。MPS 的 WorkflowTask 结构中的具体子任务类型。取值：
+<li>MediaProcess.Transcode：音视频转码任务。</li>
+<li>AiAnalysis.DeLogo：智能擦除任务。</li>
+<li>AiAnalysis.ClassificationTask：智能分类任务。</li>
+<li>AiAnalysis.CoverTask：智能封面任务。</li>
+<li>AiAnalysis.TagTask：智能标签任务。</li>
+<li>AiAnalysis.FrameTagTask：智能按帧标签任务。</li>
+<li>AiAnalysis.HighlightTask：智能高光任务。</li>
+<li>AiAnalysis.SegmentTask：智能拆条任务。</li>
+<li>AiAnalysis.HeadTailTask：智能片头片尾任务。</li>
+<li>AiAnalysis.DescriptionTask：智能摘要任务。</li>
+<li>AiAnalysis.HorizontalToVerticalTask：智能横转竖任务。</li>
+<li>AiAnalysis.DubbingTask：智能译制任务。</li>
+<li>AiAnalysis.VideoRemakeTask：智能去重任务。</li>
+<li>AiAnalysis.VideoComprehensionTask：视频理解任务。</li>
+<li>SmartSubtitle.AsrFullTextTask：智能语音全文识别任务。</li>
+<li>SmartSubtitle.TransTextTask：	翻译结果。</li>
+<li>SmartSubtitle.PureSubtitleTransTask：返回纯字幕文件翻译结果。</li>
+<li>SmartSubtitle.OcrFullTextTask：智能文字提取字幕任务。</li>
+<li>SmartErase：智能擦除任务。</li>
+
      */
     public $TaskType;
 
@@ -66,7 +126,27 @@ class MPSSubTaskResult extends AbstractModel
     public $Output;
 
     /**
-     * @param string $TaskType 任务类型。MPS 的 WorkflowTask 结构中的具体子任务类型。取值：<li>AiAnalysis.DeLogo：智能擦除任务。</li><li>MediaProcess.Transcode：音视频增强任务。</li>
+     * @param string $TaskType 任务类型。MPS 的 WorkflowTask 结构中的具体子任务类型。取值：
+<li>MediaProcess.Transcode：音视频转码任务。</li>
+<li>AiAnalysis.DeLogo：智能擦除任务。</li>
+<li>AiAnalysis.ClassificationTask：智能分类任务。</li>
+<li>AiAnalysis.CoverTask：智能封面任务。</li>
+<li>AiAnalysis.TagTask：智能标签任务。</li>
+<li>AiAnalysis.FrameTagTask：智能按帧标签任务。</li>
+<li>AiAnalysis.HighlightTask：智能高光任务。</li>
+<li>AiAnalysis.SegmentTask：智能拆条任务。</li>
+<li>AiAnalysis.HeadTailTask：智能片头片尾任务。</li>
+<li>AiAnalysis.DescriptionTask：智能摘要任务。</li>
+<li>AiAnalysis.HorizontalToVerticalTask：智能横转竖任务。</li>
+<li>AiAnalysis.DubbingTask：智能译制任务。</li>
+<li>AiAnalysis.VideoRemakeTask：智能去重任务。</li>
+<li>AiAnalysis.VideoComprehensionTask：视频理解任务。</li>
+<li>SmartSubtitle.AsrFullTextTask：智能语音全文识别任务。</li>
+<li>SmartSubtitle.TransTextTask：	翻译结果。</li>
+<li>SmartSubtitle.PureSubtitleTransTask：返回纯字幕文件翻译结果。</li>
+<li>SmartSubtitle.OcrFullTextTask：智能文字提取字幕任务。</li>
+<li>SmartErase：智能擦除任务。</li>
+
      * @param string $Status 任务状态。有 PROCESSING，SUCCESS 和 FAIL 三种。
      * @param string $ErrCode 错误码。返回0时成功，其他值为失败。
      * @param string $Message 错误信息。

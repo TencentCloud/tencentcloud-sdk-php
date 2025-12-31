@@ -18,28 +18,36 @@ namespace TencentCloud\Ags\V20250920\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 挂载存储配置
+ * HTTP GET 探测动作配置
  *
- * @method CosStorageSource getCos() 获取对象存储桶配置
- * @method void setCos(CosStorageSource $Cos) 设置对象存储桶配置
- * @method ImageStorageSource getImage() 获取镜像卷配置
- * @method void setImage(ImageStorageSource $Image) 设置镜像卷配置
+ * @method string getPath() 获取路径
+ * @method void setPath(string $Path) 设置路径
+ * @method integer getPort() 获取端口
+ * @method void setPort(integer $Port) 设置端口
+ * @method string getScheme() 获取协议
+ * @method void setScheme(string $Scheme) 设置协议
  */
-class StorageSource extends AbstractModel
+class HttpGetAction extends AbstractModel
 {
     /**
-     * @var CosStorageSource 对象存储桶配置
+     * @var string 路径
      */
-    public $Cos;
+    public $Path;
 
     /**
-     * @var ImageStorageSource 镜像卷配置
+     * @var integer 端口
      */
-    public $Image;
+    public $Port;
 
     /**
-     * @param CosStorageSource $Cos 对象存储桶配置
-     * @param ImageStorageSource $Image 镜像卷配置
+     * @var string 协议
+     */
+    public $Scheme;
+
+    /**
+     * @param string $Path 路径
+     * @param integer $Port 端口
+     * @param string $Scheme 协议
      */
     function __construct()
     {
@@ -54,14 +62,16 @@ class StorageSource extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Cos",$param) and $param["Cos"] !== null) {
-            $this->Cos = new CosStorageSource();
-            $this->Cos->deserialize($param["Cos"]);
+        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
+            $this->Path = $param["Path"];
         }
 
-        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
-            $this->Image = new ImageStorageSource();
-            $this->Image->deserialize($param["Image"]);
+        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
+            $this->Port = $param["Port"];
+        }
+
+        if (array_key_exists("Scheme",$param) and $param["Scheme"] !== null) {
+            $this->Scheme = $param["Scheme"];
         }
     }
 }

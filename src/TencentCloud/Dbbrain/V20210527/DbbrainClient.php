@@ -82,6 +82,7 @@ use TencentCloud\Dbbrain\V20210527\Models as Models;
  * @method Models\DescribeRedisTopCostCommandsResponse DescribeRedisTopCostCommands(Models\DescribeRedisTopCostCommandsRequest $req) 获取指定时间段内Redis 访问命令 cost top N
  * @method Models\DescribeRedisTopHotKeysResponse DescribeRedisTopHotKeys(Models\DescribeRedisTopHotKeysRequest $req) 热Key分析
  * @method Models\DescribeRedisTopKeyPrefixListResponse DescribeRedisTopKeyPrefixList(Models\DescribeRedisTopKeyPrefixListRequest $req) 查询redis实例top key前缀列表。
+ * @method Models\DescribeRedisUnExpiredKeyStatisticsResponse DescribeRedisUnExpiredKeyStatistics(Models\DescribeRedisUnExpiredKeyStatisticsRequest $req) 查询Redis全量Key的内存分布情况。
  * @method Models\DescribeSecurityAuditLogDownloadUrlsResponse DescribeSecurityAuditLogDownloadUrls(Models\DescribeSecurityAuditLogDownloadUrlsRequest $req) 查询安全审计日志导出文件下载链接。目前日志文件下载仅提供腾讯云内网地址，请通过广州地域的腾讯云服务器进行下载。
  * @method Models\DescribeSecurityAuditLogExportTasksResponse DescribeSecurityAuditLogExportTasks(Models\DescribeSecurityAuditLogExportTasksRequest $req) 查询安全审计日志导出任务列表。
  * @method Models\DescribeSlowLogQueryTimeStatsResponse DescribeSlowLogQueryTimeStats(Models\DescribeSlowLogQueryTimeStatsRequest $req) 统计排序指定时间段内的top慢sql。

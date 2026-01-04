@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
 <li>当 ModelName 是 Qwen，可选值为 0925；</li>
 <li>当 ModelName 是 Hunyuan，可选值为 3.0；</li>
 <li>当 ModelName 是 Mingmou，可选值为 1.0；</li>
- * @method array getFileInfos() 获取AIGC 生图任务的输入图片的文件信息。默认只支持指定1个，使用模型 GEM 时最多指定3个。
- * @method void setFileInfos(array $FileInfos) 设置AIGC 生图任务的输入图片的文件信息。默认只支持指定1个，使用模型 GEM 时最多指定3个。
+ * @method array getFileInfos() 获取AIGC 生图任务的输入图片的文件信息。默认只支持指定1个，使用模型 GEM 时，版本2.5最多指定3个，版本3.0最多指定14个。
+ * @method void setFileInfos(array $FileInfos) 设置AIGC 生图任务的输入图片的文件信息。默认只支持指定1个，使用模型 GEM 时，版本2.5最多指定3个，版本3.0最多指定14个。
  * @method string getPrompt() 获取生成图片的提示词。当 FileInfos 为空时，此参数必填。
  * @method void setPrompt(string $Prompt) 设置生成图片的提示词。当 FileInfos 为空时，此参数必填。
  * @method string getNegativePrompt() 获取要阻止模型生成图片的提示词。
@@ -93,7 +93,7 @@ class CreateAigcImageTaskRequest extends AbstractModel
     public $ModelVersion;
 
     /**
-     * @var array AIGC 生图任务的输入图片的文件信息。默认只支持指定1个，使用模型 GEM 时最多指定3个。
+     * @var array AIGC 生图任务的输入图片的文件信息。默认只支持指定1个，使用模型 GEM 时，版本2.5最多指定3个，版本3.0最多指定14个。
      */
     public $FileInfos;
 
@@ -151,7 +151,7 @@ class CreateAigcImageTaskRequest extends AbstractModel
 <li>当 ModelName 是 Qwen，可选值为 0925；</li>
 <li>当 ModelName 是 Hunyuan，可选值为 3.0；</li>
 <li>当 ModelName 是 Mingmou，可选值为 1.0；</li>
-     * @param array $FileInfos AIGC 生图任务的输入图片的文件信息。默认只支持指定1个，使用模型 GEM 时最多指定3个。
+     * @param array $FileInfos AIGC 生图任务的输入图片的文件信息。默认只支持指定1个，使用模型 GEM 时，版本2.5最多指定3个，版本3.0最多指定14个。
      * @param string $Prompt 生成图片的提示词。当 FileInfos 为空时，此参数必填。
      * @param string $NegativePrompt 要阻止模型生成图片的提示词。
      * @param string $EnhancePrompt 是否自动优化提示词。开启时将自动优化传入的 Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 

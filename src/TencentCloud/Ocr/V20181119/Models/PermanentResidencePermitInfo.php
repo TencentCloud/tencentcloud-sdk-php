@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHolderNum(ContentInfo $HolderNum) 设置持证人持有号码，外国人永久居留证 返回该字段
  * @method ContentInfo getNationality() 获取国籍，外国人永久居留证 返回该字段
  * @method void setNationality(ContentInfo $Nationality) 设置国籍，外国人永久居留证 返回该字段
+ * @method ContentInfo getEnName() 获取英文名
+示例值：Ming Li
+ * @method void setEnName(ContentInfo $EnName) 设置英文名
+示例值：Ming Li
  */
 class PermanentResidencePermitInfo extends AbstractModel
 {
@@ -115,6 +119,12 @@ class PermanentResidencePermitInfo extends AbstractModel
     public $Nationality;
 
     /**
+     * @var ContentInfo 英文名
+示例值：Ming Li
+     */
+    public $EnName;
+
+    /**
      * @param ContentInfo $Name 姓名（人像面）
      * @param ContentInfo $Sex 性别（人像面）
      * @param ContentInfo $Nation 民族（人像面）
@@ -128,6 +138,8 @@ class PermanentResidencePermitInfo extends AbstractModel
      * @param ContentInfo $PortraitImage Portrait，身份证头像照片的base64编码，请求 EnablePortrait 时返回；
      * @param ContentInfo $HolderNum 持证人持有号码，外国人永久居留证 返回该字段
      * @param ContentInfo $Nationality 国籍，外国人永久居留证 返回该字段
+     * @param ContentInfo $EnName 英文名
+示例值：Ming Li
      */
     function __construct()
     {
@@ -205,6 +217,11 @@ class PermanentResidencePermitInfo extends AbstractModel
         if (array_key_exists("Nationality",$param) and $param["Nationality"] !== null) {
             $this->Nationality = new ContentInfo();
             $this->Nationality->deserialize($param["Nationality"]);
+        }
+
+        if (array_key_exists("EnName",$param) and $param["EnName"] !== null) {
+            $this->EnName = new ContentInfo();
+            $this->EnName->deserialize($param["EnName"]);
         }
     }
 }

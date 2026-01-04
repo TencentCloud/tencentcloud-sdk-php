@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
 可选
 - 16000
 - 24000 
+ * @method integer getBitrate() 获取 MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： `64`, `128`, `192`, `256` ,  默认： `128` 
+ * @method void setBitrate(integer $Bitrate) 设置 MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： `64`, `128`, `192`, `256` ,  默认： `128` 
  */
 class AudioFormat extends AbstractModel
 {
@@ -71,6 +73,11 @@ class AudioFormat extends AbstractModel
     public $SampleRate;
 
     /**
+     * @var integer  MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： `64`, `128`, `192`, `256` ,  默认： `128` 
+     */
+    public $Bitrate;
+
+    /**
      * @param string $Format 生成的音频格式
 
 - TextToSpeech流式接口
@@ -84,6 +91,7 @@ class AudioFormat extends AbstractModel
 可选
 - 16000
 - 24000 
+     * @param integer $Bitrate  MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： `64`, `128`, `192`, `256` ,  默认： `128` 
      */
     function __construct()
     {
@@ -104,6 +112,10 @@ class AudioFormat extends AbstractModel
 
         if (array_key_exists("SampleRate",$param) and $param["SampleRate"] !== null) {
             $this->SampleRate = $param["SampleRate"];
+        }
+
+        if (array_key_exists("Bitrate",$param) and $param["Bitrate"] !== null) {
+            $this->Bitrate = $param["Bitrate"];
         }
     }
 }

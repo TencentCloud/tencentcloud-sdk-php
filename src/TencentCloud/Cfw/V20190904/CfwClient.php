@@ -61,9 +61,11 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DescribeCcnInstanceRegionStatusResponse DescribeCcnInstanceRegionStatus(Models\DescribeCcnInstanceRegionStatusRequest $req) 查询CCN关联实例的地域防火墙引流网络部署状态
 1.根据CCN ID和实例ID列表，返回实例对应地域的防火墙引流网络部署状态
 2.如果传入实例ID列表为空，则返回CCN关联的所有实例的地域防火墙引流网络部署状态
+ * @method Models\DescribeCcnVpcFwPolicyLimitResponse DescribeCcnVpcFwPolicyLimit(Models\DescribeCcnVpcFwPolicyLimitRequest $req) 查询CCN中VPC防火墙接入策略配置时的规则数量限制
  * @method Models\DescribeCcnVpcFwSwitchResponse DescribeCcnVpcFwSwitch(Models\DescribeCcnVpcFwSwitchRequest $req) 查询CCN VPC防火墙开关配置
  * @method Models\DescribeCfwEipsResponse DescribeCfwEips(Models\DescribeCfwEipsRequest $req) 查询防火墙弹性公网IP
  * @method Models\DescribeCfwInsStatusResponse DescribeCfwInsStatus(Models\DescribeCfwInsStatusRequest $req) cfw实例运行状态查询
+ * @method Models\DescribeClusterVpcFwSwitchsResponse DescribeClusterVpcFwSwitchs(Models\DescribeClusterVpcFwSwitchsRequest $req) 查询集群模式Vpc间防火墙开关
  * @method Models\DescribeDefenseSwitchResponse DescribeDefenseSwitch(Models\DescribeDefenseSwitchRequest $req) 获取入侵防御按钮列表
  * @method Models\DescribeEnterpriseSGRuleProgressResponse DescribeEnterpriseSGRuleProgress(Models\DescribeEnterpriseSGRuleProgressRequest $req) 查询新版安全组下发进度
  * @method Models\DescribeEnterpriseSecurityGroupRuleResponse DescribeEnterpriseSecurityGroupRule(Models\DescribeEnterpriseSecurityGroupRuleRequest $req) 查询新企业安全组规则

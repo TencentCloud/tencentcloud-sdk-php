@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cbs\V20170312\Models;
+namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * InquiryPriceRenewDisks返回参数结构体
+ * DescribeRocketMQGeneralSKUs返回参数结构体
  *
- * @method PrepayPrice getDiskPrice() 获取<p>描述了续费云盘的价格。</p>
- * @method void setDiskPrice(PrepayPrice $DiskPrice) 设置<p>描述了续费云盘的价格。</p>
+ * @method array getSkus() 获取商品配置信息
+ * @method void setSkus(array $Skus) 设置商品配置信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class InquiryPriceRenewDisksResponse extends AbstractModel
+class DescribeRocketMQGeneralSKUsResponse extends AbstractModel
 {
     /**
-     * @var PrepayPrice <p>描述了续费云盘的价格。</p>
+     * @var array 商品配置信息
      */
-    public $DiskPrice;
+    public $Skus;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class InquiryPriceRenewDisksResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param PrepayPrice $DiskPrice <p>描述了续费云盘的价格。</p>
+     * @param array $Skus 商品配置信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +54,13 @@ class InquiryPriceRenewDisksResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskPrice",$param) and $param["DiskPrice"] !== null) {
-            $this->DiskPrice = new PrepayPrice();
-            $this->DiskPrice->deserialize($param["DiskPrice"]);
+        if (array_key_exists("Skus",$param) and $param["Skus"] !== null) {
+            $this->Skus = [];
+            foreach ($param["Skus"] as $key => $value){
+                $obj = new GeneralSKU();
+                $obj->deserialize($value);
+                array_push($this->Skus, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

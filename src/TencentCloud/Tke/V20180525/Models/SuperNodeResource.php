@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceType(string $ResourceType) 设置QuotaType为 exact 时，此字段有效，表示精确配额的资源类型。
  * @method string getDisasterRecoverGroupId() 获取置放群组 ID，QuotaType为 exact 时有效，表示购买的精确配额需满足置放群组。可通过 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810) 接口返回值中的DisasterRecoverGroupId获取。
  * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) 设置置放群组 ID，QuotaType为 exact 时有效，表示购买的精确配额需满足置放群组。可通过 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810) 接口返回值中的DisasterRecoverGroupId获取。
+ * @method string getPriceType() 获取定价类型
+ * @method void setPriceType(string $PriceType) 设置定价类型
  */
 class SuperNodeResource extends AbstractModel
 {
@@ -87,6 +89,11 @@ class SuperNodeResource extends AbstractModel
     public $DisasterRecoverGroupId;
 
     /**
+     * @var string 定价类型
+     */
+    public $PriceType;
+
+    /**
      * @param string $NodeName 节点名称，此字段在出参中有效。
      * @param integer $Num 节点上的资源总数，QuotaType为 exact 时，表示创建指定规格的精确配额数量。
      * @param float $Cpu 节点上的总核数，QuotaType为 exact 时表示指定规格的核数。
@@ -96,6 +103,7 @@ class SuperNodeResource extends AbstractModel
      * @param string $ChargeType 配额的计费类型，PREPAID表示包月，POSTPAID_BY_HOUR表示按量。
      * @param string $ResourceType QuotaType为 exact 时，此字段有效，表示精确配额的资源类型。
      * @param string $DisasterRecoverGroupId 置放群组 ID，QuotaType为 exact 时有效，表示购买的精确配额需满足置放群组。可通过 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810) 接口返回值中的DisasterRecoverGroupId获取。
+     * @param string $PriceType 定价类型
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class SuperNodeResource extends AbstractModel
 
         if (array_key_exists("DisasterRecoverGroupId",$param) and $param["DisasterRecoverGroupId"] !== null) {
             $this->DisasterRecoverGroupId = $param["DisasterRecoverGroupId"];
+        }
+
+        if (array_key_exists("PriceType",$param) and $param["PriceType"] !== null) {
+            $this->PriceType = $param["PriceType"];
         }
     }
 }

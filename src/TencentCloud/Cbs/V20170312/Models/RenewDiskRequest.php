@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RenewDisk请求参数结构体
  *
- * @method DiskChargePrepaid getDiskChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云硬盘的续费时长。<br>在云硬盘与挂载的实例一起续费的场景下，可以指定参数CurInstanceDeadline，此时云硬盘会按对齐到实例续费后的到期时间来续费。
- * @method void setDiskChargePrepaid(DiskChargePrepaid $DiskChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云硬盘的续费时长。<br>在云硬盘与挂载的实例一起续费的场景下，可以指定参数CurInstanceDeadline，此时云硬盘会按对齐到实例续费后的到期时间来续费。
- * @method string getDiskId() 获取云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
- * @method void setDiskId(string $DiskId) 设置云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
+ * @method DiskChargePrepaid getDiskChargePrepaid() 获取<p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云硬盘的续费时长。<br>在云硬盘与挂载的实例一起续费的场景下，可以指定参数CurInstanceDeadline，此时云硬盘会按对齐到实例续费后的到期时间来续费。</p>
+ * @method void setDiskChargePrepaid(DiskChargePrepaid $DiskChargePrepaid) 设置<p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云硬盘的续费时长。<br>在云硬盘与挂载的实例一起续费的场景下，可以指定参数CurInstanceDeadline，此时云硬盘会按对齐到实例续费后的到期时间来续费。</p>
+ * @method string getDiskId() 获取<p>云硬盘ID， 通过<a href="/document/product/362/16315">DescribeDisks</a>接口查询。</p>
+ * @method void setDiskId(string $DiskId) 设置<p>云硬盘ID， 通过<a href="/document/product/362/16315">DescribeDisks</a>接口查询。</p>
  */
 class RenewDiskRequest extends AbstractModel
 {
     /**
-     * @var DiskChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云硬盘的续费时长。<br>在云硬盘与挂载的实例一起续费的场景下，可以指定参数CurInstanceDeadline，此时云硬盘会按对齐到实例续费后的到期时间来续费。
+     * @var DiskChargePrepaid <p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云硬盘的续费时长。<br>在云硬盘与挂载的实例一起续费的场景下，可以指定参数CurInstanceDeadline，此时云硬盘会按对齐到实例续费后的到期时间来续费。</p>
      */
     public $DiskChargePrepaid;
 
     /**
-     * @var string 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
+     * @var string <p>云硬盘ID， 通过<a href="/document/product/362/16315">DescribeDisks</a>接口查询。</p>
      */
     public $DiskId;
 
     /**
-     * @param DiskChargePrepaid $DiskChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云硬盘的续费时长。<br>在云硬盘与挂载的实例一起续费的场景下，可以指定参数CurInstanceDeadline，此时云硬盘会按对齐到实例续费后的到期时间来续费。
-     * @param string $DiskId 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
+     * @param DiskChargePrepaid $DiskChargePrepaid <p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云硬盘的续费时长。<br>在云硬盘与挂载的实例一起续费的场景下，可以指定参数CurInstanceDeadline，此时云硬盘会按对齐到实例续费后的到期时间来续费。</p>
+     * @param string $DiskId <p>云硬盘ID， 通过<a href="/document/product/362/16315">DescribeDisks</a>接口查询。</p>
      */
     function __construct()
     {

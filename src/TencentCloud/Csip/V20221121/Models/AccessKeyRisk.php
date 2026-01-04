@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppID(integer $AppID) 设置所属appid
  * @method string getQueryParam() 获取对应风险的查询参数
  * @method void setQueryParam(string $QueryParam) 设置对应风险的查询参数
+ * @method integer getCloudType() 获取云类型 0-腾讯云 4-阿里云
+ * @method void setCloudType(integer $CloudType) 设置云类型 0-腾讯云 4-阿里云
+ * @method array getRelatedAK() 获取相关的AK列表，包含AK名和AK备注
+ * @method void setRelatedAK(array $RelatedAK) 设置相关的AK列表，包含AK名和AK备注
  */
 class AccessKeyRisk extends AbstractModel
 {
@@ -192,6 +196,16 @@ class AccessKeyRisk extends AbstractModel
     public $QueryParam;
 
     /**
+     * @var integer 云类型 0-腾讯云 4-阿里云
+     */
+    public $CloudType;
+
+    /**
+     * @var array 相关的AK列表，包含AK名和AK备注
+     */
+    public $RelatedAK;
+
+    /**
      * @param string $Name 风险名称
      * @param integer $Level 风险等级
 0-无效 1-提示 2-低危 3-中危 4-高危 5-严重
@@ -220,6 +234,8 @@ class AccessKeyRisk extends AbstractModel
 1表示 检测中
      * @param integer $AppID 所属appid
      * @param string $QueryParam 对应风险的查询参数
+     * @param integer $CloudType 云类型 0-腾讯云 4-阿里云
+     * @param array $RelatedAK 相关的AK列表，包含AK名和AK备注
      */
     function __construct()
     {
@@ -316,6 +332,19 @@ class AccessKeyRisk extends AbstractModel
 
         if (array_key_exists("QueryParam",$param) and $param["QueryParam"] !== null) {
             $this->QueryParam = $param["QueryParam"];
+        }
+
+        if (array_key_exists("CloudType",$param) and $param["CloudType"] !== null) {
+            $this->CloudType = $param["CloudType"];
+        }
+
+        if (array_key_exists("RelatedAK",$param) and $param["RelatedAK"] !== null) {
+            $this->RelatedAK = [];
+            foreach ($param["RelatedAK"] as $key => $value){
+                $obj = new AKInfo();
+                $obj->deserialize($value);
+                array_push($this->RelatedAK, $obj);
+            }
         }
     }
 }

@@ -14,23 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cbs\V20170312\Models;
+namespace TencentCloud\Cfw\V20190904\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * InquiryPriceRenewDisks返回参数结构体
+ * DescribeClusterVpcFwSwitchs返回参数结构体
  *
- * @method PrepayPrice getDiskPrice() 获取<p>描述了续费云盘的价格。</p>
- * @method void setDiskPrice(PrepayPrice $DiskPrice) 设置<p>描述了续费云盘的价格。</p>
+ * @method integer getTotal() 获取总条数
+ * @method void setTotal(integer $Total) 设置总条数
+ * @method array getData() 获取防火墙开关列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setData(array $Data) 设置防火墙开关列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class InquiryPriceRenewDisksResponse extends AbstractModel
+class DescribeClusterVpcFwSwitchsResponse extends AbstractModel
 {
     /**
-     * @var PrepayPrice <p>描述了续费云盘的价格。</p>
+     * @var integer 总条数
      */
-    public $DiskPrice;
+    public $Total;
+
+    /**
+     * @var array 防火墙开关列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +48,9 @@ class InquiryPriceRenewDisksResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param PrepayPrice $DiskPrice <p>描述了续费云盘的价格。</p>
+     * @param integer $Total 总条数
+     * @param array $Data 防火墙开关列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +66,17 @@ class InquiryPriceRenewDisksResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskPrice",$param) and $param["DiskPrice"] !== null) {
-            $this->DiskPrice = new PrepayPrice();
-            $this->DiskPrice->deserialize($param["DiskPrice"]);
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = [];
+            foreach ($param["Data"] as $key => $value){
+                $obj = new ClusterSwitchDetail();
+                $obj->deserialize($value);
+                array_push($this->Data, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

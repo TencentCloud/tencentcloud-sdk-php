@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccessKey(string $AccessKey) 设置访问密钥
  * @method integer getAlarmCount() 获取告警数量
  * @method void setAlarmCount(integer $AlarmCount) 设置告警数量
+ * @method integer getAccessKeyStatus() 获取访问密钥状态 0 禁用 1 已启用 2 已删除
+ * @method void setAccessKeyStatus(integer $AccessKeyStatus) 设置访问密钥状态 0 禁用 1 已启用 2 已删除
+ * @method string getAccessKeyCreateTime() 获取AK创建时间
+ * @method void setAccessKeyCreateTime(string $AccessKeyCreateTime) 设置AK创建时间
+ * @method string getLastAccessTime() 获取AK最后使用时间，从未使用过则返回“-”
+ * @method void setLastAccessTime(string $LastAccessTime) 设置AK最后使用时间，从未使用过则返回“-”
  */
 class AccessKeyAlarmCount extends AbstractModel
 {
@@ -45,9 +51,27 @@ class AccessKeyAlarmCount extends AbstractModel
     public $AlarmCount;
 
     /**
+     * @var integer 访问密钥状态 0 禁用 1 已启用 2 已删除
+     */
+    public $AccessKeyStatus;
+
+    /**
+     * @var string AK创建时间
+     */
+    public $AccessKeyCreateTime;
+
+    /**
+     * @var string AK最后使用时间，从未使用过则返回“-”
+     */
+    public $LastAccessTime;
+
+    /**
      * @param integer $ID 访问密钥的ID
      * @param string $AccessKey 访问密钥
      * @param integer $AlarmCount 告警数量
+     * @param integer $AccessKeyStatus 访问密钥状态 0 禁用 1 已启用 2 已删除
+     * @param string $AccessKeyCreateTime AK创建时间
+     * @param string $LastAccessTime AK最后使用时间，从未使用过则返回“-”
      */
     function __construct()
     {
@@ -72,6 +96,18 @@ class AccessKeyAlarmCount extends AbstractModel
 
         if (array_key_exists("AlarmCount",$param) and $param["AlarmCount"] !== null) {
             $this->AlarmCount = $param["AlarmCount"];
+        }
+
+        if (array_key_exists("AccessKeyStatus",$param) and $param["AccessKeyStatus"] !== null) {
+            $this->AccessKeyStatus = $param["AccessKeyStatus"];
+        }
+
+        if (array_key_exists("AccessKeyCreateTime",$param) and $param["AccessKeyCreateTime"] !== null) {
+            $this->AccessKeyCreateTime = $param["AccessKeyCreateTime"];
+        }
+
+        if (array_key_exists("LastAccessTime",$param) and $param["LastAccessTime"] !== null) {
+            $this->LastAccessTime = $param["LastAccessTime"];
         }
     }
 }

@@ -132,6 +132,8 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群查询消费组下的客户端连接列表接口文档见 [DescribeConsumerClientList](https://cloud.tencent.com/document/api/1493/120140)。
  * @method Models\DescribeRocketMQEnvironmentRolesResponse DescribeRocketMQEnvironmentRoles(Models\DescribeRocketMQEnvironmentRolesRequest $req) 查询角色授权列表。
 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的查询角色列表接口文档见 [DescribeRoleList](https://cloud.tencent.com/document/api/1493/98862)。
+ * @method Models\DescribeRocketMQGeneralSKUsResponse DescribeRocketMQGeneralSKUs(Models\DescribeRocketMQGeneralSKUsRequest $req) 查询通用集群售卖规格。
+当前 API 适用集群：4.x 通用集群。查询 5.x 集群的售卖规格接口文档见 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676)。
  * @method Models\DescribeRocketMQGroupsResponse DescribeRocketMQGroups(Models\DescribeRocketMQGroupsRequest $req) 查询 RocketMQ 消费组列表。
 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。查询 5.x 集群的消费组列表接口文档见 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535)。
  * @method Models\DescribeRocketMQMigratingTopicListResponse DescribeRocketMQMigratingTopicList(Models\DescribeRocketMQMigratingTopicListRequest $req) 查询Topic迁移状态列表，源集群和目标集群客户端数量信息需要配合DescribeRocketMQSmoothMigrationTaskTopicInsNum接口查询

@@ -18,33 +18,23 @@ namespace TencentCloud\Dbbrain\V20210527\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRedisTopBigKeys请求参数结构体
+ * DescribeRedisUnExpiredKeyStatistics请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+ * @method string getInstanceId() 获取实例 ID。可通过接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过接口获取。
  * @method string getProduct() 获取服务产品类型，支持值包括 "redis" - 云数据库 Redis。
  * @method void setProduct(string $Product) 设置服务产品类型，支持值包括 "redis" - 云数据库 Redis。
  * @method string getDate() 获取查询某个日期最新的任务，如2021-05-27，最早可为前30天的日期。该参数与AsyncRequestId参数不可同时为空。
  * @method void setDate(string $Date) 设置查询某个日期最新的任务，如2021-05-27，最早可为前30天的日期。该参数与AsyncRequestId参数不可同时为空。
- * @method string getSortBy() 获取排序字段，取值包括Capacity - 内存，ItemCount - 元素数量，默认为Capacity。
- * @method void setSortBy(string $SortBy) 设置排序字段，取值包括Capacity - 内存，ItemCount - 元素数量，默认为Capacity。
- * @method string getKeyType() 获取key类型筛选条件，默认为不进行筛选，取值包括string, list, set, hash, sortedset, stream。
- * @method void setKeyType(string $KeyType) 设置key类型筛选条件，默认为不进行筛选，取值包括string, list, set, hash, sortedset, stream。
- * @method integer getLimit() 获取查询数目，默认为20，最大值为100。
- * @method void setLimit(integer $Limit) 设置查询数目，默认为20，最大值为100。
  * @method integer getAsyncRequestId() 获取异步任务ID。当为空时，选择最近任务的ID。
  * @method void setAsyncRequestId(integer $AsyncRequestId) 设置异步任务ID。当为空时，选择最近任务的ID。
  * @method array getShardIds() 获取分片节点序号列表。当列表为空时，选择所有分片节点。
  * @method void setShardIds(array $ShardIds) 设置分片节点序号列表。当列表为空时，选择所有分片节点。
- * @method boolean getUnExpireKey() 获取是否仅查询未设置过期时间的大Key。
-当为true时，仅查询未设置过期时间的大Key，默认为false。
- * @method void setUnExpireKey(boolean $UnExpireKey) 设置是否仅查询未设置过期时间的大Key。
-当为true时，仅查询未设置过期时间的大Key，默认为false。
  */
-class DescribeRedisTopBigKeysRequest extends AbstractModel
+class DescribeRedisUnExpiredKeyStatisticsRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @var string 实例 ID。可通过接口获取。
      */
     public $InstanceId;
 
@@ -59,21 +49,6 @@ class DescribeRedisTopBigKeysRequest extends AbstractModel
     public $Date;
 
     /**
-     * @var string 排序字段，取值包括Capacity - 内存，ItemCount - 元素数量，默认为Capacity。
-     */
-    public $SortBy;
-
-    /**
-     * @var string key类型筛选条件，默认为不进行筛选，取值包括string, list, set, hash, sortedset, stream。
-     */
-    public $KeyType;
-
-    /**
-     * @var integer 查询数目，默认为20，最大值为100。
-     */
-    public $Limit;
-
-    /**
      * @var integer 异步任务ID。当为空时，选择最近任务的ID。
      */
     public $AsyncRequestId;
@@ -84,22 +59,11 @@ class DescribeRedisTopBigKeysRequest extends AbstractModel
     public $ShardIds;
 
     /**
-     * @var boolean 是否仅查询未设置过期时间的大Key。
-当为true时，仅查询未设置过期时间的大Key，默认为false。
-     */
-    public $UnExpireKey;
-
-    /**
-     * @param string $InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @param string $InstanceId 实例 ID。可通过接口获取。
      * @param string $Product 服务产品类型，支持值包括 "redis" - 云数据库 Redis。
      * @param string $Date 查询某个日期最新的任务，如2021-05-27，最早可为前30天的日期。该参数与AsyncRequestId参数不可同时为空。
-     * @param string $SortBy 排序字段，取值包括Capacity - 内存，ItemCount - 元素数量，默认为Capacity。
-     * @param string $KeyType key类型筛选条件，默认为不进行筛选，取值包括string, list, set, hash, sortedset, stream。
-     * @param integer $Limit 查询数目，默认为20，最大值为100。
      * @param integer $AsyncRequestId 异步任务ID。当为空时，选择最近任务的ID。
      * @param array $ShardIds 分片节点序号列表。当列表为空时，选择所有分片节点。
-     * @param boolean $UnExpireKey 是否仅查询未设置过期时间的大Key。
-当为true时，仅查询未设置过期时间的大Key，默认为false。
      */
     function __construct()
     {
@@ -126,28 +90,12 @@ class DescribeRedisTopBigKeysRequest extends AbstractModel
             $this->Date = $param["Date"];
         }
 
-        if (array_key_exists("SortBy",$param) and $param["SortBy"] !== null) {
-            $this->SortBy = $param["SortBy"];
-        }
-
-        if (array_key_exists("KeyType",$param) and $param["KeyType"] !== null) {
-            $this->KeyType = $param["KeyType"];
-        }
-
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
-        }
-
         if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
             $this->AsyncRequestId = $param["AsyncRequestId"];
         }
 
         if (array_key_exists("ShardIds",$param) and $param["ShardIds"] !== null) {
             $this->ShardIds = $param["ShardIds"];
-        }
-
-        if (array_key_exists("UnExpireKey",$param) and $param["UnExpireKey"] !== null) {
-            $this->UnExpireKey = $param["UnExpireKey"];
         }
     }
 }

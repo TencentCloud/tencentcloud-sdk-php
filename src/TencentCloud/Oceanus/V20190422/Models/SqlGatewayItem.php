@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpu(float $Cpu) 设置Cpu
  * @method float getMem() 获取Mem
  * @method void setMem(float $Mem) 设置Mem
+ * @method string getJdkVersion() 获取jdk版本
+ * @method void setJdkVersion(string $JdkVersion) 设置jdk版本
  */
 class SqlGatewayItem extends AbstractModel
 {
@@ -128,6 +130,11 @@ class SqlGatewayItem extends AbstractModel
     public $Mem;
 
     /**
+     * @var string jdk版本
+     */
+    public $JdkVersion;
+
+    /**
      * @param string $SerialId 唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlinkVersion Flink内核版本
@@ -148,6 +155,7 @@ class SqlGatewayItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Cpu Cpu
      * @param float $Mem Mem
+     * @param string $JdkVersion jdk版本
      */
     function __construct()
     {
@@ -214,6 +222,10 @@ class SqlGatewayItem extends AbstractModel
 
         if (array_key_exists("Mem",$param) and $param["Mem"] !== null) {
             $this->Mem = $param["Mem"];
+        }
+
+        if (array_key_exists("JdkVersion",$param) and $param["JdkVersion"] !== null) {
+            $this->JdkVersion = $param["JdkVersion"];
         }
     }
 }

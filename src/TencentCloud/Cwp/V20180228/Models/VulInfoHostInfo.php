@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置主机InstanceId
  * @method string getMachineType() 获取主机类型
  * @method void setMachineType(string $MachineType) 设置主机类型
+ * @method integer getAgentStatus() 获取agent是否在线；0不在线，1在线
+ * @method void setAgentStatus(integer $AgentStatus) 设置agent是否在线；0不在线，1在线
  */
 class VulInfoHostInfo extends AbstractModel
 {
@@ -80,6 +82,11 @@ class VulInfoHostInfo extends AbstractModel
     public $MachineType;
 
     /**
+     * @var integer agent是否在线；0不在线，1在线
+     */
+    public $AgentStatus;
+
+    /**
      * @param string $HostName 主机名
      * @param string $HostIp 主机ip
      * @param array $Tags 主机标签
@@ -88,6 +95,7 @@ class VulInfoHostInfo extends AbstractModel
      * @param string $Uuid 主机uuid
      * @param string $InstanceId 主机InstanceId
      * @param string $MachineType 主机类型
+     * @param integer $AgentStatus agent是否在线；0不在线，1在线
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class VulInfoHostInfo extends AbstractModel
 
         if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
             $this->MachineType = $param["MachineType"];
+        }
+
+        if (array_key_exists("AgentStatus",$param) and $param["AgentStatus"] !== null) {
+            $this->AgentStatus = $param["AgentStatus"];
         }
     }
 }

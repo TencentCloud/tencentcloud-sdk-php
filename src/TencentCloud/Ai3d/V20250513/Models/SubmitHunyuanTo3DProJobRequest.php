@@ -86,6 +86,8 @@ quadrilateral: 四边形面与三角形面混合生成。
 多边形类型，表示模型的表面由几边形网格构成，默认为triangle,参考值:
 triangle: 三角形面。
 quadrilateral: 四边形面与三角形面混合生成。
+ * @method string getResultFormat() 获取生成模型的格式，仅限制生成一种格式； 生成模型文件组默认返回obj、glb格式（开启时Geometry参数时，默认为glb格式）； 可选值：STL，USDZ，FBX；
+ * @method void setResultFormat(string $ResultFormat) 设置生成模型的格式，仅限制生成一种格式； 生成模型文件组默认返回obj、glb格式（开启时Geometry参数时，默认为glb格式）； 可选值：STL，USDZ，FBX；
  */
 class SubmitHunyuanTo3DProJobRequest extends AbstractModel
 {
@@ -155,6 +157,11 @@ quadrilateral: 四边形面与三角形面混合生成。
     public $PolygonType;
 
     /**
+     * @var string 生成模型的格式，仅限制生成一种格式； 生成模型文件组默认返回obj、glb格式（开启时Geometry参数时，默认为glb格式）； 可选值：STL，USDZ，FBX；
+     */
+    public $ResultFormat;
+
+    /**
      * @param string $Prompt 文生3D，3D内容的描述，中文正向提示词。
 最多支持1024个 utf-8 字符。
 ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
@@ -188,6 +195,7 @@ Sketch：可输入草图或线稿图生成模型，此模式下prompt和ImageUrl
 多边形类型，表示模型的表面由几边形网格构成，默认为triangle,参考值:
 triangle: 三角形面。
 quadrilateral: 四边形面与三角形面混合生成。
+     * @param string $ResultFormat 生成模型的格式，仅限制生成一种格式； 生成模型文件组默认返回obj、glb格式（开启时Geometry参数时，默认为glb格式）； 可选值：STL，USDZ，FBX；
      */
     function __construct()
     {
@@ -237,6 +245,10 @@ quadrilateral: 四边形面与三角形面混合生成。
 
         if (array_key_exists("PolygonType",$param) and $param["PolygonType"] !== null) {
             $this->PolygonType = $param["PolygonType"];
+        }
+
+        if (array_key_exists("ResultFormat",$param) and $param["ResultFormat"] !== null) {
+            $this->ResultFormat = $param["ResultFormat"];
         }
     }
 }

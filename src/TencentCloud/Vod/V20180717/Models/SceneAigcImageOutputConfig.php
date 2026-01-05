@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
 <li>默认值：0，表示其他分类。</li>
  * @method string getExpireTime() 获取输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setExpireTime(string $ExpireTime) 设置输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method string getAspectRatio() 获取指定所生成图片的宽高比。输入格式为 W:H。仅生商品图场景有效。
+ * @method void setAspectRatio(string $AspectRatio) 设置指定所生成图片的宽高比。输入格式为 W:H。仅生商品图场景有效。
  */
 class SceneAigcImageOutputConfig extends AbstractModel
 {
@@ -58,12 +60,18 @@ class SceneAigcImageOutputConfig extends AbstractModel
     public $ExpireTime;
 
     /**
+     * @var string 指定所生成图片的宽高比。输入格式为 W:H。仅生商品图场景有效。
+     */
+    public $AspectRatio;
+
+    /**
      * @param string $StorageMode 存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li>
 默认值：Temporary
      * @param string $MediaName 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
      * @param integer $ClassId 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
 <li>默认值：0，表示其他分类。</li>
      * @param string $ExpireTime 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param string $AspectRatio 指定所生成图片的宽高比。输入格式为 W:H。仅生商品图场景有效。
      */
     function __construct()
     {
@@ -92,6 +100,10 @@ class SceneAigcImageOutputConfig extends AbstractModel
 
         if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
             $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("AspectRatio",$param) and $param["AspectRatio"] !== null) {
+            $this->AspectRatio = $param["AspectRatio"];
         }
     }
 }

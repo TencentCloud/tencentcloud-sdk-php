@@ -98,6 +98,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAttackStatusDesc(string $AttackStatusDesc) 设置破解状态说明
  * @method string getBanExpiredTime() 获取阻断过期时间（仅阻断中事件有效）
  * @method void setBanExpiredTime(string $BanExpiredTime) 设置阻断过期时间（仅阻断中事件有效）
+ * @method IPAnalyse getIPAnalyse() 获取IP分析
+ * @method void setIPAnalyse(IPAnalyse $IPAnalyse) 设置IP分析
  */
 class BruteAttackInfo extends AbstractModel
 {
@@ -249,6 +251,11 @@ class BruteAttackInfo extends AbstractModel
     public $BanExpiredTime;
 
     /**
+     * @var IPAnalyse IP分析
+     */
+    public $IPAnalyse;
+
+    /**
      * @param integer $Id 唯一Id
      * @param string $Uuid 主机安全客户端唯一标识UUID
      * @param string $MachineIp 主机ip
@@ -288,6 +295,7 @@ class BruteAttackInfo extends AbstractModel
      * @param integer $DataFrom 事件来源：0--阻断规则，1--威胁情报
      * @param string $AttackStatusDesc 破解状态说明
      * @param string $BanExpiredTime 阻断过期时间（仅阻断中事件有效）
+     * @param IPAnalyse $IPAnalyse IP分析
      */
     function __construct()
     {
@@ -409,6 +417,11 @@ class BruteAttackInfo extends AbstractModel
 
         if (array_key_exists("BanExpiredTime",$param) and $param["BanExpiredTime"] !== null) {
             $this->BanExpiredTime = $param["BanExpiredTime"];
+        }
+
+        if (array_key_exists("IPAnalyse",$param) and $param["IPAnalyse"] !== null) {
+            $this->IPAnalyse = new IPAnalyse();
+            $this->IPAnalyse->deserialize($param["IPAnalyse"]);
         }
     }
 }

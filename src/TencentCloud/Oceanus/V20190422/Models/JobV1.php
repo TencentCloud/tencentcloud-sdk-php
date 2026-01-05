@@ -184,6 +184,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContinueAlarm(integer $ContinueAlarm) 设置停止持续告警
  * @method integer getRestartCount() 获取作业重启次数
  * @method void setRestartCount(integer $RestartCount) 设置作业重启次数
+ * @method integer getExpectJobDefaultAlarmStatus() 获取期望是开启默认告警
+ * @method void setExpectJobDefaultAlarmStatus(integer $ExpectJobDefaultAlarmStatus) 设置期望是开启默认告警
+ * @method string getJdkVersion() 获取jdk版本
+ * @method void setJdkVersion(string $JdkVersion) 设置jdk版本
  */
 class JobV1 extends AbstractModel
 {
@@ -438,6 +442,16 @@ class JobV1 extends AbstractModel
     public $RestartCount;
 
     /**
+     * @var integer 期望是开启默认告警
+     */
+    public $ExpectJobDefaultAlarmStatus;
+
+    /**
+     * @var string jdk版本
+     */
+    public $JdkVersion;
+
+    /**
      * @param string $JobId 作业ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域
@@ -520,6 +534,8 @@ class JobV1 extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ContinueAlarm 停止持续告警
      * @param integer $RestartCount 作业重启次数
+     * @param integer $ExpectJobDefaultAlarmStatus 期望是开启默认告警
+     * @param string $JdkVersion jdk版本
      */
     function __construct()
     {
@@ -706,6 +722,14 @@ class JobV1 extends AbstractModel
 
         if (array_key_exists("RestartCount",$param) and $param["RestartCount"] !== null) {
             $this->RestartCount = $param["RestartCount"];
+        }
+
+        if (array_key_exists("ExpectJobDefaultAlarmStatus",$param) and $param["ExpectJobDefaultAlarmStatus"] !== null) {
+            $this->ExpectJobDefaultAlarmStatus = $param["ExpectJobDefaultAlarmStatus"];
+        }
+
+        if (array_key_exists("JdkVersion",$param) and $param["JdkVersion"] !== null) {
+            $this->JdkVersion = $param["JdkVersion"];
         }
     }
 }

@@ -30,7 +30,9 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\BindApiGroupResponse BindApiGroup(Models\BindApiGroupRequest $req) 网关与API分组批量绑定
  * @method Models\BindPluginResponse BindPlugin(Models\BindPluginRequest $req) 插件与网关分组/API批量绑定
  * @method Models\ChangeApiUsableStatusResponse ChangeApiUsableStatus(Models\ChangeApiUsableStatusRequest $req) 启用或禁用API
- * @method Models\ContinueRunFailedTaskBatchResponse ContinueRunFailedTaskBatch(Models\ContinueRunFailedTaskBatchRequest $req) 对执行失败的任务批次执行续跑
+ * @method Models\ContinueRunFailedTaskBatchResponse ContinueRunFailedTaskBatch(Models\ContinueRunFailedTaskBatchRequest $req) 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+对执行失败的任务批次执行续跑
  * @method Models\CreateAllGatewayApiAsyncResponse CreateAllGatewayApiAsync(Models\CreateAllGatewayApiAsyncRequest $req) 一键导入API分组
  * @method Models\CreateApiGroupResponse CreateApiGroup(Models\CreateApiGroupRequest $req) 创建API分组
  * @method Models\CreateApiRateLimitRuleResponse CreateApiRateLimitRule(Models\CreateApiRateLimitRuleRequest $req) 创建API限流规则
@@ -57,8 +59,12 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\CreatePublicConfigResponse CreatePublicConfig(Models\CreatePublicConfigRequest $req) 创建公共配置项
  * @method Models\CreatePublicConfigWithDetailRespResponse CreatePublicConfigWithDetailResp(Models\CreatePublicConfigWithDetailRespRequest $req) 创建公共配置项，并返回配置项详细信息。
  * @method Models\CreateRepositoryResponse CreateRepository(Models\CreateRepositoryRequest $req) 创建仓库
- * @method Models\CreateTaskResponse CreateTask(Models\CreateTaskRequest $req) 创建任务
- * @method Models\CreateTaskFlowResponse CreateTaskFlow(Models\CreateTaskFlowRequest $req) 创建工作流
+ * @method Models\CreateTaskResponse CreateTask(Models\CreateTaskRequest $req) 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+创建任务
+ * @method Models\CreateTaskFlowResponse CreateTaskFlow(Models\CreateTaskFlowRequest $req) 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+创建工作流
  * @method Models\CreateUnitNamespacesResponse CreateUnitNamespaces(Models\CreateUnitNamespacesRequest $req) 批量创建单元化命名空间
  * @method Models\CreateUnitRuleResponse CreateUnitRule(Models\CreateUnitRuleRequest $req) 创建单元化规则
  * @method Models\CreateUnitRuleWithDetailRespResponse CreateUnitRuleWithDetailResp(Models\CreateUnitRuleWithDetailRespRequest $req) 创建单元化规则, 并返回详细信息
@@ -85,7 +91,9 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DeleteServerlessGroupResponse DeleteServerlessGroup(Models\DeleteServerlessGroupRequest $req) serverless 能力已下线。下线对应接口。
 
 删除Serverless部署组
- * @method Models\DeleteTaskResponse DeleteTask(Models\DeleteTaskRequest $req) 删除任务
+ * @method Models\DeleteTaskResponse DeleteTask(Models\DeleteTaskRequest $req) 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+删除任务
  * @method Models\DeleteUnitNamespacesResponse DeleteUnitNamespaces(Models\DeleteUnitNamespacesRequest $req) 删除单元化命名空间
  * @method Models\DeleteUnitRuleResponse DeleteUnitRule(Models\DeleteUnitRuleRequest $req) 删除单元化规则
  * @method Models\DeployContainerApplicationResponse DeployContainerApplication(Models\DeployContainerApplicationRequest $req) 部署容器应用-更新
@@ -128,7 +136,9 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DescribeEnabledUnitRuleResponse DescribeEnabledUnitRule(Models\DescribeEnabledUnitRuleRequest $req) 查询生效的单元化规则
  * @method Models\DescribeFileConfigReleasesResponse DescribeFileConfigReleases(Models\DescribeFileConfigReleasesRequest $req) 查询文件配置项发布信息
  * @method Models\DescribeFileConfigsResponse DescribeFileConfigs(Models\DescribeFileConfigsRequest $req) 查询文件配置项列表
- * @method Models\DescribeFlowLastBatchStateResponse DescribeFlowLastBatchState(Models\DescribeFlowLastBatchStateRequest $req) 查询工作流最新一个批次的状态信息
+ * @method Models\DescribeFlowLastBatchStateResponse DescribeFlowLastBatchState(Models\DescribeFlowLastBatchStateRequest $req) 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+查询工作流最新一个批次的状态信息
  * @method Models\DescribeGatewayAllGroupApisResponse DescribeGatewayAllGroupApis(Models\DescribeGatewayAllGroupApisRequest $req) 查询网关所有分组下Api列表
  * @method Models\DescribeGatewayApisResponse DescribeGatewayApis(Models\DescribeGatewayApisRequest $req) 查询API分组下的Api列表信息
  * @method Models\DescribeGatewayMonitorOverviewResponse DescribeGatewayMonitorOverview(Models\DescribeGatewayMonitorOverviewRequest $req) 查询网关监控概览
@@ -180,9 +190,15 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DescribeSimpleGroupsResponse DescribeSimpleGroups(Models\DescribeSimpleGroupsRequest $req) 查询简单部署组列表
  * @method Models\DescribeSimpleNamespacesResponse DescribeSimpleNamespaces(Models\DescribeSimpleNamespacesRequest $req) 查询简单命名空间列表
  * @method Models\DescribeStatisticsResponse DescribeStatistics(Models\DescribeStatisticsRequest $req) 服务统计页面：接口和服务维度
- * @method Models\DescribeTaskDetailResponse DescribeTaskDetail(Models\DescribeTaskDetailRequest $req) 查询任务详情
- * @method Models\DescribeTaskLastStatusResponse DescribeTaskLastStatus(Models\DescribeTaskLastStatusRequest $req) 查询任务最近一次执行状态
- * @method Models\DescribeTaskRecordsResponse DescribeTaskRecords(Models\DescribeTaskRecordsRequest $req) 翻页查询任务列表
+ * @method Models\DescribeTaskDetailResponse DescribeTaskDetail(Models\DescribeTaskDetailRequest $req) 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+查询任务详情
+ * @method Models\DescribeTaskLastStatusResponse DescribeTaskLastStatus(Models\DescribeTaskLastStatusRequest $req) 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+查询任务最近一次执行状态
+ * @method Models\DescribeTaskRecordsResponse DescribeTaskRecords(Models\DescribeTaskRecordsRequest $req) 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+翻页查询任务列表
  * @method Models\DescribeUnitApiUseDetailResponse DescribeUnitApiUseDetail(Models\DescribeUnitApiUseDetailRequest $req) 查询网关API监控明细数据（仅单元化网关），非单元化网关使用DescribeApiUseDetail
  * @method Models\DescribeUnitNamespacesResponse DescribeUnitNamespaces(Models\DescribeUnitNamespacesRequest $req) 查询单元化命名空间列表
  * @method Models\DescribeUnitRuleResponse DescribeUnitRule(Models\DescribeUnitRuleRequest $req) 查询单元化规则详情
@@ -192,20 +208,32 @@ use TencentCloud\Tsf\V20180326\Models as Models;
 请查阅[COS相关文档](https://cloud.tencent.com/document/product/436)
  * @method Models\DescribeUsableUnitNamespacesResponse DescribeUsableUnitNamespaces(Models\DescribeUsableUnitNamespacesRequest $req) 查询可用于被导入的命名空间列表
  * @method Models\DisableLaneRuleResponse DisableLaneRule(Models\DisableLaneRuleRequest $req) 禁用灰度发布规则
- * @method Models\DisableTaskResponse DisableTask(Models\DisableTaskRequest $req) 停用任务
- * @method Models\DisableTaskFlowResponse DisableTaskFlow(Models\DisableTaskFlowRequest $req) 停用工作流
+ * @method Models\DisableTaskResponse DisableTask(Models\DisableTaskRequest $req) 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+停用任务
+ * @method Models\DisableTaskFlowResponse DisableTaskFlow(Models\DisableTaskFlowRequest $req) 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+停用工作流
  * @method Models\DisableUnitRouteResponse DisableUnitRoute(Models\DisableUnitRouteRequest $req) 禁用单元化路由
  * @method Models\DisableUnitRuleResponse DisableUnitRule(Models\DisableUnitRuleRequest $req) 禁用单元化规则
  * @method Models\DisassociateBusinessLogConfigResponse DisassociateBusinessLogConfig(Models\DisassociateBusinessLogConfigRequest $req) 取消关联业务日志配置项和应用
  * @method Models\DisassociateKafkaConfigResponse DisassociateKafkaConfig(Models\DisassociateKafkaConfigRequest $req) 取消关联投递信息和部署组
  * @method Models\DraftApiGroupResponse DraftApiGroup(Models\DraftApiGroupRequest $req) 下线Api分组
  * @method Models\EnableLaneRuleResponse EnableLaneRule(Models\EnableLaneRuleRequest $req) 启用灰度发布规则
- * @method Models\EnableTaskResponse EnableTask(Models\EnableTaskRequest $req) 启用任务
- * @method Models\EnableTaskFlowResponse EnableTaskFlow(Models\EnableTaskFlowRequest $req) 启用工作流
+ * @method Models\EnableTaskResponse EnableTask(Models\EnableTaskRequest $req) 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+启用任务
+ * @method Models\EnableTaskFlowResponse EnableTaskFlow(Models\EnableTaskFlowRequest $req) 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+启用工作流
  * @method Models\EnableUnitRouteResponse EnableUnitRoute(Models\EnableUnitRouteRequest $req) 启用单元化路由
  * @method Models\EnableUnitRuleResponse EnableUnitRule(Models\EnableUnitRuleRequest $req) 启用单元化规则
- * @method Models\ExecuteTaskResponse ExecuteTask(Models\ExecuteTaskRequest $req) 手动执行一次任务
- * @method Models\ExecuteTaskFlowResponse ExecuteTaskFlow(Models\ExecuteTaskFlowRequest $req) 执行一次工作流
+ * @method Models\ExecuteTaskResponse ExecuteTask(Models\ExecuteTaskRequest $req) 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+手动执行一次任务
+ * @method Models\ExecuteTaskFlowResponse ExecuteTaskFlow(Models\ExecuteTaskFlowRequest $req) 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+执行一次工作流
  * @method Models\ExpandGroupResponse ExpandGroup(Models\ExpandGroupRequest $req) 虚拟机部署组添加实例
  * @method Models\ModifyApplicationResponse ModifyApplication(Models\ModifyApplicationRequest $req) 修改应用
  * @method Models\ModifyClusterResponse ModifyCluster(Models\ModifyClusterRequest $req) 修改集群信息
@@ -219,17 +247,27 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\ModifyNamespaceResponse ModifyNamespace(Models\ModifyNamespaceRequest $req) 修改命名空间
  * @method Models\ModifyPathRewriteResponse ModifyPathRewrite(Models\ModifyPathRewriteRequest $req) 修改路径重写
  * @method Models\ModifyProgramResponse ModifyProgram(Models\ModifyProgramRequest $req) 更新数据集
- * @method Models\ModifyTaskResponse ModifyTask(Models\ModifyTaskRequest $req) 修改任务
+ * @method Models\ModifyTaskResponse ModifyTask(Models\ModifyTaskRequest $req) 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+修改任务
  * @method Models\ModifyUploadInfoResponse ModifyUploadInfo(Models\ModifyUploadInfoRequest $req) 调用该接口和COS的上传接口后，需要调用此接口更新TSF中保存的程序包状态。
 调用此接口完成后，才标志上传包流程结束。
  * @method Models\OperateApplicationTcrBindingResponse OperateApplicationTcrBinding(Models\OperateApplicationTcrBindingRequest $req) 绑定解绑tcr仓库
  * @method Models\ReassociateBusinessLogConfigResponse ReassociateBusinessLogConfig(Models\ReassociateBusinessLogConfigRequest $req) 后端服务已经删除这个接口,  API 接口下线处理
 
 重关联业务日志配置
- * @method Models\RedoTaskResponse RedoTask(Models\RedoTaskRequest $req) 重新执行任务
- * @method Models\RedoTaskBatchResponse RedoTaskBatch(Models\RedoTaskBatchRequest $req) 重新执行任务批次
- * @method Models\RedoTaskExecuteResponse RedoTaskExecute(Models\RedoTaskExecuteRequest $req) 重新执行在某个节点上执行任务。
- * @method Models\RedoTaskFlowBatchResponse RedoTaskFlowBatch(Models\RedoTaskFlowBatchRequest $req) 重新执行工作流批次
+ * @method Models\RedoTaskResponse RedoTask(Models\RedoTaskRequest $req) 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+重新执行任务
+ * @method Models\RedoTaskBatchResponse RedoTaskBatch(Models\RedoTaskBatchRequest $req) 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+重新执行任务批次
+ * @method Models\RedoTaskExecuteResponse RedoTaskExecute(Models\RedoTaskExecuteRequest $req) 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+重新执行在某个节点上执行任务。
+ * @method Models\RedoTaskFlowBatchResponse RedoTaskFlowBatch(Models\RedoTaskFlowBatchRequest $req) 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+重新执行工作流批次
  * @method Models\ReleaseApiGroupResponse ReleaseApiGroup(Models\ReleaseApiGroupRequest $req) 发布Api分组
  * @method Models\ReleaseConfigResponse ReleaseConfig(Models\ReleaseConfigRequest $req) 发布配置
  * @method Models\ReleaseConfigWithDetailRespResponse ReleaseConfigWithDetailResp(Models\ReleaseConfigWithDetailRespRequest $req) 发布配置，并且返回配置ID。
@@ -248,9 +286,15 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\StartGroupResponse StartGroup(Models\StartGroupRequest $req) 启动分组
  * @method Models\StopContainerGroupResponse StopContainerGroup(Models\StopContainerGroupRequest $req) 停止容器部署组
  * @method Models\StopGroupResponse StopGroup(Models\StopGroupRequest $req) 停止虚拟机部署组
- * @method Models\StopTaskBatchResponse StopTaskBatch(Models\StopTaskBatchRequest $req) 停止执行中的任务批次， 非运行中的任务不可调用。
- * @method Models\StopTaskExecuteResponse StopTaskExecute(Models\StopTaskExecuteRequest $req) 停止正在某个节点上执行的任务
- * @method Models\TerminateTaskFlowBatchResponse TerminateTaskFlowBatch(Models\TerminateTaskFlowBatchRequest $req) 停止一个工作流批次
+ * @method Models\StopTaskBatchResponse StopTaskBatch(Models\StopTaskBatchRequest $req) 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+停止执行中的任务批次， 非运行中的任务不可调用。
+ * @method Models\StopTaskExecuteResponse StopTaskExecute(Models\StopTaskExecuteRequest $req) 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+停止正在某个节点上执行的任务
+ * @method Models\TerminateTaskFlowBatchResponse TerminateTaskFlowBatch(Models\TerminateTaskFlowBatchRequest $req) 分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+停止一个工作流批次
  * @method Models\UnbindApiGroupResponse UnbindApiGroup(Models\UnbindApiGroupRequest $req) API分组批量与网关解绑
  * @method Models\UpdateApiGroupResponse UpdateApiGroup(Models\UpdateApiGroupRequest $req) 更新Api分组
  * @method Models\UpdateApiRateLimitRuleResponse UpdateApiRateLimitRule(Models\UpdateApiRateLimitRuleRequest $req) 更新API限流规则

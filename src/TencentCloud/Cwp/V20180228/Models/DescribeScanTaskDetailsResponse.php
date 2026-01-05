@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStoppingAll(boolean $StoppingAll) 设置任务是否全部正在被停止 ture是
  * @method integer getVulCount() 获取扫描出漏洞个数
  * @method void setVulCount(integer $VulCount) 设置扫描出漏洞个数
+ * @method array getPatchInfo() 获取单独扫描kb时的信息
+ * @method void setPatchInfo(array $PatchInfo) 设置单独扫描kb时的信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -131,6 +133,11 @@ class DescribeScanTaskDetailsResponse extends AbstractModel
     public $VulCount;
 
     /**
+     * @var array 单独扫描kb时的信息
+     */
+    public $PatchInfo;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -151,6 +158,7 @@ class DescribeScanTaskDetailsResponse extends AbstractModel
      * @param integer $Type 0一键检测 1定时检测
      * @param boolean $StoppingAll 任务是否全部正在被停止 ture是
      * @param integer $VulCount 扫描出漏洞个数
+     * @param array $PatchInfo 单独扫描kb时的信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -234,6 +242,15 @@ class DescribeScanTaskDetailsResponse extends AbstractModel
 
         if (array_key_exists("VulCount",$param) and $param["VulCount"] !== null) {
             $this->VulCount = $param["VulCount"];
+        }
+
+        if (array_key_exists("PatchInfo",$param) and $param["PatchInfo"] !== null) {
+            $this->PatchInfo = [];
+            foreach ($param["PatchInfo"] as $key => $value){
+                $obj = new PatchInfoDetail();
+                $obj->deserialize($value);
+                array_push($this->PatchInfo, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

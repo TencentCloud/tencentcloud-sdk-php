@@ -32,6 +32,8 @@ h：按小时。此时返回查询时间范围内 UTC 时间为整小时的数�
  * @method void setPeriod(string $Period) 设置返回数据的粒度，支持设为以下值：
 d：按天。此时返回查询时间范围内 UTC 时间为零点的数据。
 h：按小时。此时返回查询时间范围内 UTC 时间为整小时的数据。
+ * @method boolean getIsFloat() 获取返回数据是否为小数
+ * @method void setIsFloat(boolean $IsFloat) 设置返回数据是否为小数
  */
 class DescribeTRTCMarketQualityDataRequest extends AbstractModel
 {
@@ -58,12 +60,18 @@ h：按小时。此时返回查询时间范围内 UTC 时间为整小时的数�
     public $Period;
 
     /**
+     * @var boolean 返回数据是否为小数
+     */
+    public $IsFloat;
+
+    /**
      * @param string $SdkAppId 用户SdkAppId（如：1400xxxxxx）
      * @param string $StartTime 查询开始时间，格式为YYYY-MM-DD。（查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天）
      * @param string $EndTime 查询结束时间，格式为YYYY-MM-DD。
      * @param string $Period 返回数据的粒度，支持设为以下值：
 d：按天。此时返回查询时间范围内 UTC 时间为零点的数据。
 h：按小时。此时返回查询时间范围内 UTC 时间为整小时的数据。
+     * @param boolean $IsFloat 返回数据是否为小数
      */
     function __construct()
     {
@@ -92,6 +100,10 @@ h：按小时。此时返回查询时间范围内 UTC 时间为整小时的数�
 
         if (array_key_exists("Period",$param) and $param["Period"] !== null) {
             $this->Period = $param["Period"];
+        }
+
+        if (array_key_exists("IsFloat",$param) and $param["IsFloat"] !== null) {
+            $this->IsFloat = $param["IsFloat"];
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getVulId() 获取漏洞id
  * @method void setVulId(integer $VulId) 设置漏洞id
- * @method string getPublishTime() 获取漏洞纰漏时间
- * @method void setPublishTime(string $PublishTime) 设置漏洞纰漏时间
+ * @method string getPublishTime() 获取漏洞披露时间
+ * @method void setPublishTime(string $PublishTime) 设置漏洞披露时间
  * @method string getName() 获取漏洞名
  * @method void setName(string $Name) 设置漏洞名
  * @method string getNameEn() 获取漏洞名,英文描述
@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSupportFix(integer $SupportFix) 设置是否支持自动修复 0:不支持 >0: 支持
  * @method integer getSupportDefense() 获取是否支持自动防御 0:不支持 1:支持
  * @method void setSupportDefense(integer $SupportDefense) 设置是否支持自动防御 0:不支持 1:支持
+ * @method integer getKbId() 获取KB对应的ID
+ * @method void setKbId(integer $KbId) 设置KB对应的ID
+ * @method string getKbNumber() 获取KB号
+ * @method void setKbNumber(string $KbNumber) 设置KB号
  */
 class VulEmergentMsgInfo extends AbstractModel
 {
@@ -41,7 +45,7 @@ class VulEmergentMsgInfo extends AbstractModel
     public $VulId;
 
     /**
-     * @var string 漏洞纰漏时间
+     * @var string 漏洞披露时间
      */
     public $PublishTime;
 
@@ -66,12 +70,24 @@ class VulEmergentMsgInfo extends AbstractModel
     public $SupportDefense;
 
     /**
+     * @var integer KB对应的ID
+     */
+    public $KbId;
+
+    /**
+     * @var string KB号
+     */
+    public $KbNumber;
+
+    /**
      * @param integer $VulId 漏洞id
-     * @param string $PublishTime 漏洞纰漏时间
+     * @param string $PublishTime 漏洞披露时间
      * @param string $Name 漏洞名
      * @param string $NameEn 漏洞名,英文描述
      * @param integer $SupportFix 是否支持自动修复 0:不支持 >0: 支持
      * @param integer $SupportDefense 是否支持自动防御 0:不支持 1:支持
+     * @param integer $KbId KB对应的ID
+     * @param string $KbNumber KB号
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class VulEmergentMsgInfo extends AbstractModel
 
         if (array_key_exists("SupportDefense",$param) and $param["SupportDefense"] !== null) {
             $this->SupportDefense = $param["SupportDefense"];
+        }
+
+        if (array_key_exists("KbId",$param) and $param["KbId"] !== null) {
+            $this->KbId = $param["KbId"];
+        }
+
+        if (array_key_exists("KbNumber",$param) and $param["KbNumber"] !== null) {
+            $this->KbNumber = $param["KbNumber"];
         }
     }
 }

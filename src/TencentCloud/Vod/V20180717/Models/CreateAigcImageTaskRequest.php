@@ -24,25 +24,21 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
  * @method string getModelName() 获取模型名称。取值：
 <li>GEM：Gemini；</li>
-<li>Jimeng：即梦；</li>
 <li>Qwen：千问。</li>
 <li>Hunyuan：混元。</li>
 <li>Mingmou：明眸。</li>
  * @method void setModelName(string $ModelName) 设置模型名称。取值：
 <li>GEM：Gemini；</li>
-<li>Jimeng：即梦；</li>
 <li>Qwen：千问。</li>
 <li>Hunyuan：混元。</li>
 <li>Mingmou：明眸。</li>
  * @method string getModelVersion() 获取模型版本。取值：
 <li>当 ModelName 是 GEM，可选值为 2.5、3.0；</li>
-<li>当 ModelName 是 Jimeng，可选值为 4.0；</li>
 <li>当 ModelName 是 Qwen，可选值为 0925；</li>
 <li>当 ModelName 是 Hunyuan，可选值为 3.0；</li>
 <li>当 ModelName 是 Mingmou，可选值为 1.0；</li>
  * @method void setModelVersion(string $ModelVersion) 设置模型版本。取值：
 <li>当 ModelName 是 GEM，可选值为 2.5、3.0；</li>
-<li>当 ModelName 是 Jimeng，可选值为 4.0；</li>
 <li>当 ModelName 是 Qwen，可选值为 0925；</li>
 <li>当 ModelName 是 Hunyuan，可选值为 3.0；</li>
 <li>当 ModelName 是 Mingmou，可选值为 1.0；</li>
@@ -75,7 +71,6 @@ class CreateAigcImageTaskRequest extends AbstractModel
     /**
      * @var string 模型名称。取值：
 <li>GEM：Gemini；</li>
-<li>Jimeng：即梦；</li>
 <li>Qwen：千问。</li>
 <li>Hunyuan：混元。</li>
 <li>Mingmou：明眸。</li>
@@ -85,7 +80,6 @@ class CreateAigcImageTaskRequest extends AbstractModel
     /**
      * @var string 模型版本。取值：
 <li>当 ModelName 是 GEM，可选值为 2.5、3.0；</li>
-<li>当 ModelName 是 Jimeng，可选值为 4.0；</li>
 <li>当 ModelName 是 Qwen，可选值为 0925；</li>
 <li>当 ModelName 是 Hunyuan，可选值为 3.0；</li>
 <li>当 ModelName 是 Mingmou，可选值为 1.0；</li>
@@ -141,13 +135,11 @@ class CreateAigcImageTaskRequest extends AbstractModel
      * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      * @param string $ModelName 模型名称。取值：
 <li>GEM：Gemini；</li>
-<li>Jimeng：即梦；</li>
 <li>Qwen：千问。</li>
 <li>Hunyuan：混元。</li>
 <li>Mingmou：明眸。</li>
      * @param string $ModelVersion 模型版本。取值：
 <li>当 ModelName 是 GEM，可选值为 2.5、3.0；</li>
-<li>当 ModelName 是 Jimeng，可选值为 4.0；</li>
 <li>当 ModelName 是 Qwen，可选值为 0925；</li>
 <li>当 ModelName 是 Hunyuan，可选值为 3.0；</li>
 <li>当 ModelName 是 Mingmou，可选值为 1.0；</li>

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventIds(string $EventIds) 设置漏洞事件id串，多个用英文逗号分隔
  * @method string getUuids() 获取重新检查的机器uuid,多个逗号分隔
  * @method void setUuids(string $Uuids) 设置重新检查的机器uuid,多个逗号分隔
+ * @method integer getEventType() 获取0漏洞,1windows 补丁
+ * @method void setEventType(integer $EventType) 设置0漏洞,1windows 补丁
  */
 class ScanVulAgainRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ScanVulAgainRequest extends AbstractModel
     public $Uuids;
 
     /**
+     * @var integer 0漏洞,1windows 补丁
+     */
+    public $EventType;
+
+    /**
      * @param string $EventIds 漏洞事件id串，多个用英文逗号分隔
      * @param string $Uuids 重新检查的机器uuid,多个逗号分隔
+     * @param integer $EventType 0漏洞,1windows 补丁
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ScanVulAgainRequest extends AbstractModel
 
         if (array_key_exists("Uuids",$param) and $param["Uuids"] !== null) {
             $this->Uuids = $param["Uuids"];
+        }
+
+        if (array_key_exists("EventType",$param) and $param["EventType"] !== null) {
+            $this->EventType = $param["EventType"];
         }
     }
 }

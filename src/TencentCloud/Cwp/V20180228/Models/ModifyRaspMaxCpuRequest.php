@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRaspMaxCpu请求参数结构体
  *
- * @method integer getRaspMaxCpu() 获取rasp当前最大cpu限制，0<cpu<=100，默认100表示不限制
- * @method void setRaspMaxCpu(integer $RaspMaxCpu) 设置rasp当前最大cpu限制，0<cpu<=100，默认100表示不限制
+ * @method integer getRaspMaxCpu() 获取rasp当前最大cpu限制，大于0，小于等于100，默认100表示不限制
+ * @method void setRaspMaxCpu(integer $RaspMaxCpu) 设置rasp当前最大cpu限制，大于0，小于等于100，默认100表示不限制
  */
 class ModifyRaspMaxCpuRequest extends AbstractModel
 {
     /**
-     * @var integer rasp当前最大cpu限制，0<cpu<=100，默认100表示不限制
+     * @var integer rasp当前最大cpu限制，大于0，小于等于100，默认100表示不限制
      */
     public $RaspMaxCpu;
 
     /**
-     * @param integer $RaspMaxCpu rasp当前最大cpu限制，0<cpu<=100，默认100表示不限制
+     * @param integer $RaspMaxCpu rasp当前最大cpu限制，大于0，小于等于100，默认100表示不限制
      */
     function __construct()
     {

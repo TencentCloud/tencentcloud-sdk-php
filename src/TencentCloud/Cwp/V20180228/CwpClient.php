@@ -24,9 +24,6 @@ use TencentCloud\Cwp\V20180228\Models as Models;
 
 /**
  * @method Models\AddLoginWhiteListsResponse AddLoginWhiteLists(Models\AddLoginWhiteListsRequest $req) 批量添加异地登录白名单
- * @method Models\CancelIgnoreVulResponse CancelIgnoreVul(Models\CancelIgnoreVulRequest $req) 产品变动切换到了\\n切换到 AddVulIgnoreRule / ModifyVulIgnoreRule  CancelVulIgnoreRule\\n相关接口
-
-取消漏洞忽略
  * @method Models\ChangeRuleEventsIgnoreStatusResponse ChangeRuleEventsIgnoreStatus(Models\ChangeRuleEventsIgnoreStatusRequest $req) 根据检测项id或事件id批量忽略事件或取消忽略
  * @method Models\ChangeStrategyEnableStatusResponse ChangeStrategyEnableStatus(Models\ChangeStrategyEnableStatusRequest $req) 根据策略id修改策略可用状态
  * @method Models\CheckBashPolicyParamsResponse CheckBashPolicyParams(Models\CheckBashPolicyParamsRequest $req) 校验高危命令用户规则新增和编辑时的参数。
@@ -153,7 +150,6 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeAttackTopResponse DescribeAttackTop(Models\DescribeAttackTopRequest $req) 网络攻击top5数据列表
  * @method Models\DescribeAttackTrendsResponse DescribeAttackTrends(Models\DescribeAttackTrendsRequest $req) 网络攻击趋势数据
  * @method Models\DescribeAttackVulTypeListResponse DescribeAttackVulTypeList(Models\DescribeAttackVulTypeListRequest $req) 获取网络攻击威胁类型列表
- * @method Models\DescribeAvailableExpertServiceDetailResponse DescribeAvailableExpertServiceDetail(Models\DescribeAvailableExpertServiceDetailRequest $req) 专家服务-可用订单详情
  * @method Models\DescribeBanModeResponse DescribeBanMode(Models\DescribeBanModeRequest $req) 获取爆破阻断模式
  * @method Models\DescribeBanRegionsResponse DescribeBanRegions(Models\DescribeBanRegionsRequest $req) 获取阻断地域
  * @method Models\DescribeBanStatusResponse DescribeBanStatus(Models\DescribeBanStatusRequest $req) 获取阻断按钮状态
@@ -202,11 +198,8 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeDefenceEventDetailResponse DescribeDefenceEventDetail(Models\DescribeDefenceEventDetailRequest $req) 获取漏洞防御事件详情
  * @method Models\DescribeDirectConnectInstallCommandResponse DescribeDirectConnectInstallCommand(Models\DescribeDirectConnectInstallCommandRequest $req) 获取专线agent安装命令，包含token
  * @method Models\DescribeESAggregationsResponse DescribeESAggregations(Models\DescribeESAggregationsRequest $req) 获取ES字段聚合结果
- * @method Models\DescribeEmergencyResponseListResponse DescribeEmergencyResponseList(Models\DescribeEmergencyResponseListRequest $req) 专家服务-应急响应列表
  * @method Models\DescribeEmergencyVulListResponse DescribeEmergencyVulList(Models\DescribeEmergencyVulListRequest $req) 获取应急漏洞列表
  * @method Models\DescribeEventByTableResponse DescribeEventByTable(Models\DescribeEventByTableRequest $req) 根据事件表名和id查询告警事件详情
- * @method Models\DescribeExpertServiceListResponse DescribeExpertServiceList(Models\DescribeExpertServiceListRequest $req) 专家服务-安全管家列表
- * @method Models\DescribeExpertServiceOrderListResponse DescribeExpertServiceOrderList(Models\DescribeExpertServiceOrderListRequest $req) 专家服务-专家服务订单列表
  * @method Models\DescribeExportMachinesResponse DescribeExportMachines(Models\DescribeExportMachinesRequest $req) 本接口 (DescribeExportMachines) 用于导出区域主机列表。
  * @method Models\DescribeFastAnalysisResponse DescribeFastAnalysis(Models\DescribeFastAnalysisRequest $req) 日志快速分析统计
  * @method Models\DescribeFileTamperEventRuleInfoResponse DescribeFileTamperEventRuleInfo(Models\DescribeFileTamperEventRuleInfoRequest $req) 查看产生事件时规则详情接口
@@ -269,7 +262,6 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeMalwareTimingScanSettingResponse DescribeMalwareTimingScanSetting(Models\DescribeMalwareTimingScanSettingRequest $req) 查询定时扫描配置
  * @method Models\DescribeMalwareWhiteListResponse DescribeMalwareWhiteList(Models\DescribeMalwareWhiteListRequest $req) 获取木马白名单列表
  * @method Models\DescribeMalwareWhiteListAffectListResponse DescribeMalwareWhiteListAffectList(Models\DescribeMalwareWhiteListAffectListRequest $req) 获取木马白名单受影响列表
- * @method Models\DescribeMonthInspectionReportResponse DescribeMonthInspectionReport(Models\DescribeMonthInspectionReportRequest $req) 专家服务-安全管家月巡检报告下载
  * @method Models\DescribeNetAttackSettingResponse DescribeNetAttackSetting(Models\DescribeNetAttackSettingRequest $req) 查询网络攻击设置
  * @method Models\DescribeNetAttackWhiteListResponse DescribeNetAttackWhiteList(Models\DescribeNetAttackWhiteListRequest $req) 获取网络攻击白名单列表
  * @method Models\DescribeOpenPortStatisticsResponse DescribeOpenPortStatistics(Models\DescribeOpenPortStatisticsRequest $req) 本接口 (DescribeOpenPortStatistics) 用于获取端口统计列表。
@@ -283,7 +275,6 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeProductStatusResponse DescribeProductStatus(Models\DescribeProductStatusRequest $req) 产品试用状态查询接口
  * @method Models\DescribeProtectDirListResponse DescribeProtectDirList(Models\DescribeProtectDirListRequest $req) 网页防篡改防护目录列表
  * @method Models\DescribeProtectDirRelatedServerResponse DescribeProtectDirRelatedServer(Models\DescribeProtectDirRelatedServerRequest $req) 查询防护目录关联服务器列表信息
- * @method Models\DescribeProtectNetListResponse DescribeProtectNetList(Models\DescribeProtectNetListRequest $req) 专家服务-旗舰重保列表
  * @method Models\DescribePublicProxyInstallCommandResponse DescribePublicProxyInstallCommand(Models\DescribePublicProxyInstallCommandRequest $req) 获取公网接入代理安装命令
  * @method Models\DescribeRansomDefenseBackupListResponse DescribeRansomDefenseBackupList(Models\DescribeRansomDefenseBackupListRequest $req) 查询主机快照备份列表
  * @method Models\DescribeRansomDefenseEventsListResponse DescribeRansomDefenseEventsList(Models\DescribeRansomDefenseEventsListRequest $req) 查询防勒索事件列表
@@ -454,9 +445,6 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\ExportWebPageEventListResponse ExportWebPageEventList(Models\ExportWebPageEventListRequest $req) 导出篡改事件列表
  * @method Models\FixBaselineDetectResponse FixBaselineDetect(Models\FixBaselineDetectRequest $req) 修复基线检测
  * @method Models\GetLocalStorageItemResponse GetLocalStorageItem(Models\GetLocalStorageItemRequest $req) 获取本地存储数据
- * @method Models\IgnoreImpactedHostsResponse IgnoreImpactedHosts(Models\IgnoreImpactedHostsRequest $req) 产品变动切换到了\\n切换到 AddVulIgnoreRule / ModifyVulIgnoreRule  CancelVulIgnoreRule\\n相关接口
-
-本接口 (IgnoreImpactedHosts) 用于忽略漏洞。
  * @method Models\KeysLocalStorageResponse KeysLocalStorage(Models\KeysLocalStorageRequest $req) 获取本地存储键值列表
  * @method Models\ModifyAutoOpenProVersionConfigResponse ModifyAutoOpenProVersionConfig(Models\ModifyAutoOpenProVersionConfigRequest $req) 用于设置新增主机自动开通专业防护配置。
  * @method Models\ModifyBanModeResponse ModifyBanMode(Models\ModifyBanModeRequest $req) 修改爆破阻断模式

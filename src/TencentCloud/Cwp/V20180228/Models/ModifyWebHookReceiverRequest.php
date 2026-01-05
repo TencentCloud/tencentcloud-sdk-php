@@ -28,6 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddr(string $Addr) 设置webhook地址
  * @method boolean getIsModify() 获取是否修改
  * @method void setIsModify(boolean $IsModify) 设置是否修改
+ * @method integer getType() 获取类型
+ * @method void setType(integer $Type) 设置类型
+ * @method string getSCFRegion() 获取目标地域
+ * @method void setSCFRegion(string $SCFRegion) 设置目标地域
+ * @method string getNamespace() 获取命名空间
+ * @method void setNamespace(string $Namespace) 设置命名空间
+ * @method string getFunctionName() 获取函数名称
+ * @method void setFunctionName(string $FunctionName) 设置函数名称
+ * @method string getFunctionVersion() 获取函数版本
+ * @method void setFunctionVersion(string $FunctionVersion) 设置函数版本
+ * @method string getAlias() 获取别名
+ * @method void setAlias(string $Alias) 设置别名
  */
 class ModifyWebHookReceiverRequest extends AbstractModel
 {
@@ -52,10 +64,46 @@ class ModifyWebHookReceiverRequest extends AbstractModel
     public $IsModify;
 
     /**
+     * @var integer 类型
+     */
+    public $Type;
+
+    /**
+     * @var string 目标地域
+     */
+    public $SCFRegion;
+
+    /**
+     * @var string 命名空间
+     */
+    public $Namespace;
+
+    /**
+     * @var string 函数名称
+     */
+    public $FunctionName;
+
+    /**
+     * @var string 函数版本
+     */
+    public $FunctionVersion;
+
+    /**
+     * @var string 别名
+     */
+    public $Alias;
+
+    /**
      * @param integer $Id id
      * @param string $Name 接收人名称
      * @param string $Addr webhook地址
      * @param boolean $IsModify 是否修改
+     * @param integer $Type 类型
+     * @param string $SCFRegion 目标地域
+     * @param string $Namespace 命名空间
+     * @param string $FunctionName 函数名称
+     * @param string $FunctionVersion 函数版本
+     * @param string $Alias 别名
      */
     function __construct()
     {
@@ -84,6 +132,30 @@ class ModifyWebHookReceiverRequest extends AbstractModel
 
         if (array_key_exists("IsModify",$param) and $param["IsModify"] !== null) {
             $this->IsModify = $param["IsModify"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("SCFRegion",$param) and $param["SCFRegion"] !== null) {
+            $this->SCFRegion = $param["SCFRegion"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("FunctionName",$param) and $param["FunctionName"] !== null) {
+            $this->FunctionName = $param["FunctionName"];
+        }
+
+        if (array_key_exists("FunctionVersion",$param) and $param["FunctionVersion"] !== null) {
+            $this->FunctionVersion = $param["FunctionVersion"];
+        }
+
+        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
+            $this->Alias = $param["Alias"];
         }
     }
 }

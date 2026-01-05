@@ -82,6 +82,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobManagerCpu(float $JobManagerCpu) 设置JobManager cpu
  * @method float getJobManagerMem() 获取JobManager 内存
  * @method void setJobManagerMem(float $JobManagerMem) 设置JobManager 内存
+ * @method string getJdkVersion() 获取jdk版本
+ * @method void setJdkVersion(string $JdkVersion) 设置jdk版本
  * @method float getTaskManagerCpu() 获取TaskManager cpu
  * @method void setTaskManagerCpu(float $TaskManagerCpu) 设置TaskManager cpu
  * @method float getTaskManagerMem() 获取TaskManager 内存
@@ -253,6 +255,11 @@ class CreateJobConfigRequest extends AbstractModel
     public $JobManagerMem;
 
     /**
+     * @var string jdk版本
+     */
+    public $JdkVersion;
+
+    /**
      * @var float TaskManager cpu
      */
     public $TaskManagerCpu;
@@ -314,6 +321,7 @@ class CreateJobConfigRequest extends AbstractModel
      * @param string $FlinkVersion flink版本
      * @param float $JobManagerCpu JobManager cpu
      * @param float $JobManagerMem JobManager 内存
+     * @param string $JdkVersion jdk版本
      * @param float $TaskManagerCpu TaskManager cpu
      * @param float $TaskManagerMem TaskManager 内存
      * @param integer $UseOldSystemConnector 0=默认使用老的 1=使用新的
@@ -474,6 +482,10 @@ class CreateJobConfigRequest extends AbstractModel
 
         if (array_key_exists("JobManagerMem",$param) and $param["JobManagerMem"] !== null) {
             $this->JobManagerMem = $param["JobManagerMem"];
+        }
+
+        if (array_key_exists("JdkVersion",$param) and $param["JdkVersion"] !== null) {
+            $this->JdkVersion = $param["JdkVersion"];
         }
 
         if (array_key_exists("TaskManagerCpu",$param) and $param["TaskManagerCpu"] !== null) {

@@ -29,6 +29,9 @@ use TencentCloud\Vdb\V20230616\Models as Models;
  * @method Models\DescribeInstanceMaintenanceWindowResponse DescribeInstanceMaintenanceWindow(Models\DescribeInstanceMaintenanceWindowRequest $req) 本接口（DescribeInstanceMaintenanceWindow）用于查看实例维护时间窗。
  * @method Models\DescribeInstanceNodesResponse DescribeInstanceNodes(Models\DescribeInstanceNodesRequest $req) 查询实例pod列表
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 查询实例列表
+ * @method Models\DescribePriceCreateInstanceResponse DescribePriceCreateInstance(Models\DescribePriceCreateInstanceRequest $req) 查询新购实例价格
+ * @method Models\DescribePriceRenewInstanceResponse DescribePriceRenewInstance(Models\DescribePriceRenewInstanceRequest $req) 查询实例续费价格（包年包月）
+ * @method Models\DescribePriceResizeInstanceResponse DescribePriceResizeInstance(Models\DescribePriceResizeInstanceRequest $req) 查询实例变配价格
  * @method Models\DestroyInstancesResponse DestroyInstances(Models\DestroyInstancesRequest $req) 本接口（DestroyInstances）用于销毁实例。
  * @method Models\DisassociateSecurityGroupsResponse DisassociateSecurityGroups(Models\DisassociateSecurityGroupsRequest $req) 本接口(DisassociateSecurityGroups)用于安全组批量解绑实例。
  * @method Models\IsolateInstanceResponse IsolateInstance(Models\IsolateInstanceRequest $req) 本接口（IsolateInstance）用于隔离实例于回收站，在回收站保护时长内可恢复实例。

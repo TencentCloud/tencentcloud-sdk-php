@@ -72,6 +72,8 @@ XTI - 威胁情报
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置附加信息
  * @method integer getPort() 获取请求目的端口
  * @method void setPort(integer $Port) 设置请求目的端口
+ * @method IPAnalyse getIPAnalyse() 获取ip分析
+ * @method void setIPAnalyse(IPAnalyse $IPAnalyse) 设置ip分析
  */
 class HostLoginList extends AbstractModel
 {
@@ -190,6 +192,11 @@ XTI - 威胁情报
     public $Port;
 
     /**
+     * @var IPAnalyse ip分析
+     */
+    public $IPAnalyse;
+
+    /**
      * @param integer $Id 记录Id
      * @param string $Uuid 主机Uuid
      * @param string $MachineIp 主机ip
@@ -216,6 +223,7 @@ ABROAD - 境外IP；
 XTI - 威胁情报
      * @param MachineExtraInfo $MachineExtraInfo 附加信息
      * @param integer $Port 请求目的端口
+     * @param IPAnalyse $IPAnalyse ip分析
      */
     function __construct()
     {
@@ -317,6 +325,11 @@ XTI - 威胁情报
 
         if (array_key_exists("Port",$param) and $param["Port"] !== null) {
             $this->Port = $param["Port"];
+        }
+
+        if (array_key_exists("IPAnalyse",$param) and $param["IPAnalyse"] !== null) {
+            $this->IPAnalyse = new IPAnalyse();
+            $this->IPAnalyse->deserialize($param["IPAnalyse"]);
         }
     }
 }

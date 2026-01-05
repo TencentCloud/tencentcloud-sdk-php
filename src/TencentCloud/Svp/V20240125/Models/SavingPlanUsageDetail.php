@@ -20,90 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 节省计划使用率数据
  *
- * @method string getSpType() 获取节省计划类型
- * @method void setSpType(string $SpType) 设置节省计划类型
- * @method integer getStatus() 获取节省计划状态
- * @method void setStatus(integer $Status) 设置节省计划状态
- * @method string getDeductAmount() 获取累计抵扣的金额（单位：元）
- * @method void setDeductAmount(string $DeductAmount) 设置累计抵扣的金额（单位：元）
- * @method string getPromiseAmount() 获取累计承诺消费金额（单位：元）
- * @method void setPromiseAmount(string $PromiseAmount) 设置累计承诺消费金额（单位：元）
- * @method string getNetSavings() 获取累计净节省金额（单位：元）
- * @method void setNetSavings(string $NetSavings) 设置累计净节省金额（单位：元）
- * @method float getUtilizationRate() 获取使用率
- * @method void setUtilizationRate(float $UtilizationRate) 设置使用率
- * @method string getLossAmount() 获取累计流失金额（单位：元）
- * @method void setLossAmount(string $LossAmount) 设置累计流失金额（单位：元）
- * @method string getDosageAmount() 获取累计按量计费预期金额（单位：元）
- * @method void setDosageAmount(string $DosageAmount) 设置累计按量计费预期金额（单位：元）
- * @method string getCostAmount() 获取累计成本金额（单位：元）
- * @method void setCostAmount(string $CostAmount) 设置累计成本金额（单位：元）
- * @method array getRegion() 获取地域
- * @method void setRegion(array $Region) 设置地域
+ * @method string getSpId() 获取<p>节省计划资源id</p>
+ * @method void setSpId(string $SpId) 设置<p>节省计划资源id</p>
+ * @method string getSpType() 获取<p>节省计划类型</p>
+ * @method void setSpType(string $SpType) 设置<p>节省计划类型</p>
+ * @method integer getStatus() 获取<p>节省计划状态</p>枚举值：<ul><li> 1：  生效</li><li> 2： 失效 </li><li> 3： 作废</li></ul>
+ * @method void setStatus(integer $Status) 设置<p>节省计划状态</p>枚举值：<ul><li> 1：  生效</li><li> 2： 失效 </li><li> 3： 作废</li></ul>
+ * @method string getDeductAmount() 获取<p>累计抵扣的金额（单位：元）</p>
+ * @method void setDeductAmount(string $DeductAmount) 设置<p>累计抵扣的金额（单位：元）</p>
+ * @method string getPromiseAmount() 获取<p>累计承诺消费金额（单位：元）</p>
+ * @method void setPromiseAmount(string $PromiseAmount) 设置<p>累计承诺消费金额（单位：元）</p>
+ * @method string getNetSavings() 获取<p>累计净节省金额（单位：元）</p>
+ * @method void setNetSavings(string $NetSavings) 设置<p>累计净节省金额（单位：元）</p>
+ * @method float getUtilizationRate() 获取<p>使用率</p>
+ * @method void setUtilizationRate(float $UtilizationRate) 设置<p>使用率</p>
+ * @method string getLossAmount() 获取<p>累计流失金额（单位：元）</p>
+ * @method void setLossAmount(string $LossAmount) 设置<p>累计流失金额（单位：元）</p>
+ * @method string getDosageAmount() 获取<p>累计按量计费预期金额（单位：元）</p>
+ * @method void setDosageAmount(string $DosageAmount) 设置<p>累计按量计费预期金额（单位：元）</p>
+ * @method string getCostAmount() 获取<p>累计成本金额（单位：元）</p>
+ * @method void setCostAmount(string $CostAmount) 设置<p>累计成本金额（单位：元）</p>
+ * @method array getRegion() 获取<p>地域</p>
+ * @method void setRegion(array $Region) 设置<p>地域</p>
  */
 class SavingPlanUsageDetail extends AbstractModel
 {
     /**
-     * @var string 节省计划类型
+     * @var string <p>节省计划资源id</p>
+     */
+    public $SpId;
+
+    /**
+     * @var string <p>节省计划类型</p>
      */
     public $SpType;
 
     /**
-     * @var integer 节省计划状态
+     * @var integer <p>节省计划状态</p>枚举值：<ul><li> 1：  生效</li><li> 2： 失效 </li><li> 3： 作废</li></ul>
      */
     public $Status;
 
     /**
-     * @var string 累计抵扣的金额（单位：元）
+     * @var string <p>累计抵扣的金额（单位：元）</p>
      */
     public $DeductAmount;
 
     /**
-     * @var string 累计承诺消费金额（单位：元）
+     * @var string <p>累计承诺消费金额（单位：元）</p>
      */
     public $PromiseAmount;
 
     /**
-     * @var string 累计净节省金额（单位：元）
+     * @var string <p>累计净节省金额（单位：元）</p>
      */
     public $NetSavings;
 
     /**
-     * @var float 使用率
+     * @var float <p>使用率</p>
      */
     public $UtilizationRate;
 
     /**
-     * @var string 累计流失金额（单位：元）
+     * @var string <p>累计流失金额（单位：元）</p>
      */
     public $LossAmount;
 
     /**
-     * @var string 累计按量计费预期金额（单位：元）
+     * @var string <p>累计按量计费预期金额（单位：元）</p>
      */
     public $DosageAmount;
 
     /**
-     * @var string 累计成本金额（单位：元）
+     * @var string <p>累计成本金额（单位：元）</p>
      */
     public $CostAmount;
 
     /**
-     * @var array 地域
+     * @var array <p>地域</p>
      */
     public $Region;
 
     /**
-     * @param string $SpType 节省计划类型
-     * @param integer $Status 节省计划状态
-     * @param string $DeductAmount 累计抵扣的金额（单位：元）
-     * @param string $PromiseAmount 累计承诺消费金额（单位：元）
-     * @param string $NetSavings 累计净节省金额（单位：元）
-     * @param float $UtilizationRate 使用率
-     * @param string $LossAmount 累计流失金额（单位：元）
-     * @param string $DosageAmount 累计按量计费预期金额（单位：元）
-     * @param string $CostAmount 累计成本金额（单位：元）
-     * @param array $Region 地域
+     * @param string $SpId <p>节省计划资源id</p>
+     * @param string $SpType <p>节省计划类型</p>
+     * @param integer $Status <p>节省计划状态</p>枚举值：<ul><li> 1：  生效</li><li> 2： 失效 </li><li> 3： 作废</li></ul>
+     * @param string $DeductAmount <p>累计抵扣的金额（单位：元）</p>
+     * @param string $PromiseAmount <p>累计承诺消费金额（单位：元）</p>
+     * @param string $NetSavings <p>累计净节省金额（单位：元）</p>
+     * @param float $UtilizationRate <p>使用率</p>
+     * @param string $LossAmount <p>累计流失金额（单位：元）</p>
+     * @param string $DosageAmount <p>累计按量计费预期金额（单位：元）</p>
+     * @param string $CostAmount <p>累计成本金额（单位：元）</p>
+     * @param array $Region <p>地域</p>
      */
     function __construct()
     {
@@ -118,6 +126,10 @@ class SavingPlanUsageDetail extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SpId",$param) and $param["SpId"] !== null) {
+            $this->SpId = $param["SpId"];
+        }
+
         if (array_key_exists("SpType",$param) and $param["SpType"] !== null) {
             $this->SpType = $param["SpType"];
         }

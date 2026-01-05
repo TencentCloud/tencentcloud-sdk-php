@@ -130,12 +130,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemindedOn(integer $RemindedOn) 设置合同到期提醒时间，为Unix标准时间戳（秒）格式，支持的范围是从发起时间开始到后10年内。
 
 到达提醒时间后，腾讯电子签会短信通知发起方企业合同提醒，可用于处理合同到期事务，如合同续签等事宜。
- * @method string getApproverVerifyType() 获取指定个人签署方查看合同的校验方式
-<ul><li>   **VerifyCheck**  :（默认）人脸识别,人脸识别后才能合同内容 </li>
-<li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号（ApproverMobile）相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）</li></ul>
- * @method void setApproverVerifyType(string $ApproverVerifyType) 设置指定个人签署方查看合同的校验方式
-<ul><li>   **VerifyCheck**  :（默认）人脸识别,人脸识别后才能合同内容 </li>
-<li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号（ApproverMobile）相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）</li></ul>
+ * @method string getApproverVerifyType() 获取指定个人签署方查看合同的校验方式<ul><li>   **VerifyCheck**  :（默认）人脸识别,人脸识别后才能查看合同内容 </li><li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号（ApproverMobile）相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）</li></ul>
+ * @method void setApproverVerifyType(string $ApproverVerifyType) 设置指定个人签署方查看合同的校验方式<ul><li>   **VerifyCheck**  :（默认）人脸识别,人脸识别后才能查看合同内容 </li><li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号（ApproverMobile）相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）</li></ul>
  * @method integer getSignBeanTag() 获取签署方签署控件（印章/签名等）的生成方式：
 <ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
 <li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
@@ -333,9 +329,7 @@ class CreateFlowByFilesRequest extends AbstractModel
     public $RemindedOn;
 
     /**
-     * @var string 指定个人签署方查看合同的校验方式
-<ul><li>   **VerifyCheck**  :（默认）人脸识别,人脸识别后才能合同内容 </li>
-<li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号（ApproverMobile）相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）</li></ul>
+     * @var string 指定个人签署方查看合同的校验方式<ul><li>   **VerifyCheck**  :（默认）人脸识别,人脸识别后才能查看合同内容 </li><li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号（ApproverMobile）相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）</li></ul>
      */
     public $ApproverVerifyType;
 
@@ -462,9 +456,7 @@ class CreateFlowByFilesRequest extends AbstractModel
      * @param integer $RemindedOn 合同到期提醒时间，为Unix标准时间戳（秒）格式，支持的范围是从发起时间开始到后10年内。
 
 到达提醒时间后，腾讯电子签会短信通知发起方企业合同提醒，可用于处理合同到期事务，如合同续签等事宜。
-     * @param string $ApproverVerifyType 指定个人签署方查看合同的校验方式
-<ul><li>   **VerifyCheck**  :（默认）人脸识别,人脸识别后才能合同内容 </li>
-<li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号（ApproverMobile）相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）</li></ul>
+     * @param string $ApproverVerifyType 指定个人签署方查看合同的校验方式<ul><li>   **VerifyCheck**  :（默认）人脸识别,人脸识别后才能查看合同内容 </li><li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号（ApproverMobile）相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）</li></ul>
      * @param integer $SignBeanTag 签署方签署控件（印章/签名等）的生成方式：
 <ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
 <li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>

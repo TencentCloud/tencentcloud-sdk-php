@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecordSize(integer $RecordSize) 设置录制文件大小
  * @method string getRecordUrl() 获取录制url
  * @method void setRecordUrl(string $RecordUrl) 设置录制url
+ * @method integer getReason() 获取MemberQuit事件，对应Reason（0:主动退出 1:被踢 2:永久被踢 4:失去心跳下线 5:房间结束，成员自动退出）
+ * @method void setReason(integer $Reason) 设置MemberQuit事件，对应Reason（0:主动退出 1:被踢 2:永久被踢 4:失去心跳下线 5:房间结束，成员自动退出）
  */
 class EventDataInfo extends AbstractModel
 {
@@ -66,12 +68,18 @@ class EventDataInfo extends AbstractModel
     public $RecordUrl;
 
     /**
+     * @var integer MemberQuit事件，对应Reason（0:主动退出 1:被踢 2:永久被踢 4:失去心跳下线 5:房间结束，成员自动退出）
+     */
+    public $Reason;
+
+    /**
      * @param integer $RoomId 事件发生的房间号。
      * @param string $UserId 事件发生的用户。
      * @param integer $Device 用户设备类型。0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
      * @param integer $Duration 录制时长。单位：秒
      * @param integer $RecordSize 录制文件大小
      * @param string $RecordUrl 录制url
+     * @param integer $Reason MemberQuit事件，对应Reason（0:主动退出 1:被踢 2:永久被踢 4:失去心跳下线 5:房间结束，成员自动退出）
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class EventDataInfo extends AbstractModel
 
         if (array_key_exists("RecordUrl",$param) and $param["RecordUrl"] !== null) {
             $this->RecordUrl = $param["RecordUrl"];
+        }
+
+        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
+            $this->Reason = $param["Reason"];
         }
     }
 }

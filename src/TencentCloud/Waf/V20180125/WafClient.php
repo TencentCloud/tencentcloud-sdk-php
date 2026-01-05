@@ -80,6 +80,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeAttackWhiteRuleResponse DescribeAttackWhiteRule(Models\DescribeAttackWhiteRuleRequest $req) 获取用户规则白名单列表
  * @method Models\DescribeAutoDenyIPResponse DescribeAutoDenyIP(Models\DescribeAutoDenyIPRequest $req) 描述WAF自动封禁IP详情,对齐自动封堵状态
  * @method Models\DescribeBatchIpAccessControlResponse DescribeBatchIpAccessControl(Models\DescribeBatchIpAccessControlRequest $req) Waf 批量防护IP黑白名单查询
+ * @method Models\DescribeBotIdRuleResponse DescribeBotIdRule(Models\DescribeBotIdRuleRequest $req) 获取BotId规则列表1
  * @method Models\DescribeBotSceneListResponse DescribeBotSceneList(Models\DescribeBotSceneListRequest $req) 获取BOT场景列表与概览
  * @method Models\DescribeBotSceneOverviewResponse DescribeBotSceneOverview(Models\DescribeBotSceneOverviewRequest $req) 获取Bot场景全局概览
  * @method Models\DescribeBotSceneUCBRuleResponse DescribeBotSceneUCBRule(Models\DescribeBotSceneUCBRuleRequest $req) 场景化后Bot获取UCB自定义规则策略

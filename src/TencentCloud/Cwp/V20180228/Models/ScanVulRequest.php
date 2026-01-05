@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVulIds(array $VulIds) 设置需要扫描的漏洞id
  * @method integer getScanMethod() 获取0版本比对，2版本比对+poc
  * @method void setScanMethod(integer $ScanMethod) 设置0版本比对，2版本比对+poc
+ * @method array getKBNumber() 获取kb编号
+ * @method void setKBNumber(array $KBNumber) 设置kb编号
  */
 class ScanVulRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ScanVulRequest extends AbstractModel
     public $ScanMethod;
 
     /**
+     * @var array kb编号
+     */
+    public $KBNumber;
+
+    /**
      * @param string $VulLevels 危害等级：1-低危；2-中危；3-高危；4-严重 (多选英文;分隔)
      * @param integer $HostType 服务器分类：1:专业版服务器；2:自选服务器
      * @param string $VulCategories 漏洞类型：1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞 (多选英文;分隔)
@@ -88,6 +95,7 @@ class ScanVulRequest extends AbstractModel
      * @param integer $TimeoutPeriod 超时时长 单位秒 默认 3600 秒
      * @param array $VulIds 需要扫描的漏洞id
      * @param integer $ScanMethod 0版本比对，2版本比对+poc
+     * @param array $KBNumber kb编号
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class ScanVulRequest extends AbstractModel
 
         if (array_key_exists("ScanMethod",$param) and $param["ScanMethod"] !== null) {
             $this->ScanMethod = $param["ScanMethod"];
+        }
+
+        if (array_key_exists("KBNumber",$param) and $param["KBNumber"] !== null) {
+            $this->KBNumber = $param["KBNumber"];
         }
     }
 }

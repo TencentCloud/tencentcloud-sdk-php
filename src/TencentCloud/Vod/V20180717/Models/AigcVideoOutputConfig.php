@@ -32,32 +32,28 @@ use TencentCloud\Common\AbstractModel;
 <li>默认值：0，表示其他分类。</li>
  * @method string getExpireTime() 获取输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setExpireTime(string $ExpireTime) 设置输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method float getDuration() 获取生成视频的时长，单位：秒。<li>当 ModelName 是 Kling，可选值为 5、10，默认为 5；</li><li>当 ModelName 是 Jimeng，可选值为 5、10，默认为 5；</li><li>当 ModelName 是 Hailuo，可选值为 6、10，默认为 6；</li><li>当 ModelName 是 Vidu，可指定1-10；</li><li>当 ModelName 是 GV，可选值为 8，默认为 8；</li><li>当 ModelName 是 OS，可选值为 4、8、12，默认为 8；</li>
- * @method void setDuration(float $Duration) 设置生成视频的时长，单位：秒。<li>当 ModelName 是 Kling，可选值为 5、10，默认为 5；</li><li>当 ModelName 是 Jimeng，可选值为 5、10，默认为 5；</li><li>当 ModelName 是 Hailuo，可选值为 6、10，默认为 6；</li><li>当 ModelName 是 Vidu，可指定1-10；</li><li>当 ModelName 是 GV，可选值为 8，默认为 8；</li><li>当 ModelName 是 OS，可选值为 4、8、12，默认为 8；</li>
+ * @method float getDuration() 获取生成视频的时长，单位：秒。<li>当 ModelName 是 Kling，可选值为 5、10，默认为 5；</li><li>当 ModelName 是 Hailuo，可选值为 6、10，默认为 6；</li><li>当 ModelName 是 Vidu，可指定1-10；</li><li>当 ModelName 是 GV，可选值为 8，默认为 8；</li><li>当 ModelName 是 OS，可选值为 4、8、12，默认为 8；</li>
+ * @method void setDuration(float $Duration) 设置生成视频的时长，单位：秒。<li>当 ModelName 是 Kling，可选值为 5、10，默认为 5；</li><li>当 ModelName 是 Hailuo，可选值为 6、10，默认为 6；</li><li>当 ModelName 是 Vidu，可指定1-10；</li><li>当 ModelName 是 GV，可选值为 8，默认为 8；</li><li>当 ModelName 是 OS，可选值为 4、8、12，默认为 8；</li>
  * @method string getResolution() 获取生成视频的分辨率。
 <li>当 ModelName 是 Kling，可选值为 720P、1080P，默认为 720P；</li>
 <li>当 ModelName 是 Hailuo，可选值为 768P、1080P，默认为 768P；</li>
-<li>当 ModelName 是 Jimeng，可选值为 1080P；</li>
 <li>当 ModelName 是 Vidu，可选值为 720P、1080P，默认为 720P；</li>
 <li>当 ModelName 是 GV，可选值为 720P、1080P，默认为 720P；</li>
 <li>当 ModelName 是 OS，可选值为 720P；</li>
  * @method void setResolution(string $Resolution) 设置生成视频的分辨率。
 <li>当 ModelName 是 Kling，可选值为 720P、1080P，默认为 720P；</li>
 <li>当 ModelName 是 Hailuo，可选值为 768P、1080P，默认为 768P；</li>
-<li>当 ModelName 是 Jimeng，可选值为 1080P；</li>
 <li>当 ModelName 是 Vidu，可选值为 720P、1080P，默认为 720P；</li>
 <li>当 ModelName 是 GV，可选值为 720P、1080P，默认为 720P；</li>
 <li>当 ModelName 是 OS，可选值为 720P；</li>
  * @method string getAspectRatio() 获取指定所生成视频的宽高比。
 <li>当 ModelName 是 Kling，当文生视频时，则可选值为 16:9、9:16、 1:1，默认为16:9；</li>
-<li>当 ModelName 是 Jimeng，当文生视频时，则可选值为 16:9、4:3、1:1、3:4、9:16、21:9</li>
 <li>当 ModelName 是 Vidu，当文生视频时和使用参考图片生成时，则可选值为 16:9、9:16、4:3、3:4、1:1，其中仅版本q2支持4:3、3:4</li>
 <li>当 ModelName 是 GV，则可选值为 16:9、9:16，默认为 16:9；</li>
 <li>当 ModelName 是 OS，当文生视频时，则可选值为 16:9、9:16，默认为 16:9；</li>
 <li>当 ModelName 是 Hailuo，则暂不支持。</li>
  * @method void setAspectRatio(string $AspectRatio) 设置指定所生成视频的宽高比。
 <li>当 ModelName 是 Kling，当文生视频时，则可选值为 16:9、9:16、 1:1，默认为16:9；</li>
-<li>当 ModelName 是 Jimeng，当文生视频时，则可选值为 16:9、4:3、1:1、3:4、9:16、21:9</li>
 <li>当 ModelName 是 Vidu，当文生视频时和使用参考图片生成时，则可选值为 16:9、9:16、4:3、3:4、1:1，其中仅版本q2支持4:3、3:4</li>
 <li>当 ModelName 是 GV，则可选值为 16:9、9:16，默认为 16:9；</li>
 <li>当 ModelName 是 OS，当文生视频时，则可选值为 16:9、9:16，默认为 16:9；</li>
@@ -106,7 +102,7 @@ class AigcVideoOutputConfig extends AbstractModel
     public $ExpireTime;
 
     /**
-     * @var float 生成视频的时长，单位：秒。<li>当 ModelName 是 Kling，可选值为 5、10，默认为 5；</li><li>当 ModelName 是 Jimeng，可选值为 5、10，默认为 5；</li><li>当 ModelName 是 Hailuo，可选值为 6、10，默认为 6；</li><li>当 ModelName 是 Vidu，可指定1-10；</li><li>当 ModelName 是 GV，可选值为 8，默认为 8；</li><li>当 ModelName 是 OS，可选值为 4、8、12，默认为 8；</li>
+     * @var float 生成视频的时长，单位：秒。<li>当 ModelName 是 Kling，可选值为 5、10，默认为 5；</li><li>当 ModelName 是 Hailuo，可选值为 6、10，默认为 6；</li><li>当 ModelName 是 Vidu，可指定1-10；</li><li>当 ModelName 是 GV，可选值为 8，默认为 8；</li><li>当 ModelName 是 OS，可选值为 4、8、12，默认为 8；</li>
      */
     public $Duration;
 
@@ -114,7 +110,6 @@ class AigcVideoOutputConfig extends AbstractModel
      * @var string 生成视频的分辨率。
 <li>当 ModelName 是 Kling，可选值为 720P、1080P，默认为 720P；</li>
 <li>当 ModelName 是 Hailuo，可选值为 768P、1080P，默认为 768P；</li>
-<li>当 ModelName 是 Jimeng，可选值为 1080P；</li>
 <li>当 ModelName 是 Vidu，可选值为 720P、1080P，默认为 720P；</li>
 <li>当 ModelName 是 GV，可选值为 720P、1080P，默认为 720P；</li>
 <li>当 ModelName 是 OS，可选值为 720P；</li>
@@ -124,7 +119,6 @@ class AigcVideoOutputConfig extends AbstractModel
     /**
      * @var string 指定所生成视频的宽高比。
 <li>当 ModelName 是 Kling，当文生视频时，则可选值为 16:9、9:16、 1:1，默认为16:9；</li>
-<li>当 ModelName 是 Jimeng，当文生视频时，则可选值为 16:9、4:3、1:1、3:4、9:16、21:9</li>
 <li>当 ModelName 是 Vidu，当文生视频时和使用参考图片生成时，则可选值为 16:9、9:16、4:3、3:4、1:1，其中仅版本q2支持4:3、3:4</li>
 <li>当 ModelName 是 GV，则可选值为 16:9、9:16，默认为 16:9；</li>
 <li>当 ModelName 是 OS，当文生视频时，则可选值为 16:9、9:16，默认为 16:9；</li>
@@ -168,17 +162,15 @@ class AigcVideoOutputConfig extends AbstractModel
      * @param integer $ClassId 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
 <li>默认值：0，表示其他分类。</li>
      * @param string $ExpireTime 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param float $Duration 生成视频的时长，单位：秒。<li>当 ModelName 是 Kling，可选值为 5、10，默认为 5；</li><li>当 ModelName 是 Jimeng，可选值为 5、10，默认为 5；</li><li>当 ModelName 是 Hailuo，可选值为 6、10，默认为 6；</li><li>当 ModelName 是 Vidu，可指定1-10；</li><li>当 ModelName 是 GV，可选值为 8，默认为 8；</li><li>当 ModelName 是 OS，可选值为 4、8、12，默认为 8；</li>
+     * @param float $Duration 生成视频的时长，单位：秒。<li>当 ModelName 是 Kling，可选值为 5、10，默认为 5；</li><li>当 ModelName 是 Hailuo，可选值为 6、10，默认为 6；</li><li>当 ModelName 是 Vidu，可指定1-10；</li><li>当 ModelName 是 GV，可选值为 8，默认为 8；</li><li>当 ModelName 是 OS，可选值为 4、8、12，默认为 8；</li>
      * @param string $Resolution 生成视频的分辨率。
 <li>当 ModelName 是 Kling，可选值为 720P、1080P，默认为 720P；</li>
 <li>当 ModelName 是 Hailuo，可选值为 768P、1080P，默认为 768P；</li>
-<li>当 ModelName 是 Jimeng，可选值为 1080P；</li>
 <li>当 ModelName 是 Vidu，可选值为 720P、1080P，默认为 720P；</li>
 <li>当 ModelName 是 GV，可选值为 720P、1080P，默认为 720P；</li>
 <li>当 ModelName 是 OS，可选值为 720P；</li>
      * @param string $AspectRatio 指定所生成视频的宽高比。
 <li>当 ModelName 是 Kling，当文生视频时，则可选值为 16:9、9:16、 1:1，默认为16:9；</li>
-<li>当 ModelName 是 Jimeng，当文生视频时，则可选值为 16:9、4:3、1:1、3:4、9:16、21:9</li>
 <li>当 ModelName 是 Vidu，当文生视频时和使用参考图片生成时，则可选值为 16:9、9:16、4:3、3:4、1:1，其中仅版本q2支持4:3、3:4</li>
 <li>当 ModelName 是 GV，则可选值为 16:9、9:16，默认为 16:9；</li>
 <li>当 ModelName 是 OS，当文生视频时，则可选值为 16:9、9:16，默认为 16:9；</li>

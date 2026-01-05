@@ -62,9 +62,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCOSBucket(string $COSBucket) 设置作业绑定的存储桶
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLogCollect() 获取是否启用日志收集，0-未启用，1-已启用，2-历史集群未设置日志集，3-历史集群已开启
+ * @method integer getLogCollect() 获取是否启用日志收集，0-未启用，1-采集到cls，4-采集到cos，5-采集到es
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLogCollect(integer $LogCollect) 设置是否启用日志收集，0-未启用，1-已启用，2-历史集群未设置日志集，3-历史集群已开启
+ * @method void setLogCollect(integer $LogCollect) 设置是否启用日志收集，0-未启用，1-采集到cls，4-采集到cos，5-采集到es
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxParallelism() 获取作业的最大并行度
 注意：此字段可能返回 null，表示取不到有效值。
@@ -146,6 +146,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlinkVersion(string $FlinkVersion) 设置flink 版本
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getJdkVersion() 获取jdk版本
+ * @method void setJdkVersion(string $JdkVersion) 设置jdk版本
  * @method float getJobManagerCpu() 获取jm使用cpu数目
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJobManagerCpu(float $JobManagerCpu) 设置jm使用cpu数目
@@ -243,7 +245,7 @@ class JobConfig extends AbstractModel
     public $COSBucket;
 
     /**
-     * @var integer 是否启用日志收集，0-未启用，1-已启用，2-历史集群未设置日志集，3-历史集群已开启
+     * @var integer 是否启用日志收集，0-未启用，1-采集到cls，4-采集到cos，5-采集到es
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogCollect;
@@ -369,6 +371,11 @@ class JobConfig extends AbstractModel
     public $FlinkVersion;
 
     /**
+     * @var string jdk版本
+     */
+    public $JdkVersion;
+
+    /**
      * @var float jm使用cpu数目
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -430,7 +437,7 @@ class JobConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $COSBucket 作业绑定的存储桶
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $LogCollect 是否启用日志收集，0-未启用，1-已启用，2-历史集群未设置日志集，3-历史集群已开启
+     * @param integer $LogCollect 是否启用日志收集，0-未启用，1-采集到cls，4-采集到cos，5-采集到es
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxParallelism 作业的最大并行度
 注意：此字段可能返回 null，表示取不到有效值。
@@ -472,6 +479,7 @@ class JobConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlinkVersion flink 版本
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $JdkVersion jdk版本
      * @param float $JobManagerCpu jm使用cpu数目
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $JobManagerMem jm使用内存数目
@@ -646,6 +654,10 @@ class JobConfig extends AbstractModel
 
         if (array_key_exists("FlinkVersion",$param) and $param["FlinkVersion"] !== null) {
             $this->FlinkVersion = $param["FlinkVersion"];
+        }
+
+        if (array_key_exists("JdkVersion",$param) and $param["JdkVersion"] !== null) {
+            $this->JdkVersion = $param["JdkVersion"];
         }
 
         if (array_key_exists("JobManagerCpu",$param) and $param["JobManagerCpu"] !== null) {

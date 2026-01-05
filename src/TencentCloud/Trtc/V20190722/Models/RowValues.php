@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRowValue(array $RowValue) 设置数据值
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRowValueFloat() 获取数据值
+ * @method void setRowValueFloat(array $RowValueFloat) 设置数据值
  */
 class RowValues extends AbstractModel
 {
@@ -34,8 +36,14 @@ class RowValues extends AbstractModel
     public $RowValue;
 
     /**
+     * @var array 数据值
+     */
+    public $RowValueFloat;
+
+    /**
      * @param array $RowValue 数据值
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RowValueFloat 数据值
      */
     function __construct()
     {
@@ -52,6 +60,10 @@ class RowValues extends AbstractModel
         }
         if (array_key_exists("RowValue",$param) and $param["RowValue"] !== null) {
             $this->RowValue = $param["RowValue"];
+        }
+
+        if (array_key_exists("RowValueFloat",$param) and $param["RowValueFloat"] !== null) {
+            $this->RowValueFloat = $param["RowValueFloat"];
         }
     }
 }

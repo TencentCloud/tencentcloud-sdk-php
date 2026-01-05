@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSystemProvide(integer $SystemProvide) 设置1: 系统内置资源
  * @method string getConnector() 获取Connector
  * @method void setConnector(string $Connector) 设置Connector
+ * @method string getConnectorVersion() 获取Connector版本
+ * @method void setConnectorVersion(string $ConnectorVersion) 设置Connector版本
  */
 class ResourceRefDetail extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ResourceRefDetail extends AbstractModel
     public $Connector;
 
     /**
+     * @var string Connector版本
+     */
+    public $ConnectorVersion;
+
+    /**
      * @param string $ResourceId 资源id
      * @param integer $Version 资源版本，-1表示使用最新版本
      * @param string $Name 资源名称
      * @param integer $Type 1: 主资源
      * @param integer $SystemProvide 1: 系统内置资源
      * @param string $Connector Connector
+     * @param string $ConnectorVersion Connector版本
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class ResourceRefDetail extends AbstractModel
 
         if (array_key_exists("Connector",$param) and $param["Connector"] !== null) {
             $this->Connector = $param["Connector"];
+        }
+
+        if (array_key_exists("ConnectorVersion",$param) and $param["ConnectorVersion"] !== null) {
+            $this->ConnectorVersion = $param["ConnectorVersion"];
         }
     }
 }

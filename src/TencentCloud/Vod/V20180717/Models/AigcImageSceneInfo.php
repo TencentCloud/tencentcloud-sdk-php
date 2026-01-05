@@ -22,32 +22,40 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getType() 获取AI生图场景类型，可选值：
 - change_clothes：AI换衣。
+- product_image：AI生商品图。
  * @method void setType(string $Type) 设置AI生图场景类型，可选值：
 - change_clothes：AI换衣。
+- product_image：AI生商品图。
  * @method ChangeClothesConfig getChangeClothesConfig() 获取当 Type 为 change_clothes 时有效，则该项为必填，表示AI 换衣生图配置参数。
-
-
  * @method void setChangeClothesConfig(ChangeClothesConfig $ChangeClothesConfig) 设置当 Type 为 change_clothes 时有效，则该项为必填，表示AI 换衣生图配置参数。
+ * @method ProductImageConfig getProductImageConfig() 获取当 Type 为 product_image 时有效，表示AI 生商品图配置参数。
+ * @method void setProductImageConfig(ProductImageConfig $ProductImageConfig) 设置当 Type 为 product_image 时有效，表示AI 生商品图配置参数。
  */
 class AigcImageSceneInfo extends AbstractModel
 {
     /**
      * @var string AI生图场景类型，可选值：
 - change_clothes：AI换衣。
+- product_image：AI生商品图。
      */
     public $Type;
 
     /**
      * @var ChangeClothesConfig 当 Type 为 change_clothes 时有效，则该项为必填，表示AI 换衣生图配置参数。
-
-
      */
     public $ChangeClothesConfig;
 
     /**
+     * @var ProductImageConfig 当 Type 为 product_image 时有效，表示AI 生商品图配置参数。
+     */
+    public $ProductImageConfig;
+
+    /**
      * @param string $Type AI生图场景类型，可选值：
 - change_clothes：AI换衣。
+- product_image：AI生商品图。
      * @param ChangeClothesConfig $ChangeClothesConfig 当 Type 为 change_clothes 时有效，则该项为必填，表示AI 换衣生图配置参数。
+     * @param ProductImageConfig $ProductImageConfig 当 Type 为 product_image 时有效，表示AI 生商品图配置参数。
      */
     function __construct()
     {
@@ -69,6 +77,11 @@ class AigcImageSceneInfo extends AbstractModel
         if (array_key_exists("ChangeClothesConfig",$param) and $param["ChangeClothesConfig"] !== null) {
             $this->ChangeClothesConfig = new ChangeClothesConfig();
             $this->ChangeClothesConfig->deserialize($param["ChangeClothesConfig"]);
+        }
+
+        if (array_key_exists("ProductImageConfig",$param) and $param["ProductImageConfig"] !== null) {
+            $this->ProductImageConfig = new ProductImageConfig();
+            $this->ProductImageConfig->deserialize($param["ProductImageConfig"]);
         }
     }
 }

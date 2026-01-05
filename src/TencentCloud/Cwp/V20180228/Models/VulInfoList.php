@@ -92,6 +92,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVulFixSwitch(integer $VulFixSwitch) 设置漏洞是否支持修复 0不支持，1支持
  * @method string getLatestFixTime() 获取最近修复时间
  * @method void setLatestFixTime(string $LatestFixTime) 设置最近修复时间
+ * @method integer getRaspOpenNodeCount() 获取漏洞对应机器的应用防护开启数量
+ * @method void setRaspOpenNodeCount(integer $RaspOpenNodeCount) 设置漏洞对应机器的应用防护开启数量
+ * @method integer getRaspClosedNodeCount() 获取漏洞对应机器的应用防护关闭数量
+ * @method void setRaspClosedNodeCount(integer $RaspClosedNodeCount) 设置漏洞对应机器的应用防护关闭数量
  */
 class VulInfoList extends AbstractModel
 {
@@ -244,6 +248,16 @@ class VulInfoList extends AbstractModel
     public $LatestFixTime;
 
     /**
+     * @var integer 漏洞对应机器的应用防护开启数量
+     */
+    public $RaspOpenNodeCount;
+
+    /**
+     * @var integer 漏洞对应机器的应用防护关闭数量
+     */
+    public $RaspClosedNodeCount;
+
+    /**
      * @param string $Ids 漏洞包含的事件id串，多个用“,”分割
      * @param string $Name 漏洞名
      * @param integer $Status 0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中  8:修复失败
@@ -280,6 +294,8 @@ class VulInfoList extends AbstractModel
      * @param integer $Method 检测方式0 - 版本比对, 1 - POC验证
      * @param integer $VulFixSwitch 漏洞是否支持修复 0不支持，1支持
      * @param string $LatestFixTime 最近修复时间
+     * @param integer $RaspOpenNodeCount 漏洞对应机器的应用防护开启数量
+     * @param integer $RaspClosedNodeCount 漏洞对应机器的应用防护关闭数量
      */
     function __construct()
     {
@@ -404,6 +420,14 @@ class VulInfoList extends AbstractModel
 
         if (array_key_exists("LatestFixTime",$param) and $param["LatestFixTime"] !== null) {
             $this->LatestFixTime = $param["LatestFixTime"];
+        }
+
+        if (array_key_exists("RaspOpenNodeCount",$param) and $param["RaspOpenNodeCount"] !== null) {
+            $this->RaspOpenNodeCount = $param["RaspOpenNodeCount"];
+        }
+
+        if (array_key_exists("RaspClosedNodeCount",$param) and $param["RaspClosedNodeCount"] !== null) {
+            $this->RaspClosedNodeCount = $param["RaspClosedNodeCount"];
         }
     }
 }

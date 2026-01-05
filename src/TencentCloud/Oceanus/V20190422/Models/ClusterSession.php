@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskManagerCpu(float $TaskManagerCpu) 设置TaskManagerCpu
  * @method float getTaskManagerMem() 获取TaskManagerMem
  * @method void setTaskManagerMem(float $TaskManagerMem) 设置TaskManagerMem
+ * @method string getJdkVersion() 获取jdk版本
+ * @method void setJdkVersion(string $JdkVersion) 设置jdk版本
  */
 class ClusterSession extends AbstractModel
 {
@@ -177,6 +179,11 @@ class ClusterSession extends AbstractModel
     public $TaskManagerMem;
 
     /**
+     * @var string jdk版本
+     */
+    public $JdkVersion;
+
+    /**
      * @param string $ClusterGroupSerialId 集群SerialId
      * @param integer $AppId 创建者appId
      * @param string $OwnerUin 创建者主账号
@@ -200,6 +207,7 @@ class ClusterSession extends AbstractModel
      * @param float $JobManagerMem JobManagerMem
      * @param float $TaskManagerCpu TaskManagerCpu
      * @param float $TaskManagerMem TaskManagerMem
+     * @param string $JdkVersion jdk版本
      */
     function __construct()
     {
@@ -306,6 +314,10 @@ class ClusterSession extends AbstractModel
 
         if (array_key_exists("TaskManagerMem",$param) and $param["TaskManagerMem"] !== null) {
             $this->TaskManagerMem = $param["TaskManagerMem"];
+        }
+
+        if (array_key_exists("JdkVersion",$param) and $param["JdkVersion"] !== null) {
+            $this->JdkVersion = $param["JdkVersion"];
         }
     }
 }

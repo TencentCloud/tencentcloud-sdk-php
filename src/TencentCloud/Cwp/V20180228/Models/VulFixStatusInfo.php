@@ -34,6 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFixSuccessCnt(integer $FixSuccessCnt) 设置修复成功的数量
  * @method integer getFixMethod() 获取修复方式 0组件更新或者安装补丁,1禁用服务
  * @method void setFixMethod(integer $FixMethod) 设置修复方式 0组件更新或者安装补丁,1禁用服务
+ * @method integer getKbId() 获取kb的ID
+ * @method void setKbId(integer $KbId) 设置kb的ID
+ * @method string getKbNumber() 获取kb号
+ * @method void setKbNumber(string $KbNumber) 设置kb号
+ * @method string getKbName() 获取kb名字
+ * @method void setKbName(string $KbName) 设置kb名字
+ * @method array getPreKbList() 获取前置kb列表
+ * @method void setPreKbList(array $PreKbList) 设置前置kb列表
  */
 class VulFixStatusInfo extends AbstractModel
 {
@@ -73,6 +81,26 @@ class VulFixStatusInfo extends AbstractModel
     public $FixMethod;
 
     /**
+     * @var integer kb的ID
+     */
+    public $KbId;
+
+    /**
+     * @var string kb号
+     */
+    public $KbNumber;
+
+    /**
+     * @var string kb名字
+     */
+    public $KbName;
+
+    /**
+     * @var array 前置kb列表
+     */
+    public $PreKbList;
+
+    /**
      * @param integer $VulId 漏洞id
      * @param string $VulName 漏洞名称
      * @param integer $Progress 漏洞修复进度 1-100；
@@ -80,6 +108,10 @@ class VulFixStatusInfo extends AbstractModel
      * @param integer $FailCnt 漏洞修复失败主机数量
      * @param integer $FixSuccessCnt 修复成功的数量
      * @param integer $FixMethod 修复方式 0组件更新或者安装补丁,1禁用服务
+     * @param integer $KbId kb的ID
+     * @param string $KbNumber kb号
+     * @param string $KbName kb名字
+     * @param array $PreKbList 前置kb列表
      */
     function __construct()
     {
@@ -125,6 +157,22 @@ class VulFixStatusInfo extends AbstractModel
 
         if (array_key_exists("FixMethod",$param) and $param["FixMethod"] !== null) {
             $this->FixMethod = $param["FixMethod"];
+        }
+
+        if (array_key_exists("KbId",$param) and $param["KbId"] !== null) {
+            $this->KbId = $param["KbId"];
+        }
+
+        if (array_key_exists("KbNumber",$param) and $param["KbNumber"] !== null) {
+            $this->KbNumber = $param["KbNumber"];
+        }
+
+        if (array_key_exists("KbName",$param) and $param["KbName"] !== null) {
+            $this->KbName = $param["KbName"];
+        }
+
+        if (array_key_exists("PreKbList",$param) and $param["PreKbList"] !== null) {
+            $this->PreKbList = $param["PreKbList"];
         }
     }
 }

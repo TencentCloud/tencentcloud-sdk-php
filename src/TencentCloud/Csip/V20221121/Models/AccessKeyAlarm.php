@@ -76,6 +76,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleKey(string $RuleKey) 设置告警规则标识
  * @method integer getCloudType() 获取云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
  * @method void setCloudType(integer $CloudType) 设置云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
+ * @method integer getAIStatus() 获取告警AI分析状态
+-1 分析失败
+0 未分析
+1 分析中
+2 分析成功，真实告警
+3 分析成功，可疑告警
+ * @method void setAIStatus(integer $AIStatus) 设置告警AI分析状态
+-1 分析失败
+0 未分析
+1 分析中
+2 分析成功，真实告警
+3 分析成功，可疑告警
+ * @method integer getFirstAlarmTimestamp() 获取首次告警时间戳（秒级）
+ * @method void setFirstAlarmTimestamp(integer $FirstAlarmTimestamp) 设置首次告警时间戳（秒级）
+ * @method integer getLastAlarmTimestamp() 获取最后告警时间戳（秒级）
+ * @method void setLastAlarmTimestamp(integer $LastAlarmTimestamp) 设置最后告警时间戳（秒级）
  */
 class AccessKeyAlarm extends AbstractModel
 {
@@ -200,6 +216,26 @@ class AccessKeyAlarm extends AbstractModel
     public $CloudType;
 
     /**
+     * @var integer 告警AI分析状态
+-1 分析失败
+0 未分析
+1 分析中
+2 分析成功，真实告警
+3 分析成功，可疑告警
+     */
+    public $AIStatus;
+
+    /**
+     * @var integer 首次告警时间戳（秒级）
+     */
+    public $FirstAlarmTimestamp;
+
+    /**
+     * @var integer 最后告警时间戳（秒级）
+     */
+    public $LastAlarmTimestamp;
+
+    /**
      * @param string $Name 告警名称
      * @param integer $Level 告警等级
 0-无效 1-提示 2-低危 3-中危 4-高危 5-严重
@@ -228,6 +264,14 @@ class AccessKeyAlarm extends AbstractModel
      * @param string $Evidence 告警证据
      * @param string $RuleKey 告警规则标识
      * @param integer $CloudType 云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
+     * @param integer $AIStatus 告警AI分析状态
+-1 分析失败
+0 未分析
+1 分析中
+2 分析成功，真实告警
+3 分析成功，可疑告警
+     * @param integer $FirstAlarmTimestamp 首次告警时间戳（秒级）
+     * @param integer $LastAlarmTimestamp 最后告警时间戳（秒级）
      */
     function __construct()
     {
@@ -332,6 +376,18 @@ class AccessKeyAlarm extends AbstractModel
 
         if (array_key_exists("CloudType",$param) and $param["CloudType"] !== null) {
             $this->CloudType = $param["CloudType"];
+        }
+
+        if (array_key_exists("AIStatus",$param) and $param["AIStatus"] !== null) {
+            $this->AIStatus = $param["AIStatus"];
+        }
+
+        if (array_key_exists("FirstAlarmTimestamp",$param) and $param["FirstAlarmTimestamp"] !== null) {
+            $this->FirstAlarmTimestamp = $param["FirstAlarmTimestamp"];
+        }
+
+        if (array_key_exists("LastAlarmTimestamp",$param) and $param["LastAlarmTimestamp"] !== null) {
+            $this->LastAlarmTimestamp = $param["LastAlarmTimestamp"];
         }
     }
 }

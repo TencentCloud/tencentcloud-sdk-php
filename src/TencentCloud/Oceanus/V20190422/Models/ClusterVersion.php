@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportedFlink(array $SupportedFlink) 设置集群支持的Flink版本
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getJdkSupportVersion() 获取jdk支持版本
+ * @method void setJdkSupportVersion(array $JdkSupportVersion) 设置jdk支持版本
  */
 class ClusterVersion extends AbstractModel
 {
@@ -44,10 +46,16 @@ class ClusterVersion extends AbstractModel
     public $SupportedFlink;
 
     /**
+     * @var array jdk支持版本
+     */
+    public $JdkSupportVersion;
+
+    /**
      * @param string $Flink 集群的Flink版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SupportedFlink 集群支持的Flink版本
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $JdkSupportVersion jdk支持版本
      */
     function __construct()
     {
@@ -68,6 +76,15 @@ class ClusterVersion extends AbstractModel
 
         if (array_key_exists("SupportedFlink",$param) and $param["SupportedFlink"] !== null) {
             $this->SupportedFlink = $param["SupportedFlink"];
+        }
+
+        if (array_key_exists("JdkSupportVersion",$param) and $param["JdkSupportVersion"] !== null) {
+            $this->JdkSupportVersion = [];
+            foreach ($param["JdkSupportVersion"] as $key => $value){
+                $obj = new FlinkJdkVersion();
+                $obj->deserialize($value);
+                array_push($this->JdkSupportVersion, $obj);
+            }
         }
     }
 }

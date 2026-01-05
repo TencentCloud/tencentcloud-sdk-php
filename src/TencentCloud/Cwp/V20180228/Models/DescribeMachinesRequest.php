@@ -32,8 +32,8 @@ BM 黑石
 ECM 边缘计算
 LH 轻量应用服务器
 Other 混合云专区
- * @method string getMachineRegion() 获取机器所属地域。如：ap-guangzhou，ap-shanghai
- * @method void setMachineRegion(string $MachineRegion) 设置机器所属地域。如：ap-guangzhou，ap-shanghai
+ * @method string getMachineRegion() 获取机器所属地域。如：ap-guangzhou，ap-shanghai，非腾讯云主机使用：ap-others
+ * @method void setMachineRegion(string $MachineRegion) 设置机器所属地域。如：ap-guangzhou，ap-shanghai，非腾讯云主机使用：ap-others
  * @method integer getLimit() 获取返回数量，默认为10，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为10，最大值为100。
  * @method integer getOffset() 获取偏移量，默认为0。
@@ -80,7 +80,7 @@ Other 混合云专区
     public $MachineType;
 
     /**
-     * @var string 机器所属地域。如：ap-guangzhou，ap-shanghai
+     * @var string 机器所属地域。如：ap-guangzhou，ap-shanghai，非腾讯云主机使用：ap-others
      */
     public $MachineRegion;
 
@@ -123,7 +123,7 @@ BM 黑石
 ECM 边缘计算
 LH 轻量应用服务器
 Other 混合云专区
-     * @param string $MachineRegion 机器所属地域。如：ap-guangzhou，ap-shanghai
+     * @param string $MachineRegion 机器所属地域。如：ap-guangzhou，ap-shanghai，非腾讯云主机使用：ap-others
      * @param integer $Limit 返回数量，默认为10，最大值为100。
      * @param integer $Offset 偏移量，默认为0。
      * @param array $Filters 过滤条件。

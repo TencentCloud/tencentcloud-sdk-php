@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRiskEventCount(integer $RiskEventCount) 设置扫描漏洞数
  * @method string getScanEndTime() 获取扫描结束时间
  * @method void setScanEndTime(string $ScanEndTime) 设置扫描结束时间
+ * @method array getKBNumber() 获取任务扫描的KB编号
+ * @method void setKBNumber(array $KBNumber) 设置任务扫描的KB编号
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -82,6 +84,11 @@ class DescribeScanStateResponse extends AbstractModel
     public $ScanEndTime;
 
     /**
+     * @var array 任务扫描的KB编号
+     */
+    public $KBNumber;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -95,6 +102,7 @@ class DescribeScanStateResponse extends AbstractModel
      * @param string $ScanBeginTime 开始扫描时间
      * @param integer $RiskEventCount 扫描漏洞数
      * @param string $ScanEndTime 扫描结束时间
+     * @param array $KBNumber 任务扫描的KB编号
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -140,6 +148,10 @@ class DescribeScanStateResponse extends AbstractModel
 
         if (array_key_exists("ScanEndTime",$param) and $param["ScanEndTime"] !== null) {
             $this->ScanEndTime = $param["ScanEndTime"];
+        }
+
+        if (array_key_exists("KBNumber",$param) and $param["KBNumber"] !== null) {
+            $this->KBNumber = $param["KBNumber"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

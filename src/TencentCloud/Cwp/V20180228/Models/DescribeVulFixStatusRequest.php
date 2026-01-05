@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVulId(integer $VulId) 设置漏洞id 传FixId可以不用传VulId
  * @method string getQuuid() 获取主机quuid 和VulId 组合可查 某主机最近一次修复任务详情
  * @method void setQuuid(string $Quuid) 设置主机quuid 和VulId 组合可查 某主机最近一次修复任务详情
+ * @method integer getKbId() 获取补丁 id
+ * @method void setKbId(integer $KbId) 设置补丁 id
  */
 class DescribeVulFixStatusRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeVulFixStatusRequest extends AbstractModel
     public $Quuid;
 
     /**
+     * @var integer 补丁 id
+     */
+    public $KbId;
+
+    /**
      * @param integer $FixId 任务id 传VulId可以不用传FixId
      * @param integer $VulId 漏洞id 传FixId可以不用传VulId
      * @param string $Quuid 主机quuid 和VulId 组合可查 某主机最近一次修复任务详情
+     * @param integer $KbId 补丁 id
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeVulFixStatusRequest extends AbstractModel
 
         if (array_key_exists("Quuid",$param) and $param["Quuid"] !== null) {
             $this->Quuid = $param["Quuid"];
+        }
+
+        if (array_key_exists("KbId",$param) and $param["KbId"] !== null) {
+            $this->KbId = $param["KbId"];
         }
     }
 }

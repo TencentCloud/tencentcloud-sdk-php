@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRaspMaxCpu返回参数结构体
  *
- * @method integer getRaspMaxCpu() 获取rasp当前最大cpu限制，0<cpu<=100，默认100表示不限制
- * @method void setRaspMaxCpu(integer $RaspMaxCpu) 设置rasp当前最大cpu限制，0<cpu<=100，默认100表示不限制
+ * @method integer getRaspMaxCpu() 获取rasp当前最大cpu限制，大于0，小于等于100，默认100表示不限制
+ * @method void setRaspMaxCpu(integer $RaspMaxCpu) 设置rasp当前最大cpu限制，大于0，小于等于100，默认100表示不限制
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeRaspMaxCpuResponse extends AbstractModel
 {
     /**
-     * @var integer rasp当前最大cpu限制，0<cpu<=100，默认100表示不限制
+     * @var integer rasp当前最大cpu限制，大于0，小于等于100，默认100表示不限制
      */
     public $RaspMaxCpu;
 
@@ -38,7 +38,7 @@ class DescribeRaspMaxCpuResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $RaspMaxCpu rasp当前最大cpu限制，0<cpu<=100，默认100表示不限制
+     * @param integer $RaspMaxCpu rasp当前最大cpu限制，大于0，小于等于100，默认100表示不限制
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

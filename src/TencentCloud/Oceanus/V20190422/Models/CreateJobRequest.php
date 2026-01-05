@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置作业描述
  * @method integer getOpenJobDefaultAlarm() 获取开启默认告警
  * @method void setOpenJobDefaultAlarm(integer $OpenJobDefaultAlarm) 设置开启默认告警
+ * @method integer getUid() 获取用户Uid
+ * @method void setUid(integer $Uid) 设置用户Uid
+ * @method string getJdkVersion() 获取jdk版本
+ * @method void setJdkVersion(string $JdkVersion) 设置jdk版本
  */
 class CreateJobRequest extends AbstractModel
 {
@@ -108,6 +112,16 @@ class CreateJobRequest extends AbstractModel
     public $OpenJobDefaultAlarm;
 
     /**
+     * @var integer 用户Uid
+     */
+    public $Uid;
+
+    /**
+     * @var string jdk版本
+     */
+    public $JdkVersion;
+
+    /**
      * @param string $Name 作业名称，允许输入长度小于50个字符的中文、英文、数字、-（横线）、_（下划线）、.（点），且符号必须半角字符。注意作业名不能和现有作业同名
      * @param integer $JobType 作业的类型，1 表示 SQL 作业，2 表示 JAR 作业
      * @param integer $ClusterType 集群的类型，1 表示共享集群，2 表示独享集群
@@ -120,6 +134,8 @@ class CreateJobRequest extends AbstractModel
      * @param array $Tags 作业标签
      * @param string $Description 作业描述
      * @param integer $OpenJobDefaultAlarm 开启默认告警
+     * @param integer $Uid 用户Uid
+     * @param string $JdkVersion jdk版本
      */
     function __construct()
     {
@@ -185,6 +201,14 @@ class CreateJobRequest extends AbstractModel
 
         if (array_key_exists("OpenJobDefaultAlarm",$param) and $param["OpenJobDefaultAlarm"] !== null) {
             $this->OpenJobDefaultAlarm = $param["OpenJobDefaultAlarm"];
+        }
+
+        if (array_key_exists("Uid",$param) and $param["Uid"] !== null) {
+            $this->Uid = $param["Uid"];
+        }
+
+        if (array_key_exists("JdkVersion",$param) and $param["JdkVersion"] !== null) {
+            $this->JdkVersion = $param["JdkVersion"];
         }
     }
 }

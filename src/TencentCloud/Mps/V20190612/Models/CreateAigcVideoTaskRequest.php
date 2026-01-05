@@ -25,7 +25,6 @@ use TencentCloud\Common\AbstractModel;
 Hunyuan,
 Hailuo，
 Kling，
-Jimeng，
 Vidu，
 OS，
 GV。
@@ -34,22 +33,19 @@ GV。
 Hunyuan,
 Hailuo，
 Kling，
-Jimeng，
 Vidu，
 OS，
 GV。
  * @method string getModelVersion() 获取指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。
 1. Hailuo， 可选[02、2.3]。
-2. Kling，可选[2.0、2.1、2.5]。
-3. Jimeng, 可选[3.0pro]。
-4. Vidu,可选[q2、q2-pro、q2-turbo]。
+2. Kling，可选[2.0、2.1、2.5、O1、2.6]。
+3. Vidu,可选[q2、q2-pro、q2-turbo]。
 4. GV, 可选[3.1]。
 5. OS，可选[2.0]。
  * @method void setModelVersion(string $ModelVersion) 设置指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。
 1. Hailuo， 可选[02、2.3]。
-2. Kling，可选[2.0、2.1、2.5]。
-3. Jimeng, 可选[3.0pro]。
-4. Vidu,可选[q2、q2-pro、q2-turbo]。
+2. Kling，可选[2.0、2.1、2.5、O1、2.6]。
+3. Vidu,可选[q2、q2-pro、q2-turbo]。
 4. GV, 可选[3.1]。
 5. OS，可选[2.0]。
  * @method string getPrompt() 获取生成视频的描述。(注：最大支持2000字符)。当未传入图片时，此参数必填。
@@ -117,23 +113,27 @@ GV。
  * @method integer getDuration() 获取生成视频的时长。
 注意：
 1. Kling支持 5、10秒。默认: 5秒。
-2. Jimeng支持5、10秒。 默认: 5秒。
-3. Hailuo的std模式可支持6、10秒，其他仅6秒。默认：6秒。
-4. Vidu支持1-10秒。
+2. Hailuo的std模式可支持6、10秒，其他仅6秒。默认：6秒。
+3. Vidu支持1-10秒。
 4. GV支持 8秒。 默认：8秒。
 5. OS支持4、8、12秒。 默认：8秒。
  * @method void setDuration(integer $Duration) 设置生成视频的时长。
 注意：
 1. Kling支持 5、10秒。默认: 5秒。
-2. Jimeng支持5、10秒。 默认: 5秒。
-3. Hailuo的std模式可支持6、10秒，其他仅6秒。默认：6秒。
-4. Vidu支持1-10秒。
+2. Hailuo的std模式可支持6、10秒，其他仅6秒。默认：6秒。
+3. Vidu支持1-10秒。
 4. GV支持 8秒。 默认：8秒。
 5. OS支持4、8、12秒。 默认：8秒。
- * @method AigcVideoExtraParam getExtraParameters() 获取用于传入模型要求的额外参数。
- * @method void setExtraParameters(AigcVideoExtraParam $ExtraParameters) 设置用于传入模型要求的额外参数。
+ * @method AigcVideoExtraParam getExtraParameters() 获取用于传入要求的额外参数。
+ * @method void setExtraParameters(AigcVideoExtraParam $ExtraParameters) 设置用于传入要求的额外参数。
  * @method AigcStoreCosParam getStoreCosParam() 获取文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。
  * @method void setStoreCosParam(AigcStoreCosParam $StoreCosParam) 设置文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。
+ * @method string getAdditionalParameters() 获取用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。
+示例：
+{\"camera_control\":{\"type\":\"simple\"}}
+ * @method void setAdditionalParameters(string $AdditionalParameters) 设置用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。
+示例：
+{\"camera_control\":{\"type\":\"simple\"}}
  * @method string getOperator() 获取接口操作者名称。
  * @method void setOperator(string $Operator) 设置接口操作者名称。
  */
@@ -145,7 +145,6 @@ class CreateAigcVideoTaskRequest extends AbstractModel
 Hunyuan,
 Hailuo，
 Kling，
-Jimeng，
 Vidu，
 OS，
 GV。
@@ -155,9 +154,8 @@ GV。
     /**
      * @var string 指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。
 1. Hailuo， 可选[02、2.3]。
-2. Kling，可选[2.0、2.1、2.5]。
-3. Jimeng, 可选[3.0pro]。
-4. Vidu,可选[q2、q2-pro、q2-turbo]。
+2. Kling，可选[2.0、2.1、2.5、O1、2.6]。
+3. Vidu,可选[q2、q2-pro、q2-turbo]。
 4. GV, 可选[3.1]。
 5. OS，可选[2.0]。
      */
@@ -222,16 +220,15 @@ GV。
      * @var integer 生成视频的时长。
 注意：
 1. Kling支持 5、10秒。默认: 5秒。
-2. Jimeng支持5、10秒。 默认: 5秒。
-3. Hailuo的std模式可支持6、10秒，其他仅6秒。默认：6秒。
-4. Vidu支持1-10秒。
+2. Hailuo的std模式可支持6、10秒，其他仅6秒。默认：6秒。
+3. Vidu支持1-10秒。
 4. GV支持 8秒。 默认：8秒。
 5. OS支持4、8、12秒。 默认：8秒。
      */
     public $Duration;
 
     /**
-     * @var AigcVideoExtraParam 用于传入模型要求的额外参数。
+     * @var AigcVideoExtraParam 用于传入要求的额外参数。
      */
     public $ExtraParameters;
 
@@ -239,6 +236,13 @@ GV。
      * @var AigcStoreCosParam 文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。
      */
     public $StoreCosParam;
+
+    /**
+     * @var string 用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。
+示例：
+{\"camera_control\":{\"type\":\"simple\"}}
+     */
+    public $AdditionalParameters;
 
     /**
      * @var string 接口操作者名称。
@@ -251,15 +255,13 @@ GV。
 Hunyuan,
 Hailuo，
 Kling，
-Jimeng，
 Vidu，
 OS，
 GV。
      * @param string $ModelVersion 指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。
 1. Hailuo， 可选[02、2.3]。
-2. Kling，可选[2.0、2.1、2.5]。
-3. Jimeng, 可选[3.0pro]。
-4. Vidu,可选[q2、q2-pro、q2-turbo]。
+2. Kling，可选[2.0、2.1、2.5、O1、2.6]。
+3. Vidu,可选[q2、q2-pro、q2-turbo]。
 4. GV, 可选[3.1]。
 5. OS，可选[2.0]。
      * @param string $Prompt 生成视频的描述。(注：最大支持2000字符)。当未传入图片时，此参数必填。
@@ -296,13 +298,15 @@ GV。
      * @param integer $Duration 生成视频的时长。
 注意：
 1. Kling支持 5、10秒。默认: 5秒。
-2. Jimeng支持5、10秒。 默认: 5秒。
-3. Hailuo的std模式可支持6、10秒，其他仅6秒。默认：6秒。
-4. Vidu支持1-10秒。
+2. Hailuo的std模式可支持6、10秒，其他仅6秒。默认：6秒。
+3. Vidu支持1-10秒。
 4. GV支持 8秒。 默认：8秒。
 5. OS支持4、8、12秒。 默认：8秒。
-     * @param AigcVideoExtraParam $ExtraParameters 用于传入模型要求的额外参数。
+     * @param AigcVideoExtraParam $ExtraParameters 用于传入要求的额外参数。
      * @param AigcStoreCosParam $StoreCosParam 文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。
+     * @param string $AdditionalParameters 用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。
+示例：
+{\"camera_control\":{\"type\":\"simple\"}}
      * @param string $Operator 接口操作者名称。
      */
     function __construct()
@@ -367,6 +371,10 @@ GV。
         if (array_key_exists("StoreCosParam",$param) and $param["StoreCosParam"] !== null) {
             $this->StoreCosParam = new AigcStoreCosParam();
             $this->StoreCosParam->deserialize($param["StoreCosParam"]);
+        }
+
+        if (array_key_exists("AdditionalParameters",$param) and $param["AdditionalParameters"] !== null) {
+            $this->AdditionalParameters = $param["AdditionalParameters"];
         }
 
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {

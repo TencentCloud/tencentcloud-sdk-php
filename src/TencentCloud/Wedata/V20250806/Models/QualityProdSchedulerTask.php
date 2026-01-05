@@ -1,0 +1,169 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Wedata\V20250806\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * 数据质量生产调度任务业务实体
+ *
+ * @method string getWorkflowId() 获取生产调度任务工作流ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWorkflowId(string $WorkflowId) 设置生产调度任务工作流ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTaskId() 获取生产调度任务Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskId(string $TaskId) 设置生产调度任务Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTaskName() 获取生产调度任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskName(string $TaskName) 设置生产调度任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCycleType() 获取生产调度任务周期类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCycleType(integer $CycleType) 设置生产调度任务周期类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTaskType() 获取生产任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskType(string $TaskType) 设置生产任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getScheduleTimeZone() 获取时区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置时区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getInChargeIdList() 获取负责人id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInChargeIdList(array $InChargeIdList) 设置负责人id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getInChargeNameList() 获取负责人name
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInChargeNameList(array $InChargeNameList) 设置负责人name
+注意：此字段可能返回 null，表示取不到有效值。
+ */
+class QualityProdSchedulerTask extends AbstractModel
+{
+    /**
+     * @var string 生产调度任务工作流ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WorkflowId;
+
+    /**
+     * @var string 生产调度任务Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskId;
+
+    /**
+     * @var string 生产调度任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskName;
+
+    /**
+     * @var integer 生产调度任务周期类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CycleType;
+
+    /**
+     * @var string 生产任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskType;
+
+    /**
+     * @var string 时区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScheduleTimeZone;
+
+    /**
+     * @var array 负责人id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InChargeIdList;
+
+    /**
+     * @var array 负责人name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InChargeNameList;
+
+    /**
+     * @param string $WorkflowId 生产调度任务工作流ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaskId 生产调度任务Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaskName 生产调度任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CycleType 生产调度任务周期类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaskType 生产任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ScheduleTimeZone 时区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $InChargeIdList 负责人id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $InChargeNameList 负责人name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("WorkflowId",$param) and $param["WorkflowId"] !== null) {
+            $this->WorkflowId = $param["WorkflowId"];
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("TaskName",$param) and $param["TaskName"] !== null) {
+            $this->TaskName = $param["TaskName"];
+        }
+
+        if (array_key_exists("CycleType",$param) and $param["CycleType"] !== null) {
+            $this->CycleType = $param["CycleType"];
+        }
+
+        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
+            $this->TaskType = $param["TaskType"];
+        }
+
+        if (array_key_exists("ScheduleTimeZone",$param) and $param["ScheduleTimeZone"] !== null) {
+            $this->ScheduleTimeZone = $param["ScheduleTimeZone"];
+        }
+
+        if (array_key_exists("InChargeIdList",$param) and $param["InChargeIdList"] !== null) {
+            $this->InChargeIdList = $param["InChargeIdList"];
+        }
+
+        if (array_key_exists("InChargeNameList",$param) and $param["InChargeNameList"] !== null) {
+            $this->InChargeNameList = $param["InChargeNameList"];
+        }
+    }
+}

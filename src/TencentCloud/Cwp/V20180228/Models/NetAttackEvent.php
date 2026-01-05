@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCount(integer $Count) 设置攻击次数
  * @method boolean getNew() 获取是否今日新增主机
  * @method void setNew(boolean $New) 设置是否今日新增主机
+ * @method integer getRaspOpen() 获取是否开启应用防护，0关闭，1开启
+ * @method void setRaspOpen(integer $RaspOpen) 设置是否开启应用防护，0关闭，1开启
+ * @method IPAnalyse getIPAnalyse() 获取ip分析
+ * @method void setIPAnalyse(IPAnalyse $IPAnalyse) 设置ip分析
  */
 class NetAttackEvent extends AbstractModel
 {
@@ -143,6 +147,16 @@ class NetAttackEvent extends AbstractModel
     public $New;
 
     /**
+     * @var integer 是否开启应用防护，0关闭，1开启
+     */
+    public $RaspOpen;
+
+    /**
+     * @var IPAnalyse ip分析
+     */
+    public $IPAnalyse;
+
+    /**
      * @param integer $Id 日志ID
      * @param string $Uuid 客户端ID
      * @param integer $DstPort 目标端口
@@ -160,6 +174,8 @@ class NetAttackEvent extends AbstractModel
      * @param string $Quuid cvm uuid
      * @param integer $Count 攻击次数
      * @param boolean $New 是否今日新增主机
+     * @param integer $RaspOpen 是否开启应用防护，0关闭，1开启
+     * @param IPAnalyse $IPAnalyse ip分析
      */
     function __construct()
     {
@@ -241,6 +257,15 @@ class NetAttackEvent extends AbstractModel
 
         if (array_key_exists("New",$param) and $param["New"] !== null) {
             $this->New = $param["New"];
+        }
+
+        if (array_key_exists("RaspOpen",$param) and $param["RaspOpen"] !== null) {
+            $this->RaspOpen = $param["RaspOpen"];
+        }
+
+        if (array_key_exists("IPAnalyse",$param) and $param["IPAnalyse"] !== null) {
+            $this->IPAnalyse = new IPAnalyse();
+            $this->IPAnalyse->deserialize($param["IPAnalyse"]);
         }
     }
 }

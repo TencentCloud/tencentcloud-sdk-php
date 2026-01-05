@@ -26,10 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSceneInfo(AigcImageSceneInfo $SceneInfo) 设置场景化生图参数配置。
  * @method array getFileInfos() 获取输入图片列表，支持的图片格式：jpg、jpeg、png、webp。不同的场景需要不同的输入数据：
 
-- change_clothes：只能输入1张**模特**图片。
+- AI换衣场景：只能输入 1 张**模特**图片。
+- AI生商品图场景：需输入 1～10 张**同一产品**的不同角度的图片
  * @method void setFileInfos(array $FileInfos) 设置输入图片列表，支持的图片格式：jpg、jpeg、png、webp。不同的场景需要不同的输入数据：
 
-- change_clothes：只能输入1张**模特**图片。
+- AI换衣场景：只能输入 1 张**模特**图片。
+- AI生商品图场景：需输入 1～10 张**同一产品**的不同角度的图片
  * @method SceneAigcImageOutputConfig getOutputConfig() 获取场景化生图任务的输出媒体文件配置。
  * @method void setOutputConfig(SceneAigcImageOutputConfig $OutputConfig) 设置场景化生图任务的输出媒体文件配置。
  * @method string getSessionId() 获取用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
@@ -56,7 +58,8 @@ class CreateSceneAigcImageTaskRequest extends AbstractModel
     /**
      * @var array 输入图片列表，支持的图片格式：jpg、jpeg、png、webp。不同的场景需要不同的输入数据：
 
-- change_clothes：只能输入1张**模特**图片。
+- AI换衣场景：只能输入 1 张**模特**图片。
+- AI生商品图场景：需输入 1～10 张**同一产品**的不同角度的图片
      */
     public $FileInfos;
 
@@ -90,7 +93,8 @@ class CreateSceneAigcImageTaskRequest extends AbstractModel
      * @param AigcImageSceneInfo $SceneInfo 场景化生图参数配置。
      * @param array $FileInfos 输入图片列表，支持的图片格式：jpg、jpeg、png、webp。不同的场景需要不同的输入数据：
 
-- change_clothes：只能输入1张**模特**图片。
+- AI换衣场景：只能输入 1 张**模特**图片。
+- AI生商品图场景：需输入 1～10 张**同一产品**的不同角度的图片
      * @param SceneAigcImageOutputConfig $OutputConfig 场景化生图任务的输出媒体文件配置。
      * @param string $SessionId 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。

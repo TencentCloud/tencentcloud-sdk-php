@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyFolder请求参数结构体
  *
- * @method string getSourceFolderId() 获取文件夹ID（必填）
- * @method void setSourceFolderId(string $SourceFolderId) 设置文件夹ID（必填）
+ * @method string getSourceFolderId() 获取只有移动文件夹的场景必填，如果是批量移动作业的场景，非必填。
+ * @method void setSourceFolderId(string $SourceFolderId) 设置只有移动文件夹的场景必填，如果是批量移动作业的场景，非必填。
  * @method string getTargetFolderId() 获取如需拖拽文件夹，需传入目标文件夹ID
  * @method void setTargetFolderId(string $TargetFolderId) 设置如需拖拽文件夹，需传入目标文件夹ID
  * @method string getFolderName() 获取如需修改文件夹名，需传入FolderName字段
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyFolderRequest extends AbstractModel
 {
     /**
-     * @var string 文件夹ID（必填）
+     * @var string 只有移动文件夹的场景必填，如果是批量移动作业的场景，非必填。
      */
     public $SourceFolderId;
 
@@ -66,7 +66,7 @@ class ModifyFolderRequest extends AbstractModel
     public $WorkSpaceId;
 
     /**
-     * @param string $SourceFolderId 文件夹ID（必填）
+     * @param string $SourceFolderId 只有移动文件夹的场景必填，如果是批量移动作业的场景，非必填。
      * @param string $TargetFolderId 如需拖拽文件夹，需传入目标文件夹ID
      * @param string $FolderName 如需修改文件夹名，需传入FolderName字段
      * @param integer $FolderType 文件夹类型，0是任务文件夹，1是依赖文件夹

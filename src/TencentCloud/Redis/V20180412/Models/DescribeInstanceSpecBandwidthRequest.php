@@ -20,66 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceSpecBandwidth请求参数结构体
  *
- * @method string getInstanceId() 获取指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。填写实例id或者规格，两者必选其一。
- * @method void setInstanceId(string $InstanceId) 设置指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。填写实例id或者规格，两者必选其一。
- * @method integer getShardSize() 获取分片大小，单位：MB
- * @method void setShardSize(integer $ShardSize) 设置分片大小，单位：MB
- * @method integer getShardNum() 获取分片数量。
- * @method void setShardNum(integer $ShardNum) 设置分片数量。
- * @method integer getReplicateNum() 获取复制组数量。
- * @method void setReplicateNum(integer $ReplicateNum) 设置复制组数量。
- * @method integer getReadOnlyWeight() 获取只读权重。
-- 100：开启从只读。
-- 0：关闭从只读。
- * @method void setReadOnlyWeight(integer $ReadOnlyWeight) 设置只读权重。
-- 100：开启从只读。
-- 0：关闭从只读。
- * @method integer getType() 获取实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的Type。
- * @method void setType(integer $Type) 设置实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的Type。
+ * @method string getInstanceId() 获取<p>指定实例 ID。请登录 <a href="https://console.cloud.tencent.com/redis">Redis控制台</a> 在实例列表复制实例 ID。同时，InstanceId 与规格参数不能同时为空，至少提供一种。</p><ul><li>若仅指定 InstanceId：查询该实例当前规格的带宽。</li><li>若指定 InstanceId + 至少一个规格参数（ShardSize、ShardNum 或 ReplicateNum）：计算变更规格后的带宽。</li><li>若指定部分或所有规格参数（ShardSize、ShardNum、ReplicateNum 与 Type），而不指定 InstanceId：根据规格组合查询理论带宽。</li></ul>
+ * @method void setInstanceId(string $InstanceId) 设置<p>指定实例 ID。请登录 <a href="https://console.cloud.tencent.com/redis">Redis控制台</a> 在实例列表复制实例 ID。同时，InstanceId 与规格参数不能同时为空，至少提供一种。</p><ul><li>若仅指定 InstanceId：查询该实例当前规格的带宽。</li><li>若指定 InstanceId + 至少一个规格参数（ShardSize、ShardNum 或 ReplicateNum）：计算变更规格后的带宽。</li><li>若指定部分或所有规格参数（ShardSize、ShardNum、ReplicateNum 与 Type），而不指定 InstanceId：根据规格组合查询理论带宽。</li></ul>
+ * @method integer getShardSize() 获取<p>分片大小。单位：MB。</p>
+ * @method void setShardSize(integer $ShardSize) 设置<p>分片大小。单位：MB。</p>
+ * @method integer getShardNum() 获取<p>分片数量。</p>
+ * @method void setShardNum(integer $ShardNum) 设置<p>分片数量。</p>
+ * @method integer getReplicateNum() 获取<p>复制组数量。</p>
+ * @method void setReplicateNum(integer $ReplicateNum) 设置<p>复制组数量。</p>
+ * @method integer getReadOnlyWeight() 获取<p>只读权重。- 100：开启从只读。- 0：关闭从只读。</p>
+ * @method void setReadOnlyWeight(integer $ReadOnlyWeight) 设置<p>只读权重。- 100：开启从只读。- 0：关闭从只读。</p>
+ * @method integer getType() 获取<p>实例类型，同 <a href="https://cloud.tencent.com/document/api/239/20026">CreateInstances</a> 的Type。</p>
+ * @method void setType(integer $Type) 设置<p>实例类型，同 <a href="https://cloud.tencent.com/document/api/239/20026">CreateInstances</a> 的Type。</p>
  */
 class DescribeInstanceSpecBandwidthRequest extends AbstractModel
 {
     /**
-     * @var string 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。填写实例id或者规格，两者必选其一。
+     * @var string <p>指定实例 ID。请登录 <a href="https://console.cloud.tencent.com/redis">Redis控制台</a> 在实例列表复制实例 ID。同时，InstanceId 与规格参数不能同时为空，至少提供一种。</p><ul><li>若仅指定 InstanceId：查询该实例当前规格的带宽。</li><li>若指定 InstanceId + 至少一个规格参数（ShardSize、ShardNum 或 ReplicateNum）：计算变更规格后的带宽。</li><li>若指定部分或所有规格参数（ShardSize、ShardNum、ReplicateNum 与 Type），而不指定 InstanceId：根据规格组合查询理论带宽。</li></ul>
      */
     public $InstanceId;
 
     /**
-     * @var integer 分片大小，单位：MB
+     * @var integer <p>分片大小。单位：MB。</p>
      */
     public $ShardSize;
 
     /**
-     * @var integer 分片数量。
+     * @var integer <p>分片数量。</p>
      */
     public $ShardNum;
 
     /**
-     * @var integer 复制组数量。
+     * @var integer <p>复制组数量。</p>
      */
     public $ReplicateNum;
 
     /**
-     * @var integer 只读权重。
-- 100：开启从只读。
-- 0：关闭从只读。
+     * @var integer <p>只读权重。- 100：开启从只读。- 0：关闭从只读。</p>
      */
     public $ReadOnlyWeight;
 
     /**
-     * @var integer 实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的Type。
+     * @var integer <p>实例类型，同 <a href="https://cloud.tencent.com/document/api/239/20026">CreateInstances</a> 的Type。</p>
      */
     public $Type;
 
     /**
-     * @param string $InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。填写实例id或者规格，两者必选其一。
-     * @param integer $ShardSize 分片大小，单位：MB
-     * @param integer $ShardNum 分片数量。
-     * @param integer $ReplicateNum 复制组数量。
-     * @param integer $ReadOnlyWeight 只读权重。
-- 100：开启从只读。
-- 0：关闭从只读。
-     * @param integer $Type 实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的Type。
+     * @param string $InstanceId <p>指定实例 ID。请登录 <a href="https://console.cloud.tencent.com/redis">Redis控制台</a> 在实例列表复制实例 ID。同时，InstanceId 与规格参数不能同时为空，至少提供一种。</p><ul><li>若仅指定 InstanceId：查询该实例当前规格的带宽。</li><li>若指定 InstanceId + 至少一个规格参数（ShardSize、ShardNum 或 ReplicateNum）：计算变更规格后的带宽。</li><li>若指定部分或所有规格参数（ShardSize、ShardNum、ReplicateNum 与 Type），而不指定 InstanceId：根据规格组合查询理论带宽。</li></ul>
+     * @param integer $ShardSize <p>分片大小。单位：MB。</p>
+     * @param integer $ShardNum <p>分片数量。</p>
+     * @param integer $ReplicateNum <p>复制组数量。</p>
+     * @param integer $ReadOnlyWeight <p>只读权重。- 100：开启从只读。- 0：关闭从只读。</p>
+     * @param integer $Type <p>实例类型，同 <a href="https://cloud.tencent.com/document/api/239/20026">CreateInstances</a> 的Type。</p>
      */
     function __construct()
     {

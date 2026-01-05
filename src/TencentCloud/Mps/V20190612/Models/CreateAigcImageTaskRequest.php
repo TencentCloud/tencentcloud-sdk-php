@@ -24,22 +24,18 @@ use TencentCloud\Common\AbstractModel;
 当前支持的模型列表：
 Hunyuan,
 GEM，
-Jimeng，
 Qwen。
  * @method void setModelName(string $ModelName) 设置模型名称。
 当前支持的模型列表：
 Hunyuan,
 GEM，
-Jimeng，
 Qwen。
  * @method string getModelVersion() 获取指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。
 
 1. GEM， 可选[2.5,3.0]。
-2. Jimeng，可选[4.0]。
  * @method void setModelVersion(string $ModelVersion) 设置指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。
 
 1. GEM， 可选[2.5,3.0]。
-2. Jimeng，可选[4.0]。
  * @method string getPrompt() 获取生成图片的描述。(注：最大支持1000字符)。当未传入参考图片时，此参数必填。
  * @method void setPrompt(string $Prompt) 设置生成图片的描述。(注：最大支持1000字符)。当未传入参考图片时，此参数必填。
  * @method string getNegativePrompt() 获取用于描述您想要阻止模型生成的内容。 注意：部分模型支持。 例如： 顶部照明、明亮的色彩 人物、动物 多辆汽车、风。
@@ -76,7 +72,6 @@ class CreateAigcImageTaskRequest extends AbstractModel
 当前支持的模型列表：
 Hunyuan,
 GEM，
-Jimeng，
 Qwen。
      */
     public $ModelName;
@@ -85,7 +80,6 @@ Qwen。
      * @var string 指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。
 
 1. GEM， 可选[2.5,3.0]。
-2. Jimeng，可选[4.0]。
      */
     public $ModelVersion;
 
@@ -136,12 +130,10 @@ Qwen。
 当前支持的模型列表：
 Hunyuan,
 GEM，
-Jimeng，
 Qwen。
      * @param string $ModelVersion 指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。
 
 1. GEM， 可选[2.5,3.0]。
-2. Jimeng，可选[4.0]。
      * @param string $Prompt 生成图片的描述。(注：最大支持1000字符)。当未传入参考图片时，此参数必填。
      * @param string $NegativePrompt 用于描述您想要阻止模型生成的内容。 注意：部分模型支持。 例如： 顶部照明、明亮的色彩 人物、动物 多辆汽车、风。
      * @param boolean $EnhancePrompt 默认取值为False，模型会严格地遵循指令。如果需要更精细的prompt获得最佳效果，可将此参数设置为True，将自动优化传入的prompt，以提升生成质量。

@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostCount(integer $HostCount) 设置主机数目
  * @method array getExcludedQuuids() 获取需排除的机器列表
  * @method void setExcludedQuuids(array $ExcludedQuuids) 设置需排除的机器列表
+ * @method string getMsgLanguage() 获取推送语言类型，中文zh，英文en	
+ * @method void setMsgLanguage(string $MsgLanguage) 设置推送语言类型，中文zh，英文en	
  */
 class WebHookPolicy extends AbstractModel
 {
@@ -101,6 +103,11 @@ class WebHookPolicy extends AbstractModel
     public $ExcludedQuuids;
 
     /**
+     * @var string 推送语言类型，中文zh，英文en	
+     */
+    public $MsgLanguage;
+
+    /**
      * @param integer $Id id
      * @param string $Name 策略名称
      * @param array $Events 事件类型
@@ -112,6 +119,7 @@ class WebHookPolicy extends AbstractModel
      * @param array $Quuids 主机列表
      * @param integer $HostCount 主机数目
      * @param array $ExcludedQuuids 需排除的机器列表
+     * @param string $MsgLanguage 推送语言类型，中文zh，英文en	
      */
     function __construct()
     {
@@ -188,6 +196,10 @@ class WebHookPolicy extends AbstractModel
 
         if (array_key_exists("ExcludedQuuids",$param) and $param["ExcludedQuuids"] !== null) {
             $this->ExcludedQuuids = $param["ExcludedQuuids"];
+        }
+
+        if (array_key_exists("MsgLanguage",$param) and $param["MsgLanguage"] !== null) {
+            $this->MsgLanguage = $param["MsgLanguage"];
         }
     }
 }

@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tag\V20180813\Models;
+namespace TencentCloud\Wedata\V20250806\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetTagKeys返回参数结构体
+ * DeleteProject返回参数结构体
  *
- * @method string getPaginationToken() 获取<p>获取的下一页的Token值，如果当前是最后一页，返回为空</p>
- * @method void setPaginationToken(string $PaginationToken) 设置<p>获取的下一页的Token值，如果当前是最后一页，返回为空</p>
- * @method array getTagKeys() 获取<p>标签键信息。</p>
- * @method void setTagKeys(array $TagKeys) 设置<p>标签键信息。</p>
+ * @method ProjectResult getData() 获取删除结果
+ * @method void setData(ProjectResult $Data) 设置删除结果
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class GetTagKeysResponse extends AbstractModel
+class DeleteProjectResponse extends AbstractModel
 {
     /**
-     * @var string <p>获取的下一页的Token值，如果当前是最后一页，返回为空</p>
+     * @var ProjectResult 删除结果
      */
-    public $PaginationToken;
-
-    /**
-     * @var array <p>标签键信息。</p>
-     */
-    public $TagKeys;
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class GetTagKeysResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $PaginationToken <p>获取的下一页的Token值，如果当前是最后一页，返回为空</p>
-     * @param array $TagKeys <p>标签键信息。</p>
+     * @param ProjectResult $Data 删除结果
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +54,9 @@ class GetTagKeysResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PaginationToken",$param) and $param["PaginationToken"] !== null) {
-            $this->PaginationToken = $param["PaginationToken"];
-        }
-
-        if (array_key_exists("TagKeys",$param) and $param["TagKeys"] !== null) {
-            $this->TagKeys = $param["TagKeys"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new ProjectResult();
+            $this->Data->deserialize($param["Data"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

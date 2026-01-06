@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageHeight(integer $ImageHeight) 设置图片输出高度，单位：像素。
  * @method integer getImageWidth() 获取图片输出宽度，单位：像素。
  * @method void setImageWidth(integer $ImageWidth) 设置图片输出宽度，单位：像素。
+ * @method string getImageSize() 获取图片输出分辨率，取值：1K/2K/4K。
+ * @method void setImageSize(string $ImageSize) 设置图片输出分辨率，取值：1K/2K/4K。
  */
 class ImageProcessOutputConfig extends AbstractModel
 {
@@ -69,6 +71,11 @@ class ImageProcessOutputConfig extends AbstractModel
     public $ImageWidth;
 
     /**
+     * @var string 图片输出分辨率，取值：1K/2K/4K。
+     */
+    public $ImageSize;
+
+    /**
      * @param string $AspectRatio 输出图片的宽高比。可以配合ImageWidth 和 ImageHeight 使用，规则如下：
 
 1. 仅指定 AspectRatio 时，根据原图输入进行自适应调整。
@@ -80,6 +87,7 @@ class ImageProcessOutputConfig extends AbstractModel
 支持该参数 ScheduleId: 30010(扩图)
      * @param integer $ImageHeight 图片输出高度，单位：像素。
      * @param integer $ImageWidth 图片输出宽度，单位：像素。
+     * @param string $ImageSize 图片输出分辨率，取值：1K/2K/4K。
      */
     function __construct()
     {
@@ -104,6 +112,10 @@ class ImageProcessOutputConfig extends AbstractModel
 
         if (array_key_exists("ImageWidth",$param) and $param["ImageWidth"] !== null) {
             $this->ImageWidth = $param["ImageWidth"];
+        }
+
+        if (array_key_exists("ImageSize",$param) and $param["ImageSize"] !== null) {
+            $this->ImageSize = $param["ImageSize"];
         }
     }
 }

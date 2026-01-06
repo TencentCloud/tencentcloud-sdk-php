@@ -25,11 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRuleId() 获取用于细分客户使用场景，由腾讯侧在线下对接时分配。
  * @method void setRuleId(string $RuleId) 设置用于细分客户使用场景，由腾讯侧在线下对接时分配。
  * @method string getInfoType() 获取指定拉取的结果信息。
-- 取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息）。
+- 取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息；4：视频信息；5：意愿核身朗读模式相关结果；6：意愿核身问答/点头模式相关结果）。
 - 例如 13 表示拉取文本类、视频最佳截图信息。
 - 默认值：0
  * @method void setInfoType(string $InfoType) 设置指定拉取的结果信息。
-- 取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息）。
+- 取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息；4：视频信息；5：意愿核身朗读模式相关结果；6：意愿核身问答/点头模式相关结果）。
 - 例如 13 表示拉取文本类、视频最佳截图信息。
 - 默认值：0
  * @method integer getBestFramesCount() 获取从活体视频中截取一定张数的自截帧。
@@ -77,7 +77,7 @@ class GetDetectInfoEnhancedRequest extends AbstractModel
 
     /**
      * @var string 指定拉取的结果信息。
-- 取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息）。
+- 取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息；4：视频信息；5：意愿核身朗读模式相关结果；6：意愿核身问答/点头模式相关结果）。
 - 例如 13 表示拉取文本类、视频最佳截图信息。
 - 默认值：0
      */
@@ -130,7 +130,7 @@ class GetDetectInfoEnhancedRequest extends AbstractModel
      * @param string $BizToken 人脸核身流程的标识，调用[DetectAuth](https://cloud.tencent.com/document/product/1007/31816)接口时生成。
      * @param string $RuleId 用于细分客户使用场景，由腾讯侧在线下对接时分配。
      * @param string $InfoType 指定拉取的结果信息。
-- 取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息）。
+- 取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息；4：视频信息；5：意愿核身朗读模式相关结果；6：意愿核身问答/点头模式相关结果）。
 - 例如 13 表示拉取文本类、视频最佳截图信息。
 - 默认值：0
      * @param integer $BestFramesCount 从活体视频中截取一定张数的自截帧。

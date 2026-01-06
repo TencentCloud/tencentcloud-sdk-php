@@ -32,7 +32,8 @@ use TencentCloud\Common\AbstractModel;
 RequestId：请求 ID
 EventName：事件名称
 ActionType：操作类型（Write：写；Read：读）
-PrincipalId：子账号、ResourceType：资源类型
+PrincipalId：子账号
+ResourceType：资源类型
 ResourceId：资源Id
 ResourceName：资源名称
 AccessKeyId：密钥 ID
@@ -46,7 +47,8 @@ Tags：标签（AttributeValue格式：[{"key":"*","value":"*"}]）
 RequestId：请求 ID
 EventName：事件名称
 ActionType：操作类型（Write：写；Read：读）
-PrincipalId：子账号、ResourceType：资源类型
+PrincipalId：子账号
+ResourceType：资源类型
 ResourceId：资源Id
 ResourceName：资源名称
 AccessKeyId：密钥 ID
@@ -86,7 +88,8 @@ class DescribeEventsRequest extends AbstractModel
 RequestId：请求 ID
 EventName：事件名称
 ActionType：操作类型（Write：写；Read：读）
-PrincipalId：子账号、ResourceType：资源类型
+PrincipalId：子账号
+ResourceType：资源类型
 ResourceId：资源Id
 ResourceName：资源名称
 AccessKeyId：密钥 ID
@@ -113,7 +116,8 @@ Tags：标签（AttributeValue格式：[{"key":"*","value":"*"}]）
 RequestId：请求 ID
 EventName：事件名称
 ActionType：操作类型（Write：写；Read：读）
-PrincipalId：子账号、ResourceType：资源类型
+PrincipalId：子账号
+ResourceType：资源类型
 ResourceId：资源Id
 ResourceName：资源名称
 AccessKeyId：密钥 ID

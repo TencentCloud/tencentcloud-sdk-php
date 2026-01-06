@@ -54,6 +54,7 @@ use TencentCloud\Wedata\V20250806\Models as Models;
  * @method Models\DeleteDataSourceResponse DeleteDataSource(Models\DeleteDataSourceRequest $req) 该接口用于删除数据源
  * @method Models\DeleteLineageResponse DeleteLineage(Models\DeleteLineageRequest $req) RegisterLineage
  * @method Models\DeleteOpsAlarmRuleResponse DeleteOpsAlarmRule(Models\DeleteOpsAlarmRuleRequest $req) 删除告警规则
+ * @method Models\DeleteProjectResponse DeleteProject(Models\DeleteProjectRequest $req) 删除项目
  * @method Models\DeleteProjectMemberResponse DeleteProjectMember(Models\DeleteProjectMemberRequest $req) 删除项目用户
  * @method Models\DeleteQualityRuleResponse DeleteQualityRule(Models\DeleteQualityRuleRequest $req) 删除质量规则接口
  * @method Models\DeleteQualityRuleGroupResponse DeleteQualityRuleGroup(Models\DeleteQualityRuleGroupRequest $req) 删除监控任务

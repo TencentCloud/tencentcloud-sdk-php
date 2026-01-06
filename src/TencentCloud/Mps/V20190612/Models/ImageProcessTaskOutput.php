@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSignedUrl() 获取输出文件的URL。
  * @method void setSignedUrl(string $SignedUrl) 设置输出文件的URL。
+ * @method string getContent() 获取图生文任务的处理结果。
+ * @method void setContent(string $Content) 设置图生文任务的处理结果。
  */
 class ImageProcessTaskOutput extends AbstractModel
 {
@@ -51,11 +53,17 @@ class ImageProcessTaskOutput extends AbstractModel
     public $SignedUrl;
 
     /**
+     * @var string 图生文任务的处理结果。
+     */
+    public $Content;
+
+    /**
      * @param string $Path 输出文件的路径。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskOutputStorage $OutputStorage 输出文件的存储位置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SignedUrl 输出文件的URL。
+     * @param string $Content 图生文任务的处理结果。
      */
     function __construct()
     {
@@ -81,6 +89,10 @@ class ImageProcessTaskOutput extends AbstractModel
 
         if (array_key_exists("SignedUrl",$param) and $param["SignedUrl"] !== null) {
             $this->SignedUrl = $param["SignedUrl"];
+        }
+
+        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
+            $this->Content = $param["Content"];
         }
     }
 }

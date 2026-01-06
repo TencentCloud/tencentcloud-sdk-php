@@ -24,10 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置VPC实例ID。
  * @method string getIpAddress() 获取云服务器内网IP。
  * @method void setIpAddress(string $IpAddress) 设置云服务器内网IP。
- * @method integer getBandwidth() 获取流控带宽值。
- * @method void setBandwidth(integer $Bandwidth) 设置流控带宽值。
+ * @method integer getBandwidth() 获取网关流控出方向带宽值，当值为-1时，代表未限速；当值大于等于0时，限速带宽上限为返回值。
+ * @method void setBandwidth(integer $Bandwidth) 设置网关流控出方向带宽值，当值为-1时，代表未限速；当值大于等于0时，限速带宽上限为返回值。
  * @method string getCreateTime() 获取创建时间。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
+ * @method integer getInBandwidth() 获取网关流控入方向带宽值，当值为-1时，代表未限速；当值大于等于0时，限速带宽上限为返回值。
+ * @method void setInBandwidth(integer $InBandwidth) 设置网关流控入方向带宽值，当值为-1时，代表未限速；当值大于等于0时，限速带宽上限为返回值。
  */
 class GatewayQos extends AbstractModel
 {
@@ -42,7 +44,7 @@ class GatewayQos extends AbstractModel
     public $IpAddress;
 
     /**
-     * @var integer 流控带宽值。
+     * @var integer 网关流控出方向带宽值，当值为-1时，代表未限速；当值大于等于0时，限速带宽上限为返回值。
      */
     public $Bandwidth;
 
@@ -52,10 +54,16 @@ class GatewayQos extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var integer 网关流控入方向带宽值，当值为-1时，代表未限速；当值大于等于0时，限速带宽上限为返回值。
+     */
+    public $InBandwidth;
+
+    /**
      * @param string $VpcId VPC实例ID。
      * @param string $IpAddress 云服务器内网IP。
-     * @param integer $Bandwidth 流控带宽值。
+     * @param integer $Bandwidth 网关流控出方向带宽值，当值为-1时，代表未限速；当值大于等于0时，限速带宽上限为返回值。
      * @param string $CreateTime 创建时间。
+     * @param integer $InBandwidth 网关流控入方向带宽值，当值为-1时，代表未限速；当值大于等于0时，限速带宽上限为返回值。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class GatewayQos extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("InBandwidth",$param) and $param["InBandwidth"] !== null) {
+            $this->InBandwidth = $param["InBandwidth"];
         }
     }
 }

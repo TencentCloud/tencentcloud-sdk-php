@@ -28,6 +28,8 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
  * @method string getStyle() 获取绘画风格当前仅支持美术馆风格（gallerying）。
  * @method void setStyle(string $Style) 设置绘画风格当前仅支持美术馆风格（gallerying）。
+ * @method string getMode() 获取特效模式，默认使用人像模式。 Person：人像模式，仅支持上传人像图片，人像生成效果更好【这里需要加非人脸的拦截】。 Pet：宠物模式，支持宠物等非人像图片。 示例值：Person
+ * @method void setMode(string $Mode) 设置特效模式，默认使用人像模式。 Person：人像模式，仅支持上传人像图片，人像生成效果更好【这里需要加非人脸的拦截】。 Pet：宠物模式，支持宠物等非人像图片。 示例值：Person
  * @method integer getLogoAdd() 获取为生成结果图添加显式水印标识的开关，默认为1。  
 1：添加。  
 0：不添加。  
@@ -58,6 +60,11 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
     public $Style;
 
     /**
+     * @var string 特效模式，默认使用人像模式。 Person：人像模式，仅支持上传人像图片，人像生成效果更好【这里需要加非人脸的拦截】。 Pet：宠物模式，支持宠物等非人像图片。 示例值：Person
+     */
+    public $Mode;
+
+    /**
      * @var integer 为生成结果图添加显式水印标识的开关，默认为1。  
 1：添加。  
 0：不添加。  
@@ -77,6 +84,7 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      * @param string $Style 绘画风格当前仅支持美术馆风格（gallerying）。
+     * @param string $Mode 特效模式，默认使用人像模式。 Person：人像模式，仅支持上传人像图片，人像生成效果更好【这里需要加非人脸的拦截】。 Pet：宠物模式，支持宠物等非人像图片。 示例值：Person
      * @param integer $LogoAdd 为生成结果图添加显式水印标识的开关，默认为1。  
 1：添加。  
 0：不添加。  
@@ -105,6 +113,10 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 
         if (array_key_exists("Style",$param) and $param["Style"] !== null) {
             $this->Style = $param["Style"];
+        }
+
+        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
+            $this->Mode = $param["Mode"];
         }
 
         if (array_key_exists("LogoAdd",$param) and $param["LogoAdd"] !== null) {

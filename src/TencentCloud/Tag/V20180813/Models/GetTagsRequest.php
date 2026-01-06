@@ -20,58 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetTags请求参数结构体
  *
- * @method string getPaginationToken() 获取从上一页的响应中获取的下一页的Token值。
-如果是第一次请求，设置为空。
- * @method void setPaginationToken(string $PaginationToken) 设置从上一页的响应中获取的下一页的Token值。
-如果是第一次请求，设置为空。
- * @method integer getMaxResults() 获取每一页返回的数据最大条数，最大1000。
-缺省值：50。
- * @method void setMaxResults(integer $MaxResults) 设置每一页返回的数据最大条数，最大1000。
-缺省值：50。
- * @method array getTagKeys() 获取标签键。
-返回所有标签键列表对应的标签。
-最大长度：20
- * @method void setTagKeys(array $TagKeys) 设置标签键。
-返回所有标签键列表对应的标签。
-最大长度：20
- * @method string getCategory() 获取标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
- * @method void setCategory(string $Category) 设置标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+ * @method string getPaginationToken() 获取<p>从上一页的响应中获取的下一页的Token值。如果是第一次请求，设置为空。</p>
+ * @method void setPaginationToken(string $PaginationToken) 设置<p>从上一页的响应中获取的下一页的Token值。如果是第一次请求，设置为空。</p>
+ * @method integer getMaxResults() 获取<p>每一页返回的数据最大条数，最大1000。缺省值：50。</p>
+ * @method void setMaxResults(integer $MaxResults) 设置<p>每一页返回的数据最大条数，最大1000。缺省值：50。</p>
+ * @method array getTagKeys() 获取<p>标签键。返回所有标签键列表对应的标签。最大长度：20</p>
+ * @method void setTagKeys(array $TagKeys) 设置<p>标签键。返回所有标签键列表对应的标签。最大长度：20</p>
+ * @method string getCategory() 获取<p>标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。</p>
+ * @method void setCategory(string $Category) 设置<p>标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。</p>
  */
 class GetTagsRequest extends AbstractModel
 {
     /**
-     * @var string 从上一页的响应中获取的下一页的Token值。
-如果是第一次请求，设置为空。
+     * @var string <p>从上一页的响应中获取的下一页的Token值。如果是第一次请求，设置为空。</p>
      */
     public $PaginationToken;
 
     /**
-     * @var integer 每一页返回的数据最大条数，最大1000。
-缺省值：50。
+     * @var integer <p>每一页返回的数据最大条数，最大1000。缺省值：50。</p>
      */
     public $MaxResults;
 
     /**
-     * @var array 标签键。
-返回所有标签键列表对应的标签。
-最大长度：20
+     * @var array <p>标签键。返回所有标签键列表对应的标签。最大长度：20</p>
      */
     public $TagKeys;
 
     /**
-     * @var string 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+     * @var string <p>标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。</p>
      */
     public $Category;
 
     /**
-     * @param string $PaginationToken 从上一页的响应中获取的下一页的Token值。
-如果是第一次请求，设置为空。
-     * @param integer $MaxResults 每一页返回的数据最大条数，最大1000。
-缺省值：50。
-     * @param array $TagKeys 标签键。
-返回所有标签键列表对应的标签。
-最大长度：20
-     * @param string $Category 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+     * @param string $PaginationToken <p>从上一页的响应中获取的下一页的Token值。如果是第一次请求，设置为空。</p>
+     * @param integer $MaxResults <p>每一页返回的数据最大条数，最大1000。缺省值：50。</p>
+     * @param array $TagKeys <p>标签键。返回所有标签键列表对应的标签。最大长度：20</p>
+     * @param string $Category <p>标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。</p>
      */
     function __construct()
     {

@@ -42,10 +42,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置验证人的姓名。
 - 是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示。
 - 最长长度32位。中文请使用UTF-8编码。
- * @method string getRedirectUrl() 获取认证结束后重定向的回调链接地址。
+ * @method string getRedirectUrl() 获取认证结束后重定向的回调链接地址，仅微信H5场景使用。
 - 最长长度1024位。
- * @method void setRedirectUrl(string $RedirectUrl) 设置认证结束后重定向的回调链接地址。
+- 默认值：[腾讯云人脸核身产品介绍页](URL Here)https://cloud.tencent.com/product/faceid?Is=sdk-topnav 
+
+ * @method void setRedirectUrl(string $RedirectUrl) 设置认证结束后重定向的回调链接地址，仅微信H5场景使用。
 - 最长长度1024位。
+- 默认值：[腾讯云人脸核身产品介绍页](URL Here)https://cloud.tencent.com/product/faceid?Is=sdk-topnav 
+
  * @method string getExtra() 获取透传字段，在获取验证结果时返回。
 - 最长长度1024位。
  * @method void setExtra(string $Extra) 设置透传字段，在获取验证结果时返回。
@@ -111,8 +115,10 @@ class DetectAuthRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 认证结束后重定向的回调链接地址。
+     * @var string 认证结束后重定向的回调链接地址，仅微信H5场景使用。
 - 最长长度1024位。
+- 默认值：[腾讯云人脸核身产品介绍页](URL Here)https://cloud.tencent.com/product/faceid?Is=sdk-topnav 
+
      */
     public $RedirectUrl;
 
@@ -173,8 +179,10 @@ class DetectAuthRequest extends AbstractModel
      * @param string $Name 验证人的姓名。
 - 是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示。
 - 最长长度32位。中文请使用UTF-8编码。
-     * @param string $RedirectUrl 认证结束后重定向的回调链接地址。
+     * @param string $RedirectUrl 认证结束后重定向的回调链接地址，仅微信H5场景使用。
 - 最长长度1024位。
+- 默认值：[腾讯云人脸核身产品介绍页](URL Here)https://cloud.tencent.com/product/faceid?Is=sdk-topnav 
+
      * @param string $Extra 透传字段，在获取验证结果时返回。
 - 最长长度1024位。
      * @param string $ImageBase64 用于人脸比对的图像数据，使用base64编码。

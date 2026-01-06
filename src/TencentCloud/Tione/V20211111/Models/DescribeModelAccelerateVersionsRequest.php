@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderField(string $OrderField) 设置排序字段; 枚举值: CreateTime (创建时间) ；默认CreateTime
  * @method string getOrder() 获取排序方向; 枚举值: ASC | DESC；默认DESC
  * @method void setOrder(string $Order) 设置排序方向; 枚举值: ASC | DESC；默认DESC
- * @method integer getOffset() 获取分页查询起始位置，如：Limit为100，第一页Offset为0，第二页Offset为100....即每页左边为闭区间; 默认0
- * @method void setOffset(integer $Offset) 设置分页查询起始位置，如：Limit为100，第一页Offset为0，第二页Offset为100....即每页左边为闭区间; 默认0
+ * @method integer getOffset() 获取分页查询起始位置，如：Limit为100，第一页Offset为0，第二页Offset为100...即每页左边为闭区间; 默认0
+ * @method void setOffset(integer $Offset) 设置分页查询起始位置，如：Limit为100，第一页Offset为0，第二页Offset为100...即每页左边为闭区间; 默认0
  * @method integer getLimit() 获取分页查询每页大小，最大20000; 默认10
  * @method void setLimit(integer $Limit) 设置分页查询每页大小，最大20000; 默认10
  * @method string getTrainingModelId() 获取模型ID
@@ -60,7 +60,7 @@ class DescribeModelAccelerateVersionsRequest extends AbstractModel
     public $Order;
 
     /**
-     * @var integer 分页查询起始位置，如：Limit为100，第一页Offset为0，第二页Offset为100....即每页左边为闭区间; 默认0
+     * @var integer 分页查询起始位置，如：Limit为100，第一页Offset为0，第二页Offset为100...即每页左边为闭区间; 默认0
      */
     public $Offset;
 
@@ -81,7 +81,7 @@ class DescribeModelAccelerateVersionsRequest extends AbstractModel
 每次请求的Filters的上限为10，Filter.Values的上限为100
      * @param string $OrderField 排序字段; 枚举值: CreateTime (创建时间) ；默认CreateTime
      * @param string $Order 排序方向; 枚举值: ASC | DESC；默认DESC
-     * @param integer $Offset 分页查询起始位置，如：Limit为100，第一页Offset为0，第二页Offset为100....即每页左边为闭区间; 默认0
+     * @param integer $Offset 分页查询起始位置，如：Limit为100，第一页Offset为0，第二页Offset为100...即每页左边为闭区间; 默认0
      * @param integer $Limit 分页查询每页大小，最大20000; 默认10
      * @param string $TrainingModelId 模型ID
      */

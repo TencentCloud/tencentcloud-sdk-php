@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtectMode(integer $ProtectMode) 设置主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。
  * @method integer getDeployMode() 获取主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。
  * @method void setDeployMode(integer $DeployMode) 设置主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。
- * @method string getZone() 获取实例可用区信息，格式如 "ap-shanghai-1"。
- * @method void setZone(string $Zone) 设置实例可用区信息，格式如 "ap-shanghai-1"。
+ * @method string getZone() 获取实例可用区信息，格式如 "ap-shanghai-2"。
+ * @method void setZone(string $Zone) 设置实例可用区信息，格式如 "ap-shanghai-2"。
  * @method SlaveConfig getSlaveConfig() 获取备库的配置信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlaveConfig(SlaveConfig $SlaveConfig) 设置备库的配置信息。
@@ -52,7 +52,7 @@ class DescribeDBInstanceConfigResponse extends AbstractModel
     public $DeployMode;
 
     /**
-     * @var string 实例可用区信息，格式如 "ap-shanghai-1"。
+     * @var string 实例可用区信息，格式如 "ap-shanghai-2"。
      */
     public $Zone;
 
@@ -81,7 +81,7 @@ class DescribeDBInstanceConfigResponse extends AbstractModel
     /**
      * @param integer $ProtectMode 主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。
      * @param integer $DeployMode 主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。
-     * @param string $Zone 实例可用区信息，格式如 "ap-shanghai-1"。
+     * @param string $Zone 实例可用区信息，格式如 "ap-shanghai-2"。
      * @param SlaveConfig $SlaveConfig 备库的配置信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupConfig $BackupConfig 强同步实例第二备库的配置信息。

@@ -28,8 +28,36 @@ use TencentCloud\Common\AbstractModel;
 该字段将被废弃，不建议使用。	
  * @method void setFlowType(string $FlowType) 设置合同流程的类别分类（如销售合同/入职合同等）。
 该字段将被废弃，不建议使用。	
- * @method integer getFlowStatus() 获取合同流程当前的签署状态, 会存在下列的状态值 <ul><li> **0** : 未开启流程(合同中不存在填写环节)</li> <li> **1** : 待签署</li> <li> **2** : 部分签署</li> <li> **3** : 已拒签</li> <li> **4** : 已签署</li> <li> **5** : 已过期</li> <li> **6** : 已撤销</li> <li> **7** : 未开启流程(合同中存在填写环节)</li> <li> **8** : 等待填写</li> <li> **9** : 部分填写</li> <li> **10** : 已拒填</li> <li> **16** : 已失效（可能因为参与方修改姓名等原因）</li> <li> **21** : 已解除</li></ul>	
- * @method void setFlowStatus(integer $FlowStatus) 设置合同流程当前的签署状态, 会存在下列的状态值 <ul><li> **0** : 未开启流程(合同中不存在填写环节)</li> <li> **1** : 待签署</li> <li> **2** : 部分签署</li> <li> **3** : 已拒签</li> <li> **4** : 已签署</li> <li> **5** : 已过期</li> <li> **6** : 已撤销</li> <li> **7** : 未开启流程(合同中存在填写环节)</li> <li> **8** : 等待填写</li> <li> **9** : 部分填写</li> <li> **10** : 已拒填</li> <li> **16** : 已失效（可能因为参与方修改姓名等原因）</li> <li> **21** : 已解除</li></ul>	
+ * @method integer getFlowStatus() 获取合同流程当前的签署状态, 会存在下列的状态值 
+<ul>
+<li> **0** : 未开启流程(合同中不存在填写环节)</li> 
+<li> **1** : 待签署</li>
+ <li> **2** : 部分签署</li>
+ <li> **3** : 已拒签</li>
+ <li> **4** : 已签署</li> 
+<li> **5** : 已过期</li>
+ <li> **6** : 已撤销</li> 
+<li> **7** : 未开启流程(合同中存在填写环节)</li>
+ <li> **8** : 等待填写</li>
+ <li> **9** : 部分填写</li>
+ <li> **10** : 已拒填</li> 
+<li> **16** : 已失效（可能因为参与方修改姓名等原因）</li>
+ <li> **21** : 已解除</li></ul>	
+ * @method void setFlowStatus(integer $FlowStatus) 设置合同流程当前的签署状态, 会存在下列的状态值 
+<ul>
+<li> **0** : 未开启流程(合同中不存在填写环节)</li> 
+<li> **1** : 待签署</li>
+ <li> **2** : 部分签署</li>
+ <li> **3** : 已拒签</li>
+ <li> **4** : 已签署</li> 
+<li> **5** : 已过期</li>
+ <li> **6** : 已撤销</li> 
+<li> **7** : 未开启流程(合同中存在填写环节)</li>
+ <li> **8** : 等待填写</li>
+ <li> **9** : 部分填写</li>
+ <li> **10** : 已拒填</li> 
+<li> **16** : 已失效（可能因为参与方修改姓名等原因）</li>
+ <li> **21** : 已解除</li></ul>	
  * @method string getFlowMessage() 获取当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。	
  * @method void setFlowMessage(string $FlowMessage) 设置当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。	
  * @method string getFlowDescription() 获取合同流程描述信息。	
@@ -72,7 +100,21 @@ class FlowDetailInfo extends AbstractModel
     public $FlowType;
 
     /**
-     * @var integer 合同流程当前的签署状态, 会存在下列的状态值 <ul><li> **0** : 未开启流程(合同中不存在填写环节)</li> <li> **1** : 待签署</li> <li> **2** : 部分签署</li> <li> **3** : 已拒签</li> <li> **4** : 已签署</li> <li> **5** : 已过期</li> <li> **6** : 已撤销</li> <li> **7** : 未开启流程(合同中存在填写环节)</li> <li> **8** : 等待填写</li> <li> **9** : 部分填写</li> <li> **10** : 已拒填</li> <li> **16** : 已失效（可能因为参与方修改姓名等原因）</li> <li> **21** : 已解除</li></ul>	
+     * @var integer 合同流程当前的签署状态, 会存在下列的状态值 
+<ul>
+<li> **0** : 未开启流程(合同中不存在填写环节)</li> 
+<li> **1** : 待签署</li>
+ <li> **2** : 部分签署</li>
+ <li> **3** : 已拒签</li>
+ <li> **4** : 已签署</li> 
+<li> **5** : 已过期</li>
+ <li> **6** : 已撤销</li> 
+<li> **7** : 未开启流程(合同中存在填写环节)</li>
+ <li> **8** : 等待填写</li>
+ <li> **9** : 部分填写</li>
+ <li> **10** : 已拒填</li> 
+<li> **16** : 已失效（可能因为参与方修改姓名等原因）</li>
+ <li> **21** : 已解除</li></ul>	
      */
     public $FlowStatus;
 
@@ -124,7 +166,21 @@ class FlowDetailInfo extends AbstractModel
      * @param string $FlowName 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
      * @param string $FlowType 合同流程的类别分类（如销售合同/入职合同等）。
 该字段将被废弃，不建议使用。	
-     * @param integer $FlowStatus 合同流程当前的签署状态, 会存在下列的状态值 <ul><li> **0** : 未开启流程(合同中不存在填写环节)</li> <li> **1** : 待签署</li> <li> **2** : 部分签署</li> <li> **3** : 已拒签</li> <li> **4** : 已签署</li> <li> **5** : 已过期</li> <li> **6** : 已撤销</li> <li> **7** : 未开启流程(合同中存在填写环节)</li> <li> **8** : 等待填写</li> <li> **9** : 部分填写</li> <li> **10** : 已拒填</li> <li> **16** : 已失效（可能因为参与方修改姓名等原因）</li> <li> **21** : 已解除</li></ul>	
+     * @param integer $FlowStatus 合同流程当前的签署状态, 会存在下列的状态值 
+<ul>
+<li> **0** : 未开启流程(合同中不存在填写环节)</li> 
+<li> **1** : 待签署</li>
+ <li> **2** : 部分签署</li>
+ <li> **3** : 已拒签</li>
+ <li> **4** : 已签署</li> 
+<li> **5** : 已过期</li>
+ <li> **6** : 已撤销</li> 
+<li> **7** : 未开启流程(合同中存在填写环节)</li>
+ <li> **8** : 等待填写</li>
+ <li> **9** : 部分填写</li>
+ <li> **10** : 已拒填</li> 
+<li> **16** : 已失效（可能因为参与方修改姓名等原因）</li>
+ <li> **21** : 已解除</li></ul>	
      * @param string $FlowMessage 当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。	
      * @param string $FlowDescription 合同流程描述信息。	
      * @param integer $CreatedOn 合同流程的创建时间戳，格式为Unix标准时间戳（秒）。	

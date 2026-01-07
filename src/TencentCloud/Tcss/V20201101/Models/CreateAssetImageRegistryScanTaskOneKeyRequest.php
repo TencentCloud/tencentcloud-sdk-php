@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScanType(array $ScanType) 设置扫描类型数组
  * @method array getId() 获取扫描的镜像列表Id
  * @method void setId(array $Id) 设置扫描的镜像列表Id
+ * @method array getExcludeIDs() 获取剔除扫描的镜像id列表
+ * @method void setExcludeIDs(array $ExcludeIDs) 设置剔除扫描的镜像id列表
  * @method boolean getIsLatest() 获取是否最新镜像
  * @method void setIsLatest(boolean $IsLatest) 设置是否最新镜像
  * @method integer getScanScope() 获取扫描范围 0全部镜像，1自选镜像，2推荐扫描镜像
@@ -65,6 +67,11 @@ class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel
     public $Id;
 
     /**
+     * @var array 剔除扫描的镜像id列表
+     */
+    public $ExcludeIDs;
+
+    /**
      * @var boolean 是否最新镜像
      */
     public $IsLatest;
@@ -99,6 +106,7 @@ class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel
      * @param array $Images 扫描的镜像列表
      * @param array $ScanType 扫描类型数组
      * @param array $Id 扫描的镜像列表Id
+     * @param array $ExcludeIDs 剔除扫描的镜像id列表
      * @param boolean $IsLatest 是否最新镜像
      * @param integer $ScanScope 扫描范围 0全部镜像，1自选镜像，2推荐扫描镜像
      * @param array $RegistryType 仓库类型
@@ -138,6 +146,10 @@ class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("ExcludeIDs",$param) and $param["ExcludeIDs"] !== null) {
+            $this->ExcludeIDs = $param["ExcludeIDs"];
         }
 
         if (array_key_exists("IsLatest",$param) and $param["IsLatest"] !== null) {

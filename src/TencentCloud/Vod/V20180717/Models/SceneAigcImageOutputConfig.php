@@ -32,8 +32,12 @@ use TencentCloud\Common\AbstractModel;
 <li>默认值：0，表示其他分类。</li>
  * @method string getExpireTime() 获取输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setExpireTime(string $ExpireTime) 设置输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method string getAspectRatio() 获取指定所生成图片的宽高比。输入格式为 W:H。仅生商品图场景有效。
- * @method void setAspectRatio(string $AspectRatio) 设置指定所生成图片的宽高比。输入格式为 W:H。仅生商品图场景有效。
+ * @method string getAspectRatio() 获取指定所生成图片的宽高比。输入格式为 W:H。
+
+仅生商品图场景有效，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
+ * @method void setAspectRatio(string $AspectRatio) 设置指定所生成图片的宽高比。输入格式为 W:H。
+
+仅生商品图场景有效，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
  */
 class SceneAigcImageOutputConfig extends AbstractModel
 {
@@ -60,7 +64,9 @@ class SceneAigcImageOutputConfig extends AbstractModel
     public $ExpireTime;
 
     /**
-     * @var string 指定所生成图片的宽高比。输入格式为 W:H。仅生商品图场景有效。
+     * @var string 指定所生成图片的宽高比。输入格式为 W:H。
+
+仅生商品图场景有效，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
      */
     public $AspectRatio;
 
@@ -71,7 +77,9 @@ class SceneAigcImageOutputConfig extends AbstractModel
      * @param integer $ClassId 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
 <li>默认值：0，表示其他分类。</li>
      * @param string $ExpireTime 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param string $AspectRatio 指定所生成图片的宽高比。输入格式为 W:H。仅生商品图场景有效。
+     * @param string $AspectRatio 指定所生成图片的宽高比。输入格式为 W:H。
+
+仅生商品图场景有效，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
      */
     function __construct()
     {

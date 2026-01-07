@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getReplicationMode() 获取从库复制方式，可能的返回值：aysnc-异步，semisync-半同步
  * @method void setReplicationMode(string $ReplicationMode) 设置从库复制方式，可能的返回值：aysnc-异步，semisync-半同步
- * @method string getZone() 获取从库可用区的正式名称，如ap-shanghai-1
- * @method void setZone(string $Zone) 设置从库可用区的正式名称，如ap-shanghai-1
+ * @method string getZone() 获取从库可用区的正式名称，如 ap-shanghai-2
+ * @method void setZone(string $Zone) 设置从库可用区的正式名称，如 ap-shanghai-2
  */
 class SlaveConfig extends AbstractModel
 {
@@ -33,13 +33,13 @@ class SlaveConfig extends AbstractModel
     public $ReplicationMode;
 
     /**
-     * @var string 从库可用区的正式名称，如ap-shanghai-1
+     * @var string 从库可用区的正式名称，如 ap-shanghai-2
      */
     public $Zone;
 
     /**
      * @param string $ReplicationMode 从库复制方式，可能的返回值：aysnc-异步，semisync-半同步
-     * @param string $Zone 从库可用区的正式名称，如ap-shanghai-1
+     * @param string $Zone 从库可用区的正式名称，如 ap-shanghai-2
      */
     function __construct()
     {

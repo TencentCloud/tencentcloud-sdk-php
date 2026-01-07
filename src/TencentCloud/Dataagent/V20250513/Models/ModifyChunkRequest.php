@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChunkId(string $ChunkId) 设置切片ID
  * @method string getContent() 获取编辑后的文本
  * @method void setContent(string $Content) 设置编辑后的文本
+ * @method string getKnowledgeBaseId() 获取知识库id
+ * @method void setKnowledgeBaseId(string $KnowledgeBaseId) 设置知识库id
  */
 class ModifyChunkRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyChunkRequest extends AbstractModel
     public $Content;
 
     /**
+     * @var string 知识库id
+     */
+    public $KnowledgeBaseId;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $FileId 文件ID
      * @param string $ChunkId 切片ID
      * @param string $Content 编辑后的文本
+     * @param string $KnowledgeBaseId 知识库id
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ModifyChunkRequest extends AbstractModel
 
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = $param["Content"];
+        }
+
+        if (array_key_exists("KnowledgeBaseId",$param) and $param["KnowledgeBaseId"] !== null) {
+            $this->KnowledgeBaseId = $param["KnowledgeBaseId"];
         }
     }
 }

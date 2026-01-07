@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContent(string $Content) 设置chunk内容
  * @method string getAfterChunkId() 获取新 Chunk 插入到目标 Chunk ​之后的位置。插入位置的上一个 chunkId
  * @method void setAfterChunkId(string $AfterChunkId) 设置新 Chunk 插入到目标 Chunk ​之后的位置。插入位置的上一个 chunkId
+ * @method string getKnowledgeBaseId() 获取知识库id
+ * @method void setKnowledgeBaseId(string $KnowledgeBaseId) 设置知识库id
  */
 class AddChunkRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class AddChunkRequest extends AbstractModel
     public $AfterChunkId;
 
     /**
+     * @var string 知识库id
+     */
+    public $KnowledgeBaseId;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $FileId 文件ID
      * @param string $BeforeChunkId 新增chunk的后面一个ChunkID。如果是空就是插到队尾。插入位置的下一个 chunkId。如果插到最前面，传入原切片的第一个。
      * @param integer $InsertPos 显式指定的位置,实际的位置。从 0 开始计算。0 代表插到最前面，chunk total 代表插到最后面。
      * @param string $Content chunk内容
      * @param string $AfterChunkId 新 Chunk 插入到目标 Chunk ​之后的位置。插入位置的上一个 chunkId
+     * @param string $KnowledgeBaseId 知识库id
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class AddChunkRequest extends AbstractModel
 
         if (array_key_exists("AfterChunkId",$param) and $param["AfterChunkId"] !== null) {
             $this->AfterChunkId = $param["AfterChunkId"];
+        }
+
+        if (array_key_exists("KnowledgeBaseId",$param) and $param["KnowledgeBaseId"] !== null) {
+            $this->KnowledgeBaseId = $param["KnowledgeBaseId"];
         }
     }
 }

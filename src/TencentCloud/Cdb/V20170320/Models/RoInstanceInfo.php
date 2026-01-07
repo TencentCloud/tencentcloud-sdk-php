@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWeight(integer $Weight) 设置RO实例在RO组内的权重
  * @method string getRegion() 获取RO实例所在区域名称，如ap-shanghai
  * @method void setRegion(string $Region) 设置RO实例所在区域名称，如ap-shanghai
- * @method string getZone() 获取RO可用区的正式名称，如ap-shanghai-1
- * @method void setZone(string $Zone) 设置RO可用区的正式名称，如ap-shanghai-1
+ * @method string getZone() 获取RO可用区的正式名称，如 ap-shanghai-2
+ * @method void setZone(string $Zone) 设置RO可用区的正式名称，如 ap-shanghai-2
  * @method string getInstanceId() 获取RO实例ID，格式如：cdbro-c1nl9rpv
  * @method void setInstanceId(string $InstanceId) 设置RO实例ID，格式如：cdbro-c1nl9rpv
  * @method integer getStatus() 获取RO实例状态，可能返回值：0-创建中，1-运行中，3-异地RO（仅在使用DescribeDBInstances查询主实例信息时，返回值中异地RO的状态恒等于3，其他场景下无此值），4-删除中
@@ -97,7 +97,7 @@ class RoInstanceInfo extends AbstractModel
     public $Region;
 
     /**
-     * @var string RO可用区的正式名称，如ap-shanghai-1
+     * @var string RO可用区的正式名称，如 ap-shanghai-2
      */
     public $Zone;
 
@@ -197,7 +197,7 @@ class RoInstanceInfo extends AbstractModel
      * @param string $OfflineTime RO实例在RO组内上一次下线的时间
      * @param integer $Weight RO实例在RO组内的权重
      * @param string $Region RO实例所在区域名称，如ap-shanghai
-     * @param string $Zone RO可用区的正式名称，如ap-shanghai-1
+     * @param string $Zone RO可用区的正式名称，如 ap-shanghai-2
      * @param string $InstanceId RO实例ID，格式如：cdbro-c1nl9rpv
      * @param integer $Status RO实例状态，可能返回值：0-创建中，1-运行中，3-异地RO（仅在使用DescribeDBInstances查询主实例信息时，返回值中异地RO的状态恒等于3，其他场景下无此值），4-删除中
      * @param integer $InstanceType 实例类型，可能返回值：1-主实例，2-灾备实例，3-只读实例

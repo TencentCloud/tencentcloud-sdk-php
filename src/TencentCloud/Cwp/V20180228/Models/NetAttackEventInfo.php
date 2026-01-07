@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostOpProcessTree(string $HostOpProcessTree) 设置进程树,需要用base64 解码
  * @method IPAnalyse getIPAnalyse() 获取IP分析
  * @method void setIPAnalyse(IPAnalyse $IPAnalyse) 设置IP分析
+ * @method string getNetResponsePayload() 获取响应数据包 base64编码
+ * @method void setNetResponsePayload(string $NetResponsePayload) 设置响应数据包 base64编码
  */
 class NetAttackEventInfo extends AbstractModel
 {
@@ -192,6 +194,11 @@ class NetAttackEventInfo extends AbstractModel
     public $IPAnalyse;
 
     /**
+     * @var string 响应数据包 base64编码
+     */
+    public $NetResponsePayload;
+
+    /**
      * @param integer $Status 处理状态，0 待处理 1 已处理 2 已加白  3 已忽略 4 已删除 5: 已开启防御
      * @param string $SrcIP 攻击源ip
      * @param string $Location 攻击源地
@@ -216,6 +223,7 @@ class NetAttackEventInfo extends AbstractModel
      * @param integer $HostOpType 0:无失陷行为 1: rce(命令执行) 2: dnslog 3: writefile
      * @param string $HostOpProcessTree 进程树,需要用base64 解码
      * @param IPAnalyse $IPAnalyse IP分析
+     * @param string $NetResponsePayload 响应数据包 base64编码
      */
     function __construct()
     {
@@ -326,6 +334,10 @@ class NetAttackEventInfo extends AbstractModel
         if (array_key_exists("IPAnalyse",$param) and $param["IPAnalyse"] !== null) {
             $this->IPAnalyse = new IPAnalyse();
             $this->IPAnalyse->deserialize($param["IPAnalyse"]);
+        }
+
+        if (array_key_exists("NetResponsePayload",$param) and $param["NetResponsePayload"] !== null) {
+            $this->NetResponsePayload = $param["NetResponsePayload"];
         }
     }
 }

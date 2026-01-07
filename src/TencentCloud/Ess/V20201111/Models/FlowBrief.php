@@ -42,6 +42,7 @@ use TencentCloud\Common\AbstractModel;
 <li> **8** : 等待填写</li>
 <li> **9** : 部分填写</li>
 <li> **10** : 已拒填</li>
+<li> **16** : 已失效（签署期间有签署人改名等原因导致）</li>
 <li> **21** : 已解除</li></ul>
  * @method void setFlowStatus(integer $FlowStatus) 设置合同流程当前的签署状态, 会存在下列的状态值
 <ul><li> **0** : 未开启流程(合同中不存在填写环节)</li>
@@ -55,6 +56,7 @@ use TencentCloud\Common\AbstractModel;
 <li> **8** : 等待填写</li>
 <li> **9** : 部分填写</li>
 <li> **10** : 已拒填</li>
+<li> **16** : 已失效（签署期间有签署人改名等原因导致）</li>
 <li> **21** : 已解除</li></ul>
  * @method integer getCreatedOn() 获取合同流程创建时间，格式为Unix标准时间戳（秒）。
  * @method void setCreatedOn(integer $CreatedOn) 设置合同流程创建时间，格式为Unix标准时间戳（秒）。
@@ -111,6 +113,7 @@ class FlowBrief extends AbstractModel
 <li> **8** : 等待填写</li>
 <li> **9** : 部分填写</li>
 <li> **10** : 已拒填</li>
+<li> **16** : 已失效（签署期间有签署人改名等原因导致）</li>
 <li> **21** : 已解除</li></ul>
      */
     public $FlowStatus;
@@ -166,6 +169,7 @@ class FlowBrief extends AbstractModel
 <li> **8** : 等待填写</li>
 <li> **9** : 部分填写</li>
 <li> **10** : 已拒填</li>
+<li> **16** : 已失效（签署期间有签署人改名等原因导致）</li>
 <li> **21** : 已解除</li></ul>
      * @param integer $CreatedOn 合同流程创建时间，格式为Unix标准时间戳（秒）。
      * @param string $FlowMessage 当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。

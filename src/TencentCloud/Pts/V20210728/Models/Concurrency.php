@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGracefulStopSeconds(integer $GracefulStopSeconds) 设置优雅终止任务的等待时间
  * @method integer getResources() 获取资源数
  * @method void setResources(integer $Resources) 设置资源数
+ * @method string getMode() 获取压力模型
+ * @method void setMode(string $Mode) 设置压力模型
  */
 class Concurrency extends AbstractModel
 {
@@ -62,12 +64,18 @@ class Concurrency extends AbstractModel
     public $Resources;
 
     /**
+     * @var string 压力模型
+     */
+    public $Mode;
+
+    /**
      * @param array $Stages 多阶段配置数组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IterationCount 运行次数
      * @param integer $MaxRequestsPerSecond 最大RPS
      * @param integer $GracefulStopSeconds 优雅终止任务的等待时间
      * @param integer $Resources 资源数
+     * @param string $Mode 压力模型
      */
     function __construct()
     {
@@ -105,6 +113,10 @@ class Concurrency extends AbstractModel
 
         if (array_key_exists("Resources",$param) and $param["Resources"] !== null) {
             $this->Resources = $param["Resources"];
+        }
+
+        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
+            $this->Mode = $param["Mode"];
         }
     }
 }

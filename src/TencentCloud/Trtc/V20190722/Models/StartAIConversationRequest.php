@@ -34,8 +34,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSTTConfig(STTConfig $STTConfig) 设置语音识别配置。
  * @method string getLLMConfig() 获取必填参数，LLM配置。需符合openai规范，为JSON字符串，示例如下：<pre> { <br> &emsp;  "LLMType": "大模型类型",  // String 必填，如："openai" <br> &emsp;  "Model": "您的模型名称", // String 必填，指定使用的模型<br>    "APIKey": "您的LLM API密钥", // String 必填 <br> &emsp;  "APIUrl": "https://api.xxx.com/chat/completions", // String 必填，LLM API访问的URL<br> &emsp;  "History": 10, // Integer 选填，设置 LLM 的上下文轮次，默认值为0，最大值50<br> &emsp;  "HistoryMode": 1, // Integer 选填，1表示LLM上下文中的内容会和播放音频做同步，没有播放的音频对应的文本不会出现在上下文中。0表示不会做同步，默认值为0<br> &emsp;  "Streaming": true // Boolean 非必填，指定是否使用流式传输<br> &emsp;} </pre>
  * @method void setLLMConfig(string $LLMConfig) 设置必填参数，LLM配置。需符合openai规范，为JSON字符串，示例如下：<pre> { <br> &emsp;  "LLMType": "大模型类型",  // String 必填，如："openai" <br> &emsp;  "Model": "您的模型名称", // String 必填，指定使用的模型<br>    "APIKey": "您的LLM API密钥", // String 必填 <br> &emsp;  "APIUrl": "https://api.xxx.com/chat/completions", // String 必填，LLM API访问的URL<br> &emsp;  "History": 10, // Integer 选填，设置 LLM 的上下文轮次，默认值为0，最大值50<br> &emsp;  "HistoryMode": 1, // Integer 选填，1表示LLM上下文中的内容会和播放音频做同步，没有播放的音频对应的文本不会出现在上下文中。0表示不会做同步，默认值为0<br> &emsp;  "Streaming": true // Boolean 非必填，指定是否使用流式传输<br> &emsp;} </pre>
- * @method string getTTSConfig() 获取必填参数，TTS配置，详见 [TTS配置说明](https://cloud.tencent.com/document/product/647/115414 )， 为JSON字符串: TRTC TTS的配置如下：```{  "TTSType": "flow",  // 【必填】固定为此值  "VoiceId": "v-female-R2s4N9qJ", // 【必填】精品音色 ID /克隆音色 ID, 可选择不同音色, ID 库参考下方音色列表  "Model": "flow_01_turbo", // 【必填】当前默认的 TTS 模型版本（对应 Flash 版本）  "Speed": 1.0,    //【可选】调节语速 范围 [0.5-2.0],默认 1.0; 取值越大，语速越快  "Volume": 1.0,   // 【可选】调节音量 [0, 10] 默认值 1.0; 取值越大，音量越高  "Pitch": 0,   // 【可选】调节语调 [-12,12],默认值为 0,其中 0 为原音色输出。  "Language": "zh" //【可选】建议填写，目前支持填写中文：zh 英文：en 粤语方言：yue; 参数参考：(ISO 639-1) }```
- * @method void setTTSConfig(string $TTSConfig) 设置必填参数，TTS配置，详见 [TTS配置说明](https://cloud.tencent.com/document/product/647/115414 )， 为JSON字符串: TRTC TTS的配置如下：```{  "TTSType": "flow",  // 【必填】固定为此值  "VoiceId": "v-female-R2s4N9qJ", // 【必填】精品音色 ID /克隆音色 ID, 可选择不同音色, ID 库参考下方音色列表  "Model": "flow_01_turbo", // 【必填】当前默认的 TTS 模型版本（对应 Flash 版本）  "Speed": 1.0,    //【可选】调节语速 范围 [0.5-2.0],默认 1.0; 取值越大，语速越快  "Volume": 1.0,   // 【可选】调节音量 [0, 10] 默认值 1.0; 取值越大，音量越高  "Pitch": 0,   // 【可选】调节语调 [-12,12],默认值为 0,其中 0 为原音色输出。  "Language": "zh" //【可选】建议填写，目前支持填写中文：zh 英文：en 粤语方言：yue; 参数参考：(ISO 639-1) }```
+ * @method string getTTSConfig() 获取必填参数，TTS配置，详见 [TTS配置说明](https://cloud.tencent.com/document/product/647/115414 )， 为JSON字符串: TRTC TTS的配置如下：  
+
+```
+{  
+   "TTSType": "flow",  // 【必填】固定为此值 
+   "VoiceId": "v-female-R2s4N9qJ", // 【必填】精品音色 ID /克隆音色 ID, 可选择  不同音色, ID 库参考下方音色列表  
+   "Model": "flow_01_turbo", // 【必填】当前默认的 TTS 模型版本（对应 Flash 版本） 
+   "Speed": 1.0,    //【可选】调节语速 范围 [0.5-2.0],默认 1.0; 取值越大，语速越快
+   "Volume": 1.0,   // 【可选】调节音量 [0, 10] 默认值 1.0; 取值越大，音量越高  
+   "Pitch": 0,   // 【可选】调节语调 [-12,12],默认值为 0,其中 0 为原音色输出。
+   "Language": "zh" //【可选】建议填写，目前支持填写中文：zh 英文：en 粤语方言：yue; 参数参考：(ISO 639-1)
+}
+```
+ * @method void setTTSConfig(string $TTSConfig) 设置必填参数，TTS配置，详见 [TTS配置说明](https://cloud.tencent.com/document/product/647/115414 )， 为JSON字符串: TRTC TTS的配置如下：  
+
+```
+{  
+   "TTSType": "flow",  // 【必填】固定为此值 
+   "VoiceId": "v-female-R2s4N9qJ", // 【必填】精品音色 ID /克隆音色 ID, 可选择  不同音色, ID 库参考下方音色列表  
+   "Model": "flow_01_turbo", // 【必填】当前默认的 TTS 模型版本（对应 Flash 版本） 
+   "Speed": 1.0,    //【可选】调节语速 范围 [0.5-2.0],默认 1.0; 取值越大，语速越快
+   "Volume": 1.0,   // 【可选】调节音量 [0, 10] 默认值 1.0; 取值越大，音量越高  
+   "Pitch": 0,   // 【可选】调节语调 [-12,12],默认值为 0,其中 0 为原音色输出。
+   "Language": "zh" //【可选】建议填写，目前支持填写中文：zh 英文：en 粤语方言：yue; 参数参考：(ISO 639-1)
+}
+```
  * @method string getAvatarConfig() 获取数字人配置，为JSON字符串。**数字人配置需要提工单加白后才能使用**
  * @method void setAvatarConfig(string $AvatarConfig) 设置数字人配置，为JSON字符串。**数字人配置需要提工单加白后才能使用**
  * @method string getExperimentalParams() 获取实验性参数,联系后台使用
@@ -79,7 +103,19 @@ class StartAIConversationRequest extends AbstractModel
     public $LLMConfig;
 
     /**
-     * @var string 必填参数，TTS配置，详见 [TTS配置说明](https://cloud.tencent.com/document/product/647/115414 )， 为JSON字符串: TRTC TTS的配置如下：```{  "TTSType": "flow",  // 【必填】固定为此值  "VoiceId": "v-female-R2s4N9qJ", // 【必填】精品音色 ID /克隆音色 ID, 可选择不同音色, ID 库参考下方音色列表  "Model": "flow_01_turbo", // 【必填】当前默认的 TTS 模型版本（对应 Flash 版本）  "Speed": 1.0,    //【可选】调节语速 范围 [0.5-2.0],默认 1.0; 取值越大，语速越快  "Volume": 1.0,   // 【可选】调节音量 [0, 10] 默认值 1.0; 取值越大，音量越高  "Pitch": 0,   // 【可选】调节语调 [-12,12],默认值为 0,其中 0 为原音色输出。  "Language": "zh" //【可选】建议填写，目前支持填写中文：zh 英文：en 粤语方言：yue; 参数参考：(ISO 639-1) }```
+     * @var string 必填参数，TTS配置，详见 [TTS配置说明](https://cloud.tencent.com/document/product/647/115414 )， 为JSON字符串: TRTC TTS的配置如下：  
+
+```
+{  
+   "TTSType": "flow",  // 【必填】固定为此值 
+   "VoiceId": "v-female-R2s4N9qJ", // 【必填】精品音色 ID /克隆音色 ID, 可选择  不同音色, ID 库参考下方音色列表  
+   "Model": "flow_01_turbo", // 【必填】当前默认的 TTS 模型版本（对应 Flash 版本） 
+   "Speed": 1.0,    //【可选】调节语速 范围 [0.5-2.0],默认 1.0; 取值越大，语速越快
+   "Volume": 1.0,   // 【可选】调节音量 [0, 10] 默认值 1.0; 取值越大，音量越高  
+   "Pitch": 0,   // 【可选】调节语调 [-12,12],默认值为 0,其中 0 为原音色输出。
+   "Language": "zh" //【可选】建议填写，目前支持填写中文：zh 英文：en 粤语方言：yue; 参数参考：(ISO 639-1)
+}
+```
      */
     public $TTSConfig;
 
@@ -101,7 +137,19 @@ class StartAIConversationRequest extends AbstractModel
      * @param integer $RoomIdType TRTC房间号的类型，0代表数字房间号，1代表字符串房间号。不填默认是数字房间号。
      * @param STTConfig $STTConfig 语音识别配置。
      * @param string $LLMConfig 必填参数，LLM配置。需符合openai规范，为JSON字符串，示例如下：<pre> { <br> &emsp;  "LLMType": "大模型类型",  // String 必填，如："openai" <br> &emsp;  "Model": "您的模型名称", // String 必填，指定使用的模型<br>    "APIKey": "您的LLM API密钥", // String 必填 <br> &emsp;  "APIUrl": "https://api.xxx.com/chat/completions", // String 必填，LLM API访问的URL<br> &emsp;  "History": 10, // Integer 选填，设置 LLM 的上下文轮次，默认值为0，最大值50<br> &emsp;  "HistoryMode": 1, // Integer 选填，1表示LLM上下文中的内容会和播放音频做同步，没有播放的音频对应的文本不会出现在上下文中。0表示不会做同步，默认值为0<br> &emsp;  "Streaming": true // Boolean 非必填，指定是否使用流式传输<br> &emsp;} </pre>
-     * @param string $TTSConfig 必填参数，TTS配置，详见 [TTS配置说明](https://cloud.tencent.com/document/product/647/115414 )， 为JSON字符串: TRTC TTS的配置如下：```{  "TTSType": "flow",  // 【必填】固定为此值  "VoiceId": "v-female-R2s4N9qJ", // 【必填】精品音色 ID /克隆音色 ID, 可选择不同音色, ID 库参考下方音色列表  "Model": "flow_01_turbo", // 【必填】当前默认的 TTS 模型版本（对应 Flash 版本）  "Speed": 1.0,    //【可选】调节语速 范围 [0.5-2.0],默认 1.0; 取值越大，语速越快  "Volume": 1.0,   // 【可选】调节音量 [0, 10] 默认值 1.0; 取值越大，音量越高  "Pitch": 0,   // 【可选】调节语调 [-12,12],默认值为 0,其中 0 为原音色输出。  "Language": "zh" //【可选】建议填写，目前支持填写中文：zh 英文：en 粤语方言：yue; 参数参考：(ISO 639-1) }```
+     * @param string $TTSConfig 必填参数，TTS配置，详见 [TTS配置说明](https://cloud.tencent.com/document/product/647/115414 )， 为JSON字符串: TRTC TTS的配置如下：  
+
+```
+{  
+   "TTSType": "flow",  // 【必填】固定为此值 
+   "VoiceId": "v-female-R2s4N9qJ", // 【必填】精品音色 ID /克隆音色 ID, 可选择  不同音色, ID 库参考下方音色列表  
+   "Model": "flow_01_turbo", // 【必填】当前默认的 TTS 模型版本（对应 Flash 版本） 
+   "Speed": 1.0,    //【可选】调节语速 范围 [0.5-2.0],默认 1.0; 取值越大，语速越快
+   "Volume": 1.0,   // 【可选】调节音量 [0, 10] 默认值 1.0; 取值越大，音量越高  
+   "Pitch": 0,   // 【可选】调节语调 [-12,12],默认值为 0,其中 0 为原音色输出。
+   "Language": "zh" //【可选】建议填写，目前支持填写中文：zh 英文：en 粤语方言：yue; 参数参考：(ISO 639-1)
+}
+```
      * @param string $AvatarConfig 数字人配置，为JSON字符串。**数字人配置需要提工单加白后才能使用**
      * @param string $ExperimentalParams 实验性参数,联系后台使用
      */

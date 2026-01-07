@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPage(integer $Page) 设置表示第一页
  * @method integer getPageSize() 获取默认一页展示 10 条
  * @method void setPageSize(integer $PageSize) 设置默认一页展示 10 条
+ * @method string getKnowledgeBaseId() 获取知识库id
+ * @method void setKnowledgeBaseId(string $KnowledgeBaseId) 设置知识库id
  */
 class QueryChunkListRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class QueryChunkListRequest extends AbstractModel
     public $PageSize;
 
     /**
+     * @var string 知识库id
+     */
+    public $KnowledgeBaseId;
+
+    /**
      * @param integer $Page 表示第一页
      * @param integer $PageSize 默认一页展示 10 条
+     * @param string $KnowledgeBaseId 知识库id
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class QueryChunkListRequest extends AbstractModel
 
         if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
             $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("KnowledgeBaseId",$param) and $param["KnowledgeBaseId"] !== null) {
+            $this->KnowledgeBaseId = $param["KnowledgeBaseId"];
         }
     }
 }

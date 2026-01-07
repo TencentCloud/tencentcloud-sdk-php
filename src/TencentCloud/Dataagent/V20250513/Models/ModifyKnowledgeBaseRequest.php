@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKnowledgeBaseName(string $KnowledgeBaseName) 设置知识库名称，create和update时必填。只允许字母、数字、汉字、下划线
  * @method string getKnowledgeBaseDesc() 获取知识库描述，create和update时必填
  * @method void setKnowledgeBaseDesc(string $KnowledgeBaseDesc) 设置知识库描述，create和update时必填
+ * @method integer getUseScope() 获取1仅自己使用，2指定用户，0全员
+ * @method void setUseScope(integer $UseScope) 设置1仅自己使用，2指定用户，0全员
+ * @method array getAuthorityUins() 获取可使用用户列表
+ * @method void setAuthorityUins(array $AuthorityUins) 设置可使用用户列表
  */
 class ModifyKnowledgeBaseRequest extends AbstractModel
 {
@@ -59,11 +63,23 @@ class ModifyKnowledgeBaseRequest extends AbstractModel
     public $KnowledgeBaseDesc;
 
     /**
+     * @var integer 1仅自己使用，2指定用户，0全员
+     */
+    public $UseScope;
+
+    /**
+     * @var array 可使用用户列表
+     */
+    public $AuthorityUins;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $OperateType 操作类型：Create，Update，Delete
      * @param string $KnowledgeBaseId 知识库id，update和delete时必填
      * @param string $KnowledgeBaseName 知识库名称，create和update时必填。只允许字母、数字、汉字、下划线
      * @param string $KnowledgeBaseDesc 知识库描述，create和update时必填
+     * @param integer $UseScope 1仅自己使用，2指定用户，0全员
+     * @param array $AuthorityUins 可使用用户列表
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class ModifyKnowledgeBaseRequest extends AbstractModel
 
         if (array_key_exists("KnowledgeBaseDesc",$param) and $param["KnowledgeBaseDesc"] !== null) {
             $this->KnowledgeBaseDesc = $param["KnowledgeBaseDesc"];
+        }
+
+        if (array_key_exists("UseScope",$param) and $param["UseScope"] !== null) {
+            $this->UseScope = $param["UseScope"];
+        }
+
+        if (array_key_exists("AuthorityUins",$param) and $param["AuthorityUins"] !== null) {
+            $this->AuthorityUins = $param["AuthorityUins"];
         }
     }
 }

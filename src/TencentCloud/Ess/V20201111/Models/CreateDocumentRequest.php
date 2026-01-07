@@ -54,16 +54,8 @@ use TencentCloud\Common\AbstractModel;
 ![image](https://qcloudimg.tencent-cloud.cn/raw/a54a76a58c454593d06d8e9883ecc9b3.png)
  * @method boolean getNeedPreview() 获取是否为预览模式，取值如下：<ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li> <li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。 <font color="red">注意： 1.以预览模式创建的合同仅供查看，因此参与方无法进行签署操作;；2.以预览模式调用该接口返回的FlowId为临时Flowld，无法用于发起和拉取信息。</font> </li></ul>注: `当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容，动态表格合成完后会触发文档合成完成的回调通知`
  * @method void setNeedPreview(boolean $NeedPreview) 设置是否为预览模式，取值如下：<ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li> <li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。 <font color="red">注意： 1.以预览模式创建的合同仅供查看，因此参与方无法进行签署操作;；2.以预览模式调用该接口返回的FlowId为临时Flowld，无法用于发起和拉取信息。</font> </li></ul>注: `当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容，动态表格合成完后会触发文档合成完成的回调通知`
- * @method integer getPreviewType() 获取预览模式下产生的预览链接类型 
-<ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
-<li> **1** :H5链接 ,点开后在浏览器中展示合同的样子。</li></ul>
-注: `1.此参数在NeedPreview 为true时有效`
-`2.动态表格控件不支持H5链接方式预览`
- * @method void setPreviewType(integer $PreviewType) 设置预览模式下产生的预览链接类型 
-<ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
-<li> **1** :H5链接 ,点开后在浏览器中展示合同的样子。</li></ul>
-注: `1.此参数在NeedPreview 为true时有效`
-`2.动态表格控件不支持H5链接方式预览`
+ * @method integer getPreviewType() 获取预览模式下产生的预览链接类型 <ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li><li> **1** :H5链接 ,点开后在浏览器中展示合同的样子。</li></ul>注: `1.此参数在NeedPreview 为true时有效`
+ * @method void setPreviewType(integer $PreviewType) 设置预览模式下产生的预览链接类型 <ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li><li> **1** :H5链接 ,点开后在浏览器中展示合同的样子。</li></ul>注: `1.此参数在NeedPreview 为true时有效`
  * @method Agent getAgent() 获取代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
@@ -115,11 +107,7 @@ class CreateDocumentRequest extends AbstractModel
     public $NeedPreview;
 
     /**
-     * @var integer 预览模式下产生的预览链接类型 
-<ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
-<li> **1** :H5链接 ,点开后在浏览器中展示合同的样子。</li></ul>
-注: `1.此参数在NeedPreview 为true时有效`
-`2.动态表格控件不支持H5链接方式预览`
+     * @var integer 预览模式下产生的预览链接类型 <ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li><li> **1** :H5链接 ,点开后在浏览器中展示合同的样子。</li></ul>注: `1.此参数在NeedPreview 为true时有效`
      */
     public $PreviewType;
 
@@ -152,11 +140,7 @@ class CreateDocumentRequest extends AbstractModel
 注：只有在控制台编辑模板时，<font color="red">归属给发起方</font>的填写控件（如下图）才能在创建文档的时候进行内容填充。
 ![image](https://qcloudimg.tencent-cloud.cn/raw/a54a76a58c454593d06d8e9883ecc9b3.png)
      * @param boolean $NeedPreview 是否为预览模式，取值如下：<ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li> <li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。 <font color="red">注意： 1.以预览模式创建的合同仅供查看，因此参与方无法进行签署操作;；2.以预览模式调用该接口返回的FlowId为临时Flowld，无法用于发起和拉取信息。</font> </li></ul>注: `当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容，动态表格合成完后会触发文档合成完成的回调通知`
-     * @param integer $PreviewType 预览模式下产生的预览链接类型 
-<ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
-<li> **1** :H5链接 ,点开后在浏览器中展示合同的样子。</li></ul>
-注: `1.此参数在NeedPreview 为true时有效`
-`2.动态表格控件不支持H5链接方式预览`
+     * @param integer $PreviewType 预览模式下产生的预览链接类型 <ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li><li> **1** :H5链接 ,点开后在浏览器中展示合同的样子。</li></ul>注: `1.此参数在NeedPreview 为true时有效`
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      * @param string $ClientToken 该字段已不再使用

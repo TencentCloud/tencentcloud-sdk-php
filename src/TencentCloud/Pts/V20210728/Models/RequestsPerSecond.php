@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetRequestsPerSecond(integer $TargetRequestsPerSecond) 设置目标RPS，入参无效
  * @method integer getGracefulStopSeconds() 获取优雅关停的等待时间
  * @method void setGracefulStopSeconds(integer $GracefulStopSeconds) 设置优雅关停的等待时间
+ * @method integer getIterationCount() 获取场景最大执行次数
+ * @method void setIterationCount(integer $IterationCount) 设置场景最大执行次数
  */
 class RequestsPerSecond extends AbstractModel
 {
@@ -73,6 +75,11 @@ class RequestsPerSecond extends AbstractModel
     public $GracefulStopSeconds;
 
     /**
+     * @var integer 场景最大执行次数
+     */
+    public $IterationCount;
+
+    /**
      * @param integer $MaxRequestsPerSecond 最大RPS
      * @param integer $DurationSeconds 施压时间
      * @param integer $TargetVirtualUsers deprecated
@@ -80,6 +87,7 @@ class RequestsPerSecond extends AbstractModel
      * @param integer $StartRequestsPerSecond 起始RPS
      * @param integer $TargetRequestsPerSecond 目标RPS，入参无效
      * @param integer $GracefulStopSeconds 优雅关停的等待时间
+     * @param integer $IterationCount 场景最大执行次数
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class RequestsPerSecond extends AbstractModel
 
         if (array_key_exists("GracefulStopSeconds",$param) and $param["GracefulStopSeconds"] !== null) {
             $this->GracefulStopSeconds = $param["GracefulStopSeconds"];
+        }
+
+        if (array_key_exists("IterationCount",$param) and $param["IterationCount"] !== null) {
+            $this->IterationCount = $param["IterationCount"];
         }
     }
 }

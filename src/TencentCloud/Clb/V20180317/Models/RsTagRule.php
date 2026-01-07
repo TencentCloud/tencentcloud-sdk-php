@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 修改节点标签的数据类型
  *
- * @method string getListenerId() 获取负载均衡监听器 ID。
- * @method void setListenerId(string $ListenerId) 设置负载均衡监听器 ID。
- * @method array getTargets() 获取要修改标签的后端机器列表。
- * @method void setTargets(array $Targets) 设置要修改标签的后端机器列表。
- * @method string getLocationId() 获取转发规则的ID，七层规则时需要此参数，4层规则不需要。
- * @method void setLocationId(string $LocationId) 设置转发规则的ID，七层规则时需要此参数，4层规则不需要。
- * @method string getTag() 获取后端服务修改后的标签。此参数的优先级低于前述[Target](https://cloud.tencent.com/document/api/214/30694#Target)中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Tag参数为空时，才以RsTagRule中的Tag参数为准。
- * @method void setTag(string $Tag) 设置后端服务修改后的标签。此参数的优先级低于前述[Target](https://cloud.tencent.com/document/api/214/30694#Target)中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Tag参数为空时，才以RsTagRule中的Tag参数为准。
+ * @method string getListenerId() 获取<p>负载均衡监听器 ID。</p>
+ * @method void setListenerId(string $ListenerId) 设置<p>负载均衡监听器 ID。</p>
+ * @method array getTargets() 获取<p>要修改标签的后端机器列表。</p>
+ * @method void setTargets(array $Targets) 设置<p>要修改标签的后端机器列表。</p>
+ * @method string getLocationId() 获取<p>转发规则的ID，七层规则时需要此参数，4层规则不需要。</p>
+ * @method void setLocationId(string $LocationId) 设置<p>转发规则的ID，七层规则时需要此参数，4层规则不需要。</p>
+ * @method string getTag() 获取<p>后端服务修改后的标签。此参数的优先级低于前述<a href="https://cloud.tencent.com/document/api/214/30694#Target">Target</a>中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Tag参数为空时，才以RsTagRule中的Tag参数为准。</p>
+ * @method void setTag(string $Tag) 设置<p>后端服务修改后的标签。此参数的优先级低于前述<a href="https://cloud.tencent.com/document/api/214/30694#Target">Target</a>中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Tag参数为空时，才以RsTagRule中的Tag参数为准。</p>
  */
 class RsTagRule extends AbstractModel
 {
     /**
-     * @var string 负载均衡监听器 ID。
+     * @var string <p>负载均衡监听器 ID。</p>
      */
     public $ListenerId;
 
     /**
-     * @var array 要修改标签的后端机器列表。
+     * @var array <p>要修改标签的后端机器列表。</p>
      */
     public $Targets;
 
     /**
-     * @var string 转发规则的ID，七层规则时需要此参数，4层规则不需要。
+     * @var string <p>转发规则的ID，七层规则时需要此参数，4层规则不需要。</p>
      */
     public $LocationId;
 
     /**
-     * @var string 后端服务修改后的标签。此参数的优先级低于前述[Target](https://cloud.tencent.com/document/api/214/30694#Target)中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Tag参数为空时，才以RsTagRule中的Tag参数为准。
+     * @var string <p>后端服务修改后的标签。此参数的优先级低于前述<a href="https://cloud.tencent.com/document/api/214/30694#Target">Target</a>中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Tag参数为空时，才以RsTagRule中的Tag参数为准。</p>
      */
     public $Tag;
 
     /**
-     * @param string $ListenerId 负载均衡监听器 ID。
-     * @param array $Targets 要修改标签的后端机器列表。
-     * @param string $LocationId 转发规则的ID，七层规则时需要此参数，4层规则不需要。
-     * @param string $Tag 后端服务修改后的标签。此参数的优先级低于前述[Target](https://cloud.tencent.com/document/api/214/30694#Target)中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Tag参数为空时，才以RsTagRule中的Tag参数为准。
+     * @param string $ListenerId <p>负载均衡监听器 ID。</p>
+     * @param array $Targets <p>要修改标签的后端机器列表。</p>
+     * @param string $LocationId <p>转发规则的ID，七层规则时需要此参数，4层规则不需要。</p>
+     * @param string $Tag <p>后端服务修改后的标签。此参数的优先级低于前述<a href="https://cloud.tencent.com/document/api/214/30694#Target">Target</a>中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Tag参数为空时，才以RsTagRule中的Tag参数为准。</p>
      */
     function __construct()
     {

@@ -67,8 +67,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccelerateMainland(string $AccelerateMainland) 设置是否开启中国大陆网络优化。
  <li>on：开启</li> <li>off：关闭</li>
  * @method DDosProtectionConfig getDDosProtectionConfig() 获取安全防护配置。
+本字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDDosProtectionConfig(DDosProtectionConfig $DDosProtectionConfig) 设置安全防护配置。
+本字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getL4ProxyRuleCount() 获取四层代理实例下的转发规则数量。
  * @method void setL4ProxyRuleCount(integer $L4ProxyRuleCount) 设置四层代理实例下的转发规则数量。
@@ -142,7 +144,9 @@ class L4Proxy extends AbstractModel
 
     /**
      * @var DDosProtectionConfig 安全防护配置。
+本字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $DDosProtectionConfig;
 
@@ -181,6 +185,7 @@ class L4Proxy extends AbstractModel
      * @param string $AccelerateMainland 是否开启中国大陆网络优化。
  <li>on：开启</li> <li>off：关闭</li>
      * @param DDosProtectionConfig $DDosProtectionConfig 安全防护配置。
+本字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $L4ProxyRuleCount 四层代理实例下的转发规则数量。
      * @param string $UpdateTime 最新变更时间。

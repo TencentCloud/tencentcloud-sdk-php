@@ -37,31 +37,25 @@ use TencentCloud\Common\AbstractModel;
  * @method string getIpv6() 获取是否开启 IPv6 访问，不填写时默认为 off。该配置仅在部分加速区域和安全防护配置下支持开启，详情请参考 [新建四层代理实例](https://cloud.tencent.com/document/product/1552/90025) 。取值为：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-
-
  * @method void setIpv6(string $Ipv6) 设置是否开启 IPv6 访问，不填写时默认为 off。该配置仅在部分加速区域和安全防护配置下支持开启，详情请参考 [新建四层代理实例](https://cloud.tencent.com/document/product/1552/90025) 。取值为：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-
-
  * @method string getStaticIp() 获取是否开启固定 IP，不填写时默认为 off。该配置仅在部分加速区域和安全防护配置下支持开启，详情请参考 [新建四层代理实例](https://cloud.tencent.com/document/product/1552/90025) 。取值为：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-
  * @method void setStaticIp(string $StaticIp) 设置是否开启固定 IP，不填写时默认为 off。该配置仅在部分加速区域和安全防护配置下支持开启，详情请参考 [新建四层代理实例](https://cloud.tencent.com/document/product/1552/90025) 。取值为：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-
  * @method string getAccelerateMainland() 获取是否开启中国大陆网络优化，不填写时默认为 off。该配置仅在部分加速区域和安全防护配置下支持开启，详情请参考 [新建四层代理实例](https://cloud.tencent.com/document/product/1552/90025) 。取值为：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-
  * @method void setAccelerateMainland(string $AccelerateMainland) 设置是否开启中国大陆网络优化，不填写时默认为 off。该配置仅在部分加速区域和安全防护配置下支持开启，详情请参考 [新建四层代理实例](https://cloud.tencent.com/document/product/1552/90025) 。取值为：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-
  * @method DDosProtectionConfig getDDosProtectionConfig() 获取L3/L4 DDoS 防护配置，不填写时默认使用平台默认防护选项。详情参考 [独立 DDoS 防护](https://cloud.tencent.com/document/product/1552/95994)。
+本字段已废弃，请使用 DDosProtectionId 字段指定关联的DDoS防护配置。
  * @method void setDDosProtectionConfig(DDosProtectionConfig $DDosProtectionConfig) 设置L3/L4 DDoS 防护配置，不填写时默认使用平台默认防护选项。详情参考 [独立 DDoS 防护](https://cloud.tencent.com/document/product/1552/95994)。
+本字段已废弃，请使用 DDosProtectionId 字段指定关联的DDoS防护配置。
  */
 class CreateL4ProxyRequest extends AbstractModel
 {
@@ -88,8 +82,6 @@ class CreateL4ProxyRequest extends AbstractModel
      * @var string 是否开启 IPv6 访问，不填写时默认为 off。该配置仅在部分加速区域和安全防护配置下支持开启，详情请参考 [新建四层代理实例](https://cloud.tencent.com/document/product/1552/90025) 。取值为：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-
-
      */
     public $Ipv6;
 
@@ -97,7 +89,6 @@ class CreateL4ProxyRequest extends AbstractModel
      * @var string 是否开启固定 IP，不填写时默认为 off。该配置仅在部分加速区域和安全防护配置下支持开启，详情请参考 [新建四层代理实例](https://cloud.tencent.com/document/product/1552/90025) 。取值为：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-
      */
     public $StaticIp;
 
@@ -105,12 +96,13 @@ class CreateL4ProxyRequest extends AbstractModel
      * @var string 是否开启中国大陆网络优化，不填写时默认为 off。该配置仅在部分加速区域和安全防护配置下支持开启，详情请参考 [新建四层代理实例](https://cloud.tencent.com/document/product/1552/90025) 。取值为：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-
      */
     public $AccelerateMainland;
 
     /**
      * @var DDosProtectionConfig L3/L4 DDoS 防护配置，不填写时默认使用平台默认防护选项。详情参考 [独立 DDoS 防护](https://cloud.tencent.com/document/product/1552/95994)。
+本字段已废弃，请使用 DDosProtectionId 字段指定关联的DDoS防护配置。
+     * @deprecated
      */
     public $DDosProtectionConfig;
 
@@ -125,17 +117,14 @@ class CreateL4ProxyRequest extends AbstractModel
      * @param string $Ipv6 是否开启 IPv6 访问，不填写时默认为 off。该配置仅在部分加速区域和安全防护配置下支持开启，详情请参考 [新建四层代理实例](https://cloud.tencent.com/document/product/1552/90025) 。取值为：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-
-
      * @param string $StaticIp 是否开启固定 IP，不填写时默认为 off。该配置仅在部分加速区域和安全防护配置下支持开启，详情请参考 [新建四层代理实例](https://cloud.tencent.com/document/product/1552/90025) 。取值为：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-
      * @param string $AccelerateMainland 是否开启中国大陆网络优化，不填写时默认为 off。该配置仅在部分加速区域和安全防护配置下支持开启，详情请参考 [新建四层代理实例](https://cloud.tencent.com/document/product/1552/90025) 。取值为：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-
      * @param DDosProtectionConfig $DDosProtectionConfig L3/L4 DDoS 防护配置，不填写时默认使用平台默认防护选项。详情参考 [独立 DDoS 防护](https://cloud.tencent.com/document/product/1552/95994)。
+本字段已废弃，请使用 DDosProtectionId 字段指定关联的DDoS防护配置。
      */
     function __construct()
     {

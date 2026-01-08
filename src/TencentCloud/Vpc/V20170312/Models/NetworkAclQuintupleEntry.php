@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间，用于DescribeNetworkAclQuintupleEntries的出参。
  * @method string getNetworkAclDirection() 获取方向，INGRESS或EGRESS，用于DescribeNetworkAclQuintupleEntries的出参。
  * @method void setNetworkAclDirection(string $NetworkAclDirection) 设置方向，INGRESS或EGRESS，用于DescribeNetworkAclQuintupleEntries的出参。
+ * @method string getSourceIPv6Cidr() 获取IPv6源CIDR。
+ * @method void setSourceIPv6Cidr(string $SourceIPv6Cidr) 设置IPv6源CIDR。
+ * @method string getDestinationIPv6Cidr() 获取IPv6目的CIDR。
+ * @method void setDestinationIPv6Cidr(string $DestinationIPv6Cidr) 设置IPv6目的CIDR。
  */
 class NetworkAclQuintupleEntry extends AbstractModel
 {
@@ -101,6 +105,16 @@ class NetworkAclQuintupleEntry extends AbstractModel
     public $NetworkAclDirection;
 
     /**
+     * @var string IPv6源CIDR。
+     */
+    public $SourceIPv6Cidr;
+
+    /**
+     * @var string IPv6目的CIDR。
+     */
+    public $DestinationIPv6Cidr;
+
+    /**
      * @param string $Protocol 协议, 取值: TCP,UDP, ICMP, ALL。
      * @param string $Description 描述。
      * @param string $SourcePort 源端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。
@@ -112,6 +126,8 @@ class NetworkAclQuintupleEntry extends AbstractModel
      * @param integer $Priority 优先级，从1开始。
      * @param string $CreateTime 创建时间，用于DescribeNetworkAclQuintupleEntries的出参。
      * @param string $NetworkAclDirection 方向，INGRESS或EGRESS，用于DescribeNetworkAclQuintupleEntries的出参。
+     * @param string $SourceIPv6Cidr IPv6源CIDR。
+     * @param string $DestinationIPv6Cidr IPv6目的CIDR。
      */
     function __construct()
     {
@@ -168,6 +184,14 @@ class NetworkAclQuintupleEntry extends AbstractModel
 
         if (array_key_exists("NetworkAclDirection",$param) and $param["NetworkAclDirection"] !== null) {
             $this->NetworkAclDirection = $param["NetworkAclDirection"];
+        }
+
+        if (array_key_exists("SourceIPv6Cidr",$param) and $param["SourceIPv6Cidr"] !== null) {
+            $this->SourceIPv6Cidr = $param["SourceIPv6Cidr"];
+        }
+
+        if (array_key_exists("DestinationIPv6Cidr",$param) and $param["DestinationIPv6Cidr"] !== null) {
+            $this->DestinationIPv6Cidr = $param["DestinationIPv6Cidr"];
         }
     }
 }

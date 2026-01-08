@@ -49,9 +49,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getIsSerialRegion() 获取0: 该地域暂未支持串行
 1: 该用户未在该地域配置串行带宽
 2: 该用户已在该地域配置串行带宽，可以开启串行开关
+3. 该地域可以支持串行，但是未部署公共集群
  * @method void setIsSerialRegion(integer $IsSerialRegion) 设置0: 该地域暂未支持串行
 1: 该用户未在该地域配置串行带宽
 2: 该用户已在该地域配置串行带宽，可以开启串行开关
+3. 该地域可以支持串行，但是未部署公共集群
  * @method integer getIsPublicClb() 获取0: 不是公网CLB 可以开启串行开关
 1: 是公网CLB 不可以开启串行开关
 
@@ -59,10 +61,10 @@ use TencentCloud\Common\AbstractModel;
 1: 是公网CLB 不可以开启串行开关
 
  * @method integer getEndpointBindEipNum() 获取0: 开启开关时提示要创建私有连接。
-1: 关闭该开关是提示删除私有连接。
+1: 关闭该开关时提示删除私有连接。
 如果大于 1: 关闭开关 、开启开关不需提示创建删除私有连接。
  * @method void setEndpointBindEipNum(integer $EndpointBindEipNum) 设置0: 开启开关时提示要创建私有连接。
-1: 关闭该开关是提示删除私有连接。
+1: 关闭该开关时提示删除私有连接。
 如果大于 1: 关闭开关 、开启开关不需提示创建删除私有连接。
  * @method string getScanMode() 获取扫描深度
  * @method void setScanMode(string $ScanMode) 设置扫描深度
@@ -96,6 +98,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置域名化CLB的域名
  * @method integer getOverUsedStatus() 获取IP超量状态
  * @method void setOverUsedStatus(integer $OverUsedStatus) 设置IP超量状态
+ * @method integer getSwitchSupportType() 获取0 都不支持
+1 支持旁路
+2 支持串行
+3 旁路串行都支持
+ * @method void setSwitchSupportType(integer $SwitchSupportType) 设置0 都不支持
+1 支持旁路
+2 支持串行
+3 旁路串行都支持
  */
 class EdgeIpInfo extends AbstractModel
 {
@@ -160,6 +170,7 @@ class EdgeIpInfo extends AbstractModel
      * @var integer 0: 该地域暂未支持串行
 1: 该用户未在该地域配置串行带宽
 2: 该用户已在该地域配置串行带宽，可以开启串行开关
+3. 该地域可以支持串行，但是未部署公共集群
      */
     public $IsSerialRegion;
 
@@ -172,7 +183,7 @@ class EdgeIpInfo extends AbstractModel
 
     /**
      * @var integer 0: 开启开关时提示要创建私有连接。
-1: 关闭该开关是提示删除私有连接。
+1: 关闭该开关时提示删除私有连接。
 如果大于 1: 关闭开关 、开启开关不需提示创建删除私有连接。
      */
     public $EndpointBindEipNum;
@@ -230,6 +241,14 @@ class EdgeIpInfo extends AbstractModel
     public $OverUsedStatus;
 
     /**
+     * @var integer 0 都不支持
+1 支持旁路
+2 支持串行
+3 旁路串行都支持
+     */
+    public $SwitchSupportType;
+
+    /**
      * @param string $PublicIp 公网IP
      * @param integer $PublicIpType 公网 IP 类型 1 公网,2 弹性,3 弹性ipv6,4 anycastIP, 6 HighQualityEIP
      * @param string $InstanceId 实例ID
@@ -246,11 +265,12 @@ class EdgeIpInfo extends AbstractModel
      * @param integer $IsSerialRegion 0: 该地域暂未支持串行
 1: 该用户未在该地域配置串行带宽
 2: 该用户已在该地域配置串行带宽，可以开启串行开关
+3. 该地域可以支持串行，但是未部署公共集群
      * @param integer $IsPublicClb 0: 不是公网CLB 可以开启串行开关
 1: 是公网CLB 不可以开启串行开关
 
      * @param integer $EndpointBindEipNum 0: 开启开关时提示要创建私有连接。
-1: 关闭该开关是提示删除私有连接。
+1: 关闭该开关时提示删除私有连接。
 如果大于 1: 关闭开关 、开启开关不需提示创建删除私有连接。
      * @param string $ScanMode 扫描深度
      * @param integer $ScanStatus 扫描状态
@@ -268,6 +288,10 @@ class EdgeIpInfo extends AbstractModel
      * @param integer $SwitchWeight 开关权重
      * @param string $Domain 域名化CLB的域名
      * @param integer $OverUsedStatus IP超量状态
+     * @param integer $SwitchSupportType 0 都不支持
+1 支持旁路
+2 支持串行
+3 旁路串行都支持
      */
     function __construct()
     {
@@ -372,6 +396,10 @@ class EdgeIpInfo extends AbstractModel
 
         if (array_key_exists("OverUsedStatus",$param) and $param["OverUsedStatus"] !== null) {
             $this->OverUsedStatus = $param["OverUsedStatus"];
+        }
+
+        if (array_key_exists("SwitchSupportType",$param) and $param["SwitchSupportType"] !== null) {
+            $this->SwitchSupportType = $param["SwitchSupportType"];
         }
     }
 }

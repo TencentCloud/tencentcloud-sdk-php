@@ -121,7 +121,49 @@ polarismesh - STANDARD版本
 - 0：后付费
 - 1：预付费（接口暂不支持创建预付费实例）
  * @method string getEngineResourceSpec() 获取引擎的节点规格 ID。参见EngineProductVersion字段说明
+北极星支持的引擎规格ID与节点数对应关系：
+基础版：
+spec-c160bas1 500
+spec-c160bas2 1000
+spec-c160bas3 2000
+spec-c160bas4 5000
+spec-c160bas5 10000
+spec-c160bas6 20000
+spec-c160bas7 50000
+企业版：
+spec-c160pro50 50
+spec-c160pro100 100
+spec-c160pro200 200
+spec-c160pro500 500
+spec-c160pro1k 1000
+spec-c160pro5k 5000
+spec-c160pro10k 10000
+spec-c160pro20k 20000
+spec-c160pro50k 50000
+开发版：
+spec-c160dev1 50
  * @method void setEngineResourceSpec(string $EngineResourceSpec) 设置引擎的节点规格 ID。参见EngineProductVersion字段说明
+北极星支持的引擎规格ID与节点数对应关系：
+基础版：
+spec-c160bas1 500
+spec-c160bas2 1000
+spec-c160bas3 2000
+spec-c160bas4 5000
+spec-c160bas5 10000
+spec-c160bas6 20000
+spec-c160bas7 50000
+企业版：
+spec-c160pro50 50
+spec-c160pro100 100
+spec-c160pro200 200
+spec-c160pro500 500
+spec-c160pro1k 1000
+spec-c160pro5k 5000
+spec-c160pro10k 10000
+spec-c160pro20k 20000
+spec-c160pro50k 50000
+开发版：
+spec-c160dev1 50
  * @method integer getEngineNodeNum() 获取引擎的节点数量。参见EngineProductVersion字段说明
  * @method void setEngineNodeNum(integer $EngineNodeNum) 设置引擎的节点数量。参见EngineProductVersion字段说明
  * @method string getVpcId() 获取VPC ID。在 VPC 的子网内分配一个 IP 作为引擎的访问地址。参考值：
@@ -271,6 +313,27 @@ polarismesh - STANDARD版本
 
     /**
      * @var string 引擎的节点规格 ID。参见EngineProductVersion字段说明
+北极星支持的引擎规格ID与节点数对应关系：
+基础版：
+spec-c160bas1 500
+spec-c160bas2 1000
+spec-c160bas3 2000
+spec-c160bas4 5000
+spec-c160bas5 10000
+spec-c160bas6 20000
+spec-c160bas7 50000
+企业版：
+spec-c160pro50 50
+spec-c160pro100 100
+spec-c160pro200 200
+spec-c160pro500 500
+spec-c160pro1k 1000
+spec-c160pro5k 5000
+spec-c160pro10k 10000
+spec-c160pro20k 20000
+spec-c160pro50k 50000
+开发版：
+spec-c160dev1 50
      */
     public $EngineResourceSpec;
 
@@ -421,6 +484,27 @@ polarismesh - STANDARD版本
 - 0：后付费
 - 1：预付费（接口暂不支持创建预付费实例）
      * @param string $EngineResourceSpec 引擎的节点规格 ID。参见EngineProductVersion字段说明
+北极星支持的引擎规格ID与节点数对应关系：
+基础版：
+spec-c160bas1 500
+spec-c160bas2 1000
+spec-c160bas3 2000
+spec-c160bas4 5000
+spec-c160bas5 10000
+spec-c160bas6 20000
+spec-c160bas7 50000
+企业版：
+spec-c160pro50 50
+spec-c160pro100 100
+spec-c160pro200 200
+spec-c160pro500 500
+spec-c160pro1k 1000
+spec-c160pro5k 5000
+spec-c160pro10k 10000
+spec-c160pro20k 20000
+spec-c160pro50k 50000
+开发版：
+spec-c160dev1 50
      * @param integer $EngineNodeNum 引擎的节点数量。参见EngineProductVersion字段说明
      * @param string $VpcId VPC ID。在 VPC 的子网内分配一个 IP 作为引擎的访问地址。参考值：
 - vpc-conz6aix

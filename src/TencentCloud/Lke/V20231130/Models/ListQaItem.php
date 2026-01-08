@@ -68,12 +68,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsDisabled(boolean $IsDisabled) 设置问答是否停用，false:未停用，ture:已停用
  * @method string getStaffName() 获取员工名称
  * @method void setStaffName(string $StaffName) 设置员工名称
- * @method integer getEnableScope() 获取问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+ * @method integer getEnableScope() 获取问答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnableScope(integer $EnableScope) 设置问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+ * @method void setEnableScope(integer $EnableScope) 设置问答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDocEnableScope() 获取问答关联的文档生效域
- * @method void setDocEnableScope(integer $DocEnableScope) 设置问答关联的文档生效域
+ * @method integer getDocEnableScope() 获取问答关联的文档生效域：1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
+若问答未关联文档，则该字段值同问答生效域。
+ * @method void setDocEnableScope(integer $DocEnableScope) 设置问答关联的文档生效域：1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
+若问答未关联文档，则该字段值同问答生效域。
+ * @method string getQaSize() 获取问答大小（含相似问），单位：字节
+ * @method void setQaSize(string $QaSize) 设置问答大小（含相似问），单位：字节
  */
 class ListQaItem extends AbstractModel
 {
@@ -198,15 +202,21 @@ class ListQaItem extends AbstractModel
     public $StaffName;
 
     /**
-     * @var integer 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * @var integer 问答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableScope;
 
     /**
-     * @var integer 问答关联的文档生效域
+     * @var integer 问答关联的文档生效域：1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
+若问答未关联文档，则该字段值同问答生效域。
      */
     public $DocEnableScope;
+
+    /**
+     * @var string 问答大小（含相似问），单位：字节
+     */
+    public $QaSize;
 
     /**
      * @param string $QaBizId 问答ID
@@ -233,9 +243,11 @@ class ListQaItem extends AbstractModel
      * @param string $SimilarQuestionTips 返回问答关联的相似问,联动搜索,仅展示一条
      * @param boolean $IsDisabled 问答是否停用，false:未停用，ture:已停用
      * @param string $StaffName 员工名称
-     * @param integer $EnableScope 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * @param integer $EnableScope 问答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DocEnableScope 问答关联的文档生效域
+     * @param integer $DocEnableScope 问答关联的文档生效域：1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
+若问答未关联文档，则该字段值同问答生效域。
+     * @param string $QaSize 问答大小（含相似问），单位：字节
      */
     function __construct()
     {
@@ -357,6 +369,10 @@ class ListQaItem extends AbstractModel
 
         if (array_key_exists("DocEnableScope",$param) and $param["DocEnableScope"] !== null) {
             $this->DocEnableScope = $param["DocEnableScope"];
+        }
+
+        if (array_key_exists("QaSize",$param) and $param["QaSize"] !== null) {
+            $this->QaSize = $param["QaSize"];
         }
     }
 }

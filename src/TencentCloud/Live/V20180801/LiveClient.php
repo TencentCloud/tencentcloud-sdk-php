@@ -166,6 +166,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
 用于查询回调事件。
  * @method Models\DescribeCasterResponse DescribeCaster(Models\DescribeCasterRequest $req) 查询导播台信息接口，用来查询导播台状态、描述、输出长、宽等信息
  * @method Models\DescribeCasterDisplayInfoResponse DescribeCasterDisplayInfo(Models\DescribeCasterDisplayInfoRequest $req) 查询导播台PVW任务和PGM任务的展示信息，包括使用的布局、水印、字幕等信息。
+ * @method Models\DescribeCasterEmergencyStatusResponse DescribeCasterEmergencyStatus(Models\DescribeCasterEmergencyStatusRequest $req) 该接口用查询导播台的备播状态
  * @method Models\DescribeCasterInputInfosResponse DescribeCasterInputInfos(Models\DescribeCasterInputInfosRequest $req) 该接口用来查询导播台的输入源信息列表。
  * @method Models\DescribeCasterLayoutInfosResponse DescribeCasterLayoutInfos(Models\DescribeCasterLayoutInfosRequest $req) 该接口用来查询某个导播台的布局列表
  * @method Models\DescribeCasterListResponse DescribeCasterList(Models\DescribeCasterListRequest $req) 该接口用来查询账号下所有的导播台列表
@@ -358,6 +359,8 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\StopRecordTaskResponse StopRecordTask(Models\StopRecordTaskRequest $req) 提前结束录制，中止运行中的录制任务并生成录制文件。任务被成功终止后，本次任务将不再启动。
  * @method Models\StopScreenshotTaskResponse StopScreenshotTask(Models\StopScreenshotTaskRequest $req) 提前结束截图，中止运行中的截图任务。任务被成功终止后，本次任务将不再启动。
  * @method Models\SwitchBackupStreamResponse SwitchBackupStream(Models\SwitchBackupStreamRequest $req) 调用该接口实现切换当前播放所使用的主备流。
+ * @method Models\SwitchCasterToEmergencyResponse SwitchCasterToEmergency(Models\SwitchCasterToEmergencyRequest $req) 该接口用来将导播台切换到备播状态。
+该接口使用时，主监任务需处于运行状态。
  * @method Models\UnBindLiveDomainCertResponse UnBindLiveDomainCert(Models\UnBindLiveDomainCertRequest $req) 解绑域名证书
  * @method Models\UpdateLiveWatermarkResponse UpdateLiveWatermark(Models\UpdateLiveWatermarkRequest $req) 更新水印。
  */

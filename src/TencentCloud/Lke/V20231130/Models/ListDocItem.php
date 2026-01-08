@@ -154,10 +154,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsDisabled(boolean $IsDisabled) 设置false:未停用，ture:已停用
  * @method string getStaffName() 获取员工名称
  * @method void setStaffName(string $StaffName) 设置员工名称
- * @method integer getEnableScope() 获取文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+ * @method integer getEnableScope() 获取文档生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnableScope(integer $EnableScope) 设置文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+ * @method void setEnableScope(integer $EnableScope) 设置文档生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDocSize() 获取文档大小，单位：字节
+ * @method void setDocSize(string $DocSize) 设置文档大小，单位：字节
  */
 class ListDocItem extends AbstractModel
 {
@@ -373,10 +375,15 @@ class ListDocItem extends AbstractModel
     public $StaffName;
 
     /**
-     * @var integer 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * @var integer 文档生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableScope;
+
+    /**
+     * @var string 文档大小，单位：字节
+     */
+    public $DocSize;
 
     /**
      * @param string $DocBizId 文档ID
@@ -446,8 +453,9 @@ class ListDocItem extends AbstractModel
      * @param array $AttributeFlags 文档的属性标记，0: 不做用户外部权限校验
      * @param boolean $IsDisabled false:未停用，ture:已停用
      * @param string $StaffName 员工名称
-     * @param integer $EnableScope 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * @param integer $EnableScope 文档生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DocSize 文档大小，单位：字节
      */
     function __construct()
     {
@@ -613,6 +621,10 @@ class ListDocItem extends AbstractModel
 
         if (array_key_exists("EnableScope",$param) and $param["EnableScope"] !== null) {
             $this->EnableScope = $param["EnableScope"];
+        }
+
+        if (array_key_exists("DocSize",$param) and $param["DocSize"] !== null) {
+            $this->DocSize = $param["DocSize"];
         }
     }
 }

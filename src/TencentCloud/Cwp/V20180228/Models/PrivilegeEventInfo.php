@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineStatus(string $MachineStatus) 设置主机在线状态 OFFLINE  ONLINE
  * @method string getModifyTime() 获取处理时间
  * @method void setModifyTime(string $ModifyTime) 设置处理时间
+ * @method integer getCount() 获取告警数量
+ * @method void setCount(integer $Count) 设置告警数量
  */
 class PrivilegeEventInfo extends AbstractModel
 {
@@ -206,6 +208,11 @@ class PrivilegeEventInfo extends AbstractModel
     public $ModifyTime;
 
     /**
+     * @var integer 告警数量
+     */
+    public $Count;
+
+    /**
      * @param integer $Id 数据ID
      * @param string $Uuid 主机安全uuid
      * @param string $Quuid 主机uuid
@@ -232,6 +239,7 @@ class PrivilegeEventInfo extends AbstractModel
      * @param string $NewCaps 权限列表|隔开
      * @param string $MachineStatus 主机在线状态 OFFLINE  ONLINE
      * @param string $ModifyTime 处理时间
+     * @param integer $Count 告警数量
      */
     function __construct()
     {
@@ -348,6 +356,10 @@ class PrivilegeEventInfo extends AbstractModel
 
         if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
             $this->ModifyTime = $param["ModifyTime"];
+        }
+
+        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
+            $this->Count = $param["Count"];
         }
     }
 }

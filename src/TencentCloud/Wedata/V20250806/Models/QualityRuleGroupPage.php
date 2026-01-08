@@ -18,35 +18,35 @@ namespace TencentCloud\Wedata\V20250806\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 数据质量阈值
+ * 质量监控分页
  *
- * @method integer getValueType() 获取阈值类型【入参必填】  1.低阈值  2.高阈值   3.普通阈值  4.枚举值
+ * @method integer getTotalCount() 获取总数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValueType(integer $ValueType) 设置阈值类型【入参必填】  1.低阈值  2.高阈值   3.普通阈值  4.枚举值
+ * @method void setTotalCount(integer $TotalCount) 设置总数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getValue() 获取阈值【入参必填】
+ * @method array getItems() 获取质量监控列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValue(string $Value) 设置阈值【入参必填】
+ * @method void setItems(array $Items) 设置质量监控列表
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class QualityThresholdValue extends AbstractModel
+class QualityRuleGroupPage extends AbstractModel
 {
     /**
-     * @var integer 阈值类型【入参必填】  1.低阈值  2.高阈值   3.普通阈值  4.枚举值
+     * @var integer 总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ValueType;
+    public $TotalCount;
 
     /**
-     * @var string 阈值【入参必填】
+     * @var array 质量监控列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Value;
+    public $Items;
 
     /**
-     * @param integer $ValueType 阈值类型【入参必填】  1.低阈值  2.高阈值   3.普通阈值  4.枚举值
+     * @param integer $TotalCount 总数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Value 阈值【入参必填】
+     * @param array $Items 质量监控列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,12 +62,17 @@ class QualityThresholdValue extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ValueType",$param) and $param["ValueType"] !== null) {
-            $this->ValueType = $param["ValueType"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
+            $this->Items = [];
+            foreach ($param["Items"] as $key => $value){
+                $obj = new QualityRuleGroup();
+                $obj->deserialize($value);
+                array_push($this->Items, $obj);
+            }
         }
     }
 }

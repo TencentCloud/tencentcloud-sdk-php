@@ -144,6 +144,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrlLongSegmentThreshold(integer $UrlLongSegmentThreshold) 设置URL长分段收敛阈值
  * @method integer getUrlNumberSegmentThreshold() 获取URL数字分段收敛阈值
  * @method void setUrlNumberSegmentThreshold(integer $UrlNumberSegmentThreshold) 设置URL数字分段收敛阈值
+ * @method string getLogSpanIdKey() 获取spanId的索引key: 当CLS索引类型为键值索引时生效
+ * @method void setLogSpanIdKey(string $LogSpanIdKey) 设置spanId的索引key: 当CLS索引类型为键值索引时生效
  */
 class ApmInstanceDetail extends AbstractModel
 {
@@ -434,6 +436,11 @@ class ApmInstanceDetail extends AbstractModel
     public $UrlNumberSegmentThreshold;
 
     /**
+     * @var string spanId的索引key: 当CLS索引类型为键值索引时生效
+     */
+    public $LogSpanIdKey;
+
+    /**
      * @param string $InstanceId 业务系统 ID
      * @param string $Name 业务系统名
      * @param string $Description 业务系统描述信息
@@ -496,6 +503,7 @@ class ApmInstanceDetail extends AbstractModel
      * @param string $Token 业务系统鉴权 token
      * @param integer $UrlLongSegmentThreshold URL长分段收敛阈值
      * @param integer $UrlNumberSegmentThreshold URL数字分段收敛阈值
+     * @param string $LogSpanIdKey spanId的索引key: 当CLS索引类型为键值索引时生效
      */
     function __construct()
     {
@@ -737,6 +745,10 @@ class ApmInstanceDetail extends AbstractModel
 
         if (array_key_exists("UrlNumberSegmentThreshold",$param) and $param["UrlNumberSegmentThreshold"] !== null) {
             $this->UrlNumberSegmentThreshold = $param["UrlNumberSegmentThreshold"];
+        }
+
+        if (array_key_exists("LogSpanIdKey",$param) and $param["LogSpanIdKey"] !== null) {
+            $this->LogSpanIdKey = $param["LogSpanIdKey"];
         }
     }
 }

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScore(float $Score) 设置视频在本次检索中的得分，得分越高和检索值越相似，取值范围[0,1]
  * @method float getStartTimeOffset() 获取视频片段的开始时间，单位：秒
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置视频片段的开始时间，单位：秒
- * @method float getEndTimeOffset() 获取视频片段的开始时间，单位：秒
- * @method void setEndTimeOffset(float $EndTimeOffset) 设置视频片段的开始时间，单位：秒
+ * @method float getEndTimeOffset() 获取视频片段的结束时间，单位：秒
+ * @method void setEndTimeOffset(float $EndTimeOffset) 设置视频片段的结束时间，单位：秒
  */
 class SemanticsSearchResult extends AbstractModel
 {
@@ -47,7 +47,7 @@ class SemanticsSearchResult extends AbstractModel
     public $StartTimeOffset;
 
     /**
-     * @var float 视频片段的开始时间，单位：秒
+     * @var float 视频片段的结束时间，单位：秒
      */
     public $EndTimeOffset;
 
@@ -55,7 +55,7 @@ class SemanticsSearchResult extends AbstractModel
      * @param string $FileId 媒体文件唯一标识 ID。
      * @param float $Score 视频在本次检索中的得分，得分越高和检索值越相似，取值范围[0,1]
      * @param float $StartTimeOffset 视频片段的开始时间，单位：秒
-     * @param float $EndTimeOffset 视频片段的开始时间，单位：秒
+     * @param float $EndTimeOffset 视频片段的结束时间，单位：秒
      */
     function __construct()
     {

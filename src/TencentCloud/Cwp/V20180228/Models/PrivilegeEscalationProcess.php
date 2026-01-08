@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置附加信息
  * @method integer getPid() 获取进程id
  * @method void setPid(integer $Pid) 设置进程id
+ * @method integer getCount() 获取告警数量
+ * @method void setCount(integer $Count) 设置告警数量
  */
 class PrivilegeEscalationProcess extends AbstractModel
 {
@@ -164,6 +166,11 @@ class PrivilegeEscalationProcess extends AbstractModel
     public $Pid;
 
     /**
+     * @var integer 告警数量
+     */
+    public $Count;
+
+    /**
      * @param integer $Id 数据ID
      * @param string $Uuid 主机安全ID
      * @param string $Quuid 主机ID
@@ -184,6 +191,7 @@ class PrivilegeEscalationProcess extends AbstractModel
      * @param string $MachineName 机器名
      * @param MachineExtraInfo $MachineExtraInfo 附加信息
      * @param integer $Pid 进程id
+     * @param integer $Count 告警数量
      */
     function __construct()
     {
@@ -277,6 +285,10 @@ class PrivilegeEscalationProcess extends AbstractModel
 
         if (array_key_exists("Pid",$param) and $param["Pid"] !== null) {
             $this->Pid = $param["Pid"];
+        }
+
+        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
+            $this->Count = $param["Count"];
         }
     }
 }

@@ -178,6 +178,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableDesensitizationRule(integer $EnableDesensitizationRule) 设置是否开启脱敏规则
  * @method string getDesensitizationRule() 获取脱敏规则
  * @method void setDesensitizationRule(string $DesensitizationRule) 设置脱敏规则
+ * @method string getLogSpanIdKey() 获取spanId的索引key: 当CLS索引类型为键值索引时生效
+ * @method void setLogSpanIdKey(string $LogSpanIdKey) 设置spanId的索引key: 当CLS索引类型为键值索引时生效
  */
 class ApmAppConfig extends AbstractModel
 {
@@ -485,6 +487,11 @@ class ApmAppConfig extends AbstractModel
     public $DesensitizationRule;
 
     /**
+     * @var string spanId的索引key: 当CLS索引类型为键值索引时生效
+     */
+    public $LogSpanIdKey;
+
+    /**
      * @param string $InstanceKey 实例ID
      * @param string $ServiceName 服务名
      * @param integer $UrlConvergenceSwitch URL收敛开关
@@ -564,6 +571,7 @@ class ApmAppConfig extends AbstractModel
      * @param array $SlowSQLThresholds 慢SQL阈值
      * @param integer $EnableDesensitizationRule 是否开启脱敏规则
      * @param string $DesensitizationRule 脱敏规则
+     * @param string $LogSpanIdKey spanId的索引key: 当CLS索引类型为键值索引时生效
      */
     function __construct()
     {
@@ -811,6 +819,10 @@ class ApmAppConfig extends AbstractModel
 
         if (array_key_exists("DesensitizationRule",$param) and $param["DesensitizationRule"] !== null) {
             $this->DesensitizationRule = $param["DesensitizationRule"];
+        }
+
+        if (array_key_exists("LogSpanIdKey",$param) and $param["LogSpanIdKey"] !== null) {
+            $this->LogSpanIdKey = $param["LogSpanIdKey"];
         }
     }
 }

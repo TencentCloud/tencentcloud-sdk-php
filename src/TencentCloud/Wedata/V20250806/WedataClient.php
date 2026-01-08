@@ -34,6 +34,7 @@ use TencentCloud\Wedata\V20250806\Models as Models;
  * @method Models\CreateOpsAlarmRuleResponse CreateOpsAlarmRule(Models\CreateOpsAlarmRuleRequest $req) 设置告警规则
  * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 创建项目，创建时包含集群信息
  * @method Models\CreateProjectMemberResponse CreateProjectMember(Models\CreateProjectMemberRequest $req) 添加项目用户角色
+ * @method Models\CreateQualityRuleResponse CreateQualityRule(Models\CreateQualityRuleRequest $req) 创建质量规则接口
  * @method Models\CreateQualityRuleGroupResponse CreateQualityRuleGroup(Models\CreateQualityRuleGroupRequest $req) 创建监控任务
  * @method Models\CreateResourceFileResponse CreateResourceFile(Models\CreateResourceFileRequest $req) 创建资源文件
  * @method Models\CreateResourceFolderResponse CreateResourceFolder(Models\CreateResourceFolderRequest $req) 创建资源文件文件夹
@@ -135,6 +136,10 @@ use TencentCloud\Wedata\V20250806\Models as Models;
  * @method Models\ListProjectRolesResponse ListProjectRoles(Models\ListProjectRolesRequest $req) 获取角色列表信息
  * @method Models\ListProjectsResponse ListProjects(Models\ListProjectsRequest $req) 租户全局范围的项目列表，与用户查看范围无关.
  * @method Models\ListQualityRuleGroupExecResultsByPageResponse ListQualityRuleGroupExecResultsByPage(Models\ListQualityRuleGroupExecResultsByPageRequest $req) 规则组执行结果分页查询接口
+ * @method Models\ListQualityRuleGroupsResponse ListQualityRuleGroups(Models\ListQualityRuleGroupsRequest $req) 【过滤条件】
+{表idTableId,支持匹配}       {任务负责人Operator,支持匹配}    
+【必要字段】
+{数据来源TableId}
  * @method Models\ListQualityRuleGroupsTableResponse ListQualityRuleGroupsTable(Models\ListQualityRuleGroupsTableRequest $req) 查询监控列表
  * @method Models\ListQualityRuleTemplatesResponse ListQualityRuleTemplates(Models\ListQualityRuleTemplatesRequest $req) 【过滤条件】 {模板名称Name，查询使用Keyword进行模糊匹配} {模板类型type，1.系统模板 2.自定义模板} {质量检测维度QualityDims, 1.准确性 2.唯一性 3.完整性 4.一致性 5.及时性 6.有效性} 【排序字段】 { 引用数排序类型CitationOrderType，根据引用数量排序 ASC DESC}
  * @method Models\ListQualityRulesResponse ListQualityRules(Models\ListQualityRulesRequest $req) 分页查询质量规则

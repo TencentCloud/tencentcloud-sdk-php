@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUser(string $User) 设置提交用户
  * @method integer getWrittenBytes() 获取写入字节数
  * @method void setWrittenBytes(integer $WrittenBytes) 设置写入字节数
+ * @method string getErrorMessage() 获取Error日志
+ * @method void setErrorMessage(string $ErrorMessage) 设置Error日志
  */
 class TrinoQueryInfo extends AbstractModel
 {
@@ -157,6 +159,11 @@ class TrinoQueryInfo extends AbstractModel
     public $WrittenBytes;
 
     /**
+     * @var string Error日志
+     */
+    public $ErrorMessage;
+
+    /**
      * @param string $Catalog catalog
      * @param string $ClientIpAddr 提交IP
      * @param string $CompletedSplits 切片数
@@ -176,6 +183,7 @@ class TrinoQueryInfo extends AbstractModel
      * @param string $Statement 执行语句
      * @param string $User 提交用户
      * @param integer $WrittenBytes 写入字节数
+     * @param string $ErrorMessage Error日志
      */
     function __construct()
     {
@@ -264,6 +272,10 @@ class TrinoQueryInfo extends AbstractModel
 
         if (array_key_exists("WrittenBytes",$param) and $param["WrittenBytes"] !== null) {
             $this->WrittenBytes = $param["WrittenBytes"];
+        }
+
+        if (array_key_exists("ErrorMessage",$param) and $param["ErrorMessage"] !== null) {
+            $this->ErrorMessage = $param["ErrorMessage"];
         }
     }
 }

@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExecutionStatement(string $ExecutionStatement) 设置执行语句
  * @method string getUser() 获取用户
  * @method void setUser(string $User) 设置用户
+ * @method string getErrorCode() 获取错误码
+ * @method void setErrorCode(string $ErrorCode) 设置错误码
  */
 class StarRocksQueryInfo extends AbstractModel
 {
@@ -157,6 +159,11 @@ class StarRocksQueryInfo extends AbstractModel
     public $User;
 
     /**
+     * @var string 错误码
+     */
+    public $ErrorCode;
+
+    /**
      * @param string $ClientIP 提交IP
      * @param integer $CPUCost CPU总时间(ns)
      * @param string $DefaultDB 默认DB
@@ -176,6 +183,7 @@ class StarRocksQueryInfo extends AbstractModel
      * @param string $ExecutionState 执行状态
      * @param string $ExecutionStatement 执行语句
      * @param string $User 用户
+     * @param string $ErrorCode 错误码
      */
     function __construct()
     {
@@ -264,6 +272,10 @@ class StarRocksQueryInfo extends AbstractModel
 
         if (array_key_exists("User",$param) and $param["User"] !== null) {
             $this->User = $param["User"];
+        }
+
+        if (array_key_exists("ErrorCode",$param) and $param["ErrorCode"] !== null) {
+            $this->ErrorCode = $param["ErrorCode"];
         }
     }
 }

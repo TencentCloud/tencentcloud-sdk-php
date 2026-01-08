@@ -164,9 +164,9 @@ RERUN：重跑
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineParam(string $EngineParam) 设置引擎参数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCatalogName() 获取数据目录名称，不填默认为DataLakeCatalog
+ * @method string getCatalogName() 获取数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCatalogName(string $CatalogName) 设置数据目录名称，不填默认为DataLakeCatalog
+ * @method void setCatalogName(string $CatalogName) 设置数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class QualityRuleGroupExecStrategy extends AbstractModel
@@ -352,7 +352,7 @@ RERUN：重跑
     public $EngineParam;
 
     /**
-     * @var string 数据目录名称，不填默认为DataLakeCatalog
+     * @var string 数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CatalogName;
@@ -430,7 +430,7 @@ RERUN：重跑
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineParam 引擎参数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CatalogName 数据目录名称，不填默认为DataLakeCatalog
+     * @param string $CatalogName 数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTEHDConfig(TEHDConfig $TEHDConfig) 设置极速高清转码参数。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method EnhanceConfig getEnhanceConfig() 获取音视频增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) 设置音视频增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AdaptiveStreamTemplate extends AbstractModel
 {
@@ -74,6 +78,12 @@ class AdaptiveStreamTemplate extends AbstractModel
     public $TEHDConfig;
 
     /**
+     * @var EnhanceConfig 音视频增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnhanceConfig;
+
+    /**
      * @param VideoTemplateInfo $Video 视频参数信息。
      * @param AudioTemplateInfo $Audio 音频参数信息。
      * @param integer $RemoveAudio 是否移除音频流，取值范围：
@@ -83,6 +93,8 @@ class AdaptiveStreamTemplate extends AbstractModel
 <li>0：否，</li>
 <li>1：是。</li>
      * @param TEHDConfig $TEHDConfig 极速高清转码参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnhanceConfig $EnhanceConfig 音视频增强配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -119,6 +131,11 @@ class AdaptiveStreamTemplate extends AbstractModel
         if (array_key_exists("TEHDConfig",$param) and $param["TEHDConfig"] !== null) {
             $this->TEHDConfig = new TEHDConfig();
             $this->TEHDConfig->deserialize($param["TEHDConfig"]);
+        }
+
+        if (array_key_exists("EnhanceConfig",$param) and $param["EnhanceConfig"] !== null) {
+            $this->EnhanceConfig = new EnhanceConfig();
+            $this->EnhanceConfig->deserialize($param["EnhanceConfig"]);
         }
     }
 }

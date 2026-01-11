@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioTemplate(AudioTemplateInfo $AudioTemplate) 设置音频流配置参数，当 RemoveAudio 为 0，该字段必填。
  * @method TEHDConfig getTEHDConfig() 获取极速高清转码参数。
  * @method void setTEHDConfig(TEHDConfig $TEHDConfig) 设置极速高清转码参数。
+ * @method EnhanceConfig getEnhanceConfig() 获取音视频增强配置。
+ * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) 设置音视频增强配置。
  * @method string getSegmentType() 获取切片类型，当 Container 为 hls 时有效，可选值：
 <li>ts：ts 切片；</li>
 <li>fmp4：fmp4 切片。</li>
@@ -113,6 +115,11 @@ class CreateTranscodeTemplateRequest extends AbstractModel
     public $TEHDConfig;
 
     /**
+     * @var EnhanceConfig 音视频增强配置。
+     */
+    public $EnhanceConfig;
+
+    /**
      * @var string 切片类型，当 Container 为 hls 时有效，可选值：
 <li>ts：ts 切片；</li>
 <li>fmp4：fmp4 切片。</li>
@@ -136,6 +143,7 @@ class CreateTranscodeTemplateRequest extends AbstractModel
      * @param VideoTemplateInfo $VideoTemplate 视频流配置参数，当 RemoveVideo 为 0，该字段必填。
      * @param AudioTemplateInfo $AudioTemplate 音频流配置参数，当 RemoveAudio 为 0，该字段必填。
      * @param TEHDConfig $TEHDConfig 极速高清转码参数。
+     * @param EnhanceConfig $EnhanceConfig 音视频增强配置。
      * @param string $SegmentType 切片类型，当 Container 为 hls 时有效，可选值：
 <li>ts：ts 切片；</li>
 <li>fmp4：fmp4 切片。</li>
@@ -191,6 +199,11 @@ class CreateTranscodeTemplateRequest extends AbstractModel
         if (array_key_exists("TEHDConfig",$param) and $param["TEHDConfig"] !== null) {
             $this->TEHDConfig = new TEHDConfig();
             $this->TEHDConfig->deserialize($param["TEHDConfig"]);
+        }
+
+        if (array_key_exists("EnhanceConfig",$param) and $param["EnhanceConfig"] !== null) {
+            $this->EnhanceConfig = new EnhanceConfig();
+            $this->EnhanceConfig->deserialize($param["EnhanceConfig"]);
         }
 
         if (array_key_exists("SegmentType",$param) and $param["SegmentType"] !== null) {

@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTEHDConfig(TEHDConfig $TEHDConfig) 设置极速高清转码参数。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method EnhanceConfig getEnhanceConfig() 获取音视频增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) 设置音视频增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerType() 获取封装格式过滤条件，可选值：
 <li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li>
 <li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
@@ -127,6 +131,12 @@ class TranscodeTemplate extends AbstractModel
     public $TEHDConfig;
 
     /**
+     * @var EnhanceConfig 音视频增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnhanceConfig;
+
+    /**
      * @var string 封装格式过滤条件，可选值：
 <li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li>
 <li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
@@ -165,6 +175,8 @@ class TranscodeTemplate extends AbstractModel
      * @param VideoTemplateInfo $VideoTemplate 视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
      * @param AudioTemplateInfo $AudioTemplate 音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
      * @param TEHDConfig $TEHDConfig 极速高清转码参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnhanceConfig $EnhanceConfig 音视频增强配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerType 封装格式过滤条件，可选值：
 <li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li>
@@ -227,6 +239,11 @@ class TranscodeTemplate extends AbstractModel
         if (array_key_exists("TEHDConfig",$param) and $param["TEHDConfig"] !== null) {
             $this->TEHDConfig = new TEHDConfig();
             $this->TEHDConfig->deserialize($param["TEHDConfig"]);
+        }
+
+        if (array_key_exists("EnhanceConfig",$param) and $param["EnhanceConfig"] !== null) {
+            $this->EnhanceConfig = new EnhanceConfig();
+            $this->EnhanceConfig->deserialize($param["EnhanceConfig"]);
         }
 
         if (array_key_exists("ContainerType",$param) and $param["ContainerType"] !== null) {

@@ -46,6 +46,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
  * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：100。
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：10，最大值：100。
+ * @method string getEnhanceType() 获取增强类型，可选值：
+<li>VideoEnhance（仅视频增强）</li>
+<li>AudioEnhance（仅音频增强）</li>
+<li>AudioVideoEnhance（音视频增强）</li>
+<li>AnyEnhance（包括仅视频增强、仅音频增强、音视频增强）</li>
+<li>None（非增强）</li>
+ * @method void setEnhanceType(string $EnhanceType) 设置增强类型，可选值：
+<li>VideoEnhance（仅视频增强）</li>
+<li>AudioEnhance（仅音频增强）</li>
+<li>AudioVideoEnhance（音视频增强）</li>
+<li>AnyEnhance（包括仅视频增强、仅音频增强、音视频增强）</li>
+<li>None（非增强）</li>
+ * @method string getEnhanceScenarioType() 获取增强场景配置，可选值： <li>common（通用），通用增强参数，适用于各种视频类型的基础优化参数，提升整体画质。</li> <li>AIGC，整体分辨率提升，利用AI技术提升视频整体分辨率，增强画面清晰度。</li> <li>short_play（短剧），增强面部与字幕细节，突出人物面部表情细节和字幕清晰度，提升观剧体验。</li> <li>short_video（短视频），优化复杂多样的画质问题，针对短视频的复杂场景，优化画质，解决多种视觉问题。</li> <li>game（游戏视频），修复运动模糊，提升细节，重点提升游戏细节清晰度，恢复运动模糊区域，使游戏画面内容更清晰，更丰富。</li> <li>HD_movie_series（超高清影视剧），获得超高清流畅效果，针对广电/OTT超高清视频的诉求，生成4K 60fps HDR的超高清标准视频。支持广电场景格式标准要求。</li> <li>LQ_material（低清素材/老片修复），整体分辨率提升，针对老旧视频由于拍摄年代较久存在的分辨率不足、模糊失真、划痕损伤和色温等问题进行专门优化。</li> <li>lecture（秀场/电商/大会/讲座），美化提升面部效果，针对秀场/电商/大会/讲座等存在人物进行讲解的场景，进行人脸区域、噪声消除、毛刺处理的专门优化。</li>
+ * @method void setEnhanceScenarioType(string $EnhanceScenarioType) 设置增强场景配置，可选值： <li>common（通用），通用增强参数，适用于各种视频类型的基础优化参数，提升整体画质。</li> <li>AIGC，整体分辨率提升，利用AI技术提升视频整体分辨率，增强画面清晰度。</li> <li>short_play（短剧），增强面部与字幕细节，突出人物面部表情细节和字幕清晰度，提升观剧体验。</li> <li>short_video（短视频），优化复杂多样的画质问题，针对短视频的复杂场景，优化画质，解决多种视觉问题。</li> <li>game（游戏视频），修复运动模糊，提升细节，重点提升游戏细节清晰度，恢复运动模糊区域，使游戏画面内容更清晰，更丰富。</li> <li>HD_movie_series（超高清影视剧），获得超高清流畅效果，针对广电/OTT超高清视频的诉求，生成4K 60fps HDR的超高清标准视频。支持广电场景格式标准要求。</li> <li>LQ_material（低清素材/老片修复），整体分辨率提升，针对老旧视频由于拍摄年代较久存在的分辨率不足、模糊失真、划痕损伤和色温等问题进行专门优化。</li> <li>lecture（秀场/电商/大会/讲座），美化提升面部效果，针对秀场/电商/大会/讲座等存在人物进行讲解的场景，进行人脸区域、噪声消除、毛刺处理的专门优化。</li>
  */
 class DescribeTranscodeTemplatesRequest extends AbstractModel
 {
@@ -91,6 +105,21 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 增强类型，可选值：
+<li>VideoEnhance（仅视频增强）</li>
+<li>AudioEnhance（仅音频增强）</li>
+<li>AudioVideoEnhance（音视频增强）</li>
+<li>AnyEnhance（包括仅视频增强、仅音频增强、音视频增强）</li>
+<li>None（非增强）</li>
+     */
+    public $EnhanceType;
+
+    /**
+     * @var string 增强场景配置，可选值： <li>common（通用），通用增强参数，适用于各种视频类型的基础优化参数，提升整体画质。</li> <li>AIGC，整体分辨率提升，利用AI技术提升视频整体分辨率，增强画面清晰度。</li> <li>short_play（短剧），增强面部与字幕细节，突出人物面部表情细节和字幕清晰度，提升观剧体验。</li> <li>short_video（短视频），优化复杂多样的画质问题，针对短视频的复杂场景，优化画质，解决多种视觉问题。</li> <li>game（游戏视频），修复运动模糊，提升细节，重点提升游戏细节清晰度，恢复运动模糊区域，使游戏画面内容更清晰，更丰富。</li> <li>HD_movie_series（超高清影视剧），获得超高清流畅效果，针对广电/OTT超高清视频的诉求，生成4K 60fps HDR的超高清标准视频。支持广电场景格式标准要求。</li> <li>LQ_material（低清素材/老片修复），整体分辨率提升，针对老旧视频由于拍摄年代较久存在的分辨率不足、模糊失真、划痕损伤和色温等问题进行专门优化。</li> <li>lecture（秀场/电商/大会/讲座），美化提升面部效果，针对秀场/电商/大会/讲座等存在人物进行讲解的场景，进行人脸区域、噪声消除、毛刺处理的专门优化。</li>
+     */
+    public $EnhanceScenarioType;
+
+    /**
      * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      * @param array $Definitions 转码模板唯一标识过滤条件，数组长度限制：100。
      * @param string $Type 模板类型过滤条件，可选值：
@@ -104,6 +133,13 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
 <li>TEHD：极速高清模板。</li>
      * @param integer $Offset 分页偏移量，默认值：0。
      * @param integer $Limit 返回记录条数，默认值：10，最大值：100。
+     * @param string $EnhanceType 增强类型，可选值：
+<li>VideoEnhance（仅视频增强）</li>
+<li>AudioEnhance（仅音频增强）</li>
+<li>AudioVideoEnhance（音视频增强）</li>
+<li>AnyEnhance（包括仅视频增强、仅音频增强、音视频增强）</li>
+<li>None（非增强）</li>
+     * @param string $EnhanceScenarioType 增强场景配置，可选值： <li>common（通用），通用增强参数，适用于各种视频类型的基础优化参数，提升整体画质。</li> <li>AIGC，整体分辨率提升，利用AI技术提升视频整体分辨率，增强画面清晰度。</li> <li>short_play（短剧），增强面部与字幕细节，突出人物面部表情细节和字幕清晰度，提升观剧体验。</li> <li>short_video（短视频），优化复杂多样的画质问题，针对短视频的复杂场景，优化画质，解决多种视觉问题。</li> <li>game（游戏视频），修复运动模糊，提升细节，重点提升游戏细节清晰度，恢复运动模糊区域，使游戏画面内容更清晰，更丰富。</li> <li>HD_movie_series（超高清影视剧），获得超高清流畅效果，针对广电/OTT超高清视频的诉求，生成4K 60fps HDR的超高清标准视频。支持广电场景格式标准要求。</li> <li>LQ_material（低清素材/老片修复），整体分辨率提升，针对老旧视频由于拍摄年代较久存在的分辨率不足、模糊失真、划痕损伤和色温等问题进行专门优化。</li> <li>lecture（秀场/电商/大会/讲座），美化提升面部效果，针对秀场/电商/大会/讲座等存在人物进行讲解的场景，进行人脸区域、噪声消除、毛刺处理的专门优化。</li>
      */
     function __construct()
     {
@@ -144,6 +180,14 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("EnhanceType",$param) and $param["EnhanceType"] !== null) {
+            $this->EnhanceType = $param["EnhanceType"];
+        }
+
+        if (array_key_exists("EnhanceScenarioType",$param) and $param["EnhanceScenarioType"] !== null) {
+            $this->EnhanceScenarioType = $param["EnhanceScenarioType"];
         }
     }
 }

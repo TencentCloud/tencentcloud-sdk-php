@@ -18,43 +18,51 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 音频降噪控制信息
+ * 大模型增强配置。
  *
- * @method string getSwitch() 获取音频降噪控制开关，可选值：
-<li>ON：开启音频降噪；</li>
-<li>OFF：关闭音频降噪。</li>
- * @method void setSwitch(string $Switch) 设置音频降噪控制开关，可选值：
-<li>ON：开启音频降噪；</li>
-<li>OFF：关闭音频降噪。</li>
- * @method string getType() 获取音频降噪类型，仅当音频降噪控制开关为 ON 时有效，可选值：
-<li>normal：正常音频降噪；</li>
+ * @method string getSwitch() 获取大模型增强开关，可选值：
+<li>ON：开启；</li>
+<li>OFF：关闭。</li>
+ * @method void setSwitch(string $Switch) 设置大模型增强开关，可选值：
+<li>ON：开启；</li>
+<li>OFF：关闭。</li>
+ * @method string getType() 获取强度类型，仅当大模型增强控制开关为 ON 时有效，可选值：
+<li>weak：弱；</li>
+<li>normal：正常；</li>
+<li>strong：强。</li>
 默认值：normal。
- * @method void setType(string $Type) 设置音频降噪类型，仅当音频降噪控制开关为 ON 时有效，可选值：
-<li>normal：正常音频降噪；</li>
+ * @method void setType(string $Type) 设置强度类型，仅当大模型增强控制开关为 ON 时有效，可选值：
+<li>weak：弱；</li>
+<li>normal：正常；</li>
+<li>strong：强。</li>
 默认值：normal。
  */
-class AudioDenoiseInfo extends AbstractModel
+class DiffusionEnhanceInfo extends AbstractModel
 {
     /**
-     * @var string 音频降噪控制开关，可选值：
-<li>ON：开启音频降噪；</li>
-<li>OFF：关闭音频降噪。</li>
+     * @var string 大模型增强开关，可选值：
+<li>ON：开启；</li>
+<li>OFF：关闭。</li>
      */
     public $Switch;
 
     /**
-     * @var string 音频降噪类型，仅当音频降噪控制开关为 ON 时有效，可选值：
-<li>normal：正常音频降噪；</li>
+     * @var string 强度类型，仅当大模型增强控制开关为 ON 时有效，可选值：
+<li>weak：弱；</li>
+<li>normal：正常；</li>
+<li>strong：强。</li>
 默认值：normal。
      */
     public $Type;
 
     /**
-     * @param string $Switch 音频降噪控制开关，可选值：
-<li>ON：开启音频降噪；</li>
-<li>OFF：关闭音频降噪。</li>
-     * @param string $Type 音频降噪类型，仅当音频降噪控制开关为 ON 时有效，可选值：
-<li>normal：正常音频降噪；</li>
+     * @param string $Switch 大模型增强开关，可选值：
+<li>ON：开启；</li>
+<li>OFF：关闭。</li>
+     * @param string $Type 强度类型，仅当大模型增强控制开关为 ON 时有效，可选值：
+<li>weak：弱；</li>
+<li>normal：正常；</li>
+<li>strong：强。</li>
 默认值：normal。
      */
     function __construct()

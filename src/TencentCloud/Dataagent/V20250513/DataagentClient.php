@@ -35,7 +35,9 @@ use TencentCloud\Dataagent\V20250513\Models as Models;
  * @method Models\GetUploadJobDetailsResponse GetUploadJobDetails(Models\GetUploadJobDetailsRequest $req) 查询上传任务
  * @method Models\ModifyChunkResponse ModifyChunk(Models\ModifyChunkRequest $req) 编辑修改分片
  * @method Models\ModifyKnowledgeBaseResponse ModifyKnowledgeBase(Models\ModifyKnowledgeBaseRequest $req) 操作知识库
+ * @method Models\ModifyUserAuthorityResponse ModifyUserAuthority(Models\ModifyUserAuthorityRequest $req) 修改对象权限
  * @method Models\QueryChunkListResponse QueryChunkList(Models\QueryChunkListRequest $req) 文档切片查询
+ * @method Models\QueryUserAuthorityResponse QueryUserAuthority(Models\QueryUserAuthorityRequest $req) 查询对象权限
  * @method Models\StopChatAIResponse StopChatAI(Models\StopChatAIRequest $req) 中断DataAgent的回答输出
  * @method Models\UploadAndCommitFileResponse UploadAndCommitFile(Models\UploadAndCommitFileRequest $req) 上传提交文件
  */

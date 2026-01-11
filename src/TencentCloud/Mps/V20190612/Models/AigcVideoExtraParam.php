@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 5. OS 仅文生视频支持, 16:9(默认), 9:16。
 
 注：关于具体模型支持的宽高比例，可查看具体模型官网介绍获取更完整描述。
+ * @method boolean getOffPeak() 获取错峰模型，目前仅支持Vidu模型。
+错峰模式下提交的任务，会在48小时内生成，未能完成的任务会被自动取消。
+ * @method void setOffPeak(boolean $OffPeak) 设置错峰模型，目前仅支持Vidu模型。
+错峰模式下提交的任务，会在48小时内生成，未能完成的任务会被自动取消。
  */
 class AigcVideoExtraParam extends AbstractModel
 {
@@ -92,6 +96,12 @@ class AigcVideoExtraParam extends AbstractModel
     public $AspectRatio;
 
     /**
+     * @var boolean 错峰模型，目前仅支持Vidu模型。
+错峰模式下提交的任务，会在48小时内生成，未能完成的任务会被自动取消。
+     */
+    public $OffPeak;
+
+    /**
      * @param string $Resolution 生成视频的分辨率，分辨率与选择模型及设置的视频时长相关。 
 
 不同模型支持的分辨率选项:
@@ -112,6 +122,8 @@ class AigcVideoExtraParam extends AbstractModel
 5. OS 仅文生视频支持, 16:9(默认), 9:16。
 
 注：关于具体模型支持的宽高比例，可查看具体模型官网介绍获取更完整描述。
+     * @param boolean $OffPeak 错峰模型，目前仅支持Vidu模型。
+错峰模式下提交的任务，会在48小时内生成，未能完成的任务会被自动取消。
      */
     function __construct()
     {
@@ -132,6 +144,10 @@ class AigcVideoExtraParam extends AbstractModel
 
         if (array_key_exists("AspectRatio",$param) and $param["AspectRatio"] !== null) {
             $this->AspectRatio = $param["AspectRatio"];
+        }
+
+        if (array_key_exists("OffPeak",$param) and $param["OffPeak"] !== null) {
+            $this->OffPeak = $param["OffPeak"];
         }
     }
 }

@@ -23,11 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSwitch() 获取画面超分控制开关，可选值：
 <li>ON：开启画面超分；</li>
 <li>OFF：关闭画面超分。</li>
-当开启画面超分时，默认2倍超分。
  * @method void setSwitch(string $Switch) 设置画面超分控制开关，可选值：
 <li>ON：开启画面超分；</li>
 <li>OFF：关闭画面超分。</li>
-当开启画面超分时，默认2倍超分。
  * @method string getType() 获取画面超分类型，仅当画面超分控制开关为 ON 时有效，可选值：
 <li>lq：针对低清晰度有较多噪声视频的超分；</li>
 <li>hq：针对高清晰度视频超分。</li>
@@ -47,7 +45,6 @@ class SuperResolutionInfo extends AbstractModel
      * @var string 画面超分控制开关，可选值：
 <li>ON：开启画面超分；</li>
 <li>OFF：关闭画面超分。</li>
-当开启画面超分时，默认2倍超分。
      */
     public $Switch;
 
@@ -69,7 +66,6 @@ class SuperResolutionInfo extends AbstractModel
      * @param string $Switch 画面超分控制开关，可选值：
 <li>ON：开启画面超分；</li>
 <li>OFF：关闭画面超分。</li>
-当开启画面超分时，默认2倍超分。
      * @param string $Type 画面超分类型，仅当画面超分控制开关为 ON 时有效，可选值：
 <li>lq：针对低清晰度有较多噪声视频的超分；</li>
 <li>hq：针对高清晰度视频超分。</li>

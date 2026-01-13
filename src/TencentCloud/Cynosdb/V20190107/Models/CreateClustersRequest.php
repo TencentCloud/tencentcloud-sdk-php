@@ -158,6 +158,8 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
  * @method void setAutoArchive(string $AutoArchive) 设置是否自动归档
  * @method integer getAutoArchiveDelayHours() 获取暂停后的归档处理时间
  * @method void setAutoArchiveDelayHours(integer $AutoArchiveDelayHours) 设置暂停后的归档处理时间
+ * @method string getCynosVersion() 获取内核小版本号
+ * @method void setCynosVersion(string $CynosVersion) 设置内核小版本号
  */
 class CreateClustersRequest extends AbstractModel
 {
@@ -411,6 +413,11 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     public $AutoArchiveDelayHours;
 
     /**
+     * @var string 内核小版本号
+     */
+    public $CynosVersion;
+
+    /**
      * @param string $Zone 可用区
      * @param string $VpcId 所属VPC网络ID
      * @param string $SubnetId 所属子网ID
@@ -480,6 +487,7 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      * @param ProxyConfig $ProxyConfig 数据库代理配置
      * @param string $AutoArchive 是否自动归档
      * @param integer $AutoArchiveDelayHours 暂停后的归档处理时间
+     * @param string $CynosVersion 内核小版本号
      */
     function __construct()
     {
@@ -688,6 +696,10 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
 
         if (array_key_exists("AutoArchiveDelayHours",$param) and $param["AutoArchiveDelayHours"] !== null) {
             $this->AutoArchiveDelayHours = $param["AutoArchiveDelayHours"];
+        }
+
+        if (array_key_exists("CynosVersion",$param) and $param["CynosVersion"] !== null) {
+            $this->CynosVersion = $param["CynosVersion"];
         }
     }
 }

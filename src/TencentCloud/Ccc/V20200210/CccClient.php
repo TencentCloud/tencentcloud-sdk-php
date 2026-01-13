@@ -32,9 +32,9 @@ use TencentCloud\Ccc\V20200210\Models as Models;
  * @method Models\CreateAIAgentCallResponse CreateAIAgentCall(Models\CreateAIAgentCallRequest $req) 用于创建**一次性的智能体外呼通话**。你可以在管理端-智能体管理中，新建语音智能体，进行 [对话流程配置](https://cloud.tencent.com/document/product/679/119796) 。该接口可调用配置完成的智能体发起单次的外呼任务。若需创建批量智能体外呼任务，请参考文档 [创建自动外呼任务](https://cloud.tencent.com/document/product/679/69194)。
 
 该功能需购买语音智能体通话套餐，并且仅限自有电话号码使用。详情请参考 [语音智能体通话购买指引](https://cloud.tencent.com/document/product/679/125953)。
- * @method Models\CreateAICallResponse CreateAICall(Models\CreateAICallRequest $req) 用于调用AI模型发起外呼通话，仅限自有电话号码使用，目前开通高级版座席**限时**免费体验。
+ * @method Models\CreateAICallResponse CreateAICall(Models\CreateAICallRequest $req) 用于 **直接调用AI模型** 发起 **单次** 外呼通话，支持通过API参数直接配置模型、提示词、语音等全部通话要素。
 
-发起通话前，请先确认您的AI模型是否兼容 OpenAI、Azure 或 Minimax 协议，并前往模型服务商网站获取相关鉴权信息。 具体功能说明请参考文档 [腾讯云联络中心AI通话平台](https://cloud.tencent.com/document/product/679/112100)。
+该功能需购买语音智能体通话套餐，并且仅限自有电话号码使用。详情请参考 [语音智能体通话购买指引](https://cloud.tencent.com/document/product/679/125953)。
  * @method Models\CreateAdminURLResponse CreateAdminURL(Models\CreateAdminURLRequest $req) 创建管理端访问链接
  * @method Models\CreateAgentCruiseDialingCampaignResponse CreateAgentCruiseDialingCampaign(Models\CreateAgentCruiseDialingCampaignRequest $req) 座席巡航式外呼。
  * @method Models\CreateAutoCalloutTaskResponse CreateAutoCalloutTask(Models\CreateAutoCalloutTaskRequest $req) 用于**创建批量自动外呼通话**，系统将根据任务配置，自动向指定的**被叫号码列表**发起外呼通话。该接口可调用配置完成的智能体发起批量的外呼任务，你可以在管理端-智能体管理中，新建语音智能体，进行 [对话流程配置](https://cloud.tencent.com/document/product/679/119796)。若需创建单次智能体外呼任务，请参考文档 [创建单次智能体通话](https://cloud.tencent.com/document/product/679/115681)。
@@ -69,7 +69,8 @@ use TencentCloud\Ccc\V20200210\Models as Models;
 - 语音合成（TTS）时延：统计文本转换为语音音频的合成耗时。
  * @method Models\DescribeActiveCarrierPrivilegeNumberResponse DescribeActiveCarrierPrivilegeNumber(Models\DescribeActiveCarrierPrivilegeNumberRequest $req) 查询生效运营商白名单规则
  * @method Models\DescribeAgentCruiseDialingCampaignResponse DescribeAgentCruiseDialingCampaign(Models\DescribeAgentCruiseDialingCampaignRequest $req) 查询 座席巡航式外呼任务
- * @method Models\DescribeAutoCalloutTaskResponse DescribeAutoCalloutTask(Models\DescribeAutoCalloutTaskRequest $req) 查询自动外呼任务详情
+ * @method Models\DescribeAutoCalloutTaskResponse DescribeAutoCalloutTask(Models\DescribeAutoCalloutTaskRequest $req) 用于通过 TaskId 查询**自动外呼任务的详细信息**，包括任务基础配置、起止时间、外呼名单、执行状态以及实际通话情况等。
+该接口通常与 [创建批量自动外呼任务](https://cloud.tencent.com/document/product/679/69194) 配合使用，用于在任务创建后查看任务配置是否生效、任务当前状态，以及后续执行过程中的实时进展。
  * @method Models\DescribeAutoCalloutTasksResponse DescribeAutoCalloutTasks(Models\DescribeAutoCalloutTasksRequest $req) 批量查询自动外呼任务
  * @method Models\DescribeCCCBuyInfoListResponse DescribeCCCBuyInfoList(Models\DescribeCCCBuyInfoListRequest $req) 获取用户购买信息列表
  * @method Models\DescribeCallInMetricsResponse DescribeCallInMetrics(Models\DescribeCallInMetricsRequest $req) 获取呼入实时数据统计指标

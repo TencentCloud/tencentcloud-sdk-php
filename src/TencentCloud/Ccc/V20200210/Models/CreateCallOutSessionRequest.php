@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSdkAppId() 获取应用 ID
  * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID
- * @method string getUserId() 获取客服用户 ID，一般为客服邮箱，确保已经绑定了手机号 https://cloud.tencent.com/document/product/679/76067#.E6.AD.A5.E9.AA.A42.EF.BC.9A.E5.AE.8C.E5.96.84.E8.B4.A6.E5.8F.B7.E4.BF.A1.E6.81.AF
- * @method void setUserId(string $UserId) 设置客服用户 ID，一般为客服邮箱，确保已经绑定了手机号 https://cloud.tencent.com/document/product/679/76067#.E6.AD.A5.E9.AA.A42.EF.BC.9A.E5.AE.8C.E5.96.84.E8.B4.A6.E5.8F.B7.E4.BF.A1.E6.81.AF
+ * @method string getUserId() 获取座席邮箱，确保已经绑定了手机号 https://cloud.tencent.com/document/product/679/76067#.E6.AD.A5.E9.AA.A42.EF.BC.9A.E5.AE.8C.E5.96.84.E8.B4.A6.E5.8F.B7.E4.BF.A1.E6.81.AF
+ * @method void setUserId(string $UserId) 设置座席邮箱，确保已经绑定了手机号 https://cloud.tencent.com/document/product/679/76067#.E6.AD.A5.E9.AA.A42.EF.BC.9A.E5.AE.8C.E5.96.84.E8.B4.A6.E5.8F.B7.E4.BF.A1.E6.81.AF
  * @method string getCallee() 获取被叫号码，须带 0086 前缀
  * @method void setCallee(string $Callee) 设置被叫号码，须带 0086 前缀
  * @method string getCaller() 获取主叫号码（废弃，使用Callers），须带 0086 前缀
@@ -45,7 +45,7 @@ class CreateCallOutSessionRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var string 客服用户 ID，一般为客服邮箱，确保已经绑定了手机号 https://cloud.tencent.com/document/product/679/76067#.E6.AD.A5.E9.AA.A42.EF.BC.9A.E5.AE.8C.E5.96.84.E8.B4.A6.E5.8F.B7.E4.BF.A1.E6.81.AF
+     * @var string 座席邮箱，确保已经绑定了手机号 https://cloud.tencent.com/document/product/679/76067#.E6.AD.A5.E9.AA.A42.EF.BC.9A.E5.AE.8C.E5.96.84.E8.B4.A6.E5.8F.B7.E4.BF.A1.E6.81.AF
      */
     public $UserId;
 
@@ -82,7 +82,7 @@ class CreateCallOutSessionRequest extends AbstractModel
 
     /**
      * @param integer $SdkAppId 应用 ID
-     * @param string $UserId 客服用户 ID，一般为客服邮箱，确保已经绑定了手机号 https://cloud.tencent.com/document/product/679/76067#.E6.AD.A5.E9.AA.A42.EF.BC.9A.E5.AE.8C.E5.96.84.E8.B4.A6.E5.8F.B7.E4.BF.A1.E6.81.AF
+     * @param string $UserId 座席邮箱，确保已经绑定了手机号 https://cloud.tencent.com/document/product/679/76067#.E6.AD.A5.E9.AA.A42.EF.BC.9A.E5.AE.8C.E5.96.84.E8.B4.A6.E5.8F.B7.E4.BF.A1.E6.81.AF
      * @param string $Callee 被叫号码，须带 0086 前缀
      * @param string $Caller 主叫号码（废弃，使用Callers），须带 0086 前缀
      * @param array $Callers 指定主叫号码列表，如果前面的号码失败了会自动换成下一个号码，须带 0086 前缀

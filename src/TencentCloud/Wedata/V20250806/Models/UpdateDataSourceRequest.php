@@ -35,9 +35,9 @@ INSTANCE(云实例)
 mysql: 自建实例
 {
     "deployType": "CONNSTR_CVMDB",
-    "url": "jdbc:mysql://1.1.1.1:1111/database",
+    "url": "jdbc:mysql://1.1.1.1:1111/example#test#123456",
     "username": "root",
-    "password": "root",
+    "password": "example#test#123456",
     "region": "ap-shanghai",
     "vpcId": "vpc-kprq42yo",
     "type": "MYSQL"
@@ -48,16 +48,16 @@ mysql: 云实例
     "db": "db",
     "region": "ap-shanghai",
     "username": "msyql",
-    "password": "mysql",
+    "password": "example#test#123456",
     "deployType": "INSTANCE",
     "type": "TENCENT_MYSQL"
 }
 sql_server: 
 {
     "deployType": "CONNSTR_PUBLICDB",
-    "url": "jdbc:sqlserver://1.1.1.1:223;DatabaseName=database",
+    "url": "jdbc:sqlserver://1.1.1.1:223;example#test#123456",
     "username": "user_1",
-    "password": "pass_2",
+    "password": "example#test#123456",
     "type": "SQLSERVER"
 }
 redis:
@@ -67,7 +67,7 @@ redis:
 {
     "deployType": "CONNSTR_PUBLICDB",
     "username":""
-    "password": "pass",
+    "password": "example#test#123456",
     "ip": "1.1.1.1",
     "port": "6379",
     "redisType": "NO_ACCOUT",
@@ -76,9 +76,9 @@ redis:
 oracle: 
 {
     "deployType": "CONNSTR_CVMDB",
-    "url": "jdbc:oracle:thin:@1.1.1.1:1521:prod",
+    "url": "jdbc:oracle:thin:@1.1.1.1:1521:example#test#123456",
     "username": "oracle",
-    "password": "pass",
+    "password": "example#test#123456",
     "region": "ap-shanghai",
     "vpcId": "vpc-kprq42yo",
     "type": "ORACLE"
@@ -95,16 +95,16 @@ mongodb:
     "db": "admin",
     "deployType": "CONNSTR_PUBLICDB",
     "username": "user",
-    "password": "pass",
+    "password": "example#test#123456",
     "type": "MONGODB",
     "host": "1.1.1.1:9200"
 }
 postgresql:
 {
     "deployType": "CONNSTR_PUBLICDB",
-    "url": "jdbc:postgresql://1.1.1.1:1921/database",
+    "url": "jdbc:postgresql://1.1.1.1:1921/example#test#123456",
     "username": "user",
-    "password": "pass",
+    "password": "example#test#123456",
     "type": "POSTGRE"
 }
 kafka:
@@ -132,7 +132,7 @@ cos:
     "region": "ap-shanghai",
     "deployType": "INSTANCE",
     "secretId": "aaaaa",
-    "secretKey": "sssssss",
+    "secretKey": "example#test#123456",
     "bucket": "aaa",
     "type": "COS"
 }
@@ -149,9 +149,9 @@ INSTANCE(云实例)
 mysql: 自建实例
 {
     "deployType": "CONNSTR_CVMDB",
-    "url": "jdbc:mysql://1.1.1.1:1111/database",
+    "url": "jdbc:mysql://1.1.1.1:1111/example#test#123456",
     "username": "root",
-    "password": "root",
+    "password": "example#test#123456",
     "region": "ap-shanghai",
     "vpcId": "vpc-kprq42yo",
     "type": "MYSQL"
@@ -162,16 +162,16 @@ mysql: 云实例
     "db": "db",
     "region": "ap-shanghai",
     "username": "msyql",
-    "password": "mysql",
+    "password": "example#test#123456",
     "deployType": "INSTANCE",
     "type": "TENCENT_MYSQL"
 }
 sql_server: 
 {
     "deployType": "CONNSTR_PUBLICDB",
-    "url": "jdbc:sqlserver://1.1.1.1:223;DatabaseName=database",
+    "url": "jdbc:sqlserver://1.1.1.1:223;example#test#123456",
     "username": "user_1",
-    "password": "pass_2",
+    "password": "example#test#123456",
     "type": "SQLSERVER"
 }
 redis:
@@ -181,7 +181,7 @@ redis:
 {
     "deployType": "CONNSTR_PUBLICDB",
     "username":""
-    "password": "pass",
+    "password": "example#test#123456",
     "ip": "1.1.1.1",
     "port": "6379",
     "redisType": "NO_ACCOUT",
@@ -190,9 +190,9 @@ redis:
 oracle: 
 {
     "deployType": "CONNSTR_CVMDB",
-    "url": "jdbc:oracle:thin:@1.1.1.1:1521:prod",
+    "url": "jdbc:oracle:thin:@1.1.1.1:1521:example#test#123456",
     "username": "oracle",
-    "password": "pass",
+    "password": "example#test#123456",
     "region": "ap-shanghai",
     "vpcId": "vpc-kprq42yo",
     "type": "ORACLE"
@@ -209,16 +209,16 @@ mongodb:
     "db": "admin",
     "deployType": "CONNSTR_PUBLICDB",
     "username": "user",
-    "password": "pass",
+    "password": "example#test#123456",
     "type": "MONGODB",
     "host": "1.1.1.1:9200"
 }
 postgresql:
 {
     "deployType": "CONNSTR_PUBLICDB",
-    "url": "jdbc:postgresql://1.1.1.1:1921/database",
+    "url": "jdbc:postgresql://1.1.1.1:1921/example#test#123456",
     "username": "user",
-    "password": "pass",
+    "password": "example#test#123456",
     "type": "POSTGRE"
 }
 kafka:
@@ -246,7 +246,7 @@ cos:
     "region": "ap-shanghai",
     "deployType": "INSTANCE",
     "secretId": "aaaaa",
-    "secretKey": "sssssss",
+    "secretKey": "example#test#123456",
     "bucket": "aaa",
     "type": "COS"
 }
@@ -287,9 +287,9 @@ INSTANCE(云实例)
 mysql: 自建实例
 {
     "deployType": "CONNSTR_CVMDB",
-    "url": "jdbc:mysql://1.1.1.1:1111/database",
+    "url": "jdbc:mysql://1.1.1.1:1111/example#test#123456",
     "username": "root",
-    "password": "root",
+    "password": "example#test#123456",
     "region": "ap-shanghai",
     "vpcId": "vpc-kprq42yo",
     "type": "MYSQL"
@@ -300,16 +300,16 @@ mysql: 云实例
     "db": "db",
     "region": "ap-shanghai",
     "username": "msyql",
-    "password": "mysql",
+    "password": "example#test#123456",
     "deployType": "INSTANCE",
     "type": "TENCENT_MYSQL"
 }
 sql_server: 
 {
     "deployType": "CONNSTR_PUBLICDB",
-    "url": "jdbc:sqlserver://1.1.1.1:223;DatabaseName=database",
+    "url": "jdbc:sqlserver://1.1.1.1:223;example#test#123456",
     "username": "user_1",
-    "password": "pass_2",
+    "password": "example#test#123456",
     "type": "SQLSERVER"
 }
 redis:
@@ -319,7 +319,7 @@ redis:
 {
     "deployType": "CONNSTR_PUBLICDB",
     "username":""
-    "password": "pass",
+    "password": "example#test#123456",
     "ip": "1.1.1.1",
     "port": "6379",
     "redisType": "NO_ACCOUT",
@@ -328,9 +328,9 @@ redis:
 oracle: 
 {
     "deployType": "CONNSTR_CVMDB",
-    "url": "jdbc:oracle:thin:@1.1.1.1:1521:prod",
+    "url": "jdbc:oracle:thin:@1.1.1.1:1521:example#test#123456",
     "username": "oracle",
-    "password": "pass",
+    "password": "example#test#123456",
     "region": "ap-shanghai",
     "vpcId": "vpc-kprq42yo",
     "type": "ORACLE"
@@ -347,16 +347,16 @@ mongodb:
     "db": "admin",
     "deployType": "CONNSTR_PUBLICDB",
     "username": "user",
-    "password": "pass",
+    "password": "example#test#123456",
     "type": "MONGODB",
     "host": "1.1.1.1:9200"
 }
 postgresql:
 {
     "deployType": "CONNSTR_PUBLICDB",
-    "url": "jdbc:postgresql://1.1.1.1:1921/database",
+    "url": "jdbc:postgresql://1.1.1.1:1921/example#test#123456",
     "username": "user",
-    "password": "pass",
+    "password": "example#test#123456",
     "type": "POSTGRE"
 }
 kafka:
@@ -384,7 +384,7 @@ cos:
     "region": "ap-shanghai",
     "deployType": "INSTANCE",
     "secretId": "aaaaa",
-    "secretKey": "sssssss",
+    "secretKey": "example#test#123456",
     "bucket": "aaa",
     "type": "COS"
 }
@@ -432,9 +432,9 @@ INSTANCE(云实例)
 mysql: 自建实例
 {
     "deployType": "CONNSTR_CVMDB",
-    "url": "jdbc:mysql://1.1.1.1:1111/database",
+    "url": "jdbc:mysql://1.1.1.1:1111/example#test#123456",
     "username": "root",
-    "password": "root",
+    "password": "example#test#123456",
     "region": "ap-shanghai",
     "vpcId": "vpc-kprq42yo",
     "type": "MYSQL"
@@ -445,16 +445,16 @@ mysql: 云实例
     "db": "db",
     "region": "ap-shanghai",
     "username": "msyql",
-    "password": "mysql",
+    "password": "example#test#123456",
     "deployType": "INSTANCE",
     "type": "TENCENT_MYSQL"
 }
 sql_server: 
 {
     "deployType": "CONNSTR_PUBLICDB",
-    "url": "jdbc:sqlserver://1.1.1.1:223;DatabaseName=database",
+    "url": "jdbc:sqlserver://1.1.1.1:223;example#test#123456",
     "username": "user_1",
-    "password": "pass_2",
+    "password": "example#test#123456",
     "type": "SQLSERVER"
 }
 redis:
@@ -464,7 +464,7 @@ redis:
 {
     "deployType": "CONNSTR_PUBLICDB",
     "username":""
-    "password": "pass",
+    "password": "example#test#123456",
     "ip": "1.1.1.1",
     "port": "6379",
     "redisType": "NO_ACCOUT",
@@ -473,9 +473,9 @@ redis:
 oracle: 
 {
     "deployType": "CONNSTR_CVMDB",
-    "url": "jdbc:oracle:thin:@1.1.1.1:1521:prod",
+    "url": "jdbc:oracle:thin:@1.1.1.1:1521:example#test#123456",
     "username": "oracle",
-    "password": "pass",
+    "password": "example#test#123456",
     "region": "ap-shanghai",
     "vpcId": "vpc-kprq42yo",
     "type": "ORACLE"
@@ -492,16 +492,16 @@ mongodb:
     "db": "admin",
     "deployType": "CONNSTR_PUBLICDB",
     "username": "user",
-    "password": "pass",
+    "password": "example#test#123456",
     "type": "MONGODB",
     "host": "1.1.1.1:9200"
 }
 postgresql:
 {
     "deployType": "CONNSTR_PUBLICDB",
-    "url": "jdbc:postgresql://1.1.1.1:1921/database",
+    "url": "jdbc:postgresql://1.1.1.1:1921/example#test#123456",
     "username": "user",
-    "password": "pass",
+    "password": "example#test#123456",
     "type": "POSTGRE"
 }
 kafka:
@@ -529,7 +529,7 @@ cos:
     "region": "ap-shanghai",
     "deployType": "INSTANCE",
     "secretId": "aaaaa",
-    "secretKey": "sssssss",
+    "secretKey": "example#test#123456",
     "bucket": "aaa",
     "type": "COS"
 }

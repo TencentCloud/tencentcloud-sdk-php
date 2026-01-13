@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
 4已结束：任务到期终止
  * @method integer getTaskId() 获取任务Id
  * @method void setTaskId(integer $TaskId) 设置任务Id
+ * @method integer getMaxRingTimeoutSecond() 获取最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+ * @method void setMaxRingTimeoutSecond(integer $MaxRingTimeoutSecond) 设置最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
  */
 class AutoCalloutTaskInfo extends AbstractModel
 {
@@ -98,6 +100,11 @@ class AutoCalloutTaskInfo extends AbstractModel
     public $TaskId;
 
     /**
+     * @var integer 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+     */
+    public $MaxRingTimeoutSecond;
+
+    /**
      * @param string $Name 任务名
      * @param integer $CalleeCount 被叫数量
      * @param array $Callers 主叫号码列表
@@ -112,6 +119,7 @@ class AutoCalloutTaskInfo extends AbstractModel
 3结束中：任务到期，但仍有部分呼叫未结束
 4已结束：任务到期终止
      * @param integer $TaskId 任务Id
+     * @param integer $MaxRingTimeoutSecond 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class AutoCalloutTaskInfo extends AbstractModel
 
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("MaxRingTimeoutSecond",$param) and $param["MaxRingTimeoutSecond"] !== null) {
+            $this->MaxRingTimeoutSecond = $param["MaxRingTimeoutSecond"];
         }
     }
 }

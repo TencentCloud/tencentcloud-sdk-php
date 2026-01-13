@@ -23,7 +23,6 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEngineType() 获取引擎模型类型。
 • 16k_zh：中文普通话通用；
 • 16k_en：英语；
-• 16k_yue：粤语；
 • 16k_id：印度尼西亚语；
 • 16k_fil：菲律宾语；
 • 16k_th：泰语；
@@ -37,7 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEngineType(string $EngineType) 设置引擎模型类型。
 • 16k_zh：中文普通话通用；
 • 16k_en：英语；
-• 16k_yue：粤语；
 • 16k_id：印度尼西亚语；
 • 16k_fil：菲律宾语；
 • 16k_th：泰语；
@@ -75,7 +73,6 @@ class CreateAsyncRecognitionTaskRequest extends AbstractModel
      * @var string 引擎模型类型。
 • 16k_zh：中文普通话通用；
 • 16k_en：英语；
-• 16k_yue：粤语；
 • 16k_id：印度尼西亚语；
 • 16k_fil：菲律宾语；
 • 16k_th：泰语；
@@ -143,7 +140,6 @@ class CreateAsyncRecognitionTaskRequest extends AbstractModel
      * @param string $EngineType 引擎模型类型。
 • 16k_zh：中文普通话通用；
 • 16k_en：英语；
-• 16k_yue：粤语；
 • 16k_id：印度尼西亚语；
 • 16k_fil：菲律宾语；
 • 16k_th：泰语；

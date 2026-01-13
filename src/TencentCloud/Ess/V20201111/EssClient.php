@@ -175,6 +175,11 @@ use TencentCloud\Ess\V20201111\Models as Models;
 ![image](https://qcloudimg.tencent-cloud.cn/raw/32f3526ad7152757202a7e4e760356db.jpg)
 跳过上传确认的嵌入页面长相如下：
 ![image](https://qcloudimg.tencent-cloud.cn/raw/c68047feddbc106e261870687b6ab89d.jpg)
+ * @method Models\CreateContractReviewChecklistWebUrlResponse CreateContractReviewChecklistWebUrl(Models\CreateContractReviewChecklistWebUrlRequest $req) 此接口（CreateContractReviewChecklistWebUrl）用来创建新建审查要点清单web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+
+适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
+
+注意:  `如果文件资源为word类型生成的链接不能进行iframe嵌入，需要在单独窗口打开`
  * @method Models\CreateContractReviewWebUrlResponse CreateContractReviewWebUrl(Models\CreateContractReviewWebUrlRequest $req) 此接口（CreateContractReviewWebUrl）用来创建合同审查web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
 
 适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
@@ -880,7 +885,22 @@ use TencentCloud\Ess\V20201111\Models as Models;
 
 嵌入页面长相如下：
 ![image](https://qcloudimg.tencent-cloud.cn/raw/c68047feddbc106e261870687b6ab89d.jpg)
+ * @method Models\DescribeContractReviewChecklistWebUrlResponse DescribeContractReviewChecklistWebUrl(Models\DescribeContractReviewChecklistWebUrlRequest $req) 此接口（DescribeContractReviewChecklistWebUrl）用来创建查看审查要点清单web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+
+适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
+
+注意:  `如果文件资源为word类型生成的链接不能进行iframe嵌入，需要在单独窗口打开`
+ * @method Models\DescribeContractReviewChecklistsWebUrlResponse DescribeContractReviewChecklistsWebUrl(Models\DescribeContractReviewChecklistsWebUrlRequest $req) 此接口（DescribeContractReviewChecklistsWebUrl）用来创建审查要点清单列表web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+
+适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
+
+注意:  `如果文件资源为word类型生成的链接不能进行iframe嵌入，需要在单独窗口打开`
  * @method Models\DescribeContractReviewTaskResponse DescribeContractReviewTask(Models\DescribeContractReviewTaskRequest $req) 本接口（DescribeContractReviewTask）用于获取合同审查任务详情，包括任务的状态和识别出的风险信息。
+ * @method Models\DescribeContractReviewTaskListWebUrlResponse DescribeContractReviewTaskListWebUrl(Models\DescribeContractReviewTaskListWebUrlRequest $req) 此接口（DescribeContractReviewTaskListWebUrl）用来创建合同审查记录列表web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+
+适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
+
+注意:  `如果文件资源为word类型生成的链接不能进行iframe嵌入，需要在单独窗口打开`
  * @method Models\DescribeContractReviewWebUrlResponse DescribeContractReviewWebUrl(Models\DescribeContractReviewWebUrlRequest $req) 此接口（DescribeContractReviewWebUrl）用来创建合同审查web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
 
 适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
@@ -1059,6 +1079,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 <ul><li>处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。</li>
 <li>如果此用户在开通时候绑定过个人自动签账号许可,  关闭此用户的自动签不会归还个人自动签账号许可的额度。</li></ul>
  * @method Models\ExportContractComparisonTaskResponse ExportContractComparisonTask(Models\ExportContractComparisonTaskRequest $req) 本接口（ExportContractComparisonTask）用于导出指定的合同对比任务的结果文件。任务完成后，用户可根据不同的使用场景，选择导出可视化对比报告（PDF）或结构化差异明细（EXCEL）。
+ * @method Models\ExportContractReviewResultResponse ExportContractReviewResult(Models\ExportContractReviewResultRequest $req) 本接口（ExportContractReviewResult）用于导出和同审查结果。支持选择 1 “带风险批注文件”、 2 “审查结果＆摘要（.xIsx）”
  * @method Models\GetTaskResultApiResponse GetTaskResultApi(Models\GetTaskResultApiRequest $req) 此接口（GetTaskResultApi）用来查询转换任务的状态。如需发起转换任务，请使用<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi" target="_blank">创建文件转换任务接口</a>进行资源文件的转换操作<br />
 前提条件：已调用 <a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi" target="_blank">创建文件转换任务接口</a>进行文件转换，并得到了返回的转换任务Id。<br />
 

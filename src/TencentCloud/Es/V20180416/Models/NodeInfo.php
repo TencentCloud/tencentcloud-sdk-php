@@ -52,9 +52,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemSize(integer $MemSize) 设置内存大小，单位GB
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDiskEnhance() 获取/
+ * @method integer getDiskEnhance() 获取硬盘额外性能
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiskEnhance(integer $DiskEnhance) 设置/
+ * @method void setDiskEnhance(integer $DiskEnhance) 设置硬盘额外性能
 注意：此字段可能返回 null，表示取不到有效值。
  * @method GpuInfo getGpuInfo() 获取节点Gpu信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -120,7 +120,7 @@ class NodeInfo extends AbstractModel
     public $MemSize;
 
     /**
-     * @var integer /
+     * @var integer 硬盘额外性能
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskEnhance;
@@ -148,7 +148,7 @@ class NodeInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MemSize 内存大小，单位GB
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DiskEnhance /
+     * @param integer $DiskEnhance 硬盘额外性能
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GpuInfo $GpuInfo 节点Gpu信息
 注意：此字段可能返回 null，表示取不到有效值。

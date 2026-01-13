@@ -36,6 +36,7 @@ use TencentCloud\Live\V20180801\Models as Models;
  * @method Models\AuthenticateDomainOwnerResponse AuthenticateDomainOwner(Models\AuthenticateDomainOwnerRequest $req) 验证用户是否拥有特定直播域名。
  * @method Models\CancelCommonMixStreamResponse CancelCommonMixStream(Models\CancelCommonMixStreamRequest $req) 该接口用来取消混流。用法与 mix_streamv2.cancel_mix_stream 基本一致。
  * @method Models\CopyCasterResponse CopyCaster(Models\CopyCasterRequest $req) 该接口用来复制导播台配置
+ * @method Models\CreateAuditKeywordLibResponse CreateAuditKeywordLib(Models\CreateAuditKeywordLibRequest $req) 创建关键词库，直播审核功能使用。
  * @method Models\CreateAuditKeywordsResponse CreateAuditKeywords(Models\CreateAuditKeywordsRequest $req) 创建关键词，并关联到关键词库。
  * @method Models\CreateCasterResponse CreateCaster(Models\CreateCasterRequest $req) 该接口用来创建新的导播台
  * @method Models\CreateCasterInputPushUrlResponse CreateCasterInputPushUrl(Models\CreateCasterInputPushUrlRequest $req) 该接口用来生成导播台推流地址

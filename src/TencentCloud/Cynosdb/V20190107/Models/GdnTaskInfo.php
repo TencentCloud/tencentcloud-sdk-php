@@ -34,6 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStandbyClusterId(string $StandbyClusterId) 设置从集群ID
  * @method string getStandbyClusterName() 获取从集群名称
  * @method void setStandbyClusterName(string $StandbyClusterName) 设置从集群名称
+ * @method string getForceSwitchGdn() 获取是否已强切
+ * @method void setForceSwitchGdn(string $ForceSwitchGdn) 设置是否已强切
+ * @method integer getCode() 获取返回码
+ * @method void setCode(integer $Code) 设置返回码
+ * @method string getMessage() 获取提示信息
+ * @method void setMessage(string $Message) 设置提示信息
+ * @method string getIsSupportForce() 获取是否支持强切
+ * @method void setIsSupportForce(string $IsSupportForce) 设置是否支持强切
  */
 class GdnTaskInfo extends AbstractModel
 {
@@ -73,6 +81,26 @@ class GdnTaskInfo extends AbstractModel
     public $StandbyClusterName;
 
     /**
+     * @var string 是否已强切
+     */
+    public $ForceSwitchGdn;
+
+    /**
+     * @var integer 返回码
+     */
+    public $Code;
+
+    /**
+     * @var string 提示信息
+     */
+    public $Message;
+
+    /**
+     * @var string 是否支持强切
+     */
+    public $IsSupportForce;
+
+    /**
      * @param string $GdnId 全球数据库唯一标识
      * @param string $GdnName 全球数据库唯一别名
      * @param string $PrimaryClusterId 主集群ID
@@ -80,6 +108,10 @@ class GdnTaskInfo extends AbstractModel
      * @param string $StandbyClusterRegion 从集群所在地域
      * @param string $StandbyClusterId 从集群ID
      * @param string $StandbyClusterName 从集群名称
+     * @param string $ForceSwitchGdn 是否已强切
+     * @param integer $Code 返回码
+     * @param string $Message 提示信息
+     * @param string $IsSupportForce 是否支持强切
      */
     function __construct()
     {
@@ -120,6 +152,22 @@ class GdnTaskInfo extends AbstractModel
 
         if (array_key_exists("StandbyClusterName",$param) and $param["StandbyClusterName"] !== null) {
             $this->StandbyClusterName = $param["StandbyClusterName"];
+        }
+
+        if (array_key_exists("ForceSwitchGdn",$param) and $param["ForceSwitchGdn"] !== null) {
+            $this->ForceSwitchGdn = $param["ForceSwitchGdn"];
+        }
+
+        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
+            $this->Code = $param["Code"];
+        }
+
+        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
+            $this->Message = $param["Message"];
+        }
+
+        if (array_key_exists("IsSupportForce",$param) and $param["IsSupportForce"] !== null) {
+            $this->IsSupportForce = $param["IsSupportForce"];
         }
     }
 }

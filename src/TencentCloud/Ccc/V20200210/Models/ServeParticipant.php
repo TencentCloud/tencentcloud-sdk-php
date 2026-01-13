@@ -45,7 +45,15 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getSkillGroupId() 获取技能组 ID
  * @method void setSkillGroupId(integer $SkillGroupId) 设置技能组 ID
  * @method string getEndStatusString() 获取结束状态
+
+中文详情[参考](https://www.tencentcloud.com/zh/document/product/1229/71847)
+
+英文详情[参考](https://www.tencentcloud.com/document/product/1229/71847?lang=en)
  * @method void setEndStatusString(string $EndStatusString) 设置结束状态
+
+中文详情[参考](https://www.tencentcloud.com/zh/document/product/1229/71847)
+
+英文详情[参考](https://www.tencentcloud.com/document/product/1229/71847?lang=en)
  * @method string getRecordURL() 获取录音 URL
  * @method void setRecordURL(string $RecordURL) 设置录音 URL
  * @method integer getSequence() 获取参与者序号，从 0 开始
@@ -121,6 +129,10 @@ class ServeParticipant extends AbstractModel
 
     /**
      * @var string 结束状态
+
+中文详情[参考](https://www.tencentcloud.com/zh/document/product/1229/71847)
+
+英文详情[参考](https://www.tencentcloud.com/document/product/1229/71847?lang=en)
      */
     public $EndStatusString;
 
@@ -163,6 +175,10 @@ class ServeParticipant extends AbstractModel
      * @param string $TransferToType 转接去向参与者类型，取值与 Type 一致
      * @param integer $SkillGroupId 技能组 ID
      * @param string $EndStatusString 结束状态
+
+中文详情[参考](https://www.tencentcloud.com/zh/document/product/1229/71847)
+
+英文详情[参考](https://www.tencentcloud.com/document/product/1229/71847?lang=en)
      * @param string $RecordURL 录音 URL
      * @param integer $Sequence 参与者序号，从 0 开始
      * @param integer $StartTimestamp 开始时间戳，Unix 秒级时间戳

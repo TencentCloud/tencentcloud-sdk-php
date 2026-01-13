@@ -116,10 +116,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHasFavorite(boolean $HasFavorite) 设置true已收藏/false表示未收藏状态
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLifeCycleTime() 获取生命周期
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLifeCycleTime(integer $LifeCycleTime) 设置生命周期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStorageSizeWithUnit() 获取存储量，已转为适合的单位展示
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorageSizeWithUnit(string $StorageSizeWithUnit) 设置存储量，已转为适合的单位展示
@@ -222,6 +218,10 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocation(string $Location) 设置存储位置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLifeCycleTime() 获取生命周期
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLifeCycleTime(integer $LifeCycleTime) 设置生命周期
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsPartitionTable() 获取判断是否是分区表1 是 0否
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsPartitionTable(integer $IsPartitionTable) 设置判断是否是分区表1 是 0否
@@ -229,6 +229,10 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
  * @method array getPartitionColumns() 获取分区字段 key
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPartitionColumns(array $PartitionColumns) 设置分区字段 key
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDateFormat() 获取分区时间格式：yyyy-MM-dd
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDateFormat(string $DateFormat) 设置分区时间格式：yyyy-MM-dd
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPartitionExpireDays() 获取生命周期-分区保留天数【分区保留策略时有效】
 注意：此字段可能返回 null，表示取不到有效值。
@@ -490,12 +494,6 @@ class TableMeta extends AbstractModel
     public $HasFavorite;
 
     /**
-     * @var integer 生命周期
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $LifeCycleTime;
-
-    /**
      * @var string 存储量，已转为适合的单位展示
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -647,6 +645,12 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
     public $Location;
 
     /**
+     * @var integer 生命周期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LifeCycleTime;
+
+    /**
      * @var integer 判断是否是分区表1 是 0否
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -657,6 +661,12 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PartitionColumns;
+
+    /**
+     * @var string 分区时间格式：yyyy-MM-dd
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DateFormat;
 
     /**
      * @var integer 生命周期-分区保留天数【分区保留策略时有效】
@@ -875,8 +885,6 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $HasFavorite true已收藏/false表示未收藏状态
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $LifeCycleTime 生命周期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StorageSizeWithUnit 存储量，已转为适合的单位展示
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 数据源引擎的实例ID：如EMR集群实例ID/数据源实例ID
@@ -928,9 +936,13 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Location 存储位置
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LifeCycleTime 生命周期
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsPartitionTable 判断是否是分区表1 是 0否
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PartitionColumns 分区字段 key
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DateFormat 分区时间格式：yyyy-MM-dd
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PartitionExpireDays 生命周期-分区保留天数【分区保留策略时有效】
 注意：此字段可能返回 null，表示取不到有效值。
@@ -1098,10 +1110,6 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
             $this->HasFavorite = $param["HasFavorite"];
         }
 
-        if (array_key_exists("LifeCycleTime",$param) and $param["LifeCycleTime"] !== null) {
-            $this->LifeCycleTime = $param["LifeCycleTime"];
-        }
-
         if (array_key_exists("StorageSizeWithUnit",$param) and $param["StorageSizeWithUnit"] !== null) {
             $this->StorageSizeWithUnit = $param["StorageSizeWithUnit"];
         }
@@ -1209,12 +1217,20 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
             $this->Location = $param["Location"];
         }
 
+        if (array_key_exists("LifeCycleTime",$param) and $param["LifeCycleTime"] !== null) {
+            $this->LifeCycleTime = $param["LifeCycleTime"];
+        }
+
         if (array_key_exists("IsPartitionTable",$param) and $param["IsPartitionTable"] !== null) {
             $this->IsPartitionTable = $param["IsPartitionTable"];
         }
 
         if (array_key_exists("PartitionColumns",$param) and $param["PartitionColumns"] !== null) {
             $this->PartitionColumns = $param["PartitionColumns"];
+        }
+
+        if (array_key_exists("DateFormat",$param) and $param["DateFormat"] !== null) {
+            $this->DateFormat = $param["DateFormat"];
         }
 
         if (array_key_exists("PartitionExpireDays",$param) and $param["PartitionExpireDays"] !== null) {

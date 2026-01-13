@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIvrId(integer $IvrId) 设置任务使用的IvrId
  * @method integer getState() 获取任务状态 0初始 1运行中 2已完成 3结束中 4已终止
  * @method void setState(integer $State) 设置任务状态 0初始 1运行中 2已完成 3结束中 4已终止
+ * @method integer getMaxRingTimeoutSecond() 获取最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+ * @method void setMaxRingTimeoutSecond(integer $MaxRingTimeoutSecond) 设置最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -85,6 +87,11 @@ class DescribeAutoCalloutTaskResponse extends AbstractModel
     public $State;
 
     /**
+     * @var integer 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+     */
+    public $MaxRingTimeoutSecond;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -99,6 +106,7 @@ class DescribeAutoCalloutTaskResponse extends AbstractModel
      * @param array $Callees 被叫信息列表
      * @param integer $IvrId 任务使用的IvrId
      * @param integer $State 任务状态 0初始 1运行中 2已完成 3结束中 4已终止
+     * @param integer $MaxRingTimeoutSecond 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -149,6 +157,10 @@ class DescribeAutoCalloutTaskResponse extends AbstractModel
 
         if (array_key_exists("State",$param) and $param["State"] !== null) {
             $this->State = $param["State"];
+        }
+
+        if (array_key_exists("MaxRingTimeoutSecond",$param) and $param["MaxRingTimeoutSecond"] !== null) {
+            $this->MaxRingTimeoutSecond = $param["MaxRingTimeoutSecond"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -55,7 +55,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStartTime() 获取执行活动开始时间。格式为：YYYY-MM-DDThh:mm:ssZ
  * @method void setStartTime(string $StartTime) 设置执行活动开始时间。格式为：YYYY-MM-DDThh:mm:ssZ
  * @method string getEndTime() 获取执行活动结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置执行活动结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取执行活动创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
  * @method void setCreatedTime(string $CreatedTime) 设置执行活动创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
  * @method string getUpdatedTime() 获取执行活动更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
@@ -138,6 +140,7 @@ class Invocation extends AbstractModel
 
     /**
      * @var string 执行活动结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
@@ -228,6 +231,7 @@ class Invocation extends AbstractModel
      * @param string $Description 执行活动描述。
      * @param string $StartTime 执行活动开始时间。格式为：YYYY-MM-DDThh:mm:ssZ
      * @param string $EndTime 执行活动结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 执行活动创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
      * @param string $UpdatedTime 执行活动更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
      * @param string $Parameters 自定义参数取值。

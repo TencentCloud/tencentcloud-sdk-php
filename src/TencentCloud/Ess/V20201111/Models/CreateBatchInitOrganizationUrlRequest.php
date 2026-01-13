@@ -30,6 +30,7 @@ use TencentCloud\Common\AbstractModel;
 <li>AUTH_JOIN_ORGANIZATION_GROUP : 加入集团企业</li>
 <li>OPEN_AUTO_SIGN :开通企业自动签署</li>
 <li>PARTNER_AUTO_SIGN_AUTH :合作方企业授权自动签</li>
+<li>CHANGE_SUB_ORGANIZATION_ADMIN_AUTH :变更子企业超管授权(**授权后，主企业可变更子企业超管，此功能需联系客户经理开通白名单使用**)</li>
 </ul>
  * @method void setOperateTypes(array $OperateTypes) 设置初始化操作类型
 <ul>
@@ -37,6 +38,7 @@ use TencentCloud\Common\AbstractModel;
 <li>AUTH_JOIN_ORGANIZATION_GROUP : 加入集团企业</li>
 <li>OPEN_AUTO_SIGN :开通企业自动签署</li>
 <li>PARTNER_AUTO_SIGN_AUTH :合作方企业授权自动签</li>
+<li>CHANGE_SUB_ORGANIZATION_ADMIN_AUTH :变更子企业超管授权(**授权后，主企业可变更子企业超管，此功能需联系客户经理开通白名单使用**)</li>
 </ul>
  * @method array getOrganizationIds() 获取批量操作的企业Id列表，最大支持50个
  * @method void setOrganizationIds(array $OrganizationIds) 设置批量操作的企业Id列表，最大支持50个
@@ -52,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
 企业电子签账号可在[电子签的网页端](https://qian.tencent.com/console/company-settings/company-center) ，于企业设置-企业信息菜单栏下复制获取。
 
 ![企业电子签账号](https://qcloudimg.tencent-cloud.cn/raw/4e6b30ee92f00671f7f1c5bd127c27db.png)
+ * @method boolean getChangeAdminAuthAutoSign() 获取初始化操作类型里含有CHANGE_SUB_ORGANIZATION_ADMIN_AUTH（变更子企业超管授权）操作类型时，授权协议中主企业的签署方是否使用自动签（需操作人有自动签授权）
+ * @method void setChangeAdminAuthAutoSign(boolean $ChangeAdminAuthAutoSign) 设置初始化操作类型里含有CHANGE_SUB_ORGANIZATION_ADMIN_AUTH（变更子企业超管授权）操作类型时，授权协议中主企业的签署方是否使用自动签（需操作人有自动签授权）
  */
 class CreateBatchInitOrganizationUrlRequest extends AbstractModel
 {
@@ -68,6 +72,7 @@ class CreateBatchInitOrganizationUrlRequest extends AbstractModel
 <li>AUTH_JOIN_ORGANIZATION_GROUP : 加入集团企业</li>
 <li>OPEN_AUTO_SIGN :开通企业自动签署</li>
 <li>PARTNER_AUTO_SIGN_AUTH :合作方企业授权自动签</li>
+<li>CHANGE_SUB_ORGANIZATION_ADMIN_AUTH :变更子企业超管授权(**授权后，主企业可变更子企业超管，此功能需联系客户经理开通白名单使用**)</li>
 </ul>
      */
     public $OperateTypes;
@@ -92,6 +97,11 @@ class CreateBatchInitOrganizationUrlRequest extends AbstractModel
     public $AuthorizedOrganizationId;
 
     /**
+     * @var boolean 初始化操作类型里含有CHANGE_SUB_ORGANIZATION_ADMIN_AUTH（变更子企业超管授权）操作类型时，授权协议中主企业的签署方是否使用自动签（需操作人有自动签授权）
+     */
+    public $ChangeAdminAuthAutoSign;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param array $OperateTypes 初始化操作类型
@@ -100,6 +110,7 @@ class CreateBatchInitOrganizationUrlRequest extends AbstractModel
 <li>AUTH_JOIN_ORGANIZATION_GROUP : 加入集团企业</li>
 <li>OPEN_AUTO_SIGN :开通企业自动签署</li>
 <li>PARTNER_AUTO_SIGN_AUTH :合作方企业授权自动签</li>
+<li>CHANGE_SUB_ORGANIZATION_ADMIN_AUTH :变更子企业超管授权(**授权后，主企业可变更子企业超管，此功能需联系客户经理开通白名单使用**)</li>
 </ul>
      * @param array $OrganizationIds 批量操作的企业Id列表，最大支持50个
      * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
@@ -108,6 +119,7 @@ class CreateBatchInitOrganizationUrlRequest extends AbstractModel
 企业电子签账号可在[电子签的网页端](https://qian.tencent.com/console/company-settings/company-center) ，于企业设置-企业信息菜单栏下复制获取。
 
 ![企业电子签账号](https://qcloudimg.tencent-cloud.cn/raw/4e6b30ee92f00671f7f1c5bd127c27db.png)
+     * @param boolean $ChangeAdminAuthAutoSign 初始化操作类型里含有CHANGE_SUB_ORGANIZATION_ADMIN_AUTH（变更子企业超管授权）操作类型时，授权协议中主企业的签署方是否使用自动签（需操作人有自动签授权）
      */
     function __construct()
     {
@@ -142,6 +154,10 @@ class CreateBatchInitOrganizationUrlRequest extends AbstractModel
 
         if (array_key_exists("AuthorizedOrganizationId",$param) and $param["AuthorizedOrganizationId"] !== null) {
             $this->AuthorizedOrganizationId = $param["AuthorizedOrganizationId"];
+        }
+
+        if (array_key_exists("ChangeAdminAuthAutoSign",$param) and $param["ChangeAdminAuthAutoSign"] !== null) {
+            $this->ChangeAdminAuthAutoSign = $param["ChangeAdminAuthAutoSign"];
         }
     }
 }

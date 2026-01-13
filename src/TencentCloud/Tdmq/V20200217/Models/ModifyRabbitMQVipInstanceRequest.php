@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemoveAllTags(boolean $RemoveAllTags) 设置是否删除所有标签，默认为false
  * @method array getTags() 获取修改实例的标签信息，全量标签信息，非增量
  * @method void setTags(array $Tags) 设置修改实例的标签信息，全量标签信息，非增量
+ * @method boolean getEnableRiskWarning() 获取是否开启集群风险提示
+ * @method void setEnableRiskWarning(boolean $EnableRiskWarning) 设置是否开启集群风险提示
  */
 class ModifyRabbitMQVipInstanceRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ModifyRabbitMQVipInstanceRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var boolean 是否开启集群风险提示
+     */
+    public $EnableRiskWarning;
+
+    /**
      * @param string $InstanceId 实例Id
      * @param string $ClusterName 集群名称，不填则不修改。非空字符串时必须 3-64 个字符，只能包含数字、字母、“-”和“_”
      * @param string $Remark 备注，不填则不修改
      * @param boolean $EnableDeletionProtection 是否开启删除保护，不填则不修改
      * @param boolean $RemoveAllTags 是否删除所有标签，默认为false
      * @param array $Tags 修改实例的标签信息，全量标签信息，非增量
+     * @param boolean $EnableRiskWarning 是否开启集群风险提示
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class ModifyRabbitMQVipInstanceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("EnableRiskWarning",$param) and $param["EnableRiskWarning"] !== null) {
+            $this->EnableRiskWarning = $param["EnableRiskWarning"];
         }
     }
 }

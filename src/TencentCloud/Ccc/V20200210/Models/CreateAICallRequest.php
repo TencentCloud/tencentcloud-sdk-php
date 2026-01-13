@@ -432,6 +432,8 @@ HoaiMy
 0: 挂断电话（默认）
  * @method string getLLMExtraBody() 获取大模型拓展参数， 格式为json字符串
  * @method void setLLMExtraBody(string $LLMExtraBody) 设置大模型拓展参数， 格式为json字符串
+ * @method integer getMaxCallDurationMs() 获取最大通话时长， 默认不限制。单位毫秒(ms)
+ * @method void setMaxCallDurationMs(integer $MaxCallDurationMs) 设置最大通话时长， 默认不限制。单位毫秒(ms)
  */
 class CreateAICallRequest extends AbstractModel
 {
@@ -787,6 +789,11 @@ HoaiMy
     public $LLMExtraBody;
 
     /**
+     * @var integer 最大通话时长， 默认不限制。单位毫秒(ms)
+     */
+    public $MaxCallDurationMs;
+
+    /**
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param string $Callee 被叫号码
      * @param string $LLMType 模型接口协议类型，目前兼容四种协议类型：
@@ -993,6 +1000,7 @@ HoaiMy
      * @param integer $VoicemailAction 识别到对端为语音信箱时的行为，当EnableVoicemailDetection为True时生效
 0: 挂断电话（默认）
      * @param string $LLMExtraBody 大模型拓展参数， 格式为json字符串
+     * @param integer $MaxCallDurationMs 最大通话时长， 默认不限制。单位毫秒(ms)
      */
     function __construct()
     {
@@ -1170,6 +1178,10 @@ HoaiMy
 
         if (array_key_exists("LLMExtraBody",$param) and $param["LLMExtraBody"] !== null) {
             $this->LLMExtraBody = $param["LLMExtraBody"];
+        }
+
+        if (array_key_exists("MaxCallDurationMs",$param) and $param["MaxCallDurationMs"] !== null) {
+            $this->MaxCallDurationMs = $param["MaxCallDurationMs"];
         }
     }
 }

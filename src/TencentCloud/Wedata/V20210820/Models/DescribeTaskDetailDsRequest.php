@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskDetailDs请求参数结构体
  *
- * @method string getTaskId() 获取任务Id
- * @method void setTaskId(string $TaskId) 设置任务Id
- * @method string getProjectId() 获取项目Id
- * @method void setProjectId(string $ProjectId) 设置项目Id
+ * @method string getTaskId() 获取任务ID
+ * @method void setTaskId(string $TaskId) 设置任务ID
+ * @method string getProjectId() 获取项目ID （必填属性）
+ * @method void setProjectId(string $ProjectId) 设置项目ID （必填属性）
  * @method integer getTaskAlarmStatus() 获取已废弃，无需填写
  * @method void setTaskAlarmStatus(integer $TaskAlarmStatus) 设置已废弃，无需填写
  */
 class DescribeTaskDetailDsRequest extends AbstractModel
 {
     /**
-     * @var string 任务Id
+     * @var string 任务ID
      */
     public $TaskId;
 
     /**
-     * @var string 项目Id
+     * @var string 项目ID （必填属性）
      */
     public $ProjectId;
 
@@ -45,8 +45,8 @@ class DescribeTaskDetailDsRequest extends AbstractModel
     public $TaskAlarmStatus;
 
     /**
-     * @param string $TaskId 任务Id
-     * @param string $ProjectId 项目Id
+     * @param string $TaskId 任务ID
+     * @param string $ProjectId 项目ID （必填属性）
      * @param integer $TaskAlarmStatus 已废弃，无需填写
      */
     function __construct()

@@ -78,6 +78,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置标签列表
  * @method boolean getEnableDeletionProtection() 获取是否已开启删除保护
  * @method void setEnableDeletionProtection(boolean $EnableDeletionProtection) 设置是否已开启删除保护
+ * @method boolean getMirroredQueueRisk() 获取是否有vhost未开启镜像队列风险
+ * @method void setMirroredQueueRisk(boolean $MirroredQueueRisk) 设置是否有vhost未开启镜像队列风险
+ * @method boolean getEnableRiskWarning() 获取是否提示风险
+ * @method void setEnableRiskWarning(boolean $EnableRiskWarning) 设置是否提示风险
+ * @method integer getConsumeTimeout() 获取消费超时时间
+ * @method void setConsumeTimeout(integer $ConsumeTimeout) 设置消费超时时间
+ * @method integer getChannelMax() 获取最大Channel数
+ * @method void setChannelMax(integer $ChannelMax) 设置最大Channel数
  */
 class RabbitMQClusterInfo extends AbstractModel
 {
@@ -223,6 +231,26 @@ class RabbitMQClusterInfo extends AbstractModel
     public $EnableDeletionProtection;
 
     /**
+     * @var boolean 是否有vhost未开启镜像队列风险
+     */
+    public $MirroredQueueRisk;
+
+    /**
+     * @var boolean 是否提示风险
+     */
+    public $EnableRiskWarning;
+
+    /**
+     * @var integer 消费超时时间
+     */
+    public $ConsumeTimeout;
+
+    /**
+     * @var integer 最大Channel数
+     */
+    public $ChannelMax;
+
+    /**
      * @param string $ClusterId 集群 ID
      * @param string $ClusterName 集群名称
      * @param string $Region 地域信息
@@ -252,6 +280,10 @@ class RabbitMQClusterInfo extends AbstractModel
      * @param boolean $Container 是否为容器实例，默认 true
      * @param array $Tags 标签列表
      * @param boolean $EnableDeletionProtection 是否已开启删除保护
+     * @param boolean $MirroredQueueRisk 是否有vhost未开启镜像队列风险
+     * @param boolean $EnableRiskWarning 是否提示风险
+     * @param integer $ConsumeTimeout 消费超时时间
+     * @param integer $ChannelMax 最大Channel数
      */
     function __construct()
     {
@@ -386,6 +418,22 @@ class RabbitMQClusterInfo extends AbstractModel
 
         if (array_key_exists("EnableDeletionProtection",$param) and $param["EnableDeletionProtection"] !== null) {
             $this->EnableDeletionProtection = $param["EnableDeletionProtection"];
+        }
+
+        if (array_key_exists("MirroredQueueRisk",$param) and $param["MirroredQueueRisk"] !== null) {
+            $this->MirroredQueueRisk = $param["MirroredQueueRisk"];
+        }
+
+        if (array_key_exists("EnableRiskWarning",$param) and $param["EnableRiskWarning"] !== null) {
+            $this->EnableRiskWarning = $param["EnableRiskWarning"];
+        }
+
+        if (array_key_exists("ConsumeTimeout",$param) and $param["ConsumeTimeout"] !== null) {
+            $this->ConsumeTimeout = $param["ConsumeTimeout"];
+        }
+
+        if (array_key_exists("ChannelMax",$param) and $param["ChannelMax"] !== null) {
+            $this->ChannelMax = $param["ChannelMax"];
         }
     }
 }

@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupIdList(array $SecurityGroupIdList) 设置<p>给实例设置安全组 ID 数组。</p>
  * @method array getResourceTags() 获取<p>给实例绑定标签。</p>
  * @method void setResourceTags(array $ResourceTags) 设置<p>给实例绑定标签。</p>
- * @method integer getMemSize() 获取<p>混合存储版，单分片持久化内存容量，单位：GB。KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>
- * @method void setMemSize(integer $MemSize) 设置<p>混合存储版，单分片持久化内存容量，单位：GB。KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>
+ * @method integer getMemSize() 获取<p>极速版，单分片持久化内存容量。KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>单位：GB。
+ * @method void setMemSize(integer $MemSize) 设置<p>极速版，单分片持久化内存容量。KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>单位：GB。
  * @method integer getDiskSize() 获取<p>每个分片硬盘的容量。单位：GB。每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>
  * @method void setDiskSize(integer $DiskSize) 设置<p>每个分片硬盘的容量。单位：GB。每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>
  * @method integer getMachineCpu() 获取<p>计算 CPU 核数，可忽略不传。CPU 核数与内存为固定搭配，具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>
@@ -160,7 +160,7 @@ class CreateInstancesRequest extends AbstractModel
     public $ResourceTags;
 
     /**
-     * @var integer <p>混合存储版，单分片持久化内存容量，单位：GB。KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>
+     * @var integer <p>极速版，单分片持久化内存容量。KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>单位：GB。
      */
     public $MemSize;
 
@@ -203,7 +203,7 @@ class CreateInstancesRequest extends AbstractModel
      * @param integer $AutoRenew <p>包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</li></ul></p>
      * @param array $SecurityGroupIdList <p>给实例设置安全组 ID 数组。</p>
      * @param array $ResourceTags <p>给实例绑定标签。</p>
-     * @param integer $MemSize <p>混合存储版，单分片持久化内存容量，单位：GB。KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>
+     * @param integer $MemSize <p>极速版，单分片持久化内存容量。KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>单位：GB。
      * @param integer $DiskSize <p>每个分片硬盘的容量。单位：GB。每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>
      * @param integer $MachineCpu <p>计算 CPU 核数，可忽略不传。CPU 核数与内存为固定搭配，具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>
      * @param integer $ProjectId <p>项目id，取值以用户账户&gt;用户账户相关接口查询&gt;项目列表返回的projectId为准。</p>

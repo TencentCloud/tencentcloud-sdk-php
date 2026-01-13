@@ -24,6 +24,7 @@ use TencentCloud\Es\V20180416\Models as Models;
 
 /**
  * @method Models\CheckMigrateIndexMetaDataResponse CheckMigrateIndexMetaData(Models\CheckMigrateIndexMetaDataRequest $req) 检查cos迁移索引元数据
+ * @method Models\CreateAutoBackUpStrategyResponse CreateAutoBackUpStrategy(Models\CreateAutoBackUpStrategyRequest $req) 新建自动备份快照策略
  * @method Models\CreateClusterSnapshotResponse CreateClusterSnapshot(Models\CreateClusterSnapshotRequest $req) 集群快照手动创建
  * @method Models\CreateCosMigrateToServerlessInstanceResponse CreateCosMigrateToServerlessInstance(Models\CreateCosMigrateToServerlessInstanceRequest $req) cos迁移流程
  * @method Models\CreateIndexResponse CreateIndex(Models\CreateIndexRequest $req) 创建索引
@@ -31,6 +32,7 @@ use TencentCloud\Es\V20180416\Models as Models;
  * @method Models\CreateLogstashInstanceResponse CreateLogstashInstance(Models\CreateLogstashInstanceRequest $req) 用于创建Logstash实例
  * @method Models\CreateServerlessInstanceResponse CreateServerlessInstance(Models\CreateServerlessInstanceRequest $req) 创建Serverless索引
  * @method Models\CreateServerlessSpaceV2Response CreateServerlessSpaceV2(Models\CreateServerlessSpaceV2Request $req) 创建Serverless索引空间
+ * @method Models\DeleteAutoBackUpStrategyResponse DeleteAutoBackUpStrategy(Models\DeleteAutoBackUpStrategyRequest $req) 删除自动备份快照策略
  * @method Models\DeleteClusterSnapshotResponse DeleteClusterSnapshot(Models\DeleteClusterSnapshotRequest $req) 删除快照仓库里备份的快照
  * @method Models\DeleteIndexResponse DeleteIndex(Models\DeleteIndexRequest $req) 删除索引
  * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) 销毁集群实例
@@ -38,6 +40,7 @@ use TencentCloud\Es\V20180416\Models as Models;
  * @method Models\DeleteLogstashPipelinesResponse DeleteLogstashPipelines(Models\DeleteLogstashPipelinesRequest $req) 用于批量删除Logstash管道
  * @method Models\DeleteServerlessInstanceResponse DeleteServerlessInstance(Models\DeleteServerlessInstanceRequest $req) 删除Serverless索引
  * @method Models\DeleteServerlessSpaceUserResponse DeleteServerlessSpaceUser(Models\DeleteServerlessSpaceUserRequest $req) 删除Serverless空间子用户
+ * @method Models\DescribeAutoBackUpStrategyResponse DescribeAutoBackUpStrategy(Models\DescribeAutoBackUpStrategyRequest $req) 获取自动备份快照策略信息
  * @method Models\DescribeClusterSnapshotResponse DescribeClusterSnapshot(Models\DescribeClusterSnapshotRequest $req) 获取快照备份列表
  * @method Models\DescribeDiagnoseResponse DescribeDiagnose(Models\DescribeDiagnoseRequest $req) 查询智能运维诊断结果报告
  * @method Models\DescribeIndexListResponse DescribeIndexList(Models\DescribeIndexListRequest $req) 获取索引列表
@@ -65,6 +68,8 @@ use TencentCloud\Es\V20180416\Models as Models;
  * @method Models\GetRequestTargetNodeTypesResponse GetRequestTargetNodeTypes(Models\GetRequestTargetNodeTypesRequest $req) 获取接收客户端请求的节点类型
  * @method Models\InquirePriceRenewInstanceResponse InquirePriceRenewInstance(Models\InquirePriceRenewInstanceRequest $req) 集群续费询价接口，续费前通过调用该接口，可获取集群续费的价格。
  * @method Models\InstallInstanceModelResponse InstallInstanceModel(Models\InstallInstanceModelRequest $req) ES集群安装模型接口
+ * @method Models\ModifyAutoBackUpCommonInfoResponse ModifyAutoBackUpCommonInfo(Models\ModifyAutoBackUpCommonInfoRequest $req) 修改自动备份快照策略公共信息
+ * @method Models\ModifyAutoBackUpStrategyResponse ModifyAutoBackUpStrategy(Models\ModifyAutoBackUpStrategyRequest $req) 修改自动备份快照策略
  * @method Models\ModifyEsVipSecurityGroupResponse ModifyEsVipSecurityGroup(Models\ModifyEsVipSecurityGroupRequest $req) 修改绑定VIP的安全组，传安全组id列表
  * @method Models\QueryIpTraceLogResponse QueryIpTraceLog(Models\QueryIpTraceLogRequest $req) 查询IP溯源日志
  * @method Models\RestartInstanceResponse RestartInstance(Models\RestartInstanceRequest $req) 重启ES集群实例(用于系统版本更新等操作)

@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryUserAuthority请求参数结构体
  *
-
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getModule() 获取分为知识库knowledge、数据源datasource、自定义场景scene
+ * @method void setModule(string $Module) 设置分为知识库knowledge、数据源datasource、自定义场景scene
+ * @method string getObjectId() 获取对象id,分为知识库id、数据源id、场景id
+ * @method void setObjectId(string $ObjectId) 设置对象id,分为知识库id、数据源id、场景id
  */
 class QueryUserAuthorityRequest extends AbstractModel
 {
-
+    /**
+     * @var string 实例ID
+     */
+    public $InstanceId;
 
     /**
+     * @var string 分为知识库knowledge、数据源datasource、自定义场景scene
+     */
+    public $Module;
 
+    /**
+     * @var string 对象id,分为知识库id、数据源id、场景id
+     */
+    public $ObjectId;
+
+    /**
+     * @param string $InstanceId 实例ID
+     * @param string $Module 分为知识库knowledge、数据源datasource、自定义场景scene
+     * @param string $ObjectId 对象id,分为知识库id、数据源id、场景id
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class QueryUserAuthorityRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
 
+        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
+            $this->Module = $param["Module"];
+        }
+
+        if (array_key_exists("ObjectId",$param) and $param["ObjectId"] !== null) {
+            $this->ObjectId = $param["ObjectId"];
+        }
     }
 }

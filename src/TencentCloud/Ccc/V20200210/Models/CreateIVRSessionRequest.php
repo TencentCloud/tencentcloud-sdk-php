@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVariables(array $Variables) 设置自定义变量
  * @method string getUUI() 获取用户数据
  * @method void setUUI(string $UUI) 设置用户数据
+ * @method integer getMaxRingTimeoutSecond() 获取最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+ * @method void setMaxRingTimeoutSecond(integer $MaxRingTimeoutSecond) 设置最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
  */
 class CreateIVRSessionRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateIVRSessionRequest extends AbstractModel
     public $UUI;
 
     /**
+     * @var integer 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+     */
+    public $MaxRingTimeoutSecond;
+
+    /**
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param string $Callee 被叫
      * @param integer $IVRId 指定的 IVR Id，目前支持呼入和自动外呼两种类型
      * @param array $Callers 主叫号码列表
      * @param array $Variables 自定义变量
      * @param string $UUI 用户数据
+     * @param integer $MaxRingTimeoutSecond 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class CreateIVRSessionRequest extends AbstractModel
 
         if (array_key_exists("UUI",$param) and $param["UUI"] !== null) {
             $this->UUI = $param["UUI"];
+        }
+
+        if (array_key_exists("MaxRingTimeoutSecond",$param) and $param["MaxRingTimeoutSecond"] !== null) {
+            $this->MaxRingTimeoutSecond = $param["MaxRingTimeoutSecond"];
         }
     }
 }

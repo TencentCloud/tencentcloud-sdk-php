@@ -26,10 +26,12 @@ use TencentCloud\Ags\V20250920\Models as Models;
  * @method Models\AcquireSandboxInstanceTokenResponse AcquireSandboxInstanceToken(Models\AcquireSandboxInstanceTokenRequest $req) 获取访问沙箱工具时所需要使用的访问Token，创建沙箱实例后需调用此接口获取沙箱实例访问Token。
 此Token可用于调用代码沙箱实例执行代码，或浏览器沙箱实例进行浏览器操作等。
  * @method Models\CreateAPIKeyResponse CreateAPIKey(Models\CreateAPIKeyRequest $req) 创建新的API密钥，用于调用Agent Sandbox接口。相较于腾讯云Secret ID Secret Key支持调用所有接口使用，仅有部分接口支持使用API密钥调用。
+ * @method Models\CreatePreCacheImageTaskResponse CreatePreCacheImageTask(Models\CreatePreCacheImageTaskRequest $req) 创建镜像预热任务
  * @method Models\CreateSandboxToolResponse CreateSandboxTool(Models\CreateSandboxToolRequest $req) 创建沙箱工具
  * @method Models\DeleteAPIKeyResponse DeleteAPIKey(Models\DeleteAPIKeyRequest $req) 删除API密钥。注意区别于腾讯云Secret ID Secret Key，本接口删除的是Agent Sandbox专用API key。
  * @method Models\DeleteSandboxToolResponse DeleteSandboxTool(Models\DeleteSandboxToolRequest $req) 删除沙箱工具
  * @method Models\DescribeAPIKeyListResponse DescribeAPIKeyList(Models\DescribeAPIKeyListRequest $req) 获取API密钥列表，包含API密钥简略信息，包含名称、创建时间等。
+ * @method Models\DescribePreCacheImageTaskResponse DescribePreCacheImageTask(Models\DescribePreCacheImageTaskRequest $req) 查询镜像预热任务信息
  * @method Models\DescribeSandboxInstanceListResponse DescribeSandboxInstanceList(Models\DescribeSandboxInstanceListRequest $req) 查询沙箱实例列表
  * @method Models\DescribeSandboxToolListResponse DescribeSandboxToolList(Models\DescribeSandboxToolListRequest $req) 查询沙箱工具列表
  * @method Models\StartSandboxInstanceResponse StartSandboxInstance(Models\StartSandboxInstanceRequest $req) 启动沙箱实例

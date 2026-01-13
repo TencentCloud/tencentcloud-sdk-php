@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBandwidthRange返回参数结构体
  *
- * @method integer getBaseBandwidth() 获取标准带宽。指购买实例时，系统为每个节点分配的带宽。
- * @method void setBaseBandwidth(integer $BaseBandwidth) 设置标准带宽。指购买实例时，系统为每个节点分配的带宽。
- * @method integer getAddBandwidth() 获取指实例的附加带宽。标准带宽不满足需求的情况下，用户可自行增加的带宽。<ul><li>开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数 * Max ([只读副本数量, 1])，标准架构的分片数 = 1。</li><li>没有开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数，标准架构的分片数 = 1。</li></ul>
- * @method void setAddBandwidth(integer $AddBandwidth) 设置指实例的附加带宽。标准带宽不满足需求的情况下，用户可自行增加的带宽。<ul><li>开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数 * Max ([只读副本数量, 1])，标准架构的分片数 = 1。</li><li>没有开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数，标准架构的分片数 = 1。</li></ul>
- * @method integer getMinAddBandwidth() 获取附加带宽设置下限。
- * @method void setMinAddBandwidth(integer $MinAddBandwidth) 设置附加带宽设置下限。
- * @method integer getMaxAddBandwidth() 获取附加带宽设置上限。
- * @method void setMaxAddBandwidth(integer $MaxAddBandwidth) 设置附加带宽设置上限。
+ * @method integer getBaseBandwidth() 获取<p>标准带宽。指购买实例时，系统为每个节点分配的带宽。</p>单位： MB/s。
+ * @method void setBaseBandwidth(integer $BaseBandwidth) 设置<p>标准带宽。指购买实例时，系统为每个节点分配的带宽。</p>单位： MB/s。
+ * @method integer getAddBandwidth() 获取<p>指实例的附加带宽。标准带宽不满足需求的情况下，用户可自行增加的带宽。</p><ul><li>开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数 * Max ([只读副本数量, 1])，标准架构的分片数 = 1。</li><li>没有开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数，标准架构的分片数 = 1。</li></ul>单位： MB/s。
+ * @method void setAddBandwidth(integer $AddBandwidth) 设置<p>指实例的附加带宽。标准带宽不满足需求的情况下，用户可自行增加的带宽。</p><ul><li>开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数 * Max ([只读副本数量, 1])，标准架构的分片数 = 1。</li><li>没有开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数，标准架构的分片数 = 1。</li></ul>单位： MB/s。
+ * @method integer getMinAddBandwidth() 获取<p>附加带宽设置下限。</p>单位： MB/s。
+ * @method void setMinAddBandwidth(integer $MinAddBandwidth) 设置<p>附加带宽设置下限。</p>单位： MB/s。
+ * @method integer getMaxAddBandwidth() 获取<p>附加带宽设置上限。</p>单位： MB/s。
+ * @method void setMaxAddBandwidth(integer $MaxAddBandwidth) 设置<p>附加带宽设置上限。</p>单位： MB/s。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBandwidthRangeResponse extends AbstractModel
 {
     /**
-     * @var integer 标准带宽。指购买实例时，系统为每个节点分配的带宽。
+     * @var integer <p>标准带宽。指购买实例时，系统为每个节点分配的带宽。</p>单位： MB/s。
      */
     public $BaseBandwidth;
 
     /**
-     * @var integer 指实例的附加带宽。标准带宽不满足需求的情况下，用户可自行增加的带宽。<ul><li>开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数 * Max ([只读副本数量, 1])，标准架构的分片数 = 1。</li><li>没有开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数，标准架构的分片数 = 1。</li></ul>
+     * @var integer <p>指实例的附加带宽。标准带宽不满足需求的情况下，用户可自行增加的带宽。</p><ul><li>开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数 * Max ([只读副本数量, 1])，标准架构的分片数 = 1。</li><li>没有开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数，标准架构的分片数 = 1。</li></ul>单位： MB/s。
      */
     public $AddBandwidth;
 
     /**
-     * @var integer 附加带宽设置下限。
+     * @var integer <p>附加带宽设置下限。</p>单位： MB/s。
      */
     public $MinAddBandwidth;
 
     /**
-     * @var integer 附加带宽设置上限。
+     * @var integer <p>附加带宽设置上限。</p>单位： MB/s。
      */
     public $MaxAddBandwidth;
 
@@ -59,10 +59,10 @@ class DescribeBandwidthRangeResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $BaseBandwidth 标准带宽。指购买实例时，系统为每个节点分配的带宽。
-     * @param integer $AddBandwidth 指实例的附加带宽。标准带宽不满足需求的情况下，用户可自行增加的带宽。<ul><li>开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数 * Max ([只读副本数量, 1])，标准架构的分片数 = 1。</li><li>没有开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数，标准架构的分片数 = 1。</li></ul>
-     * @param integer $MinAddBandwidth 附加带宽设置下限。
-     * @param integer $MaxAddBandwidth 附加带宽设置上限。
+     * @param integer $BaseBandwidth <p>标准带宽。指购买实例时，系统为每个节点分配的带宽。</p>单位： MB/s。
+     * @param integer $AddBandwidth <p>指实例的附加带宽。标准带宽不满足需求的情况下，用户可自行增加的带宽。</p><ul><li>开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数 * Max ([只读副本数量, 1])，标准架构的分片数 = 1。</li><li>没有开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数，标准架构的分片数 = 1。</li></ul>单位： MB/s。
+     * @param integer $MinAddBandwidth <p>附加带宽设置下限。</p>单位： MB/s。
+     * @param integer $MaxAddBandwidth <p>附加带宽设置上限。</p>单位： MB/s。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

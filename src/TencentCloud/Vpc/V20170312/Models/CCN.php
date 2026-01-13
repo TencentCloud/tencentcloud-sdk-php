@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQosLevel(string $QosLevel) 设置实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
  * @method string getInstanceChargeType() 获取付费类型，PREPAID为预付费，POSTPAID为后付费。
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置付费类型，PREPAID为预付费，POSTPAID为后付费。
+ * @method string getInstanceMeteringType() 获取计量类型
+ * @method void setInstanceMeteringType(string $InstanceMeteringType) 设置计量类型
  * @method string getBandwidthLimitType() 获取限速类型，`INTER_REGION_LIMIT` 为地域间限速；`OUTER_REGION_LIMIT` 为地域出口限速。
  * @method void setBandwidthLimitType(string $BandwidthLimitType) 设置限速类型，`INTER_REGION_LIMIT` 为地域间限速；`OUTER_REGION_LIMIT` 为地域出口限速。
  * @method array getTagSet() 获取标签键值对。
@@ -112,6 +114,11 @@ class CCN extends AbstractModel
      * @var string 付费类型，PREPAID为预付费，POSTPAID为后付费。
      */
     public $InstanceChargeType;
+
+    /**
+     * @var string 计量类型
+     */
+    public $InstanceMeteringType;
 
     /**
      * @var string 限速类型，`INTER_REGION_LIMIT` 为地域间限速；`OUTER_REGION_LIMIT` 为地域出口限速。
@@ -207,6 +214,7 @@ class CCN extends AbstractModel
      * @param string $State 实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。
      * @param string $QosLevel 实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
      * @param string $InstanceChargeType 付费类型，PREPAID为预付费，POSTPAID为后付费。
+     * @param string $InstanceMeteringType 计量类型
      * @param string $BandwidthLimitType 限速类型，`INTER_REGION_LIMIT` 为地域间限速；`OUTER_REGION_LIMIT` 为地域出口限速。
      * @param array $TagSet 标签键值对。
      * @param boolean $RoutePriorityFlag 是否支持云联网路由优先级的功能。`False`：不支持，`True`：支持。
@@ -268,6 +276,10 @@ class CCN extends AbstractModel
 
         if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
             $this->InstanceChargeType = $param["InstanceChargeType"];
+        }
+
+        if (array_key_exists("InstanceMeteringType",$param) and $param["InstanceMeteringType"] !== null) {
+            $this->InstanceMeteringType = $param["InstanceMeteringType"];
         }
 
         if (array_key_exists("BandwidthLimitType",$param) and $param["BandwidthLimitType"] !== null) {

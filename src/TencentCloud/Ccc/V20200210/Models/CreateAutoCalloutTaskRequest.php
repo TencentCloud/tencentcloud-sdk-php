@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAIAgentId(integer $AIAgentId) 设置智能体 ID，不填写时需要填写 IvrId
  * @method integer getRetryInterval() 获取任务失败重试时间间隔，重试间隔 600秒～86400 秒
  * @method void setRetryInterval(integer $RetryInterval) 设置任务失败重试时间间隔，重试间隔 600秒～86400 秒
+ * @method integer getMaxRingTimeoutSecond() 获取最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+ * @method void setMaxRingTimeoutSecond(integer $MaxRingTimeoutSecond) 设置最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
  */
 class CreateAutoCalloutTaskRequest extends AbstractModel
 {
@@ -136,6 +138,11 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
     public $RetryInterval;
 
     /**
+     * @var integer 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+     */
+    public $MaxRingTimeoutSecond;
+
+    /**
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param integer $NotBefore 任务起始时间戳，Unix 秒级时间戳
      * @param array $Callees 被叫号码列表
@@ -152,6 +159,7 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
      * @param array $AvailableTime 可用时间段
      * @param integer $AIAgentId 智能体 ID，不填写时需要填写 IvrId
      * @param integer $RetryInterval 任务失败重试时间间隔，重试间隔 600秒～86400 秒
+     * @param integer $MaxRingTimeoutSecond 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
      */
     function __construct()
     {
@@ -243,6 +251,10 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
 
         if (array_key_exists("RetryInterval",$param) and $param["RetryInterval"] !== null) {
             $this->RetryInterval = $param["RetryInterval"];
+        }
+
+        if (array_key_exists("MaxRingTimeoutSecond",$param) and $param["MaxRingTimeoutSecond"] !== null) {
+            $this->MaxRingTimeoutSecond = $param["MaxRingTimeoutSecond"];
         }
     }
 }

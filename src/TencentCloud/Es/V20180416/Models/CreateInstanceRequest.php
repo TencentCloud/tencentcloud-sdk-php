@@ -100,8 +100,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperationDuration(OperationDuration $OperationDuration) 设置可维护时间段
  * @method boolean getEnableHybridStorage() 获取是否开启存算分离
  * @method void setEnableHybridStorage(boolean $EnableHybridStorage) 设置是否开启存算分离
- * @method integer getDiskEnhance() 获取是否开启essd 增强型云盘
- * @method void setDiskEnhance(integer $DiskEnhance) 设置是否开启essd 增强型云盘
+ * @method integer getDiskEnhance() 获取硬盘额外性能
+ * @method void setDiskEnhance(integer $DiskEnhance) 设置硬盘额外性能
  * @method boolean getEnableDiagnose() 获取是否开启智能巡检
  * @method void setEnableDiagnose(boolean $EnableDiagnose) 设置是否开启智能巡检
  * @method string getCdcId() 获取cdcId，使用cdc子网时传递
@@ -292,7 +292,7 @@ class CreateInstanceRequest extends AbstractModel
     public $EnableHybridStorage;
 
     /**
-     * @var integer 是否开启essd 增强型云盘
+     * @var integer 硬盘额外性能
      */
     public $DiskEnhance;
 
@@ -382,7 +382,7 @@ class CreateInstanceRequest extends AbstractModel
      * @param string $Protocol 创建https集群，默认是http
      * @param OperationDuration $OperationDuration 可维护时间段
      * @param boolean $EnableHybridStorage 是否开启存算分离
-     * @param integer $DiskEnhance 是否开启essd 增强型云盘
+     * @param integer $DiskEnhance 硬盘额外性能
      * @param boolean $EnableDiagnose 是否开启智能巡检
      * @param string $CdcId cdcId，使用cdc子网时传递
      * @param integer $DisasterRecoverGroupAffinity 置放群组亲和度，范围[0,10]，0表示不开启

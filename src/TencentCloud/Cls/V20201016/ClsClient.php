@@ -46,6 +46,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\CreateConsumerResponse CreateConsumer(Models\CreateConsumerRequest $req) 本接口用于创建投递CKafka任务
  * @method Models\CreateConsumerGroupResponse CreateConsumerGroup(Models\CreateConsumerGroupRequest $req) 消费组心跳
  * @method Models\CreateCosRechargeResponse CreateCosRecharge(Models\CreateCosRechargeRequest $req) 本接口用于创建cos导入任务
+ * @method Models\CreateDashboardResponse CreateDashboard(Models\CreateDashboardRequest $req) 本接口用于创建仪表盘
  * @method Models\CreateDashboardSubscribeResponse CreateDashboardSubscribe(Models\CreateDashboardSubscribeRequest $req) 此接口用于创建仪表盘订阅
  * @method Models\CreateDataTransformResponse CreateDataTransform(Models\CreateDataTransformRequest $req) 本接口用于创建数据加工任务。
  * @method Models\CreateDeliverCloudFunctionResponse CreateDeliverCloudFunction(Models\CreateDeliverCloudFunctionRequest $req) 本接口用于创建投递SCF任务
@@ -76,6 +77,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\DeleteConsumerResponse DeleteConsumer(Models\DeleteConsumerRequest $req) 删除投递Ckafka任务
  * @method Models\DeleteConsumerGroupResponse DeleteConsumerGroup(Models\DeleteConsumerGroupRequest $req) 删除消费组
  * @method Models\DeleteCosRechargeResponse DeleteCosRecharge(Models\DeleteCosRechargeRequest $req) 本接口用于删除cos导入任务
+ * @method Models\DeleteDashboardResponse DeleteDashboard(Models\DeleteDashboardRequest $req) 本接口用于删除仪表盘
  * @method Models\DeleteDashboardSubscribeResponse DeleteDashboardSubscribe(Models\DeleteDashboardSubscribeRequest $req) 此接口用于删除仪表盘订阅
  * @method Models\DeleteDataTransformResponse DeleteDataTransform(Models\DeleteDataTransformRequest $req) 本接口用于删除数据加工任务
  * @method Models\DeleteDlcDeliverResponse DeleteDlcDeliver(Models\DeleteDlcDeliverRequest $req) 删除DLC投递任务
@@ -161,6 +163,7 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
  * @method Models\ModifyConsumerResponse ModifyConsumer(Models\ModifyConsumerRequest $req) 本接口用于修改投递Ckafka任务
  * @method Models\ModifyConsumerGroupResponse ModifyConsumerGroup(Models\ModifyConsumerGroupRequest $req) 更新消费组信息
  * @method Models\ModifyCosRechargeResponse ModifyCosRecharge(Models\ModifyCosRechargeRequest $req) 本接口用于修改cos导入任务
+ * @method Models\ModifyDashboardResponse ModifyDashboard(Models\ModifyDashboardRequest $req) 本接口用于修改仪表盘
  * @method Models\ModifyDashboardSubscribeResponse ModifyDashboardSubscribe(Models\ModifyDashboardSubscribeRequest $req) 此接口用于修改仪表盘订阅
  * @method Models\ModifyDataTransformResponse ModifyDataTransform(Models\ModifyDataTransformRequest $req) 本接口用于修改数据加工任务
  * @method Models\ModifyDlcDeliverResponse ModifyDlcDeliver(Models\ModifyDlcDeliverRequest $req) 修改DLC投递任务

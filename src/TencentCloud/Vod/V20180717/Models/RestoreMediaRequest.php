@@ -29,14 +29,14 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRestoreTier() 获取解冻模式。当媒体文件当前的存储类型为归档存储时，有以下取值：
 <li>极速模式：Expedited，解冻任务在5分钟后完成。</li>
 <li>标准模式：Standard，解冻任务在5小时后完成 。</li>
-<li>批量模式：Bulk，，解冻任务在12小时后完成。</li>
+<li>批量模式：Bulk，解冻任务在12小时后完成。</li>
 当媒体文件的存储类型为深度归档存储时，有以下取值：
 <li>标准模式：Standard，解冻任务在24小时后完成。</li>
 <li>批量模式：Bulk，解冻任务在48小时后完成。</li>
  * @method void setRestoreTier(string $RestoreTier) 设置解冻模式。当媒体文件当前的存储类型为归档存储时，有以下取值：
 <li>极速模式：Expedited，解冻任务在5分钟后完成。</li>
 <li>标准模式：Standard，解冻任务在5小时后完成 。</li>
-<li>批量模式：Bulk，，解冻任务在12小时后完成。</li>
+<li>批量模式：Bulk，解冻任务在12小时后完成。</li>
 当媒体文件的存储类型为深度归档存储时，有以下取值：
 <li>标准模式：Standard，解冻任务在24小时后完成。</li>
 <li>批量模式：Bulk，解冻任务在48小时后完成。</li>
@@ -62,7 +62,7 @@ class RestoreMediaRequest extends AbstractModel
      * @var string 解冻模式。当媒体文件当前的存储类型为归档存储时，有以下取值：
 <li>极速模式：Expedited，解冻任务在5分钟后完成。</li>
 <li>标准模式：Standard，解冻任务在5小时后完成 。</li>
-<li>批量模式：Bulk，，解冻任务在12小时后完成。</li>
+<li>批量模式：Bulk，解冻任务在12小时后完成。</li>
 当媒体文件的存储类型为深度归档存储时，有以下取值：
 <li>标准模式：Standard，解冻任务在24小时后完成。</li>
 <li>批量模式：Bulk，解冻任务在48小时后完成。</li>
@@ -76,7 +76,7 @@ class RestoreMediaRequest extends AbstractModel
      * @param string $RestoreTier 解冻模式。当媒体文件当前的存储类型为归档存储时，有以下取值：
 <li>极速模式：Expedited，解冻任务在5分钟后完成。</li>
 <li>标准模式：Standard，解冻任务在5小时后完成 。</li>
-<li>批量模式：Bulk，，解冻任务在12小时后完成。</li>
+<li>批量模式：Bulk，解冻任务在12小时后完成。</li>
 当媒体文件的存储类型为深度归档存储时，有以下取值：
 <li>标准模式：Standard，解冻任务在24小时后完成。</li>
 <li>批量模式：Bulk，解冻任务在48小时后完成。</li>

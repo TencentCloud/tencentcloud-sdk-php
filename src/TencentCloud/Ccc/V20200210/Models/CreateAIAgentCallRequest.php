@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 1. dify-inputs-xxx 为dify的inputs变量
 2.  dify-inputs-user 为dify的user值
 3.  dify-inputs-conversation_id 为dify的conversation_id值
+ * @method integer getMaxRingTimeoutSecond() 获取最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+ * @method void setMaxRingTimeoutSecond(integer $MaxRingTimeoutSecond) 设置最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
  */
 class CreateAIAgentCallRequest extends AbstractModel
 {
@@ -79,6 +81,11 @@ class CreateAIAgentCallRequest extends AbstractModel
     public $Variables;
 
     /**
+     * @var integer 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+     */
+    public $MaxRingTimeoutSecond;
+
+    /**
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param integer $AIAgentId AI智能体ID
      * @param string $Callee 被叫号码
@@ -89,6 +96,7 @@ class CreateAIAgentCallRequest extends AbstractModel
 1. dify-inputs-xxx 为dify的inputs变量
 2.  dify-inputs-user 为dify的user值
 3.  dify-inputs-conversation_id 为dify的conversation_id值
+     * @param integer $MaxRingTimeoutSecond 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
      */
     function __construct()
     {
@@ -135,6 +143,10 @@ class CreateAIAgentCallRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Variables, $obj);
             }
+        }
+
+        if (array_key_exists("MaxRingTimeoutSecond",$param) and $param["MaxRingTimeoutSecond"] !== null) {
+            $this->MaxRingTimeoutSecond = $param["MaxRingTimeoutSecond"];
         }
     }
 }

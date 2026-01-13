@@ -32,15 +32,8 @@ false：不通知
  * @method void setOperateInform(boolean $OperateInform) 设置任务操作是否消息通知下游任务责任人true：通知
 false：不通知
 不传默认false
- * @method boolean getDeleteMode() 获取任务删除方式
-true：不针对下游任务实例进行强制失败
-false：针对下游任务实例进行强制失败
-不传默认false
-
- * @method void setDeleteMode(boolean $DeleteMode) 设置任务删除方式
-true：不针对下游任务实例进行强制失败
-false：针对下游任务实例进行强制失败
-不传默认false
+ * @method boolean getDeleteMode() 获取(本参数暂不生效)当前删除上游任务时，不会针对下游任务实例进行强制失败
+ * @method void setDeleteMode(boolean $DeleteMode) 设置(本参数暂不生效)当前删除上游任务时，不会针对下游任务实例进行强制失败
  */
 class DeleteTriggerTaskRequest extends AbstractModel
 {
@@ -63,11 +56,7 @@ false：不通知
     public $OperateInform;
 
     /**
-     * @var boolean 任务删除方式
-true：不针对下游任务实例进行强制失败
-false：针对下游任务实例进行强制失败
-不传默认false
-
+     * @var boolean (本参数暂不生效)当前删除上游任务时，不会针对下游任务实例进行强制失败
      */
     public $DeleteMode;
 
@@ -78,10 +67,7 @@ false：针对下游任务实例进行强制失败
      * @param boolean $OperateInform 任务操作是否消息通知下游任务责任人true：通知
 false：不通知
 不传默认false
-     * @param boolean $DeleteMode 任务删除方式
-true：不针对下游任务实例进行强制失败
-false：针对下游任务实例进行强制失败
-不传默认false
+     * @param boolean $DeleteMode (本参数暂不生效)当前删除上游任务时，不会针对下游任务实例进行强制失败
      */
     function __construct()
     {

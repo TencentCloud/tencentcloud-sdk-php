@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 表生命周期相关信息
  *
- * @method integer getLifecycle() 获取生命周期值
+ * @method integer getLifecycle() 获取生命周期值，如果PartitionLifeCycle=custom时，表示自定义生命周期
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLifecycle(integer $Lifecycle) 设置生命周期值
+ * @method void setLifecycle(integer $Lifecycle) 设置生命周期值，如果PartitionLifeCycle=custom时，表示自定义生命周期
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getColumns() 获取列名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class LifecycleInfo extends AbstractModel
 {
     /**
-     * @var integer 生命周期值
+     * @var integer 生命周期值，如果PartitionLifeCycle=custom时，表示自定义生命周期
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Lifecycle;
@@ -54,7 +54,7 @@ class LifecycleInfo extends AbstractModel
     public $DateFormat;
 
     /**
-     * @param integer $Lifecycle 生命周期值
+     * @param integer $Lifecycle 生命周期值，如果PartitionLifeCycle=custom时，表示自定义生命周期
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Columns 列名
 注意：此字段可能返回 null，表示取不到有效值。

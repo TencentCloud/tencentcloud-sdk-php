@@ -25,6 +25,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
 /**
  * @method Models\AddMachineGroupInfoResponse AddMachineGroupInfo(Models\AddMachineGroupInfoRequest $req) 用于添加机器组信息
  * @method Models\ApplyConfigToMachineGroupResponse ApplyConfigToMachineGroup(Models\ApplyConfigToMachineGroupRequest $req) 应用采集配置到指定机器组
+ * @method Models\CancelRebuildIndexTaskResponse CancelRebuildIndexTask(Models\CancelRebuildIndexTaskRequest $req) 取消重建索引任务
  * @method Models\CheckFunctionResponse CheckFunction(Models\CheckFunctionRequest $req) 本接口用于数据加工DSL函数的语法校验。
  * @method Models\CheckRechargeKafkaServerResponse CheckRechargeKafkaServer(Models\CheckRechargeKafkaServerRequest $req) 本接口用于校验Kafka服务集群是否可以正常访问
  * @method Models\CloseKafkaConsumerResponse CloseKafkaConsumer(Models\CloseKafkaConsumerRequest $req) 关闭Kafka协议消费
@@ -61,6 +62,13 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\CreateMetricConfigResponse CreateMetricConfig(Models\CreateMetricConfigRequest $req) 创建指标采集配置
  * @method Models\CreateMetricSubscribeResponse CreateMetricSubscribe(Models\CreateMetricSubscribeRequest $req) 创建指标订阅配置
  * @method Models\CreateNoticeContentResponse CreateNoticeContent(Models\CreateNoticeContentRequest $req) 该接口用于创建通知内容。
+ * @method Models\CreateRebuildIndexTaskResponse CreateRebuildIndexTask(Models\CreateRebuildIndexTaskRequest $req) 创建重建索引任务
+注意：
+- 单个日志主题同时仅允许运行一个重建索引任务，单个日志主题最多同时拥有10个重建索引任务记录，需删除不再需要的任务记录后才能新建索引任务。
+- 同一时间范围内的日志，仅允许重建一次索引，需删除之前的任务记录后才能再次重建。
+- 删除重建索引任务记录将恢复重建索引前的索引数据。
+- 所选时间范围对应日志写流量不能超出5TB。
+- 重建索引时间范围以日志时间为准，日志上传时间与重建索引时间范围有超过1小时的偏差时（例如16:00上传了一条02:00的日志到 CLS，重建00:00～12:00的日志索引）不会被重建且后续无法进行检索。新上报一条日志到已经被重建的日志时间范围时，也不会被重建且后续无法进行检索。
  * @method Models\CreateScheduledSqlResponse CreateScheduledSql(Models\CreateScheduledSqlRequest $req) 本接口用于创建定时SQL分析任务
  * @method Models\CreateShipperResponse CreateShipper(Models\CreateShipperRequest $req) 新建投递到COS的任务，【！！！注意】使用此接口，需要检查是否配置了投递COS的角色和权限。如果没有配置，请参考文档投递权限查看和配置https://cloud.tencent.com/document/product/614/71623。
  * @method Models\CreateSplunkDeliverResponse CreateSplunkDeliver(Models\CreateSplunkDeliverRequest $req) 创建Splunk投递任务
@@ -141,6 +149,7 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
  * @method Models\DescribeMetricSubscribesResponse DescribeMetricSubscribes(Models\DescribeMetricSubscribesRequest $req) 获取指标订阅配置
  * @method Models\DescribeNoticeContentsResponse DescribeNoticeContents(Models\DescribeNoticeContentsRequest $req) 获取通知内容列表
  * @method Models\DescribePartitionsResponse DescribePartitions(Models\DescribePartitionsRequest $req) 该接口已废弃，如需获取分区数量，请使用DescribeTopics接口。
+ * @method Models\DescribeRebuildIndexTasksResponse DescribeRebuildIndexTasks(Models\DescribeRebuildIndexTasksRequest $req) 获取重建索引任务列表
  * @method Models\DescribeScheduledSqlInfoResponse DescribeScheduledSqlInfo(Models\DescribeScheduledSqlInfoRequest $req) 本接口用于获取定时SQL分析任务列表
  * @method Models\DescribeShipperTasksResponse DescribeShipperTasks(Models\DescribeShipperTasksRequest $req) 获取投递任务列表
  * @method Models\DescribeShippersResponse DescribeShippers(Models\DescribeShippersRequest $req) 获取投递到COS的任务配置信息
@@ -150,6 +159,7 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
  * @method Models\DescribeTopicMetricConfigsResponse DescribeTopicMetricConfigs(Models\DescribeTopicMetricConfigsRequest $req) 获取指标订阅配置
  * @method Models\DescribeTopicsResponse DescribeTopics(Models\DescribeTopicsRequest $req) 本接口用于获取日志或指标主题列表，支持分页
  * @method Models\DescribeWebCallbacksResponse DescribeWebCallbacks(Models\DescribeWebCallbacksRequest $req) 获取告警渠道回调配置列表。
+ * @method Models\EstimateRebuildIndexTaskResponse EstimateRebuildIndexTask(Models\EstimateRebuildIndexTaskRequest $req) 预估重建索引任务
  * @method Models\GetAlarmLogResponse GetAlarmLog(Models\GetAlarmLogRequest $req) 本接口用于获取告警策略执行详情
  * @method Models\GetMetricLabelValuesResponse GetMetricLabelValues(Models\GetMetricLabelValuesRequest $req) 获取时序label values列表
  * @method Models\MergePartitionResponse MergePartition(Models\MergePartitionRequest $req) 该接口已废弃，如需修改分区数量，请使用ModifyTopic接口。

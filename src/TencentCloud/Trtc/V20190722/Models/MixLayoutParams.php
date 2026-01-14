@@ -74,6 +74,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRenderMode(integer $RenderMode) 设置模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoutList定义的RenderMode一致。
  * @method integer getMaxResolutionUserAlign() 获取屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。
  * @method void setMaxResolutionUserAlign(integer $MaxResolutionUserAlign) 设置屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。
+ * @method boolean getPureAudioDisableLayout() 获取控制房间内纯音频用户是否占据混流布局，只在混流录制，模板布局生效。true: 代表纯音频用户不占位，false: 代表纯音频用户占位（默认为false）。
+ * @method void setPureAudioDisableLayout(boolean $PureAudioDisableLayout) 设置控制房间内纯音频用户是否占据混流布局，只在混流录制，模板布局生效。true: 代表纯音频用户不占位，false: 代表纯音频用户占位（默认为false）。
  */
 class MixLayoutParams extends AbstractModel
 {
@@ -153,6 +155,11 @@ class MixLayoutParams extends AbstractModel
     public $MaxResolutionUserAlign;
 
     /**
+     * @var boolean 控制房间内纯音频用户是否占据混流布局，只在混流录制，模板布局生效。true: 代表纯音频用户不占位，false: 代表纯音频用户占位（默认为false）。
+     */
+    public $PureAudioDisableLayout;
+
+    /**
      * @param integer $MixLayoutMode 布局模式:
 1：悬浮布局；
 2：屏幕分享布局；
@@ -180,6 +187,7 @@ class MixLayoutParams extends AbstractModel
      * @param array $WaterMarkList 水印布局参数， 最多支持25个。
      * @param integer $RenderMode 模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoutList定义的RenderMode一致。
      * @param integer $MaxResolutionUserAlign 屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。
+     * @param boolean $PureAudioDisableLayout 控制房间内纯音频用户是否占据混流布局，只在混流录制，模板布局生效。true: 代表纯音频用户不占位，false: 代表纯音频用户占位（默认为false）。
      */
     function __construct()
     {
@@ -250,6 +258,10 @@ class MixLayoutParams extends AbstractModel
 
         if (array_key_exists("MaxResolutionUserAlign",$param) and $param["MaxResolutionUserAlign"] !== null) {
             $this->MaxResolutionUserAlign = $param["MaxResolutionUserAlign"];
+        }
+
+        if (array_key_exists("PureAudioDisableLayout",$param) and $param["PureAudioDisableLayout"] !== null) {
+            $this->PureAudioDisableLayout = $param["PureAudioDisableLayout"];
         }
     }
 }

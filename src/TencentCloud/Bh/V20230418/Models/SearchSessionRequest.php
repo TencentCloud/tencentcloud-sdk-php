@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealName(string $RealName) 设置姓名，长度不超过20
  * @method string getDeviceName() 获取主机名，长度不超过64
  * @method void setDeviceName(string $DeviceName) 设置主机名，长度不超过64
- * @method integer getStatus() 获取状态，1为活跃，2为结束，3为强制离线，4为其他错误
- * @method void setStatus(integer $Status) 设置状态，1为活跃，2为结束，3为强制离线，4为其他错误
+ * @method integer getStatus() 获取状态，1为活跃，2为结束，3为强制离线，4为其他错误，5暂停会话
+ * @method void setStatus(integer $Status) 设置状态，1为活跃，2为结束，3为强制离线，4为其他错误，5暂停会话
  * @method array getStatusSet() 获取状态，1为活跃，2为结束，3为强制离线
  * @method void setStatusSet(array $StatusSet) 设置状态，1为活跃，2为结束，3为强制离线
  * @method string getId() 获取若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话
@@ -122,7 +122,7 @@ class SearchSessionRequest extends AbstractModel
     public $DeviceName;
 
     /**
-     * @var integer 状态，1为活跃，2为结束，3为强制离线，4为其他错误
+     * @var integer 状态，1为活跃，2为结束，3为强制离线，4为其他错误，5暂停会话
      */
     public $Status;
 
@@ -169,7 +169,7 @@ class SearchSessionRequest extends AbstractModel
      * @param integer $Limit 分页的页内记录数，默认为20，最大200
      * @param string $RealName 姓名，长度不超过20
      * @param string $DeviceName 主机名，长度不超过64
-     * @param integer $Status 状态，1为活跃，2为结束，3为强制离线，4为其他错误
+     * @param integer $Status 状态，1为活跃，2为结束，3为强制离线，4为其他错误，5暂停会话
      * @param array $StatusSet 状态，1为活跃，2为结束，3为强制离线
      * @param string $Id 若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话
      * @param array $AppAssetKindSet 应用资产类型, 1-web

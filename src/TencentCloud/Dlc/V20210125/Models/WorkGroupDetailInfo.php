@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCatalogPolicyInfo(Policy $CatalogPolicyInfo) 设置数据目录权限集
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method Policys getDataCatalogPolicyInfo() 获取数据目录权限
+ * @method void setDataCatalogPolicyInfo(Policys $DataCatalogPolicyInfo) 设置数据目录权限
+ * @method Policys getModelPolicyInfo() 获取模型权限
+ * @method void setModelPolicyInfo(Policys $ModelPolicyInfo) 设置模型权限
  */
 class WorkGroupDetailInfo extends AbstractModel
 {
@@ -90,6 +94,16 @@ class WorkGroupDetailInfo extends AbstractModel
     public $CatalogPolicyInfo;
 
     /**
+     * @var Policys 数据目录权限
+     */
+    public $DataCatalogPolicyInfo;
+
+    /**
+     * @var Policys 模型权限
+     */
+    public $ModelPolicyInfo;
+
+    /**
      * @param integer $WorkGroupId 工作组Id
      * @param string $WorkGroupName 工作组名称
      * @param string $Type 包含的信息类型。User：用户信息；DataAuth：数据权限；EngineAuth:引擎权限
@@ -100,6 +114,8 @@ class WorkGroupDetailInfo extends AbstractModel
      * @param Policys $RowFilterInfo 行过滤信息集合
      * @param Policy $CatalogPolicyInfo 数据目录权限集
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param Policys $DataCatalogPolicyInfo 数据目录权限
+     * @param Policys $ModelPolicyInfo 模型权限
      */
     function __construct()
     {
@@ -153,6 +169,16 @@ class WorkGroupDetailInfo extends AbstractModel
         if (array_key_exists("CatalogPolicyInfo",$param) and $param["CatalogPolicyInfo"] !== null) {
             $this->CatalogPolicyInfo = new Policy();
             $this->CatalogPolicyInfo->deserialize($param["CatalogPolicyInfo"]);
+        }
+
+        if (array_key_exists("DataCatalogPolicyInfo",$param) and $param["DataCatalogPolicyInfo"] !== null) {
+            $this->DataCatalogPolicyInfo = new Policys();
+            $this->DataCatalogPolicyInfo->deserialize($param["DataCatalogPolicyInfo"]);
+        }
+
+        if (array_key_exists("ModelPolicyInfo",$param) and $param["ModelPolicyInfo"] !== null) {
+            $this->ModelPolicyInfo = new Policys();
+            $this->ModelPolicyInfo->deserialize($param["ModelPolicyInfo"]);
         }
     }
 }

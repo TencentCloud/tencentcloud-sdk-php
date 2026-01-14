@@ -1,0 +1,89 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Cls\V20201016\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * CreateRebuildIndexTask请求参数结构体
+ *
+ * @method string getTopicId() 获取日志主题ID
+ * @method void setTopicId(string $TopicId) 设置日志主题ID
+ * @method integer getStartTime() 获取重建起始时间戳，毫秒
+起始时间不允许超过日志生命周期
+ * @method void setStartTime(integer $StartTime) 设置重建起始时间戳，毫秒
+起始时间不允许超过日志生命周期
+ * @method integer getEndTime() 获取重建结束时间戳，毫秒
+结束时间不晚于当前时间往前推15分钟
+注意：建议提前使用“预估重建索引任务(EstimateRebuildIndexTask)”接口评估该时间范围重建索引涉及到的数据量及耗时，避免因数据量过大导致费用成本过高或耗时过长
+ * @method void setEndTime(integer $EndTime) 设置重建结束时间戳，毫秒
+结束时间不晚于当前时间往前推15分钟
+注意：建议提前使用“预估重建索引任务(EstimateRebuildIndexTask)”接口评估该时间范围重建索引涉及到的数据量及耗时，避免因数据量过大导致费用成本过高或耗时过长
+ */
+class CreateRebuildIndexTaskRequest extends AbstractModel
+{
+    /**
+     * @var string 日志主题ID
+     */
+    public $TopicId;
+
+    /**
+     * @var integer 重建起始时间戳，毫秒
+起始时间不允许超过日志生命周期
+     */
+    public $StartTime;
+
+    /**
+     * @var integer 重建结束时间戳，毫秒
+结束时间不晚于当前时间往前推15分钟
+注意：建议提前使用“预估重建索引任务(EstimateRebuildIndexTask)”接口评估该时间范围重建索引涉及到的数据量及耗时，避免因数据量过大导致费用成本过高或耗时过长
+     */
+    public $EndTime;
+
+    /**
+     * @param string $TopicId 日志主题ID
+     * @param integer $StartTime 重建起始时间戳，毫秒
+起始时间不允许超过日志生命周期
+     * @param integer $EndTime 重建结束时间戳，毫秒
+结束时间不晚于当前时间往前推15分钟
+注意：建议提前使用“预估重建索引任务(EstimateRebuildIndexTask)”接口评估该时间范围重建索引涉及到的数据量及耗时，避免因数据量过大导致费用成本过高或耗时过长
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
+            $this->TopicId = $param["TopicId"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
+        }
+    }
+}

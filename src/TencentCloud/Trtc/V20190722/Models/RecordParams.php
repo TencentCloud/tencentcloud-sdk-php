@@ -54,6 +54,8 @@ Hls 格式录制此参数不生效。
  * @method void setMediaId(integer $MediaId) 设置指定录制主辅流，0：主流+辅流（默认）；1:主流；2:辅流。
  * @method integer getFillType() 获取上行视频停止时，录制的补帧类型，0：补最后一帧 1：补黑帧
  * @method void setFillType(integer $FillType) 设置上行视频停止时，录制的补帧类型，0：补最后一帧 1：补黑帧
+ * @method integer getSubscribeAbility() 获取控制录制任务是否订阅混流回推机器人，1是订阅，0是不订阅，默认是0。如果是混流录制任务，建议用订阅白名单控制订阅用户，防止同时订阅混流回推机器人和上行主播，以避免混音效果。
+ * @method void setSubscribeAbility(integer $SubscribeAbility) 设置控制录制任务是否订阅混流回推机器人，1是订阅，0是不订阅，默认是0。如果是混流录制任务，建议用订阅白名单控制订阅用户，防止同时订阅混流回推机器人和上行主播，以避免混音效果。
  */
 class RecordParams extends AbstractModel
 {
@@ -111,6 +113,11 @@ Hls 格式录制此参数不生效。
     public $FillType;
 
     /**
+     * @var integer 控制录制任务是否订阅混流回推机器人，1是订阅，0是不订阅，默认是0。如果是混流录制任务，建议用订阅白名单控制订阅用户，防止同时订阅混流回推机器人和上行主播，以避免混音效果。
+     */
+    public $SubscribeAbility;
+
+    /**
      * @param integer $RecordMode 录制模式：
 1：单流录制，分别录制房间的订阅UserId的音频和视频，将录制文件上传至云存储；
 2：合流录制，将房间内订阅UserId的音视频混录成一个音视频文件，将录制文件上传至云存储；
@@ -128,6 +135,7 @@ Hls 格式录制此参数不生效。
 Hls 格式录制此参数不生效。
      * @param integer $MediaId 指定录制主辅流，0：主流+辅流（默认）；1:主流；2:辅流。
      * @param integer $FillType 上行视频停止时，录制的补帧类型，0：补最后一帧 1：补黑帧
+     * @param integer $SubscribeAbility 控制录制任务是否订阅混流回推机器人，1是订阅，0是不订阅，默认是0。如果是混流录制任务，建议用订阅白名单控制订阅用户，防止同时订阅混流回推机器人和上行主播，以避免混音效果。
      */
     function __construct()
     {
@@ -177,6 +185,10 @@ Hls 格式录制此参数不生效。
 
         if (array_key_exists("FillType",$param) and $param["FillType"] !== null) {
             $this->FillType = $param["FillType"];
+        }
+
+        if (array_key_exists("SubscribeAbility",$param) and $param["SubscribeAbility"] !== null) {
+            $this->SubscribeAbility = $param["SubscribeAbility"];
         }
     }
 }

@@ -70,6 +70,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkload(string $Workload) 设置K8S集群工作负载
  * @method string getPodName() 获取K8S集群容器名称
  * @method void setPodName(string $PodName) 设置K8S集群容器名称
+ * @method integer getMode() 获取访问方式 1-直链 2-客户端 3-web 大部分情况下是2
+ * @method void setMode(integer $Mode) 设置访问方式 1-直链 2-客户端 3-web 大部分情况下是2
+ * @method integer getDisableMonitor() 获取是否禁用会话监控。0-不禁用；1-禁用会话，仅展示中断；2-禁用会话，不展示中断
+ * @method void setDisableMonitor(integer $DisableMonitor) 设置是否禁用会话监控。0-不禁用；1-禁用会话，仅展示中断；2-禁用会话，不展示中断
+ * @method float getRealTimeBandwidthIn() 获取实时入带宽，单位Mbps
+ * @method void setRealTimeBandwidthIn(float $RealTimeBandwidthIn) 设置实时入带宽，单位Mbps
+ * @method float getRealTimeBandwidthOut() 获取实时出带宽，单位Mbps
+ * @method void setRealTimeBandwidthOut(float $RealTimeBandwidthOut) 设置实时出带宽，单位Mbps
  */
 class SessionResult extends AbstractModel
 {
@@ -199,6 +207,26 @@ class SessionResult extends AbstractModel
     public $PodName;
 
     /**
+     * @var integer 访问方式 1-直链 2-客户端 3-web 大部分情况下是2
+     */
+    public $Mode;
+
+    /**
+     * @var integer 是否禁用会话监控。0-不禁用；1-禁用会话，仅展示中断；2-禁用会话，不展示中断
+     */
+    public $DisableMonitor;
+
+    /**
+     * @var float 实时入带宽，单位Mbps
+     */
+    public $RealTimeBandwidthIn;
+
+    /**
+     * @var float 实时出带宽，单位Mbps
+     */
+    public $RealTimeBandwidthOut;
+
+    /**
      * @param string $UserName 用户名
      * @param string $RealName 姓名
      * @param string $Account 主机账号
@@ -224,6 +252,10 @@ class SessionResult extends AbstractModel
      * @param string $Namespace K8S集群命名空间
      * @param string $Workload K8S集群工作负载
      * @param string $PodName K8S集群容器名称
+     * @param integer $Mode 访问方式 1-直链 2-客户端 3-web 大部分情况下是2
+     * @param integer $DisableMonitor 是否禁用会话监控。0-不禁用；1-禁用会话，仅展示中断；2-禁用会话，不展示中断
+     * @param float $RealTimeBandwidthIn 实时入带宽，单位Mbps
+     * @param float $RealTimeBandwidthOut 实时出带宽，单位Mbps
      */
     function __construct()
     {
@@ -336,6 +368,22 @@ class SessionResult extends AbstractModel
 
         if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
             $this->PodName = $param["PodName"];
+        }
+
+        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
+            $this->Mode = $param["Mode"];
+        }
+
+        if (array_key_exists("DisableMonitor",$param) and $param["DisableMonitor"] !== null) {
+            $this->DisableMonitor = $param["DisableMonitor"];
+        }
+
+        if (array_key_exists("RealTimeBandwidthIn",$param) and $param["RealTimeBandwidthIn"] !== null) {
+            $this->RealTimeBandwidthIn = $param["RealTimeBandwidthIn"];
+        }
+
+        if (array_key_exists("RealTimeBandwidthOut",$param) and $param["RealTimeBandwidthOut"] !== null) {
+            $this->RealTimeBandwidthOut = $param["RealTimeBandwidthOut"];
         }
     }
 }

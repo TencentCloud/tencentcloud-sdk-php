@@ -70,6 +70,8 @@ False -- 不开启
  * @method void setRotationFrequency(integer $RotationFrequency) 设置轮转周期，以天为单位，默认为1天。
  * @method string getKmsHsmClusterId() 获取KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。
  * @method void setKmsHsmClusterId(string $KmsHsmClusterId) 设置KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。
+ * @method string getAccountRemark() 获取账户备注
+ * @method void setAccountRemark(string $AccountRemark) 设置账户备注
  */
 class CreateProductSecretRequest extends AbstractModel
 {
@@ -151,6 +153,11 @@ False -- 不开启
     public $KmsHsmClusterId;
 
     /**
+     * @var string 账户备注
+     */
+    public $AccountRemark;
+
+    /**
      * @param string $SecretName 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。
      * @param string $UserNamePrefix 用户账号名前缀，由用户自行指定，长度限定在8个字符以内，
 可选字符集包括：
@@ -176,6 +183,7 @@ False -- 不开启
 如果不指定，默认为False。
      * @param integer $RotationFrequency 轮转周期，以天为单位，默认为1天。
      * @param string $KmsHsmClusterId KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。
+     * @param string $AccountRemark 账户备注
      */
     function __construct()
     {
@@ -250,6 +258,10 @@ False -- 不开启
 
         if (array_key_exists("KmsHsmClusterId",$param) and $param["KmsHsmClusterId"] !== null) {
             $this->KmsHsmClusterId = $param["KmsHsmClusterId"];
+        }
+
+        if (array_key_exists("AccountRemark",$param) and $param["AccountRemark"] !== null) {
+            $this->AccountRemark = $param["AccountRemark"];
         }
     }
 }

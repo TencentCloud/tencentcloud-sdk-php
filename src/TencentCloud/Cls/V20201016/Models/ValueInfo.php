@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 需要开启键值索引的字段的索引描述信息
  *
- * @method string getType() 获取字段类型，目前支持的类型有：long、text、double
- * @method void setType(string $Type) 设置字段类型，目前支持的类型有：long、text、double
+ * @method string getType() 获取字段类型，支持的类型有：long、text、double、json
+注意：json 类型目前仅部分用户或日志主题支持，如需使用请联系我们开启功能白名单
+ * @method void setType(string $Type) 设置字段类型，支持的类型有：long、text、double、json
+注意：json 类型目前仅部分用户或日志主题支持，如需使用请联系我们开启功能白名单
  * @method string getTokenizer() 获取字段的分词符，其中的每个字符代表一个分词符；
 仅支持英文符号、\n\t\r及转义符\；
 long及double类型字段需为空；
@@ -36,11 +38,20 @@ long及double类型字段需为空；
  * @method void setContainZH(boolean $ContainZH) 设置是否包含中文，long及double类型字段需为false
  * @method string getAlias() 获取字段别名
  * @method void setAlias(string $Alias) 设置字段别名
+ * @method boolean getOpenIndexForChildOnly() 获取仅为子节点开启索引，本字段不开启。
+注意：仅json类型字段可配置该参数
+ * @method void setOpenIndexForChildOnly(boolean $OpenIndexForChildOnly) 设置仅为子节点开启索引，本字段不开启。
+注意：仅json类型字段可配置该参数
+ * @method array getChildNode() 获取json子节点列表
+注意：仅json类型字段可配置该参数
+ * @method void setChildNode(array $ChildNode) 设置json子节点列表
+注意：仅json类型字段可配置该参数
  */
 class ValueInfo extends AbstractModel
 {
     /**
-     * @var string 字段类型，目前支持的类型有：long、text、double
+     * @var string 字段类型，支持的类型有：long、text、double、json
+注意：json 类型目前仅部分用户或日志主题支持，如需使用请联系我们开启功能白名单
      */
     public $Type;
 
@@ -68,7 +79,20 @@ long及double类型字段需为空；
     public $Alias;
 
     /**
-     * @param string $Type 字段类型，目前支持的类型有：long、text、double
+     * @var boolean 仅为子节点开启索引，本字段不开启。
+注意：仅json类型字段可配置该参数
+     */
+    public $OpenIndexForChildOnly;
+
+    /**
+     * @var array json子节点列表
+注意：仅json类型字段可配置该参数
+     */
+    public $ChildNode;
+
+    /**
+     * @param string $Type 字段类型，支持的类型有：long、text、double、json
+注意：json 类型目前仅部分用户或日志主题支持，如需使用请联系我们开启功能白名单
      * @param string $Tokenizer 字段的分词符，其中的每个字符代表一个分词符；
 仅支持英文符号、\n\t\r及转义符\；
 long及double类型字段需为空；
@@ -76,6 +100,10 @@ long及double类型字段需为空；
      * @param boolean $SqlFlag 字段是否开启分析功能
      * @param boolean $ContainZH 是否包含中文，long及double类型字段需为false
      * @param string $Alias 字段别名
+     * @param boolean $OpenIndexForChildOnly 仅为子节点开启索引，本字段不开启。
+注意：仅json类型字段可配置该参数
+     * @param array $ChildNode json子节点列表
+注意：仅json类型字段可配置该参数
      */
     function __construct()
     {
@@ -108,6 +136,19 @@ long及double类型字段需为空；
 
         if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
             $this->Alias = $param["Alias"];
+        }
+
+        if (array_key_exists("OpenIndexForChildOnly",$param) and $param["OpenIndexForChildOnly"] !== null) {
+            $this->OpenIndexForChildOnly = $param["OpenIndexForChildOnly"];
+        }
+
+        if (array_key_exists("ChildNode",$param) and $param["ChildNode"] !== null) {
+            $this->ChildNode = [];
+            foreach ($param["ChildNode"] as $key => $value){
+                $obj = new KeyValueInfo();
+                $obj->deserialize($value);
+                array_push($this->ChildNode, $obj);
+            }
         }
     }
 }

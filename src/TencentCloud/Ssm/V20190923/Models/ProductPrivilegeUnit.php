@@ -80,6 +80,34 @@ TableName - 显式指明所在表
  * @method void setColumnName(string $ColumnName) 设置仅当PrivilegeName为ColumnPrivileges时这个值才生效，并且此时必须填充：
 Database - 显式指明所在的数据库实例。
 TableName - 显式指明所在表
+ * @method string getSchemaName() 获取仅当PrivilegeName为SchemaPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+ * @method void setSchemaName(string $SchemaName) 设置仅当PrivilegeName为SchemaPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+ * @method string getSequenceName() 获取仅当PrivilegeName为SequencePrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+ * @method void setSequenceName(string $SequenceName) 设置仅当PrivilegeName为SequencePrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+ * @method string getProcedureName() 获取仅当PrivilegeName为ProcedurePrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+ * @method void setProcedureName(string $ProcedureName) 设置仅当PrivilegeName为ProcedurePrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+ * @method string getTypeName() 获取仅当PrivilegeName为TypePrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+ * @method void setTypeName(string $TypeName) 设置仅当PrivilegeName为TypePrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+ * @method string getFunctionName() 获取仅当PrivilegeName为FunctionPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+ * @method void setFunctionName(string $FunctionName) 设置仅当PrivilegeName为FunctionPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+ * @method string getViewName() 获取仅当PrivilegeName为ViewPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+ * @method void setViewName(string $ViewName) 设置仅当PrivilegeName为ViewPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+ * @method string getMatviewName() 获取仅当PrivilegeName为MatviewPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+ * @method void setMatviewName(string $MatviewName) 设置仅当PrivilegeName为MatviewPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
  */
 class ProductPrivilegeUnit extends AbstractModel
 {
@@ -134,6 +162,48 @@ TableName - 显式指明所在表
     public $ColumnName;
 
     /**
+     * @var string 仅当PrivilegeName为SchemaPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     */
+    public $SchemaName;
+
+    /**
+     * @var string 仅当PrivilegeName为SequencePrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     */
+    public $SequenceName;
+
+    /**
+     * @var string 仅当PrivilegeName为ProcedurePrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     */
+    public $ProcedureName;
+
+    /**
+     * @var string 仅当PrivilegeName为TypePrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     */
+    public $TypeName;
+
+    /**
+     * @var string 仅当PrivilegeName为FunctionPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     */
+    public $FunctionName;
+
+    /**
+     * @var string 仅当PrivilegeName为ViewPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     */
+    public $ViewName;
+
+    /**
+     * @var string 仅当PrivilegeName为MatviewPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     */
+    public $MatviewName;
+
+    /**
      * @param string $PrivilegeName 权限名称，当前可选：
 GlobalPrivileges
 DatabasePrivileges
@@ -164,6 +234,20 @@ ColumnPrivileges
      * @param string $ColumnName 仅当PrivilegeName为ColumnPrivileges时这个值才生效，并且此时必须填充：
 Database - 显式指明所在的数据库实例。
 TableName - 显式指明所在表
+     * @param string $SchemaName 仅当PrivilegeName为SchemaPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     * @param string $SequenceName 仅当PrivilegeName为SequencePrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     * @param string $ProcedureName 仅当PrivilegeName为ProcedurePrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     * @param string $TypeName 仅当PrivilegeName为TypePrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     * @param string $FunctionName 仅当PrivilegeName为FunctionPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     * @param string $ViewName 仅当PrivilegeName为ViewPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     * @param string $MatviewName 仅当PrivilegeName为MatviewPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
      */
     function __construct()
     {
@@ -196,6 +280,34 @@ TableName - 显式指明所在表
 
         if (array_key_exists("ColumnName",$param) and $param["ColumnName"] !== null) {
             $this->ColumnName = $param["ColumnName"];
+        }
+
+        if (array_key_exists("SchemaName",$param) and $param["SchemaName"] !== null) {
+            $this->SchemaName = $param["SchemaName"];
+        }
+
+        if (array_key_exists("SequenceName",$param) and $param["SequenceName"] !== null) {
+            $this->SequenceName = $param["SequenceName"];
+        }
+
+        if (array_key_exists("ProcedureName",$param) and $param["ProcedureName"] !== null) {
+            $this->ProcedureName = $param["ProcedureName"];
+        }
+
+        if (array_key_exists("TypeName",$param) and $param["TypeName"] !== null) {
+            $this->TypeName = $param["TypeName"];
+        }
+
+        if (array_key_exists("FunctionName",$param) and $param["FunctionName"] !== null) {
+            $this->FunctionName = $param["FunctionName"];
+        }
+
+        if (array_key_exists("ViewName",$param) and $param["ViewName"] !== null) {
+            $this->ViewName = $param["ViewName"];
+        }
+
+        if (array_key_exists("MatviewName",$param) and $param["MatviewName"] !== null) {
+            $this->MatviewName = $param["MatviewName"];
         }
     }
 }

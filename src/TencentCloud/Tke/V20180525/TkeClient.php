@@ -98,6 +98,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DeleteReservedInstancesResponse DeleteReservedInstances(Models\DeleteReservedInstancesRequest $req) 预留券实例如符合退还规则，可通过本接口主动退还。
  * @method Models\DeleteRollOutSequenceResponse DeleteRollOutSequence(Models\DeleteRollOutSequenceRequest $req) 删除集群发布序列
  * @method Models\DeleteTKEEdgeClusterResponse DeleteTKEEdgeCluster(Models\DeleteTKEEdgeClusterRequest $req) 删除边缘计算集群
+ * @method Models\DeleteUserPermissionsResponse DeleteUserPermissions(Models\DeleteUserPermissionsRequest $req) 使用请求中提供的权限集合，删除用户对应的权限
  * @method Models\DescribeAddonResponse DescribeAddon(Models\DescribeAddonRequest $req) 获取addon列表
  * @method Models\DescribeAddonValuesResponse DescribeAddonValues(Models\DescribeAddonValuesRequest $req) 获取一个addon的参数
  * @method Models\DescribeAvailableClusterVersionResponse DescribeAvailableClusterVersion(Models\DescribeAvailableClusterVersionRequest $req) 获取集群可以升级的所有版本
@@ -200,6 +201,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 查询任务相关信息，只会查询对应任务类型的最新的一条任务状态
  * @method Models\DescribeUpgradeTaskDetailResponse DescribeUpgradeTaskDetail(Models\DescribeUpgradeTaskDetailRequest $req) 查询计划升级任务详情
  * @method Models\DescribeUpgradeTasksResponse DescribeUpgradeTasks(Models\DescribeUpgradeTasksRequest $req) 查询计划升级任务
+ * @method Models\DescribeUserPermissionsResponse DescribeUserPermissions(Models\DescribeUserPermissionsRequest $req) 查询一个指定用户在当前地域下所有 TKE 集群中的聚合权限信息。返回用户在各集群中的 ClusterRoleBinding 和 RoleBinding 信息。
  * @method Models\DescribeVersionsResponse DescribeVersions(Models\DescribeVersionsRequest $req) 获取集群版本信息
  * @method Models\DescribeVpcCniPodLimitsResponse DescribeVpcCniPodLimits(Models\DescribeVpcCniPodLimitsRequest $req) 本接口查询当前用户和地域在指定可用区下的机型可支持的最大 TKE VPC-CNI 网络模式的 Pod 数量
  * @method Models\DisableClusterAuditResponse DisableClusterAudit(Models\DisableClusterAuditRequest $req) 关闭集群审计
@@ -220,6 +222,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\GetMostSuitableImageCacheResponse GetMostSuitableImageCache(Models\GetMostSuitableImageCacheRequest $req) 根据镜像列表，查询匹配的镜像缓存
  * @method Models\GetTkeAppChartListResponse GetTkeAppChartList(Models\GetTkeAppChartListRequest $req) 获取TKE支持的App列表
  * @method Models\GetUpgradeInstanceProgressResponse GetUpgradeInstanceProgress(Models\GetUpgradeInstanceProgressRequest $req) 获得节点升级当前的进度，若集群未处于节点升级状态，则接口会报错：任务未找到。
+ * @method Models\GrantUserPermissionsResponse GrantUserPermissions(Models\GrantUserPermissionsRequest $req) 使用请求中提供的权限集合，为用户授予对应的 RBAC 权限。
  * @method Models\InstallAddonResponse InstallAddon(Models\InstallAddonRequest $req) 为目标集群安装一个addon
  * @method Models\InstallEdgeLogAgentResponse InstallEdgeLogAgent(Models\InstallEdgeLogAgentRequest $req) 在tke@edge集群的边缘节点上安装日志采集组件
  * @method Models\InstallLogAgentResponse InstallLogAgent(Models\InstallLogAgentRequest $req) 在TKE集群中安装CLS日志采集组件

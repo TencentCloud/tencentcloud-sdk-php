@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWarnCardInfos(array $WarnCardInfos) 设置该字段仅对国际站请求起作用，国内站该字段将固定返回空数组。国际站告警码如下：  告警码-9101 证件边框不完整告警-9102 证件复印件告警-9103 证件翻拍告警-9104 证件PS告警-9107 证件反光告警-9108 证件模糊告警-9109 告警能力未开通
  * @method integer getCardCount() 获取输入图片中的卡证数量（仅请求曼谷地域[ap-bangkok]返回）
  * @method void setCardCount(integer $CardCount) 设置输入图片中的卡证数量（仅请求曼谷地域[ap-bangkok]返回）
+ * @method boolean getIsComplete() 获取是否完整
+ * @method void setIsComplete(boolean $IsComplete) 设置是否完整
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -166,6 +168,11 @@ class MLIDPassportOCRResponse extends AbstractModel
     public $CardCount;
 
     /**
+     * @var boolean 是否完整
+     */
+    public $IsComplete;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -193,6 +200,7 @@ class MLIDPassportOCRResponse extends AbstractModel
      * @param PassportRecognizeInfos $PassportRecognizeInfos 信息区证件内容
      * @param array $WarnCardInfos 该字段仅对国际站请求起作用，国内站该字段将固定返回空数组。国际站告警码如下：  告警码-9101 证件边框不完整告警-9102 证件复印件告警-9103 证件翻拍告警-9104 证件PS告警-9107 证件反光告警-9108 证件模糊告警-9109 告警能力未开通
      * @param integer $CardCount 输入图片中的卡证数量（仅请求曼谷地域[ap-bangkok]返回）
+     * @param boolean $IsComplete 是否完整
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -279,6 +287,10 @@ class MLIDPassportOCRResponse extends AbstractModel
 
         if (array_key_exists("CardCount",$param) and $param["CardCount"] !== null) {
             $this->CardCount = $param["CardCount"];
+        }
+
+        if (array_key_exists("IsComplete",$param) and $param["IsComplete"] !== null) {
+            $this->IsComplete = $param["IsComplete"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

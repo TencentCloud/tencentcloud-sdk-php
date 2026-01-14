@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始时间，不得早于当前时间的180天前
  * @method string getEndTime() 获取结束时间
  * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method array getOperationSet() 获取操作类型
+ * @method void setOperationSet(array $OperationSet) 设置操作类型
+ * @method array getProtocolSet() 获取会话类型
+ * @method void setProtocolSet(array $ProtocolSet) 设置会话类型
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取每页容量，默认为20，最大200
@@ -42,6 +46,16 @@ class SearchAuditLogRequest extends AbstractModel
     public $EndTime;
 
     /**
+     * @var array 操作类型
+     */
+    public $OperationSet;
+
+    /**
+     * @var array 会话类型
+     */
+    public $ProtocolSet;
+
+    /**
      * @var integer 偏移量
      */
     public $Offset;
@@ -54,6 +68,8 @@ class SearchAuditLogRequest extends AbstractModel
     /**
      * @param string $StartTime 开始时间，不得早于当前时间的180天前
      * @param string $EndTime 结束时间
+     * @param array $OperationSet 操作类型
+     * @param array $ProtocolSet 会话类型
      * @param integer $Offset 偏移量
      * @param integer $Limit 每页容量，默认为20，最大200
      */
@@ -76,6 +92,14 @@ class SearchAuditLogRequest extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("OperationSet",$param) and $param["OperationSet"] !== null) {
+            $this->OperationSet = $param["OperationSet"];
+        }
+
+        if (array_key_exists("ProtocolSet",$param) and $param["ProtocolSet"] !== null) {
+            $this->ProtocolSet = $param["ProtocolSet"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyGlobalDomainDns请求参数结构体
  *
- * @method integer getDnsRecordId() 获取解析记录ID
- * @method void setDnsRecordId(integer $DnsRecordId) 设置解析记录ID
- * @method string getDomainId() 获取域名ID
- * @method void setDomainId(string $DomainId) 设置域名ID
- * @method array getNationCountryInnerCodes() 获取国家ID列表
- * @method void setNationCountryInnerCodes(array $NationCountryInnerCodes) 设置国家ID列表
- * @method array getProxyIdList() 获取通道ID列表
- * @method void setProxyIdList(array $ProxyIdList) 设置通道ID列表
+ * @method integer getDnsRecordId() 获取<p>解析记录ID</p>
+ * @method void setDnsRecordId(integer $DnsRecordId) 设置<p>解析记录ID</p>
+ * @method string getDomainId() 获取<p>域名ID</p>
+ * @method void setDomainId(string $DomainId) 设置<p>域名ID</p>
+ * @method array getNationCountryInnerCodes() 获取<p>国家ID列表</p>
+ * @method void setNationCountryInnerCodes(array $NationCountryInnerCodes) 设置<p>国家ID列表</p>
+ * @method array getProxyIdList() 获取<p>通道ID列表</p>
+ * @method void setProxyIdList(array $ProxyIdList) 设置<p>通道ID列表</p>
  */
 class ModifyGlobalDomainDnsRequest extends AbstractModel
 {
     /**
-     * @var integer 解析记录ID
+     * @var integer <p>解析记录ID</p>
      */
     public $DnsRecordId;
 
     /**
-     * @var string 域名ID
+     * @var string <p>域名ID</p>
      */
     public $DomainId;
 
     /**
-     * @var array 国家ID列表
+     * @var array <p>国家ID列表</p>
      */
     public $NationCountryInnerCodes;
 
     /**
-     * @var array 通道ID列表
+     * @var array <p>通道ID列表</p>
      */
     public $ProxyIdList;
 
     /**
-     * @param integer $DnsRecordId 解析记录ID
-     * @param string $DomainId 域名ID
-     * @param array $NationCountryInnerCodes 国家ID列表
-     * @param array $ProxyIdList 通道ID列表
+     * @param integer $DnsRecordId <p>解析记录ID</p>
+     * @param string $DomainId <p>域名ID</p>
+     * @param array $NationCountryInnerCodes <p>国家ID列表</p>
+     * @param array $ProxyIdList <p>通道ID列表</p>
      */
     function __construct()
     {

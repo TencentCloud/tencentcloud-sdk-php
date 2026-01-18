@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method BeautyConfig getBeautyConfig() 获取美颜配置。
  * @method void setBeautyConfig(BeautyConfig $BeautyConfig) 设置美颜配置。
+ * @method ImageTransformConfig getTransformConfig() 获取图片基础转换能力。
+ * @method void setTransformConfig(ImageTransformConfig $TransformConfig) 设置图片基础转换能力。
  */
 class ImageTaskInput extends AbstractModel
 {
@@ -71,6 +73,11 @@ class ImageTaskInput extends AbstractModel
     public $BeautyConfig;
 
     /**
+     * @var ImageTransformConfig 图片基础转换能力。
+     */
+    public $TransformConfig;
+
+    /**
      * @param ImageEncodeConfig $EncodeConfig 图片编码配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageEnhanceConfig $EnhanceConfig 图片增强配置。
@@ -80,6 +87,7 @@ class ImageTaskInput extends AbstractModel
      * @param BlindWatermarkConfig $BlindWatermarkConfig 盲水印配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BeautyConfig $BeautyConfig 美颜配置。
+     * @param ImageTransformConfig $TransformConfig 图片基础转换能力。
      */
     function __construct()
     {
@@ -117,6 +125,11 @@ class ImageTaskInput extends AbstractModel
         if (array_key_exists("BeautyConfig",$param) and $param["BeautyConfig"] !== null) {
             $this->BeautyConfig = new BeautyConfig();
             $this->BeautyConfig->deserialize($param["BeautyConfig"]);
+        }
+
+        if (array_key_exists("TransformConfig",$param) and $param["TransformConfig"] !== null) {
+            $this->TransformConfig = new ImageTransformConfig();
+            $this->TransformConfig->deserialize($param["TransformConfig"]);
         }
     }
 }

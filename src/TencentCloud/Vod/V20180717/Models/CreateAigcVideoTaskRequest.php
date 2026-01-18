@@ -26,24 +26,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelName(string $ModelName) 设置模型名称。取值：<li>Hailuo：海螺；</li><li>Kling：可灵；</li><li> Jimeng：即梦；</li><li>Vidu；</li><li>Hunyuan：混元；</li><li>Mingmou：明眸；</li>
  * @method string getModelVersion() 获取模型版本。取值：<li>当 ModelName 是 Hailuo，可选值为 02、2.3、2.3-fast；</li><li>当 ModelName 是 Kling，可选值为 1.6、2.0、2.1、2.5、O1；</li><li>当 ModelName 是 Jimeng，可选值为 3.0pro；</li><li>当 ModelName 是 Vidu，可选值为 q2、q2-pro、q2-turbo；</li><li>当 ModelName 是 GV，可选值为 3.1、3.1-Fast；</li><li>当 ModelName 是 OS，可选值为 2.0；</li><li>当 ModelName 是 Hunyuan，可选值为 1.5；</li><li>当 ModelName 是 Mingmou，可选值为 1.0；</li>
  * @method void setModelVersion(string $ModelVersion) 设置模型版本。取值：<li>当 ModelName 是 Hailuo，可选值为 02、2.3、2.3-fast；</li><li>当 ModelName 是 Kling，可选值为 1.6、2.0、2.1、2.5、O1；</li><li>当 ModelName 是 Jimeng，可选值为 3.0pro；</li><li>当 ModelName 是 Vidu，可选值为 q2、q2-pro、q2-turbo；</li><li>当 ModelName 是 GV，可选值为 3.1、3.1-Fast；</li><li>当 ModelName 是 OS，可选值为 2.0；</li><li>当 ModelName 是 Hunyuan，可选值为 1.5；</li><li>当 ModelName 是 Mingmou，可选值为 1.0；</li>
- * @method array getFileInfos() 获取最多包含三张素材资源图片的列表，用于描述模型在生成视频时要使用的资源图片。
+ * @method array getFileInfos() 获取最多包含三张素材资源文件的列表，用于描述模型在生成视频时要使用的资源文件。
 
-首尾帧视频生成：用FileInfos第一张表示首帧（此时FileInfos最多包含一张图片），LastFrameFileId或者LastFrameUrl表示尾帧。
+首尾帧视频生成：用 FileInfos 第一张表示首帧（此时 FileInfos 最多包含一张图片），LastFrameFileId 或者 LastFrameUrl 表示尾帧。
 
 支持多图输入的模型：
-1. GV，使用多图输入时，不可使用LastFrameFileId和LastFrameUrl。
-2. Vidu，支持多图参考生视频。q2模型1-7张图片，可通过FileInfos里面的ObjectId作为主体id来传入。
+1. GV，使用多图输入时，不可使用 LastFrameFileId 和 LastFrameUrl。
+2. Vidu，支持多图参考生视频。q2 模型1-7张图片，可通过 FileInfos 里面的 ObjectId 作为主体 id 来传入。
 
 注意：
 1. 图片大小不超过10M。
 2. 支持的图片格式：jpeg、png。
- * @method void setFileInfos(array $FileInfos) 设置最多包含三张素材资源图片的列表，用于描述模型在生成视频时要使用的资源图片。
+ * @method void setFileInfos(array $FileInfos) 设置最多包含三张素材资源文件的列表，用于描述模型在生成视频时要使用的资源文件。
 
-首尾帧视频生成：用FileInfos第一张表示首帧（此时FileInfos最多包含一张图片），LastFrameFileId或者LastFrameUrl表示尾帧。
+首尾帧视频生成：用 FileInfos 第一张表示首帧（此时 FileInfos 最多包含一张图片），LastFrameFileId 或者 LastFrameUrl 表示尾帧。
 
 支持多图输入的模型：
-1. GV，使用多图输入时，不可使用LastFrameFileId和LastFrameUrl。
-2. Vidu，支持多图参考生视频。q2模型1-7张图片，可通过FileInfos里面的ObjectId作为主体id来传入。
+1. GV，使用多图输入时，不可使用 LastFrameFileId 和 LastFrameUrl。
+2. Vidu，支持多图参考生视频。q2 模型1-7张图片，可通过 FileInfos 里面的 ObjectId 作为主体 id 来传入。
 
 注意：
 1. 图片大小不超过10M。
@@ -74,6 +74,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnhancePrompt(string $EnhancePrompt) 设置是否自动优化提示词。开启时将自动优化传入的 Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
  * @method AigcVideoOutputConfig getOutputConfig() 获取生视频任务的输出媒体文件配置。
  * @method void setOutputConfig(AigcVideoOutputConfig $OutputConfig) 设置生视频任务的输出媒体文件配置。
+ * @method string getInputRegion() 获取输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。
+ * @method void setInputRegion(string $InputRegion) 设置输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。
+ * @method string getSceneType() 获取场景类型。取值如下：
+<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li>
+<li>其他 ModelName 暂不支持。</li>
+ * @method void setSceneType(string $SceneType) 设置场景类型。取值如下：
+<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li>
+<li>其他 ModelName 暂不支持。</li>
  * @method string getSessionId() 获取用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。
@@ -82,8 +90,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTasksPriority(integer $TasksPriority) 设置任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
  * @method string getExtInfo() 获取保留字段，特殊用途时使用。
  * @method void setExtInfo(string $ExtInfo) 设置保留字段，特殊用途时使用。
- * @method string getInputRegion() 获取输入图片的区域信息。当图片url是国外地址时候，可选Oversea。默认Mainland。
- * @method void setInputRegion(string $InputRegion) 设置输入图片的区域信息。当图片url是国外地址时候，可选Oversea。默认Mainland。
  */
 class CreateAigcVideoTaskRequest extends AbstractModel
 {
@@ -103,13 +109,13 @@ class CreateAigcVideoTaskRequest extends AbstractModel
     public $ModelVersion;
 
     /**
-     * @var array 最多包含三张素材资源图片的列表，用于描述模型在生成视频时要使用的资源图片。
+     * @var array 最多包含三张素材资源文件的列表，用于描述模型在生成视频时要使用的资源文件。
 
-首尾帧视频生成：用FileInfos第一张表示首帧（此时FileInfos最多包含一张图片），LastFrameFileId或者LastFrameUrl表示尾帧。
+首尾帧视频生成：用 FileInfos 第一张表示首帧（此时 FileInfos 最多包含一张图片），LastFrameFileId 或者 LastFrameUrl 表示尾帧。
 
 支持多图输入的模型：
-1. GV，使用多图输入时，不可使用LastFrameFileId和LastFrameUrl。
-2. Vidu，支持多图参考生视频。q2模型1-7张图片，可通过FileInfos里面的ObjectId作为主体id来传入。
+1. GV，使用多图输入时，不可使用 LastFrameFileId 和 LastFrameUrl。
+2. Vidu，支持多图参考生视频。q2 模型1-7张图片，可通过 FileInfos 里面的 ObjectId 作为主体 id 来传入。
 
 注意：
 1. 图片大小不超过10M。
@@ -155,6 +161,18 @@ class CreateAigcVideoTaskRequest extends AbstractModel
     public $OutputConfig;
 
     /**
+     * @var string 输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。
+     */
+    public $InputRegion;
+
+    /**
+     * @var string 场景类型。取值如下：
+<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li>
+<li>其他 ModelName 暂不支持。</li>
+     */
+    public $SceneType;
+
+    /**
      * @var string 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
     public $SessionId;
@@ -175,21 +193,16 @@ class CreateAigcVideoTaskRequest extends AbstractModel
     public $ExtInfo;
 
     /**
-     * @var string 输入图片的区域信息。当图片url是国外地址时候，可选Oversea。默认Mainland。
-     */
-    public $InputRegion;
-
-    /**
      * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      * @param string $ModelName 模型名称。取值：<li>Hailuo：海螺；</li><li>Kling：可灵；</li><li> Jimeng：即梦；</li><li>Vidu；</li><li>Hunyuan：混元；</li><li>Mingmou：明眸；</li>
      * @param string $ModelVersion 模型版本。取值：<li>当 ModelName 是 Hailuo，可选值为 02、2.3、2.3-fast；</li><li>当 ModelName 是 Kling，可选值为 1.6、2.0、2.1、2.5、O1；</li><li>当 ModelName 是 Jimeng，可选值为 3.0pro；</li><li>当 ModelName 是 Vidu，可选值为 q2、q2-pro、q2-turbo；</li><li>当 ModelName 是 GV，可选值为 3.1、3.1-Fast；</li><li>当 ModelName 是 OS，可选值为 2.0；</li><li>当 ModelName 是 Hunyuan，可选值为 1.5；</li><li>当 ModelName 是 Mingmou，可选值为 1.0；</li>
-     * @param array $FileInfos 最多包含三张素材资源图片的列表，用于描述模型在生成视频时要使用的资源图片。
+     * @param array $FileInfos 最多包含三张素材资源文件的列表，用于描述模型在生成视频时要使用的资源文件。
 
-首尾帧视频生成：用FileInfos第一张表示首帧（此时FileInfos最多包含一张图片），LastFrameFileId或者LastFrameUrl表示尾帧。
+首尾帧视频生成：用 FileInfos 第一张表示首帧（此时 FileInfos 最多包含一张图片），LastFrameFileId 或者 LastFrameUrl 表示尾帧。
 
 支持多图输入的模型：
-1. GV，使用多图输入时，不可使用LastFrameFileId和LastFrameUrl。
-2. Vidu，支持多图参考生视频。q2模型1-7张图片，可通过FileInfos里面的ObjectId作为主体id来传入。
+1. GV，使用多图输入时，不可使用 LastFrameFileId 和 LastFrameUrl。
+2. Vidu，支持多图参考生视频。q2 模型1-7张图片，可通过 FileInfos 里面的 ObjectId 作为主体 id 来传入。
 
 注意：
 1. 图片大小不超过10M。
@@ -207,11 +220,14 @@ class CreateAigcVideoTaskRequest extends AbstractModel
      * @param string $NegativePrompt 要阻止模型生成视频的提示词。
      * @param string $EnhancePrompt 是否自动优化提示词。开启时将自动优化传入的 Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
      * @param AigcVideoOutputConfig $OutputConfig 生视频任务的输出媒体文件配置。
+     * @param string $InputRegion 输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。
+     * @param string $SceneType 场景类型。取值如下：
+<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li>
+<li>其他 ModelName 暂不支持。</li>
      * @param string $SessionId 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。
      * @param integer $TasksPriority 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
      * @param string $ExtInfo 保留字段，特殊用途时使用。
-     * @param string $InputRegion 输入图片的区域信息。当图片url是国外地址时候，可选Oversea。默认Mainland。
      */
     function __construct()
     {
@@ -272,6 +288,14 @@ class CreateAigcVideoTaskRequest extends AbstractModel
             $this->OutputConfig->deserialize($param["OutputConfig"]);
         }
 
+        if (array_key_exists("InputRegion",$param) and $param["InputRegion"] !== null) {
+            $this->InputRegion = $param["InputRegion"];
+        }
+
+        if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
+            $this->SceneType = $param["SceneType"];
+        }
+
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
             $this->SessionId = $param["SessionId"];
         }
@@ -286,10 +310,6 @@ class CreateAigcVideoTaskRequest extends AbstractModel
 
         if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
             $this->ExtInfo = $param["ExtInfo"];
-        }
-
-        if (array_key_exists("InputRegion",$param) and $param["InputRegion"] !== null) {
-            $this->InputRegion = $param["InputRegion"];
         }
     }
 }

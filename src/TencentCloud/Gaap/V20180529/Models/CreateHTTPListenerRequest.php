@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateHTTPListener请求参数结构体
  *
- * @method string getListenerName() 获取监听器名称
- * @method void setListenerName(string $ListenerName) 设置监听器名称
- * @method integer getPort() 获取监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
- * @method void setPort(integer $Port) 设置监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
- * @method string getProxyId() 获取通道ID，与GroupId不能同时设置，对应为通道创建监听器
- * @method void setProxyId(string $ProxyId) 设置通道ID，与GroupId不能同时设置，对应为通道创建监听器
- * @method string getGroupId() 获取通道组ID，与ProxyId不能同时设置，对应为通道组创建监听器
- * @method void setGroupId(string $GroupId) 设置通道组ID，与ProxyId不能同时设置，对应为通道组创建监听器
+ * @method string getListenerName() 获取<p>监听器名称</p>
+ * @method void setListenerName(string $ListenerName) 设置<p>监听器名称</p>
+ * @method integer getPort() 获取<p>监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复</p>
+ * @method void setPort(integer $Port) 设置<p>监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复</p>
+ * @method string getProxyId() 获取<p>通道ID，与GroupId不能同时设置，对应为通道创建监听器</p>
+ * @method void setProxyId(string $ProxyId) 设置<p>通道ID，与GroupId不能同时设置，对应为通道创建监听器</p>
+ * @method string getGroupId() 获取<p>通道组ID，与ProxyId不能同时设置，对应为通道组创建监听器</p>
+ * @method void setGroupId(string $GroupId) 设置<p>通道组ID，与ProxyId不能同时设置，对应为通道组创建监听器</p>
  */
 class CreateHTTPListenerRequest extends AbstractModel
 {
     /**
-     * @var string 监听器名称
+     * @var string <p>监听器名称</p>
      */
     public $ListenerName;
 
     /**
-     * @var integer 监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
+     * @var integer <p>监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复</p>
      */
     public $Port;
 
     /**
-     * @var string 通道ID，与GroupId不能同时设置，对应为通道创建监听器
+     * @var string <p>通道ID，与GroupId不能同时设置，对应为通道创建监听器</p>
      */
     public $ProxyId;
 
     /**
-     * @var string 通道组ID，与ProxyId不能同时设置，对应为通道组创建监听器
+     * @var string <p>通道组ID，与ProxyId不能同时设置，对应为通道组创建监听器</p>
      */
     public $GroupId;
 
     /**
-     * @param string $ListenerName 监听器名称
-     * @param integer $Port 监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
-     * @param string $ProxyId 通道ID，与GroupId不能同时设置，对应为通道创建监听器
-     * @param string $GroupId 通道组ID，与ProxyId不能同时设置，对应为通道组创建监听器
+     * @param string $ListenerName <p>监听器名称</p>
+     * @param integer $Port <p>监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复</p>
+     * @param string $ProxyId <p>通道ID，与GroupId不能同时设置，对应为通道创建监听器</p>
+     * @param string $GroupId <p>通道组ID，与ProxyId不能同时设置，对应为通道组创建监听器</p>
      */
     function __construct()
     {

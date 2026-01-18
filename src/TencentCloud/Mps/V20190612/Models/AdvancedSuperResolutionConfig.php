@@ -30,12 +30,14 @@ use TencentCloud\Common\AbstractModel;
 默认值：ON。
  * @method string getType() 获取类型，可选值：
 <li>standard：通用超分</li>
-<li>super：高级超分。</li>
+<li>super：高级超分super版。</li>
+<li>ultra：高级超分ultra版。</li>
 默认值：standard。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置类型，可选值：
 <li>standard：通用超分</li>
-<li>super：高级超分。</li>
+<li>super：高级超分super版。</li>
+<li>ultra：高级超分ultra版。</li>
 默认值：standard。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMode() 获取输出图片模式，默认percent。
@@ -49,16 +51,34 @@ use TencentCloud\Common\AbstractModel;
 <li> percent: 超分倍率，可以为小数。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method float getPercent() 获取超分倍率，可以为小数。
+注意：当Mode等于percent时使用。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPercent(float $Percent) 设置超分倍率，可以为小数。
+注意：当Mode等于percent时使用。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWidth() 获取目标图片宽度，不能超过4096。
+注意：当Mode等于aspect或fixed时，优先使用此配置。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWidth(integer $Width) 设置目标图片宽度，不能超过4096。
+注意：当Mode等于aspect或fixed时，优先使用此配置。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHeight() 获取目标图片高度，不能超过4096。
+注意：当Mode等于aspect或fixed时，优先使用此配置。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeight(integer $Height) 设置目标图片高度，不能超过4096。
+注意：当Mode等于aspect或fixed时，优先使用此配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLongSide() 获取目标图片长边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLongSide(integer $LongSide) 设置目标图片长边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getShortSide() 获取目标图片短边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setShortSide(integer $ShortSide) 设置目标图片短边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AdvancedSuperResolutionConfig extends AbstractModel
@@ -74,7 +94,8 @@ class AdvancedSuperResolutionConfig extends AbstractModel
     /**
      * @var string 类型，可选值：
 <li>standard：通用超分</li>
-<li>super：高级超分。</li>
+<li>super：高级超分super版。</li>
+<li>ultra：高级超分ultra版。</li>
 默认值：standard。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -91,21 +112,38 @@ class AdvancedSuperResolutionConfig extends AbstractModel
 
     /**
      * @var float 超分倍率，可以为小数。
+注意：当Mode等于percent时使用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Percent;
 
     /**
      * @var integer 目标图片宽度，不能超过4096。
+注意：当Mode等于aspect或fixed时，优先使用此配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Width;
 
     /**
      * @var integer 目标图片高度，不能超过4096。
+注意：当Mode等于aspect或fixed时，优先使用此配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Height;
+
+    /**
+     * @var integer 目标图片长边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LongSide;
+
+    /**
+     * @var integer 目标图片短边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ShortSide;
 
     /**
      * @param string $Switch 能力配置开关，可选值：
@@ -114,7 +152,8 @@ class AdvancedSuperResolutionConfig extends AbstractModel
 默认值：ON。
      * @param string $Type 类型，可选值：
 <li>standard：通用超分</li>
-<li>super：高级超分。</li>
+<li>super：高级超分super版。</li>
+<li>ultra：高级超分ultra版。</li>
 默认值：standard。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Mode 输出图片模式，默认percent。
@@ -123,10 +162,19 @@ class AdvancedSuperResolutionConfig extends AbstractModel
 <li> percent: 超分倍率，可以为小数。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Percent 超分倍率，可以为小数。
+注意：当Mode等于percent时使用。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Width 目标图片宽度，不能超过4096。
+注意：当Mode等于aspect或fixed时，优先使用此配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Height 目标图片高度，不能超过4096。
+注意：当Mode等于aspect或fixed时，优先使用此配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LongSide 目标图片长边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ShortSide 目标图片短边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +212,14 @@ class AdvancedSuperResolutionConfig extends AbstractModel
 
         if (array_key_exists("Height",$param) and $param["Height"] !== null) {
             $this->Height = $param["Height"];
+        }
+
+        if (array_key_exists("LongSide",$param) and $param["LongSide"] !== null) {
+            $this->LongSide = $param["LongSide"];
+        }
+
+        if (array_key_exists("ShortSide",$param) and $param["ShortSide"] !== null) {
+            $this->ShortSide = $param["ShortSide"];
         }
     }
 }

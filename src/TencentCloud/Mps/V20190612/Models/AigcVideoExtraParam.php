@@ -60,6 +60,24 @@ use TencentCloud\Common\AbstractModel;
 5. OS 仅文生视频支持, 16:9(默认), 9:16。
 
 注：关于具体模型支持的宽高比例，可查看具体模型官网介绍获取更完整描述。
+ * @method integer getLogoAdd() 获取是否添加图标水印。
+1. Hailuo 支持此参数。
+2. Kling 支持此参数。
+3. Vidu 支持此参数。
+ * @method void setLogoAdd(integer $LogoAdd) 设置是否添加图标水印。
+1. Hailuo 支持此参数。
+2. Kling 支持此参数。
+3. Vidu 支持此参数。
+ * @method boolean getEnableAudio() 获取为视频生成音频。接受的值包括 true 或 false。 
+
+支持此参数的模型：
+1. GV，默认true。
+2. OS，默认true。
+ * @method void setEnableAudio(boolean $EnableAudio) 设置为视频生成音频。接受的值包括 true 或 false。 
+
+支持此参数的模型：
+1. GV，默认true。
+2. OS，默认true。
  * @method boolean getOffPeak() 获取错峰模型，目前仅支持Vidu模型。
 错峰模式下提交的任务，会在48小时内生成，未能完成的任务会被自动取消。
  * @method void setOffPeak(boolean $OffPeak) 设置错峰模型，目前仅支持Vidu模型。
@@ -96,6 +114,23 @@ class AigcVideoExtraParam extends AbstractModel
     public $AspectRatio;
 
     /**
+     * @var integer 是否添加图标水印。
+1. Hailuo 支持此参数。
+2. Kling 支持此参数。
+3. Vidu 支持此参数。
+     */
+    public $LogoAdd;
+
+    /**
+     * @var boolean 为视频生成音频。接受的值包括 true 或 false。 
+
+支持此参数的模型：
+1. GV，默认true。
+2. OS，默认true。
+     */
+    public $EnableAudio;
+
+    /**
      * @var boolean 错峰模型，目前仅支持Vidu模型。
 错峰模式下提交的任务，会在48小时内生成，未能完成的任务会被自动取消。
      */
@@ -122,6 +157,15 @@ class AigcVideoExtraParam extends AbstractModel
 5. OS 仅文生视频支持, 16:9(默认), 9:16。
 
 注：关于具体模型支持的宽高比例，可查看具体模型官网介绍获取更完整描述。
+     * @param integer $LogoAdd 是否添加图标水印。
+1. Hailuo 支持此参数。
+2. Kling 支持此参数。
+3. Vidu 支持此参数。
+     * @param boolean $EnableAudio 为视频生成音频。接受的值包括 true 或 false。 
+
+支持此参数的模型：
+1. GV，默认true。
+2. OS，默认true。
      * @param boolean $OffPeak 错峰模型，目前仅支持Vidu模型。
 错峰模式下提交的任务，会在48小时内生成，未能完成的任务会被自动取消。
      */
@@ -144,6 +188,14 @@ class AigcVideoExtraParam extends AbstractModel
 
         if (array_key_exists("AspectRatio",$param) and $param["AspectRatio"] !== null) {
             $this->AspectRatio = $param["AspectRatio"];
+        }
+
+        if (array_key_exists("LogoAdd",$param) and $param["LogoAdd"] !== null) {
+            $this->LogoAdd = $param["LogoAdd"];
+        }
+
+        if (array_key_exists("EnableAudio",$param) and $param["EnableAudio"] !== null) {
+            $this->EnableAudio = $param["EnableAudio"];
         }
 
         if (array_key_exists("OffPeak",$param) and $param["OffPeak"] !== null) {

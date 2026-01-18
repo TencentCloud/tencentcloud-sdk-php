@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateProxyGroup请求参数结构体
  *
- * @method integer getProjectId() 获取通道组所属项目ID
- * @method void setProjectId(integer $ProjectId) 设置通道组所属项目ID
- * @method string getGroupName() 获取通道组别名
- * @method void setGroupName(string $GroupName) 设置通道组别名
- * @method string getRealServerRegion() 获取源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId
- * @method void setRealServerRegion(string $RealServerRegion) 设置源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId
- * @method array getTagSet() 获取标签列表
- * @method void setTagSet(array $TagSet) 设置标签列表
- * @method array getAccessRegionSet() 获取加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。
- * @method void setAccessRegionSet(array $AccessRegionSet) 设置加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。
- * @method string getIPAddressVersion() 获取IP版本，可取值：IPv4、IPv6，默认值IPv4
- * @method void setIPAddressVersion(string $IPAddressVersion) 设置IP版本，可取值：IPv4、IPv6，默认值IPv4
- * @method string getPackageType() 获取通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder
- * @method void setPackageType(string $PackageType) 设置通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder
- * @method integer getHttp3Supported() 获取该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道组默认支持Http3.0；当为IPv6，默认不支持Http3.0。
- * @method void setHttp3Supported(integer $Http3Supported) 设置该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道组默认支持Http3.0；当为IPv6，默认不支持Http3.0。
+ * @method integer getProjectId() 获取<p>通道组所属项目ID</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>通道组所属项目ID</p>
+ * @method string getGroupName() 获取<p>通道组别名</p>
+ * @method void setGroupName(string $GroupName) 设置<p>通道组别名</p>
+ * @method string getRealServerRegion() 获取<p>源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId</p>
+ * @method void setRealServerRegion(string $RealServerRegion) 设置<p>源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId</p>
+ * @method array getTagSet() 获取<p>标签列表</p>
+ * @method void setTagSet(array $TagSet) 设置<p>标签列表</p>
+ * @method array getAccessRegionSet() 获取<p>加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。</p>
+ * @method void setAccessRegionSet(array $AccessRegionSet) 设置<p>加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。</p>
+ * @method string getIPAddressVersion() 获取<p>IP版本，可取值：IPv4、IPv6，默认值IPv4</p>
+ * @method void setIPAddressVersion(string $IPAddressVersion) 设置<p>IP版本，可取值：IPv4、IPv6，默认值IPv4</p>
+ * @method string getPackageType() 获取<p>通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder</p>
+ * @method void setPackageType(string $PackageType) 设置<p>通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder</p>
+ * @method integer getHttp3Supported() 获取<p>该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道组默认支持Http3.0；当为IPv6，默认不支持Http3.0。</p>
+ * @method void setHttp3Supported(integer $Http3Supported) 设置<p>该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道组默认支持Http3.0；当为IPv6，默认不支持Http3.0。</p>
  */
 class CreateProxyGroupRequest extends AbstractModel
 {
     /**
-     * @var integer 通道组所属项目ID
+     * @var integer <p>通道组所属项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var string 通道组别名
+     * @var string <p>通道组别名</p>
      */
     public $GroupName;
 
     /**
-     * @var string 源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId
+     * @var string <p>源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId</p>
      */
     public $RealServerRegion;
 
     /**
-     * @var array 标签列表
+     * @var array <p>标签列表</p>
      */
     public $TagSet;
 
     /**
-     * @var array 加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。
+     * @var array <p>加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。</p>
      */
     public $AccessRegionSet;
 
     /**
-     * @var string IP版本，可取值：IPv4、IPv6，默认值IPv4
+     * @var string <p>IP版本，可取值：IPv4、IPv6，默认值IPv4</p>
      */
     public $IPAddressVersion;
 
     /**
-     * @var string 通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder
+     * @var string <p>通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder</p>
      */
     public $PackageType;
 
     /**
-     * @var integer 该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道组默认支持Http3.0；当为IPv6，默认不支持Http3.0。
+     * @var integer <p>该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道组默认支持Http3.0；当为IPv6，默认不支持Http3.0。</p>
      */
     public $Http3Supported;
 
     /**
-     * @param integer $ProjectId 通道组所属项目ID
-     * @param string $GroupName 通道组别名
-     * @param string $RealServerRegion 源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId
-     * @param array $TagSet 标签列表
-     * @param array $AccessRegionSet 加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。
-     * @param string $IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
-     * @param string $PackageType 通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder
-     * @param integer $Http3Supported 该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道组默认支持Http3.0；当为IPv6，默认不支持Http3.0。
+     * @param integer $ProjectId <p>通道组所属项目ID</p>
+     * @param string $GroupName <p>通道组别名</p>
+     * @param string $RealServerRegion <p>源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId</p>
+     * @param array $TagSet <p>标签列表</p>
+     * @param array $AccessRegionSet <p>加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。</p>
+     * @param string $IPAddressVersion <p>IP版本，可取值：IPv4、IPv6，默认值IPv4</p>
+     * @param string $PackageType <p>通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder</p>
+     * @param integer $Http3Supported <p>该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道组默认支持Http3.0；当为IPv6，默认不支持Http3.0。</p>
      */
     function __construct()
     {

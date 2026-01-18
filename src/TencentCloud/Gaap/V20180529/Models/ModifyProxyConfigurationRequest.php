@@ -20,70 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyProxyConfiguration请求参数结构体
  *
- * @method string getInstanceId() 获取（旧参数，请切换到ProxyId）通道的实例ID。
- * @method void setInstanceId(string $InstanceId) 设置（旧参数，请切换到ProxyId）通道的实例ID。
- * @method integer getBandwidth() 获取需要调整到的目标带宽，单位：Mbps。
-Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到
- * @method void setBandwidth(integer $Bandwidth) 设置需要调整到的目标带宽，单位：Mbps。
-Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到
- * @method integer getConcurrent() 获取需要调整到的目标并发值，单位：万。
-Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到
- * @method void setConcurrent(integer $Concurrent) 设置需要调整到的目标并发值，单位：万。
-Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到
- * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
-更多详细信息请参阅：如何保证幂等性。
- * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
-更多详细信息请参阅：如何保证幂等性。
- * @method string getProxyId() 获取（新参数）通道的实例ID。
- * @method void setProxyId(string $ProxyId) 设置（新参数）通道的实例ID。
- * @method integer getBillingType() 获取计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
- * @method void setBillingType(integer $BillingType) 设置计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+ * @method string getInstanceId() 获取<p>（旧参数，请切换到ProxyId）通道的实例ID。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>（旧参数，请切换到ProxyId）通道的实例ID。</p>
+ * @method integer getBandwidth() 获取<p>需要调整到的目标带宽，单位：Mbps。Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到</p>
+ * @method void setBandwidth(integer $Bandwidth) 设置<p>需要调整到的目标带宽，单位：Mbps。Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到</p>
+ * @method integer getConcurrent() 获取<p>需要调整到的目标并发值，单位：万。Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到</p>
+ * @method void setConcurrent(integer $Concurrent) 设置<p>需要调整到的目标并发值，单位：万。Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到</p>
+ * @method string getClientToken() 获取<p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。更多详细信息请参阅：如何保证幂等性。</p>
+ * @method void setClientToken(string $ClientToken) 设置<p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。更多详细信息请参阅：如何保证幂等性。</p>
+ * @method string getProxyId() 获取<p>（新参数）通道的实例ID。</p>
+ * @method void setProxyId(string $ProxyId) 设置<p>（新参数）通道的实例ID。</p>
+ * @method integer getBillingType() 获取<p>计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）</p>
+ * @method void setBillingType(integer $BillingType) 设置<p>计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）</p>
  */
 class ModifyProxyConfigurationRequest extends AbstractModel
 {
     /**
-     * @var string （旧参数，请切换到ProxyId）通道的实例ID。
+     * @var string <p>（旧参数，请切换到ProxyId）通道的实例ID。</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 需要调整到的目标带宽，单位：Mbps。
-Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到
+     * @var integer <p>需要调整到的目标带宽，单位：Mbps。Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到</p>
      */
     public $Bandwidth;
 
     /**
-     * @var integer 需要调整到的目标并发值，单位：万。
-Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到
+     * @var integer <p>需要调整到的目标并发值，单位：万。Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到</p>
      */
     public $Concurrent;
 
     /**
-     * @var string 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
-更多详细信息请参阅：如何保证幂等性。
+     * @var string <p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。更多详细信息请参阅：如何保证幂等性。</p>
      */
     public $ClientToken;
 
     /**
-     * @var string （新参数）通道的实例ID。
+     * @var string <p>（新参数）通道的实例ID。</p>
      */
     public $ProxyId;
 
     /**
-     * @var integer 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+     * @var integer <p>计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）</p>
      */
     public $BillingType;
 
     /**
-     * @param string $InstanceId （旧参数，请切换到ProxyId）通道的实例ID。
-     * @param integer $Bandwidth 需要调整到的目标带宽，单位：Mbps。
-Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到
-     * @param integer $Concurrent 需要调整到的目标并发值，单位：万。
-Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到
-     * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
-更多详细信息请参阅：如何保证幂等性。
-     * @param string $ProxyId （新参数）通道的实例ID。
-     * @param integer $BillingType 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+     * @param string $InstanceId <p>（旧参数，请切换到ProxyId）通道的实例ID。</p>
+     * @param integer $Bandwidth <p>需要调整到的目标带宽，单位：Mbps。Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到</p>
+     * @param integer $Concurrent <p>需要调整到的目标并发值，单位：万。Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到</p>
+     * @param string $ClientToken <p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。更多详细信息请参阅：如何保证幂等性。</p>
+     * @param string $ProxyId <p>（新参数）通道的实例ID。</p>
+     * @param integer $BillingType <p>计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）</p>
      */
     function __construct()
     {

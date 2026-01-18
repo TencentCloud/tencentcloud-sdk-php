@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddRealServers请求参数结构体
  *
- * @method integer getProjectId() 获取源站对应的项目ID
- * @method void setProjectId(integer $ProjectId) 设置源站对应的项目ID
- * @method array getRealServerIP() 获取源站对应的IP或域名
- * @method void setRealServerIP(array $RealServerIP) 设置源站对应的IP或域名
- * @method string getRealServerName() 获取源站名称
- * @method void setRealServerName(string $RealServerName) 设置源站名称
- * @method array getTagSet() 获取标签列表
- * @method void setTagSet(array $TagSet) 设置标签列表
+ * @method integer getProjectId() 获取<p>源站对应的项目ID</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>源站对应的项目ID</p>
+ * @method array getRealServerIP() 获取<p>源站对应的IP或域名</p>
+ * @method void setRealServerIP(array $RealServerIP) 设置<p>源站对应的IP或域名</p>
+ * @method string getRealServerName() 获取<p>源站名称</p>
+ * @method void setRealServerName(string $RealServerName) 设置<p>源站名称</p>
+ * @method array getTagSet() 获取<p>标签列表</p>
+ * @method void setTagSet(array $TagSet) 设置<p>标签列表</p>
  */
 class AddRealServersRequest extends AbstractModel
 {
     /**
-     * @var integer 源站对应的项目ID
+     * @var integer <p>源站对应的项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var array 源站对应的IP或域名
+     * @var array <p>源站对应的IP或域名</p>
      */
     public $RealServerIP;
 
     /**
-     * @var string 源站名称
+     * @var string <p>源站名称</p>
      */
     public $RealServerName;
 
     /**
-     * @var array 标签列表
+     * @var array <p>标签列表</p>
      */
     public $TagSet;
 
     /**
-     * @param integer $ProjectId 源站对应的项目ID
-     * @param array $RealServerIP 源站对应的IP或域名
-     * @param string $RealServerName 源站名称
-     * @param array $TagSet 标签列表
+     * @param integer $ProjectId <p>源站对应的项目ID</p>
+     * @param array $RealServerIP <p>源站对应的IP或域名</p>
+     * @param string $RealServerName <p>源站名称</p>
+     * @param array $TagSet <p>标签列表</p>
      */
     function __construct()
     {

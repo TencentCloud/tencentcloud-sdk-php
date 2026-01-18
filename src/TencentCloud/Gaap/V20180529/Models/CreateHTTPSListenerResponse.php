@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateHTTPSListener返回参数结构体
  *
- * @method string getListenerId() 获取创建的监听器ID
- * @method void setListenerId(string $ListenerId) 设置创建的监听器ID
+ * @method string getListenerId() 获取<p>创建的监听器ID</p>
+ * @method void setListenerId(string $ListenerId) 设置<p>创建的监听器ID</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateHTTPSListenerResponse extends AbstractModel
 {
     /**
-     * @var string 创建的监听器ID
+     * @var string <p>创建的监听器ID</p>
      */
     public $ListenerId;
 
@@ -38,7 +38,7 @@ class CreateHTTPSListenerResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ListenerId 创建的监听器ID
+     * @param string $ListenerId <p>创建的监听器ID</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

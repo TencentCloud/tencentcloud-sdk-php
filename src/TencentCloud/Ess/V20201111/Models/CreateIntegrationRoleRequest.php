@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 默认0，saas角色
  * @method array getPermissionGroups() 获取权限树
  * @method void setPermissionGroups(array $PermissionGroups) 设置权限树
- * @method string getSubOrganizationIds() 获取集团角色的话，需要传递集团子企业列表，如果是全选，则传1
- * @method void setSubOrganizationIds(string $SubOrganizationIds) 设置集团角色的话，需要传递集团子企业列表，如果是全选，则传1
+ * @method array getSubOrganizationIds() 获取集团角色的话，需要传递集团子企业列表，如果是全选，则传1
+ * @method void setSubOrganizationIds(array $SubOrganizationIds) 设置集团角色的话，需要传递集团子企业列表，如果是全选，则传1
  * @method Agent getAgent() 获取代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
@@ -77,7 +77,7 @@ class CreateIntegrationRoleRequest extends AbstractModel
     public $PermissionGroups;
 
     /**
-     * @var string 集团角色的话，需要传递集团子企业列表，如果是全选，则传1
+     * @var array 集团角色的话，需要传递集团子企业列表，如果是全选，则传1
      */
     public $SubOrganizationIds;
 
@@ -97,7 +97,7 @@ class CreateIntegrationRoleRequest extends AbstractModel
      * @param integer $IsGroupRole 角色类型，0:saas角色，1:集团角色
 默认0，saas角色
      * @param array $PermissionGroups 权限树
-     * @param string $SubOrganizationIds 集团角色的话，需要传递集团子企业列表，如果是全选，则传1
+     * @param array $SubOrganizationIds 集团角色的话，需要传递集团子企业列表，如果是全选，则传1
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */

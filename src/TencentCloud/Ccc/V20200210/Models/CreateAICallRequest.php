@@ -271,7 +271,7 @@ HoaiMy
         &quot;APIUrl&quot;: &quot;https://api.minimax.chat/v1/t2a_v2&quot;,
         &quot;APIKey&quot;: &quot;eyxxxx&quot;,
         &quot;GroupId&quot;: &quot;181000000000000&quot;,
-        &quot;VoiceType&quot;:&quot;female-tianmei-jingpin&quot;,
+        &quot;VoiceType&quot;:&quot;female-tianmei&quot;,
         &quot;Speed&quot;: 1.2
 }
 </code></pre>
@@ -345,7 +345,7 @@ HoaiMy
         &quot;APIUrl&quot;: &quot;https://api.minimax.chat/v1/t2a_v2&quot;,
         &quot;APIKey&quot;: &quot;eyxxxx&quot;,
         &quot;GroupId&quot;: &quot;181000000000000&quot;,
-        &quot;VoiceType&quot;:&quot;female-tianmei-jingpin&quot;,
+        &quot;VoiceType&quot;:&quot;female-tianmei&quot;,
         &quot;Speed&quot;: 1.2
 }
 </code></pre>
@@ -434,6 +434,8 @@ HoaiMy
  * @method void setLLMExtraBody(string $LLMExtraBody) 设置大模型拓展参数， 格式为json字符串
  * @method integer getMaxCallDurationMs() 获取最大通话时长， 默认不限制。单位毫秒(ms)
  * @method void setMaxCallDurationMs(integer $MaxCallDurationMs) 设置最大通话时长， 默认不限制。单位毫秒(ms)
+ * @method integer getMaxRingTimeoutSecond() 获取最大振铃时长，达到时长阈值自动挂断。 **仅自携号码支持当前参数**
+ * @method void setMaxRingTimeoutSecond(integer $MaxRingTimeoutSecond) 设置最大振铃时长，达到时长阈值自动挂断。 **仅自携号码支持当前参数**
  */
 class CreateAICallRequest extends AbstractModel
 {
@@ -669,7 +671,7 @@ HoaiMy
         &quot;APIUrl&quot;: &quot;https://api.minimax.chat/v1/t2a_v2&quot;,
         &quot;APIKey&quot;: &quot;eyxxxx&quot;,
         &quot;GroupId&quot;: &quot;181000000000000&quot;,
-        &quot;VoiceType&quot;:&quot;female-tianmei-jingpin&quot;,
+        &quot;VoiceType&quot;:&quot;female-tianmei&quot;,
         &quot;Speed&quot;: 1.2
 }
 </code></pre>
@@ -792,6 +794,11 @@ HoaiMy
      * @var integer 最大通话时长， 默认不限制。单位毫秒(ms)
      */
     public $MaxCallDurationMs;
+
+    /**
+     * @var integer 最大振铃时长，达到时长阈值自动挂断。 **仅自携号码支持当前参数**
+     */
+    public $MaxRingTimeoutSecond;
 
     /**
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
@@ -933,7 +940,7 @@ HoaiMy
         &quot;APIUrl&quot;: &quot;https://api.minimax.chat/v1/t2a_v2&quot;,
         &quot;APIKey&quot;: &quot;eyxxxx&quot;,
         &quot;GroupId&quot;: &quot;181000000000000&quot;,
-        &quot;VoiceType&quot;:&quot;female-tianmei-jingpin&quot;,
+        &quot;VoiceType&quot;:&quot;female-tianmei&quot;,
         &quot;Speed&quot;: 1.2
 }
 </code></pre>
@@ -1001,6 +1008,7 @@ HoaiMy
 0: 挂断电话（默认）
      * @param string $LLMExtraBody 大模型拓展参数， 格式为json字符串
      * @param integer $MaxCallDurationMs 最大通话时长， 默认不限制。单位毫秒(ms)
+     * @param integer $MaxRingTimeoutSecond 最大振铃时长，达到时长阈值自动挂断。 **仅自携号码支持当前参数**
      */
     function __construct()
     {
@@ -1182,6 +1190,10 @@ HoaiMy
 
         if (array_key_exists("MaxCallDurationMs",$param) and $param["MaxCallDurationMs"] !== null) {
             $this->MaxCallDurationMs = $param["MaxCallDurationMs"];
+        }
+
+        if (array_key_exists("MaxRingTimeoutSecond",$param) and $param["MaxRingTimeoutSecond"] !== null) {
+            $this->MaxRingTimeoutSecond = $param["MaxRingTimeoutSecond"];
         }
     }
 }

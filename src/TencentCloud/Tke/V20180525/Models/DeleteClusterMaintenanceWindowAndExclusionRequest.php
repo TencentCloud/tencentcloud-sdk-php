@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteClusterMaintenanceWindowAndExclusion请求参数结构体
  *
- * @method string getClusterID() 获取集群ID
- * @method void setClusterID(string $ClusterID) 设置集群ID
+ * @method string getClusterID() 获取集群ID，可以从容器服务控制台计划升级功能集群维护窗口页面获取（https://console.cloud.tencent.com/tke2/upgrade-plan）。
+ * @method void setClusterID(string $ClusterID) 设置集群ID，可以从容器服务控制台计划升级功能集群维护窗口页面获取（https://console.cloud.tencent.com/tke2/upgrade-plan）。
  */
 class DeleteClusterMaintenanceWindowAndExclusionRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 集群ID，可以从容器服务控制台计划升级功能集群维护窗口页面获取（https://console.cloud.tencent.com/tke2/upgrade-plan）。
      */
     public $ClusterID;
 
     /**
-     * @param string $ClusterID 集群ID
+     * @param string $ClusterID 集群ID，可以从容器服务控制台计划升级功能集群维护窗口页面获取（https://console.cloud.tencent.com/tke2/upgrade-plan）。
      */
     function __construct()
     {

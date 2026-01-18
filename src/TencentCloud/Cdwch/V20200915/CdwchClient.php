@@ -34,6 +34,7 @@ use TencentCloud\Cdwch\V20200915\Models as Models;
  * @method Models\DescribeCNInstancesResponse DescribeCNInstances(Models\DescribeCNInstancesRequest $req) 获取云原生实例列表
  * @method Models\DescribeCkSqlApisResponse DescribeCkSqlApis(Models\DescribeCkSqlApisRequest $req) 查询集群用户、集群表，数据库等相关信息
  * @method Models\DescribeClusterConfigsResponse DescribeClusterConfigs(Models\DescribeClusterConfigsRequest $req) 获取集群的最新的几个配置文件（config.xml、metrika.xml、user.xml）的内容，显示给用户
+ * @method Models\DescribeEventTasksResponse DescribeEventTasks(Models\DescribeEventTasksRequest $req) 获取产生的事件
  * @method Models\DescribeInstanceResponse DescribeInstance(Models\DescribeInstanceRequest $req) 根据实例ID查询某个实例的具体信息
  * @method Models\DescribeInstanceClustersResponse DescribeInstanceClusters(Models\DescribeInstanceClustersRequest $req) 集群vcluster列表
  * @method Models\DescribeInstanceKeyValConfigsResponse DescribeInstanceKeyValConfigs(Models\DescribeInstanceKeyValConfigsRequest $req) 在集群详情页面获取所有参数列表

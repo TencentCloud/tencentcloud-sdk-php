@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDomainErrorPageInfo返回参数结构体
  *
- * @method string getErrorPageId() 获取错误定制响应的配置ID
- * @method void setErrorPageId(string $ErrorPageId) 设置错误定制响应的配置ID
+ * @method string getErrorPageId() 获取<p>错误定制响应的配置ID</p>
+ * @method void setErrorPageId(string $ErrorPageId) 设置<p>错误定制响应的配置ID</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateDomainErrorPageInfoResponse extends AbstractModel
 {
     /**
-     * @var string 错误定制响应的配置ID
+     * @var string <p>错误定制响应的配置ID</p>
      */
     public $ErrorPageId;
 
@@ -38,7 +38,7 @@ class CreateDomainErrorPageInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ErrorPageId 错误定制响应的配置ID
+     * @param string $ErrorPageId <p>错误定制响应的配置ID</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

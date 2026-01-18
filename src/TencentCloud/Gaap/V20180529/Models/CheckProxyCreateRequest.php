@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckProxyCreate请求参数结构体
  *
- * @method string getAccessRegion() 获取通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
- * @method void setAccessRegion(string $AccessRegion) 设置通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
- * @method string getRealServerRegion() 获取通道的源站区域。取值可通过接口DescribeDestRegions获取到
- * @method void setRealServerRegion(string $RealServerRegion) 设置通道的源站区域。取值可通过接口DescribeDestRegions获取到
- * @method integer getBandwidth() 获取通道带宽上限，单位：Mbps。
- * @method void setBandwidth(integer $Bandwidth) 设置通道带宽上限，单位：Mbps。
- * @method integer getConcurrent() 获取通道并发量上限，表示同时在线的连接数，单位：万。
- * @method void setConcurrent(integer $Concurrent) 设置通道并发量上限，表示同时在线的连接数，单位：万。
- * @method string getGroupId() 获取如果在通道组下创建通道，需要填写通道组的ID
- * @method void setGroupId(string $GroupId) 设置如果在通道组下创建通道，需要填写通道组的ID
- * @method string getIPAddressVersion() 获取IP版本，可取值：IPv4、IPv6，默认值IPv4
- * @method void setIPAddressVersion(string $IPAddressVersion) 设置IP版本，可取值：IPv4、IPv6，默认值IPv4
- * @method string getNetworkType() 获取网络类型，可取值：normal、cn2，默认值normal
- * @method void setNetworkType(string $NetworkType) 设置网络类型，可取值：normal、cn2，默认值normal
- * @method string getPackageType() 获取通道套餐类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
- * @method void setPackageType(string $PackageType) 设置通道套餐类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
- * @method integer getHttp3Supported() 获取该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道默认支持Http3.0；当为IPv6，默认不支持Http3.0。
- * @method void setHttp3Supported(integer $Http3Supported) 设置该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道默认支持Http3.0；当为IPv6，默认不支持Http3.0。
+ * @method string getAccessRegion() 获取<p>通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到</p>
+ * @method void setAccessRegion(string $AccessRegion) 设置<p>通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到</p>
+ * @method string getRealServerRegion() 获取<p>通道的源站区域。取值可通过接口DescribeDestRegions获取到</p>
+ * @method void setRealServerRegion(string $RealServerRegion) 设置<p>通道的源站区域。取值可通过接口DescribeDestRegions获取到</p>
+ * @method integer getBandwidth() 获取<p>通道带宽上限，单位：Mbps。</p>
+ * @method void setBandwidth(integer $Bandwidth) 设置<p>通道带宽上限，单位：Mbps。</p>
+ * @method integer getConcurrent() 获取<p>通道并发量上限，表示同时在线的连接数，单位：万。</p>
+ * @method void setConcurrent(integer $Concurrent) 设置<p>通道并发量上限，表示同时在线的连接数，单位：万。</p>
+ * @method string getGroupId() 获取<p>如果在通道组下创建通道，需要填写通道组的ID</p>
+ * @method void setGroupId(string $GroupId) 设置<p>如果在通道组下创建通道，需要填写通道组的ID</p>
+ * @method string getIPAddressVersion() 获取<p>IP版本，可取值：IPv4、IPv6，默认值IPv4</p>
+ * @method void setIPAddressVersion(string $IPAddressVersion) 设置<p>IP版本，可取值：IPv4、IPv6，默认值IPv4</p>
+ * @method string getNetworkType() 获取<p>网络类型，可取值：normal、cn2，默认值normal</p>
+ * @method void setNetworkType(string $NetworkType) 设置<p>网络类型，可取值：normal、cn2，默认值normal</p>
+ * @method string getPackageType() 获取<p>通道套餐类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。</p>
+ * @method void setPackageType(string $PackageType) 设置<p>通道套餐类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。</p>
+ * @method integer getHttp3Supported() 获取<p>该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道默认支持Http3.0；当为IPv6，默认不支持Http3.0。</p>
+ * @method void setHttp3Supported(integer $Http3Supported) 设置<p>该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道默认支持Http3.0；当为IPv6，默认不支持Http3.0。</p>
  */
 class CheckProxyCreateRequest extends AbstractModel
 {
     /**
-     * @var string 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
+     * @var string <p>通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到</p>
      */
     public $AccessRegion;
 
     /**
-     * @var string 通道的源站区域。取值可通过接口DescribeDestRegions获取到
+     * @var string <p>通道的源站区域。取值可通过接口DescribeDestRegions获取到</p>
      */
     public $RealServerRegion;
 
     /**
-     * @var integer 通道带宽上限，单位：Mbps。
+     * @var integer <p>通道带宽上限，单位：Mbps。</p>
      */
     public $Bandwidth;
 
     /**
-     * @var integer 通道并发量上限，表示同时在线的连接数，单位：万。
+     * @var integer <p>通道并发量上限，表示同时在线的连接数，单位：万。</p>
      */
     public $Concurrent;
 
     /**
-     * @var string 如果在通道组下创建通道，需要填写通道组的ID
+     * @var string <p>如果在通道组下创建通道，需要填写通道组的ID</p>
      */
     public $GroupId;
 
     /**
-     * @var string IP版本，可取值：IPv4、IPv6，默认值IPv4
+     * @var string <p>IP版本，可取值：IPv4、IPv6，默认值IPv4</p>
      */
     public $IPAddressVersion;
 
     /**
-     * @var string 网络类型，可取值：normal、cn2，默认值normal
+     * @var string <p>网络类型，可取值：normal、cn2，默认值normal</p>
      */
     public $NetworkType;
 
     /**
-     * @var string 通道套餐类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
+     * @var string <p>通道套餐类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。</p>
      */
     public $PackageType;
 
     /**
-     * @var integer 该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道默认支持Http3.0；当为IPv6，默认不支持Http3.0。
+     * @var integer <p>该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道默认支持Http3.0；当为IPv6，默认不支持Http3.0。</p>
      */
     public $Http3Supported;
 
     /**
-     * @param string $AccessRegion 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
-     * @param string $RealServerRegion 通道的源站区域。取值可通过接口DescribeDestRegions获取到
-     * @param integer $Bandwidth 通道带宽上限，单位：Mbps。
-     * @param integer $Concurrent 通道并发量上限，表示同时在线的连接数，单位：万。
-     * @param string $GroupId 如果在通道组下创建通道，需要填写通道组的ID
-     * @param string $IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
-     * @param string $NetworkType 网络类型，可取值：normal、cn2，默认值normal
-     * @param string $PackageType 通道套餐类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
-     * @param integer $Http3Supported 该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道默认支持Http3.0；当为IPv6，默认不支持Http3.0。
+     * @param string $AccessRegion <p>通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到</p>
+     * @param string $RealServerRegion <p>通道的源站区域。取值可通过接口DescribeDestRegions获取到</p>
+     * @param integer $Bandwidth <p>通道带宽上限，单位：Mbps。</p>
+     * @param integer $Concurrent <p>通道并发量上限，表示同时在线的连接数，单位：万。</p>
+     * @param string $GroupId <p>如果在通道组下创建通道，需要填写通道组的ID</p>
+     * @param string $IPAddressVersion <p>IP版本，可取值：IPv4、IPv6，默认值IPv4</p>
+     * @param string $NetworkType <p>网络类型，可取值：normal、cn2，默认值normal</p>
+     * @param string $PackageType <p>通道套餐类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。</p>
+     * @param integer $Http3Supported <p>该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道默认支持Http3.0；当为IPv6，默认不支持Http3.0。</p>
      */
     function __construct()
     {

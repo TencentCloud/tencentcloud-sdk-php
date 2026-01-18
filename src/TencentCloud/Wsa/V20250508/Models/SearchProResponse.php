@@ -42,6 +42,8 @@ site：网站名称，部分不知名站点结果可能为空
 score：相关性得分，取值0～1，越靠近1表示越相关
 images：图片列表
 favicon：网站图标链接，部分不知名站点结果可能为空
+ * @method string getVersion() 获取用户版本：standard/premium/lite
+ * @method void setVersion(string $Version) 设置用户版本：standard/premium/lite
  * @method string getMsg() 获取提示信息
  * @method void setMsg(string $Msg) 设置提示信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -69,6 +71,11 @@ favicon：网站图标链接，部分不知名站点结果可能为空
     public $Pages;
 
     /**
+     * @var string 用户版本：standard/premium/lite
+     */
+    public $Version;
+
+    /**
      * @var string 提示信息
      */
     public $Msg;
@@ -90,6 +97,7 @@ site：网站名称，部分不知名站点结果可能为空
 score：相关性得分，取值0～1，越靠近1表示越相关
 images：图片列表
 favicon：网站图标链接，部分不知名站点结果可能为空
+     * @param string $Version 用户版本：standard/premium/lite
      * @param string $Msg 提示信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -112,6 +120,10 @@ favicon：网站图标链接，部分不知名站点结果可能为空
 
         if (array_key_exists("Pages",$param) and $param["Pages"] !== null) {
             $this->Pages = $param["Pages"];
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
         }
 
         if (array_key_exists("Msg",$param) and $param["Msg"] !== null) {

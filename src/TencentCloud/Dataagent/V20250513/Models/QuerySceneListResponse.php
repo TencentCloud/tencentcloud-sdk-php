@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QuerySceneList返回参数结构体
  *
+ * @method array getDatas() 获取场景列表
+ * @method void setDatas(array $Datas) 设置场景列表
  * @method integer getTotal() 获取总数
  * @method void setTotal(integer $Total) 设置总数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -27,6 +29,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class QuerySceneListResponse extends AbstractModel
 {
+    /**
+     * @var array 场景列表
+     */
+    public $Datas;
+
     /**
      * @var integer 总数
      */
@@ -38,6 +45,7 @@ class QuerySceneListResponse extends AbstractModel
     public $RequestId;
 
     /**
+     * @param array $Datas 场景列表
      * @param integer $Total 总数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -54,6 +62,15 @@ class QuerySceneListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Datas",$param) and $param["Datas"] !== null) {
+            $this->Datas = [];
+            foreach ($param["Datas"] as $key => $value){
+                $obj = new Scene();
+                $obj->deserialize($value);
+                array_push($this->Datas, $obj);
+            }
+        }
+
         if (array_key_exists("Total",$param) and $param["Total"] !== null) {
             $this->Total = $param["Total"];
         }

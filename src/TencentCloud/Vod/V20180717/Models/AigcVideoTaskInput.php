@@ -28,6 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileInfos(array $FileInfos) 设置AIGC生图任务输入文件信息。
  * @method string getLastFrameFileId() 获取用于作为尾帧画面来生成视频的媒体文件 ID。该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
  * @method void setLastFrameFileId(string $LastFrameFileId) 设置用于作为尾帧画面来生成视频的媒体文件 ID。该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
+ * @method string getLastFrameUrl() 获取用于作为尾帧画面来生成视频的媒体文件 URL。说明：
+1. 只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。
+2. 图片大小需小于5M。
+3. 3. 图片格式的取值为：jpeg，jpg, png, webp。
+ * @method void setLastFrameUrl(string $LastFrameUrl) 设置用于作为尾帧画面来生成视频的媒体文件 URL。说明：
+1. 只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。
+2. 图片大小需小于5M。
+3. 3. 图片格式的取值为：jpeg，jpg, png, webp。
  * @method string getPrompt() 获取生成视频的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。
  * @method void setPrompt(string $Prompt) 设置生成视频的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。
  * @method string getNegativePrompt() 获取要阻止模型生成视频的提示词。最大支持1000字符。
@@ -38,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGenerationMode(string $GenerationMode) 设置生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li> 
  * @method AigcVideoOutputConfig getOutputConfig() 获取AIGC 生图输出结果文件输出。
  * @method void setOutputConfig(AigcVideoOutputConfig $OutputConfig) 设置AIGC 生图输出结果文件输出。
+ * @method string getInputRegion() 获取输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。
+ * @method void setInputRegion(string $InputRegion) 设置输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。
+ * @method string getSceneType() 获取场景类型。取值如下：<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li><li>其他 ModelName 暂不支持。</li>
+ * @method void setSceneType(string $SceneType) 设置场景类型。取值如下：<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li><li>其他 ModelName 暂不支持。</li>
  */
 class AigcVideoTaskInput extends AbstractModel
 {
@@ -60,6 +72,14 @@ class AigcVideoTaskInput extends AbstractModel
      * @var string 用于作为尾帧画面来生成视频的媒体文件 ID。该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
      */
     public $LastFrameFileId;
+
+    /**
+     * @var string 用于作为尾帧画面来生成视频的媒体文件 URL。说明：
+1. 只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。
+2. 图片大小需小于5M。
+3. 3. 图片格式的取值为：jpeg，jpg, png, webp。
+     */
+    public $LastFrameUrl;
 
     /**
      * @var string 生成视频的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。
@@ -87,15 +107,31 @@ class AigcVideoTaskInput extends AbstractModel
     public $OutputConfig;
 
     /**
+     * @var string 输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。
+     */
+    public $InputRegion;
+
+    /**
+     * @var string 场景类型。取值如下：<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li><li>其他 ModelName 暂不支持。</li>
+     */
+    public $SceneType;
+
+    /**
      * @param string $ModelName 模型名称。
      * @param string $ModelVersion 模型版本。
      * @param array $FileInfos AIGC生图任务输入文件信息。
      * @param string $LastFrameFileId 用于作为尾帧画面来生成视频的媒体文件 ID。该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
+     * @param string $LastFrameUrl 用于作为尾帧画面来生成视频的媒体文件 URL。说明：
+1. 只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。
+2. 图片大小需小于5M。
+3. 3. 图片格式的取值为：jpeg，jpg, png, webp。
      * @param string $Prompt 生成视频的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。
      * @param string $NegativePrompt 要阻止模型生成视频的提示词。最大支持1000字符。
      * @param string $EnhancePrompt 是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
      * @param string $GenerationMode 生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li> 
      * @param AigcVideoOutputConfig $OutputConfig AIGC 生图输出结果文件输出。
+     * @param string $InputRegion 输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。
+     * @param string $SceneType 场景类型。取值如下：<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li><li>其他 ModelName 暂不支持。</li>
      */
     function __construct()
     {
@@ -131,6 +167,10 @@ class AigcVideoTaskInput extends AbstractModel
             $this->LastFrameFileId = $param["LastFrameFileId"];
         }
 
+        if (array_key_exists("LastFrameUrl",$param) and $param["LastFrameUrl"] !== null) {
+            $this->LastFrameUrl = $param["LastFrameUrl"];
+        }
+
         if (array_key_exists("Prompt",$param) and $param["Prompt"] !== null) {
             $this->Prompt = $param["Prompt"];
         }
@@ -150,6 +190,14 @@ class AigcVideoTaskInput extends AbstractModel
         if (array_key_exists("OutputConfig",$param) and $param["OutputConfig"] !== null) {
             $this->OutputConfig = new AigcVideoOutputConfig();
             $this->OutputConfig->deserialize($param["OutputConfig"]);
+        }
+
+        if (array_key_exists("InputRegion",$param) and $param["InputRegion"] !== null) {
+            $this->InputRegion = $param["InputRegion"];
+        }
+
+        if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
+            $this->SceneType = $param["SceneType"];
         }
     }
 }

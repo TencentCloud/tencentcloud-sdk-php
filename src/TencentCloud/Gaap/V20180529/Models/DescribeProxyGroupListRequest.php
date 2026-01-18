@@ -20,78 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProxyGroupList请求参数结构体
  *
- * @method integer getOffset() 获取偏移量，默认值为0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认值为0。
- * @method integer getLimit() 获取返回数量，默认值为20，最大值为100。
- * @method void setLimit(integer $Limit) 设置返回数量，默认值为20，最大值为100。
- * @method integer getProjectId() 获取项目ID。取值范围：
--1，该用户下所有项目
-0，默认项目
-其他值，指定的项目
- * @method void setProjectId(integer $ProjectId) 设置项目ID。取值范围：
--1，该用户下所有项目
-0，默认项目
-其他值，指定的项目
- * @method array getFilters() 获取过滤条件。   
-每次请求的Filter.Values的上限为5。
-RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
-PackageType - String - 是否必填：否 - （过滤条件）通道组类型，Thunder表示标准通道组，Accelerator表示银牌加速通道组。
- * @method void setFilters(array $Filters) 设置过滤条件。   
-每次请求的Filter.Values的上限为5。
-RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
-PackageType - String - 是否必填：否 - （过滤条件）通道组类型，Thunder表示标准通道组，Accelerator表示银牌加速通道组。
- * @method array getTagSet() 获取标签列表，当存在该字段时，拉取对应标签下的资源列表。
-最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，该通道组会被拉取出来。
- * @method void setTagSet(array $TagSet) 设置标签列表，当存在该字段时，拉取对应标签下的资源列表。
-最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，该通道组会被拉取出来。
+ * @method integer getOffset() 获取<p>偏移量，默认值为0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认值为0。</p>
+ * @method integer getLimit() 获取<p>返回数量，默认值为20，最大值为100。</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认值为20，最大值为100。</p>
+ * @method integer getProjectId() 获取<p>项目ID。取值范围：-1，该用户下所有项目0，默认项目其他值，指定的项目</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>项目ID。取值范围：-1，该用户下所有项目0，默认项目其他值，指定的项目</p>
+ * @method array getFilters() 获取<p>过滤条件。 <br />每次请求的Filter.Values的上限为5。RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。PackageType - String - 是否必填：否 - （过滤条件）通道组类型，Thunder表示标准通道组，Accelerator表示银牌加速通道组。</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件。 <br />每次请求的Filter.Values的上限为5。RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。PackageType - String - 是否必填：否 - （过滤条件）通道组类型，Thunder表示标准通道组，Accelerator表示银牌加速通道组。</p>
+ * @method array getTagSet() 获取<p>标签列表，当存在该字段时，拉取对应标签下的资源列表。最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，该通道组会被拉取出来。</p>
+ * @method void setTagSet(array $TagSet) 设置<p>标签列表，当存在该字段时，拉取对应标签下的资源列表。最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，该通道组会被拉取出来。</p>
  */
 class DescribeProxyGroupListRequest extends AbstractModel
 {
     /**
-     * @var integer 偏移量，默认值为0。
+     * @var integer <p>偏移量，默认值为0。</p>
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认值为20，最大值为100。
+     * @var integer <p>返回数量，默认值为20，最大值为100。</p>
      */
     public $Limit;
 
     /**
-     * @var integer 项目ID。取值范围：
--1，该用户下所有项目
-0，默认项目
-其他值，指定的项目
+     * @var integer <p>项目ID。取值范围：-1，该用户下所有项目0，默认项目其他值，指定的项目</p>
      */
     public $ProjectId;
 
     /**
-     * @var array 过滤条件。   
-每次请求的Filter.Values的上限为5。
-RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
-PackageType - String - 是否必填：否 - （过滤条件）通道组类型，Thunder表示标准通道组，Accelerator表示银牌加速通道组。
+     * @var array <p>过滤条件。 <br />每次请求的Filter.Values的上限为5。RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。PackageType - String - 是否必填：否 - （过滤条件）通道组类型，Thunder表示标准通道组，Accelerator表示银牌加速通道组。</p>
      */
     public $Filters;
 
     /**
-     * @var array 标签列表，当存在该字段时，拉取对应标签下的资源列表。
-最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，该通道组会被拉取出来。
+     * @var array <p>标签列表，当存在该字段时，拉取对应标签下的资源列表。最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，该通道组会被拉取出来。</p>
      */
     public $TagSet;
 
     /**
-     * @param integer $Offset 偏移量，默认值为0。
-     * @param integer $Limit 返回数量，默认值为20，最大值为100。
-     * @param integer $ProjectId 项目ID。取值范围：
--1，该用户下所有项目
-0，默认项目
-其他值，指定的项目
-     * @param array $Filters 过滤条件。   
-每次请求的Filter.Values的上限为5。
-RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
-PackageType - String - 是否必填：否 - （过滤条件）通道组类型，Thunder表示标准通道组，Accelerator表示银牌加速通道组。
-     * @param array $TagSet 标签列表，当存在该字段时，拉取对应标签下的资源列表。
-最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，该通道组会被拉取出来。
+     * @param integer $Offset <p>偏移量，默认值为0。</p>
+     * @param integer $Limit <p>返回数量，默认值为20，最大值为100。</p>
+     * @param integer $ProjectId <p>项目ID。取值范围：-1，该用户下所有项目0，默认项目其他值，指定的项目</p>
+     * @param array $Filters <p>过滤条件。 <br />每次请求的Filter.Values的上限为5。RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。PackageType - String - 是否必填：否 - （过滤条件）通道组类型，Thunder表示标准通道组，Accelerator表示银牌加速通道组。</p>
+     * @param array $TagSet <p>标签列表，当存在该字段时，拉取对应标签下的资源列表。最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，该通道组会被拉取出来。</p>
      */
     function __construct()
     {

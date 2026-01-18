@@ -20,70 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCertificate请求参数结构体
  *
- * @method integer getCertificateType() 获取证书类型。其中：
-0，表示基础认证配置；
-1，表示客户端CA证书；
-2，服务器SSL证书；
-3，表示源站CA证书；
-4，表示通道SSL证书。
- * @method void setCertificateType(integer $CertificateType) 设置证书类型。其中：
-0，表示基础认证配置；
-1，表示客户端CA证书；
-2，服务器SSL证书；
-3，表示源站CA证书；
-4，表示通道SSL证书。
- * @method string getCertificateContent() 获取证书内容。采用url编码。其中：
-当证书类型为基础认证配置时，该参数填写用户名/密码对。格式：“用户名：密码”，例如：root:FSGdT。其中密码使用htpasswd或者openssl，例如：openssl passwd -crypt 123456。
-当证书类型为CA/SSL证书时，该参数填写证书内容，格式为pem。
- * @method void setCertificateContent(string $CertificateContent) 设置证书内容。采用url编码。其中：
-当证书类型为基础认证配置时，该参数填写用户名/密码对。格式：“用户名：密码”，例如：root:FSGdT。其中密码使用htpasswd或者openssl，例如：openssl passwd -crypt 123456。
-当证书类型为CA/SSL证书时，该参数填写证书内容，格式为pem。
- * @method string getCertificateAlias() 获取证书名称
- * @method void setCertificateAlias(string $CertificateAlias) 设置证书名称
- * @method string getCertificateKey() 获取密钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
- * @method void setCertificateKey(string $CertificateKey) 设置密钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
+ * @method integer getCertificateType() 获取<p>证书类型。其中：0，表示基础认证配置；1，表示客户端CA证书；2，服务器SSL证书；3，表示源站CA证书；4，表示通道SSL证书。</p>
+ * @method void setCertificateType(integer $CertificateType) 设置<p>证书类型。其中：0，表示基础认证配置；1，表示客户端CA证书；2，服务器SSL证书；3，表示源站CA证书；4，表示通道SSL证书。</p>
+ * @method string getCertificateContent() 获取<p>证书内容。采用url编码。其中：当证书类型为基础认证配置时，该参数填写用户名/密码对。格式：“用户名：密码”，例如：root:FSGdT。其中密码使用htpasswd或者openssl，例如：openssl passwd -crypt 123456。当证书类型为CA/SSL证书时，该参数填写证书内容，格式为pem。</p>
+ * @method void setCertificateContent(string $CertificateContent) 设置<p>证书内容。采用url编码。其中：当证书类型为基础认证配置时，该参数填写用户名/密码对。格式：“用户名：密码”，例如：root:FSGdT。其中密码使用htpasswd或者openssl，例如：openssl passwd -crypt 123456。当证书类型为CA/SSL证书时，该参数填写证书内容，格式为pem。</p>
+ * @method string getCertificateAlias() 获取<p>证书名称</p>
+ * @method void setCertificateAlias(string $CertificateAlias) 设置<p>证书名称</p>
+ * @method string getCertificateKey() 获取<p>密钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。</p>
+ * @method void setCertificateKey(string $CertificateKey) 设置<p>密钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。</p>
  */
 class CreateCertificateRequest extends AbstractModel
 {
     /**
-     * @var integer 证书类型。其中：
-0，表示基础认证配置；
-1，表示客户端CA证书；
-2，服务器SSL证书；
-3，表示源站CA证书；
-4，表示通道SSL证书。
+     * @var integer <p>证书类型。其中：0，表示基础认证配置；1，表示客户端CA证书；2，服务器SSL证书；3，表示源站CA证书；4，表示通道SSL证书。</p>
      */
     public $CertificateType;
 
     /**
-     * @var string 证书内容。采用url编码。其中：
-当证书类型为基础认证配置时，该参数填写用户名/密码对。格式：“用户名：密码”，例如：root:FSGdT。其中密码使用htpasswd或者openssl，例如：openssl passwd -crypt 123456。
-当证书类型为CA/SSL证书时，该参数填写证书内容，格式为pem。
+     * @var string <p>证书内容。采用url编码。其中：当证书类型为基础认证配置时，该参数填写用户名/密码对。格式：“用户名：密码”，例如：root:FSGdT。其中密码使用htpasswd或者openssl，例如：openssl passwd -crypt 123456。当证书类型为CA/SSL证书时，该参数填写证书内容，格式为pem。</p>
      */
     public $CertificateContent;
 
     /**
-     * @var string 证书名称
+     * @var string <p>证书名称</p>
      */
     public $CertificateAlias;
 
     /**
-     * @var string 密钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
+     * @var string <p>密钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。</p>
      */
     public $CertificateKey;
 
     /**
-     * @param integer $CertificateType 证书类型。其中：
-0，表示基础认证配置；
-1，表示客户端CA证书；
-2，服务器SSL证书；
-3，表示源站CA证书；
-4，表示通道SSL证书。
-     * @param string $CertificateContent 证书内容。采用url编码。其中：
-当证书类型为基础认证配置时，该参数填写用户名/密码对。格式：“用户名：密码”，例如：root:FSGdT。其中密码使用htpasswd或者openssl，例如：openssl passwd -crypt 123456。
-当证书类型为CA/SSL证书时，该参数填写证书内容，格式为pem。
-     * @param string $CertificateAlias 证书名称
-     * @param string $CertificateKey 密钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
+     * @param integer $CertificateType <p>证书类型。其中：0，表示基础认证配置；1，表示客户端CA证书；2，服务器SSL证书；3，表示源站CA证书；4，表示通道SSL证书。</p>
+     * @param string $CertificateContent <p>证书内容。采用url编码。其中：当证书类型为基础认证配置时，该参数填写用户名/密码对。格式：“用户名：密码”，例如：root:FSGdT。其中密码使用htpasswd或者openssl，例如：openssl passwd -crypt 123456。当证书类型为CA/SSL证书时，该参数填写证书内容，格式为pem。</p>
+     * @param string $CertificateAlias <p>证书名称</p>
+     * @param string $CertificateKey <p>密钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。</p>
      */
     function __construct()
     {

@@ -22,6 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getType() 获取输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 URL；</li> 
  * @method void setType(string $Type) 设置输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 URL；</li> 
+ * @method string getCategory() 获取文件分类。取值为：
+<li>Image: 图片；</li>
+<li>Video: 视频。</li>
+ * @method void setCategory(string $Category) 设置文件分类。取值为：
+<li>Image: 图片；</li>
+<li>Video: 视频。</li>
  * @method string getFileId() 获取媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。当 Type 取值为 File 时，本参数有效。说明：
 1. 推荐使用小于10M的图片；
 2. 图片格式的取值为：jpeg，jpg, png。
@@ -63,6 +69,13 @@ class AigcVideoTaskInputFileInfo extends AbstractModel
     public $Type;
 
     /**
+     * @var string 文件分类。取值为：
+<li>Image: 图片；</li>
+<li>Video: 视频。</li>
+     */
+    public $Category;
+
+    /**
      * @var string 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。当 Type 取值为 File 时，本参数有效。说明：
 1. 推荐使用小于10M的图片；
 2. 图片格式的取值为：jpeg，jpg, png。
@@ -100,6 +113,9 @@ class AigcVideoTaskInputFileInfo extends AbstractModel
 
     /**
      * @param string $Type 输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 URL；</li> 
+     * @param string $Category 文件分类。取值为：
+<li>Image: 图片；</li>
+<li>Video: 视频。</li>
      * @param string $FileId 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。当 Type 取值为 File 时，本参数有效。说明：
 1. 推荐使用小于10M的图片；
 2. 图片格式的取值为：jpeg，jpg, png。
@@ -132,6 +148,10 @@ class AigcVideoTaskInputFileInfo extends AbstractModel
         }
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
+            $this->Category = $param["Category"];
         }
 
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {

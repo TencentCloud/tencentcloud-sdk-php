@@ -123,6 +123,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\ModifyApplicationTriggerPersonalResponse ModifyApplicationTriggerPersonal(Models\ModifyApplicationTriggerPersonalRequest $req) 用于修改应用更新触发器
  * @method Models\ModifyImmutableTagRulesResponse ModifyImmutableTagRules(Models\ModifyImmutableTagRulesRequest $req) 更新镜像不可变规则
  * @method Models\ModifyInstanceResponse ModifyInstance(Models\ModifyInstanceRequest $req) 更新实例信息
+ * @method Models\ModifyInstanceStorageResponse ModifyInstanceStorage(Models\ModifyInstanceStorageRequest $req) TCR实例存储桶切换
  * @method Models\ModifyInstanceTokenResponse ModifyInstanceToken(Models\ModifyInstanceTokenRequest $req) 更新实例内指定长期访问凭证的启用状态
  * @method Models\ModifyNamespaceResponse ModifyNamespace(Models\ModifyNamespaceRequest $req) 更新命名空间信息
  * @method Models\ModifyRepositoryResponse ModifyRepository(Models\ModifyRepositoryRequest $req) 更新镜像仓库信息，可修改仓库描述信息
@@ -135,6 +136,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\ModifyUserPasswordPersonalResponse ModifyUserPasswordPersonal(Models\ModifyUserPasswordPersonalRequest $req) 修改个人用户登录密码
  * @method Models\ModifyWebhookTriggerResponse ModifyWebhookTrigger(Models\ModifyWebhookTriggerRequest $req) 更新触发器
  * @method Models\RenewInstanceResponse RenewInstance(Models\RenewInstanceRequest $req) 预付费实例续费，同时支持按量计费转包年包月
+ * @method Models\TerminateGCJobResponse TerminateGCJob(Models\TerminateGCJobRequest $req) 终止制品清理任务
  * @method Models\ValidateNamespaceExistPersonalResponse ValidateNamespaceExistPersonal(Models\ValidateNamespaceExistPersonalRequest $req) 查询个人版用户命名空间是否存在
  * @method Models\ValidateRepositoryExistPersonalResponse ValidateRepositoryExistPersonal(Models\ValidateRepositoryExistPersonalRequest $req) 用于判断个人版仓库是否存在
  */

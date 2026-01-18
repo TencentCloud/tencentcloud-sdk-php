@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDomainErrorPageInfo请求参数结构体
  *
- * @method string getListenerId() 获取监听器ID
- * @method void setListenerId(string $ListenerId) 设置监听器ID
- * @method string getDomain() 获取域名
- * @method void setDomain(string $Domain) 设置域名
- * @method array getErrorNos() 获取原始错误码
- * @method void setErrorNos(array $ErrorNos) 设置原始错误码
- * @method string getBody() 获取新的响应包体
- * @method void setBody(string $Body) 设置新的响应包体
- * @method integer getNewErrorNo() 获取新错误码
- * @method void setNewErrorNo(integer $NewErrorNo) 设置新错误码
- * @method array getClearHeaders() 获取需要删除的响应头
- * @method void setClearHeaders(array $ClearHeaders) 设置需要删除的响应头
- * @method array getSetHeaders() 获取需要设置的响应头
- * @method void setSetHeaders(array $SetHeaders) 设置需要设置的响应头
+ * @method string getListenerId() 获取<p>监听器ID</p>
+ * @method void setListenerId(string $ListenerId) 设置<p>监听器ID</p>
+ * @method string getDomain() 获取<p>域名</p>
+ * @method void setDomain(string $Domain) 设置<p>域名</p>
+ * @method array getErrorNos() 获取<p>原始错误码</p>
+ * @method void setErrorNos(array $ErrorNos) 设置<p>原始错误码</p>
+ * @method string getBody() 获取<p>新的响应包体</p>
+ * @method void setBody(string $Body) 设置<p>新的响应包体</p>
+ * @method integer getNewErrorNo() 获取<p>新错误码</p>
+ * @method void setNewErrorNo(integer $NewErrorNo) 设置<p>新错误码</p>
+ * @method array getClearHeaders() 获取<p>需要删除的响应头</p>
+ * @method void setClearHeaders(array $ClearHeaders) 设置<p>需要删除的响应头</p>
+ * @method array getSetHeaders() 获取<p>需要设置的响应头</p>
+ * @method void setSetHeaders(array $SetHeaders) 设置<p>需要设置的响应头</p>
  */
 class CreateDomainErrorPageInfoRequest extends AbstractModel
 {
     /**
-     * @var string 监听器ID
+     * @var string <p>监听器ID</p>
      */
     public $ListenerId;
 
     /**
-     * @var string 域名
+     * @var string <p>域名</p>
      */
     public $Domain;
 
     /**
-     * @var array 原始错误码
+     * @var array <p>原始错误码</p>
      */
     public $ErrorNos;
 
     /**
-     * @var string 新的响应包体
+     * @var string <p>新的响应包体</p>
      */
     public $Body;
 
     /**
-     * @var integer 新错误码
+     * @var integer <p>新错误码</p>
      */
     public $NewErrorNo;
 
     /**
-     * @var array 需要删除的响应头
+     * @var array <p>需要删除的响应头</p>
      */
     public $ClearHeaders;
 
     /**
-     * @var array 需要设置的响应头
+     * @var array <p>需要设置的响应头</p>
      */
     public $SetHeaders;
 
     /**
-     * @param string $ListenerId 监听器ID
-     * @param string $Domain 域名
-     * @param array $ErrorNos 原始错误码
-     * @param string $Body 新的响应包体
-     * @param integer $NewErrorNo 新错误码
-     * @param array $ClearHeaders 需要删除的响应头
-     * @param array $SetHeaders 需要设置的响应头
+     * @param string $ListenerId <p>监听器ID</p>
+     * @param string $Domain <p>域名</p>
+     * @param array $ErrorNos <p>原始错误码</p>
+     * @param string $Body <p>新的响应包体</p>
+     * @param integer $NewErrorNo <p>新错误码</p>
+     * @param array $ClearHeaders <p>需要删除的响应头</p>
+     * @param array $SetHeaders <p>需要设置的响应头</p>
      */
     function __construct()
     {

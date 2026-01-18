@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGroupAndStatisticsProxy返回参数结构体
  *
- * @method array getGroupSet() 获取可以统计的通道组信息
- * @method void setGroupSet(array $GroupSet) 设置可以统计的通道组信息
- * @method integer getTotalCount() 获取通道组数量
- * @method void setTotalCount(integer $TotalCount) 设置通道组数量
+ * @method array getGroupSet() 获取<p>可以统计的通道组信息</p>
+ * @method void setGroupSet(array $GroupSet) 设置<p>可以统计的通道组信息</p>
+ * @method integer getTotalCount() 获取<p>通道组数量</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>通道组数量</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeGroupAndStatisticsProxyResponse extends AbstractModel
 {
     /**
-     * @var array 可以统计的通道组信息
+     * @var array <p>可以统计的通道组信息</p>
      */
     public $GroupSet;
 
     /**
-     * @var integer 通道组数量
+     * @var integer <p>通道组数量</p>
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeGroupAndStatisticsProxyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $GroupSet 可以统计的通道组信息
-     * @param integer $TotalCount 通道组数量
+     * @param array $GroupSet <p>可以统计的通道组信息</p>
+     * @param integer $TotalCount <p>通道组数量</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

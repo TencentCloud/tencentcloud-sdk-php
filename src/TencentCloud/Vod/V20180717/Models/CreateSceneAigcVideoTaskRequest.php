@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTasksPriority(integer $TasksPriority) 设置任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
  * @method string getExtInfo() 获取保留字段，特殊用途时使用。
  * @method void setExtInfo(string $ExtInfo) 设置保留字段，特殊用途时使用。
+ * @method string getPrompt() 获取用户自定义prompt
+ * @method void setPrompt(string $Prompt) 设置用户自定义prompt
  */
 class CreateSceneAigcVideoTaskRequest extends AbstractModel
 {
@@ -86,6 +88,11 @@ class CreateSceneAigcVideoTaskRequest extends AbstractModel
     public $ExtInfo;
 
     /**
+     * @var string 用户自定义prompt
+     */
+    public $Prompt;
+
+    /**
      * @param integer $SubAppId **点播应用 ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。**
      * @param AigcVideoSceneInfo $SceneInfo 场景化生视频参数配置。
      * @param SceneAigcVideoOutputConfig $OutputConfig 场景化生视频任务的输出媒体文件配置。
@@ -96,6 +103,7 @@ class CreateSceneAigcVideoTaskRequest extends AbstractModel
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。
      * @param integer $TasksPriority 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
      * @param string $ExtInfo 保留字段，特殊用途时使用。
+     * @param string $Prompt 用户自定义prompt
      */
     function __construct()
     {
@@ -147,6 +155,10 @@ class CreateSceneAigcVideoTaskRequest extends AbstractModel
 
         if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
             $this->ExtInfo = $param["ExtInfo"];
+        }
+
+        if (array_key_exists("Prompt",$param) and $param["Prompt"] !== null) {
+            $this->Prompt = $param["Prompt"];
         }
     }
 }

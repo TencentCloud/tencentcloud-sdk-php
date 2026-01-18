@@ -67,6 +67,7 @@ https://cloud.tencent.com/document/product/1278/85305
  * @method Models\DescribeNotebookResponse DescribeNotebook(Models\DescribeNotebookRequest $req) Notebook详情
  * @method Models\DescribeNotebooksResponse DescribeNotebooks(Models\DescribeNotebooksRequest $req) Notebook列表
  * @method Models\DescribePlatformImagesResponse DescribePlatformImages(Models\DescribePlatformImagesRequest $req) 查询平台镜像信息
+ * @method Models\DescribeSubAccountLinuxUserInfosResponse DescribeSubAccountLinuxUserInfos(Models\DescribeSubAccountLinuxUserInfosRequest $req) 批量查询子账号Linux用户信息
  * @method Models\DescribeTrainingModelVersionResponse DescribeTrainingModelVersion(Models\DescribeTrainingModelVersionRequest $req) 查询模型版本
  * @method Models\DescribeTrainingModelVersionsResponse DescribeTrainingModelVersions(Models\DescribeTrainingModelVersionsRequest $req) 模型版本列表
  * @method Models\DescribeTrainingTaskResponse DescribeTrainingTask(Models\DescribeTrainingTaskRequest $req) 训练任务详情
@@ -83,6 +84,7 @@ https://cloud.tencent.com/document/product/1278/85305
  * @method Models\StopModelAccelerateTaskResponse StopModelAccelerateTask(Models\StopModelAccelerateTaskRequest $req) 停止模型加速任务
  * @method Models\StopNotebookResponse StopNotebook(Models\StopNotebookRequest $req) 停止Notebook
  * @method Models\StopTrainingTaskResponse StopTrainingTask(Models\StopTrainingTaskRequest $req) 停止模型训练任务
+ * @method Models\UpdateSubAccountLinuxUserInfoResponse UpdateSubAccountLinuxUserInfo(Models\UpdateSubAccountLinuxUserInfoRequest $req) 更新子账号Linux用户信息
  */
 
 class TioneClient extends AbstractClient

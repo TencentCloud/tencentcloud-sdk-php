@@ -134,6 +134,10 @@ Modify 集群变更中；
  * @method void setHasPublicCloudClb(boolean $HasPublicCloudClb) 设置是否开启公网clb
  * @method string getUpgradeZkVersions() 获取可升级的zk版本
  * @method void setUpgradeZkVersions(string $UpgradeZkVersions) 设置可升级的zk版本
+ * @method string getShowRip() 获取是否显示rip
+ * @method void setShowRip(string $ShowRip) 设置是否显示rip
+ * @method string getInstanceType() 获取实例类型：标准型 standard，无keeper节点类型noKeeper；
+ * @method void setInstanceType(string $InstanceType) 设置实例类型：标准型 standard，无keeper节点类型noKeeper；
  */
 class InstanceInfo extends AbstractModel
 {
@@ -411,6 +415,16 @@ Modify 集群变更中；
     public $UpgradeZkVersions;
 
     /**
+     * @var string 是否显示rip
+     */
+    public $ShowRip;
+
+    /**
+     * @var string 实例类型：标准型 standard，无keeper节点类型noKeeper；
+     */
+    public $InstanceType;
+
+    /**
      * @param string $InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
      * @param string $InstanceName 集群实例名称
      * @param string $Status 状态,
@@ -468,6 +482,8 @@ Modify 集群变更中；
      * @param array $BindSGs 绑定的安全组
      * @param boolean $HasPublicCloudClb 是否开启公网clb
      * @param string $UpgradeZkVersions 可升级的zk版本
+     * @param string $ShowRip 是否显示rip
+     * @param string $InstanceType 实例类型：标准型 standard，无keeper节点类型noKeeper；
      */
     function __construct()
     {
@@ -710,6 +726,14 @@ Modify 集群变更中；
 
         if (array_key_exists("UpgradeZkVersions",$param) and $param["UpgradeZkVersions"] !== null) {
             $this->UpgradeZkVersions = $param["UpgradeZkVersions"];
+        }
+
+        if (array_key_exists("ShowRip",$param) and $param["ShowRip"] !== null) {
+            $this->ShowRip = $param["ShowRip"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

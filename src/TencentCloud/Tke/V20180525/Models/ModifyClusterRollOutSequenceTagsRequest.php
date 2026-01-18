@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyClusterRollOutSequenceTags请求参数结构体
  *
- * @method string getClusterID() 获取集群ID
- * @method void setClusterID(string $ClusterID) 设置集群ID
- * @method array getTags() 获取集群发布序列标签（为空时表示移除集群标签）
- * @method void setTags(array $Tags) 设置集群发布序列标签（为空时表示移除集群标签）
+ * @method string getClusterID() 获取集群ID，可以从容器服务集群控制台获取（https://console.cloud.tencent.com/tke2/cluster）。
+ * @method void setClusterID(string $ClusterID) 设置集群ID，可以从容器服务集群控制台获取（https://console.cloud.tencent.com/tke2/cluster）。
+ * @method array getTags() 获取集群发布序列标签（为空时表示移除集群标签）。支持以下集群标签：
+- 标签键："Env"，支持的标签值：["Test","Pre-Production","Production"]
+- 标签键："Protection-Level"，支持的标签值：["Low","Medium","High"]
+ * @method void setTags(array $Tags) 设置集群发布序列标签（为空时表示移除集群标签）。支持以下集群标签：
+- 标签键："Env"，支持的标签值：["Test","Pre-Production","Production"]
+- 标签键："Protection-Level"，支持的标签值：["Low","Medium","High"]
  */
 class ModifyClusterRollOutSequenceTagsRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 集群ID，可以从容器服务集群控制台获取（https://console.cloud.tencent.com/tke2/cluster）。
      */
     public $ClusterID;
 
     /**
-     * @var array 集群发布序列标签（为空时表示移除集群标签）
+     * @var array 集群发布序列标签（为空时表示移除集群标签）。支持以下集群标签：
+- 标签键："Env"，支持的标签值：["Test","Pre-Production","Production"]
+- 标签键："Protection-Level"，支持的标签值：["Low","Medium","High"]
      */
     public $Tags;
 
     /**
-     * @param string $ClusterID 集群ID
-     * @param array $Tags 集群发布序列标签（为空时表示移除集群标签）
+     * @param string $ClusterID 集群ID，可以从容器服务集群控制台获取（https://console.cloud.tencent.com/tke2/cluster）。
+     * @param array $Tags 集群发布序列标签（为空时表示移除集群标签）。支持以下集群标签：
+- 标签键："Env"，支持的标签值：["Test","Pre-Production","Production"]
+- 标签键："Protection-Level"，支持的标签值：["Low","Medium","High"]
      */
     function __construct()
     {

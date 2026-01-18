@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateProxyGroup返回参数结构体
  *
- * @method string getGroupId() 获取通道组ID
- * @method void setGroupId(string $GroupId) 设置通道组ID
+ * @method string getGroupId() 获取<p>通道组ID</p>
+ * @method void setGroupId(string $GroupId) 设置<p>通道组ID</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateProxyGroupResponse extends AbstractModel
 {
     /**
-     * @var string 通道组ID
+     * @var string <p>通道组ID</p>
      */
     public $GroupId;
 
@@ -38,7 +38,7 @@ class CreateProxyGroupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $GroupId 通道组ID
+     * @param string $GroupId <p>通道组ID</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

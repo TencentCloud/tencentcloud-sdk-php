@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterID(string $ClusterID) 设置集群ID
  * @method string getClusterName() 获取集群名称
  * @method void setClusterName(string $ClusterName) 设置集群名称
+ * @method string getRegion() 获取集群地域
+ * @method void setRegion(string $Region) 设置集群地域
  * @method string getPlanedStartAt() 获取预计开始时间
  * @method void setPlanedStartAt(string $PlanedStartAt) 设置预计开始时间
  * @method string getUpgradeStartAt() 获取升级开始时间
@@ -53,6 +55,11 @@ class UpgradePlan extends AbstractModel
      * @var string 集群名称
      */
     public $ClusterName;
+
+    /**
+     * @var string 集群地域
+     */
+    public $Region;
 
     /**
      * @var string 预计开始时间
@@ -83,6 +90,7 @@ class UpgradePlan extends AbstractModel
      * @param integer $ID 升级计划ID
      * @param string $ClusterID 集群ID
      * @param string $ClusterName 集群名称
+     * @param string $Region 集群地域
      * @param string $PlanedStartAt 预计开始时间
      * @param string $UpgradeStartAt 升级开始时间
      * @param string $UpgradeEndAt 升级结束时间
@@ -112,6 +120,10 @@ class UpgradePlan extends AbstractModel
 
         if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
             $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
         }
 
         if (array_key_exists("PlanedStartAt",$param) and $param["PlanedStartAt"] !== null) {

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddRealServers返回参数结构体
  *
- * @method array getRealServerSet() 获取源站信息列表
- * @method void setRealServerSet(array $RealServerSet) 设置源站信息列表
+ * @method array getRealServerSet() 获取<p>源站信息列表</p>
+ * @method void setRealServerSet(array $RealServerSet) 设置<p>源站信息列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class AddRealServersResponse extends AbstractModel
 {
     /**
-     * @var array 源站信息列表
+     * @var array <p>源站信息列表</p>
      */
     public $RealServerSet;
 
@@ -38,7 +38,7 @@ class AddRealServersResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $RealServerSet 源站信息列表
+     * @param array $RealServerSet <p>源站信息列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -52,6 +52,8 @@ use TencentCloud\Live\V20180801\Models as Models;
  * @method Models\CreateLiveCallbackTemplateResponse CreateLiveCallbackTemplate(Models\CreateLiveCallbackTemplateRequest $req) 创建回调模板，数量上限：50，成功返回模板id后，需要调用[CreateLiveCallbackRule](/document/product/267/32638)接口将模板 ID 绑定到域名/路径使用。
 <br>回调协议相关文档：[事件消息通知](/document/product/267/32744)。
 注意：至少填写一个回调 URL。
+ * @method Models\CreateLiveCloudEffectResponse CreateLiveCloudEffect(Models\CreateLiveCloudEffectRequest $req) 使用该接口生成云端特效。特效可用于叠加到直播流上，供播放端观看。
+注意：云端特效生成需要一定时间，调用生成接口后，可通过查询接口，获取是否特效已生成。
  * @method Models\CreateLivePadRuleResponse CreateLivePadRule(Models\CreateLivePadRuleRequest $req) 创建直播垫片规则。
  * @method Models\CreateLivePadTemplateResponse CreateLivePadTemplate(Models\CreateLivePadTemplateRequest $req) 创建直播垫片模板。
  * @method Models\CreateLivePullStreamTaskResponse CreateLivePullStreamTask(Models\CreateLivePullStreamTaskRequest $req) 创建直播拉流任务。支持将外部已有的点播文件，或者直播源拉取过来转推到指定的目标地址。

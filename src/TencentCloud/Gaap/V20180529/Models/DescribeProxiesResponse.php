@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProxies返回参数结构体
  *
- * @method integer getTotalCount() 获取通道个数。
- * @method void setTotalCount(integer $TotalCount) 设置通道个数。
- * @method array getInstanceSet() 获取（旧参数，请切换到ProxySet）通道实例信息列表。
- * @method void setInstanceSet(array $InstanceSet) 设置（旧参数，请切换到ProxySet）通道实例信息列表。
- * @method array getProxySet() 获取（新参数）通道实例信息列表。
- * @method void setProxySet(array $ProxySet) 设置（新参数）通道实例信息列表。
+ * @method integer getTotalCount() 获取<p>通道个数。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>通道个数。</p>
+ * @method array getInstanceSet() 获取<p>（旧参数，请切换到ProxySet）通道实例信息列表。</p>
+ * @method void setInstanceSet(array $InstanceSet) 设置<p>（旧参数，请切换到ProxySet）通道实例信息列表。</p>
+ * @method array getProxySet() 获取<p>（新参数）通道实例信息列表。</p>
+ * @method void setProxySet(array $ProxySet) 设置<p>（新参数）通道实例信息列表。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeProxiesResponse extends AbstractModel
 {
     /**
-     * @var integer 通道个数。
+     * @var integer <p>通道个数。</p>
      */
     public $TotalCount;
 
     /**
-     * @var array （旧参数，请切换到ProxySet）通道实例信息列表。
+     * @var array <p>（旧参数，请切换到ProxySet）通道实例信息列表。</p>
      */
     public $InstanceSet;
 
     /**
-     * @var array （新参数）通道实例信息列表。
+     * @var array <p>（新参数）通道实例信息列表。</p>
      */
     public $ProxySet;
 
@@ -52,9 +52,9 @@ class DescribeProxiesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 通道个数。
-     * @param array $InstanceSet （旧参数，请切换到ProxySet）通道实例信息列表。
-     * @param array $ProxySet （新参数）通道实例信息列表。
+     * @param integer $TotalCount <p>通道个数。</p>
+     * @param array $InstanceSet <p>（旧参数，请切换到ProxySet）通道实例信息列表。</p>
+     * @param array $ProxySet <p>（新参数）通道实例信息列表。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

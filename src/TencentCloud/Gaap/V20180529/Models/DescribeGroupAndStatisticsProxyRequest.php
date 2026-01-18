@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGroupAndStatisticsProxy请求参数结构体
  *
- * @method integer getProjectId() 获取项目ID
- * @method void setProjectId(integer $ProjectId) 设置项目ID
+ * @method integer getProjectId() 获取<p>项目ID</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>项目ID</p>
  */
 class DescribeGroupAndStatisticsProxyRequest extends AbstractModel
 {
     /**
-     * @var integer 项目ID
+     * @var integer <p>项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @param integer $ProjectId 项目ID
+     * @param integer $ProjectId <p>项目ID</p>
      */
     function __construct()
     {

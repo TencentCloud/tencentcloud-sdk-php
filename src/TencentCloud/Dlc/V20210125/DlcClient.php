@@ -50,6 +50,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\CreateDataEngineResponse CreateDataEngine(Models\CreateDataEngineRequest $req) 为用户创建数据引擎
  * @method Models\CreateDataMaskStrategyResponse CreateDataMaskStrategy(Models\CreateDataMaskStrategyRequest $req) 创建数据脱敏策略
  * @method Models\CreateDatabaseResponse CreateDatabase(Models\CreateDatabaseRequest $req) 本接口（CreateDatabase）用于生成建库SQL语句。
+ * @method Models\CreateDatasourceConnectionResponse CreateDatasourceConnection(Models\CreateDatasourceConnectionRequest $req) 创建数据源
  * @method Models\CreateExportTaskResponse CreateExportTask(Models\CreateExportTaskRequest $req) 该接口（CreateExportTask）用于创建导出任务
  * @method Models\CreateImportTaskResponse CreateImportTask(Models\CreateImportTaskRequest $req) 该接口（CreateImportTask）用于创建导入任务
  * @method Models\CreateInternalTableResponse CreateInternalTable(Models\CreateInternalTableRequest $req) 创建托管存储内表（该接口已废弃）

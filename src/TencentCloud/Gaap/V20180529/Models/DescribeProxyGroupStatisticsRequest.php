@@ -20,62 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProxyGroupStatistics请求参数结构体
  *
- * @method string getGroupId() 获取通道组ID
- * @method void setGroupId(string $GroupId) 设置通道组ID
- * @method string getStartTime() 获取起始时间
- * @method void setStartTime(string $StartTime) 设置起始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
- * @method array getMetricNames() 获取统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets
- * @method void setMetricNames(array $MetricNames) 设置统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets
- * @method integer getGranularity() 获取监控粒度，目前支持60，300，3600，86400，单位：秒。
-当时间范围不超过1天，支持最小粒度60秒；
-当时间范围不超过7天，支持最小粒度3600秒；
-当时间范围不超过30天，支持最小粒度86400秒。
- * @method void setGranularity(integer $Granularity) 设置监控粒度，目前支持60，300，3600，86400，单位：秒。
-当时间范围不超过1天，支持最小粒度60秒；
-当时间范围不超过7天，支持最小粒度3600秒；
-当时间范围不超过30天，支持最小粒度86400秒。
+ * @method string getGroupId() 获取<p>通道组ID</p>
+ * @method void setGroupId(string $GroupId) 设置<p>通道组ID</p>
+ * @method string getStartTime() 获取<p>起始时间</p>
+ * @method void setStartTime(string $StartTime) 设置<p>起始时间</p>
+ * @method string getEndTime() 获取<p>结束时间</p>
+ * @method void setEndTime(string $EndTime) 设置<p>结束时间</p>
+ * @method array getMetricNames() 获取<p>统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets</p>
+ * @method void setMetricNames(array $MetricNames) 设置<p>统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets</p>
+ * @method integer getGranularity() 获取<p>监控粒度，目前支持60，300，3600，86400，单位：秒。当时间范围不超过1天，支持最小粒度60秒；当时间范围不超过7天，支持最小粒度3600秒；当时间范围不超过30天，支持最小粒度86400秒。</p>
+ * @method void setGranularity(integer $Granularity) 设置<p>监控粒度，目前支持60，300，3600，86400，单位：秒。当时间范围不超过1天，支持最小粒度60秒；当时间范围不超过7天，支持最小粒度3600秒；当时间范围不超过30天，支持最小粒度86400秒。</p>
  */
 class DescribeProxyGroupStatisticsRequest extends AbstractModel
 {
     /**
-     * @var string 通道组ID
+     * @var string <p>通道组ID</p>
      */
     public $GroupId;
 
     /**
-     * @var string 起始时间
+     * @var string <p>起始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string <p>结束时间</p>
      */
     public $EndTime;
 
     /**
-     * @var array 统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets
+     * @var array <p>统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets</p>
      */
     public $MetricNames;
 
     /**
-     * @var integer 监控粒度，目前支持60，300，3600，86400，单位：秒。
-当时间范围不超过1天，支持最小粒度60秒；
-当时间范围不超过7天，支持最小粒度3600秒；
-当时间范围不超过30天，支持最小粒度86400秒。
+     * @var integer <p>监控粒度，目前支持60，300，3600，86400，单位：秒。当时间范围不超过1天，支持最小粒度60秒；当时间范围不超过7天，支持最小粒度3600秒；当时间范围不超过30天，支持最小粒度86400秒。</p>
      */
     public $Granularity;
 
     /**
-     * @param string $GroupId 通道组ID
-     * @param string $StartTime 起始时间
-     * @param string $EndTime 结束时间
-     * @param array $MetricNames 统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets
-     * @param integer $Granularity 监控粒度，目前支持60，300，3600，86400，单位：秒。
-当时间范围不超过1天，支持最小粒度60秒；
-当时间范围不超过7天，支持最小粒度3600秒；
-当时间范围不超过30天，支持最小粒度86400秒。
+     * @param string $GroupId <p>通道组ID</p>
+     * @param string $StartTime <p>起始时间</p>
+     * @param string $EndTime <p>结束时间</p>
+     * @param array $MetricNames <p>统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets</p>
+     * @param integer $Granularity <p>监控粒度，目前支持60，300，3600，86400，单位：秒。当时间范围不超过1天，支持最小粒度60秒；当时间范围不超过7天，支持最小粒度3600秒；当时间范围不超过30天，支持最小粒度86400秒。</p>
      */
     function __construct()
     {

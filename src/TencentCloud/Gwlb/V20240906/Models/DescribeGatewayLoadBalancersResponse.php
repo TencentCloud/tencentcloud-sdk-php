@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGatewayLoadBalancers返回参数结构体
  *
- * @method integer getTotalCount() 获取满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
- * @method void setTotalCount(integer $TotalCount) 设置满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
- * @method array getLoadBalancerSet() 获取返回的网关负载均衡实例数组。
- * @method void setLoadBalancerSet(array $LoadBalancerSet) 设置返回的网关负载均衡实例数组。
+ * @method integer getTotalCount() 获取<p>满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。</p>
+ * @method array getLoadBalancerSet() 获取<p>返回的网关负载均衡实例数组。</p>
+ * @method void setLoadBalancerSet(array $LoadBalancerSet) 设置<p>返回的网关负载均衡实例数组。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeGatewayLoadBalancersResponse extends AbstractModel
 {
     /**
-     * @var integer 满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
+     * @var integer <p>满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 返回的网关负载均衡实例数组。
+     * @var array <p>返回的网关负载均衡实例数组。</p>
      */
     public $LoadBalancerSet;
 
@@ -45,8 +45,8 @@ class DescribeGatewayLoadBalancersResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
-     * @param array $LoadBalancerSet 返回的网关负载均衡实例数组。
+     * @param integer $TotalCount <p>满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。</p>
+     * @param array $LoadBalancerSet <p>返回的网关负载均衡实例数组。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

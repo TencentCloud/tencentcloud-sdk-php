@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BindListenerRealServers请求参数结构体
  *
- * @method string getListenerId() 获取监听器ID
- * @method void setListenerId(string $ListenerId) 设置监听器ID
- * @method array getRealServerBindSet() 获取待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。
- * @method void setRealServerBindSet(array $RealServerBindSet) 设置待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。
+ * @method string getListenerId() 获取<p>监听器ID</p>
+ * @method void setListenerId(string $ListenerId) 设置<p>监听器ID</p>
+ * @method array getRealServerBindSet() 获取<p>待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。</p>
+ * @method void setRealServerBindSet(array $RealServerBindSet) 设置<p>待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。</p>
  */
 class BindListenerRealServersRequest extends AbstractModel
 {
     /**
-     * @var string 监听器ID
+     * @var string <p>监听器ID</p>
      */
     public $ListenerId;
 
     /**
-     * @var array 待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。
+     * @var array <p>待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。</p>
      */
     public $RealServerBindSet;
 
     /**
-     * @param string $ListenerId 监听器ID
-     * @param array $RealServerBindSet 待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。
+     * @param string $ListenerId <p>监听器ID</p>
+     * @param array $RealServerBindSet <p>待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。</p>
      */
     function __construct()
     {

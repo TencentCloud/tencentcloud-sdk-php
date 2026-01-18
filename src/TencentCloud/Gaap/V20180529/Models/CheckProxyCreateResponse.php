@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckProxyCreate返回参数结构体
  *
- * @method integer getCheckFlag() 获取查询能否创建给定配置的通道，1可以创建，0不可创建。
- * @method void setCheckFlag(integer $CheckFlag) 设置查询能否创建给定配置的通道，1可以创建，0不可创建。
+ * @method integer getCheckFlag() 获取<p>查询能否创建给定配置的通道，1可以创建，0不可创建。</p>
+ * @method void setCheckFlag(integer $CheckFlag) 设置<p>查询能否创建给定配置的通道，1可以创建，0不可创建。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CheckProxyCreateResponse extends AbstractModel
 {
     /**
-     * @var integer 查询能否创建给定配置的通道，1可以创建，0不可创建。
+     * @var integer <p>查询能否创建给定配置的通道，1可以创建，0不可创建。</p>
      */
     public $CheckFlag;
 
@@ -38,7 +38,7 @@ class CheckProxyCreateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $CheckFlag 查询能否创建给定配置的通道，1可以创建，0不可创建。
+     * @param integer $CheckFlag <p>查询能否创建给定配置的通道，1可以创建，0不可创建。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

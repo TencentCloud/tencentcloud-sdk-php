@@ -26,8 +26,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaintenanceTime(string $MaintenanceTime) 设置维护开始时间
  * @method integer getDuration() 获取维护时长（小时）
  * @method void setDuration(integer $Duration) 设置维护时长（小时）
- * @method array getDayOfWeek() 获取维护周期（一周中的哪几天）
- * @method void setDayOfWeek(array $DayOfWeek) 设置维护周期（一周中的哪几天）
+ * @method array getDayOfWeek() 获取维护周期（一周中的哪几天），支持的参数值如下：
+
+- MO：周一
+- TU：周二
+- WE：周三
+- TH：周四
+- FR：周五
+- SA：周六
+- SU：周日
+ * @method void setDayOfWeek(array $DayOfWeek) 设置维护周期（一周中的哪几天），支持的参数值如下：
+
+- MO：周一
+- TU：周二
+- WE：周三
+- TH：周四
+- FR：周五
+- SA：周六
+- SU：周日
  * @method array getExclusions() 获取维护排除项
  * @method void setExclusions(array $Exclusions) 设置维护排除项
  */
@@ -49,7 +65,15 @@ class ModifyClusterMaintenanceWindowAndExclusionsRequest extends AbstractModel
     public $Duration;
 
     /**
-     * @var array 维护周期（一周中的哪几天）
+     * @var array 维护周期（一周中的哪几天），支持的参数值如下：
+
+- MO：周一
+- TU：周二
+- WE：周三
+- TH：周四
+- FR：周五
+- SA：周六
+- SU：周日
      */
     public $DayOfWeek;
 
@@ -62,7 +86,15 @@ class ModifyClusterMaintenanceWindowAndExclusionsRequest extends AbstractModel
      * @param string $ClusterID 集群ID
      * @param string $MaintenanceTime 维护开始时间
      * @param integer $Duration 维护时长（小时）
-     * @param array $DayOfWeek 维护周期（一周中的哪几天）
+     * @param array $DayOfWeek 维护周期（一周中的哪几天），支持的参数值如下：
+
+- MO：周一
+- TU：周二
+- WE：周三
+- TH：周四
+- FR：周五
+- SA：周六
+- SU：周日
      * @param array $Exclusions 维护排除项
      */
     function __construct()

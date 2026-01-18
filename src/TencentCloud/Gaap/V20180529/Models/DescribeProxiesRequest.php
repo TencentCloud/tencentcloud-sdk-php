@@ -20,154 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProxies请求参数结构体
  *
- * @method array getInstanceIds() 获取（旧参数，请切换到ProxyIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
- * @method void setInstanceIds(array $InstanceIds) 设置（旧参数，请切换到ProxyIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
- * @method integer getOffset() 获取偏移量，默认为0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
- * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
- * @method array getFilters() 获取过滤条件。   
-每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定InstanceIds和Filters。 
-ProjectId - String - 是否必填：否 -（过滤条件）按照项目ID过滤。   
-AccessRegion - String - 是否必填：否 - （过滤条件）按照接入地域过滤。    
-RealServerRegion - String - 是否必填：否 - （过滤条件）按照源站地域过滤。
-GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过滤。
-IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版本过滤。
-PackageType - String - 是否必填：否 - （过滤条件）按照通道套餐类型过滤。
- * @method void setFilters(array $Filters) 设置过滤条件。   
-每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定InstanceIds和Filters。 
-ProjectId - String - 是否必填：否 -（过滤条件）按照项目ID过滤。   
-AccessRegion - String - 是否必填：否 - （过滤条件）按照接入地域过滤。    
-RealServerRegion - String - 是否必填：否 - （过滤条件）按照源站地域过滤。
-GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过滤。
-IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版本过滤。
-PackageType - String - 是否必填：否 - （过滤条件）按照通道套餐类型过滤。
- * @method array getProxyIds() 获取（新参数，替代InstanceIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
- * @method void setProxyIds(array $ProxyIds) 设置（新参数，替代InstanceIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
- * @method array getTagSet() 获取标签列表，当存在该字段时，拉取对应标签下的资源列表。
-最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，通道会被拉取出来。
- * @method void setTagSet(array $TagSet) 设置标签列表，当存在该字段时，拉取对应标签下的资源列表。
-最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，通道会被拉取出来。
- * @method integer getIndependent() 获取当该字段为1时，仅拉取非通道组的通道，
-当该字段为0时，仅拉取通道组的通道，
-不存在该字段时，拉取所有通道，包括独立通道和通道组通道。
- * @method void setIndependent(integer $Independent) 设置当该字段为1时，仅拉取非通道组的通道，
-当该字段为0时，仅拉取通道组的通道，
-不存在该字段时，拉取所有通道，包括独立通道和通道组通道。
- * @method string getOrder() 获取输出通道列表的排列顺序。取值范围：
-asc：升序排列；
-desc：降序排列。
-默认为降序。
- * @method void setOrder(string $Order) 设置输出通道列表的排列顺序。取值范围：
-asc：升序排列；
-desc：降序排列。
-默认为降序。
- * @method string getOrderField() 获取通道列表排序的依据字段。取值范围：
-create_time：依据通道的创建时间排序；
-proxy_id：依据通道的ID排序；
-bandwidth：依据通道带宽上限排序；
-concurrent_connections：依据通道并发排序；
-默认按通道创建时间排序。
- * @method void setOrderField(string $OrderField) 设置通道列表排序的依据字段。取值范围：
-create_time：依据通道的创建时间排序；
-proxy_id：依据通道的ID排序；
-bandwidth：依据通道带宽上限排序；
-concurrent_connections：依据通道并发排序；
-默认按通道创建时间排序。
+ * @method array getInstanceIds() 获取<p>（旧参数，请切换到ProxyIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。</p>
+ * @method void setInstanceIds(array $InstanceIds) 设置<p>（旧参数，请切换到ProxyIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。</p>
+ * @method integer getOffset() 获取<p>偏移量，默认为0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为0。</p>
+ * @method integer getLimit() 获取<p>返回数量，默认为20，最大值为100。</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认为20，最大值为100。</p>
+ * @method array getFilters() 获取<p>过滤条件。 <br />每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定InstanceIds和Filters。 ProjectId - String - 是否必填：否 -（过滤条件）按照项目ID过滤。 <br />AccessRegion - String - 是否必填：否 - （过滤条件）按照接入地域过滤。  <br />RealServerRegion - String - 是否必填：否 - （过滤条件）按照源站地域过滤。GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过滤。IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版本过滤。PackageType - String - 是否必填：否 - （过滤条件）按照通道套餐类型过滤。</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件。 <br />每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定InstanceIds和Filters。 ProjectId - String - 是否必填：否 -（过滤条件）按照项目ID过滤。 <br />AccessRegion - String - 是否必填：否 - （过滤条件）按照接入地域过滤。  <br />RealServerRegion - String - 是否必填：否 - （过滤条件）按照源站地域过滤。GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过滤。IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版本过滤。PackageType - String - 是否必填：否 - （过滤条件）按照通道套餐类型过滤。</p>
+ * @method array getProxyIds() 获取<p>（新参数，替代InstanceIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。</p>
+ * @method void setProxyIds(array $ProxyIds) 设置<p>（新参数，替代InstanceIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。</p>
+ * @method array getTagSet() 获取<p>标签列表，当存在该字段时，拉取对应标签下的资源列表。最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，通道会被拉取出来。</p>
+ * @method void setTagSet(array $TagSet) 设置<p>标签列表，当存在该字段时，拉取对应标签下的资源列表。最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，通道会被拉取出来。</p>
+ * @method integer getIndependent() 获取<p>当该字段为1时，仅拉取非通道组的通道，当该字段为0时，仅拉取通道组的通道，不存在该字段时，拉取所有通道，包括独立通道和通道组通道。</p>
+ * @method void setIndependent(integer $Independent) 设置<p>当该字段为1时，仅拉取非通道组的通道，当该字段为0时，仅拉取通道组的通道，不存在该字段时，拉取所有通道，包括独立通道和通道组通道。</p>
+ * @method string getOrder() 获取<p>输出通道列表的排列顺序。取值范围：asc：升序排列；desc：降序排列。默认为降序。</p>
+ * @method void setOrder(string $Order) 设置<p>输出通道列表的排列顺序。取值范围：asc：升序排列；desc：降序排列。默认为降序。</p>
+ * @method string getOrderField() 获取<p>通道列表排序的依据字段。取值范围：create_time：依据通道的创建时间排序；proxy_id：依据通道的ID排序；bandwidth：依据通道带宽上限排序；concurrent_connections：依据通道并发排序；默认按通道创建时间排序。</p>
+ * @method void setOrderField(string $OrderField) 设置<p>通道列表排序的依据字段。取值范围：create_time：依据通道的创建时间排序；proxy_id：依据通道的ID排序；bandwidth：依据通道带宽上限排序；concurrent_connections：依据通道并发排序；默认按通道创建时间排序。</p>
  */
 class DescribeProxiesRequest extends AbstractModel
 {
     /**
-     * @var array （旧参数，请切换到ProxyIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
+     * @var array <p>（旧参数，请切换到ProxyIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。</p>
      */
     public $InstanceIds;
 
     /**
-     * @var integer 偏移量，默认为0。
+     * @var integer <p>偏移量，默认为0。</p>
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认为20，最大值为100。
+     * @var integer <p>返回数量，默认为20，最大值为100。</p>
      */
     public $Limit;
 
     /**
-     * @var array 过滤条件。   
-每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定InstanceIds和Filters。 
-ProjectId - String - 是否必填：否 -（过滤条件）按照项目ID过滤。   
-AccessRegion - String - 是否必填：否 - （过滤条件）按照接入地域过滤。    
-RealServerRegion - String - 是否必填：否 - （过滤条件）按照源站地域过滤。
-GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过滤。
-IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版本过滤。
-PackageType - String - 是否必填：否 - （过滤条件）按照通道套餐类型过滤。
+     * @var array <p>过滤条件。 <br />每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定InstanceIds和Filters。 ProjectId - String - 是否必填：否 -（过滤条件）按照项目ID过滤。 <br />AccessRegion - String - 是否必填：否 - （过滤条件）按照接入地域过滤。  <br />RealServerRegion - String - 是否必填：否 - （过滤条件）按照源站地域过滤。GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过滤。IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版本过滤。PackageType - String - 是否必填：否 - （过滤条件）按照通道套餐类型过滤。</p>
      */
     public $Filters;
 
     /**
-     * @var array （新参数，替代InstanceIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
+     * @var array <p>（新参数，替代InstanceIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。</p>
      */
     public $ProxyIds;
 
     /**
-     * @var array 标签列表，当存在该字段时，拉取对应标签下的资源列表。
-最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，通道会被拉取出来。
+     * @var array <p>标签列表，当存在该字段时，拉取对应标签下的资源列表。最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，通道会被拉取出来。</p>
      */
     public $TagSet;
 
     /**
-     * @var integer 当该字段为1时，仅拉取非通道组的通道，
-当该字段为0时，仅拉取通道组的通道，
-不存在该字段时，拉取所有通道，包括独立通道和通道组通道。
+     * @var integer <p>当该字段为1时，仅拉取非通道组的通道，当该字段为0时，仅拉取通道组的通道，不存在该字段时，拉取所有通道，包括独立通道和通道组通道。</p>
      */
     public $Independent;
 
     /**
-     * @var string 输出通道列表的排列顺序。取值范围：
-asc：升序排列；
-desc：降序排列。
-默认为降序。
+     * @var string <p>输出通道列表的排列顺序。取值范围：asc：升序排列；desc：降序排列。默认为降序。</p>
      */
     public $Order;
 
     /**
-     * @var string 通道列表排序的依据字段。取值范围：
-create_time：依据通道的创建时间排序；
-proxy_id：依据通道的ID排序；
-bandwidth：依据通道带宽上限排序；
-concurrent_connections：依据通道并发排序；
-默认按通道创建时间排序。
+     * @var string <p>通道列表排序的依据字段。取值范围：create_time：依据通道的创建时间排序；proxy_id：依据通道的ID排序；bandwidth：依据通道带宽上限排序；concurrent_connections：依据通道并发排序；默认按通道创建时间排序。</p>
      */
     public $OrderField;
 
     /**
-     * @param array $InstanceIds （旧参数，请切换到ProxyIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
-     * @param integer $Offset 偏移量，默认为0。
-     * @param integer $Limit 返回数量，默认为20，最大值为100。
-     * @param array $Filters 过滤条件。   
-每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定InstanceIds和Filters。 
-ProjectId - String - 是否必填：否 -（过滤条件）按照项目ID过滤。   
-AccessRegion - String - 是否必填：否 - （过滤条件）按照接入地域过滤。    
-RealServerRegion - String - 是否必填：否 - （过滤条件）按照源站地域过滤。
-GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过滤。
-IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版本过滤。
-PackageType - String - 是否必填：否 - （过滤条件）按照通道套餐类型过滤。
-     * @param array $ProxyIds （新参数，替代InstanceIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
-     * @param array $TagSet 标签列表，当存在该字段时，拉取对应标签下的资源列表。
-最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，通道会被拉取出来。
-     * @param integer $Independent 当该字段为1时，仅拉取非通道组的通道，
-当该字段为0时，仅拉取通道组的通道，
-不存在该字段时，拉取所有通道，包括独立通道和通道组通道。
-     * @param string $Order 输出通道列表的排列顺序。取值范围：
-asc：升序排列；
-desc：降序排列。
-默认为降序。
-     * @param string $OrderField 通道列表排序的依据字段。取值范围：
-create_time：依据通道的创建时间排序；
-proxy_id：依据通道的ID排序；
-bandwidth：依据通道带宽上限排序；
-concurrent_connections：依据通道并发排序；
-默认按通道创建时间排序。
+     * @param array $InstanceIds <p>（旧参数，请切换到ProxyIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。</p>
+     * @param integer $Offset <p>偏移量，默认为0。</p>
+     * @param integer $Limit <p>返回数量，默认为20，最大值为100。</p>
+     * @param array $Filters <p>过滤条件。 <br />每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定InstanceIds和Filters。 ProjectId - String - 是否必填：否 -（过滤条件）按照项目ID过滤。 <br />AccessRegion - String - 是否必填：否 - （过滤条件）按照接入地域过滤。  <br />RealServerRegion - String - 是否必填：否 - （过滤条件）按照源站地域过滤。GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过滤。IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版本过滤。PackageType - String - 是否必填：否 - （过滤条件）按照通道套餐类型过滤。</p>
+     * @param array $ProxyIds <p>（新参数，替代InstanceIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。</p>
+     * @param array $TagSet <p>标签列表，当存在该字段时，拉取对应标签下的资源列表。最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，通道会被拉取出来。</p>
+     * @param integer $Independent <p>当该字段为1时，仅拉取非通道组的通道，当该字段为0时，仅拉取通道组的通道，不存在该字段时，拉取所有通道，包括独立通道和通道组通道。</p>
+     * @param string $Order <p>输出通道列表的排列顺序。取值范围：asc：升序排列；desc：降序排列。默认为降序。</p>
+     * @param string $OrderField <p>通道列表排序的依据字段。取值范围：create_time：依据通道的创建时间排序；proxy_id：依据通道的ID排序；bandwidth：依据通道带宽上限排序；concurrent_connections：依据通道并发排序；默认按通道创建时间排序。</p>
      */
     function __construct()
     {

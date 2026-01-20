@@ -20,146 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCertificates请求参数结构体
  *
- * @method integer getOffset() 获取分页偏移量，从0开始。 默认为0
- * @method void setOffset(integer $Offset) 设置分页偏移量，从0开始。 默认为0
- * @method integer getLimit() 获取每页数量，默认10。最大值1000，如超过1000按1000处理
- * @method void setLimit(integer $Limit) 设置每页数量，默认10。最大值1000，如超过1000按1000处理
- * @method string getSearchKey() 获取搜索关键词，模糊匹配证书 ID、备注名称、证书域名
- * @method void setSearchKey(string $SearchKey) 设置搜索关键词，模糊匹配证书 ID、备注名称、证书域名
- * @method string getCertificateType() 获取证书类型：CA = 客户端证书，SVR = 服务器证书。
- * @method void setCertificateType(string $CertificateType) 设置证书类型：CA = 客户端证书，SVR = 服务器证书。
- * @method integer getProjectId() 获取项目 ID。
- * @method void setProjectId(integer $ProjectId) 设置项目 ID。
- * @method string getExpirationSort() 获取默认按照证书申请时间降序； 若传排序则按到期时间排序：DESC = 证书到期时间降序， ASC = 证书到期时间升序。
- * @method void setExpirationSort(string $ExpirationSort) 设置默认按照证书申请时间降序； 若传排序则按到期时间排序：DESC = 证书到期时间降序， ASC = 证书到期时间升序。
- * @method array getCertificateStatus() 获取证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 已退款。 15 = 证书迁移中
- * @method void setCertificateStatus(array $CertificateStatus) 设置证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 已退款。 15 = 证书迁移中
- * @method integer getDeployable() 获取是否可部署，可选值：1 = 可部署，0 =  不可部署。
- * @method void setDeployable(integer $Deployable) 设置是否可部署，可选值：1 = 可部署，0 =  不可部署。
- * @method integer getUpload() 获取是否筛选上传托管的 1筛选，0不筛选
- * @method void setUpload(integer $Upload) 设置是否筛选上传托管的 1筛选，0不筛选
- * @method integer getRenew() 获取是否筛选可续期证书 1筛选 0不筛选
- * @method void setRenew(integer $Renew) 设置是否筛选可续期证书 1筛选 0不筛选
- * @method string getFilterSource() 获取筛选来源， upload：上传证书， buy：腾讯云证书， 不传默认全部
- * @method void setFilterSource(string $FilterSource) 设置筛选来源， upload：上传证书， buy：腾讯云证书， 不传默认全部
- * @method integer getIsSM() 获取是否筛选国密证书。1:筛选  0:不筛选
- * @method void setIsSM(integer $IsSM) 设置是否筛选国密证书。1:筛选  0:不筛选
- * @method integer getFilterExpiring() 获取筛选证书是否即将过期，传1是筛选，0不筛选
- * @method void setFilterExpiring(integer $FilterExpiring) 设置筛选证书是否即将过期，传1是筛选，0不筛选
- * @method integer getHostable() 获取是否可托管，可选值：1 = 可托管，0 =  不可托管。
- * @method void setHostable(integer $Hostable) 设置是否可托管，可选值：1 = 可托管，0 =  不可托管。
- * @method array getTags() 获取筛选指定标签的证书
- * @method void setTags(array $Tags) 设置筛选指定标签的证书
- * @method integer getIsPendingIssue() 获取是否筛选等待签发的证书，传1是筛选，0和null不筛选
- * @method void setIsPendingIssue(integer $IsPendingIssue) 设置是否筛选等待签发的证书，传1是筛选，0和null不筛选
- * @method array getCertIds() 获取筛选指定证书ID的证书，只支持有权限的证书ID
- * @method void setCertIds(array $CertIds) 设置筛选指定证书ID的证书，只支持有权限的证书ID
+ * @method integer getOffset() 获取<p>分页偏移量，从0开始。 默认为0</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移量，从0开始。 默认为0</p>
+ * @method integer getLimit() 获取<p>每页数量，默认10。最大值1000，如超过1000按1000处理</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页数量，默认10。最大值1000，如超过1000按1000处理</p>
+ * @method string getSearchKey() 获取<p>搜索关键词，模糊匹配证书 ID、备注名称、证书域名</p>
+ * @method void setSearchKey(string $SearchKey) 设置<p>搜索关键词，模糊匹配证书 ID、备注名称、证书域名</p>
+ * @method string getCertificateType() 获取<p>证书类型：CA = 客户端证书，SVR = 服务器证书。</p>
+ * @method void setCertificateType(string $CertificateType) 设置<p>证书类型：CA = 客户端证书，SVR = 服务器证书。</p>
+ * @method integer getProjectId() 获取<p>项目 ID。</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>项目 ID。</p>
+ * @method string getExpirationSort() 获取<p>默认按照证书申请时间降序； 若传排序则按到期时间排序：DESC = 证书到期时间降序， ASC = 证书到期时间升序。</p>
+ * @method void setExpirationSort(string $ExpirationSort) 设置<p>默认按照证书申请时间降序； 若传排序则按到期时间排序：DESC = 证书到期时间降序， ASC = 证书到期时间升序。</p>
+ * @method array getCertificateStatus() 获取<p>证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 已退款。 15 = 证书迁移中</p>
+ * @method void setCertificateStatus(array $CertificateStatus) 设置<p>证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 已退款。 15 = 证书迁移中</p>
+ * @method integer getDeployable() 获取<p>是否可部署，可选值：1 = 可部署，0 =  不可部署。</p>
+ * @method void setDeployable(integer $Deployable) 设置<p>是否可部署，可选值：1 = 可部署，0 =  不可部署。</p>
+ * @method integer getUpload() 获取<p>是否筛选上传托管的 1筛选，0不筛选</p>
+ * @method void setUpload(integer $Upload) 设置<p>是否筛选上传托管的 1筛选，0不筛选</p>
+ * @method integer getRenew() 获取<p>是否筛选可续期证书 1筛选 0不筛选</p>
+ * @method void setRenew(integer $Renew) 设置<p>是否筛选可续期证书 1筛选 0不筛选</p>
+ * @method string getFilterSource() 获取<p>筛选来源， upload：上传证书， buy：腾讯云证书， 不传默认全部</p>
+ * @method void setFilterSource(string $FilterSource) 设置<p>筛选来源， upload：上传证书， buy：腾讯云证书， 不传默认全部</p>
+ * @method integer getIsSM() 获取<p>是否筛选国密证书。1:筛选  0:不筛选</p>
+ * @method void setIsSM(integer $IsSM) 设置<p>是否筛选国密证书。1:筛选  0:不筛选</p>
+ * @method integer getFilterExpiring() 获取<p>筛选证书是否即将过期，传1是筛选，0不筛选</p>
+ * @method void setFilterExpiring(integer $FilterExpiring) 设置<p>筛选证书是否即将过期，传1是筛选，0不筛选</p>
+ * @method integer getHostable() 获取<p>是否可托管，可选值：1 = 可托管，0 =  不可托管。</p>
+ * @method void setHostable(integer $Hostable) 设置<p>是否可托管，可选值：1 = 可托管，0 =  不可托管。</p>
+ * @method array getTags() 获取<p>筛选指定标签的证书</p>
+ * @method void setTags(array $Tags) 设置<p>筛选指定标签的证书</p>
+ * @method integer getIsPendingIssue() 获取<p>是否筛选等待签发的证书，传1是筛选，0和null不筛选</p>
+ * @method void setIsPendingIssue(integer $IsPendingIssue) 设置<p>是否筛选等待签发的证书，传1是筛选，0和null不筛选</p>
+ * @method array getCertIds() 获取<p>筛选指定证书ID的证书，只支持有权限的证书ID</p>
+ * @method void setCertIds(array $CertIds) 设置<p>筛选指定证书ID的证书，只支持有权限的证书ID</p>
+ * @method string getServiceId() 获取<p>订阅服务ID</p>
+ * @method void setServiceId(string $ServiceId) 设置<p>订阅服务ID</p>
  */
 class DescribeCertificatesRequest extends AbstractModel
 {
     /**
-     * @var integer 分页偏移量，从0开始。 默认为0
+     * @var integer <p>分页偏移量，从0开始。 默认为0</p>
      */
     public $Offset;
 
     /**
-     * @var integer 每页数量，默认10。最大值1000，如超过1000按1000处理
+     * @var integer <p>每页数量，默认10。最大值1000，如超过1000按1000处理</p>
      */
     public $Limit;
 
     /**
-     * @var string 搜索关键词，模糊匹配证书 ID、备注名称、证书域名
+     * @var string <p>搜索关键词，模糊匹配证书 ID、备注名称、证书域名</p>
      */
     public $SearchKey;
 
     /**
-     * @var string 证书类型：CA = 客户端证书，SVR = 服务器证书。
+     * @var string <p>证书类型：CA = 客户端证书，SVR = 服务器证书。</p>
      */
     public $CertificateType;
 
     /**
-     * @var integer 项目 ID。
+     * @var integer <p>项目 ID。</p>
      */
     public $ProjectId;
 
     /**
-     * @var string 默认按照证书申请时间降序； 若传排序则按到期时间排序：DESC = 证书到期时间降序， ASC = 证书到期时间升序。
+     * @var string <p>默认按照证书申请时间降序； 若传排序则按到期时间排序：DESC = 证书到期时间降序， ASC = 证书到期时间升序。</p>
      */
     public $ExpirationSort;
 
     /**
-     * @var array 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 已退款。 15 = 证书迁移中
+     * @var array <p>证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 已退款。 15 = 证书迁移中</p>
      */
     public $CertificateStatus;
 
     /**
-     * @var integer 是否可部署，可选值：1 = 可部署，0 =  不可部署。
+     * @var integer <p>是否可部署，可选值：1 = 可部署，0 =  不可部署。</p>
      */
     public $Deployable;
 
     /**
-     * @var integer 是否筛选上传托管的 1筛选，0不筛选
+     * @var integer <p>是否筛选上传托管的 1筛选，0不筛选</p>
      */
     public $Upload;
 
     /**
-     * @var integer 是否筛选可续期证书 1筛选 0不筛选
+     * @var integer <p>是否筛选可续期证书 1筛选 0不筛选</p>
      */
     public $Renew;
 
     /**
-     * @var string 筛选来源， upload：上传证书， buy：腾讯云证书， 不传默认全部
+     * @var string <p>筛选来源， upload：上传证书， buy：腾讯云证书， 不传默认全部</p>
      */
     public $FilterSource;
 
     /**
-     * @var integer 是否筛选国密证书。1:筛选  0:不筛选
+     * @var integer <p>是否筛选国密证书。1:筛选  0:不筛选</p>
      */
     public $IsSM;
 
     /**
-     * @var integer 筛选证书是否即将过期，传1是筛选，0不筛选
+     * @var integer <p>筛选证书是否即将过期，传1是筛选，0不筛选</p>
      */
     public $FilterExpiring;
 
     /**
-     * @var integer 是否可托管，可选值：1 = 可托管，0 =  不可托管。
+     * @var integer <p>是否可托管，可选值：1 = 可托管，0 =  不可托管。</p>
      */
     public $Hostable;
 
     /**
-     * @var array 筛选指定标签的证书
+     * @var array <p>筛选指定标签的证书</p>
      */
     public $Tags;
 
     /**
-     * @var integer 是否筛选等待签发的证书，传1是筛选，0和null不筛选
+     * @var integer <p>是否筛选等待签发的证书，传1是筛选，0和null不筛选</p>
      */
     public $IsPendingIssue;
 
     /**
-     * @var array 筛选指定证书ID的证书，只支持有权限的证书ID
+     * @var array <p>筛选指定证书ID的证书，只支持有权限的证书ID</p>
      */
     public $CertIds;
 
     /**
-     * @param integer $Offset 分页偏移量，从0开始。 默认为0
-     * @param integer $Limit 每页数量，默认10。最大值1000，如超过1000按1000处理
-     * @param string $SearchKey 搜索关键词，模糊匹配证书 ID、备注名称、证书域名
-     * @param string $CertificateType 证书类型：CA = 客户端证书，SVR = 服务器证书。
-     * @param integer $ProjectId 项目 ID。
-     * @param string $ExpirationSort 默认按照证书申请时间降序； 若传排序则按到期时间排序：DESC = 证书到期时间降序， ASC = 证书到期时间升序。
-     * @param array $CertificateStatus 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 已退款。 15 = 证书迁移中
-     * @param integer $Deployable 是否可部署，可选值：1 = 可部署，0 =  不可部署。
-     * @param integer $Upload 是否筛选上传托管的 1筛选，0不筛选
-     * @param integer $Renew 是否筛选可续期证书 1筛选 0不筛选
-     * @param string $FilterSource 筛选来源， upload：上传证书， buy：腾讯云证书， 不传默认全部
-     * @param integer $IsSM 是否筛选国密证书。1:筛选  0:不筛选
-     * @param integer $FilterExpiring 筛选证书是否即将过期，传1是筛选，0不筛选
-     * @param integer $Hostable 是否可托管，可选值：1 = 可托管，0 =  不可托管。
-     * @param array $Tags 筛选指定标签的证书
-     * @param integer $IsPendingIssue 是否筛选等待签发的证书，传1是筛选，0和null不筛选
-     * @param array $CertIds 筛选指定证书ID的证书，只支持有权限的证书ID
+     * @var string <p>订阅服务ID</p>
+     */
+    public $ServiceId;
+
+    /**
+     * @param integer $Offset <p>分页偏移量，从0开始。 默认为0</p>
+     * @param integer $Limit <p>每页数量，默认10。最大值1000，如超过1000按1000处理</p>
+     * @param string $SearchKey <p>搜索关键词，模糊匹配证书 ID、备注名称、证书域名</p>
+     * @param string $CertificateType <p>证书类型：CA = 客户端证书，SVR = 服务器证书。</p>
+     * @param integer $ProjectId <p>项目 ID。</p>
+     * @param string $ExpirationSort <p>默认按照证书申请时间降序； 若传排序则按到期时间排序：DESC = 证书到期时间降序， ASC = 证书到期时间升序。</p>
+     * @param array $CertificateStatus <p>证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 已退款。 15 = 证书迁移中</p>
+     * @param integer $Deployable <p>是否可部署，可选值：1 = 可部署，0 =  不可部署。</p>
+     * @param integer $Upload <p>是否筛选上传托管的 1筛选，0不筛选</p>
+     * @param integer $Renew <p>是否筛选可续期证书 1筛选 0不筛选</p>
+     * @param string $FilterSource <p>筛选来源， upload：上传证书， buy：腾讯云证书， 不传默认全部</p>
+     * @param integer $IsSM <p>是否筛选国密证书。1:筛选  0:不筛选</p>
+     * @param integer $FilterExpiring <p>筛选证书是否即将过期，传1是筛选，0不筛选</p>
+     * @param integer $Hostable <p>是否可托管，可选值：1 = 可托管，0 =  不可托管。</p>
+     * @param array $Tags <p>筛选指定标签的证书</p>
+     * @param integer $IsPendingIssue <p>是否筛选等待签发的证书，传1是筛选，0和null不筛选</p>
+     * @param array $CertIds <p>筛选指定证书ID的证书，只支持有权限的证书ID</p>
+     * @param string $ServiceId <p>订阅服务ID</p>
      */
     function __construct()
     {
@@ -245,6 +253,10 @@ class DescribeCertificatesRequest extends AbstractModel
 
         if (array_key_exists("CertIds",$param) and $param["CertIds"] !== null) {
             $this->CertIds = $param["CertIds"];
+        }
+
+        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
+            $this->ServiceId = $param["ServiceId"];
         }
     }
 }

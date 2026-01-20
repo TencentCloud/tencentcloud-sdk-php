@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSplunkDeliver返回参数结构体
  *
- * @method string getTaskId() 获取splunk投递任务id
- * @method void setTaskId(string $TaskId) 设置splunk投递任务id
+ * @method string getTaskId() 获取<p>splunk投递任务id</p>
+ * @method void setTaskId(string $TaskId) 设置<p>splunk投递任务id</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateSplunkDeliverResponse extends AbstractModel
 {
     /**
-     * @var string splunk投递任务id
+     * @var string <p>splunk投递任务id</p>
      */
     public $TaskId;
 
@@ -38,7 +38,7 @@ class CreateSplunkDeliverResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId splunk投递任务id
+     * @param string $TaskId <p>splunk投递任务id</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

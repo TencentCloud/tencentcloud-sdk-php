@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWordlist(array $Wordlist) 设置字词时间戳信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSpeakerId() 获取说话人ID（如启用说话人识别）
+ * @method void setSpeakerId(string $SpeakerId) 设置说话人ID（如启用说话人识别）
  */
 class SmartSubtitleTaskAsrFullTextSegmentItem extends AbstractModel
 {
@@ -62,12 +64,18 @@ class SmartSubtitleTaskAsrFullTextSegmentItem extends AbstractModel
     public $Wordlist;
 
     /**
+     * @var string 说话人ID（如启用说话人识别）
+     */
+    public $SpeakerId;
+
+    /**
      * @param float $Confidence 识别片段置信度。取值：0~100。
      * @param float $StartTimeOffset 识别片段起始的偏移时间，单位：秒。
      * @param float $EndTimeOffset 识别片段终止的偏移时间，单位：秒。
      * @param string $Text 识别文本。
      * @param array $Wordlist 字词时间戳信息。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SpeakerId 说话人ID（如启用说话人识别）
      */
     function __construct()
     {
@@ -105,6 +113,10 @@ class SmartSubtitleTaskAsrFullTextSegmentItem extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Wordlist, $obj);
             }
+        }
+
+        if (array_key_exists("SpeakerId",$param) and $param["SpeakerId"] !== null) {
+            $this->SpeakerId = $param["SpeakerId"];
         }
     }
 }

@@ -20,78 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SubmitTemplateToImageJob请求参数结构体
  *
- * @method Image getImage() 获取算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
-Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
-图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
- * @method void setImage(Image $Image) 设置算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
-Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
-图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
- * @method string getStyle() 获取绘画风格当前仅支持美术馆风格（gallerying）。
- * @method void setStyle(string $Style) 设置绘画风格当前仅支持美术馆风格（gallerying）。
- * @method string getMode() 获取特效模式，默认使用人像模式。 Person：人像模式，仅支持上传人像图片，人像生成效果更好【这里需要加非人脸的拦截】。 Pet：宠物模式，支持宠物等非人像图片。 示例值：Person
- * @method void setMode(string $Mode) 设置特效模式，默认使用人像模式。 Person：人像模式，仅支持上传人像图片，人像生成效果更好【这里需要加非人脸的拦截】。 Pet：宠物模式，支持宠物等非人像图片。 示例值：Person
- * @method integer getLogoAdd() 获取为生成结果图添加显式水印标识的开关，默认为1。  
-1：添加。  
-0：不添加。  
-其他数值：默认按1处理。  
-建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。
- * @method void setLogoAdd(integer $LogoAdd) 设置为生成结果图添加显式水印标识的开关，默认为1。  
-1：添加。  
-0：不添加。  
-其他数值：默认按1处理。  
-建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。
- * @method LogoParam getLogoParam() 获取标识内容设置。
-默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
- * @method void setLogoParam(LogoParam $LogoParam) 设置标识内容设置。
-默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+ * @method Image getImage() 获取<p>算法将根据输入的图片，结合文本描述智能生成与之相关的图像。Base64 和 Url 必须提供一个，如果都提供以 Url 为准。图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。</p>
+ * @method void setImage(Image $Image) 设置<p>算法将根据输入的图片，结合文本描述智能生成与之相关的图像。Base64 和 Url 必须提供一个，如果都提供以 Url 为准。图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。</p>
+ * @method string getStyle() 获取<p>绘画风格当前仅支持美术馆风格（gallerying）。</p>
+ * @method void setStyle(string $Style) 设置<p>绘画风格当前仅支持美术馆风格（gallerying）。</p>
+ * @method string getMode() 获取<p>特效模式，默认使用人像模式。</p>枚举值：<ul><li> Person： 人像模式，仅支持上传人像图片。</li><li> Pet： 宠物模式，支持宠物等非人像图片。</li></ul>默认值：Person
+ * @method void setMode(string $Mode) 设置<p>特效模式，默认使用人像模式。</p>枚举值：<ul><li> Person： 人像模式，仅支持上传人像图片。</li><li> Pet： 宠物模式，支持宠物等非人像图片。</li></ul>默认值：Person
+ * @method integer getLogoAdd() 获取<p>为生成结果图添加显式水印标识的开关，默认为1。<br />1：添加。<br />0：不添加。<br />其他数值：默认按1处理。<br />建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。</p>
+ * @method void setLogoAdd(integer $LogoAdd) 设置<p>为生成结果图添加显式水印标识的开关，默认为1。<br />1：添加。<br />0：不添加。<br />其他数值：默认按1处理。<br />建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。</p>
+ * @method LogoParam getLogoParam() 获取<p>标识内容设置。默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。</p>
+ * @method void setLogoParam(LogoParam $LogoParam) 设置<p>标识内容设置。默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。</p>
  */
 class SubmitTemplateToImageJobRequest extends AbstractModel
 {
     /**
-     * @var Image 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
-Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
-图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+     * @var Image <p>算法将根据输入的图片，结合文本描述智能生成与之相关的图像。Base64 和 Url 必须提供一个，如果都提供以 Url 为准。图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。</p>
      */
     public $Image;
 
     /**
-     * @var string 绘画风格当前仅支持美术馆风格（gallerying）。
+     * @var string <p>绘画风格当前仅支持美术馆风格（gallerying）。</p>
      */
     public $Style;
 
     /**
-     * @var string 特效模式，默认使用人像模式。 Person：人像模式，仅支持上传人像图片，人像生成效果更好【这里需要加非人脸的拦截】。 Pet：宠物模式，支持宠物等非人像图片。 示例值：Person
+     * @var string <p>特效模式，默认使用人像模式。</p>枚举值：<ul><li> Person： 人像模式，仅支持上传人像图片。</li><li> Pet： 宠物模式，支持宠物等非人像图片。</li></ul>默认值：Person
      */
     public $Mode;
 
     /**
-     * @var integer 为生成结果图添加显式水印标识的开关，默认为1。  
-1：添加。  
-0：不添加。  
-其他数值：默认按1处理。  
-建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。
+     * @var integer <p>为生成结果图添加显式水印标识的开关，默认为1。<br />1：添加。<br />0：不添加。<br />其他数值：默认按1处理。<br />建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。</p>
      */
     public $LogoAdd;
 
     /**
-     * @var LogoParam 标识内容设置。
-默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+     * @var LogoParam <p>标识内容设置。默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。</p>
      */
     public $LogoParam;
 
     /**
-     * @param Image $Image 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
-Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
-图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
-     * @param string $Style 绘画风格当前仅支持美术馆风格（gallerying）。
-     * @param string $Mode 特效模式，默认使用人像模式。 Person：人像模式，仅支持上传人像图片，人像生成效果更好【这里需要加非人脸的拦截】。 Pet：宠物模式，支持宠物等非人像图片。 示例值：Person
-     * @param integer $LogoAdd 为生成结果图添加显式水印标识的开关，默认为1。  
-1：添加。  
-0：不添加。  
-其他数值：默认按1处理。  
-建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。
-     * @param LogoParam $LogoParam 标识内容设置。
-默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+     * @param Image $Image <p>算法将根据输入的图片，结合文本描述智能生成与之相关的图像。Base64 和 Url 必须提供一个，如果都提供以 Url 为准。图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。</p>
+     * @param string $Style <p>绘画风格当前仅支持美术馆风格（gallerying）。</p>
+     * @param string $Mode <p>特效模式，默认使用人像模式。</p>枚举值：<ul><li> Person： 人像模式，仅支持上传人像图片。</li><li> Pet： 宠物模式，支持宠物等非人像图片。</li></ul>默认值：Person
+     * @param integer $LogoAdd <p>为生成结果图添加显式水印标识的开关，默认为1。<br />1：添加。<br />0：不添加。<br />其他数值：默认按1处理。<br />建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。</p>
+     * @param LogoParam $LogoParam <p>标识内容设置。默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。</p>
      */
     function __construct()
     {

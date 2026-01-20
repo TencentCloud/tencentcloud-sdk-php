@@ -18,7 +18,7 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 资产视角风险项
+ * 资产视角风险信息
  *
  * @method integer getAppId() 获取租户ID
  * @method void setAppId(integer $AppId) 设置租户ID
@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClassify(string $Classify) 设置处置分类
  * @method array getStandardTerms() 获取等保合规
  * @method void setStandardTerms(array $StandardTerms) 设置等保合规
+ * @method string getAssetType() 获取资产类型
+ * @method void setAssetType(string $AssetType) 设置资产类型
  */
 class AssetRiskItem extends AbstractModel
 {
@@ -136,6 +138,11 @@ class AssetRiskItem extends AbstractModel
     public $StandardTerms;
 
     /**
+     * @var string 资产类型
+     */
+    public $AssetType;
+
+    /**
      * @param integer $AppId 租户ID
      * @param string $Provider 云厂商
      * @param string $ProviderName 云厂商名称
@@ -152,6 +159,7 @@ class AssetRiskItem extends AbstractModel
      * @param string $RiskRuleId 风险规则ID
      * @param string $Classify 处置分类
      * @param array $StandardTerms 等保合规
+     * @param string $AssetType 资产类型
      */
     function __construct()
     {
@@ -233,6 +241,10 @@ class AssetRiskItem extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->StandardTerms, $obj);
             }
+        }
+
+        if (array_key_exists("AssetType",$param) and $param["AssetType"] !== null) {
+            $this->AssetType = $param["AssetType"];
         }
     }
 }

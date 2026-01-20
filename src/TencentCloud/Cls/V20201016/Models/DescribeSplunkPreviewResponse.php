@@ -20,17 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSplunkPreview返回参数结构体
  *
- * @method array getPreviewInfos() 获取预览结果
- * @method void setPreviewInfos(array $PreviewInfos) 设置预览结果
+ * @method array getPreviewInfos() 获取<p>预览结果</p>
+ * @method void setPreviewInfos(array $PreviewInfos) 设置<p>预览结果</p>
+ * @method FilterStatistics getFilterStats() 获取<p>数据过滤结果</p>
+ * @method void setFilterStats(FilterStatistics $FilterStats) 设置<p>数据过滤结果</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSplunkPreviewResponse extends AbstractModel
 {
     /**
-     * @var array 预览结果
+     * @var array <p>预览结果</p>
      */
     public $PreviewInfos;
+
+    /**
+     * @var FilterStatistics <p>数据过滤结果</p>
+     */
+    public $FilterStats;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class DescribeSplunkPreviewResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $PreviewInfos 预览结果
+     * @param array $PreviewInfos <p>预览结果</p>
+     * @param FilterStatistics $FilterStats <p>数据过滤结果</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,11 @@ class DescribeSplunkPreviewResponse extends AbstractModel
         }
         if (array_key_exists("PreviewInfos",$param) and $param["PreviewInfos"] !== null) {
             $this->PreviewInfos = $param["PreviewInfos"];
+        }
+
+        if (array_key_exists("FilterStats",$param) and $param["FilterStats"] !== null) {
+            $this->FilterStats = new FilterStatistics();
+            $this->FilterStats->deserialize($param["FilterStats"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

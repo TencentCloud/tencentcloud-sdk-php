@@ -38,6 +38,7 @@ use TencentCloud\Common\AbstractModel;
 <li>AddBlindWatermark: 添加基础版权数字水印</li>
 <li>AddNagraWatermark: 添加NAGRA数字水印</li>
 <li>ExtractBlindWatermark: 提取基础版权数字水印</li>
+<li>AIGC: AIGC</li>
  * @method void setTypes(array $Types) 设置查询媒体处理任务类型，默认查询转码。
 <li>Transcode：转码</li>
 <li>Enhance：增强</li>
@@ -52,6 +53,7 @@ use TencentCloud\Common\AbstractModel;
 <li>AddBlindWatermark: 添加基础版权数字水印</li>
 <li>AddNagraWatermark: 添加NAGRA数字水印</li>
 <li>ExtractBlindWatermark: 提取基础版权数字水印</li>
+<li>AIGC: AIGC</li>
  * @method array getProcessRegions() 获取媒体处理园区，默认返回 ap-guangzhou 园区。
 <li>ap-guangzhou：广州</li>
 <li>ap-hongkong：中国香港</li>
@@ -114,6 +116,7 @@ class DescribeUsageDataRequest extends AbstractModel
 <li>AddBlindWatermark: 添加基础版权数字水印</li>
 <li>AddNagraWatermark: 添加NAGRA数字水印</li>
 <li>ExtractBlindWatermark: 提取基础版权数字水印</li>
+<li>AIGC: AIGC</li>
      */
     public $Types;
 
@@ -155,6 +158,7 @@ class DescribeUsageDataRequest extends AbstractModel
 <li>AddBlindWatermark: 添加基础版权数字水印</li>
 <li>AddNagraWatermark: 添加NAGRA数字水印</li>
 <li>ExtractBlindWatermark: 提取基础版权数字水印</li>
+<li>AIGC: AIGC</li>
      * @param array $ProcessRegions 媒体处理园区，默认返回 ap-guangzhou 园区。
 <li>ap-guangzhou：广州</li>
 <li>ap-hongkong：中国香港</li>

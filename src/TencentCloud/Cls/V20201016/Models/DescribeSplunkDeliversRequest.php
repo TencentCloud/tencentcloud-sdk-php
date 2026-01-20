@@ -20,58 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSplunkDelivers请求参数结构体
  *
- * @method string getTopicId() 获取日志主题Id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
- * @method void setTopicId(string $TopicId) 设置日志主题Id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
- * @method array getFilters() 获取- taskId 按照【任务id】进行过滤。 类型：String 必选：否  
-- name 按照【任务名称】进行过滤。 类型：String 必选：否  
-- statusFlag 按照【状态】进行过滤。 类型：String 必选：否  
- 每次请求的Filters的上限为10，Filter.Values的上限为10。
- * @method void setFilters(array $Filters) 设置- taskId 按照【任务id】进行过滤。 类型：String 必选：否  
-- name 按照【任务名称】进行过滤。 类型：String 必选：否  
-- statusFlag 按照【状态】进行过滤。 类型：String 必选：否  
- 每次请求的Filters的上限为10，Filter.Values的上限为10。
- * @method integer getOffset() 获取分页的偏移量，默认值为0。
- * @method void setOffset(integer $Offset) 设置分页的偏移量，默认值为0。
- * @method integer getLimit() 获取分页单页限制数目，默认值为20，最大值100。
- * @method void setLimit(integer $Limit) 设置分页单页限制数目，默认值为20，最大值100。
+ * @method string getTopicId() 获取<p>日志主题Id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
+ * @method void setTopicId(string $TopicId) 设置<p>日志主题Id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
+ * @method array getFilters() 获取<ul><li>taskId 按照【任务id】进行过滤。 类型：String 必选：否  </li><li>name 按照【任务名称】进行过滤。 类型：String 必选：否  </li><li>statusFlag 按照【状态】进行过滤。 类型：String 必选：否<br /> 每次请求的Filters的上限为10，Filter.Values的上限为10。</li></ul>
+ * @method void setFilters(array $Filters) 设置<ul><li>taskId 按照【任务id】进行过滤。 类型：String 必选：否  </li><li>name 按照【任务名称】进行过滤。 类型：String 必选：否  </li><li>statusFlag 按照【状态】进行过滤。 类型：String 必选：否<br /> 每次请求的Filters的上限为10，Filter.Values的上限为10。</li></ul>
+ * @method integer getOffset() 获取<p>分页的偏移量，默认值为0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页的偏移量，默认值为0。</p>
+ * @method integer getLimit() 获取<p>分页单页限制数目，默认值为20，最大值100。</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页单页限制数目，默认值为20，最大值100。</p>
  */
 class DescribeSplunkDeliversRequest extends AbstractModel
 {
     /**
-     * @var string 日志主题Id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * @var string <p>日志主题Id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
      */
     public $TopicId;
 
     /**
-     * @var array - taskId 按照【任务id】进行过滤。 类型：String 必选：否  
-- name 按照【任务名称】进行过滤。 类型：String 必选：否  
-- statusFlag 按照【状态】进行过滤。 类型：String 必选：否  
- 每次请求的Filters的上限为10，Filter.Values的上限为10。
+     * @var array <ul><li>taskId 按照【任务id】进行过滤。 类型：String 必选：否  </li><li>name 按照【任务名称】进行过滤。 类型：String 必选：否  </li><li>statusFlag 按照【状态】进行过滤。 类型：String 必选：否<br /> 每次请求的Filters的上限为10，Filter.Values的上限为10。</li></ul>
      */
     public $Filters;
 
     /**
-     * @var integer 分页的偏移量，默认值为0。
+     * @var integer <p>分页的偏移量，默认值为0。</p>
      */
     public $Offset;
 
     /**
-     * @var integer 分页单页限制数目，默认值为20，最大值100。
+     * @var integer <p>分页单页限制数目，默认值为20，最大值100。</p>
      */
     public $Limit;
 
     /**
-     * @param string $TopicId 日志主题Id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-     * @param array $Filters - taskId 按照【任务id】进行过滤。 类型：String 必选：否  
-- name 按照【任务名称】进行过滤。 类型：String 必选：否  
-- statusFlag 按照【状态】进行过滤。 类型：String 必选：否  
- 每次请求的Filters的上限为10，Filter.Values的上限为10。
-     * @param integer $Offset 分页的偏移量，默认值为0。
-     * @param integer $Limit 分页单页限制数目，默认值为20，最大值100。
+     * @param string $TopicId <p>日志主题Id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
+     * @param array $Filters <ul><li>taskId 按照【任务id】进行过滤。 类型：String 必选：否  </li><li>name 按照【任务名称】进行过滤。 类型：String 必选：否  </li><li>statusFlag 按照【状态】进行过滤。 类型：String 必选：否<br /> 每次请求的Filters的上限为10，Filter.Values的上限为10。</li></ul>
+     * @param integer $Offset <p>分页的偏移量，默认值为0。</p>
+     * @param integer $Limit <p>分页单页限制数目，默认值为20，最大值100。</p>
      */
     function __construct()
     {

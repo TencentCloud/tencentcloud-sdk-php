@@ -20,30 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSplunkPreview请求参数结构体
  *
- * @method string getTopicId() 获取日志主题id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
- * @method void setTopicId(string $TopicId) 设置日志主题id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
- * @method MetadataInfo getMetadataInfo() 获取splunk投递任务-元信息
- * @method void setMetadataInfo(MetadataInfo $MetadataInfo) 设置splunk投递任务-元信息
+ * @method string getTopicId() 获取<p>日志主题id。- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
+ * @method void setTopicId(string $TopicId) 设置<p>日志主题id。- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
+ * @method MetadataInfo getMetadataInfo() 获取<p>splunk投递任务-元信息</p>
+ * @method void setMetadataInfo(MetadataInfo $MetadataInfo) 设置<p>splunk投递任务-元信息</p>
+ * @method string getDSLFilter() 获取<p>splunk投递任务-投递 splunk过滤原始日志语句</p>
+ * @method void setDSLFilter(string $DSLFilter) 设置<p>splunk投递任务-投递 splunk过滤原始日志语句</p>
  */
 class DescribeSplunkPreviewRequest extends AbstractModel
 {
     /**
-     * @var string 日志主题id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * @var string <p>日志主题id。- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
      */
     public $TopicId;
 
     /**
-     * @var MetadataInfo splunk投递任务-元信息
+     * @var MetadataInfo <p>splunk投递任务-元信息</p>
      */
     public $MetadataInfo;
 
     /**
-     * @param string $TopicId 日志主题id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-     * @param MetadataInfo $MetadataInfo splunk投递任务-元信息
+     * @var string <p>splunk投递任务-投递 splunk过滤原始日志语句</p>
+     */
+    public $DSLFilter;
+
+    /**
+     * @param string $TopicId <p>日志主题id。- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
+     * @param MetadataInfo $MetadataInfo <p>splunk投递任务-元信息</p>
+     * @param string $DSLFilter <p>splunk投递任务-投递 splunk过滤原始日志语句</p>
      */
     function __construct()
     {
@@ -65,6 +69,10 @@ class DescribeSplunkPreviewRequest extends AbstractModel
         if (array_key_exists("MetadataInfo",$param) and $param["MetadataInfo"] !== null) {
             $this->MetadataInfo = new MetadataInfo();
             $this->MetadataInfo->deserialize($param["MetadataInfo"]);
+        }
+
+        if (array_key_exists("DSLFilter",$param) and $param["DSLFilter"] !== null) {
+            $this->DSLFilter = $param["DSLFilter"];
         }
     }
 }

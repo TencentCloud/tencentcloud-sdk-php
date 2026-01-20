@@ -108,6 +108,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefaultMetaVersion(string $DefaultMetaVersion) 设置数据库版本：mysql8/tdsql8/mysql5
  * @method integer getNeedCdbAudit() 获取是否开通数据库审计
  * @method void setNeedCdbAudit(integer $NeedCdbAudit) 设置是否开通数据库审计
+ * @method string getSgIP() 获取安全指定来源ip
+ * @method void setSgIP(string $SgIP) 设置安全指定来源ip
  */
 class CreateClusterRequest extends AbstractModel
 {
@@ -256,6 +258,11 @@ class CreateClusterRequest extends AbstractModel
     public $NeedCdbAudit;
 
     /**
+     * @var string 安全指定来源ip
+     */
+    public $SgIP;
+
+    /**
      * @param string $ProductVersion EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：[产品版本名称](https://cloud.tencent.com/document/product/589/66338)
      * @param boolean $EnableSupportHAFlag 是否开启节点高可用。取值范围：
 <li>true：表示开启节点高可用。</li>
@@ -300,6 +307,7 @@ class CreateClusterRequest extends AbstractModel
      * @param string $LoadBalancerId clb id
      * @param string $DefaultMetaVersion 数据库版本：mysql8/tdsql8/mysql5
      * @param integer $NeedCdbAudit 是否开通数据库审计
+     * @param string $SgIP 安全指定来源ip
      */
     function __construct()
     {
@@ -441,6 +449,10 @@ class CreateClusterRequest extends AbstractModel
 
         if (array_key_exists("NeedCdbAudit",$param) and $param["NeedCdbAudit"] !== null) {
             $this->NeedCdbAudit = $param["NeedCdbAudit"];
+        }
+
+        if (array_key_exists("SgIP",$param) and $param["SgIP"] !== null) {
+            $this->SgIP = $param["SgIP"];
         }
     }
 }

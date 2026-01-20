@@ -20,138 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Splunk投递任务信息
  *
- * @method string getTaskId() 获取任务id
- * @method void setTaskId(string $TaskId) 设置任务id
- * @method string getName() 获取任务名称
- * @method void setName(string $Name) 设置任务名称
- * @method integer getUin() 获取用户id
- * @method void setUin(integer $Uin) 设置用户id
- * @method string getTopicId() 获取日志主题id
- * @method void setTopicId(string $TopicId) 设置日志主题id
- * @method integer getStatus() 获取任务状态；1.运行中；2:暂停；3：异常
- * @method void setStatus(integer $Status) 设置任务状态；1.运行中；2:暂停；3：异常
- * @method integer getEnable() 获取启用状态；0:禁用；1:启用
- * @method void setEnable(integer $Enable) 设置启用状态；0:禁用；1:启用
- * @method integer getCreateTime() 获取创建时间；单位：秒
- * @method void setCreateTime(integer $CreateTime) 设置创建时间；单位：秒
- * @method integer getUpdateTime() 获取更新时间；单位：秒
- * @method void setUpdateTime(integer $UpdateTime) 设置更新时间；单位：秒
- * @method NetInfo getNetInfo() 获取splunk投递任务-目标配置
- * @method void setNetInfo(NetInfo $NetInfo) 设置splunk投递任务-目标配置
- * @method MetadataInfo getMetadata() 获取splunk投递任务元信息
- * @method void setMetadata(MetadataInfo $Metadata) 设置splunk投递任务元信息
- * @method integer getHasServiceLog() 获取是否启用服务日志；1:关闭；2:开启
- * @method void setHasServiceLog(integer $HasServiceLog) 设置是否启用服务日志；1:关闭；2:开启
- * @method string getSource() 获取高级配置-数据来源；
- * @method void setSource(string $Source) 设置高级配置-数据来源；
- * @method string getSourceType() 获取高级配置-数据来源类型；
- * @method void setSourceType(string $SourceType) 设置高级配置-数据来源类型；
- * @method string getIndex() 获取高级配置-Splunk写入的索引
- * @method void setIndex(string $Index) 设置高级配置-Splunk写入的索引
- * @method integer getIndexAck() 获取高级配置-是否启用索引器；1-不开启；2-开启；
- * @method void setIndexAck(integer $IndexAck) 设置高级配置-是否启用索引器；1-不开启；2-开启；
- * @method string getChannel() 获取高级配置-通道
- * @method void setChannel(string $Channel) 设置高级配置-通道
+ * @method string getTaskId() 获取<p>任务id</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务id</p>
+ * @method string getName() 获取<p>任务名称</p>
+ * @method void setName(string $Name) 设置<p>任务名称</p>
+ * @method integer getUin() 获取<p>用户id</p>
+ * @method void setUin(integer $Uin) 设置<p>用户id</p>
+ * @method string getTopicId() 获取<p>日志主题id</p>
+ * @method void setTopicId(string $TopicId) 设置<p>日志主题id</p>
+ * @method integer getStatus() 获取<p>任务状态；1.运行中；2:暂停；3：异常</p>
+ * @method void setStatus(integer $Status) 设置<p>任务状态；1.运行中；2:暂停；3：异常</p>
+ * @method integer getEnable() 获取<p>启用状态；0:禁用；1:启用</p>
+ * @method void setEnable(integer $Enable) 设置<p>启用状态；0:禁用；1:启用</p>
+ * @method integer getCreateTime() 获取<p>创建时间；单位：秒</p>
+ * @method void setCreateTime(integer $CreateTime) 设置<p>创建时间；单位：秒</p>
+ * @method integer getUpdateTime() 获取<p>更新时间；单位：秒</p>
+ * @method void setUpdateTime(integer $UpdateTime) 设置<p>更新时间；单位：秒</p>
+ * @method NetInfo getNetInfo() 获取<p>splunk投递任务-目标配置</p>
+ * @method void setNetInfo(NetInfo $NetInfo) 设置<p>splunk投递任务-目标配置</p>
+ * @method MetadataInfo getMetadata() 获取<p>splunk投递任务元信息</p>
+ * @method void setMetadata(MetadataInfo $Metadata) 设置<p>splunk投递任务元信息</p>
+ * @method integer getHasServiceLog() 获取<p>是否启用服务日志；1:关闭；2:开启</p>
+ * @method void setHasServiceLog(integer $HasServiceLog) 设置<p>是否启用服务日志；1:关闭；2:开启</p>
+ * @method string getSource() 获取<p>高级配置-数据来源；</p>
+ * @method void setSource(string $Source) 设置<p>高级配置-数据来源；</p>
+ * @method string getSourceType() 获取<p>高级配置-数据来源类型；</p>
+ * @method void setSourceType(string $SourceType) 设置<p>高级配置-数据来源类型；</p>
+ * @method string getIndex() 获取<p>高级配置-Splunk写入的索引</p>
+ * @method void setIndex(string $Index) 设置<p>高级配置-Splunk写入的索引</p>
+ * @method integer getIndexAck() 获取<p>高级配置-是否启用索引器；1-不开启；2-开启；</p>
+ * @method void setIndexAck(integer $IndexAck) 设置<p>高级配置-是否启用索引器；1-不开启；2-开启；</p>
+ * @method string getChannel() 获取<p>高级配置-通道</p>
+ * @method void setChannel(string $Channel) 设置<p>高级配置-通道</p>
+ * @method string getDSLFilter() 获取<p>预过滤处理-对写入 Splunk 原始数据进行预过滤处理语句</p>
+ * @method void setDSLFilter(string $DSLFilter) 设置<p>预过滤处理-对写入 Splunk 原始数据进行预过滤处理语句</p>
  */
 class SplunkDeliverInfo extends AbstractModel
 {
     /**
-     * @var string 任务id
+     * @var string <p>任务id</p>
      */
     public $TaskId;
 
     /**
-     * @var string 任务名称
+     * @var string <p>任务名称</p>
      */
     public $Name;
 
     /**
-     * @var integer 用户id
+     * @var integer <p>用户id</p>
      */
     public $Uin;
 
     /**
-     * @var string 日志主题id
+     * @var string <p>日志主题id</p>
      */
     public $TopicId;
 
     /**
-     * @var integer 任务状态；1.运行中；2:暂停；3：异常
+     * @var integer <p>任务状态；1.运行中；2:暂停；3：异常</p>
      */
     public $Status;
 
     /**
-     * @var integer 启用状态；0:禁用；1:启用
+     * @var integer <p>启用状态；0:禁用；1:启用</p>
      */
     public $Enable;
 
     /**
-     * @var integer 创建时间；单位：秒
+     * @var integer <p>创建时间；单位：秒</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer 更新时间；单位：秒
+     * @var integer <p>更新时间；单位：秒</p>
      */
     public $UpdateTime;
 
     /**
-     * @var NetInfo splunk投递任务-目标配置
+     * @var NetInfo <p>splunk投递任务-目标配置</p>
      */
     public $NetInfo;
 
     /**
-     * @var MetadataInfo splunk投递任务元信息
+     * @var MetadataInfo <p>splunk投递任务元信息</p>
      */
     public $Metadata;
 
     /**
-     * @var integer 是否启用服务日志；1:关闭；2:开启
+     * @var integer <p>是否启用服务日志；1:关闭；2:开启</p>
      */
     public $HasServiceLog;
 
     /**
-     * @var string 高级配置-数据来源；
+     * @var string <p>高级配置-数据来源；</p>
      */
     public $Source;
 
     /**
-     * @var string 高级配置-数据来源类型；
+     * @var string <p>高级配置-数据来源类型；</p>
      */
     public $SourceType;
 
     /**
-     * @var string 高级配置-Splunk写入的索引
+     * @var string <p>高级配置-Splunk写入的索引</p>
      */
     public $Index;
 
     /**
-     * @var integer 高级配置-是否启用索引器；1-不开启；2-开启；
+     * @var integer <p>高级配置-是否启用索引器；1-不开启；2-开启；</p>
      */
     public $IndexAck;
 
     /**
-     * @var string 高级配置-通道
+     * @var string <p>高级配置-通道</p>
      */
     public $Channel;
 
     /**
-     * @param string $TaskId 任务id
-     * @param string $Name 任务名称
-     * @param integer $Uin 用户id
-     * @param string $TopicId 日志主题id
-     * @param integer $Status 任务状态；1.运行中；2:暂停；3：异常
-     * @param integer $Enable 启用状态；0:禁用；1:启用
-     * @param integer $CreateTime 创建时间；单位：秒
-     * @param integer $UpdateTime 更新时间；单位：秒
-     * @param NetInfo $NetInfo splunk投递任务-目标配置
-     * @param MetadataInfo $Metadata splunk投递任务元信息
-     * @param integer $HasServiceLog 是否启用服务日志；1:关闭；2:开启
-     * @param string $Source 高级配置-数据来源；
-     * @param string $SourceType 高级配置-数据来源类型；
-     * @param string $Index 高级配置-Splunk写入的索引
-     * @param integer $IndexAck 高级配置-是否启用索引器；1-不开启；2-开启；
-     * @param string $Channel 高级配置-通道
+     * @var string <p>预过滤处理-对写入 Splunk 原始数据进行预过滤处理语句</p>
+     */
+    public $DSLFilter;
+
+    /**
+     * @param string $TaskId <p>任务id</p>
+     * @param string $Name <p>任务名称</p>
+     * @param integer $Uin <p>用户id</p>
+     * @param string $TopicId <p>日志主题id</p>
+     * @param integer $Status <p>任务状态；1.运行中；2:暂停；3：异常</p>
+     * @param integer $Enable <p>启用状态；0:禁用；1:启用</p>
+     * @param integer $CreateTime <p>创建时间；单位：秒</p>
+     * @param integer $UpdateTime <p>更新时间；单位：秒</p>
+     * @param NetInfo $NetInfo <p>splunk投递任务-目标配置</p>
+     * @param MetadataInfo $Metadata <p>splunk投递任务元信息</p>
+     * @param integer $HasServiceLog <p>是否启用服务日志；1:关闭；2:开启</p>
+     * @param string $Source <p>高级配置-数据来源；</p>
+     * @param string $SourceType <p>高级配置-数据来源类型；</p>
+     * @param string $Index <p>高级配置-Splunk写入的索引</p>
+     * @param integer $IndexAck <p>高级配置-是否启用索引器；1-不开启；2-开启；</p>
+     * @param string $Channel <p>高级配置-通道</p>
+     * @param string $DSLFilter <p>预过滤处理-对写入 Splunk 原始数据进行预过滤处理语句</p>
      */
     function __construct()
     {
@@ -230,6 +238,10 @@ class SplunkDeliverInfo extends AbstractModel
 
         if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
             $this->Channel = $param["Channel"];
+        }
+
+        if (array_key_exists("DSLFilter",$param) and $param["DSLFilter"] !== null) {
+            $this->DSLFilter = $param["DSLFilter"];
         }
     }
 }

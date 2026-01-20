@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSplunkDelivers返回参数结构体
  *
- * @method array getInfos() 获取Splunk投递任务信息列表
- * @method void setInfos(array $Infos) 设置Splunk投递任务信息列表
- * @method integer getTotal() 获取符合条件的任务总数。
- * @method void setTotal(integer $Total) 设置符合条件的任务总数。
+ * @method array getInfos() 获取<p>Splunk投递任务信息列表</p>
+ * @method void setInfos(array $Infos) 设置<p>Splunk投递任务信息列表</p>
+ * @method integer getTotal() 获取<p>符合条件的任务总数。</p>
+ * @method void setTotal(integer $Total) 设置<p>符合条件的任务总数。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSplunkDeliversResponse extends AbstractModel
 {
     /**
-     * @var array Splunk投递任务信息列表
+     * @var array <p>Splunk投递任务信息列表</p>
      */
     public $Infos;
 
     /**
-     * @var integer 符合条件的任务总数。
+     * @var integer <p>符合条件的任务总数。</p>
      */
     public $Total;
 
@@ -45,8 +45,8 @@ class DescribeSplunkDeliversResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Infos Splunk投递任务信息列表
-     * @param integer $Total 符合条件的任务总数。
+     * @param array $Infos <p>Splunk投递任务信息列表</p>
+     * @param integer $Total <p>符合条件的任务总数。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

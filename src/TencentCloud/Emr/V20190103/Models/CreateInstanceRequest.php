@@ -172,6 +172,8 @@ Hadoop-Hbase
  * @method void setDefaultMetaVersion(string $DefaultMetaVersion) 设置数据库类型：mysql8/tdsql8
  * @method integer getNeedCdbAudit() 获取是否开通审计：0:不开通,1:开通
  * @method void setNeedCdbAudit(integer $NeedCdbAudit) 设置是否开通审计：0:不开通,1:开通
+ * @method string getSgIP() 获取安全组指定来源ip
+ * @method void setSgIP(string $SgIP) 设置安全组指定来源ip
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -400,6 +402,11 @@ Hadoop-Hbase
     public $NeedCdbAudit;
 
     /**
+     * @var string 安全组指定来源ip
+     */
+    public $SgIP;
+
+    /**
      * @param integer $ProductId 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
 51:表示STARROCKS-V1.4.0
 54:表示STARROCKS-V2.0.0
@@ -476,6 +483,7 @@ Hadoop-Hbase
      * @param string $LoadBalancerId CLB id
      * @param string $DefaultMetaVersion 数据库类型：mysql8/tdsql8
      * @param integer $NeedCdbAudit 是否开通审计：0:不开通,1:开通
+     * @param string $SgIP 安全组指定来源ip
      */
     function __construct()
     {
@@ -667,6 +675,10 @@ Hadoop-Hbase
 
         if (array_key_exists("NeedCdbAudit",$param) and $param["NeedCdbAudit"] !== null) {
             $this->NeedCdbAudit = $param["NeedCdbAudit"];
+        }
+
+        if (array_key_exists("SgIP",$param) and $param["SgIP"] !== null) {
+            $this->SgIP = $param["SgIP"];
         }
     }
 }

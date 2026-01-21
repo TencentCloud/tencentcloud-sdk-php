@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPid(integer $Pid) 设置计费ID
  * @method string getInstanceId() 获取独享集群实例Id
  * @method void setInstanceId(string $InstanceId) 设置独享集群实例Id
+ * @method array getZones() 获取可用区列表
+ * @method void setZones(array $Zones) 设置可用区列表
  */
 class HostDetail extends AbstractModel
 {
@@ -192,6 +194,11 @@ class HostDetail extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var array 可用区列表
+     */
+    public $Zones;
+
+    /**
      * @param string $HostId 主机Id
      * @param string $HostName 主机名称
      * @param string $Zone 可用区
@@ -216,6 +223,7 @@ class HostDetail extends AbstractModel
      * @param string $PidTag 计费标签
      * @param integer $Pid 计费ID
      * @param string $InstanceId 独享集群实例Id
+     * @param array $Zones 可用区列表
      */
     function __construct()
     {
@@ -324,6 +332,10 @@ class HostDetail extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
+            $this->Zones = $param["Zones"];
         }
     }
 }

@@ -152,6 +152,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\GetAttackHistogramResponse GetAttackHistogram(Models\GetAttackHistogramRequest $req) 生成攻击日志的产生时间柱状图
  * @method Models\GetAttackTotalCountResponse GetAttackTotalCount(Models\GetAttackTotalCountRequest $req) 按照条件查询展示攻击总次数
  * @method Models\GetInstanceQpsLimitResponse GetInstanceQpsLimit(Models\GetInstanceQpsLimitRequest $req) 获取套餐实例的弹性qps上限
+ * @method Models\GetOrganizationRoleResponse GetOrganizationRole(Models\GetOrganizationRoleRequest $req) 获取集团账号角色
  * @method Models\ImportIpAccessControlResponse ImportIpAccessControl(Models\ImportIpAccessControlRequest $req) 导入IP黑白名单
  * @method Models\ModifyAntiFakeUrlResponse ModifyAntiFakeUrl(Models\ModifyAntiFakeUrlRequest $req) 编辑防篡改url
  * @method Models\ModifyAntiFakeUrlStatusResponse ModifyAntiFakeUrlStatus(Models\ModifyAntiFakeUrlStatusRequest $req) 切换防篡改开关

@@ -20,78 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeParamTemplates请求参数结构体
  *
- * @method array getProductTypes() 获取产品类型数组。
-- 2：Redis 2.8 内存版（标准架构）。
-- 3：CKV 3.2 内存版（标准架构）。
-- 4：CKV 3.2 内存版（集群架构）。
-- 6：Redis 4.0 内存版（标准架构）。
-- 7：Redis 4.0 内存版（集群架构）。
-- 8：Redis 5.0 内存版（标准架构）。
-- 9：Redis 5.0 内存版（集群架构）。
-- 15：Redis 6.2 内存版（标准架构）。
-- 16：Redis 6.2 内存版（集群架构）。
-- 17：Redis 7.0 内存版（标准架构）。
-- 18：Redis 7.0 内存版（集群架构）。
- * @method void setProductTypes(array $ProductTypes) 设置产品类型数组。
-- 2：Redis 2.8 内存版（标准架构）。
-- 3：CKV 3.2 内存版（标准架构）。
-- 4：CKV 3.2 内存版（集群架构）。
-- 6：Redis 4.0 内存版（标准架构）。
-- 7：Redis 4.0 内存版（集群架构）。
-- 8：Redis 5.0 内存版（标准架构）。
-- 9：Redis 5.0 内存版（集群架构）。
-- 15：Redis 6.2 内存版（标准架构）。
-- 16：Redis 6.2 内存版（集群架构）。
-- 17：Redis 7.0 内存版（标准架构）。
-- 18：Redis 7.0 内存版（集群架构）。
- * @method array getTemplateNames() 获取模板名称数组。数组最大长度限制为50
- * @method void setTemplateNames(array $TemplateNames) 设置模板名称数组。数组最大长度限制为50
- * @method array getTemplateIds() 获取模板ID数组。数组最大长度限制为50
- * @method void setTemplateIds(array $TemplateIds) 设置模板ID数组。数组最大长度限制为50
+ * @method array getProductTypes() 获取<p>指定查询的产品版本与架构。</p><ul><li>6：Redis 4.0 标准架构。</li><li>7：Redis 4.0 集群架构。</li><li>8：Redis 5.0 标准架构。</li><li>9：Redis 5.0 集群架构。</li><li>15：Redis 6.2 标准架构。</li><li>16：Redis 6.2 集群架构。</li><li>17：Redis 7.0 标准架构。</li><li>18：Redis 7.0 集群架构。</li><li>19：ValKey 8.0 标准架构。</li><li>20：ValKey 8.0 集群架构。</li></ul>
+ * @method void setProductTypes(array $ProductTypes) 设置<p>指定查询的产品版本与架构。</p><ul><li>6：Redis 4.0 标准架构。</li><li>7：Redis 4.0 集群架构。</li><li>8：Redis 5.0 标准架构。</li><li>9：Redis 5.0 集群架构。</li><li>15：Redis 6.2 标准架构。</li><li>16：Redis 6.2 集群架构。</li><li>17：Redis 7.0 标准架构。</li><li>18：Redis 7.0 集群架构。</li><li>19：ValKey 8.0 标准架构。</li><li>20：ValKey 8.0 集群架构。</li></ul>
+ * @method array getTemplateNames() 获取<p>指定查询的参数模板名称。</p><ul><li>数据类型：字符串数组，最大长度限制为50。</li><li>获取方式：请通过 <a href="https://console.cloud.tencent.com/redis/templates">Redis 控制台的参数模版</a> 页面复制自定义模板或系统默认模板的模板名称。</li></ul>
+ * @method void setTemplateNames(array $TemplateNames) 设置<p>指定查询的参数模板名称。</p><ul><li>数据类型：字符串数组，最大长度限制为50。</li><li>获取方式：请通过 <a href="https://console.cloud.tencent.com/redis/templates">Redis 控制台的参数模版</a> 页面复制自定义模板或系统默认模板的模板名称。</li></ul>
+ * @method array getTemplateIds() 获取<p>指定查询的参数模板 ID。</p><ul><li>数据类型：字符串数组，最大长度限制为50。</li><li>获取方式：请通过 <a href="https://console.cloud.tencent.com/redis/templates">Redis 控制台的参数模版</a> 页面复制自定义模板或系统默认模板的模板 ID。</li></ul>
+ * @method void setTemplateIds(array $TemplateIds) 设置<p>指定查询的参数模板 ID。</p><ul><li>数据类型：字符串数组，最大长度限制为50。</li><li>获取方式：请通过 <a href="https://console.cloud.tencent.com/redis/templates">Redis 控制台的参数模版</a> 页面复制自定义模板或系统默认模板的模板 ID。</li></ul>
+ * @method integer getLimit() 获取<p>指定查询结果的分页大小，即每页返回的记录数量。</p><ul><li>取值范围：0～200。</li><li>默认值：200。</li></ul>
+ * @method void setLimit(integer $Limit) 设置<p>指定查询结果的分页大小，即每页返回的记录数量。</p><ul><li>取值范围：0～200。</li><li>默认值：200。</li></ul>
+ * @method integer getOffset() 获取<p>分页偏移量，用于指定查询结果的起始位置。</p><ul><li>取值：必须为 Limit 的整数倍，默认值为 0。</li><li>计算公式：offset=limit*(页码-1)。</li></ul>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移量，用于指定查询结果的起始位置。</p><ul><li>取值：必须为 Limit 的整数倍，默认值为 0。</li><li>计算公式：offset=limit*(页码-1)。</li></ul>
  */
 class DescribeParamTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array 产品类型数组。
-- 2：Redis 2.8 内存版（标准架构）。
-- 3：CKV 3.2 内存版（标准架构）。
-- 4：CKV 3.2 内存版（集群架构）。
-- 6：Redis 4.0 内存版（标准架构）。
-- 7：Redis 4.0 内存版（集群架构）。
-- 8：Redis 5.0 内存版（标准架构）。
-- 9：Redis 5.0 内存版（集群架构）。
-- 15：Redis 6.2 内存版（标准架构）。
-- 16：Redis 6.2 内存版（集群架构）。
-- 17：Redis 7.0 内存版（标准架构）。
-- 18：Redis 7.0 内存版（集群架构）。
+     * @var array <p>指定查询的产品版本与架构。</p><ul><li>6：Redis 4.0 标准架构。</li><li>7：Redis 4.0 集群架构。</li><li>8：Redis 5.0 标准架构。</li><li>9：Redis 5.0 集群架构。</li><li>15：Redis 6.2 标准架构。</li><li>16：Redis 6.2 集群架构。</li><li>17：Redis 7.0 标准架构。</li><li>18：Redis 7.0 集群架构。</li><li>19：ValKey 8.0 标准架构。</li><li>20：ValKey 8.0 集群架构。</li></ul>
      */
     public $ProductTypes;
 
     /**
-     * @var array 模板名称数组。数组最大长度限制为50
+     * @var array <p>指定查询的参数模板名称。</p><ul><li>数据类型：字符串数组，最大长度限制为50。</li><li>获取方式：请通过 <a href="https://console.cloud.tencent.com/redis/templates">Redis 控制台的参数模版</a> 页面复制自定义模板或系统默认模板的模板名称。</li></ul>
      */
     public $TemplateNames;
 
     /**
-     * @var array 模板ID数组。数组最大长度限制为50
+     * @var array <p>指定查询的参数模板 ID。</p><ul><li>数据类型：字符串数组，最大长度限制为50。</li><li>获取方式：请通过 <a href="https://console.cloud.tencent.com/redis/templates">Redis 控制台的参数模版</a> 页面复制自定义模板或系统默认模板的模板 ID。</li></ul>
      */
     public $TemplateIds;
 
     /**
-     * @param array $ProductTypes 产品类型数组。
-- 2：Redis 2.8 内存版（标准架构）。
-- 3：CKV 3.2 内存版（标准架构）。
-- 4：CKV 3.2 内存版（集群架构）。
-- 6：Redis 4.0 内存版（标准架构）。
-- 7：Redis 4.0 内存版（集群架构）。
-- 8：Redis 5.0 内存版（标准架构）。
-- 9：Redis 5.0 内存版（集群架构）。
-- 15：Redis 6.2 内存版（标准架构）。
-- 16：Redis 6.2 内存版（集群架构）。
-- 17：Redis 7.0 内存版（标准架构）。
-- 18：Redis 7.0 内存版（集群架构）。
-     * @param array $TemplateNames 模板名称数组。数组最大长度限制为50
-     * @param array $TemplateIds 模板ID数组。数组最大长度限制为50
+     * @var integer <p>指定查询结果的分页大小，即每页返回的记录数量。</p><ul><li>取值范围：0～200。</li><li>默认值：200。</li></ul>
+     */
+    public $Limit;
+
+    /**
+     * @var integer <p>分页偏移量，用于指定查询结果的起始位置。</p><ul><li>取值：必须为 Limit 的整数倍，默认值为 0。</li><li>计算公式：offset=limit*(页码-1)。</li></ul>
+     */
+    public $Offset;
+
+    /**
+     * @param array $ProductTypes <p>指定查询的产品版本与架构。</p><ul><li>6：Redis 4.0 标准架构。</li><li>7：Redis 4.0 集群架构。</li><li>8：Redis 5.0 标准架构。</li><li>9：Redis 5.0 集群架构。</li><li>15：Redis 6.2 标准架构。</li><li>16：Redis 6.2 集群架构。</li><li>17：Redis 7.0 标准架构。</li><li>18：Redis 7.0 集群架构。</li><li>19：ValKey 8.0 标准架构。</li><li>20：ValKey 8.0 集群架构。</li></ul>
+     * @param array $TemplateNames <p>指定查询的参数模板名称。</p><ul><li>数据类型：字符串数组，最大长度限制为50。</li><li>获取方式：请通过 <a href="https://console.cloud.tencent.com/redis/templates">Redis 控制台的参数模版</a> 页面复制自定义模板或系统默认模板的模板名称。</li></ul>
+     * @param array $TemplateIds <p>指定查询的参数模板 ID。</p><ul><li>数据类型：字符串数组，最大长度限制为50。</li><li>获取方式：请通过 <a href="https://console.cloud.tencent.com/redis/templates">Redis 控制台的参数模版</a> 页面复制自定义模板或系统默认模板的模板 ID。</li></ul>
+     * @param integer $Limit <p>指定查询结果的分页大小，即每页返回的记录数量。</p><ul><li>取值范围：0～200。</li><li>默认值：200。</li></ul>
+     * @param integer $Offset <p>分页偏移量，用于指定查询结果的起始位置。</p><ul><li>取值：必须为 Limit 的整数倍，默认值为 0。</li><li>计算公式：offset=limit*(页码-1)。</li></ul>
      */
     function __construct()
     {
@@ -116,6 +88,14 @@ class DescribeParamTemplatesRequest extends AbstractModel
 
         if (array_key_exists("TemplateIds",$param) and $param["TemplateIds"] !== null) {
             $this->TemplateIds = $param["TemplateIds"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

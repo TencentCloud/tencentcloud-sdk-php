@@ -52,6 +52,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getHostServerSerialNumber() 获取机箱 ID
  * @method void setHostServerSerialNumber(string $HostServerSerialNumber) 设置机箱 ID
+ * @method string getServiceStatus() 获取服务状态。
+IDLE：未连接
+ESTABLISHED：连接中
+ * @method void setServiceStatus(string $ServiceStatus) 设置服务状态。
+IDLE：未连接
+ESTABLISHED：连接中
  */
 class AndroidInstance extends AbstractModel
 {
@@ -136,6 +142,13 @@ class AndroidInstance extends AbstractModel
     public $HostServerSerialNumber;
 
     /**
+     * @var string 服务状态。
+IDLE：未连接
+ESTABLISHED：连接中
+     */
+    public $ServiceStatus;
+
+    /**
      * @param string $AndroidInstanceId 实例 ID
      * @param string $AndroidInstanceRegion 实例所在区域
      * @param string $AndroidInstanceZone 实例可用区
@@ -152,6 +165,9 @@ class AndroidInstance extends AbstractModel
      * @param string $PrivateIP 内网 IP
      * @param string $CreateTime 创建时间
      * @param string $HostServerSerialNumber 机箱 ID
+     * @param string $ServiceStatus 服务状态。
+IDLE：未连接
+ESTABLISHED：连接中
      */
     function __construct()
     {
@@ -233,6 +249,10 @@ class AndroidInstance extends AbstractModel
 
         if (array_key_exists("HostServerSerialNumber",$param) and $param["HostServerSerialNumber"] !== null) {
             $this->HostServerSerialNumber = $param["HostServerSerialNumber"];
+        }
+
+        if (array_key_exists("ServiceStatus",$param) and $param["ServiceStatus"] !== null) {
+            $this->ServiceStatus = $param["ServiceStatus"];
         }
     }
 }

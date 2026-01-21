@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置子网ID
  * @method array getTags() 获取腾讯云标签
  * @method void setTags(array $Tags) 设置腾讯云标签
+ * @method SuperNodeResource getQuota() 获取按量配额
+ * @method void setQuota(SuperNodeResource $Quota) 设置按量配额
  */
 class VirtualNodeSpec extends AbstractModel
 {
@@ -45,9 +47,15 @@ class VirtualNodeSpec extends AbstractModel
     public $Tags;
 
     /**
+     * @var SuperNodeResource 按量配额
+     */
+    public $Quota;
+
+    /**
      * @param string $DisplayName 节点展示名称，建议不超过20个字符
      * @param string $SubnetId 子网ID
      * @param array $Tags 腾讯云标签
+     * @param SuperNodeResource $Quota 按量配额
      */
     function __construct()
     {
@@ -77,6 +85,11 @@ class VirtualNodeSpec extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("Quota",$param) and $param["Quota"] !== null) {
+            $this->Quota = new SuperNodeResource();
+            $this->Quota->deserialize($param["Quota"]);
         }
     }
 }

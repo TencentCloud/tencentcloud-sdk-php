@@ -20,178 +20,162 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCluster请求参数结构体
  *
- * @method Placement getPlacement() 获取集群中实例所在的位置。
- * @method void setPlacement(Placement $Placement) 设置集群中实例所在的位置。
- * @method ManagerNode getManagerNode() 获取指定管理节点。
- * @method void setManagerNode(ManagerNode $ManagerNode) 设置指定管理节点。
- * @method integer getManagerNodeCount() 获取指定管理节点的数量。默认取值：1。取值范围：1～2。
- * @method void setManagerNodeCount(integer $ManagerNodeCount) 设置指定管理节点的数量。默认取值：1。取值范围：1～2。
- * @method ComputeNode getComputeNode() 获取指定计算节点。
- * @method void setComputeNode(ComputeNode $ComputeNode) 设置指定计算节点。
- * @method integer getComputeNodeCount() 获取指定计算节点的数量。默认取值：0。
- * @method void setComputeNodeCount(integer $ComputeNodeCount) 设置指定计算节点的数量。默认取值：0。
- * @method string getSchedulerType() 获取调度器类型。默认取值：SLURM。<br><li>SLURM：SLURM调度器。</li>
- * @method void setSchedulerType(string $SchedulerType) 设置调度器类型。默认取值：SLURM。<br><li>SLURM：SLURM调度器。</li>
- * @method string getImageId() 获取指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。
- * @method void setImageId(string $ImageId) 设置指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。
- * @method VirtualPrivateCloud getVirtualPrivateCloud() 获取私有网络相关信息配置。
- * @method void setVirtualPrivateCloud(VirtualPrivateCloud $VirtualPrivateCloud) 设置私有网络相关信息配置。
- * @method LoginSettings getLoginSettings() 获取集群登录设置。
- * @method void setLoginSettings(LoginSettings $LoginSettings) 设置集群登录设置。
- * @method array getSecurityGroupIds() 获取集群中实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置集群中实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
- * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
- * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
- * @method boolean getDryRun() 获取是否只预检此次请求。
-true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。
-如果检查不通过，则返回对应错误码；
-如果检查通过，则返回RequestId.
-false（默认）：发送正常请求，通过检查后直接创建实例
- * @method void setDryRun(boolean $DryRun) 设置是否只预检此次请求。
-true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。
-如果检查不通过，则返回对应错误码；
-如果检查通过，则返回RequestId.
-false（默认）：发送正常请求，通过检查后直接创建实例
- * @method string getAccountType() 获取域名字服务类型。默认取值：NIS。<li>NIS：NIS域名字服务。</li>
- * @method void setAccountType(string $AccountType) 设置域名字服务类型。默认取值：NIS。<li>NIS：NIS域名字服务。</li>
- * @method string getClusterName() 获取集群显示名称。
- * @method void setClusterName(string $ClusterName) 设置集群显示名称。
- * @method StorageOption getStorageOption() 获取集群存储选项
- * @method void setStorageOption(StorageOption $StorageOption) 设置集群存储选项
- * @method LoginNode getLoginNode() 获取指定登录节点。
- * @method void setLoginNode(LoginNode $LoginNode) 设置指定登录节点。
- * @method integer getLoginNodeCount() 获取指定登录节点的数量。默认取值：0。取值范围：0～10。
- * @method void setLoginNodeCount(integer $LoginNodeCount) 设置指定登录节点的数量。默认取值：0。取值范围：0～10。
- * @method array getTags() 获取创建集群时同时绑定的标签对说明。
- * @method void setTags(array $Tags) 设置创建集群时同时绑定的标签对说明。
- * @method string getAutoScalingType() 获取弹性伸缩类型。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li><br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li>
- * @method void setAutoScalingType(string $AutoScalingType) 设置弹性伸缩类型。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li><br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li>
+ * @method Placement getPlacement() 获取<p>集群中实例所在的位置。</p>
+ * @method void setPlacement(Placement $Placement) 设置<p>集群中实例所在的位置。</p>
+ * @method ManagerNode getManagerNode() 获取<p>指定管理节点。</p>
+ * @method void setManagerNode(ManagerNode $ManagerNode) 设置<p>指定管理节点。</p>
+ * @method integer getManagerNodeCount() 获取<p>指定管理节点的数量。默认取值：1。取值范围：1～2。</p>
+ * @method void setManagerNodeCount(integer $ManagerNodeCount) 设置<p>指定管理节点的数量。默认取值：1。取值范围：1～2。</p>
+ * @method ComputeNode getComputeNode() 获取<p>指定计算节点。</p>
+ * @method void setComputeNode(ComputeNode $ComputeNode) 设置<p>指定计算节点。</p>
+ * @method integer getComputeNodeCount() 获取<p>指定计算节点的数量。默认取值：0。</p>
+ * @method void setComputeNodeCount(integer $ComputeNodeCount) 设置<p>指定计算节点的数量。默认取值：0。</p>
+ * @method string getSchedulerType() 获取<p>调度器类型。默认取值：SLURM。<br><li>SLURM：SLURM调度器。</li></p>
+ * @method void setSchedulerType(string $SchedulerType) 设置<p>调度器类型。默认取值：SLURM。<br><li>SLURM：SLURM调度器。</li></p>
+ * @method string getImageId() 获取<p>指定有效的<a href="https://cloud.tencent.com/document/product/213/4940">镜像</a>ID，格式形如<code>img-xxx</code>。目前支持部分公有镜像和自定义镜像。</p>
+ * @method void setImageId(string $ImageId) 设置<p>指定有效的<a href="https://cloud.tencent.com/document/product/213/4940">镜像</a>ID，格式形如<code>img-xxx</code>。目前支持部分公有镜像和自定义镜像。</p>
+ * @method VirtualPrivateCloud getVirtualPrivateCloud() 获取<p>私有网络相关信息配置。</p>
+ * @method void setVirtualPrivateCloud(VirtualPrivateCloud $VirtualPrivateCloud) 设置<p>私有网络相关信息配置。</p>
+ * @method LoginSettings getLoginSettings() 获取<p>集群登录设置。</p>
+ * @method void setLoginSettings(LoginSettings $LoginSettings) 设置<p>集群登录设置。</p>
+ * @method array getSecurityGroupIds() 获取<p>集群中实例所属安全组。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。</p>
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置<p>集群中实例所属安全组。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。</p>
+ * @method string getClientToken() 获取<p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。</p>
+ * @method void setClientToken(string $ClientToken) 设置<p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。</p>
+ * @method boolean getDryRun() 获取<p>是否只预检此次请求。<br>true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。<br>如果检查不通过，则返回对应错误码；<br>如果检查通过，则返回RequestId.<br>false（默认）：发送正常请求，通过检查后直接创建实例</p>
+ * @method void setDryRun(boolean $DryRun) 设置<p>是否只预检此次请求。<br>true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。<br>如果检查不通过，则返回对应错误码；<br>如果检查通过，则返回RequestId.<br>false（默认）：发送正常请求，通过检查后直接创建实例</p>
+ * @method string getAccountType() 获取<p>域名字服务类型。默认取值：NIS。<li>NIS：NIS域名字服务。</li></p>
+ * @method void setAccountType(string $AccountType) 设置<p>域名字服务类型。默认取值：NIS。<li>NIS：NIS域名字服务。</li></p>
+ * @method string getClusterName() 获取<p>集群显示名称。</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群显示名称。</p>
+ * @method StorageOption getStorageOption() 获取<p>集群存储选项</p>
+ * @method void setStorageOption(StorageOption $StorageOption) 设置<p>集群存储选项</p>
+ * @method LoginNode getLoginNode() 获取<p>指定登录节点。</p>
+ * @method void setLoginNode(LoginNode $LoginNode) 设置<p>指定登录节点。</p>
+ * @method integer getLoginNodeCount() 获取<p>指定登录节点的数量。默认取值：0。取值范围：0～10。</p>
+ * @method void setLoginNodeCount(integer $LoginNodeCount) 设置<p>指定登录节点的数量。默认取值：0。取值范围：0～10。</p>
+ * @method array getTags() 获取<p>创建集群时同时绑定的标签对说明。</p>
+ * @method void setTags(array $Tags) 设置<p>创建集群时同时绑定的标签对说明。</p>
+ * @method string getAutoScalingType() 获取<p>弹性伸缩类型。<br><li>AS：集群自动扩缩容由<a href="https://cloud.tencent.com/document/product/377/3154">弹性伸缩</a>产品实现。</li><br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li></p>
+ * @method void setAutoScalingType(string $AutoScalingType) 设置<p>弹性伸缩类型。<br><li>AS：集群自动扩缩容由<a href="https://cloud.tencent.com/document/product/377/3154">弹性伸缩</a>产品实现。</li><br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li></p>
  */
 class CreateClusterRequest extends AbstractModel
 {
     /**
-     * @var Placement 集群中实例所在的位置。
+     * @var Placement <p>集群中实例所在的位置。</p>
      */
     public $Placement;
 
     /**
-     * @var ManagerNode 指定管理节点。
+     * @var ManagerNode <p>指定管理节点。</p>
      */
     public $ManagerNode;
 
     /**
-     * @var integer 指定管理节点的数量。默认取值：1。取值范围：1～2。
+     * @var integer <p>指定管理节点的数量。默认取值：1。取值范围：1～2。</p>
      */
     public $ManagerNodeCount;
 
     /**
-     * @var ComputeNode 指定计算节点。
+     * @var ComputeNode <p>指定计算节点。</p>
      */
     public $ComputeNode;
 
     /**
-     * @var integer 指定计算节点的数量。默认取值：0。
+     * @var integer <p>指定计算节点的数量。默认取值：0。</p>
      */
     public $ComputeNodeCount;
 
     /**
-     * @var string 调度器类型。默认取值：SLURM。<br><li>SLURM：SLURM调度器。</li>
+     * @var string <p>调度器类型。默认取值：SLURM。<br><li>SLURM：SLURM调度器。</li></p>
      */
     public $SchedulerType;
 
     /**
-     * @var string 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。
+     * @var string <p>指定有效的<a href="https://cloud.tencent.com/document/product/213/4940">镜像</a>ID，格式形如<code>img-xxx</code>。目前支持部分公有镜像和自定义镜像。</p>
      */
     public $ImageId;
 
     /**
-     * @var VirtualPrivateCloud 私有网络相关信息配置。
+     * @var VirtualPrivateCloud <p>私有网络相关信息配置。</p>
      */
     public $VirtualPrivateCloud;
 
     /**
-     * @var LoginSettings 集群登录设置。
+     * @var LoginSettings <p>集群登录设置。</p>
      */
     public $LoginSettings;
 
     /**
-     * @var array 集群中实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+     * @var array <p>集群中实例所属安全组。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。</p>
      */
     public $SecurityGroupIds;
 
     /**
-     * @var string 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     * @var string <p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。</p>
      */
     public $ClientToken;
 
     /**
-     * @var boolean 是否只预检此次请求。
-true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。
-如果检查不通过，则返回对应错误码；
-如果检查通过，则返回RequestId.
-false（默认）：发送正常请求，通过检查后直接创建实例
+     * @var boolean <p>是否只预检此次请求。<br>true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。<br>如果检查不通过，则返回对应错误码；<br>如果检查通过，则返回RequestId.<br>false（默认）：发送正常请求，通过检查后直接创建实例</p>
      */
     public $DryRun;
 
     /**
-     * @var string 域名字服务类型。默认取值：NIS。<li>NIS：NIS域名字服务。</li>
+     * @var string <p>域名字服务类型。默认取值：NIS。<li>NIS：NIS域名字服务。</li></p>
      */
     public $AccountType;
 
     /**
-     * @var string 集群显示名称。
+     * @var string <p>集群显示名称。</p>
      */
     public $ClusterName;
 
     /**
-     * @var StorageOption 集群存储选项
+     * @var StorageOption <p>集群存储选项</p>
      */
     public $StorageOption;
 
     /**
-     * @var LoginNode 指定登录节点。
+     * @var LoginNode <p>指定登录节点。</p>
      */
     public $LoginNode;
 
     /**
-     * @var integer 指定登录节点的数量。默认取值：0。取值范围：0～10。
+     * @var integer <p>指定登录节点的数量。默认取值：0。取值范围：0～10。</p>
      */
     public $LoginNodeCount;
 
     /**
-     * @var array 创建集群时同时绑定的标签对说明。
+     * @var array <p>创建集群时同时绑定的标签对说明。</p>
      */
     public $Tags;
 
     /**
-     * @var string 弹性伸缩类型。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li><br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li>
+     * @var string <p>弹性伸缩类型。<br><li>AS：集群自动扩缩容由<a href="https://cloud.tencent.com/document/product/377/3154">弹性伸缩</a>产品实现。</li><br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li></p>
      */
     public $AutoScalingType;
 
     /**
-     * @param Placement $Placement 集群中实例所在的位置。
-     * @param ManagerNode $ManagerNode 指定管理节点。
-     * @param integer $ManagerNodeCount 指定管理节点的数量。默认取值：1。取值范围：1～2。
-     * @param ComputeNode $ComputeNode 指定计算节点。
-     * @param integer $ComputeNodeCount 指定计算节点的数量。默认取值：0。
-     * @param string $SchedulerType 调度器类型。默认取值：SLURM。<br><li>SLURM：SLURM调度器。</li>
-     * @param string $ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。
-     * @param VirtualPrivateCloud $VirtualPrivateCloud 私有网络相关信息配置。
-     * @param LoginSettings $LoginSettings 集群登录设置。
-     * @param array $SecurityGroupIds 集群中实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
-     * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
-     * @param boolean $DryRun 是否只预检此次请求。
-true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。
-如果检查不通过，则返回对应错误码；
-如果检查通过，则返回RequestId.
-false（默认）：发送正常请求，通过检查后直接创建实例
-     * @param string $AccountType 域名字服务类型。默认取值：NIS。<li>NIS：NIS域名字服务。</li>
-     * @param string $ClusterName 集群显示名称。
-     * @param StorageOption $StorageOption 集群存储选项
-     * @param LoginNode $LoginNode 指定登录节点。
-     * @param integer $LoginNodeCount 指定登录节点的数量。默认取值：0。取值范围：0～10。
-     * @param array $Tags 创建集群时同时绑定的标签对说明。
-     * @param string $AutoScalingType 弹性伸缩类型。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li><br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li>
+     * @param Placement $Placement <p>集群中实例所在的位置。</p>
+     * @param ManagerNode $ManagerNode <p>指定管理节点。</p>
+     * @param integer $ManagerNodeCount <p>指定管理节点的数量。默认取值：1。取值范围：1～2。</p>
+     * @param ComputeNode $ComputeNode <p>指定计算节点。</p>
+     * @param integer $ComputeNodeCount <p>指定计算节点的数量。默认取值：0。</p>
+     * @param string $SchedulerType <p>调度器类型。默认取值：SLURM。<br><li>SLURM：SLURM调度器。</li></p>
+     * @param string $ImageId <p>指定有效的<a href="https://cloud.tencent.com/document/product/213/4940">镜像</a>ID，格式形如<code>img-xxx</code>。目前支持部分公有镜像和自定义镜像。</p>
+     * @param VirtualPrivateCloud $VirtualPrivateCloud <p>私有网络相关信息配置。</p>
+     * @param LoginSettings $LoginSettings <p>集群登录设置。</p>
+     * @param array $SecurityGroupIds <p>集群中实例所属安全组。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。</p>
+     * @param string $ClientToken <p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。</p>
+     * @param boolean $DryRun <p>是否只预检此次请求。<br>true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。<br>如果检查不通过，则返回对应错误码；<br>如果检查通过，则返回RequestId.<br>false（默认）：发送正常请求，通过检查后直接创建实例</p>
+     * @param string $AccountType <p>域名字服务类型。默认取值：NIS。<li>NIS：NIS域名字服务。</li></p>
+     * @param string $ClusterName <p>集群显示名称。</p>
+     * @param StorageOption $StorageOption <p>集群存储选项</p>
+     * @param LoginNode $LoginNode <p>指定登录节点。</p>
+     * @param integer $LoginNodeCount <p>指定登录节点的数量。默认取值：0。取值范围：0～10。</p>
+     * @param array $Tags <p>创建集群时同时绑定的标签对说明。</p>
+     * @param string $AutoScalingType <p>弹性伸缩类型。<br><li>AS：集群自动扩缩容由<a href="https://cloud.tencent.com/document/product/377/3154">弹性伸缩</a>产品实现。</li><br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li></p>
      */
     function __construct()
     {

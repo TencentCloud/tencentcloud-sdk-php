@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageSet(array $ImageSet) 设置附加图片输入。
  * @method ImageProcessOutputConfig getOutputConfig() 获取图片处理输出配置。
  * @method void setOutputConfig(ImageProcessOutputConfig $OutputConfig) 设置图片处理输出配置。
+ * @method array getExtPrompt() 获取图片处理附加 prompt，只针对某些场景可用。
+ * @method void setExtPrompt(array $ExtPrompt) 设置图片处理附加 prompt，只针对某些场景可用。
  */
 class AddOnParameter extends AbstractModel
 {
@@ -38,8 +40,14 @@ class AddOnParameter extends AbstractModel
     public $OutputConfig;
 
     /**
+     * @var array 图片处理附加 prompt，只针对某些场景可用。
+     */
+    public $ExtPrompt;
+
+    /**
      * @param array $ImageSet 附加图片输入。
      * @param ImageProcessOutputConfig $OutputConfig 图片处理输出配置。
+     * @param array $ExtPrompt 图片处理附加 prompt，只针对某些场景可用。
      */
     function __construct()
     {
@@ -66,6 +74,15 @@ class AddOnParameter extends AbstractModel
         if (array_key_exists("OutputConfig",$param) and $param["OutputConfig"] !== null) {
             $this->OutputConfig = new ImageProcessOutputConfig();
             $this->OutputConfig->deserialize($param["OutputConfig"]);
+        }
+
+        if (array_key_exists("ExtPrompt",$param) and $param["ExtPrompt"] !== null) {
+            $this->ExtPrompt = [];
+            foreach ($param["ExtPrompt"] as $key => $value){
+                $obj = new ImageProcessPrompt();
+                $obj->deserialize($value);
+                array_push($this->ExtPrompt, $obj);
+            }
         }
     }
 }

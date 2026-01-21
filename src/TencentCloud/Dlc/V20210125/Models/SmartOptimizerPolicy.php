@@ -22,17 +22,17 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInherit() 获取是否继承
  * @method void setInherit(string $Inherit) 设置是否继承
- * @method array getResources() 获取ResourceInfo
+ * @method array getResources() 获取数据治理资源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResources(array $Resources) 设置ResourceInfo
+ * @method void setResources(array $Resources) 设置数据治理资源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method SmartOptimizerWrittenPolicy getWritten() 获取SmartOptimizerWrittenPolicy
+ * @method SmartOptimizerWrittenPolicy getWritten() 获取数据重写策略
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWritten(SmartOptimizerWrittenPolicy $Written) 设置SmartOptimizerWrittenPolicy
+ * @method void setWritten(SmartOptimizerWrittenPolicy $Written) 设置数据重写策略
 注意：此字段可能返回 null，表示取不到有效值。
- * @method SmartOptimizerLifecyclePolicy getLifecycle() 获取SmartOptimizerLifecyclePolicy
+ * @method SmartOptimizerLifecyclePolicy getLifecycle() 获取数据过期策略
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLifecycle(SmartOptimizerLifecyclePolicy $Lifecycle) 设置SmartOptimizerLifecyclePolicy
+ * @method void setLifecycle(SmartOptimizerLifecyclePolicy $Lifecycle) 设置数据过期策略
 注意：此字段可能返回 null，表示取不到有效值。
  * @method SmartOptimizerIndexPolicy getIndex() 获取SmartOptimizerIndexPolicy
 注意：此字段可能返回 null，表示取不到有效值。
@@ -51,19 +51,19 @@ class SmartOptimizerPolicy extends AbstractModel
     public $Inherit;
 
     /**
-     * @var array ResourceInfo
+     * @var array 数据治理资源
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resources;
 
     /**
-     * @var SmartOptimizerWrittenPolicy SmartOptimizerWrittenPolicy
+     * @var SmartOptimizerWrittenPolicy 数据重写策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Written;
 
     /**
-     * @var SmartOptimizerLifecyclePolicy SmartOptimizerLifecyclePolicy
+     * @var SmartOptimizerLifecyclePolicy 数据过期策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Lifecycle;
@@ -82,11 +82,11 @@ class SmartOptimizerPolicy extends AbstractModel
 
     /**
      * @param string $Inherit 是否继承
-     * @param array $Resources ResourceInfo
+     * @param array $Resources 数据治理资源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SmartOptimizerWrittenPolicy $Written SmartOptimizerWrittenPolicy
+     * @param SmartOptimizerWrittenPolicy $Written 数据重写策略
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SmartOptimizerLifecyclePolicy $Lifecycle SmartOptimizerLifecyclePolicy
+     * @param SmartOptimizerLifecyclePolicy $Lifecycle 数据过期策略
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SmartOptimizerIndexPolicy $Index SmartOptimizerIndexPolicy
 注意：此字段可能返回 null，表示取不到有效值。

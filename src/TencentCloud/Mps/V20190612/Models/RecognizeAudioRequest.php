@@ -190,10 +190,24 @@ zu: 祖鲁语
 
  * @method string getAudioFormat() 获取音频数据格式，默认为 pcm
 
-支持的格式：pcm (16k 采样率的单声道 16 位采样 pcm 数据)
+支持的格式：
+pcm (16000 采样率的单声道 16 位采样 pcm 数据)
+ogg-opus (16000 / 24000 / 48000 采样率的单声道 opus 编码的 ogg 数据)
  * @method void setAudioFormat(string $AudioFormat) 设置音频数据格式，默认为 pcm
 
-支持的格式：pcm (16k 采样率的单声道 16 位采样 pcm 数据)
+支持的格式：
+pcm (16000 采样率的单声道 16 位采样 pcm 数据)
+ogg-opus (16000 / 24000 / 48000 采样率的单声道 opus 编码的 ogg 数据)
+ * @method integer getSampleRate() 获取音频的采样率
+
+支持的采样率：
+pcm 16000
+ogg-opus 16000 / 24000 / 48000
+ * @method void setSampleRate(integer $SampleRate) 设置音频的采样率
+
+支持的采样率：
+pcm 16000
+ogg-opus 16000 / 24000 / 48000
  * @method string getUserExtPara() 获取扩展参数，默认不填，特殊需求使用
  * @method void setUserExtPara(string $UserExtPara) 设置扩展参数，默认不填，特殊需求使用
  */
@@ -294,9 +308,20 @@ zu: 祖鲁语
     /**
      * @var string 音频数据格式，默认为 pcm
 
-支持的格式：pcm (16k 采样率的单声道 16 位采样 pcm 数据)
+支持的格式：
+pcm (16000 采样率的单声道 16 位采样 pcm 数据)
+ogg-opus (16000 / 24000 / 48000 采样率的单声道 opus 编码的 ogg 数据)
      */
     public $AudioFormat;
+
+    /**
+     * @var integer 音频的采样率
+
+支持的采样率：
+pcm 16000
+ogg-opus 16000 / 24000 / 48000
+     */
+    public $SampleRate;
 
     /**
      * @var string 扩展参数，默认不填，特殊需求使用
@@ -390,7 +415,14 @@ zu: 祖鲁语
 
      * @param string $AudioFormat 音频数据格式，默认为 pcm
 
-支持的格式：pcm (16k 采样率的单声道 16 位采样 pcm 数据)
+支持的格式：
+pcm (16000 采样率的单声道 16 位采样 pcm 数据)
+ogg-opus (16000 / 24000 / 48000 采样率的单声道 opus 编码的 ogg 数据)
+     * @param integer $SampleRate 音频的采样率
+
+支持的采样率：
+pcm 16000
+ogg-opus 16000 / 24000 / 48000
      * @param string $UserExtPara 扩展参数，默认不填，特殊需求使用
      */
     function __construct()
@@ -416,6 +448,10 @@ zu: 祖鲁语
 
         if (array_key_exists("AudioFormat",$param) and $param["AudioFormat"] !== null) {
             $this->AudioFormat = $param["AudioFormat"];
+        }
+
+        if (array_key_exists("SampleRate",$param) and $param["SampleRate"] !== null) {
+            $this->SampleRate = $param["SampleRate"];
         }
 
         if (array_key_exists("UserExtPara",$param) and $param["UserExtPara"] !== null) {

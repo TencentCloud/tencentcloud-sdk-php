@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 默认值：0，表示其他分类。
  * @method void setClassId(integer $ClassId) 设置分类ID，用于对媒体进行分类管理，可通过 创建分类 接口，创建分类，获得分类 ID。
 默认值：0，表示其他分类。
- * @method integer getSubAppId() 获取点播 子应用 ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播 子应用 ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+ * @method integer getSubAppId() 获取点播子应用 ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。注意：不建议填写“托管类型”的点播子应用ID，只能填写“标准类型”的点播子应用ID，否则会导致无法通过点播域名正常播放视频。
+ * @method void setSubAppId(integer $SubAppId) 设置点播子应用 ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。注意：不建议填写“托管类型”的点播子应用ID，只能填写“标准类型”的点播子应用ID，否则会导致无法通过点播域名正常播放视频。
  * @method string getSessionContext() 获取任务流上下文，任务完成回调时透传。
  * @method void setSessionContext(string $SessionContext) 设置任务流上下文，任务完成回调时透传。
  * @method string getSourceContext() 获取上传上下文，上传完成回调时透传。
@@ -67,7 +67,7 @@ class TencentVod extends AbstractModel
     public $ClassId;
 
     /**
-     * @var integer 点播 子应用 ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * @var integer 点播子应用 ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。注意：不建议填写“托管类型”的点播子应用ID，只能填写“标准类型”的点播子应用ID，否则会导致无法通过点播域名正常播放视频。
      */
     public $SubAppId;
 
@@ -98,7 +98,7 @@ class TencentVod extends AbstractModel
      * @param string $StorageRegion 指定上传园区，仅适用于对上传地域有特殊需求的用户。
      * @param integer $ClassId 分类ID，用于对媒体进行分类管理，可通过 创建分类 接口，创建分类，获得分类 ID。
 默认值：0，表示其他分类。
-     * @param integer $SubAppId 点播 子应用 ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * @param integer $SubAppId 点播子应用 ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。注意：不建议填写“托管类型”的点播子应用ID，只能填写“标准类型”的点播子应用ID，否则会导致无法通过点播域名正常播放视频。
      * @param string $SessionContext 任务流上下文，任务完成回调时透传。
      * @param string $SourceContext 上传上下文，上传完成回调时透传。
      * @param integer $MediaType 上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls, 2:aac(StreamType=1纯音频录制时有效),

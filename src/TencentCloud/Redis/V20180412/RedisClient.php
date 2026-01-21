@@ -134,7 +134,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\UpgradeInstanceVersionResponse UpgradeInstanceVersion(Models\UpgradeInstanceVersionRequest $req) 本接口（UpgradeInstanceVersion）用于将当前实例升级到更高版本，或者将当前标准架构升级至集群架构。
  * @method Models\UpgradeProxyVersionResponse UpgradeProxyVersion(Models\UpgradeProxyVersionRequest $req) 本接口（UpgradeProxyVersion）用于升级实例 Proxy 版本。
  * @method Models\UpgradeSmallVersionResponse UpgradeSmallVersion(Models\UpgradeSmallVersionRequest $req) 本接口（UpgradeSmallVersion）用于实例小版本升级。
- * @method Models\UpgradeVersionToMultiAvailabilityZonesResponse UpgradeVersionToMultiAvailabilityZones(Models\UpgradeVersionToMultiAvailabilityZonesRequest $req) 本接口（UpgradeVersionToMultiAvailabilityZones）用于升级实例支持多AZ。
+ * @method Models\UpgradeVersionToMultiAvailabilityZonesResponse UpgradeVersionToMultiAvailabilityZones(Models\UpgradeVersionToMultiAvailabilityZonesRequest $req) 本接口已废弃。
  */
 
 class RedisClient extends AbstractClient

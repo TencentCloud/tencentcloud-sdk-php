@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setSpeakerPath(string $SpeakerPath) 设置标记文件路径
 
+ * @method string getVoiceId() 获取音色id
+ * @method void setVoiceId(string $VoiceId) 设置音色id
  * @method TaskOutputStorage getOutputStorage() 获取译制视频存储位置。
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置译制视频存储位置。
  */
@@ -43,6 +45,11 @@ class AiAnalysisTaskDubbingOutput extends AbstractModel
     public $SpeakerPath;
 
     /**
+     * @var string 音色id
+     */
+    public $VoiceId;
+
+    /**
      * @var TaskOutputStorage 译制视频存储位置。
      */
     public $OutputStorage;
@@ -51,6 +58,7 @@ class AiAnalysisTaskDubbingOutput extends AbstractModel
      * @param string $VideoPath 译制视频路径。
      * @param string $SpeakerPath 标记文件路径
 
+     * @param string $VoiceId 音色id
      * @param TaskOutputStorage $OutputStorage 译制视频存储位置。
      */
     function __construct()
@@ -72,6 +80,10 @@ class AiAnalysisTaskDubbingOutput extends AbstractModel
 
         if (array_key_exists("SpeakerPath",$param) and $param["SpeakerPath"] !== null) {
             $this->SpeakerPath = $param["SpeakerPath"];
+        }
+
+        if (array_key_exists("VoiceId",$param) and $param["VoiceId"] !== null) {
+            $this->VoiceId = $param["VoiceId"];
         }
 
         if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {

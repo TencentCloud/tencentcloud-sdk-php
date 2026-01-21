@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 <li> 3= Prometheus管理的弹性集群(MEKS) </li>
  * @method string getClusterId() 获取集群 ID，可不填
  * @method void setClusterId(string $ClusterId) 设置集群 ID，可不填
+ * @method boolean getDisable() 获取值为true时禁用集成
+ * @method void setDisable(boolean $Disable) 设置值为true时禁用集成
  */
 class UpdateExporterIntegrationRequest extends AbstractModel
 {
@@ -68,6 +70,11 @@ class UpdateExporterIntegrationRequest extends AbstractModel
     public $ClusterId;
 
     /**
+     * @var boolean 值为true时禁用集成
+     */
+    public $Disable;
+
+    /**
      * @param string $InstanceId Prometheus 实例 ID
      * @param string $Kind 类型(可通过 DescribeExporterIntegrations 获取对应集成的 Kind)
      * @param string $Content 配置内容(可通过 DescribeExporterIntegrations 接口获取对应集成的 Content，并在此基础上做修改)
@@ -76,6 +83,7 @@ class UpdateExporterIntegrationRequest extends AbstractModel
 <li> 2=弹性集群(EKS) </li>
 <li> 3= Prometheus管理的弹性集群(MEKS) </li>
      * @param string $ClusterId 集群 ID，可不填
+     * @param boolean $Disable 值为true时禁用集成
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class UpdateExporterIntegrationRequest extends AbstractModel
 
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("Disable",$param) and $param["Disable"] !== null) {
+            $this->Disable = $param["Disable"];
         }
     }
 }

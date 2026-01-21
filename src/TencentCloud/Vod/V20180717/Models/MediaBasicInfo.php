@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStorageRegion() 获取媒体文件存储地区，如 ap-chongqing，参见[地域列表](https://cloud.tencent.com/document/product/266/9760#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)。
  * @method void setStorageRegion(string $StorageRegion) 设置媒体文件存储地区，如 ap-chongqing，参见[地域列表](https://cloud.tencent.com/document/product/266/9760#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)。
+ * @method string getStoragePath() 获取媒体的存储路径。
+ * @method void setStoragePath(string $StoragePath) 设置媒体的存储路径。
  * @method array getTagSet() 获取媒体文件的标签信息。
  * @method void setTagSet(array $TagSet) 设置媒体文件的标签信息。
  * @method string getVid() 获取直播录制文件的唯一标识。
@@ -142,6 +144,11 @@ class MediaBasicInfo extends AbstractModel
     public $StorageRegion;
 
     /**
+     * @var string 媒体的存储路径。
+     */
+    public $StoragePath;
+
+    /**
      * @var array 媒体文件的标签信息。
      */
     public $TagSet;
@@ -188,6 +195,7 @@ class MediaBasicInfo extends AbstractModel
      * @param MediaSourceData $SourceInfo 该媒体文件的来源信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StorageRegion 媒体文件存储地区，如 ap-chongqing，参见[地域列表](https://cloud.tencent.com/document/product/266/9760#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)。
+     * @param string $StoragePath 媒体的存储路径。
      * @param array $TagSet 媒体文件的标签信息。
      * @param string $Vid 直播录制文件的唯一标识。
      * @param string $Category 文件类型：
@@ -265,6 +273,10 @@ class MediaBasicInfo extends AbstractModel
 
         if (array_key_exists("StorageRegion",$param) and $param["StorageRegion"] !== null) {
             $this->StorageRegion = $param["StorageRegion"];
+        }
+
+        if (array_key_exists("StoragePath",$param) and $param["StoragePath"] !== null) {
+            $this->StoragePath = $param["StoragePath"];
         }
 
         if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {

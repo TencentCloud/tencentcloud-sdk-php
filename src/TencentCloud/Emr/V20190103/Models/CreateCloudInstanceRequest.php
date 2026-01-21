@@ -80,6 +80,8 @@ MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser M
  * @method void setDefaultMetaVersion(string $DefaultMetaVersion) 设置数据库版本
  * @method integer getNeedCdbAudit() 获取是否开通审计
  * @method void setNeedCdbAudit(integer $NeedCdbAudit) 设置是否开通审计
+ * @method string getSgIP() 获取安全组来源IP
+ * @method void setSgIP(string $SgIP) 设置安全组来源IP
  */
 class CreateCloudInstanceRequest extends AbstractModel
 {
@@ -186,6 +188,11 @@ MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser M
     public $NeedCdbAudit;
 
     /**
+     * @var string 安全组来源IP
+     */
+    public $SgIP;
+
+    /**
      * @param string $InstanceName 实例名称。
 <li>长度限制为6-36个字符。</li>
 <li>只允许包含中文、字母、数字、-、_。</li>
@@ -216,6 +223,7 @@ MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser M
      * @param integer $ZoneId 可用区id
      * @param string $DefaultMetaVersion 数据库版本
      * @param integer $NeedCdbAudit 是否开通审计
+     * @param string $SgIP 安全组来源IP
      */
     function __construct()
     {
@@ -318,6 +326,10 @@ MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser M
 
         if (array_key_exists("NeedCdbAudit",$param) and $param["NeedCdbAudit"] !== null) {
             $this->NeedCdbAudit = $param["NeedCdbAudit"];
+        }
+
+        if (array_key_exists("SgIP",$param) and $param["SgIP"] !== null) {
+            $this->SgIP = $param["SgIP"];
         }
     }
 }

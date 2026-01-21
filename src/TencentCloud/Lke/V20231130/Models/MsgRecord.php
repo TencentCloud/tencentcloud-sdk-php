@@ -132,6 +132,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWidgetAction(WidgetAction $WidgetAction) 设置Widget动作信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAudios() 获取音频信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAudios(array $Audios) 设置音频信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MsgRecord extends AbstractModel
 {
@@ -304,6 +308,12 @@ class MsgRecord extends AbstractModel
     public $WidgetAction;
 
     /**
+     * @var array 音频信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Audios;
+
+    /**
      * @param string $Content 内容
      * @param string $SessionId 当前记录所对应的 Session ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -359,6 +369,8 @@ class MsgRecord extends AbstractModel
      * @param array $Widgets Widget信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WidgetAction $WidgetAction Widget动作信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Audios 音频信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -510,6 +522,15 @@ class MsgRecord extends AbstractModel
         if (array_key_exists("WidgetAction",$param) and $param["WidgetAction"] !== null) {
             $this->WidgetAction = new WidgetAction();
             $this->WidgetAction->deserialize($param["WidgetAction"]);
+        }
+
+        if (array_key_exists("Audios",$param) and $param["Audios"] !== null) {
+            $this->Audios = [];
+            foreach ($param["Audios"] as $key => $value){
+                $obj = new Audio();
+                $obj->deserialize($value);
+                array_push($this->Audios, $obj);
+            }
         }
     }
 }

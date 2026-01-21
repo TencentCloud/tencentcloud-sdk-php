@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeParamTemplates返回参数结构体
  *
- * @method integer getTotalCount() 获取该用户的参数模板数量。
- * @method void setTotalCount(integer $TotalCount) 设置该用户的参数模板数量。
- * @method array getItems() 获取参数模板详情。
- * @method void setItems(array $Items) 设置参数模板详情。
+ * @method integer getTotalCount() 获取<p>该用户的参数模板数量。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>该用户的参数模板数量。</p>
+ * @method array getItems() 获取<p>参数模板详情。</p>
+ * @method void setItems(array $Items) 设置<p>参数模板详情。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeParamTemplatesResponse extends AbstractModel
 {
     /**
-     * @var integer 该用户的参数模板数量。
+     * @var integer <p>该用户的参数模板数量。</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 参数模板详情。
+     * @var array <p>参数模板详情。</p>
      */
     public $Items;
 
@@ -45,8 +45,8 @@ class DescribeParamTemplatesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 该用户的参数模板数量。
-     * @param array $Items 参数模板详情。
+     * @param integer $TotalCount <p>该用户的参数模板数量。</p>
+     * @param array $Items <p>参数模板详情。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

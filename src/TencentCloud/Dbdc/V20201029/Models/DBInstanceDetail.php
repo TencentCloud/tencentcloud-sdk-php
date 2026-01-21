@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDbEngine(string $DbEngine) 设置DB引擎，MySQL,Percona,MariaDB
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method array getZones() 获取可用区列表
+ * @method void setZones(array $Zones) 设置可用区列表
  */
 class DBInstanceDetail extends AbstractModel
 {
@@ -171,6 +173,11 @@ class DBInstanceDetail extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var array 可用区列表
+     */
+    public $Zones;
+
+    /**
      * @param string $InstanceId DB实例Id
      * @param string $InstanceName DB实例名称
      * @param integer $Status DB实例状态,-1:已隔离, 0:创建中, 1:流程中, 2:运行中, 3:未初始化
@@ -192,6 +199,7 @@ class DBInstanceDetail extends AbstractModel
      * @param integer $HostRole 主机角色, 1:主, 2:从, 3:主+从
      * @param string $DbEngine DB引擎，MySQL,Percona,MariaDB
      * @param string $CreateTime 创建时间
+     * @param array $Zones 可用区列表
      */
     function __construct()
     {
@@ -288,6 +296,10 @@ class DBInstanceDetail extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
+            $this->Zones = $param["Zones"];
         }
     }
 }

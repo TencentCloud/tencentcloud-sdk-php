@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileSystemId(string $FileSystemId) 设置文件系统ID
  * @method string getPath() 获取目录绝对路径
  * @method void setPath(string $Path) 设置目录绝对路径
+ * @method string getDataFlowId() 获取数据流动Id
+ * @method void setDataFlowId(string $DataFlowId) 设置数据流动Id
  */
 class PathInfo extends AbstractModel
 {
@@ -38,8 +40,14 @@ class PathInfo extends AbstractModel
     public $Path;
 
     /**
+     * @var string 数据流动Id
+     */
+    public $DataFlowId;
+
+    /**
      * @param string $FileSystemId 文件系统ID
      * @param string $Path 目录绝对路径
+     * @param string $DataFlowId 数据流动Id
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class PathInfo extends AbstractModel
 
         if (array_key_exists("Path",$param) and $param["Path"] !== null) {
             $this->Path = $param["Path"];
+        }
+
+        if (array_key_exists("DataFlowId",$param) and $param["DataFlowId"] !== null) {
+            $this->DataFlowId = $param["DataFlowId"];
         }
     }
 }

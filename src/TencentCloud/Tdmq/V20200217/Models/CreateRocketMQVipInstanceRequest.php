@@ -24,8 +24,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置实例名称
  * @method string getSpec() 获取集群规格，支持规格有 1.通用型:rocket-vip-basic-0; 2.基础型:rocket-vip-basic-1; 3.标准型:rocket-vip-basic-2; 4.高阶Ⅰ型:rocket-vip-basic-3; 5.高阶Ⅱ型:rocket-vip-basic-4
  * @method void setSpec(string $Spec) 设置集群规格，支持规格有 1.通用型:rocket-vip-basic-0; 2.基础型:rocket-vip-basic-1; 3.标准型:rocket-vip-basic-2; 4.高阶Ⅰ型:rocket-vip-basic-3; 5.高阶Ⅱ型:rocket-vip-basic-4
- * @method integer getNodeCount() 获取节点数量，最小2，最大20
- * @method void setNodeCount(integer $NodeCount) 设置节点数量，最小2，最大20
  * @method integer getStorageSize() 获取单节点存储空间，GB为单位，最低200GB
  * @method void setStorageSize(integer $StorageSize) 设置单节点存储空间，GB为单位，最低200GB
  * @method array getZoneIds() 获取节点部署的区域ID列表，如广州一区，则是100001，具体可查询腾讯云官网
@@ -34,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcInfo(VpcInfo $VpcInfo) 设置VPC信息
  * @method integer getTimeSpan() 获取购买时长，月为单位
  * @method void setTimeSpan(integer $TimeSpan) 设置购买时长，月为单位
+ * @method integer getNodeCount() 获取节点数量，创建专享集群时必填
+ * @method void setNodeCount(integer $NodeCount) 设置节点数量，创建专享集群时必填
+ * @method string getGeneralSkuCode() 获取通用集群规格标识，新购通用集群时必填，从 [DescribeRocketMQGeneralSKUs](https://cloud.tencent.com/document/api/1179/127066) 接口返回的 [GeneralSKU](https://cloud.tencent.com/document/api/1179/46089#GeneralSKU) 字段获取。
+ * @method void setGeneralSkuCode(string $GeneralSkuCode) 设置通用集群规格标识，新购通用集群时必填，从 [DescribeRocketMQGeneralSKUs](https://cloud.tencent.com/document/api/1179/127066) 接口返回的 [GeneralSKU](https://cloud.tencent.com/document/api/1179/46089#GeneralSKU) 字段获取。
  * @method boolean getSupportsMigrateToCloud() 获取是否用于迁移上云，默认为false
  * @method void setSupportsMigrateToCloud(boolean $SupportsMigrateToCloud) 设置是否用于迁移上云，默认为false
  * @method boolean getEnablePublic() 获取是否开启公网
@@ -58,11 +60,6 @@ class CreateRocketMQVipInstanceRequest extends AbstractModel
     public $Spec;
 
     /**
-     * @var integer 节点数量，最小2，最大20
-     */
-    public $NodeCount;
-
-    /**
      * @var integer 单节点存储空间，GB为单位，最低200GB
      */
     public $StorageSize;
@@ -81,6 +78,16 @@ class CreateRocketMQVipInstanceRequest extends AbstractModel
      * @var integer 购买时长，月为单位
      */
     public $TimeSpan;
+
+    /**
+     * @var integer 节点数量，创建专享集群时必填
+     */
+    public $NodeCount;
+
+    /**
+     * @var string 通用集群规格标识，新购通用集群时必填，从 [DescribeRocketMQGeneralSKUs](https://cloud.tencent.com/document/api/1179/127066) 接口返回的 [GeneralSKU](https://cloud.tencent.com/document/api/1179/46089#GeneralSKU) 字段获取。
+     */
+    public $GeneralSkuCode;
 
     /**
      * @var boolean 是否用于迁移上云，默认为false
@@ -110,11 +117,12 @@ class CreateRocketMQVipInstanceRequest extends AbstractModel
     /**
      * @param string $Name 实例名称
      * @param string $Spec 集群规格，支持规格有 1.通用型:rocket-vip-basic-0; 2.基础型:rocket-vip-basic-1; 3.标准型:rocket-vip-basic-2; 4.高阶Ⅰ型:rocket-vip-basic-3; 5.高阶Ⅱ型:rocket-vip-basic-4
-     * @param integer $NodeCount 节点数量，最小2，最大20
      * @param integer $StorageSize 单节点存储空间，GB为单位，最低200GB
      * @param array $ZoneIds 节点部署的区域ID列表，如广州一区，则是100001，具体可查询腾讯云官网
      * @param VpcInfo $VpcInfo VPC信息
      * @param integer $TimeSpan 购买时长，月为单位
+     * @param integer $NodeCount 节点数量，创建专享集群时必填
+     * @param string $GeneralSkuCode 通用集群规格标识，新购通用集群时必填，从 [DescribeRocketMQGeneralSKUs](https://cloud.tencent.com/document/api/1179/127066) 接口返回的 [GeneralSKU](https://cloud.tencent.com/document/api/1179/46089#GeneralSKU) 字段获取。
      * @param boolean $SupportsMigrateToCloud 是否用于迁移上云，默认为false
      * @param boolean $EnablePublic 是否开启公网
      * @param integer $Bandwidth 公网带宽，在开启公网情况下为必传字段
@@ -142,10 +150,6 @@ class CreateRocketMQVipInstanceRequest extends AbstractModel
             $this->Spec = $param["Spec"];
         }
 
-        if (array_key_exists("NodeCount",$param) and $param["NodeCount"] !== null) {
-            $this->NodeCount = $param["NodeCount"];
-        }
-
         if (array_key_exists("StorageSize",$param) and $param["StorageSize"] !== null) {
             $this->StorageSize = $param["StorageSize"];
         }
@@ -161,6 +165,14 @@ class CreateRocketMQVipInstanceRequest extends AbstractModel
 
         if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
             $this->TimeSpan = $param["TimeSpan"];
+        }
+
+        if (array_key_exists("NodeCount",$param) and $param["NodeCount"] !== null) {
+            $this->NodeCount = $param["NodeCount"];
+        }
+
+        if (array_key_exists("GeneralSkuCode",$param) and $param["GeneralSkuCode"] !== null) {
+            $this->GeneralSkuCode = $param["GeneralSkuCode"];
         }
 
         if (array_key_exists("SupportsMigrateToCloud",$param) and $param["SupportsMigrateToCloud"] !== null) {

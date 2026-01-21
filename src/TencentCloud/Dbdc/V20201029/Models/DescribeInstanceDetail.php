@@ -76,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceTags(array $ResourceTags) 设置实例标签
  * @method string getCpuType() 获取CPU类型：Intel/AMD,Hygon
  * @method void setCpuType(string $CpuType) 设置CPU类型：Intel/AMD,Hygon
+ * @method array getZones() 获取可用区列表
+ * @method void setZones(array $Zones) 设置可用区列表
  */
 class DescribeInstanceDetail extends AbstractModel
 {
@@ -220,6 +222,11 @@ class DescribeInstanceDetail extends AbstractModel
     public $CpuType;
 
     /**
+     * @var array 可用区列表
+     */
+    public $Zones;
+
+    /**
      * @param string $InstanceId 独享集群实例Id
      * @param string $InstanceName 独享集群实例名称
      * @param string $Region 地域
@@ -248,6 +255,7 @@ class DescribeInstanceDetail extends AbstractModel
      * @param string $ClusterId 所属集群ID(默认集群为空)
      * @param array $ResourceTags 实例标签
      * @param string $CpuType CPU类型：Intel/AMD,Hygon
+     * @param array $Zones 可用区列表
      */
     function __construct()
     {
@@ -377,6 +385,10 @@ class DescribeInstanceDetail extends AbstractModel
 
         if (array_key_exists("CpuType",$param) and $param["CpuType"] !== null) {
             $this->CpuType = $param["CpuType"];
+        }
+
+        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
+            $this->Zones = $param["Zones"];
         }
     }
 }

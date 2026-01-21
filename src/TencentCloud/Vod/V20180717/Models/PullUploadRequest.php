@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtInfo(string $ExtInfo) 设置保留字段，特殊用途时使用。
  * @method string getSourceContext() 获取来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。
  * @method void setSourceContext(string $SourceContext) 设置来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。
+ * @method string getMediaStoragePath() 获取媒体存储路径，以/开头。
+ * @method void setMediaStoragePath(string $MediaStoragePath) 设置媒体存储路径，以/开头。
  */
 class PullUploadRequest extends AbstractModel
 {
@@ -134,6 +136,11 @@ class PullUploadRequest extends AbstractModel
     public $SourceContext;
 
     /**
+     * @var string 媒体存储路径，以/开头。
+     */
+    public $MediaStoragePath;
+
+    /**
      * @param string $MediaUrl 要拉取的媒体 URL，暂不支持拉取 Dash 格式（可以支持 HLS）。
 支持的扩展名详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。请确保媒体 URL 可以访问。
      * @param string $MediaType 媒体文件类型（扩展名），支持的类型详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。
@@ -152,6 +159,7 @@ class PullUploadRequest extends AbstractModel
      * @param string $SessionId 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      * @param string $ExtInfo 保留字段，特殊用途时使用。
      * @param string $SourceContext 来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。
+     * @param string $MediaStoragePath 媒体存储路径，以/开头。
      */
     function __construct()
     {
@@ -220,6 +228,10 @@ class PullUploadRequest extends AbstractModel
 
         if (array_key_exists("SourceContext",$param) and $param["SourceContext"] !== null) {
             $this->SourceContext = $param["SourceContext"];
+        }
+
+        if (array_key_exists("MediaStoragePath",$param) and $param["MediaStoragePath"] !== null) {
+            $this->MediaStoragePath = $param["MediaStoragePath"];
         }
     }
 }

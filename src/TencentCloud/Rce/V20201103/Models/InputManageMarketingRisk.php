@@ -91,7 +91,9 @@ use TencentCloud\Common\AbstractModel;
 3：H5
 4：小程序
  * @method DataAuthorizationInfo getDataAuthorization() 获取数据授权信息。
+注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。
  * @method void setDataAuthorization(DataAuthorizationInfo $DataAuthorization) 设置数据授权信息。
+注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。
  */
 class InputManageMarketingRisk extends AbstractModel
 {
@@ -220,6 +222,7 @@ class InputManageMarketingRisk extends AbstractModel
 
     /**
      * @var DataAuthorizationInfo 数据授权信息。
+注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。
      */
     public $DataAuthorization;
 
@@ -260,6 +263,7 @@ class InputManageMarketingRisk extends AbstractModel
 3：H5
 4：小程序
      * @param DataAuthorizationInfo $DataAuthorization 数据授权信息。
+注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。
      */
     function __construct()
     {

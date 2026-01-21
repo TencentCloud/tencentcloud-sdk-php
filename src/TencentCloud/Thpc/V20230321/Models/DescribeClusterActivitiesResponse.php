@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusterActivities返回参数结构体
  *
- * @method array getClusterActivitySet() 获取集群活动历史记录列表。
- * @method void setClusterActivitySet(array $ClusterActivitySet) 设置集群活动历史记录列表。
- * @method integer getTotalCount() 获取集群活动历史记录数量。
- * @method void setTotalCount(integer $TotalCount) 设置集群活动历史记录数量。
+ * @method array getClusterActivitySet() 获取<p>集群活动历史记录列表。</p>
+ * @method void setClusterActivitySet(array $ClusterActivitySet) 设置<p>集群活动历史记录列表。</p>
+ * @method integer getTotalCount() 获取<p>集群活动历史记录数量。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>集群活动历史记录数量。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeClusterActivitiesResponse extends AbstractModel
 {
     /**
-     * @var array 集群活动历史记录列表。
+     * @var array <p>集群活动历史记录列表。</p>
      */
     public $ClusterActivitySet;
 
     /**
-     * @var integer 集群活动历史记录数量。
+     * @var integer <p>集群活动历史记录数量。</p>
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeClusterActivitiesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ClusterActivitySet 集群活动历史记录列表。
-     * @param integer $TotalCount 集群活动历史记录数量。
+     * @param array $ClusterActivitySet <p>集群活动历史记录列表。</p>
+     * @param integer $TotalCount <p>集群活动历史记录数量。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

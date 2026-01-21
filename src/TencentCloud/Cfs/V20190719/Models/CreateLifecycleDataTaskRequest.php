@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskName(string $TaskName) 设置任务名称
  * @method string getDataFlowId() 获取数据流动 ID ，该接口可以通过 DescribeDataFlow 查询
  * @method void setDataFlowId(string $DataFlowId) 设置数据流动 ID ，该接口可以通过 DescribeDataFlow 查询
+ * @method boolean getIsOverwrite() 获取	 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。  ture：覆盖  false：不覆盖（同时也不会释放热存数据）  为空时，默认为false
+ * @method void setIsOverwrite(boolean $IsOverwrite) 设置	 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。  ture：覆盖  false：不覆盖（同时也不会释放热存数据）  为空时，默认为false
  */
 class CreateLifecycleDataTaskRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateLifecycleDataTaskRequest extends AbstractModel
     public $DataFlowId;
 
     /**
+     * @var boolean 	 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。  ture：覆盖  false：不覆盖（同时也不会释放热存数据）  为空时，默认为false
+     */
+    public $IsOverwrite;
+
+    /**
      * @param string $FileSystemId 文件系统唯一 ID
      * @param string $Type 生命周期任务类型；archive：沉降；restore：预热；release：数据释放；metaload：元数据加载
      * @param string $TaskPath 需要沉降的路径或文件，仅支持传入1个路径，不允许为空。
      * @param string $TaskName 任务名称
      * @param string $DataFlowId 数据流动 ID ，该接口可以通过 DescribeDataFlow 查询
+     * @param boolean $IsOverwrite 	 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。  ture：覆盖  false：不覆盖（同时也不会释放热存数据）  为空时，默认为false
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class CreateLifecycleDataTaskRequest extends AbstractModel
 
         if (array_key_exists("DataFlowId",$param) and $param["DataFlowId"] !== null) {
             $this->DataFlowId = $param["DataFlowId"];
+        }
+
+        if (array_key_exists("IsOverwrite",$param) and $param["IsOverwrite"] !== null) {
+            $this->IsOverwrite = $param["IsOverwrite"];
         }
     }
 }

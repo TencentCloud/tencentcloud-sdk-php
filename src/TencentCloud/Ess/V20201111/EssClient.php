@@ -922,6 +922,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
 
 注意:  `如果文件资源为word类型生成的链接不能进行iframe嵌入，需要在单独窗口打开`
+ * @method Models\DescribeEnterpriseContractReviewChecklistsResponse DescribeEnterpriseContractReviewChecklists(Models\DescribeEnterpriseContractReviewChecklistsRequest $req) 本接口（DescribeEnterpriseContractReviewChecklists）用于获取企业全部审查要点清单。
  * @method Models\DescribeExtendedServiceAuthDetailResponse DescribeExtendedServiceAuthDetail(Models\DescribeExtendedServiceAuthDetailRequest $req) 查询企业扩展服务的授权详情（列表），当前支持查询以下内容：
 1. 企业自动签（本企业授权、集团企业授权、合作企业授权）
 2. 批量签署能力

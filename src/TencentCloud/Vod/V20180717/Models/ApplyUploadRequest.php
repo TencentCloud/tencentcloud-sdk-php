@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionContext(string $SessionContext) 设置会话上下文，用于透传用户请求信息，当指定 Procedure 参数后，[任务流状态变更回调](/document/product/266/9636) 将返回该字段值，最长 1000 个字符。
  * @method string getExtInfo() 获取保留字段，特殊用途时使用。
  * @method void setExtInfo(string $ExtInfo) 设置保留字段，特殊用途时使用。
+ * @method string getMediaStoragePath() 获取媒体存储路径，以/开头。
+ * @method void setMediaStoragePath(string $MediaStoragePath) 设置媒体存储路径，以/开头。
  */
 class ApplyUploadRequest extends AbstractModel
 {
@@ -104,6 +106,11 @@ class ApplyUploadRequest extends AbstractModel
     public $ExtInfo;
 
     /**
+     * @var string 媒体存储路径，以/开头。
+     */
+    public $MediaStoragePath;
+
+    /**
      * @param string $MediaType 媒体类型，可选值请参考 [上传能力综述](/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。
      * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      * @param string $MediaName 媒体名称。
@@ -116,6 +123,7 @@ class ApplyUploadRequest extends AbstractModel
      * @param string $SourceContext 来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。
      * @param string $SessionContext 会话上下文，用于透传用户请求信息，当指定 Procedure 参数后，[任务流状态变更回调](/document/product/266/9636) 将返回该字段值，最长 1000 个字符。
      * @param string $ExtInfo 保留字段，特殊用途时使用。
+     * @param string $MediaStoragePath 媒体存储路径，以/开头。
      */
     function __construct()
     {
@@ -172,6 +180,10 @@ class ApplyUploadRequest extends AbstractModel
 
         if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
             $this->ExtInfo = $param["ExtInfo"];
+        }
+
+        if (array_key_exists("MediaStoragePath",$param) and $param["MediaStoragePath"] !== null) {
+            $this->MediaStoragePath = $param["MediaStoragePath"];
         }
     }
 }

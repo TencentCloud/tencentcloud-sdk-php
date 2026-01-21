@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageWidth(integer $ImageWidth) 设置图片输出宽度，单位：像素。
  * @method string getImageSize() 获取图片输出分辨率，取值：1K/2K/4K。
  * @method void setImageSize(string $ImageSize) 设置图片输出分辨率，取值：1K/2K/4K。
+ * @method string getFormat() 获取图片输出编码格式，可取值：PNG、JPG、WEBP、HEIF、AVIF。
+ * @method void setFormat(string $Format) 设置图片输出编码格式，可取值：PNG、JPG、WEBP、HEIF、AVIF。
+ * @method integer getQuality() 获取图片质量，对于某些输出格式可用，只有Format 有效的情况下生效，取值范围 0-100。
+ * @method void setQuality(integer $Quality) 设置图片质量，对于某些输出格式可用，只有Format 有效的情况下生效，取值范围 0-100。
  */
 class ImageProcessOutputConfig extends AbstractModel
 {
@@ -76,6 +80,16 @@ class ImageProcessOutputConfig extends AbstractModel
     public $ImageSize;
 
     /**
+     * @var string 图片输出编码格式，可取值：PNG、JPG、WEBP、HEIF、AVIF。
+     */
+    public $Format;
+
+    /**
+     * @var integer 图片质量，对于某些输出格式可用，只有Format 有效的情况下生效，取值范围 0-100。
+     */
+    public $Quality;
+
+    /**
      * @param string $AspectRatio 输出图片的宽高比。可以配合ImageWidth 和 ImageHeight 使用，规则如下：
 
 1. 仅指定 AspectRatio 时，根据原图输入进行自适应调整。
@@ -88,6 +102,8 @@ class ImageProcessOutputConfig extends AbstractModel
      * @param integer $ImageHeight 图片输出高度，单位：像素。
      * @param integer $ImageWidth 图片输出宽度，单位：像素。
      * @param string $ImageSize 图片输出分辨率，取值：1K/2K/4K。
+     * @param string $Format 图片输出编码格式，可取值：PNG、JPG、WEBP、HEIF、AVIF。
+     * @param integer $Quality 图片质量，对于某些输出格式可用，只有Format 有效的情况下生效，取值范围 0-100。
      */
     function __construct()
     {
@@ -116,6 +132,14 @@ class ImageProcessOutputConfig extends AbstractModel
 
         if (array_key_exists("ImageSize",$param) and $param["ImageSize"] !== null) {
             $this->ImageSize = $param["ImageSize"];
+        }
+
+        if (array_key_exists("Format",$param) and $param["Format"] !== null) {
+            $this->Format = $param["Format"];
+        }
+
+        if (array_key_exists("Quality",$param) and $param["Quality"] !== null) {
+            $this->Quality = $param["Quality"];
         }
     }
 }

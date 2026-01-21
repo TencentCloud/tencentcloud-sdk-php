@@ -53,6 +53,7 @@ use TencentCloud\Lcic\V20220817\Models as Models;
 初始重试间隔不低于500ms
 最大重试次数不超过3次
  * @method Models\CreateDocumentResponse CreateDocument(Models\CreateDocumentRequest $req) 创建房间内可以使用的文档。
+ * @method Models\CreateGroupLiveCodesResponse CreateGroupLiveCodes(Models\CreateGroupLiveCodesRequest $req) 创建分组直播参加码
  * @method Models\CreateGroupWithMembersResponse CreateGroupWithMembers(Models\CreateGroupWithMembersRequest $req) 此接口根据成员列表创建群组
  * @method Models\CreateGroupWithSubGroupResponse CreateGroupWithSubGroup(Models\CreateGroupWithSubGroupRequest $req) 此接口会聚合子群组创建联合群组
  * @method Models\CreateRoomResponse CreateRoom(Models\CreateRoomRequest $req) 创建课堂
@@ -78,6 +79,7 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\DescribeDocumentsByRoomResponse DescribeDocumentsByRoom(Models\DescribeDocumentsByRoomRequest $req) 此接口获取指定房间下课件列表
  * @method Models\DescribeGroupResponse DescribeGroup(Models\DescribeGroupRequest $req) 此接口用于获取群组详情
  * @method Models\DescribeGroupListResponse DescribeGroupList(Models\DescribeGroupListRequest $req) 获取群组列表
+ * @method Models\DescribeGroupLiveCodesResponse DescribeGroupLiveCodes(Models\DescribeGroupLiveCodesRequest $req) 获取分组直播参加码
  * @method Models\DescribeGroupMemberListResponse DescribeGroupMemberList(Models\DescribeGroupMemberListRequest $req) 此接口用于获取群组成员列表
  * @method Models\DescribeMarqueeResponse DescribeMarquee(Models\DescribeMarqueeRequest $req) 查询跑马灯配置
  * @method Models\DescribeQuestionListResponse DescribeQuestionList(Models\DescribeQuestionListRequest $req) 获取房间提问列表

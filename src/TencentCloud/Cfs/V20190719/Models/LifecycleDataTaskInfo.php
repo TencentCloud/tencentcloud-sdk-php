@@ -74,6 +74,18 @@ running：执行中，finished：已完成
  * @method void setType(string $Type) 设置任务类型,archive:表示沉降任务，restore：表示拉取任务
  * @method string getDataFlowId() 获取数据流动Id
  * @method void setDataFlowId(string $DataFlowId) 设置数据流动Id
+ * @method boolean getIsOverwrite() 获取当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
+
+ture：覆盖
+
+false：不覆盖（同时也不会释放热存数据）
+为空时，默认为false
+ * @method void setIsOverwrite(boolean $IsOverwrite) 设置当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
+
+ture：覆盖
+
+false：不覆盖（同时也不会释放热存数据）
+为空时，默认为false
  */
 class LifecycleDataTaskInfo extends AbstractModel
 {
@@ -177,6 +189,16 @@ running：执行中，finished：已完成
     public $DataFlowId;
 
     /**
+     * @var boolean 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
+
+ture：覆盖
+
+false：不覆盖（同时也不会释放热存数据）
+为空时，默认为false
+     */
+    public $IsOverwrite;
+
+    /**
      * @param string $TaskId 任务id
      * @param string $TaskStatus 任务状态.
 init：未执行
@@ -204,6 +226,12 @@ running：执行中，finished：已完成
      * @param string $TaskPath 任务路径
      * @param string $Type 任务类型,archive:表示沉降任务，restore：表示拉取任务
      * @param string $DataFlowId 数据流动Id
+     * @param boolean $IsOverwrite 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
+
+ture：覆盖
+
+false：不覆盖（同时也不会释放热存数据）
+为空时，默认为false
      */
     function __construct()
     {
@@ -288,6 +316,10 @@ running：执行中，finished：已完成
 
         if (array_key_exists("DataFlowId",$param) and $param["DataFlowId"] !== null) {
             $this->DataFlowId = $param["DataFlowId"];
+        }
+
+        if (array_key_exists("IsOverwrite",$param) and $param["IsOverwrite"] !== null) {
+            $this->IsOverwrite = $param["IsOverwrite"];
         }
     }
 }

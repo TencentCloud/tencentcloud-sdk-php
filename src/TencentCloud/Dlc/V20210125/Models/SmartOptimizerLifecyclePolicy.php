@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLifecycleEnable(string $LifecycleEnable) 设置生命周期启用
  * @method integer getExpiration() 获取过期时间
  * @method void setExpiration(integer $Expiration) 设置过期时间
- * @method boolean getDropTable() 获取是否删表
- * @method void setDropTable(boolean $DropTable) 设置是否删表
+ * @method boolean getDropTable() 获取是否删表，该字段废弃已使用，用TableExpiration策略替代
+ * @method void setDropTable(boolean $DropTable) 设置是否删表，该字段废弃已使用，用TableExpiration策略替代
  * @method string getExpiredField() 获取过期字段
  * @method void setExpiredField(string $ExpiredField) 设置过期字段
  * @method string getExpiredFieldFormat() 获取过期字段格式
@@ -44,7 +44,8 @@ class SmartOptimizerLifecyclePolicy extends AbstractModel
     public $Expiration;
 
     /**
-     * @var boolean 是否删表
+     * @var boolean 是否删表，该字段废弃已使用，用TableExpiration策略替代
+     * @deprecated
      */
     public $DropTable;
 
@@ -61,7 +62,7 @@ class SmartOptimizerLifecyclePolicy extends AbstractModel
     /**
      * @param string $LifecycleEnable 生命周期启用
      * @param integer $Expiration 过期时间
-     * @param boolean $DropTable 是否删表
+     * @param boolean $DropTable 是否删表，该字段废弃已使用，用TableExpiration策略替代
      * @param string $ExpiredField 过期字段
      * @param string $ExpiredFieldFormat 过期字段格式
      */

@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFinanceType(integer $FinanceType) 设置计费状态；0-不计费，1-限时免费，2-官方收费
  * @method ToolAdvanceConfig getToolAdvanceConfig() 获取工具高级设置
  * @method void setToolAdvanceConfig(ToolAdvanceConfig $ToolAdvanceConfig) 设置工具高级设置
+ * @method integer getAuthMode() 获取授权模式； 0-开发者授权；1-使用者授权
+ * @method void setAuthMode(integer $AuthMode) 设置授权模式； 0-开发者授权；1-使用者授权
+ * @method integer getAuthType() 获取授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；
+ * @method void setAuthType(integer $AuthType) 设置授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；
  */
 class AgentToolInfo extends AbstractModel
 {
@@ -173,6 +177,16 @@ class AgentToolInfo extends AbstractModel
     public $ToolAdvanceConfig;
 
     /**
+     * @var integer 授权模式； 0-开发者授权；1-使用者授权
+     */
+    public $AuthMode;
+
+    /**
+     * @var integer 授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；
+     */
+    public $AuthType;
+
+    /**
      * @param string $PluginId 插件id
      * @param string $PluginName 插件名称
      * @param string $IconUrl 插件图标url
@@ -196,6 +210,8 @@ class AgentToolInfo extends AbstractModel
      * @param integer $ToolSource 工具来源: 0-来自插件，1-来自工作流
      * @param integer $FinanceType 计费状态；0-不计费，1-限时免费，2-官方收费
      * @param ToolAdvanceConfig $ToolAdvanceConfig 工具高级设置
+     * @param integer $AuthMode 授权模式； 0-开发者授权；1-使用者授权
+     * @param integer $AuthType 授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；
      */
     function __construct()
     {
@@ -310,6 +326,14 @@ class AgentToolInfo extends AbstractModel
         if (array_key_exists("ToolAdvanceConfig",$param) and $param["ToolAdvanceConfig"] !== null) {
             $this->ToolAdvanceConfig = new ToolAdvanceConfig();
             $this->ToolAdvanceConfig->deserialize($param["ToolAdvanceConfig"]);
+        }
+
+        if (array_key_exists("AuthMode",$param) and $param["AuthMode"] !== null) {
+            $this->AuthMode = $param["AuthMode"];
+        }
+
+        if (array_key_exists("AuthType",$param) and $param["AuthType"] !== null) {
+            $this->AuthType = $param["AuthType"];
         }
     }
 }

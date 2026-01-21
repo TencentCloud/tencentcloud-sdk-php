@@ -38,6 +38,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileMinSize(string $FileMinSize) 设置数据转储文件最小规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPolicyType() 获取策略类型
+ * @method void setPolicyType(string $PolicyType) 设置策略类型
+ * @method integer getExpireThreshold() 获取阈值范围[10-90]
+ * @method void setExpireThreshold(integer $ExpireThreshold) 设置阈值范围[10-90]
+ * @method integer getTargetThreshold() 获取阈值范围[10-90]
+ * @method void setTargetThreshold(integer $TargetThreshold) 设置阈值范围[10-90]
+ * @method boolean getIsOverwrite() 获取当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
+
+ture：覆盖
+
+false：不覆盖（同时也不会释放热存数据）
+
+为空时，默认为false
+ * @method void setIsOverwrite(boolean $IsOverwrite) 设置当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
+
+ture：覆盖
+
+false：不覆盖（同时也不会释放热存数据）
+
+为空时，默认为false
  */
 class LifecycleRule extends AbstractModel
 {
@@ -75,6 +95,32 @@ class LifecycleRule extends AbstractModel
     public $FileMinSize;
 
     /**
+     * @var string 策略类型
+     */
+    public $PolicyType;
+
+    /**
+     * @var integer 阈值范围[10-90]
+     */
+    public $ExpireThreshold;
+
+    /**
+     * @var integer 阈值范围[10-90]
+     */
+    public $TargetThreshold;
+
+    /**
+     * @var boolean 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
+
+ture：覆盖
+
+false：不覆盖（同时也不会释放热存数据）
+
+为空时，默认为false
+     */
+    public $IsOverwrite;
+
+    /**
      * @param string $StorageType 数据转储后的存储类型。其中：InfrequentAccess：低频介质存储；ColdStorage：冷存储。
      * @param string $FileType 数据转储文件类型。其中，BIG_FILE：超大文件；STD_FILE：普通文件；SMALL_FILE：小文件；ALL：所有文件。
      * @param string $Action 数据转储行为。其中，Archive：沉降；Noarchive：不沉降。
@@ -84,6 +130,16 @@ class LifecycleRule extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileMinSize 数据转储文件最小规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PolicyType 策略类型
+     * @param integer $ExpireThreshold 阈值范围[10-90]
+     * @param integer $TargetThreshold 阈值范围[10-90]
+     * @param boolean $IsOverwrite 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
+
+ture：覆盖
+
+false：不覆盖（同时也不会释放热存数据）
+
+为空时，默认为false
      */
     function __construct()
     {
@@ -120,6 +176,22 @@ class LifecycleRule extends AbstractModel
 
         if (array_key_exists("FileMinSize",$param) and $param["FileMinSize"] !== null) {
             $this->FileMinSize = $param["FileMinSize"];
+        }
+
+        if (array_key_exists("PolicyType",$param) and $param["PolicyType"] !== null) {
+            $this->PolicyType = $param["PolicyType"];
+        }
+
+        if (array_key_exists("ExpireThreshold",$param) and $param["ExpireThreshold"] !== null) {
+            $this->ExpireThreshold = $param["ExpireThreshold"];
+        }
+
+        if (array_key_exists("TargetThreshold",$param) and $param["TargetThreshold"] !== null) {
+            $this->TargetThreshold = $param["TargetThreshold"];
+        }
+
+        if (array_key_exists("IsOverwrite",$param) and $param["IsOverwrite"] !== null) {
+            $this->IsOverwrite = $param["IsOverwrite"];
         }
     }
 }

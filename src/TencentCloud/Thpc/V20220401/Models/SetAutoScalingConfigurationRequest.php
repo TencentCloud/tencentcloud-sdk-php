@@ -20,66 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetAutoScalingConfiguration请求参数结构体
  *
- * @method string getClusterId() 获取集群ID。
- * @method void setClusterId(string $ClusterId) 设置集群ID。
- * @method integer getExpansionBusyTime() 获取任务连续等待时间，队列的任务处于连续等待的时间。单位秒。默认值120。
- * @method void setExpansionBusyTime(integer $ExpansionBusyTime) 设置任务连续等待时间，队列的任务处于连续等待的时间。单位秒。默认值120。
- * @method integer getShrinkIdleTime() 获取节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。单位秒。默认值300。
- * @method void setShrinkIdleTime(integer $ShrinkIdleTime) 设置节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。单位秒。默认值300。
- * @method array getQueueConfigs() 获取扩容队列配置列表。
- * @method void setQueueConfigs(array $QueueConfigs) 设置扩容队列配置列表。
- * @method boolean getDryRun() 获取是否只预检此次请求。
-true：发送检查请求，不会绑定弹性伸缩组。检查项包括是否填写了必需参数，请求格式，业务限制。
-如果检查不通过，则返回对应错误码；
-如果检查通过，则返回RequestId。
-false（默认）：发送正常请求，通过检查后直接绑定弹性伸缩组。
- * @method void setDryRun(boolean $DryRun) 设置是否只预检此次请求。
-true：发送检查请求，不会绑定弹性伸缩组。检查项包括是否填写了必需参数，请求格式，业务限制。
-如果检查不通过，则返回对应错误码；
-如果检查通过，则返回RequestId。
-false（默认）：发送正常请求，通过检查后直接绑定弹性伸缩组。
+ * @method string getClusterId() 获取<p>集群ID。</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID。</p>
+ * @method integer getExpansionBusyTime() 获取<p>任务连续等待时间，队列的任务处于连续等待的时间。单位秒。默认值120。</p>
+ * @method void setExpansionBusyTime(integer $ExpansionBusyTime) 设置<p>任务连续等待时间，队列的任务处于连续等待的时间。单位秒。默认值120。</p>
+ * @method integer getShrinkIdleTime() 获取<p>节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。单位秒。默认值300。</p>
+ * @method void setShrinkIdleTime(integer $ShrinkIdleTime) 设置<p>节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。单位秒。默认值300。</p>
+ * @method array getQueueConfigs() 获取<p>扩容队列配置列表。</p>
+ * @method void setQueueConfigs(array $QueueConfigs) 设置<p>扩容队列配置列表。</p>
+ * @method boolean getDryRun() 获取<p>是否只预检此次请求。<br>true：发送检查请求，不会绑定弹性伸缩组。检查项包括是否填写了必需参数，请求格式，业务限制。<br>如果检查不通过，则返回对应错误码；<br>如果检查通过，则返回RequestId。<br>false（默认）：发送正常请求，通过检查后直接绑定弹性伸缩组。</p>
+ * @method void setDryRun(boolean $DryRun) 设置<p>是否只预检此次请求。<br>true：发送检查请求，不会绑定弹性伸缩组。检查项包括是否填写了必需参数，请求格式，业务限制。<br>如果检查不通过，则返回对应错误码；<br>如果检查通过，则返回RequestId。<br>false（默认）：发送正常请求，通过检查后直接绑定弹性伸缩组。</p>
  */
 class SetAutoScalingConfigurationRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID。
+     * @var string <p>集群ID。</p>
      */
     public $ClusterId;
 
     /**
-     * @var integer 任务连续等待时间，队列的任务处于连续等待的时间。单位秒。默认值120。
+     * @var integer <p>任务连续等待时间，队列的任务处于连续等待的时间。单位秒。默认值120。</p>
      */
     public $ExpansionBusyTime;
 
     /**
-     * @var integer 节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。单位秒。默认值300。
+     * @var integer <p>节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。单位秒。默认值300。</p>
      */
     public $ShrinkIdleTime;
 
     /**
-     * @var array 扩容队列配置列表。
+     * @var array <p>扩容队列配置列表。</p>
      */
     public $QueueConfigs;
 
     /**
-     * @var boolean 是否只预检此次请求。
-true：发送检查请求，不会绑定弹性伸缩组。检查项包括是否填写了必需参数，请求格式，业务限制。
-如果检查不通过，则返回对应错误码；
-如果检查通过，则返回RequestId。
-false（默认）：发送正常请求，通过检查后直接绑定弹性伸缩组。
+     * @var boolean <p>是否只预检此次请求。<br>true：发送检查请求，不会绑定弹性伸缩组。检查项包括是否填写了必需参数，请求格式，业务限制。<br>如果检查不通过，则返回对应错误码；<br>如果检查通过，则返回RequestId。<br>false（默认）：发送正常请求，通过检查后直接绑定弹性伸缩组。</p>
      */
     public $DryRun;
 
     /**
-     * @param string $ClusterId 集群ID。
-     * @param integer $ExpansionBusyTime 任务连续等待时间，队列的任务处于连续等待的时间。单位秒。默认值120。
-     * @param integer $ShrinkIdleTime 节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。单位秒。默认值300。
-     * @param array $QueueConfigs 扩容队列配置列表。
-     * @param boolean $DryRun 是否只预检此次请求。
-true：发送检查请求，不会绑定弹性伸缩组。检查项包括是否填写了必需参数，请求格式，业务限制。
-如果检查不通过，则返回对应错误码；
-如果检查通过，则返回RequestId。
-false（默认）：发送正常请求，通过检查后直接绑定弹性伸缩组。
+     * @param string $ClusterId <p>集群ID。</p>
+     * @param integer $ExpansionBusyTime <p>任务连续等待时间，队列的任务处于连续等待的时间。单位秒。默认值120。</p>
+     * @param integer $ShrinkIdleTime <p>节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。单位秒。默认值300。</p>
+     * @param array $QueueConfigs <p>扩容队列配置列表。</p>
+     * @param boolean $DryRun <p>是否只预检此次请求。<br>true：发送检查请求，不会绑定弹性伸缩组。检查项包括是否填写了必需参数，请求格式，业务限制。<br>如果检查不通过，则返回对应错误码；<br>如果检查通过，则返回RequestId。<br>false（默认）：发送正常请求，通过检查后直接绑定弹性伸缩组。</p>
      */
     function __construct()
     {

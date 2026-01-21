@@ -68,6 +68,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method float getSendReceiveRatio() 获取控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
  * @method void setSendReceiveRatio(float $SendReceiveRatio) 设置控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
+ * @method integer getTpsLimit() 获取收发 TPS 峰值上限
+ * @method void setTpsLimit(integer $TpsLimit) 设置收发 TPS 峰值上限
+ * @method string getGeneralSkuCode() 获取通用集群规格
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGeneralSkuCode(string $GeneralSkuCode) 设置通用集群规格
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RocketMQInstanceConfig extends AbstractModel
 {
@@ -168,6 +174,17 @@ class RocketMQInstanceConfig extends AbstractModel
     public $SendReceiveRatio;
 
     /**
+     * @var integer 收发 TPS 峰值上限
+     */
+    public $TpsLimit;
+
+    /**
+     * @var string 通用集群规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GeneralSkuCode;
+
+    /**
      * @param integer $MaxTpsPerNamespace 单命名空间TPS上线
      * @param integer $MaxNamespaceNum 最大命名空间数量
      * @param integer $UsedNamespaceNum 已使用命名空间数量
@@ -192,6 +209,9 @@ class RocketMQInstanceConfig extends AbstractModel
      * @param integer $TopicNumUpperLimit Topic个数最大配额，默认为集群规格单节点最大配额*节点个数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $SendReceiveRatio 控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
+     * @param integer $TpsLimit 收发 TPS 峰值上限
+     * @param string $GeneralSkuCode 通用集群规格
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -286,6 +306,14 @@ class RocketMQInstanceConfig extends AbstractModel
 
         if (array_key_exists("SendReceiveRatio",$param) and $param["SendReceiveRatio"] !== null) {
             $this->SendReceiveRatio = $param["SendReceiveRatio"];
+        }
+
+        if (array_key_exists("TpsLimit",$param) and $param["TpsLimit"] !== null) {
+            $this->TpsLimit = $param["TpsLimit"];
+        }
+
+        if (array_key_exists("GeneralSkuCode",$param) and $param["GeneralSkuCode"] !== null) {
+            $this->GeneralSkuCode = $param["GeneralSkuCode"];
         }
     }
 }

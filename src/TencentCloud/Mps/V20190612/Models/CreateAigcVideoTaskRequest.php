@@ -48,6 +48,16 @@ GV。
 3. Vidu,可选[q2、q2-pro、q2-turbo]。
 4. GV, 可选[3.1]。
 5. OS，可选[2.0]。
+ * @method string getSceneType() 获取指定场景生视频。
+注意：仅部分模型支持指定场景。
+1. Kling支持动作控制，motion_control。
+2. Mingmou支持横转竖，land2port。
+3. Vidu支持特效模板，template_effect。
+ * @method void setSceneType(string $SceneType) 设置指定场景生视频。
+注意：仅部分模型支持指定场景。
+1. Kling支持动作控制，motion_control。
+2. Mingmou支持横转竖，land2port。
+3. Vidu支持特效模板，template_effect。
  * @method string getPrompt() 获取生成视频的描述。(注：最大支持2000字符)。当未传入图片时，此参数必填。
  * @method void setPrompt(string $Prompt) 设置生成视频的描述。(注：最大支持2000字符)。当未传入图片时，此参数必填。
  * @method string getNegativePrompt() 获取用于描述您想要阻止模型生成的内容。
@@ -162,6 +172,15 @@ GV。
     public $ModelVersion;
 
     /**
+     * @var string 指定场景生视频。
+注意：仅部分模型支持指定场景。
+1. Kling支持动作控制，motion_control。
+2. Mingmou支持横转竖，land2port。
+3. Vidu支持特效模板，template_effect。
+     */
+    public $SceneType;
+
+    /**
      * @var string 生成视频的描述。(注：最大支持2000字符)。当未传入图片时，此参数必填。
      */
     public $Prompt;
@@ -264,6 +283,11 @@ GV。
 3. Vidu,可选[q2、q2-pro、q2-turbo]。
 4. GV, 可选[3.1]。
 5. OS，可选[2.0]。
+     * @param string $SceneType 指定场景生视频。
+注意：仅部分模型支持指定场景。
+1. Kling支持动作控制，motion_control。
+2. Mingmou支持横转竖，land2port。
+3. Vidu支持特效模板，template_effect。
      * @param string $Prompt 生成视频的描述。(注：最大支持2000字符)。当未传入图片时，此参数必填。
      * @param string $NegativePrompt 用于描述您想要阻止模型生成的内容。
 注意：部分模型支持。
@@ -328,6 +352,10 @@ GV。
 
         if (array_key_exists("ModelVersion",$param) and $param["ModelVersion"] !== null) {
             $this->ModelVersion = $param["ModelVersion"];
+        }
+
+        if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
+            $this->SceneType = $param["SceneType"];
         }
 
         if (array_key_exists("Prompt",$param) and $param["Prompt"] !== null) {

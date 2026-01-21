@@ -78,6 +78,7 @@ https://cloud.tencent.com/document/product/1278/85305
  * @method Models\ModifyModelServiceAuthorizationResponse ModifyModelServiceAuthorization(Models\ModifyModelServiceAuthorizationRequest $req) 修改服务鉴权配置
  * @method Models\ModifyNotebookResponse ModifyNotebook(Models\ModifyNotebookRequest $req) 修改Notebook
  * @method Models\ModifyNotebookTagsResponse ModifyNotebookTags(Models\ModifyNotebookTagsRequest $req) 修改Notebook标签
+ * @method Models\ModifyServiceGroupWeightsResponse ModifyServiceGroupWeights(Models\ModifyServiceGroupWeightsRequest $req) 更新推理服务组流量分配
  * @method Models\PushTrainingMetricsResponse PushTrainingMetrics(Models\PushTrainingMetricsRequest $req) 上报训练自定义指标
  * @method Models\StartNotebookResponse StartNotebook(Models\StartNotebookRequest $req) 启动Notebook
  * @method Models\StartTrainingTaskResponse StartTrainingTask(Models\StartTrainingTaskRequest $req) 启动模型训练任务

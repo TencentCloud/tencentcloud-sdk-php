@@ -811,6 +811,7 @@ LimitTypes取值范围：
 如有需要, 可以封禁任意限速实例, 可接入到内部运营系统
  * @method Models\UpdateTrafficMirrorAllFilterResponse UpdateTrafficMirrorAllFilter(Models\UpdateTrafficMirrorAllFilterRequest $req) 本接口（UpdateTrafficMirrorAllFilter）用于更新流量镜像实例的过滤规则或者采集对象。
  * @method Models\UpdateTrafficMirrorDirectionResponse UpdateTrafficMirrorDirection(Models\UpdateTrafficMirrorDirectionRequest $req) 本接口（UpdateTrafficMirrorDirection）用于更新流量镜像实例的采集方向。
+ * @method Models\UpgradeNatGatewayProductVersionResponse UpgradeNatGatewayProductVersion(Models\UpgradeNatGatewayProductVersionRequest $req) 本接口（UpgradeNatGatewayProductVersion）用于升级NAT实例产品版本，将传统型NAT实例升级到标准型NAT。
  * @method Models\WithdrawNotifyRoutesResponse WithdrawNotifyRoutes(Models\WithdrawNotifyRoutesRequest $req) 本接口（WithdrawNotifyRoutes）用于撤销已发布到云联网的路由。路由表列表页操作增加“从云联网撤销”。
  */
 

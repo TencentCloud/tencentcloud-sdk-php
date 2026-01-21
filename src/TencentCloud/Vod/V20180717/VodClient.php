@@ -327,6 +327,9 @@ use TencentCloud\Vod\V20180717\Models as Models;
  * @method Models\HandleCurrentPlaylistResponse HandleCurrentPlaylist(Models\HandleCurrentPlaylistRequest $req) 操作轮播当前播放列表。支持的操作有：<li> Insert：向当前播列表插入播放节目。</li><li> Delete：删除播列表中的播放节目。</li>
  * @method Models\ImportMediaKnowledgeResponse ImportMediaKnowledge(Models\ImportMediaKnowledgeRequest $req) 用于将智能分析的结果导入到知识库中。
  * @method Models\InspectMediaQualityResponse InspectMediaQuality(Models\InspectMediaQualityRequest $req) 对点播中的音视频媒体发起音画质检测任务。
+ * @method Models\ListFilesResponse ListFiles(Models\ListFilesRequest $req) 用于列出子应用下存储的文件条目。
+
+**此API只在“FileID+Path模式”下可用**
  * @method Models\LiveRealTimeClipResponse LiveRealTimeClip(Models\LiveRealTimeClipRequest $req) 直播即时剪辑，是指在直播过程中（即直播尚未结束时），客户可以在过往直播内容中选择一段，实时生成一个新的视频（HLS 格式），开发者可以将其立即分享出去，或者长久保存起来。
 
 腾讯云点播支持两种即时剪辑模式：

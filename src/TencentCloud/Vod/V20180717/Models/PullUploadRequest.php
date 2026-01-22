@@ -57,7 +57,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSourceContext() 获取来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。
  * @method void setSourceContext(string $SourceContext) 设置来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。
  * @method string getMediaStoragePath() 获取媒体存储路径，以/开头。
+只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以指定存储路径。
  * @method void setMediaStoragePath(string $MediaStoragePath) 设置媒体存储路径，以/开头。
+只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以指定存储路径。
  */
 class PullUploadRequest extends AbstractModel
 {
@@ -137,6 +139,7 @@ class PullUploadRequest extends AbstractModel
 
     /**
      * @var string 媒体存储路径，以/开头。
+只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以指定存储路径。
      */
     public $MediaStoragePath;
 
@@ -160,6 +163,7 @@ class PullUploadRequest extends AbstractModel
      * @param string $ExtInfo 保留字段，特殊用途时使用。
      * @param string $SourceContext 来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。
      * @param string $MediaStoragePath 媒体存储路径，以/开头。
+只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以指定存储路径。
      */
     function __construct()
     {

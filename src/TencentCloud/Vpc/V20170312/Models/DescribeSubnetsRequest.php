@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(string $Offset) 设置偏移量，默认为0。
  * @method string getLimit() 获取返回数量，默认为20，最大值为100。
  * @method void setLimit(string $Limit) 设置返回数量，默认为20，最大值为100。
+ * @method integer getMaxResults() 获取每次调用返回的最大结果数。如果查询返回的时候有NextToken返回，您可以使用NextToken值获取更多页结果， 当NextToke返回空或者返回的结果数量小于MaxResults时，表示没有更多数据了。允许的最大页面大小为 100。
+ * @method void setMaxResults(integer $MaxResults) 设置每次调用返回的最大结果数。如果查询返回的时候有NextToken返回，您可以使用NextToken值获取更多页结果， 当NextToke返回空或者返回的结果数量小于MaxResults时，表示没有更多数据了。允许的最大页面大小为 100。
+ * @method string getNextToken() 获取如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。
+ * @method void setNextToken(string $NextToken) 设置如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。
  */
 class DescribeSubnetsRequest extends AbstractModel
 {
@@ -94,6 +98,16 @@ class DescribeSubnetsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var integer 每次调用返回的最大结果数。如果查询返回的时候有NextToken返回，您可以使用NextToken值获取更多页结果， 当NextToke返回空或者返回的结果数量小于MaxResults时，表示没有更多数据了。允许的最大页面大小为 100。
+     */
+    public $MaxResults;
+
+    /**
+     * @var string 如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。
+     */
+    public $NextToken;
+
+    /**
      * @param array $SubnetIds 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100（该参数指定的子网是否返回，需要结合分页拉取参数Limit和Offset）。参数不支持同时指定SubnetIds和Filters。
      * @param array $Filters 过滤条件，参数不支持同时指定SubnetIds和Filters。
 <li>subnet-id - String - （过滤条件）Subnet实例名称。</li>
@@ -112,6 +126,8 @@ class DescribeSubnetsRequest extends AbstractModel
 <li>address-type - String - （过滤条件）IPv6 Cidr 的类型，精确匹配。`GUA`(全球单播地址), `ULA`(唯一本地地址)。</li>
      * @param string $Offset 偏移量，默认为0。
      * @param string $Limit 返回数量，默认为20，最大值为100。
+     * @param integer $MaxResults 每次调用返回的最大结果数。如果查询返回的时候有NextToken返回，您可以使用NextToken值获取更多页结果， 当NextToke返回空或者返回的结果数量小于MaxResults时，表示没有更多数据了。允许的最大页面大小为 100。
+     * @param string $NextToken 如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。
      */
     function __construct()
     {
@@ -145,6 +161,14 @@ class DescribeSubnetsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("MaxResults",$param) and $param["MaxResults"] !== null) {
+            $this->MaxResults = $param["MaxResults"];
+        }
+
+        if (array_key_exists("NextToken",$param) and $param["NextToken"] !== null) {
+            $this->NextToken = $param["NextToken"];
         }
     }
 }

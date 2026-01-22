@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCallees(array $Callees) 设置被叫信息列表
  * @method integer getIvrId() 获取任务使用的IvrId
  * @method void setIvrId(integer $IvrId) 设置任务使用的IvrId
- * @method integer getState() 获取任务状态 0初始 1运行中 2已完成 3结束中 4已终止
- * @method void setState(integer $State) 设置任务状态 0初始 1运行中 2已完成 3结束中 4已终止
+ * @method integer getState() 获取任务状态 0初始 1运行中 2已完成 3结束中 4已终止 5已暂停
+ * @method void setState(integer $State) 设置任务状态 0初始 1运行中 2已完成 3结束中 4已终止 5已暂停
  * @method integer getMaxRingTimeoutSecond() 获取最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
  * @method void setMaxRingTimeoutSecond(integer $MaxRingTimeoutSecond) 设置最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -82,7 +82,7 @@ class DescribeAutoCalloutTaskResponse extends AbstractModel
     public $IvrId;
 
     /**
-     * @var integer 任务状态 0初始 1运行中 2已完成 3结束中 4已终止
+     * @var integer 任务状态 0初始 1运行中 2已完成 3结束中 4已终止 5已暂停
      */
     public $State;
 
@@ -105,7 +105,7 @@ class DescribeAutoCalloutTaskResponse extends AbstractModel
      * @param array $Callers 主叫列表
      * @param array $Callees 被叫信息列表
      * @param integer $IvrId 任务使用的IvrId
-     * @param integer $State 任务状态 0初始 1运行中 2已完成 3结束中 4已终止
+     * @param integer $State 任务状态 0初始 1运行中 2已完成 3结束中 4已终止 5已暂停
      * @param integer $MaxRingTimeoutSecond 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

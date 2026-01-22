@@ -80,6 +80,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(integer $GroupId) 设置伸缩组id
  * @method array getGraceDownLabel() 获取优雅缩容业务pod标签，当node不存在上述pod或超过优雅缩容时间时，缩容节点
  * @method void setGraceDownLabel(array $GraceDownLabel) 设置优雅缩容业务pod标签，当node不存在上述pod或超过优雅缩容时间时，缩容节点
+ * @method integer getGraceDownProtectTime() 获取任务保护时间
+ * @method void setGraceDownProtectTime(integer $GraceDownProtectTime) 设置任务保护时间
  */
 class TimeAutoScaleStrategy extends AbstractModel
 {
@@ -202,6 +204,11 @@ class TimeAutoScaleStrategy extends AbstractModel
     public $GraceDownLabel;
 
     /**
+     * @var integer 任务保护时间
+     */
+    public $GraceDownProtectTime;
+
+    /**
      * @param string $StrategyName 策略名字，集群内唯一。
      * @param integer $IntervalTime 策略触发后的冷却时间，该段时间内，将不能触发弹性扩缩容。
      * @param integer $ScaleAction 扩缩容动作，1表示扩容，2表示缩容。
@@ -232,6 +239,7 @@ class TimeAutoScaleStrategy extends AbstractModel
      * @param integer $CompensateFlag 补偿扩容，0表示不开启，1表示开启
      * @param integer $GroupId 伸缩组id
      * @param array $GraceDownLabel 优雅缩容业务pod标签，当node不存在上述pod或超过优雅缩容时间时，缩容节点
+     * @param integer $GraceDownProtectTime 任务保护时间
      */
     function __construct()
     {
@@ -343,6 +351,10 @@ class TimeAutoScaleStrategy extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->GraceDownLabel, $obj);
             }
+        }
+
+        if (array_key_exists("GraceDownProtectTime",$param) and $param["GraceDownProtectTime"] !== null) {
+            $this->GraceDownProtectTime = $param["GraceDownProtectTime"];
         }
     }
 }

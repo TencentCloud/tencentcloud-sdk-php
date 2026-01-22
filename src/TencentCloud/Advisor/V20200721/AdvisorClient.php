@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Advisor\V20200721\Models as Models;
 
 /**
+ * @method Models\CreateAdvisorAuthorizationResponse CreateAdvisorAuthorization(Models\CreateAdvisorAuthorizationRequest $req) 开启智能顾问授权。会同步开启报告解读和云架构协作权限
  * @method Models\DescribeStrategiesResponse DescribeStrategies(Models\DescribeStrategiesRequest $req) 用于查询评估项的信息
  * @method Models\DescribeTaskStrategyRisksResponse DescribeTaskStrategyRisks(Models\DescribeTaskStrategyRisksRequest $req) 查询评估项风险实例列表
  */

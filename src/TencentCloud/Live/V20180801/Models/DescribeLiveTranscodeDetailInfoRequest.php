@@ -20,98 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLiveTranscodeDetailInfo请求参数结构体
  *
- * @method string getPushDomain() 获取推流域名。
- * @method void setPushDomain(string $PushDomain) 设置推流域名。
- * @method string getStreamName() 获取流名称。
- * @method void setStreamName(string $StreamName) 设置流名称。
- * @method string getDayTime() 获取查询时间，北京时间，
-格式：yyyymmdd。
-注意：支持查询近1个月内某天的详细数据，截止到昨天。
- * @method void setDayTime(string $DayTime) 设置查询时间，北京时间，
-格式：yyyymmdd。
-注意：支持查询近1个月内某天的详细数据，截止到昨天。
- * @method integer getPageNum() 获取页数，默认1，
-不超过100页。
- * @method void setPageNum(integer $PageNum) 设置页数，默认1，
-不超过100页。
- * @method integer getPageSize() 获取每页个数，默认20，
-范围：[10,1000]。
- * @method void setPageSize(integer $PageSize) 设置每页个数，默认20，
-范围：[10,1000]。
- * @method string getStartDayTime() 获取起始天时间，北京时间，
-格式：yyyymmdd。
-注意：支持查询近1个月内的详细数据。
- * @method void setStartDayTime(string $StartDayTime) 设置起始天时间，北京时间，
-格式：yyyymmdd。
-注意：支持查询近1个月内的详细数据。
- * @method string getEndDayTime() 获取结束天时间，北京时间，
-格式：yyyymmdd。
-注意：支持查询近1个月内的详细数据，截止到昨天，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
- * @method void setEndDayTime(string $EndDayTime) 设置结束天时间，北京时间，
-格式：yyyymmdd。
-注意：支持查询近1个月内的详细数据，截止到昨天，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
+ * @method string getPushDomain() 获取<p>推流域名。</p>
+ * @method void setPushDomain(string $PushDomain) 设置<p>推流域名。</p>
+ * @method string getStreamName() 获取<p>流名称。</p>
+ * @method void setStreamName(string $StreamName) 设置<p>流名称。</p>
+ * @method string getDayTime() 获取<p>查询时间，北京时间，<br>格式：yyyymmdd。<br>注意：支持查询近1个月内某天的详细数据，截止到昨天。</p>
+ * @method void setDayTime(string $DayTime) 设置<p>查询时间，北京时间，<br>格式：yyyymmdd。<br>注意：支持查询近1个月内某天的详细数据，截止到昨天。</p>
+ * @method integer getPageNum() 获取<p>页数，默认1，<br>不超过100页。</p>
+ * @method void setPageNum(integer $PageNum) 设置<p>页数，默认1，<br>不超过100页。</p>
+ * @method integer getPageSize() 获取<p>每页个数，默认20，<br>范围：[10,1000]。</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页个数，默认20，<br>范围：[10,1000]。</p>
+ * @method string getStartDayTime() 获取<p>起始天时间，北京时间，<br>格式：yyyymmdd。<br>注意：支持查询近1个月内的详细数据。</p>
+ * @method void setStartDayTime(string $StartDayTime) 设置<p>起始天时间，北京时间，<br>格式：yyyymmdd。<br>注意：支持查询近1个月内的详细数据。</p>
+ * @method string getEndDayTime() 获取<p>结束天时间，北京时间，<br>格式：yyyymmdd。<br>注意：支持查询近1个月内的详细数据，截止到昨天，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。</p>
+ * @method void setEndDayTime(string $EndDayTime) 设置<p>结束天时间，北京时间，<br>格式：yyyymmdd。<br>注意：支持查询近1个月内的详细数据，截止到昨天，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。</p>
  */
 class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel
 {
     /**
-     * @var string 推流域名。
+     * @var string <p>推流域名。</p>
      */
     public $PushDomain;
 
     /**
-     * @var string 流名称。
+     * @var string <p>流名称。</p>
      */
     public $StreamName;
 
     /**
-     * @var string 查询时间，北京时间，
-格式：yyyymmdd。
-注意：支持查询近1个月内某天的详细数据，截止到昨天。
+     * @var string <p>查询时间，北京时间，<br>格式：yyyymmdd。<br>注意：支持查询近1个月内某天的详细数据，截止到昨天。</p>
      */
     public $DayTime;
 
     /**
-     * @var integer 页数，默认1，
-不超过100页。
+     * @var integer <p>页数，默认1，<br>不超过100页。</p>
      */
     public $PageNum;
 
     /**
-     * @var integer 每页个数，默认20，
-范围：[10,1000]。
+     * @var integer <p>每页个数，默认20，<br>范围：[10,1000]。</p>
      */
     public $PageSize;
 
     /**
-     * @var string 起始天时间，北京时间，
-格式：yyyymmdd。
-注意：支持查询近1个月内的详细数据。
+     * @var string <p>起始天时间，北京时间，<br>格式：yyyymmdd。<br>注意：支持查询近1个月内的详细数据。</p>
      */
     public $StartDayTime;
 
     /**
-     * @var string 结束天时间，北京时间，
-格式：yyyymmdd。
-注意：支持查询近1个月内的详细数据，截止到昨天，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
+     * @var string <p>结束天时间，北京时间，<br>格式：yyyymmdd。<br>注意：支持查询近1个月内的详细数据，截止到昨天，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。</p>
      */
     public $EndDayTime;
 
     /**
-     * @param string $PushDomain 推流域名。
-     * @param string $StreamName 流名称。
-     * @param string $DayTime 查询时间，北京时间，
-格式：yyyymmdd。
-注意：支持查询近1个月内某天的详细数据，截止到昨天。
-     * @param integer $PageNum 页数，默认1，
-不超过100页。
-     * @param integer $PageSize 每页个数，默认20，
-范围：[10,1000]。
-     * @param string $StartDayTime 起始天时间，北京时间，
-格式：yyyymmdd。
-注意：支持查询近1个月内的详细数据。
-     * @param string $EndDayTime 结束天时间，北京时间，
-格式：yyyymmdd。
-注意：支持查询近1个月内的详细数据，截止到昨天，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
+     * @param string $PushDomain <p>推流域名。</p>
+     * @param string $StreamName <p>流名称。</p>
+     * @param string $DayTime <p>查询时间，北京时间，<br>格式：yyyymmdd。<br>注意：支持查询近1个月内某天的详细数据，截止到昨天。</p>
+     * @param integer $PageNum <p>页数，默认1，<br>不超过100页。</p>
+     * @param integer $PageSize <p>每页个数，默认20，<br>范围：[10,1000]。</p>
+     * @param string $StartDayTime <p>起始天时间，北京时间，<br>格式：yyyymmdd。<br>注意：支持查询近1个月内的详细数据。</p>
+     * @param string $EndDayTime <p>结束天时间，北京时间，<br>格式：yyyymmdd。<br>注意：支持查询近1个月内的详细数据，截止到昨天，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。</p>
      */
     function __construct()
     {

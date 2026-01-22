@@ -40,12 +40,14 @@ use TencentCloud\Common\AbstractModel;
 2 已完成：任务中所有呼叫完成
 3结束中：任务到期，但仍有部分呼叫未结束
 4已结束：任务到期终止
+5已暂停：可恢复继续执行
  * @method void setState(integer $State) 设置任务状态：
 0初始：任务创建，呼叫未开始
 1运行中
 2 已完成：任务中所有呼叫完成
 3结束中：任务到期，但仍有部分呼叫未结束
 4已结束：任务到期终止
+5已暂停：可恢复继续执行
  * @method integer getTaskId() 获取任务Id
  * @method void setTaskId(integer $TaskId) 设置任务Id
  * @method integer getMaxRingTimeoutSecond() 获取最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
@@ -91,6 +93,7 @@ class AutoCalloutTaskInfo extends AbstractModel
 2 已完成：任务中所有呼叫完成
 3结束中：任务到期，但仍有部分呼叫未结束
 4已结束：任务到期终止
+5已暂停：可恢复继续执行
      */
     public $State;
 
@@ -118,6 +121,7 @@ class AutoCalloutTaskInfo extends AbstractModel
 2 已完成：任务中所有呼叫完成
 3结束中：任务到期，但仍有部分呼叫未结束
 4已结束：任务到期终止
+5已暂停：可恢复继续执行
      * @param integer $TaskId 任务Id
      * @param integer $MaxRingTimeoutSecond 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
      */

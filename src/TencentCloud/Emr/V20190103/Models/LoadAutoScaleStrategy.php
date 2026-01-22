@@ -84,6 +84,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(integer $GroupId) 设置伸缩组Id
  * @method string getSoft() 获取soft例如yarn
  * @method void setSoft(string $Soft) 设置soft例如yarn
+ * @method integer getGraceDownProtectTime() 获取任务保护时间
+ * @method void setGraceDownProtectTime(integer $GraceDownProtectTime) 设置任务保护时间
  */
 class LoadAutoScaleStrategy extends AbstractModel
 {
@@ -212,6 +214,11 @@ class LoadAutoScaleStrategy extends AbstractModel
     public $Soft;
 
     /**
+     * @var integer 任务保护时间
+     */
+    public $GraceDownProtectTime;
+
+    /**
      * @param integer $StrategyId 规则ID。
      * @param string $StrategyName 规则名称。
      * @param integer $CalmDownTime 规则生效冷却时间。
@@ -244,6 +251,7 @@ class LoadAutoScaleStrategy extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GroupId 伸缩组Id
      * @param string $Soft soft例如yarn
+     * @param integer $GraceDownProtectTime 任务保护时间
      */
     function __construct()
     {
@@ -354,6 +362,10 @@ class LoadAutoScaleStrategy extends AbstractModel
 
         if (array_key_exists("Soft",$param) and $param["Soft"] !== null) {
             $this->Soft = $param["Soft"];
+        }
+
+        if (array_key_exists("GraceDownProtectTime",$param) and $param["GraceDownProtectTime"] !== null) {
+            $this->GraceDownProtectTime = $param["GraceDownProtectTime"];
         }
     }
 }

@@ -56,8 +56,8 @@ tags=标签
 project =项目
 payerUin=支付者账号
 ownerUin=使用者账号
- * @method string getFeeType() 获取费用类型：cost-总费用，totalCost-原价费用
- * @method void setFeeType(string $FeeType) 设置费用类型：cost-总费用，totalCost-原价费用
+ * @method string getFeeType() 获取费用类型：cost-折后总费用，totalCost-原价费用
+ * @method void setFeeType(string $FeeType) 设置费用类型：cost-折后总费用，totalCost-原价费用
  * @method integer getPageSize() 获取数量，每页最大值为100
  * @method void setPageSize(integer $PageSize) 设置数量，每页最大值为100
  * @method integer getPageNo() 获取起始页，当PageNo=1表示第一页， PageNo=2表示第二页，依次类推。
@@ -110,7 +110,7 @@ ownerUin=使用者账号
     public $Dimensions;
 
     /**
-     * @var string 费用类型：cost-总费用，totalCost-原价费用
+     * @var string 费用类型：cost-折后总费用，totalCost-原价费用
      */
     public $FeeType;
 
@@ -158,7 +158,7 @@ tags=标签
 project =项目
 payerUin=支付者账号
 ownerUin=使用者账号
-     * @param string $FeeType 费用类型：cost-总费用，totalCost-原价费用
+     * @param string $FeeType 费用类型：cost-折后总费用，totalCost-原价费用
      * @param integer $PageSize 数量，每页最大值为100
      * @param integer $PageNo 起始页，当PageNo=1表示第一页， PageNo=2表示第二页，依次类推。
      * @param string $TagKeyStr 分账标签值

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AttachPolicy请求参数结构体
  *
- * @method integer getTargetId() 获取绑定策略目标ID。成员Uin或部门ID
- * @method void setTargetId(integer $TargetId) 设置绑定策略目标ID。成员Uin或部门ID
- * @method string getTargetType() 获取目标类型。取值范围：NODE-部门、MEMBER-成员
- * @method void setTargetType(string $TargetType) 设置目标类型。取值范围：NODE-部门、MEMBER-成员
- * @method integer getPolicyId() 获取策略ID。
- * @method void setPolicyId(integer $PolicyId) 设置策略ID。
- * @method string getType() 获取策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略
- * @method void setType(string $Type) 设置策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略
+ * @method integer getTargetId() 获取<p>绑定策略目标ID。成员Uin或部门ID</p>
+ * @method void setTargetId(integer $TargetId) 设置<p>绑定策略目标ID。成员Uin或部门ID</p>
+ * @method string getTargetType() 获取<p>目标类型。取值范围：NODE-部门、MEMBER-成员</p>
+ * @method void setTargetType(string $TargetType) 设置<p>目标类型。取值范围：NODE-部门、MEMBER-成员</p>
+ * @method integer getPolicyId() 获取<p>策略Id。可以调用<a href="https://cloud.tencent.com/document/product/850/105311">ListPolicies</a>获取</p>
+ * @method void setPolicyId(integer $PolicyId) 设置<p>策略Id。可以调用<a href="https://cloud.tencent.com/document/product/850/105311">ListPolicies</a>获取</p>
+ * @method string getType() 获取<p>策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略</p>
+ * @method void setType(string $Type) 设置<p>策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略</p>
  */
 class AttachPolicyRequest extends AbstractModel
 {
     /**
-     * @var integer 绑定策略目标ID。成员Uin或部门ID
+     * @var integer <p>绑定策略目标ID。成员Uin或部门ID</p>
      */
     public $TargetId;
 
     /**
-     * @var string 目标类型。取值范围：NODE-部门、MEMBER-成员
+     * @var string <p>目标类型。取值范围：NODE-部门、MEMBER-成员</p>
      */
     public $TargetType;
 
     /**
-     * @var integer 策略ID。
+     * @var integer <p>策略Id。可以调用<a href="https://cloud.tencent.com/document/product/850/105311">ListPolicies</a>获取</p>
      */
     public $PolicyId;
 
     /**
-     * @var string 策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略
+     * @var string <p>策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略</p>
      */
     public $Type;
 
     /**
-     * @param integer $TargetId 绑定策略目标ID。成员Uin或部门ID
-     * @param string $TargetType 目标类型。取值范围：NODE-部门、MEMBER-成员
-     * @param integer $PolicyId 策略ID。
-     * @param string $Type 策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略
+     * @param integer $TargetId <p>绑定策略目标ID。成员Uin或部门ID</p>
+     * @param string $TargetType <p>目标类型。取值范围：NODE-部门、MEMBER-成员</p>
+     * @param integer $PolicyId <p>策略Id。可以调用<a href="https://cloud.tencent.com/document/product/850/105311">ListPolicies</a>获取</p>
+     * @param string $Type <p>策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略</p>
      */
     function __construct()
     {

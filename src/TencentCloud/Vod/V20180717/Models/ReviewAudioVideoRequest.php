@@ -22,6 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileId() 获取媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
  * @method void setFileId(string $FileId) 设置媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
+ * @method string getMediaStoragePath() 获取媒体的存储路径。
+只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以通过MediaStoragePath发起任务。
+FileId和MediaStoragePath必须提供其中一个。
+ * @method void setMediaStoragePath(string $MediaStoragePath) 设置媒体的存储路径。
+只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以通过MediaStoragePath发起任务。
+FileId和MediaStoragePath必须提供其中一个。
  * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
  * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
  * @method array getReviewContents() 获取审核的内容，可选值有：
@@ -51,6 +57,13 @@ class ReviewAudioVideoRequest extends AbstractModel
      * @var string 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
      */
     public $FileId;
+
+    /**
+     * @var string 媒体的存储路径。
+只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以通过MediaStoragePath发起任务。
+FileId和MediaStoragePath必须提供其中一个。
+     */
+    public $MediaStoragePath;
 
     /**
      * @var integer <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
@@ -93,6 +106,9 @@ class ReviewAudioVideoRequest extends AbstractModel
 
     /**
      * @param string $FileId 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
+     * @param string $MediaStoragePath 媒体的存储路径。
+只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以通过MediaStoragePath发起任务。
+FileId和MediaStoragePath必须提供其中一个。
      * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      * @param array $ReviewContents 审核的内容，可选值有：
 <li>Media：原始音视频；</li>
@@ -120,6 +136,10 @@ class ReviewAudioVideoRequest extends AbstractModel
         }
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
             $this->FileId = $param["FileId"];
+        }
+
+        if (array_key_exists("MediaStoragePath",$param) and $param["MediaStoragePath"] !== null) {
+            $this->MediaStoragePath = $param["MediaStoragePath"];
         }
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {

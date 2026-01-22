@@ -38,9 +38,9 @@ use TencentCloud\Common\AbstractModel;
 如果不填默认值为空数组，表示不筛选，返回所有状态
  * @method void setAcceptStatus(array $AcceptStatus) 设置校验状态(1未校验2采纳3不采纳)
 如果不填默认值为空数组，表示不筛选，返回所有状态
- * @method array getReleaseStatus() 获取发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
+ * @method array getReleaseStatus() 获取发布状态(2,4导入成功 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
 如果不填默认值为空数组，表示不筛选返回所有状态
- * @method void setReleaseStatus(array $ReleaseStatus) 设置发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
+ * @method void setReleaseStatus(array $ReleaseStatus) 设置发布状态(2,4导入成功 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
 如果不填默认值为空数组，表示不筛选返回所有状态
  * @method string getDocBizId() 获取文档ID
  * @method void setDocBizId(string $DocBizId) 设置文档ID
@@ -60,8 +60,10 @@ use TencentCloud\Common\AbstractModel;
 如果不填默认值为"filename"
  * @method integer getShowCurrCate() 获取是否只展示当前分类的数据 0不是，1是
  * @method void setShowCurrCate(integer $ShowCurrCate) 设置是否只展示当前分类的数据 0不是，1是
- * @method integer getEnableScope() 获取// 知识生效作用域枚举值 enum RetrievalEnableScope {   ENABLE_SCOPE_TYPE_UNKNOWN = 0; // 未知类型   ENABLE_SCOPE_TYPE_NONE = 1; // 停用   ENABLE_SCOPE_TYPE_DEV = 2; // 仅开发域   ENABLE_SCOPE_TYPE_RELEASE = 3; // 仅发布域   ENABLE_SCOPE_TYPE_ALL = 4; // 全域 }  问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
- * @method void setEnableScope(integer $EnableScope) 设置// 知识生效作用域枚举值 enum RetrievalEnableScope {   ENABLE_SCOPE_TYPE_UNKNOWN = 0; // 未知类型   ENABLE_SCOPE_TYPE_NONE = 1; // 停用   ENABLE_SCOPE_TYPE_DEV = 2; // 仅开发域   ENABLE_SCOPE_TYPE_RELEASE = 3; // 仅发布域   ENABLE_SCOPE_TYPE_ALL = 4; // 全域 }  问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+ * @method integer getEnableScope() 获取问答生效域检索，不检索不传。枚举值如下：
+1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
+ * @method void setEnableScope(integer $EnableScope) 设置问答生效域检索，不检索不传。枚举值如下：
+1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
  */
 class ListQARequest extends AbstractModel
 {
@@ -95,7 +97,7 @@ class ListQARequest extends AbstractModel
     public $AcceptStatus;
 
     /**
-     * @var array 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
+     * @var array 发布状态(2,4导入成功 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
 如果不填默认值为空数组，表示不筛选返回所有状态
      */
     public $ReleaseStatus;
@@ -138,7 +140,8 @@ class ListQARequest extends AbstractModel
     public $ShowCurrCate;
 
     /**
-     * @var integer // 知识生效作用域枚举值 enum RetrievalEnableScope {   ENABLE_SCOPE_TYPE_UNKNOWN = 0; // 未知类型   ENABLE_SCOPE_TYPE_NONE = 1; // 停用   ENABLE_SCOPE_TYPE_DEV = 2; // 仅开发域   ENABLE_SCOPE_TYPE_RELEASE = 3; // 仅发布域   ENABLE_SCOPE_TYPE_ALL = 4; // 全域 }  问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * @var integer 问答生效域检索，不检索不传。枚举值如下：
+1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
      */
     public $EnableScope;
 
@@ -152,7 +155,7 @@ class ListQARequest extends AbstractModel
 输入特定标识 lke:system:untagged  将查询所有未关联标签的问答
      * @param array $AcceptStatus 校验状态(1未校验2采纳3不采纳)
 如果不填默认值为空数组，表示不筛选，返回所有状态
-     * @param array $ReleaseStatus 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
+     * @param array $ReleaseStatus 发布状态(2,4导入成功 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
 如果不填默认值为空数组，表示不筛选返回所有状态
      * @param string $DocBizId 文档ID
      * @param integer $Source 来源(1 文档生成 2 批量导入 3 手动添加)
@@ -163,7 +166,8 @@ class ListQARequest extends AbstractModel
      * @param string $QueryType 查询类型 filename 名称、 attribute 标签
 如果不填默认值为"filename"
      * @param integer $ShowCurrCate 是否只展示当前分类的数据 0不是，1是
-     * @param integer $EnableScope // 知识生效作用域枚举值 enum RetrievalEnableScope {   ENABLE_SCOPE_TYPE_UNKNOWN = 0; // 未知类型   ENABLE_SCOPE_TYPE_NONE = 1; // 停用   ENABLE_SCOPE_TYPE_DEV = 2; // 仅开发域   ENABLE_SCOPE_TYPE_RELEASE = 3; // 仅发布域   ENABLE_SCOPE_TYPE_ALL = 4; // 全域 }  问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * @param integer $EnableScope 问答生效域检索，不检索不传。枚举值如下：
+1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
      */
     function __construct()
     {

@@ -27,8 +27,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFileId() 获取媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
  * @method void setFileId(string $FileId) 设置媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
  * @method string getMediaStoragePath() 获取媒体的存储路径。
+只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以通过MediaStoragePath发起任务。
 FileId和MediaStoragePath必须提供其中一个。
  * @method void setMediaStoragePath(string $MediaStoragePath) 设置媒体的存储路径。
+只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以通过MediaStoragePath发起任务。
 FileId和MediaStoragePath必须提供其中一个。
  * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
  * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
@@ -56,6 +58,7 @@ class EnhanceMediaQualityRequest extends AbstractModel
 
     /**
      * @var string 媒体的存储路径。
+只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以通过MediaStoragePath发起任务。
 FileId和MediaStoragePath必须提供其中一个。
      */
     public $MediaStoragePath;
@@ -90,6 +93,7 @@ FileId和MediaStoragePath必须提供其中一个。
 针对典型的使用场景，云点播提供了多个[预置模板](https://cloud.tencent.com/document/product/266/102586#50604b3f-0286-4a10-a3f7-18218116aff7)。
      * @param string $FileId 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
      * @param string $MediaStoragePath 媒体的存储路径。
+只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以通过MediaStoragePath发起任务。
 FileId和MediaStoragePath必须提供其中一个。
      * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      * @param EnhanceMediaQualityOutputConfig $OutputConfig 音画质重生后的媒体文件配置。

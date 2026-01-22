@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
 
- * @method integer getStatus() 获取状态 <br>1-未校验  2-未发布 3-发布中 4-已发布  5-发布失败 6-不采纳 7-审核中  8-审核失败  9-审核失败申诉后人工审核中  11-审核失败申诉后人工审核不通过  12-已过期  13-超量失效  14-超量失效恢复 19-学习中  20-学习失败
- * @method void setStatus(integer $Status) 设置状态 <br>1-未校验  2-未发布 3-发布中 4-已发布  5-发布失败 6-不采纳 7-审核中  8-审核失败  9-审核失败申诉后人工审核中  11-审核失败申诉后人工审核不通过  12-已过期  13-超量失效  14-超量失效恢复 19-学习中  20-学习失败
+ * @method integer getStatus() 获取状态 <br>1-未校验  2,4-导入完成  5-发布失败 6-不采纳 7-审核中  8-审核失败  9-审核失败申诉后人工审核中  11-审核失败申诉后人工审核不通过  12-已过期  13-超量失效  14-超量失效恢复 19-学习中  20-学习失败
+ * @method void setStatus(integer $Status) 设置状态 <br>1-未校验  2,4-导入完成  5-发布失败 6-不采纳 7-审核中  8-审核失败  9-审核失败申诉后人工审核中  11-审核失败申诉后人工审核不通过  12-已过期  13-超量失效  14-超量失效恢复 19-学习中  20-学习失败
  * @method string getStatusDesc() 获取状态描述
 
  * @method void setStatusDesc(string $StatusDesc) 设置状态描述
@@ -172,7 +172,7 @@ class DescribeQAResponse extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var integer 状态 <br>1-未校验  2-未发布 3-发布中 4-已发布  5-发布失败 6-不采纳 7-审核中  8-审核失败  9-审核失败申诉后人工审核中  11-审核失败申诉后人工审核不通过  12-已过期  13-超量失效  14-超量失效恢复 19-学习中  20-学习失败
+     * @var integer 状态 <br>1-未校验  2,4-导入完成  5-发布失败 6-不采纳 7-审核中  8-审核失败  9-审核失败申诉后人工审核中  11-审核失败申诉后人工审核不通过  12-已过期  13-超量失效  14-超量失效恢复 19-学习中  20-学习失败
      */
     public $Status;
 
@@ -338,7 +338,7 @@ class DescribeQAResponse extends AbstractModel
 
      * @param string $UpdateTime 更新时间
 
-     * @param integer $Status 状态 <br>1-未校验  2-未发布 3-发布中 4-已发布  5-发布失败 6-不采纳 7-审核中  8-审核失败  9-审核失败申诉后人工审核中  11-审核失败申诉后人工审核不通过  12-已过期  13-超量失效  14-超量失效恢复 19-学习中  20-学习失败
+     * @param integer $Status 状态 <br>1-未校验  2,4-导入完成  5-发布失败 6-不采纳 7-审核中  8-审核失败  9-审核失败申诉后人工审核中  11-审核失败申诉后人工审核不通过  12-已过期  13-超量失效  14-超量失效恢复 19-学习中  20-学习失败
      * @param string $StatusDesc 状态描述
 
      * @param string $CateBizId 分类ID

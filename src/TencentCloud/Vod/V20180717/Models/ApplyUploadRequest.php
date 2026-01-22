@@ -45,7 +45,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getExtInfo() 获取保留字段，特殊用途时使用。
  * @method void setExtInfo(string $ExtInfo) 设置保留字段，特殊用途时使用。
  * @method string getMediaStoragePath() 获取媒体存储路径，以/开头。
+只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以指定存储路径。
  * @method void setMediaStoragePath(string $MediaStoragePath) 设置媒体存储路径，以/开头。
+只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以指定存储路径。
  */
 class ApplyUploadRequest extends AbstractModel
 {
@@ -107,6 +109,7 @@ class ApplyUploadRequest extends AbstractModel
 
     /**
      * @var string 媒体存储路径，以/开头。
+只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以指定存储路径。
      */
     public $MediaStoragePath;
 
@@ -124,6 +127,7 @@ class ApplyUploadRequest extends AbstractModel
      * @param string $SessionContext 会话上下文，用于透传用户请求信息，当指定 Procedure 参数后，[任务流状态变更回调](/document/product/266/9636) 将返回该字段值，最长 1000 个字符。
      * @param string $ExtInfo 保留字段，特殊用途时使用。
      * @param string $MediaStoragePath 媒体存储路径，以/开头。
+只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以指定存储路径。
      */
     function __construct()
     {

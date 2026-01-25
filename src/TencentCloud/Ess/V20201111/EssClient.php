@@ -1059,7 +1059,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 
 1. 该接口**仅适用于在H5端签署**的合同，**在通过视频认证后**获取人脸视频。
 2. 该接口**不支持小程序端**的签署人脸视频获取。
-3. 请在**签署完成后的三天内**获取人脸视频，**过期后将无法获取**。
+3. 请在**签署完成后的24小时内**获取人脸视频，**过期后将无法获取**。
 
 **注意：该接口需要开通白名单，请联系客户经理开通后使用。**
  * @method Models\DescribeSingleSignOnEmployeesResponse DescribeSingleSignOnEmployees(Models\DescribeSingleSignOnEmployeesRequest $req) 此接口（DescribeSingleSignOnEmployees）用于查询单点登录企业员工。

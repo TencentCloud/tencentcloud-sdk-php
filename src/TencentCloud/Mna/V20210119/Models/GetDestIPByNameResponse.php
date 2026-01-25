@@ -14,23 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Clb\V20180317\Models;
+namespace TencentCloud\Mna\V20210119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateTargetGroup返回参数结构体
+ * GetDestIPByName返回参数结构体
  *
- * @method string getTargetGroupId() 获取<p>创建目标组后生成的id</p>
- * @method void setTargetGroupId(string $TargetGroupId) 设置<p>创建目标组后生成的id</p>
+ * @method array getDestIpInfo() 获取目标IP信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDestIpInfo(array $DestIpInfo) 设置目标IP信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAccessRegion() 获取接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲
+ * @method void setAccessRegion(string $AccessRegion) 设置接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateTargetGroupResponse extends AbstractModel
+class GetDestIPByNameResponse extends AbstractModel
 {
     /**
-     * @var string <p>创建目标组后生成的id</p>
+     * @var array 目标IP信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TargetGroupId;
+    public $DestIpInfo;
+
+    /**
+     * @var string 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲
+     */
+    public $AccessRegion;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +48,9 @@ class CreateTargetGroupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TargetGroupId <p>创建目标组后生成的id</p>
+     * @param array $DestIpInfo 目标IP信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AccessRegion 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +66,17 @@ class CreateTargetGroupResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TargetGroupId",$param) and $param["TargetGroupId"] !== null) {
-            $this->TargetGroupId = $param["TargetGroupId"];
+        if (array_key_exists("DestIpInfo",$param) and $param["DestIpInfo"] !== null) {
+            $this->DestIpInfo = [];
+            foreach ($param["DestIpInfo"] as $key => $value){
+                $obj = new DestIpInfo();
+                $obj->deserialize($value);
+                array_push($this->DestIpInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("AccessRegion",$param) and $param["AccessRegion"] !== null) {
+            $this->AccessRegion = $param["AccessRegion"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

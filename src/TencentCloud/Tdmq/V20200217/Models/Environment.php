@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubscriptionExpirationTime(integer $SubscriptionExpirationTime) 设置离线订阅过期自动清理时间
  * @method boolean getSubscriptionExpirationTimeEnable() 获取离线订阅过期自动清理时间开关
  * @method void setSubscriptionExpirationTimeEnable(boolean $SubscriptionExpirationTimeEnable) 设置离线订阅过期自动清理时间开关
+ * @method array getTags() 获取命名空间标签
+ * @method void setTags(array $Tags) 设置命名空间标签
  */
 class Environment extends AbstractModel
 {
@@ -117,6 +119,11 @@ class Environment extends AbstractModel
     public $SubscriptionExpirationTimeEnable;
 
     /**
+     * @var array 命名空间标签
+     */
+    public $Tags;
+
+    /**
      * @param string $EnvironmentId 命名空间名称
      * @param string $Remark 说明
      * @param integer $MsgTTL 未消费消息过期时间，单位：秒，最大1296000（15天）
@@ -132,6 +139,7 @@ class Environment extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SubscriptionExpirationTime 离线订阅过期自动清理时间
      * @param boolean $SubscriptionExpirationTimeEnable 离线订阅过期自动清理时间开关
+     * @param array $Tags 命名空间标签
      */
     function __construct()
     {
@@ -193,6 +201,15 @@ class Environment extends AbstractModel
 
         if (array_key_exists("SubscriptionExpirationTimeEnable",$param) and $param["SubscriptionExpirationTimeEnable"] !== null) {
             $this->SubscriptionExpirationTimeEnable = $param["SubscriptionExpirationTimeEnable"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageNumber(integer $PageNumber) 设置页码，从1开始
  * @method integer getPageSize() 获取分页大小，最大500
  * @method void setPageSize(integer $PageSize) 设置分页大小，最大500
- * @method string getParentCatalogId() 获取父目录ID
- * @method void setParentCatalogId(string $ParentCatalogId) 设置父目录ID
+ * @method string getParentCatalogId() 获取父目录ID(此参数还未支持)
+ * @method void setParentCatalogId(string $ParentCatalogId) 设置父目录ID(此参数还未支持)
  */
 class ListCatalogRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ListCatalogRequest extends AbstractModel
     public $PageSize;
 
     /**
-     * @var string 父目录ID
+     * @var string 父目录ID(此参数还未支持)
      */
     public $ParentCatalogId;
 
     /**
      * @param integer $PageNumber 页码，从1开始
      * @param integer $PageSize 分页大小，最大500
-     * @param string $ParentCatalogId 父目录ID
+     * @param string $ParentCatalogId 父目录ID(此参数还未支持)
      */
     function __construct()
     {

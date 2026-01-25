@@ -20,134 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTargetGroup请求参数结构体
  *
- * @method string getTargetGroupName() 获取目标组名称，限定50个字符
- * @method void setTargetGroupName(string $TargetGroupName) 设置目标组名称，限定50个字符
- * @method string getVpcId() 获取目标组的vpcId属性，不填则使用默认vpc。
- * @method void setVpcId(string $VpcId) 设置目标组的vpcId属性，不填则使用默认vpc。
- * @method integer getPort() 获取目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。
-
- * @method void setPort(integer $Port) 设置目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。
-
- * @method array getTargetGroupInstances() 获取目标组绑定的后端服务器，单次最多支持50个。
- * @method void setTargetGroupInstances(array $TargetGroupInstances) 设置目标组绑定的后端服务器，单次最多支持50个。
- * @method string getType() 获取目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
- * @method void setType(string $Type) 设置目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
- * @method string getProtocol() 获取目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。
- * @method void setProtocol(string $Protocol) 设置目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。
- * @method TargetGroupHealthCheck getHealthCheck() 获取健康检查。
- * @method void setHealthCheck(TargetGroupHealthCheck $HealthCheck) 设置健康检查。
- * @method string getScheduleAlgorithm() 获取调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
-<ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur>
- * @method void setScheduleAlgorithm(string $ScheduleAlgorithm) 设置调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
-<ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur>
- * @method array getTags() 获取标签。
- * @method void setTags(array $Tags) 设置标签。
- * @method integer getWeight() 获取后端服务默认权重, 其中：
-<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul>
- * @method void setWeight(integer $Weight) 设置后端服务默认权重, 其中：
-<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul>
- * @method boolean getFullListenSwitch() 获取全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。
- * @method void setFullListenSwitch(boolean $FullListenSwitch) 设置全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。
- * @method boolean getKeepaliveEnable() 获取是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。
- * @method void setKeepaliveEnable(boolean $KeepaliveEnable) 设置是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。
- * @method integer getSessionExpireTime() 获取会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。
- * @method void setSessionExpireTime(integer $SessionExpireTime) 设置会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。
- * @method string getIpVersion() 获取IP版本类型。
- * @method void setIpVersion(string $IpVersion) 设置IP版本类型。
+ * @method string getTargetGroupName() 获取<p>目标组名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
+ * @method void setTargetGroupName(string $TargetGroupName) 设置<p>目标组名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
+ * @method string getVpcId() 获取<p>目标组的vpcId属性，不填则使用默认vpc。</p>
+ * @method void setVpcId(string $VpcId) 设置<p>目标组的vpcId属性，不填则使用默认vpc。</p>
+ * @method integer getPort() 获取<p>目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。</p>
+ * @method void setPort(integer $Port) 设置<p>目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。</p>
+ * @method array getTargetGroupInstances() 获取<p>目标组绑定的后端服务器，单次最多支持50个。</p>
+ * @method void setTargetGroupInstances(array $TargetGroupInstances) 设置<p>目标组绑定的后端服务器，单次最多支持50个。</p>
+ * @method string getType() 获取<p>目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。</p>
+ * @method void setType(string $Type) 设置<p>目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。</p>
+ * @method string getProtocol() 获取<p>目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。</p>
+ * @method void setProtocol(string $Protocol) 设置<p>目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。</p>
+ * @method TargetGroupHealthCheck getHealthCheck() 获取<p>健康检查。</p>
+ * @method void setHealthCheck(TargetGroupHealthCheck $HealthCheck) 设置<p>健康检查。</p>
+ * @method string getScheduleAlgorithm() 获取<p>调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：<br>&lt;ur&gt;<li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li>&lt;ur&gt;</p>
+ * @method void setScheduleAlgorithm(string $ScheduleAlgorithm) 设置<p>调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：<br>&lt;ur&gt;<li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li>&lt;ur&gt;</p>
+ * @method array getTags() 获取<p>标签。</p>
+ * @method void setTags(array $Tags) 设置<p>标签。</p>
+ * @method integer getWeight() 获取<p>后端服务默认权重, 其中：</p><ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul>
+ * @method void setWeight(integer $Weight) 设置<p>后端服务默认权重, 其中：</p><ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul>
+ * @method boolean getFullListenSwitch() 获取<p>全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。</p>
+ * @method void setFullListenSwitch(boolean $FullListenSwitch) 设置<p>全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。</p>
+ * @method boolean getKeepaliveEnable() 获取<p>是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。</p>
+ * @method void setKeepaliveEnable(boolean $KeepaliveEnable) 设置<p>是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。</p>
+ * @method integer getSessionExpireTime() 获取<p>会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。</p>
+ * @method void setSessionExpireTime(integer $SessionExpireTime) 设置<p>会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。</p>
+ * @method string getIpVersion() 获取<p>IP版本类型。</p>
+ * @method void setIpVersion(string $IpVersion) 设置<p>IP版本类型。</p>
+ * @method boolean getSnatEnable() 获取<p>是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时<code>透传客户端源IP</code>选项关闭，反之亦然。</p>
+ * @method void setSnatEnable(boolean $SnatEnable) 设置<p>是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时<code>透传客户端源IP</code>选项关闭，反之亦然。</p>
  */
 class CreateTargetGroupRequest extends AbstractModel
 {
     /**
-     * @var string 目标组名称，限定50个字符
+     * @var string <p>目标组名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
      */
     public $TargetGroupName;
 
     /**
-     * @var string 目标组的vpcId属性，不填则使用默认vpc。
+     * @var string <p>目标组的vpcId属性，不填则使用默认vpc。</p>
      */
     public $VpcId;
 
     /**
-     * @var integer 目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。
-
+     * @var integer <p>目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。</p>
      */
     public $Port;
 
     /**
-     * @var array 目标组绑定的后端服务器，单次最多支持50个。
+     * @var array <p>目标组绑定的后端服务器，单次最多支持50个。</p>
      */
     public $TargetGroupInstances;
 
     /**
-     * @var string 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
+     * @var string <p>目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。</p>
      */
     public $Type;
 
     /**
-     * @var string 目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。
+     * @var string <p>目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。</p>
      */
     public $Protocol;
 
     /**
-     * @var TargetGroupHealthCheck 健康检查。
+     * @var TargetGroupHealthCheck <p>健康检查。</p>
      */
     public $HealthCheck;
 
     /**
-     * @var string 调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
-<ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur>
+     * @var string <p>调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：<br>&lt;ur&gt;<li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li>&lt;ur&gt;</p>
      */
     public $ScheduleAlgorithm;
 
     /**
-     * @var array 标签。
+     * @var array <p>标签。</p>
      */
     public $Tags;
 
     /**
-     * @var integer 后端服务默认权重, 其中：
-<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul>
+     * @var integer <p>后端服务默认权重, 其中：</p><ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul>
      */
     public $Weight;
 
     /**
-     * @var boolean 全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。
+     * @var boolean <p>全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。</p>
      */
     public $FullListenSwitch;
 
     /**
-     * @var boolean 是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。
+     * @var boolean <p>是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。</p>
      */
     public $KeepaliveEnable;
 
     /**
-     * @var integer 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。
+     * @var integer <p>会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。</p>
      */
     public $SessionExpireTime;
 
     /**
-     * @var string IP版本类型。
+     * @var string <p>IP版本类型。</p>
      */
     public $IpVersion;
 
     /**
-     * @param string $TargetGroupName 目标组名称，限定50个字符
-     * @param string $VpcId 目标组的vpcId属性，不填则使用默认vpc。
-     * @param integer $Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。
+     * @var boolean <p>是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时<code>透传客户端源IP</code>选项关闭，反之亦然。</p>
+     */
+    public $SnatEnable;
 
-     * @param array $TargetGroupInstances 目标组绑定的后端服务器，单次最多支持50个。
-     * @param string $Type 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
-     * @param string $Protocol 目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。
-     * @param TargetGroupHealthCheck $HealthCheck 健康检查。
-     * @param string $ScheduleAlgorithm 调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
-<ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur>
-     * @param array $Tags 标签。
-     * @param integer $Weight 后端服务默认权重, 其中：
-<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul>
-     * @param boolean $FullListenSwitch 全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。
-     * @param boolean $KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。
-     * @param integer $SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。
-     * @param string $IpVersion IP版本类型。
+    /**
+     * @param string $TargetGroupName <p>目标组名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
+     * @param string $VpcId <p>目标组的vpcId属性，不填则使用默认vpc。</p>
+     * @param integer $Port <p>目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。</p>
+     * @param array $TargetGroupInstances <p>目标组绑定的后端服务器，单次最多支持50个。</p>
+     * @param string $Type <p>目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。</p>
+     * @param string $Protocol <p>目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。</p>
+     * @param TargetGroupHealthCheck $HealthCheck <p>健康检查。</p>
+     * @param string $ScheduleAlgorithm <p>调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：<br>&lt;ur&gt;<li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li>&lt;ur&gt;</p>
+     * @param array $Tags <p>标签。</p>
+     * @param integer $Weight <p>后端服务默认权重, 其中：</p><ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul>
+     * @param boolean $FullListenSwitch <p>全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。</p>
+     * @param boolean $KeepaliveEnable <p>是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。</p>
+     * @param integer $SessionExpireTime <p>会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。</p>
+     * @param string $IpVersion <p>IP版本类型。</p>
+     * @param boolean $SnatEnable <p>是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时<code>透传客户端源IP</code>选项关闭，反之亦然。</p>
      */
     function __construct()
     {
@@ -227,6 +223,10 @@ class CreateTargetGroupRequest extends AbstractModel
 
         if (array_key_exists("IpVersion",$param) and $param["IpVersion"] !== null) {
             $this->IpVersion = $param["IpVersion"];
+        }
+
+        if (array_key_exists("SnatEnable",$param) and $param["SnatEnable"] !== null) {
+            $this->SnatEnable = $param["SnatEnable"];
         }
     }
 }

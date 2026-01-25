@@ -44,6 +44,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorageSize(integer $StorageSize) 设置数据库存储大小
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDatasourceId() 获取数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatasourceId(integer $DatasourceId) 设置数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDatasourceType() 获取数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatasourceType(string $DatasourceType) 设置数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatabaseInfo extends AbstractModel
 {
@@ -84,6 +92,18 @@ class DatabaseInfo extends AbstractModel
     public $StorageSize;
 
     /**
+     * @var integer 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatasourceId;
+
+    /**
+     * @var string 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatasourceType;
+
+    /**
      * @param string $Guid 数据库GUID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 数据库名称
@@ -95,6 +115,10 @@ class DatabaseInfo extends AbstractModel
      * @param string $Location 数据库位置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StorageSize 数据库存储大小
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DatasourceId 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DatasourceType 数据源类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -132,6 +156,14 @@ class DatabaseInfo extends AbstractModel
 
         if (array_key_exists("StorageSize",$param) and $param["StorageSize"] !== null) {
             $this->StorageSize = $param["StorageSize"];
+        }
+
+        if (array_key_exists("DatasourceId",$param) and $param["DatasourceId"] !== null) {
+            $this->DatasourceId = $param["DatasourceId"];
+        }
+
+        if (array_key_exists("DatasourceType",$param) and $param["DatasourceType"] !== null) {
+            $this->DatasourceType = $param["DatasourceType"];
         }
     }
 }

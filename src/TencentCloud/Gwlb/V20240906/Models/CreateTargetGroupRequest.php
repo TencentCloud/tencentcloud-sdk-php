@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTargetGroup请求参数结构体
  *
- * @method string getTargetGroupName() 获取<p>目标组名称，限定60个字符。</p>
- * @method void setTargetGroupName(string $TargetGroupName) 设置<p>目标组名称，限定60个字符。</p>
+ * @method string getTargetGroupName() 获取<p>目标组名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
+ * @method void setTargetGroupName(string $TargetGroupName) 设置<p>目标组名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
  * @method string getVpcId() 获取<p>网关负载均衡后端目标组所属的网络 ID，如vpc-12345678，可以通过 <a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>  接口获取。 不填此参数则默认为DefaultVPC。</p>
  * @method void setVpcId(string $VpcId) 设置<p>网关负载均衡后端目标组所属的网络 ID，如vpc-12345678，可以通过 <a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>  接口获取。 不填此参数则默认为DefaultVPC。</p>
  * @method integer getPort() 获取<p>目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。</p>
  * @method void setPort(integer $Port) 设置<p>目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。</p>
  * @method array getTargetGroupInstances() 获取<p>目标组绑定的后端服务器</p>
  * @method void setTargetGroupInstances(array $TargetGroupInstances) 设置<p>目标组绑定的后端服务器</p>
- * @method string getProtocol() 获取<p>网关负载均衡目标组协议。- TENCENT_GENEVE ：GENEVE 标准协议- AWS_GENEVE：GENEVE 兼容协议</p>
- * @method void setProtocol(string $Protocol) 设置<p>网关负载均衡目标组协议。- TENCENT_GENEVE ：GENEVE 标准协议- AWS_GENEVE：GENEVE 兼容协议</p>
+ * @method string getProtocol() 获取<p>网关负载均衡目标组协议。</p><ul><li>TENCENT_GENEVE ：GENEVE 标准协议</li><li>AWS_GENEVE：GENEVE 兼容协议</li></ul>
+ * @method void setProtocol(string $Protocol) 设置<p>网关负载均衡目标组协议。</p><ul><li>TENCENT_GENEVE ：GENEVE 标准协议</li><li>AWS_GENEVE：GENEVE 兼容协议</li></ul>
  * @method TargetGroupHealthCheck getHealthCheck() 获取<p>健康检查设置。</p>
  * @method void setHealthCheck(TargetGroupHealthCheck $HealthCheck) 设置<p>健康检查设置。</p>
  * @method string getScheduleAlgorithm() 获取<p>均衡算法。</p><ul><li>IP_HASH_2_CONSISTENT：二元组一致性哈希</li><li>IP_HASH_3_CONSISTENT：三元组一致性哈希</li><li>IP_HASH_5_CONSISTENT：五元组一致性哈希</li></ul>
@@ -56,7 +56,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateTargetGroupRequest extends AbstractModel
 {
     /**
-     * @var string <p>目标组名称，限定60个字符。</p>
+     * @var string <p>目标组名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
      */
     public $TargetGroupName;
 
@@ -76,7 +76,7 @@ class CreateTargetGroupRequest extends AbstractModel
     public $TargetGroupInstances;
 
     /**
-     * @var string <p>网关负载均衡目标组协议。- TENCENT_GENEVE ：GENEVE 标准协议- AWS_GENEVE：GENEVE 兼容协议</p>
+     * @var string <p>网关负载均衡目标组协议。</p><ul><li>TENCENT_GENEVE ：GENEVE 标准协议</li><li>AWS_GENEVE：GENEVE 兼容协议</li></ul>
      */
     public $Protocol;
 
@@ -136,11 +136,11 @@ class CreateTargetGroupRequest extends AbstractModel
     public $RescheduleUnhealthyStartTime;
 
     /**
-     * @param string $TargetGroupName <p>目标组名称，限定60个字符。</p>
+     * @param string $TargetGroupName <p>目标组名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
      * @param string $VpcId <p>网关负载均衡后端目标组所属的网络 ID，如vpc-12345678，可以通过 <a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>  接口获取。 不填此参数则默认为DefaultVPC。</p>
      * @param integer $Port <p>目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。</p>
      * @param array $TargetGroupInstances <p>目标组绑定的后端服务器</p>
-     * @param string $Protocol <p>网关负载均衡目标组协议。- TENCENT_GENEVE ：GENEVE 标准协议- AWS_GENEVE：GENEVE 兼容协议</p>
+     * @param string $Protocol <p>网关负载均衡目标组协议。</p><ul><li>TENCENT_GENEVE ：GENEVE 标准协议</li><li>AWS_GENEVE：GENEVE 兼容协议</li></ul>
      * @param TargetGroupHealthCheck $HealthCheck <p>健康检查设置。</p>
      * @param string $ScheduleAlgorithm <p>均衡算法。</p><ul><li>IP_HASH_2_CONSISTENT：二元组一致性哈希</li><li>IP_HASH_3_CONSISTENT：三元组一致性哈希</li><li>IP_HASH_5_CONSISTENT：五元组一致性哈希</li></ul>
      * @param boolean $AllDeadToAlive <p>是否支持全死全活。默认支持。</p>

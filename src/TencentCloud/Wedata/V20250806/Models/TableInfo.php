@@ -60,6 +60,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessMetadata(BusinessMetadata $BusinessMetadata) 设置表的业务元数据
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCatalogName() 获取数据目录
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCatalogName(string $CatalogName) 设置数据目录
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDatasourceId() 获取数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatasourceId(integer $DatasourceId) 设置数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDatasourceType() 获取数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatasourceType(string $DatasourceType) 设置数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableInfo extends AbstractModel
 {
@@ -124,6 +136,24 @@ class TableInfo extends AbstractModel
     public $BusinessMetadata;
 
     /**
+     * @var string 数据目录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CatalogName;
+
+    /**
+     * @var integer 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatasourceId;
+
+    /**
+     * @var string 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatasourceType;
+
+    /**
      * @param string $Guid 数据表GUID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 数据表名称
@@ -143,6 +173,12 @@ class TableInfo extends AbstractModel
      * @param TechnicalMetadata $TechnicalMetadata 表的技术元数据
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessMetadata $BusinessMetadata 表的业务元数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CatalogName 数据目录
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DatasourceId 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DatasourceType 数据源类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -198,6 +234,18 @@ class TableInfo extends AbstractModel
         if (array_key_exists("BusinessMetadata",$param) and $param["BusinessMetadata"] !== null) {
             $this->BusinessMetadata = new BusinessMetadata();
             $this->BusinessMetadata->deserialize($param["BusinessMetadata"]);
+        }
+
+        if (array_key_exists("CatalogName",$param) and $param["CatalogName"] !== null) {
+            $this->CatalogName = $param["CatalogName"];
+        }
+
+        if (array_key_exists("DatasourceId",$param) and $param["DatasourceId"] !== null) {
+            $this->DatasourceId = $param["DatasourceId"];
+        }
+
+        if (array_key_exists("DatasourceType",$param) and $param["DatasourceType"] !== null) {
+            $this->DatasourceType = $param["DatasourceType"];
         }
     }
 }

@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Clb\V20180317\Models;
+namespace TencentCloud\Mna\V20210119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateTargetGroup返回参数结构体
+ * GetMonitorDataByName返回参数结构体
  *
- * @method string getTargetGroupId() 获取<p>创建目标组后生成的id</p>
- * @method void setTargetGroupId(string $TargetGroupId) 设置<p>创建目标组后生成的id</p>
+ * @method string getFilePath() 获取文件下载链接
+ * @method void setFilePath(string $FilePath) 设置文件下载链接
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateTargetGroupResponse extends AbstractModel
+class GetMonitorDataByNameResponse extends AbstractModel
 {
     /**
-     * @var string <p>创建目标组后生成的id</p>
+     * @var string 文件下载链接
      */
-    public $TargetGroupId;
+    public $FilePath;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class CreateTargetGroupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TargetGroupId <p>创建目标组后生成的id</p>
+     * @param string $FilePath 文件下载链接
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class CreateTargetGroupResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TargetGroupId",$param) and $param["TargetGroupId"] !== null) {
-            $this->TargetGroupId = $param["TargetGroupId"];
+        if (array_key_exists("FilePath",$param) and $param["FilePath"] !== null) {
+            $this->FilePath = $param["FilePath"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method InputFile3D getFile() 获取需进行组件生成的3D模型文件，仅支持FBX格式。
  * @method void setFile(InputFile3D $File) 设置需进行组件生成的3D模型文件，仅支持FBX格式。
+ * @method string getModel() 获取组件生成模型版本，默认为1.0，可选项：1.0，1.5；
+ * @method void setModel(string $Model) 设置组件生成模型版本，默认为1.0，可选项：1.0，1.5；
  */
 class SubmitHunyuan3DPartJobRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class SubmitHunyuan3DPartJobRequest extends AbstractModel
     public $File;
 
     /**
+     * @var string 组件生成模型版本，默认为1.0，可选项：1.0，1.5；
+     */
+    public $Model;
+
+    /**
      * @param InputFile3D $File 需进行组件生成的3D模型文件，仅支持FBX格式。
+     * @param string $Model 组件生成模型版本，默认为1.0，可选项：1.0，1.5；
      */
     function __construct()
     {
@@ -49,6 +57,10 @@ class SubmitHunyuan3DPartJobRequest extends AbstractModel
         if (array_key_exists("File",$param) and $param["File"] !== null) {
             $this->File = new InputFile3D();
             $this->File->deserialize($param["File"]);
+        }
+
+        if (array_key_exists("Model",$param) and $param["Model"] !== null) {
+            $this->Model = $param["Model"];
         }
     }
 }

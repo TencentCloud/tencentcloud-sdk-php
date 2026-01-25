@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
 - 30100：换装场景
  * @method AddOnParameter getAddOnParameter() 获取图片处理附加参数。
  * @method void setAddOnParameter(AddOnParameter $AddOnParameter) 设置图片处理附加参数。
+ * @method string getStdExtInfo() 获取图片处理拓展参数。
+ * @method void setStdExtInfo(string $StdExtInfo) 设置图片处理拓展参数。
  */
 class ProcessImageRequest extends AbstractModel
 {
@@ -123,6 +125,11 @@ class ProcessImageRequest extends AbstractModel
     public $AddOnParameter;
 
     /**
+     * @var string 图片处理拓展参数。
+     */
+    public $StdExtInfo;
+
+    /**
      * @param MediaInputInfo $InputInfo 图片处理的文件输入信息。
      * @param TaskOutputStorage $OutputStorage 图片处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
      * @param string $OutputDir 图片处理生成的文件输出的路径。如果不填表示与 InputInfo 中文件所在的目录一致。如果是目录，如`/image/201907/`，表示继承原文件名输出到该目录。
@@ -144,6 +151,7 @@ class ProcessImageRequest extends AbstractModel
 - 30010：图片扩展
 - 30100：换装场景
      * @param AddOnParameter $AddOnParameter 图片处理附加参数。
+     * @param string $StdExtInfo 图片处理拓展参数。
      */
     function __construct()
     {
@@ -196,6 +204,10 @@ class ProcessImageRequest extends AbstractModel
         if (array_key_exists("AddOnParameter",$param) and $param["AddOnParameter"] !== null) {
             $this->AddOnParameter = new AddOnParameter();
             $this->AddOnParameter->deserialize($param["AddOnParameter"]);
+        }
+
+        if (array_key_exists("StdExtInfo",$param) and $param["StdExtInfo"] !== null) {
+            $this->StdExtInfo = $param["StdExtInfo"];
         }
     }
 }

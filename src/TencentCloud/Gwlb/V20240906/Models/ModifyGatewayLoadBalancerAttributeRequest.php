@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyGatewayLoadBalancerAttribute请求参数结构体
  *
- * @method string getLoadBalancerId() 获取网关负载均衡的唯一ID。可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/api/1782/111683) 接口获取。
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置网关负载均衡的唯一ID。可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/api/1782/111683) 接口获取。
- * @method string getLoadBalancerName() 获取网关负载均衡实例名称。可支持输入1-60个字符。
- * @method void setLoadBalancerName(string $LoadBalancerName) 设置网关负载均衡实例名称。可支持输入1-60个字符。
- * @method boolean getDeleteProtect() 获取是否开启删除保护。
- * @method void setDeleteProtect(boolean $DeleteProtect) 设置是否开启删除保护。
+ * @method string getLoadBalancerId() 获取<p>网关负载均衡的唯一ID。可通过<a href="https://cloud.tencent.com/document/api/1782/111683">DescribeGatewayLoadBalancers</a> 接口获取。</p>
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置<p>网关负载均衡的唯一ID。可通过<a href="https://cloud.tencent.com/document/api/1782/111683">DescribeGatewayLoadBalancers</a> 接口获取。</p>
+ * @method string getLoadBalancerName() 获取<p>网关负载均衡实例名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
+ * @method void setLoadBalancerName(string $LoadBalancerName) 设置<p>网关负载均衡实例名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
+ * @method boolean getDeleteProtect() 获取<p>是否开启删除保护。</p>
+ * @method void setDeleteProtect(boolean $DeleteProtect) 设置<p>是否开启删除保护。</p>
  */
 class ModifyGatewayLoadBalancerAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 网关负载均衡的唯一ID。可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/api/1782/111683) 接口获取。
+     * @var string <p>网关负载均衡的唯一ID。可通过<a href="https://cloud.tencent.com/document/api/1782/111683">DescribeGatewayLoadBalancers</a> 接口获取。</p>
      */
     public $LoadBalancerId;
 
     /**
-     * @var string 网关负载均衡实例名称。可支持输入1-60个字符。
+     * @var string <p>网关负载均衡实例名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
      */
     public $LoadBalancerName;
 
     /**
-     * @var boolean 是否开启删除保护。
+     * @var boolean <p>是否开启删除保护。</p>
      */
     public $DeleteProtect;
 
     /**
-     * @param string $LoadBalancerId 网关负载均衡的唯一ID。可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/api/1782/111683) 接口获取。
-     * @param string $LoadBalancerName 网关负载均衡实例名称。可支持输入1-60个字符。
-     * @param boolean $DeleteProtect 是否开启删除保护。
+     * @param string $LoadBalancerId <p>网关负载均衡的唯一ID。可通过<a href="https://cloud.tencent.com/document/api/1782/111683">DescribeGatewayLoadBalancers</a> 接口获取。</p>
+     * @param string $LoadBalancerName <p>网关负载均衡实例名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
+     * @param boolean $DeleteProtect <p>是否开启删除保护。</p>
      */
     function __construct()
     {

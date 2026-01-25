@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxBandWidth(integer $MaxBandWidth) 设置峰值带宽。单位：mbps
  * @method integer getMaxNamespaces() 获取最大命名空间个数
  * @method void setMaxNamespaces(integer $MaxNamespaces) 设置最大命名空间个数
- * @method integer getMaxTopics() 获取最大主题分区数
- * @method void setMaxTopics(integer $MaxTopics) 设置最大主题分区数
+ * @method integer getMaxTopics() 获取可以创建的最大主题数
+ * @method void setMaxTopics(integer $MaxTopics) 设置可以创建的最大主题数
  * @method integer getScalableTps() 获取规格外弹性TPS
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScalableTps(integer $ScalableTps) 设置规格外弹性TPS
@@ -40,8 +40,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxPartitions(integer $MaxPartitions) 设置32或者128
 当前集群topic的最大分区数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxDelayedMessages() 获取商品最大延迟消息数量。0代表没有限制	
- * @method void setMaxDelayedMessages(integer $MaxDelayedMessages) 设置商品最大延迟消息数量。0代表没有限制	
+ * @method integer getMaxDelayedMessages() 获取最大延迟消息数量。0代表没有限制	
+ * @method void setMaxDelayedMessages(integer $MaxDelayedMessages) 设置最大延迟消息数量。0代表没有限制	
+ * @method integer getMaxTopicsPartitioned() 获取可以创建的最大主题分区数
+ * @method void setMaxTopicsPartitioned(integer $MaxTopicsPartitioned) 设置可以创建的最大主题分区数
+ * @method integer getBrokerMaxConnections() 获取单broker最大链接数
+ * @method void setBrokerMaxConnections(integer $BrokerMaxConnections) 设置单broker最大链接数
+ * @method integer getBrokerMaxConnectionsPerIp() 获取单IP最大链接数
+ * @method void setBrokerMaxConnectionsPerIp(integer $BrokerMaxConnectionsPerIp) 设置单IP最大链接数
+ * @method integer getMaximumElasticStorage() 获取弹性存储集群最大存储规格；固定存储该值为0
+ * @method void setMaximumElasticStorage(integer $MaximumElasticStorage) 设置弹性存储集群最大存储规格；固定存储该值为0
  */
 class PulsarProClusterSpecInfo extends AbstractModel
 {
@@ -66,7 +74,7 @@ class PulsarProClusterSpecInfo extends AbstractModel
     public $MaxNamespaces;
 
     /**
-     * @var integer 最大主题分区数
+     * @var integer 可以创建的最大主题数
      */
     public $MaxTopics;
 
@@ -84,22 +92,46 @@ class PulsarProClusterSpecInfo extends AbstractModel
     public $MaxPartitions;
 
     /**
-     * @var integer 商品最大延迟消息数量。0代表没有限制	
+     * @var integer 最大延迟消息数量。0代表没有限制	
      */
     public $MaxDelayedMessages;
+
+    /**
+     * @var integer 可以创建的最大主题分区数
+     */
+    public $MaxTopicsPartitioned;
+
+    /**
+     * @var integer 单broker最大链接数
+     */
+    public $BrokerMaxConnections;
+
+    /**
+     * @var integer 单IP最大链接数
+     */
+    public $BrokerMaxConnectionsPerIp;
+
+    /**
+     * @var integer 弹性存储集群最大存储规格；固定存储该值为0
+     */
+    public $MaximumElasticStorage;
 
     /**
      * @param string $SpecName 集群规格名称
      * @param integer $MaxTps 峰值tps
      * @param integer $MaxBandWidth 峰值带宽。单位：mbps
      * @param integer $MaxNamespaces 最大命名空间个数
-     * @param integer $MaxTopics 最大主题分区数
+     * @param integer $MaxTopics 可以创建的最大主题数
      * @param integer $ScalableTps 规格外弹性TPS
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxPartitions 32或者128
 当前集群topic的最大分区数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxDelayedMessages 商品最大延迟消息数量。0代表没有限制	
+     * @param integer $MaxDelayedMessages 最大延迟消息数量。0代表没有限制	
+     * @param integer $MaxTopicsPartitioned 可以创建的最大主题分区数
+     * @param integer $BrokerMaxConnections 单broker最大链接数
+     * @param integer $BrokerMaxConnectionsPerIp 单IP最大链接数
+     * @param integer $MaximumElasticStorage 弹性存储集群最大存储规格；固定存储该值为0
      */
     function __construct()
     {
@@ -144,6 +176,22 @@ class PulsarProClusterSpecInfo extends AbstractModel
 
         if (array_key_exists("MaxDelayedMessages",$param) and $param["MaxDelayedMessages"] !== null) {
             $this->MaxDelayedMessages = $param["MaxDelayedMessages"];
+        }
+
+        if (array_key_exists("MaxTopicsPartitioned",$param) and $param["MaxTopicsPartitioned"] !== null) {
+            $this->MaxTopicsPartitioned = $param["MaxTopicsPartitioned"];
+        }
+
+        if (array_key_exists("BrokerMaxConnections",$param) and $param["BrokerMaxConnections"] !== null) {
+            $this->BrokerMaxConnections = $param["BrokerMaxConnections"];
+        }
+
+        if (array_key_exists("BrokerMaxConnectionsPerIp",$param) and $param["BrokerMaxConnectionsPerIp"] !== null) {
+            $this->BrokerMaxConnectionsPerIp = $param["BrokerMaxConnectionsPerIp"];
+        }
+
+        if (array_key_exists("MaximumElasticStorage",$param) and $param["MaximumElasticStorage"] !== null) {
+            $this->MaximumElasticStorage = $param["MaximumElasticStorage"];
         }
     }
 }

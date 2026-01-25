@@ -120,6 +120,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVanityNameServersIps(array $VanityNameServersIps) 设置用户自定义 NS IP 信息。（该字段为历史保留字段，已不再维护，请根据站点类型参考对应字段）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getWorkModeInfos() 获取版本管理配置组工作模式。站点各配置模块可按照配置组维度开启「版本管理模式」或「即时生效模式」，详情请参考 [版本管理](https://cloud.tencent.com/document/product/1552/113690)。
+ * @method void setWorkModeInfos(array $WorkModeInfos) 设置版本管理配置组工作模式。站点各配置模块可按照配置组维度开启「版本管理模式」或「即时生效模式」，详情请参考 [版本管理](https://cloud.tencent.com/document/product/1552/113690)。
  */
 class Zone extends AbstractModel
 {
@@ -270,6 +272,11 @@ class Zone extends AbstractModel
     public $VanityNameServersIps;
 
     /**
+     * @var array 版本管理配置组工作模式。站点各配置模块可按照配置组维度开启「版本管理模式」或「即时生效模式」，详情请参考 [版本管理](https://cloud.tencent.com/document/product/1552/113690)。
+     */
+    public $WorkModeInfos;
+
+    /**
      * @param string $ZoneId 站点 ID。
      * @param string $ZoneName 站点名称。
      * @param string $AliasZoneName 同名站点标识。允许输入数字、英文、"." 、"-" 和 "_" 组合，长度 200 个字符以内。
@@ -320,6 +327,7 @@ class Zone extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VanityNameServersIps 用户自定义 NS IP 信息。（该字段为历史保留字段，已不再维护，请根据站点类型参考对应字段）
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $WorkModeInfos 版本管理配置组工作模式。站点各配置模块可按照配置组维度开启「版本管理模式」或「即时生效模式」，详情请参考 [版本管理](https://cloud.tencent.com/document/product/1552/113690)。
      */
     function __construct()
     {
@@ -447,6 +455,15 @@ class Zone extends AbstractModel
                 $obj = new VanityNameServersIps();
                 $obj->deserialize($value);
                 array_push($this->VanityNameServersIps, $obj);
+            }
+        }
+
+        if (array_key_exists("WorkModeInfos",$param) and $param["WorkModeInfos"] !== null) {
+            $this->WorkModeInfos = [];
+            foreach ($param["WorkModeInfos"] as $key => $value){
+                $obj = new ConfigGroupWorkModeInfo();
+                $obj->deserialize($value);
+                array_push($this->WorkModeInfos, $obj);
             }
         }
     }

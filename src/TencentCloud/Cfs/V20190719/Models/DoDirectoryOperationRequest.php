@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DoDirectoryOperation请求参数结构体
  *
- * @method string getFileSystemId() 获取文件系统Id
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统Id
+ * @method string getFileSystemId() 获取文件系统 ID。当前仅 Turbo 系列文件系统支持调用此接口，通用系列文件系统（含增强型）不支持调用。
+ * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID。当前仅 Turbo 系列文件系统支持调用此接口，通用系列文件系统（含增强型）不支持调用。
  * @method string getOpetationType() 获取create：创建目录，等同于mkdir。
 check：确认目录是否存在，等同于stat。
 move：对文件/目录进行重命名，等同于mv。
@@ -30,15 +30,15 @@ check：确认目录是否存在，等同于stat。
 move：对文件/目录进行重命名，等同于mv。
  * @method string getDirectoryPath() 获取目录的绝对路径  默认递归创建（即如果目录中有子目录不存在，则先创建出对应子目录）
  * @method void setDirectoryPath(string $DirectoryPath) 设置目录的绝对路径  默认递归创建（即如果目录中有子目录不存在，则先创建出对应子目录）
- * @method string getMode() 获取创建目录的权限，若不传，默认为0755  若Operation Type为check，此值无实际意义
- * @method void setMode(string $Mode) 设置创建目录的权限，若不传，默认为0755  若Operation Type为check，此值无实际意义
- * @method string getDestPath() 获取mv操作的目标目录名称；如果是turbo文件系统必须以/cfs/开头
- * @method void setDestPath(string $DestPath) 设置mv操作的目标目录名称；如果是turbo文件系统必须以/cfs/开头
+ * @method string getMode() 获取创建目录的权限，若不传，默认为0755。若OperationType为 check，此值无实际意义。
+ * @method void setMode(string $Mode) 设置创建目录的权限，若不传，默认为0755。若OperationType为 check，此值无实际意义。
+ * @method string getDestPath() 获取mv 操作的目标目录名称。路径必须以/cfs/开头
+ * @method void setDestPath(string $DestPath) 设置mv 操作的目标目录名称。路径必须以/cfs/开头
  */
 class DoDirectoryOperationRequest extends AbstractModel
 {
     /**
-     * @var string 文件系统Id
+     * @var string 文件系统 ID。当前仅 Turbo 系列文件系统支持调用此接口，通用系列文件系统（含增强型）不支持调用。
      */
     public $FileSystemId;
 
@@ -55,23 +55,23 @@ move：对文件/目录进行重命名，等同于mv。
     public $DirectoryPath;
 
     /**
-     * @var string 创建目录的权限，若不传，默认为0755  若Operation Type为check，此值无实际意义
+     * @var string 创建目录的权限，若不传，默认为0755。若OperationType为 check，此值无实际意义。
      */
     public $Mode;
 
     /**
-     * @var string mv操作的目标目录名称；如果是turbo文件系统必须以/cfs/开头
+     * @var string mv 操作的目标目录名称。路径必须以/cfs/开头
      */
     public $DestPath;
 
     /**
-     * @param string $FileSystemId 文件系统Id
+     * @param string $FileSystemId 文件系统 ID。当前仅 Turbo 系列文件系统支持调用此接口，通用系列文件系统（含增强型）不支持调用。
      * @param string $OpetationType create：创建目录，等同于mkdir。
 check：确认目录是否存在，等同于stat。
 move：对文件/目录进行重命名，等同于mv。
      * @param string $DirectoryPath 目录的绝对路径  默认递归创建（即如果目录中有子目录不存在，则先创建出对应子目录）
-     * @param string $Mode 创建目录的权限，若不传，默认为0755  若Operation Type为check，此值无实际意义
-     * @param string $DestPath mv操作的目标目录名称；如果是turbo文件系统必须以/cfs/开头
+     * @param string $Mode 创建目录的权限，若不传，默认为0755。若OperationType为 check，此值无实际意义。
+     * @param string $DestPath mv 操作的目标目录名称。路径必须以/cfs/开头
      */
     function __construct()
     {

@@ -20,90 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTargetGroupAttribute请求参数结构体
  *
- * @method string getTargetGroupId() 获取目标组的ID，可以通过[DescribeTargetGroups](https://cloud.tencent.com/document/product/214/40554)获取。
- * @method void setTargetGroupId(string $TargetGroupId) 设置目标组的ID，可以通过[DescribeTargetGroups](https://cloud.tencent.com/document/product/214/40554)获取。
- * @method string getTargetGroupName() 获取目标组的新名称。
- * @method void setTargetGroupName(string $TargetGroupName) 设置目标组的新名称。
- * @method TargetGroupHealthCheck getHealthCheck() 获取健康检查详情。
- * @method void setHealthCheck(TargetGroupHealthCheck $HealthCheck) 设置健康检查详情。
- * @method boolean getAllDeadToAlive() 获取是否支持全死全活。
- * @method void setAllDeadToAlive(boolean $AllDeadToAlive) 设置是否支持全死全活。
- * @method integer getTcpIdleConnectTimeout() 获取TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。
- * @method void setTcpIdleConnectTimeout(integer $TcpIdleConnectTimeout) 设置TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。
- * @method integer getOthersIdleConnectTimeout() 获取其他协议连接空闲超时时间，可配置5s-180s，默认120s
- * @method void setOthersIdleConnectTimeout(integer $OthersIdleConnectTimeout) 设置其他协议连接空闲超时时间，可配置5s-180s，默认120s
- * @method boolean getRescheduleUnbindRs() 获取重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。
- * @method void setRescheduleUnbindRs(boolean $RescheduleUnbindRs) 设置重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。
- * @method integer getRescheduleUnbindRsStartTime() 获取解绑RS后开启重调度的时间，可配置0s-3600s，默认0s
- * @method void setRescheduleUnbindRsStartTime(integer $RescheduleUnbindRsStartTime) 设置解绑RS后开启重调度的时间，可配置0s-3600s，默认0s
- * @method boolean getRescheduleUnhealthy() 获取重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。
- * @method void setRescheduleUnhealthy(boolean $RescheduleUnhealthy) 设置重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。
- * @method integer getRescheduleUnhealthyStartTime() 获取后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s
- * @method void setRescheduleUnhealthyStartTime(integer $RescheduleUnhealthyStartTime) 设置后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s
+ * @method string getTargetGroupId() 获取<p>目标组的ID，可以通过<a href="https://cloud.tencent.com/document/product/214/40554">DescribeTargetGroups</a>获取。</p>
+ * @method void setTargetGroupId(string $TargetGroupId) 设置<p>目标组的ID，可以通过<a href="https://cloud.tencent.com/document/product/214/40554">DescribeTargetGroups</a>获取。</p>
+ * @method string getTargetGroupName() 获取<p>目标组的新名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
+ * @method void setTargetGroupName(string $TargetGroupName) 设置<p>目标组的新名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
+ * @method TargetGroupHealthCheck getHealthCheck() 获取<p>健康检查详情。</p>
+ * @method void setHealthCheck(TargetGroupHealthCheck $HealthCheck) 设置<p>健康检查详情。</p>
+ * @method boolean getAllDeadToAlive() 获取<p>是否支持全死全活。</p>
+ * @method void setAllDeadToAlive(boolean $AllDeadToAlive) 设置<p>是否支持全死全活。</p>
+ * @method integer getTcpIdleConnectTimeout() 获取<p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p>
+ * @method void setTcpIdleConnectTimeout(integer $TcpIdleConnectTimeout) 设置<p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p>
+ * @method integer getOthersIdleConnectTimeout() 获取<p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p>
+ * @method void setOthersIdleConnectTimeout(integer $OthersIdleConnectTimeout) 设置<p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p>
+ * @method boolean getRescheduleUnbindRs() 获取<p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p>
+ * @method void setRescheduleUnbindRs(boolean $RescheduleUnbindRs) 设置<p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p>
+ * @method integer getRescheduleUnbindRsStartTime() 获取<p>解绑RS后开启重调度的时间，可配置0s-3600s，默认0s</p>
+ * @method void setRescheduleUnbindRsStartTime(integer $RescheduleUnbindRsStartTime) 设置<p>解绑RS后开启重调度的时间，可配置0s-3600s，默认0s</p>
+ * @method boolean getRescheduleUnhealthy() 获取<p>重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。</p>
+ * @method void setRescheduleUnhealthy(boolean $RescheduleUnhealthy) 设置<p>重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。</p>
+ * @method integer getRescheduleUnhealthyStartTime() 获取<p>后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s</p>
+ * @method void setRescheduleUnhealthyStartTime(integer $RescheduleUnhealthyStartTime) 设置<p>后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s</p>
  */
 class ModifyTargetGroupAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 目标组的ID，可以通过[DescribeTargetGroups](https://cloud.tencent.com/document/product/214/40554)获取。
+     * @var string <p>目标组的ID，可以通过<a href="https://cloud.tencent.com/document/product/214/40554">DescribeTargetGroups</a>获取。</p>
      */
     public $TargetGroupId;
 
     /**
-     * @var string 目标组的新名称。
+     * @var string <p>目标组的新名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
      */
     public $TargetGroupName;
 
     /**
-     * @var TargetGroupHealthCheck 健康检查详情。
+     * @var TargetGroupHealthCheck <p>健康检查详情。</p>
      */
     public $HealthCheck;
 
     /**
-     * @var boolean 是否支持全死全活。
+     * @var boolean <p>是否支持全死全活。</p>
      */
     public $AllDeadToAlive;
 
     /**
-     * @var integer TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。
+     * @var integer <p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p>
      */
     public $TcpIdleConnectTimeout;
 
     /**
-     * @var integer 其他协议连接空闲超时时间，可配置5s-180s，默认120s
+     * @var integer <p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p>
      */
     public $OthersIdleConnectTimeout;
 
     /**
-     * @var boolean 重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。
+     * @var boolean <p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p>
      */
     public $RescheduleUnbindRs;
 
     /**
-     * @var integer 解绑RS后开启重调度的时间，可配置0s-3600s，默认0s
+     * @var integer <p>解绑RS后开启重调度的时间，可配置0s-3600s，默认0s</p>
      */
     public $RescheduleUnbindRsStartTime;
 
     /**
-     * @var boolean 重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。
+     * @var boolean <p>重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。</p>
      */
     public $RescheduleUnhealthy;
 
     /**
-     * @var integer 后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s
+     * @var integer <p>后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s</p>
      */
     public $RescheduleUnhealthyStartTime;
 
     /**
-     * @param string $TargetGroupId 目标组的ID，可以通过[DescribeTargetGroups](https://cloud.tencent.com/document/product/214/40554)获取。
-     * @param string $TargetGroupName 目标组的新名称。
-     * @param TargetGroupHealthCheck $HealthCheck 健康检查详情。
-     * @param boolean $AllDeadToAlive 是否支持全死全活。
-     * @param integer $TcpIdleConnectTimeout TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。
-     * @param integer $OthersIdleConnectTimeout 其他协议连接空闲超时时间，可配置5s-180s，默认120s
-     * @param boolean $RescheduleUnbindRs 重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。
-     * @param integer $RescheduleUnbindRsStartTime 解绑RS后开启重调度的时间，可配置0s-3600s，默认0s
-     * @param boolean $RescheduleUnhealthy 重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。
-     * @param integer $RescheduleUnhealthyStartTime 后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s
+     * @param string $TargetGroupId <p>目标组的ID，可以通过<a href="https://cloud.tencent.com/document/product/214/40554">DescribeTargetGroups</a>获取。</p>
+     * @param string $TargetGroupName <p>目标组的新名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
+     * @param TargetGroupHealthCheck $HealthCheck <p>健康检查详情。</p>
+     * @param boolean $AllDeadToAlive <p>是否支持全死全活。</p>
+     * @param integer $TcpIdleConnectTimeout <p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p>
+     * @param integer $OthersIdleConnectTimeout <p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p>
+     * @param boolean $RescheduleUnbindRs <p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p>
+     * @param integer $RescheduleUnbindRsStartTime <p>解绑RS后开启重调度的时间，可配置0s-3600s，默认0s</p>
+     * @param boolean $RescheduleUnhealthy <p>重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。</p>
+     * @param integer $RescheduleUnhealthyStartTime <p>后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s</p>
      */
     function __construct()
     {

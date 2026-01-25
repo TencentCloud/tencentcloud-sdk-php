@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderByType(string $OrderByType) 设置排序类型，取值范围：
 <li> ASC：升序排序 </li>
 <li> DESC：降序排序 </li>
- * @method array getFilters() 获取搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
- * @method void setFilters(array $Filters) 设置搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
+ * @method array getFilters() 获取搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。目前支持的搜索字段：Status、ProxyNodeId、ClusterId、OssProxyNodeName。
+ * @method void setFilters(array $Filters) 设置搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。目前支持的搜索字段：Status、ProxyNodeId、ClusterId、OssProxyNodeName。
  */
 class DescribeProxyNodesRequest extends AbstractModel
 {
@@ -66,7 +66,7 @@ class DescribeProxyNodesRequest extends AbstractModel
     public $OrderByType;
 
     /**
-     * @var array 搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
+     * @var array 搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。目前支持的搜索字段：Status、ProxyNodeId、ClusterId、OssProxyNodeName。
      */
     public $Filters;
 
@@ -79,7 +79,7 @@ class DescribeProxyNodesRequest extends AbstractModel
      * @param string $OrderByType 排序类型，取值范围：
 <li> ASC：升序排序 </li>
 <li> DESC：降序排序 </li>
-     * @param array $Filters 搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
+     * @param array $Filters 搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。目前支持的搜索字段：Status、ProxyNodeId、ClusterId、OssProxyNodeName。
      */
     function __construct()
     {

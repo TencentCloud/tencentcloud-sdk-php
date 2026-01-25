@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAckTimeOut(integer $AckTimeOut) 设置消费者 Ack 超时时间，单位：秒，范围60-（3600*24）
  * @method integer getPulsarTopicMessageType() 获取Pulsar主题消息类型0: 混合消息1:普通消息2:延迟消息
  * @method void setPulsarTopicMessageType(integer $PulsarTopicMessageType) 设置Pulsar主题消息类型0: 混合消息1:普通消息2:延迟消息
+ * @method array getTags() 获取主题标签
+ * @method void setTags(array $Tags) 设置主题标签
+ * @method string getDelayMessagePolicy() 获取defaultPolicy/timingwheelPolicy不传默认是社区版本延迟消息策略
+ * @method void setDelayMessagePolicy(string $DelayMessagePolicy) 设置defaultPolicy/timingwheelPolicy不传默认是社区版本延迟消息策略
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -135,6 +139,16 @@ class CreateTopicRequest extends AbstractModel
     public $PulsarTopicMessageType;
 
     /**
+     * @var array 主题标签
+     */
+    public $Tags;
+
+    /**
+     * @var string defaultPolicy/timingwheelPolicy不传默认是社区版本延迟消息策略
+     */
+    public $DelayMessagePolicy;
+
+    /**
      * @param string $EnvironmentId 环境（命名空间）名称。
      * @param string $TopicName 主题名，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
      * @param integer $Partitions 入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过32。
@@ -156,6 +170,8 @@ class CreateTopicRequest extends AbstractModel
      * @param boolean $IsolateConsumerEnable 是否开启异常消费者隔离
      * @param integer $AckTimeOut 消费者 Ack 超时时间，单位：秒，范围60-（3600*24）
      * @param integer $PulsarTopicMessageType Pulsar主题消息类型0: 混合消息1:普通消息2:延迟消息
+     * @param array $Tags 主题标签
+     * @param string $DelayMessagePolicy defaultPolicy/timingwheelPolicy不传默认是社区版本延迟消息策略
      */
     function __construct()
     {
@@ -216,6 +232,19 @@ class CreateTopicRequest extends AbstractModel
 
         if (array_key_exists("PulsarTopicMessageType",$param) and $param["PulsarTopicMessageType"] !== null) {
             $this->PulsarTopicMessageType = $param["PulsarTopicMessageType"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("DelayMessagePolicy",$param) and $param["DelayMessagePolicy"] !== null) {
+            $this->DelayMessagePolicy = $param["DelayMessagePolicy"];
         }
     }
 }

@@ -34,6 +34,7 @@ use TencentCloud\Mna\V20210119\Models as Models;
  * @method Models\DeleteL3ConnResponse DeleteL3Conn(Models\DeleteL3ConnRequest $req) 删除互通规则
  * @method Models\DownloadActiveDeviceCountResponse DownloadActiveDeviceCount(Models\DownloadActiveDeviceCountRequest $req) 下载活跃设备数量统计
  * @method Models\GetActiveDeviceCountResponse GetActiveDeviceCount(Models\GetActiveDeviceCountRequest $req) 活跃设备数量统计
+ * @method Models\GetDestIPByNameResponse GetDestIPByName(Models\GetDestIPByNameRequest $req) 统计单个设备访问目标IP地址信息
  * @method Models\GetDeviceResponse GetDevice(Models\GetDeviceRequest $req) 通过指定设备的ID查找设备详细信息
  * @method Models\GetDevicePayModeResponse GetDevicePayMode(Models\GetDevicePayModeRequest $req) 获取设备付费模式
  * @method Models\GetDevicesResponse GetDevices(Models\GetDevicesRequest $req) 获取设备信息列表
@@ -41,15 +42,19 @@ use TencentCloud\Mna\V20210119\Models as Models;
  * @method Models\GetFlowPackagesResponse GetFlowPackages(Models\GetFlowPackagesRequest $req) 获取流量包列表
  * @method Models\GetFlowStatisticResponse GetFlowStatistic(Models\GetFlowStatisticRequest $req) 获取指定设备Id，指定时间点数据流量使用情况
  * @method Models\GetFlowStatisticByGroupResponse GetFlowStatisticByGroup(Models\GetFlowStatisticByGroupRequest $req) 获取指定分组，指定时间数据流量使用情况
+ * @method Models\GetFlowStatisticByNameResponse GetFlowStatisticByName(Models\GetFlowStatisticByNameRequest $req) 获取指定设备Id，指定时间点数据流量使用情况
  * @method Models\GetFlowStatisticByRegionResponse GetFlowStatisticByRegion(Models\GetFlowStatisticByRegionRequest $req) 获取指定区域，指定时间点数据流量使用情况
  * @method Models\GetGroupDetailResponse GetGroupDetail(Models\GetGroupDetailRequest $req) 查看分组详细信息
  * @method Models\GetGroupListResponse GetGroupList(Models\GetGroupListRequest $req) 获取分组列表
  * @method Models\GetHardwareListResponse GetHardwareList(Models\GetHardwareListRequest $req) 获取厂商硬件列表
  * @method Models\GetL3ConnListResponse GetL3ConnList(Models\GetL3ConnListRequest $req) 获取互通规则列表
+ * @method Models\GetMonitorDataByNameResponse GetMonitorDataByName(Models\GetMonitorDataByNameRequest $req) 获取单个设备所有监控指标的下载文件链接
  * @method Models\GetMultiFlowStatisticResponse GetMultiFlowStatistic(Models\GetMultiFlowStatisticRequest $req) 批量获取设备流量统计曲线
  * @method Models\GetNetMonitorResponse GetNetMonitor(Models\GetNetMonitorRequest $req) 获取单设备的实时流量统计指标
+ * @method Models\GetNetMonitorByNameResponse GetNetMonitorByName(Models\GetNetMonitorByNameRequest $req) 获取单设备的实时流量统计指标
  * @method Models\GetPublicKeyResponse GetPublicKey(Models\GetPublicKeyRequest $req) 获取公钥用于验签
  * @method Models\GetStatisticDataResponse GetStatisticData(Models\GetStatisticDataRequest $req) 在用量统计页面下载流量数据
+ * @method Models\GetStatisticDataByNameResponse GetStatisticDataByName(Models\GetStatisticDataByNameRequest $req) 在用量统计页面下载流量数据
  * @method Models\GetVendorHardwareResponse GetVendorHardware(Models\GetVendorHardwareRequest $req) 获取厂商硬件设备列表
  * @method Models\GroupAddDeviceResponse GroupAddDevice(Models\GroupAddDeviceRequest $req) 向已存在分组中添加设备
  * @method Models\GroupDeleteDeviceResponse GroupDeleteDevice(Models\GroupDeleteDeviceRequest $req) 删除分组中的设备

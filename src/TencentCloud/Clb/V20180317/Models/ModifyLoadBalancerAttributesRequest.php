@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLoadBalancerId() 获取<p>负载均衡的唯一ID，可以通过 <a href="https://cloud.tencent.com/document/product/214/30685">DescribeLoadBalancers</a> 接口获取。</p>
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置<p>负载均衡的唯一ID，可以通过 <a href="https://cloud.tencent.com/document/product/214/30685">DescribeLoadBalancers</a> 接口获取。</p>
- * @method string getLoadBalancerName() 获取<p>负载均衡实例名称，规则：1-60 个英文、汉字、数字、连接线“-”或下划线“_”。</p>
- * @method void setLoadBalancerName(string $LoadBalancerName) 设置<p>负载均衡实例名称，规则：1-60 个英文、汉字、数字、连接线“-”或下划线“_”。</p>
+ * @method string getLoadBalancerName() 获取<p>负载均衡实例名称，规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
+ * @method void setLoadBalancerName(string $LoadBalancerName) 设置<p>负载均衡实例名称，规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
  * @method TargetRegionInfo getTargetRegionInfo() 获取<p>设置负载均衡跨地域绑定1.0的后端服务信息</p>
  * @method void setTargetRegionInfo(TargetRegionInfo $TargetRegionInfo) 设置<p>设置负载均衡跨地域绑定1.0的后端服务信息</p>
  * @method InternetAccessible getInternetChargeInfo() 获取<p>网络计费相关参数</p>
  * @method void setInternetChargeInfo(InternetAccessible $InternetChargeInfo) 设置<p>网络计费相关参数</p>
- * @method boolean getLoadBalancerPassToTarget() 获取<p>Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。不填则不修改。</p>
- * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) 设置<p>Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。不填则不修改。</p>
+ * @method boolean getLoadBalancerPassToTarget() 获取<p>Target是否放通来自CLB的流量。<br>开启放通（true）：只验证CLB上的安全组；<br>不开启放通（false）：需同时验证CLB和后端实例上的安全组。<br>不填则不修改。</p>
+ * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) 设置<p>Target是否放通来自CLB的流量。<br>开启放通（true）：只验证CLB上的安全组；<br>不开启放通（false）：需同时验证CLB和后端实例上的安全组。<br>不填则不修改。</p>
  * @method integer getSwitchFlag() 获取<p>不同计费模式之间的切换：0表示不切换，1表示预付费和后付费切换，2表示后付费之间切换。默认值：0</p>
  * @method void setSwitchFlag(integer $SwitchFlag) 设置<p>不同计费模式之间的切换：0表示不切换，1表示预付费和后付费切换，2表示后付费之间切换。默认值：0</p>
  * @method boolean getSnatPro() 获取<p>是否开启跨地域绑定2.0功能。不填则不修改。</p>
@@ -49,7 +49,7 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
     public $LoadBalancerId;
 
     /**
-     * @var string <p>负载均衡实例名称，规则：1-60 个英文、汉字、数字、连接线“-”或下划线“_”。</p>
+     * @var string <p>负载均衡实例名称，规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
      */
     public $LoadBalancerName;
 
@@ -64,7 +64,7 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
     public $InternetChargeInfo;
 
     /**
-     * @var boolean <p>Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。不填则不修改。</p>
+     * @var boolean <p>Target是否放通来自CLB的流量。<br>开启放通（true）：只验证CLB上的安全组；<br>不开启放通（false）：需同时验证CLB和后端实例上的安全组。<br>不填则不修改。</p>
      */
     public $LoadBalancerPassToTarget;
 
@@ -95,10 +95,10 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
 
     /**
      * @param string $LoadBalancerId <p>负载均衡的唯一ID，可以通过 <a href="https://cloud.tencent.com/document/product/214/30685">DescribeLoadBalancers</a> 接口获取。</p>
-     * @param string $LoadBalancerName <p>负载均衡实例名称，规则：1-60 个英文、汉字、数字、连接线“-”或下划线“_”。</p>
+     * @param string $LoadBalancerName <p>负载均衡实例名称，规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
      * @param TargetRegionInfo $TargetRegionInfo <p>设置负载均衡跨地域绑定1.0的后端服务信息</p>
      * @param InternetAccessible $InternetChargeInfo <p>网络计费相关参数</p>
-     * @param boolean $LoadBalancerPassToTarget <p>Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。不填则不修改。</p>
+     * @param boolean $LoadBalancerPassToTarget <p>Target是否放通来自CLB的流量。<br>开启放通（true）：只验证CLB上的安全组；<br>不开启放通（false）：需同时验证CLB和后端实例上的安全组。<br>不填则不修改。</p>
      * @param integer $SwitchFlag <p>不同计费模式之间的切换：0表示不切换，1表示预付费和后付费切换，2表示后付费之间切换。默认值：0</p>
      * @param boolean $SnatPro <p>是否开启跨地域绑定2.0功能。不填则不修改。</p>
      * @param boolean $DeleteProtect <p>是否开启删除保护，不填则不修改。</p>

@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 
  * @method integer getAmount() 获取商品数量
  * @method void setAmount(integer $Amount) 设置商品数量
+ * @method float getOriginPrice() 获取原价
+ * @method void setOriginPrice(float $OriginPrice) 设置原价
+ * @method float getDiscountPrice() 获取折扣价
+ * @method void setDiscountPrice(float $DiscountPrice) 设置折扣价
  */
 class ItemPrice extends AbstractModel
 {
@@ -62,12 +66,24 @@ class ItemPrice extends AbstractModel
     public $Amount;
 
     /**
+     * @var float 原价
+     */
+    public $OriginPrice;
+
+    /**
+     * @var float 折扣价
+     */
+    public $DiscountPrice;
+
+    /**
      * @param float $UnitPrice 原单价，元
      * @param float $DiscountUnitPrice 折扣后单价，元
      * @param float $Discount 折扣
      * @param string $ChargeUnit 单位：时/月
 
      * @param integer $Amount 商品数量
+     * @param float $OriginPrice 原价
+     * @param float $DiscountPrice 折扣价
      */
     function __construct()
     {
@@ -100,6 +116,14 @@ class ItemPrice extends AbstractModel
 
         if (array_key_exists("Amount",$param) and $param["Amount"] !== null) {
             $this->Amount = $param["Amount"];
+        }
+
+        if (array_key_exists("OriginPrice",$param) and $param["OriginPrice"] !== null) {
+            $this->OriginPrice = $param["OriginPrice"];
+        }
+
+        if (array_key_exists("DiscountPrice",$param) and $param["DiscountPrice"] !== null) {
+            $this->DiscountPrice = $param["DiscountPrice"];
         }
     }
 }

@@ -14,24 +14,34 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdc\V20201214\Models;
+namespace TencentCloud\Wedata\V20250806\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDedicatedSupportedZones请求参数结构体
+ * 数据安全使用的filter
  *
- * @method array getRegions() 获取<p>传入region列表</p>
- * @method void setRegions(array $Regions) 设置<p>传入region列表</p>
+ * @method string getName() 获取key
+ * @method void setName(string $Name) 设置key
+ * @method array getValues() 获取values
+
+ * @method void setValues(array $Values) 设置values
  */
-class DescribeDedicatedSupportedZonesRequest extends AbstractModel
+class SecurityFilter extends AbstractModel
 {
     /**
-     * @var array <p>传入region列表</p>
+     * @var string key
      */
-    public $Regions;
+    public $Name;
 
     /**
-     * @param array $Regions <p>传入region列表</p>
+     * @var array values
+
+     */
+    public $Values;
+
+    /**
+     * @param string $Name key
+     * @param array $Values values
      */
     function __construct()
     {
@@ -46,8 +56,12 @@ class DescribeDedicatedSupportedZonesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Regions",$param) and $param["Regions"] !== null) {
-            $this->Regions = $param["Regions"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
+            $this->Values = $param["Values"];
         }
     }
 }

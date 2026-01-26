@@ -85,6 +85,9 @@ use TencentCloud\Billing\V20180709\Models as Models;
  * @method Models\DescribeDosageDetailListResponse DescribeDosageDetailList(Models\DescribeDosageDetailListRequest $req) 获取已接入标准用量明细模板产品的用量明细数据，目前已接入并支持查询的产品包括：云联络中心、实时音视频、实时音视频、智能媒资托管、CODING DevOps、全球IP应用加速
  * @method Models\DescribeGatherResourceResponse DescribeGatherResource(Models\DescribeGatherResourceRequest $req) 查询分账账单资源归集汇总
  * @method Models\DescribeGatherRuleDetailResponse DescribeGatherRuleDetail(Models\DescribeGatherRuleDetailRequest $req) 查询归集规则详情
+ * @method Models\DescribeRenewInstancesResponse DescribeRenewInstances(Models\DescribeRenewInstancesRequest $req) 注意事项：
+1、本接口支持查询已接入续费管理页的包年包月实例，包括运行中、已隔离（部分产品不支持）
+2、子用户使用该接口时，应具备QcloudFinanceRenewManageFullAccess权限策略。
  * @method Models\DescribeSavingPlanResourceInfoResponse DescribeSavingPlanResourceInfo(Models\DescribeSavingPlanResourceInfoRequest $req) 查询节省计划详情
  * @method Models\DescribeTagListResponse DescribeTagList(Models\DescribeTagListRequest $req) 获取分账标签
  * @method Models\DescribeVoucherInfoResponse DescribeVoucherInfo(Models\DescribeVoucherInfoRequest $req) 获取代金券相关信息

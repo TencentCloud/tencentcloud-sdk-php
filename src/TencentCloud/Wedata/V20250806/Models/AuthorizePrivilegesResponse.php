@@ -14,37 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Trro\V20220325\Models;
+namespace TencentCloud\Wedata\V20250806\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDeviceList返回参数结构体
+ * AuthorizePrivileges返回参数结构体
  *
- * @method array getDevices() 获取<p>设备信息列表</p>
- * @method void setDevices(array $Devices) 设置<p>设备信息列表</p>
- * @method integer getTotal() 获取<p>设备总数</p>
- * @method void setTotal(integer $Total) 设置<p>设备总数</p>
- * @method integer getNum() 获取<p>本次返回的设备数</p>
- * @method void setNum(integer $Num) 设置<p>本次返回的设备数</p>
+ * @method AuthorizePrivilegesRsp getData() 获取结果
+ * @method void setData(AuthorizePrivilegesRsp $Data) 设置结果
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeDeviceListResponse extends AbstractModel
+class AuthorizePrivilegesResponse extends AbstractModel
 {
     /**
-     * @var array <p>设备信息列表</p>
+     * @var AuthorizePrivilegesRsp 结果
      */
-    public $Devices;
-
-    /**
-     * @var integer <p>设备总数</p>
-     */
-    public $Total;
-
-    /**
-     * @var integer <p>本次返回的设备数</p>
-     */
-    public $Num;
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +38,7 @@ class DescribeDeviceListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Devices <p>设备信息列表</p>
-     * @param integer $Total <p>设备总数</p>
-     * @param integer $Num <p>本次返回的设备数</p>
+     * @param AuthorizePrivilegesRsp $Data 结果
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,21 +54,9 @@ class DescribeDeviceListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Devices",$param) and $param["Devices"] !== null) {
-            $this->Devices = [];
-            foreach ($param["Devices"] as $key => $value){
-                $obj = new DeviceInfo();
-                $obj->deserialize($value);
-                array_push($this->Devices, $obj);
-            }
-        }
-
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
-        }
-
-        if (array_key_exists("Num",$param) and $param["Num"] !== null) {
-            $this->Num = $param["Num"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new AuthorizePrivilegesRsp();
+            $this->Data->deserialize($param["Data"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

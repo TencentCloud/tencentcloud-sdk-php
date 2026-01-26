@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDeviceList请求参数结构体
  *
- * @method string getProjectId() 获取设备所属项目ID
- * @method void setProjectId(string $ProjectId) 设置设备所属项目ID
- * @method string getDeviceType() 获取设备类型筛选，不填默认为全部设备类型
- * @method void setDeviceType(string $DeviceType) 设置设备类型筛选，不填默认为全部设备类型
- * @method string getSearchWords() 获取对设备ID或Name按关键字进行模糊匹配，不填则不进行模糊匹配
- * @method void setSearchWords(string $SearchWords) 设置对设备ID或Name按关键字进行模糊匹配，不填则不进行模糊匹配
- * @method integer getPageSize() 获取每页返回的最大设备数，不填默认为10
- * @method void setPageSize(integer $PageSize) 设置每页返回的最大设备数，不填默认为10
- * @method integer getPageNumber() 获取当前页码，不填默认为1（首页）
- * @method void setPageNumber(integer $PageNumber) 设置当前页码，不填默认为1（首页）
- * @method string getDeviceStatus() 获取设备状态筛选，不填默认为不过滤。取值：["ready","connected","online"]，online代表ready或connected
- * @method void setDeviceStatus(string $DeviceStatus) 设置设备状态筛选，不填默认为不过滤。取值：["ready","connected","online"]，online代表ready或connected
+ * @method string getProjectId() 获取<p>设备所属项目ID</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>设备所属项目ID</p>
+ * @method string getDeviceType() 获取<p>设备类型筛选，不填默认为全部设备类型</p>
+ * @method void setDeviceType(string $DeviceType) 设置<p>设备类型筛选，不填默认为全部设备类型</p>
+ * @method string getSearchWords() 获取<p>对设备ID或Name按关键字进行模糊匹配，不填则不进行模糊匹配</p>
+ * @method void setSearchWords(string $SearchWords) 设置<p>对设备ID或Name按关键字进行模糊匹配，不填则不进行模糊匹配</p>
+ * @method integer getPageSize() 获取<p>每页返回的最大设备数，不填默认为10</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页返回的最大设备数，不填默认为10</p>
+ * @method integer getPageNumber() 获取<p>当前页码，不填默认为1（首页）</p>
+ * @method void setPageNumber(integer $PageNumber) 设置<p>当前页码，不填默认为1（首页）</p>
+ * @method string getDeviceStatus() 获取<p>设备状态筛选，不填默认为不过滤。取值：[&quot;ready&quot;,&quot;connected&quot;,&quot;online&quot;]，online代表ready或connected</p>
+ * @method void setDeviceStatus(string $DeviceStatus) 设置<p>设备状态筛选，不填默认为不过滤。取值：[&quot;ready&quot;,&quot;connected&quot;,&quot;online&quot;]，online代表ready或connected</p>
+ * @method integer getRegisterType() 获取<p>标识查询项目下的设备注册类型，默认不包含免注册登录设备。 若存在免注册登录设备，该参数传&quot;1&quot;</p><p>枚举值：</p><ul><li>0： 项目不包含免注册登录设备</li><li>1： 项目包含免注册登录设备</li></ul><p>默认值：0</p>
+ * @method void setRegisterType(integer $RegisterType) 设置<p>标识查询项目下的设备注册类型，默认不包含免注册登录设备。 若存在免注册登录设备，该参数传&quot;1&quot;</p><p>枚举值：</p><ul><li>0： 项目不包含免注册登录设备</li><li>1： 项目包含免注册登录设备</li></ul><p>默认值：0</p>
  */
 class DescribeDeviceListRequest extends AbstractModel
 {
     /**
-     * @var string 设备所属项目ID
+     * @var string <p>设备所属项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var string 设备类型筛选，不填默认为全部设备类型
+     * @var string <p>设备类型筛选，不填默认为全部设备类型</p>
      */
     public $DeviceType;
 
     /**
-     * @var string 对设备ID或Name按关键字进行模糊匹配，不填则不进行模糊匹配
+     * @var string <p>对设备ID或Name按关键字进行模糊匹配，不填则不进行模糊匹配</p>
      */
     public $SearchWords;
 
     /**
-     * @var integer 每页返回的最大设备数，不填默认为10
+     * @var integer <p>每页返回的最大设备数，不填默认为10</p>
      */
     public $PageSize;
 
     /**
-     * @var integer 当前页码，不填默认为1（首页）
+     * @var integer <p>当前页码，不填默认为1（首页）</p>
      */
     public $PageNumber;
 
     /**
-     * @var string 设备状态筛选，不填默认为不过滤。取值：["ready","connected","online"]，online代表ready或connected
+     * @var string <p>设备状态筛选，不填默认为不过滤。取值：[&quot;ready&quot;,&quot;connected&quot;,&quot;online&quot;]，online代表ready或connected</p>
      */
     public $DeviceStatus;
 
     /**
-     * @param string $ProjectId 设备所属项目ID
-     * @param string $DeviceType 设备类型筛选，不填默认为全部设备类型
-     * @param string $SearchWords 对设备ID或Name按关键字进行模糊匹配，不填则不进行模糊匹配
-     * @param integer $PageSize 每页返回的最大设备数，不填默认为10
-     * @param integer $PageNumber 当前页码，不填默认为1（首页）
-     * @param string $DeviceStatus 设备状态筛选，不填默认为不过滤。取值：["ready","connected","online"]，online代表ready或connected
+     * @var integer <p>标识查询项目下的设备注册类型，默认不包含免注册登录设备。 若存在免注册登录设备，该参数传&quot;1&quot;</p><p>枚举值：</p><ul><li>0： 项目不包含免注册登录设备</li><li>1： 项目包含免注册登录设备</li></ul><p>默认值：0</p>
+     */
+    public $RegisterType;
+
+    /**
+     * @param string $ProjectId <p>设备所属项目ID</p>
+     * @param string $DeviceType <p>设备类型筛选，不填默认为全部设备类型</p>
+     * @param string $SearchWords <p>对设备ID或Name按关键字进行模糊匹配，不填则不进行模糊匹配</p>
+     * @param integer $PageSize <p>每页返回的最大设备数，不填默认为10</p>
+     * @param integer $PageNumber <p>当前页码，不填默认为1（首页）</p>
+     * @param string $DeviceStatus <p>设备状态筛选，不填默认为不过滤。取值：[&quot;ready&quot;,&quot;connected&quot;,&quot;online&quot;]，online代表ready或connected</p>
+     * @param integer $RegisterType <p>标识查询项目下的设备注册类型，默认不包含免注册登录设备。 若存在免注册登录设备，该参数传&quot;1&quot;</p><p>枚举值：</p><ul><li>0： 项目不包含免注册登录设备</li><li>1： 项目包含免注册登录设备</li></ul><p>默认值：0</p>
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeDeviceListRequest extends AbstractModel
 
         if (array_key_exists("DeviceStatus",$param) and $param["DeviceStatus"] !== null) {
             $this->DeviceStatus = $param["DeviceStatus"];
+        }
+
+        if (array_key_exists("RegisterType",$param) and $param["RegisterType"] !== null) {
+            $this->RegisterType = $param["RegisterType"];
         }
     }
 }

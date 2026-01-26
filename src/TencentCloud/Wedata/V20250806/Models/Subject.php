@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdc\V20201214\Models;
+namespace TencentCloud\Wedata\V20250806\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDedicatedSupportedZones请求参数结构体
+ * Subject主体信息，授权/回收主体
  *
- * @method array getRegions() 获取<p>传入region列表</p>
- * @method void setRegions(array $Regions) 设置<p>传入region列表</p>
+ * @method string getSubjectType() 获取主体类型
+ * @method void setSubjectType(string $SubjectType) 设置主体类型
+ * @method array getSubjectValues() 获取主体列表
+ * @method void setSubjectValues(array $SubjectValues) 设置主体列表
  */
-class DescribeDedicatedSupportedZonesRequest extends AbstractModel
+class Subject extends AbstractModel
 {
     /**
-     * @var array <p>传入region列表</p>
+     * @var string 主体类型
      */
-    public $Regions;
+    public $SubjectType;
 
     /**
-     * @param array $Regions <p>传入region列表</p>
+     * @var array 主体列表
+     */
+    public $SubjectValues;
+
+    /**
+     * @param string $SubjectType 主体类型
+     * @param array $SubjectValues 主体列表
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeDedicatedSupportedZonesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Regions",$param) and $param["Regions"] !== null) {
-            $this->Regions = $param["Regions"];
+        if (array_key_exists("SubjectType",$param) and $param["SubjectType"] !== null) {
+            $this->SubjectType = $param["SubjectType"];
+        }
+
+        if (array_key_exists("SubjectValues",$param) and $param["SubjectValues"] !== null) {
+            $this->SubjectValues = $param["SubjectValues"];
         }
     }
 }

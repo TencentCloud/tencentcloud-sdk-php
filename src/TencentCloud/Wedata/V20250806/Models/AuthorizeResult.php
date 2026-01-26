@@ -18,52 +18,48 @@ namespace TencentCloud\Wedata\V20250806\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * LineageNodeInfo  血缘关系实体
+ * AuthorizeResult授权结果
  *
- * @method LineageResource getResource() 获取当前资源
+ * @method PrivilegeResource getResource() 获取授权资源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResource(LineageResource $Resource) 设置当前资源
+ * @method void setResource(PrivilegeResource $Resource) 设置授权资源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method LineageRelation getRelation() 获取关系
+ * @method boolean getResult() 获取结果
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRelation(LineageRelation $Relation) 设置关系
+ * @method void setResult(boolean $Result) 设置结果
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDownStreamCount() 获取上游数量
- * @method void setDownStreamCount(integer $DownStreamCount) 设置上游数量
- * @method integer getUpStreamCount() 获取下游数量
- * @method void setUpStreamCount(integer $UpStreamCount) 设置下游数量
+ * @method string getReason() 获取原因
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReason(string $Reason) 设置原因
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class LineageNodeInfo extends AbstractModel
+class AuthorizeResult extends AbstractModel
 {
     /**
-     * @var LineageResource 当前资源
+     * @var PrivilegeResource 授权资源
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resource;
 
     /**
-     * @var LineageRelation 关系
+     * @var boolean 结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Relation;
+    public $Result;
 
     /**
-     * @var integer 上游数量
-     */
-    public $DownStreamCount;
-
-    /**
-     * @var integer 下游数量
-     */
-    public $UpStreamCount;
-
-    /**
-     * @param LineageResource $Resource 当前资源
+     * @var string 原因
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LineageRelation $Relation 关系
+     */
+    public $Reason;
+
+    /**
+     * @param PrivilegeResource $Resource 授权资源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DownStreamCount 上游数量
-     * @param integer $UpStreamCount 下游数量
+     * @param boolean $Result 结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Reason 原因
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -79,21 +75,16 @@ class LineageNodeInfo extends AbstractModel
             return;
         }
         if (array_key_exists("Resource",$param) and $param["Resource"] !== null) {
-            $this->Resource = new LineageResource();
+            $this->Resource = new PrivilegeResource();
             $this->Resource->deserialize($param["Resource"]);
         }
 
-        if (array_key_exists("Relation",$param) and $param["Relation"] !== null) {
-            $this->Relation = new LineageRelation();
-            $this->Relation->deserialize($param["Relation"]);
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
         }
 
-        if (array_key_exists("DownStreamCount",$param) and $param["DownStreamCount"] !== null) {
-            $this->DownStreamCount = $param["DownStreamCount"];
-        }
-
-        if (array_key_exists("UpStreamCount",$param) and $param["UpStreamCount"] !== null) {
-            $this->UpStreamCount = $param["UpStreamCount"];
+        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
+            $this->Reason = $param["Reason"];
         }
     }
 }

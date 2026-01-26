@@ -20,6 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 系统安全设置
  *
+ * @method AuthModeSetting getAuthMode() 获取认证方式设置
+ * @method void setAuthMode(AuthModeSetting $AuthMode) 设置认证方式设置
+ * @method PasswordSetting getPassword() 获取密码安全设置
+ * @method void setPassword(PasswordSetting $Password) 设置密码安全设置
+ * @method LoginSetting getLogin() 获取登录安全设置
+ * @method void setLogin(LoginSetting $Login) 设置登录安全设置
+ * @method LDAPSetting getLDAP() 获取LDAP配置信息
+ * @method void setLDAP(LDAPSetting $LDAP) 设置LDAP配置信息
+ * @method OAuthSetting getOAuth() 获取OAuth配置信息
+ * @method void setOAuth(OAuthSetting $OAuth) 设置OAuth配置信息
  * @method AuthModeSetting getAuthModeGM() 获取国密认证方式设置
  * @method void setAuthModeGM(AuthModeSetting $AuthModeGM) 设置国密认证方式设置
  * @method ReconnectionSetting getReconnection() 获取资产重连次数
@@ -29,6 +39,31 @@ use TencentCloud\Common\AbstractModel;
  */
 class SecuritySetting extends AbstractModel
 {
+    /**
+     * @var AuthModeSetting 认证方式设置
+     */
+    public $AuthMode;
+
+    /**
+     * @var PasswordSetting 密码安全设置
+     */
+    public $Password;
+
+    /**
+     * @var LoginSetting 登录安全设置
+     */
+    public $Login;
+
+    /**
+     * @var LDAPSetting LDAP配置信息
+     */
+    public $LDAP;
+
+    /**
+     * @var OAuthSetting OAuth配置信息
+     */
+    public $OAuth;
+
     /**
      * @var AuthModeSetting 国密认证方式设置
      */
@@ -45,6 +80,11 @@ class SecuritySetting extends AbstractModel
     public $EnvInternetAccess;
 
     /**
+     * @param AuthModeSetting $AuthMode 认证方式设置
+     * @param PasswordSetting $Password 密码安全设置
+     * @param LoginSetting $Login 登录安全设置
+     * @param LDAPSetting $LDAP LDAP配置信息
+     * @param OAuthSetting $OAuth OAuth配置信息
      * @param AuthModeSetting $AuthModeGM 国密认证方式设置
      * @param ReconnectionSetting $Reconnection 资产重连次数
      * @param EnvInternetAccessSetting $EnvInternetAccess 大区环境网络设置
@@ -62,6 +102,31 @@ class SecuritySetting extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("AuthMode",$param) and $param["AuthMode"] !== null) {
+            $this->AuthMode = new AuthModeSetting();
+            $this->AuthMode->deserialize($param["AuthMode"]);
+        }
+
+        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
+            $this->Password = new PasswordSetting();
+            $this->Password->deserialize($param["Password"]);
+        }
+
+        if (array_key_exists("Login",$param) and $param["Login"] !== null) {
+            $this->Login = new LoginSetting();
+            $this->Login->deserialize($param["Login"]);
+        }
+
+        if (array_key_exists("LDAP",$param) and $param["LDAP"] !== null) {
+            $this->LDAP = new LDAPSetting();
+            $this->LDAP->deserialize($param["LDAP"]);
+        }
+
+        if (array_key_exists("OAuth",$param) and $param["OAuth"] !== null) {
+            $this->OAuth = new OAuthSetting();
+            $this->OAuth->deserialize($param["OAuth"]);
+        }
+
         if (array_key_exists("AuthModeGM",$param) and $param["AuthModeGM"] !== null) {
             $this->AuthModeGM = new AuthModeSetting();
             $this->AuthModeGM->deserialize($param["AuthModeGM"]);

@@ -26,6 +26,7 @@ use TencentCloud\Wedata\V20250806\Models as Models;
  * @method Models\AddCalcEnginesToProjectResponse AddCalcEnginesToProject(Models\AddCalcEnginesToProjectRequest $req) 关联项目集群
  * @method Models\AssociateResourceGroupToProjectResponse AssociateResourceGroupToProject(Models\AssociateResourceGroupToProjectRequest $req) 该接口用于将指定执行资源组绑定到项目
  * @method Models\AuthorizeDataSourceResponse AuthorizeDataSource(Models\AuthorizeDataSourceRequest $req) 授权数据源
+ * @method Models\AuthorizePrivilegesResponse AuthorizePrivileges(Models\AuthorizePrivilegesRequest $req) Catalog模式下授权
  * @method Models\CreateCodeFileResponse CreateCodeFile(Models\CreateCodeFileRequest $req) 新建代码文件
  * @method Models\CreateCodeFolderResponse CreateCodeFolder(Models\CreateCodeFolderRequest $req) 新建代码文件夹
  * @method Models\CreateCodePermissionsResponse CreateCodePermissions(Models\CreateCodePermissionsRequest $req) 配置CodeStudio实体权限
@@ -131,6 +132,7 @@ use TencentCloud\Wedata\V20250806\Models as Models;
  * @method Models\ListOpsTasksResponse ListOpsTasks(Models\ListOpsTasksRequest $req) 根据项目id获取任务列表
  * @method Models\ListOpsTriggerWorkflowsResponse ListOpsTriggerWorkflows(Models\ListOpsTriggerWorkflowsRequest $req) 查询工作流列表
  * @method Models\ListOpsWorkflowsResponse ListOpsWorkflows(Models\ListOpsWorkflowsRequest $req) 根据项目ID获取项目下工作流
+ * @method Models\ListPermissionsResponse ListPermissions(Models\ListPermissionsRequest $req) 获取可授权权限详情
  * @method Models\ListProcessLineageResponse ListProcessLineage(Models\ListProcessLineageRequest $req) 获取资产血缘信息
  * @method Models\ListProjectMembersResponse ListProjectMembers(Models\ListProjectMembersRequest $req) 获取项目下的用户，分页返回
  * @method Models\ListProjectRolesResponse ListProjectRoles(Models\ListProjectRolesRequest $req) 获取角色列表信息
@@ -175,6 +177,7 @@ use TencentCloud\Wedata\V20250806\Models as Models;
  * @method Models\RerunTaskInstancesAsyncResponse RerunTaskInstancesAsync(Models\RerunTaskInstancesAsyncRequest $req) 实例批量重跑-异步
  * @method Models\RerunTriggerWorkflowRunAsyncResponse RerunTriggerWorkflowRunAsync(Models\RerunTriggerWorkflowRunAsyncRequest $req) 重跑运行
  * @method Models\RevokeDataSourceAuthorizationResponse RevokeDataSourceAuthorization(Models\RevokeDataSourceAuthorizationRequest $req) 回收数据源权限
+ * @method Models\RevokePrivilegesResponse RevokePrivileges(Models\RevokePrivilegesRequest $req) Catalog模式下授权回收
  * @method Models\RunSQLScriptResponse RunSQLScript(Models\RunSQLScriptRequest $req) 运行SQL脚本
  * @method Models\SetSuccessTaskInstancesAsyncResponse SetSuccessTaskInstancesAsync(Models\SetSuccessTaskInstancesAsyncRequest $req) 实例批量置成功-异步
  * @method Models\StartOpsTasksResponse StartOpsTasks(Models\StartOpsTasksRequest $req) 异步批量启动任务

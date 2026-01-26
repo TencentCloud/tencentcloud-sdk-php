@@ -214,6 +214,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\EnableClusterAuditResponse EnableClusterAudit(Models\EnableClusterAuditRequest $req) 开启集群审计
  * @method Models\EnableClusterDeletionProtectionResponse EnableClusterDeletionProtection(Models\EnableClusterDeletionProtectionRequest $req) 启用集群删除保护
  * @method Models\EnableControlPlaneLogsResponse EnableControlPlaneLogs(Models\EnableControlPlaneLogsRequest $req) 创建插件日志采集配置
+ * @method Models\EnableEksEventPersistenceResponse EnableEksEventPersistence(Models\EnableEksEventPersistenceRequest $req) Eks集群开启事件持久化功能
  * @method Models\EnableEncryptionProtectionResponse EnableEncryptionProtection(Models\EnableEncryptionProtectionRequest $req) 开启加密数据保护，需要先开启KMS能力，完成KMS授权
  * @method Models\EnableEventPersistenceResponse EnableEventPersistence(Models\EnableEventPersistenceRequest $req) 开启事件持久化功能
  * @method Models\EnableVpcCniNetworkTypeResponse EnableVpcCniNetworkType(Models\EnableVpcCniNetworkTypeRequest $req) GR集群可以通过本接口附加vpc-cni容器网络插件，开启vpc-cni容器网络能力

@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogicBackupConfig(LogicBackupConfigInfo $LogicBackupConfig) 设置逻辑备份配置
  * @method boolean getDeleteAutoLogicBackup() 获取是否删除自动逻辑备份
  * @method void setDeleteAutoLogicBackup(boolean $DeleteAutoLogicBackup) 设置是否删除自动逻辑备份
+ * @method SnapshotBackupConfig getSnapshotSecondaryBackupConfig() 获取二级快照备份参数
+ * @method void setSnapshotSecondaryBackupConfig(SnapshotBackupConfig $SnapshotSecondaryBackupConfig) 设置二级快照备份参数
  */
 class ModifyBackupConfigRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ModifyBackupConfigRequest extends AbstractModel
     public $DeleteAutoLogicBackup;
 
     /**
+     * @var SnapshotBackupConfig 二级快照备份参数
+     */
+    public $SnapshotSecondaryBackupConfig;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param integer $BackupTimeBeg 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
      * @param integer $BackupTimeEnd 表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
@@ -88,6 +95,7 @@ class ModifyBackupConfigRequest extends AbstractModel
      * @param string $BackupType 该参数目前不支持修改，无需填写。
      * @param LogicBackupConfigInfo $LogicBackupConfig 逻辑备份配置
      * @param boolean $DeleteAutoLogicBackup 是否删除自动逻辑备份
+     * @param SnapshotBackupConfig $SnapshotSecondaryBackupConfig 二级快照备份参数
      */
     function __construct()
     {
@@ -133,6 +141,11 @@ class ModifyBackupConfigRequest extends AbstractModel
 
         if (array_key_exists("DeleteAutoLogicBackup",$param) and $param["DeleteAutoLogicBackup"] !== null) {
             $this->DeleteAutoLogicBackup = $param["DeleteAutoLogicBackup"];
+        }
+
+        if (array_key_exists("SnapshotSecondaryBackupConfig",$param) and $param["SnapshotSecondaryBackupConfig"] !== null) {
+            $this->SnapshotSecondaryBackupConfig = new SnapshotBackupConfig();
+            $this->SnapshotSecondaryBackupConfig->deserialize($param["SnapshotSecondaryBackupConfig"]);
         }
     }
 }

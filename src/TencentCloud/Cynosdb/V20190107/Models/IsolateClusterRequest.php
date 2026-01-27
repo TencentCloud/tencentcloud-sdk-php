@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsolateReasonTypes(array $IsolateReasonTypes) 设置实例退还原因类型
  * @method string getIsolateReason() 获取实例退还原因补充
  * @method void setIsolateReason(string $IsolateReason) 设置实例退还原因补充
+ * @method boolean getSaveBackup() 获取保留备份,true-保留（会产生费用）
+ * @method void setSaveBackup(boolean $SaveBackup) 设置保留备份,true-保留（会产生费用）
  */
 class IsolateClusterRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class IsolateClusterRequest extends AbstractModel
     public $IsolateReason;
 
     /**
+     * @var boolean 保留备份,true-保留（会产生费用）
+     */
+    public $SaveBackup;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $DbType 该参数已废用
      * @param array $IsolateReasonTypes 实例退还原因类型
      * @param string $IsolateReason 实例退还原因补充
+     * @param boolean $SaveBackup 保留备份,true-保留（会产生费用）
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class IsolateClusterRequest extends AbstractModel
 
         if (array_key_exists("IsolateReason",$param) and $param["IsolateReason"] !== null) {
             $this->IsolateReason = $param["IsolateReason"];
+        }
+
+        if (array_key_exists("SaveBackup",$param) and $param["SaveBackup"] !== null) {
+            $this->SaveBackup = $param["SaveBackup"];
         }
     }
 }

@@ -94,6 +94,8 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
  * @method void setProjectId(integer $ProjectId) 设置项目id
  * @method string getAutoArchive() 获取是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
  * @method void setAutoArchive(string $AutoArchive) 设置是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+ * @method boolean getFromSaveBackup() 获取是否从保存备份中恢复
+ * @method void setFromSaveBackup(boolean $FromSaveBackup) 设置是否从保存备份中恢复
  */
 class RollbackToNewClusterRequest extends AbstractModel
 {
@@ -247,6 +249,11 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     public $AutoArchive;
 
     /**
+     * @var boolean 是否从保存备份中恢复
+     */
+    public $FromSaveBackup;
+
+    /**
      * @param string $Zone 可用区
      * @param string $OriginalClusterId 回档时，传入源集群ID，用于查找源poolId
      * @param string $UniqVpcId 所属VPC网络ID
@@ -284,6 +291,7 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      * @param array $OriginalROInstanceList 原ro实例信息
      * @param integer $ProjectId 项目id
      * @param string $AutoArchive 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+     * @param boolean $FromSaveBackup 是否从保存备份中恢复
      */
     function __construct()
     {
@@ -433,6 +441,10 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
 
         if (array_key_exists("AutoArchive",$param) and $param["AutoArchive"] !== null) {
             $this->AutoArchive = $param["AutoArchive"];
+        }
+
+        if (array_key_exists("FromSaveBackup",$param) and $param["FromSaveBackup"] !== null) {
+            $this->FromSaveBackup = $param["FromSaveBackup"];
         }
     }
 }

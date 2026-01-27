@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateEventsAuditTrack请求参数结构体
  *
- * @method string getName() 获取跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符
- * @method void setName(string $Name) 设置跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符
- * @method integer getStatus() 获取跟踪集状态（未开启：0；开启：1）
- * @method void setStatus(integer $Status) 设置跟踪集状态（未开启：0；开启：1）
- * @method Storage getStorage() 获取数据投递存储（目前支持 cos、cls）
- * @method void setStorage(Storage $Storage) 设置数据投递存储（目前支持 cos、cls）
- * @method Filter getFilters() 获取数据过滤条件
- * @method void setFilters(Filter $Filters) 设置数据过滤条件
- * @method integer getTrackForAllMembers() 获取是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能) 
- * @method void setTrackForAllMembers(integer $TrackForAllMembers) 设置是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能) 
+ * @method string getName() 获取<p>跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符</p>
+ * @method void setName(string $Name) 设置<p>跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符</p>
+ * @method integer getStatus() 获取<p>跟踪集状态（未开启：0；开启：1）</p>
+ * @method void setStatus(integer $Status) 设置<p>跟踪集状态（未开启：0；开启：1）</p>
+ * @method Storage getStorage() 获取<p>数据投递存储（目前支持 cos、cls、ckafka）</p>
+ * @method void setStorage(Storage $Storage) 设置<p>数据投递存储（目前支持 cos、cls、ckafka）</p>
+ * @method Filter getFilters() 获取<p>数据过滤条件</p>
+ * @method void setFilters(Filter $Filters) 设置<p>数据过滤条件</p>
+ * @method integer getTrackForAllMembers() 获取<p>是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)</p>
+ * @method void setTrackForAllMembers(integer $TrackForAllMembers) 设置<p>是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)</p>
  */
 class CreateEventsAuditTrackRequest extends AbstractModel
 {
     /**
-     * @var string 跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符
+     * @var string <p>跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符</p>
      */
     public $Name;
 
     /**
-     * @var integer 跟踪集状态（未开启：0；开启：1）
+     * @var integer <p>跟踪集状态（未开启：0；开启：1）</p>
      */
     public $Status;
 
     /**
-     * @var Storage 数据投递存储（目前支持 cos、cls）
+     * @var Storage <p>数据投递存储（目前支持 cos、cls、ckafka）</p>
      */
     public $Storage;
 
     /**
-     * @var Filter 数据过滤条件
+     * @var Filter <p>数据过滤条件</p>
      */
     public $Filters;
 
     /**
-     * @var integer 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能) 
+     * @var integer <p>是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)</p>
      */
     public $TrackForAllMembers;
 
     /**
-     * @param string $Name 跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符
-     * @param integer $Status 跟踪集状态（未开启：0；开启：1）
-     * @param Storage $Storage 数据投递存储（目前支持 cos、cls）
-     * @param Filter $Filters 数据过滤条件
-     * @param integer $TrackForAllMembers 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能) 
+     * @param string $Name <p>跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符</p>
+     * @param integer $Status <p>跟踪集状态（未开启：0；开启：1）</p>
+     * @param Storage $Storage <p>数据投递存储（目前支持 cos、cls、ckafka）</p>
+     * @param Filter $Filters <p>数据过滤条件</p>
+     * @param integer $TrackForAllMembers <p>是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)</p>
      */
     function __construct()
     {

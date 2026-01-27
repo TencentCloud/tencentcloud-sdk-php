@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDstZoneId(integer $DstZoneId) 设置目标实例主可用区 ID。可使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取可用区 ID。
  * @method NodeDistribution getNodeDistribution() 获取独享集群 CDB 实例的节点分布情况。
  * @method void setNodeDistribution(NodeDistribution $NodeDistribution) 设置独享集群 CDB 实例的节点分布情况。
- * @method ClusterTopology getClusterTopology() 获取集群版的节点拓扑配置。Nodeld信息可通过 [DescribeClusterInfo](https://cloud.tencent.com/document/api/236/105116) 接口获取。
- * @method void setClusterTopology(ClusterTopology $ClusterTopology) 设置集群版的节点拓扑配置。Nodeld信息可通过 [DescribeClusterInfo](https://cloud.tencent.com/document/api/236/105116) 接口获取。
+ * @method ClusterTopology getClusterTopology() 获取云盘版的节点拓扑配置。Nodeld 信息可通过 [DescribeClusterInfo](https://cloud.tencent.com/document/api/236/105116) 接口获取。
+ * @method void setClusterTopology(ClusterTopology $ClusterTopology) 设置云盘版的节点拓扑配置。Nodeld 信息可通过 [DescribeClusterInfo](https://cloud.tencent.com/document/api/236/105116) 接口获取。
  */
 class DescribeInstanceUpgradeTypeRequest extends AbstractModel
 {
@@ -110,7 +110,7 @@ class DescribeInstanceUpgradeTypeRequest extends AbstractModel
     public $NodeDistribution;
 
     /**
-     * @var ClusterTopology 集群版的节点拓扑配置。Nodeld信息可通过 [DescribeClusterInfo](https://cloud.tencent.com/document/api/236/105116) 接口获取。
+     * @var ClusterTopology 云盘版的节点拓扑配置。Nodeld 信息可通过 [DescribeClusterInfo](https://cloud.tencent.com/document/api/236/105116) 接口获取。
      */
     public $ClusterTopology;
 
@@ -127,7 +127,7 @@ class DescribeInstanceUpgradeTypeRequest extends AbstractModel
      * @param string $DstCdbType 目标实例类型。支持值包括："CUSTOM" - 通用型实例，"EXCLUSIVE" - 独享型实例，"ONTKE" - ONTKE 单节点实例，"CLOUD_NATIVE_CLUSTER" - 云盘版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 云盘版加强型。
      * @param integer $DstZoneId 目标实例主可用区 ID。可使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取可用区 ID。
      * @param NodeDistribution $NodeDistribution 独享集群 CDB 实例的节点分布情况。
-     * @param ClusterTopology $ClusterTopology 集群版的节点拓扑配置。Nodeld信息可通过 [DescribeClusterInfo](https://cloud.tencent.com/document/api/236/105116) 接口获取。
+     * @param ClusterTopology $ClusterTopology 云盘版的节点拓扑配置。Nodeld 信息可通过 [DescribeClusterInfo](https://cloud.tencent.com/document/api/236/105116) 接口获取。
      */
     function __construct()
     {

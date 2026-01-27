@@ -20,70 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 跟踪集存储信息
  *
- * @method string getStorageType() 获取存储类型（目前支持 cos、cls）
- * @method void setStorageType(string $StorageType) 设置存储类型（目前支持 cos、cls）
- * @method string getStorageRegion() 获取存储所在地域
- * @method void setStorageRegion(string $StorageRegion) 设置存储所在地域
- * @method string getStorageName() 获取存储名称(cos：存储名称为用户自定义的存储桶名称，不包含"-APPID"，仅支持小写字母、数字以及中划线"-"的组合，不能超过50字符，且不支持中划线"-"开头或结尾； cls：存储名称为日志主题id，字符长度为1-50个字符)
- * @method void setStorageName(string $StorageName) 设置存储名称(cos：存储名称为用户自定义的存储桶名称，不包含"-APPID"，仅支持小写字母、数字以及中划线"-"的组合，不能超过50字符，且不支持中划线"-"开头或结尾； cls：存储名称为日志主题id，字符长度为1-50个字符)
- * @method string getStoragePrefix() 获取存储目录前缀，cos日志文件前缀仅支持字母和数字的组合，3-40个字符
- * @method void setStoragePrefix(string $StoragePrefix) 设置存储目录前缀，cos日志文件前缀仅支持字母和数字的组合，3-40个字符
- * @method string getStorageAccountId() 获取被指定存储用户ID
- * @method void setStorageAccountId(string $StorageAccountId) 设置被指定存储用户ID
- * @method string getStorageAppId() 获取被指定存储用户appid
- * @method void setStorageAppId(string $StorageAppId) 设置被指定存储用户appid
- * @method integer getCompress() 获取是否压缩。
-1:压缩  2:不压缩
- * @method void setCompress(integer $Compress) 设置是否压缩。
-1:压缩  2:不压缩
+ * @method string getStorageType() 获取<p>存储类型（目前支持 cos、cls、ckafka）</p>
+ * @method void setStorageType(string $StorageType) 设置<p>存储类型（目前支持 cos、cls、ckafka）</p>
+ * @method string getStorageRegion() 获取<p>存储所在地域</p>
+ * @method void setStorageRegion(string $StorageRegion) 设置<p>存储所在地域</p>
+ * @method string getStorageName() 获取<p>存储名称(cos：存储名称为用户自定义的存储桶名称，不包含&quot;-APPID&quot;，仅支持小写字母、数字以及中划线&quot;-&quot;的组合，不能超过50字符，且不支持中划线&quot;-&quot;开头或结尾； cls：存储名称为日志主题id，字符长度为1-50个字符； ckafka： ckafka实例ID/topic. 举例：ckafka-xxxxxx/tencent_test_audit_log)</p>
+ * @method void setStorageName(string $StorageName) 设置<p>存储名称(cos：存储名称为用户自定义的存储桶名称，不包含&quot;-APPID&quot;，仅支持小写字母、数字以及中划线&quot;-&quot;的组合，不能超过50字符，且不支持中划线&quot;-&quot;开头或结尾； cls：存储名称为日志主题id，字符长度为1-50个字符； ckafka： ckafka实例ID/topic. 举例：ckafka-xxxxxx/tencent_test_audit_log)</p>
+ * @method string getStoragePrefix() 获取<p>存储目录前缀，cos日志文件前缀仅支持字母和数字的组合，3-40个字符</p>
+ * @method void setStoragePrefix(string $StoragePrefix) 设置<p>存储目录前缀，cos日志文件前缀仅支持字母和数字的组合，3-40个字符</p>
+ * @method string getStorageAccountId() 获取<p>被指定存储用户ID</p>
+ * @method void setStorageAccountId(string $StorageAccountId) 设置<p>被指定存储用户ID</p>
+ * @method string getStorageAppId() 获取<p>被指定存储用户appid</p>
+ * @method void setStorageAppId(string $StorageAppId) 设置<p>被指定存储用户appid</p>
+ * @method integer getCompress() 获取<p>是否压缩。<br>1:压缩  2:不压缩</p>
+ * @method void setCompress(integer $Compress) 设置<p>是否压缩。<br>1:压缩  2:不压缩</p>
  */
 class Storage extends AbstractModel
 {
     /**
-     * @var string 存储类型（目前支持 cos、cls）
+     * @var string <p>存储类型（目前支持 cos、cls、ckafka）</p>
      */
     public $StorageType;
 
     /**
-     * @var string 存储所在地域
+     * @var string <p>存储所在地域</p>
      */
     public $StorageRegion;
 
     /**
-     * @var string 存储名称(cos：存储名称为用户自定义的存储桶名称，不包含"-APPID"，仅支持小写字母、数字以及中划线"-"的组合，不能超过50字符，且不支持中划线"-"开头或结尾； cls：存储名称为日志主题id，字符长度为1-50个字符)
+     * @var string <p>存储名称(cos：存储名称为用户自定义的存储桶名称，不包含&quot;-APPID&quot;，仅支持小写字母、数字以及中划线&quot;-&quot;的组合，不能超过50字符，且不支持中划线&quot;-&quot;开头或结尾； cls：存储名称为日志主题id，字符长度为1-50个字符； ckafka： ckafka实例ID/topic. 举例：ckafka-xxxxxx/tencent_test_audit_log)</p>
      */
     public $StorageName;
 
     /**
-     * @var string 存储目录前缀，cos日志文件前缀仅支持字母和数字的组合，3-40个字符
+     * @var string <p>存储目录前缀，cos日志文件前缀仅支持字母和数字的组合，3-40个字符</p>
      */
     public $StoragePrefix;
 
     /**
-     * @var string 被指定存储用户ID
+     * @var string <p>被指定存储用户ID</p>
      */
     public $StorageAccountId;
 
     /**
-     * @var string 被指定存储用户appid
+     * @var string <p>被指定存储用户appid</p>
      */
     public $StorageAppId;
 
     /**
-     * @var integer 是否压缩。
-1:压缩  2:不压缩
+     * @var integer <p>是否压缩。<br>1:压缩  2:不压缩</p>
      */
     public $Compress;
 
     /**
-     * @param string $StorageType 存储类型（目前支持 cos、cls）
-     * @param string $StorageRegion 存储所在地域
-     * @param string $StorageName 存储名称(cos：存储名称为用户自定义的存储桶名称，不包含"-APPID"，仅支持小写字母、数字以及中划线"-"的组合，不能超过50字符，且不支持中划线"-"开头或结尾； cls：存储名称为日志主题id，字符长度为1-50个字符)
-     * @param string $StoragePrefix 存储目录前缀，cos日志文件前缀仅支持字母和数字的组合，3-40个字符
-     * @param string $StorageAccountId 被指定存储用户ID
-     * @param string $StorageAppId 被指定存储用户appid
-     * @param integer $Compress 是否压缩。
-1:压缩  2:不压缩
+     * @param string $StorageType <p>存储类型（目前支持 cos、cls、ckafka）</p>
+     * @param string $StorageRegion <p>存储所在地域</p>
+     * @param string $StorageName <p>存储名称(cos：存储名称为用户自定义的存储桶名称，不包含&quot;-APPID&quot;，仅支持小写字母、数字以及中划线&quot;-&quot;的组合，不能超过50字符，且不支持中划线&quot;-&quot;开头或结尾； cls：存储名称为日志主题id，字符长度为1-50个字符； ckafka： ckafka实例ID/topic. 举例：ckafka-xxxxxx/tencent_test_audit_log)</p>
+     * @param string $StoragePrefix <p>存储目录前缀，cos日志文件前缀仅支持字母和数字的组合，3-40个字符</p>
+     * @param string $StorageAccountId <p>被指定存储用户ID</p>
+     * @param string $StorageAppId <p>被指定存储用户appid</p>
+     * @param integer $Compress <p>是否压缩。<br>1:压缩  2:不压缩</p>
      */
     function __construct()
     {

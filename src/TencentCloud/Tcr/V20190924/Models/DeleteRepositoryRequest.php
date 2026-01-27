@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRepository请求参数结构体
  *
- * @method string getRegistryId() 获取实例Id
- * @method void setRegistryId(string $RegistryId) 设置实例Id
- * @method string getNamespaceName() 获取命名空间的名称
- * @method void setNamespaceName(string $NamespaceName) 设置命名空间的名称
- * @method string getRepositoryName() 获取镜像仓库的名称
- * @method void setRepositoryName(string $RepositoryName) 设置镜像仓库的名称
+ * @method string getRegistryId() 获取<p>实例Id</p>
+ * @method void setRegistryId(string $RegistryId) 设置<p>实例Id</p>
+ * @method string getNamespaceName() 获取<p>命名空间的名称</p>
+ * @method void setNamespaceName(string $NamespaceName) 设置<p>命名空间的名称</p>
+ * @method string getRepositoryName() 获取<p>镜像仓库的名称</p>
+ * @method void setRepositoryName(string $RepositoryName) 设置<p>镜像仓库的名称</p>
+ * @method boolean getForceDelete() 获取<p>默认值为true，表示无论仓库是否存在镜像都直接删除；false代表删除仓库前需检查是否存在镜像。</p>
+ * @method void setForceDelete(boolean $ForceDelete) 设置<p>默认值为true，表示无论仓库是否存在镜像都直接删除；false代表删除仓库前需检查是否存在镜像。</p>
  */
 class DeleteRepositoryRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string <p>实例Id</p>
      */
     public $RegistryId;
 
     /**
-     * @var string 命名空间的名称
+     * @var string <p>命名空间的名称</p>
      */
     public $NamespaceName;
 
     /**
-     * @var string 镜像仓库的名称
+     * @var string <p>镜像仓库的名称</p>
      */
     public $RepositoryName;
 
     /**
-     * @param string $RegistryId 实例Id
-     * @param string $NamespaceName 命名空间的名称
-     * @param string $RepositoryName 镜像仓库的名称
+     * @var boolean <p>默认值为true，表示无论仓库是否存在镜像都直接删除；false代表删除仓库前需检查是否存在镜像。</p>
+     */
+    public $ForceDelete;
+
+    /**
+     * @param string $RegistryId <p>实例Id</p>
+     * @param string $NamespaceName <p>命名空间的名称</p>
+     * @param string $RepositoryName <p>镜像仓库的名称</p>
+     * @param boolean $ForceDelete <p>默认值为true，表示无论仓库是否存在镜像都直接删除；false代表删除仓库前需检查是否存在镜像。</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DeleteRepositoryRequest extends AbstractModel
 
         if (array_key_exists("RepositoryName",$param) and $param["RepositoryName"] !== null) {
             $this->RepositoryName = $param["RepositoryName"];
+        }
+
+        if (array_key_exists("ForceDelete",$param) and $param["ForceDelete"] !== null) {
+            $this->ForceDelete = $param["ForceDelete"];
         }
     }
 }

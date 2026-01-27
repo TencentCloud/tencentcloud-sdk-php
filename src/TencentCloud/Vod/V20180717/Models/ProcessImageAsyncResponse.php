@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Nlp\V20190408\Models;
+namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * EvaluateSentenceSimilarity返回参数结构体
+ * ProcessImageAsync返回参数结构体
  *
- * @method array getScoreList() 获取每个句子对的相似度分值。
- * @method void setScoreList(array $ScoreList) 设置每个句子对的相似度分值。
+ * @method string getTaskId() 获取任务 ID。
+ * @method void setTaskId(string $TaskId) 设置任务 ID。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class EvaluateSentenceSimilarityResponse extends AbstractModel
+class ProcessImageAsyncResponse extends AbstractModel
 {
     /**
-     * @var array 每个句子对的相似度分值。
+     * @var string 任务 ID。
      */
-    public $ScoreList;
+    public $TaskId;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class EvaluateSentenceSimilarityResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ScoreList 每个句子对的相似度分值。
+     * @param string $TaskId 任务 ID。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class EvaluateSentenceSimilarityResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ScoreList",$param) and $param["ScoreList"] !== null) {
-            $this->ScoreList = $param["ScoreList"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

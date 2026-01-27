@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTagRetentionRules请求参数结构体
  *
- * @method string getRegistryId() 获取主实例iD
- * @method void setRegistryId(string $RegistryId) 设置主实例iD
- * @method string getNamespaceName() 获取命名空间的名称
- * @method void setNamespaceName(string $NamespaceName) 设置命名空间的名称
- * @method integer getLimit() 获取分页PageSize
- * @method void setLimit(integer $Limit) 设置分页PageSize
- * @method integer getOffset() 获取分页Page
- * @method void setOffset(integer $Offset) 设置分页Page
+ * @method string getRegistryId() 获取<p>主实例iD</p>
+ * @method void setRegistryId(string $RegistryId) 设置<p>主实例iD</p>
+ * @method string getNamespaceName() 获取<p>命名空间的名称</p>
+ * @method void setNamespaceName(string $NamespaceName) 设置<p>命名空间的名称</p>
+ * @method integer getLimit() 获取<p>分页PageSize</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页PageSize</p>
+ * @method integer getOffset() 获取<p>分页Page</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页Page</p>
  */
 class DescribeTagRetentionRulesRequest extends AbstractModel
 {
     /**
-     * @var string 主实例iD
+     * @var string <p>主实例iD</p>
      */
     public $RegistryId;
 
     /**
-     * @var string 命名空间的名称
+     * @var string <p>命名空间的名称</p>
      */
     public $NamespaceName;
 
     /**
-     * @var integer 分页PageSize
+     * @var integer <p>分页PageSize</p>
      */
     public $Limit;
 
     /**
-     * @var integer 分页Page
+     * @var integer <p>分页Page</p>
      */
     public $Offset;
 
     /**
-     * @param string $RegistryId 主实例iD
-     * @param string $NamespaceName 命名空间的名称
-     * @param integer $Limit 分页PageSize
-     * @param integer $Offset 分页Page
+     * @param string $RegistryId <p>主实例iD</p>
+     * @param string $NamespaceName <p>命名空间的名称</p>
+     * @param integer $Limit <p>分页PageSize</p>
+     * @param integer $Offset <p>分页Page</p>
      */
     function __construct()
     {

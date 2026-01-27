@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAuditTrack返回参数结构体
  *
- * @method integer getTrackId() 获取跟踪集 ID
- * @method void setTrackId(integer $TrackId) 设置跟踪集 ID
+ * @method integer getTrackId() 获取<p>跟踪集 ID</p>
+ * @method void setTrackId(integer $TrackId) 设置<p>跟踪集 ID</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateAuditTrackResponse extends AbstractModel
 {
     /**
-     * @var integer 跟踪集 ID
+     * @var integer <p>跟踪集 ID</p>
      */
     public $TrackId;
 
@@ -38,7 +38,7 @@ class CreateAuditTrackResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TrackId 跟踪集 ID
+     * @param integer $TrackId <p>跟踪集 ID</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

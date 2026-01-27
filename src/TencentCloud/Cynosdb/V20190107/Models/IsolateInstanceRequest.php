@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsolateReasonTypes(array $IsolateReasonTypes) 设置实例退还原因类型
  * @method string getIsolateReason() 获取实例退还原因补充
  * @method void setIsolateReason(string $IsolateReason) 设置实例退还原因补充
+ * @method boolean getSaveBackup() 获取保留备份
+ * @method void setSaveBackup(boolean $SaveBackup) 设置保留备份
  */
 class IsolateInstanceRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class IsolateInstanceRequest extends AbstractModel
     public $IsolateReason;
 
     /**
+     * @var boolean 保留备份
+     */
+    public $SaveBackup;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param array $InstanceIdList 实例ID数组，例如["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"]
      * @param string $DbType 该参数已废弃
      * @param array $IsolateReasonTypes 实例退还原因类型
      * @param string $IsolateReason 实例退还原因补充
+     * @param boolean $SaveBackup 保留备份
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class IsolateInstanceRequest extends AbstractModel
 
         if (array_key_exists("IsolateReason",$param) and $param["IsolateReason"] !== null) {
             $this->IsolateReason = $param["IsolateReason"];
+        }
+
+        if (array_key_exists("SaveBackup",$param) and $param["SaveBackup"] !== null) {
+            $this->SaveBackup = $param["SaveBackup"];
         }
     }
 }

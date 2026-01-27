@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getClothesFileInfos() 获取输入需要更换的**衣物**图片列表。目前最大支持4张图片。
  * @method void setClothesFileInfos(array $ClothesFileInfos) 设置输入需要更换的**衣物**图片列表。目前最大支持4张图片。
+ * @method string getPrompt() 获取AI换衣的提示词。
+ * @method void setPrompt(string $Prompt) 设置AI换衣的提示词。
  */
 class ChangeClothesConfig extends AbstractModel
 {
@@ -31,7 +33,13 @@ class ChangeClothesConfig extends AbstractModel
     public $ClothesFileInfos;
 
     /**
+     * @var string AI换衣的提示词。
+     */
+    public $Prompt;
+
+    /**
      * @param array $ClothesFileInfos 输入需要更换的**衣物**图片列表。目前最大支持4张图片。
+     * @param string $Prompt AI换衣的提示词。
      */
     function __construct()
     {
@@ -53,6 +61,10 @@ class ChangeClothesConfig extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ClothesFileInfos, $obj);
             }
+        }
+
+        if (array_key_exists("Prompt",$param) and $param["Prompt"] !== null) {
+            $this->Prompt = $param["Prompt"];
         }
     }
 }

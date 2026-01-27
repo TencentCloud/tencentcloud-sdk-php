@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogicCrossRegionsConfigUpdateTime(string $LogicCrossRegionsConfigUpdateTime) 设置跨地域逻辑备份配置修改时间
  * @method LogicBackupConfigInfo getLogicBackupConfig() 获取自动逻辑备份配置
  * @method void setLogicBackupConfig(LogicBackupConfigInfo $LogicBackupConfig) 设置自动逻辑备份配置
+ * @method BackupConfigInfo getSnapshotSecondaryBackupConfig() 获取二级快照备份配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSnapshotSecondaryBackupConfig(BackupConfigInfo $SnapshotSecondaryBackupConfig) 设置二级快照备份配置信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -75,6 +79,12 @@ class DescribeBackupConfigResponse extends AbstractModel
     public $LogicBackupConfig;
 
     /**
+     * @var BackupConfigInfo 二级快照备份配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SnapshotSecondaryBackupConfig;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -87,6 +97,8 @@ class DescribeBackupConfigResponse extends AbstractModel
      * @param string $BackupType 备份方式，logic-逻辑备份，snapshot-快照备份
      * @param string $LogicCrossRegionsConfigUpdateTime 跨地域逻辑备份配置修改时间
      * @param LogicBackupConfigInfo $LogicBackupConfig 自动逻辑备份配置
+     * @param BackupConfigInfo $SnapshotSecondaryBackupConfig 二级快照备份配置信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -129,6 +141,11 @@ class DescribeBackupConfigResponse extends AbstractModel
         if (array_key_exists("LogicBackupConfig",$param) and $param["LogicBackupConfig"] !== null) {
             $this->LogicBackupConfig = new LogicBackupConfigInfo();
             $this->LogicBackupConfig->deserialize($param["LogicBackupConfig"]);
+        }
+
+        if (array_key_exists("SnapshotSecondaryBackupConfig",$param) and $param["SnapshotSecondaryBackupConfig"] !== null) {
+            $this->SnapshotSecondaryBackupConfig = new BackupConfigInfo();
+            $this->SnapshotSecondaryBackupConfig->deserialize($param["SnapshotSecondaryBackupConfig"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

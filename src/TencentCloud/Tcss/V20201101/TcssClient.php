@@ -23,8 +23,12 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tcss\V20201101\Models as Models;
 
 /**
- * @method Models\AddAndPublishNetworkFirewallPolicyDetailResponse AddAndPublishNetworkFirewallPolicyDetail(Models\AddAndPublishNetworkFirewallPolicyDetailRequest $req) 容器网络创建网络策略添加并发布任务
- * @method Models\AddAndPublishNetworkFirewallPolicyYamlDetailResponse AddAndPublishNetworkFirewallPolicyYamlDetail(Models\AddAndPublishNetworkFirewallPolicyYamlDetailRequest $req) 容器网络创建Yaml网络策略并发布任务
+ * @method Models\AddAndPublishNetworkFirewallPolicyDetailResponse AddAndPublishNetworkFirewallPolicyDetail(Models\AddAndPublishNetworkFirewallPolicyDetailRequest $req) 功能已下线待三合一重构
+
+容器网络创建网络策略添加并发布任务
+ * @method Models\AddAndPublishNetworkFirewallPolicyYamlDetailResponse AddAndPublishNetworkFirewallPolicyYamlDetail(Models\AddAndPublishNetworkFirewallPolicyYamlDetailRequest $req) 功能已下线待三合一重构
+
+容器网络创建Yaml网络策略并发布任务
  * @method Models\AddAssetImageRegistryRegistryDetailResponse AddAssetImageRegistryRegistryDetail(Models\AddAssetImageRegistryRegistryDetailRequest $req) 新增单个镜像仓库详细信息
  * @method Models\AddComplianceAssetPolicySetToWhitelistResponse AddComplianceAssetPolicySetToWhitelist(Models\AddComplianceAssetPolicySetToWhitelistRequest $req) 新增安全合规忽略(资产+检测项列表)列表，不显示指定的检查项包含的资产内容
 参考的AddCompliancePolicyItemToWhitelist，除输入字段外，其它应该是一致的，如果有不同可能是定义的不对
@@ -39,11 +43,19 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\AddEditWarningRulesResponse AddEditWarningRules(Models\AddEditWarningRulesRequest $req) 添加编辑告警策略
  * @method Models\AddEscapeWhiteListResponse AddEscapeWhiteList(Models\AddEscapeWhiteListRequest $req) 新增逃逸白名单
  * @method Models\AddIgnoreVulResponse AddIgnoreVul(Models\AddIgnoreVulRequest $req) 新增漏洞扫描忽略漏洞
- * @method Models\AddNetworkFirewallPolicyDetailResponse AddNetworkFirewallPolicyDetail(Models\AddNetworkFirewallPolicyDetailRequest $req) 容器网络创建网络策略添加任务
- * @method Models\AddNetworkFirewallPolicyYamlDetailResponse AddNetworkFirewallPolicyYamlDetail(Models\AddNetworkFirewallPolicyYamlDetailRequest $req) 容器网络创建Yaml网络策略添加任务
- * @method Models\CheckNetworkFirewallPolicyYamlResponse CheckNetworkFirewallPolicyYaml(Models\CheckNetworkFirewallPolicyYamlRequest $req) 容器网络创建检查Yaml网络策略任务
+ * @method Models\AddNetworkFirewallPolicyDetailResponse AddNetworkFirewallPolicyDetail(Models\AddNetworkFirewallPolicyDetailRequest $req) 功能已下线待三合一重构
+
+容器网络创建网络策略添加任务
+ * @method Models\AddNetworkFirewallPolicyYamlDetailResponse AddNetworkFirewallPolicyYamlDetail(Models\AddNetworkFirewallPolicyYamlDetailRequest $req) 功能已下线待三合一重构
+
+容器网络创建Yaml网络策略添加任务
+ * @method Models\CheckNetworkFirewallPolicyYamlResponse CheckNetworkFirewallPolicyYaml(Models\CheckNetworkFirewallPolicyYamlRequest $req) 功能已下线待三合一重构
+
+容器网络创建检查Yaml网络策略任务
  * @method Models\CheckRepeatAssetImageRegistryResponse CheckRepeatAssetImageRegistry(Models\CheckRepeatAssetImageRegistryRequest $req) 检查单个镜像仓库名是否重复
- * @method Models\ConfirmNetworkFirewallPolicyResponse ConfirmNetworkFirewallPolicy(Models\ConfirmNetworkFirewallPolicyRequest $req) 容器网络创建网络策略确认任务
+ * @method Models\ConfirmNetworkFirewallPolicyResponse ConfirmNetworkFirewallPolicy(Models\ConfirmNetworkFirewallPolicyRequest $req) 功能已下线待三合一重构
+
+容器网络创建网络策略确认任务
  * @method Models\CreateAbnormalProcessRulesExportJobResponse CreateAbnormalProcessRulesExportJob(Models\CreateAbnormalProcessRulesExportJobRequest $req) 创建异常进程规则导出任务
  * @method Models\CreateAccessControlsRuleExportJobResponse CreateAccessControlsRuleExportJob(Models\CreateAccessControlsRuleExportJobRequest $req) 创建文件篡改规则导出任务
  * @method Models\CreateAssetImageRegistryScanTaskResponse CreateAssetImageRegistryScanTask(Models\CreateAssetImageRegistryScanTaskRequest $req) 镜像仓库创建镜像扫描任务
@@ -66,10 +78,18 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\CreateK8sApiAbnormalEventExportJobResponse CreateK8sApiAbnormalEventExportJob(Models\CreateK8sApiAbnormalEventExportJobRequest $req) 创建k8s api异常事件导出任务
  * @method Models\CreateK8sApiAbnormalRuleExportJobResponse CreateK8sApiAbnormalRuleExportJob(Models\CreateK8sApiAbnormalRuleExportJobRequest $req) 创建k8sApi异常规则导出任务
  * @method Models\CreateK8sApiAbnormalRuleInfoResponse CreateK8sApiAbnormalRuleInfo(Models\CreateK8sApiAbnormalRuleInfoRequest $req) 创建k8sapi异常事件规则
- * @method Models\CreateNetworkFirewallClusterRefreshResponse CreateNetworkFirewallClusterRefresh(Models\CreateNetworkFirewallClusterRefreshRequest $req) 容器网络集群下发刷新任务
- * @method Models\CreateNetworkFirewallPolicyDiscoverResponse CreateNetworkFirewallPolicyDiscover(Models\CreateNetworkFirewallPolicyDiscoverRequest $req) 容器网络集群网络策略创建自动发现任务
- * @method Models\CreateNetworkFirewallPublishResponse CreateNetworkFirewallPublish(Models\CreateNetworkFirewallPublishRequest $req) 容器网络创建网络策略发布任务
- * @method Models\CreateNetworkFirewallUndoPublishResponse CreateNetworkFirewallUndoPublish(Models\CreateNetworkFirewallUndoPublishRequest $req) 容器网络创建网络策略撤销任务
+ * @method Models\CreateNetworkFirewallClusterRefreshResponse CreateNetworkFirewallClusterRefresh(Models\CreateNetworkFirewallClusterRefreshRequest $req) 功能已下线待三合一重构
+
+容器网络集群下发刷新任务
+ * @method Models\CreateNetworkFirewallPolicyDiscoverResponse CreateNetworkFirewallPolicyDiscover(Models\CreateNetworkFirewallPolicyDiscoverRequest $req) 功能已下线待三合一重构
+
+容器网络集群网络策略创建自动发现任务
+ * @method Models\CreateNetworkFirewallPublishResponse CreateNetworkFirewallPublish(Models\CreateNetworkFirewallPublishRequest $req) 功能已下线待三合一重构
+
+容器网络创建网络策略发布任务
+ * @method Models\CreateNetworkFirewallUndoPublishResponse CreateNetworkFirewallUndoPublish(Models\CreateNetworkFirewallUndoPublishRequest $req) 功能已下线待三合一重构
+
+容器网络创建网络策略撤销任务
  * @method Models\CreateOrModifyPostPayCoresResponse CreateOrModifyPostPayCores(Models\CreateOrModifyPostPayCoresRequest $req) CreateOrModifyPostPayCores  创建或者编辑弹性计费上限
  * @method Models\CreateProcessEventsExportJobResponse CreateProcessEventsExportJob(Models\CreateProcessEventsExportJobRequest $req) 创建异常进程事件导出异步任务
  * @method Models\CreateRefreshTaskResponse CreateRefreshTask(Models\CreateRefreshTaskRequest $req) 下发刷新任务，会刷新资产信息
@@ -97,7 +117,9 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DeleteIgnoreVulResponse DeleteIgnoreVul(Models\DeleteIgnoreVulRequest $req) 取消漏洞扫描忽略漏洞
  * @method Models\DeleteK8sApiAbnormalRuleResponse DeleteK8sApiAbnormalRule(Models\DeleteK8sApiAbnormalRuleRequest $req) 删除k8sapi异常事件规则
  * @method Models\DeleteMachineResponse DeleteMachine(Models\DeleteMachineRequest $req) 卸载Agent客户端
- * @method Models\DeleteNetworkFirewallPolicyDetailResponse DeleteNetworkFirewallPolicyDetail(Models\DeleteNetworkFirewallPolicyDetailRequest $req) 容器网络创建网络策略删除任务
+ * @method Models\DeleteNetworkFirewallPolicyDetailResponse DeleteNetworkFirewallPolicyDetail(Models\DeleteNetworkFirewallPolicyDetailRequest $req) 功能已下线待三合一重构
+
+容器网络创建网络策略删除任务
  * @method Models\DeleteRaspRulesResponse DeleteRaspRules(Models\DeleteRaspRulesRequest $req) 删除漏洞防御白名单
  * @method Models\DeleteReverseShellEventsResponse DeleteReverseShellEvents(Models\DeleteReverseShellEventsRequest $req) 删除运行时反弹shell事件
  * @method Models\DeleteReverseShellWhiteListsResponse DeleteReverseShellWhiteLists(Models\DeleteReverseShellWhiteListsRequest $req) 删除运行时反弹shell白名单
@@ -214,17 +236,39 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeK8sApiAbnormalSummaryResponse DescribeK8sApiAbnormalSummary(Models\DescribeK8sApiAbnormalSummaryRequest $req) 查询k8sapi异常事件统计
  * @method Models\DescribeK8sApiAbnormalTendencyResponse DescribeK8sApiAbnormalTendency(Models\DescribeK8sApiAbnormalTendencyRequest $req) 查询k8sapi异常事件趋势
  * @method Models\DescribeLogStorageStatisticResponse DescribeLogStorageStatistic(Models\DescribeLogStorageStatisticRequest $req) 获取日志检索容量使用统计
- * @method Models\DescribeNetworkFirewallAuditRecordResponse DescribeNetworkFirewallAuditRecord(Models\DescribeNetworkFirewallAuditRecordRequest $req) 查询集群策略审计列表
- * @method Models\DescribeNetworkFirewallClusterListResponse DescribeNetworkFirewallClusterList(Models\DescribeNetworkFirewallClusterListRequest $req) 查询集群策略列表
- * @method Models\DescribeNetworkFirewallClusterRefreshStatusResponse DescribeNetworkFirewallClusterRefreshStatus(Models\DescribeNetworkFirewallClusterRefreshStatusRequest $req) 容器网络查询资产任务进度
- * @method Models\DescribeNetworkFirewallNamespaceLabelListResponse DescribeNetworkFirewallNamespaceLabelList(Models\DescribeNetworkFirewallNamespaceLabelListRequest $req) 查询集群网络空间标签列表
- * @method Models\DescribeNetworkFirewallNamespaceListResponse DescribeNetworkFirewallNamespaceList(Models\DescribeNetworkFirewallNamespaceListRequest $req) 查询集群网络空间列表
- * @method Models\DescribeNetworkFirewallPodLabelsListResponse DescribeNetworkFirewallPodLabelsList(Models\DescribeNetworkFirewallPodLabelsListRequest $req) 查询集群网络pod标签
- * @method Models\DescribeNetworkFirewallPolicyDetailResponse DescribeNetworkFirewallPolicyDetail(Models\DescribeNetworkFirewallPolicyDetailRequest $req) 容器网络集群查看策略详情
- * @method Models\DescribeNetworkFirewallPolicyDiscoverResponse DescribeNetworkFirewallPolicyDiscover(Models\DescribeNetworkFirewallPolicyDiscoverRequest $req) 容器网络查询网络策略自动发现任务进度
- * @method Models\DescribeNetworkFirewallPolicyListResponse DescribeNetworkFirewallPolicyList(Models\DescribeNetworkFirewallPolicyListRequest $req) 查询集群网络策略列表
- * @method Models\DescribeNetworkFirewallPolicyStatusResponse DescribeNetworkFirewallPolicyStatus(Models\DescribeNetworkFirewallPolicyStatusRequest $req) 容器网络查询网络策略策略执行状态
- * @method Models\DescribeNetworkFirewallPolicyYamlDetailResponse DescribeNetworkFirewallPolicyYamlDetail(Models\DescribeNetworkFirewallPolicyYamlDetailRequest $req) 容器网络集群查看Yaml网络策略详情
+ * @method Models\DescribeNetworkFirewallAuditRecordResponse DescribeNetworkFirewallAuditRecord(Models\DescribeNetworkFirewallAuditRecordRequest $req) 功能已下线待三合一重构
+
+查询集群策略审计列表
+ * @method Models\DescribeNetworkFirewallClusterListResponse DescribeNetworkFirewallClusterList(Models\DescribeNetworkFirewallClusterListRequest $req) 功能已下线待三合一重构
+
+查询集群策略列表
+ * @method Models\DescribeNetworkFirewallClusterRefreshStatusResponse DescribeNetworkFirewallClusterRefreshStatus(Models\DescribeNetworkFirewallClusterRefreshStatusRequest $req) 功能已下线待三合一重构
+
+容器网络查询资产任务进度
+ * @method Models\DescribeNetworkFirewallNamespaceLabelListResponse DescribeNetworkFirewallNamespaceLabelList(Models\DescribeNetworkFirewallNamespaceLabelListRequest $req) 功能已下线待三合一重构
+
+查询集群网络空间标签列表
+ * @method Models\DescribeNetworkFirewallNamespaceListResponse DescribeNetworkFirewallNamespaceList(Models\DescribeNetworkFirewallNamespaceListRequest $req) 功能已下线待三合一重构
+
+查询集群网络空间列表
+ * @method Models\DescribeNetworkFirewallPodLabelsListResponse DescribeNetworkFirewallPodLabelsList(Models\DescribeNetworkFirewallPodLabelsListRequest $req) 功能已下线待三合一重构
+
+查询集群网络pod标签
+ * @method Models\DescribeNetworkFirewallPolicyDetailResponse DescribeNetworkFirewallPolicyDetail(Models\DescribeNetworkFirewallPolicyDetailRequest $req) 功能已下线待三合一重构
+
+容器网络集群查看策略详情
+ * @method Models\DescribeNetworkFirewallPolicyDiscoverResponse DescribeNetworkFirewallPolicyDiscover(Models\DescribeNetworkFirewallPolicyDiscoverRequest $req) 功能已下线待三合一重构
+
+容器网络查询网络策略自动发现任务进度
+ * @method Models\DescribeNetworkFirewallPolicyListResponse DescribeNetworkFirewallPolicyList(Models\DescribeNetworkFirewallPolicyListRequest $req) 功能已下线待三合一重构
+
+查询集群网络策略列表
+ * @method Models\DescribeNetworkFirewallPolicyStatusResponse DescribeNetworkFirewallPolicyStatus(Models\DescribeNetworkFirewallPolicyStatusRequest $req) 功能已下线待三合一重构
+
+容器网络查询网络策略策略执行状态
+ * @method Models\DescribeNetworkFirewallPolicyYamlDetailResponse DescribeNetworkFirewallPolicyYamlDetail(Models\DescribeNetworkFirewallPolicyYamlDetailRequest $req) 功能已下线待三合一重构
+
+容器网络集群查看Yaml网络策略详情
  * @method Models\DescribeNewestVulResponse DescribeNewestVul(Models\DescribeNewestVulRequest $req) 查询最新披露漏洞列表
  * @method Models\DescribePostPayDetailResponse DescribePostPayDetail(Models\DescribePostPayDetailRequest $req) DescribePostPayDetail  查询后付费详情
  * @method Models\DescribeProVersionInfoResponse DescribeProVersionInfo(Models\DescribeProVersionInfoRequest $req) DescribeProVersionInfo  查询专业版需购买信息
@@ -363,12 +407,20 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\SwitchImageAutoAuthorizedRuleResponse SwitchImageAutoAuthorizedRule(Models\SwitchImageAutoAuthorizedRuleRequest $req) 编辑本地镜像自动授权开关
  * @method Models\SyncAssetImageRegistryAssetResponse SyncAssetImageRegistryAsset(Models\SyncAssetImageRegistryAssetRequest $req) 镜像仓库资产刷新
  * @method Models\UninstallClusterContainerSecurityResponse UninstallClusterContainerSecurity(Models\UninstallClusterContainerSecurityRequest $req) 卸载集群容器安全
- * @method Models\UpdateAndPublishNetworkFirewallPolicyDetailResponse UpdateAndPublishNetworkFirewallPolicyDetail(Models\UpdateAndPublishNetworkFirewallPolicyDetailRequest $req) 容器网络创建网络策略更新并发布任务
- * @method Models\UpdateAndPublishNetworkFirewallPolicyYamlDetailResponse UpdateAndPublishNetworkFirewallPolicyYamlDetail(Models\UpdateAndPublishNetworkFirewallPolicyYamlDetailRequest $req) 容器网络更新Yaml网络策略并发布任务
+ * @method Models\UpdateAndPublishNetworkFirewallPolicyDetailResponse UpdateAndPublishNetworkFirewallPolicyDetail(Models\UpdateAndPublishNetworkFirewallPolicyDetailRequest $req) 功能已下线待三合一重构
+
+容器网络创建网络策略更新并发布任务
+ * @method Models\UpdateAndPublishNetworkFirewallPolicyYamlDetailResponse UpdateAndPublishNetworkFirewallPolicyYamlDetail(Models\UpdateAndPublishNetworkFirewallPolicyYamlDetailRequest $req) 功能已下线待三合一重构
+
+容器网络更新Yaml网络策略并发布任务
  * @method Models\UpdateAssetImageRegistryRegistryDetailResponse UpdateAssetImageRegistryRegistryDetail(Models\UpdateAssetImageRegistryRegistryDetailRequest $req) 更新单个镜像仓库详细信息
  * @method Models\UpdateImageRegistryTimingScanTaskResponse UpdateImageRegistryTimingScanTask(Models\UpdateImageRegistryTimingScanTaskRequest $req) 镜像仓库更新定时任务
- * @method Models\UpdateNetworkFirewallPolicyDetailResponse UpdateNetworkFirewallPolicyDetail(Models\UpdateNetworkFirewallPolicyDetailRequest $req) 容器网络创建网络策略更新任务
- * @method Models\UpdateNetworkFirewallPolicyYamlDetailResponse UpdateNetworkFirewallPolicyYamlDetail(Models\UpdateNetworkFirewallPolicyYamlDetailRequest $req) 容器网络更新Yaml网络策略任务
+ * @method Models\UpdateNetworkFirewallPolicyDetailResponse UpdateNetworkFirewallPolicyDetail(Models\UpdateNetworkFirewallPolicyDetailRequest $req) 功能已下线待三合一重构
+
+容器网络创建网络策略更新任务
+ * @method Models\UpdateNetworkFirewallPolicyYamlDetailResponse UpdateNetworkFirewallPolicyYamlDetail(Models\UpdateNetworkFirewallPolicyYamlDetailRequest $req) 功能已下线待三合一重构
+
+容器网络更新Yaml网络策略任务
  */
 
 class TcssClient extends AbstractClient

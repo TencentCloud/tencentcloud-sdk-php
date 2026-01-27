@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAuditTrack请求参数结构体
  *
- * @method integer getTrackId() 获取跟踪集 ID
- * @method void setTrackId(integer $TrackId) 设置跟踪集 ID
- * @method string getName() 获取跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符
- * @method void setName(string $Name) 设置跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符
- * @method string getActionType() 获取跟踪事件类型（读：Read；写：Write；全部：*）
- * @method void setActionType(string $ActionType) 设置跟踪事件类型（读：Read；写：Write；全部：*）
- * @method string getResourceType() 获取跟踪事件所属产品（支持全部产品或单个产品，如：cos，全部：*）
- * @method void setResourceType(string $ResourceType) 设置跟踪事件所属产品（支持全部产品或单个产品，如：cos，全部：*）
- * @method integer getStatus() 获取跟踪集状态（未开启：0；开启：1）
- * @method void setStatus(integer $Status) 设置跟踪集状态（未开启：0；开启：1）
- * @method array getEventNames() 获取跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：["*"]；指定ResourceType时，支持全部接口：["*"]；支持部分接口：["cos", "cls"]，接口列表上限10个）
- * @method void setEventNames(array $EventNames) 设置跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：["*"]；指定ResourceType时，支持全部接口：["*"]；支持部分接口：["cos", "cls"]，接口列表上限10个）
- * @method Storage getStorage() 获取数据投递存储（目前支持 cos、cls）
- * @method void setStorage(Storage $Storage) 设置数据投递存储（目前支持 cos、cls）
- * @method integer getTrackForAllMembers() 获取是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)
- * @method void setTrackForAllMembers(integer $TrackForAllMembers) 设置是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)
+ * @method integer getTrackId() 获取<p>跟踪集 ID</p>
+ * @method void setTrackId(integer $TrackId) 设置<p>跟踪集 ID</p>
+ * @method string getName() 获取<p>跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符</p>
+ * @method void setName(string $Name) 设置<p>跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符</p>
+ * @method string getActionType() 获取<p>跟踪事件类型（读：Read；写：Write；全部：*）</p>
+ * @method void setActionType(string $ActionType) 设置<p>跟踪事件类型（读：Read；写：Write；全部：*）</p>
+ * @method string getResourceType() 获取<p>跟踪事件所属产品（支持全部产品或单个产品，如：cos，全部：*）</p>
+ * @method void setResourceType(string $ResourceType) 设置<p>跟踪事件所属产品（支持全部产品或单个产品，如：cos，全部：*）</p>
+ * @method integer getStatus() 获取<p>跟踪集状态（未开启：0；开启：1）</p>
+ * @method void setStatus(integer $Status) 设置<p>跟踪集状态（未开启：0；开启：1）</p>
+ * @method array getEventNames() 获取<p>跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：[&quot;*&quot;]；指定ResourceType时，支持全部接口：[&quot;*&quot;]；支持部分接口：[&quot;cos&quot;, &quot;cls&quot;]，接口列表上限10个）</p>
+ * @method void setEventNames(array $EventNames) 设置<p>跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：[&quot;*&quot;]；指定ResourceType时，支持全部接口：[&quot;*&quot;]；支持部分接口：[&quot;cos&quot;, &quot;cls&quot;]，接口列表上限10个）</p>
+ * @method Storage getStorage() 获取<p>数据投递存储（目前支持 cos、cls、ckafka）</p>
+ * @method void setStorage(Storage $Storage) 设置<p>数据投递存储（目前支持 cos、cls、ckafka）</p>
+ * @method integer getTrackForAllMembers() 获取<p>是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)</p>
+ * @method void setTrackForAllMembers(integer $TrackForAllMembers) 设置<p>是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)</p>
  */
 class ModifyAuditTrackRequest extends AbstractModel
 {
     /**
-     * @var integer 跟踪集 ID
+     * @var integer <p>跟踪集 ID</p>
      */
     public $TrackId;
 
     /**
-     * @var string 跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符
+     * @var string <p>跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符</p>
      */
     public $Name;
 
     /**
-     * @var string 跟踪事件类型（读：Read；写：Write；全部：*）
+     * @var string <p>跟踪事件类型（读：Read；写：Write；全部：*）</p>
      */
     public $ActionType;
 
     /**
-     * @var string 跟踪事件所属产品（支持全部产品或单个产品，如：cos，全部：*）
+     * @var string <p>跟踪事件所属产品（支持全部产品或单个产品，如：cos，全部：*）</p>
      */
     public $ResourceType;
 
     /**
-     * @var integer 跟踪集状态（未开启：0；开启：1）
+     * @var integer <p>跟踪集状态（未开启：0；开启：1）</p>
      */
     public $Status;
 
     /**
-     * @var array 跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：["*"]；指定ResourceType时，支持全部接口：["*"]；支持部分接口：["cos", "cls"]，接口列表上限10个）
+     * @var array <p>跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：[&quot;*&quot;]；指定ResourceType时，支持全部接口：[&quot;*&quot;]；支持部分接口：[&quot;cos&quot;, &quot;cls&quot;]，接口列表上限10个）</p>
      */
     public $EventNames;
 
     /**
-     * @var Storage 数据投递存储（目前支持 cos、cls）
+     * @var Storage <p>数据投递存储（目前支持 cos、cls、ckafka）</p>
      */
     public $Storage;
 
     /**
-     * @var integer 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)
+     * @var integer <p>是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)</p>
      */
     public $TrackForAllMembers;
 
     /**
-     * @param integer $TrackId 跟踪集 ID
-     * @param string $Name 跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符
-     * @param string $ActionType 跟踪事件类型（读：Read；写：Write；全部：*）
-     * @param string $ResourceType 跟踪事件所属产品（支持全部产品或单个产品，如：cos，全部：*）
-     * @param integer $Status 跟踪集状态（未开启：0；开启：1）
-     * @param array $EventNames 跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：["*"]；指定ResourceType时，支持全部接口：["*"]；支持部分接口：["cos", "cls"]，接口列表上限10个）
-     * @param Storage $Storage 数据投递存储（目前支持 cos、cls）
-     * @param integer $TrackForAllMembers 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)
+     * @param integer $TrackId <p>跟踪集 ID</p>
+     * @param string $Name <p>跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符</p>
+     * @param string $ActionType <p>跟踪事件类型（读：Read；写：Write；全部：*）</p>
+     * @param string $ResourceType <p>跟踪事件所属产品（支持全部产品或单个产品，如：cos，全部：*）</p>
+     * @param integer $Status <p>跟踪集状态（未开启：0；开启：1）</p>
+     * @param array $EventNames <p>跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：[&quot;*&quot;]；指定ResourceType时，支持全部接口：[&quot;*&quot;]；支持部分接口：[&quot;cos&quot;, &quot;cls&quot;]，接口列表上限10个）</p>
+     * @param Storage $Storage <p>数据投递存储（目前支持 cos、cls、ckafka）</p>
+     * @param integer $TrackForAllMembers <p>是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)</p>
      */
     function __construct()
     {

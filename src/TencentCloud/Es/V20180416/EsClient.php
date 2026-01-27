@@ -26,6 +26,7 @@ use TencentCloud\Es\V20180416\Models as Models;
  * @method Models\CheckMigrateIndexMetaDataResponse CheckMigrateIndexMetaData(Models\CheckMigrateIndexMetaDataRequest $req) 检查cos迁移索引元数据
  * @method Models\CreateAutoBackUpStrategyResponse CreateAutoBackUpStrategy(Models\CreateAutoBackUpStrategyRequest $req) 新建自动备份快照策略
  * @method Models\CreateClusterSnapshotResponse CreateClusterSnapshot(Models\CreateClusterSnapshotRequest $req) 集群快照手动创建
+ * @method Models\CreateCollectorResponse CreateCollector(Models\CreateCollectorRequest $req) 用于创建Beats采集器
  * @method Models\CreateCosMigrateToServerlessInstanceResponse CreateCosMigrateToServerlessInstance(Models\CreateCosMigrateToServerlessInstanceRequest $req) cos迁移流程
  * @method Models\CreateIndexResponse CreateIndex(Models\CreateIndexRequest $req) 创建索引
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 创建指定规格的ES集群实例

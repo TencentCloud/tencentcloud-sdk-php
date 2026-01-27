@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAspectRatio(string $AspectRatio) 设置指定所生成图片的宽高比。输入格式为 W:H。
 
 仅生商品图场景有效，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
+ * @method ImageSceneAigcEncodeConfig getEncodeConfig() 获取输出图片编码格式参数。**仅AI换衣场景有效。**
+ * @method void setEncodeConfig(ImageSceneAigcEncodeConfig $EncodeConfig) 设置输出图片编码格式参数。**仅AI换衣场景有效。**
  */
 class SceneAigcImageOutputConfig extends AbstractModel
 {
@@ -71,6 +73,11 @@ class SceneAigcImageOutputConfig extends AbstractModel
     public $AspectRatio;
 
     /**
+     * @var ImageSceneAigcEncodeConfig 输出图片编码格式参数。**仅AI换衣场景有效。**
+     */
+    public $EncodeConfig;
+
+    /**
      * @param string $StorageMode 存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li>
 默认值：Temporary
      * @param string $MediaName 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
@@ -80,6 +87,7 @@ class SceneAigcImageOutputConfig extends AbstractModel
      * @param string $AspectRatio 指定所生成图片的宽高比。输入格式为 W:H。
 
 仅生商品图场景有效，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
+     * @param ImageSceneAigcEncodeConfig $EncodeConfig 输出图片编码格式参数。**仅AI换衣场景有效。**
      */
     function __construct()
     {
@@ -112,6 +120,11 @@ class SceneAigcImageOutputConfig extends AbstractModel
 
         if (array_key_exists("AspectRatio",$param) and $param["AspectRatio"] !== null) {
             $this->AspectRatio = $param["AspectRatio"];
+        }
+
+        if (array_key_exists("EncodeConfig",$param) and $param["EncodeConfig"] !== null) {
+            $this->EncodeConfig = new ImageSceneAigcEncodeConfig();
+            $this->EncodeConfig->deserialize($param["EncodeConfig"]);
         }
     }
 }

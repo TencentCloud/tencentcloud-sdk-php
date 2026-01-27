@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 版本保留策略
  *
- * @method integer getRetentionId() 获取版本保留策略Id
- * @method void setRetentionId(integer $RetentionId) 设置版本保留策略Id
- * @method string getNamespaceName() 获取命名空间的名称
- * @method void setNamespaceName(string $NamespaceName) 设置命名空间的名称
- * @method array getRetentionRuleList() 获取规则列表
- * @method void setRetentionRuleList(array $RetentionRuleList) 设置规则列表
- * @method string getCronSetting() 获取定期执行方式
- * @method void setCronSetting(string $CronSetting) 设置定期执行方式
- * @method boolean getDisabled() 获取是否启用规则
- * @method void setDisabled(boolean $Disabled) 设置是否启用规则
- * @method string getNextExecutionTime() 获取基于当前时间根据cronSetting后下一次任务要执行的时间，仅做参考使用
- * @method void setNextExecutionTime(string $NextExecutionTime) 设置基于当前时间根据cronSetting后下一次任务要执行的时间，仅做参考使用
+ * @method integer getRetentionId() 获取<p>版本保留策略Id</p>
+ * @method void setRetentionId(integer $RetentionId) 设置<p>版本保留策略Id</p>
+ * @method string getNamespaceName() 获取<p>命名空间的名称</p>
+ * @method void setNamespaceName(string $NamespaceName) 设置<p>命名空间的名称</p>
+ * @method array getRetentionRuleList() 获取<p>规则列表</p>
+ * @method void setRetentionRuleList(array $RetentionRuleList) 设置<p>规则列表</p>
+ * @method array getAdvancedRuleItems() 获取<p>高级保留规则列表</p>
+ * @method void setAdvancedRuleItems(array $AdvancedRuleItems) 设置<p>高级保留规则列表</p>
+ * @method string getCronSetting() 获取<p>定期执行方式</p>
+ * @method void setCronSetting(string $CronSetting) 设置<p>定期执行方式</p>
+ * @method boolean getDisabled() 获取<p>是否启用规则</p>
+ * @method void setDisabled(boolean $Disabled) 设置<p>是否启用规则</p>
+ * @method string getNextExecutionTime() 获取<p>基于当前时间根据cronSetting后下一次任务要执行的时间，仅做参考使用</p>
+ * @method void setNextExecutionTime(string $NextExecutionTime) 设置<p>基于当前时间根据cronSetting后下一次任务要执行的时间，仅做参考使用</p>
  */
 class RetentionPolicy extends AbstractModel
 {
     /**
-     * @var integer 版本保留策略Id
+     * @var integer <p>版本保留策略Id</p>
      */
     public $RetentionId;
 
     /**
-     * @var string 命名空间的名称
+     * @var string <p>命名空间的名称</p>
      */
     public $NamespaceName;
 
     /**
-     * @var array 规则列表
+     * @var array <p>规则列表</p>
      */
     public $RetentionRuleList;
 
     /**
-     * @var string 定期执行方式
+     * @var array <p>高级保留规则列表</p>
+     */
+    public $AdvancedRuleItems;
+
+    /**
+     * @var string <p>定期执行方式</p>
      */
     public $CronSetting;
 
     /**
-     * @var boolean 是否启用规则
+     * @var boolean <p>是否启用规则</p>
      */
     public $Disabled;
 
     /**
-     * @var string 基于当前时间根据cronSetting后下一次任务要执行的时间，仅做参考使用
+     * @var string <p>基于当前时间根据cronSetting后下一次任务要执行的时间，仅做参考使用</p>
      */
     public $NextExecutionTime;
 
     /**
-     * @param integer $RetentionId 版本保留策略Id
-     * @param string $NamespaceName 命名空间的名称
-     * @param array $RetentionRuleList 规则列表
-     * @param string $CronSetting 定期执行方式
-     * @param boolean $Disabled 是否启用规则
-     * @param string $NextExecutionTime 基于当前时间根据cronSetting后下一次任务要执行的时间，仅做参考使用
+     * @param integer $RetentionId <p>版本保留策略Id</p>
+     * @param string $NamespaceName <p>命名空间的名称</p>
+     * @param array $RetentionRuleList <p>规则列表</p>
+     * @param array $AdvancedRuleItems <p>高级保留规则列表</p>
+     * @param string $CronSetting <p>定期执行方式</p>
+     * @param boolean $Disabled <p>是否启用规则</p>
+     * @param string $NextExecutionTime <p>基于当前时间根据cronSetting后下一次任务要执行的时间，仅做参考使用</p>
      */
     function __construct()
     {
@@ -100,6 +108,15 @@ class RetentionPolicy extends AbstractModel
                 $obj = new RetentionRule();
                 $obj->deserialize($value);
                 array_push($this->RetentionRuleList, $obj);
+            }
+        }
+
+        if (array_key_exists("AdvancedRuleItems",$param) and $param["AdvancedRuleItems"] !== null) {
+            $this->AdvancedRuleItems = [];
+            foreach ($param["AdvancedRuleItems"] as $key => $value){
+                $obj = new RetentionRuleItem();
+                $obj->deserialize($value);
+                array_push($this->AdvancedRuleItems, $obj);
             }
         }
 

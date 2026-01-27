@@ -58,13 +58,16 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\DescribeInstanceSSLResponse DescribeInstanceSSL(Models\DescribeInstanceSSLRequest $req) 查看实例SSL开启状态
  * @method Models\DescribeLogDownloadTasksResponse DescribeLogDownloadTasks(Models\DescribeLogDownloadTasksRequest $req) 日志下载任务查询
  * @method Models\DescribeMongodbLogsResponse DescribeMongodbLogs(Models\DescribeMongodbLogsRequest $req) 该接口（DescribeMongodbLogs）用于查询运行日志。
+ * @method Models\DescribeSRVConnectionDomainResponse DescribeSRVConnectionDomain(Models\DescribeSRVConnectionDomainRequest $req) 本接口（DescribeSRVConnectionDomain）用于查询MongoDB数据库当前的域名信息。
  * @method Models\DescribeSecurityGroupResponse DescribeSecurityGroup(Models\DescribeSecurityGroupRequest $req) 本接口（DescribeSecurityGroup）用于查询实例绑定的安全组。
  * @method Models\DescribeSlowLogPatternsResponse DescribeSlowLogPatterns(Models\DescribeSlowLogPatternsRequest $req) 本接口（DescribeSlowLogPatterns）用于获取数据库实例慢日志的统计信息。
  * @method Models\DescribeSlowLogsResponse DescribeSlowLogs(Models\DescribeSlowLogsRequest $req) 本接口（DescribeSlowLogs）用于获取云数据库慢日志信息。接口只支持查询最近7天内慢日志。
  * @method Models\DescribeSpecInfoResponse DescribeSpecInfo(Models\DescribeSpecInfoRequest $req) 本接口（DescribeSpecInfo）用于查询实例的售卖规格。
  * @method Models\DescribeTransparentDataEncryptionStatusResponse DescribeTransparentDataEncryptionStatus(Models\DescribeTransparentDataEncryptionStatusRequest $req) 获取实例透明加密的开启状态
+ * @method Models\DisableSRVConnectionUrlResponse DisableSRVConnectionUrl(Models\DisableSRVConnectionUrlRequest $req) 本接口（DisableSRVConnectionUrl）用于关闭MongoDB数据库的SRV访问地址。
  * @method Models\DropDBInstanceParamTplResponse DropDBInstanceParamTpl(Models\DropDBInstanceParamTplRequest $req) 本接口(DropDBInstanceParamTpl )用于删除云数据库MongoDB实例的参数模板
 **说明：DropDBInstanceParamTpl  API正在公测中，在此期间，该接口仅对公测用户开放**
+ * @method Models\EnableSRVConnectionUrlResponse EnableSRVConnectionUrl(Models\EnableSRVConnectionUrlRequest $req) 本接口（EnableSRVConnectionUrl）用于开启MongoDB数据库的SRV访问地址。
  * @method Models\EnableTransparentDataEncryptionResponse EnableTransparentDataEncryption(Models\EnableTransparentDataEncryptionRequest $req) 本接口（EnableTransparentDataEncryption）用于开启云数据库 MongoDB 的透明加密能力。
  * @method Models\FlashBackDBInstanceResponse FlashBackDBInstance(Models\FlashBackDBInstanceRequest $req) 该接口用于发起按 Key 闪回任务，依据数据的闪回 Key（默认为 id）对数据进行极速回档，快速恢复业务。
 **说明：按 Key 闪回于2023年09月11日正式进行公测，在此期间，该接口仅对公测用户开放。**
@@ -82,6 +85,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\ModifyDBInstanceSecurityGroupResponse ModifyDBInstanceSecurityGroup(Models\ModifyDBInstanceSecurityGroupRequest $req) 本接口（ModifyDBInstanceSecurityGroup）用于修改实例绑定的安全组
  * @method Models\ModifyDBInstanceSpecResponse ModifyDBInstanceSpec(Models\ModifyDBInstanceSpecRequest $req) 本接口（ModifyDBInstanceSpec）用于调整MongoDB云数据库实例配置。接口支持的售卖规格，可从查询云数据库的售卖规格（[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)）获取。
  * @method Models\ModifyInstanceParamsResponse ModifyInstanceParams(Models\ModifyInstanceParamsRequest $req) 本接口（ModifyInstanceParams）用于修改mongoDB实例的参数配置。
+ * @method Models\ModifySRVConnectionUrlResponse ModifySRVConnectionUrl(Models\ModifySRVConnectionUrlRequest $req) 本接口（DisableSRVConnectionUrl）用于修改MongoDB数据库的SRV访问地址的TTL时长。
  * @method Models\OfflineIsolatedDBInstanceResponse OfflineIsolatedDBInstance(Models\OfflineIsolatedDBInstanceRequest $req) 本接口(OfflineIsolatedDBInstance)用于立即下线隔离状态的云数据库实例。进行操作的实例状态必须为隔离状态。
  * @method Models\OpenAuditServiceResponse OpenAuditService(Models\OpenAuditServiceRequest $req) 本接口(OpenAuditService)用于开通云数据库实例的审计。
  * @method Models\RenameInstanceResponse RenameInstance(Models\RenameInstanceRequest $req) 本接口(RenameInstance)用于修改云数据库实例的名称。

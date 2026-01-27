@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRebuildIndexTasks返回参数结构体
  *
- * @method array getRebuildTasks() 获取索引重建任务列表
- * @method void setRebuildTasks(array $RebuildTasks) 设置索引重建任务列表
+ * @method array getRebuildTasks() 获取<p>索引重建任务列表</p>
+ * @method void setRebuildTasks(array $RebuildTasks) 设置<p>索引重建任务列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeRebuildIndexTasksResponse extends AbstractModel
 {
     /**
-     * @var array 索引重建任务列表
+     * @var array <p>索引重建任务列表</p>
      */
     public $RebuildTasks;
 
@@ -38,7 +38,7 @@ class DescribeRebuildIndexTasksResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $RebuildTasks 索引重建任务列表
+     * @param array $RebuildTasks <p>索引重建任务列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

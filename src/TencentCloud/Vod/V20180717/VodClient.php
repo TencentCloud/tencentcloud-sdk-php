@@ -88,6 +88,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 > 2. 该功能目前仍在内测中，如需测试体验，您可以联系我们获得支持。
  * @method Models\CreatePersonSampleResponse CreatePersonSample(Models\CreatePersonSampleRequest $req) 该接口用于创建素材样本，用于通过五官定位等技术，进行内容识别、不适宜视频识别等视频处理。
  * @method Models\CreateProcedureTemplateResponse CreateProcedureTemplate(Models\CreateProcedureTemplateRequest $req) 创建用户自定义的任务流模板，模板上限：50。
+ * @method Models\CreateProcessImageAsyncTemplateResponse CreateProcessImageAsyncTemplate(Models\CreateProcessImageAsyncTemplateRequest $req) 创建用户自定义图像异步处理模板，数量上限：50。暂时不支持 HLS 格式。
  * @method Models\CreateQualityInspectTemplateResponse CreateQualityInspectTemplate(Models\CreateQualityInspectTemplateRequest $req) 创建音画质检测模板。
  * @method Models\CreateRebuildMediaTemplateResponse CreateRebuildMediaTemplate(Models\CreateRebuildMediaTemplateRequest $req) 该 API 已经<font color=red>不再维护</font>，新版 [音画质重生](https://cloud.tencent.com/document/product/266/102571) 接口使用预置模板，详情请参见 [音画质重生模板](https://cloud.tencent.com/document/product/266/102586#50604b3f-0286-4a10-a3f7-18218116aff7)。
 创建视频重生模板。
@@ -134,6 +135,9 @@ use TencentCloud\Vod\V20180717\Models as Models;
 * 注意：原文件删除后，无法发起转码、微信发布等任何视频处理操作。
  * @method Models\DeletePersonSampleResponse DeletePersonSample(Models\DeletePersonSampleRequest $req) 该接口用于根据人物 ID，删除素材样本。
  * @method Models\DeleteProcedureTemplateResponse DeleteProcedureTemplate(Models\DeleteProcedureTemplateRequest $req) 删除用户自定义的任务流模板。
+ * @method Models\DeleteProcessImageAsyncTemplateResponse DeleteProcessImageAsyncTemplate(Models\DeleteProcessImageAsyncTemplateRequest $req) 删除用户自定义图像异步处理模板。
+
+注意：模板 ID 为 10000 以下的为系统预置模板，不允许删除。
  * @method Models\DeleteQualityInspectTemplateResponse DeleteQualityInspectTemplate(Models\DeleteQualityInspectTemplateRequest $req) 删除音画质检测模板。
  * @method Models\DeleteRebuildMediaTemplateResponse DeleteRebuildMediaTemplate(Models\DeleteRebuildMediaTemplateRequest $req) 该 API 已经<font color=red>不再维护</font>，新版 [音画质重生](https://cloud.tencent.com/document/product/266/102571) 接口使用预置模板，详情请参见 [音画质重生模板](https://cloud.tencent.com/document/product/266/102586#50604b3f-0286-4a10-a3f7-18218116aff7)。
 删除视频重生模板。
@@ -261,6 +265,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
     1. 商品的类型、生效和失效日期。
     2. 商品中每种资源的额度和剩余额度。
  * @method Models\DescribeProcedureTemplatesResponse DescribeProcedureTemplates(Models\DescribeProcedureTemplatesRequest $req) 根据任务流模板名字，获取任务流模板详情列表。
+ * @method Models\DescribeProcessImageAsyncTemplatesResponse DescribeProcessImageAsyncTemplates(Models\DescribeProcessImageAsyncTemplatesRequest $req) 根据图像异步处理模板唯一标识，获取图像异步处理模板详情列表。返回结果包含符合条件的所有用户自定义图像异步处理模板。
  * @method Models\DescribeQualityInspectTemplatesResponse DescribeQualityInspectTemplates(Models\DescribeQualityInspectTemplatesRequest $req) 获取音画质检测模板列表。
  * @method Models\DescribeRebuildMediaTemplatesResponse DescribeRebuildMediaTemplates(Models\DescribeRebuildMediaTemplatesRequest $req) 该 API 已经<font color=red>不再维护</font>，新版 [音画质重生](https://cloud.tencent.com/document/product/266/102571) 接口使用预置模板，详情请参见 [音画质重生模板](https://cloud.tencent.com/document/product/266/102586#50604b3f-0286-4a10-a3f7-18218116aff7)。
 获取视频重生模板列表。
@@ -399,6 +404,9 @@ use TencentCloud\Vod\V20180717\Models as Models;
 当媒体文件的当前存储类型为深度归档存储时，可以修改为以下类型：
 <li>标准存储</li>
  * @method Models\ModifyPersonSampleResponse ModifyPersonSample(Models\ModifyPersonSampleRequest $req) 该接口用于根据素材 ID，修改素材样本信息，包括名称、描述的修改，以及五官、标签的添加、删除、重置操作。五官删除操作需保证至少剩余 1 张图片，否则，请使用重置操作。
+ * @method Models\ModifyProcessImageAsyncTemplateResponse ModifyProcessImageAsyncTemplate(Models\ModifyProcessImageAsyncTemplateRequest $req) 修改用户自定义图像异步处理模板。
+
+注意：模板 ID 10000 以下的为系统预置模板，不允许修改。
  * @method Models\ModifyQualityInspectTemplateResponse ModifyQualityInspectTemplate(Models\ModifyQualityInspectTemplateRequest $req) 修改音画质检测模板。
  * @method Models\ModifyRebuildMediaTemplateResponse ModifyRebuildMediaTemplate(Models\ModifyRebuildMediaTemplateRequest $req) 该 API 已经<font color=red>不再维护</font>，新版 [音画质重生](https://cloud.tencent.com/document/product/266/102571) 接口使用预置模板，详情请参见 [音画质重生模板](https://cloud.tencent.com/document/product/266/102586#50604b3f-0286-4a10-a3f7-18218116aff7)。
 修改视频重生模板。
@@ -429,6 +437,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 ><li>图片文件大小支持：文件 < 5M；</li>
 ><li>图片文件分辨率支持：建议分辨率大于256x256，否则可能会影响识别效果；</li>
 ><li>图片文件支持格式：PNG、JPG、JPEG、BMP、GIF、WEBP格式。</li>
+ * @method Models\ProcessImageAsyncResponse ProcessImageAsync(Models\ProcessImageAsyncRequest $req) 该接口用于图片处理任务
  * @method Models\ProcessMediaResponse ProcessMedia(Models\ProcessMediaRequest $req) 对点播中的音视频媒体发起处理任务，功能包括：
 1. 视频转码（带水印）；
 2. 视频转动图；

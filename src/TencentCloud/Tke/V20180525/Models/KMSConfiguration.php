@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * kms加密参数
  *
- * @method string getKeyId() 获取kms id，可以在密钥管理控制台获取
- * @method void setKeyId(string $KeyId) 设置kms id，可以在密钥管理控制台获取
- * @method string getKmsRegion() 获取kms 地域
- * @method void setKmsRegion(string $KmsRegion) 设置kms 地域
+ * @method string getKeyId() 获取自定义密钥,当不指定KeyId时，采用默认生成密钥（TKE-KMS）
+ * @method void setKeyId(string $KeyId) 设置自定义密钥,当不指定KeyId时，采用默认生成密钥（TKE-KMS）
+ * @method string getKmsRegion() 获取默认生成密钥或自定义密钥地域信息
+ * @method void setKmsRegion(string $KmsRegion) 设置默认生成密钥或自定义密钥地域信息
  */
 class KMSConfiguration extends AbstractModel
 {
     /**
-     * @var string kms id，可以在密钥管理控制台获取
+     * @var string 自定义密钥,当不指定KeyId时，采用默认生成密钥（TKE-KMS）
      */
     public $KeyId;
 
     /**
-     * @var string kms 地域
+     * @var string 默认生成密钥或自定义密钥地域信息
      */
     public $KmsRegion;
 
     /**
-     * @param string $KeyId kms id，可以在密钥管理控制台获取
-     * @param string $KmsRegion kms 地域
+     * @param string $KeyId 自定义密钥,当不指定KeyId时，采用默认生成密钥（TKE-KMS）
+     * @param string $KmsRegion 默认生成密钥或自定义密钥地域信息
      */
     function __construct()
     {

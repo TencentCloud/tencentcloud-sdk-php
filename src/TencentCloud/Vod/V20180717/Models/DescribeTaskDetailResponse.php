@@ -138,6 +138,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSceneAigcImageTask(SceneAigcImageTask $SceneAigcImageTask) 设置场景化 AIGC 生图任务信息，仅当 TaskType 为 SceneAigcImageTask，该字段有值。
  * @method SceneAigcVideoTask getSceneAigcVideoTask() 获取场景化 AIGC 生视频任务信息，仅当 TaskType 为 SceneAigcVideoTask，该字段有值。
  * @method void setSceneAigcVideoTask(SceneAigcVideoTask $SceneAigcVideoTask) 设置场景化 AIGC 生视频任务信息，仅当 TaskType 为 SceneAigcVideoTask，该字段有值。
+ * @method ProcessImageAsync getProcessImageAsyncTask() 获取图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。
+ * @method void setProcessImageAsyncTask(ProcessImageAsync $ProcessImageAsyncTask) 设置图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -335,6 +337,11 @@ class DescribeTaskDetailResponse extends AbstractModel
     public $SceneAigcVideoTask;
 
     /**
+     * @var ProcessImageAsync 图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。
+     */
+    public $ProcessImageAsyncTask;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -399,6 +406,7 @@ class DescribeTaskDetailResponse extends AbstractModel
      * @param ImportMediaKnowledgeTask $ImportMediaKnowledge 媒体导入知识库任务信息，仅当 TaskType 为 ImportMediaKnowledge，该字段有值。
      * @param SceneAigcImageTask $SceneAigcImageTask 场景化 AIGC 生图任务信息，仅当 TaskType 为 SceneAigcImageTask，该字段有值。
      * @param SceneAigcVideoTask $SceneAigcVideoTask 场景化 AIGC 生视频任务信息，仅当 TaskType 为 SceneAigcVideoTask，该字段有值。
+     * @param ProcessImageAsync $ProcessImageAsyncTask 图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -572,6 +580,11 @@ class DescribeTaskDetailResponse extends AbstractModel
         if (array_key_exists("SceneAigcVideoTask",$param) and $param["SceneAigcVideoTask"] !== null) {
             $this->SceneAigcVideoTask = new SceneAigcVideoTask();
             $this->SceneAigcVideoTask->deserialize($param["SceneAigcVideoTask"]);
+        }
+
+        if (array_key_exists("ProcessImageAsyncTask",$param) and $param["ProcessImageAsyncTask"] !== null) {
+            $this->ProcessImageAsyncTask = new ProcessImageAsync();
+            $this->ProcessImageAsyncTask->deserialize($param["ProcessImageAsyncTask"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

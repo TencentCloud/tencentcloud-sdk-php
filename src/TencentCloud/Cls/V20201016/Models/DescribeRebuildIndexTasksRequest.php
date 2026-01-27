@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRebuildIndexTasks请求参数结构体
  *
- * @method string getTopicId() 获取日志主题ID
- * @method void setTopicId(string $TopicId) 设置日志主题ID
- * @method string getTaskId() 获取索引重建任务ID
- * @method void setTaskId(string $TaskId) 设置索引重建任务ID
- * @method string getStatus() 获取索引重建任务状态，不填返回所有状态任务列表，多种状态之间用逗号分隔，0:索引重建任务已创建，1:已创建索引重建资源，2:重建中，3:重建完成，4:重建成功（可检索），5:任务取消，6:元数据和索引已删除
- * @method void setStatus(string $Status) 设置索引重建任务状态，不填返回所有状态任务列表，多种状态之间用逗号分隔，0:索引重建任务已创建，1:已创建索引重建资源，2:重建中，3:重建完成，4:重建成功（可检索），5:任务取消，6:元数据和索引已删除
- * @method integer getOffset() 获取分页的偏移量，默认值为0。
- * @method void setOffset(integer $Offset) 设置分页的偏移量，默认值为0。
- * @method integer getLimit() 获取分页单页限制数目，默认值为10，最大值20。
- * @method void setLimit(integer $Limit) 设置分页单页限制数目，默认值为10，最大值20。
+ * @method string getTopicId() 获取<p>日志主题ID</p>
+ * @method void setTopicId(string $TopicId) 设置<p>日志主题ID</p>
+ * @method string getTaskId() 获取<p>索引重建任务ID</p>
+ * @method void setTaskId(string $TaskId) 设置<p>索引重建任务ID</p>
+ * @method string getStatus() 获取<p>索引重建任务状态，不填返回所有状态任务列表，多种状态之间用逗号分隔。</p><p>枚举值：</p><ul><li>0： 索引重建任务已创建</li><li>1： 正在创建索引重建资源</li><li>2： 已创建索引重建资源</li><li>3： 重建中</li><li>4： 暂停</li><li>5： 重建完成</li><li>6： 重建成功（可检索）</li><li>7： 重建失败</li><li>8： 任务取消</li><li>9： 元数据和索引已删除</li></ul>
+ * @method void setStatus(string $Status) 设置<p>索引重建任务状态，不填返回所有状态任务列表，多种状态之间用逗号分隔。</p><p>枚举值：</p><ul><li>0： 索引重建任务已创建</li><li>1： 正在创建索引重建资源</li><li>2： 已创建索引重建资源</li><li>3： 重建中</li><li>4： 暂停</li><li>5： 重建完成</li><li>6： 重建成功（可检索）</li><li>7： 重建失败</li><li>8： 任务取消</li><li>9： 元数据和索引已删除</li></ul>
+ * @method integer getOffset() 获取<p>分页的偏移量，默认值为0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页的偏移量，默认值为0。</p>
+ * @method integer getLimit() 获取<p>分页单页限制数目，默认值为10，最大值20。</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页单页限制数目，默认值为10，最大值20。</p>
  */
 class DescribeRebuildIndexTasksRequest extends AbstractModel
 {
     /**
-     * @var string 日志主题ID
+     * @var string <p>日志主题ID</p>
      */
     public $TopicId;
 
     /**
-     * @var string 索引重建任务ID
+     * @var string <p>索引重建任务ID</p>
      */
     public $TaskId;
 
     /**
-     * @var string 索引重建任务状态，不填返回所有状态任务列表，多种状态之间用逗号分隔，0:索引重建任务已创建，1:已创建索引重建资源，2:重建中，3:重建完成，4:重建成功（可检索），5:任务取消，6:元数据和索引已删除
+     * @var string <p>索引重建任务状态，不填返回所有状态任务列表，多种状态之间用逗号分隔。</p><p>枚举值：</p><ul><li>0： 索引重建任务已创建</li><li>1： 正在创建索引重建资源</li><li>2： 已创建索引重建资源</li><li>3： 重建中</li><li>4： 暂停</li><li>5： 重建完成</li><li>6： 重建成功（可检索）</li><li>7： 重建失败</li><li>8： 任务取消</li><li>9： 元数据和索引已删除</li></ul>
      */
     public $Status;
 
     /**
-     * @var integer 分页的偏移量，默认值为0。
+     * @var integer <p>分页的偏移量，默认值为0。</p>
      */
     public $Offset;
 
     /**
-     * @var integer 分页单页限制数目，默认值为10，最大值20。
+     * @var integer <p>分页单页限制数目，默认值为10，最大值20。</p>
      */
     public $Limit;
 
     /**
-     * @param string $TopicId 日志主题ID
-     * @param string $TaskId 索引重建任务ID
-     * @param string $Status 索引重建任务状态，不填返回所有状态任务列表，多种状态之间用逗号分隔，0:索引重建任务已创建，1:已创建索引重建资源，2:重建中，3:重建完成，4:重建成功（可检索），5:任务取消，6:元数据和索引已删除
-     * @param integer $Offset 分页的偏移量，默认值为0。
-     * @param integer $Limit 分页单页限制数目，默认值为10，最大值20。
+     * @param string $TopicId <p>日志主题ID</p>
+     * @param string $TaskId <p>索引重建任务ID</p>
+     * @param string $Status <p>索引重建任务状态，不填返回所有状态任务列表，多种状态之间用逗号分隔。</p><p>枚举值：</p><ul><li>0： 索引重建任务已创建</li><li>1： 正在创建索引重建资源</li><li>2： 已创建索引重建资源</li><li>3： 重建中</li><li>4： 暂停</li><li>5： 重建完成</li><li>6： 重建成功（可检索）</li><li>7： 重建失败</li><li>8： 任务取消</li><li>9： 元数据和索引已删除</li></ul>
+     * @param integer $Offset <p>分页的偏移量，默认值为0。</p>
+     * @param integer $Limit <p>分页单页限制数目，默认值为10，最大值20。</p>
      */
     function __construct()
     {

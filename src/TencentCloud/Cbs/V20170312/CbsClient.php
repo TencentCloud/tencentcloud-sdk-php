@@ -45,6 +45,7 @@ use TencentCloud\Cbs\V20170312\Models as Models;
 
 * 每个地域下的定期快照策略配额限制请参考文档[定期快照](/document/product/362/8191)。
 * 当已绑定定期快照策略的云硬盘处于未使用状态（即弹性云盘未挂载或非弹性云盘的主机处于关机状态）将不会创建定期快照。
+ * @method Models\CopyAutoSnapshotPolicyCrossAccountResponse CopyAutoSnapshotPolicyCrossAccount(Models\CopyAutoSnapshotPolicyCrossAccountRequest $req) 针对白名单内用户实现自动快照策略的跨账号复制功能
  * @method Models\CopySnapshotCrossRegionsResponse CopySnapshotCrossRegions(Models\CopySnapshotCrossRegionsRequest $req) 本接口（CopySnapshotCrossRegions）用于快照跨地域复制。
 
 * 本接口为异步接口，当跨地域复制的请求下发成功后会返回一个新的快照ID，此时快照未立即复制到目标地域，可请求目标地域的[DescribeSnapshots](/document/product/362/15647)接口查询新快照的状态，判断是否复制完成。如果快照的状态为“NORMAL”，表示快照复制完成。

@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTagRetentionRule请求参数结构体
  *
- * @method string getRegistryId() 获取主实例iD
- * @method void setRegistryId(string $RegistryId) 设置主实例iD
- * @method integer getNamespaceId() 获取命名空间的Id，必须填写原有的命名空间id
- * @method void setNamespaceId(integer $NamespaceId) 设置命名空间的Id，必须填写原有的命名空间id
- * @method RetentionRule getRetentionRule() 获取保留策略
- * @method void setRetentionRule(RetentionRule $RetentionRule) 设置保留策略
- * @method string getCronSetting() 获取执行周期，必须填写为原来的设置
- * @method void setCronSetting(string $CronSetting) 设置执行周期，必须填写为原来的设置
- * @method integer getRetentionId() 获取规则Id
- * @method void setRetentionId(integer $RetentionId) 设置规则Id
- * @method boolean getDisabled() 获取是否禁用规则
- * @method void setDisabled(boolean $Disabled) 设置是否禁用规则
+ * @method string getRegistryId() 获取<p>主实例iD</p>
+ * @method void setRegistryId(string $RegistryId) 设置<p>主实例iD</p>
+ * @method integer getNamespaceId() 获取<p>命名空间的Id，必须填写原有的命名空间id</p>
+ * @method void setNamespaceId(integer $NamespaceId) 设置<p>命名空间的Id，必须填写原有的命名空间id</p>
+ * @method string getCronSetting() 获取<p>执行周期，必须填写为原来的设置</p>
+ * @method void setCronSetting(string $CronSetting) 设置<p>执行周期，必须填写为原来的设置</p>
+ * @method integer getRetentionId() 获取<p>规则Id</p>
+ * @method void setRetentionId(integer $RetentionId) 设置<p>规则Id</p>
+ * @method RetentionRule getRetentionRule() 获取<p>保留策略，当基本保留策略和高级保留策略同时配置时，优先使用高级保留策略</p>
+ * @method void setRetentionRule(RetentionRule $RetentionRule) 设置<p>保留策略，当基本保留策略和高级保留策略同时配置时，优先使用高级保留策略</p>
+ * @method array getAdvancedRuleItems() 获取<p>高级保留策略，当基本保留策略和高级保留策略同时配置时，优先使用高级保留策略</p>
+ * @method void setAdvancedRuleItems(array $AdvancedRuleItems) 设置<p>高级保留策略，当基本保留策略和高级保留策略同时配置时，优先使用高级保留策略</p>
+ * @method boolean getDisabled() 获取<p>是否禁用规则</p>
+ * @method void setDisabled(boolean $Disabled) 设置<p>是否禁用规则</p>
  */
 class ModifyTagRetentionRuleRequest extends AbstractModel
 {
     /**
-     * @var string 主实例iD
+     * @var string <p>主实例iD</p>
      */
     public $RegistryId;
 
     /**
-     * @var integer 命名空间的Id，必须填写原有的命名空间id
+     * @var integer <p>命名空间的Id，必须填写原有的命名空间id</p>
      */
     public $NamespaceId;
 
     /**
-     * @var RetentionRule 保留策略
-     */
-    public $RetentionRule;
-
-    /**
-     * @var string 执行周期，必须填写为原来的设置
+     * @var string <p>执行周期，必须填写为原来的设置</p>
      */
     public $CronSetting;
 
     /**
-     * @var integer 规则Id
+     * @var integer <p>规则Id</p>
      */
     public $RetentionId;
 
     /**
-     * @var boolean 是否禁用规则
+     * @var RetentionRule <p>保留策略，当基本保留策略和高级保留策略同时配置时，优先使用高级保留策略</p>
+     */
+    public $RetentionRule;
+
+    /**
+     * @var array <p>高级保留策略，当基本保留策略和高级保留策略同时配置时，优先使用高级保留策略</p>
+     */
+    public $AdvancedRuleItems;
+
+    /**
+     * @var boolean <p>是否禁用规则</p>
      */
     public $Disabled;
 
     /**
-     * @param string $RegistryId 主实例iD
-     * @param integer $NamespaceId 命名空间的Id，必须填写原有的命名空间id
-     * @param RetentionRule $RetentionRule 保留策略
-     * @param string $CronSetting 执行周期，必须填写为原来的设置
-     * @param integer $RetentionId 规则Id
-     * @param boolean $Disabled 是否禁用规则
+     * @param string $RegistryId <p>主实例iD</p>
+     * @param integer $NamespaceId <p>命名空间的Id，必须填写原有的命名空间id</p>
+     * @param string $CronSetting <p>执行周期，必须填写为原来的设置</p>
+     * @param integer $RetentionId <p>规则Id</p>
+     * @param RetentionRule $RetentionRule <p>保留策略，当基本保留策略和高级保留策略同时配置时，优先使用高级保留策略</p>
+     * @param array $AdvancedRuleItems <p>高级保留策略，当基本保留策略和高级保留策略同时配置时，优先使用高级保留策略</p>
+     * @param boolean $Disabled <p>是否禁用规则</p>
      */
     function __construct()
     {
@@ -94,17 +102,26 @@ class ModifyTagRetentionRuleRequest extends AbstractModel
             $this->NamespaceId = $param["NamespaceId"];
         }
 
-        if (array_key_exists("RetentionRule",$param) and $param["RetentionRule"] !== null) {
-            $this->RetentionRule = new RetentionRule();
-            $this->RetentionRule->deserialize($param["RetentionRule"]);
-        }
-
         if (array_key_exists("CronSetting",$param) and $param["CronSetting"] !== null) {
             $this->CronSetting = $param["CronSetting"];
         }
 
         if (array_key_exists("RetentionId",$param) and $param["RetentionId"] !== null) {
             $this->RetentionId = $param["RetentionId"];
+        }
+
+        if (array_key_exists("RetentionRule",$param) and $param["RetentionRule"] !== null) {
+            $this->RetentionRule = new RetentionRule();
+            $this->RetentionRule->deserialize($param["RetentionRule"]);
+        }
+
+        if (array_key_exists("AdvancedRuleItems",$param) and $param["AdvancedRuleItems"] !== null) {
+            $this->AdvancedRuleItems = [];
+            foreach ($param["AdvancedRuleItems"] as $key => $value){
+                $obj = new RetentionRuleItem();
+                $obj->deserialize($value);
+                array_push($this->AdvancedRuleItems, $obj);
+            }
         }
 
         if (array_key_exists("Disabled",$param) and $param["Disabled"] !== null) {

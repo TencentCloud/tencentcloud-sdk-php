@@ -164,6 +164,8 @@ pausing
  * @method void setArchiveStatus(string $ArchiveStatus) 设置归档状态，枚举值<li>normal:正常</li><li>archiving:归档中</li><li>resuming:恢复中</li><li>archived :已归档</li>
  * @method integer getArchiveProgress() 获取归档进度，百分比。
  * @method void setArchiveProgress(integer $ArchiveProgress) 设置归档进度，百分比。
+ * @method boolean getIsOpenTDE() 获取是否开启透明加密
+ * @method void setIsOpenTDE(boolean $IsOpenTDE) 设置是否开启透明加密
  */
 class CynosdbClusterDetail extends AbstractModel
 {
@@ -464,6 +466,11 @@ pausing
     public $ArchiveProgress;
 
     /**
+     * @var boolean 是否开启透明加密
+     */
+    public $IsOpenTDE;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $Region 地域
@@ -536,6 +543,7 @@ pausing
      * @param integer $UsedArchiveStorage 二级存储使用量，单位：G
      * @param string $ArchiveStatus 归档状态，枚举值<li>normal:正常</li><li>archiving:归档中</li><li>resuming:恢复中</li><li>archived :已归档</li>
      * @param integer $ArchiveProgress 归档进度，百分比。
+     * @param boolean $IsOpenTDE 是否开启透明加密
      */
     function __construct()
     {
@@ -803,6 +811,10 @@ pausing
 
         if (array_key_exists("ArchiveProgress",$param) and $param["ArchiveProgress"] !== null) {
             $this->ArchiveProgress = $param["ArchiveProgress"];
+        }
+
+        if (array_key_exists("IsOpenTDE",$param) and $param["IsOpenTDE"] !== null) {
+            $this->IsOpenTDE = $param["IsOpenTDE"];
         }
     }
 }

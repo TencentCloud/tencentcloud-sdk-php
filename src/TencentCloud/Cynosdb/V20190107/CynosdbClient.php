@@ -53,6 +53,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DeleteBackupResponse DeleteBackup(Models\DeleteBackupRequest $req) 本接口（DeleteBackup）用于为集群删除手动备份，无法删除自动备份。
  * @method Models\DeleteCLSDeliveryResponse DeleteCLSDelivery(Models\DeleteCLSDeliveryRequest $req) 本接口（DeleteCLSDelivery）用于删除日志投递。
  * @method Models\DeleteClusterDatabaseResponse DeleteClusterDatabase(Models\DeleteClusterDatabaseRequest $req) 本接口（DeleteClusterDatabase）用于删除数据库。
+ * @method Models\DeleteClusterSaveBackupResponse DeleteClusterSaveBackup(Models\DeleteClusterSaveBackupRequest $req) 本接口（DeleteClusterSaveBackup）用于为集群删除遗留备份
  * @method Models\DeleteParamTemplateResponse DeleteParamTemplate(Models\DeleteParamTemplateRequest $req) 本接口（DeleteParamTemplate）用于删除用户创建的参数模板。
  * @method Models\DescribeAccountAllGrantPrivilegesResponse DescribeAccountAllGrantPrivileges(Models\DescribeAccountAllGrantPrivilegesRequest $req) 本接口（DescribeAccountAllGrantPrivileges）用于查询账号所有可授予的权限。
  * @method Models\DescribeAccountPrivilegesResponse DescribeAccountPrivileges(Models\DescribeAccountPrivilegesRequest $req) 本接口（DescribeAccountPrivileges）用于查询账号已有权限。
@@ -103,12 +104,14 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeProxiesResponse DescribeProxies(Models\DescribeProxiesRequest $req) 本接口（DescribeProxies）用于查询数据库代理列表。
  * @method Models\DescribeProxyNodesResponse DescribeProxyNodes(Models\DescribeProxyNodesRequest $req) 本接口（DescribeProxyNodes）用于查询代理节点列表。
  * @method Models\DescribeProxySpecsResponse DescribeProxySpecs(Models\DescribeProxySpecsRequest $req) 本接口（DescribeProxySpecs）用于查询数据库代理规格。
+ * @method Models\DescribeRedoLogsResponse DescribeRedoLogs(Models\DescribeRedoLogsRequest $req) 本接口（DescribeRedoLogs）用于查询redo日志列表。
  * @method Models\DescribeResourcePackageDetailResponse DescribeResourcePackageDetail(Models\DescribeResourcePackageDetailRequest $req) 本接口（DescribeResourcePackageDetail）用于查询资源包使用详情。
  * @method Models\DescribeResourcePackageListResponse DescribeResourcePackageList(Models\DescribeResourcePackageListRequest $req) 本接口（DescribeResourcePackageList）用于查询资源包列表。
  * @method Models\DescribeResourcePackageSaleSpecResponse DescribeResourcePackageSaleSpec(Models\DescribeResourcePackageSaleSpecRequest $req) 本接口（DescribeResourcePackageSaleSpec）用于查询资源包规格。
  * @method Models\DescribeResourcesByDealNameResponse DescribeResourcesByDealName(Models\DescribeResourcesByDealNameRequest $req) 本接口（DescribeResourcesByDealName）用于查询订单关联实例。
  * @method Models\DescribeRollbackTimeRangeResponse DescribeRollbackTimeRange(Models\DescribeRollbackTimeRangeRequest $req) 本接口（DescribeRollbackTimeRange）用于查询回档时间范围。
  * @method Models\DescribeSSLStatusResponse DescribeSSLStatus(Models\DescribeSSLStatusRequest $req) 查询实例SSL状态
+ * @method Models\DescribeSaveBackupClustersResponse DescribeSaveBackupClusters(Models\DescribeSaveBackupClustersRequest $req) 本接口（DescribeSaveBackupClusters）用于查询遗留备份集群信息。
  * @method Models\DescribeServerlessInstanceSpecsResponse DescribeServerlessInstanceSpecs(Models\DescribeServerlessInstanceSpecsRequest $req) 查询Serverless实例可选规格
  * @method Models\DescribeServerlessStrategyResponse DescribeServerlessStrategy(Models\DescribeServerlessStrategyRequest $req) 查询serverless策略
  * @method Models\DescribeSlaveZonesResponse DescribeSlaveZones(Models\DescribeSlaveZonesRequest $req) 查询从可用区
@@ -158,6 +161,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\ModifyResourcePackageNameResponse ModifyResourcePackageName(Models\ModifyResourcePackageNameRequest $req) 本接口（ModifyResourcePackageName）用于修改资源包名称。
  * @method Models\ModifyResourcePackagesDeductionPriorityResponse ModifyResourcePackagesDeductionPriority(Models\ModifyResourcePackagesDeductionPriorityRequest $req) 修改已绑定资源包抵扣优先级
  * @method Models\ModifyServerlessStrategyResponse ModifyServerlessStrategy(Models\ModifyServerlessStrategyRequest $req) 修改serverless策略
+ * @method Models\ModifySnapBackupCrossRegionConfigResponse ModifySnapBackupCrossRegionConfig(Models\ModifySnapBackupCrossRegionConfigRequest $req) 本接口（ModifySnapBackupCrossRegionConfig）用于修改指定集群的快照备份跨地域配置。
  * @method Models\ModifyVipVportResponse ModifyVipVport(Models\ModifyVipVportRequest $req) 本接口（ModifyVipVport）用于修改实例组ip，端口。
  * @method Models\OfflineClusterResponse OfflineCluster(Models\OfflineClusterRequest $req) 本接口（OfflineCluster）用于销毁集群。
  * @method Models\OfflineInstanceResponse OfflineInstance(Models\OfflineInstanceRequest $req) 本接口（OfflineInstance）用于销毁实例。

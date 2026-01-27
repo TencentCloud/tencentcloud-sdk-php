@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUDPMappingTimeout(integer $UDPMappingTimeout) 设置UDP映射空闲时间，指多少秒以后UDP流停止向端点发送。取值范围为：3-7200秒，默认为10秒。
  * @method integer getTCPEstablishedConnectionTimeout() 获取TCP已建立的连接空闲超时，指多少秒以后连接变为空闲状态。取值范围为：40-10800秒，默认为10800秒。
  * @method void setTCPEstablishedConnectionTimeout(integer $TCPEstablishedConnectionTimeout) 设置TCP已建立的连接空闲超时，指多少秒以后连接变为空闲状态。取值范围为：40-10800秒，默认为10800秒。
- * @method integer getTcpTimeWaitTimeout() 获取TCP TIME_WAIT超时，指完全关闭的TCP连接在到期后保留在NAT映射中的秒数。取值范围为：10-600秒，默认为120秒。
- * @method void setTcpTimeWaitTimeout(integer $TcpTimeWaitTimeout) 设置TCP TIME_WAIT超时，指完全关闭的TCP连接在到期后保留在NAT映射中的秒数。取值范围为：10-600秒，默认为120秒。
+ * @method integer getTCPTimeWaitTimeout() 获取TCP TIME_WAIT超时，指完全关闭的TCP连接在到期后保留在NAT映射中的秒数。取值范围为：10-600秒，默认为120秒。
+ * @method void setTCPTimeWaitTimeout(integer $TCPTimeWaitTimeout) 设置TCP TIME_WAIT超时，指完全关闭的TCP连接在到期后保留在NAT映射中的秒数。取值范围为：10-600秒，默认为120秒。
  */
 class ConnectionStateTimeouts extends AbstractModel
 {
@@ -42,12 +42,12 @@ class ConnectionStateTimeouts extends AbstractModel
     /**
      * @var integer TCP TIME_WAIT超时，指完全关闭的TCP连接在到期后保留在NAT映射中的秒数。取值范围为：10-600秒，默认为120秒。
      */
-    public $TcpTimeWaitTimeout;
+    public $TCPTimeWaitTimeout;
 
     /**
      * @param integer $UDPMappingTimeout UDP映射空闲时间，指多少秒以后UDP流停止向端点发送。取值范围为：3-7200秒，默认为10秒。
      * @param integer $TCPEstablishedConnectionTimeout TCP已建立的连接空闲超时，指多少秒以后连接变为空闲状态。取值范围为：40-10800秒，默认为10800秒。
-     * @param integer $TcpTimeWaitTimeout TCP TIME_WAIT超时，指完全关闭的TCP连接在到期后保留在NAT映射中的秒数。取值范围为：10-600秒，默认为120秒。
+     * @param integer $TCPTimeWaitTimeout TCP TIME_WAIT超时，指完全关闭的TCP连接在到期后保留在NAT映射中的秒数。取值范围为：10-600秒，默认为120秒。
      */
     function __construct()
     {
@@ -70,8 +70,8 @@ class ConnectionStateTimeouts extends AbstractModel
             $this->TCPEstablishedConnectionTimeout = $param["TCPEstablishedConnectionTimeout"];
         }
 
-        if (array_key_exists("TcpTimeWaitTimeout",$param) and $param["TcpTimeWaitTimeout"] !== null) {
-            $this->TcpTimeWaitTimeout = $param["TcpTimeWaitTimeout"];
+        if (array_key_exists("TCPTimeWaitTimeout",$param) and $param["TCPTimeWaitTimeout"] !== null) {
+            $this->TCPTimeWaitTimeout = $param["TCPTimeWaitTimeout"];
         }
     }
 }

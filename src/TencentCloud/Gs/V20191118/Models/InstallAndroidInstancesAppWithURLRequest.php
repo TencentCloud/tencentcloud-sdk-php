@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAndroidInstanceIds(array $AndroidInstanceIds) 设置实例ID
  * @method string getAndroidAppURL() 获取安卓应用下载 URL
  * @method void setAndroidAppURL(string $AndroidAppURL) 设置安卓应用下载 URL
+ * @method string getAndroidAppMD5() 获取安卓应用MD5码值（32位小写十六进制字符串）
+ * @method void setAndroidAppMD5(string $AndroidAppMD5) 设置安卓应用MD5码值（32位小写十六进制字符串）
  */
 class InstallAndroidInstancesAppWithURLRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class InstallAndroidInstancesAppWithURLRequest extends AbstractModel
     public $AndroidAppURL;
 
     /**
+     * @var string 安卓应用MD5码值（32位小写十六进制字符串）
+     */
+    public $AndroidAppMD5;
+
+    /**
      * @param array $AndroidInstanceIds 实例ID
      * @param string $AndroidAppURL 安卓应用下载 URL
+     * @param string $AndroidAppMD5 安卓应用MD5码值（32位小写十六进制字符串）
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class InstallAndroidInstancesAppWithURLRequest extends AbstractModel
 
         if (array_key_exists("AndroidAppURL",$param) and $param["AndroidAppURL"] !== null) {
             $this->AndroidAppURL = $param["AndroidAppURL"];
+        }
+
+        if (array_key_exists("AndroidAppMD5",$param) and $param["AndroidAppMD5"] !== null) {
+            $this->AndroidAppMD5 = $param["AndroidAppMD5"];
         }
     }
 }

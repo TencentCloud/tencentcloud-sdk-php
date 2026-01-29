@@ -78,6 +78,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpecifiedSubBackupId(integer $SpecifiedSubBackupId) 设置异地数据备份id
  * @method string getMasterZone() 获取新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。
  * @method void setMasterZone(string $MasterZone) 设置新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。
+ * @method string getZone() 获取新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。
+ * @method void setZone(string $Zone) 设置新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。
  */
 class CreateCloneInstanceRequest extends AbstractModel
 {
@@ -215,8 +217,14 @@ class CreateCloneInstanceRequest extends AbstractModel
 
     /**
      * @var string 新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。
+     * @deprecated
      */
     public $MasterZone;
+
+    /**
+     * @var string 新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。
+     */
+    public $Zone;
 
     /**
      * @param string $InstanceId 克隆源实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取。
@@ -248,6 +256,7 @@ class CreateCloneInstanceRequest extends AbstractModel
      * @param string $SrcRegion 原实例所在地域名，当传入异地备份时为必选项，例：ap-guangzhou
      * @param integer $SpecifiedSubBackupId 异地数据备份id
      * @param string $MasterZone 新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。
+     * @param string $Zone 新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。
      */
     function __construct()
     {
@@ -374,6 +383,10 @@ class CreateCloneInstanceRequest extends AbstractModel
 
         if (array_key_exists("MasterZone",$param) and $param["MasterZone"] !== null) {
             $this->MasterZone = $param["MasterZone"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
     }
 }

@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMappingFiled(string $MappingFiled) 设置映射字段名称
  * @method string getDescription() 获取描述
  * @method void setDescription(string $Description) 设置描述
+ * @method integer getAutoRotateKey() 获取OIDC公钥自动轮转开关（默认为0代表关闭，1代表开启）
+ * @method void setAutoRotateKey(integer $AutoRotateKey) 设置OIDC公钥自动轮转开关（默认为0代表关闭，1代表开启）
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -103,6 +105,11 @@ class DescribeUserOIDCConfigResponse extends AbstractModel
     public $Description;
 
     /**
+     * @var integer OIDC公钥自动轮转开关（默认为0代表关闭，1代表开启）
+     */
+    public $AutoRotateKey;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -119,6 +126,7 @@ class DescribeUserOIDCConfigResponse extends AbstractModel
      * @param string $ResponseMode 授权请求Response mode
      * @param string $MappingFiled 映射字段名称
      * @param string $Description 描述
+     * @param integer $AutoRotateKey OIDC公钥自动轮转开关（默认为0代表关闭，1代表开启）
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -176,6 +184,10 @@ class DescribeUserOIDCConfigResponse extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("AutoRotateKey",$param) and $param["AutoRotateKey"] !== null) {
+            $this->AutoRotateKey = $param["AutoRotateKey"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

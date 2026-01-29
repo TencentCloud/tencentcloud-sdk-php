@@ -84,6 +84,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method string getModel() 获取需要授权的Model名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。
  * @method void setModel(string $Model) 设置需要授权的Model名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。
+ * @method boolean getIsAdminPolicy() 获取权限来源是否为管理员
+ * @method void setIsAdminPolicy(boolean $IsAdminPolicy) 设置权限来源是否为管理员
  */
 class Policy extends AbstractModel
 {
@@ -196,6 +198,11 @@ class Policy extends AbstractModel
     public $Model;
 
     /**
+     * @var boolean 权限来源是否为管理员
+     */
+    public $IsAdminPolicy;
+
+    /**
      * @param string $Database 需要授权的数据库名，填 * 代表当前Catalog下所有数据库。当授权类型为管理员级别时，只允许填 “*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定数据库。
      * @param string $Catalog 需要授权的数据源名称，管理员级别下只支持填  * （代表该级别全部资源）；数据源级别和数据库级别鉴权的情况下，只支持填COSDataCatalog或者*；在数据表级别鉴权下可以填写用户自定义数据源。不填情况下默认为DataLakeCatalog。注意：如果是对用户自定义数据源进行鉴权，DLC能够管理的权限是用户接入数据源的时候提供的账户的子集。
      * @param string $Table 需要授权的表名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。
@@ -228,6 +235,7 @@ class Policy extends AbstractModel
      * @param string $EngineGeneration 引擎类型
 
      * @param string $Model 需要授权的Model名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。
+     * @param boolean $IsAdminPolicy 权限来源是否为管理员
      */
     function __construct()
     {
@@ -316,6 +324,10 @@ class Policy extends AbstractModel
 
         if (array_key_exists("Model",$param) and $param["Model"] !== null) {
             $this->Model = $param["Model"];
+        }
+
+        if (array_key_exists("IsAdminPolicy",$param) and $param["IsAdminPolicy"] !== null) {
+            $this->IsAdminPolicy = $param["IsAdminPolicy"];
         }
     }
 }

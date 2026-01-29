@@ -50,6 +50,7 @@ use TencentCloud\Rum\V20210622\Models as Models;
  * @method Models\DescribeDataPvUrlStatisticsResponse DescribeDataPvUrlStatistics(Models\DescribeDataPvUrlStatisticsRequest $req) 获取DescribeDataPvUrlStatistics信息
  * @method Models\DescribeDataPvUrlStatisticsV2Response DescribeDataPvUrlStatisticsV2(Models\DescribeDataPvUrlStatisticsV2Request $req) 获取DescribeDataPvUrlStatistics信息
  * @method Models\DescribeDataReportCountResponse DescribeDataReportCount(Models\DescribeDataReportCountRequest $req) 获取项目上报量
+ * @method Models\DescribeDataReportCountV2Response DescribeDataReportCountV2(Models\DescribeDataReportCountV2Request $req) 获取项目上报量
  * @method Models\DescribeDataSetUrlStatisticsResponse DescribeDataSetUrlStatistics(Models\DescribeDataSetUrlStatisticsRequest $req) 获取DescribeDataSetUrlStatistics信息
  * @method Models\DescribeDataStaticProjectResponse DescribeDataStaticProject(Models\DescribeDataStaticProjectRequest $req) 获取DescribeDataStaticProject信息
  * @method Models\DescribeDataStaticResourceResponse DescribeDataStaticResource(Models\DescribeDataStaticResourceRequest $req) 获取DescribeDataStaticResource信息

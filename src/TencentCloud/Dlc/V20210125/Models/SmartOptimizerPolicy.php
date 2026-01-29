@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChangeTable(SmartOptimizerChangeTablePolicy $ChangeTable) 设置SmartOptimizerChangeTablePolicy
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method TableExpirationPolicy getTableExpiration() 获取表过期策略
+ * @method void setTableExpiration(TableExpirationPolicy $TableExpiration) 设置表过期策略
  */
 class SmartOptimizerPolicy extends AbstractModel
 {
@@ -81,6 +83,11 @@ class SmartOptimizerPolicy extends AbstractModel
     public $ChangeTable;
 
     /**
+     * @var TableExpirationPolicy 表过期策略
+     */
+    public $TableExpiration;
+
+    /**
      * @param string $Inherit 是否继承
      * @param array $Resources 数据治理资源
 注意：此字段可能返回 null，表示取不到有效值。
@@ -92,6 +99,7 @@ class SmartOptimizerPolicy extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SmartOptimizerChangeTablePolicy $ChangeTable SmartOptimizerChangeTablePolicy
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param TableExpirationPolicy $TableExpiration 表过期策略
      */
     function __construct()
     {
@@ -137,6 +145,11 @@ class SmartOptimizerPolicy extends AbstractModel
         if (array_key_exists("ChangeTable",$param) and $param["ChangeTable"] !== null) {
             $this->ChangeTable = new SmartOptimizerChangeTablePolicy();
             $this->ChangeTable->deserialize($param["ChangeTable"]);
+        }
+
+        if (array_key_exists("TableExpiration",$param) and $param["TableExpiration"] !== null) {
+            $this->TableExpiration = new TableExpirationPolicy();
+            $this->TableExpiration->deserialize($param["TableExpiration"]);
         }
     }
 }

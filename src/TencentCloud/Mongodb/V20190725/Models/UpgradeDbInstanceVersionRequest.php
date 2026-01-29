@@ -22,10 +22,28 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
  * @method void setInstanceId(string $InstanceId) 设置实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
- * @method string getMongoVersion() 获取新升级的数据库版本，当前仅支持MONGO_40_WT（MongoDB 4.0 WiredTiger存储引擎版本）及MONGO_42_WT（MongoDB 4.0 WiredTiger存储引擎版本）。
- * @method void setMongoVersion(string $MongoVersion) 设置新升级的数据库版本，当前仅支持MONGO_40_WT（MongoDB 4.0 WiredTiger存储引擎版本）及MONGO_42_WT（MongoDB 4.0 WiredTiger存储引擎版本）。
- * @method integer getInMaintenance() 获取是否在维护时间内升级。0-立即升级 1-维护时间内升级
- * @method void setInMaintenance(integer $InMaintenance) 设置是否在维护时间内升级。0-立即升级 1-维护时间内升级
+ * @method string getMongoVersion() 获取新升级的数据库版本。当前支持版本如下所示，支持旧版本向高版本升级，不支持跨版本升级。
+- MONGO_40_WT：4.0 版本。
+- MONGO_42_WT：4.2 版本。
+- MONGO_44_WT：4.4 版本
+- MONGO_50_WT：5.0 版本
+- MONGO_60_WT：6.0 版本。
+- MONGO_70_WT：7.0 版本。
+- MONGO_80_WT：8.0 版本。
+ * @method void setMongoVersion(string $MongoVersion) 设置新升级的数据库版本。当前支持版本如下所示，支持旧版本向高版本升级，不支持跨版本升级。
+- MONGO_40_WT：4.0 版本。
+- MONGO_42_WT：4.2 版本。
+- MONGO_44_WT：4.4 版本
+- MONGO_50_WT：5.0 版本
+- MONGO_60_WT：6.0 版本。
+- MONGO_70_WT：7.0 版本。
+- MONGO_80_WT：8.0 版本。
+ * @method integer getInMaintenance() 获取指定升级操作是否在维护时间内进行。
+- 0：立即升级。
+- 1：维护时间窗升级。
+ * @method void setInMaintenance(integer $InMaintenance) 设置指定升级操作是否在维护时间内进行。
+- 0：立即升级。
+- 1：维护时间窗升级。
  */
 class UpgradeDbInstanceVersionRequest extends AbstractModel
 {
@@ -35,19 +53,37 @@ class UpgradeDbInstanceVersionRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 新升级的数据库版本，当前仅支持MONGO_40_WT（MongoDB 4.0 WiredTiger存储引擎版本）及MONGO_42_WT（MongoDB 4.0 WiredTiger存储引擎版本）。
+     * @var string 新升级的数据库版本。当前支持版本如下所示，支持旧版本向高版本升级，不支持跨版本升级。
+- MONGO_40_WT：4.0 版本。
+- MONGO_42_WT：4.2 版本。
+- MONGO_44_WT：4.4 版本
+- MONGO_50_WT：5.0 版本
+- MONGO_60_WT：6.0 版本。
+- MONGO_70_WT：7.0 版本。
+- MONGO_80_WT：8.0 版本。
      */
     public $MongoVersion;
 
     /**
-     * @var integer 是否在维护时间内升级。0-立即升级 1-维护时间内升级
+     * @var integer 指定升级操作是否在维护时间内进行。
+- 0：立即升级。
+- 1：维护时间窗升级。
      */
     public $InMaintenance;
 
     /**
      * @param string $InstanceId 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
-     * @param string $MongoVersion 新升级的数据库版本，当前仅支持MONGO_40_WT（MongoDB 4.0 WiredTiger存储引擎版本）及MONGO_42_WT（MongoDB 4.0 WiredTiger存储引擎版本）。
-     * @param integer $InMaintenance 是否在维护时间内升级。0-立即升级 1-维护时间内升级
+     * @param string $MongoVersion 新升级的数据库版本。当前支持版本如下所示，支持旧版本向高版本升级，不支持跨版本升级。
+- MONGO_40_WT：4.0 版本。
+- MONGO_42_WT：4.2 版本。
+- MONGO_44_WT：4.4 版本
+- MONGO_50_WT：5.0 版本
+- MONGO_60_WT：6.0 版本。
+- MONGO_70_WT：7.0 版本。
+- MONGO_80_WT：8.0 版本。
+     * @param integer $InMaintenance 指定升级操作是否在维护时间内进行。
+- 0：立即升级。
+- 1：维护时间窗升级。
      */
     function __construct()
     {

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyOrganizationAccountStatus请求参数结构体
  *
- * @method integer getStatus() 获取修改集团账号状态，1 开启， 2关闭
- * @method void setStatus(integer $Status) 设置修改集团账号状态，1 开启， 2关闭
+ * @method integer getStatus() 获取修改集团账号状态，1 开启， 0关闭
+ * @method void setStatus(integer $Status) 设置修改集团账号状态，1 开启， 0关闭
  * @method array getMemberId() 获取集团账号的成员id
  * @method void setMemberId(array $MemberId) 设置集团账号的成员id
  */
 class ModifyOrganizationAccountStatusRequest extends AbstractModel
 {
     /**
-     * @var integer 修改集团账号状态，1 开启， 2关闭
+     * @var integer 修改集团账号状态，1 开启， 0关闭
      */
     public $Status;
 
@@ -38,7 +38,7 @@ class ModifyOrganizationAccountStatusRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @param integer $Status 修改集团账号状态，1 开启， 2关闭
+     * @param integer $Status 修改集团账号状态，1 开启， 0关闭
      * @param array $MemberId 集团账号的成员id
      */
     function __construct()

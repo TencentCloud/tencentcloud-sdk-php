@@ -98,7 +98,8 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\SetInstanceMaintenanceResponse SetInstanceMaintenance(Models\SetInstanceMaintenanceRequest $req) 本接口（SetInstanceMaintenance ） 用于设置实例维护时间窗。
  * @method Models\TerminateDBInstancesResponse TerminateDBInstances(Models\TerminateDBInstancesRequest $req) 本接口（TerminateDBInstances）用于退还包年包月计费实例。
  * @method Models\UpgradeDBInstanceKernelVersionResponse UpgradeDBInstanceKernelVersion(Models\UpgradeDBInstanceKernelVersionRequest $req) 本接口(UpgradeDBInstanceKernelVersion)用于升级数据库实例内核版本。
- * @method Models\UpgradeDbInstanceVersionResponse UpgradeDbInstanceVersion(Models\UpgradeDbInstanceVersionRequest $req) 本接口用于跨版本升级数据库内核。当前仅支持3.6版本升级为4.0版本、4.0版本升级为4.2版本、4.2版本升级为4.4版本及4.4版本升级为5.0版本。
+ * @method Models\UpgradeDbInstanceVersionResponse UpgradeDbInstanceVersion(Models\UpgradeDbInstanceVersionRequest $req) 本接口（UpgradeDbInstanceVersion）用于升级数据库版本。
+**说明**：支持3.6及以上版本升级，仅支持从低版本向高版本逐级升级，不支持跨版本升级或版本降级。
  */
 
 class MongodbClient extends AbstractClient

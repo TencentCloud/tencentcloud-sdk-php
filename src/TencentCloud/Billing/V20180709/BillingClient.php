@@ -99,6 +99,10 @@ use TencentCloud\Billing\V20180709\Models as Models;
  * @method Models\PayDealsResponse PayDeals(Models\PayDealsRequest $req) 支付订单
  * @method Models\RefundInstanceResponse RefundInstance(Models\RefundInstanceRequest $req) 退订不再需要的实例，只退还实付金额的部分，已使用的代金券不退还，退还的实付金额默认退到腾讯云账户余额中。调用该接口的账号需要授予finace:RefundInstance的权限，否则无法支付成功。目前已接入并支持退订的产品包括：T-Sec-Web应用防火墙、云防火墙、主机安全、主机容器、云安全中心、T-Sec-密钥管理系统。
  * @method Models\RenewInstanceResponse RenewInstance(Models\RenewInstanceRequest $req) 续费一台实例，调用该接口续费服务器时，您需要确保您的腾讯云账户余额充足，否则会续费失败。调用该接口的账号需要授予finace:trade的权限，否则无法续费成功。目前已接入并支持续费的产品包括：T-Sec-Web应用防火墙、云防火墙、主机安全、主机容器、云安全中心、T-Sec-密钥管理系统。
+ * @method Models\SetRenewalResponse SetRenewal(Models\SetRenewalRequest $req) 注意事项：
+1、本接口支持对包年包月实例设置自动续费模式及周期
+2、可通过实例查询接口获取到产品编码、地域编码
+3、子用户使用该接口时，应具备QcloudFinanceRenewManageFullAccess权限策略。
  */
 
 class BillingClient extends AbstractClient

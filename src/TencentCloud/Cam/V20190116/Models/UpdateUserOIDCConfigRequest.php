@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScope(array $Scope) 设置授权请求Scope。有openid; email;profile三种。代表授权请求信息范围openid表示请求访问用户的身份信息，email表示请求访问用户的电子邮件地址，profile表示请求访问用户的基本信息。默认必选openid。
  * @method string getDescription() 获取描述，长度为1~255个英文或中文字符，默认值为空。
  * @method void setDescription(string $Description) 设置描述，长度为1~255个英文或中文字符，默认值为空。
+ * @method integer getAutoRotateKey() 获取OIDC公钥自动轮转开关（默认为0代表关闭，1代表开启）如果不传的话，会默认置0
+ * @method void setAutoRotateKey(integer $AutoRotateKey) 设置OIDC公钥自动轮转开关（默认为0代表关闭，1代表开启）如果不传的话，会默认置0
  */
 class UpdateUserOIDCConfigRequest extends AbstractModel
 {
@@ -90,6 +92,11 @@ class UpdateUserOIDCConfigRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var integer OIDC公钥自动轮转开关（默认为0代表关闭，1代表开启）如果不传的话，会默认置0
+     */
+    public $AutoRotateKey;
+
+    /**
      * @param string $IdentityUrl 身份提供商URL。OpenID Connect身份提供商标识。
 对应企业IdP提供的Openid-configuration中"issuer"字段的值，该URL必须以https开头，符合标准URL格式，不允许带有query参数（以?标识）、fragment片段（以#标识）和登录信息（以@标识）。
      * @param string $ClientId 客户端ID，在OpenID Connect身份提供商注册的客户端ID，允许英文字母、数字、特殊字符.-_:/，不能以特殊字符.-_:/开头，单个客户端ID最大64个字符。
@@ -100,6 +107,7 @@ class UpdateUserOIDCConfigRequest extends AbstractModel
      * @param string $IdentityKey RSA签名公钥，JWKS格式，需要进行base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
      * @param array $Scope 授权请求Scope。有openid; email;profile三种。代表授权请求信息范围openid表示请求访问用户的身份信息，email表示请求访问用户的电子邮件地址，profile表示请求访问用户的基本信息。默认必选openid。
      * @param string $Description 描述，长度为1~255个英文或中文字符，默认值为空。
+     * @param integer $AutoRotateKey OIDC公钥自动轮转开关（默认为0代表关闭，1代表开启）如果不传的话，会默认置0
      */
     function __construct()
     {
@@ -148,6 +156,10 @@ class UpdateUserOIDCConfigRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("AutoRotateKey",$param) and $param["AutoRotateKey"] !== null) {
+            $this->AutoRotateKey = $param["AutoRotateKey"];
         }
     }
 }

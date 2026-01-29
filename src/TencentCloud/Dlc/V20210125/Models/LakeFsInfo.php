@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置托管存储名称
  * @method string getType() 获取托管存储类型
  * @method void setType(string $Type) 设置托管存储类型
- * @method float getSpaceUsedSize() 获取容量
- * @method void setSpaceUsedSize(float $SpaceUsedSize) 设置容量
+ * @method float getSpaceUsedSize() 获取存储用量
+ * @method void setSpaceUsedSize(float $SpaceUsedSize) 设置存储用量
  * @method integer getCreateTimeStamp() 获取创建时候的时间戳
  * @method void setCreateTimeStamp(integer $CreateTimeStamp) 设置创建时候的时间戳
  * @method integer getDefaultBucket() 获取是否是用户默认桶，0：默认桶，1：非默认桶
@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置桶描述信息
  * @method string getStatus() 获取托管桶状态，当前取值为：creating、bind、readOnly、isolate
  * @method void setStatus(string $Status) 设置托管桶状态，当前取值为：creating、bind、readOnly、isolate
+ * @method array getTagList() 获取托管存储桶标签列表
+ * @method void setTagList(array $TagList) 设置托管存储桶标签列表
  */
 class LakeFsInfo extends AbstractModel
 {
@@ -50,7 +52,7 @@ class LakeFsInfo extends AbstractModel
     public $Type;
 
     /**
-     * @var float 容量
+     * @var float 存储用量
      */
     public $SpaceUsedSize;
 
@@ -80,14 +82,20 @@ class LakeFsInfo extends AbstractModel
     public $Status;
 
     /**
+     * @var array 托管存储桶标签列表
+     */
+    public $TagList;
+
+    /**
      * @param string $Name 托管存储名称
      * @param string $Type 托管存储类型
-     * @param float $SpaceUsedSize 容量
+     * @param float $SpaceUsedSize 存储用量
      * @param integer $CreateTimeStamp 创建时候的时间戳
      * @param integer $DefaultBucket 是否是用户默认桶，0：默认桶，1：非默认桶
      * @param string $ShortName 托管存储short name
      * @param string $Description 桶描述信息
      * @param string $Status 托管桶状态，当前取值为：creating、bind、readOnly、isolate
+     * @param array $TagList 托管存储桶标签列表
      */
     function __construct()
     {
@@ -132,6 +140,15 @@ class LakeFsInfo extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
         }
     }
 }

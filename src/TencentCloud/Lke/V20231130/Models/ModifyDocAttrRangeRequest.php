@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDocAttrRange请求参数结构体
  *
- * @method string getBotBizId() 获取应用ID
- * @method void setBotBizId(string $BotBizId) 设置应用ID
+ * @method string getBotBizId() 获取应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+ * @method void setBotBizId(string $BotBizId) 设置应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
  * @method array getDocBizIds() 获取文档ID
  * @method void setDocBizIds(array $DocBizIds) 设置文档ID
  * @method integer getAttrRange() 获取属性标签适用范围 1：全部，2：按条件
  * @method void setAttrRange(integer $AttrRange) 设置属性标签适用范围 1：全部，2：按条件
- * @method array getAttrLabels() 获取属性标签引用
- * @method void setAttrLabels(array $AttrLabels) 设置属性标签引用
+ * @method array getAttrLabels() 获取属性标签引用，LabelBizIds可通过 DescribeAttributeLabel 接口获取
+ * @method void setAttrLabels(array $AttrLabels) 设置属性标签引用，LabelBizIds可通过 DescribeAttributeLabel 接口获取
  */
 class ModifyDocAttrRangeRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public $BotBizId;
 
@@ -47,15 +47,15 @@ class ModifyDocAttrRangeRequest extends AbstractModel
     public $AttrRange;
 
     /**
-     * @var array 属性标签引用
+     * @var array 属性标签引用，LabelBizIds可通过 DescribeAttributeLabel 接口获取
      */
     public $AttrLabels;
 
     /**
-     * @param string $BotBizId 应用ID
+     * @param string $BotBizId 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      * @param array $DocBizIds 文档ID
      * @param integer $AttrRange 属性标签适用范围 1：全部，2：按条件
-     * @param array $AttrLabels 属性标签引用
+     * @param array $AttrLabels 属性标签引用，LabelBizIds可通过 DescribeAttributeLabel 接口获取
      */
     function __construct()
     {

@@ -26,14 +26,14 @@ ResourceUri，取决于 ResourceType，Metalake时固定为default，其他类�
 - Metalake，固定为default
 - Catalog，取catalogName
 - Schema，取catalogName.SchemaName
-- Table,，取catalogName.SchemaName.TableName
+- Table，取catalogName.SchemaName.TableName
  * @method void setResource(PrivilegeResource $Resource) 设置资源
 ResourceType：来源于TCCATALOG模块的GetGrantPrivilegesSTD接口中返回的ResourceType，并改为首字母大写，例如METALAKE对应Metalake
 ResourceUri，取决于 ResourceType，Metalake时固定为default，其他类别采用catalog的三段式结构，例如
 - Metalake，固定为default
 - Catalog，取catalogName
 - Schema，取catalogName.SchemaName
-- Table,，取catalogName.SchemaName.TableName
+- Table，取catalogName.SchemaName.TableName
  * @method array getFilters() 获取过滤条件(此参数还未支持)
  * @method void setFilters(array $Filters) 设置过滤条件(此参数还未支持)
  * @method array getOrderFields() 获取排序字段(此参数还未支持)
@@ -50,7 +50,7 @@ ResourceUri，取决于 ResourceType，Metalake时固定为default，其他类�
 - Metalake，固定为default
 - Catalog，取catalogName
 - Schema，取catalogName.SchemaName
-- Table,，取catalogName.SchemaName.TableName
+- Table，取catalogName.SchemaName.TableName
      */
     public $Resource;
 
@@ -76,7 +76,7 @@ ResourceUri，取决于 ResourceType，Metalake时固定为default，其他类�
 - Metalake，固定为default
 - Catalog，取catalogName
 - Schema，取catalogName.SchemaName
-- Table,，取catalogName.SchemaName.TableName
+- Table，取catalogName.SchemaName.TableName
      * @param array $Filters 过滤条件(此参数还未支持)
      * @param array $OrderFields 排序字段(此参数还未支持)
      * @param Page $Page 页参数(此参数还未支持)

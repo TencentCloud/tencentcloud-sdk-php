@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSliceVideo(integer $SliceVideo) 设置视频截帧间隔时长，默认5s， 示例值：5 取值范围5-60s
  * @method SubscribeStreamUserIds getSubscribeStreamUserIds() 获取指定订阅流白名单或者黑名单。
  * @method void setSubscribeStreamUserIds(SubscribeStreamUserIds $SubscribeStreamUserIds) 设置指定订阅流白名单或者黑名单。
+ * @method integer getSliceImageType() 获取知道图片格式类型：
+0 png, 1 jpg默认0
+ * @method void setSliceImageType(integer $SliceImageType) 设置知道图片格式类型：
+0 png, 1 jpg默认0
  * @method string getSliceCallbackUrl() 获取已废弃，从控制台配置回调url
  * @method void setSliceCallbackUrl(string $SliceCallbackUrl) 设置已废弃，从控制台配置回调url
  */
@@ -79,6 +83,12 @@ class SliceParams extends AbstractModel
     public $SubscribeStreamUserIds;
 
     /**
+     * @var integer 知道图片格式类型：
+0 png, 1 jpg默认0
+     */
+    public $SliceImageType;
+
+    /**
      * @var string 已废弃，从控制台配置回调url
      */
     public $SliceCallbackUrl;
@@ -95,6 +105,8 @@ class SliceParams extends AbstractModel
 取值范围15-60s
      * @param integer $SliceVideo 视频截帧间隔时长，默认5s， 示例值：5 取值范围5-60s
      * @param SubscribeStreamUserIds $SubscribeStreamUserIds 指定订阅流白名单或者黑名单。
+     * @param integer $SliceImageType 知道图片格式类型：
+0 png, 1 jpg默认0
      * @param string $SliceCallbackUrl 已废弃，从控制台配置回调url
      */
     function __construct()
@@ -129,6 +141,10 @@ class SliceParams extends AbstractModel
         if (array_key_exists("SubscribeStreamUserIds",$param) and $param["SubscribeStreamUserIds"] !== null) {
             $this->SubscribeStreamUserIds = new SubscribeStreamUserIds();
             $this->SubscribeStreamUserIds->deserialize($param["SubscribeStreamUserIds"]);
+        }
+
+        if (array_key_exists("SliceImageType",$param) and $param["SliceImageType"] !== null) {
+            $this->SliceImageType = $param["SliceImageType"];
         }
 
         if (array_key_exists("SliceCallbackUrl",$param) and $param["SliceCallbackUrl"] !== null) {

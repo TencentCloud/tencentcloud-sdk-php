@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getWaterMarkType() 获取水印类型，0为图片（默认），1为文字。
  * @method void setWaterMarkType(integer $WaterMarkType) 设置水印类型，0为图片（默认），1为文字。
- * @method McuWaterMarkImage getWaterMarkImage() 获取图片水印参数。WaterMarkType为0指定。
- * @method void setWaterMarkImage(McuWaterMarkImage $WaterMarkImage) 设置图片水印参数。WaterMarkType为0指定。
+ * @method McuWaterMarkImage getWaterMarkImage() 获取图片水印参数。WaterMarkType为0指定。图片分辨率限制不超过2K，图片大小限制不超过5MB。
+ * @method void setWaterMarkImage(McuWaterMarkImage $WaterMarkImage) 设置图片水印参数。WaterMarkType为0指定。图片分辨率限制不超过2K，图片大小限制不超过5MB。
  * @method McuWaterMarkText getWaterMarkText() 获取文字水印参数。WaterMarkType为1指定。
  * @method void setWaterMarkText(McuWaterMarkText $WaterMarkText) 设置文字水印参数。WaterMarkType为1指定。
  */
@@ -35,7 +35,7 @@ class McuWaterMarkParams extends AbstractModel
     public $WaterMarkType;
 
     /**
-     * @var McuWaterMarkImage 图片水印参数。WaterMarkType为0指定。
+     * @var McuWaterMarkImage 图片水印参数。WaterMarkType为0指定。图片分辨率限制不超过2K，图片大小限制不超过5MB。
      */
     public $WaterMarkImage;
 
@@ -46,7 +46,7 @@ class McuWaterMarkParams extends AbstractModel
 
     /**
      * @param integer $WaterMarkType 水印类型，0为图片（默认），1为文字。
-     * @param McuWaterMarkImage $WaterMarkImage 图片水印参数。WaterMarkType为0指定。
+     * @param McuWaterMarkImage $WaterMarkImage 图片水印参数。WaterMarkType为0指定。图片分辨率限制不超过2K，图片大小限制不超过5MB。
      * @param McuWaterMarkText $WaterMarkText 文字水印参数。WaterMarkType为1指定。
      */
     function __construct()

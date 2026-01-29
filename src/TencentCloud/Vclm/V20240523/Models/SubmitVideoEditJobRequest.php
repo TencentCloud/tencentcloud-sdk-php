@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
 - 上传图url大小不超过 8M
 - 支持jpg，png，jpeg，webp，bmp，tiff 格式
 - 单边分辨率不超过5000，不小于50，长宽限制1:4 ~ 4:1
+ * @method VideoEditParam getVideoEditParam() 获取扩展字段。
+ * @method void setVideoEditParam(VideoEditParam $VideoEditParam) 设置扩展字段。
  * @method integer getLogoAdd() 获取为生成视频添加标识的开关，默认为1。传0 需前往  [控制台](https://console.cloud.tencent.com/vtc/setting)  申请开启显式标识自主完成后方可生效。
 1：添加标识；
 0：不添加标识；
@@ -115,6 +117,11 @@ class SubmitVideoEditJobRequest extends AbstractModel
     public $Image;
 
     /**
+     * @var VideoEditParam 扩展字段。
+     */
+    public $VideoEditParam;
+
+    /**
      * @var integer 为生成视频添加标识的开关，默认为1。传0 需前往  [控制台](https://console.cloud.tencent.com/vtc/setting)  申请开启显式标识自主完成后方可生效。
 1：添加标识；
 0：不添加标识；
@@ -151,6 +158,7 @@ class SubmitVideoEditJobRequest extends AbstractModel
 - 上传图url大小不超过 8M
 - 支持jpg，png，jpeg，webp，bmp，tiff 格式
 - 单边分辨率不超过5000，不小于50，长宽限制1:4 ~ 4:1
+     * @param VideoEditParam $VideoEditParam 扩展字段。
      * @param integer $LogoAdd 为生成视频添加标识的开关，默认为1。传0 需前往  [控制台](https://console.cloud.tencent.com/vtc/setting)  申请开启显式标识自主完成后方可生效。
 1：添加标识；
 0：不添加标识；
@@ -193,6 +201,11 @@ class SubmitVideoEditJobRequest extends AbstractModel
         if (array_key_exists("Image",$param) and $param["Image"] !== null) {
             $this->Image = new Image();
             $this->Image->deserialize($param["Image"]);
+        }
+
+        if (array_key_exists("VideoEditParam",$param) and $param["VideoEditParam"] !== null) {
+            $this->VideoEditParam = new VideoEditParam();
+            $this->VideoEditParam->deserialize($param["VideoEditParam"]);
         }
 
         if (array_key_exists("LogoAdd",$param) and $param["LogoAdd"] !== null) {

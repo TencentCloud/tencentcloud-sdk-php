@@ -33,9 +33,13 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\CreateHostingDomainResponse CreateHostingDomain(Models\CreateHostingDomainRequest $req) 创建托管域名
  * @method Models\CreatePostpayPackageResponse CreatePostpayPackage(Models\CreatePostpayPackageRequest $req) 开通后付费资源
  * @method Models\CreateStaticStoreResponse CreateStaticStore(Models\CreateStaticStoreRequest $req) 创建静态托管资源，包括COS和CDN，异步任务创建，查看创建结果需要根据DescribeStaticStore接口来查看
+ * @method Models\CreateTableResponse CreateTable(Models\CreateTableRequest $req) 本接口(CreateTable)用于创建表，支持创建capped类型集合，暂时不支持分片表
+ * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 创建tcb用户
  * @method Models\DeleteCloudBaseProjectLatestVersionResponse DeleteCloudBaseProjectLatestVersion(Models\DeleteCloudBaseProjectLatestVersionRequest $req) 删除云项目
  * @method Models\DeleteCloudBaseRunServerVersionResponse DeleteCloudBaseRunServerVersion(Models\DeleteCloudBaseRunServerVersionRequest $req) 删除服务版本
  * @method Models\DeleteGatewayVersionResponse DeleteGatewayVersion(Models\DeleteGatewayVersionRequest $req) 删除网关某版本
+ * @method Models\DeleteTableResponse DeleteTable(Models\DeleteTableRequest $req) 本接口(DeleteTable)用于删除表，删除表后表中数据将会被删除且无法恢复，请谨慎操作
+ * @method Models\DeleteUsersResponse DeleteUsers(Models\DeleteUsersRequest $req) 删除tcb用户
  * @method Models\DeleteWxGatewayRouteResponse DeleteWxGatewayRoute(Models\DeleteWxGatewayRouteRequest $req) 删除安全网关路由
  * @method Models\DescribeActivityRecordResponse DescribeActivityRecord(Models\DescribeActivityRecordRequest $req) 查询活动记录信息
  * @method Models\DescribeAuthDomainsResponse DescribeAuthDomains(Models\DescribeAuthDomainsRequest $req) 获取安全域名列表
@@ -74,7 +78,10 @@ use TencentCloud\Tcb\V20180608\Models as Models;
 2 没有免费包，有付费包，付费返回复用SmsFreeQuota结构，其中只有 TodayUsedQuota 字段有效
 3 都没有返回为空数组
  * @method Models\DescribeSpecialCostItemsResponse DescribeSpecialCostItems(Models\DescribeSpecialCostItemsRequest $req) 查询环境1分钱抵扣信息
+ * @method Models\DescribeTableResponse DescribeTable(Models\DescribeTableRequest $req) 查询表的相关信息，包括索引等信息
+ * @method Models\DescribeTablesResponse DescribeTables(Models\DescribeTablesRequest $req) 本接口(ListTables)用于查询所有表信息，包括表名、表中数据条数、表中数据量、索引个数及索引的大小等
  * @method Models\DescribeUserActivityInfoResponse DescribeUserActivityInfo(Models\DescribeUserActivityInfoRequest $req) 查询用户活动信息
+ * @method Models\DescribeUserListResponse DescribeUserList(Models\DescribeUserListRequest $req) 查询tcb用户列表
  * @method Models\DescribeWxGatewayRoutesResponse DescribeWxGatewayRoutes(Models\DescribeWxGatewayRoutesRequest $req) 查看安全网关路由
  * @method Models\DescribeWxGatewaysResponse DescribeWxGateways(Models\DescribeWxGatewaysRequest $req) 查看安全网关
  * @method Models\DestroyEnvResponse DestroyEnv(Models\DestroyEnvRequest $req) 销毁环境
@@ -83,16 +90,19 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\EstablishCloudBaseRunServerResponse EstablishCloudBaseRunServer(Models\EstablishCloudBaseRunServerRequest $req) 创建云应用服务
  * @method Models\EstablishWxGatewayRouteResponse EstablishWxGatewayRoute(Models\EstablishWxGatewayRouteRequest $req) 创建或修改安全网关路由
  * @method Models\FreezeCloudBaseRunServersResponse FreezeCloudBaseRunServers(Models\FreezeCloudBaseRunServersRequest $req) 批量冻结
+ * @method Models\ListTablesResponse ListTables(Models\ListTablesRequest $req) 本接口(ListTables)用于查询所有表信息，包括表名、表中数据条数、表中数据量、索引个数及索引的大小等
  * @method Models\ModifyCloudBaseRunServerFlowConfResponse ModifyCloudBaseRunServerFlowConf(Models\ModifyCloudBaseRunServerFlowConfRequest $req) 修改容器内的版本流量配置
  * @method Models\ModifyCloudBaseRunServerVersionResponse ModifyCloudBaseRunServerVersion(Models\ModifyCloudBaseRunServerVersionRequest $req) 修改服务版本的副本数，环境变量
  * @method Models\ModifyClsTopicResponse ModifyClsTopic(Models\ModifyClsTopicRequest $req) 修改日志主题
  * @method Models\ModifyDatabaseACLResponse ModifyDatabaseACL(Models\ModifyDatabaseACLRequest $req) 修改数据库权限
  * @method Models\ModifyEnvResponse ModifyEnv(Models\ModifyEnvRequest $req) 更新环境信息
  * @method Models\ModifyGatewayVersionTrafficResponse ModifyGatewayVersionTraffic(Models\ModifyGatewayVersionTrafficRequest $req) 设置网关版本的流量比例
+ * @method Models\ModifyUserResponse ModifyUser(Models\ModifyUserRequest $req) 修改tcb用户
  * @method Models\ReinstateEnvResponse ReinstateEnv(Models\ReinstateEnvRequest $req) 针对已隔离的免费环境，可以通过本接口将其恢复访问。
  * @method Models\ReplaceActivityRecordResponse ReplaceActivityRecord(Models\ReplaceActivityRecordRequest $req) 更新活动详情
  * @method Models\RunSqlResponse RunSql(Models\RunSqlRequest $req) 执行SQL语句
  * @method Models\UnfreezeCloudBaseRunServersResponse UnfreezeCloudBaseRunServers(Models\UnfreezeCloudBaseRunServersRequest $req) 批量解冻服务
+ * @method Models\UpdateTableResponse UpdateTable(Models\UpdateTableRequest $req) 本接口(UpdateTable)用于修改表信息，当前可以支持创建和删除索引
  */
 
 class TcbClient extends AbstractClient

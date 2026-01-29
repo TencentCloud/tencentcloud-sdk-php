@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScope(array $Scope) 设置授权请求Scope。openid; email;profile。授权请求信息范围。默认必选openid。
  * @method string getDescription() 获取描述信息。由用户自行定义。
  * @method void setDescription(string $Description) 设置描述信息。由用户自行定义。
+ * @method integer getAutoRotateKey() 获取OIDC公钥自动轮转开关（默认为0代表关闭，1代表开启）如果不传的话会默认置0
+ * @method void setAutoRotateKey(integer $AutoRotateKey) 设置OIDC公钥自动轮转开关（默认为0代表关闭，1代表开启）如果不传的话会默认置0
  */
 class CreateUserOIDCConfigRequest extends AbstractModel
 {
@@ -90,6 +92,11 @@ class CreateUserOIDCConfigRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var integer OIDC公钥自动轮转开关（默认为0代表关闭，1代表开启）如果不传的话会默认置0
+     */
+    public $AutoRotateKey;
+
+    /**
      * @param string $IdentityUrl 身份提供商URL。OpenID Connect身份提供商标识。
 对应企业IdP提供的Openid-configuration中"issuer"字段的值。
      * @param string $ClientId 客户端ID，在OpenID Connect身份提供商注册的客户端ID。
@@ -100,6 +107,7 @@ class CreateUserOIDCConfigRequest extends AbstractModel
      * @param string $IdentityKey 签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
      * @param array $Scope 授权请求Scope。openid; email;profile。授权请求信息范围。默认必选openid。
      * @param string $Description 描述信息。由用户自行定义。
+     * @param integer $AutoRotateKey OIDC公钥自动轮转开关（默认为0代表关闭，1代表开启）如果不传的话会默认置0
      */
     function __construct()
     {
@@ -148,6 +156,10 @@ class CreateUserOIDCConfigRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("AutoRotateKey",$param) and $param["AutoRotateKey"] !== null) {
+            $this->AutoRotateKey = $param["AutoRotateKey"];
         }
     }
 }

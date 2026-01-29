@@ -635,6 +635,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 1. 此接口只能用于激活，**不能用于续期**。
 2. 在激活子企业时，**请确保子企业的许可证数量充足**。
  * @method Models\CreateIntegrationUserRolesResponse CreateIntegrationUserRoles(Models\CreateIntegrationUserRolesRequest $req) 此接口用于赋予员工指定的角色权限，如需解绑请使用 DeleteIntegrationRoleUsers 接口。
+ * @method Models\CreateLMInformationExtractionTaskFieldFeedbackResponse CreateLMInformationExtractionTaskFieldFeedback(Models\CreateLMInformationExtractionTaskFieldFeedbackRequest $req) 此接口（CreateLMInformationExtractionTaskFieldFeedback）用于创建合同智能提取任务字段结果的反馈。
  * @method Models\CreateLegalSealQrCodeResponse CreateLegalSealQrCode(Models\CreateLegalSealQrCodeRequest $req) 该接口用于获取创建法人章的二维码，需要通过微信扫描。扫描后将跳转到腾讯电子签署，进入到创建法人章的流程。
 
 **注意**
@@ -796,6 +797,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 </ul>
 
 ![image](https://qcloudimg.tencent-cloud.cn/raw/3427941ecb091bf0c55009bad192dd1c.png)
+ * @method Models\CreateRiskIdentificationTaskFeedbackResponse CreateRiskIdentificationTaskFeedback(Models\CreateRiskIdentificationTaskFeedbackRequest $req) 此接口（CreateRiskIdentificationTaskFeedback）用于创建合同审查任务结果反馈。
  * @method Models\CreateSchemeUrlResponse CreateSchemeUrl(Models\CreateSchemeUrlRequest $req) 获取跳转至腾讯电子签小程序的签署链接
 
 适用场景：如果需要签署人在自己的APP、小程序、H5应用中签署，可以通过此接口获取跳转腾讯电子签小程序的签署跳转链接。
@@ -1046,6 +1048,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 | 用印审批岗（各部门的印章管理岗）             | 可对被授权的印章进行日常使用管理，如合同盖章用印的审核及登记。          |
 | 部门管理员（部门的合同+印章+模板管理）         | 部门级（含子部门）所有合同管理权限能力。                                |
 | 业务员（销售员、采购员）             | 发起合同、签署合同（含填写、拒签）、撤销合同、持有印章等权限能力。      |
+ * @method Models\DescribeLMInformationExtractionTaskFieldFeedbackResponse DescribeLMInformationExtractionTaskFieldFeedback(Models\DescribeLMInformationExtractionTaskFieldFeedbackRequest $req) 此接口（DescribeLMInformationExtractionTaskFieldFeedback）用于查询合同智能提取任务字段反馈信息。
  * @method Models\DescribeOrganizationAuthStatusResponse DescribeOrganizationAuthStatus(Models\DescribeOrganizationAuthStatusRequest $req) 查询企业认证状态- 仅通过[CreateOrganizationAuthUrl](https://qian.tencent.com/developers/companyApis/organizations/CreateOrganizationAuthUrl) 和[CreateBatchOrganizationRegistrationTasks](https://qian.tencent.com/developers/companyApis/organizations/CreateBatchOrganizationRegistrationTasks)这两个接口进行引导认证的企业，调用方企业可以依据这个接口，查询认证状态。
  * @method Models\DescribeOrganizationGroupOrganizationsResponse DescribeOrganizationGroupOrganizations(Models\DescribeOrganizationGroupOrganizationsRequest $req) 此API接口用来查询加入集团的成员企业信息
 适用场景：子企业在加入集团后，主企业可能通过此接口获取到所有的子企业列表，方便进行展示和统计
@@ -1055,6 +1058,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 1. 此操作要求操作者具备<b>印章查询权限</b>（若调用者尚无此权限，请联系超级管理员前往Web控制台【组织管理】->【角色管理】添加相应权限）。
  * @method Models\DescribeOrganizationVerifyStatusResponse DescribeOrganizationVerifyStatus(Models\DescribeOrganizationVerifyStatusRequest $req) 仅且仅能查询企业本身在电子签的认证状态
  * @method Models\DescribePersonCertificateResponse DescribePersonCertificate(Models\DescribePersonCertificateRequest $req) 此接口（DescribePersonCertificate）用于查询个人数字证书信息。<br />注：`1.目前仅用于查询开通了医疗自动签署功能的个人数字证书。`<br />`2.调用此接口需要开通白名单，使用前请联系相关人员开通白名单。`
+ * @method Models\DescribeRiskIdentificationTaskFeedbackResponse DescribeRiskIdentificationTaskFeedback(Models\DescribeRiskIdentificationTaskFeedbackRequest $req) 此接口（DescribeRiskIdentificationTaskFeedback）用于查询合同审查任务结果反馈信息
  * @method Models\DescribeSignFaceVideoResponse DescribeSignFaceVideo(Models\DescribeSignFaceVideoRequest $req) 该接口用于在使用视频认证方式签署合同后，获取用户的签署人脸认证视频。
 
 1. 该接口**仅适用于在H5端签署**的合同，**在通过视频认证后**获取人脸视频。

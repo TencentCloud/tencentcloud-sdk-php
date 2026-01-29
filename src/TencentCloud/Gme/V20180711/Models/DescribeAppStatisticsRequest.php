@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAppStatistics请求参数结构体
  *
- * @method integer getBizId() 获取GME应用ID
- * @method void setBizId(integer $BizId) 设置GME应用ID
- * @method string getStartDate() 获取数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13
- * @method void setStartDate(string $StartDate) 设置数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13
- * @method string getEndDate() 获取数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13
- * @method void setEndDate(string $EndDate) 设置数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13
- * @method array getServices() 获取要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText
- * @method void setServices(array $Services) 设置要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText
+ * @method integer getBizId() 获取<p>GME应用ID</p>
+ * @method void setBizId(integer $BizId) 设置<p>GME应用ID</p>
+ * @method string getStartDate() 获取<p>数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13</p>
+ * @method void setStartDate(string $StartDate) 设置<p>数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13</p>
+ * @method string getEndDate() 获取<p>数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13</p>
+ * @method void setEndDate(string $EndDate) 设置<p>数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13</p>
+ * @method array getServices() 获取<p>要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText</p>
+ * @method void setServices(array $Services) 设置<p>要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText</p>
  */
 class DescribeAppStatisticsRequest extends AbstractModel
 {
     /**
-     * @var integer GME应用ID
+     * @var integer <p>GME应用ID</p>
      */
     public $BizId;
 
     /**
-     * @var string 数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13
+     * @var string <p>数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13</p>
      */
     public $StartDate;
 
     /**
-     * @var string 数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13
+     * @var string <p>数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13</p>
      */
     public $EndDate;
 
     /**
-     * @var array 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText
+     * @var array <p>要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText</p>
      */
     public $Services;
 
     /**
-     * @param integer $BizId GME应用ID
-     * @param string $StartDate 数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13
-     * @param string $EndDate 数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13
-     * @param array $Services 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText
+     * @param integer $BizId <p>GME应用ID</p>
+     * @param string $StartDate <p>数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13</p>
+     * @param string $EndDate <p>数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13</p>
+     * @param array $Services <p>要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText</p>
      */
     function __construct()
     {

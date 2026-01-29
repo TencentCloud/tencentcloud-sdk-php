@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置图片处理模板名称，长度限制：64个字符。
  * @method string getComment() 获取图片处理模板描述信息，长度限制：256个字符。
  * @method void setComment(string $Comment) 设置图片处理模板描述信息，长度限制：256个字符。
+ * @method string getStdExtInfo() 获取图片处理模板拓展参数。
+ * @method void setStdExtInfo(string $StdExtInfo) 设置图片处理模板拓展参数。
  */
 class CreateProcessImageTemplateRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateProcessImageTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
+     * @var string 图片处理模板拓展参数。
+     */
+    public $StdExtInfo;
+
+    /**
      * @param ImageTaskInput $ProcessImageTemplate 图片处理模板。
      * @param string $Name 图片处理模板名称，长度限制：64个字符。
      * @param string $Comment 图片处理模板描述信息，长度限制：256个字符。
+     * @param string $StdExtInfo 图片处理模板拓展参数。
      */
     function __construct()
     {
@@ -73,6 +81,10 @@ class CreateProcessImageTemplateRequest extends AbstractModel
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("StdExtInfo",$param) and $param["StdExtInfo"] !== null) {
+            $this->StdExtInfo = $param["StdExtInfo"];
         }
     }
 }

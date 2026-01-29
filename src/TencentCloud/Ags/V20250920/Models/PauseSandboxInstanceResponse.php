@@ -14,31 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcb\V20180608\Models;
+namespace TencentCloud\Ags\V20250920\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SearchClsLog返回参数结构体
+ * PauseSandboxInstance返回参数结构体
  *
- * @method LogResObject getLogResults() 获取日志内容结果
- * @method void setLogResults(LogResObject $LogResults) 设置日志内容结果
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class SearchClsLogResponse extends AbstractModel
+class PauseSandboxInstanceResponse extends AbstractModel
 {
-    /**
-     * @var LogResObject 日志内容结果
-     */
-    public $LogResults;
-
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param LogResObject $LogResults 日志内容结果
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,11 +46,6 @@ class SearchClsLogResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LogResults",$param) and $param["LogResults"] !== null) {
-            $this->LogResults = new LogResObject();
-            $this->LogResults->deserialize($param["LogResults"]);
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

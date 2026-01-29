@@ -25,19 +25,23 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEndTime() 获取结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
  * @method void setEndTime(string $EndTime) 设置结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
  * @method array getMetricNames() 获取查询指标，取值有：
-<li>l4Flow_connections: 访问并发连接数；</li>
-<li>l4Flow_flux: 访问总流量；</li>
-<li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量；</li>
-<li>l4Flow_inBandwidth: 访问入向带宽峰值；</li>
-<li>l4Flow_outBandwidth: 访问出向带宽峰值。</li>
+<ul><li>**l4Flow_flux**: 访问总流量，单位：Byte，指标值类型：Integer；</li>
+<li>**l4Flow_inFlux**: 访问入流量，单位：Byte，指标值类型：Integer；</li>
+<li>**l4Flow_outFlux**: 访问出流量，单位：Byte，指标值类型：Integer；</li>
+<li>**l4Flow_inBandwidth**: 访问入向带宽峰值，单位：bps，指标值类型：Integer；</li>
+<li>**l4Flow_outBandwidth**: 访问出向带宽峰值，单位：bps，指标值类型：Integer；</li>
+<li>**l4Flow_connections**: 访问并发连接数，单位：个，指标值类型：Integer ；</li>
+<li>**l4Flow_newConnectionsRate**: 新建连接数速率，单位：个/秒，指标值类型： Float，保留两位小数。</li></ul>**注意**：<ul><li><code> Integer</code> 值类型的指标将从  <code>Data.N.TypeValue</code> 返回对应时序数据；</li>
+<li><code>Float</code> 值类型的指标将从 <code>Data.N.FloatTypeValue</code> 返回对应时序数据。</li></ul>
  * @method void setMetricNames(array $MetricNames) 设置查询指标，取值有：
-<li>l4Flow_connections: 访问并发连接数；</li>
-<li>l4Flow_flux: 访问总流量；</li>
-<li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量；</li>
-<li>l4Flow_inBandwidth: 访问入向带宽峰值；</li>
-<li>l4Flow_outBandwidth: 访问出向带宽峰值。</li>
+<ul><li>**l4Flow_flux**: 访问总流量，单位：Byte，指标值类型：Integer；</li>
+<li>**l4Flow_inFlux**: 访问入流量，单位：Byte，指标值类型：Integer；</li>
+<li>**l4Flow_outFlux**: 访问出流量，单位：Byte，指标值类型：Integer；</li>
+<li>**l4Flow_inBandwidth**: 访问入向带宽峰值，单位：bps，指标值类型：Integer；</li>
+<li>**l4Flow_outBandwidth**: 访问出向带宽峰值，单位：bps，指标值类型：Integer；</li>
+<li>**l4Flow_connections**: 访问并发连接数，单位：个，指标值类型：Integer ；</li>
+<li>**l4Flow_newConnectionsRate**: 新建连接数速率，单位：个/秒，指标值类型： Float，保留两位小数。</li></ul>**注意**：<ul><li><code> Integer</code> 值类型的指标将从  <code>Data.N.TypeValue</code> 返回对应时序数据；</li>
+<li><code>Float</code> 值类型的指标将从 <code>Data.N.FloatTypeValue</code> 返回对应时序数据。</li></ul>
  * @method array getZoneIds() 获取站点ID，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。
 最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
  * @method void setZoneIds(array $ZoneIds) 设置站点ID，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。
@@ -45,21 +49,21 @@ use TencentCloud\Common\AbstractModel;
  * @method array getProxyIds() 获取四层实例列表, 不填表示选择全部实例。
  * @method void setProxyIds(array $ProxyIds) 设置四层实例列表, 不填表示选择全部实例。
  * @method string getInterval() 获取查询时间粒度，取值有：
-<li>min: 1分钟 ；</li>
-<li>5min: 5分钟 ；</li>
-<li>hour: 1小时 ；</li>
-<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。
+<ul><li>**min**: 1分钟 ；</li>
+<li>**5min**: 5分钟 ；</li>
+<li>**hour**: 1小时 ；</li>
+<li>**day**: 1天 。</li></ul>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以 <code>min</code> 粒度查询，2天范围内以 <code>5min</code> 粒度查询，7天范围内以 <code>hour</code> 粒度查询，超过7天以 <code>day</code> 粒度查询。
  * @method void setInterval(string $Interval) 设置查询时间粒度，取值有：
-<li>min: 1分钟 ；</li>
-<li>5min: 5分钟 ；</li>
-<li>hour: 1小时 ；</li>
-<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。
+<ul><li>**min**: 1分钟 ；</li>
+<li>**5min**: 5分钟 ；</li>
+<li>**hour**: 1小时 ；</li>
+<li>**day**: 1天 。</li></ul>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以 <code>min</code> 粒度查询，2天范围内以 <code>5min</code> 粒度查询，7天范围内以 <code>hour</code> 粒度查询，超过7天以 <code>day</code> 粒度查询。
  * @method array getFilters() 获取过滤条件，详细的过滤条件Key值如下：
-<li>ruleId：按照转发规则 ID 进行过滤。</li>
-<li>proxyId：按照四层代理实例 ID 进行过滤。</li>
+<ul><li>**ruleId**：按照转发规则 ID 进行过滤。</li>
+<li>**proxyId**：按照四层代理实例 ID 进行过滤。</li></ul>
  * @method void setFilters(array $Filters) 设置过滤条件，详细的过滤条件Key值如下：
-<li>ruleId：按照转发规则 ID 进行过滤。</li>
-<li>proxyId：按照四层代理实例 ID 进行过滤。</li>
+<ul><li>**ruleId**：按照转发规则 ID 进行过滤。</li>
+<li>**proxyId**：按照四层代理实例 ID 进行过滤。</li></ul>
  * @method string getArea() 获取数据归属地区。该参数已废弃。请在 Filters.country 中按客户端地域过滤数据。
  * @method void setArea(string $Area) 设置数据归属地区。该参数已废弃。请在 Filters.country 中按客户端地域过滤数据。
  */
@@ -77,12 +81,14 @@ class DescribeTimingL4DataRequest extends AbstractModel
 
     /**
      * @var array 查询指标，取值有：
-<li>l4Flow_connections: 访问并发连接数；</li>
-<li>l4Flow_flux: 访问总流量；</li>
-<li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量；</li>
-<li>l4Flow_inBandwidth: 访问入向带宽峰值；</li>
-<li>l4Flow_outBandwidth: 访问出向带宽峰值。</li>
+<ul><li>**l4Flow_flux**: 访问总流量，单位：Byte，指标值类型：Integer；</li>
+<li>**l4Flow_inFlux**: 访问入流量，单位：Byte，指标值类型：Integer；</li>
+<li>**l4Flow_outFlux**: 访问出流量，单位：Byte，指标值类型：Integer；</li>
+<li>**l4Flow_inBandwidth**: 访问入向带宽峰值，单位：bps，指标值类型：Integer；</li>
+<li>**l4Flow_outBandwidth**: 访问出向带宽峰值，单位：bps，指标值类型：Integer；</li>
+<li>**l4Flow_connections**: 访问并发连接数，单位：个，指标值类型：Integer ；</li>
+<li>**l4Flow_newConnectionsRate**: 新建连接数速率，单位：个/秒，指标值类型： Float，保留两位小数。</li></ul>**注意**：<ul><li><code> Integer</code> 值类型的指标将从  <code>Data.N.TypeValue</code> 返回对应时序数据；</li>
+<li><code>Float</code> 值类型的指标将从 <code>Data.N.FloatTypeValue</code> 返回对应时序数据。</li></ul>
      */
     public $MetricNames;
 
@@ -99,22 +105,23 @@ class DescribeTimingL4DataRequest extends AbstractModel
 
     /**
      * @var string 查询时间粒度，取值有：
-<li>min: 1分钟 ；</li>
-<li>5min: 5分钟 ；</li>
-<li>hour: 1小时 ；</li>
-<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。
+<ul><li>**min**: 1分钟 ；</li>
+<li>**5min**: 5分钟 ；</li>
+<li>**hour**: 1小时 ；</li>
+<li>**day**: 1天 。</li></ul>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以 <code>min</code> 粒度查询，2天范围内以 <code>5min</code> 粒度查询，7天范围内以 <code>hour</code> 粒度查询，超过7天以 <code>day</code> 粒度查询。
      */
     public $Interval;
 
     /**
      * @var array 过滤条件，详细的过滤条件Key值如下：
-<li>ruleId：按照转发规则 ID 进行过滤。</li>
-<li>proxyId：按照四层代理实例 ID 进行过滤。</li>
+<ul><li>**ruleId**：按照转发规则 ID 进行过滤。</li>
+<li>**proxyId**：按照四层代理实例 ID 进行过滤。</li></ul>
      */
     public $Filters;
 
     /**
      * @var string 数据归属地区。该参数已废弃。请在 Filters.country 中按客户端地域过滤数据。
+     * @deprecated
      */
     public $Area;
 
@@ -122,23 +129,25 @@ class DescribeTimingL4DataRequest extends AbstractModel
      * @param string $StartTime 开始时间。
      * @param string $EndTime 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
      * @param array $MetricNames 查询指标，取值有：
-<li>l4Flow_connections: 访问并发连接数；</li>
-<li>l4Flow_flux: 访问总流量；</li>
-<li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量；</li>
-<li>l4Flow_inBandwidth: 访问入向带宽峰值；</li>
-<li>l4Flow_outBandwidth: 访问出向带宽峰值。</li>
+<ul><li>**l4Flow_flux**: 访问总流量，单位：Byte，指标值类型：Integer；</li>
+<li>**l4Flow_inFlux**: 访问入流量，单位：Byte，指标值类型：Integer；</li>
+<li>**l4Flow_outFlux**: 访问出流量，单位：Byte，指标值类型：Integer；</li>
+<li>**l4Flow_inBandwidth**: 访问入向带宽峰值，单位：bps，指标值类型：Integer；</li>
+<li>**l4Flow_outBandwidth**: 访问出向带宽峰值，单位：bps，指标值类型：Integer；</li>
+<li>**l4Flow_connections**: 访问并发连接数，单位：个，指标值类型：Integer ；</li>
+<li>**l4Flow_newConnectionsRate**: 新建连接数速率，单位：个/秒，指标值类型： Float，保留两位小数。</li></ul>**注意**：<ul><li><code> Integer</code> 值类型的指标将从  <code>Data.N.TypeValue</code> 返回对应时序数据；</li>
+<li><code>Float</code> 值类型的指标将从 <code>Data.N.FloatTypeValue</code> 返回对应时序数据。</li></ul>
      * @param array $ZoneIds 站点ID，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。
 最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
      * @param array $ProxyIds 四层实例列表, 不填表示选择全部实例。
      * @param string $Interval 查询时间粒度，取值有：
-<li>min: 1分钟 ；</li>
-<li>5min: 5分钟 ；</li>
-<li>hour: 1小时 ；</li>
-<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。
+<ul><li>**min**: 1分钟 ；</li>
+<li>**5min**: 5分钟 ；</li>
+<li>**hour**: 1小时 ；</li>
+<li>**day**: 1天 。</li></ul>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以 <code>min</code> 粒度查询，2天范围内以 <code>5min</code> 粒度查询，7天范围内以 <code>hour</code> 粒度查询，超过7天以 <code>day</code> 粒度查询。
      * @param array $Filters 过滤条件，详细的过滤条件Key值如下：
-<li>ruleId：按照转发规则 ID 进行过滤。</li>
-<li>proxyId：按照四层代理实例 ID 进行过滤。</li>
+<ul><li>**ruleId**：按照转发规则 ID 进行过滤。</li>
+<li>**proxyId**：按照四层代理实例 ID 进行过滤。</li></ul>
      * @param string $Area 数据归属地区。该参数已废弃。请在 Filters.country 中按客户端地域过滤数据。
      */
     function __construct()

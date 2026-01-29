@@ -41,6 +41,7 @@ use TencentCloud\Hai\V20230812\Models as Models;
  * @method Models\StopInstanceResponse StopInstance(Models\StopInstanceRequest $req) 本接口 (StopInstance) 用于主动关闭实例。
 ‘已关机’、‘预付费’的实例不支持关机
  * @method Models\TerminateInstancesResponse TerminateInstances(Models\TerminateInstancesRequest $req) 本接口 (TerminateInstances) 用于主动退还实例。
+ * @method Models\UpdateServiceConfigsResponse UpdateServiceConfigs(Models\UpdateServiceConfigsRequest $req) 本接口(UpdateServiceConfigs)用于更新服务配置
  */
 
 class HaiClient extends AbstractClient

@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mariadb\V20170312\Models;
+namespace TencentCloud\Hai\V20230812\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDBInstanceDetail请求参数结构体
+ * UpdateServiceConfigs请求参数结构体
  *
- * @method string getInstanceId() 获取<p>实例Id形如：tdsql-ow728lmc。</p>
- * @method void setInstanceId(string $InstanceId) 设置<p>实例Id形如：tdsql-ow728lmc。</p>
+ * @method string getServiceId() 获取服务ID
+ * @method void setServiceId(string $ServiceId) 设置服务ID
+ * @method integer getTargetReplicas() 获取期望副本数
+ * @method void setTargetReplicas(integer $TargetReplicas) 设置期望副本数
  */
-class DescribeDBInstanceDetailRequest extends AbstractModel
+class UpdateServiceConfigsRequest extends AbstractModel
 {
     /**
-     * @var string <p>实例Id形如：tdsql-ow728lmc。</p>
+     * @var string 服务ID
      */
-    public $InstanceId;
+    public $ServiceId;
 
     /**
-     * @param string $InstanceId <p>实例Id形如：tdsql-ow728lmc。</p>
+     * @var integer 期望副本数
+     */
+    public $TargetReplicas;
+
+    /**
+     * @param string $ServiceId 服务ID
+     * @param integer $TargetReplicas 期望副本数
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeDBInstanceDetailRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
+            $this->ServiceId = $param["ServiceId"];
+        }
+
+        if (array_key_exists("TargetReplicas",$param) and $param["TargetReplicas"] !== null) {
+            $this->TargetReplicas = $param["TargetReplicas"];
         }
     }
 }

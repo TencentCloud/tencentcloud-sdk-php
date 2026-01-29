@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRoomMember返回参数结构体
  *
- * @method DeleteResult getDeleteResult() 获取剔除房间或成员的操作结果
- * @method void setDeleteResult(DeleteResult $DeleteResult) 设置剔除房间或成员的操作结果
+ * @method DeleteResult getDeleteResult() 获取<p>剔除房间或成员的操作结果</p>
+ * @method void setDeleteResult(DeleteResult $DeleteResult) 设置<p>剔除房间或成员的操作结果</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DeleteRoomMemberResponse extends AbstractModel
 {
     /**
-     * @var DeleteResult 剔除房间或成员的操作结果
+     * @var DeleteResult <p>剔除房间或成员的操作结果</p>
      */
     public $DeleteResult;
 
@@ -38,7 +38,7 @@ class DeleteRoomMemberResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param DeleteResult $DeleteResult 剔除房间或成员的操作结果
+     * @param DeleteResult $DeleteResult <p>剔除房间或成员的操作结果</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

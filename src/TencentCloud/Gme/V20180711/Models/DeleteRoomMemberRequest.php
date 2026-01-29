@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRoomMember请求参数结构体
  *
- * @method string getRoomId() 获取要操作的房间id
- * @method void setRoomId(string $RoomId) 设置要操作的房间id
- * @method integer getDeleteType() 获取剔除类型 1-删除房间 2-剔除用户
- * @method void setDeleteType(integer $DeleteType) 设置剔除类型 1-删除房间 2-剔除用户
- * @method integer getBizId() 获取应用id
- * @method void setBizId(integer $BizId) 设置应用id
- * @method array getUids() 获取要剔除的用户列表（整型）
- * @method void setUids(array $Uids) 设置要剔除的用户列表（整型）
- * @method array getStrUids() 获取要剔除的用户列表（字符串类型）
- * @method void setStrUids(array $StrUids) 设置要剔除的用户列表（字符串类型）
+ * @method string getRoomId() 获取<p>要操作的房间id</p>
+ * @method void setRoomId(string $RoomId) 设置<p>要操作的房间id</p>
+ * @method integer getDeleteType() 获取<p>剔除类型 1-删除房间 2-剔除用户</p>
+ * @method void setDeleteType(integer $DeleteType) 设置<p>剔除类型 1-删除房间 2-剔除用户</p>
+ * @method integer getBizId() 获取<p>应用id</p>
+ * @method void setBizId(integer $BizId) 设置<p>应用id</p>
+ * @method array getUids() 获取<p>要剔除的用户列表（整型）</p>
+ * @method void setUids(array $Uids) 设置<p>要剔除的用户列表（整型）</p>
+ * @method array getStrUids() 获取<p>要剔除的用户列表（字符串类型）</p>
+ * @method void setStrUids(array $StrUids) 设置<p>要剔除的用户列表（字符串类型）</p>
  */
 class DeleteRoomMemberRequest extends AbstractModel
 {
     /**
-     * @var string 要操作的房间id
+     * @var string <p>要操作的房间id</p>
      */
     public $RoomId;
 
     /**
-     * @var integer 剔除类型 1-删除房间 2-剔除用户
+     * @var integer <p>剔除类型 1-删除房间 2-剔除用户</p>
      */
     public $DeleteType;
 
     /**
-     * @var integer 应用id
+     * @var integer <p>应用id</p>
      */
     public $BizId;
 
     /**
-     * @var array 要剔除的用户列表（整型）
+     * @var array <p>要剔除的用户列表（整型）</p>
      */
     public $Uids;
 
     /**
-     * @var array 要剔除的用户列表（字符串类型）
+     * @var array <p>要剔除的用户列表（字符串类型）</p>
      */
     public $StrUids;
 
     /**
-     * @param string $RoomId 要操作的房间id
-     * @param integer $DeleteType 剔除类型 1-删除房间 2-剔除用户
-     * @param integer $BizId 应用id
-     * @param array $Uids 要剔除的用户列表（整型）
-     * @param array $StrUids 要剔除的用户列表（字符串类型）
+     * @param string $RoomId <p>要操作的房间id</p>
+     * @param integer $DeleteType <p>剔除类型 1-删除房间 2-剔除用户</p>
+     * @param integer $BizId <p>应用id</p>
+     * @param array $Uids <p>要剔除的用户列表（整型）</p>
+     * @param array $StrUids <p>要剔除的用户列表（字符串类型）</p>
      */
     function __construct()
     {

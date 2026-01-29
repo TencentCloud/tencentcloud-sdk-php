@@ -48,6 +48,28 @@ CT_TKE_SERVERLESS:TKE Serverless集群;
  * @method void setMemLimit(integer $MemLimit) 设置内存量
  * @method integer getCpuLimit() 获取cpu
  * @method void setCpuLimit(integer $CpuLimit) 设置cpu
+ * @method string getClusterAuditStatus() 获取集群审计开关状态：
+已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
+ * @method void setClusterAuditStatus(string $ClusterAuditStatus) 设置集群审计开关状态：
+已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
+ * @method string getAccessedStatus() 获取接入状态:
+未接入: AccessedNone
+已防护: AccessedDefended
+未防护: AccessedInstalled
+部分防护: AccessedPartialDefence
+接入异常: AccessedException
+卸载异常: AccessedUninstallException
+接入中: AccessedInstalling
+卸载中: AccessedUninstalling
+ * @method void setAccessedStatus(string $AccessedStatus) 设置接入状态:
+未接入: AccessedNone
+已防护: AccessedDefended
+未防护: AccessedInstalled
+部分防护: AccessedPartialDefence
+接入异常: AccessedException
+卸载异常: AccessedUninstallException
+接入中: AccessedInstalling
+卸载中: AccessedUninstalling
  */
 class AssetClusterListItem extends AbstractModel
 {
@@ -98,6 +120,25 @@ CT_TKE_SERVERLESS:TKE Serverless集群;
     public $CpuLimit;
 
     /**
+     * @var string 集群审计开关状态：
+已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
+     */
+    public $ClusterAuditStatus;
+
+    /**
+     * @var string 接入状态:
+未接入: AccessedNone
+已防护: AccessedDefended
+未防护: AccessedInstalled
+部分防护: AccessedPartialDefence
+接入异常: AccessedException
+卸载异常: AccessedUninstallException
+接入中: AccessedInstalling
+卸载中: AccessedUninstalling
+     */
+    public $AccessedStatus;
+
+    /**
      * @param string $ClusterID 集群ID
      * @param string $ClusterName 集群名称
      * @param string $Status 集群状态
@@ -112,6 +153,17 @@ CT_TKE_SERVERLESS:TKE Serverless集群;
      * @param string $ClusterVersion 集群版本
      * @param integer $MemLimit 内存量
      * @param integer $CpuLimit cpu
+     * @param string $ClusterAuditStatus 集群审计开关状态：
+已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
+     * @param string $AccessedStatus 接入状态:
+未接入: AccessedNone
+已防护: AccessedDefended
+未防护: AccessedInstalled
+部分防护: AccessedPartialDefence
+接入异常: AccessedException
+卸载异常: AccessedUninstallException
+接入中: AccessedInstalling
+卸载中: AccessedUninstalling
      */
     function __construct()
     {
@@ -156,6 +208,14 @@ CT_TKE_SERVERLESS:TKE Serverless集群;
 
         if (array_key_exists("CpuLimit",$param) and $param["CpuLimit"] !== null) {
             $this->CpuLimit = $param["CpuLimit"];
+        }
+
+        if (array_key_exists("ClusterAuditStatus",$param) and $param["ClusterAuditStatus"] !== null) {
+            $this->ClusterAuditStatus = $param["ClusterAuditStatus"];
+        }
+
+        if (array_key_exists("AccessedStatus",$param) and $param["AccessedStatus"] !== null) {
+            $this->AccessedStatus = $param["AccessedStatus"];
         }
     }
 }

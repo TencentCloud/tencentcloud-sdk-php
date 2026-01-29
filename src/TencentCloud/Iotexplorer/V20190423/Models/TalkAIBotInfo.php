@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
  * @method integer getUpdateTime() 获取更新时间
  * @method void setUpdateTime(integer $UpdateTime) 设置更新时间
+ * @method array getBoundProducts() 获取已关联产品信息列表
+ * @method void setBoundProducts(array $BoundProducts) 设置已关联产品信息列表
  */
 class TalkAIBotInfo extends AbstractModel
 {
@@ -108,6 +110,7 @@ class TalkAIBotInfo extends AbstractModel
 
     /**
      * @var TalkProductInfo 产品信息列表
+     * @deprecated
      */
     public $ProductList;
 
@@ -120,6 +123,11 @@ class TalkAIBotInfo extends AbstractModel
      * @var integer 更新时间
      */
     public $UpdateTime;
+
+    /**
+     * @var array 已关联产品信息列表
+     */
+    public $BoundProducts;
 
     /**
      * @param integer $Uin UIN
@@ -136,6 +144,7 @@ class TalkAIBotInfo extends AbstractModel
      * @param TalkProductInfo $ProductList 产品信息列表
      * @param integer $CreateTime 创建时间
      * @param integer $UpdateTime 更新时间
+     * @param array $BoundProducts 已关联产品信息列表
      */
     function __construct()
     {
@@ -209,6 +218,15 @@ class TalkAIBotInfo extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("BoundProducts",$param) and $param["BoundProducts"] !== null) {
+            $this->BoundProducts = [];
+            foreach ($param["BoundProducts"] as $key => $value){
+                $obj = new TalkProductInfo();
+                $obj->deserialize($value);
+                array_push($this->BoundProducts, $obj);
+            }
         }
     }
 }

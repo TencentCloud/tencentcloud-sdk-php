@@ -33,9 +33,6 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\BindTWeTalkAIBotResponse BindTWeTalkAIBot(Models\BindTWeTalkAIBotRequest $req) 用于绑定一个产品和智能体。
  * @method Models\CallDeviceActionAsyncResponse CallDeviceActionAsync(Models\CallDeviceActionAsyncRequest $req) 提供给用户异步调用设备行为的能力
  * @method Models\CallDeviceActionSyncResponse CallDeviceActionSync(Models\CallDeviceActionSyncRequest $req) 为用户提供同步调用设备行为的能力。
- * @method Models\CancelAssignTWeCallLicenseResponse CancelAssignTWeCallLicense(Models\CancelAssignTWeCallLicenseRequest $req) 业务已下线
-
-取消分配
  * @method Models\ChangeP2PRouteResponse ChangeP2PRoute(Models\ChangeP2PRouteRequest $req) p2p路线切换（此接口目前处于内测接口，可以联系申请加白 ）
  * @method Models\CheckFirmwareUpdateResponse CheckFirmwareUpdate(Models\CheckFirmwareUpdateRequest $req) 本接口（CheckFirmwareUpdate）用于查询设备可升级固件版本
  * @method Models\ControlDeviceDataResponse ControlDeviceData(Models\ControlDeviceDataRequest $req) 根据设备产品ID、设备名称，设置控制设备的属性数据。
@@ -45,6 +42,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\CreateCloudStorageAIServiceTaskResponse CreateCloudStorageAIServiceTask(Models\CreateCloudStorageAIServiceTaskRequest $req) 创建设备云存 AI 分析任务
  * @method Models\CreateDeviceResponse CreateDevice(Models\CreateDeviceRequest $req) 创建设备
  * @method Models\CreateDeviceChannelResponse CreateDeviceChannel(Models\CreateDeviceChannelRequest $req) 创建设备通道
+ * @method Models\CreateDeviceSDPAnswerResponse CreateDeviceSDPAnswer(Models\CreateDeviceSDPAnswerRequest $req) 创建设备SDP应答
  * @method Models\CreateExternalSourceAIServiceTaskResponse CreateExternalSourceAIServiceTask(Models\CreateExternalSourceAIServiceTaskRequest $req) 创建外部视频 AI 分析任务
  * @method Models\CreateFenceBindResponse CreateFenceBind(Models\CreateFenceBindRequest $req) > 创建围栏绑定信息。
  * @method Models\CreateFreeCloudStorageResponse CreateFreeCloudStorage(Models\CreateFreeCloudStorageRequest $req) 开通云存卡服务

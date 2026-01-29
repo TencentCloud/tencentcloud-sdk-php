@@ -139,7 +139,11 @@ pause
  * @method InstanceAbility getInstanceAbility() 获取当前实例支持的能力
  * @method void setInstanceAbility(InstanceAbility $InstanceAbility) 设置当前实例支持的能力
  * @method string getDeviceType() 获取实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
  * @method void setDeviceType(string $DeviceType) 设置实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
  * @method string getInstanceStorageType() 获取实例存储类型
  * @method void setInstanceStorageType(string $InstanceStorageType) 设置实例存储类型
  * @method string getCynosVersionTag() 获取未知字段
@@ -428,6 +432,8 @@ pause
 
     /**
      * @var string 实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      */
     public $DeviceType;
 
@@ -512,6 +518,8 @@ pause
      * @param string $InstanceIndexMode 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
      * @param InstanceAbility $InstanceAbility 当前实例支持的能力
      * @param string $DeviceType 实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      * @param string $InstanceStorageType 实例存储类型
      * @param string $CynosVersionTag 未知字段
      * @param array $NodeList libradb 节点信息

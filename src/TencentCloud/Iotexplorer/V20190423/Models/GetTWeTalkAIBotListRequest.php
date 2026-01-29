@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBotId() 获取智能体ID
  * @method void setBotId(string $BotId) 设置智能体ID
+ * @method string getName() 获取智能体名称
+ * @method void setName(string $Name) 设置智能体名称
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getInstanceId() 获取实例ID
@@ -39,6 +41,11 @@ class GetTWeTalkAIBotListRequest extends AbstractModel
      * @var string 智能体ID
      */
     public $BotId;
+
+    /**
+     * @var string 智能体名称
+     */
+    public $Name;
 
     /**
      * @var string 产品ID
@@ -67,6 +74,7 @@ class GetTWeTalkAIBotListRequest extends AbstractModel
 
     /**
      * @param string $BotId 智能体ID
+     * @param string $Name 智能体名称
      * @param string $ProductId 产品ID
      * @param string $InstanceId 实例ID
      * @param boolean $IncludeCredentials 是否脱敏
@@ -88,6 +96,10 @@ class GetTWeTalkAIBotListRequest extends AbstractModel
         }
         if (array_key_exists("BotId",$param) and $param["BotId"] !== null) {
             $this->BotId = $param["BotId"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
         if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {

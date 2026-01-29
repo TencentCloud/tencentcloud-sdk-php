@@ -49,7 +49,11 @@ use TencentCloud\Common\AbstractModel;
  * @method array getInstanceTasks() 获取实例任务信息
  * @method void setInstanceTasks(array $InstanceTasks) 设置实例任务信息
  * @method string getInstanceDeviceType() 获取实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
  * @method void setInstanceDeviceType(string $InstanceDeviceType) 设置实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
  * @method string getInstanceStorageType() 获取实例存储类型
 说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
  * @method void setInstanceStorageType(string $InstanceStorageType) 设置实例存储类型
@@ -135,6 +139,8 @@ class ClusterInstanceDetail extends AbstractModel
 
     /**
      * @var string 实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      */
     public $InstanceDeviceType;
 
@@ -171,6 +177,8 @@ class ClusterInstanceDetail extends AbstractModel
      * @param string $ServerlessStatus serverless实例子状态
      * @param array $InstanceTasks 实例任务信息
      * @param string $InstanceDeviceType 实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      * @param string $InstanceStorageType 实例存储类型
 说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
      * @param string $DbMode 数据库类型

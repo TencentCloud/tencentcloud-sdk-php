@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSilenceTime(integer $SilenceTime) 设置VAD 静默检测时间， 当开启语义vad此配置失效
  * @method boolean getNoiseFilterEnabled() 获取是否启用噪声过滤
  * @method void setNoiseFilterEnabled(boolean $NoiseFilterEnabled) 设置是否启用噪声过滤
- * @method boolean getLongTermMemoryEnabled() 获取是否开启长记忆，默认开启
- * @method void setLongTermMemoryEnabled(boolean $LongTermMemoryEnabled) 设置是否开启长记忆，默认开启
+ * @method boolean getLongTermMemoryEnabled() 获取是否开启长记忆，默认关闭
+ * @method void setLongTermMemoryEnabled(boolean $LongTermMemoryEnabled) 设置是否开启长记忆，默认关闭
  * @method string getSystemPrompt() 获取系统提示词，仅当未配置LLMConfig时使用
  * @method void setSystemPrompt(string $SystemPrompt) 设置系统提示词，仅当未配置LLMConfig时使用
  * @method string getGreetingMessage() 获取开机问候语，如果未配置默认不开启
@@ -97,7 +97,7 @@ class TalkAgentConfigInfo extends AbstractModel
     public $NoiseFilterEnabled;
 
     /**
-     * @var boolean 是否开启长记忆，默认开启
+     * @var boolean 是否开启长记忆，默认关闭
      */
     public $LongTermMemoryEnabled;
 
@@ -131,7 +131,7 @@ class TalkAgentConfigInfo extends AbstractModel
      * @param integer $SemanticVADSensitivity 语义vad灵敏度， 1-慢 2-适中 3-快
      * @param integer $SilenceTime VAD 静默检测时间， 当开启语义vad此配置失效
      * @param boolean $NoiseFilterEnabled 是否启用噪声过滤
-     * @param boolean $LongTermMemoryEnabled 是否开启长记忆，默认开启
+     * @param boolean $LongTermMemoryEnabled 是否开启长记忆，默认关闭
      * @param string $SystemPrompt 系统提示词，仅当未配置LLMConfig时使用
      * @param string $GreetingMessage 开机问候语，如果未配置默认不开启
      * @param integer $DefaultVoiceType 系统默认音色，当配置复刻音色时，默认值为200000000

@@ -91,7 +91,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\ModifyGatewayVersionTrafficResponse ModifyGatewayVersionTraffic(Models\ModifyGatewayVersionTrafficRequest $req) 设置网关版本的流量比例
  * @method Models\ReinstateEnvResponse ReinstateEnv(Models\ReinstateEnvRequest $req) 针对已隔离的免费环境，可以通过本接口将其恢复访问。
  * @method Models\ReplaceActivityRecordResponse ReplaceActivityRecord(Models\ReplaceActivityRecordRequest $req) 更新活动详情
- * @method Models\SearchClsLogResponse SearchClsLog(Models\SearchClsLogRequest $req) 搜索CLS日志，TCB角色密钥访问
+ * @method Models\RunSqlResponse RunSql(Models\RunSqlRequest $req) 执行SQL语句
  * @method Models\UnfreezeCloudBaseRunServersResponse UnfreezeCloudBaseRunServers(Models\UnfreezeCloudBaseRunServersRequest $req) 批量解冻服务
  */
 

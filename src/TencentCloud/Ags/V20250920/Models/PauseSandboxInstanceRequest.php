@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iotexplorer\V20190423\Models;
+namespace TencentCloud\Ags\V20250920\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CancelAssignTWeCallLicense请求参数结构体
+ * PauseSandboxInstance请求参数结构体
  *
- * @method string getPkgId() 获取订单号
- * @method void setPkgId(string $PkgId) 设置订单号
+ * @method string getInstanceId() 获取沙箱实例ID
+ * @method void setInstanceId(string $InstanceId) 设置沙箱实例ID
  */
-class CancelAssignTWeCallLicenseRequest extends AbstractModel
+class PauseSandboxInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 订单号
+     * @var string 沙箱实例ID
      */
-    public $PkgId;
+    public $InstanceId;
 
     /**
-     * @param string $PkgId 订单号
+     * @param string $InstanceId 沙箱实例ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class CancelAssignTWeCallLicenseRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PkgId",$param) and $param["PkgId"] !== null) {
-            $this->PkgId = $param["PkgId"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

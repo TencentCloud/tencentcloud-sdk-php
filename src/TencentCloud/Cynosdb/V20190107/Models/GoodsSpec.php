@@ -48,8 +48,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeUnit(string $TimeUnit) 设置时长单位
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDeviceType() 获取机器类型
- * @method void setDeviceType(string $DeviceType) 设置机器类型
+ * @method string getDeviceType() 获取实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
+ * @method void setDeviceType(string $DeviceType) 设置实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
  */
 class GoodsSpec extends AbstractModel
 {
@@ -96,7 +100,9 @@ class GoodsSpec extends AbstractModel
     public $TimeUnit;
 
     /**
-     * @var string 机器类型
+     * @var string 实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      */
     public $DeviceType;
 
@@ -115,7 +121,9 @@ class GoodsSpec extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeUnit 时长单位
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DeviceType 机器类型
+     * @param string $DeviceType 实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      */
     function __construct()
     {

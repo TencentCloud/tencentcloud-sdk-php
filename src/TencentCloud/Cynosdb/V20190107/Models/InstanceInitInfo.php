@@ -37,7 +37,11 @@ use TencentCloud\Common\AbstractModel;
  * @method float getMaxRoCpu() 获取Serverless实例最大规格
  * @method void setMaxRoCpu(float $MaxRoCpu) 设置Serverless实例最大规格
  * @method string getDeviceType() 获取实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
  * @method void setDeviceType(string $DeviceType) 设置实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
  */
 class InstanceInitInfo extends AbstractModel
 {
@@ -83,6 +87,8 @@ class InstanceInitInfo extends AbstractModel
 
     /**
      * @var string 实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      */
     public $DeviceType;
 
@@ -96,6 +102,8 @@ class InstanceInitInfo extends AbstractModel
      * @param float $MinRoCpu Serverless实例最小规格
      * @param float $MaxRoCpu Serverless实例最大规格
      * @param string $DeviceType 实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      */
     function __construct()
     {

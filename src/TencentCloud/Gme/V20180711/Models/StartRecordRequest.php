@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartRecord请求参数结构体
  *
- * @method integer getBizId() 获取应用ID。
- * @method void setBizId(integer $BizId) 设置应用ID。
- * @method string getRoomId() 获取房间ID。
- * @method void setRoomId(string $RoomId) 设置房间ID。
- * @method integer getRecordMode() 获取录制类型：1代表单流 2代表混流 3代表单流和混流。
- * @method void setRecordMode(integer $RecordMode) 设置录制类型：1代表单流 2代表混流 3代表单流和混流。
- * @method SubscribeRecordUserIds getSubscribeRecordUserIds() 获取指定订阅流白名单或者黑名单（不传默认订阅房间内所有音频流）。
- * @method void setSubscribeRecordUserIds(SubscribeRecordUserIds $SubscribeRecordUserIds) 设置指定订阅流白名单或者黑名单（不传默认订阅房间内所有音频流）。
+ * @method integer getBizId() 获取<p>应用ID。</p>
+ * @method void setBizId(integer $BizId) 设置<p>应用ID。</p>
+ * @method string getRoomId() 获取<p>房间ID。</p>
+ * @method void setRoomId(string $RoomId) 设置<p>房间ID。</p>
+ * @method integer getRecordMode() 获取<p>录制类型：1代表单流 2代表混流 3代表单流和混流。</p>
+ * @method void setRecordMode(integer $RecordMode) 设置<p>录制类型：1代表单流 2代表混流 3代表单流和混流。</p>
+ * @method SubscribeRecordUserIds getSubscribeRecordUserIds() 获取<p>指定订阅流白名单或者黑名单（不传默认订阅房间内所有音频流）。</p>
+ * @method void setSubscribeRecordUserIds(SubscribeRecordUserIds $SubscribeRecordUserIds) 设置<p>指定订阅流白名单或者黑名单（不传默认订阅房间内所有音频流）。</p>
  */
 class StartRecordRequest extends AbstractModel
 {
     /**
-     * @var integer 应用ID。
+     * @var integer <p>应用ID。</p>
      */
     public $BizId;
 
     /**
-     * @var string 房间ID。
+     * @var string <p>房间ID。</p>
      */
     public $RoomId;
 
     /**
-     * @var integer 录制类型：1代表单流 2代表混流 3代表单流和混流。
+     * @var integer <p>录制类型：1代表单流 2代表混流 3代表单流和混流。</p>
      */
     public $RecordMode;
 
     /**
-     * @var SubscribeRecordUserIds 指定订阅流白名单或者黑名单（不传默认订阅房间内所有音频流）。
+     * @var SubscribeRecordUserIds <p>指定订阅流白名单或者黑名单（不传默认订阅房间内所有音频流）。</p>
      */
     public $SubscribeRecordUserIds;
 
     /**
-     * @param integer $BizId 应用ID。
-     * @param string $RoomId 房间ID。
-     * @param integer $RecordMode 录制类型：1代表单流 2代表混流 3代表单流和混流。
-     * @param SubscribeRecordUserIds $SubscribeRecordUserIds 指定订阅流白名单或者黑名单（不传默认订阅房间内所有音频流）。
+     * @param integer $BizId <p>应用ID。</p>
+     * @param string $RoomId <p>房间ID。</p>
+     * @param integer $RecordMode <p>录制类型：1代表单流 2代表混流 3代表单流和混流。</p>
+     * @param SubscribeRecordUserIds $SubscribeRecordUserIds <p>指定订阅流白名单或者黑名单（不传默认订阅房间内所有音频流）。</p>
      */
     function __construct()
     {

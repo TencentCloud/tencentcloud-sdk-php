@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRecordInfo请求参数结构体
  *
- * @method integer getTaskId() 获取进行中的任务taskid（StartRecord接口返回）。
- * @method void setTaskId(integer $TaskId) 设置进行中的任务taskid（StartRecord接口返回）。
- * @method integer getRecordMode() 获取录制类型：1代表单流 2代表混流 3代表单流和混流。
- * @method void setRecordMode(integer $RecordMode) 设置录制类型：1代表单流 2代表混流 3代表单流和混流。
- * @method integer getBizId() 获取应用ID。
- * @method void setBizId(integer $BizId) 设置应用ID。
- * @method SubscribeRecordUserIds getSubscribeRecordUserIds() 获取指定订阅流白名单或者黑名单。
- * @method void setSubscribeRecordUserIds(SubscribeRecordUserIds $SubscribeRecordUserIds) 设置指定订阅流白名单或者黑名单。
+ * @method integer getTaskId() 获取<p>进行中的任务taskid（StartRecord接口返回）。</p>
+ * @method void setTaskId(integer $TaskId) 设置<p>进行中的任务taskid（StartRecord接口返回）。</p>
+ * @method integer getRecordMode() 获取<p>录制类型：1代表单流 2代表混流 3代表单流和混流。</p>
+ * @method void setRecordMode(integer $RecordMode) 设置<p>录制类型：1代表单流 2代表混流 3代表单流和混流。</p>
+ * @method integer getBizId() 获取<p>应用ID。</p>
+ * @method void setBizId(integer $BizId) 设置<p>应用ID。</p>
+ * @method SubscribeRecordUserIds getSubscribeRecordUserIds() 获取<p>指定订阅流白名单或者黑名单。</p>
+ * @method void setSubscribeRecordUserIds(SubscribeRecordUserIds $SubscribeRecordUserIds) 设置<p>指定订阅流白名单或者黑名单。</p>
  */
 class ModifyRecordInfoRequest extends AbstractModel
 {
     /**
-     * @var integer 进行中的任务taskid（StartRecord接口返回）。
+     * @var integer <p>进行中的任务taskid（StartRecord接口返回）。</p>
      */
     public $TaskId;
 
     /**
-     * @var integer 录制类型：1代表单流 2代表混流 3代表单流和混流。
+     * @var integer <p>录制类型：1代表单流 2代表混流 3代表单流和混流。</p>
      */
     public $RecordMode;
 
     /**
-     * @var integer 应用ID。
+     * @var integer <p>应用ID。</p>
      */
     public $BizId;
 
     /**
-     * @var SubscribeRecordUserIds 指定订阅流白名单或者黑名单。
+     * @var SubscribeRecordUserIds <p>指定订阅流白名单或者黑名单。</p>
      */
     public $SubscribeRecordUserIds;
 
     /**
-     * @param integer $TaskId 进行中的任务taskid（StartRecord接口返回）。
-     * @param integer $RecordMode 录制类型：1代表单流 2代表混流 3代表单流和混流。
-     * @param integer $BizId 应用ID。
-     * @param SubscribeRecordUserIds $SubscribeRecordUserIds 指定订阅流白名单或者黑名单。
+     * @param integer $TaskId <p>进行中的任务taskid（StartRecord接口返回）。</p>
+     * @param integer $RecordMode <p>录制类型：1代表单流 2代表混流 3代表单流和混流。</p>
+     * @param integer $BizId <p>应用ID。</p>
+     * @param SubscribeRecordUserIds $SubscribeRecordUserIds <p>指定订阅流白名单或者黑名单。</p>
      */
     function __construct()
     {

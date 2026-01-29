@@ -33,9 +33,17 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getOldStorageLimit() 获取变配前存储上限
  * @method void setOldStorageLimit(integer $OldStorageLimit) 设置变配前存储上限
  * @method string getOldDeviceType() 获取变配前实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
  * @method void setOldDeviceType(string $OldDeviceType) 设置变配前实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
  * @method string getDeviceType() 获取变配后实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
  * @method void setDeviceType(string $DeviceType) 设置变配后实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
  * @method string getUpgradeType() 获取升级方式。升级完成后切换或维护时间内切换
  * @method void setUpgradeType(string $UpgradeType) 设置升级方式。升级完成后切换或维护时间内切换
  * @method integer getLibraNodeCount() 获取libra节点数量
@@ -77,11 +85,15 @@ class ModifyInstanceData extends AbstractModel
 
     /**
      * @var string 变配前实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      */
     public $OldDeviceType;
 
     /**
      * @var string 变配后实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      */
     public $DeviceType;
 
@@ -108,7 +120,11 @@ class ModifyInstanceData extends AbstractModel
      * @param integer $OldMemory 变配前内存
      * @param integer $OldStorageLimit 变配前存储上限
      * @param string $OldDeviceType 变配前实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      * @param string $DeviceType 变配后实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      * @param string $UpgradeType 升级方式。升级完成后切换或维护时间内切换
      * @param integer $LibraNodeCount libra节点数量
      * @param integer $OldLibraNodeCount 原libra节点数量

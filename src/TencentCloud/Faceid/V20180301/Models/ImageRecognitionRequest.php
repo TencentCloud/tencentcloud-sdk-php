@@ -20,58 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ImageRecognition请求参数结构体
  *
- * @method string getIdCard() 获取身份证号
- * @method void setIdCard(string $IdCard) 设置身份证号
- * @method string getName() 获取姓名。中文请使用UTF-8编码。
- * @method void setName(string $Name) 设置姓名。中文请使用UTF-8编码。
- * @method string getImageBase64() 获取用于人脸比对的照片，图片的Base64值；
-Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
- * @method void setImageBase64(string $ImageBase64) 设置用于人脸比对的照片，图片的Base64值；
-Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
- * @method string getOptional() 获取本接口不需要传递此参数。
- * @method void setOptional(string $Optional) 设置本接口不需要传递此参数。
- * @method Encryption getEncryption() 获取敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
- * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+ * @method string getIdCard() 获取<p>身份证号</p>
+ * @method void setIdCard(string $IdCard) 设置<p>身份证号</p>
+ * @method string getName() 获取<p>姓名。中文请使用UTF-8编码。</p>
+ * @method void setName(string $Name) 设置<p>姓名。中文请使用UTF-8编码。</p>
+ * @method string getImageBase64() 获取<p>用于人脸比对的照片，图片的Base64值；<br>Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。<br>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</p>
+ * @method void setImageBase64(string $ImageBase64) 设置<p>用于人脸比对的照片，图片的Base64值；<br>Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。<br>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</p>
+ * @method string getOptional() 获取<p>本接口不需要传递此参数。</p>
+ * @method void setOptional(string $Optional) 设置<p>本接口不需要传递此参数。</p>
+ * @method Encryption getEncryption() 获取<p>敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</p>
+ * @method void setEncryption(Encryption $Encryption) 设置<p>敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</p>
  */
 class ImageRecognitionRequest extends AbstractModel
 {
     /**
-     * @var string 身份证号
+     * @var string <p>身份证号</p>
      */
     public $IdCard;
 
     /**
-     * @var string 姓名。中文请使用UTF-8编码。
+     * @var string <p>姓名。中文请使用UTF-8编码。</p>
      */
     public $Name;
 
     /**
-     * @var string 用于人脸比对的照片，图片的Base64值；
-Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+     * @var string <p>用于人脸比对的照片，图片的Base64值；<br>Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。<br>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</p>
      */
     public $ImageBase64;
 
     /**
-     * @var string 本接口不需要传递此参数。
+     * @var string <p>本接口不需要传递此参数。</p>
      */
     public $Optional;
 
     /**
-     * @var Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @var Encryption <p>敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</p>
      */
     public $Encryption;
 
     /**
-     * @param string $IdCard 身份证号
-     * @param string $Name 姓名。中文请使用UTF-8编码。
-     * @param string $ImageBase64 用于人脸比对的照片，图片的Base64值；
-Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
-     * @param string $Optional 本接口不需要传递此参数。
-     * @param Encryption $Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @param string $IdCard <p>身份证号</p>
+     * @param string $Name <p>姓名。中文请使用UTF-8编码。</p>
+     * @param string $ImageBase64 <p>用于人脸比对的照片，图片的Base64值；<br>Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。<br>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</p>
+     * @param string $Optional <p>本接口不需要传递此参数。</p>
+     * @param Encryption $Encryption <p>敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</p>
      */
     function __construct()
     {

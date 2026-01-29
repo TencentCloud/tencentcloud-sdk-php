@@ -34,6 +34,8 @@ use TencentCloud\Ags\V20250920\Models as Models;
  * @method Models\DescribePreCacheImageTaskResponse DescribePreCacheImageTask(Models\DescribePreCacheImageTaskRequest $req) 查询镜像预热任务信息
  * @method Models\DescribeSandboxInstanceListResponse DescribeSandboxInstanceList(Models\DescribeSandboxInstanceListRequest $req) 查询沙箱实例列表
  * @method Models\DescribeSandboxToolListResponse DescribeSandboxToolList(Models\DescribeSandboxToolListRequest $req) 查询沙箱工具列表
+ * @method Models\PauseSandboxInstanceResponse PauseSandboxInstance(Models\PauseSandboxInstanceRequest $req) 暂停沙箱实例
+ * @method Models\ResumeSandboxInstanceResponse ResumeSandboxInstance(Models\ResumeSandboxInstanceRequest $req) 恢复沙箱实例
  * @method Models\StartSandboxInstanceResponse StartSandboxInstance(Models\StartSandboxInstanceRequest $req) 启动沙箱实例
  * @method Models\StopSandboxInstanceResponse StopSandboxInstance(Models\StopSandboxInstanceRequest $req) 停止沙箱实例
  * @method Models\UpdateSandboxInstanceResponse UpdateSandboxInstance(Models\UpdateSandboxInstanceRequest $req) 更新沙箱实例

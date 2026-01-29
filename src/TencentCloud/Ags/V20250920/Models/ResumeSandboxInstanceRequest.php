@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mariadb\V20170312\Models;
+namespace TencentCloud\Ags\V20250920\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDBInstanceDetail请求参数结构体
+ * ResumeSandboxInstance请求参数结构体
  *
- * @method string getInstanceId() 获取<p>实例Id形如：tdsql-ow728lmc。</p>
- * @method void setInstanceId(string $InstanceId) 设置<p>实例Id形如：tdsql-ow728lmc。</p>
+ * @method string getInstanceId() 获取沙箱实例ID
+ * @method void setInstanceId(string $InstanceId) 设置沙箱实例ID
  */
-class DescribeDBInstanceDetailRequest extends AbstractModel
+class ResumeSandboxInstanceRequest extends AbstractModel
 {
     /**
-     * @var string <p>实例Id形如：tdsql-ow728lmc。</p>
+     * @var string 沙箱实例ID
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId <p>实例Id形如：tdsql-ow728lmc。</p>
+     * @param string $InstanceId 沙箱实例ID
      */
     function __construct()
     {

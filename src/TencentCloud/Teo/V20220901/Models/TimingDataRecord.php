@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTypeKey() 获取查询维度值。
  * @method void setTypeKey(string $TypeKey) 设置查询维度值。
- * @method array getTypeValue() 获取详细时序数据。
- * @method void setTypeValue(array $TypeValue) 设置详细时序数据。
+ * @method array getTypeValue() 获取<code>Integer</code> 类型的详细时序数据，查询指标值类型为 <code>Integer</code> 指标会由本字段返回对应时序数据。<br> **注意**：若查询指标未明确说明指标值类型，默认由本字段返回数据。
+ * @method void setTypeValue(array $TypeValue) 设置<code>Integer</code> 类型的详细时序数据，查询指标值类型为 <code>Integer</code> 指标会由本字段返回对应时序数据。<br> **注意**：若查询指标未明确说明指标值类型，默认由本字段返回数据。
+ * @method array getFloatTypeValue() 获取<code>Float</code> 类型的详细时序数据，查询指标值类型为 <code>Float</code> 指标会由本字段返回对应时序数据。
+ * @method void setFloatTypeValue(array $FloatTypeValue) 设置<code>Float</code> 类型的详细时序数据，查询指标值类型为 <code>Float</code> 指标会由本字段返回对应时序数据。
  */
 class TimingDataRecord extends AbstractModel
 {
@@ -33,13 +35,19 @@ class TimingDataRecord extends AbstractModel
     public $TypeKey;
 
     /**
-     * @var array 详细时序数据。
+     * @var array <code>Integer</code> 类型的详细时序数据，查询指标值类型为 <code>Integer</code> 指标会由本字段返回对应时序数据。<br> **注意**：若查询指标未明确说明指标值类型，默认由本字段返回数据。
      */
     public $TypeValue;
 
     /**
+     * @var array <code>Float</code> 类型的详细时序数据，查询指标值类型为 <code>Float</code> 指标会由本字段返回对应时序数据。
+     */
+    public $FloatTypeValue;
+
+    /**
      * @param string $TypeKey 查询维度值。
-     * @param array $TypeValue 详细时序数据。
+     * @param array $TypeValue <code>Integer</code> 类型的详细时序数据，查询指标值类型为 <code>Integer</code> 指标会由本字段返回对应时序数据。<br> **注意**：若查询指标未明确说明指标值类型，默认由本字段返回数据。
+     * @param array $FloatTypeValue <code>Float</code> 类型的详细时序数据，查询指标值类型为 <code>Float</code> 指标会由本字段返回对应时序数据。
      */
     function __construct()
     {
@@ -64,6 +72,15 @@ class TimingDataRecord extends AbstractModel
                 $obj = new TimingTypeValue();
                 $obj->deserialize($value);
                 array_push($this->TypeValue, $obj);
+            }
+        }
+
+        if (array_key_exists("FloatTypeValue",$param) and $param["FloatTypeValue"] !== null) {
+            $this->FloatTypeValue = [];
+            foreach ($param["FloatTypeValue"] as $key => $value){
+                $obj = new FloatTimingTypeValue();
+                $obj->deserialize($value);
+                array_push($this->FloatTypeValue, $obj);
             }
         }
     }

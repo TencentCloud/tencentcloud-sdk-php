@@ -37,7 +37,8 @@ use TencentCloud\Teo\V20220901\Models as Models;
  * @method Models\BindSecurityTemplateToEntityResponse BindSecurityTemplateToEntity(Models\BindSecurityTemplateToEntityRequest $req) 操作安全策略模板，支持将域名绑定或换绑到指定的策略模板，或者从指定的策略模板解绑。
  * @method Models\BindSharedCNAMEResponse BindSharedCNAME(Models\BindSharedCNAMERequest $req) 用于加速域名绑定或解绑共享 CNAME，该功能白名单内测中。
  * @method Models\BindZoneToPlanResponse BindZoneToPlan(Models\BindZoneToPlanRequest $req) 将未绑定套餐的站点绑定到已有套餐
- * @method Models\CheckCnameStatusResponse CheckCnameStatus(Models\CheckCnameStatusRequest $req) 校验域名 CNAME 状态
+ * @method Models\CheckCnameStatusResponse CheckCnameStatus(Models\CheckCnameStatusRequest $req) 当站点接入类型为 CNAME 接入类型时，要求该站点下的所有接入域名必须按照 EdgeOne 分配的指定 CNAME 域名完成 CNAME 记录配置。
+您可以通过本接口获取 EdgeOne 为接入域名分配的指定 CNAME 域名，并且可以通过本接口完成对接入域名的 CNAME 配置状态的校验。
  * @method Models\CheckFreeCertificateVerificationResponse CheckFreeCertificateVerification(Models\CheckFreeCertificateVerificationRequest $req) 该接口用于验证免费证书并获取免费证书申请结果。如果验证通过，可通过该接口查询到对应域名申请的免费证书信息，如果申请失败，该接口将返回对应的验证失败信息。
 在触发[申请免费证书接口](https://cloud.tencent.com/document/product/1552/90437)后，您可以通过本接口检查免费证书申请结果。在免费证书申请成功后， 还需要通过[配置域名证书](https://cloud.tencent.com/document/product/1552/80764)接口配置，才能将免费证书部署至加速域上。
  * @method Models\ConfirmMultiPathGatewayOriginACLResponse ConfirmMultiPathGatewayOriginACL(Models\ConfirmMultiPathGatewayOriginACLRequest $req) 本接口用于多通道安全加速网关回源 IP 网段发生变更时，确认已将最新回源 IP 网段更新至源站防火墙。

@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Hunyuan\V20230901\Models;
+namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 3D文件
+ * 人机校验页的具体配置。
  *
- * @method string getUrl() 获取文件的Url（有效期24小时）	
- * @method void setUrl(string $Url) 设置文件的Url（有效期24小时）	
- * @method string getType() 获取文件格式	
- * @method void setType(string $Type) 设置文件格式	
+ * @method string getEnabled() 获取人机校验页是否开启，取值有：<li>on：开启；</li><li>off：关闭。</li>
+ * @method void setEnabled(string $Enabled) 设置人机校验页是否开启，取值有：<li>on：开启；</li><li>off：关闭。</li>
  */
-class InputFile3D extends AbstractModel
+class CAPTCHAPageChallenge extends AbstractModel
 {
     /**
-     * @var string 文件的Url（有效期24小时）	
+     * @var string 人机校验页是否开启，取值有：<li>on：开启；</li><li>off：关闭。</li>
      */
-    public $Url;
+    public $Enabled;
 
     /**
-     * @var string 文件格式	
-     */
-    public $Type;
-
-    /**
-     * @param string $Url 文件的Url（有效期24小时）	
-     * @param string $Type 文件格式	
+     * @param string $Enabled 人机校验页是否开启，取值有：<li>on：开启；</li><li>off：关闭。</li>
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class InputFile3D extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
-        }
-
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
+            $this->Enabled = $param["Enabled"];
         }
     }
 }

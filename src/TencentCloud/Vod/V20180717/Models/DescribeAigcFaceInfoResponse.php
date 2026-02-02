@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gme\V20180711\Models;
+namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ScanVoice返回参数结构体
+ * DescribeAigcFaceInfo返回参数结构体
  *
- * @method array getData() 获取<p>语音检测返回。Data 字段是 JSON 数组，每一个元素包含：<li>DataId： 请求中对应的 DataId。</li></p><li>TaskID ：该检测任务的 ID，用于轮询语音检测结果。</li>
- * @method void setData(array $Data) 设置<p>语音检测返回。Data 字段是 JSON 数组，每一个元素包含：<li>DataId： 请求中对应的 DataId。</li></p><li>TaskID ：该检测任务的 ID，用于轮询语音检测结果。</li>
+ * @method array getFaceInfoSet() 获取人脸信息。
+ * @method void setFaceInfoSet(array $FaceInfoSet) 设置人脸信息。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class ScanVoiceResponse extends AbstractModel
+class DescribeAigcFaceInfoResponse extends AbstractModel
 {
     /**
-     * @var array <p>语音检测返回。Data 字段是 JSON 数组，每一个元素包含：<li>DataId： 请求中对应的 DataId。</li></p><li>TaskID ：该检测任务的 ID，用于轮询语音检测结果。</li>
+     * @var array 人脸信息。
      */
-    public $Data;
+    public $FaceInfoSet;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class ScanVoiceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data <p>语音检测返回。Data 字段是 JSON 数组，每一个元素包含：<li>DataId： 请求中对应的 DataId。</li></p><li>TaskID ：该检测任务的 ID，用于轮询语音检测结果。</li>
+     * @param array $FaceInfoSet 人脸信息。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,12 +54,12 @@ class ScanVoiceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new ScanVoiceResult();
+        if (array_key_exists("FaceInfoSet",$param) and $param["FaceInfoSet"] !== null) {
+            $this->FaceInfoSet = [];
+            foreach ($param["FaceInfoSet"] as $key => $value){
+                $obj = new AigcFaceInfo();
                 $obj->deserialize($value);
-                array_push($this->Data, $obj);
+                array_push($this->FaceInfoSet, $obj);
             }
         }
 

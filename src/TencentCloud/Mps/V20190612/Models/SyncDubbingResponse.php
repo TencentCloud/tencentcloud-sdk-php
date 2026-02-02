@@ -14,44 +14,50 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Hunyuan\V20230901\Models;
+namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Describe3DSmartTopologyJob返回参数结构体
+ * SyncDubbing返回参数结构体
  *
- * @method string getStatus() 获取任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功 示例值：RUN。	
- * @method void setStatus(string $Status) 设置任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功 示例值：RUN。	
- * @method string getErrorCode() 获取错误码。	
- * @method void setErrorCode(string $ErrorCode) 设置错误码。	
- * @method string getErrorMessage() 获取错误信息。	
- * @method void setErrorMessage(string $ErrorMessage) 设置错误信息。	
- * @method array getResultFile3Ds() 获取生成文件的URL地址，有效期1天。	
- * @method void setResultFile3Ds(array $ResultFile3Ds) 设置生成文件的URL地址，有效期1天。	
+ * @method integer getErrorCode() 获取错误码，成功时返回0
+ * @method void setErrorCode(integer $ErrorCode) 设置错误码，成功时返回0
+ * @method string getMsg() 获取错误信息，成功时返回success
+ * @method void setMsg(string $Msg) 设置错误信息，成功时返回success
+ * @method string getAudioData() 获取合成音频的base64编码，wav格式。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAudioData(string $AudioData) 设置合成音频的base64编码，wav格式。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVoiceId() 获取克隆的音色Id。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVoiceId(string $VoiceId) 设置克隆的音色Id。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class Describe3DSmartTopologyJobResponse extends AbstractModel
+class SyncDubbingResponse extends AbstractModel
 {
     /**
-     * @var string 任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功 示例值：RUN。	
-     */
-    public $Status;
-
-    /**
-     * @var string 错误码。	
+     * @var integer 错误码，成功时返回0
      */
     public $ErrorCode;
 
     /**
-     * @var string 错误信息。	
+     * @var string 错误信息，成功时返回success
      */
-    public $ErrorMessage;
+    public $Msg;
 
     /**
-     * @var array 生成文件的URL地址，有效期1天。	
+     * @var string 合成音频的base64编码，wav格式。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ResultFile3Ds;
+    public $AudioData;
+
+    /**
+     * @var string 克隆的音色Id。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VoiceId;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -59,10 +65,12 @@ class Describe3DSmartTopologyJobResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Status 任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功 示例值：RUN。	
-     * @param string $ErrorCode 错误码。	
-     * @param string $ErrorMessage 错误信息。	
-     * @param array $ResultFile3Ds 生成文件的URL地址，有效期1天。	
+     * @param integer $ErrorCode 错误码，成功时返回0
+     * @param string $Msg 错误信息，成功时返回success
+     * @param string $AudioData 合成音频的base64编码，wav格式。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VoiceId 克隆的音色Id。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -78,25 +86,20 @@ class Describe3DSmartTopologyJobResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
-        }
-
         if (array_key_exists("ErrorCode",$param) and $param["ErrorCode"] !== null) {
             $this->ErrorCode = $param["ErrorCode"];
         }
 
-        if (array_key_exists("ErrorMessage",$param) and $param["ErrorMessage"] !== null) {
-            $this->ErrorMessage = $param["ErrorMessage"];
+        if (array_key_exists("Msg",$param) and $param["Msg"] !== null) {
+            $this->Msg = $param["Msg"];
         }
 
-        if (array_key_exists("ResultFile3Ds",$param) and $param["ResultFile3Ds"] !== null) {
-            $this->ResultFile3Ds = [];
-            foreach ($param["ResultFile3Ds"] as $key => $value){
-                $obj = new File3D();
-                $obj->deserialize($value);
-                array_push($this->ResultFile3Ds, $obj);
-            }
+        if (array_key_exists("AudioData",$param) and $param["AudioData"] !== null) {
+            $this->AudioData = $param["AudioData"];
+        }
+
+        if (array_key_exists("VoiceId",$param) and $param["VoiceId"] !== null) {
+            $this->VoiceId = $param["VoiceId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

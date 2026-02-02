@@ -78,6 +78,10 @@ use TencentCloud\Common\AbstractModel;
 2. 对于模型可以直出的分辨率，也可以主动选择模型直出低分辨率，使用增强获得指定分辨率。
  * @method string getFrameInterpolate() 获取是否开启vidu智能插帧。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
  * @method void setFrameInterpolate(string $FrameInterpolate) 设置是否开启vidu智能插帧。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
+ * @method string getLogoAdd() 获取是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
+目前支持的模型有 Vidu，其他模型暂不支持。
+ * @method void setLogoAdd(string $LogoAdd) 设置是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
+目前支持的模型有 Vidu，其他模型暂不支持。
  */
 class AigcVideoOutputConfig extends AbstractModel
 {
@@ -163,6 +167,12 @@ class AigcVideoOutputConfig extends AbstractModel
     public $FrameInterpolate;
 
     /**
+     * @var string 是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
+目前支持的模型有 Vidu，其他模型暂不支持。
+     */
+    public $LogoAdd;
+
+    /**
      * @param string $StorageMode 存储模式。取值有： <li>Permanent：永久存储，生成的视频文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的视频文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li>
 默认值：Temporary
      * @param string $MediaName 输出媒体文件名，最长 64 个字符。缺省由系统指定生成文件名。
@@ -192,6 +202,8 @@ class AigcVideoOutputConfig extends AbstractModel
 1. 对于选择的分辨率超过模型可生成分辨率时，默认会启用增强。
 2. 对于模型可以直出的分辨率，也可以主动选择模型直出低分辨率，使用增强获得指定分辨率。
      * @param string $FrameInterpolate 是否开启vidu智能插帧。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
+     * @param string $LogoAdd 是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
+目前支持的模型有 Vidu，其他模型暂不支持。
      */
     function __construct()
     {
@@ -256,6 +268,10 @@ class AigcVideoOutputConfig extends AbstractModel
 
         if (array_key_exists("FrameInterpolate",$param) and $param["FrameInterpolate"] !== null) {
             $this->FrameInterpolate = $param["FrameInterpolate"];
+        }
+
+        if (array_key_exists("LogoAdd",$param) and $param["LogoAdd"] !== null) {
+            $this->LogoAdd = $param["LogoAdd"];
         }
     }
 }

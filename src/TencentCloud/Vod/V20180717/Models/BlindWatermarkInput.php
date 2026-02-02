@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Hunyuan\V20230901\Models;
+namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Describe3DSmartTopologyJob请求参数结构体
+ * 媒体处理任务中的数字水印参数类型
  *
- * @method string getJobId() 获取任务ID。	
- * @method void setJobId(string $JobId) 设置任务ID。	
+ * @method integer getDefinition() 获取数字水印模板ID
+ * @method void setDefinition(integer $Definition) 设置数字水印模板ID
  */
-class Describe3DSmartTopologyJobRequest extends AbstractModel
+class BlindWatermarkInput extends AbstractModel
 {
     /**
-     * @var string 任务ID。	
+     * @var integer 数字水印模板ID
      */
-    public $JobId;
+    public $Definition;
 
     /**
-     * @param string $JobId 任务ID。	
+     * @param integer $Definition 数字水印模板ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class Describe3DSmartTopologyJobRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
+            $this->Definition = $param["Definition"];
         }
     }
 }

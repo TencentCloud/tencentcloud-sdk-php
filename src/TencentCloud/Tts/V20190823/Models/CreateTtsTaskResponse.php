@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTtsTask返回参数结构体
  *
- * @method CreateTtsTaskRespData getData() 获取任务 id
- * @method void setData(CreateTtsTaskRespData $Data) 设置任务 id
+ * @method CreateTtsTaskRespData getData() 获取<p>任务 id</p>
+ * @method void setData(CreateTtsTaskRespData $Data) 设置<p>任务 id</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateTtsTaskResponse extends AbstractModel
 {
     /**
-     * @var CreateTtsTaskRespData 任务 id
+     * @var CreateTtsTaskRespData <p>任务 id</p>
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class CreateTtsTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param CreateTtsTaskRespData $Data 任务 id
+     * @param CreateTtsTaskRespData $Data <p>任务 id</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

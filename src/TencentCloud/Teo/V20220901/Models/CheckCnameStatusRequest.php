@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() 获取站点 ID。
  * @method void setZoneId(string $ZoneId) 设置站点 ID。
- * @method array getRecordNames() 获取加速域名列表。
- * @method void setRecordNames(array $RecordNames) 设置加速域名列表。
+ * @method array getRecordNames() 获取需要检测 CNAME 配置状态的域名列表，可以为：<li>加速域名;</li><li>别称域名。</li>
+ * @method void setRecordNames(array $RecordNames) 设置需要检测 CNAME 配置状态的域名列表，可以为：<li>加速域名;</li><li>别称域名。</li>
  */
 class CheckCnameStatusRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class CheckCnameStatusRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var array 加速域名列表。
+     * @var array 需要检测 CNAME 配置状态的域名列表，可以为：<li>加速域名;</li><li>别称域名。</li>
      */
     public $RecordNames;
 
     /**
      * @param string $ZoneId 站点 ID。
-     * @param array $RecordNames 加速域名列表。
+     * @param array $RecordNames 需要检测 CNAME 配置状态的域名列表，可以为：<li>加速域名;</li><li>别称域名。</li>
      */
     function __construct()
     {

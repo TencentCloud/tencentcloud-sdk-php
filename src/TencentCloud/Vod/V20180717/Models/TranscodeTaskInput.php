@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTraceWatermark(TraceWatermarkInput $TraceWatermark) 设置溯源水印。
  * @method CopyRightWatermarkInput getCopyRightWatermark() 获取版权水印。
  * @method void setCopyRightWatermark(CopyRightWatermarkInput $CopyRightWatermark) 设置版权水印。
+ * @method BlindWatermarkInput getBlindWatermark() 获取数字水印。
+ * @method void setBlindWatermark(BlindWatermarkInput $BlindWatermark) 设置数字水印。
  * @method array getMosaicSet() 获取马赛克列表，最大可支持 10 张。
  * @method void setMosaicSet(array $MosaicSet) 设置马赛克列表，最大可支持 10 张。
  * @method array getHeadTailSet() 获取片头片尾列表，支持多片头片尾，最大可支持 10 个。
@@ -72,6 +74,11 @@ class TranscodeTaskInput extends AbstractModel
     public $CopyRightWatermark;
 
     /**
+     * @var BlindWatermarkInput 数字水印。
+     */
+    public $BlindWatermark;
+
+    /**
      * @var array 马赛克列表，最大可支持 10 张。
      */
     public $MosaicSet;
@@ -102,6 +109,7 @@ class TranscodeTaskInput extends AbstractModel
      * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
      * @param TraceWatermarkInput $TraceWatermark 溯源水印。
      * @param CopyRightWatermarkInput $CopyRightWatermark 版权水印。
+     * @param BlindWatermarkInput $BlindWatermark 数字水印。
      * @param array $MosaicSet 马赛克列表，最大可支持 10 张。
      * @param array $HeadTailSet 片头片尾列表，支持多片头片尾，最大可支持 10 个。
      * @param float $StartTimeOffset 转码后的视频的起始时间偏移，单位：秒。
@@ -147,6 +155,11 @@ class TranscodeTaskInput extends AbstractModel
         if (array_key_exists("CopyRightWatermark",$param) and $param["CopyRightWatermark"] !== null) {
             $this->CopyRightWatermark = new CopyRightWatermarkInput();
             $this->CopyRightWatermark->deserialize($param["CopyRightWatermark"]);
+        }
+
+        if (array_key_exists("BlindWatermark",$param) and $param["BlindWatermark"] !== null) {
+            $this->BlindWatermark = new BlindWatermarkInput();
+            $this->BlindWatermark->deserialize($param["BlindWatermark"]);
         }
 
         if (array_key_exists("MosaicSet",$param) and $param["MosaicSet"] !== null) {

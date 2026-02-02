@@ -34,18 +34,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowName(string $FlowName) 设置自定义的合同流程的名称，长度不能超过200个字符，只能由中文汉字、中文标点、英文字母、阿拉伯数字、空格、小括号、中括号、中划线、下划线以及（,）、（;）、（.）、(&)、（+）组成。
 
 该名称还将用于合同签署完成后文件下载的默认文件名称。
- * @method array getApprovers() 获取合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
-
-如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。
- * @method void setApprovers(array $Approvers) 设置合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
-
-如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。
  * @method array getFileIds() 获取本合同流程需包含的PDF文件资源编号列表，通过[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获取PDF文件资源编号。
 
 注:  `目前，此接口仅支持单个文件发起。`
  * @method void setFileIds(array $FileIds) 设置本合同流程需包含的PDF文件资源编号列表，通过[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获取PDF文件资源编号。
 
 注:  `目前，此接口仅支持单个文件发起。`
+ * @method array getApprovers() 获取合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
+
+如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。
+ * @method void setApprovers(array $Approvers) 设置合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
+
+如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。
  * @method string getFlowDescription() 获取合同流程描述信息(可自定义此描述)，最大长度1000个字符。
  * @method void setFlowDescription(string $FlowDescription) 设置合同流程描述信息(可自定义此描述)，最大长度1000个字符。
  * @method string getFlowType() 获取合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
@@ -204,12 +204,8 @@ use TencentCloud\Common\AbstractModel;
 注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
  * @method integer getFlowDisplayType() 获取在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li><li> <b>3</b> :文书</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
  * @method void setFlowDisplayType(integer $FlowDisplayType) 设置在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li><li> <b>3</b> :文书</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
- * @method boolean getOpenDynamicSignFlow() 获取是否开启动态签署合同：
-<ul><li> **true**：开启动态签署合同，可在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li>
-<li> **false**：不开启动态签署合同。</li></ul>
- * @method void setOpenDynamicSignFlow(boolean $OpenDynamicSignFlow) 设置是否开启动态签署合同：
-<ul><li> **true**：开启动态签署合同，可在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li>
-<li> **false**：不开启动态签署合同。</li></ul>
+ * @method boolean getOpenDynamicSignFlow() 获取是否开启动态签署合同：<ul><li> **true**：开启动态签署合同，可在发起时可以不传签署人，在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li><li> **false**：不开启动态签署合同。</li></ul>
+ * @method void setOpenDynamicSignFlow(boolean $OpenDynamicSignFlow) 设置是否开启动态签署合同：<ul><li> **true**：开启动态签署合同，可在发起时可以不传签署人，在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li><li> **false**：不开启动态签署合同。</li></ul>
  */
 class CreateFlowByFilesRequest extends AbstractModel
 {
@@ -229,18 +225,18 @@ class CreateFlowByFilesRequest extends AbstractModel
     public $FlowName;
 
     /**
-     * @var array 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
-
-如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。
-     */
-    public $Approvers;
-
-    /**
      * @var array 本合同流程需包含的PDF文件资源编号列表，通过[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获取PDF文件资源编号。
 
 注:  `目前，此接口仅支持单个文件发起。`
      */
     public $FileIds;
+
+    /**
+     * @var array 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
+
+如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。
+     */
+    public $Approvers;
 
     /**
      * @var string 合同流程描述信息(可自定义此描述)，最大长度1000个字符。
@@ -394,9 +390,7 @@ class CreateFlowByFilesRequest extends AbstractModel
     public $FlowDisplayType;
 
     /**
-     * @var boolean 是否开启动态签署合同：
-<ul><li> **true**：开启动态签署合同，可在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li>
-<li> **false**：不开启动态签署合同。</li></ul>
+     * @var boolean 是否开启动态签署合同：<ul><li> **true**：开启动态签署合同，可在发起时可以不传签署人，在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li><li> **false**：不开启动态签署合同。</li></ul>
      */
     public $OpenDynamicSignFlow;
 
@@ -408,12 +402,12 @@ class CreateFlowByFilesRequest extends AbstractModel
      * @param string $FlowName 自定义的合同流程的名称，长度不能超过200个字符，只能由中文汉字、中文标点、英文字母、阿拉伯数字、空格、小括号、中括号、中划线、下划线以及（,）、（;）、（.）、(&)、（+）组成。
 
 该名称还将用于合同签署完成后文件下载的默认文件名称。
-     * @param array $Approvers 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
-
-如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。
      * @param array $FileIds 本合同流程需包含的PDF文件资源编号列表，通过[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获取PDF文件资源编号。
 
 注:  `目前，此接口仅支持单个文件发起。`
+     * @param array $Approvers 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
+
+如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。
      * @param string $FlowDescription 合同流程描述信息(可自定义此描述)，最大长度1000个字符。
      * @param string $FlowType 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
 如果用户已经在控制台创建了自定义合同类型，可以将这里的类型名称传入。 如果没有创建，我们会自动给发起方公司创建此自定义合同类型。
@@ -493,9 +487,7 @@ class CreateFlowByFilesRequest extends AbstractModel
 <li> 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
 注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
      * @param integer $FlowDisplayType 在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li><li> <b>3</b> :文书</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
-     * @param boolean $OpenDynamicSignFlow 是否开启动态签署合同：
-<ul><li> **true**：开启动态签署合同，可在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li>
-<li> **false**：不开启动态签署合同。</li></ul>
+     * @param boolean $OpenDynamicSignFlow 是否开启动态签署合同：<ul><li> **true**：开启动态签署合同，可在发起时可以不传签署人，在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li><li> **false**：不开启动态签署合同。</li></ul>
      */
     function __construct()
     {
@@ -519,6 +511,10 @@ class CreateFlowByFilesRequest extends AbstractModel
             $this->FlowName = $param["FlowName"];
         }
 
+        if (array_key_exists("FileIds",$param) and $param["FileIds"] !== null) {
+            $this->FileIds = $param["FileIds"];
+        }
+
         if (array_key_exists("Approvers",$param) and $param["Approvers"] !== null) {
             $this->Approvers = [];
             foreach ($param["Approvers"] as $key => $value){
@@ -526,10 +522,6 @@ class CreateFlowByFilesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Approvers, $obj);
             }
-        }
-
-        if (array_key_exists("FileIds",$param) and $param["FileIds"] !== null) {
-            $this->FileIds = $param["FileIds"];
         }
 
         if (array_key_exists("FlowDescription",$param) and $param["FlowDescription"] !== null) {

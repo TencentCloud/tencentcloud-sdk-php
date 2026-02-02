@@ -43,9 +43,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getInterfaces() 获取契约接口列表
  * @method void setInterfaces(array $Interfaces) 设置契约接口列表
  * @method array getMetadatas() 获取元数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetadatas(array $Metadatas) 设置元数据
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GovernanceServiceContract extends AbstractModel
 {
@@ -106,7 +104,6 @@ class GovernanceServiceContract extends AbstractModel
 
     /**
      * @var array 元数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Metadatas;
 
@@ -123,7 +120,6 @@ class GovernanceServiceContract extends AbstractModel
      * @param string $ModifyTime 修改时间
      * @param array $Interfaces 契约接口列表
      * @param array $Metadatas 元数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

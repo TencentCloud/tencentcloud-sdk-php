@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTraceWatermark(TraceWatermarkInput $TraceWatermark) 设置溯源水印。
  * @method CopyRightWatermarkInput getCopyRightWatermark() 获取版权水印。
  * @method void setCopyRightWatermark(CopyRightWatermarkInput $CopyRightWatermark) 设置版权水印。
+ * @method BlindWatermarkInput getBlindWatermark() 获取数字水印。
+ * @method void setBlindWatermark(BlindWatermarkInput $BlindWatermark) 设置数字水印。
  * @method array getSubtitleSet() 获取字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。
  * @method void setSubtitleSet(array $SubtitleSet) 设置字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。
  */
@@ -54,6 +56,11 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
     public $CopyRightWatermark;
 
     /**
+     * @var BlindWatermarkInput 数字水印。
+     */
+    public $BlindWatermark;
+
+    /**
      * @var array 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。
      */
     public $SubtitleSet;
@@ -63,6 +70,7 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
      * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
      * @param TraceWatermarkInput $TraceWatermark 溯源水印。
      * @param CopyRightWatermarkInput $CopyRightWatermark 版权水印。
+     * @param BlindWatermarkInput $BlindWatermark 数字水印。
      * @param array $SubtitleSet 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。
      */
     function __construct()
@@ -99,6 +107,11 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
         if (array_key_exists("CopyRightWatermark",$param) and $param["CopyRightWatermark"] !== null) {
             $this->CopyRightWatermark = new CopyRightWatermarkInput();
             $this->CopyRightWatermark->deserialize($param["CopyRightWatermark"]);
+        }
+
+        if (array_key_exists("BlindWatermark",$param) and $param["BlindWatermark"] !== null) {
+            $this->BlindWatermark = new BlindWatermarkInput();
+            $this->BlindWatermark->deserialize($param["BlindWatermark"]);
         }
 
         if (array_key_exists("SubtitleSet",$param) and $param["SubtitleSet"] !== null) {

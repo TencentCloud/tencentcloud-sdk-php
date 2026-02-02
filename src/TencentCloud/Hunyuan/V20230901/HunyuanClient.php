@@ -44,8 +44,6 @@ use TencentCloud\Hunyuan\V20230901\Models as Models;
  2. 默认该接口下单账号限制并发数为  5 路，如您有提高并发限制的需求请 [购买](https://buy.cloud.tencent.com/hunyuan) 。
  3. 请使用 SDK 调用本接口，每种开发语言的 SDK Git 仓库 examples/hunyuan/v20230901/ 目录下有提供示例供参考。SDK 链接在文档下方 “**开发者资源 - SDK**” 部分提供。
  4. 我们推荐您使用 API Explorer，方便快速地在线调试接口和下载各语言的示例代码，[点击打开](https://console.cloud.tencent.com/api/explorer?Product=hunyuan&Version=2023-09-01&Action=ChatCompletions)。
- * @method Models\Describe3DSmartTopologyJobResponse Describe3DSmartTopologyJob(Models\Describe3DSmartTopologyJobRequest $req) 混元生3D接口，采用 Polygon 1.5模型，输入3D 高模后，可生成布线规整，较低面数的3D 模型。
-默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
  * @method Models\FilesDeletionsResponse FilesDeletions(Models\FilesDeletionsRequest $req) 删除文件。
  * @method Models\FilesListResponse FilesList(Models\FilesListRequest $req) 文件列表。
  * @method Models\FilesUploadsResponse FilesUploads(Models\FilesUploadsRequest $req) 上传用于不同用途的文件。
@@ -101,8 +99,6 @@ use TencentCloud\Hunyuan\V20230901\Models as Models;
  3. 请使用 SDK 调用本接口，每种开发语言的 SDK Git 仓库 examples/hunyuan/v20230901/ 目录下有提供示例供参考。SDK 链接在文档下方 “**开发者资源 - SDK**” 部分提供。
  4. 我们推荐您使用 API Explorer，方便快速地在线调试接口和下载各语言的示例代码，[点击打开](https://console.cloud.tencent.com/api/explorer?Product=hunyuan&Version=2023-09-01&Action=ChatCompletions)。
  * @method Models\SetPayModeResponse SetPayMode(Models\SetPayModeRequest $req) 设置付费模式
- * @method Models\Submit3DSmartTopologyJobResponse Submit3DSmartTopologyJob(Models\Submit3DSmartTopologyJobRequest $req) 混元生3D接口，采用 Polygon 1.5模型，输入3D 高模后，可生成布线规整，较低面数的3D 模型。
-默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
  * @method Models\SubmitHunyuanImageChatJobResponse SubmitHunyuanImageChatJob(Models\SubmitHunyuanImageChatJobRequest $req) 混元生图（多轮对话）接口基于混元大模型，将根据输入的文本描述生成图像，支持通过多轮对话的方式不断调整图像内容。分为提交任务和查询任务2个接口。
 提交任务：输入文本和前置对话 ID 等，提交一个混元生图多轮对话异步任务，获得任务 ID。
 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得在上一轮对话基础上继续生成的图像结果。

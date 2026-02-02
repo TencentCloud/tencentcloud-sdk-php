@@ -39,9 +39,7 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getEditable() 获取该服务别名是否可以编辑
  * @method void setEditable(boolean $Editable) 设置该服务别名是否可以编辑
  * @method array getMetadatas() 获取元数据信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetadatas(array $Metadatas) 设置元数据信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GovernanceAlias extends AbstractModel
 {
@@ -92,7 +90,6 @@ class GovernanceAlias extends AbstractModel
 
     /**
      * @var array 元数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Metadatas;
 
@@ -107,7 +104,6 @@ class GovernanceAlias extends AbstractModel
      * @param string $Id 服务别名ID
      * @param boolean $Editable 该服务别名是否可以编辑
      * @param array $Metadatas 元数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

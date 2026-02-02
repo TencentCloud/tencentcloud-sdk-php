@@ -22,10 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFromEmailAddress() 获取发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址>，别名中不能带有冒号(:)。
  * @method void setFromEmailAddress(string $FromEmailAddress) 设置发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址>，别名中不能带有冒号(:)。
- * @method array getDestination() 获取收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
- * @method void setDestination(array $Destination) 设置收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
  * @method string getSubject() 获取邮件主题
  * @method void setSubject(string $Subject) 设置邮件主题
+ * @method array getDestination() 获取收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
+Destination/Cc/Bcc三个参数必须至少存在一个。
+ * @method void setDestination(array $Destination) 设置收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
+Destination/Cc/Bcc三个参数必须至少存在一个。
  * @method string getReplyToAddresses() 获取邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
  * @method void setReplyToAddresses(string $ReplyToAddresses) 设置邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
  * @method array getCc() 获取抄送人邮箱地址，最多支持抄送20人。
@@ -61,14 +63,15 @@ class SendEmailRequest extends AbstractModel
     public $FromEmailAddress;
 
     /**
-     * @var array 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
-     */
-    public $Destination;
-
-    /**
      * @var string 邮件主题
      */
     public $Subject;
+
+    /**
+     * @var array 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
+Destination/Cc/Bcc三个参数必须至少存在一个。
+     */
+    public $Destination;
 
     /**
      * @var string 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
@@ -129,8 +132,9 @@ class SendEmailRequest extends AbstractModel
 
     /**
      * @param string $FromEmailAddress 发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址>，别名中不能带有冒号(:)。
-     * @param array $Destination 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
      * @param string $Subject 邮件主题
+     * @param array $Destination 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
+Destination/Cc/Bcc三个参数必须至少存在一个。
      * @param string $ReplyToAddresses 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
      * @param array $Cc 抄送人邮箱地址，最多支持抄送20人。
      * @param array $Bcc 密送人邮箱地址，最多支持抄送20人,Bcc和Destination不能重复。
@@ -162,12 +166,12 @@ class SendEmailRequest extends AbstractModel
             $this->FromEmailAddress = $param["FromEmailAddress"];
         }
 
-        if (array_key_exists("Destination",$param) and $param["Destination"] !== null) {
-            $this->Destination = $param["Destination"];
-        }
-
         if (array_key_exists("Subject",$param) and $param["Subject"] !== null) {
             $this->Subject = $param["Subject"];
+        }
+
+        if (array_key_exists("Destination",$param) and $param["Destination"] !== null) {
+            $this->Destination = $param["Destination"];
         }
 
         if (array_key_exists("ReplyToAddresses",$param) and $param["ReplyToAddresses"] !== null) {

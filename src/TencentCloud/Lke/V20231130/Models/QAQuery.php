@@ -20,15 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QA查询参数
  *
- * @method integer getPageNumber() 获取页码
+ * @method integer getPageNumber() 获取页码 从1开始
 
+ * @method void setPageNumber(integer $PageNumber) 设置页码 从1开始
 
- * @method void setPageNumber(integer $PageNumber) 设置页码
+ * @method integer getPageSize() 获取页大小 默认15 最大100
 
-
- * @method integer getPageSize() 获取每页数量
-
- * @method void setPageSize(integer $PageSize) 设置每页数量
+ * @method void setPageSize(integer $PageSize) 设置页大小 默认15 最大100
 
  * @method string getBotBizId() 获取应用ID
  * @method void setBotBizId(string $BotBizId) 设置应用ID
@@ -40,13 +38,13 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setCateBizId(string $CateBizId) 设置分类ID
 
- * @method array getAcceptStatus() 获取校验状态
+ * @method array getAcceptStatus() 获取校验状态的枚举值
 
- * @method void setAcceptStatus(array $AcceptStatus) 设置校验状态
+ * @method void setAcceptStatus(array $AcceptStatus) 设置校验状态的枚举值
 
- * @method array getReleaseStatus() 获取发布状态
+ * @method array getReleaseStatus() 获取发布状态的枚举值
 
- * @method void setReleaseStatus(array $ReleaseStatus) 设置发布状态
+ * @method void setReleaseStatus(array $ReleaseStatus) 设置发布状态的枚举值
 
  * @method string getDocBizId() 获取文档ID
 
@@ -66,18 +64,21 @@ use TencentCloud\Common\AbstractModel;
 
  * @method string getQueryType() 获取查询类型 filename 名称、 attribute 标签
  * @method void setQueryType(string $QueryType) 设置查询类型 filename 名称、 attribute 标签
+ * @method integer getEnableScope() 获取问答生效域检索，不检索不传。枚举值如下：
+1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
+ * @method void setEnableScope(integer $EnableScope) 设置问答生效域检索，不检索不传。枚举值如下：
+1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
  */
 class QAQuery extends AbstractModel
 {
     /**
-     * @var integer 页码
-
+     * @var integer 页码 从1开始
 
      */
     public $PageNumber;
 
     /**
-     * @var integer 每页数量
+     * @var integer 页大小 默认15 最大100
 
      */
     public $PageSize;
@@ -100,13 +101,13 @@ class QAQuery extends AbstractModel
     public $CateBizId;
 
     /**
-     * @var array 校验状态
+     * @var array 校验状态的枚举值
 
      */
     public $AcceptStatus;
 
     /**
-     * @var array 发布状态
+     * @var array 发布状态的枚举值
 
      */
     public $ReleaseStatus;
@@ -141,19 +142,24 @@ class QAQuery extends AbstractModel
     public $QueryType;
 
     /**
-     * @param integer $PageNumber 页码
+     * @var integer 问答生效域检索，不检索不传。枚举值如下：
+1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
+     */
+    public $EnableScope;
 
+    /**
+     * @param integer $PageNumber 页码 从1开始
 
-     * @param integer $PageSize 每页数量
+     * @param integer $PageSize 页大小 默认15 最大100
 
      * @param string $BotBizId 应用ID
      * @param string $Query 查询内容
 
      * @param string $CateBizId 分类ID
 
-     * @param array $AcceptStatus 校验状态
+     * @param array $AcceptStatus 校验状态的枚举值
 
-     * @param array $ReleaseStatus 发布状态
+     * @param array $ReleaseStatus 发布状态的枚举值
 
      * @param string $DocBizId 文档ID
 
@@ -164,6 +170,8 @@ class QAQuery extends AbstractModel
      * @param string $QueryAnswer 查询答案
 
      * @param string $QueryType 查询类型 filename 名称、 attribute 标签
+     * @param integer $EnableScope 问答生效域检索，不检索不传。枚举值如下：
+1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
      */
     function __construct()
     {
@@ -224,6 +232,10 @@ class QAQuery extends AbstractModel
 
         if (array_key_exists("QueryType",$param) and $param["QueryType"] !== null) {
             $this->QueryType = $param["QueryType"];
+        }
+
+        if (array_key_exists("EnableScope",$param) and $param["EnableScope"] !== null) {
+            $this->EnableScope = $param["EnableScope"];
         }
     }
 }

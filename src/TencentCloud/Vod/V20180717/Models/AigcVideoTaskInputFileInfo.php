@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AIGC 生视频任务输入的图片文件信息。
  *
- * @method string getType() 获取输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 URL；</li> 
- * @method void setType(string $Type) 设置输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 URL；</li> 
+ * @method string getType() 获取输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 Url；</li> 
+ * @method void setType(string $Type) 设置输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 Url；</li> 
  * @method string getCategory() 获取文件分类。取值为：
 <li>Image: 图片；</li>
 <li>Video: 视频。</li>
@@ -64,7 +64,7 @@ use TencentCloud\Common\AbstractModel;
 class AigcVideoTaskInputFileInfo extends AbstractModel
 {
     /**
-     * @var string 输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 URL；</li> 
+     * @var string 输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 Url；</li> 
      */
     public $Type;
 
@@ -112,7 +112,7 @@ class AigcVideoTaskInputFileInfo extends AbstractModel
     public $VoiceId;
 
     /**
-     * @param string $Type 输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 URL；</li> 
+     * @param string $Type 输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 Url；</li> 
      * @param string $Category 文件分类。取值为：
 <li>Image: 图片；</li>
 <li>Video: 视频。</li>

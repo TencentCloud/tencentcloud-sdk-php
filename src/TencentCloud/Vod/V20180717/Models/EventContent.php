@@ -194,6 +194,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAigcImageCompleteEvent(AigcImageTask $AigcImageCompleteEvent) 设置AIGC 生图任务信息，仅当 EventType 为 AigcImageTaskComplete 时有效。
  * @method AigcVideoTask getAigcVideoCompleteEvent() 获取AIGC 生视频任务信息，仅当 EventType 为 AigcVideoTaskComplete 时有效。
  * @method void setAigcVideoCompleteEvent(AigcVideoTask $AigcVideoCompleteEvent) 设置AIGC 生视频任务信息，仅当 EventType 为 AigcVideoTaskComplete 时有效。
+ * @method ExtractBlindWatermarkTask getExtractBlindWatermarkComplete() 获取提取数字水印信息，仅当 EventType 为 ExtractBlindWatermarkComplete 时有效。
+ * @method void setExtractBlindWatermarkComplete(ExtractBlindWatermarkTask $ExtractBlindWatermarkComplete) 设置提取数字水印信息，仅当 EventType 为 ExtractBlindWatermarkComplete 时有效。
+ * @method SceneAigcImageTask getSceneAigcImageCompleteEvent() 获取AIGC 场景化生图任务信息，仅当 EventType 为 SceneAigcImageCompleteEvent 时有效。
+ * @method void setSceneAigcImageCompleteEvent(SceneAigcImageTask $SceneAigcImageCompleteEvent) 设置AIGC 场景化生图任务信息，仅当 EventType 为 SceneAigcImageCompleteEvent 时有效。
+ * @method ProcessImageAsyncTask getProcessImageAsyncCompleteEvent() 获取图片异步处理任务信息，仅当 EventType 为 ProcessImageAsyncCompleteEvent 时有效。
+ * @method void setProcessImageAsyncCompleteEvent(ProcessImageAsyncTask $ProcessImageAsyncCompleteEvent) 设置图片异步处理任务信息，仅当 EventType 为 ProcessImageAsyncCompleteEvent 时有效。
  */
 class EventContent extends AbstractModel
 {
@@ -413,6 +419,21 @@ class EventContent extends AbstractModel
     public $AigcVideoCompleteEvent;
 
     /**
+     * @var ExtractBlindWatermarkTask 提取数字水印信息，仅当 EventType 为 ExtractBlindWatermarkComplete 时有效。
+     */
+    public $ExtractBlindWatermarkComplete;
+
+    /**
+     * @var SceneAigcImageTask AIGC 场景化生图任务信息，仅当 EventType 为 SceneAigcImageCompleteEvent 时有效。
+     */
+    public $SceneAigcImageCompleteEvent;
+
+    /**
+     * @var ProcessImageAsyncTask 图片异步处理任务信息，仅当 EventType 为 ProcessImageAsyncCompleteEvent 时有效。
+     */
+    public $ProcessImageAsyncCompleteEvent;
+
+    /**
      * @param string $EventHandle 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
      * @param string $EventType <b>支持事件类型：</b>
 <li>NewFileUpload：视频上传完成；</li>
@@ -500,6 +521,9 @@ class EventContent extends AbstractModel
      * @param ProcessMediaByMPS $ProcessMediaByMPSCompleteEvent MPS 视频处理任务信息，仅当 EventType 为 ProcessMediaByMPSComplete 时有效。
      * @param AigcImageTask $AigcImageCompleteEvent AIGC 生图任务信息，仅当 EventType 为 AigcImageTaskComplete 时有效。
      * @param AigcVideoTask $AigcVideoCompleteEvent AIGC 生视频任务信息，仅当 EventType 为 AigcVideoTaskComplete 时有效。
+     * @param ExtractBlindWatermarkTask $ExtractBlindWatermarkComplete 提取数字水印信息，仅当 EventType 为 ExtractBlindWatermarkComplete 时有效。
+     * @param SceneAigcImageTask $SceneAigcImageCompleteEvent AIGC 场景化生图任务信息，仅当 EventType 为 SceneAigcImageCompleteEvent 时有效。
+     * @param ProcessImageAsyncTask $ProcessImageAsyncCompleteEvent 图片异步处理任务信息，仅当 EventType 为 ProcessImageAsyncCompleteEvent 时有效。
      */
     function __construct()
     {
@@ -670,6 +694,21 @@ class EventContent extends AbstractModel
         if (array_key_exists("AigcVideoCompleteEvent",$param) and $param["AigcVideoCompleteEvent"] !== null) {
             $this->AigcVideoCompleteEvent = new AigcVideoTask();
             $this->AigcVideoCompleteEvent->deserialize($param["AigcVideoCompleteEvent"]);
+        }
+
+        if (array_key_exists("ExtractBlindWatermarkComplete",$param) and $param["ExtractBlindWatermarkComplete"] !== null) {
+            $this->ExtractBlindWatermarkComplete = new ExtractBlindWatermarkTask();
+            $this->ExtractBlindWatermarkComplete->deserialize($param["ExtractBlindWatermarkComplete"]);
+        }
+
+        if (array_key_exists("SceneAigcImageCompleteEvent",$param) and $param["SceneAigcImageCompleteEvent"] !== null) {
+            $this->SceneAigcImageCompleteEvent = new SceneAigcImageTask();
+            $this->SceneAigcImageCompleteEvent->deserialize($param["SceneAigcImageCompleteEvent"]);
+        }
+
+        if (array_key_exists("ProcessImageAsyncCompleteEvent",$param) and $param["ProcessImageAsyncCompleteEvent"] !== null) {
+            $this->ProcessImageAsyncCompleteEvent = new ProcessImageAsyncTask();
+            $this->ProcessImageAsyncCompleteEvent->deserialize($param["ProcessImageAsyncCompleteEvent"]);
         }
     }
 }

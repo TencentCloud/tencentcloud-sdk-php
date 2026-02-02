@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gme\V20180711\Models;
+namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ScanVoice返回参数结构体
+ * CreateAigcApiToken返回参数结构体
  *
- * @method array getData() 获取<p>语音检测返回。Data 字段是 JSON 数组，每一个元素包含：<li>DataId： 请求中对应的 DataId。</li></p><li>TaskID ：该检测任务的 ID，用于轮询语音检测结果。</li>
- * @method void setData(array $Data) 设置<p>语音检测返回。Data 字段是 JSON 数组，每一个元素包含：<li>DataId： 请求中对应的 DataId。</li></p><li>TaskID ：该检测任务的 ID，用于轮询语音检测结果。</li>
+ * @method string getApiToken() 获取API的Token
+ * @method void setApiToken(string $ApiToken) 设置API的Token
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class ScanVoiceResponse extends AbstractModel
+class CreateAigcApiTokenResponse extends AbstractModel
 {
     /**
-     * @var array <p>语音检测返回。Data 字段是 JSON 数组，每一个元素包含：<li>DataId： 请求中对应的 DataId。</li></p><li>TaskID ：该检测任务的 ID，用于轮询语音检测结果。</li>
+     * @var string API的Token
      */
-    public $Data;
+    public $ApiToken;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class ScanVoiceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data <p>语音检测返回。Data 字段是 JSON 数组，每一个元素包含：<li>DataId： 请求中对应的 DataId。</li></p><li>TaskID ：该检测任务的 ID，用于轮询语音检测结果。</li>
+     * @param string $ApiToken API的Token
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,13 +54,8 @@ class ScanVoiceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new ScanVoiceResult();
-                $obj->deserialize($value);
-                array_push($this->Data, $obj);
-            }
+        if (array_key_exists("ApiToken",$param) and $param["ApiToken"] !== null) {
+            $this->ApiToken = $param["ApiToken"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

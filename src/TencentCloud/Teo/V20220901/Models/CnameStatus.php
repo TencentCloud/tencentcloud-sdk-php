@@ -18,48 +18,48 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CNAME 状态
+ * 接入域名 CNAME 配置状态
  *
- * @method string getRecordName() 获取记录名称。
- * @method void setRecordName(string $RecordName) 设置记录名称。
- * @method string getCname() 获取CNAME 地址。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCname(string $Cname) 设置CNAME 地址。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取CNAME 状态信息，取值有：
-<li>active：生效；</li>
-<li>moved：不生效；</li>
- * @method void setStatus(string $Status) 设置CNAME 状态信息，取值有：
-<li>active：生效；</li>
-<li>moved：不生效；</li>
+ * @method string getRecordName() 获取接入域名。
+ * @method void setRecordName(string $RecordName) 设置接入域名。
+ * @method string getCname() 获取EdgeOne 分配给接入域名的 CNAME。
+ * @method void setCname(string $Cname) 设置EdgeOne 分配给接入域名的 CNAME。
+ * @method string getStatus() 获取CNAME 配置状态校验结果，取值有：
+<li>active：表示接入域名已正确配置到 EdgeOne 为其分配的指定 CNAME；</li>
+<li>moved：表示接入域名未配置到 EdgeOne 为其分配的指定 CNAME；</li>
+<li>invalid：表示接入域名配置的 CNAME 为 EdgeOne 为其他域名分配的 CNAME，会导致服务异常，请修改为 EdgeOne 为该接入域名提供的指定 CNAME，您可通过本结构体的 Cname 字段获取 EdgeOne 为该接入域名提供的 CNAME。</li>
+ * @method void setStatus(string $Status) 设置CNAME 配置状态校验结果，取值有：
+<li>active：表示接入域名已正确配置到 EdgeOne 为其分配的指定 CNAME；</li>
+<li>moved：表示接入域名未配置到 EdgeOne 为其分配的指定 CNAME；</li>
+<li>invalid：表示接入域名配置的 CNAME 为 EdgeOne 为其他域名分配的 CNAME，会导致服务异常，请修改为 EdgeOne 为该接入域名提供的指定 CNAME，您可通过本结构体的 Cname 字段获取 EdgeOne 为该接入域名提供的 CNAME。</li>
  */
 class CnameStatus extends AbstractModel
 {
     /**
-     * @var string 记录名称。
+     * @var string 接入域名。
      */
     public $RecordName;
 
     /**
-     * @var string CNAME 地址。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string EdgeOne 分配给接入域名的 CNAME。
      */
     public $Cname;
 
     /**
-     * @var string CNAME 状态信息，取值有：
-<li>active：生效；</li>
-<li>moved：不生效；</li>
+     * @var string CNAME 配置状态校验结果，取值有：
+<li>active：表示接入域名已正确配置到 EdgeOne 为其分配的指定 CNAME；</li>
+<li>moved：表示接入域名未配置到 EdgeOne 为其分配的指定 CNAME；</li>
+<li>invalid：表示接入域名配置的 CNAME 为 EdgeOne 为其他域名分配的 CNAME，会导致服务异常，请修改为 EdgeOne 为该接入域名提供的指定 CNAME，您可通过本结构体的 Cname 字段获取 EdgeOne 为该接入域名提供的 CNAME。</li>
      */
     public $Status;
 
     /**
-     * @param string $RecordName 记录名称。
-     * @param string $Cname CNAME 地址。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status CNAME 状态信息，取值有：
-<li>active：生效；</li>
-<li>moved：不生效；</li>
+     * @param string $RecordName 接入域名。
+     * @param string $Cname EdgeOne 分配给接入域名的 CNAME。
+     * @param string $Status CNAME 配置状态校验结果，取值有：
+<li>active：表示接入域名已正确配置到 EdgeOne 为其分配的指定 CNAME；</li>
+<li>moved：表示接入域名未配置到 EdgeOne 为其分配的指定 CNAME；</li>
+<li>invalid：表示接入域名配置的 CNAME 为 EdgeOne 为其他域名分配的 CNAME，会导致服务异常，请修改为 EdgeOne 为该接入域名提供的指定 CNAME，您可通过本结构体的 Cname 字段获取 EdgeOne 为该接入域名提供的 CNAME。</li>
      */
     function __construct()
     {

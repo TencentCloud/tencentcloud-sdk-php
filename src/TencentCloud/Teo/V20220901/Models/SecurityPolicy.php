@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExceptionRules(ExceptionRules $ExceptionRules) 设置例外规则配置。
  * @method BotManagement getBotManagement() 获取Bot 管理配置。
  * @method void setBotManagement(BotManagement $BotManagement) 设置Bot 管理配置。
+ * @method BotManagementLite getBotManagementLite() 获取基础 Bot 管理配置。
+ * @method void setBotManagementLite(BotManagementLite $BotManagementLite) 设置基础 Bot 管理配置。
  */
 class SecurityPolicy extends AbstractModel
 {
@@ -66,12 +68,18 @@ class SecurityPolicy extends AbstractModel
     public $BotManagement;
 
     /**
+     * @var BotManagementLite 基础 Bot 管理配置。
+     */
+    public $BotManagementLite;
+
+    /**
      * @param CustomRules $CustomRules 自定义规则配置。
      * @param ManagedRules $ManagedRules 托管规则配置。
      * @param HttpDDoSProtection $HttpDDoSProtection HTTP DDOS 防护配置。
      * @param RateLimitingRules $RateLimitingRules 速率限制规则配置。
      * @param ExceptionRules $ExceptionRules 例外规则配置。
      * @param BotManagement $BotManagement Bot 管理配置。
+     * @param BotManagementLite $BotManagementLite 基础 Bot 管理配置。
      */
     function __construct()
     {
@@ -114,6 +122,11 @@ class SecurityPolicy extends AbstractModel
         if (array_key_exists("BotManagement",$param) and $param["BotManagement"] !== null) {
             $this->BotManagement = new BotManagement();
             $this->BotManagement->deserialize($param["BotManagement"]);
+        }
+
+        if (array_key_exists("BotManagementLite",$param) and $param["BotManagementLite"] !== null) {
+            $this->BotManagementLite = new BotManagementLite();
+            $this->BotManagementLite->deserialize($param["BotManagementLite"]);
         }
     }
 }

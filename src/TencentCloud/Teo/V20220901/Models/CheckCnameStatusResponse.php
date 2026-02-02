@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckCnameStatus返回参数结构体
  *
- * @method array getCnameStatus() 获取加速域名 CNAME 状态信息列表。
- * @method void setCnameStatus(array $CnameStatus) 设置加速域名 CNAME 状态信息列表。
+ * @method array getCnameStatus() 获取接入域名的 CNAME 配置状态信息列表。
+ * @method void setCnameStatus(array $CnameStatus) 设置接入域名的 CNAME 配置状态信息列表。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CheckCnameStatusResponse extends AbstractModel
 {
     /**
-     * @var array 加速域名 CNAME 状态信息列表。
+     * @var array 接入域名的 CNAME 配置状态信息列表。
      */
     public $CnameStatus;
 
@@ -38,7 +38,7 @@ class CheckCnameStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $CnameStatus 加速域名 CNAME 状态信息列表。
+     * @param array $CnameStatus 接入域名的 CNAME 配置状态信息列表。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

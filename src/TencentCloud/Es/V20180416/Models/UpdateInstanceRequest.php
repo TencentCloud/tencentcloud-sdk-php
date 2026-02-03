@@ -154,6 +154,8 @@ CLOSE 关闭
  * @method void setAutoScaleDiskInfoList(array $AutoScaleDiskInfoList) 设置自动扩盘参数
  * @method array getAutoScaleDiskDeleteNodeTypeList() 获取自动扩盘删除参数
  * @method void setAutoScaleDiskDeleteNodeTypeList(array $AutoScaleDiskDeleteNodeTypeList) 设置自动扩盘删除参数
+ * @method OtherConfig getOtherConfig() 获取其他附加配置，jvm或者yml
+ * @method void setOtherConfig(OtherConfig $OtherConfig) 设置其他附加配置，jvm或者yml
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -409,6 +411,11 @@ CLOSE 关闭
     public $AutoScaleDiskDeleteNodeTypeList;
 
     /**
+     * @var OtherConfig 其他附加配置，jvm或者yml
+     */
+    public $OtherConfig;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
      * @param integer $NodeNum 已废弃请使用NodeInfoList
@@ -476,6 +483,7 @@ CLOSE 关闭
      * @param string $EnableDestroyProtection 开启集群保护：OPEN-开启，CLOSE-关闭
      * @param array $AutoScaleDiskInfoList 自动扩盘参数
      * @param array $AutoScaleDiskDeleteNodeTypeList 自动扩盘删除参数
+     * @param OtherConfig $OtherConfig 其他附加配置，jvm或者yml
      */
     function __construct()
     {
@@ -699,6 +707,11 @@ CLOSE 关闭
 
         if (array_key_exists("AutoScaleDiskDeleteNodeTypeList",$param) and $param["AutoScaleDiskDeleteNodeTypeList"] !== null) {
             $this->AutoScaleDiskDeleteNodeTypeList = $param["AutoScaleDiskDeleteNodeTypeList"];
+        }
+
+        if (array_key_exists("OtherConfig",$param) and $param["OtherConfig"] !== null) {
+            $this->OtherConfig = new OtherConfig();
+            $this->OtherConfig->deserialize($param["OtherConfig"]);
         }
     }
 }

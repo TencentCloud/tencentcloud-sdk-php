@@ -24,10 +24,13 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
 
 /**
  * @method Models\ActivateInstanceResponse ActivateInstance(Models\ActivateInstanceRequest $req) 本接口（ActivateInstance）用于恢复已隔离的实例访问。
+ * @method Models\ActivateLibraDBClusterResponse ActivateLibraDBCluster(Models\ActivateLibraDBClusterRequest $req) 解除分析集群隔离状态
+ * @method Models\ActivateLibraDBInstanceResponse ActivateLibraDBInstance(Models\ActivateLibraDBInstanceRequest $req) 本接口（ActivateLibraDBInstance）用于解除已隔离的只读分析引擎实例。
  * @method Models\AddClusterSlaveZoneResponse AddClusterSlaveZone(Models\AddClusterSlaveZoneRequest $req) 本接口（AddClusterSlaveZone）用于对集群开启多可用区部署。
  * @method Models\AddInstancesResponse AddInstances(Models\AddInstancesRequest $req) 本接口（AddInstances）用于集群添加实例。
  * @method Models\AssociateSecurityGroupsResponse AssociateSecurityGroups(Models\AssociateSecurityGroupsRequest $req) 本接口（AssociateSecurityGroups）用于安全组批量绑定云资源。
  * @method Models\BindClusterResourcePackagesResponse BindClusterResourcePackages(Models\BindClusterResourcePackagesRequest $req) 本接口（BindClusterResourcePackages）用于为集群绑定资源包。
+ * @method Models\CheckCreateLibraDBInstanceResponse CheckCreateLibraDBInstance(Models\CheckCreateLibraDBInstanceRequest $req) 本接口（CheckCreateLibraDBInstance）用于校验集群是否可以添加只读分析引擎实例
  * @method Models\CloseAuditServiceResponse CloseAuditService(Models\CloseAuditServiceRequest $req) 本接口（CloseAuditService）用于关闭 TDSQL-C MySQL 实例的数据库审计服务。
  * @method Models\CloseClusterPasswordComplexityResponse CloseClusterPasswordComplexity(Models\CloseClusterPasswordComplexityRequest $req) 本接口（CloseClusterPasswordComplexity）用于关闭集群密码复杂度。
  * @method Models\CloseProxyResponse CloseProxy(Models\CloseProxyRequest $req) 本接口（CloseProxy）用于关闭集群的数据库代理服务。
@@ -43,6 +46,8 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\CreateClusterDatabaseResponse CreateClusterDatabase(Models\CreateClusterDatabaseRequest $req) 本接口（CreateClusterDatabase）用于创建数据库。
  * @method Models\CreateClustersResponse CreateClusters(Models\CreateClustersRequest $req) 本接口（CreateClusters）用于新购集群。
  * @method Models\CreateIntegrateClusterResponse CreateIntegrateCluster(Models\CreateIntegrateClusterRequest $req) 本接口（CreateClusters）用于新购集群。
+ * @method Models\CreateLibraDBClusterAccountsResponse CreateLibraDBClusterAccounts(Models\CreateLibraDBClusterAccountsRequest $req) 本接口（CreateLibraDBClusterAccounts）用于创建分析集群账号
+ * @method Models\CreateLibraDBClustersResponse CreateLibraDBClusters(Models\CreateLibraDBClustersRequest $req) 创建 TDSQL-C 分析集群
  * @method Models\CreateParamTemplateResponse CreateParamTemplate(Models\CreateParamTemplateRequest $req) 本接口（CreateParamTemplate）用于创建参数模板。
  * @method Models\CreateProxyResponse CreateProxy(Models\CreateProxyRequest $req) 本接口（CreateProxy）用于开启集群的数据库代理。
  * @method Models\CreateProxyEndPointResponse CreateProxyEndPoint(Models\CreateProxyEndPointRequest $req) 本接口（CreateProxyEndPoint）用于创建数据库代理连接点。
@@ -54,6 +59,8 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DeleteCLSDeliveryResponse DeleteCLSDelivery(Models\DeleteCLSDeliveryRequest $req) 本接口（DeleteCLSDelivery）用于删除日志投递。
  * @method Models\DeleteClusterDatabaseResponse DeleteClusterDatabase(Models\DeleteClusterDatabaseRequest $req) 本接口（DeleteClusterDatabase）用于删除数据库。
  * @method Models\DeleteClusterSaveBackupResponse DeleteClusterSaveBackup(Models\DeleteClusterSaveBackupRequest $req) 本接口（DeleteClusterSaveBackup）用于为集群删除遗留备份
+ * @method Models\DeleteLibraDBClusterResponse DeleteLibraDBCluster(Models\DeleteLibraDBClusterRequest $req) 删除 TDSQL-C 分析集群
+ * @method Models\DeleteLibraDBClusterAccountsResponse DeleteLibraDBClusterAccounts(Models\DeleteLibraDBClusterAccountsRequest $req) 本接口（DeleteLibraDBClusterAccounts）用于删除分析集群账号
  * @method Models\DeleteParamTemplateResponse DeleteParamTemplate(Models\DeleteParamTemplateRequest $req) 本接口（DeleteParamTemplate）用于删除用户创建的参数模板。
  * @method Models\DescribeAccountAllGrantPrivilegesResponse DescribeAccountAllGrantPrivileges(Models\DescribeAccountAllGrantPrivilegesRequest $req) 本接口（DescribeAccountAllGrantPrivileges）用于查询账号所有可授予的权限。
  * @method Models\DescribeAccountPrivilegesResponse DescribeAccountPrivileges(Models\DescribeAccountPrivilegesRequest $req) 本接口（DescribeAccountPrivileges）用于查询账号已有权限。
@@ -97,6 +104,19 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeInstancesWithinSameClusterResponse DescribeInstancesWithinSameCluster(Models\DescribeInstancesWithinSameClusterRequest $req) 本接口（DescribeInstancesWithinSameCluster）用于查询同一集群下实例列表
  * @method Models\DescribeIntegrateTaskResponse DescribeIntegrateTask(Models\DescribeIntegrateTaskRequest $req) 本接口（DescribeIntegrateTask）用于查询集群任务。
  * @method Models\DescribeIsolatedInstancesResponse DescribeIsolatedInstances(Models\DescribeIsolatedInstancesRequest $req) 本接口（DescribeIsolatedInstances）用于查询回收站实例列表。
+ * @method Models\DescribeLibraDBClusterAccountAllPrivilegesResponse DescribeLibraDBClusterAccountAllPrivileges(Models\DescribeLibraDBClusterAccountAllPrivilegesRequest $req) 本接口（DescribeLibraDBClusterAccountAllPrivileges）用于查询分析集群账号全部权限
+ * @method Models\DescribeLibraDBClusterAccountPrivilegesResponse DescribeLibraDBClusterAccountPrivileges(Models\DescribeLibraDBClusterAccountPrivilegesRequest $req) 本接口（DescribeLibraDBClusterAccountPrivileges）用于查询分析集群账号权限
+ * @method Models\DescribeLibraDBClusterAccountsResponse DescribeLibraDBClusterAccounts(Models\DescribeLibraDBClusterAccountsRequest $req) 本接口（DescribeLibraDBClusterAccounts）用于查询分析集群账号
+ * @method Models\DescribeLibraDBClusterAutoMapRuleResponse DescribeLibraDBClusterAutoMapRule(Models\DescribeLibraDBClusterAutoMapRuleRequest $req) 本接口（DescribeLibraDBClusterAutoMapRule）用于查看分析集群高级映射规则
+ * @method Models\DescribeLibraDBClusterDetailResponse DescribeLibraDBClusterDetail(Models\DescribeLibraDBClusterDetailRequest $req) 查询 TDSQL-C 分析集群信息
+ * @method Models\DescribeLibraDBClusterTableMappingResponse DescribeLibraDBClusterTableMapping(Models\DescribeLibraDBClusterTableMappingRequest $req) 本接口（ModifyLibraDBForwardConfig）用于查看分析集群库表映射关系
+ * @method Models\DescribeLibraDBClustersResponse DescribeLibraDBClusters(Models\DescribeLibraDBClustersRequest $req) 查询分析集群列表
+ * @method Models\DescribeLibraDBDataSourceResponse DescribeLibraDBDataSource(Models\DescribeLibraDBDataSourceRequest $req) 本接口（DescribeLibraDBDataSource）用于查询分析集群的源实例信息
+ * @method Models\DescribeLibraDBForwardConfigResponse DescribeLibraDBForwardConfig(Models\DescribeLibraDBForwardConfigRequest $req) 本接口（DescribeLibraDBForwardConfig）用于查询分析引擎转发参数
+ * @method Models\DescribeLibraDBInstanceDetailResponse DescribeLibraDBInstanceDetail(Models\DescribeLibraDBInstanceDetailRequest $req) 本接口(DescribeLibraDBInstanceDetail)用于查询只读分析引擎详情
+ * @method Models\DescribeLibraDBInstanceSpecsResponse DescribeLibraDBInstanceSpecs(Models\DescribeLibraDBInstanceSpecsRequest $req) 本接口(DescribeLibraDBInstanceSpecs)用于查询只读分析引擎在该地域支持的规格列表信息
+ * @method Models\DescribeLibraDBSlowLogsResponse DescribeLibraDBSlowLogs(Models\DescribeLibraDBSlowLogsRequest $req) 本接口（DescribeLibraDBSlowLogs）为只读分析引擎的慢 SQL 明细查询接口
+ * @method Models\DescribeLibraDBVersionResponse DescribeLibraDBVersion(Models\DescribeLibraDBVersionRequest $req) 查询只读分析引擎支持的版本列表
  * @method Models\DescribeMaintainPeriodResponse DescribeMaintainPeriod(Models\DescribeMaintainPeriodRequest $req) 本接口（DescribeMaintainPeriod）用于查询实例维护时间窗。
  * @method Models\DescribeParamTemplateDetailResponse DescribeParamTemplateDetail(Models\DescribeParamTemplateDetailRequest $req) 本接口（DescribeParamTemplateDetail）用于查询用户参数模板详情。
  * @method Models\DescribeParamTemplatesResponse DescribeParamTemplates(Models\DescribeParamTemplatesRequest $req) 本接口（DescribeParamTemplates）用于查询用户指定产品下的所有参数模板信息。
@@ -119,6 +139,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 本接口（DescribeTasks）用于查询任务列表。
  * @method Models\DescribeZonesResponse DescribeZones(Models\DescribeZonesRequest $req) 本接口（DescribeZones）用于查询可售卖地域可用区信息。
  * @method Models\DisassociateSecurityGroupsResponse DisassociateSecurityGroups(Models\DisassociateSecurityGroupsRequest $req) 本接口（DisassociateSecurityGroups）用于安全组批量解绑云资源。
+ * @method Models\DownloadLibraDBClusterListResponse DownloadLibraDBClusterList(Models\DownloadLibraDBClusterListRequest $req) 下载分析集群列表
  * @method Models\ExportInstanceErrorLogsResponse ExportInstanceErrorLogs(Models\ExportInstanceErrorLogsRequest $req) 此接口（ExportInstanceErrorLogs）用于导出实例错误日志。
  * @method Models\ExportInstanceSlowQueriesResponse ExportInstanceSlowQueries(Models\ExportInstanceSlowQueriesRequest $req) 本接口（ExportInstanceSlowQueries）用于导出实例慢日志。
  * @method Models\ExportResourcePackageDeductDetailsResponse ExportResourcePackageDeductDetails(Models\ExportResourcePackageDeductDetailsRequest $req) 资源包使用明细导出
@@ -129,6 +150,8 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\InquirePriceRenewResponse InquirePriceRenew(Models\InquirePriceRenewRequest $req) 本接口（InquirePriceRenew）用于查询续费集群价格。
  * @method Models\IsolateClusterResponse IsolateCluster(Models\IsolateClusterRequest $req) 本接口（IsolateCluster）用于隔离集群。
  * @method Models\IsolateInstanceResponse IsolateInstance(Models\IsolateInstanceRequest $req) 本接口(IsolateInstance)用于隔离实例。
+ * @method Models\IsolateLibraDBClusterResponse IsolateLibraDBCluster(Models\IsolateLibraDBClusterRequest $req) 隔离 TDSQL-C 分析集群
+ * @method Models\IsolateLibraDBInstanceResponse IsolateLibraDBInstance(Models\IsolateLibraDBInstanceRequest $req) 本接口(IsolateLibraDBInstance)用于隔离的只读分析引擎实例。
  * @method Models\ModifyAccountDescriptionResponse ModifyAccountDescription(Models\ModifyAccountDescriptionRequest $req) 本接口(ModifyAccountDescription)用于修改数据库账号描述信息。
  * @method Models\ModifyAccountHostResponse ModifyAccountHost(Models\ModifyAccountHostRequest $req) 本接口（ModifyAccountHost）用于修改账号主机。
  * @method Models\ModifyAccountParamsResponse ModifyAccountParams(Models\ModifyAccountParamsRequest $req) 本接口（ModifyAccountParams）用于修改账号配置。
@@ -153,6 +176,14 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\ModifyInstanceNameResponse ModifyInstanceName(Models\ModifyInstanceNameRequest $req) 本接口(ModifyInstanceName)用于修改实例名称。
  * @method Models\ModifyInstanceParamResponse ModifyInstanceParam(Models\ModifyInstanceParamRequest $req) 本接口（ModifyInstanceParam）用于修改实例参数。
  * @method Models\ModifyInstanceUpgradeLimitDaysResponse ModifyInstanceUpgradeLimitDays(Models\ModifyInstanceUpgradeLimitDaysRequest $req) 本接口（ModifyInstanceUpgradeLimitDays）用于修改实例内核小版本的升级限制时间。
+ * @method Models\ModifyLibraDBClusterAccountDescriptionResponse ModifyLibraDBClusterAccountDescription(Models\ModifyLibraDBClusterAccountDescriptionRequest $req) 本接口（ModifyLibraDBClusterAccountDescription）用于修改分析集群账号描述
+ * @method Models\ModifyLibraDBClusterAccountHostResponse ModifyLibraDBClusterAccountHost(Models\ModifyLibraDBClusterAccountHostRequest $req) 本接口（ModifyLibraDBClusterAccountHost）用于修改分析集群账号的可登录主机信息
+ * @method Models\ModifyLibraDBClusterAccountPrivilegeResponse ModifyLibraDBClusterAccountPrivilege(Models\ModifyLibraDBClusterAccountPrivilegeRequest $req) 本接口（ModifyLibraDBClusterAccountPrivilege）用于修改分析集群账号权限
+ * @method Models\ModifyLibraDBClusterDataSourceResponse ModifyLibraDBClusterDataSource(Models\ModifyLibraDBClusterDataSourceRequest $req) 本接口（ModifyLibraDBClusterDataSource）用于修改 TDSQL-C 分析集群数据源
+ * @method Models\ModifyLibraDBClusterNameResponse ModifyLibraDBClusterName(Models\ModifyLibraDBClusterNameRequest $req) 修改分析集群名称
+ * @method Models\ModifyLibraDBClusterProjectResponse ModifyLibraDBClusterProject(Models\ModifyLibraDBClusterProjectRequest $req) 修改分析集群项目 ID
+ * @method Models\ModifyLibraDBClusterReplicationObjectResponse ModifyLibraDBClusterReplicationObject(Models\ModifyLibraDBClusterReplicationObjectRequest $req) 本接口（ModifyLibraDBClusterReplicationObject）用于修改分析集群同步对象
+ * @method Models\ModifyLibraDBForwardConfigResponse ModifyLibraDBForwardConfig(Models\ModifyLibraDBForwardConfigRequest $req) 本接口（ModifyLibraDBForwardConfig）用于修改只读分析实例自动转发参数
  * @method Models\ModifyMaintainPeriodConfigResponse ModifyMaintainPeriodConfig(Models\ModifyMaintainPeriodConfigRequest $req) 本接口（ModifyMaintainPeriodConfig）用于修改维护时间配置。
  * @method Models\ModifyParamTemplateResponse ModifyParamTemplate(Models\ModifyParamTemplateRequest $req) 本接口（ModifyParamTemplate）用于修改用户参数模板。
  * @method Models\ModifyProxyDescResponse ModifyProxyDesc(Models\ModifyProxyDescRequest $req) 本接口（ModifyProxyDesc）用于修改数据库代理描述。
@@ -165,6 +196,8 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\ModifyVipVportResponse ModifyVipVport(Models\ModifyVipVportRequest $req) 本接口（ModifyVipVport）用于修改实例组ip，端口。
  * @method Models\OfflineClusterResponse OfflineCluster(Models\OfflineClusterRequest $req) 本接口（OfflineCluster）用于销毁集群。
  * @method Models\OfflineInstanceResponse OfflineInstance(Models\OfflineInstanceRequest $req) 本接口（OfflineInstance）用于销毁实例。
+ * @method Models\OfflineLibraDBClusterResponse OfflineLibraDBCluster(Models\OfflineLibraDBClusterRequest $req) 下线分析集群
+ * @method Models\OfflineLibraDBInstanceResponse OfflineLibraDBInstance(Models\OfflineLibraDBInstanceRequest $req) 本接口(OfflineLibraDBInstance)用于下线的只读分析引擎实例。
  * @method Models\OpenAuditServiceResponse OpenAuditService(Models\OpenAuditServiceRequest $req) 本接口（OpenAuditService）用于为实例开通数据库审计服务。
  * @method Models\OpenClusterPasswordComplexityResponse OpenClusterPasswordComplexity(Models\OpenClusterPasswordComplexityRequest $req) 本接口（OpenClusterPasswordComplexity）用于开启自定义密码复杂度功能。
  * @method Models\OpenClusterReadOnlyInstanceGroupAccessResponse OpenClusterReadOnlyInstanceGroupAccess(Models\OpenClusterReadOnlyInstanceGroupAccessRequest $req) 本接口（OpenClusterReadOnlyInstanceGroupAccess）用于开启只读实例组接入。
@@ -177,15 +210,19 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\ReloadBalanceProxyNodeResponse ReloadBalanceProxyNode(Models\ReloadBalanceProxyNodeRequest $req) 本接口（ReloadBalanceProxyNode）用于负载均衡数据库代理。
  * @method Models\RemoveClusterSlaveZoneResponse RemoveClusterSlaveZone(Models\RemoveClusterSlaveZoneRequest $req) 本接口（RemoveClusterSlaveZone）用于关闭集群多可用区部署。
  * @method Models\RenewClustersResponse RenewClusters(Models\RenewClustersRequest $req) 续费集群
+ * @method Models\RenewLibraDBClustersResponse RenewLibraDBClusters(Models\RenewLibraDBClustersRequest $req) 续费分析集群
  * @method Models\ReplayInstanceAuditLogResponse ReplayInstanceAuditLog(Models\ReplayInstanceAuditLogRequest $req) 回放实例审计日志
  * @method Models\ResetAccountPasswordResponse ResetAccountPassword(Models\ResetAccountPasswordRequest $req) 本接口（ResetAccountPassword）用于修改数据库账号密码。
+ * @method Models\ResetLibraDBClusterAccountPasswordResponse ResetLibraDBClusterAccountPassword(Models\ResetLibraDBClusterAccountPasswordRequest $req) 修改分析集群账号密码
  * @method Models\RestartInstanceResponse RestartInstance(Models\RestartInstanceRequest $req) 本接口（RestartInstance）用于重启实例。
+ * @method Models\RestartLibraDBInstanceResponse RestartLibraDBInstance(Models\RestartLibraDBInstanceRequest $req) 重启只读分析引擎
  * @method Models\ResumeServerlessResponse ResumeServerless(Models\ResumeServerlessRequest $req) 本接口（ResumeServerless）用于恢复 serverless 集群（启动暂停的集群）。
  * @method Models\RevokeAccountPrivilegesResponse RevokeAccountPrivileges(Models\RevokeAccountPrivilegesRequest $req) 本接口（RevokeAccountPrivileges）用于批量回收账号权限。
  * @method Models\RollBackClusterResponse RollBackCluster(Models\RollBackClusterRequest $req) 本接口（RollBackCluster）用于集群回档。
  * @method Models\RollbackToNewClusterResponse RollbackToNewCluster(Models\RollbackToNewClusterRequest $req) 本接口（RollbackToNewCluster）用于回档到新集群。
  * @method Models\SearchClusterDatabasesResponse SearchClusterDatabases(Models\SearchClusterDatabasesRequest $req) 本接口（SearchClusterDatabases）用于搜索集群数据库列表。
  * @method Models\SearchClusterTablesResponse SearchClusterTables(Models\SearchClusterTablesRequest $req) 本接口（SearchClusterTables）用于搜索集群数据表列表。
+ * @method Models\SetLibraDBClusterRenewFlagResponse SetLibraDBClusterRenewFlag(Models\SetLibraDBClusterRenewFlagRequest $req) 设置 TDSQL-C 分析集群是否续费
  * @method Models\SetRenewFlagResponse SetRenewFlag(Models\SetRenewFlagRequest $req) 本接口（SetRenewFlag）用于设置实例的自动续费功能。
  * @method Models\StartCLSDeliveryResponse StartCLSDelivery(Models\StartCLSDeliveryRequest $req) 本接口（StartCLSDelivery）用于开启日志投递功能。
  * @method Models\StopCLSDeliveryResponse StopCLSDelivery(Models\StopCLSDeliveryRequest $req) 本接口（StopCLSDelivery）用于停止日志投递功能。

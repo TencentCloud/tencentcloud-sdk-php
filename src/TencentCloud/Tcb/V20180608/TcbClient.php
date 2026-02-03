@@ -23,11 +23,15 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tcb\V20180608\Models as Models;
 
 /**
+ * @method Models\BindCloudBaseAccessDomainResponse BindCloudBaseAccessDomain(Models\BindCloudBaseAccessDomainRequest $req) 绑定云开发自定义域名，用于云接入和静态托管
+ * @method Models\BindCloudBaseGWDomainResponse BindCloudBaseGWDomain(Models\BindCloudBaseGWDomainRequest $req) 绑定自定义域名
  * @method Models\BindEnvGatewayResponse BindEnvGateway(Models\BindEnvGatewayRequest $req) 绑定另外一个环境下的网关，callContainer请求可以访问到该网关
  * @method Models\CheckTcbServiceResponse CheckTcbService(Models\CheckTcbServiceRequest $req) 检查是否开通Tcb服务
  * @method Models\CommonServiceAPIResponse CommonServiceAPI(Models\CommonServiceAPIRequest $req) TCB云API统一入口
  * @method Models\CreateAndDeployCloudBaseProjectResponse CreateAndDeployCloudBaseProject(Models\CreateAndDeployCloudBaseProjectRequest $req) 创建云开发项目
  * @method Models\CreateAuthDomainResponse CreateAuthDomain(Models\CreateAuthDomainRequest $req) 增加安全域名
+ * @method Models\CreateBillDealResponse CreateBillDeal(Models\CreateBillDealRequest $req) 创建云开发产品计费订单
+ * @method Models\CreateCloudBaseGWAPIResponse CreateCloudBaseGWAPI(Models\CreateCloudBaseGWAPIRequest $req) 创建云开发网关API
  * @method Models\CreateCloudBaseRunResourceResponse CreateCloudBaseRunResource(Models\CreateCloudBaseRunResourceRequest $req) 开通容器托管的资源，包括集群创建，VPC配置，异步任务创建，镜像托管，Coding等，查看创建结果需要根据DescribeCloudBaseRunResource接口来查看
  * @method Models\CreateCloudBaseRunServerVersionResponse CreateCloudBaseRunServerVersion(Models\CreateCloudBaseRunServerVersionRequest $req) 创建服务版本
  * @method Models\CreateHostingDomainResponse CreateHostingDomain(Models\CreateHostingDomainRequest $req) 创建托管域名
@@ -35,6 +39,8 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\CreateStaticStoreResponse CreateStaticStore(Models\CreateStaticStoreRequest $req) 创建静态托管资源，包括COS和CDN，异步任务创建，查看创建结果需要根据DescribeStaticStore接口来查看
  * @method Models\CreateTableResponse CreateTable(Models\CreateTableRequest $req) 本接口(CreateTable)用于创建表，支持创建capped类型集合，暂时不支持分片表
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 创建tcb用户
+ * @method Models\DeleteCloudBaseGWAPIResponse DeleteCloudBaseGWAPI(Models\DeleteCloudBaseGWAPIRequest $req) 删除网关API
+ * @method Models\DeleteCloudBaseGWDomainResponse DeleteCloudBaseGWDomain(Models\DeleteCloudBaseGWDomainRequest $req) 删除网关域名
  * @method Models\DeleteCloudBaseProjectLatestVersionResponse DeleteCloudBaseProjectLatestVersion(Models\DeleteCloudBaseProjectLatestVersionRequest $req) 删除云项目
  * @method Models\DeleteCloudBaseRunServerVersionResponse DeleteCloudBaseRunServerVersion(Models\DeleteCloudBaseRunServerVersionRequest $req) 删除服务版本
  * @method Models\DeleteGatewayVersionResponse DeleteGatewayVersion(Models\DeleteGatewayVersionRequest $req) 删除网关某版本
@@ -47,6 +53,8 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DescribeBillingInfoResponse DescribeBillingInfo(Models\DescribeBillingInfoRequest $req) 获取计费相关信息
  * @method Models\DescribeCbrServerVersionResponse DescribeCbrServerVersion(Models\DescribeCbrServerVersionRequest $req) 查询服务版本的详情
  * @method Models\DescribeCloudBaseBuildServiceResponse DescribeCloudBaseBuildService(Models\DescribeCloudBaseBuildServiceRequest $req) 获取云托管代码上传url
+ * @method Models\DescribeCloudBaseGWAPIResponse DescribeCloudBaseGWAPI(Models\DescribeCloudBaseGWAPIRequest $req) 获取网关API列表
+ * @method Models\DescribeCloudBaseGWServiceResponse DescribeCloudBaseGWService(Models\DescribeCloudBaseGWServiceRequest $req) 获取网关服务
  * @method Models\DescribeCloudBaseProjectLatestVersionListResponse DescribeCloudBaseProjectLatestVersionList(Models\DescribeCloudBaseProjectLatestVersionListRequest $req) 获取云开发项目列表
  * @method Models\DescribeCloudBaseProjectVersionListResponse DescribeCloudBaseProjectVersionList(Models\DescribeCloudBaseProjectVersionListRequest $req) 云项目部署列表
  * @method Models\DescribeCloudBaseRunResourceResponse DescribeCloudBaseRunResource(Models\DescribeCloudBaseRunResourceRequest $req) 查看容器托管的集群状态
@@ -58,6 +66,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DescribeCurveDataResponse DescribeCurveData(Models\DescribeCurveDataRequest $req) 根据用户传入的指标, 拉取一段时间内的监控数据。
  * @method Models\DescribeDatabaseACLResponse DescribeDatabaseACL(Models\DescribeDatabaseACLRequest $req) 获取数据库权限
  * @method Models\DescribeDownloadFileResponse DescribeDownloadFile(Models\DescribeDownloadFileRequest $req) 获取下载文件信息
+ * @method Models\DescribeEnvAccountCircleResponse DescribeEnvAccountCircle(Models\DescribeEnvAccountCircleRequest $req) 查询环境计费周期
  * @method Models\DescribeEnvDealRegionResponse DescribeEnvDealRegion(Models\DescribeEnvDealRegionRequest $req) 获取环境下单地域
  * @method Models\DescribeEnvFreeQuotaResponse DescribeEnvFreeQuota(Models\DescribeEnvFreeQuotaRequest $req) 查询后付费免费配额信息
  * @method Models\DescribeEnvLimitResponse DescribeEnvLimit(Models\DescribeEnvLimitRequest $req) 查询环境个数上限
@@ -73,11 +82,13 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DescribePostpayFreeQuotasResponse DescribePostpayFreeQuotas(Models\DescribePostpayFreeQuotasRequest $req) 查询后付费资源免费量
  * @method Models\DescribePostpayPackageFreeQuotasResponse DescribePostpayPackageFreeQuotas(Models\DescribePostpayPackageFreeQuotasRequest $req) 获取后付费免费额度
  * @method Models\DescribeQuotaDataResponse DescribeQuotaData(Models\DescribeQuotaDataRequest $req) 查询指定指标的配额使用量
+ * @method Models\DescribeSafeRuleResponse DescribeSafeRule(Models\DescribeSafeRuleRequest $req) 查询数据库安全规则
  * @method Models\DescribeSmsQuotasResponse DescribeSmsQuotas(Models\DescribeSmsQuotasRequest $req) 查询后付费短信资源量
 1 有免费包的返回SmsFreeQuota结构所有字段
 2 没有免费包，有付费包，付费返回复用SmsFreeQuota结构，其中只有 TodayUsedQuota 字段有效
 3 都没有返回为空数组
  * @method Models\DescribeSpecialCostItemsResponse DescribeSpecialCostItems(Models\DescribeSpecialCostItemsRequest $req) 查询环境1分钱抵扣信息
+ * @method Models\DescribeStaticStoreResponse DescribeStaticStore(Models\DescribeStaticStoreRequest $req) 查看当前环境下静态托管资源信息，根据返回结果判断静态资源的状态
  * @method Models\DescribeTableResponse DescribeTable(Models\DescribeTableRequest $req) 查询表的相关信息，包括索引等信息
  * @method Models\DescribeTablesResponse DescribeTables(Models\DescribeTablesRequest $req) 本接口(ListTables)用于查询所有表信息，包括表名、表中数据条数、表中数据量、索引个数及索引的大小等
  * @method Models\DescribeUserActivityInfoResponse DescribeUserActivityInfo(Models\DescribeUserActivityInfoRequest $req) 查询用户活动信息
@@ -91,6 +102,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\EstablishWxGatewayRouteResponse EstablishWxGatewayRoute(Models\EstablishWxGatewayRouteRequest $req) 创建或修改安全网关路由
  * @method Models\FreezeCloudBaseRunServersResponse FreezeCloudBaseRunServers(Models\FreezeCloudBaseRunServersRequest $req) 批量冻结
  * @method Models\ListTablesResponse ListTables(Models\ListTablesRequest $req) 本接口(ListTables)用于查询所有表信息，包括表名、表中数据条数、表中数据量、索引个数及索引的大小等
+ * @method Models\ModifyCloudBaseGWAPIResponse ModifyCloudBaseGWAPI(Models\ModifyCloudBaseGWAPIRequest $req) 修改云开发网关API
  * @method Models\ModifyCloudBaseRunServerFlowConfResponse ModifyCloudBaseRunServerFlowConf(Models\ModifyCloudBaseRunServerFlowConfRequest $req) 修改容器内的版本流量配置
  * @method Models\ModifyCloudBaseRunServerVersionResponse ModifyCloudBaseRunServerVersion(Models\ModifyCloudBaseRunServerVersionRequest $req) 修改服务版本的副本数，环境变量
  * @method Models\ModifyClsTopicResponse ModifyClsTopic(Models\ModifyClsTopicRequest $req) 修改日志主题
@@ -101,6 +113,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\ReinstateEnvResponse ReinstateEnv(Models\ReinstateEnvRequest $req) 针对已隔离的免费环境，可以通过本接口将其恢复访问。
  * @method Models\ReplaceActivityRecordResponse ReplaceActivityRecord(Models\ReplaceActivityRecordRequest $req) 更新活动详情
  * @method Models\RunSqlResponse RunSql(Models\RunSqlRequest $req) 执行SQL语句
+ * @method Models\SearchClsLogResponse SearchClsLog(Models\SearchClsLogRequest $req) 搜索CLS日志，TCB角色密钥访问
  * @method Models\UnfreezeCloudBaseRunServersResponse UnfreezeCloudBaseRunServers(Models\UnfreezeCloudBaseRunServersRequest $req) 批量解冻服务
  * @method Models\UpdateTableResponse UpdateTable(Models\UpdateTableRequest $req) 本接口(UpdateTable)用于修改表信息，当前可以支持创建和删除索引
  */

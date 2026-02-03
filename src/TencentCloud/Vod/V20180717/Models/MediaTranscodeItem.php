@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
 <li>None 表示没有经过数字水印处理。</li>
  * @method string getCopyRightWatermarkText() 获取版权信息。
  * @method void setCopyRightWatermarkText(string $CopyRightWatermarkText) 设置版权信息。
+ * @method integer getBlindWatermarkDefinition() 获取数字水印模板id。
+ * @method void setBlindWatermarkDefinition(integer $BlindWatermarkDefinition) 设置数字水印模板id。
  */
 class MediaTranscodeItem extends AbstractModel
 {
@@ -130,6 +132,11 @@ class MediaTranscodeItem extends AbstractModel
     public $CopyRightWatermarkText;
 
     /**
+     * @var integer 数字水印模板id。
+     */
+    public $BlindWatermarkDefinition;
+
+    /**
      * @param string $Url 转码后的视频文件地址。
      * @param integer $Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
 <font color=red>注意：取值 0 表示原始文件。</font> 
@@ -148,6 +155,7 @@ class MediaTranscodeItem extends AbstractModel
 <li>CopyRight 表示经过版权水印处理；</li>
 <li>None 表示没有经过数字水印处理。</li>
      * @param string $CopyRightWatermarkText 版权信息。
+     * @param integer $BlindWatermarkDefinition 数字水印模板id。
      */
     function __construct()
     {
@@ -222,6 +230,10 @@ class MediaTranscodeItem extends AbstractModel
 
         if (array_key_exists("CopyRightWatermarkText",$param) and $param["CopyRightWatermarkText"] !== null) {
             $this->CopyRightWatermarkText = $param["CopyRightWatermarkText"];
+        }
+
+        if (array_key_exists("BlindWatermarkDefinition",$param) and $param["BlindWatermarkDefinition"] !== null) {
+            $this->BlindWatermarkDefinition = $param["BlindWatermarkDefinition"];
         }
     }
 }

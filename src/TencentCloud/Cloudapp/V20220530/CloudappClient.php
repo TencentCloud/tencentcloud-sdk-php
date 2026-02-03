@@ -137,6 +137,7 @@ use TencentCloud\Cloudapp\V20220530\Models as Models;
   }
 }
 ```
+ * @method Models\IssueLicenseResponse IssueLicense(Models\IssueLicenseRequest $req) 颁发 License
  * @method Models\VerifyLicenseResponse VerifyLicense(Models\VerifyLicenseRequest $req) 从软件进程读取 LICENSE。
  */
 

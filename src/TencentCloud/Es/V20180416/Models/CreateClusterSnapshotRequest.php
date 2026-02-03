@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemoteCos(integer $RemoteCos) 设置跨地域备份 0 不跨地域; 1 跨地域
  * @method string getRemoteCosRegion() 获取跨地域备份地域名称 ap-guangzhou
  * @method void setRemoteCosRegion(string $RemoteCosRegion) 设置跨地域备份地域名称 ap-guangzhou
+ * @method integer getMultiAz() 获取cos多AZ备份 0 单AZ; 1 多AZ
+ * @method void setMultiAz(integer $MultiAz) 设置cos多AZ备份 0 单AZ; 1 多AZ
  */
 class CreateClusterSnapshotRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class CreateClusterSnapshotRequest extends AbstractModel
     public $RemoteCosRegion;
 
     /**
+     * @var integer cos多AZ备份 0 单AZ; 1 多AZ
+     */
+    public $MultiAz;
+
+    /**
      * @param string $InstanceId 实例名称
      * @param string $SnapshotName 快照名称
      * @param string $Indices 索引名称
@@ -112,6 +119,7 @@ class CreateClusterSnapshotRequest extends AbstractModel
      * @param integer $RetentionGraceTime 锁定宽限期,单位天
      * @param integer $RemoteCos 跨地域备份 0 不跨地域; 1 跨地域
      * @param string $RemoteCosRegion 跨地域备份地域名称 ap-guangzhou
+     * @param integer $MultiAz cos多AZ备份 0 单AZ; 1 多AZ
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class CreateClusterSnapshotRequest extends AbstractModel
 
         if (array_key_exists("RemoteCosRegion",$param) and $param["RemoteCosRegion"] !== null) {
             $this->RemoteCosRegion = $param["RemoteCosRegion"];
+        }
+
+        if (array_key_exists("MultiAz",$param) and $param["MultiAz"] !== null) {
+            $this->MultiAz = $param["MultiAz"];
         }
     }
 }

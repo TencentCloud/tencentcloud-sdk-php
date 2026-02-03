@@ -51,6 +51,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
  * @method Models\CreateAigcImageTaskResponse CreateAigcImageTask(Models\CreateAigcImageTaskRequest $req) 该接口用于[生成 AIGC 图片](https://cloud.tencent.com/document/product/266/124473)。<b>接口处于内测阶段，如需使用请[联系我们](https://cloud.tencent.com/online-service?from=sales_sales&source=PRESALE)，接口调用会产生实际费用，</b>请参考点播 [AIGC 生图片计费文档](https://cloud.tencent.com/document/product/266/95125#9c4dc6ff-4b3f-4b25-bf2d-393889dfb9ac)。该功能结算模式为[后付费](https://cloud.tencent.com/document/product/266/2838)，日结客户当天使用将在第二天出账，月结客户将在次月1日统一出上月使用费用。
  * @method Models\CreateAigcVideoTaskResponse CreateAigcVideoTask(Models\CreateAigcVideoTaskRequest $req) 该接口用于[生成 AIGC 视频](https://cloud.tencent.com/document/product/266/124474)。<b>接口处于内测阶段，如需使用请[联系我们](https://cloud.tencent.com/online-service?from=sales_sales&source=PRESALE)，接口调用会产生实际费用</b>，请参考点播 [AIGC 生视频计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。该功能结算模式为[后付费](https://cloud.tencent.com/document/product/266/2838)，日结客户当天使用将在第二天出账，月结客户将在次月1日统一出上月使用费用。
  * @method Models\CreateAnimatedGraphicsTemplateResponse CreateAnimatedGraphicsTemplate(Models\CreateAnimatedGraphicsTemplateRequest $req) 创建用户自定义转动图模板，数量上限：16。
+ * @method Models\CreateBlindWatermarkTemplateResponse CreateBlindWatermarkTemplate(Models\CreateBlindWatermarkTemplateRequest $req) 创建用户自定义数字水印模板。
  * @method Models\CreateCLSLogsetResponse CreateCLSLogset(Models\CreateCLSLogsetRequest $req) 由 VOD 创建新的日志集。
  * @method Models\CreateCLSTopicResponse CreateCLSTopic(Models\CreateCLSTopicRequest $req) 创建 VOD 下新的 CLS 日志主题
  * @method Models\CreateClassResponse CreateClass(Models\CreateClassRequest $req) * 用于对媒体进行分类管理；
@@ -120,6 +121,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
  * @method Models\DeleteAdaptiveDynamicStreamingTemplateResponse DeleteAdaptiveDynamicStreamingTemplate(Models\DeleteAdaptiveDynamicStreamingTemplateRequest $req) 删除转自适应码流模板
  * @method Models\DeleteAigcApiTokenResponse DeleteAigcApiToken(Models\DeleteAigcApiTokenRequest $req) 删除 AIGC API Token
  * @method Models\DeleteAnimatedGraphicsTemplateResponse DeleteAnimatedGraphicsTemplate(Models\DeleteAnimatedGraphicsTemplateRequest $req) 删除用户自定义转动图模板。
+ * @method Models\DeleteBlindWatermarkTemplateResponse DeleteBlindWatermarkTemplate(Models\DeleteBlindWatermarkTemplateRequest $req) 删除用户自定义数字水印模板。
  * @method Models\DeleteCLSTopicResponse DeleteCLSTopic(Models\DeleteCLSTopicRequest $req) 删除点播开通的日志主题。
  * @method Models\DeleteClassResponse DeleteClass(Models\DeleteClassRequest $req) * 仅当待删分类无子分类且无媒体关联情况下，可删除分类；
 * 否则，请先执行[删除媒体](/document/product/266/31764)及子分类，再删除该分类；
@@ -167,6 +169,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
    3. 查询时间跨度超过1天的，返回以天为粒度的数据，否则，返回以5分钟为粒度的数据。
  * @method Models\DescribeAllClassResponse DescribeAllClass(Models\DescribeAllClassRequest $req) * 获得用户的所有分类信息。
  * @method Models\DescribeAnimatedGraphicsTemplatesResponse DescribeAnimatedGraphicsTemplates(Models\DescribeAnimatedGraphicsTemplatesRequest $req) 查询转动图模板列表，支持根据条件，分页查询。
+ * @method Models\DescribeBlindWatermarkTemplatesResponse DescribeBlindWatermarkTemplates(Models\DescribeBlindWatermarkTemplatesRequest $req) 查询用户自定义数字水印模板。
  * @method Models\DescribeCDNStatDetailsResponse DescribeCDNStatDetails(Models\DescribeCDNStatDetailsRequest $req) 该接口用于查询点播域名的 CDN 带宽、流量等统计数据。
 * 查询的起始时间和结束时间跨度不超过90天。
 * 可以查询不同服务区域的数据。
@@ -323,6 +326,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 使用模板发起音画质重生。
  * @method Models\EnhanceMediaQualityResponse EnhanceMediaQuality(Models\EnhanceMediaQualityRequest $req) 对点播中的音视频媒体发起音画质重生任务。
  * @method Models\ExecuteFunctionResponse ExecuteFunction(Models\ExecuteFunctionRequest $req) 本接口仅用于定制开发的特殊场景，除非云点播客服人员主动告知您需要使用本接口，其它情况请勿调用。
+ * @method Models\ExtractBlindWatermarkResponse ExtractBlindWatermark(Models\ExtractBlindWatermarkRequest $req) 用于发起提取视频数字水印任务，提取结果可以通过DescribeTaskDetail查询。
  * @method Models\ExtractCopyRightWatermarkResponse ExtractCopyRightWatermark(Models\ExtractCopyRightWatermarkRequest $req) 如果有盗录溯源需求，请参考 [幽灵水印](https://cloud.tencent.com/document/product/266/94228)。
  * @method Models\ExtractTraceWatermarkResponse ExtractTraceWatermark(Models\ExtractTraceWatermarkRequest $req) 如果有盗录溯源需求，推荐使用 [幽灵水印](https://cloud.tencent.com/document/product/266/94228)。
  * @method Models\FastEditMediaResponse FastEditMedia(Models\FastEditMediaRequest $req) 对云点播的 HLS 视频实现快速拼接和快速剪辑，生成新的 HLS 格式的媒体。
@@ -372,6 +376,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
  * @method Models\ModifyAIRecognitionTemplateResponse ModifyAIRecognitionTemplate(Models\ModifyAIRecognitionTemplateRequest $req) 修改用户自定义音视频内容识别模板。
  * @method Models\ModifyAdaptiveDynamicStreamingTemplateResponse ModifyAdaptiveDynamicStreamingTemplate(Models\ModifyAdaptiveDynamicStreamingTemplateRequest $req) 修改转自适应码流模板
  * @method Models\ModifyAnimatedGraphicsTemplateResponse ModifyAnimatedGraphicsTemplate(Models\ModifyAnimatedGraphicsTemplateRequest $req) 修改用户自定义转动图模板。
+ * @method Models\ModifyBlindWatermarkTemplateResponse ModifyBlindWatermarkTemplate(Models\ModifyBlindWatermarkTemplateRequest $req) 修改用户自定义数字水印模板，数字水印类型不允许修改。
  * @method Models\ModifyClassResponse ModifyClass(Models\ModifyClassRequest $req) 修改媒体分类属性。
  * @method Models\ModifyContentReviewTemplateResponse ModifyContentReviewTemplate(Models\ModifyContentReviewTemplateRequest $req) 该 API 已经<font color=red>不再维护</font>，新版审核模板支持音视频审核和图片审核，详细请参考 [修改审核模板](https://cloud.tencent.com/document/api/266/84388)。
 修改用户自定义音视频内容审核模板。

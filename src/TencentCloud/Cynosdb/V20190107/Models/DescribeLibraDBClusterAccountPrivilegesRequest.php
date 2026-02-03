@@ -1,0 +1,113 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Cynosdb\V20190107\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * DescribeLibraDBClusterAccountPrivileges请求参数结构体
+ *
+ * @method string getClusterId() 获取集群id
+ * @method void setClusterId(string $ClusterId) 设置集群id
+ * @method string getAccountName() 获取账号名
+ * @method void setAccountName(string $AccountName) 设置账号名
+ * @method string getHost() 获取主机名
+ * @method void setHost(string $Host) 设置主机名
+ * @method string getDb() 获取数据库名
+ * @method void setDb(string $Db) 设置数据库名
+ * @method string getType() 获取类型
+ * @method void setType(string $Type) 设置类型
+ * @method string getTableName() 获取表名
+ * @method void setTableName(string $TableName) 设置表名
+ */
+class DescribeLibraDBClusterAccountPrivilegesRequest extends AbstractModel
+{
+    /**
+     * @var string 集群id
+     */
+    public $ClusterId;
+
+    /**
+     * @var string 账号名
+     */
+    public $AccountName;
+
+    /**
+     * @var string 主机名
+     */
+    public $Host;
+
+    /**
+     * @var string 数据库名
+     */
+    public $Db;
+
+    /**
+     * @var string 类型
+     */
+    public $Type;
+
+    /**
+     * @var string 表名
+     */
+    public $TableName;
+
+    /**
+     * @param string $ClusterId 集群id
+     * @param string $AccountName 账号名
+     * @param string $Host 主机名
+     * @param string $Db 数据库名
+     * @param string $Type 类型
+     * @param string $TableName 表名
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("AccountName",$param) and $param["AccountName"] !== null) {
+            $this->AccountName = $param["AccountName"];
+        }
+
+        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
+            $this->Host = $param["Host"];
+        }
+
+        if (array_key_exists("Db",$param) and $param["Db"] !== null) {
+            $this->Db = $param["Db"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("TableName",$param) and $param["TableName"] !== null) {
+            $this->TableName = $param["TableName"];
+        }
+    }
+}

@@ -28,6 +28,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\CheckInstanceResponse CheckInstance(Models\CheckInstanceRequest $req) 用于校验企业版实例信息
  * @method Models\CheckInstanceNameResponse CheckInstanceName(Models\CheckInstanceNameRequest $req) 检查待创建的实例名称是否符合规范
  * @method Models\CreateApplicationTriggerPersonalResponse CreateApplicationTriggerPersonal(Models\CreateApplicationTriggerPersonalRequest $req) 用于创建应用更新触发器
+ * @method Models\CreateGCJobResponse CreateGCJob(Models\CreateGCJobRequest $req) 创建 GC 作业
  * @method Models\CreateImageAccelerationServiceResponse CreateImageAccelerationService(Models\CreateImageAccelerationServiceRequest $req) 创建镜像加速服务
  * @method Models\CreateImmutableTagRulesResponse CreateImmutableTagRules(Models\CreateImmutableTagRulesRequest $req) 创建镜像不可变规则
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 创建实例

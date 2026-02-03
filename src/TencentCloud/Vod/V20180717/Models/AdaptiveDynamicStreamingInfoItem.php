@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubStreamSet(array $SubStreamSet) 设置子流信息列表。
  * @method string getCopyRightWatermarkText() 获取版权信息。
  * @method void setCopyRightWatermarkText(string $CopyRightWatermarkText) 设置版权信息。
+ * @method integer getBlindWatermarkDefinition() 获取数字水印模板id。
+ * @method void setBlindWatermarkDefinition(integer $BlindWatermarkDefinition) 设置数字水印模板id。
  * @method array getSubtitleSet() 获取字幕信息列表。
  * @method void setSubtitleSet(array $SubtitleSet) 设置字幕信息列表。
  * @method string getDefaultSubtitleId() 获取默认字幕的唯一标识。
@@ -108,6 +110,11 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
     public $CopyRightWatermarkText;
 
     /**
+     * @var integer 数字水印模板id。
+     */
+    public $BlindWatermarkDefinition;
+
+    /**
      * @var array 字幕信息列表。
      */
     public $SubtitleSet;
@@ -134,6 +141,7 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
 <li>None 表示没有经过数字水印处理。</li>
      * @param array $SubStreamSet 子流信息列表。
      * @param string $CopyRightWatermarkText 版权信息。
+     * @param integer $BlindWatermarkDefinition 数字水印模板id。
      * @param array $SubtitleSet 字幕信息列表。
      * @param string $DefaultSubtitleId 默认字幕的唯一标识。
      */
@@ -185,6 +193,10 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
 
         if (array_key_exists("CopyRightWatermarkText",$param) and $param["CopyRightWatermarkText"] !== null) {
             $this->CopyRightWatermarkText = $param["CopyRightWatermarkText"];
+        }
+
+        if (array_key_exists("BlindWatermarkDefinition",$param) and $param["BlindWatermarkDefinition"] !== null) {
+            $this->BlindWatermarkDefinition = $param["BlindWatermarkDefinition"];
         }
 
         if (array_key_exists("SubtitleSet",$param) and $param["SubtitleSet"] !== null) {

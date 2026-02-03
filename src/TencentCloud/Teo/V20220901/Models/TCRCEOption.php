@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getChannel() 获取Channel 信息。
  * @method void setChannel(string $Channel) 设置Channel 信息。
+ * @method string getRegion() 获取RCE Channel 的开通地域，目前可选的取值范围：<li>ap-beijing：华北地区（北京）；</li><li>ap-jakarta：亚太东南（雅加达）；</li><li>ap-singapore：亚太东南（新加坡）；</li><li>eu-frankfurt：欧洲地区（法兰克福）；</li><li>na-siliconvalley：美国西部（硅谷）。</li>
+ * @method void setRegion(string $Region) 设置RCE Channel 的开通地域，目前可选的取值范围：<li>ap-beijing：华北地区（北京）；</li><li>ap-jakarta：亚太东南（雅加达）；</li><li>ap-singapore：亚太东南（新加坡）；</li><li>eu-frankfurt：欧洲地区（法兰克福）；</li><li>na-siliconvalley：美国西部（硅谷）。</li>
  */
 class TCRCEOption extends AbstractModel
 {
@@ -31,7 +33,13 @@ class TCRCEOption extends AbstractModel
     public $Channel;
 
     /**
+     * @var string RCE Channel 的开通地域，目前可选的取值范围：<li>ap-beijing：华北地区（北京）；</li><li>ap-jakarta：亚太东南（雅加达）；</li><li>ap-singapore：亚太东南（新加坡）；</li><li>eu-frankfurt：欧洲地区（法兰克福）；</li><li>na-siliconvalley：美国西部（硅谷）。</li>
+     */
+    public $Region;
+
+    /**
      * @param string $Channel Channel 信息。
+     * @param string $Region RCE Channel 的开通地域，目前可选的取值范围：<li>ap-beijing：华北地区（北京）；</li><li>ap-jakarta：亚太东南（雅加达）；</li><li>ap-singapore：亚太东南（新加坡）；</li><li>eu-frankfurt：欧洲地区（法兰克福）；</li><li>na-siliconvalley：美国西部（硅谷）。</li>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class TCRCEOption extends AbstractModel
         }
         if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
             $this->Channel = $param["Channel"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
         }
     }
 }

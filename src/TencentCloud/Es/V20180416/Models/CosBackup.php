@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStrategyName(string $StrategyName) 设置策略名称
  * @method string getIndices() 获取备份索引列表，如果不填表示备份所有索引
  * @method void setIndices(string $Indices) 设置备份索引列表，如果不填表示备份所有索引
+ * @method integer getMultiAz() 获取cos多AZ备份 0 单AZ; 1 多AZ
+ * @method void setMultiAz(integer $MultiAz) 设置cos多AZ备份 0 单AZ; 1 多AZ
  * @method string getCreateTime() 获取策略创建时间
  * @method void setCreateTime(string $CreateTime) 设置策略创建时间
  */
@@ -138,6 +140,11 @@ class CosBackup extends AbstractModel
     public $Indices;
 
     /**
+     * @var integer cos多AZ备份 0 单AZ; 1 多AZ
+     */
+    public $MultiAz;
+
+    /**
      * @var string 策略创建时间
      */
     public $CreateTime;
@@ -159,6 +166,7 @@ class CosBackup extends AbstractModel
      * @param string $RemoteCosRegion 跨地域备份地域名称 ap-guangzhou
      * @param string $StrategyName 策略名称
      * @param string $Indices 备份索引列表，如果不填表示备份所有索引
+     * @param integer $MultiAz cos多AZ备份 0 单AZ; 1 多AZ
      * @param string $CreateTime 策略创建时间
      */
     function __construct()
@@ -236,6 +244,10 @@ class CosBackup extends AbstractModel
 
         if (array_key_exists("Indices",$param) and $param["Indices"] !== null) {
             $this->Indices = $param["Indices"];
+        }
+
+        if (array_key_exists("MultiAz",$param) and $param["MultiAz"] !== null) {
+            $this->MultiAz = $param["MultiAz"];
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {

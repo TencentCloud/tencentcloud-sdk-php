@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableDesensitizationRule(integer $EnableDesensitizationRule) 设置是否开启脱敏规则
  * @method string getDesensitizationRule() 获取脱敏规则
  * @method void setDesensitizationRule(string $DesensitizationRule) 设置脱敏规则
+ * @method AutoProfilingConfig getAutoProfilingConfig() 获取自动性能剖析任务配置
+ * @method void setAutoProfilingConfig(AutoProfilingConfig $AutoProfilingConfig) 设置自动性能剖析任务配置
  */
 class ApmApplicationConfigView extends AbstractModel
 {
@@ -199,6 +201,11 @@ class ApmApplicationConfigView extends AbstractModel
     public $DesensitizationRule;
 
     /**
+     * @var AutoProfilingConfig 自动性能剖析任务配置
+     */
+    public $AutoProfilingConfig;
+
+    /**
      * @param string $InstanceKey 业务系统 ID
      * @param string $ServiceName 应用名	
      * @param string $OperationNameFilter 接口过滤
@@ -224,6 +231,7 @@ class ApmApplicationConfigView extends AbstractModel
      * @param array $SlowSQLThresholds 慢SQL阈值
      * @param integer $EnableDesensitizationRule 是否开启脱敏规则
      * @param string $DesensitizationRule 脱敏规则
+     * @param AutoProfilingConfig $AutoProfilingConfig 自动性能剖析任务配置
      */
     function __construct()
     {
@@ -346,6 +354,11 @@ class ApmApplicationConfigView extends AbstractModel
 
         if (array_key_exists("DesensitizationRule",$param) and $param["DesensitizationRule"] !== null) {
             $this->DesensitizationRule = $param["DesensitizationRule"];
+        }
+
+        if (array_key_exists("AutoProfilingConfig",$param) and $param["AutoProfilingConfig"] !== null) {
+            $this->AutoProfilingConfig = new AutoProfilingConfig();
+            $this->AutoProfilingConfig->deserialize($param["AutoProfilingConfig"]);
         }
     }
 }

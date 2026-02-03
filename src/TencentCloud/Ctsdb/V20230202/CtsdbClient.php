@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Ctsdb\V20230202\Models as Models;
 
 /**
+ * @method Models\DescribeClusterDetailResponse DescribeClusterDetail(Models\DescribeClusterDetailRequest $req) 查询实例详情
  * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) 查询实例列表及详情
  * @method Models\DescribeDatabasesResponse DescribeDatabases(Models\DescribeDatabasesRequest $req) 查看数据库/列表
 

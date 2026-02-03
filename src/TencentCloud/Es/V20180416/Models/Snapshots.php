@@ -152,6 +152,10 @@ SUCCESS     备份成功
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStrategyName(string $StrategyName) 设置策略名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMultiAz() 获取cos多AZ备份 0 单AZ; 1 多AZ
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMultiAz(integer $MultiAz) 设置cos多AZ备份 0 单AZ; 1 多AZ
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Snapshots extends AbstractModel
 {
@@ -338,6 +342,12 @@ SUCCESS     备份成功
     public $StrategyName;
 
     /**
+     * @var integer cos多AZ备份 0 单AZ; 1 多AZ
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MultiAz;
+
+    /**
      * @param string $SnapshotName 快照名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uuid 快照Uuid
@@ -403,6 +413,8 @@ SUCCESS     备份成功
      * @param string $KmsKey kms密钥
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StrategyName 策略名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MultiAz cos多AZ备份 0 单AZ; 1 多AZ
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -537,6 +549,10 @@ SUCCESS     备份成功
 
         if (array_key_exists("StrategyName",$param) and $param["StrategyName"] !== null) {
             $this->StrategyName = $param["StrategyName"];
+        }
+
+        if (array_key_exists("MultiAz",$param) and $param["MultiAz"] !== null) {
+            $this->MultiAz = $param["MultiAz"];
         }
     }
 }

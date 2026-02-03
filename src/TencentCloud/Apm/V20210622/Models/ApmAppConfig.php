@@ -180,6 +180,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDesensitizationRule(string $DesensitizationRule) 设置脱敏规则
  * @method string getLogSpanIdKey() 获取spanId的索引key: 当CLS索引类型为键值索引时生效
  * @method void setLogSpanIdKey(string $LogSpanIdKey) 设置spanId的索引key: 当CLS索引类型为键值索引时生效
+ * @method AutoProfilingConfig getAutoProfilingConfig() 获取自动性能剖析配置
+ * @method void setAutoProfilingConfig(AutoProfilingConfig $AutoProfilingConfig) 设置自动性能剖析配置
  */
 class ApmAppConfig extends AbstractModel
 {
@@ -492,6 +494,11 @@ class ApmAppConfig extends AbstractModel
     public $LogSpanIdKey;
 
     /**
+     * @var AutoProfilingConfig 自动性能剖析配置
+     */
+    public $AutoProfilingConfig;
+
+    /**
      * @param string $InstanceKey 实例ID
      * @param string $ServiceName 服务名
      * @param integer $UrlConvergenceSwitch URL收敛开关
@@ -572,6 +579,7 @@ class ApmAppConfig extends AbstractModel
      * @param integer $EnableDesensitizationRule 是否开启脱敏规则
      * @param string $DesensitizationRule 脱敏规则
      * @param string $LogSpanIdKey spanId的索引key: 当CLS索引类型为键值索引时生效
+     * @param AutoProfilingConfig $AutoProfilingConfig 自动性能剖析配置
      */
     function __construct()
     {
@@ -823,6 +831,11 @@ class ApmAppConfig extends AbstractModel
 
         if (array_key_exists("LogSpanIdKey",$param) and $param["LogSpanIdKey"] !== null) {
             $this->LogSpanIdKey = $param["LogSpanIdKey"];
+        }
+
+        if (array_key_exists("AutoProfilingConfig",$param) and $param["AutoProfilingConfig"] !== null) {
+            $this->AutoProfilingConfig = new AutoProfilingConfig();
+            $this->AutoProfilingConfig->deserialize($param["AutoProfilingConfig"]);
         }
     }
 }

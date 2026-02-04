@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProcessName(string $ProcessName) 设置当前步骤的名称，例如：”购买资源中“
  * @method integer getBackupStatus() 获取集群备份任务开启状态
  * @method void setBackupStatus(integer $BackupStatus) 设置集群备份任务开启状态
+ * @method integer getBackupOpenStatus() 获取集群备份任务开启状态2
+ * @method void setBackupOpenStatus(integer $BackupOpenStatus) 设置集群备份任务开启状态2
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -82,6 +84,11 @@ class DescribeInstanceStateResponse extends AbstractModel
     public $BackupStatus;
 
     /**
+     * @var integer 集群备份任务开启状态2
+     */
+    public $BackupOpenStatus;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -95,6 +102,7 @@ class DescribeInstanceStateResponse extends AbstractModel
      * @param string $FlowMsg 集群流程错误信息，例如：“创建失败，资源不足”
      * @param string $ProcessName 当前步骤的名称，例如：”购买资源中“
      * @param integer $BackupStatus 集群备份任务开启状态
+     * @param integer $BackupOpenStatus 集群备份任务开启状态2
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -140,6 +148,10 @@ class DescribeInstanceStateResponse extends AbstractModel
 
         if (array_key_exists("BackupStatus",$param) and $param["BackupStatus"] !== null) {
             $this->BackupStatus = $param["BackupStatus"];
+        }
+
+        if (array_key_exists("BackupOpenStatus",$param) and $param["BackupOpenStatus"] !== null) {
+            $this->BackupOpenStatus = $param["BackupOpenStatus"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

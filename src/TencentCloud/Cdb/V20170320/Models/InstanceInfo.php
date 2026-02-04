@@ -130,6 +130,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceBandwidth(integer $DeviceBandwidth) 设置设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。
  * @method string getDestroyProtect() 获取实例销毁保护状态，on表示开启保护，否则为关闭保护
  * @method void setDestroyProtect(string $DestroyProtect) 设置实例销毁保护状态，on表示开启保护，否则为关闭保护
+ * @method string getCpuModel() 获取TDSQL引擎参数
+ * @method void setCpuModel(string $CpuModel) 设置TDSQL引擎参数
  */
 class InstanceInfo extends AbstractModel
 {
@@ -393,6 +395,11 @@ class InstanceInfo extends AbstractModel
     public $DestroyProtect;
 
     /**
+     * @var string TDSQL引擎参数
+     */
+    public $CpuModel;
+
+    /**
      * @param integer $WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      * @param string $Zone 可用区信息
      * @param integer $InitFlag 初始化标志，可能的返回值为：0-未初始化；1-已初始化
@@ -448,6 +455,7 @@ class InstanceInfo extends AbstractModel
      * @param array $AnalysisNodeInfos 分析引擎节点列表
      * @param integer $DeviceBandwidth 设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。
      * @param string $DestroyProtect 实例销毁保护状态，on表示开启保护，否则为关闭保护
+     * @param string $CpuModel TDSQL引擎参数
      */
     function __construct()
     {
@@ -692,6 +700,10 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("DestroyProtect",$param) and $param["DestroyProtect"] !== null) {
             $this->DestroyProtect = $param["DestroyProtect"];
+        }
+
+        if (array_key_exists("CpuModel",$param) and $param["CpuModel"] !== null) {
+            $this->CpuModel = $param["CpuModel"];
         }
     }
 }

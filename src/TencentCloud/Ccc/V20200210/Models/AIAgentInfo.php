@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAIAgentId(integer $AIAgentId) 设置智能体ID
  * @method string getAIAgentName() 获取智能体名称
  * @method void setAIAgentName(string $AIAgentName) 设置智能体名称
+ * @method array getVariableNames() 获取智能体变量名列表
+ * @method void setVariableNames(array $VariableNames) 设置智能体变量名列表
  */
 class AIAgentInfo extends AbstractModel
 {
@@ -38,8 +40,14 @@ class AIAgentInfo extends AbstractModel
     public $AIAgentName;
 
     /**
+     * @var array 智能体变量名列表
+     */
+    public $VariableNames;
+
+    /**
      * @param integer $AIAgentId 智能体ID
      * @param string $AIAgentName 智能体名称
+     * @param array $VariableNames 智能体变量名列表
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class AIAgentInfo extends AbstractModel
 
         if (array_key_exists("AIAgentName",$param) and $param["AIAgentName"] !== null) {
             $this->AIAgentName = $param["AIAgentName"];
+        }
+
+        if (array_key_exists("VariableNames",$param) and $param["VariableNames"] !== null) {
+            $this->VariableNames = $param["VariableNames"];
         }
     }
 }

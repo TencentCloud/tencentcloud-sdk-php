@@ -23,9 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getInputInfo() 获取媒体处理的文件输入信息。
  * @method void setInputInfo(array $InputInfo) 设置媒体处理的文件输入信息。
  * @method TaskOutputStorage getOutputStorage() 获取媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
-注意：当InputInfo.Type为URL时，该参数是必填项
+注意：当InputInfo.Type为URL时，该参数是必填项，目前只支持COS输出
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
-注意：当InputInfo.Type为URL时，该参数是必填项
+注意：当InputInfo.Type为URL时，该参数是必填项，目前只支持COS输出
  * @method string getOutputDir() 获取媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
 如果不填，表示与 InputInfo 中文件所在的目录一致。
  * @method void setOutputDir(string $OutputDir) 设置媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTasksPriority(integer $TasksPriority) 设置任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
  * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
  * @method void setSessionContext(string $SessionContext) 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
- * @method string getResourceId() 获取资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
- * @method void setResourceId(string $ResourceId) 设置资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+ * @method string getResourceId() 获取资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
+ * @method void setResourceId(string $ResourceId) 设置资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
  * @method integer getSkipMateData() 获取是否跳过元信息获取，可选值： 
 0：表示不跳过 
 1：表示跳过 
@@ -58,7 +58,7 @@ class BatchProcessMediaRequest extends AbstractModel
 
     /**
      * @var TaskOutputStorage 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
-注意：当InputInfo.Type为URL时，该参数是必填项
+注意：当InputInfo.Type为URL时，该参数是必填项，目前只支持COS输出
      */
     public $OutputStorage;
 
@@ -89,7 +89,7 @@ class BatchProcessMediaRequest extends AbstractModel
     public $SessionContext;
 
     /**
-     * @var string 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+     * @var string 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
      */
     public $ResourceId;
 
@@ -104,14 +104,14 @@ class BatchProcessMediaRequest extends AbstractModel
     /**
      * @param array $InputInfo 媒体处理的文件输入信息。
      * @param TaskOutputStorage $OutputStorage 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
-注意：当InputInfo.Type为URL时，该参数是必填项
+注意：当InputInfo.Type为URL时，该参数是必填项，目前只支持COS输出
      * @param string $OutputDir 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
 如果不填，表示与 InputInfo 中文件所在的目录一致。
      * @param SmartSubtitlesTaskInput $SmartSubtitlesTask 智能字幕
      * @param TaskNotifyConfig $TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
      * @param integer $TasksPriority 任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-     * @param string $ResourceId 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+     * @param string $ResourceId 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
      * @param integer $SkipMateData 是否跳过元信息获取，可选值： 
 0：表示不跳过 
 1：表示跳过 

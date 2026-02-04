@@ -80,6 +80,8 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
  * @method void setRuntimeVersion(string $RuntimeVersion) 设置运行时版本
  * @method string getVpcCniType() 获取区分共享网卡多IP模式和独立网卡模式，共享网卡多 IP 模式填写"tke-route-eni"，独立网卡模式填写"tke-direct-eni"，默认为共享网卡模式
  * @method void setVpcCniType(string $VpcCniType) 设置区分共享网卡多IP模式和独立网卡模式，共享网卡多 IP 模式填写"tke-route-eni"，独立网卡模式填写"tke-direct-eni"，默认为共享网卡模式
+ * @method boolean getIsHighAvailability() 获取集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行，默认为true
+ * @method void setIsHighAvailability(boolean $IsHighAvailability) 设置集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行，默认为true
  */
 class ClusterAdvancedSettings extends AbstractModel
 {
@@ -198,6 +200,11 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
     public $VpcCniType;
 
     /**
+     * @var boolean 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行，默认为true
+     */
+    public $IsHighAvailability;
+
+    /**
      * @param boolean $AsEnabled 是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
      * @param boolean $AuditEnabled 是否开启审计开关
      * @param string $AuditLogTopicId 审计日志上传到的topic
@@ -228,6 +235,7 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
      * @param boolean $QGPUShareEnable 是否开启QGPU共享
      * @param string $RuntimeVersion 运行时版本
      * @param string $VpcCniType 区分共享网卡多IP模式和独立网卡模式，共享网卡多 IP 模式填写"tke-route-eni"，独立网卡模式填写"tke-direct-eni"，默认为共享网卡模式
+     * @param boolean $IsHighAvailability 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行，默认为true
      */
     function __construct()
     {
@@ -330,6 +338,10 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
 
         if (array_key_exists("VpcCniType",$param) and $param["VpcCniType"] !== null) {
             $this->VpcCniType = $param["VpcCniType"];
+        }
+
+        if (array_key_exists("IsHighAvailability",$param) and $param["IsHighAvailability"] !== null) {
+            $this->IsHighAvailability = $param["IsHighAvailability"];
         }
     }
 }

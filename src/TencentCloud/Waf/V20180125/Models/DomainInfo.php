@@ -274,6 +274,8 @@ public：公有云域名
  * @method void setAccessStatus(integer $AccessStatus) 设置clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
  * @method array getLabels() 获取域名标签
  * @method void setLabels(array $Labels) 设置域名标签
+ * @method integer getPrivateVipStatus() 获取saaswaf独享ip状态，0是关闭，1是开启，2是开启中
+ * @method void setPrivateVipStatus(integer $PrivateVipStatus) 设置saaswaf独享ip状态，0是关闭，1是开启，2是开启中
  */
 class DomainInfo extends AbstractModel
 {
@@ -549,6 +551,11 @@ public：公有云域名
     public $Labels;
 
     /**
+     * @var integer saaswaf独享ip状态，0是关闭，1是开启，2是开启中
+     */
+    public $PrivateVipStatus;
+
+    /**
      * @param string $Domain 域名
      * @param string $DomainId 域名ID
      * @param string $InstanceId 实例ID
@@ -676,6 +683,7 @@ public：公有云域名
      * @param string $SgID 安全组ID
      * @param integer $AccessStatus clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
      * @param array $Labels 域名标签
+     * @param integer $PrivateVipStatus saaswaf独享ip状态，0是关闭，1是开启，2是开启中
      */
     function __construct()
     {
@@ -842,6 +850,10 @@ public：公有云域名
 
         if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
             $this->Labels = $param["Labels"];
+        }
+
+        if (array_key_exists("PrivateVipStatus",$param) and $param["PrivateVipStatus"] !== null) {
+            $this->PrivateVipStatus = $param["PrivateVipStatus"];
         }
     }
 }

@@ -150,6 +150,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBotSecurityPkg(BotSecurityPkg $BotSecurityPkg) 设置BOT安全护航信息
  * @method BotMonitorPkg getBotMonitorPkg() 获取BOT安全监测资源信息
  * @method void setBotMonitorPkg(BotMonitorPkg $BotMonitorPkg) 设置BOT安全监测资源信息
+ * @method DedicatedIPPkg getDedicatedIPPkg() 获取独享ip资源信息
+ * @method void setDedicatedIPPkg(DedicatedIPPkg $DedicatedIPPkg) 设置独享ip资源信息
+ * @method integer getDedicatedIPCount() 获取已经配置独享ip的数量
+ * @method void setDedicatedIPCount(integer $DedicatedIPCount) 设置已经配置独享ip的数量
  */
 class InstanceInfo extends AbstractModel
 {
@@ -435,6 +439,16 @@ class InstanceInfo extends AbstractModel
     public $BotMonitorPkg;
 
     /**
+     * @var DedicatedIPPkg 独享ip资源信息
+     */
+    public $DedicatedIPPkg;
+
+    /**
+     * @var integer 已经配置独享ip的数量
+     */
+    public $DedicatedIPCount;
+
+    /**
      * @param string $InstanceId 实例唯一ID
      * @param string $InstanceName 实例名称
      * @param string $ResourceIds 实例对应资源ID，计费使用
@@ -500,6 +514,8 @@ class InstanceInfo extends AbstractModel
      * @param integer $RegionId 地域id
      * @param BotSecurityPkg $BotSecurityPkg BOT安全护航信息
      * @param BotMonitorPkg $BotMonitorPkg BOT安全监测资源信息
+     * @param DedicatedIPPkg $DedicatedIPPkg 独享ip资源信息
+     * @param integer $DedicatedIPCount 已经配置独享ip的数量
      */
     function __construct()
     {
@@ -745,6 +761,15 @@ class InstanceInfo extends AbstractModel
         if (array_key_exists("BotMonitorPkg",$param) and $param["BotMonitorPkg"] !== null) {
             $this->BotMonitorPkg = new BotMonitorPkg();
             $this->BotMonitorPkg->deserialize($param["BotMonitorPkg"]);
+        }
+
+        if (array_key_exists("DedicatedIPPkg",$param) and $param["DedicatedIPPkg"] !== null) {
+            $this->DedicatedIPPkg = new DedicatedIPPkg();
+            $this->DedicatedIPPkg->deserialize($param["DedicatedIPPkg"]);
+        }
+
+        if (array_key_exists("DedicatedIPCount",$param) and $param["DedicatedIPCount"] !== null) {
+            $this->DedicatedIPCount = $param["DedicatedIPCount"];
         }
     }
 }

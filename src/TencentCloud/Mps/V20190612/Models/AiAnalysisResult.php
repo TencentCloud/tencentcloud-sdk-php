@@ -98,13 +98,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVideoComprehensionTask(AiAnalysisTaskVideoComprehensionResult $VideoComprehensionTask) 设置视频（音频）理解任务的查询结果，当任务类型为 VideoComprehension 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AiAnalysisTaskCutoutResult getCutoutTask() 获取视频内容分析抠图任务的查询结果，当任务类型为Cutout时有效。
+ * @method AiAnalysisTaskCutoutResult getCutoutTask() 获取视频内容分析智能抠图任务的查询结果，当任务类型为Cutout时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCutoutTask(AiAnalysisTaskCutoutResult $CutoutTask) 设置视频内容分析抠图任务的查询结果，当任务类型为Cutout时有效。
+ * @method void setCutoutTask(AiAnalysisTaskCutoutResult $CutoutTask) 设置视频内容分析智能抠图任务的查询结果，当任务类型为Cutout时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AiAnalysisTaskReelResult getReelTask() 获取视频内容分析成片任务的查询结果，当任务类型为Reel时有效。
+ * @method AiAnalysisTaskReelResult getReelTask() 获取视频内容分析AI解说二创任务的查询结果，当任务类型为Reel时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReelTask(AiAnalysisTaskReelResult $ReelTask) 设置视频内容分析成片任务的查询结果，当任务类型为Reel时有效。
+ * @method void setReelTask(AiAnalysisTaskReelResult $ReelTask) 设置视频内容分析AI解说二创任务的查询结果，当任务类型为Reel时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AiAnalysisResult extends AbstractModel
@@ -205,13 +205,13 @@ class AiAnalysisResult extends AbstractModel
     public $VideoComprehensionTask;
 
     /**
-     * @var AiAnalysisTaskCutoutResult 视频内容分析抠图任务的查询结果，当任务类型为Cutout时有效。
+     * @var AiAnalysisTaskCutoutResult 视频内容分析智能抠图任务的查询结果，当任务类型为Cutout时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CutoutTask;
 
     /**
-     * @var AiAnalysisTaskReelResult 视频内容分析成片任务的查询结果，当任务类型为Reel时有效。
+     * @var AiAnalysisTaskReelResult 视频内容分析AI解说二创任务的查询结果，当任务类型为Reel时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReelTask;
@@ -256,9 +256,9 @@ class AiAnalysisResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiAnalysisTaskVideoComprehensionResult $VideoComprehensionTask 视频（音频）理解任务的查询结果，当任务类型为 VideoComprehension 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AiAnalysisTaskCutoutResult $CutoutTask 视频内容分析抠图任务的查询结果，当任务类型为Cutout时有效。
+     * @param AiAnalysisTaskCutoutResult $CutoutTask 视频内容分析智能抠图任务的查询结果，当任务类型为Cutout时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AiAnalysisTaskReelResult $ReelTask 视频内容分析成片任务的查询结果，当任务类型为Reel时有效。
+     * @param AiAnalysisTaskReelResult $ReelTask 视频内容分析AI解说二创任务的查询结果，当任务类型为Reel时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

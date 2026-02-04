@@ -26,10 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) 设置唯一标识转推任务。
  * @method integer getSequenceNumber() 获取客户保证同一个任务，每次更新请求中的SequenceNumber递增，防止请求乱序。
  * @method void setSequenceNumber(integer $SequenceNumber) 设置客户保证同一个任务，每次更新请求中的SequenceNumber递增，防止请求乱序。
- * @method integer getWithTranscoding() 获取是否转码，0表示无需转码，1表示需要转码。
-注：混流是必须转码，这个参数需设置为1。
- * @method void setWithTranscoding(integer $WithTranscoding) 设置是否转码，0表示无需转码，1表示需要转码。
-注：混流是必须转码，这个参数需设置为1。
+ * @method integer getWithTranscoding() 获取是否转码，0表示无需转码，1表示需要转码。 WithTranscoding为0，表示旁路转推，默认不转码；WithTranscoding为1，表示混流转推，此时一定会转码，并收取转码费用。 注： 1，混流是必须转码的，这个参数需设置为1。 2，WithTranscoding=0时，视频输出Codec默认跟随上行视频Codec，如果上行视频Codec发生变化，CDN会断流重推。
+ * @method void setWithTranscoding(integer $WithTranscoding) 设置是否转码，0表示无需转码，1表示需要转码。 WithTranscoding为0，表示旁路转推，默认不转码；WithTranscoding为1，表示混流转推，此时一定会转码，并收取转码费用。 注： 1，混流是必须转码的，这个参数需设置为1。 2，WithTranscoding=0时，视频输出Codec默认跟随上行视频Codec，如果上行视频Codec发生变化，CDN会断流重推。
  * @method McuAudioParams getAudioParams() 获取更新相关参数，只支持更新参与混音的主播列表参数，不支持更新Codec、采样率、码率和声道数。不填表示不更新此参数。
  * @method void setAudioParams(McuAudioParams $AudioParams) 设置更新相关参数，只支持更新参与混音的主播列表参数，不支持更新Codec、采样率、码率和声道数。不填表示不更新此参数。
  * @method McuVideoParams getVideoParams() 获取更新视频相关参数，转码时支持更新除编码类型之外的编码参数，视频布局参数，背景图片和背景颜色参数，水印参数。不填表示不更新此参数。
@@ -61,8 +59,7 @@ class UpdatePublishCdnStreamRequest extends AbstractModel
     public $SequenceNumber;
 
     /**
-     * @var integer 是否转码，0表示无需转码，1表示需要转码。
-注：混流是必须转码，这个参数需设置为1。
+     * @var integer 是否转码，0表示无需转码，1表示需要转码。 WithTranscoding为0，表示旁路转推，默认不转码；WithTranscoding为1，表示混流转推，此时一定会转码，并收取转码费用。 注： 1，混流是必须转码的，这个参数需设置为1。 2，WithTranscoding=0时，视频输出Codec默认跟随上行视频Codec，如果上行视频Codec发生变化，CDN会断流重推。
      */
     public $WithTranscoding;
 
@@ -100,8 +97,7 @@ class UpdatePublishCdnStreamRequest extends AbstractModel
      * @param integer $SdkAppId TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和转推的房间所对应的SdkAppId相同。
      * @param string $TaskId 唯一标识转推任务。
      * @param integer $SequenceNumber 客户保证同一个任务，每次更新请求中的SequenceNumber递增，防止请求乱序。
-     * @param integer $WithTranscoding 是否转码，0表示无需转码，1表示需要转码。
-注：混流是必须转码，这个参数需设置为1。
+     * @param integer $WithTranscoding 是否转码，0表示无需转码，1表示需要转码。 WithTranscoding为0，表示旁路转推，默认不转码；WithTranscoding为1，表示混流转推，此时一定会转码，并收取转码费用。 注： 1，混流是必须转码的，这个参数需设置为1。 2，WithTranscoding=0时，视频输出Codec默认跟随上行视频Codec，如果上行视频Codec发生变化，CDN会断流重推。
      * @param McuAudioParams $AudioParams 更新相关参数，只支持更新参与混音的主播列表参数，不支持更新Codec、采样率、码率和声道数。不填表示不更新此参数。
      * @param McuVideoParams $VideoParams 更新视频相关参数，转码时支持更新除编码类型之外的编码参数，视频布局参数，背景图片和背景颜色参数，水印参数。不填表示不更新此参数。
      * @param SingleSubscribeParams $SingleSubscribeParams 更新单流转推的用户上行参数，仅在非转码时有效。不填表示不更新此参数。

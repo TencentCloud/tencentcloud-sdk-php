@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTotalCount() 获取升级记录总数
  * @method void setTotalCount(string $TotalCount) 设置升级记录总数
+ * @method string getErrorMsg() 获取错误信息
+ * @method void setErrorMsg(string $ErrorMsg) 设置错误信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -43,6 +45,11 @@ class DescribeUpgradeListResponse extends AbstractModel
     public $TotalCount;
 
     /**
+     * @var string 错误信息
+     */
+    public $ErrorMsg;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -51,6 +58,7 @@ class DescribeUpgradeListResponse extends AbstractModel
      * @param array $UpgradeItems 升级记录具体数据
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TotalCount 升级记录总数
+     * @param string $ErrorMsg 错误信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -77,6 +85,10 @@ class DescribeUpgradeListResponse extends AbstractModel
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("ErrorMsg",$param) and $param["ErrorMsg"] !== null) {
+            $this->ErrorMsg = $param["ErrorMsg"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

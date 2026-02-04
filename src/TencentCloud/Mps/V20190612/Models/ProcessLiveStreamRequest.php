@@ -20,20 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ProcessLiveStream请求参数结构体
  *
- * @method string getUrl() 获取直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv, trtc 等）。
+ * @method string getUrl() 获取直播流 URL（必须是直播流地址，支持 rtmp，hls 和 flv, trtc,webrtc,srt等）。
 trtc地址如下：
  trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
 `<roomid>` 为trtc的房间号id, 为数字
 `<sdkappid>` 为trtc的sdk app id
 `<userid>` 为服务进入房间的用户id,可以区分谁是机器人
 <`usersig>` 为trtc 用户的签名
- * @method void setUrl(string $Url) 设置直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv, trtc 等）。
+
+webrtc 支持[LEB](https://cloud.tencent.com/product/leb)的直播流，地址获取请[参考](https://cloud.tencent.com/document/product/267/32720)
+
+srt支持地址请[参考](https://ffmpeg.org/ffmpeg-protocols.html#srt)
+
+
+ * @method void setUrl(string $Url) 设置直播流 URL（必须是直播流地址，支持 rtmp，hls 和 flv, trtc,webrtc,srt等）。
 trtc地址如下：
  trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
 `<roomid>` 为trtc的房间号id, 为数字
 `<sdkappid>` 为trtc的sdk app id
 `<userid>` 为服务进入房间的用户id,可以区分谁是机器人
 <`usersig>` 为trtc 用户的签名
+
+webrtc 支持[LEB](https://cloud.tencent.com/product/leb)的直播流，地址获取请[参考](https://cloud.tencent.com/document/product/267/32720)
+
+srt支持地址请[参考](https://ffmpeg.org/ffmpeg-protocols.html#srt)
+
+
  * @method LiveStreamTaskNotifyConfig getTaskNotifyConfig() 获取任务的事件通知信息，用于指定直播流处理的结果。
  * @method void setTaskNotifyConfig(LiveStreamTaskNotifyConfig $TaskNotifyConfig) 设置任务的事件通知信息，用于指定直播流处理的结果。
  * @method TaskOutputStorage getOutputStorage() 获取直播流处理输出文件的目标存储。如处理有文件输出，该参数为必填项。
@@ -48,6 +60,8 @@ trtc地址如下：
  * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) 设置视频内容分析类型任务参数。
  * @method AiQualityControlTaskInput getAiQualityControlTask() 获取媒体质检类型任务参数。
  * @method void setAiQualityControlTask(AiQualityControlTaskInput $AiQualityControlTask) 设置媒体质检类型任务参数。
+ * @method LiveSmartSubtitlesTaskInput getSmartSubtitlesTask() 获取智能字幕任务参数。
+ * @method void setSmartSubtitlesTask(LiveSmartSubtitlesTaskInput $SmartSubtitlesTask) 设置智能字幕任务参数。
  * @method string getSessionId() 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
@@ -66,13 +80,19 @@ trtc地址如下：
 class ProcessLiveStreamRequest extends AbstractModel
 {
     /**
-     * @var string 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv, trtc 等）。
+     * @var string 直播流 URL（必须是直播流地址，支持 rtmp，hls 和 flv, trtc,webrtc,srt等）。
 trtc地址如下：
  trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
 `<roomid>` 为trtc的房间号id, 为数字
 `<sdkappid>` 为trtc的sdk app id
 `<userid>` 为服务进入房间的用户id,可以区分谁是机器人
 <`usersig>` 为trtc 用户的签名
+
+webrtc 支持[LEB](https://cloud.tencent.com/product/leb)的直播流，地址获取请[参考](https://cloud.tencent.com/document/product/267/32720)
+
+srt支持地址请[参考](https://ffmpeg.org/ffmpeg-protocols.html#srt)
+
+
      */
     public $Url;
 
@@ -112,6 +132,11 @@ trtc地址如下：
     public $AiQualityControlTask;
 
     /**
+     * @var LiveSmartSubtitlesTaskInput 智能字幕任务参数。
+     */
+    public $SmartSubtitlesTask;
+
+    /**
      * @var string 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
     public $SessionId;
@@ -131,13 +156,19 @@ trtc地址如下：
     public $ScheduleId;
 
     /**
-     * @param string $Url 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv, trtc 等）。
+     * @param string $Url 直播流 URL（必须是直播流地址，支持 rtmp，hls 和 flv, trtc,webrtc,srt等）。
 trtc地址如下：
  trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
 `<roomid>` 为trtc的房间号id, 为数字
 `<sdkappid>` 为trtc的sdk app id
 `<userid>` 为服务进入房间的用户id,可以区分谁是机器人
 <`usersig>` 为trtc 用户的签名
+
+webrtc 支持[LEB](https://cloud.tencent.com/product/leb)的直播流，地址获取请[参考](https://cloud.tencent.com/document/product/267/32720)
+
+srt支持地址请[参考](https://ffmpeg.org/ffmpeg-protocols.html#srt)
+
+
      * @param LiveStreamTaskNotifyConfig $TaskNotifyConfig 任务的事件通知信息，用于指定直播流处理的结果。
      * @param TaskOutputStorage $OutputStorage 直播流处理输出文件的目标存储。如处理有文件输出，该参数为必填项。
      * @param string $OutputDir 直播流处理生成的文件输出的目标目录，如`/movie/201909/`，如果不填为 `/` 目录。
@@ -145,6 +176,7 @@ trtc地址如下：
      * @param AiRecognitionTaskInput $AiRecognitionTask 视频内容识别类型任务参数。
      * @param AiAnalysisTaskInput $AiAnalysisTask 视频内容分析类型任务参数。
      * @param AiQualityControlTaskInput $AiQualityControlTask 媒体质检类型任务参数。
+     * @param LiveSmartSubtitlesTaskInput $SmartSubtitlesTask 智能字幕任务参数。
      * @param string $SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      * @param integer $ScheduleId 直播编排ID。
@@ -202,6 +234,11 @@ trtc地址如下：
         if (array_key_exists("AiQualityControlTask",$param) and $param["AiQualityControlTask"] !== null) {
             $this->AiQualityControlTask = new AiQualityControlTaskInput();
             $this->AiQualityControlTask->deserialize($param["AiQualityControlTask"]);
+        }
+
+        if (array_key_exists("SmartSubtitlesTask",$param) and $param["SmartSubtitlesTask"] !== null) {
+            $this->SmartSubtitlesTask = new LiveSmartSubtitlesTaskInput();
+            $this->SmartSubtitlesTask->deserialize($param["SmartSubtitlesTask"]);
         }
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {

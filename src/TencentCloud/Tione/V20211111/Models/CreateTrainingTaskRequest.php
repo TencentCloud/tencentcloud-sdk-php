@@ -70,6 +70,8 @@ POSTPAID_BY_HOUR 按量计费
  * @method void setEncodedStartCmdInfo(EncodedStartCmdInfo $EncodedStartCmdInfo) 设置编码后的任务启动命令，与StartCmdInfo同时配置时，仅当前参数生效
  * @method array getCodeRepos() 获取代码仓库配置
  * @method void setCodeRepos(array $CodeRepos) 设置代码仓库配置
+ * @method ExposeNetworkConfig getExposeNetworkConfig() 获取网络暴露配置
+ * @method void setExposeNetworkConfig(ExposeNetworkConfig $ExposeNetworkConfig) 设置网络暴露配置
  */
 class CreateTrainingTaskRequest extends AbstractModel
 {
@@ -195,6 +197,11 @@ POSTPAID_BY_HOUR 按量计费
     public $CodeRepos;
 
     /**
+     * @var ExposeNetworkConfig 网络暴露配置
+     */
+    public $ExposeNetworkConfig;
+
+    /**
      * @param string $Name 训练任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      * @param string $ChargeType 计费模式，eg：PREPAID 包年包月（资源组）;
 POSTPAID_BY_HOUR 按量计费
@@ -220,6 +227,7 @@ POSTPAID_BY_HOUR 按量计费
      * @param string $CallbackUrl 回调地址，用于创建/启动/停止训练任务的异步回调。回调格式&内容详见：[[TI-ONE接口回调说明]](https://cloud.tencent.com/document/product/851/84292)
      * @param EncodedStartCmdInfo $EncodedStartCmdInfo 编码后的任务启动命令，与StartCmdInfo同时配置时，仅当前参数生效
      * @param array $CodeRepos 代码仓库配置
+     * @param ExposeNetworkConfig $ExposeNetworkConfig 网络暴露配置
      */
     function __construct()
     {
@@ -354,6 +362,11 @@ POSTPAID_BY_HOUR 按量计费
                 $obj->deserialize($value);
                 array_push($this->CodeRepos, $obj);
             }
+        }
+
+        if (array_key_exists("ExposeNetworkConfig",$param) and $param["ExposeNetworkConfig"] !== null) {
+            $this->ExposeNetworkConfig = new ExposeNetworkConfig();
+            $this->ExposeNetworkConfig->deserialize($param["ExposeNetworkConfig"]);
         }
     }
 }

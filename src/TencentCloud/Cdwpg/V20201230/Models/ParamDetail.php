@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShortDesc(string $ShortDesc) 设置英文简介
  * @method string getParameterName() 获取参数名
  * @method void setParameterName(string $ParameterName) 设置参数名
+ * @method string getLatestValue() 获取最新修改值
+ * @method void setLatestValue(string $LatestValue) 设置最新修改值
  */
 class ParamDetail extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ParamDetail extends AbstractModel
     public $ParameterName;
 
     /**
+     * @var string 最新修改值
+     */
+    public $LatestValue;
+
+    /**
      * @param string $ParamName 参数名
      * @param string $DefaultValue 默认值
      * @param boolean $NeedRestart 是否需要重启
@@ -88,6 +95,7 @@ class ParamDetail extends AbstractModel
      * @param string $Unit 单位
      * @param string $ShortDesc 英文简介
      * @param string $ParameterName 参数名
+     * @param string $LatestValue 最新修改值
      */
     function __construct()
     {
@@ -133,6 +141,10 @@ class ParamDetail extends AbstractModel
 
         if (array_key_exists("ParameterName",$param) and $param["ParameterName"] !== null) {
             $this->ParameterName = $param["ParameterName"];
+        }
+
+        if (array_key_exists("LatestValue",$param) and $param["LatestValue"] !== null) {
+            $this->LatestValue = $param["LatestValue"];
         }
     }
 }

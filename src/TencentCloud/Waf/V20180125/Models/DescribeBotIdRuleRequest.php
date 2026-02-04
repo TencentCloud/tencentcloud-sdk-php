@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBotId(string $BotId) 设置规则名称
  * @method array getLevel() 获取风险等级筛选
  * @method void setLevel(array $Level) 设置风险等级筛选
- * @method array getBotIdType() 获取规则类型筛选
- * @method void setBotIdType(array $BotIdType) 设置规则类型筛选
+ * @method array getBotIdType() 获取规则类型筛选"cbe-01": "爬虫型BOT", 	"cbe-02": "刷量型BOT", 	"cbe-03": "账号穷举型BOT", 	"cbe-04": "恶意扫描型BOT", 	"cbe-05": "DDoS型BOT", 	"cbe-06": "垃圾邮件发送型BOT", 	"cbe-07": "社交媒体自动化型BOT", 	"cbe-08": "竞争对手数据收集型BOT", 	"cbe-09": "恶意软件传播型BOT"
+ * @method void setBotIdType(array $BotIdType) 设置规则类型筛选"cbe-01": "爬虫型BOT", 	"cbe-02": "刷量型BOT", 	"cbe-03": "账号穷举型BOT", 	"cbe-04": "恶意扫描型BOT", 	"cbe-05": "DDoS型BOT", 	"cbe-06": "垃圾邮件发送型BOT", 	"cbe-07": "社交媒体自动化型BOT", 	"cbe-08": "竞争对手数据收集型BOT", 	"cbe-09": "恶意软件传播型BOT"
  * @method integer getStatus() 获取规则开关-用于筛选: 0-全部 1-关闭 2-开启
  * @method void setStatus(integer $Status) 设置规则开关-用于筛选: 0-全部 1-关闭 2-开启
  * @method array getRuleAction() 获取动作类型-用于筛选
@@ -65,7 +65,7 @@ class DescribeBotIdRuleRequest extends AbstractModel
     public $Level;
 
     /**
-     * @var array 规则类型筛选
+     * @var array 规则类型筛选"cbe-01": "爬虫型BOT", 	"cbe-02": "刷量型BOT", 	"cbe-03": "账号穷举型BOT", 	"cbe-04": "恶意扫描型BOT", 	"cbe-05": "DDoS型BOT", 	"cbe-06": "垃圾邮件发送型BOT", 	"cbe-07": "社交媒体自动化型BOT", 	"cbe-08": "竞争对手数据收集型BOT", 	"cbe-09": "恶意软件传播型BOT"
      */
     public $BotIdType;
 
@@ -85,7 +85,7 @@ class DescribeBotIdRuleRequest extends AbstractModel
      * @param string $RuleId 规则ID
      * @param string $BotId 规则名称
      * @param array $Level 风险等级筛选
-     * @param array $BotIdType 规则类型筛选
+     * @param array $BotIdType 规则类型筛选"cbe-01": "爬虫型BOT", 	"cbe-02": "刷量型BOT", 	"cbe-03": "账号穷举型BOT", 	"cbe-04": "恶意扫描型BOT", 	"cbe-05": "DDoS型BOT", 	"cbe-06": "垃圾邮件发送型BOT", 	"cbe-07": "社交媒体自动化型BOT", 	"cbe-08": "竞争对手数据收集型BOT", 	"cbe-09": "恶意软件传播型BOT"
      * @param integer $Status 规则开关-用于筛选: 0-全部 1-关闭 2-开启
      * @param array $RuleAction 动作类型-用于筛选
      */

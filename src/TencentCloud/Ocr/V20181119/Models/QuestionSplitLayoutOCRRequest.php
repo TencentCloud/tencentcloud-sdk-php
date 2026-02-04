@@ -30,8 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPdfPageNumber(integer $PdfPageNumber) 设置需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
  * @method boolean getEnableImageCrop() 获取是否开启切边增强和弯曲矫正,默认为false不开启
  * @method void setEnableImageCrop(boolean $EnableImageCrop) 设置是否开启切边增强和弯曲矫正,默认为false不开启
- * @method boolean getUseNewModel() 获取false: 使用当前默认模型  true: 使用新的多模态推理模型，速度更快推理效果更强，仅 `EnableOnlyDetectBorder` 为 `true` 时生效，公测中
- * @method void setUseNewModel(boolean $UseNewModel) 设置false: 使用当前默认模型  true: 使用新的多模态推理模型，速度更快推理效果更强，仅 `EnableOnlyDetectBorder` 为 `true` 时生效，公测中
+ * @method boolean getUseNewModel() 获取false: 使用当前默认模型返回结构化信息更全面，但检测精度一般
+true:  使用多模态推理模型，速度更快精度更高，但只返回题目最外层边框
+
+API默认false, demo默认使用的是true
+ * @method void setUseNewModel(boolean $UseNewModel) 设置false: 使用当前默认模型返回结构化信息更全面，但检测精度一般
+true:  使用多模态推理模型，速度更快精度更高，但只返回题目最外层边框
+
+API默认false, demo默认使用的是true
  */
 class QuestionSplitLayoutOCRRequest extends AbstractModel
 {
@@ -61,7 +67,10 @@ class QuestionSplitLayoutOCRRequest extends AbstractModel
     public $EnableImageCrop;
 
     /**
-     * @var boolean false: 使用当前默认模型  true: 使用新的多模态推理模型，速度更快推理效果更强，仅 `EnableOnlyDetectBorder` 为 `true` 时生效，公测中
+     * @var boolean false: 使用当前默认模型返回结构化信息更全面，但检测精度一般
+true:  使用多模态推理模型，速度更快精度更高，但只返回题目最外层边框
+
+API默认false, demo默认使用的是true
      */
     public $UseNewModel;
 
@@ -71,7 +80,10 @@ class QuestionSplitLayoutOCRRequest extends AbstractModel
      * @param boolean $IsPdf 是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
      * @param integer $PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
      * @param boolean $EnableImageCrop 是否开启切边增强和弯曲矫正,默认为false不开启
-     * @param boolean $UseNewModel false: 使用当前默认模型  true: 使用新的多模态推理模型，速度更快推理效果更强，仅 `EnableOnlyDetectBorder` 为 `true` 时生效，公测中
+     * @param boolean $UseNewModel false: 使用当前默认模型返回结构化信息更全面，但检测精度一般
+true:  使用多模态推理模型，速度更快精度更高，但只返回题目最外层边框
+
+API默认false, demo默认使用的是true
      */
     function __construct()
     {

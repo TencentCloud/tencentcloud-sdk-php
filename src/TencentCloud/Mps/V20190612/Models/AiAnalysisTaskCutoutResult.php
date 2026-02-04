@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 视频抠图结果数据结构
+ * 视频智能抠图结果数据结构
  *
  * @method string getStatus() 获取任务状态，有 `PROCESSING`，`SUCCESS` 和 `FAIL` 三种
  * @method void setStatus(string $Status) 设置任务状态，有 `PROCESSING`，`SUCCESS` 和 `FAIL` 三种

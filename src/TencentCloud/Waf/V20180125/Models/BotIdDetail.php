@@ -30,8 +30,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAction(string $Action) 设置规则动作
  * @method integer getLevel() 获取风险等级
  * @method void setLevel(integer $Level) 设置风险等级
- * @method string getBotIdType() 获取规则类型
- * @method void setBotIdType(string $BotIdType) 设置规则类型
+ * @method string getBotIdType() 获取"cbe-01": "爬虫型BOT",
+	"cbe-02": "刷量型BOT",
+	"cbe-03": "账号穷举型BOT",
+	"cbe-04": "恶意扫描型BOT",
+	"cbe-05": "DDoS型BOT",
+	"cbe-06": "垃圾邮件发送型BOT",
+	"cbe-07": "社交媒体自动化型BOT",
+	"cbe-08": "竞争对手数据收集型BOT",
+	"cbe-09": "恶意软件传播型BOT"
+ * @method void setBotIdType(string $BotIdType) 设置"cbe-01": "爬虫型BOT",
+	"cbe-02": "刷量型BOT",
+	"cbe-03": "账号穷举型BOT",
+	"cbe-04": "恶意扫描型BOT",
+	"cbe-05": "DDoS型BOT",
+	"cbe-06": "垃圾邮件发送型BOT",
+	"cbe-07": "社交媒体自动化型BOT",
+	"cbe-08": "竞争对手数据收集型BOT",
+	"cbe-09": "恶意软件传播型BOT"
  * @method integer getModifyTime() 获取修改时间
  * @method void setModifyTime(integer $ModifyTime) 设置修改时间
  * @method integer getInsertTime() 获取插入时间
@@ -73,7 +89,15 @@ class BotIdDetail extends AbstractModel
     public $Level;
 
     /**
-     * @var string 规则类型
+     * @var string "cbe-01": "爬虫型BOT",
+	"cbe-02": "刷量型BOT",
+	"cbe-03": "账号穷举型BOT",
+	"cbe-04": "恶意扫描型BOT",
+	"cbe-05": "DDoS型BOT",
+	"cbe-06": "垃圾邮件发送型BOT",
+	"cbe-07": "社交媒体自动化型BOT",
+	"cbe-08": "竞争对手数据收集型BOT",
+	"cbe-09": "恶意软件传播型BOT"
      */
     public $BotIdType;
 
@@ -113,7 +137,15 @@ class BotIdDetail extends AbstractModel
      * @param boolean $Status 规则开关
      * @param string $Action 规则动作
      * @param integer $Level 风险等级
-     * @param string $BotIdType 规则类型
+     * @param string $BotIdType "cbe-01": "爬虫型BOT",
+	"cbe-02": "刷量型BOT",
+	"cbe-03": "账号穷举型BOT",
+	"cbe-04": "恶意扫描型BOT",
+	"cbe-05": "DDoS型BOT",
+	"cbe-06": "垃圾邮件发送型BOT",
+	"cbe-07": "社交媒体自动化型BOT",
+	"cbe-08": "竞争对手数据收集型BOT",
+	"cbe-09": "恶意软件传播型BOT"
      * @param integer $ModifyTime 修改时间
      * @param integer $InsertTime 插入时间
      * @param string $Description 规则描述

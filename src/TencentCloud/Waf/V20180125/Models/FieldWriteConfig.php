@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableBody(integer $EnableBody) 设置1:开启 0:不开启
  * @method integer getEnableBot() 获取1:开启 0:不开启
  * @method void setEnableBot(integer $EnableBot) 设置1:开启 0:不开启
+ * @method integer getEnableResponse() 获取响应方向body
+1:开启 0:不开启
+ * @method void setEnableResponse(integer $EnableResponse) 设置响应方向body
+1:开启 0:不开启
  */
 class FieldWriteConfig extends AbstractModel
 {
@@ -45,9 +49,17 @@ class FieldWriteConfig extends AbstractModel
     public $EnableBot;
 
     /**
+     * @var integer 响应方向body
+1:开启 0:不开启
+     */
+    public $EnableResponse;
+
+    /**
      * @param integer $EnableHeaders 1:开启 0:不开启
      * @param integer $EnableBody 1:开启 0:不开启
      * @param integer $EnableBot 1:开启 0:不开启
+     * @param integer $EnableResponse 响应方向body
+1:开启 0:不开启
      */
     function __construct()
     {
@@ -72,6 +84,10 @@ class FieldWriteConfig extends AbstractModel
 
         if (array_key_exists("EnableBot",$param) and $param["EnableBot"] !== null) {
             $this->EnableBot = $param["EnableBot"];
+        }
+
+        if (array_key_exists("EnableResponse",$param) and $param["EnableResponse"] !== null) {
+            $this->EnableResponse = $param["EnableResponse"];
         }
     }
 }

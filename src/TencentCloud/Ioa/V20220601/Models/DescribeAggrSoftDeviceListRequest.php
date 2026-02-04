@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置软件名
  * @method integer getOsType() 获取0:win 2:mac
  * @method void setOsType(integer $OsType) 设置0:win 2:mac
+ * @method integer getGroupId() 获取分组ID
+ * @method void setGroupId(integer $GroupId) 设置分组ID
+ * @method integer getGroupType() 获取分组类型 1-终端分组 2-组织架构(账号分组) 3/4-虚拟分组
+ * @method void setGroupType(integer $GroupType) 设置分组类型 1-终端分组 2-组织架构(账号分组) 3/4-虚拟分组
  */
 class DescribeAggrSoftDeviceListRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class DescribeAggrSoftDeviceListRequest extends AbstractModel
     public $OsType;
 
     /**
+     * @var integer 分组ID
+     */
+    public $GroupId;
+
+    /**
+     * @var integer 分组类型 1-终端分组 2-组织架构(账号分组) 3/4-虚拟分组
+     */
+    public $GroupType;
+
+    /**
      * @param Condition $Condition 过滤条件
      * @param string $Name 软件名
      * @param integer $OsType 0:win 2:mac
+     * @param integer $GroupId 分组ID
+     * @param integer $GroupType 分组类型 1-终端分组 2-组织架构(账号分组) 3/4-虚拟分组
      */
     function __construct()
     {
@@ -73,6 +89,14 @@ class DescribeAggrSoftDeviceListRequest extends AbstractModel
 
         if (array_key_exists("OsType",$param) and $param["OsType"] !== null) {
             $this->OsType = $param["OsType"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("GroupType",$param) and $param["GroupType"] !== null) {
+            $this->GroupType = $param["GroupType"];
         }
     }
 }

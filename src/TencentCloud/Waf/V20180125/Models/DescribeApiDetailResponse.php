@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLog() 获取请求样例，json字符串格式
  * @method void setLog(string $Log) 设置请求样例，json字符串格式
+ * @method string getFullReqLog() 获取完整请求样例
+ * @method void setFullReqLog(string $FullReqLog) 设置完整请求样例
  * @method array getParameterList() 获取请求参数样例列表
  * @method void setParameterList(array $ParameterList) 设置请求参数样例列表
  * @method string getScene() 获取当前场景标签
@@ -55,6 +57,11 @@ class DescribeApiDetailResponse extends AbstractModel
      * @var string 请求样例，json字符串格式
      */
     public $Log;
+
+    /**
+     * @var string 完整请求样例
+     */
+    public $FullReqLog;
 
     /**
      * @var array 请求参数样例列表
@@ -123,6 +130,7 @@ class DescribeApiDetailResponse extends AbstractModel
 
     /**
      * @param string $Log 请求样例，json字符串格式
+     * @param string $FullReqLog 完整请求样例
      * @param array $ParameterList 请求参数样例列表
      * @param string $Scene 当前场景标签
      * @param array $SensitiveFields 敏感字段
@@ -152,6 +160,10 @@ class DescribeApiDetailResponse extends AbstractModel
         }
         if (array_key_exists("Log",$param) and $param["Log"] !== null) {
             $this->Log = $param["Log"];
+        }
+
+        if (array_key_exists("FullReqLog",$param) and $param["FullReqLog"] !== null) {
+            $this->FullReqLog = $param["FullReqLog"];
         }
 
         if (array_key_exists("ParameterList",$param) and $param["ParameterList"] !== null) {

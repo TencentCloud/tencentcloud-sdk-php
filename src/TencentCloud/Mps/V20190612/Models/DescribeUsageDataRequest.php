@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUsageData请求参数结构体
  *
- * @method string getStartTime() 获取起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
- * @method void setStartTime(string $StartTime) 设置起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+ * @method string getStartTime() 获取起始日期。使用 ISO 日期格式。
+ * @method void setStartTime(string $StartTime) 设置起始日期。使用 ISO 日期格式。
  * @method string getEndTime() 获取结束日期，需大于等于起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  * @method void setEndTime(string $EndTime) 设置结束日期，需大于等于起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  * @method array getTypes() 获取查询媒体处理任务类型，默认查询转码。
@@ -92,7 +92,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeUsageDataRequest extends AbstractModel
 {
     /**
-     * @var string 起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @var string 起始日期。使用 ISO 日期格式。
      */
     public $StartTime;
 
@@ -142,7 +142,7 @@ class DescribeUsageDataRequest extends AbstractModel
     public $ProcessRegions;
 
     /**
-     * @param string $StartTime 起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @param string $StartTime 起始日期。使用 ISO 日期格式。
      * @param string $EndTime 结束日期，需大于等于起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param array $Types 查询媒体处理任务类型，默认查询转码。
 <li>Transcode：转码</li>

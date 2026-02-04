@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置数字水印模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
  * @method string getUpdateTime() 获取数字水印模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
  * @method void setUpdateTime(string $UpdateTime) 设置数字水印模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+ * @method string getStrength() 获取数字水印强度。 default: 默认，高清画质和抗性平衡 stronger:画质清晰，抗性较强 strongest:画质一般，抗性最强
+ * @method void setStrength(string $Strength) 设置数字水印强度。 default: 默认，高清画质和抗性平衡 stronger:画质清晰，抗性较强 strongest:画质一般，抗性最强
  */
 class BlindWatermarkTemplate extends AbstractModel
 {
@@ -73,6 +75,11 @@ class BlindWatermarkTemplate extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 数字水印强度。 default: 默认，高清画质和抗性平衡 stronger:画质清晰，抗性较强 strongest:画质一般，抗性最强
+     */
+    public $Strength;
+
+    /**
      * @param integer $Definition 数字水印模板唯一标识。
      * @param string $Type 数字水印类型，可选值：<li>blind-basic：基础版权数字水印；</li><li>blind-nagra：NAGRA取证水印；</li>
      * @param string $Name 数字水印模板名称。
@@ -80,6 +87,7 @@ class BlindWatermarkTemplate extends AbstractModel
      * @param string $Comment 数字水印模板描述信息。
      * @param string $CreateTime 数字水印模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      * @param string $UpdateTime 数字水印模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * @param string $Strength 数字水印强度。 default: 默认，高清画质和抗性平衡 stronger:画质清晰，抗性较强 strongest:画质一般，抗性最强
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class BlindWatermarkTemplate extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("Strength",$param) and $param["Strength"] !== null) {
+            $this->Strength = $param["Strength"];
         }
     }
 }

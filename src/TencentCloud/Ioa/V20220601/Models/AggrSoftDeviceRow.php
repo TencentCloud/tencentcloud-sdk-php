@@ -90,6 +90,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSoftwareId(integer $SoftwareId) 设置软件id
  * @method integer getOsType() 获取0:win 2:mac
  * @method void setOsType(integer $OsType) 设置0:win 2:mac
+ * @method string getAssetType() 获取所有权
+ * @method void setAssetType(string $AssetType) 设置所有权
  */
 class AggrSoftDeviceRow extends AbstractModel
 {
@@ -209,6 +211,11 @@ class AggrSoftDeviceRow extends AbstractModel
     public $OsType;
 
     /**
+     * @var string 所有权
+     */
+    public $AssetType;
+
+    /**
      * @param string $DeviceName 终端名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastLoginAccount 最近登录账号
@@ -244,6 +251,7 @@ class AggrSoftDeviceRow extends AbstractModel
      * @param string $RemarkName 终端备注名
      * @param integer $SoftwareId 软件id
      * @param integer $OsType 0:win 2:mac
+     * @param string $AssetType 所有权
      */
     function __construct()
     {
@@ -336,6 +344,10 @@ class AggrSoftDeviceRow extends AbstractModel
 
         if (array_key_exists("OsType",$param) and $param["OsType"] !== null) {
             $this->OsType = $param["OsType"];
+        }
+
+        if (array_key_exists("AssetType",$param) and $param["AssetType"] !== null) {
+            $this->AssetType = $param["AssetType"];
         }
     }
 }

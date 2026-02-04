@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(string $Id) 设置精准速率限制的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li><b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li><b>删除</b>已有规则：RateLimitingRules 参数中，Rules 列表中未包含的已有规则将被删除。</li>
  * @method string getName() 获取精准速率限制的名称。
  * @method void setName(string $Name) 设置精准速率限制的名称。
- * @method string getCondition() 获取精准速率限制的具体内容，需符合表达式语法，详细规范参见产品文档。
- * @method void setCondition(string $Condition) 设置精准速率限制的具体内容，需符合表达式语法，详细规范参见产品文档。
- * @method array getCountBy() 获取速率阈值请求特征的匹配方式， 当 Enabled 为 on 时，此字段必填。<br /><br />当条件有多个时，将组合多个条件共同进行统计计算，条件最多不可超过5条。取值有：<br/><li><b>http.request.ip</b>：客户端 IP；</li><li><b>http.request.xff_header_ip</b>：客户端 IP（优先匹配 XFF 头部）；</li><li><b>http.request.uri.path</b>：请求的访问路径；</li><li><b>http.request.cookies['session']</b>：名称为session的Cookie，其中session可替换为自己指定的参数；</li><li><b>http.request.headers['user-agent']</b>：名称为user-agent的HTTP头部，其中user-agent可替换为自己指定的参数；</li><li><b>http.request.ja3</b>：请求的JA3指纹；</li><li><b>http.request.uri.query['test']</b>：名称为test的URL查询参数，其中test可替换为自己指定的参数。</li> 
- * @method void setCountBy(array $CountBy) 设置速率阈值请求特征的匹配方式， 当 Enabled 为 on 时，此字段必填。<br /><br />当条件有多个时，将组合多个条件共同进行统计计算，条件最多不可超过5条。取值有：<br/><li><b>http.request.ip</b>：客户端 IP；</li><li><b>http.request.xff_header_ip</b>：客户端 IP（优先匹配 XFF 头部）；</li><li><b>http.request.uri.path</b>：请求的访问路径；</li><li><b>http.request.cookies['session']</b>：名称为session的Cookie，其中session可替换为自己指定的参数；</li><li><b>http.request.headers['user-agent']</b>：名称为user-agent的HTTP头部，其中user-agent可替换为自己指定的参数；</li><li><b>http.request.ja3</b>：请求的JA3指纹；</li><li><b>http.request.uri.query['test']</b>：名称为test的URL查询参数，其中test可替换为自己指定的参数。</li> 
+ * @method string getCondition() 获取精准速率限制的具体内容，需符合表达式语法，详细规范参见[产品文档](https://cloud.tencent.com/document/product/1552/125343)。
+ * @method void setCondition(string $Condition) 设置精准速率限制的具体内容，需符合表达式语法，详细规范参见[产品文档](https://cloud.tencent.com/document/product/1552/125343)。
+ * @method array getCountBy() 获取速率阈值请求特征的匹配方式， 当 Enabled 为 on 时，此字段必填。<br /><br />当条件有多个时，将组合多个条件共同进行统计计算，条件最多不可超过5条。取值有：<br/><li><b>http.request.ip</b>：客户端 IP；</li><li><b>http.request.xff_header_ip</b>：客户端 IP（优先匹配 XFF 头部）；</li><li><b>http.request.uri.path</b>：请求的访问路径；</li><li><b>http.request.cookies['session']</b>：名称为 session 的 Cookie，其中 session 可替换为自己指定的参数；</li><li><b>http.request.headers['user-agent']</b>：名称为 user-agent 的 HTTP 头部，其中 user-agent 可替换为自己指定的参数；</li><li><b>http.request.ja3</b>：请求的 JA3 指纹；</li><li><b>http.request.ja4</b>：请求的 JA4 指纹；</li><li><b>http.request.uri.query['test']</b>：名称为 test 的 URL 查询参数，其中 test 可替换为自己指定的参数。</li> 
+ * @method void setCountBy(array $CountBy) 设置速率阈值请求特征的匹配方式， 当 Enabled 为 on 时，此字段必填。<br /><br />当条件有多个时，将组合多个条件共同进行统计计算，条件最多不可超过5条。取值有：<br/><li><b>http.request.ip</b>：客户端 IP；</li><li><b>http.request.xff_header_ip</b>：客户端 IP（优先匹配 XFF 头部）；</li><li><b>http.request.uri.path</b>：请求的访问路径；</li><li><b>http.request.cookies['session']</b>：名称为 session 的 Cookie，其中 session 可替换为自己指定的参数；</li><li><b>http.request.headers['user-agent']</b>：名称为 user-agent 的 HTTP 头部，其中 user-agent 可替换为自己指定的参数；</li><li><b>http.request.ja3</b>：请求的 JA3 指纹；</li><li><b>http.request.ja4</b>：请求的 JA4 指纹；</li><li><b>http.request.uri.query['test']</b>：名称为 test 的 URL 查询参数，其中 test 可替换为自己指定的参数。</li> 
  * @method integer getMaxRequestThreshold() 获取精准速率限制在时间范围内的累计拦截次数，取值范围 1 ~ 100000。
  * @method void setMaxRequestThreshold(integer $MaxRequestThreshold) 设置精准速率限制在时间范围内的累计拦截次数，取值范围 1 ~ 100000。
  * @method string getCountingPeriod() 获取统计的时间窗口，取值有：<li>1s：1秒；</li><li>5s：5秒；</li><li>10s：10秒；</li><li>20s：20秒；</li><li>30s：30秒；</li><li>40s：40秒；</li><li>50s：50秒；</li><li>1m：1分钟；</li><li>2m：2分钟；</li><li>5m：5分钟；</li><li>10m：10分钟；</li><li>1h：1小时。</li> 
@@ -54,12 +54,12 @@ class RateLimitingRule extends AbstractModel
     public $Name;
 
     /**
-     * @var string 精准速率限制的具体内容，需符合表达式语法，详细规范参见产品文档。
+     * @var string 精准速率限制的具体内容，需符合表达式语法，详细规范参见[产品文档](https://cloud.tencent.com/document/product/1552/125343)。
      */
     public $Condition;
 
     /**
-     * @var array 速率阈值请求特征的匹配方式， 当 Enabled 为 on 时，此字段必填。<br /><br />当条件有多个时，将组合多个条件共同进行统计计算，条件最多不可超过5条。取值有：<br/><li><b>http.request.ip</b>：客户端 IP；</li><li><b>http.request.xff_header_ip</b>：客户端 IP（优先匹配 XFF 头部）；</li><li><b>http.request.uri.path</b>：请求的访问路径；</li><li><b>http.request.cookies['session']</b>：名称为session的Cookie，其中session可替换为自己指定的参数；</li><li><b>http.request.headers['user-agent']</b>：名称为user-agent的HTTP头部，其中user-agent可替换为自己指定的参数；</li><li><b>http.request.ja3</b>：请求的JA3指纹；</li><li><b>http.request.uri.query['test']</b>：名称为test的URL查询参数，其中test可替换为自己指定的参数。</li> 
+     * @var array 速率阈值请求特征的匹配方式， 当 Enabled 为 on 时，此字段必填。<br /><br />当条件有多个时，将组合多个条件共同进行统计计算，条件最多不可超过5条。取值有：<br/><li><b>http.request.ip</b>：客户端 IP；</li><li><b>http.request.xff_header_ip</b>：客户端 IP（优先匹配 XFF 头部）；</li><li><b>http.request.uri.path</b>：请求的访问路径；</li><li><b>http.request.cookies['session']</b>：名称为 session 的 Cookie，其中 session 可替换为自己指定的参数；</li><li><b>http.request.headers['user-agent']</b>：名称为 user-agent 的 HTTP 头部，其中 user-agent 可替换为自己指定的参数；</li><li><b>http.request.ja3</b>：请求的 JA3 指纹；</li><li><b>http.request.ja4</b>：请求的 JA4 指纹；</li><li><b>http.request.uri.query['test']</b>：名称为 test 的 URL 查询参数，其中 test 可替换为自己指定的参数。</li> 
      */
     public $CountBy;
 
@@ -96,8 +96,8 @@ class RateLimitingRule extends AbstractModel
     /**
      * @param string $Id 精准速率限制的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li><b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li><b>删除</b>已有规则：RateLimitingRules 参数中，Rules 列表中未包含的已有规则将被删除。</li>
      * @param string $Name 精准速率限制的名称。
-     * @param string $Condition 精准速率限制的具体内容，需符合表达式语法，详细规范参见产品文档。
-     * @param array $CountBy 速率阈值请求特征的匹配方式， 当 Enabled 为 on 时，此字段必填。<br /><br />当条件有多个时，将组合多个条件共同进行统计计算，条件最多不可超过5条。取值有：<br/><li><b>http.request.ip</b>：客户端 IP；</li><li><b>http.request.xff_header_ip</b>：客户端 IP（优先匹配 XFF 头部）；</li><li><b>http.request.uri.path</b>：请求的访问路径；</li><li><b>http.request.cookies['session']</b>：名称为session的Cookie，其中session可替换为自己指定的参数；</li><li><b>http.request.headers['user-agent']</b>：名称为user-agent的HTTP头部，其中user-agent可替换为自己指定的参数；</li><li><b>http.request.ja3</b>：请求的JA3指纹；</li><li><b>http.request.uri.query['test']</b>：名称为test的URL查询参数，其中test可替换为自己指定的参数。</li> 
+     * @param string $Condition 精准速率限制的具体内容，需符合表达式语法，详细规范参见[产品文档](https://cloud.tencent.com/document/product/1552/125343)。
+     * @param array $CountBy 速率阈值请求特征的匹配方式， 当 Enabled 为 on 时，此字段必填。<br /><br />当条件有多个时，将组合多个条件共同进行统计计算，条件最多不可超过5条。取值有：<br/><li><b>http.request.ip</b>：客户端 IP；</li><li><b>http.request.xff_header_ip</b>：客户端 IP（优先匹配 XFF 头部）；</li><li><b>http.request.uri.path</b>：请求的访问路径；</li><li><b>http.request.cookies['session']</b>：名称为 session 的 Cookie，其中 session 可替换为自己指定的参数；</li><li><b>http.request.headers['user-agent']</b>：名称为 user-agent 的 HTTP 头部，其中 user-agent 可替换为自己指定的参数；</li><li><b>http.request.ja3</b>：请求的 JA3 指纹；</li><li><b>http.request.ja4</b>：请求的 JA4 指纹；</li><li><b>http.request.uri.query['test']</b>：名称为 test 的 URL 查询参数，其中 test 可替换为自己指定的参数。</li> 
      * @param integer $MaxRequestThreshold 精准速率限制在时间范围内的累计拦截次数，取值范围 1 ~ 100000。
      * @param string $CountingPeriod 统计的时间窗口，取值有：<li>1s：1秒；</li><li>5s：5秒；</li><li>10s：10秒；</li><li>20s：20秒；</li><li>30s：30秒；</li><li>40s：40秒；</li><li>50s：50秒；</li><li>1m：1分钟；</li><li>2m：2分钟；</li><li>5m：5分钟；</li><li>10m：10分钟；</li><li>1h：1小时。</li> 
      * @param string $ActionDuration Action 动作的持续时长，单位仅支持：<li>s：秒，取值 1 ~ 120；</li><li>m：分钟，取值 1 ~ 120；</li><li>h：小时，取值 1 ~ 48；</li><li>d：天，取值 1 ~ 30。</li>

@@ -152,6 +152,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCodeRepos() 获取任务关联的代码仓库配置
  * @method void setCodeRepos(array $CodeRepos) 设置任务关联的代码仓库配置
+ * @method ExposeNetworkConfig getExposeNetworkConfig() 获取暴露网络配置
+ * @method void setExposeNetworkConfig(ExposeNetworkConfig $ExposeNetworkConfig) 设置暴露网络配置
  */
 class TrainingTaskDetail extends AbstractModel
 {
@@ -386,6 +388,11 @@ class TrainingTaskDetail extends AbstractModel
     public $CodeRepos;
 
     /**
+     * @var ExposeNetworkConfig 暴露网络配置
+     */
+    public $ExposeNetworkConfig;
+
+    /**
      * @param string $Id 训练任务ID
      * @param string $Name 训练任务名称
      * @param string $Uin 主账号uin
@@ -452,6 +459,7 @@ class TrainingTaskDetail extends AbstractModel
      * @param string $CallbackUrl 回调地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CodeRepos 任务关联的代码仓库配置
+     * @param ExposeNetworkConfig $ExposeNetworkConfig 暴露网络配置
      */
     function __construct()
     {
@@ -653,6 +661,11 @@ class TrainingTaskDetail extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CodeRepos, $obj);
             }
+        }
+
+        if (array_key_exists("ExposeNetworkConfig",$param) and $param["ExposeNetworkConfig"] !== null) {
+            $this->ExposeNetworkConfig = new ExposeNetworkConfig();
+            $this->ExposeNetworkConfig->deserialize($param["ExposeNetworkConfig"]);
         }
     }
 }

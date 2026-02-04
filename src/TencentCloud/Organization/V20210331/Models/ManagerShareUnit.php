@@ -20,90 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 我的共享单元列表详情
  *
- * @method string getUnitId() 获取共享单元ID。
- * @method void setUnitId(string $UnitId) 设置共享单元ID。
- * @method string getName() 获取共享单元名称。
- * @method void setName(string $Name) 设置共享单元名称。
- * @method integer getUin() 获取共享单元管理员Uin。
- * @method void setUin(integer $Uin) 设置共享单元管理员Uin。
- * @method integer getOwnerUin() 获取共享单元管理员OwnerUin。
- * @method void setOwnerUin(integer $OwnerUin) 设置共享单元管理员OwnerUin。
- * @method string getArea() 获取共享单元地域。
- * @method void setArea(string $Area) 设置共享单元地域。
- * @method string getDescription() 获取描述。
- * @method void setDescription(string $Description) 设置描述。
- * @method string getCreateTime() 获取创建时间。
- * @method void setCreateTime(string $CreateTime) 设置创建时间。
- * @method integer getShareResourceNum() 获取共享单元资源数。
- * @method void setShareResourceNum(integer $ShareResourceNum) 设置共享单元资源数。
- * @method integer getShareMemberNum() 获取共享单元成员数。
- * @method void setShareMemberNum(integer $ShareMemberNum) 设置共享单元成员数。
- * @method integer getShareScope() 获取共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
- * @method void setShareScope(integer $ShareScope) 设置共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
+ * @method string getUnitId() 获取<p>共享单元ID。</p>
+ * @method void setUnitId(string $UnitId) 设置<p>共享单元ID。</p>
+ * @method string getName() 获取<p>共享单元名称。</p>
+ * @method void setName(string $Name) 设置<p>共享单元名称。</p>
+ * @method integer getUin() 获取<p>共享单元管理员Uin。</p>
+ * @method void setUin(integer $Uin) 设置<p>共享单元管理员Uin。</p>
+ * @method integer getOwnerUin() 获取<p>共享单元管理员OwnerUin。</p>
+ * @method void setOwnerUin(integer $OwnerUin) 设置<p>共享单元管理员OwnerUin。</p>
+ * @method string getArea() 获取<p>共享单元地域。</p>
+ * @method void setArea(string $Area) 设置<p>共享单元地域。</p>
+ * @method string getDescription() 获取<p>描述。</p>
+ * @method void setDescription(string $Description) 设置<p>描述。</p>
+ * @method string getCreateTime() 获取<p>创建时间。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间。</p>
+ * @method integer getShareResourceNum() 获取<p>共享单元资源数。</p>
+ * @method void setShareResourceNum(integer $ShareResourceNum) 设置<p>共享单元资源数。</p>
+ * @method integer getShareMemberNum() 获取<p>共享单元成员数。</p>
+ * @method void setShareMemberNum(integer $ShareMemberNum) 设置<p>共享单元成员数。</p>
+ * @method integer getShareScope() 获取<p>共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号</p>
+ * @method void setShareScope(integer $ShareScope) 设置<p>共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号</p>
+ * @method integer getShareNodeNum() 获取<p>共享单元部门数。</p>
+ * @method void setShareNodeNum(integer $ShareNodeNum) 设置<p>共享单元部门数。</p>
  */
 class ManagerShareUnit extends AbstractModel
 {
     /**
-     * @var string 共享单元ID。
+     * @var string <p>共享单元ID。</p>
      */
     public $UnitId;
 
     /**
-     * @var string 共享单元名称。
+     * @var string <p>共享单元名称。</p>
      */
     public $Name;
 
     /**
-     * @var integer 共享单元管理员Uin。
+     * @var integer <p>共享单元管理员Uin。</p>
      */
     public $Uin;
 
     /**
-     * @var integer 共享单元管理员OwnerUin。
+     * @var integer <p>共享单元管理员OwnerUin。</p>
      */
     public $OwnerUin;
 
     /**
-     * @var string 共享单元地域。
+     * @var string <p>共享单元地域。</p>
      */
     public $Area;
 
     /**
-     * @var string 描述。
+     * @var string <p>描述。</p>
      */
     public $Description;
 
     /**
-     * @var string 创建时间。
+     * @var string <p>创建时间。</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer 共享单元资源数。
+     * @var integer <p>共享单元资源数。</p>
      */
     public $ShareResourceNum;
 
     /**
-     * @var integer 共享单元成员数。
+     * @var integer <p>共享单元成员数。</p>
      */
     public $ShareMemberNum;
 
     /**
-     * @var integer 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
+     * @var integer <p>共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号</p>
      */
     public $ShareScope;
 
     /**
-     * @param string $UnitId 共享单元ID。
-     * @param string $Name 共享单元名称。
-     * @param integer $Uin 共享单元管理员Uin。
-     * @param integer $OwnerUin 共享单元管理员OwnerUin。
-     * @param string $Area 共享单元地域。
-     * @param string $Description 描述。
-     * @param string $CreateTime 创建时间。
-     * @param integer $ShareResourceNum 共享单元资源数。
-     * @param integer $ShareMemberNum 共享单元成员数。
-     * @param integer $ShareScope 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
+     * @var integer <p>共享单元部门数。</p>
+     */
+    public $ShareNodeNum;
+
+    /**
+     * @param string $UnitId <p>共享单元ID。</p>
+     * @param string $Name <p>共享单元名称。</p>
+     * @param integer $Uin <p>共享单元管理员Uin。</p>
+     * @param integer $OwnerUin <p>共享单元管理员OwnerUin。</p>
+     * @param string $Area <p>共享单元地域。</p>
+     * @param string $Description <p>描述。</p>
+     * @param string $CreateTime <p>创建时间。</p>
+     * @param integer $ShareResourceNum <p>共享单元资源数。</p>
+     * @param integer $ShareMemberNum <p>共享单元成员数。</p>
+     * @param integer $ShareScope <p>共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号</p>
+     * @param integer $ShareNodeNum <p>共享单元部门数。</p>
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class ManagerShareUnit extends AbstractModel
 
         if (array_key_exists("ShareScope",$param) and $param["ShareScope"] !== null) {
             $this->ShareScope = $param["ShareScope"];
+        }
+
+        if (array_key_exists("ShareNodeNum",$param) and $param["ShareNodeNum"] !== null) {
+            $this->ShareNodeNum = $param["ShareNodeNum"];
         }
     }
 }

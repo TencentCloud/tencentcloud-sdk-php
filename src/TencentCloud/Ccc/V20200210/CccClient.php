@@ -81,6 +81,7 @@ use TencentCloud\Ccc\V20200210\Models as Models;
  * @method Models\DescribeCompanyListResponse DescribeCompanyList(Models\DescribeCompanyListRequest $req) 查询公司资质申请列表
  * @method Models\DescribeExtensionResponse DescribeExtension(Models\DescribeExtensionRequest $req) 获取话机信息
  * @method Models\DescribeExtensionsResponse DescribeExtensions(Models\DescribeExtensionsRequest $req) 查询话机列表信息
+ * @method Models\DescribeFlashSMSListResponse DescribeFlashSMSList(Models\DescribeFlashSMSListRequest $req) 获取闪信记录列表
  * @method Models\DescribeIMCdrListResponse DescribeIMCdrList(Models\DescribeIMCdrListRequest $req) 获取包括全媒体和文本会话两种类型的服务记录。
  * @method Models\DescribeIMCdrsResponse DescribeIMCdrs(Models\DescribeIMCdrsRequest $req) 获取包括全媒体和文本会话两种类型的服务记录。
  * @method Models\DescribeIvrAudioListResponse DescribeIvrAudioList(Models\DescribeIvrAudioListRequest $req) 查询IVR音频文件列表信息

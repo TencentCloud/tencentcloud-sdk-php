@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPriority(integer $Priority) 设置优先级
  * @method TokenValidation getTokenValidation() 获取token有效性配置信息
  * @method void setTokenValidation(TokenValidation $TokenValidation) 设置token有效性配置信息
+ * @method integer getDisableMultiJson() 获取1表示开启了禁用嵌套功能
+ * @method void setDisableMultiJson(integer $DisableMultiJson) 设置1表示开启了禁用嵌套功能
  */
 class BotToken extends AbstractModel
 {
@@ -101,6 +103,11 @@ class BotToken extends AbstractModel
     public $TokenValidation;
 
     /**
+     * @var integer 1表示开启了禁用嵌套功能
+     */
+    public $DisableMultiJson;
+
+    /**
      * @param string $Name 会话名称
      * @param string $Description 会话描述
      * @param string $Id 会话id
@@ -112,6 +119,7 @@ class BotToken extends AbstractModel
      * @param array $Scene 场景列表，内容为空表示全部场景应用
      * @param integer $Priority 优先级
      * @param TokenValidation $TokenValidation token有效性配置信息
+     * @param integer $DisableMultiJson 1表示开启了禁用嵌套功能
      */
     function __construct()
     {
@@ -169,6 +177,10 @@ class BotToken extends AbstractModel
         if (array_key_exists("TokenValidation",$param) and $param["TokenValidation"] !== null) {
             $this->TokenValidation = new TokenValidation();
             $this->TokenValidation->deserialize($param["TokenValidation"]);
+        }
+
+        if (array_key_exists("DisableMultiJson",$param) and $param["DisableMultiJson"] !== null) {
+            $this->DisableMultiJson = $param["DisableMultiJson"];
         }
     }
 }

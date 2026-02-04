@@ -22,12 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method CFSConfig getCFSConfig() 获取cfs的配置信息
  * @method void setCFSConfig(CFSConfig $CFSConfig) 设置cfs的配置信息
- * @method string getVolumeSourceType() 获取挂载源类型，CFS、COS，默认为CFS
- * @method void setVolumeSourceType(string $VolumeSourceType) 设置挂载源类型，CFS、COS，默认为CFS
+ * @method string getVolumeSourceType() 获取挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS
+ * @method void setVolumeSourceType(string $VolumeSourceType) 设置挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS
  * @method string getMountPath() 获取自定义容器内挂载路径
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMountPath(string $MountPath) 设置自定义容器内挂载路径
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method PublicDataSourceFS getPublicDataSource() 获取挂载数据源时的配置信息
+ * @method void setPublicDataSource(PublicDataSourceFS $PublicDataSource) 设置挂载数据源时的配置信息
  */
 class VolumeMount extends AbstractModel
 {
@@ -37,7 +39,7 @@ class VolumeMount extends AbstractModel
     public $CFSConfig;
 
     /**
-     * @var string 挂载源类型，CFS、COS，默认为CFS
+     * @var string 挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS
      */
     public $VolumeSourceType;
 
@@ -48,10 +50,16 @@ class VolumeMount extends AbstractModel
     public $MountPath;
 
     /**
+     * @var PublicDataSourceFS 挂载数据源时的配置信息
+     */
+    public $PublicDataSource;
+
+    /**
      * @param CFSConfig $CFSConfig cfs的配置信息
-     * @param string $VolumeSourceType 挂载源类型，CFS、COS，默认为CFS
+     * @param string $VolumeSourceType 挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS
      * @param string $MountPath 自定义容器内挂载路径
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param PublicDataSourceFS $PublicDataSource 挂载数据源时的配置信息
      */
     function __construct()
     {
@@ -77,6 +85,11 @@ class VolumeMount extends AbstractModel
 
         if (array_key_exists("MountPath",$param) and $param["MountPath"] !== null) {
             $this->MountPath = $param["MountPath"];
+        }
+
+        if (array_key_exists("PublicDataSource",$param) and $param["PublicDataSource"] !== null) {
+            $this->PublicDataSource = new PublicDataSourceFS();
+            $this->PublicDataSource->deserialize($param["PublicDataSource"]);
         }
     }
 }

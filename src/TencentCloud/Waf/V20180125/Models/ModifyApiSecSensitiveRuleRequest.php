@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApiSecCustomEventRuleNameList(array $ApiSecCustomEventRuleNameList) 设置批量操作的时候的自定义事件规则列表
  * @method ApiSecCustomEventRule getApiSecCustomEventRuleRule() 获取自定义事件规则
  * @method void setApiSecCustomEventRuleRule(ApiSecCustomEventRule $ApiSecCustomEventRuleRule) 设置自定义事件规则
+ * @method ApiSecExcludeRule getCustomApiExcludeRule() 获取无效api排除规则
+ * @method void setCustomApiExcludeRule(ApiSecExcludeRule $CustomApiExcludeRule) 设置无效api排除规则
+ * @method array getApiExcludeRuleName() 获取批量操作的时候的无效api排除规则
+ * @method void setApiExcludeRuleName(array $ApiExcludeRuleName) 设置批量操作的时候的无效api排除规则
  */
 class ModifyApiSecSensitiveRuleRequest extends AbstractModel
 {
@@ -115,6 +119,16 @@ class ModifyApiSecSensitiveRuleRequest extends AbstractModel
     public $ApiSecCustomEventRuleRule;
 
     /**
+     * @var ApiSecExcludeRule 无效api排除规则
+     */
+    public $CustomApiExcludeRule;
+
+    /**
+     * @var array 批量操作的时候的无效api排除规则
+     */
+    public $ApiExcludeRuleName;
+
+    /**
      * @param string $Domain 域名
      * @param integer $Status 1表示开，0表示关，3表示删除
      * @param string $RuleName 规则名称
@@ -128,6 +142,8 @@ class ModifyApiSecSensitiveRuleRequest extends AbstractModel
      * @param ApiSecSceneRule $ApiSecSceneRule 单条自定义api场景规则
      * @param array $ApiSecCustomEventRuleNameList 批量操作的时候的自定义事件规则列表
      * @param ApiSecCustomEventRule $ApiSecCustomEventRuleRule 自定义事件规则
+     * @param ApiSecExcludeRule $CustomApiExcludeRule 无效api排除规则
+     * @param array $ApiExcludeRuleName 批量操作的时候的无效api排除规则
      */
     function __construct()
     {
@@ -197,6 +213,15 @@ class ModifyApiSecSensitiveRuleRequest extends AbstractModel
         if (array_key_exists("ApiSecCustomEventRuleRule",$param) and $param["ApiSecCustomEventRuleRule"] !== null) {
             $this->ApiSecCustomEventRuleRule = new ApiSecCustomEventRule();
             $this->ApiSecCustomEventRuleRule->deserialize($param["ApiSecCustomEventRuleRule"]);
+        }
+
+        if (array_key_exists("CustomApiExcludeRule",$param) and $param["CustomApiExcludeRule"] !== null) {
+            $this->CustomApiExcludeRule = new ApiSecExcludeRule();
+            $this->CustomApiExcludeRule->deserialize($param["CustomApiExcludeRule"]);
+        }
+
+        if (array_key_exists("ApiExcludeRuleName",$param) and $param["ApiExcludeRuleName"] !== null) {
+            $this->ApiExcludeRuleName = $param["ApiExcludeRuleName"];
         }
     }
 }

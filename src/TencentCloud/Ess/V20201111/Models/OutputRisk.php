@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContent(string $Content) 设置PDF风险原文内容
  * @method array getPositions() 获取审查出的PDF段落位置信息
  * @method void setPositions(array $Positions) 设置审查出的PDF段落位置信息
+ * @method boolean getIsMark() 获取是否已修订
+ * @method void setIsMark(boolean $IsMark) 设置是否已修订
+ * @method boolean getIsIgnore() 获取是否已忽略
+ * @method void setIsIgnore(boolean $IsIgnore) 设置是否已忽略
  * @method string getRiskBasis() 获取审查依据
  * @method void setRiskBasis(string $RiskBasis) 设置审查依据
  * @method integer getRiskLevelId() 获取风险等级id。1 为最高风险等级，0 为最低风险等级，从[2,n]数字越大风险等级逐渐降低。
@@ -62,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatorId(string $CreatorId) 设置创建人ID
  * @method integer getCreatedOn() 获取创建时间
  * @method void setCreatedOn(integer $CreatedOn) 设置创建时间
+ * @method string getRiskLevelAliasName() 获取风险等级别名
+ * @method void setRiskLevelAliasName(string $RiskLevelAliasName) 设置风险等级别名
  */
 class OutputRisk extends AbstractModel
 {
@@ -112,6 +118,16 @@ class OutputRisk extends AbstractModel
     public $Positions;
 
     /**
+     * @var boolean 是否已修订
+     */
+    public $IsMark;
+
+    /**
+     * @var boolean 是否已忽略
+     */
+    public $IsIgnore;
+
+    /**
      * @var string 审查依据
      */
     public $RiskBasis;
@@ -147,6 +163,11 @@ class OutputRisk extends AbstractModel
     public $CreatedOn;
 
     /**
+     * @var string 风险等级别名
+     */
+    public $RiskLevelAliasName;
+
+    /**
      * @param string $RiskId 合同审查风险结果ID
      * @param string $RiskName 风险名称
      * @param string $RiskDescription 风险描述
@@ -161,6 +182,8 @@ class OutputRisk extends AbstractModel
      * @param array $RiskPresentation 风险评估
      * @param string $Content PDF风险原文内容
      * @param array $Positions 审查出的PDF段落位置信息
+     * @param boolean $IsMark 是否已修订
+     * @param boolean $IsIgnore 是否已忽略
      * @param string $RiskBasis 审查依据
      * @param integer $RiskLevelId 风险等级id。1 为最高风险等级，0 为最低风险等级，从[2,n]数字越大风险等级逐渐降低。
      * @param array $RiskLabels 风险标签
@@ -168,6 +191,7 @@ class OutputRisk extends AbstractModel
      * @param string $Creator 创建人
      * @param string $CreatorId 创建人ID
      * @param integer $CreatedOn 创建时间
+     * @param string $RiskLevelAliasName 风险等级别名
      */
     function __construct()
     {
@@ -219,6 +243,14 @@ class OutputRisk extends AbstractModel
             }
         }
 
+        if (array_key_exists("IsMark",$param) and $param["IsMark"] !== null) {
+            $this->IsMark = $param["IsMark"];
+        }
+
+        if (array_key_exists("IsIgnore",$param) and $param["IsIgnore"] !== null) {
+            $this->IsIgnore = $param["IsIgnore"];
+        }
+
         if (array_key_exists("RiskBasis",$param) and $param["RiskBasis"] !== null) {
             $this->RiskBasis = $param["RiskBasis"];
         }
@@ -245,6 +277,10 @@ class OutputRisk extends AbstractModel
 
         if (array_key_exists("CreatedOn",$param) and $param["CreatedOn"] !== null) {
             $this->CreatedOn = $param["CreatedOn"];
+        }
+
+        if (array_key_exists("RiskLevelAliasName",$param) and $param["RiskLevelAliasName"] !== null) {
+            $this->RiskLevelAliasName = $param["RiskLevelAliasName"];
         }
     }
 }

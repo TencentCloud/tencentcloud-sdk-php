@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVideoComprehensionAnalysisResult() 获取视频（音频）理解内容详情
  * @method void setVideoComprehensionAnalysisResult(string $VideoComprehensionAnalysisResult) 设置视频（音频）理解内容详情
+ * @method string getVideoComprehensionExtInfo() 获取视频（音频）理解扩展信息
+ * @method void setVideoComprehensionExtInfo(string $VideoComprehensionExtInfo) 设置视频（音频）理解扩展信息
+ * @method array getVideoComprehensionResultList() 获取视频分镜理解结果
+ * @method void setVideoComprehensionResultList(array $VideoComprehensionResultList) 设置视频分镜理解结果
  */
 class AiAnalysisTaskVideoComprehensionOutput extends AbstractModel
 {
@@ -31,7 +35,19 @@ class AiAnalysisTaskVideoComprehensionOutput extends AbstractModel
     public $VideoComprehensionAnalysisResult;
 
     /**
+     * @var string 视频（音频）理解扩展信息
+     */
+    public $VideoComprehensionExtInfo;
+
+    /**
+     * @var array 视频分镜理解结果
+     */
+    public $VideoComprehensionResultList;
+
+    /**
      * @param string $VideoComprehensionAnalysisResult 视频（音频）理解内容详情
+     * @param string $VideoComprehensionExtInfo 视频（音频）理解扩展信息
+     * @param array $VideoComprehensionResultList 视频分镜理解结果
      */
     function __construct()
     {
@@ -48,6 +64,19 @@ class AiAnalysisTaskVideoComprehensionOutput extends AbstractModel
         }
         if (array_key_exists("VideoComprehensionAnalysisResult",$param) and $param["VideoComprehensionAnalysisResult"] !== null) {
             $this->VideoComprehensionAnalysisResult = $param["VideoComprehensionAnalysisResult"];
+        }
+
+        if (array_key_exists("VideoComprehensionExtInfo",$param) and $param["VideoComprehensionExtInfo"] !== null) {
+            $this->VideoComprehensionExtInfo = $param["VideoComprehensionExtInfo"];
+        }
+
+        if (array_key_exists("VideoComprehensionResultList",$param) and $param["VideoComprehensionResultList"] !== null) {
+            $this->VideoComprehensionResultList = [];
+            foreach ($param["VideoComprehensionResultList"] as $key => $value){
+                $obj = new VideoComprehensionResultItem();
+                $obj->deserialize($value);
+                array_push($this->VideoComprehensionResultList, $obj);
+            }
         }
     }
 }

@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method RateLimitCommonRsp getBaseInfo() 获取操作结果
  * @method void setBaseInfo(RateLimitCommonRsp $BaseInfo) 设置操作结果
+ * @method integer getLimitRuleID() 获取操作的规则ID
+ * @method void setLimitRuleID(integer $LimitRuleID) 设置操作的规则ID
+ * @method string getDomain() 获取所属域名
+ * @method void setDomain(string $Domain) 设置所属域名
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +37,24 @@ class UpdateRateLimitV2Response extends AbstractModel
     public $BaseInfo;
 
     /**
+     * @var integer 操作的规则ID
+     */
+    public $LimitRuleID;
+
+    /**
+     * @var string 所属域名
+     */
+    public $Domain;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param RateLimitCommonRsp $BaseInfo 操作结果
+     * @param integer $LimitRuleID 操作的规则ID
+     * @param string $Domain 所属域名
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -57,6 +73,14 @@ class UpdateRateLimitV2Response extends AbstractModel
         if (array_key_exists("BaseInfo",$param) and $param["BaseInfo"] !== null) {
             $this->BaseInfo = new RateLimitCommonRsp();
             $this->BaseInfo->deserialize($param["BaseInfo"]);
+        }
+
+        if (array_key_exists("LimitRuleID",$param) and $param["LimitRuleID"] !== null) {
+            $this->LimitRuleID = $param["LimitRuleID"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

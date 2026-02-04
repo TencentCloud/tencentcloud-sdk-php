@@ -26,6 +26,7 @@ use TencentCloud\Common\AbstractModel;
 <li>LiveRecordResult：直播录制结果；</li>
 <li>AiQualityControlResult：媒体质检结果；</li>
 <li>AiAnalysisResult：内容分析结果；</li>
+<li>AiSmartSubtitleResult：智能字幕结果；</li>
 <li>ProcessEof：直播流处理结束。</li>
  * @method void setNotificationType(string $NotificationType) 设置直播流处理结果类型，包含：
 <li>AiReviewResult：内容审核结果；</li>
@@ -33,6 +34,7 @@ use TencentCloud\Common\AbstractModel;
 <li>LiveRecordResult：直播录制结果；</li>
 <li>AiQualityControlResult：媒体质检结果；</li>
 <li>AiAnalysisResult：内容分析结果；</li>
+<li>AiSmartSubtitleResult：智能字幕结果；</li>
 <li>ProcessEof：直播流处理结束。</li>
  * @method string getTaskId() 获取视频处理任务 ID。
  * @method void setTaskId(string $TaskId) 设置视频处理任务 ID。
@@ -60,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLiveRecordResultInfo(LiveStreamRecordResultInfo $LiveRecordResultInfo) 设置直播录制结果，当 NotificationType 为 LiveRecordResult 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method LiveStreamAiSmartSubtitleResultInfo getAiSmartSubtitleResultInfo() 获取智能字幕结果，当 NotificationType 为 AiSmartSubtitleResult 时有效。
+ * @method void setAiSmartSubtitleResultInfo(LiveStreamAiSmartSubtitleResultInfo $AiSmartSubtitleResultInfo) 设置智能字幕结果，当 NotificationType 为 AiSmartSubtitleResult 时有效。
  * @method string getSessionId() 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
  * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
  * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长1000个字符。
@@ -80,6 +84,7 @@ class ParseLiveStreamProcessNotificationResponse extends AbstractModel
 <li>LiveRecordResult：直播录制结果；</li>
 <li>AiQualityControlResult：媒体质检结果；</li>
 <li>AiAnalysisResult：内容分析结果；</li>
+<li>AiSmartSubtitleResult：智能字幕结果；</li>
 <li>ProcessEof：直播流处理结束。</li>
      */
     public $NotificationType;
@@ -126,6 +131,11 @@ class ParseLiveStreamProcessNotificationResponse extends AbstractModel
     public $LiveRecordResultInfo;
 
     /**
+     * @var LiveStreamAiSmartSubtitleResultInfo 智能字幕结果，当 NotificationType 为 AiSmartSubtitleResult 时有效。
+     */
+    public $AiSmartSubtitleResultInfo;
+
+    /**
      * @var string 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
      */
     public $SessionId;
@@ -157,6 +167,7 @@ class ParseLiveStreamProcessNotificationResponse extends AbstractModel
 <li>LiveRecordResult：直播录制结果；</li>
 <li>AiQualityControlResult：媒体质检结果；</li>
 <li>AiAnalysisResult：内容分析结果；</li>
+<li>AiSmartSubtitleResult：智能字幕结果；</li>
 <li>ProcessEof：直播流处理结束。</li>
      * @param string $TaskId 视频处理任务 ID。
      * @param LiveStreamProcessErrorInfo $ProcessEofInfo 直播流处理错误信息，当 NotificationType 为 ProcessEof 时有效。
@@ -171,6 +182,7 @@ class ParseLiveStreamProcessNotificationResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LiveStreamRecordResultInfo $LiveRecordResultInfo 直播录制结果，当 NotificationType 为 LiveRecordResult 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param LiveStreamAiSmartSubtitleResultInfo $AiSmartSubtitleResultInfo 智能字幕结果，当 NotificationType 为 AiSmartSubtitleResult 时有效。
      * @param string $SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长1000个字符。
      * @param integer $Timestamp - 过期时间，事件通知签名过期 UNIX 时间戳。 - 来自媒体处理的消息通知默认过期时间是10分钟，如果一条消息通知中的 Timestamp 值所指定的时间已经过期，则可以判定这条通知无效，进而可以防止网络重放攻击。 - Timestamp 的格式为十进制 UNIX 时间戳，即从1970年01月01日（UTC/GMT 的午夜）开始所经过的秒数。
@@ -226,6 +238,11 @@ class ParseLiveStreamProcessNotificationResponse extends AbstractModel
         if (array_key_exists("LiveRecordResultInfo",$param) and $param["LiveRecordResultInfo"] !== null) {
             $this->LiveRecordResultInfo = new LiveStreamRecordResultInfo();
             $this->LiveRecordResultInfo->deserialize($param["LiveRecordResultInfo"]);
+        }
+
+        if (array_key_exists("AiSmartSubtitleResultInfo",$param) and $param["AiSmartSubtitleResultInfo"] !== null) {
+            $this->AiSmartSubtitleResultInfo = new LiveStreamAiSmartSubtitleResultInfo();
+            $this->AiSmartSubtitleResultInfo->deserialize($param["AiSmartSubtitleResultInfo"]);
         }
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {

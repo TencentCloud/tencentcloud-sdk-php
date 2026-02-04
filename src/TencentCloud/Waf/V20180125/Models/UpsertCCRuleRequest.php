@@ -70,6 +70,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActionRatio(integer $ActionRatio) 设置动作灰度比例，默认值100
  * @method string getSource() 获取规则来源
  * @method void setSource(string $Source) 设置规则来源
+ * @method string getJobType() 获取forever
+ * @method void setJobType(string $JobType) 设置forever
+ * @method JobDateTime getJobDateTime() 获取无
+ * @method void setJobDateTime(JobDateTime $JobDateTime) 设置无
+ * @method integer getExpireTime() 获取0
+ * @method void setExpireTime(integer $ExpireTime) 设置0
+ * @method integer getValidStatus() 获取有效性
+ * @method void setValidStatus(integer $ValidStatus) 设置有效性
  */
 class UpsertCCRuleRequest extends AbstractModel
 {
@@ -199,6 +207,26 @@ class UpsertCCRuleRequest extends AbstractModel
     public $Source;
 
     /**
+     * @var string forever
+     */
+    public $JobType;
+
+    /**
+     * @var JobDateTime 无
+     */
+    public $JobDateTime;
+
+    /**
+     * @var integer 0
+     */
+    public $ExpireTime;
+
+    /**
+     * @var integer 有效性
+     */
+    public $ValidStatus;
+
+    /**
      * @param string $Domain 域名
      * @param string $Name 名称
      * @param integer $Status 状态
@@ -224,6 +252,10 @@ class UpsertCCRuleRequest extends AbstractModel
      * @param string $PageId 页面ID
      * @param integer $ActionRatio 动作灰度比例，默认值100
      * @param string $Source 规则来源
+     * @param string $JobType forever
+     * @param JobDateTime $JobDateTime 无
+     * @param integer $ExpireTime 0
+     * @param integer $ValidStatus 有效性
      */
     function __construct()
     {
@@ -336,6 +368,23 @@ class UpsertCCRuleRequest extends AbstractModel
 
         if (array_key_exists("Source",$param) and $param["Source"] !== null) {
             $this->Source = $param["Source"];
+        }
+
+        if (array_key_exists("JobType",$param) and $param["JobType"] !== null) {
+            $this->JobType = $param["JobType"];
+        }
+
+        if (array_key_exists("JobDateTime",$param) and $param["JobDateTime"] !== null) {
+            $this->JobDateTime = new JobDateTime();
+            $this->JobDateTime->deserialize($param["JobDateTime"]);
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("ValidStatus",$param) and $param["ValidStatus"] !== null) {
+            $this->ValidStatus = $param["ValidStatus"];
         }
     }
 }

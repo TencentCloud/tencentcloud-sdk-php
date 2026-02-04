@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRepLog(string $RepLog) 设置请求样例
  * @method string getRspLog() 获取响应样例
  * @method void setRspLog(string $RspLog) 设置响应样例
+ * @method string getFullReqLog() 获取完整请求样例
+ * @method void setFullReqLog(string $FullReqLog) 设置完整请求样例
  */
 class ApiDetailSampleHistory extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ApiDetailSampleHistory extends AbstractModel
     public $RspLog;
 
     /**
+     * @var string 完整请求样例
+     */
+    public $FullReqLog;
+
+    /**
      * @param string $SampleNme 样例名称
      * @param string $RepLog 请求样例
      * @param string $RspLog 响应样例
+     * @param string $FullReqLog 完整请求样例
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ApiDetailSampleHistory extends AbstractModel
 
         if (array_key_exists("RspLog",$param) and $param["RspLog"] !== null) {
             $this->RspLog = $param["RspLog"];
+        }
+
+        if (array_key_exists("FullReqLog",$param) and $param["FullReqLog"] !== null) {
+            $this->FullReqLog = $param["FullReqLog"];
         }
     }
 }

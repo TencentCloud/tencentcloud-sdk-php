@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Aiart\V20221229\Models;
+namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTemplateToImageJob请求参数结构体
+ * 直播智能字幕结果
  *
- * @method string getJobId() 获取任务 ID。
- * @method void setJobId(string $JobId) 设置任务 ID。
+ * @method array getSmartSubtitleResult() 获取直播智能字幕任务结果列表。
+ * @method void setSmartSubtitleResult(array $SmartSubtitleResult) 设置直播智能字幕任务结果列表。
  */
-class DescribeTemplateToImageJobRequest extends AbstractModel
+class LiveStreamAiSmartSubtitleResultInfo extends AbstractModel
 {
     /**
-     * @var string 任务 ID。
+     * @var array 直播智能字幕任务结果列表。
      */
-    public $JobId;
+    public $SmartSubtitleResult;
 
     /**
-     * @param string $JobId 任务 ID。
+     * @param array $SmartSubtitleResult 直播智能字幕任务结果列表。
      */
     function __construct()
     {
@@ -46,8 +46,13 @@ class DescribeTemplateToImageJobRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists("SmartSubtitleResult",$param) and $param["SmartSubtitleResult"] !== null) {
+            $this->SmartSubtitleResult = [];
+            foreach ($param["SmartSubtitleResult"] as $key => $value){
+                $obj = new LiveSmartSubtitleResult();
+                $obj->deserialize($value);
+                array_push($this->SmartSubtitleResult, $obj);
+            }
         }
     }
 }

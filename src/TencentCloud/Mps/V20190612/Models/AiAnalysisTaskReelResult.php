@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 智能成片结果类型
+ * AI解说二创结果类型
  *
  * @method string getStatus() 获取任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method void setStatus(string $Status) 设置任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
@@ -26,11 +26,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) 设置错误码，0：成功，其他值：失败。
  * @method string getMessage() 获取错误信息。
  * @method void setMessage(string $Message) 设置错误信息。
- * @method AiAnalysisTaskReelInput getInput() 获取智能成片任务输入。
- * @method void setInput(AiAnalysisTaskReelInput $Input) 设置智能成片任务输入。
- * @method AiAnalysisTaskReelOutput getOutput() 获取智能成片任务输出。
+ * @method AiAnalysisTaskReelInput getInput() 获取AI解说二创任务输入。
+ * @method void setInput(AiAnalysisTaskReelInput $Input) 设置AI解说二创任务输入。
+ * @method AiAnalysisTaskReelOutput getOutput() 获取AI解说二创任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutput(AiAnalysisTaskReelOutput $Output) 设置智能成片任务输出。
+ * @method void setOutput(AiAnalysisTaskReelOutput $Output) 设置AI解说二创任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrCodeExt() 获取错误码，空字符串表示成功，其他值表示失败，取值请参考 媒体处理类错误码 列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -67,12 +67,12 @@ class AiAnalysisTaskReelResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiAnalysisTaskReelInput 智能成片任务输入。
+     * @var AiAnalysisTaskReelInput AI解说二创任务输入。
      */
     public $Input;
 
     /**
-     * @var AiAnalysisTaskReelOutput 智能成片任务输出。
+     * @var AiAnalysisTaskReelOutput AI解说二创任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
@@ -105,8 +105,8 @@ class AiAnalysisTaskReelResult extends AbstractModel
      * @param string $Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      * @param integer $ErrCode 错误码，0：成功，其他值：失败。
      * @param string $Message 错误信息。
-     * @param AiAnalysisTaskReelInput $Input 智能成片任务输入。
-     * @param AiAnalysisTaskReelOutput $Output 智能成片任务输出。
+     * @param AiAnalysisTaskReelInput $Input AI解说二创任务输入。
+     * @param AiAnalysisTaskReelOutput $Output AI解说二创任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrCodeExt 错误码，空字符串表示成功，其他值表示失败，取值请参考 媒体处理类错误码 列表。
 注意：此字段可能返回 null，表示取不到有效值。

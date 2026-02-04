@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQGPUShareEnable(boolean $QGPUShareEnable) 设置是否开启QGPU共享
  * @method ClusterProperty getClusterProperty() 获取集群属性
  * @method void setClusterProperty(ClusterProperty $ClusterProperty) 设置集群属性
+ * @method boolean getIsHighAvailability() 获取集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+ * @method void setIsHighAvailability(boolean $IsHighAvailability) 设置集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
  */
 class ModifyClusterAttributeRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ModifyClusterAttributeRequest extends AbstractModel
     public $ClusterProperty;
 
     /**
+     * @var boolean 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+     */
+    public $IsHighAvailability;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param integer $ProjectId 集群所属项目
      * @param string $ClusterName 集群名称,字符长度50
@@ -88,6 +95,7 @@ class ModifyClusterAttributeRequest extends AbstractModel
      * @param AutoUpgradeClusterLevel $AutoUpgradeClusterLevel 自动变配集群等级
      * @param boolean $QGPUShareEnable 是否开启QGPU共享
      * @param ClusterProperty $ClusterProperty 集群属性
+     * @param boolean $IsHighAvailability 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
      */
     function __construct()
     {
@@ -134,6 +142,10 @@ class ModifyClusterAttributeRequest extends AbstractModel
         if (array_key_exists("ClusterProperty",$param) and $param["ClusterProperty"] !== null) {
             $this->ClusterProperty = new ClusterProperty();
             $this->ClusterProperty->deserialize($param["ClusterProperty"]);
+        }
+
+        if (array_key_exists("IsHighAvailability",$param) and $param["IsHighAvailability"] !== null) {
+            $this->IsHighAvailability = $param["IsHighAvailability"];
         }
     }
 }

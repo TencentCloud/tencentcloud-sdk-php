@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageSize(integer $PageSize) 设置PageSize 每页获取数(只支持32位)
  * @method integer getPageNum() 获取PageNum 获取第几页(只支持32位)
  * @method void setPageNum(integer $PageNum) 设置PageNum 获取第几页(只支持32位)
+ * @method RulePayload getRulePayload() 获取复杂查询规则条件查询项（支持任意层级AND/OR组合）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRulePayload(RulePayload $RulePayload) 设置复杂查询规则条件查询项（支持任意层级AND/OR组合）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRulePayloadMode() 获取规则模式：0-使用旧的FilterGroups，1-使用新的RulePayload
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRulePayloadMode(integer $RulePayloadMode) 设置规则模式：0-使用旧的FilterGroups，1-使用新的RulePayload
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Condition extends AbstractModel
 {
@@ -59,11 +67,27 @@ class Condition extends AbstractModel
     public $PageNum;
 
     /**
+     * @var RulePayload 复杂查询规则条件查询项（支持任意层级AND/OR组合）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RulePayload;
+
+    /**
+     * @var integer 规则模式：0-使用旧的FilterGroups，1-使用新的RulePayload
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RulePayloadMode;
+
+    /**
      * @param array $Filters Filters 条件过滤
      * @param array $FilterGroups FilterGroups 条件过滤组
      * @param Sort $Sort Sort 排序字段
      * @param integer $PageSize PageSize 每页获取数(只支持32位)
      * @param integer $PageNum PageNum 获取第几页(只支持32位)
+     * @param RulePayload $RulePayload 复杂查询规则条件查询项（支持任意层级AND/OR组合）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RulePayloadMode 规则模式：0-使用旧的FilterGroups，1-使用新的RulePayload
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -107,6 +131,15 @@ class Condition extends AbstractModel
 
         if (array_key_exists("PageNum",$param) and $param["PageNum"] !== null) {
             $this->PageNum = $param["PageNum"];
+        }
+
+        if (array_key_exists("RulePayload",$param) and $param["RulePayload"] !== null) {
+            $this->RulePayload = new RulePayload();
+            $this->RulePayload->deserialize($param["RulePayload"]);
+        }
+
+        if (array_key_exists("RulePayloadMode",$param) and $param["RulePayloadMode"] !== null) {
+            $this->RulePayloadMode = $param["RulePayloadMode"];
         }
     }
 }

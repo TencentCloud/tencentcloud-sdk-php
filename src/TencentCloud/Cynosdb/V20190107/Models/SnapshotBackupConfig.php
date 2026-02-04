@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupIntervalTime(integer $BackupIntervalTime) 设置间隔时间
  * @method integer getReserveDuration() 获取表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600247=604800，最大为158112000
  * @method void setReserveDuration(integer $ReserveDuration) 设置表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600247=604800，最大为158112000
- * @method string getBackupTriggerStrategy() 获取动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
- * @method void setBackupTriggerStrategy(string $BackupTriggerStrategy) 设置动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
+ * @method string getBackupTriggerStrategy() 获取自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
+ * @method void setBackupTriggerStrategy(string $BackupTriggerStrategy) 设置自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
  */
 class SnapshotBackupConfig extends AbstractModel
 {
@@ -68,7 +68,7 @@ class SnapshotBackupConfig extends AbstractModel
     public $ReserveDuration;
 
     /**
-     * @var string 动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
+     * @var string 自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
      */
     public $BackupTriggerStrategy;
 
@@ -79,7 +79,7 @@ class SnapshotBackupConfig extends AbstractModel
      * @param array $BackupWeekDays 该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周日到周六的备份方式，full-全量备份，increment-增量备份
      * @param integer $BackupIntervalTime 间隔时间
      * @param integer $ReserveDuration 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600247=604800，最大为158112000
-     * @param string $BackupTriggerStrategy 动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
+     * @param string $BackupTriggerStrategy 自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
      */
     function __construct()
     {

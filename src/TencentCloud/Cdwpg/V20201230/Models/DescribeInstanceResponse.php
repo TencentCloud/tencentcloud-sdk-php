@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method InstanceInfo getInstanceInfo() 获取实例描述信息
  * @method void setInstanceInfo(InstanceInfo $InstanceInfo) 设置实例描述信息
+ * @method string getErrorMsg() 获取错误信息
+ * @method void setErrorMsg(string $ErrorMsg) 设置错误信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +35,18 @@ class DescribeInstanceResponse extends AbstractModel
     public $InstanceInfo;
 
     /**
+     * @var string 错误信息
+     */
+    public $ErrorMsg;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param InstanceInfo $InstanceInfo 实例描述信息
+     * @param string $ErrorMsg 错误信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -57,6 +65,10 @@ class DescribeInstanceResponse extends AbstractModel
         if (array_key_exists("InstanceInfo",$param) and $param["InstanceInfo"] !== null) {
             $this->InstanceInfo = new InstanceInfo();
             $this->InstanceInfo->deserialize($param["InstanceInfo"]);
+        }
+
+        if (array_key_exists("ErrorMsg",$param) and $param["ErrorMsg"] !== null) {
+            $this->ErrorMsg = $param["ErrorMsg"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

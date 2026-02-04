@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQGPUShareEnable(boolean $QGPUShareEnable) 设置是否开启QGPU共享
  * @method ClusterProperty getClusterProperty() 获取集群属性
  * @method void setClusterProperty(ClusterProperty $ClusterProperty) 设置集群属性
+ * @method boolean getIsHighAvailability() 获取集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+ * @method void setIsHighAvailability(boolean $IsHighAvailability) 设置集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -75,6 +77,11 @@ class ModifyClusterAttributeResponse extends AbstractModel
     public $ClusterProperty;
 
     /**
+     * @var boolean 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+     */
+    public $IsHighAvailability;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -87,6 +94,7 @@ class ModifyClusterAttributeResponse extends AbstractModel
      * @param AutoUpgradeClusterLevel $AutoUpgradeClusterLevel 自动变配集群等级
      * @param boolean $QGPUShareEnable 是否开启QGPU共享
      * @param ClusterProperty $ClusterProperty 集群属性
+     * @param boolean $IsHighAvailability 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -130,6 +138,10 @@ class ModifyClusterAttributeResponse extends AbstractModel
         if (array_key_exists("ClusterProperty",$param) and $param["ClusterProperty"] !== null) {
             $this->ClusterProperty = new ClusterProperty();
             $this->ClusterProperty->deserialize($param["ClusterProperty"]);
+        }
+
+        if (array_key_exists("IsHighAvailability",$param) and $param["IsHighAvailability"] !== null) {
+            $this->IsHighAvailability = $param["IsHighAvailability"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

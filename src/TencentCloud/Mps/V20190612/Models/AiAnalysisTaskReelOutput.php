@@ -18,23 +18,42 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 智能成片结果信息
+ * AI解说二创结果信息
  *
- * @method string getVideoPath() 获取成片视频路径。
- * @method void setVideoPath(string $VideoPath) 设置成片视频路径。
+ * @method string getVideoPath() 获取解说视频路径。
+ * @method void setVideoPath(string $VideoPath) 设置解说视频路径。
+ * @method array getVideoPaths() 获取解说视频路径列表。
+
+**注意**：
+1. 当返回一个文件时，`VideoPath `返回一个文件路径，`VideoPaths `也会填充同样路径的一个元素。
+2. 当返回多个文件时，`VideoPath `返回为空字符串，`VideoPaths `返回多文件路径列表。
+ * @method void setVideoPaths(array $VideoPaths) 设置解说视频路径列表。
+
+**注意**：
+1. 当返回一个文件时，`VideoPath `返回一个文件路径，`VideoPaths `也会填充同样路径的一个元素。
+2. 当返回多个文件时，`VideoPath `返回为空字符串，`VideoPaths `返回多文件路径列表。
  * @method string getScriptPath() 获取脚本文件路径
 
  * @method void setScriptPath(string $ScriptPath) 设置脚本文件路径
 
- * @method TaskOutputStorage getOutputStorage() 获取成片视频存储位置。
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置成片视频存储位置。
+ * @method TaskOutputStorage getOutputStorage() 获取解说视频存储位置。
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置解说视频存储位置。
  */
 class AiAnalysisTaskReelOutput extends AbstractModel
 {
     /**
-     * @var string 成片视频路径。
+     * @var string 解说视频路径。
      */
     public $VideoPath;
+
+    /**
+     * @var array 解说视频路径列表。
+
+**注意**：
+1. 当返回一个文件时，`VideoPath `返回一个文件路径，`VideoPaths `也会填充同样路径的一个元素。
+2. 当返回多个文件时，`VideoPath `返回为空字符串，`VideoPaths `返回多文件路径列表。
+     */
+    public $VideoPaths;
 
     /**
      * @var string 脚本文件路径
@@ -43,15 +62,20 @@ class AiAnalysisTaskReelOutput extends AbstractModel
     public $ScriptPath;
 
     /**
-     * @var TaskOutputStorage 成片视频存储位置。
+     * @var TaskOutputStorage 解说视频存储位置。
      */
     public $OutputStorage;
 
     /**
-     * @param string $VideoPath 成片视频路径。
+     * @param string $VideoPath 解说视频路径。
+     * @param array $VideoPaths 解说视频路径列表。
+
+**注意**：
+1. 当返回一个文件时，`VideoPath `返回一个文件路径，`VideoPaths `也会填充同样路径的一个元素。
+2. 当返回多个文件时，`VideoPath `返回为空字符串，`VideoPaths `返回多文件路径列表。
      * @param string $ScriptPath 脚本文件路径
 
-     * @param TaskOutputStorage $OutputStorage 成片视频存储位置。
+     * @param TaskOutputStorage $OutputStorage 解说视频存储位置。
      */
     function __construct()
     {
@@ -68,6 +92,10 @@ class AiAnalysisTaskReelOutput extends AbstractModel
         }
         if (array_key_exists("VideoPath",$param) and $param["VideoPath"] !== null) {
             $this->VideoPath = $param["VideoPath"];
+        }
+
+        if (array_key_exists("VideoPaths",$param) and $param["VideoPaths"] !== null) {
+            $this->VideoPaths = $param["VideoPaths"];
         }
 
         if (array_key_exists("ScriptPath",$param) and $param["ScriptPath"] !== null) {

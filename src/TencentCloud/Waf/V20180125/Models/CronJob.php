@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDays(array $Days) 设置每个月的几号执行
  * @method array getWDays() 获取每个星期的星期几执行
  * @method void setWDays(array $WDays) 设置每个星期的星期几执行
- * @method string getStartTime() 获取开始时间
- * @method void setStartTime(string $StartTime) 设置开始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method string getStartTime() 获取开始时间戳
+ * @method void setStartTime(string $StartTime) 设置开始时间戳
+ * @method string getEndTime() 获取结束时间戳
+ * @method void setEndTime(string $EndTime) 设置结束时间戳
  */
 class CronJob extends AbstractModel
 {
@@ -42,20 +42,20 @@ class CronJob extends AbstractModel
     public $WDays;
 
     /**
-     * @var string 开始时间
+     * @var string 开始时间戳
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string 结束时间戳
      */
     public $EndTime;
 
     /**
      * @param array $Days 每个月的几号执行
      * @param array $WDays 每个星期的星期几执行
-     * @param string $StartTime 开始时间
-     * @param string $EndTime 结束时间
+     * @param string $StartTime 开始时间戳
+     * @param string $EndTime 结束时间戳
      */
     function __construct()
     {

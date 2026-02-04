@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComment(string $Comment) 设置数字水印模板描述信息，长度限制：256 个字符。
  * @method string getTextContent() 获取数字水印文字内容，长度不超过64个字符，NAGRA水印类型的模板不支持修改文字内容。
  * @method void setTextContent(string $TextContent) 设置数字水印文字内容，长度不超过64个字符，NAGRA水印类型的模板不支持修改文字内容。
+ * @method string getStrength() 获取数字水印强度。 default: 默认，高清画质和抗性平衡 stronger:画质清晰，抗性较强 strongest:画质一般，抗性最强
+ * @method void setStrength(string $Strength) 设置数字水印强度。 default: 默认，高清画质和抗性平衡 stronger:画质清晰，抗性较强 strongest:画质一般，抗性最强
  */
 class ModifyBlindWatermarkTemplateRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyBlindWatermarkTemplateRequest extends AbstractModel
     public $TextContent;
 
     /**
+     * @var string 数字水印强度。 default: 默认，高清画质和抗性平衡 stronger:画质清晰，抗性较强 strongest:画质一般，抗性最强
+     */
+    public $Strength;
+
+    /**
      * @param integer $Definition 数字水印模板唯一标识。
      * @param string $Name 数字水印模板名称，支持 中文、英文、数字、_、-和. 六种格式，长度限制：64 个字符。
      * @param string $Comment 数字水印模板描述信息，长度限制：256 个字符。
      * @param string $TextContent 数字水印文字内容，长度不超过64个字符，NAGRA水印类型的模板不支持修改文字内容。
+     * @param string $Strength 数字水印强度。 default: 默认，高清画质和抗性平衡 stronger:画质清晰，抗性较强 strongest:画质一般，抗性最强
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ModifyBlindWatermarkTemplateRequest extends AbstractModel
 
         if (array_key_exists("TextContent",$param) and $param["TextContent"] !== null) {
             $this->TextContent = $param["TextContent"];
+        }
+
+        if (array_key_exists("Strength",$param) and $param["Strength"] !== null) {
+            $this->Strength = $param["Strength"];
         }
     }
 }

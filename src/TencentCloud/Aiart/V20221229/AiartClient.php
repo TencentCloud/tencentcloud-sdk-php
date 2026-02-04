@@ -26,7 +26,6 @@ use TencentCloud\Aiart\V20221229\Models as Models;
  * @method Models\ChangeClothesResponse ChangeClothes(Models\ChangeClothesRequest $req) 上传正面全身模特照和服装平铺图，生成模特换装后的图片。
 生成的换装图片分辨率和模特照分辨率一致。
 模特换装默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
- * @method Models\DescribeTemplateToImageJobResponse DescribeTemplateToImageJob(Models\DescribeTemplateToImageJobRequest $req) 查询图片特效任务
  * @method Models\GenerateAvatarResponse GenerateAvatar(Models\GenerateAvatarRequest $req) 百变头像接口将根据输入的人像照片，生成风格百变的头像。
 百变头像默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
  * @method Models\ImageInpaintingRemovalResponse ImageInpaintingRemoval(Models\ImageInpaintingRemovalRequest $req) 局部消除接口通过图像 mask 指定需要消除的人、物、文字等区域，在选定区域对图像内容进行消除与重绘补全。
@@ -93,7 +92,6 @@ AI 美照默认提供1个并发，代表最多能同时处理1个已提交的任
 - 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
 
 表情动图生成默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
- * @method Models\SubmitTemplateToImageJobResponse SubmitTemplateToImageJob(Models\SubmitTemplateToImageJobRequest $req) 提交图片特效任务
  * @method Models\SubmitTextToImageJobResponse SubmitTextToImageJob(Models\SubmitTextToImageJobRequest $req) 混元生图接口，基于混元大模型，根据输入的文本描述快速生成图片。
 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
  * @method Models\SubmitTextToImageProJobResponse SubmitTextToImageProJob(Models\SubmitTextToImageProJobRequest $req) 本接口已迁移至腾讯混元大模型-混元生图，即将停止此处维护，可切换至 [混元生图 API](https://cloud.tencent.com/document/product/1729/105969) 继续使用。

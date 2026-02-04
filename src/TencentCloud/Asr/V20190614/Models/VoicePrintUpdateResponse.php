@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * VoicePrintUpdate返回参数结构体
  *
- * @method VoicePrintBaseData getData() 获取说话人基础数据
- * @method void setData(VoicePrintBaseData $Data) 设置说话人基础数据
+ * @method VoicePrintBaseData getData() 获取<p>说话人基础数据</p>
+ * @method void setData(VoicePrintBaseData $Data) 设置<p>说话人基础数据</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class VoicePrintUpdateResponse extends AbstractModel
 {
     /**
-     * @var VoicePrintBaseData 说话人基础数据
+     * @var VoicePrintBaseData <p>说话人基础数据</p>
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class VoicePrintUpdateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param VoicePrintBaseData $Data 说话人基础数据
+     * @param VoicePrintBaseData $Data <p>说话人基础数据</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

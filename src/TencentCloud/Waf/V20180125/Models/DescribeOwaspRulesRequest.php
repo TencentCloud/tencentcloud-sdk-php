@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页页数，默认为0
  * @method integer getLimit() 获取每页容量，默认为10
  * @method void setLimit(integer $Limit) 设置每页容量，默认为10
- * @method string getBy() 获取排序字段，支持 RuleId, UpdateTime
- * @method void setBy(string $By) 设置排序字段，支持 RuleId, UpdateTime
+ * @method string getBy() 获取排序字段，支持 RuleId, ModifyTime
+ * @method void setBy(string $By) 设置排序字段，支持 RuleId, ModifyTime
  * @method string getOrder() 获取排序方式，支持asc、desc
  * @method void setOrder(string $Order) 设置排序方式，支持asc、desc
  * @method array getFilters() 获取筛选条件，支持 RuleId：规则ID、TypeId：规则类型、Desc：规则描述 、CveID：CVE编号、Status：规则状态、VulLevel：威胁等级
@@ -51,7 +51,7 @@ class DescribeOwaspRulesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 排序字段，支持 RuleId, UpdateTime
+     * @var string 排序字段，支持 RuleId, ModifyTime
      */
     public $By;
 
@@ -69,7 +69,7 @@ class DescribeOwaspRulesRequest extends AbstractModel
      * @param string $Domain 需要查询的域名
      * @param integer $Offset 分页页数，默认为0
      * @param integer $Limit 每页容量，默认为10
-     * @param string $By 排序字段，支持 RuleId, UpdateTime
+     * @param string $By 排序字段，支持 RuleId, ModifyTime
      * @param string $Order 排序方式，支持asc、desc
      * @param array $Filters 筛选条件，支持 RuleId：规则ID、TypeId：规则类型、Desc：规则描述 、CveID：CVE编号、Status：规则状态、VulLevel：威胁等级
      */

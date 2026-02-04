@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * VoicePrintUpdate请求参数结构体
  *
- * @method integer getVoiceFormat() 获取音频格式 0: pcm, 1: wav
- * @method void setVoiceFormat(integer $VoiceFormat) 设置音频格式 0: pcm, 1: wav
- * @method integer getSampleRate() 获取音频采样率 目前仅支持16000 单位Hz
- * @method void setSampleRate(integer $SampleRate) 设置音频采样率 目前仅支持16000 单位Hz
- * @method string getVoicePrintId() 获取说话人id， 说话人唯一标识
- * @method void setVoicePrintId(string $VoicePrintId) 设置说话人id， 说话人唯一标识
- * @method string getData() 获取音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M	
- * @method void setData(string $Data) 设置音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M	
- * @method string getSpeakerNick() 获取说话人昵称  不超过32字节
- * @method void setSpeakerNick(string $SpeakerNick) 设置说话人昵称  不超过32字节
+ * @method integer getVoiceFormat() 获取<p>音频格式 0: pcm, 1: wav</p>
+ * @method void setVoiceFormat(integer $VoiceFormat) 设置<p>音频格式 0: pcm, 1: wav</p>
+ * @method integer getSampleRate() 获取<p>音频采样率 目前仅支持16000 单位Hz</p>
+ * @method void setSampleRate(integer $SampleRate) 设置<p>音频采样率 目前仅支持16000 单位Hz</p>
+ * @method string getVoicePrintId() 获取<p>说话人id， 说话人唯一标识</p>
+ * @method void setVoicePrintId(string $VoicePrintId) 设置<p>说话人id， 说话人唯一标识</p>
+ * @method string getData() 获取<p>音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M</p>
+ * @method void setData(string $Data) 设置<p>音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M</p>
+ * @method string getSpeakerNick() 获取<p>说话人昵称  不超过32字节</p>
+ * @method void setSpeakerNick(string $SpeakerNick) 设置<p>说话人昵称  不超过32字节</p>
+ * @method string getAudioUrl() 获取<p>声纹cos url 注意:仅支持腾讯云cos url 地址</p>
+ * @method void setAudioUrl(string $AudioUrl) 设置<p>声纹cos url 注意:仅支持腾讯云cos url 地址</p>
  */
 class VoicePrintUpdateRequest extends AbstractModel
 {
     /**
-     * @var integer 音频格式 0: pcm, 1: wav
+     * @var integer <p>音频格式 0: pcm, 1: wav</p>
      */
     public $VoiceFormat;
 
     /**
-     * @var integer 音频采样率 目前仅支持16000 单位Hz
+     * @var integer <p>音频采样率 目前仅支持16000 单位Hz</p>
      */
     public $SampleRate;
 
     /**
-     * @var string 说话人id， 说话人唯一标识
+     * @var string <p>说话人id， 说话人唯一标识</p>
      */
     public $VoicePrintId;
 
     /**
-     * @var string 音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M	
+     * @var string <p>音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M</p>
      */
     public $Data;
 
     /**
-     * @var string 说话人昵称  不超过32字节
+     * @var string <p>说话人昵称  不超过32字节</p>
      */
     public $SpeakerNick;
 
     /**
-     * @param integer $VoiceFormat 音频格式 0: pcm, 1: wav
-     * @param integer $SampleRate 音频采样率 目前仅支持16000 单位Hz
-     * @param string $VoicePrintId 说话人id， 说话人唯一标识
-     * @param string $Data 音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M	
-     * @param string $SpeakerNick 说话人昵称  不超过32字节
+     * @var string <p>声纹cos url 注意:仅支持腾讯云cos url 地址</p>
+     */
+    public $AudioUrl;
+
+    /**
+     * @param integer $VoiceFormat <p>音频格式 0: pcm, 1: wav</p>
+     * @param integer $SampleRate <p>音频采样率 目前仅支持16000 单位Hz</p>
+     * @param string $VoicePrintId <p>说话人id， 说话人唯一标识</p>
+     * @param string $Data <p>音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M</p>
+     * @param string $SpeakerNick <p>说话人昵称  不超过32字节</p>
+     * @param string $AudioUrl <p>声纹cos url 注意:仅支持腾讯云cos url 地址</p>
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class VoicePrintUpdateRequest extends AbstractModel
 
         if (array_key_exists("SpeakerNick",$param) and $param["SpeakerNick"] !== null) {
             $this->SpeakerNick = $param["SpeakerNick"];
+        }
+
+        if (array_key_exists("AudioUrl",$param) and $param["AudioUrl"] !== null) {
+            $this->AudioUrl = $param["AudioUrl"];
         }
     }
 }

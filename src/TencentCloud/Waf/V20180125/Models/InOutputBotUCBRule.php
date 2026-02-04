@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActionList(array $ActionList) 设置当Action=intercept时，此字段必填
  * @method integer getDelayTime() 获取惩罚时间
  * @method void setDelayTime(integer $DelayTime) 设置惩罚时间
+ * @method integer getBatch() 获取是否为批量规则：0表示场景规则，1表示批量规则
+ * @method void setBatch(integer $Batch) 设置是否为批量规则：0表示场景规则，1表示批量规则
+ * @method integer getHitCount() 获取24小时内命中数
+ * @method void setHitCount(integer $HitCount) 设置24小时内命中数
  */
 class InOutputBotUCBRule extends AbstractModel
 {
@@ -192,6 +196,16 @@ class InOutputBotUCBRule extends AbstractModel
     public $DelayTime;
 
     /**
+     * @var integer 是否为批量规则：0表示场景规则，1表示批量规则
+     */
+    public $Batch;
+
+    /**
+     * @var integer 24小时内命中数
+     */
+    public $HitCount;
+
+    /**
      * @param string $Domain 域名
      * @param string $Name 规则名称
      * @param array $Rule UCB的具体规则项
@@ -216,6 +230,8 @@ class InOutputBotUCBRule extends AbstractModel
      * @param integer $BlockPageId 自定义拦截页面ID
      * @param array $ActionList 当Action=intercept时，此字段必填
      * @param integer $DelayTime 惩罚时间
+     * @param integer $Batch 是否为批量规则：0表示场景规则，1表示批量规则
+     * @param integer $HitCount 24小时内命中数
      */
     function __construct()
     {
@@ -335,6 +351,14 @@ class InOutputBotUCBRule extends AbstractModel
 
         if (array_key_exists("DelayTime",$param) and $param["DelayTime"] !== null) {
             $this->DelayTime = $param["DelayTime"];
+        }
+
+        if (array_key_exists("Batch",$param) and $param["Batch"] !== null) {
+            $this->Batch = $param["Batch"];
+        }
+
+        if (array_key_exists("HitCount",$param) and $param["HitCount"] !== null) {
+            $this->HitCount = $param["HitCount"];
         }
     }
 }

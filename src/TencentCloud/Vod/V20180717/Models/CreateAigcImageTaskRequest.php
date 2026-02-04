@@ -26,20 +26,34 @@ use TencentCloud\Common\AbstractModel;
 <li>GEM：Gemini；</li>
 <li>Qwen：千问。</li>
 <li>Hunyuan：混元。</li>
+<li>Vidu：生数。</li>
+<li>Kling：可灵。</li>
  * @method void setModelName(string $ModelName) 设置模型名称。取值：
 <li>GEM：Gemini；</li>
 <li>Qwen：千问。</li>
 <li>Hunyuan：混元。</li>
+<li>Vidu：生数。</li>
+<li>Kling：可灵。</li>
  * @method string getModelVersion() 获取模型版本。取值：
 <li>当 ModelName 是 GEM，可选值为 2.5、3.0；</li>
 <li>当 ModelName 是 Qwen，可选值为 0925；</li>
 <li>当 ModelName 是 Hunyuan，可选值为 3.0；</li>
+<li>当 ModelName 是 Vidu，可选值为 q2；</li>
+<li>当 ModelName 是 Kling，可选值为 2.1；</li>
  * @method void setModelVersion(string $ModelVersion) 设置模型版本。取值：
 <li>当 ModelName 是 GEM，可选值为 2.5、3.0；</li>
 <li>当 ModelName 是 Qwen，可选值为 0925；</li>
 <li>当 ModelName 是 Hunyuan，可选值为 3.0；</li>
- * @method array getFileInfos() 获取AIGC 生图任务的输入图片的文件信息。默认只支持指定1个，使用模型 GEM 时，版本2.5最多指定3个，版本3.0最多指定14个。
- * @method void setFileInfos(array $FileInfos) 设置AIGC 生图任务的输入图片的文件信息。默认只支持指定1个，使用模型 GEM 时，版本2.5最多指定3个，版本3.0最多指定14个。
+<li>当 ModelName 是 Vidu，可选值为 q2；</li>
+<li>当 ModelName 是 Kling，可选值为 2.1；</li>
+ * @method array getFileInfos() 获取AIGC 生图任务的输入图片的文件信息。默认只支持指定1个。下列模型可传多张参考图：
+* GEM 2.5：0～3张图片；
+* GEM 3.0：0～14张图片；
+* Vidu q2：0～7张图片，图片支持 png、jpeg、jpg、webp格式，图片像素不能小于 128x128，且比例需要小于1:4或4:1；
+ * @method void setFileInfos(array $FileInfos) 设置AIGC 生图任务的输入图片的文件信息。默认只支持指定1个。下列模型可传多张参考图：
+* GEM 2.5：0～3张图片；
+* GEM 3.0：0～14张图片；
+* Vidu q2：0～7张图片，图片支持 png、jpeg、jpg、webp格式，图片像素不能小于 128x128，且比例需要小于1:4或4:1；
  * @method string getPrompt() 获取生成图片的提示词。当 FileInfos 为空时，此参数必填。
  * @method void setPrompt(string $Prompt) 设置生成图片的提示词。当 FileInfos 为空时，此参数必填。
  * @method string getNegativePrompt() 获取要阻止模型生成图片的提示词。
@@ -69,6 +83,8 @@ class CreateAigcImageTaskRequest extends AbstractModel
 <li>GEM：Gemini；</li>
 <li>Qwen：千问。</li>
 <li>Hunyuan：混元。</li>
+<li>Vidu：生数。</li>
+<li>Kling：可灵。</li>
      */
     public $ModelName;
 
@@ -77,11 +93,16 @@ class CreateAigcImageTaskRequest extends AbstractModel
 <li>当 ModelName 是 GEM，可选值为 2.5、3.0；</li>
 <li>当 ModelName 是 Qwen，可选值为 0925；</li>
 <li>当 ModelName 是 Hunyuan，可选值为 3.0；</li>
+<li>当 ModelName 是 Vidu，可选值为 q2；</li>
+<li>当 ModelName 是 Kling，可选值为 2.1；</li>
      */
     public $ModelVersion;
 
     /**
-     * @var array AIGC 生图任务的输入图片的文件信息。默认只支持指定1个，使用模型 GEM 时，版本2.5最多指定3个，版本3.0最多指定14个。
+     * @var array AIGC 生图任务的输入图片的文件信息。默认只支持指定1个。下列模型可传多张参考图：
+* GEM 2.5：0～3张图片；
+* GEM 3.0：0～14张图片；
+* Vidu q2：0～7张图片，图片支持 png、jpeg、jpg、webp格式，图片像素不能小于 128x128，且比例需要小于1:4或4:1；
      */
     public $FileInfos;
 
@@ -131,11 +152,18 @@ class CreateAigcImageTaskRequest extends AbstractModel
 <li>GEM：Gemini；</li>
 <li>Qwen：千问。</li>
 <li>Hunyuan：混元。</li>
+<li>Vidu：生数。</li>
+<li>Kling：可灵。</li>
      * @param string $ModelVersion 模型版本。取值：
 <li>当 ModelName 是 GEM，可选值为 2.5、3.0；</li>
 <li>当 ModelName 是 Qwen，可选值为 0925；</li>
 <li>当 ModelName 是 Hunyuan，可选值为 3.0；</li>
-     * @param array $FileInfos AIGC 生图任务的输入图片的文件信息。默认只支持指定1个，使用模型 GEM 时，版本2.5最多指定3个，版本3.0最多指定14个。
+<li>当 ModelName 是 Vidu，可选值为 q2；</li>
+<li>当 ModelName 是 Kling，可选值为 2.1；</li>
+     * @param array $FileInfos AIGC 生图任务的输入图片的文件信息。默认只支持指定1个。下列模型可传多张参考图：
+* GEM 2.5：0～3张图片；
+* GEM 3.0：0～14张图片；
+* Vidu q2：0～7张图片，图片支持 png、jpeg、jpg、webp格式，图片像素不能小于 128x128，且比例需要小于1:4或4:1；
      * @param string $Prompt 生成图片的提示词。当 FileInfos 为空时，此参数必填。
      * @param string $NegativePrompt 要阻止模型生成图片的提示词。
      * @param string $EnhancePrompt 是否自动优化提示词。开启时将自动优化传入的 Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 

@@ -268,6 +268,8 @@ https：使用https协议回源
 7：解绑LB失败 
 8：绑定LB失败 
 10：内部错误
+ * @method integer getPrivateVipStatus() 获取saaswaf独享ip状态，0是关闭状态，1是开启状态，2是开启中
+ * @method void setPrivateVipStatus(integer $PrivateVipStatus) 设置saaswaf独享ip状态，0是关闭状态，1是开启状态，2是开启中
  */
 class DomainsPartInfo extends AbstractModel
 {
@@ -625,6 +627,11 @@ https：使用https协议回源
     public $State;
 
     /**
+     * @var integer saaswaf独享ip状态，0是关闭状态，1是开启状态，2是开启中
+     */
+    public $PrivateVipStatus;
+
+    /**
      * @param string $Domain 域名
      * @param string $DomainId 域名唯一ID
      * @param string $InstanceId 域名所属实例唯一ID
@@ -749,6 +756,7 @@ https：使用https协议回源
 7：解绑LB失败 
 8：绑定LB失败 
 10：内部错误
+     * @param integer $PrivateVipStatus saaswaf独享ip状态，0是关闭状态，1是开启状态，2是开启中
      */
     function __construct()
     {
@@ -999,6 +1007,10 @@ https：使用https协议回源
 
         if (array_key_exists("State",$param) and $param["State"] !== null) {
             $this->State = $param["State"];
+        }
+
+        if (array_key_exists("PrivateVipStatus",$param) and $param["PrivateVipStatus"] !== null) {
+            $this->PrivateVipStatus = $param["PrivateVipStatus"];
         }
     }
 }

@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActionType(integer $ActionType) 设置42为黑名单，40为白名单
  * @method string getNote() 获取备注
  * @method void setNote(string $Note) 设置备注
+ * @method string getJobType() 获取任务类型（TimedJob/CronJob）
+ * @method void setJobType(string $JobType) 设置任务类型（TimedJob/CronJob）
+ * @method JobDateTime getJobDateTime() 获取任务时间配置
+ * @method void setJobDateTime(JobDateTime $JobDateTime) 设置任务时间配置
+ * @method integer getValidStatus() 获取生效状态
+ * @method void setValidStatus(integer $ValidStatus) 设置生效状态
  */
 class IpAccessControlParam extends AbstractModel
 {
@@ -52,10 +58,28 @@ class IpAccessControlParam extends AbstractModel
     public $Note;
 
     /**
+     * @var string 任务类型（TimedJob/CronJob）
+     */
+    public $JobType;
+
+    /**
+     * @var JobDateTime 任务时间配置
+     */
+    public $JobDateTime;
+
+    /**
+     * @var integer 生效状态
+     */
+    public $ValidStatus;
+
+    /**
      * @param array $IpList IP列表
      * @param integer $ValidTs valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
      * @param integer $ActionType 42为黑名单，40为白名单
      * @param string $Note 备注
+     * @param string $JobType 任务类型（TimedJob/CronJob）
+     * @param JobDateTime $JobDateTime 任务时间配置
+     * @param integer $ValidStatus 生效状态
      */
     function __construct()
     {
@@ -84,6 +108,19 @@ class IpAccessControlParam extends AbstractModel
 
         if (array_key_exists("Note",$param) and $param["Note"] !== null) {
             $this->Note = $param["Note"];
+        }
+
+        if (array_key_exists("JobType",$param) and $param["JobType"] !== null) {
+            $this->JobType = $param["JobType"];
+        }
+
+        if (array_key_exists("JobDateTime",$param) and $param["JobDateTime"] !== null) {
+            $this->JobDateTime = new JobDateTime();
+            $this->JobDateTime->deserialize($param["JobDateTime"]);
+        }
+
+        if (array_key_exists("ValidStatus",$param) and $param["ValidStatus"] !== null) {
+            $this->ValidStatus = $param["ValidStatus"];
         }
     }
 }

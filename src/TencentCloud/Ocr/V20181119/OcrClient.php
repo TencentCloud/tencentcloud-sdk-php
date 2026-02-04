@@ -326,7 +326,10 @@ use TencentCloud\Ocr\V20181119\Models as Models;
           <td rowspan="9">告警功能</td>
         </tr>
         <tr>
-          <td>身份证边框不完整告警</td>
+         <td>身份证有效日期不合法告警</td>
+        </tr> 
+        <tr>
+         <td>身份证边框不完整告警</td>
         </tr>
         <tr>
           <td>身份证复印件告警</td>
@@ -391,10 +394,10 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\QuestionOCRResponse QuestionOCR(Models\QuestionOCRRequest $req) 题目识别是教育的基础OCR识别能力。可支持扫描、拍照场景的单题题目识别。接口支持印刷体文本、手写体文本及公式的OCR识别和坐标返回，此外，接口还可对题目中的配图位置进行检测并返回坐标位置。适用于智能批改等场景的题目内容识别作为检索输入。
 
 默认接口请求频率限制：2次/秒。
- * @method Models\QuestionSplitLayoutOCRResponse QuestionSplitLayoutOCR(Models\QuestionSplitLayoutOCRRequest $req) 试卷切题（仅检测）可将整页练习册、试卷或教辅中的题目进行自动切题，返回试题边框和题目元素的坐标位置。
+ * @method Models\QuestionSplitLayoutOCRResponse QuestionSplitLayoutOCR(Models\QuestionSplitLayoutOCRRequest $req) 试卷切题（仅检测）可将整页练习册、试卷或教辅中的题目进行自动切题，返回试题边框的坐标位置。新客户请注意UseNewMode的选择。
 
 默认接口请求频率限制：2次/秒。
- * @method Models\QuestionSplitOCRResponse QuestionSplitOCR(Models\QuestionSplitOCRRequest $req) 试卷切题识别可将整页练习册、试卷或教辅中的题目进行自动切题，并识别出其中的文字内容和坐标位置。
+ * @method Models\QuestionSplitOCRResponse QuestionSplitOCR(Models\QuestionSplitOCRRequest $req) 试卷切题识别可将整页练习册、试卷或教辅中的题目进行自动切题，并识别出其中的文字内容和坐标位置。新接入客户请注意UseNewModel选择
 
 默认接口请求频率限制：2次/秒。
  * @method Models\QuotaInvoiceOCRResponse QuotaInvoiceOCR(Models\QuotaInvoiceOCRRequest $req) <b>此接口不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/90802">通用票据识别（高级版）</a>。</b>
@@ -426,7 +429,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
         </tr>
         <tr>
           <td rowspan="9">告警功能</td>
-          <td>身份证有效日期不合法，即有效日期不符合5年、10年、20年、长期期限
+          <td>身份证有效日期不合法
 
 </td>
         </tr>

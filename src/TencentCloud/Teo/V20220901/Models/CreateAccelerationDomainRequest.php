@@ -27,29 +27,29 @@ use TencentCloud\Common\AbstractModel;
  * @method OriginInfo getOriginInfo() 获取源站信息。
  * @method void setOriginInfo(OriginInfo $OriginInfo) 设置源站信息。
  * @method string getOriginProtocol() 获取回源协议，取值有：
-<li>FOLLOW: 协议跟随；</li>
-<li>HTTP: HTTP协议回源；</li>
-<li>HTTPS: HTTPS协议回源。</li>
-<li>不填默认为： FOLLOW。</li>
+<li>FOLLOW：协议跟随；</li>
+<li>HTTP：HTTP 协议回源；</li>
+<li>HTTPS：HTTPS 协议回源。</li>不填默认为：FOLLOW。
  * @method void setOriginProtocol(string $OriginProtocol) 设置回源协议，取值有：
-<li>FOLLOW: 协议跟随；</li>
-<li>HTTP: HTTP协议回源；</li>
-<li>HTTPS: HTTPS协议回源。</li>
-<li>不填默认为： FOLLOW。</li>
- * @method integer getHttpOriginPort() 获取HTTP回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTP时生效, 不填默认为80。
- * @method void setHttpOriginPort(integer $HttpOriginPort) 设置HTTP回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTP时生效, 不填默认为80。
- * @method integer getHttpsOriginPort() 获取HTTPS回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTPS时生效，不填默认为443。
- * @method void setHttpsOriginPort(integer $HttpsOriginPort) 设置HTTPS回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTPS时生效，不填默认为443。
- * @method string getIPv6Status() 获取IPv6状态，取值有：
-<li>follow：遵循站点IPv6配置；</li>
+<li>FOLLOW：协议跟随；</li>
+<li>HTTP：HTTP 协议回源；</li>
+<li>HTTPS：HTTPS 协议回源。</li>不填默认为：FOLLOW。
+ * @method integer getHttpOriginPort() 获取HTTP 回源端口，默认值80，取值：1～65535。
+当 OriginProtocol = FOLLOW 或 HTTP 时生效。
+ * @method void setHttpOriginPort(integer $HttpOriginPort) 设置HTTP 回源端口，默认值80，取值：1～65535。
+当 OriginProtocol = FOLLOW 或 HTTP 时生效。
+ * @method integer getHttpsOriginPort() 获取HTTPS 回源端口，默认值443，取值：1～65535。
+当 OriginProtocol = FOLLOW 或 HTTPS 时生效。
+ * @method void setHttpsOriginPort(integer $HttpsOriginPort) 设置HTTPS 回源端口，默认值443，取值：1～65535。
+当 OriginProtocol = FOLLOW 或 HTTPS 时生效。
+ * @method string getIPv6Status() 获取IPv6 状态，取值有：
+<li>follow：遵循站点 IPv6 配置；</li>
 <li>on：开启状态；</li>
-<li>off：关闭状态。</li>
-<li>不填默认为：follow。</li>
- * @method void setIPv6Status(string $IPv6Status) 设置IPv6状态，取值有：
-<li>follow：遵循站点IPv6配置；</li>
+<li>off：关闭状态。</li>不填默认为：follow。
+ * @method void setIPv6Status(string $IPv6Status) 设置IPv6 状态，取值有：
+<li>follow：遵循站点 IPv6 配置；</li>
 <li>on：开启状态；</li>
-<li>off：关闭状态。</li>
-<li>不填默认为：follow。</li>
+<li>off：关闭状态。</li>不填默认为：follow。
  */
 class CreateAccelerationDomainRequest extends AbstractModel
 {
@@ -70,29 +70,29 @@ class CreateAccelerationDomainRequest extends AbstractModel
 
     /**
      * @var string 回源协议，取值有：
-<li>FOLLOW: 协议跟随；</li>
-<li>HTTP: HTTP协议回源；</li>
-<li>HTTPS: HTTPS协议回源。</li>
-<li>不填默认为： FOLLOW。</li>
+<li>FOLLOW：协议跟随；</li>
+<li>HTTP：HTTP 协议回源；</li>
+<li>HTTPS：HTTPS 协议回源。</li>不填默认为：FOLLOW。
      */
     public $OriginProtocol;
 
     /**
-     * @var integer HTTP回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTP时生效, 不填默认为80。
+     * @var integer HTTP 回源端口，默认值80，取值：1～65535。
+当 OriginProtocol = FOLLOW 或 HTTP 时生效。
      */
     public $HttpOriginPort;
 
     /**
-     * @var integer HTTPS回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTPS时生效，不填默认为443。
+     * @var integer HTTPS 回源端口，默认值443，取值：1～65535。
+当 OriginProtocol = FOLLOW 或 HTTPS 时生效。
      */
     public $HttpsOriginPort;
 
     /**
-     * @var string IPv6状态，取值有：
-<li>follow：遵循站点IPv6配置；</li>
+     * @var string IPv6 状态，取值有：
+<li>follow：遵循站点 IPv6 配置；</li>
 <li>on：开启状态；</li>
-<li>off：关闭状态。</li>
-<li>不填默认为：follow。</li>
+<li>off：关闭状态。</li>不填默认为：follow。
      */
     public $IPv6Status;
 
@@ -101,17 +101,17 @@ class CreateAccelerationDomainRequest extends AbstractModel
      * @param string $DomainName 加速域名。
      * @param OriginInfo $OriginInfo 源站信息。
      * @param string $OriginProtocol 回源协议，取值有：
-<li>FOLLOW: 协议跟随；</li>
-<li>HTTP: HTTP协议回源；</li>
-<li>HTTPS: HTTPS协议回源。</li>
-<li>不填默认为： FOLLOW。</li>
-     * @param integer $HttpOriginPort HTTP回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTP时生效, 不填默认为80。
-     * @param integer $HttpsOriginPort HTTPS回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTPS时生效，不填默认为443。
-     * @param string $IPv6Status IPv6状态，取值有：
-<li>follow：遵循站点IPv6配置；</li>
+<li>FOLLOW：协议跟随；</li>
+<li>HTTP：HTTP 协议回源；</li>
+<li>HTTPS：HTTPS 协议回源。</li>不填默认为：FOLLOW。
+     * @param integer $HttpOriginPort HTTP 回源端口，默认值80，取值：1～65535。
+当 OriginProtocol = FOLLOW 或 HTTP 时生效。
+     * @param integer $HttpsOriginPort HTTPS 回源端口，默认值443，取值：1～65535。
+当 OriginProtocol = FOLLOW 或 HTTPS 时生效。
+     * @param string $IPv6Status IPv6 状态，取值有：
+<li>follow：遵循站点 IPv6 配置；</li>
 <li>on：开启状态；</li>
-<li>off：关闭状态。</li>
-<li>不填默认为：follow。</li>
+<li>off：关闭状态。</li>不填默认为：follow。
      */
     function __construct()
     {

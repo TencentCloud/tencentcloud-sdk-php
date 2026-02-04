@@ -39,13 +39,15 @@ use TencentCloud\Common\AbstractModel;
 <li> partial：CNAME 接入类型；</li>
 <li> noDomainAccess：无域名接入类型；</li>
 <li>dnsPodAccess：DNSPod 托管类型，该类型要求您的域名已托管在腾讯云 DNSPod；</li>
-<li> pages：Pages 类型。</li>
+<li> pages：Pages 类型；</li>
+<li> ai：边缘推理接入类型。</li>
  * @method void setType(string $Type) 设置站点接入类型，取值有：
 <li> full：NS 接入类型；</li>
 <li> partial：CNAME 接入类型；</li>
 <li> noDomainAccess：无域名接入类型；</li>
 <li>dnsPodAccess：DNSPod 托管类型，该类型要求您的域名已托管在腾讯云 DNSPod；</li>
-<li> pages：Pages 类型。</li>
+<li> pages：Pages 类型；</li>
+<li> ai：边缘推理接入类型。</li>
  * @method array getTags() 获取站点关联的标签。
  * @method void setTags(array $Tags) 设置站点关联的标签。
  * @method array getResources() 获取计费资源列表。
@@ -154,7 +156,8 @@ class Zone extends AbstractModel
 <li> partial：CNAME 接入类型；</li>
 <li> noDomainAccess：无域名接入类型；</li>
 <li>dnsPodAccess：DNSPod 托管类型，该类型要求您的域名已托管在腾讯云 DNSPod；</li>
-<li> pages：Pages 类型。</li>
+<li> pages：Pages 类型；</li>
+<li> ai：边缘推理接入类型。</li>
      */
     public $Type;
 
@@ -289,7 +292,8 @@ class Zone extends AbstractModel
 <li> partial：CNAME 接入类型；</li>
 <li> noDomainAccess：无域名接入类型；</li>
 <li>dnsPodAccess：DNSPod 托管类型，该类型要求您的域名已托管在腾讯云 DNSPod；</li>
-<li> pages：Pages 类型。</li>
+<li> pages：Pages 类型；</li>
+<li> ai：边缘推理接入类型。</li>
      * @param array $Tags 站点关联的标签。
      * @param array $Resources 计费资源列表。
      * @param NSDetail $NSDetail NS 类型站点详情。仅当 Type = full 时返回值。

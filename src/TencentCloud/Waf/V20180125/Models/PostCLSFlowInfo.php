@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogTopicName(string $LogTopicName) 设置CLS日志主题名称
  * @method string getLogTopicID() 获取CLS日志集合ID
  * @method void setLogTopicID(string $LogTopicID) 设置CLS日志集合ID
+ * @method FieldWriteConfig getWriteConfig() 获取写配置
+ * @method void setWriteConfig(FieldWriteConfig $WriteConfig) 设置写配置
  */
 class PostCLSFlowInfo extends AbstractModel
 {
@@ -80,6 +82,11 @@ class PostCLSFlowInfo extends AbstractModel
     public $LogTopicID;
 
     /**
+     * @var FieldWriteConfig 写配置
+     */
+    public $WriteConfig;
+
+    /**
      * @param integer $FlowId 投递流唯一ID
      * @param integer $LogType 1-访问日志 2-攻击日志
      * @param integer $Status 状态 0-为关闭 1-为启用
@@ -88,6 +95,7 @@ class PostCLSFlowInfo extends AbstractModel
      * @param string $LogsetID CLS日志集合ID
      * @param string $LogTopicName CLS日志主题名称
      * @param string $LogTopicID CLS日志集合ID
+     * @param FieldWriteConfig $WriteConfig 写配置
      */
     function __construct()
     {
@@ -132,6 +140,11 @@ class PostCLSFlowInfo extends AbstractModel
 
         if (array_key_exists("LogTopicID",$param) and $param["LogTopicID"] !== null) {
             $this->LogTopicID = $param["LogTopicID"];
+        }
+
+        if (array_key_exists("WriteConfig",$param) and $param["WriteConfig"] !== null) {
+            $this->WriteConfig = new FieldWriteConfig();
+            $this->WriteConfig->deserialize($param["WriteConfig"]);
         }
     }
 }

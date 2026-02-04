@@ -20,214 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 通用混流布局参数。
  *
- * @method integer getImageLayer() 获取输入图层。取值范围[1，16]。
-1)背景流（即大主播画面或画布）的 image_layer 填1。
-2)纯音频混流，该参数也需填。
-注意：不同输入，该值不可重复
- * @method void setImageLayer(integer $ImageLayer) 设置输入图层。取值范围[1，16]。
-1)背景流（即大主播画面或画布）的 image_layer 填1。
-2)纯音频混流，该参数也需填。
-注意：不同输入，该值不可重复
- * @method integer getInputType() 获取输入类型。取值范围[0，5]。
-不填默认为0。
-0表示输入流为音视频。
-2表示输入流为图片。
-3表示输入流为画布。 
-4表示输入流为音频。
-5表示输入流为纯视频。
- * @method void setInputType(integer $InputType) 设置输入类型。取值范围[0，5]。
-不填默认为0。
-0表示输入流为音视频。
-2表示输入流为图片。
-3表示输入流为画布。 
-4表示输入流为音频。
-5表示输入流为纯视频。
- * @method float getImageHeight() 获取输入画面在输出时的高度。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为输入流的高度。
-使用百分比时，期望输出为（百分比 * 背景高）。
- * @method void setImageHeight(float $ImageHeight) 设置输入画面在输出时的高度。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为输入流的高度。
-使用百分比时，期望输出为（百分比 * 背景高）。
- * @method float getImageWidth() 获取输入画面在输出时的宽度。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为输入流的宽度。
-使用百分比时，期望输出为（百分比 * 背景宽）。
- * @method void setImageWidth(float $ImageWidth) 设置输入画面在输出时的宽度。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为输入流的宽度。
-使用百分比时，期望输出为（百分比 * 背景宽）。
- * @method float getLocationX() 获取输入在输出画面的X偏移。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为0。
-相对于大主播背景画面左上角的横向偏移。 
-使用百分比时，期望输出为（百分比 * 背景宽）。
- * @method void setLocationX(float $LocationX) 设置输入在输出画面的X偏移。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为0。
-相对于大主播背景画面左上角的横向偏移。 
-使用百分比时，期望输出为（百分比 * 背景宽）。
- * @method float getLocationY() 获取输入在输出画面的Y偏移。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为0。
-相对于大主播背景画面左上角的纵向偏移。 
-使用百分比时，期望输出为（百分比 * 背景宽）
- * @method void setLocationY(float $LocationY) 设置输入在输出画面的Y偏移。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为0。
-相对于大主播背景画面左上角的纵向偏移。 
-使用百分比时，期望输出为（百分比 * 背景宽）
- * @method string getColor() 获取当InputType为3(画布)时，该值表示画布的颜色。
-常用的颜色有：
-红色：0xCC0033。
-黄色：0xCC9900。
-绿色：0xCCCC33。
-蓝色：0x99CCFF。
-黑色：0x000000。
-白色：0xFFFFFF。
-灰色：0x999999。
- * @method void setColor(string $Color) 设置当InputType为3(画布)时，该值表示画布的颜色。
-常用的颜色有：
-红色：0xCC0033。
-黄色：0xCC9900。
-绿色：0xCCCC33。
-蓝色：0x99CCFF。
-黑色：0x000000。
-白色：0xFFFFFF。
-灰色：0x999999。
- * @method integer getWatermarkId() 获取当InputType为2(图片)时，该值是水印ID。
- * @method void setWatermarkId(integer $WatermarkId) 设置当InputType为2(图片)时，该值是水印ID。
+ * @method integer getImageLayer() 获取<p>输入图层。取值范围[1，16]。<br>1)背景流（即大主播画面或画布）的 image_layer 填1。<br>2)纯音频混流，该参数也需填。<br>注意：不同输入，该值不可重复</p>
+ * @method void setImageLayer(integer $ImageLayer) 设置<p>输入图层。取值范围[1，16]。<br>1)背景流（即大主播画面或画布）的 image_layer 填1。<br>2)纯音频混流，该参数也需填。<br>注意：不同输入，该值不可重复</p>
+ * @method integer getInputType() 获取<p>输入类型。取值范围[0，5]。<br>不填默认为0。<br>0表示输入流为音视频。<br>2表示输入流为图片。<br>3表示输入流为画布。<br>4表示输入流为音频。<br>5表示输入流为纯视频。</p>
+ * @method void setInputType(integer $InputType) 设置<p>输入类型。取值范围[0，5]。<br>不填默认为0。<br>0表示输入流为音视频。<br>2表示输入流为图片。<br>3表示输入流为画布。<br>4表示输入流为音频。<br>5表示输入流为纯视频。</p>
+ * @method float getImageHeight() 获取<p>输入画面在输出时的高度。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为输入流的高度。<br>使用百分比时，期望输出为（百分比 * 背景高）。</p>
+ * @method void setImageHeight(float $ImageHeight) 设置<p>输入画面在输出时的高度。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为输入流的高度。<br>使用百分比时，期望输出为（百分比 * 背景高）。</p>
+ * @method float getImageWidth() 获取<p>输入画面在输出时的宽度。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为输入流的宽度。<br>使用百分比时，期望输出为（百分比 * 背景宽）。</p>
+ * @method void setImageWidth(float $ImageWidth) 设置<p>输入画面在输出时的宽度。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为输入流的宽度。<br>使用百分比时，期望输出为（百分比 * 背景宽）。</p>
+ * @method float getLocationX() 获取<p>输入在输出画面的X偏移。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为0。<br>相对于大主播背景画面左上角的横向偏移。<br>使用百分比时，期望输出为（百分比 * 背景宽）。</p>
+ * @method void setLocationX(float $LocationX) 设置<p>输入在输出画面的X偏移。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为0。<br>相对于大主播背景画面左上角的横向偏移。<br>使用百分比时，期望输出为（百分比 * 背景宽）。</p>
+ * @method float getLocationY() 获取<p>输入在输出画面的Y偏移。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为0。<br>相对于大主播背景画面左上角的纵向偏移。<br>使用百分比时，期望输出为（百分比 * 背景宽）</p>
+ * @method void setLocationY(float $LocationY) 设置<p>输入在输出画面的Y偏移。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为0。<br>相对于大主播背景画面左上角的纵向偏移。<br>使用百分比时，期望输出为（百分比 * 背景宽）</p>
+ * @method string getColor() 获取<p>当InputType为3(画布)时，该值表示画布的颜色。<br>常用的颜色有：<br>红色：0xCC0033。<br>黄色：0xCC9900。<br>绿色：0xCCCC33。<br>蓝色：0x99CCFF。<br>黑色：0x000000。<br>白色：0xFFFFFF。<br>灰色：0x999999。</p>
+ * @method void setColor(string $Color) 设置<p>当InputType为3(画布)时，该值表示画布的颜色。<br>常用的颜色有：<br>红色：0xCC0033。<br>黄色：0xCC9900。<br>绿色：0xCCCC33。<br>蓝色：0x99CCFF。<br>黑色：0x000000。<br>白色：0xFFFFFF。<br>灰色：0x999999。</p>
+ * @method integer getWatermarkId() 获取<p>当InputType为2(图片)时，该值是水印ID。</p>
+ * @method void setWatermarkId(integer $WatermarkId) 设置<p>当InputType为2(图片)时，该值是水印ID。</p>
+ * @method string getWebPageUrl() 获取<p>当InputType为8时，该值是动效贴片的URL</p>
+ * @method void setWebPageUrl(string $WebPageUrl) 设置<p>当InputType为8时，该值是动效贴片的URL</p>
  */
 class CommonMixLayoutParams extends AbstractModel
 {
     /**
-     * @var integer 输入图层。取值范围[1，16]。
-1)背景流（即大主播画面或画布）的 image_layer 填1。
-2)纯音频混流，该参数也需填。
-注意：不同输入，该值不可重复
+     * @var integer <p>输入图层。取值范围[1，16]。<br>1)背景流（即大主播画面或画布）的 image_layer 填1。<br>2)纯音频混流，该参数也需填。<br>注意：不同输入，该值不可重复</p>
      */
     public $ImageLayer;
 
     /**
-     * @var integer 输入类型。取值范围[0，5]。
-不填默认为0。
-0表示输入流为音视频。
-2表示输入流为图片。
-3表示输入流为画布。 
-4表示输入流为音频。
-5表示输入流为纯视频。
+     * @var integer <p>输入类型。取值范围[0，5]。<br>不填默认为0。<br>0表示输入流为音视频。<br>2表示输入流为图片。<br>3表示输入流为画布。<br>4表示输入流为音频。<br>5表示输入流为纯视频。</p>
      */
     public $InputType;
 
     /**
-     * @var float 输入画面在输出时的高度。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为输入流的高度。
-使用百分比时，期望输出为（百分比 * 背景高）。
+     * @var float <p>输入画面在输出时的高度。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为输入流的高度。<br>使用百分比时，期望输出为（百分比 * 背景高）。</p>
      */
     public $ImageHeight;
 
     /**
-     * @var float 输入画面在输出时的宽度。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为输入流的宽度。
-使用百分比时，期望输出为（百分比 * 背景宽）。
+     * @var float <p>输入画面在输出时的宽度。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为输入流的宽度。<br>使用百分比时，期望输出为（百分比 * 背景宽）。</p>
      */
     public $ImageWidth;
 
     /**
-     * @var float 输入在输出画面的X偏移。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为0。
-相对于大主播背景画面左上角的横向偏移。 
-使用百分比时，期望输出为（百分比 * 背景宽）。
+     * @var float <p>输入在输出画面的X偏移。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为0。<br>相对于大主播背景画面左上角的横向偏移。<br>使用百分比时，期望输出为（百分比 * 背景宽）。</p>
      */
     public $LocationX;
 
     /**
-     * @var float 输入在输出画面的Y偏移。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为0。
-相对于大主播背景画面左上角的纵向偏移。 
-使用百分比时，期望输出为（百分比 * 背景宽）
+     * @var float <p>输入在输出画面的Y偏移。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为0。<br>相对于大主播背景画面左上角的纵向偏移。<br>使用百分比时，期望输出为（百分比 * 背景宽）</p>
      */
     public $LocationY;
 
     /**
-     * @var string 当InputType为3(画布)时，该值表示画布的颜色。
-常用的颜色有：
-红色：0xCC0033。
-黄色：0xCC9900。
-绿色：0xCCCC33。
-蓝色：0x99CCFF。
-黑色：0x000000。
-白色：0xFFFFFF。
-灰色：0x999999。
+     * @var string <p>当InputType为3(画布)时，该值表示画布的颜色。<br>常用的颜色有：<br>红色：0xCC0033。<br>黄色：0xCC9900。<br>绿色：0xCCCC33。<br>蓝色：0x99CCFF。<br>黑色：0x000000。<br>白色：0xFFFFFF。<br>灰色：0x999999。</p>
      */
     public $Color;
 
     /**
-     * @var integer 当InputType为2(图片)时，该值是水印ID。
+     * @var integer <p>当InputType为2(图片)时，该值是水印ID。</p>
      */
     public $WatermarkId;
 
     /**
-     * @param integer $ImageLayer 输入图层。取值范围[1，16]。
-1)背景流（即大主播画面或画布）的 image_layer 填1。
-2)纯音频混流，该参数也需填。
-注意：不同输入，该值不可重复
-     * @param integer $InputType 输入类型。取值范围[0，5]。
-不填默认为0。
-0表示输入流为音视频。
-2表示输入流为图片。
-3表示输入流为画布。 
-4表示输入流为音频。
-5表示输入流为纯视频。
-     * @param float $ImageHeight 输入画面在输出时的高度。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为输入流的高度。
-使用百分比时，期望输出为（百分比 * 背景高）。
-     * @param float $ImageWidth 输入画面在输出时的宽度。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为输入流的宽度。
-使用百分比时，期望输出为（百分比 * 背景宽）。
-     * @param float $LocationX 输入在输出画面的X偏移。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为0。
-相对于大主播背景画面左上角的横向偏移。 
-使用百分比时，期望输出为（百分比 * 背景宽）。
-     * @param float $LocationY 输入在输出画面的Y偏移。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为0。
-相对于大主播背景画面左上角的纵向偏移。 
-使用百分比时，期望输出为（百分比 * 背景宽）
-     * @param string $Color 当InputType为3(画布)时，该值表示画布的颜色。
-常用的颜色有：
-红色：0xCC0033。
-黄色：0xCC9900。
-绿色：0xCCCC33。
-蓝色：0x99CCFF。
-黑色：0x000000。
-白色：0xFFFFFF。
-灰色：0x999999。
-     * @param integer $WatermarkId 当InputType为2(图片)时，该值是水印ID。
+     * @var string <p>当InputType为8时，该值是动效贴片的URL</p>
+     */
+    public $WebPageUrl;
+
+    /**
+     * @param integer $ImageLayer <p>输入图层。取值范围[1，16]。<br>1)背景流（即大主播画面或画布）的 image_layer 填1。<br>2)纯音频混流，该参数也需填。<br>注意：不同输入，该值不可重复</p>
+     * @param integer $InputType <p>输入类型。取值范围[0，5]。<br>不填默认为0。<br>0表示输入流为音视频。<br>2表示输入流为图片。<br>3表示输入流为画布。<br>4表示输入流为音频。<br>5表示输入流为纯视频。</p>
+     * @param float $ImageHeight <p>输入画面在输出时的高度。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为输入流的高度。<br>使用百分比时，期望输出为（百分比 * 背景高）。</p>
+     * @param float $ImageWidth <p>输入画面在输出时的宽度。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为输入流的宽度。<br>使用百分比时，期望输出为（百分比 * 背景宽）。</p>
+     * @param float $LocationX <p>输入在输出画面的X偏移。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为0。<br>相对于大主播背景画面左上角的横向偏移。<br>使用百分比时，期望输出为（百分比 * 背景宽）。</p>
+     * @param float $LocationY <p>输入在输出画面的Y偏移。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为0。<br>相对于大主播背景画面左上角的纵向偏移。<br>使用百分比时，期望输出为（百分比 * 背景宽）</p>
+     * @param string $Color <p>当InputType为3(画布)时，该值表示画布的颜色。<br>常用的颜色有：<br>红色：0xCC0033。<br>黄色：0xCC9900。<br>绿色：0xCCCC33。<br>蓝色：0x99CCFF。<br>黑色：0x000000。<br>白色：0xFFFFFF。<br>灰色：0x999999。</p>
+     * @param integer $WatermarkId <p>当InputType为2(图片)时，该值是水印ID。</p>
+     * @param string $WebPageUrl <p>当InputType为8时，该值是动效贴片的URL</p>
      */
     function __construct()
     {
@@ -272,6 +140,10 @@ class CommonMixLayoutParams extends AbstractModel
 
         if (array_key_exists("WatermarkId",$param) and $param["WatermarkId"] !== null) {
             $this->WatermarkId = $param["WatermarkId"];
+        }
+
+        if (array_key_exists("WebPageUrl",$param) and $param["WebPageUrl"] !== null) {
+            $this->WebPageUrl = $param["WebPageUrl"];
         }
     }
 }

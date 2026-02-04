@@ -29,12 +29,15 @@ use TencentCloud\Apm\V20210622\Models as Models;
  * @method Models\CreateProfileTaskResponse CreateProfileTask(Models\CreateProfileTaskRequest $req) 创建事件任务
  * @method Models\DeleteApmSampleConfigResponse DeleteApmSampleConfig(Models\DeleteApmSampleConfigRequest $req) 删除采样配置接口
  * @method Models\DescribeApmAgentResponse DescribeApmAgent(Models\DescribeApmAgentRequest $req) 获取 APM 接入点
+ * @method Models\DescribeApmAllVulCountResponse DescribeApmAllVulCount(Models\DescribeApmAllVulCountRequest $req) 查询用户所有漏洞信息
  * @method Models\DescribeApmApplicationConfigResponse DescribeApmApplicationConfig(Models\DescribeApmApplicationConfigRequest $req) 查询应用配置接口
  * @method Models\DescribeApmAssociationResponse DescribeApmAssociation(Models\DescribeApmAssociationRequest $req) 用于查询apm业务系统与其他产品的关联关系
  * @method Models\DescribeApmInstancesResponse DescribeApmInstances(Models\DescribeApmInstancesRequest $req) 获取 APM 业务系统列表
  * @method Models\DescribeApmPrometheusRuleResponse DescribeApmPrometheusRule(Models\DescribeApmPrometheusRuleRequest $req) 用于查询apm业务系统与Prometheus实例的指标匹配规则
  * @method Models\DescribeApmSampleConfigResponse DescribeApmSampleConfig(Models\DescribeApmSampleConfigRequest $req) 查询采样配置接口
  * @method Models\DescribeApmServiceMetricResponse DescribeApmServiceMetric(Models\DescribeApmServiceMetricRequest $req) 获取 APM 应用指标列表
+ * @method Models\DescribeApmVulnerabilityCountResponse DescribeApmVulnerabilityCount(Models\DescribeApmVulnerabilityCountRequest $req) 查询漏洞指标
+ * @method Models\DescribeApmVulnerabilityDetailResponse DescribeApmVulnerabilityDetail(Models\DescribeApmVulnerabilityDetailRequest $req) 查询漏洞详情
  * @method Models\DescribeGeneralApmApplicationConfigResponse DescribeGeneralApmApplicationConfig(Models\DescribeGeneralApmApplicationConfigRequest $req) 查询应用配置信息
  * @method Models\DescribeGeneralMetricDataResponse DescribeGeneralMetricData(Models\DescribeGeneralMetricDataRequest $req) 获取指标数据通用接口。用户根据需要上送请求参数，返回对应的指标数据。
 接口调用频率限制为：20次/秒，1200次/分钟。单请求的数据点数限制为1440个。
@@ -61,6 +64,7 @@ use TencentCloud\Apm\V20210622\Models as Models;
  * @method Models\DescribeGeneralOTSpanListResponse DescribeGeneralOTSpanList(Models\DescribeGeneralOTSpanListRequest $req) 通用查询 OpenTelemetry 调用链列表
  * @method Models\DescribeGeneralSpanListResponse DescribeGeneralSpanList(Models\DescribeGeneralSpanListRequest $req) 通用查询调用链列表
  * @method Models\DescribeMetricRecordsResponse DescribeMetricRecords(Models\DescribeMetricRecordsRequest $req) 查询指标列表接口，查询指标更推荐使用DescribeGeneralMetricData接口
+ * @method Models\DescribeOPRAllVulCountResponse DescribeOPRAllVulCount(Models\DescribeOPRAllVulCountRequest $req) 查询用户所有漏洞信息
  * @method Models\DescribeServiceOverviewResponse DescribeServiceOverview(Models\DescribeServiceOverviewRequest $req) 应用概览数据拉取
  * @method Models\DescribeTagValuesResponse DescribeTagValues(Models\DescribeTagValuesRequest $req) 根据维度名和过滤条件，查询维度数据.
  * @method Models\DescribeTopologyNewResponse DescribeTopologyNew(Models\DescribeTopologyNewRequest $req) 根据应用名查询服务拓扑图

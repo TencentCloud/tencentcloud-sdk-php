@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRenewFlag(integer $RenewFlag) 设置续费标志
  * @method string getBillingItem() 获取计费项
  * @method void setBillingItem(string $BillingItem) 设置计费项
+ * @method integer getGatewayType() 获取小程序网关类型 1新网关；0老网关
+ * @method void setGatewayType(integer $GatewayType) 设置小程序网关类型 1新网关；0老网关
  */
 class MiniPkg extends AbstractModel
 {
@@ -80,6 +82,11 @@ class MiniPkg extends AbstractModel
     public $BillingItem;
 
     /**
+     * @var integer 小程序网关类型 1新网关；0老网关
+     */
+    public $GatewayType;
+
+    /**
      * @param string $ResourceIds 资源id
      * @param integer $Status 状态
      * @param integer $Region 地域
@@ -88,6 +95,7 @@ class MiniPkg extends AbstractModel
      * @param integer $Count 购买数量
      * @param integer $RenewFlag 续费标志
      * @param string $BillingItem 计费项
+     * @param integer $GatewayType 小程序网关类型 1新网关；0老网关
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class MiniPkg extends AbstractModel
 
         if (array_key_exists("BillingItem",$param) and $param["BillingItem"] !== null) {
             $this->BillingItem = $param["BillingItem"];
+        }
+
+        if (array_key_exists("GatewayType",$param) and $param["GatewayType"] !== null) {
+            $this->GatewayType = $param["GatewayType"];
         }
     }
 }

@@ -32,8 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableImageCrop(boolean $EnableImageCrop) 设置是否开启切边增强和弯曲矫正,默认为false不开启
  * @method boolean getEnableOnlyDetectBorder() 获取是否只返回检测框，默认false
  * @method void setEnableOnlyDetectBorder(boolean $EnableOnlyDetectBorder) 设置是否只返回检测框，默认false
- * @method boolean getUseNewModel() 获取false: 使用当前默认模型  true: 使用新的多模态推理模型，速度更快推理效果更强，仅 `EnableOnlyDetectBorder` 为 `true` 时生效，公测中
- * @method void setUseNewModel(boolean $UseNewModel) 设置false: 使用当前默认模型  true: 使用新的多模态推理模型，速度更快推理效果更强，仅 `EnableOnlyDetectBorder` 为 `true` 时生效，公测中
+ * @method boolean getUseNewModel() 获取false: 使用当前默认模型(结构化信息更全面，但手写答案坐标精度一般)  
+true:  使用多模态推理模型，推理效果更强（题目框选、手写答案坐标定位能力更优，但不返回题目选项和题目类型信息）
+
+API默认false, demo默认使用的是true
+ * @method void setUseNewModel(boolean $UseNewModel) 设置false: 使用当前默认模型(结构化信息更全面，但手写答案坐标精度一般)  
+true:  使用多模态推理模型，推理效果更强（题目框选、手写答案坐标定位能力更优，但不返回题目选项和题目类型信息）
+
+API默认false, demo默认使用的是true
  */
 class QuestionSplitOCRRequest extends AbstractModel
 {
@@ -68,7 +74,10 @@ class QuestionSplitOCRRequest extends AbstractModel
     public $EnableOnlyDetectBorder;
 
     /**
-     * @var boolean false: 使用当前默认模型  true: 使用新的多模态推理模型，速度更快推理效果更强，仅 `EnableOnlyDetectBorder` 为 `true` 时生效，公测中
+     * @var boolean false: 使用当前默认模型(结构化信息更全面，但手写答案坐标精度一般)  
+true:  使用多模态推理模型，推理效果更强（题目框选、手写答案坐标定位能力更优，但不返回题目选项和题目类型信息）
+
+API默认false, demo默认使用的是true
      */
     public $UseNewModel;
 
@@ -79,7 +88,10 @@ class QuestionSplitOCRRequest extends AbstractModel
      * @param integer $PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
      * @param boolean $EnableImageCrop 是否开启切边增强和弯曲矫正,默认为false不开启
      * @param boolean $EnableOnlyDetectBorder 是否只返回检测框，默认false
-     * @param boolean $UseNewModel false: 使用当前默认模型  true: 使用新的多模态推理模型，速度更快推理效果更强，仅 `EnableOnlyDetectBorder` 为 `true` 时生效，公测中
+     * @param boolean $UseNewModel false: 使用当前默认模型(结构化信息更全面，但手写答案坐标精度一般)  
+true:  使用多模态推理模型，推理效果更强（题目框选、手写答案坐标定位能力更优，但不返回题目选项和题目类型信息）
+
+API默认false, demo默认使用的是true
      */
     function __construct()
     {

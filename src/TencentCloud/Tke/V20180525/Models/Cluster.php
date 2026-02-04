@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterEtcdNodeNum(integer $ClusterEtcdNodeNum) 设置集群当前etcd数量
  * @method string getCdcId() 获取本地专用集群Id
  * @method void setCdcId(string $CdcId) 设置本地专用集群Id
+ * @method boolean getIsHighAvailability() 获取集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+ * @method void setIsHighAvailability(boolean $IsHighAvailability) 设置集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
  */
 class Cluster extends AbstractModel
 {
@@ -202,6 +204,11 @@ class Cluster extends AbstractModel
     public $CdcId;
 
     /**
+     * @var boolean 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+     */
+    public $IsHighAvailability;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $ClusterDescription 集群描述
@@ -228,6 +235,7 @@ class Cluster extends AbstractModel
      * @param string $RuntimeVersion 运行时版本
      * @param integer $ClusterEtcdNodeNum 集群当前etcd数量
      * @param string $CdcId 本地专用集群Id
+     * @param boolean $IsHighAvailability 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
      */
     function __construct()
     {
@@ -346,6 +354,10 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
             $this->CdcId = $param["CdcId"];
+        }
+
+        if (array_key_exists("IsHighAvailability",$param) and $param["IsHighAvailability"] !== null) {
+            $this->IsHighAvailability = $param["IsHighAvailability"];
         }
     }
 }

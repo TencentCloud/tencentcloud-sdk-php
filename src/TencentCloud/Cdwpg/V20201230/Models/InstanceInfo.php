@@ -74,6 +74,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置集群id
  * @method array getAccessDetails() 获取访问信息
  * @method void setAccessDetails(array $AccessDetails) 设置访问信息
+ * @method integer getIsAz() 获取集群是否跨az，为0不跨az；为1跨az
+ * @method void setIsAz(integer $IsAz) 设置集群是否跨az，为0不跨az；为1跨az
+ * @method string getSecondaryZone() 获取备可用区
+ * @method void setSecondaryZone(string $SecondaryZone) 设置备可用区
+ * @method string getSecondarySubnet() 获取备子网
+ * @method void setSecondarySubnet(string $SecondarySubnet) 设置备子网
+ * @method string getAccessInfo() 获取访问信息
+ * @method void setAccessInfo(string $AccessInfo) 设置访问信息
+ * @method array getGTMNodes() 获取GTM节点信息
+ * @method void setGTMNodes(array $GTMNodes) 设置GTM节点信息
  */
 class InstanceInfo extends AbstractModel
 {
@@ -209,6 +219,31 @@ class InstanceInfo extends AbstractModel
     public $AccessDetails;
 
     /**
+     * @var integer 集群是否跨az，为0不跨az；为1跨az
+     */
+    public $IsAz;
+
+    /**
+     * @var string 备可用区
+     */
+    public $SecondaryZone;
+
+    /**
+     * @var string 备子网
+     */
+    public $SecondarySubnet;
+
+    /**
+     * @var string 访问信息
+     */
+    public $AccessInfo;
+
+    /**
+     * @var array GTM节点信息
+     */
+    public $GTMNodes;
+
+    /**
      * @param integer $ID ID值
      * @param string $InstanceType 内核版本类型
      * @param string $InstanceName 集群名字
@@ -236,6 +271,11 @@ class InstanceInfo extends AbstractModel
      * @param boolean $RenewFlag 自动续费
      * @param string $InstanceId 集群id
      * @param array $AccessDetails 访问信息
+     * @param integer $IsAz 集群是否跨az，为0不跨az；为1跨az
+     * @param string $SecondaryZone 备可用区
+     * @param string $SecondarySubnet 备子网
+     * @param string $AccessInfo 访问信息
+     * @param array $GTMNodes GTM节点信息
      */
     function __construct()
     {
@@ -372,6 +412,31 @@ class InstanceInfo extends AbstractModel
                 $obj = new AccessInfo();
                 $obj->deserialize($value);
                 array_push($this->AccessDetails, $obj);
+            }
+        }
+
+        if (array_key_exists("IsAz",$param) and $param["IsAz"] !== null) {
+            $this->IsAz = $param["IsAz"];
+        }
+
+        if (array_key_exists("SecondaryZone",$param) and $param["SecondaryZone"] !== null) {
+            $this->SecondaryZone = $param["SecondaryZone"];
+        }
+
+        if (array_key_exists("SecondarySubnet",$param) and $param["SecondarySubnet"] !== null) {
+            $this->SecondarySubnet = $param["SecondarySubnet"];
+        }
+
+        if (array_key_exists("AccessInfo",$param) and $param["AccessInfo"] !== null) {
+            $this->AccessInfo = $param["AccessInfo"];
+        }
+
+        if (array_key_exists("GTMNodes",$param) and $param["GTMNodes"] !== null) {
+            $this->GTMNodes = [];
+            foreach ($param["GTMNodes"] as $key => $value){
+                $obj = new InstanceNodeGroup();
+                $obj->deserialize($value);
+                array_push($this->GTMNodes, $obj);
             }
         }
     }

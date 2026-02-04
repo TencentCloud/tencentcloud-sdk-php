@@ -20,210 +20,186 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 目标组信息
  *
- * @method string getTargetGroupId() 获取目标组ID
- * @method void setTargetGroupId(string $TargetGroupId) 设置目标组ID
- * @method string getVpcId() 获取目标组的vpcid
- * @method void setVpcId(string $VpcId) 设置目标组的vpcid
- * @method string getTargetGroupName() 获取目标组的名字
- * @method void setTargetGroupName(string $TargetGroupName) 设置目标组的名字
- * @method integer getPort() 获取目标组的默认端口，全监听目标组此字段返回0，表示无效端口。
+ * @method string getTargetGroupId() 获取<p>目标组ID</p>
+ * @method void setTargetGroupId(string $TargetGroupId) 设置<p>目标组ID</p>
+ * @method string getVpcId() 获取<p>目标组的vpcid</p>
+ * @method void setVpcId(string $VpcId) 设置<p>目标组的vpcid</p>
+ * @method string getTargetGroupName() 获取<p>目标组的名字</p>
+ * @method void setTargetGroupName(string $TargetGroupName) 设置<p>目标组的名字</p>
+ * @method integer getPort() 获取<p>目标组的默认端口，全监听目标组此字段返回0，表示无效端口。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPort(integer $Port) 设置目标组的默认端口，全监听目标组此字段返回0，表示无效端口。
+ * @method void setPort(integer $Port) 设置<p>目标组的默认端口，全监听目标组此字段返回0，表示无效端口。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreatedTime() 获取目标组的创建时间
- * @method void setCreatedTime(string $CreatedTime) 设置目标组的创建时间
- * @method string getUpdatedTime() 获取目标组的修改时间
- * @method void setUpdatedTime(string $UpdatedTime) 设置目标组的修改时间
- * @method array getAssociatedRule() 获取关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
+ * @method string getCreatedTime() 获取<p>目标组的创建时间</p>
+ * @method void setCreatedTime(string $CreatedTime) 设置<p>目标组的创建时间</p>
+ * @method string getUpdatedTime() 获取<p>目标组的修改时间</p>
+ * @method void setUpdatedTime(string $UpdatedTime) 设置<p>目标组的修改时间</p>
+ * @method array getAssociatedRule() 获取<p>关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAssociatedRule(array $AssociatedRule) 设置关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
+ * @method void setAssociatedRule(array $AssociatedRule) 设置<p>关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProtocol() 获取目标组后端转发协议, 仅v2新版目标组返回有效值。
+ * @method string getProtocol() 获取<p>目标组后端转发协议, 仅v2新版目标组返回有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProtocol(string $Protocol) 设置目标组后端转发协议, 仅v2新版目标组返回有效值。
+ * @method void setProtocol(string $Protocol) 设置<p>目标组后端转发协议, 仅v2新版目标组返回有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getScheduleAlgorithm() 获取调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：
-<ur>
-<li>WRR:按权重轮询。</li>
-<li>LEAST_CONN:最小连接数。</li>
-<li>IP_HASH:按IP哈希。</li>
-</ur>
-
+ * @method string getScheduleAlgorithm() 获取<p>调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：<br><ur></p><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li></ur>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScheduleAlgorithm(string $ScheduleAlgorithm) 设置调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：
-<ur>
-<li>WRR:按权重轮询。</li>
-<li>LEAST_CONN:最小连接数。</li>
-<li>IP_HASH:按IP哈希。</li>
-</ur>
-
+ * @method void setScheduleAlgorithm(string $ScheduleAlgorithm) 设置<p>调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：<br><ur></p><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li></ur>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method TargetGroupHealthCheck getHealthCheck() 获取健康检查详情。
+ * @method TargetGroupHealthCheck getHealthCheck() 获取<p>健康检查详情。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHealthCheck(TargetGroupHealthCheck $HealthCheck) 设置健康检查详情。
+ * @method void setHealthCheck(TargetGroupHealthCheck $HealthCheck) 设置<p>健康检查详情。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTargetGroupType() 获取目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。
- * @method void setTargetGroupType(string $TargetGroupType) 设置目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。
- * @method integer getAssociatedRuleCount() 获取目标组已关联的规则数。
- * @method void setAssociatedRuleCount(integer $AssociatedRuleCount) 设置目标组已关联的规则数。
- * @method integer getRegisteredInstancesCount() 获取目标组内的实例数量。
- * @method void setRegisteredInstancesCount(integer $RegisteredInstancesCount) 设置目标组内的实例数量。
- * @method array getTag() 获取标签。
- * @method void setTag(array $Tag) 设置标签。
- * @method integer getWeight() 获取默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
+ * @method string getTargetGroupType() 获取<p>目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。</p>
+ * @method void setTargetGroupType(string $TargetGroupType) 设置<p>目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。</p>
+ * @method integer getAssociatedRuleCount() 获取<p>目标组已关联的规则数。</p>
+ * @method void setAssociatedRuleCount(integer $AssociatedRuleCount) 设置<p>目标组已关联的规则数。</p>
+ * @method integer getRegisteredInstancesCount() 获取<p>目标组内的实例数量。</p>
+ * @method void setRegisteredInstancesCount(integer $RegisteredInstancesCount) 设置<p>目标组内的实例数量。</p>
+ * @method array getTag() 获取<p>标签。</p>
+ * @method void setTag(array $Tag) 设置<p>标签。</p>
+ * @method integer getWeight() 获取<p>默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWeight(integer $Weight) 设置默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
+ * @method void setWeight(integer $Weight) 设置<p>默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getFullListenSwitch() 获取是否全监听目标组。
- * @method void setFullListenSwitch(boolean $FullListenSwitch) 设置是否全监听目标组。
- * @method boolean getKeepaliveEnable() 获取是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
- * @method void setKeepaliveEnable(boolean $KeepaliveEnable) 设置是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
- * @method integer getSessionExpireTime() 获取会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
- * @method void setSessionExpireTime(integer $SessionExpireTime) 设置会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
- * @method string getIpVersion() 获取IP版本。
- * @method void setIpVersion(string $IpVersion) 设置IP版本。
+ * @method boolean getFullListenSwitch() 获取<p>是否全监听目标组。</p>
+ * @method void setFullListenSwitch(boolean $FullListenSwitch) 设置<p>是否全监听目标组。</p>
+ * @method boolean getKeepaliveEnable() 获取<p>是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。</p>
+ * @method void setKeepaliveEnable(boolean $KeepaliveEnable) 设置<p>是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。</p>
+ * @method integer getSessionExpireTime() 获取<p>会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。</p>
+ * @method void setSessionExpireTime(integer $SessionExpireTime) 设置<p>会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。</p>
+ * @method string getIpVersion() 获取<p>IP版本。</p>
+ * @method void setIpVersion(string $IpVersion) 设置<p>IP版本。</p>
  */
 class TargetGroupInfo extends AbstractModel
 {
     /**
-     * @var string 目标组ID
+     * @var string <p>目标组ID</p>
      */
     public $TargetGroupId;
 
     /**
-     * @var string 目标组的vpcid
+     * @var string <p>目标组的vpcid</p>
      */
     public $VpcId;
 
     /**
-     * @var string 目标组的名字
+     * @var string <p>目标组的名字</p>
      */
     public $TargetGroupName;
 
     /**
-     * @var integer 目标组的默认端口，全监听目标组此字段返回0，表示无效端口。
+     * @var integer <p>目标组的默认端口，全监听目标组此字段返回0，表示无效端口。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
-     * @var string 目标组的创建时间
+     * @var string <p>目标组的创建时间</p>
      */
     public $CreatedTime;
 
     /**
-     * @var string 目标组的修改时间
+     * @var string <p>目标组的修改时间</p>
      */
     public $UpdatedTime;
 
     /**
-     * @var array 关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
+     * @var array <p>关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssociatedRule;
 
     /**
-     * @var string 目标组后端转发协议, 仅v2新版目标组返回有效值。
+     * @var string <p>目标组后端转发协议, 仅v2新版目标组返回有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocol;
 
     /**
-     * @var string 调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：
-<ur>
-<li>WRR:按权重轮询。</li>
-<li>LEAST_CONN:最小连接数。</li>
-<li>IP_HASH:按IP哈希。</li>
-</ur>
-
+     * @var string <p>调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：<br><ur></p><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li></ur>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduleAlgorithm;
 
     /**
-     * @var TargetGroupHealthCheck 健康检查详情。
+     * @var TargetGroupHealthCheck <p>健康检查详情。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HealthCheck;
 
     /**
-     * @var string 目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。
+     * @var string <p>目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。</p>
      */
     public $TargetGroupType;
 
     /**
-     * @var integer 目标组已关联的规则数。
+     * @var integer <p>目标组已关联的规则数。</p>
      */
     public $AssociatedRuleCount;
 
     /**
-     * @var integer 目标组内的实例数量。
+     * @var integer <p>目标组内的实例数量。</p>
      */
     public $RegisteredInstancesCount;
 
     /**
-     * @var array 标签。
+     * @var array <p>标签。</p>
      */
     public $Tag;
 
     /**
-     * @var integer 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
+     * @var integer <p>默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weight;
 
     /**
-     * @var boolean 是否全监听目标组。
+     * @var boolean <p>是否全监听目标组。</p>
      */
     public $FullListenSwitch;
 
     /**
-     * @var boolean 是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+     * @var boolean <p>是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。</p>
      */
     public $KeepaliveEnable;
 
     /**
-     * @var integer 会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+     * @var integer <p>会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。</p>
      */
     public $SessionExpireTime;
 
     /**
-     * @var string IP版本。
+     * @var string <p>IP版本。</p>
      */
     public $IpVersion;
 
     /**
-     * @param string $TargetGroupId 目标组ID
-     * @param string $VpcId 目标组的vpcid
-     * @param string $TargetGroupName 目标组的名字
-     * @param integer $Port 目标组的默认端口，全监听目标组此字段返回0，表示无效端口。
+     * @param string $TargetGroupId <p>目标组ID</p>
+     * @param string $VpcId <p>目标组的vpcid</p>
+     * @param string $TargetGroupName <p>目标组的名字</p>
+     * @param integer $Port <p>目标组的默认端口，全监听目标组此字段返回0，表示无效端口。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreatedTime 目标组的创建时间
-     * @param string $UpdatedTime 目标组的修改时间
-     * @param array $AssociatedRule 关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
+     * @param string $CreatedTime <p>目标组的创建时间</p>
+     * @param string $UpdatedTime <p>目标组的修改时间</p>
+     * @param array $AssociatedRule <p>关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Protocol 目标组后端转发协议, 仅v2新版目标组返回有效值。
+     * @param string $Protocol <p>目标组后端转发协议, 仅v2新版目标组返回有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ScheduleAlgorithm 调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：
-<ur>
-<li>WRR:按权重轮询。</li>
-<li>LEAST_CONN:最小连接数。</li>
-<li>IP_HASH:按IP哈希。</li>
-</ur>
-
+     * @param string $ScheduleAlgorithm <p>调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：<br><ur></p><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li></ur>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TargetGroupHealthCheck $HealthCheck 健康检查详情。
+     * @param TargetGroupHealthCheck $HealthCheck <p>健康检查详情。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TargetGroupType 目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。
-     * @param integer $AssociatedRuleCount 目标组已关联的规则数。
-     * @param integer $RegisteredInstancesCount 目标组内的实例数量。
-     * @param array $Tag 标签。
-     * @param integer $Weight 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
+     * @param string $TargetGroupType <p>目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。</p>
+     * @param integer $AssociatedRuleCount <p>目标组已关联的规则数。</p>
+     * @param integer $RegisteredInstancesCount <p>目标组内的实例数量。</p>
+     * @param array $Tag <p>标签。</p>
+     * @param integer $Weight <p>默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $FullListenSwitch 是否全监听目标组。
-     * @param boolean $KeepaliveEnable 是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
-     * @param integer $SessionExpireTime 会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
-     * @param string $IpVersion IP版本。
+     * @param boolean $FullListenSwitch <p>是否全监听目标组。</p>
+     * @param boolean $KeepaliveEnable <p>是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。</p>
+     * @param integer $SessionExpireTime <p>会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。</p>
+     * @param string $IpVersion <p>IP版本。</p>
      */
     function __construct()
     {

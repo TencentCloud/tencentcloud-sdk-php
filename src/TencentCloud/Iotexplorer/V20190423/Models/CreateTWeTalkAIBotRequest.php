@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgentConfig(TalkAgentConfigInfo $AgentConfig) 设置智能体配置
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getCustomTools() 获取自定义工具配置，最多可创建10个
+ * @method void setCustomTools(string $CustomTools) 设置自定义工具配置，最多可创建10个
  */
 class CreateTWeTalkAIBotRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateTWeTalkAIBotRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var string 自定义工具配置，最多可创建10个
+     */
+    public $CustomTools;
+
+    /**
      * @param string $Name 产品ID
      * @param string $Description 名称
      * @param string $TargetLanguage 支持的语言，zh-中文；en-英文；默认zh
@@ -88,6 +95,7 @@ class CreateTWeTalkAIBotRequest extends AbstractModel
      * @param TalkTTSConfigInfo $TTSConfig 语音合成配置
      * @param TalkAgentConfigInfo $AgentConfig 智能体配置
      * @param string $InstanceId 实例ID
+     * @param string $CustomTools 自定义工具配置，最多可创建10个
      */
     function __construct()
     {
@@ -136,6 +144,10 @@ class CreateTWeTalkAIBotRequest extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("CustomTools",$param) and $param["CustomTools"] !== null) {
+            $this->CustomTools = $param["CustomTools"];
         }
     }
 }

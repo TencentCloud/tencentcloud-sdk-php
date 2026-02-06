@@ -14,26 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Trtc\V20190722\Models;
+namespace TencentCloud\Tdmysql\V20211122\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTRTCRealTimeQualityMetricData返回参数结构体
+ * ModifyDBSBackupPolicy返回参数结构体
  *
- * @method TRTCDataResp getData() 获取TRTC监控数据出参
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(TRTCDataResp $Data) 设置TRTC监控数据出参
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsSuccess() 获取是否成功
+ * @method void setIsSuccess(boolean $IsSuccess) 设置是否成功
+ * @method string getMsg() 获取消息
+ * @method void setMsg(string $Msg) 设置消息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeTRTCRealTimeQualityMetricDataResponse extends AbstractModel
+class ModifyDBSBackupPolicyResponse extends AbstractModel
 {
     /**
-     * @var TRTCDataResp TRTC监控数据出参
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var boolean 是否成功
      */
-    public $Data;
+    public $IsSuccess;
+
+    /**
+     * @var string 消息
+     */
+    public $Msg;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +45,8 @@ class DescribeTRTCRealTimeQualityMetricDataResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param TRTCDataResp $Data TRTC监控数据出参
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsSuccess 是否成功
+     * @param string $Msg 消息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,9 +62,12 @@ class DescribeTRTCRealTimeQualityMetricDataResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = new TRTCDataResp();
-            $this->Data->deserialize($param["Data"]);
+        if (array_key_exists("IsSuccess",$param) and $param["IsSuccess"] !== null) {
+            $this->IsSuccess = $param["IsSuccess"];
+        }
+
+        if (array_key_exists("Msg",$param) and $param["Msg"] !== null) {
+            $this->Msg = $param["Msg"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

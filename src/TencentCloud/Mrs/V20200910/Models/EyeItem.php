@@ -20,34 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 眼科结构体
  *
- * @method EyeChildItem getLeft() 获取左眼
- * @method void setLeft(EyeChildItem $Left) 设置左眼
- * @method EyeChildItem getRight() 获取右眼
- * @method void setRight(EyeChildItem $Right) 设置右眼
- * @method BaseItem2 getPd() 获取瞳距
- * @method void setPd(BaseItem2 $Pd) 设置瞳距
+ * @method EyeChildItem getLeft() 获取<p>左眼</p>
+ * @method void setLeft(EyeChildItem $Left) 设置<p>左眼</p>
+ * @method EyeChildItem getRight() 获取<p>右眼</p>
+ * @method void setRight(EyeChildItem $Right) 设置<p>右眼</p>
+ * @method BaseItem2 getPd() 获取<p>瞳距</p>
+ * @method void setPd(BaseItem2 $Pd) 设置<p>瞳距</p>
+ * @method EyeFinalItem getRightFinal() 获取<p>右眼平均后结果</p>
+ * @method void setRightFinal(EyeFinalItem $RightFinal) 设置<p>右眼平均后结果</p>
+ * @method EyeFinalItem getLeftFinal() 获取<p>左眼平均后结果</p>
+ * @method void setLeftFinal(EyeFinalItem $LeftFinal) 设置<p>左眼平均后结果</p>
  */
 class EyeItem extends AbstractModel
 {
     /**
-     * @var EyeChildItem 左眼
+     * @var EyeChildItem <p>左眼</p>
      */
     public $Left;
 
     /**
-     * @var EyeChildItem 右眼
+     * @var EyeChildItem <p>右眼</p>
      */
     public $Right;
 
     /**
-     * @var BaseItem2 瞳距
+     * @var BaseItem2 <p>瞳距</p>
      */
     public $Pd;
 
     /**
-     * @param EyeChildItem $Left 左眼
-     * @param EyeChildItem $Right 右眼
-     * @param BaseItem2 $Pd 瞳距
+     * @var EyeFinalItem <p>右眼平均后结果</p>
+     */
+    public $RightFinal;
+
+    /**
+     * @var EyeFinalItem <p>左眼平均后结果</p>
+     */
+    public $LeftFinal;
+
+    /**
+     * @param EyeChildItem $Left <p>左眼</p>
+     * @param EyeChildItem $Right <p>右眼</p>
+     * @param BaseItem2 $Pd <p>瞳距</p>
+     * @param EyeFinalItem $RightFinal <p>右眼平均后结果</p>
+     * @param EyeFinalItem $LeftFinal <p>左眼平均后结果</p>
      */
     function __construct()
     {
@@ -75,6 +91,16 @@ class EyeItem extends AbstractModel
         if (array_key_exists("Pd",$param) and $param["Pd"] !== null) {
             $this->Pd = new BaseItem2();
             $this->Pd->deserialize($param["Pd"]);
+        }
+
+        if (array_key_exists("RightFinal",$param) and $param["RightFinal"] !== null) {
+            $this->RightFinal = new EyeFinalItem();
+            $this->RightFinal->deserialize($param["RightFinal"]);
+        }
+
+        if (array_key_exists("LeftFinal",$param) and $param["LeftFinal"] !== null) {
+            $this->LeftFinal = new EyeFinalItem();
+            $this->LeftFinal->deserialize($param["LeftFinal"]);
         }
     }
 }

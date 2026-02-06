@@ -34,28 +34,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpireTime(string $ExpireTime) 设置输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method string getResolution() 获取生成图片的分辨率。
 
-* GEM 2.5 可选值：1K、2K、4K；
-* GEM 3.0 可选值：1K、2K、4K；
+* GEM 2.5 可选值：1K、2K、4K，默认1K；
+* GEM 3.0 可选值：1K、2K、4K，默认1K；
 * Vidu q2 可选值：1080p、2K、4K，默认1080p；
-* Kling 2.1 可选值：1k、2k；
-* Hunyuan 3.0 可选值：768:768、768:1024、1024:768、1024:1024、720:1280、1280:720、768:1280、1280:768，不传默认使用1024:1024。
+* Kling 2.1 可选值：1k、2k，默认1k；
+* Hunyuan 3.0 可选值：720P、1080P、2K、4K。
  * @method void setResolution(string $Resolution) 设置生成图片的分辨率。
 
-* GEM 2.5 可选值：1K、2K、4K；
-* GEM 3.0 可选值：1K、2K、4K；
+* GEM 2.5 可选值：1K、2K、4K，默认1K；
+* GEM 3.0 可选值：1K、2K、4K，默认1K；
 * Vidu q2 可选值：1080p、2K、4K，默认1080p；
-* Kling 2.1 可选值：1k、2k；
-* Hunyuan 3.0 可选值：768:768、768:1024、1024:768、1024:1024、720:1280、1280:720、768:1280、1280:768，不传默认使用1024:1024。
+* Kling 2.1 可选值：1k、2k，默认1k；
+* Hunyuan 3.0 可选值：720P、1080P、2K、4K。
  * @method string getAspectRatio() 获取指定所生成图片的宽高比。
 <li>当 ModelName 是 GEM，可选值是 1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9；</li>
 <li>当 ModelName 是 Qwen，则暂不支持。</li>
-<li>当 ModelName 是 Hunyuan，则暂不支持。</li>
+<li>当 ModelName 是 Hunyuan，可选值16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li>
 <li>当 ModelName 是 Vidu，可选值16:9、9:16、1:1、3:4、4:3、21:9、2:3、3:2。</li>
 <li>当 ModelName 是 Kling，可选值16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li>
  * @method void setAspectRatio(string $AspectRatio) 设置指定所生成图片的宽高比。
 <li>当 ModelName 是 GEM，可选值是 1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9；</li>
 <li>当 ModelName 是 Qwen，则暂不支持。</li>
-<li>当 ModelName 是 Hunyuan，则暂不支持。</li>
+<li>当 ModelName 是 Hunyuan，可选值16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li>
 <li>当 ModelName 是 Vidu，可选值16:9、9:16、1:1、3:4、4:3、21:9、2:3、3:2。</li>
 <li>当 ModelName 是 Kling，可选值16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li>
  * @method string getPersonGeneration() 获取是否允许人物或人脸生成。取值有： <li>AllowAdult：允许生成成人；</li> <li>Disallowed：禁止在图片中包含人物或人脸；</li> 
@@ -92,11 +92,11 @@ class AigcImageOutputConfig extends AbstractModel
     /**
      * @var string 生成图片的分辨率。
 
-* GEM 2.5 可选值：1K、2K、4K；
-* GEM 3.0 可选值：1K、2K、4K；
+* GEM 2.5 可选值：1K、2K、4K，默认1K；
+* GEM 3.0 可选值：1K、2K、4K，默认1K；
 * Vidu q2 可选值：1080p、2K、4K，默认1080p；
-* Kling 2.1 可选值：1k、2k；
-* Hunyuan 3.0 可选值：768:768、768:1024、1024:768、1024:1024、720:1280、1280:720、768:1280、1280:768，不传默认使用1024:1024。
+* Kling 2.1 可选值：1k、2k，默认1k；
+* Hunyuan 3.0 可选值：720P、1080P、2K、4K。
      */
     public $Resolution;
 
@@ -104,7 +104,7 @@ class AigcImageOutputConfig extends AbstractModel
      * @var string 指定所生成图片的宽高比。
 <li>当 ModelName 是 GEM，可选值是 1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9；</li>
 <li>当 ModelName 是 Qwen，则暂不支持。</li>
-<li>当 ModelName 是 Hunyuan，则暂不支持。</li>
+<li>当 ModelName 是 Hunyuan，可选值16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li>
 <li>当 ModelName 是 Vidu，可选值16:9、9:16、1:1、3:4、4:3、21:9、2:3、3:2。</li>
 <li>当 ModelName 是 Kling，可选值16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li>
      */
@@ -134,15 +134,15 @@ class AigcImageOutputConfig extends AbstractModel
      * @param string $ExpireTime 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param string $Resolution 生成图片的分辨率。
 
-* GEM 2.5 可选值：1K、2K、4K；
-* GEM 3.0 可选值：1K、2K、4K；
+* GEM 2.5 可选值：1K、2K、4K，默认1K；
+* GEM 3.0 可选值：1K、2K、4K，默认1K；
 * Vidu q2 可选值：1080p、2K、4K，默认1080p；
-* Kling 2.1 可选值：1k、2k；
-* Hunyuan 3.0 可选值：768:768、768:1024、1024:768、1024:1024、720:1280、1280:720、768:1280、1280:768，不传默认使用1024:1024。
+* Kling 2.1 可选值：1k、2k，默认1k；
+* Hunyuan 3.0 可选值：720P、1080P、2K、4K。
      * @param string $AspectRatio 指定所生成图片的宽高比。
 <li>当 ModelName 是 GEM，可选值是 1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9；</li>
 <li>当 ModelName 是 Qwen，则暂不支持。</li>
-<li>当 ModelName 是 Hunyuan，则暂不支持。</li>
+<li>当 ModelName 是 Hunyuan，可选值16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li>
 <li>当 ModelName 是 Vidu，可选值16:9、9:16、1:1、3:4、4:3、21:9、2:3、3:2。</li>
 <li>当 ModelName 是 Kling，可选值16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li>
      * @param string $PersonGeneration 是否允许人物或人脸生成。取值有： <li>AllowAdult：允许生成成人；</li> <li>Disallowed：禁止在图片中包含人物或人脸；</li> 

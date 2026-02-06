@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(integer $UpdateTime) 设置更新时间
  * @method array getBoundProducts() 获取已关联产品信息列表
  * @method void setBoundProducts(array $BoundProducts) 设置已关联产品信息列表
+ * @method string getCustomTools() 获取自定义工具列表，最多可创建10个
+ * @method void setCustomTools(string $CustomTools) 设置自定义工具列表，最多可创建10个
  */
 class TalkAIBotInfo extends AbstractModel
 {
@@ -130,6 +132,11 @@ class TalkAIBotInfo extends AbstractModel
     public $BoundProducts;
 
     /**
+     * @var string 自定义工具列表，最多可创建10个
+     */
+    public $CustomTools;
+
+    /**
      * @param integer $Uin UIN
      * @param integer $AppId APPID
      * @param string $InstanceId 实例ID
@@ -145,6 +152,7 @@ class TalkAIBotInfo extends AbstractModel
      * @param integer $CreateTime 创建时间
      * @param integer $UpdateTime 更新时间
      * @param array $BoundProducts 已关联产品信息列表
+     * @param string $CustomTools 自定义工具列表，最多可创建10个
      */
     function __construct()
     {
@@ -227,6 +235,10 @@ class TalkAIBotInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->BoundProducts, $obj);
             }
+        }
+
+        if (array_key_exists("CustomTools",$param) and $param["CustomTools"] !== null) {
+            $this->CustomTools = $param["CustomTools"];
         }
     }
 }

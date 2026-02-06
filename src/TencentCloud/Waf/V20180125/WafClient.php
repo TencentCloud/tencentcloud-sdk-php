@@ -70,6 +70,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeAccessIndexResponse DescribeAccessIndex(Models\DescribeAccessIndexRequest $req) 本接口用于获取访问日志索引配置信息
  * @method Models\DescribeAntiFakeRulesResponse DescribeAntiFakeRules(Models\DescribeAntiFakeRulesRequest $req) 获取防篡改url
  * @method Models\DescribeAntiInfoLeakageRulesResponse DescribeAntiInfoLeakageRules(Models\DescribeAntiInfoLeakageRulesRequest $req) 取得信息防泄漏规则列表
+ * @method Models\DescribeApiAggregateTopNResponse DescribeApiAggregateTopN(Models\DescribeApiAggregateTopNRequest $req) 获取Api安全模块的访问日志聚合topN
  * @method Models\DescribeApiDetailResponse DescribeApiDetail(Models\DescribeApiDetailRequest $req) 获取Api请求详情信息
  * @method Models\DescribeApiListVersionTwoResponse DescribeApiListVersionTwo(Models\DescribeApiListVersionTwoRequest $req) api资产列表
  * @method Models\DescribeAreaBanAreasResponse DescribeAreaBanAreas(Models\DescribeAreaBanAreasRequest $req) 获取地域封禁配置包括地域封禁开关，设置封禁的地区信息

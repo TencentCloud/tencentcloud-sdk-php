@@ -33,13 +33,25 @@ use TencentCloud\Common\AbstractModel;
  * @method string getExpireTime() 获取输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setExpireTime(string $ExpireTime) 设置输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method string getAspectRatio() 获取指定所生成图片的宽高比。输入格式为 W:H。
-
-仅生商品图场景有效，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
+本字段在以下场景有效：
+* 生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
+* AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： 
+    1. 仅指定 AspectRatio 时，根据原图输入进行自适应调整。
+    2. 指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。
+    3. 当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。
  * @method void setAspectRatio(string $AspectRatio) 设置指定所生成图片的宽高比。输入格式为 W:H。
-
-仅生商品图场景有效，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
+本字段在以下场景有效：
+* 生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
+* AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： 
+    1. 仅指定 AspectRatio 时，根据原图输入进行自适应调整。
+    2. 指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。
+    3. 当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。
  * @method ImageSceneAigcEncodeConfig getEncodeConfig() 获取输出图片编码格式参数。**仅AI换衣场景有效。**
  * @method void setEncodeConfig(ImageSceneAigcEncodeConfig $EncodeConfig) 设置输出图片编码格式参数。**仅AI换衣场景有效。**
+ * @method integer getImageWidth() 获取输出图像宽度，**仅AI扩图场景有效**。
+ * @method void setImageWidth(integer $ImageWidth) 设置输出图像宽度，**仅AI扩图场景有效**。
+ * @method integer getImageHeight() 获取输出图像高度，**仅AI扩图场景有效**。
+ * @method void setImageHeight(integer $ImageHeight) 设置输出图像高度，**仅AI扩图场景有效**。
  */
 class SceneAigcImageOutputConfig extends AbstractModel
 {
@@ -67,8 +79,12 @@ class SceneAigcImageOutputConfig extends AbstractModel
 
     /**
      * @var string 指定所生成图片的宽高比。输入格式为 W:H。
-
-仅生商品图场景有效，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
+本字段在以下场景有效：
+* 生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
+* AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： 
+    1. 仅指定 AspectRatio 时，根据原图输入进行自适应调整。
+    2. 指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。
+    3. 当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。
      */
     public $AspectRatio;
 
@@ -78,6 +94,16 @@ class SceneAigcImageOutputConfig extends AbstractModel
     public $EncodeConfig;
 
     /**
+     * @var integer 输出图像宽度，**仅AI扩图场景有效**。
+     */
+    public $ImageWidth;
+
+    /**
+     * @var integer 输出图像高度，**仅AI扩图场景有效**。
+     */
+    public $ImageHeight;
+
+    /**
      * @param string $StorageMode 存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li>
 默认值：Temporary
      * @param string $MediaName 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
@@ -85,9 +111,15 @@ class SceneAigcImageOutputConfig extends AbstractModel
 <li>默认值：0，表示其他分类。</li>
      * @param string $ExpireTime 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param string $AspectRatio 指定所生成图片的宽高比。输入格式为 W:H。
-
-仅生商品图场景有效，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
+本字段在以下场景有效：
+* 生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
+* AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： 
+    1. 仅指定 AspectRatio 时，根据原图输入进行自适应调整。
+    2. 指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。
+    3. 当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。
      * @param ImageSceneAigcEncodeConfig $EncodeConfig 输出图片编码格式参数。**仅AI换衣场景有效。**
+     * @param integer $ImageWidth 输出图像宽度，**仅AI扩图场景有效**。
+     * @param integer $ImageHeight 输出图像高度，**仅AI扩图场景有效**。
      */
     function __construct()
     {
@@ -125,6 +157,14 @@ class SceneAigcImageOutputConfig extends AbstractModel
         if (array_key_exists("EncodeConfig",$param) and $param["EncodeConfig"] !== null) {
             $this->EncodeConfig = new ImageSceneAigcEncodeConfig();
             $this->EncodeConfig->deserialize($param["EncodeConfig"]);
+        }
+
+        if (array_key_exists("ImageWidth",$param) and $param["ImageWidth"] !== null) {
+            $this->ImageWidth = $param["ImageWidth"];
+        }
+
+        if (array_key_exists("ImageHeight",$param) and $param["ImageHeight"] !== null) {
+            $this->ImageHeight = $param["ImageHeight"];
         }
     }
 }

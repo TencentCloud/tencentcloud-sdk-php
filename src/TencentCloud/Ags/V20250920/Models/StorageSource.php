@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCos(CosStorageSource $Cos) 设置对象存储桶配置
  * @method ImageStorageSource getImage() 获取镜像卷配置
  * @method void setImage(ImageStorageSource $Image) 设置镜像卷配置
+ * @method CfsStorageSource getCfs() 获取文件存储配置
+ * @method void setCfs(CfsStorageSource $Cfs) 设置文件存储配置
  */
 class StorageSource extends AbstractModel
 {
@@ -38,8 +40,14 @@ class StorageSource extends AbstractModel
     public $Image;
 
     /**
+     * @var CfsStorageSource 文件存储配置
+     */
+    public $Cfs;
+
+    /**
      * @param CosStorageSource $Cos 对象存储桶配置
      * @param ImageStorageSource $Image 镜像卷配置
+     * @param CfsStorageSource $Cfs 文件存储配置
      */
     function __construct()
     {
@@ -62,6 +70,11 @@ class StorageSource extends AbstractModel
         if (array_key_exists("Image",$param) and $param["Image"] !== null) {
             $this->Image = new ImageStorageSource();
             $this->Image->deserialize($param["Image"]);
+        }
+
+        if (array_key_exists("Cfs",$param) and $param["Cfs"] !== null) {
+            $this->Cfs = new CfsStorageSource();
+            $this->Cfs->deserialize($param["Cfs"]);
         }
     }
 }

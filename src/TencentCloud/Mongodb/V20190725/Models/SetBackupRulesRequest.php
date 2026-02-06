@@ -64,14 +64,8 @@ use TencentCloud\Common\AbstractModel;
 - 格式：请输入 0-6 之间的数字代表周日至周六（例如：1 代表周一），多个日期请用英文逗号 , 分隔。
 - 示例：输入 1,3,5 表示系统将在每周的周一、周三、周五执行备份。
 - 默认值：不设置，则默认为全周期 (0,1,2,3,4,5,6)，即每日执行备份。
- * @method string getLongTermUnit() 获取长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。
-- 不开启（默认）：不启用长期保留功能。
-- 按周保留： 指定为 weekly。
-- 按月保留： 指定为 monthly。
- * @method void setLongTermUnit(string $LongTermUnit) 设置长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。
-- 不开启（默认）：不启用长期保留功能。
-- 按周保留： 指定为 weekly。
-- 按月保留： 指定为 monthly。
+ * @method string getLongTermUnit() 获取长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。- 不开启（默认）：不启用长期保留功能。- 按周保留： 指定为 weekly。- 按月保留： 指定为 monthly。待废弃，使用LongTermInterval
+ * @method void setLongTermUnit(string $LongTermUnit) 设置长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。- 不开启（默认）：不启用长期保留功能。- 按周保留： 指定为 weekly。- 按月保留： 指定为 monthly。待废弃，使用LongTermInterval
  * @method string getLongTermActiveDays() 获取指定用于长期保留的具体备份日期。此设置仅在 **LongTermUnit** 被设为**weekly** 或 **monthly** 时生效。
 - 按周（weekly）保留：请输入 0-6 之间的数字来代表周日至周六。多个日期请用英文逗号分隔。
 - 按月（monthly）保留：请输入 1-31 之间的数字来代表月份中的具体日期。多个日期请用英文逗号分隔。
@@ -94,14 +88,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupVersion(integer $BackupVersion) 设置指定备份版本。
 - 旧版本备份：0。
 - 开启高级备份：1。
- * @method integer getAlarmWaterLevel() 获取设置备份数据集存储空间使用率的告警阈值。
-- 单位：%。
--  默认值：100。
-- 取值范围：[50,300]。
- * @method void setAlarmWaterLevel(integer $AlarmWaterLevel) 设置设置备份数据集存储空间使用率的告警阈值。
-- 单位：%。
--  默认值：100。
-- 取值范围：[50,300]。
+ * @method integer getAlarmWaterLevel() 获取设置备份数据集存储空间使用率的告警阈值。- 单位：%。-  默认值：100。- 取值范围：[50,300]。待废弃,使用AlertThreshold
+ * @method void setAlarmWaterLevel(integer $AlarmWaterLevel) 设置设置备份数据集存储空间使用率的告警阈值。- 单位：%。-  默认值：100。- 取值范围：[50,300]。待废弃,使用AlertThreshold
+ * @method string getLongTermInterval() 获取长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。- 不开启（默认）：不启用长期保留功能。- 按周保留： 指定为 weekly。- 按月保留： 指定为 monthly。
+ * @method void setLongTermInterval(string $LongTermInterval) 设置长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。- 不开启（默认）：不启用长期保留功能。- 按周保留： 指定为 weekly。- 按月保留： 指定为 monthly。
+ * @method integer getAlertThreshold() 获取设置备份数据集存储空间使用率的告警阈值。- 单位：%。-  默认值：100。- 取值范围：[50,300]。
+ * @method void setAlertThreshold(integer $AlertThreshold) 设置设置备份数据集存储空间使用率的告警阈值。- 单位：%。-  默认值：100。- 取值范围：[50,300]。
  */
 class SetBackupRulesRequest extends AbstractModel
 {
@@ -156,10 +148,7 @@ class SetBackupRulesRequest extends AbstractModel
     public $ActiveWeekdays;
 
     /**
-     * @var string 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。
-- 不开启（默认）：不启用长期保留功能。
-- 按周保留： 指定为 weekly。
-- 按月保留： 指定为 monthly。
+     * @var string 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。- 不开启（默认）：不启用长期保留功能。- 按周保留： 指定为 weekly。- 按月保留： 指定为 monthly。待废弃，使用LongTermInterval
      */
     public $LongTermUnit;
 
@@ -191,12 +180,19 @@ class SetBackupRulesRequest extends AbstractModel
     public $BackupVersion;
 
     /**
-     * @var integer 设置备份数据集存储空间使用率的告警阈值。
-- 单位：%。
--  默认值：100。
-- 取值范围：[50,300]。
+     * @var integer 设置备份数据集存储空间使用率的告警阈值。- 单位：%。-  默认值：100。- 取值范围：[50,300]。待废弃,使用AlertThreshold
      */
     public $AlarmWaterLevel;
+
+    /**
+     * @var string 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。- 不开启（默认）：不启用长期保留功能。- 按周保留： 指定为 weekly。- 按月保留： 指定为 monthly。
+     */
+    public $LongTermInterval;
+
+    /**
+     * @var integer 设置备份数据集存储空间使用率的告警阈值。- 单位：%。-  默认值：100。- 取值范围：[50,300]。
+     */
+    public $AlertThreshold;
 
     /**
      * @param string $InstanceId 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
@@ -221,10 +217,7 @@ class SetBackupRulesRequest extends AbstractModel
 - 格式：请输入 0-6 之间的数字代表周日至周六（例如：1 代表周一），多个日期请用英文逗号 , 分隔。
 - 示例：输入 1,3,5 表示系统将在每周的周一、周三、周五执行备份。
 - 默认值：不设置，则默认为全周期 (0,1,2,3,4,5,6)，即每日执行备份。
-     * @param string $LongTermUnit 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。
-- 不开启（默认）：不启用长期保留功能。
-- 按周保留： 指定为 weekly。
-- 按月保留： 指定为 monthly。
+     * @param string $LongTermUnit 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。- 不开启（默认）：不启用长期保留功能。- 按周保留： 指定为 weekly。- 按月保留： 指定为 monthly。待废弃，使用LongTermInterval
      * @param string $LongTermActiveDays 指定用于长期保留的具体备份日期。此设置仅在 **LongTermUnit** 被设为**weekly** 或 **monthly** 时生效。
 - 按周（weekly）保留：请输入 0-6 之间的数字来代表周日至周六。多个日期请用英文逗号分隔。
 - 按月（monthly）保留：请输入 1-31 之间的数字来代表月份中的具体日期。多个日期请用英文逗号分隔。
@@ -236,10 +229,9 @@ class SetBackupRulesRequest extends AbstractModel
      * @param integer $BackupVersion 指定备份版本。
 - 旧版本备份：0。
 - 开启高级备份：1。
-     * @param integer $AlarmWaterLevel 设置备份数据集存储空间使用率的告警阈值。
-- 单位：%。
--  默认值：100。
-- 取值范围：[50,300]。
+     * @param integer $AlarmWaterLevel 设置备份数据集存储空间使用率的告警阈值。- 单位：%。-  默认值：100。- 取值范围：[50,300]。待废弃,使用AlertThreshold
+     * @param string $LongTermInterval 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。- 不开启（默认）：不启用长期保留功能。- 按周保留： 指定为 weekly。- 按月保留： 指定为 monthly。
+     * @param integer $AlertThreshold 设置备份数据集存储空间使用率的告警阈值。- 单位：%。-  默认值：100。- 取值范围：[50,300]。
      */
     function __construct()
     {
@@ -304,6 +296,14 @@ class SetBackupRulesRequest extends AbstractModel
 
         if (array_key_exists("AlarmWaterLevel",$param) and $param["AlarmWaterLevel"] !== null) {
             $this->AlarmWaterLevel = $param["AlarmWaterLevel"];
+        }
+
+        if (array_key_exists("LongTermInterval",$param) and $param["LongTermInterval"] !== null) {
+            $this->LongTermInterval = $param["LongTermInterval"];
+        }
+
+        if (array_key_exists("AlertThreshold",$param) and $param["AlertThreshold"] !== null) {
+            $this->AlertThreshold = $param["AlertThreshold"];
         }
     }
 }

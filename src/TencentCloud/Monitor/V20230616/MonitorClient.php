@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Monitor\V20230616\Models as Models;
 
 /**
+ * @method Models\CreateNoticeContentTmplResponse CreateNoticeContentTmpl(Models\CreateNoticeContentTmplRequest $req) 创建自定义通知内容模板
  * @method Models\DescribeAlarmNotifyHistoriesResponse DescribeAlarmNotifyHistories(Models\DescribeAlarmNotifyHistoriesRequest $req) 按需查询告警的通知历史
  */
 

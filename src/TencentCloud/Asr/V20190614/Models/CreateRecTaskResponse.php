@@ -20,21 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRecTask返回参数结构体
  *
- * @method Task getData() 获取录音文件识别的请求返回结果，包含结果查询需要的TaskId。
-**注意：TaskId有效期为24小时，不同日期可能出现重复TaskId，请不要依赖TaskId作为您业务系统里的唯一ID。**
-
- * @method void setData(Task $Data) 设置录音文件识别的请求返回结果，包含结果查询需要的TaskId。
-**注意：TaskId有效期为24小时，不同日期可能出现重复TaskId，请不要依赖TaskId作为您业务系统里的唯一ID。**
-
+ * @method Task getData() 获取<p>录音文件识别的请求返回结果，包含结果查询需要的TaskId。<br><strong>注意：TaskId有效期为24小时，不同日期可能出现重复TaskId，请不要依赖TaskId作为您业务系统里的唯一ID。</strong></p>
+ * @method void setData(Task $Data) 设置<p>录音文件识别的请求返回结果，包含结果查询需要的TaskId。<br><strong>注意：TaskId有效期为24小时，不同日期可能出现重复TaskId，请不要依赖TaskId作为您业务系统里的唯一ID。</strong></p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateRecTaskResponse extends AbstractModel
 {
     /**
-     * @var Task 录音文件识别的请求返回结果，包含结果查询需要的TaskId。
-**注意：TaskId有效期为24小时，不同日期可能出现重复TaskId，请不要依赖TaskId作为您业务系统里的唯一ID。**
-
+     * @var Task <p>录音文件识别的请求返回结果，包含结果查询需要的TaskId。<br><strong>注意：TaskId有效期为24小时，不同日期可能出现重复TaskId，请不要依赖TaskId作为您业务系统里的唯一ID。</strong></p>
      */
     public $Data;
 
@@ -44,9 +38,7 @@ class CreateRecTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param Task $Data 录音文件识别的请求返回结果，包含结果查询需要的TaskId。
-**注意：TaskId有效期为24小时，不同日期可能出现重复TaskId，请不要依赖TaskId作为您业务系统里的唯一ID。**
-
+     * @param Task $Data <p>录音文件识别的请求返回结果，包含结果查询需要的TaskId。<br><strong>注意：TaskId有效期为24小时，不同日期可能出现重复TaskId，请不要依赖TaskId作为您业务系统里的唯一ID。</strong></p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

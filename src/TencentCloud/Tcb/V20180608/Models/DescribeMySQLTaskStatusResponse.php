@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Bh\V20230418\Models;
+namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SearchSubtaskResultById返回参数结构体
+ * DescribeMySQLTaskStatus返回参数结构体
  *
- * @method integer getTotalCount() 获取记录数
- * @method void setTotalCount(integer $TotalCount) 设置记录数
- * @method array getSubtaskResult() 获取运维子任务执行结果
- * @method void setSubtaskResult(array $SubtaskResult) 设置运维子任务执行结果
+ * @method MySQLTaskStatus getData() 获取任务状态
+ * @method void setData(MySQLTaskStatus $Data) 设置任务状态
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class SearchSubtaskResultByIdResponse extends AbstractModel
+class DescribeMySQLTaskStatusResponse extends AbstractModel
 {
     /**
-     * @var integer 记录数
+     * @var MySQLTaskStatus 任务状态
      */
-    public $TotalCount;
-
-    /**
-     * @var array 运维子任务执行结果
-     */
-    public $SubtaskResult;
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class SearchSubtaskResultByIdResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 记录数
-     * @param array $SubtaskResult 运维子任务执行结果
+     * @param MySQLTaskStatus $Data 任务状态
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +54,9 @@ class SearchSubtaskResultByIdResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("SubtaskResult",$param) and $param["SubtaskResult"] !== null) {
-            $this->SubtaskResult = [];
-            foreach ($param["SubtaskResult"] as $key => $value){
-                $obj = new SubtaskResult();
-                $obj->deserialize($value);
-                array_push($this->SubtaskResult, $obj);
-            }
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new MySQLTaskStatus();
+            $this->Data->deserialize($param["Data"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

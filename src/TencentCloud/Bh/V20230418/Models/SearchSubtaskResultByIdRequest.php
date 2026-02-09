@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页的页内记录数，默认为20，最大200
  * @method string getId() 获取运维父任务执行日志ID
  * @method void setId(string $Id) 设置运维父任务执行日志ID
- * @method array getStatus() 获取运维父任务执行状态
- * @method void setStatus(array $Status) 设置运维父任务执行状态
+ * @method array getStatus() 获取运维父任务执行状态。1 - 执行中，2 - 成功，3 - 失败，4 - 超时
+ * @method void setStatus(array $Status) 设置运维父任务执行状态。1 - 执行中，2 - 成功，3 - 失败，4 - 超时
  */
 class SearchSubtaskResultByIdRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class SearchSubtaskResultByIdRequest extends AbstractModel
     public $Id;
 
     /**
-     * @var array 运维父任务执行状态
+     * @var array 运维父任务执行状态。1 - 执行中，2 - 成功，3 - 失败，4 - 超时
      */
     public $Status;
 
@@ -63,7 +63,7 @@ class SearchSubtaskResultByIdRequest extends AbstractModel
      * @param integer $Offset 查询偏移
      * @param integer $Limit 分页的页内记录数，默认为20，最大200
      * @param string $Id 运维父任务执行日志ID
-     * @param array $Status 运维父任务执行状态
+     * @param array $Status 运维父任务执行状态。1 - 执行中，2 - 成功，3 - 失败，4 - 超时
      */
     function __construct()
     {

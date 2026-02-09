@@ -35,6 +35,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\CreateCloudBaseRunResourceResponse CreateCloudBaseRunResource(Models\CreateCloudBaseRunResourceRequest $req) 开通容器托管的资源，包括集群创建，VPC配置，异步任务创建，镜像托管，Coding等，查看创建结果需要根据DescribeCloudBaseRunResource接口来查看
  * @method Models\CreateCloudBaseRunServerVersionResponse CreateCloudBaseRunServerVersion(Models\CreateCloudBaseRunServerVersionRequest $req) 创建服务版本
  * @method Models\CreateHostingDomainResponse CreateHostingDomain(Models\CreateHostingDomainRequest $req) 创建托管域名
+ * @method Models\CreateMySQLResponse CreateMySQL(Models\CreateMySQLRequest $req) 开通Mysql
  * @method Models\CreatePostpayPackageResponse CreatePostpayPackage(Models\CreatePostpayPackageRequest $req) 开通后付费资源
  * @method Models\CreateStaticStoreResponse CreateStaticStore(Models\CreateStaticStoreRequest $req) 创建静态托管资源，包括COS和CDN，异步任务创建，查看创建结果需要根据DescribeStaticStore接口来查看
  * @method Models\CreateTableResponse CreateTable(Models\CreateTableRequest $req) 本接口(CreateTable)用于创建表，支持创建capped类型集合，暂时不支持分片表
@@ -63,6 +64,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DescribeCloudBaseRunServerVersionResponse DescribeCloudBaseRunServerVersion(Models\DescribeCloudBaseRunServerVersionRequest $req) 查询服务版本的详情，CPU和MEM  请使用CPUSize和MemSize
  * @method Models\DescribeCloudBaseRunVersionResponse DescribeCloudBaseRunVersion(Models\DescribeCloudBaseRunVersionRequest $req) 查询服务版本详情(新)
  * @method Models\DescribeCloudBaseRunVersionSnapshotResponse DescribeCloudBaseRunVersionSnapshot(Models\DescribeCloudBaseRunVersionSnapshotRequest $req) 查询版本历史
+ * @method Models\DescribeCreateMySQLResultResponse DescribeCreateMySQLResult(Models\DescribeCreateMySQLResultRequest $req) 查询开通Mysql结果
  * @method Models\DescribeCurveDataResponse DescribeCurveData(Models\DescribeCurveDataRequest $req) 根据用户传入的指标, 拉取一段时间内的监控数据。
  * @method Models\DescribeDatabaseACLResponse DescribeDatabaseACL(Models\DescribeDatabaseACLRequest $req) 获取数据库权限
  * @method Models\DescribeDownloadFileResponse DescribeDownloadFile(Models\DescribeDownloadFileRequest $req) 获取下载文件信息
@@ -79,6 +81,8 @@ use TencentCloud\Tcb\V20180608\Models as Models;
 暂不鉴权
  * @method Models\DescribeGraphDataResponse DescribeGraphData(Models\DescribeGraphDataRequest $req) 根据用户传入的指标, 拉取一段时间内的监控数据。
  * @method Models\DescribeHostingDomainTaskResponse DescribeHostingDomainTask(Models\DescribeHostingDomainTaskRequest $req) 查询静态托管域名任务状态
+ * @method Models\DescribeMySQLClusterDetailResponse DescribeMySQLClusterDetail(Models\DescribeMySQLClusterDetailRequest $req) 销毁Mysql
+ * @method Models\DescribeMySQLTaskStatusResponse DescribeMySQLTaskStatus(Models\DescribeMySQLTaskStatusRequest $req) 查询Mysql任务状态
  * @method Models\DescribePostpayFreeQuotasResponse DescribePostpayFreeQuotas(Models\DescribePostpayFreeQuotasRequest $req) 查询后付费资源免费量
  * @method Models\DescribePostpayPackageFreeQuotasResponse DescribePostpayPackageFreeQuotas(Models\DescribePostpayPackageFreeQuotasRequest $req) 获取后付费免费额度
  * @method Models\DescribeQuotaDataResponse DescribeQuotaData(Models\DescribeQuotaDataRequest $req) 查询指定指标的配额使用量
@@ -96,6 +100,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DescribeWxGatewayRoutesResponse DescribeWxGatewayRoutes(Models\DescribeWxGatewayRoutesRequest $req) 查看安全网关路由
  * @method Models\DescribeWxGatewaysResponse DescribeWxGateways(Models\DescribeWxGatewaysRequest $req) 查看安全网关
  * @method Models\DestroyEnvResponse DestroyEnv(Models\DestroyEnvRequest $req) 销毁环境
+ * @method Models\DestroyMySQLResponse DestroyMySQL(Models\DestroyMySQLRequest $req) 销毁Mysql
  * @method Models\DestroyStaticStoreResponse DestroyStaticStore(Models\DestroyStaticStoreRequest $req) 销毁静态托管资源，该接口创建异步销毁任务，资源最终状态可从DestroyStaticStore接口查看
  * @method Models\EditAuthConfigResponse EditAuthConfig(Models\EditAuthConfigRequest $req) 修改登录配置
  * @method Models\EstablishCloudBaseRunServerResponse EstablishCloudBaseRunServer(Models\EstablishCloudBaseRunServerRequest $req) 创建云应用服务

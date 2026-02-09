@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAndroidVersion(string $AndroidVersion) 设置安卓10
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method string getAndroidInstanceImageModel() 获取镜像型号。
+YS1：基础型云手机
+GC0、GC1、GC2：三种性能型云手机
+ * @method void setAndroidInstanceImageModel(string $AndroidInstanceImageModel) 设置镜像型号。
+YS1：基础型云手机
+GC0、GC1、GC2：三种性能型云手机
  */
 class AndroidInstanceImage extends AbstractModel
 {
@@ -73,6 +79,13 @@ class AndroidInstanceImage extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var string 镜像型号。
+YS1：基础型云手机
+GC0、GC1、GC2：三种性能型云手机
+     */
+    public $AndroidInstanceImageModel;
+
+    /**
      * @param string $AndroidInstanceImageId 镜像 ID
      * @param string $AndroidInstanceImageName 镜像名称，由业务方自定义，仅用于展示
      * @param string $AndroidInstanceImageState 镜像状态
@@ -80,6 +93,9 @@ class AndroidInstanceImage extends AbstractModel
      * @param string $AndroidInstanceImageDescription 镜像描述
      * @param string $AndroidVersion 安卓10
      * @param string $CreateTime 创建时间
+     * @param string $AndroidInstanceImageModel 镜像型号。
+YS1：基础型云手机
+GC0、GC1、GC2：三种性能型云手机
      */
     function __construct()
     {
@@ -120,6 +136,10 @@ class AndroidInstanceImage extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("AndroidInstanceImageModel",$param) and $param["AndroidInstanceImageModel"] !== null) {
+            $this->AndroidInstanceImageModel = $param["AndroidInstanceImageModel"];
         }
     }
 }

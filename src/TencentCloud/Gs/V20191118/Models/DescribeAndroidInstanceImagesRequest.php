@@ -29,10 +29,12 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLimit() 获取限制量，默认为20，最大值为100
  * @method void setLimit(integer $Limit) 设置限制量，默认为20，最大值为100
  * @method array getFilters() 获取字段过滤器。Filter 的 Name 有以下值：
+ImageModel：镜像型号
 ImageName：镜像名称
 ImageState：镜像状态
 AndroidVersion：安卓版本
  * @method void setFilters(array $Filters) 设置字段过滤器。Filter 的 Name 有以下值：
+ImageModel：镜像型号
 ImageName：镜像名称
 ImageState：镜像状态
 AndroidVersion：安卓版本
@@ -61,6 +63,7 @@ class DescribeAndroidInstanceImagesRequest extends AbstractModel
 
     /**
      * @var array 字段过滤器。Filter 的 Name 有以下值：
+ImageModel：镜像型号
 ImageName：镜像名称
 ImageState：镜像状态
 AndroidVersion：安卓版本
@@ -73,6 +76,7 @@ AndroidVersion：安卓版本
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 限制量，默认为20，最大值为100
      * @param array $Filters 字段过滤器。Filter 的 Name 有以下值：
+ImageModel：镜像型号
 ImageName：镜像名称
 ImageState：镜像状态
 AndroidVersion：安卓版本

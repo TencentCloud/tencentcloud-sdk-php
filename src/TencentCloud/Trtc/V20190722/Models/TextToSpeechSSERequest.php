@@ -32,8 +32,25 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAPIKey(string $APIKey) 设置TTS的API密钥
  * @method string getModel() 获取TTS的模型，当前固定为：flow_01_turbo
  * @method void setModel(string $Model) 设置TTS的模型，当前固定为：flow_01_turbo
- * @method string getLanguage() 获取 需要合成的语言（ISO 639-1），支持 zh（中文）、en（英文）、yue（粤语）、ja（日语）、ko（韩语），默认自动识别
- * @method void setLanguage(string $Language) 设置 需要合成的语言（ISO 639-1），支持 zh（中文）、en（英文）、yue（粤语）、ja（日语）、ko（韩语），默认自动识别
+ * @method string getLanguage() 获取 需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：
+- zh（中文）
+- en（英文）
+- yue（粤语）
+- ja（日语）
+- ko（韩语）
+- ar（阿拉伯语）
+- id（印尼语）
+- th（泰语）
+
+ * @method void setLanguage(string $Language) 设置 需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：
+- zh（中文）
+- en（英文）
+- yue（粤语）
+- ja（日语）
+- ko（韩语）
+- ar（阿拉伯语）
+- id（印尼语）
+- th（泰语）
  */
 class TextToSpeechSSERequest extends AbstractModel
 {
@@ -69,7 +86,16 @@ class TextToSpeechSSERequest extends AbstractModel
     public $Model;
 
     /**
-     * @var string  需要合成的语言（ISO 639-1），支持 zh（中文）、en（英文）、yue（粤语）、ja（日语）、ko（韩语），默认自动识别
+     * @var string  需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：
+- zh（中文）
+- en（英文）
+- yue（粤语）
+- ja（日语）
+- ko（韩语）
+- ar（阿拉伯语）
+- id（印尼语）
+- th（泰语）
+
      */
     public $Language;
 
@@ -80,7 +106,15 @@ class TextToSpeechSSERequest extends AbstractModel
      * @param AudioFormat $AudioFormat 文本转语音的输出音频的格式
      * @param string $APIKey TTS的API密钥
      * @param string $Model TTS的模型，当前固定为：flow_01_turbo
-     * @param string $Language  需要合成的语言（ISO 639-1），支持 zh（中文）、en（英文）、yue（粤语）、ja（日语）、ko（韩语），默认自动识别
+     * @param string $Language  需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：
+- zh（中文）
+- en（英文）
+- yue（粤语）
+- ja（日语）
+- ko（韩语）
+- ar（阿拉伯语）
+- id（印尼语）
+- th（泰语）
      */
     function __construct()
     {

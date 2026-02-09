@@ -58,6 +58,12 @@ ESTABLISHED：连接中
  * @method void setServiceStatus(string $ServiceStatus) 设置服务状态。
 IDLE：未连接
 ESTABLISHED：连接中
+ * @method string getAndroidInstanceModel() 获取安卓实例型号。
+YS1：默认值，基础型云手机
+GC0、GC1、GC2：三种性能型云手机
+ * @method void setAndroidInstanceModel(string $AndroidInstanceModel) 设置安卓实例型号。
+YS1：默认值，基础型云手机
+GC0、GC1、GC2：三种性能型云手机
  */
 class AndroidInstance extends AbstractModel
 {
@@ -149,6 +155,13 @@ ESTABLISHED：连接中
     public $ServiceStatus;
 
     /**
+     * @var string 安卓实例型号。
+YS1：默认值，基础型云手机
+GC0、GC1、GC2：三种性能型云手机
+     */
+    public $AndroidInstanceModel;
+
+    /**
      * @param string $AndroidInstanceId 实例 ID
      * @param string $AndroidInstanceRegion 实例所在区域
      * @param string $AndroidInstanceZone 实例可用区
@@ -168,6 +181,9 @@ ESTABLISHED：连接中
      * @param string $ServiceStatus 服务状态。
 IDLE：未连接
 ESTABLISHED：连接中
+     * @param string $AndroidInstanceModel 安卓实例型号。
+YS1：默认值，基础型云手机
+GC0、GC1、GC2：三种性能型云手机
      */
     function __construct()
     {
@@ -253,6 +269,10 @@ ESTABLISHED：连接中
 
         if (array_key_exists("ServiceStatus",$param) and $param["ServiceStatus"] !== null) {
             $this->ServiceStatus = $param["ServiceStatus"];
+        }
+
+        if (array_key_exists("AndroidInstanceModel",$param) and $param["AndroidInstanceModel"] !== null) {
+            $this->AndroidInstanceModel = $param["AndroidInstanceModel"];
         }
     }
 }

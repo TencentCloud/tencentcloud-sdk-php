@@ -54,6 +54,8 @@ A6：六开
  * @method void setImageId(string $ImageId) 设置镜像 ID。如果不填，将使用默认的系统镜像
  * @method array getLabels() 获取安卓实例标签列表
  * @method void setLabels(array $Labels) 设置安卓实例标签列表
+ * @method string getModel() 获取安卓实例型号。YS1：默认值，基础型云手机GC0、GC1、GC2：三种性能型云手机
+ * @method void setModel(string $Model) 设置安卓实例型号。YS1：默认值，基础型云手机GC0、GC1、GC2：三种性能型云手机
  */
 class CreateAndroidInstancesRequest extends AbstractModel
 {
@@ -99,6 +101,11 @@ A6：六开
     public $Labels;
 
     /**
+     * @var string 安卓实例型号。YS1：默认值，基础型云手机GC0、GC1、GC2：三种性能型云手机
+     */
+    public $Model;
+
+    /**
      * @param string $Zone 安卓实例可用区。
 ap-guangzhou-3：广州三区
 ap-shenzhen-1：深圳一区
@@ -116,6 +123,7 @@ A6：六开
      * @param array $HostSerialNumbers 宿主机 ID 列表。可以指定宿主机 ID 进行创建；也可以不指定由系统自动分配宿主机。
      * @param string $ImageId 镜像 ID。如果不填，将使用默认的系统镜像
      * @param array $Labels 安卓实例标签列表
+     * @param string $Model 安卓实例型号。YS1：默认值，基础型云手机GC0、GC1、GC2：三种性能型云手机
      */
     function __construct()
     {
@@ -157,6 +165,10 @@ A6：六开
                 $obj->deserialize($value);
                 array_push($this->Labels, $obj);
             }
+        }
+
+        if (array_key_exists("Model",$param) and $param["Model"] !== null) {
+            $this->Model = $param["Model"];
         }
     }
 }

@@ -20,8 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFileSystem请求参数结构体
  *
- * @method string getType() 获取文件系统类型, 可填goosefs和goosefsx
- * @method void setType(string $Type) 设置文件系统类型, 可填goosefs和goosefsx
  * @method string getName() 获取文件系统名
  * @method void setName(string $Name) 设置文件系统名
  * @method string getDescription() 获取文件系统备注描述
@@ -32,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置子网ID
  * @method string getZone() 获取子网所在的可用区
  * @method void setZone(string $Zone) 设置子网所在的可用区
+ * @method string getType() 获取文件系统类型, 可填goosefs和goosefsx
+ * @method void setType(string $Type) 设置文件系统类型, 可填goosefs和goosefsx
  * @method array getTag() 获取文件系统关联的tag
  * @method void setTag(array $Tag) 设置文件系统关联的tag
  * @method GooseFSxBuildElement getGooseFSxBuildElements() 获取GooseFSx构建时要传递的参数
@@ -43,11 +43,6 @@ use TencentCloud\Common\AbstractModel;
  */
 class CreateFileSystemRequest extends AbstractModel
 {
-    /**
-     * @var string 文件系统类型, 可填goosefs和goosefsx
-     */
-    public $Type;
-
     /**
      * @var string 文件系统名
      */
@@ -74,6 +69,12 @@ class CreateFileSystemRequest extends AbstractModel
     public $Zone;
 
     /**
+     * @var string 文件系统类型, 可填goosefs和goosefsx
+     * @deprecated
+     */
+    public $Type;
+
+    /**
      * @var array 文件系统关联的tag
      */
     public $Tag;
@@ -94,12 +95,12 @@ class CreateFileSystemRequest extends AbstractModel
     public $ClusterPort;
 
     /**
-     * @param string $Type 文件系统类型, 可填goosefs和goosefsx
      * @param string $Name 文件系统名
      * @param string $Description 文件系统备注描述
      * @param string $VpcId vpc网络ID
      * @param string $SubnetId 子网ID
      * @param string $Zone 子网所在的可用区
+     * @param string $Type 文件系统类型, 可填goosefs和goosefsx
      * @param array $Tag 文件系统关联的tag
      * @param GooseFSxBuildElement $GooseFSxBuildElements GooseFSx构建时要传递的参数
      * @param string $SecurityGroupId 客户端集群所属的安全组
@@ -118,10 +119,6 @@ class CreateFileSystemRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
-        }
-
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
         }
@@ -140,6 +137,10 @@ class CreateFileSystemRequest extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
 
         if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {

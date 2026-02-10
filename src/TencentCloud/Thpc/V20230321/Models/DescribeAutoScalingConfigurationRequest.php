@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAutoScalingConfiguration请求参数结构体
  *
- * @method string getClusterId() 获取集群ID。	
- * @method void setClusterId(string $ClusterId) 设置集群ID。	
+ * @method string getClusterId() 获取<p>集群ID。</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID。</p>
+ * @method string getQueueName() 获取<p>队列名称</p>
+ * @method void setQueueName(string $QueueName) 设置<p>队列名称</p>
  */
 class DescribeAutoScalingConfigurationRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID。	
+     * @var string <p>集群ID。</p>
      */
     public $ClusterId;
 
     /**
-     * @param string $ClusterId 集群ID。	
+     * @var string <p>队列名称</p>
+     */
+    public $QueueName;
+
+    /**
+     * @param string $ClusterId <p>集群ID。</p>
+     * @param string $QueueName <p>队列名称</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeAutoScalingConfigurationRequest extends AbstractModel
         }
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("QueueName",$param) and $param["QueueName"] !== null) {
+            $this->QueueName = $param["QueueName"];
         }
     }
 }

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method ProcessImageAsyncOutputFileInfo getFileInfo() 获取图片异步处理任务的输出文件信息。
  * @method void setFileInfo(ProcessImageAsyncOutputFileInfo $FileInfo) 设置图片异步处理任务的输出文件信息。
+ * @method string getOutputText() 获取图片理解结果。
+ * @method void setOutputText(string $OutputText) 设置图片理解结果。
  */
 class ProcessImageAsyncOutput extends AbstractModel
 {
@@ -31,7 +33,13 @@ class ProcessImageAsyncOutput extends AbstractModel
     public $FileInfo;
 
     /**
+     * @var string 图片理解结果。
+     */
+    public $OutputText;
+
+    /**
      * @param ProcessImageAsyncOutputFileInfo $FileInfo 图片异步处理任务的输出文件信息。
+     * @param string $OutputText 图片理解结果。
      */
     function __construct()
     {
@@ -49,6 +57,10 @@ class ProcessImageAsyncOutput extends AbstractModel
         if (array_key_exists("FileInfo",$param) and $param["FileInfo"] !== null) {
             $this->FileInfo = new ProcessImageAsyncOutputFileInfo();
             $this->FileInfo->deserialize($param["FileInfo"]);
+        }
+
+        if (array_key_exists("OutputText",$param) and $param["OutputText"] !== null) {
+            $this->OutputText = $param["OutputText"];
         }
     }
 }

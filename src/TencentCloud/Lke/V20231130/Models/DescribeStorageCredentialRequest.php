@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBotBizId() 获取应用ID，参数非必填不代表不需要填写，下面不同的参数组合会获取到不同的权限，具体请参考 https://cloud.tencent.com/document/product/1759/116238
  * @method void setBotBizId(string $BotBizId) 设置应用ID，参数非必填不代表不需要填写，下面不同的参数组合会获取到不同的权限，具体请参考 https://cloud.tencent.com/document/product/1759/116238
- * @method string getFileType() 获取文件类型,正常的文件名类型后缀，例如 xlsx、pdf、 docx、png 等
- * @method void setFileType(string $FileType) 设置文件类型,正常的文件名类型后缀，例如 xlsx、pdf、 docx、png 等
+ * @method string getFileType() 获取文件类型,正常的文件名类型后缀，支持 docx、doc、pdf、txt、md、wps、pages、html、mhtml、epub、xml、json、log、xlsx、xls、csv、tsv、numbers、pptx、ppt、ppsx、ppsm、key、png、jpg、jpeg、gif、bmp、tiff、webp、heif、heic、jp2、eps、icns、im、pcx、ppm、xbm、xmind
+
+ * @method void setFileType(string $FileType) 设置文件类型,正常的文件名类型后缀，支持 docx、doc、pdf、txt、md、wps、pages、html、mhtml、epub、xml、json、log、xlsx、xls、csv、tsv、numbers、pptx、ppt、ppsx、ppsm、key、png、jpg、jpeg、gif、bmp、tiff、webp、heif、heic、jp2、eps、icns、im、pcx、ppm、xbm、xmind
+
  * @method boolean getIsPublic() 获取IsPublic用于上传文件或图片时选择场景，当上传对话端图片时IsPublic为true，上传文件（包括文档库文件/图片等和对话端文件）时IsPublic为false
 
  * @method void setIsPublic(boolean $IsPublic) 设置IsPublic用于上传文件或图片时选择场景，当上传对话端图片时IsPublic为true，上传文件（包括文档库文件/图片等和对话端文件）时IsPublic为false
@@ -39,7 +41,8 @@ class DescribeStorageCredentialRequest extends AbstractModel
     public $BotBizId;
 
     /**
-     * @var string 文件类型,正常的文件名类型后缀，例如 xlsx、pdf、 docx、png 等
+     * @var string 文件类型,正常的文件名类型后缀，支持 docx、doc、pdf、txt、md、wps、pages、html、mhtml、epub、xml、json、log、xlsx、xls、csv、tsv、numbers、pptx、ppt、ppsx、ppsm、key、png、jpg、jpeg、gif、bmp、tiff、webp、heif、heic、jp2、eps、icns、im、pcx、ppm、xbm、xmind
+
      */
     public $FileType;
 
@@ -56,7 +59,8 @@ class DescribeStorageCredentialRequest extends AbstractModel
 
     /**
      * @param string $BotBizId 应用ID，参数非必填不代表不需要填写，下面不同的参数组合会获取到不同的权限，具体请参考 https://cloud.tencent.com/document/product/1759/116238
-     * @param string $FileType 文件类型,正常的文件名类型后缀，例如 xlsx、pdf、 docx、png 等
+     * @param string $FileType 文件类型,正常的文件名类型后缀，支持 docx、doc、pdf、txt、md、wps、pages、html、mhtml、epub、xml、json、log、xlsx、xls、csv、tsv、numbers、pptx、ppt、ppsx、ppsm、key、png、jpg、jpeg、gif、bmp、tiff、webp、heif、heic、jp2、eps、icns、im、pcx、ppm、xbm、xmind
+
      * @param boolean $IsPublic IsPublic用于上传文件或图片时选择场景，当上传对话端图片时IsPublic为true，上传文件（包括文档库文件/图片等和对话端文件）时IsPublic为false
 
      * @param string $TypeKey 存储类型: offline:离线文件，realtime:实时文件；为空默认为offline

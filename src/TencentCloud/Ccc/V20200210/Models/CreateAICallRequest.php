@@ -436,6 +436,14 @@ HoaiMy
  * @method void setMaxCallDurationMs(integer $MaxCallDurationMs) 设置最大通话时长， 默认不限制。单位毫秒(ms)
  * @method integer getMaxRingTimeoutSecond() 获取最大振铃时长，达到时长阈值自动挂断。 **仅自携号码支持当前参数**
  * @method void setMaxRingTimeoutSecond(integer $MaxRingTimeoutSecond) 设置最大振铃时长，达到时长阈值自动挂断。 **仅自携号码支持当前参数**
+ * @method string getAmbientSoundType() 获取环境音场景，没有的话不填。
+coffee_shops：咖啡店氛围，背景中有人聊天
+busy_office：客服中心
+ * @method void setAmbientSoundType(string $AmbientSoundType) 设置环境音场景，没有的话不填。
+coffee_shops：咖啡店氛围，背景中有人聊天
+busy_office：客服中心
+ * @method float getAmbientSoundVolume() 获取环境音音量。如果AmbientSoundType 为空，该字段不填。取值的范围是 [0,2]。值越低，环境音越小；值越高，环境音越响亮。如果未设置，则使用默认值 1。
+ * @method void setAmbientSoundVolume(float $AmbientSoundVolume) 设置环境音音量。如果AmbientSoundType 为空，该字段不填。取值的范围是 [0,2]。值越低，环境音越小；值越高，环境音越响亮。如果未设置，则使用默认值 1。
  */
 class CreateAICallRequest extends AbstractModel
 {
@@ -801,6 +809,18 @@ HoaiMy
     public $MaxRingTimeoutSecond;
 
     /**
+     * @var string 环境音场景，没有的话不填。
+coffee_shops：咖啡店氛围，背景中有人聊天
+busy_office：客服中心
+     */
+    public $AmbientSoundType;
+
+    /**
+     * @var float 环境音音量。如果AmbientSoundType 为空，该字段不填。取值的范围是 [0,2]。值越低，环境音越小；值越高，环境音越响亮。如果未设置，则使用默认值 1。
+     */
+    public $AmbientSoundVolume;
+
+    /**
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param string $Callee 被叫号码
      * @param string $LLMType 模型接口协议类型，目前兼容四种协议类型：
@@ -1009,6 +1029,10 @@ HoaiMy
      * @param string $LLMExtraBody 大模型拓展参数， 格式为json字符串
      * @param integer $MaxCallDurationMs 最大通话时长， 默认不限制。单位毫秒(ms)
      * @param integer $MaxRingTimeoutSecond 最大振铃时长，达到时长阈值自动挂断。 **仅自携号码支持当前参数**
+     * @param string $AmbientSoundType 环境音场景，没有的话不填。
+coffee_shops：咖啡店氛围，背景中有人聊天
+busy_office：客服中心
+     * @param float $AmbientSoundVolume 环境音音量。如果AmbientSoundType 为空，该字段不填。取值的范围是 [0,2]。值越低，环境音越小；值越高，环境音越响亮。如果未设置，则使用默认值 1。
      */
     function __construct()
     {
@@ -1194,6 +1218,14 @@ HoaiMy
 
         if (array_key_exists("MaxRingTimeoutSecond",$param) and $param["MaxRingTimeoutSecond"] !== null) {
             $this->MaxRingTimeoutSecond = $param["MaxRingTimeoutSecond"];
+        }
+
+        if (array_key_exists("AmbientSoundType",$param) and $param["AmbientSoundType"] !== null) {
+            $this->AmbientSoundType = $param["AmbientSoundType"];
+        }
+
+        if (array_key_exists("AmbientSoundVolume",$param) and $param["AmbientSoundVolume"] !== null) {
+            $this->AmbientSoundVolume = $param["AmbientSoundVolume"];
         }
     }
 }

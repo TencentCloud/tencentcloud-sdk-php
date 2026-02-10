@@ -51,6 +51,18 @@ use TencentCloud\Common\AbstractModel;
 <li>JITTranscoding: 即时转码</li>
 <li>VideoSnapshot: 视频截图</li>
 <li>JITEncryption: 即时加密</li>
+<li>MediaEnhancement: 音视频增强</li>
+<li>ImageCompression: 图片压缩</li>
+<li>ImageEnhancement: 图片增强</li>
+<li>ImageSuperResolution: 图片超分</li>
+<li>ImageAdvanceCompression: 图片高级压缩</li>
+<li>ImageUnderstanding: 图片理解</li>
+<li>AddTraceWatermark: 添加溯源水印</li>
+<li>AddBlindWatermark: 添加盲水印</li>
+<li>AddNagraWatermark: 添加NAGRA数字水印</li>
+<li>ExtractTraceWatermark: 提取溯源水印</li>
+<li>ExtractBlindWatermark: 提取盲水印</li>
+<li>ExtractNagraWatermark: 提取NAGRA数字水印</li>
 
  * @method void setType(string $Type) 设置查询视频处理任务类型，目前支持的任务类型包括：
 <li> Transcoding: 普通转码</li>
@@ -77,6 +89,18 @@ use TencentCloud\Common\AbstractModel;
 <li>JITTranscoding: 即时转码</li>
 <li>VideoSnapshot: 视频截图</li>
 <li>JITEncryption: 即时加密</li>
+<li>MediaEnhancement: 音视频增强</li>
+<li>ImageCompression: 图片压缩</li>
+<li>ImageEnhancement: 图片增强</li>
+<li>ImageSuperResolution: 图片超分</li>
+<li>ImageAdvanceCompression: 图片高级压缩</li>
+<li>ImageUnderstanding: 图片理解</li>
+<li>AddTraceWatermark: 添加溯源水印</li>
+<li>AddBlindWatermark: 添加盲水印</li>
+<li>AddNagraWatermark: 添加NAGRA数字水印</li>
+<li>ExtractTraceWatermark: 提取溯源水印</li>
+<li>ExtractBlindWatermark: 提取盲水印</li>
+<li>ExtractNagraWatermark: 提取NAGRA数字水印</li>
  */
 class DescribeMediaProcessUsageDataRequest extends AbstractModel
 {
@@ -121,6 +145,18 @@ class DescribeMediaProcessUsageDataRequest extends AbstractModel
 <li>JITTranscoding: 即时转码</li>
 <li>VideoSnapshot: 视频截图</li>
 <li>JITEncryption: 即时加密</li>
+<li>MediaEnhancement: 音视频增强</li>
+<li>ImageCompression: 图片压缩</li>
+<li>ImageEnhancement: 图片增强</li>
+<li>ImageSuperResolution: 图片超分</li>
+<li>ImageAdvanceCompression: 图片高级压缩</li>
+<li>ImageUnderstanding: 图片理解</li>
+<li>AddTraceWatermark: 添加溯源水印</li>
+<li>AddBlindWatermark: 添加盲水印</li>
+<li>AddNagraWatermark: 添加NAGRA数字水印</li>
+<li>ExtractTraceWatermark: 提取溯源水印</li>
+<li>ExtractBlindWatermark: 提取盲水印</li>
+<li>ExtractNagraWatermark: 提取NAGRA数字水印</li>
 
      */
     public $Type;
@@ -154,6 +190,18 @@ class DescribeMediaProcessUsageDataRequest extends AbstractModel
 <li>JITTranscoding: 即时转码</li>
 <li>VideoSnapshot: 视频截图</li>
 <li>JITEncryption: 即时加密</li>
+<li>MediaEnhancement: 音视频增强</li>
+<li>ImageCompression: 图片压缩</li>
+<li>ImageEnhancement: 图片增强</li>
+<li>ImageSuperResolution: 图片超分</li>
+<li>ImageAdvanceCompression: 图片高级压缩</li>
+<li>ImageUnderstanding: 图片理解</li>
+<li>AddTraceWatermark: 添加溯源水印</li>
+<li>AddBlindWatermark: 添加盲水印</li>
+<li>AddNagraWatermark: 添加NAGRA数字水印</li>
+<li>ExtractTraceWatermark: 提取溯源水印</li>
+<li>ExtractBlindWatermark: 提取盲水印</li>
+<li>ExtractNagraWatermark: 提取NAGRA数字水印</li>
      */
     function __construct()
     {

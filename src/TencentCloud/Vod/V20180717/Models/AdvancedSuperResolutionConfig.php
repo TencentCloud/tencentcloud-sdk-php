@@ -50,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWidth(integer $Width) 设置目标图片宽度，不能超过4096。
  * @method integer getHeight() 获取目标图片高度，不能超过4096。
  * @method void setHeight(integer $Height) 设置目标图片高度，不能超过4096。
+ * @method integer getLongSide() 获取目标图片长边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+ * @method void setLongSide(integer $LongSide) 设置目标图片长边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+ * @method integer getShortSide() 获取目标图片短边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+ * @method void setShortSide(integer $ShortSide) 设置目标图片短边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
  */
 class AdvancedSuperResolutionConfig extends AbstractModel
 {
@@ -93,6 +101,18 @@ class AdvancedSuperResolutionConfig extends AbstractModel
     public $Height;
 
     /**
+     * @var integer 目标图片长边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+     */
+    public $LongSide;
+
+    /**
+     * @var integer 目标图片短边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+     */
+    public $ShortSide;
+
+    /**
      * @param string $Switch 能力配置开关，可选值：
 <li>ON：开启；</li>
 <li>OFF：关闭。</li>
@@ -108,6 +128,10 @@ class AdvancedSuperResolutionConfig extends AbstractModel
      * @param float $Percent 超分倍率，可以为小数。
      * @param integer $Width 目标图片宽度，不能超过4096。
      * @param integer $Height 目标图片高度，不能超过4096。
+     * @param integer $LongSide 目标图片长边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+     * @param integer $ShortSide 目标图片短边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
      */
     function __construct()
     {
@@ -144,6 +168,14 @@ class AdvancedSuperResolutionConfig extends AbstractModel
 
         if (array_key_exists("Height",$param) and $param["Height"] !== null) {
             $this->Height = $param["Height"];
+        }
+
+        if (array_key_exists("LongSide",$param) and $param["LongSide"] !== null) {
+            $this->LongSide = $param["LongSide"];
+        }
+
+        if (array_key_exists("ShortSide",$param) and $param["ShortSide"] !== null) {
+            $this->ShortSide = $param["ShortSide"];
         }
     }
 }

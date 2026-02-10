@@ -78,10 +78,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExclusiveType(string $ExclusiveType) 设置独享实例规格。取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
  * @method boolean getAutoScaling() 获取标准型NAT网关自动扩容
  * @method void setAutoScaling(boolean $AutoScaling) 设置标准型NAT网关自动扩容
- * @method boolean getICMPProxy() 获取是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，当前适用于标准型NAT网关
- * @method void setICMPProxy(boolean $ICMPProxy) 设置是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，当前适用于标准型NAT网关
- * @method boolean getPublicAddressAffinity() 获取true代表同一个私网IP访问同一个公网目的IP时，固定使用同一个NAT网关上的弹性公网IP；false代表这种情况下使用的弹性公网IP不固定。默认为true。
- * @method void setPublicAddressAffinity(boolean $PublicAddressAffinity) 设置true代表同一个私网IP访问同一个公网目的IP时，固定使用同一个NAT网关上的弹性公网IP；false代表这种情况下使用的弹性公网IP不固定。默认为true。
+ * @method boolean getICMPProxy() 获取是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，默认为true，应答请求报文；false代表不应答。
+ * @method void setICMPProxy(boolean $ICMPProxy) 设置是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，默认为true，应答请求报文；false代表不应答。
+ * @method boolean getPublicAddressAffinity() 获取同一个内网地址通过NAT网关访问同一个目的IP时，是否使用固定的弹性公网IP。默认为true，使用固定IP；false代表使用随机IP。
+ * @method void setPublicAddressAffinity(boolean $PublicAddressAffinity) 设置同一个内网地址通过NAT网关访问同一个目的IP时，是否使用固定的弹性公网IP。默认为true，使用固定IP；false代表使用随机IP。
  */
 class NatGateway extends AbstractModel
 {
@@ -223,12 +223,12 @@ class NatGateway extends AbstractModel
     public $AutoScaling;
 
     /**
-     * @var boolean 是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，当前适用于标准型NAT网关
+     * @var boolean 是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，默认为true，应答请求报文；false代表不应答。
      */
     public $ICMPProxy;
 
     /**
-     * @var boolean true代表同一个私网IP访问同一个公网目的IP时，固定使用同一个NAT网关上的弹性公网IP；false代表这种情况下使用的弹性公网IP不固定。默认为true。
+     * @var boolean 同一个内网地址通过NAT网关访问同一个目的IP时，是否使用固定的弹性公网IP。默认为true，使用固定IP；false代表使用随机IP。
      */
     public $PublicAddressAffinity;
 
@@ -262,8 +262,8 @@ class NatGateway extends AbstractModel
      * @param ConnectionStateTimeouts $ConnectionStateTimeouts NAT实例连接超时时间
      * @param string $ExclusiveType 独享实例规格。取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
      * @param boolean $AutoScaling 标准型NAT网关自动扩容
-     * @param boolean $ICMPProxy 是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，当前适用于标准型NAT网关
-     * @param boolean $PublicAddressAffinity true代表同一个私网IP访问同一个公网目的IP时，固定使用同一个NAT网关上的弹性公网IP；false代表这种情况下使用的弹性公网IP不固定。默认为true。
+     * @param boolean $ICMPProxy 是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，默认为true，应答请求报文；false代表不应答。
+     * @param boolean $PublicAddressAffinity 同一个内网地址通过NAT网关访问同一个目的IP时，是否使用固定的弹性公网IP。默认为true，使用固定IP；false代表使用随机IP。
      */
     function __construct()
     {

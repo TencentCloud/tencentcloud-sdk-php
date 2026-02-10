@@ -264,6 +264,10 @@ NotExists
  * @method void setAIAgentId(integer $AIAgentId) 设置如果是智能体相关通话，这里是智能体 ID
  * @method string getAIAgentName() 获取如果是智能体相关通话，这里是智能体名称
  * @method void setAIAgentName(string $AIAgentName) 设置如果是智能体相关通话，这里是智能体名称
+ * @method integer getSysHangupReason() 获取接通后系统挂断原因，枚举类似
+ * @method void setSysHangupReason(integer $SysHangupReason) 设置接通后系统挂断原因，枚举类似
+ * @method string getSysHangupReasonString() 获取接通后系统挂断原因，文字描述信息
+ * @method void setSysHangupReasonString(string $SysHangupReasonString) 设置接通后系统挂断原因，文字描述信息
  */
 class TelCdrInfo extends AbstractModel
 {
@@ -551,6 +555,16 @@ NotExists
     public $AIAgentName;
 
     /**
+     * @var integer 接通后系统挂断原因，枚举类似
+     */
+    public $SysHangupReason;
+
+    /**
+     * @var string 接通后系统挂断原因，文字描述信息
+     */
+    public $SysHangupReasonString;
+
+    /**
      * @param string $Caller 主叫号码
      * @param string $Callee 被叫号码
      * @param integer $Time 呼叫发起时间戳，Unix 时间戳
@@ -673,6 +687,8 @@ NotExists
      * @param array $VoicemailAsrURL 通话中语音留言ASR文本信息地址
      * @param integer $AIAgentId 如果是智能体相关通话，这里是智能体 ID
      * @param string $AIAgentName 如果是智能体相关通话，这里是智能体名称
+     * @param integer $SysHangupReason 接通后系统挂断原因，枚举类似
+     * @param string $SysHangupReasonString 接通后系统挂断原因，文字描述信息
      */
     function __construct()
     {
@@ -861,6 +877,14 @@ NotExists
 
         if (array_key_exists("AIAgentName",$param) and $param["AIAgentName"] !== null) {
             $this->AIAgentName = $param["AIAgentName"];
+        }
+
+        if (array_key_exists("SysHangupReason",$param) and $param["SysHangupReason"] !== null) {
+            $this->SysHangupReason = $param["SysHangupReason"];
+        }
+
+        if (array_key_exists("SysHangupReasonString",$param) and $param["SysHangupReasonString"] !== null) {
+            $this->SysHangupReasonString = $param["SysHangupReasonString"];
         }
     }
 }

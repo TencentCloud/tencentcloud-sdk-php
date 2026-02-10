@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNatureLanguageToSqlModelConfig(NL2SQLModelConfig $NatureLanguageToSqlModelConfig) 设置NL2SQL模型配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getGraphRetrieval() 获取是否开启图谱检索
+ * @method void setGraphRetrieval(boolean $GraphRetrieval) 设置是否开启图谱检索
  */
 class SearchStrategy extends AbstractModel
 {
@@ -84,6 +86,11 @@ class SearchStrategy extends AbstractModel
     public $NatureLanguageToSqlModelConfig;
 
     /**
+     * @var boolean 是否开启图谱检索
+     */
+    public $GraphRetrieval;
+
+    /**
      * @param integer $StrategyType 检索策略类型 0:混合检索，1：语义检索
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $TableEnhancement Excel检索增强开关, false关闭，true打开
@@ -96,6 +103,7 @@ class SearchStrategy extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NL2SQLModelConfig $NatureLanguageToSqlModelConfig NL2SQL模型配置
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $GraphRetrieval 是否开启图谱检索
      */
     function __construct()
     {
@@ -133,6 +141,10 @@ class SearchStrategy extends AbstractModel
         if (array_key_exists("NatureLanguageToSqlModelConfig",$param) and $param["NatureLanguageToSqlModelConfig"] !== null) {
             $this->NatureLanguageToSqlModelConfig = new NL2SQLModelConfig();
             $this->NatureLanguageToSqlModelConfig->deserialize($param["NatureLanguageToSqlModelConfig"]);
+        }
+
+        if (array_key_exists("GraphRetrieval",$param) and $param["GraphRetrieval"] !== null) {
+            $this->GraphRetrieval = $param["GraphRetrieval"];
         }
     }
 }

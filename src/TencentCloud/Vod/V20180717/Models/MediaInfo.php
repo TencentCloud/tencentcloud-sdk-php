@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method MPSAiMediaInfo getMPSAiMediaInfo() 获取MPS智能媒资信息
  * @method void setMPSAiMediaInfo(MPSAiMediaInfo $MPSAiMediaInfo) 设置MPS智能媒资信息
+ * @method ImageUnderstandingInfo getImageUnderstandingInfo() 获取图片理解信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setImageUnderstandingInfo(ImageUnderstandingInfo $ImageUnderstandingInfo) 设置图片理解信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaInfo extends AbstractModel
 {
@@ -158,6 +162,12 @@ class MediaInfo extends AbstractModel
     public $MPSAiMediaInfo;
 
     /**
+     * @var ImageUnderstandingInfo 图片理解信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ImageUnderstandingInfo;
+
+    /**
      * @param MediaBasicInfo $BasicInfo 基础信息。包括视频名称、分类、播放地址、封面图片等。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaMetaData $MetaData 元信息。包括大小、时长、视频流信息、音频流信息等。
@@ -184,6 +194,8 @@ class MediaInfo extends AbstractModel
      * @param FileReviewInfo $ReviewInfo 审核信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MPSAiMediaInfo $MPSAiMediaInfo MPS智能媒资信息
+     * @param ImageUnderstandingInfo $ImageUnderstandingInfo 图片理解信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -265,6 +277,11 @@ class MediaInfo extends AbstractModel
         if (array_key_exists("MPSAiMediaInfo",$param) and $param["MPSAiMediaInfo"] !== null) {
             $this->MPSAiMediaInfo = new MPSAiMediaInfo();
             $this->MPSAiMediaInfo->deserialize($param["MPSAiMediaInfo"]);
+        }
+
+        if (array_key_exists("ImageUnderstandingInfo",$param) and $param["ImageUnderstandingInfo"] !== null) {
+            $this->ImageUnderstandingInfo = new ImageUnderstandingInfo();
+            $this->ImageUnderstandingInfo->deserialize($param["ImageUnderstandingInfo"]);
         }
     }
 }

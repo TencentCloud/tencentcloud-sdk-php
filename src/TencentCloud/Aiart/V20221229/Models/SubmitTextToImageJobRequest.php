@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SubmitTextToImageJob请求参数结构体
  *
- * @method string getPrompt() 获取<p>文本描述。<br>算法将根据输入的文本智能生成与之相关的图像。<br>不能为空，推荐使用中文。最多可传1024个 utf-8 字符。</p>
- * @method void setPrompt(string $Prompt) 设置<p>文本描述。<br>算法将根据输入的文本智能生成与之相关的图像。<br>不能为空，推荐使用中文。最多可传1024个 utf-8 字符。</p>
- * @method array getImages() 获取<p>垫图url列表，大小不超过10MB，支持 jpg jpeg png webp格式，最多3张图</p>
- * @method void setImages(array $Images) 设置<p>垫图url列表，大小不超过10MB，支持 jpg jpeg png webp格式，最多3张图</p>
+ * @method string getPrompt() 获取<p>文本描述。<br>算法将根据输入的文本智能生成与之相关的图像。<br>不能为空，推荐使用中文。最多可传8192个 utf-8 字符。</p>
+ * @method void setPrompt(string $Prompt) 设置<p>文本描述。<br>算法将根据输入的文本智能生成与之相关的图像。<br>不能为空，推荐使用中文。最多可传8192个 utf-8 字符。</p>
+ * @method array getImages() 获取<p>垫图url列表，base64后大小不超过10MB，支持 jpg jpeg png webp格式，最多3张图</p>
+ * @method void setImages(array $Images) 设置<p>垫图url列表，base64后大小不超过10MB，支持 jpg jpeg png webp格式，最多3张图</p>
  * @method string getResolution() 获取<p>生成图分辨率，默认1024:1024：</p><ul><li>宽高维度均在 [512, 2048] 像素范围内;</li><li>宽高乘积（即图像面积）不超过 1024×1024 像素;</li></ul>
  * @method void setResolution(string $Resolution) 设置<p>生成图分辨率，默认1024:1024：</p><ul><li>宽高维度均在 [512, 2048] 像素范围内;</li><li>宽高乘积（即图像面积）不超过 1024×1024 像素;</li></ul>
  * @method integer getSeed() 获取<p>随机种子，默认随机。<br>不传：随机种子生成。<br>正数：固定种子生成。<br>扩写开启时固定种子不生效，将保持随机。</p>
@@ -38,12 +38,12 @@ use TencentCloud\Common\AbstractModel;
 class SubmitTextToImageJobRequest extends AbstractModel
 {
     /**
-     * @var string <p>文本描述。<br>算法将根据输入的文本智能生成与之相关的图像。<br>不能为空，推荐使用中文。最多可传1024个 utf-8 字符。</p>
+     * @var string <p>文本描述。<br>算法将根据输入的文本智能生成与之相关的图像。<br>不能为空，推荐使用中文。最多可传8192个 utf-8 字符。</p>
      */
     public $Prompt;
 
     /**
-     * @var array <p>垫图url列表，大小不超过10MB，支持 jpg jpeg png webp格式，最多3张图</p>
+     * @var array <p>垫图url列表，base64后大小不超过10MB，支持 jpg jpeg png webp格式，最多3张图</p>
      */
     public $Images;
 
@@ -73,8 +73,8 @@ class SubmitTextToImageJobRequest extends AbstractModel
     public $Revise;
 
     /**
-     * @param string $Prompt <p>文本描述。<br>算法将根据输入的文本智能生成与之相关的图像。<br>不能为空，推荐使用中文。最多可传1024个 utf-8 字符。</p>
-     * @param array $Images <p>垫图url列表，大小不超过10MB，支持 jpg jpeg png webp格式，最多3张图</p>
+     * @param string $Prompt <p>文本描述。<br>算法将根据输入的文本智能生成与之相关的图像。<br>不能为空，推荐使用中文。最多可传8192个 utf-8 字符。</p>
+     * @param array $Images <p>垫图url列表，base64后大小不超过10MB，支持 jpg jpeg png webp格式，最多3张图</p>
      * @param string $Resolution <p>生成图分辨率，默认1024:1024：</p><ul><li>宽高维度均在 [512, 2048] 像素范围内;</li><li>宽高乘积（即图像面积）不超过 1024×1024 像素;</li></ul>
      * @param integer $Seed <p>随机种子，默认随机。<br>不传：随机种子生成。<br>正数：固定种子生成。<br>扩写开启时固定种子不生效，将保持随机。</p>
      * @param integer $LogoAdd <p>为生成结果图添加显式水印标识的开关，默认为1。<br>1：添加。<br>0：不添加。<br>其他数值：默认按1处理。<br>建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。</p>

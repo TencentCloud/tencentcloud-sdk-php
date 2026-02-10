@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeInstanceId(string $NodeInstanceId) 设置节点Instance Id
  * @method string getInitialPassword() 获取初始密码
  * @method void setInitialPassword(string $InitialPassword) 设置初始密码
+ * @method string getClusterId() 获取所属集群id
+ * @method void setClusterId(string $ClusterId) 设置所属集群id
  */
 class ClientClusterManagerNodeInfo extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ClientClusterManagerNodeInfo extends AbstractModel
     public $InitialPassword;
 
     /**
+     * @var string 所属集群id
+     */
+    public $ClusterId;
+
+    /**
      * @param string $NodeIp 客户端节点IP
      * @param string $NodeInstanceId 节点Instance Id
      * @param string $InitialPassword 初始密码
+     * @param string $ClusterId 所属集群id
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ClientClusterManagerNodeInfo extends AbstractModel
 
         if (array_key_exists("InitialPassword",$param) and $param["InitialPassword"] !== null) {
             $this->InitialPassword = $param["InitialPassword"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

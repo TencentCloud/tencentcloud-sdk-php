@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
 
  * @method string getWidgetRunId() 获取Widget实例ID
  * @method void setWidgetRunId(string $WidgetRunId) 设置Widget实例ID
+ * @method string getView() 获取Widget显示数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setView(string $View) 设置Widget显示数据
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getState() 获取Widget状态数据
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setState(string $State) 设置Widget状态数据
@@ -57,6 +61,12 @@ class Widget extends AbstractModel
     public $WidgetRunId;
 
     /**
+     * @var string Widget显示数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $View;
+
+    /**
      * @var string Widget状态数据
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -84,6 +94,8 @@ class Widget extends AbstractModel
      * @param string $WidgetId Widget配置ID
 
      * @param string $WidgetRunId Widget实例ID
+     * @param string $View Widget显示数据
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $State Widget状态数据
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Position Widget位置
@@ -112,6 +124,10 @@ class Widget extends AbstractModel
 
         if (array_key_exists("WidgetRunId",$param) and $param["WidgetRunId"] !== null) {
             $this->WidgetRunId = $param["WidgetRunId"];
+        }
+
+        if (array_key_exists("View",$param) and $param["View"] !== null) {
+            $this->View = $param["View"];
         }
 
         if (array_key_exists("State",$param) and $param["State"] !== null) {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteApp请求参数结构体
  *
- * @method string getAppBizId() 获取应用ID
- * @method void setAppBizId(string $AppBizId) 设置应用ID
- * @method string getAppType() 获取应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
- * @method void setAppType(string $AppType) 设置应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
+ * @method string getAppBizId() 获取应用ID，获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
+ * @method void setAppBizId(string $AppBizId) 设置应用ID，获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
+ * @method string getAppType() 获取应用类型；`"knowledge_qa"` 知识问答应用（包含标准模式 单工作流 Multi-Agent 等模式）
+ * @method void setAppType(string $AppType) 设置应用类型；`"knowledge_qa"` 知识问答应用（包含标准模式 单工作流 Multi-Agent 等模式）
  */
 class DeleteAppRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string 应用ID，获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
      */
     public $AppBizId;
 
     /**
-     * @var string 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
+     * @var string 应用类型；`"knowledge_qa"` 知识问答应用（包含标准模式 单工作流 Multi-Agent 等模式）
      */
     public $AppType;
 
     /**
-     * @param string $AppBizId 应用ID
-     * @param string $AppType 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
+     * @param string $AppBizId 应用ID，获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
+     * @param string $AppType 应用类型；`"knowledge_qa"` 知识问答应用（包含标准模式 单工作流 Multi-Agent 等模式）
      */
     function __construct()
     {

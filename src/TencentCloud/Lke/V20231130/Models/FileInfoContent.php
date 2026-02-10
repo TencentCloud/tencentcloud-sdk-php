@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 文件信息内容
  *
  * @method integer getDocBizId() 获取实时文档解析接口返回的 DocBizId
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDocBizId(integer $DocBizId) 设置实时文档解析接口返回的 DocBizId
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileName() 获取文件名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileName(string $FileName) 设置文件名称
@@ -38,11 +40,21 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileUrl(string $FileUrl) 设置文件 URL
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDocId() 获取实时文档解析接口返回的 doc_id。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDocId(integer $DocId) 设置实时文档解析接口返回的 doc_id。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCreateTime() 获取文件创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(integer $CreateTime) 设置文件创建时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FileInfoContent extends AbstractModel
 {
     /**
      * @var integer 实时文档解析接口返回的 DocBizId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $DocBizId;
 
@@ -71,7 +83,20 @@ class FileInfoContent extends AbstractModel
     public $FileUrl;
 
     /**
+     * @var integer 实时文档解析接口返回的 doc_id。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DocId;
+
+    /**
+     * @var integer 文件创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
      * @param integer $DocBizId 实时文档解析接口返回的 DocBizId
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileName 文件名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileType 文件类型
@@ -79,6 +104,10 @@ class FileInfoContent extends AbstractModel
      * @param integer $FileSize 文件大小
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileUrl 文件 URL
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DocId 实时文档解析接口返回的 doc_id。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CreateTime 文件创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -112,6 +141,14 @@ class FileInfoContent extends AbstractModel
 
         if (array_key_exists("FileUrl",$param) and $param["FileUrl"] !== null) {
             $this->FileUrl = $param["FileUrl"];
+        }
+
+        if (array_key_exists("DocId",$param) and $param["DocId"] !== null) {
+            $this->DocId = $param["DocId"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

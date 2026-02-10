@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTurnOffMic(integer $TurnOffMic) 设置<p>释放音视频权限后是否自动取消连麦。可以有以下取值：<br>0 自动取消连麦（默认值）<br>1 保持连麦状态</p>
  * @method integer getAudioQuality() 获取<p>声音音质。可以有以下取值：<br>0：流畅模式（默认值），占用更小的带宽、拥有更好的降噪效果，适用于1对1、小班教学、多人音视频会议等场景。<br>1：高音质模式，适合需要高保真传输音乐的场景，但降噪效果会被削弱，适用于音乐教学场景。</p>
  * @method void setAudioQuality(integer $AudioQuality) 设置<p>声音音质。可以有以下取值：<br>0：流畅模式（默认值），占用更小的带宽、拥有更好的降噪效果，适用于1对1、小班教学、多人音视频会议等场景。<br>1：高音质模式，适合需要高保真传输音乐的场景，但降噪效果会被削弱，适用于音乐教学场景。</p>
- * @method integer getDisableRecord() 获取<p>录制方式，可以有以下取值：0 开启自动录制（默认值）1  禁止录制2 开启手动录制 注： - 如果该配置取值为0，录制将从上课后开始，课堂结束后停止。 - 如果该配置取值为2，需通过startRecord、stopRecord接口控制录制的开始和结束。</p>
- * @method void setDisableRecord(integer $DisableRecord) 设置<p>录制方式，可以有以下取值：0 开启自动录制（默认值）1  禁止录制2 开启手动录制 注： - 如果该配置取值为0，录制将从上课后开始，课堂结束后停止。 - 如果该配置取值为2，需通过startRecord、stopRecord接口控制录制的开始和结束。</p>
+ * @method integer getDisableRecord() 获取<p>录制方式。</p><p>枚举值：</p><ul><li>0： 开启自动录制（默认）</li><li>1： 禁止录制</li><li>2： 开启手动录制。（仅支持页面录制，需通过startRecord、stopRecord接口控制录制的开始和结束。）</li><li>3： 信令录制。</li></ul>
+ * @method void setDisableRecord(integer $DisableRecord) 设置<p>录制方式。</p><p>枚举值：</p><ul><li>0： 开启自动录制（默认）</li><li>1： 禁止录制</li><li>2： 开启手动录制。（仅支持页面录制，需通过startRecord、stopRecord接口控制录制的开始和结束。）</li><li>3： 信令录制。</li></ul>
  * @method array getAssistants() 获取<p>助教Id列表。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有助教权限。</p>
  * @method void setAssistants(array $Assistants) 设置<p>助教Id列表。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有助教权限。</p>
  * @method integer getRTCAudienceNumber() 获取<p>rtc人数。</p>
@@ -147,7 +147,7 @@ class CreateRoomRequest extends AbstractModel
     public $AudioQuality;
 
     /**
-     * @var integer <p>录制方式，可以有以下取值：0 开启自动录制（默认值）1  禁止录制2 开启手动录制 注： - 如果该配置取值为0，录制将从上课后开始，课堂结束后停止。 - 如果该配置取值为2，需通过startRecord、stopRecord接口控制录制的开始和结束。</p>
+     * @var integer <p>录制方式。</p><p>枚举值：</p><ul><li>0： 开启自动录制（默认）</li><li>1： 禁止录制</li><li>2： 开启手动录制。（仅支持页面录制，需通过startRecord、stopRecord接口控制录制的开始和结束。）</li><li>3： 信令录制。</li></ul>
      */
     public $DisableRecord;
 
@@ -275,7 +275,7 @@ class CreateRoomRequest extends AbstractModel
      * @param integer $AutoMic <p>进入课堂时是否自动连麦。可以有以下取值：<br>0 不自动连麦（需要手动申请上麦，默认值）<br>1 自动连麦</p>
      * @param integer $TurnOffMic <p>释放音视频权限后是否自动取消连麦。可以有以下取值：<br>0 自动取消连麦（默认值）<br>1 保持连麦状态</p>
      * @param integer $AudioQuality <p>声音音质。可以有以下取值：<br>0：流畅模式（默认值），占用更小的带宽、拥有更好的降噪效果，适用于1对1、小班教学、多人音视频会议等场景。<br>1：高音质模式，适合需要高保真传输音乐的场景，但降噪效果会被削弱，适用于音乐教学场景。</p>
-     * @param integer $DisableRecord <p>录制方式，可以有以下取值：0 开启自动录制（默认值）1  禁止录制2 开启手动录制 注： - 如果该配置取值为0，录制将从上课后开始，课堂结束后停止。 - 如果该配置取值为2，需通过startRecord、stopRecord接口控制录制的开始和结束。</p>
+     * @param integer $DisableRecord <p>录制方式。</p><p>枚举值：</p><ul><li>0： 开启自动录制（默认）</li><li>1： 禁止录制</li><li>2： 开启手动录制。（仅支持页面录制，需通过startRecord、stopRecord接口控制录制的开始和结束。）</li><li>3： 信令录制。</li></ul>
      * @param array $Assistants <p>助教Id列表。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有助教权限。</p>
      * @param integer $RTCAudienceNumber <p>rtc人数。</p>
      * @param integer $AudienceType <p>观看类型。互动观看 （默认）</p>

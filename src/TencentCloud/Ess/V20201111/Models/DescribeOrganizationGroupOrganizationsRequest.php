@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
  * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息,userId必填。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
- * @method integer getLimit() 获取指定分页每页返回的数据条数，单页最大1000
- * @method void setLimit(integer $Limit) 设置指定分页每页返回的数据条数，单页最大1000
- * @method integer getOffset() 获取指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0
- * @method void setOffset(integer $Offset) 设置指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0
+ * @method integer getLimit() 获取指定分页每页返回的数据条数，单页最大支持 200。
+ * @method void setLimit(integer $Limit) 设置指定分页每页返回的数据条数，单页最大支持 200。
+ * @method integer getOffset() 获取偏移量，默认为0，最大20000。关于<code>Offset</code>的更进一步介绍请参考 API <a href="https://cloud.tencent.com/document/api/213/15688" target="_blank">简介</a>中的相关小节。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0，最大20000。关于<code>Offset</code>的更进一步介绍请参考 API <a href="https://cloud.tencent.com/document/api/213/15688" target="_blank">简介</a>中的相关小节。
  * @method string getName() 获取查询成员企业的企业名，模糊匹配
  * @method void setName(string $Name) 设置查询成员企业的企业名，模糊匹配
  * @method integer getStatus() 获取成员企业加入集团的当前状态
@@ -47,9 +47,15 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getExport() 获取是否导出当前成员企业数据
 <ul><li> **false**：不导出（默认值）</li>
 <li> **true**：导出</li></ul>
+
+p.s.
+若传入此参数， LImit参数将无效，导出的为全量数据。
  * @method void setExport(boolean $Export) 设置是否导出当前成员企业数据
 <ul><li> **false**：不导出（默认值）</li>
 <li> **true**：导出</li></ul>
+
+p.s.
+若传入此参数， LImit参数将无效，导出的为全量数据。
  * @method string getId() 获取成员企业机构 ID，32 位字符串，在PC控制台 集团管理可获取
  * @method void setId(string $Id) 设置成员企业机构 ID，32 位字符串，在PC控制台 集团管理可获取
  */
@@ -62,12 +68,12 @@ class DescribeOrganizationGroupOrganizationsRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var integer 指定分页每页返回的数据条数，单页最大1000
+     * @var integer 指定分页每页返回的数据条数，单页最大支持 200。
      */
     public $Limit;
 
     /**
-     * @var integer 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0
+     * @var integer 偏移量，默认为0，最大20000。关于<code>Offset</code>的更进一步介绍请参考 API <a href="https://cloud.tencent.com/document/api/213/15688" target="_blank">简介</a>中的相关小节。
      */
     public $Offset;
 
@@ -92,6 +98,9 @@ class DescribeOrganizationGroupOrganizationsRequest extends AbstractModel
      * @var boolean 是否导出当前成员企业数据
 <ul><li> **false**：不导出（默认值）</li>
 <li> **true**：导出</li></ul>
+
+p.s.
+若传入此参数， LImit参数将无效，导出的为全量数据。
      */
     public $Export;
 
@@ -103,8 +112,8 @@ class DescribeOrganizationGroupOrganizationsRequest extends AbstractModel
     /**
      * @param UserInfo $Operator 执行本接口操作的员工信息,userId必填。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
-     * @param integer $Limit 指定分页每页返回的数据条数，单页最大1000
-     * @param integer $Offset 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0
+     * @param integer $Limit 指定分页每页返回的数据条数，单页最大支持 200。
+     * @param integer $Offset 偏移量，默认为0，最大20000。关于<code>Offset</code>的更进一步介绍请参考 API <a href="https://cloud.tencent.com/document/api/213/15688" target="_blank">简介</a>中的相关小节。
      * @param string $Name 查询成员企业的企业名，模糊匹配
      * @param integer $Status 成员企业加入集团的当前状态
 <ul><li> **1**：待授权</li>
@@ -116,6 +125,9 @@ class DescribeOrganizationGroupOrganizationsRequest extends AbstractModel
      * @param boolean $Export 是否导出当前成员企业数据
 <ul><li> **false**：不导出（默认值）</li>
 <li> **true**：导出</li></ul>
+
+p.s.
+若传入此参数， LImit参数将无效，导出的为全量数据。
      * @param string $Id 成员企业机构 ID，32 位字符串，在PC控制台 集团管理可获取
      */
     function __construct()

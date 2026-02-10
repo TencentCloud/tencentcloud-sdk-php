@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthMode(integer $AuthMode) 设置授权模式； 0-开发者授权；1-使用者授权
  * @method integer getAuthType() 获取授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；
  * @method void setAuthType(integer $AuthType) 设置授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；
+ * @method integer getAuthConfigStatus() 获取工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置
+ * @method void setAuthConfigStatus(integer $AuthConfigStatus) 设置工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置
  */
 class AgentToolInfo extends AbstractModel
 {
@@ -187,6 +189,11 @@ class AgentToolInfo extends AbstractModel
     public $AuthType;
 
     /**
+     * @var integer 工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置
+     */
+    public $AuthConfigStatus;
+
+    /**
      * @param string $PluginId 插件id
      * @param string $PluginName 插件名称
      * @param string $IconUrl 插件图标url
@@ -212,6 +219,7 @@ class AgentToolInfo extends AbstractModel
      * @param ToolAdvanceConfig $ToolAdvanceConfig 工具高级设置
      * @param integer $AuthMode 授权模式； 0-开发者授权；1-使用者授权
      * @param integer $AuthType 授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；
+     * @param integer $AuthConfigStatus 工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置
      */
     function __construct()
     {
@@ -334,6 +342,10 @@ class AgentToolInfo extends AbstractModel
 
         if (array_key_exists("AuthType",$param) and $param["AuthType"] !== null) {
             $this->AuthType = $param["AuthType"];
+        }
+
+        if (array_key_exists("AuthConfigStatus",$param) and $param["AuthConfigStatus"] !== null) {
+            $this->AuthConfigStatus = $param["AuthConfigStatus"];
         }
     }
 }

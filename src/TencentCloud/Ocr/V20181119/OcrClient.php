@@ -310,6 +310,9 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 
 另外，本接口还支持多种扩展能力，满足不同场景的需求。如身份证照片、人像照片的裁剪功能，同时具备7种告警功能，如下表所示。
 
+重要提醒：本产品告警功能依托AI检测技术，不可作为审核的唯一依据，应用前请做好效果测试。
+
+
 <table style="width:650px">
       <thead>
         <tr>
@@ -415,6 +418,9 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 
 另外，本接口还支持多种扩展能力，满足不同场景的需求。如身份证照片、人像照片的裁剪功能，同时具备9种告警功能，如下表所示。
 
+重要提醒：本产品告警功能依托AI检测技术，不可作为审核的唯一依据，应用前请做好效果测试。
+
+
 <table style="width:650px">
       <thead>
         <tr>
@@ -465,6 +471,8 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 
 默认接口请求频率限制：2次/秒。
  * @method Models\RecognizeGeneralCardWarnResponse RecognizeGeneralCardWarn(Models\RecognizeGeneralCardWarnRequest $req) 支持通用证照的有效性检测告警，包括卡证复印件告警、卡证翻拍告警等功能，支持通用证照的ps伪造检测，可以应用于各种证件信息有效性校验场景。
+
+重要提醒：本产品依托AI检测技术，不可作为审核的唯一依据，应用前请做好效果测试。
 
 默认接口请求频率限制：5次/秒。
  * @method Models\RecognizeGeneralInvoiceResponse RecognizeGeneralInvoice(Models\RecognizeGeneralInvoiceRequest $req) 本接口支持 PDF多页（最多30页）、一页中单张、多张、类型票据的混合识别，同时支持单选识别某类票据，已支持票种包括：增值税发票（专票、普票、卷票、区块链发票、通行费发票）、全电发票（专票、普票）、非税发票（通用票据、统一缴纳书）、定额发票、通用机打发票、购车发票（机动车销售发票、二手车发票）、火车票、出租车发票、机票行程单、汽车票、轮船票、过路过桥费发票等常用标准报销发票，支持OFD格式的 增值税电子普通发票、增值税电子专用发票、电子发票（普通发票）、电子发票（增值税专用发票）、电子发票（机票行程单）、电子发票（铁路电子客票）的第一页识别，并支持非上述类型的其他发票的智能识别，点击[立即试用](https://cloud.tencent.com/product/ocr)。
@@ -706,6 +714,8 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 
 默认接口请求频率限制：20次/秒。
  * @method Models\RecognizeValidIDCardOCRResponse RecognizeValidIDCardOCR(Models\RecognizeValidIDCardOCRRequest $req) 本接口支持二代身份证、临时身份证、港澳台居住证、外国人永久居留证，字段内容识别功能，包括姓名、性别、民族、出生、出生日期、住址、公民身份号码、签发机关、有效期限、国籍、通行证号码、持证人持有号码；支持返回证件类型；支持翻拍、复印、边框不完整、遮挡、字段级反光和字段级完整性告警；支持卡片主体框裁剪和头像裁剪。
+
+重要提醒：本产品告警功能依托AI检测技术，不可作为审核的唯一依据，应用前请做好效果测试。
 
 默认接口请求频率限制：5次/秒。
  * @method Models\ResidenceBookletOCRResponse ResidenceBookletOCR(Models\ResidenceBookletOCRRequest $req) 本接口支持居民户口簿户主页及成员页关键字段的识别，包括姓名、户别、地址、籍贯、身份证号码等。

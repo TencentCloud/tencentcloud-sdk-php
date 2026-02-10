@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() 获取图片异步处理模板ID。
  * @method void setDefinition(integer $Definition) 设置图片异步处理模板ID。
+ * @method ProcessImageAsyncInputExtendedParameter getExtendedParameter() 获取图片异步处理扩展参数。
+ * @method void setExtendedParameter(ProcessImageAsyncInputExtendedParameter $ExtendedParameter) 设置图片异步处理扩展参数。
  */
 class ProcessImageAsyncTaskInput extends AbstractModel
 {
@@ -31,7 +33,13 @@ class ProcessImageAsyncTaskInput extends AbstractModel
     public $Definition;
 
     /**
+     * @var ProcessImageAsyncInputExtendedParameter 图片异步处理扩展参数。
+     */
+    public $ExtendedParameter;
+
+    /**
      * @param integer $Definition 图片异步处理模板ID。
+     * @param ProcessImageAsyncInputExtendedParameter $ExtendedParameter 图片异步处理扩展参数。
      */
     function __construct()
     {
@@ -48,6 +56,11 @@ class ProcessImageAsyncTaskInput extends AbstractModel
         }
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
             $this->Definition = $param["Definition"];
+        }
+
+        if (array_key_exists("ExtendedParameter",$param) and $param["ExtendedParameter"] !== null) {
+            $this->ExtendedParameter = new ProcessImageAsyncInputExtendedParameter();
+            $this->ExtendedParameter->deserialize($param["ExtendedParameter"]);
         }
     }
 }

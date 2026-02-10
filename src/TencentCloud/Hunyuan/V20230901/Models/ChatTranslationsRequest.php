@@ -78,6 +78,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setField(string $Field) 设置待翻译文本所属领域，例如游戏剧情等
  * @method array getReferences() 获取参考示例，最多10个
  * @method void setReferences(array $References) 设置参考示例，最多10个
+ * @method array getGlossaryIDs() 获取关联的术语库 ID 列表，用于术语翻译，最大支持5个术语库
+ * @method void setGlossaryIDs(array $GlossaryIDs) 设置关联的术语库 ID 列表，用于术语翻译，最大支持5个术语库
  */
 class ChatTranslationsRequest extends AbstractModel
 {
@@ -139,6 +141,11 @@ class ChatTranslationsRequest extends AbstractModel
     public $References;
 
     /**
+     * @var array 关联的术语库 ID 列表，用于术语翻译，最大支持5个术语库
+     */
+    public $GlossaryIDs;
+
+    /**
      * @param string $Model 模型名称，可选值包括 hunyuan-translation、hunyuan-translation-lite。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
@@ -168,6 +175,7 @@ class ChatTranslationsRequest extends AbstractModel
 菲律宾语：fil，印地语：hi，波兰语：pl，捷克语：cs，荷兰语：nl，高棉语：km，缅甸语：my，波斯语：fa，古吉拉特语：gu，乌尔都语：ur，泰卢固语：te，马拉地语：mr，希伯来语：he，孟加拉语：bn，泰米尔语：ta，乌克兰语：uk，藏语：bo，哈萨克语：kk，蒙古语：mn，维吾尔语：ug
      * @param string $Field 待翻译文本所属领域，例如游戏剧情等
      * @param array $References 参考示例，最多10个
+     * @param array $GlossaryIDs 关联的术语库 ID 列表，用于术语翻译，最大支持5个术语库
      */
     function __construct()
     {
@@ -213,6 +221,10 @@ class ChatTranslationsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->References, $obj);
             }
+        }
+
+        if (array_key_exists("GlossaryIDs",$param) and $param["GlossaryIDs"] !== null) {
+            $this->GlossaryIDs = $param["GlossaryIDs"];
         }
     }
 }

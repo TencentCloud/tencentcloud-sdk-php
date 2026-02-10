@@ -81,12 +81,18 @@ use TencentCloud\Common\AbstractModel;
     motion_control 表示动作控制；
     avatar_i2v 表示数字人；
     lip_sync 表示对口型；</li>
+<li>当 ModelName 为 Vidu 时：
+    template_effect 表示特效模板；
+</li>
 <li>其他 ModelName 暂不支持。</li>
  * @method void setSceneType(string $SceneType) 设置场景类型。取值如下：
 <li>当 ModelName 为 Kling 时：
     motion_control 表示动作控制；
     avatar_i2v 表示数字人；
     lip_sync 表示对口型；</li>
+<li>当 ModelName 为 Vidu 时：
+    template_effect 表示特效模板；
+</li>
 <li>其他 ModelName 暂不支持。</li>
  * @method string getSessionId() 获取用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
@@ -177,6 +183,9 @@ class CreateAigcVideoTaskRequest extends AbstractModel
     motion_control 表示动作控制；
     avatar_i2v 表示数字人；
     lip_sync 表示对口型；</li>
+<li>当 ModelName 为 Vidu 时：
+    template_effect 表示特效模板；
+</li>
 <li>其他 ModelName 暂不支持。</li>
      */
     public $SceneType;
@@ -235,6 +244,9 @@ class CreateAigcVideoTaskRequest extends AbstractModel
     motion_control 表示动作控制；
     avatar_i2v 表示数字人；
     lip_sync 表示对口型；</li>
+<li>当 ModelName 为 Vidu 时：
+    template_effect 表示特效模板；
+</li>
 <li>其他 ModelName 暂不支持。</li>
      * @param string $SessionId 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。

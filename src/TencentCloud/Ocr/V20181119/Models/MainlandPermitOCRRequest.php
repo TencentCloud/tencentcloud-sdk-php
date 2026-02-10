@@ -28,11 +28,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRetProfile(boolean $RetProfile) 设置是否返回头像。默认不返回。
  * @method string getCardSide() 获取图片正反面
 FRONT：正面
-BACK：反面
+BACK：反面 （仅支持来往内地通行证反面识别，不支持港澳台通行证反面识别）
 默认为FRONT
  * @method void setCardSide(string $CardSide) 设置图片正反面
 FRONT：正面
-BACK：反面
+BACK：反面 （仅支持来往内地通行证反面识别，不支持港澳台通行证反面识别）
 默认为FRONT
  */
 class MainlandPermitOCRRequest extends AbstractModel
@@ -55,7 +55,7 @@ class MainlandPermitOCRRequest extends AbstractModel
     /**
      * @var string 图片正反面
 FRONT：正面
-BACK：反面
+BACK：反面 （仅支持来往内地通行证反面识别，不支持港澳台通行证反面识别）
 默认为FRONT
      */
     public $CardSide;
@@ -66,7 +66,7 @@ BACK：反面
      * @param boolean $RetProfile 是否返回头像。默认不返回。
      * @param string $CardSide 图片正反面
 FRONT：正面
-BACK：反面
+BACK：反面 （仅支持来往内地通行证反面识别，不支持港澳台通行证反面识别）
 默认为FRONT
      */
     function __construct()

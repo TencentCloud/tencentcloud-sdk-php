@@ -34,12 +34,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilePath(string $FilePath) 设置文件存储目录
  * @method string getType() 获取存储类型
  * @method void setType(string $Type) 设置存储类型
- * @method string getCorpUin() 获取主号
- * @method void setCorpUin(string $CorpUin) 设置主号
+ * @method string getCorpUin() 获取企业主账号
+ * @method void setCorpUin(string $CorpUin) 设置企业主账号
  * @method string getImagePath() 获取图片存储目录
  * @method void setImagePath(string $ImagePath) 设置图片存储目录
  * @method string getUploadPath() 获取上传存储路径，到具体文件
  * @method void setUploadPath(string $UploadPath) 设置上传存储路径，到具体文件
+ * @method string getUploadUrl() 获取文件上传地址，使用put请求上传文件到该地址
+ * @method void setUploadUrl(string $UploadUrl) 设置文件上传地址，使用put请求上传文件到该地址
+ * @method string getFileUrl() 获取文件的预签名地址，支持下载
+ * @method void setFileUrl(string $FileUrl) 设置文件的预签名地址，支持下载
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -81,7 +85,7 @@ class DescribeStorageCredentialResponse extends AbstractModel
     public $Type;
 
     /**
-     * @var string 主号
+     * @var string 企业主账号
      */
     public $CorpUin;
 
@@ -96,6 +100,16 @@ class DescribeStorageCredentialResponse extends AbstractModel
     public $UploadPath;
 
     /**
+     * @var string 文件上传地址，使用put请求上传文件到该地址
+     */
+    public $UploadUrl;
+
+    /**
+     * @var string 文件的预签名地址，支持下载
+     */
+    public $FileUrl;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -108,9 +122,11 @@ class DescribeStorageCredentialResponse extends AbstractModel
      * @param string $Region 对象存储可用区
      * @param string $FilePath 文件存储目录
      * @param string $Type 存储类型
-     * @param string $CorpUin 主号
+     * @param string $CorpUin 企业主账号
      * @param string $ImagePath 图片存储目录
      * @param string $UploadPath 上传存储路径，到具体文件
+     * @param string $UploadUrl 文件上传地址，使用put请求上传文件到该地址
+     * @param string $FileUrl 文件的预签名地址，支持下载
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -165,6 +181,14 @@ class DescribeStorageCredentialResponse extends AbstractModel
 
         if (array_key_exists("UploadPath",$param) and $param["UploadPath"] !== null) {
             $this->UploadPath = $param["UploadPath"];
+        }
+
+        if (array_key_exists("UploadUrl",$param) and $param["UploadUrl"] !== null) {
+            $this->UploadUrl = $param["UploadUrl"];
+        }
+
+        if (array_key_exists("FileUrl",$param) and $param["FileUrl"] !== null) {
+            $this->FileUrl = $param["FileUrl"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

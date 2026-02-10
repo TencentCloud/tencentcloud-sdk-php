@@ -24,6 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置vpc id
  * @method string getSubnetId() 获取子网ID
  * @method void setSubnetId(string $SubnetId) 设置子网ID
+ * @method string getUsedCluster() 获取应用的集群；可以是集群id,也可以是All
+ * @method void setUsedCluster(string $UsedCluster) 设置应用的集群；可以是集群id,也可以是All
+ * @method string getCIDR() 获取cidr，只有当IsDirectConnect为true时才生效
+ * @method void setCIDR(string $CIDR) 设置cidr，只有当IsDirectConnect为true时才生效
+ * @method boolean getIsDirectConnect() 获取是否为专线接入场景
+ * @method void setIsDirectConnect(boolean $IsDirectConnect) 设置是否为专线接入场景
  */
 class SubnetInfo extends AbstractModel
 {
@@ -38,8 +44,26 @@ class SubnetInfo extends AbstractModel
     public $SubnetId;
 
     /**
+     * @var string 应用的集群；可以是集群id,也可以是All
+     */
+    public $UsedCluster;
+
+    /**
+     * @var string cidr，只有当IsDirectConnect为true时才生效
+     */
+    public $CIDR;
+
+    /**
+     * @var boolean 是否为专线接入场景
+     */
+    public $IsDirectConnect;
+
+    /**
      * @param string $VpcId vpc id
      * @param string $SubnetId 子网ID
+     * @param string $UsedCluster 应用的集群；可以是集群id,也可以是All
+     * @param string $CIDR cidr，只有当IsDirectConnect为true时才生效
+     * @param boolean $IsDirectConnect 是否为专线接入场景
      */
     function __construct()
     {
@@ -60,6 +84,18 @@ class SubnetInfo extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("UsedCluster",$param) and $param["UsedCluster"] !== null) {
+            $this->UsedCluster = $param["UsedCluster"];
+        }
+
+        if (array_key_exists("CIDR",$param) and $param["CIDR"] !== null) {
+            $this->CIDR = $param["CIDR"];
+        }
+
+        if (array_key_exists("IsDirectConnect",$param) and $param["IsDirectConnect"] !== null) {
+            $this->IsDirectConnect = $param["IsDirectConnect"];
         }
     }
 }

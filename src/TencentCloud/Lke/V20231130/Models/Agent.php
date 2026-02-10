@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgentMode(integer $AgentMode) 设置0 自由转交，1 计划与执行
  * @method AgentAdvancedConfig getAdvancedConfig() 获取高级设置
  * @method void setAdvancedConfig(AgentAdvancedConfig $AdvancedConfig) 设置高级设置
+ * @method integer getMaxToolCount() 获取工具数量上限
+ * @method void setMaxToolCount(integer $MaxToolCount) 设置工具数量上限
  */
 class Agent extends AbstractModel
 {
@@ -122,6 +124,11 @@ class Agent extends AbstractModel
     public $AdvancedConfig;
 
     /**
+     * @var integer 工具数量上限
+     */
+    public $MaxToolCount;
+
+    /**
      * @param string $AgentId AgentID
      * @param string $WorkflowId WorkflowID，非空则当前Agent从workflow转换而来
      * @param string $Name Agent名称，同一个应用内，Agent名称不能重复
@@ -136,6 +143,7 @@ class Agent extends AbstractModel
      * @param integer $AgentType Agent类型; 0: 未指定类型; 1: 知识库检索Agent
      * @param integer $AgentMode 0 自由转交，1 计划与执行
      * @param AgentAdvancedConfig $AdvancedConfig 高级设置
+     * @param integer $MaxToolCount 工具数量上限
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ class Agent extends AbstractModel
         if (array_key_exists("AdvancedConfig",$param) and $param["AdvancedConfig"] !== null) {
             $this->AdvancedConfig = new AgentAdvancedConfig();
             $this->AdvancedConfig->deserialize($param["AdvancedConfig"]);
+        }
+
+        if (array_key_exists("MaxToolCount",$param) and $param["MaxToolCount"] !== null) {
+            $this->MaxToolCount = $param["MaxToolCount"];
         }
     }
 }

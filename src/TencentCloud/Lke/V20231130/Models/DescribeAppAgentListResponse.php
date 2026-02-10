@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgents(array $Agents) 设置应用Agent信息列表
  * @method AgentHandoffAdvancedSetting getHandoffAdvancedSetting() 获取Agent转交高级设置
  * @method void setHandoffAdvancedSetting(AgentHandoffAdvancedSetting $HandoffAdvancedSetting) 设置Agent转交高级设置
+ * @method integer getMaxAgentCount() 获取Agent数量上限
+ * @method void setMaxAgentCount(integer $MaxAgentCount) 设置Agent数量上限
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,6 +49,11 @@ class DescribeAppAgentListResponse extends AbstractModel
     public $HandoffAdvancedSetting;
 
     /**
+     * @var integer Agent数量上限
+     */
+    public $MaxAgentCount;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +62,7 @@ class DescribeAppAgentListResponse extends AbstractModel
      * @param string $StaringAgentId 入口启动AgentID
      * @param array $Agents 应用Agent信息列表
      * @param AgentHandoffAdvancedSetting $HandoffAdvancedSetting Agent转交高级设置
+     * @param integer $MaxAgentCount Agent数量上限
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -86,6 +94,10 @@ class DescribeAppAgentListResponse extends AbstractModel
         if (array_key_exists("HandoffAdvancedSetting",$param) and $param["HandoffAdvancedSetting"] !== null) {
             $this->HandoffAdvancedSetting = new AgentHandoffAdvancedSetting();
             $this->HandoffAdvancedSetting->deserialize($param["HandoffAdvancedSetting"]);
+        }
+
+        if (array_key_exists("MaxAgentCount",$param) and $param["MaxAgentCount"] !== null) {
+            $this->MaxAgentCount = $param["MaxAgentCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

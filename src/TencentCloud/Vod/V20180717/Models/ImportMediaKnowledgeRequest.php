@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。</b>
  * @method string getFileId() 获取媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
  * @method void setFileId(string $FileId) 设置媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
+ * @method integer getDefinition() 获取大模型理解模板的唯一标识
+ * @method void setDefinition(integer $Definition) 设置大模型理解模板的唯一标识
  * @method array getImportTasks() 获取需要导入知识库任务类型，可选值有：
 - AiAnalysis.DescriptionTask
 - SmartSubtitle.AsrFullTextTask
@@ -44,15 +46,22 @@ class ImportMediaKnowledgeRequest extends AbstractModel
     public $FileId;
 
     /**
+     * @var integer 大模型理解模板的唯一标识
+     */
+    public $Definition;
+
+    /**
      * @var array 需要导入知识库任务类型，可选值有：
 - AiAnalysis.DescriptionTask
 - SmartSubtitle.AsrFullTextTask
+     * @deprecated
      */
     public $ImportTasks;
 
     /**
      * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。</b>
      * @param string $FileId 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
+     * @param integer $Definition 大模型理解模板的唯一标识
      * @param array $ImportTasks 需要导入知识库任务类型，可选值有：
 - AiAnalysis.DescriptionTask
 - SmartSubtitle.AsrFullTextTask
@@ -76,6 +85,10 @@ class ImportMediaKnowledgeRequest extends AbstractModel
 
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
             $this->FileId = $param["FileId"];
+        }
+
+        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
+            $this->Definition = $param["Definition"];
         }
 
         if (array_key_exists("ImportTasks",$param) and $param["ImportTasks"] !== null) {

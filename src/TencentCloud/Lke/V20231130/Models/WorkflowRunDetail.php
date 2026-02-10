@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomVariables(array $CustomVariables) 设置API参数配置
  * @method string getWorkflowGraph() 获取工作流的流程图
  * @method void setWorkflowGraph(string $WorkflowGraph) 设置工作流的流程图
+ * @method AsyncWorkflowMessage getLatestMessage() 获取当前的回复消息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLatestMessage(AsyncWorkflowMessage $LatestMessage) 设置当前的回复消息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowRunDetail extends AbstractModel
 {
@@ -144,6 +148,12 @@ class WorkflowRunDetail extends AbstractModel
     public $WorkflowGraph;
 
     /**
+     * @var AsyncWorkflowMessage 当前的回复消息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LatestMessage;
+
+    /**
      * @param integer $RunEnv 运行环境。0: 测试环境； 1: 正式环境
      * @param string $AppBizId 应用ID
      * @param string $WorkflowRunId 工作流运行实例的ID
@@ -161,6 +171,8 @@ class WorkflowRunDetail extends AbstractModel
      * @param string $MainModelName 主模型名称
      * @param array $CustomVariables API参数配置
      * @param string $WorkflowGraph 工作流的流程图
+     * @param AsyncWorkflowMessage $LatestMessage 当前的回复消息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -246,6 +258,11 @@ class WorkflowRunDetail extends AbstractModel
 
         if (array_key_exists("WorkflowGraph",$param) and $param["WorkflowGraph"] !== null) {
             $this->WorkflowGraph = $param["WorkflowGraph"];
+        }
+
+        if (array_key_exists("LatestMessage",$param) and $param["LatestMessage"] !== null) {
+            $this->LatestMessage = new AsyncWorkflowMessage();
+            $this->LatestMessage->deserialize($param["LatestMessage"]);
         }
     }
 }

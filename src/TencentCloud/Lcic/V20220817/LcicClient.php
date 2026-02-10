@@ -30,6 +30,7 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\BatchDeleteGroupMemberResponse BatchDeleteGroupMember(Models\BatchDeleteGroupMemberRequest $req) 此接口用于批量删除成员列表到指定群组列表
  * @method Models\BatchDeleteRecordResponse BatchDeleteRecord(Models\BatchDeleteRecordRequest $req) 批量删除多个房间的录制文件
  * @method Models\BatchDescribeDocumentResponse BatchDescribeDocument(Models\BatchDescribeDocumentRequest $req) 批量获取文档详情
+ * @method Models\BatchGetPlaybackTokenResponse BatchGetPlaybackToken(Models\BatchGetPlaybackTokenRequest $req) 批量获取信令录制回放token，用于回放指定课堂时鉴权
  * @method Models\BatchRegisterResponse BatchRegister(Models\BatchRegisterRequest $req) 如果批量注册的用户已存在，则会被覆盖。一次最多注册1000个用户。默认请求频率限制：10次/秒
  * @method Models\BindDocumentToRoomResponse BindDocumentToRoom(Models\BindDocumentToRoomRequest $req) 功能概述
 本接口提供教学场景下的课程文档预绑定能力，支持将课件课堂ID进行关联映射，实现课件的自动化预加载。
@@ -62,6 +63,7 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\DeleteDocumentResponse DeleteDocument(Models\DeleteDocumentRequest $req) 删除文档
  * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) 此接口用于删除指定群组，支持批量操作。
  * @method Models\DeleteGroupMemberResponse DeleteGroupMember(Models\DeleteGroupMemberRequest $req) 此接口用于删除群组中指定成员
+ * @method Models\DeletePlaybackItemResponse DeletePlaybackItem(Models\DeletePlaybackItemRequest $req) 删除该堂课的录制记录
  * @method Models\DeleteRecordResponse DeleteRecord(Models\DeleteRecordRequest $req) 删除指定房间的录制文件
  * @method Models\DeleteRoomResponse DeleteRoom(Models\DeleteRoomRequest $req) 删除房间
 删除课堂前，请先删除该课堂下的各类资源（包括录制文件、板书等），并解绑相关课件。
@@ -82,6 +84,8 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\DescribeGroupLiveCodesResponse DescribeGroupLiveCodes(Models\DescribeGroupLiveCodesRequest $req) 获取分组直播参加码
  * @method Models\DescribeGroupMemberListResponse DescribeGroupMemberList(Models\DescribeGroupMemberListRequest $req) 此接口用于获取群组成员列表
  * @method Models\DescribeMarqueeResponse DescribeMarquee(Models\DescribeMarqueeRequest $req) 查询跑马灯配置
+ * @method Models\DescribePlayRecordsResponse DescribePlayRecords(Models\DescribePlayRecordsRequest $req) 信令录制视频观看记录查询接口，用于查询指定课堂在指定时间段内的用户播放记录。
+ * @method Models\DescribePlaybackListResponse DescribePlaybackList(Models\DescribePlaybackListRequest $req) 查询录制信息
  * @method Models\DescribeQuestionListResponse DescribeQuestionList(Models\DescribeQuestionListRequest $req) 获取房间提问列表
  * @method Models\DescribeRecordResponse DescribeRecord(Models\DescribeRecordRequest $req) 查询录制信息
  * @method Models\DescribeRecordStreamResponse DescribeRecordStream(Models\DescribeRecordStreamRequest $req) 录制流查询
@@ -101,6 +105,7 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\ForbidSendMsgResponse ForbidSendMsg(Models\ForbidSendMsgRequest $req) 禁止指定房间中某些用户在一段时间内发言。
 取消对某些用户的禁言。
 被禁言用户退出房间之后再进入同一房间，禁言仍然有效。
+ * @method Models\GetPlaybackTokenResponse GetPlaybackToken(Models\GetPlaybackTokenRequest $req) 获取信令录制回放token，用于回放指定课堂时鉴权
  * @method Models\GetRoomEventResponse GetRoomEvent(Models\GetRoomEventRequest $req) 获取房间事件,仅在课堂结束1小时内有效。
  * @method Models\GetRoomMessageResponse GetRoomMessage(Models\GetRoomMessageRequest $req) 获取房间历史消息(房间历史消息保存7天)
  * @method Models\GetRoomsResponse GetRooms(Models\GetRoomsRequest $req) 获取房间列表

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getPeriod() 获取购买实例的时长，单位是月。可支持时长：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
  * @method void setPeriod(integer $Period) 设置购买实例的时长，单位是月。可支持时长：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
- * @method integer getAutoRenewFlag() 获取自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为0即手动续费
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为0即手动续费
+ * @method integer getAutoRenewFlag() 获取自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为1即自动续费。
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为1即自动续费。
  */
 class AddressChargePrepaid extends AbstractModel
 {
@@ -33,13 +33,13 @@ class AddressChargePrepaid extends AbstractModel
     public $Period;
 
     /**
-     * @var integer 自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为0即手动续费
+     * @var integer 自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为1即自动续费。
      */
     public $AutoRenewFlag;
 
     /**
      * @param integer $Period 购买实例的时长，单位是月。可支持时长：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
-     * @param integer $AutoRenewFlag 自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为0即手动续费
+     * @param integer $AutoRenewFlag 自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为1即自动续费。
      */
     function __construct()
     {

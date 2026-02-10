@@ -50,6 +50,20 @@ use TencentCloud\Common\AbstractModel;
 <li>follow：遵循站点 IPv6 配置；</li>
 <li>on：开启状态；</li>
 <li>off：关闭状态。</li>不填默认为：follow。
+ * @method string getSharedCNAME() 获取指定域名绑定的共享 CNAME 地址，不传时使用默认 CNAME。
+绑定共享 CNAME 要求所有域名的调度策略保持一致，以下配置将影响调度策略，在不一致时绑定共享 CNAME 将按照以下方式处理：
+- IPv6 访问：不允许创建域名，请修改 IPv6Status 已保持与共享 CNAME 绑定的其余域名配置一致；
+- DDoS 防护：如果选择的共享 CNAME 已启用 DDoS 防护，则创建域名时，将默认为该域名启用 DDoS 防护。
+- 中国大陆网络优化（国际加速）：不允许创建域名，请保持当前域名的中国大陆网络优化（国际加速）配置与共享 CNAME 绑定的其余域名一致后重试。
+
+注：共享 CNAME 当前仍在内测中，如需使用，请联系我们开通。
+ * @method void setSharedCNAME(string $SharedCNAME) 设置指定域名绑定的共享 CNAME 地址，不传时使用默认 CNAME。
+绑定共享 CNAME 要求所有域名的调度策略保持一致，以下配置将影响调度策略，在不一致时绑定共享 CNAME 将按照以下方式处理：
+- IPv6 访问：不允许创建域名，请修改 IPv6Status 已保持与共享 CNAME 绑定的其余域名配置一致；
+- DDoS 防护：如果选择的共享 CNAME 已启用 DDoS 防护，则创建域名时，将默认为该域名启用 DDoS 防护。
+- 中国大陆网络优化（国际加速）：不允许创建域名，请保持当前域名的中国大陆网络优化（国际加速）配置与共享 CNAME 绑定的其余域名一致后重试。
+
+注：共享 CNAME 当前仍在内测中，如需使用，请联系我们开通。
  */
 class CreateAccelerationDomainRequest extends AbstractModel
 {
@@ -97,6 +111,17 @@ class CreateAccelerationDomainRequest extends AbstractModel
     public $IPv6Status;
 
     /**
+     * @var string 指定域名绑定的共享 CNAME 地址，不传时使用默认 CNAME。
+绑定共享 CNAME 要求所有域名的调度策略保持一致，以下配置将影响调度策略，在不一致时绑定共享 CNAME 将按照以下方式处理：
+- IPv6 访问：不允许创建域名，请修改 IPv6Status 已保持与共享 CNAME 绑定的其余域名配置一致；
+- DDoS 防护：如果选择的共享 CNAME 已启用 DDoS 防护，则创建域名时，将默认为该域名启用 DDoS 防护。
+- 中国大陆网络优化（国际加速）：不允许创建域名，请保持当前域名的中国大陆网络优化（国际加速）配置与共享 CNAME 绑定的其余域名一致后重试。
+
+注：共享 CNAME 当前仍在内测中，如需使用，请联系我们开通。
+     */
+    public $SharedCNAME;
+
+    /**
      * @param string $ZoneId 加速域名所属站点 ID。
      * @param string $DomainName 加速域名。
      * @param OriginInfo $OriginInfo 源站信息。
@@ -112,6 +137,13 @@ class CreateAccelerationDomainRequest extends AbstractModel
 <li>follow：遵循站点 IPv6 配置；</li>
 <li>on：开启状态；</li>
 <li>off：关闭状态。</li>不填默认为：follow。
+     * @param string $SharedCNAME 指定域名绑定的共享 CNAME 地址，不传时使用默认 CNAME。
+绑定共享 CNAME 要求所有域名的调度策略保持一致，以下配置将影响调度策略，在不一致时绑定共享 CNAME 将按照以下方式处理：
+- IPv6 访问：不允许创建域名，请修改 IPv6Status 已保持与共享 CNAME 绑定的其余域名配置一致；
+- DDoS 防护：如果选择的共享 CNAME 已启用 DDoS 防护，则创建域名时，将默认为该域名启用 DDoS 防护。
+- 中国大陆网络优化（国际加速）：不允许创建域名，请保持当前域名的中国大陆网络优化（国际加速）配置与共享 CNAME 绑定的其余域名一致后重试。
+
+注：共享 CNAME 当前仍在内测中，如需使用，请联系我们开通。
      */
     function __construct()
     {
@@ -153,6 +185,10 @@ class CreateAccelerationDomainRequest extends AbstractModel
 
         if (array_key_exists("IPv6Status",$param) and $param["IPv6Status"] !== null) {
             $this->IPv6Status = $param["IPv6Status"];
+        }
+
+        if (array_key_exists("SharedCNAME",$param) and $param["SharedCNAME"] !== null) {
+            $this->SharedCNAME = $param["SharedCNAME"];
         }
     }
 }

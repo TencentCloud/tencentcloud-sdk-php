@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAutoScalingConfiguration返回参数结构体
  *
- * @method string getClusterId() 获取集群ID。
- * @method void setClusterId(string $ClusterId) 设置集群ID。
- * @method integer getExpansionBusyTime() 获取任务连续等待时间，队列的任务处于连续等待的时间。单位秒。
- * @method void setExpansionBusyTime(integer $ExpansionBusyTime) 设置任务连续等待时间，队列的任务处于连续等待的时间。单位秒。
- * @method integer getShrinkIdleTime() 获取节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。
- * @method void setShrinkIdleTime(integer $ShrinkIdleTime) 设置节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。
- * @method array getQueueConfigs() 获取扩容队列配置概览列表。
- * @method void setQueueConfigs(array $QueueConfigs) 设置扩容队列配置概览列表。
+ * @method string getClusterId() 获取<p>集群ID。</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID。</p>
+ * @method integer getExpansionBusyTime() 获取<p>任务连续等待时间，队列的任务处于连续等待的时间。单位秒。</p>
+ * @method void setExpansionBusyTime(integer $ExpansionBusyTime) 设置<p>任务连续等待时间，队列的任务处于连续等待的时间。单位秒。</p>
+ * @method integer getShrinkIdleTime() 获取<p>节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。</p>
+ * @method void setShrinkIdleTime(integer $ShrinkIdleTime) 设置<p>节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。</p>
+ * @method array getQueueConfigs() 获取<p>扩容队列配置概览列表。</p>
+ * @method void setQueueConfigs(array $QueueConfigs) 设置<p>扩容队列配置概览列表。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAutoScalingConfigurationResponse extends AbstractModel
 {
     /**
-     * @var string 集群ID。
+     * @var string <p>集群ID。</p>
      */
     public $ClusterId;
 
     /**
-     * @var integer 任务连续等待时间，队列的任务处于连续等待的时间。单位秒。
+     * @var integer <p>任务连续等待时间，队列的任务处于连续等待的时间。单位秒。</p>
      */
     public $ExpansionBusyTime;
 
     /**
-     * @var integer 节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。
+     * @var integer <p>节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。</p>
      */
     public $ShrinkIdleTime;
 
     /**
-     * @var array 扩容队列配置概览列表。
+     * @var array <p>扩容队列配置概览列表。</p>
      */
     public $QueueConfigs;
 
@@ -59,10 +59,10 @@ class DescribeAutoScalingConfigurationResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ClusterId 集群ID。
-     * @param integer $ExpansionBusyTime 任务连续等待时间，队列的任务处于连续等待的时间。单位秒。
-     * @param integer $ShrinkIdleTime 节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。
-     * @param array $QueueConfigs 扩容队列配置概览列表。
+     * @param string $ClusterId <p>集群ID。</p>
+     * @param integer $ExpansionBusyTime <p>任务连续等待时间，队列的任务处于连续等待的时间。单位秒。</p>
+     * @param integer $ShrinkIdleTime <p>节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。</p>
+     * @param array $QueueConfigs <p>扩容队列配置概览列表。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSortBy(string $SortBy) 设置默认无排序，支持：ASC、DESC、asc、desc
  * @method string getOrderBy() 获取待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间)
  * @method void setOrderBy(string $OrderBy) 设置待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间)
+ * @method string getHostRegexp() 获取匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网
+ * @method void setHostRegexp(string $HostRegexp) 设置匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网
  */
 class DescribeAccountsRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeAccountsRequest extends AbstractModel
     public $OrderBy;
 
     /**
+     * @var string 匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网
+     */
+    public $HostRegexp;
+
+    /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param integer $Offset 记录偏移量，默认值为0。
      * @param integer $Limit 单次请求返回的数量，默认值为20，最小值为1，最大值为100。
      * @param string $AccountRegexp 匹配账号名的正则表达式，规则同 MySQL 官网。
      * @param string $SortBy 默认无排序，支持：ASC、DESC、asc、desc
      * @param string $OrderBy 待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间)
+     * @param string $HostRegexp 匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeAccountsRequest extends AbstractModel
 
         if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
             $this->OrderBy = $param["OrderBy"];
+        }
+
+        if (array_key_exists("HostRegexp",$param) and $param["HostRegexp"] !== null) {
+            $this->HostRegexp = $param["HostRegexp"];
         }
     }
 }

@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnhancePrompt(string $EnhancePrompt) 设置是否自动优化提示词。开启时将自动优化传入的 Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
  * @method AigcImageOutputConfig getOutputConfig() 获取生图任务的输出媒体文件配置。
  * @method void setOutputConfig(AigcImageOutputConfig $OutputConfig) 设置生图任务的输出媒体文件配置。
+ * @method string getInputRegion() 获取输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。
+ * @method void setInputRegion(string $InputRegion) 设置输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。
  * @method string getSessionId() 获取用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。
@@ -127,6 +129,11 @@ class CreateAigcImageTaskRequest extends AbstractModel
     public $OutputConfig;
 
     /**
+     * @var string 输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。
+     */
+    public $InputRegion;
+
+    /**
      * @var string 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
     public $SessionId;
@@ -168,6 +175,7 @@ class CreateAigcImageTaskRequest extends AbstractModel
      * @param string $NegativePrompt 要阻止模型生成图片的提示词。
      * @param string $EnhancePrompt 是否自动优化提示词。开启时将自动优化传入的 Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
      * @param AigcImageOutputConfig $OutputConfig 生图任务的输出媒体文件配置。
+     * @param string $InputRegion 输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。
      * @param string $SessionId 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。
      * @param integer $TasksPriority 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
@@ -222,6 +230,10 @@ class CreateAigcImageTaskRequest extends AbstractModel
         if (array_key_exists("OutputConfig",$param) and $param["OutputConfig"] !== null) {
             $this->OutputConfig = new AigcImageOutputConfig();
             $this->OutputConfig->deserialize($param["OutputConfig"]);
+        }
+
+        if (array_key_exists("InputRegion",$param) and $param["InputRegion"] !== null) {
+            $this->InputRegion = $param["InputRegion"];
         }
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {

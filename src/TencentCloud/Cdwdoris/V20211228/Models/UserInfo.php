@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置集群实例id
  * @method string getUserName() 获取用户名
  * @method void setUserName(string $UserName) 设置用户名
- * @method string getPassWord() 获取密码
- * @method void setPassWord(string $PassWord) 设置密码
- * @method string getWhiteHost() 获取用户链接来自的 IP
- * @method void setWhiteHost(string $WhiteHost) 设置用户链接来自的 IP
+ * @method string getPassWord() 获取base64加密后的密码
+ * @method void setPassWord(string $PassWord) 设置base64加密后的密码
+ * @method string getWhiteHost() 获取用户链接来自的 IP地址
+ * @method void setWhiteHost(string $WhiteHost) 设置用户链接来自的 IP地址
  * @method string getOldWhiteHost() 获取修改前用户链接来自的 IP
  * @method void setOldWhiteHost(string $OldWhiteHost) 设置修改前用户链接来自的 IP
  * @method string getDescribe() 获取描述
@@ -54,12 +54,12 @@ class UserInfo extends AbstractModel
     public $UserName;
 
     /**
-     * @var string 密码
+     * @var string base64加密后的密码
      */
     public $PassWord;
 
     /**
-     * @var string 用户链接来自的 IP
+     * @var string 用户链接来自的 IP地址
      */
     public $WhiteHost;
 
@@ -96,8 +96,8 @@ class UserInfo extends AbstractModel
     /**
      * @param string $InstanceId 集群实例id
      * @param string $UserName 用户名
-     * @param string $PassWord 密码
-     * @param string $WhiteHost 用户链接来自的 IP
+     * @param string $PassWord base64加密后的密码
+     * @param string $WhiteHost 用户链接来自的 IP地址
      * @param string $OldWhiteHost 修改前用户链接来自的 IP
      * @param string $Describe 描述
      * @param string $OldPwd 旧密码

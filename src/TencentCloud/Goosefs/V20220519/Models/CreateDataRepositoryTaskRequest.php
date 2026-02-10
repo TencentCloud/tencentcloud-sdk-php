@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRepositoryType(string $RepositoryType) 设置数据流通方式 MSP_AFM 手动加载  RAW_AFM 按需加载
  * @method string getTextLocation() 获取文件列表下载地址，以http开头
  * @method void setTextLocation(string $TextLocation) 设置文件列表下载地址，以http开头
+ * @method boolean getEnableDataFlowSubPath() 获取是否开启自定义路径(暂时仅供预热使用)
+ * @method void setEnableDataFlowSubPath(boolean $EnableDataFlowSubPath) 设置是否开启自定义路径(暂时仅供预热使用)
+ * @method string getDataFlowSubPath() 获取自定义路径(暂时仅供预热使用)
+ * @method void setDataFlowSubPath(string $DataFlowSubPath) 设置自定义路径(暂时仅供预热使用)
  */
 class CreateDataRepositoryTaskRequest extends AbstractModel
 {
@@ -73,6 +77,16 @@ class CreateDataRepositoryTaskRequest extends AbstractModel
     public $TextLocation;
 
     /**
+     * @var boolean 是否开启自定义路径(暂时仅供预热使用)
+     */
+    public $EnableDataFlowSubPath;
+
+    /**
+     * @var string 自定义路径(暂时仅供预热使用)
+     */
+    public $DataFlowSubPath;
+
+    /**
      * @param string $TaskType 数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者COS_TO_FS(COS Bucket到文件系统)
      * @param string $Bucket COS存储桶名
      * @param string $FileSystemId 文件系统ID
@@ -80,6 +94,8 @@ class CreateDataRepositoryTaskRequest extends AbstractModel
      * @param string $TaskName 任务名称
      * @param string $RepositoryType 数据流通方式 MSP_AFM 手动加载  RAW_AFM 按需加载
      * @param string $TextLocation 文件列表下载地址，以http开头
+     * @param boolean $EnableDataFlowSubPath 是否开启自定义路径(暂时仅供预热使用)
+     * @param string $DataFlowSubPath 自定义路径(暂时仅供预热使用)
      */
     function __construct()
     {
@@ -120,6 +136,14 @@ class CreateDataRepositoryTaskRequest extends AbstractModel
 
         if (array_key_exists("TextLocation",$param) and $param["TextLocation"] !== null) {
             $this->TextLocation = $param["TextLocation"];
+        }
+
+        if (array_key_exists("EnableDataFlowSubPath",$param) and $param["EnableDataFlowSubPath"] !== null) {
+            $this->EnableDataFlowSubPath = $param["EnableDataFlowSubPath"];
+        }
+
+        if (array_key_exists("DataFlowSubPath",$param) and $param["DataFlowSubPath"] !== null) {
+            $this->DataFlowSubPath = $param["DataFlowSubPath"];
         }
     }
 }

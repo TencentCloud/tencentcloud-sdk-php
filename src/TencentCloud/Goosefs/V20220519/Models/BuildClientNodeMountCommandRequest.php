@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileSystemId(string $FileSystemId) 设置文件系统ID
  * @method string getCustomMountDir() 获取自定义挂载目录的绝对路径, 如果未指定, 则会使用默认值, 格式/goosefsx/${fs_id}-proxy. 比如/goosefsx/x-c60-a2b3d4-proxy
  * @method void setCustomMountDir(string $CustomMountDir) 设置自定义挂载目录的绝对路径, 如果未指定, 则会使用默认值, 格式/goosefsx/${fs_id}-proxy. 比如/goosefsx/x-c60-a2b3d4-proxy
+ * @method string getClusterId() 获取客户端集群ID
+ * @method void setClusterId(string $ClusterId) 设置客户端集群ID
  */
 class BuildClientNodeMountCommandRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class BuildClientNodeMountCommandRequest extends AbstractModel
     public $CustomMountDir;
 
     /**
+     * @var string 客户端集群ID
+     */
+    public $ClusterId;
+
+    /**
      * @param string $FileSystemId 文件系统ID
      * @param string $CustomMountDir 自定义挂载目录的绝对路径, 如果未指定, 则会使用默认值, 格式/goosefsx/${fs_id}-proxy. 比如/goosefsx/x-c60-a2b3d4-proxy
+     * @param string $ClusterId 客户端集群ID
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class BuildClientNodeMountCommandRequest extends AbstractModel
 
         if (array_key_exists("CustomMountDir",$param) and $param["CustomMountDir"] !== null) {
             $this->CustomMountDir = $param["CustomMountDir"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

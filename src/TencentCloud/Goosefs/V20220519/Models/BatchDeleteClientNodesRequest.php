@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientNodes(array $ClientNodes) 设置删除的客户端节点列表
  * @method boolean getSingleClusterFlag() 获取是否单集群，默认是false
  * @method void setSingleClusterFlag(boolean $SingleClusterFlag) 设置是否单集群，默认是false
+ * @method string getClusterId() 获取客户端集群id
+ * @method void setClusterId(string $ClusterId) 设置客户端集群id
  */
 class BatchDeleteClientNodesRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class BatchDeleteClientNodesRequest extends AbstractModel
     public $SingleClusterFlag;
 
     /**
+     * @var string 客户端集群id
+     */
+    public $ClusterId;
+
+    /**
      * @param string $FileSystemId 文件系统id
      * @param array $ClientNodes 删除的客户端节点列表
      * @param boolean $SingleClusterFlag 是否单集群，默认是false
+     * @param string $ClusterId 客户端集群id
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class BatchDeleteClientNodesRequest extends AbstractModel
 
         if (array_key_exists("SingleClusterFlag",$param) and $param["SingleClusterFlag"] !== null) {
             $this->SingleClusterFlag = $param["SingleClusterFlag"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

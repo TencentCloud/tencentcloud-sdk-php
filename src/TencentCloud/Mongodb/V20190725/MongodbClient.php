@@ -24,6 +24,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
 
 /**
  * @method Models\AssignProjectResponse AssignProject(Models\AssignProjectRequest $req) 本接口(AssignProject)用于指定云数据库实例的所属项目。
+ * @method Models\CloseAuditServiceResponse CloseAuditService(Models\CloseAuditServiceRequest $req) 本接口（CloseAuditService）用于关闭审计服务
  * @method Models\CreateAccountUserResponse CreateAccountUser(Models\CreateAccountUserRequest $req) 本接口（CreateAccountUser）用于自定义实例访问账号。
  * @method Models\CreateAuditLogFileResponse CreateAuditLogFile(Models\CreateAuditLogFileRequest $req) 本接口(CreateAuditLogFile)用于创建云数据库实例的审计日志文件。
  * @method Models\CreateBackupDBInstanceResponse CreateBackupDBInstance(Models\CreateBackupDBInstanceRequest $req) 本接口（CreateBackupDBInstance）用于备份实例。
@@ -38,7 +39,10 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\DeleteLogDownloadTaskResponse DeleteLogDownloadTask(Models\DeleteLogDownloadTaskRequest $req) 删除日志下载任务
  * @method Models\DescribeAccountUsersResponse DescribeAccountUsers(Models\DescribeAccountUsersRequest $req) 本接口（DescribeAccountUsers）用于获取当前实例的全部账号。
  * @method Models\DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfo(Models\DescribeAsyncRequestInfoRequest $req) 本接口（DescribeAsyncRequestInfo）用于查询异步任务状态接口。
+ * @method Models\DescribeAuditConfigResponse DescribeAuditConfig(Models\DescribeAuditConfigRequest $req) 本接口(DescribeAuditConfig)用于查询云数据库审计策略的服务配置，包括审计日志保存时长等。
  * @method Models\DescribeAuditInstanceListResponse DescribeAuditInstanceList(Models\DescribeAuditInstanceListRequest $req) 本接口（DescribeAuditInstanceList）用于查询开通或未开通数据库审计的实例列表。
+ * @method Models\DescribeAuditLogFilesResponse DescribeAuditLogFiles(Models\DescribeAuditLogFilesRequest $req) 本接口(DescribeAuditLogFiles)用于查询云数据库实例的审计日志文件。
+ * @method Models\DescribeAuditLogsResponse DescribeAuditLogs(Models\DescribeAuditLogsRequest $req) 本接口(DescribeAuditLogs)用于查询数据库审计日志。
  * @method Models\DescribeBackupDownloadTaskResponse DescribeBackupDownloadTask(Models\DescribeBackupDownloadTaskRequest $req) 本接口（DescribeBackupDownloadTask）用于查询备份下载任务信息。
  * @method Models\DescribeBackupRulesResponse DescribeBackupRules(Models\DescribeBackupRulesRequest $req) 本接口（DescribeBackupRules）用于获取实例自动备份配置信息。
  * @method Models\DescribeClientConnectionsResponse DescribeClientConnections(Models\DescribeClientConnectionsRequest $req) 本接口（DescribeClientConnections）用于查询实例客户端连接信息，包括连接 IP 和连接数量。

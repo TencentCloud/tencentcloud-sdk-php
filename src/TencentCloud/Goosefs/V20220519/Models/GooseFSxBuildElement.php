@@ -41,6 +41,7 @@ class GooseFSxBuildElement extends AbstractModel
 
     /**
      * @var array 要关联映射的bucket列表
+     * @deprecated
      */
     public $MappedBucketList;
 

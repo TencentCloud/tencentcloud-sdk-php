@@ -25,11 +25,15 @@ use TencentCloud\Common\AbstractModel;
  * @method array getHeaders() 获取应用配置的插件header信息
  * @method void setHeaders(array $Headers) 设置应用配置的插件header信息
  * @method AgentModelInfo getModel() 获取插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModel(AgentModelInfo $Model) 设置插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPluginInfoType() 获取插件信息类型; 0: 未指定类型; 1: 知识库问答插件
  * @method void setPluginInfoType(integer $PluginInfoType) 设置插件信息类型; 0: 未指定类型; 1: 知识库问答插件
  * @method AgentKnowledgeQAPlugin getKnowledgeQa() 获取知识库问答插件配置
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKnowledgeQa(AgentKnowledgeQAPlugin $KnowledgeQa) 设置知识库问答插件配置
+注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnableRoleAuth() 获取是否使用一键授权
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableRoleAuth(boolean $EnableRoleAuth) 设置是否使用一键授权
@@ -53,6 +57,7 @@ class AgentPluginInfo extends AbstractModel
 
     /**
      * @var AgentModelInfo 插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Model;
 
@@ -63,6 +68,7 @@ class AgentPluginInfo extends AbstractModel
 
     /**
      * @var AgentKnowledgeQAPlugin 知识库问答插件配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KnowledgeQa;
 
@@ -86,8 +92,10 @@ class AgentPluginInfo extends AbstractModel
      * @param string $PluginId 插件id
      * @param array $Headers 应用配置的插件header信息
      * @param AgentModelInfo $Model 插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PluginInfoType 插件信息类型; 0: 未指定类型; 1: 知识库问答插件
      * @param AgentKnowledgeQAPlugin $KnowledgeQa 知识库问答插件配置
+注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableRoleAuth 是否使用一键授权
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Query 应用配置的插件query信息

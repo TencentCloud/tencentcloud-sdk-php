@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getImageUrls() 获取用户图 URL 列表
  * @method void setImageUrls(array $ImageUrls) 设置用户图 URL 列表
- * @method Rect getTemplateFaceRect() 获取模版图人脸坐标。
- * @method void setTemplateFaceRect(Rect $TemplateFaceRect) 设置模版图人脸坐标。
+ * @method Rect getTemplateFaceRect() 获取模板图人脸坐标。
+ * @method void setTemplateFaceRect(Rect $TemplateFaceRect) 设置模板图人脸坐标。
  */
 class FaceInfo extends AbstractModel
 {
@@ -33,13 +33,13 @@ class FaceInfo extends AbstractModel
     public $ImageUrls;
 
     /**
-     * @var Rect 模版图人脸坐标。
+     * @var Rect 模板图人脸坐标。
      */
     public $TemplateFaceRect;
 
     /**
      * @param array $ImageUrls 用户图 URL 列表
-     * @param Rect $TemplateFaceRect 模版图人脸坐标。
+     * @param Rect $TemplateFaceRect 模板图人脸坐标。
      */
     function __construct()
     {

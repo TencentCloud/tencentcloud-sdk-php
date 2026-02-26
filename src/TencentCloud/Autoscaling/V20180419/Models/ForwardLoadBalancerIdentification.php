@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 应用型负载均衡器标识信息
  *
- * @method string getLoadBalancerId() 获取负载均衡器ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡器ID
- * @method string getListenerId() 获取应用型负载均衡监听器 ID
- * @method void setListenerId(string $ListenerId) 设置应用型负载均衡监听器 ID
- * @method string getLocationId() 获取转发规则ID，注意：针对七层监听器此参数必填
- * @method void setLocationId(string $LocationId) 设置转发规则ID，注意：针对七层监听器此参数必填
+ * @method string getLoadBalancerId() 获取<p>负载均衡器ID</p>
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置<p>负载均衡器ID</p>
+ * @method string getListenerId() 获取<p>应用型负载均衡监听器 ID</p>
+ * @method void setListenerId(string $ListenerId) 设置<p>应用型负载均衡监听器 ID</p>
+ * @method string getLocationId() 获取<p>转发规则ID，注意：针对七层监听器此参数必填</p>
+ * @method void setLocationId(string $LocationId) 设置<p>转发规则ID，注意：针对七层监听器此参数必填</p>
+ * @method array getPortList() 获取<p>监听器或转发路径需解绑的端口号列表。</p><p>取值范围：[1, 65535]</p><p>不传递该参数时，默认解绑指定监听器或转发路径关联的所有端口。</p>
+ * @method void setPortList(array $PortList) 设置<p>监听器或转发路径需解绑的端口号列表。</p><p>取值范围：[1, 65535]</p><p>不传递该参数时，默认解绑指定监听器或转发路径关联的所有端口。</p>
  */
 class ForwardLoadBalancerIdentification extends AbstractModel
 {
     /**
-     * @var string 负载均衡器ID
+     * @var string <p>负载均衡器ID</p>
      */
     public $LoadBalancerId;
 
     /**
-     * @var string 应用型负载均衡监听器 ID
+     * @var string <p>应用型负载均衡监听器 ID</p>
      */
     public $ListenerId;
 
     /**
-     * @var string 转发规则ID，注意：针对七层监听器此参数必填
+     * @var string <p>转发规则ID，注意：针对七层监听器此参数必填</p>
      */
     public $LocationId;
 
     /**
-     * @param string $LoadBalancerId 负载均衡器ID
-     * @param string $ListenerId 应用型负载均衡监听器 ID
-     * @param string $LocationId 转发规则ID，注意：针对七层监听器此参数必填
+     * @var array <p>监听器或转发路径需解绑的端口号列表。</p><p>取值范围：[1, 65535]</p><p>不传递该参数时，默认解绑指定监听器或转发路径关联的所有端口。</p>
+     */
+    public $PortList;
+
+    /**
+     * @param string $LoadBalancerId <p>负载均衡器ID</p>
+     * @param string $ListenerId <p>应用型负载均衡监听器 ID</p>
+     * @param string $LocationId <p>转发规则ID，注意：针对七层监听器此参数必填</p>
+     * @param array $PortList <p>监听器或转发路径需解绑的端口号列表。</p><p>取值范围：[1, 65535]</p><p>不传递该参数时，默认解绑指定监听器或转发路径关联的所有端口。</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ForwardLoadBalancerIdentification extends AbstractModel
 
         if (array_key_exists("LocationId",$param) and $param["LocationId"] !== null) {
             $this->LocationId = $param["LocationId"];
+        }
+
+        if (array_key_exists("PortList",$param) and $param["PortList"] !== null) {
+            $this->PortList = $param["PortList"];
         }
     }
 }

@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置工作流触发时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getScheduleTime() 获取计划调度时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScheduleTime(string $ScheduleTime) 设置计划调度时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExecutionStartTime() 获取执行开始时间戳
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutionStartTime(string $ExecutionStartTime) 设置执行开始时间戳
@@ -194,6 +198,12 @@ class TriggerWorkflowRunBrief extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
+
+    /**
+     * @var string 计划调度时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScheduleTime;
 
     /**
      * @var string 执行开始时间戳
@@ -350,6 +360,8 @@ class TriggerWorkflowRunBrief extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 工作流触发时间
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ScheduleTime 计划调度时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutionStartTime 执行开始时间戳
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutionEndTime 执行结束时间戳
@@ -440,6 +452,10 @@ class TriggerWorkflowRunBrief extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("ScheduleTime",$param) and $param["ScheduleTime"] !== null) {
+            $this->ScheduleTime = $param["ScheduleTime"];
         }
 
         if (array_key_exists("ExecutionStartTime",$param) and $param["ExecutionStartTime"] !== null) {

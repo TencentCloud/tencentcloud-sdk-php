@@ -127,6 +127,8 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\CreateCcnResponse CreateCcn(Models\CreateCcnRequest $req) 本接口（CreateCcn）用于创建云联网（CCN）。<br />
 * 创建云联网同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
 * 每个账号能创建的云联网实例个数是有限的，详请参考产品文档。如果需要扩充请联系在线客服。
+ * @method Models\CreateCcnPolicyBasedRoutingNextHopResponse CreateCcnPolicyBasedRoutingNextHop(Models\CreateCcnPolicyBasedRoutingNextHopRequest $req) 创建云联网策略路由下一跳
+ * @method Models\CreateCcnPolicyBasedRoutingRulesResponse CreateCcnPolicyBasedRoutingRules(Models\CreateCcnPolicyBasedRoutingRulesRequest $req) 创建云联网策略路由匹配规则
  * @method Models\CreateCcnRouteTablesResponse CreateCcnRouteTables(Models\CreateCcnRouteTablesRequest $req) 本接口（CreateCcnRouteTables）用于给指定的云联网实例新建路由表。
  * @method Models\CreateCdcLDCXListResponse CreateCdcLDCXList(Models\CreateCdcLDCXListRequest $req) 创建 IDC 通道
  * @method Models\CreateCdcNetPlanesResponse CreateCdcNetPlanes(Models\CreateCdcNetPlanesRequest $req) 创建虚拟连接，用于支持 CDC 多租户模式
@@ -264,6 +266,8 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DeleteCcnResponse DeleteCcn(Models\DeleteCcnRequest $req) 本接口（DeleteCcn）用于删除云联网。
 * 删除后，云联网关联的所有实例间路由将被删除，网络将会中断，请务必确认
 * 删除云联网是不可逆的操作，请谨慎处理。
+ * @method Models\DeleteCcnPolicyBasedRoutingNextHopResponse DeleteCcnPolicyBasedRoutingNextHop(Models\DeleteCcnPolicyBasedRoutingNextHopRequest $req) 删除云联网策略路由下一跳
+ * @method Models\DeleteCcnPolicyBasedRoutingRuleResponse DeleteCcnPolicyBasedRoutingRule(Models\DeleteCcnPolicyBasedRoutingRuleRequest $req) 删除云联网策略路由匹配规则
  * @method Models\DeleteCcnRouteTablesResponse DeleteCcnRouteTables(Models\DeleteCcnRouteTablesRequest $req) 本接口（DeleteCcnRouteTables）用于删除云联网路由表。
  * @method Models\DeleteCdcLDCXListResponse DeleteCdcLDCXList(Models\DeleteCdcLDCXListRequest $req) 删除 IDC通道
  * @method Models\DeleteCdcNetPlanesResponse DeleteCdcNetPlanes(Models\DeleteCdcNetPlanesRequest $req) 删除虚拟连接
@@ -359,6 +363,8 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DescribeBandwidthPackageResourcesResponse DescribeBandwidthPackageResources(Models\DescribeBandwidthPackageResourcesRequest $req) 本接口 (DescribeBandwidthPackageResources) 用于根据共享带宽包唯一ID查询共享带宽包内的资源列表，支持按条件过滤查询结果和分页查询。
  * @method Models\DescribeBandwidthPackagesResponse DescribeBandwidthPackages(Models\DescribeBandwidthPackagesRequest $req) 接口用于查询带宽包详细信息，包括带宽包唯一标识ID，类型，计费模式，名称，资源信息等
  * @method Models\DescribeCcnAttachedInstancesResponse DescribeCcnAttachedInstances(Models\DescribeCcnAttachedInstancesRequest $req) 本接口（DescribeCcnAttachedInstances）用于查询云联网实例下已关联的网络实例。
+ * @method Models\DescribeCcnPolicyBasedRoutingNextHopResponse DescribeCcnPolicyBasedRoutingNextHop(Models\DescribeCcnPolicyBasedRoutingNextHopRequest $req) 查询云联网策略路由下一跳
+ * @method Models\DescribeCcnPolicyBasedRoutingRuleResponse DescribeCcnPolicyBasedRoutingRule(Models\DescribeCcnPolicyBasedRoutingRuleRequest $req) 查询云联网策略路由匹配规则
  * @method Models\DescribeCcnRegionBandwidthLimitsResponse DescribeCcnRegionBandwidthLimits(Models\DescribeCcnRegionBandwidthLimitsRequest $req) 本接口（DescribeCcnRegionBandwidthLimits）用于查询云联网各地域出带宽上限，该接口只返回已关联网络实例包含的地域。
  * @method Models\DescribeCcnRouteTableBroadcastPolicysResponse DescribeCcnRouteTableBroadcastPolicys(Models\DescribeCcnRouteTableBroadcastPolicysRequest $req) 本接口(DescribeCcnRouteTableBroadcastPolicys)用于查询指定云联网路由表的路由传播策略。
  * @method Models\DescribeCcnRouteTableInputPolicysResponse DescribeCcnRouteTableInputPolicys(Models\DescribeCcnRouteTableInputPolicysRequest $req) 本接口(DescribeCcnRouteTableInputPolicys)用于查询指定云联网路由表的路由接收策略。
@@ -612,6 +618,8 @@ LimitTypes取值范围：
  * @method Models\ModifyBandwidthPackageBandwidthResponse ModifyBandwidthPackageBandwidth(Models\ModifyBandwidthPackageBandwidthRequest $req) 接口用于调整[共享带宽包](https://cloud.tencent.com/document/product/684/15245)(BWP)带宽
  * @method Models\ModifyCcnAttachedInstancesAttributeResponse ModifyCcnAttachedInstancesAttribute(Models\ModifyCcnAttachedInstancesAttributeRequest $req) 修改CCN关联实例属性，目前仅修改备注description
  * @method Models\ModifyCcnAttributeResponse ModifyCcnAttribute(Models\ModifyCcnAttributeRequest $req) 本接口（ModifyCcnAttribute）用于修改云联网（CCN）的相关属性。
+ * @method Models\ModifyCcnPolicyBasedRoutingNextHopAttributeResponse ModifyCcnPolicyBasedRoutingNextHopAttribute(Models\ModifyCcnPolicyBasedRoutingNextHopAttributeRequest $req) 更新云联网策略路由下一跳参数
+ * @method Models\ModifyCcnPolicyBasedRoutingRuleAttributeResponse ModifyCcnPolicyBasedRoutingRuleAttribute(Models\ModifyCcnPolicyBasedRoutingRuleAttributeRequest $req) 更新云联网策略路由匹配规则参数
  * @method Models\ModifyCcnRegionBandwidthLimitsTypeResponse ModifyCcnRegionBandwidthLimitsType(Models\ModifyCcnRegionBandwidthLimitsTypeRequest $req) 本接口（ModifyCcnRegionBandwidthLimitsType）用于修改后付费云联网实例修改带宽限速策略。
  * @method Models\ModifyCcnRouteTablesResponse ModifyCcnRouteTables(Models\ModifyCcnRouteTablesRequest $req) 该接口用于修改云联网路由表名称和备注。
  * @method Models\ModifyCdcLDCXAttributeResponse ModifyCdcLDCXAttribute(Models\ModifyCdcLDCXAttributeRequest $req) 修改 IDC通道信息

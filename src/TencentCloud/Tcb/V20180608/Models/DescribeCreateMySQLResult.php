@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailReason(string $FailReason) 设置失败原因
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getFreezeStatus() 获取是否冻结
- * @method void setFreezeStatus(boolean $FreezeStatus) 设置是否冻结
+ * @method boolean getFreezeStatus() 获取是否已被冻结（只在 Status=success时有效）
+ * @method void setFreezeStatus(boolean $FreezeStatus) 设置是否已被冻结（只在 Status=success时有效）
  */
 class DescribeCreateMySQLResult extends AbstractModel
 {
@@ -43,7 +43,7 @@ class DescribeCreateMySQLResult extends AbstractModel
     public $FailReason;
 
     /**
-     * @var boolean 是否冻结
+     * @var boolean 是否已被冻结（只在 Status=success时有效）
      */
     public $FreezeStatus;
 
@@ -51,7 +51,7 @@ class DescribeCreateMySQLResult extends AbstractModel
      * @param string $Status 状态 notexist | init | doing | success | fail
      * @param string $FailReason 失败原因
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $FreezeStatus 是否冻结
+     * @param boolean $FreezeStatus 是否已被冻结（只在 Status=success时有效）
      */
     function __construct()
     {

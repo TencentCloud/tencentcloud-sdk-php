@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutionStartTime(string $ExecutionStartTime) 设置运行开始时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDependencyTriggerPolicy() 获取依赖策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDependencyTriggerPolicy(string $DependencyTriggerPolicy) 设置依赖策略
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TriggerTaskBrief extends AbstractModel
 {
@@ -164,6 +168,12 @@ class TriggerTaskBrief extends AbstractModel
     public $ExecutionStartTime;
 
     /**
+     * @var string 依赖策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DependencyTriggerPolicy;
+
+    /**
      * @param string $ProjectId 项目id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectName 项目名称
@@ -191,6 +201,8 @@ class TriggerTaskBrief extends AbstractModel
      * @param string $ExecutionState 任务状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutionStartTime 运行开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DependencyTriggerPolicy 依赖策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -260,6 +272,10 @@ class TriggerTaskBrief extends AbstractModel
 
         if (array_key_exists("ExecutionStartTime",$param) and $param["ExecutionStartTime"] !== null) {
             $this->ExecutionStartTime = $param["ExecutionStartTime"];
+        }
+
+        if (array_key_exists("DependencyTriggerPolicy",$param) and $param["DependencyTriggerPolicy"] !== null) {
+            $this->DependencyTriggerPolicy = $param["DependencyTriggerPolicy"];
         }
     }
 }

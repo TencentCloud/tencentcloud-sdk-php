@@ -20,589 +20,381 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 核身文本信息。
  *
- * @method integer getErrCode() 获取本次流程最终验证结果。
-- 取值范围：0为成功。
-- 仅包含活体人脸核身结果，不包含意愿核身结果。
+ * @method integer getErrCode() 获取<p>本次流程最终验证结果。</p><ul><li>取值范围：0为成功。</li><li>仅包含活体人脸核身结果，不包含意愿核身结果。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrCode(integer $ErrCode) 设置本次流程最终验证结果。
-- 取值范围：0为成功。
-- 仅包含活体人脸核身结果，不包含意愿核身结果。
+ * @method void setErrCode(integer $ErrCode) 设置<p>本次流程最终验证结果。</p><ul><li>取值范围：0为成功。</li><li>仅包含活体人脸核身结果，不包含意愿核身结果。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getErrMsg() 获取本次流程最终验证结果描述。
-- 仅描述用，文案更新时不会通知。
+ * @method string getErrMsg() 获取<p>本次流程最终验证结果描述。</p><ul><li>仅描述用，文案更新时不会通知。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrMsg(string $ErrMsg) 设置本次流程最终验证结果描述。
-- 仅描述用，文案更新时不会通知。
+ * @method void setErrMsg(string $ErrMsg) 设置<p>本次流程最终验证结果描述。</p><ul><li>仅描述用，文案更新时不会通知。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIdCard() 获取本次验证使用的身份证号。
+ * @method string getIdCard() 获取<p>本次验证使用的身份证号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIdCard(string $IdCard) 设置本次验证使用的身份证号。
+ * @method void setIdCard(string $IdCard) 设置<p>本次验证使用的身份证号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getUseIDType() 获取用户认证时使用的证件号码类型。
-- 取值范围：
-    0：二代身份证的证件号码。
-    1：港澳台居住证的证件号码。
-    2：其他（核验使用的证件号码非合法身份号码）。
+ * @method integer getUseIDType() 获取<p>用户认证时使用的证件号码类型。</p><ul><li>取值范围：<br>  0：二代身份证的证件号码。<br>  1：港澳台居住证的证件号码。<br>  2：其他（核验使用的证件号码非合法身份号码）。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUseIDType(integer $UseIDType) 设置用户认证时使用的证件号码类型。
-- 取值范围：
-    0：二代身份证的证件号码。
-    1：港澳台居住证的证件号码。
-    2：其他（核验使用的证件号码非合法身份号码）。
+ * @method void setUseIDType(integer $UseIDType) 设置<p>用户认证时使用的证件号码类型。</p><ul><li>取值范围：<br>  0：二代身份证的证件号码。<br>  1：港澳台居住证的证件号码。<br>  2：其他（核验使用的证件号码非合法身份号码）。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取本次验证使用的姓名。
+ * @method string getName() 获取<p>本次验证使用的姓名。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置本次验证使用的姓名。
+ * @method void setName(string $Name) 设置<p>本次验证使用的姓名。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOcrNation() 获取身份校验环节识别结果：民族。
+ * @method string getOcrNation() 获取<p>身份校验环节识别结果：民族。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOcrNation(string $OcrNation) 设置身份校验环节识别结果：民族。
+ * @method void setOcrNation(string $OcrNation) 设置<p>身份校验环节识别结果：民族。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOcrAddress() 获取身份校验环节识别结果：家庭住址。
+ * @method string getOcrAddress() 获取<p>身份校验环节识别结果：家庭住址。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOcrAddress(string $OcrAddress) 设置身份校验环节识别结果：家庭住址。
+ * @method void setOcrAddress(string $OcrAddress) 设置<p>身份校验环节识别结果：家庭住址。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOcrBirth() 获取身份校验环节识别结果：生日。
-- 格式为：YYYY/M/D
+ * @method string getOcrBirth() 获取<p>身份校验环节识别结果：生日。</p><ul><li>格式为：YYYY/M/D</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOcrBirth(string $OcrBirth) 设置身份校验环节识别结果：生日。
-- 格式为：YYYY/M/D
+ * @method void setOcrBirth(string $OcrBirth) 设置<p>身份校验环节识别结果：生日。</p><ul><li>格式为：YYYY/M/D</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOcrAuthority() 获取身份校验环节识别结果：签发机关。
+ * @method string getOcrAuthority() 获取<p>身份校验环节识别结果：签发机关。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOcrAuthority(string $OcrAuthority) 设置身份校验环节识别结果：签发机关。
+ * @method void setOcrAuthority(string $OcrAuthority) 设置<p>身份校验环节识别结果：签发机关。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOcrValidDate() 获取身份校验环节识别结果：有效日期。
-- 格式为：YYYY.MM.DD-YYYY.MM.DD。
+ * @method string getOcrValidDate() 获取<p>身份校验环节识别结果：有效日期。</p><ul><li>格式为：YYYY.MM.DD-YYYY.MM.DD。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOcrValidDate(string $OcrValidDate) 设置身份校验环节识别结果：有效日期。
-- 格式为：YYYY.MM.DD-YYYY.MM.DD。
+ * @method void setOcrValidDate(string $OcrValidDate) 设置<p>身份校验环节识别结果：有效日期。</p><ul><li>格式为：YYYY.MM.DD-YYYY.MM.DD。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOcrName() 获取身份校验环节识别结果：姓名。
+ * @method string getOcrName() 获取<p>身份校验环节识别结果：姓名。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOcrName(string $OcrName) 设置身份校验环节识别结果：姓名。
+ * @method void setOcrName(string $OcrName) 设置<p>身份校验环节识别结果：姓名。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOcrIdCard() 获取身份校验环节识别结果：身份证号。
+ * @method string getOcrIdCard() 获取<p>身份校验环节识别结果：身份证号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOcrIdCard(string $OcrIdCard) 设置身份校验环节识别结果：身份证号。
+ * @method void setOcrIdCard(string $OcrIdCard) 设置<p>身份校验环节识别结果：身份证号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOcrGender() 获取身份校验环节识别结果：性别。
+ * @method string getOcrGender() 获取<p>身份校验环节识别结果：性别。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOcrGender(string $OcrGender) 设置身份校验环节识别结果：性别。
+ * @method void setOcrGender(string $OcrGender) 设置<p>身份校验环节识别结果：性别。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIdInfoFrom() 获取身份校验环节采用的信息上传方式。
-- 取值有"NFC"、"OCR"、"手动输入"、"其他"
+ * @method string getIdInfoFrom() 获取<p>身份校验环节采用的信息上传方式。</p><ul><li>取值有&quot;NFC&quot;、&quot;OCR&quot;、&quot;手动输入&quot;、&quot;其他&quot;</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIdInfoFrom(string $IdInfoFrom) 设置身份校验环节采用的信息上传方式。
-- 取值有"NFC"、"OCR"、"手动输入"、"其他"
+ * @method void setIdInfoFrom(string $IdInfoFrom) 设置<p>身份校验环节采用的信息上传方式。</p><ul><li>取值有&quot;NFC&quot;、&quot;OCR&quot;、&quot;手动输入&quot;、&quot;其他&quot;</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLiveStatus() 获取本次流程最终活体结果。
-- 0为成功
+ * @method integer getLiveStatus() 获取<p>本次流程最终活体结果。</p><ul><li>0为成功</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLiveStatus(integer $LiveStatus) 设置本次流程最终活体结果。
-- 0为成功
+ * @method void setLiveStatus(integer $LiveStatus) 设置<p>本次流程最终活体结果。</p><ul><li>0为成功</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLiveMsg() 获取本次流程最终活体结果描述。
-- 仅描述用，文案更新时不会通知。
+ * @method string getLiveMsg() 获取<p>本次流程最终活体结果描述。</p><ul><li>仅描述用，文案更新时不会通知。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLiveMsg(string $LiveMsg) 设置本次流程最终活体结果描述。
-- 仅描述用，文案更新时不会通知。
+ * @method void setLiveMsg(string $LiveMsg) 设置<p>本次流程最终活体结果描述。</p><ul><li>仅描述用，文案更新时不会通知。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getComparestatus() 获取本次流程最终一比一结果。
-- 0为成功
+ * @method integer getComparestatus() 获取<p>本次流程最终一比一结果。</p><ul><li>0为成功</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setComparestatus(integer $Comparestatus) 设置本次流程最终一比一结果。
-- 0为成功
+ * @method void setComparestatus(integer $Comparestatus) 设置<p>本次流程最终一比一结果。</p><ul><li>0为成功</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getComparemsg() 获取本次流程最终一比一结果描述。
-- 仅描述用，文案更新时不会通知。
+ * @method string getComparemsg() 获取<p>本次流程最终一比一结果描述。</p><ul><li>仅描述用，文案更新时不会通知。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setComparemsg(string $Comparemsg) 设置本次流程最终一比一结果描述。
-- 仅描述用，文案更新时不会通知。
+ * @method void setComparemsg(string $Comparemsg) 设置<p>本次流程最终一比一结果描述。</p><ul><li>仅描述用，文案更新时不会通知。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSim() 获取本次流程活体一比一的分数。
-- 取值范围 [0.00, 100.00]。
-- 相似度大于等于70时才判断为同一人，阈值不支持自定义。
-- 阈值70的误通过率为千分之一，阈值80的误通过率是万分之一。
+ * @method string getSim() 获取<p>本次流程活体一比一的分数。- 取值范围 [0.00, 100.00]。- 相似度大于等于70时才判断为同一人，阈值不支持自定义。- 阈值70的误通过率为万分之一。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSim(string $Sim) 设置本次流程活体一比一的分数。
-- 取值范围 [0.00, 100.00]。
-- 相似度大于等于70时才判断为同一人，阈值不支持自定义。
-- 阈值70的误通过率为千分之一，阈值80的误通过率是万分之一。
+ * @method void setSim(string $Sim) 设置<p>本次流程活体一比一的分数。- 取值范围 [0.00, 100.00]。- 相似度大于等于70时才判断为同一人，阈值不支持自定义。- 阈值70的误通过率为万分之一。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLocation() 获取地理位置经纬度。
+ * @method string getLocation() 获取<p>地理位置经纬度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLocation(string $Location) 设置地理位置经纬度。
+ * @method void setLocation(string $Location) 设置<p>地理位置经纬度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExtra() 获取Auth接口带入额外信息。
+ * @method string getExtra() 获取<p>Auth接口带入额外信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExtra(string $Extra) 设置Auth接口带入额外信息。
+ * @method void setExtra(string $Extra) 设置<p>Auth接口带入额外信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getLivenessDetail() 获取本次流程进行的活体一比一流水。
+ * @method array getLivenessDetail() 获取<p>本次流程进行的活体一比一流水。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLivenessDetail(array $LivenessDetail) 设置本次流程进行的活体一比一流水。
+ * @method void setLivenessDetail(array $LivenessDetail) 设置<p>本次流程进行的活体一比一流水。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getLivenessInfoTag() 获取描述当前请求活体阶段被拒绝的详细原因，该参数仅限PLUS版本核身服务返回。
-- 详情如下：
-    01-用户全程闭眼
-    02-用户未完成指定动作
-    03-疑似翻拍攻击
-    04-疑似合成攻击
-    05-疑似黑产模版
-    06-疑似存在水印
-    07-反光校验未通过
-    08-疑似中途换人
-    09-人脸质量过差
-    10-距离校验不通过
-    11-疑似对抗样本攻击
-    12-嘴巴区域疑似存在攻击痕迹
-    13-眼睛区域疑似存在攻击痕迹
-    14-眼睛或嘴巴被遮挡
+ * @method array getLivenessInfoTag() 获取<p>描述当前请求活体阶段被拒绝的详细原因，该参数仅限PLUS版本核身服务返回。</p><ul><li>详情如下：<br>  01-用户全程闭眼<br>  02-用户未完成指定动作<br>  03-疑似翻拍攻击<br>  04-疑似合成攻击<br>  05-疑似黑产模版<br>  06-疑似存在水印<br>  07-反光校验未通过<br>  08-疑似中途换人<br>  09-人脸质量过差<br>  10-距离校验不通过<br>  11-疑似对抗样本攻击<br>  12-嘴巴区域疑似存在攻击痕迹<br>  13-眼睛区域疑似存在攻击痕迹<br>  14-眼睛或嘴巴被遮挡</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLivenessInfoTag(array $LivenessInfoTag) 设置描述当前请求活体阶段被拒绝的详细原因，该参数仅限PLUS版本核身服务返回。
-- 详情如下：
-    01-用户全程闭眼
-    02-用户未完成指定动作
-    03-疑似翻拍攻击
-    04-疑似合成攻击
-    05-疑似黑产模版
-    06-疑似存在水印
-    07-反光校验未通过
-    08-疑似中途换人
-    09-人脸质量过差
-    10-距离校验不通过
-    11-疑似对抗样本攻击
-    12-嘴巴区域疑似存在攻击痕迹
-    13-眼睛区域疑似存在攻击痕迹
-    14-眼睛或嘴巴被遮挡
+ * @method void setLivenessInfoTag(array $LivenessInfoTag) 设置<p>描述当前请求活体阶段被拒绝的详细原因，该参数仅限PLUS版本核身服务返回。</p><ul><li>详情如下：<br>  01-用户全程闭眼<br>  02-用户未完成指定动作<br>  03-疑似翻拍攻击<br>  04-疑似合成攻击<br>  05-疑似黑产模版<br>  06-疑似存在水印<br>  07-反光校验未通过<br>  08-疑似中途换人<br>  09-人脸质量过差<br>  10-距离校验不通过<br>  11-疑似对抗样本攻击<br>  12-嘴巴区域疑似存在攻击痕迹<br>  13-眼睛区域疑似存在攻击痕迹<br>  14-眼睛或嘴巴被遮挡</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMobile() 获取手机号码。
+ * @method string getMobile() 获取<p>手机号码。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMobile(string $Mobile) 设置手机号码。
+ * @method void setMobile(string $Mobile) 设置<p>手机号码。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCompareLibType() 获取本次流程最终比对库源类型。
-- 取值范围：
-    权威库。
-    业务方自有库（用户上传照片、客户的混合库、混合部署库）。
-    二次验证库。
-    人工审核库。
+ * @method string getCompareLibType() 获取<p>本次流程最终比对库源类型。</p><ul><li>取值范围：<br>  权威库。<br>  业务方自有库（用户上传照片、客户的混合库、混合部署库）。<br>  二次验证库。<br>  人工审核库。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCompareLibType(string $CompareLibType) 设置本次流程最终比对库源类型。
-- 取值范围：
-    权威库。
-    业务方自有库（用户上传照片、客户的混合库、混合部署库）。
-    二次验证库。
-    人工审核库。
+ * @method void setCompareLibType(string $CompareLibType) 设置<p>本次流程最终比对库源类型。</p><ul><li>取值范围：<br>  权威库。<br>  业务方自有库（用户上传照片、客户的混合库、混合部署库）。<br>  二次验证库。<br>  人工审核库。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLivenessMode() 获取本次流程最终活体类型。
-- 取值范围：
-    0：未知
-    1：数字活体
-    2：动作活体
-    3：静默活体
-    4：一闪活体（动作+光线）
-    5：远近活体
+ * @method integer getLivenessMode() 获取<p>本次流程最终活体类型。</p><ul><li>取值范围：<br>  0：未知<br>  1：数字活体<br>  2：动作活体<br>  3：静默活体<br>  4：一闪活体（动作+光线）<br>  5：远近活体</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLivenessMode(integer $LivenessMode) 设置本次流程最终活体类型。
-- 取值范围：
-    0：未知
-    1：数字活体
-    2：动作活体
-    3：静默活体
-    4：一闪活体（动作+光线）
-    5：远近活体
+ * @method void setLivenessMode(integer $LivenessMode) 设置<p>本次流程最终活体类型。</p><ul><li>取值范围：<br>  0：未知<br>  1：数字活体<br>  2：动作活体<br>  3：静默活体<br>  4：一闪活体（动作+光线）<br>  5：远近活体</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getNFCRequestIds() 获取nfc重复计费requestId列表。
+ * @method array getNFCRequestIds() 获取<p>nfc重复计费requestId列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNFCRequestIds(array $NFCRequestIds) 设置nfc重复计费requestId列表。
+ * @method void setNFCRequestIds(array $NFCRequestIds) 设置<p>nfc重复计费requestId列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getNFCBillingCounts() 获取nfc重复计费计数。
+ * @method integer getNFCBillingCounts() 获取<p>nfc重复计费计数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNFCBillingCounts(integer $NFCBillingCounts) 设置nfc重复计费计数。
+ * @method void setNFCBillingCounts(integer $NFCBillingCounts) 设置<p>nfc重复计费计数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPassNo() 获取港澳台居住证通行证号码。
+ * @method string getPassNo() 获取<p>港澳台居住证通行证号码。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPassNo(string $PassNo) 设置港澳台居住证通行证号码。
+ * @method void setPassNo(string $PassNo) 设置<p>港澳台居住证通行证号码。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVisaNum() 获取港澳台居住证签发次数。
+ * @method string getVisaNum() 获取<p>港澳台居住证签发次数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVisaNum(string $VisaNum) 设置港澳台居住证签发次数。
+ * @method void setVisaNum(string $VisaNum) 设置<p>港澳台居住证签发次数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLivenessActionSequence() 获取活体检测的动作顺序，多动作以“,”分隔。
-输出格式如：“1,2”表示“张嘴+眨眼”。
-- 详细序列值含义如下： 
-   1：张嘴
-2：眨眼
-3：点头
-4：摇头
-5：静默
-注：仅浮层H5产品返回
+ * @method string getLivenessActionSequence() 获取<p>活体检测的动作顺序，多动作以“,”分隔。<br>输出格式如：“1,2”表示“张嘴+眨眼”。</p><ul><li>详细序列值含义如下：<br> 1：张嘴<br>2：眨眼<br>3：点头<br>4：摇头<br>5：静默<br>注：仅浮层H5产品返回</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLivenessActionSequence(string $LivenessActionSequence) 设置活体检测的动作顺序，多动作以“,”分隔。
-输出格式如：“1,2”表示“张嘴+眨眼”。
-- 详细序列值含义如下： 
-   1：张嘴
-2：眨眼
-3：点头
-4：摇头
-5：静默
-注：仅浮层H5产品返回
+ * @method void setLivenessActionSequence(string $LivenessActionSequence) 设置<p>活体检测的动作顺序，多动作以“,”分隔。<br>输出格式如：“1,2”表示“张嘴+眨眼”。</p><ul><li>详细序列值含义如下：<br> 1：张嘴<br>2：眨眼<br>3：点头<br>4：摇头<br>5：静默<br>注：仅浮层H5产品返回</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetectInfoText extends AbstractModel
 {
     /**
-     * @var integer 本次流程最终验证结果。
-- 取值范围：0为成功。
-- 仅包含活体人脸核身结果，不包含意愿核身结果。
+     * @var integer <p>本次流程最终验证结果。</p><ul><li>取值范围：0为成功。</li><li>仅包含活体人脸核身结果，不包含意愿核身结果。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrCode;
 
     /**
-     * @var string 本次流程最终验证结果描述。
-- 仅描述用，文案更新时不会通知。
+     * @var string <p>本次流程最终验证结果描述。</p><ul><li>仅描述用，文案更新时不会通知。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrMsg;
 
     /**
-     * @var string 本次验证使用的身份证号。
+     * @var string <p>本次验证使用的身份证号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdCard;
 
     /**
-     * @var integer 用户认证时使用的证件号码类型。
-- 取值范围：
-    0：二代身份证的证件号码。
-    1：港澳台居住证的证件号码。
-    2：其他（核验使用的证件号码非合法身份号码）。
+     * @var integer <p>用户认证时使用的证件号码类型。</p><ul><li>取值范围：<br>  0：二代身份证的证件号码。<br>  1：港澳台居住证的证件号码。<br>  2：其他（核验使用的证件号码非合法身份号码）。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UseIDType;
 
     /**
-     * @var string 本次验证使用的姓名。
+     * @var string <p>本次验证使用的姓名。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var string 身份校验环节识别结果：民族。
+     * @var string <p>身份校验环节识别结果：民族。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrNation;
 
     /**
-     * @var string 身份校验环节识别结果：家庭住址。
+     * @var string <p>身份校验环节识别结果：家庭住址。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrAddress;
 
     /**
-     * @var string 身份校验环节识别结果：生日。
-- 格式为：YYYY/M/D
+     * @var string <p>身份校验环节识别结果：生日。</p><ul><li>格式为：YYYY/M/D</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrBirth;
 
     /**
-     * @var string 身份校验环节识别结果：签发机关。
+     * @var string <p>身份校验环节识别结果：签发机关。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrAuthority;
 
     /**
-     * @var string 身份校验环节识别结果：有效日期。
-- 格式为：YYYY.MM.DD-YYYY.MM.DD。
+     * @var string <p>身份校验环节识别结果：有效日期。</p><ul><li>格式为：YYYY.MM.DD-YYYY.MM.DD。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrValidDate;
 
     /**
-     * @var string 身份校验环节识别结果：姓名。
+     * @var string <p>身份校验环节识别结果：姓名。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrName;
 
     /**
-     * @var string 身份校验环节识别结果：身份证号。
+     * @var string <p>身份校验环节识别结果：身份证号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrIdCard;
 
     /**
-     * @var string 身份校验环节识别结果：性别。
+     * @var string <p>身份校验环节识别结果：性别。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrGender;
 
     /**
-     * @var string 身份校验环节采用的信息上传方式。
-- 取值有"NFC"、"OCR"、"手动输入"、"其他"
+     * @var string <p>身份校验环节采用的信息上传方式。</p><ul><li>取值有&quot;NFC&quot;、&quot;OCR&quot;、&quot;手动输入&quot;、&quot;其他&quot;</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdInfoFrom;
 
     /**
-     * @var integer 本次流程最终活体结果。
-- 0为成功
+     * @var integer <p>本次流程最终活体结果。</p><ul><li>0为成功</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LiveStatus;
 
     /**
-     * @var string 本次流程最终活体结果描述。
-- 仅描述用，文案更新时不会通知。
+     * @var string <p>本次流程最终活体结果描述。</p><ul><li>仅描述用，文案更新时不会通知。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LiveMsg;
 
     /**
-     * @var integer 本次流程最终一比一结果。
-- 0为成功
+     * @var integer <p>本次流程最终一比一结果。</p><ul><li>0为成功</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Comparestatus;
 
     /**
-     * @var string 本次流程最终一比一结果描述。
-- 仅描述用，文案更新时不会通知。
+     * @var string <p>本次流程最终一比一结果描述。</p><ul><li>仅描述用，文案更新时不会通知。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Comparemsg;
 
     /**
-     * @var string 本次流程活体一比一的分数。
-- 取值范围 [0.00, 100.00]。
-- 相似度大于等于70时才判断为同一人，阈值不支持自定义。
-- 阈值70的误通过率为千分之一，阈值80的误通过率是万分之一。
+     * @var string <p>本次流程活体一比一的分数。- 取值范围 [0.00, 100.00]。- 相似度大于等于70时才判断为同一人，阈值不支持自定义。- 阈值70的误通过率为万分之一。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sim;
 
     /**
-     * @var string 地理位置经纬度。
+     * @var string <p>地理位置经纬度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Location;
 
     /**
-     * @var string Auth接口带入额外信息。
+     * @var string <p>Auth接口带入额外信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Extra;
 
     /**
-     * @var array 本次流程进行的活体一比一流水。
+     * @var array <p>本次流程进行的活体一比一流水。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LivenessDetail;
 
     /**
-     * @var array 描述当前请求活体阶段被拒绝的详细原因，该参数仅限PLUS版本核身服务返回。
-- 详情如下：
-    01-用户全程闭眼
-    02-用户未完成指定动作
-    03-疑似翻拍攻击
-    04-疑似合成攻击
-    05-疑似黑产模版
-    06-疑似存在水印
-    07-反光校验未通过
-    08-疑似中途换人
-    09-人脸质量过差
-    10-距离校验不通过
-    11-疑似对抗样本攻击
-    12-嘴巴区域疑似存在攻击痕迹
-    13-眼睛区域疑似存在攻击痕迹
-    14-眼睛或嘴巴被遮挡
+     * @var array <p>描述当前请求活体阶段被拒绝的详细原因，该参数仅限PLUS版本核身服务返回。</p><ul><li>详情如下：<br>  01-用户全程闭眼<br>  02-用户未完成指定动作<br>  03-疑似翻拍攻击<br>  04-疑似合成攻击<br>  05-疑似黑产模版<br>  06-疑似存在水印<br>  07-反光校验未通过<br>  08-疑似中途换人<br>  09-人脸质量过差<br>  10-距离校验不通过<br>  11-疑似对抗样本攻击<br>  12-嘴巴区域疑似存在攻击痕迹<br>  13-眼睛区域疑似存在攻击痕迹<br>  14-眼睛或嘴巴被遮挡</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LivenessInfoTag;
 
     /**
-     * @var string 手机号码。
+     * @var string <p>手机号码。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mobile;
 
     /**
-     * @var string 本次流程最终比对库源类型。
-- 取值范围：
-    权威库。
-    业务方自有库（用户上传照片、客户的混合库、混合部署库）。
-    二次验证库。
-    人工审核库。
+     * @var string <p>本次流程最终比对库源类型。</p><ul><li>取值范围：<br>  权威库。<br>  业务方自有库（用户上传照片、客户的混合库、混合部署库）。<br>  二次验证库。<br>  人工审核库。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CompareLibType;
 
     /**
-     * @var integer 本次流程最终活体类型。
-- 取值范围：
-    0：未知
-    1：数字活体
-    2：动作活体
-    3：静默活体
-    4：一闪活体（动作+光线）
-    5：远近活体
+     * @var integer <p>本次流程最终活体类型。</p><ul><li>取值范围：<br>  0：未知<br>  1：数字活体<br>  2：动作活体<br>  3：静默活体<br>  4：一闪活体（动作+光线）<br>  5：远近活体</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LivenessMode;
 
     /**
-     * @var array nfc重复计费requestId列表。
+     * @var array <p>nfc重复计费requestId列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NFCRequestIds;
 
     /**
-     * @var integer nfc重复计费计数。
+     * @var integer <p>nfc重复计费计数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NFCBillingCounts;
 
     /**
-     * @var string 港澳台居住证通行证号码。
+     * @var string <p>港澳台居住证通行证号码。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PassNo;
 
     /**
-     * @var string 港澳台居住证签发次数。
+     * @var string <p>港澳台居住证签发次数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VisaNum;
 
     /**
-     * @var string 活体检测的动作顺序，多动作以“,”分隔。
-输出格式如：“1,2”表示“张嘴+眨眼”。
-- 详细序列值含义如下： 
-   1：张嘴
-2：眨眼
-3：点头
-4：摇头
-5：静默
-注：仅浮层H5产品返回
+     * @var string <p>活体检测的动作顺序，多动作以“,”分隔。<br>输出格式如：“1,2”表示“张嘴+眨眼”。</p><ul><li>详细序列值含义如下：<br> 1：张嘴<br>2：眨眼<br>3：点头<br>4：摇头<br>5：静默<br>注：仅浮层H5产品返回</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LivenessActionSequence;
 
     /**
-     * @param integer $ErrCode 本次流程最终验证结果。
-- 取值范围：0为成功。
-- 仅包含活体人脸核身结果，不包含意愿核身结果。
+     * @param integer $ErrCode <p>本次流程最终验证结果。</p><ul><li>取值范围：0为成功。</li><li>仅包含活体人脸核身结果，不包含意愿核身结果。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ErrMsg 本次流程最终验证结果描述。
-- 仅描述用，文案更新时不会通知。
+     * @param string $ErrMsg <p>本次流程最终验证结果描述。</p><ul><li>仅描述用，文案更新时不会通知。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IdCard 本次验证使用的身份证号。
+     * @param string $IdCard <p>本次验证使用的身份证号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $UseIDType 用户认证时使用的证件号码类型。
-- 取值范围：
-    0：二代身份证的证件号码。
-    1：港澳台居住证的证件号码。
-    2：其他（核验使用的证件号码非合法身份号码）。
+     * @param integer $UseIDType <p>用户认证时使用的证件号码类型。</p><ul><li>取值范围：<br>  0：二代身份证的证件号码。<br>  1：港澳台居住证的证件号码。<br>  2：其他（核验使用的证件号码非合法身份号码）。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 本次验证使用的姓名。
+     * @param string $Name <p>本次验证使用的姓名。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OcrNation 身份校验环节识别结果：民族。
+     * @param string $OcrNation <p>身份校验环节识别结果：民族。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OcrAddress 身份校验环节识别结果：家庭住址。
+     * @param string $OcrAddress <p>身份校验环节识别结果：家庭住址。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OcrBirth 身份校验环节识别结果：生日。
-- 格式为：YYYY/M/D
+     * @param string $OcrBirth <p>身份校验环节识别结果：生日。</p><ul><li>格式为：YYYY/M/D</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OcrAuthority 身份校验环节识别结果：签发机关。
+     * @param string $OcrAuthority <p>身份校验环节识别结果：签发机关。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OcrValidDate 身份校验环节识别结果：有效日期。
-- 格式为：YYYY.MM.DD-YYYY.MM.DD。
+     * @param string $OcrValidDate <p>身份校验环节识别结果：有效日期。</p><ul><li>格式为：YYYY.MM.DD-YYYY.MM.DD。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OcrName 身份校验环节识别结果：姓名。
+     * @param string $OcrName <p>身份校验环节识别结果：姓名。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OcrIdCard 身份校验环节识别结果：身份证号。
+     * @param string $OcrIdCard <p>身份校验环节识别结果：身份证号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OcrGender 身份校验环节识别结果：性别。
+     * @param string $OcrGender <p>身份校验环节识别结果：性别。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IdInfoFrom 身份校验环节采用的信息上传方式。
-- 取值有"NFC"、"OCR"、"手动输入"、"其他"
+     * @param string $IdInfoFrom <p>身份校验环节采用的信息上传方式。</p><ul><li>取值有&quot;NFC&quot;、&quot;OCR&quot;、&quot;手动输入&quot;、&quot;其他&quot;</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $LiveStatus 本次流程最终活体结果。
-- 0为成功
+     * @param integer $LiveStatus <p>本次流程最终活体结果。</p><ul><li>0为成功</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LiveMsg 本次流程最终活体结果描述。
-- 仅描述用，文案更新时不会通知。
+     * @param string $LiveMsg <p>本次流程最终活体结果描述。</p><ul><li>仅描述用，文案更新时不会通知。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Comparestatus 本次流程最终一比一结果。
-- 0为成功
+     * @param integer $Comparestatus <p>本次流程最终一比一结果。</p><ul><li>0为成功</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Comparemsg 本次流程最终一比一结果描述。
-- 仅描述用，文案更新时不会通知。
+     * @param string $Comparemsg <p>本次流程最终一比一结果描述。</p><ul><li>仅描述用，文案更新时不会通知。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Sim 本次流程活体一比一的分数。
-- 取值范围 [0.00, 100.00]。
-- 相似度大于等于70时才判断为同一人，阈值不支持自定义。
-- 阈值70的误通过率为千分之一，阈值80的误通过率是万分之一。
+     * @param string $Sim <p>本次流程活体一比一的分数。- 取值范围 [0.00, 100.00]。- 相似度大于等于70时才判断为同一人，阈值不支持自定义。- 阈值70的误通过率为万分之一。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Location 地理位置经纬度。
+     * @param string $Location <p>地理位置经纬度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Extra Auth接口带入额外信息。
+     * @param string $Extra <p>Auth接口带入额外信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $LivenessDetail 本次流程进行的活体一比一流水。
+     * @param array $LivenessDetail <p>本次流程进行的活体一比一流水。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $LivenessInfoTag 描述当前请求活体阶段被拒绝的详细原因，该参数仅限PLUS版本核身服务返回。
-- 详情如下：
-    01-用户全程闭眼
-    02-用户未完成指定动作
-    03-疑似翻拍攻击
-    04-疑似合成攻击
-    05-疑似黑产模版
-    06-疑似存在水印
-    07-反光校验未通过
-    08-疑似中途换人
-    09-人脸质量过差
-    10-距离校验不通过
-    11-疑似对抗样本攻击
-    12-嘴巴区域疑似存在攻击痕迹
-    13-眼睛区域疑似存在攻击痕迹
-    14-眼睛或嘴巴被遮挡
+     * @param array $LivenessInfoTag <p>描述当前请求活体阶段被拒绝的详细原因，该参数仅限PLUS版本核身服务返回。</p><ul><li>详情如下：<br>  01-用户全程闭眼<br>  02-用户未完成指定动作<br>  03-疑似翻拍攻击<br>  04-疑似合成攻击<br>  05-疑似黑产模版<br>  06-疑似存在水印<br>  07-反光校验未通过<br>  08-疑似中途换人<br>  09-人脸质量过差<br>  10-距离校验不通过<br>  11-疑似对抗样本攻击<br>  12-嘴巴区域疑似存在攻击痕迹<br>  13-眼睛区域疑似存在攻击痕迹<br>  14-眼睛或嘴巴被遮挡</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Mobile 手机号码。
+     * @param string $Mobile <p>手机号码。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CompareLibType 本次流程最终比对库源类型。
-- 取值范围：
-    权威库。
-    业务方自有库（用户上传照片、客户的混合库、混合部署库）。
-    二次验证库。
-    人工审核库。
+     * @param string $CompareLibType <p>本次流程最终比对库源类型。</p><ul><li>取值范围：<br>  权威库。<br>  业务方自有库（用户上传照片、客户的混合库、混合部署库）。<br>  二次验证库。<br>  人工审核库。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $LivenessMode 本次流程最终活体类型。
-- 取值范围：
-    0：未知
-    1：数字活体
-    2：动作活体
-    3：静默活体
-    4：一闪活体（动作+光线）
-    5：远近活体
+     * @param integer $LivenessMode <p>本次流程最终活体类型。</p><ul><li>取值范围：<br>  0：未知<br>  1：数字活体<br>  2：动作活体<br>  3：静默活体<br>  4：一闪活体（动作+光线）<br>  5：远近活体</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $NFCRequestIds nfc重复计费requestId列表。
+     * @param array $NFCRequestIds <p>nfc重复计费requestId列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $NFCBillingCounts nfc重复计费计数。
+     * @param integer $NFCBillingCounts <p>nfc重复计费计数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PassNo 港澳台居住证通行证号码。
+     * @param string $PassNo <p>港澳台居住证通行证号码。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VisaNum 港澳台居住证签发次数。
+     * @param string $VisaNum <p>港澳台居住证签发次数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LivenessActionSequence 活体检测的动作顺序，多动作以“,”分隔。
-输出格式如：“1,2”表示“张嘴+眨眼”。
-- 详细序列值含义如下： 
-   1：张嘴
-2：眨眼
-3：点头
-4：摇头
-5：静默
-注：仅浮层H5产品返回
+     * @param string $LivenessActionSequence <p>活体检测的动作顺序，多动作以“,”分隔。<br>输出格式如：“1,2”表示“张嘴+眨眼”。</p><ul><li>详细序列值含义如下：<br> 1：张嘴<br>2：眨眼<br>3：点头<br>4：摇头<br>5：静默<br>注：仅浮层H5产品返回</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

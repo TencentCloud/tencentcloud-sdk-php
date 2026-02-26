@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEnvId() 获取云开发环境ID
  * @method void setEnvId(string $EnvId) 设置云开发环境ID
- * @method string getDbInstanceType() 获取Db类型 1. FLEXDB 2.MYSQL
- * @method void setDbInstanceType(string $DbInstanceType) 设置Db类型 1. FLEXDB 2.MYSQL
+ * @method string getDbInstanceType() 获取Db类型: MYSQL
+ * @method void setDbInstanceType(string $DbInstanceType) 设置Db类型: MYSQL
  * @method string getMysqlVersion() 获取mysql版本
  * @method void setMysqlVersion(string $MysqlVersion) 设置mysql版本
  * @method string getVpcId() 获取vpc Id
@@ -41,7 +41,7 @@ class CreateMySQLRequest extends AbstractModel
     public $EnvId;
 
     /**
-     * @var string Db类型 1. FLEXDB 2.MYSQL
+     * @var string Db类型: MYSQL
      */
     public $DbInstanceType;
 
@@ -67,7 +67,7 @@ class CreateMySQLRequest extends AbstractModel
 
     /**
      * @param string $EnvId 云开发环境ID
-     * @param string $DbInstanceType Db类型 1. FLEXDB 2.MYSQL
+     * @param string $DbInstanceType Db类型: MYSQL
      * @param string $MysqlVersion mysql版本
      * @param string $VpcId vpc Id
      * @param string $SubnetId 子网ID

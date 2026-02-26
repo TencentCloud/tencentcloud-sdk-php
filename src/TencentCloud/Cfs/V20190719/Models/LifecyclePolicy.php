@@ -20,61 +20,61 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 生命周期管理策略信息
  *
- * @method string getCreateTime() 获取生命周期管理策略创建的时间
- * @method void setCreateTime(string $CreateTime) 设置生命周期管理策略创建的时间
- * @method string getLifecyclePolicyID() 获取生命周期管理策略ID
- * @method void setLifecyclePolicyID(string $LifecyclePolicyID) 设置生命周期管理策略ID
- * @method string getLifecyclePolicyName() 获取生命周期管理策略名称
+ * @method string getCreateTime() 获取<p>生命周期管理策略创建的时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>生命周期管理策略创建的时间</p>
+ * @method string getLifecyclePolicyID() 获取<p>生命周期管理策略ID</p>
+ * @method void setLifecyclePolicyID(string $LifecyclePolicyID) 设置<p>生命周期管理策略ID</p>
+ * @method string getLifecyclePolicyName() 获取<p>生命周期管理策略名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLifecyclePolicyName(string $LifecyclePolicyName) 设置生命周期管理策略名称
+ * @method void setLifecyclePolicyName(string $LifecyclePolicyName) 设置<p>生命周期管理策略名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getLifecycleRules() 获取生命周期管理策略关联的管理规则列表
+ * @method array getLifecycleRules() 获取<p>生命周期管理策略关联的管理规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLifecycleRules(array $LifecycleRules) 设置生命周期管理策略关联的管理规则列表
+ * @method void setLifecycleRules(array $LifecycleRules) 设置<p>生命周期管理策略关联的管理规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPaths() 获取生命周期管理策略关联目录的绝对路径列表
+ * @method array getPaths() 获取<p>生命周期管理策略关联目录的绝对路径列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPaths(array $Paths) 设置生命周期管理策略关联目录的绝对路径列表
+ * @method void setPaths(array $Paths) 设置<p>生命周期管理策略关联目录的绝对路径列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class LifecyclePolicy extends AbstractModel
 {
     /**
-     * @var string 生命周期管理策略创建的时间
+     * @var string <p>生命周期管理策略创建的时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 生命周期管理策略ID
+     * @var string <p>生命周期管理策略ID</p>
      */
     public $LifecyclePolicyID;
 
     /**
-     * @var string 生命周期管理策略名称
+     * @var string <p>生命周期管理策略名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LifecyclePolicyName;
 
     /**
-     * @var array 生命周期管理策略关联的管理规则列表
+     * @var array <p>生命周期管理策略关联的管理规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LifecycleRules;
 
     /**
-     * @var array 生命周期管理策略关联目录的绝对路径列表
+     * @var array <p>生命周期管理策略关联目录的绝对路径列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Paths;
 
     /**
-     * @param string $CreateTime 生命周期管理策略创建的时间
-     * @param string $LifecyclePolicyID 生命周期管理策略ID
-     * @param string $LifecyclePolicyName 生命周期管理策略名称
+     * @param string $CreateTime <p>生命周期管理策略创建的时间</p>
+     * @param string $LifecyclePolicyID <p>生命周期管理策略ID</p>
+     * @param string $LifecyclePolicyName <p>生命周期管理策略名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $LifecycleRules 生命周期管理策略关联的管理规则列表
+     * @param array $LifecycleRules <p>生命周期管理策略关联的管理规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Paths 生命周期管理策略关联目录的绝对路径列表
+     * @param array $Paths <p>生命周期管理策略关联目录的绝对路径列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

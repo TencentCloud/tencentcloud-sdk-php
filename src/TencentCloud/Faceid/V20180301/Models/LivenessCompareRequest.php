@@ -20,162 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * LivenessCompare请求参数结构体
  *
- * @method string getLivenessType() 获取活体检测类型。
-- 取值：LIP/ACTION/SILENT。
-- LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。
- * @method void setLivenessType(string $LivenessType) 设置活体检测类型。
-- 取值：LIP/ACTION/SILENT。
-- LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。
- * @method string getImageBase64() 获取用于人脸比对的照片的Base64值。
-- Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
-- 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
-- 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageBase64。
- * @method void setImageBase64(string $ImageBase64) 设置用于人脸比对的照片的Base64值。
-- Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
-- 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
-- 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageBase64。
- * @method string getImageUrl() 获取用于人脸比对照片的URL地址。
-- 图片下载后经Base64编码后的数据大小不超过3M，仅支持jpg、png格式。
-- 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageBase64。
-- 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
-- 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
- * @method void setImageUrl(string $ImageUrl) 设置用于人脸比对照片的URL地址。
-- 图片下载后经Base64编码后的数据大小不超过3M，仅支持jpg、png格式。
-- 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageBase64。
-- 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
-- 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
- * @method string getValidateData() 获取验证数据。
-- 数字模式传参：传数字验证码，验证码需先调用<a href="https://cloud.tencent.com/document/product/1007/31821">获取数字验证码接口</a>得到；
-- 动作模式传参：传动作顺序，动作顺序需先调用<a href="https://cloud.tencent.com/document/product/1007/31822">获取动作顺序接口</a>得到；
-- 静默模式传参：空。
- * @method void setValidateData(string $ValidateData) 设置验证数据。
-- 数字模式传参：传数字验证码，验证码需先调用<a href="https://cloud.tencent.com/document/product/1007/31821">获取数字验证码接口</a>得到；
-- 动作模式传参：传动作顺序，动作顺序需先调用<a href="https://cloud.tencent.com/document/product/1007/31822">获取动作顺序接口</a>得到；
-- 静默模式传参：空。
- * @method string getOptional() 获取额外配置，传入JSON字符串。
-
-- 格式如下：
-{
-"BestFrameNum": 2  //需要返回多张最佳截图，取值范围2-10
-}
- * @method void setOptional(string $Optional) 设置额外配置，传入JSON字符串。
-
-- 格式如下：
-{
-"BestFrameNum": 2  //需要返回多张最佳截图，取值范围2-10
-}
- * @method string getVideoBase64() 获取用于活体检测的视频，视频的Base64值。
-- Base64编码后的大小不超过8M，支持mp4、avi、flv格式。
-- 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
-- 视频的 VideoUrl、VideoBase64 必须提供一个，如果都提供，只使用 VideoBase64。
- * @method void setVideoBase64(string $VideoBase64) 设置用于活体检测的视频，视频的Base64值。
-- Base64编码后的大小不超过8M，支持mp4、avi、flv格式。
-- 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
-- 视频的 VideoUrl、VideoBase64 必须提供一个，如果都提供，只使用 VideoBase64。
- * @method string getVideoUrl() 获取用于活体检测的视频Url 地址。
-- 视频下载后经Base64编码后不超过 8M，视频下载耗时不超过4S，支持mp4、avi、flv格式。
-- 视频的 VideoUrl、VideoBase64 必须提供一个，如果都提供，只使用 VideoBase64。
-- 建议视频存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议视频存储于腾讯云。
-- 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
- * @method void setVideoUrl(string $VideoUrl) 设置用于活体检测的视频Url 地址。
-- 视频下载后经Base64编码后不超过 8M，视频下载耗时不超过4S，支持mp4、avi、flv格式。
-- 视频的 VideoUrl、VideoBase64 必须提供一个，如果都提供，只使用 VideoBase64。
-- 建议视频存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议视频存储于腾讯云。
-- 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+ * @method string getLivenessType() 获取<p>活体检测类型。</p><ul><li>取值：LIP/ACTION/SILENT。</li><li>LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。</li></ul>
+ * @method void setLivenessType(string $LivenessType) 设置<p>活体检测类型。</p><ul><li>取值：LIP/ACTION/SILENT。</li><li>LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。</li></ul>
+ * @method string getImageBase64() 获取<p>用于人脸比对的照片的Base64值。</p><ul><li>Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。</li><li>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</li><li>图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageBase64。</li></ul>
+ * @method void setImageBase64(string $ImageBase64) 设置<p>用于人脸比对的照片的Base64值。</p><ul><li>Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。</li><li>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</li><li>图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageBase64。</li></ul>
+ * @method string getImageUrl() 获取<p>用于人脸比对照片的URL地址。</p><ul><li>图片下载后经Base64编码后的数据大小不超过3M，仅支持jpg、png格式。</li><li>图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageBase64。</li><li>图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。</li><li>非腾讯云存储的 Url 速度和稳定性可能受一定影响。</li></ul>
+ * @method void setImageUrl(string $ImageUrl) 设置<p>用于人脸比对照片的URL地址。</p><ul><li>图片下载后经Base64编码后的数据大小不超过3M，仅支持jpg、png格式。</li><li>图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageBase64。</li><li>图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。</li><li>非腾讯云存储的 Url 速度和稳定性可能受一定影响。</li></ul>
+ * @method string getValidateData() 获取<p>验证数据。</p><ul><li>数字模式传参：传数字验证码，验证码需先调用<a href="https://cloud.tencent.com/document/product/1007/31821">获取数字验证码接口</a>得到；</li><li>动作模式传参：传动作顺序，动作顺序需先调用<a href="https://cloud.tencent.com/document/product/1007/31822">获取动作顺序接口</a>得到；</li><li>静默模式传参：空。</li></ul>
+ * @method void setValidateData(string $ValidateData) 设置<p>验证数据。</p><ul><li>数字模式传参：传数字验证码，验证码需先调用<a href="https://cloud.tencent.com/document/product/1007/31821">获取数字验证码接口</a>得到；</li><li>动作模式传参：传动作顺序，动作顺序需先调用<a href="https://cloud.tencent.com/document/product/1007/31822">获取动作顺序接口</a>得到；</li><li>静默模式传参：空。</li></ul>
+ * @method string getOptional() 获取<p>额外配置，传入JSON字符串。</p><ul><li>格式如下：<br>{<br>&quot;BestFrameNum&quot;: 2  //需要返回多张最佳截图，取值范围2-10<br>}</li></ul>
+ * @method void setOptional(string $Optional) 设置<p>额外配置，传入JSON字符串。</p><ul><li>格式如下：<br>{<br>&quot;BestFrameNum&quot;: 2  //需要返回多张最佳截图，取值范围2-10<br>}</li></ul>
+ * @method string getVideoBase64() 获取<p>用于活体检测的视频，视频的Base64值。</p><ul><li>Base64编码后的大小不超过8M，支持mp4、avi、flv格式。</li><li>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</li><li>视频的 VideoUrl、VideoBase64 必须提供一个，如果都提供，只使用 VideoBase64。</li></ul>
+ * @method void setVideoBase64(string $VideoBase64) 设置<p>用于活体检测的视频，视频的Base64值。</p><ul><li>Base64编码后的大小不超过8M，支持mp4、avi、flv格式。</li><li>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</li><li>视频的 VideoUrl、VideoBase64 必须提供一个，如果都提供，只使用 VideoBase64。</li></ul>
+ * @method string getVideoUrl() 获取<p>用于活体检测的视频Url 地址。</p><ul><li>视频下载后经Base64编码后不超过 8M，视频下载耗时不超过4S，支持mp4、avi、flv格式。</li><li>视频的 VideoUrl、VideoBase64 必须提供一个，如果都提供，只使用 VideoBase64。</li><li>建议视频存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议视频存储于腾讯云。</li><li>非腾讯云存储的 Url 速度和稳定性可能受一定影响。</li></ul>
+ * @method void setVideoUrl(string $VideoUrl) 设置<p>用于活体检测的视频Url 地址。</p><ul><li>视频下载后经Base64编码后不超过 8M，视频下载耗时不超过4S，支持mp4、avi、flv格式。</li><li>视频的 VideoUrl、VideoBase64 必须提供一个，如果都提供，只使用 VideoBase64。</li><li>建议视频存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议视频存储于腾讯云。</li><li>非腾讯云存储的 Url 速度和稳定性可能受一定影响。</li></ul>
  */
 class LivenessCompareRequest extends AbstractModel
 {
     /**
-     * @var string 活体检测类型。
-- 取值：LIP/ACTION/SILENT。
-- LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。
+     * @var string <p>活体检测类型。</p><ul><li>取值：LIP/ACTION/SILENT。</li><li>LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。</li></ul>
      */
     public $LivenessType;
 
     /**
-     * @var string 用于人脸比对的照片的Base64值。
-- Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
-- 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
-- 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageBase64。
+     * @var string <p>用于人脸比对的照片的Base64值。</p><ul><li>Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。</li><li>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</li><li>图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageBase64。</li></ul>
      */
     public $ImageBase64;
 
     /**
-     * @var string 用于人脸比对照片的URL地址。
-- 图片下载后经Base64编码后的数据大小不超过3M，仅支持jpg、png格式。
-- 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageBase64。
-- 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
-- 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+     * @var string <p>用于人脸比对照片的URL地址。</p><ul><li>图片下载后经Base64编码后的数据大小不超过3M，仅支持jpg、png格式。</li><li>图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageBase64。</li><li>图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。</li><li>非腾讯云存储的 Url 速度和稳定性可能受一定影响。</li></ul>
      */
     public $ImageUrl;
 
     /**
-     * @var string 验证数据。
-- 数字模式传参：传数字验证码，验证码需先调用<a href="https://cloud.tencent.com/document/product/1007/31821">获取数字验证码接口</a>得到；
-- 动作模式传参：传动作顺序，动作顺序需先调用<a href="https://cloud.tencent.com/document/product/1007/31822">获取动作顺序接口</a>得到；
-- 静默模式传参：空。
+     * @var string <p>验证数据。</p><ul><li>数字模式传参：传数字验证码，验证码需先调用<a href="https://cloud.tencent.com/document/product/1007/31821">获取数字验证码接口</a>得到；</li><li>动作模式传参：传动作顺序，动作顺序需先调用<a href="https://cloud.tencent.com/document/product/1007/31822">获取动作顺序接口</a>得到；</li><li>静默模式传参：空。</li></ul>
      */
     public $ValidateData;
 
     /**
-     * @var string 额外配置，传入JSON字符串。
-
-- 格式如下：
-{
-"BestFrameNum": 2  //需要返回多张最佳截图，取值范围2-10
-}
+     * @var string <p>额外配置，传入JSON字符串。</p><ul><li>格式如下：<br>{<br>&quot;BestFrameNum&quot;: 2  //需要返回多张最佳截图，取值范围2-10<br>}</li></ul>
      */
     public $Optional;
 
     /**
-     * @var string 用于活体检测的视频，视频的Base64值。
-- Base64编码后的大小不超过8M，支持mp4、avi、flv格式。
-- 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
-- 视频的 VideoUrl、VideoBase64 必须提供一个，如果都提供，只使用 VideoBase64。
+     * @var string <p>用于活体检测的视频，视频的Base64值。</p><ul><li>Base64编码后的大小不超过8M，支持mp4、avi、flv格式。</li><li>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</li><li>视频的 VideoUrl、VideoBase64 必须提供一个，如果都提供，只使用 VideoBase64。</li></ul>
      */
     public $VideoBase64;
 
     /**
-     * @var string 用于活体检测的视频Url 地址。
-- 视频下载后经Base64编码后不超过 8M，视频下载耗时不超过4S，支持mp4、avi、flv格式。
-- 视频的 VideoUrl、VideoBase64 必须提供一个，如果都提供，只使用 VideoBase64。
-- 建议视频存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议视频存储于腾讯云。
-- 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+     * @var string <p>用于活体检测的视频Url 地址。</p><ul><li>视频下载后经Base64编码后不超过 8M，视频下载耗时不超过4S，支持mp4、avi、flv格式。</li><li>视频的 VideoUrl、VideoBase64 必须提供一个，如果都提供，只使用 VideoBase64。</li><li>建议视频存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议视频存储于腾讯云。</li><li>非腾讯云存储的 Url 速度和稳定性可能受一定影响。</li></ul>
      */
     public $VideoUrl;
 
     /**
-     * @param string $LivenessType 活体检测类型。
-- 取值：LIP/ACTION/SILENT。
-- LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。
-     * @param string $ImageBase64 用于人脸比对的照片的Base64值。
-- Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
-- 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
-- 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageBase64。
-     * @param string $ImageUrl 用于人脸比对照片的URL地址。
-- 图片下载后经Base64编码后的数据大小不超过3M，仅支持jpg、png格式。
-- 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageBase64。
-- 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
-- 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
-     * @param string $ValidateData 验证数据。
-- 数字模式传参：传数字验证码，验证码需先调用<a href="https://cloud.tencent.com/document/product/1007/31821">获取数字验证码接口</a>得到；
-- 动作模式传参：传动作顺序，动作顺序需先调用<a href="https://cloud.tencent.com/document/product/1007/31822">获取动作顺序接口</a>得到；
-- 静默模式传参：空。
-     * @param string $Optional 额外配置，传入JSON字符串。
-
-- 格式如下：
-{
-"BestFrameNum": 2  //需要返回多张最佳截图，取值范围2-10
-}
-     * @param string $VideoBase64 用于活体检测的视频，视频的Base64值。
-- Base64编码后的大小不超过8M，支持mp4、avi、flv格式。
-- 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
-- 视频的 VideoUrl、VideoBase64 必须提供一个，如果都提供，只使用 VideoBase64。
-     * @param string $VideoUrl 用于活体检测的视频Url 地址。
-- 视频下载后经Base64编码后不超过 8M，视频下载耗时不超过4S，支持mp4、avi、flv格式。
-- 视频的 VideoUrl、VideoBase64 必须提供一个，如果都提供，只使用 VideoBase64。
-- 建议视频存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议视频存储于腾讯云。
-- 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+     * @param string $LivenessType <p>活体检测类型。</p><ul><li>取值：LIP/ACTION/SILENT。</li><li>LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。</li></ul>
+     * @param string $ImageBase64 <p>用于人脸比对的照片的Base64值。</p><ul><li>Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。</li><li>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</li><li>图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageBase64。</li></ul>
+     * @param string $ImageUrl <p>用于人脸比对照片的URL地址。</p><ul><li>图片下载后经Base64编码后的数据大小不超过3M，仅支持jpg、png格式。</li><li>图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageBase64。</li><li>图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。</li><li>非腾讯云存储的 Url 速度和稳定性可能受一定影响。</li></ul>
+     * @param string $ValidateData <p>验证数据。</p><ul><li>数字模式传参：传数字验证码，验证码需先调用<a href="https://cloud.tencent.com/document/product/1007/31821">获取数字验证码接口</a>得到；</li><li>动作模式传参：传动作顺序，动作顺序需先调用<a href="https://cloud.tencent.com/document/product/1007/31822">获取动作顺序接口</a>得到；</li><li>静默模式传参：空。</li></ul>
+     * @param string $Optional <p>额外配置，传入JSON字符串。</p><ul><li>格式如下：<br>{<br>&quot;BestFrameNum&quot;: 2  //需要返回多张最佳截图，取值范围2-10<br>}</li></ul>
+     * @param string $VideoBase64 <p>用于活体检测的视频，视频的Base64值。</p><ul><li>Base64编码后的大小不超过8M，支持mp4、avi、flv格式。</li><li>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</li><li>视频的 VideoUrl、VideoBase64 必须提供一个，如果都提供，只使用 VideoBase64。</li></ul>
+     * @param string $VideoUrl <p>用于活体检测的视频Url 地址。</p><ul><li>视频下载后经Base64编码后不超过 8M，视频下载耗时不超过4S，支持mp4、avi、flv格式。</li><li>视频的 VideoUrl、VideoBase64 必须提供一个，如果都提供，只使用 VideoBase64。</li><li>建议视频存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议视频存储于腾讯云。</li><li>非腾讯云存储的 Url 速度和稳定性可能受一定影响。</li></ul>
      */
     function __construct()
     {

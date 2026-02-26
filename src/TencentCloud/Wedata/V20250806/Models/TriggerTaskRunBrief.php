@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间戳
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getScheduleTime() 获取计划调度时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScheduleTime(string $ScheduleTime) 设置计划调度时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间戳
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间戳
@@ -240,6 +244,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutionResult(string $ExecutionResult) 设置任务执行结果
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDependencyTriggerPolicy() 获取依赖策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDependencyTriggerPolicy(string $DependencyTriggerPolicy) 设置依赖策略
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TriggerTaskRunBrief extends AbstractModel
 {
@@ -338,6 +346,12 @@ class TriggerTaskRunBrief extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
+
+    /**
+     * @var string 计划调度时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScheduleTime;
 
     /**
      * @var string 更新时间戳
@@ -574,6 +588,12 @@ class TriggerTaskRunBrief extends AbstractModel
     public $ExecutionResult;
 
     /**
+     * @var string 依赖策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DependencyTriggerPolicy;
+
+    /**
      * @param string $ExecutionId 任务运行ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutionState 执行状态，运行失败:FAILED、运行成功:SUCCESS、等待中:PENDING、跳过运行:SKIP、运行中:RUNNING
@@ -605,6 +625,8 @@ class TriggerTaskRunBrief extends AbstractModel
      * @param string $JobId 执行平台执行 ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ScheduleTime 计划调度时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间戳
 注意：此字段可能返回 null，表示取不到有效值。
@@ -684,6 +706,8 @@ class TriggerTaskRunBrief extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutionResult 任务执行结果
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DependencyTriggerPolicy 依赖策略
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -760,6 +784,10 @@ class TriggerTaskRunBrief extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("ScheduleTime",$param) and $param["ScheduleTime"] !== null) {
+            $this->ScheduleTime = $param["ScheduleTime"];
         }
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
@@ -916,6 +944,10 @@ class TriggerTaskRunBrief extends AbstractModel
 
         if (array_key_exists("ExecutionResult",$param) and $param["ExecutionResult"] !== null) {
             $this->ExecutionResult = $param["ExecutionResult"];
+        }
+
+        if (array_key_exists("DependencyTriggerPolicy",$param) and $param["DependencyTriggerPolicy"] !== null) {
+            $this->DependencyTriggerPolicy = $param["DependencyTriggerPolicy"];
         }
     }
 }

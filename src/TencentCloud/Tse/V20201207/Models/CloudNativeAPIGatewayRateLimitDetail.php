@@ -34,6 +34,8 @@ ip service consumer credential path header
 ip service consumer credential path header
  * @method ExternalRedis getExternalRedis() 获取外部redis配置
  * @method void setExternalRedis(ExternalRedis $ExternalRedis) 设置外部redis配置
+ * @method string getGlobalConfigId() 获取全局配置中的redis配置
+ * @method void setGlobalConfigId(string $GlobalConfigId) 设置全局配置中的redis配置
  * @method string getPolicy() 获取计数器策略 
 local 单机
 redis  默认redis
@@ -109,6 +111,11 @@ ip service consumer credential path header
     public $ExternalRedis;
 
     /**
+     * @var string 全局配置中的redis配置
+     */
+    public $GlobalConfigId;
+
+    /**
      * @var string 计数器策略 
 local 单机
 redis  默认redis
@@ -172,6 +179,7 @@ default 直接返回
      * @param string $LimitBy 限流依据
 ip service consumer credential path header
      * @param ExternalRedis $ExternalRedis 外部redis配置
+     * @param string $GlobalConfigId 全局配置中的redis配置
      * @param string $Policy 计数器策略 
 local 单机
 redis  默认redis
@@ -234,6 +242,10 @@ default 直接返回
         if (array_key_exists("ExternalRedis",$param) and $param["ExternalRedis"] !== null) {
             $this->ExternalRedis = new ExternalRedis();
             $this->ExternalRedis->deserialize($param["ExternalRedis"]);
+        }
+
+        if (array_key_exists("GlobalConfigId",$param) and $param["GlobalConfigId"] !== null) {
+            $this->GlobalConfigId = $param["GlobalConfigId"];
         }
 
         if (array_key_exists("Policy",$param) and $param["Policy"] !== null) {

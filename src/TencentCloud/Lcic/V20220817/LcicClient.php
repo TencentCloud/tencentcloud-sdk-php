@@ -112,7 +112,9 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\GetWatermarkResponse GetWatermark(Models\GetWatermarkRequest $req) 获取水印设置
  * @method Models\KickUserFromRoomResponse KickUserFromRoom(Models\KickUserFromRoomRequest $req) 从房间里面踢出用户
  * @method Models\LoginOriginIdResponse LoginOriginId(Models\LoginOriginIdRequest $req) 使用源账号登录，源账号为注册时填入的originId
+ * @method Models\LoginOriginIdWithRoomResponse LoginOriginIdWithRoom(Models\LoginOriginIdWithRoomRequest $req) 使用源账号登录课堂，源账号为注册时填入的originId
  * @method Models\LoginUserResponse LoginUser(Models\LoginUserRequest $req) 登录
+ * @method Models\LoginUserWithRoomResponse LoginUserWithRoom(Models\LoginUserWithRoomRequest $req) 登录课堂
  * @method Models\ModifyAppResponse ModifyApp(Models\ModifyAppRequest $req) 修改应用
  * @method Models\ModifyGroupResponse ModifyGroup(Models\ModifyGroupRequest $req) 此接口修改群组信息
  * @method Models\ModifyRoomResponse ModifyRoom(Models\ModifyRoomRequest $req) 修改房间

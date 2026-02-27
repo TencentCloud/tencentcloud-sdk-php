@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据库实例规格
  *
- * @method string getSpecCode() 获取规格ID
- * @method void setSpecCode(string $SpecCode) 设置规格ID
- * @method integer getCPU() 获取CPU核数
- * @method void setCPU(integer $CPU) 设置CPU核数
- * @method integer getMemory() 获取内存大小，单位：MB
- * @method void setMemory(integer $Memory) 设置内存大小，单位：MB
- * @method integer getMaxStorage() 获取该规格所支持最大存储容量，单位：GB
- * @method void setMaxStorage(integer $MaxStorage) 设置该规格所支持最大存储容量，单位：GB
- * @method integer getMinStorage() 获取该规格所支持最小存储容量，单位：GB
- * @method void setMinStorage(integer $MinStorage) 设置该规格所支持最小存储容量，单位：GB
- * @method integer getQPS() 获取该规格的预估QPS
- * @method void setQPS(integer $QPS) 设置该规格的预估QPS
+ * @method string getSpecCode() 获取<p>规格ID</p>
+ * @method void setSpecCode(string $SpecCode) 设置<p>规格ID</p>
+ * @method integer getCPU() 获取<p>CPU核数</p>
+ * @method void setCPU(integer $CPU) 设置<p>CPU核数</p>
+ * @method integer getMemory() 获取<p>内存大小，单位：MB</p>
+ * @method void setMemory(integer $Memory) 设置<p>内存大小，单位：MB</p>
+ * @method integer getMaxStorage() 获取<p>该规格所支持最大存储容量，单位：GB</p>
+ * @method void setMaxStorage(integer $MaxStorage) 设置<p>该规格所支持最大存储容量，单位：GB</p>
+ * @method integer getMinStorage() 获取<p>该规格所支持最小存储容量，单位：GB</p>
+ * @method void setMinStorage(integer $MinStorage) 设置<p>该规格所支持最小存储容量，单位：GB</p>
+ * @method integer getQPS() 获取<p>该规格的预估QPS</p>
+ * @method void setQPS(integer $QPS) 设置<p>该规格的预估QPS</p>
  */
 class ClassInfo extends AbstractModel
 {
     /**
-     * @var string 规格ID
+     * @var string <p>规格ID</p>
      */
     public $SpecCode;
 
     /**
-     * @var integer CPU核数
+     * @var integer <p>CPU核数</p>
      */
     public $CPU;
 
     /**
-     * @var integer 内存大小，单位：MB
+     * @var integer <p>内存大小，单位：MB</p>
      */
     public $Memory;
 
     /**
-     * @var integer 该规格所支持最大存储容量，单位：GB
+     * @var integer <p>该规格所支持最大存储容量，单位：GB</p>
      */
     public $MaxStorage;
 
     /**
-     * @var integer 该规格所支持最小存储容量，单位：GB
+     * @var integer <p>该规格所支持最小存储容量，单位：GB</p>
      */
     public $MinStorage;
 
     /**
-     * @var integer 该规格的预估QPS
+     * @var integer <p>该规格的预估QPS</p>
      */
     public $QPS;
 
     /**
-     * @param string $SpecCode 规格ID
-     * @param integer $CPU CPU核数
-     * @param integer $Memory 内存大小，单位：MB
-     * @param integer $MaxStorage 该规格所支持最大存储容量，单位：GB
-     * @param integer $MinStorage 该规格所支持最小存储容量，单位：GB
-     * @param integer $QPS 该规格的预估QPS
+     * @param string $SpecCode <p>规格ID</p>
+     * @param integer $CPU <p>CPU核数</p>
+     * @param integer $Memory <p>内存大小，单位：MB</p>
+     * @param integer $MaxStorage <p>该规格所支持最大存储容量，单位：GB</p>
+     * @param integer $MinStorage <p>该规格所支持最小存储容量，单位：GB</p>
+     * @param integer $QPS <p>该规格的预估QPS</p>
      */
     function __construct()
     {

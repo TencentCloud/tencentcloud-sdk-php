@@ -34,6 +34,7 @@ use TencentCloud\Apm\V20210622\Models as Models;
  * @method Models\DescribeApmAssociationResponse DescribeApmAssociation(Models\DescribeApmAssociationRequest $req) 用于查询apm业务系统与其他产品的关联关系
  * @method Models\DescribeApmInstancesResponse DescribeApmInstances(Models\DescribeApmInstancesRequest $req) 获取 APM 业务系统列表
  * @method Models\DescribeApmPrometheusRuleResponse DescribeApmPrometheusRule(Models\DescribeApmPrometheusRuleRequest $req) 用于查询apm业务系统与Prometheus实例的指标匹配规则
+ * @method Models\DescribeApmSQLInjectionDetailResponse DescribeApmSQLInjectionDetail(Models\DescribeApmSQLInjectionDetailRequest $req) 查询SQL注入详情信息
  * @method Models\DescribeApmSampleConfigResponse DescribeApmSampleConfig(Models\DescribeApmSampleConfigRequest $req) 查询采样配置接口
  * @method Models\DescribeApmServiceMetricResponse DescribeApmServiceMetric(Models\DescribeApmServiceMetricRequest $req) 获取 APM 应用指标列表
  * @method Models\DescribeApmVulnerabilityCountResponse DescribeApmVulnerabilityCount(Models\DescribeApmVulnerabilityCountRequest $req) 查询漏洞指标

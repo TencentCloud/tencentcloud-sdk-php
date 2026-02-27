@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLinuxUid(integer $LinuxUid) 设置子账号在Linux下的UID
  * @method integer getLinuxGid() 获取子账号在Linux下的GID
  * @method void setLinuxGid(integer $LinuxGid) 设置子账号在Linux下的GID
+ * @method string getLinuxUserName() 获取子账号在Linux下的用户名
+ * @method void setLinuxUserName(string $LinuxUserName) 设置子账号在Linux下的用户名
  */
 class SubAccountInfo extends AbstractModel
 {
@@ -59,11 +61,17 @@ class SubAccountInfo extends AbstractModel
     public $LinuxGid;
 
     /**
+     * @var string 子账号在Linux下的用户名
+     */
+    public $LinuxUserName;
+
+    /**
      * @param string $Uin 腾讯云主账号UIN
      * @param string $SubUin 腾讯云子账号UIN
      * @param string $SubUinName 子账号名称
      * @param integer $LinuxUid 子账号在Linux下的UID
      * @param integer $LinuxGid 子账号在Linux下的GID
+     * @param string $LinuxUserName 子账号在Linux下的用户名
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class SubAccountInfo extends AbstractModel
 
         if (array_key_exists("LinuxGid",$param) and $param["LinuxGid"] !== null) {
             $this->LinuxGid = $param["LinuxGid"];
+        }
+
+        if (array_key_exists("LinuxUserName",$param) and $param["LinuxUserName"] !== null) {
+            $this->LinuxUserName = $param["LinuxUserName"];
         }
     }
 }

@@ -28,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthCheck(TargetGroupHealthCheck $HealthCheck) 设置<p>健康检查详情。</p>
  * @method boolean getAllDeadToAlive() 获取<p>是否支持全死全活。</p>
  * @method void setAllDeadToAlive(boolean $AllDeadToAlive) 设置<p>是否支持全死全活。</p>
- * @method integer getTcpIdleConnectTimeout() 获取<p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p>
- * @method void setTcpIdleConnectTimeout(integer $TcpIdleConnectTimeout) 设置<p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p>
- * @method integer getOthersIdleConnectTimeout() 获取<p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p>
- * @method void setOthersIdleConnectTimeout(integer $OthersIdleConnectTimeout) 设置<p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p>
  * @method boolean getRescheduleUnbindRs() 获取<p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p>
  * @method void setRescheduleUnbindRs(boolean $RescheduleUnbindRs) 设置<p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p>
  * @method integer getRescheduleUnbindRsStartTime() 获取<p>解绑RS后开启重调度的时间，可配置0s-3600s，默认0s</p>
@@ -64,16 +60,6 @@ class ModifyTargetGroupAttributeRequest extends AbstractModel
     public $AllDeadToAlive;
 
     /**
-     * @var integer <p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p>
-     */
-    public $TcpIdleConnectTimeout;
-
-    /**
-     * @var integer <p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p>
-     */
-    public $OthersIdleConnectTimeout;
-
-    /**
      * @var boolean <p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p>
      */
     public $RescheduleUnbindRs;
@@ -98,8 +84,6 @@ class ModifyTargetGroupAttributeRequest extends AbstractModel
      * @param string $TargetGroupName <p>目标组的新名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
      * @param TargetGroupHealthCheck $HealthCheck <p>健康检查详情。</p>
      * @param boolean $AllDeadToAlive <p>是否支持全死全活。</p>
-     * @param integer $TcpIdleConnectTimeout <p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p>
-     * @param integer $OthersIdleConnectTimeout <p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p>
      * @param boolean $RescheduleUnbindRs <p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p>
      * @param integer $RescheduleUnbindRsStartTime <p>解绑RS后开启重调度的时间，可配置0s-3600s，默认0s</p>
      * @param boolean $RescheduleUnhealthy <p>重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。</p>
@@ -133,14 +117,6 @@ class ModifyTargetGroupAttributeRequest extends AbstractModel
 
         if (array_key_exists("AllDeadToAlive",$param) and $param["AllDeadToAlive"] !== null) {
             $this->AllDeadToAlive = $param["AllDeadToAlive"];
-        }
-
-        if (array_key_exists("TcpIdleConnectTimeout",$param) and $param["TcpIdleConnectTimeout"] !== null) {
-            $this->TcpIdleConnectTimeout = $param["TcpIdleConnectTimeout"];
-        }
-
-        if (array_key_exists("OthersIdleConnectTimeout",$param) and $param["OthersIdleConnectTimeout"] !== null) {
-            $this->OthersIdleConnectTimeout = $param["OthersIdleConnectTimeout"];
         }
 
         if (array_key_exists("RescheduleUnbindRs",$param) and $param["RescheduleUnbindRs"] !== null) {

@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroup(string $SecurityGroup) 设置外网安全组
  * @method string getClusterIntranetSubnetId() 获取内网访问所属子网
  * @method void setClusterIntranetSubnetId(string $ClusterIntranetSubnetId) 设置内网访问所属子网
+ * @method string getIntranetSecurityGroup() 获取内网安全组
+ * @method void setIntranetSecurityGroup(string $IntranetSecurityGroup) 设置内网安全组
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -92,6 +94,11 @@ class DescribeClusterEndpointsResponse extends AbstractModel
     public $ClusterIntranetSubnetId;
 
     /**
+     * @var string 内网安全组
+     */
+    public $IntranetSecurityGroup;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -107,6 +114,7 @@ class DescribeClusterEndpointsResponse extends AbstractModel
      * @param string $ClusterIntranetDomain 内网域名
      * @param string $SecurityGroup 外网安全组
      * @param string $ClusterIntranetSubnetId 内网访问所属子网
+     * @param string $IntranetSecurityGroup 内网安全组
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -156,6 +164,10 @@ class DescribeClusterEndpointsResponse extends AbstractModel
 
         if (array_key_exists("ClusterIntranetSubnetId",$param) and $param["ClusterIntranetSubnetId"] !== null) {
             $this->ClusterIntranetSubnetId = $param["ClusterIntranetSubnetId"];
+        }
+
+        if (array_key_exists("IntranetSecurityGroup",$param) and $param["IntranetSecurityGroup"] !== null) {
+            $this->IntranetSecurityGroup = $param["IntranetSecurityGroup"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

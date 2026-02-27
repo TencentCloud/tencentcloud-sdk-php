@@ -20,114 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述一种规格的信息
  *
- * @method string getSpecCode() 获取规格ID
- * @method void setSpecCode(string $SpecCode) 设置规格ID
- * @method string getVersion() 获取PostgreSQL的版本编号
- * @method void setVersion(string $Version) 设置PostgreSQL的版本编号
- * @method string getVersionName() 获取内核编号对应的完整版本名称
- * @method void setVersionName(string $VersionName) 设置内核编号对应的完整版本名称
- * @method integer getCpu() 获取CPU核数
- * @method void setCpu(integer $Cpu) 设置CPU核数
- * @method integer getMemory() 获取内存大小，单位：MB
- * @method void setMemory(integer $Memory) 设置内存大小，单位：MB
- * @method integer getMaxStorage() 获取该规格所支持最大存储容量，单位：GB
- * @method void setMaxStorage(integer $MaxStorage) 设置该规格所支持最大存储容量，单位：GB
- * @method integer getMinStorage() 获取该规格所支持最小存储容量，单位：GB
- * @method void setMinStorage(integer $MinStorage) 设置该规格所支持最小存储容量，单位：GB
- * @method integer getQps() 获取该规格的预估QPS
- * @method void setQps(integer $Qps) 设置该规格的预估QPS
- * @method integer getPid() 获取【该字段废弃】
- * @method void setPid(integer $Pid) 设置【该字段废弃】
- * @method string getType() 获取机器类型
- * @method void setType(string $Type) 设置机器类型
- * @method string getMajorVersion() 获取PostgreSQL的主要版本编号
- * @method void setMajorVersion(string $MajorVersion) 设置PostgreSQL的主要版本编号
- * @method string getKernelVersion() 获取PostgreSQL的内核版本编号
- * @method void setKernelVersion(string $KernelVersion) 设置PostgreSQL的内核版本编号
- * @method integer getIsSupportTDE() 获取是否支持TDE数据加密功能，0-不支持，1-支持
- * @method void setIsSupportTDE(integer $IsSupportTDE) 设置是否支持TDE数据加密功能，0-不支持，1-支持
+ * @method string getSpecCode() 获取<p>规格ID</p>
+ * @method void setSpecCode(string $SpecCode) 设置<p>规格ID</p>
+ * @method string getVersion() 获取<p>PostgreSQL的版本编号</p>
+ * @method void setVersion(string $Version) 设置<p>PostgreSQL的版本编号</p>
+ * @method string getVersionName() 获取<p>内核编号对应的完整版本名称</p>
+ * @method void setVersionName(string $VersionName) 设置<p>内核编号对应的完整版本名称</p>
+ * @method integer getCpu() 获取<p>CPU核数</p>
+ * @method void setCpu(integer $Cpu) 设置<p>CPU核数</p>
+ * @method integer getMemory() 获取<p>内存大小，单位：MB</p>
+ * @method void setMemory(integer $Memory) 设置<p>内存大小，单位：MB</p>
+ * @method integer getMaxStorage() 获取<p>该规格所支持最大存储容量，单位：GB</p>
+ * @method void setMaxStorage(integer $MaxStorage) 设置<p>该规格所支持最大存储容量，单位：GB</p>
+ * @method integer getMinStorage() 获取<p>该规格所支持最小存储容量，单位：GB</p>
+ * @method void setMinStorage(integer $MinStorage) 设置<p>该规格所支持最小存储容量，单位：GB</p>
+ * @method integer getQps() 获取<p>该规格的预估QPS</p>
+ * @method void setQps(integer $Qps) 设置<p>该规格的预估QPS</p>
+ * @method integer getPid() 获取<p>【该字段废弃】</p>
+ * @method void setPid(integer $Pid) 设置<p>【该字段废弃】</p>
+ * @method string getType() 获取<p>机器类型</p>
+ * @method void setType(string $Type) 设置<p>机器类型</p>
+ * @method string getMajorVersion() 获取<p>PostgreSQL的主要版本编号</p>
+ * @method void setMajorVersion(string $MajorVersion) 设置<p>PostgreSQL的主要版本编号</p>
+ * @method string getKernelVersion() 获取<p>PostgreSQL的内核版本编号</p>
+ * @method void setKernelVersion(string $KernelVersion) 设置<p>PostgreSQL的内核版本编号</p>
+ * @method integer getIsSupportTDE() 获取<p>是否支持TDE数据加密功能，0-不支持，1-支持</p>
+ * @method void setIsSupportTDE(integer $IsSupportTDE) 设置<p>是否支持TDE数据加密功能，0-不支持，1-支持</p>
  */
 class SpecItemInfo extends AbstractModel
 {
     /**
-     * @var string 规格ID
+     * @var string <p>规格ID</p>
      */
     public $SpecCode;
 
     /**
-     * @var string PostgreSQL的版本编号
+     * @var string <p>PostgreSQL的版本编号</p>
      */
     public $Version;
 
     /**
-     * @var string 内核编号对应的完整版本名称
+     * @var string <p>内核编号对应的完整版本名称</p>
      */
     public $VersionName;
 
     /**
-     * @var integer CPU核数
+     * @var integer <p>CPU核数</p>
      */
     public $Cpu;
 
     /**
-     * @var integer 内存大小，单位：MB
+     * @var integer <p>内存大小，单位：MB</p>
      */
     public $Memory;
 
     /**
-     * @var integer 该规格所支持最大存储容量，单位：GB
+     * @var integer <p>该规格所支持最大存储容量，单位：GB</p>
      */
     public $MaxStorage;
 
     /**
-     * @var integer 该规格所支持最小存储容量，单位：GB
+     * @var integer <p>该规格所支持最小存储容量，单位：GB</p>
      */
     public $MinStorage;
 
     /**
-     * @var integer 该规格的预估QPS
+     * @var integer <p>该规格的预估QPS</p>
      */
     public $Qps;
 
     /**
-     * @var integer 【该字段废弃】
+     * @var integer <p>【该字段废弃】</p>
      */
     public $Pid;
 
     /**
-     * @var string 机器类型
+     * @var string <p>机器类型</p>
      */
     public $Type;
 
     /**
-     * @var string PostgreSQL的主要版本编号
+     * @var string <p>PostgreSQL的主要版本编号</p>
      */
     public $MajorVersion;
 
     /**
-     * @var string PostgreSQL的内核版本编号
+     * @var string <p>PostgreSQL的内核版本编号</p>
      */
     public $KernelVersion;
 
     /**
-     * @var integer 是否支持TDE数据加密功能，0-不支持，1-支持
+     * @var integer <p>是否支持TDE数据加密功能，0-不支持，1-支持</p>
      */
     public $IsSupportTDE;
 
     /**
-     * @param string $SpecCode 规格ID
-     * @param string $Version PostgreSQL的版本编号
-     * @param string $VersionName 内核编号对应的完整版本名称
-     * @param integer $Cpu CPU核数
-     * @param integer $Memory 内存大小，单位：MB
-     * @param integer $MaxStorage 该规格所支持最大存储容量，单位：GB
-     * @param integer $MinStorage 该规格所支持最小存储容量，单位：GB
-     * @param integer $Qps 该规格的预估QPS
-     * @param integer $Pid 【该字段废弃】
-     * @param string $Type 机器类型
-     * @param string $MajorVersion PostgreSQL的主要版本编号
-     * @param string $KernelVersion PostgreSQL的内核版本编号
-     * @param integer $IsSupportTDE 是否支持TDE数据加密功能，0-不支持，1-支持
+     * @param string $SpecCode <p>规格ID</p>
+     * @param string $Version <p>PostgreSQL的版本编号</p>
+     * @param string $VersionName <p>内核编号对应的完整版本名称</p>
+     * @param integer $Cpu <p>CPU核数</p>
+     * @param integer $Memory <p>内存大小，单位：MB</p>
+     * @param integer $MaxStorage <p>该规格所支持最大存储容量，单位：GB</p>
+     * @param integer $MinStorage <p>该规格所支持最小存储容量，单位：GB</p>
+     * @param integer $Qps <p>该规格的预估QPS</p>
+     * @param integer $Pid <p>【该字段废弃】</p>
+     * @param string $Type <p>机器类型</p>
+     * @param string $MajorVersion <p>PostgreSQL的主要版本编号</p>
+     * @param string $KernelVersion <p>PostgreSQL的内核版本编号</p>
+     * @param integer $IsSupportTDE <p>是否支持TDE数据加密功能，0-不支持，1-支持</p>
      */
     function __construct()
     {

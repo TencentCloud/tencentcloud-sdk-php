@@ -40,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置<p>标签。</p>
  * @method string getForwardingMode() 获取<p>流量分发方式</p><ul><li>STATELESS：无状态</li><li>STATEFUL： 有状态</li></ul>
  * @method void setForwardingMode(string $ForwardingMode) 设置<p>流量分发方式</p><ul><li>STATELESS：无状态</li><li>STATEFUL： 有状态</li></ul>
- * @method integer getTcpIdleConnectTimeout() 获取<p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p>
- * @method void setTcpIdleConnectTimeout(integer $TcpIdleConnectTimeout) 设置<p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p>
- * @method integer getOthersIdleConnectTimeout() 获取<p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p>
- * @method void setOthersIdleConnectTimeout(integer $OthersIdleConnectTimeout) 设置<p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p>
  * @method boolean getRescheduleUnbindRs() 获取<p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p>
  * @method void setRescheduleUnbindRs(boolean $RescheduleUnbindRs) 设置<p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p>
  * @method integer getRescheduleUnbindRsStartTime() 获取<p>解绑RS后开启重调度的时间，可配置0s-3600s，默认0s</p>
@@ -106,16 +102,6 @@ class CreateTargetGroupRequest extends AbstractModel
     public $ForwardingMode;
 
     /**
-     * @var integer <p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p>
-     */
-    public $TcpIdleConnectTimeout;
-
-    /**
-     * @var integer <p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p>
-     */
-    public $OthersIdleConnectTimeout;
-
-    /**
      * @var boolean <p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p>
      */
     public $RescheduleUnbindRs;
@@ -146,8 +132,6 @@ class CreateTargetGroupRequest extends AbstractModel
      * @param boolean $AllDeadToAlive <p>是否支持全死全活。默认支持。</p>
      * @param array $Tags <p>标签。</p>
      * @param string $ForwardingMode <p>流量分发方式</p><ul><li>STATELESS：无状态</li><li>STATEFUL： 有状态</li></ul>
-     * @param integer $TcpIdleConnectTimeout <p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p>
-     * @param integer $OthersIdleConnectTimeout <p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p>
      * @param boolean $RescheduleUnbindRs <p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p>
      * @param integer $RescheduleUnbindRsStartTime <p>解绑RS后开启重调度的时间，可配置0s-3600s，默认0s</p>
      * @param boolean $RescheduleUnhealthy <p>重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。</p>
@@ -215,14 +199,6 @@ class CreateTargetGroupRequest extends AbstractModel
 
         if (array_key_exists("ForwardingMode",$param) and $param["ForwardingMode"] !== null) {
             $this->ForwardingMode = $param["ForwardingMode"];
-        }
-
-        if (array_key_exists("TcpIdleConnectTimeout",$param) and $param["TcpIdleConnectTimeout"] !== null) {
-            $this->TcpIdleConnectTimeout = $param["TcpIdleConnectTimeout"];
-        }
-
-        if (array_key_exists("OthersIdleConnectTimeout",$param) and $param["OthersIdleConnectTimeout"] !== null) {
-            $this->OthersIdleConnectTimeout = $param["OthersIdleConnectTimeout"];
         }
 
         if (array_key_exists("RescheduleUnbindRs",$param) and $param["RescheduleUnbindRs"] !== null) {

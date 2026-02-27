@@ -18,7 +18,7 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 成本分返回值复杂类型
+ * 成本分析返回值复杂类型
  *
  * @method string getTime() 获取日期
  * @method void setTime(string $Time) 设置日期

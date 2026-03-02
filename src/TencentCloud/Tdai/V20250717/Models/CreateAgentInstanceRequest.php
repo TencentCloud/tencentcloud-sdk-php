@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAgentInstance请求参数结构体
  *
- * @method string getAgentId() 获取智能体ID
- * @method void setAgentId(string $AgentId) 设置智能体ID
- * @method string getAgentVersion() 获取智能体版本
- * @method void setAgentVersion(string $AgentVersion) 设置智能体版本
- * @method string getInstanceName() 获取实例名
- * @method void setInstanceName(string $InstanceName) 设置实例名
- * @method array getParameters() 获取智能体实例的参数列表
- * @method void setParameters(array $Parameters) 设置智能体实例的参数列表
- * @method array getTags() 获取资源的标签信息
- * @method void setTags(array $Tags) 设置资源的标签信息
+ * @method string getAgentId() 获取<p>智能体ID</p>
+ * @method void setAgentId(string $AgentId) 设置<p>智能体ID</p>
+ * @method string getAgentVersion() 获取<p>智能体版本</p>
+ * @method void setAgentVersion(string $AgentVersion) 设置<p>智能体版本</p>
+ * @method string getInstanceName() 获取<p>实例名</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名</p>
+ * @method array getParameters() 获取<p>智能体实例的参数列表</p>
+ * @method void setParameters(array $Parameters) 设置<p>智能体实例的参数列表</p>
+ * @method array getTags() 获取<p>资源的标签信息</p>
+ * @method void setTags(array $Tags) 设置<p>资源的标签信息</p>
  */
 class CreateAgentInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 智能体ID
+     * @var string <p>智能体ID</p>
      */
     public $AgentId;
 
     /**
-     * @var string 智能体版本
+     * @var string <p>智能体版本</p>
      */
     public $AgentVersion;
 
     /**
-     * @var string 实例名
+     * @var string <p>实例名</p>
      */
     public $InstanceName;
 
     /**
-     * @var array 智能体实例的参数列表
+     * @var array <p>智能体实例的参数列表</p>
      */
     public $Parameters;
 
     /**
-     * @var array 资源的标签信息
+     * @var array <p>资源的标签信息</p>
      */
     public $Tags;
 
     /**
-     * @param string $AgentId 智能体ID
-     * @param string $AgentVersion 智能体版本
-     * @param string $InstanceName 实例名
-     * @param array $Parameters 智能体实例的参数列表
-     * @param array $Tags 资源的标签信息
+     * @param string $AgentId <p>智能体ID</p>
+     * @param string $AgentVersion <p>智能体版本</p>
+     * @param string $InstanceName <p>实例名</p>
+     * @param array $Parameters <p>智能体实例的参数列表</p>
+     * @param array $Tags <p>资源的标签信息</p>
      */
     function __construct()
     {

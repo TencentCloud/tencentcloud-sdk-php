@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInstances返回参数结构体
  *
- * @method array getDealNames() 获取订单号列表。每个实例对应一个订单号。
- * @method void setDealNames(array $DealNames) 设置订单号列表。每个实例对应一个订单号。
- * @method string getBillId() 获取冻结流水号。
- * @method void setBillId(string $BillId) 设置冻结流水号。
- * @method array getDBInstanceIdSet() 获取创建成功的实例ID集合，只在后付费情景下有返回值。
- * @method void setDBInstanceIdSet(array $DBInstanceIdSet) 设置创建成功的实例ID集合，只在后付费情景下有返回值。
+ * @method array getDealNames() 获取<p>订单号列表。每个实例对应一个订单号。</p>
+ * @method void setDealNames(array $DealNames) 设置<p>订单号列表。每个实例对应一个订单号。</p>
+ * @method string getBillId() 获取<p>冻结流水号。</p>
+ * @method void setBillId(string $BillId) 设置<p>冻结流水号。</p>
+ * @method array getDBInstanceIdSet() 获取<p>创建成功的实例ID集合，只在后付费情景下有返回值。</p>
+ * @method void setDBInstanceIdSet(array $DBInstanceIdSet) 设置<p>创建成功的实例ID集合，只在后付费情景下有返回值。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateInstancesResponse extends AbstractModel
 {
     /**
-     * @var array 订单号列表。每个实例对应一个订单号。
+     * @var array <p>订单号列表。每个实例对应一个订单号。</p>
      */
     public $DealNames;
 
     /**
-     * @var string 冻结流水号。
+     * @var string <p>冻结流水号。</p>
      */
     public $BillId;
 
     /**
-     * @var array 创建成功的实例ID集合，只在后付费情景下有返回值。
+     * @var array <p>创建成功的实例ID集合，只在后付费情景下有返回值。</p>
      */
     public $DBInstanceIdSet;
 
@@ -52,9 +52,9 @@ class CreateInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DealNames 订单号列表。每个实例对应一个订单号。
-     * @param string $BillId 冻结流水号。
-     * @param array $DBInstanceIdSet 创建成功的实例ID集合，只在后付费情景下有返回值。
+     * @param array $DealNames <p>订单号列表。每个实例对应一个订单号。</p>
+     * @param string $BillId <p>冻结流水号。</p>
+     * @param array $DBInstanceIdSet <p>创建成功的实例ID集合，只在后付费情景下有返回值。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

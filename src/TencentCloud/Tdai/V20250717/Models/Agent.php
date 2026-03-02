@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgentName(string $AgentName) 设置智能体名称
  * @method string getAgentInternalName() 获取智能体类型
  * @method void setAgentInternalName(string $AgentInternalName) 设置智能体类型
+ * @method string getDeployPlace() 获取架构：共享版-intranet，企业版-userVpc
+ * @method void setDeployPlace(string $DeployPlace) 设置架构：共享版-intranet，企业版-userVpc
  * @method string getAgentStatus() 获取智能体状态
  * @method void setAgentStatus(string $AgentStatus) 设置智能体状态
  * @method string getDefaultVersion() 获取默认版本
@@ -59,6 +61,11 @@ class Agent extends AbstractModel
      * @var string 智能体类型
      */
     public $AgentInternalName;
+
+    /**
+     * @var string 架构：共享版-intranet，企业版-userVpc
+     */
+    public $DeployPlace;
 
     /**
      * @var string 智能体状态
@@ -104,6 +111,7 @@ class Agent extends AbstractModel
      * @param string $AgentId 智能体Id
      * @param string $AgentName 智能体名称
      * @param string $AgentInternalName 智能体类型
+     * @param string $DeployPlace 架构：共享版-intranet，企业版-userVpc
      * @param string $AgentStatus 智能体状态
      * @param string $DefaultVersion 默认版本
      * @param string $AgentType 智能体模式
@@ -136,6 +144,10 @@ class Agent extends AbstractModel
 
         if (array_key_exists("AgentInternalName",$param) and $param["AgentInternalName"] !== null) {
             $this->AgentInternalName = $param["AgentInternalName"];
+        }
+
+        if (array_key_exists("DeployPlace",$param) and $param["DeployPlace"] !== null) {
+            $this->DeployPlace = $param["DeployPlace"];
         }
 
         if (array_key_exists("AgentStatus",$param) and $param["AgentStatus"] !== null) {

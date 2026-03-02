@@ -44,12 +44,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueuedSkillGroupId(integer $QueuedSkillGroupId) 设置排队技能组 ID
  * @method string getQueuedSkillGroupName() 获取排队技能组名称
  * @method void setQueuedSkillGroupName(string $QueuedSkillGroupName) 设置排队技能组名称
- * @method string getRecordURL() 获取录音链接，带鉴权和有效期，获取之后请在短时间内拉取，不要持久化此链接
- * @method void setRecordURL(string $RecordURL) 设置录音链接，带鉴权和有效期，获取之后请在短时间内拉取，不要持久化此链接
+ * @method string getRecordURL() 获取录音链接，带鉴权和有效期，获取之后请在24 小时内拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接
+ * @method void setRecordURL(string $RecordURL) 设置录音链接，带鉴权和有效期，获取之后请在24 小时内拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接
  * @method string getCustomRecordURL() 获取录音转存第三方 COS 链接
  * @method void setCustomRecordURL(string $CustomRecordURL) 设置录音转存第三方 COS 链接
- * @method string getAsrURL() 获取录音文本信息链接，带鉴权和有效期，获取之后请在短时间内拉取，不要持久化此链接
- * @method void setAsrURL(string $AsrURL) 设置录音文本信息链接，带鉴权和有效期，获取之后请在短时间内拉取，不要持久化此链接
+ * @method string getAsrURL() 获取录音文本信息链接，带鉴权和有效期，获取之后请在24 小时拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接
+ * @method void setAsrURL(string $AsrURL) 设置录音文本信息链接，带鉴权和有效期，获取之后请在24 小时拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接
  * @method array getVoicemailRecordURL() 获取语音留言录音链接
  * @method void setVoicemailRecordURL(array $VoicemailRecordURL) 设置语音留言录音链接
  * @method array getVoicemailAsrURL() 获取语音留言录音文本信息链接，需在控制台购买离线语音识别套餐包并开启离线语音识别开关
@@ -132,7 +132,7 @@ class DescribeSessionDetailResponse extends AbstractModel
     public $QueuedSkillGroupName;
 
     /**
-     * @var string 录音链接，带鉴权和有效期，获取之后请在短时间内拉取，不要持久化此链接
+     * @var string 录音链接，带鉴权和有效期，获取之后请在24 小时内拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接
      */
     public $RecordURL;
 
@@ -142,7 +142,7 @@ class DescribeSessionDetailResponse extends AbstractModel
     public $CustomRecordURL;
 
     /**
-     * @var string 录音文本信息链接，带鉴权和有效期，获取之后请在短时间内拉取，不要持久化此链接
+     * @var string 录音文本信息链接，带鉴权和有效期，获取之后请在24 小时拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接
      */
     public $AsrURL;
 
@@ -204,9 +204,9 @@ class DescribeSessionDetailResponse extends AbstractModel
      * @param integer $EndStatus 参考 DescribeTelCdr 接口 EndStatus 字段
      * @param integer $QueuedSkillGroupId 排队技能组 ID
      * @param string $QueuedSkillGroupName 排队技能组名称
-     * @param string $RecordURL 录音链接，带鉴权和有效期，获取之后请在短时间内拉取，不要持久化此链接
+     * @param string $RecordURL 录音链接，带鉴权和有效期，获取之后请在24 小时内拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接
      * @param string $CustomRecordURL 录音转存第三方 COS 链接
-     * @param string $AsrURL 录音文本信息链接，带鉴权和有效期，获取之后请在短时间内拉取，不要持久化此链接
+     * @param string $AsrURL 录音文本信息链接，带鉴权和有效期，获取之后请在24 小时拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接
      * @param array $VoicemailRecordURL 语音留言录音链接
      * @param array $VoicemailAsrURL 语音留言录音文本信息链接，需在控制台购买离线语音识别套餐包并开启离线语音识别开关
      * @param array $IVRKeyPressed IVR 按键信息

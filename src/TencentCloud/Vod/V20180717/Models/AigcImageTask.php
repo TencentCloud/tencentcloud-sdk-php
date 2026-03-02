@@ -20,82 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AIGC 生图任务信息
  *
- * @method string getTaskId() 获取任务 ID。
- * @method void setTaskId(string $TaskId) 设置任务 ID。
- * @method string getStatus() 获取任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
- * @method void setStatus(string $Status) 设置任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
- * @method integer getErrCode() 获取错误码。源异常时返回非0错误码，返回0时请使用各个具体任务的 ErrCode。
- * @method void setErrCode(integer $ErrCode) 设置错误码。源异常时返回非0错误码，返回0时请使用各个具体任务的 ErrCode。
- * @method string getMessage() 获取错误信息。
- * @method void setMessage(string $Message) 设置错误信息。
- * @method integer getProgress() 获取任务进度，取值范围 [0-100] 。
- * @method void setProgress(integer $Progress) 设置任务进度，取值范围 [0-100] 。
- * @method AigcImageTaskInput getInput() 获取AIGC 生图任务的输入信息。
- * @method void setInput(AigcImageTaskInput $Input) 设置AIGC 生图任务的输入信息。
- * @method AigcImageTaskOutput getOutput() 获取AIGC 生图任务的输出信息。
- * @method void setOutput(AigcImageTaskOutput $Output) 设置AIGC 生图任务的输出信息。
- * @method string getSessionId() 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
- * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
- * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
- * @method void setSessionContext(string $SessionContext) 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+ * @method string getTaskId() 获取<p>任务 ID。</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务 ID。</p>
+ * @method string getStatus() 获取<p>任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li></p>
+ * @method void setStatus(string $Status) 设置<p>任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li></p>
+ * @method integer getErrCode() 获取<p>错误码。源异常时返回非0错误码，返回0时请使用各个具体任务的 ErrCode。</p>
+ * @method void setErrCode(integer $ErrCode) 设置<p>错误码。源异常时返回非0错误码，返回0时请使用各个具体任务的 ErrCode。</p>
+ * @method string getErrCodeExt() 获取<p>扩展错误码。空字符串表示成功，其它值表示失败。</p><p>枚举值：</p><ul><li>RequestLimitExceeded： 模型调用超出并发限制。</li><li>InvalidParameter.VoilationContent： 输入 prompt 违反内容安全策略。</li><li>InvalidParameterValue： 参数错误。</li><li>FailedOperation： 模型任务堆积。</li><li>InternalError： 内部错误。</li></ul>
+ * @method void setErrCodeExt(string $ErrCodeExt) 设置<p>扩展错误码。空字符串表示成功，其它值表示失败。</p><p>枚举值：</p><ul><li>RequestLimitExceeded： 模型调用超出并发限制。</li><li>InvalidParameter.VoilationContent： 输入 prompt 违反内容安全策略。</li><li>InvalidParameterValue： 参数错误。</li><li>FailedOperation： 模型任务堆积。</li><li>InternalError： 内部错误。</li></ul>
+ * @method string getMessage() 获取<p>错误信息。</p>
+ * @method void setMessage(string $Message) 设置<p>错误信息。</p>
+ * @method integer getProgress() 获取<p>任务进度，取值范围 [0-100] 。</p>
+ * @method void setProgress(integer $Progress) 设置<p>任务进度，取值范围 [0-100] 。</p>
+ * @method AigcImageTaskInput getInput() 获取<p>AIGC 生图任务的输入信息。</p>
+ * @method void setInput(AigcImageTaskInput $Input) 设置<p>AIGC 生图任务的输入信息。</p>
+ * @method AigcImageTaskOutput getOutput() 获取<p>AIGC 生图任务的输出信息。</p>
+ * @method void setOutput(AigcImageTaskOutput $Output) 设置<p>AIGC 生图任务的输出信息。</p>
+ * @method string getSessionId() 获取<p>用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
+ * @method void setSessionId(string $SessionId) 设置<p>用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
+ * @method string getSessionContext() 获取<p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
+ * @method void setSessionContext(string $SessionContext) 设置<p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
  */
 class AigcImageTask extends AbstractModel
 {
     /**
-     * @var string 任务 ID。
+     * @var string <p>任务 ID。</p>
      */
     public $TaskId;
 
     /**
-     * @var string 任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
+     * @var string <p>任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li></p>
      */
     public $Status;
 
     /**
-     * @var integer 错误码。源异常时返回非0错误码，返回0时请使用各个具体任务的 ErrCode。
+     * @var integer <p>错误码。源异常时返回非0错误码，返回0时请使用各个具体任务的 ErrCode。</p>
      */
     public $ErrCode;
 
     /**
-     * @var string 错误信息。
+     * @var string <p>扩展错误码。空字符串表示成功，其它值表示失败。</p><p>枚举值：</p><ul><li>RequestLimitExceeded： 模型调用超出并发限制。</li><li>InvalidParameter.VoilationContent： 输入 prompt 违反内容安全策略。</li><li>InvalidParameterValue： 参数错误。</li><li>FailedOperation： 模型任务堆积。</li><li>InternalError： 内部错误。</li></ul>
+     */
+    public $ErrCodeExt;
+
+    /**
+     * @var string <p>错误信息。</p>
      */
     public $Message;
 
     /**
-     * @var integer 任务进度，取值范围 [0-100] 。
+     * @var integer <p>任务进度，取值范围 [0-100] 。</p>
      */
     public $Progress;
 
     /**
-     * @var AigcImageTaskInput AIGC 生图任务的输入信息。
+     * @var AigcImageTaskInput <p>AIGC 生图任务的输入信息。</p>
      */
     public $Input;
 
     /**
-     * @var AigcImageTaskOutput AIGC 生图任务的输出信息。
+     * @var AigcImageTaskOutput <p>AIGC 生图任务的输出信息。</p>
      */
     public $Output;
 
     /**
-     * @var string 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * @var string <p>用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
      */
     public $SessionId;
 
     /**
-     * @var string 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * @var string <p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
      */
     public $SessionContext;
 
     /**
-     * @param string $TaskId 任务 ID。
-     * @param string $Status 任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
-     * @param integer $ErrCode 错误码。源异常时返回非0错误码，返回0时请使用各个具体任务的 ErrCode。
-     * @param string $Message 错误信息。
-     * @param integer $Progress 任务进度，取值范围 [0-100] 。
-     * @param AigcImageTaskInput $Input AIGC 生图任务的输入信息。
-     * @param AigcImageTaskOutput $Output AIGC 生图任务的输出信息。
-     * @param string $SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
-     * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * @param string $TaskId <p>任务 ID。</p>
+     * @param string $Status <p>任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li></p>
+     * @param integer $ErrCode <p>错误码。源异常时返回非0错误码，返回0时请使用各个具体任务的 ErrCode。</p>
+     * @param string $ErrCodeExt <p>扩展错误码。空字符串表示成功，其它值表示失败。</p><p>枚举值：</p><ul><li>RequestLimitExceeded： 模型调用超出并发限制。</li><li>InvalidParameter.VoilationContent： 输入 prompt 违反内容安全策略。</li><li>InvalidParameterValue： 参数错误。</li><li>FailedOperation： 模型任务堆积。</li><li>InternalError： 内部错误。</li></ul>
+     * @param string $Message <p>错误信息。</p>
+     * @param integer $Progress <p>任务进度，取值范围 [0-100] 。</p>
+     * @param AigcImageTaskInput $Input <p>AIGC 生图任务的输入信息。</p>
+     * @param AigcImageTaskOutput $Output <p>AIGC 生图任务的输出信息。</p>
+     * @param string $SessionId <p>用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
+     * @param string $SessionContext <p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class AigcImageTask extends AbstractModel
 
         if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
             $this->ErrCode = $param["ErrCode"];
+        }
+
+        if (array_key_exists("ErrCodeExt",$param) and $param["ErrCodeExt"] !== null) {
+            $this->ErrCodeExt = $param["ErrCodeExt"];
         }
 
         if (array_key_exists("Message",$param) and $param["Message"] !== null) {

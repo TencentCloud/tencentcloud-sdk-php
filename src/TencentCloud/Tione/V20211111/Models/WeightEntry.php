@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServiceId() 获取服务id
  * @method void setServiceId(string $ServiceId) 设置服务id
- * @method integer getWeight() 获取流量权重值，同 ServiceGroup 下 总和应为 100
- * @method void setWeight(integer $Weight) 设置流量权重值，同 ServiceGroup 下 总和应为 100
+ * @method integer getWeight() 获取流量权重值，ServiceGroup 下，不同服务版本根据权重比例分配流量
+ * @method void setWeight(integer $Weight) 设置流量权重值，ServiceGroup 下，不同服务版本根据权重比例分配流量
  */
 class WeightEntry extends AbstractModel
 {
@@ -33,13 +33,13 @@ class WeightEntry extends AbstractModel
     public $ServiceId;
 
     /**
-     * @var integer 流量权重值，同 ServiceGroup 下 总和应为 100
+     * @var integer 流量权重值，ServiceGroup 下，不同服务版本根据权重比例分配流量
      */
     public $Weight;
 
     /**
      * @param string $ServiceId 服务id
-     * @param integer $Weight 流量权重值，同 ServiceGroup 下 总和应为 100
+     * @param integer $Weight 流量权重值，ServiceGroup 下，不同服务版本根据权重比例分配流量
      */
     function __construct()
     {

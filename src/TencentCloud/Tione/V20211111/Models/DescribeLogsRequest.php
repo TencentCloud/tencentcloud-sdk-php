@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置日志查询开始时间（RFC3339格式的时间字符串），默认值为当前时间的前一个小时
  * @method string getEndTime() 获取日志查询结束时间（RFC3339格式的时间字符串），默认值为当前时间
  * @method void setEndTime(string $EndTime) 设置日志查询结束时间（RFC3339格式的时间字符串），默认值为当前时间
- * @method integer getLimit() 获取日志查询条数，默认值100，最大值100
- * @method void setLimit(integer $Limit) 设置日志查询条数，默认值100，最大值100
+ * @method integer getLimit() 获取日志查询条数，默认值100，最大值1000
+ * @method void setLimit(integer $Limit) 设置日志查询条数，默认值100，最大值1000
  * @method string getServiceId() 获取服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：
 - Service类型为TRAIN：
   调用[DescribeTrainingTask接口](/document/product/851/75089)查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId
@@ -92,6 +92,8 @@ use TencentCloud\Common\AbstractModel;
 1. Filter.Name：目前只支持Key（也就是按关键字过滤日志）
 2. Filter.Values：表示过滤日志的关键字；Values为多个的时候表示同时满足
 3. Filter. Negative和Filter. Fuzzy没有使用
+ * @method integer getOffset() 获取使用OFFSET分页查询时，指定返回的数据偏移量，默认为0
+ * @method void setOffset(integer $Offset) 设置使用OFFSET分页查询时，指定返回的数据偏移量，默认为0
  */
 class DescribeLogsRequest extends AbstractModel
 {
@@ -116,7 +118,7 @@ class DescribeLogsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 日志查询条数，默认值100，最大值100
+     * @var integer 日志查询条数，默认值100，最大值1000
      */
     public $Limit;
 
@@ -172,6 +174,11 @@ class DescribeLogsRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var integer 使用OFFSET分页查询时，指定返回的数据偏移量，默认为0
+     */
+    public $Offset;
+
+    /**
      * @param string $Service 服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测
 枚举值：
 - TRAIN
@@ -180,7 +187,7 @@ class DescribeLogsRequest extends AbstractModel
 - BATCH
      * @param string $StartTime 日志查询开始时间（RFC3339格式的时间字符串），默认值为当前时间的前一个小时
      * @param string $EndTime 日志查询结束时间（RFC3339格式的时间字符串），默认值为当前时间
-     * @param integer $Limit 日志查询条数，默认值100，最大值100
+     * @param integer $Limit 日志查询条数，默认值100，最大值1000
      * @param string $ServiceId 服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：
 - Service类型为TRAIN：
   调用[DescribeTrainingTask接口](/document/product/851/75089)查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId
@@ -208,6 +215,7 @@ class DescribeLogsRequest extends AbstractModel
 1. Filter.Name：目前只支持Key（也就是按关键字过滤日志）
 2. Filter.Values：表示过滤日志的关键字；Values为多个的时候表示同时满足
 3. Filter. Negative和Filter. Fuzzy没有使用
+     * @param integer $Offset 使用OFFSET分页查询时，指定返回的数据偏移量，默认为0
      */
     function __construct()
     {
@@ -265,6 +273,10 @@ class DescribeLogsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

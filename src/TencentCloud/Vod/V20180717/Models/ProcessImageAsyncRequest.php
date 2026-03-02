@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ProcessImageAsync请求参数结构体
  *
- * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method string getFileId() 获取需要进行图片处理的FileId。
- * @method void setFileId(string $FileId) 设置需要进行图片处理的FileId。
- * @method ProcessImageAsyncTaskInput getImageTaskInput() 获取图片处理参数。
- * @method void setImageTaskInput(ProcessImageAsyncTaskInput $ImageTaskInput) 设置图片处理参数。
- * @method ProcessImageAsyncOutputConfig getOutputConfig() 获取图片处理任务的输出媒体文件配置。
- * @method void setOutputConfig(ProcessImageAsyncOutputConfig $OutputConfig) 设置图片处理任务的输出媒体文件配置。
- * @method string getSessionId() 获取用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
- * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
- * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。
- * @method void setSessionContext(string $SessionContext) 设置来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。
- * @method integer getTasksPriority() 获取任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
- * @method void setTasksPriority(integer $TasksPriority) 设置任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
- * @method string getExtInfo() 获取保留字段，特殊用途时使用。
- * @method void setExtInfo(string $ExtInfo) 设置保留字段，特殊用途时使用。
+ * @method integer getSubAppId() 获取<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method void setSubAppId(integer $SubAppId) 设置<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method string getFileId() 获取<p>需要进行图片处理的FileId。不能与Url同时输入。</p>
+ * @method void setFileId(string $FileId) 设置<p>需要进行图片处理的FileId。不能与Url同时输入。</p>
+ * @method string getUrl() 获取<p>需要进行图片处理的Url。不能与FileId同时输入。</p>
+ * @method void setUrl(string $Url) 设置<p>需要进行图片处理的Url。不能与FileId同时输入。</p>
+ * @method ProcessImageAsyncTaskInput getImageTaskInput() 获取<p>图片处理参数。</p>
+ * @method void setImageTaskInput(ProcessImageAsyncTaskInput $ImageTaskInput) 设置<p>图片处理参数。</p>
+ * @method ProcessImageAsyncOutputConfig getOutputConfig() 获取<p>图片处理任务的输出媒体文件配置。</p>
+ * @method void setOutputConfig(ProcessImageAsyncOutputConfig $OutputConfig) 设置<p>图片处理任务的输出媒体文件配置。</p>
+ * @method string getSessionId() 获取<p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
+ * @method void setSessionId(string $SessionId) 设置<p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
+ * @method string getSessionContext() 获取<p>来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。</p>
+ * @method void setSessionContext(string $SessionContext) 设置<p>来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。</p>
+ * @method integer getTasksPriority() 获取<p>任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。</p>
+ * @method void setTasksPriority(integer $TasksPriority) 设置<p>任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。</p>
+ * @method string getExtInfo() 获取<p>保留字段，特殊用途时使用。</p>
+ * @method void setExtInfo(string $ExtInfo) 设置<p>保留字段，特殊用途时使用。</p>
  */
 class ProcessImageAsyncRequest extends AbstractModel
 {
     /**
-     * @var integer <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * @var integer <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string 需要进行图片处理的FileId。
+     * @var string <p>需要进行图片处理的FileId。不能与Url同时输入。</p>
      */
     public $FileId;
 
     /**
-     * @var ProcessImageAsyncTaskInput 图片处理参数。
+     * @var string <p>需要进行图片处理的Url。不能与FileId同时输入。</p>
+     */
+    public $Url;
+
+    /**
+     * @var ProcessImageAsyncTaskInput <p>图片处理参数。</p>
      */
     public $ImageTaskInput;
 
     /**
-     * @var ProcessImageAsyncOutputConfig 图片处理任务的输出媒体文件配置。
+     * @var ProcessImageAsyncOutputConfig <p>图片处理任务的输出媒体文件配置。</p>
      */
     public $OutputConfig;
 
     /**
-     * @var string 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * @var string <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
      */
     public $SessionId;
 
     /**
-     * @var string 来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。
+     * @var string <p>来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。</p>
      */
     public $SessionContext;
 
     /**
-     * @var integer 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+     * @var integer <p>任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。</p>
      */
     public $TasksPriority;
 
     /**
-     * @var string 保留字段，特殊用途时使用。
+     * @var string <p>保留字段，特殊用途时使用。</p>
      */
     public $ExtInfo;
 
     /**
-     * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     * @param string $FileId 需要进行图片处理的FileId。
-     * @param ProcessImageAsyncTaskInput $ImageTaskInput 图片处理参数。
-     * @param ProcessImageAsyncOutputConfig $OutputConfig 图片处理任务的输出媒体文件配置。
-     * @param string $SessionId 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
-     * @param string $SessionContext 来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。
-     * @param integer $TasksPriority 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
-     * @param string $ExtInfo 保留字段，特殊用途时使用。
+     * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param string $FileId <p>需要进行图片处理的FileId。不能与Url同时输入。</p>
+     * @param string $Url <p>需要进行图片处理的Url。不能与FileId同时输入。</p>
+     * @param ProcessImageAsyncTaskInput $ImageTaskInput <p>图片处理参数。</p>
+     * @param ProcessImageAsyncOutputConfig $OutputConfig <p>图片处理任务的输出媒体文件配置。</p>
+     * @param string $SessionId <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
+     * @param string $SessionContext <p>来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。</p>
+     * @param integer $TasksPriority <p>任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。</p>
+     * @param string $ExtInfo <p>保留字段，特殊用途时使用。</p>
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class ProcessImageAsyncRequest extends AbstractModel
 
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
             $this->FileId = $param["FileId"];
+        }
+
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
         }
 
         if (array_key_exists("ImageTaskInput",$param) and $param["ImageTaskInput"] !== null) {

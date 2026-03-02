@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSdkAppId() 获取<p>低代码平台的SdkAppId。</p>
  * @method void setSdkAppId(integer $SdkAppId) 设置<p>低代码平台的SdkAppId。</p>
+ * @method integer getRoomId() 获取<p>房间ID</p>
+ * @method void setRoomId(integer $RoomId) 设置<p>房间ID</p>
  * @method integer getPage() 获取<p>分页查询当前页数，从1开始递增</p>
  * @method void setPage(integer $Page) 设置<p>分页查询当前页数，从1开始递增</p>
  * @method integer getLimit() 获取<p>默认10条，最大上限为100条</p>
@@ -35,6 +37,11 @@ class DescribePlaybackListRequest extends AbstractModel
     public $SdkAppId;
 
     /**
+     * @var integer <p>房间ID</p>
+     */
+    public $RoomId;
+
+    /**
      * @var integer <p>分页查询当前页数，从1开始递增</p>
      */
     public $Page;
@@ -46,6 +53,7 @@ class DescribePlaybackListRequest extends AbstractModel
 
     /**
      * @param integer $SdkAppId <p>低代码平台的SdkAppId。</p>
+     * @param integer $RoomId <p>房间ID</p>
      * @param integer $Page <p>分页查询当前页数，从1开始递增</p>
      * @param integer $Limit <p>默认10条，最大上限为100条</p>
      */
@@ -64,6 +72,10 @@ class DescribePlaybackListRequest extends AbstractModel
         }
         if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
             $this->SdkAppId = $param["SdkAppId"];
+        }
+
+        if (array_key_exists("RoomId",$param) and $param["RoomId"] !== null) {
+            $this->RoomId = $param["RoomId"];
         }
 
         if (array_key_exists("Page",$param) and $param["Page"] !== null) {

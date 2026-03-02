@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) 设置TRTC的SdkAppId
  * @method string getVoiceName() 获取声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位
  * @method void setVoiceName(string $VoiceName) 设置声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位
- * @method string getPromptAudio() 获取声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在10秒～180秒之间
- * @method void setPromptAudio(string $PromptAudio) 设置声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在10秒～180秒之间
+ * @method string getPromptAudio() 获取声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在6秒～180秒之间
+ * @method void setPromptAudio(string $PromptAudio) 设置声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在6秒～180秒之间
  * @method string getAPIKey() 获取TTS的API密钥
  * @method void setAPIKey(string $APIKey) 设置TTS的API密钥
  * @method string getPromptText() 获取声音克隆的参考文本，为参考音频对应的文字。
@@ -48,12 +48,13 @@ class VoiceCloneRequest extends AbstractModel
     public $VoiceName;
 
     /**
-     * @var string 声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在10秒～180秒之间
+     * @var string 声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在6秒～180秒之间
      */
     public $PromptAudio;
 
     /**
      * @var string TTS的API密钥
+     * @deprecated
      */
     public $APIKey;
 
@@ -75,7 +76,7 @@ class VoiceCloneRequest extends AbstractModel
     /**
      * @param integer $SdkAppId TRTC的SdkAppId
      * @param string $VoiceName 声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位
-     * @param string $PromptAudio 声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在10秒～180秒之间
+     * @param string $PromptAudio 声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在6秒～180秒之间
      * @param string $APIKey TTS的API密钥
      * @param string $PromptText 声音克隆的参考文本，为参考音频对应的文字。
      * @param string $Model TTS的模型：flow_01_turbo，flow_01_ex

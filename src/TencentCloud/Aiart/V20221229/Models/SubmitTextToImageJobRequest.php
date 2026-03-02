@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrompt(string $Prompt) 设置<p>文本描述。<br>算法将根据输入的文本智能生成与之相关的图像。<br>不能为空，推荐使用中文。最多可传8192个 utf-8 字符。</p>
  * @method array getImages() 获取<p>垫图url列表，base64后大小不超过10MB，支持 jpg jpeg png webp格式，最多3张图</p>
  * @method void setImages(array $Images) 设置<p>垫图url列表，base64后大小不超过10MB，支持 jpg jpeg png webp格式，最多3张图</p>
+ * @method string getSkillType() 获取<p>选择适配的生图能力类型。</p><p>枚举值：</p><ul><li>default： 通用生图</li><li>cover： 文章封面</li><li>ppt： 幻灯片PPT</li><li>poster： 创意海报</li></ul><p>默认值：default</p>
+ * @method void setSkillType(string $SkillType) 设置<p>选择适配的生图能力类型。</p><p>枚举值：</p><ul><li>default： 通用生图</li><li>cover： 文章封面</li><li>ppt： 幻灯片PPT</li><li>poster： 创意海报</li></ul><p>默认值：default</p>
+ * @method integer getGeneratedImageCount() 获取<p>生成的结果图片数量<br>取值范围： </p><ul><li>default：通用生图任务（1）</li><li>cover:：封面（1）</li><li>ppt：幻灯片页数（1～20）</li><li>poster：生成图片张数（1）</li></ul><p>默认值：1</p>
+ * @method void setGeneratedImageCount(integer $GeneratedImageCount) 设置<p>生成的结果图片数量<br>取值范围： </p><ul><li>default：通用生图任务（1）</li><li>cover:：封面（1）</li><li>ppt：幻灯片页数（1～20）</li><li>poster：生成图片张数（1）</li></ul><p>默认值：1</p>
  * @method string getResolution() 获取<p>生成图分辨率，默认1024:1024：</p><ul><li>宽高维度均在 [512, 2048] 像素范围内;</li><li>宽高乘积（即图像面积）不超过 1024×1024 像素;</li></ul>
  * @method void setResolution(string $Resolution) 设置<p>生成图分辨率，默认1024:1024：</p><ul><li>宽高维度均在 [512, 2048] 像素范围内;</li><li>宽高乘积（即图像面积）不超过 1024×1024 像素;</li></ul>
  * @method integer getSeed() 获取<p>随机种子，默认随机。<br>不传：随机种子生成。<br>正数：固定种子生成。<br>扩写开启时固定种子不生效，将保持随机。</p>
@@ -46,6 +50,16 @@ class SubmitTextToImageJobRequest extends AbstractModel
      * @var array <p>垫图url列表，base64后大小不超过10MB，支持 jpg jpeg png webp格式，最多3张图</p>
      */
     public $Images;
+
+    /**
+     * @var string <p>选择适配的生图能力类型。</p><p>枚举值：</p><ul><li>default： 通用生图</li><li>cover： 文章封面</li><li>ppt： 幻灯片PPT</li><li>poster： 创意海报</li></ul><p>默认值：default</p>
+     */
+    public $SkillType;
+
+    /**
+     * @var integer <p>生成的结果图片数量<br>取值范围： </p><ul><li>default：通用生图任务（1）</li><li>cover:：封面（1）</li><li>ppt：幻灯片页数（1～20）</li><li>poster：生成图片张数（1）</li></ul><p>默认值：1</p>
+     */
+    public $GeneratedImageCount;
 
     /**
      * @var string <p>生成图分辨率，默认1024:1024：</p><ul><li>宽高维度均在 [512, 2048] 像素范围内;</li><li>宽高乘积（即图像面积）不超过 1024×1024 像素;</li></ul>
@@ -75,6 +89,8 @@ class SubmitTextToImageJobRequest extends AbstractModel
     /**
      * @param string $Prompt <p>文本描述。<br>算法将根据输入的文本智能生成与之相关的图像。<br>不能为空，推荐使用中文。最多可传8192个 utf-8 字符。</p>
      * @param array $Images <p>垫图url列表，base64后大小不超过10MB，支持 jpg jpeg png webp格式，最多3张图</p>
+     * @param string $SkillType <p>选择适配的生图能力类型。</p><p>枚举值：</p><ul><li>default： 通用生图</li><li>cover： 文章封面</li><li>ppt： 幻灯片PPT</li><li>poster： 创意海报</li></ul><p>默认值：default</p>
+     * @param integer $GeneratedImageCount <p>生成的结果图片数量<br>取值范围： </p><ul><li>default：通用生图任务（1）</li><li>cover:：封面（1）</li><li>ppt：幻灯片页数（1～20）</li><li>poster：生成图片张数（1）</li></ul><p>默认值：1</p>
      * @param string $Resolution <p>生成图分辨率，默认1024:1024：</p><ul><li>宽高维度均在 [512, 2048] 像素范围内;</li><li>宽高乘积（即图像面积）不超过 1024×1024 像素;</li></ul>
      * @param integer $Seed <p>随机种子，默认随机。<br>不传：随机种子生成。<br>正数：固定种子生成。<br>扩写开启时固定种子不生效，将保持随机。</p>
      * @param integer $LogoAdd <p>为生成结果图添加显式水印标识的开关，默认为1。<br>1：添加。<br>0：不添加。<br>其他数值：默认按1处理。<br>建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。</p>
@@ -100,6 +116,14 @@ class SubmitTextToImageJobRequest extends AbstractModel
 
         if (array_key_exists("Images",$param) and $param["Images"] !== null) {
             $this->Images = $param["Images"];
+        }
+
+        if (array_key_exists("SkillType",$param) and $param["SkillType"] !== null) {
+            $this->SkillType = $param["SkillType"];
+        }
+
+        if (array_key_exists("GeneratedImageCount",$param) and $param["GeneratedImageCount"] !== null) {
+            $this->GeneratedImageCount = $param["GeneratedImageCount"];
         }
 
         if (array_key_exists("Resolution",$param) and $param["Resolution"] !== null) {

@@ -91,7 +91,7 @@ use TencentCloud\Ccc\V20200210\Models as Models;
  * @method Models\DescribePredictiveDialingCampaignsResponse DescribePredictiveDialingCampaigns(Models\DescribePredictiveDialingCampaignsRequest $req) 查询预测式外呼任务列表
  * @method Models\DescribePredictiveDialingSessionsResponse DescribePredictiveDialingSessions(Models\DescribePredictiveDialingSessionsRequest $req) 查询预测式外呼呼叫列表
  * @method Models\DescribeProtectedTelCdrResponse DescribeProtectedTelCdr(Models\DescribeProtectedTelCdrRequest $req) 获取主被叫受保护的电话服务记录与录音
- * @method Models\DescribeSessionDetailResponse DescribeSessionDetail(Models\DescribeSessionDetailRequest $req) 获取通话详情
+ * @method Models\DescribeSessionDetailResponse DescribeSessionDetail(Models\DescribeSessionDetailRequest $req) 此接口用于在通话结束后，通过 session id 和时间戳，查询单一通话的通话详情。包括：主被叫信息、录音等。
  * @method Models\DescribeSkillGroupInfoListResponse DescribeSkillGroupInfoList(Models\DescribeSkillGroupInfoListRequest $req) 获取技能组信息列表
  * @method Models\DescribeStaffInfoListResponse DescribeStaffInfoList(Models\DescribeStaffInfoListRequest $req) 获取坐席信息列表
  * @method Models\DescribeStaffStatusHistoryResponse DescribeStaffStatusHistory(Models\DescribeStaffStatusHistoryRequest $req) 查询座席状态历史

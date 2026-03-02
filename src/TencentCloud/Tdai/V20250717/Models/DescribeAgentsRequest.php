@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgentInternalName(string $AgentInternalName) 设置智能体类型，为空时查询所有，如果填写则会根据AgentName筛选
  * @method string getAgentStatus() 获取智能体状态，为空时查询所有，如果填写则会根据AgentStatus筛选
  * @method void setAgentStatus(string $AgentStatus) 设置智能体状态，为空时查询所有，如果填写则会根据AgentStatus筛选
+ * @method string getDeployPlace() 获取架构，共享版-intranet，企业版-userVpc
+ * @method void setDeployPlace(string $DeployPlace) 设置架构，共享版-intranet，企业版-userVpc
  */
 class DescribeAgentsRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeAgentsRequest extends AbstractModel
     public $AgentStatus;
 
     /**
+     * @var string 架构，共享版-intranet，企业版-userVpc
+     */
+    public $DeployPlace;
+
+    /**
      * @param integer $Offset 查询开始位置
      * @param integer $Limit 列表查询数量
      * @param string $AgentId 智能体ID，为空时查询所有，如果填写则会根据AgentId筛选
      * @param string $AgentName 智能体名称，为空时查询所有，如果填写则会根据AgentName筛选
      * @param string $AgentInternalName 智能体类型，为空时查询所有，如果填写则会根据AgentName筛选
      * @param string $AgentStatus 智能体状态，为空时查询所有，如果填写则会根据AgentStatus筛选
+     * @param string $DeployPlace 架构，共享版-intranet，企业版-userVpc
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeAgentsRequest extends AbstractModel
 
         if (array_key_exists("AgentStatus",$param) and $param["AgentStatus"] !== null) {
             $this->AgentStatus = $param["AgentStatus"];
+        }
+
+        if (array_key_exists("DeployPlace",$param) and $param["DeployPlace"] !== null) {
+            $this->DeployPlace = $param["DeployPlace"];
         }
     }
 }

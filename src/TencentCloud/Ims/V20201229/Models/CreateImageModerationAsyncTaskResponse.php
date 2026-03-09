@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateImageModerationAsyncTask返回参数结构体
  *
- * @method string getDataId() 获取该字段用于返回检测对象对应请求参数中的DataId。
- * @method void setDataId(string $DataId) 设置该字段用于返回检测对象对应请求参数中的DataId。
+ * @method string getDataId() 获取<p>该字段用于返回检测对象对应请求参数中的DataId。</p>
+ * @method void setDataId(string $DataId) 设置<p>该字段用于返回检测对象对应请求参数中的DataId。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateImageModerationAsyncTaskResponse extends AbstractModel
 {
     /**
-     * @var string 该字段用于返回检测对象对应请求参数中的DataId。
+     * @var string <p>该字段用于返回检测对象对应请求参数中的DataId。</p>
      */
     public $DataId;
 
@@ -38,7 +38,7 @@ class CreateImageModerationAsyncTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DataId 该字段用于返回检测对象对应请求参数中的DataId。
+     * @param string $DataId <p>该字段用于返回检测对象对应请求参数中的DataId。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据湖计算服务（Data Lake Compute，简称DLC）数据字段配置信息
  *
- * @method string getClsField() 获取cls日志中的字段名
- * @method void setClsField(string $ClsField) 设置cls日志中的字段名
- * @method string getDlcField() 获取数据湖计算服务表的列名
- * @method void setDlcField(string $DlcField) 设置数据湖计算服务表的列名
- * @method string getDlcFieldType() 获取数据湖计算服务字段类型
- * @method void setDlcFieldType(string $DlcFieldType) 设置数据湖计算服务字段类型
- * @method string getFillField() 获取解析失败填充字段
- * @method void setFillField(string $FillField) 设置解析失败填充字段
- * @method boolean getDisable() 获取是否禁用
- * @method void setDisable(boolean $Disable) 设置是否禁用
+ * @method string getClsField() 获取<p>cls日志中的字段名</p>
+ * @method void setClsField(string $ClsField) 设置<p>cls日志中的字段名</p>
+ * @method string getDlcField() 获取<p>数据湖计算服务表的列名</p>
+ * @method void setDlcField(string $DlcField) 设置<p>数据湖计算服务表的列名</p>
+ * @method string getDlcFieldType() 获取<p>数据湖计算服务字段类型</p><p>枚举值：</p><ul><li>int|string|struct等： 参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></li></ul>
+ * @method void setDlcFieldType(string $DlcFieldType) 设置<p>数据湖计算服务字段类型</p><p>枚举值：</p><ul><li>int|string|struct等： 参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></li></ul>
+ * @method string getFillField() 获取<p>解析失败填充字段</p>
+ * @method void setFillField(string $FillField) 设置<p>解析失败填充字段</p>
+ * @method boolean getDisable() 获取<p>是否禁用</p>
+ * @method void setDisable(boolean $Disable) 设置<p>是否禁用</p>
  */
 class DlcFiledInfo extends AbstractModel
 {
     /**
-     * @var string cls日志中的字段名
+     * @var string <p>cls日志中的字段名</p>
      */
     public $ClsField;
 
     /**
-     * @var string 数据湖计算服务表的列名
+     * @var string <p>数据湖计算服务表的列名</p>
      */
     public $DlcField;
 
     /**
-     * @var string 数据湖计算服务字段类型
+     * @var string <p>数据湖计算服务字段类型</p><p>枚举值：</p><ul><li>int|string|struct等： 参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></li></ul>
      */
     public $DlcFieldType;
 
     /**
-     * @var string 解析失败填充字段
+     * @var string <p>解析失败填充字段</p>
      */
     public $FillField;
 
     /**
-     * @var boolean 是否禁用
+     * @var boolean <p>是否禁用</p>
      */
     public $Disable;
 
     /**
-     * @param string $ClsField cls日志中的字段名
-     * @param string $DlcField 数据湖计算服务表的列名
-     * @param string $DlcFieldType 数据湖计算服务字段类型
-     * @param string $FillField 解析失败填充字段
-     * @param boolean $Disable 是否禁用
+     * @param string $ClsField <p>cls日志中的字段名</p>
+     * @param string $DlcField <p>数据湖计算服务表的列名</p>
+     * @param string $DlcFieldType <p>数据湖计算服务字段类型</p><p>枚举值：</p><ul><li>int|string|struct等： 参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></li></ul>
+     * @param string $FillField <p>解析失败填充字段</p>
+     * @param boolean $Disable <p>是否禁用</p>
      */
     function __construct()
     {

@@ -20,91 +20,91 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstancesDetail请求参数结构体
  *
- * @method string getInstanceId() 获取（过滤条件）按照实例ID过滤
- * @method void setInstanceId(string $InstanceId) 设置（过滤条件）按照实例ID过滤
- * @method string getSearchWord() 获取（过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询
- * @method void setSearchWord(string $SearchWord) 设置（过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询
- * @method array getStatus() 获取（过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
- * @method void setStatus(array $Status) 设置（过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
- * @method integer getOffset() 获取偏移量，不填默认为0。
- * @method void setOffset(integer $Offset) 设置偏移量，不填默认为0。
- * @method integer getLimit() 获取返回数量，不填则默认10，最大值20。
- * @method void setLimit(integer $Limit) 设置返回数量，不填则默认10，最大值20。
- * @method string getTagKey() 获取匹配标签key值。
- * @method void setTagKey(string $TagKey) 设置匹配标签key值。
- * @method array getFilters() 获取过滤器。filter.Name 支持('Ip', 'VpcId', 'SubNetId', 'InstanceType','InstanceId') ,filter.Values最多传递10个值.
- * @method void setFilters(array $Filters) 设置过滤器。filter.Name 支持('Ip', 'VpcId', 'SubNetId', 'InstanceType','InstanceId') ,filter.Values最多传递10个值.
- * @method string getInstanceIds() 获取已经废弃， 使用InstanceIdList
- * @method void setInstanceIds(string $InstanceIds) 设置已经废弃， 使用InstanceIdList
- * @method array getInstanceIdList() 获取按照实例ID过滤
- * @method void setInstanceIdList(array $InstanceIdList) 设置按照实例ID过滤
- * @method array getTagList() 获取根据标签列表过滤实例（取交集）
- * @method void setTagList(array $TagList) 设置根据标签列表过滤实例（取交集）
+ * @method string getInstanceId() 获取<p>（过滤条件）按照实例ID过滤</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>（过滤条件）按照实例ID过滤</p>
+ * @method string getSearchWord() 获取<p>（过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询</p>
+ * @method void setSearchWord(string $SearchWord) 设置<p>（过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询</p>
+ * @method array getStatus() 获取<p>（过滤条件）实例的状态，不填默认返回全部</p><p>枚举值：</p><ul><li>-1： 创建失败</li><li>0： 创建中</li><li>1： 运行中</li><li>2： 删除中</li><li>3： 已删除</li><li>4： 删除失败</li><li>5： 隔离中</li><li>7： 升级中</li></ul>
+ * @method void setStatus(array $Status) 设置<p>（过滤条件）实例的状态，不填默认返回全部</p><p>枚举值：</p><ul><li>-1： 创建失败</li><li>0： 创建中</li><li>1： 运行中</li><li>2： 删除中</li><li>3： 已删除</li><li>4： 删除失败</li><li>5： 隔离中</li><li>7： 升级中</li></ul>
+ * @method integer getOffset() 获取<p>偏移量，不填默认为0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，不填默认为0。</p>
+ * @method integer getLimit() 获取<p>返回数量，不填则默认10，最大值20。</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，不填则默认10，最大值20。</p>
+ * @method string getTagKey() 获取<p>匹配标签key值。</p>
+ * @method void setTagKey(string $TagKey) 设置<p>匹配标签key值。</p>
+ * @method array getFilters() 获取<p>过滤器。filter.Name 支持(&#39;Ip&#39;, &#39;VpcId&#39;, &#39;SubNetId&#39;, &#39;InstanceType&#39;,&#39;InstanceId&#39;) ,filter.Values最多传递10个值.</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤器。filter.Name 支持(&#39;Ip&#39;, &#39;VpcId&#39;, &#39;SubNetId&#39;, &#39;InstanceType&#39;,&#39;InstanceId&#39;) ,filter.Values最多传递10个值.</p>
+ * @method string getInstanceIds() 获取<p>已经废弃， 使用InstanceIdList</p>
+ * @method void setInstanceIds(string $InstanceIds) 设置<p>已经废弃， 使用InstanceIdList</p>
+ * @method array getInstanceIdList() 获取<p>按照实例ID过滤</p>
+ * @method void setInstanceIdList(array $InstanceIdList) 设置<p>按照实例ID过滤</p>
+ * @method array getTagList() 获取<p>根据标签列表过滤实例（取交集）</p>
+ * @method void setTagList(array $TagList) 设置<p>根据标签列表过滤实例（取交集）</p>
  */
 class DescribeInstancesDetailRequest extends AbstractModel
 {
     /**
-     * @var string （过滤条件）按照实例ID过滤
+     * @var string <p>（过滤条件）按照实例ID过滤</p>
      */
     public $InstanceId;
 
     /**
-     * @var string （过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询
+     * @var string <p>（过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询</p>
      */
     public $SearchWord;
 
     /**
-     * @var array （过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
+     * @var array <p>（过滤条件）实例的状态，不填默认返回全部</p><p>枚举值：</p><ul><li>-1： 创建失败</li><li>0： 创建中</li><li>1： 运行中</li><li>2： 删除中</li><li>3： 已删除</li><li>4： 删除失败</li><li>5： 隔离中</li><li>7： 升级中</li></ul>
      */
     public $Status;
 
     /**
-     * @var integer 偏移量，不填默认为0。
+     * @var integer <p>偏移量，不填默认为0。</p>
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，不填则默认10，最大值20。
+     * @var integer <p>返回数量，不填则默认10，最大值20。</p>
      */
     public $Limit;
 
     /**
-     * @var string 匹配标签key值。
+     * @var string <p>匹配标签key值。</p>
      */
     public $TagKey;
 
     /**
-     * @var array 过滤器。filter.Name 支持('Ip', 'VpcId', 'SubNetId', 'InstanceType','InstanceId') ,filter.Values最多传递10个值.
+     * @var array <p>过滤器。filter.Name 支持(&#39;Ip&#39;, &#39;VpcId&#39;, &#39;SubNetId&#39;, &#39;InstanceType&#39;,&#39;InstanceId&#39;) ,filter.Values最多传递10个值.</p>
      */
     public $Filters;
 
     /**
-     * @var string 已经废弃， 使用InstanceIdList
+     * @var string <p>已经废弃， 使用InstanceIdList</p>
      * @deprecated
      */
     public $InstanceIds;
 
     /**
-     * @var array 按照实例ID过滤
+     * @var array <p>按照实例ID过滤</p>
      */
     public $InstanceIdList;
 
     /**
-     * @var array 根据标签列表过滤实例（取交集）
+     * @var array <p>根据标签列表过滤实例（取交集）</p>
      */
     public $TagList;
 
     /**
-     * @param string $InstanceId （过滤条件）按照实例ID过滤
-     * @param string $SearchWord （过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询
-     * @param array $Status （过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
-     * @param integer $Offset 偏移量，不填默认为0。
-     * @param integer $Limit 返回数量，不填则默认10，最大值20。
-     * @param string $TagKey 匹配标签key值。
-     * @param array $Filters 过滤器。filter.Name 支持('Ip', 'VpcId', 'SubNetId', 'InstanceType','InstanceId') ,filter.Values最多传递10个值.
-     * @param string $InstanceIds 已经废弃， 使用InstanceIdList
-     * @param array $InstanceIdList 按照实例ID过滤
-     * @param array $TagList 根据标签列表过滤实例（取交集）
+     * @param string $InstanceId <p>（过滤条件）按照实例ID过滤</p>
+     * @param string $SearchWord <p>（过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询</p>
+     * @param array $Status <p>（过滤条件）实例的状态，不填默认返回全部</p><p>枚举值：</p><ul><li>-1： 创建失败</li><li>0： 创建中</li><li>1： 运行中</li><li>2： 删除中</li><li>3： 已删除</li><li>4： 删除失败</li><li>5： 隔离中</li><li>7： 升级中</li></ul>
+     * @param integer $Offset <p>偏移量，不填默认为0。</p>
+     * @param integer $Limit <p>返回数量，不填则默认10，最大值20。</p>
+     * @param string $TagKey <p>匹配标签key值。</p>
+     * @param array $Filters <p>过滤器。filter.Name 支持(&#39;Ip&#39;, &#39;VpcId&#39;, &#39;SubNetId&#39;, &#39;InstanceType&#39;,&#39;InstanceId&#39;) ,filter.Values最多传递10个值.</p>
+     * @param string $InstanceIds <p>已经废弃， 使用InstanceIdList</p>
+     * @param array $InstanceIdList <p>按照实例ID过滤</p>
+     * @param array $TagList <p>根据标签列表过滤实例（取交集）</p>
      */
     function __construct()
     {

@@ -52,6 +52,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBoundProducts(array $BoundProducts) 设置已关联产品信息列表
  * @method string getCustomTools() 获取自定义工具列表，最多可创建10个
  * @method void setCustomTools(string $CustomTools) 设置自定义工具列表，最多可创建10个
+ * @method string getWebhookTools() 获取WebHook工具配置(JSON字符串格式)
+ * @method void setWebhookTools(string $WebhookTools) 设置WebHook工具配置(JSON字符串格式)
+ * @method string getBotType() 获取智能体模板类型
+ * @method void setBotType(string $BotType) 设置智能体模板类型
+ * @method string getRAGConfig() 获取知识库相关配置(JSON字符串格式)
+ * @method void setRAGConfig(string $RAGConfig) 设置知识库相关配置(JSON字符串格式)
  */
 class TalkAIBotInfo extends AbstractModel
 {
@@ -137,6 +143,21 @@ class TalkAIBotInfo extends AbstractModel
     public $CustomTools;
 
     /**
+     * @var string WebHook工具配置(JSON字符串格式)
+     */
+    public $WebhookTools;
+
+    /**
+     * @var string 智能体模板类型
+     */
+    public $BotType;
+
+    /**
+     * @var string 知识库相关配置(JSON字符串格式)
+     */
+    public $RAGConfig;
+
+    /**
      * @param integer $Uin UIN
      * @param integer $AppId APPID
      * @param string $InstanceId 实例ID
@@ -153,6 +174,9 @@ class TalkAIBotInfo extends AbstractModel
      * @param integer $UpdateTime 更新时间
      * @param array $BoundProducts 已关联产品信息列表
      * @param string $CustomTools 自定义工具列表，最多可创建10个
+     * @param string $WebhookTools WebHook工具配置(JSON字符串格式)
+     * @param string $BotType 智能体模板类型
+     * @param string $RAGConfig 知识库相关配置(JSON字符串格式)
      */
     function __construct()
     {
@@ -239,6 +263,18 @@ class TalkAIBotInfo extends AbstractModel
 
         if (array_key_exists("CustomTools",$param) and $param["CustomTools"] !== null) {
             $this->CustomTools = $param["CustomTools"];
+        }
+
+        if (array_key_exists("WebhookTools",$param) and $param["WebhookTools"] !== null) {
+            $this->WebhookTools = $param["WebhookTools"];
+        }
+
+        if (array_key_exists("BotType",$param) and $param["BotType"] !== null) {
+            $this->BotType = $param["BotType"];
+        }
+
+        if (array_key_exists("RAGConfig",$param) and $param["RAGConfig"] !== null) {
+            $this->RAGConfig = $param["RAGConfig"];
         }
     }
 }

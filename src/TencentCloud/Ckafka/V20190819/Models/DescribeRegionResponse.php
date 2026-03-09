@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRegion返回参数结构体
  *
- * @method array getResult() 获取返回地域枚举结果列表
- * @method void setResult(array $Result) 设置返回地域枚举结果列表
+ * @method array getResult() 获取<p>返回地域枚举结果列表</p>
+ * @method void setResult(array $Result) 设置<p>返回地域枚举结果列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeRegionResponse extends AbstractModel
 {
     /**
-     * @var array 返回地域枚举结果列表
+     * @var array <p>返回地域枚举结果列表</p>
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class DescribeRegionResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Result 返回地域枚举结果列表
+     * @param array $Result <p>返回地域枚举结果列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

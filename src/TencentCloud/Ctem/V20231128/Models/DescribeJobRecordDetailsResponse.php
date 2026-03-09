@@ -20,24 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeJobRecordDetails返回参数结构体
  *
- * @method integer getTotal() 获取总数
- * @method void setTotal(integer $Total) 设置总数
- * @method array getList() 获取数组
- * @method void setList(array $List) 设置数组
+ * @method integer getTotal() 获取<p>总数</p>
+ * @method void setTotal(integer $Total) 设置<p>总数</p>
+ * @method array getList() 获取<p>数组</p>
+ * @method void setList(array $List) 设置<p>数组</p>
+ * @method array getEnterpriseEquityPath() 获取<p>持股路径</p>
+ * @method void setEnterpriseEquityPath(array $EnterpriseEquityPath) 设置<p>持股路径</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeJobRecordDetailsResponse extends AbstractModel
 {
     /**
-     * @var integer 总数
+     * @var integer <p>总数</p>
      */
     public $Total;
 
     /**
-     * @var array 数组
+     * @var array <p>数组</p>
      */
     public $List;
+
+    /**
+     * @var array <p>持股路径</p>
+     */
+    public $EnterpriseEquityPath;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +52,9 @@ class DescribeJobRecordDetailsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total 总数
-     * @param array $List 数组
+     * @param integer $Total <p>总数</p>
+     * @param array $List <p>数组</p>
+     * @param array $EnterpriseEquityPath <p>持股路径</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -72,6 +80,15 @@ class DescribeJobRecordDetailsResponse extends AbstractModel
                 $obj = new DisplayJobRecordDetail();
                 $obj->deserialize($value);
                 array_push($this->List, $obj);
+            }
+        }
+
+        if (array_key_exists("EnterpriseEquityPath",$param) and $param["EnterpriseEquityPath"] !== null) {
+            $this->EnterpriseEquityPath = [];
+            foreach ($param["EnterpriseEquityPath"] as $key => $value){
+                $obj = new Equity();
+                $obj->deserialize($value);
+                array_push($this->EnterpriseEquityPath, $obj);
             }
         }
 

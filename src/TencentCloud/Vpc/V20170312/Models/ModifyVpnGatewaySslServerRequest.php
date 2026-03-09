@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSsoEnabled(boolean $SsoEnabled) 设置是否开启SSO认证。默认为False。该功能当前需要申请开白使用。
  * @method string getSamlData() 获取SAML-DATA
  * @method void setSamlData(string $SamlData) 设置SAML-DATA
+ * @method DnsServers getDnsServers() 获取DNS Server地址
+ * @method void setDnsServers(DnsServers $DnsServers) 设置DNS Server地址
  */
 class ModifyVpnGatewaySslServerRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class ModifyVpnGatewaySslServerRequest extends AbstractModel
     public $SamlData;
 
     /**
+     * @var DnsServers DNS Server地址
+     */
+    public $DnsServers;
+
+    /**
      * @param string $SslVpnServerId SSL-VPN SERVER 实例ID
      * @param string $SslVpnServerName SSL-VPN SERVER NAME
      * @param array $LocalAddress 本端地址
@@ -112,6 +119,7 @@ class ModifyVpnGatewaySslServerRequest extends AbstractModel
      * @param boolean $Compress 是否支持压缩。当前不支持压缩。默认False。
      * @param boolean $SsoEnabled 是否开启SSO认证。默认为False。该功能当前需要申请开白使用。
      * @param string $SamlData SAML-DATA
+     * @param DnsServers $DnsServers DNS Server地址
      */
     function __construct()
     {
@@ -168,6 +176,11 @@ class ModifyVpnGatewaySslServerRequest extends AbstractModel
 
         if (array_key_exists("SamlData",$param) and $param["SamlData"] !== null) {
             $this->SamlData = $param["SamlData"];
+        }
+
+        if (array_key_exists("DnsServers",$param) and $param["DnsServers"] !== null) {
+            $this->DnsServers = new DnsServers();
+            $this->DnsServers->deserialize($param["DnsServers"]);
         }
     }
 }

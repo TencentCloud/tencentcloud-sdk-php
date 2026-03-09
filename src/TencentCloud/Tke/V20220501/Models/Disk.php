@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDiskType() 获取云盘类型
  * @method void setDiskType(string $DiskType) 设置云盘类型
- * @method integer getDiskSize() 获取云盘大小(G）
- * @method void setDiskSize(integer $DiskSize) 设置云盘大小(G）
+ * @method integer getDiskSize() 获取云盘大小 (G）
+ * @method void setDiskSize(integer $DiskSize) 设置云盘大小 (G）
  * @method boolean getAutoFormatAndMount() 获取是否自动化格式盘并挂载
  * @method void setAutoFormatAndMount(boolean $AutoFormatAndMount) 设置是否自动化格式盘并挂载
  * @method string getFileSystem() 获取文件系统
@@ -34,6 +34,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskId(string $DiskId) 设置云盘ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEncrypt() 获取加密系统盘
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEncrypt(string $Encrypt) 设置加密系统盘
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getKmsKeyId() 获取自定义 KMS ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKmsKeyId(string $KmsKeyId) 设置自定义 KMS ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Disk extends AbstractModel
 {
@@ -43,7 +51,7 @@ class Disk extends AbstractModel
     public $DiskType;
 
     /**
-     * @var integer 云盘大小(G）
+     * @var integer 云盘大小 (G）
      */
     public $DiskSize;
 
@@ -69,12 +77,28 @@ class Disk extends AbstractModel
     public $DiskId;
 
     /**
+     * @var string 加密系统盘
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Encrypt;
+
+    /**
+     * @var string 自定义 KMS ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KmsKeyId;
+
+    /**
      * @param string $DiskType 云盘类型
-     * @param integer $DiskSize 云盘大小(G）
+     * @param integer $DiskSize 云盘大小 (G）
      * @param boolean $AutoFormatAndMount 是否自动化格式盘并挂载
      * @param string $FileSystem 文件系统
      * @param string $MountTarget 挂载目录
      * @param string $DiskId 云盘ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Encrypt 加密系统盘
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $KmsKeyId 自定义 KMS ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -112,6 +136,14 @@ class Disk extends AbstractModel
 
         if (array_key_exists("DiskId",$param) and $param["DiskId"] !== null) {
             $this->DiskId = $param["DiskId"];
+        }
+
+        if (array_key_exists("Encrypt",$param) and $param["Encrypt"] !== null) {
+            $this->Encrypt = $param["Encrypt"];
+        }
+
+        if (array_key_exists("KmsKeyId",$param) and $param["KmsKeyId"] !== null) {
+            $this->KmsKeyId = $param["KmsKeyId"];
         }
     }
 }

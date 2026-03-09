@@ -80,6 +80,8 @@ drop：拒绝
 规则状态，true表示启用，false表示禁用
  * @method string getUid() 获取规则对应的唯一内部id
  * @method void setUid(string $Uid) 设置规则对应的唯一内部id
+ * @method string getScope() 获取规则生效范围，SG安全组，LH轻量服务器
+ * @method void setScope(string $Scope) 设置规则生效范围，SG安全组，LH轻量服务器
  */
 class SecurityGroupRule extends AbstractModel
 {
@@ -166,6 +168,11 @@ drop：拒绝
     public $Uid;
 
     /**
+     * @var string 规则生效范围，SG安全组，LH轻量服务器
+     */
+    public $Scope;
+
+    /**
      * @param string $SourceContent 访问源示例：
 net：IP/CIDR(192.168.0.2)
 template：参数模板id(ipm-dyodhpby)
@@ -196,6 +203,7 @@ drop：拒绝
      * @param string $Enable （入参时Enable无意义；由通用配置中新增规则启用状态控制）
 规则状态，true表示启用，false表示禁用
      * @param string $Uid 规则对应的唯一内部id
+     * @param string $Scope 规则生效范围，SG安全组，LH轻量服务器
      */
     function __construct()
     {
@@ -260,6 +268,10 @@ drop：拒绝
 
         if (array_key_exists("Uid",$param) and $param["Uid"] !== null) {
             $this->Uid = $param["Uid"];
+        }
+
+        if (array_key_exists("Scope",$param) and $param["Scope"] !== null) {
+            $this->Scope = $param["Scope"];
         }
     }
 }

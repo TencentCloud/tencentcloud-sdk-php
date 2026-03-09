@@ -20,32 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetTotalRequestStatistics返回参数结构体
  *
- * @method CaptchaStatisticObj getData() 获取查询后数据块
+ * @method CaptchaStatisticObj getData() 获取<p>查询后数据块</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(CaptchaStatisticObj $Data) 设置查询后数据块
+ * @method void setData(CaptchaStatisticObj $Data) 设置<p>查询后数据块</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCaptchaCode() 获取验证码返回码
- * @method void setCaptchaCode(integer $CaptchaCode) 设置验证码返回码
- * @method string getCaptchaMsg() 获取验证码返回信息
- * @method void setCaptchaMsg(string $CaptchaMsg) 设置验证码返回信息
+ * @method integer getCaptchaCode() 获取<p>验证码返回码</p>
+ * @method void setCaptchaCode(integer $CaptchaCode) 设置<p>验证码返回码</p>
+ * @method string getCaptchaMsg() 获取<p>验证码返回信息</p>
+ * @method void setCaptchaMsg(string $CaptchaMsg) 设置<p>验证码返回信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetTotalRequestStatisticsResponse extends AbstractModel
 {
     /**
-     * @var CaptchaStatisticObj 查询后数据块
+     * @var CaptchaStatisticObj <p>查询后数据块</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
     /**
-     * @var integer 验证码返回码
+     * @var integer <p>验证码返回码</p>
      */
     public $CaptchaCode;
 
     /**
-     * @var string 验证码返回信息
+     * @var string <p>验证码返回信息</p>
      */
     public $CaptchaMsg;
 
@@ -55,10 +55,10 @@ class GetTotalRequestStatisticsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param CaptchaStatisticObj $Data 查询后数据块
+     * @param CaptchaStatisticObj $Data <p>查询后数据块</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CaptchaCode 验证码返回码
-     * @param string $CaptchaMsg 验证码返回信息
+     * @param integer $CaptchaCode <p>验证码返回码</p>
+     * @param string $CaptchaMsg <p>验证码返回信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,162 +20,162 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTopicAttributes请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
- * @method string getTopicName() 获取主题名
- * @method void setTopicName(string $TopicName) 设置主题名
- * @method string getNote() 获取主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
- * @method void setNote(string $Note) 设置主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
- * @method integer getEnableWhiteList() 获取IP 白名单开关，1：打开；0：关闭。
- * @method void setEnableWhiteList(integer $EnableWhiteList) 设置IP 白名单开关，1：打开；0：关闭。
- * @method integer getMinInsyncReplicas() 获取默认为1。
- * @method void setMinInsyncReplicas(integer $MinInsyncReplicas) 设置默认为1。
- * @method integer getUncleanLeaderElectionEnable() 获取默认为 0，0：false；1：true。
- * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) 设置默认为 0，0：false；1：true。
- * @method integer getRetentionMs() 获取消息保留时间，单位：ms，当前最小值为60000ms。
- * @method void setRetentionMs(integer $RetentionMs) 设置消息保留时间，单位：ms，当前最小值为60000ms。
- * @method integer getMaxMessageBytes() 获取主题消息最大值，单位为 Byte，最大值为12582912Byte（即12MB）。
- * @method void setMaxMessageBytes(integer $MaxMessageBytes) 设置主题消息最大值，单位为 Byte，最大值为12582912Byte（即12MB）。
- * @method integer getSegmentMs() 获取Segment 分片滚动的时长，单位：ms，当前最小值86400000ms。
- * @method void setSegmentMs(integer $SegmentMs) 设置Segment 分片滚动的时长，单位：ms，当前最小值86400000ms。
- * @method string getCleanUpPolicy() 获取消息删除策略，可以选择delete 或者compact
- * @method void setCleanUpPolicy(string $CleanUpPolicy) 设置消息删除策略，可以选择delete 或者compact
- * @method array getIpWhiteList() 获取Ip白名单列表，配额限制，enableWhileList=1时必选
- * @method void setIpWhiteList(array $IpWhiteList) 设置Ip白名单列表，配额限制，enableWhileList=1时必选
- * @method integer getEnableAclRule() 获取预设ACL规则, 1:打开  0:关闭，默认不打开
- * @method void setEnableAclRule(integer $EnableAclRule) 设置预设ACL规则, 1:打开  0:关闭，默认不打开
- * @method string getAclRuleName() 获取ACL规则名
- * @method void setAclRuleName(string $AclRuleName) 设置ACL规则名
- * @method integer getRetentionBytes() 获取可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
- * @method void setRetentionBytes(integer $RetentionBytes) 设置可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
- * @method array getTags() 获取标签列表
- * @method void setTags(array $Tags) 设置标签列表
- * @method integer getQuotaProducerByteRate() 获取生产限流，单位 MB/s；设置为-1，则生产不限流
- * @method void setQuotaProducerByteRate(integer $QuotaProducerByteRate) 设置生产限流，单位 MB/s；设置为-1，则生产不限流
- * @method integer getQuotaConsumerByteRate() 获取消费限流，单位 MB/s；设置为-1，则消费不限流
- * @method void setQuotaConsumerByteRate(integer $QuotaConsumerByteRate) 设置消费限流，单位 MB/s；设置为-1，则消费不限流
- * @method integer getReplicaNum() 获取topic副本数  最小值 1,最大值 3
- * @method void setReplicaNum(integer $ReplicaNum) 设置topic副本数  最小值 1,最大值 3
- * @method string getLogMsgTimestampType() 获取消息保存的时间类型：CreateTime/LogAppendTime
- * @method void setLogMsgTimestampType(string $LogMsgTimestampType) 设置消息保存的时间类型：CreateTime/LogAppendTime
+ * @method string getInstanceId() 获取<p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+ * @method string getTopicName() 获取<p>主题名</p>
+ * @method void setTopicName(string $TopicName) 设置<p>主题名</p>
+ * @method string getNote() 获取<p>主题备注</p><p>入参限制：不超过64个字符</p><p>默认值：&quot;&quot;</p>
+ * @method void setNote(string $Note) 设置<p>主题备注</p><p>入参限制：不超过64个字符</p><p>默认值：&quot;&quot;</p>
+ * @method integer getEnableWhiteList() 获取<p>IP 白名单开关，1：打开；0：关闭。</p>
+ * @method void setEnableWhiteList(integer $EnableWhiteList) 设置<p>IP 白名单开关，1：打开；0：关闭。</p>
+ * @method integer getMinInsyncReplicas() 获取<p>最小同步副本数</p><p>默认值：1</p><p>最小值为1</p>
+ * @method void setMinInsyncReplicas(integer $MinInsyncReplicas) 设置<p>最小同步副本数</p><p>默认值：1</p><p>最小值为1</p>
+ * @method integer getUncleanLeaderElectionEnable() 获取<p>是否允许未同步的副本选为leader</p><p>枚举值：</p><ul><li>0： 不允许</li><li>1： 允许</li></ul><p>默认值：0</p>
+ * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) 设置<p>是否允许未同步的副本选为leader</p><p>枚举值：</p><ul><li>0： 不允许</li><li>1： 允许</li></ul><p>默认值：0</p>
+ * @method integer getRetentionMs() 获取<p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
+ * @method void setRetentionMs(integer $RetentionMs) 设置<p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
+ * @method integer getMaxMessageBytes() 获取<p>主题消息最大值</p><p>取值范围：[1024, 12582912]</p><p>单位：Bytes</p>
+ * @method void setMaxMessageBytes(integer $MaxMessageBytes) 设置<p>主题消息最大值</p><p>取值范围：[1024, 12582912]</p><p>单位：Bytes</p>
+ * @method integer getSegmentMs() 获取<p>Segment 分片滚动的时长</p><p>单位：毫秒</p><p>最小值为86400000ms（1天）</p>
+ * @method void setSegmentMs(integer $SegmentMs) 设置<p>Segment 分片滚动的时长</p><p>单位：毫秒</p><p>最小值为86400000ms（1天）</p>
+ * @method string getCleanUpPolicy() 获取<p>消息删除策略，可以选择delete 或者compact</p>
+ * @method void setCleanUpPolicy(string $CleanUpPolicy) 设置<p>消息删除策略，可以选择delete 或者compact</p>
+ * @method array getIpWhiteList() 获取<p>Ip白名单列表，配额限制，enableWhileList=1时必选</p>
+ * @method void setIpWhiteList(array $IpWhiteList) 设置<p>Ip白名单列表，配额限制，enableWhileList=1时必选</p>
+ * @method integer getEnableAclRule() 获取<p>预设ACL规则, 1:打开  0:关闭，默认不打开</p>
+ * @method void setEnableAclRule(integer $EnableAclRule) 设置<p>预设ACL规则, 1:打开  0:关闭，默认不打开</p>
+ * @method string getAclRuleName() 获取<p>ACL规则名</p>
+ * @method void setAclRuleName(string $AclRuleName) 设置<p>ACL规则名</p>
+ * @method integer getRetentionBytes() 获取<p>可选, 保留文件大小</p><p>取值范围：[1073741824, 1099511627776]</p><p>单位：Bytes</p><p>默认值：-1</p><p>特殊值：-1表示无限制</p>
+ * @method void setRetentionBytes(integer $RetentionBytes) 设置<p>可选, 保留文件大小</p><p>取值范围：[1073741824, 1099511627776]</p><p>单位：Bytes</p><p>默认值：-1</p><p>特殊值：-1表示无限制</p>
+ * @method array getTags() 获取<p>标签列表</p>
+ * @method void setTags(array $Tags) 设置<p>标签列表</p>
+ * @method integer getQuotaProducerByteRate() 获取<p>生产限流，单位 MB/s；设置为-1，则生产不限流</p>
+ * @method void setQuotaProducerByteRate(integer $QuotaProducerByteRate) 设置<p>生产限流，单位 MB/s；设置为-1，则生产不限流</p>
+ * @method integer getQuotaConsumerByteRate() 获取<p>消费限流，单位 MB/s；设置为-1，则消费不限流</p>
+ * @method void setQuotaConsumerByteRate(integer $QuotaConsumerByteRate) 设置<p>消费限流，单位 MB/s；设置为-1，则消费不限流</p>
+ * @method integer getReplicaNum() 获取<p>topic副本数  最小值 1,最大值 3</p>
+ * @method void setReplicaNum(integer $ReplicaNum) 设置<p>topic副本数  最小值 1,最大值 3</p>
+ * @method string getLogMsgTimestampType() 获取<p>消息保存的时间类型：CreateTime/LogAppendTime</p>
+ * @method void setLogMsgTimestampType(string $LogMsgTimestampType) 设置<p>消息保存的时间类型：CreateTime/LogAppendTime</p>
  */
 class ModifyTopicAttributesRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public $InstanceId;
 
     /**
-     * @var string 主题名
+     * @var string <p>主题名</p>
      */
     public $TopicName;
 
     /**
-     * @var string 主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
+     * @var string <p>主题备注</p><p>入参限制：不超过64个字符</p><p>默认值：&quot;&quot;</p>
      */
     public $Note;
 
     /**
-     * @var integer IP 白名单开关，1：打开；0：关闭。
+     * @var integer <p>IP 白名单开关，1：打开；0：关闭。</p>
      */
     public $EnableWhiteList;
 
     /**
-     * @var integer 默认为1。
+     * @var integer <p>最小同步副本数</p><p>默认值：1</p><p>最小值为1</p>
      */
     public $MinInsyncReplicas;
 
     /**
-     * @var integer 默认为 0，0：false；1：true。
+     * @var integer <p>是否允许未同步的副本选为leader</p><p>枚举值：</p><ul><li>0： 不允许</li><li>1： 允许</li></ul><p>默认值：0</p>
      */
     public $UncleanLeaderElectionEnable;
 
     /**
-     * @var integer 消息保留时间，单位：ms，当前最小值为60000ms。
+     * @var integer <p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
      */
     public $RetentionMs;
 
     /**
-     * @var integer 主题消息最大值，单位为 Byte，最大值为12582912Byte（即12MB）。
+     * @var integer <p>主题消息最大值</p><p>取值范围：[1024, 12582912]</p><p>单位：Bytes</p>
      */
     public $MaxMessageBytes;
 
     /**
-     * @var integer Segment 分片滚动的时长，单位：ms，当前最小值86400000ms。
+     * @var integer <p>Segment 分片滚动的时长</p><p>单位：毫秒</p><p>最小值为86400000ms（1天）</p>
      */
     public $SegmentMs;
 
     /**
-     * @var string 消息删除策略，可以选择delete 或者compact
+     * @var string <p>消息删除策略，可以选择delete 或者compact</p>
      */
     public $CleanUpPolicy;
 
     /**
-     * @var array Ip白名单列表，配额限制，enableWhileList=1时必选
+     * @var array <p>Ip白名单列表，配额限制，enableWhileList=1时必选</p>
      */
     public $IpWhiteList;
 
     /**
-     * @var integer 预设ACL规则, 1:打开  0:关闭，默认不打开
+     * @var integer <p>预设ACL规则, 1:打开  0:关闭，默认不打开</p>
      */
     public $EnableAclRule;
 
     /**
-     * @var string ACL规则名
+     * @var string <p>ACL规则名</p>
      */
     public $AclRuleName;
 
     /**
-     * @var integer 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
+     * @var integer <p>可选, 保留文件大小</p><p>取值范围：[1073741824, 1099511627776]</p><p>单位：Bytes</p><p>默认值：-1</p><p>特殊值：-1表示无限制</p>
      */
     public $RetentionBytes;
 
     /**
-     * @var array 标签列表
+     * @var array <p>标签列表</p>
      */
     public $Tags;
 
     /**
-     * @var integer 生产限流，单位 MB/s；设置为-1，则生产不限流
+     * @var integer <p>生产限流，单位 MB/s；设置为-1，则生产不限流</p>
      */
     public $QuotaProducerByteRate;
 
     /**
-     * @var integer 消费限流，单位 MB/s；设置为-1，则消费不限流
+     * @var integer <p>消费限流，单位 MB/s；设置为-1，则消费不限流</p>
      */
     public $QuotaConsumerByteRate;
 
     /**
-     * @var integer topic副本数  最小值 1,最大值 3
+     * @var integer <p>topic副本数  最小值 1,最大值 3</p>
      */
     public $ReplicaNum;
 
     /**
-     * @var string 消息保存的时间类型：CreateTime/LogAppendTime
+     * @var string <p>消息保存的时间类型：CreateTime/LogAppendTime</p>
      */
     public $LogMsgTimestampType;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
-     * @param string $TopicName 主题名
-     * @param string $Note 主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
-     * @param integer $EnableWhiteList IP 白名单开关，1：打开；0：关闭。
-     * @param integer $MinInsyncReplicas 默认为1。
-     * @param integer $UncleanLeaderElectionEnable 默认为 0，0：false；1：true。
-     * @param integer $RetentionMs 消息保留时间，单位：ms，当前最小值为60000ms。
-     * @param integer $MaxMessageBytes 主题消息最大值，单位为 Byte，最大值为12582912Byte（即12MB）。
-     * @param integer $SegmentMs Segment 分片滚动的时长，单位：ms，当前最小值86400000ms。
-     * @param string $CleanUpPolicy 消息删除策略，可以选择delete 或者compact
-     * @param array $IpWhiteList Ip白名单列表，配额限制，enableWhileList=1时必选
-     * @param integer $EnableAclRule 预设ACL规则, 1:打开  0:关闭，默认不打开
-     * @param string $AclRuleName ACL规则名
-     * @param integer $RetentionBytes 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
-     * @param array $Tags 标签列表
-     * @param integer $QuotaProducerByteRate 生产限流，单位 MB/s；设置为-1，则生产不限流
-     * @param integer $QuotaConsumerByteRate 消费限流，单位 MB/s；设置为-1，则消费不限流
-     * @param integer $ReplicaNum topic副本数  最小值 1,最大值 3
-     * @param string $LogMsgTimestampType 消息保存的时间类型：CreateTime/LogAppendTime
+     * @param string $InstanceId <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+     * @param string $TopicName <p>主题名</p>
+     * @param string $Note <p>主题备注</p><p>入参限制：不超过64个字符</p><p>默认值：&quot;&quot;</p>
+     * @param integer $EnableWhiteList <p>IP 白名单开关，1：打开；0：关闭。</p>
+     * @param integer $MinInsyncReplicas <p>最小同步副本数</p><p>默认值：1</p><p>最小值为1</p>
+     * @param integer $UncleanLeaderElectionEnable <p>是否允许未同步的副本选为leader</p><p>枚举值：</p><ul><li>0： 不允许</li><li>1： 允许</li></ul><p>默认值：0</p>
+     * @param integer $RetentionMs <p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
+     * @param integer $MaxMessageBytes <p>主题消息最大值</p><p>取值范围：[1024, 12582912]</p><p>单位：Bytes</p>
+     * @param integer $SegmentMs <p>Segment 分片滚动的时长</p><p>单位：毫秒</p><p>最小值为86400000ms（1天）</p>
+     * @param string $CleanUpPolicy <p>消息删除策略，可以选择delete 或者compact</p>
+     * @param array $IpWhiteList <p>Ip白名单列表，配额限制，enableWhileList=1时必选</p>
+     * @param integer $EnableAclRule <p>预设ACL规则, 1:打开  0:关闭，默认不打开</p>
+     * @param string $AclRuleName <p>ACL规则名</p>
+     * @param integer $RetentionBytes <p>可选, 保留文件大小</p><p>取值范围：[1073741824, 1099511627776]</p><p>单位：Bytes</p><p>默认值：-1</p><p>特殊值：-1表示无限制</p>
+     * @param array $Tags <p>标签列表</p>
+     * @param integer $QuotaProducerByteRate <p>生产限流，单位 MB/s；设置为-1，则生产不限流</p>
+     * @param integer $QuotaConsumerByteRate <p>消费限流，单位 MB/s；设置为-1，则消费不限流</p>
+     * @param integer $ReplicaNum <p>topic副本数  最小值 1,最大值 3</p>
+     * @param string $LogMsgTimestampType <p>消息保存的时间类型：CreateTime/LogAppendTime</p>
      */
     function __construct()
     {

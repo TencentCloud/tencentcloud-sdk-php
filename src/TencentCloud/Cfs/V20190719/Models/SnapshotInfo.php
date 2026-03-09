@@ -20,137 +20,137 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 快照信息
  *
- * @method string getCreationTime() 获取创建快照时间
- * @method void setCreationTime(string $CreationTime) 设置创建快照时间
- * @method string getSnapshotName() 获取快照名称
- * @method void setSnapshotName(string $SnapshotName) 设置快照名称
- * @method string getSnapshotId() 获取快照ID
- * @method void setSnapshotId(string $SnapshotId) 设置快照ID
- * @method string getStatus() 获取快照状态，creating-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败
- * @method void setStatus(string $Status) 设置快照状态，creating-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败
- * @method string getRegionName() 获取地域名称
- * @method void setRegionName(string $RegionName) 设置地域名称
- * @method string getFileSystemId() 获取文件系统ID
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统ID
- * @method integer getSize() 获取快照大小
- * @method void setSize(integer $Size) 设置快照大小
- * @method integer getAliveDay() 获取保留时长天
- * @method void setAliveDay(integer $AliveDay) 设置保留时长天
- * @method integer getPercent() 获取快照进度百分比，1表示1% 范围1-100
- * @method void setPercent(integer $Percent) 设置快照进度百分比，1表示1% 范围1-100
- * @method integer getAppId() 获取账号ID
- * @method void setAppId(integer $AppId) 设置账号ID
- * @method string getDeleteTime() 获取快照删除时间
- * @method void setDeleteTime(string $DeleteTime) 设置快照删除时间
- * @method string getFsName() 获取文件系统名称
- * @method void setFsName(string $FsName) 设置文件系统名称
- * @method array getTags() 获取快照标签
- * @method void setTags(array $Tags) 设置快照标签
- * @method string getSnapshotType() 获取快照类型，general为通用系列快照，turbo为Turbo系列快照
+ * @method string getCreationTime() 获取<p>创建快照时间</p>
+ * @method void setCreationTime(string $CreationTime) 设置<p>创建快照时间</p>
+ * @method string getSnapshotName() 获取<p>快照名称</p>
+ * @method void setSnapshotName(string $SnapshotName) 设置<p>快照名称</p>
+ * @method string getSnapshotId() 获取<p>快照ID</p>
+ * @method void setSnapshotId(string $SnapshotId) 设置<p>快照ID</p>
+ * @method string getStatus() 获取<p>快照状态，creating-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败</p>
+ * @method void setStatus(string $Status) 设置<p>快照状态，creating-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败</p>
+ * @method string getRegionName() 获取<p>地域名称</p>
+ * @method void setRegionName(string $RegionName) 设置<p>地域名称</p>
+ * @method string getFileSystemId() 获取<p>文件系统ID</p>
+ * @method void setFileSystemId(string $FileSystemId) 设置<p>文件系统ID</p>
+ * @method integer getSize() 获取<p>快照大小</p><p>单位：MiB</p>
+ * @method void setSize(integer $Size) 设置<p>快照大小</p><p>单位：MiB</p>
+ * @method integer getAliveDay() 获取<p>保留时长天</p>
+ * @method void setAliveDay(integer $AliveDay) 设置<p>保留时长天</p>
+ * @method integer getPercent() 获取<p>快照进度百分比，1表示1% 范围1-100</p>
+ * @method void setPercent(integer $Percent) 设置<p>快照进度百分比，1表示1% 范围1-100</p>
+ * @method integer getAppId() 获取<p>账号ID</p>
+ * @method void setAppId(integer $AppId) 设置<p>账号ID</p>
+ * @method string getDeleteTime() 获取<p>快照删除时间</p>
+ * @method void setDeleteTime(string $DeleteTime) 设置<p>快照删除时间</p>
+ * @method string getFsName() 获取<p>文件系统名称</p>
+ * @method void setFsName(string $FsName) 设置<p>文件系统名称</p>
+ * @method array getTags() 获取<p>快照标签</p>
+ * @method void setTags(array $Tags) 设置<p>快照标签</p>
+ * @method string getSnapshotType() 获取<p>快照类型，general为通用系列快照，turbo为Turbo系列快照</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSnapshotType(string $SnapshotType) 设置快照类型，general为通用系列快照，turbo为Turbo系列快照
+ * @method void setSnapshotType(string $SnapshotType) 设置<p>快照类型，general为通用系列快照，turbo为Turbo系列快照</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSnapshotTime() 获取实际快照时间，反映快照对应文件系统某个时刻的数据。
+ * @method string getSnapshotTime() 获取<p>实际快照时间，反映快照对应文件系统某个时刻的数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSnapshotTime(string $SnapshotTime) 设置实际快照时间，反映快照对应文件系统某个时刻的数据。
+ * @method void setSnapshotTime(string $SnapshotTime) 设置<p>实际快照时间，反映快照对应文件系统某个时刻的数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SnapshotInfo extends AbstractModel
 {
     /**
-     * @var string 创建快照时间
+     * @var string <p>创建快照时间</p>
      */
     public $CreationTime;
 
     /**
-     * @var string 快照名称
+     * @var string <p>快照名称</p>
      */
     public $SnapshotName;
 
     /**
-     * @var string 快照ID
+     * @var string <p>快照ID</p>
      */
     public $SnapshotId;
 
     /**
-     * @var string 快照状态，creating-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败
+     * @var string <p>快照状态，creating-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败</p>
      */
     public $Status;
 
     /**
-     * @var string 地域名称
+     * @var string <p>地域名称</p>
      */
     public $RegionName;
 
     /**
-     * @var string 文件系统ID
+     * @var string <p>文件系统ID</p>
      */
     public $FileSystemId;
 
     /**
-     * @var integer 快照大小
+     * @var integer <p>快照大小</p><p>单位：MiB</p>
      */
     public $Size;
 
     /**
-     * @var integer 保留时长天
+     * @var integer <p>保留时长天</p>
      */
     public $AliveDay;
 
     /**
-     * @var integer 快照进度百分比，1表示1% 范围1-100
+     * @var integer <p>快照进度百分比，1表示1% 范围1-100</p>
      */
     public $Percent;
 
     /**
-     * @var integer 账号ID
+     * @var integer <p>账号ID</p>
      */
     public $AppId;
 
     /**
-     * @var string 快照删除时间
+     * @var string <p>快照删除时间</p>
      */
     public $DeleteTime;
 
     /**
-     * @var string 文件系统名称
+     * @var string <p>文件系统名称</p>
      */
     public $FsName;
 
     /**
-     * @var array 快照标签
+     * @var array <p>快照标签</p>
      */
     public $Tags;
 
     /**
-     * @var string 快照类型，general为通用系列快照，turbo为Turbo系列快照
+     * @var string <p>快照类型，general为通用系列快照，turbo为Turbo系列快照</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotType;
 
     /**
-     * @var string 实际快照时间，反映快照对应文件系统某个时刻的数据。
+     * @var string <p>实际快照时间，反映快照对应文件系统某个时刻的数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotTime;
 
     /**
-     * @param string $CreationTime 创建快照时间
-     * @param string $SnapshotName 快照名称
-     * @param string $SnapshotId 快照ID
-     * @param string $Status 快照状态，creating-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败
-     * @param string $RegionName 地域名称
-     * @param string $FileSystemId 文件系统ID
-     * @param integer $Size 快照大小
-     * @param integer $AliveDay 保留时长天
-     * @param integer $Percent 快照进度百分比，1表示1% 范围1-100
-     * @param integer $AppId 账号ID
-     * @param string $DeleteTime 快照删除时间
-     * @param string $FsName 文件系统名称
-     * @param array $Tags 快照标签
-     * @param string $SnapshotType 快照类型，general为通用系列快照，turbo为Turbo系列快照
+     * @param string $CreationTime <p>创建快照时间</p>
+     * @param string $SnapshotName <p>快照名称</p>
+     * @param string $SnapshotId <p>快照ID</p>
+     * @param string $Status <p>快照状态，creating-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败</p>
+     * @param string $RegionName <p>地域名称</p>
+     * @param string $FileSystemId <p>文件系统ID</p>
+     * @param integer $Size <p>快照大小</p><p>单位：MiB</p>
+     * @param integer $AliveDay <p>保留时长天</p>
+     * @param integer $Percent <p>快照进度百分比，1表示1% 范围1-100</p>
+     * @param integer $AppId <p>账号ID</p>
+     * @param string $DeleteTime <p>快照删除时间</p>
+     * @param string $FsName <p>文件系统名称</p>
+     * @param array $Tags <p>快照标签</p>
+     * @param string $SnapshotType <p>快照类型，general为通用系列快照，turbo为Turbo系列快照</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SnapshotTime 实际快照时间，反映快照对应文件系统某个时刻的数据。
+     * @param string $SnapshotTime <p>实际快照时间，反映快照对应文件系统某个时刻的数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

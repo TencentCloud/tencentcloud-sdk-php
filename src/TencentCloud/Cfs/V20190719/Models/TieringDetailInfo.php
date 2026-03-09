@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 分层存储详细信息
  *
- * @method integer getTieringSizeInBytes() 获取低频存储容量
- * @method void setTieringSizeInBytes(integer $TieringSizeInBytes) 设置低频存储容量
- * @method integer getSecondaryTieringSizeInBytes() 获取冷存储容量
- * @method void setSecondaryTieringSizeInBytes(integer $SecondaryTieringSizeInBytes) 设置冷存储容量
+ * @method integer getTieringSizeInBytes() 获取<p>低频存储容量</p><p>单位：Byte, B, 字节</p>
+ * @method void setTieringSizeInBytes(integer $TieringSizeInBytes) 设置<p>低频存储容量</p><p>单位：Byte, B, 字节</p>
+ * @method integer getSecondaryTieringSizeInBytes() 获取<p>冷存储容量</p><p>单位：Byte, B, 字节</p>
+ * @method void setSecondaryTieringSizeInBytes(integer $SecondaryTieringSizeInBytes) 设置<p>冷存储容量</p><p>单位：Byte, B, 字节</p>
  */
 class TieringDetailInfo extends AbstractModel
 {
     /**
-     * @var integer 低频存储容量
+     * @var integer <p>低频存储容量</p><p>单位：Byte, B, 字节</p>
      */
     public $TieringSizeInBytes;
 
     /**
-     * @var integer 冷存储容量
+     * @var integer <p>冷存储容量</p><p>单位：Byte, B, 字节</p>
      */
     public $SecondaryTieringSizeInBytes;
 
     /**
-     * @param integer $TieringSizeInBytes 低频存储容量
-     * @param integer $SecondaryTieringSizeInBytes 冷存储容量
+     * @param integer $TieringSizeInBytes <p>低频存储容量</p><p>单位：Byte, B, 字节</p>
+     * @param integer $SecondaryTieringSizeInBytes <p>冷存储容量</p><p>单位：Byte, B, 字节</p>
      */
     function __construct()
     {

@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGroup请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
- * @method string getSearchWord() 获取搜索关键字
- * @method void setSearchWord(string $SearchWord) 设置搜索关键字
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取最大返回数量
- * @method void setLimit(integer $Limit) 设置最大返回数量
- * @method array getFilters() 获取仅支持 GroupState 筛选,   支持的筛选状态有 Empty/Stable  注意：该参数只能在2.8/3.2 版本生效
- * @method void setFilters(array $Filters) 设置仅支持 GroupState 筛选,   支持的筛选状态有 Empty/Stable  注意：该参数只能在2.8/3.2 版本生效
+ * @method string getInstanceId() 获取<p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+ * @method string getSearchWord() 获取<p>搜索关键字</p>
+ * @method void setSearchWord(string $SearchWord) 设置<p>搜索关键字</p>
+ * @method integer getOffset() 获取<p>偏移量</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量</p>
+ * @method integer getLimit() 获取<p>最大返回数量</p><p>默认值：20</p>
+ * @method void setLimit(integer $Limit) 设置<p>最大返回数量</p><p>默认值：20</p>
+ * @method array getFilters() 获取<p>仅支持 GroupState 筛选,   支持的筛选状态有 Empty/Stable  注意：该参数只能在2.8/3.2 版本生效</p>
+ * @method void setFilters(array $Filters) 设置<p>仅支持 GroupState 筛选,   支持的筛选状态有 Empty/Stable  注意：该参数只能在2.8/3.2 版本生效</p>
  */
 class DescribeGroupRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public $InstanceId;
 
     /**
-     * @var string 搜索关键字
+     * @var string <p>搜索关键字</p>
      */
     public $SearchWord;
 
     /**
-     * @var integer 偏移量
+     * @var integer <p>偏移量</p>
      */
     public $Offset;
 
     /**
-     * @var integer 最大返回数量
+     * @var integer <p>最大返回数量</p><p>默认值：20</p>
      */
     public $Limit;
 
     /**
-     * @var array 仅支持 GroupState 筛选,   支持的筛选状态有 Empty/Stable  注意：该参数只能在2.8/3.2 版本生效
+     * @var array <p>仅支持 GroupState 筛选,   支持的筛选状态有 Empty/Stable  注意：该参数只能在2.8/3.2 版本生效</p>
      */
     public $Filters;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
-     * @param string $SearchWord 搜索关键字
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 最大返回数量
-     * @param array $Filters 仅支持 GroupState 筛选,   支持的筛选状态有 Empty/Stable  注意：该参数只能在2.8/3.2 版本生效
+     * @param string $InstanceId <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+     * @param string $SearchWord <p>搜索关键字</p>
+     * @param integer $Offset <p>偏移量</p>
+     * @param integer $Limit <p>最大返回数量</p><p>默认值：20</p>
+     * @param array $Filters <p>仅支持 GroupState 筛选,   支持的筛选状态有 Empty/Stable  注意：该参数只能在2.8/3.2 版本生效</p>
      */
     function __construct()
     {

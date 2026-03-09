@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 创建预付费接口返回的Data
  *
- * @method integer getFlowId() 获取CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
- * @method void setFlowId(integer $FlowId) 设置CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
- * @method array getDealNames() 获取订单号列表
- * @method void setDealNames(array $DealNames) 设置订单号列表
- * @method string getInstanceId() 获取ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
- * @method array getDealNameInstanceIdMapping() 获取订单和购买实例对应映射列表
- * @method void setDealNameInstanceIdMapping(array $DealNameInstanceIdMapping) 设置订单和购买实例对应映射列表
+ * @method integer getFlowId() 获取<p>CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。</p>
+ * @method void setFlowId(integer $FlowId) 设置<p>CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。</p>
+ * @method array getDealNames() 获取<p>订单号列表</p>
+ * @method void setDealNames(array $DealNames) 设置<p>订单号列表</p>
+ * @method string getInstanceId() 获取<p>ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id</p>
+ * @method array getDealNameInstanceIdMapping() 获取<p>订单和购买实例对应映射列表</p>
+ * @method void setDealNameInstanceIdMapping(array $DealNameInstanceIdMapping) 设置<p>订单和购买实例对应映射列表</p>
+ * @method string getEventId() 获取<p>CAM鉴权返回的eventId</p>
+ * @method void setEventId(string $EventId) 设置<p>CAM鉴权返回的eventId</p>
  */
 class CreateInstancePreData extends AbstractModel
 {
     /**
-     * @var integer CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
+     * @var integer <p>CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。</p>
      */
     public $FlowId;
 
     /**
-     * @var array 订单号列表
+     * @var array <p>订单号列表</p>
      */
     public $DealNames;
 
     /**
-     * @var string ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
+     * @var string <p>ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id</p>
      */
     public $InstanceId;
 
     /**
-     * @var array 订单和购买实例对应映射列表
+     * @var array <p>订单和购买实例对应映射列表</p>
      */
     public $DealNameInstanceIdMapping;
 
     /**
-     * @param integer $FlowId CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
-     * @param array $DealNames 订单号列表
-     * @param string $InstanceId ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
-     * @param array $DealNameInstanceIdMapping 订单和购买实例对应映射列表
+     * @var string <p>CAM鉴权返回的eventId</p>
+     */
+    public $EventId;
+
+    /**
+     * @param integer $FlowId <p>CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。</p>
+     * @param array $DealNames <p>订单号列表</p>
+     * @param string $InstanceId <p>ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id</p>
+     * @param array $DealNameInstanceIdMapping <p>订单和购买实例对应映射列表</p>
+     * @param string $EventId <p>CAM鉴权返回的eventId</p>
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class CreateInstancePreData extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DealNameInstanceIdMapping, $obj);
             }
+        }
+
+        if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
+            $this->EventId = $param["EventId"];
         }
     }
 }

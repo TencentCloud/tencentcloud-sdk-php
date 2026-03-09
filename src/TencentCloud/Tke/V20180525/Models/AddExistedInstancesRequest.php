@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceAdvancedSettingsOverrides(array $InstanceAdvancedSettingsOverrides) 设置参数InstanceAdvancedSettingsOverride数组用于定制化地配置各台instance，与InstanceIds顺序对应。当传入InstanceAdvancedSettingsOverrides数组时，将覆盖默认参数InstanceAdvancedSettings；当没有传入参数InstanceAdvancedSettingsOverrides时，InstanceAdvancedSettings参数对每台instance生效。参数InstanceAdvancedSettingsOverride数组的长度应与InstanceIds数组一致；当长度大于InstanceIds数组长度时将报错；当长度小于InstanceIds数组时，没有对应配置的instance将使用默认配置。
  * @method string getImageId() 获取节点镜像
  * @method void setImageId(string $ImageId) 设置节点镜像
+ * @method string getNodeType() 获取直接添加为原生节点
+ * @method void setNodeType(string $NodeType) 设置直接添加为原生节点
  */
 class AddExistedInstancesRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class AddExistedInstancesRequest extends AbstractModel
     public $ImageId;
 
     /**
+     * @var string 直接添加为原生节点
+     */
+    public $NodeType;
+
+    /**
      * @param string $ClusterId 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
      * @param array $InstanceIds 实例列表，不支持竞价实例（请登录 [CVM控制台](https://console.cloud.tencent.com/cvm) 获取待添加节点ID ）
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings 实例额外需要设置参数信息(默认值)
@@ -112,6 +119,7 @@ class AddExistedInstancesRequest extends AbstractModel
      * @param array $SkipValidateOptions 校验规则相关选项，可配置跳过某些校验规则。目前支持GlobalRouteCIDRCheck（跳过GlobalRouter的相关校验），VpcCniCIDRCheck（跳过VpcCni相关校验）
      * @param array $InstanceAdvancedSettingsOverrides 参数InstanceAdvancedSettingsOverride数组用于定制化地配置各台instance，与InstanceIds顺序对应。当传入InstanceAdvancedSettingsOverrides数组时，将覆盖默认参数InstanceAdvancedSettings；当没有传入参数InstanceAdvancedSettingsOverrides时，InstanceAdvancedSettings参数对每台instance生效。参数InstanceAdvancedSettingsOverride数组的长度应与InstanceIds数组一致；当长度大于InstanceIds数组长度时将报错；当长度小于InstanceIds数组时，没有对应配置的instance将使用默认配置。
      * @param string $ImageId 节点镜像
+     * @param string $NodeType 直接添加为原生节点
      */
     function __construct()
     {
@@ -177,6 +185,10 @@ class AddExistedInstancesRequest extends AbstractModel
 
         if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
             $this->ImageId = $param["ImageId"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
         }
     }
 }

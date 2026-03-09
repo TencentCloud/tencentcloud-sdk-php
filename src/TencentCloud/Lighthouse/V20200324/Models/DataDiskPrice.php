@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据盘价格
  *
- * @method string getDiskId() 获取云硬盘ID。
- * @method void setDiskId(string $DiskId) 设置云硬盘ID。
- * @method float getOriginalDiskPrice() 获取云硬盘单价。
- * @method void setOriginalDiskPrice(float $OriginalDiskPrice) 设置云硬盘单价。
- * @method float getOriginalPrice() 获取云硬盘总价。
- * @method void setOriginalPrice(float $OriginalPrice) 设置云硬盘总价。
- * @method float getDiscount() 获取折扣。
- * @method void setDiscount(float $Discount) 设置折扣。
- * @method float getDiscountPrice() 获取折后总价。
- * @method void setDiscountPrice(float $DiscountPrice) 设置折后总价。
- * @method string getInstanceId() 获取数据盘挂载的实例ID。
- * @method void setInstanceId(string $InstanceId) 设置数据盘挂载的实例ID。
+ * @method string getDiskId() 获取<p>云硬盘ID。</p>
+ * @method void setDiskId(string $DiskId) 设置<p>云硬盘ID。</p>
+ * @method float getOriginalDiskPrice() 获取<p>云硬盘单价。</p><p>单位：元</p>
+ * @method void setOriginalDiskPrice(float $OriginalDiskPrice) 设置<p>云硬盘单价。</p><p>单位：元</p>
+ * @method float getOriginalPrice() 获取<p>云硬盘总价。</p><p>单位：元</p>
+ * @method void setOriginalPrice(float $OriginalPrice) 设置<p>云硬盘总价。</p><p>单位：元</p>
+ * @method float getDiscount() 获取<p>折扣。</p>
+ * @method void setDiscount(float $Discount) 设置<p>折扣。</p>
+ * @method float getDiscountPrice() 获取<p>折后总价。</p><p>单位：元</p>
+ * @method void setDiscountPrice(float $DiscountPrice) 设置<p>折后总价。</p><p>单位：元</p>
+ * @method string getInstanceId() 获取<p>数据盘挂载的实例ID。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>数据盘挂载的实例ID。</p>
  */
 class DataDiskPrice extends AbstractModel
 {
     /**
-     * @var string 云硬盘ID。
+     * @var string <p>云硬盘ID。</p>
      */
     public $DiskId;
 
     /**
-     * @var float 云硬盘单价。
+     * @var float <p>云硬盘单价。</p><p>单位：元</p>
      */
     public $OriginalDiskPrice;
 
     /**
-     * @var float 云硬盘总价。
+     * @var float <p>云硬盘总价。</p><p>单位：元</p>
      */
     public $OriginalPrice;
 
     /**
-     * @var float 折扣。
+     * @var float <p>折扣。</p>
      */
     public $Discount;
 
     /**
-     * @var float 折后总价。
+     * @var float <p>折后总价。</p><p>单位：元</p>
      */
     public $DiscountPrice;
 
     /**
-     * @var string 数据盘挂载的实例ID。
+     * @var string <p>数据盘挂载的实例ID。</p>
      */
     public $InstanceId;
 
     /**
-     * @param string $DiskId 云硬盘ID。
-     * @param float $OriginalDiskPrice 云硬盘单价。
-     * @param float $OriginalPrice 云硬盘总价。
-     * @param float $Discount 折扣。
-     * @param float $DiscountPrice 折后总价。
-     * @param string $InstanceId 数据盘挂载的实例ID。
+     * @param string $DiskId <p>云硬盘ID。</p>
+     * @param float $OriginalDiskPrice <p>云硬盘单价。</p><p>单位：元</p>
+     * @param float $OriginalPrice <p>云硬盘总价。</p><p>单位：元</p>
+     * @param float $Discount <p>折扣。</p>
+     * @param float $DiscountPrice <p>折后总价。</p><p>单位：元</p>
+     * @param string $InstanceId <p>数据盘挂载的实例ID。</p>
      */
     function __construct()
     {

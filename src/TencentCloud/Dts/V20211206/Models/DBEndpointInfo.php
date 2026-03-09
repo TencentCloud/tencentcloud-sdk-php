@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
 对于redis实例，simple(单节点)、cluster-cache(直连集群)、cluster-proxy(代理集群)；
  * @method array getInfo() 获取实例具体的连接信息，如ip、port、接入方式等
  * @method void setInfo(array $Info) 设置实例具体的连接信息，如ip、port、接入方式等
- * @method string getSupplier() 获取实例服务提供商，如:"aliyun","others"
- * @method void setSupplier(string $Supplier) 设置实例服务提供商，如:"aliyun","others"
+ * @method string getSupplier() 获取实例服务提供商，如:"others","aliyun","aws"
+ * @method void setSupplier(string $Supplier) 设置实例服务提供商，如:"others","aliyun","aws"
  * @method array getExtraAttr() 获取此参数为数组类型，可以传多个键值对结构对象。
 MongoDB可定义如下的参数：
 'AuthDatabase':'admin',    //认证库
@@ -91,7 +91,7 @@ class DBEndpointInfo extends AbstractModel
     public $Info;
 
     /**
-     * @var string 实例服务提供商，如:"aliyun","others"
+     * @var string 实例服务提供商，如:"others","aliyun","aws"
      */
     public $Supplier;
 
@@ -131,7 +131,7 @@ MongoDB可定义如下的参数：
 对于mongo业务，取值为replicaset(mongodb副本集)、standalone(mongodb单节点)、cluster(mongodb集群)；
 对于redis实例，simple(单节点)、cluster-cache(直连集群)、cluster-proxy(代理集群)；
      * @param array $Info 实例具体的连接信息，如ip、port、接入方式等
-     * @param string $Supplier 实例服务提供商，如:"aliyun","others"
+     * @param string $Supplier 实例服务提供商，如:"others","aliyun","aws"
      * @param array $ExtraAttr 此参数为数组类型，可以传多个键值对结构对象。
 MongoDB可定义如下的参数：
 'AuthDatabase':'admin',    //认证库

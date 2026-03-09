@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例版本信息
  *
- * @method string getKafkaVersion() 获取ckafka集群实例版本
- * @method void setKafkaVersion(string $KafkaVersion) 设置ckafka集群实例版本
- * @method string getCurBrokerVersion() 获取broker版本信息
- * @method void setCurBrokerVersion(string $CurBrokerVersion) 设置broker版本信息
- * @method array getLatestBrokerVersion() 获取最新版本信息
- * @method void setLatestBrokerVersion(array $LatestBrokerVersion) 设置最新版本信息
- * @method boolean getAllowUpgradeHighVersion() 获取允许跨大版本内核升级
- * @method void setAllowUpgradeHighVersion(boolean $AllowUpgradeHighVersion) 设置允许跨大版本内核升级
- * @method array getHighVersionSet() 获取允许升级的大版本
- * @method void setHighVersionSet(array $HighVersionSet) 设置允许升级的大版本
- * @method boolean getAllowAutoDeleteTimestamp() 获取允许小版本号配置自动删除消费者组
- * @method void setAllowAutoDeleteTimestamp(boolean $AllowAutoDeleteTimestamp) 设置允许小版本号配置自动删除消费者组
+ * @method string getKafkaVersion() 获取<p>ckafka集群实例版本</p>
+ * @method void setKafkaVersion(string $KafkaVersion) 设置<p>ckafka集群实例版本</p>
+ * @method string getCurBrokerVersion() 获取<p>broker版本信息</p>
+ * @method void setCurBrokerVersion(string $CurBrokerVersion) 设置<p>broker版本信息</p>
+ * @method array getLatestBrokerVersion() 获取<p>最新版本信息</p>
+ * @method void setLatestBrokerVersion(array $LatestBrokerVersion) 设置<p>最新版本信息</p>
+ * @method boolean getAllowUpgradeHighVersion() 获取<p>允许跨大版本内核升级</p>
+ * @method void setAllowUpgradeHighVersion(boolean $AllowUpgradeHighVersion) 设置<p>允许跨大版本内核升级</p>
+ * @method array getHighVersionSet() 获取<p>允许升级的大版本</p>
+ * @method void setHighVersionSet(array $HighVersionSet) 设置<p>允许升级的大版本</p>
+ * @method boolean getAllowAutoDeleteTimestamp() 获取<p>允许小版本号配置自动删除消费者组</p>
+ * @method void setAllowAutoDeleteTimestamp(boolean $AllowAutoDeleteTimestamp) 设置<p>允许小版本号配置自动删除消费者组</p>
+ * @method boolean getAllowModifyTxnIdExpiration() 获取<p>允许修改事务ID过期时间配置</p>
+ * @method void setAllowModifyTxnIdExpiration(boolean $AllowModifyTxnIdExpiration) 设置<p>允许修改事务ID过期时间配置</p>
  */
 class InstanceVersion extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例版本
+     * @var string <p>ckafka集群实例版本</p>
      */
     public $KafkaVersion;
 
     /**
-     * @var string broker版本信息
+     * @var string <p>broker版本信息</p>
      */
     public $CurBrokerVersion;
 
     /**
-     * @var array 最新版本信息
+     * @var array <p>最新版本信息</p>
      */
     public $LatestBrokerVersion;
 
     /**
-     * @var boolean 允许跨大版本内核升级
+     * @var boolean <p>允许跨大版本内核升级</p>
      */
     public $AllowUpgradeHighVersion;
 
     /**
-     * @var array 允许升级的大版本
+     * @var array <p>允许升级的大版本</p>
      */
     public $HighVersionSet;
 
     /**
-     * @var boolean 允许小版本号配置自动删除消费者组
+     * @var boolean <p>允许小版本号配置自动删除消费者组</p>
      */
     public $AllowAutoDeleteTimestamp;
 
     /**
-     * @param string $KafkaVersion ckafka集群实例版本
-     * @param string $CurBrokerVersion broker版本信息
-     * @param array $LatestBrokerVersion 最新版本信息
-     * @param boolean $AllowUpgradeHighVersion 允许跨大版本内核升级
-     * @param array $HighVersionSet 允许升级的大版本
-     * @param boolean $AllowAutoDeleteTimestamp 允许小版本号配置自动删除消费者组
+     * @var boolean <p>允许修改事务ID过期时间配置</p>
+     */
+    public $AllowModifyTxnIdExpiration;
+
+    /**
+     * @param string $KafkaVersion <p>ckafka集群实例版本</p>
+     * @param string $CurBrokerVersion <p>broker版本信息</p>
+     * @param array $LatestBrokerVersion <p>最新版本信息</p>
+     * @param boolean $AllowUpgradeHighVersion <p>允许跨大版本内核升级</p>
+     * @param array $HighVersionSet <p>允许升级的大版本</p>
+     * @param boolean $AllowAutoDeleteTimestamp <p>允许小版本号配置自动删除消费者组</p>
+     * @param boolean $AllowModifyTxnIdExpiration <p>允许修改事务ID过期时间配置</p>
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class InstanceVersion extends AbstractModel
 
         if (array_key_exists("AllowAutoDeleteTimestamp",$param) and $param["AllowAutoDeleteTimestamp"] !== null) {
             $this->AllowAutoDeleteTimestamp = $param["AllowAutoDeleteTimestamp"];
+        }
+
+        if (array_key_exists("AllowModifyTxnIdExpiration",$param) and $param["AllowModifyTxnIdExpiration"] !== null) {
+            $this->AllowModifyTxnIdExpiration = $param["AllowModifyTxnIdExpiration"];
         }
     }
 }

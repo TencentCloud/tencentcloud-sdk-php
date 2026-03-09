@@ -20,158 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCommand请求参数结构体
  *
- * @method string getCommandId() 获取命令ID。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
- * @method void setCommandId(string $CommandId) 设置命令ID。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
- * @method string getCommandName() 获取命令名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
- * @method void setCommandName(string $CommandName) 设置命令名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
- * @method string getDescription() 获取命令描述。不超过120字符。
- * @method void setDescription(string $Description) 设置命令描述。不超过120字符。
- * @method string getContent() 获取Base64编码后的命令内容，长度不可超过64KB。
- * @method void setContent(string $Content) 设置Base64编码后的命令内容，长度不可超过64KB。
- * @method string getCommandType() 获取命令类型，目前支持取值：SHELL、POWERSHELL、BAT。
- * @method void setCommandType(string $CommandType) 设置命令类型，目前支持取值：SHELL、POWERSHELL、BAT。
- * @method string getWorkingDirectory() 获取命令执行路径。
- * @method void setWorkingDirectory(string $WorkingDirectory) 设置命令执行路径。
- * @method integer getTimeout() 获取命令超时时间。取值范围[1, 86400]。
- * @method void setTimeout(integer $Timeout) 设置命令超时时间。取值范围[1, 86400]。
- * @method string getDefaultParameters() 获取启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
-采取整体全覆盖式修改，即修改时必须提供所有新默认值。
-仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
-key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
-自定义参数最多20个。
-自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
- * @method void setDefaultParameters(string $DefaultParameters) 设置启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
-采取整体全覆盖式修改，即修改时必须提供所有新默认值。
-仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
-key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
-自定义参数最多20个。
-自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
- * @method array getDefaultParameterConfs() 获取自定义参数数组。如果 InvokeCommand 时未提供参数取值，将使用这里的默认值进行替换。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
-仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
-自定义参数最多20个。
- * @method void setDefaultParameterConfs(array $DefaultParameterConfs) 设置自定义参数数组。如果 InvokeCommand 时未提供参数取值，将使用这里的默认值进行替换。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
-仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
-自定义参数最多20个。
- * @method string getUsername() 获取在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。
- * @method void setUsername(string $Username) 设置在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。
- * @method string getOutputCOSBucketUrl() 获取指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。
- * @method void setOutputCOSBucketUrl(string $OutputCOSBucketUrl) 设置指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。
- * @method string getOutputCOSKeyPrefix() 获取指定日志在cos bucket中的目录，目录命名有如下规则：
-1. 可用数字、中英文和可见字符的组合，长度最多为60。
-2. 用 / 分割路径，可快速创建子目录。
-3. 不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。
- * @method void setOutputCOSKeyPrefix(string $OutputCOSKeyPrefix) 设置指定日志在cos bucket中的目录，目录命名有如下规则：
-1. 可用数字、中英文和可见字符的组合，长度最多为60。
-2. 用 / 分割路径，可快速创建子目录。
-3. 不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。
+ * @method string getCommandId() 获取<p>命令ID。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取。</p>
+ * @method void setCommandId(string $CommandId) 设置<p>命令ID。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取。</p>
+ * @method string getCommandName() 获取<p>命令名称。名称仅支持中文、英文、数字、下划线、分隔符&quot;-&quot;、小数点，最大长度不能超60个字节。</p>
+ * @method void setCommandName(string $CommandName) 设置<p>命令名称。名称仅支持中文、英文、数字、下划线、分隔符&quot;-&quot;、小数点，最大长度不能超60个字节。</p>
+ * @method string getDescription() 获取<p>命令描述。不超过120字符。</p>
+ * @method void setDescription(string $Description) 设置<p>命令描述。不超过120字符。</p>
+ * @method string getContent() 获取<p>Base64编码后的命令内容，长度不可超过64KB。</p>
+ * @method void setContent(string $Content) 设置<p>Base64编码后的命令内容，长度不可超过64KB。</p>
+ * @method string getCommandType() 获取<p>命令类型，目前支持取值：SHELL、POWERSHELL、BAT。</p>
+ * @method void setCommandType(string $CommandType) 设置<p>命令类型，目前支持取值：SHELL、POWERSHELL、BAT。</p>
+ * @method string getWorkingDirectory() 获取<p>命令执行路径。</p>
+ * @method void setWorkingDirectory(string $WorkingDirectory) 设置<p>命令执行路径。</p>
+ * @method integer getTimeout() 获取<p>命令超时时间。</p><p>取值范围：[1, 86400]</p><p>单位：秒</p><p>默认值：60</p><p>指定 OutputCOSBucketUrl 参数时，超时时间将包含命令输出上传 COS 的耗时</p>
+ * @method void setTimeout(integer $Timeout) 设置<p>命令超时时间。</p><p>取值范围：[1, 86400]</p><p>单位：秒</p><p>默认值：60</p><p>指定 OutputCOSBucketUrl 参数时，超时时间将包含命令输出上传 COS 的耗时</p>
+ * @method string getDefaultParameters() 获取<p>启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{&quot;varA&quot;: &quot;222&quot;}。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。<br>采取整体全覆盖式修改，即修改时必须提供所有新默认值。<br>仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取命令的 EnableParameter 设置。<br>key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。<br>自定义参数最多20个。<br>自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。</p>
+ * @method void setDefaultParameters(string $DefaultParameters) 设置<p>启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{&quot;varA&quot;: &quot;222&quot;}。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。<br>采取整体全覆盖式修改，即修改时必须提供所有新默认值。<br>仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取命令的 EnableParameter 设置。<br>key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。<br>自定义参数最多20个。<br>自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。</p>
+ * @method array getDefaultParameterConfs() 获取<p>自定义参数数组。如果 InvokeCommand 时未提供参数取值，将使用这里的默认值进行替换。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。<br>仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取命令的 EnableParameter 设置。<br>自定义参数最多20个。</p>
+ * @method void setDefaultParameterConfs(array $DefaultParameterConfs) 设置<p>自定义参数数组。如果 InvokeCommand 时未提供参数取值，将使用这里的默认值进行替换。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。<br>仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取命令的 EnableParameter 设置。<br>自定义参数最多20个。</p>
+ * @method string getUsername() 获取<p>在 CVM 或 Lighthouse 实例中执行命令的用户名称。<br>使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。</p>
+ * @method void setUsername(string $Username) 设置<p>在 CVM 或 Lighthouse 实例中执行命令的用户名称。<br>使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。</p>
+ * @method string getOutputCOSBucketUrl() 获取<p>指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。</p>
+ * @method void setOutputCOSBucketUrl(string $OutputCOSBucketUrl) 设置<p>指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。</p>
+ * @method string getOutputCOSKeyPrefix() 获取<p>指定日志在cos bucket中的目录，目录命名有如下规则：</p><ol><li>可用数字、中英文和可见字符的组合，长度最多为60。</li><li>用 / 分割路径，可快速创建子目录。</li><li>不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。</li></ol>
+ * @method void setOutputCOSKeyPrefix(string $OutputCOSKeyPrefix) 设置<p>指定日志在cos bucket中的目录，目录命名有如下规则：</p><ol><li>可用数字、中英文和可见字符的组合，长度最多为60。</li><li>用 / 分割路径，可快速创建子目录。</li><li>不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。</li></ol>
  */
 class ModifyCommandRequest extends AbstractModel
 {
     /**
-     * @var string 命令ID。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
+     * @var string <p>命令ID。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取。</p>
      */
     public $CommandId;
 
     /**
-     * @var string 命令名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
+     * @var string <p>命令名称。名称仅支持中文、英文、数字、下划线、分隔符&quot;-&quot;、小数点，最大长度不能超60个字节。</p>
      */
     public $CommandName;
 
     /**
-     * @var string 命令描述。不超过120字符。
+     * @var string <p>命令描述。不超过120字符。</p>
      */
     public $Description;
 
     /**
-     * @var string Base64编码后的命令内容，长度不可超过64KB。
+     * @var string <p>Base64编码后的命令内容，长度不可超过64KB。</p>
      */
     public $Content;
 
     /**
-     * @var string 命令类型，目前支持取值：SHELL、POWERSHELL、BAT。
+     * @var string <p>命令类型，目前支持取值：SHELL、POWERSHELL、BAT。</p>
      */
     public $CommandType;
 
     /**
-     * @var string 命令执行路径。
+     * @var string <p>命令执行路径。</p>
      */
     public $WorkingDirectory;
 
     /**
-     * @var integer 命令超时时间。取值范围[1, 86400]。
+     * @var integer <p>命令超时时间。</p><p>取值范围：[1, 86400]</p><p>单位：秒</p><p>默认值：60</p><p>指定 OutputCOSBucketUrl 参数时，超时时间将包含命令输出上传 COS 的耗时</p>
      */
     public $Timeout;
 
     /**
-     * @var string 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
-采取整体全覆盖式修改，即修改时必须提供所有新默认值。
-仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
-key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
-自定义参数最多20个。
-自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+     * @var string <p>启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{&quot;varA&quot;: &quot;222&quot;}。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。<br>采取整体全覆盖式修改，即修改时必须提供所有新默认值。<br>仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取命令的 EnableParameter 设置。<br>key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。<br>自定义参数最多20个。<br>自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。</p>
      */
     public $DefaultParameters;
 
     /**
-     * @var array 自定义参数数组。如果 InvokeCommand 时未提供参数取值，将使用这里的默认值进行替换。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
-仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
-自定义参数最多20个。
+     * @var array <p>自定义参数数组。如果 InvokeCommand 时未提供参数取值，将使用这里的默认值进行替换。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。<br>仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取命令的 EnableParameter 设置。<br>自定义参数最多20个。</p>
      */
     public $DefaultParameterConfs;
 
     /**
-     * @var string 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。
+     * @var string <p>在 CVM 或 Lighthouse 实例中执行命令的用户名称。<br>使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。</p>
      */
     public $Username;
 
     /**
-     * @var string 指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。
+     * @var string <p>指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。</p>
      */
     public $OutputCOSBucketUrl;
 
     /**
-     * @var string 指定日志在cos bucket中的目录，目录命名有如下规则：
-1. 可用数字、中英文和可见字符的组合，长度最多为60。
-2. 用 / 分割路径，可快速创建子目录。
-3. 不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。
+     * @var string <p>指定日志在cos bucket中的目录，目录命名有如下规则：</p><ol><li>可用数字、中英文和可见字符的组合，长度最多为60。</li><li>用 / 分割路径，可快速创建子目录。</li><li>不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。</li></ol>
      */
     public $OutputCOSKeyPrefix;
 
     /**
-     * @param string $CommandId 命令ID。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
-     * @param string $CommandName 命令名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
-     * @param string $Description 命令描述。不超过120字符。
-     * @param string $Content Base64编码后的命令内容，长度不可超过64KB。
-     * @param string $CommandType 命令类型，目前支持取值：SHELL、POWERSHELL、BAT。
-     * @param string $WorkingDirectory 命令执行路径。
-     * @param integer $Timeout 命令超时时间。取值范围[1, 86400]。
-     * @param string $DefaultParameters 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
-采取整体全覆盖式修改，即修改时必须提供所有新默认值。
-仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
-key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
-自定义参数最多20个。
-自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
-     * @param array $DefaultParameterConfs 自定义参数数组。如果 InvokeCommand 时未提供参数取值，将使用这里的默认值进行替换。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
-仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
-自定义参数最多20个。
-     * @param string $Username 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。
-     * @param string $OutputCOSBucketUrl 指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。
-     * @param string $OutputCOSKeyPrefix 指定日志在cos bucket中的目录，目录命名有如下规则：
-1. 可用数字、中英文和可见字符的组合，长度最多为60。
-2. 用 / 分割路径，可快速创建子目录。
-3. 不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。
+     * @param string $CommandId <p>命令ID。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取。</p>
+     * @param string $CommandName <p>命令名称。名称仅支持中文、英文、数字、下划线、分隔符&quot;-&quot;、小数点，最大长度不能超60个字节。</p>
+     * @param string $Description <p>命令描述。不超过120字符。</p>
+     * @param string $Content <p>Base64编码后的命令内容，长度不可超过64KB。</p>
+     * @param string $CommandType <p>命令类型，目前支持取值：SHELL、POWERSHELL、BAT。</p>
+     * @param string $WorkingDirectory <p>命令执行路径。</p>
+     * @param integer $Timeout <p>命令超时时间。</p><p>取值范围：[1, 86400]</p><p>单位：秒</p><p>默认值：60</p><p>指定 OutputCOSBucketUrl 参数时，超时时间将包含命令输出上传 COS 的耗时</p>
+     * @param string $DefaultParameters <p>启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{&quot;varA&quot;: &quot;222&quot;}。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。<br>采取整体全覆盖式修改，即修改时必须提供所有新默认值。<br>仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取命令的 EnableParameter 设置。<br>key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。<br>自定义参数最多20个。<br>自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。</p>
+     * @param array $DefaultParameterConfs <p>自定义参数数组。如果 InvokeCommand 时未提供参数取值，将使用这里的默认值进行替换。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。<br>仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取命令的 EnableParameter 设置。<br>自定义参数最多20个。</p>
+     * @param string $Username <p>在 CVM 或 Lighthouse 实例中执行命令的用户名称。<br>使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。</p>
+     * @param string $OutputCOSBucketUrl <p>指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。</p>
+     * @param string $OutputCOSKeyPrefix <p>指定日志在cos bucket中的目录，目录命名有如下规则：</p><ol><li>可用数字、中英文和可见字符的组合，长度最多为60。</li><li>用 / 分割路径，可快速创建子目录。</li><li>不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。</li></ol>
      */
     function __construct()
     {

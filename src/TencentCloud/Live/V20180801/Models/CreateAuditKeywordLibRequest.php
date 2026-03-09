@@ -20,14 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAuditKeywordLib请求参数结构体
  *
-
+ * @method string getName() 获取<p>自定义词库名称。</p>
+ * @method void setName(string $Name) 设置<p>自定义词库名称。</p>
+ * @method string getDescription() 获取<p>自定义词库名称描述。</p>
+ * @method void setDescription(string $Description) 设置<p>自定义词库名称描述。</p>
+ * @method string getSuggestion() 获取<p>处理建议。<br>可取值：Review 疑似，Block 违规。</p>
+ * @method void setSuggestion(string $Suggestion) 设置<p>处理建议。<br>可取值：Review 疑似，Block 违规。</p>
+ * @method string getMatchType() 获取<p>匹配模式。<br>可取值：ExactMatch 精确匹配， FuzzyMatch 模糊匹配。</p>
+ * @method void setMatchType(string $MatchType) 设置<p>匹配模式。<br>可取值：ExactMatch 精确匹配， FuzzyMatch 模糊匹配。</p>
  */
 class CreateAuditKeywordLibRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>自定义词库名称。</p>
+     */
+    public $Name;
 
     /**
+     * @var string <p>自定义词库名称描述。</p>
+     */
+    public $Description;
 
+    /**
+     * @var string <p>处理建议。<br>可取值：Review 疑似，Block 违规。</p>
+     */
+    public $Suggestion;
+
+    /**
+     * @var string <p>匹配模式。<br>可取值：ExactMatch 精确匹配， FuzzyMatch 模糊匹配。</p>
+     */
+    public $MatchType;
+
+    /**
+     * @param string $Name <p>自定义词库名称。</p>
+     * @param string $Description <p>自定义词库名称描述。</p>
+     * @param string $Suggestion <p>处理建议。<br>可取值：Review 疑似，Block 违规。</p>
+     * @param string $MatchType <p>匹配模式。<br>可取值：ExactMatch 精确匹配， FuzzyMatch 模糊匹配。</p>
      */
     function __construct()
     {
@@ -42,6 +70,20 @@ class CreateAuditKeywordLibRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
 
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("Suggestion",$param) and $param["Suggestion"] !== null) {
+            $this->Suggestion = $param["Suggestion"];
+        }
+
+        if (array_key_exists("MatchType",$param) and $param["MatchType"] !== null) {
+            $this->MatchType = $param["MatchType"];
+        }
     }
 }

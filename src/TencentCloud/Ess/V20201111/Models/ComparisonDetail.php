@@ -46,6 +46,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOriginText(string $OriginText) 设置原文文本。
  * @method string getDiffText() 获取对比文本。
  * @method void setDiffText(string $DiffText) 设置对比文本。
+ * @method integer getFormatType() 获取合同文本的格式类型。
+类型如下：
+<ul><li> **0**：段落（正文）</li>
+<li> **1**：标点符号</li>
+<li> **2**：页眉页脚</li>
+<li> **3**：目录</li>
+<li> **4**：印章</li>
+<li> **5**：序号</li>
+<li> **6**：水印</li>
+<li> **7**：下划线内容（填写区）</li>
+</ul>
+ * @method void setFormatType(integer $FormatType) 设置合同文本的格式类型。
+类型如下：
+<ul><li> **0**：段落（正文）</li>
+<li> **1**：标点符号</li>
+<li> **2**：页眉页脚</li>
+<li> **3**：目录</li>
+<li> **4**：印章</li>
+<li> **5**：序号</li>
+<li> **6**：水印</li>
+<li> **7**：下划线内容（填写区）</li>
+</ul>
  */
 class ComparisonDetail extends AbstractModel
 {
@@ -83,6 +105,21 @@ class ComparisonDetail extends AbstractModel
     public $DiffText;
 
     /**
+     * @var integer 合同文本的格式类型。
+类型如下：
+<ul><li> **0**：段落（正文）</li>
+<li> **1**：标点符号</li>
+<li> **2**：页眉页脚</li>
+<li> **3**：目录</li>
+<li> **4**：印章</li>
+<li> **5**：序号</li>
+<li> **6**：水印</li>
+<li> **7**：下划线内容（填写区）</li>
+</ul>
+     */
+    public $FormatType;
+
+    /**
      * @param string $ComparisonPointId 合同对比差异点唯一ID。
      * @param string $ComparisonType 对比前后差异类型，具体如下：
 <ul><li> **add**：新增</li>
@@ -96,6 +133,17 @@ class ComparisonDetail extends AbstractModel
 </ul>
      * @param string $OriginText 原文文本。
      * @param string $DiffText 对比文本。
+     * @param integer $FormatType 合同文本的格式类型。
+类型如下：
+<ul><li> **0**：段落（正文）</li>
+<li> **1**：标点符号</li>
+<li> **2**：页眉页脚</li>
+<li> **3**：目录</li>
+<li> **4**：印章</li>
+<li> **5**：序号</li>
+<li> **6**：水印</li>
+<li> **7**：下划线内容（填写区）</li>
+</ul>
      */
     function __construct()
     {
@@ -128,6 +176,10 @@ class ComparisonDetail extends AbstractModel
 
         if (array_key_exists("DiffText",$param) and $param["DiffText"] !== null) {
             $this->DiffText = $param["DiffText"];
+        }
+
+        if (array_key_exists("FormatType",$param) and $param["FormatType"] !== null) {
+            $this->FormatType = $param["FormatType"];
         }
     }
 }

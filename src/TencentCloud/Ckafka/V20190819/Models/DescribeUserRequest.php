@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUser请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
- * @method string getSearchWord() 获取按照名称过滤
- * @method void setSearchWord(string $SearchWord) 设置按照名称过滤
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取返回数量
- * @method void setLimit(integer $Limit) 设置返回数量
+ * @method string getInstanceId() 获取<p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+ * @method string getSearchWord() 获取<p>按照名称过滤</p><p>支持模糊匹配</p>
+ * @method void setSearchWord(string $SearchWord) 设置<p>按照名称过滤</p><p>支持模糊匹配</p>
+ * @method integer getOffset() 获取<p>偏移量</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量</p>
+ * @method integer getLimit() 获取<p>返回数量</p><p>默认值：20</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量</p><p>默认值：20</p>
  */
 class DescribeUserRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public $InstanceId;
 
     /**
-     * @var string 按照名称过滤
+     * @var string <p>按照名称过滤</p><p>支持模糊匹配</p>
      */
     public $SearchWord;
 
     /**
-     * @var integer 偏移量
+     * @var integer <p>偏移量</p>
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量
+     * @var integer <p>返回数量</p><p>默认值：20</p>
      */
     public $Limit;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
-     * @param string $SearchWord 按照名称过滤
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 返回数量
+     * @param string $InstanceId <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+     * @param string $SearchWord <p>按照名称过滤</p><p>支持模糊匹配</p>
+     * @param integer $Offset <p>偏移量</p>
+     * @param integer $Limit <p>返回数量</p><p>默认值：20</p>
      */
     function __construct()
     {

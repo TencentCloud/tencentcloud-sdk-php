@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyMountPoint请求参数结构体
  *
- * @method string getMountPointId() 获取挂载点ID
- * @method void setMountPointId(string $MountPointId) 设置挂载点ID
- * @method string getMountPointName() 获取挂载点名称
- * @method void setMountPointName(string $MountPointName) 设置挂载点名称
- * @method integer getMountPointStatus() 获取挂载点状态
- * @method void setMountPointStatus(integer $MountPointStatus) 设置挂载点状态
+ * @method string getMountPointId() 获取<p>挂载点ID</p>
+ * @method void setMountPointId(string $MountPointId) 设置<p>挂载点ID</p>
+ * @method string getMountPointName() 获取<p>挂载点名称</p>
+ * @method void setMountPointName(string $MountPointName) 设置<p>挂载点名称</p>
+ * @method integer getMountPointStatus() 获取<p>挂载点状态</p><p>枚举值：</p><ul><li>1： 打开</li><li>2： 关闭</li></ul>
+ * @method void setMountPointStatus(integer $MountPointStatus) 设置<p>挂载点状态</p><p>枚举值：</p><ul><li>1： 打开</li><li>2： 关闭</li></ul>
  */
 class ModifyMountPointRequest extends AbstractModel
 {
     /**
-     * @var string 挂载点ID
+     * @var string <p>挂载点ID</p>
      */
     public $MountPointId;
 
     /**
-     * @var string 挂载点名称
+     * @var string <p>挂载点名称</p>
      */
     public $MountPointName;
 
     /**
-     * @var integer 挂载点状态
+     * @var integer <p>挂载点状态</p><p>枚举值：</p><ul><li>1： 打开</li><li>2： 关闭</li></ul>
      */
     public $MountPointStatus;
 
     /**
-     * @param string $MountPointId 挂载点ID
-     * @param string $MountPointName 挂载点名称
-     * @param integer $MountPointStatus 挂载点状态
+     * @param string $MountPointId <p>挂载点ID</p>
+     * @param string $MountPointName <p>挂载点名称</p>
+     * @param integer $MountPointStatus <p>挂载点状态</p><p>枚举值：</p><ul><li>1： 打开</li><li>2： 关闭</li></ul>
      */
     function __construct()
     {

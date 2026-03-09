@@ -20,145 +20,129 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 路由实体对象
  *
- * @method integer getAccessType() 获取实例接入方式
-0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)
-1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
-2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）
-3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
- * @method void setAccessType(integer $AccessType) 设置实例接入方式
-0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)
-1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
-2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）
-3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
- * @method integer getRouteId() 获取路由Id
- * @method void setRouteId(integer $RouteId) 设置路由Id
- * @method integer getVipType() 获取路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)
- * @method void setVipType(integer $VipType) 设置路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)
- * @method array getVipList() 获取虚拟IP列表
- * @method void setVipList(array $VipList) 设置虚拟IP列表
- * @method string getDomain() 获取域名
+ * @method integer getAccessType() 获取<p>实例接入方式0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）</p>
+ * @method void setAccessType(integer $AccessType) 设置<p>实例接入方式0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）</p>
+ * @method integer getRouteId() 获取<p>路由Id</p>
+ * @method void setRouteId(integer $RouteId) 设置<p>路由Id</p>
+ * @method integer getVipType() 获取<p>路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)</p>
+ * @method void setVipType(integer $VipType) 设置<p>路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)</p>
+ * @method array getVipList() 获取<p>虚拟IP列表</p>
+ * @method void setVipList(array $VipList) 设置<p>虚拟IP列表</p>
+ * @method string getDomain() 获取<p>域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDomain(string $Domain) 设置域名
+ * @method void setDomain(string $Domain) 设置<p>域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDomainPort() 获取域名port
+ * @method integer getDomainPort() 获取<p>域名port</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDomainPort(integer $DomainPort) 设置域名port
+ * @method void setDomainPort(integer $DomainPort) 设置<p>域名port</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDeleteTimestamp() 获取时间戳
- * @method void setDeleteTimestamp(string $DeleteTimestamp) 设置时间戳
- * @method string getSubnet() 获取子网Id
+ * @method string getDeleteTimestamp() 获取<p>时间戳</p>
+ * @method void setDeleteTimestamp(string $DeleteTimestamp) 设置<p>时间戳</p>
+ * @method string getSubnet() 获取<p>子网Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubnet(string $Subnet) 设置子网Id
+ * @method void setSubnet(string $Subnet) 设置<p>子网Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getBrokerVipList() 获取虚拟IP列表(1对1 broker节点)
- * @method void setBrokerVipList(array $BrokerVipList) 设置虚拟IP列表(1对1 broker节点)
- * @method string getVpcId() 获取私有网络Id
+ * @method array getBrokerVipList() 获取<p>虚拟IP列表(1对1 broker节点)</p>
+ * @method void setBrokerVipList(array $BrokerVipList) 设置<p>虚拟IP列表(1对1 broker节点)</p>
+ * @method string getVpcId() 获取<p>私有网络Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVpcId(string $VpcId) 设置私有网络Id
+ * @method void setVpcId(string $VpcId) 设置<p>私有网络Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNote() 获取备注信息
+ * @method string getNote() 获取<p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNote(string $Note) 设置备注信息
+ * @method void setNote(string $Note) 设置<p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取路由的状态。1: 创建中，2: 创建成功，3: 创建失败，4: 删除中，6: 删除失败
+ * @method integer getStatus() 获取<p>路由的状态。1: 创建中，2: 创建成功，3: 创建失败，4: 删除中，6: 删除失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置路由的状态。1: 创建中，2: 创建成功，3: 创建失败，4: 删除中，6: 删除失败
+ * @method void setStatus(integer $Status) 设置<p>路由的状态。1: 创建中，2: 创建成功，3: 创建失败，4: 删除中，6: 删除失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Route extends AbstractModel
 {
     /**
-     * @var integer 实例接入方式
-0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)
-1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
-2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）
-3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
+     * @var integer <p>实例接入方式0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）</p>
      */
     public $AccessType;
 
     /**
-     * @var integer 路由Id
+     * @var integer <p>路由Id</p>
      */
     public $RouteId;
 
     /**
-     * @var integer 路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)
+     * @var integer <p>路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)</p>
      */
     public $VipType;
 
     /**
-     * @var array 虚拟IP列表
+     * @var array <p>虚拟IP列表</p>
      */
     public $VipList;
 
     /**
-     * @var string 域名
+     * @var string <p>域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
     /**
-     * @var integer 域名port
+     * @var integer <p>域名port</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DomainPort;
 
     /**
-     * @var string 时间戳
+     * @var string <p>时间戳</p>
      */
     public $DeleteTimestamp;
 
     /**
-     * @var string 子网Id
+     * @var string <p>子网Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Subnet;
 
     /**
-     * @var array 虚拟IP列表(1对1 broker节点)
+     * @var array <p>虚拟IP列表(1对1 broker节点)</p>
      */
     public $BrokerVipList;
 
     /**
-     * @var string 私有网络Id
+     * @var string <p>私有网络Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
-     * @var string 备注信息
+     * @var string <p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Note;
 
     /**
-     * @var integer 路由的状态。1: 创建中，2: 创建成功，3: 创建失败，4: 删除中，6: 删除失败
+     * @var integer <p>路由的状态。1: 创建中，2: 创建成功，3: 创建失败，4: 删除中，6: 删除失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @param integer $AccessType 实例接入方式
-0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)
-1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
-2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）
-3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
-     * @param integer $RouteId 路由Id
-     * @param integer $VipType 路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)
-     * @param array $VipList 虚拟IP列表
-     * @param string $Domain 域名
+     * @param integer $AccessType <p>实例接入方式0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）</p>
+     * @param integer $RouteId <p>路由Id</p>
+     * @param integer $VipType <p>路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)</p>
+     * @param array $VipList <p>虚拟IP列表</p>
+     * @param string $Domain <p>域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DomainPort 域名port
+     * @param integer $DomainPort <p>域名port</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DeleteTimestamp 时间戳
-     * @param string $Subnet 子网Id
+     * @param string $DeleteTimestamp <p>时间戳</p>
+     * @param string $Subnet <p>子网Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $BrokerVipList 虚拟IP列表(1对1 broker节点)
-     * @param string $VpcId 私有网络Id
+     * @param array $BrokerVipList <p>虚拟IP列表(1对1 broker节点)</p>
+     * @param string $VpcId <p>私有网络Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Note 备注信息
+     * @param string $Note <p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 路由的状态。1: 创建中，2: 创建成功，3: 创建失败，4: 删除中，6: 删除失败
+     * @param integer $Status <p>路由的状态。1: 创建中，2: 创建成功，3: 创建失败，4: 删除中，6: 删除失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

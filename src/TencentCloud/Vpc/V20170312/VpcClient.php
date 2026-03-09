@@ -383,6 +383,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DescribeCrossBorderFlowMonitorResponse DescribeCrossBorderFlowMonitor(Models\DescribeCrossBorderFlowMonitorRequest $req) 本接口（DescribeCrossBorderFlowMonitor）用于查询跨境带宽监控数据，该接口目前只提供给服务商联通使用。
  * @method Models\DescribeCustomerGatewayVendorsResponse DescribeCustomerGatewayVendors(Models\DescribeCustomerGatewayVendorsRequest $req) 本接口（DescribeCustomerGatewayVendors）用于查询可支持的对端网关厂商信息。
  * @method Models\DescribeCustomerGatewaysResponse DescribeCustomerGateways(Models\DescribeCustomerGatewaysRequest $req) 本接口（DescribeCustomerGateways）用于查询对端网关列表。
+ * @method Models\DescribeDesignatedZonesResponse DescribeDesignatedZones(Models\DescribeDesignatedZonesRequest $req) 用于查询用户创建带宽包时可指定的可用区信息
  * @method Models\DescribeDhcpIpsResponse DescribeDhcpIps(Models\DescribeDhcpIpsRequest $req) 本接口（DescribeDhcpIps）用于查询DhcpIp列表
  * @method Models\DescribeDirectConnectGatewayCcnRoutesResponse DescribeDirectConnectGatewayCcnRoutes(Models\DescribeDirectConnectGatewayCcnRoutesRequest $req) 本接口（DescribeDirectConnectGatewayCcnRoutes）用于查询专线网关的云联网路由（IDC网段）
  * @method Models\DescribeDirectConnectGatewaysResponse DescribeDirectConnectGateways(Models\DescribeDirectConnectGatewaysRequest $req) 本接口（DescribeDirectConnectGateways）用于查询专线网关。

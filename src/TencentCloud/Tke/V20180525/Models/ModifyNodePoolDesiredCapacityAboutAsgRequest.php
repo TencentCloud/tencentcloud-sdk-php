@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群id
  * @method string getNodePoolId() 获取节点池id
  * @method void setNodePoolId(string $NodePoolId) 设置节点池id
- * @method integer getDesiredCapacity() 获取节点池所关联的伸缩组的期望实例数
- * @method void setDesiredCapacity(integer $DesiredCapacity) 设置节点池所关联的伸缩组的期望实例数
+ * @method integer getDesiredCapacity() 获取节点池所关联的伸缩组的期望实例数，单位个
+ * @method void setDesiredCapacity(integer $DesiredCapacity) 设置节点池所关联的伸缩组的期望实例数，单位个
  */
 class ModifyNodePoolDesiredCapacityAboutAsgRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ModifyNodePoolDesiredCapacityAboutAsgRequest extends AbstractModel
     public $NodePoolId;
 
     /**
-     * @var integer 节点池所关联的伸缩组的期望实例数
+     * @var integer 节点池所关联的伸缩组的期望实例数，单位个
      */
     public $DesiredCapacity;
 
     /**
      * @param string $ClusterId 集群id
      * @param string $NodePoolId 节点池id
-     * @param integer $DesiredCapacity 节点池所关联的伸缩组的期望实例数
+     * @param integer $DesiredCapacity 节点池所关联的伸缩组的期望实例数，单位个
      */
     function __construct()
     {

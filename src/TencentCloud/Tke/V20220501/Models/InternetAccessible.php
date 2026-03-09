@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 公网带宽
  *
- * @method integer getMaxBandwidthOut() 获取带宽
- * @method void setMaxBandwidthOut(integer $MaxBandwidthOut) 设置带宽
+ * @method integer getMaxBandwidthOut() 获取带宽，单位为Mbps
+ * @method void setMaxBandwidthOut(integer $MaxBandwidthOut) 设置带宽，单位为Mbps
  * @method string getChargeType() 获取网络计费方式
  * @method void setChargeType(string $ChargeType) 设置网络计费方式
  * @method string getBandwidthPackageId() 获取带宽包 ID
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class InternetAccessible extends AbstractModel
 {
     /**
-     * @var integer 带宽
+     * @var integer 带宽，单位为Mbps
      */
     public $MaxBandwidthOut;
 
@@ -45,7 +45,7 @@ class InternetAccessible extends AbstractModel
     public $BandwidthPackageId;
 
     /**
-     * @param integer $MaxBandwidthOut 带宽
+     * @param integer $MaxBandwidthOut 带宽，单位为Mbps
      * @param string $ChargeType 网络计费方式
      * @param string $BandwidthPackageId 带宽包 ID
      */

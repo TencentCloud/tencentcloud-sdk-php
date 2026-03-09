@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneInstanceCountISPSet(array $ZoneInstanceCountISPSet) 设置需要创建实例的可用区及创建数目及运营商的列表
  * @method string getPassword() 获取密码
  * @method void setPassword(string $Password) 设置密码
- * @method integer getInternetMaxBandwidthOut() 获取公网带宽
- * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置公网带宽
+ * @method integer getInternetMaxBandwidthOut() 获取公网带宽，单位为Mbps
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置公网带宽，单位为Mbps
  * @method string getImageId() 获取镜像id
  * @method void setImageId(string $ImageId) 设置镜像id
  * @method string getInstanceName() 获取实例名称
@@ -68,7 +68,7 @@ class CreateECMInstancesRequest extends AbstractModel
     public $Password;
 
     /**
-     * @var integer 公网带宽
+     * @var integer 公网带宽，单位为Mbps
      */
     public $InternetMaxBandwidthOut;
 
@@ -112,7 +112,7 @@ class CreateECMInstancesRequest extends AbstractModel
      * @param string $ModuleId 边缘模块id
      * @param array $ZoneInstanceCountISPSet 需要创建实例的可用区及创建数目及运营商的列表
      * @param string $Password 密码
-     * @param integer $InternetMaxBandwidthOut 公网带宽
+     * @param integer $InternetMaxBandwidthOut 公网带宽，单位为Mbps
      * @param string $ImageId 镜像id
      * @param string $InstanceName 实例名称
      * @param string $HostName 主机名称

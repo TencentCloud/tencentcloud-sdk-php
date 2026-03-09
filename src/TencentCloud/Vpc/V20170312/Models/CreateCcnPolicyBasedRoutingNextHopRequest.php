@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setState(string $State) 设置状态
  * @method string getDescription() 获取描述
  * @method void setDescription(string $Description) 设置描述
- * @method string getNextHopResourceType() 获取下一跳资源类型[HAVIP, GWLB_ENDPOINT]]
- * @method void setNextHopResourceType(string $NextHopResourceType) 设置下一跳资源类型[HAVIP, GWLB_ENDPOINT]]
+ * @method string getNextHopResourceType() 获取下一跳资源类型[HAVIP, GWLB_ENDPOINT]
+ * @method void setNextHopResourceType(string $NextHopResourceType) 设置下一跳资源类型[HAVIP, GWLB_ENDPOINT]
  * @method string getNextHopResourceId() 获取下一跳资源ID
  * @method void setNextHopResourceId(string $NextHopResourceId) 设置下一跳资源ID
  */
@@ -77,7 +77,7 @@ class CreateCcnPolicyBasedRoutingNextHopRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var string 下一跳资源类型[HAVIP, GWLB_ENDPOINT]]
+     * @var string 下一跳资源类型[HAVIP, GWLB_ENDPOINT]
      */
     public $NextHopResourceType;
 
@@ -94,7 +94,7 @@ class CreateCcnPolicyBasedRoutingNextHopRequest extends AbstractModel
      * @param string $InstanceType 关联实例类型[VPC,DIRECTCONNECT,VPNGW]
      * @param string $State 状态
      * @param string $Description 描述
-     * @param string $NextHopResourceType 下一跳资源类型[HAVIP, GWLB_ENDPOINT]]
+     * @param string $NextHopResourceType 下一跳资源类型[HAVIP, GWLB_ENDPOINT]
      * @param string $NextHopResourceId 下一跳资源ID
      */
     function __construct()

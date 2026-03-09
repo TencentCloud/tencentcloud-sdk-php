@@ -162,6 +162,10 @@ ANY:表示所有
  * @method void setCreateTime(string $CreateTime) 设置规则创建时间
  * @method string getUpdateTime() 获取规则最近更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置规则最近更新时间
+ * @method integer getRulePartition() 获取规则分区，1最前分区，2中间分区，3最后分区
+ * @method void setRulePartition(integer $RulePartition) 设置规则分区，1最前分区，2中间分区，3最后分区
+ * @method string getScope() 获取规则生效范围，SG安全组，LH轻量服务器
+ * @method void setScope(string $Scope) 设置规则生效范围，SG安全组，LH轻量服务器
  */
 class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel
 {
@@ -369,6 +373,16 @@ ANY:表示所有
     public $UpdateTime;
 
     /**
+     * @var integer 规则分区，1最前分区，2中间分区，3最后分区
+     */
+    public $RulePartition;
+
+    /**
+     * @var string 规则生效范围，SG安全组，LH轻量服务器
+     */
+    public $Scope;
+
+    /**
      * @param integer $OrderIndex 排序
      * @param integer $RuleUuid 主键id
      * @param string $Uuid 规则uuid
@@ -440,6 +454,8 @@ ANY:表示所有
      * @param SgDnsParseCount $DnsParseCount 域名解析的IP统计
      * @param string $CreateTime 规则创建时间
      * @param string $UpdateTime 规则最近更新时间
+     * @param integer $RulePartition 规则分区，1最前分区，2中间分区，3最后分区
+     * @param string $Scope 规则生效范围，SG安全组，LH轻量服务器
      */
     function __construct()
     {
@@ -590,6 +606,14 @@ ANY:表示所有
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("RulePartition",$param) and $param["RulePartition"] !== null) {
+            $this->RulePartition = $param["RulePartition"];
+        }
+
+        if (array_key_exists("Scope",$param) and $param["Scope"] !== null) {
+            $this->Scope = $param["Scope"];
         }
     }
 }

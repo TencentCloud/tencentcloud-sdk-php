@@ -126,6 +126,8 @@ UPDATING 更新中
  * @method void setMonitorSource(string $MonitorSource) 设置用于监控的创建来源字段
  * @method string getSubUinName() 获取子用户的 nickname
  * @method void setSubUinName(string $SubUinName) 设置子用户的 nickname
+ * @method LogConfig getGatewayLogConfig() 获取网关日志投递相关配置
+ * @method void setGatewayLogConfig(LogConfig $GatewayLogConfig) 设置网关日志投递相关配置
  */
 class ServiceGroup extends AbstractModel
 {
@@ -279,6 +281,11 @@ UPDATING 更新中
     public $SubUinName;
 
     /**
+     * @var LogConfig 网关日志投递相关配置
+     */
+    public $GatewayLogConfig;
+
+    /**
      * @param string $ServiceGroupId 服务组id
      * @param string $ServiceGroupName 服务组名
      * @param string $CreatedBy 创建者
@@ -332,6 +339,7 @@ UPDATING 更新中
      * @param array $AuthTokens 限流鉴权 token 列表
      * @param string $MonitorSource 用于监控的创建来源字段
      * @param string $SubUinName 子用户的 nickname
+     * @param LogConfig $GatewayLogConfig 网关日志投递相关配置
      */
     function __construct()
     {
@@ -455,6 +463,11 @@ UPDATING 更新中
 
         if (array_key_exists("SubUinName",$param) and $param["SubUinName"] !== null) {
             $this->SubUinName = $param["SubUinName"];
+        }
+
+        if (array_key_exists("GatewayLogConfig",$param) and $param["GatewayLogConfig"] !== null) {
+            $this->GatewayLogConfig = new LogConfig();
+            $this->GatewayLogConfig->deserialize($param["GatewayLogConfig"]);
         }
     }
 }

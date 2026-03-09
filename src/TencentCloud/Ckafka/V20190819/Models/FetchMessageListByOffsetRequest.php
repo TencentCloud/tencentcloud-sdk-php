@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * FetchMessageListByOffset请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
- * @method string getTopic() 获取主题名
- * @method void setTopic(string $Topic) 设置主题名
- * @method integer getPartition() 获取分区id
- * @method void setPartition(integer $Partition) 设置分区id
- * @method integer getOffset() 获取位点信息
- * @method void setOffset(integer $Offset) 设置位点信息
- * @method integer getSinglePartitionRecordNumber() 获取最大查询条数，默认20，最大20
- * @method void setSinglePartitionRecordNumber(integer $SinglePartitionRecordNumber) 设置最大查询条数，默认20，最大20
+ * @method string getInstanceId() 获取<p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+ * @method string getTopic() 获取<p>主题名</p>
+ * @method void setTopic(string $Topic) 设置<p>主题名</p>
+ * @method integer getPartition() 获取<p>分区id</p>
+ * @method void setPartition(integer $Partition) 设置<p>分区id</p>
+ * @method integer getOffset() 获取<p>位点信息</p>
+ * @method void setOffset(integer $Offset) 设置<p>位点信息</p>
+ * @method integer getSinglePartitionRecordNumber() 获取<p>最大查询条数，默认20，最大20</p>
+ * @method void setSinglePartitionRecordNumber(integer $SinglePartitionRecordNumber) 设置<p>最大查询条数，默认20，最大20</p>
  */
 class FetchMessageListByOffsetRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public $InstanceId;
 
     /**
-     * @var string 主题名
+     * @var string <p>主题名</p>
      */
     public $Topic;
 
     /**
-     * @var integer 分区id
+     * @var integer <p>分区id</p>
      */
     public $Partition;
 
     /**
-     * @var integer 位点信息
+     * @var integer <p>位点信息</p>
      */
     public $Offset;
 
     /**
-     * @var integer 最大查询条数，默认20，最大20
+     * @var integer <p>最大查询条数，默认20，最大20</p>
      */
     public $SinglePartitionRecordNumber;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
-     * @param string $Topic 主题名
-     * @param integer $Partition 分区id
-     * @param integer $Offset 位点信息
-     * @param integer $SinglePartitionRecordNumber 最大查询条数，默认20，最大20
+     * @param string $InstanceId <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+     * @param string $Topic <p>主题名</p>
+     * @param integer $Partition <p>分区id</p>
+     * @param integer $Offset <p>位点信息</p>
+     * @param integer $SinglePartitionRecordNumber <p>最大查询条数，默认20，最大20</p>
      */
     function __construct()
     {

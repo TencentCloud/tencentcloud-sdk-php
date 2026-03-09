@@ -34,12 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置任务执行结束时间，格式为 yyyy-mm-dd hh:mm:ss
  * @method string getBriefMsg() 获取迁移任务错误信息
  * @method void setBriefMsg(string $BriefMsg) 设置迁移任务错误信息
- * @method string getStatus() 获取任务状态，取值为：creating(创建中)、created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)、
-pausing(暂停中)、
-manualPaused(已暂停)
- * @method void setStatus(string $Status) 设置任务状态，取值为：creating(创建中)、created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)、
-pausing(暂停中)、
-manualPaused(已暂停)
+ * @method string getStatus() 获取任务状态，取值为：creating(创建中)、created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(终止中)、completing(完成中)、pausing(暂停中)、manualPaused(已暂停)、resumableErr(可重试错误)、resuming(重试中)、unknown(未知状态)、error(任务错误)、canceled(已取消)
+ * @method void setStatus(string $Status) 设置任务状态，取值为：creating(创建中)、created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(终止中)、completing(完成中)、pausing(暂停中)、manualPaused(已暂停)、resumableErr(可重试错误)、resuming(重试中)、unknown(未知状态)、error(任务错误)、canceled(已取消)
  * @method string getRunMode() 获取任务运行模式，值包括：immediate(立即运行)，timed(定时运行)
  * @method void setRunMode(string $RunMode) 设置任务运行模式，值包括：immediate(立即运行)，timed(定时运行)
  * @method string getExpectRunTime() 获取期待启动时间，当RunMode取值为timed时，此值必填，形如：2022-07-11 16:20:49
@@ -101,9 +97,7 @@ class JobItem extends AbstractModel
     public $BriefMsg;
 
     /**
-     * @var string 任务状态，取值为：creating(创建中)、created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)、
-pausing(暂停中)、
-manualPaused(已暂停)
+     * @var string 任务状态，取值为：creating(创建中)、created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(终止中)、completing(完成中)、pausing(暂停中)、manualPaused(已暂停)、resumableErr(可重试错误)、resuming(重试中)、unknown(未知状态)、error(任务错误)、canceled(已取消)
      */
     public $Status;
 
@@ -170,9 +164,7 @@ manualPaused(已暂停)
      * @param string $StartTime 任务开始执行时间，格式为 yyyy-mm-dd hh:mm:ss
      * @param string $EndTime 任务执行结束时间，格式为 yyyy-mm-dd hh:mm:ss
      * @param string $BriefMsg 迁移任务错误信息
-     * @param string $Status 任务状态，取值为：creating(创建中)、created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)、
-pausing(暂停中)、
-manualPaused(已暂停)
+     * @param string $Status 任务状态，取值为：creating(创建中)、created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(终止中)、completing(完成中)、pausing(暂停中)、manualPaused(已暂停)、resumableErr(可重试错误)、resuming(重试中)、unknown(未知状态)、error(任务错误)、canceled(已取消)
      * @param string $RunMode 任务运行模式，值包括：immediate(立即运行)，timed(定时运行)
      * @param string $ExpectRunTime 期待启动时间，当RunMode取值为timed时，此值必填，形如：2022-07-11 16:20:49
      * @param MigrateAction $Action 任务操作信息

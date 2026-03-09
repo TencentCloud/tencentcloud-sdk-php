@@ -20,74 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 云硬盘配置
  *
- * @method string getZone() 获取可用区。
- * @method void setZone(string $Zone) 设置可用区。
- * @method string getDiskType() 获取云硬盘类型。枚举值如下：
-
-<li>CLOUD_BASIC：普通云硬盘</li>
-<li>CLOUD_PREMIUM：高性能云硬盘</li>
-<li>CLOUD_SSD：SSD云硬盘</li>
- * @method void setDiskType(string $DiskType) 设置云硬盘类型。枚举值如下：
-
-<li>CLOUD_BASIC：普通云硬盘</li>
-<li>CLOUD_PREMIUM：高性能云硬盘</li>
-<li>CLOUD_SSD：SSD云硬盘</li>
- * @method string getDiskSalesState() 获取云硬盘可售卖状态。
- * @method void setDiskSalesState(string $DiskSalesState) 设置云硬盘可售卖状态。
- * @method integer getMaxDiskSize() 获取最大云硬盘大小。
- * @method void setMaxDiskSize(integer $MaxDiskSize) 设置最大云硬盘大小。
- * @method integer getMinDiskSize() 获取最小云硬盘大小。
- * @method void setMinDiskSize(integer $MinDiskSize) 设置最小云硬盘大小。
- * @method integer getDiskStepSize() 获取云硬盘步长。
- * @method void setDiskStepSize(integer $DiskStepSize) 设置云硬盘步长。
+ * @method string getZone() 获取<p>可用区。</p>
+ * @method void setZone(string $Zone) 设置<p>可用区。</p>
+ * @method string getDiskType() 获取<p>云硬盘类型。枚举值如下：</p><li>CLOUD_BASIC：普通云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_SSD：SSD云硬盘</li>
+ * @method void setDiskType(string $DiskType) 设置<p>云硬盘类型。枚举值如下：</p><li>CLOUD_BASIC：普通云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_SSD：SSD云硬盘</li>
+ * @method string getDiskSalesState() 获取<p>云硬盘可售卖状态。</p>
+ * @method void setDiskSalesState(string $DiskSalesState) 设置<p>云硬盘可售卖状态。</p>
+ * @method integer getMaxDiskSize() 获取<p>最大云硬盘大小。</p><p>单位：GB</p>
+ * @method void setMaxDiskSize(integer $MaxDiskSize) 设置<p>最大云硬盘大小。</p><p>单位：GB</p>
+ * @method integer getMinDiskSize() 获取<p>最小云硬盘大小。</p><p>单位：GB</p>
+ * @method void setMinDiskSize(integer $MinDiskSize) 设置<p>最小云硬盘大小。</p><p>单位：GB</p>
+ * @method integer getDiskStepSize() 获取<p>云硬盘步长。</p><p>单位：GB</p>
+ * @method void setDiskStepSize(integer $DiskStepSize) 设置<p>云硬盘步长。</p><p>单位：GB</p>
  */
 class DiskConfig extends AbstractModel
 {
     /**
-     * @var string 可用区。
+     * @var string <p>可用区。</p>
      */
     public $Zone;
 
     /**
-     * @var string 云硬盘类型。枚举值如下：
-
-<li>CLOUD_BASIC：普通云硬盘</li>
-<li>CLOUD_PREMIUM：高性能云硬盘</li>
-<li>CLOUD_SSD：SSD云硬盘</li>
+     * @var string <p>云硬盘类型。枚举值如下：</p><li>CLOUD_BASIC：普通云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_SSD：SSD云硬盘</li>
      */
     public $DiskType;
 
     /**
-     * @var string 云硬盘可售卖状态。
+     * @var string <p>云硬盘可售卖状态。</p>
      */
     public $DiskSalesState;
 
     /**
-     * @var integer 最大云硬盘大小。
+     * @var integer <p>最大云硬盘大小。</p><p>单位：GB</p>
      */
     public $MaxDiskSize;
 
     /**
-     * @var integer 最小云硬盘大小。
+     * @var integer <p>最小云硬盘大小。</p><p>单位：GB</p>
      */
     public $MinDiskSize;
 
     /**
-     * @var integer 云硬盘步长。
+     * @var integer <p>云硬盘步长。</p><p>单位：GB</p>
      */
     public $DiskStepSize;
 
     /**
-     * @param string $Zone 可用区。
-     * @param string $DiskType 云硬盘类型。枚举值如下：
-
-<li>CLOUD_BASIC：普通云硬盘</li>
-<li>CLOUD_PREMIUM：高性能云硬盘</li>
-<li>CLOUD_SSD：SSD云硬盘</li>
-     * @param string $DiskSalesState 云硬盘可售卖状态。
-     * @param integer $MaxDiskSize 最大云硬盘大小。
-     * @param integer $MinDiskSize 最小云硬盘大小。
-     * @param integer $DiskStepSize 云硬盘步长。
+     * @param string $Zone <p>可用区。</p>
+     * @param string $DiskType <p>云硬盘类型。枚举值如下：</p><li>CLOUD_BASIC：普通云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_SSD：SSD云硬盘</li>
+     * @param string $DiskSalesState <p>云硬盘可售卖状态。</p>
+     * @param integer $MaxDiskSize <p>最大云硬盘大小。</p><p>单位：GB</p>
+     * @param integer $MinDiskSize <p>最小云硬盘大小。</p><p>单位：GB</p>
+     * @param integer $DiskStepSize <p>云硬盘步长。</p><p>单位：GB</p>
      */
     function __construct()
     {

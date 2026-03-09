@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopicSubscribeGroup请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
- * @method string getTopicName() 获取主题名
- * @method void setTopicName(string $TopicName) 设置主题名
- * @method integer getOffset() 获取分页时的起始位置
- * @method void setOffset(integer $Offset) 设置分页时的起始位置
- * @method integer getLimit() 获取分页时的个数
- * @method void setLimit(integer $Limit) 设置分页时的个数
+ * @method string getInstanceId() 获取<p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+ * @method string getTopicName() 获取<p>主题名</p>
+ * @method void setTopicName(string $TopicName) 设置<p>主题名</p>
+ * @method integer getOffset() 获取<p>分页时的起始位置</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页时的起始位置</p>
+ * @method integer getLimit() 获取<p>分页时的个数</p><p>默认值：20</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页时的个数</p><p>默认值：20</p>
  */
 class DescribeTopicSubscribeGroupRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public $InstanceId;
 
     /**
-     * @var string 主题名
+     * @var string <p>主题名</p>
      */
     public $TopicName;
 
     /**
-     * @var integer 分页时的起始位置
+     * @var integer <p>分页时的起始位置</p>
      */
     public $Offset;
 
     /**
-     * @var integer 分页时的个数
+     * @var integer <p>分页时的个数</p><p>默认值：20</p>
      */
     public $Limit;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
-     * @param string $TopicName 主题名
-     * @param integer $Offset 分页时的起始位置
-     * @param integer $Limit 分页时的个数
+     * @param string $InstanceId <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+     * @param string $TopicName <p>主题名</p>
+     * @param integer $Offset <p>分页时的起始位置</p>
+     * @param integer $Limit <p>分页时的个数</p><p>默认值：20</p>
      */
     function __construct()
     {

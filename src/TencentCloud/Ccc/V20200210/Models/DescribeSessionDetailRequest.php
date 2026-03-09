@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSessionDetail请求参数结构体
  *
- * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
- * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
- * @method string getSessionId() 获取通话的 session id
- * @method void setSessionId(string $SessionId) 设置通话的 session id
- * @method integer getStartTimestamp() 获取起始时间戳，Unix 秒级时间戳，最大支持近180天。
- * @method void setStartTimestamp(integer $StartTimestamp) 设置起始时间戳，Unix 秒级时间戳，最大支持近180天。
- * @method integer getEndTimestamp() 获取结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。
- * @method void setEndTimestamp(integer $EndTimestamp) 设置结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。
+ * @method integer getSdkAppId() 获取<p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+ * @method void setSdkAppId(integer $SdkAppId) 设置<p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+ * @method string getSessionId() 获取<p>通话的 session id</p>
+ * @method void setSessionId(string $SessionId) 设置<p>通话的 session id</p>
+ * @method integer getStartTimestamp() 获取<p>起始时间戳，Unix 秒级时间戳，最大支持近180天。</p>
+ * @method void setStartTimestamp(integer $StartTimestamp) 设置<p>起始时间戳，Unix 秒级时间戳，最大支持近180天。</p>
+ * @method integer getEndTimestamp() 获取<p>结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。</p>
+ * @method void setEndTimestamp(integer $EndTimestamp) 设置<p>结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。</p>
  */
 class DescribeSessionDetailRequest extends AbstractModel
 {
     /**
-     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * @var integer <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public $SdkAppId;
 
     /**
-     * @var string 通话的 session id
+     * @var string <p>通话的 session id</p>
      */
     public $SessionId;
 
     /**
-     * @var integer 起始时间戳，Unix 秒级时间戳，最大支持近180天。
+     * @var integer <p>起始时间戳，Unix 秒级时间戳，最大支持近180天。</p>
      */
     public $StartTimestamp;
 
     /**
-     * @var integer 结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。
+     * @var integer <p>结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。</p>
      */
     public $EndTimestamp;
 
     /**
-     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
-     * @param string $SessionId 通话的 session id
-     * @param integer $StartTimestamp 起始时间戳，Unix 秒级时间戳，最大支持近180天。
-     * @param integer $EndTimestamp 结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。
+     * @param integer $SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+     * @param string $SessionId <p>通话的 session id</p>
+     * @param integer $StartTimestamp <p>起始时间戳，Unix 秒级时间戳，最大支持近180天。</p>
+     * @param integer $EndTimestamp <p>结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。</p>
      */
     function __construct()
     {

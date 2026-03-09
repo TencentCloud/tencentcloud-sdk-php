@@ -20,171 +20,185 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSessionDetail返回参数结构体
  *
- * @method string getCaller() 获取主叫号码
- * @method void setCaller(string $Caller) 设置主叫号码
- * @method string getCallee() 获取被叫号码
- * @method void setCallee(string $Callee) 设置被叫号码
- * @method integer getCallType() 获取通话类型 1 呼出 2 呼入 3 音频呼入 5 预测式外呼 6 内线呼叫
- * @method void setCallType(integer $CallType) 设置通话类型 1 呼出 2 呼入 3 音频呼入 5 预测式外呼 6 内线呼叫
- * @method integer getStartTimeStamp() 获取开始时间戳，Unix 秒级时间戳
- * @method void setStartTimeStamp(integer $StartTimeStamp) 设置开始时间戳，Unix 秒级时间戳
- * @method integer getRingTimestamp() 获取振铃时间戳，UNIX 秒级时间戳
- * @method void setRingTimestamp(integer $RingTimestamp) 设置振铃时间戳，UNIX 秒级时间戳
- * @method integer getAcceptTimestamp() 获取接听时间戳，UNIX 秒级时间戳
- * @method void setAcceptTimestamp(integer $AcceptTimestamp) 设置接听时间戳，UNIX 秒级时间戳
- * @method integer getEndedTimestamp() 获取结束时间戳，UNIX 秒级时间戳
- * @method void setEndedTimestamp(integer $EndedTimestamp) 设置结束时间戳，UNIX 秒级时间戳
- * @method integer getQueuedTimestamp() 获取进入排队时间，Unix 秒级时间戳
- * @method void setQueuedTimestamp(integer $QueuedTimestamp) 设置进入排队时间，Unix 秒级时间戳
- * @method string getStaffUserId() 获取座席账号
- * @method void setStaffUserId(string $StaffUserId) 设置座席账号
- * @method integer getEndStatus() 获取参考 DescribeTelCdr 接口 EndStatus 字段
- * @method void setEndStatus(integer $EndStatus) 设置参考 DescribeTelCdr 接口 EndStatus 字段
- * @method integer getQueuedSkillGroupId() 获取排队技能组 ID
- * @method void setQueuedSkillGroupId(integer $QueuedSkillGroupId) 设置排队技能组 ID
- * @method string getQueuedSkillGroupName() 获取排队技能组名称
- * @method void setQueuedSkillGroupName(string $QueuedSkillGroupName) 设置排队技能组名称
- * @method string getRecordURL() 获取录音链接，带鉴权和有效期，获取之后请在24 小时内拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接
- * @method void setRecordURL(string $RecordURL) 设置录音链接，带鉴权和有效期，获取之后请在24 小时内拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接
- * @method string getCustomRecordURL() 获取录音转存第三方 COS 链接
- * @method void setCustomRecordURL(string $CustomRecordURL) 设置录音转存第三方 COS 链接
- * @method string getAsrURL() 获取录音文本信息链接，带鉴权和有效期，获取之后请在24 小时拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接
- * @method void setAsrURL(string $AsrURL) 设置录音文本信息链接，带鉴权和有效期，获取之后请在24 小时拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接
- * @method array getVoicemailRecordURL() 获取语音留言录音链接
- * @method void setVoicemailRecordURL(array $VoicemailRecordURL) 设置语音留言录音链接
- * @method array getVoicemailAsrURL() 获取语音留言录音文本信息链接，需在控制台购买离线语音识别套餐包并开启离线语音识别开关
- * @method void setVoicemailAsrURL(array $VoicemailAsrURL) 设置语音留言录音文本信息链接，需在控制台购买离线语音识别套餐包并开启离线语音识别开关
- * @method array getIVRKeyPressed() 获取IVR 按键信息
- * @method void setIVRKeyPressed(array $IVRKeyPressed) 设置IVR 按键信息
- * @method array getPostIVRKeyPressed() 获取满意度按键信息
- * @method void setPostIVRKeyPressed(array $PostIVRKeyPressed) 设置满意度按键信息
- * @method string getHungUpSide() 获取挂机方 seat 座席 user 用户 system 系统
- * @method void setHungUpSide(string $HungUpSide) 设置挂机方 seat 座席 user 用户 system 系统
- * @method string getUUI() 获取客户自定义数据（User-to-User Interface）
- * @method void setUUI(string $UUI) 设置客户自定义数据（User-to-User Interface）
- * @method array getEvents() 获取通话中的事件列表
- * @method void setEvents(array $Events) 设置通话中的事件列表
- * @method array getServeParticipants() 获取服务参与者列表
- * @method void setServeParticipants(array $ServeParticipants) 设置服务参与者列表
+ * @method string getCaller() 获取<p>主叫号码</p>
+ * @method void setCaller(string $Caller) 设置<p>主叫号码</p>
+ * @method string getCallee() 获取<p>被叫号码</p>
+ * @method void setCallee(string $Callee) 设置<p>被叫号码</p>
+ * @method integer getCallType() 获取<p>通话类型 1 呼出 2 呼入 3 音频呼入 5 预测式外呼 6 内线呼叫</p>
+ * @method void setCallType(integer $CallType) 设置<p>通话类型 1 呼出 2 呼入 3 音频呼入 5 预测式外呼 6 内线呼叫</p>
+ * @method integer getStartTimeStamp() 获取<p>开始时间戳，Unix 秒级时间戳</p>
+ * @method void setStartTimeStamp(integer $StartTimeStamp) 设置<p>开始时间戳，Unix 秒级时间戳</p>
+ * @method integer getRingTimestamp() 获取<p>振铃时间戳，UNIX 秒级时间戳</p>
+ * @method void setRingTimestamp(integer $RingTimestamp) 设置<p>振铃时间戳，UNIX 秒级时间戳</p>
+ * @method integer getAcceptTimestamp() 获取<p>接听时间戳，UNIX 秒级时间戳</p>
+ * @method void setAcceptTimestamp(integer $AcceptTimestamp) 设置<p>接听时间戳，UNIX 秒级时间戳</p>
+ * @method integer getEndedTimestamp() 获取<p>结束时间戳，UNIX 秒级时间戳</p>
+ * @method void setEndedTimestamp(integer $EndedTimestamp) 设置<p>结束时间戳，UNIX 秒级时间戳</p>
+ * @method integer getQueuedTimestamp() 获取<p>进入排队时间，Unix 秒级时间戳</p>
+ * @method void setQueuedTimestamp(integer $QueuedTimestamp) 设置<p>进入排队时间，Unix 秒级时间戳</p>
+ * @method string getStaffUserId() 获取<p>座席账号</p>
+ * @method void setStaffUserId(string $StaffUserId) 设置<p>座席账号</p>
+ * @method integer getEndStatus() 获取<p>参考 DescribeTelCdr 接口 EndStatus 字段</p>
+ * @method void setEndStatus(integer $EndStatus) 设置<p>参考 DescribeTelCdr 接口 EndStatus 字段</p>
+ * @method integer getQueuedSkillGroupId() 获取<p>排队技能组 ID</p>
+ * @method void setQueuedSkillGroupId(integer $QueuedSkillGroupId) 设置<p>排队技能组 ID</p>
+ * @method string getQueuedSkillGroupName() 获取<p>排队技能组名称</p>
+ * @method void setQueuedSkillGroupName(string $QueuedSkillGroupName) 设置<p>排队技能组名称</p>
+ * @method string getRecordURL() 获取<p>录音链接，带鉴权和有效期，获取之后请在24 小时内拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接</p>
+ * @method void setRecordURL(string $RecordURL) 设置<p>录音链接，带鉴权和有效期，获取之后请在24 小时内拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接</p>
+ * @method string getCustomRecordURL() 获取<p>录音转存第三方 COS 链接</p>
+ * @method void setCustomRecordURL(string $CustomRecordURL) 设置<p>录音转存第三方 COS 链接</p>
+ * @method string getAsrURL() 获取<p>录音文本信息链接，带鉴权和有效期，获取之后请在24 小时拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接</p>
+ * @method void setAsrURL(string $AsrURL) 设置<p>录音文本信息链接，带鉴权和有效期，获取之后请在24 小时拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接</p>
+ * @method array getVoicemailRecordURL() 获取<p>语音留言录音链接</p>
+ * @method void setVoicemailRecordURL(array $VoicemailRecordURL) 设置<p>语音留言录音链接</p>
+ * @method array getVoicemailAsrURL() 获取<p>语音留言录音文本信息链接，需在控制台购买离线语音识别套餐包并开启离线语音识别开关</p>
+ * @method void setVoicemailAsrURL(array $VoicemailAsrURL) 设置<p>语音留言录音文本信息链接，需在控制台购买离线语音识别套餐包并开启离线语音识别开关</p>
+ * @method array getIVRKeyPressed() 获取<p>IVR 按键信息</p>
+ * @method void setIVRKeyPressed(array $IVRKeyPressed) 设置<p>IVR 按键信息</p>
+ * @method array getPostIVRKeyPressed() 获取<p>满意度按键信息</p>
+ * @method void setPostIVRKeyPressed(array $PostIVRKeyPressed) 设置<p>满意度按键信息</p>
+ * @method string getHungUpSide() 获取<p>挂机方 seat 座席 user 用户 system 系统</p>
+ * @method void setHungUpSide(string $HungUpSide) 设置<p>挂机方 seat 座席 user 用户 system 系统</p>
+ * @method string getUUI() 获取<p>客户自定义数据（User-to-User Interface）</p>
+ * @method void setUUI(string $UUI) 设置<p>客户自定义数据（User-to-User Interface）</p>
+ * @method array getEvents() 获取<p>通话中的事件列表</p>
+ * @method void setEvents(array $Events) 设置<p>通话中的事件列表</p>
+ * @method array getServeParticipants() 获取<p>服务参与者列表</p>
+ * @method void setServeParticipants(array $ServeParticipants) 设置<p>服务参与者列表</p>
+ * @method integer getSysHangupReason() 获取<p>接通后系统挂断原因状态码</p><p><a href="https://cloud.tencent.com/document/product/679/123938">详见</a></p>
+ * @method void setSysHangupReason(integer $SysHangupReason) 设置<p>接通后系统挂断原因状态码</p><p><a href="https://cloud.tencent.com/document/product/679/123938">详见</a></p>
+ * @method string getSysHangupReasonString() 获取<p>接通后系统挂断原因</p><p><a href="https://cloud.tencent.com/document/product/679/123938">详见</a></p>
+ * @method void setSysHangupReasonString(string $SysHangupReasonString) 设置<p>接通后系统挂断原因</p><p><a href="https://cloud.tencent.com/document/product/679/123938">详见</a></p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSessionDetailResponse extends AbstractModel
 {
     /**
-     * @var string 主叫号码
+     * @var string <p>主叫号码</p>
      */
     public $Caller;
 
     /**
-     * @var string 被叫号码
+     * @var string <p>被叫号码</p>
      */
     public $Callee;
 
     /**
-     * @var integer 通话类型 1 呼出 2 呼入 3 音频呼入 5 预测式外呼 6 内线呼叫
+     * @var integer <p>通话类型 1 呼出 2 呼入 3 音频呼入 5 预测式外呼 6 内线呼叫</p>
      */
     public $CallType;
 
     /**
-     * @var integer 开始时间戳，Unix 秒级时间戳
+     * @var integer <p>开始时间戳，Unix 秒级时间戳</p>
      */
     public $StartTimeStamp;
 
     /**
-     * @var integer 振铃时间戳，UNIX 秒级时间戳
+     * @var integer <p>振铃时间戳，UNIX 秒级时间戳</p>
      */
     public $RingTimestamp;
 
     /**
-     * @var integer 接听时间戳，UNIX 秒级时间戳
+     * @var integer <p>接听时间戳，UNIX 秒级时间戳</p>
      */
     public $AcceptTimestamp;
 
     /**
-     * @var integer 结束时间戳，UNIX 秒级时间戳
+     * @var integer <p>结束时间戳，UNIX 秒级时间戳</p>
      */
     public $EndedTimestamp;
 
     /**
-     * @var integer 进入排队时间，Unix 秒级时间戳
+     * @var integer <p>进入排队时间，Unix 秒级时间戳</p>
      */
     public $QueuedTimestamp;
 
     /**
-     * @var string 座席账号
+     * @var string <p>座席账号</p>
      */
     public $StaffUserId;
 
     /**
-     * @var integer 参考 DescribeTelCdr 接口 EndStatus 字段
+     * @var integer <p>参考 DescribeTelCdr 接口 EndStatus 字段</p>
      */
     public $EndStatus;
 
     /**
-     * @var integer 排队技能组 ID
+     * @var integer <p>排队技能组 ID</p>
      */
     public $QueuedSkillGroupId;
 
     /**
-     * @var string 排队技能组名称
+     * @var string <p>排队技能组名称</p>
      */
     public $QueuedSkillGroupName;
 
     /**
-     * @var string 录音链接，带鉴权和有效期，获取之后请在24 小时内拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接
+     * @var string <p>录音链接，带鉴权和有效期，获取之后请在24 小时内拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接</p>
      */
     public $RecordURL;
 
     /**
-     * @var string 录音转存第三方 COS 链接
+     * @var string <p>录音转存第三方 COS 链接</p>
      */
     public $CustomRecordURL;
 
     /**
-     * @var string 录音文本信息链接，带鉴权和有效期，获取之后请在24 小时拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接
+     * @var string <p>录音文本信息链接，带鉴权和有效期，获取之后请在24 小时拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接</p>
      */
     public $AsrURL;
 
     /**
-     * @var array 语音留言录音链接
+     * @var array <p>语音留言录音链接</p>
      */
     public $VoicemailRecordURL;
 
     /**
-     * @var array 语音留言录音文本信息链接，需在控制台购买离线语音识别套餐包并开启离线语音识别开关
+     * @var array <p>语音留言录音文本信息链接，需在控制台购买离线语音识别套餐包并开启离线语音识别开关</p>
      */
     public $VoicemailAsrURL;
 
     /**
-     * @var array IVR 按键信息
+     * @var array <p>IVR 按键信息</p>
      */
     public $IVRKeyPressed;
 
     /**
-     * @var array 满意度按键信息
+     * @var array <p>满意度按键信息</p>
      */
     public $PostIVRKeyPressed;
 
     /**
-     * @var string 挂机方 seat 座席 user 用户 system 系统
+     * @var string <p>挂机方 seat 座席 user 用户 system 系统</p>
      */
     public $HungUpSide;
 
     /**
-     * @var string 客户自定义数据（User-to-User Interface）
+     * @var string <p>客户自定义数据（User-to-User Interface）</p>
      */
     public $UUI;
 
     /**
-     * @var array 通话中的事件列表
+     * @var array <p>通话中的事件列表</p>
      */
     public $Events;
 
     /**
-     * @var array 服务参与者列表
+     * @var array <p>服务参与者列表</p>
      */
     public $ServeParticipants;
+
+    /**
+     * @var integer <p>接通后系统挂断原因状态码</p><p><a href="https://cloud.tencent.com/document/product/679/123938">详见</a></p>
+     */
+    public $SysHangupReason;
+
+    /**
+     * @var string <p>接通后系统挂断原因</p><p><a href="https://cloud.tencent.com/document/product/679/123938">详见</a></p>
+     */
+    public $SysHangupReasonString;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -192,29 +206,31 @@ class DescribeSessionDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Caller 主叫号码
-     * @param string $Callee 被叫号码
-     * @param integer $CallType 通话类型 1 呼出 2 呼入 3 音频呼入 5 预测式外呼 6 内线呼叫
-     * @param integer $StartTimeStamp 开始时间戳，Unix 秒级时间戳
-     * @param integer $RingTimestamp 振铃时间戳，UNIX 秒级时间戳
-     * @param integer $AcceptTimestamp 接听时间戳，UNIX 秒级时间戳
-     * @param integer $EndedTimestamp 结束时间戳，UNIX 秒级时间戳
-     * @param integer $QueuedTimestamp 进入排队时间，Unix 秒级时间戳
-     * @param string $StaffUserId 座席账号
-     * @param integer $EndStatus 参考 DescribeTelCdr 接口 EndStatus 字段
-     * @param integer $QueuedSkillGroupId 排队技能组 ID
-     * @param string $QueuedSkillGroupName 排队技能组名称
-     * @param string $RecordURL 录音链接，带鉴权和有效期，获取之后请在24 小时内拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接
-     * @param string $CustomRecordURL 录音转存第三方 COS 链接
-     * @param string $AsrURL 录音文本信息链接，带鉴权和有效期，获取之后请在24 小时拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接
-     * @param array $VoicemailRecordURL 语音留言录音链接
-     * @param array $VoicemailAsrURL 语音留言录音文本信息链接，需在控制台购买离线语音识别套餐包并开启离线语音识别开关
-     * @param array $IVRKeyPressed IVR 按键信息
-     * @param array $PostIVRKeyPressed 满意度按键信息
-     * @param string $HungUpSide 挂机方 seat 座席 user 用户 system 系统
-     * @param string $UUI 客户自定义数据（User-to-User Interface）
-     * @param array $Events 通话中的事件列表
-     * @param array $ServeParticipants 服务参与者列表
+     * @param string $Caller <p>主叫号码</p>
+     * @param string $Callee <p>被叫号码</p>
+     * @param integer $CallType <p>通话类型 1 呼出 2 呼入 3 音频呼入 5 预测式外呼 6 内线呼叫</p>
+     * @param integer $StartTimeStamp <p>开始时间戳，Unix 秒级时间戳</p>
+     * @param integer $RingTimestamp <p>振铃时间戳，UNIX 秒级时间戳</p>
+     * @param integer $AcceptTimestamp <p>接听时间戳，UNIX 秒级时间戳</p>
+     * @param integer $EndedTimestamp <p>结束时间戳，UNIX 秒级时间戳</p>
+     * @param integer $QueuedTimestamp <p>进入排队时间，Unix 秒级时间戳</p>
+     * @param string $StaffUserId <p>座席账号</p>
+     * @param integer $EndStatus <p>参考 DescribeTelCdr 接口 EndStatus 字段</p>
+     * @param integer $QueuedSkillGroupId <p>排队技能组 ID</p>
+     * @param string $QueuedSkillGroupName <p>排队技能组名称</p>
+     * @param string $RecordURL <p>录音链接，带鉴权和有效期，获取之后请在24 小时内拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接</p>
+     * @param string $CustomRecordURL <p>录音转存第三方 COS 链接</p>
+     * @param string $AsrURL <p>录音文本信息链接，带鉴权和有效期，获取之后请在24 小时拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接</p>
+     * @param array $VoicemailRecordURL <p>语音留言录音链接</p>
+     * @param array $VoicemailAsrURL <p>语音留言录音文本信息链接，需在控制台购买离线语音识别套餐包并开启离线语音识别开关</p>
+     * @param array $IVRKeyPressed <p>IVR 按键信息</p>
+     * @param array $PostIVRKeyPressed <p>满意度按键信息</p>
+     * @param string $HungUpSide <p>挂机方 seat 座席 user 用户 system 系统</p>
+     * @param string $UUI <p>客户自定义数据（User-to-User Interface）</p>
+     * @param array $Events <p>通话中的事件列表</p>
+     * @param array $ServeParticipants <p>服务参与者列表</p>
+     * @param integer $SysHangupReason <p>接通后系统挂断原因状态码</p><p><a href="https://cloud.tencent.com/document/product/679/123938">详见</a></p>
+     * @param string $SysHangupReasonString <p>接通后系统挂断原因</p><p><a href="https://cloud.tencent.com/document/product/679/123938">详见</a></p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -340,6 +356,14 @@ class DescribeSessionDetailResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ServeParticipants, $obj);
             }
+        }
+
+        if (array_key_exists("SysHangupReason",$param) and $param["SysHangupReason"] !== null) {
+            $this->SysHangupReason = $param["SysHangupReason"];
+        }
+
+        if (array_key_exists("SysHangupReasonString",$param) and $param["SysHangupReasonString"] !== null) {
+            $this->SysHangupReasonString = $param["SysHangupReasonString"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

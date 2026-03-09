@@ -61,6 +61,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\CreateMachineGroupResponse CreateMachineGroup(Models\CreateMachineGroupRequest $req) 创建机器组
  * @method Models\CreateMetricConfigResponse CreateMetricConfig(Models\CreateMetricConfigRequest $req) 创建指标采集配置
  * @method Models\CreateMetricSubscribeResponse CreateMetricSubscribe(Models\CreateMetricSubscribeRequest $req) 创建指标订阅配置
+ * @method Models\CreateNetworkApplicationResponse CreateNetworkApplication(Models\CreateNetworkApplicationRequest $req) 创建网络应用
  * @method Models\CreateNoticeContentResponse CreateNoticeContent(Models\CreateNoticeContentRequest $req) 该接口用于创建通知内容。
  * @method Models\CreateRebuildIndexTaskResponse CreateRebuildIndexTask(Models\CreateRebuildIndexTaskRequest $req) 创建重建索引任务
 注意：
@@ -99,6 +100,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\DeleteMachineGroupInfoResponse DeleteMachineGroupInfo(Models\DeleteMachineGroupInfoRequest $req) 用于删除机器组信息
  * @method Models\DeleteMetricConfigResponse DeleteMetricConfig(Models\DeleteMetricConfigRequest $req) 删除指标采集配置
  * @method Models\DeleteMetricSubscribeResponse DeleteMetricSubscribe(Models\DeleteMetricSubscribeRequest $req) 删除指标订阅配置
+ * @method Models\DeleteNetworkApplicationResponse DeleteNetworkApplication(Models\DeleteNetworkApplicationRequest $req) 删除网络应用
  * @method Models\DeleteNoticeContentResponse DeleteNoticeContent(Models\DeleteNoticeContentRequest $req) 该接口用于删除通知内容配置
  * @method Models\DeleteScheduledSqlResponse DeleteScheduledSql(Models\DeleteScheduledSqlRequest $req) 本接口用于删除定时SQL分析任务
  * @method Models\DeleteShipperResponse DeleteShipper(Models\DeleteShipperRequest $req) 删除投递COS任务
@@ -147,6 +149,8 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
  * @method Models\DescribeMetricCorrectDimensionResponse DescribeMetricCorrectDimension(Models\DescribeMetricCorrectDimensionRequest $req) 获取指标订阅配置
  * @method Models\DescribeMetricSubscribePreviewResponse DescribeMetricSubscribePreview(Models\DescribeMetricSubscribePreviewRequest $req) 创建指标订阅配置
  * @method Models\DescribeMetricSubscribesResponse DescribeMetricSubscribes(Models\DescribeMetricSubscribesRequest $req) 获取指标订阅配置
+ * @method Models\DescribeNetworkApplicationDetailResponse DescribeNetworkApplicationDetail(Models\DescribeNetworkApplicationDetailRequest $req) 获取网络应用详情
+ * @method Models\DescribeNetworkApplicationsResponse DescribeNetworkApplications(Models\DescribeNetworkApplicationsRequest $req) 获取网络应用列表
  * @method Models\DescribeNoticeContentsResponse DescribeNoticeContents(Models\DescribeNoticeContentsRequest $req) 获取通知内容列表
  * @method Models\DescribePartitionsResponse DescribePartitions(Models\DescribePartitionsRequest $req) 该接口已废弃，如需获取分区数量，请使用DescribeTopics接口。
  * @method Models\DescribeRebuildIndexTasksResponse DescribeRebuildIndexTasks(Models\DescribeRebuildIndexTasksRequest $req) 获取重建索引任务列表
@@ -188,6 +192,7 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
 注意：修改接口直接覆盖历史数据，改为本次合法入参数据，请谨慎调用此接口。
  * @method Models\ModifyMetricConfigResponse ModifyMetricConfig(Models\ModifyMetricConfigRequest $req) 创建指标采集配置
  * @method Models\ModifyMetricSubscribeResponse ModifyMetricSubscribe(Models\ModifyMetricSubscribeRequest $req) 修改指标订阅配置
+ * @method Models\ModifyNetworkApplicationResponse ModifyNetworkApplication(Models\ModifyNetworkApplicationRequest $req) 修改网络应用
  * @method Models\ModifyNoticeContentResponse ModifyNoticeContent(Models\ModifyNoticeContentRequest $req) 该接口用于修改通知内容配置
  * @method Models\ModifyScheduledSqlResponse ModifyScheduledSql(Models\ModifyScheduledSqlRequest $req) 本接口用于修改定时SQL分析任务
  * @method Models\ModifyShipperResponse ModifyShipper(Models\ModifyShipperRequest $req) 修改现有的投递规则，客户如果使用此接口，需要自行处理CLS对指定bucket的写权限。

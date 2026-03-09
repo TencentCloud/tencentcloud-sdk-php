@@ -48,6 +48,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefaultVoiceType(integer $DefaultVoiceType) 设置系统默认音色，当配置复刻音色时，默认值为200000000
  * @method string getFastVoiceType() 获取复刻音色
  * @method void setFastVoiceType(string $FastVoiceType) 设置复刻音色
+ * @method string getSubtitleCallbackUrl() 获取实时字幕回调地址，支持HTTP/HTTPS
+ * @method void setSubtitleCallbackUrl(string $SubtitleCallbackUrl) 设置实时字幕回调地址，支持HTTP/HTTPS
+ * @method string getSubtitleCallbackSignKey() 获取回调签名密钥，最大32字符，用于HMAC SHA256签名
+ * @method void setSubtitleCallbackSignKey(string $SubtitleCallbackSignKey) 设置回调签名密钥，最大32字符，用于HMAC SHA256签名
+ * @method integer getSubtitleCallbackTimeout() 获取字幕推送超时时间（秒），参考TRTC规范
+ * @method void setSubtitleCallbackTimeout(integer $SubtitleCallbackTimeout) 设置字幕推送超时时间（秒），参考TRTC规范
  */
 class TalkAgentConfigInfo extends AbstractModel
 {
@@ -122,6 +128,21 @@ class TalkAgentConfigInfo extends AbstractModel
     public $FastVoiceType;
 
     /**
+     * @var string 实时字幕回调地址，支持HTTP/HTTPS
+     */
+    public $SubtitleCallbackUrl;
+
+    /**
+     * @var string 回调签名密钥，最大32字符，用于HMAC SHA256签名
+     */
+    public $SubtitleCallbackSignKey;
+
+    /**
+     * @var integer 字幕推送超时时间（秒），参考TRTC规范
+     */
+    public $SubtitleCallbackTimeout;
+
+    /**
      * @param integer $SessionTimeout 会话超时（秒），指连接会话的时间，例如30秒是指会话在30秒后断开
      * @param boolean $InterruptionEnabled 允许打断
      * @param integer $MaxContextTokens 最大上下文
@@ -136,6 +157,9 @@ class TalkAgentConfigInfo extends AbstractModel
      * @param string $GreetingMessage 开机问候语，如果未配置默认不开启
      * @param integer $DefaultVoiceType 系统默认音色，当配置复刻音色时，默认值为200000000
      * @param string $FastVoiceType 复刻音色
+     * @param string $SubtitleCallbackUrl 实时字幕回调地址，支持HTTP/HTTPS
+     * @param string $SubtitleCallbackSignKey 回调签名密钥，最大32字符，用于HMAC SHA256签名
+     * @param integer $SubtitleCallbackTimeout 字幕推送超时时间（秒），参考TRTC规范
      */
     function __construct()
     {
@@ -205,6 +229,18 @@ class TalkAgentConfigInfo extends AbstractModel
 
         if (array_key_exists("FastVoiceType",$param) and $param["FastVoiceType"] !== null) {
             $this->FastVoiceType = $param["FastVoiceType"];
+        }
+
+        if (array_key_exists("SubtitleCallbackUrl",$param) and $param["SubtitleCallbackUrl"] !== null) {
+            $this->SubtitleCallbackUrl = $param["SubtitleCallbackUrl"];
+        }
+
+        if (array_key_exists("SubtitleCallbackSignKey",$param) and $param["SubtitleCallbackSignKey"] !== null) {
+            $this->SubtitleCallbackSignKey = $param["SubtitleCallbackSignKey"];
+        }
+
+        if (array_key_exists("SubtitleCallbackTimeout",$param) and $param["SubtitleCallbackTimeout"] !== null) {
+            $this->SubtitleCallbackTimeout = $param["SubtitleCallbackTimeout"];
         }
     }
 }

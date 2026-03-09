@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopicSyncReplica请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getTopicName() 获取主题名称
- * @method void setTopicName(string $TopicName) 设置主题名称
- * @method integer getOffset() 获取偏移量，不填默认为0
- * @method void setOffset(integer $Offset) 设置偏移量，不填默认为0
- * @method integer getLimit() 获取返回数量，默认值为20，必须大于0。
- * @method void setLimit(integer $Limit) 设置返回数量，默认值为20，必须大于0。
- * @method boolean getOutOfSyncReplicaOnly() 获取仅筛选未同步副本
- * @method void setOutOfSyncReplicaOnly(boolean $OutOfSyncReplicaOnly) 设置仅筛选未同步副本
+ * @method string getInstanceId() 获取<p>实例ID</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+ * @method string getTopicName() 获取<p>主题名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
+ * @method void setTopicName(string $TopicName) 设置<p>主题名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
+ * @method integer getOffset() 获取<p>偏移量，不填默认为0</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，不填默认为0</p>
+ * @method integer getLimit() 获取<p>返回数量，默认值为20，必须大于0。</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认值为20，必须大于0。</p>
+ * @method boolean getOutOfSyncReplicaOnly() 获取<p>仅筛选未同步副本</p>
+ * @method void setOutOfSyncReplicaOnly(boolean $OutOfSyncReplicaOnly) 设置<p>仅筛选未同步副本</p>
  */
 class DescribeTopicSyncReplicaRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public $InstanceId;
 
     /**
-     * @var string 主题名称
+     * @var string <p>主题名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
      */
     public $TopicName;
 
     /**
-     * @var integer 偏移量，不填默认为0
+     * @var integer <p>偏移量，不填默认为0</p>
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认值为20，必须大于0。
+     * @var integer <p>返回数量，默认值为20，必须大于0。</p>
      */
     public $Limit;
 
     /**
-     * @var boolean 仅筛选未同步副本
+     * @var boolean <p>仅筛选未同步副本</p>
      */
     public $OutOfSyncReplicaOnly;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $TopicName 主题名称
-     * @param integer $Offset 偏移量，不填默认为0
-     * @param integer $Limit 返回数量，默认值为20，必须大于0。
-     * @param boolean $OutOfSyncReplicaOnly 仅筛选未同步副本
+     * @param string $InstanceId <p>实例ID</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+     * @param string $TopicName <p>主题名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
+     * @param integer $Offset <p>偏移量，不填默认为0</p>
+     * @param integer $Limit <p>返回数量，默认值为20，必须大于0。</p>
+     * @param boolean $OutOfSyncReplicaOnly <p>仅筛选未同步副本</p>
      */
     function __construct()
     {

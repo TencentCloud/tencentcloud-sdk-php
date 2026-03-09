@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRoute返回参数结构体
  *
- * @method RouteResponse getResult() 获取返回的路由信息结果集
- * @method void setResult(RouteResponse $Result) 设置返回的路由信息结果集
+ * @method RouteResponse getResult() 获取<p>返回的路由信息结果集</p>
+ * @method void setResult(RouteResponse $Result) 设置<p>返回的路由信息结果集</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeRouteResponse extends AbstractModel
 {
     /**
-     * @var RouteResponse 返回的路由信息结果集
+     * @var RouteResponse <p>返回的路由信息结果集</p>
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class DescribeRouteResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param RouteResponse $Result 返回的路由信息结果集
+     * @param RouteResponse $Result <p>返回的路由信息结果集</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

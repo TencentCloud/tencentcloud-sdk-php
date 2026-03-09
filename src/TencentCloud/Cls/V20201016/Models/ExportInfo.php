@@ -20,138 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 日志导出信息
  *
- * @method string getTopicId() 获取日志主题ID
- * @method void setTopicId(string $TopicId) 设置日志主题ID
- * @method string getExportId() 获取日志导出任务ID
- * @method void setExportId(string $ExportId) 设置日志导出任务ID
- * @method string getQuery() 获取日志导出查询语句
- * @method void setQuery(string $Query) 设置日志导出查询语句
- * @method string getFileName() 获取日志导出文件名
- * @method void setFileName(string $FileName) 设置日志导出文件名
- * @method integer getFileSize() 获取日志文件大小
- * @method void setFileSize(integer $FileSize) 设置日志文件大小
- * @method string getOrder() 获取日志导出时间排序
- * @method void setOrder(string $Order) 设置日志导出时间排序
- * @method string getFormat() 获取日志导出格式
- * @method void setFormat(string $Format) 设置日志导出格式
- * @method integer getCount() 获取日志导出数量
- * @method void setCount(integer $Count) 设置日志导出数量
- * @method string getStatus() 获取日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中
- * @method void setStatus(string $Status) 设置日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中
- * @method integer getFrom() 获取日志导出起始时间，毫秒时间戳
- * @method void setFrom(integer $From) 设置日志导出起始时间，毫秒时间戳
- * @method integer getTo() 获取日志导出结束时间，毫秒时间戳
- * @method void setTo(integer $To) 设置日志导出结束时间，毫秒时间戳
- * @method string getCosPath() 获取日志导出路径,有效期一个小时，请尽快使用该路径下载。
- * @method void setCosPath(string $CosPath) 设置日志导出路径,有效期一个小时，请尽快使用该路径下载。
- * @method string getCreateTime() 获取日志导出创建时间
-时间格式：yyyy-MM-dd HH:mm:ss
- * @method void setCreateTime(string $CreateTime) 设置日志导出创建时间
-时间格式：yyyy-MM-dd HH:mm:ss
- * @method integer getSyntaxRule() 获取语法规则。 默认值为0。
-0：Lucene语法，1：CQL语法。
- * @method void setSyntaxRule(integer $SyntaxRule) 设置语法规则。 默认值为0。
-0：Lucene语法，1：CQL语法。
- * @method array getDerivedFields() 获取导出字段
- * @method void setDerivedFields(array $DerivedFields) 设置导出字段
+ * @method string getTopicId() 获取<p>日志主题ID</p>
+ * @method void setTopicId(string $TopicId) 设置<p>日志主题ID</p>
+ * @method string getExportId() 获取<p>日志导出任务ID</p>
+ * @method void setExportId(string $ExportId) 设置<p>日志导出任务ID</p>
+ * @method string getQuery() 获取<p>日志导出查询语句</p>
+ * @method void setQuery(string $Query) 设置<p>日志导出查询语句</p>
+ * @method string getFileName() 获取<p>日志导出文件名</p>
+ * @method void setFileName(string $FileName) 设置<p>日志导出文件名</p>
+ * @method integer getFileSize() 获取<p>日志文件大小</p><p>单位：Byte</p>
+ * @method void setFileSize(integer $FileSize) 设置<p>日志文件大小</p><p>单位：Byte</p>
+ * @method string getOrder() 获取<p>日志导出时间排序</p>
+ * @method void setOrder(string $Order) 设置<p>日志导出时间排序</p>
+ * @method string getFormat() 获取<p>日志导出格式</p>
+ * @method void setFormat(string $Format) 设置<p>日志导出格式</p>
+ * @method integer getCount() 获取<p>日志导出数量</p>
+ * @method void setCount(integer $Count) 设置<p>日志导出数量</p>
+ * @method string getStatus() 获取<p>日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中</p>
+ * @method void setStatus(string $Status) 设置<p>日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中</p>
+ * @method integer getFrom() 获取<p>日志导出起始时间，毫秒时间戳</p>
+ * @method void setFrom(integer $From) 设置<p>日志导出起始时间，毫秒时间戳</p>
+ * @method integer getTo() 获取<p>日志导出结束时间，毫秒时间戳</p>
+ * @method void setTo(integer $To) 设置<p>日志导出结束时间，毫秒时间戳</p>
+ * @method string getCosPath() 获取<p>日志导出路径,有效期一个小时，请尽快使用该路径下载。</p>
+ * @method void setCosPath(string $CosPath) 设置<p>日志导出路径,有效期一个小时，请尽快使用该路径下载。</p>
+ * @method string getCreateTime() 获取<p>日志导出创建时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>日志导出创建时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
+ * @method integer getSyntaxRule() 获取<p>语法规则。 默认值为0。<br>0：Lucene语法，1：CQL语法。</p>
+ * @method void setSyntaxRule(integer $SyntaxRule) 设置<p>语法规则。 默认值为0。<br>0：Lucene语法，1：CQL语法。</p>
+ * @method array getDerivedFields() 获取<p>导出字段</p>
+ * @method void setDerivedFields(array $DerivedFields) 设置<p>导出字段</p>
  */
 class ExportInfo extends AbstractModel
 {
     /**
-     * @var string 日志主题ID
+     * @var string <p>日志主题ID</p>
      */
     public $TopicId;
 
     /**
-     * @var string 日志导出任务ID
+     * @var string <p>日志导出任务ID</p>
      */
     public $ExportId;
 
     /**
-     * @var string 日志导出查询语句
+     * @var string <p>日志导出查询语句</p>
      */
     public $Query;
 
     /**
-     * @var string 日志导出文件名
+     * @var string <p>日志导出文件名</p>
      */
     public $FileName;
 
     /**
-     * @var integer 日志文件大小
+     * @var integer <p>日志文件大小</p><p>单位：Byte</p>
      */
     public $FileSize;
 
     /**
-     * @var string 日志导出时间排序
+     * @var string <p>日志导出时间排序</p>
      */
     public $Order;
 
     /**
-     * @var string 日志导出格式
+     * @var string <p>日志导出格式</p>
      */
     public $Format;
 
     /**
-     * @var integer 日志导出数量
+     * @var integer <p>日志导出数量</p>
      */
     public $Count;
 
     /**
-     * @var string 日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中
+     * @var string <p>日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中</p>
      */
     public $Status;
 
     /**
-     * @var integer 日志导出起始时间，毫秒时间戳
+     * @var integer <p>日志导出起始时间，毫秒时间戳</p>
      */
     public $From;
 
     /**
-     * @var integer 日志导出结束时间，毫秒时间戳
+     * @var integer <p>日志导出结束时间，毫秒时间戳</p>
      */
     public $To;
 
     /**
-     * @var string 日志导出路径,有效期一个小时，请尽快使用该路径下载。
+     * @var string <p>日志导出路径,有效期一个小时，请尽快使用该路径下载。</p>
      */
     public $CosPath;
 
     /**
-     * @var string 日志导出创建时间
-时间格式：yyyy-MM-dd HH:mm:ss
+     * @var string <p>日志导出创建时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer 语法规则。 默认值为0。
-0：Lucene语法，1：CQL语法。
+     * @var integer <p>语法规则。 默认值为0。<br>0：Lucene语法，1：CQL语法。</p>
      */
     public $SyntaxRule;
 
     /**
-     * @var array 导出字段
+     * @var array <p>导出字段</p>
      */
     public $DerivedFields;
 
     /**
-     * @param string $TopicId 日志主题ID
-     * @param string $ExportId 日志导出任务ID
-     * @param string $Query 日志导出查询语句
-     * @param string $FileName 日志导出文件名
-     * @param integer $FileSize 日志文件大小
-     * @param string $Order 日志导出时间排序
-     * @param string $Format 日志导出格式
-     * @param integer $Count 日志导出数量
-     * @param string $Status 日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中
-     * @param integer $From 日志导出起始时间，毫秒时间戳
-     * @param integer $To 日志导出结束时间，毫秒时间戳
-     * @param string $CosPath 日志导出路径,有效期一个小时，请尽快使用该路径下载。
-     * @param string $CreateTime 日志导出创建时间
-时间格式：yyyy-MM-dd HH:mm:ss
-     * @param integer $SyntaxRule 语法规则。 默认值为0。
-0：Lucene语法，1：CQL语法。
-     * @param array $DerivedFields 导出字段
+     * @param string $TopicId <p>日志主题ID</p>
+     * @param string $ExportId <p>日志导出任务ID</p>
+     * @param string $Query <p>日志导出查询语句</p>
+     * @param string $FileName <p>日志导出文件名</p>
+     * @param integer $FileSize <p>日志文件大小</p><p>单位：Byte</p>
+     * @param string $Order <p>日志导出时间排序</p>
+     * @param string $Format <p>日志导出格式</p>
+     * @param integer $Count <p>日志导出数量</p>
+     * @param string $Status <p>日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中</p>
+     * @param integer $From <p>日志导出起始时间，毫秒时间戳</p>
+     * @param integer $To <p>日志导出结束时间，毫秒时间戳</p>
+     * @param string $CosPath <p>日志导出路径,有效期一个小时，请尽快使用该路径下载。</p>
+     * @param string $CreateTime <p>日志导出创建时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
+     * @param integer $SyntaxRule <p>语法规则。 默认值为0。<br>0：Lucene语法，1：CQL语法。</p>
+     * @param array $DerivedFields <p>导出字段</p>
      */
     function __construct()
     {

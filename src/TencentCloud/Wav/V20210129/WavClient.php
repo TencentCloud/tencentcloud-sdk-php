@@ -24,7 +24,9 @@ use TencentCloud\Wav\V20210129\Models as Models;
 
 /**
  * @method Models\CreateChannelCodeResponse CreateChannelCode(Models\CreateChannelCodeRequest $req) 新增渠道活码接口
- * @method Models\CreateCorpTagResponse CreateCorpTag(Models\CreateCorpTagRequest $req) 该接口用户设置标签库, 每个企业最多可配置3000个企业标签。
+ * @method Models\CreateCorpTagResponse CreateCorpTag(Models\CreateCorpTagRequest $req) 产品已EOL
+
+该接口用户设置标签库, 每个企业最多可配置3000个企业标签。
  * @method Models\CreateLeadResponse CreateLead(Models\CreateLeadRequest $req) 线索回收接口
  * @method Models\QueryActivityJoinListResponse QueryActivityJoinList(Models\QueryActivityJoinListRequest $req) 根据游标拉取活动参与列表信息
  * @method Models\QueryActivityListResponse QueryActivityList(Models\QueryActivityListRequest $req) 根据游标拉取活动列表信息

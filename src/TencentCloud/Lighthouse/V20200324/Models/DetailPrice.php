@@ -20,66 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 计费项目明细。
  *
- * @method string getPriceName() 获取描述计费项目名称，目前取值
-<li>"DiskSpace"代表云硬盘空间收费项。</li>
-<li>"DiskBackupQuota"代表数据盘备份点配额收费项。</li>
-<li>"Instance"代表实例收费项。</li>
-<li>"SystemDiskBackupQuota"代表系统盘备份点配额收费项。</li>
- * @method void setPriceName(string $PriceName) 设置描述计费项目名称，目前取值
-<li>"DiskSpace"代表云硬盘空间收费项。</li>
-<li>"DiskBackupQuota"代表数据盘备份点配额收费项。</li>
-<li>"Instance"代表实例收费项。</li>
-<li>"SystemDiskBackupQuota"代表系统盘备份点配额收费项。</li>
- * @method float getOriginUnitPrice() 获取计费项维度单价。
- * @method void setOriginUnitPrice(float $OriginUnitPrice) 设置计费项维度单价。
- * @method float getOriginalPrice() 获取计费项维度总价。
- * @method void setOriginalPrice(float $OriginalPrice) 设置计费项维度总价。
- * @method float getDiscount() 获取计费项维度折扣。
- * @method void setDiscount(float $Discount) 设置计费项维度折扣。
- * @method float getDiscountPrice() 获取计费项维度折后总价。
- * @method void setDiscountPrice(float $DiscountPrice) 设置计费项维度折后总价。
+ * @method string getPriceName() 获取<p>描述计费项目名称，目前取值</p><li>"DiskSpace"代表云硬盘空间收费项。</li><li>"DiskBackupQuota"代表数据盘备份点配额收费项。</li><li>"Instance"代表实例收费项。</li><li>"SystemDiskBackupQuota"代表系统盘备份点配额收费项。</li>
+ * @method void setPriceName(string $PriceName) 设置<p>描述计费项目名称，目前取值</p><li>"DiskSpace"代表云硬盘空间收费项。</li><li>"DiskBackupQuota"代表数据盘备份点配额收费项。</li><li>"Instance"代表实例收费项。</li><li>"SystemDiskBackupQuota"代表系统盘备份点配额收费项。</li>
+ * @method float getOriginUnitPrice() 获取<p>计费项维度单价。</p><p>单位：元</p>
+ * @method void setOriginUnitPrice(float $OriginUnitPrice) 设置<p>计费项维度单价。</p><p>单位：元</p>
+ * @method float getOriginalPrice() 获取<p>计费项维度总价。</p><p>单位：元</p>
+ * @method void setOriginalPrice(float $OriginalPrice) 设置<p>计费项维度总价。</p><p>单位：元</p>
+ * @method float getDiscount() 获取<p>计费项维度折扣。</p>
+ * @method void setDiscount(float $Discount) 设置<p>计费项维度折扣。</p>
+ * @method float getDiscountPrice() 获取<p>计费项维度折后总价。</p><p>单位：元</p>
+ * @method void setDiscountPrice(float $DiscountPrice) 设置<p>计费项维度折后总价。</p><p>单位：元</p>
  */
 class DetailPrice extends AbstractModel
 {
     /**
-     * @var string 描述计费项目名称，目前取值
-<li>"DiskSpace"代表云硬盘空间收费项。</li>
-<li>"DiskBackupQuota"代表数据盘备份点配额收费项。</li>
-<li>"Instance"代表实例收费项。</li>
-<li>"SystemDiskBackupQuota"代表系统盘备份点配额收费项。</li>
+     * @var string <p>描述计费项目名称，目前取值</p><li>"DiskSpace"代表云硬盘空间收费项。</li><li>"DiskBackupQuota"代表数据盘备份点配额收费项。</li><li>"Instance"代表实例收费项。</li><li>"SystemDiskBackupQuota"代表系统盘备份点配额收费项。</li>
      */
     public $PriceName;
 
     /**
-     * @var float 计费项维度单价。
+     * @var float <p>计费项维度单价。</p><p>单位：元</p>
      */
     public $OriginUnitPrice;
 
     /**
-     * @var float 计费项维度总价。
+     * @var float <p>计费项维度总价。</p><p>单位：元</p>
      */
     public $OriginalPrice;
 
     /**
-     * @var float 计费项维度折扣。
+     * @var float <p>计费项维度折扣。</p>
      */
     public $Discount;
 
     /**
-     * @var float 计费项维度折后总价。
+     * @var float <p>计费项维度折后总价。</p><p>单位：元</p>
      */
     public $DiscountPrice;
 
     /**
-     * @param string $PriceName 描述计费项目名称，目前取值
-<li>"DiskSpace"代表云硬盘空间收费项。</li>
-<li>"DiskBackupQuota"代表数据盘备份点配额收费项。</li>
-<li>"Instance"代表实例收费项。</li>
-<li>"SystemDiskBackupQuota"代表系统盘备份点配额收费项。</li>
-     * @param float $OriginUnitPrice 计费项维度单价。
-     * @param float $OriginalPrice 计费项维度总价。
-     * @param float $Discount 计费项维度折扣。
-     * @param float $DiscountPrice 计费项维度折后总价。
+     * @param string $PriceName <p>描述计费项目名称，目前取值</p><li>"DiskSpace"代表云硬盘空间收费项。</li><li>"DiskBackupQuota"代表数据盘备份点配额收费项。</li><li>"Instance"代表实例收费项。</li><li>"SystemDiskBackupQuota"代表系统盘备份点配额收费项。</li>
+     * @param float $OriginUnitPrice <p>计费项维度单价。</p><p>单位：元</p>
+     * @param float $OriginalPrice <p>计费项维度总价。</p><p>单位：元</p>
+     * @param float $Discount <p>计费项维度折扣。</p>
+     * @param float $DiscountPrice <p>计费项维度折后总价。</p><p>单位：元</p>
      */
     function __construct()
     {

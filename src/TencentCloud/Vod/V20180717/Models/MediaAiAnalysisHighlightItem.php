@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 智能精彩片段信息
  *
- * @method string getHighlightUrl() 获取智能精彩集锦地址。
- * @method void setHighlightUrl(string $HighlightUrl) 设置智能精彩集锦地址。
- * @method string getCovImgUrl() 获取智能精彩集锦封面地址。
- * @method void setCovImgUrl(string $CovImgUrl) 设置智能精彩集锦封面地址。
- * @method float getConfidence() 获取智能精彩集锦的可信度，取值范围是 0 到 100。
- * @method void setConfidence(float $Confidence) 设置智能精彩集锦的可信度，取值范围是 0 到 100。
- * @method float getDuration() 获取智能精彩集锦持续时间。
- * @method void setDuration(float $Duration) 设置智能精彩集锦持续时间。
- * @method array getSegmentSet() 获取智能精彩集锦子片段列表，精彩集锦片段由这些子片段拼接生成。
- * @method void setSegmentSet(array $SegmentSet) 设置智能精彩集锦子片段列表，精彩集锦片段由这些子片段拼接生成。
+ * @method string getHighlightUrl() 获取<p>智能精彩集锦地址。</p>
+ * @method void setHighlightUrl(string $HighlightUrl) 设置<p>智能精彩集锦地址。</p>
+ * @method string getCovImgUrl() 获取<p>智能精彩集锦封面地址。</p>
+ * @method void setCovImgUrl(string $CovImgUrl) 设置<p>智能精彩集锦封面地址。</p>
+ * @method float getConfidence() 获取<p>智能精彩集锦的可信度，取值范围是 0 到 100。</p>
+ * @method void setConfidence(float $Confidence) 设置<p>智能精彩集锦的可信度，取值范围是 0 到 100。</p>
+ * @method float getDuration() 获取<p>智能精彩集锦持续时间。</p><p>单位：秒</p>
+ * @method void setDuration(float $Duration) 设置<p>智能精彩集锦持续时间。</p><p>单位：秒</p>
+ * @method array getSegmentSet() 获取<p>智能精彩集锦子片段列表，精彩集锦片段由这些子片段拼接生成。</p>
+ * @method void setSegmentSet(array $SegmentSet) 设置<p>智能精彩集锦子片段列表，精彩集锦片段由这些子片段拼接生成。</p>
  */
 class MediaAiAnalysisHighlightItem extends AbstractModel
 {
     /**
-     * @var string 智能精彩集锦地址。
+     * @var string <p>智能精彩集锦地址。</p>
      */
     public $HighlightUrl;
 
     /**
-     * @var string 智能精彩集锦封面地址。
+     * @var string <p>智能精彩集锦封面地址。</p>
      */
     public $CovImgUrl;
 
     /**
-     * @var float 智能精彩集锦的可信度，取值范围是 0 到 100。
+     * @var float <p>智能精彩集锦的可信度，取值范围是 0 到 100。</p>
      */
     public $Confidence;
 
     /**
-     * @var float 智能精彩集锦持续时间。
+     * @var float <p>智能精彩集锦持续时间。</p><p>单位：秒</p>
      */
     public $Duration;
 
     /**
-     * @var array 智能精彩集锦子片段列表，精彩集锦片段由这些子片段拼接生成。
+     * @var array <p>智能精彩集锦子片段列表，精彩集锦片段由这些子片段拼接生成。</p>
      */
     public $SegmentSet;
 
     /**
-     * @param string $HighlightUrl 智能精彩集锦地址。
-     * @param string $CovImgUrl 智能精彩集锦封面地址。
-     * @param float $Confidence 智能精彩集锦的可信度，取值范围是 0 到 100。
-     * @param float $Duration 智能精彩集锦持续时间。
-     * @param array $SegmentSet 智能精彩集锦子片段列表，精彩集锦片段由这些子片段拼接生成。
+     * @param string $HighlightUrl <p>智能精彩集锦地址。</p>
+     * @param string $CovImgUrl <p>智能精彩集锦封面地址。</p>
+     * @param float $Confidence <p>智能精彩集锦的可信度，取值范围是 0 到 100。</p>
+     * @param float $Duration <p>智能精彩集锦持续时间。</p><p>单位：秒</p>
+     * @param array $SegmentSet <p>智能精彩集锦子片段列表，精彩集锦片段由这些子片段拼接生成。</p>
      */
     function __construct()
     {

@@ -20,67 +20,67 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstances请求参数结构体
  *
- * @method string getInstanceId() 获取（查询条件）按照ckafka集群实例Id过滤
- * @method void setInstanceId(string $InstanceId) 设置（查询条件）按照ckafka集群实例Id过滤
- * @method string getSearchWord() 获取搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询
- * @method void setSearchWord(string $SearchWord) 设置搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询
- * @method array getStatus() 获取（查询条件）实例的状态  0：创建中，1：运行中，2：删除中，5: 隔离中,  7:升级中 不填默认返回全部
- * @method void setStatus(array $Status) 设置（查询条件）实例的状态  0：创建中，1：运行中，2：删除中，5: 隔离中,  7:升级中 不填默认返回全部
- * @method integer getOffset() 获取偏移量，不填默认为0
- * @method void setOffset(integer $Offset) 设置偏移量，不填默认为0
- * @method integer getLimit() 获取返回数量，不填则默认10，最大值100
- * @method void setLimit(integer $Limit) 设置返回数量，不填则默认10，最大值100
- * @method string getTagKey() 获取已废弃。匹配标签key值。
- * @method void setTagKey(string $TagKey) 设置已废弃。匹配标签key值。
- * @method string getVpcId() 获取（查询条件）私有网络Id
- * @method void setVpcId(string $VpcId) 设置（查询条件）私有网络Id
+ * @method string getInstanceId() 获取<p>（查询条件）按照ckafka集群实例Id过滤</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>（查询条件）按照ckafka集群实例Id过滤</p>
+ * @method string getSearchWord() 获取<p>搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询</p>
+ * @method void setSearchWord(string $SearchWord) 设置<p>搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询</p>
+ * @method array getStatus() 获取<p>（查询条件）实例的状态 不填默认返回全部</p><p>枚举值：</p><ul><li>-1： 创建失败</li><li>0： 创建中</li><li>1： 运行中</li><li>2： 删除中</li><li>3： 已删除</li><li>4： 删除失败</li><li>5： 隔离中</li><li>7： 升级中</li></ul>
+ * @method void setStatus(array $Status) 设置<p>（查询条件）实例的状态 不填默认返回全部</p><p>枚举值：</p><ul><li>-1： 创建失败</li><li>0： 创建中</li><li>1： 运行中</li><li>2： 删除中</li><li>3： 已删除</li><li>4： 删除失败</li><li>5： 隔离中</li><li>7： 升级中</li></ul>
+ * @method integer getOffset() 获取<p>偏移量，不填默认为0</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，不填默认为0</p>
+ * @method integer getLimit() 获取<p>返回数量，不填则默认10，最大值100</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，不填则默认10，最大值100</p>
+ * @method string getTagKey() 获取<p>已废弃。匹配标签key值。</p>
+ * @method void setTagKey(string $TagKey) 设置<p>已废弃。匹配标签key值。</p>
+ * @method string getVpcId() 获取<p>（查询条件）私有网络Id</p>
+ * @method void setVpcId(string $VpcId) 设置<p>（查询条件）私有网络Id</p>
  */
 class DescribeInstancesRequest extends AbstractModel
 {
     /**
-     * @var string （查询条件）按照ckafka集群实例Id过滤
+     * @var string <p>（查询条件）按照ckafka集群实例Id过滤</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询
+     * @var string <p>搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询</p>
      */
     public $SearchWord;
 
     /**
-     * @var array （查询条件）实例的状态  0：创建中，1：运行中，2：删除中，5: 隔离中,  7:升级中 不填默认返回全部
+     * @var array <p>（查询条件）实例的状态 不填默认返回全部</p><p>枚举值：</p><ul><li>-1： 创建失败</li><li>0： 创建中</li><li>1： 运行中</li><li>2： 删除中</li><li>3： 已删除</li><li>4： 删除失败</li><li>5： 隔离中</li><li>7： 升级中</li></ul>
      */
     public $Status;
 
     /**
-     * @var integer 偏移量，不填默认为0
+     * @var integer <p>偏移量，不填默认为0</p>
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，不填则默认10，最大值100
+     * @var integer <p>返回数量，不填则默认10，最大值100</p>
      */
     public $Limit;
 
     /**
-     * @var string 已废弃。匹配标签key值。
+     * @var string <p>已废弃。匹配标签key值。</p>
      * @deprecated
      */
     public $TagKey;
 
     /**
-     * @var string （查询条件）私有网络Id
+     * @var string <p>（查询条件）私有网络Id</p>
      */
     public $VpcId;
 
     /**
-     * @param string $InstanceId （查询条件）按照ckafka集群实例Id过滤
-     * @param string $SearchWord 搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询
-     * @param array $Status （查询条件）实例的状态  0：创建中，1：运行中，2：删除中，5: 隔离中,  7:升级中 不填默认返回全部
-     * @param integer $Offset 偏移量，不填默认为0
-     * @param integer $Limit 返回数量，不填则默认10，最大值100
-     * @param string $TagKey 已废弃。匹配标签key值。
-     * @param string $VpcId （查询条件）私有网络Id
+     * @param string $InstanceId <p>（查询条件）按照ckafka集群实例Id过滤</p>
+     * @param string $SearchWord <p>搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询</p>
+     * @param array $Status <p>（查询条件）实例的状态 不填默认返回全部</p><p>枚举值：</p><ul><li>-1： 创建失败</li><li>0： 创建中</li><li>1： 运行中</li><li>2： 删除中</li><li>3： 已删除</li><li>4： 删除失败</li><li>5： 隔离中</li><li>7： 升级中</li></ul>
+     * @param integer $Offset <p>偏移量，不填默认为0</p>
+     * @param integer $Limit <p>返回数量，不填则默认10，最大值100</p>
+     * @param string $TagKey <p>已废弃。匹配标签key值。</p>
+     * @param string $VpcId <p>（查询条件）私有网络Id</p>
      */
     function __construct()
     {

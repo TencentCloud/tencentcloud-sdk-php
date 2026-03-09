@@ -20,78 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 计算集群配置。
  *
- * @method string getZone() 获取计算集群可用区。
- * @method void setZone(string $Zone) 设置计算集群可用区。
- * @method string getType() 获取计算集群类型，取值范围：
-- KUBERNETES
- * @method void setType(string $Type) 设置计算集群类型，取值范围：
-- KUBERNETES
- * @method string getServiceCidr() 获取计算集群Service CIDR，不能与VPC网段重合。
- * @method void setServiceCidr(string $ServiceCidr) 设置计算集群Service CIDR，不能与VPC网段重合。
- * @method ResourceQuota getResourceQuota() 获取资源配额。
- * @method void setResourceQuota(ResourceQuota $ResourceQuota) 设置资源配额。
- * @method LimitRange getLimitRange() 获取限制范围。
- * @method void setLimitRange(LimitRange $LimitRange) 设置限制范围。
- * @method string getSystemNodeInstanceType() 获取系统节点池实例规格。
- * @method void setSystemNodeInstanceType(string $SystemNodeInstanceType) 设置系统节点池实例规格。
- * @method integer getSystemNodeCount() 获取系统节点池实例数量。
- * @method void setSystemNodeCount(integer $SystemNodeCount) 设置系统节点池实例数量。
- * @method boolean getAutoUpgradeClusterLevel() 获取纳管环境自动升配
- * @method void setAutoUpgradeClusterLevel(boolean $AutoUpgradeClusterLevel) 设置纳管环境自动升配
+ * @method string getZone() 获取<p>计算集群可用区。</p>
+ * @method void setZone(string $Zone) 设置<p>计算集群可用区。</p>
+ * @method string getType() 获取<p>计算集群类型，取值范围：</p><ul><li>KUBERNETES</li></ul>
+ * @method void setType(string $Type) 设置<p>计算集群类型，取值范围：</p><ul><li>KUBERNETES</li></ul>
+ * @method string getServiceCidr() 获取<p>计算集群Service CIDR，不能与VPC网段重合。</p>
+ * @method void setServiceCidr(string $ServiceCidr) 设置<p>计算集群Service CIDR，不能与VPC网段重合。</p>
+ * @method ResourceQuota getResourceQuota() 获取<p>资源配额。</p>
+ * @method void setResourceQuota(ResourceQuota $ResourceQuota) 设置<p>资源配额。</p>
+ * @method LimitRange getLimitRange() 获取<p>限制范围。</p>
+ * @method void setLimitRange(LimitRange $LimitRange) 设置<p>限制范围。</p>
+ * @method string getSystemNodeInstanceType() 获取<p>系统节点池实例规格。详情参见<a href="https://cloud.tencent.com/document/product/213/11518">实例规格</a>描述</p>
+ * @method void setSystemNodeInstanceType(string $SystemNodeInstanceType) 设置<p>系统节点池实例规格。详情参见<a href="https://cloud.tencent.com/document/product/213/11518">实例规格</a>描述</p>
+ * @method integer getSystemNodeCount() 获取<p>系统节点池实例数量。</p>
+ * @method void setSystemNodeCount(integer $SystemNodeCount) 设置<p>系统节点池实例数量。</p>
+ * @method boolean getAutoUpgradeClusterLevel() 获取<p>纳管环境自动升配</p>
+ * @method void setAutoUpgradeClusterLevel(boolean $AutoUpgradeClusterLevel) 设置<p>纳管环境自动升配</p>
  */
 class ClusterOption extends AbstractModel
 {
     /**
-     * @var string 计算集群可用区。
+     * @var string <p>计算集群可用区。</p>
      */
     public $Zone;
 
     /**
-     * @var string 计算集群类型，取值范围：
-- KUBERNETES
+     * @var string <p>计算集群类型，取值范围：</p><ul><li>KUBERNETES</li></ul>
      */
     public $Type;
 
     /**
-     * @var string 计算集群Service CIDR，不能与VPC网段重合。
+     * @var string <p>计算集群Service CIDR，不能与VPC网段重合。</p>
      */
     public $ServiceCidr;
 
     /**
-     * @var ResourceQuota 资源配额。
+     * @var ResourceQuota <p>资源配额。</p>
      */
     public $ResourceQuota;
 
     /**
-     * @var LimitRange 限制范围。
+     * @var LimitRange <p>限制范围。</p>
      */
     public $LimitRange;
 
     /**
-     * @var string 系统节点池实例规格。
+     * @var string <p>系统节点池实例规格。详情参见<a href="https://cloud.tencent.com/document/product/213/11518">实例规格</a>描述</p>
      */
     public $SystemNodeInstanceType;
 
     /**
-     * @var integer 系统节点池实例数量。
+     * @var integer <p>系统节点池实例数量。</p>
      */
     public $SystemNodeCount;
 
     /**
-     * @var boolean 纳管环境自动升配
+     * @var boolean <p>纳管环境自动升配</p>
      */
     public $AutoUpgradeClusterLevel;
 
     /**
-     * @param string $Zone 计算集群可用区。
-     * @param string $Type 计算集群类型，取值范围：
-- KUBERNETES
-     * @param string $ServiceCidr 计算集群Service CIDR，不能与VPC网段重合。
-     * @param ResourceQuota $ResourceQuota 资源配额。
-     * @param LimitRange $LimitRange 限制范围。
-     * @param string $SystemNodeInstanceType 系统节点池实例规格。
-     * @param integer $SystemNodeCount 系统节点池实例数量。
-     * @param boolean $AutoUpgradeClusterLevel 纳管环境自动升配
+     * @param string $Zone <p>计算集群可用区。</p>
+     * @param string $Type <p>计算集群类型，取值范围：</p><ul><li>KUBERNETES</li></ul>
+     * @param string $ServiceCidr <p>计算集群Service CIDR，不能与VPC网段重合。</p>
+     * @param ResourceQuota $ResourceQuota <p>资源配额。</p>
+     * @param LimitRange $LimitRange <p>限制范围。</p>
+     * @param string $SystemNodeInstanceType <p>系统节点池实例规格。详情参见<a href="https://cloud.tencent.com/document/product/213/11518">实例规格</a>描述</p>
+     * @param integer $SystemNodeCount <p>系统节点池实例数量。</p>
+     * @param boolean $AutoUpgradeClusterLevel <p>纳管环境自动升配</p>
      */
     function __construct()
     {

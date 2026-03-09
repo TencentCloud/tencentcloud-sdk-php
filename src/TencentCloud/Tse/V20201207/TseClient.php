@@ -39,6 +39,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\CreateEngineResponse CreateEngine(Models\CreateEngineRequest $req) 创建引擎实例
  * @method Models\CreateGovernanceAliasResponse CreateGovernanceAlias(Models\CreateGovernanceAliasRequest $req) 创建治理中心服务别名
  * @method Models\CreateGovernanceInstancesResponse CreateGovernanceInstances(Models\CreateGovernanceInstancesRequest $req) 创建服务实例
+ * @method Models\CreateGovernanceLaneGroupsResponse CreateGovernanceLaneGroups(Models\CreateGovernanceLaneGroupsRequest $req) 创建泳道组
  * @method Models\CreateGovernanceNamespacesResponse CreateGovernanceNamespaces(Models\CreateGovernanceNamespacesRequest $req) 创建治理中心命名空间
  * @method Models\CreateGovernanceServicesResponse CreateGovernanceServices(Models\CreateGovernanceServicesRequest $req) 创建治理中心服务
  * @method Models\CreateNativeGatewayServerGroupResponse CreateNativeGatewayServerGroup(Models\CreateNativeGatewayServerGroupRequest $req) 创建云原生网关引擎分组
@@ -63,6 +64,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\DeleteGovernanceAliasesResponse DeleteGovernanceAliases(Models\DeleteGovernanceAliasesRequest $req) 删除治理中心服务别名
  * @method Models\DeleteGovernanceInstancesResponse DeleteGovernanceInstances(Models\DeleteGovernanceInstancesRequest $req) 删除服务实例
  * @method Models\DeleteGovernanceInstancesByHostResponse DeleteGovernanceInstancesByHost(Models\DeleteGovernanceInstancesByHostRequest $req) 删除治理中心服务实例
+ * @method Models\DeleteGovernanceLaneGroupsResponse DeleteGovernanceLaneGroups(Models\DeleteGovernanceLaneGroupsRequest $req) 删除泳道组
  * @method Models\DeleteGovernanceNamespacesResponse DeleteGovernanceNamespaces(Models\DeleteGovernanceNamespacesRequest $req) 删除治理中心命名空间
  * @method Models\DeleteGovernanceServicesResponse DeleteGovernanceServices(Models\DeleteGovernanceServicesRequest $req) 删除治理中心服务
  * @method Models\DeleteNativeGatewayServerGroupResponse DeleteNativeGatewayServerGroup(Models\DeleteNativeGatewayServerGroupRequest $req) 删除网关实例分组
@@ -97,6 +99,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\DescribeConfigFilesByGroupResponse DescribeConfigFilesByGroup(Models\DescribeConfigFilesByGroupRequest $req) 根据group查询配置文件列表
  * @method Models\DescribeGovernanceAliasesResponse DescribeGovernanceAliases(Models\DescribeGovernanceAliasesRequest $req) 查询治理中心服务别名列表
  * @method Models\DescribeGovernanceInstancesResponse DescribeGovernanceInstances(Models\DescribeGovernanceInstancesRequest $req) 查询服务实例
+ * @method Models\DescribeGovernanceLaneGroupsResponse DescribeGovernanceLaneGroups(Models\DescribeGovernanceLaneGroupsRequest $req) 查询泳道组列表
  * @method Models\DescribeGovernanceNamespacesResponse DescribeGovernanceNamespaces(Models\DescribeGovernanceNamespacesRequest $req) 查询服务治理中心命名空间列表
  * @method Models\DescribeGovernanceServiceContractVersionsResponse DescribeGovernanceServiceContractVersions(Models\DescribeGovernanceServiceContractVersionsRequest $req) 查询服务下契约版本列表
  * @method Models\DescribeGovernanceServiceContractsResponse DescribeGovernanceServiceContracts(Models\DescribeGovernanceServiceContractsRequest $req) 查询服务契约定义列表
@@ -129,6 +132,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\ModifyConsoleNetworkResponse ModifyConsoleNetwork(Models\ModifyConsoleNetworkRequest $req) 修改网关实例Konga网络配置
  * @method Models\ModifyGovernanceAliasResponse ModifyGovernanceAlias(Models\ModifyGovernanceAliasRequest $req) 修改治理中心服务别名
  * @method Models\ModifyGovernanceInstancesResponse ModifyGovernanceInstances(Models\ModifyGovernanceInstancesRequest $req) 修改治理中心服务实例
+ * @method Models\ModifyGovernanceLaneGroupsResponse ModifyGovernanceLaneGroups(Models\ModifyGovernanceLaneGroupsRequest $req) 创建泳道组
  * @method Models\ModifyGovernanceNamespacesResponse ModifyGovernanceNamespaces(Models\ModifyGovernanceNamespacesRequest $req) 修改治理中心命名空间
  * @method Models\ModifyGovernanceServicesResponse ModifyGovernanceServices(Models\ModifyGovernanceServicesRequest $req) 修改治理中心服务
  * @method Models\ModifyNativeGatewayServerGroupResponse ModifyNativeGatewayServerGroup(Models\ModifyNativeGatewayServerGroupRequest $req) 修改云原生API网关实例分组基础信息

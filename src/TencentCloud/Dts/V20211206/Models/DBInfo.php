@@ -20,186 +20,186 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据库信息
  *
- * @method string getRole() 获取表示节点角色，针对分布式数据库，如mongodb中的mongos节点。tdsqlmysql的可选项：proxy表示节点类型为主机，set表示节点类型为节点。proxy类型必须填在数组第一项。tdsqlmysql类型的源/目标配置必填。
- * @method void setRole(string $Role) 设置表示节点角色，针对分布式数据库，如mongodb中的mongos节点。tdsqlmysql的可选项：proxy表示节点类型为主机，set表示节点类型为节点。proxy类型必须填在数组第一项。tdsqlmysql类型的源/目标配置必填。
- * @method string getDbKernel() 获取内核版本，针对mariadb的不同内核版本等
- * @method void setDbKernel(string $DbKernel) 设置内核版本，针对mariadb的不同内核版本等
- * @method string getHost() 获取实例的IP地址，对于公网、专线、VPN、云联网、自研上云、VPC等接入方式此项必填
- * @method void setHost(string $Host) 设置实例的IP地址，对于公网、专线、VPN、云联网、自研上云、VPC等接入方式此项必填
- * @method integer getPort() 获取实例的端口，对于公网、云主机自建、专线、VPN、云联网、自研上云、VPC等接入方式此项必填
- * @method void setPort(integer $Port) 设置实例的端口，对于公网、云主机自建、专线、VPN、云联网、自研上云、VPC等接入方式此项必填
- * @method string getUser() 获取实例的用户名
- * @method void setUser(string $User) 设置实例的用户名
- * @method string getPassword() 获取实例的密码
- * @method void setPassword(string $Password) 设置实例的密码
- * @method string getCvmInstanceId() 获取CVM实例短ID，格式如：ins-olgl39y8；与云服务器控制台页面显示的实例ID相同；如果接入类型为云主机自建的方式，此项必填
- * @method void setCvmInstanceId(string $CvmInstanceId) 设置CVM实例短ID，格式如：ins-olgl39y8；与云服务器控制台页面显示的实例ID相同；如果接入类型为云主机自建的方式，此项必填
- * @method string getUniqVpnGwId() 获取VPN网关ID，格式如：vpngw-9ghexg7q；如果接入类型为vpncloud的方式，此项必填
- * @method void setUniqVpnGwId(string $UniqVpnGwId) 设置VPN网关ID，格式如：vpngw-9ghexg7q；如果接入类型为vpncloud的方式，此项必填
- * @method string getUniqDcgId() 获取专线网关ID，格式如：dcg-0rxtqqxb；如果接入类型为专线接入的方式，此项必填
- * @method void setUniqDcgId(string $UniqDcgId) 设置专线网关ID，格式如：dcg-0rxtqqxb；如果接入类型为专线接入的方式，此项必填
- * @method string getInstanceId() 获取数据库实例ID，格式如：cdb-powiqx8q；如果接入类型为云数据库的方式，此项必填
- * @method void setInstanceId(string $InstanceId) 设置数据库实例ID，格式如：cdb-powiqx8q；如果接入类型为云数据库的方式，此项必填
- * @method string getCcnGwId() 获取云联网ID，如：ccn-afp6kltc 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCcnGwId(string $CcnGwId) 设置云联网ID，如：ccn-afp6kltc 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVpcId() 获取私有网络ID，格式如：vpc-92jblxto；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填
- * @method void setVpcId(string $VpcId) 设置私有网络ID，格式如：vpc-92jblxto；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填
- * @method string getSubnetId() 获取私有网络下的子网ID，格式如：subnet-3paxmkdz；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填
- * @method void setSubnetId(string $SubnetId) 设置私有网络下的子网ID，格式如：subnet-3paxmkdz；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填
- * @method string getEngineVersion() 获取数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6
- * @method void setEngineVersion(string $EngineVersion) 设置数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6
- * @method string getAccount() 获取实例所属账号
- * @method void setAccount(string $Account) 设置实例所属账号
- * @method string getAccountRole() 获取跨账号迁移时的角色,只允许[a-zA-Z0-9\-\_]+
- * @method void setAccountRole(string $AccountRole) 设置跨账号迁移时的角色,只允许[a-zA-Z0-9\-\_]+
- * @method string getAccountMode() 获取资源所属账号 为空或self(表示本账号内资源)、other(表示其他账户资源)
- * @method void setAccountMode(string $AccountMode) 设置资源所属账号 为空或self(表示本账号内资源)、other(表示其他账户资源)
- * @method string getTmpSecretId() 获取临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
- * @method void setTmpSecretId(string $TmpSecretId) 设置临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
- * @method string getTmpSecretKey() 获取临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
- * @method void setTmpSecretKey(string $TmpSecretKey) 设置临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
- * @method string getTmpToken() 获取临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
- * @method void setTmpToken(string $TmpToken) 设置临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
- * @method string getEncryptConn() 获取是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
- * @method void setEncryptConn(string $EncryptConn) 设置是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
- * @method string getSetId() 获取tdsql的分片id。如节点类型为set必填。
- * @method void setSetId(string $SetId) 设置tdsql的分片id。如节点类型为set必填。
+ * @method string getRole() 获取<p>表示节点角色，针对分布式数据库，如mongodb中的mongos节点。tdsqlmysql的可选项：proxy表示节点类型为主机，set表示节点类型为节点。proxy类型必须填在数组第一项。tdsqlmysql类型的源/目标配置必填。</p>
+ * @method void setRole(string $Role) 设置<p>表示节点角色，针对分布式数据库，如mongodb中的mongos节点。tdsqlmysql的可选项：proxy表示节点类型为主机，set表示节点类型为节点。proxy类型必须填在数组第一项。tdsqlmysql类型的源/目标配置必填。</p>
+ * @method string getDbKernel() 获取<p>内核版本，针对mariadb的不同内核版本等</p>
+ * @method void setDbKernel(string $DbKernel) 设置<p>内核版本，针对mariadb的不同内核版本等</p>
+ * @method string getHost() 获取<p>实例的IP地址，对于公网、专线、VPN、云联网、自研上云、VPC等接入方式此项必填</p>
+ * @method void setHost(string $Host) 设置<p>实例的IP地址，对于公网、专线、VPN、云联网、自研上云、VPC等接入方式此项必填</p>
+ * @method integer getPort() 获取<p>实例的端口，对于公网、云主机自建、专线、VPN、云联网、自研上云、VPC等接入方式此项必填</p>
+ * @method void setPort(integer $Port) 设置<p>实例的端口，对于公网、云主机自建、专线、VPN、云联网、自研上云、VPC等接入方式此项必填</p>
+ * @method string getUser() 获取<p>实例的用户名</p>
+ * @method void setUser(string $User) 设置<p>实例的用户名</p>
+ * @method string getPassword() 获取<p>实例的密码</p>
+ * @method void setPassword(string $Password) 设置<p>实例的密码</p>
+ * @method string getCvmInstanceId() 获取<p>CVM实例短ID，格式如：ins-olgl39y8；与云服务器控制台页面显示的实例ID相同；如果接入类型为云主机自建的方式，此项必填</p>
+ * @method void setCvmInstanceId(string $CvmInstanceId) 设置<p>CVM实例短ID，格式如：ins-olgl39y8；与云服务器控制台页面显示的实例ID相同；如果接入类型为云主机自建的方式，此项必填</p>
+ * @method string getUniqVpnGwId() 获取<p>VPN网关ID，格式如：vpngw-9ghexg7q；如果接入类型为vpncloud的方式，此项必填</p>
+ * @method void setUniqVpnGwId(string $UniqVpnGwId) 设置<p>VPN网关ID，格式如：vpngw-9ghexg7q；如果接入类型为vpncloud的方式，此项必填</p>
+ * @method string getUniqDcgId() 获取<p>专线网关ID，格式如：dcg-0rxtqqxb；如果接入类型为专线接入的方式，此项必填</p>
+ * @method void setUniqDcgId(string $UniqDcgId) 设置<p>专线网关ID，格式如：dcg-0rxtqqxb；如果接入类型为专线接入的方式，此项必填</p>
+ * @method string getInstanceId() 获取<p>数据库实例ID，格式如：cdb-powiqx8q；如果接入类型为云数据库的方式，此项必填</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>数据库实例ID，格式如：cdb-powiqx8q；如果接入类型为云数据库的方式，此项必填</p>
+ * @method string getCcnGwId() 获取<p>云联网ID，如：ccn-afp6kltc 注意：此字段可能返回 null，表示取不到有效值。</p>
+ * @method void setCcnGwId(string $CcnGwId) 设置<p>云联网ID，如：ccn-afp6kltc 注意：此字段可能返回 null，表示取不到有效值。</p>
+ * @method string getVpcId() 获取<p>私有网络ID，格式如：vpc-92jblxto；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填</p>
+ * @method void setVpcId(string $VpcId) 设置<p>私有网络ID，格式如：vpc-92jblxto；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填</p>
+ * @method string getSubnetId() 获取<p>私有网络下的子网ID，格式如：subnet-3paxmkdz；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>私有网络下的子网ID，格式如：subnet-3paxmkdz；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填</p>
+ * @method string getEngineVersion() 获取<p>数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6</p>
+ * @method void setEngineVersion(string $EngineVersion) 设置<p>数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6</p>
+ * @method string getAccount() 获取<p>实例所属账号</p>
+ * @method void setAccount(string $Account) 设置<p>实例所属账号</p>
+ * @method string getAccountRole() 获取<p>跨账号迁移时的角色,只允许[a-zA-Z0-9-_]+</p>
+ * @method void setAccountRole(string $AccountRole) 设置<p>跨账号迁移时的角色,只允许[a-zA-Z0-9-_]+</p>
+ * @method string getAccountMode() 获取<p>资源所属账号 为空或self(表示本账号内资源)、other(表示其他账户资源)</p>
+ * @method void setAccountMode(string $AccountMode) 设置<p>资源所属账号 为空或self(表示本账号内资源)、other(表示其他账户资源)</p>
+ * @method string getTmpSecretId() 获取<p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
+ * @method void setTmpSecretId(string $TmpSecretId) 设置<p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
+ * @method string getTmpSecretKey() 获取<p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
+ * @method void setTmpSecretKey(string $TmpSecretKey) 设置<p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
+ * @method string getTmpToken() 获取<p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
+ * @method void setTmpToken(string $TmpToken) 设置<p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
+ * @method string getEncryptConn() 获取<p>是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted</p>
+ * @method void setEncryptConn(string $EncryptConn) 设置<p>是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted</p>
+ * @method string getSetId() 获取<p>tdsql的分片id。如节点类型为set必填。</p>
+ * @method void setSetId(string $SetId) 设置<p>tdsql的分片id。如节点类型为set必填。</p>
  */
 class DBInfo extends AbstractModel
 {
     /**
-     * @var string 表示节点角色，针对分布式数据库，如mongodb中的mongos节点。tdsqlmysql的可选项：proxy表示节点类型为主机，set表示节点类型为节点。proxy类型必须填在数组第一项。tdsqlmysql类型的源/目标配置必填。
+     * @var string <p>表示节点角色，针对分布式数据库，如mongodb中的mongos节点。tdsqlmysql的可选项：proxy表示节点类型为主机，set表示节点类型为节点。proxy类型必须填在数组第一项。tdsqlmysql类型的源/目标配置必填。</p>
      */
     public $Role;
 
     /**
-     * @var string 内核版本，针对mariadb的不同内核版本等
+     * @var string <p>内核版本，针对mariadb的不同内核版本等</p>
      */
     public $DbKernel;
 
     /**
-     * @var string 实例的IP地址，对于公网、专线、VPN、云联网、自研上云、VPC等接入方式此项必填
+     * @var string <p>实例的IP地址，对于公网、专线、VPN、云联网、自研上云、VPC等接入方式此项必填</p>
      */
     public $Host;
 
     /**
-     * @var integer 实例的端口，对于公网、云主机自建、专线、VPN、云联网、自研上云、VPC等接入方式此项必填
+     * @var integer <p>实例的端口，对于公网、云主机自建、专线、VPN、云联网、自研上云、VPC等接入方式此项必填</p>
      */
     public $Port;
 
     /**
-     * @var string 实例的用户名
+     * @var string <p>实例的用户名</p>
      */
     public $User;
 
     /**
-     * @var string 实例的密码
+     * @var string <p>实例的密码</p>
      */
     public $Password;
 
     /**
-     * @var string CVM实例短ID，格式如：ins-olgl39y8；与云服务器控制台页面显示的实例ID相同；如果接入类型为云主机自建的方式，此项必填
+     * @var string <p>CVM实例短ID，格式如：ins-olgl39y8；与云服务器控制台页面显示的实例ID相同；如果接入类型为云主机自建的方式，此项必填</p>
      */
     public $CvmInstanceId;
 
     /**
-     * @var string VPN网关ID，格式如：vpngw-9ghexg7q；如果接入类型为vpncloud的方式，此项必填
+     * @var string <p>VPN网关ID，格式如：vpngw-9ghexg7q；如果接入类型为vpncloud的方式，此项必填</p>
      */
     public $UniqVpnGwId;
 
     /**
-     * @var string 专线网关ID，格式如：dcg-0rxtqqxb；如果接入类型为专线接入的方式，此项必填
+     * @var string <p>专线网关ID，格式如：dcg-0rxtqqxb；如果接入类型为专线接入的方式，此项必填</p>
      */
     public $UniqDcgId;
 
     /**
-     * @var string 数据库实例ID，格式如：cdb-powiqx8q；如果接入类型为云数据库的方式，此项必填
+     * @var string <p>数据库实例ID，格式如：cdb-powiqx8q；如果接入类型为云数据库的方式，此项必填</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 云联网ID，如：ccn-afp6kltc 注意：此字段可能返回 null，表示取不到有效值。
+     * @var string <p>云联网ID，如：ccn-afp6kltc 注意：此字段可能返回 null，表示取不到有效值。</p>
      */
     public $CcnGwId;
 
     /**
-     * @var string 私有网络ID，格式如：vpc-92jblxto；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填
+     * @var string <p>私有网络ID，格式如：vpc-92jblxto；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填</p>
      */
     public $VpcId;
 
     /**
-     * @var string 私有网络下的子网ID，格式如：subnet-3paxmkdz；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填
+     * @var string <p>私有网络下的子网ID，格式如：subnet-3paxmkdz；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填</p>
      */
     public $SubnetId;
 
     /**
-     * @var string 数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6
+     * @var string <p>数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6</p>
      */
     public $EngineVersion;
 
     /**
-     * @var string 实例所属账号
+     * @var string <p>实例所属账号</p>
      */
     public $Account;
 
     /**
-     * @var string 跨账号迁移时的角色,只允许[a-zA-Z0-9\-\_]+
+     * @var string <p>跨账号迁移时的角色,只允许[a-zA-Z0-9-_]+</p>
      */
     public $AccountRole;
 
     /**
-     * @var string 资源所属账号 为空或self(表示本账号内资源)、other(表示其他账户资源)
+     * @var string <p>资源所属账号 为空或self(表示本账号内资源)、other(表示其他账户资源)</p>
      */
     public $AccountMode;
 
     /**
-     * @var string 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
+     * @var string <p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
      */
     public $TmpSecretId;
 
     /**
-     * @var string 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
+     * @var string <p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
      */
     public $TmpSecretKey;
 
     /**
-     * @var string 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
+     * @var string <p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
      */
     public $TmpToken;
 
     /**
-     * @var string 是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
+     * @var string <p>是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted</p>
      */
     public $EncryptConn;
 
     /**
-     * @var string tdsql的分片id。如节点类型为set必填。
+     * @var string <p>tdsql的分片id。如节点类型为set必填。</p>
      */
     public $SetId;
 
     /**
-     * @param string $Role 表示节点角色，针对分布式数据库，如mongodb中的mongos节点。tdsqlmysql的可选项：proxy表示节点类型为主机，set表示节点类型为节点。proxy类型必须填在数组第一项。tdsqlmysql类型的源/目标配置必填。
-     * @param string $DbKernel 内核版本，针对mariadb的不同内核版本等
-     * @param string $Host 实例的IP地址，对于公网、专线、VPN、云联网、自研上云、VPC等接入方式此项必填
-     * @param integer $Port 实例的端口，对于公网、云主机自建、专线、VPN、云联网、自研上云、VPC等接入方式此项必填
-     * @param string $User 实例的用户名
-     * @param string $Password 实例的密码
-     * @param string $CvmInstanceId CVM实例短ID，格式如：ins-olgl39y8；与云服务器控制台页面显示的实例ID相同；如果接入类型为云主机自建的方式，此项必填
-     * @param string $UniqVpnGwId VPN网关ID，格式如：vpngw-9ghexg7q；如果接入类型为vpncloud的方式，此项必填
-     * @param string $UniqDcgId 专线网关ID，格式如：dcg-0rxtqqxb；如果接入类型为专线接入的方式，此项必填
-     * @param string $InstanceId 数据库实例ID，格式如：cdb-powiqx8q；如果接入类型为云数据库的方式，此项必填
-     * @param string $CcnGwId 云联网ID，如：ccn-afp6kltc 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VpcId 私有网络ID，格式如：vpc-92jblxto；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填
-     * @param string $SubnetId 私有网络下的子网ID，格式如：subnet-3paxmkdz；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填
-     * @param string $EngineVersion 数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6
-     * @param string $Account 实例所属账号
-     * @param string $AccountRole 跨账号迁移时的角色,只允许[a-zA-Z0-9\-\_]+
-     * @param string $AccountMode 资源所属账号 为空或self(表示本账号内资源)、other(表示其他账户资源)
-     * @param string $TmpSecretId 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
-     * @param string $TmpSecretKey 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
-     * @param string $TmpToken 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
-     * @param string $EncryptConn 是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
-     * @param string $SetId tdsql的分片id。如节点类型为set必填。
+     * @param string $Role <p>表示节点角色，针对分布式数据库，如mongodb中的mongos节点。tdsqlmysql的可选项：proxy表示节点类型为主机，set表示节点类型为节点。proxy类型必须填在数组第一项。tdsqlmysql类型的源/目标配置必填。</p>
+     * @param string $DbKernel <p>内核版本，针对mariadb的不同内核版本等</p>
+     * @param string $Host <p>实例的IP地址，对于公网、专线、VPN、云联网、自研上云、VPC等接入方式此项必填</p>
+     * @param integer $Port <p>实例的端口，对于公网、云主机自建、专线、VPN、云联网、自研上云、VPC等接入方式此项必填</p>
+     * @param string $User <p>实例的用户名</p>
+     * @param string $Password <p>实例的密码</p>
+     * @param string $CvmInstanceId <p>CVM实例短ID，格式如：ins-olgl39y8；与云服务器控制台页面显示的实例ID相同；如果接入类型为云主机自建的方式，此项必填</p>
+     * @param string $UniqVpnGwId <p>VPN网关ID，格式如：vpngw-9ghexg7q；如果接入类型为vpncloud的方式，此项必填</p>
+     * @param string $UniqDcgId <p>专线网关ID，格式如：dcg-0rxtqqxb；如果接入类型为专线接入的方式，此项必填</p>
+     * @param string $InstanceId <p>数据库实例ID，格式如：cdb-powiqx8q；如果接入类型为云数据库的方式，此项必填</p>
+     * @param string $CcnGwId <p>云联网ID，如：ccn-afp6kltc 注意：此字段可能返回 null，表示取不到有效值。</p>
+     * @param string $VpcId <p>私有网络ID，格式如：vpc-92jblxto；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填</p>
+     * @param string $SubnetId <p>私有网络下的子网ID，格式如：subnet-3paxmkdz；如果接入类型为vpc、vpncloud、ccn、dcg的方式，此项必填</p>
+     * @param string $EngineVersion <p>数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6</p>
+     * @param string $Account <p>实例所属账号</p>
+     * @param string $AccountRole <p>跨账号迁移时的角色,只允许[a-zA-Z0-9-_]+</p>
+     * @param string $AccountMode <p>资源所属账号 为空或self(表示本账号内资源)、other(表示其他账户资源)</p>
+     * @param string $TmpSecretId <p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
+     * @param string $TmpSecretKey <p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
+     * @param string $TmpToken <p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
+     * @param string $EncryptConn <p>是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted</p>
+     * @param string $SetId <p>tdsql的分片id。如节点类型为set必填。</p>
      */
     function __construct()
     {

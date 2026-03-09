@@ -24,18 +24,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyType(integer $ModifyType) 设置变配类型
  * @method boolean getMigrateFlag() 获取是否迁移标志
  * @method void setMigrateFlag(boolean $MigrateFlag) 设置是否迁移标志
- * @method integer getMigrateCostTime() 获取迁移预计耗时(稳定模式)秒
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMigrateCostTime(integer $MigrateCostTime) 设置迁移预计耗时(稳定模式)秒
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getUpgradeStrategy() 获取升配模式(1:稳定模式，2:高速模式)
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpgradeStrategy(integer $UpgradeStrategy) 设置升配模式(1:稳定模式，2:高速模式)
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMigrateCostTimeHighSpeed() 获取迁移预计耗时(高速模式)秒
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMigrateCostTimeHighSpeed(integer $MigrateCostTimeHighSpeed) 设置迁移预计耗时(高速模式)秒
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescModifyType extends AbstractModel
 {
@@ -50,32 +38,8 @@ class DescModifyType extends AbstractModel
     public $MigrateFlag;
 
     /**
-     * @var integer 迁移预计耗时(稳定模式)秒
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $MigrateCostTime;
-
-    /**
-     * @var integer 升配模式(1:稳定模式，2:高速模式)
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $UpgradeStrategy;
-
-    /**
-     * @var integer 迁移预计耗时(高速模式)秒
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $MigrateCostTimeHighSpeed;
-
-    /**
      * @param integer $ModifyType 变配类型
      * @param boolean $MigrateFlag 是否迁移标志
-     * @param integer $MigrateCostTime 迁移预计耗时(稳定模式)秒
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $UpgradeStrategy 升配模式(1:稳定模式，2:高速模式)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MigrateCostTimeHighSpeed 迁移预计耗时(高速模式)秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -96,18 +60,6 @@ class DescModifyType extends AbstractModel
 
         if (array_key_exists("MigrateFlag",$param) and $param["MigrateFlag"] !== null) {
             $this->MigrateFlag = $param["MigrateFlag"];
-        }
-
-        if (array_key_exists("MigrateCostTime",$param) and $param["MigrateCostTime"] !== null) {
-            $this->MigrateCostTime = $param["MigrateCostTime"];
-        }
-
-        if (array_key_exists("UpgradeStrategy",$param) and $param["UpgradeStrategy"] !== null) {
-            $this->UpgradeStrategy = $param["UpgradeStrategy"];
-        }
-
-        if (array_key_exists("MigrateCostTimeHighSpeed",$param) and $param["MigrateCostTimeHighSpeed"] !== null) {
-            $this->MigrateCostTimeHighSpeed = $param["MigrateCostTimeHighSpeed"];
         }
     }
 }

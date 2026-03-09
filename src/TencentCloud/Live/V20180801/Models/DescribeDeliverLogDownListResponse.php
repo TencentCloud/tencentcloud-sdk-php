@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDeliverLogDownList返回参数结构体
  *
- * @method array getLogInfoList() 获取日志信息列表。
- * @method void setLogInfoList(array $LogInfoList) 设置日志信息列表。
- * @method integer getTotalNum() 获取总条数。
- * @method void setTotalNum(integer $TotalNum) 设置总条数。
+ * @method array getLogInfoList() 获取<p>日志信息列表。</p>
+ * @method void setLogInfoList(array $LogInfoList) 设置<p>日志信息列表。</p>
+ * @method integer getTotalNum() 获取<p>总条数。</p>
+ * @method void setTotalNum(integer $TotalNum) 设置<p>总条数。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDeliverLogDownListResponse extends AbstractModel
 {
     /**
-     * @var array 日志信息列表。
+     * @var array <p>日志信息列表。</p>
      */
     public $LogInfoList;
 
     /**
-     * @var integer 总条数。
+     * @var integer <p>总条数。</p>
      */
     public $TotalNum;
 
@@ -45,8 +45,8 @@ class DescribeDeliverLogDownListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $LogInfoList 日志信息列表。
-     * @param integer $TotalNum 总条数。
+     * @param array $LogInfoList <p>日志信息列表。</p>
+     * @param integer $TotalNum <p>总条数。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

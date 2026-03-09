@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BatchModifyGroupOffsets请求参数结构体
  *
- * @method string getGroupName() 获取消费分组名称
- * @method void setGroupName(string $GroupName) 设置消费分组名称
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
- * @method array getPartitions() 获取partition信息
- * @method void setPartitions(array $Partitions) 设置partition信息
- * @method array getTopicName() 获取指定topic，默认所有topic
- * @method void setTopicName(array $TopicName) 设置指定topic，默认所有topic
+ * @method string getGroupName() 获取<p>消费分组名称</p>
+ * @method void setGroupName(string $GroupName) 设置<p>消费分组名称</p>
+ * @method string getInstanceId() 获取<p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+ * @method array getPartitions() 获取<p>partition信息</p>
+ * @method void setPartitions(array $Partitions) 设置<p>partition信息</p>
+ * @method array getTopicName() 获取<p>指定topic，默认所有topic</p>
+ * @method void setTopicName(array $TopicName) 设置<p>指定topic，默认所有topic</p>
  */
 class BatchModifyGroupOffsetsRequest extends AbstractModel
 {
     /**
-     * @var string 消费分组名称
+     * @var string <p>消费分组名称</p>
      */
     public $GroupName;
 
     /**
-     * @var string ckafka集群实例Id
+     * @var string <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public $InstanceId;
 
     /**
-     * @var array partition信息
+     * @var array <p>partition信息</p>
      */
     public $Partitions;
 
     /**
-     * @var array 指定topic，默认所有topic
+     * @var array <p>指定topic，默认所有topic</p>
      */
     public $TopicName;
 
     /**
-     * @param string $GroupName 消费分组名称
-     * @param string $InstanceId ckafka集群实例Id
-     * @param array $Partitions partition信息
-     * @param array $TopicName 指定topic，默认所有topic
+     * @param string $GroupName <p>消费分组名称</p>
+     * @param string $InstanceId <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+     * @param array $Partitions <p>partition信息</p>
+     * @param array $TopicName <p>指定topic，默认所有topic</p>
      */
     function __construct()
     {

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 智能精彩集锦片段列表。
  *
- * @method float getConfidence() 获取置信度。
- * @method void setConfidence(float $Confidence) 设置置信度。
- * @method float getStartTimeOffset() 获取片段起始时间偏移。
- * @method void setStartTimeOffset(float $StartTimeOffset) 设置片段起始时间偏移。
- * @method float getEndTimeOffset() 获取片段结束时间偏移。
- * @method void setEndTimeOffset(float $EndTimeOffset) 设置片段结束时间偏移。
+ * @method float getConfidence() 获取<p>置信度。</p>
+ * @method void setConfidence(float $Confidence) 设置<p>置信度。</p>
+ * @method float getStartTimeOffset() 获取<p>片段起始时间偏移。</p><p>单位：秒</p>
+ * @method void setStartTimeOffset(float $StartTimeOffset) 设置<p>片段起始时间偏移。</p><p>单位：秒</p>
+ * @method float getEndTimeOffset() 获取<p>片段结束时间偏移。</p><p>单位：秒</p>
+ * @method void setEndTimeOffset(float $EndTimeOffset) 设置<p>片段结束时间偏移。</p><p>单位：秒</p>
  */
 class HighlightSegmentItem extends AbstractModel
 {
     /**
-     * @var float 置信度。
+     * @var float <p>置信度。</p>
      */
     public $Confidence;
 
     /**
-     * @var float 片段起始时间偏移。
+     * @var float <p>片段起始时间偏移。</p><p>单位：秒</p>
      */
     public $StartTimeOffset;
 
     /**
-     * @var float 片段结束时间偏移。
+     * @var float <p>片段结束时间偏移。</p><p>单位：秒</p>
      */
     public $EndTimeOffset;
 
     /**
-     * @param float $Confidence 置信度。
-     * @param float $StartTimeOffset 片段起始时间偏移。
-     * @param float $EndTimeOffset 片段结束时间偏移。
+     * @param float $Confidence <p>置信度。</p>
+     * @param float $StartTimeOffset <p>片段起始时间偏移。</p><p>单位：秒</p>
+     * @param float $EndTimeOffset <p>片段结束时间偏移。</p><p>单位：秒</p>
      */
     function __construct()
     {

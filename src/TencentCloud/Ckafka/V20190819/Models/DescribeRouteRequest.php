@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRoute请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
- * @method integer getRouteId() 获取路由Id
- * @method void setRouteId(integer $RouteId) 设置路由Id
- * @method boolean getMainRouteFlag() 获取是否显示主路由，true时会在返回原路由列表的基础上,再额外展示实例创建时的主路由信息(且不被InternalFlag/UsedFor等参数过滤影响)	
- * @method void setMainRouteFlag(boolean $MainRouteFlag) 设置是否显示主路由，true时会在返回原路由列表的基础上,再额外展示实例创建时的主路由信息(且不被InternalFlag/UsedFor等参数过滤影响)	
+ * @method string getInstanceId() 获取<p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+ * @method integer getRouteId() 获取<p>路由Id</p>
+ * @method void setRouteId(integer $RouteId) 设置<p>路由Id</p>
+ * @method boolean getMainRouteFlag() 获取<p>是否显示主路由，true时会在返回原路由列表的基础上,再额外展示实例创建时的主路由信息(且不被InternalFlag/UsedFor等参数过滤影响)</p>
+ * @method void setMainRouteFlag(boolean $MainRouteFlag) 设置<p>是否显示主路由，true时会在返回原路由列表的基础上,再额外展示实例创建时的主路由信息(且不被InternalFlag/UsedFor等参数过滤影响)</p>
  */
 class DescribeRouteRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 路由Id
+     * @var integer <p>路由Id</p>
      */
     public $RouteId;
 
     /**
-     * @var boolean 是否显示主路由，true时会在返回原路由列表的基础上,再额外展示实例创建时的主路由信息(且不被InternalFlag/UsedFor等参数过滤影响)	
+     * @var boolean <p>是否显示主路由，true时会在返回原路由列表的基础上,再额外展示实例创建时的主路由信息(且不被InternalFlag/UsedFor等参数过滤影响)</p>
      */
     public $MainRouteFlag;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
-     * @param integer $RouteId 路由Id
-     * @param boolean $MainRouteFlag 是否显示主路由，true时会在返回原路由列表的基础上,再额外展示实例创建时的主路由信息(且不被InternalFlag/UsedFor等参数过滤影响)	
+     * @param string $InstanceId <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+     * @param integer $RouteId <p>路由Id</p>
+     * @param boolean $MainRouteFlag <p>是否显示主路由，true时会在返回原路由列表的基础上,再额外展示实例创建时的主路由信息(且不被InternalFlag/UsedFor等参数过滤影响)</p>
      */
     function __construct()
     {

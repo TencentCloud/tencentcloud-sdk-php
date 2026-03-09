@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeModifyType请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
- * @method integer getBandWidth() 获取升配后的带宽，单位mb
- * @method void setBandWidth(integer $BandWidth) 设置升配后的带宽，单位mb
- * @method integer getDiskSize() 获取升配后的磁盘，单位G
- * @method void setDiskSize(integer $DiskSize) 设置升配后的磁盘，单位G
- * @method string getDiskType() 获取磁盘类型，例如 CLOUD_PREMIUM
- * @method void setDiskType(string $DiskType) 设置磁盘类型，例如 CLOUD_PREMIUM
- * @method integer getPartition() 获取分区数量
- * @method void setPartition(integer $Partition) 设置分区数量
- * @method integer getTopic() 获取topic数量
- * @method void setTopic(integer $Topic) 设置topic数量
- * @method string getType() 获取实例类型例如 sp_ckafka_profession
- * @method void setType(string $Type) 设置实例类型例如 sp_ckafka_profession
- * @method string getModifyEntry() 获取变配入口
- * @method void setModifyEntry(string $ModifyEntry) 设置变配入口
+ * @method string getInstanceId() 获取<p>ckafka集群实例Id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>ckafka集群实例Id</p>
+ * @method integer getBandWidth() 获取<p>升配后的带宽，单位mb</p>
+ * @method void setBandWidth(integer $BandWidth) 设置<p>升配后的带宽，单位mb</p>
+ * @method integer getDiskSize() 获取<p>升配后的磁盘，单位G</p>
+ * @method void setDiskSize(integer $DiskSize) 设置<p>升配后的磁盘，单位G</p>
+ * @method string getDiskType() 获取<p>磁盘类型，例如 CLOUD_PREMIUM</p>
+ * @method void setDiskType(string $DiskType) 设置<p>磁盘类型，例如 CLOUD_PREMIUM</p>
+ * @method integer getPartition() 获取<p>分区数量</p>
+ * @method void setPartition(integer $Partition) 设置<p>分区数量</p>
+ * @method integer getTopic() 获取<p>topic数量</p>
+ * @method void setTopic(integer $Topic) 设置<p>topic数量</p>
+ * @method string getType() 获取<p>实例类型例如 sp_ckafka_profession</p>
+ * @method void setType(string $Type) 设置<p>实例类型例如 sp_ckafka_profession</p>
+ * @method string getModifyEntry() 获取<p>变配入口</p>
+ * @method void setModifyEntry(string $ModifyEntry) 设置<p>变配入口</p>
+ * @method boolean getModifyZone() 获取<p>是否可用区变更  false: 非可用区变更  true: 可用区变更  默认false</p>
+ * @method void setModifyZone(boolean $ModifyZone) 设置<p>是否可用区变更  false: 非可用区变更  true: 可用区变更  默认false</p>
  */
 class DescribeModifyTypeRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string <p>ckafka集群实例Id</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 升配后的带宽，单位mb
+     * @var integer <p>升配后的带宽，单位mb</p>
      */
     public $BandWidth;
 
     /**
-     * @var integer 升配后的磁盘，单位G
+     * @var integer <p>升配后的磁盘，单位G</p>
      */
     public $DiskSize;
 
     /**
-     * @var string 磁盘类型，例如 CLOUD_PREMIUM
+     * @var string <p>磁盘类型，例如 CLOUD_PREMIUM</p>
      */
     public $DiskType;
 
     /**
-     * @var integer 分区数量
+     * @var integer <p>分区数量</p>
      */
     public $Partition;
 
     /**
-     * @var integer topic数量
+     * @var integer <p>topic数量</p>
      */
     public $Topic;
 
     /**
-     * @var string 实例类型例如 sp_ckafka_profession
+     * @var string <p>实例类型例如 sp_ckafka_profession</p>
      */
     public $Type;
 
     /**
-     * @var string 变配入口
+     * @var string <p>变配入口</p>
      */
     public $ModifyEntry;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
-     * @param integer $BandWidth 升配后的带宽，单位mb
-     * @param integer $DiskSize 升配后的磁盘，单位G
-     * @param string $DiskType 磁盘类型，例如 CLOUD_PREMIUM
-     * @param integer $Partition 分区数量
-     * @param integer $Topic topic数量
-     * @param string $Type 实例类型例如 sp_ckafka_profession
-     * @param string $ModifyEntry 变配入口
+     * @var boolean <p>是否可用区变更  false: 非可用区变更  true: 可用区变更  默认false</p>
+     */
+    public $ModifyZone;
+
+    /**
+     * @param string $InstanceId <p>ckafka集群实例Id</p>
+     * @param integer $BandWidth <p>升配后的带宽，单位mb</p>
+     * @param integer $DiskSize <p>升配后的磁盘，单位G</p>
+     * @param string $DiskType <p>磁盘类型，例如 CLOUD_PREMIUM</p>
+     * @param integer $Partition <p>分区数量</p>
+     * @param integer $Topic <p>topic数量</p>
+     * @param string $Type <p>实例类型例如 sp_ckafka_profession</p>
+     * @param string $ModifyEntry <p>变配入口</p>
+     * @param boolean $ModifyZone <p>是否可用区变更  false: 非可用区变更  true: 可用区变更  默认false</p>
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class DescribeModifyTypeRequest extends AbstractModel
 
         if (array_key_exists("ModifyEntry",$param) and $param["ModifyEntry"] !== null) {
             $this->ModifyEntry = $param["ModifyEntry"];
+        }
+
+        if (array_key_exists("ModifyZone",$param) and $param["ModifyZone"] !== null) {
+            $this->ModifyZone = $param["ModifyZone"];
         }
     }
 }

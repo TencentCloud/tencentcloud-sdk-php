@@ -84,6 +84,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterType(string $ClusterType) 设置<p>ckafka集群实例底层集群类型</p>
  * @method array getFeatures() 获取<p>实例功能列表</p>
  * @method void setFeatures(array $Features) 设置<p>实例功能列表</p>
+ * @method integer getRetentionBytes() 获取<p>实例级别消息保留大小</p>单位：byte<br>默认值：-1<br><p>实例级别消息保留大小</p>
+ * @method void setRetentionBytes(integer $RetentionBytes) 设置<p>实例级别消息保留大小</p>单位：byte<br>默认值：-1<br><p>实例级别消息保留大小</p>
  */
 class InstanceDetail extends AbstractModel
 {
@@ -248,6 +250,11 @@ class InstanceDetail extends AbstractModel
     public $Features;
 
     /**
+     * @var integer <p>实例级别消息保留大小</p>单位：byte<br>默认值：-1<br><p>实例级别消息保留大小</p>
+     */
+    public $RetentionBytes;
+
+    /**
      * @param string $InstanceId <p>ckafka集群实例Id</p>
      * @param string $InstanceName <p>ckafka集群实例名称</p>
      * @param string $Vip <p>访问实例的vip 信息</p>
@@ -280,6 +287,7 @@ class InstanceDetail extends AbstractModel
      * @param integer $PublicNetwork <p>公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写</p>
      * @param string $ClusterType <p>ckafka集群实例底层集群类型</p>
      * @param array $Features <p>实例功能列表</p>
+     * @param integer $RetentionBytes <p>实例级别消息保留大小</p>单位：byte<br>默认值：-1<br><p>实例级别消息保留大小</p>
      */
     function __construct()
     {
@@ -430,6 +438,10 @@ class InstanceDetail extends AbstractModel
 
         if (array_key_exists("Features",$param) and $param["Features"] !== null) {
             $this->Features = $param["Features"];
+        }
+
+        if (array_key_exists("RetentionBytes",$param) and $param["RetentionBytes"] !== null) {
+            $this->RetentionBytes = $param["RetentionBytes"];
         }
     }
 }

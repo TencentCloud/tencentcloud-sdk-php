@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGroupOffsets请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
- * @method string getGroup() 获取Kafka 消费分组
- * @method void setGroup(string $Group) 设置Kafka 消费分组
- * @method array getTopics() 获取group 订阅的主题名称数组，如果没有该数组，则表示指定的 group 下所有 topic 信息
- * @method void setTopics(array $Topics) 设置group 订阅的主题名称数组，如果没有该数组，则表示指定的 group 下所有 topic 信息
- * @method string getSearchWord() 获取模糊匹配 topicName
- * @method void setSearchWord(string $SearchWord) 设置模糊匹配 topicName
- * @method integer getOffset() 获取本次查询的偏移位置，默认为0
- * @method void setOffset(integer $Offset) 设置本次查询的偏移位置，默认为0
- * @method integer getLimit() 获取本次返回结果的最大个数，默认为50，最大值为50
- * @method void setLimit(integer $Limit) 设置本次返回结果的最大个数，默认为50，最大值为50
+ * @method string getInstanceId() 获取<p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+ * @method string getGroup() 获取<p>Kafka 消费分组</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40840">DescribeGroup</a></p>
+ * @method void setGroup(string $Group) 设置<p>Kafka 消费分组</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40840">DescribeGroup</a></p>
+ * @method array getTopics() 获取<p>group 订阅的主题名称数组，如果没有该数组，则表示指定的 group 下所有 topic 信息</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
+ * @method void setTopics(array $Topics) 设置<p>group 订阅的主题名称数组，如果没有该数组，则表示指定的 group 下所有 topic 信息</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
+ * @method string getSearchWord() 获取<p>模糊匹配 topicName</p>
+ * @method void setSearchWord(string $SearchWord) 设置<p>模糊匹配 topicName</p>
+ * @method integer getOffset() 获取<p>本次查询的偏移位置，默认为0</p>
+ * @method void setOffset(integer $Offset) 设置<p>本次查询的偏移位置，默认为0</p>
+ * @method integer getLimit() 获取<p>本次返回结果的最大个数，默认为50，最大值为50</p>
+ * @method void setLimit(integer $Limit) 设置<p>本次返回结果的最大个数，默认为50，最大值为50</p>
  */
 class DescribeGroupOffsetsRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public $InstanceId;
 
     /**
-     * @var string Kafka 消费分组
+     * @var string <p>Kafka 消费分组</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40840">DescribeGroup</a></p>
      */
     public $Group;
 
     /**
-     * @var array group 订阅的主题名称数组，如果没有该数组，则表示指定的 group 下所有 topic 信息
+     * @var array <p>group 订阅的主题名称数组，如果没有该数组，则表示指定的 group 下所有 topic 信息</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
      */
     public $Topics;
 
     /**
-     * @var string 模糊匹配 topicName
+     * @var string <p>模糊匹配 topicName</p>
      */
     public $SearchWord;
 
     /**
-     * @var integer 本次查询的偏移位置，默认为0
+     * @var integer <p>本次查询的偏移位置，默认为0</p>
      */
     public $Offset;
 
     /**
-     * @var integer 本次返回结果的最大个数，默认为50，最大值为50
+     * @var integer <p>本次返回结果的最大个数，默认为50，最大值为50</p>
      */
     public $Limit;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
-     * @param string $Group Kafka 消费分组
-     * @param array $Topics group 订阅的主题名称数组，如果没有该数组，则表示指定的 group 下所有 topic 信息
-     * @param string $SearchWord 模糊匹配 topicName
-     * @param integer $Offset 本次查询的偏移位置，默认为0
-     * @param integer $Limit 本次返回结果的最大个数，默认为50，最大值为50
+     * @param string $InstanceId <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+     * @param string $Group <p>Kafka 消费分组</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40840">DescribeGroup</a></p>
+     * @param array $Topics <p>group 订阅的主题名称数组，如果没有该数组，则表示指定的 group 下所有 topic 信息</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
+     * @param string $SearchWord <p>模糊匹配 topicName</p>
+     * @param integer $Offset <p>本次查询的偏移位置，默认为0</p>
+     * @param integer $Limit <p>本次返回结果的最大个数，默认为50，最大值为50</p>
      */
     function __construct()
     {

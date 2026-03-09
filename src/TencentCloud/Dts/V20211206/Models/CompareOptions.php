@@ -29,7 +29,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() 获取对比类型：builtin（内置校验）、independent（独立校验）。默认为builtin，mongodb及redis链路不支持独立校验。
  * @method void setType(string $Type) 设置对比类型：builtin（内置校验）、independent（独立校验）。默认为builtin，mongodb及redis链路不支持独立校验。
  * @method array getCompareMode() 获取校验类型，枚举值：structureCheck-结构校验(目前仅postgresql支持)、full-全量校验、increment-增量校验(如果勾选了增量校验，Method只能选dataCheck)、advanceObject-数据库信息校验(目前仅mongodb支持) 
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompareMode(array $CompareMode) 设置校验类型，枚举值：structureCheck-结构校验(目前仅postgresql支持)、full-全量校验、increment-增量校验(如果勾选了增量校验，Method只能选dataCheck)、advanceObject-数据库信息校验(目前仅mongodb支持) 
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getReCheckTime() 获取复检次数
  * @method void setReCheckTime(integer $ReCheckTime) 设置复检次数
  * @method integer getReCheckInterval() 获取复检时间间隔，单位为分钟，取值 1-60
@@ -59,6 +61,7 @@ class CompareOptions extends AbstractModel
 
     /**
      * @var array 校验类型，枚举值：structureCheck-结构校验(目前仅postgresql支持)、full-全量校验、increment-增量校验(如果勾选了增量校验，Method只能选dataCheck)、advanceObject-数据库信息校验(目前仅mongodb支持) 
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CompareMode;
 
@@ -78,6 +81,7 @@ class CompareOptions extends AbstractModel
      * @param integer $ThreadCount 线程数，取值1-8，默认为1
      * @param string $Type 对比类型：builtin（内置校验）、independent（独立校验）。默认为builtin，mongodb及redis链路不支持独立校验。
      * @param array $CompareMode 校验类型，枚举值：structureCheck-结构校验(目前仅postgresql支持)、full-全量校验、increment-增量校验(如果勾选了增量校验，Method只能选dataCheck)、advanceObject-数据库信息校验(目前仅mongodb支持) 
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReCheckTime 复检次数
      * @param integer $ReCheckInterval 复检时间间隔，单位为分钟，取值 1-60
      */

@@ -20,162 +20,162 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 命令详情。
  *
- * @method string getCommandId() 获取命令ID。
- * @method void setCommandId(string $CommandId) 设置命令ID。
- * @method string getCommandName() 获取命令名称。
- * @method void setCommandName(string $CommandName) 设置命令名称。
- * @method string getDescription() 获取命令描述。
- * @method void setDescription(string $Description) 设置命令描述。
- * @method string getContent() 获取Base64编码后的命令内容。
- * @method void setContent(string $Content) 设置Base64编码后的命令内容。
- * @method string getCommandType() 获取命令类型。取值为 SHELL、POWERSHELL、BAT 之一。
- * @method void setCommandType(string $CommandType) 设置命令类型。取值为 SHELL、POWERSHELL、BAT 之一。
- * @method string getWorkingDirectory() 获取命令执行路径。
- * @method void setWorkingDirectory(string $WorkingDirectory) 设置命令执行路径。
- * @method integer getTimeout() 获取命令超时时间。
- * @method void setTimeout(integer $Timeout) 设置命令超时时间。
- * @method string getCreatedTime() 获取命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
- * @method void setCreatedTime(string $CreatedTime) 设置命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
- * @method string getUpdatedTime() 获取命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
- * @method void setUpdatedTime(string $UpdatedTime) 设置命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
- * @method boolean getEnableParameter() 获取是否启用自定义参数功能。
- * @method void setEnableParameter(boolean $EnableParameter) 设置是否启用自定义参数功能。
- * @method string getDefaultParameters() 获取自定义参数的默认取值。
- * @method void setDefaultParameters(string $DefaultParameters) 设置自定义参数的默认取值。
- * @method array getDefaultParameterConfs() 获取自定义参数的默认取值。
- * @method void setDefaultParameterConfs(array $DefaultParameterConfs) 设置自定义参数的默认取值。
- * @method array getScenes() 获取命令关联的场景
- * @method void setScenes(array $Scenes) 设置命令关联的场景
- * @method string getFormattedDescription() 获取命令的结构化描述。公共命令有值，用户命令为空字符串。
- * @method void setFormattedDescription(string $FormattedDescription) 设置命令的结构化描述。公共命令有值，用户命令为空字符串。
- * @method string getCreatedBy() 获取命令创建者。TAT 代表公共命令，USER 代表个人命令。
- * @method void setCreatedBy(string $CreatedBy) 设置命令创建者。TAT 代表公共命令，USER 代表个人命令。
- * @method array getTags() 获取命令关联的标签列表。
- * @method void setTags(array $Tags) 设置命令关联的标签列表。
- * @method string getUsername() 获取在实例上执行命令的用户名。
- * @method void setUsername(string $Username) 设置在实例上执行命令的用户名。
- * @method string getOutputCOSBucketUrl() 获取日志上传的cos bucket 地址。
- * @method void setOutputCOSBucketUrl(string $OutputCOSBucketUrl) 设置日志上传的cos bucket 地址。
- * @method string getOutputCOSKeyPrefix() 获取日志在cos bucket中的目录。
- * @method void setOutputCOSKeyPrefix(string $OutputCOSKeyPrefix) 设置日志在cos bucket中的目录。
+ * @method string getCommandId() 获取<p>命令ID。</p>
+ * @method void setCommandId(string $CommandId) 设置<p>命令ID。</p>
+ * @method string getCommandName() 获取<p>命令名称。</p>
+ * @method void setCommandName(string $CommandName) 设置<p>命令名称。</p>
+ * @method string getDescription() 获取<p>命令描述。</p>
+ * @method void setDescription(string $Description) 设置<p>命令描述。</p>
+ * @method string getContent() 获取<p>Base64编码后的命令内容。</p>
+ * @method void setContent(string $Content) 设置<p>Base64编码后的命令内容。</p>
+ * @method string getCommandType() 获取<p>命令类型。取值为 SHELL、POWERSHELL、BAT 之一。</p>
+ * @method void setCommandType(string $CommandType) 设置<p>命令类型。取值为 SHELL、POWERSHELL、BAT 之一。</p>
+ * @method string getWorkingDirectory() 获取<p>命令执行路径。</p>
+ * @method void setWorkingDirectory(string $WorkingDirectory) 设置<p>命令执行路径。</p>
+ * @method integer getTimeout() 获取<p>命令超时时间。</p><p>单位：秒</p><p>指定 OutputCOSBucketUrl 参数时，超时时间将包含命令输出上传 COS 的耗时</p>
+ * @method void setTimeout(integer $Timeout) 设置<p>命令超时时间。</p><p>单位：秒</p><p>指定 OutputCOSBucketUrl 参数时，超时时间将包含命令输出上传 COS 的耗时</p>
+ * @method string getCreatedTime() 获取<p>命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ</p>
+ * @method void setCreatedTime(string $CreatedTime) 设置<p>命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ</p>
+ * @method string getUpdatedTime() 获取<p>命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ</p>
+ * @method void setUpdatedTime(string $UpdatedTime) 设置<p>命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ</p>
+ * @method boolean getEnableParameter() 获取<p>是否启用自定义参数功能。</p>
+ * @method void setEnableParameter(boolean $EnableParameter) 设置<p>是否启用自定义参数功能。</p>
+ * @method string getDefaultParameters() 获取<p>自定义参数的默认取值。</p>
+ * @method void setDefaultParameters(string $DefaultParameters) 设置<p>自定义参数的默认取值。</p>
+ * @method array getDefaultParameterConfs() 获取<p>自定义参数的默认取值。</p>
+ * @method void setDefaultParameterConfs(array $DefaultParameterConfs) 设置<p>自定义参数的默认取值。</p>
+ * @method array getScenes() 获取<p>命令关联的场景</p>
+ * @method void setScenes(array $Scenes) 设置<p>命令关联的场景</p>
+ * @method string getFormattedDescription() 获取<p>命令的结构化描述。公共命令有值，用户命令为空字符串。</p>
+ * @method void setFormattedDescription(string $FormattedDescription) 设置<p>命令的结构化描述。公共命令有值，用户命令为空字符串。</p>
+ * @method string getCreatedBy() 获取<p>命令创建者。</p><p>枚举值：</p><ul><li>TAT： 公共命令</li><li>USER： 个人创建的命令</li></ul>
+ * @method void setCreatedBy(string $CreatedBy) 设置<p>命令创建者。</p><p>枚举值：</p><ul><li>TAT： 公共命令</li><li>USER： 个人创建的命令</li></ul>
+ * @method array getTags() 获取<p>命令关联的标签列表。</p>
+ * @method void setTags(array $Tags) 设置<p>命令关联的标签列表。</p>
+ * @method string getUsername() 获取<p>在实例上执行命令的用户名。</p>
+ * @method void setUsername(string $Username) 设置<p>在实例上执行命令的用户名。</p>
+ * @method string getOutputCOSBucketUrl() 获取<p>日志上传的cos bucket 地址。</p>
+ * @method void setOutputCOSBucketUrl(string $OutputCOSBucketUrl) 设置<p>日志上传的cos bucket 地址。</p>
+ * @method string getOutputCOSKeyPrefix() 获取<p>日志在cos bucket中的目录。</p>
+ * @method void setOutputCOSKeyPrefix(string $OutputCOSKeyPrefix) 设置<p>日志在cos bucket中的目录。</p>
  */
 class Command extends AbstractModel
 {
     /**
-     * @var string 命令ID。
+     * @var string <p>命令ID。</p>
      */
     public $CommandId;
 
     /**
-     * @var string 命令名称。
+     * @var string <p>命令名称。</p>
      */
     public $CommandName;
 
     /**
-     * @var string 命令描述。
+     * @var string <p>命令描述。</p>
      */
     public $Description;
 
     /**
-     * @var string Base64编码后的命令内容。
+     * @var string <p>Base64编码后的命令内容。</p>
      */
     public $Content;
 
     /**
-     * @var string 命令类型。取值为 SHELL、POWERSHELL、BAT 之一。
+     * @var string <p>命令类型。取值为 SHELL、POWERSHELL、BAT 之一。</p>
      */
     public $CommandType;
 
     /**
-     * @var string 命令执行路径。
+     * @var string <p>命令执行路径。</p>
      */
     public $WorkingDirectory;
 
     /**
-     * @var integer 命令超时时间。
+     * @var integer <p>命令超时时间。</p><p>单位：秒</p><p>指定 OutputCOSBucketUrl 参数时，超时时间将包含命令输出上传 COS 的耗时</p>
      */
     public $Timeout;
 
     /**
-     * @var string 命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * @var string <p>命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ</p>
      */
     public $CreatedTime;
 
     /**
-     * @var string 命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * @var string <p>命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ</p>
      */
     public $UpdatedTime;
 
     /**
-     * @var boolean 是否启用自定义参数功能。
+     * @var boolean <p>是否启用自定义参数功能。</p>
      */
     public $EnableParameter;
 
     /**
-     * @var string 自定义参数的默认取值。
+     * @var string <p>自定义参数的默认取值。</p>
      */
     public $DefaultParameters;
 
     /**
-     * @var array 自定义参数的默认取值。
+     * @var array <p>自定义参数的默认取值。</p>
      */
     public $DefaultParameterConfs;
 
     /**
-     * @var array 命令关联的场景
+     * @var array <p>命令关联的场景</p>
      */
     public $Scenes;
 
     /**
-     * @var string 命令的结构化描述。公共命令有值，用户命令为空字符串。
+     * @var string <p>命令的结构化描述。公共命令有值，用户命令为空字符串。</p>
      */
     public $FormattedDescription;
 
     /**
-     * @var string 命令创建者。TAT 代表公共命令，USER 代表个人命令。
+     * @var string <p>命令创建者。</p><p>枚举值：</p><ul><li>TAT： 公共命令</li><li>USER： 个人创建的命令</li></ul>
      */
     public $CreatedBy;
 
     /**
-     * @var array 命令关联的标签列表。
+     * @var array <p>命令关联的标签列表。</p>
      */
     public $Tags;
 
     /**
-     * @var string 在实例上执行命令的用户名。
+     * @var string <p>在实例上执行命令的用户名。</p>
      */
     public $Username;
 
     /**
-     * @var string 日志上传的cos bucket 地址。
+     * @var string <p>日志上传的cos bucket 地址。</p>
      */
     public $OutputCOSBucketUrl;
 
     /**
-     * @var string 日志在cos bucket中的目录。
+     * @var string <p>日志在cos bucket中的目录。</p>
      */
     public $OutputCOSKeyPrefix;
 
     /**
-     * @param string $CommandId 命令ID。
-     * @param string $CommandName 命令名称。
-     * @param string $Description 命令描述。
-     * @param string $Content Base64编码后的命令内容。
-     * @param string $CommandType 命令类型。取值为 SHELL、POWERSHELL、BAT 之一。
-     * @param string $WorkingDirectory 命令执行路径。
-     * @param integer $Timeout 命令超时时间。
-     * @param string $CreatedTime 命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
-     * @param string $UpdatedTime 命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
-     * @param boolean $EnableParameter 是否启用自定义参数功能。
-     * @param string $DefaultParameters 自定义参数的默认取值。
-     * @param array $DefaultParameterConfs 自定义参数的默认取值。
-     * @param array $Scenes 命令关联的场景
-     * @param string $FormattedDescription 命令的结构化描述。公共命令有值，用户命令为空字符串。
-     * @param string $CreatedBy 命令创建者。TAT 代表公共命令，USER 代表个人命令。
-     * @param array $Tags 命令关联的标签列表。
-     * @param string $Username 在实例上执行命令的用户名。
-     * @param string $OutputCOSBucketUrl 日志上传的cos bucket 地址。
-     * @param string $OutputCOSKeyPrefix 日志在cos bucket中的目录。
+     * @param string $CommandId <p>命令ID。</p>
+     * @param string $CommandName <p>命令名称。</p>
+     * @param string $Description <p>命令描述。</p>
+     * @param string $Content <p>Base64编码后的命令内容。</p>
+     * @param string $CommandType <p>命令类型。取值为 SHELL、POWERSHELL、BAT 之一。</p>
+     * @param string $WorkingDirectory <p>命令执行路径。</p>
+     * @param integer $Timeout <p>命令超时时间。</p><p>单位：秒</p><p>指定 OutputCOSBucketUrl 参数时，超时时间将包含命令输出上传 COS 的耗时</p>
+     * @param string $CreatedTime <p>命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ</p>
+     * @param string $UpdatedTime <p>命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ</p>
+     * @param boolean $EnableParameter <p>是否启用自定义参数功能。</p>
+     * @param string $DefaultParameters <p>自定义参数的默认取值。</p>
+     * @param array $DefaultParameterConfs <p>自定义参数的默认取值。</p>
+     * @param array $Scenes <p>命令关联的场景</p>
+     * @param string $FormattedDescription <p>命令的结构化描述。公共命令有值，用户命令为空字符串。</p>
+     * @param string $CreatedBy <p>命令创建者。</p><p>枚举值：</p><ul><li>TAT： 公共命令</li><li>USER： 个人创建的命令</li></ul>
+     * @param array $Tags <p>命令关联的标签列表。</p>
+     * @param string $Username <p>在实例上执行命令的用户名。</p>
+     * @param string $OutputCOSBucketUrl <p>日志上传的cos bucket 地址。</p>
+     * @param string $OutputCOSKeyPrefix <p>日志在cos bucket中的目录。</p>
      */
     function __construct()
     {

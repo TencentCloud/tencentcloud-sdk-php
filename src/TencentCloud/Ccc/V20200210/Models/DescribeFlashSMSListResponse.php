@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFlashSMSList返回参数结构体
  *
- * @method integer getTotal() 获取记录总数
- * @method void setTotal(integer $Total) 设置记录总数
- * @method array getFlashSMSList() 获取闪信记录列表
- * @method void setFlashSMSList(array $FlashSMSList) 设置闪信记录列表
+ * @method integer getTotal() 获取<p>记录总数</p>
+ * @method void setTotal(integer $Total) 设置<p>记录总数</p>
+ * @method array getFlashSMSList() 获取<p>闪信记录列表</p>
+ * @method void setFlashSMSList(array $FlashSMSList) 设置<p>闪信记录列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeFlashSMSListResponse extends AbstractModel
 {
     /**
-     * @var integer 记录总数
+     * @var integer <p>记录总数</p>
      */
     public $Total;
 
     /**
-     * @var array 闪信记录列表
+     * @var array <p>闪信记录列表</p>
      */
     public $FlashSMSList;
 
@@ -45,8 +45,8 @@ class DescribeFlashSMSListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total 记录总数
-     * @param array $FlashSMSList 闪信记录列表
+     * @param integer $Total <p>记录总数</p>
+     * @param array $FlashSMSList <p>闪信记录列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

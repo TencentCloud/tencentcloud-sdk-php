@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetTotalTicketStatistics请求参数结构体
  *
- * @method string getStartTimeStr() 获取开始时间
- * @method void setStartTimeStr(string $StartTimeStr) 设置开始时间
- * @method string getEndTimeStr() 获取结束时间
- * @method void setEndTimeStr(string $EndTimeStr) 设置结束时间
- * @method string getDimension() 获取查询粒度
-分钟：“1”
-小时：“2”
-天：“3”
- * @method void setDimension(string $Dimension) 设置查询粒度
-分钟：“1”
-小时：“2”
-天：“3”
+ * @method string getStartTimeStr() 获取<p>开始时间</p>
+ * @method void setStartTimeStr(string $StartTimeStr) 设置<p>开始时间</p>
+ * @method string getEndTimeStr() 获取<p>结束时间</p>
+ * @method void setEndTimeStr(string $EndTimeStr) 设置<p>结束时间</p>
+ * @method string getDimension() 获取<p>查询粒度<br>分钟：“1”<br>小时：“2”<br>天：“3”</p>
+ * @method void setDimension(string $Dimension) 设置<p>查询粒度<br>分钟：“1”<br>小时：“2”<br>天：“3”</p>
  */
 class GetTotalTicketStatisticsRequest extends AbstractModel
 {
     /**
-     * @var string 开始时间
+     * @var string <p>开始时间</p>
      */
     public $StartTimeStr;
 
     /**
-     * @var string 结束时间
+     * @var string <p>结束时间</p>
      */
     public $EndTimeStr;
 
     /**
-     * @var string 查询粒度
-分钟：“1”
-小时：“2”
-天：“3”
+     * @var string <p>查询粒度<br>分钟：“1”<br>小时：“2”<br>天：“3”</p>
      */
     public $Dimension;
 
     /**
-     * @param string $StartTimeStr 开始时间
-     * @param string $EndTimeStr 结束时间
-     * @param string $Dimension 查询粒度
-分钟：“1”
-小时：“2”
-天：“3”
+     * @param string $StartTimeStr <p>开始时间</p>
+     * @param string $EndTimeStr <p>结束时间</p>
+     * @param string $Dimension <p>查询粒度<br>分钟：“1”<br>小时：“2”<br>天：“3”</p>
      */
     function __construct()
     {

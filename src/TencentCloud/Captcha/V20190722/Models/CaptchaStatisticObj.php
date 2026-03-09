@@ -20,101 +20,101 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 验证码统计图Obj
  *
- * @method integer getActionTotal() 获取请求总量
- * @method void setActionTotal(integer $ActionTotal) 设置请求总量
- * @method integer getVerifyTotal() 获取验证总量
- * @method void setVerifyTotal(integer $VerifyTotal) 设置验证总量
- * @method integer getVerifyThroughTotal() 获取验证通过总量
- * @method void setVerifyThroughTotal(integer $VerifyThroughTotal) 设置验证通过总量
- * @method integer getVerifyInterceptTotal() 获取验证拦截总量
- * @method void setVerifyInterceptTotal(integer $VerifyInterceptTotal) 设置验证拦截总量
- * @method integer getTicketTotal() 获取票据校验总量
- * @method void setTicketTotal(integer $TicketTotal) 设置票据校验总量
- * @method integer getTicketThroughTotal() 获取票据通过总量
- * @method void setTicketThroughTotal(integer $TicketThroughTotal) 设置票据通过总量
- * @method integer getTicketInterceptTotal() 获取票据拦截总量
- * @method void setTicketInterceptTotal(integer $TicketInterceptTotal) 设置票据拦截总量
- * @method array getRequestTrend() 获取请求趋势图
+ * @method integer getActionTotal() 获取<p>请求总量</p>
+ * @method void setActionTotal(integer $ActionTotal) 设置<p>请求总量</p>
+ * @method integer getVerifyTotal() 获取<p>验证总量</p>
+ * @method void setVerifyTotal(integer $VerifyTotal) 设置<p>验证总量</p>
+ * @method integer getVerifyThroughTotal() 获取<p>验证通过总量</p>
+ * @method void setVerifyThroughTotal(integer $VerifyThroughTotal) 设置<p>验证通过总量</p>
+ * @method integer getVerifyInterceptTotal() 获取<p>验证拦截总量</p>
+ * @method void setVerifyInterceptTotal(integer $VerifyInterceptTotal) 设置<p>验证拦截总量</p>
+ * @method integer getTicketTotal() 获取<p>票据校验总量</p>
+ * @method void setTicketTotal(integer $TicketTotal) 设置<p>票据校验总量</p>
+ * @method integer getTicketThroughTotal() 获取<p>票据通过总量</p>
+ * @method void setTicketThroughTotal(integer $TicketThroughTotal) 设置<p>票据通过总量</p>
+ * @method integer getTicketInterceptTotal() 获取<p>票据拦截总量</p>
+ * @method void setTicketInterceptTotal(integer $TicketInterceptTotal) 设置<p>票据拦截总量</p>
+ * @method array getRequestTrend() 获取<p>请求趋势图</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRequestTrend(array $RequestTrend) 设置请求趋势图
+ * @method void setRequestTrend(array $RequestTrend) 设置<p>请求趋势图</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getInterceptPerTrend() 获取拦截率趋势图
+ * @method array getInterceptPerTrend() 获取<p>拦截率趋势图</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInterceptPerTrend(array $InterceptPerTrend) 设置拦截率趋势图
+ * @method void setInterceptPerTrend(array $InterceptPerTrend) 设置<p>拦截率趋势图</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTicketCheckTrend() 获取票据校验趋势图
+ * @method array getTicketCheckTrend() 获取<p>票据校验趋势图</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTicketCheckTrend(array $TicketCheckTrend) 设置票据校验趋势图
+ * @method void setTicketCheckTrend(array $TicketCheckTrend) 设置<p>票据校验趋势图</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CaptchaStatisticObj extends AbstractModel
 {
     /**
-     * @var integer 请求总量
+     * @var integer <p>请求总量</p>
      */
     public $ActionTotal;
 
     /**
-     * @var integer 验证总量
+     * @var integer <p>验证总量</p>
      */
     public $VerifyTotal;
 
     /**
-     * @var integer 验证通过总量
+     * @var integer <p>验证通过总量</p>
      */
     public $VerifyThroughTotal;
 
     /**
-     * @var integer 验证拦截总量
+     * @var integer <p>验证拦截总量</p>
      */
     public $VerifyInterceptTotal;
 
     /**
-     * @var integer 票据校验总量
+     * @var integer <p>票据校验总量</p>
      */
     public $TicketTotal;
 
     /**
-     * @var integer 票据通过总量
+     * @var integer <p>票据通过总量</p>
      */
     public $TicketThroughTotal;
 
     /**
-     * @var integer 票据拦截总量
+     * @var integer <p>票据拦截总量</p>
      */
     public $TicketInterceptTotal;
 
     /**
-     * @var array 请求趋势图
+     * @var array <p>请求趋势图</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RequestTrend;
 
     /**
-     * @var array 拦截率趋势图
+     * @var array <p>拦截率趋势图</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InterceptPerTrend;
 
     /**
-     * @var array 票据校验趋势图
+     * @var array <p>票据校验趋势图</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TicketCheckTrend;
 
     /**
-     * @param integer $ActionTotal 请求总量
-     * @param integer $VerifyTotal 验证总量
-     * @param integer $VerifyThroughTotal 验证通过总量
-     * @param integer $VerifyInterceptTotal 验证拦截总量
-     * @param integer $TicketTotal 票据校验总量
-     * @param integer $TicketThroughTotal 票据通过总量
-     * @param integer $TicketInterceptTotal 票据拦截总量
-     * @param array $RequestTrend 请求趋势图
+     * @param integer $ActionTotal <p>请求总量</p>
+     * @param integer $VerifyTotal <p>验证总量</p>
+     * @param integer $VerifyThroughTotal <p>验证通过总量</p>
+     * @param integer $VerifyInterceptTotal <p>验证拦截总量</p>
+     * @param integer $TicketTotal <p>票据校验总量</p>
+     * @param integer $TicketThroughTotal <p>票据通过总量</p>
+     * @param integer $TicketInterceptTotal <p>票据拦截总量</p>
+     * @param array $RequestTrend <p>请求趋势图</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $InterceptPerTrend 拦截率趋势图
+     * @param array $InterceptPerTrend <p>拦截率趋势图</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TicketCheckTrend 票据校验趋势图
+     * @param array $TicketCheckTrend <p>票据校验趋势图</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

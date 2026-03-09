@@ -66,6 +66,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置环境标签。
 可取值通过接口 [tag:DescribeTags](https://cloud.tencent.com/document/product/651/35316) 可获取到。
 不传或为空则默认不打任何标签。
+ * @method string getRenewFlag() 获取自动续费标识。取值范围：
+- NOTIFY_AND_AUTO_RENEW：通知过期且自动续费
+- NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费（需要手动续费，可通过接口 [RenewEnv](https://cloud.tencent.com/document/product/876/128590) 来续费）
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。
+若该参数指定为NOTIFY_AND_AUTO_RENEW（即：自动续费），在账户余额充足的情况下，实例到期后将按月自动续费；但如果账户余额不足，将无法自动续费。请留意腾讯云短信和邮件通知。
+ * @method void setRenewFlag(string $RenewFlag) 设置自动续费标识。取值范围：
+- NOTIFY_AND_AUTO_RENEW：通知过期且自动续费
+- NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费（需要手动续费，可通过接口 [RenewEnv](https://cloud.tencent.com/document/product/876/128590) 来续费）
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。
+若该参数指定为NOTIFY_AND_AUTO_RENEW（即：自动续费），在账户余额充足的情况下，实例到期后将按月自动续费；但如果账户余额不足，将无法自动续费。请留意腾讯云短信和邮件通知。
  */
 class CreateEnvRequest extends AbstractModel
 {
@@ -117,6 +129,16 @@ class CreateEnvRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 自动续费标识。取值范围：
+- NOTIFY_AND_AUTO_RENEW：通知过期且自动续费
+- NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费（需要手动续费，可通过接口 [RenewEnv](https://cloud.tencent.com/document/product/876/128590) 来续费）
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。
+若该参数指定为NOTIFY_AND_AUTO_RENEW（即：自动续费），在账户余额充足的情况下，实例到期后将按月自动续费；但如果账户余额不足，将无法自动续费。请留意腾讯云短信和邮件通知。
+     */
+    public $RenewFlag;
+
+    /**
      * @param string $Alias 环境别名。
 
 ### 格式要求
@@ -140,6 +162,12 @@ class CreateEnvRequest extends AbstractModel
      * @param array $Tags 环境标签。
 可取值通过接口 [tag:DescribeTags](https://cloud.tencent.com/document/product/651/35316) 可获取到。
 不传或为空则默认不打任何标签。
+     * @param string $RenewFlag 自动续费标识。取值范围：
+- NOTIFY_AND_AUTO_RENEW：通知过期且自动续费
+- NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费（需要手动续费，可通过接口 [RenewEnv](https://cloud.tencent.com/document/product/876/128590) 来续费）
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。
+若该参数指定为NOTIFY_AND_AUTO_RENEW（即：自动续费），在账户余额充足的情况下，实例到期后将按月自动续费；但如果账户余额不足，将无法自动续费。请留意腾讯云短信和邮件通知。
      */
     function __construct()
     {
@@ -181,6 +209,10 @@ class CreateEnvRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
+            $this->RenewFlag = $param["RenewFlag"];
         }
     }
 }

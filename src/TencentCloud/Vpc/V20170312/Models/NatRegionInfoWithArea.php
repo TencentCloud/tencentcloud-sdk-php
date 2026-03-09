@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * NAT地域地区对象
  *
-
+ * @method string getRegion() 获取地域ID，如：ap-guangzhou。
+ * @method void setRegion(string $Region) 设置地域ID，如：ap-guangzhou。
  */
 class NatRegionInfoWithArea extends AbstractModel
 {
-
+    /**
+     * @var string 地域ID，如：ap-guangzhou。
+     */
+    public $Region;
 
     /**
-
+     * @param string $Region 地域ID，如：ap-guangzhou。
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class NatRegionInfoWithArea extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
+        }
     }
 }

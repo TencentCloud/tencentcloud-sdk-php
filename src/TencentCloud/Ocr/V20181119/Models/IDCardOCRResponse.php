@@ -20,123 +20,78 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IDCardOCR返回参数结构体
  *
- * @method string getName() 获取姓名（人像面）
- * @method void setName(string $Name) 设置姓名（人像面）
- * @method string getSex() 获取性别（人像面）
- * @method void setSex(string $Sex) 设置性别（人像面）
- * @method string getNation() 获取民族（人像面）
- * @method void setNation(string $Nation) 设置民族（人像面）
- * @method string getBirth() 获取出生日期（人像面）
- * @method void setBirth(string $Birth) 设置出生日期（人像面）
- * @method string getAddress() 获取地址（人像面）
- * @method void setAddress(string $Address) 设置地址（人像面）
- * @method string getIdNum() 获取身份证号（人像面）
- * @method void setIdNum(string $IdNum) 设置身份证号（人像面）
- * @method string getAuthority() 获取发证机关（国徽面）
- * @method void setAuthority(string $Authority) 设置发证机关（国徽面）
- * @method string getValidDate() 获取证件有效期（国徽面）
- * @method void setValidDate(string $ValidDate) 设置证件有效期（国徽面）
- * @method string getAdvancedInfo() 获取扩展信息，不请求则不返回，具体输入参考示例3和示例4。
-IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时返回；
-Portrait，身份证头像照片的base64编码，请求 Config.CropPortrait 时返回；
-Quality，图片质量分数，请求 Config.Quality 时返回（取值范围：0 ~ 100，分数越低越模糊，建议阈值≥50）;
-BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0 ~ 100，分数越低边框遮挡可能性越低，建议阈值≤50）;
-WarnInfos，告警信息，Code 告警码列表和释义：
--9100 身份证有效日期不合法告警，
--9101 身份证边框不完整告警，
--9102 身份证复印件告警（黑白及彩色复印件）,
--9108 身份证复印件告警（仅黑白复印件），
--9103 身份证翻拍告警，
--9105 身份证框内遮挡告警，
--9104 临时身份证告警，
--9106 身份证疑似存在PS痕迹告警，
--9107 身份证反光告警，
--9110 电子身份证告警
- * @method void setAdvancedInfo(string $AdvancedInfo) 设置扩展信息，不请求则不返回，具体输入参考示例3和示例4。
-IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时返回；
-Portrait，身份证头像照片的base64编码，请求 Config.CropPortrait 时返回；
-Quality，图片质量分数，请求 Config.Quality 时返回（取值范围：0 ~ 100，分数越低越模糊，建议阈值≥50）;
-BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0 ~ 100，分数越低边框遮挡可能性越低，建议阈值≤50）;
-WarnInfos，告警信息，Code 告警码列表和释义：
--9100 身份证有效日期不合法告警，
--9101 身份证边框不完整告警，
--9102 身份证复印件告警（黑白及彩色复印件）,
--9108 身份证复印件告警（仅黑白复印件），
--9103 身份证翻拍告警，
--9105 身份证框内遮挡告警，
--9104 临时身份证告警，
--9106 身份证疑似存在PS痕迹告警，
--9107 身份证反光告警，
--9110 电子身份证告警
- * @method array getReflectDetailInfos() 获取反光点覆盖区域详情结果，具体内容请点击左侧链接
- * @method void setReflectDetailInfos(array $ReflectDetailInfos) 设置反光点覆盖区域详情结果，具体内容请点击左侧链接
+ * @method string getName() 获取<p>姓名（人像面）</p>
+ * @method void setName(string $Name) 设置<p>姓名（人像面）</p>
+ * @method string getSex() 获取<p>性别（人像面）</p>
+ * @method void setSex(string $Sex) 设置<p>性别（人像面）</p>
+ * @method string getNation() 获取<p>民族（人像面）</p>
+ * @method void setNation(string $Nation) 设置<p>民族（人像面）</p>
+ * @method string getBirth() 获取<p>出生日期（人像面）</p>
+ * @method void setBirth(string $Birth) 设置<p>出生日期（人像面）</p>
+ * @method string getAddress() 获取<p>地址（人像面）</p>
+ * @method void setAddress(string $Address) 设置<p>地址（人像面）</p>
+ * @method string getIdNum() 获取<p>身份证号（人像面）</p>
+ * @method void setIdNum(string $IdNum) 设置<p>身份证号（人像面）</p>
+ * @method string getAuthority() 获取<p>发证机关（国徽面）</p>
+ * @method void setAuthority(string $Authority) 设置<p>发证机关（国徽面）</p>
+ * @method string getValidDate() 获取<p>证件有效期（国徽面）</p>
+ * @method void setValidDate(string $ValidDate) 设置<p>证件有效期（国徽面）</p>
+ * @method string getAdvancedInfo() 获取<p>扩展信息，不请求则不返回，具体输入参考示例3和示例4。<br>IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时返回；<br>Portrait，身份证头像照片的base64编码，请求 Config.CropPortrait 时返回；<br>Quality，图片质量分数，请求 Config.Quality 时返回（取值范围：0 ~ 100，分数越低越模糊，建议阈值≥50）;<br>BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0 ~ 100，分数越低边框遮挡可能性越低，建议阈值≤50）;<br>WarnInfos，告警信息，Code 告警码列表和释义：<br>-9100 身份证有效日期不合法告警，<br>-9101 身份证边框不完整告警，<br>-9102 身份证复印件告警（黑白及彩色复印件）,<br>-9108 身份证复印件告警（仅黑白复印件），<br>-9103 身份证翻拍告警，<br>-9105 身份证框内遮挡告警，<br>-9104 临时身份证告警，<br>-9106 身份证疑似存在PS痕迹告警，<br>-9107 身份证反光告警，<br>-9110 电子身份证告警，<br>-9111 水印告警（仅CardWarnType参数为Advanced时）</p>
+ * @method void setAdvancedInfo(string $AdvancedInfo) 设置<p>扩展信息，不请求则不返回，具体输入参考示例3和示例4。<br>IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时返回；<br>Portrait，身份证头像照片的base64编码，请求 Config.CropPortrait 时返回；<br>Quality，图片质量分数，请求 Config.Quality 时返回（取值范围：0 ~ 100，分数越低越模糊，建议阈值≥50）;<br>BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0 ~ 100，分数越低边框遮挡可能性越低，建议阈值≤50）;<br>WarnInfos，告警信息，Code 告警码列表和释义：<br>-9100 身份证有效日期不合法告警，<br>-9101 身份证边框不完整告警，<br>-9102 身份证复印件告警（黑白及彩色复印件）,<br>-9108 身份证复印件告警（仅黑白复印件），<br>-9103 身份证翻拍告警，<br>-9105 身份证框内遮挡告警，<br>-9104 临时身份证告警，<br>-9106 身份证疑似存在PS痕迹告警，<br>-9107 身份证反光告警，<br>-9110 电子身份证告警，<br>-9111 水印告警（仅CardWarnType参数为Advanced时）</p>
+ * @method array getReflectDetailInfos() 获取<p>反光点覆盖区域详情结果，具体内容请点击左侧链接</p>
+ * @method void setReflectDetailInfos(array $ReflectDetailInfos) 设置<p>反光点覆盖区域详情结果，具体内容请点击左侧链接</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class IDCardOCRResponse extends AbstractModel
 {
     /**
-     * @var string 姓名（人像面）
+     * @var string <p>姓名（人像面）</p>
      */
     public $Name;
 
     /**
-     * @var string 性别（人像面）
+     * @var string <p>性别（人像面）</p>
      */
     public $Sex;
 
     /**
-     * @var string 民族（人像面）
+     * @var string <p>民族（人像面）</p>
      */
     public $Nation;
 
     /**
-     * @var string 出生日期（人像面）
+     * @var string <p>出生日期（人像面）</p>
      */
     public $Birth;
 
     /**
-     * @var string 地址（人像面）
+     * @var string <p>地址（人像面）</p>
      */
     public $Address;
 
     /**
-     * @var string 身份证号（人像面）
+     * @var string <p>身份证号（人像面）</p>
      */
     public $IdNum;
 
     /**
-     * @var string 发证机关（国徽面）
+     * @var string <p>发证机关（国徽面）</p>
      */
     public $Authority;
 
     /**
-     * @var string 证件有效期（国徽面）
+     * @var string <p>证件有效期（国徽面）</p>
      */
     public $ValidDate;
 
     /**
-     * @var string 扩展信息，不请求则不返回，具体输入参考示例3和示例4。
-IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时返回；
-Portrait，身份证头像照片的base64编码，请求 Config.CropPortrait 时返回；
-Quality，图片质量分数，请求 Config.Quality 时返回（取值范围：0 ~ 100，分数越低越模糊，建议阈值≥50）;
-BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0 ~ 100，分数越低边框遮挡可能性越低，建议阈值≤50）;
-WarnInfos，告警信息，Code 告警码列表和释义：
--9100 身份证有效日期不合法告警，
--9101 身份证边框不完整告警，
--9102 身份证复印件告警（黑白及彩色复印件）,
--9108 身份证复印件告警（仅黑白复印件），
--9103 身份证翻拍告警，
--9105 身份证框内遮挡告警，
--9104 临时身份证告警，
--9106 身份证疑似存在PS痕迹告警，
--9107 身份证反光告警，
--9110 电子身份证告警
+     * @var string <p>扩展信息，不请求则不返回，具体输入参考示例3和示例4。<br>IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时返回；<br>Portrait，身份证头像照片的base64编码，请求 Config.CropPortrait 时返回；<br>Quality，图片质量分数，请求 Config.Quality 时返回（取值范围：0 ~ 100，分数越低越模糊，建议阈值≥50）;<br>BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0 ~ 100，分数越低边框遮挡可能性越低，建议阈值≤50）;<br>WarnInfos，告警信息，Code 告警码列表和释义：<br>-9100 身份证有效日期不合法告警，<br>-9101 身份证边框不完整告警，<br>-9102 身份证复印件告警（黑白及彩色复印件）,<br>-9108 身份证复印件告警（仅黑白复印件），<br>-9103 身份证翻拍告警，<br>-9105 身份证框内遮挡告警，<br>-9104 临时身份证告警，<br>-9106 身份证疑似存在PS痕迹告警，<br>-9107 身份证反光告警，<br>-9110 电子身份证告警，<br>-9111 水印告警（仅CardWarnType参数为Advanced时）</p>
      */
     public $AdvancedInfo;
 
     /**
-     * @var array 反光点覆盖区域详情结果，具体内容请点击左侧链接
+     * @var array <p>反光点覆盖区域详情结果，具体内容请点击左侧链接</p>
      */
     public $ReflectDetailInfos;
 
@@ -146,31 +101,16 @@ WarnInfos，告警信息，Code 告警码列表和释义：
     public $RequestId;
 
     /**
-     * @param string $Name 姓名（人像面）
-     * @param string $Sex 性别（人像面）
-     * @param string $Nation 民族（人像面）
-     * @param string $Birth 出生日期（人像面）
-     * @param string $Address 地址（人像面）
-     * @param string $IdNum 身份证号（人像面）
-     * @param string $Authority 发证机关（国徽面）
-     * @param string $ValidDate 证件有效期（国徽面）
-     * @param string $AdvancedInfo 扩展信息，不请求则不返回，具体输入参考示例3和示例4。
-IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时返回；
-Portrait，身份证头像照片的base64编码，请求 Config.CropPortrait 时返回；
-Quality，图片质量分数，请求 Config.Quality 时返回（取值范围：0 ~ 100，分数越低越模糊，建议阈值≥50）;
-BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0 ~ 100，分数越低边框遮挡可能性越低，建议阈值≤50）;
-WarnInfos，告警信息，Code 告警码列表和释义：
--9100 身份证有效日期不合法告警，
--9101 身份证边框不完整告警，
--9102 身份证复印件告警（黑白及彩色复印件）,
--9108 身份证复印件告警（仅黑白复印件），
--9103 身份证翻拍告警，
--9105 身份证框内遮挡告警，
--9104 临时身份证告警，
--9106 身份证疑似存在PS痕迹告警，
--9107 身份证反光告警，
--9110 电子身份证告警
-     * @param array $ReflectDetailInfos 反光点覆盖区域详情结果，具体内容请点击左侧链接
+     * @param string $Name <p>姓名（人像面）</p>
+     * @param string $Sex <p>性别（人像面）</p>
+     * @param string $Nation <p>民族（人像面）</p>
+     * @param string $Birth <p>出生日期（人像面）</p>
+     * @param string $Address <p>地址（人像面）</p>
+     * @param string $IdNum <p>身份证号（人像面）</p>
+     * @param string $Authority <p>发证机关（国徽面）</p>
+     * @param string $ValidDate <p>证件有效期（国徽面）</p>
+     * @param string $AdvancedInfo <p>扩展信息，不请求则不返回，具体输入参考示例3和示例4。<br>IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时返回；<br>Portrait，身份证头像照片的base64编码，请求 Config.CropPortrait 时返回；<br>Quality，图片质量分数，请求 Config.Quality 时返回（取值范围：0 ~ 100，分数越低越模糊，建议阈值≥50）;<br>BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0 ~ 100，分数越低边框遮挡可能性越低，建议阈值≤50）;<br>WarnInfos，告警信息，Code 告警码列表和释义：<br>-9100 身份证有效日期不合法告警，<br>-9101 身份证边框不完整告警，<br>-9102 身份证复印件告警（黑白及彩色复印件）,<br>-9108 身份证复印件告警（仅黑白复印件），<br>-9103 身份证翻拍告警，<br>-9105 身份证框内遮挡告警，<br>-9104 临时身份证告警，<br>-9106 身份证疑似存在PS痕迹告警，<br>-9107 身份证反光告警，<br>-9110 电子身份证告警，<br>-9111 水印告警（仅CardWarnType参数为Advanced时）</p>
+     * @param array $ReflectDetailInfos <p>反光点覆盖区域详情结果，具体内容请点击左侧链接</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,146 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 企业认证信息参数， 需要保证这些参数跟营业执照中的信息一致。
  *
- * @method string getOrganizationName() 获取组织机构名称。
-请确认该名称与企业营业执照中注册的名称一致。
-如果名称中包含英文括号()，请使用中文括号（）代替。
- * @method void setOrganizationName(string $OrganizationName) 设置组织机构名称。
-请确认该名称与企业营业执照中注册的名称一致。
-如果名称中包含英文括号()，请使用中文括号（）代替。
- * @method string getUniformSocialCreditCode() 获取组织机构企业统一社会信用代码。
-请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。
- * @method void setUniformSocialCreditCode(string $UniformSocialCreditCode) 设置组织机构企业统一社会信用代码。
-请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。
- * @method string getLegalName() 获取组织机构法人的姓名。
-请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。
- * @method void setLegalName(string $LegalName) 设置组织机构法人的姓名。
-请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。
- * @method string getLegalIdCardType() 获取组织机构法人的证件类型
- * @method void setLegalIdCardType(string $LegalIdCardType) 设置组织机构法人的证件类型
- * @method string getLegalIdCardNumber() 获取组织机构法人的证件号码
- * @method void setLegalIdCardNumber(string $LegalIdCardNumber) 设置组织机构法人的证件号码
- * @method string getAdminName() 获取组织机构超管姓名。
-
- * @method void setAdminName(string $AdminName) 设置组织机构超管姓名。
-
- * @method string getAdminMobile() 获取组织机构超管手机号。
-
- * @method void setAdminMobile(string $AdminMobile) 设置组织机构超管手机号。
-
- * @method string getAdminIdCardType() 获取组织机构超管证件类型
-
- * @method void setAdminIdCardType(string $AdminIdCardType) 设置组织机构超管证件类型
-
- * @method string getAdminIdCardNumber() 获取组织机构超管证件号码
-
- * @method void setAdminIdCardNumber(string $AdminIdCardNumber) 设置组织机构超管证件号码
-
- * @method string getOldAdminName() 获取原超管姓名
- * @method void setOldAdminName(string $OldAdminName) 设置原超管姓名
- * @method string getOldAdminMobile() 获取原超管手机号
- * @method void setOldAdminMobile(string $OldAdminMobile) 设置原超管手机号
- * @method string getOldAdminIdCardType() 获取原超管证件类型
- * @method void setOldAdminIdCardType(string $OldAdminIdCardType) 设置原超管证件类型
- * @method string getOldAdminIdCardNumber() 获取原超管证件号码
- * @method void setOldAdminIdCardNumber(string $OldAdminIdCardNumber) 设置原超管证件号码
+ * @method string getOrganizationName() 获取<p>组织机构名称。<br>请确认该名称与企业营业执照中注册的名称一致。<br>如果名称中包含英文括号()，请使用中文括号（）代替。</p>
+ * @method void setOrganizationName(string $OrganizationName) 设置<p>组织机构名称。<br>请确认该名称与企业营业执照中注册的名称一致。<br>如果名称中包含英文括号()，请使用中文括号（）代替。</p>
+ * @method string getUniformSocialCreditCode() 获取<p>组织机构企业统一社会信用代码。<br>请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。</p>
+ * @method void setUniformSocialCreditCode(string $UniformSocialCreditCode) 设置<p>组织机构企业统一社会信用代码。<br>请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。</p>
+ * @method string getLegalName() 获取<p>组织机构法人的姓名。<br>请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。</p>
+ * @method void setLegalName(string $LegalName) 设置<p>组织机构法人的姓名。<br>请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。</p>
+ * @method string getLegalIdCardType() 获取<p>组织机构法人的证件类型</p><p>枚举值：</p><ul><li>居民身份证： 中国大陆居民身份证</li></ul>
+ * @method void setLegalIdCardType(string $LegalIdCardType) 设置<p>组织机构法人的证件类型</p><p>枚举值：</p><ul><li>居民身份证： 中国大陆居民身份证</li></ul>
+ * @method string getLegalIdCardNumber() 获取<p>组织机构法人的证件号码</p>
+ * @method void setLegalIdCardNumber(string $LegalIdCardNumber) 设置<p>组织机构法人的证件号码</p>
+ * @method string getAdminName() 获取<p>组织机构超管姓名。</p>
+ * @method void setAdminName(string $AdminName) 设置<p>组织机构超管姓名。</p>
+ * @method string getAdminMobile() 获取<p>组织机构超管手机号。</p>
+ * @method void setAdminMobile(string $AdminMobile) 设置<p>组织机构超管手机号。</p>
+ * @method string getAdminIdCardType() 获取<p>组织机构超管证件类型</p><p>枚举值：</p><ul><li>居民身份证： 中国大陆居民身份证</li></ul>
+ * @method void setAdminIdCardType(string $AdminIdCardType) 设置<p>组织机构超管证件类型</p><p>枚举值：</p><ul><li>居民身份证： 中国大陆居民身份证</li></ul>
+ * @method string getAdminIdCardNumber() 获取<p>组织机构超管证件号码</p>
+ * @method void setAdminIdCardNumber(string $AdminIdCardNumber) 设置<p>组织机构超管证件号码</p>
+ * @method string getOldAdminName() 获取<p>原超管姓名</p>
+ * @method void setOldAdminName(string $OldAdminName) 设置<p>原超管姓名</p>
+ * @method string getOldAdminMobile() 获取<p>原超管手机号</p>
+ * @method void setOldAdminMobile(string $OldAdminMobile) 设置<p>原超管手机号</p>
+ * @method string getOldAdminIdCardType() 获取<p>原超管证件类型</p><p>枚举值：</p><ul><li>居民身份证： 中国大陆居民身份证</li></ul>
+ * @method void setOldAdminIdCardType(string $OldAdminIdCardType) 设置<p>原超管证件类型</p><p>枚举值：</p><ul><li>居民身份证： 中国大陆居民身份证</li></ul>
+ * @method string getOldAdminIdCardNumber() 获取<p>原超管证件号码</p>
+ * @method void setOldAdminIdCardNumber(string $OldAdminIdCardNumber) 设置<p>原超管证件号码</p>
  */
 class OrganizationCommonInfo extends AbstractModel
 {
     /**
-     * @var string 组织机构名称。
-请确认该名称与企业营业执照中注册的名称一致。
-如果名称中包含英文括号()，请使用中文括号（）代替。
+     * @var string <p>组织机构名称。<br>请确认该名称与企业营业执照中注册的名称一致。<br>如果名称中包含英文括号()，请使用中文括号（）代替。</p>
      */
     public $OrganizationName;
 
     /**
-     * @var string 组织机构企业统一社会信用代码。
-请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。
+     * @var string <p>组织机构企业统一社会信用代码。<br>请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。</p>
      */
     public $UniformSocialCreditCode;
 
     /**
-     * @var string 组织机构法人的姓名。
-请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。
+     * @var string <p>组织机构法人的姓名。<br>请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。</p>
      */
     public $LegalName;
 
     /**
-     * @var string 组织机构法人的证件类型
+     * @var string <p>组织机构法人的证件类型</p><p>枚举值：</p><ul><li>居民身份证： 中国大陆居民身份证</li></ul>
      */
     public $LegalIdCardType;
 
     /**
-     * @var string 组织机构法人的证件号码
+     * @var string <p>组织机构法人的证件号码</p>
      */
     public $LegalIdCardNumber;
 
     /**
-     * @var string 组织机构超管姓名。
-
+     * @var string <p>组织机构超管姓名。</p>
      */
     public $AdminName;
 
     /**
-     * @var string 组织机构超管手机号。
-
+     * @var string <p>组织机构超管手机号。</p>
      */
     public $AdminMobile;
 
     /**
-     * @var string 组织机构超管证件类型
-
+     * @var string <p>组织机构超管证件类型</p><p>枚举值：</p><ul><li>居民身份证： 中国大陆居民身份证</li></ul>
      */
     public $AdminIdCardType;
 
     /**
-     * @var string 组织机构超管证件号码
-
+     * @var string <p>组织机构超管证件号码</p>
      */
     public $AdminIdCardNumber;
 
     /**
-     * @var string 原超管姓名
+     * @var string <p>原超管姓名</p>
      */
     public $OldAdminName;
 
     /**
-     * @var string 原超管手机号
+     * @var string <p>原超管手机号</p>
      */
     public $OldAdminMobile;
 
     /**
-     * @var string 原超管证件类型
+     * @var string <p>原超管证件类型</p><p>枚举值：</p><ul><li>居民身份证： 中国大陆居民身份证</li></ul>
      */
     public $OldAdminIdCardType;
 
     /**
-     * @var string 原超管证件号码
+     * @var string <p>原超管证件号码</p>
      */
     public $OldAdminIdCardNumber;
 
     /**
-     * @param string $OrganizationName 组织机构名称。
-请确认该名称与企业营业执照中注册的名称一致。
-如果名称中包含英文括号()，请使用中文括号（）代替。
-     * @param string $UniformSocialCreditCode 组织机构企业统一社会信用代码。
-请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。
-     * @param string $LegalName 组织机构法人的姓名。
-请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。
-     * @param string $LegalIdCardType 组织机构法人的证件类型
-     * @param string $LegalIdCardNumber 组织机构法人的证件号码
-     * @param string $AdminName 组织机构超管姓名。
-
-     * @param string $AdminMobile 组织机构超管手机号。
-
-     * @param string $AdminIdCardType 组织机构超管证件类型
-
-     * @param string $AdminIdCardNumber 组织机构超管证件号码
-
-     * @param string $OldAdminName 原超管姓名
-     * @param string $OldAdminMobile 原超管手机号
-     * @param string $OldAdminIdCardType 原超管证件类型
-     * @param string $OldAdminIdCardNumber 原超管证件号码
+     * @param string $OrganizationName <p>组织机构名称。<br>请确认该名称与企业营业执照中注册的名称一致。<br>如果名称中包含英文括号()，请使用中文括号（）代替。</p>
+     * @param string $UniformSocialCreditCode <p>组织机构企业统一社会信用代码。<br>请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。</p>
+     * @param string $LegalName <p>组织机构法人的姓名。<br>请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。</p>
+     * @param string $LegalIdCardType <p>组织机构法人的证件类型</p><p>枚举值：</p><ul><li>居民身份证： 中国大陆居民身份证</li></ul>
+     * @param string $LegalIdCardNumber <p>组织机构法人的证件号码</p>
+     * @param string $AdminName <p>组织机构超管姓名。</p>
+     * @param string $AdminMobile <p>组织机构超管手机号。</p>
+     * @param string $AdminIdCardType <p>组织机构超管证件类型</p><p>枚举值：</p><ul><li>居民身份证： 中国大陆居民身份证</li></ul>
+     * @param string $AdminIdCardNumber <p>组织机构超管证件号码</p>
+     * @param string $OldAdminName <p>原超管姓名</p>
+     * @param string $OldAdminMobile <p>原超管手机号</p>
+     * @param string $OldAdminIdCardType <p>原超管证件类型</p><p>枚举值：</p><ul><li>居民身份证： 中国大陆居民身份证</li></ul>
+     * @param string $OldAdminIdCardNumber <p>原超管证件号码</p>
      */
     function __construct()
     {

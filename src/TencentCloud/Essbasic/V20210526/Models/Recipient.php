@@ -20,186 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 流程中签署方和填写方(如果有填写控件存证时)的信息
  *
- * @method string getRecipientId() 获取合同参与方的角色ID
- * @method void setRecipientId(string $RecipientId) 设置合同参与方的角色ID
- * @method string getRecipientType() 获取参与者类型, 可以选择的类型如下:
-<ul><li> **ENTERPRISE** :此角色为企业参与方</li>
-<li> **INDIVIDUAL** :此角色为个人参与方</li>
-<li> **PROMOTER** :此角色是发起方</li></ul>
- * @method void setRecipientType(string $RecipientType) 设置参与者类型, 可以选择的类型如下:
-<ul><li> **ENTERPRISE** :此角色为企业参与方</li>
-<li> **INDIVIDUAL** :此角色为个人参与方</li>
-<li> **PROMOTER** :此角色是发起方</li></ul>
- * @method string getDescription() 获取合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。
- * @method void setDescription(string $Description) 设置合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。
- * @method string getRoleName() 获取合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。
- * @method void setRoleName(string $RoleName) 设置合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。
- * @method boolean getRequireValidation() 获取是否需要校验，
-true-是，
-false-否
- * @method void setRequireValidation(boolean $RequireValidation) 设置是否需要校验，
-true-是，
-false-否
- * @method boolean getRequireSign() 获取是否必须填写，
-true-是，
-false-否
- * @method void setRequireSign(boolean $RequireSign) 设置是否必须填写，
-true-是，
-false-否
- * @method integer getSignType() 获取内部字段，签署类型
- * @method void setSignType(integer $SignType) 设置内部字段，签署类型
- * @method integer getRoutingOrder() 获取签署顺序：数字越小优先级越高
- * @method void setRoutingOrder(integer $RoutingOrder) 设置签署顺序：数字越小优先级越高
- * @method boolean getIsPromoter() 获取是否是发起方，
-true-是 
-false-否
- * @method void setIsPromoter(boolean $IsPromoter) 设置是否是发起方，
-true-是 
-false-否
- * @method array getApproverVerifyTypes() 获取签署人查看合同校验方式, 支持的类型如下:
-<ul><li> 1 :实名认证查看</li>
-<li> 2 :手机号校验查看</li></ul>
- * @method void setApproverVerifyTypes(array $ApproverVerifyTypes) 设置签署人查看合同校验方式, 支持的类型如下:
-<ul><li> 1 :实名认证查看</li>
-<li> 2 :手机号校验查看</li></ul>
- * @method array getApproverSignTypes() 获取签署人进行合同签署时的认证方式，支持的类型如下:
-<ul><li> 1 :人脸认证</li>
-<li> 2 :签署密码</li>
-<li> 3 :运营商三要素认证</li>
-<li> 4 :UKey认证</li>
-<li> 5 :设备指纹识别</li>
-<li> 6 :设备面容识别</li></ul>
- * @method void setApproverSignTypes(array $ApproverSignTypes) 设置签署人进行合同签署时的认证方式，支持的类型如下:
-<ul><li> 1 :人脸认证</li>
-<li> 2 :签署密码</li>
-<li> 3 :运营商三要素认证</li>
-<li> 4 :UKey认证</li>
-<li> 5 :设备指纹识别</li>
-<li> 6 :设备面容识别</li></ul>
- * @method boolean getNoTransfer() 获取签署方是否可以转他人处理
-
-<ul><li> **false** : ( 默认)可以转他人处理</li>
-<li> **true** :不可以转他人处理</li></ul>
- * @method void setNoTransfer(boolean $NoTransfer) 设置签署方是否可以转他人处理
-
-<ul><li> **false** : ( 默认)可以转他人处理</li>
-<li> **true** :不可以转他人处理</li></ul>
+ * @method string getRecipientId() 获取<p>合同参与方的角色ID</p>
+ * @method void setRecipientId(string $RecipientId) 设置<p>合同参与方的角色ID</p>
+ * @method string getRecipientType() 获取<p>参与者类型, 可以选择的类型如下:</p><ul><li> **ENTERPRISE** :此角色为企业参与方</li><li> **INDIVIDUAL** :此角色为个人参与方</li><li> **PROMOTER** :此角色是发起方</li></ul>
+ * @method void setRecipientType(string $RecipientType) 设置<p>参与者类型, 可以选择的类型如下:</p><ul><li> **ENTERPRISE** :此角色为企业参与方</li><li> **INDIVIDUAL** :此角色为个人参与方</li><li> **PROMOTER** :此角色是发起方</li></ul>
+ * @method string getDescription() 获取<p>合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。</p>
+ * @method void setDescription(string $Description) 设置<p>合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。</p>
+ * @method string getRoleName() 获取<p>合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。</p>
+ * @method void setRoleName(string $RoleName) 设置<p>合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。</p>
+ * @method boolean getRequireValidation() 获取<p>是否需要校验，<br>true-是，<br>false-否</p>
+ * @method void setRequireValidation(boolean $RequireValidation) 设置<p>是否需要校验，<br>true-是，<br>false-否</p>
+ * @method boolean getRequireSign() 获取<p>是否必须填写，<br>true-是，<br>false-否</p>
+ * @method void setRequireSign(boolean $RequireSign) 设置<p>是否必须填写，<br>true-是，<br>false-否</p>
+ * @method integer getSignType() 获取<p>内部字段，签署类型</p><p>枚举值：</p><ul><li>0： 人脸</li></ul>
+ * @method void setSignType(integer $SignType) 设置<p>内部字段，签署类型</p><p>枚举值：</p><ul><li>0： 人脸</li></ul>
+ * @method integer getRoutingOrder() 获取<p>签署顺序：数字越小优先级越高</p>
+ * @method void setRoutingOrder(integer $RoutingOrder) 设置<p>签署顺序：数字越小优先级越高</p>
+ * @method boolean getIsPromoter() 获取<p>是否是发起方，<br>true-是<br>false-否</p>
+ * @method void setIsPromoter(boolean $IsPromoter) 设置<p>是否是发起方，<br>true-是<br>false-否</p>
+ * @method array getApproverVerifyTypes() 获取<p>签署人查看合同校验方式, 支持的类型如下:</p><ul><li> 1 :实名认证查看</li><li> 2 :手机号校验查看</li></ul>
+ * @method void setApproverVerifyTypes(array $ApproverVerifyTypes) 设置<p>签署人查看合同校验方式, 支持的类型如下:</p><ul><li> 1 :实名认证查看</li><li> 2 :手机号校验查看</li></ul>
+ * @method array getApproverSignTypes() 获取<p>签署人进行合同签署时的认证方式，支持的类型如下:</p><ul><li> 1 :人脸认证</li><li> 2 :签署密码</li><li> 3 :运营商三要素认证</li><li> 4 :UKey认证</li><li> 5 :设备指纹识别</li><li> 6 :设备面容识别</li></ul>
+ * @method void setApproverSignTypes(array $ApproverSignTypes) 设置<p>签署人进行合同签署时的认证方式，支持的类型如下:</p><ul><li> 1 :人脸认证</li><li> 2 :签署密码</li><li> 3 :运营商三要素认证</li><li> 4 :UKey认证</li><li> 5 :设备指纹识别</li><li> 6 :设备面容识别</li></ul>
+ * @method boolean getNoTransfer() 获取<p>签署方是否可以转他人处理</p><ul><li> **false** : ( 默认)可以转他人处理</li><li> **true** :不可以转他人处理</li></ul>
+ * @method void setNoTransfer(boolean $NoTransfer) 设置<p>签署方是否可以转他人处理</p><ul><li> **false** : ( 默认)可以转他人处理</li><li> **true** :不可以转他人处理</li></ul>
  */
 class Recipient extends AbstractModel
 {
     /**
-     * @var string 合同参与方的角色ID
+     * @var string <p>合同参与方的角色ID</p>
      */
     public $RecipientId;
 
     /**
-     * @var string 参与者类型, 可以选择的类型如下:
-<ul><li> **ENTERPRISE** :此角色为企业参与方</li>
-<li> **INDIVIDUAL** :此角色为个人参与方</li>
-<li> **PROMOTER** :此角色是发起方</li></ul>
+     * @var string <p>参与者类型, 可以选择的类型如下:</p><ul><li> **ENTERPRISE** :此角色为企业参与方</li><li> **INDIVIDUAL** :此角色为个人参与方</li><li> **PROMOTER** :此角色是发起方</li></ul>
      */
     public $RecipientType;
 
     /**
-     * @var string 合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。
+     * @var string <p>合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。</p>
      */
     public $Description;
 
     /**
-     * @var string 合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。
+     * @var string <p>合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。</p>
      */
     public $RoleName;
 
     /**
-     * @var boolean 是否需要校验，
-true-是，
-false-否
+     * @var boolean <p>是否需要校验，<br>true-是，<br>false-否</p>
      */
     public $RequireValidation;
 
     /**
-     * @var boolean 是否必须填写，
-true-是，
-false-否
+     * @var boolean <p>是否必须填写，<br>true-是，<br>false-否</p>
      */
     public $RequireSign;
 
     /**
-     * @var integer 内部字段，签署类型
+     * @var integer <p>内部字段，签署类型</p><p>枚举值：</p><ul><li>0： 人脸</li></ul>
      */
     public $SignType;
 
     /**
-     * @var integer 签署顺序：数字越小优先级越高
+     * @var integer <p>签署顺序：数字越小优先级越高</p>
      */
     public $RoutingOrder;
 
     /**
-     * @var boolean 是否是发起方，
-true-是 
-false-否
+     * @var boolean <p>是否是发起方，<br>true-是<br>false-否</p>
      */
     public $IsPromoter;
 
     /**
-     * @var array 签署人查看合同校验方式, 支持的类型如下:
-<ul><li> 1 :实名认证查看</li>
-<li> 2 :手机号校验查看</li></ul>
+     * @var array <p>签署人查看合同校验方式, 支持的类型如下:</p><ul><li> 1 :实名认证查看</li><li> 2 :手机号校验查看</li></ul>
      */
     public $ApproverVerifyTypes;
 
     /**
-     * @var array 签署人进行合同签署时的认证方式，支持的类型如下:
-<ul><li> 1 :人脸认证</li>
-<li> 2 :签署密码</li>
-<li> 3 :运营商三要素认证</li>
-<li> 4 :UKey认证</li>
-<li> 5 :设备指纹识别</li>
-<li> 6 :设备面容识别</li></ul>
+     * @var array <p>签署人进行合同签署时的认证方式，支持的类型如下:</p><ul><li> 1 :人脸认证</li><li> 2 :签署密码</li><li> 3 :运营商三要素认证</li><li> 4 :UKey认证</li><li> 5 :设备指纹识别</li><li> 6 :设备面容识别</li></ul>
      */
     public $ApproverSignTypes;
 
     /**
-     * @var boolean 签署方是否可以转他人处理
-
-<ul><li> **false** : ( 默认)可以转他人处理</li>
-<li> **true** :不可以转他人处理</li></ul>
+     * @var boolean <p>签署方是否可以转他人处理</p><ul><li> **false** : ( 默认)可以转他人处理</li><li> **true** :不可以转他人处理</li></ul>
      */
     public $NoTransfer;
 
     /**
-     * @param string $RecipientId 合同参与方的角色ID
-     * @param string $RecipientType 参与者类型, 可以选择的类型如下:
-<ul><li> **ENTERPRISE** :此角色为企业参与方</li>
-<li> **INDIVIDUAL** :此角色为个人参与方</li>
-<li> **PROMOTER** :此角色是发起方</li></ul>
-     * @param string $Description 合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。
-     * @param string $RoleName 合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。
-     * @param boolean $RequireValidation 是否需要校验，
-true-是，
-false-否
-     * @param boolean $RequireSign 是否必须填写，
-true-是，
-false-否
-     * @param integer $SignType 内部字段，签署类型
-     * @param integer $RoutingOrder 签署顺序：数字越小优先级越高
-     * @param boolean $IsPromoter 是否是发起方，
-true-是 
-false-否
-     * @param array $ApproverVerifyTypes 签署人查看合同校验方式, 支持的类型如下:
-<ul><li> 1 :实名认证查看</li>
-<li> 2 :手机号校验查看</li></ul>
-     * @param array $ApproverSignTypes 签署人进行合同签署时的认证方式，支持的类型如下:
-<ul><li> 1 :人脸认证</li>
-<li> 2 :签署密码</li>
-<li> 3 :运营商三要素认证</li>
-<li> 4 :UKey认证</li>
-<li> 5 :设备指纹识别</li>
-<li> 6 :设备面容识别</li></ul>
-     * @param boolean $NoTransfer 签署方是否可以转他人处理
-
-<ul><li> **false** : ( 默认)可以转他人处理</li>
-<li> **true** :不可以转他人处理</li></ul>
+     * @param string $RecipientId <p>合同参与方的角色ID</p>
+     * @param string $RecipientType <p>参与者类型, 可以选择的类型如下:</p><ul><li> **ENTERPRISE** :此角色为企业参与方</li><li> **INDIVIDUAL** :此角色为个人参与方</li><li> **PROMOTER** :此角色是发起方</li></ul>
+     * @param string $Description <p>合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。</p>
+     * @param string $RoleName <p>合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。</p>
+     * @param boolean $RequireValidation <p>是否需要校验，<br>true-是，<br>false-否</p>
+     * @param boolean $RequireSign <p>是否必须填写，<br>true-是，<br>false-否</p>
+     * @param integer $SignType <p>内部字段，签署类型</p><p>枚举值：</p><ul><li>0： 人脸</li></ul>
+     * @param integer $RoutingOrder <p>签署顺序：数字越小优先级越高</p>
+     * @param boolean $IsPromoter <p>是否是发起方，<br>true-是<br>false-否</p>
+     * @param array $ApproverVerifyTypes <p>签署人查看合同校验方式, 支持的类型如下:</p><ul><li> 1 :实名认证查看</li><li> 2 :手机号校验查看</li></ul>
+     * @param array $ApproverSignTypes <p>签署人进行合同签署时的认证方式，支持的类型如下:</p><ul><li> 1 :人脸认证</li><li> 2 :签署密码</li><li> 3 :运营商三要素认证</li><li> 4 :UKey认证</li><li> 5 :设备指纹识别</li><li> 6 :设备面容识别</li></ul>
+     * @param boolean $NoTransfer <p>签署方是否可以转他人处理</p><ul><li> **false** : ( 默认)可以转他人处理</li><li> **true** :不可以转他人处理</li></ul>
      */
     function __construct()
     {

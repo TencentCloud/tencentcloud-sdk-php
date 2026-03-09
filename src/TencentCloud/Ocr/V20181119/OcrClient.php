@@ -53,7 +53,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 默认接口请求频率限制：20次/秒。
  * @method Models\ClassifyStoreNameResponse ClassifyStoreName(Models\ClassifyStoreNameRequest $req) 本接口用于识别门头照分类标签信息
 默认接口请求频率限制：1次/秒
- * @method Models\DescribeExtractDocAgentJobResponse DescribeExtractDocAgentJob(Models\DescribeExtractDocAgentJobRequest $req) 用于查询文档处理任务。文档处理领域里常见的通用Agent 如抽取、比对之类的，目前我们提供的抽取，但未来可以根据实际情况和客户需求扩展。
+ * @method Models\DescribeExtractDocAgentJobResponse DescribeExtractDocAgentJob(Models\DescribeExtractDocAgentJobRequest $req) 模型参数更大，速度更慢。推荐场景：可以接受异步（超过30s返回），样本输入输出token大于2000，长文本类文档建议用异步模型。需要 SubmitExtractDocAgentJob（提交任务）、DescribeExtractDocAgentJob（查询任务）两个接口配套使用，计费发生在提交任务后。【备注：1.固定价格不限抽取字段数，2.自适应价格抽取字段大于10记两次费用，小于等于10记一次费用】
  * @method Models\DescribeMarkEssayAgentJobResponse DescribeMarkEssayAgentJob(Models\DescribeMarkEssayAgentJobRequest $req) 用于作文批改Agent查询任务。基于业界领先的千亿参数多模态大模型技术，提供中英文手写作文的精准批改端到端服务。核心功能涵盖错别字智能识别、好词好句点评、错句纠错，并能够在原文中定位至具体段落与字符位置，同时提供详细的修改建议与优化内容。此能力是作业批改场景中的核心模块。
 
 默认接口请求并发限制：2次/分钟。
@@ -87,7 +87,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\EstateCertOCRResponse EstateCertOCR(Models\EstateCertOCRRequest $req) 本接口支持不动产权证关键字段的识别，包括使用期限、面积、用途、权利性质、权利类型、坐落、共有情况、权利人、权利其他状况等。
 
 默认接口请求频率限制：5次/秒。
- * @method Models\ExtractDocAgentResponse ExtractDocAgent(Models\ExtractDocAgentRequest $req) 用于查询文档处理任务。文档处理领域里常见的通用Agent 如抽取、比对之类的，目前我们提供的抽取，但未来可以根据实际情况和客户需求扩展。
+ * @method Models\ExtractDocAgentResponse ExtractDocAgent(Models\ExtractDocAgentRequest $req) 模型参数更小，速度更快。推荐场景：实时性要求高（30s以内）并且样本输入输出token2000以内，建议用实时模型。【备注：1.固定价格不限抽取字段数，2.自适应价格抽取字段大于10记两次费用，小于等于10记一次费用】
  * @method Models\ExtractDocBasicResponse ExtractDocBasic(Models\ExtractDocBasicRequest $req) 本接口支持识别并提取制式卡证、票据、表单等结构化场景的字段信息。无需任何配置，灵活高效。适用于各类结构化信息录入场景。点击[立即体验](https://ocrdemo.cloud.tencent.com/?action=ExtractDocBasic)。
 
 接口别名：SmartStructuralOCRV2
@@ -701,9 +701,6 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\RecognizeTableAccurateOCRResponse RecognizeTableAccurateOCR(Models\RecognizeTableAccurateOCRRequest $req) 本接口支持中英文图片/PDF内常规表格、无线表格、多表格的检测和识别，返回每个单元格的文字内容，支持旋转的表格图片识别，且支持将识别结果保存为 Excel 格式。识别效果比表格识别V2更好，覆盖场景更加广泛，对表格难例场景，如无线表格、嵌套表格（有线表格中包含无线表格）的识别效果均优于表格识别V2。
 
 默认接口请求频率限制：2次/秒。
- * @method Models\RecognizeTableMultiOCRResponse RecognizeTableMultiOCR(Models\RecognizeTableMultiOCRRequest $req) 基于MLLM(多模态大语言模型)的表格识别能力，针对复杂表格的算法识别效果更佳，适配财务报表识别场景，并可输出直接对接业务系统的Excel数据。
-
-默认接口请求频率限制：1次/秒。
  * @method Models\RecognizeTableOCRResponse RecognizeTableOCR(Models\RecognizeTableOCRRequest $req) 本接口支持中英文图片/ PDF内常规表格、无线表格、多表格的检测和识别，支持日文有线表格识别，返回每个单元格的文字内容，支持旋转的表格图片识别，且支持将识别结果保存为 Excel 格式。
 
 默认接口请求频率限制：10次/秒。
@@ -740,7 +737,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\SmartStructuralOCRResponse SmartStructuralOCR(Models\SmartStructuralOCRRequest $req) 本接口支持识别并提取各类证照、票据、表单、合同等结构化场景的字段信息。无需任何配置，灵活高效。适用于各类结构化信息录入场景。
 
 默认接口请求频率限制：5次/秒。
- * @method Models\SubmitExtractDocAgentJobResponse SubmitExtractDocAgentJob(Models\SubmitExtractDocAgentJobRequest $req) 文档处理领域里常见的通用Agent 如抽取、比对之类的，目前我们提供的抽取，但未来可以根据实际情况和客户需求扩展。
+ * @method Models\SubmitExtractDocAgentJobResponse SubmitExtractDocAgentJob(Models\SubmitExtractDocAgentJobRequest $req) 模型参数更大，速度更慢。推荐场景：可以接受异步（超过30s返回），样本输入输出token大于2000，长文本类文档建议用异步模型。需要 SubmitExtractDocAgentJob（提交任务）、DescribeExtractDocAgentJob（查询任务）两个接口配套使用，计费发生在提交任务后。【备注：1.固定价格不限抽取字段数，2.自适应价格抽取字段大于10记两次费用，小于等于10记一次费用】
  * @method Models\SubmitMarkEssayAgentJobResponse SubmitMarkEssayAgentJob(Models\SubmitMarkEssayAgentJobRequest $req) 用于作文批改Agent提交任务。基于业界领先的千亿参数多模态大模型技术，提供中英文手写作文的精准批改端到端服务。核心功能涵盖错别字智能识别、好词好句点评、错句纠错，并能够在原文中定位至具体段落与字符位置，同时提供详细的修改建议与优化内容。此能力是作业批改场景中的核心模块。
 
 默认接口请求并发限制：2次/分钟。

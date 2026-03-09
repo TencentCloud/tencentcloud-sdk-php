@@ -62,6 +62,7 @@ class RemoveWatermarkRequest extends AbstractModel
 
     /**
      * @var string 该字段已无效。
+     * @deprecated
      */
     public $TasksNotifyMode;
 

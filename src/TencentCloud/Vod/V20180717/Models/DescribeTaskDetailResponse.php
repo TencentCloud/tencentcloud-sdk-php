@@ -20,333 +20,335 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskDetail返回参数结构体
  *
- * @method string getTaskType() 获取任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li>
- * @method void setTaskType(string $TaskType) 设置任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li>
- * @method string getStatus() 获取任务状态，取值：
-<li>WAITING：等待中；</li>
-<li>PROCESSING：处理中；</li>
-<li>FINISH：已完成；</li>
-<li>ABORTED：已终止。</li>
- * @method void setStatus(string $Status) 设置任务状态，取值：
-<li>WAITING：等待中；</li>
-<li>PROCESSING：处理中；</li>
-<li>FINISH：已完成；</li>
-<li>ABORTED：已终止。</li>
- * @method string getCreateTime() 获取任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method void setCreateTime(string $CreateTime) 设置任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method string getBeginProcessTime() 获取任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method void setBeginProcessTime(string $BeginProcessTime) 设置任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method string getFinishTime() 获取任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method void setFinishTime(string $FinishTime) 设置任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method ProcedureTask getProcedureTask() 获取视频处理任务信息，仅当 TaskType 为 Procedure，该字段有值。
+ * @method string getTaskType() 获取<p>任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li></p>
+ * @method void setTaskType(string $TaskType) 设置<p>任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li></p>
+ * @method string getStatus() 获取<p>任务状态，取值：</p><li>WAITING：等待中；</li><li>PROCESSING：处理中；</li><li>FINISH：已完成；</li><li>ABORTED：已终止。</li>
+ * @method void setStatus(string $Status) 设置<p>任务状态，取值：</p><li>WAITING：等待中；</li><li>PROCESSING：处理中；</li><li>FINISH：已完成；</li><li>ABORTED：已终止。</li>
+ * @method string getCreateTime() 获取<p>任务的创建时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>任务的创建时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method string getBeginProcessTime() 获取<p>任务开始执行的时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method void setBeginProcessTime(string $BeginProcessTime) 设置<p>任务开始执行的时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method string getFinishTime() 获取<p>任务执行完毕的时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method void setFinishTime(string $FinishTime) 设置<p>任务执行完毕的时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method ProcedureTask getProcedureTask() 获取<p>视频处理任务信息，仅当 TaskType 为 Procedure，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProcedureTask(ProcedureTask $ProcedureTask) 设置视频处理任务信息，仅当 TaskType 为 Procedure，该字段有值。
+ * @method void setProcedureTask(ProcedureTask $ProcedureTask) 设置<p>视频处理任务信息，仅当 TaskType 为 Procedure，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method EditMediaTask getEditMediaTask() 获取视频编辑任务信息，仅当 TaskType 为 EditMedia，该字段有值。
+ * @method EditMediaTask getEditMediaTask() 获取<p>视频编辑任务信息，仅当 TaskType 为 EditMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEditMediaTask(EditMediaTask $EditMediaTask) 设置视频编辑任务信息，仅当 TaskType 为 EditMedia，该字段有值。
+ * @method void setEditMediaTask(EditMediaTask $EditMediaTask) 设置<p>视频编辑任务信息，仅当 TaskType 为 EditMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method WechatPublishTask getWechatPublishTask() 获取微信发布任务信息，仅当 TaskType 为 WechatPublish，该字段有值。
+ * @method WechatPublishTask getWechatPublishTask() 获取<p>微信发布任务信息，仅当 TaskType 为 WechatPublish，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWechatPublishTask(WechatPublishTask $WechatPublishTask) 设置微信发布任务信息，仅当 TaskType 为 WechatPublish，该字段有值。
+ * @method void setWechatPublishTask(WechatPublishTask $WechatPublishTask) 设置<p>微信发布任务信息，仅当 TaskType 为 WechatPublish，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ComposeMediaTask getComposeMediaTask() 获取制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。
+ * @method ComposeMediaTask getComposeMediaTask() 获取<p>制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setComposeMediaTask(ComposeMediaTask $ComposeMediaTask) 设置制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。
+ * @method void setComposeMediaTask(ComposeMediaTask $ComposeMediaTask) 设置<p>制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method SplitMediaTask getSplitMediaTask() 获取视频拆条任务信息，仅当 TaskType 为 SplitMedia，该字段有值。
+ * @method SplitMediaTask getSplitMediaTask() 获取<p>视频拆条任务信息，仅当 TaskType 为 SplitMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSplitMediaTask(SplitMediaTask $SplitMediaTask) 设置视频拆条任务信息，仅当 TaskType 为 SplitMedia，该字段有值。
+ * @method void setSplitMediaTask(SplitMediaTask $SplitMediaTask) 设置<p>视频拆条任务信息，仅当 TaskType 为 SplitMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method WechatMiniProgramPublishTask getWechatMiniProgramPublishTask() 获取微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+ * @method WechatMiniProgramPublishTask getWechatMiniProgramPublishTask() 获取<p>微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWechatMiniProgramPublishTask(WechatMiniProgramPublishTask $WechatMiniProgramPublishTask) 设置微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+ * @method void setWechatMiniProgramPublishTask(WechatMiniProgramPublishTask $WechatMiniProgramPublishTask) 设置<p>微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method PullUploadTask getPullUploadTask() 获取拉取上传媒体文件任务信息，仅当 TaskType 为 PullUpload，该字段有值。
+ * @method PullUploadTask getPullUploadTask() 获取<p>拉取上传媒体文件任务信息，仅当 TaskType 为 PullUpload，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPullUploadTask(PullUploadTask $PullUploadTask) 设置拉取上传媒体文件任务信息，仅当 TaskType 为 PullUpload，该字段有值。
+ * @method void setPullUploadTask(PullUploadTask $PullUploadTask) 设置<p>拉取上传媒体文件任务信息，仅当 TaskType 为 PullUpload，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method TranscodeTask2017 getTranscodeTask() 获取视频转码任务信息，仅当 TaskType 为 Transcode，该字段有值。
+ * @method TranscodeTask2017 getTranscodeTask() 获取<p>视频转码任务信息，仅当 TaskType 为 Transcode，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTranscodeTask(TranscodeTask2017 $TranscodeTask) 设置视频转码任务信息，仅当 TaskType 为 Transcode，该字段有值。
+ * @method void setTranscodeTask(TranscodeTask2017 $TranscodeTask) 设置<p>视频转码任务信息，仅当 TaskType 为 Transcode，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ConcatTask2017 getConcatTask() 获取视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。
+ * @method ConcatTask2017 getConcatTask() 获取<p>视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConcatTask(ConcatTask2017 $ConcatTask) 设置视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。
+ * @method void setConcatTask(ConcatTask2017 $ConcatTask) 设置<p>视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ClipTask2017 getClipTask() 获取视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。
+ * @method ClipTask2017 getClipTask() 获取<p>视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClipTask(ClipTask2017 $ClipTask) 设置视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。
+ * @method void setClipTask(ClipTask2017 $ClipTask) 设置<p>视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CreateImageSpriteTask2017 getCreateImageSpriteTask() 获取截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。
+ * @method CreateImageSpriteTask2017 getCreateImageSpriteTask() 获取<p>截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateImageSpriteTask(CreateImageSpriteTask2017 $CreateImageSpriteTask) 设置截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。
+ * @method void setCreateImageSpriteTask(CreateImageSpriteTask2017 $CreateImageSpriteTask) 设置<p>截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method SnapshotByTimeOffsetTask2017 getSnapshotByTimeOffsetTask() 获取视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
+ * @method SnapshotByTimeOffsetTask2017 getSnapshotByTimeOffsetTask() 获取<p>视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSnapshotByTimeOffsetTask(SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetTask) 设置视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
+ * @method void setSnapshotByTimeOffsetTask(SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetTask) 设置<p>视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method RemoveWatermarkTask getRemoveWatermarkTask() 获取智能去除水印任务信息，仅当 TaskType 为 RemoveWatermark，该字段有值。
+ * @method RemoveWatermarkTask getRemoveWatermarkTask() 获取<p>智能去除水印任务信息，仅当 TaskType 为 RemoveWatermark，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRemoveWatermarkTask(RemoveWatermarkTask $RemoveWatermarkTask) 设置智能去除水印任务信息，仅当 TaskType 为 RemoveWatermark，该字段有值。
+ * @method void setRemoveWatermarkTask(RemoveWatermarkTask $RemoveWatermarkTask) 设置<p>智能去除水印任务信息，仅当 TaskType 为 RemoveWatermark，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method RebuildMediaTask getRebuildMediaTask() 获取音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。
+ * @method RebuildMediaTask getRebuildMediaTask() 获取<p>音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRebuildMediaTask(RebuildMediaTask $RebuildMediaTask) 设置音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。
+ * @method void setRebuildMediaTask(RebuildMediaTask $RebuildMediaTask) 设置<p>音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ExtractTraceWatermarkTask getExtractTraceWatermarkTask() 获取提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。
+ * @method ExtractTraceWatermarkTask getExtractTraceWatermarkTask() 获取<p>提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExtractTraceWatermarkTask(ExtractTraceWatermarkTask $ExtractTraceWatermarkTask) 设置提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。
+ * @method void setExtractTraceWatermarkTask(ExtractTraceWatermarkTask $ExtractTraceWatermarkTask) 设置<p>提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ExtractCopyRightWatermarkTask getExtractCopyRightWatermarkTask() 获取提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。
+ * @method ExtractCopyRightWatermarkTask getExtractCopyRightWatermarkTask() 获取<p>提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExtractCopyRightWatermarkTask(ExtractCopyRightWatermarkTask $ExtractCopyRightWatermarkTask) 设置提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。
+ * @method void setExtractCopyRightWatermarkTask(ExtractCopyRightWatermarkTask $ExtractCopyRightWatermarkTask) 设置<p>提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ReviewAudioVideoTask getReviewAudioVideoTask() 获取音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。
+ * @method ReviewAudioVideoTask getReviewAudioVideoTask() 获取<p>音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReviewAudioVideoTask(ReviewAudioVideoTask $ReviewAudioVideoTask) 设置音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。
+ * @method void setReviewAudioVideoTask(ReviewAudioVideoTask $ReviewAudioVideoTask) 设置<p>音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ReduceMediaBitrateTask getReduceMediaBitrateTask() 获取该字段已无效。
+ * @method ReduceMediaBitrateTask getReduceMediaBitrateTask() 获取<p>该字段已无效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReduceMediaBitrateTask(ReduceMediaBitrateTask $ReduceMediaBitrateTask) 设置该字段已无效。
+ * @method void setReduceMediaBitrateTask(ReduceMediaBitrateTask $ReduceMediaBitrateTask) 设置<p>该字段已无效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DescribeFileAttributesTask getDescribeFileAttributesTask() 获取获取文件属性任务信息，仅当 TaskType 为 DescribeFileAttributes，该字段有值。
+ * @method DescribeFileAttributesTask getDescribeFileAttributesTask() 获取<p>获取文件属性任务信息，仅当 TaskType 为 DescribeFileAttributes，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescribeFileAttributesTask(DescribeFileAttributesTask $DescribeFileAttributesTask) 设置获取文件属性任务信息，仅当 TaskType 为 DescribeFileAttributes，该字段有值。
+ * @method void setDescribeFileAttributesTask(DescribeFileAttributesTask $DescribeFileAttributesTask) 设置<p>获取文件属性任务信息，仅当 TaskType 为 DescribeFileAttributes，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method QualityInspectTask getQualityInspectTask() 获取音画质检测任务信息，仅当 TaskType 为 QualityInspect 时该字段有值。
+ * @method QualityInspectTask getQualityInspectTask() 获取<p>音画质检测任务信息，仅当 TaskType 为 QualityInspect 时该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQualityInspectTask(QualityInspectTask $QualityInspectTask) 设置音画质检测任务信息，仅当 TaskType 为 QualityInspect 时该字段有值。
+ * @method void setQualityInspectTask(QualityInspectTask $QualityInspectTask) 设置<p>音画质检测任务信息，仅当 TaskType 为 QualityInspect 时该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method QualityEnhanceTask getQualityEnhanceTask() 获取音画质重生任务信息，仅当 TaskType 为 QualityEnhance，该字段有值。
+ * @method QualityEnhanceTask getQualityEnhanceTask() 获取<p>音画质重生任务信息，仅当 TaskType 为 QualityEnhance，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQualityEnhanceTask(QualityEnhanceTask $QualityEnhanceTask) 设置音画质重生任务信息，仅当 TaskType 为 QualityEnhance，该字段有值。
+ * @method void setQualityEnhanceTask(QualityEnhanceTask $QualityEnhanceTask) 设置<p>音画质重生任务信息，仅当 TaskType 为 QualityEnhance，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ComplexAdaptiveDynamicStreamingTask getComplexAdaptiveDynamicStreamingTask() 获取复杂自适应码流任务信息，仅当 TaskType 为 ComplexAdaptiveDynamicStreaming，该字段有值。
+ * @method ComplexAdaptiveDynamicStreamingTask getComplexAdaptiveDynamicStreamingTask() 获取<p>复杂自适应码流任务信息，仅当 TaskType 为 ComplexAdaptiveDynamicStreaming，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setComplexAdaptiveDynamicStreamingTask(ComplexAdaptiveDynamicStreamingTask $ComplexAdaptiveDynamicStreamingTask) 设置复杂自适应码流任务信息，仅当 TaskType 为 ComplexAdaptiveDynamicStreaming，该字段有值。
+ * @method void setComplexAdaptiveDynamicStreamingTask(ComplexAdaptiveDynamicStreamingTask $ComplexAdaptiveDynamicStreamingTask) 设置<p>复杂自适应码流任务信息，仅当 TaskType 为 ComplexAdaptiveDynamicStreaming，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ProcessMediaByMPS getProcessMediaByMPSTask() 获取MPS 视频处理任务信息，仅当 TaskType 为 ProcessMediaByMPS，该字段有值。
- * @method void setProcessMediaByMPSTask(ProcessMediaByMPS $ProcessMediaByMPSTask) 设置MPS 视频处理任务信息，仅当 TaskType 为 ProcessMediaByMPS，该字段有值。
- * @method AigcImageTask getAigcImageTask() 获取AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。
- * @method void setAigcImageTask(AigcImageTask $AigcImageTask) 设置AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。
- * @method AigcVideoTask getAigcVideoTask() 获取AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。
- * @method void setAigcVideoTask(AigcVideoTask $AigcVideoTask) 设置AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。
- * @method ImportMediaKnowledgeTask getImportMediaKnowledge() 获取媒体导入知识库任务信息，仅当 TaskType 为 ImportMediaKnowledge，该字段有值。
- * @method void setImportMediaKnowledge(ImportMediaKnowledgeTask $ImportMediaKnowledge) 设置媒体导入知识库任务信息，仅当 TaskType 为 ImportMediaKnowledge，该字段有值。
- * @method SceneAigcImageTask getSceneAigcImageTask() 获取场景化 AIGC 生图任务信息，仅当 TaskType 为 SceneAigcImageTask，该字段有值。
- * @method void setSceneAigcImageTask(SceneAigcImageTask $SceneAigcImageTask) 设置场景化 AIGC 生图任务信息，仅当 TaskType 为 SceneAigcImageTask，该字段有值。
- * @method SceneAigcVideoTask getSceneAigcVideoTask() 获取场景化 AIGC 生视频任务信息，仅当 TaskType 为 SceneAigcVideoTask，该字段有值。
- * @method void setSceneAigcVideoTask(SceneAigcVideoTask $SceneAigcVideoTask) 设置场景化 AIGC 生视频任务信息，仅当 TaskType 为 SceneAigcVideoTask，该字段有值。
- * @method ProcessImageAsync getProcessImageAsyncTask() 获取图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。
- * @method void setProcessImageAsyncTask(ProcessImageAsync $ProcessImageAsyncTask) 设置图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。
- * @method ExtractBlindWatermarkTask getExtractBlindWatermarkTask() 获取提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。
- * @method void setExtractBlindWatermarkTask(ExtractBlindWatermarkTask $ExtractBlindWatermarkTask) 设置提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。
+ * @method ProcessMediaByMPS getProcessMediaByMPSTask() 获取<p>MPS 视频处理任务信息，仅当 TaskType 为 ProcessMediaByMPS，该字段有值。</p>
+ * @method void setProcessMediaByMPSTask(ProcessMediaByMPS $ProcessMediaByMPSTask) 设置<p>MPS 视频处理任务信息，仅当 TaskType 为 ProcessMediaByMPS，该字段有值。</p>
+ * @method AigcImageTask getAigcImageTask() 获取<p>AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。</p>
+ * @method void setAigcImageTask(AigcImageTask $AigcImageTask) 设置<p>AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。</p>
+ * @method AigcVideoTask getAigcVideoTask() 获取<p>AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。</p>
+ * @method void setAigcVideoTask(AigcVideoTask $AigcVideoTask) 设置<p>AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。</p>
+ * @method ImportMediaKnowledgeTask getImportMediaKnowledge() 获取<p>媒体导入知识库任务信息，仅当 TaskType 为 ImportMediaKnowledge，该字段有值。</p>
+ * @method void setImportMediaKnowledge(ImportMediaKnowledgeTask $ImportMediaKnowledge) 设置<p>媒体导入知识库任务信息，仅当 TaskType 为 ImportMediaKnowledge，该字段有值。</p>
+ * @method SceneAigcImageTask getSceneAigcImageTask() 获取<p>场景化 AIGC 生图任务信息，仅当 TaskType 为 SceneAigcImageTask，该字段有值。</p>
+ * @method void setSceneAigcImageTask(SceneAigcImageTask $SceneAigcImageTask) 设置<p>场景化 AIGC 生图任务信息，仅当 TaskType 为 SceneAigcImageTask，该字段有值。</p>
+ * @method SceneAigcVideoTask getSceneAigcVideoTask() 获取<p>场景化 AIGC 生视频任务信息，仅当 TaskType 为 SceneAigcVideoTask，该字段有值。</p>
+ * @method void setSceneAigcVideoTask(SceneAigcVideoTask $SceneAigcVideoTask) 设置<p>场景化 AIGC 生视频任务信息，仅当 TaskType 为 SceneAigcVideoTask，该字段有值。</p>
+ * @method ProcessImageAsync getProcessImageAsyncTask() 获取<p>图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。</p>
+ * @method void setProcessImageAsyncTask(ProcessImageAsync $ProcessImageAsyncTask) 设置<p>图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。</p>
+ * @method ExtractBlindWatermarkTask getExtractBlindWatermarkTask() 获取<p>提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。</p>
+ * @method void setExtractBlindWatermarkTask(ExtractBlindWatermarkTask $ExtractBlindWatermarkTask) 设置<p>提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。</p>
+ * @method CreateAigcAdvancedCustomElementTask getCreateAigcAdvancedCustomElementTask() 获取<p>创建自定义主体信息，仅当 TaskType 为 CreateAigcAdvancedCustomElement，该字段有值。</p>
+ * @method void setCreateAigcAdvancedCustomElementTask(CreateAigcAdvancedCustomElementTask $CreateAigcAdvancedCustomElementTask) 设置<p>创建自定义主体信息，仅当 TaskType 为 CreateAigcAdvancedCustomElement，该字段有值。</p>
+ * @method CreateAigcCustomVoiceTask getCreateAigcCustomVoiceTask() 获取<p>创建自定义音色信息，仅当 TaskType 为 CreateAigcCustomVoice，该字段有值。</p>
+ * @method void setCreateAigcCustomVoiceTask(CreateAigcCustomVoiceTask $CreateAigcCustomVoiceTask) 设置<p>创建自定义音色信息，仅当 TaskType 为 CreateAigcCustomVoice，该字段有值。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeTaskDetailResponse extends AbstractModel
 {
     /**
-     * @var string 任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li>
+     * @var string <p>任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li></p>
      */
     public $TaskType;
 
     /**
-     * @var string 任务状态，取值：
-<li>WAITING：等待中；</li>
-<li>PROCESSING：处理中；</li>
-<li>FINISH：已完成；</li>
-<li>ABORTED：已终止。</li>
+     * @var string <p>任务状态，取值：</p><li>WAITING：等待中；</li><li>PROCESSING：处理中；</li><li>FINISH：已完成；</li><li>ABORTED：已终止。</li>
      */
     public $Status;
 
     /**
-     * @var string 任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @var string <p>任务的创建时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @var string <p>任务开始执行的时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public $BeginProcessTime;
 
     /**
-     * @var string 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @var string <p>任务执行完毕的时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public $FinishTime;
 
     /**
-     * @var ProcedureTask 视频处理任务信息，仅当 TaskType 为 Procedure，该字段有值。
+     * @var ProcedureTask <p>视频处理任务信息，仅当 TaskType 为 Procedure，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProcedureTask;
 
     /**
-     * @var EditMediaTask 视频编辑任务信息，仅当 TaskType 为 EditMedia，该字段有值。
+     * @var EditMediaTask <p>视频编辑任务信息，仅当 TaskType 为 EditMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EditMediaTask;
 
     /**
-     * @var WechatPublishTask 微信发布任务信息，仅当 TaskType 为 WechatPublish，该字段有值。
+     * @var WechatPublishTask <p>微信发布任务信息，仅当 TaskType 为 WechatPublish，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WechatPublishTask;
 
     /**
-     * @var ComposeMediaTask 制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。
+     * @var ComposeMediaTask <p>制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComposeMediaTask;
 
     /**
-     * @var SplitMediaTask 视频拆条任务信息，仅当 TaskType 为 SplitMedia，该字段有值。
+     * @var SplitMediaTask <p>视频拆条任务信息，仅当 TaskType 为 SplitMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SplitMediaTask;
 
     /**
-     * @var WechatMiniProgramPublishTask 微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+     * @var WechatMiniProgramPublishTask <p>微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WechatMiniProgramPublishTask;
 
     /**
-     * @var PullUploadTask 拉取上传媒体文件任务信息，仅当 TaskType 为 PullUpload，该字段有值。
+     * @var PullUploadTask <p>拉取上传媒体文件任务信息，仅当 TaskType 为 PullUpload，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PullUploadTask;
 
     /**
-     * @var TranscodeTask2017 视频转码任务信息，仅当 TaskType 为 Transcode，该字段有值。
+     * @var TranscodeTask2017 <p>视频转码任务信息，仅当 TaskType 为 Transcode，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TranscodeTask;
 
     /**
-     * @var ConcatTask2017 视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。
+     * @var ConcatTask2017 <p>视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConcatTask;
 
     /**
-     * @var ClipTask2017 视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。
+     * @var ClipTask2017 <p>视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClipTask;
 
     /**
-     * @var CreateImageSpriteTask2017 截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。
+     * @var CreateImageSpriteTask2017 <p>截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateImageSpriteTask;
 
     /**
-     * @var SnapshotByTimeOffsetTask2017 视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
+     * @var SnapshotByTimeOffsetTask2017 <p>视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotByTimeOffsetTask;
 
     /**
-     * @var RemoveWatermarkTask 智能去除水印任务信息，仅当 TaskType 为 RemoveWatermark，该字段有值。
+     * @var RemoveWatermarkTask <p>智能去除水印任务信息，仅当 TaskType 为 RemoveWatermark，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemoveWatermarkTask;
 
     /**
-     * @var RebuildMediaTask 音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。
+     * @var RebuildMediaTask <p>音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RebuildMediaTask;
 
     /**
-     * @var ExtractTraceWatermarkTask 提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。
+     * @var ExtractTraceWatermarkTask <p>提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtractTraceWatermarkTask;
 
     /**
-     * @var ExtractCopyRightWatermarkTask 提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。
+     * @var ExtractCopyRightWatermarkTask <p>提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtractCopyRightWatermarkTask;
 
     /**
-     * @var ReviewAudioVideoTask 音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。
+     * @var ReviewAudioVideoTask <p>音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReviewAudioVideoTask;
 
     /**
-     * @var ReduceMediaBitrateTask 该字段已无效。
+     * @var ReduceMediaBitrateTask <p>该字段已无效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReduceMediaBitrateTask;
 
     /**
-     * @var DescribeFileAttributesTask 获取文件属性任务信息，仅当 TaskType 为 DescribeFileAttributes，该字段有值。
+     * @var DescribeFileAttributesTask <p>获取文件属性任务信息，仅当 TaskType 为 DescribeFileAttributes，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DescribeFileAttributesTask;
 
     /**
-     * @var QualityInspectTask 音画质检测任务信息，仅当 TaskType 为 QualityInspect 时该字段有值。
+     * @var QualityInspectTask <p>音画质检测任务信息，仅当 TaskType 为 QualityInspect 时该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QualityInspectTask;
 
     /**
-     * @var QualityEnhanceTask 音画质重生任务信息，仅当 TaskType 为 QualityEnhance，该字段有值。
+     * @var QualityEnhanceTask <p>音画质重生任务信息，仅当 TaskType 为 QualityEnhance，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QualityEnhanceTask;
 
     /**
-     * @var ComplexAdaptiveDynamicStreamingTask 复杂自适应码流任务信息，仅当 TaskType 为 ComplexAdaptiveDynamicStreaming，该字段有值。
+     * @var ComplexAdaptiveDynamicStreamingTask <p>复杂自适应码流任务信息，仅当 TaskType 为 ComplexAdaptiveDynamicStreaming，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComplexAdaptiveDynamicStreamingTask;
 
     /**
-     * @var ProcessMediaByMPS MPS 视频处理任务信息，仅当 TaskType 为 ProcessMediaByMPS，该字段有值。
+     * @var ProcessMediaByMPS <p>MPS 视频处理任务信息，仅当 TaskType 为 ProcessMediaByMPS，该字段有值。</p>
      */
     public $ProcessMediaByMPSTask;
 
     /**
-     * @var AigcImageTask AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。
+     * @var AigcImageTask <p>AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。</p>
      */
     public $AigcImageTask;
 
     /**
-     * @var AigcVideoTask AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。
+     * @var AigcVideoTask <p>AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。</p>
      */
     public $AigcVideoTask;
 
     /**
-     * @var ImportMediaKnowledgeTask 媒体导入知识库任务信息，仅当 TaskType 为 ImportMediaKnowledge，该字段有值。
+     * @var ImportMediaKnowledgeTask <p>媒体导入知识库任务信息，仅当 TaskType 为 ImportMediaKnowledge，该字段有值。</p>
      */
     public $ImportMediaKnowledge;
 
     /**
-     * @var SceneAigcImageTask 场景化 AIGC 生图任务信息，仅当 TaskType 为 SceneAigcImageTask，该字段有值。
+     * @var SceneAigcImageTask <p>场景化 AIGC 生图任务信息，仅当 TaskType 为 SceneAigcImageTask，该字段有值。</p>
      */
     public $SceneAigcImageTask;
 
     /**
-     * @var SceneAigcVideoTask 场景化 AIGC 生视频任务信息，仅当 TaskType 为 SceneAigcVideoTask，该字段有值。
+     * @var SceneAigcVideoTask <p>场景化 AIGC 生视频任务信息，仅当 TaskType 为 SceneAigcVideoTask，该字段有值。</p>
      */
     public $SceneAigcVideoTask;
 
     /**
-     * @var ProcessImageAsync 图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。
+     * @var ProcessImageAsync <p>图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。</p>
      */
     public $ProcessImageAsyncTask;
 
     /**
-     * @var ExtractBlindWatermarkTask 提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。
+     * @var ExtractBlindWatermarkTask <p>提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。</p>
      */
     public $ExtractBlindWatermarkTask;
+
+    /**
+     * @var CreateAigcAdvancedCustomElementTask <p>创建自定义主体信息，仅当 TaskType 为 CreateAigcAdvancedCustomElement，该字段有值。</p>
+     */
+    public $CreateAigcAdvancedCustomElementTask;
+
+    /**
+     * @var CreateAigcCustomVoiceTask <p>创建自定义音色信息，仅当 TaskType 为 CreateAigcCustomVoice，该字段有值。</p>
+     */
+    public $CreateAigcCustomVoiceTask;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -354,67 +356,65 @@ class DescribeTaskDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskType 任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li>
-     * @param string $Status 任务状态，取值：
-<li>WAITING：等待中；</li>
-<li>PROCESSING：处理中；</li>
-<li>FINISH：已完成；</li>
-<li>ABORTED：已终止。</li>
-     * @param string $CreateTime 任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param string $BeginProcessTime 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param string $FinishTime 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param ProcedureTask $ProcedureTask 视频处理任务信息，仅当 TaskType 为 Procedure，该字段有值。
+     * @param string $TaskType <p>任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li></p>
+     * @param string $Status <p>任务状态，取值：</p><li>WAITING：等待中；</li><li>PROCESSING：处理中；</li><li>FINISH：已完成；</li><li>ABORTED：已终止。</li>
+     * @param string $CreateTime <p>任务的创建时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param string $BeginProcessTime <p>任务开始执行的时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param string $FinishTime <p>任务执行完毕的时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param ProcedureTask $ProcedureTask <p>视频处理任务信息，仅当 TaskType 为 Procedure，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EditMediaTask $EditMediaTask 视频编辑任务信息，仅当 TaskType 为 EditMedia，该字段有值。
+     * @param EditMediaTask $EditMediaTask <p>视频编辑任务信息，仅当 TaskType 为 EditMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WechatPublishTask $WechatPublishTask 微信发布任务信息，仅当 TaskType 为 WechatPublish，该字段有值。
+     * @param WechatPublishTask $WechatPublishTask <p>微信发布任务信息，仅当 TaskType 为 WechatPublish，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ComposeMediaTask $ComposeMediaTask 制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。
+     * @param ComposeMediaTask $ComposeMediaTask <p>制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SplitMediaTask $SplitMediaTask 视频拆条任务信息，仅当 TaskType 为 SplitMedia，该字段有值。
+     * @param SplitMediaTask $SplitMediaTask <p>视频拆条任务信息，仅当 TaskType 为 SplitMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WechatMiniProgramPublishTask $WechatMiniProgramPublishTask 微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+     * @param WechatMiniProgramPublishTask $WechatMiniProgramPublishTask <p>微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PullUploadTask $PullUploadTask 拉取上传媒体文件任务信息，仅当 TaskType 为 PullUpload，该字段有值。
+     * @param PullUploadTask $PullUploadTask <p>拉取上传媒体文件任务信息，仅当 TaskType 为 PullUpload，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TranscodeTask2017 $TranscodeTask 视频转码任务信息，仅当 TaskType 为 Transcode，该字段有值。
+     * @param TranscodeTask2017 $TranscodeTask <p>视频转码任务信息，仅当 TaskType 为 Transcode，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConcatTask2017 $ConcatTask 视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。
+     * @param ConcatTask2017 $ConcatTask <p>视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClipTask2017 $ClipTask 视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。
+     * @param ClipTask2017 $ClipTask <p>视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateImageSpriteTask2017 $CreateImageSpriteTask 截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。
+     * @param CreateImageSpriteTask2017 $CreateImageSpriteTask <p>截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetTask 视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
+     * @param SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetTask <p>视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RemoveWatermarkTask $RemoveWatermarkTask 智能去除水印任务信息，仅当 TaskType 为 RemoveWatermark，该字段有值。
+     * @param RemoveWatermarkTask $RemoveWatermarkTask <p>智能去除水印任务信息，仅当 TaskType 为 RemoveWatermark，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RebuildMediaTask $RebuildMediaTask 音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。
+     * @param RebuildMediaTask $RebuildMediaTask <p>音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExtractTraceWatermarkTask $ExtractTraceWatermarkTask 提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。
+     * @param ExtractTraceWatermarkTask $ExtractTraceWatermarkTask <p>提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExtractCopyRightWatermarkTask $ExtractCopyRightWatermarkTask 提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。
+     * @param ExtractCopyRightWatermarkTask $ExtractCopyRightWatermarkTask <p>提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReviewAudioVideoTask $ReviewAudioVideoTask 音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。
+     * @param ReviewAudioVideoTask $ReviewAudioVideoTask <p>音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReduceMediaBitrateTask $ReduceMediaBitrateTask 该字段已无效。
+     * @param ReduceMediaBitrateTask $ReduceMediaBitrateTask <p>该字段已无效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DescribeFileAttributesTask $DescribeFileAttributesTask 获取文件属性任务信息，仅当 TaskType 为 DescribeFileAttributes，该字段有值。
+     * @param DescribeFileAttributesTask $DescribeFileAttributesTask <p>获取文件属性任务信息，仅当 TaskType 为 DescribeFileAttributes，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QualityInspectTask $QualityInspectTask 音画质检测任务信息，仅当 TaskType 为 QualityInspect 时该字段有值。
+     * @param QualityInspectTask $QualityInspectTask <p>音画质检测任务信息，仅当 TaskType 为 QualityInspect 时该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QualityEnhanceTask $QualityEnhanceTask 音画质重生任务信息，仅当 TaskType 为 QualityEnhance，该字段有值。
+     * @param QualityEnhanceTask $QualityEnhanceTask <p>音画质重生任务信息，仅当 TaskType 为 QualityEnhance，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ComplexAdaptiveDynamicStreamingTask $ComplexAdaptiveDynamicStreamingTask 复杂自适应码流任务信息，仅当 TaskType 为 ComplexAdaptiveDynamicStreaming，该字段有值。
+     * @param ComplexAdaptiveDynamicStreamingTask $ComplexAdaptiveDynamicStreamingTask <p>复杂自适应码流任务信息，仅当 TaskType 为 ComplexAdaptiveDynamicStreaming，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProcessMediaByMPS $ProcessMediaByMPSTask MPS 视频处理任务信息，仅当 TaskType 为 ProcessMediaByMPS，该字段有值。
-     * @param AigcImageTask $AigcImageTask AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。
-     * @param AigcVideoTask $AigcVideoTask AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。
-     * @param ImportMediaKnowledgeTask $ImportMediaKnowledge 媒体导入知识库任务信息，仅当 TaskType 为 ImportMediaKnowledge，该字段有值。
-     * @param SceneAigcImageTask $SceneAigcImageTask 场景化 AIGC 生图任务信息，仅当 TaskType 为 SceneAigcImageTask，该字段有值。
-     * @param SceneAigcVideoTask $SceneAigcVideoTask 场景化 AIGC 生视频任务信息，仅当 TaskType 为 SceneAigcVideoTask，该字段有值。
-     * @param ProcessImageAsync $ProcessImageAsyncTask 图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。
-     * @param ExtractBlindWatermarkTask $ExtractBlindWatermarkTask 提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。
+     * @param ProcessMediaByMPS $ProcessMediaByMPSTask <p>MPS 视频处理任务信息，仅当 TaskType 为 ProcessMediaByMPS，该字段有值。</p>
+     * @param AigcImageTask $AigcImageTask <p>AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。</p>
+     * @param AigcVideoTask $AigcVideoTask <p>AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。</p>
+     * @param ImportMediaKnowledgeTask $ImportMediaKnowledge <p>媒体导入知识库任务信息，仅当 TaskType 为 ImportMediaKnowledge，该字段有值。</p>
+     * @param SceneAigcImageTask $SceneAigcImageTask <p>场景化 AIGC 生图任务信息，仅当 TaskType 为 SceneAigcImageTask，该字段有值。</p>
+     * @param SceneAigcVideoTask $SceneAigcVideoTask <p>场景化 AIGC 生视频任务信息，仅当 TaskType 为 SceneAigcVideoTask，该字段有值。</p>
+     * @param ProcessImageAsync $ProcessImageAsyncTask <p>图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。</p>
+     * @param ExtractBlindWatermarkTask $ExtractBlindWatermarkTask <p>提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。</p>
+     * @param CreateAigcAdvancedCustomElementTask $CreateAigcAdvancedCustomElementTask <p>创建自定义主体信息，仅当 TaskType 为 CreateAigcAdvancedCustomElement，该字段有值。</p>
+     * @param CreateAigcCustomVoiceTask $CreateAigcCustomVoiceTask <p>创建自定义音色信息，仅当 TaskType 为 CreateAigcCustomVoice，该字段有值。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -598,6 +598,16 @@ class DescribeTaskDetailResponse extends AbstractModel
         if (array_key_exists("ExtractBlindWatermarkTask",$param) and $param["ExtractBlindWatermarkTask"] !== null) {
             $this->ExtractBlindWatermarkTask = new ExtractBlindWatermarkTask();
             $this->ExtractBlindWatermarkTask->deserialize($param["ExtractBlindWatermarkTask"]);
+        }
+
+        if (array_key_exists("CreateAigcAdvancedCustomElementTask",$param) and $param["CreateAigcAdvancedCustomElementTask"] !== null) {
+            $this->CreateAigcAdvancedCustomElementTask = new CreateAigcAdvancedCustomElementTask();
+            $this->CreateAigcAdvancedCustomElementTask->deserialize($param["CreateAigcAdvancedCustomElementTask"]);
+        }
+
+        if (array_key_exists("CreateAigcCustomVoiceTask",$param) and $param["CreateAigcCustomVoiceTask"] !== null) {
+            $this->CreateAigcCustomVoiceTask = new CreateAigcCustomVoiceTask();
+            $this->CreateAigcCustomVoiceTask->deserialize($param["CreateAigcCustomVoiceTask"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

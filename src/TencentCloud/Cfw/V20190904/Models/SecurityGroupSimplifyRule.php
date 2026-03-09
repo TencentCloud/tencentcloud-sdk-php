@@ -56,6 +56,8 @@ region：地域(ap-gaungzhou)
  * @method void setRuleUuid(integer $RuleUuid) 设置规则对应的唯一id
  * @method integer getSequence() 获取规则序号
  * @method void setSequence(integer $Sequence) 设置规则序号
+ * @method string getScope() 获取规则生效范围，SG安全组，LH轻量服务器
+ * @method void setScope(string $Scope) 设置规则生效范围，SG安全组，LH轻量服务器
  */
 class SecurityGroupSimplifyRule extends AbstractModel
 {
@@ -102,6 +104,11 @@ region：地域(ap-gaungzhou)
     public $Sequence;
 
     /**
+     * @var string 规则生效范围，SG安全组，LH轻量服务器
+     */
+    public $Scope;
+
+    /**
      * @param string $SourceContent 访问源示例：
 net：IP/CIDR(192.168.0.2)
 template：参数模板(ipm-dyodhpby)
@@ -120,6 +127,7 @@ region：地域(ap-gaungzhou)
      * @param string $Description 描述
      * @param integer $RuleUuid 规则对应的唯一id
      * @param integer $Sequence 规则序号
+     * @param string $Scope 规则生效范围，SG安全组，LH轻量服务器
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ region：地域(ap-gaungzhou)
 
         if (array_key_exists("Sequence",$param) and $param["Sequence"] !== null) {
             $this->Sequence = $param["Sequence"];
+        }
+
+        if (array_key_exists("Scope",$param) and $param["Scope"] !== null) {
+            $this->Scope = $param["Scope"];
         }
     }
 }

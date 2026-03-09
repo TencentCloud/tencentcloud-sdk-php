@@ -20,154 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 传统型负载均衡监听器信息
  *
- * @method string getListenerId() 获取负载均衡监听器ID
- * @method void setListenerId(string $ListenerId) 设置负载均衡监听器ID
- * @method integer getListenerPort() 获取负载均衡监听器端口
- * @method void setListenerPort(integer $ListenerPort) 设置负载均衡监听器端口
- * @method integer getInstancePort() 获取监听器后端转发端口
- * @method void setInstancePort(integer $InstancePort) 设置监听器后端转发端口
- * @method string getListenerName() 获取监听器名称
- * @method void setListenerName(string $ListenerName) 设置监听器名称
- * @method string getProtocol() 获取监听器协议类型
- * @method void setProtocol(string $Protocol) 设置监听器协议类型
- * @method integer getSessionExpire() 获取会话保持时间
- * @method void setSessionExpire(integer $SessionExpire) 设置会话保持时间
- * @method integer getHealthSwitch() 获取是否开启了健康检查：1（开启）、0（关闭）
- * @method void setHealthSwitch(integer $HealthSwitch) 设置是否开启了健康检查：1（开启）、0（关闭）
- * @method integer getTimeOut() 获取响应超时时间
- * @method void setTimeOut(integer $TimeOut) 设置响应超时时间
- * @method integer getIntervalTime() 获取检查间隔
- * @method void setIntervalTime(integer $IntervalTime) 设置检查间隔
- * @method integer getHealthNum() 获取健康阈值
- * @method void setHealthNum(integer $HealthNum) 设置健康阈值
- * @method integer getUnhealthNum() 获取不健康阈值
- * @method void setUnhealthNum(integer $UnhealthNum) 设置不健康阈值
- * @method string getHttpHash() 获取传统型公网负载均衡 监听器的请求均衡方法。空字符串或wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发，least_conn表示按最小连接数。
- * @method void setHttpHash(string $HttpHash) 设置传统型公网负载均衡 监听器的请求均衡方法。空字符串或wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发，least_conn表示按最小连接数。
- * @method integer getHttpCode() 获取传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
- * @method void setHttpCode(integer $HttpCode) 设置传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
- * @method string getHttpCheckPath() 获取传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
- * @method void setHttpCheckPath(string $HttpCheckPath) 设置传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
- * @method string getSSLMode() 获取传统型公网负载均衡的 HTTPS 监听器的认证方式
- * @method void setSSLMode(string $SSLMode) 设置传统型公网负载均衡的 HTTPS 监听器的认证方式
- * @method string getCertId() 获取传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID
- * @method void setCertId(string $CertId) 设置传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID
- * @method string getCertCaId() 获取传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID
- * @method void setCertCaId(string $CertCaId) 设置传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID
- * @method integer getStatus() 获取监听器的状态，0 表示创建中，1 表示运行中
- * @method void setStatus(integer $Status) 设置监听器的状态，0 表示创建中，1 表示运行中
+ * @method string getListenerId() 获取<p>负载均衡监听器ID</p>
+ * @method void setListenerId(string $ListenerId) 设置<p>负载均衡监听器ID</p>
+ * @method integer getListenerPort() 获取<p>负载均衡监听器端口</p>
+ * @method void setListenerPort(integer $ListenerPort) 设置<p>负载均衡监听器端口</p>
+ * @method integer getInstancePort() 获取<p>监听器后端转发端口</p>
+ * @method void setInstancePort(integer $InstancePort) 设置<p>监听器后端转发端口</p>
+ * @method string getListenerName() 获取<p>监听器名称</p>
+ * @method void setListenerName(string $ListenerName) 设置<p>监听器名称</p>
+ * @method string getProtocol() 获取<p>监听器协议类型</p>
+ * @method void setProtocol(string $Protocol) 设置<p>监听器协议类型</p>
+ * @method integer getSessionExpire() 获取<p>会话保持时间</p>
+ * @method void setSessionExpire(integer $SessionExpire) 设置<p>会话保持时间</p>
+ * @method integer getHealthSwitch() 获取<p>是否开启了健康检查：1（开启）、0（关闭）</p>
+ * @method void setHealthSwitch(integer $HealthSwitch) 设置<p>是否开启了健康检查：1（开启）、0（关闭）</p>
+ * @method integer getTimeOut() 获取<p>响应超时时间</p><p>单位：秒</p>
+ * @method void setTimeOut(integer $TimeOut) 设置<p>响应超时时间</p><p>单位：秒</p>
+ * @method integer getIntervalTime() 获取<p>检查间隔</p><p>单位：秒</p>
+ * @method void setIntervalTime(integer $IntervalTime) 设置<p>检查间隔</p><p>单位：秒</p>
+ * @method integer getHealthNum() 获取<p>健康阈值</p>
+ * @method void setHealthNum(integer $HealthNum) 设置<p>健康阈值</p>
+ * @method integer getUnhealthNum() 获取<p>不健康阈值</p>
+ * @method void setUnhealthNum(integer $UnhealthNum) 设置<p>不健康阈值</p>
+ * @method string getHttpHash() 获取<p>传统型公网负载均衡 监听器的请求均衡方法。空字符串或wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发，least_conn表示按最小连接数。</p>
+ * @method void setHttpHash(string $HttpHash) 设置<p>传统型公网负载均衡 监听器的请求均衡方法。空字符串或wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发，least_conn表示按最小连接数。</p>
+ * @method integer getHttpCode() 获取<p>传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释</p>
+ * @method void setHttpCode(integer $HttpCode) 设置<p>传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释</p>
+ * @method string getHttpCheckPath() 获取<p>传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径</p>
+ * @method void setHttpCheckPath(string $HttpCheckPath) 设置<p>传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径</p>
+ * @method string getSSLMode() 获取<p>传统型公网负载均衡的 HTTPS 监听器的认证方式</p>
+ * @method void setSSLMode(string $SSLMode) 设置<p>传统型公网负载均衡的 HTTPS 监听器的认证方式</p>
+ * @method string getCertId() 获取<p>传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID</p>
+ * @method void setCertId(string $CertId) 设置<p>传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID</p>
+ * @method string getCertCaId() 获取<p>传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID</p>
+ * @method void setCertCaId(string $CertCaId) 设置<p>传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID</p>
+ * @method integer getStatus() 获取<p>监听器的状态，0 表示创建中，1 表示运行中</p>
+ * @method void setStatus(integer $Status) 设置<p>监听器的状态，0 表示创建中，1 表示运行中</p>
  */
 class ClassicalListener extends AbstractModel
 {
     /**
-     * @var string 负载均衡监听器ID
+     * @var string <p>负载均衡监听器ID</p>
      */
     public $ListenerId;
 
     /**
-     * @var integer 负载均衡监听器端口
+     * @var integer <p>负载均衡监听器端口</p>
      */
     public $ListenerPort;
 
     /**
-     * @var integer 监听器后端转发端口
+     * @var integer <p>监听器后端转发端口</p>
      */
     public $InstancePort;
 
     /**
-     * @var string 监听器名称
+     * @var string <p>监听器名称</p>
      */
     public $ListenerName;
 
     /**
-     * @var string 监听器协议类型
+     * @var string <p>监听器协议类型</p>
      */
     public $Protocol;
 
     /**
-     * @var integer 会话保持时间
+     * @var integer <p>会话保持时间</p>
      */
     public $SessionExpire;
 
     /**
-     * @var integer 是否开启了健康检查：1（开启）、0（关闭）
+     * @var integer <p>是否开启了健康检查：1（开启）、0（关闭）</p>
      */
     public $HealthSwitch;
 
     /**
-     * @var integer 响应超时时间
+     * @var integer <p>响应超时时间</p><p>单位：秒</p>
      */
     public $TimeOut;
 
     /**
-     * @var integer 检查间隔
+     * @var integer <p>检查间隔</p><p>单位：秒</p>
      */
     public $IntervalTime;
 
     /**
-     * @var integer 健康阈值
+     * @var integer <p>健康阈值</p>
      */
     public $HealthNum;
 
     /**
-     * @var integer 不健康阈值
+     * @var integer <p>不健康阈值</p>
      */
     public $UnhealthNum;
 
     /**
-     * @var string 传统型公网负载均衡 监听器的请求均衡方法。空字符串或wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发，least_conn表示按最小连接数。
+     * @var string <p>传统型公网负载均衡 监听器的请求均衡方法。空字符串或wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发，least_conn表示按最小连接数。</p>
      */
     public $HttpHash;
 
     /**
-     * @var integer 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
+     * @var integer <p>传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释</p>
      */
     public $HttpCode;
 
     /**
-     * @var string 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
+     * @var string <p>传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径</p>
      */
     public $HttpCheckPath;
 
     /**
-     * @var string 传统型公网负载均衡的 HTTPS 监听器的认证方式
+     * @var string <p>传统型公网负载均衡的 HTTPS 监听器的认证方式</p>
      */
     public $SSLMode;
 
     /**
-     * @var string 传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID
+     * @var string <p>传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID</p>
      */
     public $CertId;
 
     /**
-     * @var string 传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID
+     * @var string <p>传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID</p>
      */
     public $CertCaId;
 
     /**
-     * @var integer 监听器的状态，0 表示创建中，1 表示运行中
+     * @var integer <p>监听器的状态，0 表示创建中，1 表示运行中</p>
      */
     public $Status;
 
     /**
-     * @param string $ListenerId 负载均衡监听器ID
-     * @param integer $ListenerPort 负载均衡监听器端口
-     * @param integer $InstancePort 监听器后端转发端口
-     * @param string $ListenerName 监听器名称
-     * @param string $Protocol 监听器协议类型
-     * @param integer $SessionExpire 会话保持时间
-     * @param integer $HealthSwitch 是否开启了健康检查：1（开启）、0（关闭）
-     * @param integer $TimeOut 响应超时时间
-     * @param integer $IntervalTime 检查间隔
-     * @param integer $HealthNum 健康阈值
-     * @param integer $UnhealthNum 不健康阈值
-     * @param string $HttpHash 传统型公网负载均衡 监听器的请求均衡方法。空字符串或wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发，least_conn表示按最小连接数。
-     * @param integer $HttpCode 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
-     * @param string $HttpCheckPath 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
-     * @param string $SSLMode 传统型公网负载均衡的 HTTPS 监听器的认证方式
-     * @param string $CertId 传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID
-     * @param string $CertCaId 传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID
-     * @param integer $Status 监听器的状态，0 表示创建中，1 表示运行中
+     * @param string $ListenerId <p>负载均衡监听器ID</p>
+     * @param integer $ListenerPort <p>负载均衡监听器端口</p>
+     * @param integer $InstancePort <p>监听器后端转发端口</p>
+     * @param string $ListenerName <p>监听器名称</p>
+     * @param string $Protocol <p>监听器协议类型</p>
+     * @param integer $SessionExpire <p>会话保持时间</p>
+     * @param integer $HealthSwitch <p>是否开启了健康检查：1（开启）、0（关闭）</p>
+     * @param integer $TimeOut <p>响应超时时间</p><p>单位：秒</p>
+     * @param integer $IntervalTime <p>检查间隔</p><p>单位：秒</p>
+     * @param integer $HealthNum <p>健康阈值</p>
+     * @param integer $UnhealthNum <p>不健康阈值</p>
+     * @param string $HttpHash <p>传统型公网负载均衡 监听器的请求均衡方法。空字符串或wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发，least_conn表示按最小连接数。</p>
+     * @param integer $HttpCode <p>传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释</p>
+     * @param string $HttpCheckPath <p>传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径</p>
+     * @param string $SSLMode <p>传统型公网负载均衡的 HTTPS 监听器的认证方式</p>
+     * @param string $CertId <p>传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID</p>
+     * @param string $CertCaId <p>传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID</p>
+     * @param integer $Status <p>监听器的状态，0 表示创建中，1 表示运行中</p>
      */
     function __construct()
     {

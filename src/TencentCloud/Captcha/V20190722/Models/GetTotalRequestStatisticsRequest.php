@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetTotalRequestStatistics请求参数结构体
  *
- * @method string getStartTimeStr() 获取开始时间字符串
- * @method void setStartTimeStr(string $StartTimeStr) 设置开始时间字符串
- * @method string getEndTimeStr() 获取结束时间字符串
- * @method void setEndTimeStr(string $EndTimeStr) 设置结束时间字符串
- * @method string getDimension() 获取查询粒度
- * @method void setDimension(string $Dimension) 设置查询粒度
+ * @method string getStartTimeStr() 获取<p>开始时间字符串</p>
+ * @method void setStartTimeStr(string $StartTimeStr) 设置<p>开始时间字符串</p>
+ * @method string getEndTimeStr() 获取<p>结束时间字符串</p>
+ * @method void setEndTimeStr(string $EndTimeStr) 设置<p>结束时间字符串</p>
+ * @method string getDimension() 获取<p>查询粒度</p>
+ * @method void setDimension(string $Dimension) 设置<p>查询粒度</p>
  */
 class GetTotalRequestStatisticsRequest extends AbstractModel
 {
     /**
-     * @var string 开始时间字符串
+     * @var string <p>开始时间字符串</p>
      */
     public $StartTimeStr;
 
     /**
-     * @var string 结束时间字符串
+     * @var string <p>结束时间字符串</p>
      */
     public $EndTimeStr;
 
     /**
-     * @var string 查询粒度
+     * @var string <p>查询粒度</p>
      */
     public $Dimension;
 
     /**
-     * @param string $StartTimeStr 开始时间字符串
-     * @param string $EndTimeStr 结束时间字符串
-     * @param string $Dimension 查询粒度
+     * @param string $StartTimeStr <p>开始时间字符串</p>
+     * @param string $EndTimeStr <p>结束时间字符串</p>
+     * @param string $Dimension <p>查询粒度</p>
      */
     function __construct()
     {

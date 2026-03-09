@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 坐标详情
  *
- * @method float getX() 获取PDF文件页X坐标位置,以PDF单页左上角为坐标原点
- * @method void setX(float $X) 设置PDF文件页X坐标位置,以PDF单页左上角为坐标原点
- * @method float getY() 获取PDF文件页Y坐标位置,以PDF单页左上角为坐标原点
- * @method void setY(float $Y) 设置PDF文件页Y坐标位置,以PDF单页左上角为坐标原点
- * @method float getWidth() 获取距离X坐标的宽度，用于在PDF文件进行画框。
- * @method void setWidth(float $Width) 设置距离X坐标的宽度，用于在PDF文件进行画框。
- * @method float getHeight() 获取距离Y坐标的高度，用于在PDF文件进行画框。
- * @method void setHeight(float $Height) 设置距离Y坐标的高度，用于在PDF文件进行画框。
+ * @method float getX() 获取PDF文件页X坐标位置,以PDF单页左上角为坐标原点，单位是 “点”（Point，简称 pt）
+ * @method void setX(float $X) 设置PDF文件页X坐标位置,以PDF单页左上角为坐标原点，单位是 “点”（Point，简称 pt）
+ * @method float getY() 获取PDF文件页Y坐标位置,以PDF单页左上角为坐标原点，单位是 “点”（Point，简称 pt）
+ * @method void setY(float $Y) 设置PDF文件页Y坐标位置,以PDF单页左上角为坐标原点，单位是 “点”（Point，简称 pt）
+ * @method float getWidth() 获取距离X坐标的宽度，用于在PDF文件进行画框，单位是 “点”（Point，简称 pt）
+ * @method void setWidth(float $Width) 设置距离X坐标的宽度，用于在PDF文件进行画框，单位是 “点”（Point，简称 pt）
+ * @method float getHeight() 获取距离Y坐标的高度，用于在PDF文件进行画框，单位是 “点”（Point，简称 pt）
+ * @method void setHeight(float $Height) 设置距离Y坐标的高度，用于在PDF文件进行画框，单位是 “点”（Point，简称 pt）
  * @method integer getPageIndex() 获取PDF文件页码索引，此值加1就是对应PDF文件的页码。
  * @method void setPageIndex(integer $PageIndex) 设置PDF文件页码索引，此值加1就是对应PDF文件的页码。
  * @method string getId() 获取系统生成的唯一ID值
@@ -42,22 +42,22 @@ use TencentCloud\Common\AbstractModel;
 class PositionInfo extends AbstractModel
 {
     /**
-     * @var float PDF文件页X坐标位置,以PDF单页左上角为坐标原点
+     * @var float PDF文件页X坐标位置,以PDF单页左上角为坐标原点，单位是 “点”（Point，简称 pt）
      */
     public $X;
 
     /**
-     * @var float PDF文件页Y坐标位置,以PDF单页左上角为坐标原点
+     * @var float PDF文件页Y坐标位置,以PDF单页左上角为坐标原点，单位是 “点”（Point，简称 pt）
      */
     public $Y;
 
     /**
-     * @var float 距离X坐标的宽度，用于在PDF文件进行画框。
+     * @var float 距离X坐标的宽度，用于在PDF文件进行画框，单位是 “点”（Point，简称 pt）
      */
     public $Width;
 
     /**
-     * @var float 距离Y坐标的高度，用于在PDF文件进行画框。
+     * @var float 距离Y坐标的高度，用于在PDF文件进行画框，单位是 “点”（Point，简称 pt）
      */
     public $Height;
 
@@ -87,10 +87,10 @@ class PositionInfo extends AbstractModel
     public $DocType;
 
     /**
-     * @param float $X PDF文件页X坐标位置,以PDF单页左上角为坐标原点
-     * @param float $Y PDF文件页Y坐标位置,以PDF单页左上角为坐标原点
-     * @param float $Width 距离X坐标的宽度，用于在PDF文件进行画框。
-     * @param float $Height 距离Y坐标的高度，用于在PDF文件进行画框。
+     * @param float $X PDF文件页X坐标位置,以PDF单页左上角为坐标原点，单位是 “点”（Point，简称 pt）
+     * @param float $Y PDF文件页Y坐标位置,以PDF单页左上角为坐标原点，单位是 “点”（Point，简称 pt）
+     * @param float $Width 距离X坐标的宽度，用于在PDF文件进行画框，单位是 “点”（Point，简称 pt）
+     * @param float $Height 距离Y坐标的高度，用于在PDF文件进行画框，单位是 “点”（Point，简称 pt）
      * @param integer $PageIndex PDF文件页码索引，此值加1就是对应PDF文件的页码。
      * @param string $Id 系统生成的唯一ID值
      * @param integer $Begin 开始位置

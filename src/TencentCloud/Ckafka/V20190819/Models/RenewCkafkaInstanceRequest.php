@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RenewCkafkaInstance请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
- * @method integer getTimeSpan() 获取续费时长, 默认为1, 单位是月
- * @method void setTimeSpan(integer $TimeSpan) 设置续费时长, 默认为1, 单位是月
+ * @method string getInstanceId() 获取<p>ckafka集群实例Id,可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>ckafka集群实例Id,可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
+ * @method integer getTimeSpan() 获取<p>续费时长, 默认为1, 单位是月</p>
+ * @method void setTimeSpan(integer $TimeSpan) 设置<p>续费时长, 默认为1, 单位是月</p>
  */
 class RenewCkafkaInstanceRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+     * @var string <p>ckafka集群实例Id,可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 续费时长, 默认为1, 单位是月
+     * @var integer <p>续费时长, 默认为1, 单位是月</p>
      */
     public $TimeSpan;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
-     * @param integer $TimeSpan 续费时长, 默认为1, 单位是月
+     * @param string $InstanceId <p>ckafka集群实例Id,可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
+     * @param integer $TimeSpan <p>续费时长, 默认为1, 单位是月</p>
      */
     function __construct()
     {

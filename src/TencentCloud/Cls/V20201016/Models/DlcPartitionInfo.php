@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据湖计算服务（Data Lake Compute，简称DLC）数据分区配置
  *
- * @method string getClsField() 获取cls日志中的字段名
- * @method void setClsField(string $ClsField) 设置cls日志中的字段名
- * @method string getDlcField() 获取dlc表的列名
- * @method void setDlcField(string $DlcField) 设置dlc表的列名
- * @method string getDlcFieldType() 获取dlc字段类型
- * @method void setDlcFieldType(string $DlcFieldType) 设置dlc字段类型
+ * @method string getClsField() 获取<p>cls日志中的字段名</p>
+ * @method void setClsField(string $ClsField) 设置<p>cls日志中的字段名</p>
+ * @method string getDlcField() 获取<p>dlc表的列名</p>
+ * @method void setDlcField(string $DlcField) 设置<p>dlc表的列名</p>
+ * @method string getDlcFieldType() 获取<p>请参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></p><p>枚举值：</p><ul><li>int|string|array等： 请参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></li></ul>
+ * @method void setDlcFieldType(string $DlcFieldType) 设置<p>请参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></p><p>枚举值：</p><ul><li>int|string|array等： 请参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></li></ul>
  */
 class DlcPartitionInfo extends AbstractModel
 {
     /**
-     * @var string cls日志中的字段名
+     * @var string <p>cls日志中的字段名</p>
      */
     public $ClsField;
 
     /**
-     * @var string dlc表的列名
+     * @var string <p>dlc表的列名</p>
      */
     public $DlcField;
 
     /**
-     * @var string dlc字段类型
+     * @var string <p>请参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></p><p>枚举值：</p><ul><li>int|string|array等： 请参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></li></ul>
      */
     public $DlcFieldType;
 
     /**
-     * @param string $ClsField cls日志中的字段名
-     * @param string $DlcField dlc表的列名
-     * @param string $DlcFieldType dlc字段类型
+     * @param string $ClsField <p>cls日志中的字段名</p>
+     * @param string $DlcField <p>dlc表的列名</p>
+     * @param string $DlcFieldType <p>请参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></p><p>枚举值：</p><ul><li>int|string|array等： 请参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></li></ul>
      */
     function __construct()
     {

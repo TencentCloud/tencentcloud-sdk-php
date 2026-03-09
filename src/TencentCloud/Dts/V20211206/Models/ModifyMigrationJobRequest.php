@@ -20,86 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyMigrationJob请求参数结构体
  *
- * @method string getJobId() 获取任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
-
- * @method void setJobId(string $JobId) 设置任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
-
- * @method string getRunMode() 获取运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)
- * @method void setRunMode(string $RunMode) 设置运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)
- * @method MigrateOption getMigrateOption() 获取迁移任务配置选项，描述任务如何执行迁移等一系列配置信息；字段下的RateLimitOption不可配置、如果需要修改任务的限速信息、请在任务运行后通过ModifyMigrateRateLimit接口修改
- * @method void setMigrateOption(MigrateOption $MigrateOption) 设置迁移任务配置选项，描述任务如何执行迁移等一系列配置信息；字段下的RateLimitOption不可配置、如果需要修改任务的限速信息、请在任务运行后通过ModifyMigrateRateLimit接口修改
- * @method DBEndpointInfo getSrcInfo() 获取源实例信息
- * @method void setSrcInfo(DBEndpointInfo $SrcInfo) 设置源实例信息
- * @method DBEndpointInfo getDstInfo() 获取目标实例信息
- * @method void setDstInfo(DBEndpointInfo $DstInfo) 设置目标实例信息
- * @method string getJobName() 获取迁移任务名称，最大长度128
- * @method void setJobName(string $JobName) 设置迁移任务名称，最大长度128
- * @method string getExpectRunTime() 获取期待启动时间，当RunMode取值为timed时，此值必填，形如："2006-01-02 15:04:05"
- * @method void setExpectRunTime(string $ExpectRunTime) 设置期待启动时间，当RunMode取值为timed时，此值必填，形如："2006-01-02 15:04:05"
- * @method array getTags() 获取标签信息
- * @method void setTags(array $Tags) 设置标签信息
- * @method integer getAutoRetryTimeRangeMinutes() 获取自动重试的时间段、可设置5至720分钟、0表示不重试
- * @method void setAutoRetryTimeRangeMinutes(integer $AutoRetryTimeRangeMinutes) 设置自动重试的时间段、可设置5至720分钟、0表示不重试
+ * @method string getJobId() 获取<p>任务id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
+ * @method void setJobId(string $JobId) 设置<p>任务id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
+ * @method string getRunMode() 获取<p>运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)</p>
+ * @method void setRunMode(string $RunMode) 设置<p>运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)</p>
+ * @method MigrateOption getMigrateOption() 获取<p>迁移任务配置选项，描述任务如何执行迁移等一系列配置信息；字段下的RateLimitOption不可配置、如果需要修改任务的限速信息、请在任务运行后通过ModifyMigrateRateLimit接口修改</p>
+ * @method void setMigrateOption(MigrateOption $MigrateOption) 设置<p>迁移任务配置选项，描述任务如何执行迁移等一系列配置信息；字段下的RateLimitOption不可配置、如果需要修改任务的限速信息、请在任务运行后通过ModifyMigrateRateLimit接口修改</p>
+ * @method DBEndpointInfo getSrcInfo() 获取<p>源实例信息</p>
+ * @method void setSrcInfo(DBEndpointInfo $SrcInfo) 设置<p>源实例信息</p>
+ * @method DBEndpointInfo getDstInfo() 获取<p>目标实例信息</p>
+ * @method void setDstInfo(DBEndpointInfo $DstInfo) 设置<p>目标实例信息</p>
+ * @method string getJobName() 获取<p>迁移任务名称，最大长度128</p>
+ * @method void setJobName(string $JobName) 设置<p>迁移任务名称，最大长度128</p>
+ * @method string getExpectRunTime() 获取<p>期待启动时间，当RunMode取值为timed时，此值必填，形如：&quot;2006-01-02 15:04:05&quot;</p>
+ * @method void setExpectRunTime(string $ExpectRunTime) 设置<p>期待启动时间，当RunMode取值为timed时，此值必填，形如：&quot;2006-01-02 15:04:05&quot;</p>
+ * @method array getTags() 获取<p>标签信息</p>
+ * @method void setTags(array $Tags) 设置<p>标签信息</p>
+ * @method integer getAutoRetryTimeRangeMinutes() 获取<p>自动重试的时间段、可设置5至720分钟、0表示不重试</p>
+ * @method void setAutoRetryTimeRangeMinutes(integer $AutoRetryTimeRangeMinutes) 设置<p>自动重试的时间段、可设置5至720分钟、0表示不重试</p>
  */
 class ModifyMigrationJobRequest extends AbstractModel
 {
     /**
-     * @var string 任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
-
+     * @var string <p>任务id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
      */
     public $JobId;
 
     /**
-     * @var string 运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)
+     * @var string <p>运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)</p>
      */
     public $RunMode;
 
     /**
-     * @var MigrateOption 迁移任务配置选项，描述任务如何执行迁移等一系列配置信息；字段下的RateLimitOption不可配置、如果需要修改任务的限速信息、请在任务运行后通过ModifyMigrateRateLimit接口修改
+     * @var MigrateOption <p>迁移任务配置选项，描述任务如何执行迁移等一系列配置信息；字段下的RateLimitOption不可配置、如果需要修改任务的限速信息、请在任务运行后通过ModifyMigrateRateLimit接口修改</p>
      */
     public $MigrateOption;
 
     /**
-     * @var DBEndpointInfo 源实例信息
+     * @var DBEndpointInfo <p>源实例信息</p>
      */
     public $SrcInfo;
 
     /**
-     * @var DBEndpointInfo 目标实例信息
+     * @var DBEndpointInfo <p>目标实例信息</p>
      */
     public $DstInfo;
 
     /**
-     * @var string 迁移任务名称，最大长度128
+     * @var string <p>迁移任务名称，最大长度128</p>
      */
     public $JobName;
 
     /**
-     * @var string 期待启动时间，当RunMode取值为timed时，此值必填，形如："2006-01-02 15:04:05"
+     * @var string <p>期待启动时间，当RunMode取值为timed时，此值必填，形如：&quot;2006-01-02 15:04:05&quot;</p>
      */
     public $ExpectRunTime;
 
     /**
-     * @var array 标签信息
+     * @var array <p>标签信息</p>
      */
     public $Tags;
 
     /**
-     * @var integer 自动重试的时间段、可设置5至720分钟、0表示不重试
+     * @var integer <p>自动重试的时间段、可设置5至720分钟、0表示不重试</p>
      */
     public $AutoRetryTimeRangeMinutes;
 
     /**
-     * @param string $JobId 任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
-
-     * @param string $RunMode 运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)
-     * @param MigrateOption $MigrateOption 迁移任务配置选项，描述任务如何执行迁移等一系列配置信息；字段下的RateLimitOption不可配置、如果需要修改任务的限速信息、请在任务运行后通过ModifyMigrateRateLimit接口修改
-     * @param DBEndpointInfo $SrcInfo 源实例信息
-     * @param DBEndpointInfo $DstInfo 目标实例信息
-     * @param string $JobName 迁移任务名称，最大长度128
-     * @param string $ExpectRunTime 期待启动时间，当RunMode取值为timed时，此值必填，形如："2006-01-02 15:04:05"
-     * @param array $Tags 标签信息
-     * @param integer $AutoRetryTimeRangeMinutes 自动重试的时间段、可设置5至720分钟、0表示不重试
+     * @param string $JobId <p>任务id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
+     * @param string $RunMode <p>运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)</p>
+     * @param MigrateOption $MigrateOption <p>迁移任务配置选项，描述任务如何执行迁移等一系列配置信息；字段下的RateLimitOption不可配置、如果需要修改任务的限速信息、请在任务运行后通过ModifyMigrateRateLimit接口修改</p>
+     * @param DBEndpointInfo $SrcInfo <p>源实例信息</p>
+     * @param DBEndpointInfo $DstInfo <p>目标实例信息</p>
+     * @param string $JobName <p>迁移任务名称，最大长度128</p>
+     * @param string $ExpectRunTime <p>期待启动时间，当RunMode取值为timed时，此值必填，形如：&quot;2006-01-02 15:04:05&quot;</p>
+     * @param array $Tags <p>标签信息</p>
+     * @param integer $AutoRetryTimeRangeMinutes <p>自动重试的时间段、可设置5至720分钟、0表示不重试</p>
      */
     function __construct()
     {

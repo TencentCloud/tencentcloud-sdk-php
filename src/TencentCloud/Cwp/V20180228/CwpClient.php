@@ -266,6 +266,8 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeNetAttackWhiteListResponse DescribeNetAttackWhiteList(Models\DescribeNetAttackWhiteListRequest $req) 获取网络攻击白名单列表
  * @method Models\DescribeOpenPortStatisticsResponse DescribeOpenPortStatistics(Models\DescribeOpenPortStatisticsRequest $req) 本接口 (DescribeOpenPortStatistics) 用于获取端口统计列表。
  * @method Models\DescribeOverviewStatisticsResponse DescribeOverviewStatistics(Models\DescribeOverviewStatisticsRequest $req) 获取概览统计数据。
+ * @method Models\DescribePatchEffectHostListResponse DescribePatchEffectHostList(Models\DescribePatchEffectHostListRequest $req) 查询补丁影响的主机信息列表
+ * @method Models\DescribePatchInfoResponse DescribePatchInfo(Models\DescribePatchInfoRequest $req) 补丁详情
  * @method Models\DescribePrivilegeEventInfoResponse DescribePrivilegeEventInfo(Models\DescribePrivilegeEventInfoRequest $req) 本地提权信息详情
  * @method Models\DescribePrivilegeEventsResponse DescribePrivilegeEvents(Models\DescribePrivilegeEventsRequest $req) 获取本地提权事件列表
  * @method Models\DescribePrivilegeRulesResponse DescribePrivilegeRules(Models\DescribePrivilegeRulesRequest $req) 获取本地提权规则列表
@@ -374,6 +376,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeWebPageGeneralizeResponse DescribeWebPageGeneralize(Models\DescribeWebPageGeneralizeRequest $req) 查询网站防篡改概览信息
  * @method Models\DescribeWebPageProtectStatResponse DescribeWebPageProtectStat(Models\DescribeWebPageProtectStatRequest $req) 网站防篡改-查询动态防护信息
  * @method Models\DescribeWebPageServiceInfoResponse DescribeWebPageServiceInfo(Models\DescribeWebPageServiceInfoRequest $req) 网站防篡改-查询网页防篡改服务器购买信息及服务器信息
+ * @method Models\DescribeWindowsPatchListResponse DescribeWindowsPatchList(Models\DescribeWindowsPatchListRequest $req) 获取补丁信息列表
  * @method Models\DestroyOrderResponse DestroyOrder(Models\DestroyOrderRequest $req) DestroyOrder  该接口可以对资源销毁.
  * @method Models\EditBashRulesResponse EditBashRules(Models\EditBashRulesRequest $req) 新增或修改高危命令规则
  * @method Models\EditPrivilegeRulesResponse EditPrivilegeRules(Models\EditPrivilegeRulesRequest $req) 新增或修改本地提权规则（支持多服务器选择）
@@ -420,6 +423,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\ExportMaliciousRequestsResponse ExportMaliciousRequests(Models\ExportMaliciousRequestsRequest $req) 本接口 (ExportMaliciousRequests) 用于导出下载恶意请求文件。
  * @method Models\ExportMalwaresResponse ExportMalwares(Models\ExportMalwaresRequest $req) 本接口 (ExportMalwares) 用于导出木马记录CSV文件。
  * @method Models\ExportNonlocalLoginPlacesResponse ExportNonlocalLoginPlaces(Models\ExportNonlocalLoginPlacesRequest $req) 本接口 (ExportNonlocalLoginPlaces) 用于导出异地登录事件记录CSV文件。
+ * @method Models\ExportPatchEffectHostListResponse ExportPatchEffectHostList(Models\ExportPatchEffectHostListRequest $req) 导出补丁影响主机列表
  * @method Models\ExportPrivilegeEventsResponse ExportPrivilegeEvents(Models\ExportPrivilegeEventsRequest $req) 导出本地提权事件
  * @method Models\ExportProtectDirListResponse ExportProtectDirList(Models\ExportProtectDirListRequest $req) 导出网页防篡改防护目录列表
  * @method Models\ExportRansomDefenseBackupListResponse ExportRansomDefenseBackupList(Models\ExportRansomDefenseBackupListRequest $req) 导出主机快照备份列表
@@ -443,6 +447,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\ExportVulInfoResponse ExportVulInfo(Models\ExportVulInfoRequest $req) 导出漏洞信息，包括影响主机列表，组件信息
  * @method Models\ExportVulListResponse ExportVulList(Models\ExportVulListRequest $req) 漏洞管理-导出漏洞列表
  * @method Models\ExportWebPageEventListResponse ExportWebPageEventList(Models\ExportWebPageEventListRequest $req) 导出篡改事件列表
+ * @method Models\ExportWindowsPatchListResponse ExportWindowsPatchList(Models\ExportWindowsPatchListRequest $req) 导出Windows补丁列表
  * @method Models\FixBaselineDetectResponse FixBaselineDetect(Models\FixBaselineDetectRequest $req) 修复基线检测
  * @method Models\GetLocalStorageItemResponse GetLocalStorageItem(Models\GetLocalStorageItemRequest $req) 获取本地存储数据
  * @method Models\KeysLocalStorageResponse KeysLocalStorage(Models\KeysLocalStorageRequest $req) 获取本地存储键值列表

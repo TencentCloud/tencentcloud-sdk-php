@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 关于Lighthouse Instance实例的价格信息。
  *
- * @method float getOriginalBundlePrice() 获取套餐单价原价。
- * @method void setOriginalBundlePrice(float $OriginalBundlePrice) 设置套餐单价原价。
- * @method float getOriginalPrice() 获取原价。
- * @method void setOriginalPrice(float $OriginalPrice) 设置原价。
- * @method float getDiscount() 获取折扣。
- * @method void setDiscount(float $Discount) 设置折扣。
- * @method float getDiscountPrice() 获取折后价。
- * @method void setDiscountPrice(float $DiscountPrice) 设置折后价。
- * @method string getCurrency() 获取价格货币单位。取值范围CNY:人民币。USD:美元。
- * @method void setCurrency(string $Currency) 设置价格货币单位。取值范围CNY:人民币。USD:美元。
- * @method array getDetailPrices() 获取计费项目明细。
- * @method void setDetailPrices(array $DetailPrices) 设置计费项目明细。
+ * @method float getOriginalBundlePrice() 获取<p>套餐单价原价。</p><p>单位：元</p>
+ * @method void setOriginalBundlePrice(float $OriginalBundlePrice) 设置<p>套餐单价原价。</p><p>单位：元</p>
+ * @method float getOriginalPrice() 获取<p>原价。</p><p>单位：元</p>
+ * @method void setOriginalPrice(float $OriginalPrice) 设置<p>原价。</p><p>单位：元</p>
+ * @method float getDiscount() 获取<p>折扣。</p>
+ * @method void setDiscount(float $Discount) 设置<p>折扣。</p>
+ * @method float getDiscountPrice() 获取<p>折后价。</p><p>单位：元</p>
+ * @method void setDiscountPrice(float $DiscountPrice) 设置<p>折后价。</p><p>单位：元</p>
+ * @method string getCurrency() 获取<p>价格货币单位。取值范围CNY:人民币。USD:美元。</p>
+ * @method void setCurrency(string $Currency) 设置<p>价格货币单位。取值范围CNY:人民币。USD:美元。</p>
+ * @method array getDetailPrices() 获取<p>计费项目明细。</p>
+ * @method void setDetailPrices(array $DetailPrices) 设置<p>计费项目明细。</p>
  */
 class InstancePrice extends AbstractModel
 {
     /**
-     * @var float 套餐单价原价。
+     * @var float <p>套餐单价原价。</p><p>单位：元</p>
      */
     public $OriginalBundlePrice;
 
     /**
-     * @var float 原价。
+     * @var float <p>原价。</p><p>单位：元</p>
      */
     public $OriginalPrice;
 
     /**
-     * @var float 折扣。
+     * @var float <p>折扣。</p>
      */
     public $Discount;
 
     /**
-     * @var float 折后价。
+     * @var float <p>折后价。</p><p>单位：元</p>
      */
     public $DiscountPrice;
 
     /**
-     * @var string 价格货币单位。取值范围CNY:人民币。USD:美元。
+     * @var string <p>价格货币单位。取值范围CNY:人民币。USD:美元。</p>
      */
     public $Currency;
 
     /**
-     * @var array 计费项目明细。
+     * @var array <p>计费项目明细。</p>
      */
     public $DetailPrices;
 
     /**
-     * @param float $OriginalBundlePrice 套餐单价原价。
-     * @param float $OriginalPrice 原价。
-     * @param float $Discount 折扣。
-     * @param float $DiscountPrice 折后价。
-     * @param string $Currency 价格货币单位。取值范围CNY:人民币。USD:美元。
-     * @param array $DetailPrices 计费项目明细。
+     * @param float $OriginalBundlePrice <p>套餐单价原价。</p><p>单位：元</p>
+     * @param float $OriginalPrice <p>原价。</p><p>单位：元</p>
+     * @param float $Discount <p>折扣。</p>
+     * @param float $DiscountPrice <p>折后价。</p><p>单位：元</p>
+     * @param string $Currency <p>价格货币单位。取值范围CNY:人民币。USD:美元。</p>
+     * @param array $DetailPrices <p>计费项目明细。</p>
      */
     function __construct()
     {

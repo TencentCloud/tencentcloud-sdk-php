@@ -76,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccessPolicy(array $AccessPolicy) 设置策略信息
  * @method string getSpName() 获取CAM服务提供商Name
  * @method void setSpName(string $SpName) 设置CAM服务提供商Name
+ * @method DnsServers getDnsServers() 获取DNS Server地址
+ * @method void setDnsServers(DnsServers $DnsServers) 设置DNS Server地址
  */
 class SslVpnSever extends AbstractModel
 {
@@ -188,6 +190,11 @@ class SslVpnSever extends AbstractModel
     public $SpName;
 
     /**
+     * @var DnsServers DNS Server地址
+     */
+    public $DnsServers;
+
+    /**
      * @param string $VpcId VPC实例ID.
      * @param string $SslVpnServerId SSL-VPN-SERVER 实例ID。
      * @param string $VpnGatewayId VPN 实例ID。
@@ -216,6 +223,7 @@ class SslVpnSever extends AbstractModel
      * @param integer $AccessPolicyEnabled 是否开启策略控制。0：不开启 1： 开启
      * @param array $AccessPolicy 策略信息
      * @param string $SpName CAM服务提供商Name
+     * @param DnsServers $DnsServers DNS Server地址
      */
     function __construct()
     {
@@ -313,6 +321,11 @@ class SslVpnSever extends AbstractModel
 
         if (array_key_exists("SpName",$param) and $param["SpName"] !== null) {
             $this->SpName = $param["SpName"];
+        }
+
+        if (array_key_exists("DnsServers",$param) and $param["DnsServers"] !== null) {
+            $this->DnsServers = new DnsServers();
+            $this->DnsServers->deserialize($param["DnsServers"]);
         }
     }
 }

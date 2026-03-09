@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxyProtocol(boolean $ProxyProtocol) 设置<p>TCP_SSL和QUIC是否支持PP</p>
  * @method boolean getSnatEnable() 获取<p>是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时<code>透传客户端源IP</code>选项关闭，反之亦然。</p>
  * @method void setSnatEnable(boolean $SnatEnable) 设置<p>是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时<code>透传客户端源IP</code>选项关闭，反之亦然。</p>
- * @method string getDataCompressMode() 获取<p>数据压缩模式</p>
- * @method void setDataCompressMode(string $DataCompressMode) 设置<p>数据压缩模式</p>
+ * @method string getDataCompressMode() 获取<p>数据压缩模式</p><p>枚举值：</p><ul><li>transparent： 透明模式（默认值）</li><li>compatibility： 兼容模式（开启 gzip 兼容压缩配置）</li></ul>
+ * @method void setDataCompressMode(string $DataCompressMode) 设置<p>数据压缩模式</p><p>枚举值：</p><ul><li>transparent： 透明模式（默认值）</li><li>compatibility： 兼容模式（开启 gzip 兼容压缩配置）</li></ul>
  * @method boolean getRescheduleTargetZeroWeight() 获取<p>重新调度功能，权重调为0开关，打开此开关，后端服务器权重调为0时触发重新调度。仅TCP/UDP监听器支持。</p>
  * @method void setRescheduleTargetZeroWeight(boolean $RescheduleTargetZeroWeight) 设置<p>重新调度功能，权重调为0开关，打开此开关，后端服务器权重调为0时触发重新调度。仅TCP/UDP监听器支持。</p>
  * @method boolean getRescheduleUnhealthy() 获取<p>重新调度功能，健康检查异常开关，打开此开关，后端服务器健康检查异常时触发重新调度。仅TCP/UDP监听器支持。</p>
@@ -162,7 +162,7 @@ class ModifyListenerRequest extends AbstractModel
     public $SnatEnable;
 
     /**
-     * @var string <p>数据压缩模式</p>
+     * @var string <p>数据压缩模式</p><p>枚举值：</p><ul><li>transparent： 透明模式（默认值）</li><li>compatibility： 兼容模式（开启 gzip 兼容压缩配置）</li></ul>
      */
     public $DataCompressMode;
 
@@ -210,7 +210,7 @@ class ModifyListenerRequest extends AbstractModel
      * @param integer $IdleConnectTimeout <p>空闲连接超时时间，此参数仅适用于TCP/UDP监听器。如需设置超过1980s，请通过 <a href="https://console.cloud.tencent.com/workorder/category">工单申请</a>,最大可设置到3600s。</p><p>取值范围：[10, 1980]</p><p>单位：秒</p><p>默认值：900</p><p>TCP监听器默认值：900，UDP监听器默认值：300s。取值范围：共享型实例和独占型实例支持：10～900，性能容量型实例支持：10~1980。</p>
      * @param boolean $ProxyProtocol <p>TCP_SSL和QUIC是否支持PP</p>
      * @param boolean $SnatEnable <p>是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时<code>透传客户端源IP</code>选项关闭，反之亦然。</p>
-     * @param string $DataCompressMode <p>数据压缩模式</p>
+     * @param string $DataCompressMode <p>数据压缩模式</p><p>枚举值：</p><ul><li>transparent： 透明模式（默认值）</li><li>compatibility： 兼容模式（开启 gzip 兼容压缩配置）</li></ul>
      * @param boolean $RescheduleTargetZeroWeight <p>重新调度功能，权重调为0开关，打开此开关，后端服务器权重调为0时触发重新调度。仅TCP/UDP监听器支持。</p>
      * @param boolean $RescheduleUnhealthy <p>重新调度功能，健康检查异常开关，打开此开关，后端服务器健康检查异常时触发重新调度。仅TCP/UDP监听器支持。</p>
      * @param boolean $RescheduleExpandTarget <p>重新调度功能，扩容后端服务开关，打开此开关，后端服务器增加或者减少时触发重新调度。仅TCP/UDP监听器支持。</p>

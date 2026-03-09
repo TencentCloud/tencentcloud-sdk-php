@@ -112,6 +112,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) 设置<p>集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭</p>
  * @method integer getDeleteProtectionEnable() 获取<p>实例删除保护开关: 1 开启 0 关闭</p>
  * @method void setDeleteProtectionEnable(integer $DeleteProtectionEnable) 设置<p>实例删除保护开关: 1 开启 0 关闭</p>
+ * @method integer getRetentionBytes() 获取<p>实例级别消息保留大小</p>单位：bytes<br>默认值：-1
+ * @method void setRetentionBytes(integer $RetentionBytes) 设置<p>实例级别消息保留大小</p>单位：bytes<br>默认值：-1
+ * @method integer getTransactionalIdExpirationMs() 获取<p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p>单位：ms
+ * @method void setTransactionalIdExpirationMs(integer $TransactionalIdExpirationMs) 设置<p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p>单位：ms
  */
 class InstanceAttributesResponse extends AbstractModel
 {
@@ -346,6 +350,16 @@ class InstanceAttributesResponse extends AbstractModel
     public $DeleteProtectionEnable;
 
     /**
+     * @var integer <p>实例级别消息保留大小</p>单位：bytes<br>默认值：-1
+     */
+    public $RetentionBytes;
+
+    /**
+     * @var integer <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p>单位：ms
+     */
+    public $TransactionalIdExpirationMs;
+
+    /**
      * @param string $InstanceId <p>ckafka集群实例Id</p>
      * @param string $InstanceName <p>ckafka集群实例Name</p>
      * @param array $VipList <p>接入点 VIP 列表信息</p>
@@ -392,6 +406,8 @@ class InstanceAttributesResponse extends AbstractModel
      * @param string $CustomCertId <p>ssl自定义证书id  仅自定义证书实例集群返回</p>
      * @param integer $UncleanLeaderElectionEnable <p>集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭</p>
      * @param integer $DeleteProtectionEnable <p>实例删除保护开关: 1 开启 0 关闭</p>
+     * @param integer $RetentionBytes <p>实例级别消息保留大小</p>单位：bytes<br>默认值：-1
+     * @param integer $TransactionalIdExpirationMs <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p>单位：ms
      */
     function __construct()
     {
@@ -601,6 +617,14 @@ class InstanceAttributesResponse extends AbstractModel
 
         if (array_key_exists("DeleteProtectionEnable",$param) and $param["DeleteProtectionEnable"] !== null) {
             $this->DeleteProtectionEnable = $param["DeleteProtectionEnable"];
+        }
+
+        if (array_key_exists("RetentionBytes",$param) and $param["RetentionBytes"] !== null) {
+            $this->RetentionBytes = $param["RetentionBytes"];
+        }
+
+        if (array_key_exists("TransactionalIdExpirationMs",$param) and $param["TransactionalIdExpirationMs"] !== null) {
+            $this->TransactionalIdExpirationMs = $param["TransactionalIdExpirationMs"];
         }
     }
 }

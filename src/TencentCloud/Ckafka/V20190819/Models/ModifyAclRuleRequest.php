@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAclRule请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
- * @method string getRuleName() 获取ACL规则名
- * @method void setRuleName(string $RuleName) 设置ACL规则名
- * @method integer getIsApplied() 获取修改预设规则时传入,是否应用到新增的Topic
- * @method void setIsApplied(integer $IsApplied) 设置修改预设规则时传入,是否应用到新增的Topic
+ * @method string getInstanceId() 获取<p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+ * @method string getRuleName() 获取<p>ACL规则名</p>
+ * @method void setRuleName(string $RuleName) 设置<p>ACL规则名</p>
+ * @method integer getIsApplied() 获取<p>修改预设规则时传入,是否应用到新增的Topic</p><p>枚举值：</p><ul><li>0： 不允许应用到新增的topic</li><li>1： 允许应用到新增的topic</li></ul><p>默认值：0</p>
+ * @method void setIsApplied(integer $IsApplied) 设置<p>修改预设规则时传入,是否应用到新增的Topic</p><p>枚举值：</p><ul><li>0： 不允许应用到新增的topic</li><li>1： 允许应用到新增的topic</li></ul><p>默认值：0</p>
  */
 class ModifyAclRuleRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public $InstanceId;
 
     /**
-     * @var string ACL规则名
+     * @var string <p>ACL规则名</p>
      */
     public $RuleName;
 
     /**
-     * @var integer 修改预设规则时传入,是否应用到新增的Topic
+     * @var integer <p>修改预设规则时传入,是否应用到新增的Topic</p><p>枚举值：</p><ul><li>0： 不允许应用到新增的topic</li><li>1： 允许应用到新增的topic</li></ul><p>默认值：0</p>
      */
     public $IsApplied;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
-     * @param string $RuleName ACL规则名
-     * @param integer $IsApplied 修改预设规则时传入,是否应用到新增的Topic
+     * @param string $InstanceId <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+     * @param string $RuleName <p>ACL规则名</p>
+     * @param integer $IsApplied <p>修改预设规则时传入,是否应用到新增的Topic</p><p>枚举值：</p><ul><li>0： 不允许应用到新增的topic</li><li>1： 允许应用到新增的topic</li></ul><p>默认值：0</p>
      */
     function __construct()
     {

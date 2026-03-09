@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 雪碧图
  *
- * @method integer getHeight() 获取雪碧图小图的高度。
- * @method void setHeight(integer $Height) 设置雪碧图小图的高度。
- * @method integer getWidth() 获取雪碧图小图的宽度。
- * @method void setWidth(integer $Width) 设置雪碧图小图的宽度。
- * @method integer getTotalCount() 获取雪碧图小图的总数量。
- * @method void setTotalCount(integer $TotalCount) 设置雪碧图小图的总数量。
- * @method array getImageUrlSet() 获取截取雪碧图输出的地址。
- * @method void setImageUrlSet(array $ImageUrlSet) 设置截取雪碧图输出的地址。
- * @method string getWebVttUrl() 获取雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。
- * @method void setWebVttUrl(string $WebVttUrl) 设置雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。
+ * @method integer getHeight() 获取<p>雪碧图小图的高度。</p>
+ * @method void setHeight(integer $Height) 设置<p>雪碧图小图的高度。</p>
+ * @method integer getWidth() 获取<p>雪碧图小图的宽度。</p>
+ * @method void setWidth(integer $Width) 设置<p>雪碧图小图的宽度。</p>
+ * @method integer getTotalCount() 获取<p>雪碧图小图的总数量。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>雪碧图小图的总数量。</p>
+ * @method array getImageUrlSet() 获取<p>截取雪碧图输出的地址。</p>
+ * @method void setImageUrlSet(array $ImageUrlSet) 设置<p>截取雪碧图输出的地址。</p>
+ * @method string getWebVttUrl() 获取<p>雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。</p>
+ * @method void setWebVttUrl(string $WebVttUrl) 设置<p>雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。</p>
  */
 class MediaImageSpriteInfo extends AbstractModel
 {
     /**
-     * @var integer 雪碧图小图的高度。
+     * @var integer <p>雪碧图小图的高度。</p>
      */
     public $Height;
 
     /**
-     * @var integer 雪碧图小图的宽度。
+     * @var integer <p>雪碧图小图的宽度。</p>
      */
     public $Width;
 
     /**
-     * @var integer 雪碧图小图的总数量。
+     * @var integer <p>雪碧图小图的总数量。</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 截取雪碧图输出的地址。
+     * @var array <p>截取雪碧图输出的地址。</p>
      */
     public $ImageUrlSet;
 
     /**
-     * @var string 雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。
+     * @var string <p>雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。</p>
      */
     public $WebVttUrl;
 
     /**
-     * @param integer $Height 雪碧图小图的高度。
-     * @param integer $Width 雪碧图小图的宽度。
-     * @param integer $TotalCount 雪碧图小图的总数量。
-     * @param array $ImageUrlSet 截取雪碧图输出的地址。
-     * @param string $WebVttUrl 雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。
+     * @param integer $Height <p>雪碧图小图的高度。</p>
+     * @param integer $Width <p>雪碧图小图的宽度。</p>
+     * @param integer $TotalCount <p>雪碧图小图的总数量。</p>
+     * @param array $ImageUrlSet <p>截取雪碧图输出的地址。</p>
+     * @param string $WebVttUrl <p>雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。</p>
      */
     function __construct()
     {

@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSamlData(string $SamlData) 设置SAML-DATA，开启SSO时传。
  * @method array getTags() 获取指定绑定的标签列表
  * @method void setTags(array $Tags) 设置指定绑定的标签列表
+ * @method DnsServers getDnsServers() 获取DNS Server 地址
+ * @method void setDnsServers(DnsServers $DnsServers) 设置DNS Server 地址
  */
 class CreateVpnGatewaySslServerRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class CreateVpnGatewaySslServerRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var DnsServers DNS Server 地址
+     */
+    public $DnsServers;
+
+    /**
      * @param string $VpnGatewayId VPN网关实例ID。
      * @param string $SslVpnServerName SSL-VPN-SERVER 实例名称，长度不超过60个字节。
      * @param string $RemoteAddress 客户端地址网段。
@@ -128,6 +135,7 @@ class CreateVpnGatewaySslServerRequest extends AbstractModel
      * @param boolean $AccessPolicyEnabled 是否开启策略访问控制。默认为False
      * @param string $SamlData SAML-DATA，开启SSO时传。
      * @param array $Tags 指定绑定的标签列表
+     * @param DnsServers $DnsServers DNS Server 地址
      */
     function __construct()
     {
@@ -197,6 +205,11 @@ class CreateVpnGatewaySslServerRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("DnsServers",$param) and $param["DnsServers"] !== null) {
+            $this->DnsServers = new DnsServers();
+            $this->DnsServers->deserialize($param["DnsServers"]);
         }
     }
 }

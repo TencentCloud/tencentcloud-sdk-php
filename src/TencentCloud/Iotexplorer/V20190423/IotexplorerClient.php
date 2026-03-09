@@ -171,7 +171,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\InvokeCloudStorageAIServiceTaskResponse InvokeCloudStorageAIServiceTask(Models\InvokeCloudStorageAIServiceTaskRequest $req) 同步执行设备云存 AI 分析任务
  * @method Models\InvokeExternalSourceAIServiceTaskResponse InvokeExternalSourceAIServiceTask(Models\InvokeExternalSourceAIServiceTaskRequest $req) 创建外部视频 AI 分析任务
  * @method Models\InvokeTWeSeeRecognitionTaskResponse InvokeTWeSeeRecognitionTask(Models\InvokeTWeSeeRecognitionTaskRequest $req) 同步执行 TWeSee 语义理解任务
- * @method Models\InvokeTWeSeeRecognitionTaskWithFileResponse InvokeTWeSeeRecognitionTaskWithFile(Models\InvokeTWeSeeRecognitionTaskWithFileRequest $req) 同步执行 TWeSee 语义理解任务
+ * @method Models\InvokeTWeSeeRecognitionTaskWithFileResponse InvokeTWeSeeRecognitionTaskWithFile(Models\InvokeTWeSeeRecognitionTaskWithFileRequest $req) 上传文件并同步执行 TWeSee 语义理解任务
  * @method Models\InvokeVideosKeywordsAnalyzerResponse InvokeVideosKeywordsAnalyzer(Models\InvokeVideosKeywordsAnalyzerRequest $req) 获取某个时间段的视频内容关键字
  * @method Models\ListEventHistoryResponse ListEventHistory(Models\ListEventHistoryRequest $req) 获取设备的历史事件
  * @method Models\ListFirmwaresResponse ListFirmwares(Models\ListFirmwaresRequest $req) 本接口（ListFirmwares）用于获取固件列表

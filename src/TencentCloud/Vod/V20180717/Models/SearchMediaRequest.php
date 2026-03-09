@@ -20,490 +20,266 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchMedia请求参数结构体
  *
- * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method array getFileIds() 获取文件 ID 集合，匹配集合中的任意元素。
-<li>数组长度限制：10。</li>
-<li>单个 ID 长度限制：40个字符。</li>
- * @method void setFileIds(array $FileIds) 设置文件 ID 集合，匹配集合中的任意元素。
-<li>数组长度限制：10。</li>
-<li>单个 ID 长度限制：40个字符。</li>
- * @method array getNames() 获取文件名集合，模糊匹配媒体文件的文件名，匹配度越高，排序越优先。
-<li>单个文件名长度限制：100个字符。</li>
-<li>数组长度限制：10。</li>
- * @method void setNames(array $Names) 设置文件名集合，模糊匹配媒体文件的文件名，匹配度越高，排序越优先。
-<li>单个文件名长度限制：100个字符。</li>
-<li>数组长度限制：10。</li>
- * @method array getNamePrefixes() 获取文件名前缀，前缀匹配媒体文件的文件名。
-<li>单个文件名前缀长度限制：100个字符。</li>
-<li>数组长度限制：10。</li>
- * @method void setNamePrefixes(array $NamePrefixes) 设置文件名前缀，前缀匹配媒体文件的文件名。
-<li>单个文件名前缀长度限制：100个字符。</li>
-<li>数组长度限制：10。</li>
- * @method array getDescriptions() 获取文件描述集合，模糊匹配媒体文件的描述，匹配度越高，排序越优先。
-<li>单个描述长度限制：100个字符。</li>
-<li>数组长度限制：10。</li>
- * @method void setDescriptions(array $Descriptions) 设置文件描述集合，模糊匹配媒体文件的描述，匹配度越高，排序越优先。
-<li>单个描述长度限制：100个字符。</li>
-<li>数组长度限制：10。</li>
- * @method array getClassIds() 获取分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。
-<li>数组长度限制：10。</li>
- * @method void setClassIds(array $ClassIds) 设置分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。
-<li>数组长度限制：10。</li>
- * @method array getTags() 获取标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：32个字符。</li>
-<li>数组长度限制：16。</li>
- * @method void setTags(array $Tags) 设置标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：32个字符。</li>
-<li>数组长度限制：16。</li>
- * @method array getCategories() 获取文件类型。匹配集合中的任意元素：
-<li>Video: 视频文件</li>
-<li>Audio: 音频文件</li>
-<li>Image: 图片文件</li>
- * @method void setCategories(array $Categories) 设置文件类型。匹配集合中的任意元素：
-<li>Video: 视频文件</li>
-<li>Audio: 音频文件</li>
-<li>Image: 图片文件</li>
- * @method array getSourceTypes() 获取媒体文件来源集合，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
-<li>数组长度限制：10。</li>
- * @method void setSourceTypes(array $SourceTypes) 设置媒体文件来源集合，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
-<li>数组长度限制：10。</li>
- * @method array getStreamIds() 获取推流直播码集合。匹配集合中的任意元素。
-<li>数组长度限制：10。</li>
- * @method void setStreamIds(array $StreamIds) 设置推流直播码集合。匹配集合中的任意元素。
-<li>数组长度限制：10。</li>
- * @method TimeRange getCreateTime() 获取匹配创建时间在此时间段内的文件。
-<li>包含所指定的头尾时间点。</li>
- * @method void setCreateTime(TimeRange $CreateTime) 设置匹配创建时间在此时间段内的文件。
-<li>包含所指定的头尾时间点。</li>
- * @method TimeRange getExpireTime() 获取匹配过期时间在此时间段内的文件，无法检索到已过期文件。
-<li>包含所指定的头尾时间点。</li>
- * @method void setExpireTime(TimeRange $ExpireTime) 设置匹配过期时间在此时间段内的文件，无法检索到已过期文件。
-<li>包含所指定的头尾时间点。</li>
- * @method array getStorageRegions() 获取媒体文件存储地区，如 ap-chongqing，参见[地域列表](https://cloud.tencent.com/document/product/266/9760#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)。
-<li>单个存储地区长度限制：20个字符。</li>
-<li>数组长度限制：20。</li>
- * @method void setStorageRegions(array $StorageRegions) 设置媒体文件存储地区，如 ap-chongqing，参见[地域列表](https://cloud.tencent.com/document/product/266/9760#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)。
-<li>单个存储地区长度限制：20个字符。</li>
-<li>数组长度限制：20。</li>
- * @method array getStorageClasses() 获取存储类型数组。可选值有：
-<li> STANDARD：标准存储。</li>
-<li> STANDARD_IA：低频存储。</li>
-<li> ARCHIVE：归档存储。</li>
-<li> DEEP_ARCHIVE：深度归档存储。</li>
- * @method void setStorageClasses(array $StorageClasses) 设置存储类型数组。可选值有：
-<li> STANDARD：标准存储。</li>
-<li> STANDARD_IA：低频存储。</li>
-<li> ARCHIVE：归档存储。</li>
-<li> DEEP_ARCHIVE：深度归档存储。</li>
- * @method array getMediaTypes() 获取媒体文件封装格式集合，匹配集合中任意元素。
-<li>数组长度限制：10。</li>
- * @method void setMediaTypes(array $MediaTypes) 设置媒体文件封装格式集合，匹配集合中任意元素。
-<li>数组长度限制：10。</li>
- * @method array getStatus() 获取媒体文件状态，匹配集合中任意元素。
-<li> Normal：正常；</li>
-<li> SystemForbidden：平台封禁；</li>
-<li> Forbidden：主动封禁。</li>
- * @method void setStatus(array $Status) 设置媒体文件状态，匹配集合中任意元素。
-<li> Normal：正常；</li>
-<li> SystemForbidden：平台封禁；</li>
-<li> Forbidden：主动封禁。</li>
- * @method array getReviewResults() 获取媒体文件审核结果，匹配集合中任意元素。
-<li> pass：审核通过；</li>
-<li> review：疑似违规，建议复审；</li>
-<li> block：确认违规，建议封禁；</li>
-<li> notModerated：未审核。</li>
- * @method void setReviewResults(array $ReviewResults) 设置媒体文件审核结果，匹配集合中任意元素。
-<li> pass：审核通过；</li>
-<li> review：疑似违规，建议复审；</li>
-<li> block：确认违规，建议封禁；</li>
-<li> notModerated：未审核。</li>
- * @method array getTrtcSdkAppIds() 获取TRTC 应用 ID 集合。匹配集合中的任意元素。
-<li>数组长度限制：10。</li>
- * @method void setTrtcSdkAppIds(array $TrtcSdkAppIds) 设置TRTC 应用 ID 集合。匹配集合中的任意元素。
-<li>数组长度限制：10。</li>
- * @method array getTrtcRoomIds() 获取TRTC 房间 ID 集合。匹配集合中的任意元素。
-<li>单个房间 ID 长度限制：64个字符；</li>
-<li>数组长度限制：10。</li>
- * @method void setTrtcRoomIds(array $TrtcRoomIds) 设置TRTC 房间 ID 集合。匹配集合中的任意元素。
-<li>单个房间 ID 长度限制：64个字符；</li>
-<li>数组长度限制：10。</li>
- * @method array getFilters() 获取指定所有媒体文件需要返回的信息，可同时指定多个信息，N 从 0 开始递增。如果未填写该字段，默认返回所有信息。选项有：
-<li>basicInfo（视频基础信息）。</li>
-<li>metaData（视频元信息）。</li>
-<li>transcodeInfo（视频转码结果信息）。</li>
-<li>animatedGraphicsInfo（视频转动图结果信息）。</li>
-<li>imageSpriteInfo（视频雪碧图信息）。</li>
-<li>snapshotByTimeOffsetInfo（视频指定时间点截图信息）。</li>
-<li>sampleSnapshotInfo（采样截图信息）。</li>
-<li>keyFrameDescInfo（打点信息）。</li>
-<li>adaptiveDynamicStreamingInfo（转自适应码流信息）。</li>
-<li>miniProgramReviewInfo（小程序审核信息）。</li>
- * @method void setFilters(array $Filters) 设置指定所有媒体文件需要返回的信息，可同时指定多个信息，N 从 0 开始递增。如果未填写该字段，默认返回所有信息。选项有：
-<li>basicInfo（视频基础信息）。</li>
-<li>metaData（视频元信息）。</li>
-<li>transcodeInfo（视频转码结果信息）。</li>
-<li>animatedGraphicsInfo（视频转动图结果信息）。</li>
-<li>imageSpriteInfo（视频雪碧图信息）。</li>
-<li>snapshotByTimeOffsetInfo（视频指定时间点截图信息）。</li>
-<li>sampleSnapshotInfo（采样截图信息）。</li>
-<li>keyFrameDescInfo（打点信息）。</li>
-<li>adaptiveDynamicStreamingInfo（转自适应码流信息）。</li>
-<li>miniProgramReviewInfo（小程序审核信息）。</li>
- * @method SortBy getSort() 获取排序方式。
-<li>Sort.Field 可选 CreateTime 。</li>
-<li>当 Text、 Names 或 Descriptions 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
- * @method void setSort(SortBy $Sort) 设置排序方式。
-<li>Sort.Field 可选 CreateTime 。</li>
-<li>当 Text、 Names 或 Descriptions 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
- * @method integer getOffset() 获取<div id="p_offset">分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
-<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
- * @method void setOffset(integer $Offset) 设置<div id="p_offset">分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
-<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
- * @method integer getLimit() 获取<div id="p_limit">分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。
-<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
- * @method void setLimit(integer $Limit) 设置<div id="p_limit">分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。
-<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
- * @method string getText() 获取（不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
-搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
- * @method void setText(string $Text) 设置（不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
-搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
- * @method string getSourceType() 获取（不推荐：应使用 SourceTypes 替代）
-媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
- * @method void setSourceType(string $SourceType) 设置（不推荐：应使用 SourceTypes 替代）
-媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
- * @method string getStreamId() 获取（不推荐：应使用 StreamIds 替代）
-推流直播码。
- * @method void setStreamId(string $StreamId) 设置（不推荐：应使用 StreamIds 替代）
-推流直播码。
- * @method string getStartTime() 获取（不推荐：应使用 CreateTime 替代）
-创建时间的开始时间。
-<li>大于等于开始时间。</li>
-<li>当 CreateTime.After 也存在时，将优先使用 CreateTime.After。</li>
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
- * @method void setStartTime(string $StartTime) 设置（不推荐：应使用 CreateTime 替代）
-创建时间的开始时间。
-<li>大于等于开始时间。</li>
-<li>当 CreateTime.After 也存在时，将优先使用 CreateTime.After。</li>
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
- * @method string getEndTime() 获取（不推荐：应使用 CreateTime 替代）
-创建时间的结束时间。
-<li>小于结束时间。</li>
-<li>当 CreateTime.Before 也存在时，将优先使用 CreateTime.Before。</li>
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
- * @method void setEndTime(string $EndTime) 设置（不推荐：应使用 CreateTime 替代）
-创建时间的结束时间。
-<li>小于结束时间。</li>
-<li>当 CreateTime.Before 也存在时，将优先使用 CreateTime.Before。</li>
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
- * @method array getVids() 获取该字段已无效。
- * @method void setVids(array $Vids) 设置该字段已无效。
- * @method string getVid() 获取该字段已无效。
- * @method void setVid(string $Vid) 设置该字段已无效。
+ * @method integer getSubAppId() 获取<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method void setSubAppId(integer $SubAppId) 设置<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method array getFileIds() 获取<p>文件 ID 集合，匹配集合中的任意元素。</p><li>数组长度限制：10。</li><li>单个 ID 长度限制：40个字符。</li>
+ * @method void setFileIds(array $FileIds) 设置<p>文件 ID 集合，匹配集合中的任意元素。</p><li>数组长度限制：10。</li><li>单个 ID 长度限制：40个字符。</li>
+ * @method array getNames() 获取<p>文件名集合，模糊匹配媒体文件的文件名，匹配度越高，排序越优先。</p><li>单个文件名长度限制：100个字符。</li><li>数组长度限制：10。</li>
+ * @method void setNames(array $Names) 设置<p>文件名集合，模糊匹配媒体文件的文件名，匹配度越高，排序越优先。</p><li>单个文件名长度限制：100个字符。</li><li>数组长度限制：10。</li>
+ * @method array getNamePrefixes() 获取<p>文件名前缀，前缀匹配媒体文件的文件名。</p><li>单个文件名前缀长度限制：100个字符。</li><li>数组长度限制：10。</li>
+ * @method void setNamePrefixes(array $NamePrefixes) 设置<p>文件名前缀，前缀匹配媒体文件的文件名。</p><li>单个文件名前缀长度限制：100个字符。</li><li>数组长度限制：10。</li>
+ * @method array getDescriptions() 获取<p>文件描述集合，模糊匹配媒体文件的描述，匹配度越高，排序越优先。</p><li>单个描述长度限制：100个字符。</li><li>数组长度限制：10。</li>
+ * @method void setDescriptions(array $Descriptions) 设置<p>文件描述集合，模糊匹配媒体文件的描述，匹配度越高，排序越优先。</p><li>单个描述长度限制：100个字符。</li><li>数组长度限制：10。</li>
+ * @method array getClassIds() 获取<p>分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。</p><li>数组长度限制：10。</li>
+ * @method void setClassIds(array $ClassIds) 设置<p>分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。</p><li>数组长度限制：10。</li>
+ * @method array getTags() 获取<p>标签集合，匹配集合中任意元素。</p><li>单个标签长度限制：32个字符。</li><li>数组长度限制：16。</li>
+ * @method void setTags(array $Tags) 设置<p>标签集合，匹配集合中任意元素。</p><li>单个标签长度限制：32个字符。</li><li>数组长度限制：16。</li>
+ * @method array getCategories() 获取<p>文件类型。匹配集合中的任意元素：</p><li>Video: 视频文件</li><li>Audio: 音频文件</li><li>Image: 图片文件</li>
+ * @method void setCategories(array $Categories) 设置<p>文件类型。匹配集合中的任意元素：</p><li>Video: 视频文件</li><li>Audio: 音频文件</li><li>Image: 图片文件</li>
+ * @method array getSourceTypes() 获取<p>媒体文件来源集合，来源取值参见 <a href="https://cloud.tencent.com/document/product/266/31773#MediaSourceData">SourceType</a>。</p><li>数组长度限制：10。</li>
+ * @method void setSourceTypes(array $SourceTypes) 设置<p>媒体文件来源集合，来源取值参见 <a href="https://cloud.tencent.com/document/product/266/31773#MediaSourceData">SourceType</a>。</p><li>数组长度限制：10。</li>
+ * @method array getStreamIds() 获取<p>推流直播码集合。匹配集合中的任意元素。</p><li>数组长度限制：10。</li>
+ * @method void setStreamIds(array $StreamIds) 设置<p>推流直播码集合。匹配集合中的任意元素。</p><li>数组长度限制：10。</li>
+ * @method TimeRange getCreateTime() 获取<p>匹配创建时间在此时间段内的文件。</p><li>包含所指定的头尾时间点。</li>
+ * @method void setCreateTime(TimeRange $CreateTime) 设置<p>匹配创建时间在此时间段内的文件。</p><li>包含所指定的头尾时间点。</li>
+ * @method TimeRange getExpireTime() 获取<p>匹配过期时间在此时间段内的文件，无法检索到已过期文件。</p><li>包含所指定的头尾时间点。</li>
+ * @method void setExpireTime(TimeRange $ExpireTime) 设置<p>匹配过期时间在此时间段内的文件，无法检索到已过期文件。</p><li>包含所指定的头尾时间点。</li>
+ * @method array getStorageRegions() 获取<p>媒体文件存储地区，如 ap-chongqing，参见<a href="https://cloud.tencent.com/document/product/266/9760#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">地域列表</a>。</p><li>单个存储地区长度限制：20个字符。</li><li>数组长度限制：20。</li>
+ * @method void setStorageRegions(array $StorageRegions) 设置<p>媒体文件存储地区，如 ap-chongqing，参见<a href="https://cloud.tencent.com/document/product/266/9760#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">地域列表</a>。</p><li>单个存储地区长度限制：20个字符。</li><li>数组长度限制：20。</li>
+ * @method array getStorageClasses() 获取<p>存储类型数组。可选值有：</p><li> STANDARD：标准存储。</li><li> STANDARD_IA：低频存储。</li><li> ARCHIVE：归档存储。</li><li> DEEP_ARCHIVE：深度归档存储。</li>
+ * @method void setStorageClasses(array $StorageClasses) 设置<p>存储类型数组。可选值有：</p><li> STANDARD：标准存储。</li><li> STANDARD_IA：低频存储。</li><li> ARCHIVE：归档存储。</li><li> DEEP_ARCHIVE：深度归档存储。</li>
+ * @method array getMediaTypes() 获取<p>媒体文件封装格式集合，匹配集合中任意元素。</p><li>数组长度限制：10。</li>
+ * @method void setMediaTypes(array $MediaTypes) 设置<p>媒体文件封装格式集合，匹配集合中任意元素。</p><li>数组长度限制：10。</li>
+ * @method array getStatus() 获取<p>媒体文件状态，匹配集合中任意元素。</p><li> Normal：正常；</li><li> SystemForbidden：平台封禁；</li><li> Forbidden：主动封禁。</li>
+ * @method void setStatus(array $Status) 设置<p>媒体文件状态，匹配集合中任意元素。</p><li> Normal：正常；</li><li> SystemForbidden：平台封禁；</li><li> Forbidden：主动封禁。</li>
+ * @method array getReviewResults() 获取<p>媒体文件审核结果，匹配集合中任意元素。</p><li> pass：审核通过；</li><li> review：疑似违规，建议复审；</li><li> block：确认违规，建议封禁；</li><li> notModerated：未审核。</li>
+ * @method void setReviewResults(array $ReviewResults) 设置<p>媒体文件审核结果，匹配集合中任意元素。</p><li> pass：审核通过；</li><li> review：疑似违规，建议复审；</li><li> block：确认违规，建议封禁；</li><li> notModerated：未审核。</li>
+ * @method array getTrtcSdkAppIds() 获取<p>TRTC 应用 ID 集合。匹配集合中的任意元素。</p><li>数组长度限制：10。</li>
+ * @method void setTrtcSdkAppIds(array $TrtcSdkAppIds) 设置<p>TRTC 应用 ID 集合。匹配集合中的任意元素。</p><li>数组长度限制：10。</li>
+ * @method array getTrtcRoomIds() 获取<p>TRTC 房间 ID 集合。匹配集合中的任意元素。</p><li>单个房间 ID 长度限制：64个字符；</li><li>数组长度限制：10。</li>
+ * @method void setTrtcRoomIds(array $TrtcRoomIds) 设置<p>TRTC 房间 ID 集合。匹配集合中的任意元素。</p><li>单个房间 ID 长度限制：64个字符；</li><li>数组长度限制：10。</li>
+ * @method array getFilters() 获取<p>指定所有媒体文件需要返回的信息，可同时指定多个信息，N 从 0 开始递增。如果未填写该字段，默认返回所有信息。选项有：</p><li>basicInfo（视频基础信息）。</li><li>metaData（视频元信息）。</li><li>transcodeInfo（视频转码结果信息）。</li><li>animatedGraphicsInfo（视频转动图结果信息）。</li><li>imageSpriteInfo（视频雪碧图信息）。</li><li>snapshotByTimeOffsetInfo（视频指定时间点截图信息）。</li><li>sampleSnapshotInfo（采样截图信息）。</li><li>keyFrameDescInfo（打点信息）。</li><li>adaptiveDynamicStreamingInfo（转自适应码流信息）。</li><li>miniProgramReviewInfo（小程序审核信息）。</li>
+ * @method void setFilters(array $Filters) 设置<p>指定所有媒体文件需要返回的信息，可同时指定多个信息，N 从 0 开始递增。如果未填写该字段，默认返回所有信息。选项有：</p><li>basicInfo（视频基础信息）。</li><li>metaData（视频元信息）。</li><li>transcodeInfo（视频转码结果信息）。</li><li>animatedGraphicsInfo（视频转动图结果信息）。</li><li>imageSpriteInfo（视频雪碧图信息）。</li><li>snapshotByTimeOffsetInfo（视频指定时间点截图信息）。</li><li>sampleSnapshotInfo（采样截图信息）。</li><li>keyFrameDescInfo（打点信息）。</li><li>adaptiveDynamicStreamingInfo（转自适应码流信息）。</li><li>miniProgramReviewInfo（小程序审核信息）。</li>
+ * @method SortBy getSort() 获取<p>排序方式。</p><li>Sort.Field 可选 CreateTime 。</li><li>当 Text、 Names 或 Descriptions 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
+ * @method void setSort(SortBy $Sort) 设置<p>排序方式。</p><li>Sort.Field 可选 CreateTime 。</li><li>当 Text、 Names 或 Descriptions 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
+ * @method integer getOffset() 获取<div id="p_offset">分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
+ * @method void setOffset(integer $Offset) 设置<div id="p_offset">分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
+ * @method integer getLimit() 获取<div id="p_limit">分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
+ * @method void setLimit(integer $Limit) 设置<div id="p_limit">分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
+ * @method string getText() 获取<p>（不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）<br>搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。</p>
+ * @method void setText(string $Text) 设置<p>（不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）<br>搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。</p>
+ * @method string getSourceType() 获取<p>（不推荐：应使用 SourceTypes 替代）<br>媒体文件来源，来源取值参见 <a href="https://cloud.tencent.com/document/product/266/31773#MediaSourceData">SourceType</a>。</p>
+ * @method void setSourceType(string $SourceType) 设置<p>（不推荐：应使用 SourceTypes 替代）<br>媒体文件来源，来源取值参见 <a href="https://cloud.tencent.com/document/product/266/31773#MediaSourceData">SourceType</a>。</p>
+ * @method string getStreamId() 获取<p>（不推荐：应使用 StreamIds 替代）<br>推流直播码。</p>
+ * @method void setStreamId(string $StreamId) 设置<p>（不推荐：应使用 StreamIds 替代）<br>推流直播码。</p>
+ * @method string getStartTime() 获取<p>（不推荐：应使用 CreateTime 替代）<br>创建时间的开始时间。</p><li>大于等于开始时间。</li><li>当 CreateTime.After 也存在时，将优先使用 CreateTime.After。</li><li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
+ * @method void setStartTime(string $StartTime) 设置<p>（不推荐：应使用 CreateTime 替代）<br>创建时间的开始时间。</p><li>大于等于开始时间。</li><li>当 CreateTime.After 也存在时，将优先使用 CreateTime.After。</li><li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
+ * @method string getEndTime() 获取<p>（不推荐：应使用 CreateTime 替代）<br>创建时间的结束时间。</p><li>小于结束时间。</li><li>当 CreateTime.Before 也存在时，将优先使用 CreateTime.Before。</li><li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
+ * @method void setEndTime(string $EndTime) 设置<p>（不推荐：应使用 CreateTime 替代）<br>创建时间的结束时间。</p><li>小于结束时间。</li><li>当 CreateTime.Before 也存在时，将优先使用 CreateTime.Before。</li><li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
+ * @method array getVids() 获取<p>该字段已无效。</p>
+ * @method void setVids(array $Vids) 设置<p>该字段已无效。</p>
+ * @method string getVid() 获取<p>该字段已无效。</p>
+ * @method void setVid(string $Vid) 设置<p>该字段已无效。</p>
+ * @method array getStreamDomains() 获取<p>直播推流Domain，当媒资来源是直播录制时有效。</p>
+ * @method void setStreamDomains(array $StreamDomains) 设置<p>直播推流Domain，当媒资来源是直播录制时有效。</p>
+ * @method array getStreamPaths() 获取<p>直播推流Path，当媒资来源是直播录制时有效。</p>
+ * @method void setStreamPaths(array $StreamPaths) 设置<p>直播推流Path，当媒资来源是直播录制时有效。</p>
  */
 class SearchMediaRequest extends AbstractModel
 {
     /**
-     * @var integer <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * @var integer <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var array 文件 ID 集合，匹配集合中的任意元素。
-<li>数组长度限制：10。</li>
-<li>单个 ID 长度限制：40个字符。</li>
+     * @var array <p>文件 ID 集合，匹配集合中的任意元素。</p><li>数组长度限制：10。</li><li>单个 ID 长度限制：40个字符。</li>
      */
     public $FileIds;
 
     /**
-     * @var array 文件名集合，模糊匹配媒体文件的文件名，匹配度越高，排序越优先。
-<li>单个文件名长度限制：100个字符。</li>
-<li>数组长度限制：10。</li>
+     * @var array <p>文件名集合，模糊匹配媒体文件的文件名，匹配度越高，排序越优先。</p><li>单个文件名长度限制：100个字符。</li><li>数组长度限制：10。</li>
      */
     public $Names;
 
     /**
-     * @var array 文件名前缀，前缀匹配媒体文件的文件名。
-<li>单个文件名前缀长度限制：100个字符。</li>
-<li>数组长度限制：10。</li>
+     * @var array <p>文件名前缀，前缀匹配媒体文件的文件名。</p><li>单个文件名前缀长度限制：100个字符。</li><li>数组长度限制：10。</li>
      */
     public $NamePrefixes;
 
     /**
-     * @var array 文件描述集合，模糊匹配媒体文件的描述，匹配度越高，排序越优先。
-<li>单个描述长度限制：100个字符。</li>
-<li>数组长度限制：10。</li>
+     * @var array <p>文件描述集合，模糊匹配媒体文件的描述，匹配度越高，排序越优先。</p><li>单个描述长度限制：100个字符。</li><li>数组长度限制：10。</li>
      */
     public $Descriptions;
 
     /**
-     * @var array 分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。
-<li>数组长度限制：10。</li>
+     * @var array <p>分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。</p><li>数组长度限制：10。</li>
      */
     public $ClassIds;
 
     /**
-     * @var array 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：32个字符。</li>
-<li>数组长度限制：16。</li>
+     * @var array <p>标签集合，匹配集合中任意元素。</p><li>单个标签长度限制：32个字符。</li><li>数组长度限制：16。</li>
      */
     public $Tags;
 
     /**
-     * @var array 文件类型。匹配集合中的任意元素：
-<li>Video: 视频文件</li>
-<li>Audio: 音频文件</li>
-<li>Image: 图片文件</li>
+     * @var array <p>文件类型。匹配集合中的任意元素：</p><li>Video: 视频文件</li><li>Audio: 音频文件</li><li>Image: 图片文件</li>
      */
     public $Categories;
 
     /**
-     * @var array 媒体文件来源集合，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
-<li>数组长度限制：10。</li>
+     * @var array <p>媒体文件来源集合，来源取值参见 <a href="https://cloud.tencent.com/document/product/266/31773#MediaSourceData">SourceType</a>。</p><li>数组长度限制：10。</li>
      */
     public $SourceTypes;
 
     /**
-     * @var array 推流直播码集合。匹配集合中的任意元素。
-<li>数组长度限制：10。</li>
+     * @var array <p>推流直播码集合。匹配集合中的任意元素。</p><li>数组长度限制：10。</li>
      */
     public $StreamIds;
 
     /**
-     * @var TimeRange 匹配创建时间在此时间段内的文件。
-<li>包含所指定的头尾时间点。</li>
+     * @var TimeRange <p>匹配创建时间在此时间段内的文件。</p><li>包含所指定的头尾时间点。</li>
      */
     public $CreateTime;
 
     /**
-     * @var TimeRange 匹配过期时间在此时间段内的文件，无法检索到已过期文件。
-<li>包含所指定的头尾时间点。</li>
+     * @var TimeRange <p>匹配过期时间在此时间段内的文件，无法检索到已过期文件。</p><li>包含所指定的头尾时间点。</li>
      */
     public $ExpireTime;
 
     /**
-     * @var array 媒体文件存储地区，如 ap-chongqing，参见[地域列表](https://cloud.tencent.com/document/product/266/9760#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)。
-<li>单个存储地区长度限制：20个字符。</li>
-<li>数组长度限制：20。</li>
+     * @var array <p>媒体文件存储地区，如 ap-chongqing，参见<a href="https://cloud.tencent.com/document/product/266/9760#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">地域列表</a>。</p><li>单个存储地区长度限制：20个字符。</li><li>数组长度限制：20。</li>
      */
     public $StorageRegions;
 
     /**
-     * @var array 存储类型数组。可选值有：
-<li> STANDARD：标准存储。</li>
-<li> STANDARD_IA：低频存储。</li>
-<li> ARCHIVE：归档存储。</li>
-<li> DEEP_ARCHIVE：深度归档存储。</li>
+     * @var array <p>存储类型数组。可选值有：</p><li> STANDARD：标准存储。</li><li> STANDARD_IA：低频存储。</li><li> ARCHIVE：归档存储。</li><li> DEEP_ARCHIVE：深度归档存储。</li>
      */
     public $StorageClasses;
 
     /**
-     * @var array 媒体文件封装格式集合，匹配集合中任意元素。
-<li>数组长度限制：10。</li>
+     * @var array <p>媒体文件封装格式集合，匹配集合中任意元素。</p><li>数组长度限制：10。</li>
      */
     public $MediaTypes;
 
     /**
-     * @var array 媒体文件状态，匹配集合中任意元素。
-<li> Normal：正常；</li>
-<li> SystemForbidden：平台封禁；</li>
-<li> Forbidden：主动封禁。</li>
+     * @var array <p>媒体文件状态，匹配集合中任意元素。</p><li> Normal：正常；</li><li> SystemForbidden：平台封禁；</li><li> Forbidden：主动封禁。</li>
      */
     public $Status;
 
     /**
-     * @var array 媒体文件审核结果，匹配集合中任意元素。
-<li> pass：审核通过；</li>
-<li> review：疑似违规，建议复审；</li>
-<li> block：确认违规，建议封禁；</li>
-<li> notModerated：未审核。</li>
+     * @var array <p>媒体文件审核结果，匹配集合中任意元素。</p><li> pass：审核通过；</li><li> review：疑似违规，建议复审；</li><li> block：确认违规，建议封禁；</li><li> notModerated：未审核。</li>
      */
     public $ReviewResults;
 
     /**
-     * @var array TRTC 应用 ID 集合。匹配集合中的任意元素。
-<li>数组长度限制：10。</li>
+     * @var array <p>TRTC 应用 ID 集合。匹配集合中的任意元素。</p><li>数组长度限制：10。</li>
      */
     public $TrtcSdkAppIds;
 
     /**
-     * @var array TRTC 房间 ID 集合。匹配集合中的任意元素。
-<li>单个房间 ID 长度限制：64个字符；</li>
-<li>数组长度限制：10。</li>
+     * @var array <p>TRTC 房间 ID 集合。匹配集合中的任意元素。</p><li>单个房间 ID 长度限制：64个字符；</li><li>数组长度限制：10。</li>
      */
     public $TrtcRoomIds;
 
     /**
-     * @var array 指定所有媒体文件需要返回的信息，可同时指定多个信息，N 从 0 开始递增。如果未填写该字段，默认返回所有信息。选项有：
-<li>basicInfo（视频基础信息）。</li>
-<li>metaData（视频元信息）。</li>
-<li>transcodeInfo（视频转码结果信息）。</li>
-<li>animatedGraphicsInfo（视频转动图结果信息）。</li>
-<li>imageSpriteInfo（视频雪碧图信息）。</li>
-<li>snapshotByTimeOffsetInfo（视频指定时间点截图信息）。</li>
-<li>sampleSnapshotInfo（采样截图信息）。</li>
-<li>keyFrameDescInfo（打点信息）。</li>
-<li>adaptiveDynamicStreamingInfo（转自适应码流信息）。</li>
-<li>miniProgramReviewInfo（小程序审核信息）。</li>
+     * @var array <p>指定所有媒体文件需要返回的信息，可同时指定多个信息，N 从 0 开始递增。如果未填写该字段，默认返回所有信息。选项有：</p><li>basicInfo（视频基础信息）。</li><li>metaData（视频元信息）。</li><li>transcodeInfo（视频转码结果信息）。</li><li>animatedGraphicsInfo（视频转动图结果信息）。</li><li>imageSpriteInfo（视频雪碧图信息）。</li><li>snapshotByTimeOffsetInfo（视频指定时间点截图信息）。</li><li>sampleSnapshotInfo（采样截图信息）。</li><li>keyFrameDescInfo（打点信息）。</li><li>adaptiveDynamicStreamingInfo（转自适应码流信息）。</li><li>miniProgramReviewInfo（小程序审核信息）。</li>
      */
     public $Filters;
 
     /**
-     * @var SortBy 排序方式。
-<li>Sort.Field 可选 CreateTime 。</li>
-<li>当 Text、 Names 或 Descriptions 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
+     * @var SortBy <p>排序方式。</p><li>Sort.Field 可选 CreateTime 。</li><li>当 Text、 Names 或 Descriptions 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
      */
     public $Sort;
 
     /**
-     * @var integer <div id="p_offset">分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
-<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
+     * @var integer <div id="p_offset">分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
      */
     public $Offset;
 
     /**
-     * @var integer <div id="p_limit">分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。
-<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
+     * @var integer <div id="p_limit">分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
      */
     public $Limit;
 
     /**
-     * @var string （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
-搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
+     * @var string <p>（不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）<br>搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。</p>
      */
     public $Text;
 
     /**
-     * @var string （不推荐：应使用 SourceTypes 替代）
-媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
+     * @var string <p>（不推荐：应使用 SourceTypes 替代）<br>媒体文件来源，来源取值参见 <a href="https://cloud.tencent.com/document/product/266/31773#MediaSourceData">SourceType</a>。</p>
      */
     public $SourceType;
 
     /**
-     * @var string （不推荐：应使用 StreamIds 替代）
-推流直播码。
+     * @var string <p>（不推荐：应使用 StreamIds 替代）<br>推流直播码。</p>
      */
     public $StreamId;
 
     /**
-     * @var string （不推荐：应使用 CreateTime 替代）
-创建时间的开始时间。
-<li>大于等于开始时间。</li>
-<li>当 CreateTime.After 也存在时，将优先使用 CreateTime.After。</li>
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
+     * @var string <p>（不推荐：应使用 CreateTime 替代）<br>创建时间的开始时间。</p><li>大于等于开始时间。</li><li>当 CreateTime.After 也存在时，将优先使用 CreateTime.After。</li><li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
      */
     public $StartTime;
 
     /**
-     * @var string （不推荐：应使用 CreateTime 替代）
-创建时间的结束时间。
-<li>小于结束时间。</li>
-<li>当 CreateTime.Before 也存在时，将优先使用 CreateTime.Before。</li>
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
+     * @var string <p>（不推荐：应使用 CreateTime 替代）<br>创建时间的结束时间。</p><li>小于结束时间。</li><li>当 CreateTime.Before 也存在时，将优先使用 CreateTime.Before。</li><li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
      */
     public $EndTime;
 
     /**
-     * @var array 该字段已无效。
+     * @var array <p>该字段已无效。</p>
      */
     public $Vids;
 
     /**
-     * @var string 该字段已无效。
+     * @var string <p>该字段已无效。</p>
      */
     public $Vid;
 
     /**
-     * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     * @param array $FileIds 文件 ID 集合，匹配集合中的任意元素。
-<li>数组长度限制：10。</li>
-<li>单个 ID 长度限制：40个字符。</li>
-     * @param array $Names 文件名集合，模糊匹配媒体文件的文件名，匹配度越高，排序越优先。
-<li>单个文件名长度限制：100个字符。</li>
-<li>数组长度限制：10。</li>
-     * @param array $NamePrefixes 文件名前缀，前缀匹配媒体文件的文件名。
-<li>单个文件名前缀长度限制：100个字符。</li>
-<li>数组长度限制：10。</li>
-     * @param array $Descriptions 文件描述集合，模糊匹配媒体文件的描述，匹配度越高，排序越优先。
-<li>单个描述长度限制：100个字符。</li>
-<li>数组长度限制：10。</li>
-     * @param array $ClassIds 分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。
-<li>数组长度限制：10。</li>
-     * @param array $Tags 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：32个字符。</li>
-<li>数组长度限制：16。</li>
-     * @param array $Categories 文件类型。匹配集合中的任意元素：
-<li>Video: 视频文件</li>
-<li>Audio: 音频文件</li>
-<li>Image: 图片文件</li>
-     * @param array $SourceTypes 媒体文件来源集合，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
-<li>数组长度限制：10。</li>
-     * @param array $StreamIds 推流直播码集合。匹配集合中的任意元素。
-<li>数组长度限制：10。</li>
-     * @param TimeRange $CreateTime 匹配创建时间在此时间段内的文件。
-<li>包含所指定的头尾时间点。</li>
-     * @param TimeRange $ExpireTime 匹配过期时间在此时间段内的文件，无法检索到已过期文件。
-<li>包含所指定的头尾时间点。</li>
-     * @param array $StorageRegions 媒体文件存储地区，如 ap-chongqing，参见[地域列表](https://cloud.tencent.com/document/product/266/9760#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)。
-<li>单个存储地区长度限制：20个字符。</li>
-<li>数组长度限制：20。</li>
-     * @param array $StorageClasses 存储类型数组。可选值有：
-<li> STANDARD：标准存储。</li>
-<li> STANDARD_IA：低频存储。</li>
-<li> ARCHIVE：归档存储。</li>
-<li> DEEP_ARCHIVE：深度归档存储。</li>
-     * @param array $MediaTypes 媒体文件封装格式集合，匹配集合中任意元素。
-<li>数组长度限制：10。</li>
-     * @param array $Status 媒体文件状态，匹配集合中任意元素。
-<li> Normal：正常；</li>
-<li> SystemForbidden：平台封禁；</li>
-<li> Forbidden：主动封禁。</li>
-     * @param array $ReviewResults 媒体文件审核结果，匹配集合中任意元素。
-<li> pass：审核通过；</li>
-<li> review：疑似违规，建议复审；</li>
-<li> block：确认违规，建议封禁；</li>
-<li> notModerated：未审核。</li>
-     * @param array $TrtcSdkAppIds TRTC 应用 ID 集合。匹配集合中的任意元素。
-<li>数组长度限制：10。</li>
-     * @param array $TrtcRoomIds TRTC 房间 ID 集合。匹配集合中的任意元素。
-<li>单个房间 ID 长度限制：64个字符；</li>
-<li>数组长度限制：10。</li>
-     * @param array $Filters 指定所有媒体文件需要返回的信息，可同时指定多个信息，N 从 0 开始递增。如果未填写该字段，默认返回所有信息。选项有：
-<li>basicInfo（视频基础信息）。</li>
-<li>metaData（视频元信息）。</li>
-<li>transcodeInfo（视频转码结果信息）。</li>
-<li>animatedGraphicsInfo（视频转动图结果信息）。</li>
-<li>imageSpriteInfo（视频雪碧图信息）。</li>
-<li>snapshotByTimeOffsetInfo（视频指定时间点截图信息）。</li>
-<li>sampleSnapshotInfo（采样截图信息）。</li>
-<li>keyFrameDescInfo（打点信息）。</li>
-<li>adaptiveDynamicStreamingInfo（转自适应码流信息）。</li>
-<li>miniProgramReviewInfo（小程序审核信息）。</li>
-     * @param SortBy $Sort 排序方式。
-<li>Sort.Field 可选 CreateTime 。</li>
-<li>当 Text、 Names 或 Descriptions 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
-     * @param integer $Offset <div id="p_offset">分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
-<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
-     * @param integer $Limit <div id="p_limit">分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。
-<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
-     * @param string $Text （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
-搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
-     * @param string $SourceType （不推荐：应使用 SourceTypes 替代）
-媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
-     * @param string $StreamId （不推荐：应使用 StreamIds 替代）
-推流直播码。
-     * @param string $StartTime （不推荐：应使用 CreateTime 替代）
-创建时间的开始时间。
-<li>大于等于开始时间。</li>
-<li>当 CreateTime.After 也存在时，将优先使用 CreateTime.After。</li>
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
-     * @param string $EndTime （不推荐：应使用 CreateTime 替代）
-创建时间的结束时间。
-<li>小于结束时间。</li>
-<li>当 CreateTime.Before 也存在时，将优先使用 CreateTime.Before。</li>
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
-     * @param array $Vids 该字段已无效。
-     * @param string $Vid 该字段已无效。
+     * @var array <p>直播推流Domain，当媒资来源是直播录制时有效。</p>
+     */
+    public $StreamDomains;
+
+    /**
+     * @var array <p>直播推流Path，当媒资来源是直播录制时有效。</p>
+     */
+    public $StreamPaths;
+
+    /**
+     * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param array $FileIds <p>文件 ID 集合，匹配集合中的任意元素。</p><li>数组长度限制：10。</li><li>单个 ID 长度限制：40个字符。</li>
+     * @param array $Names <p>文件名集合，模糊匹配媒体文件的文件名，匹配度越高，排序越优先。</p><li>单个文件名长度限制：100个字符。</li><li>数组长度限制：10。</li>
+     * @param array $NamePrefixes <p>文件名前缀，前缀匹配媒体文件的文件名。</p><li>单个文件名前缀长度限制：100个字符。</li><li>数组长度限制：10。</li>
+     * @param array $Descriptions <p>文件描述集合，模糊匹配媒体文件的描述，匹配度越高，排序越优先。</p><li>单个描述长度限制：100个字符。</li><li>数组长度限制：10。</li>
+     * @param array $ClassIds <p>分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。</p><li>数组长度限制：10。</li>
+     * @param array $Tags <p>标签集合，匹配集合中任意元素。</p><li>单个标签长度限制：32个字符。</li><li>数组长度限制：16。</li>
+     * @param array $Categories <p>文件类型。匹配集合中的任意元素：</p><li>Video: 视频文件</li><li>Audio: 音频文件</li><li>Image: 图片文件</li>
+     * @param array $SourceTypes <p>媒体文件来源集合，来源取值参见 <a href="https://cloud.tencent.com/document/product/266/31773#MediaSourceData">SourceType</a>。</p><li>数组长度限制：10。</li>
+     * @param array $StreamIds <p>推流直播码集合。匹配集合中的任意元素。</p><li>数组长度限制：10。</li>
+     * @param TimeRange $CreateTime <p>匹配创建时间在此时间段内的文件。</p><li>包含所指定的头尾时间点。</li>
+     * @param TimeRange $ExpireTime <p>匹配过期时间在此时间段内的文件，无法检索到已过期文件。</p><li>包含所指定的头尾时间点。</li>
+     * @param array $StorageRegions <p>媒体文件存储地区，如 ap-chongqing，参见<a href="https://cloud.tencent.com/document/product/266/9760#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">地域列表</a>。</p><li>单个存储地区长度限制：20个字符。</li><li>数组长度限制：20。</li>
+     * @param array $StorageClasses <p>存储类型数组。可选值有：</p><li> STANDARD：标准存储。</li><li> STANDARD_IA：低频存储。</li><li> ARCHIVE：归档存储。</li><li> DEEP_ARCHIVE：深度归档存储。</li>
+     * @param array $MediaTypes <p>媒体文件封装格式集合，匹配集合中任意元素。</p><li>数组长度限制：10。</li>
+     * @param array $Status <p>媒体文件状态，匹配集合中任意元素。</p><li> Normal：正常；</li><li> SystemForbidden：平台封禁；</li><li> Forbidden：主动封禁。</li>
+     * @param array $ReviewResults <p>媒体文件审核结果，匹配集合中任意元素。</p><li> pass：审核通过；</li><li> review：疑似违规，建议复审；</li><li> block：确认违规，建议封禁；</li><li> notModerated：未审核。</li>
+     * @param array $TrtcSdkAppIds <p>TRTC 应用 ID 集合。匹配集合中的任意元素。</p><li>数组长度限制：10。</li>
+     * @param array $TrtcRoomIds <p>TRTC 房间 ID 集合。匹配集合中的任意元素。</p><li>单个房间 ID 长度限制：64个字符；</li><li>数组长度限制：10。</li>
+     * @param array $Filters <p>指定所有媒体文件需要返回的信息，可同时指定多个信息，N 从 0 开始递增。如果未填写该字段，默认返回所有信息。选项有：</p><li>basicInfo（视频基础信息）。</li><li>metaData（视频元信息）。</li><li>transcodeInfo（视频转码结果信息）。</li><li>animatedGraphicsInfo（视频转动图结果信息）。</li><li>imageSpriteInfo（视频雪碧图信息）。</li><li>snapshotByTimeOffsetInfo（视频指定时间点截图信息）。</li><li>sampleSnapshotInfo（采样截图信息）。</li><li>keyFrameDescInfo（打点信息）。</li><li>adaptiveDynamicStreamingInfo（转自适应码流信息）。</li><li>miniProgramReviewInfo（小程序审核信息）。</li>
+     * @param SortBy $Sort <p>排序方式。</p><li>Sort.Field 可选 CreateTime 。</li><li>当 Text、 Names 或 Descriptions 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
+     * @param integer $Offset <div id="p_offset">分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
+     * @param integer $Limit <div id="p_limit">分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
+     * @param string $Text <p>（不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）<br>搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。</p>
+     * @param string $SourceType <p>（不推荐：应使用 SourceTypes 替代）<br>媒体文件来源，来源取值参见 <a href="https://cloud.tencent.com/document/product/266/31773#MediaSourceData">SourceType</a>。</p>
+     * @param string $StreamId <p>（不推荐：应使用 StreamIds 替代）<br>推流直播码。</p>
+     * @param string $StartTime <p>（不推荐：应使用 CreateTime 替代）<br>创建时间的开始时间。</p><li>大于等于开始时间。</li><li>当 CreateTime.After 也存在时，将优先使用 CreateTime.After。</li><li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
+     * @param string $EndTime <p>（不推荐：应使用 CreateTime 替代）<br>创建时间的结束时间。</p><li>小于结束时间。</li><li>当 CreateTime.Before 也存在时，将优先使用 CreateTime.Before。</li><li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
+     * @param array $Vids <p>该字段已无效。</p>
+     * @param string $Vid <p>该字段已无效。</p>
+     * @param array $StreamDomains <p>直播推流Domain，当媒资来源是直播录制时有效。</p>
+     * @param array $StreamPaths <p>直播推流Path，当媒资来源是直播录制时有效。</p>
      */
     function __construct()
     {
@@ -639,6 +415,14 @@ class SearchMediaRequest extends AbstractModel
 
         if (array_key_exists("Vid",$param) and $param["Vid"] !== null) {
             $this->Vid = $param["Vid"];
+        }
+
+        if (array_key_exists("StreamDomains",$param) and $param["StreamDomains"] !== null) {
+            $this->StreamDomains = $param["StreamDomains"];
+        }
+
+        if (array_key_exists("StreamPaths",$param) and $param["StreamPaths"] !== null) {
+            $this->StreamPaths = $param["StreamPaths"];
         }
     }
 }

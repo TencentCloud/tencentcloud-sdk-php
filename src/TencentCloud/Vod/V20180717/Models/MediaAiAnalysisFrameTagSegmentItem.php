@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 按帧标签片段列表
  *
- * @method float getStartTimeOffset() 获取按帧标签起始的偏移时间。
- * @method void setStartTimeOffset(float $StartTimeOffset) 设置按帧标签起始的偏移时间。
- * @method float getEndTimeOffset() 获取按帧标签结束的偏移时间。
- * @method void setEndTimeOffset(float $EndTimeOffset) 设置按帧标签结束的偏移时间。
- * @method array getTagSet() 获取时间片段内的标签列表。
- * @method void setTagSet(array $TagSet) 设置时间片段内的标签列表。
+ * @method float getStartTimeOffset() 获取<p>按帧标签起始的偏移时间。</p><p>单位：秒</p>
+ * @method void setStartTimeOffset(float $StartTimeOffset) 设置<p>按帧标签起始的偏移时间。</p><p>单位：秒</p>
+ * @method float getEndTimeOffset() 获取<p>按帧标签结束的偏移时间。</p><p>单位：秒</p>
+ * @method void setEndTimeOffset(float $EndTimeOffset) 设置<p>按帧标签结束的偏移时间。</p><p>单位：秒</p>
+ * @method array getTagSet() 获取<p>时间片段内的标签列表。</p>
+ * @method void setTagSet(array $TagSet) 设置<p>时间片段内的标签列表。</p>
  */
 class MediaAiAnalysisFrameTagSegmentItem extends AbstractModel
 {
     /**
-     * @var float 按帧标签起始的偏移时间。
+     * @var float <p>按帧标签起始的偏移时间。</p><p>单位：秒</p>
      */
     public $StartTimeOffset;
 
     /**
-     * @var float 按帧标签结束的偏移时间。
+     * @var float <p>按帧标签结束的偏移时间。</p><p>单位：秒</p>
      */
     public $EndTimeOffset;
 
     /**
-     * @var array 时间片段内的标签列表。
+     * @var array <p>时间片段内的标签列表。</p>
      */
     public $TagSet;
 
     /**
-     * @param float $StartTimeOffset 按帧标签起始的偏移时间。
-     * @param float $EndTimeOffset 按帧标签结束的偏移时间。
-     * @param array $TagSet 时间片段内的标签列表。
+     * @param float $StartTimeOffset <p>按帧标签起始的偏移时间。</p><p>单位：秒</p>
+     * @param float $EndTimeOffset <p>按帧标签结束的偏移时间。</p><p>单位：秒</p>
+     * @param array $TagSet <p>时间片段内的标签列表。</p>
      */
     function __construct()
     {

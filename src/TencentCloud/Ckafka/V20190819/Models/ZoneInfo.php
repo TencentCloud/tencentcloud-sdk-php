@@ -20,91 +20,91 @@ use TencentCloud\Common\AbstractModel;
 /**
  * zone信息实体
  *
- * @method string getZoneId() 获取可用区
- * @method void setZoneId(string $ZoneId) 设置可用区
- * @method integer getIsInternalApp() 获取是否内部APP
- * @method void setIsInternalApp(integer $IsInternalApp) 设置是否内部APP
- * @method integer getAppId() 获取应用标识
- * @method void setAppId(integer $AppId) 设置应用标识
- * @method boolean getFlag() 获取可用区是否售罄标识，true表示已售罄，false表示未售罄。
- * @method void setFlag(boolean $Flag) 设置可用区是否售罄标识，true表示已售罄，false表示未售罄。
- * @method string getZoneName() 获取可用区名称
- * @method void setZoneName(string $ZoneName) 设置可用区名称
- * @method integer getZoneStatus() 获取可用区状态  枚举示例:  3: 开启，4: 关闭;  可用区状态以SoldOut为准
- * @method void setZoneStatus(integer $ZoneStatus) 设置可用区状态  枚举示例:  3: 开启，4: 关闭;  可用区状态以SoldOut为准
- * @method string getExflag() 获取额外标识
- * @method void setExflag(string $Exflag) 设置额外标识
- * @method string getSoldOut() 获取true为售罄，false为未售罄
- * @method void setSoldOut(string $SoldOut) 设置true为售罄，false为未售罄
- * @method array getSalesInfo() 获取标准版售罄信息
- * @method void setSalesInfo(array $SalesInfo) 设置标准版售罄信息
- * @method string getExtraFlag() 获取额外标识
- * @method void setExtraFlag(string $ExtraFlag) 设置额外标识
+ * @method string getZoneId() 获取<p>可用区</p>
+ * @method void setZoneId(string $ZoneId) 设置<p>可用区</p>
+ * @method integer getIsInternalApp() 获取<p>是否内部APP</p><p>枚举值：</p><ul><li>0： 外部</li><li>1： 内部</li></ul><p>默认值：0</p>
+ * @method void setIsInternalApp(integer $IsInternalApp) 设置<p>是否内部APP</p><p>枚举值：</p><ul><li>0： 外部</li><li>1： 内部</li></ul><p>默认值：0</p>
+ * @method integer getAppId() 获取<p>应用标识</p>
+ * @method void setAppId(integer $AppId) 设置<p>应用标识</p>
+ * @method boolean getFlag() 获取<p>可用区是否售罄标识，true表示已售罄，false表示未售罄。</p>
+ * @method void setFlag(boolean $Flag) 设置<p>可用区是否售罄标识，true表示已售罄，false表示未售罄。</p>
+ * @method string getZoneName() 获取<p>可用区名称</p>
+ * @method void setZoneName(string $ZoneName) 设置<p>可用区名称</p>
+ * @method integer getZoneStatus() 获取<p>可用区状态</p><p>枚举值：</p><ul><li>3： 开启</li><li>4： 关闭</li></ul><p>可用区状态以SoldOut为准</p>
+ * @method void setZoneStatus(integer $ZoneStatus) 设置<p>可用区状态</p><p>枚举值：</p><ul><li>3： 开启</li><li>4： 关闭</li></ul><p>可用区状态以SoldOut为准</p>
+ * @method string getExflag() 获取<p>额外标识</p>
+ * @method void setExflag(string $Exflag) 设置<p>额外标识</p>
+ * @method string getSoldOut() 获取<p>true为售罄，false为未售罄</p>
+ * @method void setSoldOut(string $SoldOut) 设置<p>true为售罄，false为未售罄</p>
+ * @method array getSalesInfo() 获取<p>标准版售罄信息</p>
+ * @method void setSalesInfo(array $SalesInfo) 设置<p>标准版售罄信息</p>
+ * @method string getExtraFlag() 获取<p>额外标识</p>
+ * @method void setExtraFlag(string $ExtraFlag) 设置<p>额外标识</p>
  */
 class ZoneInfo extends AbstractModel
 {
     /**
-     * @var string 可用区
+     * @var string <p>可用区</p>
      */
     public $ZoneId;
 
     /**
-     * @var integer 是否内部APP
+     * @var integer <p>是否内部APP</p><p>枚举值：</p><ul><li>0： 外部</li><li>1： 内部</li></ul><p>默认值：0</p>
      */
     public $IsInternalApp;
 
     /**
-     * @var integer 应用标识
+     * @var integer <p>应用标识</p>
      */
     public $AppId;
 
     /**
-     * @var boolean 可用区是否售罄标识，true表示已售罄，false表示未售罄。
+     * @var boolean <p>可用区是否售罄标识，true表示已售罄，false表示未售罄。</p>
      */
     public $Flag;
 
     /**
-     * @var string 可用区名称
+     * @var string <p>可用区名称</p>
      */
     public $ZoneName;
 
     /**
-     * @var integer 可用区状态  枚举示例:  3: 开启，4: 关闭;  可用区状态以SoldOut为准
+     * @var integer <p>可用区状态</p><p>枚举值：</p><ul><li>3： 开启</li><li>4： 关闭</li></ul><p>可用区状态以SoldOut为准</p>
      */
     public $ZoneStatus;
 
     /**
-     * @var string 额外标识
+     * @var string <p>额外标识</p>
      * @deprecated
      */
     public $Exflag;
 
     /**
-     * @var string true为售罄，false为未售罄
+     * @var string <p>true为售罄，false为未售罄</p>
      */
     public $SoldOut;
 
     /**
-     * @var array 标准版售罄信息
+     * @var array <p>标准版售罄信息</p>
      */
     public $SalesInfo;
 
     /**
-     * @var string 额外标识
+     * @var string <p>额外标识</p>
      */
     public $ExtraFlag;
 
     /**
-     * @param string $ZoneId 可用区
-     * @param integer $IsInternalApp 是否内部APP
-     * @param integer $AppId 应用标识
-     * @param boolean $Flag 可用区是否售罄标识，true表示已售罄，false表示未售罄。
-     * @param string $ZoneName 可用区名称
-     * @param integer $ZoneStatus 可用区状态  枚举示例:  3: 开启，4: 关闭;  可用区状态以SoldOut为准
-     * @param string $Exflag 额外标识
-     * @param string $SoldOut true为售罄，false为未售罄
-     * @param array $SalesInfo 标准版售罄信息
-     * @param string $ExtraFlag 额外标识
+     * @param string $ZoneId <p>可用区</p>
+     * @param integer $IsInternalApp <p>是否内部APP</p><p>枚举值：</p><ul><li>0： 外部</li><li>1： 内部</li></ul><p>默认值：0</p>
+     * @param integer $AppId <p>应用标识</p>
+     * @param boolean $Flag <p>可用区是否售罄标识，true表示已售罄，false表示未售罄。</p>
+     * @param string $ZoneName <p>可用区名称</p>
+     * @param integer $ZoneStatus <p>可用区状态</p><p>枚举值：</p><ul><li>3： 开启</li><li>4： 关闭</li></ul><p>可用区状态以SoldOut为准</p>
+     * @param string $Exflag <p>额外标识</p>
+     * @param string $SoldOut <p>true为售罄，false为未售罄</p>
+     * @param array $SalesInfo <p>标准版售罄信息</p>
+     * @param string $ExtraFlag <p>额外标识</p>
      */
     function __construct()
     {

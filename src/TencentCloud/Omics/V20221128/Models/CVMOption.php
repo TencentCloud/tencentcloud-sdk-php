@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 云服务器配置。
  *
- * @method string getZone() 获取云服务器可用区。
- * @method void setZone(string $Zone) 设置云服务器可用区。
- * @method string getInstanceType() 获取云服务器实例规格。
- * @method void setInstanceType(string $InstanceType) 设置云服务器实例规格。
+ * @method string getZone() 获取<p>云服务器可用区。</p>
+ * @method void setZone(string $Zone) 设置<p>云服务器可用区。</p>
+ * @method string getInstanceType() 获取<p>云服务器实例规格。详情参见<a href="https://cloud.tencent.com/document/product/213/11518">实例规格</a>描述</p>
+ * @method void setInstanceType(string $InstanceType) 设置<p>云服务器实例规格。详情参见<a href="https://cloud.tencent.com/document/product/213/11518">实例规格</a>描述</p>
  */
 class CVMOption extends AbstractModel
 {
     /**
-     * @var string 云服务器可用区。
+     * @var string <p>云服务器可用区。</p>
      */
     public $Zone;
 
     /**
-     * @var string 云服务器实例规格。
+     * @var string <p>云服务器实例规格。详情参见<a href="https://cloud.tencent.com/document/product/213/11518">实例规格</a>描述</p>
      */
     public $InstanceType;
 
     /**
-     * @param string $Zone 云服务器可用区。
-     * @param string $InstanceType 云服务器实例规格。
+     * @param string $Zone <p>云服务器可用区。</p>
+     * @param string $InstanceType <p>云服务器实例规格。详情参见<a href="https://cloud.tencent.com/document/product/213/11518">实例规格</a>描述</p>
      */
     function __construct()
     {

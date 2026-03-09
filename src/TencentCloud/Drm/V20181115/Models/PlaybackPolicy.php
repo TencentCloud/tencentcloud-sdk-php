@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 播放控制参数
  *
- * @method integer getLicenseDurationSeconds() 获取播放许可证的有效期
- * @method void setLicenseDurationSeconds(integer $LicenseDurationSeconds) 设置播放许可证的有效期
- * @method integer getPlaybackDurationSeconds() 获取开始播放后，允许最长播放时间
- * @method void setPlaybackDurationSeconds(integer $PlaybackDurationSeconds) 设置开始播放后，允许最长播放时间
+ * @method integer getLicenseDurationSeconds() 获取<p>播放许可证的有效期</p><p>单位：秒</p>
+ * @method void setLicenseDurationSeconds(integer $LicenseDurationSeconds) 设置<p>播放许可证的有效期</p><p>单位：秒</p>
+ * @method integer getPlaybackDurationSeconds() 获取<p>开始播放后，允许最长播放时间</p><p>单位：秒</p>
+ * @method void setPlaybackDurationSeconds(integer $PlaybackDurationSeconds) 设置<p>开始播放后，允许最长播放时间</p><p>单位：秒</p>
  */
 class PlaybackPolicy extends AbstractModel
 {
     /**
-     * @var integer 播放许可证的有效期
+     * @var integer <p>播放许可证的有效期</p><p>单位：秒</p>
      */
     public $LicenseDurationSeconds;
 
     /**
-     * @var integer 开始播放后，允许最长播放时间
+     * @var integer <p>开始播放后，允许最长播放时间</p><p>单位：秒</p>
      */
     public $PlaybackDurationSeconds;
 
     /**
-     * @param integer $LicenseDurationSeconds 播放许可证的有效期
-     * @param integer $PlaybackDurationSeconds 开始播放后，允许最长播放时间
+     * @param integer $LicenseDurationSeconds <p>播放许可证的有效期</p><p>单位：秒</p>
+     * @param integer $PlaybackDurationSeconds <p>开始播放后，允许最长播放时间</p><p>单位：秒</p>
      */
     function __construct()
     {

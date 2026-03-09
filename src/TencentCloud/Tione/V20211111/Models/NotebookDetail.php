@@ -172,6 +172,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(string $AppId) 设置Appid
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDescription() 获取描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDescription(string $Description) 设置描述
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NotebookDetail extends AbstractModel
 {
@@ -428,6 +432,12 @@ class NotebookDetail extends AbstractModel
     public $AppId;
 
     /**
+     * @var string 描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Description;
+
+    /**
      * @param string $Id notebook  ID
      * @param string $Name notebook 名称
      * @param string $LifecycleScriptId 生命周期脚本
@@ -503,6 +513,8 @@ class NotebookDetail extends AbstractModel
      * @param string $SubUinName 子用户名称
      * @param string $JobCreateTime 任务实例创建时间
      * @param string $AppId Appid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Description 描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -708,6 +720,10 @@ class NotebookDetail extends AbstractModel
 
         if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
             $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClasses返回参数结构体
  *
- * @method array getClassInfoSet() 获取数据库规格列表
- * @method void setClassInfoSet(array $ClassInfoSet) 设置数据库规格列表
+ * @method array getClassInfoSet() 获取<p>数据库规格列表</p>
+ * @method void setClassInfoSet(array $ClassInfoSet) 设置<p>数据库规格列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeClassesResponse extends AbstractModel
 {
     /**
-     * @var array 数据库规格列表
+     * @var array <p>数据库规格列表</p>
      */
     public $ClassInfoSet;
 
@@ -38,7 +38,7 @@ class DescribeClassesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ClassInfoSet 数据库规格列表
+     * @param array $ClassInfoSet <p>数据库规格列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

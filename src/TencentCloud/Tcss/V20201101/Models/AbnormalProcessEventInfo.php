@@ -20,422 +20,314 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 容器运行时安全异常进程信息
  *
- * @method string getProcessPath() 获取进程目录
- * @method void setProcessPath(string $ProcessPath) 设置进程目录
- * @method string getEventType() 获取事件类型，MALICE_PROCESS_START:恶意进程启动
- * @method void setEventType(string $EventType) 设置事件类型，MALICE_PROCESS_START:恶意进程启动
- * @method string getMatchRuleName() 获取命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则
- * @method void setMatchRuleName(string $MatchRuleName) 设置命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则
- * @method string getFoundTime() 获取生成时间
- * @method void setFoundTime(string $FoundTime) 设置生成时间
- * @method string getContainerName() 获取容器名
- * @method void setContainerName(string $ContainerName) 设置容器名
- * @method string getImageName() 获取镜像名
- * @method void setImageName(string $ImageName) 设置镜像名
- * @method string getBehavior() 获取动作执行结果，    BEHAVIOR_NONE: 无
-    BEHAVIOR_ALERT: 告警
-    BEHAVIOR_RELEASE：放行
-    BEHAVIOR_HOLDUP_FAILED:拦截失败
-    BEHAVIOR_HOLDUP_SUCCESSED：拦截失败
- * @method void setBehavior(string $Behavior) 设置动作执行结果，    BEHAVIOR_NONE: 无
-    BEHAVIOR_ALERT: 告警
-    BEHAVIOR_RELEASE：放行
-    BEHAVIOR_HOLDUP_FAILED:拦截失败
-    BEHAVIOR_HOLDUP_SUCCESSED：拦截失败
- * @method string getStatus() 获取状态，EVENT_UNDEAL:事件未处理
-    EVENT_DEALED:事件已经处理
-    EVENT_INGNORE：事件已经忽略
- * @method void setStatus(string $Status) 设置状态，EVENT_UNDEAL:事件未处理
-    EVENT_DEALED:事件已经处理
-    EVENT_INGNORE：事件已经忽略
- * @method string getId() 获取事件记录的唯一id
- * @method void setId(string $Id) 设置事件记录的唯一id
- * @method string getImageId() 获取镜像id，用于跳转
- * @method void setImageId(string $ImageId) 设置镜像id，用于跳转
- * @method string getContainerId() 获取容器id，用于跳转
- * @method void setContainerId(string $ContainerId) 设置容器id，用于跳转
- * @method string getSolution() 获取事件解决方案
- * @method void setSolution(string $Solution) 设置事件解决方案
- * @method string getDescription() 获取事件详细描述
- * @method void setDescription(string $Description) 设置事件详细描述
- * @method string getMatchRuleId() 获取命中策略id
- * @method void setMatchRuleId(string $MatchRuleId) 设置命中策略id
- * @method string getMatchAction() 获取命中规则行为：
-RULE_MODE_RELEASE 放行
-RULE_MODE_ALERT  告警
-RULE_MODE_HOLDUP 拦截
- * @method void setMatchAction(string $MatchAction) 设置命中规则行为：
-RULE_MODE_RELEASE 放行
-RULE_MODE_ALERT  告警
-RULE_MODE_HOLDUP 拦截
- * @method string getMatchProcessPath() 获取命中规则进程信息
- * @method void setMatchProcessPath(string $MatchProcessPath) 设置命中规则进程信息
- * @method boolean getRuleExist() 获取规则是否存在
- * @method void setRuleExist(boolean $RuleExist) 设置规则是否存在
- * @method integer getEventCount() 获取事件数量
- * @method void setEventCount(integer $EventCount) 设置事件数量
- * @method string getLatestFoundTime() 获取最近生成时间
- * @method void setLatestFoundTime(string $LatestFoundTime) 设置最近生成时间
- * @method string getRuleId() 获取规则组Id
- * @method void setRuleId(string $RuleId) 设置规则组Id
- * @method string getMatchGroupName() 获取命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字
- * @method void setMatchGroupName(string $MatchGroupName) 设置命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字
- * @method string getMatchRuleLevel() 获取命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。
- * @method void setMatchRuleLevel(string $MatchRuleLevel) 设置命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。
- * @method string getContainerNetStatus() 获取网络状态
-未隔离  	NORMAL
-已隔离		ISOLATED
-隔离中		ISOLATING
-隔离失败	ISOLATE_FAILED
-解除隔离中  RESTORING
-解除隔离失败 RESTORE_FAILED
- * @method void setContainerNetStatus(string $ContainerNetStatus) 设置网络状态
-未隔离  	NORMAL
-已隔离		ISOLATED
-隔离中		ISOLATING
-隔离失败	ISOLATE_FAILED
-解除隔离中  RESTORING
-解除隔离失败 RESTORE_FAILED
- * @method string getContainerNetSubStatus() 获取容器子状态
-"AGENT_OFFLINE"       //Agent离线
-"NODE_DESTROYED"      //节点已销毁
-"CONTAINER_EXITED"    //容器已退出
-"CONTAINER_DESTROYED" //容器已销毁
-"SHARED_HOST"         // 容器与主机共享网络
-"RESOURCE_LIMIT"      //隔离操作资源超限
-"UNKNOW"              // 原因未知
- * @method void setContainerNetSubStatus(string $ContainerNetSubStatus) 设置容器子状态
-"AGENT_OFFLINE"       //Agent离线
-"NODE_DESTROYED"      //节点已销毁
-"CONTAINER_EXITED"    //容器已退出
-"CONTAINER_DESTROYED" //容器已销毁
-"SHARED_HOST"         // 容器与主机共享网络
-"RESOURCE_LIMIT"      //隔离操作资源超限
-"UNKNOW"              // 原因未知
- * @method string getContainerIsolateOperationSrc() 获取容器隔离操作来源
- * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) 设置容器隔离操作来源
- * @method string getContainerStatus() 获取容器状态
-正在运行: RUNNING
-暂停: PAUSED
-停止: STOPPED
-已经创建: CREATED
-已经销毁: DESTROYED
-正在重启中: RESTARTING
-迁移中: REMOVING
- * @method void setContainerStatus(string $ContainerStatus) 设置容器状态
-正在运行: RUNNING
-暂停: PAUSED
-停止: STOPPED
-已经创建: CREATED
-已经销毁: DESTROYED
-正在重启中: RESTARTING
-迁移中: REMOVING
- * @method string getClusterID() 获取集群ID
- * @method void setClusterID(string $ClusterID) 设置集群ID
- * @method string getNodeType() 获取节点类型：NORMAL普通节点、SUPER超级节点
- * @method void setNodeType(string $NodeType) 设置节点类型：NORMAL普通节点、SUPER超级节点
- * @method string getPodName() 获取pod 名称
- * @method void setPodName(string $PodName) 设置pod 名称
- * @method string getPodIP() 获取pod ip
- * @method void setPodIP(string $PodIP) 设置pod ip
- * @method string getNodeUniqueID() 获取集群id
- * @method void setNodeUniqueID(string $NodeUniqueID) 设置集群id
- * @method string getPublicIP() 获取节点公网ip
- * @method void setPublicIP(string $PublicIP) 设置节点公网ip
- * @method string getNodeName() 获取节点名称
- * @method void setNodeName(string $NodeName) 设置节点名称
- * @method string getNodeID() 获取节点id
- * @method void setNodeID(string $NodeID) 设置节点id
- * @method string getHostID() 获取uuid
- * @method void setHostID(string $HostID) 设置uuid
- * @method string getHostIP() 获取节点内网ip
- * @method void setHostIP(string $HostIP) 设置节点内网ip
- * @method string getClusterName() 获取集群名称
- * @method void setClusterName(string $ClusterName) 设置集群名称
+ * @method string getProcessPath() 获取<p>进程目录</p>
+ * @method void setProcessPath(string $ProcessPath) 设置<p>进程目录</p>
+ * @method string getEventType() 获取<p>事件类型，MALICE_PROCESS_START:恶意进程启动</p>
+ * @method void setEventType(string $EventType) 设置<p>事件类型，MALICE_PROCESS_START:恶意进程启动</p>
+ * @method string getMatchRuleName() 获取<p>命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则</p>
+ * @method void setMatchRuleName(string $MatchRuleName) 设置<p>命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则</p>
+ * @method string getFoundTime() 获取<p>生成时间</p>
+ * @method void setFoundTime(string $FoundTime) 设置<p>生成时间</p>
+ * @method string getContainerName() 获取<p>容器名</p>
+ * @method void setContainerName(string $ContainerName) 设置<p>容器名</p>
+ * @method string getImageName() 获取<p>镜像名</p>
+ * @method void setImageName(string $ImageName) 设置<p>镜像名</p>
+ * @method string getBehavior() 获取<p>动作执行结果，    BEHAVIOR_NONE: 无<br>    BEHAVIOR_ALERT: 告警<br>    BEHAVIOR_RELEASE：放行<br>    BEHAVIOR_HOLDUP_FAILED:拦截失败<br>    BEHAVIOR_HOLDUP_SUCCESSED：拦截失败</p>
+ * @method void setBehavior(string $Behavior) 设置<p>动作执行结果，    BEHAVIOR_NONE: 无<br>    BEHAVIOR_ALERT: 告警<br>    BEHAVIOR_RELEASE：放行<br>    BEHAVIOR_HOLDUP_FAILED:拦截失败<br>    BEHAVIOR_HOLDUP_SUCCESSED：拦截失败</p>
+ * @method string getStatus() 获取<p>状态，EVENT_UNDEAL:事件未处理<br>    EVENT_DEALED:事件已经处理<br>    EVENT_INGNORE：事件已经忽略</p>
+ * @method void setStatus(string $Status) 设置<p>状态，EVENT_UNDEAL:事件未处理<br>    EVENT_DEALED:事件已经处理<br>    EVENT_INGNORE：事件已经忽略</p>
+ * @method string getId() 获取<p>事件记录的唯一id</p>
+ * @method void setId(string $Id) 设置<p>事件记录的唯一id</p>
+ * @method string getImageId() 获取<p>镜像id，用于跳转</p>
+ * @method void setImageId(string $ImageId) 设置<p>镜像id，用于跳转</p>
+ * @method string getContainerId() 获取<p>容器id，用于跳转</p>
+ * @method void setContainerId(string $ContainerId) 设置<p>容器id，用于跳转</p>
+ * @method string getSolution() 获取<p>事件解决方案</p>
+ * @method void setSolution(string $Solution) 设置<p>事件解决方案</p>
+ * @method string getDescription() 获取<p>事件详细描述</p>
+ * @method void setDescription(string $Description) 设置<p>事件详细描述</p>
+ * @method string getMatchRuleId() 获取<p>命中策略id</p>
+ * @method void setMatchRuleId(string $MatchRuleId) 设置<p>命中策略id</p>
+ * @method string getMatchAction() 获取<p>命中规则行为：<br>RULE_MODE_RELEASE 放行<br>RULE_MODE_ALERT  告警<br>RULE_MODE_HOLDUP 拦截</p>
+ * @method void setMatchAction(string $MatchAction) 设置<p>命中规则行为：<br>RULE_MODE_RELEASE 放行<br>RULE_MODE_ALERT  告警<br>RULE_MODE_HOLDUP 拦截</p>
+ * @method string getMatchProcessPath() 获取<p>命中规则进程信息</p>
+ * @method void setMatchProcessPath(string $MatchProcessPath) 设置<p>命中规则进程信息</p>
+ * @method boolean getRuleExist() 获取<p>规则是否存在</p>
+ * @method void setRuleExist(boolean $RuleExist) 设置<p>规则是否存在</p>
+ * @method integer getEventCount() 获取<p>事件数量</p>
+ * @method void setEventCount(integer $EventCount) 设置<p>事件数量</p>
+ * @method string getLatestFoundTime() 获取<p>最近生成时间</p>
+ * @method void setLatestFoundTime(string $LatestFoundTime) 设置<p>最近生成时间</p>
+ * @method string getRuleId() 获取<p>规则组Id</p>
+ * @method void setRuleId(string $RuleId) 设置<p>规则组Id</p>
+ * @method string getMatchGroupName() 获取<p>命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字</p>
+ * @method void setMatchGroupName(string $MatchGroupName) 设置<p>命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字</p>
+ * @method string getMatchRuleLevel() 获取<p>命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。</p>
+ * @method void setMatchRuleLevel(string $MatchRuleLevel) 设置<p>命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。</p>
+ * @method string getContainerNetStatus() 获取<p>网络状态<br>未隔离      NORMAL<br>已隔离        ISOLATED<br>隔离中        ISOLATING<br>隔离失败    ISOLATE_FAILED<br>解除隔离中  RESTORING<br>解除隔离失败 RESTORE_FAILED</p>
+ * @method void setContainerNetStatus(string $ContainerNetStatus) 设置<p>网络状态<br>未隔离      NORMAL<br>已隔离        ISOLATED<br>隔离中        ISOLATING<br>隔离失败    ISOLATE_FAILED<br>解除隔离中  RESTORING<br>解除隔离失败 RESTORE_FAILED</p>
+ * @method string getContainerNetSubStatus() 获取<p>容器子状态<br>&quot;AGENT_OFFLINE&quot;       //Agent离线<br>&quot;NODE_DESTROYED&quot;      //节点已销毁<br>&quot;CONTAINER_EXITED&quot;    //容器已退出<br>&quot;CONTAINER_DESTROYED&quot; //容器已销毁<br>&quot;SHARED_HOST&quot;         // 容器与主机共享网络<br>&quot;RESOURCE_LIMIT&quot;      //隔离操作资源超限<br>&quot;UNKNOW&quot;              // 原因未知</p>
+ * @method void setContainerNetSubStatus(string $ContainerNetSubStatus) 设置<p>容器子状态<br>&quot;AGENT_OFFLINE&quot;       //Agent离线<br>&quot;NODE_DESTROYED&quot;      //节点已销毁<br>&quot;CONTAINER_EXITED&quot;    //容器已退出<br>&quot;CONTAINER_DESTROYED&quot; //容器已销毁<br>&quot;SHARED_HOST&quot;         // 容器与主机共享网络<br>&quot;RESOURCE_LIMIT&quot;      //隔离操作资源超限<br>&quot;UNKNOW&quot;              // 原因未知</p>
+ * @method string getContainerIsolateOperationSrc() 获取<p>容器隔离操作来源</p>
+ * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) 设置<p>容器隔离操作来源</p>
+ * @method string getContainerStatus() 获取<p>容器状态<br>正在运行: RUNNING<br>暂停: PAUSED<br>停止: STOPPED<br>已经创建: CREATED<br>已经销毁: DESTROYED<br>正在重启中: RESTARTING<br>迁移中: REMOVING</p>
+ * @method void setContainerStatus(string $ContainerStatus) 设置<p>容器状态<br>正在运行: RUNNING<br>暂停: PAUSED<br>停止: STOPPED<br>已经创建: CREATED<br>已经销毁: DESTROYED<br>正在重启中: RESTARTING<br>迁移中: REMOVING</p>
+ * @method string getClusterID() 获取<p>集群ID</p>
+ * @method void setClusterID(string $ClusterID) 设置<p>集群ID</p>
+ * @method string getNodeType() 获取<p>节点类型：NORMAL普通节点、SUPER超级节点</p>
+ * @method void setNodeType(string $NodeType) 设置<p>节点类型：NORMAL普通节点、SUPER超级节点</p>
+ * @method string getPodName() 获取<p>pod 名称</p>
+ * @method void setPodName(string $PodName) 设置<p>pod 名称</p>
+ * @method string getPodIP() 获取<p>pod ip</p>
+ * @method void setPodIP(string $PodIP) 设置<p>pod ip</p>
+ * @method string getNodeUniqueID() 获取<p>集群id</p>
+ * @method void setNodeUniqueID(string $NodeUniqueID) 设置<p>集群id</p>
+ * @method string getPublicIP() 获取<p>节点公网ip</p>
+ * @method void setPublicIP(string $PublicIP) 设置<p>节点公网ip</p>
+ * @method string getNodeName() 获取<p>节点名称</p>
+ * @method void setNodeName(string $NodeName) 设置<p>节点名称</p>
+ * @method string getNodeID() 获取<p>节点id</p>
+ * @method void setNodeID(string $NodeID) 设置<p>节点id</p>
+ * @method string getHostID() 获取<p>uuid</p>
+ * @method void setHostID(string $HostID) 设置<p>uuid</p>
+ * @method string getHostIP() 获取<p>节点内网ip</p>
+ * @method void setHostIP(string $HostIP) 设置<p>节点内网ip</p>
+ * @method string getClusterName() 获取<p>集群名称</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名称</p>
+ * @method string getCmdLine() 获取<p>命令行参数</p>
+ * @method void setCmdLine(string $CmdLine) 设置<p>命令行参数</p>
  */
 class AbnormalProcessEventInfo extends AbstractModel
 {
     /**
-     * @var string 进程目录
+     * @var string <p>进程目录</p>
      */
     public $ProcessPath;
 
     /**
-     * @var string 事件类型，MALICE_PROCESS_START:恶意进程启动
+     * @var string <p>事件类型，MALICE_PROCESS_START:恶意进程启动</p>
      */
     public $EventType;
 
     /**
-     * @var string 命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则
+     * @var string <p>命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则</p>
      */
     public $MatchRuleName;
 
     /**
-     * @var string 生成时间
+     * @var string <p>生成时间</p>
      */
     public $FoundTime;
 
     /**
-     * @var string 容器名
+     * @var string <p>容器名</p>
      */
     public $ContainerName;
 
     /**
-     * @var string 镜像名
+     * @var string <p>镜像名</p>
      */
     public $ImageName;
 
     /**
-     * @var string 动作执行结果，    BEHAVIOR_NONE: 无
-    BEHAVIOR_ALERT: 告警
-    BEHAVIOR_RELEASE：放行
-    BEHAVIOR_HOLDUP_FAILED:拦截失败
-    BEHAVIOR_HOLDUP_SUCCESSED：拦截失败
+     * @var string <p>动作执行结果，    BEHAVIOR_NONE: 无<br>    BEHAVIOR_ALERT: 告警<br>    BEHAVIOR_RELEASE：放行<br>    BEHAVIOR_HOLDUP_FAILED:拦截失败<br>    BEHAVIOR_HOLDUP_SUCCESSED：拦截失败</p>
      */
     public $Behavior;
 
     /**
-     * @var string 状态，EVENT_UNDEAL:事件未处理
-    EVENT_DEALED:事件已经处理
-    EVENT_INGNORE：事件已经忽略
+     * @var string <p>状态，EVENT_UNDEAL:事件未处理<br>    EVENT_DEALED:事件已经处理<br>    EVENT_INGNORE：事件已经忽略</p>
      */
     public $Status;
 
     /**
-     * @var string 事件记录的唯一id
+     * @var string <p>事件记录的唯一id</p>
      */
     public $Id;
 
     /**
-     * @var string 镜像id，用于跳转
+     * @var string <p>镜像id，用于跳转</p>
      */
     public $ImageId;
 
     /**
-     * @var string 容器id，用于跳转
+     * @var string <p>容器id，用于跳转</p>
      */
     public $ContainerId;
 
     /**
-     * @var string 事件解决方案
+     * @var string <p>事件解决方案</p>
      */
     public $Solution;
 
     /**
-     * @var string 事件详细描述
+     * @var string <p>事件详细描述</p>
      */
     public $Description;
 
     /**
-     * @var string 命中策略id
+     * @var string <p>命中策略id</p>
      */
     public $MatchRuleId;
 
     /**
-     * @var string 命中规则行为：
-RULE_MODE_RELEASE 放行
-RULE_MODE_ALERT  告警
-RULE_MODE_HOLDUP 拦截
+     * @var string <p>命中规则行为：<br>RULE_MODE_RELEASE 放行<br>RULE_MODE_ALERT  告警<br>RULE_MODE_HOLDUP 拦截</p>
      */
     public $MatchAction;
 
     /**
-     * @var string 命中规则进程信息
+     * @var string <p>命中规则进程信息</p>
      */
     public $MatchProcessPath;
 
     /**
-     * @var boolean 规则是否存在
+     * @var boolean <p>规则是否存在</p>
      */
     public $RuleExist;
 
     /**
-     * @var integer 事件数量
+     * @var integer <p>事件数量</p>
      */
     public $EventCount;
 
     /**
-     * @var string 最近生成时间
+     * @var string <p>最近生成时间</p>
      */
     public $LatestFoundTime;
 
     /**
-     * @var string 规则组Id
+     * @var string <p>规则组Id</p>
      */
     public $RuleId;
 
     /**
-     * @var string 命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字
+     * @var string <p>命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字</p>
      */
     public $MatchGroupName;
 
     /**
-     * @var string 命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。
+     * @var string <p>命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。</p>
      */
     public $MatchRuleLevel;
 
     /**
-     * @var string 网络状态
-未隔离  	NORMAL
-已隔离		ISOLATED
-隔离中		ISOLATING
-隔离失败	ISOLATE_FAILED
-解除隔离中  RESTORING
-解除隔离失败 RESTORE_FAILED
+     * @var string <p>网络状态<br>未隔离      NORMAL<br>已隔离        ISOLATED<br>隔离中        ISOLATING<br>隔离失败    ISOLATE_FAILED<br>解除隔离中  RESTORING<br>解除隔离失败 RESTORE_FAILED</p>
      */
     public $ContainerNetStatus;
 
     /**
-     * @var string 容器子状态
-"AGENT_OFFLINE"       //Agent离线
-"NODE_DESTROYED"      //节点已销毁
-"CONTAINER_EXITED"    //容器已退出
-"CONTAINER_DESTROYED" //容器已销毁
-"SHARED_HOST"         // 容器与主机共享网络
-"RESOURCE_LIMIT"      //隔离操作资源超限
-"UNKNOW"              // 原因未知
+     * @var string <p>容器子状态<br>&quot;AGENT_OFFLINE&quot;       //Agent离线<br>&quot;NODE_DESTROYED&quot;      //节点已销毁<br>&quot;CONTAINER_EXITED&quot;    //容器已退出<br>&quot;CONTAINER_DESTROYED&quot; //容器已销毁<br>&quot;SHARED_HOST&quot;         // 容器与主机共享网络<br>&quot;RESOURCE_LIMIT&quot;      //隔离操作资源超限<br>&quot;UNKNOW&quot;              // 原因未知</p>
      */
     public $ContainerNetSubStatus;
 
     /**
-     * @var string 容器隔离操作来源
+     * @var string <p>容器隔离操作来源</p>
      */
     public $ContainerIsolateOperationSrc;
 
     /**
-     * @var string 容器状态
-正在运行: RUNNING
-暂停: PAUSED
-停止: STOPPED
-已经创建: CREATED
-已经销毁: DESTROYED
-正在重启中: RESTARTING
-迁移中: REMOVING
+     * @var string <p>容器状态<br>正在运行: RUNNING<br>暂停: PAUSED<br>停止: STOPPED<br>已经创建: CREATED<br>已经销毁: DESTROYED<br>正在重启中: RESTARTING<br>迁移中: REMOVING</p>
      */
     public $ContainerStatus;
 
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterID;
 
     /**
-     * @var string 节点类型：NORMAL普通节点、SUPER超级节点
+     * @var string <p>节点类型：NORMAL普通节点、SUPER超级节点</p>
      */
     public $NodeType;
 
     /**
-     * @var string pod 名称
+     * @var string <p>pod 名称</p>
      */
     public $PodName;
 
     /**
-     * @var string pod ip
+     * @var string <p>pod ip</p>
      */
     public $PodIP;
 
     /**
-     * @var string 集群id
+     * @var string <p>集群id</p>
      */
     public $NodeUniqueID;
 
     /**
-     * @var string 节点公网ip
+     * @var string <p>节点公网ip</p>
      */
     public $PublicIP;
 
     /**
-     * @var string 节点名称
+     * @var string <p>节点名称</p>
      */
     public $NodeName;
 
     /**
-     * @var string 节点id
+     * @var string <p>节点id</p>
      */
     public $NodeID;
 
     /**
-     * @var string uuid
+     * @var string <p>uuid</p>
      */
     public $HostID;
 
     /**
-     * @var string 节点内网ip
+     * @var string <p>节点内网ip</p>
      */
     public $HostIP;
 
     /**
-     * @var string 集群名称
+     * @var string <p>集群名称</p>
      */
     public $ClusterName;
 
     /**
-     * @param string $ProcessPath 进程目录
-     * @param string $EventType 事件类型，MALICE_PROCESS_START:恶意进程启动
-     * @param string $MatchRuleName 命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则
-     * @param string $FoundTime 生成时间
-     * @param string $ContainerName 容器名
-     * @param string $ImageName 镜像名
-     * @param string $Behavior 动作执行结果，    BEHAVIOR_NONE: 无
-    BEHAVIOR_ALERT: 告警
-    BEHAVIOR_RELEASE：放行
-    BEHAVIOR_HOLDUP_FAILED:拦截失败
-    BEHAVIOR_HOLDUP_SUCCESSED：拦截失败
-     * @param string $Status 状态，EVENT_UNDEAL:事件未处理
-    EVENT_DEALED:事件已经处理
-    EVENT_INGNORE：事件已经忽略
-     * @param string $Id 事件记录的唯一id
-     * @param string $ImageId 镜像id，用于跳转
-     * @param string $ContainerId 容器id，用于跳转
-     * @param string $Solution 事件解决方案
-     * @param string $Description 事件详细描述
-     * @param string $MatchRuleId 命中策略id
-     * @param string $MatchAction 命中规则行为：
-RULE_MODE_RELEASE 放行
-RULE_MODE_ALERT  告警
-RULE_MODE_HOLDUP 拦截
-     * @param string $MatchProcessPath 命中规则进程信息
-     * @param boolean $RuleExist 规则是否存在
-     * @param integer $EventCount 事件数量
-     * @param string $LatestFoundTime 最近生成时间
-     * @param string $RuleId 规则组Id
-     * @param string $MatchGroupName 命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字
-     * @param string $MatchRuleLevel 命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。
-     * @param string $ContainerNetStatus 网络状态
-未隔离  	NORMAL
-已隔离		ISOLATED
-隔离中		ISOLATING
-隔离失败	ISOLATE_FAILED
-解除隔离中  RESTORING
-解除隔离失败 RESTORE_FAILED
-     * @param string $ContainerNetSubStatus 容器子状态
-"AGENT_OFFLINE"       //Agent离线
-"NODE_DESTROYED"      //节点已销毁
-"CONTAINER_EXITED"    //容器已退出
-"CONTAINER_DESTROYED" //容器已销毁
-"SHARED_HOST"         // 容器与主机共享网络
-"RESOURCE_LIMIT"      //隔离操作资源超限
-"UNKNOW"              // 原因未知
-     * @param string $ContainerIsolateOperationSrc 容器隔离操作来源
-     * @param string $ContainerStatus 容器状态
-正在运行: RUNNING
-暂停: PAUSED
-停止: STOPPED
-已经创建: CREATED
-已经销毁: DESTROYED
-正在重启中: RESTARTING
-迁移中: REMOVING
-     * @param string $ClusterID 集群ID
-     * @param string $NodeType 节点类型：NORMAL普通节点、SUPER超级节点
-     * @param string $PodName pod 名称
-     * @param string $PodIP pod ip
-     * @param string $NodeUniqueID 集群id
-     * @param string $PublicIP 节点公网ip
-     * @param string $NodeName 节点名称
-     * @param string $NodeID 节点id
-     * @param string $HostID uuid
-     * @param string $HostIP 节点内网ip
-     * @param string $ClusterName 集群名称
+     * @var string <p>命令行参数</p>
+     */
+    public $CmdLine;
+
+    /**
+     * @param string $ProcessPath <p>进程目录</p>
+     * @param string $EventType <p>事件类型，MALICE_PROCESS_START:恶意进程启动</p>
+     * @param string $MatchRuleName <p>命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则</p>
+     * @param string $FoundTime <p>生成时间</p>
+     * @param string $ContainerName <p>容器名</p>
+     * @param string $ImageName <p>镜像名</p>
+     * @param string $Behavior <p>动作执行结果，    BEHAVIOR_NONE: 无<br>    BEHAVIOR_ALERT: 告警<br>    BEHAVIOR_RELEASE：放行<br>    BEHAVIOR_HOLDUP_FAILED:拦截失败<br>    BEHAVIOR_HOLDUP_SUCCESSED：拦截失败</p>
+     * @param string $Status <p>状态，EVENT_UNDEAL:事件未处理<br>    EVENT_DEALED:事件已经处理<br>    EVENT_INGNORE：事件已经忽略</p>
+     * @param string $Id <p>事件记录的唯一id</p>
+     * @param string $ImageId <p>镜像id，用于跳转</p>
+     * @param string $ContainerId <p>容器id，用于跳转</p>
+     * @param string $Solution <p>事件解决方案</p>
+     * @param string $Description <p>事件详细描述</p>
+     * @param string $MatchRuleId <p>命中策略id</p>
+     * @param string $MatchAction <p>命中规则行为：<br>RULE_MODE_RELEASE 放行<br>RULE_MODE_ALERT  告警<br>RULE_MODE_HOLDUP 拦截</p>
+     * @param string $MatchProcessPath <p>命中规则进程信息</p>
+     * @param boolean $RuleExist <p>规则是否存在</p>
+     * @param integer $EventCount <p>事件数量</p>
+     * @param string $LatestFoundTime <p>最近生成时间</p>
+     * @param string $RuleId <p>规则组Id</p>
+     * @param string $MatchGroupName <p>命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字</p>
+     * @param string $MatchRuleLevel <p>命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。</p>
+     * @param string $ContainerNetStatus <p>网络状态<br>未隔离      NORMAL<br>已隔离        ISOLATED<br>隔离中        ISOLATING<br>隔离失败    ISOLATE_FAILED<br>解除隔离中  RESTORING<br>解除隔离失败 RESTORE_FAILED</p>
+     * @param string $ContainerNetSubStatus <p>容器子状态<br>&quot;AGENT_OFFLINE&quot;       //Agent离线<br>&quot;NODE_DESTROYED&quot;      //节点已销毁<br>&quot;CONTAINER_EXITED&quot;    //容器已退出<br>&quot;CONTAINER_DESTROYED&quot; //容器已销毁<br>&quot;SHARED_HOST&quot;         // 容器与主机共享网络<br>&quot;RESOURCE_LIMIT&quot;      //隔离操作资源超限<br>&quot;UNKNOW&quot;              // 原因未知</p>
+     * @param string $ContainerIsolateOperationSrc <p>容器隔离操作来源</p>
+     * @param string $ContainerStatus <p>容器状态<br>正在运行: RUNNING<br>暂停: PAUSED<br>停止: STOPPED<br>已经创建: CREATED<br>已经销毁: DESTROYED<br>正在重启中: RESTARTING<br>迁移中: REMOVING</p>
+     * @param string $ClusterID <p>集群ID</p>
+     * @param string $NodeType <p>节点类型：NORMAL普通节点、SUPER超级节点</p>
+     * @param string $PodName <p>pod 名称</p>
+     * @param string $PodIP <p>pod ip</p>
+     * @param string $NodeUniqueID <p>集群id</p>
+     * @param string $PublicIP <p>节点公网ip</p>
+     * @param string $NodeName <p>节点名称</p>
+     * @param string $NodeID <p>节点id</p>
+     * @param string $HostID <p>uuid</p>
+     * @param string $HostIP <p>节点内网ip</p>
+     * @param string $ClusterName <p>集群名称</p>
+     * @param string $CmdLine <p>命令行参数</p>
      */
     function __construct()
     {
@@ -596,6 +488,10 @@ RULE_MODE_HOLDUP 拦截
 
         if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
             $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("CmdLine",$param) and $param["CmdLine"] !== null) {
+            $this->CmdLine = $param["CmdLine"];
         }
     }
 }

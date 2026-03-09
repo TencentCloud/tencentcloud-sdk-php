@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 容器运行时安全，子策略信息
  *
- * @method string getRuleMode() 获取策略模式，   RULE_MODE_RELEASE: 放行
-   RULE_MODE_ALERT: 告警
-   RULE_MODE_HOLDUP:拦截
- * @method void setRuleMode(string $RuleMode) 设置策略模式，   RULE_MODE_RELEASE: 放行
-   RULE_MODE_ALERT: 告警
-   RULE_MODE_HOLDUP:拦截
- * @method string getProcessPath() 获取进程路径
- * @method void setProcessPath(string $ProcessPath) 设置进程路径
- * @method string getRuleId() 获取子策略id
- * @method void setRuleId(string $RuleId) 设置子策略id
- * @method string getRuleLevel() 获取威胁等级，HIGH:高，MIDDLE:中，LOW:低
- * @method void setRuleLevel(string $RuleLevel) 设置威胁等级，HIGH:高，MIDDLE:中，LOW:低
+ * @method string getRuleMode() 获取<p>策略模式，   RULE_MODE_RELEASE: 放行<br>   RULE_MODE_ALERT: 告警<br>   RULE_MODE_HOLDUP:拦截</p>
+ * @method void setRuleMode(string $RuleMode) 设置<p>策略模式，   RULE_MODE_RELEASE: 放行<br>   RULE_MODE_ALERT: 告警<br>   RULE_MODE_HOLDUP:拦截</p>
+ * @method string getProcessPath() 获取<p>进程路径</p>
+ * @method void setProcessPath(string $ProcessPath) 设置<p>进程路径</p>
+ * @method string getRuleId() 获取<p>子策略id</p>
+ * @method void setRuleId(string $RuleId) 设置<p>子策略id</p>
+ * @method string getRuleLevel() 获取<p>威胁等级，HIGH:高，MIDDLE:中，LOW:低</p>
+ * @method void setRuleLevel(string $RuleLevel) 设置<p>威胁等级，HIGH:高，MIDDLE:中，LOW:低</p>
+ * @method string getCmdLine() 获取<p>命令行参数</p>
+ * @method void setCmdLine(string $CmdLine) 设置<p>命令行参数</p>
  */
 class AbnormalProcessChildRuleInfo extends AbstractModel
 {
     /**
-     * @var string 策略模式，   RULE_MODE_RELEASE: 放行
-   RULE_MODE_ALERT: 告警
-   RULE_MODE_HOLDUP:拦截
+     * @var string <p>策略模式，   RULE_MODE_RELEASE: 放行<br>   RULE_MODE_ALERT: 告警<br>   RULE_MODE_HOLDUP:拦截</p>
      */
     public $RuleMode;
 
     /**
-     * @var string 进程路径
+     * @var string <p>进程路径</p>
      */
     public $ProcessPath;
 
     /**
-     * @var string 子策略id
+     * @var string <p>子策略id</p>
      */
     public $RuleId;
 
     /**
-     * @var string 威胁等级，HIGH:高，MIDDLE:中，LOW:低
+     * @var string <p>威胁等级，HIGH:高，MIDDLE:中，LOW:低</p>
      */
     public $RuleLevel;
 
     /**
-     * @param string $RuleMode 策略模式，   RULE_MODE_RELEASE: 放行
-   RULE_MODE_ALERT: 告警
-   RULE_MODE_HOLDUP:拦截
-     * @param string $ProcessPath 进程路径
-     * @param string $RuleId 子策略id
-     * @param string $RuleLevel 威胁等级，HIGH:高，MIDDLE:中，LOW:低
+     * @var string <p>命令行参数</p>
+     */
+    public $CmdLine;
+
+    /**
+     * @param string $RuleMode <p>策略模式，   RULE_MODE_RELEASE: 放行<br>   RULE_MODE_ALERT: 告警<br>   RULE_MODE_HOLDUP:拦截</p>
+     * @param string $ProcessPath <p>进程路径</p>
+     * @param string $RuleId <p>子策略id</p>
+     * @param string $RuleLevel <p>威胁等级，HIGH:高，MIDDLE:中，LOW:低</p>
+     * @param string $CmdLine <p>命令行参数</p>
      */
     function __construct()
     {
@@ -92,6 +92,10 @@ class AbnormalProcessChildRuleInfo extends AbstractModel
 
         if (array_key_exists("RuleLevel",$param) and $param["RuleLevel"] !== null) {
             $this->RuleLevel = $param["RuleLevel"];
+        }
+
+        if (array_key_exists("CmdLine",$param) and $param["CmdLine"] !== null) {
+            $this->CmdLine = $param["CmdLine"];
         }
     }
 }

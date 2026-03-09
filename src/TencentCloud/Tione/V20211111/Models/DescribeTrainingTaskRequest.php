@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getId() 获取训练任务ID
  * @method void setId(string $Id) 设置训练任务ID
+ * @method string getInstanceId() 获取训练任务实例ID
+ * @method void setInstanceId(string $InstanceId) 设置训练任务实例ID
  */
 class DescribeTrainingTaskRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeTrainingTaskRequest extends AbstractModel
     public $Id;
 
     /**
+     * @var string 训练任务实例ID
+     */
+    public $InstanceId;
+
+    /**
      * @param string $Id 训练任务ID
+     * @param string $InstanceId 训练任务实例ID
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeTrainingTaskRequest extends AbstractModel
         }
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

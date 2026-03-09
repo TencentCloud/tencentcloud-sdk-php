@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBVersions返回参数结构体
  *
- * @method array getVersionSet() 获取数据库版本号信息列表
- * @method void setVersionSet(array $VersionSet) 设置数据库版本号信息列表
+ * @method array getVersionSet() 获取<p>数据库版本号信息列表</p>
+ * @method void setVersionSet(array $VersionSet) 设置<p>数据库版本号信息列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDBVersionsResponse extends AbstractModel
 {
     /**
-     * @var array 数据库版本号信息列表
+     * @var array <p>数据库版本号信息列表</p>
      */
     public $VersionSet;
 
@@ -38,7 +38,7 @@ class DescribeDBVersionsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $VersionSet 数据库版本号信息列表
+     * @param array $VersionSet <p>数据库版本号信息列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

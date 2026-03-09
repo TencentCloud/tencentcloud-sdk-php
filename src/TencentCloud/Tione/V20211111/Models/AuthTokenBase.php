@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置token 创建时间
  * @method string getStatus() 获取token状态
  * @method void setStatus(string $Status) 设置token状态
+ * @method string getId() 获取token的唯一id，与value一一对应，重置后id也会一并变化
+ * @method void setId(string $Id) 设置token的唯一id，与value一一对应，重置后id也会一并变化
  */
 class AuthTokenBase extends AbstractModel
 {
@@ -59,11 +61,17 @@ class AuthTokenBase extends AbstractModel
     public $Status;
 
     /**
+     * @var string token的唯一id，与value一一对应，重置后id也会一并变化
+     */
+    public $Id;
+
+    /**
      * @param string $Value token 值
      * @param string $Name token 别名
      * @param string $Description token 描述
      * @param string $CreateTime token 创建时间
      * @param string $Status token状态
+     * @param string $Id token的唯一id，与value一一对应，重置后id也会一并变化
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class AuthTokenBase extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
     }
 }

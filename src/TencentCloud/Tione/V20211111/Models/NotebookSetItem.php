@@ -132,6 +132,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method ExposePortConfig getExposePortConfig() 获取容器服务暴露端口配置
  * @method void setExposePortConfig(ExposePortConfig $ExposePortConfig) 设置容器服务暴露端口配置
+ * @method string getDescription() 获取描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDescription(string $Description) 设置描述
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NotebookSetItem extends AbstractModel
 {
@@ -316,6 +320,12 @@ class NotebookSetItem extends AbstractModel
     public $ExposePortConfig;
 
     /**
+     * @var string 描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Description;
+
+    /**
      * @param string $Id notebook ID
      * @param string $Name notebook 名称
      * @param string $ChargeType 计费模式
@@ -372,6 +382,8 @@ class NotebookSetItem extends AbstractModel
      * @param string $AppId AppId
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ExposePortConfig $ExposePortConfig 容器服务暴露端口配置
+     * @param string $Description 描述
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -518,6 +530,10 @@ class NotebookSetItem extends AbstractModel
         if (array_key_exists("ExposePortConfig",$param) and $param["ExposePortConfig"] !== null) {
             $this->ExposePortConfig = new ExposePortConfig();
             $this->ExposePortConfig->deserialize($param["ExposePortConfig"]);
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

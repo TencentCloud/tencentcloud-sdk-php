@@ -46,8 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnterpriseUidList(array $EnterpriseUidList) 设置子公司ID列表
  * @method array getFilters() 获取查询数组
  * @method void setFilters(array $Filters) 设置查询数组
- * @method integer getCustomerId() 获取企业ID
- * @method void setCustomerId(integer $CustomerId) 设置企业ID
+ * @method integer getCustomerId() 获取<p>企业ID</p>
+ * @method void setCustomerId(integer $CustomerId) 设置<p>企业ID</p>
+ * @method string getOrderBy() 获取<p>排序方式</p>
+ * @method void setOrderBy(string $OrderBy) 设置<p>排序方式</p>
  */
 class DescribeApiSecsRequest extends AbstractModel
 {
@@ -117,9 +119,14 @@ class DescribeApiSecsRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer 企业ID
+     * @var integer <p>企业ID</p>
      */
     public $CustomerId;
+
+    /**
+     * @var string <p>排序方式</p>
+     */
+    public $OrderBy;
 
     /**
      * @param boolean $IsAggregation 是否聚合数据
@@ -135,7 +142,8 @@ class DescribeApiSecsRequest extends AbstractModel
      * @param array $CustomerIdList 企业ID列表，可多选
      * @param array $EnterpriseUidList 子公司ID列表
      * @param array $Filters 查询数组
-     * @param integer $CustomerId 企业ID
+     * @param integer $CustomerId <p>企业ID</p>
+     * @param string $OrderBy <p>排序方式</p>
      */
     function __construct()
     {
@@ -209,6 +217,10 @@ class DescribeApiSecsRequest extends AbstractModel
 
         if (array_key_exists("CustomerId",$param) and $param["CustomerId"] !== null) {
             $this->CustomerId = $param["CustomerId"];
+        }
+
+        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
+            $this->OrderBy = $param["OrderBy"];
         }
     }
 }

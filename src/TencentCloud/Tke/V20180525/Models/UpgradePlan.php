@@ -34,8 +34,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpgradeStartAt(string $UpgradeStartAt) 设置升级开始时间
  * @method string getUpgradeEndAt() 获取升级结束时间
  * @method void setUpgradeEndAt(string $UpgradeEndAt) 设置升级结束时间
- * @method string getStatus() 获取升级状态
- * @method void setStatus(string $Status) 设置升级状态
+ * @method string getStatus() 获取升级状态，包括以下状态值：
+- Pending：等待中
+- Processing：升级配置处理中
+- Running：升级中
+- Succeed：升级成功
+- Failed：升级失败
+- Cancelled：已取消
+ * @method void setStatus(string $Status) 设置升级状态，包括以下状态值：
+- Pending：等待中
+- Processing：升级配置处理中
+- Running：升级中
+- Succeed：升级成功
+- Failed：升级失败
+- Cancelled：已取消
  * @method string getReason() 获取原因
  * @method void setReason(string $Reason) 设置原因
  */
@@ -77,7 +89,13 @@ class UpgradePlan extends AbstractModel
     public $UpgradeEndAt;
 
     /**
-     * @var string 升级状态
+     * @var string 升级状态，包括以下状态值：
+- Pending：等待中
+- Processing：升级配置处理中
+- Running：升级中
+- Succeed：升级成功
+- Failed：升级失败
+- Cancelled：已取消
      */
     public $Status;
 
@@ -94,7 +112,13 @@ class UpgradePlan extends AbstractModel
      * @param string $PlanedStartAt 预计开始时间
      * @param string $UpgradeStartAt 升级开始时间
      * @param string $UpgradeEndAt 升级结束时间
-     * @param string $Status 升级状态
+     * @param string $Status 升级状态，包括以下状态值：
+- Pending：等待中
+- Processing：升级配置处理中
+- Running：升级中
+- Succeed：升级成功
+- Failed：升级失败
+- Cancelled：已取消
      * @param string $Reason 原因
      */
     function __construct()

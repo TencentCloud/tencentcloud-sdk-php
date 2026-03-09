@@ -82,6 +82,8 @@ POSTPAID_BY_HOUR：按小时后付费
  * @method void setSSHConfig(SSHConfig $SSHConfig) 设置SSH配置
  * @method array getEnvs() 获取自定义环境变量
  * @method void setEnvs(array $Envs) 设置自定义环境变量
+ * @method string getDescription() 获取描述
+ * @method void setDescription(string $Description) 设置描述
  */
 class ModifyNotebookRequest extends AbstractModel
 {
@@ -217,6 +219,11 @@ POSTPAID_BY_HOUR：按小时后付费
     public $Envs;
 
     /**
+     * @var string 描述
+     */
+    public $Description;
+
+    /**
      * @param string $Id notebook id
      * @param string $Name 名称。不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      * @param string $ChargeType （不允许修改）计算资源付费模式 ，可选值为：
@@ -248,6 +255,7 @@ POSTPAID_BY_HOUR：按小时后付费
      * @param string $ImageType 镜像类型，包括SYSTEM、TCR、CCR
      * @param SSHConfig $SSHConfig SSH配置
      * @param array $Envs 自定义环境变量
+     * @param string $Description 描述
      */
     function __construct()
     {
@@ -380,6 +388,10 @@ POSTPAID_BY_HOUR：按小时后付费
                 $obj->deserialize($value);
                 array_push($this->Envs, $obj);
             }
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

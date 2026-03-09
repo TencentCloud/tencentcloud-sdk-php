@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriodModifyCount(integer $PeriodModifyCount) 设置本月Period的修改次数
  * @method string getGranularity() 获取日志存储时长单位，年year/月month/天day
  * @method void setGranularity(string $Granularity) 设置日志存储时长单位，年year/月month/天day
+ * @method string getMsgLanguage() 获取语言类型
+ * @method void setMsgLanguage(string $MsgLanguage) 设置语言类型
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -54,6 +56,11 @@ class DescribeLogStorageConfigResponse extends AbstractModel
     public $Granularity;
 
     /**
+     * @var string 语言类型
+     */
+    public $MsgLanguage;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -63,6 +70,7 @@ class DescribeLogStorageConfigResponse extends AbstractModel
      * @param integer $Period 日志存储时长，3640表示不限
      * @param integer $PeriodModifyCount 本月Period的修改次数
      * @param string $Granularity 日志存储时长单位，年year/月month/天day
+     * @param string $MsgLanguage 语言类型
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -92,6 +100,10 @@ class DescribeLogStorageConfigResponse extends AbstractModel
 
         if (array_key_exists("Granularity",$param) and $param["Granularity"] !== null) {
             $this->Granularity = $param["Granularity"];
+        }
+
+        if (array_key_exists("MsgLanguage",$param) and $param["MsgLanguage"] !== null) {
+            $this->MsgLanguage = $param["MsgLanguage"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

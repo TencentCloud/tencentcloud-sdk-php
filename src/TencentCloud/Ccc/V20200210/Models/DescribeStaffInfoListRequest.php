@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStaffInfoList请求参数结构体
  *
- * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
- * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
- * @method integer getPageSize() 获取分页尺寸，上限 9999
- * @method void setPageSize(integer $PageSize) 设置分页尺寸，上限 9999
- * @method integer getPageNumber() 获取分页页码，从 0 开始
- * @method void setPageNumber(integer $PageNumber) 设置分页页码，从 0 开始
- * @method string getStaffMail() 获取坐席账号，查询单个坐席时使用
- * @method void setStaffMail(string $StaffMail) 设置坐席账号，查询单个坐席时使用
- * @method integer getModifiedTime() 获取查询修改时间大于等于ModifiedTime的坐席时使用
- * @method void setModifiedTime(integer $ModifiedTime) 设置查询修改时间大于等于ModifiedTime的坐席时使用
- * @method integer getSkillGroupId() 获取技能组ID
- * @method void setSkillGroupId(integer $SkillGroupId) 设置技能组ID
+ * @method integer getSdkAppId() 获取<p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+ * @method void setSdkAppId(integer $SdkAppId) 设置<p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+ * @method integer getPageSize() 获取<p>分页尺寸，上限 9999</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>分页尺寸，上限 9999</p>
+ * @method integer getPageNumber() 获取<p>分页页码，从 0 开始</p>
+ * @method void setPageNumber(integer $PageNumber) 设置<p>分页页码，从 0 开始</p>
+ * @method string getStaffMail() 获取<p>坐席账号，查询单个坐席时使用</p>
+ * @method void setStaffMail(string $StaffMail) 设置<p>坐席账号，查询单个坐席时使用</p>
+ * @method integer getModifiedTime() 获取<p>查询修改时间大于等于ModifiedTime的坐席时使用</p>
+ * @method void setModifiedTime(integer $ModifiedTime) 设置<p>查询修改时间大于等于ModifiedTime的坐席时使用</p>
+ * @method integer getSkillGroupId() 获取<p>技能组ID</p>
+ * @method void setSkillGroupId(integer $SkillGroupId) 设置<p>技能组ID</p>
  */
 class DescribeStaffInfoListRequest extends AbstractModel
 {
     /**
-     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * @var integer <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public $SdkAppId;
 
     /**
-     * @var integer 分页尺寸，上限 9999
+     * @var integer <p>分页尺寸，上限 9999</p>
      */
     public $PageSize;
 
     /**
-     * @var integer 分页页码，从 0 开始
+     * @var integer <p>分页页码，从 0 开始</p>
      */
     public $PageNumber;
 
     /**
-     * @var string 坐席账号，查询单个坐席时使用
+     * @var string <p>坐席账号，查询单个坐席时使用</p>
      */
     public $StaffMail;
 
     /**
-     * @var integer 查询修改时间大于等于ModifiedTime的坐席时使用
+     * @var integer <p>查询修改时间大于等于ModifiedTime的坐席时使用</p>
      */
     public $ModifiedTime;
 
     /**
-     * @var integer 技能组ID
+     * @var integer <p>技能组ID</p>
      */
     public $SkillGroupId;
 
     /**
-     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
-     * @param integer $PageSize 分页尺寸，上限 9999
-     * @param integer $PageNumber 分页页码，从 0 开始
-     * @param string $StaffMail 坐席账号，查询单个坐席时使用
-     * @param integer $ModifiedTime 查询修改时间大于等于ModifiedTime的坐席时使用
-     * @param integer $SkillGroupId 技能组ID
+     * @param integer $SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+     * @param integer $PageSize <p>分页尺寸，上限 9999</p>
+     * @param integer $PageNumber <p>分页页码，从 0 开始</p>
+     * @param string $StaffMail <p>坐席账号，查询单个坐席时使用</p>
+     * @param integer $ModifiedTime <p>查询修改时间大于等于ModifiedTime的坐席时使用</p>
+     * @param integer $SkillGroupId <p>技能组ID</p>
      */
     function __construct()
     {

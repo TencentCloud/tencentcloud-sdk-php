@@ -20,38 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProductConfig请求参数结构体
  *
- * @method string getZone() 获取可用区名称
- * @method void setZone(string $Zone) 设置可用区名称
- * @method string getDBEngine() 获取数据库引擎，支持：
-1、postgresql（云数据库PostgreSQL）；
-2、mssql_compatible（MSSQL兼容-云数据库PostgreSQL）；
-如不指定默认使用postgresql。
- * @method void setDBEngine(string $DBEngine) 设置数据库引擎，支持：
-1、postgresql（云数据库PostgreSQL）；
-2、mssql_compatible（MSSQL兼容-云数据库PostgreSQL）；
-如不指定默认使用postgresql。
+ * @method string getZone() 获取<p>可用区名称</p>
+ * @method void setZone(string $Zone) 设置<p>可用区名称</p>
+ * @method string getDBEngine() 获取<p>数据库引擎，支持：<br>1、postgresql（云数据库PostgreSQL）；<br>2、mssql_compatible（MSSQL兼容-云数据库PostgreSQL）；<br>如不指定默认使用postgresql。</p>
+ * @method void setDBEngine(string $DBEngine) 设置<p>数据库引擎，支持：<br>1、postgresql（云数据库PostgreSQL）；<br>2、mssql_compatible（MSSQL兼容-云数据库PostgreSQL）；<br>如不指定默认使用postgresql。</p>
  */
 class DescribeProductConfigRequest extends AbstractModel
 {
     /**
-     * @var string 可用区名称
+     * @var string <p>可用区名称</p>
      */
     public $Zone;
 
     /**
-     * @var string 数据库引擎，支持：
-1、postgresql（云数据库PostgreSQL）；
-2、mssql_compatible（MSSQL兼容-云数据库PostgreSQL）；
-如不指定默认使用postgresql。
+     * @var string <p>数据库引擎，支持：<br>1、postgresql（云数据库PostgreSQL）；<br>2、mssql_compatible（MSSQL兼容-云数据库PostgreSQL）；<br>如不指定默认使用postgresql。</p>
      */
     public $DBEngine;
 
     /**
-     * @param string $Zone 可用区名称
-     * @param string $DBEngine 数据库引擎，支持：
-1、postgresql（云数据库PostgreSQL）；
-2、mssql_compatible（MSSQL兼容-云数据库PostgreSQL）；
-如不指定默认使用postgresql。
+     * @param string $Zone <p>可用区名称</p>
+     * @param string $DBEngine <p>数据库引擎，支持：<br>1、postgresql（云数据库PostgreSQL）；<br>2、mssql_compatible（MSSQL兼容-云数据库PostgreSQL）；<br>如不指定默认使用postgresql。</p>
      */
     function __construct()
     {

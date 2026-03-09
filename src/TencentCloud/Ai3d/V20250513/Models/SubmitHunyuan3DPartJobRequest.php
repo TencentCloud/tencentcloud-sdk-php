@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SubmitHunyuan3DPartJob请求参数结构体
  *
- * @method InputFile3D getFile() 获取需进行组件生成的3D模型文件，仅支持FBX格式。
- * @method void setFile(InputFile3D $File) 设置需进行组件生成的3D模型文件，仅支持FBX格式。
- * @method string getModel() 获取组件生成模型版本，默认为1.0，可选项：1.0，1.5；
- * @method void setModel(string $Model) 设置组件生成模型版本，默认为1.0，可选项：1.0，1.5；
+ * @method InputFile3D getFile() 获取<p>需进行组件生成的3D模型文件，仅支持FBX格式。</p>
+ * @method void setFile(InputFile3D $File) 设置<p>需进行组件生成的3D模型文件，仅支持FBX格式。</p>
+ * @method string getModel() 获取<p>组件生成模型版本，默认为1.5</p><p>枚举值：</p><ul><li>1.5： 1.5模型</li></ul><p>默认值：1.5</p>
+ * @method void setModel(string $Model) 设置<p>组件生成模型版本，默认为1.5</p><p>枚举值：</p><ul><li>1.5： 1.5模型</li></ul><p>默认值：1.5</p>
  */
 class SubmitHunyuan3DPartJobRequest extends AbstractModel
 {
     /**
-     * @var InputFile3D 需进行组件生成的3D模型文件，仅支持FBX格式。
+     * @var InputFile3D <p>需进行组件生成的3D模型文件，仅支持FBX格式。</p>
      */
     public $File;
 
     /**
-     * @var string 组件生成模型版本，默认为1.0，可选项：1.0，1.5；
+     * @var string <p>组件生成模型版本，默认为1.5</p><p>枚举值：</p><ul><li>1.5： 1.5模型</li></ul><p>默认值：1.5</p>
      */
     public $Model;
 
     /**
-     * @param InputFile3D $File 需进行组件生成的3D模型文件，仅支持FBX格式。
-     * @param string $Model 组件生成模型版本，默认为1.0，可选项：1.0，1.5；
+     * @param InputFile3D $File <p>需进行组件生成的3D模型文件，仅支持FBX格式。</p>
+     * @param string $Model <p>组件生成模型版本，默认为1.5</p><p>枚举值：</p><ul><li>1.5： 1.5模型</li></ul><p>默认值：1.5</p>
      */
     function __construct()
     {

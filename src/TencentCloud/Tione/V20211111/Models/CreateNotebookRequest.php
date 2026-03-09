@@ -84,6 +84,8 @@ GooseFSx：GooseFSx存储
  * @method void setSSHConfig(SSHConfig $SSHConfig) 设置SSH配置信息
  * @method GooseFS getVolumeSourceGooseFS() 获取GooseFS存储配置
  * @method void setVolumeSourceGooseFS(GooseFS $VolumeSourceGooseFS) 设置GooseFS存储配置
+ * @method string getDescription() 获取描述
+ * @method void setDescription(string $Description) 设置描述
  */
 class CreateNotebookRequest extends AbstractModel
 {
@@ -216,6 +218,11 @@ GooseFSx：GooseFSx存储
     public $VolumeSourceGooseFS;
 
     /**
+     * @var string 描述
+     */
+    public $Description;
+
+    /**
      * @param string $Name 名称。不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      * @param string $ChargeType 计算资源付费模式 ，可选值为：
 PREPAID：预付费，即包年包月
@@ -248,6 +255,7 @@ GooseFSx：GooseFSx存储
      * @param string $ImageType 镜像类型，包括SYSTEM、TCR、CCR
      * @param SSHConfig $SSHConfig SSH配置信息
      * @param GooseFS $VolumeSourceGooseFS GooseFS存储配置
+     * @param string $Description 描述
      */
     function __construct()
     {
@@ -372,6 +380,10 @@ GooseFSx：GooseFSx存储
         if (array_key_exists("VolumeSourceGooseFS",$param) and $param["VolumeSourceGooseFS"] !== null) {
             $this->VolumeSourceGooseFS = new GooseFS();
             $this->VolumeSourceGooseFS->deserialize($param["VolumeSourceGooseFS"]);
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

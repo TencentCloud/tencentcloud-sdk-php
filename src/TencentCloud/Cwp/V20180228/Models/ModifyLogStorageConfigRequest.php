@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriod(integer $Period) 设置日志存储时长，3640表示不限
  * @method string getGranularity() 获取日志存储时长单位，年year/月month/天day
  * @method void setGranularity(string $Granularity) 设置日志存储时长单位，年year/月month/天day
+ * @method string getMsgLanguage() 获取语言类型
+ * @method void setMsgLanguage(string $MsgLanguage) 设置语言类型
  */
 class ModifyLogStorageConfigRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyLogStorageConfigRequest extends AbstractModel
     public $Granularity;
 
     /**
+     * @var string 语言类型
+     */
+    public $MsgLanguage;
+
+    /**
      * @param boolean $IsModifyPeriod 是否修改有效期（已废弃）
      * @param array $Type 存储类型，string数组
      * @param integer $Period 日志存储时长，3640表示不限
      * @param string $Granularity 日志存储时长单位，年year/月month/天day
+     * @param string $MsgLanguage 语言类型
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ModifyLogStorageConfigRequest extends AbstractModel
 
         if (array_key_exists("Granularity",$param) and $param["Granularity"] !== null) {
             $this->Granularity = $param["Granularity"];
+        }
+
+        if (array_key_exists("MsgLanguage",$param) and $param["MsgLanguage"] !== null) {
+            $this->MsgLanguage = $param["MsgLanguage"];
         }
     }
 }

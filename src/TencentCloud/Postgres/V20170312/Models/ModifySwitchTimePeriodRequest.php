@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySwitchTimePeriod请求参数结构体
  *
- * @method string getDBInstanceId() 获取处于等待切换状态中的实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
- * @method void setDBInstanceId(string $DBInstanceId) 设置处于等待切换状态中的实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
- * @method integer getSwitchTag() 获取入参取值为 0 ，代表立即切换。
- * @method void setSwitchTag(integer $SwitchTag) 设置入参取值为 0 ，代表立即切换。
+ * @method string getDBInstanceId() 获取<p>处于等待切换状态中的实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+ * @method void setDBInstanceId(string $DBInstanceId) 设置<p>处于等待切换状态中的实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+ * @method integer getSwitchTag() 获取<p>入参取值为 0 ，代表立即切换。</p>
+ * @method void setSwitchTag(integer $SwitchTag) 设置<p>入参取值为 0 ，代表立即切换。</p>
  */
 class ModifySwitchTimePeriodRequest extends AbstractModel
 {
     /**
-     * @var string 处于等待切换状态中的实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @var string <p>处于等待切换状态中的实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
      */
     public $DBInstanceId;
 
     /**
-     * @var integer 入参取值为 0 ，代表立即切换。
+     * @var integer <p>入参取值为 0 ，代表立即切换。</p>
      */
     public $SwitchTag;
 
     /**
-     * @param string $DBInstanceId 处于等待切换状态中的实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
-     * @param integer $SwitchTag 入参取值为 0 ，代表立即切换。
+     * @param string $DBInstanceId <p>处于等待切换状态中的实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+     * @param integer $SwitchTag <p>入参取值为 0 ，代表立即切换。</p>
      */
     function __construct()
     {

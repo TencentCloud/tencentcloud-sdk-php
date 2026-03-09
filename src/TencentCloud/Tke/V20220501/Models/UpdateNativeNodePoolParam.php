@@ -60,10 +60,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceTypes(array $InstanceTypes) 设置机型列表
  * @method integer getReplicas() 获取期望节点数
  * @method void setReplicas(integer $Replicas) 设置期望节点数
- * @method boolean getUpdateExistedNode() 获取是否更新存量节点
- * @method void setUpdateExistedNode(boolean $UpdateExistedNode) 设置是否更新存量节点
+ * @method boolean getUpdateExistedNode() 获取是否更新存量节点MetaData(包括： metadata、annotation、label)
+ * @method void setUpdateExistedNode(boolean $UpdateExistedNode) 设置是否更新存量节点MetaData(包括： metadata、annotation、label)
  * @method array getDataDisks() 获取数据盘列表
  * @method void setDataDisks(array $DataDisks) 设置数据盘列表
+ * @method string getUpdateMachineManagement() 获取节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选
+
+management包括：nameserver、host、kubelet、kernel参数
+ * @method void setUpdateMachineManagement(string $UpdateMachineManagement) 设置节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选
+
+management包括：nameserver、host、kubelet、kernel参数
  * @method array getKeyIds() 获取ssh公钥id数组
  * @method void setKeyIds(array $KeyIds) 设置ssh公钥id数组
  * @method string getDeletePolicy() 获取节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest
@@ -166,7 +172,7 @@ class UpdateNativeNodePoolParam extends AbstractModel
     public $Replicas;
 
     /**
-     * @var boolean 是否更新存量节点
+     * @var boolean 是否更新存量节点MetaData(包括： metadata、annotation、label)
      */
     public $UpdateExistedNode;
 
@@ -174,6 +180,13 @@ class UpdateNativeNodePoolParam extends AbstractModel
      * @var array 数据盘列表
      */
     public $DataDisks;
+
+    /**
+     * @var string 节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选
+
+management包括：nameserver、host、kubelet、kernel参数
+     */
+    public $UpdateMachineManagement;
 
     /**
      * @var array ssh公钥id数组
@@ -221,8 +234,11 @@ class UpdateNativeNodePoolParam extends AbstractModel
      * @param boolean $EnableAutoscaling 是否开启弹性伸缩
      * @param array $InstanceTypes 机型列表
      * @param integer $Replicas 期望节点数
-     * @param boolean $UpdateExistedNode 是否更新存量节点
+     * @param boolean $UpdateExistedNode 是否更新存量节点MetaData(包括： metadata、annotation、label)
      * @param array $DataDisks 数据盘列表
+     * @param string $UpdateMachineManagement 节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选
+
+management包括：nameserver、host、kubelet、kernel参数
      * @param array $KeyIds ssh公钥id数组
      * @param string $DeletePolicy 节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest
      * @param array $GPUConfigs 节点池 GPU 配置
@@ -327,6 +343,10 @@ class UpdateNativeNodePoolParam extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DataDisks, $obj);
             }
+        }
+
+        if (array_key_exists("UpdateMachineManagement",$param) and $param["UpdateMachineManagement"] !== null) {
+            $this->UpdateMachineManagement = $param["UpdateMachineManagement"];
         }
 
         if (array_key_exists("KeyIds",$param) and $param["KeyIds"] !== null) {

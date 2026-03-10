@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * VPN网关配额对象
  *
- * @method integer getBandwidth() 获取带宽配额
- * @method void setBandwidth(integer $Bandwidth) 设置带宽配额
+ * @method integer getBandwidth() 获取带宽配额，单位：Mbps。
+ * @method void setBandwidth(integer $Bandwidth) 设置带宽配额，单位：Mbps。
  * @method string getCname() 获取配额中文名称
  * @method void setCname(string $Cname) 设置配额中文名称
  * @method string getName() 获取配额英文名称
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class VpnGatewayQuota extends AbstractModel
 {
     /**
-     * @var integer 带宽配额
+     * @var integer 带宽配额，单位：Mbps。
      */
     public $Bandwidth;
 
@@ -45,7 +45,7 @@ class VpnGatewayQuota extends AbstractModel
     public $Name;
 
     /**
-     * @param integer $Bandwidth 带宽配额
+     * @param integer $Bandwidth 带宽配额，单位：Mbps。
      * @param string $Cname 配额中文名称
      * @param string $Name 配额英文名称
      */

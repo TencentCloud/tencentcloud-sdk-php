@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getKeyIds() 获取查询CMK的ID列表，批量查询一次最多支持100个KeyId
  * @method void setKeyIds(array $KeyIds) 设置查询CMK的ID列表，批量查询一次最多支持100个KeyId
+ * @method MemberAccount getMemberAccount() 获取可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+ * @method void setMemberAccount(MemberAccount $MemberAccount) 设置可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
  */
 class DescribeKeysRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeKeysRequest extends AbstractModel
     public $KeyIds;
 
     /**
+     * @var MemberAccount 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+     */
+    public $MemberAccount;
+
+    /**
      * @param array $KeyIds 查询CMK的ID列表，批量查询一次最多支持100个KeyId
+     * @param MemberAccount $MemberAccount 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
      */
     function __construct()
     {
@@ -48,6 +56,11 @@ class DescribeKeysRequest extends AbstractModel
         }
         if (array_key_exists("KeyIds",$param) and $param["KeyIds"] !== null) {
             $this->KeyIds = $param["KeyIds"];
+        }
+
+        if (array_key_exists("MemberAccount",$param) and $param["MemberAccount"] !== null) {
+            $this->MemberAccount = new MemberAccount();
+            $this->MemberAccount->deserialize($param["MemberAccount"]);
         }
     }
 }

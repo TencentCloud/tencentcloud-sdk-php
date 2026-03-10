@@ -37,8 +37,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTranId(string $TranId) 设置事务id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTranStatus() 获取事务状态
+取值范围：
+1: 处理中
+2: 处理成功
+3: 处理失败
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTranStatus(integer $TranStatus) 设置事务状态
+取值范围：
+1: 处理中
+2: 处理成功
+3: 处理失败
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class IdDTO extends AbstractModel
@@ -69,6 +77,10 @@ class IdDTO extends AbstractModel
 
     /**
      * @var integer 事务状态
+取值范围：
+1: 处理中
+2: 处理成功
+3: 处理失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TranStatus;
@@ -83,6 +95,10 @@ class IdDTO extends AbstractModel
      * @param string $TranId 事务id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TranStatus 事务状态
+取值范围：
+1: 处理中
+2: 处理成功
+3: 处理失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -25,7 +25,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSeed() 获取随机数
  * @method void setSeed(string $Seed) 设置随机数
  * @method integer getDefaultPanelType() 获取默认看板
+取值范围：
+1：项目看板 
+2：我的看板
  * @method void setDefaultPanelType(integer $DefaultPanelType) 设置默认看板
+取值范围：
+1：项目看板 
+2：我的看板
  */
 class DeleteProjectRequest extends AbstractModel
 {
@@ -41,6 +47,9 @@ class DeleteProjectRequest extends AbstractModel
 
     /**
      * @var integer 默认看板
+取值范围：
+1：项目看板 
+2：我的看板
      */
     public $DefaultPanelType;
 
@@ -48,6 +57,9 @@ class DeleteProjectRequest extends AbstractModel
      * @param integer $Id 项目ID
      * @param string $Seed 随机数
      * @param integer $DefaultPanelType 默认看板
+取值范围：
+1：项目看板 
+2：我的看板
      */
     function __construct()
     {

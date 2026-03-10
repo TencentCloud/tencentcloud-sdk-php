@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEngine(string $Engine) 设置浏览器引擎
  * @method string getIsp() 获取运营商
  * @method void setIsp(string $Isp) 设置运营商
- * @method string getFrom() 获取来源页面
- * @method void setFrom(string $From) 设置来源页面
+ * @method string getFrom() 获取查询维度：from=按页面来源(from)聚合输出；其他值/空值=输出整体汇总。
+ * @method void setFrom(string $From) 设置查询维度：from=按页面来源(from)聚合输出；其他值/空值=输出整体汇总。
  * @method string getLevel() 获取日志等级
  * @method void setLevel(string $Level) 设置日志等级
  * @method string getType() 获取类型暂无
@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtThird(string $ExtThird) 设置自定义3
  * @method string getExtFirst() 获取自定义1
  * @method void setExtFirst(string $ExtFirst) 设置自定义1
- * @method string getNetType() 获取网络类型
- * @method void setNetType(string $NetType) 设置网络类型
+ * @method string getNetType() 获取网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。 
+ * @method void setNetType(string $NetType) 设置网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。 
  * @method string getDevice() 获取机型
  * @method void setDevice(string $Device) 设置机型
  * @method string getIsAbroad() 获取显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。
@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOs(string $Os) 设置操作系统
  * @method string getBrowser() 获取浏览器
  * @method void setBrowser(string $Browser) 设置浏览器
- * @method string getCostType() 获取耗时计算
- * @method void setCostType(string $CostType) 设置耗时计算
+ * @method string getCostType() 获取Web Vitals 口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。 
+ * @method void setCostType(string $CostType) 设置Web Vitals 口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。 
  * @method string getEnv() 获取环境
  * @method void setEnv(string $Env) 设置环境
  */
@@ -98,7 +98,7 @@ class DescribeDataWebVitalsPageRequest extends AbstractModel
     public $Isp;
 
     /**
-     * @var string 来源页面
+     * @var string 查询维度：from=按页面来源(from)聚合输出；其他值/空值=输出整体汇总。
      */
     public $From;
 
@@ -143,7 +143,7 @@ class DescribeDataWebVitalsPageRequest extends AbstractModel
     public $ExtFirst;
 
     /**
-     * @var string 网络类型
+     * @var string 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。 
      */
     public $NetType;
 
@@ -168,7 +168,7 @@ class DescribeDataWebVitalsPageRequest extends AbstractModel
     public $Browser;
 
     /**
-     * @var string 耗时计算
+     * @var string Web Vitals 口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。 
      */
     public $CostType;
 
@@ -184,7 +184,7 @@ class DescribeDataWebVitalsPageRequest extends AbstractModel
      * @param string $ExtSecond 自定义2
      * @param string $Engine 浏览器引擎
      * @param string $Isp 运营商
-     * @param string $From 来源页面
+     * @param string $From 查询维度：from=按页面来源(from)聚合输出；其他值/空值=输出整体汇总。
      * @param string $Level 日志等级
      * @param string $Type 类型暂无
      * @param string $Brand 品牌
@@ -193,12 +193,12 @@ class DescribeDataWebVitalsPageRequest extends AbstractModel
      * @param string $Platform 平台
      * @param string $ExtThird 自定义3
      * @param string $ExtFirst 自定义1
-     * @param string $NetType 网络类型
+     * @param string $NetType 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。 
      * @param string $Device 机型
      * @param string $IsAbroad 显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。
      * @param string $Os 操作系统
      * @param string $Browser 浏览器
-     * @param string $CostType 耗时计算
+     * @param string $CostType Web Vitals 口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。 
      * @param string $Env 环境
      */
     function __construct()

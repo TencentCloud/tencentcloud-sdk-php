@@ -24,9 +24,27 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModuleId(string $ModuleId) 设置配置名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIncludeType() 获取配置方式
+ * @method string getIncludeType() 获取配置方式。
+取值范围：
+
+- usable：可用
+- visible：可见
+- disabled：不可用
+- hidden：隐藏
+
+默认值：disabled
+示例值：disabled
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIncludeType(string $IncludeType) 设置配置方式
+ * @method void setIncludeType(string $IncludeType) 设置配置方式。
+取值范围：
+
+- usable：可用
+- visible：可见
+- disabled：不可用
+- hidden：隐藏
+
+默认值：disabled
+示例值：disabled
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getParams() 获取额外参数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -42,7 +60,16 @@ class ProjectConfigResult extends AbstractModel
     public $ModuleId;
 
     /**
-     * @var string 配置方式
+     * @var string 配置方式。
+取值范围：
+
+- usable：可用
+- visible：可见
+- disabled：不可用
+- hidden：隐藏
+
+默认值：disabled
+示例值：disabled
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IncludeType;
@@ -56,7 +83,16 @@ class ProjectConfigResult extends AbstractModel
     /**
      * @param string $ModuleId 配置名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IncludeType 配置方式
+     * @param string $IncludeType 配置方式。
+取值范围：
+
+- usable：可用
+- visible：可见
+- disabled：不可用
+- hidden：隐藏
+
+默认值：disabled
+示例值：disabled
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Params 额外参数
 注意：此字段可能返回 null，表示取不到有效值。

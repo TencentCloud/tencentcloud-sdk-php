@@ -22,14 +22,58 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTableId() 获取页数
  * @method void setTableId(integer $TableId) 设置页数
- * @method string getMode() 获取条数
- * @method void setMode(string $Mode) 设置条数
- * @method string getRoleType() 获取角色类型
- * @method void setRoleType(string $RoleType) 设置角色类型
+ * @method string getMode() 获取模式。
+取值范围：
+
+- ALL：全部
+- Specify：指定
+- TAG：标签
+
+默认值：ALL
+示例值：ALL
+ * @method void setMode(string $Mode) 设置模式。
+取值范围：
+
+- ALL：全部
+- Specify：指定
+- TAG：标签
+
+默认值：ALL
+示例值：ALL
+ * @method string getRoleType() 获取角色类型。
+取值范围：
+
+- ROLES：按角色
+- Others：其它
+
+默认值：Others
+示例值：Others
+ * @method void setRoleType(string $RoleType) 设置角色类型。
+取值范围：
+
+- ROLES：按角色
+- Others：其它
+
+默认值：Others
+示例值：Others
  * @method integer getRoleId() 获取所有页码
  * @method void setRoleId(integer $RoleId) 设置所有页码
- * @method string getType() 获取类型
- * @method void setType(string $Type) 设置类型
+ * @method string getType() 获取类型。
+取值范围：
+
+- ROW：行权限
+- COLUMN：列权限
+
+默认值：ROW
+示例值：ROW
+ * @method void setType(string $Type) 设置类型。
+取值范围：
+
+- ROW：行权限
+- COLUMN：列权限
+
+默认值：ROW
+示例值：ROW
  * @method integer getProjectId() 获取项目id
  * @method void setProjectId(integer $ProjectId) 设置项目id
  */
@@ -41,12 +85,27 @@ class DescribePermissionRanksInfoRequest extends AbstractModel
     public $TableId;
 
     /**
-     * @var string 条数
+     * @var string 模式。
+取值范围：
+
+- ALL：全部
+- Specify：指定
+- TAG：标签
+
+默认值：ALL
+示例值：ALL
      */
     public $Mode;
 
     /**
-     * @var string 角色类型
+     * @var string 角色类型。
+取值范围：
+
+- ROLES：按角色
+- Others：其它
+
+默认值：Others
+示例值：Others
      */
     public $RoleType;
 
@@ -56,7 +115,14 @@ class DescribePermissionRanksInfoRequest extends AbstractModel
     public $RoleId;
 
     /**
-     * @var string 类型
+     * @var string 类型。
+取值范围：
+
+- ROW：行权限
+- COLUMN：列权限
+
+默认值：ROW
+示例值：ROW
      */
     public $Type;
 
@@ -67,10 +133,32 @@ class DescribePermissionRanksInfoRequest extends AbstractModel
 
     /**
      * @param integer $TableId 页数
-     * @param string $Mode 条数
-     * @param string $RoleType 角色类型
+     * @param string $Mode 模式。
+取值范围：
+
+- ALL：全部
+- Specify：指定
+- TAG：标签
+
+默认值：ALL
+示例值：ALL
+     * @param string $RoleType 角色类型。
+取值范围：
+
+- ROLES：按角色
+- Others：其它
+
+默认值：Others
+示例值：Others
      * @param integer $RoleId 所有页码
-     * @param string $Type 类型
+     * @param string $Type 类型。
+取值范围：
+
+- ROW：行权限
+- COLUMN：列权限
+
+默认值：ROW
+示例值：ROW
      * @param integer $ProjectId 项目id
      */
     function __construct()

@@ -32,6 +32,7 @@ use TencentCloud\Hai\V20230812\Models as Models;
  * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 本接口（DescribeRegions）用于查询地域列表
  * @method Models\DescribeScenesResponse DescribeScenes(Models\DescribeScenesRequest $req) 本接口（DescribeScenes）用于查询场景
  * @method Models\DescribeServiceLoginSettingsResponse DescribeServiceLoginSettings(Models\DescribeServiceLoginSettingsRequest $req) 本接口（DescribeServiceLoginSettings）用于查询服务登录配置
+ * @method Models\DescribeServicesResponse DescribeServices(Models\DescribeServicesRequest $req) 本接口 (DescribeServices) 用于查询一个或多个服务
  * @method Models\InquirePriceRunInstancesResponse InquirePriceRunInstances(Models\InquirePriceRunInstancesRequest $req) 本接口 (InquirePriceRunInstances) 用于实例询价。
  * @method Models\InquirePriceUpdateServiceConfigsResponse InquirePriceUpdateServiceConfigs(Models\InquirePriceUpdateServiceConfigsRequest $req) 本接口(InquirePriceUpdateServiceConfigs)用于更新服务配置询价
  * @method Models\ResetInstancesPasswordResponse ResetInstancesPassword(Models\ResetInstancesPasswordRequest $req) 本接口 (ResetInstancesPassword) 用于重置实例的用户密码。

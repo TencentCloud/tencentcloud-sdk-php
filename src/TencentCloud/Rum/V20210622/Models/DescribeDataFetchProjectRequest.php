@@ -60,14 +60,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOs(string $Os) 设置操作系统
  * @method string getBrowser() 获取浏览器
  * @method void setBrowser(string $Browser) 设置浏览器
- * @method string getCostType() 获取耗时计算方式
- * @method void setCostType(string $CostType) 设置耗时计算方式
+ * @method string getCostType() 获取耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
+ * @method void setCostType(string $CostType) 设置耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
  * @method string getUrl() 获取来源
  * @method void setUrl(string $Url) 设置来源
  * @method string getEnv() 获取环境
  * @method void setEnv(string $Env) 设置环境
- * @method string getStatus() 获取httpcode响应码
- * @method void setStatus(string $Status) 设置httpcode响应码
+ * @method string getStatus() 获取HTTP 状态码（tag 值）：用于过滤字段 status；取值一般为 200/301/404/500 等，也可配合 4xx/5xx 统计逻辑使用
+ * @method void setStatus(string $Status) 设置HTTP 状态码（tag 值）：用于过滤字段 status；取值一般为 200/301/404/500 等，也可配合 4xx/5xx 统计逻辑使用
  * @method string getRet() 获取retcode
  * @method void setRet(string $Ret) 设置retcode
  */
@@ -174,7 +174,7 @@ class DescribeDataFetchProjectRequest extends AbstractModel
     public $Browser;
 
     /**
-     * @var string 耗时计算方式
+     * @var string 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
      */
     public $CostType;
 
@@ -189,7 +189,7 @@ class DescribeDataFetchProjectRequest extends AbstractModel
     public $Env;
 
     /**
-     * @var string httpcode响应码
+     * @var string HTTP 状态码（tag 值）：用于过滤字段 status；取值一般为 200/301/404/500 等，也可配合 4xx/5xx 统计逻辑使用
      */
     public $Status;
 
@@ -219,10 +219,10 @@ class DescribeDataFetchProjectRequest extends AbstractModel
      * @param string $IsAbroad 是否海外,1表示海外，0表示非海外；默认值为空，查询所有。
      * @param string $Os 操作系统
      * @param string $Browser 浏览器
-     * @param string $CostType 耗时计算方式
+     * @param string $CostType 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
      * @param string $Url 来源
      * @param string $Env 环境
-     * @param string $Status httpcode响应码
+     * @param string $Status HTTP 状态码（tag 值）：用于过滤字段 status；取值一般为 200/301/404/500 等，也可配合 4xx/5xx 统计逻辑使用
      * @param string $Ret retcode
      */
     function __construct()

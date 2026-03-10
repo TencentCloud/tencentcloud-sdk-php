@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtThird(string $ExtThird) 设置自定义3
  * @method string getExtFirst() 获取自定义1
  * @method void setExtFirst(string $ExtFirst) 设置自定义1
- * @method string getNetType() 获取网络类型
- * @method void setNetType(string $NetType) 设置网络类型
+ * @method string getNetType() 获取网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
+ * @method void setNetType(string $NetType) 设置网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
  * @method string getDevice() 获取机型
  * @method void setDevice(string $Device) 设置机型
  * @method string getIsAbroad() 获取显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。
@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOs(string $Os) 设置操作系统
  * @method string getBrowser() 获取浏览器
  * @method void setBrowser(string $Browser) 设置浏览器
- * @method string getCostType() 获取耗时计算方式
- * @method void setCostType(string $CostType) 设置耗时计算方式
+ * @method string getCostType() 获取耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
+ * @method void setCostType(string $CostType) 设置耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
  * @method string getUrl() 获取来源
  * @method void setUrl(string $Url) 设置来源
  * @method string getEnv() 获取环境
@@ -145,7 +145,7 @@ class DescribeDataFetchUrlInfoRequest extends AbstractModel
     public $ExtFirst;
 
     /**
-     * @var string 网络类型
+     * @var string 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
      */
     public $NetType;
 
@@ -170,7 +170,7 @@ class DescribeDataFetchUrlInfoRequest extends AbstractModel
     public $Browser;
 
     /**
-     * @var string 耗时计算方式
+     * @var string 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
      */
     public $CostType;
 
@@ -200,12 +200,12 @@ class DescribeDataFetchUrlInfoRequest extends AbstractModel
      * @param string $Platform 平台
      * @param string $ExtThird 自定义3
      * @param string $ExtFirst 自定义1
-     * @param string $NetType 网络类型
+     * @param string $NetType 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
      * @param string $Device 机型
      * @param string $IsAbroad 显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。
      * @param string $Os 操作系统
      * @param string $Browser 浏览器
-     * @param string $CostType 耗时计算方式
+     * @param string $CostType 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
      * @param string $Url 来源
      * @param string $Env 环境
      */

@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataKeyLen(integer $DataKeyLen) 设置数据密钥的长度
  * @method array getTagFilters() 获取标签过滤条件
  * @method void setTagFilters(array $TagFilters) 设置标签过滤条件
+ * @method array getMemberAccounts() 获取成员账号信息数组
+ * @method void setMemberAccounts(array $MemberAccounts) 设置成员账号信息数组
  */
 class ListDataKeyDetailRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class ListDataKeyDetailRequest extends AbstractModel
     public $TagFilters;
 
     /**
+     * @var array 成员账号信息数组
+     */
+    public $MemberAccounts;
+
+    /**
      * @param integer $Offset 含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0
      * @param integer $Limit 含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为10，最大值为200
      * @param integer $Role 根据创建者角色筛选，默认 0 表示用户自己创建的数据密钥， 1 表示授权其它云产品自动创建的数据密钥
@@ -112,6 +119,7 @@ class ListDataKeyDetailRequest extends AbstractModel
      * @param string $KeyId 根密钥全局唯一标识符
      * @param integer $DataKeyLen 数据密钥的长度
      * @param array $TagFilters 标签过滤条件
+     * @param array $MemberAccounts 成员账号信息数组
      */
     function __construct()
     {
@@ -172,6 +180,15 @@ class ListDataKeyDetailRequest extends AbstractModel
                 $obj = new TagFilter();
                 $obj->deserialize($value);
                 array_push($this->TagFilters, $obj);
+            }
+        }
+
+        if (array_key_exists("MemberAccounts",$param) and $param["MemberAccounts"] !== null) {
+            $this->MemberAccounts = [];
+            foreach ($param["MemberAccounts"] as $key => $value){
+                $obj = new MemberAccount();
+                $obj->deserialize($value);
+                array_push($this->MemberAccounts, $obj);
             }
         }
     }

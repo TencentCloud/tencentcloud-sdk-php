@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvId(string $EnvId) 设置环境id
  * @method MongoConnector getMongoConnector() 获取MongoConnector
  * @method void setMongoConnector(MongoConnector $MongoConnector) 设置MongoConnector
+ * @method array getTableNames() 获取指定表名过滤，为空时返回所有表
+ * @method void setTableNames(array $TableNames) 设置指定表名过滤，为空时返回所有表
  */
 class DescribeTablesRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeTablesRequest extends AbstractModel
     public $MongoConnector;
 
     /**
+     * @var array 指定表名过滤，为空时返回所有表
+     */
+    public $TableNames;
+
+    /**
      * @param integer $MgoLimit 分页条件
      * @param string $Tag 实例ID
      * @param integer $MgoOffset 分页条件
      * @param string $EnvId 环境id
      * @param MongoConnector $MongoConnector MongoConnector
+     * @param array $TableNames 指定表名过滤，为空时返回所有表
      */
     function __construct()
     {
@@ -97,6 +105,10 @@ class DescribeTablesRequest extends AbstractModel
         if (array_key_exists("MongoConnector",$param) and $param["MongoConnector"] !== null) {
             $this->MongoConnector = new MongoConnector();
             $this->MongoConnector->deserialize($param["MongoConnector"]);
+        }
+
+        if (array_key_exists("TableNames",$param) and $param["TableNames"] !== null) {
+            $this->TableNames = $param["TableNames"];
         }
     }
 }

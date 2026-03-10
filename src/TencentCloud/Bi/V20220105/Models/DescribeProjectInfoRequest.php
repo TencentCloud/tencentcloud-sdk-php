@@ -23,7 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getId() 获取项目Id
  * @method void setId(integer $Id) 设置项目Id
  * @method integer getDefaultPanelType() 获取默认看板
+取值范围：
+1：项目看板 
+2：我的看板
  * @method void setDefaultPanelType(integer $DefaultPanelType) 设置默认看板
+取值范围：
+1：项目看板 
+2：我的看板
  */
 class DescribeProjectInfoRequest extends AbstractModel
 {
@@ -34,12 +40,18 @@ class DescribeProjectInfoRequest extends AbstractModel
 
     /**
      * @var integer 默认看板
+取值范围：
+1：项目看板 
+2：我的看板
      */
     public $DefaultPanelType;
 
     /**
      * @param integer $Id 项目Id
      * @param integer $DefaultPanelType 默认看板
+取值范围：
+1：项目看板 
+2：我的看板
      */
     function __construct()
     {

@@ -35,7 +35,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSeed() 获取种子
  * @method void setSeed(string $Seed) 设置种子
  * @method integer getDefaultPanelType() 获取默认看板
+取值范围：
+1：项目看板 
+2：我的看板
  * @method void setDefaultPanelType(integer $DefaultPanelType) 设置默认看板
+取值范围：
+1：项目看板 
+2：我的看板
  * @method string getPanelScope() 获取2
  * @method void setPanelScope(string $PanelScope) 设置2
  * @method string getManagePlatform() 获取项目管理平台
@@ -80,6 +86,9 @@ class ModifyProjectRequest extends AbstractModel
 
     /**
      * @var integer 默认看板
+取值范围：
+1：项目看板 
+2：我的看板
      */
     public $DefaultPanelType;
 
@@ -102,6 +111,9 @@ class ModifyProjectRequest extends AbstractModel
      * @param boolean $IsApply 可申请
      * @param string $Seed 种子
      * @param integer $DefaultPanelType 默认看板
+取值范围：
+1：项目看板 
+2：我的看板
      * @param string $PanelScope 2
      * @param string $ManagePlatform 项目管理平台
      */

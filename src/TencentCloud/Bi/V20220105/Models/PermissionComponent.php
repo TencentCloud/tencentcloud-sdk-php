@@ -24,9 +24,27 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModuleId(string $ModuleId) 设置权限值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIncludeType() 获取可见/可用
+ * @method string getIncludeType() 获取可用性。
+取值范围：
+
+- usable：可用
+- visible：可见
+- disabled：不可用
+- hidden：隐藏
+
+默认值：disabled
+示例值：disabled
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIncludeType(string $IncludeType) 设置可见/可用
+ * @method void setIncludeType(string $IncludeType) 设置可用性。
+取值范围：
+
+- usable：可用
+- visible：可见
+- disabled：不可用
+- hidden：隐藏
+
+默认值：disabled
+示例值：disabled
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpgradeVersionType() 获取目标升级版本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,7 +68,16 @@ class PermissionComponent extends AbstractModel
     public $ModuleId;
 
     /**
-     * @var string 可见/可用
+     * @var string 可用性。
+取值范围：
+
+- usable：可用
+- visible：可见
+- disabled：不可用
+- hidden：隐藏
+
+默认值：disabled
+示例值：disabled
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IncludeType;
@@ -76,7 +103,16 @@ class PermissionComponent extends AbstractModel
     /**
      * @param string $ModuleId 权限值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IncludeType 可见/可用
+     * @param string $IncludeType 可用性。
+取值范围：
+
+- usable：可用
+- visible：可见
+- disabled：不可用
+- hidden：隐藏
+
+默认值：disabled
+示例值：disabled
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpgradeVersionType 目标升级版本
 注意：此字段可能返回 null，表示取不到有效值。

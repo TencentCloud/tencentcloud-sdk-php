@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataKeyId(string $DataKeyId) 设置数据密钥的唯一标志符
  * @method string getDataKeyName() 获取数据密钥的名称
  * @method void setDataKeyName(string $DataKeyName) 设置数据密钥的名称
+ * @method MemberAccount getMemberAccount() 获取可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+ * @method void setMemberAccount(MemberAccount $MemberAccount) 设置可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
  */
 class UpdateDataKeyNameRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class UpdateDataKeyNameRequest extends AbstractModel
     public $DataKeyName;
 
     /**
+     * @var MemberAccount 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+     */
+    public $MemberAccount;
+
+    /**
      * @param string $DataKeyId 数据密钥的唯一标志符
      * @param string $DataKeyName 数据密钥的名称
+     * @param MemberAccount $MemberAccount 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
      */
     function __construct()
     {
@@ -60,6 +68,11 @@ class UpdateDataKeyNameRequest extends AbstractModel
 
         if (array_key_exists("DataKeyName",$param) and $param["DataKeyName"] !== null) {
             $this->DataKeyName = $param["DataKeyName"];
+        }
+
+        if (array_key_exists("MemberAccount",$param) and $param["MemberAccount"] !== null) {
+            $this->MemberAccount = new MemberAccount();
+            $this->MemberAccount->deserialize($param["MemberAccount"]);
         }
     }
 }

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getDataKeyIds() 获取需要批量禁用的DataKey Id 列表，数据密钥数量最大支持100
  * @method void setDataKeyIds(array $DataKeyIds) 设置需要批量禁用的DataKey Id 列表，数据密钥数量最大支持100
+ * @method MemberAccount getMemberAccount() 获取可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+ * @method void setMemberAccount(MemberAccount $MemberAccount) 设置可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
  */
 class DisableDataKeysRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DisableDataKeysRequest extends AbstractModel
     public $DataKeyIds;
 
     /**
+     * @var MemberAccount 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+     */
+    public $MemberAccount;
+
+    /**
      * @param array $DataKeyIds 需要批量禁用的DataKey Id 列表，数据密钥数量最大支持100
+     * @param MemberAccount $MemberAccount 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
      */
     function __construct()
     {
@@ -48,6 +56,11 @@ class DisableDataKeysRequest extends AbstractModel
         }
         if (array_key_exists("DataKeyIds",$param) and $param["DataKeyIds"] !== null) {
             $this->DataKeyIds = $param["DataKeyIds"];
+        }
+
+        if (array_key_exists("MemberAccount",$param) and $param["MemberAccount"] !== null) {
+            $this->MemberAccount = new MemberAccount();
+            $this->MemberAccount->deserialize($param["MemberAccount"]);
         }
     }
 }

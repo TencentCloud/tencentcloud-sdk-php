@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRenewFlag(string $RenewFlag) 设置网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费，'NOT_NOTIFY_AND_NOT_RENEW'：到期不续费。
  * @method string getInstanceChargeType() 获取网关付费类型：POSTPAID_BY_HOUR：按量计费，PREPAID：包年包月预付费。
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置网关付费类型：POSTPAID_BY_HOUR：按量计费，PREPAID：包年包月预付费。
- * @method integer getInternetMaxBandwidthOut() 获取网关出带宽。
- * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置网关出带宽。
+ * @method integer getInternetMaxBandwidthOut() 获取网关出带宽，单位：Mbps。
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置网关出带宽，单位：Mbps。
  * @method string getCreatedTime() 获取创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
  * @method string getExpiredTime() 获取预付费网关过期时间。
@@ -106,7 +106,7 @@ class VpnGateway extends AbstractModel
     public $InstanceChargeType;
 
     /**
-     * @var integer 网关出带宽。
+     * @var integer 网关出带宽，单位：Mbps。
      */
     public $InternetMaxBandwidthOut;
 
@@ -179,7 +179,7 @@ class VpnGateway extends AbstractModel
      * @param string $PublicIpAddress 网关公网IP。
      * @param string $RenewFlag 网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费，'NOT_NOTIFY_AND_NOT_RENEW'：到期不续费。
      * @param string $InstanceChargeType 网关付费类型：POSTPAID_BY_HOUR：按量计费，PREPAID：包年包月预付费。
-     * @param integer $InternetMaxBandwidthOut 网关出带宽。
+     * @param integer $InternetMaxBandwidthOut 网关出带宽，单位：Mbps。
      * @param string $CreatedTime 创建时间。
      * @param string $ExpiredTime 预付费网关过期时间。
      * @param boolean $IsAddressBlocked 公网IP是否被封堵。

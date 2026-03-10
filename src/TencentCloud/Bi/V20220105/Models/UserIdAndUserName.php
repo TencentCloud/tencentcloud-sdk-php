@@ -36,9 +36,23 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastLogin(string $LastLogin) 设置最后一次登录时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取停启用状态
+ * @method integer getStatus() 获取用户状态。
+取值范围：
+
+- 1：启用
+- 0：停用
+
+默认值：1
+示例值：1
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置停启用状态
+ * @method void setStatus(integer $Status) 设置用户状态。
+取值范围：
+
+- 1：启用
+- 0：停用
+
+默认值：1
+示例值：1
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFirstModify() 获取首次登录是否修改密码
 注意：此字段可能返回 null，表示取不到有效值。
@@ -140,7 +154,14 @@ class UserIdAndUserName extends AbstractModel
     public $LastLogin;
 
     /**
-     * @var integer 停启用状态
+     * @var integer 用户状态。
+取值范围：
+
+- 1：启用
+- 0：停用
+
+默认值：1
+示例值：1
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -256,7 +277,14 @@ class UserIdAndUserName extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastLogin 最后一次登录时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 停启用状态
+     * @param integer $Status 用户状态。
+取值范围：
+
+- 1：启用
+- 0：停用
+
+默认值：1
+示例值：1
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FirstModify 首次登录是否修改密码
 注意：此字段可能返回 null，表示取不到有效值。

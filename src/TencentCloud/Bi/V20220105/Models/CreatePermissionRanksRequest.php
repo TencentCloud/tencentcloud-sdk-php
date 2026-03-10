@@ -22,18 +22,74 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTableId() 获取页数
  * @method void setTableId(integer $TableId) 设置页数
- * @method string getMode() 获取条数
- * @method void setMode(string $Mode) 设置条数
- * @method string getRoleType() 获取角色类型
- * @method void setRoleType(string $RoleType) 设置角色类型
+ * @method string getMode() 获取模式。
+取值范围：
+- ALL：全部
+- Specify：指定
+- TAG：标签
+
+默认值：ALL
+示例值：ALL
+ * @method void setMode(string $Mode) 设置模式。
+取值范围：
+- ALL：全部
+- Specify：指定
+- TAG：标签
+
+默认值：ALL
+示例值：ALL
+ * @method string getRoleType() 获取角色类型。
+取值范围：
+
+- ROLES：按角色
+- Others：其它
+
+默认值：Others
+示例值：Others
+ * @method void setRoleType(string $RoleType) 设置角色类型。
+取值范围：
+
+- ROLES：按角色
+- Others：其它
+
+默认值：Others
+示例值：Others
  * @method integer getRoleId() 获取所有页码
  * @method void setRoleId(integer $RoleId) 设置所有页码
  * @method string getRulerInfo() 获取规则信息
  * @method void setRulerInfo(string $RulerInfo) 设置规则信息
- * @method string getType() 获取类型
- * @method void setType(string $Type) 设置类型
- * @method string getOpenStatus() 获取状态
- * @method void setOpenStatus(string $OpenStatus) 设置状态
+ * @method string getType() 获取类型。
+取值范围：
+
+- ROW：行权限
+- COLUMN：列权限
+
+默认值：ROW
+示例值：ROW
+ * @method void setType(string $Type) 设置类型。
+取值范围：
+
+- ROW：行权限
+- COLUMN：列权限
+
+默认值：ROW
+示例值：ROW
+ * @method string getOpenStatus() 获取开启状态。
+取值范围：
+
+- Open：开启
+- Close：关闭
+
+默认值：Close
+示例值：Close
+ * @method void setOpenStatus(string $OpenStatus) 设置开启状态。
+取值范围：
+
+- Open：开启
+- Close：关闭
+
+默认值：Close
+示例值：Close
  * @method integer getProjectId() 获取项目id
  * @method void setProjectId(integer $ProjectId) 设置项目id
  * @method array getRowColumnConfigList() 获取行列权限配置
@@ -47,12 +103,26 @@ class CreatePermissionRanksRequest extends AbstractModel
     public $TableId;
 
     /**
-     * @var string 条数
+     * @var string 模式。
+取值范围：
+- ALL：全部
+- Specify：指定
+- TAG：标签
+
+默认值：ALL
+示例值：ALL
      */
     public $Mode;
 
     /**
-     * @var string 角色类型
+     * @var string 角色类型。
+取值范围：
+
+- ROLES：按角色
+- Others：其它
+
+默认值：Others
+示例值：Others
      */
     public $RoleType;
 
@@ -67,12 +137,26 @@ class CreatePermissionRanksRequest extends AbstractModel
     public $RulerInfo;
 
     /**
-     * @var string 类型
+     * @var string 类型。
+取值范围：
+
+- ROW：行权限
+- COLUMN：列权限
+
+默认值：ROW
+示例值：ROW
      */
     public $Type;
 
     /**
-     * @var string 状态
+     * @var string 开启状态。
+取值范围：
+
+- Open：开启
+- Close：关闭
+
+默认值：Close
+示例值：Close
      */
     public $OpenStatus;
 
@@ -88,12 +172,40 @@ class CreatePermissionRanksRequest extends AbstractModel
 
     /**
      * @param integer $TableId 页数
-     * @param string $Mode 条数
-     * @param string $RoleType 角色类型
+     * @param string $Mode 模式。
+取值范围：
+- ALL：全部
+- Specify：指定
+- TAG：标签
+
+默认值：ALL
+示例值：ALL
+     * @param string $RoleType 角色类型。
+取值范围：
+
+- ROLES：按角色
+- Others：其它
+
+默认值：Others
+示例值：Others
      * @param integer $RoleId 所有页码
      * @param string $RulerInfo 规则信息
-     * @param string $Type 类型
-     * @param string $OpenStatus 状态
+     * @param string $Type 类型。
+取值范围：
+
+- ROW：行权限
+- COLUMN：列权限
+
+默认值：ROW
+示例值：ROW
+     * @param string $OpenStatus 开启状态。
+取值范围：
+
+- Open：开启
+- Close：关闭
+
+默认值：Close
+示例值：Close
      * @param integer $ProjectId 项目id
      * @param array $RowColumnConfigList 行列权限配置
      */

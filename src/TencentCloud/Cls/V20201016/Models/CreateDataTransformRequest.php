@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
 名称限制
 - 不能为空字符串
 - 不能包含字符'|'
-- 最长 255 个字符
+- 最长128 个字符
  * @method void setName(string $Name) 设置加工任务名称
 名称限制
 - 不能为空字符串
 - 不能包含字符'|'
-- 最长 255 个字符
+- 最长128 个字符
  * @method string getEtlContent() 获取加工语句。 当FuncType为2时，EtlContent必须使用[log_auto_output](https://cloud.tencent.com/document/product/614/70733#b3c58797-4825-4807-bef4-68106e25024f) 
 
 其他参考文档：
@@ -121,7 +121,7 @@ class CreateDataTransformRequest extends AbstractModel
 名称限制
 - 不能为空字符串
 - 不能包含字符'|'
-- 最长 255 个字符
+- 最长128 个字符
      */
     public $Name;
 
@@ -226,7 +226,7 @@ true：丢弃日志数据。
 名称限制
 - 不能为空字符串
 - 不能包含字符'|'
-- 最长 255 个字符
+- 最长128 个字符
      * @param string $EtlContent 加工语句。 当FuncType为2时，EtlContent必须使用[log_auto_output](https://cloud.tencent.com/document/product/614/70733#b3c58797-4825-4807-bef4-68106e25024f) 
 
 其他参考文档：

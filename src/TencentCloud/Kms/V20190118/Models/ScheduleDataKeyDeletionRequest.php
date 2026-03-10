@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataKeyId(string $DataKeyId) 设置数据密钥的唯一标志符
  * @method integer getPendingWindowInDays() 获取计划删除时间区间[7,30]
  * @method void setPendingWindowInDays(integer $PendingWindowInDays) 设置计划删除时间区间[7,30]
+ * @method MemberAccount getMemberAccount() 获取可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+ * @method void setMemberAccount(MemberAccount $MemberAccount) 设置可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
  */
 class ScheduleDataKeyDeletionRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ScheduleDataKeyDeletionRequest extends AbstractModel
     public $PendingWindowInDays;
 
     /**
+     * @var MemberAccount 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+     */
+    public $MemberAccount;
+
+    /**
      * @param string $DataKeyId 数据密钥的唯一标志符
      * @param integer $PendingWindowInDays 计划删除时间区间[7,30]
+     * @param MemberAccount $MemberAccount 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
      */
     function __construct()
     {
@@ -60,6 +68,11 @@ class ScheduleDataKeyDeletionRequest extends AbstractModel
 
         if (array_key_exists("PendingWindowInDays",$param) and $param["PendingWindowInDays"] !== null) {
             $this->PendingWindowInDays = $param["PendingWindowInDays"];
+        }
+
+        if (array_key_exists("MemberAccount",$param) and $param["MemberAccount"] !== null) {
+            $this->MemberAccount = new MemberAccount();
+            $this->MemberAccount->deserialize($param["MemberAccount"]);
         }
     }
 }

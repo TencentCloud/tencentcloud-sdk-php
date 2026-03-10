@@ -63,6 +63,8 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DeleteCloudBaseGWAPIResponse DeleteCloudBaseGWAPI(Models\DeleteCloudBaseGWAPIRequest $req) 删除网关API
  * @method Models\DeleteCloudBaseGWDomainResponse DeleteCloudBaseGWDomain(Models\DeleteCloudBaseGWDomainRequest $req) 删除网关域名
  * @method Models\DeleteTableResponse DeleteTable(Models\DeleteTableRequest $req) 本接口(DeleteTable)用于删除表，删除表后表中数据将会被删除且无法恢复，请谨慎操作
+
+接口入参中的 Tag 为 flexdb 的实例 Id，可以通过 [DescribeEnvs](https://cloud.tencent.com/document/api/876/34820) 接口返回的 EnvList[0].Databases[0].InstanceId 获取
  * @method Models\DeleteUsersResponse DeleteUsers(Models\DeleteUsersRequest $req) 删除tcb用户
  * @method Models\DescribeAuthDomainsResponse DescribeAuthDomains(Models\DescribeAuthDomainsRequest $req) 本接口用于获取当前环境的安全域名列表。
 云开发会校验网页应用请求的来源域名，您需要将来源域名加入到WEB安全域名列表中。
@@ -96,7 +98,9 @@ use TencentCloud\Tcb\V20180608\Models as Models;
 安全规则，用于控制C端用户的访问权限。详见 [安全规则介绍](https://cloud.tencent.com/document/product/876/123478) 。
  * @method Models\DescribeStaticStoreResponse DescribeStaticStore(Models\DescribeStaticStoreRequest $req) 查看当前环境下静态托管资源信息，根据返回结果判断静态资源的状态
  * @method Models\DescribeTableResponse DescribeTable(Models\DescribeTableRequest $req) 查询表的相关信息，包括索引等信息
- * @method Models\DescribeTablesResponse DescribeTables(Models\DescribeTablesRequest $req) 本接口(ListTables)用于查询所有表信息，包括表名、表中数据条数、表中数据量、索引个数及索引的大小等
+
+接口入参中的 Tag 为 flexdb 的实例 Id，可以通过 [DescribeEnvs](https://cloud.tencent.com/document/api/876/34820) 接口返回的 EnvList[0].Databases[0].InstanceId 获取
+ * @method Models\DescribeTablesResponse DescribeTables(Models\DescribeTablesRequest $req) 本接口(DescribeTables)用于查询所有表信息，包括表名、表中数据条数、表中数据量、索引个数及索引的大小等
  * @method Models\DescribeUserListResponse DescribeUserList(Models\DescribeUserListRequest $req) 查询tcb用户列表
  * @method Models\DestroyEnvResponse DestroyEnv(Models\DestroyEnvRequest $req) 本接口用于销毁云开发环境。
 云开发环境遵循腾讯云包年包月预付费产品生命周期，因此环境销毁需要分两步：

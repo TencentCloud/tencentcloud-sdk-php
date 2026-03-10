@@ -30,6 +30,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\AddPermissionPolicyToRoleConfigurationResponse AddPermissionPolicyToRoleConfiguration(Models\AddPermissionPolicyToRoleConfigurationRequest $req) 为权限配置添加策略
  * @method Models\AddShareUnitResponse AddShareUnit(Models\AddShareUnitRequest $req) 创建共享单元。
  * @method Models\AddShareUnitMembersResponse AddShareUnitMembers(Models\AddShareUnitMembersRequest $req) 添加共享单元成员
+ * @method Models\AddShareUnitNodeResponse AddShareUnitNode(Models\AddShareUnitNodeRequest $req) 添加共享单元部门
  * @method Models\AddShareUnitResourcesResponse AddShareUnitResources(Models\AddShareUnitResourcesRequest $req) 添加共享单元资源
  * @method Models\AddUserToGroupResponse AddUserToGroup(Models\AddUserToGroupRequest $req) 为用户组添加用户
  * @method Models\AttachPolicyResponse AttachPolicy(Models\AttachPolicyRequest $req) 绑定策略
@@ -68,6 +69,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\DeleteSCIMCredentialResponse DeleteSCIMCredential(Models\DeleteSCIMCredentialRequest $req) 删除SCIM密钥
  * @method Models\DeleteShareUnitResponse DeleteShareUnit(Models\DeleteShareUnitRequest $req) 删除共享单元。
  * @method Models\DeleteShareUnitMembersResponse DeleteShareUnitMembers(Models\DeleteShareUnitMembersRequest $req) 删除共享单元成员
+ * @method Models\DeleteShareUnitNodeResponse DeleteShareUnitNode(Models\DeleteShareUnitNodeRequest $req) 删除共享单元部门
  * @method Models\DeleteShareUnitResourcesResponse DeleteShareUnitResources(Models\DeleteShareUnitResourcesRequest $req) 删除共享单元资源
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) 删除用户
  * @method Models\DeleteUserSyncProvisioningResponse DeleteUserSyncProvisioning(Models\DeleteUserSyncProvisioningRequest $req) 删除子用户同步任务
@@ -90,6 +92,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\DescribeResourceToShareMemberResponse DescribeResourceToShareMember(Models\DescribeResourceToShareMemberRequest $req) 获取与我共享的资源列表。
  * @method Models\DescribeShareAreasResponse DescribeShareAreas(Models\DescribeShareAreasRequest $req) 获取可共享地域列表
  * @method Models\DescribeShareUnitMembersResponse DescribeShareUnitMembers(Models\DescribeShareUnitMembersRequest $req) 获取共享单元成员列表。
+ * @method Models\DescribeShareUnitNodesResponse DescribeShareUnitNodes(Models\DescribeShareUnitNodesRequest $req) 获取共享单元部门列表。
  * @method Models\DescribeShareUnitResourcesResponse DescribeShareUnitResources(Models\DescribeShareUnitResourcesRequest $req) 获取共享单元资源列表。
  * @method Models\DescribeShareUnitsResponse DescribeShareUnits(Models\DescribeShareUnitsRequest $req) 获取共享单元列表。
  * @method Models\DetachPolicyResponse DetachPolicy(Models\DetachPolicyRequest $req) 解绑策略

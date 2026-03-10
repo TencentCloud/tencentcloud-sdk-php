@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsp(string $Isp) 设置运营商
  * @method string getArea() 获取地区
  * @method void setArea(string $Area) 设置地区
- * @method string getNetType() 获取网络类型
- * @method void setNetType(string $NetType) 设置网络类型
+ * @method string getNetType() 获取网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
+ * @method void setNetType(string $NetType) 设置网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
  * @method string getPlatform() 获取平台
  * @method void setPlatform(string $Platform) 设置平台
  * @method string getDevice() 获取机型
@@ -60,12 +60,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBrand(string $Brand) 设置品牌
  * @method string getFrom() 获取来源页面
  * @method void setFrom(string $From) 设置来源页面
- * @method string getCostType() 获取耗时计算方式
- * @method void setCostType(string $CostType) 设置耗时计算方式
+ * @method string getCostType() 获取耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
+ * @method void setCostType(string $CostType) 设置耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
  * @method string getEnv() 获取环境变量
  * @method void setEnv(string $Env) 设置环境变量
- * @method string getNetStatus() 获取网络状态
- * @method void setNetStatus(string $NetStatus) 设置网络状态
+ * @method string getNetStatus() 获取网络状态(tag 值):用于过滤/聚合字段 netStatus；枚举值：0(正常)、1(弱网)、2(断网)、3(其他)。 
+ * @method void setNetStatus(string $NetStatus) 设置网络状态(tag 值):用于过滤/聚合字段 netStatus；枚举值：0(正常)、1(弱网)、2(断网)、3(其他)。 
  * @method boolean getWebVitals() 获取是否返回webvitals数据
  * @method void setWebVitals(boolean $WebVitals) 设置是否返回webvitals数据
  */
@@ -107,7 +107,7 @@ class DescribeDataPerformancePageRequest extends AbstractModel
     public $Area;
 
     /**
-     * @var string 网络类型
+     * @var string 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
      */
     public $NetType;
 
@@ -172,7 +172,7 @@ class DescribeDataPerformancePageRequest extends AbstractModel
     public $From;
 
     /**
-     * @var string 耗时计算方式
+     * @var string 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
      */
     public $CostType;
 
@@ -182,7 +182,7 @@ class DescribeDataPerformancePageRequest extends AbstractModel
     public $Env;
 
     /**
-     * @var string 网络状态
+     * @var string 网络状态(tag 值):用于过滤/聚合字段 netStatus；枚举值：0(正常)、1(弱网)、2(断网)、3(其他)。 
      */
     public $NetStatus;
 
@@ -199,7 +199,7 @@ class DescribeDataPerformancePageRequest extends AbstractModel
      * @param string $Level 日志等级
      * @param string $Isp 运营商
      * @param string $Area 地区
-     * @param string $NetType 网络类型
+     * @param string $NetType 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
      * @param string $Platform 平台
      * @param string $Device 机型
      * @param string $VersionNum 版本
@@ -212,9 +212,9 @@ class DescribeDataPerformancePageRequest extends AbstractModel
      * @param string $Engine 浏览器引擎
      * @param string $Brand 品牌
      * @param string $From 来源页面
-     * @param string $CostType 耗时计算方式
+     * @param string $CostType 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
      * @param string $Env 环境变量
-     * @param string $NetStatus 网络状态
+     * @param string $NetStatus 网络状态(tag 值):用于过滤/聚合字段 netStatus；枚举值：0(正常)、1(弱网)、2(断网)、3(其他)。 
      * @param boolean $WebVitals 是否返回webvitals数据
      */
     function __construct()

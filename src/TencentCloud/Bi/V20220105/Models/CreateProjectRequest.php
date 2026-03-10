@@ -31,7 +31,13 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getIsApply() 获取是否允许用户申请
  * @method void setIsApply(boolean $IsApply) 设置是否允许用户申请
  * @method integer getDefaultPanelType() 获取默认看板
+取值范围：
+1：项目看板 
+2：我的看板
  * @method void setDefaultPanelType(integer $DefaultPanelType) 设置默认看板
+取值范围：
+1：项目看板 
+2：我的看板
  * @method string getManagePlatform() 获取管理平台
  * @method void setManagePlatform(string $ManagePlatform) 设置管理平台
  */
@@ -64,6 +70,9 @@ class CreateProjectRequest extends AbstractModel
 
     /**
      * @var integer 默认看板
+取值范围：
+1：项目看板 
+2：我的看板
      */
     public $DefaultPanelType;
 
@@ -79,6 +88,9 @@ class CreateProjectRequest extends AbstractModel
      * @param string $Mark 备注
      * @param boolean $IsApply 是否允许用户申请
      * @param integer $DefaultPanelType 默认看板
+取值范围：
+1：项目看板 
+2：我的看板
      * @param string $ManagePlatform 管理平台
      */
     function __construct()

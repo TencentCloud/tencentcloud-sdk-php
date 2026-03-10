@@ -20,235 +20,179 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAlarm请求参数结构体
  *
- * @method string getAlarmId() 获取告警策略ID。-通过[获取告警策略列表](https://cloud.tencent.com/document/product/614/56461)获取告警策略ID
- * @method void setAlarmId(string $AlarmId) 设置告警策略ID。-通过[获取告警策略列表](https://cloud.tencent.com/document/product/614/56461)获取告警策略ID
- * @method string getName() 获取告警策略名称。最大支持255个字节，不支持 '|'。
- * @method void setName(string $Name) 设置告警策略名称。最大支持255个字节，不支持 '|'。
- * @method MonitorTime getMonitorTime() 获取监控任务运行时间点。
- * @method void setMonitorTime(MonitorTime $MonitorTime) 设置监控任务运行时间点。
- * @method string getCondition() 获取告警信息发送的触发条件。
-
-注意:  
-- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
- * @method void setCondition(string $Condition) 设置告警信息发送的触发条件。
-
-注意:  
-- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
- * @method integer getAlarmLevel() 获取告警级别。
-
-0:警告(Warn);1:提醒(Info);2:紧急 (Critical)
-
-注意:  
-- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
- * @method void setAlarmLevel(integer $AlarmLevel) 设置告警级别。
-
-0:警告(Warn);1:提醒(Info);2:紧急 (Critical)
-
-注意:  
-- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
- * @method array getMultiConditions() 获取多触发条件。 
-
-注意:  
-- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
- * @method void setMultiConditions(array $MultiConditions) 设置多触发条件。 
-
-注意:  
-- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
- * @method integer getTriggerCount() 获取持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。
- * @method void setTriggerCount(integer $TriggerCount) 设置持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。
- * @method integer getAlarmPeriod() 获取告警重复的周期。单位是分钟。取值范围是0~1440。
- * @method void setAlarmPeriod(integer $AlarmPeriod) 设置告警重复的周期。单位是分钟。取值范围是0~1440。
- * @method array getAlarmNoticeIds() 获取关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
- * @method void setAlarmNoticeIds(array $AlarmNoticeIds) 设置关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
- * @method array getAlarmTargets() 获取监控对象列表。
- * @method void setAlarmTargets(array $AlarmTargets) 设置监控对象列表。
- * @method boolean getStatus() 获取是否开启告警策略。
- * @method void setStatus(boolean $Status) 设置是否开启告警策略。
- * @method boolean getEnable() 获取该参数已废弃，请使用Status参数控制是否开启告警策略。
- * @method void setEnable(boolean $Enable) 设置该参数已废弃，请使用Status参数控制是否开启告警策略。
- * @method string getMessageTemplate() 获取用户自定义告警内容
- * @method void setMessageTemplate(string $MessageTemplate) 设置用户自定义告警内容
- * @method CallBackInfo getCallBack() 获取用户自定义回调
- * @method void setCallBack(CallBackInfo $CallBack) 设置用户自定义回调
- * @method array getAnalysis() 获取多维分析
- * @method void setAnalysis(array $Analysis) 设置多维分析
- * @method boolean getGroupTriggerStatus() 获取分组触发状态。true：开启，false：关闭（默认）
- * @method void setGroupTriggerStatus(boolean $GroupTriggerStatus) 设置分组触发状态。true：开启，false：关闭（默认）
- * @method array getGroupTriggerCondition() 获取分组触发条件。
- * @method void setGroupTriggerCondition(array $GroupTriggerCondition) 设置分组触发条件。
- * @method array getTags() 获取标签描述列表，通过指定该参数可以同时绑定标签到相应的告警策略。最大支持10个标签键值对，并且不能有重复的键值对。
- * @method void setTags(array $Tags) 设置标签描述列表，通过指定该参数可以同时绑定标签到相应的告警策略。最大支持10个标签键值对，并且不能有重复的键值对。
- * @method integer getMonitorObjectType() 获取监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
-
- * @method void setMonitorObjectType(integer $MonitorObjectType) 设置监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
-
- * @method array getClassifications() 获取告警附加分类信息列表。
-Classifications元素个数不能超过20个。
-Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 `^[a-z]([a-z0-9_]{0,49})$`。
-Classifications元素的Value长度不能超过200个字符。
- * @method void setClassifications(array $Classifications) 设置告警附加分类信息列表。
-Classifications元素个数不能超过20个。
-Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 `^[a-z]([a-z0-9_]{0,49})$`。
-Classifications元素的Value长度不能超过200个字符。
+ * @method string getAlarmId() 获取<p>告警策略ID。-通过<a href="https://cloud.tencent.com/document/product/614/56461">获取告警策略列表</a>获取告警策略ID</p>
+ * @method void setAlarmId(string $AlarmId) 设置<p>告警策略ID。-通过<a href="https://cloud.tencent.com/document/product/614/56461">获取告警策略列表</a>获取告警策略ID</p>
+ * @method string getName() 获取<p>告警策略名称。最大支持255个字节，不支持 &#39;|&#39;。</p>
+ * @method void setName(string $Name) 设置<p>告警策略名称。最大支持255个字节，不支持 &#39;|&#39;。</p>
+ * @method MonitorTime getMonitorTime() 获取<p>监控任务运行时间点。</p>
+ * @method void setMonitorTime(MonitorTime $MonitorTime) 设置<p>监控任务运行时间点。</p>
+ * @method string getCondition() 获取<p>告警信息发送的触发条件。</p><p>注意:  </p><ul><li>Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li></ul>
+ * @method void setCondition(string $Condition) 设置<p>告警信息发送的触发条件。</p><p>注意:  </p><ul><li>Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li></ul>
+ * @method integer getAlarmLevel() 获取<p>告警级别。</p><p>0:警告(Warn);1:提醒(Info);2:紧急 (Critical)</p><p>注意:  </p><ul><li>Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li></ul>
+ * @method void setAlarmLevel(integer $AlarmLevel) 设置<p>告警级别。</p><p>0:警告(Warn);1:提醒(Info);2:紧急 (Critical)</p><p>注意:  </p><ul><li>Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li></ul>
+ * @method array getMultiConditions() 获取<p>多触发条件。 </p><p>注意:  </p><ul><li>Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li></ul>
+ * @method void setMultiConditions(array $MultiConditions) 设置<p>多触发条件。 </p><p>注意:  </p><ul><li>Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li></ul>
+ * @method integer getTriggerCount() 获取<p>持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。</p>
+ * @method void setTriggerCount(integer $TriggerCount) 设置<p>持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。</p>
+ * @method integer getAlarmPeriod() 获取<p>告警重复的周期。单位是分钟。取值范围是0~1440。</p>
+ * @method void setAlarmPeriod(integer $AlarmPeriod) 设置<p>告警重复的周期。单位是分钟。取值范围是0~1440。</p>
+ * @method array getAlarmTargets() 获取<p>监控对象列表。</p>
+ * @method void setAlarmTargets(array $AlarmTargets) 设置<p>监控对象列表。</p>
+ * @method boolean getStatus() 获取<p>是否开启告警策略。</p>
+ * @method void setStatus(boolean $Status) 设置<p>是否开启告警策略。</p>
+ * @method boolean getEnable() 获取<p>该参数已废弃，请使用Status参数控制是否开启告警策略。</p>
+ * @method void setEnable(boolean $Enable) 设置<p>该参数已废弃，请使用Status参数控制是否开启告警策略。</p>
+ * @method string getMessageTemplate() 获取<p>用户自定义告警内容</p>
+ * @method void setMessageTemplate(string $MessageTemplate) 设置<p>用户自定义告警内容</p>
+ * @method CallBackInfo getCallBack() 获取<p>用户自定义回调</p>
+ * @method void setCallBack(CallBackInfo $CallBack) 设置<p>用户自定义回调</p>
+ * @method array getAnalysis() 获取<p>多维分析</p>
+ * @method void setAnalysis(array $Analysis) 设置<p>多维分析</p>
+ * @method boolean getGroupTriggerStatus() 获取<p>分组触发状态。true：开启，false：关闭（默认）</p>
+ * @method void setGroupTriggerStatus(boolean $GroupTriggerStatus) 设置<p>分组触发状态。true：开启，false：关闭（默认）</p>
+ * @method array getGroupTriggerCondition() 获取<p>分组触发条件。</p>
+ * @method void setGroupTriggerCondition(array $GroupTriggerCondition) 设置<p>分组触发条件。</p>
+ * @method array getTags() 获取<p>标签描述列表，通过指定该参数可以同时绑定标签到相应的告警策略。最大支持10个标签键值对，并且不能有重复的键值对。</p>
+ * @method void setTags(array $Tags) 设置<p>标签描述列表，通过指定该参数可以同时绑定标签到相应的告警策略。最大支持10个标签键值对，并且不能有重复的键值对。</p>
+ * @method integer getMonitorObjectType() 获取<p>监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。<br>当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。</p>
+ * @method void setMonitorObjectType(integer $MonitorObjectType) 设置<p>监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。<br>当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。</p>
+ * @method array getClassifications() 获取<p>告警附加分类信息列表。<br>Classifications元素个数不能超过20个。<br>Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 <code>^[a-z]([a-z0-9_]{0,49})$</code>。<br>Classifications元素的Value长度不能超过200个字符。</p>
+ * @method void setClassifications(array $Classifications) 设置<p>告警附加分类信息列表。<br>Classifications元素个数不能超过20个。<br>Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 <code>^[a-z]([a-z0-9_]{0,49})$</code>。<br>Classifications元素的Value长度不能超过200个字符。</p>
+ * @method array getAlarmNoticeIds() 获取<p>关联的日志服务告警通知渠道组列表。-通过<a href="https://cloud.tencent.com/document/product/614/56462">获取通知渠道组列表</a>获取关联的告警通知渠道组列表，和MonitorNotice互斥</p>
+ * @method void setAlarmNoticeIds(array $AlarmNoticeIds) 设置<p>关联的日志服务告警通知渠道组列表。-通过<a href="https://cloud.tencent.com/document/product/614/56462">获取通知渠道组列表</a>获取关联的告警通知渠道组列表，和MonitorNotice互斥</p>
+ * @method MonitorNotice getMonitorNotice() 获取<p>关联的可观测平台通知模板，与 AlarmNoticeIds 参数互斥，不能同时使用</p>
+ * @method void setMonitorNotice(MonitorNotice $MonitorNotice) 设置<p>关联的可观测平台通知模板，与 AlarmNoticeIds 参数互斥，不能同时使用</p>
  */
 class ModifyAlarmRequest extends AbstractModel
 {
     /**
-     * @var string 告警策略ID。-通过[获取告警策略列表](https://cloud.tencent.com/document/product/614/56461)获取告警策略ID
+     * @var string <p>告警策略ID。-通过<a href="https://cloud.tencent.com/document/product/614/56461">获取告警策略列表</a>获取告警策略ID</p>
      */
     public $AlarmId;
 
     /**
-     * @var string 告警策略名称。最大支持255个字节，不支持 '|'。
+     * @var string <p>告警策略名称。最大支持255个字节，不支持 &#39;|&#39;。</p>
      */
     public $Name;
 
     /**
-     * @var MonitorTime 监控任务运行时间点。
+     * @var MonitorTime <p>监控任务运行时间点。</p>
      */
     public $MonitorTime;
 
     /**
-     * @var string 告警信息发送的触发条件。
-
-注意:  
-- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
+     * @var string <p>告警信息发送的触发条件。</p><p>注意:  </p><ul><li>Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li></ul>
      */
     public $Condition;
 
     /**
-     * @var integer 告警级别。
-
-0:警告(Warn);1:提醒(Info);2:紧急 (Critical)
-
-注意:  
-- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
+     * @var integer <p>告警级别。</p><p>0:警告(Warn);1:提醒(Info);2:紧急 (Critical)</p><p>注意:  </p><ul><li>Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li></ul>
      */
     public $AlarmLevel;
 
     /**
-     * @var array 多触发条件。 
-
-注意:  
-- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
+     * @var array <p>多触发条件。 </p><p>注意:  </p><ul><li>Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li></ul>
      */
     public $MultiConditions;
 
     /**
-     * @var integer 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。
+     * @var integer <p>持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。</p>
      */
     public $TriggerCount;
 
     /**
-     * @var integer 告警重复的周期。单位是分钟。取值范围是0~1440。
+     * @var integer <p>告警重复的周期。单位是分钟。取值范围是0~1440。</p>
      */
     public $AlarmPeriod;
 
     /**
-     * @var array 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
-     */
-    public $AlarmNoticeIds;
-
-    /**
-     * @var array 监控对象列表。
+     * @var array <p>监控对象列表。</p>
      */
     public $AlarmTargets;
 
     /**
-     * @var boolean 是否开启告警策略。
+     * @var boolean <p>是否开启告警策略。</p>
      */
     public $Status;
 
     /**
-     * @var boolean 该参数已废弃，请使用Status参数控制是否开启告警策略。
+     * @var boolean <p>该参数已废弃，请使用Status参数控制是否开启告警策略。</p>
      * @deprecated
      */
     public $Enable;
 
     /**
-     * @var string 用户自定义告警内容
+     * @var string <p>用户自定义告警内容</p>
      */
     public $MessageTemplate;
 
     /**
-     * @var CallBackInfo 用户自定义回调
+     * @var CallBackInfo <p>用户自定义回调</p>
      */
     public $CallBack;
 
     /**
-     * @var array 多维分析
+     * @var array <p>多维分析</p>
      */
     public $Analysis;
 
     /**
-     * @var boolean 分组触发状态。true：开启，false：关闭（默认）
+     * @var boolean <p>分组触发状态。true：开启，false：关闭（默认）</p>
      */
     public $GroupTriggerStatus;
 
     /**
-     * @var array 分组触发条件。
+     * @var array <p>分组触发条件。</p>
      */
     public $GroupTriggerCondition;
 
     /**
-     * @var array 标签描述列表，通过指定该参数可以同时绑定标签到相应的告警策略。最大支持10个标签键值对，并且不能有重复的键值对。
+     * @var array <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的告警策略。最大支持10个标签键值对，并且不能有重复的键值对。</p>
      */
     public $Tags;
 
     /**
-     * @var integer 监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
-
+     * @var integer <p>监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。<br>当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。</p>
      */
     public $MonitorObjectType;
 
     /**
-     * @var array 告警附加分类信息列表。
-Classifications元素个数不能超过20个。
-Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 `^[a-z]([a-z0-9_]{0,49})$`。
-Classifications元素的Value长度不能超过200个字符。
+     * @var array <p>告警附加分类信息列表。<br>Classifications元素个数不能超过20个。<br>Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 <code>^[a-z]([a-z0-9_]{0,49})$</code>。<br>Classifications元素的Value长度不能超过200个字符。</p>
      */
     public $Classifications;
 
     /**
-     * @param string $AlarmId 告警策略ID。-通过[获取告警策略列表](https://cloud.tencent.com/document/product/614/56461)获取告警策略ID
-     * @param string $Name 告警策略名称。最大支持255个字节，不支持 '|'。
-     * @param MonitorTime $MonitorTime 监控任务运行时间点。
-     * @param string $Condition 告警信息发送的触发条件。
+     * @var array <p>关联的日志服务告警通知渠道组列表。-通过<a href="https://cloud.tencent.com/document/product/614/56462">获取通知渠道组列表</a>获取关联的告警通知渠道组列表，和MonitorNotice互斥</p>
+     */
+    public $AlarmNoticeIds;
 
-注意:  
-- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
-     * @param integer $AlarmLevel 告警级别。
+    /**
+     * @var MonitorNotice <p>关联的可观测平台通知模板，与 AlarmNoticeIds 参数互斥，不能同时使用</p>
+     */
+    public $MonitorNotice;
 
-0:警告(Warn);1:提醒(Info);2:紧急 (Critical)
-
-注意:  
-- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
-     * @param array $MultiConditions 多触发条件。 
-
-注意:  
-- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
-     * @param integer $TriggerCount 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。
-     * @param integer $AlarmPeriod 告警重复的周期。单位是分钟。取值范围是0~1440。
-     * @param array $AlarmNoticeIds 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
-     * @param array $AlarmTargets 监控对象列表。
-     * @param boolean $Status 是否开启告警策略。
-     * @param boolean $Enable 该参数已废弃，请使用Status参数控制是否开启告警策略。
-     * @param string $MessageTemplate 用户自定义告警内容
-     * @param CallBackInfo $CallBack 用户自定义回调
-     * @param array $Analysis 多维分析
-     * @param boolean $GroupTriggerStatus 分组触发状态。true：开启，false：关闭（默认）
-     * @param array $GroupTriggerCondition 分组触发条件。
-     * @param array $Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的告警策略。最大支持10个标签键值对，并且不能有重复的键值对。
-     * @param integer $MonitorObjectType 监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
-
-     * @param array $Classifications 告警附加分类信息列表。
-Classifications元素个数不能超过20个。
-Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 `^[a-z]([a-z0-9_]{0,49})$`。
-Classifications元素的Value长度不能超过200个字符。
+    /**
+     * @param string $AlarmId <p>告警策略ID。-通过<a href="https://cloud.tencent.com/document/product/614/56461">获取告警策略列表</a>获取告警策略ID</p>
+     * @param string $Name <p>告警策略名称。最大支持255个字节，不支持 &#39;|&#39;。</p>
+     * @param MonitorTime $MonitorTime <p>监控任务运行时间点。</p>
+     * @param string $Condition <p>告警信息发送的触发条件。</p><p>注意:  </p><ul><li>Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li></ul>
+     * @param integer $AlarmLevel <p>告警级别。</p><p>0:警告(Warn);1:提醒(Info);2:紧急 (Critical)</p><p>注意:  </p><ul><li>Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li></ul>
+     * @param array $MultiConditions <p>多触发条件。 </p><p>注意:  </p><ul><li>Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li></ul>
+     * @param integer $TriggerCount <p>持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。</p>
+     * @param integer $AlarmPeriod <p>告警重复的周期。单位是分钟。取值范围是0~1440。</p>
+     * @param array $AlarmTargets <p>监控对象列表。</p>
+     * @param boolean $Status <p>是否开启告警策略。</p>
+     * @param boolean $Enable <p>该参数已废弃，请使用Status参数控制是否开启告警策略。</p>
+     * @param string $MessageTemplate <p>用户自定义告警内容</p>
+     * @param CallBackInfo $CallBack <p>用户自定义回调</p>
+     * @param array $Analysis <p>多维分析</p>
+     * @param boolean $GroupTriggerStatus <p>分组触发状态。true：开启，false：关闭（默认）</p>
+     * @param array $GroupTriggerCondition <p>分组触发条件。</p>
+     * @param array $Tags <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的告警策略。最大支持10个标签键值对，并且不能有重复的键值对。</p>
+     * @param integer $MonitorObjectType <p>监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。<br>当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。</p>
+     * @param array $Classifications <p>告警附加分类信息列表。<br>Classifications元素个数不能超过20个。<br>Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 <code>^[a-z]([a-z0-9_]{0,49})$</code>。<br>Classifications元素的Value长度不能超过200个字符。</p>
+     * @param array $AlarmNoticeIds <p>关联的日志服务告警通知渠道组列表。-通过<a href="https://cloud.tencent.com/document/product/614/56462">获取通知渠道组列表</a>获取关联的告警通知渠道组列表，和MonitorNotice互斥</p>
+     * @param MonitorNotice $MonitorNotice <p>关联的可观测平台通知模板，与 AlarmNoticeIds 参数互斥，不能同时使用</p>
      */
     function __construct()
     {
@@ -299,10 +243,6 @@ Classifications元素的Value长度不能超过200个字符。
 
         if (array_key_exists("AlarmPeriod",$param) and $param["AlarmPeriod"] !== null) {
             $this->AlarmPeriod = $param["AlarmPeriod"];
-        }
-
-        if (array_key_exists("AlarmNoticeIds",$param) and $param["AlarmNoticeIds"] !== null) {
-            $this->AlarmNoticeIds = $param["AlarmNoticeIds"];
         }
 
         if (array_key_exists("AlarmTargets",$param) and $param["AlarmTargets"] !== null) {
@@ -368,6 +308,15 @@ Classifications元素的Value长度不能超过200个字符。
                 $obj->deserialize($value);
                 array_push($this->Classifications, $obj);
             }
+        }
+
+        if (array_key_exists("AlarmNoticeIds",$param) and $param["AlarmNoticeIds"] !== null) {
+            $this->AlarmNoticeIds = $param["AlarmNoticeIds"];
+        }
+
+        if (array_key_exists("MonitorNotice",$param) and $param["MonitorNotice"] !== null) {
+            $this->MonitorNotice = new MonitorNotice();
+            $this->MonitorNotice->deserialize($param["MonitorNotice"]);
         }
     }
 }

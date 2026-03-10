@@ -22,8 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTableId() 获取页数
  * @method void setTableId(integer $TableId) 设置页数
- * @method string getType() 获取类型
- * @method void setType(string $Type) 设置类型
+ * @method string getType() 获取类型。
+取值范围：
+
+- ROW：行权限
+- COLUMN：列权限
+
+默认值：ROW
+示例值：ROW
+ * @method void setType(string $Type) 设置类型。
+取值范围：
+
+- ROW：行权限
+- COLUMN：列权限
+
+默认值：ROW
+示例值：ROW
  * @method string getProjectId() 获取1
  * @method void setProjectId(string $ProjectId) 设置1
  */
@@ -35,7 +49,14 @@ class DescribePermissionStatusInfoRequest extends AbstractModel
     public $TableId;
 
     /**
-     * @var string 类型
+     * @var string 类型。
+取值范围：
+
+- ROW：行权限
+- COLUMN：列权限
+
+默认值：ROW
+示例值：ROW
      */
     public $Type;
 
@@ -46,7 +67,14 @@ class DescribePermissionStatusInfoRequest extends AbstractModel
 
     /**
      * @param integer $TableId 页数
-     * @param string $Type 类型
+     * @param string $Type 类型。
+取值范围：
+
+- ROW：行权限
+- COLUMN：列权限
+
+默认值：ROW
+示例值：ROW
      * @param string $ProjectId 1
      */
     function __construct()

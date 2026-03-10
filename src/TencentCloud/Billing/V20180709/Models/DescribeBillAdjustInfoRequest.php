@@ -20,46 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillAdjustInfo请求参数结构体
  *
- * @method string getMonth() 获取格式：yyyy-MM
-账单月份，month和timeFrom&timeTo必传一个，如果有传timeFrom&timeTo则month字段无效
- * @method void setMonth(string $Month) 设置格式：yyyy-MM
-账单月份，month和timeFrom&timeTo必传一个，如果有传timeFrom&timeTo则month字段无效
- * @method string getTimeFrom() 获取格式：yyyy-MM-dd
-开始时间，month和timeFrom&timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据
- * @method void setTimeFrom(string $TimeFrom) 设置格式：yyyy-MM-dd
-开始时间，month和timeFrom&timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据
- * @method string getTimeTo() 获取格式：yyyy-MM-dd
-截止时间，month和timeFrom&timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据
- * @method void setTimeTo(string $TimeTo) 设置格式：yyyy-MM-dd
-截止时间，month和timeFrom&timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据
+ * @method string getMonth() 获取<p>格式：yyyy-MM<br>账单月份，month和timeFrom&amp;timeTo必传一个，如果有传timeFrom&amp;timeTo则month字段无效</p>
+ * @method void setMonth(string $Month) 设置<p>格式：yyyy-MM<br>账单月份，month和timeFrom&amp;timeTo必传一个，如果有传timeFrom&amp;timeTo则month字段无效</p>
+ * @method string getTimeFrom() 获取<p>格式：yyyy-MM-dd<br>开始时间，month和timeFrom&amp;timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据</p>
+ * @method void setTimeFrom(string $TimeFrom) 设置<p>格式：yyyy-MM-dd<br>开始时间，month和timeFrom&amp;timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据</p>
+ * @method string getTimeTo() 获取<p>格式：yyyy-MM-dd<br>截止时间，month和timeFrom&amp;timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据</p>
+ * @method void setTimeTo(string $TimeTo) 设置<p>格式：yyyy-MM-dd<br>截止时间，month和timeFrom&amp;timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据</p>
+ * @method string getPayerUin() 获取<p>支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN</p>
+ * @method void setPayerUin(string $PayerUin) 设置<p>支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN</p>
  */
 class DescribeBillAdjustInfoRequest extends AbstractModel
 {
     /**
-     * @var string 格式：yyyy-MM
-账单月份，month和timeFrom&timeTo必传一个，如果有传timeFrom&timeTo则month字段无效
+     * @var string <p>格式：yyyy-MM<br>账单月份，month和timeFrom&amp;timeTo必传一个，如果有传timeFrom&amp;timeTo则month字段无效</p>
      */
     public $Month;
 
     /**
-     * @var string 格式：yyyy-MM-dd
-开始时间，month和timeFrom&timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据
+     * @var string <p>格式：yyyy-MM-dd<br>开始时间，month和timeFrom&amp;timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据</p>
      */
     public $TimeFrom;
 
     /**
-     * @var string 格式：yyyy-MM-dd
-截止时间，month和timeFrom&timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据
+     * @var string <p>格式：yyyy-MM-dd<br>截止时间，month和timeFrom&amp;timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据</p>
      */
     public $TimeTo;
 
     /**
-     * @param string $Month 格式：yyyy-MM
-账单月份，month和timeFrom&timeTo必传一个，如果有传timeFrom&timeTo则month字段无效
-     * @param string $TimeFrom 格式：yyyy-MM-dd
-开始时间，month和timeFrom&timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据
-     * @param string $TimeTo 格式：yyyy-MM-dd
-截止时间，month和timeFrom&timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据
+     * @var string <p>支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN</p>
+     */
+    public $PayerUin;
+
+    /**
+     * @param string $Month <p>格式：yyyy-MM<br>账单月份，month和timeFrom&amp;timeTo必传一个，如果有传timeFrom&amp;timeTo则month字段无效</p>
+     * @param string $TimeFrom <p>格式：yyyy-MM-dd<br>开始时间，month和timeFrom&amp;timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据</p>
+     * @param string $TimeTo <p>格式：yyyy-MM-dd<br>截止时间，month和timeFrom&amp;timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据</p>
+     * @param string $PayerUin <p>支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN</p>
      */
     function __construct()
     {
@@ -84,6 +80,10 @@ class DescribeBillAdjustInfoRequest extends AbstractModel
 
         if (array_key_exists("TimeTo",$param) and $param["TimeTo"] !== null) {
             $this->TimeTo = $param["TimeTo"];
+        }
+
+        if (array_key_exists("PayerUin",$param) and $param["PayerUin"] !== null) {
+            $this->PayerUin = $param["PayerUin"];
         }
     }
 }

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlias(string $Alias) 设置新的别名，1-60个字符或数字的组合
  * @method string getKeyId() 获取CMK的全局唯一标识符
  * @method void setKeyId(string $KeyId) 设置CMK的全局唯一标识符
+ * @method MemberAccount getMemberAccount() 获取可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+ * @method void setMemberAccount(MemberAccount $MemberAccount) 设置可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
  */
 class UpdateAliasRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class UpdateAliasRequest extends AbstractModel
     public $KeyId;
 
     /**
+     * @var MemberAccount 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+     */
+    public $MemberAccount;
+
+    /**
      * @param string $Alias 新的别名，1-60个字符或数字的组合
      * @param string $KeyId CMK的全局唯一标识符
+     * @param MemberAccount $MemberAccount 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
      */
     function __construct()
     {
@@ -60,6 +68,11 @@ class UpdateAliasRequest extends AbstractModel
 
         if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
             $this->KeyId = $param["KeyId"];
+        }
+
+        if (array_key_exists("MemberAccount",$param) and $param["MemberAccount"] !== null) {
+            $this->MemberAccount = new MemberAccount();
+            $this->MemberAccount->deserialize($param["MemberAccount"]);
         }
     }
 }

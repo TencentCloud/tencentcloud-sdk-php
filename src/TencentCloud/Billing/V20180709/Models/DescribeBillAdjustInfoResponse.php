@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillAdjustInfo返回参数结构体
  *
- * @method integer getTotal() 获取数据总量
- * @method void setTotal(integer $Total) 设置数据总量
- * @method array getData() 获取明细数据
- * @method void setData(array $Data) 设置明细数据
+ * @method integer getTotal() 获取<p>数据总量</p>
+ * @method void setTotal(integer $Total) 设置<p>数据总量</p>
+ * @method array getData() 获取<p>明细数据</p>
+ * @method void setData(array $Data) 设置<p>明细数据</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBillAdjustInfoResponse extends AbstractModel
 {
     /**
-     * @var integer 数据总量
+     * @var integer <p>数据总量</p>
      */
     public $Total;
 
     /**
-     * @var array 明细数据
+     * @var array <p>明细数据</p>
      */
     public $Data;
 
@@ -45,8 +45,8 @@ class DescribeBillAdjustInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total 数据总量
-     * @param array $Data 明细数据
+     * @param integer $Total <p>数据总量</p>
+     * @param array $Data <p>明细数据</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

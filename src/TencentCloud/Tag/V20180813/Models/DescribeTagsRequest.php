@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTags请求参数结构体
  *
- * @method string getTagKey() 获取标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签
- * @method void setTagKey(string $TagKey) 设置标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签
- * @method string getTagValue() 获取标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签
- * @method void setTagValue(string $TagValue) 设置标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签
- * @method integer getOffset() 获取数据偏移量，默认为 0, 必须为Limit参数的整数倍
- * @method void setOffset(integer $Offset) 设置数据偏移量，默认为 0, 必须为Limit参数的整数倍
- * @method integer getLimit() 获取每页大小，默认为 15
- * @method void setLimit(integer $Limit) 设置每页大小，默认为 15
- * @method integer getCreateUin() 获取创建者用户 Uin，不传或为空只将 Uin 作为条件查询
- * @method void setCreateUin(integer $CreateUin) 设置创建者用户 Uin，不传或为空只将 Uin 作为条件查询
- * @method array getTagKeys() 获取标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值
- * @method void setTagKeys(array $TagKeys) 设置标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值
- * @method integer getShowProject() 获取是否展现项目标签。1:展示  0:不展示
- * @method void setShowProject(integer $ShowProject) 设置是否展现项目标签。1:展示  0:不展示
+ * @method string getTagKey() 获取<p>标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签</p>
+ * @method void setTagKey(string $TagKey) 设置<p>标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签</p>
+ * @method string getTagValue() 获取<p>标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签</p>
+ * @method void setTagValue(string $TagValue) 设置<p>标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签</p>
+ * @method integer getOffset() 获取<p>数据偏移量，默认为 0, 必须为Limit参数的整数倍</p>
+ * @method void setOffset(integer $Offset) 设置<p>数据偏移量，默认为 0, 必须为Limit参数的整数倍</p>
+ * @method integer getLimit() 获取<p>每页大小，默认为 15，最大1000</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页大小，默认为 15，最大1000</p>
+ * @method integer getCreateUin() 获取<p>创建者用户 Uin，不传或为空只将 Uin 作为条件查询</p>
+ * @method void setCreateUin(integer $CreateUin) 设置<p>创建者用户 Uin，不传或为空只将 Uin 作为条件查询</p>
+ * @method array getTagKeys() 获取<p>标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值</p>
+ * @method void setTagKeys(array $TagKeys) 设置<p>标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值</p>
+ * @method integer getShowProject() 获取<p>是否展现项目标签。1:展示  0:不展示</p>
+ * @method void setShowProject(integer $ShowProject) 设置<p>是否展现项目标签。1:展示  0:不展示</p>
  */
 class DescribeTagsRequest extends AbstractModel
 {
     /**
-     * @var string 标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签
+     * @var string <p>标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签</p>
      */
     public $TagKey;
 
     /**
-     * @var string 标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签
+     * @var string <p>标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签</p>
      */
     public $TagValue;
 
     /**
-     * @var integer 数据偏移量，默认为 0, 必须为Limit参数的整数倍
+     * @var integer <p>数据偏移量，默认为 0, 必须为Limit参数的整数倍</p>
      */
     public $Offset;
 
     /**
-     * @var integer 每页大小，默认为 15
+     * @var integer <p>每页大小，默认为 15，最大1000</p>
      */
     public $Limit;
 
     /**
-     * @var integer 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
+     * @var integer <p>创建者用户 Uin，不传或为空只将 Uin 作为条件查询</p>
      */
     public $CreateUin;
 
     /**
-     * @var array 标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值
+     * @var array <p>标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值</p>
      */
     public $TagKeys;
 
     /**
-     * @var integer 是否展现项目标签。1:展示  0:不展示
+     * @var integer <p>是否展现项目标签。1:展示  0:不展示</p>
      */
     public $ShowProject;
 
     /**
-     * @param string $TagKey 标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签
-     * @param string $TagValue 标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签
-     * @param integer $Offset 数据偏移量，默认为 0, 必须为Limit参数的整数倍
-     * @param integer $Limit 每页大小，默认为 15
-     * @param integer $CreateUin 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
-     * @param array $TagKeys 标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值
-     * @param integer $ShowProject 是否展现项目标签。1:展示  0:不展示
+     * @param string $TagKey <p>标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签</p>
+     * @param string $TagValue <p>标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签</p>
+     * @param integer $Offset <p>数据偏移量，默认为 0, 必须为Limit参数的整数倍</p>
+     * @param integer $Limit <p>每页大小，默认为 15，最大1000</p>
+     * @param integer $CreateUin <p>创建者用户 Uin，不传或为空只将 Uin 作为条件查询</p>
+     * @param array $TagKeys <p>标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值</p>
+     * @param integer $ShowProject <p>是否展现项目标签。1:展示  0:不展示</p>
      */
     function __construct()
     {

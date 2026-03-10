@@ -27,7 +27,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getServiceType() 获取后端提供字典：域类型，1、腾讯云，2、本地
  * @method void setServiceType(string $ServiceType) 设置后端提供字典：域类型，1、腾讯云，2、本地
  * @method string getDbType() 获取驱动
+取值范围：
+MYSQL：MySQL数据库
+PRESTO：PRESTO数据库
+POSTGRE：PostgreSQL数据库
+DLC：DLC数据库
+MSSQL：微软SQL Server数据库
  * @method void setDbType(string $DbType) 设置驱动
+取值范围：
+MYSQL：MySQL数据库
+PRESTO：PRESTO数据库
+POSTGRE：PostgreSQL数据库
+DLC：DLC数据库
+MSSQL：微软SQL Server数据库
  * @method string getCharset() 获取数据库编码
  * @method void setCharset(string $Charset) 设置数据库编码
  * @method string getDbUser() 获取用户名
@@ -88,6 +100,12 @@ class ModifyDatasourceRequest extends AbstractModel
 
     /**
      * @var string 驱动
+取值范围：
+MYSQL：MySQL数据库
+PRESTO：PRESTO数据库
+POSTGRE：PostgreSQL数据库
+DLC：DLC数据库
+MSSQL：微软SQL Server数据库
      */
     public $DbType;
 
@@ -196,6 +214,12 @@ class ModifyDatasourceRequest extends AbstractModel
      * @param integer $DbPort 端口
      * @param string $ServiceType 后端提供字典：域类型，1、腾讯云，2、本地
      * @param string $DbType 驱动
+取值范围：
+MYSQL：MySQL数据库
+PRESTO：PRESTO数据库
+POSTGRE：PostgreSQL数据库
+DLC：DLC数据库
+MSSQL：微软SQL Server数据库
      * @param string $Charset 数据库编码
      * @param string $DbUser 用户名
      * @param string $DbPwd 密码

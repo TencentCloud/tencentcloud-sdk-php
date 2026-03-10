@@ -38,14 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriodRetain(string $PeriodRetain) 设置数据存储时长计费
  * @method string getBuyingChannel() 获取实例购买渠道("cdn" 等)
  * @method void setBuyingChannel(string $BuyingChannel) 设置实例购买渠道("cdn" 等)
- * @method integer getResourcePackageType() 获取预付费资源包类型(仅预付费需要)
- * @method void setResourcePackageType(integer $ResourcePackageType) 设置预付费资源包类型(仅预付费需要)
+ * @method integer getResourcePackageType() 获取资源包类型：1=5百万/30天，2=10百万/30天，3=50百万/180天，4=100百万/180天，5=300百万/180天，6=500百万/180天，7=1000百万/180天，8=2500百万/180天，9=10000百万/360天（单位：上报量=百万条，周期=天）
+ * @method void setResourcePackageType(integer $ResourcePackageType) 设置资源包类型：1=5百万/30天，2=10百万/30天，3=50百万/180天，4=100百万/180天，5=300百万/180天，6=500百万/180天，7=1000百万/180天，8=2500百万/180天，9=10000百万/360天（单位：上报量=百万条，周期=天）
  * @method integer getResourcePackageNum() 获取预付费资源包数量(仅预付费需要)
  * @method void setResourcePackageNum(integer $ResourcePackageNum) 设置预付费资源包数量(仅预付费需要)
  * @method integer getInstanceType() 获取实例类型 1:原web相关类型 2:app端类型
  * @method void setInstanceType(integer $InstanceType) 设置实例类型 1:原web相关类型 2:app端类型
- * @method integer getAutoRenewalType() 获取自动续费类型
- * @method void setAutoRenewalType(integer $AutoRenewalType) 设置自动续费类型
+ * @method integer getAutoRenewalType() 获取自动续费类型：0=不自动续费，1=开启自动续费；开启时需填写 AutoRenewalThreshold（1~50%）；同一实例最多允许存在 1 个自动续费资源包。
+ * @method void setAutoRenewalType(integer $AutoRenewalType) 设置自动续费类型：0=不自动续费，1=开启自动续费；开启时需填写 AutoRenewalThreshold（1~50%）；同一实例最多允许存在 1 个自动续费资源包。
  * @method integer getAutoRenewalThreshold() 获取自动续费阈值
  * @method void setAutoRenewalThreshold(integer $AutoRenewalThreshold) 设置自动续费阈值
  */
@@ -97,7 +97,7 @@ class CreateTawInstanceRequest extends AbstractModel
     public $BuyingChannel;
 
     /**
-     * @var integer 预付费资源包类型(仅预付费需要)
+     * @var integer 资源包类型：1=5百万/30天，2=10百万/30天，3=50百万/180天，4=100百万/180天，5=300百万/180天，6=500百万/180天，7=1000百万/180天，8=2500百万/180天，9=10000百万/360天（单位：上报量=百万条，周期=天）
      */
     public $ResourcePackageType;
 
@@ -112,7 +112,7 @@ class CreateTawInstanceRequest extends AbstractModel
     public $InstanceType;
 
     /**
-     * @var integer 自动续费类型
+     * @var integer 自动续费类型：0=不自动续费，1=开启自动续费；开启时需填写 AutoRenewalThreshold（1~50%）；同一实例最多允许存在 1 个自动续费资源包。
      */
     public $AutoRenewalType;
 
@@ -131,10 +131,10 @@ class CreateTawInstanceRequest extends AbstractModel
      * @param string $CountNum 每天数据上报量，（不作量级限制）
      * @param string $PeriodRetain 数据存储时长计费
      * @param string $BuyingChannel 实例购买渠道("cdn" 等)
-     * @param integer $ResourcePackageType 预付费资源包类型(仅预付费需要)
+     * @param integer $ResourcePackageType 资源包类型：1=5百万/30天，2=10百万/30天，3=50百万/180天，4=100百万/180天，5=300百万/180天，6=500百万/180天，7=1000百万/180天，8=2500百万/180天，9=10000百万/360天（单位：上报量=百万条，周期=天）
      * @param integer $ResourcePackageNum 预付费资源包数量(仅预付费需要)
      * @param integer $InstanceType 实例类型 1:原web相关类型 2:app端类型
-     * @param integer $AutoRenewalType 自动续费类型
+     * @param integer $AutoRenewalType 自动续费类型：0=不自动续费，1=开启自动续费；开启时需填写 AutoRenewalThreshold（1~50%）；同一实例最多允许存在 1 个自动续费资源包。
      * @param integer $AutoRenewalThreshold 自动续费阈值
      */
     function __construct()

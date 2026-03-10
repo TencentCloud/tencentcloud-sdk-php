@@ -20,38 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 腾讯云可观测平台通知渠道组信息
  *
- * @method string getNoticeId() 获取腾讯云可观测平台通知模板 ID
- * @method void setNoticeId(string $NoticeId) 设置腾讯云可观测平台通知模板 ID
- * @method string getContentTmplId() 获取腾讯云可观测平台内容模板ID，不传默认内容模板
+ * @method string getNoticeId() 获取<p>腾讯云可观测平台通知模板 ID</p>
+ * @method void setNoticeId(string $NoticeId) 设置<p>腾讯云可观测平台通知模板 ID</p>
+ * @method string getContentTmplId() 获取<p>腾讯云可观测平台内容模板ID，为空时使用默认内容模板</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setContentTmplId(string $ContentTmplId) 设置腾讯云可观测平台内容模板ID，不传默认内容模板
+ * @method void setContentTmplId(string $ContentTmplId) 设置<p>腾讯云可观测平台内容模板ID，为空时使用默认内容模板</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAlarmLevels() 获取告警级别,0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)
- * @method void setAlarmLevels(array $AlarmLevels) 设置告警级别,0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)
+ * @method array getAlarmLevels() 获取<p>告警级别,0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)</p>
+ * @method void setAlarmLevels(array $AlarmLevels) 设置<p>告警级别,0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)</p>
  */
 class MonitorNoticeRule extends AbstractModel
 {
     /**
-     * @var string 腾讯云可观测平台通知模板 ID
+     * @var string <p>腾讯云可观测平台通知模板 ID</p>
      */
     public $NoticeId;
 
     /**
-     * @var string 腾讯云可观测平台内容模板ID，不传默认内容模板
+     * @var string <p>腾讯云可观测平台内容模板ID，为空时使用默认内容模板</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContentTmplId;
 
     /**
-     * @var array 告警级别,0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)
+     * @var array <p>告警级别,0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)</p>
      */
     public $AlarmLevels;
 
     /**
-     * @param string $NoticeId 腾讯云可观测平台通知模板 ID
-     * @param string $ContentTmplId 腾讯云可观测平台内容模板ID，不传默认内容模板
+     * @param string $NoticeId <p>腾讯云可观测平台通知模板 ID</p>
+     * @param string $ContentTmplId <p>腾讯云可观测平台内容模板ID，为空时使用默认内容模板</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AlarmLevels 告警级别,0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)
+     * @param array $AlarmLevels <p>告警级别,0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)</p>
      */
     function __construct()
     {

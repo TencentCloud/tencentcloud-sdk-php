@@ -38,24 +38,36 @@ use TencentCloud\Rum\V20210622\Models as Models;
  * @method Models\DescribeAppSingleCaseDetailListResponse DescribeAppSingleCaseDetailList(Models\DescribeAppSingleCaseDetailListRequest $req) 查询 app 监控个例样本详情列表
  * @method Models\DescribeAppSingleCaseListResponse DescribeAppSingleCaseList(Models\DescribeAppSingleCaseListRequest $req) 查询 app 监控个例聚合列表
  * @method Models\DescribeDataResponse DescribeData(Models\DescribeDataRequest $req) 转发monitor查询
+ * @method Models\DescribeDataBridgeUrlV2Response DescribeDataBridgeUrlV2(Models\DescribeDataBridgeUrlV2Request $req) 获取DescribeDataBridgeUrl信息
  * @method Models\DescribeDataCustomUrlResponse DescribeDataCustomUrl(Models\DescribeDataCustomUrlRequest $req) 获取DescribeDataCustomUrl信息
+ * @method Models\DescribeDataCustomUrlV2Response DescribeDataCustomUrlV2(Models\DescribeDataCustomUrlV2Request $req) 获取DescribeDataCustomUrl信息
  * @method Models\DescribeDataEventUrlResponse DescribeDataEventUrl(Models\DescribeDataEventUrlRequest $req) 获取DescribeDataEventUrl信息
+ * @method Models\DescribeDataEventUrlV2Response DescribeDataEventUrlV2(Models\DescribeDataEventUrlV2Request $req) 获取DescribeDataEventUrl信息
  * @method Models\DescribeDataFetchProjectResponse DescribeDataFetchProject(Models\DescribeDataFetchProjectRequest $req) 获取DescribeDataFetchProject信息。已下线，请使用DescribeDataFetchUrl
  * @method Models\DescribeDataFetchUrlResponse DescribeDataFetchUrl(Models\DescribeDataFetchUrlRequest $req) 获取DescribeDataFetchUrl信息
  * @method Models\DescribeDataFetchUrlInfoResponse DescribeDataFetchUrlInfo(Models\DescribeDataFetchUrlInfoRequest $req) 获取DescribeDataFetchUrlInfo信息
+ * @method Models\DescribeDataFetchUrlV2Response DescribeDataFetchUrlV2(Models\DescribeDataFetchUrlV2Request $req) 获取DescribeDataFetchUrl信息
  * @method Models\DescribeDataLogUrlInfoResponse DescribeDataLogUrlInfo(Models\DescribeDataLogUrlInfoRequest $req) 获取loginfo信息
  * @method Models\DescribeDataLogUrlStatisticsResponse DescribeDataLogUrlStatistics(Models\DescribeDataLogUrlStatisticsRequest $req) 获取LogUrlStatistics信息
+ * @method Models\DescribeDataLogUrlStatisticsV2Response DescribeDataLogUrlStatisticsV2(Models\DescribeDataLogUrlStatisticsV2Request $req) 获取LogUrlStatistics信息
  * @method Models\DescribeDataPerformancePageResponse DescribeDataPerformancePage(Models\DescribeDataPerformancePageRequest $req) 获取PerformancePage信息
+ * @method Models\DescribeDataPerformancePageV2Response DescribeDataPerformancePageV2(Models\DescribeDataPerformancePageV2Request $req) 获取PerformancePage信息
  * @method Models\DescribeDataPvUrlInfoResponse DescribeDataPvUrlInfo(Models\DescribeDataPvUrlInfoRequest $req) 获取PvUrlInfo信息
  * @method Models\DescribeDataPvUrlStatisticsResponse DescribeDataPvUrlStatistics(Models\DescribeDataPvUrlStatisticsRequest $req) 获取DescribeDataPvUrlStatistics信息
  * @method Models\DescribeDataPvUrlStatisticsV2Response DescribeDataPvUrlStatisticsV2(Models\DescribeDataPvUrlStatisticsV2Request $req) 获取DescribeDataPvUrlStatistics信息
  * @method Models\DescribeDataReportCountResponse DescribeDataReportCount(Models\DescribeDataReportCountRequest $req) 获取项目上报量
  * @method Models\DescribeDataReportCountV2Response DescribeDataReportCountV2(Models\DescribeDataReportCountV2Request $req) 获取项目上报量
  * @method Models\DescribeDataSetUrlStatisticsResponse DescribeDataSetUrlStatistics(Models\DescribeDataSetUrlStatisticsRequest $req) 获取DescribeDataSetUrlStatistics信息
+ * @method Models\DescribeDataSetUrlStatisticsV2Response DescribeDataSetUrlStatisticsV2(Models\DescribeDataSetUrlStatisticsV2Request $req) 获取DescribeDataSetUrlStatistics信息
  * @method Models\DescribeDataStaticProjectResponse DescribeDataStaticProject(Models\DescribeDataStaticProjectRequest $req) 获取DescribeDataStaticProject信息
+ * @method Models\DescribeDataStaticProjectV2Response DescribeDataStaticProjectV2(Models\DescribeDataStaticProjectV2Request $req) 获取DescribeDataStaticProject信息
  * @method Models\DescribeDataStaticResourceResponse DescribeDataStaticResource(Models\DescribeDataStaticResourceRequest $req) 获取DescribeDataStaticResource信息
+ * @method Models\DescribeDataStaticResourceV2Response DescribeDataStaticResourceV2(Models\DescribeDataStaticResourceV2Request $req) 获取DescribeDataStaticResource信息
  * @method Models\DescribeDataStaticUrlResponse DescribeDataStaticUrl(Models\DescribeDataStaticUrlRequest $req) 获取DescribeDataStaticUrl信息
+ * @method Models\DescribeDataStaticUrlV2Response DescribeDataStaticUrlV2(Models\DescribeDataStaticUrlV2Request $req) 获取DescribeDataStaticUrl信息
  * @method Models\DescribeDataWebVitalsPageResponse DescribeDataWebVitalsPage(Models\DescribeDataWebVitalsPageRequest $req) 获取DescribeDataWebVitalsPage信息，用户核心活动信息
+页面加载性能之Web Vitals。性能关键点
+ * @method Models\DescribeDataWebVitalsPageV2Response DescribeDataWebVitalsPageV2(Models\DescribeDataWebVitalsPageV2Request $req) 获取DescribeDataWebVitalsPage信息，用户核心活动信息
 页面加载性能之Web Vitals。性能关键点
  * @method Models\DescribeErrorResponse DescribeError(Models\DescribeErrorRequest $req) 获取首页错误信息
  * @method Models\DescribeProjectLimitsResponse DescribeProjectLimits(Models\DescribeProjectLimitsRequest $req) 获取应用上报抽样信息
@@ -69,6 +81,7 @@ use TencentCloud\Rum\V20210622\Models as Models;
  * @method Models\DescribeRumLogListResponse DescribeRumLogList(Models\DescribeRumLogListRequest $req) 获取项目下的日志列表（实例创建的项目下的日志列表）
  * @method Models\DescribeRumStatsLogListResponse DescribeRumStatsLogList(Models\DescribeRumStatsLogListRequest $req) 获取项目下的日志列表，分钟级
  * @method Models\DescribeScoresResponse DescribeScores(Models\DescribeScoresRequest $req) 获取首页分数列表
+ * @method Models\DescribeScoresV2Response DescribeScoresV2(Models\DescribeScoresV2Request $req) 获取首页分数列表
  * @method Models\DescribeTawAreasResponse DescribeTawAreas(Models\DescribeTawAreasRequest $req) 查询片区信息
  * @method Models\DescribeTawInstancesResponse DescribeTawInstances(Models\DescribeTawInstancesRequest $req) 查询实例信息
  * @method Models\DescribeUvListResponse DescribeUvList(Models\DescribeUvListRequest $req) 获取项目下的UV列表

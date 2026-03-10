@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContent(string $Content) 设置请求LLM的内容
  * @method boolean getInterrupt() 获取是否允许该文本打断机器人说话
  * @method void setInterrupt(boolean $Interrupt) 设置是否允许该文本打断机器人说话
+ * @method string getExperimentalParams() 获取实验性参数,联系后台使用
+ * @method void setExperimentalParams(string $ExperimentalParams) 设置实验性参数,联系后台使用
  */
 class InvokeLLM extends AbstractModel
 {
@@ -38,8 +40,14 @@ class InvokeLLM extends AbstractModel
     public $Interrupt;
 
     /**
+     * @var string 实验性参数,联系后台使用
+     */
+    public $ExperimentalParams;
+
+    /**
      * @param string $Content 请求LLM的内容
      * @param boolean $Interrupt 是否允许该文本打断机器人说话
+     * @param string $ExperimentalParams 实验性参数,联系后台使用
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class InvokeLLM extends AbstractModel
 
         if (array_key_exists("Interrupt",$param) and $param["Interrupt"] !== null) {
             $this->Interrupt = $param["Interrupt"];
+        }
+
+        if (array_key_exists("ExperimentalParams",$param) and $param["ExperimentalParams"] !== null) {
+            $this->ExperimentalParams = $param["ExperimentalParams"];
         }
     }
 }

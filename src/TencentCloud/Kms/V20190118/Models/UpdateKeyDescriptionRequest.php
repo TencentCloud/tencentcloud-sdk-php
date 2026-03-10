@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置新的描述信息，最大支持1024字节
  * @method string getKeyId() 获取需要修改描述信息的CMK ID
  * @method void setKeyId(string $KeyId) 设置需要修改描述信息的CMK ID
+ * @method MemberAccount getMemberAccount() 获取可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+ * @method void setMemberAccount(MemberAccount $MemberAccount) 设置可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
  */
 class UpdateKeyDescriptionRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class UpdateKeyDescriptionRequest extends AbstractModel
     public $KeyId;
 
     /**
+     * @var MemberAccount 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+     */
+    public $MemberAccount;
+
+    /**
      * @param string $Description 新的描述信息，最大支持1024字节
      * @param string $KeyId 需要修改描述信息的CMK ID
+     * @param MemberAccount $MemberAccount 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
      */
     function __construct()
     {
@@ -60,6 +68,11 @@ class UpdateKeyDescriptionRequest extends AbstractModel
 
         if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
             $this->KeyId = $param["KeyId"];
+        }
+
+        if (array_key_exists("MemberAccount",$param) and $param["MemberAccount"] !== null) {
+            $this->MemberAccount = new MemberAccount();
+            $this->MemberAccount->deserialize($param["MemberAccount"]);
         }
     }
 }

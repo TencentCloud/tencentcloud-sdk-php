@@ -70,6 +70,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSyncEndTime(integer $SyncEndTime) 设置同步的结束时间
  * @method string getSourceHsmClusterId() 获取同步的原始集群，如果为空，是公有云公共集群
  * @method void setSourceHsmClusterId(string $SourceHsmClusterId) 设置同步的原始集群，如果为空，是公有云公共集群
+ * @method integer getAccountAppId() 获取成员账号appId
+ * @method void setAccountAppId(integer $AccountAppId) 设置成员账号appId
+ * @method integer getAccountUin() 获取成员账号uin
+ * @method void setAccountUin(integer $AccountUin) 设置成员账号uin
+ * @method string getAccountName() 获取成员账号名称
+ * @method void setAccountName(string $AccountName) 设置成员账号名称
  */
 class KeyMetadata extends AbstractModel
 {
@@ -199,6 +205,21 @@ class KeyMetadata extends AbstractModel
     public $SourceHsmClusterId;
 
     /**
+     * @var integer 成员账号appId
+     */
+    public $AccountAppId;
+
+    /**
+     * @var integer 成员账号uin
+     */
+    public $AccountUin;
+
+    /**
+     * @var string 成员账号名称
+     */
+    public $AccountName;
+
+    /**
      * @param string $KeyId CMK的全局唯一标识
      * @param string $Alias 作为密钥更容易辨识，更容易被人看懂的别名
      * @param integer $CreateTime 密钥创建时间
@@ -224,6 +245,9 @@ class KeyMetadata extends AbstractModel
      * @param integer $SyncStartTime 同步的开始时间
      * @param integer $SyncEndTime 同步的结束时间
      * @param string $SourceHsmClusterId 同步的原始集群，如果为空，是公有云公共集群
+     * @param integer $AccountAppId 成员账号appId
+     * @param integer $AccountUin 成员账号uin
+     * @param string $AccountName 成员账号名称
      */
     function __construct()
     {
@@ -336,6 +360,18 @@ class KeyMetadata extends AbstractModel
 
         if (array_key_exists("SourceHsmClusterId",$param) and $param["SourceHsmClusterId"] !== null) {
             $this->SourceHsmClusterId = $param["SourceHsmClusterId"];
+        }
+
+        if (array_key_exists("AccountAppId",$param) and $param["AccountAppId"] !== null) {
+            $this->AccountAppId = $param["AccountAppId"];
+        }
+
+        if (array_key_exists("AccountUin",$param) and $param["AccountUin"] !== null) {
+            $this->AccountUin = $param["AccountUin"];
+        }
+
+        if (array_key_exists("AccountName",$param) and $param["AccountName"] !== null) {
+            $this->AccountName = $param["AccountName"];
         }
     }
 }

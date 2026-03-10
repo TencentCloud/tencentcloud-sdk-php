@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOs(string $Os) 设置操作系统
  * @method string getBrowser() 获取浏览器
  * @method void setBrowser(string $Browser) 设置浏览器
- * @method string getCostType() 获取耗时计算方式
- * @method void setCostType(string $CostType) 设置耗时计算方式
+ * @method string getCostType() 获取耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（使用 percentile2 计算分位数）；"avg" 表示均值（使用 avg 计算）。
+ * @method void setCostType(string $CostType) 设置耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（使用 percentile2 计算分位数）；"avg" 表示均值（使用 avg 计算）。
  * @method string getUrl() 获取自定义测速的key的值
  * @method void setUrl(string $Url) 设置自定义测速的key的值
  * @method string getEnv() 获取环境
@@ -170,7 +170,7 @@ class DescribeDataCustomUrlRequest extends AbstractModel
     public $Browser;
 
     /**
-     * @var string 耗时计算方式
+     * @var string 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（使用 percentile2 计算分位数）；"avg" 表示均值（使用 avg 计算）。
      */
     public $CostType;
 
@@ -205,7 +205,7 @@ class DescribeDataCustomUrlRequest extends AbstractModel
      * @param string $IsAbroad 显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。
      * @param string $Os 操作系统
      * @param string $Browser 浏览器
-     * @param string $CostType 耗时计算方式
+     * @param string $CostType 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（使用 percentile2 计算分位数）；"avg" 表示均值（使用 avg 计算）。
      * @param string $Url 自定义测速的key的值
      * @param string $Env 环境
      */

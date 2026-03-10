@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWorkspaces请求参数结构体
  *
- * @method string getName() 获取工作空间名称过滤条件
- * @method void setName(string $Name) 设置工作空间名称过滤条件
+ * @method string getName() 获取<p>工作空间名称过滤条件</p>
+ * @method void setName(string $Name) 设置<p>工作空间名称过滤条件</p>
  */
 class DescribeWorkspacesRequest extends AbstractModel
 {
     /**
-     * @var string 工作空间名称过滤条件
+     * @var string <p>工作空间名称过滤条件</p>
      */
     public $Name;
 
     /**
-     * @param string $Name 工作空间名称过滤条件
+     * @param string $Name <p>工作空间名称过滤条件</p>
      */
     function __construct()
     {

@@ -51,11 +51,14 @@ use TencentCloud\Trtc\V20190722\Models as Models;
 您可以通过此接口实现如下目标：
 * 指定切片参数（SliceParams）来指定需要切片的主播的黑名单或者白名单。
 * 指定存储参数（SliceStorageParams）来指定上传到您希望的云存储，目前支持腾讯云（对象存储COS）和第三方AWS
+ * @method Models\CreateCloudTranscriptionResponse CreateCloudTranscription(Models\CreateCloudTranscriptionRequest $req) 接口说明：
+启动云端转录功能。
  * @method Models\CreatePictureResponse CreatePicture(Models\CreatePictureRequest $req) 如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁新增自定义背景图或水印，可通过此接口上传新的图片素材。无需频繁新增图片的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中操作。
  * @method Models\DeleteBasicModerationResponse DeleteBasicModeration(Models\DeleteBasicModerationRequest $req) 成功开启审核任务后，可以使用此接口来停止任务。
  * @method Models\DeleteCloudModerationResponse DeleteCloudModeration(Models\DeleteCloudModerationRequest $req) 成功开启云端审核任务后，可以使用此接口来停止送审。
  * @method Models\DeleteCloudRecordingResponse DeleteCloudRecording(Models\DeleteCloudRecordingRequest $req) 成功开启录制后，可以使用此接口来停止录制任务。停止录制成功后不代表文件全部传输完成，如果未完成后台将会继续上传文件，成功后通过事件回调通知客户文件全部传输完成状态。
  * @method Models\DeleteCloudSliceTaskResponse DeleteCloudSliceTask(Models\DeleteCloudSliceTaskRequest $req) 成功开启切片任务后，可以使用此接口来停止任务。停止切片成功后不代表文件全部传输完成，如果未完成后台将会继续上传文件，成功后通过事件回调通知客户文件全部传输完成状态。
+ * @method Models\DeleteCloudTranscriptionResponse DeleteCloudTranscription(Models\DeleteCloudTranscriptionRequest $req) 成功开启转录后，可以使用此接口来停止转录任务。
  * @method Models\DeletePictureResponse DeletePicture(Models\DeletePictureRequest $req) 如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁删除自定义背景图或水印，可通过此接口删除已上传的图片。无需频繁删除图片的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中操作。
  * @method Models\DeleteVoicePrintResponse DeleteVoicePrint(Models\DeleteVoicePrintRequest $req) 传入声纹ID，删除之前注册的声纹信息
  * @method Models\DescribeAIConversationResponse DescribeAIConversation(Models\DescribeAIConversationRequest $req) 查询AI对话任务状态。
@@ -70,6 +73,7 @@ use TencentCloud\Trtc\V20190722\Models as Models;
  * @method Models\DescribeCloudRecordingResponse DescribeCloudRecording(Models\DescribeCloudRecordingRequest $req) 成功开启录制后，可以使用此接口来查询录制状态。仅在录制任务进行时有效，录制退出后查询将会返回错误。
 录制文件上传到云点播VOD时，StorageFileList中不会返回录制文件信息，请订阅相关录制文件回调事件，获取录制文件信息。
  * @method Models\DescribeCloudSliceTaskResponse DescribeCloudSliceTask(Models\DescribeCloudSliceTaskRequest $req) 成功开启切片后，可以使用此接口来查询切片任务状态。仅在任务进行时有效，任务退出后查询将会返回错误。
+ * @method Models\DescribeCloudTranscriptionResponse DescribeCloudTranscription(Models\DescribeCloudTranscriptionRequest $req) 成功开启转录后，可以使用此接口来查询录制状态。仅在转录任务进行时有效，转录退出后查询将会返回错误。
  * @method Models\DescribeMixTranscodingUsageResponse DescribeMixTranscodingUsage(Models\DescribeMixTranscodingUsageRequest $req) 获取TRTC混流转码的用量明细。
 - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
 - 单次查询统计区间最多不能超过31天。

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getKeyId() 获取需要被取消删除的CMK的唯一标志
  * @method void setKeyId(string $KeyId) 设置需要被取消删除的CMK的唯一标志
+ * @method MemberAccount getMemberAccount() 获取可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+ * @method void setMemberAccount(MemberAccount $MemberAccount) 设置可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
  */
 class CancelKeyDeletionRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class CancelKeyDeletionRequest extends AbstractModel
     public $KeyId;
 
     /**
+     * @var MemberAccount 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+     */
+    public $MemberAccount;
+
+    /**
      * @param string $KeyId 需要被取消删除的CMK的唯一标志
+     * @param MemberAccount $MemberAccount 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
      */
     function __construct()
     {
@@ -48,6 +56,11 @@ class CancelKeyDeletionRequest extends AbstractModel
         }
         if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
             $this->KeyId = $param["KeyId"];
+        }
+
+        if (array_key_exists("MemberAccount",$param) and $param["MemberAccount"] !== null) {
+            $this->MemberAccount = new MemberAccount();
+            $this->MemberAccount->deserialize($param["MemberAccount"]);
         }
     }
 }

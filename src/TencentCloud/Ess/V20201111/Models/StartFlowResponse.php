@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 <ul><li> **START** : 发起成功, 合同进入签署环节</li>
 <li> **REVIEW** : 提交审核成功, 合同需要发起审核, 发起方企业通过接口审核通过后合同才进入签署环境  `白名单功能，使用前请联系对接的客户经理沟通。`</li>
 <li> **EXECUTING** : 已提交发起任务且PDF合同正在合成中, 等PDF合同合成成功后进入签署环节</li></ul>
+ * @method string getWorkflowInstanceId() 获取发起审批流id，仅在CreateFlow时指定了WorkFlow=true时返回
+ * @method void setWorkflowInstanceId(string $WorkflowInstanceId) 设置发起审批流id，仅在CreateFlow时指定了WorkFlow=true时返回
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -42,6 +44,11 @@ class StartFlowResponse extends AbstractModel
     public $Status;
 
     /**
+     * @var string 发起审批流id，仅在CreateFlow时指定了WorkFlow=true时返回
+     */
+    public $WorkflowInstanceId;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -51,6 +58,7 @@ class StartFlowResponse extends AbstractModel
 <ul><li> **START** : 发起成功, 合同进入签署环节</li>
 <li> **REVIEW** : 提交审核成功, 合同需要发起审核, 发起方企业通过接口审核通过后合同才进入签署环境  `白名单功能，使用前请联系对接的客户经理沟通。`</li>
 <li> **EXECUTING** : 已提交发起任务且PDF合同正在合成中, 等PDF合同合成成功后进入签署环节</li></ul>
+     * @param string $WorkflowInstanceId 发起审批流id，仅在CreateFlow时指定了WorkFlow=true时返回
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +76,10 @@ class StartFlowResponse extends AbstractModel
         }
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("WorkflowInstanceId",$param) and $param["WorkflowInstanceId"] !== null) {
+            $this->WorkflowInstanceId = $param["WorkflowInstanceId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

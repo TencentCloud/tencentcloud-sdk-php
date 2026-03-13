@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOtherApproverNotifyType(string $OtherApproverNotifyType) 设置发起合同（流程）组他方经办人通知方式
 签署通知类型，支持以下类型
 <ul><li>sms : 短信 (默认值)</li><li>none : 不通知</li></ul>
+ * @method boolean getFlowGroupNeedWorkflow() 获取是否开启发起合同组的发起审批，默认：false(不开启)，开启后，发起合同组会提交电子签内置审批流
+ * @method void setFlowGroupNeedWorkflow(boolean $FlowGroupNeedWorkflow) 设置是否开启发起合同组的发起审批，默认：false(不开启)，开启后，发起合同组会提交电子签内置审批流
  */
 class FlowGroupOptions extends AbstractModel
 {
@@ -66,6 +68,11 @@ class FlowGroupOptions extends AbstractModel
     public $OtherApproverNotifyType;
 
     /**
+     * @var boolean 是否开启发起合同组的发起审批，默认：false(不开启)，开启后，发起合同组会提交电子签内置审批流
+     */
+    public $FlowGroupNeedWorkflow;
+
+    /**
      * @param string $ApproverVerifyType 签署人校验方式,支持以下类型
 <ul><li>VerifyCheck : 人脸识别 (默认值)</li>
 <li>MobileCheck : 手机号验证</li></ul>
@@ -76,6 +83,7 @@ class FlowGroupOptions extends AbstractModel
      * @param string $OtherApproverNotifyType 发起合同（流程）组他方经办人通知方式
 签署通知类型，支持以下类型
 <ul><li>sms : 短信 (默认值)</li><li>none : 不通知</li></ul>
+     * @param boolean $FlowGroupNeedWorkflow 是否开启发起合同组的发起审批，默认：false(不开启)，开启后，发起合同组会提交电子签内置审批流
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class FlowGroupOptions extends AbstractModel
 
         if (array_key_exists("OtherApproverNotifyType",$param) and $param["OtherApproverNotifyType"] !== null) {
             $this->OtherApproverNotifyType = $param["OtherApproverNotifyType"];
+        }
+
+        if (array_key_exists("FlowGroupNeedWorkflow",$param) and $param["FlowGroupNeedWorkflow"] !== null) {
+            $this->FlowGroupNeedWorkflow = $param["FlowGroupNeedWorkflow"];
         }
     }
 }

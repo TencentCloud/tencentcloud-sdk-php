@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RecognizeTableAccurateOCR返回参数结构体
  *
- * @method array getTableDetections() 获取检测到的文本信息，具体内容请点击左侧链接。
+ * @method array getTableDetections() 获取<p>检测到的文本信息，具体内容请点击左侧链接。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTableDetections(array $TableDetections) 设置检测到的文本信息，具体内容请点击左侧链接。
+ * @method void setTableDetections(array $TableDetections) 设置<p>检测到的文本信息，具体内容请点击左侧链接。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getData() 获取Base64 编码后的 Excel 数据。
- * @method void setData(string $Data) 设置Base64 编码后的 Excel 数据。
- * @method integer getPdfPageSize() 获取图片为PDF时，返回PDF的总页数，默认为0
+ * @method string getData() 获取<p>Base64 编码后的 Excel 数据。</p>
+ * @method void setData(string $Data) 设置<p>Base64 编码后的 Excel 数据。</p>
+ * @method integer getPdfPageSize() 获取<p>图片为PDF时，返回PDF的总页数，默认为0</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPdfPageSize(integer $PdfPageSize) 设置图片为PDF时，返回PDF的总页数，默认为0
+ * @method void setPdfPageSize(integer $PdfPageSize) 设置<p>图片为PDF时，返回PDF的总页数，默认为0</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getAngle() 获取图片旋转角度（角度制），文本的水平方向为0°。
+ * @method float getAngle() 获取<p>图片旋转角度（角度制），文本的水平方向为0°。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAngle(float $Angle) 设置图片旋转角度（角度制），文本的水平方向为0°。
+ * @method void setAngle(float $Angle) 设置<p>图片旋转角度（角度制），文本的水平方向为0°。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -40,24 +40,24 @@ use TencentCloud\Common\AbstractModel;
 class RecognizeTableAccurateOCRResponse extends AbstractModel
 {
     /**
-     * @var array 检测到的文本信息，具体内容请点击左侧链接。
+     * @var array <p>检测到的文本信息，具体内容请点击左侧链接。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableDetections;
 
     /**
-     * @var string Base64 编码后的 Excel 数据。
+     * @var string <p>Base64 编码后的 Excel 数据。</p>
      */
     public $Data;
 
     /**
-     * @var integer 图片为PDF时，返回PDF的总页数，默认为0
+     * @var integer <p>图片为PDF时，返回PDF的总页数，默认为0</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PdfPageSize;
 
     /**
-     * @var float 图片旋转角度（角度制），文本的水平方向为0°。
+     * @var float <p>图片旋转角度（角度制），文本的水平方向为0°。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Angle;
@@ -68,12 +68,12 @@ class RecognizeTableAccurateOCRResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $TableDetections 检测到的文本信息，具体内容请点击左侧链接。
+     * @param array $TableDetections <p>检测到的文本信息，具体内容请点击左侧链接。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Data Base64 编码后的 Excel 数据。
-     * @param integer $PdfPageSize 图片为PDF时，返回PDF的总页数，默认为0
+     * @param string $Data <p>Base64 编码后的 Excel 数据。</p>
+     * @param integer $PdfPageSize <p>图片为PDF时，返回PDF的总页数，默认为0</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $Angle 图片旋转角度（角度制），文本的水平方向为0°。
+     * @param float $Angle <p>图片旋转角度（角度制），文本的水平方向为0°。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

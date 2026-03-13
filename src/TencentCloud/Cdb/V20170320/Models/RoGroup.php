@@ -20,142 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 只读组参数
  *
- * @method string getRoGroupMode() 获取只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组。
- * @method void setRoGroupMode(string $RoGroupMode) 设置只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组。
- * @method string getRoGroupId() 获取只读组 ID。
-说明：若此数据结构在购买实例操作中被使用，则当只读组模式选择 join 时，此项为必填。
- * @method void setRoGroupId(string $RoGroupId) 设置只读组 ID。
-说明：若此数据结构在购买实例操作中被使用，则当只读组模式选择 join 时，此项为必填。
- * @method string getRoGroupName() 获取只读组名称。
- * @method void setRoGroupName(string $RoGroupName) 设置只读组名称。
- * @method integer getRoOfflineDelay() 获取是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用。
- * @method void setRoOfflineDelay(integer $RoOfflineDelay) 设置是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用。
- * @method integer getRoMaxDelayTime() 获取延迟阈值。单位：秒。值范围：1-10000，整数。
- * @method void setRoMaxDelayTime(integer $RoMaxDelayTime) 设置延迟阈值。单位：秒。值范围：1-10000，整数。
- * @method integer getMinRoInGroup() 获取最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除。
- * @method void setMinRoInGroup(integer $MinRoInGroup) 设置最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除。
- * @method string getWeightMode() 获取读写权重分配模式，可选值：system-系统自动分配；custom-自定义。
- * @method void setWeightMode(string $WeightMode) 设置读写权重分配模式，可选值：system-系统自动分配；custom-自定义。
- * @method integer getWeight() 获取该字段已经废弃，无意义。查看只读实例的权重，请查看 RoInstances 字段里的 Weight 值。
- * @method void setWeight(integer $Weight) 设置该字段已经废弃，无意义。查看只读实例的权重，请查看 RoInstances 字段里的 Weight 值。
- * @method array getRoInstances() 获取只读组中的只读实例详情。
- * @method void setRoInstances(array $RoInstances) 设置只读组中的只读实例详情。
- * @method string getVip() 获取只读组的内网 IP。
- * @method void setVip(string $Vip) 设置只读组的内网 IP。
- * @method integer getVport() 获取只读组的内网端口号。
- * @method void setVport(integer $Vport) 设置只读组的内网端口号。
- * @method string getUniqVpcId() 获取私有网络 ID。
- * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络 ID。
- * @method string getUniqSubnetId() 获取子网 ID。
- * @method void setUniqSubnetId(string $UniqSubnetId) 设置子网 ID。
- * @method string getRoGroupRegion() 获取只读组所在的地域。
- * @method void setRoGroupRegion(string $RoGroupRegion) 设置只读组所在的地域。
- * @method string getRoGroupZone() 获取只读组所在的可用区。
- * @method void setRoGroupZone(string $RoGroupZone) 设置只读组所在的可用区。
- * @method integer getDelayReplicationTime() 获取延迟复制时间。单位：秒。值范围：1-259200，整数。
- * @method void setDelayReplicationTime(integer $DelayReplicationTime) 设置延迟复制时间。单位：秒。值范围：1-259200，整数。
+ * @method string getRoGroupMode() 获取<p>只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组。</p>
+ * @method void setRoGroupMode(string $RoGroupMode) 设置<p>只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组。</p>
+ * @method string getRoGroupId() 获取<p>只读组 ID。<br>说明：若此数据结构在购买实例操作中被使用，则当只读组模式选择 join 时，此项为必填。</p>
+ * @method void setRoGroupId(string $RoGroupId) 设置<p>只读组 ID。<br>说明：若此数据结构在购买实例操作中被使用，则当只读组模式选择 join 时，此项为必填。</p>
+ * @method string getRoGroupName() 获取<p>只读组名称。</p>
+ * @method void setRoGroupName(string $RoGroupName) 设置<p>只读组名称。</p>
+ * @method integer getRoOfflineDelay() 获取<p>是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用。</p>
+ * @method void setRoOfflineDelay(integer $RoOfflineDelay) 设置<p>是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用。</p>
+ * @method integer getRoMaxDelayTime() 获取<p>延迟阈值。单位：秒。值范围：1-10000，整数。</p>
+ * @method void setRoMaxDelayTime(integer $RoMaxDelayTime) 设置<p>延迟阈值。单位：秒。值范围：1-10000，整数。</p>
+ * @method integer getMinRoInGroup() 获取<p>最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除。</p>
+ * @method void setMinRoInGroup(integer $MinRoInGroup) 设置<p>最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除。</p>
+ * @method string getWeightMode() 获取<p>读写权重分配模式，可选值：system-系统自动分配；custom-自定义。</p>
+ * @method void setWeightMode(string $WeightMode) 设置<p>读写权重分配模式，可选值：system-系统自动分配；custom-自定义。</p>
+ * @method integer getWeight() 获取<p>该字段已经废弃，无意义。查看只读实例的权重，请查看 RoInstances 字段里的 Weight 值。</p>
+ * @method void setWeight(integer $Weight) 设置<p>该字段已经废弃，无意义。查看只读实例的权重，请查看 RoInstances 字段里的 Weight 值。</p>
+ * @method array getRoInstances() 获取<p>只读组中的只读实例详情。</p>
+ * @method void setRoInstances(array $RoInstances) 设置<p>只读组中的只读实例详情。</p>
+ * @method string getVip() 获取<p>只读组的内网 IP。</p>
+ * @method void setVip(string $Vip) 设置<p>只读组的内网 IP。</p>
+ * @method integer getVport() 获取<p>只读组的内网端口号。</p>
+ * @method void setVport(integer $Vport) 设置<p>只读组的内网端口号。</p>
+ * @method string getUniqVpcId() 获取<p>私有网络 ID。</p>
+ * @method void setUniqVpcId(string $UniqVpcId) 设置<p>私有网络 ID。</p>
+ * @method string getUniqSubnetId() 获取<p>子网 ID。</p>
+ * @method void setUniqSubnetId(string $UniqSubnetId) 设置<p>子网 ID。</p>
+ * @method string getRoGroupRegion() 获取<p>只读组所在的地域。</p>
+ * @method void setRoGroupRegion(string $RoGroupRegion) 设置<p>只读组所在的地域。</p>
+ * @method string getRoGroupZone() 获取<p>只读组所在的可用区。</p>
+ * @method void setRoGroupZone(string $RoGroupZone) 设置<p>只读组所在的可用区。</p>
+ * @method integer getDelayReplicationTime() 获取<p>延迟复制时间。单位：秒。值范围：1-259200，整数。</p>
+ * @method void setDelayReplicationTime(integer $DelayReplicationTime) 设置<p>延迟复制时间。单位：秒。值范围：1-259200，整数。</p>
  */
 class RoGroup extends AbstractModel
 {
     /**
-     * @var string 只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组。
+     * @var string <p>只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组。</p>
      */
     public $RoGroupMode;
 
     /**
-     * @var string 只读组 ID。
-说明：若此数据结构在购买实例操作中被使用，则当只读组模式选择 join 时，此项为必填。
+     * @var string <p>只读组 ID。<br>说明：若此数据结构在购买实例操作中被使用，则当只读组模式选择 join 时，此项为必填。</p>
      */
     public $RoGroupId;
 
     /**
-     * @var string 只读组名称。
+     * @var string <p>只读组名称。</p>
      */
     public $RoGroupName;
 
     /**
-     * @var integer 是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用。
+     * @var integer <p>是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用。</p>
      */
     public $RoOfflineDelay;
 
     /**
-     * @var integer 延迟阈值。单位：秒。值范围：1-10000，整数。
+     * @var integer <p>延迟阈值。单位：秒。值范围：1-10000，整数。</p>
      */
     public $RoMaxDelayTime;
 
     /**
-     * @var integer 最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除。
+     * @var integer <p>最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除。</p>
      */
     public $MinRoInGroup;
 
     /**
-     * @var string 读写权重分配模式，可选值：system-系统自动分配；custom-自定义。
+     * @var string <p>读写权重分配模式，可选值：system-系统自动分配；custom-自定义。</p>
      */
     public $WeightMode;
 
     /**
-     * @var integer 该字段已经废弃，无意义。查看只读实例的权重，请查看 RoInstances 字段里的 Weight 值。
+     * @var integer <p>该字段已经废弃，无意义。查看只读实例的权重，请查看 RoInstances 字段里的 Weight 值。</p>
      */
     public $Weight;
 
     /**
-     * @var array 只读组中的只读实例详情。
+     * @var array <p>只读组中的只读实例详情。</p>
      */
     public $RoInstances;
 
     /**
-     * @var string 只读组的内网 IP。
+     * @var string <p>只读组的内网 IP。</p>
      */
     public $Vip;
 
     /**
-     * @var integer 只读组的内网端口号。
+     * @var integer <p>只读组的内网端口号。</p>
      */
     public $Vport;
 
     /**
-     * @var string 私有网络 ID。
+     * @var string <p>私有网络 ID。</p>
      */
     public $UniqVpcId;
 
     /**
-     * @var string 子网 ID。
+     * @var string <p>子网 ID。</p>
      */
     public $UniqSubnetId;
 
     /**
-     * @var string 只读组所在的地域。
+     * @var string <p>只读组所在的地域。</p>
      */
     public $RoGroupRegion;
 
     /**
-     * @var string 只读组所在的可用区。
+     * @var string <p>只读组所在的可用区。</p>
      */
     public $RoGroupZone;
 
     /**
-     * @var integer 延迟复制时间。单位：秒。值范围：1-259200，整数。
+     * @var integer <p>延迟复制时间。单位：秒。值范围：1-259200，整数。</p>
      */
     public $DelayReplicationTime;
 
     /**
-     * @param string $RoGroupMode 只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组。
-     * @param string $RoGroupId 只读组 ID。
-说明：若此数据结构在购买实例操作中被使用，则当只读组模式选择 join 时，此项为必填。
-     * @param string $RoGroupName 只读组名称。
-     * @param integer $RoOfflineDelay 是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用。
-     * @param integer $RoMaxDelayTime 延迟阈值。单位：秒。值范围：1-10000，整数。
-     * @param integer $MinRoInGroup 最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除。
-     * @param string $WeightMode 读写权重分配模式，可选值：system-系统自动分配；custom-自定义。
-     * @param integer $Weight 该字段已经废弃，无意义。查看只读实例的权重，请查看 RoInstances 字段里的 Weight 值。
-     * @param array $RoInstances 只读组中的只读实例详情。
-     * @param string $Vip 只读组的内网 IP。
-     * @param integer $Vport 只读组的内网端口号。
-     * @param string $UniqVpcId 私有网络 ID。
-     * @param string $UniqSubnetId 子网 ID。
-     * @param string $RoGroupRegion 只读组所在的地域。
-     * @param string $RoGroupZone 只读组所在的可用区。
-     * @param integer $DelayReplicationTime 延迟复制时间。单位：秒。值范围：1-259200，整数。
+     * @param string $RoGroupMode <p>只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组。</p>
+     * @param string $RoGroupId <p>只读组 ID。<br>说明：若此数据结构在购买实例操作中被使用，则当只读组模式选择 join 时，此项为必填。</p>
+     * @param string $RoGroupName <p>只读组名称。</p>
+     * @param integer $RoOfflineDelay <p>是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用。</p>
+     * @param integer $RoMaxDelayTime <p>延迟阈值。单位：秒。值范围：1-10000，整数。</p>
+     * @param integer $MinRoInGroup <p>最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除。</p>
+     * @param string $WeightMode <p>读写权重分配模式，可选值：system-系统自动分配；custom-自定义。</p>
+     * @param integer $Weight <p>该字段已经废弃，无意义。查看只读实例的权重，请查看 RoInstances 字段里的 Weight 值。</p>
+     * @param array $RoInstances <p>只读组中的只读实例详情。</p>
+     * @param string $Vip <p>只读组的内网 IP。</p>
+     * @param integer $Vport <p>只读组的内网端口号。</p>
+     * @param string $UniqVpcId <p>私有网络 ID。</p>
+     * @param string $UniqSubnetId <p>子网 ID。</p>
+     * @param string $RoGroupRegion <p>只读组所在的地域。</p>
+     * @param string $RoGroupZone <p>只读组所在的可用区。</p>
+     * @param integer $DelayReplicationTime <p>延迟复制时间。单位：秒。值范围：1-259200，整数。</p>
      */
     function __construct()
     {

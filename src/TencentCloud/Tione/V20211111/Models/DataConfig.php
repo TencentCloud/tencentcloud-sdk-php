@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method HostPath getHostPathSource() 获取主机路径信息
  * @method void setHostPathSource(HostPath $HostPathSource) 设置主机路径信息
+ * @method PublicDataSourceFS getPublicDataSource() 获取公有云数据源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPublicDataSource(PublicDataSourceFS $PublicDataSource) 设置公有云数据源
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataConfig extends AbstractModel
 {
@@ -141,6 +145,12 @@ class DataConfig extends AbstractModel
     public $HostPathSource;
 
     /**
+     * @var PublicDataSourceFS 公有云数据源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PublicDataSource;
+
+    /**
      * @param string $MappingPath 映射路径
      * @param string $DataSourceUsage 存储用途
 可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER
@@ -164,6 +174,8 @@ class DataConfig extends AbstractModel
      * @param CBSConfig $CBSSource CBS配置信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param HostPath $HostPathSource 主机路径信息
+     * @param PublicDataSourceFS $PublicDataSource 公有云数据源
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -233,6 +245,11 @@ class DataConfig extends AbstractModel
         if (array_key_exists("HostPathSource",$param) and $param["HostPathSource"] !== null) {
             $this->HostPathSource = new HostPath();
             $this->HostPathSource->deserialize($param["HostPathSource"]);
+        }
+
+        if (array_key_exists("PublicDataSource",$param) and $param["PublicDataSource"] !== null) {
+            $this->PublicDataSource = new PublicDataSourceFS();
+            $this->PublicDataSource->deserialize($param["PublicDataSource"]);
         }
     }
 }

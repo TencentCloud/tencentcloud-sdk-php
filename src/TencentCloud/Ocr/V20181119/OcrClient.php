@@ -59,7 +59,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 默认接口请求并发限制：2次/分钟。
  * @method Models\DescribeQuestionMarkAgentJobResponse DescribeQuestionMarkAgentJob(Models\DescribeQuestionMarkAgentJobRequest $req) 用于试题批改Agent查询任务。主要面向K12的试题批改产品，支持整卷/单题端到端（试卷切题+题目批改+手写坐标回显）处理，主要聚焦的场景包括试题批改（含手写答案）、试题解析（不含手写答案），其中低年级算式批改效果比线上[数学作业批改](https://cloud.tencent.com/document/product/1004)效果更好。精准输出题目、正误判定、答案对比、错误及知识点等结构化评估结果。
 
-默认接口请求并发限制：10题/分钟。
+默认接口请求并发限制：10张/分钟。
  * @method Models\DriverLicenseOCRResponse DriverLicenseOCR(Models\DriverLicenseOCRRequest $req) 本接口支持驾驶证主页和副页所有字段的自动定位与识别，重点字段的识别准确度达到99%以上。
 
 驾驶证主页：包括证号、姓名、性别、国籍、住址、出生日期、初次领证日期、准驾车型、有效期限、发证单位
@@ -743,7 +743,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 默认接口请求并发限制：2次/分钟。
  * @method Models\SubmitQuestionMarkAgentJobResponse SubmitQuestionMarkAgentJob(Models\SubmitQuestionMarkAgentJobRequest $req) 用于试题批改Agent提交任务。主要面向K12的试题批改产品，支持整卷/单题端到端（试卷切题+题目批改+手写坐标回显）处理，主要聚焦的场景包括试题批改（含手写答案）、试题解析（不含手写答案），其中低年级算式批改效果比线上[数学作业批改](https://cloud.tencent.com/document/product/1004)效果更好。精准输出题目、正误判定、答案对比、错误及知识点等结构化评估结果。
 
-默认接口请求并发限制：10题/分钟。
+默认接口请求并发限制：10张/分钟。
  * @method Models\TableOCRResponse TableOCR(Models\TableOCRRequest $req) <b>此接口为表格识别的旧版本服务，不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/49525">新版表格识别</a>。</b>
 
 本接口支持图片内表格文档的检测和识别，返回每个单元格的文字内容，支持将识别结果保存为 Excel 格式。
@@ -784,6 +784,10 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\VehicleRegCertOCRResponse VehicleRegCertOCR(Models\VehicleRegCertOCRRequest $req) 本接口支持国内机动车登记证书主要字段的结构化识别，包括机动车所有人、身份证明名称、号码、车辆型号、车辆识别代号、发动机号、制造厂名称等。
 
 默认接口请求频率限制：5次/秒。
+ * @method Models\VerifyBizLicenseEnterprise4Response VerifyBizLicenseEnterprise4(Models\VerifyBizLicenseEnterprise4Request $req) 提供比对校验企业名称、统一社会信用代码、法人姓名、注册登记证件号码一致性的服务，助力快速核验企业资质。
+注意：
+存在个别特殊情况下核验结果不准确，请选用前知悉；
+按周更新企业信息变更情况，如遇到未及时更新的情况，可联系在线客服转产品团队进行人工处理。
  * @method Models\VerifyOfdVatInvoiceOCRResponse VerifyOfdVatInvoiceOCR(Models\VerifyOfdVatInvoiceOCRRequest $req) 本接口支持OFD格式的增值税电子普通发票、增值税电子专用发票、电子发票（普通发票）、电子发票（增值税专用发票）、电子发票（铁路电子客票）、电子发票（航空运输电子客票行程单）识别，返回发票代码、发票号码、开票日期、验证码、机器编号、密码区，购买方和销售方信息，包括名称、纳税人识别号、地址电话、开户行及账号，以及价税合计、开票人、收款人、复核人、税额、不含税金额等字段信息。
  * @method Models\VinOCRResponse VinOCR(Models\VinOCRRequest $req) 本接口支持图片内车辆识别代号（VIN）的检测和识别。
 默认接口请求频率限制：10次/秒。

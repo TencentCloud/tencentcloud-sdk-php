@@ -168,6 +168,8 @@ use TencentCloud\Common\AbstractModel;
 包括  
 
 - 签署控件 是否默认展示日期.
+ * @method boolean getWorkflow() 获取是否开启嵌入式合同发起时，提交发起审批流，默认：false（不开启），开启后，嵌入式合同发起后，会提交电子签内置审批流
+ * @method void setWorkflow(boolean $Workflow) 设置是否开启嵌入式合同发起时，提交发起审批流，默认：false（不开启），开启后，嵌入式合同发起后，会提交电子签内置审批流
  */
 class CreatePrepareFlowRequest extends AbstractModel
 {
@@ -331,6 +333,11 @@ class CreatePrepareFlowRequest extends AbstractModel
     public $SignComponentConfig;
 
     /**
+     * @var boolean 是否开启嵌入式合同发起时，提交发起审批流，默认：false（不开启），开启后，嵌入式合同发起后，会提交电子签内置审批流
+     */
+    public $Workflow;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。使用此接口时，必须填写userId。
 支持填入集团子公司经办人 userId 代发合同。
 
@@ -405,6 +412,7 @@ class CreatePrepareFlowRequest extends AbstractModel
 包括  
 
 - 签署控件 是否默认展示日期.
+     * @param boolean $Workflow 是否开启嵌入式合同发起时，提交发起审批流，默认：false（不开启），开启后，嵌入式合同发起后，会提交电子签内置审批流
      */
     function __construct()
     {
@@ -521,6 +529,10 @@ class CreatePrepareFlowRequest extends AbstractModel
         if (array_key_exists("SignComponentConfig",$param) and $param["SignComponentConfig"] !== null) {
             $this->SignComponentConfig = new SignComponentConfig();
             $this->SignComponentConfig->deserialize($param["SignComponentConfig"]);
+        }
+
+        if (array_key_exists("Workflow",$param) and $param["Workflow"] !== null) {
+            $this->Workflow = $param["Workflow"];
         }
     }
 }

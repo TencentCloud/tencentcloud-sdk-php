@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method FlowGroupOptions getFlowGroupOptions() 获取合同组发起控制参数，当前仅支持FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批
+ * @method void setFlowGroupOptions(FlowGroupOptions $FlowGroupOptions) 设置合同组发起控制参数，当前仅支持FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批
  */
 class CreatePrepareFlowGroupRequest extends AbstractModel
 {
@@ -65,6 +67,11 @@ class CreatePrepareFlowGroupRequest extends AbstractModel
     public $Agent;
 
     /**
+     * @var FlowGroupOptions 合同组发起控制参数，当前仅支持FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批
+     */
+    public $FlowGroupOptions;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param string $FlowGroupName 合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
@@ -72,6 +79,7 @@ class CreatePrepareFlowGroupRequest extends AbstractModel
      * @param integer $ResourceType 资源类型，取值有： <ul><li> **1**：模板</li> <li> **2**：文件</li></ul>
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param FlowGroupOptions $FlowGroupOptions 合同组发起控制参数，当前仅支持FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批
      */
     function __construct()
     {
@@ -111,6 +119,11 @@ class CreatePrepareFlowGroupRequest extends AbstractModel
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
             $this->Agent = new Agent();
             $this->Agent->deserialize($param["Agent"]);
+        }
+
+        if (array_key_exists("FlowGroupOptions",$param) and $param["FlowGroupOptions"] !== null) {
+            $this->FlowGroupOptions = new FlowGroupOptions();
+            $this->FlowGroupOptions->deserialize($param["FlowGroupOptions"]);
         }
     }
 }

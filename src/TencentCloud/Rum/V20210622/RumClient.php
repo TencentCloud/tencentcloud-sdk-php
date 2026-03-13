@@ -23,10 +23,8 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Rum\V20210622\Models as Models;
 
 /**
- * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 创建 RUM 应用（归属于某个团队）
  * @method Models\CreateReleaseFileResponse CreateReleaseFile(Models\CreateReleaseFileRequest $req) 创建对应项目的文件记录
  * @method Models\CreateStarProjectResponse CreateStarProject(Models\CreateStarProjectRequest $req) 个人用户添加星标项目
- * @method Models\CreateTawInstanceResponse CreateTawInstance(Models\CreateTawInstanceRequest $req) 创建 RUM 业务系统
  * @method Models\CreateWhitelistResponse CreateWhitelist(Models\CreateWhitelistRequest $req) 创建白名单
  * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) 删除实例，谨慎操作，不可恢复
  * @method Models\DeleteProjectResponse DeleteProject(Models\DeleteProjectRequest $req) 删除给定的 rum 的项目

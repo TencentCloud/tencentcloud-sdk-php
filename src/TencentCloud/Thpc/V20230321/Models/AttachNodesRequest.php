@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AttachNodes请求参数结构体
  *
- * @method string getClusterId() 获取集群id
- * @method void setClusterId(string $ClusterId) 设置集群id
- * @method array getResourceSet() 获取节点的实例id列表
- * @method void setResourceSet(array $ResourceSet) 设置节点的实例id列表
- * @method string getQueueName() 获取队列名称。不指定则为默认队列：
-SLURM默认队列为：compute。 
-
- * @method void setQueueName(string $QueueName) 设置队列名称。不指定则为默认队列：
-SLURM默认队列为：compute。 
-
- * @method string getImageId() 获取指定有效的镜像ID，格式形如img-xxx。目前仅支持公有镜像和特定自定义镜像。如不指定，则该字段是默认镜像。
- * @method void setImageId(string $ImageId) 设置指定有效的镜像ID，格式形如img-xxx。目前仅支持公有镜像和特定自定义镜像。如不指定，则该字段是默认镜像。
- * @method string getResourceType() 获取要新增节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。
- * @method void setResourceType(string $ResourceType) 设置要新增节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。
- * @method string getUserData() 获取提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅[Windows](https://cloud.tencent.com/document/product/213/17526)和[Linux](https://cloud.tencent.com/document/product/213/17525)启动时运行命令。
- * @method void setUserData(string $UserData) 设置提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅[Windows](https://cloud.tencent.com/document/product/213/17526)和[Linux](https://cloud.tencent.com/document/product/213/17525)启动时运行命令。
+ * @method string getClusterId() 获取<p>集群id</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群id</p>
+ * @method array getResourceSet() 获取<p>节点的实例id列表</p>
+ * @method void setResourceSet(array $ResourceSet) 设置<p>节点的实例id列表</p>
+ * @method string getQueueName() 获取<p>队列名称。不指定则为默认队列：<br>SLURM默认队列为：compute。</p>
+ * @method void setQueueName(string $QueueName) 设置<p>队列名称。不指定则为默认队列：<br>SLURM默认队列为：compute。</p>
+ * @method string getImageId() 获取<p>指定有效的镜像ID，格式形如img-xxx。目前仅支持公有镜像和特定自定义镜像。如不指定，则该字段是默认镜像。</p>
+ * @method void setImageId(string $ImageId) 设置<p>指定有效的镜像ID，格式形如img-xxx。目前仅支持公有镜像和特定自定义镜像。如不指定，则该字段是默认镜像。</p>
+ * @method string getResourceType() 获取<p>要新增节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。</p>
+ * @method void setResourceType(string $ResourceType) 设置<p>要新增节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。</p>
+ * @method string getUserData() 获取<p>提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅<a href="https://cloud.tencent.com/document/product/213/17526">Windows</a>和<a href="https://cloud.tencent.com/document/product/213/17525">Linux</a>启动时运行命令。</p>
+ * @method void setUserData(string $UserData) 设置<p>提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅<a href="https://cloud.tencent.com/document/product/213/17526">Windows</a>和<a href="https://cloud.tencent.com/document/product/213/17525">Linux</a>启动时运行命令。</p>
+ * @method boolean getSkipResetInstance() 获取<p>控制实例加入集群是否跳过重装系统</p><p>默认值：False</p>
+ * @method void setSkipResetInstance(boolean $SkipResetInstance) 设置<p>控制实例加入集群是否跳过重装系统</p><p>默认值：False</p>
  */
 class AttachNodesRequest extends AbstractModel
 {
     /**
-     * @var string 集群id
+     * @var string <p>集群id</p>
      */
     public $ClusterId;
 
     /**
-     * @var array 节点的实例id列表
+     * @var array <p>节点的实例id列表</p>
      */
     public $ResourceSet;
 
     /**
-     * @var string 队列名称。不指定则为默认队列：
-SLURM默认队列为：compute。 
-
+     * @var string <p>队列名称。不指定则为默认队列：<br>SLURM默认队列为：compute。</p>
      */
     public $QueueName;
 
     /**
-     * @var string 指定有效的镜像ID，格式形如img-xxx。目前仅支持公有镜像和特定自定义镜像。如不指定，则该字段是默认镜像。
+     * @var string <p>指定有效的镜像ID，格式形如img-xxx。目前仅支持公有镜像和特定自定义镜像。如不指定，则该字段是默认镜像。</p>
      */
     public $ImageId;
 
     /**
-     * @var string 要新增节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。
+     * @var string <p>要新增节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。</p>
      */
     public $ResourceType;
 
     /**
-     * @var string 提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅[Windows](https://cloud.tencent.com/document/product/213/17526)和[Linux](https://cloud.tencent.com/document/product/213/17525)启动时运行命令。
+     * @var string <p>提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅<a href="https://cloud.tencent.com/document/product/213/17526">Windows</a>和<a href="https://cloud.tencent.com/document/product/213/17525">Linux</a>启动时运行命令。</p>
      */
     public $UserData;
 
     /**
-     * @param string $ClusterId 集群id
-     * @param array $ResourceSet 节点的实例id列表
-     * @param string $QueueName 队列名称。不指定则为默认队列：
-SLURM默认队列为：compute。 
+     * @var boolean <p>控制实例加入集群是否跳过重装系统</p><p>默认值：False</p>
+     */
+    public $SkipResetInstance;
 
-     * @param string $ImageId 指定有效的镜像ID，格式形如img-xxx。目前仅支持公有镜像和特定自定义镜像。如不指定，则该字段是默认镜像。
-     * @param string $ResourceType 要新增节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。
-     * @param string $UserData 提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅[Windows](https://cloud.tencent.com/document/product/213/17526)和[Linux](https://cloud.tencent.com/document/product/213/17525)启动时运行命令。
+    /**
+     * @param string $ClusterId <p>集群id</p>
+     * @param array $ResourceSet <p>节点的实例id列表</p>
+     * @param string $QueueName <p>队列名称。不指定则为默认队列：<br>SLURM默认队列为：compute。</p>
+     * @param string $ImageId <p>指定有效的镜像ID，格式形如img-xxx。目前仅支持公有镜像和特定自定义镜像。如不指定，则该字段是默认镜像。</p>
+     * @param string $ResourceType <p>要新增节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。</p>
+     * @param string $UserData <p>提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅<a href="https://cloud.tencent.com/document/product/213/17526">Windows</a>和<a href="https://cloud.tencent.com/document/product/213/17525">Linux</a>启动时运行命令。</p>
+     * @param boolean $SkipResetInstance <p>控制实例加入集群是否跳过重装系统</p><p>默认值：False</p>
      */
     function __construct()
     {
@@ -116,6 +116,10 @@ SLURM默认队列为：compute。
 
         if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
             $this->UserData = $param["UserData"];
+        }
+
+        if (array_key_exists("SkipResetInstance",$param) and $param["SkipResetInstance"] !== null) {
+            $this->SkipResetInstance = $param["SkipResetInstance"];
         }
     }
 }

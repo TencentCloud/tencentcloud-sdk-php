@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowIds(array $FlowIds) 设置合同(流程)组中子合同列表.
  * @method array getApprovers() 获取合同组签署人信息。
  * @method void setApprovers(array $Approvers) 设置合同组签署人信息。
+ * @method string getWorkflowInstanceId() 获取FlowGroupNeedWorkflow
+ * @method void setWorkflowInstanceId(string $WorkflowInstanceId) 设置FlowGroupNeedWorkflow
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,6 +49,11 @@ class CreateFlowGroupByTemplatesResponse extends AbstractModel
     public $Approvers;
 
     /**
+     * @var string FlowGroupNeedWorkflow
+     */
+    public $WorkflowInstanceId;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +62,7 @@ class CreateFlowGroupByTemplatesResponse extends AbstractModel
      * @param string $FlowGroupId 合同(流程)组的合同组Id
      * @param array $FlowIds 合同(流程)组中子合同列表.
      * @param array $Approvers 合同组签署人信息。
+     * @param string $WorkflowInstanceId FlowGroupNeedWorkflow
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -85,6 +93,10 @@ class CreateFlowGroupByTemplatesResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Approvers, $obj);
             }
+        }
+
+        if (array_key_exists("WorkflowInstanceId",$param) and $param["WorkflowInstanceId"] !== null) {
+            $this->WorkflowInstanceId = $param["WorkflowInstanceId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

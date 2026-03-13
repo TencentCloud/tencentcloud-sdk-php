@@ -160,6 +160,8 @@ use TencentCloud\Common\AbstractModel;
 
 效果如下:
 ![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
+ * @method boolean getWorkflow() 获取是否开启发起合同审批，默认：false（不开启），开启后，发起合同（StartFlow），会提交电子签内置的审批流
+ * @method void setWorkflow(boolean $Workflow) 设置是否开启发起合同审批，默认：false（不开启），开启后，发起合同（StartFlow），会提交电子签内置的审批流
  */
 class CreateFlowRequest extends AbstractModel
 {
@@ -308,6 +310,11 @@ class CreateFlowRequest extends AbstractModel
     public $FlowDisplayType;
 
     /**
+     * @var boolean 是否开启发起合同审批，默认：false（不开启），开启后，发起合同（StartFlow），会提交电子签内置的审批流
+     */
+    public $Workflow;
+
+    /**
      * @param UserInfo $Operator 本合同的发起人，<a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
 
 注： 支持填入集团子公司经办人 userId 代发合同。
@@ -378,6 +385,7 @@ class CreateFlowRequest extends AbstractModel
 
 效果如下:
 ![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
+     * @param boolean $Workflow 是否开启发起合同审批，默认：false（不开启），开启后，发起合同（StartFlow），会提交电子签内置的审批流
      */
     function __construct()
     {
@@ -474,6 +482,10 @@ class CreateFlowRequest extends AbstractModel
 
         if (array_key_exists("FlowDisplayType",$param) and $param["FlowDisplayType"] !== null) {
             $this->FlowDisplayType = $param["FlowDisplayType"];
+        }
+
+        if (array_key_exists("Workflow",$param) and $param["Workflow"] !== null) {
+            $this->Workflow = $param["Workflow"];
         }
     }
 }

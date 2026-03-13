@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
  * @method array getApprovers() 获取签署方信息，如角色ID、角色名称等
  * @method void setApprovers(array $Approvers) 设置签署方信息，如角色ID、角色名称等
+ * @method string getWorkflowInstanceId() 获取发起审批流id，仅在CreateFlowByFiles时指定了WorkFlow=true时返回
+ * @method void setWorkflowInstanceId(string $WorkflowInstanceId) 设置发起审批流id，仅在CreateFlowByFiles时指定了WorkFlow=true时返回
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -68,6 +70,11 @@ class CreateFlowByFilesResponse extends AbstractModel
     public $Approvers;
 
     /**
+     * @var string 发起审批流id，仅在CreateFlowByFiles时指定了WorkFlow=true时返回
+     */
+    public $WorkflowInstanceId;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -83,6 +90,7 @@ class CreateFlowByFilesResponse extends AbstractModel
 
 注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
      * @param array $Approvers 签署方信息，如角色ID、角色名称等
+     * @param string $WorkflowInstanceId 发起审批流id，仅在CreateFlowByFiles时指定了WorkFlow=true时返回
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -113,6 +121,10 @@ class CreateFlowByFilesResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Approvers, $obj);
             }
+        }
+
+        if (array_key_exists("WorkflowInstanceId",$param) and $param["WorkflowInstanceId"] !== null) {
+            $this->WorkflowInstanceId = $param["WorkflowInstanceId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

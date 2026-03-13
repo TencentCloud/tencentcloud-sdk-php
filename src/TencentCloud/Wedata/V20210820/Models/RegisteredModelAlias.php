@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Sms\V20190711\Models;
+namespace TencentCloud\Wedata\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteSmsSign请求参数结构体
+ * 注册模型别名
  *
- * @method integer getSignId() 获取<p>待删除的签名 ID。</p>
- * @method void setSignId(integer $SignId) 设置<p>待删除的签名 ID。</p>
+ * @method string getAlias() 获取别名的名称
+ * @method void setAlias(string $Alias) 设置别名的名称
+ * @method string getVersion() 获取别名指向的模型版本号
+ * @method void setVersion(string $Version) 设置别名指向的模型版本号
  */
-class DeleteSmsSignRequest extends AbstractModel
+class RegisteredModelAlias extends AbstractModel
 {
     /**
-     * @var integer <p>待删除的签名 ID。</p>
+     * @var string 别名的名称
      */
-    public $SignId;
+    public $Alias;
 
     /**
-     * @param integer $SignId <p>待删除的签名 ID。</p>
+     * @var string 别名指向的模型版本号
+     */
+    public $Version;
+
+    /**
+     * @param string $Alias 别名的名称
+     * @param string $Version 别名指向的模型版本号
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DeleteSmsSignRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SignId",$param) and $param["SignId"] !== null) {
-            $this->SignId = $param["SignId"];
+        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
+            $this->Alias = $param["Alias"];
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
         }
     }
 }

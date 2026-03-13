@@ -20,90 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 套餐包信息统计响应包体
  *
- * @method string getPackageCreateTime() 获取套餐包创建时间，标准时间，例如：2019-10-08 17:18:37。
- * @method void setPackageCreateTime(string $PackageCreateTime) 设置套餐包创建时间，标准时间，例如：2019-10-08 17:18:37。
- * @method integer getPackageCreateUnixTime() 获取套餐包创建时间，UNIX 时间戳（单位：秒）。
- * @method void setPackageCreateUnixTime(integer $PackageCreateUnixTime) 设置套餐包创建时间，UNIX 时间戳（单位：秒）。
- * @method string getPackageEffectiveTime() 获取套餐包生效时间，标准时间，例如：2019-10-08 17:18:37。
- * @method void setPackageEffectiveTime(string $PackageEffectiveTime) 设置套餐包生效时间，标准时间，例如：2019-10-08 17:18:37。
- * @method integer getPackageEffectiveUnixTime() 获取套餐包生效时间，UNIX 时间戳（单位：秒）。
- * @method void setPackageEffectiveUnixTime(integer $PackageEffectiveUnixTime) 设置套餐包生效时间，UNIX 时间戳（单位：秒）。
- * @method string getPackageExpiredTime() 获取套餐包过期时间，标准时间，例如：2019-10-08 17:18:37。
- * @method void setPackageExpiredTime(string $PackageExpiredTime) 设置套餐包过期时间，标准时间，例如：2019-10-08 17:18:37。
- * @method integer getPackageExpiredUnixTime() 获取套餐包过期时间，UNIX 时间戳（单位：秒）。
- * @method void setPackageExpiredUnixTime(integer $PackageExpiredUnixTime) 设置套餐包过期时间，UNIX 时间戳（单位：秒）。
- * @method integer getAmountOfPackage() 获取套餐包条数。
- * @method void setAmountOfPackage(integer $AmountOfPackage) 设置套餐包条数。
- * @method integer getTypeOfPackage() 获取0表示赠送套餐包，1表示购买套餐包。
- * @method void setTypeOfPackage(integer $TypeOfPackage) 设置0表示赠送套餐包，1表示购买套餐包。
- * @method integer getPackageId() 获取套餐包 ID。
- * @method void setPackageId(integer $PackageId) 设置套餐包 ID。
- * @method integer getCurrentUsage() 获取当前使用量。
- * @method void setCurrentUsage(integer $CurrentUsage) 设置当前使用量。
+ * @method string getPackageCreateTime() 获取<p>套餐包创建时间，标准时间，例如：2019-10-08 17:18:37。</p>
+ * @method void setPackageCreateTime(string $PackageCreateTime) 设置<p>套餐包创建时间，标准时间，例如：2019-10-08 17:18:37。</p>
+ * @method integer getPackageCreateUnixTime() 获取<p>套餐包创建时间，UNIX 时间戳。</p><p>单位：秒</p>
+ * @method void setPackageCreateUnixTime(integer $PackageCreateUnixTime) 设置<p>套餐包创建时间，UNIX 时间戳。</p><p>单位：秒</p>
+ * @method string getPackageEffectiveTime() 获取<p>套餐包生效时间，标准时间，例如：2019-10-08 17:18:37。</p>
+ * @method void setPackageEffectiveTime(string $PackageEffectiveTime) 设置<p>套餐包生效时间，标准时间，例如：2019-10-08 17:18:37。</p>
+ * @method integer getPackageEffectiveUnixTime() 获取<p>套餐包生效时间，UNIX 时间戳。</p><p>单位：秒</p>
+ * @method void setPackageEffectiveUnixTime(integer $PackageEffectiveUnixTime) 设置<p>套餐包生效时间，UNIX 时间戳。</p><p>单位：秒</p>
+ * @method string getPackageExpiredTime() 获取<p>套餐包过期时间，标准时间，例如：2019-10-08 17:18:37。</p>
+ * @method void setPackageExpiredTime(string $PackageExpiredTime) 设置<p>套餐包过期时间，标准时间，例如：2019-10-08 17:18:37。</p>
+ * @method integer getPackageExpiredUnixTime() 获取<p>套餐包过期时间，UNIX 时间戳。</p><p>单位：秒</p>
+ * @method void setPackageExpiredUnixTime(integer $PackageExpiredUnixTime) 设置<p>套餐包过期时间，UNIX 时间戳。</p><p>单位：秒</p>
+ * @method integer getAmountOfPackage() 获取<p>套餐包条数。</p><p>单位：条</p>
+ * @method void setAmountOfPackage(integer $AmountOfPackage) 设置<p>套餐包条数。</p><p>单位：条</p>
+ * @method integer getTypeOfPackage() 获取<p>套餐包类别。</p><p>枚举值：</p><ul><li>0： 赠送套餐包</li><li>1： 购买套餐包</li></ul>
+ * @method void setTypeOfPackage(integer $TypeOfPackage) 设置<p>套餐包类别。</p><p>枚举值：</p><ul><li>0： 赠送套餐包</li><li>1： 购买套餐包</li></ul>
+ * @method integer getPackageId() 获取<p>套餐包 ID。</p>
+ * @method void setPackageId(integer $PackageId) 设置<p>套餐包 ID。</p>
+ * @method integer getCurrentUsage() 获取<p>当前使用量。</p><p>单位：条</p>
+ * @method void setCurrentUsage(integer $CurrentUsage) 设置<p>当前使用量。</p><p>单位：条</p>
  */
 class SmsPackagesStatistics extends AbstractModel
 {
     /**
-     * @var string 套餐包创建时间，标准时间，例如：2019-10-08 17:18:37。
+     * @var string <p>套餐包创建时间，标准时间，例如：2019-10-08 17:18:37。</p>
      */
     public $PackageCreateTime;
 
     /**
-     * @var integer 套餐包创建时间，UNIX 时间戳（单位：秒）。
+     * @var integer <p>套餐包创建时间，UNIX 时间戳。</p><p>单位：秒</p>
      */
     public $PackageCreateUnixTime;
 
     /**
-     * @var string 套餐包生效时间，标准时间，例如：2019-10-08 17:18:37。
+     * @var string <p>套餐包生效时间，标准时间，例如：2019-10-08 17:18:37。</p>
      */
     public $PackageEffectiveTime;
 
     /**
-     * @var integer 套餐包生效时间，UNIX 时间戳（单位：秒）。
+     * @var integer <p>套餐包生效时间，UNIX 时间戳。</p><p>单位：秒</p>
      */
     public $PackageEffectiveUnixTime;
 
     /**
-     * @var string 套餐包过期时间，标准时间，例如：2019-10-08 17:18:37。
+     * @var string <p>套餐包过期时间，标准时间，例如：2019-10-08 17:18:37。</p>
      */
     public $PackageExpiredTime;
 
     /**
-     * @var integer 套餐包过期时间，UNIX 时间戳（单位：秒）。
+     * @var integer <p>套餐包过期时间，UNIX 时间戳。</p><p>单位：秒</p>
      */
     public $PackageExpiredUnixTime;
 
     /**
-     * @var integer 套餐包条数。
+     * @var integer <p>套餐包条数。</p><p>单位：条</p>
      */
     public $AmountOfPackage;
 
     /**
-     * @var integer 0表示赠送套餐包，1表示购买套餐包。
+     * @var integer <p>套餐包类别。</p><p>枚举值：</p><ul><li>0： 赠送套餐包</li><li>1： 购买套餐包</li></ul>
      */
     public $TypeOfPackage;
 
     /**
-     * @var integer 套餐包 ID。
+     * @var integer <p>套餐包 ID。</p>
      */
     public $PackageId;
 
     /**
-     * @var integer 当前使用量。
+     * @var integer <p>当前使用量。</p><p>单位：条</p>
      */
     public $CurrentUsage;
 
     /**
-     * @param string $PackageCreateTime 套餐包创建时间，标准时间，例如：2019-10-08 17:18:37。
-     * @param integer $PackageCreateUnixTime 套餐包创建时间，UNIX 时间戳（单位：秒）。
-     * @param string $PackageEffectiveTime 套餐包生效时间，标准时间，例如：2019-10-08 17:18:37。
-     * @param integer $PackageEffectiveUnixTime 套餐包生效时间，UNIX 时间戳（单位：秒）。
-     * @param string $PackageExpiredTime 套餐包过期时间，标准时间，例如：2019-10-08 17:18:37。
-     * @param integer $PackageExpiredUnixTime 套餐包过期时间，UNIX 时间戳（单位：秒）。
-     * @param integer $AmountOfPackage 套餐包条数。
-     * @param integer $TypeOfPackage 0表示赠送套餐包，1表示购买套餐包。
-     * @param integer $PackageId 套餐包 ID。
-     * @param integer $CurrentUsage 当前使用量。
+     * @param string $PackageCreateTime <p>套餐包创建时间，标准时间，例如：2019-10-08 17:18:37。</p>
+     * @param integer $PackageCreateUnixTime <p>套餐包创建时间，UNIX 时间戳。</p><p>单位：秒</p>
+     * @param string $PackageEffectiveTime <p>套餐包生效时间，标准时间，例如：2019-10-08 17:18:37。</p>
+     * @param integer $PackageEffectiveUnixTime <p>套餐包生效时间，UNIX 时间戳。</p><p>单位：秒</p>
+     * @param string $PackageExpiredTime <p>套餐包过期时间，标准时间，例如：2019-10-08 17:18:37。</p>
+     * @param integer $PackageExpiredUnixTime <p>套餐包过期时间，UNIX 时间戳。</p><p>单位：秒</p>
+     * @param integer $AmountOfPackage <p>套餐包条数。</p><p>单位：条</p>
+     * @param integer $TypeOfPackage <p>套餐包类别。</p><p>枚举值：</p><ul><li>0： 赠送套餐包</li><li>1： 购买套餐包</li></ul>
+     * @param integer $PackageId <p>套餐包 ID。</p>
+     * @param integer $CurrentUsage <p>当前使用量。</p><p>单位：条</p>
      */
     function __construct()
     {

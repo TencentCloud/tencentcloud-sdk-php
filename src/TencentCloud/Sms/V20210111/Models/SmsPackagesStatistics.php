@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 套餐包信息统计响应包体
  *
- * @method integer getPackageCreateTime() 获取套餐包创建时间，UNIX 时间戳（单位：秒）。
- * @method void setPackageCreateTime(integer $PackageCreateTime) 设置套餐包创建时间，UNIX 时间戳（单位：秒）。
- * @method integer getPackageEffectiveTime() 获取套餐包生效时间，UNIX 时间戳（单位：秒）。
- * @method void setPackageEffectiveTime(integer $PackageEffectiveTime) 设置套餐包生效时间，UNIX 时间戳（单位：秒）。
- * @method integer getPackageExpiredTime() 获取套餐包过期时间，UNIX 时间戳（单位：秒）。
- * @method void setPackageExpiredTime(integer $PackageExpiredTime) 设置套餐包过期时间，UNIX 时间戳（单位：秒）。
- * @method integer getPackageAmount() 获取套餐包条数。
- * @method void setPackageAmount(integer $PackageAmount) 设置套餐包条数。
- * @method integer getPackageType() 获取套餐包类别，0表示赠送套餐包，1表示购买套餐包。
- * @method void setPackageType(integer $PackageType) 设置套餐包类别，0表示赠送套餐包，1表示购买套餐包。
- * @method integer getPackageId() 获取套餐包 ID。
- * @method void setPackageId(integer $PackageId) 设置套餐包 ID。
- * @method integer getCurrentUsage() 获取当前使用套餐包条数。
- * @method void setCurrentUsage(integer $CurrentUsage) 设置当前使用套餐包条数。
+ * @method integer getPackageCreateTime() 获取<p>套餐包创建时间，UNIX 时间戳。</p><p>单位：秒</p>
+ * @method void setPackageCreateTime(integer $PackageCreateTime) 设置<p>套餐包创建时间，UNIX 时间戳。</p><p>单位：秒</p>
+ * @method integer getPackageEffectiveTime() 获取<p>套餐包生效时间，UNIX 时间戳。</p><p>单位：秒</p>
+ * @method void setPackageEffectiveTime(integer $PackageEffectiveTime) 设置<p>套餐包生效时间，UNIX 时间戳。</p><p>单位：秒</p>
+ * @method integer getPackageExpiredTime() 获取<p>套餐包过期时间，UNIX 时间戳。</p><p>单位：秒</p>
+ * @method void setPackageExpiredTime(integer $PackageExpiredTime) 设置<p>套餐包过期时间，UNIX 时间戳。</p><p>单位：秒</p>
+ * @method integer getPackageAmount() 获取<p>套餐包条数。</p><p>单位：条</p>
+ * @method void setPackageAmount(integer $PackageAmount) 设置<p>套餐包条数。</p><p>单位：条</p>
+ * @method integer getPackageType() 获取<p>套餐包类别。</p><p>枚举值：</p><ul><li>0： 赠送套餐</li><li>1： 购买套餐包</li></ul>
+ * @method void setPackageType(integer $PackageType) 设置<p>套餐包类别。</p><p>枚举值：</p><ul><li>0： 赠送套餐</li><li>1： 购买套餐包</li></ul>
+ * @method integer getPackageId() 获取<p>套餐包 ID。</p>
+ * @method void setPackageId(integer $PackageId) 设置<p>套餐包 ID。</p>
+ * @method integer getCurrentUsage() 获取<p>当前使用套餐包条数。</p><p>单位：条</p>
+ * @method void setCurrentUsage(integer $CurrentUsage) 设置<p>当前使用套餐包条数。</p><p>单位：条</p>
  */
 class SmsPackagesStatistics extends AbstractModel
 {
     /**
-     * @var integer 套餐包创建时间，UNIX 时间戳（单位：秒）。
+     * @var integer <p>套餐包创建时间，UNIX 时间戳。</p><p>单位：秒</p>
      */
     public $PackageCreateTime;
 
     /**
-     * @var integer 套餐包生效时间，UNIX 时间戳（单位：秒）。
+     * @var integer <p>套餐包生效时间，UNIX 时间戳。</p><p>单位：秒</p>
      */
     public $PackageEffectiveTime;
 
     /**
-     * @var integer 套餐包过期时间，UNIX 时间戳（单位：秒）。
+     * @var integer <p>套餐包过期时间，UNIX 时间戳。</p><p>单位：秒</p>
      */
     public $PackageExpiredTime;
 
     /**
-     * @var integer 套餐包条数。
+     * @var integer <p>套餐包条数。</p><p>单位：条</p>
      */
     public $PackageAmount;
 
     /**
-     * @var integer 套餐包类别，0表示赠送套餐包，1表示购买套餐包。
+     * @var integer <p>套餐包类别。</p><p>枚举值：</p><ul><li>0： 赠送套餐</li><li>1： 购买套餐包</li></ul>
      */
     public $PackageType;
 
     /**
-     * @var integer 套餐包 ID。
+     * @var integer <p>套餐包 ID。</p>
      */
     public $PackageId;
 
     /**
-     * @var integer 当前使用套餐包条数。
+     * @var integer <p>当前使用套餐包条数。</p><p>单位：条</p>
      */
     public $CurrentUsage;
 
     /**
-     * @param integer $PackageCreateTime 套餐包创建时间，UNIX 时间戳（单位：秒）。
-     * @param integer $PackageEffectiveTime 套餐包生效时间，UNIX 时间戳（单位：秒）。
-     * @param integer $PackageExpiredTime 套餐包过期时间，UNIX 时间戳（单位：秒）。
-     * @param integer $PackageAmount 套餐包条数。
-     * @param integer $PackageType 套餐包类别，0表示赠送套餐包，1表示购买套餐包。
-     * @param integer $PackageId 套餐包 ID。
-     * @param integer $CurrentUsage 当前使用套餐包条数。
+     * @param integer $PackageCreateTime <p>套餐包创建时间，UNIX 时间戳。</p><p>单位：秒</p>
+     * @param integer $PackageEffectiveTime <p>套餐包生效时间，UNIX 时间戳。</p><p>单位：秒</p>
+     * @param integer $PackageExpiredTime <p>套餐包过期时间，UNIX 时间戳。</p><p>单位：秒</p>
+     * @param integer $PackageAmount <p>套餐包条数。</p><p>单位：条</p>
+     * @param integer $PackageType <p>套餐包类别。</p><p>枚举值：</p><ul><li>0： 赠送套餐</li><li>1： 购买套餐包</li></ul>
+     * @param integer $PackageId <p>套餐包 ID。</p>
+     * @param integer $CurrentUsage <p>当前使用套餐包条数。</p><p>单位：条</p>
      */
     function __construct()
     {

@@ -14,23 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Sms\V20190711\Models;
+namespace TencentCloud\Wedata\V20250806\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteSmsSign返回参数结构体
+ * CreateTriggerWorkflowRun返回参数结构体
  *
- * @method DeleteSignStatus getDeleteSignStatus() 获取<p>删除签名响应</p>
- * @method void setDeleteSignStatus(DeleteSignStatus $DeleteSignStatus) 设置<p>删除签名响应</p>
+ * @method CreateTriggerWorkflowRunResult getData() 获取操作结果信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setData(CreateTriggerWorkflowRunResult $Data) 设置操作结果信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DeleteSmsSignResponse extends AbstractModel
+class CreateTriggerWorkflowRunResponse extends AbstractModel
 {
     /**
-     * @var DeleteSignStatus <p>删除签名响应</p>
+     * @var CreateTriggerWorkflowRunResult 操作结果信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $DeleteSignStatus;
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +41,8 @@ class DeleteSmsSignResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param DeleteSignStatus $DeleteSignStatus <p>删除签名响应</p>
+     * @param CreateTriggerWorkflowRunResult $Data 操作结果信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +58,9 @@ class DeleteSmsSignResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeleteSignStatus",$param) and $param["DeleteSignStatus"] !== null) {
-            $this->DeleteSignStatus = new DeleteSignStatus();
-            $this->DeleteSignStatus->deserialize($param["DeleteSignStatus"]);
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new CreateTriggerWorkflowRunResult();
+            $this->Data->deserialize($param["Data"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

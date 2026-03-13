@@ -46,6 +46,7 @@ use TencentCloud\Wedata\V20250806\Models as Models;
  * @method Models\CreateTaskFolderResponse CreateTaskFolder(Models\CreateTaskFolderRequest $req) 创建文件夹
  * @method Models\CreateTriggerTaskResponse CreateTriggerTask(Models\CreateTriggerTaskRequest $req) 创建任务接口
  * @method Models\CreateTriggerWorkflowResponse CreateTriggerWorkflow(Models\CreateTriggerWorkflowRequest $req) 创建工作流
+ * @method Models\CreateTriggerWorkflowRunResponse CreateTriggerWorkflowRun(Models\CreateTriggerWorkflowRunRequest $req) 工作流调度模型下运行工作流
  * @method Models\CreateWorkflowResponse CreateWorkflow(Models\CreateWorkflowRequest $req) 创建工作流
  * @method Models\CreateWorkflowFolderResponse CreateWorkflowFolder(Models\CreateWorkflowFolderRequest $req) 创建文件夹
  * @method Models\CreateWorkflowPermissionsResponse CreateWorkflowPermissions(Models\CreateWorkflowPermissionsRequest $req) 数据开发配置权限

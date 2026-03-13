@@ -14,24 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Sms\V20190711\Models;
+namespace TencentCloud\Wedata\V20250806\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteSmsSign请求参数结构体
+ * 工作流调度模式下，工作流触发运行结果
  *
- * @method integer getSignId() 获取<p>待删除的签名 ID。</p>
- * @method void setSignId(integer $SignId) 设置<p>待删除的签名 ID。</p>
+ * @method string getWorkflowExecutionId() 获取工作流执行id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWorkflowExecutionId(string $WorkflowExecutionId) 设置工作流执行id
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class DeleteSmsSignRequest extends AbstractModel
+class CreateTriggerWorkflowRunResult extends AbstractModel
 {
     /**
-     * @var integer <p>待删除的签名 ID。</p>
+     * @var string 工作流执行id
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $SignId;
+    public $WorkflowExecutionId;
 
     /**
-     * @param integer $SignId <p>待删除的签名 ID。</p>
+     * @param string $WorkflowExecutionId 工作流执行id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -46,8 +50,8 @@ class DeleteSmsSignRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SignId",$param) and $param["SignId"] !== null) {
-            $this->SignId = $param["SignId"];
+        if (array_key_exists("WorkflowExecutionId",$param) and $param["WorkflowExecutionId"] !== null) {
+            $this->WorkflowExecutionId = $param["WorkflowExecutionId"];
         }
     }
 }

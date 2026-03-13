@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 删除签名响应
  *
- * @method string getDeleteStatus() 获取删除状态信息。
- * @method void setDeleteStatus(string $DeleteStatus) 设置删除状态信息。
- * @method integer getDeleteTime() 获取删除时间，UNIX 时间戳（单位：秒）。
- * @method void setDeleteTime(integer $DeleteTime) 设置删除时间，UNIX 时间戳（单位：秒）。
+ * @method string getDeleteStatus() 获取<p>删除状态信息。</p>
+ * @method void setDeleteStatus(string $DeleteStatus) 设置<p>删除状态信息。</p>
+ * @method integer getDeleteTime() 获取<p>删除时间，UNIX 时间戳（单位：秒）。</p>
+ * @method void setDeleteTime(integer $DeleteTime) 设置<p>删除时间，UNIX 时间戳（单位：秒）。</p>
  */
 class DeleteSignStatus extends AbstractModel
 {
     /**
-     * @var string 删除状态信息。
+     * @var string <p>删除状态信息。</p>
      */
     public $DeleteStatus;
 
     /**
-     * @var integer 删除时间，UNIX 时间戳（单位：秒）。
+     * @var integer <p>删除时间，UNIX 时间戳（单位：秒）。</p>
      */
     public $DeleteTime;
 
     /**
-     * @param string $DeleteStatus 删除状态信息。
-     * @param integer $DeleteTime 删除时间，UNIX 时间戳（单位：秒）。
+     * @param string $DeleteStatus <p>删除状态信息。</p>
+     * @param integer $DeleteTime <p>删除时间，UNIX 时间戳（单位：秒）。</p>
      */
     function __construct()
     {

@@ -230,6 +230,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorMessage(string $ErrorMessage) 设置错误信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTaskSubType() 获取任务子状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskSubType(integer $TaskSubType) 设置任务子状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getNotExistsCheckPoint() 获取是否存在SavePoint, 0-存在, 1-不存在, null 为未知
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNotExistsCheckPoint(integer $NotExistsCheckPoint) 设置是否存在SavePoint, 0-存在, 1-不存在, null 为未知
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSavePointId() 获取savepiontPath
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSavePointId(string $SavePointId) 设置savepiontPath
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSavePointPath() 获取savepiontId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSavePointPath(string $SavePointPath) 设置savepiontId
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IntegrationTaskInfo extends AbstractModel
 {
@@ -555,6 +571,30 @@ class IntegrationTaskInfo extends AbstractModel
     public $ErrorMessage;
 
     /**
+     * @var integer 任务子状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskSubType;
+
+    /**
+     * @var integer 是否存在SavePoint, 0-存在, 1-不存在, null 为未知
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NotExistsCheckPoint;
+
+    /**
+     * @var string savepiontPath
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SavePointId;
+
+    /**
+     * @var string savepiontId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SavePointPath;
+
+    /**
      * @param string $TaskName 任务名称
      * @param string $Description 任务描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -659,6 +699,14 @@ class IntegrationTaskInfo extends AbstractModel
      * @param array $TagList 标签列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorMessage 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TaskSubType 任务子状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $NotExistsCheckPoint 是否存在SavePoint, 0-存在, 1-不存在, null 为未知
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SavePointId savepiontPath
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SavePointPath savepiontId
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -920,6 +968,22 @@ class IntegrationTaskInfo extends AbstractModel
 
         if (array_key_exists("ErrorMessage",$param) and $param["ErrorMessage"] !== null) {
             $this->ErrorMessage = $param["ErrorMessage"];
+        }
+
+        if (array_key_exists("TaskSubType",$param) and $param["TaskSubType"] !== null) {
+            $this->TaskSubType = $param["TaskSubType"];
+        }
+
+        if (array_key_exists("NotExistsCheckPoint",$param) and $param["NotExistsCheckPoint"] !== null) {
+            $this->NotExistsCheckPoint = $param["NotExistsCheckPoint"];
+        }
+
+        if (array_key_exists("SavePointId",$param) and $param["SavePointId"] !== null) {
+            $this->SavePointId = $param["SavePointId"];
+        }
+
+        if (array_key_exists("SavePointPath",$param) and $param["SavePointPath"] !== null) {
+            $this->SavePointPath = $param["SavePointPath"];
         }
     }
 }

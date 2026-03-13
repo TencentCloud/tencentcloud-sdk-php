@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Sms\V20190711\Models;
+namespace TencentCloud\Wedata\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteSmsSign请求参数结构体
+ * 注册模型标签
  *
- * @method integer getSignId() 获取<p>待删除的签名 ID。</p>
- * @method void setSignId(integer $SignId) 设置<p>待删除的签名 ID。</p>
+ * @method string getKey() 获取tag key
+ * @method void setKey(string $Key) 设置tag key
+ * @method string getValue() 获取tag value
+ * @method void setValue(string $Value) 设置tag value
  */
-class DeleteSmsSignRequest extends AbstractModel
+class RegisteredModelTag extends AbstractModel
 {
     /**
-     * @var integer <p>待删除的签名 ID。</p>
+     * @var string tag key
      */
-    public $SignId;
+    public $Key;
 
     /**
-     * @param integer $SignId <p>待删除的签名 ID。</p>
+     * @var string tag value
+     */
+    public $Value;
+
+    /**
+     * @param string $Key tag key
+     * @param string $Value tag value
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DeleteSmsSignRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SignId",$param) and $param["SignId"] !== null) {
-            $this->SignId = $param["SignId"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
+        }
+
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

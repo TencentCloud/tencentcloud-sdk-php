@@ -96,6 +96,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTablePhysicalId(string $TablePhysicalId) 设置表物理唯一id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCatalogName() 获取Catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCatalogName(string $CatalogName) 设置Catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDatasourceName() 获取数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatasourceName(string $DatasourceName) 设置数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getQualifiedName() 获取Catalog(如有).数据库(如有).表名名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQualifiedName(string $QualifiedName) 设置Catalog(如有).数据库(如有).表名名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskDataRegistryDTO extends AbstractModel
 {
@@ -206,6 +218,24 @@ class TaskDataRegistryDTO extends AbstractModel
     public $TablePhysicalId;
 
     /**
+     * @var string Catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CatalogName;
+
+    /**
+     * @var string 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatasourceName;
+
+    /**
+     * @var string Catalog(如有).数据库(如有).表名名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QualifiedName;
+
+    /**
      * @param string $TaskId 任务id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName 任务名称
@@ -243,6 +273,12 @@ class TaskDataRegistryDTO extends AbstractModel
      * @param string $Ext 扩展信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TablePhysicalId 表物理唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CatalogName Catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DatasourceName 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $QualifiedName Catalog(如有).数据库(如有).表名名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -324,6 +360,18 @@ class TaskDataRegistryDTO extends AbstractModel
 
         if (array_key_exists("TablePhysicalId",$param) and $param["TablePhysicalId"] !== null) {
             $this->TablePhysicalId = $param["TablePhysicalId"];
+        }
+
+        if (array_key_exists("CatalogName",$param) and $param["CatalogName"] !== null) {
+            $this->CatalogName = $param["CatalogName"];
+        }
+
+        if (array_key_exists("DatasourceName",$param) and $param["DatasourceName"] !== null) {
+            $this->DatasourceName = $param["DatasourceName"];
+        }
+
+        if (array_key_exists("QualifiedName",$param) and $param["QualifiedName"] !== null) {
+            $this->QualifiedName = $param["QualifiedName"];
         }
     }
 }

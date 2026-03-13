@@ -103,6 +103,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeCodeTemplateDetailResponse DescribeCodeTemplateDetail(Models\DescribeCodeTemplateDetailRequest $req) 查询代码模版具体详情
  * @method Models\DescribeColumnLineageResponse DescribeColumnLineage(Models\DescribeColumnLineageRequest $req) 列出字段血缘信息
  * @method Models\DescribeColumnsMetaResponse DescribeColumnsMeta(Models\DescribeColumnsMetaRequest $req) 查询表的所有列元数据
+ * @method Models\DescribeDataAssetsResponse DescribeDataAssets(Models\DescribeDataAssetsRequest $req) 查询数据资产列表
  * @method Models\DescribeDataCheckStatResponse DescribeDataCheckStat(Models\DescribeDataCheckStatRequest $req) 数据质量的概览页面数据监测情况接口
  * @method Models\DescribeDataServicePublishedApiDetailResponse DescribeDataServicePublishedApiDetail(Models\DescribeDataServicePublishedApiDetailRequest $req) 查询数据服务API的发布态信息
  * @method Models\DescribeDataServicePublishedApiListResponse DescribeDataServicePublishedApiList(Models\DescribeDataServicePublishedApiListRequest $req) 获取数据服务API的发布态信息列表

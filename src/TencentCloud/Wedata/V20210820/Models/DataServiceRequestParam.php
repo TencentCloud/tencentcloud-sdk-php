@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置参数描述
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStdCode() 获取关联标准编码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStdCode(string $StdCode) 设置关联标准编码
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataServiceRequestParam extends AbstractModel
 {
@@ -114,6 +118,12 @@ class DataServiceRequestParam extends AbstractModel
     public $Description;
 
     /**
+     * @var string 关联标准编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StdCode;
+
+    /**
      * @param string $ParamName 参数名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BindField 绑定字段
@@ -131,6 +141,8 @@ class DataServiceRequestParam extends AbstractModel
      * @param string $ExampleValue 示例值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 参数描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StdCode 关联标准编码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -180,6 +192,10 @@ class DataServiceRequestParam extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("StdCode",$param) and $param["StdCode"] !== null) {
+            $this->StdCode = $param["StdCode"];
         }
     }
 }

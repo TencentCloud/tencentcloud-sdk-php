@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskNameExistMode(integer $TaskNameExistMode) 设置重名任务处理策略, 0:跳过,不导入; 1: 重命名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWorkFlowFolderPath() 获取工作流所属目录路径
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWorkFlowFolderPath(string $WorkFlowFolderPath) 设置工作流所属目录路径
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskImportInfo extends AbstractModel
 {
@@ -94,6 +98,12 @@ class TaskImportInfo extends AbstractModel
     public $TaskNameExistMode;
 
     /**
+     * @var string 工作流所属目录路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WorkFlowFolderPath;
+
+    /**
      * @param boolean $IsImport 是否导入编排空间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsNewWorkFlow 是否新建工作流
@@ -107,6 +117,8 @@ class TaskImportInfo extends AbstractModel
      * @param string $WorkFlowName 工作流名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskNameExistMode 重名任务处理策略, 0:跳过,不导入; 1: 重命名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WorkFlowFolderPath 工作流所属目录路径
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +160,10 @@ class TaskImportInfo extends AbstractModel
 
         if (array_key_exists("TaskNameExistMode",$param) and $param["TaskNameExistMode"] !== null) {
             $this->TaskNameExistMode = $param["TaskNameExistMode"];
+        }
+
+        if (array_key_exists("WorkFlowFolderPath",$param) and $param["WorkFlowFolderPath"] !== null) {
+            $this->WorkFlowFolderPath = $param["WorkFlowFolderPath"];
         }
     }
 }

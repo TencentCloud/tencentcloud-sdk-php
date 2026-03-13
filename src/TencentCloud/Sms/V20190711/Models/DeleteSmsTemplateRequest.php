@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteSmsTemplate请求参数结构体
  *
- * @method integer getTemplateId() 获取待删除的模板 ID。
- * @method void setTemplateId(integer $TemplateId) 设置待删除的模板 ID。
+ * @method integer getTemplateId() 获取<p>待删除的模板 ID。</p>
+ * @method void setTemplateId(integer $TemplateId) 设置<p>待删除的模板 ID。</p>
  */
 class DeleteSmsTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 待删除的模板 ID。
+     * @var integer <p>待删除的模板 ID。</p>
      */
     public $TemplateId;
 
     /**
-     * @param integer $TemplateId 待删除的模板 ID。
+     * @param integer $TemplateId <p>待删除的模板 ID。</p>
      */
     function __construct()
     {

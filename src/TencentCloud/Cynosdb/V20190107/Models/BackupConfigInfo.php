@@ -44,8 +44,10 @@ no-关闭
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCrossRegions(array $CrossRegions) 设置跨地域备份地域
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBackupTriggerStrategy() 获取动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
- * @method void setBackupTriggerStrategy(string $BackupTriggerStrategy) 设置动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
+ * @method string getBackupTriggerStrategy() 获取自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
+ * @method void setBackupTriggerStrategy(string $BackupTriggerStrategy) 设置自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
+ * @method array getAutoCopyVaults() 获取备份投递关系
+ * @method void setAutoCopyVaults(array $AutoCopyVaults) 设置备份投递关系
  */
 class BackupConfigInfo extends AbstractModel
 {
@@ -94,9 +96,14 @@ no-关闭
     public $CrossRegions;
 
     /**
-     * @var string 动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
+     * @var string 自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
      */
     public $BackupTriggerStrategy;
+
+    /**
+     * @var array 备份投递关系
+     */
+    public $AutoCopyVaults;
 
     /**
      * @param boolean $BackupCustomAutoTime 系统自动时间
@@ -111,7 +118,8 @@ yes-开启
 no-关闭
      * @param array $CrossRegions 跨地域备份地域
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BackupTriggerStrategy 动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
+     * @param string $BackupTriggerStrategy 自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
+     * @param array $AutoCopyVaults 备份投递关系
      */
     function __construct()
     {
@@ -160,6 +168,15 @@ no-关闭
 
         if (array_key_exists("BackupTriggerStrategy",$param) and $param["BackupTriggerStrategy"] !== null) {
             $this->BackupTriggerStrategy = $param["BackupTriggerStrategy"];
+        }
+
+        if (array_key_exists("AutoCopyVaults",$param) and $param["AutoCopyVaults"] !== null) {
+            $this->AutoCopyVaults = [];
+            foreach ($param["AutoCopyVaults"] as $key => $value){
+                $obj = new CreateBackupVaultItem();
+                $obj->deserialize($value);
+                array_push($this->AutoCopyVaults, $obj);
+            }
         }
     }
 }

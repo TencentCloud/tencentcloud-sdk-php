@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tdmysql\V20211122\Models;
+namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyBinlogStatus请求参数结构体
+ * 创建主体输出信息。
  *
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method integer getStatus() 获取1打开0关闭
- * @method void setStatus(integer $Status) 设置1打开0关闭
+ * @method string getSubjectId() 获取<p>主体ID。</p>
+ * @method void setSubjectId(string $SubjectId) 设置<p>主体ID。</p>
+ * @method string getSubjectInfo() 获取<p>主体信息。</p>
+ * @method void setSubjectInfo(string $SubjectInfo) 设置<p>主体信息。</p>
  */
-class ModifyBinlogStatusRequest extends AbstractModel
+class CreateAigcSubjectOutput extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string <p>主体ID。</p>
      */
-    public $InstanceId;
+    public $SubjectId;
 
     /**
-     * @var integer 1打开0关闭
+     * @var string <p>主体信息。</p>
      */
-    public $Status;
+    public $SubjectInfo;
 
     /**
-     * @param string $InstanceId 实例id
-     * @param integer $Status 1打开0关闭
+     * @param string $SubjectId <p>主体ID。</p>
+     * @param string $SubjectInfo <p>主体信息。</p>
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class ModifyBinlogStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("SubjectId",$param) and $param["SubjectId"] !== null) {
+            $this->SubjectId = $param["SubjectId"];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("SubjectInfo",$param) and $param["SubjectInfo"] !== null) {
+            $this->SubjectInfo = $param["SubjectInfo"];
         }
     }
 }

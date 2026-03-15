@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoArchive(string $AutoArchive) 设置是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
  * @method string getUpgradeType() 获取升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改
  * @method void setUpgradeType(string $UpgradeType) 设置升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改
+ * @method array getSecurityGroupIdsForNewRo() 获取新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。
+ * @method void setSecurityGroupIdsForNewRo(array $SecurityGroupIdsForNewRo) 设置新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。
  */
 class ModifyServerlessStrategyRequest extends AbstractModel
 {
@@ -121,6 +123,11 @@ class ModifyServerlessStrategyRequest extends AbstractModel
     public $UpgradeType;
 
     /**
+     * @var array 新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。
+     */
+    public $SecurityGroupIdsForNewRo;
+
+    /**
      * @param string $ClusterId serverless集群id
      * @param string $AutoPause 集群是否自动暂停，可选范围
 <li>yes</li>
@@ -136,6 +143,7 @@ class ModifyServerlessStrategyRequest extends AbstractModel
      * @param integer $MaxRoCount 只读节点最大个数
      * @param string $AutoArchive 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
      * @param string $UpgradeType 升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改
+     * @param array $SecurityGroupIdsForNewRo 新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。
      */
     function __construct()
     {
@@ -200,6 +208,10 @@ class ModifyServerlessStrategyRequest extends AbstractModel
 
         if (array_key_exists("UpgradeType",$param) and $param["UpgradeType"] !== null) {
             $this->UpgradeType = $param["UpgradeType"];
+        }
+
+        if (array_key_exists("SecurityGroupIdsForNewRo",$param) and $param["SecurityGroupIdsForNewRo"] !== null) {
+            $this->SecurityGroupIdsForNewRo = $param["SecurityGroupIdsForNewRo"];
         }
     }
 }

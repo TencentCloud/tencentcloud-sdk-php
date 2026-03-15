@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogicCrossRegions(array $LogicCrossRegions) 设置逻辑备份所跨地域
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAutoCopyVaults() 获取备份投递关系
+ * @method void setAutoCopyVaults(array $AutoCopyVaults) 设置备份投递关系
  */
 class LogicBackupConfigInfo extends AbstractModel
 {
@@ -75,6 +77,11 @@ class LogicBackupConfigInfo extends AbstractModel
     public $LogicCrossRegions;
 
     /**
+     * @var array 备份投递关系
+     */
+    public $AutoCopyVaults;
+
+    /**
      * @param string $LogicBackupEnable 是否开启自动逻辑备份
      * @param integer $LogicBackupTimeBeg 自动逻辑备份开始时间
      * @param integer $LogicBackupTimeEnd 自动逻辑备份结束时间
@@ -84,6 +91,7 @@ class LogicBackupConfigInfo extends AbstractModel
 可选值：ON/OFF
      * @param array $LogicCrossRegions 逻辑备份所跨地域
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AutoCopyVaults 备份投递关系
      */
     function __construct()
     {
@@ -120,6 +128,15 @@ class LogicBackupConfigInfo extends AbstractModel
 
         if (array_key_exists("LogicCrossRegions",$param) and $param["LogicCrossRegions"] !== null) {
             $this->LogicCrossRegions = $param["LogicCrossRegions"];
+        }
+
+        if (array_key_exists("AutoCopyVaults",$param) and $param["AutoCopyVaults"] !== null) {
+            $this->AutoCopyVaults = [];
+            foreach ($param["AutoCopyVaults"] as $key => $value){
+                $obj = new CreateBackupVaultItem();
+                $obj->deserialize($value);
+                array_push($this->AutoCopyVaults, $obj);
+            }
         }
     }
 }

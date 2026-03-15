@@ -44,6 +44,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapShotType(string $SnapShotType) 设置快照类型，可选值：full，全量；increment，增量
  * @method string getBackupName() 获取备份文件备注
  * @method void setBackupName(string $BackupName) 设置备份文件备注
+ * @method string getCopyStatus() 获取投递状态
+ * @method void setCopyStatus(string $CopyStatus) 设置投递状态
+ * @method string getEncryptKeyId() 获取秘钥id
+ * @method void setEncryptKeyId(string $EncryptKeyId) 设置秘钥id
+ * @method string getEncryptRegion() 获取秘钥地域
+ * @method void setEncryptRegion(string $EncryptRegion) 设置秘钥地域
+ * @method array getVaultInfos() 获取保险箱信息
+ * @method void setVaultInfos(array $VaultInfos) 设置保险箱信息
  */
 class BackupFileInfo extends AbstractModel
 {
@@ -108,6 +116,26 @@ class BackupFileInfo extends AbstractModel
     public $BackupName;
 
     /**
+     * @var string 投递状态
+     */
+    public $CopyStatus;
+
+    /**
+     * @var string 秘钥id
+     */
+    public $EncryptKeyId;
+
+    /**
+     * @var string 秘钥地域
+     */
+    public $EncryptRegion;
+
+    /**
+     * @var array 保险箱信息
+     */
+    public $VaultInfos;
+
+    /**
      * @param integer $SnapshotId 快照文件ID，已废弃，请使用BackupId
      * @param string $FileName 备份文件名
      * @param integer $FileSize 备份文件大小
@@ -120,6 +148,10 @@ class BackupFileInfo extends AbstractModel
      * @param integer $BackupId 备份ID
      * @param string $SnapShotType 快照类型，可选值：full，全量；increment，增量
      * @param string $BackupName 备份文件备注
+     * @param string $CopyStatus 投递状态
+     * @param string $EncryptKeyId 秘钥id
+     * @param string $EncryptRegion 秘钥地域
+     * @param array $VaultInfos 保险箱信息
      */
     function __construct()
     {
@@ -180,6 +212,27 @@ class BackupFileInfo extends AbstractModel
 
         if (array_key_exists("BackupName",$param) and $param["BackupName"] !== null) {
             $this->BackupName = $param["BackupName"];
+        }
+
+        if (array_key_exists("CopyStatus",$param) and $param["CopyStatus"] !== null) {
+            $this->CopyStatus = $param["CopyStatus"];
+        }
+
+        if (array_key_exists("EncryptKeyId",$param) and $param["EncryptKeyId"] !== null) {
+            $this->EncryptKeyId = $param["EncryptKeyId"];
+        }
+
+        if (array_key_exists("EncryptRegion",$param) and $param["EncryptRegion"] !== null) {
+            $this->EncryptRegion = $param["EncryptRegion"];
+        }
+
+        if (array_key_exists("VaultInfos",$param) and $param["VaultInfos"] !== null) {
+            $this->VaultInfos = [];
+            foreach ($param["VaultInfos"] as $key => $value){
+                $obj = new VaultInfo();
+                $obj->deserialize($value);
+                array_push($this->VaultInfos, $obj);
+            }
         }
     }
 }

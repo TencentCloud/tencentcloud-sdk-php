@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 回执数据统计响应包体
  *
- * @method integer getCallbackCount() 获取<p>短信回执量统计。</p><p>单位：数</p>
- * @method void setCallbackCount(integer $CallbackCount) 设置<p>短信回执量统计。</p><p>单位：数</p>
- * @method integer getRequestSuccessCount() 获取<p>短信提交成功量统计。</p><p>单位：数</p>
- * @method void setRequestSuccessCount(integer $RequestSuccessCount) 设置<p>短信提交成功量统计。</p><p>单位：数</p>
- * @method integer getCallbackFailCount() 获取<p>短信回执失败量统计。</p><p>单位：数</p>
- * @method void setCallbackFailCount(integer $CallbackFailCount) 设置<p>短信回执失败量统计。</p><p>单位：数</p>
- * @method integer getCallbackSuccessCount() 获取<p>短信回执成功量统计。</p><p>单位：数</p>
- * @method void setCallbackSuccessCount(integer $CallbackSuccessCount) 设置<p>短信回执成功量统计。</p><p>单位：数</p>
- * @method integer getInternalErrorCount() 获取<p>运营商内部错误统计。</p><p>单位：数</p>
- * @method void setInternalErrorCount(integer $InternalErrorCount) 设置<p>运营商内部错误统计。</p><p>单位：数</p>
- * @method integer getInvalidNumberCount() 获取<p>号码无效或空号统计。</p><p>单位：数</p>
- * @method void setInvalidNumberCount(integer $InvalidNumberCount) 设置<p>号码无效或空号统计。</p><p>单位：数</p>
- * @method integer getShutdownErrorCount() 获取<p>停机、关机等错误统计。</p><p>单位：数</p>
- * @method void setShutdownErrorCount(integer $ShutdownErrorCount) 设置<p>停机、关机等错误统计。</p><p>单位：数</p>
- * @method integer getBlackListCount() 获取<p>号码拉入免打扰名单统计。</p><p>单位：数</p>
- * @method void setBlackListCount(integer $BlackListCount) 设置<p>号码拉入免打扰名单统计。</p><p>单位：数</p>
- * @method integer getFrequencyLimitCount() 获取<p>运营商频率限制统计。</p><p>单位：数</p>
- * @method void setFrequencyLimitCount(integer $FrequencyLimitCount) 设置<p>运营商频率限制统计。</p><p>单位：数</p>
+ * @method integer getCallbackCount() 获取<p>短信回执量统计。</p><p>单位：个</p>
+ * @method void setCallbackCount(integer $CallbackCount) 设置<p>短信回执量统计。</p><p>单位：个</p>
+ * @method integer getRequestSuccessCount() 获取<p>短信提交成功量统计。</p><p>单位：个</p>
+ * @method void setRequestSuccessCount(integer $RequestSuccessCount) 设置<p>短信提交成功量统计。</p><p>单位：个</p>
+ * @method integer getCallbackFailCount() 获取<p>短信回执失败量统计。</p><p>单位：个</p>
+ * @method void setCallbackFailCount(integer $CallbackFailCount) 设置<p>短信回执失败量统计。</p><p>单位：个</p>
+ * @method integer getCallbackSuccessCount() 获取<p>短信回执成功量统计。</p><p>单位：个</p>
+ * @method void setCallbackSuccessCount(integer $CallbackSuccessCount) 设置<p>短信回执成功量统计。</p><p>单位：个</p>
+ * @method integer getInternalErrorCount() 获取<p>运营商内部错误统计。</p><p>单位：个</p>
+ * @method void setInternalErrorCount(integer $InternalErrorCount) 设置<p>运营商内部错误统计。</p><p>单位：个</p>
+ * @method integer getInvalidNumberCount() 获取<p>号码无效或空号统计。</p><p>单位：个</p>
+ * @method void setInvalidNumberCount(integer $InvalidNumberCount) 设置<p>号码无效或空号统计。</p><p>单位：个</p>
+ * @method integer getShutdownErrorCount() 获取<p>停机、关机等错误统计。</p><p>单位：个</p>
+ * @method void setShutdownErrorCount(integer $ShutdownErrorCount) 设置<p>停机、关机等错误统计。</p><p>单位：个</p>
+ * @method integer getBlackListCount() 获取<p>号码拉入免打扰名单统计。</p><p>单位：个</p>
+ * @method void setBlackListCount(integer $BlackListCount) 设置<p>号码拉入免打扰名单统计。</p><p>单位：个</p>
+ * @method integer getFrequencyLimitCount() 获取<p>运营商频率限制统计。</p><p>单位：个</p>
+ * @method void setFrequencyLimitCount(integer $FrequencyLimitCount) 设置<p>运营商频率限制统计。</p><p>单位：个</p>
  */
 class CallbackStatusStatistics extends AbstractModel
 {
     /**
-     * @var integer <p>短信回执量统计。</p><p>单位：数</p>
+     * @var integer <p>短信回执量统计。</p><p>单位：个</p>
      */
     public $CallbackCount;
 
     /**
-     * @var integer <p>短信提交成功量统计。</p><p>单位：数</p>
+     * @var integer <p>短信提交成功量统计。</p><p>单位：个</p>
      */
     public $RequestSuccessCount;
 
     /**
-     * @var integer <p>短信回执失败量统计。</p><p>单位：数</p>
+     * @var integer <p>短信回执失败量统计。</p><p>单位：个</p>
      */
     public $CallbackFailCount;
 
     /**
-     * @var integer <p>短信回执成功量统计。</p><p>单位：数</p>
+     * @var integer <p>短信回执成功量统计。</p><p>单位：个</p>
      */
     public $CallbackSuccessCount;
 
     /**
-     * @var integer <p>运营商内部错误统计。</p><p>单位：数</p>
+     * @var integer <p>运营商内部错误统计。</p><p>单位：个</p>
      */
     public $InternalErrorCount;
 
     /**
-     * @var integer <p>号码无效或空号统计。</p><p>单位：数</p>
+     * @var integer <p>号码无效或空号统计。</p><p>单位：个</p>
      */
     public $InvalidNumberCount;
 
     /**
-     * @var integer <p>停机、关机等错误统计。</p><p>单位：数</p>
+     * @var integer <p>停机、关机等错误统计。</p><p>单位：个</p>
      */
     public $ShutdownErrorCount;
 
     /**
-     * @var integer <p>号码拉入免打扰名单统计。</p><p>单位：数</p>
+     * @var integer <p>号码拉入免打扰名单统计。</p><p>单位：个</p>
      */
     public $BlackListCount;
 
     /**
-     * @var integer <p>运营商频率限制统计。</p><p>单位：数</p>
+     * @var integer <p>运营商频率限制统计。</p><p>单位：个</p>
      */
     public $FrequencyLimitCount;
 
     /**
-     * @param integer $CallbackCount <p>短信回执量统计。</p><p>单位：数</p>
-     * @param integer $RequestSuccessCount <p>短信提交成功量统计。</p><p>单位：数</p>
-     * @param integer $CallbackFailCount <p>短信回执失败量统计。</p><p>单位：数</p>
-     * @param integer $CallbackSuccessCount <p>短信回执成功量统计。</p><p>单位：数</p>
-     * @param integer $InternalErrorCount <p>运营商内部错误统计。</p><p>单位：数</p>
-     * @param integer $InvalidNumberCount <p>号码无效或空号统计。</p><p>单位：数</p>
-     * @param integer $ShutdownErrorCount <p>停机、关机等错误统计。</p><p>单位：数</p>
-     * @param integer $BlackListCount <p>号码拉入免打扰名单统计。</p><p>单位：数</p>
-     * @param integer $FrequencyLimitCount <p>运营商频率限制统计。</p><p>单位：数</p>
+     * @param integer $CallbackCount <p>短信回执量统计。</p><p>单位：个</p>
+     * @param integer $RequestSuccessCount <p>短信提交成功量统计。</p><p>单位：个</p>
+     * @param integer $CallbackFailCount <p>短信回执失败量统计。</p><p>单位：个</p>
+     * @param integer $CallbackSuccessCount <p>短信回执成功量统计。</p><p>单位：个</p>
+     * @param integer $InternalErrorCount <p>运营商内部错误统计。</p><p>单位：个</p>
+     * @param integer $InvalidNumberCount <p>号码无效或空号统计。</p><p>单位：个</p>
+     * @param integer $ShutdownErrorCount <p>停机、关机等错误统计。</p><p>单位：个</p>
+     * @param integer $BlackListCount <p>号码拉入免打扰名单统计。</p><p>单位：个</p>
+     * @param integer $FrequencyLimitCount <p>运营商频率限制统计。</p><p>单位：个</p>
      */
     function __construct()
     {

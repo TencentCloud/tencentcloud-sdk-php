@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileId(string $FileId) 设置<p>需要进行图片处理的FileId。不能与Url同时输入。</p>
  * @method string getUrl() 获取<p>需要进行图片处理的Url。不能与FileId同时输入。</p>
  * @method void setUrl(string $Url) 设置<p>需要进行图片处理的Url。不能与FileId同时输入。</p>
+ * @method string getBase64() 获取<p>需要进行图片处理的Base64，要求图片文件小于4MB。使用 Base64 时，请不要添加任何前缀如 <code>data:image/png;base64,</code>，只需提供 Base64 编码字符串本身。</p>
+ * @method void setBase64(string $Base64) 设置<p>需要进行图片处理的Base64，要求图片文件小于4MB。使用 Base64 时，请不要添加任何前缀如 <code>data:image/png;base64,</code>，只需提供 Base64 编码字符串本身。</p>
  * @method ProcessImageAsyncTaskInput getImageTaskInput() 获取<p>图片处理参数。</p>
  * @method void setImageTaskInput(ProcessImageAsyncTaskInput $ImageTaskInput) 设置<p>图片处理参数。</p>
  * @method ProcessImageAsyncOutputConfig getOutputConfig() 获取<p>图片处理任务的输出媒体文件配置。</p>
@@ -55,6 +57,11 @@ class ProcessImageAsyncRequest extends AbstractModel
      * @var string <p>需要进行图片处理的Url。不能与FileId同时输入。</p>
      */
     public $Url;
+
+    /**
+     * @var string <p>需要进行图片处理的Base64，要求图片文件小于4MB。使用 Base64 时，请不要添加任何前缀如 <code>data:image/png;base64,</code>，只需提供 Base64 编码字符串本身。</p>
+     */
+    public $Base64;
 
     /**
      * @var ProcessImageAsyncTaskInput <p>图片处理参数。</p>
@@ -90,6 +97,7 @@ class ProcessImageAsyncRequest extends AbstractModel
      * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      * @param string $FileId <p>需要进行图片处理的FileId。不能与Url同时输入。</p>
      * @param string $Url <p>需要进行图片处理的Url。不能与FileId同时输入。</p>
+     * @param string $Base64 <p>需要进行图片处理的Base64，要求图片文件小于4MB。使用 Base64 时，请不要添加任何前缀如 <code>data:image/png;base64,</code>，只需提供 Base64 编码字符串本身。</p>
      * @param ProcessImageAsyncTaskInput $ImageTaskInput <p>图片处理参数。</p>
      * @param ProcessImageAsyncOutputConfig $OutputConfig <p>图片处理任务的输出媒体文件配置。</p>
      * @param string $SessionId <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
@@ -120,6 +128,10 @@ class ProcessImageAsyncRequest extends AbstractModel
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("Base64",$param) and $param["Base64"] !== null) {
+            $this->Base64 = $param["Base64"];
         }
 
         if (array_key_exists("ImageTaskInput",$param) and $param["ImageTaskInput"] !== null) {

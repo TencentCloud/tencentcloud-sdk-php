@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAutoRenewFlag请求参数结构体
  *
- * @method array getInstanceIds() 获取需要修改的实例列表
- * @method void setInstanceIds(array $InstanceIds) 设置需要修改的实例列表
- * @method integer getAutoRenewFlag() 获取1表示开启自动续费，0为关闭自动续费
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置1表示开启自动续费，0为关闭自动续费
+ * @method array getInstanceIds() 获取<p>需要修改的实例列表</p>
+ * @method void setInstanceIds(array $InstanceIds) 设置<p>需要修改的实例列表</p>
+ * @method integer getAutoRenewFlag() 获取<p>1表示开启自动续费，0为关闭自动续费</p>
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置<p>1表示开启自动续费，0为关闭自动续费</p>
  */
 class ModifyAutoRenewFlagRequest extends AbstractModel
 {
     /**
-     * @var array 需要修改的实例列表
+     * @var array <p>需要修改的实例列表</p>
      */
     public $InstanceIds;
 
     /**
-     * @var integer 1表示开启自动续费，0为关闭自动续费
+     * @var integer <p>1表示开启自动续费，0为关闭自动续费</p>
      */
     public $AutoRenewFlag;
 
     /**
-     * @param array $InstanceIds 需要修改的实例列表
-     * @param integer $AutoRenewFlag 1表示开启自动续费，0为关闭自动续费
+     * @param array $InstanceIds <p>需要修改的实例列表</p>
+     * @param integer $AutoRenewFlag <p>1表示开启自动续费，0为关闭自动续费</p>
      */
     function __construct()
     {

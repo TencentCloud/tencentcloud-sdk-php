@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始时间
  * @method string getFinishTime() 获取完成时间
  * @method void setFinishTime(string $FinishTime) 设置完成时间
+ * @method array getVaultInfos() 获取保险箱信息
+ * @method void setVaultInfos(array $VaultInfos) 设置保险箱信息
+ * @method string getCopyStatus() 获取备份投递状态
+ * @method void setCopyStatus(string $CopyStatus) 设置备份投递状态
+ * @method string getEncryptKeyId() 获取加密秘钥key
+ * @method void setEncryptKeyId(string $EncryptKeyId) 设置加密秘钥key
+ * @method string getEncryptRegion() 获取加密秘钥地域
+ * @method void setEncryptRegion(string $EncryptRegion) 设置加密秘钥地域
  */
 class RedoLogItem extends AbstractModel
 {
@@ -80,6 +88,26 @@ class RedoLogItem extends AbstractModel
     public $FinishTime;
 
     /**
+     * @var array 保险箱信息
+     */
+    public $VaultInfos;
+
+    /**
+     * @var string 备份投递状态
+     */
+    public $CopyStatus;
+
+    /**
+     * @var string 加密秘钥key
+     */
+    public $EncryptKeyId;
+
+    /**
+     * @var string 加密秘钥地域
+     */
+    public $EncryptRegion;
+
+    /**
      * @param string $FileName 文件名
      * @param integer $FileSize 文件大小
      * @param string $BackupTime 备份时间
@@ -88,6 +116,10 @@ class RedoLogItem extends AbstractModel
      * @param string $Status 状态
      * @param string $StartTime 开始时间
      * @param string $FinishTime 完成时间
+     * @param array $VaultInfos 保险箱信息
+     * @param string $CopyStatus 备份投递状态
+     * @param string $EncryptKeyId 加密秘钥key
+     * @param string $EncryptRegion 加密秘钥地域
      */
     function __construct()
     {
@@ -137,6 +169,27 @@ class RedoLogItem extends AbstractModel
 
         if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
             $this->FinishTime = $param["FinishTime"];
+        }
+
+        if (array_key_exists("VaultInfos",$param) and $param["VaultInfos"] !== null) {
+            $this->VaultInfos = [];
+            foreach ($param["VaultInfos"] as $key => $value){
+                $obj = new VaultInfo();
+                $obj->deserialize($value);
+                array_push($this->VaultInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("CopyStatus",$param) and $param["CopyStatus"] !== null) {
+            $this->CopyStatus = $param["CopyStatus"];
+        }
+
+        if (array_key_exists("EncryptKeyId",$param) and $param["EncryptKeyId"] !== null) {
+            $this->EncryptKeyId = $param["EncryptKeyId"];
+        }
+
+        if (array_key_exists("EncryptRegion",$param) and $param["EncryptRegion"] !== null) {
+            $this->EncryptRegion = $param["EncryptRegion"];
         }
     }
 }

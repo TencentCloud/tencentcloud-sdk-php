@@ -14,20 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tdmysql\V20211122\Models;
+namespace TencentCloud\Goosefs\V20220519\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeBillingEnable请求参数结构体
+ * DescribeCustomerCluster请求参数结构体
  *
-
+ * @method string getFileSystemId() 获取文件系统id
+ * @method void setFileSystemId(string $FileSystemId) 设置文件系统id
  */
-class DescribeBillingEnableRequest extends AbstractModel
+class DescribeCustomerClusterRequest extends AbstractModel
 {
-
+    /**
+     * @var string 文件系统id
+     */
+    public $FileSystemId;
 
     /**
-
+     * @param string $FileSystemId 文件系统id
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeBillingEnableRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("FileSystemId",$param) and $param["FileSystemId"] !== null) {
+            $this->FileSystemId = $param["FileSystemId"];
+        }
     }
 }

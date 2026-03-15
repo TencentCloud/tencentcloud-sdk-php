@@ -18,7 +18,7 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 七层加速域名/四层代理实例与回源 IP 网段的绑定关系，以及回源 IP 网段详情。
+ * 七层加速域名/四层代理实例与回源 IP 网段的绑定关系，同时包含回源 IP 网段详情和选择可切换的回源 IP 网段列表。
  *
  * @method array getL7Hosts() 获取启用了特定回源 IP 网段回源的七层加速域名列表。源站防护未开启时为空。
  * @method void setL7Hosts(array $L7Hosts) 设置启用了特定回源 IP 网段回源的七层加速域名列表。源站防护未开启时为空。
@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 <li>online：已生效；</li>
 <li>offline：已停用；</li>
 <li>updating: 配置部署中。</li>
+ * @method string getOriginACLFamily() 获取源站防护回源ACL控制域。
+ * @method void setOriginACLFamily(string $OriginACLFamily) 设置源站防护回源ACL控制域。
  */
 class OriginACLInfo extends AbstractModel
 {
@@ -74,6 +76,11 @@ class OriginACLInfo extends AbstractModel
     public $Status;
 
     /**
+     * @var string 源站防护回源ACL控制域。
+     */
+    public $OriginACLFamily;
+
+    /**
      * @param array $L7Hosts 启用了特定回源 IP 网段回源的七层加速域名列表。源站防护未开启时为空。
      * @param array $L4ProxyIds 启用了特定回源 IP 网段回源的四层代理实例列表。源站防护未开启时为空。
      * @param CurrentOriginACL $CurrentOriginACL 当前生效的回源 IP 网段。源站防护未开启时为空。
@@ -84,6 +91,7 @@ class OriginACLInfo extends AbstractModel
 <li>online：已生效；</li>
 <li>offline：已停用；</li>
 <li>updating: 配置部署中。</li>
+     * @param string $OriginACLFamily 源站防护回源ACL控制域。
      */
     function __construct()
     {
@@ -118,6 +126,10 @@ class OriginACLInfo extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("OriginACLFamily",$param) and $param["OriginACLFamily"] !== null) {
+            $this->OriginACLFamily = $param["OriginACLFamily"];
         }
     }
 }

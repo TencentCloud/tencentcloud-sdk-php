@@ -80,7 +80,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DescribeInstancesDetailResponse DescribeInstancesDetail(Models\DescribeInstancesDetailRequest $req) 用户账户下获取实例列表详情
  * @method Models\DescribeModifyTypeResponse DescribeModifyType(Models\DescribeModifyTypeRequest $req) 查询实例变配类型
  * @method Models\DescribePrometheusResponse DescribePrometheus(Models\DescribePrometheusRequest $req) 获取实例Prometheus信息
- * @method Models\DescribeRegionResponse DescribeRegion(Models\DescribeRegionRequest $req) 枚举地域,只支持广州地域
+ * @method Models\DescribeRegionResponse DescribeRegion(Models\DescribeRegionRequest $req) 枚举地域信息
  * @method Models\DescribeRouteResponse DescribeRoute(Models\DescribeRouteRequest $req) 查看路由信息
  * @method Models\DescribeSecurityGroupRoutesResponse DescribeSecurityGroupRoutes(Models\DescribeSecurityGroupRoutesRequest $req) 获取安全组路由信息列表
  * @method Models\DescribeTaskStatusResponse DescribeTaskStatus(Models\DescribeTaskStatusRequest $req) 查询任务状态

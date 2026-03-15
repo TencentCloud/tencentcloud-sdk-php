@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReserveDuration(integer $ReserveDuration) 设置表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600247=604800，最大为158112000
  * @method string getBackupTriggerStrategy() 获取自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
  * @method void setBackupTriggerStrategy(string $BackupTriggerStrategy) 设置自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
+ * @method array getAutoCopyVaults() 获取保险箱信息
+ * @method void setAutoCopyVaults(array $AutoCopyVaults) 设置保险箱信息
  */
 class SnapshotBackupConfig extends AbstractModel
 {
@@ -73,6 +75,11 @@ class SnapshotBackupConfig extends AbstractModel
     public $BackupTriggerStrategy;
 
     /**
+     * @var array 保险箱信息
+     */
+    public $AutoCopyVaults;
+
+    /**
      * @param boolean $BackupCustomAutoTime 系统自动时间
      * @param integer $BackupTimeBeg 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
      * @param integer $BackupTimeEnd 表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
@@ -80,6 +87,7 @@ class SnapshotBackupConfig extends AbstractModel
      * @param integer $BackupIntervalTime 间隔时间
      * @param integer $ReserveDuration 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600247=604800，最大为158112000
      * @param string $BackupTriggerStrategy 自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
+     * @param array $AutoCopyVaults 保险箱信息
      */
     function __construct()
     {
@@ -120,6 +128,15 @@ class SnapshotBackupConfig extends AbstractModel
 
         if (array_key_exists("BackupTriggerStrategy",$param) and $param["BackupTriggerStrategy"] !== null) {
             $this->BackupTriggerStrategy = $param["BackupTriggerStrategy"];
+        }
+
+        if (array_key_exists("AutoCopyVaults",$param) and $param["AutoCopyVaults"] !== null) {
+            $this->AutoCopyVaults = [];
+            foreach ($param["AutoCopyVaults"] as $key => $value){
+                $obj = new CreateBackupVaultItem();
+                $obj->deserialize($value);
+                array_push($this->AutoCopyVaults, $obj);
+            }
         }
     }
 }

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBinlogCrossRegions(array $BinlogCrossRegions) 设置binlog异地地域
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAutoCopyVaults() 获取保险箱信息
+ * @method void setAutoCopyVaults(array $AutoCopyVaults) 设置保险箱信息
  */
 class BinlogConfigInfo extends AbstractModel
 {
@@ -48,10 +50,16 @@ class BinlogConfigInfo extends AbstractModel
     public $BinlogCrossRegions;
 
     /**
+     * @var array 保险箱信息
+     */
+    public $AutoCopyVaults;
+
+    /**
      * @param integer $BinlogSaveDays binlog保留时间
      * @param string $BinlogCrossRegionsEnable binlog异地地域备份是否开启
      * @param array $BinlogCrossRegions binlog异地地域
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AutoCopyVaults 保险箱信息
      */
     function __construct()
     {
@@ -76,6 +84,15 @@ class BinlogConfigInfo extends AbstractModel
 
         if (array_key_exists("BinlogCrossRegions",$param) and $param["BinlogCrossRegions"] !== null) {
             $this->BinlogCrossRegions = $param["BinlogCrossRegions"];
+        }
+
+        if (array_key_exists("AutoCopyVaults",$param) and $param["AutoCopyVaults"] !== null) {
+            $this->AutoCopyVaults = [];
+            foreach ($param["AutoCopyVaults"] as $key => $value){
+                $obj = new CreateBackupVaultItem();
+                $obj->deserialize($value);
+                array_push($this->AutoCopyVaults, $obj);
+            }
         }
     }
 }

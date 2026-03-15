@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tdmysql\V20211122\Models;
+namespace TencentCloud\Goosefs\V20220519\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 数据库列信息
+ * DeleteCustomerCluster请求参数结构体
  *
- * @method string getCol() 获取列名称
- * @method void setCol(string $Col) 设置列名称
- * @method string getType() 获取列类型
- * @method void setType(string $Type) 设置列类型
+ * @method string getFileSystemId() 获取文件系统id
+ * @method void setFileSystemId(string $FileSystemId) 设置文件系统id
+ * @method string getClusterId() 获取客户端集群ID
+ * @method void setClusterId(string $ClusterId) 设置客户端集群ID
  */
-class TableColumn extends AbstractModel
+class DeleteCustomerClusterRequest extends AbstractModel
 {
     /**
-     * @var string 列名称
+     * @var string 文件系统id
      */
-    public $Col;
+    public $FileSystemId;
 
     /**
-     * @var string 列类型
+     * @var string 客户端集群ID
      */
-    public $Type;
+    public $ClusterId;
 
     /**
-     * @param string $Col 列名称
-     * @param string $Type 列类型
+     * @param string $FileSystemId 文件系统id
+     * @param string $ClusterId 客户端集群ID
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class TableColumn extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Col",$param) and $param["Col"] !== null) {
-            $this->Col = $param["Col"];
+        if (array_key_exists("FileSystemId",$param) and $param["FileSystemId"] !== null) {
+            $this->FileSystemId = $param["FileSystemId"];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

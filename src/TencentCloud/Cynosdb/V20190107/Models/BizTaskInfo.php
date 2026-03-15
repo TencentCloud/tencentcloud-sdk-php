@@ -106,6 +106,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskProgressInfo(TaskProgressInfo $TaskProgressInfo) 设置任务进度信息
  * @method GdnTaskInfo getGdnTaskInfo() 获取全球数据库网络任务
  * @method void setGdnTaskInfo(GdnTaskInfo $GdnTaskInfo) 设置全球数据库网络任务
+ * @method string getVaultId() 获取保险箱id
+ * @method void setVaultId(string $VaultId) 设置保险箱id
+ * @method string getVaultName() 获取保险箱名称
+ * @method void setVaultName(string $VaultName) 设置保险箱名称
  */
 class BizTaskInfo extends AbstractModel
 {
@@ -307,6 +311,16 @@ class BizTaskInfo extends AbstractModel
     public $GdnTaskInfo;
 
     /**
+     * @var string 保险箱id
+     */
+    public $VaultId;
+
+    /**
+     * @var string 保险箱名称
+     */
+    public $VaultName;
+
+    /**
      * @param integer $ID 任务id
      * @param integer $AppId 用户appid
      * @param string $ClusterId 集群id
@@ -350,6 +364,8 @@ class BizTaskInfo extends AbstractModel
 
      * @param TaskProgressInfo $TaskProgressInfo 任务进度信息
      * @param GdnTaskInfo $GdnTaskInfo 全球数据库网络任务
+     * @param string $VaultId 保险箱id
+     * @param string $VaultName 保险箱名称
      */
     function __construct()
     {
@@ -535,6 +551,14 @@ class BizTaskInfo extends AbstractModel
         if (array_key_exists("GdnTaskInfo",$param) and $param["GdnTaskInfo"] !== null) {
             $this->GdnTaskInfo = new GdnTaskInfo();
             $this->GdnTaskInfo->deserialize($param["GdnTaskInfo"]);
+        }
+
+        if (array_key_exists("VaultId",$param) and $param["VaultId"] !== null) {
+            $this->VaultId = $param["VaultId"];
+        }
+
+        if (array_key_exists("VaultName",$param) and $param["VaultName"] !== null) {
+            $this->VaultName = $param["VaultName"];
         }
     }
 }

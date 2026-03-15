@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBinlogId(integer $BinlogId) 设置Binlog文件ID
  * @method array getCrossRegions() 获取binlog所跨地域
  * @method void setCrossRegions(array $CrossRegions) 设置binlog所跨地域
+ * @method string getCopyStatus() 获取备份投递状态
+ * @method void setCopyStatus(string $CopyStatus) 设置备份投递状态
+ * @method array getVaultInfos() 获取保险箱信息
+ * @method void setVaultInfos(array $VaultInfos) 设置保险箱信息
+ * @method string getEncryptKeyId() 获取加密秘钥key
+ * @method void setEncryptKeyId(string $EncryptKeyId) 设置加密秘钥key
+ * @method string getEncryptRegion() 获取加密秘钥地域
+ * @method void setEncryptRegion(string $EncryptRegion) 设置加密秘钥地域
  */
 class BinlogItem extends AbstractModel
 {
@@ -66,12 +74,36 @@ class BinlogItem extends AbstractModel
     public $CrossRegions;
 
     /**
+     * @var string 备份投递状态
+     */
+    public $CopyStatus;
+
+    /**
+     * @var array 保险箱信息
+     */
+    public $VaultInfos;
+
+    /**
+     * @var string 加密秘钥key
+     */
+    public $EncryptKeyId;
+
+    /**
+     * @var string 加密秘钥地域
+     */
+    public $EncryptRegion;
+
+    /**
      * @param string $FileName Binlog文件名称
      * @param integer $FileSize 文件大小，单位：字节
      * @param string $StartTime 事务最早时间
      * @param string $FinishTime 事务最晚时间
      * @param integer $BinlogId Binlog文件ID
      * @param array $CrossRegions binlog所跨地域
+     * @param string $CopyStatus 备份投递状态
+     * @param array $VaultInfos 保险箱信息
+     * @param string $EncryptKeyId 加密秘钥key
+     * @param string $EncryptRegion 加密秘钥地域
      */
     function __construct()
     {
@@ -108,6 +140,27 @@ class BinlogItem extends AbstractModel
 
         if (array_key_exists("CrossRegions",$param) and $param["CrossRegions"] !== null) {
             $this->CrossRegions = $param["CrossRegions"];
+        }
+
+        if (array_key_exists("CopyStatus",$param) and $param["CopyStatus"] !== null) {
+            $this->CopyStatus = $param["CopyStatus"];
+        }
+
+        if (array_key_exists("VaultInfos",$param) and $param["VaultInfos"] !== null) {
+            $this->VaultInfos = [];
+            foreach ($param["VaultInfos"] as $key => $value){
+                $obj = new VaultInfo();
+                $obj->deserialize($value);
+                array_push($this->VaultInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("EncryptKeyId",$param) and $param["EncryptKeyId"] !== null) {
+            $this->EncryptKeyId = $param["EncryptKeyId"];
+        }
+
+        if (array_key_exists("EncryptRegion",$param) and $param["EncryptRegion"] !== null) {
+            $this->EncryptRegion = $param["EncryptRegion"];
         }
     }
 }

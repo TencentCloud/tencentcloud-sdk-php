@@ -26,24 +26,15 @@ use TencentCloud\Tdmysql\V20211122\Models as Models;
  * @method Models\CancelIsolateDBInstancesResponse CancelIsolateDBInstances(Models\CancelIsolateDBInstancesRequest $req) 本接口（CancelIsolateDBInstances）提供批量解除隔离实例功能
  * @method Models\CreateDBSBackupResponse CreateDBSBackup(Models\CreateDBSBackupRequest $req) 创建实例备份集
  * @method Models\DeleteDBSBackupSetsResponse DeleteDBSBackupSets(Models\DeleteDBSBackupSetsRequest $req) 删除实例备份集
- * @method Models\DescribeBillingEnableResponse DescribeBillingEnable(Models\DescribeBillingEnableRequest $req) 已无地方调用
-
-本接口（DescribeBillingEnable）用于查询计费是否开启
  * @method Models\DescribeDBParametersResponse DescribeDBParameters(Models\DescribeDBParametersRequest $req) 本接口（DescribeDBParameters）用于获取实例的当前参数设置。
  * @method Models\DescribeDBSAvailableRecoveryTimeResponse DescribeDBSAvailableRecoveryTime(Models\DescribeDBSAvailableRecoveryTimeRequest $req) 可恢复时间查询
  * @method Models\DescribeDBSCloneInstancesResponse DescribeDBSCloneInstances(Models\DescribeDBSCloneInstancesRequest $req) 查询实例克隆列表
  * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) 本接口（DescribeDBSecurityGroups）用于查询实例安全组信息
  * @method Models\DescribeDatabaseObjectsResponse DescribeDatabaseObjects(Models\DescribeDatabaseObjectsRequest $req) 本接口（DescribeDatabaseObjects）用于查询云数据库实例的数据库中的对象列表，包含表、存储过程、视图和函数。
- * @method Models\DescribeDatabaseTableResponse DescribeDatabaseTable(Models\DescribeDatabaseTableRequest $req) 冗余接口，无人调用
-
-本接口（DescribeDatabaseTable）用于查询云数据库实例的表信息。
  * @method Models\DescribeFlowResponse DescribeFlow(Models\DescribeFlowRequest $req) 本接口（DescribeFlow）用于查询异步任务流程状态
  * @method Models\DestroyInstancesResponse DestroyInstances(Models\DestroyInstancesRequest $req) 本接口（DestroyInstances）提供批量销毁实例功能
  * @method Models\IsolateDBInstanceResponse IsolateDBInstance(Models\IsolateDBInstanceRequest $req) 本接口（IsolateDBInstance）提供批量隔离实例功能
  * @method Models\ModifyAutoRenewFlagResponse ModifyAutoRenewFlag(Models\ModifyAutoRenewFlagRequest $req) 本接口（ModifyAutoRenewFlag）用于修改自动续费标志
- * @method Models\ModifyBinlogStatusResponse ModifyBinlogStatus(Models\ModifyBinlogStatusRequest $req) 接口功能已被 ModifyInstanceCdc 完全覆盖
-
-修改binlog状态
  * @method Models\ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(Models\ModifyDBInstanceSecurityGroupsRequest $req) 本接口（ModifyDBInstanceSecurityGroups）用于修改云数据库安全组
  * @method Models\ModifyDBParametersResponse ModifyDBParameters(Models\ModifyDBParametersRequest $req) 本接口（ModifyDBParameters）用于修改实例参数。
  * @method Models\ModifyDBSBackupPolicyResponse ModifyDBSBackupPolicy(Models\ModifyDBSBackupPolicyRequest $req) 修改实例备份策略

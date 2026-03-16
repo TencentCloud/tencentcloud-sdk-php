@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFrom(string $From) 设置查询维度：from=按页面来源(from)聚合输出；其他值/空值=输出整体汇总。
  * @method string getLevel() 获取日志等级
  * @method void setLevel(string $Level) 设置日志等级
- * @method string getType() 获取类型暂无
- * @method void setType(string $Type) 设置类型暂无
+ * @method string getType() 获取按页面来源分组（group by from），返回每个页面的 LCP/FID/CLS/FCP
+ * @method void setType(string $Type) 设置按页面来源分组（group by from），返回每个页面的 LCP/FID/CLS/FCP
  * @method string getBrand() 获取品牌
  * @method void setBrand(string $Brand) 设置品牌
  * @method string getArea() 获取地区
@@ -108,7 +108,7 @@ class DescribeDataWebVitalsPageRequest extends AbstractModel
     public $Level;
 
     /**
-     * @var string 类型暂无
+     * @var string 按页面来源分组（group by from），返回每个页面的 LCP/FID/CLS/FCP
      */
     public $Type;
 
@@ -186,7 +186,7 @@ class DescribeDataWebVitalsPageRequest extends AbstractModel
      * @param string $Isp 运营商
      * @param string $From 查询维度：from=按页面来源(from)聚合输出；其他值/空值=输出整体汇总。
      * @param string $Level 日志等级
-     * @param string $Type 类型暂无
+     * @param string $Type 按页面来源分组（group by from），返回每个页面的 LCP/FID/CLS/FCP
      * @param string $Brand 品牌
      * @param string $Area 地区
      * @param string $VersionNum 版本

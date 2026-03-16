@@ -20,234 +20,266 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RabbiteMQ集群基本信息
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getClusterName() 获取集群名称
- * @method void setClusterName(string $ClusterName) 设置集群名称
- * @method string getRegion() 获取地域信息
- * @method void setRegion(string $Region) 设置地域信息
- * @method integer getCreateTime() 获取创建时间，毫秒为单位
- * @method void setCreateTime(integer $CreateTime) 设置创建时间，毫秒为单位
- * @method string getRemark() 获取集群说明信息
- * @method void setRemark(string $Remark) 设置集群说明信息
- * @method array getVpcs() 获取VPC及网络信息
- * @method void setVpcs(array $Vpcs) 设置VPC及网络信息
- * @method array getZoneIds() 获取可用区信息
- * @method void setZoneIds(array $ZoneIds) 设置可用区信息
- * @method integer getVirtualHostNumber() 获取虚拟主机数量
- * @method void setVirtualHostNumber(integer $VirtualHostNumber) 设置虚拟主机数量
- * @method integer getQueueNumber() 获取队列数量
- * @method void setQueueNumber(integer $QueueNumber) 设置队列数量
- * @method float getMessagePublishRate() 获取每秒生产消息数 单位：条/秒
- * @method void setMessagePublishRate(float $MessagePublishRate) 设置每秒生产消息数 单位：条/秒
- * @method integer getMessageStackNumber() 获取堆积消息数 单位：条
- * @method void setMessageStackNumber(integer $MessageStackNumber) 设置堆积消息数 单位：条
- * @method integer getExpireTime() 获取过期时间
- * @method void setExpireTime(integer $ExpireTime) 设置过期时间
- * @method integer getChannelNumber() 获取Channel数量
- * @method void setChannelNumber(integer $ChannelNumber) 设置Channel数量
- * @method integer getConnectionNumber() 获取Connection数量
- * @method void setConnectionNumber(integer $ConnectionNumber) 设置Connection数量
- * @method integer getConsumerNumber() 获取Consumer数量
- * @method void setConsumerNumber(integer $ConsumerNumber) 设置Consumer数量
- * @method integer getExchangeNumber() 获取Exchang数量
- * @method void setExchangeNumber(integer $ExchangeNumber) 设置Exchang数量
- * @method string getExceptionInformation() 获取集群异常信息
- * @method void setExceptionInformation(string $ExceptionInformation) 设置集群异常信息
- * @method integer getClusterStatus() 获取实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
- * @method void setClusterStatus(integer $ClusterStatus) 设置实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
- * @method integer getAutoRenewFlag() 获取自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
- * @method integer getMirrorQueuePolicyFlag() 获取是否开启镜像队列策略。1表示开启，0表示没开启。
- * @method void setMirrorQueuePolicyFlag(integer $MirrorQueuePolicyFlag) 设置是否开启镜像队列策略。1表示开启，0表示没开启。
- * @method float getMessageConsumeRate() 获取每秒消费消息数 单位：条/秒
- * @method void setMessageConsumeRate(float $MessageConsumeRate) 设置每秒消费消息数 单位：条/秒
- * @method string getClusterVersion() 获取集群版本信息
- * @method void setClusterVersion(string $ClusterVersion) 设置集群版本信息
- * @method integer getPayMode() 获取计费模式，0-后付费，1-预付费
- * @method void setPayMode(integer $PayMode) 设置计费模式，0-后付费，1-预付费
- * @method integer getInstanceType() 获取集群类型
- * @method void setInstanceType(integer $InstanceType) 设置集群类型
- * @method integer getMessageRetainTime() 获取消息保留时间，单位小时
- * @method void setMessageRetainTime(integer $MessageRetainTime) 设置消息保留时间，单位小时
- * @method float getSendReceiveRatio() 获取发送消息流量比例
- * @method void setSendReceiveRatio(float $SendReceiveRatio) 设置发送消息流量比例
- * @method integer getTraceTime() 获取消息轨迹保留时间，单位小时
- * @method void setTraceTime(integer $TraceTime) 设置消息轨迹保留时间，单位小时
- * @method array getTags() 获取实例标签列表
- * @method void setTags(array $Tags) 设置实例标签列表
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method string getClusterName() 获取<p>集群名称</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名称</p>
+ * @method string getRegion() 获取<p>地域信息</p>
+ * @method void setRegion(string $Region) 设置<p>地域信息</p>
+ * @method integer getCreateTime() 获取<p>创建时间，毫秒为单位</p>
+ * @method void setCreateTime(integer $CreateTime) 设置<p>创建时间，毫秒为单位</p>
+ * @method string getRemark() 获取<p>集群说明信息</p>
+ * @method void setRemark(string $Remark) 设置<p>集群说明信息</p>
+ * @method array getVpcs() 获取<p>VPC及网络信息</p>
+ * @method void setVpcs(array $Vpcs) 设置<p>VPC及网络信息</p>
+ * @method array getZoneIds() 获取<p>可用区信息</p>
+ * @method void setZoneIds(array $ZoneIds) 设置<p>可用区信息</p>
+ * @method integer getVirtualHostNumber() 获取<p>虚拟主机数量</p>
+ * @method void setVirtualHostNumber(integer $VirtualHostNumber) 设置<p>虚拟主机数量</p>
+ * @method integer getQueueNumber() 获取<p>队列数量</p>
+ * @method void setQueueNumber(integer $QueueNumber) 设置<p>队列数量</p>
+ * @method float getMessagePublishRate() 获取<p>每秒生产消息数 单位：条/秒</p>
+ * @method void setMessagePublishRate(float $MessagePublishRate) 设置<p>每秒生产消息数 单位：条/秒</p>
+ * @method integer getMessageStackNumber() 获取<p>堆积消息数 单位：条</p>
+ * @method void setMessageStackNumber(integer $MessageStackNumber) 设置<p>堆积消息数 单位：条</p>
+ * @method integer getExpireTime() 获取<p>过期时间</p>
+ * @method void setExpireTime(integer $ExpireTime) 设置<p>过期时间</p>
+ * @method integer getChannelNumber() 获取<p>Channel数量</p>
+ * @method void setChannelNumber(integer $ChannelNumber) 设置<p>Channel数量</p>
+ * @method integer getConnectionNumber() 获取<p>Connection数量</p>
+ * @method void setConnectionNumber(integer $ConnectionNumber) 设置<p>Connection数量</p>
+ * @method integer getConsumerNumber() 获取<p>Consumer数量</p>
+ * @method void setConsumerNumber(integer $ConsumerNumber) 设置<p>Consumer数量</p>
+ * @method integer getExchangeNumber() 获取<p>Exchang数量</p>
+ * @method void setExchangeNumber(integer $ExchangeNumber) 设置<p>Exchang数量</p>
+ * @method string getExceptionInformation() 获取<p>集群异常信息</p>
+ * @method void setExceptionInformation(string $ExceptionInformation) 设置<p>集群异常信息</p>
+ * @method integer getClusterStatus() 获取<p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败</p>
+ * @method void setClusterStatus(integer $ClusterStatus) 设置<p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败</p>
+ * @method integer getAutoRenewFlag() 获取<p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置<p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
+ * @method integer getMirrorQueuePolicyFlag() 获取<p>是否开启镜像队列策略。1表示开启，0表示没开启。</p>
+ * @method void setMirrorQueuePolicyFlag(integer $MirrorQueuePolicyFlag) 设置<p>是否开启镜像队列策略。1表示开启，0表示没开启。</p>
+ * @method float getMessageConsumeRate() 获取<p>每秒消费消息数 单位：条/秒</p>
+ * @method void setMessageConsumeRate(float $MessageConsumeRate) 设置<p>每秒消费消息数 单位：条/秒</p>
+ * @method string getClusterVersion() 获取<p>集群版本信息</p>
+ * @method void setClusterVersion(string $ClusterVersion) 设置<p>集群版本信息</p>
+ * @method integer getPayMode() 获取<p>计费模式，0-后付费，1-预付费</p>
+ * @method void setPayMode(integer $PayMode) 设置<p>计费模式，0-后付费，1-预付费</p>
+ * @method integer getInstanceType() 获取<p>集群类型</p>
+ * @method void setInstanceType(integer $InstanceType) 设置<p>集群类型</p>
+ * @method integer getMessageRetainTime() 获取<p>消息保留时间，单位小时</p>
+ * @method void setMessageRetainTime(integer $MessageRetainTime) 设置<p>消息保留时间，单位小时</p>
+ * @method float getSendReceiveRatio() 获取<p>发送消息流量比例</p>
+ * @method void setSendReceiveRatio(float $SendReceiveRatio) 设置<p>发送消息流量比例</p>
+ * @method integer getTraceTime() 获取<p>消息轨迹保留时间，单位小时</p>
+ * @method void setTraceTime(integer $TraceTime) 设置<p>消息轨迹保留时间，单位小时</p>
+ * @method array getTags() 获取<p>实例标签列表</p>
+ * @method void setTags(array $Tags) 设置<p>实例标签列表</p>
+ * @method boolean getElasticTpsFlag() 获取<p>是否开启弹性tps</p>
+ * @method void setElasticTpsFlag(boolean $ElasticTpsFlag) 设置<p>是否开启弹性tps</p>
+ * @method float getElasticTpsRatio() 获取<p>弹性tps倍数，默认弹1倍</p>
+ * @method void setElasticTpsRatio(float $ElasticTpsRatio) 设置<p>弹性tps倍数，默认弹1倍</p>
+ * @method integer getMaxRedeliverCount() 获取<p>最大重投次数</p>
+ * @method void setMaxRedeliverCount(integer $MaxRedeliverCount) 设置<p>最大重投次数</p>
+ * @method integer getConsumerTimeout() 获取<p>消费超时时间，单位min</p>
+ * @method void setConsumerTimeout(integer $ConsumerTimeout) 设置<p>消费超时时间，单位min</p>
  */
 class RabbitMQClusterInfo extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 集群名称
+     * @var string <p>集群名称</p>
      */
     public $ClusterName;
 
     /**
-     * @var string 地域信息
+     * @var string <p>地域信息</p>
      */
     public $Region;
 
     /**
-     * @var integer 创建时间，毫秒为单位
+     * @var integer <p>创建时间，毫秒为单位</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 集群说明信息
+     * @var string <p>集群说明信息</p>
      */
     public $Remark;
 
     /**
-     * @var array VPC及网络信息
+     * @var array <p>VPC及网络信息</p>
      */
     public $Vpcs;
 
     /**
-     * @var array 可用区信息
+     * @var array <p>可用区信息</p>
      */
     public $ZoneIds;
 
     /**
-     * @var integer 虚拟主机数量
+     * @var integer <p>虚拟主机数量</p>
      */
     public $VirtualHostNumber;
 
     /**
-     * @var integer 队列数量
+     * @var integer <p>队列数量</p>
      */
     public $QueueNumber;
 
     /**
-     * @var float 每秒生产消息数 单位：条/秒
+     * @var float <p>每秒生产消息数 单位：条/秒</p>
      */
     public $MessagePublishRate;
 
     /**
-     * @var integer 堆积消息数 单位：条
+     * @var integer <p>堆积消息数 单位：条</p>
      */
     public $MessageStackNumber;
 
     /**
-     * @var integer 过期时间
+     * @var integer <p>过期时间</p>
      */
     public $ExpireTime;
 
     /**
-     * @var integer Channel数量
+     * @var integer <p>Channel数量</p>
      */
     public $ChannelNumber;
 
     /**
-     * @var integer Connection数量
+     * @var integer <p>Connection数量</p>
      */
     public $ConnectionNumber;
 
     /**
-     * @var integer Consumer数量
+     * @var integer <p>Consumer数量</p>
      */
     public $ConsumerNumber;
 
     /**
-     * @var integer Exchang数量
+     * @var integer <p>Exchang数量</p>
      */
     public $ExchangeNumber;
 
     /**
-     * @var string 集群异常信息
+     * @var string <p>集群异常信息</p>
      */
     public $ExceptionInformation;
 
     /**
-     * @var integer 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
+     * @var integer <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败</p>
      */
     public $ClusterStatus;
 
     /**
-     * @var integer 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
+     * @var integer <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
      */
     public $AutoRenewFlag;
 
     /**
-     * @var integer 是否开启镜像队列策略。1表示开启，0表示没开启。
+     * @var integer <p>是否开启镜像队列策略。1表示开启，0表示没开启。</p>
      */
     public $MirrorQueuePolicyFlag;
 
     /**
-     * @var float 每秒消费消息数 单位：条/秒
+     * @var float <p>每秒消费消息数 单位：条/秒</p>
      */
     public $MessageConsumeRate;
 
     /**
-     * @var string 集群版本信息
+     * @var string <p>集群版本信息</p>
      */
     public $ClusterVersion;
 
     /**
-     * @var integer 计费模式，0-后付费，1-预付费
+     * @var integer <p>计费模式，0-后付费，1-预付费</p>
      */
     public $PayMode;
 
     /**
-     * @var integer 集群类型
+     * @var integer <p>集群类型</p>
      */
     public $InstanceType;
 
     /**
-     * @var integer 消息保留时间，单位小时
+     * @var integer <p>消息保留时间，单位小时</p>
      */
     public $MessageRetainTime;
 
     /**
-     * @var float 发送消息流量比例
+     * @var float <p>发送消息流量比例</p>
      */
     public $SendReceiveRatio;
 
     /**
-     * @var integer 消息轨迹保留时间，单位小时
+     * @var integer <p>消息轨迹保留时间，单位小时</p>
      */
     public $TraceTime;
 
     /**
-     * @var array 实例标签列表
+     * @var array <p>实例标签列表</p>
      */
     public $Tags;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param string $ClusterName 集群名称
-     * @param string $Region 地域信息
-     * @param integer $CreateTime 创建时间，毫秒为单位
-     * @param string $Remark 集群说明信息
-     * @param array $Vpcs VPC及网络信息
-     * @param array $ZoneIds 可用区信息
-     * @param integer $VirtualHostNumber 虚拟主机数量
-     * @param integer $QueueNumber 队列数量
-     * @param float $MessagePublishRate 每秒生产消息数 单位：条/秒
-     * @param integer $MessageStackNumber 堆积消息数 单位：条
-     * @param integer $ExpireTime 过期时间
-     * @param integer $ChannelNumber Channel数量
-     * @param integer $ConnectionNumber Connection数量
-     * @param integer $ConsumerNumber Consumer数量
-     * @param integer $ExchangeNumber Exchang数量
-     * @param string $ExceptionInformation 集群异常信息
-     * @param integer $ClusterStatus 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
-     * @param integer $AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
-     * @param integer $MirrorQueuePolicyFlag 是否开启镜像队列策略。1表示开启，0表示没开启。
-     * @param float $MessageConsumeRate 每秒消费消息数 单位：条/秒
-     * @param string $ClusterVersion 集群版本信息
-     * @param integer $PayMode 计费模式，0-后付费，1-预付费
-     * @param integer $InstanceType 集群类型
-     * @param integer $MessageRetainTime 消息保留时间，单位小时
-     * @param float $SendReceiveRatio 发送消息流量比例
-     * @param integer $TraceTime 消息轨迹保留时间，单位小时
-     * @param array $Tags 实例标签列表
+     * @var boolean <p>是否开启弹性tps</p>
+     */
+    public $ElasticTpsFlag;
+
+    /**
+     * @var float <p>弹性tps倍数，默认弹1倍</p>
+     */
+    public $ElasticTpsRatio;
+
+    /**
+     * @var integer <p>最大重投次数</p>
+     */
+    public $MaxRedeliverCount;
+
+    /**
+     * @var integer <p>消费超时时间，单位min</p>
+     */
+    public $ConsumerTimeout;
+
+    /**
+     * @param string $ClusterId <p>集群ID</p>
+     * @param string $ClusterName <p>集群名称</p>
+     * @param string $Region <p>地域信息</p>
+     * @param integer $CreateTime <p>创建时间，毫秒为单位</p>
+     * @param string $Remark <p>集群说明信息</p>
+     * @param array $Vpcs <p>VPC及网络信息</p>
+     * @param array $ZoneIds <p>可用区信息</p>
+     * @param integer $VirtualHostNumber <p>虚拟主机数量</p>
+     * @param integer $QueueNumber <p>队列数量</p>
+     * @param float $MessagePublishRate <p>每秒生产消息数 单位：条/秒</p>
+     * @param integer $MessageStackNumber <p>堆积消息数 单位：条</p>
+     * @param integer $ExpireTime <p>过期时间</p>
+     * @param integer $ChannelNumber <p>Channel数量</p>
+     * @param integer $ConnectionNumber <p>Connection数量</p>
+     * @param integer $ConsumerNumber <p>Consumer数量</p>
+     * @param integer $ExchangeNumber <p>Exchang数量</p>
+     * @param string $ExceptionInformation <p>集群异常信息</p>
+     * @param integer $ClusterStatus <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败</p>
+     * @param integer $AutoRenewFlag <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
+     * @param integer $MirrorQueuePolicyFlag <p>是否开启镜像队列策略。1表示开启，0表示没开启。</p>
+     * @param float $MessageConsumeRate <p>每秒消费消息数 单位：条/秒</p>
+     * @param string $ClusterVersion <p>集群版本信息</p>
+     * @param integer $PayMode <p>计费模式，0-后付费，1-预付费</p>
+     * @param integer $InstanceType <p>集群类型</p>
+     * @param integer $MessageRetainTime <p>消息保留时间，单位小时</p>
+     * @param float $SendReceiveRatio <p>发送消息流量比例</p>
+     * @param integer $TraceTime <p>消息轨迹保留时间，单位小时</p>
+     * @param array $Tags <p>实例标签列表</p>
+     * @param boolean $ElasticTpsFlag <p>是否开启弹性tps</p>
+     * @param float $ElasticTpsRatio <p>弹性tps倍数，默认弹1倍</p>
+     * @param integer $MaxRedeliverCount <p>最大重投次数</p>
+     * @param integer $ConsumerTimeout <p>消费超时时间，单位min</p>
      */
     function __construct()
     {
@@ -382,6 +414,22 @@ class RabbitMQClusterInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("ElasticTpsFlag",$param) and $param["ElasticTpsFlag"] !== null) {
+            $this->ElasticTpsFlag = $param["ElasticTpsFlag"];
+        }
+
+        if (array_key_exists("ElasticTpsRatio",$param) and $param["ElasticTpsRatio"] !== null) {
+            $this->ElasticTpsRatio = $param["ElasticTpsRatio"];
+        }
+
+        if (array_key_exists("MaxRedeliverCount",$param) and $param["MaxRedeliverCount"] !== null) {
+            $this->MaxRedeliverCount = $param["MaxRedeliverCount"];
+        }
+
+        if (array_key_exists("ConsumerTimeout",$param) and $param["ConsumerTimeout"] !== null) {
+            $this->ConsumerTimeout = $param["ConsumerTimeout"];
         }
     }
 }

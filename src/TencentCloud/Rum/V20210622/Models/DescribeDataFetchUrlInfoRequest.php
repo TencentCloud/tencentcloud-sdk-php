@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getStartTime() 获取开始时间
  * @method void setStartTime(integer $StartTime) 设置开始时间
- * @method string getType() 获取类型
- * @method void setType(string $Type) 设置类型
+ * @method string getType() 获取Type	是	String	无枚举值。此接口不使用 Type 做分支判断，SQL 固定 group by "url"，Type 字段传任何值不影响查询。
+
+ * @method void setType(string $Type) 设置Type	是	String	无枚举值。此接口不使用 Type 做分支判断，SQL 固定 group by "url"，Type 字段传任何值不影响查询。
+
  * @method integer getEndTime() 获取结束时间
  * @method void setEndTime(integer $EndTime) 设置结束时间
  * @method integer getID() 获取项目ID
@@ -75,7 +77,8 @@ class DescribeDataFetchUrlInfoRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string 类型
+     * @var string Type	是	String	无枚举值。此接口不使用 Type 做分支判断，SQL 固定 group by "url"，Type 字段传任何值不影响查询。
+
      */
     public $Type;
 
@@ -186,7 +189,8 @@ class DescribeDataFetchUrlInfoRequest extends AbstractModel
 
     /**
      * @param integer $StartTime 开始时间
-     * @param string $Type 类型
+     * @param string $Type Type	是	String	无枚举值。此接口不使用 Type 做分支判断，SQL 固定 group by "url"，Type 字段传任何值不影响查询。
+
      * @param integer $EndTime 结束时间
      * @param integer $ID 项目ID
      * @param string $ExtSecond 自定义2

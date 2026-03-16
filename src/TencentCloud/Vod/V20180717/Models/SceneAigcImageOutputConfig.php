@@ -20,106 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AIGC 场景化生图任务的输出媒体文件配置。
  *
- * @method string getStorageMode() 获取存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li>
-默认值：Temporary
- * @method void setStorageMode(string $StorageMode) 设置存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li>
-默认值：Temporary
- * @method string getMediaName() 获取输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
- * @method void setMediaName(string $MediaName) 设置输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
- * @method integer getClassId() 获取分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
-<li>默认值：0，表示其他分类。</li>
- * @method void setClassId(integer $ClassId) 设置分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
-<li>默认值：0，表示其他分类。</li>
- * @method string getExpireTime() 获取输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method void setExpireTime(string $ExpireTime) 设置输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method string getAspectRatio() 获取指定所生成图片的宽高比。输入格式为 W:H。
-本字段在以下场景有效：
-* 生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
-* AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： 
-    1. 仅指定 AspectRatio 时，根据原图输入进行自适应调整。
-    2. 指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。
-    3. 当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。
- * @method void setAspectRatio(string $AspectRatio) 设置指定所生成图片的宽高比。输入格式为 W:H。
-本字段在以下场景有效：
-* 生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
-* AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： 
-    1. 仅指定 AspectRatio 时，根据原图输入进行自适应调整。
-    2. 指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。
-    3. 当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。
- * @method ImageSceneAigcEncodeConfig getEncodeConfig() 获取输出图片编码格式参数。**仅AI换衣场景有效。**
- * @method void setEncodeConfig(ImageSceneAigcEncodeConfig $EncodeConfig) 设置输出图片编码格式参数。**仅AI换衣场景有效。**
- * @method integer getImageWidth() 获取输出图像宽度，**仅AI扩图场景有效**。
- * @method void setImageWidth(integer $ImageWidth) 设置输出图像宽度，**仅AI扩图场景有效**。
- * @method integer getImageHeight() 获取输出图像高度，**仅AI扩图场景有效**。
- * @method void setImageHeight(integer $ImageHeight) 设置输出图像高度，**仅AI扩图场景有效**。
+ * @method string getStorageMode() 获取<p>存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li><br>默认值：Temporary</p>
+ * @method void setStorageMode(string $StorageMode) 设置<p>存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li><br>默认值：Temporary</p>
+ * @method string getMediaName() 获取<p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。</p>
+ * @method void setMediaName(string $MediaName) 设置<p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。</p>
+ * @method integer getClassId() 获取<p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。</p><li>默认值：0，表示其他分类。</li>
+ * @method void setClassId(integer $ClassId) 设置<p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。</p><li>默认值：0，表示其他分类。</li>
+ * @method string getExpireTime() 获取<p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
+ * @method void setExpireTime(string $ExpireTime) 设置<p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
+ * @method string getAspectRatio() 获取<p>指定所生成图片的宽高比。输入格式为 W:H。<br>本字段在以下场景有效：</p><ul><li>生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9</li><li>AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： <ol><li>仅指定 AspectRatio 时，根据原图输入进行自适应调整。</li><li>指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。</li><li>当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。</li></ol></li></ul>
+ * @method void setAspectRatio(string $AspectRatio) 设置<p>指定所生成图片的宽高比。输入格式为 W:H。<br>本字段在以下场景有效：</p><ul><li>生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9</li><li>AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： <ol><li>仅指定 AspectRatio 时，根据原图输入进行自适应调整。</li><li>指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。</li><li>当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。</li></ol></li></ul>
+ * @method ImageSceneAigcEncodeConfig getEncodeConfig() 获取<p>输出图片编码格式参数。<strong>仅AI换衣场景有效。</strong></p>
+ * @method void setEncodeConfig(ImageSceneAigcEncodeConfig $EncodeConfig) 设置<p>输出图片编码格式参数。<strong>仅AI换衣场景有效。</strong></p>
+ * @method integer getImageWidth() 获取<p>输出图像宽度，<strong>仅AI扩图场景有效</strong>。</p>
+ * @method void setImageWidth(integer $ImageWidth) 设置<p>输出图像宽度，<strong>仅AI扩图场景有效</strong>。</p>
+ * @method integer getImageHeight() 获取<p>输出图像高度，<strong>仅AI扩图场景有效</strong>。</p>
+ * @method void setImageHeight(integer $ImageHeight) 设置<p>输出图像高度，<strong>仅AI扩图场景有效</strong>。</p>
+ * @method string getResolution() 获取<p>输出分辨率。仅change_clothes、change_clothes_under场景有效。可选值：1K、2K、4K。</p>
+ * @method void setResolution(string $Resolution) 设置<p>输出分辨率。仅change_clothes、change_clothes_under场景有效。可选值：1K、2K、4K。</p>
  */
 class SceneAigcImageOutputConfig extends AbstractModel
 {
     /**
-     * @var string 存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li>
-默认值：Temporary
+     * @var string <p>存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li><br>默认值：Temporary</p>
      */
     public $StorageMode;
 
     /**
-     * @var string 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
+     * @var string <p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。</p>
      */
     public $MediaName;
 
     /**
-     * @var integer 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
-<li>默认值：0，表示其他分类。</li>
+     * @var integer <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。</p><li>默认值：0，表示其他分类。</li>
      */
     public $ClassId;
 
     /**
-     * @var string 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @var string <p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
      */
     public $ExpireTime;
 
     /**
-     * @var string 指定所生成图片的宽高比。输入格式为 W:H。
-本字段在以下场景有效：
-* 生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
-* AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： 
-    1. 仅指定 AspectRatio 时，根据原图输入进行自适应调整。
-    2. 指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。
-    3. 当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。
+     * @var string <p>指定所生成图片的宽高比。输入格式为 W:H。<br>本字段在以下场景有效：</p><ul><li>生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9</li><li>AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： <ol><li>仅指定 AspectRatio 时，根据原图输入进行自适应调整。</li><li>指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。</li><li>当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。</li></ol></li></ul>
      */
     public $AspectRatio;
 
     /**
-     * @var ImageSceneAigcEncodeConfig 输出图片编码格式参数。**仅AI换衣场景有效。**
+     * @var ImageSceneAigcEncodeConfig <p>输出图片编码格式参数。<strong>仅AI换衣场景有效。</strong></p>
      */
     public $EncodeConfig;
 
     /**
-     * @var integer 输出图像宽度，**仅AI扩图场景有效**。
+     * @var integer <p>输出图像宽度，<strong>仅AI扩图场景有效</strong>。</p>
      */
     public $ImageWidth;
 
     /**
-     * @var integer 输出图像高度，**仅AI扩图场景有效**。
+     * @var integer <p>输出图像高度，<strong>仅AI扩图场景有效</strong>。</p>
      */
     public $ImageHeight;
 
     /**
-     * @param string $StorageMode 存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li>
-默认值：Temporary
-     * @param string $MediaName 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
-     * @param integer $ClassId 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
-<li>默认值：0，表示其他分类。</li>
-     * @param string $ExpireTime 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param string $AspectRatio 指定所生成图片的宽高比。输入格式为 W:H。
-本字段在以下场景有效：
-* 生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
-* AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： 
-    1. 仅指定 AspectRatio 时，根据原图输入进行自适应调整。
-    2. 指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。
-    3. 当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。
-     * @param ImageSceneAigcEncodeConfig $EncodeConfig 输出图片编码格式参数。**仅AI换衣场景有效。**
-     * @param integer $ImageWidth 输出图像宽度，**仅AI扩图场景有效**。
-     * @param integer $ImageHeight 输出图像高度，**仅AI扩图场景有效**。
+     * @var string <p>输出分辨率。仅change_clothes、change_clothes_under场景有效。可选值：1K、2K、4K。</p>
+     */
+    public $Resolution;
+
+    /**
+     * @param string $StorageMode <p>存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li><br>默认值：Temporary</p>
+     * @param string $MediaName <p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。</p>
+     * @param integer $ClassId <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。</p><li>默认值：0，表示其他分类。</li>
+     * @param string $ExpireTime <p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
+     * @param string $AspectRatio <p>指定所生成图片的宽高比。输入格式为 W:H。<br>本字段在以下场景有效：</p><ul><li>生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9</li><li>AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： <ol><li>仅指定 AspectRatio 时，根据原图输入进行自适应调整。</li><li>指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。</li><li>当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。</li></ol></li></ul>
+     * @param ImageSceneAigcEncodeConfig $EncodeConfig <p>输出图片编码格式参数。<strong>仅AI换衣场景有效。</strong></p>
+     * @param integer $ImageWidth <p>输出图像宽度，<strong>仅AI扩图场景有效</strong>。</p>
+     * @param integer $ImageHeight <p>输出图像高度，<strong>仅AI扩图场景有效</strong>。</p>
+     * @param string $Resolution <p>输出分辨率。仅change_clothes、change_clothes_under场景有效。可选值：1K、2K、4K。</p>
      */
     function __construct()
     {
@@ -165,6 +141,10 @@ class SceneAigcImageOutputConfig extends AbstractModel
 
         if (array_key_exists("ImageHeight",$param) and $param["ImageHeight"] !== null) {
             $this->ImageHeight = $param["ImageHeight"];
+        }
+
+        if (array_key_exists("Resolution",$param) and $param["Resolution"] !== null) {
+            $this->Resolution = $param["Resolution"];
         }
     }
 }

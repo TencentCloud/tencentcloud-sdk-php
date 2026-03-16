@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableLimit(boolean $EnableLimit) 设置是否开启限流
  * @method string getGrpcHost() 获取访问grpc时需携带的虚拟Host
  * @method void setGrpcHost(string $GrpcHost) 设置访问grpc时需携带的虚拟Host
+ * @method GatewayConfig getGatewayConfig() 获取网关相关配置
+ * @method void setGatewayConfig(GatewayConfig $GatewayConfig) 设置网关相关配置
  */
 class ServiceCallInfoV2 extends AbstractModel
 {
@@ -85,6 +87,11 @@ class ServiceCallInfoV2 extends AbstractModel
     public $GrpcHost;
 
     /**
+     * @var GatewayConfig 网关相关配置
+     */
+    public $GatewayConfig;
+
+    /**
      * @param string $ServiceGroupId 服务组id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InternetEndpoint 服务的公网调用地址
@@ -96,6 +103,7 @@ class ServiceCallInfoV2 extends AbstractModel
      * @param array $AuthTokens LLM token 列表
      * @param boolean $EnableLimit 是否开启限流
      * @param string $GrpcHost 访问grpc时需携带的虚拟Host
+     * @param GatewayConfig $GatewayConfig 网关相关配置
      */
     function __construct()
     {
@@ -141,6 +149,11 @@ class ServiceCallInfoV2 extends AbstractModel
 
         if (array_key_exists("GrpcHost",$param) and $param["GrpcHost"] !== null) {
             $this->GrpcHost = $param["GrpcHost"];
+        }
+
+        if (array_key_exists("GatewayConfig",$param) and $param["GatewayConfig"] !== null) {
+            $this->GatewayConfig = new GatewayConfig();
+            $this->GatewayConfig->deserialize($param["GatewayConfig"]);
         }
     }
 }

@@ -27,19 +27,23 @@ use TencentCloud\Tione\V20211111\Models as Models;
 
 使用该接口调用时需要携带腾讯云的密钥信息用于身份信息鉴权，建议通过腾讯云的云 API SDK调用，具体可以参考
 https://cloud.tencent.com/document/product/1278/85305
+ * @method Models\CreateDataSourceResponse CreateDataSource(Models\CreateDataSourceRequest $req) 创建数据源
  * @method Models\CreateDatasetResponse CreateDataset(Models\CreateDatasetRequest $req) 创建数据集
  * @method Models\CreateExportResponse CreateExport(Models\CreateExportRequest $req) 创建任务式建模训练任务，Notebook，在线服务和批量预测任务日志下载任务API
  * @method Models\CreateModelServiceResponse CreateModelService(Models\CreateModelServiceRequest $req) 用于创建、发布一个新的模型服务
  * @method Models\CreateModelServiceAuthTokenResponse CreateModelServiceAuthToken(Models\CreateModelServiceAuthTokenRequest $req) 创建一个 AuthToken
+ * @method Models\CreateMountLimitResponse CreateMountLimit(Models\CreateMountLimitRequest $req) 创建挂载限制
  * @method Models\CreateNotebookResponse CreateNotebook(Models\CreateNotebookRequest $req) 创建Notebook
  * @method Models\CreatePresignedNotebookUrlResponse CreatePresignedNotebookUrl(Models\CreatePresignedNotebookUrlRequest $req) 生成Notebook访问链接
  * @method Models\CreateTrainingModelResponse CreateTrainingModel(Models\CreateTrainingModelRequest $req) 导入模型
  * @method Models\CreateTrainingTaskResponse CreateTrainingTask(Models\CreateTrainingTaskRequest $req) 创建模型训练任务
+ * @method Models\DeleteDataSourceResponse DeleteDataSource(Models\DeleteDataSourceRequest $req) 删除数据源
  * @method Models\DeleteDatasetResponse DeleteDataset(Models\DeleteDatasetRequest $req) 删除数据集
  * @method Models\DeleteExportResponse DeleteExport(Models\DeleteExportRequest $req) 删除任务式建模训练任务，Notebook，在线服务和批量预测任务日志导出任务API
  * @method Models\DeleteModelServiceResponse DeleteModelService(Models\DeleteModelServiceRequest $req) 根据服务id删除模型服务
  * @method Models\DeleteModelServiceAuthTokenResponse DeleteModelServiceAuthToken(Models\DeleteModelServiceAuthTokenRequest $req) 删除一个 AuthToken
  * @method Models\DeleteModelServiceGroupResponse DeleteModelServiceGroup(Models\DeleteModelServiceGroupRequest $req) 根据服务组id删除服务组下所有模型服务
+ * @method Models\DeleteMountLimitResponse DeleteMountLimit(Models\DeleteMountLimitRequest $req) 删除挂载限制。注意：删除挂载限制后，该存储对应的所有数据源也会被删除
  * @method Models\DeleteNotebookResponse DeleteNotebook(Models\DeleteNotebookRequest $req) 删除Notebook
  * @method Models\DeleteTrainingModelResponse DeleteTrainingModel(Models\DeleteTrainingModelRequest $req) 删除模型
  * @method Models\DeleteTrainingModelVersionResponse DeleteTrainingModelVersion(Models\DeleteTrainingModelVersionRequest $req) 删除模型版本
@@ -50,6 +54,8 @@ https://cloud.tencent.com/document/product/1278/85305
  * @method Models\DescribeBillingSpecsResponse DescribeBillingSpecs(Models\DescribeBillingSpecsRequest $req) 本接口(DescribeBillingSpecs) 提供查询计费项列表
  * @method Models\DescribeBillingSpecsPriceResponse DescribeBillingSpecsPrice(Models\DescribeBillingSpecsPriceRequest $req) 本接口(DescribeBillingSpecsPrice)用于查询按量计费计费项价格。
  * @method Models\DescribeBuildInImagesResponse DescribeBuildInImages(Models\DescribeBuildInImagesRequest $req) 获取内置镜像列表
+ * @method Models\DescribeDataSourceResponse DescribeDataSource(Models\DescribeDataSourceRequest $req) 获取数据源详情
+ * @method Models\DescribeDataSourcesResponse DescribeDataSources(Models\DescribeDataSourcesRequest $req) 获取数据源列表
  * @method Models\DescribeDatasetsResponse DescribeDatasets(Models\DescribeDatasetsRequest $req) 查询数据集列表
  * @method Models\DescribeEventsResponse DescribeEvents(Models\DescribeEventsRequest $req) 获取任务式建模训练任务，Notebook，在线服务和批量预测任务的事件API
  * @method Models\DescribeExportResponse DescribeExport(Models\DescribeExportRequest $req) 查看任务式建模训练任务，Notebook，在线服务和批量预测任务日志下载任务状态API
@@ -64,6 +70,9 @@ https://cloud.tencent.com/document/product/1278/85305
  * @method Models\DescribeModelServiceGroupResponse DescribeModelServiceGroup(Models\DescribeModelServiceGroupRequest $req) 查询单个服务组
  * @method Models\DescribeModelServiceGroupsResponse DescribeModelServiceGroups(Models\DescribeModelServiceGroupsRequest $req) 列举在线推理服务组
  * @method Models\DescribeModelServiceHotUpdatedResponse DescribeModelServiceHotUpdated(Models\DescribeModelServiceHotUpdatedRequest $req) 用于查询模型服务能否开启热更新
+ * @method Models\DescribeMountInstanceResponse DescribeMountInstance(Models\DescribeMountInstanceRequest $req) DescribeMountInstance
+ * @method Models\DescribeMountInstancesResponse DescribeMountInstances(Models\DescribeMountInstancesRequest $req) 非数据源挂载时获取实例列表
+ * @method Models\DescribeMountLimitsResponse DescribeMountLimits(Models\DescribeMountLimitsRequest $req) 获取挂载限制列表
  * @method Models\DescribeNotebookResponse DescribeNotebook(Models\DescribeNotebookRequest $req) Notebook详情
  * @method Models\DescribeNotebooksResponse DescribeNotebooks(Models\DescribeNotebooksRequest $req) Notebook列表
  * @method Models\DescribePlatformImagesResponse DescribePlatformImages(Models\DescribePlatformImagesRequest $req) 查询平台镜像信息
@@ -85,6 +94,8 @@ https://cloud.tencent.com/document/product/1278/85305
  * @method Models\StopModelAccelerateTaskResponse StopModelAccelerateTask(Models\StopModelAccelerateTaskRequest $req) 停止模型加速任务
  * @method Models\StopNotebookResponse StopNotebook(Models\StopNotebookRequest $req) 停止Notebook
  * @method Models\StopTrainingTaskResponse StopTrainingTask(Models\StopTrainingTaskRequest $req) 停止模型训练任务
+ * @method Models\UpdateDataSourceResponse UpdateDataSource(Models\UpdateDataSourceRequest $req) 更新数据源
+ * @method Models\UpdateMountLimitResponse UpdateMountLimit(Models\UpdateMountLimitRequest $req) 创建挂载限制
  * @method Models\UpdateSubAccountLinuxUserInfoResponse UpdateSubAccountLinuxUserInfo(Models\UpdateSubAccountLinuxUserInfoRequest $req) 更新子账号Linux用户信息
  */
 

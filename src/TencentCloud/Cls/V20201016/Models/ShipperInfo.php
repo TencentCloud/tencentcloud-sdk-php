@@ -20,266 +20,194 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 投递规则
  *
- * @method string getShipperId() 获取投递规则ID
- * @method void setShipperId(string $ShipperId) 设置投递规则ID
- * @method string getTopicId() 获取日志主题ID
- * @method void setTopicId(string $TopicId) 设置日志主题ID
- * @method string getBucket() 获取投递的bucket地址
- * @method void setBucket(string $Bucket) 设置投递的bucket地址
- * @method string getPrefix() 获取投递的前缀目录
- * @method void setPrefix(string $Prefix) 设置投递的前缀目录
- * @method string getShipperName() 获取投递规则的名字
- * @method void setShipperName(string $ShipperName) 设置投递规则的名字
- * @method integer getInterval() 获取投递的时间间隔，单位 秒
- * @method void setInterval(integer $Interval) 设置投递的时间间隔，单位 秒
- * @method integer getMaxSize() 获取投递的文件的最大值，单位 MB
- * @method void setMaxSize(integer $MaxSize) 设置投递的文件的最大值，单位 MB
- * @method boolean getStatus() 获取是否生效
- * @method void setStatus(boolean $Status) 设置是否生效
- * @method array getFilterRules() 获取投递日志的过滤规则
- * @method void setFilterRules(array $FilterRules) 设置投递日志的过滤规则
- * @method string getPartition() 获取投递日志的分区规则，支持strftime的时间格式表示
- * @method void setPartition(string $Partition) 设置投递日志的分区规则，支持strftime的时间格式表示
- * @method CompressInfo getCompress() 获取投递日志的压缩配置
- * @method void setCompress(CompressInfo $Compress) 设置投递日志的压缩配置
- * @method ContentInfo getContent() 获取投递日志的内容格式配置
- * @method void setContent(ContentInfo $Content) 设置投递日志的内容格式配置
- * @method string getCreateTime() 获取投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS
- * @method void setCreateTime(string $CreateTime) 设置投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS
- * @method integer getFilenameMode() 获取投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
- * @method void setFilenameMode(integer $FilenameMode) 设置投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
- * @method integer getStartTime() 获取投递数据范围的开始时间点
- * @method void setStartTime(integer $StartTime) 设置投递数据范围的开始时间点
- * @method integer getEndTime() 获取投递数据范围的结束时间点
- * @method void setEndTime(integer $EndTime) 设置投递数据范围的结束时间点
- * @method float getProgress() 获取历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
- * @method void setProgress(float $Progress) 设置历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
- * @method integer getRemainTime() 获取历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
- * @method void setRemainTime(integer $RemainTime) 设置历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
- * @method integer getHistoryStatus() 获取历史任务状态：
-0：实时任务
-1：任务准备中
-2：任务运行中
-3：任务运行异常
-4：任务运行结束
- * @method void setHistoryStatus(integer $HistoryStatus) 设置历史任务状态：
-0：实时任务
-1：任务准备中
-2：任务运行中
-3：任务运行异常
-4：任务运行结束
- * @method string getStorageType() 获取对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
-参考值有：
-STANDARD：标准存储
-STANDARD_IA：低频存储
-ARCHIVE：归档存储
-DEEP_ARCHIVE：深度归档存储
-MAZ_STANDARD：标准存储（多 AZ）
-MAZ_STANDARD_IA：低频存储（多 AZ）
-INTELLIGENT_TIERING：智能分层存储
-MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
- * @method void setStorageType(string $StorageType) 设置对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
-参考值有：
-STANDARD：标准存储
-STANDARD_IA：低频存储
-ARCHIVE：归档存储
-DEEP_ARCHIVE：深度归档存储
-MAZ_STANDARD：标准存储（多 AZ）
-MAZ_STANDARD_IA：低频存储（多 AZ）
-INTELLIGENT_TIERING：智能分层存储
-MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
- * @method string getRoleArn() 获取角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
- * @method void setRoleArn(string $RoleArn) 设置角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
- * @method string getExternalId() 获取外部ID
- * @method void setExternalId(string $ExternalId) 设置外部ID
- * @method integer getTaskStatus() 获取任务运行状态。支持`0`,`1`,`2`
-
-- `0`: 停止
-- `1`: 运行中
-- `2`: 异常
- * @method void setTaskStatus(integer $TaskStatus) 设置任务运行状态。支持`0`,`1`,`2`
-
-- `0`: 停止
-- `1`: 运行中
-- `2`: 异常
+ * @method string getShipperId() 获取<p>投递规则ID</p>
+ * @method void setShipperId(string $ShipperId) 设置<p>投递规则ID</p>
+ * @method string getTopicId() 获取<p>日志主题ID</p>
+ * @method void setTopicId(string $TopicId) 设置<p>日志主题ID</p>
+ * @method string getBucket() 获取<p>投递的bucket地址</p>
+ * @method void setBucket(string $Bucket) 设置<p>投递的bucket地址</p>
+ * @method string getPrefix() 获取<p>投递的前缀目录</p>
+ * @method void setPrefix(string $Prefix) 设置<p>投递的前缀目录</p>
+ * @method string getShipperName() 获取<p>投递规则的名字</p>
+ * @method void setShipperName(string $ShipperName) 设置<p>投递规则的名字</p>
+ * @method integer getInterval() 获取<p>投递的时间间隔，单位 秒</p>
+ * @method void setInterval(integer $Interval) 设置<p>投递的时间间隔，单位 秒</p>
+ * @method integer getMaxSize() 获取<p>投递的文件的最大值，单位 MB</p>
+ * @method void setMaxSize(integer $MaxSize) 设置<p>投递的文件的最大值，单位 MB</p>
+ * @method boolean getStatus() 获取<p>是否生效</p>
+ * @method void setStatus(boolean $Status) 设置<p>是否生效</p>
+ * @method array getFilterRules() 获取<p>投递日志的过滤规则</p>
+ * @method void setFilterRules(array $FilterRules) 设置<p>投递日志的过滤规则</p>
+ * @method string getPartition() 获取<p>投递日志的分区规则，支持strftime的时间格式表示</p>
+ * @method void setPartition(string $Partition) 设置<p>投递日志的分区规则，支持strftime的时间格式表示</p>
+ * @method CompressInfo getCompress() 获取<p>投递日志的压缩配置</p>
+ * @method void setCompress(CompressInfo $Compress) 设置<p>投递日志的压缩配置</p>
+ * @method ContentInfo getContent() 获取<p>投递日志的内容格式配置</p>
+ * @method void setContent(ContentInfo $Content) 设置<p>投递日志的内容格式配置</p>
+ * @method string getCreateTime() 获取<p>投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS</p>
+ * @method integer getFilenameMode() 获取<p>投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）</p>
+ * @method void setFilenameMode(integer $FilenameMode) 设置<p>投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）</p>
+ * @method integer getStartTime() 获取<p>投递数据范围的开始时间点</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>投递数据范围的开始时间点</p>
+ * @method integer getEndTime() 获取<p>投递数据范围的结束时间点</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>投递数据范围的结束时间点</p>
+ * @method float getProgress() 获取<p>历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）</p>
+ * @method void setProgress(float $Progress) 设置<p>历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）</p>
+ * @method integer getRemainTime() 获取<p>历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）</p><p>单位：秒</p>
+ * @method void setRemainTime(integer $RemainTime) 设置<p>历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）</p><p>单位：秒</p>
+ * @method integer getHistoryStatus() 获取<p>历史任务状态：<br>0：实时任务<br>1：任务准备中<br>2：任务运行中<br>3：任务运行异常<br>4：任务运行结束</p>
+ * @method void setHistoryStatus(integer $HistoryStatus) 设置<p>历史任务状态：<br>0：实时任务<br>1：任务准备中<br>2：任务运行中<br>3：任务运行异常<br>4：任务运行结束</p>
+ * @method string getStorageType() 获取<p>对象存储类型，默认值为 STANDARD。枚举值请参见<a href="https://cloud.tencent.com/document/product/436/33417"> 存储类型概述</a> 文档。<br>参考值有：<br>STANDARD：标准存储<br>STANDARD_IA：低频存储<br>ARCHIVE：归档存储<br>DEEP_ARCHIVE：深度归档存储<br>MAZ_STANDARD：标准存储（多 AZ）<br>MAZ_STANDARD_IA：低频存储（多 AZ）<br>INTELLIGENT_TIERING：智能分层存储<br>MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）</p>
+ * @method void setStorageType(string $StorageType) 设置<p>对象存储类型，默认值为 STANDARD。枚举值请参见<a href="https://cloud.tencent.com/document/product/436/33417"> 存储类型概述</a> 文档。<br>参考值有：<br>STANDARD：标准存储<br>STANDARD_IA：低频存储<br>ARCHIVE：归档存储<br>DEEP_ARCHIVE：深度归档存储<br>MAZ_STANDARD：标准存储（多 AZ）<br>MAZ_STANDARD_IA：低频存储（多 AZ）<br>INTELLIGENT_TIERING：智能分层存储<br>MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）</p>
+ * @method string getRoleArn() 获取<p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
+ * @method void setRoleArn(string $RoleArn) 设置<p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
+ * @method string getExternalId() 获取<p>外部ID</p>
+ * @method void setExternalId(string $ExternalId) 设置<p>外部ID</p>
+ * @method integer getTaskStatus() 获取<p>任务运行状态。支持<code>0</code>,<code>1</code>,<code>2</code></p><ul><li><code>0</code>: 停止</li><li><code>1</code>: 运行中</li><li><code>2</code>: 异常</li></ul>
+ * @method void setTaskStatus(integer $TaskStatus) 设置<p>任务运行状态。支持<code>0</code>,<code>1</code>,<code>2</code></p><ul><li><code>0</code>: 停止</li><li><code>1</code>: 运行中</li><li><code>2</code>: 异常</li></ul>
  */
 class ShipperInfo extends AbstractModel
 {
     /**
-     * @var string 投递规则ID
+     * @var string <p>投递规则ID</p>
      */
     public $ShipperId;
 
     /**
-     * @var string 日志主题ID
+     * @var string <p>日志主题ID</p>
      */
     public $TopicId;
 
     /**
-     * @var string 投递的bucket地址
+     * @var string <p>投递的bucket地址</p>
      */
     public $Bucket;
 
     /**
-     * @var string 投递的前缀目录
+     * @var string <p>投递的前缀目录</p>
      */
     public $Prefix;
 
     /**
-     * @var string 投递规则的名字
+     * @var string <p>投递规则的名字</p>
      */
     public $ShipperName;
 
     /**
-     * @var integer 投递的时间间隔，单位 秒
+     * @var integer <p>投递的时间间隔，单位 秒</p>
      */
     public $Interval;
 
     /**
-     * @var integer 投递的文件的最大值，单位 MB
+     * @var integer <p>投递的文件的最大值，单位 MB</p>
      */
     public $MaxSize;
 
     /**
-     * @var boolean 是否生效
+     * @var boolean <p>是否生效</p>
      */
     public $Status;
 
     /**
-     * @var array 投递日志的过滤规则
+     * @var array <p>投递日志的过滤规则</p>
      */
     public $FilterRules;
 
     /**
-     * @var string 投递日志的分区规则，支持strftime的时间格式表示
+     * @var string <p>投递日志的分区规则，支持strftime的时间格式表示</p>
      */
     public $Partition;
 
     /**
-     * @var CompressInfo 投递日志的压缩配置
+     * @var CompressInfo <p>投递日志的压缩配置</p>
      */
     public $Compress;
 
     /**
-     * @var ContentInfo 投递日志的内容格式配置
+     * @var ContentInfo <p>投递日志的内容格式配置</p>
      */
     public $Content;
 
     /**
-     * @var string 投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS
+     * @var string <p>投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+     * @var integer <p>投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）</p>
      */
     public $FilenameMode;
 
     /**
-     * @var integer 投递数据范围的开始时间点
+     * @var integer <p>投递数据范围的开始时间点</p>
      */
     public $StartTime;
 
     /**
-     * @var integer 投递数据范围的结束时间点
+     * @var integer <p>投递数据范围的结束时间点</p>
      */
     public $EndTime;
 
     /**
-     * @var float 历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
+     * @var float <p>历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）</p>
      */
     public $Progress;
 
     /**
-     * @var integer 历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
+     * @var integer <p>历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）</p><p>单位：秒</p>
      */
     public $RemainTime;
 
     /**
-     * @var integer 历史任务状态：
-0：实时任务
-1：任务准备中
-2：任务运行中
-3：任务运行异常
-4：任务运行结束
+     * @var integer <p>历史任务状态：<br>0：实时任务<br>1：任务准备中<br>2：任务运行中<br>3：任务运行异常<br>4：任务运行结束</p>
      */
     public $HistoryStatus;
 
     /**
-     * @var string 对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
-参考值有：
-STANDARD：标准存储
-STANDARD_IA：低频存储
-ARCHIVE：归档存储
-DEEP_ARCHIVE：深度归档存储
-MAZ_STANDARD：标准存储（多 AZ）
-MAZ_STANDARD_IA：低频存储（多 AZ）
-INTELLIGENT_TIERING：智能分层存储
-MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
+     * @var string <p>对象存储类型，默认值为 STANDARD。枚举值请参见<a href="https://cloud.tencent.com/document/product/436/33417"> 存储类型概述</a> 文档。<br>参考值有：<br>STANDARD：标准存储<br>STANDARD_IA：低频存储<br>ARCHIVE：归档存储<br>DEEP_ARCHIVE：深度归档存储<br>MAZ_STANDARD：标准存储（多 AZ）<br>MAZ_STANDARD_IA：低频存储（多 AZ）<br>INTELLIGENT_TIERING：智能分层存储<br>MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）</p>
      */
     public $StorageType;
 
     /**
-     * @var string 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     * @var string <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
      */
     public $RoleArn;
 
     /**
-     * @var string 外部ID
+     * @var string <p>外部ID</p>
      */
     public $ExternalId;
 
     /**
-     * @var integer 任务运行状态。支持`0`,`1`,`2`
-
-- `0`: 停止
-- `1`: 运行中
-- `2`: 异常
+     * @var integer <p>任务运行状态。支持<code>0</code>,<code>1</code>,<code>2</code></p><ul><li><code>0</code>: 停止</li><li><code>1</code>: 运行中</li><li><code>2</code>: 异常</li></ul>
      */
     public $TaskStatus;
 
     /**
-     * @param string $ShipperId 投递规则ID
-     * @param string $TopicId 日志主题ID
-     * @param string $Bucket 投递的bucket地址
-     * @param string $Prefix 投递的前缀目录
-     * @param string $ShipperName 投递规则的名字
-     * @param integer $Interval 投递的时间间隔，单位 秒
-     * @param integer $MaxSize 投递的文件的最大值，单位 MB
-     * @param boolean $Status 是否生效
-     * @param array $FilterRules 投递日志的过滤规则
-     * @param string $Partition 投递日志的分区规则，支持strftime的时间格式表示
-     * @param CompressInfo $Compress 投递日志的压缩配置
-     * @param ContentInfo $Content 投递日志的内容格式配置
-     * @param string $CreateTime 投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS
-     * @param integer $FilenameMode 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
-     * @param integer $StartTime 投递数据范围的开始时间点
-     * @param integer $EndTime 投递数据范围的结束时间点
-     * @param float $Progress 历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
-     * @param integer $RemainTime 历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
-     * @param integer $HistoryStatus 历史任务状态：
-0：实时任务
-1：任务准备中
-2：任务运行中
-3：任务运行异常
-4：任务运行结束
-     * @param string $StorageType 对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
-参考值有：
-STANDARD：标准存储
-STANDARD_IA：低频存储
-ARCHIVE：归档存储
-DEEP_ARCHIVE：深度归档存储
-MAZ_STANDARD：标准存储（多 AZ）
-MAZ_STANDARD_IA：低频存储（多 AZ）
-INTELLIGENT_TIERING：智能分层存储
-MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
-     * @param string $RoleArn 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
-     * @param string $ExternalId 外部ID
-     * @param integer $TaskStatus 任务运行状态。支持`0`,`1`,`2`
-
-- `0`: 停止
-- `1`: 运行中
-- `2`: 异常
+     * @param string $ShipperId <p>投递规则ID</p>
+     * @param string $TopicId <p>日志主题ID</p>
+     * @param string $Bucket <p>投递的bucket地址</p>
+     * @param string $Prefix <p>投递的前缀目录</p>
+     * @param string $ShipperName <p>投递规则的名字</p>
+     * @param integer $Interval <p>投递的时间间隔，单位 秒</p>
+     * @param integer $MaxSize <p>投递的文件的最大值，单位 MB</p>
+     * @param boolean $Status <p>是否生效</p>
+     * @param array $FilterRules <p>投递日志的过滤规则</p>
+     * @param string $Partition <p>投递日志的分区规则，支持strftime的时间格式表示</p>
+     * @param CompressInfo $Compress <p>投递日志的压缩配置</p>
+     * @param ContentInfo $Content <p>投递日志的内容格式配置</p>
+     * @param string $CreateTime <p>投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS</p>
+     * @param integer $FilenameMode <p>投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）</p>
+     * @param integer $StartTime <p>投递数据范围的开始时间点</p>
+     * @param integer $EndTime <p>投递数据范围的结束时间点</p>
+     * @param float $Progress <p>历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）</p>
+     * @param integer $RemainTime <p>历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）</p><p>单位：秒</p>
+     * @param integer $HistoryStatus <p>历史任务状态：<br>0：实时任务<br>1：任务准备中<br>2：任务运行中<br>3：任务运行异常<br>4：任务运行结束</p>
+     * @param string $StorageType <p>对象存储类型，默认值为 STANDARD。枚举值请参见<a href="https://cloud.tencent.com/document/product/436/33417"> 存储类型概述</a> 文档。<br>参考值有：<br>STANDARD：标准存储<br>STANDARD_IA：低频存储<br>ARCHIVE：归档存储<br>DEEP_ARCHIVE：深度归档存储<br>MAZ_STANDARD：标准存储（多 AZ）<br>MAZ_STANDARD_IA：低频存储（多 AZ）<br>INTELLIGENT_TIERING：智能分层存储<br>MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）</p>
+     * @param string $RoleArn <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
+     * @param string $ExternalId <p>外部ID</p>
+     * @param integer $TaskStatus <p>任务运行状态。支持<code>0</code>,<code>1</code>,<code>2</code></p><ul><li><code>0</code>: 停止</li><li><code>1</code>: 运行中</li><li><code>2</code>: 异常</li></ul>
      */
     function __construct()
     {

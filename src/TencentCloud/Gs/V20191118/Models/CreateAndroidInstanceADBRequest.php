@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAndroidInstanceId() 获取安卓实例 ID
  * @method void setAndroidInstanceId(string $AndroidInstanceId) 设置安卓实例 ID
+ * @method string getExpiredTime() 获取过期时间。默认 1 小时，最长 30 天。格式为 2025-07-02T10:15:36Z
+ * @method void setExpiredTime(string $ExpiredTime) 设置过期时间。默认 1 小时，最长 30 天。格式为 2025-07-02T10:15:36Z
  */
 class CreateAndroidInstanceADBRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class CreateAndroidInstanceADBRequest extends AbstractModel
     public $AndroidInstanceId;
 
     /**
+     * @var string 过期时间。默认 1 小时，最长 30 天。格式为 2025-07-02T10:15:36Z
+     */
+    public $ExpiredTime;
+
+    /**
      * @param string $AndroidInstanceId 安卓实例 ID
+     * @param string $ExpiredTime 过期时间。默认 1 小时，最长 30 天。格式为 2025-07-02T10:15:36Z
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class CreateAndroidInstanceADBRequest extends AbstractModel
         }
         if (array_key_exists("AndroidInstanceId",$param) and $param["AndroidInstanceId"] !== null) {
             $this->AndroidInstanceId = $param["AndroidInstanceId"];
+        }
+
+        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
+            $this->ExpiredTime = $param["ExpiredTime"];
         }
     }
 }

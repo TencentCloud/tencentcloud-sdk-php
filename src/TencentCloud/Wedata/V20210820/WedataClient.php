@@ -301,7 +301,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\RenewWorkflowSchedulerInfoDsResponse RenewWorkflowSchedulerInfoDs(Models\RenewWorkflowSchedulerInfoDsRequest $req) 更新工作流下任务调度信息
  * @method Models\ReportDatabaseResponse ReportDatabase(Models\ReportDatabaseRequest $req) 上报database元数据
  * @method Models\ReportSchemaResponse ReportSchema(Models\ReportSchemaRequest $req) 上报schema元数据
- * @method Models\ReportTableResponse ReportTable(Models\ReportTableRequest $req) 上报table元数据
+ * @method Models\ReportTableResponse ReportTable(Models\ReportTableRequest $req) 上报table元数据,当前列数量限制在300
  * @method Models\ReportTaskLineageResponse ReportTaskLineage(Models\ReportTaskLineageRequest $req) 血缘上报接口
  * @method Models\ResumeIntegrationTaskResponse ResumeIntegrationTask(Models\ResumeIntegrationTaskRequest $req) 继续集成任务
  * @method Models\RobAndLockIntegrationTaskResponse RobAndLockIntegrationTask(Models\RobAndLockIntegrationTaskRequest $req) 抢占锁定集成任务

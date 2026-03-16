@@ -154,6 +154,8 @@ HYBRID_PAID:
  * @method void setSchedulingStrategy(string $SchedulingStrategy) 设置调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
  * @method LogConfig getGatewayLogConfig() 获取网关日志投递相关配置
  * @method void setGatewayLogConfig(LogConfig $GatewayLogConfig) 设置网关日志投递相关配置
+ * @method GatewayConfig getGatewayConfig() 获取网关相关配置
+ * @method void setGatewayConfig(GatewayConfig $GatewayConfig) 设置网关相关配置
  */
 class CreateModelServiceRequest extends AbstractModel
 {
@@ -401,6 +403,11 @@ HYBRID_PAID:
     public $GatewayLogConfig;
 
     /**
+     * @var GatewayConfig 网关相关配置
+     */
+    public $GatewayConfig;
+
+    /**
      * @param string $ServiceGroupId 新增版本时需要填写
      * @param string $ServiceGroupName 不超过60个字，仅支持英文、数字、下划线"_"、短横"-"，只能以英文、数字开头
      * @param string $ServiceDescription 模型服务的描述
@@ -468,6 +475,7 @@ HYBRID_PAID:
      * @param array $VolumeMounts 数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。
      * @param string $SchedulingStrategy 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
      * @param LogConfig $GatewayLogConfig 网关日志投递相关配置
+     * @param GatewayConfig $GatewayConfig 网关相关配置
      */
     function __construct()
     {
@@ -689,6 +697,11 @@ HYBRID_PAID:
         if (array_key_exists("GatewayLogConfig",$param) and $param["GatewayLogConfig"] !== null) {
             $this->GatewayLogConfig = new LogConfig();
             $this->GatewayLogConfig->deserialize($param["GatewayLogConfig"]);
+        }
+
+        if (array_key_exists("GatewayConfig",$param) and $param["GatewayConfig"] !== null) {
+            $this->GatewayConfig = new GatewayConfig();
+            $this->GatewayConfig->deserialize($param["GatewayConfig"]);
         }
     }
 }

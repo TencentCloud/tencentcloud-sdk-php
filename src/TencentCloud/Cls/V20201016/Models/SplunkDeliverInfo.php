@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChannel(string $Channel) 设置<p>高级配置-通道</p>
  * @method string getDSLFilter() 获取<p>预过滤处理-对写入 Splunk 原始数据进行预过滤处理语句</p>
  * @method void setDSLFilter(string $DSLFilter) 设置<p>预过滤处理-对写入 Splunk 原始数据进行预过滤处理语句</p>
+ * @method ExternalRole getExternalRole() 获取<p>高级配置-跨账户投递参数</p>
+ * @method void setExternalRole(ExternalRole $ExternalRole) 设置<p>高级配置-跨账户投递参数</p>
  */
 class SplunkDeliverInfo extends AbstractModel
 {
@@ -143,6 +145,11 @@ class SplunkDeliverInfo extends AbstractModel
     public $DSLFilter;
 
     /**
+     * @var ExternalRole <p>高级配置-跨账户投递参数</p>
+     */
+    public $ExternalRole;
+
+    /**
      * @param string $TaskId <p>任务id</p>
      * @param string $Name <p>任务名称</p>
      * @param integer $Uin <p>用户id</p>
@@ -160,6 +167,7 @@ class SplunkDeliverInfo extends AbstractModel
      * @param integer $IndexAck <p>高级配置-是否启用索引器；1-不开启；2-开启；</p>
      * @param string $Channel <p>高级配置-通道</p>
      * @param string $DSLFilter <p>预过滤处理-对写入 Splunk 原始数据进行预过滤处理语句</p>
+     * @param ExternalRole $ExternalRole <p>高级配置-跨账户投递参数</p>
      */
     function __construct()
     {
@@ -242,6 +250,11 @@ class SplunkDeliverInfo extends AbstractModel
 
         if (array_key_exists("DSLFilter",$param) and $param["DSLFilter"] !== null) {
             $this->DSLFilter = $param["DSLFilter"];
+        }
+
+        if (array_key_exists("ExternalRole",$param) and $param["ExternalRole"] !== null) {
+            $this->ExternalRole = new ExternalRole();
+            $this->ExternalRole->deserialize($param["ExternalRole"]);
         }
     }
 }

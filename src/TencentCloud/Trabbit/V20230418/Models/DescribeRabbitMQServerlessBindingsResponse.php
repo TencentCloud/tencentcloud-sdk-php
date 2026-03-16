@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRabbitMQServerlessBindings返回参数结构体
  *
- * @method array getBindingInfoList() 获取路由关系列表
- * @method void setBindingInfoList(array $BindingInfoList) 设置路由关系列表
- * @method integer getTotalCount() 获取数量
- * @method void setTotalCount(integer $TotalCount) 设置数量
+ * @method array getBindingInfoList() 获取<p>路由关系列表</p>
+ * @method void setBindingInfoList(array $BindingInfoList) 设置<p>路由关系列表</p>
+ * @method integer getTotalCount() 获取<p>数量</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>数量</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeRabbitMQServerlessBindingsResponse extends AbstractModel
 {
     /**
-     * @var array 路由关系列表
+     * @var array <p>路由关系列表</p>
      */
     public $BindingInfoList;
 
     /**
-     * @var integer 数量
+     * @var integer <p>数量</p>
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeRabbitMQServerlessBindingsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $BindingInfoList 路由关系列表
-     * @param integer $TotalCount 数量
+     * @param array $BindingInfoList <p>路由关系列表</p>
+     * @param integer $TotalCount <p>数量</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

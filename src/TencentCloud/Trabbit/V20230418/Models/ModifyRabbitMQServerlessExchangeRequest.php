@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExchangeName(string $ExchangeName) 设置exchange 名称
  * @method string getRemark() 获取备注信息
  * @method void setRemark(string $Remark) 设置备注信息
+ * @method string getAlternateExchange() 获取备用交换机
+ * @method void setAlternateExchange(string $AlternateExchange) 设置备用交换机
  */
 class ModifyRabbitMQServerlessExchangeRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyRabbitMQServerlessExchangeRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var string 备用交换机
+     */
+    public $AlternateExchange;
+
+    /**
      * @param string $InstanceId 实例 id
      * @param string $VirtualHost vhost 参数
      * @param string $ExchangeName exchange 名称
      * @param string $Remark 备注信息
+     * @param string $AlternateExchange 备用交换机
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ModifyRabbitMQServerlessExchangeRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("AlternateExchange",$param) and $param["AlternateExchange"] !== null) {
+            $this->AlternateExchange = $param["AlternateExchange"];
         }
     }
 }

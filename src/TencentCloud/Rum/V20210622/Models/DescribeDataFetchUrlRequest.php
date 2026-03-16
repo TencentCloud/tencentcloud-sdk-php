@@ -70,8 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置HTTP 状态码（tag 值）：用于过滤字段 status；支持 4xx（status =~ /4[0-9]{2}/）和 5xx（status =~ /5[0-9]{2}/）等错误码统计。
  * @method string getRet() 获取retcode
  * @method void setRet(string $Ret) 设置retcode
- * @method string getNetStatus() 获取网络状态
- * @method void setNetStatus(string $NetStatus) 设置网络状态
+ * @method string getNetStatus() 获取网络状态(tag 值):用于过滤/聚合字段 netStatus；枚举值：0(正常)、1(弱网)、2(断网)、3(其他)。
+ * @method void setNetStatus(string $NetStatus) 设置网络状态(tag 值):用于过滤/聚合字段 netStatus；枚举值：0(正常)、1(弱网)、2(断网)、3(其他)。
  */
 class DescribeDataFetchUrlRequest extends AbstractModel
 {
@@ -201,7 +201,7 @@ class DescribeDataFetchUrlRequest extends AbstractModel
     public $Ret;
 
     /**
-     * @var string 网络状态
+     * @var string 网络状态(tag 值):用于过滤/聚合字段 netStatus；枚举值：0(正常)、1(弱网)、2(断网)、3(其他)。
      */
     public $NetStatus;
 
@@ -231,7 +231,7 @@ class DescribeDataFetchUrlRequest extends AbstractModel
      * @param string $Env 环境
      * @param string $Status HTTP 状态码（tag 值）：用于过滤字段 status；支持 4xx（status =~ /4[0-9]{2}/）和 5xx（status =~ /5[0-9]{2}/）等错误码统计。
      * @param string $Ret retcode
-     * @param string $NetStatus 网络状态
+     * @param string $NetStatus 网络状态(tag 值):用于过滤/聚合字段 netStatus；枚举值：0(正常)、1(弱网)、2(断网)、3(其他)。
      */
     function __construct()
     {

@@ -33,7 +33,7 @@ use TencentCloud\Tiw\V20190919\Models as Models;
  * @method Models\DescribePPTCheckCallbackResponse DescribePPTCheckCallback(Models\DescribePPTCheckCallbackRequest $req) 查询PPT检测任务回调地址
  * @method Models\DescribeRunningTasksResponse DescribeRunningTasks(Models\DescribeRunningTasksRequest $req) 根据指定的任务类型，获取当前正在执行中的任务列表。只能查询最近3天内创建的任务。
  * @method Models\DescribeSnapshotTaskResponse DescribeSnapshotTask(Models\DescribeSnapshotTaskRequest $req) 获取指定白板板书生成任务信息
- * @method Models\DescribeTranscodeResponse DescribeTranscode(Models\DescribeTranscodeRequest $req) 查询文档转码任务的执行进度与转码结果
+ * @method Models\DescribeTranscodeResponse DescribeTranscode(Models\DescribeTranscodeRequest $req) 查询文档转码任务的执行进度与转码结果，支持查询最近半年内的任务结果
  * @method Models\DescribeTranscodeByUrlResponse DescribeTranscodeByUrl(Models\DescribeTranscodeByUrlRequest $req) 通过文档URL查询转码任务，返回最近一天内最新的转码任务状态
  * @method Models\DescribeTranscodeCallbackResponse DescribeTranscodeCallback(Models\DescribeTranscodeCallbackRequest $req) 查询文档转码回调地址
  * @method Models\DescribeVideoGenerationTaskResponse DescribeVideoGenerationTask(Models\DescribeVideoGenerationTaskRequest $req) 查询录制视频生成任务状态与结果

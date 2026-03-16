@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryHunyuanTo3DProJob请求参数结构体
  *
- * @method string getJobId() 获取任务ID。
- * @method void setJobId(string $JobId) 设置任务ID。
+ * @method string getJobId() 获取<p>任务ID。</p>
+ * @method void setJobId(string $JobId) 设置<p>任务ID。</p>
  */
 class QueryHunyuanTo3DProJobRequest extends AbstractModel
 {
     /**
-     * @var string 任务ID。
+     * @var string <p>任务ID。</p>
      */
     public $JobId;
 
     /**
-     * @param string $JobId 任务ID。
+     * @param string $JobId <p>任务ID。</p>
      */
     function __construct()
     {

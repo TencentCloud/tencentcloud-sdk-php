@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskId() 获取<p>任务id</p>
  * @method void setTaskId(string $TaskId) 设置<p>任务id</p>
- * @method string getTopicId() 获取<p>日志主题id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
- * @method void setTopicId(string $TopicId) 设置<p>日志主题id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
- * @method string getName() 获取<p>投递任务名称name有以下限制：- 不能为空- 长度不大于64- 只能包含aA-zZ、下划线、-、0-9</p>
- * @method void setName(string $Name) 设置<p>投递任务名称name有以下限制：- 不能为空- 长度不大于64- 只能包含aA-zZ、下划线、-、0-9</p>
+ * @method string getTopicId() 获取<p>日志主题id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
+ * @method void setTopicId(string $TopicId) 设置<p>日志主题id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
+ * @method string getName() 获取<p>投递任务名称<br>name有以下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul>
+ * @method void setName(string $Name) 设置<p>投递任务名称<br>name有以下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul>
  * @method integer getEnable() 获取<p>投递任务启用状态；0:禁用；1:启用</p>
  * @method void setEnable(integer $Enable) 设置<p>投递任务启用状态；0:禁用；1:启用</p>
  * @method NetInfo getNetInfo() 获取<p>splunk投递任务-目标配置</p>
@@ -34,18 +34,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetadataInfo(MetadataInfo $MetadataInfo) 设置<p>splunk投递任务元信息</p>
  * @method integer getHasServiceLog() 获取<p>是否启用服务日志；1:关闭；2:开启</p>
  * @method void setHasServiceLog(integer $HasServiceLog) 设置<p>是否启用服务日志；1:关闭；2:开启</p>
- * @method integer getIndexAck() 获取<p>高级配置-是否启用索引器;1-不开启；2-开启；默认为：1</p>
- * @method void setIndexAck(integer $IndexAck) 设置<p>高级配置-是否启用索引器;1-不开启；2-开启；默认为：1</p>
+ * @method integer getIndexAck() 获取<p>高级配置-是否启用索引器;<br>1-不开启；2-开启；默认为：1</p>
+ * @method void setIndexAck(integer $IndexAck) 设置<p>高级配置-是否启用索引器;<br>1-不开启；2-开启；默认为：1</p>
  * @method string getSource() 获取<p>高级配置-数据来源；不超过64个字符</p>
  * @method void setSource(string $Source) 设置<p>高级配置-数据来源；不超过64个字符</p>
  * @method string getSourceType() 获取<p>高级配置-数据来源类型；不超过64个字符</p>
  * @method void setSourceType(string $SourceType) 设置<p>高级配置-数据来源类型；不超过64个字符</p>
  * @method string getIndex() 获取<p>高级配置-Splunk写入的索引；不超过64个字符</p>
  * @method void setIndex(string $Index) 设置<p>高级配置-Splunk写入的索引；不超过64个字符</p>
- * @method string getChannel() 获取<p>高级配置-通道。需满足限制：如果启用索引器，该值不能为空</p>
- * @method void setChannel(string $Channel) 设置<p>高级配置-通道。需满足限制：如果启用索引器，该值不能为空</p>
+ * @method string getChannel() 获取<p>高级配置-通道。<br>需满足限制：如果启用索引器，该值不能为空</p>
+ * @method void setChannel(string $Channel) 设置<p>高级配置-通道。<br>需满足限制：如果启用索引器，该值不能为空</p>
  * @method string getDSLFilter() 获取<p>预过滤处理-对写入 Splunk 原始数据进行预过滤处理</p>
  * @method void setDSLFilter(string $DSLFilter) 设置<p>预过滤处理-对写入 Splunk 原始数据进行预过滤处理</p>
+ * @method ExternalRole getExternalRole() 获取<p>高级配置-跨账户投递用户角色授权信息</p><p>取值参考：<a href="https://console.cloud.tencent.com/cam/role/create?payloadType=account">新建自定义角色</a></p>
+ * @method void setExternalRole(ExternalRole $ExternalRole) 设置<p>高级配置-跨账户投递用户角色授权信息</p><p>取值参考：<a href="https://console.cloud.tencent.com/cam/role/create?payloadType=account">新建自定义角色</a></p>
  */
 class ModifySplunkDeliverRequest extends AbstractModel
 {
@@ -55,12 +57,12 @@ class ModifySplunkDeliverRequest extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string <p>日志主题id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
+     * @var string <p>日志主题id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
      */
     public $TopicId;
 
     /**
-     * @var string <p>投递任务名称name有以下限制：- 不能为空- 长度不大于64- 只能包含aA-zZ、下划线、-、0-9</p>
+     * @var string <p>投递任务名称<br>name有以下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul>
      */
     public $Name;
 
@@ -85,7 +87,7 @@ class ModifySplunkDeliverRequest extends AbstractModel
     public $HasServiceLog;
 
     /**
-     * @var integer <p>高级配置-是否启用索引器;1-不开启；2-开启；默认为：1</p>
+     * @var integer <p>高级配置-是否启用索引器;<br>1-不开启；2-开启；默认为：1</p>
      */
     public $IndexAck;
 
@@ -105,7 +107,7 @@ class ModifySplunkDeliverRequest extends AbstractModel
     public $Index;
 
     /**
-     * @var string <p>高级配置-通道。需满足限制：如果启用索引器，该值不能为空</p>
+     * @var string <p>高级配置-通道。<br>需满足限制：如果启用索引器，该值不能为空</p>
      */
     public $Channel;
 
@@ -115,19 +117,25 @@ class ModifySplunkDeliverRequest extends AbstractModel
     public $DSLFilter;
 
     /**
+     * @var ExternalRole <p>高级配置-跨账户投递用户角色授权信息</p><p>取值参考：<a href="https://console.cloud.tencent.com/cam/role/create?payloadType=account">新建自定义角色</a></p>
+     */
+    public $ExternalRole;
+
+    /**
      * @param string $TaskId <p>任务id</p>
-     * @param string $TopicId <p>日志主题id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
-     * @param string $Name <p>投递任务名称name有以下限制：- 不能为空- 长度不大于64- 只能包含aA-zZ、下划线、-、0-9</p>
+     * @param string $TopicId <p>日志主题id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
+     * @param string $Name <p>投递任务名称<br>name有以下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul>
      * @param integer $Enable <p>投递任务启用状态；0:禁用；1:启用</p>
      * @param NetInfo $NetInfo <p>splunk投递任务-目标配置</p>
      * @param MetadataInfo $MetadataInfo <p>splunk投递任务元信息</p>
      * @param integer $HasServiceLog <p>是否启用服务日志；1:关闭；2:开启</p>
-     * @param integer $IndexAck <p>高级配置-是否启用索引器;1-不开启；2-开启；默认为：1</p>
+     * @param integer $IndexAck <p>高级配置-是否启用索引器;<br>1-不开启；2-开启；默认为：1</p>
      * @param string $Source <p>高级配置-数据来源；不超过64个字符</p>
      * @param string $SourceType <p>高级配置-数据来源类型；不超过64个字符</p>
      * @param string $Index <p>高级配置-Splunk写入的索引；不超过64个字符</p>
-     * @param string $Channel <p>高级配置-通道。需满足限制：如果启用索引器，该值不能为空</p>
+     * @param string $Channel <p>高级配置-通道。<br>需满足限制：如果启用索引器，该值不能为空</p>
      * @param string $DSLFilter <p>预过滤处理-对写入 Splunk 原始数据进行预过滤处理</p>
+     * @param ExternalRole $ExternalRole <p>高级配置-跨账户投递用户角色授权信息</p><p>取值参考：<a href="https://console.cloud.tencent.com/cam/role/create?payloadType=account">新建自定义角色</a></p>
      */
     function __construct()
     {
@@ -194,6 +202,11 @@ class ModifySplunkDeliverRequest extends AbstractModel
 
         if (array_key_exists("DSLFilter",$param) and $param["DSLFilter"] !== null) {
             $this->DSLFilter = $param["DSLFilter"];
+        }
+
+        if (array_key_exists("ExternalRole",$param) and $param["ExternalRole"] !== null) {
+            $this->ExternalRole = new ExternalRole();
+            $this->ExternalRole->deserialize($param["ExternalRole"]);
         }
     }
 }

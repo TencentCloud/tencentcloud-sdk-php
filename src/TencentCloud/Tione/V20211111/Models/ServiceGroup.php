@@ -128,6 +128,8 @@ UPDATING 更新中
  * @method void setSubUinName(string $SubUinName) 设置子用户的 nickname
  * @method LogConfig getGatewayLogConfig() 获取网关日志投递相关配置
  * @method void setGatewayLogConfig(LogConfig $GatewayLogConfig) 设置网关日志投递相关配置
+ * @method GatewayConfig getGatewayConfig() 获取网关路由相关配置
+ * @method void setGatewayConfig(GatewayConfig $GatewayConfig) 设置网关路由相关配置
  */
 class ServiceGroup extends AbstractModel
 {
@@ -286,6 +288,11 @@ UPDATING 更新中
     public $GatewayLogConfig;
 
     /**
+     * @var GatewayConfig 网关路由相关配置
+     */
+    public $GatewayConfig;
+
+    /**
      * @param string $ServiceGroupId 服务组id
      * @param string $ServiceGroupName 服务组名
      * @param string $CreatedBy 创建者
@@ -340,6 +347,7 @@ UPDATING 更新中
      * @param string $MonitorSource 用于监控的创建来源字段
      * @param string $SubUinName 子用户的 nickname
      * @param LogConfig $GatewayLogConfig 网关日志投递相关配置
+     * @param GatewayConfig $GatewayConfig 网关路由相关配置
      */
     function __construct()
     {
@@ -468,6 +476,11 @@ UPDATING 更新中
         if (array_key_exists("GatewayLogConfig",$param) and $param["GatewayLogConfig"] !== null) {
             $this->GatewayLogConfig = new LogConfig();
             $this->GatewayLogConfig->deserialize($param["GatewayLogConfig"]);
+        }
+
+        if (array_key_exists("GatewayConfig",$param) and $param["GatewayConfig"] !== null) {
+            $this->GatewayConfig = new GatewayConfig();
+            $this->GatewayConfig->deserialize($param["GatewayConfig"]);
         }
     }
 }

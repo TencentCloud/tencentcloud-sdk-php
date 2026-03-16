@@ -20,38 +20,40 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSplunkDeliver请求参数结构体
  *
- * @method string getTopicId() 获取<p>日志主题id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
- * @method void setTopicId(string $TopicId) 设置<p>日志主题id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
- * @method string getName() 获取<p>splunk投递任务名称；name有如下限制：- 不能为空- 长度不大于64- 只能包含aA-zZ、下划线、-、0-9</p>
- * @method void setName(string $Name) 设置<p>splunk投递任务名称；name有如下限制：- 不能为空- 长度不大于64- 只能包含aA-zZ、下划线、-、0-9</p>
+ * @method string getTopicId() 获取<p>日志主题id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
+ * @method void setTopicId(string $TopicId) 设置<p>日志主题id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
+ * @method string getName() 获取<p>splunk投递任务名称；<br>name有如下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul>
+ * @method void setName(string $Name) 设置<p>splunk投递任务名称；<br>name有如下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul>
  * @method NetInfo getNetInfo() 获取<p>Splunk投递任务-目标配置-网络信息</p>
  * @method void setNetInfo(NetInfo $NetInfo) 设置<p>Splunk投递任务-目标配置-网络信息</p>
  * @method MetadataInfo getMetadataInfo() 获取<p>Splunk投递任务元信息</p>
  * @method void setMetadataInfo(MetadataInfo $MetadataInfo) 设置<p>Splunk投递任务元信息</p>
  * @method integer getHasServiceLog() 获取<p>是否开启服务日志 1:关闭；2:开启 ;默认开启</p>
  * @method void setHasServiceLog(integer $HasServiceLog) 设置<p>是否开启服务日志 1:关闭；2:开启 ;默认开启</p>
- * @method integer getIndexAck() 获取<p>高级配置-是否启用索引器；1-不启用；2-启用；默认：1</p>
- * @method void setIndexAck(integer $IndexAck) 设置<p>高级配置-是否启用索引器；1-不启用；2-启用；默认：1</p>
+ * @method integer getIndexAck() 获取<p>高级配置-是否启用索引器；1-不启用；2-启用；<br>默认：1</p>
+ * @method void setIndexAck(integer $IndexAck) 设置<p>高级配置-是否启用索引器；1-不启用；2-启用；<br>默认：1</p>
  * @method string getSource() 获取<p>高级配置-数据来源；不超过64个字符</p>
  * @method void setSource(string $Source) 设置<p>高级配置-数据来源；不超过64个字符</p>
  * @method string getSourceType() 获取<p>高级配置-数据来源类型；不超过64个字符</p>
  * @method void setSourceType(string $SourceType) 设置<p>高级配置-数据来源类型；不超过64个字符</p>
  * @method string getIndex() 获取<p>高级配置-Splunk写入的索引；不超过64个字符</p>
  * @method void setIndex(string $Index) 设置<p>高级配置-Splunk写入的索引；不超过64个字符</p>
- * @method string getChannel() 获取<p>高级配置-通道需满足限制：如果启用索引器，那么Channel必填</p>
- * @method void setChannel(string $Channel) 设置<p>高级配置-通道需满足限制：如果启用索引器，那么Channel必填</p>
+ * @method string getChannel() 获取<p>高级配置-通道<br>需满足限制：如果启用索引器，那么Channel必填</p>
+ * @method void setChannel(string $Channel) 设置<p>高级配置-通道<br>需满足限制：如果启用索引器，那么Channel必填</p>
  * @method string getDSLFilter() 获取<p>日志预过滤-数据写入 Splunk 的原始数据进行预过滤处理</p>
  * @method void setDSLFilter(string $DSLFilter) 设置<p>日志预过滤-数据写入 Splunk 的原始数据进行预过滤处理</p>
+ * @method ExternalRole getExternalRole() 获取<p>高级配置-跨账户投递用户角色授权信息</p><p>取值参考：<a href="https://console.cloud.tencent.com/cam/role/create?payloadType=account">新建自定义角色</a></p>
+ * @method void setExternalRole(ExternalRole $ExternalRole) 设置<p>高级配置-跨账户投递用户角色授权信息</p><p>取值参考：<a href="https://console.cloud.tencent.com/cam/role/create?payloadType=account">新建自定义角色</a></p>
  */
 class CreateSplunkDeliverRequest extends AbstractModel
 {
     /**
-     * @var string <p>日志主题id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
+     * @var string <p>日志主题id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
      */
     public $TopicId;
 
     /**
-     * @var string <p>splunk投递任务名称；name有如下限制：- 不能为空- 长度不大于64- 只能包含aA-zZ、下划线、-、0-9</p>
+     * @var string <p>splunk投递任务名称；<br>name有如下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul>
      */
     public $Name;
 
@@ -71,7 +73,7 @@ class CreateSplunkDeliverRequest extends AbstractModel
     public $HasServiceLog;
 
     /**
-     * @var integer <p>高级配置-是否启用索引器；1-不启用；2-启用；默认：1</p>
+     * @var integer <p>高级配置-是否启用索引器；1-不启用；2-启用；<br>默认：1</p>
      */
     public $IndexAck;
 
@@ -91,7 +93,7 @@ class CreateSplunkDeliverRequest extends AbstractModel
     public $Index;
 
     /**
-     * @var string <p>高级配置-通道需满足限制：如果启用索引器，那么Channel必填</p>
+     * @var string <p>高级配置-通道<br>需满足限制：如果启用索引器，那么Channel必填</p>
      */
     public $Channel;
 
@@ -101,17 +103,23 @@ class CreateSplunkDeliverRequest extends AbstractModel
     public $DSLFilter;
 
     /**
-     * @param string $TopicId <p>日志主题id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
-     * @param string $Name <p>splunk投递任务名称；name有如下限制：- 不能为空- 长度不大于64- 只能包含aA-zZ、下划线、-、0-9</p>
+     * @var ExternalRole <p>高级配置-跨账户投递用户角色授权信息</p><p>取值参考：<a href="https://console.cloud.tencent.com/cam/role/create?payloadType=account">新建自定义角色</a></p>
+     */
+    public $ExternalRole;
+
+    /**
+     * @param string $TopicId <p>日志主题id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
+     * @param string $Name <p>splunk投递任务名称；<br>name有如下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul>
      * @param NetInfo $NetInfo <p>Splunk投递任务-目标配置-网络信息</p>
      * @param MetadataInfo $MetadataInfo <p>Splunk投递任务元信息</p>
      * @param integer $HasServiceLog <p>是否开启服务日志 1:关闭；2:开启 ;默认开启</p>
-     * @param integer $IndexAck <p>高级配置-是否启用索引器；1-不启用；2-启用；默认：1</p>
+     * @param integer $IndexAck <p>高级配置-是否启用索引器；1-不启用；2-启用；<br>默认：1</p>
      * @param string $Source <p>高级配置-数据来源；不超过64个字符</p>
      * @param string $SourceType <p>高级配置-数据来源类型；不超过64个字符</p>
      * @param string $Index <p>高级配置-Splunk写入的索引；不超过64个字符</p>
-     * @param string $Channel <p>高级配置-通道需满足限制：如果启用索引器，那么Channel必填</p>
+     * @param string $Channel <p>高级配置-通道<br>需满足限制：如果启用索引器，那么Channel必填</p>
      * @param string $DSLFilter <p>日志预过滤-数据写入 Splunk 的原始数据进行预过滤处理</p>
+     * @param ExternalRole $ExternalRole <p>高级配置-跨账户投递用户角色授权信息</p><p>取值参考：<a href="https://console.cloud.tencent.com/cam/role/create?payloadType=account">新建自定义角色</a></p>
      */
     function __construct()
     {
@@ -170,6 +178,11 @@ class CreateSplunkDeliverRequest extends AbstractModel
 
         if (array_key_exists("DSLFilter",$param) and $param["DSLFilter"] !== null) {
             $this->DSLFilter = $param["DSLFilter"];
+        }
+
+        if (array_key_exists("ExternalRole",$param) and $param["ExternalRole"] !== null) {
+            $this->ExternalRole = new ExternalRole();
+            $this->ExternalRole->deserialize($param["ExternalRole"]);
         }
     }
 }

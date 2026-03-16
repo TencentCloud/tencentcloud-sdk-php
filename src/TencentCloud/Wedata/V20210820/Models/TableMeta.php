@@ -346,6 +346,10 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineCreator(string $EngineCreator) 设置引擎侧创建者
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getProjectStatus() 获取项目状态：0：禁用，1：启用，-3:禁用中，2：启用中
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProjectStatus(integer $ProjectStatus) 设置项目状态：0：禁用，1：启用，-3:禁用中，2：启用中
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableMeta extends AbstractModel
 {
@@ -837,6 +841,12 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
     public $EngineCreator;
 
     /**
+     * @var integer 项目状态：0：禁用，1：启用，-3:禁用中，2：启用中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProjectStatus;
+
+    /**
      * @param string $TableId 表的全局唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableName 表名称
@@ -999,6 +1009,8 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
      * @param string $MetaFrom Catalog来源
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineCreator 引擎侧创建者
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ProjectStatus 项目状态：0：禁用，1：启用，-3:禁用中，2：启用中
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1364,6 +1376,10 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
 
         if (array_key_exists("EngineCreator",$param) and $param["EngineCreator"] !== null) {
             $this->EngineCreator = $param["EngineCreator"];
+        }
+
+        if (array_key_exists("ProjectStatus",$param) and $param["ProjectStatus"] !== null) {
+            $this->ProjectStatus = $param["ProjectStatus"];
         }
     }
 }

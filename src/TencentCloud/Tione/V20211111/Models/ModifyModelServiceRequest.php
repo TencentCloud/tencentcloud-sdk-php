@@ -136,6 +136,8 @@ HYBRID_PAID:
  * @method void setVolumeMounts(array $VolumeMounts) 设置数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。
  * @method string getSchedulingStrategy() 获取调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
  * @method void setSchedulingStrategy(string $SchedulingStrategy) 设置调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
+ * @method integer getTargetProjectId() 获取目标工作空间，不为0则进行迁移，源服务只允许在默认空间
+ * @method void setTargetProjectId(integer $TargetProjectId) 设置目标工作空间，不为0则进行迁移，源服务只允许在默认空间
  */
 class ModifyModelServiceRequest extends AbstractModel
 {
@@ -338,6 +340,11 @@ HYBRID_PAID:
     public $SchedulingStrategy;
 
     /**
+     * @var integer 目标工作空间，不为0则进行迁移，源服务只允许在默认空间
+     */
+    public $TargetProjectId;
+
+    /**
      * @param string $ServiceId 服务id
      * @param ModelInfo $ModelInfo 模型信息，需要挂载模型时填写
      * @param ImageInfo $ImageInfo 镜像信息，配置服务运行所需的镜像地址等信息
@@ -396,6 +403,7 @@ HYBRID_PAID:
      * @param string $ResourceGroupId 资源组 id
      * @param array $VolumeMounts 数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。
      * @param string $SchedulingStrategy 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
+     * @param integer $TargetProjectId 目标工作空间，不为0则进行迁移，源服务只允许在默认空间
      */
     function __construct()
     {
@@ -575,6 +583,10 @@ HYBRID_PAID:
 
         if (array_key_exists("SchedulingStrategy",$param) and $param["SchedulingStrategy"] !== null) {
             $this->SchedulingStrategy = $param["SchedulingStrategy"];
+        }
+
+        if (array_key_exists("TargetProjectId",$param) and $param["TargetProjectId"] !== null) {
+            $this->TargetProjectId = $param["TargetProjectId"];
         }
     }
 }

@@ -20,43 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCloudProductLogCollection返回参数结构体
  *
- * @method string getTopicId() 获取日志主题ID
- * @method void setTopicId(string $TopicId) 设置日志主题ID
- * @method string getTopicName() 获取日志主题名称
- * @method void setTopicName(string $TopicName) 设置日志主题名称
- * @method string getLogsetId() 获取日志集ID
- * @method void setLogsetId(string $LogsetId) 设置日志集ID
- * @method string getLogsetName() 获取日志集名称
- * @method void setLogsetName(string $LogsetName) 设置日志集名称
- * @method integer getStatus() 获取-1 创建中，1创建完成 
- * @method void setStatus(integer $Status) 设置-1 创建中，1创建完成 
+ * @method string getTopicId() 获取<p>日志主题ID</p>
+ * @method void setTopicId(string $TopicId) 设置<p>日志主题ID</p>
+ * @method string getTopicName() 获取<p>日志主题名称</p>
+ * @method void setTopicName(string $TopicName) 设置<p>日志主题名称</p>
+ * @method string getLogsetId() 获取<p>日志集ID</p>
+ * @method void setLogsetId(string $LogsetId) 设置<p>日志集ID</p>
+ * @method string getLogsetName() 获取<p>日志集名称</p>
+ * @method void setLogsetName(string $LogsetName) 设置<p>日志集名称</p>
+ * @method integer getStatus() 获取<p>-1 创建中，1创建完成</p>
+ * @method void setStatus(integer $Status) 设置<p>-1 创建中，1创建完成</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateCloudProductLogCollectionResponse extends AbstractModel
 {
     /**
-     * @var string 日志主题ID
+     * @var string <p>日志主题ID</p>
      */
     public $TopicId;
 
     /**
-     * @var string 日志主题名称
+     * @var string <p>日志主题名称</p>
      */
     public $TopicName;
 
     /**
-     * @var string 日志集ID
+     * @var string <p>日志集ID</p>
      */
     public $LogsetId;
 
     /**
-     * @var string 日志集名称
+     * @var string <p>日志集名称</p>
      */
     public $LogsetName;
 
     /**
-     * @var integer -1 创建中，1创建完成 
+     * @var integer <p>-1 创建中，1创建完成</p>
      */
     public $Status;
 
@@ -66,11 +66,11 @@ class CreateCloudProductLogCollectionResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TopicId 日志主题ID
-     * @param string $TopicName 日志主题名称
-     * @param string $LogsetId 日志集ID
-     * @param string $LogsetName 日志集名称
-     * @param integer $Status -1 创建中，1创建完成 
+     * @param string $TopicId <p>日志主题ID</p>
+     * @param string $TopicName <p>日志主题名称</p>
+     * @param string $LogsetId <p>日志集ID</p>
+     * @param string $LogsetName <p>日志集名称</p>
+     * @param integer $Status <p>-1 创建中，1创建完成</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

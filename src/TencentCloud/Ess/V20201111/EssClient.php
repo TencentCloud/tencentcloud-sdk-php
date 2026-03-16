@@ -745,6 +745,17 @@ use TencentCloud\Ess\V20201111\Models as Models;
 - **合同**：已存在的合同将保持不变。新发起的合同需使用新的企业名称作为签署方，否则无法签署。
 - **印章**：所有现有的机构公章和合同专用章将被删除，并将根据新的企业名称重新生成。法人章、财务专用章和人事专用章将不做处理。
 - **证书**：企业证书将重新由CA机构使用新的企业名称生成。
+ * @method Models\CreatePartnerAuthorizationLinkResponse CreatePartnerAuthorizationLink(Models\CreatePartnerAuthorizationLinkRequest $req) 获取他方企业第三方应用的创建及授权及企业用户初始化链接
+此链接在 7 天内有效，若失效请重新生成。
+若第一次初始化，打开此链接，会进行应用号的创建，子客的创建，打开此链接的人，必须是合作方企业的超管或者法人，否则无法认证成功。
+若传递了应用号Id，若之前的初始化还未创建子客成功，则可以继续创建子客企业。
+
+注: 
+1. BusinessId “集成方业务标记”唯一，不可变更， 此标记由电子签产品经理提供，请调用方保存。
+2. 若“第三方应用id”不为空，需要其“集成方业务标记”与接口一致。
+3. 不支持客户自己创建“已有第三方应用id”进行授权。（即“已有第三方应用id”的集成方业务标记为空，不能进行授权）。
+4. 创建的子客企业与合作企业一致，其中包括超管姓名，企业名称。
+5. 创建好的第三方应用号，不支持在页面进行修改编辑，只能通过接口的方式进行管理。
  * @method Models\CreatePartnerAutoSignAuthUrlResponse CreatePartnerAutoSignAuthUrl(Models\CreatePartnerAutoSignAuthUrlRequest $req) 创建一个用于他方自动签授权的链接（可选择他方授权或我方授权）。通过这个链接，合作方企业可以直接进入小程序，进行自动签授权操作。
 
 如果授权企业尚未开通企业自动签功能，该链接还将引导他们首先开通本企业的自动签服务
@@ -1152,6 +1163,12 @@ use TencentCloud\Ess\V20201111\Models as Models;
 适用场景4：主企业代理子企业操作的场景，需要设置Agent参数，并且ProxyOrganizationId设置为子企业的id即可。
 
 注意事项：SaaS角色和集团角色对应的权限树是不一样的。
+ * @method Models\ModifyPartnerAuthorizationResponse ModifyPartnerAuthorization(Models\ModifyPartnerAuthorizationRequest $req) 管理他方企业授权的第三方应用
+
+注: 
+1. BusinessId “集成方业务标记”需要与“第三方应用id”一致
+2. 不支持客户自己创建“已有第三方应用id”进行变更。（即“已有第三方应用id”的集成方业务标记为空，不能进行变更）。
+3. 当前仅支持修改回调地址和加密key。
  * @method Models\ModifyPartnerAutoSignAuthUrlResponse ModifyPartnerAutoSignAuthUrl(Models\ModifyPartnerAutoSignAuthUrlRequest $req) 创建一个用于更新他方自动签授权的链接（可选择他方授权或我方授权）。通过这个链接，合作方企业可以直接进入小程序，进行自动签授权的更新（更新印章）操作。
 
 如果授权企业尚未开通企业自动签功能，该链接还将引导他们首先开通本企业的自动签服务

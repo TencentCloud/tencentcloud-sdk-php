@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRabbitMQServerlessBindings请求参数结构体
  *
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
- * @method string getVirtualHost() 获取Vhost参数
- * @method void setVirtualHost(string $VirtualHost) 设置Vhost参数
- * @method integer getOffset() 获取分页offset
- * @method void setOffset(integer $Offset) 设置分页offset
- * @method integer getLimit() 获取分页limit
- * @method void setLimit(integer $Limit) 设置分页limit
- * @method string getSearchWord() 获取搜索关键词，根据源exchange名称/目标资源名称/绑定key进行模糊搜索
- * @method void setSearchWord(string $SearchWord) 设置搜索关键词，根据源exchange名称/目标资源名称/绑定key进行模糊搜索
- * @method string getSourceExchange() 获取根据源Exchange精准搜索过滤
- * @method void setSourceExchange(string $SourceExchange) 设置根据源Exchange精准搜索过滤
- * @method string getQueueName() 获取根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置
- * @method void setQueueName(string $QueueName) 设置根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置
- * @method string getDestinationExchange() 获取根据目标Exchange精准搜索过滤，和QueueName过滤不可同时设置
- * @method void setDestinationExchange(string $DestinationExchange) 设置根据目标Exchange精准搜索过滤，和QueueName过滤不可同时设置
+ * @method string getInstanceId() 获取<p>实例Id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例Id</p>
+ * @method string getVirtualHost() 获取<p>Vhost参数</p>
+ * @method void setVirtualHost(string $VirtualHost) 设置<p>Vhost参数</p>
+ * @method integer getOffset() 获取<p>分页offset</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页offset</p>
+ * @method integer getLimit() 获取<p>分页limit</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页limit</p>
+ * @method string getSearchWord() 获取<p>搜索关键词，根据源exchange名称/目标资源名称进行模糊搜索</p>
+ * @method void setSearchWord(string $SearchWord) 设置<p>搜索关键词，根据源exchange名称/目标资源名称进行模糊搜索</p>
+ * @method string getSourceExchange() 获取<p>根据源Exchange精准搜索过滤</p>
+ * @method void setSourceExchange(string $SourceExchange) 设置<p>根据源Exchange精准搜索过滤</p>
+ * @method string getQueueName() 获取<p>根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置</p>
+ * @method void setQueueName(string $QueueName) 设置<p>根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置</p>
+ * @method string getDestinationExchange() 获取<p>根据目标Exchange精准搜索过滤，和QueueName过滤不可同时设置</p>
+ * @method void setDestinationExchange(string $DestinationExchange) 设置<p>根据目标Exchange精准搜索过滤，和QueueName过滤不可同时设置</p>
  */
 class DescribeRabbitMQServerlessBindingsRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string <p>实例Id</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Vhost参数
+     * @var string <p>Vhost参数</p>
      */
     public $VirtualHost;
 
     /**
-     * @var integer 分页offset
+     * @var integer <p>分页offset</p>
      */
     public $Offset;
 
     /**
-     * @var integer 分页limit
+     * @var integer <p>分页limit</p>
      */
     public $Limit;
 
     /**
-     * @var string 搜索关键词，根据源exchange名称/目标资源名称/绑定key进行模糊搜索
+     * @var string <p>搜索关键词，根据源exchange名称/目标资源名称进行模糊搜索</p>
      */
     public $SearchWord;
 
     /**
-     * @var string 根据源Exchange精准搜索过滤
+     * @var string <p>根据源Exchange精准搜索过滤</p>
      */
     public $SourceExchange;
 
     /**
-     * @var string 根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置
+     * @var string <p>根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置</p>
      */
     public $QueueName;
 
     /**
-     * @var string 根据目标Exchange精准搜索过滤，和QueueName过滤不可同时设置
+     * @var string <p>根据目标Exchange精准搜索过滤，和QueueName过滤不可同时设置</p>
      */
     public $DestinationExchange;
 
     /**
-     * @param string $InstanceId 实例Id
-     * @param string $VirtualHost Vhost参数
-     * @param integer $Offset 分页offset
-     * @param integer $Limit 分页limit
-     * @param string $SearchWord 搜索关键词，根据源exchange名称/目标资源名称/绑定key进行模糊搜索
-     * @param string $SourceExchange 根据源Exchange精准搜索过滤
-     * @param string $QueueName 根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置
-     * @param string $DestinationExchange 根据目标Exchange精准搜索过滤，和QueueName过滤不可同时设置
+     * @param string $InstanceId <p>实例Id</p>
+     * @param string $VirtualHost <p>Vhost参数</p>
+     * @param integer $Offset <p>分页offset</p>
+     * @param integer $Limit <p>分页limit</p>
+     * @param string $SearchWord <p>搜索关键词，根据源exchange名称/目标资源名称进行模糊搜索</p>
+     * @param string $SourceExchange <p>根据源Exchange精准搜索过滤</p>
+     * @param string $QueueName <p>根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置</p>
+     * @param string $DestinationExchange <p>根据目标Exchange精准搜索过滤，和QueueName过滤不可同时设置</p>
      */
     function __construct()
     {

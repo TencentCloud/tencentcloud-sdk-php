@@ -24,6 +24,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
 
 /**
  * @method Models\ActivateTWeCallLicenseResponse ActivateTWeCallLicense(Models\ActivateTWeCallLicenseRequest $req) 激活
+ * @method Models\ActivateTWeTalkResponse ActivateTWeTalk(Models\ActivateTWeTalkRequest $req) TWeTalk设备激活接口。
  * @method Models\BatchCreateTWeSeeRecognitionTaskResponse BatchCreateTWeSeeRecognitionTask(Models\BatchCreateTWeSeeRecognitionTaskRequest $req) 批量同步执行 TWeSee 语义理解任务
  * @method Models\BatchInvokeTWeSeeRecognitionTaskResponse BatchInvokeTWeSeeRecognitionTask(Models\BatchInvokeTWeSeeRecognitionTaskRequest $req) 批量同步执行 TWeSee 语义理解任务
  * @method Models\BatchUpdateFirmwareResponse BatchUpdateFirmware(Models\BatchUpdateFirmwareRequest $req) 本接口（BatchUpdateFirmware）用于批量更新设备固件
@@ -162,6 +163,8 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\GetStudioProductListResponse GetStudioProductList(Models\GetStudioProductListRequest $req) 提供查询某个项目下所有产品信息的能力。
  * @method Models\GetTWeCallActiveStatusResponse GetTWeCallActiveStatus(Models\GetTWeCallActiveStatusRequest $req) 查询激活状态
  * @method Models\GetTWeTalkAIBotListResponse GetTWeTalkAIBotList(Models\GetTWeTalkAIBotListRequest $req) 用于查询TWeTalk智能体列表。
+ * @method Models\GetTWeTalkActiveRecordListResponse GetTWeTalkActiveRecordList(Models\GetTWeTalkActiveRecordListRequest $req) TWeTalk消耗账单明细。
+ * @method Models\GetTWeTalkActiveStatusResponse GetTWeTalkActiveStatus(Models\GetTWeTalkActiveStatusRequest $req) 查询TWeTalk设备激活状态。
  * @method Models\GetTWeTalkProductConfigListResponse GetTWeTalkProductConfigList(Models\GetTWeTalkProductConfigListRequest $req) 用于获取TWeTalk服务连接产品配置信息列表。
  * @method Models\GetTWeTalkProductConfigListV2Response GetTWeTalkProductConfigListV2(Models\GetTWeTalkProductConfigListV2Request $req) 用于查询TWeTalk服务连接产品配置信息。
  * @method Models\GetTopicRuleListResponse GetTopicRuleList(Models\GetTopicRuleListRequest $req) 获取规则列表

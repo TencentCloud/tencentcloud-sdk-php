@@ -81,6 +81,7 @@ use TencentCloud\Trp\V20210515\Models as Models;
  * @method Models\ModifyTraceDataResponse ModifyTraceData(Models\ModifyTraceDataRequest $req) 修改溯源信息
  * @method Models\ModifyTraceDataRanksResponse ModifyTraceDataRanks(Models\ModifyTraceDataRanksRequest $req) 修改溯源信息的排序
  * @method Models\ReportBatchCallbackStatusResponse ReportBatchCallbackStatus(Models\ReportBatchCallbackStatusRequest $req) 接收离线筛选包回执，用于效果统计和分析。
+ * @method Models\ReportScanDetailResponse ReportScanDetail(Models\ReportScanDetailRequest $req) 扫码数据上报
  */
 
 class TrpClient extends AbstractClient

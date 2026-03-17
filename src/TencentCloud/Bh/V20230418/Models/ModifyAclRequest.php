@@ -84,6 +84,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAllowAccessCredential(boolean $AllowAccessCredential) 设置是否允许使用访问串
  * @method boolean getAllowKeyboardLogger() 获取是否允许键盘记录
  * @method void setAllowKeyboardLogger(boolean $AllowKeyboardLogger) 设置是否允许键盘记录
+ * @method integer getMaxAccessCredentialDuration() 获取访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍
+ * @method void setMaxAccessCredentialDuration(integer $MaxAccessCredentialDuration) 设置访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍
  */
 class ModifyAclRequest extends AbstractModel
 {
@@ -240,6 +242,11 @@ class ModifyAclRequest extends AbstractModel
     public $AllowKeyboardLogger;
 
     /**
+     * @var integer 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍
+     */
+    public $MaxAccessCredentialDuration;
+
+    /**
      * @param string $Name 访问权限名称，最大32字符，不能包含空白字符
      * @param boolean $AllowDiskRedirect 是否开启磁盘映射
      * @param boolean $AllowAnyAccount 是否允许任意账号登录
@@ -272,6 +279,7 @@ class ModifyAclRequest extends AbstractModel
      * @param string $DepartmentId 权限所属部门的ID，如：1.2.3
      * @param boolean $AllowAccessCredential 是否允许使用访问串
      * @param boolean $AllowKeyboardLogger 是否允许键盘记录
+     * @param integer $MaxAccessCredentialDuration 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍
      */
     function __construct()
     {
@@ -404,6 +412,10 @@ class ModifyAclRequest extends AbstractModel
 
         if (array_key_exists("AllowKeyboardLogger",$param) and $param["AllowKeyboardLogger"] !== null) {
             $this->AllowKeyboardLogger = $param["AllowKeyboardLogger"];
+        }
+
+        if (array_key_exists("MaxAccessCredentialDuration",$param) and $param["MaxAccessCredentialDuration"] !== null) {
+            $this->MaxAccessCredentialDuration = $param["MaxAccessCredentialDuration"];
         }
     }
 }

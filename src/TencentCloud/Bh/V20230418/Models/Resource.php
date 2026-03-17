@@ -128,6 +128,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPackageIOABandwidth(integer $PackageIOABandwidth) 设置 零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽
  * @method string getIOAResourceId() 获取堡垒机实例对应的零信任实例id
  * @method void setIOAResourceId(string $IOAResourceId) 设置堡垒机实例对应的零信任实例id
+ * @method string getResourceEdition() 获取资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm
+ * @method void setResourceEdition(string $ResourceEdition) 设置资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm
+ * @method string getTimeUnit() 获取计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p
+ * @method void setTimeUnit(string $TimeUnit) 设置计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p
+ * @method integer getTimeSpan() 获取计费时长
+ * @method void setTimeSpan(integer $TimeSpan) 设置计费时长
+ * @method integer getPayMode() 获取计费模式 0后付费，1预付费
+ * @method void setPayMode(integer $PayMode) 设置计费模式 0后付费，1预付费
  */
 class Resource extends AbstractModel
 {
@@ -402,6 +410,26 @@ class Resource extends AbstractModel
     public $IOAResourceId;
 
     /**
+     * @var string 资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm
+     */
+    public $ResourceEdition;
+
+    /**
+     * @var string 计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p
+     */
+    public $TimeUnit;
+
+    /**
+     * @var integer 计费时长
+     */
+    public $TimeSpan;
+
+    /**
+     * @var integer 计费模式 0后付费，1预付费
+     */
+    public $PayMode;
+
+    /**
      * @param string $ResourceId 服务实例ID，如bh-saas-s3ed4r5e
      * @param string $ApCode 地域编码
      * @param string $SvArgs 服务实例规格信息
@@ -456,6 +484,10 @@ class Resource extends AbstractModel
      * @param integer $PackageIOAUserCount 零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数
      * @param integer $PackageIOABandwidth  零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽
      * @param string $IOAResourceId 堡垒机实例对应的零信任实例id
+     * @param string $ResourceEdition 资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm
+     * @param string $TimeUnit 计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p
+     * @param integer $TimeSpan 计费时长
+     * @param integer $PayMode 计费模式 0后付费，1预付费
      */
     function __construct()
     {
@@ -689,6 +721,22 @@ class Resource extends AbstractModel
 
         if (array_key_exists("IOAResourceId",$param) and $param["IOAResourceId"] !== null) {
             $this->IOAResourceId = $param["IOAResourceId"];
+        }
+
+        if (array_key_exists("ResourceEdition",$param) and $param["ResourceEdition"] !== null) {
+            $this->ResourceEdition = $param["ResourceEdition"];
+        }
+
+        if (array_key_exists("TimeUnit",$param) and $param["TimeUnit"] !== null) {
+            $this->TimeUnit = $param["TimeUnit"];
+        }
+
+        if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
+            $this->TimeSpan = $param["TimeSpan"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
         }
     }
 }

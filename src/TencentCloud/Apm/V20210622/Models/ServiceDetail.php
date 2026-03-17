@@ -20,114 +20,150 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 应用详细信息
  *
- * @method string getServiceID() 获取应用ID
+ * @method string getServiceID() 获取<p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServiceID(string $ServiceID) 设置应用ID
+ * @method void setServiceID(string $ServiceID) 设置<p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceKey() 获取业务系统ID
+ * @method string getInstanceKey() 获取<p>业务系统ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceKey(string $InstanceKey) 设置业务系统ID
+ * @method void setInstanceKey(string $InstanceKey) 设置<p>业务系统ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAppID() 获取用户appid
+ * @method integer getAppID() 获取<p>用户appid</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppID(integer $AppID) 设置用户appid
+ * @method void setAppID(integer $AppID) 设置<p>用户appid</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateUIN() 获取主账号uin
+ * @method string getCreateUIN() 获取<p>主账号uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateUIN(string $CreateUIN) 设置主账号uin
+ * @method void setCreateUIN(string $CreateUIN) 设置<p>主账号uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getServiceName() 获取应用名
+ * @method string getServiceName() 获取<p>应用名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServiceName(string $ServiceName) 设置应用名
+ * @method void setServiceName(string $ServiceName) 设置<p>应用名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getServiceDescription() 获取应用描述
+ * @method string getServiceDescription() 获取<p>应用描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServiceDescription(string $ServiceDescription) 设置应用描述
+ * @method void setServiceDescription(string $ServiceDescription) 设置<p>应用描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegion() 获取地域
+ * @method string getRegion() 获取<p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegion(string $Region) 设置地域
+ * @method void setRegion(string $Region) 设置<p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTags() 获取标签
+ * @method array getTags() 获取<p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTags(array $Tags) 设置标签
+ * @method void setTags(array $Tags) 设置<p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceName() 获取业务系统名称
- * @method void setInstanceName(string $InstanceName) 设置业务系统名称
+ * @method string getInstanceName() 获取<p>业务系统名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>业务系统名称</p>
+ * @method boolean getEnableThresholdConfig() 获取<p>阈值配置开关。true 表示使用应用级阈值；false 表示使用业务系统级阈值</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableThresholdConfig(boolean $EnableThresholdConfig) 设置<p>阈值配置开关。true 表示使用应用级阈值；false 表示使用业务系统级阈值</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getErrRateThreshold() 获取<p>错误率阈值（%），用于判断应用健康状态为&quot;红色&quot;</p><p>单位：%</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setErrRateThreshold(integer $ErrRateThreshold) 设置<p>错误率阈值（%），用于判断应用健康状态为&quot;红色&quot;</p><p>单位：%</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getResponseDurationWarningThreshold() 获取<p>响应时间预警阈值（ms），用于判断应用健康状态为&quot;黄色&quot;</p><p>单位：ms</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResponseDurationWarningThreshold(integer $ResponseDurationWarningThreshold) 设置<p>响应时间预警阈值（ms），用于判断应用健康状态为&quot;黄色&quot;</p><p>单位：ms</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceDetail extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceID;
 
     /**
-     * @var string 业务系统ID
+     * @var string <p>业务系统ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceKey;
 
     /**
-     * @var integer 用户appid
+     * @var integer <p>用户appid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppID;
 
     /**
-     * @var string 主账号uin
+     * @var string <p>主账号uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateUIN;
 
     /**
-     * @var string 应用名
+     * @var string <p>应用名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceName;
 
     /**
-     * @var string 应用描述
+     * @var string <p>应用描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceDescription;
 
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
-     * @var array 标签
+     * @var array <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
-     * @var string 业务系统名称
+     * @var string <p>业务系统名称</p>
      */
     public $InstanceName;
 
     /**
-     * @param string $ServiceID 应用ID
+     * @var boolean <p>阈值配置开关。true 表示使用应用级阈值；false 表示使用业务系统级阈值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceKey 业务系统ID
+     */
+    public $EnableThresholdConfig;
+
+    /**
+     * @var integer <p>错误率阈值（%），用于判断应用健康状态为&quot;红色&quot;</p><p>单位：%</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AppID 用户appid
+     */
+    public $ErrRateThreshold;
+
+    /**
+     * @var integer <p>响应时间预警阈值（ms），用于判断应用健康状态为&quot;黄色&quot;</p><p>单位：ms</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateUIN 主账号uin
+     */
+    public $ResponseDurationWarningThreshold;
+
+    /**
+     * @param string $ServiceID <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ServiceName 应用名
+     * @param string $InstanceKey <p>业务系统ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ServiceDescription 应用描述
+     * @param integer $AppID <p>用户appid</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Region 地域
+     * @param string $CreateUIN <p>主账号uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Tags 标签
+     * @param string $ServiceName <p>应用名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceName 业务系统名称
+     * @param string $ServiceDescription <p>应用描述</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Region <p>地域</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags <p>标签</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceName <p>业务系统名称</p>
+     * @param boolean $EnableThresholdConfig <p>阈值配置开关。true 表示使用应用级阈值；false 表示使用业务系统级阈值</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ErrRateThreshold <p>错误率阈值（%），用于判断应用健康状态为&quot;红色&quot;</p><p>单位：%</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ResponseDurationWarningThreshold <p>响应时间预警阈值（ms），用于判断应用健康状态为&quot;黄色&quot;</p><p>单位：ms</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -181,6 +217,18 @@ class ServiceDetail extends AbstractModel
 
         if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
             $this->InstanceName = $param["InstanceName"];
+        }
+
+        if (array_key_exists("EnableThresholdConfig",$param) and $param["EnableThresholdConfig"] !== null) {
+            $this->EnableThresholdConfig = $param["EnableThresholdConfig"];
+        }
+
+        if (array_key_exists("ErrRateThreshold",$param) and $param["ErrRateThreshold"] !== null) {
+            $this->ErrRateThreshold = $param["ErrRateThreshold"];
+        }
+
+        if (array_key_exists("ResponseDurationWarningThreshold",$param) and $param["ResponseDurationWarningThreshold"] !== null) {
+            $this->ResponseDurationWarningThreshold = $param["ResponseDurationWarningThreshold"];
         }
     }
 }

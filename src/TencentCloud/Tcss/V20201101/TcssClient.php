@@ -221,6 +221,12 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeImageAutoAuthorizedRuleResponse DescribeImageAutoAuthorizedRule(Models\DescribeImageAutoAuthorizedRuleRequest $req) 查询本地镜像自动授权规则
  * @method Models\DescribeImageAutoAuthorizedTaskListResponse DescribeImageAutoAuthorizedTaskList(Models\DescribeImageAutoAuthorizedTaskListRequest $req) 查询镜像自动授权任务列表
  * @method Models\DescribeImageComponentListResponse DescribeImageComponentList(Models\DescribeImageComponentListRequest $req) 查询本地镜像组件列表
+ * @method Models\DescribeImageDenyEventDetailResponse DescribeImageDenyEventDetail(Models\DescribeImageDenyEventDetailRequest $req) 查询镜像拦截事件详情
+ * @method Models\DescribeImageDenyEventListResponse DescribeImageDenyEventList(Models\DescribeImageDenyEventListRequest $req) 查询镜像拦截事件列表
+ * @method Models\DescribeImageDenyEventTendencyResponse DescribeImageDenyEventTendency(Models\DescribeImageDenyEventTendencyRequest $req) 查询镜像拦截事件趋势
+ * @method Models\DescribeImageDenyRuleDetailResponse DescribeImageDenyRuleDetail(Models\DescribeImageDenyRuleDetailRequest $req) 查询镜像拦截规则详情
+ * @method Models\DescribeImageDenyRuleListResponse DescribeImageDenyRuleList(Models\DescribeImageDenyRuleListRequest $req) 查询镜像拦截规则列表
+ * @method Models\DescribeImageDenyRuleSummaryResponse DescribeImageDenyRuleSummary(Models\DescribeImageDenyRuleSummaryRequest $req) 查询镜像拦截规则统计
  * @method Models\DescribeImageRegistryNamespaceListResponse DescribeImageRegistryNamespaceList(Models\DescribeImageRegistryNamespaceListRequest $req) 查询用户镜像仓库下的命令空间列表
  * @method Models\DescribeImageRegistryTimingScanTaskResponse DescribeImageRegistryTimingScanTask(Models\DescribeImageRegistryTimingScanTaskRequest $req) 镜像仓库查看定时任务
  * @method Models\DescribeImageRiskSummaryResponse DescribeImageRiskSummary(Models\DescribeImageRiskSummaryRequest $req) 查询本地镜像风险概览
@@ -236,6 +242,8 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeK8sApiAbnormalSummaryResponse DescribeK8sApiAbnormalSummary(Models\DescribeK8sApiAbnormalSummaryRequest $req) 查询k8sapi异常事件统计
  * @method Models\DescribeK8sApiAbnormalTendencyResponse DescribeK8sApiAbnormalTendency(Models\DescribeK8sApiAbnormalTendencyRequest $req) 查询k8sapi异常事件趋势
  * @method Models\DescribeLogStorageStatisticResponse DescribeLogStorageStatistic(Models\DescribeLogStorageStatisticRequest $req) 获取日志检索容量使用统计
+ * @method Models\DescribeMaliciousConnectionBlackListResponse DescribeMaliciousConnectionBlackList(Models\DescribeMaliciousConnectionBlackListRequest $req) 查询恶意外连黑名单
+ * @method Models\DescribeMaliciousConnectionWhiteListResponse DescribeMaliciousConnectionWhiteList(Models\DescribeMaliciousConnectionWhiteListRequest $req) 查询恶意外连白名单
  * @method Models\DescribeNetworkFirewallAuditRecordResponse DescribeNetworkFirewallAuditRecord(Models\DescribeNetworkFirewallAuditRecordRequest $req) 功能已下线待三合一重构
 
 查询集群策略审计列表
@@ -281,6 +289,8 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeReverseShellDetailResponse DescribeReverseShellDetail(Models\DescribeReverseShellDetailRequest $req) 查询运行时反弹shell事件详细信息
  * @method Models\DescribeReverseShellEventsResponse DescribeReverseShellEvents(Models\DescribeReverseShellEventsRequest $req) 查询运行时反弹shell事件列表信息
  * @method Models\DescribeReverseShellEventsExportResponse DescribeReverseShellEventsExport(Models\DescribeReverseShellEventsExportRequest $req) 查询运行时反弹shell事件列表信息导出
+ * @method Models\DescribeReverseShellRegexpWhiteListResponse DescribeReverseShellRegexpWhiteList(Models\DescribeReverseShellRegexpWhiteListRequest $req) 查询反弹shell正则白名单列表
+ * @method Models\DescribeReverseShellRegexpWhiteListInfoResponse DescribeReverseShellRegexpWhiteListInfo(Models\DescribeReverseShellRegexpWhiteListInfoRequest $req) 查询反弹shell正则白名单详情
  * @method Models\DescribeReverseShellWhiteListDetailResponse DescribeReverseShellWhiteListDetail(Models\DescribeReverseShellWhiteListDetailRequest $req) 查询运行时反弹shell白名单详细信息
  * @method Models\DescribeReverseShellWhiteListsResponse DescribeReverseShellWhiteLists(Models\DescribeReverseShellWhiteListsRequest $req) 查询运行时运行时反弹shell白名单列表信息
  * @method Models\DescribeRiskDnsEventDetailResponse DescribeRiskDnsEventDetail(Models\DescribeRiskDnsEventDetailRequest $req) 查询恶意请求事件详情

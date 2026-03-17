@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDomainFilterList返回参数结构体
  *
- * @method DomainCountInfo getDomainCountInfo() 获取列表页统计信息
- * @method void setDomainCountInfo(DomainCountInfo $DomainCountInfo) 设置列表页统计信息
- * @method array getDomainList() 获取域名列表
- * @method void setDomainList(array $DomainList) 设置域名列表
+ * @method DomainCountInfo getDomainCountInfo() 获取<p>列表页统计信息</p>
+ * @method void setDomainCountInfo(DomainCountInfo $DomainCountInfo) 设置<p>列表页统计信息</p>
+ * @method array getDomainList() 获取<p>域名列表</p>
+ * @method void setDomainList(array $DomainList) 设置<p>域名列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDomainFilterListResponse extends AbstractModel
 {
     /**
-     * @var DomainCountInfo 列表页统计信息
+     * @var DomainCountInfo <p>列表页统计信息</p>
      */
     public $DomainCountInfo;
 
     /**
-     * @var array 域名列表
+     * @var array <p>域名列表</p>
      */
     public $DomainList;
 
@@ -45,8 +45,8 @@ class DescribeDomainFilterListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param DomainCountInfo $DomainCountInfo 列表页统计信息
-     * @param array $DomainList 域名列表
+     * @param DomainCountInfo $DomainCountInfo <p>列表页统计信息</p>
+     * @param array $DomainList <p>域名列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

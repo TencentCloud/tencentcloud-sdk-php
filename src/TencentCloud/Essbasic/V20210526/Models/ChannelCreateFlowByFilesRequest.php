@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOpenDynamicFlow(boolean $OpenDynamicFlow) 设置<p>是否开启动态合同（动态签署人2.0）</p><ul><li> **false** :(默认) 不开启动态合同（动态签署人2.0）</li><li> **true** :开启动态合同（动态签署人2.0）,发起后可继续追加合同签署人</li></ul>
  * @method boolean getOpenDynamicSignFlow() 获取<p>是否开启动态合同（动态签署人2.0）<ul><li> <strong>false</strong> :(默认) 不开启动态合同（动态签署人2.0）</li><li> <strong>true</strong> :开启动态合同（动态签署人2.0）,发起时不设置签署方，发起后可继续追加合同签署人</li></ul></p>
  * @method void setOpenDynamicSignFlow(boolean $OpenDynamicSignFlow) 设置<p>是否开启动态合同（动态签署人2.0）<ul><li> <strong>false</strong> :(默认) 不开启动态合同（动态签署人2.0）</li><li> <strong>true</strong> :开启动态合同（动态签署人2.0）,发起时不设置签署方，发起后可继续追加合同签署人</li></ul></p>
+ * @method FlowOperateLimit getFlowOperateLimit() 获取<p>发起合同流程时对合同流程的部分操作加以限制的配置。</p>
+ * @method void setFlowOperateLimit(FlowOperateLimit $FlowOperateLimit) 设置<p>发起合同流程时对合同流程的部分操作加以限制的配置。</p>
  */
 class ChannelCreateFlowByFilesRequest extends AbstractModel
 {
@@ -195,6 +197,11 @@ class ChannelCreateFlowByFilesRequest extends AbstractModel
     public $OpenDynamicSignFlow;
 
     /**
+     * @var FlowOperateLimit <p>发起合同流程时对合同流程的部分操作加以限制的配置。</p>
+     */
+    public $FlowOperateLimit;
+
+    /**
      * @param Agent $Agent <p>合同的发起企业和发起人信息，<a href="https://qcloudimg.tencent-cloud.cn/raw/b69f8aad306c40b7b78d096e39b2edbb.png" target="_blank">点击查看合同发起企业和人展示的位置</a></p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId（合同的发起企业）</li><li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId （合同的发起人）</li></ul>
      * @param string $FlowName <p>合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。</p>
      * @param string $FlowDescription <p>合同流程描述信息(可自定义此描述)，最大长度1000个字符。</p>
@@ -219,6 +226,7 @@ class ChannelCreateFlowByFilesRequest extends AbstractModel
      * @param integer $PreviewType <p>预览模式下产生的预览链接类型 </p><ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li><li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>注: <code>此参数在NeedPreview 为true时有效</code>
      * @param boolean $OpenDynamicFlow <p>是否开启动态合同（动态签署人2.0）</p><ul><li> **false** :(默认) 不开启动态合同（动态签署人2.0）</li><li> **true** :开启动态合同（动态签署人2.0）,发起后可继续追加合同签署人</li></ul>
      * @param boolean $OpenDynamicSignFlow <p>是否开启动态合同（动态签署人2.0）<ul><li> <strong>false</strong> :(默认) 不开启动态合同（动态签署人2.0）</li><li> <strong>true</strong> :开启动态合同（动态签署人2.0）,发起时不设置签署方，发起后可继续追加合同签署人</li></ul></p>
+     * @param FlowOperateLimit $FlowOperateLimit <p>发起合同流程时对合同流程的部分操作加以限制的配置。</p>
      */
     function __construct()
     {
@@ -344,6 +352,11 @@ class ChannelCreateFlowByFilesRequest extends AbstractModel
 
         if (array_key_exists("OpenDynamicSignFlow",$param) and $param["OpenDynamicSignFlow"] !== null) {
             $this->OpenDynamicSignFlow = $param["OpenDynamicSignFlow"];
+        }
+
+        if (array_key_exists("FlowOperateLimit",$param) and $param["FlowOperateLimit"] !== null) {
+            $this->FlowOperateLimit = new FlowOperateLimit();
+            $this->FlowOperateLimit->deserialize($param["FlowOperateLimit"]);
         }
     }
 }

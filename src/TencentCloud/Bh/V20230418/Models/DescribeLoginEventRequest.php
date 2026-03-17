@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResultSet(array $ResultSet) 设置操作结果，1-成功，2-失败
  * @method integer getOffset() 获取分页偏移位置，默认值为0
  * @method void setOffset(integer $Offset) 设置分页偏移位置，默认值为0
- * @method integer getLimit() 获取分页每页记录数，默认20
- * @method void setLimit(integer $Limit) 设置分页每页记录数，默认20
+ * @method integer getLimit() 获取分页每页记录数，默认20，最大200
+ * @method void setLimit(integer $Limit) 设置分页每页记录数，默认20，最大200
  */
 class DescribeLoginEventRequest extends AbstractModel
 {
@@ -96,7 +96,7 @@ class DescribeLoginEventRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 分页每页记录数，默认20
+     * @var integer 分页每页记录数，默认20，最大200
      */
     public $Limit;
 
@@ -111,7 +111,7 @@ class DescribeLoginEventRequest extends AbstractModel
      * @param integer $Result 操作结果，1-成功，2-失败
      * @param array $ResultSet 操作结果，1-成功，2-失败
      * @param integer $Offset 分页偏移位置，默认值为0
-     * @param integer $Limit 分页每页记录数，默认20
+     * @param integer $Limit 分页每页记录数，默认20，最大200
      */
     function __construct()
     {

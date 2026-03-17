@@ -109,7 +109,9 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeDataServicePublishedApiListResponse DescribeDataServicePublishedApiList(Models\DescribeDataServicePublishedApiListRequest $req) 获取数据服务API的发布态信息列表
  * @method Models\DescribeDataSourceInfoListResponse DescribeDataSourceInfoList(Models\DescribeDataSourceInfoListRequest $req) 获取数据源信息-数据源分页列表
  * @method Models\DescribeDataSourceListResponse DescribeDataSourceList(Models\DescribeDataSourceListRequest $req) 数据源详情
+ * @method Models\DescribeDatabaseByNameResponse DescribeDatabaseByName(Models\DescribeDatabaseByNameRequest $req) 根据数据库名称和数据源id获取数据库信息
  * @method Models\DescribeDatabaseInfoListResponse DescribeDatabaseInfoList(Models\DescribeDatabaseInfoListRequest $req) 获取数据库信息
+ * @method Models\DescribeDatabaseMetaResponse DescribeDatabaseMeta(Models\DescribeDatabaseMetaRequest $req) 根据数据库Id查询数据库元数据，带有数据源和项目信息
  * @method Models\DescribeDatabaseMetasResponse DescribeDatabaseMetas(Models\DescribeDatabaseMetasRequest $req) 查询数据库列表
  * @method Models\DescribeDatasourceResponse DescribeDatasource(Models\DescribeDatasourceRequest $req) 数据源详情
  * @method Models\DescribeDependOpsTasksResponse DescribeDependOpsTasks(Models\DescribeDependOpsTasksRequest $req) 根据层级查找上/下游任务节点
@@ -148,6 +150,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeIntegrationTaskResponse DescribeIntegrationTask(Models\DescribeIntegrationTaskRequest $req) 查询集成任务
  * @method Models\DescribeIntegrationTasksResponse DescribeIntegrationTasks(Models\DescribeIntegrationTasksRequest $req) 查询集成任务列表
  * @method Models\DescribeIntegrationVersionNodesInfoResponse DescribeIntegrationVersionNodesInfo(Models\DescribeIntegrationVersionNodesInfoRequest $req) 查询集成任务版本节点信息
+ * @method Models\DescribeLineageColumnsResponse DescribeLineageColumns(Models\DescribeLineageColumnsRequest $req) 列出血缘中心字段信息
  * @method Models\DescribeLineageInfoResponse DescribeLineageInfo(Models\DescribeLineageInfoRequest $req) 通用血缘查询接口
  * @method Models\DescribeManualTriggerRecordPageResponse DescribeManualTriggerRecordPage(Models\DescribeManualTriggerRecordPageRequest $req) 查询手动任务触发记录
  * @method Models\DescribeOfflineTaskTokenResponse DescribeOfflineTaskToken(Models\DescribeOfflineTaskTokenRequest $req) 获取离线任务长连接Token
@@ -167,6 +170,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeRealTimeTaskInstanceNodeInfoResponse DescribeRealTimeTaskInstanceNodeInfo(Models\DescribeRealTimeTaskInstanceNodeInfoRequest $req) 查询实时任务实例节点信息
  * @method Models\DescribeRealTimeTaskMetricOverviewResponse DescribeRealTimeTaskMetricOverview(Models\DescribeRealTimeTaskMetricOverviewRequest $req) 实时任务运行指标概览
  * @method Models\DescribeRealTimeTaskSpeedResponse DescribeRealTimeTaskSpeed(Models\DescribeRealTimeTaskSpeedRequest $req) 实时任务同步速度趋势
+ * @method Models\DescribeRealViewDatabasePageResponse DescribeRealViewDatabasePage(Models\DescribeRealViewDatabasePageRequest $req) 离线通过表名称获取表信息
  * @method Models\DescribeRealViewSchemaPageResponse DescribeRealViewSchemaPage(Models\DescribeRealViewSchemaPageRequest $req) 数据集成分页获取数据库SCHEMA信息
  * @method Models\DescribeRelatedTasksByTaskIdResponse DescribeRelatedTasksByTaskId(Models\DescribeRelatedTasksByTaskIdRequest $req) 根据任务ID分页查询任务绑定监听的事件
  * @method Models\DescribeReportTaskDetailResponse DescribeReportTaskDetail(Models\DescribeReportTaskDetailRequest $req) 查询上报任务详情，注意：任务执行完后，任务详情上报存在10分钟的延迟，使用接口查询任务详情时需等待任务运行完10分钟后查询
@@ -202,6 +206,8 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeSuccessorOpsTaskInfosResponse DescribeSuccessorOpsTaskInfos(Models\DescribeSuccessorOpsTaskInfosRequest $req) 获取下游任务信息
  * @method Models\DescribeSuccessorTaskInfoListResponse DescribeSuccessorTaskInfoList(Models\DescribeSuccessorTaskInfoListRequest $req) 获取下游任务信息批量
  * @method Models\DescribeTableBasicInfoResponse DescribeTableBasicInfo(Models\DescribeTableBasicInfoRequest $req) 元数据模型-表基础信息查询接口
+ * @method Models\DescribeTableContentPreviewResponse DescribeTableContentPreview(Models\DescribeTableContentPreviewRequest $req) 查询表的数据预览
+ * @method Models\DescribeTableDdlResponse DescribeTableDdl(Models\DescribeTableDdlRequest $req) 查询表的DDL
  * @method Models\DescribeTableInfoListResponse DescribeTableInfoList(Models\DescribeTableInfoListRequest $req) 获取数据表信息
  * @method Models\DescribeTableLineageResponse DescribeTableLineage(Models\DescribeTableLineageRequest $req) 列出表血缘信息
  * @method Models\DescribeTableLineageInfoResponse DescribeTableLineageInfo(Models\DescribeTableLineageInfoRequest $req) 列出表血缘信息
@@ -211,6 +217,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeTableQualityDetailsResponse DescribeTableQualityDetails(Models\DescribeTableQualityDetailsRequest $req) 质量报告-查询表质量详情
  * @method Models\DescribeTableSchemaInfoResponse DescribeTableSchemaInfo(Models\DescribeTableSchemaInfoRequest $req) 获取表schema信息
  * @method Models\DescribeTableScoreTrendResponse DescribeTableScoreTrend(Models\DescribeTableScoreTrendRequest $req) 查询表得分趋势
+ * @method Models\DescribeTableSelectResponse DescribeTableSelect(Models\DescribeTableSelectRequest $req) 查询表的select语句
  * @method Models\DescribeTaskAlarmRegulationsResponse DescribeTaskAlarmRegulations(Models\DescribeTaskAlarmRegulationsRequest $req) 查询任务告警规则列表
  * @method Models\DescribeTaskByCycleResponse DescribeTaskByCycle(Models\DescribeTaskByCycleRequest $req) 根据周期类型 查询所有任务
  * @method Models\DescribeTaskByStatusReportResponse DescribeTaskByStatusReport(Models\DescribeTaskByStatusReportRequest $req) 任务状态趋势

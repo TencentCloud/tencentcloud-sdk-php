@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRollbackTables(array $RollbackTables) 设置回档数据库表列表
  * @method string getRollbackMode() 获取按时间点回档模式，full: 普通; db: 快速; table: 极速  （默认是普通）
  * @method void setRollbackMode(string $RollbackMode) 设置按时间点回档模式，full: 普通; db: 快速; table: 极速  （默认是普通）
+ * @method string getVaultId() 获取保险箱id
+ * @method void setVaultId(string $VaultId) 设置保险箱id
  */
 class RollBackClusterRequest extends AbstractModel
 {
@@ -86,6 +88,11 @@ class RollBackClusterRequest extends AbstractModel
     public $RollbackMode;
 
     /**
+     * @var string 保险箱id
+     */
+    public $VaultId;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $RollbackStrategy 回档策略 timeRollback-按时间点回档 snapRollback-按备份文件回档
      * @param integer $RollbackId 备份文件ID。
@@ -96,6 +103,7 @@ class RollBackClusterRequest extends AbstractModel
      * @param array $RollbackDatabases 回档数据库列表
      * @param array $RollbackTables 回档数据库表列表
      * @param string $RollbackMode 按时间点回档模式，full: 普通; db: 快速; table: 极速  （默认是普通）
+     * @param string $VaultId 保险箱id
      */
     function __construct()
     {
@@ -150,6 +158,10 @@ class RollBackClusterRequest extends AbstractModel
 
         if (array_key_exists("RollbackMode",$param) and $param["RollbackMode"] !== null) {
             $this->RollbackMode = $param["RollbackMode"];
+        }
+
+        if (array_key_exists("VaultId",$param) and $param["VaultId"] !== null) {
+            $this->VaultId = $param["VaultId"];
         }
     }
 }

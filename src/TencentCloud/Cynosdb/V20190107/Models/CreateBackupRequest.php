@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupTables(array $BackupTables) 设置备份的表, 只在 BackupType 为 logic 时有效
  * @method string getBackupName() 获取备注名
  * @method void setBackupName(string $BackupName) 设置备注名
+ * @method array getVaults() 获取	投递到保险箱的信息
+ * @method void setVaults(array $Vaults) 设置	投递到保险箱的信息
  */
 class CreateBackupRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateBackupRequest extends AbstractModel
     public $BackupName;
 
     /**
+     * @var array 	投递到保险箱的信息
+     */
+    public $Vaults;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $BackupType 备份类型, 可选值：logic，逻辑备份；snapshot，物理备份
      * @param array $BackupDatabases 备份的库, 只在 BackupType 为 logic 时有效
      * @param array $BackupTables 备份的表, 只在 BackupType 为 logic 时有效
      * @param string $BackupName 备注名
+     * @param array $Vaults 	投递到保险箱的信息
      */
     function __construct()
     {
@@ -101,6 +109,15 @@ class CreateBackupRequest extends AbstractModel
 
         if (array_key_exists("BackupName",$param) and $param["BackupName"] !== null) {
             $this->BackupName = $param["BackupName"];
+        }
+
+        if (array_key_exists("Vaults",$param) and $param["Vaults"] !== null) {
+            $this->Vaults = [];
+            foreach ($param["Vaults"] as $key => $value){
+                $obj = new CreateBackupVaultItem();
+                $obj->deserialize($value);
+                array_push($this->Vaults, $obj);
+            }
         }
     }
 }

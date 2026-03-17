@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeContractReviewTask返回参数结构体
  *
- * @method string getChecklistId() 获取用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
- * @method void setChecklistId(string $ChecklistId) 设置用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
+ * @method string getChecklistId() 获取用于审查任务的审查清单ID（Depricated）。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
+ * @method void setChecklistId(string $ChecklistId) 设置用于审查任务的审查清单ID（Depricated）。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
+ * @method array getChecklistIds() 获取用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
+ * @method void setChecklistIds(array $ChecklistIds) 设置用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
  * @method integer getCreatedOn() 获取合同审查任务创建时间。
  * @method void setCreatedOn(integer $CreatedOn) 设置合同审查任务创建时间。
  * @method integer getFinishedOn() 获取合同审查任务完成时间。
@@ -42,18 +44,20 @@ use TencentCloud\Common\AbstractModel;
     <li>**1** - 【中立】以公平合理为原则，平衡双方的权利义务，既不过分强调己方利益，也不过度让步，力求达成双方均可接受的条款。</li>   
     <li>**2** - 【宽松】以促成交易为核心，对合同条款的修改要求较为宽松，倾向于接受对方提出的条款，以尽快达成合作。</li>  
 </ul>
- * @method string getResourceId() 获取合同审查的PDF文件资源ID。
- * @method void setResourceId(string $ResourceId) 设置合同审查的PDF文件资源ID。
+ * @method string getResourceId() 获取合同审查的PDF、WORD文件资源ID。
+ * @method void setResourceId(string $ResourceId) 设置合同审查的PDF、WORD文件资源ID。
  * @method array getRisks() 获取合同审查识别出的PDF文件风险信息，如果是空数组表示无风险。
 
 注意：`审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。`
  * @method void setRisks(array $Risks) 设置合同审查识别出的PDF文件风险信息，如果是空数组表示无风险。
 
 注意：`审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。`
- * @method RiskIdentificationRoleInfo getRole() 获取合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
+ * @method RiskIdentificationRoleInfo getRole() 获取合同审查中的角色信息（Depricated）。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRole(RiskIdentificationRoleInfo $Role) 设置合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
+ * @method void setRole(RiskIdentificationRoleInfo $Role) 设置合同审查中的角色信息（Depricated）。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRoles() 获取合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
+ * @method void setRoles(array $Roles) 设置合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
  * @method integer getStatus() 获取合同审查任务状态。
 状态如下：
 <ul>
@@ -98,9 +102,14 @@ use TencentCloud\Common\AbstractModel;
 class DescribeContractReviewTaskResponse extends AbstractModel
 {
     /**
-     * @var string 用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
+     * @var string 用于审查任务的审查清单ID（Depricated）。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
      */
     public $ChecklistId;
+
+    /**
+     * @var array 用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
+     */
+    public $ChecklistIds;
 
     /**
      * @var integer 合同审查任务创建时间。
@@ -125,7 +134,7 @@ class DescribeContractReviewTaskResponse extends AbstractModel
     public $PolicyType;
 
     /**
-     * @var string 合同审查的PDF文件资源ID。
+     * @var string 合同审查的PDF、WORD文件资源ID。
      */
     public $ResourceId;
 
@@ -137,10 +146,15 @@ class DescribeContractReviewTaskResponse extends AbstractModel
     public $Risks;
 
     /**
-     * @var RiskIdentificationRoleInfo 合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
+     * @var RiskIdentificationRoleInfo 合同审查中的角色信息（Depricated）。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Role;
+
+    /**
+     * @var array 合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
+     */
+    public $Roles;
 
     /**
      * @var integer 合同审查任务状态。
@@ -199,7 +213,8 @@ class DescribeContractReviewTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ChecklistId 用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
+     * @param string $ChecklistId 用于审查任务的审查清单ID（Depricated）。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
+     * @param array $ChecklistIds 用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
      * @param integer $CreatedOn 合同审查任务创建时间。
      * @param integer $FinishedOn 合同审查任务完成时间。
      * @param integer $PolicyType 合同审查的审查立场方。
@@ -210,12 +225,13 @@ class DescribeContractReviewTaskResponse extends AbstractModel
     <li>**1** - 【中立】以公平合理为原则，平衡双方的权利义务，既不过分强调己方利益，也不过度让步，力求达成双方均可接受的条款。</li>   
     <li>**2** - 【宽松】以促成交易为核心，对合同条款的修改要求较为宽松，倾向于接受对方提出的条款，以尽快达成合作。</li>  
 </ul>
-     * @param string $ResourceId 合同审查的PDF文件资源ID。
+     * @param string $ResourceId 合同审查的PDF、WORD文件资源ID。
      * @param array $Risks 合同审查识别出的PDF文件风险信息，如果是空数组表示无风险。
 
 注意：`审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。`
-     * @param RiskIdentificationRoleInfo $Role 合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
+     * @param RiskIdentificationRoleInfo $Role 合同审查中的角色信息（Depricated）。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Roles 合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
      * @param integer $Status 合同审查任务状态。
 状态如下：
 <ul>
@@ -254,6 +270,10 @@ class DescribeContractReviewTaskResponse extends AbstractModel
             $this->ChecklistId = $param["ChecklistId"];
         }
 
+        if (array_key_exists("ChecklistIds",$param) and $param["ChecklistIds"] !== null) {
+            $this->ChecklistIds = $param["ChecklistIds"];
+        }
+
         if (array_key_exists("CreatedOn",$param) and $param["CreatedOn"] !== null) {
             $this->CreatedOn = $param["CreatedOn"];
         }
@@ -282,6 +302,15 @@ class DescribeContractReviewTaskResponse extends AbstractModel
         if (array_key_exists("Role",$param) and $param["Role"] !== null) {
             $this->Role = new RiskIdentificationRoleInfo();
             $this->Role->deserialize($param["Role"]);
+        }
+
+        if (array_key_exists("Roles",$param) and $param["Roles"] !== null) {
+            $this->Roles = [];
+            foreach ($param["Roles"] as $key => $value){
+                $obj = new RiskIdentificationRoleInfo();
+                $obj->deserialize($value);
+                array_push($this->Roles, $obj);
+            }
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {

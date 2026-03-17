@@ -20,38 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloudRunEnvs请求参数结构体
  *
- * @method string getEnvId() 获取环境ID，如果传了这个参数则只返回该环境的相关信息
- * @method void setEnvId(string $EnvId) 设置环境ID，如果传了这个参数则只返回该环境的相关信息
- * @method boolean getIsVisible() 获取指定Channels字段为可见渠道列表或不可见渠道列表
-如只想获取渠道A的环境 就填写IsVisible= true,Channels = ["A"], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = ["A"]
- * @method void setIsVisible(boolean $IsVisible) 设置指定Channels字段为可见渠道列表或不可见渠道列表
-如只想获取渠道A的环境 就填写IsVisible= true,Channels = ["A"], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = ["A"]
- * @method array getChannels() 获取渠道列表，代表可见或不可见渠道由IsVisible参数指定
- * @method void setChannels(array $Channels) 设置渠道列表，代表可见或不可见渠道由IsVisible参数指定
+ * @method string getEnvId() 获取<p>环境ID，如果传了这个参数则只返回该环境的相关信息</p>
+ * @method void setEnvId(string $EnvId) 设置<p>环境ID，如果传了这个参数则只返回该环境的相关信息</p>
+ * @method boolean getIsVisible() 获取<p>指定Channels字段为可见渠道列表或不可见渠道列表<br>如只想获取渠道A的环境 就填写IsVisible= true,Channels = [&quot;A&quot;], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = [&quot;A&quot;]</p>
+ * @method void setIsVisible(boolean $IsVisible) 设置<p>指定Channels字段为可见渠道列表或不可见渠道列表<br>如只想获取渠道A的环境 就填写IsVisible= true,Channels = [&quot;A&quot;], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = [&quot;A&quot;]</p>
+ * @method array getChannels() 获取<p>渠道列表，代表可见或不可见渠道由IsVisible参数指定</p>
+ * @method void setChannels(array $Channels) 设置<p>渠道列表，代表可见或不可见渠道由IsVisible参数指定</p>
  */
 class DescribeCloudRunEnvsRequest extends AbstractModel
 {
     /**
-     * @var string 环境ID，如果传了这个参数则只返回该环境的相关信息
+     * @var string <p>环境ID，如果传了这个参数则只返回该环境的相关信息</p>
      */
     public $EnvId;
 
     /**
-     * @var boolean 指定Channels字段为可见渠道列表或不可见渠道列表
-如只想获取渠道A的环境 就填写IsVisible= true,Channels = ["A"], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = ["A"]
+     * @var boolean <p>指定Channels字段为可见渠道列表或不可见渠道列表<br>如只想获取渠道A的环境 就填写IsVisible= true,Channels = [&quot;A&quot;], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = [&quot;A&quot;]</p>
      */
     public $IsVisible;
 
     /**
-     * @var array 渠道列表，代表可见或不可见渠道由IsVisible参数指定
+     * @var array <p>渠道列表，代表可见或不可见渠道由IsVisible参数指定</p>
      */
     public $Channels;
 
     /**
-     * @param string $EnvId 环境ID，如果传了这个参数则只返回该环境的相关信息
-     * @param boolean $IsVisible 指定Channels字段为可见渠道列表或不可见渠道列表
-如只想获取渠道A的环境 就填写IsVisible= true,Channels = ["A"], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = ["A"]
-     * @param array $Channels 渠道列表，代表可见或不可见渠道由IsVisible参数指定
+     * @param string $EnvId <p>环境ID，如果传了这个参数则只返回该环境的相关信息</p>
+     * @param boolean $IsVisible <p>指定Channels字段为可见渠道列表或不可见渠道列表<br>如只想获取渠道A的环境 就填写IsVisible= true,Channels = [&quot;A&quot;], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = [&quot;A&quot;]</p>
+     * @param array $Channels <p>渠道列表，代表可见或不可见渠道由IsVisible参数指定</p>
      */
     function __construct()
     {

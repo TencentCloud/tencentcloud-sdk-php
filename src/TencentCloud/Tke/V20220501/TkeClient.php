@@ -31,10 +31,12 @@ use TencentCloud\Tke\V20220501\Models as Models;
  * @method Models\DescribeClusterInstancesResponse DescribeClusterInstances(Models\DescribeClusterInstancesRequest $req) 查询集群下节点实例信息
  * @method Models\DescribeClusterMachinesResponse DescribeClusterMachines(Models\DescribeClusterMachinesRequest $req) 查询托原生点列表
  * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) 查询集群列表
+ * @method Models\DescribeGPUInfoResponse DescribeGPUInfo(Models\DescribeGPUInfoRequest $req) 请求该接口，会返回所有适配该机型和操作系统组合的gpu驱动版本
  * @method Models\DescribeHealthCheckPoliciesResponse DescribeHealthCheckPolicies(Models\DescribeHealthCheckPoliciesRequest $req) 查询健康检测策略
  * @method Models\DescribeHealthCheckPolicyBindingsResponse DescribeHealthCheckPolicyBindings(Models\DescribeHealthCheckPolicyBindingsRequest $req) 查询健康检测策略绑定关系
  * @method Models\DescribeHealthCheckTemplateResponse DescribeHealthCheckTemplate(Models\DescribeHealthCheckTemplateRequest $req) 查询健康检测策略模板
  * @method Models\DescribeNodePoolsResponse DescribeNodePools(Models\DescribeNodePoolsRequest $req) 查询 TKE 节点池列表
+ * @method Models\DescribeZoneInstanceConfigInfosResponse DescribeZoneInstanceConfigInfos(Models\DescribeZoneInstanceConfigInfosRequest $req) 查询原生节点机型配置
  * @method Models\ModifyClusterMachineResponse ModifyClusterMachine(Models\ModifyClusterMachineRequest $req) 修改原生节点
  * @method Models\ModifyHealthCheckPolicyResponse ModifyHealthCheckPolicy(Models\ModifyHealthCheckPolicyRequest $req) 修改健康检测策略
  * @method Models\ModifyNodePoolResponse ModifyNodePool(Models\ModifyNodePoolRequest $req) 更新 TKE 节点池

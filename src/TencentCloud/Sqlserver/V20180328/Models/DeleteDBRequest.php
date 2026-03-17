@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteDB请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID，形如mssql-rljoi3bf
- * @method void setInstanceId(string $InstanceId) 设置实例ID，形如mssql-rljoi3bf
- * @method array getNames() 获取数据库名数组
- * @method void setNames(array $Names) 设置数据库名数组
+ * @method string getInstanceId() 获取<p>实例ID，形如mssql-rljoi3bf</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID，形如mssql-rljoi3bf</p>
+ * @method array getNames() 获取<p>数据库名数组</p>
+ * @method void setNames(array $Names) 设置<p>数据库名数组</p>
+ * @method integer getNoDoBackup() 获取<p>删除数据库前是否创建备份。</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+ * @method void setNoDoBackup(integer $NoDoBackup) 设置<p>删除数据库前是否创建备份。</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
  */
 class DeleteDBRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，形如mssql-rljoi3bf
+     * @var string <p>实例ID，形如mssql-rljoi3bf</p>
      */
     public $InstanceId;
 
     /**
-     * @var array 数据库名数组
+     * @var array <p>数据库名数组</p>
      */
     public $Names;
 
     /**
-     * @param string $InstanceId 实例ID，形如mssql-rljoi3bf
-     * @param array $Names 数据库名数组
+     * @var integer <p>删除数据库前是否创建备份。</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     */
+    public $NoDoBackup;
+
+    /**
+     * @param string $InstanceId <p>实例ID，形如mssql-rljoi3bf</p>
+     * @param array $Names <p>数据库名数组</p>
+     * @param integer $NoDoBackup <p>删除数据库前是否创建备份。</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DeleteDBRequest extends AbstractModel
 
         if (array_key_exists("Names",$param) and $param["Names"] !== null) {
             $this->Names = $param["Names"];
+        }
+
+        if (array_key_exists("NoDoBackup",$param) and $param["NoDoBackup"] !== null) {
+            $this->NoDoBackup = $param["NoDoBackup"];
         }
     }
 }

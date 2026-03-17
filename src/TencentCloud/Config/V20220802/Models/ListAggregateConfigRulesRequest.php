@@ -20,94 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListAggregateConfigRules请求参数结构体
  *
- * @method integer getLimit() 获取每页限制
- * @method void setLimit(integer $Limit) 设置每页限制
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method string getAccountGroupId() 获取账号组ID
- * @method void setAccountGroupId(string $AccountGroupId) 设置账号组ID
- * @method string getOrderType() 获取排序类型, 倒序：desc，顺序：asc
- * @method void setOrderType(string $OrderType) 设置排序类型, 倒序：desc，顺序：asc
- * @method array getRiskLevel() 获取风险等级
-1：高风险。
-2：中风险。
-3：低风险。
- * @method void setRiskLevel(array $RiskLevel) 设置风险等级
-1：高风险。
-2：中风险。
-3：低风险。
- * @method string getState() 获取规则状态
- * @method void setState(string $State) 设置规则状态
- * @method array getComplianceResult() 获取评估结果
- * @method void setComplianceResult(array $ComplianceResult) 设置评估结果
- * @method string getRuleName() 获取规则名
- * @method void setRuleName(string $RuleName) 设置规则名
- * @method integer getRuleOwnerId() 获取规则所属账号ID
- * @method void setRuleOwnerId(integer $RuleOwnerId) 设置规则所属账号ID
+ * @method integer getLimit() 获取<p>每页限制</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页限制</p>
+ * @method integer getOffset() 获取<p>偏移量</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量</p>
+ * @method string getAccountGroupId() 获取<p>账号组ID</p>
+ * @method void setAccountGroupId(string $AccountGroupId) 设置<p>账号组ID</p>
+ * @method string getOrderType() 获取<p>排序类型, 倒序：desc，顺序：asc</p>
+ * @method void setOrderType(string $OrderType) 设置<p>排序类型, 倒序：desc，顺序：asc</p>
+ * @method array getRiskLevel() 获取<p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p>
+ * @method void setRiskLevel(array $RiskLevel) 设置<p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p>
+ * @method string getState() 获取<p>规则状态</p>
+ * @method void setState(string $State) 设置<p>规则状态</p>
+ * @method array getComplianceResult() 获取<p>评估结果</p>
+ * @method void setComplianceResult(array $ComplianceResult) 设置<p>评估结果</p>
+ * @method string getRuleName() 获取<p>规则名</p>
+ * @method void setRuleName(string $RuleName) 设置<p>规则名</p>
+ * @method integer getRuleOwnerId() 获取<p>规则所属账号ID</p>
+ * @method void setRuleOwnerId(integer $RuleOwnerId) 设置<p>规则所属账号ID</p>
  */
 class ListAggregateConfigRulesRequest extends AbstractModel
 {
     /**
-     * @var integer 每页限制
+     * @var integer <p>每页限制</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量
+     * @var integer <p>偏移量</p>
      */
     public $Offset;
 
     /**
-     * @var string 账号组ID
+     * @var string <p>账号组ID</p>
      */
     public $AccountGroupId;
 
     /**
-     * @var string 排序类型, 倒序：desc，顺序：asc
+     * @var string <p>排序类型, 倒序：desc，顺序：asc</p>
      */
     public $OrderType;
 
     /**
-     * @var array 风险等级
-1：高风险。
-2：中风险。
-3：低风险。
+     * @var array <p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p>
      */
     public $RiskLevel;
 
     /**
-     * @var string 规则状态
+     * @var string <p>规则状态</p>
      */
     public $State;
 
     /**
-     * @var array 评估结果
+     * @var array <p>评估结果</p>
      */
     public $ComplianceResult;
 
     /**
-     * @var string 规则名
+     * @var string <p>规则名</p>
      */
     public $RuleName;
 
     /**
-     * @var integer 规则所属账号ID
+     * @var integer <p>规则所属账号ID</p>
      */
     public $RuleOwnerId;
 
     /**
-     * @param integer $Limit 每页限制
-     * @param integer $Offset 偏移量
-     * @param string $AccountGroupId 账号组ID
-     * @param string $OrderType 排序类型, 倒序：desc，顺序：asc
-     * @param array $RiskLevel 风险等级
-1：高风险。
-2：中风险。
-3：低风险。
-     * @param string $State 规则状态
-     * @param array $ComplianceResult 评估结果
-     * @param string $RuleName 规则名
-     * @param integer $RuleOwnerId 规则所属账号ID
+     * @param integer $Limit <p>每页限制</p>
+     * @param integer $Offset <p>偏移量</p>
+     * @param string $AccountGroupId <p>账号组ID</p>
+     * @param string $OrderType <p>排序类型, 倒序：desc，顺序：asc</p>
+     * @param array $RiskLevel <p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p>
+     * @param string $State <p>规则状态</p>
+     * @param array $ComplianceResult <p>评估结果</p>
+     * @param string $RuleName <p>规则名</p>
+     * @param integer $RuleOwnerId <p>规则所属账号ID</p>
      */
     function __construct()
     {

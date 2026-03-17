@@ -208,6 +208,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOpenDynamicSignFlow(boolean $OpenDynamicSignFlow) 设置是否开启动态签署合同：<ul><li> **true**：开启动态签署合同，可在发起时可以不传签署人，在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li><li> **false**：不开启动态签署合同。</li></ul>
  * @method boolean getWorkflow() 获取是否开启发起合同审批，默认：false（不开启），开启后，发起合同（StartFlow），会提交电子签内置的审批流
  * @method void setWorkflow(boolean $Workflow) 设置是否开启发起合同审批，默认：false（不开启），开启后，发起合同（StartFlow），会提交电子签内置的审批流
+ * @method FlowOperateLimit getFlowOperateLimit() 获取发起合同流程时对合同流程的部分操作加以限制的配置。
+ * @method void setFlowOperateLimit(FlowOperateLimit $FlowOperateLimit) 设置发起合同流程时对合同流程的部分操作加以限制的配置。
  */
 class CreateFlowByFilesRequest extends AbstractModel
 {
@@ -402,6 +404,11 @@ class CreateFlowByFilesRequest extends AbstractModel
     public $Workflow;
 
     /**
+     * @var FlowOperateLimit 发起合同流程时对合同流程的部分操作加以限制的配置。
+     */
+    public $FlowOperateLimit;
+
+    /**
      * @param UserInfo $Operator 本合同的发起人  <a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
 
 注： 支持填入集团子公司经办人 userId 代发合同。
@@ -496,6 +503,7 @@ class CreateFlowByFilesRequest extends AbstractModel
      * @param integer $FlowDisplayType 在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li><li> <b>3</b> :文书</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
      * @param boolean $OpenDynamicSignFlow 是否开启动态签署合同：<ul><li> **true**：开启动态签署合同，可在发起时可以不传签署人，在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li><li> **false**：不开启动态签署合同。</li></ul>
      * @param boolean $Workflow 是否开启发起合同审批，默认：false（不开启），开启后，发起合同（StartFlow），会提交电子签内置的审批流
+     * @param FlowOperateLimit $FlowOperateLimit 发起合同流程时对合同流程的部分操作加以限制的配置。
      */
     function __construct()
     {
@@ -621,6 +629,11 @@ class CreateFlowByFilesRequest extends AbstractModel
 
         if (array_key_exists("Workflow",$param) and $param["Workflow"] !== null) {
             $this->Workflow = $param["Workflow"];
+        }
+
+        if (array_key_exists("FlowOperateLimit",$param) and $param["FlowOperateLimit"] !== null) {
+            $this->FlowOperateLimit = new FlowOperateLimit();
+            $this->FlowOperateLimit->deserialize($param["FlowOperateLimit"]);
         }
     }
 }

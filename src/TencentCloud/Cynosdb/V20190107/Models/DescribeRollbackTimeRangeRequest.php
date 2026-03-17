@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method string getVaultId() 获取保险箱id
+ * @method void setVaultId(string $VaultId) 设置保险箱id
+ * @method string getVaultRegion() 获取保险箱地域
+ * @method void setVaultRegion(string $VaultRegion) 设置保险箱地域
  */
 class DescribeRollbackTimeRangeRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class DescribeRollbackTimeRangeRequest extends AbstractModel
     public $ClusterId;
 
     /**
+     * @var string 保险箱id
+     */
+    public $VaultId;
+
+    /**
+     * @var string 保险箱地域
+     */
+    public $VaultRegion;
+
+    /**
      * @param string $ClusterId 集群ID
+     * @param string $VaultId 保险箱id
+     * @param string $VaultRegion 保险箱地域
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DescribeRollbackTimeRangeRequest extends AbstractModel
         }
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("VaultId",$param) and $param["VaultId"] !== null) {
+            $this->VaultId = $param["VaultId"];
+        }
+
+        if (array_key_exists("VaultRegion",$param) and $param["VaultRegion"] !== null) {
+            $this->VaultRegion = $param["VaultRegion"];
         }
     }
 }

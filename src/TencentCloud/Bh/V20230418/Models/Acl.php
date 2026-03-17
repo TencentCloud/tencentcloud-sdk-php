@@ -94,6 +94,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTicketId(string $TicketId) 设置权限所属工单id
  * @method string getTicketName() 获取权限所属工单名称
  * @method void setTicketName(string $TicketName) 设置权限所属工单名称
+ * @method integer getMaxAccessCredentialDuration() 获取访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍
+ * @method void setMaxAccessCredentialDuration(integer $MaxAccessCredentialDuration) 设置访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍
  */
 class Acl extends AbstractModel
 {
@@ -275,6 +277,11 @@ class Acl extends AbstractModel
     public $TicketName;
 
     /**
+     * @var integer 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍
+     */
+    public $MaxAccessCredentialDuration;
+
+    /**
      * @param integer $Id 访问权限ID
      * @param string $Name 访问权限名称
      * @param boolean $AllowDiskRedirect 是否开启磁盘映射
@@ -312,6 +319,7 @@ class Acl extends AbstractModel
      * @param integer $AclType 权限类型 0-默认普通权限 1-工单权限,2-权限工单权限
      * @param string $TicketId 权限所属工单id
      * @param string $TicketName 权限所属工单名称
+     * @param integer $MaxAccessCredentialDuration 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍
      */
     function __construct()
     {
@@ -500,6 +508,10 @@ class Acl extends AbstractModel
 
         if (array_key_exists("TicketName",$param) and $param["TicketName"] !== null) {
             $this->TicketName = $param["TicketName"];
+        }
+
+        if (array_key_exists("MaxAccessCredentialDuration",$param) and $param["MaxAccessCredentialDuration"] !== null) {
+            $this->MaxAccessCredentialDuration = $param["MaxAccessCredentialDuration"];
         }
     }
 }

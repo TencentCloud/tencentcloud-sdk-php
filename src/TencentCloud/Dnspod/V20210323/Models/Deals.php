@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 子订单号列表
  *
- * @method string getDealId() 获取子订单ID
- * @method void setDealId(string $DealId) 设置子订单ID
- * @method string getDealName() 获取子订单号
- * @method void setDealName(string $DealName) 设置子订单号
+ * @method string getDealId() 获取<p>子订单ID</p>
+ * @method void setDealId(string $DealId) 设置<p>子订单ID</p>
+ * @method string getDealName() 获取<p>子订单号</p>
+ * @method void setDealName(string $DealName) 设置<p>子订单号</p>
+ * @method string getResourceId() 获取<p>资源ID</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>资源ID</p>
  */
 class Deals extends AbstractModel
 {
     /**
-     * @var string 子订单ID
+     * @var string <p>子订单ID</p>
      */
     public $DealId;
 
     /**
-     * @var string 子订单号
+     * @var string <p>子订单号</p>
      */
     public $DealName;
 
     /**
-     * @param string $DealId 子订单ID
-     * @param string $DealName 子订单号
+     * @var string <p>资源ID</p>
+     */
+    public $ResourceId;
+
+    /**
+     * @param string $DealId <p>子订单ID</p>
+     * @param string $DealName <p>子订单号</p>
+     * @param string $ResourceId <p>资源ID</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class Deals extends AbstractModel
 
         if (array_key_exists("DealName",$param) and $param["DealName"] !== null) {
             $this->DealName = $param["DealName"];
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
         }
     }
 }

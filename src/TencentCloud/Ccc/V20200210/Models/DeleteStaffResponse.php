@@ -20,17 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteStaff返回参数结构体
  *
- * @method array getOnlineStaffList() 获取无法删除的状态为在线的客服列表
- * @method void setOnlineStaffList(array $OnlineStaffList) 设置无法删除的状态为在线的客服列表
+ * @method array getOnlineStaffList() 获取<p>无法删除的状态为在线的客服列表</p>
+ * @method void setOnlineStaffList(array $OnlineStaffList) 设置<p>无法删除的状态为在线的客服列表</p>
+ * @method string getDeleteStatusInfo() 获取<p>坐席删除详情</p>
+ * @method void setDeleteStatusInfo(string $DeleteStatusInfo) 设置<p>坐席删除详情</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DeleteStaffResponse extends AbstractModel
 {
     /**
-     * @var array 无法删除的状态为在线的客服列表
+     * @var array <p>无法删除的状态为在线的客服列表</p>
      */
     public $OnlineStaffList;
+
+    /**
+     * @var string <p>坐席删除详情</p>
+     */
+    public $DeleteStatusInfo;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class DeleteStaffResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $OnlineStaffList 无法删除的状态为在线的客服列表
+     * @param array $OnlineStaffList <p>无法删除的状态为在线的客服列表</p>
+     * @param string $DeleteStatusInfo <p>坐席删除详情</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,10 @@ class DeleteStaffResponse extends AbstractModel
         }
         if (array_key_exists("OnlineStaffList",$param) and $param["OnlineStaffList"] !== null) {
             $this->OnlineStaffList = $param["OnlineStaffList"];
+        }
+
+        if (array_key_exists("DeleteStatusInfo",$param) and $param["DeleteStatusInfo"] !== null) {
+            $this->DeleteStatusInfo = $param["DeleteStatusInfo"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

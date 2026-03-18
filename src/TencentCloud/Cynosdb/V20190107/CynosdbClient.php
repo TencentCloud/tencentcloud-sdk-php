@@ -30,13 +30,16 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\AddInstancesResponse AddInstances(Models\AddInstancesRequest $req) 本接口（AddInstances）用于集群添加实例。
  * @method Models\AssociateSecurityGroupsResponse AssociateSecurityGroups(Models\AssociateSecurityGroupsRequest $req) 本接口（AssociateSecurityGroups）用于安全组批量绑定云资源。
  * @method Models\BindClusterResourcePackagesResponse BindClusterResourcePackages(Models\BindClusterResourcePackagesRequest $req) 本接口（BindClusterResourcePackages）用于为集群绑定资源包。
+ * @method Models\CalculateBackupSaveSecExpiresResponse CalculateBackupSaveSecExpires(Models\CalculateBackupSaveSecExpiresRequest $req) 计算修改备份保留时长后将会过期删除的备份文件列表
  * @method Models\CheckCreateLibraDBInstanceResponse CheckCreateLibraDBInstance(Models\CheckCreateLibraDBInstanceRequest $req) 本接口（CheckCreateLibraDBInstance）用于校验集群是否可以添加只读分析引擎实例
+ * @method Models\CheckTransferClusterZoneResponse CheckTransferClusterZone(Models\CheckTransferClusterZoneRequest $req) 本接口（CheckTransferClusterZone）用于检查是否可以发起跨可用区迁移。
  * @method Models\CloseAuditServiceResponse CloseAuditService(Models\CloseAuditServiceRequest $req) 本接口（CloseAuditService）用于关闭 TDSQL-C MySQL 实例的数据库审计服务。
  * @method Models\CloseClusterPasswordComplexityResponse CloseClusterPasswordComplexity(Models\CloseClusterPasswordComplexityRequest $req) 本接口（CloseClusterPasswordComplexity）用于关闭集群密码复杂度。
  * @method Models\CloseProxyResponse CloseProxy(Models\CloseProxyRequest $req) 本接口（CloseProxy）用于关闭集群的数据库代理服务。
  * @method Models\CloseProxyEndPointResponse CloseProxyEndPoint(Models\CloseProxyEndPointRequest $req) 本接口（CloseProxyEndPoint）用于关闭数据库代理连接地址。
  * @method Models\CloseSSLResponse CloseSSL(Models\CloseSSLRequest $req) 关闭SSL加密
  * @method Models\CloseWanResponse CloseWan(Models\CloseWanRequest $req) 本接口（CloseWan）用于关闭外网。
+ * @method Models\CopyBackupToVaultResponse CopyBackupToVault(Models\CopyBackupToVaultRequest $req) 将备份文件复制到指定的备份保险箱
  * @method Models\CopyClusterPasswordComplexityResponse CopyClusterPasswordComplexity(Models\CopyClusterPasswordComplexityRequest $req) 本接口（CopyClusterPasswordComplexity）用于复制集群密码复杂度。
  * @method Models\CreateAccountsResponse CreateAccounts(Models\CreateAccountsRequest $req) 本接口（CreateAccounts）用于创建用户账号。
  * @method Models\CreateAuditLogFileResponse CreateAuditLogFile(Models\CreateAuditLogFileRequest $req) 本接口(CreateAuditLogFile)用于创建云数据库实例的审计日志文件。
@@ -52,16 +55,19 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\CreateProxyResponse CreateProxy(Models\CreateProxyRequest $req) 本接口（CreateProxy）用于开启集群的数据库代理。
  * @method Models\CreateProxyEndPointResponse CreateProxyEndPoint(Models\CreateProxyEndPointRequest $req) 本接口（CreateProxyEndPoint）用于创建数据库代理连接点。
  * @method Models\CreateResourcePackageResponse CreateResourcePackage(Models\CreateResourcePackageRequest $req) 本接口（CreateResourcePackage）用于新购资源包。
+ * @method Models\CreateVaultResponse CreateVault(Models\CreateVaultRequest $req) 创建备份保险箱
  * @method Models\DeleteAccountsResponse DeleteAccounts(Models\DeleteAccountsRequest $req) 本接口（DeleteAccounts）用于删除用户账号。
  * @method Models\DeleteAuditLogFileResponse DeleteAuditLogFile(Models\DeleteAuditLogFileRequest $req) 本接口（DeleteAuditLogFile）用于删除云数据库实例的审计日志文件。
  * @method Models\DeleteAuditRuleTemplatesResponse DeleteAuditRuleTemplates(Models\DeleteAuditRuleTemplatesRequest $req) 本接口（DeleteAuditRuleTemplates）用于删除审计规则模板。
  * @method Models\DeleteBackupResponse DeleteBackup(Models\DeleteBackupRequest $req) 本接口（DeleteBackup）用于为集群删除手动备份，无法删除自动备份。
+ * @method Models\DeleteBackupVaultResponse DeleteBackupVault(Models\DeleteBackupVaultRequest $req) 从备份保险箱中删除指定的备份文件
  * @method Models\DeleteCLSDeliveryResponse DeleteCLSDelivery(Models\DeleteCLSDeliveryRequest $req) 本接口（DeleteCLSDelivery）用于删除日志投递。
  * @method Models\DeleteClusterDatabaseResponse DeleteClusterDatabase(Models\DeleteClusterDatabaseRequest $req) 本接口（DeleteClusterDatabase）用于删除数据库。
  * @method Models\DeleteClusterSaveBackupResponse DeleteClusterSaveBackup(Models\DeleteClusterSaveBackupRequest $req) 本接口（DeleteClusterSaveBackup）用于为集群删除遗留备份
  * @method Models\DeleteLibraDBClusterResponse DeleteLibraDBCluster(Models\DeleteLibraDBClusterRequest $req) 删除 TDSQL-C 分析集群
  * @method Models\DeleteLibraDBClusterAccountsResponse DeleteLibraDBClusterAccounts(Models\DeleteLibraDBClusterAccountsRequest $req) 本接口（DeleteLibraDBClusterAccounts）用于删除分析集群账号
  * @method Models\DeleteParamTemplateResponse DeleteParamTemplate(Models\DeleteParamTemplateRequest $req) 本接口（DeleteParamTemplate）用于删除用户创建的参数模板。
+ * @method Models\DeleteVaultsResponse DeleteVaults(Models\DeleteVaultsRequest $req) 批量删除备份保险箱
  * @method Models\DescribeAccountAllGrantPrivilegesResponse DescribeAccountAllGrantPrivileges(Models\DescribeAccountAllGrantPrivilegesRequest $req) 本接口（DescribeAccountAllGrantPrivileges）用于查询账号所有可授予的权限。
  * @method Models\DescribeAccountPrivilegesResponse DescribeAccountPrivileges(Models\DescribeAccountPrivilegesRequest $req) 本接口（DescribeAccountPrivileges）用于查询账号已有权限。
  * @method Models\DescribeAccountsResponse DescribeAccounts(Models\DescribeAccountsRequest $req) 本接口（DescribeAccounts）用于查询数据库账号列表。
@@ -75,8 +81,10 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeBackupDownloadUrlResponse DescribeBackupDownloadUrl(Models\DescribeBackupDownloadUrlRequest $req) 本接口（DescribeBackupDownloadUrl）用于查询集群备份文件下载地址。
  * @method Models\DescribeBackupDownloadUserRestrictionResponse DescribeBackupDownloadUserRestriction(Models\DescribeBackupDownloadUserRestrictionRequest $req) 该接口用户查询当前地域用户级别设置的默认备份下载来源限制
  * @method Models\DescribeBackupListResponse DescribeBackupList(Models\DescribeBackupListRequest $req) 本接口（DescribeBackupList）用于查询集群的备份文件列表。
+ * @method Models\DescribeBackupListByVaultResponse DescribeBackupListByVault(Models\DescribeBackupListByVaultRequest $req) 根据保险箱ID查询备份文件列表
  * @method Models\DescribeBinlogConfigResponse DescribeBinlogConfig(Models\DescribeBinlogConfigRequest $req) 该接口（DescribeBinlogConfig）用于查询binlog配置
  * @method Models\DescribeBinlogDownloadUrlResponse DescribeBinlogDownloadUrl(Models\DescribeBinlogDownloadUrlRequest $req) 本接口（DescribeBinlogDownloadUrl）用于查询 Binlog 的下载地址。
+ * @method Models\DescribeBinlogListByVaultResponse DescribeBinlogListByVault(Models\DescribeBinlogListByVaultRequest $req) 查询保险箱内binlog备份
  * @method Models\DescribeBinlogSaveDaysResponse DescribeBinlogSaveDays(Models\DescribeBinlogSaveDaysRequest $req) 此接口（DescribeBinlogSaveDays）用于查询集群的Binlog保留天数。
  * @method Models\DescribeBinlogsResponse DescribeBinlogs(Models\DescribeBinlogsRequest $req) 本接口（DescribeBinlogs）用来查询集群 Binlog 日志列表。
  * @method Models\DescribeChangedParamsAfterUpgradeResponse DescribeChangedParamsAfterUpgrade(Models\DescribeChangedParamsAfterUpgradeRequest $req) 本接口（DescribeChangedParamsAfterUpgrade）用于查询升降配运行参数对比。
@@ -124,6 +132,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeProxiesResponse DescribeProxies(Models\DescribeProxiesRequest $req) 本接口（DescribeProxies）用于查询数据库代理列表。
  * @method Models\DescribeProxyNodesResponse DescribeProxyNodes(Models\DescribeProxyNodesRequest $req) 本接口（DescribeProxyNodes）用于查询代理节点列表。
  * @method Models\DescribeProxySpecsResponse DescribeProxySpecs(Models\DescribeProxySpecsRequest $req) 本接口（DescribeProxySpecs）用于查询数据库代理规格。
+ * @method Models\DescribeRedoLogListByVaultResponse DescribeRedoLogListByVault(Models\DescribeRedoLogListByVaultRequest $req) 查询RedoLog备份
  * @method Models\DescribeRedoLogsResponse DescribeRedoLogs(Models\DescribeRedoLogsRequest $req) 本接口（DescribeRedoLogs）用于查询redo日志列表。
  * @method Models\DescribeResourcePackageDetailResponse DescribeResourcePackageDetail(Models\DescribeResourcePackageDetailRequest $req) 本接口（DescribeResourcePackageDetail）用于查询资源包使用详情。
  * @method Models\DescribeResourcePackageListResponse DescribeResourcePackageList(Models\DescribeResourcePackageListRequest $req) 本接口（DescribeResourcePackageList）用于查询资源包列表。
@@ -137,6 +146,8 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeSlaveZonesResponse DescribeSlaveZones(Models\DescribeSlaveZonesRequest $req) 查询从可用区
  * @method Models\DescribeSupportProxyVersionResponse DescribeSupportProxyVersion(Models\DescribeSupportProxyVersionRequest $req) 本接口（DescribeSupportProxyVersion）用于查询支持的数据库代理版本。
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 本接口（DescribeTasks）用于查询任务列表。
+ * @method Models\DescribeVaultBackupClusterInfoResponse DescribeVaultBackupClusterInfo(Models\DescribeVaultBackupClusterInfoRequest $req) 查询备份保险箱关联的集群信息列表
+ * @method Models\DescribeVaultsResponse DescribeVaults(Models\DescribeVaultsRequest $req) 查询备份保险箱列表，支持分页、筛选和排序
  * @method Models\DescribeZonesResponse DescribeZones(Models\DescribeZonesRequest $req) 本接口（DescribeZones）用于查询可售卖地域可用区信息。
  * @method Models\DisassociateSecurityGroupsResponse DisassociateSecurityGroups(Models\DisassociateSecurityGroupsRequest $req) 本接口（DisassociateSecurityGroups）用于安全组批量解绑云资源。
  * @method Models\DownloadLibraDBClusterListResponse DownloadLibraDBClusterList(Models\DownloadLibraDBClusterListRequest $req) 下载分析集群列表
@@ -164,6 +175,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\ModifyBackupNameResponse ModifyBackupName(Models\ModifyBackupNameRequest $req) 此接口（ModifyBackupName）用于修改备份文件备注名。
  * @method Models\ModifyBinlogConfigResponse ModifyBinlogConfig(Models\ModifyBinlogConfigRequest $req) 该接口（ModifyBinlogConfig）用于修改Binlog配置
  * @method Models\ModifyBinlogSaveDaysResponse ModifyBinlogSaveDays(Models\ModifyBinlogSaveDaysRequest $req) 此接口（ModifyBinlogSaveDays）用于修改集群Binlog保留天数。
+ * @method Models\ModifyClusterBinlogRedoLogAutoCopyVaultResponse ModifyClusterBinlogRedoLogAutoCopyVault(Models\ModifyClusterBinlogRedoLogAutoCopyVaultRequest $req) 修改集群Binlog和RedoLog自动拷贝到保险箱的配置
  * @method Models\ModifyClusterDatabaseResponse ModifyClusterDatabase(Models\ModifyClusterDatabaseRequest $req) 本接口（ModifyClusterDatabase）用于修改数据库的账号授权。
  * @method Models\ModifyClusterGlobalEncryptionResponse ModifyClusterGlobalEncryption(Models\ModifyClusterGlobalEncryptionRequest $req) 开关全局加密
  * @method Models\ModifyClusterNameResponse ModifyClusterName(Models\ModifyClusterNameRequest $req) 本接口（ModifyClusterName）用于修改集群名称。
@@ -193,6 +205,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\ModifyResourcePackagesDeductionPriorityResponse ModifyResourcePackagesDeductionPriority(Models\ModifyResourcePackagesDeductionPriorityRequest $req) 修改已绑定资源包抵扣优先级
  * @method Models\ModifyServerlessStrategyResponse ModifyServerlessStrategy(Models\ModifyServerlessStrategyRequest $req) 修改serverless策略
  * @method Models\ModifySnapBackupCrossRegionConfigResponse ModifySnapBackupCrossRegionConfig(Models\ModifySnapBackupCrossRegionConfigRequest $req) 本接口（ModifySnapBackupCrossRegionConfig）用于修改指定集群的快照备份跨地域配置。
+ * @method Models\ModifyVaultResponse ModifyVault(Models\ModifyVaultRequest $req) 修改备份保险箱配置，包括名称、描述、保留时长、加密密钥、锁定时间等
  * @method Models\ModifyVipVportResponse ModifyVipVport(Models\ModifyVipVportRequest $req) 本接口（ModifyVipVport）用于修改实例组ip，端口。
  * @method Models\OfflineClusterResponse OfflineCluster(Models\OfflineClusterRequest $req) 本接口（OfflineCluster）用于销毁集群。
  * @method Models\OfflineInstanceResponse OfflineInstance(Models\OfflineInstanceRequest $req) 本接口（OfflineInstance）用于销毁实例。
@@ -229,6 +242,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\SwitchClusterVpcResponse SwitchClusterVpc(Models\SwitchClusterVpcRequest $req) 本接口（SwitchClusterVpc）用于更换集群vpc。
  * @method Models\SwitchClusterZoneResponse SwitchClusterZone(Models\SwitchClusterZoneRequest $req) 本接口（SwitchClusterZone）用于切换集群的主备可用区。
  * @method Models\SwitchProxyVpcResponse SwitchProxyVpc(Models\SwitchProxyVpcRequest $req) 本接口（SwitchProxyVpc）用于更换数据库代理vpc。
+ * @method Models\TransferClusterZoneResponse TransferClusterZone(Models\TransferClusterZoneRequest $req) 本接口（TransferClusterZone）用于发起跨可用区迁移。
  * @method Models\UnbindClusterResourcePackagesResponse UnbindClusterResourcePackages(Models\UnbindClusterResourcePackagesRequest $req) 本接口（UnbindClusterResourcePackages）用于解除资源包与集群之间的绑定关系。
  * @method Models\UpgradeClusterVersionResponse UpgradeClusterVersion(Models\UpgradeClusterVersionRequest $req) 本接口（UpgradeClusterVersion）用于更新内核小版本。
  * @method Models\UpgradeInstanceResponse UpgradeInstance(Models\UpgradeInstanceRequest $req) 本接口（UpgradeInstance）用于实例变配。

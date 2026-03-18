@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRelateOption(string $RelateOption) 设置RelateOption 关系操作符（and/or），用于根级别条件关系
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getValueType() 获取值类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setValueType(string $ValueType) 设置值类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RulePayloadItem extends AbstractModel
 {
@@ -74,6 +78,12 @@ class RulePayloadItem extends AbstractModel
     public $RelateOption;
 
     /**
+     * @var string 值类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ValueType;
+
+    /**
      * @param string $FieldKey 字段Key
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Option 选项（eq:等于,neq:不等于,like,nlike,gt:大于,lt:小于,egt:大于等于,elt:小于等于）
@@ -83,6 +93,8 @@ class RulePayloadItem extends AbstractModel
      * @param array $Groups 嵌套条件组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RelateOption RelateOption 关系操作符（and/or），用于根级别条件关系
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ValueType 值类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -121,6 +133,10 @@ class RulePayloadItem extends AbstractModel
 
         if (array_key_exists("RelateOption",$param) and $param["RelateOption"] !== null) {
             $this->RelateOption = $param["RelateOption"];
+        }
+
+        if (array_key_exists("ValueType",$param) and $param["ValueType"] !== null) {
+            $this->ValueType = $param["ValueType"];
         }
     }
 }

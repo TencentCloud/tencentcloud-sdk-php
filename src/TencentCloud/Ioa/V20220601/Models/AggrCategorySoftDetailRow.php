@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUpgradableDeviceNum() 获取有新版本可升级的设备数量
  * @method void setUpgradableDeviceNum(integer $UpgradableDeviceNum) 设置有新版本可升级的设备数量
+ * @method integer getUpgradeDeviceNum() 获取有新版本可升级的设备数量
+ * @method void setUpgradeDeviceNum(integer $UpgradeDeviceNum) 设置有新版本可升级的设备数量
  */
 class AggrCategorySoftDetailRow extends AbstractModel
 {
@@ -141,6 +143,11 @@ class AggrCategorySoftDetailRow extends AbstractModel
     public $UpgradableDeviceNum;
 
     /**
+     * @var integer 有新版本可升级的设备数量
+     */
+    public $UpgradeDeviceNum;
+
+    /**
      * @param integer $ID ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 软件名称
@@ -164,6 +171,7 @@ class AggrCategorySoftDetailRow extends AbstractModel
      * @param float $GenuineRate 正版率
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpgradableDeviceNum 有新版本可升级的设备数量
+     * @param integer $UpgradeDeviceNum 有新版本可升级的设备数量
      */
     function __construct()
     {
@@ -224,6 +232,10 @@ class AggrCategorySoftDetailRow extends AbstractModel
 
         if (array_key_exists("UpgradableDeviceNum",$param) and $param["UpgradableDeviceNum"] !== null) {
             $this->UpgradableDeviceNum = $param["UpgradableDeviceNum"];
+        }
+
+        if (array_key_exists("UpgradeDeviceNum",$param) and $param["UpgradeDeviceNum"] !== null) {
+            $this->UpgradeDeviceNum = $param["UpgradeDeviceNum"];
         }
     }
 }

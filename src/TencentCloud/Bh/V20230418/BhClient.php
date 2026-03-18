@@ -83,10 +83,14 @@ use TencentCloud\Bh\V20230418\Models as Models;
  * @method Models\DescribeUserGroupsResponse DescribeUserGroups(Models\DescribeUserGroupsRequest $req) 查询用户组列表
  * @method Models\DescribeUserSyncStatusResponse DescribeUserSyncStatus(Models\DescribeUserSyncStatusRequest $req) 获取用户同步状态
  * @method Models\DescribeUsersResponse DescribeUsers(Models\DescribeUsersRequest $req) 查询用户列表
+ * @method Models\DisableClientTcpAccessResponse DisableClientTcpAccess(Models\DisableClientTcpAccessRequest $req) 关闭客户端TCP访问堡垒机
  * @method Models\DisableExternalAccessResponse DisableExternalAccess(Models\DisableExternalAccessRequest $req) 关闭公网访问堡垒机
  * @method Models\DisableIntranetAccessResponse DisableIntranetAccess(Models\DisableIntranetAccessRequest $req) 关闭内网访问
+ * @method Models\DisableWebAccessResponse DisableWebAccess(Models\DisableWebAccessRequest $req) 关闭web访问堡垒机
+ * @method Models\EnableClientTcpAccessResponse EnableClientTcpAccess(Models\EnableClientTcpAccessRequest $req) 开启客户端TCP访问堡垒机
  * @method Models\EnableExternalAccessResponse EnableExternalAccess(Models\EnableExternalAccessRequest $req) 开启公网访问堡垒机
  * @method Models\EnableIntranetAccessResponse EnableIntranetAccess(Models\EnableIntranetAccessRequest $req) 开通内网访问
+ * @method Models\EnableWebAccessResponse EnableWebAccess(Models\EnableWebAccessRequest $req) 开启web访问堡垒机
  * @method Models\ImportExternalDeviceResponse ImportExternalDevice(Models\ImportExternalDeviceRequest $req) 导入外部资产信息
  * @method Models\ModifyAccessWhiteListAutoStatusResponse ModifyAccessWhiteListAutoStatus(Models\ModifyAccessWhiteListAutoStatusRequest $req) 修改访问白名单自动添加IP状态：开启或关闭自动添加IP
  * @method Models\ModifyAccessWhiteListRuleResponse ModifyAccessWhiteListRule(Models\ModifyAccessWhiteListRuleRequest $req) 修改访问白名单规则

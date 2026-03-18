@@ -410,6 +410,10 @@ CAN_MANAGE : 有权限管理操作
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskExtDTO(TaskExtOpsDto $TaskExtDTO) 设置任务扩展信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getScheduleTimeZone() 获取任务时区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置任务时区
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskOpsDto extends AbstractModel
 {
@@ -997,6 +1001,12 @@ CAN_MANAGE : 有权限管理操作
     public $TaskExtDTO;
 
     /**
+     * @var string 任务时区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScheduleTimeZone;
+
+    /**
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VirtualTaskId 虚拟任务id
@@ -1191,6 +1201,8 @@ CAN_MANAGE : 有权限管理操作
      * @param string $WorkflowType 工作流类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskExtOpsDto $TaskExtDTO 任务扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ScheduleTimeZone 任务时区
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1609,6 +1621,10 @@ CAN_MANAGE : 有权限管理操作
         if (array_key_exists("TaskExtDTO",$param) and $param["TaskExtDTO"] !== null) {
             $this->TaskExtDTO = new TaskExtOpsDto();
             $this->TaskExtDTO->deserialize($param["TaskExtDTO"]);
+        }
+
+        if (array_key_exists("ScheduleTimeZone",$param) and $param["ScheduleTimeZone"] !== null) {
+            $this->ScheduleTimeZone = $param["ScheduleTimeZone"];
         }
     }
 }

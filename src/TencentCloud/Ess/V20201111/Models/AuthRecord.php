@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 <li> **3**：审核中</li>
 <li> **4**：AI识别中</li>
 <li> **5**：客户确认AI信息</li></ul>
+ * @method string getReason() 获取审核失败原因，
+当 AuditStatus 返回2时，则会返回具体的原因。
+ * @method void setReason(string $Reason) 设置审核失败原因，
+当 AuditStatus 返回2时，则会返回具体的原因。
  */
 class AuthRecord extends AbstractModel
 {
@@ -82,6 +86,12 @@ class AuthRecord extends AbstractModel
     public $AuditStatus;
 
     /**
+     * @var string 审核失败原因，
+当 AuditStatus 返回2时，则会返回具体的原因。
+     */
+    public $Reason;
+
+    /**
      * @param string $OperatorName 经办人姓名。
      * @param string $OperatorMobile 经办人手机号。
      * @param integer $AuthType 认证授权方式：
@@ -96,6 +106,8 @@ class AuthRecord extends AbstractModel
 <li> **3**：审核中</li>
 <li> **4**：AI识别中</li>
 <li> **5**：客户确认AI信息</li></ul>
+     * @param string $Reason 审核失败原因，
+当 AuditStatus 返回2时，则会返回具体的原因。
      */
     function __construct()
     {
@@ -124,6 +136,10 @@ class AuthRecord extends AbstractModel
 
         if (array_key_exists("AuditStatus",$param) and $param["AuditStatus"] !== null) {
             $this->AuditStatus = $param["AuditStatus"];
+        }
+
+        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
+            $this->Reason = $param["Reason"];
         }
     }
 }

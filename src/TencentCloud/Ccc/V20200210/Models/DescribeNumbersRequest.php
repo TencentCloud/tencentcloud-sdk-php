@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNumbers请求参数结构体
  *
- * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
- * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
- * @method integer getPageNumber() 获取页数，从0开始
- * @method void setPageNumber(integer $PageNumber) 设置页数，从0开始
- * @method integer getPageSize() 获取分页大小，默认20
- * @method void setPageSize(integer $PageSize) 设置分页大小，默认20
+ * @method integer getSdkAppId() 获取<p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+ * @method void setSdkAppId(integer $SdkAppId) 设置<p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+ * @method integer getPageNumber() 获取<p>页数，从0开始</p>
+ * @method void setPageNumber(integer $PageNumber) 设置<p>页数，从0开始</p>
+ * @method integer getPageSize() 获取<p>分页大小，默认20</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>分页大小，默认20</p>
  */
 class DescribeNumbersRequest extends AbstractModel
 {
     /**
-     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * @var integer <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public $SdkAppId;
 
     /**
-     * @var integer 页数，从0开始
+     * @var integer <p>页数，从0开始</p>
      */
     public $PageNumber;
 
     /**
-     * @var integer 分页大小，默认20
+     * @var integer <p>分页大小，默认20</p>
      */
     public $PageSize;
 
     /**
-     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
-     * @param integer $PageNumber 页数，从0开始
-     * @param integer $PageSize 分页大小，默认20
+     * @param integer $SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+     * @param integer $PageNumber <p>页数，从0开始</p>
+     * @param integer $PageSize <p>分页大小，默认20</p>
      */
     function __construct()
     {

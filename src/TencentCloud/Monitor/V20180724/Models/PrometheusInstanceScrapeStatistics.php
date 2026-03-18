@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method float getScrapedRate() 获取被采集的点数
- * @method void setScrapedRate(float $ScrapedRate) 设置被采集的点数
+ * @method float getScrapedRate() 获取每秒被采集的点数
+ * @method void setScrapedRate(float $ScrapedRate) 设置每秒被采集的点数
  * @method array getClusters() 获取集群指标列表
  * @method void setClusters(array $Clusters) 设置集群指标列表
  * @method array getGlobal() 获取非容器指标列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGlobal(array $Global) 设置非容器指标列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getSamplesRate() 获取过滤前的指标采集速率
- * @method void setSamplesRate(float $SamplesRate) 设置过滤前的指标采集速率
+ * @method float getSamplesRate() 获取过滤前的每秒指标采集速率
+ * @method void setSamplesRate(float $SamplesRate) 设置过滤前的每秒指标采集速率
  */
 class PrometheusInstanceScrapeStatistics extends AbstractModel
 {
@@ -41,7 +41,7 @@ class PrometheusInstanceScrapeStatistics extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var float 被采集的点数
+     * @var float 每秒被采集的点数
      */
     public $ScrapedRate;
 
@@ -57,17 +57,17 @@ class PrometheusInstanceScrapeStatistics extends AbstractModel
     public $Global;
 
     /**
-     * @var float 过滤前的指标采集速率
+     * @var float 过滤前的每秒指标采集速率
      */
     public $SamplesRate;
 
     /**
      * @param string $InstanceId 实例ID
-     * @param float $ScrapedRate 被采集的点数
+     * @param float $ScrapedRate 每秒被采集的点数
      * @param array $Clusters 集群指标列表
      * @param array $Global 非容器指标列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $SamplesRate 过滤前的指标采集速率
+     * @param float $SamplesRate 过滤前的每秒指标采集速率
      */
     function __construct()
     {

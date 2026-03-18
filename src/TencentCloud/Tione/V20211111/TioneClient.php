@@ -76,6 +76,7 @@ https://cloud.tencent.com/document/product/1278/85305
  * @method Models\DescribeNotebookResponse DescribeNotebook(Models\DescribeNotebookRequest $req) Notebook详情
  * @method Models\DescribeNotebooksResponse DescribeNotebooks(Models\DescribeNotebooksRequest $req) Notebook列表
  * @method Models\DescribePlatformImagesResponse DescribePlatformImages(Models\DescribePlatformImagesRequest $req) 查询平台镜像信息
+ * @method Models\DescribePublicAlgoVersionListResponse DescribePublicAlgoVersionList(Models\DescribePublicAlgoVersionListRequest $req) 公共算法版本列表
  * @method Models\DescribeSubAccountLinuxUserInfosResponse DescribeSubAccountLinuxUserInfos(Models\DescribeSubAccountLinuxUserInfosRequest $req) 批量查询子账号Linux用户信息
  * @method Models\DescribeTrainingModelVersionResponse DescribeTrainingModelVersion(Models\DescribeTrainingModelVersionRequest $req) 查询模型版本
  * @method Models\DescribeTrainingModelVersionsResponse DescribeTrainingModelVersions(Models\DescribeTrainingModelVersionsRequest $req) 模型版本列表

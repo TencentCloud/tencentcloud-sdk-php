@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRoom请求参数结构体
  *
- * @method integer getRoomId() 获取课堂Id。
- * @method void setRoomId(integer $RoomId) 设置课堂Id。
- * @method integer getRTMPStreamingURL() 获取请求RTMP推流链接，0：否，1：是，默认为0。
- * @method void setRTMPStreamingURL(integer $RTMPStreamingURL) 设置请求RTMP推流链接，0：否，1：是，默认为0。
+ * @method integer getRoomId() 获取<p>课堂Id。</p>
+ * @method void setRoomId(integer $RoomId) 设置<p>课堂Id。</p>
+ * @method integer getRTMPStreamingURL() 获取<p>请求RTMP推流链接，0：否，1：是，默认为0。</p>
+ * @method void setRTMPStreamingURL(integer $RTMPStreamingURL) 设置<p>请求RTMP推流链接，0：否，1：是，默认为0。</p>
  */
 class DescribeRoomRequest extends AbstractModel
 {
     /**
-     * @var integer 课堂Id。
+     * @var integer <p>课堂Id。</p>
      */
     public $RoomId;
 
     /**
-     * @var integer 请求RTMP推流链接，0：否，1：是，默认为0。
+     * @var integer <p>请求RTMP推流链接，0：否，1：是，默认为0。</p>
      */
     public $RTMPStreamingURL;
 
     /**
-     * @param integer $RoomId 课堂Id。
-     * @param integer $RTMPStreamingURL 请求RTMP推流链接，0：否，1：是，默认为0。
+     * @param integer $RoomId <p>课堂Id。</p>
+     * @param integer $RTMPStreamingURL <p>请求RTMP推流链接，0：否，1：是，默认为0。</p>
      */
     function __construct()
     {

@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 大模型图片翻译详情信息
  *
- * @method string getSourceLineText() 获取当前行的原文本
- * @method void setSourceLineText(string $SourceLineText) 设置当前行的原文本
- * @method string getTargetLineText() 获取当前行的译文
- * @method void setTargetLineText(string $TargetLineText) 设置当前行的译文
- * @method BoundingBox getBoundingBox() 获取段落文本框位置
- * @method void setBoundingBox(BoundingBox $BoundingBox) 设置段落文本框位置
- * @method integer getLinesCount() 获取行数
- * @method void setLinesCount(integer $LinesCount) 设置行数
- * @method integer getLineHeight() 获取行高
- * @method void setLineHeight(integer $LineHeight) 设置行高
- * @method integer getSpamCode() 获取正常段落spam_code字段为0；如果存在spam_code字段且值大于0（1: 命中垃圾检查；2: 命中安全策略；3: 其他。），则命中安全检查被过滤。
- * @method void setSpamCode(integer $SpamCode) 设置正常段落spam_code字段为0；如果存在spam_code字段且值大于0（1: 命中垃圾检查；2: 命中安全策略；3: 其他。），则命中安全检查被过滤。
- * @method RotateParagraphRect getRotateParagraphRect() 获取段落文本旋转信息，只在valid为true时表示坐标有效
- * @method void setRotateParagraphRect(RotateParagraphRect $RotateParagraphRect) 设置段落文本旋转信息，只在valid为true时表示坐标有效
+ * @method string getSourceLineText() 获取<p>当前行的原文本</p>
+ * @method void setSourceLineText(string $SourceLineText) 设置<p>当前行的原文本</p>
+ * @method string getTargetLineText() 获取<p>当前行的译文</p>
+ * @method void setTargetLineText(string $TargetLineText) 设置<p>当前行的译文</p>
+ * @method BoundingBox getBoundingBox() 获取<p>段落文本框位置</p>
+ * @method void setBoundingBox(BoundingBox $BoundingBox) 设置<p>段落文本框位置</p>
+ * @method integer getLinesCount() 获取<p>行数</p>
+ * @method void setLinesCount(integer $LinesCount) 设置<p>行数</p>
+ * @method integer getLineHeight() 获取<p>行高</p><p>单位：px</p>
+ * @method void setLineHeight(integer $LineHeight) 设置<p>行高</p><p>单位：px</p>
+ * @method integer getSpamCode() 获取<p>正常段落spam_code字段为0；如果存在spam_code字段且值大于0（1: 命中垃圾检查；2: 命中安全策略；3: 其他。），则命中安全检查被过滤。</p>
+ * @method void setSpamCode(integer $SpamCode) 设置<p>正常段落spam_code字段为0；如果存在spam_code字段且值大于0（1: 命中垃圾检查；2: 命中安全策略；3: 其他。），则命中安全检查被过滤。</p>
+ * @method RotateParagraphRect getRotateParagraphRect() 获取<p>段落文本旋转信息，只在valid为true时表示坐标有效</p>
+ * @method void setRotateParagraphRect(RotateParagraphRect $RotateParagraphRect) 设置<p>段落文本旋转信息，只在valid为true时表示坐标有效</p>
  */
 class TransDetail extends AbstractModel
 {
     /**
-     * @var string 当前行的原文本
+     * @var string <p>当前行的原文本</p>
      */
     public $SourceLineText;
 
     /**
-     * @var string 当前行的译文
+     * @var string <p>当前行的译文</p>
      */
     public $TargetLineText;
 
     /**
-     * @var BoundingBox 段落文本框位置
+     * @var BoundingBox <p>段落文本框位置</p>
      */
     public $BoundingBox;
 
     /**
-     * @var integer 行数
+     * @var integer <p>行数</p>
      */
     public $LinesCount;
 
     /**
-     * @var integer 行高
+     * @var integer <p>行高</p><p>单位：px</p>
      */
     public $LineHeight;
 
     /**
-     * @var integer 正常段落spam_code字段为0；如果存在spam_code字段且值大于0（1: 命中垃圾检查；2: 命中安全策略；3: 其他。），则命中安全检查被过滤。
+     * @var integer <p>正常段落spam_code字段为0；如果存在spam_code字段且值大于0（1: 命中垃圾检查；2: 命中安全策略；3: 其他。），则命中安全检查被过滤。</p>
      */
     public $SpamCode;
 
     /**
-     * @var RotateParagraphRect 段落文本旋转信息，只在valid为true时表示坐标有效
+     * @var RotateParagraphRect <p>段落文本旋转信息，只在valid为true时表示坐标有效</p>
      */
     public $RotateParagraphRect;
 
     /**
-     * @param string $SourceLineText 当前行的原文本
-     * @param string $TargetLineText 当前行的译文
-     * @param BoundingBox $BoundingBox 段落文本框位置
-     * @param integer $LinesCount 行数
-     * @param integer $LineHeight 行高
-     * @param integer $SpamCode 正常段落spam_code字段为0；如果存在spam_code字段且值大于0（1: 命中垃圾检查；2: 命中安全策略；3: 其他。），则命中安全检查被过滤。
-     * @param RotateParagraphRect $RotateParagraphRect 段落文本旋转信息，只在valid为true时表示坐标有效
+     * @param string $SourceLineText <p>当前行的原文本</p>
+     * @param string $TargetLineText <p>当前行的译文</p>
+     * @param BoundingBox $BoundingBox <p>段落文本框位置</p>
+     * @param integer $LinesCount <p>行数</p>
+     * @param integer $LineHeight <p>行高</p><p>单位：px</p>
+     * @param integer $SpamCode <p>正常段落spam_code字段为0；如果存在spam_code字段且值大于0（1: 命中垃圾检查；2: 命中安全策略；3: 其他。），则命中安全检查被过滤。</p>
+     * @param RotateParagraphRect $RotateParagraphRect <p>段落文本旋转信息，只在valid为true时表示坐标有效</p>
      */
     function __construct()
     {

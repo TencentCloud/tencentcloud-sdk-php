@@ -20,69 +20,69 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 文本文件元信息
  *
- * @method integer getFileSize() 获取媒资文本文件大小，单位为字节
+ * @method integer getFileSize() 获取<p>媒资文本文件大小，单位为字节</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileSize(integer $FileSize) 设置媒资文本文件大小，单位为字节
+ * @method void setFileSize(integer $FileSize) 设置<p>媒资文本文件大小，单位为字节</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMD5() 获取媒资文本文件MD5
+ * @method string getMD5() 获取<p>媒资文本文件MD5</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMD5(string $MD5) 设置媒资文本文件MD5
+ * @method void setMD5(string $MD5) 设置<p>媒资文本文件MD5</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLength() 获取媒资文本文件字符数
+ * @method integer getLength() 获取<p>媒资文本文件字符数</p><p>单位：字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLength(integer $Length) 设置媒资文本文件字符数
+ * @method void setLength(integer $Length) 设置<p>媒资文本文件字符数</p><p>单位：字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFormat() 获取媒资文本文件格式
+ * @method string getFormat() 获取<p>媒资文本文件格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFormat(string $Format) 设置媒资文本文件格式
+ * @method void setFormat(string $Format) 设置<p>媒资文本文件格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getShortFormat() 获取封装格式短后缀
+ * @method string getShortFormat() 获取<p>封装格式短后缀</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setShortFormat(string $ShortFormat) 设置封装格式短后缀
+ * @method void setShortFormat(string $ShortFormat) 设置<p>封装格式短后缀</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TextMetadata extends AbstractModel
 {
     /**
-     * @var integer 媒资文本文件大小，单位为字节
+     * @var integer <p>媒资文本文件大小，单位为字节</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileSize;
 
     /**
-     * @var string 媒资文本文件MD5
+     * @var string <p>媒资文本文件MD5</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MD5;
 
     /**
-     * @var integer 媒资文本文件字符数
+     * @var integer <p>媒资文本文件字符数</p><p>单位：字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Length;
 
     /**
-     * @var string 媒资文本文件格式
+     * @var string <p>媒资文本文件格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Format;
 
     /**
-     * @var string 封装格式短后缀
+     * @var string <p>封装格式短后缀</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShortFormat;
 
     /**
-     * @param integer $FileSize 媒资文本文件大小，单位为字节
+     * @param integer $FileSize <p>媒资文本文件大小，单位为字节</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MD5 媒资文本文件MD5
+     * @param string $MD5 <p>媒资文本文件MD5</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Length 媒资文本文件字符数
+     * @param integer $Length <p>媒资文本文件字符数</p><p>单位：字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Format 媒资文本文件格式
+     * @param string $Format <p>媒资文本文件格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ShortFormat 封装格式短后缀
+     * @param string $ShortFormat <p>封装格式短后缀</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

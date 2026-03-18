@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCompressFileType(string $CompressFileType) 设置<p>转码文件压缩格式，不传、传空字符串或不是指定的格式则不生成压缩文件，目前支持如下压缩格式：</p><p>zip： 生成<code>.zip</code>压缩包<br>tar.gz： 生成<code>.tar.gz</code>压缩包</p>
  * @method string getExtraData() 获取<p>内部参数</p>
  * @method void setExtraData(string $ExtraData) 设置<p>内部参数</p>
- * @method string getPriority() 获取<p>文档转码优先级， 只有对于PPT动态转码生效，支持填入以下值：<br></p><ul><li>low: 低优先级转码，对于动态转码，能支持500MB（下载超时时间10分钟）以及2000页文档，但资源有限可能会有比较长时间的排队，请酌情使用该功能。<br></li><li>不填表示正常优先级转码，支持200MB文件（下载超时时间2分钟），500页以内的文档进行转码<br>注意：对于PDF等静态文件转码，无论是正常优先级或者低优先级，最大只能支持200MB</li></ul>
- * @method void setPriority(string $Priority) 设置<p>文档转码优先级， 只有对于PPT动态转码生效，支持填入以下值：<br></p><ul><li>low: 低优先级转码，对于动态转码，能支持500MB（下载超时时间10分钟）以及2000页文档，但资源有限可能会有比较长时间的排队，请酌情使用该功能。<br></li><li>不填表示正常优先级转码，支持200MB文件（下载超时时间2分钟），500页以内的文档进行转码<br>注意：对于PDF等静态文件转码，无论是正常优先级或者低优先级，最大只能支持200MB</li></ul>
+ * @method string getPriority() 获取<p>注意：该参数已废弃，文档转码优先级， 只有对于PPT动态转码生效，支持填入以下值：<br>- low: 低优先级转码，对于动态转码，能支持500MB（下载超时时间10分钟）以及2000页文档，但资源有限可能会有比较长时间的排队，请酌情使用该功能。<br>- 不填表示正常优先级转码，支持200MB文件（下载超时时间2分钟），500页以内的文档进行转码<br>注意：对于PDF等静态文件转码，无论是正常优先级或者低优先级，最大只能支持200MB</p>
+ * @method void setPriority(string $Priority) 设置<p>注意：该参数已废弃，文档转码优先级， 只有对于PPT动态转码生效，支持填入以下值：<br>- low: 低优先级转码，对于动态转码，能支持500MB（下载超时时间10分钟）以及2000页文档，但资源有限可能会有比较长时间的排队，请酌情使用该功能。<br>- 不填表示正常优先级转码，支持200MB文件（下载超时时间2分钟），500页以内的文档进行转码<br>注意：对于PDF等静态文件转码，无论是正常优先级或者低优先级，最大只能支持200MB</p>
  * @method string getMinScaleResolution() 获取<p>转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率。<br>分辨率越高，效果越清晰，转出来的图片资源体积会越大，课件加载耗时会变长，请根据实际使用场景配置此参数。</p><p>示例：1280x720，注意分辨率宽高中间为英文字母&quot;xyz&quot;的&quot;x&quot;</p>
  * @method void setMinScaleResolution(string $MinScaleResolution) 设置<p>转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率。<br>分辨率越高，效果越清晰，转出来的图片资源体积会越大，课件加载耗时会变长，请根据实际使用场景配置此参数。</p><p>示例：1280x720，注意分辨率宽高中间为英文字母&quot;xyz&quot;的&quot;x&quot;</p>
  * @method boolean getAutoHandleUnsupportedElement() 获取<p>此参数仅对动态转码生效。</p><p>是否对不支持元素开启自动处理的功能，默认不开启。<br>true -- 开启<br>false -- 不开启</p><p>当设置为<code>true</code>时，可配合<code>AutoHandleUnsupportedElementTypes</code>参数使用，具体有哪些不兼容元素类型，可参考<code>AutoHandleUnsupportedElementTypes</code>参数的说明。</p>
@@ -83,7 +83,7 @@ class CreateTranscodeRequest extends AbstractModel
     public $ExtraData;
 
     /**
-     * @var string <p>文档转码优先级， 只有对于PPT动态转码生效，支持填入以下值：<br></p><ul><li>low: 低优先级转码，对于动态转码，能支持500MB（下载超时时间10分钟）以及2000页文档，但资源有限可能会有比较长时间的排队，请酌情使用该功能。<br></li><li>不填表示正常优先级转码，支持200MB文件（下载超时时间2分钟），500页以内的文档进行转码<br>注意：对于PDF等静态文件转码，无论是正常优先级或者低优先级，最大只能支持200MB</li></ul>
+     * @var string <p>注意：该参数已废弃，文档转码优先级， 只有对于PPT动态转码生效，支持填入以下值：<br>- low: 低优先级转码，对于动态转码，能支持500MB（下载超时时间10分钟）以及2000页文档，但资源有限可能会有比较长时间的排队，请酌情使用该功能。<br>- 不填表示正常优先级转码，支持200MB文件（下载超时时间2分钟），500页以内的文档进行转码<br>注意：对于PDF等静态文件转码，无论是正常优先级或者低优先级，最大只能支持200MB</p>
      */
     public $Priority;
 
@@ -115,7 +115,7 @@ class CreateTranscodeRequest extends AbstractModel
      * @param string $ThumbnailResolution <p>动态PPT转码可以为文件生成该分辨率的缩略图，不传、传空字符串或分辨率格式错误则不生成缩略图，分辨率格式同MinResolution</p>
      * @param string $CompressFileType <p>转码文件压缩格式，不传、传空字符串或不是指定的格式则不生成压缩文件，目前支持如下压缩格式：</p><p>zip： 生成<code>.zip</code>压缩包<br>tar.gz： 生成<code>.tar.gz</code>压缩包</p>
      * @param string $ExtraData <p>内部参数</p>
-     * @param string $Priority <p>文档转码优先级， 只有对于PPT动态转码生效，支持填入以下值：<br></p><ul><li>low: 低优先级转码，对于动态转码，能支持500MB（下载超时时间10分钟）以及2000页文档，但资源有限可能会有比较长时间的排队，请酌情使用该功能。<br></li><li>不填表示正常优先级转码，支持200MB文件（下载超时时间2分钟），500页以内的文档进行转码<br>注意：对于PDF等静态文件转码，无论是正常优先级或者低优先级，最大只能支持200MB</li></ul>
+     * @param string $Priority <p>注意：该参数已废弃，文档转码优先级， 只有对于PPT动态转码生效，支持填入以下值：<br>- low: 低优先级转码，对于动态转码，能支持500MB（下载超时时间10分钟）以及2000页文档，但资源有限可能会有比较长时间的排队，请酌情使用该功能。<br>- 不填表示正常优先级转码，支持200MB文件（下载超时时间2分钟），500页以内的文档进行转码<br>注意：对于PDF等静态文件转码，无论是正常优先级或者低优先级，最大只能支持200MB</p>
      * @param string $MinScaleResolution <p>转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率。<br>分辨率越高，效果越清晰，转出来的图片资源体积会越大，课件加载耗时会变长，请根据实际使用场景配置此参数。</p><p>示例：1280x720，注意分辨率宽高中间为英文字母&quot;xyz&quot;的&quot;x&quot;</p>
      * @param boolean $AutoHandleUnsupportedElement <p>此参数仅对动态转码生效。</p><p>是否对不支持元素开启自动处理的功能，默认不开启。<br>true -- 开启<br>false -- 不开启</p><p>当设置为<code>true</code>时，可配合<code>AutoHandleUnsupportedElementTypes</code>参数使用，具体有哪些不兼容元素类型，可参考<code>AutoHandleUnsupportedElementTypes</code>参数的说明。</p>
      * @param array $AutoHandleUnsupportedElementTypes <p>此参数仅在<code>AutoHandleUnsupportedElement</code>参数为<code>true</code>的情况下有效。</p><p>指定需要自动处理的不兼容元素类型，默认对所有不兼容的元素进行自动处理。</p><p>目前支持检测的不兼容元素类型及对应的自动处理方式如下：<br>0: 不支持的墨迹类型<br>-- 自动处理方式：移除墨迹</p><p>1: 自动翻页<br>-- 自动处理方式：移除自动翻页设置，并修改为单击切换</p><p>2: 已损坏音视频<br>-- 自动处理方式：移除对损坏音视频的引用</p><p>3: 不可访问资源<br>-- 自动处理方式：移除对不可访问的资源的引用</p><p>4: 只读文件<br>-- 自动处理方式：移除只读设置</p><p>5: 不支持的元素编辑锁定状态<br>-- 自动处理方式：移除锁定状态</p><p>6: 可能有兼容问题的字体<br>-- 自动处理方式： 不支持处理</p><p>7: 设置了柔化边缘的GIF图片<br>-- 自动处理方式：移除柔化边缘设置</p><p>8: 存在不兼容的空格下划线<br>-- 自动处理方式：通过调整空格下划线前后文本的字体语言体系，保证空格下划线表现正常</p><p>9: 存在设置了分段动画的数学公式和文本混合内容<br>-- 自动处理方式： 不支持处理</p><p>10: 存在设置了分段动画的渐变色文本<br>-- 自动处理方式： 不支持处理</p><p>11: 存在不兼容的分散对齐方式<br>-- 自动处理方式： 不支持处理</p><p>12: 存在不兼容的多倍行距设置<br>-- 自动处理方式： 不支持处理</p><p>13: 存在带有特殊符号内容的datetime类型的a:fld标签元素<br>-- 自动处理方式： a:fld标签替换为普通文本</p>

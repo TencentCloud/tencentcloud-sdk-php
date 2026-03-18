@@ -32,13 +32,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotal(float $Total) 设置总用量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getBasic() 获取基础指标用量
+ * @method float getBasic() 获取基础指标用量个数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBasic(float $Basic) 设置基础指标用量
+ * @method void setBasic(float $Basic) 设置基础指标用量个数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getFee() 获取付费指标用量
+ * @method float getFee() 获取付费指标用量个数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFee(float $Fee) 设置付费指标用量
+ * @method void setFee(float $Fee) 设置付费指标用量个数
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrometheusInstanceTenantUsage extends AbstractModel
@@ -62,13 +62,13 @@ class PrometheusInstanceTenantUsage extends AbstractModel
     public $Total;
 
     /**
-     * @var float 基础指标用量
+     * @var float 基础指标用量个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Basic;
 
     /**
-     * @var float 付费指标用量
+     * @var float 付费指标用量个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Fee;
@@ -80,9 +80,9 @@ class PrometheusInstanceTenantUsage extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Total 总用量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $Basic 基础指标用量
+     * @param float $Basic 基础指标用量个数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $Fee 付费指标用量
+     * @param float $Fee 付费指标用量个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

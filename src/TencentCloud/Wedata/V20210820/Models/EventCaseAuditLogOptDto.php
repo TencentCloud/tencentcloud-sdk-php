@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置事件实例描述
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getConsumeCount() 获取消费次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConsumeCount(integer $ConsumeCount) 设置消费次数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EventCaseAuditLogOptDto extends AbstractModel
 {
@@ -144,6 +148,12 @@ class EventCaseAuditLogOptDto extends AbstractModel
     public $Description;
 
     /**
+     * @var integer 消费次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConsumeCount;
+
+    /**
      * @param string $CaseId 事件实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EventName 事件名称
@@ -167,6 +177,8 @@ class EventCaseAuditLogOptDto extends AbstractModel
      * @param string $LogTimestamp 事件实例消费时间戳
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 事件实例描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ConsumeCount 消费次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -228,6 +240,10 @@ class EventCaseAuditLogOptDto extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("ConsumeCount",$param) and $param["ConsumeCount"] !== null) {
+            $this->ConsumeCount = $param["ConsumeCount"];
         }
     }
 }

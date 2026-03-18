@@ -46,12 +46,16 @@ use TencentCloud\Common\AbstractModel;
     <li>**1** - 【中立】以公平合理为原则，平衡双方的权利义务，既不过分强调己方利益，也不过度让步，力求达成双方均可接受的条款。</li>   
     <li>**2** - 【宽松】以促成交易为核心，对合同条款的修改要求较为宽松，倾向于接受对方提出的条款，以尽快达成合作。</li>  
 </ul>
- * @method RiskIdentificationRoleInfo getRole() 获取合同审查中的角色信息，通过明确入参角色的名称和描述，可以提高合同审查的效率和准确性。用户不做配置时大模型会根据合同内容推荐出风险识别角色的名称和描述信息。(Depricated)
- * @method void setRole(RiskIdentificationRoleInfo $Role) 设置合同审查中的角色信息，通过明确入参角色的名称和描述，可以提高合同审查的效率和准确性。用户不做配置时大模型会根据合同内容推荐出风险识别角色的名称和描述信息。(Depricated)
+ * @method RiskIdentificationRoleInfo getRole() 获取该字段已不再使用！
+合同审查中的角色信息，通过明确入参角色的名称和描述，可以提高合同审查的效率和准确性。用户不做配置时大模型会根据合同内容推荐出风险识别角色的名称和描述信息。
+ * @method void setRole(RiskIdentificationRoleInfo $Role) 设置该字段已不再使用！
+合同审查中的角色信息，通过明确入参角色的名称和描述，可以提高合同审查的效率和准确性。用户不做配置时大模型会根据合同内容推荐出风险识别角色的名称和描述信息。
  * @method array getRoles() 获取合同审查中的角色信息，通过明确入参角色的名称和描述，可以提高合同审查的效率和准确性。用户不做配置时大模型会根据合同内容推荐出风险识别角色的名称和描述信息。
  * @method void setRoles(array $Roles) 设置合同审查中的角色信息，通过明确入参角色的名称和描述，可以提高合同审查的效率和准确性。用户不做配置时大模型会根据合同内容推荐出风险识别角色的名称和描述信息。
- * @method string getChecklistId() 获取用户配置的审查清单ID，基于此清单ID批量创建合同审查任务，为32位字符串。[点击查看审查清单ID在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/2c6588549e28ca49bd8bb7f4a072b19e.png)。如果用户不做此配置大模型会根据合同内容在当前企业下的审查清单和系统默认的清单中选择一个清单进行审查。(Depricated)
- * @method void setChecklistId(string $ChecklistId) 设置用户配置的审查清单ID，基于此清单ID批量创建合同审查任务，为32位字符串。[点击查看审查清单ID在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/2c6588549e28ca49bd8bb7f4a072b19e.png)。如果用户不做此配置大模型会根据合同内容在当前企业下的审查清单和系统默认的清单中选择一个清单进行审查。(Depricated)
+ * @method string getChecklistId() 获取该字段已不再使用！
+用户配置的审查清单ID，基于此清单ID批量创建合同审查任务，为32位字符串。[点击查看审查清单ID在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/2c6588549e28ca49bd8bb7f4a072b19e.png)。如果用户不做此配置大模型会根据合同内容在当前企业下的审查清单和系统默认的清单中选择一个清单进行审查。
+ * @method void setChecklistId(string $ChecklistId) 设置该字段已不再使用！
+用户配置的审查清单ID，基于此清单ID批量创建合同审查任务，为32位字符串。[点击查看审查清单ID在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/2c6588549e28ca49bd8bb7f4a072b19e.png)。如果用户不做此配置大模型会根据合同内容在当前企业下的审查清单和系统默认的清单中选择一个清单进行审查。
  * @method array getChecklistIds() 获取用户配置的审查清单ID，基于此清单ID批量创建合同审查任务，为32位字符串。[点击查看审查清单ID在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/2c6588549e28ca49bd8bb7f4a072b19e.png)。如果用户不做此配置大模型会根据合同内容在当前企业下的审查清单和系统默认的清单中选择一个清单进行审查。
  * @method void setChecklistIds(array $ChecklistIds) 设置用户配置的审查清单ID，基于此清单ID批量创建合同审查任务，为32位字符串。[点击查看审查清单ID在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/2c6588549e28ca49bd8bb7f4a072b19e.png)。如果用户不做此配置大模型会根据合同内容在当前企业下的审查清单和系统默认的清单中选择一个清单进行审查。
  * @method Agent getAgent() 获取代理企业和员工的信息。
@@ -105,7 +109,8 @@ class CreateBatchContractReviewTaskRequest extends AbstractModel
     public $PolicyType;
 
     /**
-     * @var RiskIdentificationRoleInfo 合同审查中的角色信息，通过明确入参角色的名称和描述，可以提高合同审查的效率和准确性。用户不做配置时大模型会根据合同内容推荐出风险识别角色的名称和描述信息。(Depricated)
+     * @var RiskIdentificationRoleInfo 该字段已不再使用！
+合同审查中的角色信息，通过明确入参角色的名称和描述，可以提高合同审查的效率和准确性。用户不做配置时大模型会根据合同内容推荐出风险识别角色的名称和描述信息。
      */
     public $Role;
 
@@ -115,7 +120,8 @@ class CreateBatchContractReviewTaskRequest extends AbstractModel
     public $Roles;
 
     /**
-     * @var string 用户配置的审查清单ID，基于此清单ID批量创建合同审查任务，为32位字符串。[点击查看审查清单ID在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/2c6588549e28ca49bd8bb7f4a072b19e.png)。如果用户不做此配置大模型会根据合同内容在当前企业下的审查清单和系统默认的清单中选择一个清单进行审查。(Depricated)
+     * @var string 该字段已不再使用！
+用户配置的审查清单ID，基于此清单ID批量创建合同审查任务，为32位字符串。[点击查看审查清单ID在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/2c6588549e28ca49bd8bb7f4a072b19e.png)。如果用户不做此配置大模型会根据合同内容在当前企业下的审查清单和系统默认的清单中选择一个清单进行审查。
      */
     public $ChecklistId;
 
@@ -165,9 +171,11 @@ class CreateBatchContractReviewTaskRequest extends AbstractModel
     <li>**1** - 【中立】以公平合理为原则，平衡双方的权利义务，既不过分强调己方利益，也不过度让步，力求达成双方均可接受的条款。</li>   
     <li>**2** - 【宽松】以促成交易为核心，对合同条款的修改要求较为宽松，倾向于接受对方提出的条款，以尽快达成合作。</li>  
 </ul>
-     * @param RiskIdentificationRoleInfo $Role 合同审查中的角色信息，通过明确入参角色的名称和描述，可以提高合同审查的效率和准确性。用户不做配置时大模型会根据合同内容推荐出风险识别角色的名称和描述信息。(Depricated)
+     * @param RiskIdentificationRoleInfo $Role 该字段已不再使用！
+合同审查中的角色信息，通过明确入参角色的名称和描述，可以提高合同审查的效率和准确性。用户不做配置时大模型会根据合同内容推荐出风险识别角色的名称和描述信息。
      * @param array $Roles 合同审查中的角色信息，通过明确入参角色的名称和描述，可以提高合同审查的效率和准确性。用户不做配置时大模型会根据合同内容推荐出风险识别角色的名称和描述信息。
-     * @param string $ChecklistId 用户配置的审查清单ID，基于此清单ID批量创建合同审查任务，为32位字符串。[点击查看审查清单ID在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/2c6588549e28ca49bd8bb7f4a072b19e.png)。如果用户不做此配置大模型会根据合同内容在当前企业下的审查清单和系统默认的清单中选择一个清单进行审查。(Depricated)
+     * @param string $ChecklistId 该字段已不再使用！
+用户配置的审查清单ID，基于此清单ID批量创建合同审查任务，为32位字符串。[点击查看审查清单ID在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/2c6588549e28ca49bd8bb7f4a072b19e.png)。如果用户不做此配置大模型会根据合同内容在当前企业下的审查清单和系统默认的清单中选择一个清单进行审查。
      * @param array $ChecklistIds 用户配置的审查清单ID，基于此清单ID批量创建合同审查任务，为32位字符串。[点击查看审查清单ID在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/2c6588549e28ca49bd8bb7f4a072b19e.png)。如果用户不做此配置大模型会根据合同内容在当前企业下的审查清单和系统默认的清单中选择一个清单进行审查。
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。

@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 号码信息
  *
- * @method string getNumber() 获取号码
- * @method void setNumber(string $Number) 设置号码
- * @method array getCallOutSkillGroupIds() 获取绑定的外呼技能组
- * @method void setCallOutSkillGroupIds(array $CallOutSkillGroupIds) 设置绑定的外呼技能组
- * @method integer getState() 获取号码状态，1-正常，2-欠费停用，4-管理员停用，5-违规停用
- * @method void setState(integer $State) 设置号码状态，1-正常，2-欠费停用，4-管理员停用，5-违规停用
+ * @method string getNumber() 获取<p>号码</p>
+ * @method void setNumber(string $Number) 设置<p>号码</p>
+ * @method array getCallOutSkillGroupIds() 获取<p>绑定的外呼技能组</p>
+ * @method void setCallOutSkillGroupIds(array $CallOutSkillGroupIds) 设置<p>绑定的外呼技能组</p>
+ * @method integer getState() 获取<p>号码状态，1-正常，2-欠费停用，4-管理员停用，5-违规停用</p>
+ * @method void setState(integer $State) 设置<p>号码状态，1-正常，2-欠费停用，4-管理员停用，5-违规停用</p>
+ * @method integer getCostType() 获取<p>是否自携号码</p><p>枚举值：</p><ul><li>0： 非自携</li><li>1： 自携</li></ul>
+ * @method void setCostType(integer $CostType) 设置<p>是否自携号码</p><p>枚举值：</p><ul><li>0： 非自携</li><li>1： 自携</li></ul>
  */
 class NumberInfo extends AbstractModel
 {
     /**
-     * @var string 号码
+     * @var string <p>号码</p>
      */
     public $Number;
 
     /**
-     * @var array 绑定的外呼技能组
+     * @var array <p>绑定的外呼技能组</p>
      */
     public $CallOutSkillGroupIds;
 
     /**
-     * @var integer 号码状态，1-正常，2-欠费停用，4-管理员停用，5-违规停用
+     * @var integer <p>号码状态，1-正常，2-欠费停用，4-管理员停用，5-违规停用</p>
      */
     public $State;
 
     /**
-     * @param string $Number 号码
-     * @param array $CallOutSkillGroupIds 绑定的外呼技能组
-     * @param integer $State 号码状态，1-正常，2-欠费停用，4-管理员停用，5-违规停用
+     * @var integer <p>是否自携号码</p><p>枚举值：</p><ul><li>0： 非自携</li><li>1： 自携</li></ul>
+     */
+    public $CostType;
+
+    /**
+     * @param string $Number <p>号码</p>
+     * @param array $CallOutSkillGroupIds <p>绑定的外呼技能组</p>
+     * @param integer $State <p>号码状态，1-正常，2-欠费停用，4-管理员停用，5-违规停用</p>
+     * @param integer $CostType <p>是否自携号码</p><p>枚举值：</p><ul><li>0： 非自携</li><li>1： 自携</li></ul>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class NumberInfo extends AbstractModel
 
         if (array_key_exists("State",$param) and $param["State"] !== null) {
             $this->State = $param["State"];
+        }
+
+        if (array_key_exists("CostType",$param) and $param["CostType"] !== null) {
+            $this->CostType = $param["CostType"];
         }
     }
 }

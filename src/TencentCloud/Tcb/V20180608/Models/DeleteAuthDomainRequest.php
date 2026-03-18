@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEnvId() 获取开发者的环境ID
  * @method void setEnvId(string $EnvId) 设置开发者的环境ID
- * @method array getDomainIds() 获取域名ID列表，支持批量
- * @method void setDomainIds(array $DomainIds) 设置域名ID列表，支持批量
+ * @method array getDomainIds() 获取域名ID列表，支持批量传递
+ * @method void setDomainIds(array $DomainIds) 设置域名ID列表，支持批量传递
  */
 class DeleteAuthDomainRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteAuthDomainRequest extends AbstractModel
     public $EnvId;
 
     /**
-     * @var array 域名ID列表，支持批量
+     * @var array 域名ID列表，支持批量传递
      */
     public $DomainIds;
 
     /**
      * @param string $EnvId 开发者的环境ID
-     * @param array $DomainIds 域名ID列表，支持批量
+     * @param array $DomainIds 域名ID列表，支持批量传递
      */
     function __construct()
     {

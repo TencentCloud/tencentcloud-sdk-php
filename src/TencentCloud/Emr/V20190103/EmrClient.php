@@ -33,8 +33,8 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\CreateClusterResponse CreateCluster(Models\CreateClusterRequest $req) 创建EMR集群实例
  * @method Models\CreateGroupsSTDResponse CreateGroupsSTD(Models\CreateGroupsSTDRequest $req) 用户管理-批量创建用户组
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 创建EMR集群实例
- * @method Models\CreateSLInstanceResponse CreateSLInstance(Models\CreateSLInstanceRequest $req) 本接口（CreateSLInstance）用于创建Serverless HBase实例
-- 接口调用成功，会创建Serverless HBase实例，创建实例请求成功会返回创建实例的InstaceId和请求的 RequestID。
+ * @method Models\CreateSLInstanceResponse CreateSLInstance(Models\CreateSLInstanceRequest $req) 本接口（CreateSLInstance）用于创建Serverless实例、如HBase、Starrocks、TCBase等
+- 接口调用成功，会创建Serverless实例，创建实例请求成功会返回创建实例的InstaceId和请求的 RequestID。
 - 接口为异步接口，接口返回时操作并未立即完成，实例操作结果可以通过调用DescribeInstancesList查看当前实例的StatusDesc状态。
  * @method Models\DeleteAutoScaleStrategyResponse DeleteAutoScaleStrategy(Models\DeleteAutoScaleStrategyRequest $req) 删除自动扩缩容规则，后台销毁根据该规则扩缩容出来的节点
  * @method Models\DeleteGroupsSTDResponse DeleteGroupsSTD(Models\DeleteGroupsSTDRequest $req) 批量删除用户组

@@ -40,8 +40,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppId(integer $AppId) 设置用户APPID
  * @method integer getVpcId() 获取主可用区私有网络ID
  * @method void setVpcId(integer $VpcId) 设置主可用区私有网络ID
+ * @method string getVpcName() 获取主可用区私有网络名
+ * @method void setVpcName(string $VpcName) 设置主可用区私有网络名
  * @method integer getSubnetId() 获取主可用区子网ID
  * @method void setSubnetId(integer $SubnetId) 设置主可用区子网ID
+ * @method string getSubnetName() 获取主可用区子网名
+ * @method void setSubnetName(string $SubnetName) 设置主可用区子网名
  * @method integer getStatus() 获取状态码
  * @method void setStatus(integer $Status) 设置状态码
  * @method string getAddTime() 获取创建时间
@@ -64,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpireTime(string $ExpireTime) 设置过期时间，后付费返回0000-00-00 00:00:00
  * @method string getDeployRole() 获取主备部署角色
  * @method void setDeployRole(string $DeployRole) 设置主备部署角色
+ * @method string getWebUIUrl() 获取webui地址
+ * @method void setWebUIUrl(string $WebUIUrl) 设置webui地址
  */
 class SLInstanceInfo extends AbstractModel
 {
@@ -118,9 +124,19 @@ class SLInstanceInfo extends AbstractModel
     public $VpcId;
 
     /**
+     * @var string 主可用区私有网络名
+     */
+    public $VpcName;
+
+    /**
      * @var integer 主可用区子网ID
      */
     public $SubnetId;
+
+    /**
+     * @var string 主可用区子网名
+     */
+    public $SubnetName;
 
     /**
      * @var integer 状态码
@@ -170,6 +186,11 @@ class SLInstanceInfo extends AbstractModel
     public $DeployRole;
 
     /**
+     * @var string webui地址
+     */
+    public $WebUIUrl;
+
+    /**
      * @param string $ClusterId 集群实例字符串ID
      * @param integer $Id 集群实例数字ID
      * @param string $StatusDesc 状态描述
@@ -180,7 +201,9 @@ class SLInstanceInfo extends AbstractModel
      * @param string $Zone 主可用区
      * @param integer $AppId 用户APPID
      * @param integer $VpcId 主可用区私有网络ID
+     * @param string $VpcName 主可用区私有网络名
      * @param integer $SubnetId 主可用区子网ID
+     * @param string $SubnetName 主可用区子网名
      * @param integer $Status 状态码
      * @param string $AddTime 创建时间
      * @param integer $PayMode 集群计费类型。0表示按量计费，1表示包年包月
@@ -192,6 +215,7 @@ class SLInstanceInfo extends AbstractModel
      * @param string $IsolateTime 隔离时间，未隔离返回0000-00-00 00:00:00。
      * @param string $ExpireTime 过期时间，后付费返回0000-00-00 00:00:00
      * @param string $DeployRole 主备部署角色
+     * @param string $WebUIUrl webui地址
      */
     function __construct()
     {
@@ -246,8 +270,16 @@ class SLInstanceInfo extends AbstractModel
             $this->VpcId = $param["VpcId"];
         }
 
+        if (array_key_exists("VpcName",$param) and $param["VpcName"] !== null) {
+            $this->VpcName = $param["VpcName"];
+        }
+
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("SubnetName",$param) and $param["SubnetName"] !== null) {
+            $this->SubnetName = $param["SubnetName"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
@@ -294,6 +326,10 @@ class SLInstanceInfo extends AbstractModel
 
         if (array_key_exists("DeployRole",$param) and $param["DeployRole"] !== null) {
             $this->DeployRole = $param["DeployRole"];
+        }
+
+        if (array_key_exists("WebUIUrl",$param) and $param["WebUIUrl"] !== null) {
+            $this->WebUIUrl = $param["WebUIUrl"];
         }
     }
 }

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 段落文本框位置：x，y代表左上顶点，width和height代表宽高
  *
- * @method integer getX() 获取左上顶点x坐标
- * @method void setX(integer $X) 设置左上顶点x坐标
- * @method integer getY() 获取左上顶点y坐标
- * @method void setY(integer $Y) 设置左上顶点y坐标
- * @method integer getWidth() 获取宽
- * @method void setWidth(integer $Width) 设置宽
- * @method integer getHeight() 获取高
- * @method void setHeight(integer $Height) 设置高
+ * @method integer getX() 获取<p>左上顶点x坐标</p>
+ * @method void setX(integer $X) 设置<p>左上顶点x坐标</p>
+ * @method integer getY() 获取<p>左上顶点y坐标</p>
+ * @method void setY(integer $Y) 设置<p>左上顶点y坐标</p>
+ * @method integer getWidth() 获取<p>宽</p><p>单位：px</p>
+ * @method void setWidth(integer $Width) 设置<p>宽</p><p>单位：px</p>
+ * @method integer getHeight() 获取<p>高</p><p>单位：px</p>
+ * @method void setHeight(integer $Height) 设置<p>高</p><p>单位：px</p>
  */
 class BoundingBox extends AbstractModel
 {
     /**
-     * @var integer 左上顶点x坐标
+     * @var integer <p>左上顶点x坐标</p>
      */
     public $X;
 
     /**
-     * @var integer 左上顶点y坐标
+     * @var integer <p>左上顶点y坐标</p>
      */
     public $Y;
 
     /**
-     * @var integer 宽
+     * @var integer <p>宽</p><p>单位：px</p>
      */
     public $Width;
 
     /**
-     * @var integer 高
+     * @var integer <p>高</p><p>单位：px</p>
      */
     public $Height;
 
     /**
-     * @param integer $X 左上顶点x坐标
-     * @param integer $Y 左上顶点y坐标
-     * @param integer $Width 宽
-     * @param integer $Height 高
+     * @param integer $X <p>左上顶点x坐标</p>
+     * @param integer $Y <p>左上顶点y坐标</p>
+     * @param integer $Width <p>宽</p><p>单位：px</p>
+     * @param integer $Height <p>高</p><p>单位：px</p>
      */
     function __construct()
     {

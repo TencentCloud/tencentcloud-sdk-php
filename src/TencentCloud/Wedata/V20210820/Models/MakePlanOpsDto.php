@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMapParamList(array $MapParamList) 设置补录实例自定义参数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getMakeExtList() 获取补录扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMakeExtList(array $MakeExtList) 设置补录扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatorId() 获取创建人ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatorId(string $CreatorId) 设置创建人ID
@@ -238,6 +242,12 @@ class MakePlanOpsDto extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MapParamList;
+
+    /**
+     * @var array 补录扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MakeExtList;
 
     /**
      * @var string 创建人ID
@@ -419,6 +429,8 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MapParamList 补录实例自定义参数
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $MakeExtList 补录扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatorId 创建人ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Creator 创建人
@@ -532,6 +544,15 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
                 $obj = new StrToStrMap();
                 $obj->deserialize($value);
                 array_push($this->MapParamList, $obj);
+            }
+        }
+
+        if (array_key_exists("MakeExtList",$param) and $param["MakeExtList"] !== null) {
+            $this->MakeExtList = [];
+            foreach ($param["MakeExtList"] as $key => $value){
+                $obj = new StrToStrMap();
+                $obj->deserialize($value);
+                array_push($this->MakeExtList, $obj);
             }
         }
 

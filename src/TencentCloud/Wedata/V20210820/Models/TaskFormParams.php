@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatestSavedVersionId(string $LatestSavedVersionId) 设置保存版本ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStatus() 获取任务状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(string $Status) 设置任务状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskFormParams extends AbstractModel
 {
@@ -130,6 +134,12 @@ class TaskFormParams extends AbstractModel
     public $LatestSavedVersionId;
 
     /**
+     * @var string 任务状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MapParamList 参数值
@@ -151,6 +161,8 @@ class TaskFormParams extends AbstractModel
      * @param string $LatestSavedVersion 如果最新保存版本和调度版本不一致，显示最新保存版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LatestSavedVersionId 保存版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Status 任务状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -209,6 +221,10 @@ class TaskFormParams extends AbstractModel
 
         if (array_key_exists("LatestSavedVersionId",$param) and $param["LatestSavedVersionId"] !== null) {
             $this->LatestSavedVersionId = $param["LatestSavedVersionId"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

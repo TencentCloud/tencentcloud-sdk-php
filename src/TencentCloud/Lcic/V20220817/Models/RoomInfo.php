@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTurnOffMic(integer $TurnOffMic) 设置<p>释放音视频权限后是否自动取消连麦。可以有以下取值： 0 自动取消连麦（默认值） 1 保持连麦状态</p>
  * @method integer getAudioQuality() 获取<p>高音质模式。可以有以下取值： 0 不开启高音质（默认值） 1 开启高音质</p>
  * @method void setAudioQuality(integer $AudioQuality) 设置<p>高音质模式。可以有以下取值： 0 不开启高音质（默认值） 1 开启高音质</p>
- * @method integer getDisableRecord() 获取<p>上课后是否禁止自动录制。可以有以下取值： 0 不禁止录制（自动开启录制，默认值） 1 禁止录制 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。</p>
- * @method void setDisableRecord(integer $DisableRecord) 设置<p>上课后是否禁止自动录制。可以有以下取值： 0 不禁止录制（自动开启录制，默认值） 1 禁止录制 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。</p>
+ * @method integer getDisableRecord() 获取<p>录制方式。</p><p>枚举值：</p><ul><li>0： 开启自动录制</li><li>1： 禁止录制</li><li>2： 开启手动录制。（仅支持页面录制，需通过startRecord、stopRecord接口控制录制的开始和结束。）</li><li>3： 信令录制</li></ul>
+ * @method void setDisableRecord(integer $DisableRecord) 设置<p>录制方式。</p><p>枚举值：</p><ul><li>0： 开启自动录制</li><li>1： 禁止录制</li><li>2： 开启手动录制。（仅支持页面录制，需通过startRecord、stopRecord接口控制录制的开始和结束。）</li><li>3： 信令录制</li></ul>
  * @method array getAssistants() 获取<p>助教Id列表。通过[注册用户]接口获取的UserId。</p>
  * @method void setAssistants(array $Assistants) 设置<p>助教Id列表。通过[注册用户]接口获取的UserId。</p>
  * @method integer getRTCAudienceNumber() 获取<p>rtc人数。</p>
@@ -86,6 +86,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGuests(array $Guests) 设置<p>嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效</p>
  * @method integer getRecordMerge() 获取<p>录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效</p>
  * @method void setRecordMerge(integer $RecordMerge) 设置<p>录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效</p>
+ * @method integer getEnableLiveRelay() 获取<p>转推开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+ * @method void setEnableLiveRelay(integer $EnableLiveRelay) 设置<p>转推开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
  */
 class RoomInfo extends AbstractModel
 {
@@ -140,7 +142,7 @@ class RoomInfo extends AbstractModel
     public $AudioQuality;
 
     /**
-     * @var integer <p>上课后是否禁止自动录制。可以有以下取值： 0 不禁止录制（自动开启录制，默认值） 1 禁止录制 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。</p>
+     * @var integer <p>录制方式。</p><p>枚举值：</p><ul><li>0： 开启自动录制</li><li>1： 禁止录制</li><li>2： 开启手动录制。（仅支持页面录制，需通过startRecord、stopRecord接口控制录制的开始和结束。）</li><li>3： 信令录制</li></ul>
      */
     public $DisableRecord;
 
@@ -257,6 +259,11 @@ class RoomInfo extends AbstractModel
     public $RecordMerge;
 
     /**
+     * @var integer <p>转推开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+     */
+    public $EnableLiveRelay;
+
+    /**
      * @param string $Name <p>房间名称。<br>字符数不超过256</p>
      * @param integer $StartTime <p>预定的房间开始时间，unix时间戳。</p>
      * @param integer $EndTime <p>预定的房间结束时间，unix时间戳。</p>
@@ -267,7 +274,7 @@ class RoomInfo extends AbstractModel
      * @param integer $AutoMic <p>进入课堂时是否自动连麦。可以有以下取值： 0 不自动连麦（需要手动申请上麦，默认值） 1 自动连麦</p>
      * @param integer $TurnOffMic <p>释放音视频权限后是否自动取消连麦。可以有以下取值： 0 自动取消连麦（默认值） 1 保持连麦状态</p>
      * @param integer $AudioQuality <p>高音质模式。可以有以下取值： 0 不开启高音质（默认值） 1 开启高音质</p>
-     * @param integer $DisableRecord <p>上课后是否禁止自动录制。可以有以下取值： 0 不禁止录制（自动开启录制，默认值） 1 禁止录制 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。</p>
+     * @param integer $DisableRecord <p>录制方式。</p><p>枚举值：</p><ul><li>0： 开启自动录制</li><li>1： 禁止录制</li><li>2： 开启手动录制。（仅支持页面录制，需通过startRecord、stopRecord接口控制录制的开始和结束。）</li><li>3： 信令录制</li></ul>
      * @param array $Assistants <p>助教Id列表。通过[注册用户]接口获取的UserId。</p>
      * @param integer $RTCAudienceNumber <p>rtc人数。</p>
      * @param integer $AudienceType <p>观看类型。</p>
@@ -290,6 +297,7 @@ class RoomInfo extends AbstractModel
      * @param integer $SubtitlesTranscription <p>字幕转写功能开关。可以有以下取值：<br>0 不开启字幕转写功能（默认值）<br>1 自动转写模式：上课自动开启，下课自动停止<br>2 手动转写模式：支持老师或者助教通过客户端API手动开启/关闭字幕转写<br>设置0和1时客户端均不展示手动开关，设置2时老师或者助教端展示字幕转写开关</p>
      * @param array $Guests <p>嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效</p>
      * @param integer $RecordMerge <p>录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效</p>
+     * @param integer $EnableLiveRelay <p>转推开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
      */
     function __construct()
     {
@@ -434,6 +442,10 @@ class RoomInfo extends AbstractModel
 
         if (array_key_exists("RecordMerge",$param) and $param["RecordMerge"] !== null) {
             $this->RecordMerge = $param["RecordMerge"];
+        }
+
+        if (array_key_exists("EnableLiveRelay",$param) and $param["EnableLiveRelay"] !== null) {
+            $this->EnableLiveRelay = $param["EnableLiveRelay"];
         }
     }
 }

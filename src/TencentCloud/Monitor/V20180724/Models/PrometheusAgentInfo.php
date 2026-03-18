@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 托管Prometheus agent信息
  *
- * @method string getClusterType() 获取集群类型。可填入tke、eks、tkeedge、tdcc，分别代表标准集群、弹性集群、边缘集群、注册集群
- * @method void setClusterType(string $ClusterType) 设置集群类型。可填入tke、eks、tkeedge、tdcc，分别代表标准集群、弹性集群、边缘集群、注册集群
+ * @method string getClusterType() 获取集群类型。可填入tke、eks、tkeedge、tdcc、external，分别代表标准集群、弹性集群、边缘集群、注册集群、外部集群
+ * @method void setClusterType(string $ClusterType) 设置集群类型。可填入tke、eks、tkeedge、tdcc、external，分别代表标准集群、弹性集群、边缘集群、注册集群、外部集群
  * @method string getClusterId() 获取集成容器服务中关联的集群ID
  * @method void setClusterId(string $ClusterId) 设置集成容器服务中关联的集群ID
  * @method string getDescribe() 获取该参数未使用，不需要填写
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class PrometheusAgentInfo extends AbstractModel
 {
     /**
-     * @var string 集群类型。可填入tke、eks、tkeedge、tdcc，分别代表标准集群、弹性集群、边缘集群、注册集群
+     * @var string 集群类型。可填入tke、eks、tkeedge、tdcc、external，分别代表标准集群、弹性集群、边缘集群、注册集群、外部集群
      */
     public $ClusterType;
 
@@ -45,7 +45,7 @@ class PrometheusAgentInfo extends AbstractModel
     public $Describe;
 
     /**
-     * @param string $ClusterType 集群类型。可填入tke、eks、tkeedge、tdcc，分别代表标准集群、弹性集群、边缘集群、注册集群
+     * @param string $ClusterType 集群类型。可填入tke、eks、tkeedge、tdcc、external，分别代表标准集群、弹性集群、边缘集群、注册集群、外部集群
      * @param string $ClusterId 集成容器服务中关联的集群ID
      * @param string $Describe 该参数未使用，不需要填写
      */

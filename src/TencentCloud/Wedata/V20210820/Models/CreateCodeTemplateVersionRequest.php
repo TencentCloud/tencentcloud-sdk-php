@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 false表示：针对所有状态的任务均仅生成开发态保存版本。
  * @method void setNeedSubmitScheduleForTemplate(boolean $NeedSubmitScheduleForTemplate) 设置true表示：针对新建、已下线状态的任务仅生成开发态保存版本，您可在任务中自行提交到生产。针对调度中、已暂停、已失效的任务生成开发态保存版本并提交到生产（即本次代码模板的改动在调度中生效）； 
 false表示：针对所有状态的任务均仅生成开发态保存版本。
+ * @method array getAssignApprovalList() 获取指定审批人列表
+ * @method void setAssignApprovalList(array $AssignApprovalList) 设置指定审批人列表
  */
 class CreateCodeTemplateVersionRequest extends AbstractModel
 {
@@ -69,6 +71,11 @@ false表示：针对所有状态的任务均仅生成开发态保存版本。
     public $NeedSubmitScheduleForTemplate;
 
     /**
+     * @var array 指定审批人列表
+     */
+    public $AssignApprovalList;
+
+    /**
      * @param string $CodeTemplateId 模版Id
      * @param string $ProjectId 项目Id
      * @param array $Tasks 模版关联的任务以及调度参数设置
@@ -76,6 +83,7 @@ false表示：针对所有状态的任务均仅生成开发态保存版本。
      * @param string $VersionRemark 提交描述
      * @param boolean $NeedSubmitScheduleForTemplate true表示：针对新建、已下线状态的任务仅生成开发态保存版本，您可在任务中自行提交到生产。针对调度中、已暂停、已失效的任务生成开发态保存版本并提交到生产（即本次代码模板的改动在调度中生效）； 
 false表示：针对所有状态的任务均仅生成开发态保存版本。
+     * @param array $AssignApprovalList 指定审批人列表
      */
     function __construct()
     {
@@ -117,6 +125,10 @@ false表示：针对所有状态的任务均仅生成开发态保存版本。
 
         if (array_key_exists("NeedSubmitScheduleForTemplate",$param) and $param["NeedSubmitScheduleForTemplate"] !== null) {
             $this->NeedSubmitScheduleForTemplate = $param["NeedSubmitScheduleForTemplate"];
+        }
+
+        if (array_key_exists("AssignApprovalList",$param) and $param["AssignApprovalList"] !== null) {
+            $this->AssignApprovalList = $param["AssignApprovalList"];
         }
     }
 }

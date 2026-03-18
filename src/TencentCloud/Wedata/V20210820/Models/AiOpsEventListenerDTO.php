@@ -48,6 +48,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventBroadcastType(string $EventBroadcastType) 设置事件广播类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProducerTaskId() 获取事件生产者任务Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProducerTaskId(string $ProducerTaskId) 设置事件生产者任务Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDimension() 获取事件维度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDimension(string $Dimension) 设置事件维度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStatus() 获取事件状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(string $Status) 设置事件状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEventTriggerTs() 获取事件触发时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEventTriggerTs(string $EventTriggerTs) 设置事件触发时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCaseId() 获取事件ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCaseId(string $CaseId) 设置事件ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AiOpsEventListenerDTO extends AbstractModel
 {
@@ -94,6 +114,36 @@ class AiOpsEventListenerDTO extends AbstractModel
     public $EventBroadcastType;
 
     /**
+     * @var string 事件生产者任务Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProducerTaskId;
+
+    /**
+     * @var string 事件维度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Dimension;
+
+    /**
+     * @var string 事件状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
+     * @var string 事件触发时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EventTriggerTs;
+
+    /**
+     * @var string 事件ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CaseId;
+
+    /**
      * @param string $EventName 事件名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
@@ -107,6 +157,16 @@ class AiOpsEventListenerDTO extends AbstractModel
      * @param array $PropertiesList 扩展名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EventBroadcastType 事件广播类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProducerTaskId 事件生产者任务Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Dimension 事件维度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Status 事件状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EventTriggerTs 事件触发时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CaseId 事件ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -153,6 +213,26 @@ class AiOpsEventListenerDTO extends AbstractModel
 
         if (array_key_exists("EventBroadcastType",$param) and $param["EventBroadcastType"] !== null) {
             $this->EventBroadcastType = $param["EventBroadcastType"];
+        }
+
+        if (array_key_exists("ProducerTaskId",$param) and $param["ProducerTaskId"] !== null) {
+            $this->ProducerTaskId = $param["ProducerTaskId"];
+        }
+
+        if (array_key_exists("Dimension",$param) and $param["Dimension"] !== null) {
+            $this->Dimension = $param["Dimension"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("EventTriggerTs",$param) and $param["EventTriggerTs"] !== null) {
+            $this->EventTriggerTs = $param["EventTriggerTs"];
+        }
+
+        if (array_key_exists("CaseId",$param) and $param["CaseId"] !== null) {
+            $this->CaseId = $param["CaseId"];
         }
     }
 }

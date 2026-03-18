@@ -35,193 +35,193 @@ TaskStatus定义如下:
 | TASK_STATUS_SUCCESS | 8 | 任务执行完成 |
 | TASK_STATUS_FAILED | 9 | 任务执行失败 |
  *
- * @method string getTaskId() 获取任务ID
- * @method void setTaskId(string $TaskId) 设置任务ID
- * @method string getTaskName() 获取描述任务名称，指定后可根据名称筛选
+ * @method string getTaskId() 获取<p>任务ID</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务ID</p>
+ * @method string getTaskName() 获取<p>描述任务名称，指定后可根据名称筛选</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskName(string $TaskName) 设置描述任务名称，指定后可根据名称筛选
+ * @method void setTaskName(string $TaskName) 设置<p>描述任务名称，指定后可根据名称筛选</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMediaId() 获取媒资文件ID
- * @method void setMediaId(string $MediaId) 设置媒资文件ID
- * @method integer getTaskStatus() 获取任务执行状态
- * @method void setTaskStatus(integer $TaskStatus) 设置任务执行状态
- * @method float getTaskProgress() 获取任务进度，范围为[0，100]
+ * @method string getMediaId() 获取<p>媒资文件ID</p>
+ * @method void setMediaId(string $MediaId) 设置<p>媒资文件ID</p>
+ * @method integer getTaskStatus() 获取<p>任务执行状态</p>
+ * @method void setTaskStatus(integer $TaskStatus) 设置<p>任务执行状态</p>
+ * @method float getTaskProgress() 获取<p>任务进度，范围为[0，100]</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskProgress(float $TaskProgress) 设置任务进度，范围为[0，100]
+ * @method void setTaskProgress(float $TaskProgress) 设置<p>任务进度，范围为[0，100]</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTaskTimeCost() 获取任务执行时间
+ * @method integer getTaskTimeCost() 获取<p>任务执行时间</p><p>单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskTimeCost(integer $TaskTimeCost) 设置任务执行时间
+ * @method void setTaskTimeCost(integer $TaskTimeCost) 设置<p>任务执行时间</p><p>单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskCreateTime() 获取任务创建时间
- * @method void setTaskCreateTime(string $TaskCreateTime) 设置任务创建时间
- * @method string getTaskStartTime() 获取任务开始执行时间
+ * @method string getTaskCreateTime() 获取<p>任务创建时间</p>
+ * @method void setTaskCreateTime(string $TaskCreateTime) 设置<p>任务创建时间</p>
+ * @method string getTaskStartTime() 获取<p>任务开始执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskStartTime(string $TaskStartTime) 设置任务开始执行时间
+ * @method void setTaskStartTime(string $TaskStartTime) 设置<p>任务开始执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFailedReason() 获取任务失败原因
+ * @method string getFailedReason() 获取<p>任务失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFailedReason(string $FailedReason) 设置任务失败原因
+ * @method void setFailedReason(string $FailedReason) 设置<p>任务失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MediaPreknownInfo getMediaPreknownInfo() 获取任务执行时指定的先验知识
- * @method void setMediaPreknownInfo(MediaPreknownInfo $MediaPreknownInfo) 设置任务执行时指定的先验知识
- * @method string getMediaName() 获取媒资文件名称
+ * @method MediaPreknownInfo getMediaPreknownInfo() 获取<p>任务执行时指定的先验知识</p>
+ * @method void setMediaPreknownInfo(MediaPreknownInfo $MediaPreknownInfo) 设置<p>任务执行时指定的先验知识</p>
+ * @method string getMediaName() 获取<p>媒资文件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMediaName(string $MediaName) 设置媒资文件名称
+ * @method void setMediaName(string $MediaName) 设置<p>媒资文件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLabel() 获取媒资自定义标签
+ * @method string getLabel() 获取<p>媒资自定义标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabel(string $Label) 设置媒资自定义标签
+ * @method void setLabel(string $Label) 设置<p>媒资自定义标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCallbackURL() 获取任务分析完成后的后调地址
+ * @method string getCallbackURL() 获取<p>任务分析完成后的后调地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCallbackURL(string $CallbackURL) 设置任务分析完成后的后调地址
+ * @method void setCallbackURL(string $CallbackURL) 设置<p>任务分析完成后的后调地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AudioMetadata getAudioMetadata() 获取任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+ * @method AudioMetadata getAudioMetadata() 获取<p>任务对应的媒资文件元信息，仅在MediaType为Audio时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAudioMetadata(AudioMetadata $AudioMetadata) 设置任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+ * @method void setAudioMetadata(AudioMetadata $AudioMetadata) 设置<p>任务对应的媒资文件元信息，仅在MediaType为Audio时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ImageMetadata getImageMetadata() 获取任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+ * @method ImageMetadata getImageMetadata() 获取<p>任务对应的媒资文件元信息，仅在MediaType为Audio时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImageMetadata(ImageMetadata $ImageMetadata) 设置任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+ * @method void setImageMetadata(ImageMetadata $ImageMetadata) 设置<p>任务对应的媒资文件元信息，仅在MediaType为Audio时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method TextMetadata getTextMetadata() 获取任务对应的媒资文件元信息，仅在MediaType为Text时有效
+ * @method TextMetadata getTextMetadata() 获取<p>任务对应的媒资文件元信息，仅在MediaType为Text时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTextMetadata(TextMetadata $TextMetadata) 设置任务对应的媒资文件元信息，仅在MediaType为Text时有效
+ * @method void setTextMetadata(TextMetadata $TextMetadata) 设置<p>任务对应的媒资文件元信息，仅在MediaType为Text时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MediaMetadata getMetadata() 获取任务对应的媒资文件元信息，仅在MediaType为Video时有效
+ * @method MediaMetadata getMetadata() 获取<p>任务对应的媒资文件元信息，仅在MediaType为Video时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMetadata(MediaMetadata $Metadata) 设置任务对应的媒资文件元信息，仅在MediaType为Video时有效
+ * @method void setMetadata(MediaMetadata $Metadata) 设置<p>任务对应的媒资文件元信息，仅在MediaType为Video时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskInfo extends AbstractModel
 {
     /**
-     * @var string 任务ID
+     * @var string <p>任务ID</p>
      */
     public $TaskId;
 
     /**
-     * @var string 描述任务名称，指定后可根据名称筛选
+     * @var string <p>描述任务名称，指定后可根据名称筛选</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskName;
 
     /**
-     * @var string 媒资文件ID
+     * @var string <p>媒资文件ID</p>
      */
     public $MediaId;
 
     /**
-     * @var integer 任务执行状态
+     * @var integer <p>任务执行状态</p>
      */
     public $TaskStatus;
 
     /**
-     * @var float 任务进度，范围为[0，100]
+     * @var float <p>任务进度，范围为[0，100]</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskProgress;
 
     /**
-     * @var integer 任务执行时间
+     * @var integer <p>任务执行时间</p><p>单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskTimeCost;
 
     /**
-     * @var string 任务创建时间
+     * @var string <p>任务创建时间</p>
      */
     public $TaskCreateTime;
 
     /**
-     * @var string 任务开始执行时间
+     * @var string <p>任务开始执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskStartTime;
 
     /**
-     * @var string 任务失败原因
+     * @var string <p>任务失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailedReason;
 
     /**
-     * @var MediaPreknownInfo 任务执行时指定的先验知识
+     * @var MediaPreknownInfo <p>任务执行时指定的先验知识</p>
      */
     public $MediaPreknownInfo;
 
     /**
-     * @var string 媒资文件名称
+     * @var string <p>媒资文件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MediaName;
 
     /**
-     * @var string 媒资自定义标签
+     * @var string <p>媒资自定义标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
-     * @var string 任务分析完成后的后调地址
+     * @var string <p>任务分析完成后的后调地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CallbackURL;
 
     /**
-     * @var AudioMetadata 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+     * @var AudioMetadata <p>任务对应的媒资文件元信息，仅在MediaType为Audio时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioMetadata;
 
     /**
-     * @var ImageMetadata 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+     * @var ImageMetadata <p>任务对应的媒资文件元信息，仅在MediaType为Audio时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageMetadata;
 
     /**
-     * @var TextMetadata 任务对应的媒资文件元信息，仅在MediaType为Text时有效
+     * @var TextMetadata <p>任务对应的媒资文件元信息，仅在MediaType为Text时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TextMetadata;
 
     /**
-     * @var MediaMetadata 任务对应的媒资文件元信息，仅在MediaType为Video时有效
+     * @var MediaMetadata <p>任务对应的媒资文件元信息，仅在MediaType为Video时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Metadata;
 
     /**
-     * @param string $TaskId 任务ID
-     * @param string $TaskName 描述任务名称，指定后可根据名称筛选
+     * @param string $TaskId <p>任务ID</p>
+     * @param string $TaskName <p>描述任务名称，指定后可根据名称筛选</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MediaId 媒资文件ID
-     * @param integer $TaskStatus 任务执行状态
-     * @param float $TaskProgress 任务进度，范围为[0，100]
+     * @param string $MediaId <p>媒资文件ID</p>
+     * @param integer $TaskStatus <p>任务执行状态</p>
+     * @param float $TaskProgress <p>任务进度，范围为[0，100]</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TaskTimeCost 任务执行时间
+     * @param integer $TaskTimeCost <p>任务执行时间</p><p>单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskCreateTime 任务创建时间
-     * @param string $TaskStartTime 任务开始执行时间
+     * @param string $TaskCreateTime <p>任务创建时间</p>
+     * @param string $TaskStartTime <p>任务开始执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FailedReason 任务失败原因
+     * @param string $FailedReason <p>任务失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaPreknownInfo $MediaPreknownInfo 任务执行时指定的先验知识
-     * @param string $MediaName 媒资文件名称
+     * @param MediaPreknownInfo $MediaPreknownInfo <p>任务执行时指定的先验知识</p>
+     * @param string $MediaName <p>媒资文件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Label 媒资自定义标签
+     * @param string $Label <p>媒资自定义标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CallbackURL 任务分析完成后的后调地址
+     * @param string $CallbackURL <p>任务分析完成后的后调地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AudioMetadata $AudioMetadata 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+     * @param AudioMetadata $AudioMetadata <p>任务对应的媒资文件元信息，仅在MediaType为Audio时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageMetadata $ImageMetadata 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+     * @param ImageMetadata $ImageMetadata <p>任务对应的媒资文件元信息，仅在MediaType为Audio时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TextMetadata $TextMetadata 任务对应的媒资文件元信息，仅在MediaType为Text时有效
+     * @param TextMetadata $TextMetadata <p>任务对应的媒资文件元信息，仅在MediaType为Text时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaMetadata $Metadata 任务对应的媒资文件元信息，仅在MediaType为Video时有效
+     * @param MediaMetadata $Metadata <p>任务对应的媒资文件元信息，仅在MediaType为Video时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

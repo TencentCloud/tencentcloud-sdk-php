@@ -20,57 +20,57 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 矩形内容框
  *
- * @method float getX() 获取矩形框左上角水平座标
+ * @method float getX() 获取<p>矩形框左上角水平座标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setX(float $X) 设置矩形框左上角水平座标
+ * @method void setX(float $X) 设置<p>矩形框左上角水平座标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getY() 获取矩形框左上角竖直座标
+ * @method float getY() 获取<p>矩形框左上角竖直座标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setY(float $Y) 设置矩形框左上角竖直座标
+ * @method void setY(float $Y) 设置<p>矩形框左上角竖直座标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getWidth() 获取矩形框宽度
+ * @method float getWidth() 获取<p>矩形框宽度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWidth(float $Width) 设置矩形框宽度
+ * @method void setWidth(float $Width) 设置<p>矩形框宽度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getHeight() 获取矩形框长度
+ * @method float getHeight() 获取<p>矩形框长度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHeight(float $Height) 设置矩形框长度
+ * @method void setHeight(float $Height) 设置<p>矩形框长度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Rectf extends AbstractModel
 {
     /**
-     * @var float 矩形框左上角水平座标
+     * @var float <p>矩形框左上角水平座标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $X;
 
     /**
-     * @var float 矩形框左上角竖直座标
+     * @var float <p>矩形框左上角竖直座标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Y;
 
     /**
-     * @var float 矩形框宽度
+     * @var float <p>矩形框宽度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Width;
 
     /**
-     * @var float 矩形框长度
+     * @var float <p>矩形框长度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Height;
 
     /**
-     * @param float $X 矩形框左上角水平座标
+     * @param float $X <p>矩形框左上角水平座标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $Y 矩形框左上角竖直座标
+     * @param float $Y <p>矩形框左上角竖直座标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $Width 矩形框宽度
+     * @param float $Width <p>矩形框宽度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $Height 矩形框长度
+     * @param float $Height <p>矩形框长度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

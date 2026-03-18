@@ -76,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
 </table>
  * @method string getErrorMessage() 获取如果任务失败,会返回错误信息
  * @method void setErrorMessage(string $ErrorMessage) 设置如果任务失败,会返回错误信息
+ * @method string getAuthorizationInfoId() 获取认证流 Id 是指在企业认证过程中，当前操作人的认证流程的唯一标识。每个企业在认证过程中只能有一条认证流认证成功。这意味着在同一认证过程内，一个企业只能有一个认证流程处于成功状态，以确保认证的唯一性和有效性。认证流 Id可以通过回调[授权书认证审核结果回调](https://qian.tencent.com/developers/company/callback_types_staffs/#%E5%8D%81%E5%85%AD-%E6%8E%88%E6%9D%83%E4%B9%A6%E8%AE%A4%E8%AF%81%E5%AE%A1%E6%A0%B8%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)
+ * @method void setAuthorizationInfoId(string $AuthorizationInfoId) 设置认证流 Id 是指在企业认证过程中，当前操作人的认证流程的唯一标识。每个企业在认证过程中只能有一条认证流认证成功。这意味着在同一认证过程内，一个企业只能有一个认证流程处于成功状态，以确保认证的唯一性和有效性。认证流 Id可以通过回调[授权书认证审核结果回调](https://qian.tencent.com/developers/company/callback_types_staffs/#%E5%8D%81%E5%85%AD-%E6%8E%88%E6%9D%83%E4%B9%A6%E8%AE%A4%E8%AF%81%E5%AE%A1%E6%A0%B8%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)
  */
 class BatchOrganizationRegistrationTasksDetails extends AbstractModel
 {
@@ -120,6 +122,11 @@ class BatchOrganizationRegistrationTasksDetails extends AbstractModel
     public $ErrorMessage;
 
     /**
+     * @var string 认证流 Id 是指在企业认证过程中，当前操作人的认证流程的唯一标识。每个企业在认证过程中只能有一条认证流认证成功。这意味着在同一认证过程内，一个企业只能有一个认证流程处于成功状态，以确保认证的唯一性和有效性。认证流 Id可以通过回调[授权书认证审核结果回调](https://qian.tencent.com/developers/company/callback_types_staffs/#%E5%8D%81%E5%85%AD-%E6%8E%88%E6%9D%83%E4%B9%A6%E8%AE%A4%E8%AF%81%E5%AE%A1%E6%A0%B8%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)
+     */
+    public $AuthorizationInfoId;
+
+    /**
      * @param string $TaskId 生成注册链接的任务Id
      * @param string $Status 批量创建企业任务的状态
 <ul>
@@ -148,6 +155,7 @@ class BatchOrganizationRegistrationTasksDetails extends AbstractModel
 </tbody>
 </table>
      * @param string $ErrorMessage 如果任务失败,会返回错误信息
+     * @param string $AuthorizationInfoId 认证流 Id 是指在企业认证过程中，当前操作人的认证流程的唯一标识。每个企业在认证过程中只能有一条认证流认证成功。这意味着在同一认证过程内，一个企业只能有一个认证流程处于成功状态，以确保认证的唯一性和有效性。认证流 Id可以通过回调[授权书认证审核结果回调](https://qian.tencent.com/developers/company/callback_types_staffs/#%E5%8D%81%E5%85%AD-%E6%8E%88%E6%9D%83%E4%B9%A6%E8%AE%A4%E8%AF%81%E5%AE%A1%E6%A0%B8%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)
      */
     function __construct()
     {
@@ -172,6 +180,10 @@ class BatchOrganizationRegistrationTasksDetails extends AbstractModel
 
         if (array_key_exists("ErrorMessage",$param) and $param["ErrorMessage"] !== null) {
             $this->ErrorMessage = $param["ErrorMessage"];
+        }
+
+        if (array_key_exists("AuthorizationInfoId",$param) and $param["AuthorizationInfoId"] !== null) {
+            $this->AuthorizationInfoId = $param["AuthorizationInfoId"];
         }
     }
 }

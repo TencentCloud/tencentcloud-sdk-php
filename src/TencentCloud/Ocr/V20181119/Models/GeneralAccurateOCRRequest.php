@@ -20,74 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GeneralAccurateOCR请求参数结构体
  *
- * @method string getImageBase64() 获取图片/PDF的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
- * @method void setImageBase64(string $ImageBase64) 设置图片/PDF的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
- * @method string getImageUrl() 获取图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
- * @method void setImageUrl(string $ImageUrl) 设置图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
- * @method boolean getIsWords() 获取是否返回单字信息，默认值为false，注：仅ConfigID配置为OCR时支持。
- * @method void setIsWords(boolean $IsWords) 设置是否返回单字信息，默认值为false，注：仅ConfigID配置为OCR时支持。
- * @method boolean getEnableDetectSplit() 获取是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关，注：仅ConfigID配置为OCR时支持。
- * @method void setEnableDetectSplit(boolean $EnableDetectSplit) 设置是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关，注：仅ConfigID配置为OCR时支持。
- * @method boolean getIsPdf() 获取是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
- * @method void setIsPdf(boolean $IsPdf) 设置是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
- * @method integer getPdfPageNumber() 获取需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
- * @method void setPdfPageNumber(integer $PdfPageNumber) 设置需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
- * @method boolean getEnableDetectText() 获取文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。
- * @method void setEnableDetectText(boolean $EnableDetectText) 设置文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。
- * @method string getConfigID() 获取配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR
- * @method void setConfigID(string $ConfigID) 设置配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR
+ * @method string getImageBase64() 获取<p>图片/PDF的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
+ * @method void setImageBase64(string $ImageBase64) 设置<p>图片/PDF的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
+ * @method string getImageUrl() 获取<p>图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p>
+ * @method void setImageUrl(string $ImageUrl) 设置<p>图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p>
+ * @method boolean getIsWords() 获取<p>是否返回单字信息，默认值为false，注：仅ConfigID配置为OCR时支持。</p>
+ * @method void setIsWords(boolean $IsWords) 设置<p>是否返回单字信息，默认值为false，注：仅ConfigID配置为OCR时支持。</p>
+ * @method boolean getEnableDetectSplit() 获取<p>是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关，注：仅ConfigID配置为OCR时支持。</p>
+ * @method void setEnableDetectSplit(boolean $EnableDetectSplit) 设置<p>是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关，注：仅ConfigID配置为OCR时支持。</p>
+ * @method boolean getIsPdf() 获取<p>是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。</p>
+ * @method void setIsPdf(boolean $IsPdf) 设置<p>是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。</p>
+ * @method integer getPdfPageNumber() 获取<p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。</p>
+ * @method void setPdfPageNumber(integer $PdfPageNumber) 设置<p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。</p>
+ * @method boolean getEnableDetectText() 获取<p>文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。</p>
+ * @method void setEnableDetectText(boolean $EnableDetectText) 设置<p>文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。</p>
+ * @method string getConfigID() 获取<p>配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR</p>
+ * @method void setConfigID(string $ConfigID) 设置<p>配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR</p>
+ * @method string getWordsType() 获取<p>需要识别的文字类型，默认识别全部类型的文字。 0：自动识别全部类型文字 1：仅识别手写体文字 2：仅识别印刷体文字</p>
+ * @method void setWordsType(string $WordsType) 设置<p>需要识别的文字类型，默认识别全部类型的文字。 0：自动识别全部类型文字 1：仅识别手写体文字 2：仅识别印刷体文字</p>
+ * @method boolean getLanguageInfo() 获取<p>支持输出单行文字的语种信息，开启后耗时会略有增加。</p>
+ * @method void setLanguageInfo(boolean $LanguageInfo) 设置<p>支持输出单行文字的语种信息，开启后耗时会略有增加。</p>
  */
 class GeneralAccurateOCRRequest extends AbstractModel
 {
     /**
-     * @var string 图片/PDF的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+     * @var string <p>图片/PDF的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
      */
     public $ImageBase64;
 
     /**
-     * @var string 图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+     * @var string <p>图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p>
      */
     public $ImageUrl;
 
     /**
-     * @var boolean 是否返回单字信息，默认值为false，注：仅ConfigID配置为OCR时支持。
+     * @var boolean <p>是否返回单字信息，默认值为false，注：仅ConfigID配置为OCR时支持。</p>
      */
     public $IsWords;
 
     /**
-     * @var boolean 是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关，注：仅ConfigID配置为OCR时支持。
+     * @var boolean <p>是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关，注：仅ConfigID配置为OCR时支持。</p>
      */
     public $EnableDetectSplit;
 
     /**
-     * @var boolean 是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
+     * @var boolean <p>是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。</p>
      */
     public $IsPdf;
 
     /**
-     * @var integer 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+     * @var integer <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。</p>
      */
     public $PdfPageNumber;
 
     /**
-     * @var boolean 文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。
+     * @var boolean <p>文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。</p>
      */
     public $EnableDetectText;
 
     /**
-     * @var string 配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR
+     * @var string <p>配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR</p>
      */
     public $ConfigID;
 
     /**
-     * @param string $ImageBase64 图片/PDF的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
-     * @param string $ImageUrl 图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
-     * @param boolean $IsWords 是否返回单字信息，默认值为false，注：仅ConfigID配置为OCR时支持。
-     * @param boolean $EnableDetectSplit 是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关，注：仅ConfigID配置为OCR时支持。
-     * @param boolean $IsPdf 是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
-     * @param integer $PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
-     * @param boolean $EnableDetectText 文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。
-     * @param string $ConfigID 配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR
+     * @var string <p>需要识别的文字类型，默认识别全部类型的文字。 0：自动识别全部类型文字 1：仅识别手写体文字 2：仅识别印刷体文字</p>
+     */
+    public $WordsType;
+
+    /**
+     * @var boolean <p>支持输出单行文字的语种信息，开启后耗时会略有增加。</p>
+     */
+    public $LanguageInfo;
+
+    /**
+     * @param string $ImageBase64 <p>图片/PDF的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
+     * @param string $ImageUrl <p>图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p>
+     * @param boolean $IsWords <p>是否返回单字信息，默认值为false，注：仅ConfigID配置为OCR时支持。</p>
+     * @param boolean $EnableDetectSplit <p>是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关，注：仅ConfigID配置为OCR时支持。</p>
+     * @param boolean $IsPdf <p>是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。</p>
+     * @param integer $PdfPageNumber <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。</p>
+     * @param boolean $EnableDetectText <p>文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。</p>
+     * @param string $ConfigID <p>配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR</p>
+     * @param string $WordsType <p>需要识别的文字类型，默认识别全部类型的文字。 0：自动识别全部类型文字 1：仅识别手写体文字 2：仅识别印刷体文字</p>
+     * @param boolean $LanguageInfo <p>支持输出单行文字的语种信息，开启后耗时会略有增加。</p>
      */
     function __construct()
     {
@@ -132,6 +148,14 @@ class GeneralAccurateOCRRequest extends AbstractModel
 
         if (array_key_exists("ConfigID",$param) and $param["ConfigID"] !== null) {
             $this->ConfigID = $param["ConfigID"];
+        }
+
+        if (array_key_exists("WordsType",$param) and $param["WordsType"] !== null) {
+            $this->WordsType = $param["WordsType"];
+        }
+
+        if (array_key_exists("LanguageInfo",$param) and $param["LanguageInfo"] !== null) {
+            $this->LanguageInfo = $param["LanguageInfo"];
         }
     }
 }

@@ -88,6 +88,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubtitlesTranscription(integer $SubtitlesTranscription) 设置<p>字幕转写功能开关。可以有以下取值：<br>0 不开启字幕转写功能（默认值）<br>1 自动转写模式：上课自动开启，下课自动停止<br>2 手动转写模式：支持老师或者助教通过客户端API手动开启/关闭字幕转写<br>设置0和1时客户端均不展示手动开关，设置2时老师或者助教端展示字幕转写开关</p>
  * @method integer getRecordMerge() 获取<p>录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效</p>
  * @method void setRecordMerge(integer $RecordMerge) 设置<p>录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效</p>
+ * @method integer getEnableLiveRelay() 获取<p>转推开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+ * @method void setEnableLiveRelay(integer $EnableLiveRelay) 设置<p>转推开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
  */
 class CreateRoomRequest extends AbstractModel
 {
@@ -264,6 +266,11 @@ class CreateRoomRequest extends AbstractModel
     public $RecordMerge;
 
     /**
+     * @var integer <p>转推开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+     */
+    public $EnableLiveRelay;
+
+    /**
      * @param string $Name <p>课堂名称。<br>字符数不超过256</p>
      * @param integer $StartTime <p>预定的课堂开始时间，unix时间戳（秒）。</p>
      * @param integer $EndTime <p>预定的课堂结束时间，unix时间戳（秒）。</p>
@@ -298,6 +305,7 @@ class CreateRoomRequest extends AbstractModel
      * @param integer $WhiteBoardSnapshotMode <p>板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式</p>
      * @param integer $SubtitlesTranscription <p>字幕转写功能开关。可以有以下取值：<br>0 不开启字幕转写功能（默认值）<br>1 自动转写模式：上课自动开启，下课自动停止<br>2 手动转写模式：支持老师或者助教通过客户端API手动开启/关闭字幕转写<br>设置0和1时客户端均不展示手动开关，设置2时老师或者助教端展示字幕转写开关</p>
      * @param integer $RecordMerge <p>录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效</p>
+     * @param integer $EnableLiveRelay <p>转推开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
      */
     function __construct()
     {
@@ -446,6 +454,10 @@ class CreateRoomRequest extends AbstractModel
 
         if (array_key_exists("RecordMerge",$param) and $param["RecordMerge"] !== null) {
             $this->RecordMerge = $param["RecordMerge"];
+        }
+
+        if (array_key_exists("EnableLiveRelay",$param) and $param["EnableLiveRelay"] !== null) {
+            $this->EnableLiveRelay = $param["EnableLiveRelay"];
         }
     }
 }

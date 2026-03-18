@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientToken(string $ClientToken) 设置唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
  * @method string getDeploymentMode() 获取部署模式
  * @method void setDeploymentMode(string $DeploymentMode) 设置部署模式
+ * @method string getUserName() 获取服务用户名，对不需要用户名的服务不用传，8-16个字符，支持大写字母、小写字母、数字
+ * @method void setUserName(string $UserName) 设置服务用户名，对不需要用户名的服务不用传，8-16个字符，支持大写字母、小写字母、数字
  */
 class CreateSLInstanceRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateSLInstanceRequest extends AbstractModel
     public $DeploymentMode;
 
     /**
+     * @var string 服务用户名，对不需要用户名的服务不用传，8-16个字符，支持大写字母、小写字母、数字
+     */
+    public $UserName;
+
+    /**
      * @param string $InstanceName 实例名称。
      * @param integer $PayMode 实例计费模式，0表示后付费，即按量计费，1表示预付费，即包年包月。
      * @param string $DiskType 实例存储类型，CLOUD_HSSD表示性能云存储， CLOUD_BSSD表示标准云存储。
@@ -104,6 +111,7 @@ class CreateSLInstanceRequest extends AbstractModel
      * @param PrePaySetting $PrePaySetting 预付费参数
      * @param string $ClientToken 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
      * @param string $DeploymentMode 部署模式
+     * @param string $UserName 服务用户名，对不需要用户名的服务不用传，8-16个字符，支持大写字母、小写字母、数字
      */
     function __construct()
     {
@@ -167,6 +175,10 @@ class CreateSLInstanceRequest extends AbstractModel
 
         if (array_key_exists("DeploymentMode",$param) and $param["DeploymentMode"] !== null) {
             $this->DeploymentMode = $param["DeploymentMode"];
+        }
+
+        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
+            $this->UserName = $param["UserName"];
         }
     }
 }

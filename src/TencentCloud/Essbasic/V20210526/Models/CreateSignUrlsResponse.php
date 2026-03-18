@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSignUrls返回参数结构体
  *
- * @method array getSignUrlInfos() 获取生成的签署参与者的签署链接信息数组。
- * @method void setSignUrlInfos(array $SignUrlInfos) 设置生成的签署参与者的签署链接信息数组。
- * @method array getErrorMessages() 获取生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致
- * @method void setErrorMessages(array $ErrorMessages) 设置生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致
+ * @method array getSignUrlInfos() 获取<p>生成的签署参与者的签署链接信息数组。</p>
+ * @method void setSignUrlInfos(array $SignUrlInfos) 设置<p>生成的签署参与者的签署链接信息数组。</p>
+ * @method array getErrorMessages() 获取<p>生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致</p>
+ * @method void setErrorMessages(array $ErrorMessages) 设置<p>生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateSignUrlsResponse extends AbstractModel
 {
     /**
-     * @var array 生成的签署参与者的签署链接信息数组。
+     * @var array <p>生成的签署参与者的签署链接信息数组。</p>
      */
     public $SignUrlInfos;
 
     /**
-     * @var array 生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致
+     * @var array <p>生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致</p>
      */
     public $ErrorMessages;
 
@@ -45,8 +45,8 @@ class CreateSignUrlsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $SignUrlInfos 生成的签署参与者的签署链接信息数组。
-     * @param array $ErrorMessages 生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致
+     * @param array $SignUrlInfos <p>生成的签署参与者的签署链接信息数组。</p>
+     * @param array $ErrorMessages <p>生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

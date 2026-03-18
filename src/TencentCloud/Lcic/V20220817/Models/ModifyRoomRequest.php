@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioQuality(integer $AudioQuality) 设置<p>高音质模式。可以有以下取值：<br>0 不开启高音质（默认值）<br>1 开启高音质<br>直播开始后不允许修改。</p>
  * @method string getSubType() 获取<p>房间子类型，可以有以下取值：<br>videodoc 文档+视频<br>video 纯视频<br>直播开始后不允许修改。</p>
  * @method void setSubType(string $SubType) 设置<p>房间子类型，可以有以下取值：<br>videodoc 文档+视频<br>video 纯视频<br>直播开始后不允许修改。</p>
- * @method integer getDisableRecord() 获取<p>禁止录制。可以有以下取值：<br>0 不禁止录制（默认值）<br>1 禁止录制<br>直播开始后不允许修改。</p>
- * @method void setDisableRecord(integer $DisableRecord) 设置<p>禁止录制。可以有以下取值：<br>0 不禁止录制（默认值）<br>1 禁止录制<br>直播开始后不允许修改。</p>
+ * @method integer getDisableRecord() 获取<p>录制方式。</p><p>枚举值：</p><ul><li>0： 开启自动录制</li><li>1： 禁止录制</li><li>2： 开启手动录制。（仅支持页面录制，需通过startRecord、stopRecord接口控制录制的开始和结束。）</li><li>3： 信令录制</li></ul>
+ * @method void setDisableRecord(integer $DisableRecord) 设置<p>录制方式。</p><p>枚举值：</p><ul><li>0： 开启自动录制</li><li>1： 禁止录制</li><li>2： 开启手动录制。（仅支持页面录制，需通过startRecord、stopRecord接口控制录制的开始和结束。）</li><li>3： 信令录制</li></ul>
  * @method array getAssistants() 获取<p>助教Id列表。直播开始后不允许修改。</p>
  * @method void setAssistants(array $Assistants) 设置<p>助教Id列表。直播开始后不允许修改。</p>
  * @method string getGroupId() 获取<p>房间绑定的群组ID。直播开始后不允许修改。</p>
@@ -80,6 +80,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGuests(array $Guests) 设置<p>嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效</p>
  * @method integer getRecordMerge() 获取<p>录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效</p>
  * @method void setRecordMerge(integer $RecordMerge) 设置<p>录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效</p>
+ * @method integer getEnableLiveRelay() 获取<p>转推开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+ * @method void setEnableLiveRelay(integer $EnableLiveRelay) 设置<p>转推开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
  */
 class ModifyRoomRequest extends AbstractModel
 {
@@ -139,7 +141,7 @@ class ModifyRoomRequest extends AbstractModel
     public $SubType;
 
     /**
-     * @var integer <p>禁止录制。可以有以下取值：<br>0 不禁止录制（默认值）<br>1 禁止录制<br>直播开始后不允许修改。</p>
+     * @var integer <p>录制方式。</p><p>枚举值：</p><ul><li>0： 开启自动录制</li><li>1： 禁止录制</li><li>2： 开启手动录制。（仅支持页面录制，需通过startRecord、stopRecord接口控制录制的开始和结束。）</li><li>3： 信令录制</li></ul>
      */
     public $DisableRecord;
 
@@ -235,6 +237,11 @@ class ModifyRoomRequest extends AbstractModel
     public $RecordMerge;
 
     /**
+     * @var integer <p>转推开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+     */
+    public $EnableLiveRelay;
+
+    /**
      * @param integer $RoomId <p>房间ID。</p>
      * @param integer $SdkAppId <p>低代码互动课堂的SdkAppId</p>
      * @param integer $StartTime <p>预定的房间开始时间，unix时间戳（秒）。直播开始后不允许修改。</p>
@@ -246,7 +253,7 @@ class ModifyRoomRequest extends AbstractModel
      * @param integer $AutoMic <p>进入房间时是否自动连麦。可以有以下取值：<br>0 不自动连麦（默认值）<br>1 自动连麦<br>直播开始后不允许修改。</p>
      * @param integer $AudioQuality <p>高音质模式。可以有以下取值：<br>0 不开启高音质（默认值）<br>1 开启高音质<br>直播开始后不允许修改。</p>
      * @param string $SubType <p>房间子类型，可以有以下取值：<br>videodoc 文档+视频<br>video 纯视频<br>直播开始后不允许修改。</p>
-     * @param integer $DisableRecord <p>禁止录制。可以有以下取值：<br>0 不禁止录制（默认值）<br>1 禁止录制<br>直播开始后不允许修改。</p>
+     * @param integer $DisableRecord <p>录制方式。</p><p>枚举值：</p><ul><li>0： 开启自动录制</li><li>1： 禁止录制</li><li>2： 开启手动录制。（仅支持页面录制，需通过startRecord、stopRecord接口控制录制的开始和结束。）</li><li>3： 信令录制</li></ul>
      * @param array $Assistants <p>助教Id列表。直播开始后不允许修改。</p>
      * @param string $GroupId <p>房间绑定的群组ID。直播开始后不允许修改。</p>
      * @param integer $EnableDirectControl <p>打开学生麦克风/摄像头的授权开关。直播开始后不允许修改。</p>
@@ -265,6 +272,7 @@ class ModifyRoomRequest extends AbstractModel
      * @param integer $SubtitlesTranscription <p>字幕转写功能开关。可以有以下取值：<br>0 不开启字幕转写功能（默认值）<br>1 自动转写模式：上课自动开启，下课自动停止<br>2 手动转写模式：支持老师或者助教通过客户端API手动开启/关闭字幕转写<br>设置0和1时客户端均不展示手动开关，设置2时老师或者助教端展示字幕转写开关</p>
      * @param array $Guests <p>嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效</p>
      * @param integer $RecordMerge <p>录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效</p>
+     * @param integer $EnableLiveRelay <p>转推开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
      */
     function __construct()
     {
@@ -397,6 +405,10 @@ class ModifyRoomRequest extends AbstractModel
 
         if (array_key_exists("RecordMerge",$param) and $param["RecordMerge"] !== null) {
             $this->RecordMerge = $param["RecordMerge"];
+        }
+
+        if (array_key_exists("EnableLiveRelay",$param) and $param["EnableLiveRelay"] !== null) {
+            $this->EnableLiveRelay = $param["EnableLiveRelay"];
         }
     }
 }

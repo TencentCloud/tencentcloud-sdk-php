@@ -300,6 +300,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExt(StrToStrMap $Ext) 设置扩展属性
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRelatedEventList() 获取事件列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRelatedEventList(array $RelatedEventList) 设置事件列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceOpsDto extends AbstractModel
 {
@@ -732,6 +736,12 @@ class InstanceOpsDto extends AbstractModel
     public $Ext;
 
     /**
+     * @var array 事件列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RelatedEventList;
+
+    /**
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName 任务名称
@@ -871,6 +881,8 @@ class InstanceOpsDto extends AbstractModel
      * @param string $DlcSparkJobId dlc jobid
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StrToStrMap $Ext 扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RelatedEventList 事件列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1185,6 +1197,15 @@ class InstanceOpsDto extends AbstractModel
         if (array_key_exists("Ext",$param) and $param["Ext"] !== null) {
             $this->Ext = new StrToStrMap();
             $this->Ext->deserialize($param["Ext"]);
+        }
+
+        if (array_key_exists("RelatedEventList",$param) and $param["RelatedEventList"] !== null) {
+            $this->RelatedEventList = [];
+            foreach ($param["RelatedEventList"] as $key => $value){
+                $obj = new EventCaseAuditLogOptDto();
+                $obj->deserialize($value);
+                array_push($this->RelatedEventList, $obj);
+            }
         }
     }
 }

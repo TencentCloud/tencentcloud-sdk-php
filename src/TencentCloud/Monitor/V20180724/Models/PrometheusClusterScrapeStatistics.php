@@ -22,17 +22,17 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterID() 获取集群ID
  * @method void setClusterID(string $ClusterID) 设置集群ID
- * @method float getScrapedRate() 获取被采集的点数
+ * @method float getScrapedRate() 获取被采集的点个数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScrapedRate(float $ScrapedRate) 设置被采集的点数
+ * @method void setScrapedRate(float $ScrapedRate) 设置被采集的点个数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getJobs() 获取Job列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJobs(array $Jobs) 设置Job列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getSamplesRate() 获取过滤前的指标采集速率
+ * @method float getSamplesRate() 获取每秒过滤前的指标采集速率
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSamplesRate(float $SamplesRate) 设置过滤前的指标采集速率
+ * @method void setSamplesRate(float $SamplesRate) 设置每秒过滤前的指标采集速率
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrometheusClusterScrapeStatistics extends AbstractModel
@@ -43,7 +43,7 @@ class PrometheusClusterScrapeStatistics extends AbstractModel
     public $ClusterID;
 
     /**
-     * @var float 被采集的点数
+     * @var float 被采集的点个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScrapedRate;
@@ -55,18 +55,18 @@ class PrometheusClusterScrapeStatistics extends AbstractModel
     public $Jobs;
 
     /**
-     * @var float 过滤前的指标采集速率
+     * @var float 每秒过滤前的指标采集速率
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SamplesRate;
 
     /**
      * @param string $ClusterID 集群ID
-     * @param float $ScrapedRate 被采集的点数
+     * @param float $ScrapedRate 被采集的点个数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Jobs Job列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $SamplesRate 过滤前的指标采集速率
+     * @param float $SamplesRate 每秒过滤前的指标采集速率
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

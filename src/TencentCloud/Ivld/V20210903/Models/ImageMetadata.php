@@ -20,69 +20,69 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 图片文件元信息
  *
- * @method integer getFileSize() 获取媒资图片文件大小，单位为Byte
+ * @method integer getFileSize() 获取<p>媒资图片文件大小，单位为Byte</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileSize(integer $FileSize) 设置媒资图片文件大小，单位为Byte
+ * @method void setFileSize(integer $FileSize) 设置<p>媒资图片文件大小，单位为Byte</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMD5() 获取媒资图片文件MD5
+ * @method string getMD5() 获取<p>媒资图片文件MD5</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMD5(string $MD5) 设置媒资图片文件MD5
+ * @method void setMD5(string $MD5) 设置<p>媒资图片文件MD5</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getWidth() 获取媒资图片文件宽度
+ * @method integer getWidth() 获取<p>媒资图片文件宽度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWidth(integer $Width) 设置媒资图片文件宽度
+ * @method void setWidth(integer $Width) 设置<p>媒资图片文件宽度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getHeight() 获取媒资图片文件高度
+ * @method integer getHeight() 获取<p>媒资图片文件高度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHeight(integer $Height) 设置媒资图片文件高度
+ * @method void setHeight(integer $Height) 设置<p>媒资图片文件高度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFormat() 获取媒资图片文件格式
+ * @method string getFormat() 获取<p>媒资图片文件格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFormat(string $Format) 设置媒资图片文件格式
+ * @method void setFormat(string $Format) 设置<p>媒资图片文件格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageMetadata extends AbstractModel
 {
     /**
-     * @var integer 媒资图片文件大小，单位为Byte
+     * @var integer <p>媒资图片文件大小，单位为Byte</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileSize;
 
     /**
-     * @var string 媒资图片文件MD5
+     * @var string <p>媒资图片文件MD5</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MD5;
 
     /**
-     * @var integer 媒资图片文件宽度
+     * @var integer <p>媒资图片文件宽度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Width;
 
     /**
-     * @var integer 媒资图片文件高度
+     * @var integer <p>媒资图片文件高度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Height;
 
     /**
-     * @var string 媒资图片文件格式
+     * @var string <p>媒资图片文件格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Format;
 
     /**
-     * @param integer $FileSize 媒资图片文件大小，单位为Byte
+     * @param integer $FileSize <p>媒资图片文件大小，单位为Byte</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MD5 媒资图片文件MD5
+     * @param string $MD5 <p>媒资图片文件MD5</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Width 媒资图片文件宽度
+     * @param integer $Width <p>媒资图片文件宽度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Height 媒资图片文件高度
+     * @param integer $Height <p>媒资图片文件高度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Format 媒资图片文件格式
+     * @param string $Format <p>媒资图片文件格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

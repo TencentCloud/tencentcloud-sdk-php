@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPagerDutyRobot(array $PagerDutyRobot) 设置PagerDutyRobot机器人通知渠道配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getGoogleChatRobot() 获取GoogleChat
+ * @method void setGoogleChatRobot(array $GoogleChatRobot) 设置GoogleChat
  */
 class NoticeContentTmplItem extends AbstractModel
 {
@@ -94,6 +96,11 @@ class NoticeContentTmplItem extends AbstractModel
     public $PagerDutyRobot;
 
     /**
+     * @var array GoogleChat
+     */
+    public $GoogleChatRobot;
+
+    /**
      * @param array $QCloudYehe 官网通知渠道配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WeWorkRobot 企业微信机器人通知渠道配置
@@ -108,6 +115,7 @@ class NoticeContentTmplItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PagerDutyRobot PagerDutyRobot机器人通知渠道配置
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $GoogleChatRobot GoogleChat
      */
     function __construct()
     {
@@ -182,6 +190,15 @@ class NoticeContentTmplItem extends AbstractModel
                 $obj = new PagerDutyRobotNoticeTmplMatcher();
                 $obj->deserialize($value);
                 array_push($this->PagerDutyRobot, $obj);
+            }
+        }
+
+        if (array_key_exists("GoogleChatRobot",$param) and $param["GoogleChatRobot"] !== null) {
+            $this->GoogleChatRobot = [];
+            foreach ($param["GoogleChatRobot"] as $key => $value){
+                $obj = new GoogleChatRobotNoticeTmplMatcher();
+                $obj->deserialize($value);
+                array_push($this->GoogleChatRobot, $obj);
             }
         }
     }

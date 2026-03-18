@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableCheckTaskCycleLink(boolean $EnableCheckTaskCycleLink) 设置是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验
  * @method boolean getEnableMakeUp() 获取是否需要补录中间实例
  * @method void setEnableMakeUp(boolean $EnableMakeUp) 设置是否需要补录中间实例
+ * @method array getAssignApprovalList() 获取指定审批人列表
+ * @method void setAssignApprovalList(array $AssignApprovalList) 设置指定审批人列表
  */
 class CreateTaskVersionDsRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CreateTaskVersionDsRequest extends AbstractModel
     public $EnableMakeUp;
 
     /**
+     * @var array 指定审批人列表
+     */
+    public $AssignApprovalList;
+
+    /**
      * @param BatchCreateTaskVersionDTO $Task 任务id
      * @param boolean $NeedCheckParentSubmitted 是否需要校验父任务已经提交到调度
      * @param boolean $AutoRun 是否自动运行
@@ -96,6 +103,7 @@ class CreateTaskVersionDsRequest extends AbstractModel
      * @param string $AlarmRecipientTypes 告警对象:1-项目管理员，2-任务责任人
      * @param boolean $EnableCheckTaskCycleLink 是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验
      * @param boolean $EnableMakeUp 是否需要补录中间实例
+     * @param array $AssignApprovalList 指定审批人列表
      */
     function __construct()
     {
@@ -145,6 +153,10 @@ class CreateTaskVersionDsRequest extends AbstractModel
 
         if (array_key_exists("EnableMakeUp",$param) and $param["EnableMakeUp"] !== null) {
             $this->EnableMakeUp = $param["EnableMakeUp"];
+        }
+
+        if (array_key_exists("AssignApprovalList",$param) and $param["AssignApprovalList"] !== null) {
+            $this->AssignApprovalList = $param["AssignApprovalList"];
         }
     }
 }

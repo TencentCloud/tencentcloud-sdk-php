@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 挂载存储配置
  *
- * @method CosStorageSource getCos() 获取对象存储桶配置
- * @method void setCos(CosStorageSource $Cos) 设置对象存储桶配置
- * @method ImageStorageSource getImage() 获取镜像卷配置
- * @method void setImage(ImageStorageSource $Image) 设置镜像卷配置
- * @method CfsStorageSource getCfs() 获取文件存储配置
- * @method void setCfs(CfsStorageSource $Cfs) 设置文件存储配置
+ * @method CosStorageSource getCos() 获取<p>对象存储桶配置</p>
+ * @method void setCos(CosStorageSource $Cos) 设置<p>对象存储桶配置</p>
+ * @method ImageStorageSource getImage() 获取<p>镜像卷配置</p>
+ * @method void setImage(ImageStorageSource $Image) 设置<p>镜像卷配置</p>
+ * @method CfsStorageSource getCfs() 获取<p>文件存储配置</p>
+ * @method void setCfs(CfsStorageSource $Cfs) 设置<p>文件存储配置</p>
  */
 class StorageSource extends AbstractModel
 {
     /**
-     * @var CosStorageSource 对象存储桶配置
+     * @var CosStorageSource <p>对象存储桶配置</p>
      */
     public $Cos;
 
     /**
-     * @var ImageStorageSource 镜像卷配置
+     * @var ImageStorageSource <p>镜像卷配置</p>
      */
     public $Image;
 
     /**
-     * @var CfsStorageSource 文件存储配置
+     * @var CfsStorageSource <p>文件存储配置</p>
      */
     public $Cfs;
 
     /**
-     * @param CosStorageSource $Cos 对象存储桶配置
-     * @param ImageStorageSource $Image 镜像卷配置
-     * @param CfsStorageSource $Cfs 文件存储配置
+     * @param CosStorageSource $Cos <p>对象存储桶配置</p>
+     * @param ImageStorageSource $Image <p>镜像卷配置</p>
+     * @param CfsStorageSource $Cfs <p>文件存储配置</p>
      */
     function __construct()
     {

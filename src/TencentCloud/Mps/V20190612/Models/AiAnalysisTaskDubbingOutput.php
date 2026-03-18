@@ -20,46 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 智能译制结果信息
  *
- * @method string getVideoPath() 获取译制视频路径。
- * @method void setVideoPath(string $VideoPath) 设置译制视频路径。
- * @method string getSpeakerPath() 获取标记文件路径
-
- * @method void setSpeakerPath(string $SpeakerPath) 设置标记文件路径
-
- * @method string getVoiceId() 获取音色id
- * @method void setVoiceId(string $VoiceId) 设置音色id
- * @method TaskOutputStorage getOutputStorage() 获取译制视频存储位置。
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置译制视频存储位置。
+ * @method string getVideoPath() 获取<p>译制视频路径。</p>
+ * @method void setVideoPath(string $VideoPath) 设置<p>译制视频路径。</p>
+ * @method string getSpeakerPath() 获取<p>标记文件路径</p>
+ * @method void setSpeakerPath(string $SpeakerPath) 设置<p>标记文件路径</p>
+ * @method string getVoiceId() 获取<p>音色id</p>
+ * @method void setVoiceId(string $VoiceId) 设置<p>音色id</p>
+ * @method TaskOutputStorage getOutputStorage() 获取<p>译制视频存储位置。</p>
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置<p>译制视频存储位置。</p>
  */
 class AiAnalysisTaskDubbingOutput extends AbstractModel
 {
     /**
-     * @var string 译制视频路径。
+     * @var string <p>译制视频路径。</p>
      */
     public $VideoPath;
 
     /**
-     * @var string 标记文件路径
-
+     * @var string <p>标记文件路径</p>
      */
     public $SpeakerPath;
 
     /**
-     * @var string 音色id
+     * @var string <p>音色id</p>
      */
     public $VoiceId;
 
     /**
-     * @var TaskOutputStorage 译制视频存储位置。
+     * @var TaskOutputStorage <p>译制视频存储位置。</p>
      */
     public $OutputStorage;
 
     /**
-     * @param string $VideoPath 译制视频路径。
-     * @param string $SpeakerPath 标记文件路径
-
-     * @param string $VoiceId 音色id
-     * @param TaskOutputStorage $OutputStorage 译制视频存储位置。
+     * @param string $VideoPath <p>译制视频路径。</p>
+     * @param string $SpeakerPath <p>标记文件路径</p>
+     * @param string $VoiceId <p>音色id</p>
+     * @param TaskOutputStorage $OutputStorage <p>译制视频存储位置。</p>
      */
     function __construct()
     {

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AI 通话结果具体信息
  *
- * @method string getText() 获取提取的类型是文本
- * @method void setText(string $Text) 设置提取的类型是文本
- * @method array getChosen() 获取提取的内型是选项
- * @method void setChosen(array $Chosen) 设置提取的内型是选项
- * @method boolean getBoolean() 获取提取类型是布尔值
- * @method void setBoolean(boolean $Boolean) 设置提取类型是布尔值
- * @method float getNumber() 获取提取类型是数字
- * @method void setNumber(float $Number) 设置提取类型是数字
+ * @method string getText() 获取<p>提取的类型是文本</p>
+ * @method void setText(string $Text) 设置<p>提取的类型是文本</p>
+ * @method array getChosen() 获取<p>提取的类型是选项</p>
+ * @method void setChosen(array $Chosen) 设置<p>提取的类型是选项</p>
+ * @method boolean getBoolean() 获取<p>提取类型是布尔值</p>
+ * @method void setBoolean(boolean $Boolean) 设置<p>提取类型是布尔值</p>
+ * @method float getNumber() 获取<p>提取类型是数字</p>
+ * @method void setNumber(float $Number) 设置<p>提取类型是数字</p>
  */
 class AICallExtractResultInfo extends AbstractModel
 {
     /**
-     * @var string 提取的类型是文本
+     * @var string <p>提取的类型是文本</p>
      */
     public $Text;
 
     /**
-     * @var array 提取的内型是选项
+     * @var array <p>提取的类型是选项</p>
      */
     public $Chosen;
 
     /**
-     * @var boolean 提取类型是布尔值
+     * @var boolean <p>提取类型是布尔值</p>
      */
     public $Boolean;
 
     /**
-     * @var float 提取类型是数字
+     * @var float <p>提取类型是数字</p>
      */
     public $Number;
 
     /**
-     * @param string $Text 提取的类型是文本
-     * @param array $Chosen 提取的内型是选项
-     * @param boolean $Boolean 提取类型是布尔值
-     * @param float $Number 提取类型是数字
+     * @param string $Text <p>提取的类型是文本</p>
+     * @param array $Chosen <p>提取的类型是选项</p>
+     * @param boolean $Boolean <p>提取类型是布尔值</p>
+     * @param float $Number <p>提取类型是数字</p>
      */
     function __construct()
     {

@@ -20,98 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 沙箱实例结构体
  *
- * @method string getInstanceId() 获取沙箱实例唯一标识符
- * @method void setInstanceId(string $InstanceId) 设置沙箱实例唯一标识符
- * @method string getToolId() 获取所属沙箱工具 ID
- * @method void setToolId(string $ToolId) 设置所属沙箱工具 ID
- * @method string getToolName() 获取所属沙箱工具名称
- * @method void setToolName(string $ToolName) 设置所属沙箱工具名称
- * @method string getStatus() 获取实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）
- * @method void setStatus(string $Status) 设置实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）
- * @method integer getTimeoutSeconds() 获取超时时间（秒），null 表示无超时设置
- * @method void setTimeoutSeconds(integer $TimeoutSeconds) 设置超时时间（秒），null 表示无超时设置
- * @method string getExpiresAt() 获取过期时间（ISO 8601 格式），null 表示无过期时间
- * @method void setExpiresAt(string $ExpiresAt) 设置过期时间（ISO 8601 格式），null 表示无过期时间
- * @method string getStopReason() 获取停止原因：manual（手动）、timeout（超时）、error（错误）、system（系统），仅在状态为 STOPPED、STOP_FAILED 或 FAILED 时有值。当 provider 停止失败时，状态为 STOP_FAILED，原因为 error
- * @method void setStopReason(string $StopReason) 设置停止原因：manual（手动）、timeout（超时）、error（错误）、system（系统），仅在状态为 STOPPED、STOP_FAILED 或 FAILED 时有值。当 provider 停止失败时，状态为 STOP_FAILED，原因为 error
- * @method string getCreateTime() 获取创建时间（ISO 8601 格式）
- * @method void setCreateTime(string $CreateTime) 设置创建时间（ISO 8601 格式）
- * @method string getUpdateTime() 获取更新时间（ISO 8601 格式）
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间（ISO 8601 格式）
- * @method array getMountOptions() 获取存储挂载选项
- * @method void setMountOptions(array $MountOptions) 设置存储挂载选项
- * @method CustomConfigurationDetail getCustomConfiguration() 获取沙箱实例自定义配置
- * @method void setCustomConfiguration(CustomConfigurationDetail $CustomConfiguration) 设置沙箱实例自定义配置
+ * @method string getInstanceId() 获取<p>沙箱实例唯一标识符</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>沙箱实例唯一标识符</p>
+ * @method string getToolId() 获取<p>所属沙箱工具 ID</p>
+ * @method void setToolId(string $ToolId) 设置<p>所属沙箱工具 ID</p>
+ * @method string getToolName() 获取<p>所属沙箱工具名称</p>
+ * @method void setToolName(string $ToolName) 设置<p>所属沙箱工具名称</p>
+ * @method string getStatus() 获取<p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）</p>
+ * @method void setStatus(string $Status) 设置<p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）</p>
+ * @method integer getTimeoutSeconds() 获取<p>超时时间（秒），null 表示无超时设置</p>
+ * @method void setTimeoutSeconds(integer $TimeoutSeconds) 设置<p>超时时间（秒），null 表示无超时设置</p>
+ * @method string getExpiresAt() 获取<p>过期时间（ISO 8601 格式），null 表示无过期时间</p>
+ * @method void setExpiresAt(string $ExpiresAt) 设置<p>过期时间（ISO 8601 格式），null 表示无过期时间</p>
+ * @method string getStopReason() 获取<p>停止原因：manual（手动）、timeout（超时）、error（错误）、system（系统），仅在状态为 STOPPED、STOP_FAILED 或 FAILED 时有值。当 provider 停止失败时，状态为 STOP_FAILED，原因为 error</p>
+ * @method void setStopReason(string $StopReason) 设置<p>停止原因：manual（手动）、timeout（超时）、error（错误）、system（系统），仅在状态为 STOPPED、STOP_FAILED 或 FAILED 时有值。当 provider 停止失败时，状态为 STOP_FAILED，原因为 error</p>
+ * @method string getCreateTime() 获取<p>创建时间（ISO 8601 格式）</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间（ISO 8601 格式）</p>
+ * @method string getUpdateTime() 获取<p>更新时间（ISO 8601 格式）</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间（ISO 8601 格式）</p>
+ * @method array getMountOptions() 获取<p>存储挂载选项</p>
+ * @method void setMountOptions(array $MountOptions) 设置<p>存储挂载选项</p>
+ * @method CustomConfigurationDetail getCustomConfiguration() 获取<p>沙箱实例自定义配置</p>
+ * @method void setCustomConfiguration(CustomConfigurationDetail $CustomConfiguration) 设置<p>沙箱实例自定义配置</p>
  */
 class SandboxInstance extends AbstractModel
 {
     /**
-     * @var string 沙箱实例唯一标识符
+     * @var string <p>沙箱实例唯一标识符</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 所属沙箱工具 ID
+     * @var string <p>所属沙箱工具 ID</p>
      */
     public $ToolId;
 
     /**
-     * @var string 所属沙箱工具名称
+     * @var string <p>所属沙箱工具名称</p>
      */
     public $ToolName;
 
     /**
-     * @var string 实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）
+     * @var string <p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）</p>
      */
     public $Status;
 
     /**
-     * @var integer 超时时间（秒），null 表示无超时设置
+     * @var integer <p>超时时间（秒），null 表示无超时设置</p>
      */
     public $TimeoutSeconds;
 
     /**
-     * @var string 过期时间（ISO 8601 格式），null 表示无过期时间
+     * @var string <p>过期时间（ISO 8601 格式），null 表示无过期时间</p>
      */
     public $ExpiresAt;
 
     /**
-     * @var string 停止原因：manual（手动）、timeout（超时）、error（错误）、system（系统），仅在状态为 STOPPED、STOP_FAILED 或 FAILED 时有值。当 provider 停止失败时，状态为 STOP_FAILED，原因为 error
+     * @var string <p>停止原因：manual（手动）、timeout（超时）、error（错误）、system（系统），仅在状态为 STOPPED、STOP_FAILED 或 FAILED 时有值。当 provider 停止失败时，状态为 STOP_FAILED，原因为 error</p>
      */
     public $StopReason;
 
     /**
-     * @var string 创建时间（ISO 8601 格式）
+     * @var string <p>创建时间（ISO 8601 格式）</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间（ISO 8601 格式）
+     * @var string <p>更新时间（ISO 8601 格式）</p>
      */
     public $UpdateTime;
 
     /**
-     * @var array 存储挂载选项
+     * @var array <p>存储挂载选项</p>
      */
     public $MountOptions;
 
     /**
-     * @var CustomConfigurationDetail 沙箱实例自定义配置
+     * @var CustomConfigurationDetail <p>沙箱实例自定义配置</p>
      */
     public $CustomConfiguration;
 
     /**
-     * @param string $InstanceId 沙箱实例唯一标识符
-     * @param string $ToolId 所属沙箱工具 ID
-     * @param string $ToolName 所属沙箱工具名称
-     * @param string $Status 实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）
-     * @param integer $TimeoutSeconds 超时时间（秒），null 表示无超时设置
-     * @param string $ExpiresAt 过期时间（ISO 8601 格式），null 表示无过期时间
-     * @param string $StopReason 停止原因：manual（手动）、timeout（超时）、error（错误）、system（系统），仅在状态为 STOPPED、STOP_FAILED 或 FAILED 时有值。当 provider 停止失败时，状态为 STOP_FAILED，原因为 error
-     * @param string $CreateTime 创建时间（ISO 8601 格式）
-     * @param string $UpdateTime 更新时间（ISO 8601 格式）
-     * @param array $MountOptions 存储挂载选项
-     * @param CustomConfigurationDetail $CustomConfiguration 沙箱实例自定义配置
+     * @param string $InstanceId <p>沙箱实例唯一标识符</p>
+     * @param string $ToolId <p>所属沙箱工具 ID</p>
+     * @param string $ToolName <p>所属沙箱工具名称</p>
+     * @param string $Status <p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）</p>
+     * @param integer $TimeoutSeconds <p>超时时间（秒），null 表示无超时设置</p>
+     * @param string $ExpiresAt <p>过期时间（ISO 8601 格式），null 表示无过期时间</p>
+     * @param string $StopReason <p>停止原因：manual（手动）、timeout（超时）、error（错误）、system（系统），仅在状态为 STOPPED、STOP_FAILED 或 FAILED 时有值。当 provider 停止失败时，状态为 STOP_FAILED，原因为 error</p>
+     * @param string $CreateTime <p>创建时间（ISO 8601 格式）</p>
+     * @param string $UpdateTime <p>更新时间（ISO 8601 格式）</p>
+     * @param array $MountOptions <p>存储挂载选项</p>
+     * @param CustomConfigurationDetail $CustomConfiguration <p>沙箱实例自定义配置</p>
      */
     function __construct()
     {

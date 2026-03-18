@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupRegion(string $BackupRegion) 设置备份地域
  * @method string getIsCrossRegionsBackup() 获取是否跨地域备份
  * @method void setIsCrossRegionsBackup(string $IsCrossRegionsBackup) 设置是否跨地域备份
+ * @method array getBackupStatus() 获取需要查询的状态
+ * @method void setBackupStatus(array $BackupStatus) 设置需要查询的状态
  */
 class DescribeBackupListRequest extends AbstractModel
 {
@@ -132,6 +134,11 @@ class DescribeBackupListRequest extends AbstractModel
     public $IsCrossRegionsBackup;
 
     /**
+     * @var array 需要查询的状态
+     */
+    public $BackupStatus;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param integer $Limit 返回数量，取值范围(0,100]
      * @param integer $Offset 记录偏移量，取值范围[0,INF)
@@ -148,6 +155,7 @@ class DescribeBackupListRequest extends AbstractModel
      * @param array $SnapshotIdList 快照备份Id列表
      * @param string $BackupRegion 备份地域
      * @param string $IsCrossRegionsBackup 是否跨地域备份
+     * @param array $BackupStatus 需要查询的状态
      */
     function __construct()
     {
@@ -220,6 +228,10 @@ class DescribeBackupListRequest extends AbstractModel
 
         if (array_key_exists("IsCrossRegionsBackup",$param) and $param["IsCrossRegionsBackup"] !== null) {
             $this->IsCrossRegionsBackup = $param["IsCrossRegionsBackup"];
+        }
+
+        if (array_key_exists("BackupStatus",$param) and $param["BackupStatus"] !== null) {
+            $this->BackupStatus = $param["BackupStatus"];
         }
     }
 }

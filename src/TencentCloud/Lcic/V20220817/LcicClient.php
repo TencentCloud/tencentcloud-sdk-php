@@ -83,6 +83,7 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\DescribeGroupListResponse DescribeGroupList(Models\DescribeGroupListRequest $req) 获取群组列表
  * @method Models\DescribeGroupLiveCodesResponse DescribeGroupLiveCodes(Models\DescribeGroupLiveCodesRequest $req) 获取分组直播参加码
  * @method Models\DescribeGroupMemberListResponse DescribeGroupMemberList(Models\DescribeGroupMemberListRequest $req) 此接口用于获取群组成员列表
+ * @method Models\DescribeLiveRelayConfigResponse DescribeLiveRelayConfig(Models\DescribeLiveRelayConfigRequest $req) 获取转推配置
  * @method Models\DescribeMarqueeResponse DescribeMarquee(Models\DescribeMarqueeRequest $req) 查询跑马灯配置
  * @method Models\DescribePlayRecordsResponse DescribePlayRecords(Models\DescribePlayRecordsRequest $req) 信令录制视频观看记录查询接口，用于查询指定课堂在指定时间段内的用户播放记录。
  * @method Models\DescribePlaybackListResponse DescribePlaybackList(Models\DescribePlaybackListRequest $req) 查询录制信息
@@ -117,6 +118,7 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\LoginUserWithRoomResponse LoginUserWithRoom(Models\LoginUserWithRoomRequest $req) 登录课堂
  * @method Models\ModifyAppResponse ModifyApp(Models\ModifyAppRequest $req) 修改应用
  * @method Models\ModifyGroupResponse ModifyGroup(Models\ModifyGroupRequest $req) 此接口修改群组信息
+ * @method Models\ModifyLiveRelayConfigResponse ModifyLiveRelayConfig(Models\ModifyLiveRelayConfigRequest $req) 修改转推配置
  * @method Models\ModifyRoomResponse ModifyRoom(Models\ModifyRoomRequest $req) 修改房间
  * @method Models\ModifyUserProfileResponse ModifyUserProfile(Models\ModifyUserProfileRequest $req) 此接口用于修改用户信息，例如头像、昵称（用户名）等。注意，课中的用户信息不会立即同步修改，需待下次上课时，修改后的信息才会更新显示。
  * @method Models\RegisterUserResponse RegisterUser(Models\RegisterUserRequest $req) 注册用户

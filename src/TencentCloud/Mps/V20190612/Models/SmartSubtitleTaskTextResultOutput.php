@@ -20,45 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 智能字幕识别结果。
  *
- * @method array getRecognizeSubtitleResult() 获取识别字幕结果
+ * @method array getRecognizeSubtitleResult() 获取<p>识别字幕结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecognizeSubtitleResult(array $RecognizeSubtitleResult) 设置识别字幕结果
+ * @method void setRecognizeSubtitleResult(array $RecognizeSubtitleResult) 设置<p>识别字幕结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTransSubtitleResult() 获取翻译字幕结果
+ * @method array getTransSubtitleResult() 获取<p>翻译字幕结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTransSubtitleResult(array $TransSubtitleResult) 设置翻译字幕结果
+ * @method void setTransSubtitleResult(array $TransSubtitleResult) 设置<p>翻译字幕结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method TaskOutputStorage getOutputStorage() 获取字幕文件存储位置
+ * @method TaskOutputStorage getOutputStorage() 获取<p>字幕文件存储位置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置字幕文件存储位置
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置<p>字幕文件存储位置</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SmartSubtitleTaskTextResultOutput extends AbstractModel
 {
     /**
-     * @var array 识别字幕结果
+     * @var array <p>识别字幕结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecognizeSubtitleResult;
 
     /**
-     * @var array 翻译字幕结果
+     * @var array <p>翻译字幕结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TransSubtitleResult;
 
     /**
-     * @var TaskOutputStorage 字幕文件存储位置
+     * @var TaskOutputStorage <p>字幕文件存储位置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputStorage;
 
     /**
-     * @param array $RecognizeSubtitleResult 识别字幕结果
+     * @param array $RecognizeSubtitleResult <p>识别字幕结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TransSubtitleResult 翻译字幕结果
+     * @param array $TransSubtitleResult <p>翻译字幕结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskOutputStorage $OutputStorage 字幕文件存储位置
+     * @param TaskOutputStorage $OutputStorage <p>字幕文件存储位置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

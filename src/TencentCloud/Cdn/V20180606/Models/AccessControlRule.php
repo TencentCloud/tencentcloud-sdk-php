@@ -20,65 +20,57 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 访问控制规则
  *
- * @method string getRuleType() 获取requestHeader ：对请求头部进行访问控制
-url ： 对访问url进行访问控制
+ * @method string getRuleType() 获取<p>规则类型：<br>requestHeader ：对请求头部进行访问控制<br>url ： 对访问url进行访问控制</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleType(string $RuleType) 设置requestHeader ：对请求头部进行访问控制
-url ： 对访问url进行访问控制
+ * @method void setRuleType(string $RuleType) 设置<p>规则类型：<br>requestHeader ：对请求头部进行访问控制<br>url ： 对访问url进行访问控制</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRuleContent() 获取封禁内容
+ * @method string getRuleContent() 获取<p>封禁内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleContent(string $RuleContent) 设置封禁内容
+ * @method void setRuleContent(string $RuleContent) 设置<p>封禁内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegex() 获取on ：正则匹配
-off ：字面匹配
+ * @method string getRegex() 获取<p>on ：正则匹配<br>off ：字面匹配</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegex(string $Regex) 设置on ：正则匹配
-off ：字面匹配
+ * @method void setRegex(string $Regex) 设置<p>on ：正则匹配<br>off ：字面匹配</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRuleHeader() 获取RuleType为requestHeader时必填，否则不需要填
+ * @method string getRuleHeader() 获取<p>RuleType为requestHeader时必填，否则不需要填</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleHeader(string $RuleHeader) 设置RuleType为requestHeader时必填，否则不需要填
+ * @method void setRuleHeader(string $RuleHeader) 设置<p>RuleType为requestHeader时必填，否则不需要填</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AccessControlRule extends AbstractModel
 {
     /**
-     * @var string requestHeader ：对请求头部进行访问控制
-url ： 对访问url进行访问控制
+     * @var string <p>规则类型：<br>requestHeader ：对请求头部进行访问控制<br>url ： 对访问url进行访问控制</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleType;
 
     /**
-     * @var string 封禁内容
+     * @var string <p>封禁内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleContent;
 
     /**
-     * @var string on ：正则匹配
-off ：字面匹配
+     * @var string <p>on ：正则匹配<br>off ：字面匹配</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Regex;
 
     /**
-     * @var string RuleType为requestHeader时必填，否则不需要填
+     * @var string <p>RuleType为requestHeader时必填，否则不需要填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleHeader;
 
     /**
-     * @param string $RuleType requestHeader ：对请求头部进行访问控制
-url ： 对访问url进行访问控制
+     * @param string $RuleType <p>规则类型：<br>requestHeader ：对请求头部进行访问控制<br>url ： 对访问url进行访问控制</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RuleContent 封禁内容
+     * @param string $RuleContent <p>封禁内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Regex on ：正则匹配
-off ：字面匹配
+     * @param string $Regex <p>on ：正则匹配<br>off ：字面匹配</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RuleHeader RuleType为requestHeader时必填，否则不需要填
+     * @param string $RuleHeader <p>RuleType为requestHeader时必填，否则不需要填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

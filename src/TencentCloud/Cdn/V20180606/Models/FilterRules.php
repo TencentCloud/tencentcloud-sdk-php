@@ -20,45 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 防盗刷配置规则
  *
- * @method string getFilterType() 获取封禁类型
+ * @method string getFilterType() 获取<p>封禁类型<br>forbidden - 封禁</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFilterType(string $FilterType) 设置封禁类型
+ * @method void setFilterType(string $FilterType) 设置<p>封禁类型<br>forbidden - 封禁</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRuleType() 获取封禁规则类型
+ * @method string getRuleType() 获取<p>封禁规则类型<br>all - 全部请求<br>file - 指定后缀的文件请求</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleType(string $RuleType) 设置封禁规则类型
+ * @method void setRuleType(string $RuleType) 设置<p>封禁规则类型<br>all - 全部请求<br>file - 指定后缀的文件请求</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getRulePaths() 获取封禁规则路径
+ * @method array getRulePaths() 获取<p>封禁规则路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRulePaths(array $RulePaths) 设置封禁规则路径
+ * @method void setRulePaths(array $RulePaths) 设置<p>封禁规则路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class FilterRules extends AbstractModel
 {
     /**
-     * @var string 封禁类型
+     * @var string <p>封禁类型<br>forbidden - 封禁</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FilterType;
 
     /**
-     * @var string 封禁规则类型
+     * @var string <p>封禁规则类型<br>all - 全部请求<br>file - 指定后缀的文件请求</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleType;
 
     /**
-     * @var array 封禁规则路径
+     * @var array <p>封禁规则路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RulePaths;
 
     /**
-     * @param string $FilterType 封禁类型
+     * @param string $FilterType <p>封禁类型<br>forbidden - 封禁</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RuleType 封禁规则类型
+     * @param string $RuleType <p>封禁规则类型<br>all - 全部请求<br>file - 指定后缀的文件请求</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $RulePaths 封禁规则路径
+     * @param array $RulePaths <p>封禁规则路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

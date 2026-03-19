@@ -20,46 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 语音全文识别结果。
  *
- * @method array getSegmentSet() 获取语音全文识别片段列表。
+ * @method array getSegmentSet() 获取<p>语音全文识别片段列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSegmentSet(array $SegmentSet) 设置语音全文识别片段列表。
+ * @method void setSegmentSet(array $SegmentSet) 设置<p>语音全文识别片段列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPath() 获取字幕文件路径
- * @method void setPath(string $Path) 设置字幕文件路径
- * @method string getSubtitlePath() 获取字幕文件地址。
- * @method void setSubtitlePath(string $SubtitlePath) 设置字幕文件地址。
- * @method TaskOutputStorage getOutputStorage() 获取字幕文件存储位置。
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置字幕文件存储位置。
+ * @method string getPath() 获取<p>字幕文件路径</p>
+ * @method void setPath(string $Path) 设置<p>字幕文件路径</p>
+ * @method string getSubtitlePath() 获取<p>字幕文件地址。</p>
+ * @method void setSubtitlePath(string $SubtitlePath) 设置<p>字幕文件地址。</p>
+ * @method SubtitleResult getSubtitleInfo() 获取<p>识别字幕结果信息。</p>
+ * @method void setSubtitleInfo(SubtitleResult $SubtitleInfo) 设置<p>识别字幕结果信息。</p>
+ * @method TaskOutputStorage getOutputStorage() 获取<p>字幕文件存储位置。</p>
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置<p>字幕文件存储位置。</p>
  */
 class SmartSubtitleTaskAsrFullTextResultOutput extends AbstractModel
 {
     /**
-     * @var array 语音全文识别片段列表。
+     * @var array <p>语音全文识别片段列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SegmentSet;
 
     /**
-     * @var string 字幕文件路径
+     * @var string <p>字幕文件路径</p>
      */
     public $Path;
 
     /**
-     * @var string 字幕文件地址。
+     * @var string <p>字幕文件地址。</p>
      */
     public $SubtitlePath;
 
     /**
-     * @var TaskOutputStorage 字幕文件存储位置。
+     * @var SubtitleResult <p>识别字幕结果信息。</p>
+     */
+    public $SubtitleInfo;
+
+    /**
+     * @var TaskOutputStorage <p>字幕文件存储位置。</p>
      */
     public $OutputStorage;
 
     /**
-     * @param array $SegmentSet 语音全文识别片段列表。
+     * @param array $SegmentSet <p>语音全文识别片段列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Path 字幕文件路径
-     * @param string $SubtitlePath 字幕文件地址。
-     * @param TaskOutputStorage $OutputStorage 字幕文件存储位置。
+     * @param string $Path <p>字幕文件路径</p>
+     * @param string $SubtitlePath <p>字幕文件地址。</p>
+     * @param SubtitleResult $SubtitleInfo <p>识别字幕结果信息。</p>
+     * @param TaskOutputStorage $OutputStorage <p>字幕文件存储位置。</p>
      */
     function __construct()
     {
@@ -89,6 +97,11 @@ class SmartSubtitleTaskAsrFullTextResultOutput extends AbstractModel
 
         if (array_key_exists("SubtitlePath",$param) and $param["SubtitlePath"] !== null) {
             $this->SubtitlePath = $param["SubtitlePath"];
+        }
+
+        if (array_key_exists("SubtitleInfo",$param) and $param["SubtitleInfo"] !== null) {
+            $this->SubtitleInfo = new SubtitleResult();
+            $this->SubtitleInfo->deserialize($param["SubtitleInfo"]);
         }
 
         if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopData返回参数结构体
  *
- * @method array getData() 获取各个资源的Top 访问数据详情。
- * @method void setData(array $Data) 设置各个资源的Top 访问数据详情。
+ * @method array getData() 获取<p>各个资源的Top 访问数据详情。</p>
+ * @method void setData(array $Data) 设置<p>各个资源的Top 访问数据详情。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeTopDataResponse extends AbstractModel
 {
     /**
-     * @var array 各个资源的Top 访问数据详情。
+     * @var array <p>各个资源的Top 访问数据详情。</p>
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class DescribeTopDataResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data 各个资源的Top 访问数据详情。
+     * @param array $Data <p>各个资源的Top 访问数据详情。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

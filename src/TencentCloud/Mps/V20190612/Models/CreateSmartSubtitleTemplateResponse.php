@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSmartSubtitleTemplate返回参数结构体
  *
- * @method integer getDefinition() 获取智能字幕模板唯一标识。
- * @method void setDefinition(integer $Definition) 设置智能字幕模板唯一标识。
+ * @method integer getDefinition() 获取<p>智能字幕模板唯一标识。</p>
+ * @method void setDefinition(integer $Definition) 设置<p>智能字幕模板唯一标识。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateSmartSubtitleTemplateResponse extends AbstractModel
 {
     /**
-     * @var integer 智能字幕模板唯一标识。
+     * @var integer <p>智能字幕模板唯一标识。</p>
      */
     public $Definition;
 
@@ -38,7 +38,7 @@ class CreateSmartSubtitleTemplateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Definition 智能字幕模板唯一标识。
+     * @param integer $Definition <p>智能字幕模板唯一标识。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

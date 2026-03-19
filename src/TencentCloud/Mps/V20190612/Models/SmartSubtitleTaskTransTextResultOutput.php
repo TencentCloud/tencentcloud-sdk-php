@@ -20,54 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 翻译结果。
  *
- * @method array getSegmentSet() 获取翻译片段列表。
+ * @method array getSegmentSet() 获取<p>翻译片段列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSegmentSet(array $SegmentSet) 设置翻译片段列表。
+ * @method void setSegmentSet(array $SegmentSet) 设置<p>翻译片段列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSubtitlePath() 获取字幕文件地址。
- * @method void setSubtitlePath(string $SubtitlePath) 设置字幕文件地址。
- * @method TaskOutputStorage getOutputStorage() 获取字幕文件存储位置。
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置字幕文件存储位置。
- * @method string getPath() 获取字幕文件地址
- * @method void setPath(string $Path) 设置字幕文件地址
- * @method array getSubtitleResults() 获取多语言翻译时返回翻译结果。	
- * @method void setSubtitleResults(array $SubtitleResults) 设置多语言翻译时返回翻译结果。	
+ * @method string getSubtitlePath() 获取<p>字幕文件地址。</p>
+ * @method void setSubtitlePath(string $SubtitlePath) 设置<p>字幕文件地址。</p>
+ * @method TaskOutputStorage getOutputStorage() 获取<p>智能字幕结果存储信息。</p>
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置<p>智能字幕结果存储信息。</p>
+ * @method string getPath() 获取<p>字幕文件路径。</p>
+ * @method void setPath(string $Path) 设置<p>字幕文件路径。</p>
+ * @method array getSubtitleResults() 获取<p>多语言翻译时返回翻译结果。</p>
+ * @method void setSubtitleResults(array $SubtitleResults) 设置<p>多语言翻译时返回翻译结果。</p>
  */
 class SmartSubtitleTaskTransTextResultOutput extends AbstractModel
 {
     /**
-     * @var array 翻译片段列表。
+     * @var array <p>翻译片段列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SegmentSet;
 
     /**
-     * @var string 字幕文件地址。
+     * @var string <p>字幕文件地址。</p>
      */
     public $SubtitlePath;
 
     /**
-     * @var TaskOutputStorage 字幕文件存储位置。
+     * @var TaskOutputStorage <p>智能字幕结果存储信息。</p>
      */
     public $OutputStorage;
 
     /**
-     * @var string 字幕文件地址
+     * @var string <p>字幕文件路径。</p>
      */
     public $Path;
 
     /**
-     * @var array 多语言翻译时返回翻译结果。	
+     * @var array <p>多语言翻译时返回翻译结果。</p>
      */
     public $SubtitleResults;
 
     /**
-     * @param array $SegmentSet 翻译片段列表。
+     * @param array $SegmentSet <p>翻译片段列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SubtitlePath 字幕文件地址。
-     * @param TaskOutputStorage $OutputStorage 字幕文件存储位置。
-     * @param string $Path 字幕文件地址
-     * @param array $SubtitleResults 多语言翻译时返回翻译结果。	
+     * @param string $SubtitlePath <p>字幕文件地址。</p>
+     * @param TaskOutputStorage $OutputStorage <p>智能字幕结果存储信息。</p>
+     * @param string $Path <p>字幕文件路径。</p>
+     * @param array $SubtitleResults <p>多语言翻译时返回翻译结果。</p>
      */
     function __construct()
     {

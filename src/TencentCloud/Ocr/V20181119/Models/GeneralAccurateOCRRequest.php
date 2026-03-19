@@ -36,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableDetectText(boolean $EnableDetectText) 设置<p>文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。</p>
  * @method string getConfigID() 获取<p>配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR</p>
  * @method void setConfigID(string $ConfigID) 设置<p>配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR</p>
- * @method string getWordsType() 获取<p>需要识别的文字类型，默认识别全部类型的文字。 0：自动识别全部类型文字 1：仅识别手写体文字 2：仅识别印刷体文字</p>
- * @method void setWordsType(string $WordsType) 设置<p>需要识别的文字类型，默认识别全部类型的文字。 0：自动识别全部类型文字 1：仅识别手写体文字 2：仅识别印刷体文字</p>
- * @method boolean getLanguageInfo() 获取<p>支持输出单行文字的语种信息，开启后耗时会略有增加。</p>
- * @method void setLanguageInfo(boolean $LanguageInfo) 设置<p>支持输出单行文字的语种信息，开启后耗时会略有增加。</p>
  */
 class GeneralAccurateOCRRequest extends AbstractModel
 {
@@ -84,16 +80,6 @@ class GeneralAccurateOCRRequest extends AbstractModel
     public $ConfigID;
 
     /**
-     * @var string <p>需要识别的文字类型，默认识别全部类型的文字。 0：自动识别全部类型文字 1：仅识别手写体文字 2：仅识别印刷体文字</p>
-     */
-    public $WordsType;
-
-    /**
-     * @var boolean <p>支持输出单行文字的语种信息，开启后耗时会略有增加。</p>
-     */
-    public $LanguageInfo;
-
-    /**
      * @param string $ImageBase64 <p>图片/PDF的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
      * @param string $ImageUrl <p>图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p>
      * @param boolean $IsWords <p>是否返回单字信息，默认值为false，注：仅ConfigID配置为OCR时支持。</p>
@@ -102,8 +88,6 @@ class GeneralAccurateOCRRequest extends AbstractModel
      * @param integer $PdfPageNumber <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。</p>
      * @param boolean $EnableDetectText <p>文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。</p>
      * @param string $ConfigID <p>配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR</p>
-     * @param string $WordsType <p>需要识别的文字类型，默认识别全部类型的文字。 0：自动识别全部类型文字 1：仅识别手写体文字 2：仅识别印刷体文字</p>
-     * @param boolean $LanguageInfo <p>支持输出单行文字的语种信息，开启后耗时会略有增加。</p>
      */
     function __construct()
     {
@@ -148,14 +132,6 @@ class GeneralAccurateOCRRequest extends AbstractModel
 
         if (array_key_exists("ConfigID",$param) and $param["ConfigID"] !== null) {
             $this->ConfigID = $param["ConfigID"];
-        }
-
-        if (array_key_exists("WordsType",$param) and $param["WordsType"] !== null) {
-            $this->WordsType = $param["WordsType"];
-        }
-
-        if (array_key_exists("LanguageInfo",$param) and $param["LanguageInfo"] !== null) {
-            $this->LanguageInfo = $param["LanguageInfo"];
         }
     }
 }

@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfig(string $Config) 设置配置参数，不传则不修改
  * @method VisionSummaryConfig getSummaryConfig() 获取视频摘要配置参数，不传则不修改
  * @method void setSummaryConfig(VisionSummaryConfig $SummaryConfig) 设置视频摘要配置参数，不传则不修改
+ * @method SeeEventIdFilterConfig getEventIdFilterConfig() 获取云存事件 ID 过滤规则配置，不传则不修改
+ * @method void setEventIdFilterConfig(SeeEventIdFilterConfig $EventIdFilterConfig) 设置云存事件 ID 过滤规则配置，不传则不修改
  */
 class ModifyTWeSeeConfigRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ModifyTWeSeeConfigRequest extends AbstractModel
     public $SummaryConfig;
 
     /**
+     * @var SeeEventIdFilterConfig 云存事件 ID 过滤规则配置，不传则不修改
+     */
+    public $EventIdFilterConfig;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
      * @param string $UserId 用户ID
@@ -88,6 +95,7 @@ class ModifyTWeSeeConfigRequest extends AbstractModel
      * @param boolean $EnableSearch 是否开启视频搜索，不传则不修改
      * @param string $Config 配置参数，不传则不修改
      * @param VisionSummaryConfig $SummaryConfig 视频摘要配置参数，不传则不修改
+     * @param SeeEventIdFilterConfig $EventIdFilterConfig 云存事件 ID 过滤规则配置，不传则不修改
      */
     function __construct()
     {
@@ -133,6 +141,11 @@ class ModifyTWeSeeConfigRequest extends AbstractModel
         if (array_key_exists("SummaryConfig",$param) and $param["SummaryConfig"] !== null) {
             $this->SummaryConfig = new VisionSummaryConfig();
             $this->SummaryConfig->deserialize($param["SummaryConfig"]);
+        }
+
+        if (array_key_exists("EventIdFilterConfig",$param) and $param["EventIdFilterConfig"] !== null) {
+            $this->EventIdFilterConfig = new SeeEventIdFilterConfig();
+            $this->EventIdFilterConfig->deserialize($param["EventIdFilterConfig"]);
         }
     }
 }

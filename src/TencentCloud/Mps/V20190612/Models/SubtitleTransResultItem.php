@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 字幕翻译输出结果
  *
- * @method string getStatus() 获取翻译标识：
-- Success
-- Error
- * @method void setStatus(string $Status) 设置翻译标识：
-- Success
-- Error
- * @method string getTransSrc() 获取源语言（如"en"）
- * @method void setTransSrc(string $TransSrc) 设置源语言（如"en"）
- * @method string getTransDst() 获取目标语言（如"zh"）
- * @method void setTransDst(string $TransDst) 设置目标语言（如"zh"）
- * @method string getPath() 获取字幕文件地址
- * @method void setPath(string $Path) 设置字幕文件地址
+ * @method string getStatus() 获取<p>翻译标识：</p><ul><li>Success</li><li>Error</li></ul>
+ * @method void setStatus(string $Status) 设置<p>翻译标识：</p><ul><li>Success</li><li>Error</li></ul>
+ * @method string getTransSrc() 获取<p>源语言（如&quot;en&quot;）</p>
+ * @method void setTransSrc(string $TransSrc) 设置<p>源语言（如&quot;en&quot;）</p>
+ * @method string getTransDst() 获取<p>目标语言（如&quot;zh&quot;）</p>
+ * @method void setTransDst(string $TransDst) 设置<p>目标语言（如&quot;zh&quot;）</p>
+ * @method string getPath() 获取<p>字幕文件地址</p>
+ * @method void setPath(string $Path) 设置<p>字幕文件地址</p>
+ * @method string getSubtitleEmbedPath() 获取<p>翻译字幕压制视频路径。</p>
+ * @method void setSubtitleEmbedPath(string $SubtitleEmbedPath) 设置<p>翻译字幕压制视频路径。</p>
  */
 class SubtitleTransResultItem extends AbstractModel
 {
     /**
-     * @var string 翻译标识：
-- Success
-- Error
+     * @var string <p>翻译标识：</p><ul><li>Success</li><li>Error</li></ul>
      */
     public $Status;
 
     /**
-     * @var string 源语言（如"en"）
+     * @var string <p>源语言（如&quot;en&quot;）</p>
      */
     public $TransSrc;
 
     /**
-     * @var string 目标语言（如"zh"）
+     * @var string <p>目标语言（如&quot;zh&quot;）</p>
      */
     public $TransDst;
 
     /**
-     * @var string 字幕文件地址
+     * @var string <p>字幕文件地址</p>
      */
     public $Path;
 
     /**
-     * @param string $Status 翻译标识：
-- Success
-- Error
-     * @param string $TransSrc 源语言（如"en"）
-     * @param string $TransDst 目标语言（如"zh"）
-     * @param string $Path 字幕文件地址
+     * @var string <p>翻译字幕压制视频路径。</p>
+     */
+    public $SubtitleEmbedPath;
+
+    /**
+     * @param string $Status <p>翻译标识：</p><ul><li>Success</li><li>Error</li></ul>
+     * @param string $TransSrc <p>源语言（如&quot;en&quot;）</p>
+     * @param string $TransDst <p>目标语言（如&quot;zh&quot;）</p>
+     * @param string $Path <p>字幕文件地址</p>
+     * @param string $SubtitleEmbedPath <p>翻译字幕压制视频路径。</p>
      */
     function __construct()
     {
@@ -92,6 +92,10 @@ class SubtitleTransResultItem extends AbstractModel
 
         if (array_key_exists("Path",$param) and $param["Path"] !== null) {
             $this->Path = $param["Path"];
+        }
+
+        if (array_key_exists("SubtitleEmbedPath",$param) and $param["SubtitleEmbedPath"] !== null) {
+            $this->SubtitleEmbedPath = $param["SubtitleEmbedPath"];
         }
     }
 }

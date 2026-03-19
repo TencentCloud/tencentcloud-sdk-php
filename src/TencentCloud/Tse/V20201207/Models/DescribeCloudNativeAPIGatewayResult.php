@@ -82,6 +82,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAvailableVersions(array $AvailableVersions) 设置表示可以升级的版本号
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAvailableUpgradeVersions() 获取网关可以升级的版本号列表
+ * @method void setAvailableUpgradeVersions(array $AvailableUpgradeVersions) 设置网关可以升级的版本号列表
+ * @method boolean getAvailableUpgrade() 获取是否提示可升级
+ * @method void setAvailableUpgrade(boolean $AvailableUpgrade) 设置是否提示可升级
  */
 class DescribeCloudNativeAPIGatewayResult extends AbstractModel
 {
@@ -225,6 +229,16 @@ class DescribeCloudNativeAPIGatewayResult extends AbstractModel
     public $AvailableVersions;
 
     /**
+     * @var array 网关可以升级的版本号列表
+     */
+    public $AvailableUpgradeVersions;
+
+    /**
+     * @var boolean 是否提示可升级
+     */
+    public $AvailableUpgrade;
+
+    /**
      * @param string $GatewayId 云原生API网关ID。
      * @param string $Status 云原生API网关状态。
      * @param string $Name 云原生API网关名。
@@ -256,6 +270,8 @@ class DescribeCloudNativeAPIGatewayResult extends AbstractModel
      * @param boolean $DeleteProtect 是否开启删除保护
      * @param array $AvailableVersions 表示可以升级的版本号
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AvailableUpgradeVersions 网关可以升级的版本号列表
+     * @param boolean $AvailableUpgrade 是否提示可升级
      */
     function __construct()
     {
@@ -384,6 +400,14 @@ class DescribeCloudNativeAPIGatewayResult extends AbstractModel
 
         if (array_key_exists("AvailableVersions",$param) and $param["AvailableVersions"] !== null) {
             $this->AvailableVersions = $param["AvailableVersions"];
+        }
+
+        if (array_key_exists("AvailableUpgradeVersions",$param) and $param["AvailableUpgradeVersions"] !== null) {
+            $this->AvailableUpgradeVersions = $param["AvailableUpgradeVersions"];
+        }
+
+        if (array_key_exists("AvailableUpgrade",$param) and $param["AvailableUpgrade"] !== null) {
+            $this->AvailableUpgrade = $param["AvailableUpgrade"];
         }
     }
 }

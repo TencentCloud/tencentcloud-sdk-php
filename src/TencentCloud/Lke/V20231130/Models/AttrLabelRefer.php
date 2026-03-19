@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 标签引用信息
  *
- * @method integer getSource() 获取标签来源，1：标签
- * @method void setSource(integer $Source) 设置标签来源，1：标签
+ * @method integer getSource() 获取标签来源，1：标签。
+使用标签引用信息时，Source、AttributeBizId和LabelBizIds都需填写。
+ * @method void setSource(integer $Source) 设置标签来源，1：标签。
+使用标签引用信息时，Source、AttributeBizId和LabelBizIds都需填写。
  * @method string getAttributeBizId() 获取标签ID
  * @method void setAttributeBizId(string $AttributeBizId) 设置标签ID
  * @method array getLabelBizIds() 获取标签值ID
@@ -30,7 +32,8 @@ use TencentCloud\Common\AbstractModel;
 class AttrLabelRefer extends AbstractModel
 {
     /**
-     * @var integer 标签来源，1：标签
+     * @var integer 标签来源，1：标签。
+使用标签引用信息时，Source、AttributeBizId和LabelBizIds都需填写。
      */
     public $Source;
 
@@ -45,7 +48,8 @@ class AttrLabelRefer extends AbstractModel
     public $LabelBizIds;
 
     /**
-     * @param integer $Source 标签来源，1：标签
+     * @param integer $Source 标签来源，1：标签。
+使用标签引用信息时，Source、AttributeBizId和LabelBizIds都需填写。
      * @param string $AttributeBizId 标签ID
      * @param array $LabelBizIds 标签值ID
      */

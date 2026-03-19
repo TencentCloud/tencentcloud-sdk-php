@@ -68,7 +68,9 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\DeleteGrafanaInstanceResponse DeleteGrafanaInstance(Models\DeleteGrafanaInstanceRequest $req) 本接口（DeleteGrafanaInstance）用于 Grafana 包年包月实例的退费，调用后实例处于停服状态，不可使用，7天后自动销毁。
  * @method Models\DeleteGrafanaIntegrationResponse DeleteGrafanaIntegration(Models\DeleteGrafanaIntegrationRequest $req) 删除 Grafana 集成配置
  * @method Models\DeleteGrafanaNotificationChannelResponse DeleteGrafanaNotificationChannel(Models\DeleteGrafanaNotificationChannelRequest $req) 删除 Grafana 告警通道
- * @method Models\DeletePolicyGroupResponse DeletePolicyGroup(Models\DeletePolicyGroupRequest $req) 删除告警策略组
+ * @method Models\DeletePolicyGroupResponse DeletePolicyGroup(Models\DeletePolicyGroupRequest $req) 告警 1.0 API，不能再使用否则会导致后端数据不一致
+
+删除告警策略组
  * @method Models\DeletePrometheusAlertGroupsResponse DeletePrometheusAlertGroups(Models\DeletePrometheusAlertGroupsRequest $req) 删除Prometheus告警规则分组
  * @method Models\DeletePrometheusAlertPolicyResponse DeletePrometheusAlertPolicy(Models\DeletePrometheusAlertPolicyRequest $req) 删除2.0实例告警策略
  * @method Models\DeletePrometheusClusterAgentResponse DeletePrometheusClusterAgent(Models\DeletePrometheusClusterAgentRequest $req) 解除TMP实例的集群关联

@@ -20,93 +20,81 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 回源的自定义Https配置
  *
- * @method string getCustomTlsStatus() 获取自定义Tls数据开关
+ * @method string getCustomTlsStatus() 获取<p>自定义Tls数据开关<br>on - 开<br>off - 关</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCustomTlsStatus(string $CustomTlsStatus) 设置自定义Tls数据开关
+ * @method void setCustomTlsStatus(string $CustomTlsStatus) 设置<p>自定义Tls数据开关<br>on - 开<br>off - 关</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTlsVersion() 获取Tls版本列表，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本
+ * @method array getTlsVersion() 获取<p>Tls版本列表，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTlsVersion(array $TlsVersion) 设置Tls版本列表，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本
+ * @method void setTlsVersion(array $TlsVersion) 设置<p>Tls版本列表，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCipher() 获取自定义加密套件
+ * @method string getCipher() 获取<p>自定义加密套件</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCipher(string $Cipher) 设置自定义加密套件
+ * @method void setCipher(string $Cipher) 设置<p>自定义加密套件</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVerifyOriginType() 获取回源双向校验开启状态
-off - 关闭校验
-oneWay - 校验源站
-twoWay - 双向校验
+ * @method string getVerifyOriginType() 获取<p>回源双向校验开启状态<br>off - 关闭校验<br>oneWay - 校验源站<br>twoWay - 双向校验</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVerifyOriginType(string $VerifyOriginType) 设置回源双向校验开启状态
-off - 关闭校验
-oneWay - 校验源站
-twoWay - 双向校验
+ * @method void setVerifyOriginType(string $VerifyOriginType) 设置<p>回源双向校验开启状态<br>off - 关闭校验<br>oneWay - 校验源站<br>twoWay - 双向校验</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ServerCert getCertInfo() 获取回源层证书配置信息
+ * @method ServerCert getCertInfo() 获取<p>回源层证书配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCertInfo(ServerCert $CertInfo) 设置回源层证书配置信息
+ * @method void setCertInfo(ServerCert $CertInfo) 设置<p>回源层证书配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ClientCert getOriginCertInfo() 获取源站证书配置信息
+ * @method ClientCert getOriginCertInfo() 获取<p>源站证书配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOriginCertInfo(ClientCert $OriginCertInfo) 设置源站证书配置信息
+ * @method void setOriginCertInfo(ClientCert $OriginCertInfo) 设置<p>源站证书配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AdvanceHttps extends AbstractModel
 {
     /**
-     * @var string 自定义Tls数据开关
+     * @var string <p>自定义Tls数据开关<br>on - 开<br>off - 关</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomTlsStatus;
 
     /**
-     * @var array Tls版本列表，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本
+     * @var array <p>Tls版本列表，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TlsVersion;
 
     /**
-     * @var string 自定义加密套件
+     * @var string <p>自定义加密套件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cipher;
 
     /**
-     * @var string 回源双向校验开启状态
-off - 关闭校验
-oneWay - 校验源站
-twoWay - 双向校验
+     * @var string <p>回源双向校验开启状态<br>off - 关闭校验<br>oneWay - 校验源站<br>twoWay - 双向校验</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VerifyOriginType;
 
     /**
-     * @var ServerCert 回源层证书配置信息
+     * @var ServerCert <p>回源层证书配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertInfo;
 
     /**
-     * @var ClientCert 源站证书配置信息
+     * @var ClientCert <p>源站证书配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginCertInfo;
 
     /**
-     * @param string $CustomTlsStatus 自定义Tls数据开关
+     * @param string $CustomTlsStatus <p>自定义Tls数据开关<br>on - 开<br>off - 关</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TlsVersion Tls版本列表，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本
+     * @param array $TlsVersion <p>Tls版本列表，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Cipher 自定义加密套件
+     * @param string $Cipher <p>自定义加密套件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VerifyOriginType 回源双向校验开启状态
-off - 关闭校验
-oneWay - 校验源站
-twoWay - 双向校验
+     * @param string $VerifyOriginType <p>回源双向校验开启状态<br>off - 关闭校验<br>oneWay - 校验源站<br>twoWay - 双向校验</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServerCert $CertInfo 回源层证书配置信息
+     * @param ServerCert $CertInfo <p>回源层证书配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClientCert $OriginCertInfo 源站证书配置信息
+     * @param ClientCert $OriginCertInfo <p>源站证书配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

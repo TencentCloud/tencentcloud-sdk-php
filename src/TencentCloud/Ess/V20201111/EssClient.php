@@ -211,6 +211,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 注: 
 1. `支持的文件类型有doc、docx、xls、xlsx、html、jpg、jpeg、png、bmp、txt`
 2. `可通过发起合同时设置预览来检查转换文件是否达到预期效果`
+ * @method Models\CreateDigitalDataSignResponse CreateDigitalDataSign(Models\CreateDigitalDataSignRequest $req) 创建数据加签请求
  * @method Models\CreateDocumentResponse CreateDocument(Models\CreateDocumentRequest $req) 创建签署流程电子文档<br />
 
 ###  调用流程
@@ -1264,6 +1265,7 @@ httpProfile.setEndpoint("file.test.ess.tencent.cn");
 <font color="red">相关视频指引</font> <br>
 1. <a href="https://dyn.ess.tencent.cn/guide/apivideo/ess_uploadfiles.mp4" target="_blank">上传用于合同发起的PDF文件代码编写示例</a><br>
  * @method Models\VerifyDigitFileResponse VerifyDigitFile(Models\VerifyDigitFileRequest $req) 对加签后的文件进行数字签名验证，判断数字签名是否有效。
+ * @method Models\VerifyDigitalDataSignResponse VerifyDigitalDataSign(Models\VerifyDigitalDataSignRequest $req) 数据加签验签接口
  * @method Models\VerifyPdfResponse VerifyPdf(Models\VerifyPdfRequest $req) 对合同流程文件进行数字签名验证，判断数字签名是否有效，合同文件内容是否被篡改。
 
 

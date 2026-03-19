@@ -24,10 +24,14 @@ use TencentCloud\Hai\V20230812\Models as Models;
 
 /**
  * @method Models\CreateApplicationResponse CreateApplication(Models\CreateApplicationRequest $req) 本接口（CreateApplication）用于对HAI实例制作自定义应用。
+ * @method Models\CreateInferServiceByTemplateResponse CreateInferServiceByTemplate(Models\CreateInferServiceByTemplateRequest $req) 本接口(CreateInferServiceByTemplate)用于根据模板创建服务
  * @method Models\CreateMuskPromptResponse CreateMuskPrompt(Models\CreateMuskPromptRequest $req) 创建musk prompt 任务
+ * @method Models\DeployInferServiceResponse DeployInferService(Models\DeployInferServiceRequest $req) 本接口(DeployInferService)用于部署推理服务
  * @method Models\DescribeApplicationsResponse DescribeApplications(Models\DescribeApplicationsRequest $req) 本接口（DescribeApplications）用于查询应用
+ * @method Models\DescribeDeployTemplatesResponse DescribeDeployTemplates(Models\DescribeDeployTemplatesRequest $req) 本接口(DescribeDeployTemplates)用于查询模型支持的部署模板
  * @method Models\DescribeInstanceNetworkStatusResponse DescribeInstanceNetworkStatus(Models\DescribeInstanceNetworkStatusRequest $req) 本接口（DescribeInstanceNetworkStatus）用于查询实例的网络配置及消耗情况
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 本接口（DescribeInstances）用户查询实例
+ * @method Models\DescribeModelsResponse DescribeModels(Models\DescribeModelsRequest $req) 本接口(DescribeModels)用于查询模型
  * @method Models\DescribeMuskPromptsResponse DescribeMuskPrompts(Models\DescribeMuskPromptsRequest $req) 获取prompt任务列表
  * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 本接口（DescribeRegions）用于查询地域列表
  * @method Models\DescribeScenesResponse DescribeScenes(Models\DescribeScenesRequest $req) 本接口（DescribeScenes）用于查询场景

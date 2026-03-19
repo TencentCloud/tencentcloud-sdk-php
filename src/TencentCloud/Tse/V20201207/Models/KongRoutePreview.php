@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResponseBuffering(boolean $ResponseBuffering) 设置是否缓存响应body，默认true
  * @method integer getRegexPriority() 获取正则优先级
  * @method void setRegexPriority(integer $RegexPriority) 设置正则优先级
+ * @method array getQueryStringParameters() 获取querystring参数
+ * @method void setQueryStringParameters(array $QueryStringParameters) 设置querystring参数
  */
 class KongRoutePreview extends AbstractModel
 {
@@ -163,6 +165,11 @@ class KongRoutePreview extends AbstractModel
     public $RegexPriority;
 
     /**
+     * @var array querystring参数
+     */
+    public $QueryStringParameters;
+
+    /**
      * @param string $ID 服务ID
      * @param string $Name 服务名字
      * @param array $Methods 无
@@ -185,6 +192,7 @@ class KongRoutePreview extends AbstractModel
      * @param boolean $RequestBuffering 是否缓存请求body，默认true
      * @param boolean $ResponseBuffering 是否缓存响应body，默认true
      * @param integer $RegexPriority 正则优先级
+     * @param array $QueryStringParameters querystring参数
      */
     function __construct()
     {
@@ -274,6 +282,15 @@ class KongRoutePreview extends AbstractModel
 
         if (array_key_exists("RegexPriority",$param) and $param["RegexPriority"] !== null) {
             $this->RegexPriority = $param["RegexPriority"];
+        }
+
+        if (array_key_exists("QueryStringParameters",$param) and $param["QueryStringParameters"] !== null) {
+            $this->QueryStringParameters = [];
+            foreach ($param["QueryStringParameters"] as $key => $value){
+                $obj = new KVMapping();
+                $obj->deserialize($value);
+                array_push($this->QueryStringParameters, $obj);
+            }
         }
     }
 }

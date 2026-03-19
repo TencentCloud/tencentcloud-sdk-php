@@ -20,70 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSmartEraseTemplate请求参数结构体
  *
- * @method string getName() 获取智能擦除模板名称长度限制：64 个字符。
- * @method void setName(string $Name) 设置智能擦除模板名称长度限制：64 个字符。
- * @method string getEraseType() 获取擦除类型
-- subtitle 去字幕
-- watermark 去水印
-- privacy 隐私保护
- * @method void setEraseType(string $EraseType) 设置擦除类型
-- subtitle 去字幕
-- watermark 去水印
-- privacy 隐私保护
- * @method string getComment() 获取智能擦除模板描述信息长度限制：256 个字符。
- * @method void setComment(string $Comment) 设置智能擦除模板描述信息长度限制：256 个字符。
- * @method SmartEraseSubtitleConfig getEraseSubtitleConfig() 获取字幕擦除配置，EraseType取subtitle时必填且仅此时生效。
- * @method void setEraseSubtitleConfig(SmartEraseSubtitleConfig $EraseSubtitleConfig) 设置字幕擦除配置，EraseType取subtitle时必填且仅此时生效。
- * @method SmartEraseWatermarkConfig getEraseWatermarkConfig() 获取水印擦除配置，EraseType取watermark时必填且仅此时生效。
- * @method void setEraseWatermarkConfig(SmartEraseWatermarkConfig $EraseWatermarkConfig) 设置水印擦除配置，EraseType取watermark时必填且仅此时生效。
- * @method SmartErasePrivacyConfig getErasePrivacyConfig() 获取隐私保护配置，EraseType取privacy时必填且仅此时生效。
- * @method void setErasePrivacyConfig(SmartErasePrivacyConfig $ErasePrivacyConfig) 设置隐私保护配置，EraseType取privacy时必填且仅此时生效。
+ * @method string getName() 获取<p>智能擦除模板名称长度限制：64 个字符。</p>
+ * @method void setName(string $Name) 设置<p>智能擦除模板名称长度限制：64 个字符。</p>
+ * @method string getEraseType() 获取<p>擦除类型</p><ul><li>subtitle 去字幕</li><li>watermark 去水印</li><li>privacy 隐私保护</li></ul>
+ * @method void setEraseType(string $EraseType) 设置<p>擦除类型</p><ul><li>subtitle 去字幕</li><li>watermark 去水印</li><li>privacy 隐私保护</li></ul>
+ * @method string getComment() 获取<p>智能擦除模板描述信息长度限制：256 个字符。</p>
+ * @method void setComment(string $Comment) 设置<p>智能擦除模板描述信息长度限制：256 个字符。</p>
+ * @method SmartEraseSubtitleConfig getEraseSubtitleConfig() 获取<p>字幕擦除配置，EraseType取subtitle时必填且仅此时生效。</p>
+ * @method void setEraseSubtitleConfig(SmartEraseSubtitleConfig $EraseSubtitleConfig) 设置<p>字幕擦除配置，EraseType取subtitle时必填且仅此时生效。</p>
+ * @method SmartEraseWatermarkConfig getEraseWatermarkConfig() 获取<p>水印擦除配置，EraseType取watermark时必填且仅此时生效。</p>
+ * @method void setEraseWatermarkConfig(SmartEraseWatermarkConfig $EraseWatermarkConfig) 设置<p>水印擦除配置，EraseType取watermark时必填且仅此时生效。</p>
+ * @method SmartErasePrivacyConfig getErasePrivacyConfig() 获取<p>隐私保护配置，EraseType取privacy时必填且仅此时生效。</p>
+ * @method void setErasePrivacyConfig(SmartErasePrivacyConfig $ErasePrivacyConfig) 设置<p>隐私保护配置，EraseType取privacy时必填且仅此时生效。</p>
  */
 class CreateSmartEraseTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 智能擦除模板名称长度限制：64 个字符。
+     * @var string <p>智能擦除模板名称长度限制：64 个字符。</p>
      */
     public $Name;
 
     /**
-     * @var string 擦除类型
-- subtitle 去字幕
-- watermark 去水印
-- privacy 隐私保护
+     * @var string <p>擦除类型</p><ul><li>subtitle 去字幕</li><li>watermark 去水印</li><li>privacy 隐私保护</li></ul>
      */
     public $EraseType;
 
     /**
-     * @var string 智能擦除模板描述信息长度限制：256 个字符。
+     * @var string <p>智能擦除模板描述信息长度限制：256 个字符。</p>
      */
     public $Comment;
 
     /**
-     * @var SmartEraseSubtitleConfig 字幕擦除配置，EraseType取subtitle时必填且仅此时生效。
+     * @var SmartEraseSubtitleConfig <p>字幕擦除配置，EraseType取subtitle时必填且仅此时生效。</p>
      */
     public $EraseSubtitleConfig;
 
     /**
-     * @var SmartEraseWatermarkConfig 水印擦除配置，EraseType取watermark时必填且仅此时生效。
+     * @var SmartEraseWatermarkConfig <p>水印擦除配置，EraseType取watermark时必填且仅此时生效。</p>
      */
     public $EraseWatermarkConfig;
 
     /**
-     * @var SmartErasePrivacyConfig 隐私保护配置，EraseType取privacy时必填且仅此时生效。
+     * @var SmartErasePrivacyConfig <p>隐私保护配置，EraseType取privacy时必填且仅此时生效。</p>
      */
     public $ErasePrivacyConfig;
 
     /**
-     * @param string $Name 智能擦除模板名称长度限制：64 个字符。
-     * @param string $EraseType 擦除类型
-- subtitle 去字幕
-- watermark 去水印
-- privacy 隐私保护
-     * @param string $Comment 智能擦除模板描述信息长度限制：256 个字符。
-     * @param SmartEraseSubtitleConfig $EraseSubtitleConfig 字幕擦除配置，EraseType取subtitle时必填且仅此时生效。
-     * @param SmartEraseWatermarkConfig $EraseWatermarkConfig 水印擦除配置，EraseType取watermark时必填且仅此时生效。
-     * @param SmartErasePrivacyConfig $ErasePrivacyConfig 隐私保护配置，EraseType取privacy时必填且仅此时生效。
+     * @param string $Name <p>智能擦除模板名称长度限制：64 个字符。</p>
+     * @param string $EraseType <p>擦除类型</p><ul><li>subtitle 去字幕</li><li>watermark 去水印</li><li>privacy 隐私保护</li></ul>
+     * @param string $Comment <p>智能擦除模板描述信息长度限制：256 个字符。</p>
+     * @param SmartEraseSubtitleConfig $EraseSubtitleConfig <p>字幕擦除配置，EraseType取subtitle时必填且仅此时生效。</p>
+     * @param SmartEraseWatermarkConfig $EraseWatermarkConfig <p>水印擦除配置，EraseType取watermark时必填且仅此时生效。</p>
+     * @param SmartErasePrivacyConfig $ErasePrivacyConfig <p>隐私保护配置，EraseType取privacy时必填且仅此时生效。</p>
      */
     function __construct()
     {

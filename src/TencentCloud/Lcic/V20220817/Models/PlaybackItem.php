@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDuration(integer $Duration) 设置<p>录制时长</p>
  * @method integer getCreateTime() 获取<p>录制开始时间</p>
  * @method void setCreateTime(integer $CreateTime) 设置<p>录制开始时间</p>
+ * @method float getFileSize() 获取<p>文件大小。</p><p>单位：MB</p>
+ * @method void setFileSize(float $FileSize) 设置<p>文件大小。</p><p>单位：MB</p>
  */
 class PlaybackItem extends AbstractModel
 {
@@ -52,10 +54,16 @@ class PlaybackItem extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var float <p>文件大小。</p><p>单位：MB</p>
+     */
+    public $FileSize;
+
+    /**
      * @param integer $RoomId <p>房间id</p>
      * @param string $PlaybackUrl <p>回放地址</p>
      * @param integer $Duration <p>录制时长</p>
      * @param integer $CreateTime <p>录制开始时间</p>
+     * @param float $FileSize <p>文件大小。</p><p>单位：MB</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class PlaybackItem extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("FileSize",$param) and $param["FileSize"] !== null) {
+            $this->FileSize = $param["FileSize"];
         }
     }
 }

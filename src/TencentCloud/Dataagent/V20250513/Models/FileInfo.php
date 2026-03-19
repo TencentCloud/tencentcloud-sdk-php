@@ -20,114 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 知识库文件信息
  *
- * @method string getFileName() 获取文件名称
- * @method void setFileName(string $FileName) 设置文件名称
- * @method float getFileSize() 获取文件大小，字节
- * @method void setFileSize(float $FileSize) 设置文件大小，字节
- * @method integer getType() 获取文件类型,0=文本,1=表格，默认0
-
- * @method void setType(integer $Type) 设置文件类型,0=文本,1=表格，默认0
-
- * @method string getFileId() 获取文件ID
- * @method void setFileId(string $FileId) 设置文件ID
- * @method integer getStatus() 获取状态，0：数据处理中  1：可用 -1：错误
- * @method void setStatus(integer $Status) 设置状态，0：数据处理中  1：可用 -1：错误
- * @method string getCreateUser() 获取操作者
-
- * @method void setCreateUser(string $CreateUser) 设置操作者
-
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method KnowledgeTaskConfig getChunkConfig() 获取分片策略
- * @method void setChunkConfig(KnowledgeTaskConfig $ChunkConfig) 设置分片策略
- * @method integer getSource() 获取文件来源0=unknow,1=user_cos,2=local
- * @method void setSource(integer $Source) 设置文件来源0=unknow,1=user_cos,2=local
- * @method string getFileUrl() 获取文件url
- * @method void setFileUrl(string $FileUrl) 设置文件url
- * @method integer getIsShowCase() 获取是否官方示例，0=否，1=是
- * @method void setIsShowCase(integer $IsShowCase) 设置是否官方示例，0=否，1=是
- * @method string getDocumentSummary() 获取文档摘要
- * @method void setDocumentSummary(string $DocumentSummary) 设置文档摘要
+ * @method string getFileName() 获取<p>文件名称</p>
+ * @method void setFileName(string $FileName) 设置<p>文件名称</p>
+ * @method float getFileSize() 获取<p>文件大小，字节</p>
+ * @method void setFileSize(float $FileSize) 设置<p>文件大小，字节</p>
+ * @method integer getType() 获取<p>文件类型,0=文本,1=表格，默认0</p>
+ * @method void setType(integer $Type) 设置<p>文件类型,0=文本,1=表格，默认0</p>
+ * @method string getFileId() 获取<p>文件ID</p>
+ * @method void setFileId(string $FileId) 设置<p>文件ID</p>
+ * @method integer getStatus() 获取<p>状态，0：数据处理中  1：可用 -1：错误</p>
+ * @method void setStatus(integer $Status) 设置<p>状态，0：数据处理中  1：可用 -1：错误</p>
+ * @method string getCreateUser() 获取<p>操作者</p>
+ * @method void setCreateUser(string $CreateUser) 设置<p>操作者</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method KnowledgeTaskConfig getChunkConfig() 获取<p>分片策略</p>
+ * @method void setChunkConfig(KnowledgeTaskConfig $ChunkConfig) 设置<p>分片策略</p>
+ * @method integer getSource() 获取<p>文件来源0=unknow,1=user_cos,2=local</p>
+ * @method void setSource(integer $Source) 设置<p>文件来源0=unknow,1=user_cos,2=local</p>
+ * @method string getFileUrl() 获取<p>文件url</p>
+ * @method void setFileUrl(string $FileUrl) 设置<p>文件url</p>
+ * @method integer getIsShowCase() 获取<p>是否官方示例，0=否，1=是</p>
+ * @method void setIsShowCase(integer $IsShowCase) 设置<p>是否官方示例，0=否，1=是</p>
+ * @method string getDocumentSummary() 获取<p>文档摘要</p>
+ * @method void setDocumentSummary(string $DocumentSummary) 设置<p>文档摘要</p>
+ * @method string getWebUrl() 获取<p>网页地址</p>
+ * @method void setWebUrl(string $WebUrl) 设置<p>网页地址</p>
  */
 class FileInfo extends AbstractModel
 {
     /**
-     * @var string 文件名称
+     * @var string <p>文件名称</p>
      */
     public $FileName;
 
     /**
-     * @var float 文件大小，字节
+     * @var float <p>文件大小，字节</p>
      */
     public $FileSize;
 
     /**
-     * @var integer 文件类型,0=文本,1=表格，默认0
-
+     * @var integer <p>文件类型,0=文本,1=表格，默认0</p>
      */
     public $Type;
 
     /**
-     * @var string 文件ID
+     * @var string <p>文件ID</p>
      */
     public $FileId;
 
     /**
-     * @var integer 状态，0：数据处理中  1：可用 -1：错误
+     * @var integer <p>状态，0：数据处理中  1：可用 -1：错误</p>
      */
     public $Status;
 
     /**
-     * @var string 操作者
-
+     * @var string <p>操作者</p>
      */
     public $CreateUser;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var KnowledgeTaskConfig 分片策略
+     * @var KnowledgeTaskConfig <p>分片策略</p>
      */
     public $ChunkConfig;
 
     /**
-     * @var integer 文件来源0=unknow,1=user_cos,2=local
+     * @var integer <p>文件来源0=unknow,1=user_cos,2=local</p>
      */
     public $Source;
 
     /**
-     * @var string 文件url
+     * @var string <p>文件url</p>
      */
     public $FileUrl;
 
     /**
-     * @var integer 是否官方示例，0=否，1=是
+     * @var integer <p>是否官方示例，0=否，1=是</p>
      */
     public $IsShowCase;
 
     /**
-     * @var string 文档摘要
+     * @var string <p>文档摘要</p>
      */
     public $DocumentSummary;
 
     /**
-     * @param string $FileName 文件名称
-     * @param float $FileSize 文件大小，字节
-     * @param integer $Type 文件类型,0=文本,1=表格，默认0
+     * @var string <p>网页地址</p>
+     */
+    public $WebUrl;
 
-     * @param string $FileId 文件ID
-     * @param integer $Status 状态，0：数据处理中  1：可用 -1：错误
-     * @param string $CreateUser 操作者
-
-     * @param string $CreateTime 创建时间
-     * @param KnowledgeTaskConfig $ChunkConfig 分片策略
-     * @param integer $Source 文件来源0=unknow,1=user_cos,2=local
-     * @param string $FileUrl 文件url
-     * @param integer $IsShowCase 是否官方示例，0=否，1=是
-     * @param string $DocumentSummary 文档摘要
+    /**
+     * @param string $FileName <p>文件名称</p>
+     * @param float $FileSize <p>文件大小，字节</p>
+     * @param integer $Type <p>文件类型,0=文本,1=表格，默认0</p>
+     * @param string $FileId <p>文件ID</p>
+     * @param integer $Status <p>状态，0：数据处理中  1：可用 -1：错误</p>
+     * @param string $CreateUser <p>操作者</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param KnowledgeTaskConfig $ChunkConfig <p>分片策略</p>
+     * @param integer $Source <p>文件来源0=unknow,1=user_cos,2=local</p>
+     * @param string $FileUrl <p>文件url</p>
+     * @param integer $IsShowCase <p>是否官方示例，0=否，1=是</p>
+     * @param string $DocumentSummary <p>文档摘要</p>
+     * @param string $WebUrl <p>网页地址</p>
      */
     function __construct()
     {
@@ -189,6 +189,10 @@ class FileInfo extends AbstractModel
 
         if (array_key_exists("DocumentSummary",$param) and $param["DocumentSummary"] !== null) {
             $this->DocumentSummary = $param["DocumentSummary"];
+        }
+
+        if (array_key_exists("WebUrl",$param) and $param["WebUrl"] !== null) {
+            $this->WebUrl = $param["WebUrl"];
         }
     }
 }

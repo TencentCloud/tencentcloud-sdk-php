@@ -20,77 +20,77 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 智能擦除结果信息
  *
- * @method string getPath() 获取擦除后文件的路径。
- * @method void setPath(string $Path) 设置擦除后文件的路径。
- * @method TaskOutputStorage getOutputStorage() 获取擦除后文件的存储位置。
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置擦除后文件的存储位置。
- * @method string getOriginSubtitlePath() 获取基于画面提取的字幕文件路径。
- * @method void setOriginSubtitlePath(string $OriginSubtitlePath) 设置基于画面提取的字幕文件路径。
- * @method string getTranslateSubtitlePath() 获取基于画面提取的字幕翻译文件路径。
- * @method void setTranslateSubtitlePath(string $TranslateSubtitlePath) 设置基于画面提取的字幕翻译文件路径。
- * @method SubtitlePosition getSubtitlePos() 获取擦除的字幕位置。**注意**：仅对字幕提取且开启返回字幕位置时有效。
+ * @method string getPath() 获取<p>擦除后文件的路径。</p>
+ * @method void setPath(string $Path) 设置<p>擦除后文件的路径。</p>
+ * @method TaskOutputStorage getOutputStorage() 获取<p>擦除后文件的存储位置。</p>
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置<p>擦除后文件的存储位置。</p>
+ * @method string getOriginSubtitlePath() 获取<p>基于画面提取的字幕文件路径。</p>
+ * @method void setOriginSubtitlePath(string $OriginSubtitlePath) 设置<p>基于画面提取的字幕文件路径。</p>
+ * @method string getTranslateSubtitlePath() 获取<p>基于画面提取的字幕翻译文件路径。</p>
+ * @method void setTranslateSubtitlePath(string $TranslateSubtitlePath) 设置<p>基于画面提取的字幕翻译文件路径。</p>
+ * @method SubtitlePosition getSubtitlePos() 获取<p>擦除的字幕位置。<strong>注意</strong>：仅对字幕提取且开启返回字幕位置时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubtitlePos(SubtitlePosition $SubtitlePos) 设置擦除的字幕位置。**注意**：仅对字幕提取且开启返回字幕位置时有效。
+ * @method void setSubtitlePos(SubtitlePosition $SubtitlePos) 设置<p>擦除的字幕位置。<strong>注意</strong>：仅对字幕提取且开启返回字幕位置时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVoiceClonedVideo() 获取音色克隆后的视频文件地址
+ * @method string getVoiceClonedVideo() 获取<p>音色克隆后的视频文件地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVoiceClonedVideo(string $VoiceClonedVideo) 设置音色克隆后的视频文件地址
+ * @method void setVoiceClonedVideo(string $VoiceClonedVideo) 设置<p>音色克隆后的视频文件地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVoiceClonedMarkFile() 获取音色克隆的标注文件地址
+ * @method string getVoiceClonedMarkFile() 获取<p>音色克隆的标注文件地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVoiceClonedMarkFile(string $VoiceClonedMarkFile) 设置音色克隆的标注文件地址
+ * @method void setVoiceClonedMarkFile(string $VoiceClonedMarkFile) 设置<p>音色克隆的标注文件地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AiAnalysisTaskDelLogoOutput extends AbstractModel
 {
     /**
-     * @var string 擦除后文件的路径。
+     * @var string <p>擦除后文件的路径。</p>
      */
     public $Path;
 
     /**
-     * @var TaskOutputStorage 擦除后文件的存储位置。
+     * @var TaskOutputStorage <p>擦除后文件的存储位置。</p>
      */
     public $OutputStorage;
 
     /**
-     * @var string 基于画面提取的字幕文件路径。
+     * @var string <p>基于画面提取的字幕文件路径。</p>
      */
     public $OriginSubtitlePath;
 
     /**
-     * @var string 基于画面提取的字幕翻译文件路径。
+     * @var string <p>基于画面提取的字幕翻译文件路径。</p>
      */
     public $TranslateSubtitlePath;
 
     /**
-     * @var SubtitlePosition 擦除的字幕位置。**注意**：仅对字幕提取且开启返回字幕位置时有效。
+     * @var SubtitlePosition <p>擦除的字幕位置。<strong>注意</strong>：仅对字幕提取且开启返回字幕位置时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubtitlePos;
 
     /**
-     * @var string 音色克隆后的视频文件地址
+     * @var string <p>音色克隆后的视频文件地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VoiceClonedVideo;
 
     /**
-     * @var string 音色克隆的标注文件地址
+     * @var string <p>音色克隆的标注文件地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VoiceClonedMarkFile;
 
     /**
-     * @param string $Path 擦除后文件的路径。
-     * @param TaskOutputStorage $OutputStorage 擦除后文件的存储位置。
-     * @param string $OriginSubtitlePath 基于画面提取的字幕文件路径。
-     * @param string $TranslateSubtitlePath 基于画面提取的字幕翻译文件路径。
-     * @param SubtitlePosition $SubtitlePos 擦除的字幕位置。**注意**：仅对字幕提取且开启返回字幕位置时有效。
+     * @param string $Path <p>擦除后文件的路径。</p>
+     * @param TaskOutputStorage $OutputStorage <p>擦除后文件的存储位置。</p>
+     * @param string $OriginSubtitlePath <p>基于画面提取的字幕文件路径。</p>
+     * @param string $TranslateSubtitlePath <p>基于画面提取的字幕翻译文件路径。</p>
+     * @param SubtitlePosition $SubtitlePos <p>擦除的字幕位置。<strong>注意</strong>：仅对字幕提取且开启返回字幕位置时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VoiceClonedVideo 音色克隆后的视频文件地址
+     * @param string $VoiceClonedVideo <p>音色克隆后的视频文件地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VoiceClonedMarkFile 音色克隆的标注文件地址
+     * @param string $VoiceClonedMarkFile <p>音色克隆的标注文件地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

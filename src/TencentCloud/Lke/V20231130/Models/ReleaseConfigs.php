@@ -29,8 +29,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAction() 获取状态
+2：待发布
+3：发布中
+4：已发布
+5：发布失败
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAction(integer $Action) 设置状态
+2：待发布
+3：发布中
+4：已发布
+5：发布失败
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取变更后的内容
 注意：此字段可能返回 null，表示取不到有效值。
@@ -65,6 +73,10 @@ class ReleaseConfigs extends AbstractModel
 
     /**
      * @var integer 状态
+2：待发布
+3：发布中
+4：已发布
+5：发布失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Action;
@@ -99,6 +111,10 @@ class ReleaseConfigs extends AbstractModel
      * @param string $UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Action 状态
+2：待发布
+3：发布中
+4：已发布
+5：发布失败
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 变更后的内容
 注意：此字段可能返回 null，表示取不到有效值。

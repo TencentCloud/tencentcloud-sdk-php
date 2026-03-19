@@ -90,6 +90,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResponseBuffering(boolean $ResponseBuffering) 设置是否缓存响应body，默认true
  * @method integer getRegexPriority() 获取增加优先级
  * @method void setRegexPriority(integer $RegexPriority) 设置增加优先级
+ * @method array getQueryStringParameters() 获取querysring参数
+ * @method void setQueryStringParameters(array $QueryStringParameters) 设置querysring参数
  */
 class ModifyCloudNativeAPIGatewayRouteRequest extends AbstractModel
 {
@@ -198,6 +200,11 @@ class ModifyCloudNativeAPIGatewayRouteRequest extends AbstractModel
     public $RegexPriority;
 
     /**
+     * @var array querysring参数
+     */
+    public $QueryStringParameters;
+
+    /**
      * @param string $GatewayId 网关ID
      * @param string $ServiceID 所属服务的ID
      * @param string $RouteID 路由的ID，实例级别唯一
@@ -233,6 +240,7 @@ class ModifyCloudNativeAPIGatewayRouteRequest extends AbstractModel
      * @param boolean $RequestBuffering 是否缓存请求body，默认true
      * @param boolean $ResponseBuffering 是否缓存响应body，默认true
      * @param integer $RegexPriority 增加优先级
+     * @param array $QueryStringParameters querysring参数
      */
     function __construct()
     {
@@ -318,6 +326,15 @@ class ModifyCloudNativeAPIGatewayRouteRequest extends AbstractModel
 
         if (array_key_exists("RegexPriority",$param) and $param["RegexPriority"] !== null) {
             $this->RegexPriority = $param["RegexPriority"];
+        }
+
+        if (array_key_exists("QueryStringParameters",$param) and $param["QueryStringParameters"] !== null) {
+            $this->QueryStringParameters = [];
+            foreach ($param["QueryStringParameters"] as $key => $value){
+                $obj = new KVMapping();
+                $obj->deserialize($value);
+                array_push($this->QueryStringParameters, $obj);
+            }
         }
     }
 }

@@ -20,66 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 智能擦除自定义参数
  *
- * @method string getEraseType() 获取擦除类型
-- subtitle 去字幕
-- watermark 去水印
-- privacy 隐私保护
- * @method void setEraseType(string $EraseType) 设置擦除类型
-- subtitle 去字幕
-- watermark 去水印
-- privacy 隐私保护
- * @method UpdateSmartEraseSubtitleConfig getEraseSubtitleConfig() 获取字幕擦除配置；
-当EraseType值为：subtitle，此字段为必填参数
- * @method void setEraseSubtitleConfig(UpdateSmartEraseSubtitleConfig $EraseSubtitleConfig) 设置字幕擦除配置；
-当EraseType值为：subtitle，此字段为必填参数
- * @method UpdateSmartEraseWatermarkConfig getEraseWatermarkConfig() 获取水印擦除配置；
-当EraseType值为：watermark，此字段为必填参数
- * @method void setEraseWatermarkConfig(UpdateSmartEraseWatermarkConfig $EraseWatermarkConfig) 设置水印擦除配置；
-当EraseType值为：watermark，此字段为必填参数
- * @method UpdateSmartErasePrivacyConfig getErasePrivacyConfig() 获取隐私保护配置；
-当EraseType值为：privacy，此字段为必填参数
- * @method void setErasePrivacyConfig(UpdateSmartErasePrivacyConfig $ErasePrivacyConfig) 设置隐私保护配置；
-当EraseType值为：privacy，此字段为必填参数
+ * @method string getEraseType() 获取<p>擦除类型</p><ul><li>subtitle 去字幕</li><li>watermark 去水印</li><li>privacy 隐私保护</li></ul>
+ * @method void setEraseType(string $EraseType) 设置<p>擦除类型</p><ul><li>subtitle 去字幕</li><li>watermark 去水印</li><li>privacy 隐私保护</li></ul>
+ * @method UpdateSmartEraseSubtitleConfig getEraseSubtitleConfig() 获取<p>字幕擦除配置；<br>当EraseType值为：subtitle，此字段为必填参数</p>
+ * @method void setEraseSubtitleConfig(UpdateSmartEraseSubtitleConfig $EraseSubtitleConfig) 设置<p>字幕擦除配置；<br>当EraseType值为：subtitle，此字段为必填参数</p>
+ * @method UpdateSmartEraseWatermarkConfig getEraseWatermarkConfig() 获取<p>水印擦除配置；<br>当EraseType值为：watermark，此字段为必填参数</p>
+ * @method void setEraseWatermarkConfig(UpdateSmartEraseWatermarkConfig $EraseWatermarkConfig) 设置<p>水印擦除配置；<br>当EraseType值为：watermark，此字段为必填参数</p>
+ * @method UpdateSmartErasePrivacyConfig getErasePrivacyConfig() 获取<p>隐私保护配置；<br>当EraseType值为：privacy，此字段为必填参数</p>
+ * @method void setErasePrivacyConfig(UpdateSmartErasePrivacyConfig $ErasePrivacyConfig) 设置<p>隐私保护配置；<br>当EraseType值为：privacy，此字段为必填参数</p>
+ * @method integer getSubtitleEmbedId() 获取<p>擦除压制字幕模板id。</p>
+ * @method void setSubtitleEmbedId(integer $SubtitleEmbedId) 设置<p>擦除压制字幕模板id。</p>
  */
 class OverrideEraseParameter extends AbstractModel
 {
     /**
-     * @var string 擦除类型
-- subtitle 去字幕
-- watermark 去水印
-- privacy 隐私保护
+     * @var string <p>擦除类型</p><ul><li>subtitle 去字幕</li><li>watermark 去水印</li><li>privacy 隐私保护</li></ul>
      */
     public $EraseType;
 
     /**
-     * @var UpdateSmartEraseSubtitleConfig 字幕擦除配置；
-当EraseType值为：subtitle，此字段为必填参数
+     * @var UpdateSmartEraseSubtitleConfig <p>字幕擦除配置；<br>当EraseType值为：subtitle，此字段为必填参数</p>
      */
     public $EraseSubtitleConfig;
 
     /**
-     * @var UpdateSmartEraseWatermarkConfig 水印擦除配置；
-当EraseType值为：watermark，此字段为必填参数
+     * @var UpdateSmartEraseWatermarkConfig <p>水印擦除配置；<br>当EraseType值为：watermark，此字段为必填参数</p>
      */
     public $EraseWatermarkConfig;
 
     /**
-     * @var UpdateSmartErasePrivacyConfig 隐私保护配置；
-当EraseType值为：privacy，此字段为必填参数
+     * @var UpdateSmartErasePrivacyConfig <p>隐私保护配置；<br>当EraseType值为：privacy，此字段为必填参数</p>
      */
     public $ErasePrivacyConfig;
 
     /**
-     * @param string $EraseType 擦除类型
-- subtitle 去字幕
-- watermark 去水印
-- privacy 隐私保护
-     * @param UpdateSmartEraseSubtitleConfig $EraseSubtitleConfig 字幕擦除配置；
-当EraseType值为：subtitle，此字段为必填参数
-     * @param UpdateSmartEraseWatermarkConfig $EraseWatermarkConfig 水印擦除配置；
-当EraseType值为：watermark，此字段为必填参数
-     * @param UpdateSmartErasePrivacyConfig $ErasePrivacyConfig 隐私保护配置；
-当EraseType值为：privacy，此字段为必填参数
+     * @var integer <p>擦除压制字幕模板id。</p>
+     */
+    public $SubtitleEmbedId;
+
+    /**
+     * @param string $EraseType <p>擦除类型</p><ul><li>subtitle 去字幕</li><li>watermark 去水印</li><li>privacy 隐私保护</li></ul>
+     * @param UpdateSmartEraseSubtitleConfig $EraseSubtitleConfig <p>字幕擦除配置；<br>当EraseType值为：subtitle，此字段为必填参数</p>
+     * @param UpdateSmartEraseWatermarkConfig $EraseWatermarkConfig <p>水印擦除配置；<br>当EraseType值为：watermark，此字段为必填参数</p>
+     * @param UpdateSmartErasePrivacyConfig $ErasePrivacyConfig <p>隐私保护配置；<br>当EraseType值为：privacy，此字段为必填参数</p>
+     * @param integer $SubtitleEmbedId <p>擦除压制字幕模板id。</p>
      */
     function __construct()
     {
@@ -111,6 +95,10 @@ class OverrideEraseParameter extends AbstractModel
         if (array_key_exists("ErasePrivacyConfig",$param) and $param["ErasePrivacyConfig"] !== null) {
             $this->ErasePrivacyConfig = new UpdateSmartErasePrivacyConfig();
             $this->ErasePrivacyConfig->deserialize($param["ErasePrivacyConfig"]);
+        }
+
+        if (array_key_exists("SubtitleEmbedId",$param) and $param["SubtitleEmbedId"] !== null) {
+            $this->SubtitleEmbedId = $param["SubtitleEmbedId"];
         }
     }
 }

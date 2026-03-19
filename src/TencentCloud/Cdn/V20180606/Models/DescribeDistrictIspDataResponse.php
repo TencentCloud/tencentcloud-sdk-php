@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDistrictIspData返回参数结构体
  *
- * @method array getData() 获取地区运营商数据明细
- * @method void setData(array $Data) 设置地区运营商数据明细
+ * @method array getData() 获取<p>地区运营商数据明细</p>
+ * @method void setData(array $Data) 设置<p>地区运营商数据明细</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDistrictIspDataResponse extends AbstractModel
 {
     /**
-     * @var array 地区运营商数据明细
+     * @var array <p>地区运营商数据明细</p>
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class DescribeDistrictIspDataResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data 地区运营商数据明细
+     * @param array $Data <p>地区运营商数据明细</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

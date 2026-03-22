@@ -199,6 +199,7 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
  * @method Models\ModifySplunkDeliverResponse ModifySplunkDeliver(Models\ModifySplunkDeliverRequest $req) 修改splunk投递任务相关信息
  * @method Models\ModifyTopicResponse ModifyTopic(Models\ModifyTopicRequest $req) 本接口用于修改日志或指标主题。
  * @method Models\ModifyWebCallbackResponse ModifyWebCallback(Models\ModifyWebCallbackRequest $req) 该接口用于修改告警渠道回调配置。
+ * @method Models\OpenClawServiceResponse OpenClawService(Models\OpenClawServiceRequest $req) 本接口用于创建OpenClaw依赖的资源与索引
  * @method Models\OpenKafkaConsumerResponse OpenKafkaConsumer(Models\OpenKafkaConsumerRequest $req) 打开Kafka协议消费功能
  * @method Models\PreviewKafkaRechargeResponse PreviewKafkaRecharge(Models\PreviewKafkaRechargeRequest $req) 本接口用于预览Kafka数据订阅任务客户日志信息
  * @method Models\QueryMetricResponse QueryMetric(Models\QueryMetricRequest $req) 查询指定时刻指标的最新值。

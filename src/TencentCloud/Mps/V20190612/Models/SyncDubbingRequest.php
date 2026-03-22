@@ -20,230 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SyncDubbing请求参数结构体
  *
- * @method string getText() 获取合成文本，语音合成时必填，文本长度不超过2000字符
- * @method void setText(string $Text) 设置合成文本，语音合成时必填，文本长度不超过2000字符
- * @method string getTextLang() 获取文本语言，不填默认中文。
-当前支持语言：
-zh	中文 (Chinese)
-en	英语 (English)
-ja	日语 (Japanese)
-de	德语 (German)
-fr	法语 (French)
-ko	韩语 (Korean)
-ru	俄语 (Russian)
-uk	乌克兰语 (Ukrainian)
-pt	葡萄牙语 (Portuguese)
-it	意大利语 (Italian)
-es	西班牙语 (Spanish)
-id	印度尼西亚语 (Indonesian)
-nl	荷兰语 (Dutch)
-tr	土耳其语 (Turkish)
-fil	菲律宾语 (Filipino)
-ms	马来语 (Malay)
-el	希腊语 (Greek)
-fi	芬兰语 (Finnish)
-hr	克罗地亚语 (Croatian)
-sk	斯洛伐克语 (Slovak)
-pl	波兰语 (Polish)
-sv	瑞典语 (Swedish)
-hi	印地语 (Hindi)
-bg	保加利亚语 (Bulgarian)
-ro	罗马尼亚语 (Romanian)
-ar	阿拉伯语 (Arabic)
-cs	捷克语 (Czech)
-da	丹麦语 (Danish)
-ta	泰米尔语 (Tamil)
-hun	匈牙利语（Hungarian）
-vi	越南语（Vietnamese）
-no	挪威语（Norwegian）
-yue	粤语（Cantonese）
-th	泰语（Thai）
-he	希伯来语（Hebrew）
-ca	加泰罗尼亚语（Catalan）
-nn	尼诺斯克语（Nynorsk）
-af	阿非利卡语（Afrikaans）
-fa	波斯语（Persian）
-sl	斯洛文尼亚语（Slovenian）
-
- * @method void setTextLang(string $TextLang) 设置文本语言，不填默认中文。
-当前支持语言：
-zh	中文 (Chinese)
-en	英语 (English)
-ja	日语 (Japanese)
-de	德语 (German)
-fr	法语 (French)
-ko	韩语 (Korean)
-ru	俄语 (Russian)
-uk	乌克兰语 (Ukrainian)
-pt	葡萄牙语 (Portuguese)
-it	意大利语 (Italian)
-es	西班牙语 (Spanish)
-id	印度尼西亚语 (Indonesian)
-nl	荷兰语 (Dutch)
-tr	土耳其语 (Turkish)
-fil	菲律宾语 (Filipino)
-ms	马来语 (Malay)
-el	希腊语 (Greek)
-fi	芬兰语 (Finnish)
-hr	克罗地亚语 (Croatian)
-sk	斯洛伐克语 (Slovak)
-pl	波兰语 (Polish)
-sv	瑞典语 (Swedish)
-hi	印地语 (Hindi)
-bg	保加利亚语 (Bulgarian)
-ro	罗马尼亚语 (Romanian)
-ar	阿拉伯语 (Arabic)
-cs	捷克语 (Czech)
-da	丹麦语 (Danish)
-ta	泰米尔语 (Tamil)
-hun	匈牙利语（Hungarian）
-vi	越南语（Vietnamese）
-no	挪威语（Norwegian）
-yue	粤语（Cantonese）
-th	泰语（Thai）
-he	希伯来语（Hebrew）
-ca	加泰罗尼亚语（Catalan）
-nn	尼诺斯克语（Nynorsk）
-af	阿非利卡语（Afrikaans）
-fa	波斯语（Persian）
-sl	斯洛文尼亚语（Slovenian）
-
- * @method string getVoiceId() 获取音色Id，指定音色合成时填写，支持系统音色和克隆音色。
- * @method void setVoiceId(string $VoiceId) 设置音色Id，指定音色合成时填写，支持系统音色和克隆音色。
- * @method string getAudioData() 获取克隆音频base64编码。
- * @method void setAudioData(string $AudioData) 设置克隆音频base64编码。
- * @method string getAudioLang() 获取克隆音频语言，默认中文。
-当前支持语言同TextLang
- * @method void setAudioLang(string $AudioLang) 设置克隆音频语言，默认中文。
-当前支持语言同TextLang
- * @method string getExtParam() 获取扩展参数，json字符串
- * @method void setExtParam(string $ExtParam) 设置扩展参数，json字符串
+ * @method string getText() 获取<p>合成文本，语音合成时必填，文本长度不超过2000字符</p>
+ * @method void setText(string $Text) 设置<p>合成文本，语音合成时必填，文本长度不超过2000字符</p>
+ * @method string getTextLang() 获取<p>文本语言，不填默认中文。<br>当前支持语言：<br>zh    中文 (Chinese)<br>en    英语 (English)<br>ja    日语 (Japanese)<br>de    德语 (German)<br>fr    法语 (French)<br>ko    韩语 (Korean)<br>ru    俄语 (Russian)<br>uk    乌克兰语 (Ukrainian)<br>pt    葡萄牙语 (Portuguese)<br>it    意大利语 (Italian)<br>es    西班牙语 (Spanish)<br>id    印度尼西亚语 (Indonesian)<br>nl    荷兰语 (Dutch)<br>tr    土耳其语 (Turkish)<br>fil    菲律宾语 (Filipino)<br>ms    马来语 (Malay)<br>el    希腊语 (Greek)<br>fi    芬兰语 (Finnish)<br>hr    克罗地亚语 (Croatian)<br>sk    斯洛伐克语 (Slovak)<br>pl    波兰语 (Polish)<br>sv    瑞典语 (Swedish)<br>hi    印地语 (Hindi)<br>bg    保加利亚语 (Bulgarian)<br>ro    罗马尼亚语 (Romanian)<br>ar    阿拉伯语 (Arabic)<br>cs    捷克语 (Czech)<br>da    丹麦语 (Danish)<br>ta    泰米尔语 (Tamil)<br>hun    匈牙利语（Hungarian）<br>vi    越南语（Vietnamese）<br>no    挪威语（Norwegian）<br>yue    粤语（Cantonese）<br>th    泰语（Thai）<br>he    希伯来语（Hebrew）<br>ca    加泰罗尼亚语（Catalan）<br>nn    尼诺斯克语（Nynorsk）<br>af    阿非利卡语（Afrikaans）<br>fa    波斯语（Persian）<br>sl    斯洛文尼亚语（Slovenian）</p>
+ * @method void setTextLang(string $TextLang) 设置<p>文本语言，不填默认中文。<br>当前支持语言：<br>zh    中文 (Chinese)<br>en    英语 (English)<br>ja    日语 (Japanese)<br>de    德语 (German)<br>fr    法语 (French)<br>ko    韩语 (Korean)<br>ru    俄语 (Russian)<br>uk    乌克兰语 (Ukrainian)<br>pt    葡萄牙语 (Portuguese)<br>it    意大利语 (Italian)<br>es    西班牙语 (Spanish)<br>id    印度尼西亚语 (Indonesian)<br>nl    荷兰语 (Dutch)<br>tr    土耳其语 (Turkish)<br>fil    菲律宾语 (Filipino)<br>ms    马来语 (Malay)<br>el    希腊语 (Greek)<br>fi    芬兰语 (Finnish)<br>hr    克罗地亚语 (Croatian)<br>sk    斯洛伐克语 (Slovak)<br>pl    波兰语 (Polish)<br>sv    瑞典语 (Swedish)<br>hi    印地语 (Hindi)<br>bg    保加利亚语 (Bulgarian)<br>ro    罗马尼亚语 (Romanian)<br>ar    阿拉伯语 (Arabic)<br>cs    捷克语 (Czech)<br>da    丹麦语 (Danish)<br>ta    泰米尔语 (Tamil)<br>hun    匈牙利语（Hungarian）<br>vi    越南语（Vietnamese）<br>no    挪威语（Norwegian）<br>yue    粤语（Cantonese）<br>th    泰语（Thai）<br>he    希伯来语（Hebrew）<br>ca    加泰罗尼亚语（Catalan）<br>nn    尼诺斯克语（Nynorsk）<br>af    阿非利卡语（Afrikaans）<br>fa    波斯语（Persian）<br>sl    斯洛文尼亚语（Slovenian）</p>
+ * @method string getVoiceId() 获取<p>音色Id，指定音色合成时填写，支持系统音色和克隆音色。</p>
+ * @method void setVoiceId(string $VoiceId) 设置<p>音色Id，指定音色合成时填写，支持系统音色和克隆音色。</p>
+ * @method string getAudioData() 获取<p>克隆音频base64编码。</p>
+ * @method void setAudioData(string $AudioData) 设置<p>克隆音频base64编码。</p>
+ * @method string getAudioUrl() 获取<p>克隆音频Url，AudioData为空时有效</p>
+ * @method void setAudioUrl(string $AudioUrl) 设置<p>克隆音频Url，AudioData为空时有效</p>
+ * @method string getAudioLang() 获取<p>克隆音频语言，默认中文。<br>当前支持语言同TextLang</p>
+ * @method void setAudioLang(string $AudioLang) 设置<p>克隆音频语言，默认中文。<br>当前支持语言同TextLang</p>
+ * @method string getExtParam() 获取<p>扩展参数，json字符串</p><p>synExt    Object    语音合成扩展参数<br>    -duration    Float    合成音频时长，单位秒，示例：5.2<br>    -sampleRate    Integer    合成音频采样率，默认16000，支持[8000,16000,22050,32000,44100]<br>    -pitch    Integer    音调，默认0原音色输出，取值[-12, 12]<br>cloneExt    Object    音色克隆扩展参数<br>    -timeRanges    Float[][]    指定克隆音频时间范围，默认[[0, 20]]，示例[[5.2, 10], [45, 59.8]]</p>
+ * @method void setExtParam(string $ExtParam) 设置<p>扩展参数，json字符串</p><p>synExt    Object    语音合成扩展参数<br>    -duration    Float    合成音频时长，单位秒，示例：5.2<br>    -sampleRate    Integer    合成音频采样率，默认16000，支持[8000,16000,22050,32000,44100]<br>    -pitch    Integer    音调，默认0原音色输出，取值[-12, 12]<br>cloneExt    Object    音色克隆扩展参数<br>    -timeRanges    Float[][]    指定克隆音频时间范围，默认[[0, 20]]，示例[[5.2, 10], [45, 59.8]]</p>
  */
 class SyncDubbingRequest extends AbstractModel
 {
     /**
-     * @var string 合成文本，语音合成时必填，文本长度不超过2000字符
+     * @var string <p>合成文本，语音合成时必填，文本长度不超过2000字符</p>
      */
     public $Text;
 
     /**
-     * @var string 文本语言，不填默认中文。
-当前支持语言：
-zh	中文 (Chinese)
-en	英语 (English)
-ja	日语 (Japanese)
-de	德语 (German)
-fr	法语 (French)
-ko	韩语 (Korean)
-ru	俄语 (Russian)
-uk	乌克兰语 (Ukrainian)
-pt	葡萄牙语 (Portuguese)
-it	意大利语 (Italian)
-es	西班牙语 (Spanish)
-id	印度尼西亚语 (Indonesian)
-nl	荷兰语 (Dutch)
-tr	土耳其语 (Turkish)
-fil	菲律宾语 (Filipino)
-ms	马来语 (Malay)
-el	希腊语 (Greek)
-fi	芬兰语 (Finnish)
-hr	克罗地亚语 (Croatian)
-sk	斯洛伐克语 (Slovak)
-pl	波兰语 (Polish)
-sv	瑞典语 (Swedish)
-hi	印地语 (Hindi)
-bg	保加利亚语 (Bulgarian)
-ro	罗马尼亚语 (Romanian)
-ar	阿拉伯语 (Arabic)
-cs	捷克语 (Czech)
-da	丹麦语 (Danish)
-ta	泰米尔语 (Tamil)
-hun	匈牙利语（Hungarian）
-vi	越南语（Vietnamese）
-no	挪威语（Norwegian）
-yue	粤语（Cantonese）
-th	泰语（Thai）
-he	希伯来语（Hebrew）
-ca	加泰罗尼亚语（Catalan）
-nn	尼诺斯克语（Nynorsk）
-af	阿非利卡语（Afrikaans）
-fa	波斯语（Persian）
-sl	斯洛文尼亚语（Slovenian）
-
+     * @var string <p>文本语言，不填默认中文。<br>当前支持语言：<br>zh    中文 (Chinese)<br>en    英语 (English)<br>ja    日语 (Japanese)<br>de    德语 (German)<br>fr    法语 (French)<br>ko    韩语 (Korean)<br>ru    俄语 (Russian)<br>uk    乌克兰语 (Ukrainian)<br>pt    葡萄牙语 (Portuguese)<br>it    意大利语 (Italian)<br>es    西班牙语 (Spanish)<br>id    印度尼西亚语 (Indonesian)<br>nl    荷兰语 (Dutch)<br>tr    土耳其语 (Turkish)<br>fil    菲律宾语 (Filipino)<br>ms    马来语 (Malay)<br>el    希腊语 (Greek)<br>fi    芬兰语 (Finnish)<br>hr    克罗地亚语 (Croatian)<br>sk    斯洛伐克语 (Slovak)<br>pl    波兰语 (Polish)<br>sv    瑞典语 (Swedish)<br>hi    印地语 (Hindi)<br>bg    保加利亚语 (Bulgarian)<br>ro    罗马尼亚语 (Romanian)<br>ar    阿拉伯语 (Arabic)<br>cs    捷克语 (Czech)<br>da    丹麦语 (Danish)<br>ta    泰米尔语 (Tamil)<br>hun    匈牙利语（Hungarian）<br>vi    越南语（Vietnamese）<br>no    挪威语（Norwegian）<br>yue    粤语（Cantonese）<br>th    泰语（Thai）<br>he    希伯来语（Hebrew）<br>ca    加泰罗尼亚语（Catalan）<br>nn    尼诺斯克语（Nynorsk）<br>af    阿非利卡语（Afrikaans）<br>fa    波斯语（Persian）<br>sl    斯洛文尼亚语（Slovenian）</p>
      */
     public $TextLang;
 
     /**
-     * @var string 音色Id，指定音色合成时填写，支持系统音色和克隆音色。
+     * @var string <p>音色Id，指定音色合成时填写，支持系统音色和克隆音色。</p>
      */
     public $VoiceId;
 
     /**
-     * @var string 克隆音频base64编码。
+     * @var string <p>克隆音频base64编码。</p>
      */
     public $AudioData;
 
     /**
-     * @var string 克隆音频语言，默认中文。
-当前支持语言同TextLang
+     * @var string <p>克隆音频Url，AudioData为空时有效</p>
+     */
+    public $AudioUrl;
+
+    /**
+     * @var string <p>克隆音频语言，默认中文。<br>当前支持语言同TextLang</p>
      */
     public $AudioLang;
 
     /**
-     * @var string 扩展参数，json字符串
+     * @var string <p>扩展参数，json字符串</p><p>synExt    Object    语音合成扩展参数<br>    -duration    Float    合成音频时长，单位秒，示例：5.2<br>    -sampleRate    Integer    合成音频采样率，默认16000，支持[8000,16000,22050,32000,44100]<br>    -pitch    Integer    音调，默认0原音色输出，取值[-12, 12]<br>cloneExt    Object    音色克隆扩展参数<br>    -timeRanges    Float[][]    指定克隆音频时间范围，默认[[0, 20]]，示例[[5.2, 10], [45, 59.8]]</p>
      */
     public $ExtParam;
 
     /**
-     * @param string $Text 合成文本，语音合成时必填，文本长度不超过2000字符
-     * @param string $TextLang 文本语言，不填默认中文。
-当前支持语言：
-zh	中文 (Chinese)
-en	英语 (English)
-ja	日语 (Japanese)
-de	德语 (German)
-fr	法语 (French)
-ko	韩语 (Korean)
-ru	俄语 (Russian)
-uk	乌克兰语 (Ukrainian)
-pt	葡萄牙语 (Portuguese)
-it	意大利语 (Italian)
-es	西班牙语 (Spanish)
-id	印度尼西亚语 (Indonesian)
-nl	荷兰语 (Dutch)
-tr	土耳其语 (Turkish)
-fil	菲律宾语 (Filipino)
-ms	马来语 (Malay)
-el	希腊语 (Greek)
-fi	芬兰语 (Finnish)
-hr	克罗地亚语 (Croatian)
-sk	斯洛伐克语 (Slovak)
-pl	波兰语 (Polish)
-sv	瑞典语 (Swedish)
-hi	印地语 (Hindi)
-bg	保加利亚语 (Bulgarian)
-ro	罗马尼亚语 (Romanian)
-ar	阿拉伯语 (Arabic)
-cs	捷克语 (Czech)
-da	丹麦语 (Danish)
-ta	泰米尔语 (Tamil)
-hun	匈牙利语（Hungarian）
-vi	越南语（Vietnamese）
-no	挪威语（Norwegian）
-yue	粤语（Cantonese）
-th	泰语（Thai）
-he	希伯来语（Hebrew）
-ca	加泰罗尼亚语（Catalan）
-nn	尼诺斯克语（Nynorsk）
-af	阿非利卡语（Afrikaans）
-fa	波斯语（Persian）
-sl	斯洛文尼亚语（Slovenian）
-
-     * @param string $VoiceId 音色Id，指定音色合成时填写，支持系统音色和克隆音色。
-     * @param string $AudioData 克隆音频base64编码。
-     * @param string $AudioLang 克隆音频语言，默认中文。
-当前支持语言同TextLang
-     * @param string $ExtParam 扩展参数，json字符串
+     * @param string $Text <p>合成文本，语音合成时必填，文本长度不超过2000字符</p>
+     * @param string $TextLang <p>文本语言，不填默认中文。<br>当前支持语言：<br>zh    中文 (Chinese)<br>en    英语 (English)<br>ja    日语 (Japanese)<br>de    德语 (German)<br>fr    法语 (French)<br>ko    韩语 (Korean)<br>ru    俄语 (Russian)<br>uk    乌克兰语 (Ukrainian)<br>pt    葡萄牙语 (Portuguese)<br>it    意大利语 (Italian)<br>es    西班牙语 (Spanish)<br>id    印度尼西亚语 (Indonesian)<br>nl    荷兰语 (Dutch)<br>tr    土耳其语 (Turkish)<br>fil    菲律宾语 (Filipino)<br>ms    马来语 (Malay)<br>el    希腊语 (Greek)<br>fi    芬兰语 (Finnish)<br>hr    克罗地亚语 (Croatian)<br>sk    斯洛伐克语 (Slovak)<br>pl    波兰语 (Polish)<br>sv    瑞典语 (Swedish)<br>hi    印地语 (Hindi)<br>bg    保加利亚语 (Bulgarian)<br>ro    罗马尼亚语 (Romanian)<br>ar    阿拉伯语 (Arabic)<br>cs    捷克语 (Czech)<br>da    丹麦语 (Danish)<br>ta    泰米尔语 (Tamil)<br>hun    匈牙利语（Hungarian）<br>vi    越南语（Vietnamese）<br>no    挪威语（Norwegian）<br>yue    粤语（Cantonese）<br>th    泰语（Thai）<br>he    希伯来语（Hebrew）<br>ca    加泰罗尼亚语（Catalan）<br>nn    尼诺斯克语（Nynorsk）<br>af    阿非利卡语（Afrikaans）<br>fa    波斯语（Persian）<br>sl    斯洛文尼亚语（Slovenian）</p>
+     * @param string $VoiceId <p>音色Id，指定音色合成时填写，支持系统音色和克隆音色。</p>
+     * @param string $AudioData <p>克隆音频base64编码。</p>
+     * @param string $AudioUrl <p>克隆音频Url，AudioData为空时有效</p>
+     * @param string $AudioLang <p>克隆音频语言，默认中文。<br>当前支持语言同TextLang</p>
+     * @param string $ExtParam <p>扩展参数，json字符串</p><p>synExt    Object    语音合成扩展参数<br>    -duration    Float    合成音频时长，单位秒，示例：5.2<br>    -sampleRate    Integer    合成音频采样率，默认16000，支持[8000,16000,22050,32000,44100]<br>    -pitch    Integer    音调，默认0原音色输出，取值[-12, 12]<br>cloneExt    Object    音色克隆扩展参数<br>    -timeRanges    Float[][]    指定克隆音频时间范围，默认[[0, 20]]，示例[[5.2, 10], [45, 59.8]]</p>
      */
     function __construct()
     {
@@ -272,6 +108,10 @@ sl	斯洛文尼亚语（Slovenian）
 
         if (array_key_exists("AudioData",$param) and $param["AudioData"] !== null) {
             $this->AudioData = $param["AudioData"];
+        }
+
+        if (array_key_exists("AudioUrl",$param) and $param["AudioUrl"] !== null) {
+            $this->AudioUrl = $param["AudioUrl"];
         }
 
         if (array_key_exists("AudioLang",$param) and $param["AudioLang"] !== null) {

@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListDoc请求参数结构体
  *
- * @method string getBotBizId() 获取应用ID, 获取方式参看 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
- * @method void setBotBizId(string $BotBizId) 设置应用ID, 获取方式参看 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+ * @method string getBotBizId() 获取应用ID, 获取方式参看 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
+查询知识库下文档时，该参数填入知识库ID。
+ * @method void setBotBizId(string $BotBizId) 设置应用ID, 获取方式参看 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
+查询知识库下文档时，该参数填入知识库ID。
  * @method integer getPageNumber() 获取页码(必须大于0)
  * @method void setPageNumber(integer $PageNumber) 设置页码(必须大于0)
  * @method integer getPageSize() 获取每页数量(取值范围1-200)
@@ -52,7 +54,8 @@ use TencentCloud\Common\AbstractModel;
 class ListDocRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID, 获取方式参看 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+     * @var string 应用ID, 获取方式参看 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
+查询知识库下文档时，该参数填入知识库ID。
      */
     public $BotBizId;
 
@@ -110,7 +113,8 @@ class ListDocRequest extends AbstractModel
     public $EnableScope;
 
     /**
-     * @param string $BotBizId 应用ID, 获取方式参看 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+     * @param string $BotBizId 应用ID, 获取方式参看 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
+查询知识库下文档时，该参数填入知识库ID。
      * @param integer $PageNumber 页码(必须大于0)
      * @param integer $PageSize 每页数量(取值范围1-200)
      * @param string $Query 查询内容

@@ -37,12 +37,13 @@ use TencentCloud\Lke\V20231130\Models as Models;
 知识库相关背景知识介绍
 “知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
 “标签”文档：https://cloud.tencent.com/document/product/1759/112956
+单个知识库内支持创建的分类数量上限为 2000 个。
  * @method Models\CreateRejectedQuestionResponse CreateRejectedQuestion(Models\CreateRejectedQuestionRequest $req) 创建拒答问题
  * @method Models\CreateReleaseResponse CreateRelease(Models\CreateReleaseRequest $req) 创建发布
  * @method Models\CreateSharedKnowledgeResponse CreateSharedKnowledge(Models\CreateSharedKnowledgeRequest $req) 创建共享知识库。
  * @method Models\CreateVarResponse CreateVar(Models\CreateVarRequest $req) 创建变量
  * @method Models\CreateWorkflowRunResponse CreateWorkflowRun(Models\CreateWorkflowRunRequest $req) 本接口用来创建工作流的异步运行实例，创建成功后工作流会在后台异步运行，接口返回工作流运行实例ID（WorkflowRunId）等信息。后面可通过调用DescribeWorkflowRun接口查工作流运行的详情。
-注意：工作流的异步运行是基于应用的，需要先把对应的应用配置成“单工作流模式”，并且打开“异步调用”的开关，才能创建成功。
+注意：工作流的异步运行是基于应用的，需要先把对应的应用配置成“单工作流模式”，才能创建成功。
  * @method Models\DeleteAgentResponse DeleteAgent(Models\DeleteAgentRequest $req) 删除Agent
  * @method Models\DeleteAppResponse DeleteApp(Models\DeleteAppRequest $req) 删除应用
  * @method Models\DeleteAttributeLabelResponse DeleteAttributeLabel(Models\DeleteAttributeLabelRequest $req) 删除属性标签

@@ -32,6 +32,8 @@ false:  不通知下游任务责任人
 false:  不通知下游任务责任人
  * @method string getProjectId() 获取项目Id
  * @method void setProjectId(string $ProjectId) 设置项目Id
+ * @method boolean getDeleteScript() 获取删除任务时是否删除脚本文件
+ * @method void setDeleteScript(boolean $DeleteScript) 设置删除任务时是否删除脚本文件
  */
 class BatchDeleteOpsTasksRequest extends AbstractModel
 {
@@ -58,12 +60,18 @@ false:  不通知下游任务责任人
     public $ProjectId;
 
     /**
+     * @var boolean 删除任务时是否删除脚本文件
+     */
+    public $DeleteScript;
+
+    /**
      * @param array $TaskIdList 批量删除的任务TaskId
      * @param boolean $DeleteMode true : 删除后下游任务可正常运行
 false：删除后下游任务不可运行
      * @param boolean $EnableNotify true：通知下游任务责任人
 false:  不通知下游任务责任人
      * @param string $ProjectId 项目Id
+     * @param boolean $DeleteScript 删除任务时是否删除脚本文件
      */
     function __construct()
     {
@@ -92,6 +100,10 @@ false:  不通知下游任务责任人
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("DeleteScript",$param) and $param["DeleteScript"] !== null) {
+            $this->DeleteScript = $param["DeleteScript"];
         }
     }
 }

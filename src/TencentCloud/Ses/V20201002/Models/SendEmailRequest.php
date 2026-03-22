@@ -20,134 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SendEmail请求参数结构体
  *
- * @method string getFromEmailAddress() 获取发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址>，别名中不能带有冒号(:)。
- * @method void setFromEmailAddress(string $FromEmailAddress) 设置发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址>，别名中不能带有冒号(:)。
- * @method string getSubject() 获取邮件主题
- * @method void setSubject(string $Subject) 设置邮件主题
- * @method array getDestination() 获取收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
-Destination/Cc/Bcc三个参数必须至少存在一个。
- * @method void setDestination(array $Destination) 设置收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
-Destination/Cc/Bcc三个参数必须至少存在一个。
- * @method string getReplyToAddresses() 获取邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
- * @method void setReplyToAddresses(string $ReplyToAddresses) 设置邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
- * @method array getCc() 获取抄送人邮箱地址，最多支持抄送20人。
- * @method void setCc(array $Cc) 设置抄送人邮箱地址，最多支持抄送20人。
- * @method array getBcc() 获取密送人邮箱地址，最多支持抄送20人,Bcc和Destination不能重复。
- * @method void setBcc(array $Bcc) 设置密送人邮箱地址，最多支持抄送20人,Bcc和Destination不能重复。
- * @method Template getTemplate() 获取使用模板发送时，填写模板相关参数。
-<dx-alert infotype="notice" title="注意"> 如您未申请过特殊配置，则该字段为必填 </dx-alert>
- * @method void setTemplate(Template $Template) 设置使用模板发送时，填写模板相关参数。
-<dx-alert infotype="notice" title="注意"> 如您未申请过特殊配置，则该字段为必填 </dx-alert>
- * @method Simple getSimple() 获取已废弃
-<dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert>
- * @method void setSimple(Simple $Simple) 设置已废弃
-<dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert>
- * @method array getAttachments() 获取需要发送附件时，填写附件相关参数。腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍，应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 时接口会返回错误
- * @method void setAttachments(array $Attachments) 设置需要发送附件时，填写附件相关参数。腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍，应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 时接口会返回错误
- * @method string getUnsubscribe() 获取退订链接选项 0: 不加入退订链接 1: 简体中文 2: 英文 3: 繁体中文 4: 西班牙语 5: 法语 6: 德语 7: 日语 8: 韩语 9: 阿拉伯语 10: 泰语
- * @method void setUnsubscribe(string $Unsubscribe) 设置退订链接选项 0: 不加入退订链接 1: 简体中文 2: 英文 3: 繁体中文 4: 西班牙语 5: 法语 6: 德语 7: 日语 8: 韩语 9: 阿拉伯语 10: 泰语
- * @method integer getTriggerType() 获取邮件触发类型 0:非触发类，默认类型，营销类邮件、非即时类邮件等选择此类型  1:触发类，验证码等即时发送类邮件，若邮件超过一定大小，系统会自动选择非触发类型通道
- * @method void setTriggerType(integer $TriggerType) 设置邮件触发类型 0:非触发类，默认类型，营销类邮件、非即时类邮件等选择此类型  1:触发类，验证码等即时发送类邮件，若邮件超过一定大小，系统会自动选择非触发类型通道
- * @method string getSmtpMessageId() 获取smtp头中的Message-Id字段
- * @method void setSmtpMessageId(string $SmtpMessageId) 设置smtp头中的Message-Id字段
- * @method string getSmtpHeaders() 获取smtp头中可以设置的其它字段
- * @method void setSmtpHeaders(string $SmtpHeaders) 设置smtp头中可以设置的其它字段
- * @method string getHeaderFrom() 获取smtp头中的from字段，建议域名与FromEmailAddress保持一致
- * @method void setHeaderFrom(string $HeaderFrom) 设置smtp头中的from字段，建议域名与FromEmailAddress保持一致
+ * @method string getFromEmailAddress() 获取<p>发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+&lt;邮箱地址&gt;，别名中不能带有冒号(:)。</p>
+ * @method void setFromEmailAddress(string $FromEmailAddress) 设置<p>发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+&lt;邮箱地址&gt;，别名中不能带有冒号(:)。</p>
+ * @method string getSubject() 获取<p>邮件主题</p>
+ * @method void setSubject(string $Subject) 设置<p>邮件主题</p>
+ * @method array getDestination() 获取<p>收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。<br>Destination/Cc/Bcc三个参数必须至少存在一个。</p>
+ * @method void setDestination(array $Destination) 设置<p>收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。<br>Destination/Cc/Bcc三个参数必须至少存在一个。</p>
+ * @method string getReplyToAddresses() 获取<p>邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。</p>
+ * @method void setReplyToAddresses(string $ReplyToAddresses) 设置<p>邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。</p>
+ * @method array getCc() 获取<p>抄送人邮箱地址，最多支持抄送20人。</p>
+ * @method void setCc(array $Cc) 设置<p>抄送人邮箱地址，最多支持抄送20人。</p>
+ * @method array getBcc() 获取<p>密送人邮箱地址，最多支持抄送20人,Bcc和Destination不能重复。</p>
+ * @method void setBcc(array $Bcc) 设置<p>密送人邮箱地址，最多支持抄送20人,Bcc和Destination不能重复。</p>
+ * @method Template getTemplate() 获取<p>使用模板发送时，填写模板相关参数。</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">注意</div>        <div class="rno-document-tip-desc"><p>如您未申请过特殊配置，则该字段为必填</p></div>    </div></blockquote>
+ * @method void setTemplate(Template $Template) 设置<p>使用模板发送时，填写模板相关参数。</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">注意</div>        <div class="rno-document-tip-desc"><p>如您未申请过特殊配置，则该字段为必填</p></div>    </div></blockquote>
+ * @method Simple getSimple() 获取<p>已废弃</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">说明</div>        <div class="rno-document-tip-desc"><p>仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</p></div>    </div></blockquote>
+ * @method void setSimple(Simple $Simple) 设置<p>已废弃</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">说明</div>        <div class="rno-document-tip-desc"><p>仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</p></div>    </div></blockquote>
+ * @method array getAttachments() 获取<p>需要发送附件时，填写附件相关参数。腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍，应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 时接口会返回错误</p>
+ * @method void setAttachments(array $Attachments) 设置<p>需要发送附件时，填写附件相关参数。腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍，应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 时接口会返回错误</p>
+ * @method string getUnsubscribe() 获取<p>退订链接选项</p><p>枚举值：</p><ul><li>0： 不加入退订链接</li><li>1： 简体中文</li><li>2： 英文</li><li>3： 繁体中文</li><li>4： 西班牙语</li><li>5： 法语</li><li>6： 德语</li><li>7： 日语</li><li>8： 韩语</li><li>9： 阿拉伯语</li><li>10： 泰语</li><li>11： 印尼语</li></ul>
+ * @method void setUnsubscribe(string $Unsubscribe) 设置<p>退订链接选项</p><p>枚举值：</p><ul><li>0： 不加入退订链接</li><li>1： 简体中文</li><li>2： 英文</li><li>3： 繁体中文</li><li>4： 西班牙语</li><li>5： 法语</li><li>6： 德语</li><li>7： 日语</li><li>8： 韩语</li><li>9： 阿拉伯语</li><li>10： 泰语</li><li>11： 印尼语</li></ul>
+ * @method integer getTriggerType() 获取<p>邮件触发类型 0:非触发类，默认类型，营销类邮件、非即时类邮件等选择此类型  1:触发类，验证码等即时发送类邮件，若邮件超过一定大小，系统会自动选择非触发类型通道</p>
+ * @method void setTriggerType(integer $TriggerType) 设置<p>邮件触发类型 0:非触发类，默认类型，营销类邮件、非即时类邮件等选择此类型  1:触发类，验证码等即时发送类邮件，若邮件超过一定大小，系统会自动选择非触发类型通道</p>
+ * @method string getSmtpMessageId() 获取<p>smtp头中的Message-Id字段</p>
+ * @method void setSmtpMessageId(string $SmtpMessageId) 设置<p>smtp头中的Message-Id字段</p>
+ * @method string getSmtpHeaders() 获取<p>smtp头中可以设置的其它字段</p>
+ * @method void setSmtpHeaders(string $SmtpHeaders) 设置<p>smtp头中可以设置的其它字段</p>
+ * @method string getHeaderFrom() 获取<p>smtp头中的from字段，建议域名与FromEmailAddress保持一致</p>
+ * @method void setHeaderFrom(string $HeaderFrom) 设置<p>smtp头中的from字段，建议域名与FromEmailAddress保持一致</p>
  */
 class SendEmailRequest extends AbstractModel
 {
     /**
-     * @var string 发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址>，别名中不能带有冒号(:)。
+     * @var string <p>发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+&lt;邮箱地址&gt;，别名中不能带有冒号(:)。</p>
      */
     public $FromEmailAddress;
 
     /**
-     * @var string 邮件主题
+     * @var string <p>邮件主题</p>
      */
     public $Subject;
 
     /**
-     * @var array 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
-Destination/Cc/Bcc三个参数必须至少存在一个。
+     * @var array <p>收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。<br>Destination/Cc/Bcc三个参数必须至少存在一个。</p>
      */
     public $Destination;
 
     /**
-     * @var string 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
+     * @var string <p>邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。</p>
      */
     public $ReplyToAddresses;
 
     /**
-     * @var array 抄送人邮箱地址，最多支持抄送20人。
+     * @var array <p>抄送人邮箱地址，最多支持抄送20人。</p>
      */
     public $Cc;
 
     /**
-     * @var array 密送人邮箱地址，最多支持抄送20人,Bcc和Destination不能重复。
+     * @var array <p>密送人邮箱地址，最多支持抄送20人,Bcc和Destination不能重复。</p>
      */
     public $Bcc;
 
     /**
-     * @var Template 使用模板发送时，填写模板相关参数。
-<dx-alert infotype="notice" title="注意"> 如您未申请过特殊配置，则该字段为必填 </dx-alert>
+     * @var Template <p>使用模板发送时，填写模板相关参数。</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">注意</div>        <div class="rno-document-tip-desc"><p>如您未申请过特殊配置，则该字段为必填</p></div>    </div></blockquote>
      */
     public $Template;
 
     /**
-     * @var Simple 已废弃
-<dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert>
+     * @var Simple <p>已废弃</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">说明</div>        <div class="rno-document-tip-desc"><p>仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</p></div>    </div></blockquote>
      */
     public $Simple;
 
     /**
-     * @var array 需要发送附件时，填写附件相关参数。腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍，应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 时接口会返回错误
+     * @var array <p>需要发送附件时，填写附件相关参数。腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍，应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 时接口会返回错误</p>
      */
     public $Attachments;
 
     /**
-     * @var string 退订链接选项 0: 不加入退订链接 1: 简体中文 2: 英文 3: 繁体中文 4: 西班牙语 5: 法语 6: 德语 7: 日语 8: 韩语 9: 阿拉伯语 10: 泰语
+     * @var string <p>退订链接选项</p><p>枚举值：</p><ul><li>0： 不加入退订链接</li><li>1： 简体中文</li><li>2： 英文</li><li>3： 繁体中文</li><li>4： 西班牙语</li><li>5： 法语</li><li>6： 德语</li><li>7： 日语</li><li>8： 韩语</li><li>9： 阿拉伯语</li><li>10： 泰语</li><li>11： 印尼语</li></ul>
      */
     public $Unsubscribe;
 
     /**
-     * @var integer 邮件触发类型 0:非触发类，默认类型，营销类邮件、非即时类邮件等选择此类型  1:触发类，验证码等即时发送类邮件，若邮件超过一定大小，系统会自动选择非触发类型通道
+     * @var integer <p>邮件触发类型 0:非触发类，默认类型，营销类邮件、非即时类邮件等选择此类型  1:触发类，验证码等即时发送类邮件，若邮件超过一定大小，系统会自动选择非触发类型通道</p>
      */
     public $TriggerType;
 
     /**
-     * @var string smtp头中的Message-Id字段
+     * @var string <p>smtp头中的Message-Id字段</p>
      */
     public $SmtpMessageId;
 
     /**
-     * @var string smtp头中可以设置的其它字段
+     * @var string <p>smtp头中可以设置的其它字段</p>
      */
     public $SmtpHeaders;
 
     /**
-     * @var string smtp头中的from字段，建议域名与FromEmailAddress保持一致
+     * @var string <p>smtp头中的from字段，建议域名与FromEmailAddress保持一致</p>
      */
     public $HeaderFrom;
 
     /**
-     * @param string $FromEmailAddress 发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址>，别名中不能带有冒号(:)。
-     * @param string $Subject 邮件主题
-     * @param array $Destination 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
-Destination/Cc/Bcc三个参数必须至少存在一个。
-     * @param string $ReplyToAddresses 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
-     * @param array $Cc 抄送人邮箱地址，最多支持抄送20人。
-     * @param array $Bcc 密送人邮箱地址，最多支持抄送20人,Bcc和Destination不能重复。
-     * @param Template $Template 使用模板发送时，填写模板相关参数。
-<dx-alert infotype="notice" title="注意"> 如您未申请过特殊配置，则该字段为必填 </dx-alert>
-     * @param Simple $Simple 已废弃
-<dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert>
-     * @param array $Attachments 需要发送附件时，填写附件相关参数。腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍，应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 时接口会返回错误
-     * @param string $Unsubscribe 退订链接选项 0: 不加入退订链接 1: 简体中文 2: 英文 3: 繁体中文 4: 西班牙语 5: 法语 6: 德语 7: 日语 8: 韩语 9: 阿拉伯语 10: 泰语
-     * @param integer $TriggerType 邮件触发类型 0:非触发类，默认类型，营销类邮件、非即时类邮件等选择此类型  1:触发类，验证码等即时发送类邮件，若邮件超过一定大小，系统会自动选择非触发类型通道
-     * @param string $SmtpMessageId smtp头中的Message-Id字段
-     * @param string $SmtpHeaders smtp头中可以设置的其它字段
-     * @param string $HeaderFrom smtp头中的from字段，建议域名与FromEmailAddress保持一致
+     * @param string $FromEmailAddress <p>发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+&lt;邮箱地址&gt;，别名中不能带有冒号(:)。</p>
+     * @param string $Subject <p>邮件主题</p>
+     * @param array $Destination <p>收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。<br>Destination/Cc/Bcc三个参数必须至少存在一个。</p>
+     * @param string $ReplyToAddresses <p>邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。</p>
+     * @param array $Cc <p>抄送人邮箱地址，最多支持抄送20人。</p>
+     * @param array $Bcc <p>密送人邮箱地址，最多支持抄送20人,Bcc和Destination不能重复。</p>
+     * @param Template $Template <p>使用模板发送时，填写模板相关参数。</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">注意</div>        <div class="rno-document-tip-desc"><p>如您未申请过特殊配置，则该字段为必填</p></div>    </div></blockquote>
+     * @param Simple $Simple <p>已废弃</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">说明</div>        <div class="rno-document-tip-desc"><p>仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</p></div>    </div></blockquote>
+     * @param array $Attachments <p>需要发送附件时，填写附件相关参数。腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍，应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 时接口会返回错误</p>
+     * @param string $Unsubscribe <p>退订链接选项</p><p>枚举值：</p><ul><li>0： 不加入退订链接</li><li>1： 简体中文</li><li>2： 英文</li><li>3： 繁体中文</li><li>4： 西班牙语</li><li>5： 法语</li><li>6： 德语</li><li>7： 日语</li><li>8： 韩语</li><li>9： 阿拉伯语</li><li>10： 泰语</li><li>11： 印尼语</li></ul>
+     * @param integer $TriggerType <p>邮件触发类型 0:非触发类，默认类型，营销类邮件、非即时类邮件等选择此类型  1:触发类，验证码等即时发送类邮件，若邮件超过一定大小，系统会自动选择非触发类型通道</p>
+     * @param string $SmtpMessageId <p>smtp头中的Message-Id字段</p>
+     * @param string $SmtpHeaders <p>smtp头中可以设置的其它字段</p>
+     * @param string $HeaderFrom <p>smtp头中的from字段，建议域名与FromEmailAddress保持一致</p>
      */
     function __construct()
     {

@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * ModifyDoc请求参数结构体
  *
  * @method string getBotBizId() 获取应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+修改知识库文档时，该参数填入知识库ID。
  * @method void setBotBizId(string $BotBizId) 设置应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+修改知识库文档时，该参数填入知识库ID。
  * @method string getDocBizId() 获取文档ID
  * @method void setDocBizId(string $DocBizId) 设置文档ID
  * @method boolean getIsRefer() 获取是否引用链接
@@ -63,6 +65,7 @@ class ModifyDocRequest extends AbstractModel
 {
     /**
      * @var string 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+修改知识库文档时，该参数填入知识库ID。
      */
     public $BotBizId;
 
@@ -150,6 +153,7 @@ class ModifyDocRequest extends AbstractModel
 
     /**
      * @param string $BotBizId 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+修改知识库文档时，该参数填入知识库ID。
      * @param string $DocBizId 文档ID
      * @param boolean $IsRefer 是否引用链接
      * @param integer $AttrRange 标签适用范围，1:全部，2:按条件。默认为1。

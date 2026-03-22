@@ -20,102 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MorphFace请求参数结构体
  *
- * @method array getImages() 获取图片 base64 数据，base64 编码后大小不可超过5M。 
-jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 
-人员人脸总数量至少2张，不可超过5张。 
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method void setImages(array $Images) 设置图片 base64 数据，base64 编码后大小不可超过5M。 
-jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 
-人员人脸总数量至少2张，不可超过5张。 
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method array getUrls() 获取图片的 Url 。对应图片 base64 编码后大小不可超过5M。jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 
-Url、Image必须提供一个，如果都提供，只使用 Url。图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-非腾讯云存储的Url速度和稳定性可能受一定影响。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。 
-人员人脸总数量不可超过5张。 
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
- * @method void setUrls(array $Urls) 设置图片的 Url 。对应图片 base64 编码后大小不可超过5M。jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 
-Url、Image必须提供一个，如果都提供，只使用 Url。图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-非腾讯云存储的Url速度和稳定性可能受一定影响。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。 
-人员人脸总数量不可超过5张。 
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
- * @method array getGradientInfos() 获取人脸渐变参数。可调整每张图片的展示时长、人像渐变的最长时间
- * @method void setGradientInfos(array $GradientInfos) 设置人脸渐变参数。可调整每张图片的展示时长、人像渐变的最长时间
- * @method integer getFps() 获取视频帧率，取值[1,25]。默认10
- * @method void setFps(integer $Fps) 设置视频帧率，取值[1,25]。默认10
- * @method integer getOutputType() 获取视频类型，取值0。目前仅支持MP4格式，默认为MP4格式
- * @method void setOutputType(integer $OutputType) 设置视频类型，取值0。目前仅支持MP4格式，默认为MP4格式
- * @method integer getOutputWidth() 获取视频宽度，取值[128,1280]。默认值720
- * @method void setOutputWidth(integer $OutputWidth) 设置视频宽度，取值[128,1280]。默认值720
- * @method integer getOutputHeight() 获取视频高度，取值[128,1280]。默认值1280
- * @method void setOutputHeight(integer $OutputHeight) 设置视频高度，取值[128,1280]。默认值1280
+ * @method array getImages() 获取<p>图片 base64 数据，base64 编码后大小不可超过5M。<br>jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。<br>人员人脸总数量至少2张，不可超过5张。<br>若图片中包含多张人脸，只选取其中人脸面积最大的人脸。<br>支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。</p>
+ * @method void setImages(array $Images) 设置<p>图片 base64 数据，base64 编码后大小不可超过5M。<br>jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。<br>人员人脸总数量至少2张，不可超过5张。<br>若图片中包含多张人脸，只选取其中人脸面积最大的人脸。<br>支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。</p>
+ * @method array getUrls() 获取<p>图片的 Url 。对应图片 base64 编码后大小不可超过5M。jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。<br>Url、Image必须提供一个，如果都提供，只使用 Url。图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。<br>非腾讯云存储的Url速度和稳定性可能受一定影响。<br>支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。<br>人员人脸总数量不可超过5张。<br>若图片中包含多张人脸，只选取其中人脸面积最大的人脸。</p>
+ * @method void setUrls(array $Urls) 设置<p>图片的 Url 。对应图片 base64 编码后大小不可超过5M。jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。<br>Url、Image必须提供一个，如果都提供，只使用 Url。图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。<br>非腾讯云存储的Url速度和稳定性可能受一定影响。<br>支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。<br>人员人脸总数量不可超过5张。<br>若图片中包含多张人脸，只选取其中人脸面积最大的人脸。</p>
+ * @method array getGradientInfos() 获取<p>人脸渐变参数。可调整每张图片的展示时长、人像渐变的最长时间</p>
+ * @method void setGradientInfos(array $GradientInfos) 设置<p>人脸渐变参数。可调整每张图片的展示时长、人像渐变的最长时间</p>
+ * @method integer getFps() 获取<p>视频帧率，取值[1,25]。默认10</p>
+ * @method void setFps(integer $Fps) 设置<p>视频帧率，取值[1,25]。默认10</p>
+ * @method integer getOutputType() 获取<p>视频类型，取值0。目前仅支持MP4格式，默认为MP4格式</p>
+ * @method void setOutputType(integer $OutputType) 设置<p>视频类型，取值0。目前仅支持MP4格式，默认为MP4格式</p>
+ * @method integer getOutputWidth() 获取<p>视频宽度，取值[128,1280]。<br>单位：px<br>默认值：720</p>
+ * @method void setOutputWidth(integer $OutputWidth) 设置<p>视频宽度，取值[128,1280]。<br>单位：px<br>默认值：720</p>
+ * @method integer getOutputHeight() 获取<p>视频高度，取值[128,1280]。<br>单位：px<br>默认值：1280</p>
+ * @method void setOutputHeight(integer $OutputHeight) 设置<p>视频高度，取值[128,1280]。<br>单位：px<br>默认值：1280</p>
  */
 class MorphFaceRequest extends AbstractModel
 {
     /**
-     * @var array 图片 base64 数据，base64 编码后大小不可超过5M。 
-jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 
-人员人脸总数量至少2张，不可超过5张。 
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @var array <p>图片 base64 数据，base64 编码后大小不可超过5M。<br>jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。<br>人员人脸总数量至少2张，不可超过5张。<br>若图片中包含多张人脸，只选取其中人脸面积最大的人脸。<br>支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。</p>
      */
     public $Images;
 
     /**
-     * @var array 图片的 Url 。对应图片 base64 编码后大小不可超过5M。jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 
-Url、Image必须提供一个，如果都提供，只使用 Url。图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-非腾讯云存储的Url速度和稳定性可能受一定影响。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。 
-人员人脸总数量不可超过5张。 
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+     * @var array <p>图片的 Url 。对应图片 base64 编码后大小不可超过5M。jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。<br>Url、Image必须提供一个，如果都提供，只使用 Url。图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。<br>非腾讯云存储的Url速度和稳定性可能受一定影响。<br>支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。<br>人员人脸总数量不可超过5张。<br>若图片中包含多张人脸，只选取其中人脸面积最大的人脸。</p>
      */
     public $Urls;
 
     /**
-     * @var array 人脸渐变参数。可调整每张图片的展示时长、人像渐变的最长时间
+     * @var array <p>人脸渐变参数。可调整每张图片的展示时长、人像渐变的最长时间</p>
      */
     public $GradientInfos;
 
     /**
-     * @var integer 视频帧率，取值[1,25]。默认10
+     * @var integer <p>视频帧率，取值[1,25]。默认10</p>
      */
     public $Fps;
 
     /**
-     * @var integer 视频类型，取值0。目前仅支持MP4格式，默认为MP4格式
+     * @var integer <p>视频类型，取值0。目前仅支持MP4格式，默认为MP4格式</p>
      */
     public $OutputType;
 
     /**
-     * @var integer 视频宽度，取值[128,1280]。默认值720
+     * @var integer <p>视频宽度，取值[128,1280]。<br>单位：px<br>默认值：720</p>
      */
     public $OutputWidth;
 
     /**
-     * @var integer 视频高度，取值[128,1280]。默认值1280
+     * @var integer <p>视频高度，取值[128,1280]。<br>单位：px<br>默认值：1280</p>
      */
     public $OutputHeight;
 
     /**
-     * @param array $Images 图片 base64 数据，base64 编码后大小不可超过5M。 
-jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 
-人员人脸总数量至少2张，不可超过5张。 
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param array $Urls 图片的 Url 。对应图片 base64 编码后大小不可超过5M。jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 
-Url、Image必须提供一个，如果都提供，只使用 Url。图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-非腾讯云存储的Url速度和稳定性可能受一定影响。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。 
-人员人脸总数量不可超过5张。 
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
-     * @param array $GradientInfos 人脸渐变参数。可调整每张图片的展示时长、人像渐变的最长时间
-     * @param integer $Fps 视频帧率，取值[1,25]。默认10
-     * @param integer $OutputType 视频类型，取值0。目前仅支持MP4格式，默认为MP4格式
-     * @param integer $OutputWidth 视频宽度，取值[128,1280]。默认值720
-     * @param integer $OutputHeight 视频高度，取值[128,1280]。默认值1280
+     * @param array $Images <p>图片 base64 数据，base64 编码后大小不可超过5M。<br>jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。<br>人员人脸总数量至少2张，不可超过5张。<br>若图片中包含多张人脸，只选取其中人脸面积最大的人脸。<br>支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。</p>
+     * @param array $Urls <p>图片的 Url 。对应图片 base64 编码后大小不可超过5M。jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。<br>Url、Image必须提供一个，如果都提供，只使用 Url。图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。<br>非腾讯云存储的Url速度和稳定性可能受一定影响。<br>支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。<br>人员人脸总数量不可超过5张。<br>若图片中包含多张人脸，只选取其中人脸面积最大的人脸。</p>
+     * @param array $GradientInfos <p>人脸渐变参数。可调整每张图片的展示时长、人像渐变的最长时间</p>
+     * @param integer $Fps <p>视频帧率，取值[1,25]。默认10</p>
+     * @param integer $OutputType <p>视频类型，取值0。目前仅支持MP4格式，默认为MP4格式</p>
+     * @param integer $OutputWidth <p>视频宽度，取值[128,1280]。<br>单位：px<br>默认值：720</p>
+     * @param integer $OutputHeight <p>视频高度，取值[128,1280]。<br>单位：px<br>默认值：1280</p>
      */
     function __construct()
     {

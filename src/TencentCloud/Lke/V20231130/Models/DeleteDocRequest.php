@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getDocBizIds() 获取文档业务ID列表
  * @method void setDocBizIds(array $DocBizIds) 设置文档业务ID列表
- * @method string getBotBizId() 获取应用ID
- * @method void setBotBizId(string $BotBizId) 设置应用ID
+ * @method string getBotBizId() 获取应用ID。
+删除知识库文档时，该参数填入知识库ID。
+ * @method void setBotBizId(string $BotBizId) 设置应用ID。
+删除知识库文档时，该参数填入知识库ID。
  */
 class DeleteDocRequest extends AbstractModel
 {
@@ -33,13 +35,15 @@ class DeleteDocRequest extends AbstractModel
     public $DocBizIds;
 
     /**
-     * @var string 应用ID
+     * @var string 应用ID。
+删除知识库文档时，该参数填入知识库ID。
      */
     public $BotBizId;
 
     /**
      * @param array $DocBizIds 文档业务ID列表
-     * @param string $BotBizId 应用ID
+     * @param string $BotBizId 应用ID。
+删除知识库文档时，该参数填入知识库ID。
      */
     function __construct()
     {

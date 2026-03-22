@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SaveDoc请求参数结构体
  *
- * @method string getBotBizId() 获取应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
- * @method void setBotBizId(string $BotBizId) 设置应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+ * @method string getBotBizId() 获取应用ID。应用ID 获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+导入知识库文档时，该参数填入知识库 ID。
+
+ * @method void setBotBizId(string $BotBizId) 设置应用ID。应用ID 获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+导入知识库文档时，该参数填入知识库 ID。
+
  * @method string getFileName() 获取文件名，需要包含文件扩展名
  * @method void setFileName(string $FileName) 设置文件名，需要包含文件扩展名
  * @method string getFileType() 获取文档支持下面类型
@@ -258,7 +262,9 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
 class SaveDocRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+     * @var string 应用ID。应用ID 获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+导入知识库文档时，该参数填入知识库 ID。
+
      */
     public $BotBizId;
 
@@ -463,7 +469,9 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
     public $EnableScope;
 
     /**
-     * @param string $BotBizId 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+     * @param string $BotBizId 应用ID。应用ID 获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+导入知识库文档时，该参数填入知识库 ID。
+
      * @param string $FileName 文件名，需要包含文件扩展名
      * @param string $FileType 文档支持下面类型
 pdf、doc、docx、ppt、mhtml、pptx、wps、ppsx，单个文件不超过200MB；

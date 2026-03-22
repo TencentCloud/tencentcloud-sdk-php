@@ -20,62 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 扩展字段。
  *
- * @method string getUserDesignatedUrl() 获取预签名的上传url，支持把视频直接传到客户指定的地址。
- * @method void setUserDesignatedUrl(string $UserDesignatedUrl) 设置预签名的上传url，支持把视频直接传到客户指定的地址。
- * @method string getCallbackUrl() 获取回调地址
-需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。
-数据格式如下：
-{
-    "JobId": "1397428070633955328",
-    "Status": "DONE",
-    "ErrorCode": "",
-    "ErrorMessage": "",
-    "ResultVideoUrl": "https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4"
-}
- * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址
-需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。
-数据格式如下：
-{
-    "JobId": "1397428070633955328",
-    "Status": "DONE",
-    "ErrorCode": "",
-    "ErrorMessage": "",
-    "ResultVideoUrl": "https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4"
-}
+ * @method string getUserDesignatedUrl() 获取<p>预签名的上传url，支持把视频直接传到客户指定的地址。</p>
+ * @method void setUserDesignatedUrl(string $UserDesignatedUrl) 设置<p>预签名的上传url，支持把视频直接传到客户指定的地址。</p>
+ * @method string getCallbackUrl() 获取<p>回调地址<br>需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。<br>数据格式如下：<br>{<br>    &quot;JobId&quot;: &quot;1397428070633955328&quot;,<br>    &quot;Status&quot;: &quot;DONE&quot;,<br>    &quot;ErrorCode&quot;: &quot;&quot;,<br>    &quot;ErrorMessage&quot;: &quot;&quot;,<br>    &quot;ResultVideoUrl&quot;: &quot;https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4&quot;<br>}</p>
+ * @method void setCallbackUrl(string $CallbackUrl) 设置<p>回调地址<br>需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。<br>数据格式如下：<br>{<br>    &quot;JobId&quot;: &quot;1397428070633955328&quot;,<br>    &quot;Status&quot;: &quot;DONE&quot;,<br>    &quot;ErrorCode&quot;: &quot;&quot;,<br>    &quot;ErrorMessage&quot;: &quot;&quot;,<br>    &quot;ResultVideoUrl&quot;: &quot;https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4&quot;<br>}</p>
+ * @method string getBGMText() 获取<p>BGM音频文本。</p>
+ * @method void setBGMText(string $BGMText) 设置<p>BGM音频文本。</p>
  */
 class ExtraParam extends AbstractModel
 {
     /**
-     * @var string 预签名的上传url，支持把视频直接传到客户指定的地址。
+     * @var string <p>预签名的上传url，支持把视频直接传到客户指定的地址。</p>
      */
     public $UserDesignatedUrl;
 
     /**
-     * @var string 回调地址
-需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。
-数据格式如下：
-{
-    "JobId": "1397428070633955328",
-    "Status": "DONE",
-    "ErrorCode": "",
-    "ErrorMessage": "",
-    "ResultVideoUrl": "https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4"
-}
+     * @var string <p>回调地址<br>需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。<br>数据格式如下：<br>{<br>    &quot;JobId&quot;: &quot;1397428070633955328&quot;,<br>    &quot;Status&quot;: &quot;DONE&quot;,<br>    &quot;ErrorCode&quot;: &quot;&quot;,<br>    &quot;ErrorMessage&quot;: &quot;&quot;,<br>    &quot;ResultVideoUrl&quot;: &quot;https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4&quot;<br>}</p>
      */
     public $CallbackUrl;
 
     /**
-     * @param string $UserDesignatedUrl 预签名的上传url，支持把视频直接传到客户指定的地址。
-     * @param string $CallbackUrl 回调地址
-需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。
-数据格式如下：
-{
-    "JobId": "1397428070633955328",
-    "Status": "DONE",
-    "ErrorCode": "",
-    "ErrorMessage": "",
-    "ResultVideoUrl": "https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4"
-}
+     * @var string <p>BGM音频文本。</p>
+     */
+    public $BGMText;
+
+    /**
+     * @param string $UserDesignatedUrl <p>预签名的上传url，支持把视频直接传到客户指定的地址。</p>
+     * @param string $CallbackUrl <p>回调地址<br>需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。<br>数据格式如下：<br>{<br>    &quot;JobId&quot;: &quot;1397428070633955328&quot;,<br>    &quot;Status&quot;: &quot;DONE&quot;,<br>    &quot;ErrorCode&quot;: &quot;&quot;,<br>    &quot;ErrorMessage&quot;: &quot;&quot;,<br>    &quot;ResultVideoUrl&quot;: &quot;https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4&quot;<br>}</p>
+     * @param string $BGMText <p>BGM音频文本。</p>
      */
     function __construct()
     {
@@ -96,6 +68,10 @@ class ExtraParam extends AbstractModel
 
         if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
             $this->CallbackUrl = $param["CallbackUrl"];
+        }
+
+        if (array_key_exists("BGMText",$param) and $param["BGMText"] !== null) {
+            $this->BGMText = $param["BGMText"];
         }
     }
 }

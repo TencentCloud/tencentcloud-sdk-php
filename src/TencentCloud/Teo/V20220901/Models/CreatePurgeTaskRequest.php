@@ -28,13 +28,13 @@ use TencentCloud\Common\AbstractModel;
 <li>purge_url：URL刷新；</li>
 <li>purge_prefix：目录刷新；</li>
 <li>purge_host：Hostname 刷新；</li>
-<li>purge_all：站点下全部缓存刷新；</li>
+<li>purge_all：站点下全部缓存刷新（取该值时不支持 ZoneId 入参为 *）；</li>
 <li>purge_cache_tag：cache-tag 刷新。</li>缓存清除类型详情请查看[清除缓存](https://cloud.tencent.com/document/product/1552/70759)。
  * @method void setType(string $Type) 设置节点缓存清除类型，取值有：
 <li>purge_url：URL刷新；</li>
 <li>purge_prefix：目录刷新；</li>
 <li>purge_host：Hostname 刷新；</li>
-<li>purge_all：站点下全部缓存刷新；</li>
+<li>purge_all：站点下全部缓存刷新（取该值时不支持 ZoneId 入参为 *）；</li>
 <li>purge_cache_tag：cache-tag 刷新。</li>缓存清除类型详情请查看[清除缓存](https://cloud.tencent.com/document/product/1552/70759)。
  * @method string getMethod() 获取节点缓存清除方法，针对目录刷新、Hostname 刷新以及刷新全部缓存类型有效，取值有：<li> invalidate：仅刷新目录下产生了更新的资源；</li><li> delete：无论目录下资源是否更新都刷新节点资源。</li>默认值： invalidate。
  * @method void setMethod(string $Method) 设置节点缓存清除方法，针对目录刷新、Hostname 刷新以及刷新全部缓存类型有效，取值有：<li> invalidate：仅刷新目录下产生了更新的资源；</li><li> delete：无论目录下资源是否更新都刷新节点资源。</li>默认值： invalidate。
@@ -60,7 +60,7 @@ class CreatePurgeTaskRequest extends AbstractModel
 <li>purge_url：URL刷新；</li>
 <li>purge_prefix：目录刷新；</li>
 <li>purge_host：Hostname 刷新；</li>
-<li>purge_all：站点下全部缓存刷新；</li>
+<li>purge_all：站点下全部缓存刷新（取该值时不支持 ZoneId 入参为 *）；</li>
 <li>purge_cache_tag：cache-tag 刷新。</li>缓存清除类型详情请查看[清除缓存](https://cloud.tencent.com/document/product/1552/70759)。
      */
     public $Type;
@@ -94,7 +94,7 @@ class CreatePurgeTaskRequest extends AbstractModel
 <li>purge_url：URL刷新；</li>
 <li>purge_prefix：目录刷新；</li>
 <li>purge_host：Hostname 刷新；</li>
-<li>purge_all：站点下全部缓存刷新；</li>
+<li>purge_all：站点下全部缓存刷新（取该值时不支持 ZoneId 入参为 *）；</li>
 <li>purge_cache_tag：cache-tag 刷新。</li>缓存清除类型详情请查看[清除缓存](https://cloud.tencent.com/document/product/1552/70759)。
      * @param string $Method 节点缓存清除方法，针对目录刷新、Hostname 刷新以及刷新全部缓存类型有效，取值有：<li> invalidate：仅刷新目录下产生了更新的资源；</li><li> delete：无论目录下资源是否更新都刷新节点资源。</li>默认值： invalidate。
      * @param array $Targets 需清除缓存的资源列表，如 https://www.example.com/example.jpg，必须携带协议信息。更多元素格式依据清除缓存类型而定，可参考下方接口调用示例。<li>单次提交的任务数受计费套餐配额限制，请查看 [EO 计费套餐](https://cloud.tencent.com/document/product/1552/77380)。</li>

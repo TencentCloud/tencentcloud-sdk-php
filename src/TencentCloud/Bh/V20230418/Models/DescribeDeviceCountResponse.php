@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ses\V20201002\Models;
+namespace TencentCloud\Bh\V20230418\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SendEmail返回参数结构体
+ * DescribeDeviceCount返回参数结构体
  *
- * @method string getMessageId() 获取<p>接受消息生成的唯一消息标识符。</p>
- * @method void setMessageId(string $MessageId) 设置<p>接受消息生成的唯一消息标识符。</p>
+ * @method integer getTotalCount() 获取主机总数
+ * @method void setTotalCount(integer $TotalCount) 设置主机总数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class SendEmailResponse extends AbstractModel
+class DescribeDeviceCountResponse extends AbstractModel
 {
     /**
-     * @var string <p>接受消息生成的唯一消息标识符。</p>
+     * @var integer 主机总数
      */
-    public $MessageId;
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class SendEmailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $MessageId <p>接受消息生成的唯一消息标识符。</p>
+     * @param integer $TotalCount 主机总数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class SendEmailResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MessageId",$param) and $param["MessageId"] !== null) {
-            $this->MessageId = $param["MessageId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

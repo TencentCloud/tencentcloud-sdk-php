@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainInstanceId(string $DomainInstanceId) 设置管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
  * @method string getDescription() 获取详情
  * @method void setDescription(string $Description) 设置详情
- * @method integer getOsType() 获取系统类型（0: win，1：linux，2: mac，4：android，5：ios ； 默认值0）(只支持32位)
- * @method void setOsType(integer $OsType) 设置系统类型（0: win，1：linux，2: mac，4：android，5：ios ； 默认值0）(只支持32位)
+ * @method integer getOsType() 获取系统类型（0: win，1：linux，2: mac，4：android，5：ios，-1：全系统（SaaS一体化版本） ； 不传默认为0）(只支持32位)
+ * @method void setOsType(integer $OsType) 设置系统类型（0: win，1：linux，2: mac，4：android，5：ios，-1：全系统（SaaS一体化版本） ； 不传默认为0）(只支持32位)
  * @method integer getTimeType() 获取分组类型（0:手动分组；非0为自动划分分组；具体枚举值为：1:自动每小时划分分组、2:自动每天划分分组、3:自定义时间划分分组； 默认值0）(只支持32位)
  * @method void setTimeType(integer $TimeType) 设置分组类型（0:手动分组；非0为自动划分分组；具体枚举值为：1:自动每小时划分分组、2:自动每天划分分组、3:自定义时间划分分组； 默认值0）(只支持32位)
  * @method integer getAutoMinute() 获取选填，TimeType=3时的自动划分时间，其他情况为0（单位min）(只支持32位)
@@ -53,7 +53,7 @@ class CreateDeviceVirtualGroupRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var integer 系统类型（0: win，1：linux，2: mac，4：android，5：ios ； 默认值0）(只支持32位)
+     * @var integer 系统类型（0: win，1：linux，2: mac，4：android，5：ios，-1：全系统（SaaS一体化版本） ； 不传默认为0）(只支持32位)
      */
     public $OsType;
 
@@ -76,7 +76,7 @@ class CreateDeviceVirtualGroupRequest extends AbstractModel
      * @param string $DeviceVirtualGroupName 必填，终端自定义分组名
      * @param string $DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
      * @param string $Description 详情
-     * @param integer $OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios ； 默认值0）(只支持32位)
+     * @param integer $OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios，-1：全系统（SaaS一体化版本） ； 不传默认为0）(只支持32位)
      * @param integer $TimeType 分组类型（0:手动分组；非0为自动划分分组；具体枚举值为：1:自动每小时划分分组、2:自动每天划分分组、3:自定义时间划分分组； 默认值0）(只支持32位)
      * @param integer $AutoMinute 选填，TimeType=3时的自动划分时间，其他情况为0（单位min）(只支持32位)
      * @param ComplexRule $AutoRules 选填，手动分组不填，自动划分分组的划分规则数据

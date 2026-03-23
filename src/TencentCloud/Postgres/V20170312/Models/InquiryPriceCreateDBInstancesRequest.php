@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceType(string $InstanceType) 设置<p>实例类型，默认primary，支持如下：<br>primary（双机高可用（一主一从））<br>readonly（只读实例）</p>
  * @method string getDBEngine() 获取<p>DB引擎，默认postgresql，支持如下：<br>postgresql（云数据库PostgreSQL）<br>mssql_compatible（MSSQL兼容-云数据库PostgreSQL）</p>
  * @method void setDBEngine(string $DBEngine) 设置<p>DB引擎，默认postgresql，支持如下：<br>postgresql（云数据库PostgreSQL）<br>mssql_compatible（MSSQL兼容-云数据库PostgreSQL）</p>
+ * @method string getStorageType() 获取<p>实例存储类型，可选值：PHYSICAL_LOCAL_SSD：物理机本地ssd硬盘 CLOUD_PREMIUM：高性能云硬盘 CLOUD_SSD：ssd云硬盘 CLOUD_HSSD：增强型ssd云硬盘</p>
+ * @method void setStorageType(string $StorageType) 设置<p>实例存储类型，可选值：PHYSICAL_LOCAL_SSD：物理机本地ssd硬盘 CLOUD_PREMIUM：高性能云硬盘 CLOUD_SSD：ssd云硬盘 CLOUD_HSSD：增强型ssd云硬盘</p>
  */
 class InquiryPriceCreateDBInstancesRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class InquiryPriceCreateDBInstancesRequest extends AbstractModel
     public $DBEngine;
 
     /**
+     * @var string <p>实例存储类型，可选值：PHYSICAL_LOCAL_SSD：物理机本地ssd硬盘 CLOUD_PREMIUM：高性能云硬盘 CLOUD_SSD：ssd云硬盘 CLOUD_HSSD：增强型ssd云硬盘</p>
+     */
+    public $StorageType;
+
+    /**
      * @param string $Zone <p>可用区名称。该参数可以通过调用<a href="https://cloud.tencent.com/document/product/409/16769"> DescribeZones</a> 接口的返回值中的Zone字段来获取。</p>
      * @param string $SpecCode <p>规格ID。该参数可以通过调用<a href="https://cloud.tencent.com/document/product/409/89019">DescribeClasses</a>接口的返回值中的SpecCode字段来获取。</p>
      * @param integer $Storage <p>存储容量大小，单位：GB。该参数的设置步长为10。</p>
@@ -96,6 +103,7 @@ class InquiryPriceCreateDBInstancesRequest extends AbstractModel
      * @param string $InstanceChargeType <p>实例计费类型。目前支持：PREPAID（预付费，即包年包月）和 POSTPAID（按量计费）。<br>默认值：PREPAID</p>
      * @param string $InstanceType <p>实例类型，默认primary，支持如下：<br>primary（双机高可用（一主一从））<br>readonly（只读实例）</p>
      * @param string $DBEngine <p>DB引擎，默认postgresql，支持如下：<br>postgresql（云数据库PostgreSQL）<br>mssql_compatible（MSSQL兼容-云数据库PostgreSQL）</p>
+     * @param string $StorageType <p>实例存储类型，可选值：PHYSICAL_LOCAL_SSD：物理机本地ssd硬盘 CLOUD_PREMIUM：高性能云硬盘 CLOUD_SSD：ssd云硬盘 CLOUD_HSSD：增强型ssd云硬盘</p>
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class InquiryPriceCreateDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("DBEngine",$param) and $param["DBEngine"] !== null) {
             $this->DBEngine = $param["DBEngine"];
+        }
+
+        if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
+            $this->StorageType = $param["StorageType"];
         }
     }
 }

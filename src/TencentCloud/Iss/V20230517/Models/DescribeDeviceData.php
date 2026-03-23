@@ -20,262 +20,266 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询设备接口返回数据
  *
- * @method string getDeviceId() 获取设备ID
- * @method void setDeviceId(string $DeviceId) 设置设备ID
- * @method string getCode() 获取设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）
- * @method void setCode(string $Code) 设置设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）
- * @method string getName() 获取设备名称
- * @method void setName(string $Name) 设置设备名称
- * @method integer getAccessProtocol() 获取设备接入协议，1:RTMP,2:GB,3:GW 
- * @method void setAccessProtocol(integer $AccessProtocol) 设置设备接入协议，1:RTMP,2:GB,3:GW 
- * @method integer getType() 获取设备类型，1:IPC,2:NVR
- * @method void setType(integer $Type) 设置设备类型，1:IPC,2:NVR
- * @method string getClusterId() 获取设备接入服务节点id
- * @method void setClusterId(string $ClusterId) 设置设备接入服务节点id
- * @method string getClusterName() 获取设备接入服务节点名称
-
- * @method void setClusterName(string $ClusterName) 设置设备接入服务节点名称
-
- * @method integer getTransportProtocol() 获取设备流传输协议，1:UDP,2:TCP 
- * @method void setTransportProtocol(integer $TransportProtocol) 设置设备流传输协议，1:UDP,2:TCP 
- * @method string getPassword() 获取设备密码
- * @method void setPassword(string $Password) 设置设备密码
- * @method string getDescription() 获取设备描述
- * @method void setDescription(string $Description) 设置设备描述
- * @method string getSipId() 获取sip服务ID
- * @method void setSipId(string $SipId) 设置sip服务ID
- * @method string getSipDomain() 获取sip服务域
- * @method void setSipDomain(string $SipDomain) 设置sip服务域
- * @method string getSipIp() 获取sip服务IP地址
- * @method void setSipIp(string $SipIp) 设置sip服务IP地址
- * @method integer getSipPort() 获取sip服务端口
- * @method void setSipPort(integer $SipPort) 设置sip服务端口
- * @method string getPushStreamUrl() 获取Rtmp设备推流地址(仅rtmp设备有效)
- * @method void setPushStreamUrl(string $PushStreamUrl) 设置Rtmp设备推流地址(仅rtmp设备有效)
- * @method integer getStatus() 获取设备状态，0:未注册,1:在线,2:离线,3:禁用
- * @method void setStatus(integer $Status) 设置设备状态，0:未注册,1:在线,2:离线,3:禁用
- * @method string getOrganizationId() 获取设备所属组织ID
- * @method void setOrganizationId(string $OrganizationId) 设置设备所属组织ID
- * @method string getGatewayId() 获取设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）
- * @method void setGatewayId(string $GatewayId) 设置设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）
- * @method string getGatewayName() 获取设备所属网关名称
- * @method void setGatewayName(string $GatewayName) 设置设备所属网关名称
- * @method string getProtocolTypeName() 获取设备网关协议名称
- * @method void setProtocolTypeName(string $ProtocolTypeName) 设置设备网关协议名称
- * @method integer getProtocolType() 获取网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
- * @method void setProtocolType(integer $ProtocolType) 设置网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
- * @method string getIp() 获取设备接入IP
- * @method void setIp(string $Ip) 设置设备接入IP
- * @method integer getPort() 获取设备Port
- * @method void setPort(integer $Port) 设置设备Port
- * @method string getUsername() 获取设备用户名
- * @method void setUsername(string $Username) 设置设备用户名
- * @method string getRegion() 获取设备地域
- * @method void setRegion(string $Region) 设置设备地域
- * @method string getManufacturer() 获取设备厂商
- * @method void setManufacturer(string $Manufacturer) 设置设备厂商
- * @method integer getAudioSwitch() 获取音频关开（0：关闭；1：开启）关闭时丢弃音频	
- * @method void setAudioSwitch(integer $AudioSwitch) 设置音频关开（0：关闭；1：开启）关闭时丢弃音频	
- * @method integer getSubscribeSwitch() 获取订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效	
- * @method void setSubscribeSwitch(integer $SubscribeSwitch) 设置订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效	
- * @method string getAppName() 获取RTMP推流地址自定义appName
- * @method void setAppName(string $AppName) 设置RTMP推流地址自定义appName
- * @method string getStreamName() 获取RTMP推流地址自定义streamName
- * @method void setStreamName(string $StreamName) 设置RTMP推流地址自定义streamName
- * @method integer getSilentFrameSwitch() 获取是否开启静音帧（0：关闭；1 开启）
- * @method void setSilentFrameSwitch(integer $SilentFrameSwitch) 设置是否开启静音帧（0：关闭；1 开启）
+ * @method string getDeviceId() 获取<p>设备ID</p>
+ * @method void setDeviceId(string $DeviceId) 设置<p>设备ID</p>
+ * @method string getCode() 获取<p>设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）</p>
+ * @method void setCode(string $Code) 设置<p>设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）</p>
+ * @method string getName() 获取<p>设备名称</p>
+ * @method void setName(string $Name) 设置<p>设备名称</p>
+ * @method integer getAccessProtocol() 获取<p>设备接入协议，1:RTMP,2:GB,3:GW</p>
+ * @method void setAccessProtocol(integer $AccessProtocol) 设置<p>设备接入协议，1:RTMP,2:GB,3:GW</p>
+ * @method integer getType() 获取<p>设备类型，1:IPC,2:NVR</p>
+ * @method void setType(integer $Type) 设置<p>设备类型，1:IPC,2:NVR</p>
+ * @method string getClusterId() 获取<p>设备接入服务节点id</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>设备接入服务节点id</p>
+ * @method string getClusterName() 获取<p>设备接入服务节点名称</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>设备接入服务节点名称</p>
+ * @method integer getTransportProtocol() 获取<p>设备流传输协议，1:UDP,2:TCP</p>
+ * @method void setTransportProtocol(integer $TransportProtocol) 设置<p>设备流传输协议，1:UDP,2:TCP</p>
+ * @method string getPassword() 获取<p>设备密码</p>
+ * @method void setPassword(string $Password) 设置<p>设备密码</p>
+ * @method string getDescription() 获取<p>设备描述</p>
+ * @method void setDescription(string $Description) 设置<p>设备描述</p>
+ * @method string getSipId() 获取<p>sip服务ID</p>
+ * @method void setSipId(string $SipId) 设置<p>sip服务ID</p>
+ * @method string getSipDomain() 获取<p>sip服务域</p>
+ * @method void setSipDomain(string $SipDomain) 设置<p>sip服务域</p>
+ * @method string getSipIp() 获取<p>sip服务IP地址</p>
+ * @method void setSipIp(string $SipIp) 设置<p>sip服务IP地址</p>
+ * @method integer getSipPort() 获取<p>sip服务端口</p>
+ * @method void setSipPort(integer $SipPort) 设置<p>sip服务端口</p>
+ * @method string getPushStreamUrl() 获取<p>Rtmp设备推流地址(仅rtmp设备有效)</p>
+ * @method void setPushStreamUrl(string $PushStreamUrl) 设置<p>Rtmp设备推流地址(仅rtmp设备有效)</p>
+ * @method integer getStatus() 获取<p>设备状态，0:未注册,1:在线,2:离线,3:禁用</p>
+ * @method void setStatus(integer $Status) 设置<p>设备状态，0:未注册,1:在线,2:离线,3:禁用</p>
+ * @method string getOrganizationId() 获取<p>设备所属组织ID</p>
+ * @method void setOrganizationId(string $OrganizationId) 设置<p>设备所属组织ID</p>
+ * @method string getGatewayId() 获取<p>设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）</p>
+ * @method void setGatewayId(string $GatewayId) 设置<p>设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）</p>
+ * @method string getGatewayName() 获取<p>设备所属网关名称</p>
+ * @method void setGatewayName(string $GatewayName) 设置<p>设备所属网关名称</p>
+ * @method string getProtocolTypeName() 获取<p>设备网关协议名称</p>
+ * @method void setProtocolTypeName(string $ProtocolTypeName) 设置<p>设备网关协议名称</p>
+ * @method integer getProtocolType() 获取<p>网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）</p>
+ * @method void setProtocolType(integer $ProtocolType) 设置<p>网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）</p>
+ * @method string getIp() 获取<p>设备接入IP</p>
+ * @method void setIp(string $Ip) 设置<p>设备接入IP</p>
+ * @method integer getPort() 获取<p>设备Port</p>
+ * @method void setPort(integer $Port) 设置<p>设备Port</p>
+ * @method string getUsername() 获取<p>设备用户名</p>
+ * @method void setUsername(string $Username) 设置<p>设备用户名</p>
+ * @method string getRegion() 获取<p>设备地域</p>
+ * @method void setRegion(string $Region) 设置<p>设备地域</p>
+ * @method string getManufacturer() 获取<p>设备厂商</p>
+ * @method void setManufacturer(string $Manufacturer) 设置<p>设备厂商</p>
+ * @method integer getAudioSwitch() 获取<p>音频关开（0：关闭；1：开启）关闭时丢弃音频</p>
+ * @method void setAudioSwitch(integer $AudioSwitch) 设置<p>音频关开（0：关闭；1：开启）关闭时丢弃音频</p>
+ * @method integer getSubscribeSwitch() 获取<p>订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效</p>
+ * @method void setSubscribeSwitch(integer $SubscribeSwitch) 设置<p>订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效</p>
+ * @method string getAppName() 获取<p>RTMP推流地址自定义appName</p>
+ * @method void setAppName(string $AppName) 设置<p>RTMP推流地址自定义appName</p>
+ * @method string getStreamName() 获取<p>RTMP推流地址自定义streamName</p>
+ * @method void setStreamName(string $StreamName) 设置<p>RTMP推流地址自定义streamName</p>
+ * @method integer getSilentFrameSwitch() 获取<p>是否开启静音帧（0：关闭；1 开启）</p>
+ * @method void setSilentFrameSwitch(integer $SilentFrameSwitch) 设置<p>是否开启静音帧（0：关闭；1 开启）</p>
+ * @method string getPushStreamSecureUrl() 获取<p>Rtmp设备安全认证推流地址(仅rtmp设备有效)</p>
+ * @method void setPushStreamSecureUrl(string $PushStreamSecureUrl) 设置<p>Rtmp设备安全认证推流地址(仅rtmp设备有效)</p>
  */
 class DescribeDeviceData extends AbstractModel
 {
     /**
-     * @var string 设备ID
+     * @var string <p>设备ID</p>
      */
     public $DeviceId;
 
     /**
-     * @var string 设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）
+     * @var string <p>设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）</p>
      */
     public $Code;
 
     /**
-     * @var string 设备名称
+     * @var string <p>设备名称</p>
      */
     public $Name;
 
     /**
-     * @var integer 设备接入协议，1:RTMP,2:GB,3:GW 
+     * @var integer <p>设备接入协议，1:RTMP,2:GB,3:GW</p>
      */
     public $AccessProtocol;
 
     /**
-     * @var integer 设备类型，1:IPC,2:NVR
+     * @var integer <p>设备类型，1:IPC,2:NVR</p>
      */
     public $Type;
 
     /**
-     * @var string 设备接入服务节点id
+     * @var string <p>设备接入服务节点id</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 设备接入服务节点名称
-
+     * @var string <p>设备接入服务节点名称</p>
      */
     public $ClusterName;
 
     /**
-     * @var integer 设备流传输协议，1:UDP,2:TCP 
+     * @var integer <p>设备流传输协议，1:UDP,2:TCP</p>
      */
     public $TransportProtocol;
 
     /**
-     * @var string 设备密码
+     * @var string <p>设备密码</p>
      */
     public $Password;
 
     /**
-     * @var string 设备描述
+     * @var string <p>设备描述</p>
      */
     public $Description;
 
     /**
-     * @var string sip服务ID
+     * @var string <p>sip服务ID</p>
      */
     public $SipId;
 
     /**
-     * @var string sip服务域
+     * @var string <p>sip服务域</p>
      */
     public $SipDomain;
 
     /**
-     * @var string sip服务IP地址
+     * @var string <p>sip服务IP地址</p>
      */
     public $SipIp;
 
     /**
-     * @var integer sip服务端口
+     * @var integer <p>sip服务端口</p>
      */
     public $SipPort;
 
     /**
-     * @var string Rtmp设备推流地址(仅rtmp设备有效)
+     * @var string <p>Rtmp设备推流地址(仅rtmp设备有效)</p>
      */
     public $PushStreamUrl;
 
     /**
-     * @var integer 设备状态，0:未注册,1:在线,2:离线,3:禁用
+     * @var integer <p>设备状态，0:未注册,1:在线,2:离线,3:禁用</p>
      */
     public $Status;
 
     /**
-     * @var string 设备所属组织ID
+     * @var string <p>设备所属组织ID</p>
      */
     public $OrganizationId;
 
     /**
-     * @var string 设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）
+     * @var string <p>设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）</p>
      */
     public $GatewayId;
 
     /**
-     * @var string 设备所属网关名称
+     * @var string <p>设备所属网关名称</p>
      */
     public $GatewayName;
 
     /**
-     * @var string 设备网关协议名称
+     * @var string <p>设备网关协议名称</p>
      */
     public $ProtocolTypeName;
 
     /**
-     * @var integer 网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
+     * @var integer <p>网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）</p>
      */
     public $ProtocolType;
 
     /**
-     * @var string 设备接入IP
+     * @var string <p>设备接入IP</p>
      */
     public $Ip;
 
     /**
-     * @var integer 设备Port
+     * @var integer <p>设备Port</p>
      */
     public $Port;
 
     /**
-     * @var string 设备用户名
+     * @var string <p>设备用户名</p>
      */
     public $Username;
 
     /**
-     * @var string 设备地域
+     * @var string <p>设备地域</p>
      */
     public $Region;
 
     /**
-     * @var string 设备厂商
+     * @var string <p>设备厂商</p>
      */
     public $Manufacturer;
 
     /**
-     * @var integer 音频关开（0：关闭；1：开启）关闭时丢弃音频	
+     * @var integer <p>音频关开（0：关闭；1：开启）关闭时丢弃音频</p>
      */
     public $AudioSwitch;
 
     /**
-     * @var integer 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效	
+     * @var integer <p>订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效</p>
      */
     public $SubscribeSwitch;
 
     /**
-     * @var string RTMP推流地址自定义appName
+     * @var string <p>RTMP推流地址自定义appName</p>
      */
     public $AppName;
 
     /**
-     * @var string RTMP推流地址自定义streamName
+     * @var string <p>RTMP推流地址自定义streamName</p>
      */
     public $StreamName;
 
     /**
-     * @var integer 是否开启静音帧（0：关闭；1 开启）
+     * @var integer <p>是否开启静音帧（0：关闭；1 开启）</p>
      */
     public $SilentFrameSwitch;
 
     /**
-     * @param string $DeviceId 设备ID
-     * @param string $Code 设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）
-     * @param string $Name 设备名称
-     * @param integer $AccessProtocol 设备接入协议，1:RTMP,2:GB,3:GW 
-     * @param integer $Type 设备类型，1:IPC,2:NVR
-     * @param string $ClusterId 设备接入服务节点id
-     * @param string $ClusterName 设备接入服务节点名称
+     * @var string <p>Rtmp设备安全认证推流地址(仅rtmp设备有效)</p>
+     */
+    public $PushStreamSecureUrl;
 
-     * @param integer $TransportProtocol 设备流传输协议，1:UDP,2:TCP 
-     * @param string $Password 设备密码
-     * @param string $Description 设备描述
-     * @param string $SipId sip服务ID
-     * @param string $SipDomain sip服务域
-     * @param string $SipIp sip服务IP地址
-     * @param integer $SipPort sip服务端口
-     * @param string $PushStreamUrl Rtmp设备推流地址(仅rtmp设备有效)
-     * @param integer $Status 设备状态，0:未注册,1:在线,2:离线,3:禁用
-     * @param string $OrganizationId 设备所属组织ID
-     * @param string $GatewayId 设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）
-     * @param string $GatewayName 设备所属网关名称
-     * @param string $ProtocolTypeName 设备网关协议名称
-     * @param integer $ProtocolType 网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
-     * @param string $Ip 设备接入IP
-     * @param integer $Port 设备Port
-     * @param string $Username 设备用户名
-     * @param string $Region 设备地域
-     * @param string $Manufacturer 设备厂商
-     * @param integer $AudioSwitch 音频关开（0：关闭；1：开启）关闭时丢弃音频	
-     * @param integer $SubscribeSwitch 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效	
-     * @param string $AppName RTMP推流地址自定义appName
-     * @param string $StreamName RTMP推流地址自定义streamName
-     * @param integer $SilentFrameSwitch 是否开启静音帧（0：关闭；1 开启）
+    /**
+     * @param string $DeviceId <p>设备ID</p>
+     * @param string $Code <p>设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）</p>
+     * @param string $Name <p>设备名称</p>
+     * @param integer $AccessProtocol <p>设备接入协议，1:RTMP,2:GB,3:GW</p>
+     * @param integer $Type <p>设备类型，1:IPC,2:NVR</p>
+     * @param string $ClusterId <p>设备接入服务节点id</p>
+     * @param string $ClusterName <p>设备接入服务节点名称</p>
+     * @param integer $TransportProtocol <p>设备流传输协议，1:UDP,2:TCP</p>
+     * @param string $Password <p>设备密码</p>
+     * @param string $Description <p>设备描述</p>
+     * @param string $SipId <p>sip服务ID</p>
+     * @param string $SipDomain <p>sip服务域</p>
+     * @param string $SipIp <p>sip服务IP地址</p>
+     * @param integer $SipPort <p>sip服务端口</p>
+     * @param string $PushStreamUrl <p>Rtmp设备推流地址(仅rtmp设备有效)</p>
+     * @param integer $Status <p>设备状态，0:未注册,1:在线,2:离线,3:禁用</p>
+     * @param string $OrganizationId <p>设备所属组织ID</p>
+     * @param string $GatewayId <p>设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）</p>
+     * @param string $GatewayName <p>设备所属网关名称</p>
+     * @param string $ProtocolTypeName <p>设备网关协议名称</p>
+     * @param integer $ProtocolType <p>网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）</p>
+     * @param string $Ip <p>设备接入IP</p>
+     * @param integer $Port <p>设备Port</p>
+     * @param string $Username <p>设备用户名</p>
+     * @param string $Region <p>设备地域</p>
+     * @param string $Manufacturer <p>设备厂商</p>
+     * @param integer $AudioSwitch <p>音频关开（0：关闭；1：开启）关闭时丢弃音频</p>
+     * @param integer $SubscribeSwitch <p>订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效</p>
+     * @param string $AppName <p>RTMP推流地址自定义appName</p>
+     * @param string $StreamName <p>RTMP推流地址自定义streamName</p>
+     * @param integer $SilentFrameSwitch <p>是否开启静音帧（0：关闭；1 开启）</p>
+     * @param string $PushStreamSecureUrl <p>Rtmp设备安全认证推流地址(仅rtmp设备有效)</p>
      */
     function __construct()
     {
@@ -412,6 +416,10 @@ class DescribeDeviceData extends AbstractModel
 
         if (array_key_exists("SilentFrameSwitch",$param) and $param["SilentFrameSwitch"] !== null) {
             $this->SilentFrameSwitch = $param["SilentFrameSwitch"];
+        }
+
+        if (array_key_exists("PushStreamSecureUrl",$param) and $param["PushStreamSecureUrl"] !== null) {
+            $this->PushStreamSecureUrl = $param["PushStreamSecureUrl"];
         }
     }
 }

@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBVersions请求参数结构体
  *
-
+ * @method string getStorageType() 获取<p>实例存储类型，根据磁盘类型返回支持的版本</p><p>枚举值：</p><ul><li>PHYSICAL_LOCAL_SSD： 物理机本地ssd硬盘</li><li>CLOUD_PREMIUM： 高性能云硬盘</li><li>CLOUD_SSD： ssd云硬盘</li><li>CLOUD_HSSD： 增强型ssd云硬盘</li></ul><p>默认值：PHYSICAL_LOCAL_SSD</p>
+ * @method void setStorageType(string $StorageType) 设置<p>实例存储类型，根据磁盘类型返回支持的版本</p><p>枚举值：</p><ul><li>PHYSICAL_LOCAL_SSD： 物理机本地ssd硬盘</li><li>CLOUD_PREMIUM： 高性能云硬盘</li><li>CLOUD_SSD： ssd云硬盘</li><li>CLOUD_HSSD： 增强型ssd云硬盘</li></ul><p>默认值：PHYSICAL_LOCAL_SSD</p>
  */
 class DescribeDBVersionsRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>实例存储类型，根据磁盘类型返回支持的版本</p><p>枚举值：</p><ul><li>PHYSICAL_LOCAL_SSD： 物理机本地ssd硬盘</li><li>CLOUD_PREMIUM： 高性能云硬盘</li><li>CLOUD_SSD： ssd云硬盘</li><li>CLOUD_HSSD： 增强型ssd云硬盘</li></ul><p>默认值：PHYSICAL_LOCAL_SSD</p>
+     */
+    public $StorageType;
 
     /**
-
+     * @param string $StorageType <p>实例存储类型，根据磁盘类型返回支持的版本</p><p>枚举值：</p><ul><li>PHYSICAL_LOCAL_SSD： 物理机本地ssd硬盘</li><li>CLOUD_PREMIUM： 高性能云硬盘</li><li>CLOUD_SSD： ssd云硬盘</li><li>CLOUD_HSSD： 增强型ssd云硬盘</li></ul><p>默认值：PHYSICAL_LOCAL_SSD</p>
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeDBVersionsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
+            $this->StorageType = $param["StorageType"];
+        }
     }
 }

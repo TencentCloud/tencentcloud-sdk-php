@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceVirtualGroupId(integer $DeviceVirtualGroupId) 设置添加到的终端自定义分组id。和DeviceVirtualGroupIds互斥，必填其一，优先使用本参数
  * @method array getDeviceVirtualGroupIds() 获取要添加的终端自定义分组id列表
  * @method void setDeviceVirtualGroupIds(array $DeviceVirtualGroupIds) 设置要添加的终端自定义分组id列表
- * @method integer getOsType() 获取系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
- * @method void setOsType(integer $OsType) 设置系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
+ * @method integer getOsType() 获取系统类型（0: win，1：linux，2: mac，4：android，5：ios，-1：全系统（SaaS一体化版本） ； 不传默认为0）(只支持32位)
+ * @method void setOsType(integer $OsType) 设置系统类型（0: win，1：linux，2: mac，4：android，5：ios，-1：全系统（SaaS一体化版本） ； 不传默认为0）(只支持32位)
  */
 class ModifyVirtualDeviceGroupsRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class ModifyVirtualDeviceGroupsRequest extends AbstractModel
     public $DeviceVirtualGroupIds;
 
     /**
-     * @var integer 系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
+     * @var integer 系统类型（0: win，1：linux，2: mac，4：android，5：ios，-1：全系统（SaaS一体化版本） ； 不传默认为0）(只支持32位)
      */
     public $OsType;
 
@@ -63,7 +63,7 @@ class ModifyVirtualDeviceGroupsRequest extends AbstractModel
      * @param string $DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
      * @param integer $DeviceVirtualGroupId 添加到的终端自定义分组id。和DeviceVirtualGroupIds互斥，必填其一，优先使用本参数
      * @param array $DeviceVirtualGroupIds 要添加的终端自定义分组id列表
-     * @param integer $OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
+     * @param integer $OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios，-1：全系统（SaaS一体化版本） ； 不传默认为0）(只支持32位)
      */
     function __construct()
     {

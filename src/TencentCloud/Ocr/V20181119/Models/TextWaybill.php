@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 运单识别结果
  *
- * @method WaybillObj getRecName() 获取收件人姓名
- * @method void setRecName(WaybillObj $RecName) 设置收件人姓名
- * @method WaybillObj getRecNum() 获取收件人手机号
- * @method void setRecNum(WaybillObj $RecNum) 设置收件人手机号
- * @method WaybillObj getRecAddr() 获取收件人地址
- * @method void setRecAddr(WaybillObj $RecAddr) 设置收件人地址
- * @method WaybillObj getSenderName() 获取寄件人姓名
- * @method void setSenderName(WaybillObj $SenderName) 设置寄件人姓名
- * @method WaybillObj getSenderNum() 获取寄件人手机号
- * @method void setSenderNum(WaybillObj $SenderNum) 设置寄件人手机号
- * @method WaybillObj getSenderAddr() 获取寄件人地址
- * @method void setSenderAddr(WaybillObj $SenderAddr) 设置寄件人地址
- * @method WaybillObj getWaybillNum() 获取运单号
- * @method void setWaybillNum(WaybillObj $WaybillNum) 设置运单号
+ * @method WaybillObj getRecName() 获取<p>收件人姓名</p>
+ * @method void setRecName(WaybillObj $RecName) 设置<p>收件人姓名</p>
+ * @method WaybillObj getRecNum() 获取<p>收件人手机号</p>
+ * @method void setRecNum(WaybillObj $RecNum) 设置<p>收件人手机号</p>
+ * @method WaybillObj getRecAddr() 获取<p>收件人地址</p>
+ * @method void setRecAddr(WaybillObj $RecAddr) 设置<p>收件人地址</p>
+ * @method WaybillObj getSenderName() 获取<p>寄件人姓名</p>
+ * @method void setSenderName(WaybillObj $SenderName) 设置<p>寄件人姓名</p>
+ * @method WaybillObj getSenderNum() 获取<p>寄件人手机号</p>
+ * @method void setSenderNum(WaybillObj $SenderNum) 设置<p>寄件人手机号</p>
+ * @method WaybillObj getSenderAddr() 获取<p>寄件人地址</p>
+ * @method void setSenderAddr(WaybillObj $SenderAddr) 设置<p>寄件人地址</p>
+ * @method WaybillObj getWaybillNum() 获取<p>运单号, 当同时存在 母 / 子 运单号时， 该字段为子运单号</p>
+ * @method void setWaybillNum(WaybillObj $WaybillNum) 设置<p>运单号, 当同时存在 母 / 子 运单号时， 该字段为子运单号</p>
+ * @method WaybillObj getMainWaybillNum() 获取<p>母运单号， 当不存在母运单号时， 该字段为不存在</p>
+ * @method void setMainWaybillNum(WaybillObj $MainWaybillNum) 设置<p>母运单号， 当不存在母运单号时， 该字段为不存在</p>
  */
 class TextWaybill extends AbstractModel
 {
     /**
-     * @var WaybillObj 收件人姓名
+     * @var WaybillObj <p>收件人姓名</p>
      */
     public $RecName;
 
     /**
-     * @var WaybillObj 收件人手机号
+     * @var WaybillObj <p>收件人手机号</p>
      */
     public $RecNum;
 
     /**
-     * @var WaybillObj 收件人地址
+     * @var WaybillObj <p>收件人地址</p>
      */
     public $RecAddr;
 
     /**
-     * @var WaybillObj 寄件人姓名
+     * @var WaybillObj <p>寄件人姓名</p>
      */
     public $SenderName;
 
     /**
-     * @var WaybillObj 寄件人手机号
+     * @var WaybillObj <p>寄件人手机号</p>
      */
     public $SenderNum;
 
     /**
-     * @var WaybillObj 寄件人地址
+     * @var WaybillObj <p>寄件人地址</p>
      */
     public $SenderAddr;
 
     /**
-     * @var WaybillObj 运单号
+     * @var WaybillObj <p>运单号, 当同时存在 母 / 子 运单号时， 该字段为子运单号</p>
      */
     public $WaybillNum;
 
     /**
-     * @param WaybillObj $RecName 收件人姓名
-     * @param WaybillObj $RecNum 收件人手机号
-     * @param WaybillObj $RecAddr 收件人地址
-     * @param WaybillObj $SenderName 寄件人姓名
-     * @param WaybillObj $SenderNum 寄件人手机号
-     * @param WaybillObj $SenderAddr 寄件人地址
-     * @param WaybillObj $WaybillNum 运单号
+     * @var WaybillObj <p>母运单号， 当不存在母运单号时， 该字段为不存在</p>
+     */
+    public $MainWaybillNum;
+
+    /**
+     * @param WaybillObj $RecName <p>收件人姓名</p>
+     * @param WaybillObj $RecNum <p>收件人手机号</p>
+     * @param WaybillObj $RecAddr <p>收件人地址</p>
+     * @param WaybillObj $SenderName <p>寄件人姓名</p>
+     * @param WaybillObj $SenderNum <p>寄件人手机号</p>
+     * @param WaybillObj $SenderAddr <p>寄件人地址</p>
+     * @param WaybillObj $WaybillNum <p>运单号, 当同时存在 母 / 子 运单号时， 该字段为子运单号</p>
+     * @param WaybillObj $MainWaybillNum <p>母运单号， 当不存在母运单号时， 该字段为不存在</p>
      */
     function __construct()
     {
@@ -127,6 +135,11 @@ class TextWaybill extends AbstractModel
         if (array_key_exists("WaybillNum",$param) and $param["WaybillNum"] !== null) {
             $this->WaybillNum = new WaybillObj();
             $this->WaybillNum->deserialize($param["WaybillNum"]);
+        }
+
+        if (array_key_exists("MainWaybillNum",$param) and $param["MainWaybillNum"] !== null) {
+            $this->MainWaybillNum = new WaybillObj();
+            $this->MainWaybillNum->deserialize($param["MainWaybillNum"]);
         }
     }
 }

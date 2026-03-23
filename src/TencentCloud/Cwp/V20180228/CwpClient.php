@@ -347,6 +347,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeServerRelatedDirInfoResponse DescribeServerRelatedDirInfo(Models\DescribeServerRelatedDirInfoRequest $req) 查询服务区关联目录详情
  * @method Models\DescribeServersAndRiskAndFirstInfoResponse DescribeServersAndRiskAndFirstInfo(Models\DescribeServersAndRiskAndFirstInfoRequest $req) 获取待处理风险文件数+影响服务器数+是否试用检测+最近检测时间
  * @method Models\DescribeShellPolicyListResponse DescribeShellPolicyList(Models\DescribeShellPolicyListRequest $req) 查询反弹shell策略列表
+ * @method Models\DescribeSkillInfoResponse DescribeSkillInfo(Models\DescribeSkillInfoRequest $req) 补丁详情
  * @method Models\DescribeStrategyExistResponse DescribeStrategyExist(Models\DescribeStrategyExistRequest $req) 根据策略名查询策略是否存在
  * @method Models\DescribeTagMachinesResponse DescribeTagMachines(Models\DescribeTagMachinesRequest $req) 获取指定标签关联的服务器信息
  * @method Models\DescribeTagsResponse DescribeTags(Models\DescribeTagsRequest $req) 获取所有主机标签

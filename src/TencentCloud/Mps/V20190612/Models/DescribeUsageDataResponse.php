@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUsageData返回参数结构体
  *
- * @method array getData() 获取媒体处理统计数据概览，展示所查询任务的概览以及详细数据。
- * @method void setData(array $Data) 设置媒体处理统计数据概览，展示所查询任务的概览以及详细数据。
+ * @method array getData() 获取<p>媒体处理统计数据概览，展示所查询任务的概览以及详细数据。</p>
+ * @method void setData(array $Data) 设置<p>媒体处理统计数据概览，展示所查询任务的概览以及详细数据。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeUsageDataResponse extends AbstractModel
 {
     /**
-     * @var array 媒体处理统计数据概览，展示所查询任务的概览以及详细数据。
+     * @var array <p>媒体处理统计数据概览，展示所查询任务的概览以及详细数据。</p>
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class DescribeUsageDataResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data 媒体处理统计数据概览，展示所查询任务的概览以及详细数据。
+     * @param array $Data <p>媒体处理统计数据概览，展示所查询任务的概览以及详细数据。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

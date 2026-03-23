@@ -106,6 +106,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpandedCpu(integer $ExpandedCpu) 设置<p>实例已经弹性扩容的cpu核数</p>
  * @method boolean getDeletionProtection() 获取<p>实例是否开启删除保护，取值如下：</p><ul><li>true：开启删除保护</li><li>false：关闭删除保护</li></ul>
  * @method void setDeletionProtection(boolean $DeletionProtection) 设置<p>实例是否开启删除保护，取值如下：</p><ul><li>true：开启删除保护</li><li>false：关闭删除保护</li></ul>
+ * @method string getDBInstanceStorageType() 获取<p>实例存储类型，可选值：PHYSICAL_LOCAL_SSD：物理机本地ssd硬盘 CLOUD_PREMIUM：高性能云硬盘 CLOUD_SSD：ssd云硬盘 CLOUD_HSSD：增强型ssd云硬盘</p>
+ * @method void setDBInstanceStorageType(string $DBInstanceStorageType) 设置<p>实例存储类型，可选值：PHYSICAL_LOCAL_SSD：物理机本地ssd硬盘 CLOUD_PREMIUM：高性能云硬盘 CLOUD_SSD：ssd云硬盘 CLOUD_HSSD：增强型ssd云硬盘</p>
  */
 class DBInstance extends AbstractModel
 {
@@ -317,6 +319,11 @@ class DBInstance extends AbstractModel
     public $DeletionProtection;
 
     /**
+     * @var string <p>实例存储类型，可选值：PHYSICAL_LOCAL_SSD：物理机本地ssd硬盘 CLOUD_PREMIUM：高性能云硬盘 CLOUD_SSD：ssd云硬盘 CLOUD_HSSD：增强型ssd云硬盘</p>
+     */
+    public $DBInstanceStorageType;
+
+    /**
      * @param string $Region <p>实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段。</p>
      * @param string $Zone <p>实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段。</p>
      * @param string $VpcId <p>私有网络ID，形如vpc-e6w23k31。有效的VpcId可通过登录控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/15778">DescribeVpcs</a> ，从接口返回中的unVpcId字段获取。</p>
@@ -360,6 +367,7 @@ class DBInstance extends AbstractModel
      * @param integer $SupportIpv6 <p>实例是否支持Ipv6：</p><li>0：否</li><li>1：是</li>默认值：0
      * @param integer $ExpandedCpu <p>实例已经弹性扩容的cpu核数</p>
      * @param boolean $DeletionProtection <p>实例是否开启删除保护，取值如下：</p><ul><li>true：开启删除保护</li><li>false：关闭删除保护</li></ul>
+     * @param string $DBInstanceStorageType <p>实例存储类型，可选值：PHYSICAL_LOCAL_SSD：物理机本地ssd硬盘 CLOUD_PREMIUM：高性能云硬盘 CLOUD_SSD：ssd云硬盘 CLOUD_HSSD：增强型ssd云硬盘</p>
      */
     function __construct()
     {
@@ -556,6 +564,10 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
             $this->DeletionProtection = $param["DeletionProtection"];
+        }
+
+        if (array_key_exists("DBInstanceStorageType",$param) and $param["DBInstanceStorageType"] !== null) {
+            $this->DBInstanceStorageType = $param["DBInstanceStorageType"];
         }
     }
 }

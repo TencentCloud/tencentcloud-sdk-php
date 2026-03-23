@@ -20,162 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUsageData请求参数结构体
  *
- * @method string getStartTime() 获取起始日期。使用 ISO 日期格式。
- * @method void setStartTime(string $StartTime) 设置起始日期。使用 ISO 日期格式。
- * @method string getEndTime() 获取结束日期，需大于等于起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
- * @method void setEndTime(string $EndTime) 设置结束日期，需大于等于起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
- * @method array getTypes() 获取查询媒体处理任务类型，默认查询转码。
-<li>Transcode：转码</li>
-<li>Enhance：增强</li>
-<li>AIAnalysis：智能分析</li>
-<li>AIRecognition：智能识别</li>
-<li>AIReview：内容审核</li>
-<li>Snapshot：截图</li>
-<li>AnimatedGraphics：转动图</li>
-<li>AiQualityControl：质检</li>
-<li>Evaluation：视频评测</li>
-<li>ImageProcess: 图片处理</li>
-<li>AddBlindWatermark: 添加基础版权数字水印</li>
-<li>AddNagraWatermark: 添加NAGRA数字水印</li>
-<li>ExtractBlindWatermark: 提取基础版权数字水印</li>
-<li>AIGC: AIGC</li>
- * @method void setTypes(array $Types) 设置查询媒体处理任务类型，默认查询转码。
-<li>Transcode：转码</li>
-<li>Enhance：增强</li>
-<li>AIAnalysis：智能分析</li>
-<li>AIRecognition：智能识别</li>
-<li>AIReview：内容审核</li>
-<li>Snapshot：截图</li>
-<li>AnimatedGraphics：转动图</li>
-<li>AiQualityControl：质检</li>
-<li>Evaluation：视频评测</li>
-<li>ImageProcess: 图片处理</li>
-<li>AddBlindWatermark: 添加基础版权数字水印</li>
-<li>AddNagraWatermark: 添加NAGRA数字水印</li>
-<li>ExtractBlindWatermark: 提取基础版权数字水印</li>
-<li>AIGC: AIGC</li>
- * @method array getProcessRegions() 获取媒体处理园区，默认返回 ap-guangzhou 园区。
-<li>ap-guangzhou：广州</li>
-<li>ap-hongkong：中国香港</li>
-<li>ap-taipei：中国台北</li>
-<li>ap-singapore：新加坡</li>
-<li>ap-mumbai：印度</li>
-<li>ap-jakarta：雅加达</li>
-<li>ap-seoul：首尔</li>
-<li>ap-bangkok：泰国</li>
-<li>ap-tokyo：日本</li>
-<li>na-siliconvalley：美国硅谷</li>
-<li>na-ashburn：弗吉尼亚</li>
-<li>na-toronto：多伦多</li>
-<li>sa-saopaulo：圣保罗</li>
-<li>eu-frankfurt：法兰克福</li>
-<li>eu-moscow：俄罗斯</li>
-<li>aws：AWS</li>
- * @method void setProcessRegions(array $ProcessRegions) 设置媒体处理园区，默认返回 ap-guangzhou 园区。
-<li>ap-guangzhou：广州</li>
-<li>ap-hongkong：中国香港</li>
-<li>ap-taipei：中国台北</li>
-<li>ap-singapore：新加坡</li>
-<li>ap-mumbai：印度</li>
-<li>ap-jakarta：雅加达</li>
-<li>ap-seoul：首尔</li>
-<li>ap-bangkok：泰国</li>
-<li>ap-tokyo：日本</li>
-<li>na-siliconvalley：美国硅谷</li>
-<li>na-ashburn：弗吉尼亚</li>
-<li>na-toronto：多伦多</li>
-<li>sa-saopaulo：圣保罗</li>
-<li>eu-frankfurt：法兰克福</li>
-<li>eu-moscow：俄罗斯</li>
-<li>aws：AWS</li>
+ * @method string getStartTime() 获取<p>起始日期。使用 ISO 日期格式。</p>
+ * @method void setStartTime(string $StartTime) 设置<p>起始日期。使用 ISO 日期格式。</p>
+ * @method string getEndTime() 获取<p>结束日期，需大于等于起始日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F">ISO 日期格式</a>。</p>
+ * @method void setEndTime(string $EndTime) 设置<p>结束日期，需大于等于起始日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F">ISO 日期格式</a>。</p>
+ * @method array getTypes() 获取<p>查询媒体处理任务类型，默认查询转码。</p><li>Transcode：转码</li><li>Enhance：增强</li><li>AIAnalysis：智能分析</li><li>AIRecognition：智能识别</li><li>AIReview：内容审核</li><li>Snapshot：截图</li><li>AnimatedGraphics：转动图</li><li>AiQualityControl：质检</li><li>Evaluation：视频评测</li><li>ImageProcess: 图片处理</li><li>AddBlindWatermark: 添加基础版权数字水印</li><li>AddNagraWatermark: 添加NAGRA数字水印</li><li>ExtractBlindWatermark: 提取基础版权数字水印</li><li>AIGC: AIGCVideo</li>
+ * @method void setTypes(array $Types) 设置<p>查询媒体处理任务类型，默认查询转码。</p><li>Transcode：转码</li><li>Enhance：增强</li><li>AIAnalysis：智能分析</li><li>AIRecognition：智能识别</li><li>AIReview：内容审核</li><li>Snapshot：截图</li><li>AnimatedGraphics：转动图</li><li>AiQualityControl：质检</li><li>Evaluation：视频评测</li><li>ImageProcess: 图片处理</li><li>AddBlindWatermark: 添加基础版权数字水印</li><li>AddNagraWatermark: 添加NAGRA数字水印</li><li>ExtractBlindWatermark: 提取基础版权数字水印</li><li>AIGC: AIGCVideo</li>
+ * @method array getProcessRegions() 获取<p>媒体处理园区，默认返回 ap-guangzhou 园区。</p><li>ap-guangzhou：广州</li><li>ap-hongkong：中国香港</li><li>ap-taipei：中国台北</li><li>ap-singapore：新加坡</li><li>ap-mumbai：印度</li><li>ap-jakarta：雅加达</li><li>ap-seoul：首尔</li><li>ap-bangkok：泰国</li><li>ap-tokyo：日本</li><li>na-siliconvalley：美国硅谷</li><li>na-ashburn：弗吉尼亚</li><li>na-toronto：多伦多</li><li>sa-saopaulo：圣保罗</li><li>eu-frankfurt：法兰克福</li><li>eu-moscow：俄罗斯</li><li>aws：AWS</li>
+ * @method void setProcessRegions(array $ProcessRegions) 设置<p>媒体处理园区，默认返回 ap-guangzhou 园区。</p><li>ap-guangzhou：广州</li><li>ap-hongkong：中国香港</li><li>ap-taipei：中国台北</li><li>ap-singapore：新加坡</li><li>ap-mumbai：印度</li><li>ap-jakarta：雅加达</li><li>ap-seoul：首尔</li><li>ap-bangkok：泰国</li><li>ap-tokyo：日本</li><li>na-siliconvalley：美国硅谷</li><li>na-ashburn：弗吉尼亚</li><li>na-toronto：多伦多</li><li>sa-saopaulo：圣保罗</li><li>eu-frankfurt：法兰克福</li><li>eu-moscow：俄罗斯</li><li>aws：AWS</li>
  */
 class DescribeUsageDataRequest extends AbstractModel
 {
     /**
-     * @var string 起始日期。使用 ISO 日期格式。
+     * @var string <p>起始日期。使用 ISO 日期格式。</p>
      */
     public $StartTime;
 
     /**
-     * @var string 结束日期，需大于等于起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @var string <p>结束日期，需大于等于起始日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F">ISO 日期格式</a>。</p>
      */
     public $EndTime;
 
     /**
-     * @var array 查询媒体处理任务类型，默认查询转码。
-<li>Transcode：转码</li>
-<li>Enhance：增强</li>
-<li>AIAnalysis：智能分析</li>
-<li>AIRecognition：智能识别</li>
-<li>AIReview：内容审核</li>
-<li>Snapshot：截图</li>
-<li>AnimatedGraphics：转动图</li>
-<li>AiQualityControl：质检</li>
-<li>Evaluation：视频评测</li>
-<li>ImageProcess: 图片处理</li>
-<li>AddBlindWatermark: 添加基础版权数字水印</li>
-<li>AddNagraWatermark: 添加NAGRA数字水印</li>
-<li>ExtractBlindWatermark: 提取基础版权数字水印</li>
-<li>AIGC: AIGC</li>
+     * @var array <p>查询媒体处理任务类型，默认查询转码。</p><li>Transcode：转码</li><li>Enhance：增强</li><li>AIAnalysis：智能分析</li><li>AIRecognition：智能识别</li><li>AIReview：内容审核</li><li>Snapshot：截图</li><li>AnimatedGraphics：转动图</li><li>AiQualityControl：质检</li><li>Evaluation：视频评测</li><li>ImageProcess: 图片处理</li><li>AddBlindWatermark: 添加基础版权数字水印</li><li>AddNagraWatermark: 添加NAGRA数字水印</li><li>ExtractBlindWatermark: 提取基础版权数字水印</li><li>AIGC: AIGCVideo</li>
      */
     public $Types;
 
     /**
-     * @var array 媒体处理园区，默认返回 ap-guangzhou 园区。
-<li>ap-guangzhou：广州</li>
-<li>ap-hongkong：中国香港</li>
-<li>ap-taipei：中国台北</li>
-<li>ap-singapore：新加坡</li>
-<li>ap-mumbai：印度</li>
-<li>ap-jakarta：雅加达</li>
-<li>ap-seoul：首尔</li>
-<li>ap-bangkok：泰国</li>
-<li>ap-tokyo：日本</li>
-<li>na-siliconvalley：美国硅谷</li>
-<li>na-ashburn：弗吉尼亚</li>
-<li>na-toronto：多伦多</li>
-<li>sa-saopaulo：圣保罗</li>
-<li>eu-frankfurt：法兰克福</li>
-<li>eu-moscow：俄罗斯</li>
-<li>aws：AWS</li>
+     * @var array <p>媒体处理园区，默认返回 ap-guangzhou 园区。</p><li>ap-guangzhou：广州</li><li>ap-hongkong：中国香港</li><li>ap-taipei：中国台北</li><li>ap-singapore：新加坡</li><li>ap-mumbai：印度</li><li>ap-jakarta：雅加达</li><li>ap-seoul：首尔</li><li>ap-bangkok：泰国</li><li>ap-tokyo：日本</li><li>na-siliconvalley：美国硅谷</li><li>na-ashburn：弗吉尼亚</li><li>na-toronto：多伦多</li><li>sa-saopaulo：圣保罗</li><li>eu-frankfurt：法兰克福</li><li>eu-moscow：俄罗斯</li><li>aws：AWS</li>
      */
     public $ProcessRegions;
 
     /**
-     * @param string $StartTime 起始日期。使用 ISO 日期格式。
-     * @param string $EndTime 结束日期，需大于等于起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-     * @param array $Types 查询媒体处理任务类型，默认查询转码。
-<li>Transcode：转码</li>
-<li>Enhance：增强</li>
-<li>AIAnalysis：智能分析</li>
-<li>AIRecognition：智能识别</li>
-<li>AIReview：内容审核</li>
-<li>Snapshot：截图</li>
-<li>AnimatedGraphics：转动图</li>
-<li>AiQualityControl：质检</li>
-<li>Evaluation：视频评测</li>
-<li>ImageProcess: 图片处理</li>
-<li>AddBlindWatermark: 添加基础版权数字水印</li>
-<li>AddNagraWatermark: 添加NAGRA数字水印</li>
-<li>ExtractBlindWatermark: 提取基础版权数字水印</li>
-<li>AIGC: AIGC</li>
-     * @param array $ProcessRegions 媒体处理园区，默认返回 ap-guangzhou 园区。
-<li>ap-guangzhou：广州</li>
-<li>ap-hongkong：中国香港</li>
-<li>ap-taipei：中国台北</li>
-<li>ap-singapore：新加坡</li>
-<li>ap-mumbai：印度</li>
-<li>ap-jakarta：雅加达</li>
-<li>ap-seoul：首尔</li>
-<li>ap-bangkok：泰国</li>
-<li>ap-tokyo：日本</li>
-<li>na-siliconvalley：美国硅谷</li>
-<li>na-ashburn：弗吉尼亚</li>
-<li>na-toronto：多伦多</li>
-<li>sa-saopaulo：圣保罗</li>
-<li>eu-frankfurt：法兰克福</li>
-<li>eu-moscow：俄罗斯</li>
-<li>aws：AWS</li>
+     * @param string $StartTime <p>起始日期。使用 ISO 日期格式。</p>
+     * @param string $EndTime <p>结束日期，需大于等于起始日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F">ISO 日期格式</a>。</p>
+     * @param array $Types <p>查询媒体处理任务类型，默认查询转码。</p><li>Transcode：转码</li><li>Enhance：增强</li><li>AIAnalysis：智能分析</li><li>AIRecognition：智能识别</li><li>AIReview：内容审核</li><li>Snapshot：截图</li><li>AnimatedGraphics：转动图</li><li>AiQualityControl：质检</li><li>Evaluation：视频评测</li><li>ImageProcess: 图片处理</li><li>AddBlindWatermark: 添加基础版权数字水印</li><li>AddNagraWatermark: 添加NAGRA数字水印</li><li>ExtractBlindWatermark: 提取基础版权数字水印</li><li>AIGC: AIGCVideo</li>
+     * @param array $ProcessRegions <p>媒体处理园区，默认返回 ap-guangzhou 园区。</p><li>ap-guangzhou：广州</li><li>ap-hongkong：中国香港</li><li>ap-taipei：中国台北</li><li>ap-singapore：新加坡</li><li>ap-mumbai：印度</li><li>ap-jakarta：雅加达</li><li>ap-seoul：首尔</li><li>ap-bangkok：泰国</li><li>ap-tokyo：日本</li><li>na-siliconvalley：美国硅谷</li><li>na-ashburn：弗吉尼亚</li><li>na-toronto：多伦多</li><li>sa-saopaulo：圣保罗</li><li>eu-frankfurt：法兰克福</li><li>eu-moscow：俄罗斯</li><li>aws：AWS</li>
      */
     function __construct()
     {

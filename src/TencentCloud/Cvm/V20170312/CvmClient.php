@@ -35,7 +35,7 @@ use TencentCloud\Cvm\V20170312\Models as Models;
 * 如果实例原来是通过密码登录，绑定密钥后无法使用密码登录。
 * 支持批量操作。每次请求批量实例的上限为100。如果批量实例存在不允许操作的实例，操作会以特定错误码返回。
  * @method Models\AssociateSecurityGroupsResponse AssociateSecurityGroups(Models\AssociateSecurityGroupsRequest $req) 本接口 (AssociateSecurityGroups) 用于绑定安全组到指定实例。
-* 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
+* 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
 <dx-alert infotype="explain" title="">
 多个安全组绑定至实例后，将以绑定顺序作为优先级顺序依次匹配执行。如需调整安全组优先级，请参见 [调整安全组优先级](https://cloud.tencent.com/document/product/213/42842)。
 </dx-alert>
@@ -154,7 +154,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 如果原来没有设置密码，解绑后将无法使用 `SSH` 登录。可以调用 [ResetInstancesPassword](https://cloud.tencent.com/document/api/213/15736) 接口来设置登录密码。
 * 支持批量操作。每次请求批量实例的上限为100。如果批量实例存在不允许操作的实例，操作会以特定错误码返回。
  * @method Models\DisassociateSecurityGroupsResponse DisassociateSecurityGroups(Models\DisassociateSecurityGroupsRequest $req) 本接口 (DisassociateSecurityGroups) 用于解绑实例的指定安全组。
-* 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
+* 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
  * @method Models\EnterRescueModeResponse EnterRescueMode(Models\EnterRescueModeRequest $req) 本接口（EnterRescueMode）用于进入救援模式。
  * @method Models\ExitRescueModeResponse ExitRescueMode(Models\ExitRescueModeRequest $req) 本接口（ExitRescueMode）用于退出救援模式。
  * @method Models\ExportImagesResponse ExportImages(Models\ExportImagesRequest $req) 提供导出自定义镜像到指定COS存储桶的能力
@@ -241,7 +241,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 项目为一个虚拟概念，用户可以在一个账户下面建立多个项目，每个项目中管理不同的资源；将多个不同实例分属到不同项目中，后续使用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728)接口查询实例，项目ID可用于过滤结果。
 * 绑定负载均衡的实例不支持修改实例所属项目，请先使用[DeregisterInstancesFromLoadBalancer](https://cloud.tencent.com/document/api/214/1258)接口解绑负载均衡。
 * 支持批量操作。每次请求批量实例的上限为100。
-* 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
+* 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
  * @method Models\ModifyInstancesRenewFlagResponse ModifyInstancesRenewFlag(Models\ModifyInstancesRenewFlagRequest $req) 本接口 (ModifyInstancesRenewFlag) 用于修改包年包月实例续费标识。
 
 * 实例被标识为自动续费后，每次在实例到期时，会自动续费一个月。
@@ -278,7 +278,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 
 * 只支持操作包年包月实例。
 * 续费时请确保账户余额充足。可通过[DescribeAccountBalance](https://cloud.tencent.com/document/product/555/20253)接口查询账户余额。
-* 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
+* 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
  * @method Models\RepairTaskControlResponse RepairTaskControl(Models\RepairTaskControlRequest $req) 本接口（RepairTaskControl）用于对待授权状态的维修任务进行授权操作。
 
 - 仅当任务状态处于`待授权`状态时，可通过此接口对待授权的维修任务进行授权。
@@ -333,7 +333,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 只有状态为`STOPPED`的实例才可以进行此操作。
 * 接口调用成功时，实例会进入`STARTING`状态；启动实例成功时，实例会进入`RUNNING`状态。
 * 支持批量操作。每次请求批量实例的上限为100。
-* 本接口为异步接口，启动实例请求发送成功后会返回一个RequestId，此时操作并未立即完成。实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表启动实例操作成功。
+* 本接口为异步接口，启动实例请求发送成功后会返回一个RequestId，此时操作并未立即完成。实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表启动实例操作成功。
  * @method Models\StopInstancesResponse StopInstances(Models\StopInstancesRequest $req) 本接口 (StopInstances) 用于关闭一个或多个实例。
 
 * 只有状态为`RUNNING`的实例才可以进行此操作。

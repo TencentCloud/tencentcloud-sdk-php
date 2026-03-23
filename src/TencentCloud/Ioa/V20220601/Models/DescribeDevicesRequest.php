@@ -152,8 +152,8 @@ id-名称-操作系统
 
 
 SaaS需要调用分组接口DescribeDeviceChildGroups获取对应分组id
- * @method integer getOsType() 获取操作系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配
- * @method void setOsType(integer $OsType) 设置操作系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配
+ * @method integer getOsType() 获取系统类型（0: win，1：linux，2: mac，4：android，5：ios，-1：全系统（SaaS一体化版本） ； 不传默认为0）(只支持32位)，需要和GroupId或者GroupIds匹配
+ * @method void setOsType(integer $OsType) 设置系统类型（0: win，1：linux，2: mac，4：android，5：ios，-1：全系统（SaaS一体化版本） ； 不传默认为0）(只支持32位)，需要和GroupId或者GroupIds匹配
  * @method integer getOnlineStatus() 获取在线状态 （2表示在线，0或者1表示离线）
  * @method void setOnlineStatus(integer $OnlineStatus) 设置在线状态 （2表示在线，0或者1表示离线）
  * @method array getFilters() 获取过滤条件--兼容旧接口,参数同Condition
@@ -251,7 +251,7 @@ SaaS需要调用分组接口DescribeDeviceChildGroups获取对应分组id
     public $GroupId;
 
     /**
-     * @var integer 操作系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配
+     * @var integer 系统类型（0: win，1：linux，2: mac，4：android，5：ios，-1：全系统（SaaS一体化版本） ； 不传默认为0）(只支持32位)，需要和GroupId或者GroupIds匹配
      */
     public $OsType;
 
@@ -358,7 +358,7 @@ id-名称-操作系统
 
 
 SaaS需要调用分组接口DescribeDeviceChildGroups获取对应分组id
-     * @param integer $OsType 操作系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配
+     * @param integer $OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios，-1：全系统（SaaS一体化版本） ； 不传默认为0）(只支持32位)，需要和GroupId或者GroupIds匹配
      * @param integer $OnlineStatus 在线状态 （2表示在线，0或者1表示离线）
      * @param array $Filters 过滤条件--兼容旧接口,参数同Condition
      * @param Sort $Sort 排序字段--兼容旧接口,参数同Condition

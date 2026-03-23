@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportDeviceDownloadTask请求参数结构体
  *
- * @method integer getOsType() 获取系统类型（0: win，1：linux，2: mac，4：android，5：ios；默认值0）
- * @method void setOsType(integer $OsType) 设置系统类型（0: win，1：linux，2: mac，4：android，5：ios；默认值0）
+ * @method integer getOsType() 获取系统类型（0: win，1：linux，2: mac，4：android，5：ios，-1：全系统（SaaS一体化版本） ； 不传默认为0）(只支持32位)
+ * @method void setOsType(integer $OsType) 设置系统类型（0: win，1：linux，2: mac，4：android，5：ios，-1：全系统（SaaS一体化版本） ； 不传默认为0）(只支持32位)
  * @method string getDomainInstanceId() 获取管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
  * @method void setDomainInstanceId(string $DomainInstanceId) 设置管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
  * @method integer getGroupId() 获取分组id
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class ExportDeviceDownloadTaskRequest extends AbstractModel
 {
     /**
-     * @var integer 系统类型（0: win，1：linux，2: mac，4：android，5：ios；默认值0）
+     * @var integer 系统类型（0: win，1：linux，2: mac，4：android，5：ios，-1：全系统（SaaS一体化版本） ； 不传默认为0）(只支持32位)
      */
     public $OsType;
 
@@ -73,7 +73,7 @@ class ExportDeviceDownloadTaskRequest extends AbstractModel
     public $Condition;
 
     /**
-     * @param integer $OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios；默认值0）
+     * @param integer $OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios，-1：全系统（SaaS一体化版本） ； 不传默认为0）(只支持32位)
      * @param string $DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
      * @param integer $GroupId 分组id
      * @param integer $OnlineStatus  在线状态 2 在线 0，1 离线

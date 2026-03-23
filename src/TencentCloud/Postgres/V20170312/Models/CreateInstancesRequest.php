@@ -84,6 +84,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNeedSupportIpv6(integer $NeedSupportIpv6) 设置<p>是否需要支持Ipv6：</p><li>0：否</li><li>1：是</li>默认值：0
  * @method boolean getDeletionProtection() 获取<p>实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。</p>
  * @method void setDeletionProtection(boolean $DeletionProtection) 设置<p>实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。</p>
+ * @method string getStorageType() 获取<p>实例存储类型，可选值：PHYSICAL_LOCAL_SSD：物理机本地ssd硬盘 CLOUD_PREMIUM：高性能云硬盘 CLOUD_SSD：ssd云硬盘 CLOUD_HSSD：增强型ssd云硬盘</p>
+ * @method void setStorageType(string $StorageType) 设置<p>实例存储类型，可选值：PHYSICAL_LOCAL_SSD：物理机本地ssd硬盘 CLOUD_PREMIUM：高性能云硬盘 CLOUD_SSD：ssd云硬盘 CLOUD_HSSD：增强型ssd云硬盘</p>
  */
 class CreateInstancesRequest extends AbstractModel
 {
@@ -248,6 +250,11 @@ class CreateInstancesRequest extends AbstractModel
     public $DeletionProtection;
 
     /**
+     * @var string <p>实例存储类型，可选值：PHYSICAL_LOCAL_SSD：物理机本地ssd硬盘 CLOUD_PREMIUM：高性能云硬盘 CLOUD_SSD：ssd云硬盘 CLOUD_HSSD：增强型ssd云硬盘</p>
+     */
+    public $StorageType;
+
+    /**
      * @param string $Zone <p>实例所属主可用区， 如：ap-guangzhou-3；若需要支持多可用区，在DBNodeSet.N字段中进行添加主可用区和备可用区信息；<br>可用区信息可以通过调用 <a href="https://cloud.tencent.com/document/api/409/16769">DescribeZones</a> 接口的返回值中的Zone字段来获取。</p>
      * @param string $SpecCode <p>售卖规格码。该参数可以通过调用<a href="https://cloud.tencent.com/document/api/409/89019">DescribeClasses</a>的返回值中的SpecCode字段来获取。</p>
      * @param integer $Storage <p>实例磁盘容量大小，单位：GB。该参数的设置步长为10。</p>
@@ -280,6 +287,7 @@ class CreateInstancesRequest extends AbstractModel
      * @param string $SyncMode <p>主从同步方式，支持： </p><li>Semi-sync：半同步</li><li>Async：异步</li>主实例默认值：Semi-sync只读实例默认值：Async
      * @param integer $NeedSupportIpv6 <p>是否需要支持Ipv6：</p><li>0：否</li><li>1：是</li>默认值：0
      * @param boolean $DeletionProtection <p>实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。</p>
+     * @param string $StorageType <p>实例存储类型，可选值：PHYSICAL_LOCAL_SSD：物理机本地ssd硬盘 CLOUD_PREMIUM：高性能云硬盘 CLOUD_SSD：ssd云硬盘 CLOUD_HSSD：增强型ssd云硬盘</p>
      */
     function __construct()
     {
@@ -430,6 +438,10 @@ class CreateInstancesRequest extends AbstractModel
 
         if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
             $this->DeletionProtection = $param["DeletionProtection"];
+        }
+
+        if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
+            $this->StorageType = $param["StorageType"];
         }
     }
 }

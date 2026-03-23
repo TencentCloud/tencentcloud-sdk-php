@@ -28,10 +28,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudioData(string $AudioData) 设置<p>合成音频的base64编码，wav格式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAudioUrl() 获取<p>合成音频url，有效期24小时</p>
+ * @method void setAudioUrl(string $AudioUrl) 设置<p>合成音频url，有效期24小时</p>
  * @method string getVoiceId() 获取<p>克隆的音色Id。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVoiceId(string $VoiceId) 设置<p>克隆的音色Id。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExtInfo() 获取<p>扩展信息，json字符串</p><p>duration: 结果音频时长，单位秒</p>
+ * @method void setExtInfo(string $ExtInfo) 设置<p>扩展信息，json字符串</p><p>duration: 结果音频时长，单位秒</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -54,10 +58,20 @@ class SyncDubbingResponse extends AbstractModel
     public $AudioData;
 
     /**
+     * @var string <p>合成音频url，有效期24小时</p>
+     */
+    public $AudioUrl;
+
+    /**
      * @var string <p>克隆的音色Id。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VoiceId;
+
+    /**
+     * @var string <p>扩展信息，json字符串</p><p>duration: 结果音频时长，单位秒</p>
+     */
+    public $ExtInfo;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -69,8 +83,10 @@ class SyncDubbingResponse extends AbstractModel
      * @param string $Msg <p>错误信息，成功时返回success</p>
      * @param string $AudioData <p>合成音频的base64编码，wav格式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AudioUrl <p>合成音频url，有效期24小时</p>
      * @param string $VoiceId <p>克隆的音色Id。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExtInfo <p>扩展信息，json字符串</p><p>duration: 结果音频时长，单位秒</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -98,8 +114,16 @@ class SyncDubbingResponse extends AbstractModel
             $this->AudioData = $param["AudioData"];
         }
 
+        if (array_key_exists("AudioUrl",$param) and $param["AudioUrl"] !== null) {
+            $this->AudioUrl = $param["AudioUrl"];
+        }
+
         if (array_key_exists("VoiceId",$param) and $param["VoiceId"] !== null) {
             $this->VoiceId = $param["VoiceId"];
+        }
+
+        if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
+            $this->ExtInfo = $param["ExtInfo"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

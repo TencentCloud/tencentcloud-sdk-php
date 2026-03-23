@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoginUin(string $LoginUin) 设置登录用户主账号(集成商模式必填)	
  * @method string getLoginSubAccountUin() 获取登录用户子账号(集成商模式必填)	
  * @method void setLoginSubAccountUin(string $LoginSubAccountUin) 设置登录用户子账号(集成商模式必填)	
- * @method string getBotBizId() 获取应用ID
- * @method void setBotBizId(string $BotBizId) 设置应用ID
+ * @method string getBotBizId() 获取应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
+重命名知识库文档时，该参数填入知识库ID。
+ * @method void setBotBizId(string $BotBizId) 设置应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
+重命名知识库文档时，该参数填入知识库ID。
  * @method string getDocBizId() 获取文档ID
  * @method void setDocBizId(string $DocBizId) 设置文档ID
  * @method string getNewName() 获取新文档名，需要带上后缀
@@ -44,7 +46,8 @@ class RenameDocRequest extends AbstractModel
     public $LoginSubAccountUin;
 
     /**
-     * @var string 应用ID
+     * @var string 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
+重命名知识库文档时，该参数填入知识库ID。
      */
     public $BotBizId;
 
@@ -61,7 +64,8 @@ class RenameDocRequest extends AbstractModel
     /**
      * @param string $LoginUin 登录用户主账号(集成商模式必填)	
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)	
-     * @param string $BotBizId 应用ID
+     * @param string $BotBizId 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
+重命名知识库文档时，该参数填入知识库ID。
      * @param string $DocBizId 文档ID
      * @param string $NewName 新文档名，需要带上后缀
      */

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBEngine(string $DBEngine) 设置<p>数据库引擎，支持：<br>1、postgresql（云数据库PostgreSQL）；<br>2、mssql_compatible（MSSQL兼容-云数据库PostgreSQL）；</p>
  * @method string getDBMajorVersion() 获取<p>数据库主版本号。例如12，13，可以通过接口<a href="https://cloud.tencent.com/document/product/409/89018">DescribeDBVersions</a>获取。</p>
  * @method void setDBMajorVersion(string $DBMajorVersion) 设置<p>数据库主版本号。例如12，13，可以通过接口<a href="https://cloud.tencent.com/document/product/409/89018">DescribeDBVersions</a>获取。</p>
+ * @method string getStorageType() 获取<p>实例存储类型，根据存储类型返回支持的规格。</p><p>枚举值：</p><ul><li>PHYSICAL_LOCAL_SSD： 物理机本地ssd硬盘</li><li>CLOUD_PREMIUM： 高性能云硬盘</li><li>CLOUD_SSD： ssd云硬盘</li><li>CLOUD_HSSD： 增强型ssd云硬盘</li></ul><p>默认值：PHYSICAL_LOCAL_SSD</p>
+ * @method void setStorageType(string $StorageType) 设置<p>实例存储类型，根据存储类型返回支持的规格。</p><p>枚举值：</p><ul><li>PHYSICAL_LOCAL_SSD： 物理机本地ssd硬盘</li><li>CLOUD_PREMIUM： 高性能云硬盘</li><li>CLOUD_SSD： ssd云硬盘</li><li>CLOUD_HSSD： 增强型ssd云硬盘</li></ul><p>默认值：PHYSICAL_LOCAL_SSD</p>
  */
 class DescribeClassesRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeClassesRequest extends AbstractModel
     public $DBMajorVersion;
 
     /**
+     * @var string <p>实例存储类型，根据存储类型返回支持的规格。</p><p>枚举值：</p><ul><li>PHYSICAL_LOCAL_SSD： 物理机本地ssd硬盘</li><li>CLOUD_PREMIUM： 高性能云硬盘</li><li>CLOUD_SSD： ssd云硬盘</li><li>CLOUD_HSSD： 增强型ssd云硬盘</li></ul><p>默认值：PHYSICAL_LOCAL_SSD</p>
+     */
+    public $StorageType;
+
+    /**
      * @param string $Zone <p>可用区名称。可以通过接口<a href="https://cloud.tencent.com/document/product/409/16769">DescribeZones</a>获取。</p>
      * @param string $DBEngine <p>数据库引擎，支持：<br>1、postgresql（云数据库PostgreSQL）；<br>2、mssql_compatible（MSSQL兼容-云数据库PostgreSQL）；</p>
      * @param string $DBMajorVersion <p>数据库主版本号。例如12，13，可以通过接口<a href="https://cloud.tencent.com/document/product/409/89018">DescribeDBVersions</a>获取。</p>
+     * @param string $StorageType <p>实例存储类型，根据存储类型返回支持的规格。</p><p>枚举值：</p><ul><li>PHYSICAL_LOCAL_SSD： 物理机本地ssd硬盘</li><li>CLOUD_PREMIUM： 高性能云硬盘</li><li>CLOUD_SSD： ssd云硬盘</li><li>CLOUD_HSSD： 增强型ssd云硬盘</li></ul><p>默认值：PHYSICAL_LOCAL_SSD</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeClassesRequest extends AbstractModel
 
         if (array_key_exists("DBMajorVersion",$param) and $param["DBMajorVersion"] !== null) {
             $this->DBMajorVersion = $param["DBMajorVersion"];
+        }
+
+        if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
+            $this->StorageType = $param["StorageType"];
         }
     }
 }

@@ -1,0 +1,82 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Apis\V20240801\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * CreateAgentAppMcpServers请求参数结构体
+ *
+ * @method string getInstanceID() 获取实例ID
+ * @method void setInstanceID(string $InstanceID) 设置实例ID
+ * @method string getID() 获取应用ID
+ * @method void setID(string $ID) 设置应用ID
+ * @method array getMcpServers() 获取关联的mcp server
+ * @method void setMcpServers(array $McpServers) 设置关联的mcp server
+ */
+class CreateAgentAppMcpServersRequest extends AbstractModel
+{
+    /**
+     * @var string 实例ID
+     */
+    public $InstanceID;
+
+    /**
+     * @var string 应用ID
+     */
+    public $ID;
+
+    /**
+     * @var array 关联的mcp server
+     */
+    public $McpServers;
+
+    /**
+     * @param string $InstanceID 实例ID
+     * @param string $ID 应用ID
+     * @param array $McpServers 关联的mcp server
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
+            $this->InstanceID = $param["InstanceID"];
+        }
+
+        if (array_key_exists("ID",$param) and $param["ID"] !== null) {
+            $this->ID = $param["ID"];
+        }
+
+        if (array_key_exists("McpServers",$param) and $param["McpServers"] !== null) {
+            $this->McpServers = [];
+            foreach ($param["McpServers"] as $key => $value){
+                $obj = new AgentAppMcpServerDTO();
+                $obj->deserialize($value);
+                array_push($this->McpServers, $obj);
+            }
+        }
+    }
+}

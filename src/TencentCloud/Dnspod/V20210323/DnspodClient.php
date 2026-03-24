@@ -25,6 +25,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
 /**
  * @method Models\CheckRecordSnapshotRollbackResponse CheckRecordSnapshotRollback(Models\CheckRecordSnapshotRollbackRequest $req) 回滚前检查单条记录
  * @method Models\CheckSnapshotRollbackResponse CheckSnapshotRollback(Models\CheckSnapshotRollbackRequest $req) 快照回滚前检查
+ * @method Models\CreateAndPayDealResponse CreateAndPayDeal(Models\CreateAndPayDealRequest $req) DNSPod商品下单并支付
  * @method Models\CreateDealResponse CreateDeal(Models\CreateDealRequest $req) DNSPod商品下单
  * @method Models\CreateDomainResponse CreateDomain(Models\CreateDomainRequest $req) 添加域名
  * @method Models\CreateDomainAliasResponse CreateDomainAlias(Models\CreateDomainAliasRequest $req) 创建域名别名

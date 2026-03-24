@@ -20,194 +20,202 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVoucherInfo请求参数结构体
  *
- * @method integer getLimit() 获取一页多少条数据，默认是20条，最大不超过1000
- * @method void setLimit(integer $Limit) 设置一页多少条数据，默认是20条，最大不超过1000
- * @method integer getOffset() 获取第多少页，默认是1
- * @method void setOffset(integer $Offset) 设置第多少页，默认是1
- * @method string getStatus() 获取券状态：待使用：unUsed，已使用： used，已发货：delivered，已作废： cancel，已过期：overdue
- * @method void setStatus(string $Status) 设置券状态：待使用：unUsed，已使用： used，已发货：delivered，已作废： cancel，已过期：overdue
- * @method string getVoucherId() 获取代金券id
- * @method void setVoucherId(string $VoucherId) 设置代金券id
- * @method string getCodeId() 获取代金券订单id
- * @method void setCodeId(string $CodeId) 设置代金券订单id
- * @method string getProductCode() 获取商品码
- * @method void setProductCode(string $ProductCode) 设置商品码
- * @method string getActivityId() 获取活动id
- * @method void setActivityId(string $ActivityId) 设置活动id
- * @method string getVoucherName() 获取代金券名称
- * @method void setVoucherName(string $VoucherName) 设置代金券名称
- * @method string getTimeFrom() 获取发放开始时间,例：2021-01-01
- * @method void setTimeFrom(string $TimeFrom) 设置发放开始时间,例：2021-01-01
- * @method string getTimeTo() 获取发放结束时间，例：2021-01-01
- * @method void setTimeTo(string $TimeTo) 设置发放结束时间，例：2021-01-01
- * @method string getSortField() 获取指定排序字段：BeginTime开始时间、EndTime到期时间、CreateTime创建时间
- * @method void setSortField(string $SortField) 设置指定排序字段：BeginTime开始时间、EndTime到期时间、CreateTime创建时间
- * @method string getSortOrder() 获取指定升序降序：desc、asc
- * @method void setSortOrder(string $SortOrder) 设置指定升序降序：desc、asc
- * @method string getPayMode() 获取付费模式，postPay后付费/prePay预付费/riPay预留实例/""或者"*"表示全部模式，如果payMode为""或"*"，那么productCode与subProductCode必须传空
- * @method void setPayMode(string $PayMode) 设置付费模式，postPay后付费/prePay预付费/riPay预留实例/""或者"*"表示全部模式，如果payMode为""或"*"，那么productCode与subProductCode必须传空
- * @method string getPayScene() 获取付费场景PayMode=postPay时：spotpay-竞价实例,"settle account"-普通后付费PayMode=prePay时：purchase-包年包月新购，renew-包年包月续费（自动续费），modify-包年包月配置变更(变配）PayMode=riPay时：oneOffFee-预留实例预付，hourlyFee-预留实例每小时扣费，*-支持全部付费场景
- * @method void setPayScene(string $PayScene) 设置付费场景PayMode=postPay时：spotpay-竞价实例,"settle account"-普通后付费PayMode=prePay时：purchase-包年包月新购，renew-包年包月续费（自动续费），modify-包年包月配置变更(变配）PayMode=riPay时：oneOffFee-预留实例预付，hourlyFee-预留实例每小时扣费，*-支持全部付费场景
- * @method string getOperator() 获取操作人，默认就是用户uin
- * @method void setOperator(string $Operator) 设置操作人，默认就是用户uin
- * @method string getVoucherMainType() 获取代金券主类型 has_price 为有价现金券 no_price 为无价代金券
- * @method void setVoucherMainType(string $VoucherMainType) 设置代金券主类型 has_price 为有价现金券 no_price 为无价代金券
- * @method string getVoucherSubType() 获取代金券副类型 discount 为折扣券 deduct 为抵扣券
- * @method void setVoucherSubType(string $VoucherSubType) 设置代金券副类型 discount 为折扣券 deduct 为抵扣券
- * @method string getStartTimeFrom() 获取券有效时间开始时间
- * @method void setStartTimeFrom(string $StartTimeFrom) 设置券有效时间开始时间
- * @method string getStartTimeTo() 获取券有效时间结束时间
- * @method void setStartTimeTo(string $StartTimeTo) 设置券有效时间结束时间
- * @method string getEndTimeFrom() 获取券失效时间开始时间
- * @method void setEndTimeFrom(string $EndTimeFrom) 设置券失效时间开始时间
- * @method string getEndTimeTo() 获取券失效时间结束时间
- * @method void setEndTimeTo(string $EndTimeTo) 设置券失效时间结束时间
- * @method string getCreateTimeFrom() 获取发券时间开始时间
- * @method void setCreateTimeFrom(string $CreateTimeFrom) 设置发券时间开始时间
- * @method string getCreateTimeTo() 获取发券时间结束时间
- * @method void setCreateTimeTo(string $CreateTimeTo) 设置发券时间结束时间
+ * @method integer getLimit() 获取<p>一页多少条数据，默认是20条，最大不超过1000</p>
+ * @method void setLimit(integer $Limit) 设置<p>一页多少条数据，默认是20条，最大不超过1000</p>
+ * @method integer getOffset() 获取<p>第多少页，默认是1</p>
+ * @method void setOffset(integer $Offset) 设置<p>第多少页，默认是1</p>
+ * @method string getStatus() 获取<p>券状态：待使用：unUsed，已使用：&nbsp;used，已发货：delivered，已作废：&nbsp;cancel，已过期：overdue</p>
+ * @method void setStatus(string $Status) 设置<p>券状态：待使用：unUsed，已使用：&nbsp;used，已发货：delivered，已作废：&nbsp;cancel，已过期：overdue</p>
+ * @method string getVoucherId() 获取<p>代金券id</p>
+ * @method void setVoucherId(string $VoucherId) 设置<p>代金券id</p>
+ * @method string getCodeId() 获取<p>代金券订单id</p>
+ * @method void setCodeId(string $CodeId) 设置<p>代金券订单id</p>
+ * @method string getProductCode() 获取<p>商品码</p>
+ * @method void setProductCode(string $ProductCode) 设置<p>商品码</p>
+ * @method string getActivityId() 获取<p>活动id</p>
+ * @method void setActivityId(string $ActivityId) 设置<p>活动id</p>
+ * @method string getVoucherName() 获取<p>代金券名称</p>
+ * @method void setVoucherName(string $VoucherName) 设置<p>代金券名称</p>
+ * @method string getTimeFrom() 获取<p>发放开始时间,例：2021-01-01</p>
+ * @method void setTimeFrom(string $TimeFrom) 设置<p>发放开始时间,例：2021-01-01</p>
+ * @method string getTimeTo() 获取<p>发放结束时间，例：2021-01-01</p>
+ * @method void setTimeTo(string $TimeTo) 设置<p>发放结束时间，例：2021-01-01</p>
+ * @method string getSortField() 获取<p>指定排序字段：BeginTime开始时间、EndTime到期时间、CreateTime创建时间</p>
+ * @method void setSortField(string $SortField) 设置<p>指定排序字段：BeginTime开始时间、EndTime到期时间、CreateTime创建时间</p>
+ * @method string getSortOrder() 获取<p>指定升序降序：desc、asc</p>
+ * @method void setSortOrder(string $SortOrder) 设置<p>指定升序降序：desc、asc</p>
+ * @method string getPayMode() 获取<p>付费模式，postPay后付费/prePay预付费/riPay预留实例/&quot;&quot;或者&quot;*&quot;表示全部模式，如果payMode为&quot;&quot;或&quot;*&quot;，那么productCode与subProductCode必须传空</p>
+ * @method void setPayMode(string $PayMode) 设置<p>付费模式，postPay后付费/prePay预付费/riPay预留实例/&quot;&quot;或者&quot;*&quot;表示全部模式，如果payMode为&quot;&quot;或&quot;*&quot;，那么productCode与subProductCode必须传空</p>
+ * @method string getPayScene() 获取<p>付费场景PayMode=postPay时：spotpay-竞价实例,&quot;settle account&quot;-普通后付费PayMode=prePay时：purchase-包年包月新购，renew-包年包月续费（自动续费），modify-包年包月配置变更(变配）PayMode=riPay时：oneOffFee-预留实例预付，hourlyFee-预留实例每小时扣费，*-支持全部付费场景</p>
+ * @method void setPayScene(string $PayScene) 设置<p>付费场景PayMode=postPay时：spotpay-竞价实例,&quot;settle account&quot;-普通后付费PayMode=prePay时：purchase-包年包月新购，renew-包年包月续费（自动续费），modify-包年包月配置变更(变配）PayMode=riPay时：oneOffFee-预留实例预付，hourlyFee-预留实例每小时扣费，*-支持全部付费场景</p>
+ * @method string getOperator() 获取<p>操作人，默认就是用户uin</p>
+ * @method void setOperator(string $Operator) 设置<p>操作人，默认就是用户uin</p>
+ * @method string getVoucherMainType() 获取<p>代金券主类型 has_price 为有价现金券 no_price 为无价代金券</p>
+ * @method void setVoucherMainType(string $VoucherMainType) 设置<p>代金券主类型 has_price 为有价现金券 no_price 为无价代金券</p>
+ * @method string getVoucherSubType() 获取<p>代金券副类型 discount 为折扣券 deduct 为抵扣券</p>
+ * @method void setVoucherSubType(string $VoucherSubType) 设置<p>代金券副类型 discount 为折扣券 deduct 为抵扣券</p>
+ * @method string getStartTimeFrom() 获取<p>券有效时间开始时间</p>
+ * @method void setStartTimeFrom(string $StartTimeFrom) 设置<p>券有效时间开始时间</p>
+ * @method string getStartTimeTo() 获取<p>券有效时间结束时间</p>
+ * @method void setStartTimeTo(string $StartTimeTo) 设置<p>券有效时间结束时间</p>
+ * @method string getEndTimeFrom() 获取<p>券失效时间开始时间</p>
+ * @method void setEndTimeFrom(string $EndTimeFrom) 设置<p>券失效时间开始时间</p>
+ * @method string getEndTimeTo() 获取<p>券失效时间结束时间</p>
+ * @method void setEndTimeTo(string $EndTimeTo) 设置<p>券失效时间结束时间</p>
+ * @method string getCreateTimeFrom() 获取<p>发券时间开始时间</p>
+ * @method void setCreateTimeFrom(string $CreateTimeFrom) 设置<p>发券时间开始时间</p>
+ * @method string getCreateTimeTo() 获取<p>发券时间结束时间</p>
+ * @method void setCreateTimeTo(string $CreateTimeTo) 设置<p>发券时间结束时间</p>
+ * @method string getLang() 获取<p>语言参数</p><p>默认值：zh</p><p>期望返回产品名称中文或其他语言，目前仅支持中文、英文；填&quot;zh&quot;或不填时返回中文，其他情况返回英文</p>
+ * @method void setLang(string $Lang) 设置<p>语言参数</p><p>默认值：zh</p><p>期望返回产品名称中文或其他语言，目前仅支持中文、英文；填&quot;zh&quot;或不填时返回中文，其他情况返回英文</p>
  */
 class DescribeVoucherInfoRequest extends AbstractModel
 {
     /**
-     * @var integer 一页多少条数据，默认是20条，最大不超过1000
+     * @var integer <p>一页多少条数据，默认是20条，最大不超过1000</p>
      */
     public $Limit;
 
     /**
-     * @var integer 第多少页，默认是1
+     * @var integer <p>第多少页，默认是1</p>
      */
     public $Offset;
 
     /**
-     * @var string 券状态：待使用：unUsed，已使用： used，已发货：delivered，已作废： cancel，已过期：overdue
+     * @var string <p>券状态：待使用：unUsed，已使用：&nbsp;used，已发货：delivered，已作废：&nbsp;cancel，已过期：overdue</p>
      */
     public $Status;
 
     /**
-     * @var string 代金券id
+     * @var string <p>代金券id</p>
      */
     public $VoucherId;
 
     /**
-     * @var string 代金券订单id
+     * @var string <p>代金券订单id</p>
      */
     public $CodeId;
 
     /**
-     * @var string 商品码
+     * @var string <p>商品码</p>
      */
     public $ProductCode;
 
     /**
-     * @var string 活动id
+     * @var string <p>活动id</p>
      */
     public $ActivityId;
 
     /**
-     * @var string 代金券名称
+     * @var string <p>代金券名称</p>
      */
     public $VoucherName;
 
     /**
-     * @var string 发放开始时间,例：2021-01-01
+     * @var string <p>发放开始时间,例：2021-01-01</p>
      */
     public $TimeFrom;
 
     /**
-     * @var string 发放结束时间，例：2021-01-01
+     * @var string <p>发放结束时间，例：2021-01-01</p>
      */
     public $TimeTo;
 
     /**
-     * @var string 指定排序字段：BeginTime开始时间、EndTime到期时间、CreateTime创建时间
+     * @var string <p>指定排序字段：BeginTime开始时间、EndTime到期时间、CreateTime创建时间</p>
      */
     public $SortField;
 
     /**
-     * @var string 指定升序降序：desc、asc
+     * @var string <p>指定升序降序：desc、asc</p>
      */
     public $SortOrder;
 
     /**
-     * @var string 付费模式，postPay后付费/prePay预付费/riPay预留实例/""或者"*"表示全部模式，如果payMode为""或"*"，那么productCode与subProductCode必须传空
+     * @var string <p>付费模式，postPay后付费/prePay预付费/riPay预留实例/&quot;&quot;或者&quot;*&quot;表示全部模式，如果payMode为&quot;&quot;或&quot;*&quot;，那么productCode与subProductCode必须传空</p>
      */
     public $PayMode;
 
     /**
-     * @var string 付费场景PayMode=postPay时：spotpay-竞价实例,"settle account"-普通后付费PayMode=prePay时：purchase-包年包月新购，renew-包年包月续费（自动续费），modify-包年包月配置变更(变配）PayMode=riPay时：oneOffFee-预留实例预付，hourlyFee-预留实例每小时扣费，*-支持全部付费场景
+     * @var string <p>付费场景PayMode=postPay时：spotpay-竞价实例,&quot;settle account&quot;-普通后付费PayMode=prePay时：purchase-包年包月新购，renew-包年包月续费（自动续费），modify-包年包月配置变更(变配）PayMode=riPay时：oneOffFee-预留实例预付，hourlyFee-预留实例每小时扣费，*-支持全部付费场景</p>
      */
     public $PayScene;
 
     /**
-     * @var string 操作人，默认就是用户uin
+     * @var string <p>操作人，默认就是用户uin</p>
      */
     public $Operator;
 
     /**
-     * @var string 代金券主类型 has_price 为有价现金券 no_price 为无价代金券
+     * @var string <p>代金券主类型 has_price 为有价现金券 no_price 为无价代金券</p>
      */
     public $VoucherMainType;
 
     /**
-     * @var string 代金券副类型 discount 为折扣券 deduct 为抵扣券
+     * @var string <p>代金券副类型 discount 为折扣券 deduct 为抵扣券</p>
      */
     public $VoucherSubType;
 
     /**
-     * @var string 券有效时间开始时间
+     * @var string <p>券有效时间开始时间</p>
      */
     public $StartTimeFrom;
 
     /**
-     * @var string 券有效时间结束时间
+     * @var string <p>券有效时间结束时间</p>
      */
     public $StartTimeTo;
 
     /**
-     * @var string 券失效时间开始时间
+     * @var string <p>券失效时间开始时间</p>
      */
     public $EndTimeFrom;
 
     /**
-     * @var string 券失效时间结束时间
+     * @var string <p>券失效时间结束时间</p>
      */
     public $EndTimeTo;
 
     /**
-     * @var string 发券时间开始时间
+     * @var string <p>发券时间开始时间</p>
      */
     public $CreateTimeFrom;
 
     /**
-     * @var string 发券时间结束时间
+     * @var string <p>发券时间结束时间</p>
      */
     public $CreateTimeTo;
 
     /**
-     * @param integer $Limit 一页多少条数据，默认是20条，最大不超过1000
-     * @param integer $Offset 第多少页，默认是1
-     * @param string $Status 券状态：待使用：unUsed，已使用： used，已发货：delivered，已作废： cancel，已过期：overdue
-     * @param string $VoucherId 代金券id
-     * @param string $CodeId 代金券订单id
-     * @param string $ProductCode 商品码
-     * @param string $ActivityId 活动id
-     * @param string $VoucherName 代金券名称
-     * @param string $TimeFrom 发放开始时间,例：2021-01-01
-     * @param string $TimeTo 发放结束时间，例：2021-01-01
-     * @param string $SortField 指定排序字段：BeginTime开始时间、EndTime到期时间、CreateTime创建时间
-     * @param string $SortOrder 指定升序降序：desc、asc
-     * @param string $PayMode 付费模式，postPay后付费/prePay预付费/riPay预留实例/""或者"*"表示全部模式，如果payMode为""或"*"，那么productCode与subProductCode必须传空
-     * @param string $PayScene 付费场景PayMode=postPay时：spotpay-竞价实例,"settle account"-普通后付费PayMode=prePay时：purchase-包年包月新购，renew-包年包月续费（自动续费），modify-包年包月配置变更(变配）PayMode=riPay时：oneOffFee-预留实例预付，hourlyFee-预留实例每小时扣费，*-支持全部付费场景
-     * @param string $Operator 操作人，默认就是用户uin
-     * @param string $VoucherMainType 代金券主类型 has_price 为有价现金券 no_price 为无价代金券
-     * @param string $VoucherSubType 代金券副类型 discount 为折扣券 deduct 为抵扣券
-     * @param string $StartTimeFrom 券有效时间开始时间
-     * @param string $StartTimeTo 券有效时间结束时间
-     * @param string $EndTimeFrom 券失效时间开始时间
-     * @param string $EndTimeTo 券失效时间结束时间
-     * @param string $CreateTimeFrom 发券时间开始时间
-     * @param string $CreateTimeTo 发券时间结束时间
+     * @var string <p>语言参数</p><p>默认值：zh</p><p>期望返回产品名称中文或其他语言，目前仅支持中文、英文；填&quot;zh&quot;或不填时返回中文，其他情况返回英文</p>
+     */
+    public $Lang;
+
+    /**
+     * @param integer $Limit <p>一页多少条数据，默认是20条，最大不超过1000</p>
+     * @param integer $Offset <p>第多少页，默认是1</p>
+     * @param string $Status <p>券状态：待使用：unUsed，已使用：&nbsp;used，已发货：delivered，已作废：&nbsp;cancel，已过期：overdue</p>
+     * @param string $VoucherId <p>代金券id</p>
+     * @param string $CodeId <p>代金券订单id</p>
+     * @param string $ProductCode <p>商品码</p>
+     * @param string $ActivityId <p>活动id</p>
+     * @param string $VoucherName <p>代金券名称</p>
+     * @param string $TimeFrom <p>发放开始时间,例：2021-01-01</p>
+     * @param string $TimeTo <p>发放结束时间，例：2021-01-01</p>
+     * @param string $SortField <p>指定排序字段：BeginTime开始时间、EndTime到期时间、CreateTime创建时间</p>
+     * @param string $SortOrder <p>指定升序降序：desc、asc</p>
+     * @param string $PayMode <p>付费模式，postPay后付费/prePay预付费/riPay预留实例/&quot;&quot;或者&quot;*&quot;表示全部模式，如果payMode为&quot;&quot;或&quot;*&quot;，那么productCode与subProductCode必须传空</p>
+     * @param string $PayScene <p>付费场景PayMode=postPay时：spotpay-竞价实例,&quot;settle account&quot;-普通后付费PayMode=prePay时：purchase-包年包月新购，renew-包年包月续费（自动续费），modify-包年包月配置变更(变配）PayMode=riPay时：oneOffFee-预留实例预付，hourlyFee-预留实例每小时扣费，*-支持全部付费场景</p>
+     * @param string $Operator <p>操作人，默认就是用户uin</p>
+     * @param string $VoucherMainType <p>代金券主类型 has_price 为有价现金券 no_price 为无价代金券</p>
+     * @param string $VoucherSubType <p>代金券副类型 discount 为折扣券 deduct 为抵扣券</p>
+     * @param string $StartTimeFrom <p>券有效时间开始时间</p>
+     * @param string $StartTimeTo <p>券有效时间结束时间</p>
+     * @param string $EndTimeFrom <p>券失效时间开始时间</p>
+     * @param string $EndTimeTo <p>券失效时间结束时间</p>
+     * @param string $CreateTimeFrom <p>发券时间开始时间</p>
+     * @param string $CreateTimeTo <p>发券时间结束时间</p>
+     * @param string $Lang <p>语言参数</p><p>默认值：zh</p><p>期望返回产品名称中文或其他语言，目前仅支持中文、英文；填&quot;zh&quot;或不填时返回中文，其他情况返回英文</p>
      */
     function __construct()
     {
@@ -312,6 +320,10 @@ class DescribeVoucherInfoRequest extends AbstractModel
 
         if (array_key_exists("CreateTimeTo",$param) and $param["CreateTimeTo"] !== null) {
             $this->CreateTimeTo = $param["CreateTimeTo"];
+        }
+
+        if (array_key_exists("Lang",$param) and $param["Lang"] !== null) {
+            $this->Lang = $param["Lang"];
         }
     }
 }

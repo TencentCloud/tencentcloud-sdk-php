@@ -120,6 +120,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrRateThreshold(integer $ErrRateThreshold) 设置<p>错误率阈值</p><p>单位：%</p>
  * @method integer getResponseDurationWarningThreshold() 获取<p>响应时间预警阈值</p><p>单位：ms</p>
  * @method void setResponseDurationWarningThreshold(integer $ResponseDurationWarningThreshold) 设置<p>响应时间预警阈值</p><p>单位：ms</p>
+ * @method boolean getUseDefaultFuseConfig() 获取<p>是否使用探针默认熔断阈值</p>
+ * @method void setUseDefaultFuseConfig(boolean $UseDefaultFuseConfig) 设置<p>是否使用探针默认熔断阈值</p>
  */
 class ApmApplicationConfigView extends AbstractModel
 {
@@ -374,6 +376,11 @@ class ApmApplicationConfigView extends AbstractModel
     public $ResponseDurationWarningThreshold;
 
     /**
+     * @var boolean <p>是否使用探针默认熔断阈值</p>
+     */
+    public $UseDefaultFuseConfig;
+
+    /**
      * @param string $InstanceKey <p>业务系统 ID</p>
      * @param string $ServiceName <p>应用名</p>
      * @param string $OperationNameFilter <p>接口过滤</p>
@@ -424,6 +431,7 @@ class ApmApplicationConfigView extends AbstractModel
      * @param boolean $EnableThresholdConfig <p>阈值配置开关</p>
      * @param integer $ErrRateThreshold <p>错误率阈值</p><p>单位：%</p>
      * @param integer $ResponseDurationWarningThreshold <p>响应时间预警阈值</p><p>单位：ms</p>
+     * @param boolean $UseDefaultFuseConfig <p>是否使用探针默认熔断阈值</p>
      */
     function __construct()
     {
@@ -647,6 +655,10 @@ class ApmApplicationConfigView extends AbstractModel
 
         if (array_key_exists("ResponseDurationWarningThreshold",$param) and $param["ResponseDurationWarningThreshold"] !== null) {
             $this->ResponseDurationWarningThreshold = $param["ResponseDurationWarningThreshold"];
+        }
+
+        if (array_key_exists("UseDefaultFuseConfig",$param) and $param["UseDefaultFuseConfig"] !== null) {
+            $this->UseDefaultFuseConfig = $param["UseDefaultFuseConfig"];
         }
     }
 }

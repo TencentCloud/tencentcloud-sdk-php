@@ -136,6 +136,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrRateThreshold(integer $ErrRateThreshold) 设置<p>错误率阈值（%），用于判断应用健康状态为&quot;红色&quot;</p>
  * @method integer getResponseDurationWarningThreshold() 获取<p>响应时间预警阈值（ms），用于判断应用健康状态为&quot;黄色&quot;</p>
  * @method void setResponseDurationWarningThreshold(integer $ResponseDurationWarningThreshold) 设置<p>响应时间预警阈值（ms），用于判断应用健康状态为&quot;黄色&quot;</p>
+ * @method boolean getUseDefaultFuseConfig() 获取<p>是否使用探针默认熔断阈值</p>
+ * @method void setUseDefaultFuseConfig(boolean $UseDefaultFuseConfig) 设置<p>是否使用探针默认熔断阈值</p>
  */
 class ModifyApmApplicationConfigRequest extends AbstractModel
 {
@@ -430,6 +432,11 @@ class ModifyApmApplicationConfigRequest extends AbstractModel
     public $ResponseDurationWarningThreshold;
 
     /**
+     * @var boolean <p>是否使用探针默认熔断阈值</p>
+     */
+    public $UseDefaultFuseConfig;
+
+    /**
      * @param string $InstanceId <p>业务系统 ID</p>
      * @param string $ServiceName <p>应用名</p>
      * @param integer $UrlConvergenceSwitch <p>URL收敛开关,0 关 | 1 开</p>
@@ -488,6 +495,7 @@ class ModifyApmApplicationConfigRequest extends AbstractModel
      * @param boolean $EnableThresholdConfig <p>阈值配置开关。true 表示使用应用级阈值；false 表示使用业务系统级阈值</p>
      * @param integer $ErrRateThreshold <p>错误率阈值（%），用于判断应用健康状态为&quot;红色&quot;</p>
      * @param integer $ResponseDurationWarningThreshold <p>响应时间预警阈值（ms），用于判断应用健康状态为&quot;黄色&quot;</p>
+     * @param boolean $UseDefaultFuseConfig <p>是否使用探针默认熔断阈值</p>
      */
     function __construct()
     {
@@ -744,6 +752,10 @@ class ModifyApmApplicationConfigRequest extends AbstractModel
 
         if (array_key_exists("ResponseDurationWarningThreshold",$param) and $param["ResponseDurationWarningThreshold"] !== null) {
             $this->ResponseDurationWarningThreshold = $param["ResponseDurationWarningThreshold"];
+        }
+
+        if (array_key_exists("UseDefaultFuseConfig",$param) and $param["UseDefaultFuseConfig"] !== null) {
+            $this->UseDefaultFuseConfig = $param["UseDefaultFuseConfig"];
         }
     }
 }

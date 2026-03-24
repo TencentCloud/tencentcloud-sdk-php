@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVoucherInfo返回参数结构体
  *
- * @method integer getTotalCount() 获取券总数
- * @method void setTotalCount(integer $TotalCount) 设置券总数
- * @method integer getTotalBalance() 获取总余额（微分）
- * @method void setTotalBalance(integer $TotalBalance) 设置总余额（微分）
- * @method array getVoucherInfos() 获取代金券相关信息
- * @method void setVoucherInfos(array $VoucherInfos) 设置代金券相关信息
+ * @method integer getTotalCount() 获取<p>券总数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>券总数</p>
+ * @method integer getTotalBalance() 获取<p>总余额（微分）</p>
+ * @method void setTotalBalance(integer $TotalBalance) 设置<p>总余额（微分）</p>
+ * @method array getVoucherInfos() 获取<p>代金券相关信息</p>
+ * @method void setVoucherInfos(array $VoucherInfos) 设置<p>代金券相关信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeVoucherInfoResponse extends AbstractModel
 {
     /**
-     * @var integer 券总数
+     * @var integer <p>券总数</p>
      */
     public $TotalCount;
 
     /**
-     * @var integer 总余额（微分）
+     * @var integer <p>总余额（微分）</p>
      */
     public $TotalBalance;
 
     /**
-     * @var array 代金券相关信息
+     * @var array <p>代金券相关信息</p>
      */
     public $VoucherInfos;
 
@@ -52,9 +52,9 @@ class DescribeVoucherInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 券总数
-     * @param integer $TotalBalance 总余额（微分）
-     * @param array $VoucherInfos 代金券相关信息
+     * @param integer $TotalCount <p>券总数</p>
+     * @param integer $TotalBalance <p>总余额（微分）</p>
+     * @param array $VoucherInfos <p>代金券相关信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

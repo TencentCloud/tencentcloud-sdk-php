@@ -52,6 +52,20 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInChargeNameList(array $InChargeNameList) 设置负责人name
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTaskStatus() 获取生产调度任务状态，参考调度任务侧状态信息，“DELETED”状态为质量侧单独加的，查不到任务时认为任务“DELETED”
+'Y': '调度中',
+'F': '已下线',
+'O': '已暂停',
+'INVALID': '已失效',
+'DELETED': '已删除' 
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskStatus(string $TaskStatus) 设置生产调度任务状态，参考调度任务侧状态信息，“DELETED”状态为质量侧单独加的，查不到任务时认为任务“DELETED”
+'Y': '调度中',
+'F': '已下线',
+'O': '已暂停',
+'INVALID': '已失效',
+'DELETED': '已删除' 
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProdSchedulerTask extends AbstractModel
 {
@@ -104,6 +118,17 @@ class ProdSchedulerTask extends AbstractModel
     public $InChargeNameList;
 
     /**
+     * @var string 生产调度任务状态，参考调度任务侧状态信息，“DELETED”状态为质量侧单独加的，查不到任务时认为任务“DELETED”
+'Y': '调度中',
+'F': '已下线',
+'O': '已暂停',
+'INVALID': '已失效',
+'DELETED': '已删除' 
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskStatus;
+
+    /**
      * @param string $WorkflowId 生产调度任务工作流ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskId 生产调度任务Id
@@ -119,6 +144,13 @@ class ProdSchedulerTask extends AbstractModel
      * @param array $InChargeIdList 负责人id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InChargeNameList 负责人name
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaskStatus 生产调度任务状态，参考调度任务侧状态信息，“DELETED”状态为质量侧单独加的，查不到任务时认为任务“DELETED”
+'Y': '调度中',
+'F': '已下线',
+'O': '已暂停',
+'INVALID': '已失效',
+'DELETED': '已删除' 
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +196,10 @@ class ProdSchedulerTask extends AbstractModel
 
         if (array_key_exists("InChargeNameList",$param) and $param["InChargeNameList"] !== null) {
             $this->InChargeNameList = $param["InChargeNameList"];
+        }
+
+        if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
+            $this->TaskStatus = $param["TaskStatus"];
         }
     }
 }

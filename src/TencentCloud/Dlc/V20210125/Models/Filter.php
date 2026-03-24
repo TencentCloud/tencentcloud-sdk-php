@@ -18,7 +18,7 @@ namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 查询列表过滤条件参数
+ * 筛选条件定义
  *
  * @method string getName() 获取属性名称, 若存在多个Filter时，Filter间的关系为逻辑或（OR）关系。
  * @method void setName(string $Name) 设置属性名称, 若存在多个Filter时，Filter间的关系为逻辑或（OR）关系。

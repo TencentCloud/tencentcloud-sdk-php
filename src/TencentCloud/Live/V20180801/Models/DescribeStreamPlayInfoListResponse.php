@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStreamPlayInfoList返回参数结构体
  *
- * @method array getDataInfoList() 获取统计信息列表，时间粒度是1分钟。
- * @method void setDataInfoList(array $DataInfoList) 设置统计信息列表，时间粒度是1分钟。
+ * @method array getDataInfoList() 获取<p>统计信息列表，时间粒度是1分钟。</p>
+ * @method void setDataInfoList(array $DataInfoList) 设置<p>统计信息列表，时间粒度是1分钟。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeStreamPlayInfoListResponse extends AbstractModel
 {
     /**
-     * @var array 统计信息列表，时间粒度是1分钟。
+     * @var array <p>统计信息列表，时间粒度是1分钟。</p>
      */
     public $DataInfoList;
 
@@ -38,7 +38,7 @@ class DescribeStreamPlayInfoListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DataInfoList 统计信息列表，时间粒度是1分钟。
+     * @param array $DataInfoList <p>统计信息列表，时间粒度是1分钟。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

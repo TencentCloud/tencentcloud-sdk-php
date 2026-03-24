@@ -124,6 +124,7 @@ use TencentCloud\Live\V20180801\Models as Models;
 3. 创建的截图任务记录在平台侧只保留3个月。
 4. 当前截图任务管理API（CreateScreenshotTask/StopScreenshotTask/DeleteScreenshotTask）与旧API（CreateLiveInstantSnapshot/StopLiveInstantSnapshot）不兼容，两套接口不能混用。
 5. 避免 创建截图任务 与 推流 操作同时进行，可能导致因截图任务未生效而引起任务延迟启动问题，两者操作间隔建议大于3秒。
+ * @method Models\CreateVideoRedrawTaskResponse CreateVideoRedrawTask(Models\CreateVideoRedrawTaskRequest $req) 创建AI转绘任务
  * @method Models\DeleteAuditKeywordsResponse DeleteAuditKeywords(Models\DeleteAuditKeywordsRequest $req) 删除关键词信息。
  * @method Models\DeleteCasterResponse DeleteCaster(Models\DeleteCasterRequest $req) 该接口用来删除一个导播台的所有信息。
 注意，调用该接口后，所有的导播台信息将被清除，包括正在直播的内容也将直接中断。

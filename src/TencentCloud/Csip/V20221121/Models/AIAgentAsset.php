@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
 3. UNKNOWN;
  * @method string getMetadataRiskURL() 获取metadata 有风险时对应路径
  * @method void setMetadataRiskURL(string $MetadataRiskURL) 设置metadata 有风险时对应路径
+ * @method SkillState getSkillState() 获取无
+ * @method void setSkillState(SkillState $SkillState) 设置无
  */
 class AIAgentAsset extends AbstractModel
 {
@@ -97,6 +99,11 @@ class AIAgentAsset extends AbstractModel
     public $MetadataRiskURL;
 
     /**
+     * @var SkillState 无
+     */
+    public $SkillState;
+
+    /**
      * @param string $ID ID 标识
      * @param string $AgentName agent 名称
      * @param array $AgentModel agent 使用模型名称
@@ -108,6 +115,7 @@ class AIAgentAsset extends AbstractModel
      * @param string $ExposureStatus 暴露状态。有如下枚举值。1. EXPOSED；2.UNEXPOSED；
 3. UNKNOWN;
      * @param string $MetadataRiskURL metadata 有风险时对应路径
+     * @param SkillState $SkillState 无
      */
     function __construct()
     {
@@ -160,6 +168,11 @@ class AIAgentAsset extends AbstractModel
 
         if (array_key_exists("MetadataRiskURL",$param) and $param["MetadataRiskURL"] !== null) {
             $this->MetadataRiskURL = $param["MetadataRiskURL"];
+        }
+
+        if (array_key_exists("SkillState",$param) and $param["SkillState"] !== null) {
+            $this->SkillState = new SkillState();
+            $this->SkillState->deserialize($param["SkillState"]);
         }
     }
 }

@@ -20,19 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 规则组分页
  *
- * @method integer getTotalCount() 获取记录数
+ * @method integer getTotalCount() 获取查询结果总数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalCount(integer $TotalCount) 设置记录数
+ * @method void setTotalCount(integer $TotalCount) 设置查询结果总数量
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getItems() 获取规则组列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItems(array $Items) 设置规则组列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMonitorEnabledCount() 获取已开启监控任务数量（在查询结果总量中）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMonitorEnabledCount(integer $MonitorEnabledCount) 设置已开启监控任务数量（在查询结果总量中）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleGroupPage extends AbstractModel
 {
     /**
-     * @var integer 记录数
+     * @var integer 查询结果总数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
@@ -44,9 +48,17 @@ class RuleGroupPage extends AbstractModel
     public $Items;
 
     /**
-     * @param integer $TotalCount 记录数
+     * @var integer 已开启监控任务数量（在查询结果总量中）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MonitorEnabledCount;
+
+    /**
+     * @param integer $TotalCount 查询结果总数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Items 规则组列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MonitorEnabledCount 已开启监控任务数量（在查询结果总量中）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -73,6 +85,10 @@ class RuleGroupPage extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Items, $obj);
             }
+        }
+
+        if (array_key_exists("MonitorEnabledCount",$param) and $param["MonitorEnabledCount"] !== null) {
+            $this->MonitorEnabledCount = $param["MonitorEnabledCount"];
         }
     }
 }

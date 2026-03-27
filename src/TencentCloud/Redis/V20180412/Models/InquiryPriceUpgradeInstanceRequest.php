@@ -20,50 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceUpgradeInstance请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
- * @method integer getMemSize() 获取分片大小，单位：MB。
- * @method void setMemSize(integer $MemSize) 设置分片大小，单位：MB。
- * @method integer getRedisShardNum() 获取分片数量。
-- 实例为标准架构，RedisShardNum 默认为1。
-- Redis 2.8主从版、CKV主从版和 Redis 2.8单机版不需要填写。
- * @method void setRedisShardNum(integer $RedisShardNum) 设置分片数量。
-- 实例为标准架构，RedisShardNum 默认为1。
-- Redis 2.8主从版、CKV主从版和 Redis 2.8单机版不需要填写。
- * @method integer getRedisReplicasNum() 获取副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
- * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
+ * @method string getInstanceId() 获取<p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis/instance/list">Redis控制台</a>在实例列表复制实例 ID。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis/instance/list">Redis控制台</a>在实例列表复制实例 ID。</p>
+ * @method integer getMemSize() 获取<p>分片大小，单位：MB。</p>
+ * @method void setMemSize(integer $MemSize) 设置<p>分片大小，单位：MB。</p>
+ * @method integer getRedisShardNum() 获取<p>分片数量。- 实例为标准架构，RedisShardNum 默认为1。- Redis 2.8主从版、CKV主从版和 Redis 2.8单机版不需要填写。</p>
+ * @method void setRedisShardNum(integer $RedisShardNum) 设置<p>分片数量。- 实例为标准架构，RedisShardNum 默认为1。- Redis 2.8主从版、CKV主从版和 Redis 2.8单机版不需要填写。</p>
+ * @method integer getRedisReplicasNum() 获取<p>副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。</p>
+ * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置<p>副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。</p>
  */
 class InquiryPriceUpgradeInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @var string <p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis/instance/list">Redis控制台</a>在实例列表复制实例 ID。</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 分片大小，单位：MB。
+     * @var integer <p>分片大小，单位：MB。</p>
      */
     public $MemSize;
 
     /**
-     * @var integer 分片数量。
-- 实例为标准架构，RedisShardNum 默认为1。
-- Redis 2.8主从版、CKV主从版和 Redis 2.8单机版不需要填写。
+     * @var integer <p>分片数量。- 实例为标准架构，RedisShardNum 默认为1。- Redis 2.8主从版、CKV主从版和 Redis 2.8单机版不需要填写。</p>
      */
     public $RedisShardNum;
 
     /**
-     * @var integer 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
+     * @var integer <p>副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。</p>
      */
     public $RedisReplicasNum;
 
     /**
-     * @param string $InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
-     * @param integer $MemSize 分片大小，单位：MB。
-     * @param integer $RedisShardNum 分片数量。
-- 实例为标准架构，RedisShardNum 默认为1。
-- Redis 2.8主从版、CKV主从版和 Redis 2.8单机版不需要填写。
-     * @param integer $RedisReplicasNum 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
+     * @param string $InstanceId <p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis/instance/list">Redis控制台</a>在实例列表复制实例 ID。</p>
+     * @param integer $MemSize <p>分片大小，单位：MB。</p>
+     * @param integer $RedisShardNum <p>分片数量。- 实例为标准架构，RedisShardNum 默认为1。- Redis 2.8主从版、CKV主从版和 Redis 2.8单机版不需要填写。</p>
+     * @param integer $RedisReplicasNum <p>副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。</p>
      */
     function __construct()
     {

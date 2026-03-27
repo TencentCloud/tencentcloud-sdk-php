@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDeviceSessionList请求参数结构体
  *
- * @method string getProjectId() 获取项目ID
- * @method void setProjectId(string $ProjectId) 设置项目ID
- * @method integer getPageNumber() 获取页码，从1开始
- * @method void setPageNumber(integer $PageNumber) 设置页码，从1开始
- * @method integer getPageSize() 获取每页个数
- * @method void setPageSize(integer $PageSize) 设置每页个数
- * @method string getDeviceId() 获取设备ID
- * @method void setDeviceId(string $DeviceId) 设置设备ID
- * @method integer getStartTime() 获取开始时间
- * @method void setStartTime(integer $StartTime) 设置开始时间
- * @method integer getEndTime() 获取结束时间
- * @method void setEndTime(integer $EndTime) 设置结束时间
+ * @method string getProjectId() 获取<p>项目ID</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目ID</p>
+ * @method integer getPageNumber() 获取<p>页码，从1开始</p>
+ * @method void setPageNumber(integer $PageNumber) 设置<p>页码，从1开始</p>
+ * @method integer getPageSize() 获取<p>每页个数</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页个数</p>
+ * @method string getDeviceId() 获取<p>设备ID</p>
+ * @method void setDeviceId(string $DeviceId) 设置<p>设备ID</p>
+ * @method integer getStartTime() 获取<p>开始时间</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>开始时间</p>
+ * @method integer getEndTime() 获取<p>结束时间</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>结束时间</p>
  */
 class DescribeDeviceSessionListRequest extends AbstractModel
 {
     /**
-     * @var string 项目ID
+     * @var string <p>项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var integer 页码，从1开始
+     * @var integer <p>页码，从1开始</p>
      */
     public $PageNumber;
 
     /**
-     * @var integer 每页个数
+     * @var integer <p>每页个数</p>
      */
     public $PageSize;
 
     /**
-     * @var string 设备ID
+     * @var string <p>设备ID</p>
      */
     public $DeviceId;
 
     /**
-     * @var integer 开始时间
+     * @var integer <p>开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var integer 结束时间
+     * @var integer <p>结束时间</p>
      */
     public $EndTime;
 
     /**
-     * @param string $ProjectId 项目ID
-     * @param integer $PageNumber 页码，从1开始
-     * @param integer $PageSize 每页个数
-     * @param string $DeviceId 设备ID
-     * @param integer $StartTime 开始时间
-     * @param integer $EndTime 结束时间
+     * @param string $ProjectId <p>项目ID</p>
+     * @param integer $PageNumber <p>页码，从1开始</p>
+     * @param integer $PageSize <p>每页个数</p>
+     * @param string $DeviceId <p>设备ID</p>
+     * @param integer $StartTime <p>开始时间</p>
+     * @param integer $EndTime <p>结束时间</p>
      */
     function __construct()
     {

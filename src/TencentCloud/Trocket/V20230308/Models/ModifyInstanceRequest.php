@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtraTopicNum(string $ExtraTopicNum) 设置免费额度之外的主题个数，免费额度参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/96031#ProductSKU) 出参中的 TopicNumLimit 参数。
  * @method boolean getEnableDeletionProtection() 获取是否开启删除保护
  * @method void setEnableDeletionProtection(boolean $EnableDeletionProtection) 设置是否开启删除保护
+ * @method array getZoneIds() 获取部署可用区列表
+ * @method void setZoneIds(array $ZoneIds) 设置部署可用区列表
  */
 class ModifyInstanceRequest extends AbstractModel
 {
@@ -122,6 +124,11 @@ class ModifyInstanceRequest extends AbstractModel
     public $EnableDeletionProtection;
 
     /**
+     * @var array 部署可用区列表
+     */
+    public $ZoneIds;
+
+    /**
      * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      * @param string $Name 实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”
      * @param string $Remark 备注信息，最多 128 个字符
@@ -140,6 +147,7 @@ class ModifyInstanceRequest extends AbstractModel
 - 最大值：TopicNumUpperLimit 参数
      * @param string $ExtraTopicNum 免费额度之外的主题个数，免费额度参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/96031#ProductSKU) 出参中的 TopicNumLimit 参数。
      * @param boolean $EnableDeletionProtection 是否开启删除保护
+     * @param array $ZoneIds 部署可用区列表
      */
     function __construct()
     {
@@ -196,6 +204,10 @@ class ModifyInstanceRequest extends AbstractModel
 
         if (array_key_exists("EnableDeletionProtection",$param) and $param["EnableDeletionProtection"] !== null) {
             $this->EnableDeletionProtection = $param["EnableDeletionProtection"];
+        }
+
+        if (array_key_exists("ZoneIds",$param) and $param["ZoneIds"] !== null) {
+            $this->ZoneIds = $param["ZoneIds"];
         }
     }
 }

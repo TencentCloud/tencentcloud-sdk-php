@@ -33,11 +33,14 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\CleanUpInstanceResponse CleanUpInstance(Models\CleanUpInstanceRequest $req) 本接口（CleanUpInstance）用于立即下线回收站的实例。
  * @method Models\ClearInstanceResponse ClearInstance(Models\ClearInstanceRequest $req) 本接口（ClearInstance）用于清空实例数据。
  * @method Models\CloneInstancesResponse CloneInstances(Models\CloneInstancesRequest $req) 本接口（CloneInstances）用于基于当前实例的备份文件克隆一个完整的新实例。
+ * @method Models\CloseLogResponse CloseLog(Models\CloseLogRequest $req) 关闭日志
  * @method Models\CloseSSLResponse CloseSSL(Models\CloseSSLRequest $req) 本接口（CloseSSL）用于关闭SSL加密认证。
+ * @method Models\CreateExportTaskResponse CreateExportTask(Models\CreateExportTaskRequest $req) 创建日志下载任务
  * @method Models\CreateInstanceAccountResponse CreateInstanceAccount(Models\CreateInstanceAccountRequest $req) 本接口（CreateInstanceAccount）用于自定义访问实例的账号。
  * @method Models\CreateInstancesResponse CreateInstances(Models\CreateInstancesRequest $req) 本接口（CreateInstances）用于创建 Redis 实例。
  * @method Models\CreateParamTemplateResponse CreateParamTemplate(Models\CreateParamTemplateRequest $req) 该接口（CreateParamTemplate）用于创建参数模板。
  * @method Models\CreateReplicationGroupResponse CreateReplicationGroup(Models\CreateReplicationGroupRequest $req) 本接口（CreateReplicationGroup）用于创建复制组。
+ * @method Models\DeleteExportTaskResponse DeleteExportTask(Models\DeleteExportTaskRequest $req) 删除日志下载任务
  * @method Models\DeleteInstanceAccountResponse DeleteInstanceAccount(Models\DeleteInstanceAccountRequest $req) 本接口（DeleteInstanceAccount）用于删除实例子账号。
  * @method Models\DeleteParamTemplateResponse DeleteParamTemplate(Models\DeleteParamTemplateRequest $req) 本接口（DeleteParamTemplate）用于删除参数模板。
  * @method Models\DeleteReplicationInstanceResponse DeleteReplicationInstance(Models\DeleteReplicationInstanceRequest $req) 本接口（DeleteReplicationInstance）移除复制组成员。注：该接口下线中，请使用 [RemoveReplicationInstance](https://cloud.tencent.com/document/product/239/90099)。
@@ -48,6 +51,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\DescribeBandwidthRangeResponse DescribeBandwidthRange(Models\DescribeBandwidthRangeRequest $req) 本接口（DescribeBandwidthRange）用于查询实例带宽信息。
  * @method Models\DescribeCommonDBInstancesResponse DescribeCommonDBInstances(Models\DescribeCommonDBInstancesRequest $req) 本接口（DescribeCommonDBInstances）用于查询Redis实例列表信息。当前该接口已废弃。
  * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) 本接口（DescribeDBSecurityGroups）用于查询实例的安全组详情。
+ * @method Models\DescribeExportTasksResponse DescribeExportTasks(Models\DescribeExportTasksRequest $req) 本接口（DescribeExportTasks）用于查询日志文件的下载任务。
  * @method Models\DescribeGlobalReplicationAreaResponse DescribeGlobalReplicationArea(Models\DescribeGlobalReplicationAreaRequest $req) 本接口（DescribeGlobalReplicationArea）用于查询全球复制支持地域信息。
  * @method Models\DescribeInstanceAccountResponse DescribeInstanceAccount(Models\DescribeInstanceAccountRequest $req) 本接口（DescribeInstanceAccount）用于查看实例账号信息。
  * @method Models\DescribeInstanceBackupsResponse DescribeInstanceBackups(Models\DescribeInstanceBackupsRequest $req) 本接口（DescribeInstanceBackups）用于查询实例备份列表。
@@ -72,6 +76,8 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\DescribeInstanceSupportFeatureResponse DescribeInstanceSupportFeature(Models\DescribeInstanceSupportFeatureRequest $req) 本接口（DescribeInstanceSupportFeature）用于查询实例支持的功能特性。
  * @method Models\DescribeInstanceZoneInfoResponse DescribeInstanceZoneInfo(Models\DescribeInstanceZoneInfoRequest $req) 本接口（DescribeInstanceZoneInfo）用于查询 Redis 节点详细信息。
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 本接口（DescribeInstances）用于查询Redis实例列表。
+ * @method Models\DescribeLogInstanceListResponse DescribeLogInstanceList(Models\DescribeLogInstanceListRequest $req) 日志实例列表查询
+ * @method Models\DescribeLogsResponse DescribeLogs(Models\DescribeLogsRequest $req) 查询日志
  * @method Models\DescribeMaintenanceWindowResponse DescribeMaintenanceWindow(Models\DescribeMaintenanceWindowRequest $req) 本接口（DescribeMaintenanceWindow）用于查询实例维护时间窗。在实例需要进行版本升级或者架构升级的时候，会在维护时间窗时间内进行切换
  * @method Models\DescribeParamTemplateInfoResponse DescribeParamTemplateInfo(Models\DescribeParamTemplateInfoRequest $req) 本接口（DescribeParamTemplateInfo）用于查询参数模板详情。
  * @method Models\DescribeParamTemplatesResponse DescribeParamTemplates(Models\DescribeParamTemplatesRequest $req) 本接口（DescribeParamTemplates）用于查询参数模板列表。
@@ -115,10 +121,12 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\ModifyInstanceParamsResponse ModifyInstanceParams(Models\ModifyInstanceParamsRequest $req) 本接口（ModifyInstanceParams）用于修改 Redis 实例的参数配置。
  * @method Models\ModifyInstancePasswordResponse ModifyInstancePassword(Models\ModifyInstancePasswordRequest $req) 本接口（ModifyInstancePassword）用于修改实例访问密码。
  * @method Models\ModifyInstanceReadOnlyResponse ModifyInstanceReadOnly(Models\ModifyInstanceReadOnlyRequest $req) 本接口（ModifyInstanceReadOnly）用于设置实例输入模式。
+ * @method Models\ModifyLogResponse ModifyLog(Models\ModifyLogRequest $req) 修改日志
  * @method Models\ModifyMaintenanceWindowResponse ModifyMaintenanceWindow(Models\ModifyMaintenanceWindowRequest $req) 本接口（ModifyMaintenanceWindow）用于修改实例维护时间窗时间，需要进行版本升级或者架构升级的实例，会在维护时间窗内进行时间切换。注意：已经发起版本升级或者架构升级的实例，无法修改维护时间窗。
  * @method Models\ModifyNetworkConfigResponse ModifyNetworkConfig(Models\ModifyNetworkConfigRequest $req) 本接口（ModifyNetworkConfig）用于修改实例网络配置。
  * @method Models\ModifyParamTemplateResponse ModifyParamTemplate(Models\ModifyParamTemplateRequest $req) 本接口（ModifyParamTemplate）用于修改参数模板。
  * @method Models\ModifyReplicationGroupResponse ModifyReplicationGroup(Models\ModifyReplicationGroupRequest $req) 本接口（ModifyReplicationGroup）用于修改复制组信息。
+ * @method Models\OpenLogResponse OpenLog(Models\OpenLogRequest $req) 开启日志
  * @method Models\OpenSSLResponse OpenSSL(Models\OpenSSLRequest $req) 本接口（OpenSSL）用于开启 SSL 加密认证功能。
  * @method Models\ReleaseWanAddressResponse ReleaseWanAddress(Models\ReleaseWanAddressRequest $req) 本接口（ReleaseWanAddress）用于关闭外网访问。
  * @method Models\RemoveReplicationGroupResponse RemoveReplicationGroup(Models\RemoveReplicationGroupRequest $req) 本接口（RemoveReplicationGroup）用于删除复制组。

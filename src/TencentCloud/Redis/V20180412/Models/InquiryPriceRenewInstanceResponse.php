@@ -20,45 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceRenewInstance返回参数结构体
  *
- * @method float getPrice() 获取价格
- * @method void setPrice(float $Price) 设置价格
- * @method float getHighPrecisionPrice() 获取高精度价格
- * @method void setHighPrecisionPrice(float $HighPrecisionPrice) 设置高精度价格
- * @method string getCurrency() 获取币种
- * @method void setCurrency(string $Currency) 设置币种
- * @method string getAmountUnit() 获取价格金额单位
-
-- pent: 分
-- microPent: 微分
- * @method void setAmountUnit(string $AmountUnit) 设置价格金额单位
-
-- pent: 分
-- microPent: 微分
+ * @method float getPrice() 获取<p>折扣后价格</p>
+ * @method void setPrice(float $Price) 设置<p>折扣后价格</p>
+ * @method float getHighPrecisionPrice() 获取<p>高精度折扣后价格</p>
+ * @method void setHighPrecisionPrice(float $HighPrecisionPrice) 设置<p>高精度折扣后价格</p>
+ * @method float getOriginalPrice() 获取<p>原价</p>
+ * @method void setOriginalPrice(float $OriginalPrice) 设置<p>原价</p>
+ * @method float getHighPrecisionOriginalPrice() 获取<p>高精度原价</p>
+ * @method void setHighPrecisionOriginalPrice(float $HighPrecisionOriginalPrice) 设置<p>高精度原价</p>
+ * @method string getCurrency() 获取<p>币种</p>
+ * @method void setCurrency(string $Currency) 设置<p>币种</p>
+ * @method string getAmountUnit() 获取<p>价格金额单位</p><ul><li>pent: 分</li><li>microPent: 微分</li></ul>
+ * @method void setAmountUnit(string $AmountUnit) 设置<p>价格金额单位</p><ul><li>pent: 分</li><li>microPent: 微分</li></ul>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class InquiryPriceRenewInstanceResponse extends AbstractModel
 {
     /**
-     * @var float 价格
+     * @var float <p>折扣后价格</p>
      */
     public $Price;
 
     /**
-     * @var float 高精度价格
+     * @var float <p>高精度折扣后价格</p>
      */
     public $HighPrecisionPrice;
 
     /**
-     * @var string 币种
+     * @var float <p>原价</p>
+     */
+    public $OriginalPrice;
+
+    /**
+     * @var float <p>高精度原价</p>
+     */
+    public $HighPrecisionOriginalPrice;
+
+    /**
+     * @var string <p>币种</p>
      */
     public $Currency;
 
     /**
-     * @var string 价格金额单位
-
-- pent: 分
-- microPent: 微分
+     * @var string <p>价格金额单位</p><ul><li>pent: 分</li><li>microPent: 微分</li></ul>
      */
     public $AmountUnit;
 
@@ -68,13 +73,12 @@ class InquiryPriceRenewInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param float $Price 价格
-     * @param float $HighPrecisionPrice 高精度价格
-     * @param string $Currency 币种
-     * @param string $AmountUnit 价格金额单位
-
-- pent: 分
-- microPent: 微分
+     * @param float $Price <p>折扣后价格</p>
+     * @param float $HighPrecisionPrice <p>高精度折扣后价格</p>
+     * @param float $OriginalPrice <p>原价</p>
+     * @param float $HighPrecisionOriginalPrice <p>高精度原价</p>
+     * @param string $Currency <p>币种</p>
+     * @param string $AmountUnit <p>价格金额单位</p><ul><li>pent: 分</li><li>microPent: 微分</li></ul>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -96,6 +100,14 @@ class InquiryPriceRenewInstanceResponse extends AbstractModel
 
         if (array_key_exists("HighPrecisionPrice",$param) and $param["HighPrecisionPrice"] !== null) {
             $this->HighPrecisionPrice = $param["HighPrecisionPrice"];
+        }
+
+        if (array_key_exists("OriginalPrice",$param) and $param["OriginalPrice"] !== null) {
+            $this->OriginalPrice = $param["OriginalPrice"];
+        }
+
+        if (array_key_exists("HighPrecisionOriginalPrice",$param) and $param["HighPrecisionOriginalPrice"] !== null) {
+            $this->HighPrecisionOriginalPrice = $param["HighPrecisionOriginalPrice"];
         }
 
         if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {

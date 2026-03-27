@@ -20,314 +20,322 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateJobConfig请求参数结构体
  *
- * @method string getJobId() 获取作业Id
- * @method void setJobId(string $JobId) 设置作业Id
- * @method string getEntrypointClass() 获取主类
- * @method void setEntrypointClass(string $EntrypointClass) 设置主类
- * @method string getProgramArgs() 获取主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值
- * @method void setProgramArgs(string $ProgramArgs) 设置主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值
- * @method string getRemark() 获取备注
- * @method void setRemark(string $Remark) 设置备注
- * @method array getResourceRefs() 获取资源引用数组
- * @method void setResourceRefs(array $ResourceRefs) 设置资源引用数组
- * @method integer getDefaultParallelism() 获取作业默认并行度
- * @method void setDefaultParallelism(integer $DefaultParallelism) 设置作业默认并行度
- * @method array getProperties() 获取系统参数
- * @method void setProperties(array $Properties) 设置系统参数
- * @method integer getAutoDelete() 获取1: 作业配置达到上限之后，自动删除可删除的最早版本
- * @method void setAutoDelete(integer $AutoDelete) 设置1: 作业配置达到上限之后，自动删除可删除的最早版本
- * @method string getCOSBucket() 获取作业使用的 COS 存储桶名
- * @method void setCOSBucket(string $COSBucket) 设置作业使用的 COS 存储桶名
- * @method boolean getLogCollect() 获取是否采集作业日志
- * @method void setLogCollect(boolean $LogCollect) 设置是否采集作业日志
- * @method float getJobManagerSpec() 获取JobManager规格
- * @method void setJobManagerSpec(float $JobManagerSpec) 设置JobManager规格
- * @method float getTaskManagerSpec() 获取TaskManager规格
- * @method void setTaskManagerSpec(float $TaskManagerSpec) 设置TaskManager规格
- * @method string getClsLogsetId() 获取CLS日志集ID
- * @method void setClsLogsetId(string $ClsLogsetId) 设置CLS日志集ID
- * @method string getClsTopicId() 获取CLS日志主题ID
- * @method void setClsTopicId(string $ClsTopicId) 设置CLS日志主题ID
- * @method integer getLogCollectType() 获取日志采集类型 2：CLS；3：COS
- * @method void setLogCollectType(integer $LogCollectType) 设置日志采集类型 2：CLS；3：COS
- * @method string getPythonVersion() 获取pyflink作业运行时使用的python版本
- * @method void setPythonVersion(string $PythonVersion) 设置pyflink作业运行时使用的python版本
- * @method string getWorkSpaceId() 获取工作空间 SerialId
- * @method void setWorkSpaceId(string $WorkSpaceId) 设置工作空间 SerialId
- * @method string getLogLevel() 获取日志级别
- * @method void setLogLevel(string $LogLevel) 设置日志级别
- * @method integer getAutoRecover() 获取Oceanus 平台恢复作业开关 1:开启 -1: 关闭
- * @method void setAutoRecover(integer $AutoRecover) 设置Oceanus 平台恢复作业开关 1:开启 -1: 关闭
- * @method array getClazzLevels() 获取类日志级别
- * @method void setClazzLevels(array $ClazzLevels) 设置类日志级别
- * @method boolean getExpertModeOn() 获取是否打开专家模式
- * @method void setExpertModeOn(boolean $ExpertModeOn) 设置是否打开专家模式
- * @method ExpertModeConfiguration getExpertModeConfiguration() 获取专家模式的配置
- * @method void setExpertModeConfiguration(ExpertModeConfiguration $ExpertModeConfiguration) 设置专家模式的配置
- * @method boolean getTraceModeOn() 获取trace链路
- * @method void setTraceModeOn(boolean $TraceModeOn) 设置trace链路
- * @method TraceModeConfiguration getTraceModeConfiguration() 获取trace链路配置
- * @method void setTraceModeConfiguration(TraceModeConfiguration $TraceModeConfiguration) 设置trace链路配置
- * @method integer getCheckpointRetainedNum() 获取checkpoint保留个数
- * @method void setCheckpointRetainedNum(integer $CheckpointRetainedNum) 设置checkpoint保留个数
- * @method JobGraph getJobGraph() 获取算子拓扑图
- * @method void setJobGraph(JobGraph $JobGraph) 设置算子拓扑图
- * @method string getEsServerlessIndex() 获取es索引名称
- * @method void setEsServerlessIndex(string $EsServerlessIndex) 设置es索引名称
- * @method string getEsServerlessSpace() 获取es索引空间
- * @method void setEsServerlessSpace(string $EsServerlessSpace) 设置es索引空间
- * @method string getFlinkVersion() 获取flink版本
- * @method void setFlinkVersion(string $FlinkVersion) 设置flink版本
- * @method float getJobManagerCpu() 获取JobManager cpu
- * @method void setJobManagerCpu(float $JobManagerCpu) 设置JobManager cpu
- * @method float getJobManagerMem() 获取JobManager 内存
- * @method void setJobManagerMem(float $JobManagerMem) 设置JobManager 内存
- * @method string getJdkVersion() 获取jdk版本
- * @method void setJdkVersion(string $JdkVersion) 设置jdk版本
- * @method float getTaskManagerCpu() 获取TaskManager cpu
- * @method void setTaskManagerCpu(float $TaskManagerCpu) 设置TaskManager cpu
- * @method float getTaskManagerMem() 获取TaskManager 内存
- * @method void setTaskManagerMem(float $TaskManagerMem) 设置TaskManager 内存
- * @method integer getUseOldSystemConnector() 获取0=默认使用老的 1=使用新的
- * @method void setUseOldSystemConnector(integer $UseOldSystemConnector) 设置0=默认使用老的 1=使用新的
- * @method string getProgramArgsAfterGzip() 获取压缩参数
- * @method void setProgramArgsAfterGzip(string $ProgramArgsAfterGzip) 设置压缩参数
- * @method integer getCheckpointTimeoutSecond() 获取checkpoint 超时时间
- * @method void setCheckpointTimeoutSecond(integer $CheckpointTimeoutSecond) 设置checkpoint 超时时间
- * @method integer getCheckpointIntervalSecond() 获取checkpoint 间隔时间
- * @method void setCheckpointIntervalSecond(integer $CheckpointIntervalSecond) 设置checkpoint 间隔时间
+ * @method string getJobId() 获取<p>作业Id</p>
+ * @method void setJobId(string $JobId) 设置<p>作业Id</p>
+ * @method string getEntrypointClass() 获取<p>主类</p>
+ * @method void setEntrypointClass(string $EntrypointClass) 设置<p>主类</p>
+ * @method string getProgramArgs() 获取<p>主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值</p>
+ * @method void setProgramArgs(string $ProgramArgs) 设置<p>主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值</p>
+ * @method string getRemark() 获取<p>备注</p>
+ * @method void setRemark(string $Remark) 设置<p>备注</p>
+ * @method array getResourceRefs() 获取<p>资源引用数组</p>
+ * @method void setResourceRefs(array $ResourceRefs) 设置<p>资源引用数组</p>
+ * @method integer getDefaultParallelism() 获取<p>作业默认并行度</p>
+ * @method void setDefaultParallelism(integer $DefaultParallelism) 设置<p>作业默认并行度</p>
+ * @method array getProperties() 获取<p>系统参数</p>
+ * @method void setProperties(array $Properties) 设置<p>系统参数</p>
+ * @method integer getAutoDelete() 获取<p>1: 作业配置达到上限之后，自动删除可删除的最早版本</p>
+ * @method void setAutoDelete(integer $AutoDelete) 设置<p>1: 作业配置达到上限之后，自动删除可删除的最早版本</p>
+ * @method string getCOSBucket() 获取<p>作业使用的 COS 存储桶名</p>
+ * @method void setCOSBucket(string $COSBucket) 设置<p>作业使用的 COS 存储桶名</p>
+ * @method boolean getLogCollect() 获取<p>是否采集作业日志</p>
+ * @method void setLogCollect(boolean $LogCollect) 设置<p>是否采集作业日志</p>
+ * @method float getJobManagerSpec() 获取<p>JobManager规格</p>
+ * @method void setJobManagerSpec(float $JobManagerSpec) 设置<p>JobManager规格</p>
+ * @method float getTaskManagerSpec() 获取<p>TaskManager规格</p>
+ * @method void setTaskManagerSpec(float $TaskManagerSpec) 设置<p>TaskManager规格</p>
+ * @method string getClsLogsetId() 获取<p>CLS日志集ID</p>
+ * @method void setClsLogsetId(string $ClsLogsetId) 设置<p>CLS日志集ID</p>
+ * @method string getClsTopicId() 获取<p>CLS日志主题ID</p>
+ * @method void setClsTopicId(string $ClsTopicId) 设置<p>CLS日志主题ID</p>
+ * @method integer getLogCollectType() 获取<p>日志采集类型 2：CLS；3：COS</p>
+ * @method void setLogCollectType(integer $LogCollectType) 设置<p>日志采集类型 2：CLS；3：COS</p>
+ * @method string getPythonVersion() 获取<p>pyflink作业运行时使用的python版本</p>
+ * @method void setPythonVersion(string $PythonVersion) 设置<p>pyflink作业运行时使用的python版本</p>
+ * @method string getWorkSpaceId() 获取<p>工作空间 SerialId</p>
+ * @method void setWorkSpaceId(string $WorkSpaceId) 设置<p>工作空间 SerialId</p>
+ * @method string getLogLevel() 获取<p>日志级别</p>
+ * @method void setLogLevel(string $LogLevel) 设置<p>日志级别</p>
+ * @method integer getAutoRecover() 获取<p>Oceanus 平台恢复作业开关 1:开启 -1: 关闭</p>
+ * @method void setAutoRecover(integer $AutoRecover) 设置<p>Oceanus 平台恢复作业开关 1:开启 -1: 关闭</p>
+ * @method array getClazzLevels() 获取<p>类日志级别</p>
+ * @method void setClazzLevels(array $ClazzLevels) 设置<p>类日志级别</p>
+ * @method boolean getExpertModeOn() 获取<p>是否打开专家模式</p>
+ * @method void setExpertModeOn(boolean $ExpertModeOn) 设置<p>是否打开专家模式</p>
+ * @method ExpertModeConfiguration getExpertModeConfiguration() 获取<p>专家模式的配置</p>
+ * @method void setExpertModeConfiguration(ExpertModeConfiguration $ExpertModeConfiguration) 设置<p>专家模式的配置</p>
+ * @method boolean getTraceModeOn() 获取<p>trace链路</p>
+ * @method void setTraceModeOn(boolean $TraceModeOn) 设置<p>trace链路</p>
+ * @method TraceModeConfiguration getTraceModeConfiguration() 获取<p>trace链路配置</p>
+ * @method void setTraceModeConfiguration(TraceModeConfiguration $TraceModeConfiguration) 设置<p>trace链路配置</p>
+ * @method integer getCheckpointRetainedNum() 获取<p>checkpoint保留个数</p>
+ * @method void setCheckpointRetainedNum(integer $CheckpointRetainedNum) 设置<p>checkpoint保留个数</p>
+ * @method JobGraph getJobGraph() 获取<p>算子拓扑图</p>
+ * @method void setJobGraph(JobGraph $JobGraph) 设置<p>算子拓扑图</p>
+ * @method string getEsServerlessIndex() 获取<p>es索引名称</p>
+ * @method void setEsServerlessIndex(string $EsServerlessIndex) 设置<p>es索引名称</p>
+ * @method string getEsServerlessSpace() 获取<p>es索引空间</p>
+ * @method void setEsServerlessSpace(string $EsServerlessSpace) 设置<p>es索引空间</p>
+ * @method string getFlinkVersion() 获取<p>flink版本</p>
+ * @method void setFlinkVersion(string $FlinkVersion) 设置<p>flink版本</p>
+ * @method float getJobManagerCpu() 获取<p>JobManager cpu</p>
+ * @method void setJobManagerCpu(float $JobManagerCpu) 设置<p>JobManager cpu</p>
+ * @method float getJobManagerMem() 获取<p>JobManager 内存</p>
+ * @method void setJobManagerMem(float $JobManagerMem) 设置<p>JobManager 内存</p>
+ * @method string getJdkVersion() 获取<p>jdk版本</p>
+ * @method void setJdkVersion(string $JdkVersion) 设置<p>jdk版本</p>
+ * @method float getTaskManagerCpu() 获取<p>TaskManager cpu</p>
+ * @method void setTaskManagerCpu(float $TaskManagerCpu) 设置<p>TaskManager cpu</p>
+ * @method float getTaskManagerMem() 获取<p>TaskManager 内存</p>
+ * @method void setTaskManagerMem(float $TaskManagerMem) 设置<p>TaskManager 内存</p>
+ * @method integer getUseOldSystemConnector() 获取<p>0=默认使用老的 1=使用新的</p>
+ * @method void setUseOldSystemConnector(integer $UseOldSystemConnector) 设置<p>0=默认使用老的 1=使用新的</p>
+ * @method string getProgramArgsAfterGzip() 获取<p>压缩参数</p>
+ * @method void setProgramArgsAfterGzip(string $ProgramArgsAfterGzip) 设置<p>压缩参数</p>
+ * @method integer getCheckpointTimeoutSecond() 获取<p>checkpoint 超时时间</p>
+ * @method void setCheckpointTimeoutSecond(integer $CheckpointTimeoutSecond) 设置<p>checkpoint 超时时间</p>
+ * @method integer getCheckpointIntervalSecond() 获取<p>checkpoint 间隔时间</p>
+ * @method void setCheckpointIntervalSecond(integer $CheckpointIntervalSecond) 设置<p>checkpoint 间隔时间</p>
+ * @method integer getVariableReplaceMode() 获取<p>变量替换模式</p><p>枚举值：</p><ul><li>0： 表变量替换</li><li>1： SQL全局变量替换</li></ul><p>默认值：1</p>
+ * @method void setVariableReplaceMode(integer $VariableReplaceMode) 设置<p>变量替换模式</p><p>枚举值：</p><ul><li>0： 表变量替换</li><li>1： SQL全局变量替换</li></ul><p>默认值：1</p>
  */
 class CreateJobConfigRequest extends AbstractModel
 {
     /**
-     * @var string 作业Id
+     * @var string <p>作业Id</p>
      */
     public $JobId;
 
     /**
-     * @var string 主类
+     * @var string <p>主类</p>
      */
     public $EntrypointClass;
 
     /**
-     * @var string 主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值
+     * @var string <p>主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值</p>
      */
     public $ProgramArgs;
 
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
      */
     public $Remark;
 
     /**
-     * @var array 资源引用数组
+     * @var array <p>资源引用数组</p>
      */
     public $ResourceRefs;
 
     /**
-     * @var integer 作业默认并行度
+     * @var integer <p>作业默认并行度</p>
      */
     public $DefaultParallelism;
 
     /**
-     * @var array 系统参数
+     * @var array <p>系统参数</p>
      */
     public $Properties;
 
     /**
-     * @var integer 1: 作业配置达到上限之后，自动删除可删除的最早版本
+     * @var integer <p>1: 作业配置达到上限之后，自动删除可删除的最早版本</p>
      */
     public $AutoDelete;
 
     /**
-     * @var string 作业使用的 COS 存储桶名
+     * @var string <p>作业使用的 COS 存储桶名</p>
      */
     public $COSBucket;
 
     /**
-     * @var boolean 是否采集作业日志
+     * @var boolean <p>是否采集作业日志</p>
      */
     public $LogCollect;
 
     /**
-     * @var float JobManager规格
+     * @var float <p>JobManager规格</p>
      */
     public $JobManagerSpec;
 
     /**
-     * @var float TaskManager规格
+     * @var float <p>TaskManager规格</p>
      */
     public $TaskManagerSpec;
 
     /**
-     * @var string CLS日志集ID
+     * @var string <p>CLS日志集ID</p>
      */
     public $ClsLogsetId;
 
     /**
-     * @var string CLS日志主题ID
+     * @var string <p>CLS日志主题ID</p>
      */
     public $ClsTopicId;
 
     /**
-     * @var integer 日志采集类型 2：CLS；3：COS
+     * @var integer <p>日志采集类型 2：CLS；3：COS</p>
      */
     public $LogCollectType;
 
     /**
-     * @var string pyflink作业运行时使用的python版本
+     * @var string <p>pyflink作业运行时使用的python版本</p>
      */
     public $PythonVersion;
 
     /**
-     * @var string 工作空间 SerialId
+     * @var string <p>工作空间 SerialId</p>
      */
     public $WorkSpaceId;
 
     /**
-     * @var string 日志级别
+     * @var string <p>日志级别</p>
      */
     public $LogLevel;
 
     /**
-     * @var integer Oceanus 平台恢复作业开关 1:开启 -1: 关闭
+     * @var integer <p>Oceanus 平台恢复作业开关 1:开启 -1: 关闭</p>
      */
     public $AutoRecover;
 
     /**
-     * @var array 类日志级别
+     * @var array <p>类日志级别</p>
      */
     public $ClazzLevels;
 
     /**
-     * @var boolean 是否打开专家模式
+     * @var boolean <p>是否打开专家模式</p>
      */
     public $ExpertModeOn;
 
     /**
-     * @var ExpertModeConfiguration 专家模式的配置
+     * @var ExpertModeConfiguration <p>专家模式的配置</p>
      */
     public $ExpertModeConfiguration;
 
     /**
-     * @var boolean trace链路
+     * @var boolean <p>trace链路</p>
      */
     public $TraceModeOn;
 
     /**
-     * @var TraceModeConfiguration trace链路配置
+     * @var TraceModeConfiguration <p>trace链路配置</p>
      */
     public $TraceModeConfiguration;
 
     /**
-     * @var integer checkpoint保留个数
+     * @var integer <p>checkpoint保留个数</p>
      */
     public $CheckpointRetainedNum;
 
     /**
-     * @var JobGraph 算子拓扑图
+     * @var JobGraph <p>算子拓扑图</p>
      */
     public $JobGraph;
 
     /**
-     * @var string es索引名称
+     * @var string <p>es索引名称</p>
      */
     public $EsServerlessIndex;
 
     /**
-     * @var string es索引空间
+     * @var string <p>es索引空间</p>
      */
     public $EsServerlessSpace;
 
     /**
-     * @var string flink版本
+     * @var string <p>flink版本</p>
      */
     public $FlinkVersion;
 
     /**
-     * @var float JobManager cpu
+     * @var float <p>JobManager cpu</p>
      */
     public $JobManagerCpu;
 
     /**
-     * @var float JobManager 内存
+     * @var float <p>JobManager 内存</p>
      */
     public $JobManagerMem;
 
     /**
-     * @var string jdk版本
+     * @var string <p>jdk版本</p>
      */
     public $JdkVersion;
 
     /**
-     * @var float TaskManager cpu
+     * @var float <p>TaskManager cpu</p>
      */
     public $TaskManagerCpu;
 
     /**
-     * @var float TaskManager 内存
+     * @var float <p>TaskManager 内存</p>
      */
     public $TaskManagerMem;
 
     /**
-     * @var integer 0=默认使用老的 1=使用新的
+     * @var integer <p>0=默认使用老的 1=使用新的</p>
      */
     public $UseOldSystemConnector;
 
     /**
-     * @var string 压缩参数
+     * @var string <p>压缩参数</p>
      */
     public $ProgramArgsAfterGzip;
 
     /**
-     * @var integer checkpoint 超时时间
+     * @var integer <p>checkpoint 超时时间</p>
      */
     public $CheckpointTimeoutSecond;
 
     /**
-     * @var integer checkpoint 间隔时间
+     * @var integer <p>checkpoint 间隔时间</p>
      */
     public $CheckpointIntervalSecond;
 
     /**
-     * @param string $JobId 作业Id
-     * @param string $EntrypointClass 主类
-     * @param string $ProgramArgs 主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值
-     * @param string $Remark 备注
-     * @param array $ResourceRefs 资源引用数组
-     * @param integer $DefaultParallelism 作业默认并行度
-     * @param array $Properties 系统参数
-     * @param integer $AutoDelete 1: 作业配置达到上限之后，自动删除可删除的最早版本
-     * @param string $COSBucket 作业使用的 COS 存储桶名
-     * @param boolean $LogCollect 是否采集作业日志
-     * @param float $JobManagerSpec JobManager规格
-     * @param float $TaskManagerSpec TaskManager规格
-     * @param string $ClsLogsetId CLS日志集ID
-     * @param string $ClsTopicId CLS日志主题ID
-     * @param integer $LogCollectType 日志采集类型 2：CLS；3：COS
-     * @param string $PythonVersion pyflink作业运行时使用的python版本
-     * @param string $WorkSpaceId 工作空间 SerialId
-     * @param string $LogLevel 日志级别
-     * @param integer $AutoRecover Oceanus 平台恢复作业开关 1:开启 -1: 关闭
-     * @param array $ClazzLevels 类日志级别
-     * @param boolean $ExpertModeOn 是否打开专家模式
-     * @param ExpertModeConfiguration $ExpertModeConfiguration 专家模式的配置
-     * @param boolean $TraceModeOn trace链路
-     * @param TraceModeConfiguration $TraceModeConfiguration trace链路配置
-     * @param integer $CheckpointRetainedNum checkpoint保留个数
-     * @param JobGraph $JobGraph 算子拓扑图
-     * @param string $EsServerlessIndex es索引名称
-     * @param string $EsServerlessSpace es索引空间
-     * @param string $FlinkVersion flink版本
-     * @param float $JobManagerCpu JobManager cpu
-     * @param float $JobManagerMem JobManager 内存
-     * @param string $JdkVersion jdk版本
-     * @param float $TaskManagerCpu TaskManager cpu
-     * @param float $TaskManagerMem TaskManager 内存
-     * @param integer $UseOldSystemConnector 0=默认使用老的 1=使用新的
-     * @param string $ProgramArgsAfterGzip 压缩参数
-     * @param integer $CheckpointTimeoutSecond checkpoint 超时时间
-     * @param integer $CheckpointIntervalSecond checkpoint 间隔时间
+     * @var integer <p>变量替换模式</p><p>枚举值：</p><ul><li>0： 表变量替换</li><li>1： SQL全局变量替换</li></ul><p>默认值：1</p>
+     */
+    public $VariableReplaceMode;
+
+    /**
+     * @param string $JobId <p>作业Id</p>
+     * @param string $EntrypointClass <p>主类</p>
+     * @param string $ProgramArgs <p>主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值</p>
+     * @param string $Remark <p>备注</p>
+     * @param array $ResourceRefs <p>资源引用数组</p>
+     * @param integer $DefaultParallelism <p>作业默认并行度</p>
+     * @param array $Properties <p>系统参数</p>
+     * @param integer $AutoDelete <p>1: 作业配置达到上限之后，自动删除可删除的最早版本</p>
+     * @param string $COSBucket <p>作业使用的 COS 存储桶名</p>
+     * @param boolean $LogCollect <p>是否采集作业日志</p>
+     * @param float $JobManagerSpec <p>JobManager规格</p>
+     * @param float $TaskManagerSpec <p>TaskManager规格</p>
+     * @param string $ClsLogsetId <p>CLS日志集ID</p>
+     * @param string $ClsTopicId <p>CLS日志主题ID</p>
+     * @param integer $LogCollectType <p>日志采集类型 2：CLS；3：COS</p>
+     * @param string $PythonVersion <p>pyflink作业运行时使用的python版本</p>
+     * @param string $WorkSpaceId <p>工作空间 SerialId</p>
+     * @param string $LogLevel <p>日志级别</p>
+     * @param integer $AutoRecover <p>Oceanus 平台恢复作业开关 1:开启 -1: 关闭</p>
+     * @param array $ClazzLevels <p>类日志级别</p>
+     * @param boolean $ExpertModeOn <p>是否打开专家模式</p>
+     * @param ExpertModeConfiguration $ExpertModeConfiguration <p>专家模式的配置</p>
+     * @param boolean $TraceModeOn <p>trace链路</p>
+     * @param TraceModeConfiguration $TraceModeConfiguration <p>trace链路配置</p>
+     * @param integer $CheckpointRetainedNum <p>checkpoint保留个数</p>
+     * @param JobGraph $JobGraph <p>算子拓扑图</p>
+     * @param string $EsServerlessIndex <p>es索引名称</p>
+     * @param string $EsServerlessSpace <p>es索引空间</p>
+     * @param string $FlinkVersion <p>flink版本</p>
+     * @param float $JobManagerCpu <p>JobManager cpu</p>
+     * @param float $JobManagerMem <p>JobManager 内存</p>
+     * @param string $JdkVersion <p>jdk版本</p>
+     * @param float $TaskManagerCpu <p>TaskManager cpu</p>
+     * @param float $TaskManagerMem <p>TaskManager 内存</p>
+     * @param integer $UseOldSystemConnector <p>0=默认使用老的 1=使用新的</p>
+     * @param string $ProgramArgsAfterGzip <p>压缩参数</p>
+     * @param integer $CheckpointTimeoutSecond <p>checkpoint 超时时间</p>
+     * @param integer $CheckpointIntervalSecond <p>checkpoint 间隔时间</p>
+     * @param integer $VariableReplaceMode <p>变量替换模式</p><p>枚举值：</p><ul><li>0： 表变量替换</li><li>1： SQL全局变量替换</li></ul><p>默认值：1</p>
      */
     function __construct()
     {
@@ -510,6 +518,10 @@ class CreateJobConfigRequest extends AbstractModel
 
         if (array_key_exists("CheckpointIntervalSecond",$param) and $param["CheckpointIntervalSecond"] !== null) {
             $this->CheckpointIntervalSecond = $param["CheckpointIntervalSecond"];
+        }
+
+        if (array_key_exists("VariableReplaceMode",$param) and $param["VariableReplaceMode"] !== null) {
+            $this->VariableReplaceMode = $param["VariableReplaceMode"];
         }
     }
 }

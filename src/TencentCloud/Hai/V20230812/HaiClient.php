@@ -26,6 +26,7 @@ use TencentCloud\Hai\V20230812\Models as Models;
  * @method Models\CreateApplicationResponse CreateApplication(Models\CreateApplicationRequest $req) 本接口（CreateApplication）用于对HAI实例制作自定义应用。
  * @method Models\CreateInferServiceByTemplateResponse CreateInferServiceByTemplate(Models\CreateInferServiceByTemplateRequest $req) 本接口(CreateInferServiceByTemplate)用于根据模板创建服务
  * @method Models\CreateMuskPromptResponse CreateMuskPrompt(Models\CreateMuskPromptRequest $req) 创建musk prompt 任务
+ * @method Models\DeleteServiceResponse DeleteService(Models\DeleteServiceRequest $req) 本接口 (DeleteService) 用于删除一个指定配置的实例。
  * @method Models\DeployInferServiceResponse DeployInferService(Models\DeployInferServiceRequest $req) 本接口(DeployInferService)用于部署推理服务
  * @method Models\DescribeApplicationsResponse DescribeApplications(Models\DescribeApplicationsRequest $req) 本接口（DescribeApplications）用于查询应用
  * @method Models\DescribeDeployTemplatesResponse DescribeDeployTemplates(Models\DescribeDeployTemplatesRequest $req) 本接口(DescribeDeployTemplates)用于查询模型支持的部署模板
@@ -37,6 +38,7 @@ use TencentCloud\Hai\V20230812\Models as Models;
  * @method Models\DescribeScenesResponse DescribeScenes(Models\DescribeScenesRequest $req) 本接口（DescribeScenes）用于查询场景
  * @method Models\DescribeServiceLoginSettingsResponse DescribeServiceLoginSettings(Models\DescribeServiceLoginSettingsRequest $req) 本接口（DescribeServiceLoginSettings）用于查询服务登录配置
  * @method Models\DescribeServicesResponse DescribeServices(Models\DescribeServicesRequest $req) 本接口 (DescribeServices) 用于查询一个或多个服务
+ * @method Models\DescribeServicesCallInfoResponse DescribeServicesCallInfo(Models\DescribeServicesCallInfoRequest $req) 本接口 (DescribeServciesCallInfo) 用于查询服务调用信息。
  * @method Models\InquirePriceRunInstancesResponse InquirePriceRunInstances(Models\InquirePriceRunInstancesRequest $req) 本接口 (InquirePriceRunInstances) 用于实例询价。
  * @method Models\InquirePriceUpdateServiceConfigsResponse InquirePriceUpdateServiceConfigs(Models\InquirePriceUpdateServiceConfigsRequest $req) 本接口(InquirePriceUpdateServiceConfigs)用于更新服务配置询价
  * @method Models\ResetInstancesPasswordResponse ResetInstancesPassword(Models\ResetInstancesPasswordRequest $req) 本接口 (ResetInstancesPassword) 用于重置实例的用户密码。

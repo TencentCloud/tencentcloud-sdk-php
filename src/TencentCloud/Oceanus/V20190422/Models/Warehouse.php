@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Setats Warehouse结构
  *
- * @method integer getStatus() 获取<p>状态</p>
+ * @method integer getStatus() 获取<p>状态</p><p>枚举值：</p><ul><li>0： 未开启</li><li>1： 开启中</li><li>2： 已开启</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置<p>状态</p>
+ * @method void setStatus(integer $Status) 设置<p>状态</p><p>枚举值：</p><ul><li>0： 未开启</li><li>1： 开启中</li><li>2： 已开启</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLocation() 获取<p>location</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocation(string $Location) 设置<p>location</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCatalogType() 获取<p>catalogtype</p>
+ * @method string getCatalogType() 获取<p>catalog类型</p><p>枚举值：</p><ul><li>hadoop： hadoop catalog</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCatalogType(string $CatalogType) 设置<p>catalogtype</p>
+ * @method void setCatalogType(string $CatalogType) 设置<p>catalog类型</p><p>枚举值：</p><ul><li>hadoop： hadoop catalog</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUri() 获取<p>uri</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -62,7 +62,7 @@ use TencentCloud\Common\AbstractModel;
 class Warehouse extends AbstractModel
 {
     /**
-     * @var integer <p>状态</p>
+     * @var integer <p>状态</p><p>枚举值：</p><ul><li>0： 未开启</li><li>1： 开启中</li><li>2： 已开启</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -74,7 +74,7 @@ class Warehouse extends AbstractModel
     public $Location;
 
     /**
-     * @var string <p>catalogtype</p>
+     * @var string <p>catalog类型</p><p>枚举值：</p><ul><li>hadoop： hadoop catalog</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CatalogType;
@@ -121,11 +121,11 @@ class Warehouse extends AbstractModel
     public $HiveCatalogType;
 
     /**
-     * @param integer $Status <p>状态</p>
+     * @param integer $Status <p>状态</p><p>枚举值：</p><ul><li>0： 未开启</li><li>1： 开启中</li><li>2： 已开启</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Location <p>location</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CatalogType <p>catalogtype</p>
+     * @param string $CatalogType <p>catalog类型</p><p>枚举值：</p><ul><li>hadoop： hadoop catalog</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uri <p>uri</p>
 注意：此字段可能返回 null，表示取不到有效值。

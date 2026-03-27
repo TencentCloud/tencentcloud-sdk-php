@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * hadoopYarn资源信息
  *
- * @method string getClusterGroupSerialId() 获取ClusterGroupSerialId
- * @method void setClusterGroupSerialId(string $ClusterGroupSerialId) 设置ClusterGroupSerialId
- * @method integer getStatus() 获取状态
+ * @method string getClusterGroupSerialId() 获取<p>ClusterGroupSerialId</p>
+ * @method void setClusterGroupSerialId(string $ClusterGroupSerialId) 设置<p>ClusterGroupSerialId</p>
+ * @method integer getStatus() 获取<p>状态</p><p>枚举值：</p><ul><li>1： 停止</li><li>2： 开启中</li><li>3： 启动</li><li>4： 开启失败</li><li>5： 停止中</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置状态
+ * @method void setStatus(integer $Status) 设置<p>状态</p><p>枚举值：</p><ul><li>1： 停止</li><li>2： 开启中</li><li>3： 启动</li><li>4： 开启失败</li><li>5： 停止中</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getCpu() 获取cpu
+ * @method float getCpu() 获取<p>cpu</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCpu(float $Cpu) 设置cpu
+ * @method void setCpu(float $Cpu) 设置<p>cpu</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getMem() 获取mem
- * @method void setMem(float $Mem) 设置mem
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getUpdateTime() 获取更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
- * @method string getConfig() 获取配置文件内容
- * @method void setConfig(string $Config) 设置配置文件内容
- * @method string getCreatorUin() 获取CreatorUin
- * @method void setCreatorUin(string $CreatorUin) 设置CreatorUin
+ * @method float getMem() 获取<p>mem</p>
+ * @method void setMem(float $Mem) 设置<p>mem</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getUpdateTime() 获取<p>更新时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
+ * @method string getConfig() 获取<p>配置文件内容</p>
+ * @method void setConfig(string $Config) 设置<p>配置文件内容</p>
+ * @method string getCreatorUin() 获取<p>CreatorUin</p>
+ * @method void setCreatorUin(string $CreatorUin) 设置<p>CreatorUin</p>
  */
 class HadoopYarnItem extends AbstractModel
 {
     /**
-     * @var string ClusterGroupSerialId
+     * @var string <p>ClusterGroupSerialId</p>
      */
     public $ClusterGroupSerialId;
 
     /**
-     * @var integer 状态
+     * @var integer <p>状态</p><p>枚举值：</p><ul><li>1： 停止</li><li>2： 开启中</li><li>3： 启动</li><li>4： 开启失败</li><li>5： 停止中</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var float cpu
+     * @var float <p>cpu</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cpu;
 
     /**
-     * @var float mem
+     * @var float <p>mem</p>
      */
     public $Mem;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 配置文件内容
+     * @var string <p>配置文件内容</p>
      */
     public $Config;
 
     /**
-     * @var string CreatorUin
+     * @var string <p>CreatorUin</p>
      */
     public $CreatorUin;
 
     /**
-     * @param string $ClusterGroupSerialId ClusterGroupSerialId
-     * @param integer $Status 状态
+     * @param string $ClusterGroupSerialId <p>ClusterGroupSerialId</p>
+     * @param integer $Status <p>状态</p><p>枚举值：</p><ul><li>1： 停止</li><li>2： 开启中</li><li>3： 启动</li><li>4： 开启失败</li><li>5： 停止中</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $Cpu cpu
+     * @param float $Cpu <p>cpu</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $Mem mem
-     * @param string $CreateTime 创建时间
-     * @param string $UpdateTime 更新时间
-     * @param string $Config 配置文件内容
-     * @param string $CreatorUin CreatorUin
+     * @param float $Mem <p>mem</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $UpdateTime <p>更新时间</p>
+     * @param string $Config <p>配置文件内容</p>
+     * @param string $CreatorUin <p>CreatorUin</p>
      */
     function __construct()
     {

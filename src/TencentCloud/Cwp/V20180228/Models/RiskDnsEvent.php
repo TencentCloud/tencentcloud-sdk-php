@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSuggestSolution(string $SuggestSolution) 设置修复方案
  * @method string getReferenceLink() 获取参考链接
  * @method void setReferenceLink(string $ReferenceLink) 设置参考链接
- * @method integer getHandleStatus() 获取处理状态；[0:待处理|2:已加白|3:非信任状态|4:已处理|5:已忽略]
- * @method void setHandleStatus(integer $HandleStatus) 设置处理状态；[0:待处理|2:已加白|3:非信任状态|4:已处理|5:已忽略]
+ * @method integer getHandleStatus() 获取处理状态；[0:待处理|2:已加白|3:非信任状态|4:已处理|5:已忽略|6:已拦截]
+ * @method void setHandleStatus(integer $HandleStatus) 设置处理状态；[0:待处理|2:已加白|3:非信任状态|4:已处理|5:已忽略|6:已拦截]
  * @method integer getPid() 获取进程ID
  * @method void setPid(integer $Pid) 设置进程ID
  * @method string getProcessName() 获取进程名
@@ -156,7 +156,7 @@ class RiskDnsEvent extends AbstractModel
     public $ReferenceLink;
 
     /**
-     * @var integer 处理状态；[0:待处理|2:已加白|3:非信任状态|4:已处理|5:已忽略]
+     * @var integer 处理状态；[0:待处理|2:已加白|3:非信任状态|4:已处理|5:已忽略|6:已拦截]
      */
     public $HandleStatus;
 
@@ -222,7 +222,7 @@ class RiskDnsEvent extends AbstractModel
      * @param string $ThreatDesc 威胁描述
      * @param string $SuggestSolution 修复方案
      * @param string $ReferenceLink 参考链接
-     * @param integer $HandleStatus 处理状态；[0:待处理|2:已加白|3:非信任状态|4:已处理|5:已忽略]
+     * @param integer $HandleStatus 处理状态；[0:待处理|2:已加白|3:非信任状态|4:已处理|5:已忽略|6:已拦截]
      * @param integer $Pid 进程ID
      * @param string $ProcessName 进程名
      * @param string $ProcessMd5 进程MD5

@@ -20,182 +20,150 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例信息结构体
  *
- * @method string getRegistryId() 获取实例ID
- * @method void setRegistryId(string $RegistryId) 设置实例ID
- * @method string getRegistryName() 获取实例名称
- * @method void setRegistryName(string $RegistryName) 设置实例名称
- * @method string getRegistryType() 获取实例规格
- * @method void setRegistryType(string $RegistryType) 设置实例规格
- * @method string getStatus() 获取实例状态。有以下状态：
-Pending, 初始化中
-Deploying, 创建中
-Running, 运行中
-Unhealthy, 状态异常
-FailedCreated, 创建失败
-FailedUpdated, 更新失败
-Bucket-Error, 存储桶异常
-Isolate, 待回收
-Deleting, 删除中
-DeleteBucketFailed, 实例删除存储桶失败
-DeleteFailed, 实例删除失败
- * @method void setStatus(string $Status) 设置实例状态。有以下状态：
-Pending, 初始化中
-Deploying, 创建中
-Running, 运行中
-Unhealthy, 状态异常
-FailedCreated, 创建失败
-FailedUpdated, 更新失败
-Bucket-Error, 存储桶异常
-Isolate, 待回收
-Deleting, 删除中
-DeleteBucketFailed, 实例删除存储桶失败
-DeleteFailed, 实例删除失败
- * @method string getPublicDomain() 获取实例的公共访问地址
- * @method void setPublicDomain(string $PublicDomain) 设置实例的公共访问地址
- * @method string getCreatedAt() 获取实例创建时间
- * @method void setCreatedAt(string $CreatedAt) 设置实例创建时间
- * @method string getRegionName() 获取地域名称
- * @method void setRegionName(string $RegionName) 设置地域名称
- * @method integer getRegionId() 获取地域Id
- * @method void setRegionId(integer $RegionId) 设置地域Id
- * @method boolean getEnableAnonymous() 获取是否支持匿名
- * @method void setEnableAnonymous(boolean $EnableAnonymous) 设置是否支持匿名
- * @method integer getTokenValidTime() 获取Token有效时间
- * @method void setTokenValidTime(integer $TokenValidTime) 设置Token有效时间
- * @method string getInternalEndpoint() 获取实例内部访问地址
- * @method void setInternalEndpoint(string $InternalEndpoint) 设置实例内部访问地址
- * @method TagSpecification getTagSpecification() 获取实例云标签
- * @method void setTagSpecification(TagSpecification $TagSpecification) 设置实例云标签
- * @method string getExpiredAt() 获取实例过期时间（预付费）
- * @method void setExpiredAt(string $ExpiredAt) 设置实例过期时间（预付费）
- * @method integer getPayMod() 获取实例付费类型，0表示后付费，1表示预付费
- * @method void setPayMod(integer $PayMod) 设置实例付费类型，0表示后付费，1表示预付费
- * @method integer getRenewFlag() 获取预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
- * @method void setRenewFlag(integer $RenewFlag) 设置预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
- * @method boolean getDeletionProtection() 获取是否开启实例删除保护，false表示不开启
- * @method void setDeletionProtection(boolean $DeletionProtection) 设置是否开启实例删除保护，false表示不开启
+ * @method string getRegistryId() 获取<p>实例ID</p>
+ * @method void setRegistryId(string $RegistryId) 设置<p>实例ID</p>
+ * @method string getRegistryName() 获取<p>实例名称</p>
+ * @method void setRegistryName(string $RegistryName) 设置<p>实例名称</p>
+ * @method string getRegistryType() 获取<p>实例规格</p>
+ * @method void setRegistryType(string $RegistryType) 设置<p>实例规格</p>
+ * @method string getStatus() 获取<p>实例状态。有以下状态：<br>Pending, 初始化中<br>Deploying, 创建中<br>Running, 运行中<br>Unhealthy, 状态异常<br>FailedCreated, 创建失败<br>FailedUpdated, 更新失败<br>Bucket-Error, 存储桶异常<br>Isolate, 待回收<br>Deleting, 删除中<br>DeleteBucketFailed, 实例删除存储桶失败<br>DeleteFailed, 实例删除失败</p>
+ * @method void setStatus(string $Status) 设置<p>实例状态。有以下状态：<br>Pending, 初始化中<br>Deploying, 创建中<br>Running, 运行中<br>Unhealthy, 状态异常<br>FailedCreated, 创建失败<br>FailedUpdated, 更新失败<br>Bucket-Error, 存储桶异常<br>Isolate, 待回收<br>Deleting, 删除中<br>DeleteBucketFailed, 实例删除存储桶失败<br>DeleteFailed, 实例删除失败</p>
+ * @method string getPublicDomain() 获取<p>实例的公共访问地址</p>
+ * @method void setPublicDomain(string $PublicDomain) 设置<p>实例的公共访问地址</p>
+ * @method string getCreatedAt() 获取<p>实例创建时间</p>
+ * @method void setCreatedAt(string $CreatedAt) 设置<p>实例创建时间</p>
+ * @method string getRegionName() 获取<p>地域名称</p>
+ * @method void setRegionName(string $RegionName) 设置<p>地域名称</p>
+ * @method integer getRegionId() 获取<p>地域Id</p>
+ * @method void setRegionId(integer $RegionId) 设置<p>地域Id</p>
+ * @method boolean getEnableAnonymous() 获取<p>是否支持匿名</p>
+ * @method void setEnableAnonymous(boolean $EnableAnonymous) 设置<p>是否支持匿名</p>
+ * @method integer getTokenValidTime() 获取<p>Token有效时间</p>
+ * @method void setTokenValidTime(integer $TokenValidTime) 设置<p>Token有效时间</p>
+ * @method string getInternalEndpoint() 获取<p>实例内部访问地址</p>
+ * @method void setInternalEndpoint(string $InternalEndpoint) 设置<p>实例内部访问地址</p>
+ * @method TagSpecification getTagSpecification() 获取<p>实例云标签</p>
+ * @method void setTagSpecification(TagSpecification $TagSpecification) 设置<p>实例云标签</p>
+ * @method string getExpiredAt() 获取<p>实例过期时间（预付费）</p>
+ * @method void setExpiredAt(string $ExpiredAt) 设置<p>实例过期时间（预付费）</p>
+ * @method integer getPayMod() 获取<p>实例付费类型，0表示后付费，1表示预付费</p>
+ * @method void setPayMod(integer $PayMod) 设置<p>实例付费类型，0表示后付费，1表示预付费</p>
+ * @method integer getRenewFlag() 获取<p>预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知</p>
+ * @method void setRenewFlag(integer $RenewFlag) 设置<p>预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知</p>
+ * @method boolean getDeletionProtection() 获取<p>是否开启实例删除保护，false表示不开启</p>
+ * @method void setDeletionProtection(boolean $DeletionProtection) 设置<p>是否开启实例删除保护，false表示不开启</p>
+ * @method boolean getAIFeature() 获取<p>是否支持AI特性</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAIFeature(boolean $AIFeature) 设置<p>是否支持AI特性</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Registry extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $RegistryId;
 
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
      */
     public $RegistryName;
 
     /**
-     * @var string 实例规格
+     * @var string <p>实例规格</p>
      */
     public $RegistryType;
 
     /**
-     * @var string 实例状态。有以下状态：
-Pending, 初始化中
-Deploying, 创建中
-Running, 运行中
-Unhealthy, 状态异常
-FailedCreated, 创建失败
-FailedUpdated, 更新失败
-Bucket-Error, 存储桶异常
-Isolate, 待回收
-Deleting, 删除中
-DeleteBucketFailed, 实例删除存储桶失败
-DeleteFailed, 实例删除失败
+     * @var string <p>实例状态。有以下状态：<br>Pending, 初始化中<br>Deploying, 创建中<br>Running, 运行中<br>Unhealthy, 状态异常<br>FailedCreated, 创建失败<br>FailedUpdated, 更新失败<br>Bucket-Error, 存储桶异常<br>Isolate, 待回收<br>Deleting, 删除中<br>DeleteBucketFailed, 实例删除存储桶失败<br>DeleteFailed, 实例删除失败</p>
      */
     public $Status;
 
     /**
-     * @var string 实例的公共访问地址
+     * @var string <p>实例的公共访问地址</p>
      */
     public $PublicDomain;
 
     /**
-     * @var string 实例创建时间
+     * @var string <p>实例创建时间</p>
      */
     public $CreatedAt;
 
     /**
-     * @var string 地域名称
+     * @var string <p>地域名称</p>
      */
     public $RegionName;
 
     /**
-     * @var integer 地域Id
+     * @var integer <p>地域Id</p>
      */
     public $RegionId;
 
     /**
-     * @var boolean 是否支持匿名
+     * @var boolean <p>是否支持匿名</p>
      */
     public $EnableAnonymous;
 
     /**
-     * @var integer Token有效时间
+     * @var integer <p>Token有效时间</p>
      */
     public $TokenValidTime;
 
     /**
-     * @var string 实例内部访问地址
+     * @var string <p>实例内部访问地址</p>
      */
     public $InternalEndpoint;
 
     /**
-     * @var TagSpecification 实例云标签
+     * @var TagSpecification <p>实例云标签</p>
      */
     public $TagSpecification;
 
     /**
-     * @var string 实例过期时间（预付费）
+     * @var string <p>实例过期时间（预付费）</p>
      */
     public $ExpiredAt;
 
     /**
-     * @var integer 实例付费类型，0表示后付费，1表示预付费
+     * @var integer <p>实例付费类型，0表示后付费，1表示预付费</p>
      */
     public $PayMod;
 
     /**
-     * @var integer 预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
+     * @var integer <p>预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知</p>
      */
     public $RenewFlag;
 
     /**
-     * @var boolean 是否开启实例删除保护，false表示不开启
+     * @var boolean <p>是否开启实例删除保护，false表示不开启</p>
      */
     public $DeletionProtection;
 
     /**
-     * @param string $RegistryId 实例ID
-     * @param string $RegistryName 实例名称
-     * @param string $RegistryType 实例规格
-     * @param string $Status 实例状态。有以下状态：
-Pending, 初始化中
-Deploying, 创建中
-Running, 运行中
-Unhealthy, 状态异常
-FailedCreated, 创建失败
-FailedUpdated, 更新失败
-Bucket-Error, 存储桶异常
-Isolate, 待回收
-Deleting, 删除中
-DeleteBucketFailed, 实例删除存储桶失败
-DeleteFailed, 实例删除失败
-     * @param string $PublicDomain 实例的公共访问地址
-     * @param string $CreatedAt 实例创建时间
-     * @param string $RegionName 地域名称
-     * @param integer $RegionId 地域Id
-     * @param boolean $EnableAnonymous 是否支持匿名
-     * @param integer $TokenValidTime Token有效时间
-     * @param string $InternalEndpoint 实例内部访问地址
-     * @param TagSpecification $TagSpecification 实例云标签
-     * @param string $ExpiredAt 实例过期时间（预付费）
-     * @param integer $PayMod 实例付费类型，0表示后付费，1表示预付费
-     * @param integer $RenewFlag 预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
-     * @param boolean $DeletionProtection 是否开启实例删除保护，false表示不开启
+     * @var boolean <p>是否支持AI特性</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AIFeature;
+
+    /**
+     * @param string $RegistryId <p>实例ID</p>
+     * @param string $RegistryName <p>实例名称</p>
+     * @param string $RegistryType <p>实例规格</p>
+     * @param string $Status <p>实例状态。有以下状态：<br>Pending, 初始化中<br>Deploying, 创建中<br>Running, 运行中<br>Unhealthy, 状态异常<br>FailedCreated, 创建失败<br>FailedUpdated, 更新失败<br>Bucket-Error, 存储桶异常<br>Isolate, 待回收<br>Deleting, 删除中<br>DeleteBucketFailed, 实例删除存储桶失败<br>DeleteFailed, 实例删除失败</p>
+     * @param string $PublicDomain <p>实例的公共访问地址</p>
+     * @param string $CreatedAt <p>实例创建时间</p>
+     * @param string $RegionName <p>地域名称</p>
+     * @param integer $RegionId <p>地域Id</p>
+     * @param boolean $EnableAnonymous <p>是否支持匿名</p>
+     * @param integer $TokenValidTime <p>Token有效时间</p>
+     * @param string $InternalEndpoint <p>实例内部访问地址</p>
+     * @param TagSpecification $TagSpecification <p>实例云标签</p>
+     * @param string $ExpiredAt <p>实例过期时间（预付费）</p>
+     * @param integer $PayMod <p>实例付费类型，0表示后付费，1表示预付费</p>
+     * @param integer $RenewFlag <p>预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知</p>
+     * @param boolean $DeletionProtection <p>是否开启实例删除保护，false表示不开启</p>
+     * @param boolean $AIFeature <p>是否支持AI特性</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -273,6 +241,10 @@ DeleteFailed, 实例删除失败
 
         if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
             $this->DeletionProtection = $param["DeletionProtection"];
+        }
+
+        if (array_key_exists("AIFeature",$param) and $param["AIFeature"] !== null) {
+            $this->AIFeature = $param["AIFeature"];
         }
     }
 }

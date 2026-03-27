@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSessionStatisticsByInterval返回参数结构体
  *
- * @method array getSessionStatistics() 获取各时间段的会话统计数据
- * @method void setSessionStatistics(array $SessionStatistics) 设置各时间段的会话统计数据
+ * @method array getSessionStatistics() 获取<p>各时间段的会话统计数据</p>
+ * @method void setSessionStatistics(array $SessionStatistics) 设置<p>各时间段的会话统计数据</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSessionStatisticsByIntervalResponse extends AbstractModel
 {
     /**
-     * @var array 各时间段的会话统计数据
+     * @var array <p>各时间段的会话统计数据</p>
      */
     public $SessionStatistics;
 
@@ -38,7 +38,7 @@ class DescribeSessionStatisticsByIntervalResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $SessionStatistics 各时间段的会话统计数据
+     * @param array $SessionStatistics <p>各时间段的会话统计数据</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagList() 获取绑定的标签列表
  * @method void setTagList(array $TagList) 设置绑定的标签列表
+ * @method RetryPolicy getRetryPolicy() 获取重试策略
+ * @method void setRetryPolicy(RetryPolicy $RetryPolicy) 设置重试策略
  */
 class ConsumeGroupItem extends AbstractModel
 {
@@ -133,6 +135,11 @@ class ConsumeGroupItem extends AbstractModel
     public $TagList;
 
     /**
+     * @var RetryPolicy 重试策略
+     */
+    public $RetryPolicy;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $ConsumerGroup 消费组名称
      * @param boolean $ConsumeEnable 是否开启消费
@@ -152,6 +159,7 @@ class ConsumeGroupItem extends AbstractModel
      * @param integer $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagList 绑定的标签列表
+     * @param RetryPolicy $RetryPolicy 重试策略
      */
     function __construct()
     {
@@ -221,6 +229,11 @@ class ConsumeGroupItem extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagList, $obj);
             }
+        }
+
+        if (array_key_exists("RetryPolicy",$param) and $param["RetryPolicy"] !== null) {
+            $this->RetryPolicy = new RetryPolicy();
+            $this->RetryPolicy->deserialize($param["RetryPolicy"]);
         }
     }
 }

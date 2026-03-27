@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResults(array $Results) 设置<p>token值，用于回放鉴权。</p>
  * @method integer getTotal() 获取<p>房间ID。</p>
  * @method void setTotal(integer $Total) 设置<p>房间ID。</p>
+ * @method string getUserId() 获取<p>用户ID</p>
+ * @method void setUserId(string $UserId) 设置<p>用户ID</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class BatchGetPlaybackTokenResponse extends AbstractModel
     public $Total;
 
     /**
+     * @var string <p>用户ID</p>
+     */
+    public $UserId;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class BatchGetPlaybackTokenResponse extends AbstractModel
     /**
      * @param array $Results <p>token值，用于回放鉴权。</p>
      * @param integer $Total <p>房间ID。</p>
+     * @param string $UserId <p>用户ID</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -73,6 +81,10 @@ class BatchGetPlaybackTokenResponse extends AbstractModel
 
         if (array_key_exists("Total",$param) and $param["Total"] !== null) {
             $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

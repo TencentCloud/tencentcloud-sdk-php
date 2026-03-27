@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceRenewInstance请求参数结构体
  *
- * @method integer getPeriod() 获取包年包月实例的购买时长。
-- 单位：月。
-- 取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
- * @method void setPeriod(integer $Period) 设置包年包月实例的购买时长。
-- 单位：月。
-- 取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
- * @method string getInstanceId() 获取指定实例 ID。例如：crs-xjhsdj****。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis)在实例列表复制包年包月实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置指定实例 ID。例如：crs-xjhsdj****。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis)在实例列表复制包年包月实例 ID。
+ * @method integer getPeriod() 获取<p>包年包月实例的购买时长。- 单位：月。- 取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。</p>
+ * @method void setPeriod(integer $Period) 设置<p>包年包月实例的购买时长。- 单位：月。- 取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。</p>
+ * @method string getInstanceId() 获取<p>指定实例 ID。例如：crs-xjhsdj****。请登录 <a href="https://console.cloud.tencent.com/redis">Redis 控制台</a>在实例列表复制包年包月实例 ID。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>指定实例 ID。例如：crs-xjhsdj****。请登录 <a href="https://console.cloud.tencent.com/redis">Redis 控制台</a>在实例列表复制包年包月实例 ID。</p>
  */
 class InquiryPriceRenewInstanceRequest extends AbstractModel
 {
     /**
-     * @var integer 包年包月实例的购买时长。
-- 单位：月。
-- 取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+     * @var integer <p>包年包月实例的购买时长。- 单位：月。- 取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。</p>
      */
     public $Period;
 
     /**
-     * @var string 指定实例 ID。例如：crs-xjhsdj****。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis)在实例列表复制包年包月实例 ID。
+     * @var string <p>指定实例 ID。例如：crs-xjhsdj****。请登录 <a href="https://console.cloud.tencent.com/redis">Redis 控制台</a>在实例列表复制包年包月实例 ID。</p>
      */
     public $InstanceId;
 
     /**
-     * @param integer $Period 包年包月实例的购买时长。
-- 单位：月。
-- 取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
-     * @param string $InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis)在实例列表复制包年包月实例 ID。
+     * @param integer $Period <p>包年包月实例的购买时长。- 单位：月。- 取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。</p>
+     * @param string $InstanceId <p>指定实例 ID。例如：crs-xjhsdj****。请登录 <a href="https://console.cloud.tencent.com/redis">Redis 控制台</a>在实例列表复制包年包月实例 ID。</p>
      */
     function __construct()
     {

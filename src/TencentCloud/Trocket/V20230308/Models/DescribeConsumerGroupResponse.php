@@ -54,6 +54,8 @@ CLUSTERING 集群模式
  * @method void setMessageModel(string $MessageModel) 设置消费模式：
 BROADCASTING 广播模式
 CLUSTERING 集群模式
+ * @method RetryPolicy getRetryPolicy() 获取重试策略
+ * @method void setRetryPolicy(RetryPolicy $RetryPolicy) 设置重试策略
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -117,6 +119,11 @@ CLUSTERING 集群模式
     public $MessageModel;
 
     /**
+     * @var RetryPolicy 重试策略
+     */
+    public $RetryPolicy;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -139,6 +146,7 @@ CLUSTERING 集群模式
      * @param string $MessageModel 消费模式：
 BROADCASTING 广播模式
 CLUSTERING 集群模式
+     * @param RetryPolicy $RetryPolicy 重试策略
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -192,6 +200,11 @@ CLUSTERING 集群模式
 
         if (array_key_exists("MessageModel",$param) and $param["MessageModel"] !== null) {
             $this->MessageModel = $param["MessageModel"];
+        }
+
+        if (array_key_exists("RetryPolicy",$param) and $param["RetryPolicy"] !== null) {
+            $this->RetryPolicy = new RetryPolicy();
+            $this->RetryPolicy->deserialize($param["RetryPolicy"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

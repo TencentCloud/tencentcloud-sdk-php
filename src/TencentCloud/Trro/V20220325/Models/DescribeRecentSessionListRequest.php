@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRecentSessionList请求参数结构体
  *
- * @method string getProjectId() 获取项目ID
- * @method void setProjectId(string $ProjectId) 设置项目ID
- * @method integer getPageNumber() 获取页码，从1开始
- * @method void setPageNumber(integer $PageNumber) 设置页码，从1开始
- * @method integer getPageSize() 获取每页个数
- * @method void setPageSize(integer $PageSize) 设置每页个数
- * @method string getDeviceId() 获取设备ID，支持过滤远端设备或现场设备
- * @method void setDeviceId(string $DeviceId) 设置设备ID，支持过滤远端设备或现场设备
- * @method integer getStartTime() 获取时间范围的起始时间。时间范围最大为最近两小时，若不传或超出范围，则起始时间按两小时前计算
- * @method void setStartTime(integer $StartTime) 设置时间范围的起始时间。时间范围最大为最近两小时，若不传或超出范围，则起始时间按两小时前计算
- * @method integer getEndTime() 获取时间范围的结束时间。时间范围最大为最近两小时，若不传或超出范围，则结束时间按当前时间计算
- * @method void setEndTime(integer $EndTime) 设置时间范围的结束时间。时间范围最大为最近两小时，若不传或超出范围，则结束时间按当前时间计算
+ * @method string getProjectId() 获取<p>项目ID</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目ID</p>
+ * @method integer getPageNumber() 获取<p>页码，从1开始</p>
+ * @method void setPageNumber(integer $PageNumber) 设置<p>页码，从1开始</p>
+ * @method integer getPageSize() 获取<p>每页个数</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页个数</p>
+ * @method string getDeviceId() 获取<p>设备ID，支持过滤远端设备或现场设备</p>
+ * @method void setDeviceId(string $DeviceId) 设置<p>设备ID，支持过滤远端设备或现场设备</p>
+ * @method integer getStartTime() 获取<p>时间范围的起始时间。时间范围最大为最近两小时，若不传或超出范围，则起始时间按两小时前计算</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>时间范围的起始时间。时间范围最大为最近两小时，若不传或超出范围，则起始时间按两小时前计算</p>
+ * @method integer getEndTime() 获取<p>时间范围的结束时间。时间范围最大为最近两小时，若不传或超出范围，则结束时间按当前时间计算</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>时间范围的结束时间。时间范围最大为最近两小时，若不传或超出范围，则结束时间按当前时间计算</p>
  */
 class DescribeRecentSessionListRequest extends AbstractModel
 {
     /**
-     * @var string 项目ID
+     * @var string <p>项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var integer 页码，从1开始
+     * @var integer <p>页码，从1开始</p>
      */
     public $PageNumber;
 
     /**
-     * @var integer 每页个数
+     * @var integer <p>每页个数</p>
      */
     public $PageSize;
 
     /**
-     * @var string 设备ID，支持过滤远端设备或现场设备
+     * @var string <p>设备ID，支持过滤远端设备或现场设备</p>
      */
     public $DeviceId;
 
     /**
-     * @var integer 时间范围的起始时间。时间范围最大为最近两小时，若不传或超出范围，则起始时间按两小时前计算
+     * @var integer <p>时间范围的起始时间。时间范围最大为最近两小时，若不传或超出范围，则起始时间按两小时前计算</p>
      */
     public $StartTime;
 
     /**
-     * @var integer 时间范围的结束时间。时间范围最大为最近两小时，若不传或超出范围，则结束时间按当前时间计算
+     * @var integer <p>时间范围的结束时间。时间范围最大为最近两小时，若不传或超出范围，则结束时间按当前时间计算</p>
      */
     public $EndTime;
 
     /**
-     * @param string $ProjectId 项目ID
-     * @param integer $PageNumber 页码，从1开始
-     * @param integer $PageSize 每页个数
-     * @param string $DeviceId 设备ID，支持过滤远端设备或现场设备
-     * @param integer $StartTime 时间范围的起始时间。时间范围最大为最近两小时，若不传或超出范围，则起始时间按两小时前计算
-     * @param integer $EndTime 时间范围的结束时间。时间范围最大为最近两小时，若不传或超出范围，则结束时间按当前时间计算
+     * @param string $ProjectId <p>项目ID</p>
+     * @param integer $PageNumber <p>页码，从1开始</p>
+     * @param integer $PageSize <p>每页个数</p>
+     * @param string $DeviceId <p>设备ID，支持过滤远端设备或现场设备</p>
+     * @param integer $StartTime <p>时间范围的起始时间。时间范围最大为最近两小时，若不传或超出范围，则起始时间按两小时前计算</p>
+     * @param integer $EndTime <p>时间范围的结束时间。时间范围最大为最近两小时，若不传或超出范围，则结束时间按当前时间计算</p>
      */
     function __construct()
     {

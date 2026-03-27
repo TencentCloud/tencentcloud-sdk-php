@@ -23,7 +23,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getResourceId() 获取资源ID
  * @method void setResourceId(string $ResourceId) 设置资源ID
  * @method integer getLicenseType() 获取授权类型
+- 0 按量付费-专业版
+- 1 包年包月-专业版
+- 2 包年包月-旗舰版
+- 3 包年包月-轻量版
  * @method void setLicenseType(integer $LicenseType) 设置授权类型
+- 0 按量付费-专业版
+- 1 包年包月-专业版
+- 2 包年包月-旗舰版
+- 3 包年包月-轻量版
  * @method boolean getIsAll() 获取是否全部机器(当全部机器数大于当前订单可用授权数时,多余机器会被跳过)
  * @method void setIsAll(boolean $IsAll) 设置是否全部机器(当全部机器数大于当前订单可用授权数时,多余机器会被跳过)
  * @method array getQuuidList() 获取需要绑定的机器quuid列表, 当IsAll = false 时必填,反之忽略该参数.
@@ -40,6 +48,10 @@ class ModifyLicenseUnBindsRequest extends AbstractModel
 
     /**
      * @var integer 授权类型
+- 0 按量付费-专业版
+- 1 包年包月-专业版
+- 2 包年包月-旗舰版
+- 3 包年包月-轻量版
      */
     public $LicenseType;
 
@@ -57,6 +69,10 @@ class ModifyLicenseUnBindsRequest extends AbstractModel
     /**
      * @param string $ResourceId 资源ID
      * @param integer $LicenseType 授权类型
+- 0 按量付费-专业版
+- 1 包年包月-专业版
+- 2 包年包月-旗舰版
+- 3 包年包月-轻量版
      * @param boolean $IsAll 是否全部机器(当全部机器数大于当前订单可用授权数时,多余机器会被跳过)
      * @param array $QuuidList 需要绑定的机器quuid列表, 当IsAll = false 时必填,反之忽略该参数.
 最大长度=100

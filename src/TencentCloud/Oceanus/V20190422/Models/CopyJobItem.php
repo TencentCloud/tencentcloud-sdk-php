@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 复制作业单条明细
  *
- * @method string getSourceId() 获取需要复制的作业serial id
- * @method void setSourceId(string $SourceId) 设置需要复制的作业serial id
- * @method string getTargetClusterId() 获取目标集群的cluster serial id
- * @method void setTargetClusterId(string $TargetClusterId) 设置目标集群的cluster serial id
- * @method string getSourceName() 获取需要复制的作业名称
- * @method void setSourceName(string $SourceName) 设置需要复制的作业名称
- * @method string getTargetName() 获取新作业的名称
- * @method void setTargetName(string $TargetName) 设置新作业的名称
- * @method string getTargetFolderId() 获取新作业的目录id
- * @method void setTargetFolderId(string $TargetFolderId) 设置新作业的目录id
- * @method integer getJobType() 获取源作业类型
- * @method void setJobType(integer $JobType) 设置源作业类型
+ * @method string getSourceId() 获取<p>需要复制的作业serial id</p>
+ * @method void setSourceId(string $SourceId) 设置<p>需要复制的作业serial id</p>
+ * @method string getTargetClusterId() 获取<p>目标集群的cluster serial id</p>
+ * @method void setTargetClusterId(string $TargetClusterId) 设置<p>目标集群的cluster serial id</p>
+ * @method string getSourceName() 获取<p>需要复制的作业名称</p>
+ * @method void setSourceName(string $SourceName) 设置<p>需要复制的作业名称</p>
+ * @method string getTargetName() 获取<p>新作业的名称</p>
+ * @method void setTargetName(string $TargetName) 设置<p>新作业的名称</p>
+ * @method string getTargetFolderId() 获取<p>新作业的目录id</p>
+ * @method void setTargetFolderId(string $TargetFolderId) 设置<p>新作业的目录id</p>
+ * @method integer getJobType() 获取<p>作业类型</p><p>枚举值：</p><ul><li>1： sql作业</li><li>2： jar作业</li><li>4： python作业</li></ul>
+ * @method void setJobType(integer $JobType) 设置<p>作业类型</p><p>枚举值：</p><ul><li>1： sql作业</li><li>2： jar作业</li><li>4： python作业</li></ul>
  */
 class CopyJobItem extends AbstractModel
 {
     /**
-     * @var string 需要复制的作业serial id
+     * @var string <p>需要复制的作业serial id</p>
      */
     public $SourceId;
 
     /**
-     * @var string 目标集群的cluster serial id
+     * @var string <p>目标集群的cluster serial id</p>
      */
     public $TargetClusterId;
 
     /**
-     * @var string 需要复制的作业名称
+     * @var string <p>需要复制的作业名称</p>
      */
     public $SourceName;
 
     /**
-     * @var string 新作业的名称
+     * @var string <p>新作业的名称</p>
      */
     public $TargetName;
 
     /**
-     * @var string 新作业的目录id
+     * @var string <p>新作业的目录id</p>
      */
     public $TargetFolderId;
 
     /**
-     * @var integer 源作业类型
+     * @var integer <p>作业类型</p><p>枚举值：</p><ul><li>1： sql作业</li><li>2： jar作业</li><li>4： python作业</li></ul>
      */
     public $JobType;
 
     /**
-     * @param string $SourceId 需要复制的作业serial id
-     * @param string $TargetClusterId 目标集群的cluster serial id
-     * @param string $SourceName 需要复制的作业名称
-     * @param string $TargetName 新作业的名称
-     * @param string $TargetFolderId 新作业的目录id
-     * @param integer $JobType 源作业类型
+     * @param string $SourceId <p>需要复制的作业serial id</p>
+     * @param string $TargetClusterId <p>目标集群的cluster serial id</p>
+     * @param string $SourceName <p>需要复制的作业名称</p>
+     * @param string $TargetName <p>新作业的名称</p>
+     * @param string $TargetFolderId <p>新作业的目录id</p>
+     * @param integer $JobType <p>作业类型</p><p>枚举值：</p><ul><li>1： sql作业</li><li>2： jar作业</li><li>4： python作业</li></ul>
      */
     function __construct()
     {

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoomIds(array $RoomIds) 设置<p>房间ID。</p>
  * @method integer getExpireSeconds() 获取<p>token过期时间，单位秒。如果传0则表示不过期</p>
  * @method void setExpireSeconds(integer $ExpireSeconds) 设置<p>token过期时间，单位秒。如果传0则表示不过期</p>
+ * @method string getUserId() 获取<p>用户ID</p>
+ * @method void setUserId(string $UserId) 设置<p>用户ID</p>
  */
 class BatchGetPlaybackTokenRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class BatchGetPlaybackTokenRequest extends AbstractModel
     public $ExpireSeconds;
 
     /**
+     * @var string <p>用户ID</p>
+     */
+    public $UserId;
+
+    /**
      * @param integer $SdkAppId <p>低代码平台的SdkAppId。</p>
      * @param array $RoomIds <p>房间ID。</p>
      * @param integer $ExpireSeconds <p>token过期时间，单位秒。如果传0则表示不过期</p>
+     * @param string $UserId <p>用户ID</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class BatchGetPlaybackTokenRequest extends AbstractModel
 
         if (array_key_exists("ExpireSeconds",$param) and $param["ExpireSeconds"] !== null) {
             $this->ExpireSeconds = $param["ExpireSeconds"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
         }
     }
 }

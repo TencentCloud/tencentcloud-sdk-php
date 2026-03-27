@@ -18,14 +18,16 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * x08新创建的账号
+ * 新建账号
  *
  * @method string getAccountName() 获取账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30
  * @method void setAccountName(string $AccountName) 设置账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30
- * @method string getAccountPassword() 获取密码，密码长度范围为8到64个字符
- * @method void setAccountPassword(string $AccountPassword) 设置密码，密码长度范围为8到64个字符
  * @method string getHost() 获取主机(%或ipv4地址)
  * @method void setHost(string $Host) 设置主机(%或ipv4地址)
+ * @method string getAccountPassword() 获取密码，密码长度范围为8到64个字符
+ * @method void setAccountPassword(string $AccountPassword) 设置密码，密码长度范围为8到64个字符
+ * @method integer getPasswordRotation() 获取是否开启密码轮转(0:关闭;1:开启)
+ * @method void setPasswordRotation(integer $PasswordRotation) 设置是否开启密码轮转(0:关闭;1:开启)
  * @method string getDescription() 获取描述
  * @method void setDescription(string $Description) 设置描述
  * @method integer getMaxUserConnections() 获取用户最大连接数，不能大于10240
@@ -39,14 +41,19 @@ class NewAccount extends AbstractModel
     public $AccountName;
 
     /**
+     * @var string 主机(%或ipv4地址)
+     */
+    public $Host;
+
+    /**
      * @var string 密码，密码长度范围为8到64个字符
      */
     public $AccountPassword;
 
     /**
-     * @var string 主机(%或ipv4地址)
+     * @var integer 是否开启密码轮转(0:关闭;1:开启)
      */
-    public $Host;
+    public $PasswordRotation;
 
     /**
      * @var string 描述
@@ -60,8 +67,9 @@ class NewAccount extends AbstractModel
 
     /**
      * @param string $AccountName 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30
-     * @param string $AccountPassword 密码，密码长度范围为8到64个字符
      * @param string $Host 主机(%或ipv4地址)
+     * @param string $AccountPassword 密码，密码长度范围为8到64个字符
+     * @param integer $PasswordRotation 是否开启密码轮转(0:关闭;1:开启)
      * @param string $Description 描述
      * @param integer $MaxUserConnections 用户最大连接数，不能大于10240
      */
@@ -82,12 +90,16 @@ class NewAccount extends AbstractModel
             $this->AccountName = $param["AccountName"];
         }
 
+        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
+            $this->Host = $param["Host"];
+        }
+
         if (array_key_exists("AccountPassword",$param) and $param["AccountPassword"] !== null) {
             $this->AccountPassword = $param["AccountPassword"];
         }
 
-        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
-            $this->Host = $param["Host"];
+        if (array_key_exists("PasswordRotation",$param) and $param["PasswordRotation"] !== null) {
+            $this->PasswordRotation = $param["PasswordRotation"];
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {

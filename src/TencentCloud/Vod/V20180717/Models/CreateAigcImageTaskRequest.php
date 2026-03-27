@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSubAppId() 获取<p><b>点播<a href="https://cloud.tencent.com/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
  * @method void setSubAppId(integer $SubAppId) 设置<p><b>点播<a href="https://cloud.tencent.com/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
- * @method string getModelName() 获取<p>模型名称。取值：</p><li>Qwen：千问。</li><li>Hunyuan：混元。</li><li>Vidu：生数。</li><li>Kling：可灵。</li><li>MJ：Midjourney。</li>
- * @method void setModelName(string $ModelName) 设置<p>模型名称。取值：</p><li>Qwen：千问。</li><li>Hunyuan：混元。</li><li>Vidu：生数。</li><li>Kling：可灵。</li><li>MJ：Midjourney。</li>
- * @method string getModelVersion() 获取<p>模型版本。取值：<li>当 ModelName 是 Qwen，可选值为 0925；</li><li>当 ModelName 是 Hunyuan，可选值为 3.0；</li><li>当 ModelName 是 Vidu，可选值为 q2；</li><li>当 ModelName 是 Kling，可选值为 2.1、3.0、3.0-Omni；</li><li>当 ModelName 是 MJ，可选值为 v7；</li></p>
- * @method void setModelVersion(string $ModelVersion) 设置<p>模型版本。取值：<li>当 ModelName 是 Qwen，可选值为 0925；</li><li>当 ModelName 是 Hunyuan，可选值为 3.0；</li><li>当 ModelName 是 Vidu，可选值为 q2；</li><li>当 ModelName 是 Kling，可选值为 2.1、3.0、3.0-Omni；</li><li>当 ModelName 是 MJ，可选值为 v7；</li></p>
- * @method array getFileInfos() 获取<p>AIGC 生图任务的输入图片的文件信息。默认只支持指定1个。下列模型可传多张参考图：<li>GEM 2.5：0～3张图片；</li><li>Vidu q2：0～7张图片，图片支持 png、jpeg、jpg、webp格式，图片像素不能小于 128x128，且比例需要小于1:4或4:1；</li></p>
- * @method void setFileInfos(array $FileInfos) 设置<p>AIGC 生图任务的输入图片的文件信息。默认只支持指定1个。下列模型可传多张参考图：<li>GEM 2.5：0～3张图片；</li><li>Vidu q2：0～7张图片，图片支持 png、jpeg、jpg、webp格式，图片像素不能小于 128x128，且比例需要小于1:4或4:1；</li></p>
+ * @method string getModelName() 获取<p>模型名称。取值：</p><li>GG</li><li>SI</li><li>Qwen</li><li>Hunyuan</li><li>Vidu</li><li>Kling</li>
+ * @method void setModelName(string $ModelName) 设置<p>模型名称。取值：</p><li>GG</li><li>SI</li><li>Qwen</li><li>Hunyuan</li><li>Vidu</li><li>Kling</li>
+ * @method string getModelVersion() 获取<p>模型版本。取值：</p><li>当 ModelName 是 GG，可选值为 2.5、3.0、3.1；</li><li>当 ModelName 是 Jimeng，可选值为 4.0；</li><li>当 ModelName 是 SI，可选值为 4.0、4.5、5.0-lite；</li><li>当 ModelName 是 Qwen，可选值为 0925、2.0；</li><li>当 ModelName 是 Hunyuan，可选值为 3.0；</li><li>当 ModelName 是 Vidu，可选值为 q2；</li><li>当 ModelName 是 Kling，可选值为 2.1、3.0、3.0-Omni；</li>
+ * @method void setModelVersion(string $ModelVersion) 设置<p>模型版本。取值：</p><li>当 ModelName 是 GG，可选值为 2.5、3.0、3.1；</li><li>当 ModelName 是 Jimeng，可选值为 4.0；</li><li>当 ModelName 是 SI，可选值为 4.0、4.5、5.0-lite；</li><li>当 ModelName 是 Qwen，可选值为 0925、2.0；</li><li>当 ModelName 是 Hunyuan，可选值为 3.0；</li><li>当 ModelName 是 Vidu，可选值为 q2；</li><li>当 ModelName 是 Kling，可选值为 2.1、3.0、3.0-Omni；</li>
+ * @method array getFileInfos() 获取<p>AIGC 生图任务的输入图片的文件信息。各模型支持最大参考图数量：</p><ul><li>GG 2.5： 3张；</li><li>GG 3.0：14张；</li><li>GG 3.1：14张；</li><li>Kling 2.1：4张；</li><li>Kling 3.0：1张；</li><li>Kling 3.0-Omni：1张；</li><li>SI 4.0：14张；</li><li>SI 4.5：14张；</li><li>SI 5.0-lite：14张；</li><li>Vidu q2：7张；</li><li>Hunyuan 3.0：3张；</li><li>Qwen 0925：1张；</li><li>Qwen 2.0：3张；</li><li>MJ v7：3张。</li></ul>
+ * @method void setFileInfos(array $FileInfos) 设置<p>AIGC 生图任务的输入图片的文件信息。各模型支持最大参考图数量：</p><ul><li>GG 2.5： 3张；</li><li>GG 3.0：14张；</li><li>GG 3.1：14张；</li><li>Kling 2.1：4张；</li><li>Kling 3.0：1张；</li><li>Kling 3.0-Omni：1张；</li><li>SI 4.0：14张；</li><li>SI 4.5：14张；</li><li>SI 5.0-lite：14张；</li><li>Vidu q2：7张；</li><li>Hunyuan 3.0：3张；</li><li>Qwen 0925：1张；</li><li>Qwen 2.0：3张；</li><li>MJ v7：3张。</li></ul>
  * @method string getPrompt() 获取<p>生成图片的提示词。当 FileInfos 为空时，此参数必填。</p>
  * @method void setPrompt(string $Prompt) 设置<p>生成图片的提示词。当 FileInfos 为空时，此参数必填。</p>
  * @method string getNegativePrompt() 获取<p>要阻止模型生成图片的提示词。</p>
@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnhancePrompt(string $EnhancePrompt) 设置<p>是否自动优化提示词。开启时将自动优化传入的 Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
  * @method AigcImageOutputConfig getOutputConfig() 获取<p>生图任务的输出媒体文件配置。</p>
  * @method void setOutputConfig(AigcImageOutputConfig $OutputConfig) 设置<p>生图任务的输出媒体文件配置。</p>
- * @method string getInputRegion() 获取<p>输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。</p>
- * @method void setInputRegion(string $InputRegion) 设置<p>输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。</p>
+ * @method string getInputRegion() 获取<p>输入的区域信息。可选值：</p><ul><li>Mainland：中国大陆；</li><li>Oversea：海外；</li><li>OverseaUSWest：海外-美西；</li></ul>
+ * @method void setInputRegion(string $InputRegion) 设置<p>输入的区域信息。可选值：</p><ul><li>Mainland：中国大陆；</li><li>Oversea：海外；</li><li>OverseaUSWest：海外-美西；</li></ul>
  * @method string getSessionId() 获取<p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
  * @method void setSessionId(string $SessionId) 设置<p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
  * @method string getSessionContext() 获取<p>来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。</p>
@@ -55,17 +55,17 @@ class CreateAigcImageTaskRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var string <p>模型名称。取值：</p><li>Qwen：千问。</li><li>Hunyuan：混元。</li><li>Vidu：生数。</li><li>Kling：可灵。</li><li>MJ：Midjourney。</li>
+     * @var string <p>模型名称。取值：</p><li>GG</li><li>SI</li><li>Qwen</li><li>Hunyuan</li><li>Vidu</li><li>Kling</li>
      */
     public $ModelName;
 
     /**
-     * @var string <p>模型版本。取值：<li>当 ModelName 是 Qwen，可选值为 0925；</li><li>当 ModelName 是 Hunyuan，可选值为 3.0；</li><li>当 ModelName 是 Vidu，可选值为 q2；</li><li>当 ModelName 是 Kling，可选值为 2.1、3.0、3.0-Omni；</li><li>当 ModelName 是 MJ，可选值为 v7；</li></p>
+     * @var string <p>模型版本。取值：</p><li>当 ModelName 是 GG，可选值为 2.5、3.0、3.1；</li><li>当 ModelName 是 Jimeng，可选值为 4.0；</li><li>当 ModelName 是 SI，可选值为 4.0、4.5、5.0-lite；</li><li>当 ModelName 是 Qwen，可选值为 0925、2.0；</li><li>当 ModelName 是 Hunyuan，可选值为 3.0；</li><li>当 ModelName 是 Vidu，可选值为 q2；</li><li>当 ModelName 是 Kling，可选值为 2.1、3.0、3.0-Omni；</li>
      */
     public $ModelVersion;
 
     /**
-     * @var array <p>AIGC 生图任务的输入图片的文件信息。默认只支持指定1个。下列模型可传多张参考图：<li>GEM 2.5：0～3张图片；</li><li>Vidu q2：0～7张图片，图片支持 png、jpeg、jpg、webp格式，图片像素不能小于 128x128，且比例需要小于1:4或4:1；</li></p>
+     * @var array <p>AIGC 生图任务的输入图片的文件信息。各模型支持最大参考图数量：</p><ul><li>GG 2.5： 3张；</li><li>GG 3.0：14张；</li><li>GG 3.1：14张；</li><li>Kling 2.1：4张；</li><li>Kling 3.0：1张；</li><li>Kling 3.0-Omni：1张；</li><li>SI 4.0：14张；</li><li>SI 4.5：14张；</li><li>SI 5.0-lite：14张；</li><li>Vidu q2：7张；</li><li>Hunyuan 3.0：3张；</li><li>Qwen 0925：1张；</li><li>Qwen 2.0：3张；</li><li>MJ v7：3张。</li></ul>
      */
     public $FileInfos;
 
@@ -90,7 +90,7 @@ class CreateAigcImageTaskRequest extends AbstractModel
     public $OutputConfig;
 
     /**
-     * @var string <p>输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。</p>
+     * @var string <p>输入的区域信息。可选值：</p><ul><li>Mainland：中国大陆；</li><li>Oversea：海外；</li><li>OverseaUSWest：海外-美西；</li></ul>
      */
     public $InputRegion;
 
@@ -116,14 +116,14 @@ class CreateAigcImageTaskRequest extends AbstractModel
 
     /**
      * @param integer $SubAppId <p><b>点播<a href="https://cloud.tencent.com/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
-     * @param string $ModelName <p>模型名称。取值：</p><li>Qwen：千问。</li><li>Hunyuan：混元。</li><li>Vidu：生数。</li><li>Kling：可灵。</li><li>MJ：Midjourney。</li>
-     * @param string $ModelVersion <p>模型版本。取值：<li>当 ModelName 是 Qwen，可选值为 0925；</li><li>当 ModelName 是 Hunyuan，可选值为 3.0；</li><li>当 ModelName 是 Vidu，可选值为 q2；</li><li>当 ModelName 是 Kling，可选值为 2.1、3.0、3.0-Omni；</li><li>当 ModelName 是 MJ，可选值为 v7；</li></p>
-     * @param array $FileInfos <p>AIGC 生图任务的输入图片的文件信息。默认只支持指定1个。下列模型可传多张参考图：<li>GEM 2.5：0～3张图片；</li><li>Vidu q2：0～7张图片，图片支持 png、jpeg、jpg、webp格式，图片像素不能小于 128x128，且比例需要小于1:4或4:1；</li></p>
+     * @param string $ModelName <p>模型名称。取值：</p><li>GG</li><li>SI</li><li>Qwen</li><li>Hunyuan</li><li>Vidu</li><li>Kling</li>
+     * @param string $ModelVersion <p>模型版本。取值：</p><li>当 ModelName 是 GG，可选值为 2.5、3.0、3.1；</li><li>当 ModelName 是 Jimeng，可选值为 4.0；</li><li>当 ModelName 是 SI，可选值为 4.0、4.5、5.0-lite；</li><li>当 ModelName 是 Qwen，可选值为 0925、2.0；</li><li>当 ModelName 是 Hunyuan，可选值为 3.0；</li><li>当 ModelName 是 Vidu，可选值为 q2；</li><li>当 ModelName 是 Kling，可选值为 2.1、3.0、3.0-Omni；</li>
+     * @param array $FileInfos <p>AIGC 生图任务的输入图片的文件信息。各模型支持最大参考图数量：</p><ul><li>GG 2.5： 3张；</li><li>GG 3.0：14张；</li><li>GG 3.1：14张；</li><li>Kling 2.1：4张；</li><li>Kling 3.0：1张；</li><li>Kling 3.0-Omni：1张；</li><li>SI 4.0：14张；</li><li>SI 4.5：14张；</li><li>SI 5.0-lite：14张；</li><li>Vidu q2：7张；</li><li>Hunyuan 3.0：3张；</li><li>Qwen 0925：1张；</li><li>Qwen 2.0：3张；</li><li>MJ v7：3张。</li></ul>
      * @param string $Prompt <p>生成图片的提示词。当 FileInfos 为空时，此参数必填。</p>
      * @param string $NegativePrompt <p>要阻止模型生成图片的提示词。</p>
      * @param string $EnhancePrompt <p>是否自动优化提示词。开启时将自动优化传入的 Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
      * @param AigcImageOutputConfig $OutputConfig <p>生图任务的输出媒体文件配置。</p>
-     * @param string $InputRegion <p>输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。</p>
+     * @param string $InputRegion <p>输入的区域信息。可选值：</p><ul><li>Mainland：中国大陆；</li><li>Oversea：海外；</li><li>OverseaUSWest：海外-美西；</li></ul>
      * @param string $SessionId <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
      * @param string $SessionContext <p>来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。</p>
      * @param integer $TasksPriority <p>任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。</p>

@@ -20,58 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRocketMQInstanceSpec请求参数结构体
  *
- * @method string getInstanceId() 获取专享实例ID
- * @method void setInstanceId(string $InstanceId) 设置专享实例ID
- * @method string getSpecification() 获取实例规格，
-rocket-vip-basic-1 基础型
-rocket-vip-basic-2 标准型
-rocket-vip-basic-3 高阶Ⅰ型
-rocket-vip-basic-4 高阶Ⅱ型
- * @method void setSpecification(string $Specification) 设置实例规格，
-rocket-vip-basic-1 基础型
-rocket-vip-basic-2 标准型
-rocket-vip-basic-3 高阶Ⅰ型
-rocket-vip-basic-4 高阶Ⅱ型
- * @method integer getNodeCount() 获取节点数量
- * @method void setNodeCount(integer $NodeCount) 设置节点数量
- * @method integer getStorageSize() 获取存储空间，GB为单位
- * @method void setStorageSize(integer $StorageSize) 设置存储空间，GB为单位
+ * @method string getInstanceId() 获取<p>专享实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>专享实例ID</p>
+ * @method string getSpecification() 获取<p>实例规格，<br>rocket-vip-basic-1 基础型<br>rocket-vip-basic-2 标准型<br>rocket-vip-basic-3 高阶Ⅰ型<br>rocket-vip-basic-4 高阶Ⅱ型</p>
+ * @method void setSpecification(string $Specification) 设置<p>实例规格，<br>rocket-vip-basic-1 基础型<br>rocket-vip-basic-2 标准型<br>rocket-vip-basic-3 高阶Ⅰ型<br>rocket-vip-basic-4 高阶Ⅱ型</p>
+ * @method integer getNodeCount() 获取<p>节点数量</p>
+ * @method void setNodeCount(integer $NodeCount) 设置<p>节点数量</p>
+ * @method integer getStorageSize() 获取<p>存储空间，GB为单位</p>
+ * @method void setStorageSize(integer $StorageSize) 设置<p>存储空间，GB为单位</p>
+ * @method array getZoneIds() 获取<p>部署可用区列表</p>
+ * @method void setZoneIds(array $ZoneIds) 设置<p>部署可用区列表</p>
  */
 class ModifyRocketMQInstanceSpecRequest extends AbstractModel
 {
     /**
-     * @var string 专享实例ID
+     * @var string <p>专享实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 实例规格，
-rocket-vip-basic-1 基础型
-rocket-vip-basic-2 标准型
-rocket-vip-basic-3 高阶Ⅰ型
-rocket-vip-basic-4 高阶Ⅱ型
+     * @var string <p>实例规格，<br>rocket-vip-basic-1 基础型<br>rocket-vip-basic-2 标准型<br>rocket-vip-basic-3 高阶Ⅰ型<br>rocket-vip-basic-4 高阶Ⅱ型</p>
      */
     public $Specification;
 
     /**
-     * @var integer 节点数量
+     * @var integer <p>节点数量</p>
      */
     public $NodeCount;
 
     /**
-     * @var integer 存储空间，GB为单位
+     * @var integer <p>存储空间，GB为单位</p>
      */
     public $StorageSize;
 
     /**
-     * @param string $InstanceId 专享实例ID
-     * @param string $Specification 实例规格，
-rocket-vip-basic-1 基础型
-rocket-vip-basic-2 标准型
-rocket-vip-basic-3 高阶Ⅰ型
-rocket-vip-basic-4 高阶Ⅱ型
-     * @param integer $NodeCount 节点数量
-     * @param integer $StorageSize 存储空间，GB为单位
+     * @var array <p>部署可用区列表</p>
+     */
+    public $ZoneIds;
+
+    /**
+     * @param string $InstanceId <p>专享实例ID</p>
+     * @param string $Specification <p>实例规格，<br>rocket-vip-basic-1 基础型<br>rocket-vip-basic-2 标准型<br>rocket-vip-basic-3 高阶Ⅰ型<br>rocket-vip-basic-4 高阶Ⅱ型</p>
+     * @param integer $NodeCount <p>节点数量</p>
+     * @param integer $StorageSize <p>存储空间，GB为单位</p>
+     * @param array $ZoneIds <p>部署可用区列表</p>
      */
     function __construct()
     {
@@ -100,6 +92,10 @@ rocket-vip-basic-4 高阶Ⅱ型
 
         if (array_key_exists("StorageSize",$param) and $param["StorageSize"] !== null) {
             $this->StorageSize = $param["StorageSize"];
+        }
+
+        if (array_key_exists("ZoneIds",$param) and $param["ZoneIds"] !== null) {
+            $this->ZoneIds = $param["ZoneIds"];
         }
     }
 }

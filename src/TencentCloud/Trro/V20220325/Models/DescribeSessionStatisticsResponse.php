@@ -20,43 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSessionStatistics返回参数结构体
  *
- * @method integer getSessionNum() 获取会话数量
- * @method void setSessionNum(integer $SessionNum) 设置会话数量
- * @method integer getTotalDuration() 获取通话时长，单位：分钟
- * @method void setTotalDuration(integer $TotalDuration) 设置通话时长，单位：分钟
- * @method integer getActiveFieldDeviceNum() 获取活跃现场设备数
- * @method void setActiveFieldDeviceNum(integer $ActiveFieldDeviceNum) 设置活跃现场设备数
- * @method integer getActiveRemoteDeviceNum() 获取活跃远端设备数
- * @method void setActiveRemoteDeviceNum(integer $ActiveRemoteDeviceNum) 设置活跃远端设备数
- * @method integer getNotBadSessionRatio() 获取优良会话占比，单位：%
- * @method void setNotBadSessionRatio(integer $NotBadSessionRatio) 设置优良会话占比，单位：%
+ * @method integer getSessionNum() 获取<p>会话数量</p>
+ * @method void setSessionNum(integer $SessionNum) 设置<p>会话数量</p>
+ * @method integer getTotalDuration() 获取<p>通话时长，单位：分钟</p>
+ * @method void setTotalDuration(integer $TotalDuration) 设置<p>通话时长，单位：分钟</p>
+ * @method integer getActiveFieldDeviceNum() 获取<p>活跃现场设备数</p>
+ * @method void setActiveFieldDeviceNum(integer $ActiveFieldDeviceNum) 设置<p>活跃现场设备数</p>
+ * @method integer getActiveRemoteDeviceNum() 获取<p>活跃远端设备数</p>
+ * @method void setActiveRemoteDeviceNum(integer $ActiveRemoteDeviceNum) 设置<p>活跃远端设备数</p>
+ * @method integer getNotBadSessionRatio() 获取<p>优良会话占比，单位：%</p>
+ * @method void setNotBadSessionRatio(integer $NotBadSessionRatio) 设置<p>优良会话占比，单位：%</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSessionStatisticsResponse extends AbstractModel
 {
     /**
-     * @var integer 会话数量
+     * @var integer <p>会话数量</p>
      */
     public $SessionNum;
 
     /**
-     * @var integer 通话时长，单位：分钟
+     * @var integer <p>通话时长，单位：分钟</p>
      */
     public $TotalDuration;
 
     /**
-     * @var integer 活跃现场设备数
+     * @var integer <p>活跃现场设备数</p>
      */
     public $ActiveFieldDeviceNum;
 
     /**
-     * @var integer 活跃远端设备数
+     * @var integer <p>活跃远端设备数</p>
      */
     public $ActiveRemoteDeviceNum;
 
     /**
-     * @var integer 优良会话占比，单位：%
+     * @var integer <p>优良会话占比，单位：%</p>
      */
     public $NotBadSessionRatio;
 
@@ -66,11 +66,11 @@ class DescribeSessionStatisticsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $SessionNum 会话数量
-     * @param integer $TotalDuration 通话时长，单位：分钟
-     * @param integer $ActiveFieldDeviceNum 活跃现场设备数
-     * @param integer $ActiveRemoteDeviceNum 活跃远端设备数
-     * @param integer $NotBadSessionRatio 优良会话占比，单位：%
+     * @param integer $SessionNum <p>会话数量</p>
+     * @param integer $TotalDuration <p>通话时长，单位：分钟</p>
+     * @param integer $ActiveFieldDeviceNum <p>活跃现场设备数</p>
+     * @param integer $ActiveRemoteDeviceNum <p>活跃远端设备数</p>
+     * @param integer $NotBadSessionRatio <p>优良会话占比，单位：%</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

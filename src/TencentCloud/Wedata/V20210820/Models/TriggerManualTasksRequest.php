@@ -28,14 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTriggerScope(string $TriggerScope) 设置运行范围 ENTIRE_WORKFLOW or SPECIFIED_TASK
  * @method array getDataTimeList() 获取运行数据时间列表
  * @method void setDataTimeList(array $DataTimeList) 设置运行数据时间列表
- * @method string getWorkflowId() 获取工作流ID
- * @method void setWorkflowId(string $WorkflowId) 设置工作流ID
+ * @method string getWorkflowId() 获取手动工作流ID
+ * @method void setWorkflowId(string $WorkflowId) 设置手动工作流ID
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
- * @method array getTaskIds() 获取需要运行的任务列表
-TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK此参数必传
- * @method void setTaskIds(array $TaskIds) 设置需要运行的任务列表
-TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK此参数必传
+ * @method array getTaskIds() 获取需要运行的手动工作流任务列表TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK此参数必传
+ * @method void setTaskIds(array $TaskIds) 设置需要运行的手动工作流任务列表TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK此参数必传
  * @method string getSchedulerResourceGroup() 获取用户提交运行时指定的调度资源组，未指定时使用任务配置的调度资源组
  * @method void setSchedulerResourceGroup(string $SchedulerResourceGroup) 设置用户提交运行时指定的调度资源组，未指定时使用任务配置的调度资源组
  * @method string getIntegrationResourceGroup() 获取用户提交运行时指定的集成资源组，未指定时使用任务配置的集成资源组
@@ -74,7 +72,7 @@ class TriggerManualTasksRequest extends AbstractModel
     public $DataTimeList;
 
     /**
-     * @var string 工作流ID
+     * @var string 手动工作流ID
      */
     public $WorkflowId;
 
@@ -84,8 +82,7 @@ class TriggerManualTasksRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @var array 需要运行的任务列表
-TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK此参数必传
+     * @var array 需要运行的手动工作流任务列表TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK此参数必传
      */
     public $TaskIds;
 
@@ -129,10 +126,9 @@ TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK
      * @param string $TriggerName 触发运行名称
      * @param string $TriggerScope 运行范围 ENTIRE_WORKFLOW or SPECIFIED_TASK
      * @param array $DataTimeList 运行数据时间列表
-     * @param string $WorkflowId 工作流ID
+     * @param string $WorkflowId 手动工作流ID
      * @param string $Remark 备注
-     * @param array $TaskIds 需要运行的任务列表
-TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK此参数必传
+     * @param array $TaskIds 需要运行的手动工作流任务列表TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK此参数必传
      * @param string $SchedulerResourceGroup 用户提交运行时指定的调度资源组，未指定时使用任务配置的调度资源组
      * @param string $IntegrationResourceGroup 用户提交运行时指定的集成资源组，未指定时使用任务配置的集成资源组
      * @param string $ExecOrder 执行顺序 ASC、RAND、DESC

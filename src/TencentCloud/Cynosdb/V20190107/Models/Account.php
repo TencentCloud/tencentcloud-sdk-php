@@ -22,16 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAccountName() 获取数据库账号名
  * @method void setAccountName(string $AccountName) 设置数据库账号名
+ * @method string getHost() 获取主机
+ * @method void setHost(string $Host) 设置主机
  * @method string getDescription() 获取数据库账号描述
  * @method void setDescription(string $Description) 设置数据库账号描述
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getUpdateTime() 获取更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
- * @method string getHost() 获取主机
- * @method void setHost(string $Host) 设置主机
  * @method integer getMaxUserConnections() 获取用户最大连接数
  * @method void setMaxUserConnections(integer $MaxUserConnections) 设置用户最大连接数
+ * @method integer getPasswordRotation() 获取是否开启密码轮转(0:关闭;1:开启)
+ * @method void setPasswordRotation(integer $PasswordRotation) 设置是否开启密码轮转(0:关闭;1:开启)
  */
 class Account extends AbstractModel
 {
@@ -39,6 +41,11 @@ class Account extends AbstractModel
      * @var string 数据库账号名
      */
     public $AccountName;
+
+    /**
+     * @var string 主机
+     */
+    public $Host;
 
     /**
      * @var string 数据库账号描述
@@ -56,22 +63,23 @@ class Account extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var string 主机
-     */
-    public $Host;
-
-    /**
      * @var integer 用户最大连接数
      */
     public $MaxUserConnections;
 
     /**
+     * @var integer 是否开启密码轮转(0:关闭;1:开启)
+     */
+    public $PasswordRotation;
+
+    /**
      * @param string $AccountName 数据库账号名
+     * @param string $Host 主机
      * @param string $Description 数据库账号描述
      * @param string $CreateTime 创建时间
      * @param string $UpdateTime 更新时间
-     * @param string $Host 主机
      * @param integer $MaxUserConnections 用户最大连接数
+     * @param integer $PasswordRotation 是否开启密码轮转(0:关闭;1:开启)
      */
     function __construct()
     {
@@ -90,6 +98,10 @@ class Account extends AbstractModel
             $this->AccountName = $param["AccountName"];
         }
 
+        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
+            $this->Host = $param["Host"];
+        }
+
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
         }
@@ -102,12 +114,12 @@ class Account extends AbstractModel
             $this->UpdateTime = $param["UpdateTime"];
         }
 
-        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
-            $this->Host = $param["Host"];
-        }
-
         if (array_key_exists("MaxUserConnections",$param) and $param["MaxUserConnections"] !== null) {
             $this->MaxUserConnections = $param["MaxUserConnections"];
+        }
+
+        if (array_key_exists("PasswordRotation",$param) and $param["PasswordRotation"] !== null) {
+            $this->PasswordRotation = $param["PasswordRotation"];
         }
     }
 }

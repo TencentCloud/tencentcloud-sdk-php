@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRocketMQRole返回参数结构体
  *
- * @method string getRoleName() 获取角色名称
- * @method void setRoleName(string $RoleName) 设置角色名称
- * @method string getToken() 获取角色token
- * @method void setToken(string $Token) 设置角色token
- * @method string getRemark() 获取备注说明
+ * @method string getRoleName() 获取<p>角色名称</p>
+ * @method void setRoleName(string $RoleName) 设置<p>角色名称</p>
+ * @method string getToken() 获取<p>角色token</p>
+ * @method void setToken(string $Token) 设置<p>角色token</p>
+ * @method string getRemark() 获取<p>备注说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRemark(string $Remark) 设置备注说明
+ * @method void setRemark(string $Remark) 设置<p>备注说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -34,17 +34,17 @@ use TencentCloud\Common\AbstractModel;
 class CreateRocketMQRoleResponse extends AbstractModel
 {
     /**
-     * @var string 角色名称
+     * @var string <p>角色名称</p>
      */
     public $RoleName;
 
     /**
-     * @var string 角色token
+     * @var string <p>角色token</p>
      */
     public $Token;
 
     /**
-     * @var string 备注说明
+     * @var string <p>备注说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
@@ -55,9 +55,9 @@ class CreateRocketMQRoleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $RoleName 角色名称
-     * @param string $Token 角色token
-     * @param string $Remark 备注说明
+     * @param string $RoleName <p>角色名称</p>
+     * @param string $Token <p>角色token</p>
+     * @param string $Remark <p>备注说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

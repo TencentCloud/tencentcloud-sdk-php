@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRecentSessionList返回参数结构体
  *
- * @method integer getTotal() 获取总个数
- * @method void setTotal(integer $Total) 设置总个数
- * @method array getRecentSessionList() 获取会话列表
- * @method void setRecentSessionList(array $RecentSessionList) 设置会话列表
- * @method integer getNum() 获取本页数量
- * @method void setNum(integer $Num) 设置本页数量
+ * @method integer getTotal() 获取<p>总个数</p>
+ * @method void setTotal(integer $Total) 设置<p>总个数</p>
+ * @method array getRecentSessionList() 获取<p>会话列表</p>
+ * @method void setRecentSessionList(array $RecentSessionList) 设置<p>会话列表</p>
+ * @method integer getNum() 获取<p>本页数量</p>
+ * @method void setNum(integer $Num) 设置<p>本页数量</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeRecentSessionListResponse extends AbstractModel
 {
     /**
-     * @var integer 总个数
+     * @var integer <p>总个数</p>
      */
     public $Total;
 
     /**
-     * @var array 会话列表
+     * @var array <p>会话列表</p>
      */
     public $RecentSessionList;
 
     /**
-     * @var integer 本页数量
+     * @var integer <p>本页数量</p>
      */
     public $Num;
 
@@ -52,9 +52,9 @@ class DescribeRecentSessionListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total 总个数
-     * @param array $RecentSessionList 会话列表
-     * @param integer $Num 本页数量
+     * @param integer $Total <p>总个数</p>
+     * @param array $RecentSessionList <p>会话列表</p>
+     * @param integer $Num <p>本页数量</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

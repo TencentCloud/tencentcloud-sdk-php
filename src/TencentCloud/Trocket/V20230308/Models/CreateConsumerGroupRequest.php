@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置备注信息，最多 128 个字符
  * @method array getTagList() 获取标签列表
  * @method void setTagList(array $TagList) 设置标签列表
+ * @method RetryPolicy getRetryPolicy() 获取重试策略
+ * @method void setRetryPolicy(RetryPolicy $RetryPolicy) 设置重试策略
  */
 class CreateConsumerGroupRequest extends AbstractModel
 {
@@ -76,6 +78,11 @@ class CreateConsumerGroupRequest extends AbstractModel
     public $TagList;
 
     /**
+     * @var RetryPolicy 重试策略
+     */
+    public $RetryPolicy;
+
+    /**
      * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      * @param integer $MaxRetryTimes 最大重试次数，取值范围0～1000
      * @param boolean $ConsumeEnable 是否开启消费
@@ -84,6 +91,7 @@ class CreateConsumerGroupRequest extends AbstractModel
      * @param string $ConsumerGroup 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口返回的 [ConsumeGroupItem](https://cloud.tencent.com/document/api/1493/96031#ConsumeGroupItem) 或控制台获得。
      * @param string $Remark 备注信息，最多 128 个字符
      * @param array $TagList 标签列表
+     * @param RetryPolicy $RetryPolicy 重试策略
      */
     function __construct()
     {
@@ -129,6 +137,11 @@ class CreateConsumerGroupRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagList, $obj);
             }
+        }
+
+        if (array_key_exists("RetryPolicy",$param) and $param["RetryPolicy"] !== null) {
+            $this->RetryPolicy = new RetryPolicy();
+            $this->RetryPolicy->deserialize($param["RetryPolicy"]);
         }
     }
 }

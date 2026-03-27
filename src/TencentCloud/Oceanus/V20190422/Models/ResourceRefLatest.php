@@ -20,81 +20,81 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 资源引用
  *
- * @method string getResourceId() 获取资源id
+ * @method string getResourceId() 获取<p>资源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceId(string $ResourceId) 设置资源id
+ * @method void setResourceId(string $ResourceId) 设置<p>资源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getVersion() 获取版本号
+ * @method integer getVersion() 获取<p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVersion(integer $Version) 设置版本号
+ * @method void setVersion(integer $Version) 设置<p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getType() 获取资源类型
+ * @method integer getType() 获取<p>资源类型</p><p>枚举值：</p><ul><li>1： Main资源</li><li>2： 依赖资源</li><li>3： python文件</li><li>4： 数据文件</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(integer $Type) 设置资源类型
+ * @method void setType(integer $Type) 设置<p>资源类型</p><p>枚举值：</p><ul><li>1： Main资源</li><li>2： 依赖资源</li><li>3： python文件</li><li>4： 数据文件</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取状态
+ * @method integer getStatus() 获取<p>状态</p><p>枚举值：</p><ul><li>1： 活跃</li><li>-2： 删除</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置状态
+ * @method void setStatus(integer $Status) 设置<p>状态</p><p>枚举值：</p><ul><li>1： 活跃</li><li>-2： 删除</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkspaceId() 获取空间id
+ * @method string getWorkspaceId() 获取<p>空间id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkspaceId(string $WorkspaceId) 设置空间id
+ * @method void setWorkspaceId(string $WorkspaceId) 设置<p>空间id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取资源名称
+ * @method string getName() 获取<p>资源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置资源名称
+ * @method void setName(string $Name) 设置<p>资源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceRefLatest extends AbstractModel
 {
     /**
-     * @var string 资源id
+     * @var string <p>资源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
     /**
-     * @var integer 版本号
+     * @var integer <p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
-     * @var integer 资源类型
+     * @var integer <p>资源类型</p><p>枚举值：</p><ul><li>1： Main资源</li><li>2： 依赖资源</li><li>3： python文件</li><li>4： 数据文件</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
-     * @var integer 状态
+     * @var integer <p>状态</p><p>枚举值：</p><ul><li>1： 活跃</li><li>-2： 删除</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var string 空间id
+     * @var string <p>空间id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkspaceId;
 
     /**
-     * @var string 资源名称
+     * @var string <p>资源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @param string $ResourceId 资源id
+     * @param string $ResourceId <p>资源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Version 版本号
+     * @param integer $Version <p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Type 资源类型
+     * @param integer $Type <p>资源类型</p><p>枚举值：</p><ul><li>1： Main资源</li><li>2： 依赖资源</li><li>3： python文件</li><li>4： 数据文件</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 状态
+     * @param integer $Status <p>状态</p><p>枚举值：</p><ul><li>1： 活跃</li><li>-2： 删除</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkspaceId 空间id
+     * @param string $WorkspaceId <p>空间id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 资源名称
+     * @param string $Name <p>资源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

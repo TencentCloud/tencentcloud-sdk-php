@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuery(string $Query) 设置用户输入的内容
  * @method array getCustomVariables() 获取API参数配置
  * @method void setCustomVariables(array $CustomVariables) 设置API参数配置
+ * @method string getVisitorId() 获取用户ID
+ * @method void setVisitorId(string $VisitorId) 设置用户ID
  */
 class CreateWorkflowRunRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateWorkflowRunRequest extends AbstractModel
     public $CustomVariables;
 
     /**
+     * @var string 用户ID
+     */
+    public $VisitorId;
+
+    /**
      * @param string $AppBizId 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      * @param integer $RunEnv 运行环境。0: 测试环境； 1: 正式环境
      * @param string $Query 用户输入的内容
      * @param array $CustomVariables API参数配置
+     * @param string $VisitorId 用户ID
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class CreateWorkflowRunRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CustomVariables, $obj);
             }
+        }
+
+        if (array_key_exists("VisitorId",$param) and $param["VisitorId"] !== null) {
+            $this->VisitorId = $param["VisitorId"];
         }
     }
 }

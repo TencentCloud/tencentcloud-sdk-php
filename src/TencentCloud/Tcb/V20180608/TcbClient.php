@@ -26,9 +26,8 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\AddProviderResponse AddProvider(Models\AddProviderRequest $req) 添加身份认证源。在指定云开发环境下创建一个新的身份认证源，支持 OAuth 2.0、OIDC、SAML 2.0 等标准协议，以及自定义登录和邮箱登录等多种认证方式。
 创建时需指定身份源协议类型（ProviderType）并配置对应的协议连接参数（Config）。若身份源 ID 已存在将返回错误。
 限制：一个环境最大可允许加入20个认证源。
- * @method Models\BindCloudBaseAccessDomainResponse BindCloudBaseAccessDomain(Models\BindCloudBaseAccessDomainRequest $req) 绑定云开发自定义域名，用于云接入和静态托管
- * @method Models\BindCloudBaseGWDomainResponse BindCloudBaseGWDomain(Models\BindCloudBaseGWDomainRequest $req) 绑定自定义域名
  * @method Models\CheckTcbServiceResponse CheckTcbService(Models\CheckTcbServiceRequest $req) 检查是否开通Tcb服务
+ * @method Models\CreateApiKeyResponse CreateApiKey(Models\CreateApiKeyRequest $req) 创建云开发平台的API Key。在指定云开发环境下创建一个 API Key 访问凭证。支持两种类型：api_key（服务端管理员访问凭证，以管理员身份签发，可设置有效期，不设置有效期则永不过期，单个环境最多创建 5 个）和 publish_key（前端匿名访问凭证，固定有效期，每个环境仅保留一个）。创建成功后将返回 API Key 明文 Token，该值仅在创建时返回一次，请妥善保存。需要管理员权限。
  * @method Models\CreateAuthDomainResponse CreateAuthDomain(Models\CreateAuthDomainRequest $req) 增加安全域名。
 云开发会校验网页应用请求的来源域名，您需要将来源域名加入到WEB安全域名列表中。
 可以通过接口 [DescribeAuthDomains](https://cloud.tencent.com/document/product/876/42151) 获取当前已绑定生效的安全域名。
@@ -44,7 +43,6 @@ use TencentCloud\Tcb\V20180608\Models as Models;
 
 该接口支持下单并支付(CreateAndPay=true时)，此时会自动在腾讯云账户中扣除余额（余额不足会下单失败）。
 该接口支持自动扣除代金券（AutoVoucher=true时），符合条件的代金券会被自动扣除。
- * @method Models\CreateCloudBaseGWAPIResponse CreateCloudBaseGWAPI(Models\CreateCloudBaseGWAPIRequest $req) 创建云开发网关API
  * @method Models\CreateEnvResponse CreateEnv(Models\CreateEnvRequest $req) 本接口用于购买云开发环境。
 该接口会自动下单并支付，会在腾讯云账户中扣除余额（余额不足会下单失败）。
 该接口支持自动扣除代金券（AutoVoucher=true时），符合条件的代金券会被自动扣除。
@@ -62,6 +60,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
 
 - **已开通**：`LogServiceInfo` 中存在日志主题 ID 等有效信息
 - **未开通 / 开通中**：`LogServiceInfo` 为空或相关字段缺失
+ * @method Models\CreateHTTPServiceRouteResponse CreateHTTPServiceRoute(Models\CreateHTTPServiceRouteRequest $req) 本接口CreateHTTPServiceRoute用于创建HTTP访问服务路由。如果不传Domain.Routes，仅创建域名信息。首次创建域名后需要调用DescribeHTTPServiceRoute查询域名状态，如果状态是PROCESSING，需要轮询查询域名状态直到SUCCESS或者FAIL。如果状态是FAIL，可以删除后重新创建。创建成功后域名可能无法访问，原因是异步下发的路由，可通过http或者https探测路由是否下发，如果http访问返回404或者https访问握手失败，可等待一会再试，直到访问正常。
  * @method Models\CreateHostingDomainResponse CreateHostingDomain(Models\CreateHostingDomainRequest $req) 创建托管域名
  * @method Models\CreateMySQLResponse CreateMySQL(Models\CreateMySQLRequest $req) 本接口（CreateMySQL）用于开通Mysql型数据库。
 
@@ -69,20 +68,23 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\CreateStaticStoreResponse CreateStaticStore(Models\CreateStaticStoreRequest $req) 创建静态托管资源，包括COS和CDN，异步任务创建，查看创建结果需要根据DescribeStaticStore接口来查看
  * @method Models\CreateTableResponse CreateTable(Models\CreateTableRequest $req) 本接口(CreateTable)用于创建文档型数据库表，支持创建capped类型集合，暂时不支持分片表。
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 创建tcb用户
+ * @method Models\CreateVmInstanceResponse CreateVmInstance(Models\CreateVmInstanceRequest $req) 创建虚拟服务器
+创建流程为先调用[DescribeVmSpec](https://cloud.tencent.com/document/product/876/129360)获取可购买的规格，同时调用[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)拉取镜像列表，选中一个规格和一个镜像后，调用[InquireVmPrice](https://cloud.tencent.com/document/product/876/129759)询价，如果价格可接受，调用此接口创建实例
+ * @method Models\DeleteApiKeyResponse DeleteApiKey(Models\DeleteApiKeyRequest $req) 删除指定云开发环境下的某个 API Key 服务端访问凭证。删除后，该 API Key 对应的 Token 将被吊销，已使用该 Key 发起的请求将失败。该操作具有幂等性，若指定的 API Key 不存在则直接返回成功。需要管理员权限。
  * @method Models\DeleteAuthDomainResponse DeleteAuthDomain(Models\DeleteAuthDomainRequest $req) 删除合法域名。
 云开发会校验网页应用请求的来源域名，您需要将来源域名加入到WEB安全域名列表中。
 可以通过接口 [DescribeAuthDomains](https://cloud.tencent.com/document/product/876/42151) 获取当前已绑定生效的安全域名，将对应安全域名的id填入Domainlds中
 
 注意⚠️
 安全域名被删除之后，可能会引起跨域问题，请谨慎操作。
- * @method Models\DeleteCloudBaseGWAPIResponse DeleteCloudBaseGWAPI(Models\DeleteCloudBaseGWAPIRequest $req) 删除网关API
- * @method Models\DeleteCloudBaseGWDomainResponse DeleteCloudBaseGWDomain(Models\DeleteCloudBaseGWDomainRequest $req) 删除网关域名
+ * @method Models\DeleteHTTPServiceRouteResponse DeleteHTTPServiceRoute(Models\DeleteHTTPServiceRouteRequest $req) 本接口DeleteHTTPServiceRoute用于删除HTTP访问服务域名或者路由。可批量删除多条path路由、删除域名及所有path路由，如果Paths字段为空则删除域名及所有path路由，如果Paths不为空则仅删除path路由。
  * @method Models\DeleteProviderResponse DeleteProvider(Models\DeleteProviderRequest $req) 删除认证源
  * @method Models\DeleteTableResponse DeleteTable(Models\DeleteTableRequest $req) 本接口(DeleteTable)用于删除文档型数据库表，删除表后表中数据将会被删除且无法恢复，请谨慎操作。
 
 接口入参中的 Tag 为文档型数据库的实例 Id，可以通过 [DescribeEnvs](https://cloud.tencent.com/document/api/876/34820) 接口返回的 EnvList[0].Databases[0].InstanceId 获取。
  * @method Models\DeleteUsersResponse DeleteUsers(Models\DeleteUsersRequest $req) 删除tcb用户
  * @method Models\DeleteVmInstanceResponse DeleteVmInstance(Models\DeleteVmInstanceRequest $req) 销毁云服务器实例
+ * @method Models\DescribeApiKeyListResponse DescribeApiKeyList(Models\DescribeApiKeyListRequest $req) 查询 API Key 列表。分页查询指定云开发环境下的 API Key 访问凭证列表。支持按类型过滤（api_key 或 publish_key）。未指定类型时，默认仅返回 api_key 类型的记录。列表查询中 api_key 类型的令牌值将进行脱敏处理（仅保留前后各 6 位字符）；publish_key 类型始终返回完整明文。接口需要管理员权限。
  * @method Models\DescribeAuthDomainsResponse DescribeAuthDomains(Models\DescribeAuthDomainsRequest $req) 本接口用于获取当前环境的安全域名列表。
 云开发会校验网页应用请求的来源域名，您需要将来源域名加入到WEB安全域名列表中。
 可以通过接口 [CreateAuthDomain](https://cloud.tencent.com/document/product/876/42764) 增加安全域名。
@@ -90,8 +92,6 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DescribeBillingInfoResponse DescribeBillingInfo(Models\DescribeBillingInfoRequest $req) 获取计费相关信息
  * @method Models\DescribeClientResponse DescribeClient(Models\DescribeClientRequest $req) 查询客户端详情。获取指定云开发环境下某个客户端的配置信息，包括客户端基本信息（名称、图标、描述）、OAuth 凭证（ClientId、ClientSecret）、安全域名、允许的 Scope 列表、Token 有效期、会话控制策略等。当客户端 ID 等于环境 ID 时，返回该环境的默认客户端配置。
  * @method Models\DescribeCloudBaseBuildServiceResponse DescribeCloudBaseBuildService(Models\DescribeCloudBaseBuildServiceRequest $req) 获取云托管代码上传url
- * @method Models\DescribeCloudBaseGWAPIResponse DescribeCloudBaseGWAPI(Models\DescribeCloudBaseGWAPIRequest $req) 获取网关API列表
- * @method Models\DescribeCloudBaseGWServiceResponse DescribeCloudBaseGWService(Models\DescribeCloudBaseGWServiceRequest $req) 获取网关服务
  * @method Models\DescribeCloudBaseRunServerVersionResponse DescribeCloudBaseRunServerVersion(Models\DescribeCloudBaseRunServerVersionRequest $req) 查询服务版本的详情，CPU和MEM  请使用CPUSize和MemSize
  * @method Models\DescribeCreateMySQLResultResponse DescribeCreateMySQLResult(Models\DescribeCreateMySQLResultRequest $req) 本接口（DescribeCreateMySQLResult）用于查询开通Mysql结果。
 
@@ -111,6 +111,9 @@ use TencentCloud\Tcb\V20180608\Models as Models;
 本接口，用于获取环境当前属于哪个计费周期内。
  * @method Models\DescribeEnvLimitResponse DescribeEnvLimit(Models\DescribeEnvLimitRequest $req) 查询环境个数上限
  * @method Models\DescribeEnvsResponse DescribeEnvs(Models\DescribeEnvsRequest $req) 获取环境列表，含环境下的各个资源信息。尤其是各资源的唯一标识，是请求各资源的关键参数
+ * @method Models\DescribeGatewayVersionsResponse DescribeGatewayVersions(Models\DescribeGatewayVersionsRequest $req) 查询网关版本信息
+暂不鉴权
+ * @method Models\DescribeHTTPServiceRouteResponse DescribeHTTPServiceRoute(Models\DescribeHTTPServiceRouteRequest $req) 本接口DescribeHTTPServiceRoute用于查询环境下HTTP访问服务路由信息。可通过Filters过滤。如果不存在不会返回错误。
  * @method Models\DescribeHostingDomainTaskResponse DescribeHostingDomainTask(Models\DescribeHostingDomainTaskRequest $req) 查询静态托管域名任务状态
  * @method Models\DescribeLoginConfigResponse DescribeLoginConfig(Models\DescribeLoginConfigRequest $req) 查询指定云开发环境的登录策略配置。包括手机号短信登录、邮箱登录、用户名密码登录和匿名登录方式的开启状态，同时包含短信验证码发送通道、MFA 多因子认证和密码的更新策略。
  * @method Models\DescribeMySQLClusterDetailResponse DescribeMySQLClusterDetail(Models\DescribeMySQLClusterDetailRequest $req) 本接口（DescribeMySQLClusterDetail）查询Mysql集群信息。
@@ -150,13 +153,13 @@ use TencentCloud\Tcb\V20180608\Models as Models;
 该接口跟 [DescribeTables](https://cloud.tencent.com/document/api/876/127962) 接口功能一致，后续该接口可能会下线，请使用 [DescribeTable](https://cloud.tencent.com/document/api/876/127962)接口。
  * @method Models\ModifyClientResponse ModifyClient(Models\ModifyClientRequest $req) 修改客户端配置。采用增量更新策略，仅更新请求中传入的非空字段，未传入的字段保持原值不变。支持修改客户端基本信息（名称、图标、描述、主页地址）、安全域名、允许的 Scope 列表、Token 有效期、会话控制策略及启用状态等配置。
 Id、Secret、CreatedAt、Meta 等字段在该接口中不可修改，当客户端 ID 等于环境 ID 且客户端尚未创建时，将自动创建默认客户端配置。
- * @method Models\ModifyCloudBaseGWAPIResponse ModifyCloudBaseGWAPI(Models\ModifyCloudBaseGWAPIRequest $req) 修改云开发网关API
  * @method Models\ModifyClsTopicResponse ModifyClsTopic(Models\ModifyClsTopicRequest $req) 修改日志主题
  * @method Models\ModifyDatabaseACLResponse ModifyDatabaseACL(Models\ModifyDatabaseACLRequest $req) 本接口（ModifyDatabaseACL）用于修改文档型数据库权限。
  * @method Models\ModifyEnvResponse ModifyEnv(Models\ModifyEnvRequest $req) 更新环境信息
  * @method Models\ModifyEnvPlanResponse ModifyEnvPlan(Models\ModifyEnvPlanRequest $req) 本接口用于变更云开发环境套餐。
 该接口会自动下单并支付，会在腾讯云账户中扣除余额（余额不足会下单失败）。
 该接口支持自动扣除代金券（AutoVoucher=true时），符合条件的代金券会被自动扣除。
+ * @method Models\ModifyHTTPServiceRouteResponse ModifyHTTPServiceRoute(Models\ModifyHTTPServiceRouteRequest $req) 本接口ModifyHTTPServiceRoute用于修改HTTP访问服务路由。支持增量修改，对应字段不传参数表示不需要修改
  * @method Models\ModifyLoginConfigResponse ModifyLoginConfig(Models\ModifyLoginConfigRequest $req) 修改指定云开发环境的登录策略配置。支持开启或关闭手机号短信登录、邮箱登录、用户名密码登录和匿名登录，同时可配置短信验证码发送通道、MFA 多因子认证和密码更新策略。
 修改后立即生效，影响该环境下所有终端用户的登录行为。
  * @method Models\ModifyProviderResponse ModifyProvider(Models\ModifyProviderRequest $req) 修改身份认证源。更新指定云开发环境下已有身份认证源的配置信息，支持修改基本信息（名称、图标、描述）、协议连接配置（ClientId、ClientSecret、端点地址等）、登录行为控制（透传模式、自动注册、邮箱/手机号自动关联）以及启用状态。

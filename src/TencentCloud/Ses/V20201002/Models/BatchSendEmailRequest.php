@@ -20,118 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BatchSendEmail请求参数结构体
  *
- * @method string getFromEmailAddress() 获取发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照
-发信人 &lt;邮件地址&gt; 的方式填写，例如：
-腾讯云团队 &lt;noreply@mail.qcloud.com&gt;
- * @method void setFromEmailAddress(string $FromEmailAddress) 设置发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照
-发信人 &lt;邮件地址&gt; 的方式填写，例如：
-腾讯云团队 &lt;noreply@mail.qcloud.com&gt;
- * @method integer getReceiverId() 获取收件人列表ID
- * @method void setReceiverId(integer $ReceiverId) 设置收件人列表ID
- * @method string getSubject() 获取邮件主题
- * @method void setSubject(string $Subject) 设置邮件主题
- * @method integer getTaskType() 获取任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送
- * @method void setTaskType(integer $TaskType) 设置任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送
- * @method string getReplyToAddresses() 获取邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
- * @method void setReplyToAddresses(string $ReplyToAddresses) 设置邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
- * @method Template getTemplate() 获取使用模板发送时，填写的模板相关参数
-<dx-alert infotype="notice" title="注意"> 如您未申请过特殊配置，则该字段为必填 </dx-alert>
- * @method void setTemplate(Template $Template) 设置使用模板发送时，填写的模板相关参数
-<dx-alert infotype="notice" title="注意"> 如您未申请过特殊配置，则该字段为必填 </dx-alert>
- * @method Simple getSimple() 获取已废弃<dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert>
- * @method void setSimple(Simple $Simple) 设置已废弃<dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert>
- * @method array getAttachments() 获取需要发送附件时，填写附件相关参数（暂未支持）
- * @method void setAttachments(array $Attachments) 设置需要发送附件时，填写附件相关参数（暂未支持）
- * @method CycleEmailParam getCycleParam() 获取周期发送任务的必要参数
- * @method void setCycleParam(CycleEmailParam $CycleParam) 设置周期发送任务的必要参数
- * @method TimedEmailParam getTimedParam() 获取定时发送任务的必要参数
- * @method void setTimedParam(TimedEmailParam $TimedParam) 设置定时发送任务的必要参数
- * @method string getUnsubscribe() 获取退订链接选项 0: 不加入退订链接 1: 简体中文 2: 英文 3: 繁体中文 4: 西班牙语 5: 法语 6: 德语 7: 日语 8: 韩语 9: 阿拉伯语 10: 泰语
- * @method void setUnsubscribe(string $Unsubscribe) 设置退订链接选项 0: 不加入退订链接 1: 简体中文 2: 英文 3: 繁体中文 4: 西班牙语 5: 法语 6: 德语 7: 日语 8: 韩语 9: 阿拉伯语 10: 泰语
- * @method integer getADLocation() 获取是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面
- * @method void setADLocation(integer $ADLocation) 设置是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面
+ * @method string getFromEmailAddress() 获取<p>发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照<br>发信人 &lt;邮件地址&gt; 的方式填写，例如：<br>腾讯云团队 &lt;noreply@mail.qcloud.com&gt;</p>
+ * @method void setFromEmailAddress(string $FromEmailAddress) 设置<p>发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照<br>发信人 &lt;邮件地址&gt; 的方式填写，例如：<br>腾讯云团队 &lt;noreply@mail.qcloud.com&gt;</p>
+ * @method integer getReceiverId() 获取<p>收件人列表ID</p>
+ * @method void setReceiverId(integer $ReceiverId) 设置<p>收件人列表ID</p>
+ * @method string getSubject() 获取<p>邮件主题</p>
+ * @method void setSubject(string $Subject) 设置<p>邮件主题</p>
+ * @method integer getTaskType() 获取<p>任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送</p>
+ * @method void setTaskType(integer $TaskType) 设置<p>任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送</p>
+ * @method string getReplyToAddresses() 获取<p>邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。</p>
+ * @method void setReplyToAddresses(string $ReplyToAddresses) 设置<p>邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。</p>
+ * @method Template getTemplate() 获取<p>使用模板发送时，填写的模板相关参数</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">注意</div>        <div class="rno-document-tip-desc"><p>如您未申请过特殊配置，则该字段为必填</p></div>    </div></blockquote>
+ * @method void setTemplate(Template $Template) 设置<p>使用模板发送时，填写的模板相关参数</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">注意</div>        <div class="rno-document-tip-desc"><p>如您未申请过特殊配置，则该字段为必填</p></div>    </div></blockquote>
+ * @method Simple getSimple() 获取<p>已废弃<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">说明</div>        <div class="rno-document-tip-desc"><p>仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</p></div>    </div></blockquote></p>
+ * @method void setSimple(Simple $Simple) 设置<p>已废弃<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">说明</div>        <div class="rno-document-tip-desc"><p>仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</p></div>    </div></blockquote></p>
+ * @method array getAttachments() 获取<p>需要发送附件时，填写附件相关参数（暂未支持）</p>
+ * @method void setAttachments(array $Attachments) 设置<p>需要发送附件时，填写附件相关参数（暂未支持）</p>
+ * @method CycleEmailParam getCycleParam() 获取<p>周期发送任务的必要参数</p>
+ * @method void setCycleParam(CycleEmailParam $CycleParam) 设置<p>周期发送任务的必要参数</p>
+ * @method TimedEmailParam getTimedParam() 获取<p>定时发送任务的必要参数</p>
+ * @method void setTimedParam(TimedEmailParam $TimedParam) 设置<p>定时发送任务的必要参数</p>
+ * @method string getUnsubscribe() 获取<p>退订链接选项</p><p>枚举值：</p><ul><li>0： 不加入退订链接</li><li>1： 简体中文</li><li>2： 英文</li><li>3： 繁体中文</li><li>4： 西班牙语</li><li>5： 法语</li><li>6： 德语</li><li>7： 日语</li><li>8： 韩语</li><li>9： 阿拉伯语</li><li>10： 泰语</li><li>11： 印尼语</li></ul>
+ * @method void setUnsubscribe(string $Unsubscribe) 设置<p>退订链接选项</p><p>枚举值：</p><ul><li>0： 不加入退订链接</li><li>1： 简体中文</li><li>2： 英文</li><li>3： 繁体中文</li><li>4： 西班牙语</li><li>5： 法语</li><li>6： 德语</li><li>7： 日语</li><li>8： 韩语</li><li>9： 阿拉伯语</li><li>10： 泰语</li><li>11： 印尼语</li></ul>
+ * @method integer getADLocation() 获取<p>是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面</p>
+ * @method void setADLocation(integer $ADLocation) 设置<p>是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面</p>
  */
 class BatchSendEmailRequest extends AbstractModel
 {
     /**
-     * @var string 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照
-发信人 &lt;邮件地址&gt; 的方式填写，例如：
-腾讯云团队 &lt;noreply@mail.qcloud.com&gt;
+     * @var string <p>发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照<br>发信人 &lt;邮件地址&gt; 的方式填写，例如：<br>腾讯云团队 &lt;noreply@mail.qcloud.com&gt;</p>
      */
     public $FromEmailAddress;
 
     /**
-     * @var integer 收件人列表ID
+     * @var integer <p>收件人列表ID</p>
      */
     public $ReceiverId;
 
     /**
-     * @var string 邮件主题
+     * @var string <p>邮件主题</p>
      */
     public $Subject;
 
     /**
-     * @var integer 任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送
+     * @var integer <p>任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送</p>
      */
     public $TaskType;
 
     /**
-     * @var string 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
+     * @var string <p>邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。</p>
      */
     public $ReplyToAddresses;
 
     /**
-     * @var Template 使用模板发送时，填写的模板相关参数
-<dx-alert infotype="notice" title="注意"> 如您未申请过特殊配置，则该字段为必填 </dx-alert>
+     * @var Template <p>使用模板发送时，填写的模板相关参数</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">注意</div>        <div class="rno-document-tip-desc"><p>如您未申请过特殊配置，则该字段为必填</p></div>    </div></blockquote>
      */
     public $Template;
 
     /**
-     * @var Simple 已废弃<dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert>
+     * @var Simple <p>已废弃<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">说明</div>        <div class="rno-document-tip-desc"><p>仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</p></div>    </div></blockquote></p>
      */
     public $Simple;
 
     /**
-     * @var array 需要发送附件时，填写附件相关参数（暂未支持）
+     * @var array <p>需要发送附件时，填写附件相关参数（暂未支持）</p>
      */
     public $Attachments;
 
     /**
-     * @var CycleEmailParam 周期发送任务的必要参数
+     * @var CycleEmailParam <p>周期发送任务的必要参数</p>
      */
     public $CycleParam;
 
     /**
-     * @var TimedEmailParam 定时发送任务的必要参数
+     * @var TimedEmailParam <p>定时发送任务的必要参数</p>
      */
     public $TimedParam;
 
     /**
-     * @var string 退订链接选项 0: 不加入退订链接 1: 简体中文 2: 英文 3: 繁体中文 4: 西班牙语 5: 法语 6: 德语 7: 日语 8: 韩语 9: 阿拉伯语 10: 泰语
+     * @var string <p>退订链接选项</p><p>枚举值：</p><ul><li>0： 不加入退订链接</li><li>1： 简体中文</li><li>2： 英文</li><li>3： 繁体中文</li><li>4： 西班牙语</li><li>5： 法语</li><li>6： 德语</li><li>7： 日语</li><li>8： 韩语</li><li>9： 阿拉伯语</li><li>10： 泰语</li><li>11： 印尼语</li></ul>
      */
     public $Unsubscribe;
 
     /**
-     * @var integer 是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面
+     * @var integer <p>是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面</p>
      */
     public $ADLocation;
 
     /**
-     * @param string $FromEmailAddress 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照
-发信人 &lt;邮件地址&gt; 的方式填写，例如：
-腾讯云团队 &lt;noreply@mail.qcloud.com&gt;
-     * @param integer $ReceiverId 收件人列表ID
-     * @param string $Subject 邮件主题
-     * @param integer $TaskType 任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送
-     * @param string $ReplyToAddresses 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
-     * @param Template $Template 使用模板发送时，填写的模板相关参数
-<dx-alert infotype="notice" title="注意"> 如您未申请过特殊配置，则该字段为必填 </dx-alert>
-     * @param Simple $Simple 已废弃<dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert>
-     * @param array $Attachments 需要发送附件时，填写附件相关参数（暂未支持）
-     * @param CycleEmailParam $CycleParam 周期发送任务的必要参数
-     * @param TimedEmailParam $TimedParam 定时发送任务的必要参数
-     * @param string $Unsubscribe 退订链接选项 0: 不加入退订链接 1: 简体中文 2: 英文 3: 繁体中文 4: 西班牙语 5: 法语 6: 德语 7: 日语 8: 韩语 9: 阿拉伯语 10: 泰语
-     * @param integer $ADLocation 是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面
+     * @param string $FromEmailAddress <p>发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照<br>发信人 &lt;邮件地址&gt; 的方式填写，例如：<br>腾讯云团队 &lt;noreply@mail.qcloud.com&gt;</p>
+     * @param integer $ReceiverId <p>收件人列表ID</p>
+     * @param string $Subject <p>邮件主题</p>
+     * @param integer $TaskType <p>任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送</p>
+     * @param string $ReplyToAddresses <p>邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。</p>
+     * @param Template $Template <p>使用模板发送时，填写的模板相关参数</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">注意</div>        <div class="rno-document-tip-desc"><p>如您未申请过特殊配置，则该字段为必填</p></div>    </div></blockquote>
+     * @param Simple $Simple <p>已废弃<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">说明</div>        <div class="rno-document-tip-desc"><p>仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</p></div>    </div></blockquote></p>
+     * @param array $Attachments <p>需要发送附件时，填写附件相关参数（暂未支持）</p>
+     * @param CycleEmailParam $CycleParam <p>周期发送任务的必要参数</p>
+     * @param TimedEmailParam $TimedParam <p>定时发送任务的必要参数</p>
+     * @param string $Unsubscribe <p>退订链接选项</p><p>枚举值：</p><ul><li>0： 不加入退订链接</li><li>1： 简体中文</li><li>2： 英文</li><li>3： 繁体中文</li><li>4： 西班牙语</li><li>5： 法语</li><li>6： 德语</li><li>7： 日语</li><li>8： 韩语</li><li>9： 阿拉伯语</li><li>10： 泰语</li><li>11： 印尼语</li></ul>
+     * @param integer $ADLocation <p>是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面</p>
      */
     function __construct()
     {

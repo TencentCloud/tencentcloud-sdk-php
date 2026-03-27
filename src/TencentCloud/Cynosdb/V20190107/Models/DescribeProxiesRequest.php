@@ -38,8 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderByType(string $OrderByType) 设置排序类型，取值范围：
 <li> ASC：升序排序 </li>
 <li> DESC：降序排序 </li>
- * @method array getFilters() 获取搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
- * @method void setFilters(array $Filters) 设置搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
+ * @method array getFilters() 获取搜索条件，若存在多个 Filter 时，Filter 间的关系为逻辑与（AND）关系。
+说明：此参数当前仅支持 Status 和 ProxyGroupId 两种过滤条件。
+ * @method void setFilters(array $Filters) 设置搜索条件，若存在多个 Filter 时，Filter 间的关系为逻辑与（AND）关系。
+说明：此参数当前仅支持 Status 和 ProxyGroupId 两种过滤条件。
  */
 class DescribeProxiesRequest extends AbstractModel
 {
@@ -73,7 +75,8 @@ class DescribeProxiesRequest extends AbstractModel
     public $OrderByType;
 
     /**
-     * @var array 搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
+     * @var array 搜索条件，若存在多个 Filter 时，Filter 间的关系为逻辑与（AND）关系。
+说明：此参数当前仅支持 Status 和 ProxyGroupId 两种过滤条件。
      */
     public $Filters;
 
@@ -87,7 +90,8 @@ class DescribeProxiesRequest extends AbstractModel
      * @param string $OrderByType 排序类型，取值范围：
 <li> ASC：升序排序 </li>
 <li> DESC：降序排序 </li>
-     * @param array $Filters 搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
+     * @param array $Filters 搜索条件，若存在多个 Filter 时，Filter 间的关系为逻辑与（AND）关系。
+说明：此参数当前仅支持 Status 和 ProxyGroupId 两种过滤条件。
      */
     function __construct()
     {

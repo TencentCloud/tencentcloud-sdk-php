@@ -292,6 +292,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetaFrom(string $MetaFrom) 设置Catalog来源
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEngineOwner() 获取引擎侧责任人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEngineOwner(string $EngineOwner) 设置引擎侧责任人
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataSetRecord extends AbstractModel
 {
@@ -700,6 +704,12 @@ class DataSetRecord extends AbstractModel
     public $MetaFrom;
 
     /**
+     * @var string 引擎侧责任人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EngineOwner;
+
+    /**
      * @param string $AssetId 资产 ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatasourceName 数据源名称
@@ -835,6 +845,8 @@ class DataSetRecord extends AbstractModel
      * @param string $Namespace Catalog名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MetaFrom Catalog来源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EngineOwner 引擎侧责任人
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1148,6 +1160,10 @@ class DataSetRecord extends AbstractModel
 
         if (array_key_exists("MetaFrom",$param) and $param["MetaFrom"] !== null) {
             $this->MetaFrom = $param["MetaFrom"];
+        }
+
+        if (array_key_exists("EngineOwner",$param) and $param["EngineOwner"] !== null) {
+            $this->EngineOwner = $param["EngineOwner"];
         }
     }
 }

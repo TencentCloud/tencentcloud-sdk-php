@@ -88,6 +88,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
 **说明：ModifyDBInstanceParamTpl  API正在公测中，在此期间，该接口仅对公测用户开放**
  * @method Models\ModifyDBInstanceSecurityGroupResponse ModifyDBInstanceSecurityGroup(Models\ModifyDBInstanceSecurityGroupRequest $req) 本接口（ModifyDBInstanceSecurityGroup）用于修改实例绑定的安全组
  * @method Models\ModifyDBInstanceSpecResponse ModifyDBInstanceSpec(Models\ModifyDBInstanceSpecRequest $req) 本接口（ModifyDBInstanceSpec）用于调整MongoDB云数据库实例配置。接口支持的售卖规格，可从查询云数据库的售卖规格（[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)）获取。
+ * @method Models\ModifyInstanceAzResponse ModifyInstanceAz(Models\ModifyInstanceAzRequest $req) 本接口(ModifyInstanceAz)用于调整 MongoDB 云数据库的节点可用区分布，可通过指定主可用区和全部可用区分布信息完成云数据库的节点分布调整。
  * @method Models\ModifyInstanceParamsResponse ModifyInstanceParams(Models\ModifyInstanceParamsRequest $req) 本接口（ModifyInstanceParams）用于修改mongoDB实例的参数配置。
  * @method Models\ModifySRVConnectionUrlResponse ModifySRVConnectionUrl(Models\ModifySRVConnectionUrlRequest $req) 本接口（DisableSRVConnectionUrl）用于修改MongoDB数据库的SRV访问地址的TTL时长。
  * @method Models\OfflineIsolatedDBInstanceResponse OfflineIsolatedDBInstance(Models\OfflineIsolatedDBInstanceRequest $req) 本接口(OfflineIsolatedDBInstance)用于立即下线隔离状态的云数据库实例。进行操作的实例状态必须为隔离状态。

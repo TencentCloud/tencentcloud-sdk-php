@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPermType(string $PermType) 设置权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
  * @method array getDetailedPerms() 获取Topic&Group维度权限配置，权限类型为 TopicAndGroup 时必填
  * @method void setDetailedPerms(array $DetailedPerms) 设置Topic&Group维度权限配置，权限类型为 TopicAndGroup 时必填
+ * @method string getRoleGenerateMode() 获取AK、SK的生成方式，AUTO：后端自动生成，MANUAL：用户手动输入
+ * @method void setRoleGenerateMode(string $RoleGenerateMode) 设置AK、SK的生成方式，AUTO：后端自动生成，MANUAL：用户手动输入
+ * @method string getAccessKey() 获取选择MANUAL模式下，需要手动输入AK值
+ * @method void setAccessKey(string $AccessKey) 设置选择MANUAL模式下，需要手动输入AK值
+ * @method string getSecretKey() 获取选择MANUAL模式下，需要手动输入SK值
+ * @method void setSecretKey(string $SecretKey) 设置选择MANUAL模式下，需要手动输入SK值
  */
 class CreateRoleRequest extends AbstractModel
 {
@@ -73,6 +79,21 @@ class CreateRoleRequest extends AbstractModel
     public $DetailedPerms;
 
     /**
+     * @var string AK、SK的生成方式，AUTO：后端自动生成，MANUAL：用户手动输入
+     */
+    public $RoleGenerateMode;
+
+    /**
+     * @var string 选择MANUAL模式下，需要手动输入AK值
+     */
+    public $AccessKey;
+
+    /**
+     * @var string 选择MANUAL模式下，需要手动输入SK值
+     */
+    public $SecretKey;
+
+    /**
      * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      * @param string $Role 角色名称，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 32 个字符
      * @param boolean $PermWrite 是否开启生产权限
@@ -80,6 +101,9 @@ class CreateRoleRequest extends AbstractModel
      * @param string $Remark 备注
      * @param string $PermType 权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
      * @param array $DetailedPerms Topic&Group维度权限配置，权限类型为 TopicAndGroup 时必填
+     * @param string $RoleGenerateMode AK、SK的生成方式，AUTO：后端自动生成，MANUAL：用户手动输入
+     * @param string $AccessKey 选择MANUAL模式下，需要手动输入AK值
+     * @param string $SecretKey 选择MANUAL模式下，需要手动输入SK值
      */
     function __construct()
     {
@@ -125,6 +149,18 @@ class CreateRoleRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DetailedPerms, $obj);
             }
+        }
+
+        if (array_key_exists("RoleGenerateMode",$param) and $param["RoleGenerateMode"] !== null) {
+            $this->RoleGenerateMode = $param["RoleGenerateMode"];
+        }
+
+        if (array_key_exists("AccessKey",$param) and $param["AccessKey"] !== null) {
+            $this->AccessKey = $param["AccessKey"];
+        }
+
+        if (array_key_exists("SecretKey",$param) and $param["SecretKey"] !== null) {
+            $this->SecretKey = $param["SecretKey"];
         }
     }
 }

@@ -29,7 +29,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUpgradeType() 获取升级类型：upgradeImmediate，upgradeInMaintain
  * @method void setUpgradeType(string $UpgradeType) 设置升级类型：upgradeImmediate，upgradeInMaintain
  * @method string getDeviceType() 获取实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
  * @method void setDeviceType(string $DeviceType) 设置实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
  * @method integer getStorageLimit() 获取该参数已废弃
  * @method void setStorageLimit(integer $StorageLimit) 设置该参数已废弃
  * @method integer getAutoVoucher() 获取是否自动选择代金券 1是 0否 默认为0
@@ -67,6 +71,8 @@ class UpgradeInstanceRequest extends AbstractModel
 
     /**
      * @var string 实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      */
     public $DeviceType;
 
@@ -106,6 +112,8 @@ class UpgradeInstanceRequest extends AbstractModel
      * @param integer $Memory 数据库内存，单位GB
      * @param string $UpgradeType 升级类型：upgradeImmediate，upgradeInMaintain
      * @param string $DeviceType 实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      * @param integer $StorageLimit 该参数已废弃
      * @param integer $AutoVoucher 是否自动选择代金券 1是 0否 默认为0
      * @param string $DbType 该参数已废弃

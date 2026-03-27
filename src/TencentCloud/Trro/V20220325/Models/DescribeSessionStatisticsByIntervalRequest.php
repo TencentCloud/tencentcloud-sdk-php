@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSessionStatisticsByInterval请求参数结构体
  *
- * @method string getProjectId() 获取项目ID
- * @method void setProjectId(string $ProjectId) 设置项目ID
- * @method string getStatisticInterval() 获取统计时间间隔：hour|day|month
- * @method void setStatisticInterval(string $StatisticInterval) 设置统计时间间隔：hour|day|month
- * @method string getDeviceId() 获取设备ID
- * @method void setDeviceId(string $DeviceId) 设置设备ID
- * @method integer getStartTime() 获取起始时间，单位：秒
- * @method void setStartTime(integer $StartTime) 设置起始时间，单位：秒
- * @method integer getEndTime() 获取结束时间，单位：秒
- * @method void setEndTime(integer $EndTime) 设置结束时间，单位：秒
+ * @method string getProjectId() 获取<p>项目ID</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目ID</p>
+ * @method string getStatisticInterval() 获取<p>统计时间间隔：hour|day|month</p>
+ * @method void setStatisticInterval(string $StatisticInterval) 设置<p>统计时间间隔：hour|day|month</p>
+ * @method string getDeviceId() 获取<p>设备ID</p>
+ * @method void setDeviceId(string $DeviceId) 设置<p>设备ID</p>
+ * @method integer getStartTime() 获取<p>起始时间，单位：秒</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>起始时间，单位：秒</p>
+ * @method integer getEndTime() 获取<p>结束时间，单位：秒</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>结束时间，单位：秒</p>
  */
 class DescribeSessionStatisticsByIntervalRequest extends AbstractModel
 {
     /**
-     * @var string 项目ID
+     * @var string <p>项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var string 统计时间间隔：hour|day|month
+     * @var string <p>统计时间间隔：hour|day|month</p>
      */
     public $StatisticInterval;
 
     /**
-     * @var string 设备ID
+     * @var string <p>设备ID</p>
      */
     public $DeviceId;
 
     /**
-     * @var integer 起始时间，单位：秒
+     * @var integer <p>起始时间，单位：秒</p>
      */
     public $StartTime;
 
     /**
-     * @var integer 结束时间，单位：秒
+     * @var integer <p>结束时间，单位：秒</p>
      */
     public $EndTime;
 
     /**
-     * @param string $ProjectId 项目ID
-     * @param string $StatisticInterval 统计时间间隔：hour|day|month
-     * @param string $DeviceId 设备ID
-     * @param integer $StartTime 起始时间，单位：秒
-     * @param integer $EndTime 结束时间，单位：秒
+     * @param string $ProjectId <p>项目ID</p>
+     * @param string $StatisticInterval <p>统计时间间隔：hour|day|month</p>
+     * @param string $DeviceId <p>设备ID</p>
+     * @param integer $StartTime <p>起始时间，单位：秒</p>
+     * @param integer $EndTime <p>结束时间，单位：秒</p>
      */
     function __construct()
     {

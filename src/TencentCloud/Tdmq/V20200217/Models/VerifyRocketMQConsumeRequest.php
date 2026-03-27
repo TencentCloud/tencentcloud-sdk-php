@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) 设置消费组ID
  * @method string getMsgId() 获取消息id
  * @method void setMsgId(string $MsgId) 设置消息id
- * @method string getClientId() 获取客户端ID
- * @method void setClientId(string $ClientId) 设置客户端ID
  * @method string getTopicName() 获取主题名称
  * @method void setTopicName(string $TopicName) 设置主题名称
+ * @method string getClientId() 获取客户端 ID，不指定该参数时消息将被发送到对应消费组内任意客户端
+ * @method void setClientId(string $ClientId) 设置客户端 ID，不指定该参数时消息将被发送到对应消费组内任意客户端
  */
 class VerifyRocketMQConsumeRequest extends AbstractModel
 {
@@ -56,22 +56,22 @@ class VerifyRocketMQConsumeRequest extends AbstractModel
     public $MsgId;
 
     /**
-     * @var string 客户端ID
-     */
-    public $ClientId;
-
-    /**
      * @var string 主题名称
      */
     public $TopicName;
+
+    /**
+     * @var string 客户端 ID，不指定该参数时消息将被发送到对应消费组内任意客户端
+     */
+    public $ClientId;
 
     /**
      * @param string $ClusterId 集群id
      * @param string $NamespaceId 命名空间
      * @param string $GroupId 消费组ID
      * @param string $MsgId 消息id
-     * @param string $ClientId 客户端ID
      * @param string $TopicName 主题名称
+     * @param string $ClientId 客户端 ID，不指定该参数时消息将被发送到对应消费组内任意客户端
      */
     function __construct()
     {
@@ -102,12 +102,12 @@ class VerifyRocketMQConsumeRequest extends AbstractModel
             $this->MsgId = $param["MsgId"];
         }
 
-        if (array_key_exists("ClientId",$param) and $param["ClientId"] !== null) {
-            $this->ClientId = $param["ClientId"];
-        }
-
         if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
             $this->TopicName = $param["TopicName"];
+        }
+
+        if (array_key_exists("ClientId",$param) and $param["ClientId"] !== null) {
+            $this->ClientId = $param["ClientId"];
         }
     }
 }

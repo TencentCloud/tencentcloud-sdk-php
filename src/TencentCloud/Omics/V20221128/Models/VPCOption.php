@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 私有网络配置。
  *
- * @method string getVPCId() 获取私有网络ID（VPCId和VPCCIDRBlock必选其一。若使用VPCId，则使用现用私有网络；若使用VPCCIDRBlock，则创建新的私有网络）
- * @method void setVPCId(string $VPCId) 设置私有网络ID（VPCId和VPCCIDRBlock必选其一。若使用VPCId，则使用现用私有网络；若使用VPCCIDRBlock，则创建新的私有网络）
- * @method string getSubnetId() 获取子网ID（SubnetId和SubnetZone&SubnetCIDRBlock必选其一。若使用SubnetId，则使用现用子网；若使用SubnetZone&SubnetCIDRBlock，则创建新的子网）
- * @method void setSubnetId(string $SubnetId) 设置子网ID（SubnetId和SubnetZone&SubnetCIDRBlock必选其一。若使用SubnetId，则使用现用子网；若使用SubnetZone&SubnetCIDRBlock，则创建新的子网）
- * @method string getSubnetZone() 获取子网可用区。
- * @method void setSubnetZone(string $SubnetZone) 设置子网可用区。
- * @method string getVPCCIDRBlock() 获取私有网络CIDR。
- * @method void setVPCCIDRBlock(string $VPCCIDRBlock) 设置私有网络CIDR。
- * @method string getSubnetCIDRBlock() 获取子网CIDR。
- * @method void setSubnetCIDRBlock(string $SubnetCIDRBlock) 设置子网CIDR。
+ * @method string getVPCId() 获取<p>私有网络ID（VPCId和VPCCIDRBlock必选其一。若使用VPCId，则使用现用私有网络；若使用VPCCIDRBlock，则创建新的私有网络）</p>
+ * @method void setVPCId(string $VPCId) 设置<p>私有网络ID（VPCId和VPCCIDRBlock必选其一。若使用VPCId，则使用现用私有网络；若使用VPCCIDRBlock，则创建新的私有网络）</p>
+ * @method string getSubnetId() 获取<p>子网ID（SubnetId和SubnetZone&amp;SubnetCIDRBlock必选其一。若使用SubnetId，则使用现用子网；若使用SubnetZone&amp;SubnetCIDRBlock，则创建新的子网）</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网ID（SubnetId和SubnetZone&amp;SubnetCIDRBlock必选其一。若使用SubnetId，则使用现用子网；若使用SubnetZone&amp;SubnetCIDRBlock，则创建新的子网）</p>
+ * @method string getSubnetZone() 获取<p>子网可用区。</p>
+ * @method void setSubnetZone(string $SubnetZone) 设置<p>子网可用区。</p>
+ * @method string getVPCCIDRBlock() 获取<p>私有网络CIDR。</p>
+ * @method void setVPCCIDRBlock(string $VPCCIDRBlock) 设置<p>私有网络CIDR。</p>
+ * @method string getSubnetCIDRBlock() 获取<p>子网CIDR。</p>
+ * @method void setSubnetCIDRBlock(string $SubnetCIDRBlock) 设置<p>子网CIDR。</p>
  */
 class VPCOption extends AbstractModel
 {
     /**
-     * @var string 私有网络ID（VPCId和VPCCIDRBlock必选其一。若使用VPCId，则使用现用私有网络；若使用VPCCIDRBlock，则创建新的私有网络）
+     * @var string <p>私有网络ID（VPCId和VPCCIDRBlock必选其一。若使用VPCId，则使用现用私有网络；若使用VPCCIDRBlock，则创建新的私有网络）</p>
      */
     public $VPCId;
 
     /**
-     * @var string 子网ID（SubnetId和SubnetZone&SubnetCIDRBlock必选其一。若使用SubnetId，则使用现用子网；若使用SubnetZone&SubnetCIDRBlock，则创建新的子网）
+     * @var string <p>子网ID（SubnetId和SubnetZone&amp;SubnetCIDRBlock必选其一。若使用SubnetId，则使用现用子网；若使用SubnetZone&amp;SubnetCIDRBlock，则创建新的子网）</p>
      */
     public $SubnetId;
 
     /**
-     * @var string 子网可用区。
+     * @var string <p>子网可用区。</p>
      */
     public $SubnetZone;
 
     /**
-     * @var string 私有网络CIDR。
+     * @var string <p>私有网络CIDR。</p>
      */
     public $VPCCIDRBlock;
 
     /**
-     * @var string 子网CIDR。
+     * @var string <p>子网CIDR。</p>
      */
     public $SubnetCIDRBlock;
 
     /**
-     * @param string $VPCId 私有网络ID（VPCId和VPCCIDRBlock必选其一。若使用VPCId，则使用现用私有网络；若使用VPCCIDRBlock，则创建新的私有网络）
-     * @param string $SubnetId 子网ID（SubnetId和SubnetZone&SubnetCIDRBlock必选其一。若使用SubnetId，则使用现用子网；若使用SubnetZone&SubnetCIDRBlock，则创建新的子网）
-     * @param string $SubnetZone 子网可用区。
-     * @param string $VPCCIDRBlock 私有网络CIDR。
-     * @param string $SubnetCIDRBlock 子网CIDR。
+     * @param string $VPCId <p>私有网络ID（VPCId和VPCCIDRBlock必选其一。若使用VPCId，则使用现用私有网络；若使用VPCCIDRBlock，则创建新的私有网络）</p>
+     * @param string $SubnetId <p>子网ID（SubnetId和SubnetZone&amp;SubnetCIDRBlock必选其一。若使用SubnetId，则使用现用子网；若使用SubnetZone&amp;SubnetCIDRBlock，则创建新的子网）</p>
+     * @param string $SubnetZone <p>子网可用区。</p>
+     * @param string $VPCCIDRBlock <p>私有网络CIDR。</p>
+     * @param string $SubnetCIDRBlock <p>子网CIDR。</p>
      */
     function __construct()
     {

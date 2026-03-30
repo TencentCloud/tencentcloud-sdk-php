@@ -23,9 +23,51 @@ use TencentCloud\Common\AbstractModel;
  * @method string getClusterId() 获取集群Id
  * @method void setClusterId(string $ClusterId) 设置集群Id
  * @method string getClusterState() 获取集群状态
+运行中：Running
+集群等级中：ClusterLevelUpgrading
+集群升级中：Upgrading
+集群控制面扩容中：MasterScaling
+托管集群修改参数中：RuntimeUpgrading
+节点升级中：NodeUpgrading
+集群删除中：Deleting
+集群创建中：Creating
+集群已隔离：Isolated
+集群升级暂停：Pause
+集群执行隔离：ResourceIsolate
+集群隔离：ResourceIsolated
+集群执行冲正：ResourceReverse
+集群冲正：ResourceReversal
+集群执行销毁：ResourceDestroy
+集群销毁：ResourceDestroyed
+集群变配交易中：ClusterLevelTrading
  * @method void setClusterState(string $ClusterState) 设置集群状态
+运行中：Running
+集群等级中：ClusterLevelUpgrading
+集群升级中：Upgrading
+集群控制面扩容中：MasterScaling
+托管集群修改参数中：RuntimeUpgrading
+节点升级中：NodeUpgrading
+集群删除中：Deleting
+集群创建中：Creating
+集群已隔离：Isolated
+集群升级暂停：Pause
+集群执行隔离：ResourceIsolate
+集群隔离：ResourceIsolated
+集群执行冲正：ResourceReverse
+集群冲正：ResourceReversal
+集群执行销毁：ResourceDestroy
+集群销毁：ResourceDestroyed
+集群变配交易中：ClusterLevelTrading
  * @method string getClusterInstanceState() 获取集群下机器实例的状态
+节点全部正常：AllNormal
+节点全部异常：
+AllAbnormal
+节点部分异常：PartialAbnormal
  * @method void setClusterInstanceState(string $ClusterInstanceState) 设置集群下机器实例的状态
+节点全部正常：AllNormal
+节点全部异常：
+AllAbnormal
+节点部分异常：PartialAbnormal
  * @method boolean getClusterBMonitor() 获取集群是否开启监控
  * @method void setClusterBMonitor(boolean $ClusterBMonitor) 设置集群是否开启监控
  * @method integer getClusterInitNodeNum() 获取集群创建中的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败
@@ -52,11 +94,32 @@ class ClusterStatus extends AbstractModel
 
     /**
      * @var string 集群状态
+运行中：Running
+集群等级中：ClusterLevelUpgrading
+集群升级中：Upgrading
+集群控制面扩容中：MasterScaling
+托管集群修改参数中：RuntimeUpgrading
+节点升级中：NodeUpgrading
+集群删除中：Deleting
+集群创建中：Creating
+集群已隔离：Isolated
+集群升级暂停：Pause
+集群执行隔离：ResourceIsolate
+集群隔离：ResourceIsolated
+集群执行冲正：ResourceReverse
+集群冲正：ResourceReversal
+集群执行销毁：ResourceDestroy
+集群销毁：ResourceDestroyed
+集群变配交易中：ClusterLevelTrading
      */
     public $ClusterState;
 
     /**
      * @var string 集群下机器实例的状态
+节点全部正常：AllNormal
+节点全部异常：
+AllAbnormal
+节点部分异常：PartialAbnormal
      */
     public $ClusterInstanceState;
 
@@ -103,7 +166,28 @@ class ClusterStatus extends AbstractModel
     /**
      * @param string $ClusterId 集群Id
      * @param string $ClusterState 集群状态
+运行中：Running
+集群等级中：ClusterLevelUpgrading
+集群升级中：Upgrading
+集群控制面扩容中：MasterScaling
+托管集群修改参数中：RuntimeUpgrading
+节点升级中：NodeUpgrading
+集群删除中：Deleting
+集群创建中：Creating
+集群已隔离：Isolated
+集群升级暂停：Pause
+集群执行隔离：ResourceIsolate
+集群隔离：ResourceIsolated
+集群执行冲正：ResourceReverse
+集群冲正：ResourceReversal
+集群执行销毁：ResourceDestroy
+集群销毁：ResourceDestroyed
+集群变配交易中：ClusterLevelTrading
      * @param string $ClusterInstanceState 集群下机器实例的状态
+节点全部正常：AllNormal
+节点全部异常：
+AllAbnormal
+节点部分异常：PartialAbnormal
      * @param boolean $ClusterBMonitor 集群是否开启监控
      * @param integer $ClusterInitNodeNum 集群创建中的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败
      * @param integer $ClusterRunningNodeNum 集群运行中的节点数，-1表示获取节点状态超时，-2表示获取节点状态失败

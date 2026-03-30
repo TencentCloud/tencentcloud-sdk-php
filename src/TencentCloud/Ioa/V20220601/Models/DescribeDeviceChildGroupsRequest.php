@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
 - PageSize 最大值5000，最好不超过100
  * @method integer getParentId() 获取父分组id，默认0：表示获取全网终端分组
  * @method void setParentId(integer $ParentId) 设置父分组id，默认0：表示获取全网终端分组
- * @method integer getOsType() 获取操作系统类型（0：win，1：linux，2：mac，4：android，5：ios；默认0：系统win）
- * @method void setOsType(integer $OsType) 设置操作系统类型（0：win，1：linux，2：mac，4：android，5：ios；默认0：系统win）
+ * @method integer getOsType() 获取系统类型（0: win，1：linux，2: mac，4：android，5：ios，-1：全系统（SaaS一体化版本） ； 不传默认为0）(只支持32位)
+ * @method void setOsType(integer $OsType) 设置系统类型（0: win，1：linux，2: mac，4：android，5：ios，-1：全系统（SaaS一体化版本） ； 不传默认为0）(只支持32位)
  */
 class DescribeDeviceChildGroupsRequest extends AbstractModel
 {
@@ -71,7 +71,7 @@ class DescribeDeviceChildGroupsRequest extends AbstractModel
     public $ParentId;
 
     /**
-     * @var integer 操作系统类型（0：win，1：linux，2：mac，4：android，5：ios；默认0：系统win）
+     * @var integer 系统类型（0: win，1：linux，2: mac，4：android，5：ios，-1：全系统（SaaS一体化版本） ； 不传默认为0）(只支持32位)
      */
     public $OsType;
 
@@ -87,7 +87,7 @@ class DescribeDeviceChildGroupsRequest extends AbstractModel
 - PageNum 从1开始，小于等于0时使用默认参数
 - PageSize 最大值5000，最好不超过100
      * @param integer $ParentId 父分组id，默认0：表示获取全网终端分组
-     * @param integer $OsType 操作系统类型（0：win，1：linux，2：mac，4：android，5：ios；默认0：系统win）
+     * @param integer $OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios，-1：全系统（SaaS一体化版本） ； 不传默认为0）(只支持32位)
      */
     function __construct()
     {

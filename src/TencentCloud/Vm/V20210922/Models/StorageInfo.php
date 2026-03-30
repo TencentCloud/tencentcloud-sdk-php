@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据存储信息
  *
- * @method string getType() 获取类型 可选：
-URL 资源链接类型
-COS 腾讯云对象存储类型
- * @method void setType(string $Type) 设置类型 可选：
-URL 资源链接类型
-COS 腾讯云对象存储类型
- * @method string getUrl() 获取资源链接
- * @method void setUrl(string $Url) 设置资源链接
- * @method BucketInfo getBucketInfo() 获取腾讯云存储桶信息
- * @method void setBucketInfo(BucketInfo $BucketInfo) 设置腾讯云存储桶信息
+ * @method string getType() 获取<p>类型 可选：<br>URL 资源链接类型<br>COS 腾讯云对象存储类型</p>
+ * @method void setType(string $Type) 设置<p>类型 可选：<br>URL 资源链接类型<br>COS 腾讯云对象存储类型</p>
+ * @method string getUrl() 获取<p>资源链接</p>
+ * @method void setUrl(string $Url) 设置<p>资源链接</p>
+ * @method BucketInfo getBucketInfo() 获取<p>腾讯云存储桶信息</p>
+ * @method void setBucketInfo(BucketInfo $BucketInfo) 设置<p>腾讯云存储桶信息</p>
+ * @method array getImageUrlList() 获取<p>大模型审核场景下，送审的图片列表</p>
+ * @method void setImageUrlList(array $ImageUrlList) 设置<p>大模型审核场景下，送审的图片列表</p>
+ * @method string getTextContent() 获取<p>大模型审核场景下，base64编码的审核要求内容</p>
+ * @method void setTextContent(string $TextContent) 设置<p>大模型审核场景下，base64编码的审核要求内容</p>
  */
 class StorageInfo extends AbstractModel
 {
     /**
-     * @var string 类型 可选：
-URL 资源链接类型
-COS 腾讯云对象存储类型
+     * @var string <p>类型 可选：<br>URL 资源链接类型<br>COS 腾讯云对象存储类型</p>
      */
     public $Type;
 
     /**
-     * @var string 资源链接
+     * @var string <p>资源链接</p>
      */
     public $Url;
 
     /**
-     * @var BucketInfo 腾讯云存储桶信息
+     * @var BucketInfo <p>腾讯云存储桶信息</p>
      */
     public $BucketInfo;
 
     /**
-     * @param string $Type 类型 可选：
-URL 资源链接类型
-COS 腾讯云对象存储类型
-     * @param string $Url 资源链接
-     * @param BucketInfo $BucketInfo 腾讯云存储桶信息
+     * @var array <p>大模型审核场景下，送审的图片列表</p>
+     */
+    public $ImageUrlList;
+
+    /**
+     * @var string <p>大模型审核场景下，base64编码的审核要求内容</p>
+     */
+    public $TextContent;
+
+    /**
+     * @param string $Type <p>类型 可选：<br>URL 资源链接类型<br>COS 腾讯云对象存储类型</p>
+     * @param string $Url <p>资源链接</p>
+     * @param BucketInfo $BucketInfo <p>腾讯云存储桶信息</p>
+     * @param array $ImageUrlList <p>大模型审核场景下，送审的图片列表</p>
+     * @param string $TextContent <p>大模型审核场景下，base64编码的审核要求内容</p>
      */
     function __construct()
     {
@@ -81,6 +89,14 @@ COS 腾讯云对象存储类型
         if (array_key_exists("BucketInfo",$param) and $param["BucketInfo"] !== null) {
             $this->BucketInfo = new BucketInfo();
             $this->BucketInfo->deserialize($param["BucketInfo"]);
+        }
+
+        if (array_key_exists("ImageUrlList",$param) and $param["ImageUrlList"] !== null) {
+            $this->ImageUrlList = $param["ImageUrlList"];
+        }
+
+        if (array_key_exists("TextContent",$param) and $param["TextContent"] !== null) {
+            $this->TextContent = $param["TextContent"];
         }
     }
 }

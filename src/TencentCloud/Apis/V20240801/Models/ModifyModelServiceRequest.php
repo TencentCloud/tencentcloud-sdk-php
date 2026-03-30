@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPluginConfigs(array $PluginConfigs) 设置插件配置
  * @method integer getTimeout() 获取超时配置，秒
  * @method void setTimeout(integer $Timeout) 设置超时配置，秒
+ * @method boolean getPromptModerateStatus() 获取是否开启提示词安全检测配置
+ * @method void setPromptModerateStatus(boolean $PromptModerateStatus) 设置是否开启提示词安全检测配置
+ * @method PromptModerateConfigDTO getPromptModerateConfig() 获取提示词安全检测配置
+ * @method void setPromptModerateConfig(PromptModerateConfigDTO $PromptModerateConfig) 设置提示词安全检测配置
  */
 class ModifyModelServiceRequest extends AbstractModel
 {
@@ -143,6 +147,16 @@ class ModifyModelServiceRequest extends AbstractModel
     public $Timeout;
 
     /**
+     * @var boolean 是否开启提示词安全检测配置
+     */
+    public $PromptModerateStatus;
+
+    /**
+     * @var PromptModerateConfigDTO 提示词安全检测配置
+     */
+    public $PromptModerateConfig;
+
+    /**
      * @param string $InstanceID 实例
      * @param string $ID 模型服务ID
      * @param string $Name 模型服务名称
@@ -160,6 +174,8 @@ class ModifyModelServiceRequest extends AbstractModel
      * @param array $IpBlackList IP黑名单
      * @param array $PluginConfigs 插件配置
      * @param integer $Timeout 超时配置，秒
+     * @param boolean $PromptModerateStatus 是否开启提示词安全检测配置
+     * @param PromptModerateConfigDTO $PromptModerateConfig 提示词安全检测配置
      */
     function __construct()
     {
@@ -253,6 +269,15 @@ class ModifyModelServiceRequest extends AbstractModel
 
         if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
             $this->Timeout = $param["Timeout"];
+        }
+
+        if (array_key_exists("PromptModerateStatus",$param) and $param["PromptModerateStatus"] !== null) {
+            $this->PromptModerateStatus = $param["PromptModerateStatus"];
+        }
+
+        if (array_key_exists("PromptModerateConfig",$param) and $param["PromptModerateConfig"] !== null) {
+            $this->PromptModerateConfig = new PromptModerateConfigDTO();
+            $this->PromptModerateConfig->deserialize($param["PromptModerateConfig"]);
         }
     }
 }

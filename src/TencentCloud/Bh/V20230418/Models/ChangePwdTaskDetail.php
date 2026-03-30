@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDevice(Device $Device) 设置资产信息
  * @method string getAccount() 获取资产账号
  * @method void setAccount(string $Account) 设置资产账号
- * @method integer getLastChangeStatus() 获取上次改密结果。0-未改密  1-改密成功 2-改密失败
- * @method void setLastChangeStatus(integer $LastChangeStatus) 设置上次改密结果。0-未改密  1-改密成功 2-改密失败
+ * @method integer getLastChangeStatus() 获取上次改密结果。0-未改密  1-改密成功 2-改密失败,3-改密中，4-改密超时
+ * @method void setLastChangeStatus(integer $LastChangeStatus) 设置上次改密结果。0-未改密  1-改密成功 2-改密失败,3-改密中，4-改密超时
+ * @method integer getTaskStatus() 获取改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时
+ * @method void setTaskStatus(integer $TaskStatus) 设置改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时
  */
 class ChangePwdTaskDetail extends AbstractModel
 {
@@ -40,14 +42,20 @@ class ChangePwdTaskDetail extends AbstractModel
     public $Account;
 
     /**
-     * @var integer 上次改密结果。0-未改密  1-改密成功 2-改密失败
+     * @var integer 上次改密结果。0-未改密  1-改密成功 2-改密失败,3-改密中，4-改密超时
      */
     public $LastChangeStatus;
 
     /**
+     * @var integer 改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时
+     */
+    public $TaskStatus;
+
+    /**
      * @param Device $Device 资产信息
      * @param string $Account 资产账号
-     * @param integer $LastChangeStatus 上次改密结果。0-未改密  1-改密成功 2-改密失败
+     * @param integer $LastChangeStatus 上次改密结果。0-未改密  1-改密成功 2-改密失败,3-改密中，4-改密超时
+     * @param integer $TaskStatus 改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时
      */
     function __construct()
     {
@@ -73,6 +81,10 @@ class ChangePwdTaskDetail extends AbstractModel
 
         if (array_key_exists("LastChangeStatus",$param) and $param["LastChangeStatus"] !== null) {
             $this->LastChangeStatus = $param["LastChangeStatus"];
+        }
+
+        if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
+            $this->TaskStatus = $param["TaskStatus"];
         }
     }
 }

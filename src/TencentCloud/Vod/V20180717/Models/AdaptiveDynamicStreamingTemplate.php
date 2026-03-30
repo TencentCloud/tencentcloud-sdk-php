@@ -20,170 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 转自适应码流模板详情
  *
- * @method integer getDefinition() 获取转自适应码流模板唯一标识。
- * @method void setDefinition(integer $Definition) 设置转自适应码流模板唯一标识。
- * @method string getType() 获取模板类型，取值范围：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
- * @method void setType(string $Type) 设置模板类型，取值范围：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
- * @method string getName() 获取转自适应码流模板名称。
- * @method void setName(string $Name) 设置转自适应码流模板名称。
- * @method string getComment() 获取转自适应码流模板描述信息。
- * @method void setComment(string $Comment) 设置转自适应码流模板描述信息。
- * @method string getFormat() 获取自适应转码格式，取值范围：
-<li>HLS。</li>
- * @method void setFormat(string $Format) 设置自适应转码格式，取值范围：
-<li>HLS。</li>
- * @method string getDrmType() 获取DRM 类型，取值范围：
-<li>SimpleAES</li>
-<li>Widevine</li>
-<li>FairPlay</li>
-如果取值为空字符串，代表不对视频做 DRM 保护。
- * @method void setDrmType(string $DrmType) 设置DRM 类型，取值范围：
-<li>SimpleAES</li>
-<li>Widevine</li>
-<li>FairPlay</li>
-如果取值为空字符串，代表不对视频做 DRM 保护。
- * @method string getDrmKeyProvider() 获取DRM 的密钥提供商，取值范围：
-<li>SDMC：华曦达；</li>
-<li>VOD：云点播。</li>
-默认值为 VOD 。
- * @method void setDrmKeyProvider(string $DrmKeyProvider) 设置DRM 的密钥提供商，取值范围：
-<li>SDMC：华曦达；</li>
-<li>VOD：云点播。</li>
-默认值为 VOD 。
- * @method array getStreamInfos() 获取自适应转码输入流参数信息，最多输入10路流。
- * @method void setStreamInfos(array $StreamInfos) 设置自适应转码输入流参数信息，最多输入10路流。
- * @method integer getDisableHigherVideoBitrate() 获取是否禁止视频低码率转高码率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
- * @method void setDisableHigherVideoBitrate(integer $DisableHigherVideoBitrate) 设置是否禁止视频低码率转高码率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
- * @method integer getDisableHigherVideoResolution() 获取是否禁止视频分辨率转高分辨率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
- * @method void setDisableHigherVideoResolution(integer $DisableHigherVideoResolution) 设置是否禁止视频分辨率转高分辨率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
- * @method string getCreateTime() 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method string getUpdateTime() 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method void setUpdateTime(string $UpdateTime) 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method string getSegmentType() 获取切片类型，仅当 Format 为 HLS 时有效。
- * @method void setSegmentType(string $SegmentType) 设置切片类型，仅当 Format 为 HLS 时有效。
+ * @method integer getDefinition() 获取<p>转自适应码流模板唯一标识。</p>
+ * @method void setDefinition(integer $Definition) 设置<p>转自适应码流模板唯一标识。</p>
+ * @method string getType() 获取<p>模板类型，取值范围：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
+ * @method void setType(string $Type) 设置<p>模板类型，取值范围：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
+ * @method string getName() 获取<p>转自适应码流模板名称。</p>
+ * @method void setName(string $Name) 设置<p>转自适应码流模板名称。</p>
+ * @method string getComment() 获取<p>转自适应码流模板描述信息。</p>
+ * @method void setComment(string $Comment) 设置<p>转自适应码流模板描述信息。</p>
+ * @method string getFormat() 获取<p>自适应转码格式，取值范围：</p><li>HLS。</li>
+ * @method void setFormat(string $Format) 设置<p>自适应转码格式，取值范围：</p><li>HLS。</li>
+ * @method string getDrmType() 获取<p>DRM 类型，取值范围：</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>如果取值为空字符串，代表不对视频做 DRM 保护。
+ * @method void setDrmType(string $DrmType) 设置<p>DRM 类型，取值范围：</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>如果取值为空字符串，代表不对视频做 DRM 保护。
+ * @method string getDrmKeyProvider() 获取<p>DRM 的密钥提供商，取值范围：</p><li>SDMC：华曦达；</li><li>VOD：云点播。</li>默认值为 VOD 。<p>华曦达服务后续逐步下线，请使用VOD DRM加密服务。</p>
+ * @method void setDrmKeyProvider(string $DrmKeyProvider) 设置<p>DRM 的密钥提供商，取值范围：</p><li>SDMC：华曦达；</li><li>VOD：云点播。</li>默认值为 VOD 。<p>华曦达服务后续逐步下线，请使用VOD DRM加密服务。</p>
+ * @method string getDrmEncryptType() 获取<p>DRM的加密类型，取值范围：{&quot;cbcs&quot;, &quot;cenc&quot;}</p>
+ * @method void setDrmEncryptType(string $DrmEncryptType) 设置<p>DRM的加密类型，取值范围：{&quot;cbcs&quot;, &quot;cenc&quot;}</p>
+ * @method array getStreamInfos() 获取<p>自适应转码输入流参数信息，最多输入10路流。</p>
+ * @method void setStreamInfos(array $StreamInfos) 设置<p>自适应转码输入流参数信息，最多输入10路流。</p>
+ * @method integer getDisableHigherVideoBitrate() 获取<p>是否禁止视频低码率转高码率，取值范围：</p><li>0：否，</li><li>1：是。</li>
+ * @method void setDisableHigherVideoBitrate(integer $DisableHigherVideoBitrate) 设置<p>是否禁止视频低码率转高码率，取值范围：</p><li>0：否，</li><li>1：是。</li>
+ * @method integer getDisableHigherVideoResolution() 获取<p>是否禁止视频分辨率转高分辨率，取值范围：</p><li>0：否，</li><li>1：是。</li>
+ * @method void setDisableHigherVideoResolution(integer $DisableHigherVideoResolution) 设置<p>是否禁止视频分辨率转高分辨率，取值范围：</p><li>0：否，</li><li>1：是。</li>
+ * @method string getCreateTime() 获取<p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method string getUpdateTime() 获取<p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method string getSegmentType() 获取<p>切片类型，仅当 Format 为 HLS 时有效。</p>
+ * @method void setSegmentType(string $SegmentType) 设置<p>切片类型，仅当 Format 为 HLS 时有效。</p>
  */
 class AdaptiveDynamicStreamingTemplate extends AbstractModel
 {
     /**
-     * @var integer 转自适应码流模板唯一标识。
+     * @var integer <p>转自适应码流模板唯一标识。</p>
      */
     public $Definition;
 
     /**
-     * @var string 模板类型，取值范围：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+     * @var string <p>模板类型，取值范围：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
      */
     public $Type;
 
     /**
-     * @var string 转自适应码流模板名称。
+     * @var string <p>转自适应码流模板名称。</p>
      */
     public $Name;
 
     /**
-     * @var string 转自适应码流模板描述信息。
+     * @var string <p>转自适应码流模板描述信息。</p>
      */
     public $Comment;
 
     /**
-     * @var string 自适应转码格式，取值范围：
-<li>HLS。</li>
+     * @var string <p>自适应转码格式，取值范围：</p><li>HLS。</li>
      */
     public $Format;
 
     /**
-     * @var string DRM 类型，取值范围：
-<li>SimpleAES</li>
-<li>Widevine</li>
-<li>FairPlay</li>
-如果取值为空字符串，代表不对视频做 DRM 保护。
+     * @var string <p>DRM 类型，取值范围：</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>如果取值为空字符串，代表不对视频做 DRM 保护。
      */
     public $DrmType;
 
     /**
-     * @var string DRM 的密钥提供商，取值范围：
-<li>SDMC：华曦达；</li>
-<li>VOD：云点播。</li>
-默认值为 VOD 。
+     * @var string <p>DRM 的密钥提供商，取值范围：</p><li>SDMC：华曦达；</li><li>VOD：云点播。</li>默认值为 VOD 。<p>华曦达服务后续逐步下线，请使用VOD DRM加密服务。</p>
      */
     public $DrmKeyProvider;
 
     /**
-     * @var array 自适应转码输入流参数信息，最多输入10路流。
+     * @var string <p>DRM的加密类型，取值范围：{&quot;cbcs&quot;, &quot;cenc&quot;}</p>
+     */
+    public $DrmEncryptType;
+
+    /**
+     * @var array <p>自适应转码输入流参数信息，最多输入10路流。</p>
      */
     public $StreamInfos;
 
     /**
-     * @var integer 是否禁止视频低码率转高码率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
+     * @var integer <p>是否禁止视频低码率转高码率，取值范围：</p><li>0：否，</li><li>1：是。</li>
      */
     public $DisableHigherVideoBitrate;
 
     /**
-     * @var integer 是否禁止视频分辨率转高分辨率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
+     * @var integer <p>是否禁止视频分辨率转高分辨率，取值范围：</p><li>0：否，</li><li>1：是。</li>
      */
     public $DisableHigherVideoResolution;
 
     /**
-     * @var string 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @var string <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @var string <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 切片类型，仅当 Format 为 HLS 时有效。
+     * @var string <p>切片类型，仅当 Format 为 HLS 时有效。</p>
      */
     public $SegmentType;
 
     /**
-     * @param integer $Definition 转自适应码流模板唯一标识。
-     * @param string $Type 模板类型，取值范围：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
-     * @param string $Name 转自适应码流模板名称。
-     * @param string $Comment 转自适应码流模板描述信息。
-     * @param string $Format 自适应转码格式，取值范围：
-<li>HLS。</li>
-     * @param string $DrmType DRM 类型，取值范围：
-<li>SimpleAES</li>
-<li>Widevine</li>
-<li>FairPlay</li>
-如果取值为空字符串，代表不对视频做 DRM 保护。
-     * @param string $DrmKeyProvider DRM 的密钥提供商，取值范围：
-<li>SDMC：华曦达；</li>
-<li>VOD：云点播。</li>
-默认值为 VOD 。
-     * @param array $StreamInfos 自适应转码输入流参数信息，最多输入10路流。
-     * @param integer $DisableHigherVideoBitrate 是否禁止视频低码率转高码率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
-     * @param integer $DisableHigherVideoResolution 是否禁止视频分辨率转高分辨率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
-     * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param string $SegmentType 切片类型，仅当 Format 为 HLS 时有效。
+     * @param integer $Definition <p>转自适应码流模板唯一标识。</p>
+     * @param string $Type <p>模板类型，取值范围：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
+     * @param string $Name <p>转自适应码流模板名称。</p>
+     * @param string $Comment <p>转自适应码流模板描述信息。</p>
+     * @param string $Format <p>自适应转码格式，取值范围：</p><li>HLS。</li>
+     * @param string $DrmType <p>DRM 类型，取值范围：</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>如果取值为空字符串，代表不对视频做 DRM 保护。
+     * @param string $DrmKeyProvider <p>DRM 的密钥提供商，取值范围：</p><li>SDMC：华曦达；</li><li>VOD：云点播。</li>默认值为 VOD 。<p>华曦达服务后续逐步下线，请使用VOD DRM加密服务。</p>
+     * @param string $DrmEncryptType <p>DRM的加密类型，取值范围：{&quot;cbcs&quot;, &quot;cenc&quot;}</p>
+     * @param array $StreamInfos <p>自适应转码输入流参数信息，最多输入10路流。</p>
+     * @param integer $DisableHigherVideoBitrate <p>是否禁止视频低码率转高码率，取值范围：</p><li>0：否，</li><li>1：是。</li>
+     * @param integer $DisableHigherVideoResolution <p>是否禁止视频分辨率转高分辨率，取值范围：</p><li>0：否，</li><li>1：是。</li>
+     * @param string $CreateTime <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param string $UpdateTime <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param string $SegmentType <p>切片类型，仅当 Format 为 HLS 时有效。</p>
      */
     function __construct()
     {
@@ -224,6 +176,10 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
 
         if (array_key_exists("DrmKeyProvider",$param) and $param["DrmKeyProvider"] !== null) {
             $this->DrmKeyProvider = $param["DrmKeyProvider"];
+        }
+
+        if (array_key_exists("DrmEncryptType",$param) and $param["DrmEncryptType"] !== null) {
+            $this->DrmEncryptType = $param["DrmEncryptType"];
         }
 
         if (array_key_exists("StreamInfos",$param) and $param["StreamInfos"] !== null) {

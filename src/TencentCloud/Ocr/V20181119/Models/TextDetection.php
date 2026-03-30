@@ -20,74 +20,78 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 文字识别结果
  *
- * @method string getDetectedText() 获取识别出的文本行内容
- * @method void setDetectedText(string $DetectedText) 设置识别出的文本行内容
- * @method integer getConfidence() 获取置信度 0 ~100
- * @method void setConfidence(integer $Confidence) 设置置信度 0 ~100
- * @method array getPolygon() 获取文本行坐标，以四个顶点坐标表示
+ * @method string getDetectedText() 获取<p>识别出的文本行内容</p>
+ * @method void setDetectedText(string $DetectedText) 设置<p>识别出的文本行内容</p>
+ * @method integer getConfidence() 获取<p>置信度 0 ~100</p>
+ * @method void setConfidence(integer $Confidence) 设置<p>置信度 0 ~100</p>
+ * @method array getPolygon() 获取<p>文本行坐标，以四个顶点坐标表示</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPolygon(array $Polygon) 设置文本行坐标，以四个顶点坐标表示
+ * @method void setPolygon(array $Polygon) 设置<p>文本行坐标，以四个顶点坐标表示</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAdvancedInfo() 获取此字段为扩展字段。
-GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
- * @method void setAdvancedInfo(string $AdvancedInfo) 设置此字段为扩展字段。
-GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
- * @method ItemCoord getItemPolygon() 获取文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
- * @method void setItemPolygon(ItemCoord $ItemPolygon) 设置文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
- * @method array getWords() 获取识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR
- * @method void setWords(array $Words) 设置识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR
- * @method array getWordCoordPoint() 获取单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR
- * @method void setWordCoordPoint(array $WordCoordPoint) 设置单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR
+ * @method string getAdvancedInfo() 获取<p>此字段为扩展字段。<br>GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。</p>
+ * @method void setAdvancedInfo(string $AdvancedInfo) 设置<p>此字段为扩展字段。<br>GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。</p>
+ * @method ItemCoord getItemPolygon() 获取<p>文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）</p>
+ * @method void setItemPolygon(ItemCoord $ItemPolygon) 设置<p>文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）</p>
+ * @method array getWords() 获取<p>识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR</p>
+ * @method void setWords(array $Words) 设置<p>识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR</p>
+ * @method array getWordCoordPoint() 获取<p>单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR</p>
+ * @method void setWordCoordPoint(array $WordCoordPoint) 设置<p>单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR</p>
+ * @method string getLanguage() 获取<p>语种信息。zh:中文; en:英文; th:泰语; id:印尼语; ja:日语; ko:韩语; es:西班牙语; fr:法语; de:德语; pt:葡萄牙语; vi:越南语; ms:马来语; ru:俄语; it:意大利语; nl:荷兰语; sv:瑞典语; fi:芬兰语; no:挪威语; hu:匈牙利语; ar:阿拉伯语; hi:印地语</p>
+ * @method void setLanguage(string $Language) 设置<p>语种信息。zh:中文; en:英文; th:泰语; id:印尼语; ja:日语; ko:韩语; es:西班牙语; fr:法语; de:德语; pt:葡萄牙语; vi:越南语; ms:马来语; ru:俄语; it:意大利语; nl:荷兰语; sv:瑞典语; fi:芬兰语; no:挪威语; hu:匈牙利语; ar:阿拉伯语; hi:印地语</p>
  */
 class TextDetection extends AbstractModel
 {
     /**
-     * @var string 识别出的文本行内容
+     * @var string <p>识别出的文本行内容</p>
      */
     public $DetectedText;
 
     /**
-     * @var integer 置信度 0 ~100
+     * @var integer <p>置信度 0 ~100</p>
      */
     public $Confidence;
 
     /**
-     * @var array 文本行坐标，以四个顶点坐标表示
+     * @var array <p>文本行坐标，以四个顶点坐标表示</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Polygon;
 
     /**
-     * @var string 此字段为扩展字段。
-GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
+     * @var string <p>此字段为扩展字段。<br>GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。</p>
      */
     public $AdvancedInfo;
 
     /**
-     * @var ItemCoord 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     * @var ItemCoord <p>文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）</p>
      */
     public $ItemPolygon;
 
     /**
-     * @var array 识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR
+     * @var array <p>识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR</p>
      */
     public $Words;
 
     /**
-     * @var array 单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR
+     * @var array <p>单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR</p>
      */
     public $WordCoordPoint;
 
     /**
-     * @param string $DetectedText 识别出的文本行内容
-     * @param integer $Confidence 置信度 0 ~100
-     * @param array $Polygon 文本行坐标，以四个顶点坐标表示
+     * @var string <p>语种信息。zh:中文; en:英文; th:泰语; id:印尼语; ja:日语; ko:韩语; es:西班牙语; fr:法语; de:德语; pt:葡萄牙语; vi:越南语; ms:马来语; ru:俄语; it:意大利语; nl:荷兰语; sv:瑞典语; fi:芬兰语; no:挪威语; hu:匈牙利语; ar:阿拉伯语; hi:印地语</p>
+     */
+    public $Language;
+
+    /**
+     * @param string $DetectedText <p>识别出的文本行内容</p>
+     * @param integer $Confidence <p>置信度 0 ~100</p>
+     * @param array $Polygon <p>文本行坐标，以四个顶点坐标表示</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AdvancedInfo 此字段为扩展字段。
-GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
-     * @param ItemCoord $ItemPolygon 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
-     * @param array $Words 识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR
-     * @param array $WordCoordPoint 单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR
+     * @param string $AdvancedInfo <p>此字段为扩展字段。<br>GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。</p>
+     * @param ItemCoord $ItemPolygon <p>文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）</p>
+     * @param array $Words <p>识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR</p>
+     * @param array $WordCoordPoint <p>单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR</p>
+     * @param string $Language <p>语种信息。zh:中文; en:英文; th:泰语; id:印尼语; ja:日语; ko:韩语; es:西班牙语; fr:法语; de:德语; pt:葡萄牙语; vi:越南语; ms:马来语; ru:俄语; it:意大利语; nl:荷兰语; sv:瑞典语; fi:芬兰语; no:挪威语; hu:匈牙利语; ar:阿拉伯语; hi:印地语</p>
      */
     function __construct()
     {
@@ -144,6 +148,10 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
                 $obj->deserialize($value);
                 array_push($this->WordCoordPoint, $obj);
             }
+        }
+
+        if (array_key_exists("Language",$param) and $param["Language"] !== null) {
+            $this->Language = $param["Language"];
         }
     }
 }

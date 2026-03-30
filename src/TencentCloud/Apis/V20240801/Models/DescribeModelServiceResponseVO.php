@@ -84,6 +84,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRelateAgentAppNum(integer $RelateAgentAppNum) 设置关联应用数
  * @method string getUrl() 获取请求路径
  * @method void setUrl(string $Url) 设置请求路径
+ * @method boolean getPromptModerateStatus() 获取是否开启提示词安全检测
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPromptModerateStatus(boolean $PromptModerateStatus) 设置是否开启提示词安全检测
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method PromptModerateConfigDTO getPromptModerateConfig() 获取提示词安全检测配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPromptModerateConfig(PromptModerateConfigDTO $PromptModerateConfig) 设置提示词安全检测配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeModelServiceResponseVO extends AbstractModel
 {
@@ -228,6 +236,18 @@ class DescribeModelServiceResponseVO extends AbstractModel
     public $Url;
 
     /**
+     * @var boolean 是否开启提示词安全检测
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PromptModerateStatus;
+
+    /**
+     * @var PromptModerateConfigDTO 提示词安全检测配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PromptModerateConfig;
+
+    /**
      * @param integer $AppID 腾讯云AppID
      * @param string $Uin 腾讯云Uin
      * @param string $InstanceID 实例ID
@@ -260,6 +280,10 @@ class DescribeModelServiceResponseVO extends AbstractModel
      * @param string $Status 状态：normal，disabled
      * @param integer $RelateAgentAppNum 关联应用数
      * @param string $Url 请求路径
+     * @param boolean $PromptModerateStatus 是否开启提示词安全检测
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PromptModerateConfigDTO $PromptModerateConfig 提示词安全检测配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -393,6 +417,15 @@ class DescribeModelServiceResponseVO extends AbstractModel
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("PromptModerateStatus",$param) and $param["PromptModerateStatus"] !== null) {
+            $this->PromptModerateStatus = $param["PromptModerateStatus"];
+        }
+
+        if (array_key_exists("PromptModerateConfig",$param) and $param["PromptModerateConfig"] !== null) {
+            $this->PromptModerateConfig = new PromptModerateConfigDTO();
+            $this->PromptModerateConfig->deserialize($param["PromptModerateConfig"]);
         }
     }
 }

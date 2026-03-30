@@ -27,6 +27,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\BalanceReadOnlyGroupResponse BalanceReadOnlyGroup(Models\BalanceReadOnlyGroupRequest $req) 本接口（BalanceReadOnlyGroup）用于根据预定义的权重平衡每个只读实例的路由权重。预定义权重可根据接口DescribeReadOnlyGroupAutoWeight查询。
  * @method Models\CloneDBResponse CloneDB(Models\CloneDBRequest $req) 本接口（CloneDB）用于克隆数据库，只支持克隆到本实例，克隆时必须指定新库名称。
  * @method Models\CloseInterCommunicationResponse CloseInterCommunication(Models\CloseInterCommunicationRequest $req) 本接口（CloseInterCommunication）用于关闭实例互通。
+ * @method Models\CloseLogResponse CloseLog(Models\CloseLogRequest $req) 关闭日志
  * @method Models\CompleteExpansionResponse CompleteExpansion(Models\CompleteExpansionRequest $req) 本接口（CompleteExpansion）在实例发起扩容后，实例状态处于“升级待切换”时，可立即完成实例升级切换操作，无需等待可维护时间窗。本接口需要在实例低峰时调用，在完全切换成功前，存在部分库不可访问的风险。
  * @method Models\CompleteMigrationResponse CompleteMigration(Models\CompleteMigrationRequest $req) 本接口（CompleteMigration）作用是完成一个迁移任务
  * @method Models\CreateAccountResponse CreateAccount(Models\CreateAccountRequest $req) 本接口（CreateAccount）用于创建实例账号
@@ -39,6 +40,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\CreateCloudReadOnlyDBInstancesResponse CreateCloudReadOnlyDBInstances(Models\CreateCloudReadOnlyDBInstancesRequest $req) 本接口（CreateCloudReadOnlyDBInstances）用于创建只读实例 (云盘)。
  * @method Models\CreateDBResponse CreateDB(Models\CreateDBRequest $req) 本接口（CreateDB）用于创建数据库。
  * @method Models\CreateDBInstancesResponse CreateDBInstances(Models\CreateDBInstancesRequest $req) 本接口（CreateDBInstances）用于创建高可用实例 (本地盘)
+ * @method Models\CreateExportTaskResponse CreateExportTask(Models\CreateExportTaskRequest $req) 创建日志下载任务
  * @method Models\CreateIncrementalMigrationResponse CreateIncrementalMigration(Models\CreateIncrementalMigrationRequest $req) 本接口（CreateIncrementalMigration）用于创建增量备份导入任务。
  * @method Models\CreateMigrationResponse CreateMigration(Models\CreateMigrationRequest $req) 本接口（CreateMigration）作用是创建一个迁移任务
  * @method Models\CreatePublishSubscribeResponse CreatePublishSubscribe(Models\CreatePublishSubscribeRequest $req) 本接口（CreatePublishSubscribe）用于创建两个数据库之间的发布订阅关系。作为订阅者，不能再充当发布者，作为发布者可以有多个订阅者实例。
@@ -49,6 +51,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\DeleteBusinessIntelligenceFileResponse DeleteBusinessIntelligenceFile(Models\DeleteBusinessIntelligenceFileRequest $req) 本接口（DeleteBusinessIntelligenceFile）用于删除商业智能文件。
  * @method Models\DeleteDBResponse DeleteDB(Models\DeleteDBRequest $req) 本接口(DeleteDB)用于删除数据库。
  * @method Models\DeleteDBInstanceResponse DeleteDBInstance(Models\DeleteDBInstanceRequest $req) 本接口（DeleteDBInstance）用于释放回收站中的SQL server实例(立即下线)。释放后的实例将保存一段时间后物理销毁。其发布订阅将自动解除，其ro副本将自动释放。
+ * @method Models\DeleteExportTaskResponse DeleteExportTask(Models\DeleteExportTaskRequest $req) 删除日志下载任务
  * @method Models\DeleteIncrementalMigrationResponse DeleteIncrementalMigration(Models\DeleteIncrementalMigrationRequest $req) 本接口（DeleteIncrementalMigration）用于删除增量备份导入任务。
  * @method Models\DeleteMigrationResponse DeleteMigration(Models\DeleteMigrationRequest $req) 本接口（DeleteMigration）用于删除迁移任务
  * @method Models\DeletePublishSubscribeResponse DeletePublishSubscribe(Models\DeletePublishSubscribeRequest $req) 本接口（DeletePublishSubscribe）用于删除两个数据库间的发布订阅关系。
@@ -81,6 +84,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\DescribeDatabaseNamesResponse DescribeDatabaseNames(Models\DescribeDatabaseNamesRequest $req) 本接口（DescribeDatabaseNames）查询账户关联的数据库名称。
  * @method Models\DescribeDatabasesResponse DescribeDatabases(Models\DescribeDatabasesRequest $req) 本接口（DescribeDatabases）用于查询数据库列表。
  * @method Models\DescribeDatabasesNormalResponse DescribeDatabasesNormal(Models\DescribeDatabasesNormalRequest $req) 本接口(DescribeDBsNormal)用于查询数据库配置信息，此接口不包含数据库的关联账号
+ * @method Models\DescribeExportTasksResponse DescribeExportTasks(Models\DescribeExportTasksRequest $req) 查询日志下载任务
  * @method Models\DescribeFlowStatusResponse DescribeFlowStatus(Models\DescribeFlowStatusRequest $req) 本接口(DescribeFlowStatus)用于查询流程状态。
  * @method Models\DescribeHASwitchLogResponse DescribeHASwitchLog(Models\DescribeHASwitchLogRequest $req) 本接口(DescribeHASwitchLog)用于手动主备切换。
  * @method Models\DescribeIncrementalMigrationResponse DescribeIncrementalMigration(Models\DescribeIncrementalMigrationRequest $req) 本接口（DescribeIncrementalMigration）用于查询增量备份导入任务。
@@ -90,6 +94,8 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\DescribeInstanceParamsResponse DescribeInstanceParams(Models\DescribeInstanceParamsRequest $req) 该接口（DescribeInstanceParams）用于查询实例的参数列表。
  * @method Models\DescribeInstanceTasksResponse DescribeInstanceTasks(Models\DescribeInstanceTasksRequest $req) 本接口（DescribeInstanceTasks）用于查询实例相关的异步任务列表。
  * @method Models\DescribeInstanceTradeParameterResponse DescribeInstanceTradeParameter(Models\DescribeInstanceTradeParameterRequest $req) 本接口（DescribeInstanceTradeParameter）用于查询实例的计费参数
+ * @method Models\DescribeLogInstanceListResponse DescribeLogInstanceList(Models\DescribeLogInstanceListRequest $req) 日志实例列表查询
+ * @method Models\DescribeLogsResponse DescribeLogs(Models\DescribeLogsRequest $req) 查询日志
  * @method Models\DescribeMaintenanceSpanResponse DescribeMaintenanceSpan(Models\DescribeMaintenanceSpanRequest $req) 本接口（DescribeMaintenanceSpan）根据实例ID查询该实例的可维护时间窗。
  * @method Models\DescribeMigrationDatabasesResponse DescribeMigrationDatabases(Models\DescribeMigrationDatabasesRequest $req) 本接口（DescribeMigrationDatabases）的作用是查询待迁移数据库列表
  * @method Models\DescribeMigrationDetailResponse DescribeMigrationDetail(Models\DescribeMigrationDetailRequest $req) 本接口（DescribeMigrationDetail）用于查询迁移任务的详细情况
@@ -147,6 +153,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\ModifyInstanceParamResponse ModifyInstanceParam(Models\ModifyInstanceParamRequest $req) 本接口(ModifyInstanceParam)用于修改云数据库实例的参数。
 <b>注意</b>：如果修改的参数是需要<b>重启实例</b>的，那么实例将会按照WaitSwitch参数的设置(可能是立即执行也可能在可维护时间窗内自动执行)在执行参数修改时<b>重启实例</b>。
 您可以通过DescribeInstanceParams接口查询修改参数时是否会重启实例，以免导致您的实例不符合预期重启。
+ * @method Models\ModifyLogResponse ModifyLog(Models\ModifyLogRequest $req) 修改日志
  * @method Models\ModifyMaintenanceSpanResponse ModifyMaintenanceSpan(Models\ModifyMaintenanceSpanRequest $req) 本接口（ModifyMaintenanceSpan）用于修改实例的可维护时间窗
  * @method Models\ModifyMigrationResponse ModifyMigration(Models\ModifyMigrationRequest $req) 本接口（ModifyMigration）可以修改已有的迁移任务信息
  * @method Models\ModifyOpenWanIpResponse ModifyOpenWanIp(Models\ModifyOpenWanIpRequest $req) 本接口(ModifyOpenWanIp)用于开通实例外网。
@@ -154,6 +161,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\ModifyPublishSubscribeNameResponse ModifyPublishSubscribeName(Models\ModifyPublishSubscribeNameRequest $req) 本接口（ModifyPublishSubscribeName）修改发布订阅的名称。
  * @method Models\ModifyReadOnlyGroupDetailsResponse ModifyReadOnlyGroupDetails(Models\ModifyReadOnlyGroupDetailsRequest $req) 本接口（ModifyReadOnlyGroupDetails）用于修改只读组详情。
  * @method Models\OpenInterCommunicationResponse OpenInterCommunication(Models\OpenInterCommunicationRequest $req) 本接口（OpenInterCommunication）用于打开实例的互通，实例互通可以实现商业智能服务相互联通。
+ * @method Models\OpenLogResponse OpenLog(Models\OpenLogRequest $req) 开启审计日志
  * @method Models\QueryMigrationCheckProcessResponse QueryMigrationCheckProcess(Models\QueryMigrationCheckProcessRequest $req) 本接口（QueryMigrationCheckProcess）的作用是查询迁移检查任务的进度，适用于迁移源的类型为TencentDB for SQLServer 的迁移方式
  * @method Models\RecycleDBInstanceResponse RecycleDBInstance(Models\RecycleDBInstanceRequest $req) 本接口（RecycleDBInstance）用于主动回收已下线的SQLSERVER实例
  * @method Models\RecycleReadOnlyGroupResponse RecycleReadOnlyGroup(Models\RecycleReadOnlyGroupRequest $req) 本接口（RecycleReadOnlyGroup）立即回收只读组的资源，只读组占用的vip等资源将立即释放且不可找回。

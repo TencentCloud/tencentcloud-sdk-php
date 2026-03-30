@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDrmKeyProviderInfo返回参数结构体
  *
- * @method SDMCDrmKeyProviderInfo getSDMCInfo() 获取华曦达（SDMC）相关的 DRM 密钥提供商信息。
- * @method void setSDMCInfo(SDMCDrmKeyProviderInfo $SDMCInfo) 设置华曦达（SDMC）相关的 DRM 密钥提供商信息。
+ * @method SDMCDrmKeyProviderInfo getSDMCInfo() 获取<p>华曦达（SDMC）相关的 DRM 密钥提供商信息。</p><p>华曦达服务后续逐步下线，请使用VOD DRM加密服务。</p>
+ * @method void setSDMCInfo(SDMCDrmKeyProviderInfo $SDMCInfo) 设置<p>华曦达（SDMC）相关的 DRM 密钥提供商信息。</p><p>华曦达服务后续逐步下线，请使用VOD DRM加密服务。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDrmKeyProviderInfoResponse extends AbstractModel
 {
     /**
-     * @var SDMCDrmKeyProviderInfo 华曦达（SDMC）相关的 DRM 密钥提供商信息。
+     * @var SDMCDrmKeyProviderInfo <p>华曦达（SDMC）相关的 DRM 密钥提供商信息。</p><p>华曦达服务后续逐步下线，请使用VOD DRM加密服务。</p>
      */
     public $SDMCInfo;
 
@@ -38,7 +38,7 @@ class DescribeDrmKeyProviderInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param SDMCDrmKeyProviderInfo $SDMCInfo 华曦达（SDMC）相关的 DRM 密钥提供商信息。
+     * @param SDMCDrmKeyProviderInfo $SDMCInfo <p>华曦达（SDMC）相关的 DRM 密钥提供商信息。</p><p>华曦达服务后续逐步下线，请使用VOD DRM加密服务。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

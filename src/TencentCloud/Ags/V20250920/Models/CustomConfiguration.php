@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 沙箱自定义配置
  *
- * @method string getImage() 获取镜像地址
- * @method void setImage(string $Image) 设置镜像地址
- * @method string getImageRegistryType() 获取镜像仓库类型：`enterprise`、`personal`。
- * @method void setImageRegistryType(string $ImageRegistryType) 设置镜像仓库类型：`enterprise`、`personal`。
- * @method array getCommand() 获取启动命令
- * @method void setCommand(array $Command) 设置启动命令
- * @method array getArgs() 获取启动参数
- * @method void setArgs(array $Args) 设置启动参数
- * @method array getEnv() 获取环境变量
- * @method void setEnv(array $Env) 设置环境变量
- * @method array getPorts() 获取端口配置
- * @method void setPorts(array $Ports) 设置端口配置
- * @method ResourceConfiguration getResources() 获取资源配置
- * @method void setResources(ResourceConfiguration $Resources) 设置资源配置
- * @method ProbeConfiguration getProbe() 获取探针配置
- * @method void setProbe(ProbeConfiguration $Probe) 设置探针配置
+ * @method string getImage() 获取<p>镜像地址</p>
+ * @method void setImage(string $Image) 设置<p>镜像地址</p>
+ * @method string getImageRegistryType() 获取<p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
+ * @method void setImageRegistryType(string $ImageRegistryType) 设置<p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
+ * @method array getCommand() 获取<p>启动命令</p>
+ * @method void setCommand(array $Command) 设置<p>启动命令</p>
+ * @method array getArgs() 获取<p>启动参数</p>
+ * @method void setArgs(array $Args) 设置<p>启动参数</p>
+ * @method array getEnv() 获取<p>环境变量</p>
+ * @method void setEnv(array $Env) 设置<p>环境变量</p>
+ * @method array getPorts() 获取<p>端口配置</p>
+ * @method void setPorts(array $Ports) 设置<p>端口配置</p>
+ * @method ResourceConfiguration getResources() 获取<p>资源配置</p>
+ * @method void setResources(ResourceConfiguration $Resources) 设置<p>资源配置</p>
+ * @method ProbeConfiguration getProbe() 获取<p>探针配置</p>
+ * @method void setProbe(ProbeConfiguration $Probe) 设置<p>探针配置</p>
+ * @method DNSConfig getDNSConfig() 获取<p>沙箱 DNS 配置</p>
+ * @method void setDNSConfig(DNSConfig $DNSConfig) 设置<p>沙箱 DNS 配置</p>
  */
 class CustomConfiguration extends AbstractModel
 {
     /**
-     * @var string 镜像地址
+     * @var string <p>镜像地址</p>
      */
     public $Image;
 
     /**
-     * @var string 镜像仓库类型：`enterprise`、`personal`。
+     * @var string <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
      */
     public $ImageRegistryType;
 
     /**
-     * @var array 启动命令
+     * @var array <p>启动命令</p>
      */
     public $Command;
 
     /**
-     * @var array 启动参数
+     * @var array <p>启动参数</p>
      */
     public $Args;
 
     /**
-     * @var array 环境变量
+     * @var array <p>环境变量</p>
      */
     public $Env;
 
     /**
-     * @var array 端口配置
+     * @var array <p>端口配置</p>
      */
     public $Ports;
 
     /**
-     * @var ResourceConfiguration 资源配置
+     * @var ResourceConfiguration <p>资源配置</p>
      */
     public $Resources;
 
     /**
-     * @var ProbeConfiguration 探针配置
+     * @var ProbeConfiguration <p>探针配置</p>
      */
     public $Probe;
 
     /**
-     * @param string $Image 镜像地址
-     * @param string $ImageRegistryType 镜像仓库类型：`enterprise`、`personal`。
-     * @param array $Command 启动命令
-     * @param array $Args 启动参数
-     * @param array $Env 环境变量
-     * @param array $Ports 端口配置
-     * @param ResourceConfiguration $Resources 资源配置
-     * @param ProbeConfiguration $Probe 探针配置
+     * @var DNSConfig <p>沙箱 DNS 配置</p>
+     */
+    public $DNSConfig;
+
+    /**
+     * @param string $Image <p>镜像地址</p>
+     * @param string $ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
+     * @param array $Command <p>启动命令</p>
+     * @param array $Args <p>启动参数</p>
+     * @param array $Env <p>环境变量</p>
+     * @param array $Ports <p>端口配置</p>
+     * @param ResourceConfiguration $Resources <p>资源配置</p>
+     * @param ProbeConfiguration $Probe <p>探针配置</p>
+     * @param DNSConfig $DNSConfig <p>沙箱 DNS 配置</p>
      */
     function __construct()
     {
@@ -144,6 +152,11 @@ class CustomConfiguration extends AbstractModel
         if (array_key_exists("Probe",$param) and $param["Probe"] !== null) {
             $this->Probe = new ProbeConfiguration();
             $this->Probe->deserialize($param["Probe"]);
+        }
+
+        if (array_key_exists("DNSConfig",$param) and $param["DNSConfig"] !== null) {
+            $this->DNSConfig = new DNSConfig();
+            $this->DNSConfig->deserialize($param["DNSConfig"]);
         }
     }
 }

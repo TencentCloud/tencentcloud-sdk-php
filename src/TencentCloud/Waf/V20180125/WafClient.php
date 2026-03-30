@@ -110,6 +110,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 查询用户所有实例的详细信息
  * @method Models\DescribeIpAccessControlResponse DescribeIpAccessControl(Models\DescribeIpAccessControlRequest $req) Waf ip黑白名单查询
  * @method Models\DescribeIpHitItemsResponse DescribeIpHitItems(Models\DescribeIpHitItemsRequest $req) Waf  IP封堵状态查询
+ * @method Models\DescribeLLMContentSecCheckResponse DescribeLLMContentSecCheck(Models\DescribeLLMContentSecCheckRequest $req) 大模型请求内容和响应内容审核接口
  * @method Models\DescribeLogHistogramResponse DescribeLogHistogram(Models\DescribeLogHistogramRequest $req) 本接口用于构建日志数量直方图
  * @method Models\DescribeModuleStatusResponse DescribeModuleStatus(Models\DescribeModuleStatusRequest $req) 查询各个waf基础安全模块的开关状态，看每个模块是否开启
  * @method Models\DescribeObjectsResponse DescribeObjects(Models\DescribeObjectsRequest $req) 查看防护对象列表
@@ -123,6 +124,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribePostCKafkaFlowsResponse DescribePostCKafkaFlows(Models\DescribePostCKafkaFlowsRequest $req) 获取CKafka投递流任务列表
  * @method Models\DescribePostCLSFlowsResponse DescribePostCLSFlows(Models\DescribePostCLSFlowsRequest $req) 获取CLS投递流任务列表
  * @method Models\DescribeProtectionModesResponse DescribeProtectionModes(Models\DescribeProtectionModesRequest $req) 查询Tiga引擎大类规则及其防护模式
+ * @method Models\DescribeQClawContentSecCheckResponse DescribeQClawContentSecCheck(Models\DescribeQClawContentSecCheckRequest $req) 大模型请求内容和响应内容审核接口
  * @method Models\DescribeRateLimitsV2Response DescribeRateLimitsV2(Models\DescribeRateLimitsV2Request $req) 查询限流规则列表接口
  * @method Models\DescribeRuleLimitResponse DescribeRuleLimit(Models\DescribeRuleLimitRequest $req) 获取各个模块具体的规格限制
  * @method Models\DescribeScanIpResponse DescribeScanIp(Models\DescribeScanIpRequest $req) 查询扫描ip

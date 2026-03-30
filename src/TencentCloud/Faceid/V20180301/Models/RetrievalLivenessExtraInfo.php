@@ -20,45 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 模版检索详细信息
  *
- * @method string getHitGroup() 获取命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库
+ * @method string getHitGroup() 获取<p>命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHitGroup(string $HitGroup) 设置命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库
+ * @method void setHitGroup(string $HitGroup) 设置<p>命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getSimilarityScore() 获取命中的相似度
+ * @method float getSimilarityScore() 获取<p>请求图像与命中攻击模板的相似度，相似度取值范围[0,2]，取值越小表示命中攻击模板的概率越高。默认阈值为0.6，当SimilarityScore≥0.6时判断为正常，SimilarityScore&lt;0.6是判断为攻击。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSimilarityScore(float $SimilarityScore) 设置命中的相似度
+ * @method void setSimilarityScore(float $SimilarityScore) 设置<p>请求图像与命中攻击模板的相似度，相似度取值范围[0,2]，取值越小表示命中攻击模板的概率越高。默认阈值为0.6，当SimilarityScore≥0.6时判断为正常，SimilarityScore&lt;0.6是判断为攻击。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHitTemplate() 获取命中的模板id
+ * @method string getHitTemplate() 获取<p>命中的模板id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHitTemplate(string $HitTemplate) 设置命中的模板id
+ * @method void setHitTemplate(string $HitTemplate) 设置<p>命中的模板id</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RetrievalLivenessExtraInfo extends AbstractModel
 {
     /**
-     * @var string 命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库
+     * @var string <p>命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HitGroup;
 
     /**
-     * @var float 命中的相似度
+     * @var float <p>请求图像与命中攻击模板的相似度，相似度取值范围[0,2]，取值越小表示命中攻击模板的概率越高。默认阈值为0.6，当SimilarityScore≥0.6时判断为正常，SimilarityScore&lt;0.6是判断为攻击。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SimilarityScore;
 
     /**
-     * @var string 命中的模板id
+     * @var string <p>命中的模板id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HitTemplate;
 
     /**
-     * @param string $HitGroup 命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库
+     * @param string $HitGroup <p>命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $SimilarityScore 命中的相似度
+     * @param float $SimilarityScore <p>请求图像与命中攻击模板的相似度，相似度取值范围[0,2]，取值越小表示命中攻击模板的概率越高。默认阈值为0.6，当SimilarityScore≥0.6时判断为正常，SimilarityScore&lt;0.6是判断为攻击。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $HitTemplate 命中的模板id
+     * @param string $HitTemplate <p>命中的模板id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -20,130 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 转自适应码流信息
  *
- * @method integer getDefinition() 获取转自适应码流规格。
- * @method void setDefinition(integer $Definition) 设置转自适应码流规格。
- * @method string getPackage() 获取打包格式，取值范围：
-<li>HLS；</li>
-<li>DASH。</li>
- * @method void setPackage(string $Package) 设置打包格式，取值范围：
-<li>HLS；</li>
-<li>DASH。</li>
- * @method string getDrmType() 获取加密类型。
- * @method void setDrmType(string $DrmType) 设置加密类型。
- * @method string getUrl() 获取播放地址。
- * @method void setUrl(string $Url) 设置播放地址。
- * @method integer getSize() 获取媒体文件大小，单位：字节。
-<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li>
-<li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li>
-<li><font color=red>注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
- * @method void setSize(integer $Size) 设置媒体文件大小，单位：字节。
-<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li>
-<li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li>
-<li><font color=red>注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
- * @method string getDigitalWatermarkType() 获取数字水印类型。可选值：
-<li>Trace 表示经过溯源水印处理；</li>
-<li>CopyRight 表示经过版权水印处理；</li>
-<li>None 表示没有经过数字水印处理。</li>
- * @method void setDigitalWatermarkType(string $DigitalWatermarkType) 设置数字水印类型。可选值：
-<li>Trace 表示经过溯源水印处理；</li>
-<li>CopyRight 表示经过版权水印处理；</li>
-<li>None 表示没有经过数字水印处理。</li>
- * @method array getSubStreamSet() 获取子流信息列表。
- * @method void setSubStreamSet(array $SubStreamSet) 设置子流信息列表。
- * @method string getCopyRightWatermarkText() 获取版权信息。
- * @method void setCopyRightWatermarkText(string $CopyRightWatermarkText) 设置版权信息。
- * @method integer getBlindWatermarkDefinition() 获取数字水印模板id。
- * @method void setBlindWatermarkDefinition(integer $BlindWatermarkDefinition) 设置数字水印模板id。
- * @method array getSubtitleSet() 获取字幕信息列表。
- * @method void setSubtitleSet(array $SubtitleSet) 设置字幕信息列表。
- * @method string getDefaultSubtitleId() 获取默认字幕的唯一标识。
- * @method void setDefaultSubtitleId(string $DefaultSubtitleId) 设置默认字幕的唯一标识。
+ * @method integer getDefinition() 获取<p>转自适应码流规格。</p>
+ * @method void setDefinition(integer $Definition) 设置<p>转自适应码流规格。</p>
+ * @method string getPackage() 获取<p>打包格式，取值范围：</p><li>HLS；</li><li>DASH。</li>
+ * @method void setPackage(string $Package) 设置<p>打包格式，取值范围：</p><li>HLS；</li><li>DASH。</li>
+ * @method string getDrmType() 获取<p>加密类型。</p>
+ * @method void setDrmType(string $DrmType) 设置<p>加密类型。</p>
+ * @method string getUrl() 获取<p>播放地址。</p>
+ * @method void setUrl(string $Url) 设置<p>播放地址。</p>
+ * @method integer getSize() 获取<p>媒体文件大小，单位：字节。</p><li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li><li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li><li><font color="red">注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
+ * @method void setSize(integer $Size) 设置<p>媒体文件大小，单位：字节。</p><li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li><li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li><li><font color="red">注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
+ * @method string getDigitalWatermarkType() 获取<p>数字水印类型。可选值：</p><li>Trace 表示经过溯源水印处理；</li><li>CopyRight 表示经过版权水印处理；</li><li>None 表示没有经过数字水印处理。</li>
+ * @method void setDigitalWatermarkType(string $DigitalWatermarkType) 设置<p>数字水印类型。可选值：</p><li>Trace 表示经过溯源水印处理；</li><li>CopyRight 表示经过版权水印处理；</li><li>None 表示没有经过数字水印处理。</li>
+ * @method array getSubStreamSet() 获取<p>子流信息列表。</p>
+ * @method void setSubStreamSet(array $SubStreamSet) 设置<p>子流信息列表。</p>
+ * @method string getCopyRightWatermarkText() 获取<p>版权信息。</p>
+ * @method void setCopyRightWatermarkText(string $CopyRightWatermarkText) 设置<p>版权信息。</p>
+ * @method integer getBlindWatermarkDefinition() 获取<p>数字水印模板id。</p>
+ * @method void setBlindWatermarkDefinition(integer $BlindWatermarkDefinition) 设置<p>数字水印模板id。</p>
+ * @method array getSubtitleSet() 获取<p>字幕信息列表。</p>
+ * @method void setSubtitleSet(array $SubtitleSet) 设置<p>字幕信息列表。</p>
+ * @method string getDefaultSubtitleId() 获取<p>默认字幕的唯一标识。</p>
+ * @method void setDefaultSubtitleId(string $DefaultSubtitleId) 设置<p>默认字幕的唯一标识。</p>
+ * @method string getDrmEncryptType() 获取<p>DRM加密方法。</p>
+ * @method void setDrmEncryptType(string $DrmEncryptType) 设置<p>DRM加密方法。</p>
  */
 class AdaptiveDynamicStreamingInfoItem extends AbstractModel
 {
     /**
-     * @var integer 转自适应码流规格。
+     * @var integer <p>转自适应码流规格。</p>
      */
     public $Definition;
 
     /**
-     * @var string 打包格式，取值范围：
-<li>HLS；</li>
-<li>DASH。</li>
+     * @var string <p>打包格式，取值范围：</p><li>HLS；</li><li>DASH。</li>
      */
     public $Package;
 
     /**
-     * @var string 加密类型。
+     * @var string <p>加密类型。</p>
      */
     public $DrmType;
 
     /**
-     * @var string 播放地址。
+     * @var string <p>播放地址。</p>
      */
     public $Url;
 
     /**
-     * @var integer 媒体文件大小，单位：字节。
-<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li>
-<li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li>
-<li><font color=red>注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
+     * @var integer <p>媒体文件大小，单位：字节。</p><li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li><li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li><li><font color="red">注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
      */
     public $Size;
 
     /**
-     * @var string 数字水印类型。可选值：
-<li>Trace 表示经过溯源水印处理；</li>
-<li>CopyRight 表示经过版权水印处理；</li>
-<li>None 表示没有经过数字水印处理。</li>
+     * @var string <p>数字水印类型。可选值：</p><li>Trace 表示经过溯源水印处理；</li><li>CopyRight 表示经过版权水印处理；</li><li>None 表示没有经过数字水印处理。</li>
      */
     public $DigitalWatermarkType;
 
     /**
-     * @var array 子流信息列表。
+     * @var array <p>子流信息列表。</p>
      */
     public $SubStreamSet;
 
     /**
-     * @var string 版权信息。
+     * @var string <p>版权信息。</p>
      */
     public $CopyRightWatermarkText;
 
     /**
-     * @var integer 数字水印模板id。
+     * @var integer <p>数字水印模板id。</p>
      */
     public $BlindWatermarkDefinition;
 
     /**
-     * @var array 字幕信息列表。
+     * @var array <p>字幕信息列表。</p>
      */
     public $SubtitleSet;
 
     /**
-     * @var string 默认字幕的唯一标识。
+     * @var string <p>默认字幕的唯一标识。</p>
      */
     public $DefaultSubtitleId;
 
     /**
-     * @param integer $Definition 转自适应码流规格。
-     * @param string $Package 打包格式，取值范围：
-<li>HLS；</li>
-<li>DASH。</li>
-     * @param string $DrmType 加密类型。
-     * @param string $Url 播放地址。
-     * @param integer $Size 媒体文件大小，单位：字节。
-<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li>
-<li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li>
-<li><font color=red>注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
-     * @param string $DigitalWatermarkType 数字水印类型。可选值：
-<li>Trace 表示经过溯源水印处理；</li>
-<li>CopyRight 表示经过版权水印处理；</li>
-<li>None 表示没有经过数字水印处理。</li>
-     * @param array $SubStreamSet 子流信息列表。
-     * @param string $CopyRightWatermarkText 版权信息。
-     * @param integer $BlindWatermarkDefinition 数字水印模板id。
-     * @param array $SubtitleSet 字幕信息列表。
-     * @param string $DefaultSubtitleId 默认字幕的唯一标识。
+     * @var string <p>DRM加密方法。</p>
+     */
+    public $DrmEncryptType;
+
+    /**
+     * @param integer $Definition <p>转自适应码流规格。</p>
+     * @param string $Package <p>打包格式，取值范围：</p><li>HLS；</li><li>DASH。</li>
+     * @param string $DrmType <p>加密类型。</p>
+     * @param string $Url <p>播放地址。</p>
+     * @param integer $Size <p>媒体文件大小，单位：字节。</p><li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li><li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li><li><font color="red">注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
+     * @param string $DigitalWatermarkType <p>数字水印类型。可选值：</p><li>Trace 表示经过溯源水印处理；</li><li>CopyRight 表示经过版权水印处理；</li><li>None 表示没有经过数字水印处理。</li>
+     * @param array $SubStreamSet <p>子流信息列表。</p>
+     * @param string $CopyRightWatermarkText <p>版权信息。</p>
+     * @param integer $BlindWatermarkDefinition <p>数字水印模板id。</p>
+     * @param array $SubtitleSet <p>字幕信息列表。</p>
+     * @param string $DefaultSubtitleId <p>默认字幕的唯一标识。</p>
+     * @param string $DrmEncryptType <p>DRM加密方法。</p>
      */
     function __construct()
     {
@@ -210,6 +186,10 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
 
         if (array_key_exists("DefaultSubtitleId",$param) and $param["DefaultSubtitleId"] !== null) {
             $this->DefaultSubtitleId = $param["DefaultSubtitleId"];
+        }
+
+        if (array_key_exists("DrmEncryptType",$param) and $param["DrmEncryptType"] !== null) {
+            $this->DrmEncryptType = $param["DrmEncryptType"];
         }
     }
 }

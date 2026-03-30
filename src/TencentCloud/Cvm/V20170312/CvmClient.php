@@ -139,6 +139,9 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 - 不支持参数`LaunchTemplateVersions`与以下参数同时指定，包括 `MaxVersion`、`MinVersion`、`Limit`、`Offset`和`DefaultVersion`。
  * @method Models\DescribeLaunchTemplatesResponse DescribeLaunchTemplates(Models\DescribeLaunchTemplatesRequest $req) 本接口（DescribeLaunchTemplates）用于查询一个或者多个实例启动模板。
  * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 本接口(DescribeRegions)用于查询地域信息。因平台策略原因，该接口暂时停止更新，为确保您正常调用，可切换至新链接：https://cloud.tencent.com/document/product/1596/77930。
+ * @method Models\DescribeResourcePoolPackInstancesResponse DescribeResourcePoolPackInstances(Models\DescribeResourcePoolPackInstancesRequest $req) 本接口(DescribeResourcePoolPackInstances)用于查询指定实例资源池内已创建的实例列表及其物理拓扑信息。
+ * @method Models\DescribeResourcePoolPackTypeConfigsResponse DescribeResourcePoolPackTypeConfigs(Models\DescribeResourcePoolPackTypeConfigsRequest $req) 本接口(DescribeResourcePoolPackTypeConfigs)用于查询当前地域/可用区支持创建实例资源池的整机/半整机规格列表。
+ * @method Models\DescribeResourcePoolPacksResponse DescribeResourcePoolPacks(Models\DescribeResourcePoolPacksRequest $req) 本接口(DescribeResourcePoolPacks)用于查询用户已创建的实例资源池列表，包括资源池基本信息、剩余容量、底层物理拓扑信息等。
  * @method Models\DescribeTaskInfoResponse DescribeTaskInfo(Models\DescribeTaskInfoRequest $req) 本接口 (DescribeTaskInfo) 用于查询云服务器维修任务列表及详细信息。
 
 - 可以根据实例ID、实例名称或任务状态等信息来查询维修任务列表。过滤信息详情可参考入参说明。
@@ -165,6 +168,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 本接口的功能是将密钥对导入到用户账户，并不会自动绑定到实例。如需绑定可以使用[AssociateInstancesKeyPairs](https://cloud.tencent.com/document/product/213/15698)接口。
 * 需指定密钥对名称以及该密钥对的公钥文本。
 * 如果用户只有私钥，可以通过 `SSL` 工具将私钥转换成公钥后再导入。
+ * @method Models\InquirePricePurchaseResourcePoolPacksResponse InquirePricePurchaseResourcePoolPacks(Models\InquirePricePurchaseResourcePoolPacksRequest $req) 本接口(InquirePricePurchaseResourcePoolPacks)用于查询创建实例资源池的价格。
  * @method Models\InquiryPriceModifyInstancesChargeTypeResponse InquiryPriceModifyInstancesChargeType(Models\InquiryPriceModifyInstancesChargeTypeRequest $req) 本接口 (InquiryPriceModifyInstancesChargeType) 用于切换实例的计费模式询价。
 
 
@@ -261,6 +265,10 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
  * @method Models\ProgramFpgaImageResponse ProgramFpgaImage(Models\ProgramFpgaImageRequest $req) 本接口(ProgramFpgaImage)用于在线烧录由客户提供的FPGA镜像文件到指定实例的指定FPGA卡上。
 * 只支持对单个实例发起在线烧录FPGA镜像的操作。
 * 支持对单个实例的多块FPGA卡同时烧录FPGA镜像，DBDFs参数为空时，默认对指定实例的所有FPGA卡进行烧录。
+ * @method Models\PurchaseResourcePoolPacksResponse PurchaseResourcePoolPacks(Models\PurchaseResourcePoolPacksRequest $req) 本接口(PurchaseResourcePoolPacks)用于创建一个或多个实例资源池，每个资源池绑定一个整机或半整机规格的物理资源容量。
+
+* 实例资源池为剩余容量按量付费模式，购买前请确保账户余额充足。
+* 本接口为异步接口，创建请求发送成功后会返回DedicatedResourcePackIds，此时创建任务并未完成。
  * @method Models\RebootInstancesResponse RebootInstances(Models\RebootInstancesRequest $req) 本接口 (RebootInstances) 用于重启实例。
 
 * 只有状态为`RUNNING`的实例才可以进行此操作。
@@ -356,6 +364,12 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 包年包月实例首次调用本接口，入参中包含ReleasePrepaidDataDisks时，包年包月数据盘同时也会被移至回收站。
 * 支持批量操作，每次请求批量实例的上限为100。
 * 批量操作时，所有实例的付费类型必须一致。
+ * @method Models\TerminateResourcePoolPacksResponse TerminateResourcePoolPacks(Models\TerminateResourcePoolPacksRequest $req) 本接口(TerminateResourcePoolPacks)用于销毁指定的实例资源池。
+
+* 销毁资源池不会销毁池内已创建的实例。
+* 池内实例会从专属资源池解绑，转移至公共资源池，继续按原生命周期运行。
+* 转移后无法再查询底层物理拓扑信息。
+* 释放底层物理资源并删除资源池记录。
  */
 
 class CvmClient extends AbstractClient

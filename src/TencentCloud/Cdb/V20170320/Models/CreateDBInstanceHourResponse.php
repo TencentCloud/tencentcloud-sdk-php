@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDBInstanceHour返回参数结构体
  *
- * @method array getDealIds() 获取短订单 ID。
- * @method void setDealIds(array $DealIds) 设置短订单 ID。
- * @method array getInstanceIds() 获取实例 ID 列表。
- * @method void setInstanceIds(array $InstanceIds) 设置实例 ID 列表。
+ * @method array getDealIds() 获取<p>短订单 ID。</p>
+ * @method void setDealIds(array $DealIds) 设置<p>短订单 ID。</p>
+ * @method array getInstanceIds() 获取<p>实例 ID 列表。</p>
+ * @method void setInstanceIds(array $InstanceIds) 设置<p>实例 ID 列表。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateDBInstanceHourResponse extends AbstractModel
 {
     /**
-     * @var array 短订单 ID。
+     * @var array <p>短订单 ID。</p>
      */
     public $DealIds;
 
     /**
-     * @var array 实例 ID 列表。
+     * @var array <p>实例 ID 列表。</p>
      */
     public $InstanceIds;
 
@@ -45,8 +45,8 @@ class CreateDBInstanceHourResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DealIds 短订单 ID。
-     * @param array $InstanceIds 实例 ID 列表。
+     * @param array $DealIds <p>短订单 ID。</p>
+     * @param array $InstanceIds <p>实例 ID 列表。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

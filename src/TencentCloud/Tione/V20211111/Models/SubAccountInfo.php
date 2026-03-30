@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLinuxGid(integer $LinuxGid) 设置子账号在Linux下的GID
  * @method string getLinuxUserName() 获取子账号在Linux下的用户名
  * @method void setLinuxUserName(string $LinuxUserName) 设置子账号在Linux下的用户名
+ * @method boolean getEnableRootLogin() 获取是否开启 root 登录
+ * @method void setEnableRootLogin(boolean $EnableRootLogin) 设置是否开启 root 登录
+ * @method string getUpdateTime() 获取更新时间
+ * @method void setUpdateTime(string $UpdateTime) 设置更新时间
  */
 class SubAccountInfo extends AbstractModel
 {
@@ -66,12 +70,24 @@ class SubAccountInfo extends AbstractModel
     public $LinuxUserName;
 
     /**
+     * @var boolean 是否开启 root 登录
+     */
+    public $EnableRootLogin;
+
+    /**
+     * @var string 更新时间
+     */
+    public $UpdateTime;
+
+    /**
      * @param string $Uin 腾讯云主账号UIN
      * @param string $SubUin 腾讯云子账号UIN
      * @param string $SubUinName 子账号名称
      * @param integer $LinuxUid 子账号在Linux下的UID
      * @param integer $LinuxGid 子账号在Linux下的GID
      * @param string $LinuxUserName 子账号在Linux下的用户名
+     * @param boolean $EnableRootLogin 是否开启 root 登录
+     * @param string $UpdateTime 更新时间
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class SubAccountInfo extends AbstractModel
 
         if (array_key_exists("LinuxUserName",$param) and $param["LinuxUserName"] !== null) {
             $this->LinuxUserName = $param["LinuxUserName"];
+        }
+
+        if (array_key_exists("EnableRootLogin",$param) and $param["EnableRootLogin"] !== null) {
+            $this->EnableRootLogin = $param["EnableRootLogin"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
 全局域名为：global
  * @method void setDomain(string $Domain) 设置具体域名如：test.qcloudwaf.com
 全局域名为：global
- * @method string getSourceType() 获取是否为批量防护IP黑白名单，当为批量防护IP黑白名单时，取值为batch，否则为空
- * @method void setSourceType(string $SourceType) 设置是否为批量防护IP黑白名单，当为批量防护IP黑白名单时，取值为batch，否则为空
+ * @method string getSourceType() 获取用于按数据来源导入黑白名单记录，必填。 custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则
+ * @method void setSourceType(string $SourceType) 设置用于按数据来源导入黑白名单记录，必填。 custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
  */
@@ -45,7 +45,7 @@ class ImportIpAccessControlRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var string 是否为批量防护IP黑白名单，当为批量防护IP黑白名单时，取值为batch，否则为空
+     * @var string 用于按数据来源导入黑白名单记录，必填。 custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则
      */
     public $SourceType;
 
@@ -58,7 +58,7 @@ class ImportIpAccessControlRequest extends AbstractModel
      * @param array $Data 导入的IP黑白名单列表
      * @param string $Domain 具体域名如：test.qcloudwaf.com
 全局域名为：global
-     * @param string $SourceType 是否为批量防护IP黑白名单，当为批量防护IP黑白名单时，取值为batch，否则为空
+     * @param string $SourceType 用于按数据来源导入黑白名单记录，必填。 custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则
      * @param string $InstanceId 实例Id
      */
     function __construct()

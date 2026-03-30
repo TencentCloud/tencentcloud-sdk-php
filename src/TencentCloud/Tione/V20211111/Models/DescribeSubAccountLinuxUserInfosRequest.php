@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSubAccountLinuxUserInfos请求参数结构体
  *
-
+ * @method integer getOffset() 获取分页偏移量（0 表示全量）
+ * @method void setOffset(integer $Offset) 设置分页偏移量（0 表示全量）
+ * @method integer getLimit() 获取每页数量（0 表示全量）
+ * @method void setLimit(integer $Limit) 设置每页数量（0 表示全量）
+ * @method array getFilters() 获取过滤条件
+ * @method void setFilters(array $Filters) 设置过滤条件
  */
 class DescribeSubAccountLinuxUserInfosRequest extends AbstractModel
 {
-
+    /**
+     * @var integer 分页偏移量（0 表示全量）
+     */
+    public $Offset;
 
     /**
+     * @var integer 每页数量（0 表示全量）
+     */
+    public $Limit;
 
+    /**
+     * @var array 过滤条件
+     */
+    public $Filters;
+
+    /**
+     * @param integer $Offset 分页偏移量（0 表示全量）
+     * @param integer $Limit 每页数量（0 表示全量）
+     * @param array $Filters 过滤条件
      */
     function __construct()
     {
@@ -42,6 +62,21 @@ class DescribeSubAccountLinuxUserInfosRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
 
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
     }
 }

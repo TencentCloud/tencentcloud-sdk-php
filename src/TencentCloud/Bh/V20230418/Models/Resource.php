@@ -136,6 +136,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeSpan(integer $TimeSpan) 设置计费时长
  * @method integer getPayMode() 获取计费模式 0后付费，1预付费
  * @method void setPayMode(integer $PayMode) 设置计费模式 0后付费，1预付费
+ * @method string getBillingRegion() 获取计费侧地域
+ * @method void setBillingRegion(string $BillingRegion) 设置计费侧地域
+ * @method string getBillingZone() 获取计费侧可用区
+ * @method void setBillingZone(string $BillingZone) 设置计费侧可用区
  */
 class Resource extends AbstractModel
 {
@@ -430,6 +434,16 @@ class Resource extends AbstractModel
     public $PayMode;
 
     /**
+     * @var string 计费侧地域
+     */
+    public $BillingRegion;
+
+    /**
+     * @var string 计费侧可用区
+     */
+    public $BillingZone;
+
+    /**
      * @param string $ResourceId 服务实例ID，如bh-saas-s3ed4r5e
      * @param string $ApCode 地域编码
      * @param string $SvArgs 服务实例规格信息
@@ -488,6 +502,8 @@ class Resource extends AbstractModel
      * @param string $TimeUnit 计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p
      * @param integer $TimeSpan 计费时长
      * @param integer $PayMode 计费模式 0后付费，1预付费
+     * @param string $BillingRegion 计费侧地域
+     * @param string $BillingZone 计费侧可用区
      */
     function __construct()
     {
@@ -737,6 +753,14 @@ class Resource extends AbstractModel
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("BillingRegion",$param) and $param["BillingRegion"] !== null) {
+            $this->BillingRegion = $param["BillingRegion"];
+        }
+
+        if (array_key_exists("BillingZone",$param) and $param["BillingZone"] !== null) {
+            $this->BillingZone = $param["BillingZone"];
         }
     }
 }

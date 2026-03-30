@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIpAccessControl请求参数结构体
  *
- * @method string getDomain() 获取域名
- * @method void setDomain(string $Domain) 设置域名
+ * @method string getDomain() 获取域名，当操作对象为全局规则时，Domain参数应填写为"global"
+ * @method void setDomain(string $Domain) 设置域名，当操作对象为全局规则时，Domain参数应填写为"global"
  * @method integer getCount() 获取计数标识
  * @method void setCount(integer $Count) 设置计数标识
  * @method integer getActionType() 获取动作，40表示查询白名单，42表示查询黑名单
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffSet(integer $OffSet) 设置分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
  * @method integer getLimit() 获取每页返回的数量，默认为20
  * @method void setLimit(integer $Limit) 设置每页返回的数量，默认为20
- * @method string getSource() 获取来源
- * @method void setSource(string $Source) 设置来源
+ * @method string getSource() 获取用于按数据来源过滤黑白名单记录，非必填（默认为空字符串，表示不过滤/查询全部）。 "" (空字符串)	，不按来源过滤，返回所有记录（默认值） custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则 batch-group（防护对象组），防护对象组维度添加的黑白名单规则
+ * @method void setSource(string $Source) 设置用于按数据来源过滤黑白名单记录，非必填（默认为空字符串，表示不过滤/查询全部）。 "" (空字符串)	，不按来源过滤，返回所有记录（默认值） custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则 batch-group（防护对象组），防护对象组维度添加的黑白名单规则
  * @method string getSort() 获取排序参数
  * @method void setSort(string $Sort) 设置排序参数
  * @method string getIp() 获取IP
@@ -58,7 +58,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeIpAccessControlRequest extends AbstractModel
 {
     /**
-     * @var string 域名
+     * @var string 域名，当操作对象为全局规则时，Domain参数应填写为"global"
      */
     public $Domain;
 
@@ -105,7 +105,7 @@ class DescribeIpAccessControlRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 来源
+     * @var string 用于按数据来源过滤黑白名单记录，非必填（默认为空字符串，表示不过滤/查询全部）。 "" (空字符串)	，不按来源过滤，返回所有记录（默认值） custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则 batch-group（防护对象组），防护对象组维度添加的黑白名单规则
      */
     public $Source;
 
@@ -145,7 +145,7 @@ class DescribeIpAccessControlRequest extends AbstractModel
     public $TimerType;
 
     /**
-     * @param string $Domain 域名
+     * @param string $Domain 域名，当操作对象为全局规则时，Domain参数应填写为"global"
      * @param integer $Count 计数标识
      * @param integer $ActionType 动作，40表示查询白名单，42表示查询黑名单
      * @param integer $VtsMin 最小有效时间的时间戳
@@ -154,7 +154,7 @@ class DescribeIpAccessControlRequest extends AbstractModel
      * @param integer $CtsMax 最大创建时间的时间戳
      * @param integer $OffSet 分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
      * @param integer $Limit 每页返回的数量，默认为20
-     * @param string $Source 来源
+     * @param string $Source 用于按数据来源过滤黑白名单记录，非必填（默认为空字符串，表示不过滤/查询全部）。 "" (空字符串)	，不按来源过滤，返回所有记录（默认值） custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则 batch-group（防护对象组），防护对象组维度添加的黑白名单规则
      * @param string $Sort 排序参数
      * @param string $Ip IP
      * @param integer $ValidStatus 生效状态，1表示生效中，2表示过期，0表示全部

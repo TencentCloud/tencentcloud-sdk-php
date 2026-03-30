@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFraudBase请求参数结构体
  *
- * @method string getDeviceToken() 获取客户端通过SDK获取的设备Token
- * @method void setDeviceToken(string $DeviceToken) 设置客户端通过SDK获取的设备Token
+ * @method string getDeviceToken() 获取<p>客户端通过SDK获取的设备Token</p>
+ * @method void setDeviceToken(string $DeviceToken) 设置<p>客户端通过SDK获取的设备Token</p>
  */
 class DescribeFraudBaseRequest extends AbstractModel
 {
     /**
-     * @var string 客户端通过SDK获取的设备Token
+     * @var string <p>客户端通过SDK获取的设备Token</p>
      */
     public $DeviceToken;
 
     /**
-     * @param string $DeviceToken 客户端通过SDK获取的设备Token
+     * @param string $DeviceToken <p>客户端通过SDK获取的设备Token</p>
      */
     function __construct()
     {

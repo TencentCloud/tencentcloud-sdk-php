@@ -25,7 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。使用此接口时，必须填写UserId。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
  * @method integer getLimit() 获取指定分页每页返回的数据条数，单页最大支持 20。
+如果没有传递， 则为默认值20。
  * @method void setLimit(integer $Limit) 设置指定分页每页返回的数据条数，单页最大支持 20。
+如果没有传递， 则为默认值20。
  * @method Agent getAgent() 获取代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
@@ -63,6 +65,7 @@ class DescribeIntegrationEmployeesRequest extends AbstractModel
 
     /**
      * @var integer 指定分页每页返回的数据条数，单页最大支持 20。
+如果没有传递， 则为默认值20。
      */
     public $Limit;
 
@@ -95,6 +98,7 @@ class DescribeIntegrationEmployeesRequest extends AbstractModel
      * @param UserInfo $Operator 执行本接口操作的员工信息。使用此接口时，必须填写UserId。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param integer $Limit 指定分页每页返回的数据条数，单页最大支持 20。
+如果没有传递， 则为默认值20。
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      * @param array $Filters 查询的关键字段，支持Key-Values查询。可选键值如下：

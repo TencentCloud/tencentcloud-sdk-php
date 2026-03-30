@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
 默认模式：default
  * @method integer getThreadCount() 获取线程数
  * @method void setThreadCount(integer $ThreadCount) 设置线程数
+ * @method integer getGraceDownTime() 获取安全停止超时时间，单位秒
+ * @method void setGraceDownTime(integer $GraceDownTime) 设置安全停止超时时间，单位秒
  */
 class StopParams extends AbstractModel
 {
@@ -41,9 +43,15 @@ class StopParams extends AbstractModel
     public $ThreadCount;
 
     /**
+     * @var integer 安全停止超时时间，单位秒
+     */
+    public $GraceDownTime;
+
+    /**
      * @param string $StopPolicy 安全模式：safe
 默认模式：default
      * @param integer $ThreadCount 线程数
+     * @param integer $GraceDownTime 安全停止超时时间，单位秒
      */
     function __construct()
     {
@@ -64,6 +72,10 @@ class StopParams extends AbstractModel
 
         if (array_key_exists("ThreadCount",$param) and $param["ThreadCount"] !== null) {
             $this->ThreadCount = $param["ThreadCount"];
+        }
+
+        if (array_key_exists("GraceDownTime",$param) and $param["GraceDownTime"] !== null) {
+            $this->GraceDownTime = $param["GraceDownTime"];
         }
     }
 }

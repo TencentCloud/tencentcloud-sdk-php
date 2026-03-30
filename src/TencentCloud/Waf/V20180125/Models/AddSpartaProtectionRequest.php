@@ -304,6 +304,7 @@ https：使用https协议回源
 
     /**
      * @var string HTTPS回源端口,仅UpstreamScheme为http时需要填当前字段
+     * @deprecated
      */
     public $HttpsUpstreamPort;
 

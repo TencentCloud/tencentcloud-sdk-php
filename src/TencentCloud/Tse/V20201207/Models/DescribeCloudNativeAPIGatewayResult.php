@@ -86,6 +86,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAvailableUpgradeVersions(array $AvailableUpgradeVersions) 设置网关可以升级的版本号列表
  * @method boolean getAvailableUpgrade() 获取是否提示可升级
  * @method void setAvailableUpgrade(boolean $AvailableUpgrade) 设置是否提示可升级
+ * @method string getAvailableRollbackVersion() 获取可回退的版本
+ * @method void setAvailableRollbackVersion(string $AvailableRollbackVersion) 设置可回退的版本
  */
 class DescribeCloudNativeAPIGatewayResult extends AbstractModel
 {
@@ -239,6 +241,11 @@ class DescribeCloudNativeAPIGatewayResult extends AbstractModel
     public $AvailableUpgrade;
 
     /**
+     * @var string 可回退的版本
+     */
+    public $AvailableRollbackVersion;
+
+    /**
      * @param string $GatewayId 云原生API网关ID。
      * @param string $Status 云原生API网关状态。
      * @param string $Name 云原生API网关名。
@@ -272,6 +279,7 @@ class DescribeCloudNativeAPIGatewayResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AvailableUpgradeVersions 网关可以升级的版本号列表
      * @param boolean $AvailableUpgrade 是否提示可升级
+     * @param string $AvailableRollbackVersion 可回退的版本
      */
     function __construct()
     {
@@ -408,6 +416,10 @@ class DescribeCloudNativeAPIGatewayResult extends AbstractModel
 
         if (array_key_exists("AvailableUpgrade",$param) and $param["AvailableUpgrade"] !== null) {
             $this->AvailableUpgrade = $param["AvailableUpgrade"];
+        }
+
+        if (array_key_exists("AvailableRollbackVersion",$param) and $param["AvailableRollbackVersion"] !== null) {
+            $this->AvailableRollbackVersion = $param["AvailableRollbackVersion"];
         }
     }
 }

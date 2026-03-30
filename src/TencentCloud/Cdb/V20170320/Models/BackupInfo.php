@@ -20,186 +20,194 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 备份详细信息
  *
- * @method string getName() 获取备份文件名
- * @method void setName(string $Name) 设置备份文件名
- * @method integer getSize() 获取备份文件大小，单位：Byte
- * @method void setSize(integer $Size) 设置备份文件大小，单位：Byte
- * @method string getDate() 获取备份快照时间，时间格式：2016-03-17 02:10:37
- * @method void setDate(string $Date) 设置备份快照时间，时间格式：2016-03-17 02:10:37
- * @method string getIntranetUrl() 获取下载地址
- * @method void setIntranetUrl(string $IntranetUrl) 设置下载地址
- * @method string getInternetUrl() 获取下载地址
- * @method void setInternetUrl(string $InternetUrl) 设置下载地址
- * @method string getType() 获取日志具体类型。可能的值有 "logical": 逻辑冷备， "physical": 物理冷备。
- * @method void setType(string $Type) 设置日志具体类型。可能的值有 "logical": 逻辑冷备， "physical": 物理冷备。
- * @method integer getBackupId() 获取备份子任务的ID，删除备份文件时使用
- * @method void setBackupId(integer $BackupId) 设置备份子任务的ID，删除备份文件时使用
- * @method string getStatus() 获取备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
- * @method void setStatus(string $Status) 设置备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
- * @method string getFinishTime() 获取备份任务的完成时间
- * @method void setFinishTime(string $FinishTime) 设置备份任务的完成时间
- * @method string getCreator() 获取（该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。
- * @method void setCreator(string $Creator) 设置（该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。
- * @method string getStartTime() 获取备份任务的开始时间
- * @method void setStartTime(string $StartTime) 设置备份任务的开始时间
- * @method string getMethod() 获取备份方法。可能的值有 "full": 全量备份， "partial": 部分备份。
- * @method void setMethod(string $Method) 设置备份方法。可能的值有 "full": 全量备份， "partial": 部分备份。
- * @method string getWay() 获取备份方式。可能的值有 "manual": 手动备份， "automatic": 自动备份。
- * @method void setWay(string $Way) 设置备份方式。可能的值有 "manual": 手动备份， "automatic": 自动备份。
- * @method string getManualBackupName() 获取手动备份别名
- * @method void setManualBackupName(string $ManualBackupName) 设置手动备份别名
- * @method string getSaveMode() 获取备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份
- * @method void setSaveMode(string $SaveMode) 设置备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份
- * @method string getRegion() 获取本地备份所在地域
- * @method void setRegion(string $Region) 设置本地备份所在地域
- * @method array getRemoteInfo() 获取异地备份详细信息
- * @method void setRemoteInfo(array $RemoteInfo) 设置异地备份详细信息
- * @method integer getCosStorageType() 获取存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
- * @method void setCosStorageType(integer $CosStorageType) 设置存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
- * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
- * @method string getEncryptionFlag() 获取备份文件是否加密， on-加密， off-未加密
- * @method void setEncryptionFlag(string $EncryptionFlag) 设置备份文件是否加密， on-加密， off-未加密
- * @method string getExecutedGTIDSet() 获取备份GTID点位
- * @method void setExecutedGTIDSet(string $ExecutedGTIDSet) 设置备份GTID点位
- * @method string getMD5() 获取备份文件MD5值
- * @method void setMD5(string $MD5) 设置备份文件MD5值
+ * @method string getName() 获取<p>备份文件名</p>
+ * @method void setName(string $Name) 设置<p>备份文件名</p>
+ * @method integer getSize() 获取<p>备份文件大小，单位：Byte</p>
+ * @method void setSize(integer $Size) 设置<p>备份文件大小，单位：Byte</p>
+ * @method string getDate() 获取<p>备份快照时间，时间格式：2016-03-17 02:10:37</p>
+ * @method void setDate(string $Date) 设置<p>备份快照时间，时间格式：2016-03-17 02:10:37</p>
+ * @method string getIntranetUrl() 获取<p>下载地址</p>
+ * @method void setIntranetUrl(string $IntranetUrl) 设置<p>下载地址</p>
+ * @method string getInternetUrl() 获取<p>下载地址</p>
+ * @method void setInternetUrl(string $InternetUrl) 设置<p>下载地址</p>
+ * @method string getType() 获取<p>日志具体类型。可能的值有 &quot;logical&quot;: 逻辑冷备， &quot;physical&quot;: 物理冷备。</p>
+ * @method void setType(string $Type) 设置<p>日志具体类型。可能的值有 &quot;logical&quot;: 逻辑冷备， &quot;physical&quot;: 物理冷备。</p>
+ * @method integer getBackupId() 获取<p>备份子任务的ID，删除备份文件时使用</p>
+ * @method void setBackupId(integer $BackupId) 设置<p>备份子任务的ID，删除备份文件时使用</p>
+ * @method string getStatus() 获取<p>备份任务状态。可能的值有 &quot;SUCCESS&quot;: 备份成功， &quot;FAILED&quot;: 备份失败， &quot;RUNNING&quot;: 备份进行中。</p>
+ * @method void setStatus(string $Status) 设置<p>备份任务状态。可能的值有 &quot;SUCCESS&quot;: 备份成功， &quot;FAILED&quot;: 备份失败， &quot;RUNNING&quot;: 备份进行中。</p>
+ * @method string getFinishTime() 获取<p>备份任务的完成时间</p>
+ * @method void setFinishTime(string $FinishTime) 设置<p>备份任务的完成时间</p>
+ * @method string getCreator() 获取<p>（该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。</p>
+ * @method void setCreator(string $Creator) 设置<p>（该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。</p>
+ * @method string getStartTime() 获取<p>备份任务的开始时间</p>
+ * @method void setStartTime(string $StartTime) 设置<p>备份任务的开始时间</p>
+ * @method string getMethod() 获取<p>备份方法。可能的值有 &quot;full&quot;: 全量备份， &quot;partial&quot;: 部分备份。</p>
+ * @method void setMethod(string $Method) 设置<p>备份方法。可能的值有 &quot;full&quot;: 全量备份， &quot;partial&quot;: 部分备份。</p>
+ * @method string getWay() 获取<p>备份方式。可能的值有 &quot;manual&quot;: 手动备份， &quot;automatic&quot;: 自动备份。</p>
+ * @method void setWay(string $Way) 设置<p>备份方式。可能的值有 &quot;manual&quot;: 手动备份， &quot;automatic&quot;: 自动备份。</p>
+ * @method string getManualBackupName() 获取<p>手动备份别名</p>
+ * @method void setManualBackupName(string $ManualBackupName) 设置<p>手动备份别名</p>
+ * @method string getSaveMode() 获取<p>备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份</p>
+ * @method void setSaveMode(string $SaveMode) 设置<p>备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份</p>
+ * @method string getRegion() 获取<p>本地备份所在地域</p>
+ * @method void setRegion(string $Region) 设置<p>本地备份所在地域</p>
+ * @method array getRemoteInfo() 获取<p>异地备份详细信息</p>
+ * @method void setRemoteInfo(array $RemoteInfo) 设置<p>异地备份详细信息</p>
+ * @method integer getCosStorageType() 获取<p>存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0</p>
+ * @method void setCosStorageType(integer $CosStorageType) 设置<p>存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0</p>
+ * @method string getInstanceId() 获取<p>实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。</p>
+ * @method integer getProgress() 获取<p>备份完成进度</p>
+ * @method void setProgress(integer $Progress) 设置<p>备份完成进度</p>
+ * @method string getEncryptionFlag() 获取<p>备份文件是否加密， on-加密， off-未加密</p>
+ * @method void setEncryptionFlag(string $EncryptionFlag) 设置<p>备份文件是否加密， on-加密， off-未加密</p>
+ * @method string getExecutedGTIDSet() 获取<p>备份GTID点位</p>
+ * @method void setExecutedGTIDSet(string $ExecutedGTIDSet) 设置<p>备份GTID点位</p>
+ * @method string getMD5() 获取<p>备份文件MD5值</p>
+ * @method void setMD5(string $MD5) 设置<p>备份文件MD5值</p>
  */
 class BackupInfo extends AbstractModel
 {
     /**
-     * @var string 备份文件名
+     * @var string <p>备份文件名</p>
      */
     public $Name;
 
     /**
-     * @var integer 备份文件大小，单位：Byte
+     * @var integer <p>备份文件大小，单位：Byte</p>
      */
     public $Size;
 
     /**
-     * @var string 备份快照时间，时间格式：2016-03-17 02:10:37
+     * @var string <p>备份快照时间，时间格式：2016-03-17 02:10:37</p>
      */
     public $Date;
 
     /**
-     * @var string 下载地址
+     * @var string <p>下载地址</p>
      */
     public $IntranetUrl;
 
     /**
-     * @var string 下载地址
+     * @var string <p>下载地址</p>
      */
     public $InternetUrl;
 
     /**
-     * @var string 日志具体类型。可能的值有 "logical": 逻辑冷备， "physical": 物理冷备。
+     * @var string <p>日志具体类型。可能的值有 &quot;logical&quot;: 逻辑冷备， &quot;physical&quot;: 物理冷备。</p>
      */
     public $Type;
 
     /**
-     * @var integer 备份子任务的ID，删除备份文件时使用
+     * @var integer <p>备份子任务的ID，删除备份文件时使用</p>
      */
     public $BackupId;
 
     /**
-     * @var string 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
+     * @var string <p>备份任务状态。可能的值有 &quot;SUCCESS&quot;: 备份成功， &quot;FAILED&quot;: 备份失败， &quot;RUNNING&quot;: 备份进行中。</p>
      */
     public $Status;
 
     /**
-     * @var string 备份任务的完成时间
+     * @var string <p>备份任务的完成时间</p>
      */
     public $FinishTime;
 
     /**
-     * @var string （该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。
+     * @var string <p>（该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。</p>
      */
     public $Creator;
 
     /**
-     * @var string 备份任务的开始时间
+     * @var string <p>备份任务的开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var string 备份方法。可能的值有 "full": 全量备份， "partial": 部分备份。
+     * @var string <p>备份方法。可能的值有 &quot;full&quot;: 全量备份， &quot;partial&quot;: 部分备份。</p>
      */
     public $Method;
 
     /**
-     * @var string 备份方式。可能的值有 "manual": 手动备份， "automatic": 自动备份。
+     * @var string <p>备份方式。可能的值有 &quot;manual&quot;: 手动备份， &quot;automatic&quot;: 自动备份。</p>
      */
     public $Way;
 
     /**
-     * @var string 手动备份别名
+     * @var string <p>手动备份别名</p>
      */
     public $ManualBackupName;
 
     /**
-     * @var string 备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份
+     * @var string <p>备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份</p>
      */
     public $SaveMode;
 
     /**
-     * @var string 本地备份所在地域
+     * @var string <p>本地备份所在地域</p>
      */
     public $Region;
 
     /**
-     * @var array 异地备份详细信息
+     * @var array <p>异地备份详细信息</p>
      */
     public $RemoteInfo;
 
     /**
-     * @var integer 存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
+     * @var integer <p>存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0</p>
      */
     public $CosStorageType;
 
     /**
-     * @var string 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     * @var string <p>实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 备份文件是否加密， on-加密， off-未加密
+     * @var integer <p>备份完成进度</p>
+     */
+    public $Progress;
+
+    /**
+     * @var string <p>备份文件是否加密， on-加密， off-未加密</p>
      */
     public $EncryptionFlag;
 
     /**
-     * @var string 备份GTID点位
+     * @var string <p>备份GTID点位</p>
      */
     public $ExecutedGTIDSet;
 
     /**
-     * @var string 备份文件MD5值
+     * @var string <p>备份文件MD5值</p>
      */
     public $MD5;
 
     /**
-     * @param string $Name 备份文件名
-     * @param integer $Size 备份文件大小，单位：Byte
-     * @param string $Date 备份快照时间，时间格式：2016-03-17 02:10:37
-     * @param string $IntranetUrl 下载地址
-     * @param string $InternetUrl 下载地址
-     * @param string $Type 日志具体类型。可能的值有 "logical": 逻辑冷备， "physical": 物理冷备。
-     * @param integer $BackupId 备份子任务的ID，删除备份文件时使用
-     * @param string $Status 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
-     * @param string $FinishTime 备份任务的完成时间
-     * @param string $Creator （该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。
-     * @param string $StartTime 备份任务的开始时间
-     * @param string $Method 备份方法。可能的值有 "full": 全量备份， "partial": 部分备份。
-     * @param string $Way 备份方式。可能的值有 "manual": 手动备份， "automatic": 自动备份。
-     * @param string $ManualBackupName 手动备份别名
-     * @param string $SaveMode 备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份
-     * @param string $Region 本地备份所在地域
-     * @param array $RemoteInfo 异地备份详细信息
-     * @param integer $CosStorageType 存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
-     * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
-     * @param string $EncryptionFlag 备份文件是否加密， on-加密， off-未加密
-     * @param string $ExecutedGTIDSet 备份GTID点位
-     * @param string $MD5 备份文件MD5值
+     * @param string $Name <p>备份文件名</p>
+     * @param integer $Size <p>备份文件大小，单位：Byte</p>
+     * @param string $Date <p>备份快照时间，时间格式：2016-03-17 02:10:37</p>
+     * @param string $IntranetUrl <p>下载地址</p>
+     * @param string $InternetUrl <p>下载地址</p>
+     * @param string $Type <p>日志具体类型。可能的值有 &quot;logical&quot;: 逻辑冷备， &quot;physical&quot;: 物理冷备。</p>
+     * @param integer $BackupId <p>备份子任务的ID，删除备份文件时使用</p>
+     * @param string $Status <p>备份任务状态。可能的值有 &quot;SUCCESS&quot;: 备份成功， &quot;FAILED&quot;: 备份失败， &quot;RUNNING&quot;: 备份进行中。</p>
+     * @param string $FinishTime <p>备份任务的完成时间</p>
+     * @param string $Creator <p>（该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。</p>
+     * @param string $StartTime <p>备份任务的开始时间</p>
+     * @param string $Method <p>备份方法。可能的值有 &quot;full&quot;: 全量备份， &quot;partial&quot;: 部分备份。</p>
+     * @param string $Way <p>备份方式。可能的值有 &quot;manual&quot;: 手动备份， &quot;automatic&quot;: 自动备份。</p>
+     * @param string $ManualBackupName <p>手动备份别名</p>
+     * @param string $SaveMode <p>备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份</p>
+     * @param string $Region <p>本地备份所在地域</p>
+     * @param array $RemoteInfo <p>异地备份详细信息</p>
+     * @param integer $CosStorageType <p>存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0</p>
+     * @param string $InstanceId <p>实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。</p>
+     * @param integer $Progress <p>备份完成进度</p>
+     * @param string $EncryptionFlag <p>备份文件是否加密， on-加密， off-未加密</p>
+     * @param string $ExecutedGTIDSet <p>备份GTID点位</p>
+     * @param string $MD5 <p>备份文件MD5值</p>
      */
     function __construct()
     {
@@ -293,6 +301,10 @@ class BackupInfo extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
+            $this->Progress = $param["Progress"];
         }
 
         if (array_key_exists("EncryptionFlag",$param) and $param["EncryptionFlag"] !== null) {

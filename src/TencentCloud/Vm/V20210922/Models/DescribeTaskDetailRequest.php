@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskDetail请求参数结构体
  *
- * @method string getTaskId() 获取任务ID，创建任务后返回的TaskId字段
- * @method void setTaskId(string $TaskId) 设置任务ID，创建任务后返回的TaskId字段
- * @method boolean getShowAllSegments() 获取是否展示所有分片，默认只展示命中规则的分片
- * @method void setShowAllSegments(boolean $ShowAllSegments) 设置是否展示所有分片，默认只展示命中规则的分片
+ * @method string getTaskId() 获取<p>任务ID，创建任务后返回的TaskId字段</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务ID，创建任务后返回的TaskId字段</p>
+ * @method boolean getShowAllSegments() 获取<p>是否展示所有分片，默认只展示命中规则的分片</p>
+ * @method void setShowAllSegments(boolean $ShowAllSegments) 设置<p>是否展示所有分片，默认只展示命中规则的分片</p>
  */
 class DescribeTaskDetailRequest extends AbstractModel
 {
     /**
-     * @var string 任务ID，创建任务后返回的TaskId字段
+     * @var string <p>任务ID，创建任务后返回的TaskId字段</p>
      */
     public $TaskId;
 
     /**
-     * @var boolean 是否展示所有分片，默认只展示命中规则的分片
+     * @var boolean <p>是否展示所有分片，默认只展示命中规则的分片</p>
      */
     public $ShowAllSegments;
 
     /**
-     * @param string $TaskId 任务ID，创建任务后返回的TaskId字段
-     * @param boolean $ShowAllSegments 是否展示所有分片，默认只展示命中规则的分片
+     * @param string $TaskId <p>任务ID，创建任务后返回的TaskId字段</p>
+     * @param boolean $ShowAllSegments <p>是否展示所有分片，默认只展示命中规则的分片</p>
      */
     function __construct()
     {

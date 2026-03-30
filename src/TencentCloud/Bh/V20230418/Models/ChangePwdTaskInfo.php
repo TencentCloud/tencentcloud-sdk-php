@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNextTime(string $NextTime) 设置下次执行时间
  * @method string getLastTime() 获取上次执行时间
  * @method void setLastTime(string $LastTime) 设置上次执行时间
+ * @method integer getStatus() 获取改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时
+ * @method void setStatus(integer $Status) 设置改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时
  */
 class ChangePwdTaskInfo extends AbstractModel
 {
@@ -178,6 +180,11 @@ class ChangePwdTaskInfo extends AbstractModel
     public $LastTime;
 
     /**
+     * @var integer 改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时
+     */
+    public $Status;
+
+    /**
      * @param integer $Id id
      * @param string $OperationId 任务id
      * @param string $TaskName 任务名
@@ -200,6 +207,7 @@ class ChangePwdTaskInfo extends AbstractModel
      * @param string $FirstTime 首次执行时间
      * @param string $NextTime 下次执行时间
      * @param string $LastTime 上次执行时间
+     * @param integer $Status 改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时
      */
     function __construct()
     {
@@ -306,6 +314,10 @@ class ChangePwdTaskInfo extends AbstractModel
 
         if (array_key_exists("LastTime",$param) and $param["LastTime"] !== null) {
             $this->LastTime = $param["LastTime"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

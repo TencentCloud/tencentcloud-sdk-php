@@ -20,146 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 信息区证件内容
  *
- * @method string getType() 获取证件类型（护照信息页识别结果）
- * @method void setType(string $Type) 设置证件类型（护照信息页识别结果）
- * @method string getIssuingCountry() 获取发行国家（护照信息页识别结果）
- * @method void setIssuingCountry(string $IssuingCountry) 设置发行国家（护照信息页识别结果）
- * @method string getPassportID() 获取护照号码（护照信息页识别结果）
- * @method void setPassportID(string $PassportID) 设置护照号码（护照信息页识别结果）
- * @method string getSurname() 获取姓（护照信息页识别结果）
- * @method void setSurname(string $Surname) 设置姓（护照信息页识别结果）
- * @method string getGivenName() 获取名（护照信息页识别结果）
- * @method void setGivenName(string $GivenName) 设置名（护照信息页识别结果）
- * @method string getName() 获取姓名（护照信息页识别结果）
- * @method void setName(string $Name) 设置姓名（护照信息页识别结果）
- * @method string getNationality() 获取国籍信息（护照信息页识别结果）
- * @method void setNationality(string $Nationality) 设置国籍信息（护照信息页识别结果）
- * @method string getDateOfBirth() 获取出生日期（护照信息页识别结果）
- * @method void setDateOfBirth(string $DateOfBirth) 设置出生日期（护照信息页识别结果）
- * @method string getSex() 获取性别（护照信息页识别结果）
- * @method void setSex(string $Sex) 设置性别（护照信息页识别结果）
- * @method string getDateOfIssuance() 获取发行日期（护照信息页识别结果）
- * @method void setDateOfIssuance(string $DateOfIssuance) 设置发行日期（护照信息页识别结果）
- * @method string getDateOfExpiration() 获取截止日期（护照信息页识别结果）
- * @method void setDateOfExpiration(string $DateOfExpiration) 设置截止日期（护照信息页识别结果）
- * @method string getSignature() 获取持证人签名（护照信息页识别结果）
-
-仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
- * @method void setSignature(string $Signature) 设置持证人签名（护照信息页识别结果）
-
-仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
- * @method string getIssuePlace() 获取签发地点（护照信息页识别结果）
-
-仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
- * @method void setIssuePlace(string $IssuePlace) 设置签发地点（护照信息页识别结果）
-
-仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
- * @method string getIssuingAuthority() 获取签发机关（护照信息页识别结果）
-
-仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
- * @method void setIssuingAuthority(string $IssuingAuthority) 设置签发机关（护照信息页识别结果）
-
-仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+ * @method string getType() 获取<p>证件类型（护照信息页识别结果）</p>
+ * @method void setType(string $Type) 设置<p>证件类型（护照信息页识别结果）</p>
+ * @method string getIssuingCountry() 获取<p>发行国家（护照信息页识别结果）</p>
+ * @method void setIssuingCountry(string $IssuingCountry) 设置<p>发行国家（护照信息页识别结果）</p>
+ * @method string getPassportID() 获取<p>护照号码（护照信息页识别结果）</p>
+ * @method void setPassportID(string $PassportID) 设置<p>护照号码（护照信息页识别结果）</p>
+ * @method string getSurname() 获取<p>姓（护照信息页识别结果）</p>
+ * @method void setSurname(string $Surname) 设置<p>姓（护照信息页识别结果）</p>
+ * @method string getGivenName() 获取<p>名（护照信息页识别结果）</p>
+ * @method void setGivenName(string $GivenName) 设置<p>名（护照信息页识别结果）</p>
+ * @method string getName() 获取<p>姓名（护照信息页识别结果）</p>
+ * @method void setName(string $Name) 设置<p>姓名（护照信息页识别结果）</p>
+ * @method string getNationality() 获取<p>国籍信息（护照信息页识别结果）</p>
+ * @method void setNationality(string $Nationality) 设置<p>国籍信息（护照信息页识别结果）</p>
+ * @method string getDateOfBirth() 获取<p>出生日期（护照信息页识别结果）</p>
+ * @method void setDateOfBirth(string $DateOfBirth) 设置<p>出生日期（护照信息页识别结果）</p>
+ * @method string getSex() 获取<p>性别（护照信息页识别结果）</p>
+ * @method void setSex(string $Sex) 设置<p>性别（护照信息页识别结果）</p>
+ * @method string getDateOfIssuance() 获取<p>发行日期（护照信息页识别结果）</p>
+ * @method void setDateOfIssuance(string $DateOfIssuance) 设置<p>发行日期（护照信息页识别结果）</p>
+ * @method string getDateOfExpiration() 获取<p>截止日期（护照信息页识别结果）</p>
+ * @method void setDateOfExpiration(string $DateOfExpiration) 设置<p>截止日期（护照信息页识别结果）</p>
+ * @method string getSignature() 获取<p>持证人签名（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p>
+ * @method void setSignature(string $Signature) 设置<p>持证人签名（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p>
+ * @method string getIssuePlace() 获取<p>签发地点（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p>
+ * @method void setIssuePlace(string $IssuePlace) 设置<p>签发地点（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p>
+ * @method string getIssuingAuthority() 获取<p>签发机关（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p>
+ * @method void setIssuingAuthority(string $IssuingAuthority) 设置<p>签发机关（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p>
+ * @method string getBirthPlace() 获取<p>出生地（护照信息页识别结果）</p>
+ * @method void setBirthPlace(string $BirthPlace) 设置<p>出生地（护照信息页识别结果）</p>
  */
 class PassportRecognizeInfos extends AbstractModel
 {
     /**
-     * @var string 证件类型（护照信息页识别结果）
+     * @var string <p>证件类型（护照信息页识别结果）</p>
      */
     public $Type;
 
     /**
-     * @var string 发行国家（护照信息页识别结果）
+     * @var string <p>发行国家（护照信息页识别结果）</p>
      */
     public $IssuingCountry;
 
     /**
-     * @var string 护照号码（护照信息页识别结果）
+     * @var string <p>护照号码（护照信息页识别结果）</p>
      */
     public $PassportID;
 
     /**
-     * @var string 姓（护照信息页识别结果）
+     * @var string <p>姓（护照信息页识别结果）</p>
      */
     public $Surname;
 
     /**
-     * @var string 名（护照信息页识别结果）
+     * @var string <p>名（护照信息页识别结果）</p>
      */
     public $GivenName;
 
     /**
-     * @var string 姓名（护照信息页识别结果）
+     * @var string <p>姓名（护照信息页识别结果）</p>
      */
     public $Name;
 
     /**
-     * @var string 国籍信息（护照信息页识别结果）
+     * @var string <p>国籍信息（护照信息页识别结果）</p>
      */
     public $Nationality;
 
     /**
-     * @var string 出生日期（护照信息页识别结果）
+     * @var string <p>出生日期（护照信息页识别结果）</p>
      */
     public $DateOfBirth;
 
     /**
-     * @var string 性别（护照信息页识别结果）
+     * @var string <p>性别（护照信息页识别结果）</p>
      */
     public $Sex;
 
     /**
-     * @var string 发行日期（护照信息页识别结果）
+     * @var string <p>发行日期（护照信息页识别结果）</p>
      */
     public $DateOfIssuance;
 
     /**
-     * @var string 截止日期（护照信息页识别结果）
+     * @var string <p>截止日期（护照信息页识别结果）</p>
      */
     public $DateOfExpiration;
 
     /**
-     * @var string 持证人签名（护照信息页识别结果）
-
-仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+     * @var string <p>持证人签名（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p>
      */
     public $Signature;
 
     /**
-     * @var string 签发地点（护照信息页识别结果）
-
-仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+     * @var string <p>签发地点（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p>
      */
     public $IssuePlace;
 
     /**
-     * @var string 签发机关（护照信息页识别结果）
-
-仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+     * @var string <p>签发机关（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p>
      */
     public $IssuingAuthority;
 
     /**
-     * @param string $Type 证件类型（护照信息页识别结果）
-     * @param string $IssuingCountry 发行国家（护照信息页识别结果）
-     * @param string $PassportID 护照号码（护照信息页识别结果）
-     * @param string $Surname 姓（护照信息页识别结果）
-     * @param string $GivenName 名（护照信息页识别结果）
-     * @param string $Name 姓名（护照信息页识别结果）
-     * @param string $Nationality 国籍信息（护照信息页识别结果）
-     * @param string $DateOfBirth 出生日期（护照信息页识别结果）
-     * @param string $Sex 性别（护照信息页识别结果）
-     * @param string $DateOfIssuance 发行日期（护照信息页识别结果）
-     * @param string $DateOfExpiration 截止日期（护照信息页识别结果）
-     * @param string $Signature 持证人签名（护照信息页识别结果）
+     * @var string <p>出生地（护照信息页识别结果）</p>
+     */
+    public $BirthPlace;
 
-仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
-     * @param string $IssuePlace 签发地点（护照信息页识别结果）
-
-仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
-     * @param string $IssuingAuthority 签发机关（护照信息页识别结果）
-
-仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+    /**
+     * @param string $Type <p>证件类型（护照信息页识别结果）</p>
+     * @param string $IssuingCountry <p>发行国家（护照信息页识别结果）</p>
+     * @param string $PassportID <p>护照号码（护照信息页识别结果）</p>
+     * @param string $Surname <p>姓（护照信息页识别结果）</p>
+     * @param string $GivenName <p>名（护照信息页识别结果）</p>
+     * @param string $Name <p>姓名（护照信息页识别结果）</p>
+     * @param string $Nationality <p>国籍信息（护照信息页识别结果）</p>
+     * @param string $DateOfBirth <p>出生日期（护照信息页识别结果）</p>
+     * @param string $Sex <p>性别（护照信息页识别结果）</p>
+     * @param string $DateOfIssuance <p>发行日期（护照信息页识别结果）</p>
+     * @param string $DateOfExpiration <p>截止日期（护照信息页识别结果）</p>
+     * @param string $Signature <p>持证人签名（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p>
+     * @param string $IssuePlace <p>签发地点（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p>
+     * @param string $IssuingAuthority <p>签发机关（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p>
+     * @param string $BirthPlace <p>出生地（护照信息页识别结果）</p>
      */
     function __construct()
     {
@@ -228,6 +212,10 @@ class PassportRecognizeInfos extends AbstractModel
 
         if (array_key_exists("IssuingAuthority",$param) and $param["IssuingAuthority"] !== null) {
             $this->IssuingAuthority = $param["IssuingAuthority"];
+        }
+
+        if (array_key_exists("BirthPlace",$param) and $param["BirthPlace"] !== null) {
+            $this->BirthPlace = $param["BirthPlace"];
         }
     }
 }

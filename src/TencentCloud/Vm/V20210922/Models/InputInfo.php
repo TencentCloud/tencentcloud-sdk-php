@@ -20,38 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 输入信息详情
  *
- * @method string getType() 获取传入的类型可选：URL，COS
- * @method void setType(string $Type) 设置传入的类型可选：URL，COS
- * @method string getUrl() 获取Url地址
- * @method void setUrl(string $Url) 设置Url地址
- * @method string getBucketInfo() 获取桶信息。当输入当时COS时，该字段不为空
+ * @method string getType() 获取<p>传入的类型可选：URL，COS</p>
+ * @method void setType(string $Type) 设置<p>传入的类型可选：URL，COS</p>
+ * @method string getUrl() 获取<p>Url地址</p>
+ * @method void setUrl(string $Url) 设置<p>Url地址</p>
+ * @method string getBucketInfo() 获取<p>桶信息。当输入当时COS时，该字段不为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBucketInfo(string $BucketInfo) 设置桶信息。当输入当时COS时，该字段不为空
+ * @method void setBucketInfo(string $BucketInfo) 设置<p>桶信息。当输入当时COS时，该字段不为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getImageUrlList() 获取<p>大模型审核可选输入图片列表</p>
+ * @method void setImageUrlList(array $ImageUrlList) 设置<p>大模型审核可选输入图片列表</p>
+ * @method string getTextContent() 获取<p>大模型审核场景下，base64编码的审核要求内容</p>
+ * @method void setTextContent(string $TextContent) 设置<p>大模型审核场景下，base64编码的审核要求内容</p>
  */
 class InputInfo extends AbstractModel
 {
     /**
-     * @var string 传入的类型可选：URL，COS
+     * @var string <p>传入的类型可选：URL，COS</p>
      */
     public $Type;
 
     /**
-     * @var string Url地址
+     * @var string <p>Url地址</p>
      */
     public $Url;
 
     /**
-     * @var string 桶信息。当输入当时COS时，该字段不为空
+     * @var string <p>桶信息。当输入当时COS时，该字段不为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BucketInfo;
 
     /**
-     * @param string $Type 传入的类型可选：URL，COS
-     * @param string $Url Url地址
-     * @param string $BucketInfo 桶信息。当输入当时COS时，该字段不为空
+     * @var array <p>大模型审核可选输入图片列表</p>
+     */
+    public $ImageUrlList;
+
+    /**
+     * @var string <p>大模型审核场景下，base64编码的审核要求内容</p>
+     */
+    public $TextContent;
+
+    /**
+     * @param string $Type <p>传入的类型可选：URL，COS</p>
+     * @param string $Url <p>Url地址</p>
+     * @param string $BucketInfo <p>桶信息。当输入当时COS时，该字段不为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ImageUrlList <p>大模型审核可选输入图片列表</p>
+     * @param string $TextContent <p>大模型审核场景下，base64编码的审核要求内容</p>
      */
     function __construct()
     {
@@ -76,6 +92,14 @@ class InputInfo extends AbstractModel
 
         if (array_key_exists("BucketInfo",$param) and $param["BucketInfo"] !== null) {
             $this->BucketInfo = $param["BucketInfo"];
+        }
+
+        if (array_key_exists("ImageUrlList",$param) and $param["ImageUrlList"] !== null) {
+            $this->ImageUrlList = $param["ImageUrlList"];
+        }
+
+        if (array_key_exists("TextContent",$param) and $param["TextContent"] !== null) {
+            $this->TextContent = $param["TextContent"];
         }
     }
 }

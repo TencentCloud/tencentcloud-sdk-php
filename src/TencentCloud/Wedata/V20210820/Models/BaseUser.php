@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEmail(string $Email) 设置邮箱
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUserTag() 获取0: 普通用户 1: entraId用户
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserTag(integer $UserTag) 设置0: 普通用户 1: entraId用户
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BaseUser extends AbstractModel
 {
@@ -74,6 +78,12 @@ class BaseUser extends AbstractModel
     public $Email;
 
     /**
+     * @var integer 0: 普通用户 1: entraId用户
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserTag;
+
+    /**
      * @param string $UserId 有云的UIN，全局唯一
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserName 用户全局唯一标识
@@ -83,6 +93,8 @@ class BaseUser extends AbstractModel
      * @param string $PhoneNum 电话号码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Email 邮箱
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UserTag 0: 普通用户 1: entraId用户
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -116,6 +128,10 @@ class BaseUser extends AbstractModel
 
         if (array_key_exists("Email",$param) and $param["Email"] !== null) {
             $this->Email = $param["Email"];
+        }
+
+        if (array_key_exists("UserTag",$param) and $param["UserTag"] !== null) {
+            $this->UserTag = $param["UserTag"];
         }
     }
 }

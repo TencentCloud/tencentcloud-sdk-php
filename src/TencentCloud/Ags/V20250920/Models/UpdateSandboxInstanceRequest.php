@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateSandboxInstance请求参数结构体
  *
- * @method string getInstanceId() 获取沙箱实例ID
- * @method void setInstanceId(string $InstanceId) 设置沙箱实例ID
- * @method string getTimeout() 获取新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置
- * @method void setTimeout(string $Timeout) 设置新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置
+ * @method string getInstanceId() 获取<p>沙箱实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>沙箱实例ID</p>
+ * @method string getTimeout() 获取<p>新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置</p>
+ * @method void setTimeout(string $Timeout) 设置<p>新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置</p>
+ * @method array getMetadata() 获取<p>沙箱实例元数据</p>
+ * @method void setMetadata(array $Metadata) 设置<p>沙箱实例元数据</p>
  */
 class UpdateSandboxInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 沙箱实例ID
+     * @var string <p>沙箱实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置
+     * @var string <p>新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置</p>
      */
     public $Timeout;
 
     /**
-     * @param string $InstanceId 沙箱实例ID
-     * @param string $Timeout 新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置
+     * @var array <p>沙箱实例元数据</p>
+     */
+    public $Metadata;
+
+    /**
+     * @param string $InstanceId <p>沙箱实例ID</p>
+     * @param string $Timeout <p>新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置</p>
+     * @param array $Metadata <p>沙箱实例元数据</p>
      */
     function __construct()
     {
@@ -60,6 +68,15 @@ class UpdateSandboxInstanceRequest extends AbstractModel
 
         if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
             $this->Timeout = $param["Timeout"];
+        }
+
+        if (array_key_exists("Metadata",$param) and $param["Metadata"] !== null) {
+            $this->Metadata = [];
+            foreach ($param["Metadata"] as $key => $value){
+                $obj = new MetadataVar();
+                $obj->deserialize($value);
+                array_push($this->Metadata, $obj);
+            }
         }
     }
 }

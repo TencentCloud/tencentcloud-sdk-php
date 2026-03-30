@@ -43,6 +43,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\CreateCloudProductLogCollectionResponse CreateCloudProductLogCollection(Models\CreateCloudProductLogCollectionRequest $req) 内部云产品接入使用相关接口
  * @method Models\CreateConfigResponse CreateConfig(Models\CreateConfigRequest $req) 创建采集规则配置
  * @method Models\CreateConfigExtraResponse CreateConfigExtra(Models\CreateConfigExtraRequest $req) 本接口用于创建特殊采集配置任务，特殊采集配置应用于自建K8S环境的采集Agent
+ * @method Models\CreateConsoleResponse CreateConsole(Models\CreateConsoleRequest $req) 本接口用于创建DataSight控制台
  * @method Models\CreateConsoleSharingResponse CreateConsoleSharing(Models\CreateConsoleSharingRequest $req) 创建控制台分享
  * @method Models\CreateConsumerResponse CreateConsumer(Models\CreateConsumerRequest $req) 本接口用于创建投递CKafka任务
  * @method Models\CreateConsumerGroupResponse CreateConsumerGroup(Models\CreateConsumerGroupRequest $req) 消费组心跳
@@ -82,6 +83,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\DeleteConfigResponse DeleteConfig(Models\DeleteConfigRequest $req) 删除采集规则配置
  * @method Models\DeleteConfigExtraResponse DeleteConfigExtra(Models\DeleteConfigExtraRequest $req) 本接口用于删除特殊采集规则配置，特殊采集配置应用于自建K8S环境的采集Agent
  * @method Models\DeleteConfigFromMachineGroupResponse DeleteConfigFromMachineGroup(Models\DeleteConfigFromMachineGroupRequest $req) 删除应用到机器组的采集配置
+ * @method Models\DeleteConsoleResponse DeleteConsole(Models\DeleteConsoleRequest $req) 本接口用于删除DataSight控制台
  * @method Models\DeleteConsoleSharingResponse DeleteConsoleSharing(Models\DeleteConsoleSharingRequest $req) 删除控制台分享
  * @method Models\DeleteConsumerResponse DeleteConsumer(Models\DeleteConsumerRequest $req) 删除投递Ckafka任务
  * @method Models\DeleteConsumerGroupResponse DeleteConsumerGroup(Models\DeleteConsumerGroupRequest $req) 删除消费组
@@ -118,6 +120,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\DescribeConfigMachineGroupsResponse DescribeConfigMachineGroups(Models\DescribeConfigMachineGroupsRequest $req) 获取采集规则配置所绑定的机器组
  * @method Models\DescribeConfigsResponse DescribeConfigs(Models\DescribeConfigsRequest $req) 获取采集规则配置
  * @method Models\DescribeConsoleSharingListResponse DescribeConsoleSharingList(Models\DescribeConsoleSharingListRequest $req) 批量查询控制台分享列表
+ * @method Models\DescribeConsolesResponse DescribeConsoles(Models\DescribeConsolesRequest $req) 查询DataSight控制台实例列表
  * @method Models\DescribeConsumerResponse DescribeConsumer(Models\DescribeConsumerRequest $req) 本接口用于获取投递配置
  * @method Models\DescribeConsumerGroupsResponse DescribeConsumerGroups(Models\DescribeConsumerGroupsRequest $req) 获取消费组列表
  * @method Models\DescribeConsumerOffsetsResponse DescribeConsumerOffsets(Models\DescribeConsumerOffsetsRequest $req) 获取消费组点位信息
@@ -173,6 +176,7 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
  * @method Models\ModifyCloudProductLogCollectionResponse ModifyCloudProductLogCollection(Models\ModifyCloudProductLogCollectionRequest $req) 内部云产品接入使用相关接口
  * @method Models\ModifyConfigResponse ModifyConfig(Models\ModifyConfigRequest $req) 修改采集规则配置
  * @method Models\ModifyConfigExtraResponse ModifyConfigExtra(Models\ModifyConfigExtraRequest $req) 本接口用于修改特殊采集配置任务，特殊采集配置应用于自建K8S环境的采集Agent
+ * @method Models\ModifyConsoleResponse ModifyConsole(Models\ModifyConsoleRequest $req) 本接口用于编辑DataSight控制台
  * @method Models\ModifyConsoleSharingResponse ModifyConsoleSharing(Models\ModifyConsoleSharingRequest $req) 修改控制台分享，目前仅允许修改有效期
  * @method Models\ModifyConsumerResponse ModifyConsumer(Models\ModifyConsumerRequest $req) 本接口用于修改投递Ckafka任务
  * @method Models\ModifyConsumerGroupResponse ModifyConsumerGroup(Models\ModifyConsumerGroupRequest $req) 更新消费组信息

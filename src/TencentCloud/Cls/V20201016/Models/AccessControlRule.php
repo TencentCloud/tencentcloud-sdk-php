@@ -14,24 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ags\V20250920\Models;
+namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * PauseSandboxInstance请求参数结构体
+ * DataSight访问控制规则
  *
- * @method string getInstanceId() 获取<p>沙箱实例ID</p>
- * @method void setInstanceId(string $InstanceId) 设置<p>沙箱实例ID</p>
+ * @method string getAccessMode() 获取访问方式：public - 公网，internal - 内网
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAccessMode(string $AccessMode) 设置访问方式：public - 公网，internal - 内网
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class PauseSandboxInstanceRequest extends AbstractModel
+class AccessControlRule extends AbstractModel
 {
     /**
-     * @var string <p>沙箱实例ID</p>
+     * @var string 访问方式：public - 公网，internal - 内网
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $InstanceId;
+    public $AccessMode;
 
     /**
-     * @param string $InstanceId <p>沙箱实例ID</p>
+     * @param string $AccessMode 访问方式：public - 公网，internal - 内网
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -46,8 +50,8 @@ class PauseSandboxInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("AccessMode",$param) and $param["AccessMode"] !== null) {
+            $this->AccessMode = $param["AccessMode"];
         }
     }
 }

@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ags\V20250920\Models;
+namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * PauseSandboxInstance请求参数结构体
+ * DescribeAKAnalysisDetail请求参数结构体
  *
- * @method string getInstanceId() 获取<p>沙箱实例ID</p>
- * @method void setInstanceId(string $InstanceId) 设置<p>沙箱实例ID</p>
+ * @method integer getID() 获取告警记录ID
+ * @method void setID(integer $ID) 设置告警记录ID
+ * @method array getMemberId() 获取集团账号的成员id
+ * @method void setMemberId(array $MemberId) 设置集团账号的成员id
  */
-class PauseSandboxInstanceRequest extends AbstractModel
+class DescribeAKAnalysisDetailRequest extends AbstractModel
 {
     /**
-     * @var string <p>沙箱实例ID</p>
+     * @var integer 告警记录ID
      */
-    public $InstanceId;
+    public $ID;
 
     /**
-     * @param string $InstanceId <p>沙箱实例ID</p>
+     * @var array 集团账号的成员id
+     */
+    public $MemberId;
+
+    /**
+     * @param integer $ID 告警记录ID
+     * @param array $MemberId 集团账号的成员id
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class PauseSandboxInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("ID",$param) and $param["ID"] !== null) {
+            $this->ID = $param["ID"];
+        }
+
+        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
+            $this->MemberId = $param["MemberId"];
         }
     }
 }

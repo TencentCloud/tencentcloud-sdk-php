@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ags\V20250920\Models;
+namespace TencentCloud\Monitor\V20230616\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * PauseSandboxInstance请求参数结构体
+ * 触发数字分身任务响应
  *
- * @method string getInstanceId() 获取<p>沙箱实例ID</p>
- * @method void setInstanceId(string $InstanceId) 设置<p>沙箱实例ID</p>
+ * @method integer getTaskID() 获取数字分身任务ID
+ * @method void setTaskID(integer $TaskID) 设置数字分身任务ID
  */
-class PauseSandboxInstanceRequest extends AbstractModel
+class TriggerDigitalTwinTaskResp extends AbstractModel
 {
     /**
-     * @var string <p>沙箱实例ID</p>
+     * @var integer 数字分身任务ID
      */
-    public $InstanceId;
+    public $TaskID;
 
     /**
-     * @param string $InstanceId <p>沙箱实例ID</p>
+     * @param integer $TaskID 数字分身任务ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class PauseSandboxInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("TaskID",$param) and $param["TaskID"] !== null) {
+            $this->TaskID = $param["TaskID"];
         }
     }
 }

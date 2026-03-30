@@ -25,9 +25,13 @@ use TencentCloud\Monitor\V20230616\Models as Models;
 /**
  * @method Models\CreateNoticeContentTmplResponse CreateNoticeContentTmpl(Models\CreateNoticeContentTmplRequest $req) 创建自定义通知内容模板
  * @method Models\DeleteNoticeContentTmplsResponse DeleteNoticeContentTmpls(Models\DeleteNoticeContentTmplsRequest $req) 删除通知内容模板
+ * @method Models\DescribeAIWorkbenchSREDigitalTwinTaskListResponse DescribeAIWorkbenchSREDigitalTwinTaskList(Models\DescribeAIWorkbenchSREDigitalTwinTaskListRequest $req) 查询AI工作台SRE数字分身任务列表
+ * @method Models\DescribeAIWorkbenchSREDigitalTwinWorkLogDetailResponse DescribeAIWorkbenchSREDigitalTwinWorkLogDetail(Models\DescribeAIWorkbenchSREDigitalTwinWorkLogDetailRequest $req) 查询AI工作台SRE数字分身工作日志详细信息
+ * @method Models\DescribeAIWorkbenchSREDigitalTwinWorkLogListResponse DescribeAIWorkbenchSREDigitalTwinWorkLogList(Models\DescribeAIWorkbenchSREDigitalTwinWorkLogListRequest $req) 查询AI工作台SRE数字分身任务工作日志列表
  * @method Models\DescribeAlarmNotifyHistoriesResponse DescribeAlarmNotifyHistories(Models\DescribeAlarmNotifyHistoriesRequest $req) 按需查询告警的通知历史
  * @method Models\DescribeNoticeContentTmplResponse DescribeNoticeContentTmpl(Models\DescribeNoticeContentTmplRequest $req) 根据查询条件获取自定义通知内容模板，若所有查询条件空，则获取账号下所有模板
  * @method Models\ModifyNoticeContentTmplResponse ModifyNoticeContentTmpl(Models\ModifyNoticeContentTmplRequest $req) 修改通知内容模板
+ * @method Models\TriggerAIWorkbenchSREDigitalTwinTaskResponse TriggerAIWorkbenchSREDigitalTwinTask(Models\TriggerAIWorkbenchSREDigitalTwinTaskRequest $req) 触发数字分身任务请求
  */
 
 class MonitorClient extends AbstractClient

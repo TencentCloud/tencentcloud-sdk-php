@@ -14,37 +14,44 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tts\V20190823\Models;
+namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TextToVoice返回参数结构体
+ * DescribeDraftContractByPromptsTask返回参数结构体
  *
- * @method string getAudio() 获取<p>base64编码的wav/mp3音频数据</p>
- * @method void setAudio(string $Audio) 设置<p>base64编码的wav/mp3音频数据</p>
- * @method string getSessionId() 获取<p>一次请求对应一个SessionId</p>
- * @method void setSessionId(string $SessionId) 设置<p>一次请求对应一个SessionId</p>
- * @method array getSubtitles() 获取<p>时间戳信息，若未开启时间戳，则返回空数组。</p>
- * @method void setSubtitles(array $Subtitles) 设置<p>时间戳信息，若未开启时间戳，则返回空数组。</p>
+ * @method integer getStatus() 获取任务状态，枚举，0 已创建，1 执行中，2 成功，3 失败
+ * @method void setStatus(integer $Status) 设置任务状态，枚举，0 已创建，1 执行中，2 成功，3 失败
+ * @method string getMessage() 获取任务错误信息，仅在失败时返回
+ * @method void setMessage(string $Message) 设置任务错误信息，仅在失败时返回
+ * @method string getContractName() 获取生成的合同名称
+ * @method void setContractName(string $ContractName) 设置生成的合同名称
+ * @method string getResourceId() 获取生成的合同文件资源id
+ * @method void setResourceId(string $ResourceId) 设置生成的合同文件资源id
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class TextToVoiceResponse extends AbstractModel
+class DescribeDraftContractByPromptsTaskResponse extends AbstractModel
 {
     /**
-     * @var string <p>base64编码的wav/mp3音频数据</p>
+     * @var integer 任务状态，枚举，0 已创建，1 执行中，2 成功，3 失败
      */
-    public $Audio;
+    public $Status;
 
     /**
-     * @var string <p>一次请求对应一个SessionId</p>
+     * @var string 任务错误信息，仅在失败时返回
      */
-    public $SessionId;
+    public $Message;
 
     /**
-     * @var array <p>时间戳信息，若未开启时间戳，则返回空数组。</p>
+     * @var string 生成的合同名称
      */
-    public $Subtitles;
+    public $ContractName;
+
+    /**
+     * @var string 生成的合同文件资源id
+     */
+    public $ResourceId;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +59,10 @@ class TextToVoiceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Audio <p>base64编码的wav/mp3音频数据</p>
-     * @param string $SessionId <p>一次请求对应一个SessionId</p>
-     * @param array $Subtitles <p>时间戳信息，若未开启时间戳，则返回空数组。</p>
+     * @param integer $Status 任务状态，枚举，0 已创建，1 执行中，2 成功，3 失败
+     * @param string $Message 任务错误信息，仅在失败时返回
+     * @param string $ContractName 生成的合同名称
+     * @param string $ResourceId 生成的合同文件资源id
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,21 +78,20 @@ class TextToVoiceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Audio",$param) and $param["Audio"] !== null) {
-            $this->Audio = $param["Audio"];
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
-        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
-            $this->SessionId = $param["SessionId"];
+        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
+            $this->Message = $param["Message"];
         }
 
-        if (array_key_exists("Subtitles",$param) and $param["Subtitles"] !== null) {
-            $this->Subtitles = [];
-            foreach ($param["Subtitles"] as $key => $value){
-                $obj = new Subtitle();
-                $obj->deserialize($value);
-                array_push($this->Subtitles, $obj);
-            }
+        if (array_key_exists("ContractName",$param) and $param["ContractName"] !== null) {
+            $this->ContractName = $param["ContractName"];
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

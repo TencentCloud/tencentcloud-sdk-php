@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ags\V20250920\Models;
+namespace TencentCloud\Monitor\V20230616\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * StartSandboxInstance返回参数结构体
+ * TriggerAIWorkbenchSREDigitalTwinTask返回参数结构体
  *
- * @method SandboxInstance getInstance() 获取<p>创建的沙箱实例完整信息</p>
- * @method void setInstance(SandboxInstance $Instance) 设置<p>创建的沙箱实例完整信息</p>
+ * @method array getJSONStrPaths() 获取Json序列化路径
+ * @method void setJSONStrPaths(array $JSONStrPaths) 设置Json序列化路径
+ * @method TriggerDigitalTwinTaskResp getData() 获取数字分身任务信息
+ * @method void setData(TriggerDigitalTwinTaskResp $Data) 设置数字分身任务信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class StartSandboxInstanceResponse extends AbstractModel
+class TriggerAIWorkbenchSREDigitalTwinTaskResponse extends AbstractModel
 {
     /**
-     * @var SandboxInstance <p>创建的沙箱实例完整信息</p>
+     * @var array Json序列化路径
      */
-    public $Instance;
+    public $JSONStrPaths;
+
+    /**
+     * @var TriggerDigitalTwinTaskResp 数字分身任务信息
+     */
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class StartSandboxInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param SandboxInstance $Instance <p>创建的沙箱实例完整信息</p>
+     * @param array $JSONStrPaths Json序列化路径
+     * @param TriggerDigitalTwinTaskResp $Data 数字分身任务信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +62,13 @@ class StartSandboxInstanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Instance",$param) and $param["Instance"] !== null) {
-            $this->Instance = new SandboxInstance();
-            $this->Instance->deserialize($param["Instance"]);
+        if (array_key_exists("JSONStrPaths",$param) and $param["JSONStrPaths"] !== null) {
+            $this->JSONStrPaths = $param["JSONStrPaths"];
+        }
+
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new TriggerDigitalTwinTaskResp();
+            $this->Data->deserialize($param["Data"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

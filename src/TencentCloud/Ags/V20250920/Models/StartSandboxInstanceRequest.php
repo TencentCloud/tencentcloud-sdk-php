@@ -20,58 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartSandboxInstance请求参数结构体
  *
- * @method string getToolId() 获取沙箱工具 ID，与 ToolName 至少有一个要填
- * @method void setToolId(string $ToolId) 设置沙箱工具 ID，与 ToolName 至少有一个要填
- * @method string getToolName() 获取沙箱工具名称，与 ToolId 至少有一个要填
- * @method void setToolName(string $ToolName) 设置沙箱工具名称，与 ToolId 至少有一个要填
- * @method string getTimeout() 获取超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h
- * @method void setTimeout(string $Timeout) 设置超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h
- * @method string getClientToken() 获取幂等性 Token，长度不超过 64 字符
- * @method void setClientToken(string $ClientToken) 设置幂等性 Token，长度不超过 64 字符
- * @method array getMountOptions() 获取沙箱实例存储挂载配置
- * @method void setMountOptions(array $MountOptions) 设置沙箱实例存储挂载配置
- * @method CustomConfiguration getCustomConfiguration() 获取沙箱实例自定义配置
- * @method void setCustomConfiguration(CustomConfiguration $CustomConfiguration) 设置沙箱实例自定义配置
+ * @method string getToolId() 获取<p>沙箱工具 ID，与 ToolName 至少有一个要填</p>
+ * @method void setToolId(string $ToolId) 设置<p>沙箱工具 ID，与 ToolName 至少有一个要填</p>
+ * @method string getToolName() 获取<p>沙箱工具名称，与 ToolId 至少有一个要填</p>
+ * @method void setToolName(string $ToolName) 设置<p>沙箱工具名称，与 ToolId 至少有一个要填</p>
+ * @method string getTimeout() 获取<p>超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h</p>
+ * @method void setTimeout(string $Timeout) 设置<p>超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h</p>
+ * @method string getClientToken() 获取<p>幂等性 Token，长度不超过 64 字符</p>
+ * @method void setClientToken(string $ClientToken) 设置<p>幂等性 Token，长度不超过 64 字符</p>
+ * @method array getMountOptions() 获取<p>沙箱实例存储挂载配置</p>
+ * @method void setMountOptions(array $MountOptions) 设置<p>沙箱实例存储挂载配置</p>
+ * @method CustomConfiguration getCustomConfiguration() 获取<p>沙箱实例自定义配置</p>
+ * @method void setCustomConfiguration(CustomConfiguration $CustomConfiguration) 设置<p>沙箱实例自定义配置</p>
+ * @method string getAuthMode() 获取<p>沙箱访问认证模式</p><p>枚举值：</p><ul><li>DEFAULT： 跟随系统策略</li><li>TOKEN： Token认证</li><li>NONE： 免认证 </li></ul><p>默认值：DEFAULT</p>
+ * @method void setAuthMode(string $AuthMode) 设置<p>沙箱访问认证模式</p><p>枚举值：</p><ul><li>DEFAULT： 跟随系统策略</li><li>TOKEN： Token认证</li><li>NONE： 免认证 </li></ul><p>默认值：DEFAULT</p>
+ * @method array getMetadata() 获取<p>沙箱元数据</p>
+ * @method void setMetadata(array $Metadata) 设置<p>沙箱元数据</p>
  */
 class StartSandboxInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 沙箱工具 ID，与 ToolName 至少有一个要填
+     * @var string <p>沙箱工具 ID，与 ToolName 至少有一个要填</p>
      */
     public $ToolId;
 
     /**
-     * @var string 沙箱工具名称，与 ToolId 至少有一个要填
+     * @var string <p>沙箱工具名称，与 ToolId 至少有一个要填</p>
      */
     public $ToolName;
 
     /**
-     * @var string 超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h
+     * @var string <p>超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h</p>
      */
     public $Timeout;
 
     /**
-     * @var string 幂等性 Token，长度不超过 64 字符
+     * @var string <p>幂等性 Token，长度不超过 64 字符</p>
      */
     public $ClientToken;
 
     /**
-     * @var array 沙箱实例存储挂载配置
+     * @var array <p>沙箱实例存储挂载配置</p>
      */
     public $MountOptions;
 
     /**
-     * @var CustomConfiguration 沙箱实例自定义配置
+     * @var CustomConfiguration <p>沙箱实例自定义配置</p>
      */
     public $CustomConfiguration;
 
     /**
-     * @param string $ToolId 沙箱工具 ID，与 ToolName 至少有一个要填
-     * @param string $ToolName 沙箱工具名称，与 ToolId 至少有一个要填
-     * @param string $Timeout 超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h
-     * @param string $ClientToken 幂等性 Token，长度不超过 64 字符
-     * @param array $MountOptions 沙箱实例存储挂载配置
-     * @param CustomConfiguration $CustomConfiguration 沙箱实例自定义配置
+     * @var string <p>沙箱访问认证模式</p><p>枚举值：</p><ul><li>DEFAULT： 跟随系统策略</li><li>TOKEN： Token认证</li><li>NONE： 免认证 </li></ul><p>默认值：DEFAULT</p>
+     */
+    public $AuthMode;
+
+    /**
+     * @var array <p>沙箱元数据</p>
+     */
+    public $Metadata;
+
+    /**
+     * @param string $ToolId <p>沙箱工具 ID，与 ToolName 至少有一个要填</p>
+     * @param string $ToolName <p>沙箱工具名称，与 ToolId 至少有一个要填</p>
+     * @param string $Timeout <p>超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h</p>
+     * @param string $ClientToken <p>幂等性 Token，长度不超过 64 字符</p>
+     * @param array $MountOptions <p>沙箱实例存储挂载配置</p>
+     * @param CustomConfiguration $CustomConfiguration <p>沙箱实例自定义配置</p>
+     * @param string $AuthMode <p>沙箱访问认证模式</p><p>枚举值：</p><ul><li>DEFAULT： 跟随系统策略</li><li>TOKEN： Token认证</li><li>NONE： 免认证 </li></ul><p>默认值：DEFAULT</p>
+     * @param array $Metadata <p>沙箱元数据</p>
      */
     function __construct()
     {
@@ -114,6 +130,19 @@ class StartSandboxInstanceRequest extends AbstractModel
         if (array_key_exists("CustomConfiguration",$param) and $param["CustomConfiguration"] !== null) {
             $this->CustomConfiguration = new CustomConfiguration();
             $this->CustomConfiguration->deserialize($param["CustomConfiguration"]);
+        }
+
+        if (array_key_exists("AuthMode",$param) and $param["AuthMode"] !== null) {
+            $this->AuthMode = $param["AuthMode"];
+        }
+
+        if (array_key_exists("Metadata",$param) and $param["Metadata"] !== null) {
+            $this->Metadata = [];
+            foreach ($param["Metadata"] as $key => $value){
+                $obj = new MetadataVar();
+                $obj->deserialize($value);
+                array_push($this->Metadata, $obj);
+            }
         }
     }
 }

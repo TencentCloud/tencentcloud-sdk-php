@@ -18,20 +18,28 @@ namespace TencentCloud\Ags\V20250920\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * PauseSandboxInstance请求参数结构体
+ * metadata 项
  *
- * @method string getInstanceId() 获取<p>沙箱实例ID</p>
- * @method void setInstanceId(string $InstanceId) 设置<p>沙箱实例ID</p>
+ * @method string getName() 获取<p>沙箱元数据名</p>
+ * @method void setName(string $Name) 设置<p>沙箱元数据名</p>
+ * @method string getValue() 获取<p>沙箱元数据值</p>
+ * @method void setValue(string $Value) 设置<p>沙箱元数据值</p>
  */
-class PauseSandboxInstanceRequest extends AbstractModel
+class MetadataVar extends AbstractModel
 {
     /**
-     * @var string <p>沙箱实例ID</p>
+     * @var string <p>沙箱元数据名</p>
      */
-    public $InstanceId;
+    public $Name;
 
     /**
-     * @param string $InstanceId <p>沙箱实例ID</p>
+     * @var string <p>沙箱元数据值</p>
+     */
+    public $Value;
+
+    /**
+     * @param string $Name <p>沙箱元数据名</p>
+     * @param string $Value <p>沙箱元数据值</p>
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class PauseSandboxInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

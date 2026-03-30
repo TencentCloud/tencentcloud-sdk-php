@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ags\V20250920\Models;
+namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * PauseSandboxInstance请求参数结构体
+ * DeleteConsole请求参数结构体
  *
- * @method string getInstanceId() 获取<p>沙箱实例ID</p>
- * @method void setInstanceId(string $InstanceId) 设置<p>沙箱实例ID</p>
+ * @method string getConsoleId() 获取<p>DataSight控制台Id</p>
+ * @method void setConsoleId(string $ConsoleId) 设置<p>DataSight控制台Id</p>
  */
-class PauseSandboxInstanceRequest extends AbstractModel
+class DeleteConsoleRequest extends AbstractModel
 {
     /**
-     * @var string <p>沙箱实例ID</p>
+     * @var string <p>DataSight控制台Id</p>
      */
-    public $InstanceId;
+    public $ConsoleId;
 
     /**
-     * @param string $InstanceId <p>沙箱实例ID</p>
+     * @param string $ConsoleId <p>DataSight控制台Id</p>
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class PauseSandboxInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("ConsoleId",$param) and $param["ConsoleId"] !== null) {
+            $this->ConsoleId = $param["ConsoleId"];
         }
     }
 }

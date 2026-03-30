@@ -20,170 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 转码模板详情
  *
- * @method string getDefinition() 获取转码模板唯一标识。
- * @method void setDefinition(string $Definition) 设置转码模板唯一标识。
- * @method string getContainer() 获取封装格式，取值：mp4、flv、hls、mp3、flac、ogg。
- * @method void setContainer(string $Container) 设置封装格式，取值：mp4、flv、hls、mp3、flac、ogg。
- * @method string getName() 获取转码模板名称。
- * @method void setName(string $Name) 设置转码模板名称。
- * @method string getComment() 获取模板描述信息。
- * @method void setComment(string $Comment) 设置模板描述信息。
- * @method string getType() 获取模板类型，取值：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
- * @method void setType(string $Type) 设置模板类型，取值：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
- * @method integer getRemoveVideo() 获取是否去除视频数据，取值：
-<li>0：保留；</li>
-<li>1：去除。</li>
- * @method void setRemoveVideo(integer $RemoveVideo) 设置是否去除视频数据，取值：
-<li>0：保留；</li>
-<li>1：去除。</li>
- * @method integer getRemoveAudio() 获取是否去除音频数据，取值：
-<li>0：保留；</li>
-<li>1：去除。</li>
- * @method void setRemoveAudio(integer $RemoveAudio) 设置是否去除音频数据，取值：
-<li>0：保留；</li>
-<li>1：去除。</li>
- * @method VideoTemplateInfo getVideoTemplate() 获取视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
- * @method void setVideoTemplate(VideoTemplateInfo $VideoTemplate) 设置视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
- * @method AudioTemplateInfo getAudioTemplate() 获取音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
- * @method void setAudioTemplate(AudioTemplateInfo $AudioTemplate) 设置音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
- * @method TEHDConfig getTEHDConfig() 获取极速高清转码参数。
+ * @method string getDefinition() 获取<p>转码模板唯一标识。</p>
+ * @method void setDefinition(string $Definition) 设置<p>转码模板唯一标识。</p>
+ * @method string getContainer() 获取<p>封装格式，取值：mp4、flv、hls、mp3、flac、ogg。</p>
+ * @method void setContainer(string $Container) 设置<p>封装格式，取值：mp4、flv、hls、mp3、flac、ogg。</p>
+ * @method string getName() 获取<p>转码模板名称。</p>
+ * @method void setName(string $Name) 设置<p>转码模板名称。</p>
+ * @method string getComment() 获取<p>模板描述信息。</p>
+ * @method void setComment(string $Comment) 设置<p>模板描述信息。</p>
+ * @method string getType() 获取<p>模板类型，取值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
+ * @method void setType(string $Type) 设置<p>模板类型，取值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
+ * @method integer getRemoveVideo() 获取<p>是否去除视频数据，取值：</p><li>0：保留；</li><li>1：去除。</li>
+ * @method void setRemoveVideo(integer $RemoveVideo) 设置<p>是否去除视频数据，取值：</p><li>0：保留；</li><li>1：去除。</li>
+ * @method integer getRemoveAudio() 获取<p>是否去除音频数据，取值：</p><li>0：保留；</li><li>1：去除。</li>
+ * @method void setRemoveAudio(integer $RemoveAudio) 设置<p>是否去除音频数据，取值：</p><li>0：保留；</li><li>1：去除。</li>
+ * @method VideoTemplateInfo getVideoTemplate() 获取<p>视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。</p>
+ * @method void setVideoTemplate(VideoTemplateInfo $VideoTemplate) 设置<p>视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。</p>
+ * @method AudioTemplateInfo getAudioTemplate() 获取<p>音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。</p>
+ * @method void setAudioTemplate(AudioTemplateInfo $AudioTemplate) 设置<p>音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。</p>
+ * @method TEHDConfig getTEHDConfig() 获取<p>极速高清转码参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTEHDConfig(TEHDConfig $TEHDConfig) 设置极速高清转码参数。
+ * @method void setTEHDConfig(TEHDConfig $TEHDConfig) 设置<p>极速高清转码参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method EnhanceConfig getEnhanceConfig() 获取音视频增强配置。
+ * @method EnhanceConfig getEnhanceConfig() 获取<p>音视频增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) 设置音视频增强配置。
+ * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) 设置<p>音视频增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getContainerType() 获取封装格式过滤条件，可选值：
-<li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li>
-<li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
- * @method void setContainerType(string $ContainerType) 设置封装格式过滤条件，可选值：
-<li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li>
-<li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
- * @method string getCreateTime() 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method string getUpdateTime() 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method void setUpdateTime(string $UpdateTime) 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method string getSegmentType() 获取切片类型，仅当 Container 为 hls 时有效。
- * @method void setSegmentType(string $SegmentType) 设置切片类型，仅当 Container 为 hls 时有效。
+ * @method string getContainerType() 获取<p>封装格式过滤条件，可选值：</p><li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li><li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
+ * @method void setContainerType(string $ContainerType) 设置<p>封装格式过滤条件，可选值：</p><li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li><li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
+ * @method string getCreateTime() 获取<p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method string getUpdateTime() 获取<p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method string getSegmentType() 获取<p>切片类型，仅当 Container 为 hls 时有效。</p>
+ * @method void setSegmentType(string $SegmentType) 设置<p>切片类型，仅当 Container 为 hls 时有效。</p>
+ * @method string getStdExtInfo() 获取<p>扩展参数。</p>
+ * @method void setStdExtInfo(string $StdExtInfo) 设置<p>扩展参数。</p>
  */
 class TranscodeTemplate extends AbstractModel
 {
     /**
-     * @var string 转码模板唯一标识。
+     * @var string <p>转码模板唯一标识。</p>
      */
     public $Definition;
 
     /**
-     * @var string 封装格式，取值：mp4、flv、hls、mp3、flac、ogg。
+     * @var string <p>封装格式，取值：mp4、flv、hls、mp3、flac、ogg。</p>
      */
     public $Container;
 
     /**
-     * @var string 转码模板名称。
+     * @var string <p>转码模板名称。</p>
      */
     public $Name;
 
     /**
-     * @var string 模板描述信息。
+     * @var string <p>模板描述信息。</p>
      */
     public $Comment;
 
     /**
-     * @var string 模板类型，取值：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+     * @var string <p>模板类型，取值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
      */
     public $Type;
 
     /**
-     * @var integer 是否去除视频数据，取值：
-<li>0：保留；</li>
-<li>1：去除。</li>
+     * @var integer <p>是否去除视频数据，取值：</p><li>0：保留；</li><li>1：去除。</li>
      */
     public $RemoveVideo;
 
     /**
-     * @var integer 是否去除音频数据，取值：
-<li>0：保留；</li>
-<li>1：去除。</li>
+     * @var integer <p>是否去除音频数据，取值：</p><li>0：保留；</li><li>1：去除。</li>
      */
     public $RemoveAudio;
 
     /**
-     * @var VideoTemplateInfo 视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
+     * @var VideoTemplateInfo <p>视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。</p>
      */
     public $VideoTemplate;
 
     /**
-     * @var AudioTemplateInfo 音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
+     * @var AudioTemplateInfo <p>音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。</p>
      */
     public $AudioTemplate;
 
     /**
-     * @var TEHDConfig 极速高清转码参数。
+     * @var TEHDConfig <p>极速高清转码参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TEHDConfig;
 
     /**
-     * @var EnhanceConfig 音视频增强配置。
+     * @var EnhanceConfig <p>音视频增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnhanceConfig;
 
     /**
-     * @var string 封装格式过滤条件，可选值：
-<li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li>
-<li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
+     * @var string <p>封装格式过滤条件，可选值：</p><li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li><li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
      */
     public $ContainerType;
 
     /**
-     * @var string 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @var string <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @var string <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 切片类型，仅当 Container 为 hls 时有效。
+     * @var string <p>切片类型，仅当 Container 为 hls 时有效。</p>
      */
     public $SegmentType;
 
     /**
-     * @param string $Definition 转码模板唯一标识。
-     * @param string $Container 封装格式，取值：mp4、flv、hls、mp3、flac、ogg。
-     * @param string $Name 转码模板名称。
-     * @param string $Comment 模板描述信息。
-     * @param string $Type 模板类型，取值：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
-     * @param integer $RemoveVideo 是否去除视频数据，取值：
-<li>0：保留；</li>
-<li>1：去除。</li>
-     * @param integer $RemoveAudio 是否去除音频数据，取值：
-<li>0：保留；</li>
-<li>1：去除。</li>
-     * @param VideoTemplateInfo $VideoTemplate 视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
-     * @param AudioTemplateInfo $AudioTemplate 音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
-     * @param TEHDConfig $TEHDConfig 极速高清转码参数。
+     * @var string <p>扩展参数。</p>
+     */
+    public $StdExtInfo;
+
+    /**
+     * @param string $Definition <p>转码模板唯一标识。</p>
+     * @param string $Container <p>封装格式，取值：mp4、flv、hls、mp3、flac、ogg。</p>
+     * @param string $Name <p>转码模板名称。</p>
+     * @param string $Comment <p>模板描述信息。</p>
+     * @param string $Type <p>模板类型，取值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
+     * @param integer $RemoveVideo <p>是否去除视频数据，取值：</p><li>0：保留；</li><li>1：去除。</li>
+     * @param integer $RemoveAudio <p>是否去除音频数据，取值：</p><li>0：保留；</li><li>1：去除。</li>
+     * @param VideoTemplateInfo $VideoTemplate <p>视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。</p>
+     * @param AudioTemplateInfo $AudioTemplate <p>音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。</p>
+     * @param TEHDConfig $TEHDConfig <p>极速高清转码参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnhanceConfig $EnhanceConfig 音视频增强配置。
+     * @param EnhanceConfig $EnhanceConfig <p>音视频增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ContainerType 封装格式过滤条件，可选值：
-<li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li>
-<li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
-     * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param string $SegmentType 切片类型，仅当 Container 为 hls 时有效。
+     * @param string $ContainerType <p>封装格式过滤条件，可选值：</p><li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li><li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
+     * @param string $CreateTime <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param string $UpdateTime <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param string $SegmentType <p>切片类型，仅当 Container 为 hls 时有效。</p>
+     * @param string $StdExtInfo <p>扩展参数。</p>
      */
     function __construct()
     {
@@ -260,6 +236,10 @@ class TranscodeTemplate extends AbstractModel
 
         if (array_key_exists("SegmentType",$param) and $param["SegmentType"] !== null) {
             $this->SegmentType = $param["SegmentType"];
+        }
+
+        if (array_key_exists("StdExtInfo",$param) and $param["StdExtInfo"] !== null) {
+            $this->StdExtInfo = $param["StdExtInfo"];
         }
     }
 }

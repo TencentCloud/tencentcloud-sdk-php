@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceGroupId(string $ResourceGroupId) 设置资源组id
  * @method string getResourceGroupName() 获取资源组名字
  * @method void setResourceGroupName(string $ResourceGroupName) 设置资源组名字
+ * @method string getKernelId() 获取Kernel id
+ * @method void setKernelId(string $KernelId) 设置Kernel id
+ * @method string getSparkAppName() 获取spark app名称
+ * @method void setSparkAppName(string $SparkAppName) 设置spark app名称
  */
 class NotebookSessions extends AbstractModel
 {
@@ -129,6 +133,16 @@ class NotebookSessions extends AbstractModel
     public $ResourceGroupName;
 
     /**
+     * @var string Kernel id
+     */
+    public $KernelId;
+
+    /**
+     * @var string spark app名称
+     */
+    public $SparkAppName;
+
+    /**
      * @param string $Kind 类型，当前支持：spark、pyspark、sparkr、sql
      * @param string $SessionId Session唯一标识
      * @param string $ProxyUser 代理用户，默认为root
@@ -144,6 +158,8 @@ class NotebookSessions extends AbstractModel
      * @param string $DataEngineId 引擎id
      * @param string $ResourceGroupId 资源组id
      * @param string $ResourceGroupName 资源组名字
+     * @param string $KernelId Kernel id
+     * @param string $SparkAppName spark app名称
      */
     function __construct()
     {
@@ -216,6 +232,14 @@ class NotebookSessions extends AbstractModel
 
         if (array_key_exists("ResourceGroupName",$param) and $param["ResourceGroupName"] !== null) {
             $this->ResourceGroupName = $param["ResourceGroupName"];
+        }
+
+        if (array_key_exists("KernelId",$param) and $param["KernelId"] !== null) {
+            $this->KernelId = $param["KernelId"];
+        }
+
+        if (array_key_exists("SparkAppName",$param) and $param["SparkAppName"] !== null) {
+            $this->SparkAppName = $param["SparkAppName"];
         }
     }
 }

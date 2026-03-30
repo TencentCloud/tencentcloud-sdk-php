@@ -84,6 +84,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPodSize(integer $PodSize) 设置session，pod大小
  * @method integer getPodNumbers() 获取pod数量
  * @method void setPodNumbers(integer $PodNumbers) 设置pod数量
+ * @method string getSparkAppName() 获取spark app名称
+ * @method void setSparkAppName(string $SparkAppName) 设置spark app名称
  */
 class NotebookSessionInfo extends AbstractModel
 {
@@ -224,6 +226,11 @@ class NotebookSessionInfo extends AbstractModel
     public $PodNumbers;
 
     /**
+     * @var string spark app名称
+     */
+    public $SparkAppName;
+
+    /**
      * @param string $Name Session名称
      * @param string $Kind 类型，当前支持：spark、pyspark、sparkr、sql
      * @param string $DataEngineName DLC Spark作业引擎名称
@@ -256,6 +263,7 @@ class NotebookSessionInfo extends AbstractModel
      * @param string $ResourceGroupName 资源组名称
      * @param integer $PodSize session，pod大小
      * @param integer $PodNumbers pod数量
+     * @param string $SparkAppName spark app名称
      */
     function __construct()
     {
@@ -382,6 +390,10 @@ class NotebookSessionInfo extends AbstractModel
 
         if (array_key_exists("PodNumbers",$param) and $param["PodNumbers"] !== null) {
             $this->PodNumbers = $param["PodNumbers"];
+        }
+
+        if (array_key_exists("SparkAppName",$param) and $param["SparkAppName"] !== null) {
+            $this->SparkAppName = $param["SparkAppName"];
         }
     }
 }

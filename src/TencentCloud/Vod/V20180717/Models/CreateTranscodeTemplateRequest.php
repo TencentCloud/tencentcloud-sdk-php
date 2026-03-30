@@ -20,134 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTranscodeTemplate请求参数结构体
  *
- * @method string getContainer() 获取封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。
- * @method void setContainer(string $Container) 设置封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。
- * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method string getName() 获取转码模板名称，长度限制：64 个字符。
- * @method void setName(string $Name) 设置转码模板名称，长度限制：64 个字符。
- * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
- * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
- * @method integer getRemoveVideo() 获取是否去除视频数据，可选值：
-<li>0：保留</li>
-<li>1：去除</li>
-默认值：0。
- * @method void setRemoveVideo(integer $RemoveVideo) 设置是否去除视频数据，可选值：
-<li>0：保留</li>
-<li>1：去除</li>
-默认值：0。
- * @method integer getRemoveAudio() 获取是否去除音频数据，可选值：
-<li>0：保留</li>
-<li>1：去除</li>
-默认值：0。
- * @method void setRemoveAudio(integer $RemoveAudio) 设置是否去除音频数据，可选值：
-<li>0：保留</li>
-<li>1：去除</li>
-默认值：0。
- * @method VideoTemplateInfo getVideoTemplate() 获取视频流配置参数，当 RemoveVideo 为 0，该字段必填。
- * @method void setVideoTemplate(VideoTemplateInfo $VideoTemplate) 设置视频流配置参数，当 RemoveVideo 为 0，该字段必填。
- * @method AudioTemplateInfo getAudioTemplate() 获取音频流配置参数，当 RemoveAudio 为 0，该字段必填。
- * @method void setAudioTemplate(AudioTemplateInfo $AudioTemplate) 设置音频流配置参数，当 RemoveAudio 为 0，该字段必填。
- * @method TEHDConfig getTEHDConfig() 获取极速高清转码参数。
- * @method void setTEHDConfig(TEHDConfig $TEHDConfig) 设置极速高清转码参数。
- * @method EnhanceConfig getEnhanceConfig() 获取音视频增强配置。
- * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) 设置音视频增强配置。
- * @method string getSegmentType() 获取切片类型，当 Container 为 hls 时有效，可选值：
-<li>ts：ts 切片；</li>
-<li>fmp4：fmp4 切片。</li>
-默认值：ts。
- * @method void setSegmentType(string $SegmentType) 设置切片类型，当 Container 为 hls 时有效，可选值：
-<li>ts：ts 切片；</li>
-<li>fmp4：fmp4 切片。</li>
-默认值：ts。
+ * @method string getContainer() 获取<p>封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。</p>
+ * @method void setContainer(string $Container) 设置<p>封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。</p>
+ * @method integer getSubAppId() 获取<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method void setSubAppId(integer $SubAppId) 设置<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method string getName() 获取<p>转码模板名称，长度限制：64 个字符。</p>
+ * @method void setName(string $Name) 设置<p>转码模板名称，长度限制：64 个字符。</p>
+ * @method string getComment() 获取<p>模板描述信息，长度限制：256 个字符。</p>
+ * @method void setComment(string $Comment) 设置<p>模板描述信息，长度限制：256 个字符。</p>
+ * @method integer getRemoveVideo() 获取<p>是否去除视频数据，可选值：</p><li>0：保留</li><li>1：去除</li>默认值：0。
+ * @method void setRemoveVideo(integer $RemoveVideo) 设置<p>是否去除视频数据，可选值：</p><li>0：保留</li><li>1：去除</li>默认值：0。
+ * @method integer getRemoveAudio() 获取<p>是否去除音频数据，可选值：</p><li>0：保留</li><li>1：去除</li>默认值：0。
+ * @method void setRemoveAudio(integer $RemoveAudio) 设置<p>是否去除音频数据，可选值：</p><li>0：保留</li><li>1：去除</li>默认值：0。
+ * @method VideoTemplateInfo getVideoTemplate() 获取<p>视频流配置参数，当 RemoveVideo 为 0，该字段必填。</p>
+ * @method void setVideoTemplate(VideoTemplateInfo $VideoTemplate) 设置<p>视频流配置参数，当 RemoveVideo 为 0，该字段必填。</p>
+ * @method AudioTemplateInfo getAudioTemplate() 获取<p>音频流配置参数，当 RemoveAudio 为 0，该字段必填。</p>
+ * @method void setAudioTemplate(AudioTemplateInfo $AudioTemplate) 设置<p>音频流配置参数，当 RemoveAudio 为 0，该字段必填。</p>
+ * @method TEHDConfig getTEHDConfig() 获取<p>极速高清转码参数。</p>
+ * @method void setTEHDConfig(TEHDConfig $TEHDConfig) 设置<p>极速高清转码参数。</p>
+ * @method EnhanceConfig getEnhanceConfig() 获取<p>音视频增强配置。</p>
+ * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) 设置<p>音视频增强配置。</p>
+ * @method string getSegmentType() 获取<p>切片类型，当 Container 为 hls 时有效，可选值：</p><li>ts：ts 切片；</li><li>fmp4：fmp4 切片。</li>默认值：ts。
+ * @method void setSegmentType(string $SegmentType) 设置<p>切片类型，当 Container 为 hls 时有效，可选值：</p><li>ts：ts 切片；</li><li>fmp4：fmp4 切片。</li>默认值：ts。
+ * @method string getStdExtInfo() 获取<p>扩展参数。</p>
+ * @method void setStdExtInfo(string $StdExtInfo) 设置<p>扩展参数。</p>
  */
 class CreateTranscodeTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。
+     * @var string <p>封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。</p>
      */
     public $Container;
 
     /**
-     * @var integer <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * @var integer <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var string 转码模板名称，长度限制：64 个字符。
+     * @var string <p>转码模板名称，长度限制：64 个字符。</p>
      */
     public $Name;
 
     /**
-     * @var string 模板描述信息，长度限制：256 个字符。
+     * @var string <p>模板描述信息，长度限制：256 个字符。</p>
      */
     public $Comment;
 
     /**
-     * @var integer 是否去除视频数据，可选值：
-<li>0：保留</li>
-<li>1：去除</li>
-默认值：0。
+     * @var integer <p>是否去除视频数据，可选值：</p><li>0：保留</li><li>1：去除</li>默认值：0。
      */
     public $RemoveVideo;
 
     /**
-     * @var integer 是否去除音频数据，可选值：
-<li>0：保留</li>
-<li>1：去除</li>
-默认值：0。
+     * @var integer <p>是否去除音频数据，可选值：</p><li>0：保留</li><li>1：去除</li>默认值：0。
      */
     public $RemoveAudio;
 
     /**
-     * @var VideoTemplateInfo 视频流配置参数，当 RemoveVideo 为 0，该字段必填。
+     * @var VideoTemplateInfo <p>视频流配置参数，当 RemoveVideo 为 0，该字段必填。</p>
      */
     public $VideoTemplate;
 
     /**
-     * @var AudioTemplateInfo 音频流配置参数，当 RemoveAudio 为 0，该字段必填。
+     * @var AudioTemplateInfo <p>音频流配置参数，当 RemoveAudio 为 0，该字段必填。</p>
      */
     public $AudioTemplate;
 
     /**
-     * @var TEHDConfig 极速高清转码参数。
+     * @var TEHDConfig <p>极速高清转码参数。</p>
      */
     public $TEHDConfig;
 
     /**
-     * @var EnhanceConfig 音视频增强配置。
+     * @var EnhanceConfig <p>音视频增强配置。</p>
      */
     public $EnhanceConfig;
 
     /**
-     * @var string 切片类型，当 Container 为 hls 时有效，可选值：
-<li>ts：ts 切片；</li>
-<li>fmp4：fmp4 切片。</li>
-默认值：ts。
+     * @var string <p>切片类型，当 Container 为 hls 时有效，可选值：</p><li>ts：ts 切片；</li><li>fmp4：fmp4 切片。</li>默认值：ts。
      */
     public $SegmentType;
 
     /**
-     * @param string $Container 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。
-     * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     * @param string $Name 转码模板名称，长度限制：64 个字符。
-     * @param string $Comment 模板描述信息，长度限制：256 个字符。
-     * @param integer $RemoveVideo 是否去除视频数据，可选值：
-<li>0：保留</li>
-<li>1：去除</li>
-默认值：0。
-     * @param integer $RemoveAudio 是否去除音频数据，可选值：
-<li>0：保留</li>
-<li>1：去除</li>
-默认值：0。
-     * @param VideoTemplateInfo $VideoTemplate 视频流配置参数，当 RemoveVideo 为 0，该字段必填。
-     * @param AudioTemplateInfo $AudioTemplate 音频流配置参数，当 RemoveAudio 为 0，该字段必填。
-     * @param TEHDConfig $TEHDConfig 极速高清转码参数。
-     * @param EnhanceConfig $EnhanceConfig 音视频增强配置。
-     * @param string $SegmentType 切片类型，当 Container 为 hls 时有效，可选值：
-<li>ts：ts 切片；</li>
-<li>fmp4：fmp4 切片。</li>
-默认值：ts。
+     * @var string <p>扩展参数。</p>
+     */
+    public $StdExtInfo;
+
+    /**
+     * @param string $Container <p>封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。</p>
+     * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param string $Name <p>转码模板名称，长度限制：64 个字符。</p>
+     * @param string $Comment <p>模板描述信息，长度限制：256 个字符。</p>
+     * @param integer $RemoveVideo <p>是否去除视频数据，可选值：</p><li>0：保留</li><li>1：去除</li>默认值：0。
+     * @param integer $RemoveAudio <p>是否去除音频数据，可选值：</p><li>0：保留</li><li>1：去除</li>默认值：0。
+     * @param VideoTemplateInfo $VideoTemplate <p>视频流配置参数，当 RemoveVideo 为 0，该字段必填。</p>
+     * @param AudioTemplateInfo $AudioTemplate <p>音频流配置参数，当 RemoveAudio 为 0，该字段必填。</p>
+     * @param TEHDConfig $TEHDConfig <p>极速高清转码参数。</p>
+     * @param EnhanceConfig $EnhanceConfig <p>音视频增强配置。</p>
+     * @param string $SegmentType <p>切片类型，当 Container 为 hls 时有效，可选值：</p><li>ts：ts 切片；</li><li>fmp4：fmp4 切片。</li>默认值：ts。
+     * @param string $StdExtInfo <p>扩展参数。</p>
      */
     function __construct()
     {
@@ -208,6 +180,10 @@ class CreateTranscodeTemplateRequest extends AbstractModel
 
         if (array_key_exists("SegmentType",$param) and $param["SegmentType"] !== null) {
             $this->SegmentType = $param["SegmentType"];
+        }
+
+        if (array_key_exists("StdExtInfo",$param) and $param["StdExtInfo"] !== null) {
+            $this->StdExtInfo = $param["StdExtInfo"];
         }
     }
 }

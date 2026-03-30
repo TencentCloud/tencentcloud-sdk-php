@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMountOptions(array $MountOptions) 设置<p>存储挂载选项</p>
  * @method CustomConfigurationDetail getCustomConfiguration() 获取<p>沙箱实例自定义配置</p>
  * @method void setCustomConfiguration(CustomConfigurationDetail $CustomConfiguration) 设置<p>沙箱实例自定义配置</p>
+ * @method string getNetworkMode() 获取<p>网络模式</p><p>枚举值：</p><ul><li>PUBLIC： 公网访问</li><li>SANDBOX： 无网络</li><li>INTERNAL_SERVICE： 腾讯云内部公共服务</li></ul><p>可以覆盖工具级别的网络配置。但如果一个工具本身就不支持 VPC 网络，那么即便在实例设置里选了 VPC 模式，也是无效的</p>
+ * @method void setNetworkMode(string $NetworkMode) 设置<p>网络模式</p><p>枚举值：</p><ul><li>PUBLIC： 公网访问</li><li>SANDBOX： 无网络</li><li>INTERNAL_SERVICE： 腾讯云内部公共服务</li></ul><p>可以覆盖工具级别的网络配置。但如果一个工具本身就不支持 VPC 网络，那么即便在实例设置里选了 VPC 模式，也是无效的</p>
+ * @method array getMetadata() 获取<p>沙箱实例元数据</p>
+ * @method void setMetadata(array $Metadata) 设置<p>沙箱实例元数据</p>
  */
 class SandboxInstance extends AbstractModel
 {
@@ -101,6 +105,16 @@ class SandboxInstance extends AbstractModel
     public $CustomConfiguration;
 
     /**
+     * @var string <p>网络模式</p><p>枚举值：</p><ul><li>PUBLIC： 公网访问</li><li>SANDBOX： 无网络</li><li>INTERNAL_SERVICE： 腾讯云内部公共服务</li></ul><p>可以覆盖工具级别的网络配置。但如果一个工具本身就不支持 VPC 网络，那么即便在实例设置里选了 VPC 模式，也是无效的</p>
+     */
+    public $NetworkMode;
+
+    /**
+     * @var array <p>沙箱实例元数据</p>
+     */
+    public $Metadata;
+
+    /**
      * @param string $InstanceId <p>沙箱实例唯一标识符</p>
      * @param string $ToolId <p>所属沙箱工具 ID</p>
      * @param string $ToolName <p>所属沙箱工具名称</p>
@@ -112,6 +126,8 @@ class SandboxInstance extends AbstractModel
      * @param string $UpdateTime <p>更新时间（ISO 8601 格式）</p>
      * @param array $MountOptions <p>存储挂载选项</p>
      * @param CustomConfigurationDetail $CustomConfiguration <p>沙箱实例自定义配置</p>
+     * @param string $NetworkMode <p>网络模式</p><p>枚举值：</p><ul><li>PUBLIC： 公网访问</li><li>SANDBOX： 无网络</li><li>INTERNAL_SERVICE： 腾讯云内部公共服务</li></ul><p>可以覆盖工具级别的网络配置。但如果一个工具本身就不支持 VPC 网络，那么即便在实例设置里选了 VPC 模式，也是无效的</p>
+     * @param array $Metadata <p>沙箱实例元数据</p>
      */
     function __construct()
     {
@@ -174,6 +190,19 @@ class SandboxInstance extends AbstractModel
         if (array_key_exists("CustomConfiguration",$param) and $param["CustomConfiguration"] !== null) {
             $this->CustomConfiguration = new CustomConfigurationDetail();
             $this->CustomConfiguration->deserialize($param["CustomConfiguration"]);
+        }
+
+        if (array_key_exists("NetworkMode",$param) and $param["NetworkMode"] !== null) {
+            $this->NetworkMode = $param["NetworkMode"];
+        }
+
+        if (array_key_exists("Metadata",$param) and $param["Metadata"] !== null) {
+            $this->Metadata = [];
+            foreach ($param["Metadata"] as $key => $value){
+                $obj = new MetadataVar();
+                $obj->deserialize($value);
+                array_push($this->Metadata, $obj);
+            }
         }
     }
 }

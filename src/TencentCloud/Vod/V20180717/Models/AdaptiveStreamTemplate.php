@@ -20,82 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 自适应转码流参数模板
  *
- * @method VideoTemplateInfo getVideo() 获取视频参数信息。
- * @method void setVideo(VideoTemplateInfo $Video) 设置视频参数信息。
- * @method AudioTemplateInfo getAudio() 获取音频参数信息。
- * @method void setAudio(AudioTemplateInfo $Audio) 设置音频参数信息。
- * @method integer getRemoveAudio() 获取是否移除音频流，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
- * @method void setRemoveAudio(integer $RemoveAudio) 设置是否移除音频流，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
- * @method integer getRemoveVideo() 获取是否移除视频流，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
- * @method void setRemoveVideo(integer $RemoveVideo) 设置是否移除视频流，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
- * @method TEHDConfig getTEHDConfig() 获取极速高清转码参数。
+ * @method VideoTemplateInfo getVideo() 获取<p>视频参数信息。</p>
+ * @method void setVideo(VideoTemplateInfo $Video) 设置<p>视频参数信息。</p>
+ * @method AudioTemplateInfo getAudio() 获取<p>音频参数信息。</p>
+ * @method void setAudio(AudioTemplateInfo $Audio) 设置<p>音频参数信息。</p>
+ * @method integer getRemoveAudio() 获取<p>是否移除音频流，取值范围：</p><li>0：否，</li><li>1：是。</li>
+ * @method void setRemoveAudio(integer $RemoveAudio) 设置<p>是否移除音频流，取值范围：</p><li>0：否，</li><li>1：是。</li>
+ * @method integer getRemoveVideo() 获取<p>是否移除视频流，取值范围：</p><li>0：否，</li><li>1：是。</li>
+ * @method void setRemoveVideo(integer $RemoveVideo) 设置<p>是否移除视频流，取值范围：</p><li>0：否，</li><li>1：是。</li>
+ * @method TEHDConfig getTEHDConfig() 获取<p>极速高清转码参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTEHDConfig(TEHDConfig $TEHDConfig) 设置极速高清转码参数。
+ * @method void setTEHDConfig(TEHDConfig $TEHDConfig) 设置<p>极速高清转码参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method EnhanceConfig getEnhanceConfig() 获取音视频增强配置。
+ * @method EnhanceConfig getEnhanceConfig() 获取<p>音视频增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) 设置音视频增强配置。
+ * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) 设置<p>音视频增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStdExtInfo() 获取<p>扩展参数。</p>
+ * @method void setStdExtInfo(string $StdExtInfo) 设置<p>扩展参数。</p>
  */
 class AdaptiveStreamTemplate extends AbstractModel
 {
     /**
-     * @var VideoTemplateInfo 视频参数信息。
+     * @var VideoTemplateInfo <p>视频参数信息。</p>
      */
     public $Video;
 
     /**
-     * @var AudioTemplateInfo 音频参数信息。
+     * @var AudioTemplateInfo <p>音频参数信息。</p>
      */
     public $Audio;
 
     /**
-     * @var integer 是否移除音频流，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
+     * @var integer <p>是否移除音频流，取值范围：</p><li>0：否，</li><li>1：是。</li>
      */
     public $RemoveAudio;
 
     /**
-     * @var integer 是否移除视频流，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
+     * @var integer <p>是否移除视频流，取值范围：</p><li>0：否，</li><li>1：是。</li>
      */
     public $RemoveVideo;
 
     /**
-     * @var TEHDConfig 极速高清转码参数。
+     * @var TEHDConfig <p>极速高清转码参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TEHDConfig;
 
     /**
-     * @var EnhanceConfig 音视频增强配置。
+     * @var EnhanceConfig <p>音视频增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnhanceConfig;
 
     /**
-     * @param VideoTemplateInfo $Video 视频参数信息。
-     * @param AudioTemplateInfo $Audio 音频参数信息。
-     * @param integer $RemoveAudio 是否移除音频流，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
-     * @param integer $RemoveVideo 是否移除视频流，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
-     * @param TEHDConfig $TEHDConfig 极速高清转码参数。
+     * @var string <p>扩展参数。</p>
+     */
+    public $StdExtInfo;
+
+    /**
+     * @param VideoTemplateInfo $Video <p>视频参数信息。</p>
+     * @param AudioTemplateInfo $Audio <p>音频参数信息。</p>
+     * @param integer $RemoveAudio <p>是否移除音频流，取值范围：</p><li>0：否，</li><li>1：是。</li>
+     * @param integer $RemoveVideo <p>是否移除视频流，取值范围：</p><li>0：否，</li><li>1：是。</li>
+     * @param TEHDConfig $TEHDConfig <p>极速高清转码参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnhanceConfig $EnhanceConfig 音视频增强配置。
+     * @param EnhanceConfig $EnhanceConfig <p>音视频增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StdExtInfo <p>扩展参数。</p>
      */
     function __construct()
     {
@@ -136,6 +128,10 @@ class AdaptiveStreamTemplate extends AbstractModel
         if (array_key_exists("EnhanceConfig",$param) and $param["EnhanceConfig"] !== null) {
             $this->EnhanceConfig = new EnhanceConfig();
             $this->EnhanceConfig->deserialize($param["EnhanceConfig"]);
+        }
+
+        if (array_key_exists("StdExtInfo",$param) and $param["StdExtInfo"] !== null) {
+            $this->StdExtInfo = $param["StdExtInfo"];
         }
     }
 }

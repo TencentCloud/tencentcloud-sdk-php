@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 输出重定向配置
  *
- * @method string getDriver() 获取输出driver类型
- * @method void setDriver(string $Driver) 设置输出driver类型
- * @method array getOptions() 获取重定向配置参数
- * @method void setOptions(array $Options) 设置重定向配置参数
+ * @method string getDriver() 获取<p>输出driver类型</p><p>枚举值：</p><ul><li>local： 宿主机本地目录</li><li>cos： 远端cos存储</li></ul><p>默认值：local</p>
+ * @method void setDriver(string $Driver) 设置<p>输出driver类型</p><p>枚举值：</p><ul><li>local： 宿主机本地目录</li><li>cos： 远端cos存储</li></ul><p>默认值：local</p>
+ * @method array getOptions() 获取<p>重定向配置参数</p><p>日志重定向路径，用于指定任务日志的输出目标。取值格式与 Driver 类型关联：<br>当 Driver 为 local 时，格式为本地文件路径，如 stdout=/tmp/train_out.log；<br>当 Driver 为 cos 时，格式为 COS 存储桶路径，如 stdout=cos://test-123456.cos.ap-shanghai.myqcloud.com/test/.</p>
+ * @method void setOptions(array $Options) 设置<p>重定向配置参数</p><p>日志重定向路径，用于指定任务日志的输出目标。取值格式与 Driver 类型关联：<br>当 Driver 为 local 时，格式为本地文件路径，如 stdout=/tmp/train_out.log；<br>当 Driver 为 cos 时，格式为 COS 存储桶路径，如 stdout=cos://test-123456.cos.ap-shanghai.myqcloud.com/test/.</p>
  */
 class OutputRedirect extends AbstractModel
 {
     /**
-     * @var string 输出driver类型
+     * @var string <p>输出driver类型</p><p>枚举值：</p><ul><li>local： 宿主机本地目录</li><li>cos： 远端cos存储</li></ul><p>默认值：local</p>
      */
     public $Driver;
 
     /**
-     * @var array 重定向配置参数
+     * @var array <p>重定向配置参数</p><p>日志重定向路径，用于指定任务日志的输出目标。取值格式与 Driver 类型关联：<br>当 Driver 为 local 时，格式为本地文件路径，如 stdout=/tmp/train_out.log；<br>当 Driver 为 cos 时，格式为 COS 存储桶路径，如 stdout=cos://test-123456.cos.ap-shanghai.myqcloud.com/test/.</p>
      */
     public $Options;
 
     /**
-     * @param string $Driver 输出driver类型
-     * @param array $Options 重定向配置参数
+     * @param string $Driver <p>输出driver类型</p><p>枚举值：</p><ul><li>local： 宿主机本地目录</li><li>cos： 远端cos存储</li></ul><p>默认值：local</p>
+     * @param array $Options <p>重定向配置参数</p><p>日志重定向路径，用于指定任务日志的输出目标。取值格式与 Driver 类型关联：<br>当 Driver 为 local 时，格式为本地文件路径，如 stdout=/tmp/train_out.log；<br>当 Driver 为 cos 时，格式为 COS 存储桶路径，如 stdout=cos://test-123456.cos.ap-shanghai.myqcloud.com/test/.</p>
      */
     function __construct()
     {

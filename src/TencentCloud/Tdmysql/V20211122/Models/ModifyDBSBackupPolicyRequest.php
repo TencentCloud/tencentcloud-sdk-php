@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBSBackupPolicy请求参数结构体
  *
- * @method BackupPolicyModelInput getBackupPolicy() 获取备份策略
- * @method void setBackupPolicy(BackupPolicyModelInput $BackupPolicy) 设置备份策略
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method BackupPolicyModelInput getBackupPolicy() 获取<p>备份策略</p>
+ * @method void setBackupPolicy(BackupPolicyModelInput $BackupPolicy) 设置<p>备份策略</p>
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
  */
 class ModifyDBSBackupPolicyRequest extends AbstractModel
 {
     /**
-     * @var BackupPolicyModelInput 备份策略
+     * @var BackupPolicyModelInput <p>备份策略</p>
      */
     public $BackupPolicy;
 
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @param BackupPolicyModelInput $BackupPolicy 备份策略
-     * @param string $InstanceId 实例ID
+     * @param BackupPolicyModelInput $BackupPolicy <p>备份策略</p>
+     * @param string $InstanceId <p>实例ID</p>
      */
     function __construct()
     {

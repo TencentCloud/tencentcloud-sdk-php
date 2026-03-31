@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAsrVocab返回参数结构体
  *
- * @method string getVocabId() 获取词表ID，可用于获取词表信息
- * @method void setVocabId(string $VocabId) 设置词表ID，可用于获取词表信息
+ * @method string getVocabId() 获取<p>词表ID，可用于获取词表信息</p>
+ * @method void setVocabId(string $VocabId) 设置<p>词表ID，可用于获取词表信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateAsrVocabResponse extends AbstractModel
 {
     /**
-     * @var string 词表ID，可用于获取词表信息
+     * @var string <p>词表ID，可用于获取词表信息</p>
      */
     public $VocabId;
 
@@ -38,7 +38,7 @@ class CreateAsrVocabResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $VocabId 词表ID，可用于获取词表信息
+     * @param string $VocabId <p>词表ID，可用于获取词表信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

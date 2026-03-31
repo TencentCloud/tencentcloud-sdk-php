@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置流量镜像所属的子网ID。
  * @method array getTargetInfo() 获取流量镜接收目标资源信息，当接收目标为ENI和CLB时返回。
  * @method void setTargetInfo(array $TargetInfo) 设置流量镜接收目标资源信息，当接收目标为ENI和CLB时返回。
+ * @method array getIngressFilterRules() 获取流量镜像入站过滤规则。
+ * @method void setIngressFilterRules(array $IngressFilterRules) 设置流量镜像入站过滤规则。
+ * @method array getEgressFilterRules() 获取流量镜像出站过滤规则。
+ * @method void setEgressFilterRules(array $EgressFilterRules) 设置流量镜像出站过滤规则。
  */
 class TrafficMirror extends AbstractModel
 {
@@ -122,6 +126,16 @@ class TrafficMirror extends AbstractModel
     public $TargetInfo;
 
     /**
+     * @var array 流量镜像入站过滤规则。
+     */
+    public $IngressFilterRules;
+
+    /**
+     * @var array 流量镜像出站过滤规则。
+     */
+    public $EgressFilterRules;
+
+    /**
      * @param string $VpcId VPC实例ID。
      * @param string $TrafficMirrorId 流量镜像实例。
      * @param string $TrafficMirrorName 流量镜像名字。
@@ -136,6 +150,8 @@ class TrafficMirror extends AbstractModel
      * @param string $Type 流量镜像的类型。
      * @param string $SubnetId 流量镜像所属的子网ID。
      * @param array $TargetInfo 流量镜接收目标资源信息，当接收目标为ENI和CLB时返回。
+     * @param array $IngressFilterRules 流量镜像入站过滤规则。
+     * @param array $EgressFilterRules 流量镜像出站过滤规则。
      */
     function __construct()
     {
@@ -214,6 +230,24 @@ class TrafficMirror extends AbstractModel
                 $obj = new TrafficMirrorTargetResourceInfo();
                 $obj->deserialize($value);
                 array_push($this->TargetInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("IngressFilterRules",$param) and $param["IngressFilterRules"] !== null) {
+            $this->IngressFilterRules = [];
+            foreach ($param["IngressFilterRules"] as $key => $value){
+                $obj = new TrafficMirrorFilter();
+                $obj->deserialize($value);
+                array_push($this->IngressFilterRules, $obj);
+            }
+        }
+
+        if (array_key_exists("EgressFilterRules",$param) and $param["EgressFilterRules"] !== null) {
+            $this->EgressFilterRules = [];
+            foreach ($param["EgressFilterRules"] as $key => $value){
+                $obj = new TrafficMirrorFilter();
+                $obj->deserialize($value);
+                array_push($this->EgressFilterRules, $obj);
             }
         }
     }

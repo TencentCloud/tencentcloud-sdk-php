@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBSBackupPolicy返回参数结构体
  *
- * @method boolean getIsSuccess() 获取是否成功
- * @method void setIsSuccess(boolean $IsSuccess) 设置是否成功
- * @method string getMsg() 获取消息
- * @method void setMsg(string $Msg) 设置消息
+ * @method boolean getIsSuccess() 获取<p>是否成功</p>
+ * @method void setIsSuccess(boolean $IsSuccess) 设置<p>是否成功</p>
+ * @method string getMsg() 获取<p>消息</p>
+ * @method void setMsg(string $Msg) 设置<p>消息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyDBSBackupPolicyResponse extends AbstractModel
 {
     /**
-     * @var boolean 是否成功
+     * @var boolean <p>是否成功</p>
      */
     public $IsSuccess;
 
     /**
-     * @var string 消息
+     * @var string <p>消息</p>
      */
     public $Msg;
 
@@ -45,8 +45,8 @@ class ModifyDBSBackupPolicyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $IsSuccess 是否成功
-     * @param string $Msg 消息
+     * @param boolean $IsSuccess <p>是否成功</p>
+     * @param string $Msg <p>消息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

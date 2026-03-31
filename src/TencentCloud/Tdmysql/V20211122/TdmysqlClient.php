@@ -24,11 +24,11 @@ use TencentCloud\Tdmysql\V20211122\Models as Models;
 
 /**
  * @method Models\CancelIsolateDBInstancesResponse CancelIsolateDBInstances(Models\CancelIsolateDBInstancesRequest $req) 本接口（CancelIsolateDBInstances）提供批量解除隔离实例功能
- * @method Models\CreateDBSBackupResponse CreateDBSBackup(Models\CreateDBSBackupRequest $req) 创建实例备份集
- * @method Models\DeleteDBSBackupSetsResponse DeleteDBSBackupSets(Models\DeleteDBSBackupSetsRequest $req) 删除实例备份集
+ * @method Models\CreateDBSBackupResponse CreateDBSBackup(Models\CreateDBSBackupRequest $req) 创建实例手工备份  CreateDBSBackup
+ * @method Models\DeleteDBSBackupSetsResponse DeleteDBSBackupSets(Models\DeleteDBSBackupSetsRequest $req) 删除实例手工备份 DeleteDBSBackupSets
  * @method Models\DescribeDBParametersResponse DescribeDBParameters(Models\DescribeDBParametersRequest $req) 本接口（DescribeDBParameters）用于获取实例的当前参数设置。
- * @method Models\DescribeDBSAvailableRecoveryTimeResponse DescribeDBSAvailableRecoveryTime(Models\DescribeDBSAvailableRecoveryTimeRequest $req) 可恢复时间查询
- * @method Models\DescribeDBSCloneInstancesResponse DescribeDBSCloneInstances(Models\DescribeDBSCloneInstancesRequest $req) 查询实例克隆列表
+ * @method Models\DescribeDBSAvailableRecoveryTimeResponse DescribeDBSAvailableRecoveryTime(Models\DescribeDBSAvailableRecoveryTimeRequest $req) 获取可恢复时间 DescribeDBSAvailableRecoveryTime
+ * @method Models\DescribeDBSCloneInstancesResponse DescribeDBSCloneInstances(Models\DescribeDBSCloneInstancesRequest $req) 查询实例克隆列表 DescribeDBSCloneInstances
  * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) 本接口（DescribeDBSecurityGroups）用于查询实例安全组信息
  * @method Models\DescribeDatabaseObjectsResponse DescribeDatabaseObjects(Models\DescribeDatabaseObjectsRequest $req) 本接口（DescribeDatabaseObjects）用于查询云数据库实例的数据库中的对象列表，包含表、存储过程、视图和函数。
  * @method Models\DescribeFlowResponse DescribeFlow(Models\DescribeFlowRequest $req) 本接口（DescribeFlow）用于查询异步任务流程状态
@@ -37,8 +37,8 @@ use TencentCloud\Tdmysql\V20211122\Models as Models;
  * @method Models\ModifyAutoRenewFlagResponse ModifyAutoRenewFlag(Models\ModifyAutoRenewFlagRequest $req) 本接口（ModifyAutoRenewFlag）用于修改自动续费标志
  * @method Models\ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(Models\ModifyDBInstanceSecurityGroupsRequest $req) 本接口（ModifyDBInstanceSecurityGroups）用于修改云数据库安全组
  * @method Models\ModifyDBParametersResponse ModifyDBParameters(Models\ModifyDBParametersRequest $req) 本接口（ModifyDBParameters）用于修改实例参数。
- * @method Models\ModifyDBSBackupPolicyResponse ModifyDBSBackupPolicy(Models\ModifyDBSBackupPolicyRequest $req) 修改实例备份策略
- * @method Models\ModifyDBSBackupSetCommentResponse ModifyDBSBackupSetComment(Models\ModifyDBSBackupSetCommentRequest $req) 修改备份集备注
+ * @method Models\ModifyDBSBackupPolicyResponse ModifyDBSBackupPolicy(Models\ModifyDBSBackupPolicyRequest $req) 修改实例备份策略 ModifyDBSBackupPolicy
+ * @method Models\ModifyDBSBackupSetCommentResponse ModifyDBSBackupSetComment(Models\ModifyDBSBackupSetCommentRequest $req) 修改实例备份备注 ModifyDBSBackupSetComment
  * @method Models\ModifyInstanceNameResponse ModifyInstanceName(Models\ModifyInstanceNameRequest $req) 本接口（ModifyInstanceName）提供修改实例名称功能
  */
 

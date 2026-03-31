@@ -20,206 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateShipper请求参数结构体
  *
- * @method string getTopicId() 获取创建的投递规则所属的日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
- * @method void setTopicId(string $TopicId) 设置创建的投递规则所属的日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
- * @method string getBucket() 获取COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	
-
-- 通过[GET Service（List Buckets）](https://cloud.tencent.com/document/product/436/8291)获取COS存储桶。
- * @method void setBucket(string $Bucket) 设置COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	
-
-- 通过[GET Service（List Buckets）](https://cloud.tencent.com/document/product/436/8291)获取COS存储桶。
- * @method string getPrefix() 获取投递规则投递的新的目录前缀。
-- 仅支持0-9A-Za-z-_/
-- 最大支持256个字符
- * @method void setPrefix(string $Prefix) 设置投递规则投递的新的目录前缀。
-- 仅支持0-9A-Za-z-_/
-- 最大支持256个字符
- * @method string getShipperName() 获取投递规则的名字。最大支持255个字符
- * @method void setShipperName(string $ShipperName) 设置投递规则的名字。最大支持255个字符
- * @method integer getInterval() 获取投递的时间间隔，单位 秒，默认300，范围 300-900
- * @method void setInterval(integer $Interval) 设置投递的时间间隔，单位 秒，默认300，范围 300-900
- * @method integer getMaxSize() 获取投递的文件的最大值，单位 MB，默认256，范围 5-256
- * @method void setMaxSize(integer $MaxSize) 设置投递的文件的最大值，单位 MB，默认256，范围 5-256
- * @method array getFilterRules() 获取投递日志的过滤规则，匹配的日志进行投递，各rule之间是and关系，最多5个，数组为空则表示不过滤而全部投递
- * @method void setFilterRules(array $FilterRules) 设置投递日志的过滤规则，匹配的日志进行投递，各rule之间是and关系，最多5个，数组为空则表示不过滤而全部投递
- * @method string getPartition() 获取投递日志的分区规则，支持strftime的时间格式表示
- * @method void setPartition(string $Partition) 设置投递日志的分区规则，支持strftime的时间格式表示
- * @method CompressInfo getCompress() 获取投递日志的压缩配置
- * @method void setCompress(CompressInfo $Compress) 设置投递日志的压缩配置
- * @method ContentInfo getContent() 获取投递日志的内容格式配置
- * @method void setContent(ContentInfo $Content) 设置投递日志的内容格式配置
- * @method integer getFilenameMode() 获取投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
- * @method void setFilenameMode(integer $FilenameMode) 设置投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
- * @method integer getStartTime() 获取投递数据范围的开始时间点（秒级时间戳），不能超出日志主题的生命周期起点。
-如果用户不填写，默认为用户新建投递任务的时间。
- * @method void setStartTime(integer $StartTime) 设置投递数据范围的开始时间点（秒级时间戳），不能超出日志主题的生命周期起点。
-如果用户不填写，默认为用户新建投递任务的时间。
- * @method integer getEndTime() 获取投递数据范围的结束时间点（秒级时间戳），不能填写未来时间。
-如果用户不填写，默认为持续投递，即无限。
- * @method void setEndTime(integer $EndTime) 设置投递数据范围的结束时间点（秒级时间戳），不能填写未来时间。
-如果用户不填写，默认为持续投递，即无限。
- * @method string getStorageType() 获取对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
-参考值有：
-
-- STANDARD：标准存储
-- STANDARD_IA：低频存储
-- ARCHIVE：归档存储
-- DEEP_ARCHIVE：深度归档存储
-- MAZ_STANDARD：标准存储（多 AZ）
-- MAZ_STANDARD_IA：低频存储（多 AZ）
-- INTELLIGENT_TIERING：智能分层存储
-- MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
- * @method void setStorageType(string $StorageType) 设置对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
-参考值有：
-
-- STANDARD：标准存储
-- STANDARD_IA：低频存储
-- ARCHIVE：归档存储
-- DEEP_ARCHIVE：深度归档存储
-- MAZ_STANDARD：标准存储（多 AZ）
-- MAZ_STANDARD_IA：低频存储（多 AZ）
-- INTELLIGENT_TIERING：智能分层存储
-- MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
- * @method string getRoleArn() 获取角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
- * @method void setRoleArn(string $RoleArn) 设置角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
- * @method string getExternalId() 获取外部ID
- * @method void setExternalId(string $ExternalId) 设置外部ID
+ * @method string getTopicId() 获取<p>创建的投递规则所属的日志主题Id。</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
+ * @method void setTopicId(string $TopicId) 设置<p>创建的投递规则所属的日志主题Id。</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
+ * @method string getBucket() 获取<p>COS存储桶，详见产品支持的<a href="https://cloud.tencent.com/document/product/436/13312">存储桶命名规范</a>。    </p><ul><li>通过<a href="https://cloud.tencent.com/document/product/436/8291">GET Service（List Buckets）</a>获取COS存储桶。</li></ul>
+ * @method void setBucket(string $Bucket) 设置<p>COS存储桶，详见产品支持的<a href="https://cloud.tencent.com/document/product/436/13312">存储桶命名规范</a>。    </p><ul><li>通过<a href="https://cloud.tencent.com/document/product/436/8291">GET Service（List Buckets）</a>获取COS存储桶。</li></ul>
+ * @method string getPrefix() 获取<p>投递规则投递的新的目录前缀。</p><ul><li>仅支持0-9A-Za-z-_/</li><li>最大支持256个字符</li></ul>
+ * @method void setPrefix(string $Prefix) 设置<p>投递规则投递的新的目录前缀。</p><ul><li>仅支持0-9A-Za-z-_/</li><li>最大支持256个字符</li></ul>
+ * @method string getShipperName() 获取<p>投递规则的名字。最大支持255个字符</p>
+ * @method void setShipperName(string $ShipperName) 设置<p>投递规则的名字。最大支持255个字符</p>
+ * @method integer getInterval() 获取<p>投递的时间间隔，单位 秒，默认300，范围 300-900</p>
+ * @method void setInterval(integer $Interval) 设置<p>投递的时间间隔，单位 秒，默认300，范围 300-900</p>
+ * @method integer getMaxSize() 获取<p>投递的文件的最大值，单位 MB，默认256，范围 5-256</p>
+ * @method void setMaxSize(integer $MaxSize) 设置<p>投递的文件的最大值，单位 MB，默认256，范围 5-256</p>
+ * @method array getFilterRules() 获取<p>投递日志的过滤规则，匹配的日志进行投递，各rule之间是and关系，最多5个，数组为空则表示不过滤而全部投递</p>
+ * @method void setFilterRules(array $FilterRules) 设置<p>投递日志的过滤规则，匹配的日志进行投递，各rule之间是and关系，最多5个，数组为空则表示不过滤而全部投递</p>
+ * @method string getPartition() 获取<p>投递日志的分区规则，支持strftime的时间格式表示</p>
+ * @method void setPartition(string $Partition) 设置<p>投递日志的分区规则，支持strftime的时间格式表示</p>
+ * @method CompressInfo getCompress() 获取<p>投递日志的压缩配置</p>
+ * @method void setCompress(CompressInfo $Compress) 设置<p>投递日志的压缩配置</p>
+ * @method ContentInfo getContent() 获取<p>投递日志的内容格式配置</p>
+ * @method void setContent(ContentInfo $Content) 设置<p>投递日志的内容格式配置</p>
+ * @method integer getFilenameMode() 获取<p>投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）</p>
+ * @method void setFilenameMode(integer $FilenameMode) 设置<p>投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）</p>
+ * @method integer getStartTime() 获取<p>投递数据范围的开始时间点（秒级时间戳），不能超出日志主题的生命周期起点。<br>如果用户不填写，默认为用户新建投递任务的时间。</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>投递数据范围的开始时间点（秒级时间戳），不能超出日志主题的生命周期起点。<br>如果用户不填写，默认为用户新建投递任务的时间。</p>
+ * @method integer getEndTime() 获取<p>投递数据范围的结束时间点（秒级时间戳），不能填写未来时间。<br>如果用户不填写，默认为持续投递，即无限。</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>投递数据范围的结束时间点（秒级时间戳），不能填写未来时间。<br>如果用户不填写，默认为持续投递，即无限。</p>
+ * @method string getStorageType() 获取<p>对象存储类型，默认值为 STANDARD。枚举值请参见<a href="https://cloud.tencent.com/document/product/436/33417"> 存储类型概述</a> 文档。<br>参考值有：</p><ul><li>STANDARD：标准存储</li><li>STANDARD_IA：低频存储</li><li>ARCHIVE：归档存储</li><li>DEEP_ARCHIVE：深度归档存储</li><li>MAZ_STANDARD：标准存储（多 AZ）</li><li>MAZ_STANDARD_IA：低频存储（多 AZ）</li><li>INTELLIGENT_TIERING：智能分层存储</li><li>MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）</li></ul>
+ * @method void setStorageType(string $StorageType) 设置<p>对象存储类型，默认值为 STANDARD。枚举值请参见<a href="https://cloud.tencent.com/document/product/436/33417"> 存储类型概述</a> 文档。<br>参考值有：</p><ul><li>STANDARD：标准存储</li><li>STANDARD_IA：低频存储</li><li>ARCHIVE：归档存储</li><li>DEEP_ARCHIVE：深度归档存储</li><li>MAZ_STANDARD：标准存储（多 AZ）</li><li>MAZ_STANDARD_IA：低频存储（多 AZ）</li><li>INTELLIGENT_TIERING：智能分层存储</li><li>MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）</li></ul>
+ * @method string getRoleArn() 获取<p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
+ * @method void setRoleArn(string $RoleArn) 设置<p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
+ * @method string getExternalId() 获取<p>外部ID</p>
+ * @method void setExternalId(string $ExternalId) 设置<p>外部ID</p>
+ * @method string getTimeZone() 获取<p>用于生成投递到COS 的文件路径中的时间变量</p><p>入参限制：支持下面时区列表</p><ul><li>GMT-12:00</li><li>GMT-11:00</li><li>GMT-10:00</li><li>GMT-09:30</li><li>GMT-09:00</li><li>GMT-08:00</li><li>GMT-07:00</li><li>GMT-06:00</li><li>GMT-05:00</li><li>GMT-04:00</li><li>GMT-03:30</li><li>GMT-03:00</li><li>GMT-02:00</li><li>GMT-01:00</li><li>GMT+00:00</li><li>GMT+01:00</li><li>GMT+02:00</li><li>GMT+03:30</li><li>GMT+04:00</li><li>GMT+04:30</li><li>GMT+05:00</li><li>GMT+05:30</li><li>GMT+05:45</li><li>GMT+06:00</li><li>GMT+06:30</li><li>GMT+07:00</li><li>GMT+08:00</li><li>GMT+09:00</li><li>GMT+09:30</li><li>GMT+10:00</li><li>GMT+10:30</li><li>GMT+11:00</li><li>GMT+11:30</li><li>GMT+12:00</li><li>GMT+12:45</li><li>GMT+13:00</li><li>GMT+14:00</li><li>UTC-11:00</li><li>UTC-10:00</li><li>UTC-09:00</li><li>UTC-08:00</li><li>UTC-12:00</li><li>UTC-07:00</li><li>UTC-06:00</li><li>UTC-05:00</li><li>UTC-04:30</li><li>UTC-04:00</li><li>UTC-03:30</li><li>UTC-03:00</li><li>UTC-02:00</li><li>UTC-01:00</li><li>UTC+00:00</li><li>UTC+01:00</li><li>UTC+02:00</li><li>UTC+03:00</li><li>UTC+03:30</li><li>UTC+04:00</li><li>UTC+04:30</li><li>UTC+05:00</li><li>UTC+05:45</li><li>UTC+06:00</li><li>UTC+06:30</li><li>UTC+07:00</li><li>UTC+08:00</li><li>UTC+09:00</li><li>UTC+09:30</li><li>UTC+10:00</li><li>UTC+11:00</li><li>UTC+12:00</li><li>UTC+13:00</li></ul>
+ * @method void setTimeZone(string $TimeZone) 设置<p>用于生成投递到COS 的文件路径中的时间变量</p><p>入参限制：支持下面时区列表</p><ul><li>GMT-12:00</li><li>GMT-11:00</li><li>GMT-10:00</li><li>GMT-09:30</li><li>GMT-09:00</li><li>GMT-08:00</li><li>GMT-07:00</li><li>GMT-06:00</li><li>GMT-05:00</li><li>GMT-04:00</li><li>GMT-03:30</li><li>GMT-03:00</li><li>GMT-02:00</li><li>GMT-01:00</li><li>GMT+00:00</li><li>GMT+01:00</li><li>GMT+02:00</li><li>GMT+03:30</li><li>GMT+04:00</li><li>GMT+04:30</li><li>GMT+05:00</li><li>GMT+05:30</li><li>GMT+05:45</li><li>GMT+06:00</li><li>GMT+06:30</li><li>GMT+07:00</li><li>GMT+08:00</li><li>GMT+09:00</li><li>GMT+09:30</li><li>GMT+10:00</li><li>GMT+10:30</li><li>GMT+11:00</li><li>GMT+11:30</li><li>GMT+12:00</li><li>GMT+12:45</li><li>GMT+13:00</li><li>GMT+14:00</li><li>UTC-11:00</li><li>UTC-10:00</li><li>UTC-09:00</li><li>UTC-08:00</li><li>UTC-12:00</li><li>UTC-07:00</li><li>UTC-06:00</li><li>UTC-05:00</li><li>UTC-04:30</li><li>UTC-04:00</li><li>UTC-03:30</li><li>UTC-03:00</li><li>UTC-02:00</li><li>UTC-01:00</li><li>UTC+00:00</li><li>UTC+01:00</li><li>UTC+02:00</li><li>UTC+03:00</li><li>UTC+03:30</li><li>UTC+04:00</li><li>UTC+04:30</li><li>UTC+05:00</li><li>UTC+05:45</li><li>UTC+06:00</li><li>UTC+06:30</li><li>UTC+07:00</li><li>UTC+08:00</li><li>UTC+09:00</li><li>UTC+09:30</li><li>UTC+10:00</li><li>UTC+11:00</li><li>UTC+12:00</li><li>UTC+13:00</li></ul>
+ * @method string getDSLFilter() 获取<p>预过滤处理-对写入COS原始数据进行预过滤处理</p>
+ * @method void setDSLFilter(string $DSLFilter) 设置<p>预过滤处理-对写入COS原始数据进行预过滤处理</p>
  */
 class CreateShipperRequest extends AbstractModel
 {
     /**
-     * @var string 创建的投递规则所属的日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * @var string <p>创建的投递规则所属的日志主题Id。</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
      */
     public $TopicId;
 
     /**
-     * @var string COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	
-
-- 通过[GET Service（List Buckets）](https://cloud.tencent.com/document/product/436/8291)获取COS存储桶。
+     * @var string <p>COS存储桶，详见产品支持的<a href="https://cloud.tencent.com/document/product/436/13312">存储桶命名规范</a>。    </p><ul><li>通过<a href="https://cloud.tencent.com/document/product/436/8291">GET Service（List Buckets）</a>获取COS存储桶。</li></ul>
      */
     public $Bucket;
 
     /**
-     * @var string 投递规则投递的新的目录前缀。
-- 仅支持0-9A-Za-z-_/
-- 最大支持256个字符
+     * @var string <p>投递规则投递的新的目录前缀。</p><ul><li>仅支持0-9A-Za-z-_/</li><li>最大支持256个字符</li></ul>
      */
     public $Prefix;
 
     /**
-     * @var string 投递规则的名字。最大支持255个字符
+     * @var string <p>投递规则的名字。最大支持255个字符</p>
      */
     public $ShipperName;
 
     /**
-     * @var integer 投递的时间间隔，单位 秒，默认300，范围 300-900
+     * @var integer <p>投递的时间间隔，单位 秒，默认300，范围 300-900</p>
      */
     public $Interval;
 
     /**
-     * @var integer 投递的文件的最大值，单位 MB，默认256，范围 5-256
+     * @var integer <p>投递的文件的最大值，单位 MB，默认256，范围 5-256</p>
      */
     public $MaxSize;
 
     /**
-     * @var array 投递日志的过滤规则，匹配的日志进行投递，各rule之间是and关系，最多5个，数组为空则表示不过滤而全部投递
+     * @var array <p>投递日志的过滤规则，匹配的日志进行投递，各rule之间是and关系，最多5个，数组为空则表示不过滤而全部投递</p>
      */
     public $FilterRules;
 
     /**
-     * @var string 投递日志的分区规则，支持strftime的时间格式表示
+     * @var string <p>投递日志的分区规则，支持strftime的时间格式表示</p>
      */
     public $Partition;
 
     /**
-     * @var CompressInfo 投递日志的压缩配置
+     * @var CompressInfo <p>投递日志的压缩配置</p>
      */
     public $Compress;
 
     /**
-     * @var ContentInfo 投递日志的内容格式配置
+     * @var ContentInfo <p>投递日志的内容格式配置</p>
      */
     public $Content;
 
     /**
-     * @var integer 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+     * @var integer <p>投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）</p>
      */
     public $FilenameMode;
 
     /**
-     * @var integer 投递数据范围的开始时间点（秒级时间戳），不能超出日志主题的生命周期起点。
-如果用户不填写，默认为用户新建投递任务的时间。
+     * @var integer <p>投递数据范围的开始时间点（秒级时间戳），不能超出日志主题的生命周期起点。<br>如果用户不填写，默认为用户新建投递任务的时间。</p>
      */
     public $StartTime;
 
     /**
-     * @var integer 投递数据范围的结束时间点（秒级时间戳），不能填写未来时间。
-如果用户不填写，默认为持续投递，即无限。
+     * @var integer <p>投递数据范围的结束时间点（秒级时间戳），不能填写未来时间。<br>如果用户不填写，默认为持续投递，即无限。</p>
      */
     public $EndTime;
 
     /**
-     * @var string 对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
-参考值有：
-
-- STANDARD：标准存储
-- STANDARD_IA：低频存储
-- ARCHIVE：归档存储
-- DEEP_ARCHIVE：深度归档存储
-- MAZ_STANDARD：标准存储（多 AZ）
-- MAZ_STANDARD_IA：低频存储（多 AZ）
-- INTELLIGENT_TIERING：智能分层存储
-- MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
+     * @var string <p>对象存储类型，默认值为 STANDARD。枚举值请参见<a href="https://cloud.tencent.com/document/product/436/33417"> 存储类型概述</a> 文档。<br>参考值有：</p><ul><li>STANDARD：标准存储</li><li>STANDARD_IA：低频存储</li><li>ARCHIVE：归档存储</li><li>DEEP_ARCHIVE：深度归档存储</li><li>MAZ_STANDARD：标准存储（多 AZ）</li><li>MAZ_STANDARD_IA：低频存储（多 AZ）</li><li>INTELLIGENT_TIERING：智能分层存储</li><li>MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）</li></ul>
      */
     public $StorageType;
 
     /**
-     * @var string 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     * @var string <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
      */
     public $RoleArn;
 
     /**
-     * @var string 外部ID
+     * @var string <p>外部ID</p>
      */
     public $ExternalId;
 
     /**
-     * @param string $TopicId 创建的投递规则所属的日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-     * @param string $Bucket COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	
+     * @var string <p>用于生成投递到COS 的文件路径中的时间变量</p><p>入参限制：支持下面时区列表</p><ul><li>GMT-12:00</li><li>GMT-11:00</li><li>GMT-10:00</li><li>GMT-09:30</li><li>GMT-09:00</li><li>GMT-08:00</li><li>GMT-07:00</li><li>GMT-06:00</li><li>GMT-05:00</li><li>GMT-04:00</li><li>GMT-03:30</li><li>GMT-03:00</li><li>GMT-02:00</li><li>GMT-01:00</li><li>GMT+00:00</li><li>GMT+01:00</li><li>GMT+02:00</li><li>GMT+03:30</li><li>GMT+04:00</li><li>GMT+04:30</li><li>GMT+05:00</li><li>GMT+05:30</li><li>GMT+05:45</li><li>GMT+06:00</li><li>GMT+06:30</li><li>GMT+07:00</li><li>GMT+08:00</li><li>GMT+09:00</li><li>GMT+09:30</li><li>GMT+10:00</li><li>GMT+10:30</li><li>GMT+11:00</li><li>GMT+11:30</li><li>GMT+12:00</li><li>GMT+12:45</li><li>GMT+13:00</li><li>GMT+14:00</li><li>UTC-11:00</li><li>UTC-10:00</li><li>UTC-09:00</li><li>UTC-08:00</li><li>UTC-12:00</li><li>UTC-07:00</li><li>UTC-06:00</li><li>UTC-05:00</li><li>UTC-04:30</li><li>UTC-04:00</li><li>UTC-03:30</li><li>UTC-03:00</li><li>UTC-02:00</li><li>UTC-01:00</li><li>UTC+00:00</li><li>UTC+01:00</li><li>UTC+02:00</li><li>UTC+03:00</li><li>UTC+03:30</li><li>UTC+04:00</li><li>UTC+04:30</li><li>UTC+05:00</li><li>UTC+05:45</li><li>UTC+06:00</li><li>UTC+06:30</li><li>UTC+07:00</li><li>UTC+08:00</li><li>UTC+09:00</li><li>UTC+09:30</li><li>UTC+10:00</li><li>UTC+11:00</li><li>UTC+12:00</li><li>UTC+13:00</li></ul>
+     */
+    public $TimeZone;
 
-- 通过[GET Service（List Buckets）](https://cloud.tencent.com/document/product/436/8291)获取COS存储桶。
-     * @param string $Prefix 投递规则投递的新的目录前缀。
-- 仅支持0-9A-Za-z-_/
-- 最大支持256个字符
-     * @param string $ShipperName 投递规则的名字。最大支持255个字符
-     * @param integer $Interval 投递的时间间隔，单位 秒，默认300，范围 300-900
-     * @param integer $MaxSize 投递的文件的最大值，单位 MB，默认256，范围 5-256
-     * @param array $FilterRules 投递日志的过滤规则，匹配的日志进行投递，各rule之间是and关系，最多5个，数组为空则表示不过滤而全部投递
-     * @param string $Partition 投递日志的分区规则，支持strftime的时间格式表示
-     * @param CompressInfo $Compress 投递日志的压缩配置
-     * @param ContentInfo $Content 投递日志的内容格式配置
-     * @param integer $FilenameMode 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
-     * @param integer $StartTime 投递数据范围的开始时间点（秒级时间戳），不能超出日志主题的生命周期起点。
-如果用户不填写，默认为用户新建投递任务的时间。
-     * @param integer $EndTime 投递数据范围的结束时间点（秒级时间戳），不能填写未来时间。
-如果用户不填写，默认为持续投递，即无限。
-     * @param string $StorageType 对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
-参考值有：
+    /**
+     * @var string <p>预过滤处理-对写入COS原始数据进行预过滤处理</p>
+     */
+    public $DSLFilter;
 
-- STANDARD：标准存储
-- STANDARD_IA：低频存储
-- ARCHIVE：归档存储
-- DEEP_ARCHIVE：深度归档存储
-- MAZ_STANDARD：标准存储（多 AZ）
-- MAZ_STANDARD_IA：低频存储（多 AZ）
-- INTELLIGENT_TIERING：智能分层存储
-- MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
-     * @param string $RoleArn 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
-     * @param string $ExternalId 外部ID
+    /**
+     * @param string $TopicId <p>创建的投递规则所属的日志主题Id。</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
+     * @param string $Bucket <p>COS存储桶，详见产品支持的<a href="https://cloud.tencent.com/document/product/436/13312">存储桶命名规范</a>。    </p><ul><li>通过<a href="https://cloud.tencent.com/document/product/436/8291">GET Service（List Buckets）</a>获取COS存储桶。</li></ul>
+     * @param string $Prefix <p>投递规则投递的新的目录前缀。</p><ul><li>仅支持0-9A-Za-z-_/</li><li>最大支持256个字符</li></ul>
+     * @param string $ShipperName <p>投递规则的名字。最大支持255个字符</p>
+     * @param integer $Interval <p>投递的时间间隔，单位 秒，默认300，范围 300-900</p>
+     * @param integer $MaxSize <p>投递的文件的最大值，单位 MB，默认256，范围 5-256</p>
+     * @param array $FilterRules <p>投递日志的过滤规则，匹配的日志进行投递，各rule之间是and关系，最多5个，数组为空则表示不过滤而全部投递</p>
+     * @param string $Partition <p>投递日志的分区规则，支持strftime的时间格式表示</p>
+     * @param CompressInfo $Compress <p>投递日志的压缩配置</p>
+     * @param ContentInfo $Content <p>投递日志的内容格式配置</p>
+     * @param integer $FilenameMode <p>投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）</p>
+     * @param integer $StartTime <p>投递数据范围的开始时间点（秒级时间戳），不能超出日志主题的生命周期起点。<br>如果用户不填写，默认为用户新建投递任务的时间。</p>
+     * @param integer $EndTime <p>投递数据范围的结束时间点（秒级时间戳），不能填写未来时间。<br>如果用户不填写，默认为持续投递，即无限。</p>
+     * @param string $StorageType <p>对象存储类型，默认值为 STANDARD。枚举值请参见<a href="https://cloud.tencent.com/document/product/436/33417"> 存储类型概述</a> 文档。<br>参考值有：</p><ul><li>STANDARD：标准存储</li><li>STANDARD_IA：低频存储</li><li>ARCHIVE：归档存储</li><li>DEEP_ARCHIVE：深度归档存储</li><li>MAZ_STANDARD：标准存储（多 AZ）</li><li>MAZ_STANDARD_IA：低频存储（多 AZ）</li><li>INTELLIGENT_TIERING：智能分层存储</li><li>MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）</li></ul>
+     * @param string $RoleArn <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
+     * @param string $ExternalId <p>外部ID</p>
+     * @param string $TimeZone <p>用于生成投递到COS 的文件路径中的时间变量</p><p>入参限制：支持下面时区列表</p><ul><li>GMT-12:00</li><li>GMT-11:00</li><li>GMT-10:00</li><li>GMT-09:30</li><li>GMT-09:00</li><li>GMT-08:00</li><li>GMT-07:00</li><li>GMT-06:00</li><li>GMT-05:00</li><li>GMT-04:00</li><li>GMT-03:30</li><li>GMT-03:00</li><li>GMT-02:00</li><li>GMT-01:00</li><li>GMT+00:00</li><li>GMT+01:00</li><li>GMT+02:00</li><li>GMT+03:30</li><li>GMT+04:00</li><li>GMT+04:30</li><li>GMT+05:00</li><li>GMT+05:30</li><li>GMT+05:45</li><li>GMT+06:00</li><li>GMT+06:30</li><li>GMT+07:00</li><li>GMT+08:00</li><li>GMT+09:00</li><li>GMT+09:30</li><li>GMT+10:00</li><li>GMT+10:30</li><li>GMT+11:00</li><li>GMT+11:30</li><li>GMT+12:00</li><li>GMT+12:45</li><li>GMT+13:00</li><li>GMT+14:00</li><li>UTC-11:00</li><li>UTC-10:00</li><li>UTC-09:00</li><li>UTC-08:00</li><li>UTC-12:00</li><li>UTC-07:00</li><li>UTC-06:00</li><li>UTC-05:00</li><li>UTC-04:30</li><li>UTC-04:00</li><li>UTC-03:30</li><li>UTC-03:00</li><li>UTC-02:00</li><li>UTC-01:00</li><li>UTC+00:00</li><li>UTC+01:00</li><li>UTC+02:00</li><li>UTC+03:00</li><li>UTC+03:30</li><li>UTC+04:00</li><li>UTC+04:30</li><li>UTC+05:00</li><li>UTC+05:45</li><li>UTC+06:00</li><li>UTC+06:30</li><li>UTC+07:00</li><li>UTC+08:00</li><li>UTC+09:00</li><li>UTC+09:30</li><li>UTC+10:00</li><li>UTC+11:00</li><li>UTC+12:00</li><li>UTC+13:00</li></ul>
+     * @param string $DSLFilter <p>预过滤处理-对写入COS原始数据进行预过滤处理</p>
      */
     function __construct()
     {
@@ -303,6 +251,14 @@ class CreateShipperRequest extends AbstractModel
 
         if (array_key_exists("ExternalId",$param) and $param["ExternalId"] !== null) {
             $this->ExternalId = $param["ExternalId"];
+        }
+
+        if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
+            $this->TimeZone = $param["TimeZone"];
+        }
+
+        if (array_key_exists("DSLFilter",$param) and $param["DSLFilter"] !== null) {
+            $this->DSLFilter = $param["DSLFilter"];
         }
     }
 }

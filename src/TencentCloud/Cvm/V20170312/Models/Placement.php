@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostIds(array $HostIds) 设置实例所属的专用宿主机ID列表，仅用于入参。如果您有购买专用宿主机并且指定了该参数，则您购买的实例就会随机的部署在这些专用宿主机上。该参数可以通过调用 [DescribeHosts](https://cloud.tencent.com/document/api/213/16474) 的返回值中的 `HostId` 字段来获取。
  * @method string getHostId() 获取实例所属的专用宿主机ID，仅用于出参。
  * @method void setHostId(string $HostId) 设置实例所属的专用宿主机ID，仅用于出参。
+ * @method string getDedicatedResourcePackTenancy() 获取专有资源预扣策略。取值范围：<li>ResourcePool：使用实例资源池进行资源预扣</li>
+ * @method void setDedicatedResourcePackTenancy(string $DedicatedResourcePackTenancy) 设置专有资源预扣策略。取值范围：<li>ResourcePool：使用实例资源池进行资源预扣</li>
+ * @method array getDedicatedResourcePackIds() 获取专有预扣资源ID列表。形如：rpp-7eumgm3l。通过指定专有预扣资源创建实例时，必须同时指定匹配的DedicatedResourcePackTenancy。
+ * @method void setDedicatedResourcePackIds(array $DedicatedResourcePackIds) 设置专有预扣资源ID列表。形如：rpp-7eumgm3l。通过指定专有预扣资源创建实例时，必须同时指定匹配的DedicatedResourcePackTenancy。
  * @method string getRackId() 获取实例所属的实例资源池机架ID，仅用于出参。
  * @method void setRackId(string $RackId) 设置实例所属的实例资源池机架ID，仅用于出参。
  */
@@ -54,6 +58,16 @@ class Placement extends AbstractModel
     public $HostId;
 
     /**
+     * @var string 专有资源预扣策略。取值范围：<li>ResourcePool：使用实例资源池进行资源预扣</li>
+     */
+    public $DedicatedResourcePackTenancy;
+
+    /**
+     * @var array 专有预扣资源ID列表。形如：rpp-7eumgm3l。通过指定专有预扣资源创建实例时，必须同时指定匹配的DedicatedResourcePackTenancy。
+     */
+    public $DedicatedResourcePackIds;
+
+    /**
      * @var string 实例所属的实例资源池机架ID，仅用于出参。
      */
     public $RackId;
@@ -63,6 +77,8 @@ class Placement extends AbstractModel
      * @param integer $ProjectId 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 `ProjectId` 字段来获取。默认取值0，表示默认项目。
      * @param array $HostIds 实例所属的专用宿主机ID列表，仅用于入参。如果您有购买专用宿主机并且指定了该参数，则您购买的实例就会随机的部署在这些专用宿主机上。该参数可以通过调用 [DescribeHosts](https://cloud.tencent.com/document/api/213/16474) 的返回值中的 `HostId` 字段来获取。
      * @param string $HostId 实例所属的专用宿主机ID，仅用于出参。
+     * @param string $DedicatedResourcePackTenancy 专有资源预扣策略。取值范围：<li>ResourcePool：使用实例资源池进行资源预扣</li>
+     * @param array $DedicatedResourcePackIds 专有预扣资源ID列表。形如：rpp-7eumgm3l。通过指定专有预扣资源创建实例时，必须同时指定匹配的DedicatedResourcePackTenancy。
      * @param string $RackId 实例所属的实例资源池机架ID，仅用于出参。
      */
     function __construct()
@@ -92,6 +108,14 @@ class Placement extends AbstractModel
 
         if (array_key_exists("HostId",$param) and $param["HostId"] !== null) {
             $this->HostId = $param["HostId"];
+        }
+
+        if (array_key_exists("DedicatedResourcePackTenancy",$param) and $param["DedicatedResourcePackTenancy"] !== null) {
+            $this->DedicatedResourcePackTenancy = $param["DedicatedResourcePackTenancy"];
+        }
+
+        if (array_key_exists("DedicatedResourcePackIds",$param) and $param["DedicatedResourcePackIds"] !== null) {
+            $this->DedicatedResourcePackIds = $param["DedicatedResourcePackIds"];
         }
 
         if (array_key_exists("RackId",$param) and $param["RackId"] !== null) {

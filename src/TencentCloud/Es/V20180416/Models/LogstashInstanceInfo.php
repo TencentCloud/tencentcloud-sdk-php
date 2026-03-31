@@ -94,6 +94,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeployMode(integer $DeployMode) 设置部署模式，0：单可用区、1：多可用区
  * @method array getMultiZoneInfo() 获取多可用区部署时可用区的详细信息
  * @method void setMultiZoneInfo(array $MultiZoneInfo) 设置多可用区部署时可用区的详细信息
+ * @method string getUserDnsIp() 获取客户自定义dns配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserDnsIp(string $UserDnsIp) 设置客户自定义dns配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LogstashInstanceInfo extends AbstractModel
 {
@@ -259,6 +263,12 @@ class LogstashInstanceInfo extends AbstractModel
     public $MultiZoneInfo;
 
     /**
+     * @var string 客户自定义dns配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserDnsIp;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 地域
@@ -296,6 +306,8 @@ class LogstashInstanceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DeployMode 部署模式，0：单可用区、1：多可用区
      * @param array $MultiZoneInfo 多可用区部署时可用区的详细信息
+     * @param string $UserDnsIp 客户自定义dns配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -453,6 +465,10 @@ class LogstashInstanceInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->MultiZoneInfo, $obj);
             }
+        }
+
+        if (array_key_exists("UserDnsIp",$param) and $param["UserDnsIp"] !== null) {
+            $this->UserDnsIp = $param["UserDnsIp"];
         }
     }
 }

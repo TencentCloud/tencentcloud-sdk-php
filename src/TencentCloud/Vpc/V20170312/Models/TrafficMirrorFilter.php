@@ -30,6 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSrcPort(string $SrcPort) 设置过滤规则的源端口，默认值1-65535
  * @method string getDstPort() 获取过滤规则的目的端口，默认值1-65535
  * @method void setDstPort(string $DstPort) 设置过滤规则的目的端口，默认值1-65535
+ * @method string getTrafficMirrorFilterRuleId() 获取流量镜像过滤规则唯一ID。
+ * @method void setTrafficMirrorFilterRuleId(string $TrafficMirrorFilterRuleId) 设置流量镜像过滤规则唯一ID。
+ * @method integer getPriority() 获取流量镜像过滤规则优先级。
+ * @method void setPriority(integer $Priority) 设置流量镜像过滤规则优先级。
+ * @method string getAction() 获取流量镜像过滤规则策略，支持类型："ACCEPT", "DROP"。
+ * @method void setAction(string $Action) 设置流量镜像过滤规则策略，支持类型："ACCEPT", "DROP"。
+ * @method string getDescription() 获取流量镜像过滤规则描述。
+ * @method void setDescription(string $Description) 设置流量镜像过滤规则描述。
+ * @method string getCreatedTime() 获取创建时间。
+ * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
  */
 class TrafficMirrorFilter extends AbstractModel
 {
@@ -59,11 +69,41 @@ class TrafficMirrorFilter extends AbstractModel
     public $DstPort;
 
     /**
+     * @var string 流量镜像过滤规则唯一ID。
+     */
+    public $TrafficMirrorFilterRuleId;
+
+    /**
+     * @var integer 流量镜像过滤规则优先级。
+     */
+    public $Priority;
+
+    /**
+     * @var string 流量镜像过滤规则策略，支持类型："ACCEPT", "DROP"。
+     */
+    public $Action;
+
+    /**
+     * @var string 流量镜像过滤规则描述。
+     */
+    public $Description;
+
+    /**
+     * @var string 创建时间。
+     */
+    public $CreatedTime;
+
+    /**
      * @param string $SrcNet 过滤规则的源网段
      * @param string $DstNet 过滤规则的目的网段
      * @param string $Protocol 过滤规则的协议
      * @param string $SrcPort 过滤规则的源端口，默认值1-65535
      * @param string $DstPort 过滤规则的目的端口，默认值1-65535
+     * @param string $TrafficMirrorFilterRuleId 流量镜像过滤规则唯一ID。
+     * @param integer $Priority 流量镜像过滤规则优先级。
+     * @param string $Action 流量镜像过滤规则策略，支持类型："ACCEPT", "DROP"。
+     * @param string $Description 流量镜像过滤规则描述。
+     * @param string $CreatedTime 创建时间。
      */
     function __construct()
     {
@@ -96,6 +136,26 @@ class TrafficMirrorFilter extends AbstractModel
 
         if (array_key_exists("DstPort",$param) and $param["DstPort"] !== null) {
             $this->DstPort = $param["DstPort"];
+        }
+
+        if (array_key_exists("TrafficMirrorFilterRuleId",$param) and $param["TrafficMirrorFilterRuleId"] !== null) {
+            $this->TrafficMirrorFilterRuleId = $param["TrafficMirrorFilterRuleId"];
+        }
+
+        if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
+            $this->Priority = $param["Priority"];
+        }
+
+        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
+            $this->Action = $param["Action"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
+            $this->CreatedTime = $param["CreatedTime"];
         }
     }
 }

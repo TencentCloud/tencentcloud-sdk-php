@@ -48,12 +48,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBusiness(string $Business) 设置使用havip的业务标识。
  * @method array getHaVipAssociationSet() 获取`HAVIP`的飘移范围。
  * @method void setHaVipAssociationSet(array $HaVipAssociationSet) 设置`HAVIP`的飘移范围。
- * @method boolean getCheckAssociate() 获取是否开启`HAVIP`的飘移范围校验。
- * @method void setCheckAssociate(boolean $CheckAssociate) 设置是否开启`HAVIP`的飘移范围校验。
+ * @method boolean getCheckAssociate() 获取是否开启`HAVIP`的漂移范围校验。
+ * @method void setCheckAssociate(boolean $CheckAssociate) 设置是否开启`HAVIP`的漂移范围校验。
  * @method string getCdcId() 获取CDC实例ID。
  * @method void setCdcId(string $CdcId) 设置CDC实例ID。
- * @method string getFlushedTime() 获取HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
- * @method void setFlushedTime(string $FlushedTime) 设置HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
+ * @method string getFlushedTime() 获取HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
+ * @method void setFlushedTime(string $FlushedTime) 设置HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
  * @method array getTagSet() 获取标签键值对。	
  * @method void setTagSet(array $TagSet) 设置标签键值对。	
  */
@@ -122,7 +122,7 @@ class HaVip extends AbstractModel
     public $HaVipAssociationSet;
 
     /**
-     * @var boolean 是否开启`HAVIP`的飘移范围校验。
+     * @var boolean 是否开启`HAVIP`的漂移范围校验。
      */
     public $CheckAssociate;
 
@@ -132,7 +132,7 @@ class HaVip extends AbstractModel
     public $CdcId;
 
     /**
-     * @var string HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
+     * @var string HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
      */
     public $FlushedTime;
 
@@ -156,9 +156,9 @@ class HaVip extends AbstractModel
      * @param string $CreatedTime 创建时间。
      * @param string $Business 使用havip的业务标识。
      * @param array $HaVipAssociationSet `HAVIP`的飘移范围。
-     * @param boolean $CheckAssociate 是否开启`HAVIP`的飘移范围校验。
+     * @param boolean $CheckAssociate 是否开启`HAVIP`的漂移范围校验。
      * @param string $CdcId CDC实例ID。
-     * @param string $FlushedTime HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
+     * @param string $FlushedTime HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
      * @param array $TagSet 标签键值对。	
      */
     function __construct()

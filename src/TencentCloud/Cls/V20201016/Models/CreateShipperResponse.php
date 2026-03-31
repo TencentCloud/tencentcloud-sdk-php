@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateShipper返回参数结构体
  *
- * @method string getShipperId() 获取投递任务ID
- * @method void setShipperId(string $ShipperId) 设置投递任务ID
+ * @method string getShipperId() 获取<p>投递任务ID</p>
+ * @method void setShipperId(string $ShipperId) 设置<p>投递任务ID</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateShipperResponse extends AbstractModel
 {
     /**
-     * @var string 投递任务ID
+     * @var string <p>投递任务ID</p>
      */
     public $ShipperId;
 
@@ -38,7 +38,7 @@ class CreateShipperResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ShipperId 投递任务ID
+     * @param string $ShipperId <p>投递任务ID</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

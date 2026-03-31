@@ -20,71 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MobileStatus返回参数结构体
  *
- * @method string getResult() 获取认证结果码，收费情况如下。
-- 收费结果码：
-0：成功。
-
-- 不收费结果码：
--1：未查询到结果。
--2：手机号格式不正确。
--3：验证中心服务繁忙。
--4：认证次数超过当日限制，请次日重试。
- * @method void setResult(string $Result) 设置认证结果码，收费情况如下。
-- 收费结果码：
-0：成功。
-
-- 不收费结果码：
--1：未查询到结果。
--2：手机号格式不正确。
--3：验证中心服务繁忙。
--4：认证次数超过当日限制，请次日重试。
- * @method string getDescription() 获取业务结果描述。
- * @method void setDescription(string $Description) 设置业务结果描述。
- * @method integer getStatusCode() 获取状态码。
-- 取值范围：
-0：正常。
-1：停机。
-2：销号。
-4：不在网。
-99：未知状态。
- * @method void setStatusCode(integer $StatusCode) 设置状态码。
-- 取值范围：
-0：正常。
-1：停机。
-2：销号。
-4：不在网。
-99：未知状态。
+ * @method string getResult() 获取<p>认证结果码，收费情况如下。</p><ul><li><p>收费结果码：<br>0：成功。</p></li><li><p>不收费结果码：<br>-1：未查询到结果。<br>-2：手机号格式不正确。<br>-3：验证中心服务繁忙。<br>-4：认证次数超过当日限制，请次日重试。</p></li></ul>
+ * @method void setResult(string $Result) 设置<p>认证结果码，收费情况如下。</p><ul><li><p>收费结果码：<br>0：成功。</p></li><li><p>不收费结果码：<br>-1：未查询到结果。<br>-2：手机号格式不正确。<br>-3：验证中心服务繁忙。<br>-4：认证次数超过当日限制，请次日重试。</p></li></ul>
+ * @method string getDescription() 获取<p>业务结果描述。</p>
+ * @method void setDescription(string $Description) 设置<p>业务结果描述。</p>
+ * @method integer getStatusCode() 获取<p>状态码。- 取值范围：0：正常。1：停机。2：销号。4：不在网。5：在网但不可用 。99：未知状态。</p>
+ * @method void setStatusCode(integer $StatusCode) 设置<p>状态码。- 取值范围：0：正常。1：停机。2：销号。4：不在网。5：在网但不可用 。99：未知状态。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class MobileStatusResponse extends AbstractModel
 {
     /**
-     * @var string 认证结果码，收费情况如下。
-- 收费结果码：
-0：成功。
-
-- 不收费结果码：
--1：未查询到结果。
--2：手机号格式不正确。
--3：验证中心服务繁忙。
--4：认证次数超过当日限制，请次日重试。
+     * @var string <p>认证结果码，收费情况如下。</p><ul><li><p>收费结果码：<br>0：成功。</p></li><li><p>不收费结果码：<br>-1：未查询到结果。<br>-2：手机号格式不正确。<br>-3：验证中心服务繁忙。<br>-4：认证次数超过当日限制，请次日重试。</p></li></ul>
      */
     public $Result;
 
     /**
-     * @var string 业务结果描述。
+     * @var string <p>业务结果描述。</p>
      */
     public $Description;
 
     /**
-     * @var integer 状态码。
-- 取值范围：
-0：正常。
-1：停机。
-2：销号。
-4：不在网。
-99：未知状态。
+     * @var integer <p>状态码。- 取值范围：0：正常。1：停机。2：销号。4：不在网。5：在网但不可用 。99：未知状态。</p>
      */
     public $StatusCode;
 
@@ -94,23 +52,9 @@ class MobileStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Result 认证结果码，收费情况如下。
-- 收费结果码：
-0：成功。
-
-- 不收费结果码：
--1：未查询到结果。
--2：手机号格式不正确。
--3：验证中心服务繁忙。
--4：认证次数超过当日限制，请次日重试。
-     * @param string $Description 业务结果描述。
-     * @param integer $StatusCode 状态码。
-- 取值范围：
-0：正常。
-1：停机。
-2：销号。
-4：不在网。
-99：未知状态。
+     * @param string $Result <p>认证结果码，收费情况如下。</p><ul><li><p>收费结果码：<br>0：成功。</p></li><li><p>不收费结果码：<br>-1：未查询到结果。<br>-2：手机号格式不正确。<br>-3：验证中心服务繁忙。<br>-4：认证次数超过当日限制，请次日重试。</p></li></ul>
+     * @param string $Description <p>业务结果描述。</p>
+     * @param integer $StatusCode <p>状态码。- 取值范围：0：正常。1：停机。2：销号。4：不在网。5：在网但不可用 。99：未知状态。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

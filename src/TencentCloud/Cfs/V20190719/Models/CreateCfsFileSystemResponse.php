@@ -20,64 +20,64 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCfsFileSystem返回参数结构体
  *
- * @method string getCreationTime() 获取文件系统创建时间
- * @method void setCreationTime(string $CreationTime) 设置文件系统创建时间
- * @method string getCreationToken() 获取用户自定义文件系统名称
- * @method void setCreationToken(string $CreationToken) 设置用户自定义文件系统名称
- * @method string getFileSystemId() 获取文件系统 ID
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID
- * @method string getLifeCycleState() 获取文件系统状态，可能出现状态包括：“creating”  创建中, “create_failed” 创建失败, “available” 可用, “unserviced” 不可用, “upgrading” 升级中， “deleting” 删除中。
- * @method void setLifeCycleState(string $LifeCycleState) 设置文件系统状态，可能出现状态包括：“creating”  创建中, “create_failed” 创建失败, “available” 可用, “unserviced” 不可用, “upgrading” 升级中， “deleting” 删除中。
- * @method integer getSizeByte() 获取文件系统已使用容量大小，单位为 Byte
- * @method void setSizeByte(integer $SizeByte) 设置文件系统已使用容量大小，单位为 Byte
- * @method integer getZoneId() 获取可用区 ID
- * @method void setZoneId(integer $ZoneId) 设置可用区 ID
- * @method string getFsName() 获取用户自定义文件系统名称
- * @method void setFsName(string $FsName) 设置用户自定义文件系统名称
- * @method boolean getEncrypted() 获取文件系统是否加密
- * @method void setEncrypted(boolean $Encrypted) 设置文件系统是否加密
+ * @method string getCreationTime() 获取<p>文件系统创建时间</p>
+ * @method void setCreationTime(string $CreationTime) 设置<p>文件系统创建时间</p>
+ * @method string getCreationToken() 获取<p>用户自定义文件系统名称</p>
+ * @method void setCreationToken(string $CreationToken) 设置<p>用户自定义文件系统名称</p>
+ * @method string getFileSystemId() 获取<p>文件系统 ID</p>
+ * @method void setFileSystemId(string $FileSystemId) 设置<p>文件系统 ID</p>
+ * @method string getLifeCycleState() 获取<p>文件系统状态，可能出现状态包括：“creating”  创建中, “create_failed” 创建失败, “available” 可用, “unserviced” 不可用, “upgrading” 升级中， “deleting” 删除中。</p>
+ * @method void setLifeCycleState(string $LifeCycleState) 设置<p>文件系统状态，可能出现状态包括：“creating”  创建中, “create_failed” 创建失败, “available” 可用, “unserviced” 不可用, “upgrading” 升级中， “deleting” 删除中。</p>
+ * @method integer getSizeByte() 获取<p>文件系统已使用容量大小，单位为 Byte</p>
+ * @method void setSizeByte(integer $SizeByte) 设置<p>文件系统已使用容量大小，单位为 Byte</p>
+ * @method integer getZoneId() 获取<p>可用区 ID</p>
+ * @method void setZoneId(integer $ZoneId) 设置<p>可用区 ID</p>
+ * @method string getFsName() 获取<p>用户自定义文件系统名称</p>
+ * @method void setFsName(string $FsName) 设置<p>用户自定义文件系统名称</p>
+ * @method boolean getEncrypted() 获取<p>文件系统是否加密</p>
+ * @method void setEncrypted(boolean $Encrypted) 设置<p>文件系统是否加密</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateCfsFileSystemResponse extends AbstractModel
 {
     /**
-     * @var string 文件系统创建时间
+     * @var string <p>文件系统创建时间</p>
      */
     public $CreationTime;
 
     /**
-     * @var string 用户自定义文件系统名称
+     * @var string <p>用户自定义文件系统名称</p>
      */
     public $CreationToken;
 
     /**
-     * @var string 文件系统 ID
+     * @var string <p>文件系统 ID</p>
      */
     public $FileSystemId;
 
     /**
-     * @var string 文件系统状态，可能出现状态包括：“creating”  创建中, “create_failed” 创建失败, “available” 可用, “unserviced” 不可用, “upgrading” 升级中， “deleting” 删除中。
+     * @var string <p>文件系统状态，可能出现状态包括：“creating”  创建中, “create_failed” 创建失败, “available” 可用, “unserviced” 不可用, “upgrading” 升级中， “deleting” 删除中。</p>
      */
     public $LifeCycleState;
 
     /**
-     * @var integer 文件系统已使用容量大小，单位为 Byte
+     * @var integer <p>文件系统已使用容量大小，单位为 Byte</p>
      */
     public $SizeByte;
 
     /**
-     * @var integer 可用区 ID
+     * @var integer <p>可用区 ID</p>
      */
     public $ZoneId;
 
     /**
-     * @var string 用户自定义文件系统名称
+     * @var string <p>用户自定义文件系统名称</p>
      */
     public $FsName;
 
     /**
-     * @var boolean 文件系统是否加密
+     * @var boolean <p>文件系统是否加密</p>
      */
     public $Encrypted;
 
@@ -87,14 +87,14 @@ class CreateCfsFileSystemResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $CreationTime 文件系统创建时间
-     * @param string $CreationToken 用户自定义文件系统名称
-     * @param string $FileSystemId 文件系统 ID
-     * @param string $LifeCycleState 文件系统状态，可能出现状态包括：“creating”  创建中, “create_failed” 创建失败, “available” 可用, “unserviced” 不可用, “upgrading” 升级中， “deleting” 删除中。
-     * @param integer $SizeByte 文件系统已使用容量大小，单位为 Byte
-     * @param integer $ZoneId 可用区 ID
-     * @param string $FsName 用户自定义文件系统名称
-     * @param boolean $Encrypted 文件系统是否加密
+     * @param string $CreationTime <p>文件系统创建时间</p>
+     * @param string $CreationToken <p>用户自定义文件系统名称</p>
+     * @param string $FileSystemId <p>文件系统 ID</p>
+     * @param string $LifeCycleState <p>文件系统状态，可能出现状态包括：“creating”  创建中, “create_failed” 创建失败, “available” 可用, “unserviced” 不可用, “upgrading” 升级中， “deleting” 删除中。</p>
+     * @param integer $SizeByte <p>文件系统已使用容量大小，单位为 Byte</p>
+     * @param integer $ZoneId <p>可用区 ID</p>
+     * @param string $FsName <p>用户自定义文件系统名称</p>
+     * @param boolean $Encrypted <p>文件系统是否加密</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method UserInfo getOperator() 获取执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
  * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
- * @method string getRequirement() 获取起草要求
- * @method void setRequirement(string $Requirement) 设置起草要求
- * @method string getReferenceTemplateId() 获取参考模板文件资源id（PDF/Word格式）
- * @method void setReferenceTemplateId(string $ReferenceTemplateId) 设置参考模板文件资源id（PDF/Word格式）
- * @method array getRequirementFileIds() 获取相关规定文件资源id列表（PDF/Word格式）
- * @method void setRequirementFileIds(array $RequirementFileIds) 设置相关规定文件资源id列表（PDF/Word格式）
+ * @method string getRequirement() 获取起草要求，范围要求 5-1000 字
+ * @method void setRequirement(string $Requirement) 设置起草要求，范围要求 5-1000 字
+ * @method string getReferenceTemplateId() 获取参考模板文件资源id（PDF/Word格式），大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
+ * @method void setReferenceTemplateId(string $ReferenceTemplateId) 设置参考模板文件资源id（PDF/Word格式），大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
+ * @method array getRequirementFileIds() 获取相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
+ * @method void setRequirementFileIds(array $RequirementFileIds) 设置相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
  * @method string getContractLanguage() 获取起草合同的语言要求（zh，en）默认zh
  * @method void setContractLanguage(string $ContractLanguage) 设置起草合同的语言要求（zh，en）默认zh
  */
@@ -39,17 +39,17 @@ class CreateDraftContractByPromptsTaskRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var string 起草要求
+     * @var string 起草要求，范围要求 5-1000 字
      */
     public $Requirement;
 
     /**
-     * @var string 参考模板文件资源id（PDF/Word格式）
+     * @var string 参考模板文件资源id（PDF/Word格式），大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
      */
     public $ReferenceTemplateId;
 
     /**
-     * @var array 相关规定文件资源id列表（PDF/Word格式）
+     * @var array 相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
      */
     public $RequirementFileIds;
 
@@ -60,9 +60,9 @@ class CreateDraftContractByPromptsTaskRequest extends AbstractModel
 
     /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
-     * @param string $Requirement 起草要求
-     * @param string $ReferenceTemplateId 参考模板文件资源id（PDF/Word格式）
-     * @param array $RequirementFileIds 相关规定文件资源id列表（PDF/Word格式）
+     * @param string $Requirement 起草要求，范围要求 5-1000 字
+     * @param string $ReferenceTemplateId 参考模板文件资源id（PDF/Word格式），大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
+     * @param array $RequirementFileIds 相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
      * @param string $ContractLanguage 起草合同的语言要求（zh，en）默认zh
      */
     function __construct()

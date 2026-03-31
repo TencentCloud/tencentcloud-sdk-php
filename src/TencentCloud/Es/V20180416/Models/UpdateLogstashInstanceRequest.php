@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeNum(integer $NodeNum) 设置实例节点数量
  * @method string getYMLConfig() 获取实例YML配置
  * @method void setYMLConfig(string $YMLConfig) 设置实例YML配置
+ * @method string getUserDnsIp() 获取客户自定义dns配置
+ * @method void setUserDnsIp(string $UserDnsIp) 设置客户自定义dns配置
  * @method LogstashBindedES getBindedES() 获取实例绑定的ES集群信息
  * @method void setBindedES(LogstashBindedES $BindedES) 设置实例绑定的ES集群信息
  * @method string getInstanceName() 获取实例名称
@@ -57,6 +59,11 @@ class UpdateLogstashInstanceRequest extends AbstractModel
      * @var string 实例YML配置
      */
     public $YMLConfig;
+
+    /**
+     * @var string 客户自定义dns配置
+     */
+    public $UserDnsIp;
 
     /**
      * @var LogstashBindedES 实例绑定的ES集群信息
@@ -97,6 +104,7 @@ class UpdateLogstashInstanceRequest extends AbstractModel
      * @param string $InstanceId 实例ID
      * @param integer $NodeNum 实例节点数量
      * @param string $YMLConfig 实例YML配置
+     * @param string $UserDnsIp 客户自定义dns配置
      * @param LogstashBindedES $BindedES 实例绑定的ES集群信息
      * @param string $InstanceName 实例名称
      * @param array $ExtendedFiles 扩展文件列表
@@ -128,6 +136,10 @@ class UpdateLogstashInstanceRequest extends AbstractModel
 
         if (array_key_exists("YMLConfig",$param) and $param["YMLConfig"] !== null) {
             $this->YMLConfig = $param["YMLConfig"];
+        }
+
+        if (array_key_exists("UserDnsIp",$param) and $param["UserDnsIp"] !== null) {
+            $this->UserDnsIp = $param["UserDnsIp"];
         }
 
         if (array_key_exists("BindedES",$param) and $param["BindedES"] !== null) {

@@ -20,90 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFinanceFraudUltimate请求参数结构体
  *
- * @method string getDeviceToken() 获取客户端通过SDK获取的设备Token
- * @method void setDeviceToken(string $DeviceToken) 设置客户端通过SDK获取的设备Token
- * @method string getSceneCode() 获取使用场景。目前仅支持login-登录场景、register-注册场景
- * @method void setSceneCode(string $SceneCode) 设置使用场景。目前仅支持login-登录场景、register-注册场景
- * @method string getUserId() 获取用户唯一标识
- * @method void setUserId(string $UserId) 设置用户唯一标识
- * @method integer getEventTime() 获取事件时间戳（毫秒）
- * @method void setEventTime(integer $EventTime) 设置事件时间戳（毫秒）
- * @method integer getElapsedTime() 获取事件耗时（毫秒），例如进入登录界面到点击登录按钮耗时
- * @method void setElapsedTime(integer $ElapsedTime) 设置事件耗时（毫秒），例如进入登录界面到点击登录按钮耗时
- * @method string getWeChatOpenId() 获取微信的OpenId
- * @method void setWeChatOpenId(string $WeChatOpenId) 设置微信的OpenId
- * @method string getPhoneNumber() 获取手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5
- * @method void setPhoneNumber(string $PhoneNumber) 设置手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5
- * @method string getBizClientIp() 获取业务客户端IP
- * @method void setBizClientIp(string $BizClientIp) 设置业务客户端IP
- * @method string getQQOpenId() 获取QQ的OpenId
- * @method void setQQOpenId(string $QQOpenId) 设置QQ的OpenId
- * @method DataAuthorizationInfo getDataAuthorization() 获取数据授权信息
- * @method void setDataAuthorization(DataAuthorizationInfo $DataAuthorization) 设置数据授权信息
+ * @method string getDeviceToken() 获取<p>客户端通过SDK获取的设备Token</p>
+ * @method void setDeviceToken(string $DeviceToken) 设置<p>客户端通过SDK获取的设备Token</p>
+ * @method string getSceneCode() 获取<p>使用场景。目前仅支持login-登录场景、register-注册场景</p>
+ * @method void setSceneCode(string $SceneCode) 设置<p>使用场景。目前仅支持login-登录场景、register-注册场景</p>
+ * @method string getUserId() 获取<p>用户唯一标识</p>
+ * @method void setUserId(string $UserId) 设置<p>用户唯一标识</p>
+ * @method integer getEventTime() 获取<p>事件时间戳（毫秒）</p>
+ * @method void setEventTime(integer $EventTime) 设置<p>事件时间戳（毫秒）</p>
+ * @method integer getElapsedTime() 获取<p>事件耗时（毫秒），例如进入登录界面到点击登录按钮耗时</p>
+ * @method void setElapsedTime(integer $ElapsedTime) 设置<p>事件耗时（毫秒），例如进入登录界面到点击登录按钮耗时</p>
+ * @method string getWeChatOpenId() 获取<p>微信的OpenId</p>
+ * @method void setWeChatOpenId(string $WeChatOpenId) 设置<p>微信的OpenId</p>
+ * @method string getPhoneNumber() 获取<p>手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5</p>
+ * @method void setPhoneNumber(string $PhoneNumber) 设置<p>手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5</p>
+ * @method string getBizClientIp() 获取<p>业务客户端IP</p>
+ * @method void setBizClientIp(string $BizClientIp) 设置<p>业务客户端IP</p>
+ * @method string getQQOpenId() 获取<p>QQ的OpenId</p>
+ * @method void setQQOpenId(string $QQOpenId) 设置<p>QQ的OpenId</p>
+ * @method DataAuthorizationInfo getDataAuthorization() 获取<p>数据授权信息</p>
+ * @method void setDataAuthorization(DataAuthorizationInfo $DataAuthorization) 设置<p>数据授权信息</p>
  */
 class DescribeFinanceFraudUltimateRequest extends AbstractModel
 {
     /**
-     * @var string 客户端通过SDK获取的设备Token
+     * @var string <p>客户端通过SDK获取的设备Token</p>
      */
     public $DeviceToken;
 
     /**
-     * @var string 使用场景。目前仅支持login-登录场景、register-注册场景
+     * @var string <p>使用场景。目前仅支持login-登录场景、register-注册场景</p>
      */
     public $SceneCode;
 
     /**
-     * @var string 用户唯一标识
+     * @var string <p>用户唯一标识</p>
      */
     public $UserId;
 
     /**
-     * @var integer 事件时间戳（毫秒）
+     * @var integer <p>事件时间戳（毫秒）</p>
      */
     public $EventTime;
 
     /**
-     * @var integer 事件耗时（毫秒），例如进入登录界面到点击登录按钮耗时
+     * @var integer <p>事件耗时（毫秒），例如进入登录界面到点击登录按钮耗时</p>
      */
     public $ElapsedTime;
 
     /**
-     * @var string 微信的OpenId
+     * @var string <p>微信的OpenId</p>
      */
     public $WeChatOpenId;
 
     /**
-     * @var string 手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5
+     * @var string <p>手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5</p>
      */
     public $PhoneNumber;
 
     /**
-     * @var string 业务客户端IP
+     * @var string <p>业务客户端IP</p>
      */
     public $BizClientIp;
 
     /**
-     * @var string QQ的OpenId
+     * @var string <p>QQ的OpenId</p>
      */
     public $QQOpenId;
 
     /**
-     * @var DataAuthorizationInfo 数据授权信息
+     * @var DataAuthorizationInfo <p>数据授权信息</p>
      */
     public $DataAuthorization;
 
     /**
-     * @param string $DeviceToken 客户端通过SDK获取的设备Token
-     * @param string $SceneCode 使用场景。目前仅支持login-登录场景、register-注册场景
-     * @param string $UserId 用户唯一标识
-     * @param integer $EventTime 事件时间戳（毫秒）
-     * @param integer $ElapsedTime 事件耗时（毫秒），例如进入登录界面到点击登录按钮耗时
-     * @param string $WeChatOpenId 微信的OpenId
-     * @param string $PhoneNumber 手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5
-     * @param string $BizClientIp 业务客户端IP
-     * @param string $QQOpenId QQ的OpenId
-     * @param DataAuthorizationInfo $DataAuthorization 数据授权信息
+     * @param string $DeviceToken <p>客户端通过SDK获取的设备Token</p>
+     * @param string $SceneCode <p>使用场景。目前仅支持login-登录场景、register-注册场景</p>
+     * @param string $UserId <p>用户唯一标识</p>
+     * @param integer $EventTime <p>事件时间戳（毫秒）</p>
+     * @param integer $ElapsedTime <p>事件耗时（毫秒），例如进入登录界面到点击登录按钮耗时</p>
+     * @param string $WeChatOpenId <p>微信的OpenId</p>
+     * @param string $PhoneNumber <p>手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5</p>
+     * @param string $BizClientIp <p>业务客户端IP</p>
+     * @param string $QQOpenId <p>QQ的OpenId</p>
+     * @param DataAuthorizationInfo $DataAuthorization <p>数据授权信息</p>
      */
     function __construct()
     {

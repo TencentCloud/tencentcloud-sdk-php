@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUid(string $Uid) 设置用户Id, 不做修改
  * @method string getName() 获取用户名，用户名规则：1. 长度1-64字符 2. 只能包含大小写英文字母、数字和符号 . _ - 3. 只能以字母或数字开头 4. 不能重复，不传该字段或传空字符不修改
  * @method void setName(string $Name) 设置用户名，用户名规则：1. 长度1-64字符 2. 只能包含大小写英文字母、数字和符号 . _ - 3. 只能以字母或数字开头 4. 不能重复，不传该字段或传空字符不修改
- * @method string getType() 获取用户类型：0-内部用户、1-外部用户，默认0（内部用户），不传该字段或传空字符串不修改
- * @method void setType(string $Type) 设置用户类型：0-内部用户、1-外部用户，默认0（内部用户），不传该字段或传空字符串不修改
+ * @method string getType() 获取用户类型：internalUser-内部用户、externalUser-外部用户，不传该字段或传空字符串不修改。
+ * @method void setType(string $Type) 设置用户类型：internalUser-内部用户、externalUser-外部用户，不传该字段或传空字符串不修改。
  * @method string getPassword() 获取密码，传入Uid时密码可不传。密码规则：1. 长度8-32字符（推荐12位以上） 2. 不能以特殊字符开头 3. 至少包含以下四项中的三项：小写字母a-z、大写字母A-Z、数字0-9、特殊字符()!@#$%^&*\|?><_-，不传该字段或传空字符串不修改
  * @method void setPassword(string $Password) 设置密码，传入Uid时密码可不传。密码规则：1. 长度8-32字符（推荐12位以上） 2. 不能以特殊字符开头 3. 至少包含以下四项中的三项：小写字母a-z、大写字母A-Z、数字0-9、特殊字符()!@#$%^&*\|?><_-，不传该字段或传空字符串不修改
  * @method string getUserStatus() 获取用户状态：ACTIVE（激活）、BLOCKED（冻结），默认冻结，不传该字段或传空字符串不修改
@@ -61,7 +61,7 @@ class ModifyUserRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 用户类型：0-内部用户、1-外部用户，默认0（内部用户），不传该字段或传空字符串不修改
+     * @var string 用户类型：internalUser-内部用户、externalUser-外部用户，不传该字段或传空字符串不修改。
      */
     public $Type;
 
@@ -104,7 +104,7 @@ class ModifyUserRequest extends AbstractModel
      * @param string $EnvId 环境id
      * @param string $Uid 用户Id, 不做修改
      * @param string $Name 用户名，用户名规则：1. 长度1-64字符 2. 只能包含大小写英文字母、数字和符号 . _ - 3. 只能以字母或数字开头 4. 不能重复，不传该字段或传空字符不修改
-     * @param string $Type 用户类型：0-内部用户、1-外部用户，默认0（内部用户），不传该字段或传空字符串不修改
+     * @param string $Type 用户类型：internalUser-内部用户、externalUser-外部用户，不传该字段或传空字符串不修改。
      * @param string $Password 密码，传入Uid时密码可不传。密码规则：1. 长度8-32字符（推荐12位以上） 2. 不能以特殊字符开头 3. 至少包含以下四项中的三项：小写字母a-z、大写字母A-Z、数字0-9、特殊字符()!@#$%^&*\|?><_-，不传该字段或传空字符串不修改
      * @param string $UserStatus 用户状态：ACTIVE（激活）、BLOCKED（冻结），默认冻结，不传该字段或传空字符串不修改
      * @param string $NickName 用户昵称，长度2-64字符，不传该字段不修改，传空字符修改为空

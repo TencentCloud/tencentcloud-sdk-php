@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVport(string $Vport) 设置<p>访问实例的端口信息</p>
  * @method array getVipList() 获取<p>虚拟IP列表</p>
  * @method void setVipList(array $VipList) 设置<p>虚拟IP列表</p>
- * @method integer getStatus() 获取<p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
- * @method void setStatus(integer $Status) 设置<p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
+ * @method integer getStatus() 获取<p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败</p>
+ * @method void setStatus(integer $Status) 设置<p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败</p>
  * @method integer getBandwidth() 获取<p>实例带宽，单位Mbps</p>
  * @method void setBandwidth(integer $Bandwidth) 设置<p>实例带宽，单位Mbps</p>
  * @method integer getDiskSize() 获取<p>ckafka集群实例磁盘大小，单位G</p>
@@ -84,8 +84,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterType(string $ClusterType) 设置<p>ckafka集群实例底层集群类型</p>
  * @method array getFeatures() 获取<p>实例功能列表</p>
  * @method void setFeatures(array $Features) 设置<p>实例功能列表</p>
- * @method integer getRetentionBytes() 获取<p>实例级别消息保留大小</p>单位：byte<br>默认值：-1<br><p>实例级别消息保留大小</p>
- * @method void setRetentionBytes(integer $RetentionBytes) 设置<p>实例级别消息保留大小</p>单位：byte<br>默认值：-1<br><p>实例级别消息保留大小</p>
+ * @method integer getRetentionBytes() 获取<p>实例级别消息保留大小</p><p>单位：byte</p><p>默认值：-1</p><p>实例级别消息保留大小</p>
+ * @method void setRetentionBytes(integer $RetentionBytes) 设置<p>实例级别消息保留大小</p><p>单位：byte</p><p>默认值：-1</p><p>实例级别消息保留大小</p>
  */
 class InstanceDetail extends AbstractModel
 {
@@ -115,7 +115,7 @@ class InstanceDetail extends AbstractModel
     public $VipList;
 
     /**
-     * @var integer <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
+     * @var integer <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败</p>
      */
     public $Status;
 
@@ -250,7 +250,7 @@ class InstanceDetail extends AbstractModel
     public $Features;
 
     /**
-     * @var integer <p>实例级别消息保留大小</p>单位：byte<br>默认值：-1<br><p>实例级别消息保留大小</p>
+     * @var integer <p>实例级别消息保留大小</p><p>单位：byte</p><p>默认值：-1</p><p>实例级别消息保留大小</p>
      */
     public $RetentionBytes;
 
@@ -260,7 +260,7 @@ class InstanceDetail extends AbstractModel
      * @param string $Vip <p>访问实例的vip 信息</p>
      * @param string $Vport <p>访问实例的端口信息</p>
      * @param array $VipList <p>虚拟IP列表</p>
-     * @param integer $Status <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
+     * @param integer $Status <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败</p>
      * @param integer $Bandwidth <p>实例带宽，单位Mbps</p>
      * @param integer $DiskSize <p>ckafka集群实例磁盘大小，单位G</p>
      * @param integer $ZoneId <p>可用区域ID</p>
@@ -287,7 +287,7 @@ class InstanceDetail extends AbstractModel
      * @param integer $PublicNetwork <p>公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写</p>
      * @param string $ClusterType <p>ckafka集群实例底层集群类型</p>
      * @param array $Features <p>实例功能列表</p>
-     * @param integer $RetentionBytes <p>实例级别消息保留大小</p>单位：byte<br>默认值：-1<br><p>实例级别消息保留大小</p>
+     * @param integer $RetentionBytes <p>实例级别消息保留大小</p><p>单位：byte</p><p>默认值：-1</p><p>实例级别消息保留大小</p>
      */
     function __construct()
     {

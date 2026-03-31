@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExternalId(string $ExternalId) 设置<p>外部ID</p>
  * @method integer getTaskStatus() 获取<p>任务运行状态。支持<code>0</code>,<code>1</code>,<code>2</code></p><ul><li><code>0</code>: 停止</li><li><code>1</code>: 运行中</li><li><code>2</code>: 异常</li></ul>
  * @method void setTaskStatus(integer $TaskStatus) 设置<p>任务运行状态。支持<code>0</code>,<code>1</code>,<code>2</code></p><ul><li><code>0</code>: 停止</li><li><code>1</code>: 运行中</li><li><code>2</code>: 异常</li></ul>
+ * @method string getTimeZone() 获取<p>用于生成投递到COS 的文件路径中的时间变量</p>
+ * @method void setTimeZone(string $TimeZone) 设置<p>用于生成投递到COS 的文件路径中的时间变量</p>
+ * @method string getDSLFilter() 获取<p>预过滤处理-对写入COS原始数据进行预过滤处理</p>
+ * @method void setDSLFilter(string $DSLFilter) 设置<p>预过滤处理-对写入COS原始数据进行预过滤处理</p>
  */
 class ShipperInfo extends AbstractModel
 {
@@ -185,6 +189,16 @@ class ShipperInfo extends AbstractModel
     public $TaskStatus;
 
     /**
+     * @var string <p>用于生成投递到COS 的文件路径中的时间变量</p>
+     */
+    public $TimeZone;
+
+    /**
+     * @var string <p>预过滤处理-对写入COS原始数据进行预过滤处理</p>
+     */
+    public $DSLFilter;
+
+    /**
      * @param string $ShipperId <p>投递规则ID</p>
      * @param string $TopicId <p>日志主题ID</p>
      * @param string $Bucket <p>投递的bucket地址</p>
@@ -208,6 +222,8 @@ class ShipperInfo extends AbstractModel
      * @param string $RoleArn <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
      * @param string $ExternalId <p>外部ID</p>
      * @param integer $TaskStatus <p>任务运行状态。支持<code>0</code>,<code>1</code>,<code>2</code></p><ul><li><code>0</code>: 停止</li><li><code>1</code>: 运行中</li><li><code>2</code>: 异常</li></ul>
+     * @param string $TimeZone <p>用于生成投递到COS 的文件路径中的时间变量</p>
+     * @param string $DSLFilter <p>预过滤处理-对写入COS原始数据进行预过滤处理</p>
      */
     function __construct()
     {
@@ -319,6 +335,14 @@ class ShipperInfo extends AbstractModel
 
         if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
             $this->TaskStatus = $param["TaskStatus"];
+        }
+
+        if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
+            $this->TimeZone = $param["TimeZone"];
+        }
+
+        if (array_key_exists("DSLFilter",$param) and $param["DSLFilter"] !== null) {
+            $this->DSLFilter = $param["DSLFilter"];
         }
     }
 }

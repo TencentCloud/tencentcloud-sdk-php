@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getImages() 获取容器镜像列表
  * @method void setImages(array $Images) 设置容器镜像列表
+ * @method string getSnapshotter() 获取容器镜像制作snapshotter
+ * @method void setSnapshotter(string $Snapshotter) 设置容器镜像制作snapshotter
  */
 class GetMostSuitableImageCacheRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class GetMostSuitableImageCacheRequest extends AbstractModel
     public $Images;
 
     /**
+     * @var string 容器镜像制作snapshotter
+     */
+    public $Snapshotter;
+
+    /**
      * @param array $Images 容器镜像列表
+     * @param string $Snapshotter 容器镜像制作snapshotter
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class GetMostSuitableImageCacheRequest extends AbstractModel
         }
         if (array_key_exists("Images",$param) and $param["Images"] !== null) {
             $this->Images = $param["Images"];
+        }
+
+        if (array_key_exists("Snapshotter",$param) and $param["Snapshotter"] !== null) {
+            $this->Snapshotter = $param["Snapshotter"];
         }
     }
 }

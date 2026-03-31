@@ -20,51 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchLog返回参数结构体
  *
- * @method string getContext() 获取透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。
-注意：
-* 仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context
- * @method void setContext(string $Context) 设置透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。
-注意：
-* 仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context
- * @method boolean getListOver() 获取符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
-注意：仅当检索分析语句(Query)不包含SQL时有效
- * @method void setListOver(boolean $ListOver) 设置符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
-注意：仅当检索分析语句(Query)不包含SQL时有效
- * @method boolean getAnalysis() 获取返回的是否为统计分析（即SQL）结果
- * @method void setAnalysis(boolean $Analysis) 设置返回的是否为统计分析（即SQL）结果
- * @method array getResults() 获取匹配检索条件的原始日志
+ * @method string getContext() 获取<p>透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。<br>注意：</p><ul><li>仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context</li></ul>
+ * @method void setContext(string $Context) 设置<p>透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。<br>注意：</p><ul><li>仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context</li></ul>
+ * @method boolean getListOver() 获取<p>符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志<br>注意：仅当检索分析语句(Query)不包含SQL时有效</p>
+ * @method void setListOver(boolean $ListOver) 设置<p>符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志<br>注意：仅当检索分析语句(Query)不包含SQL时有效</p>
+ * @method boolean getAnalysis() 获取<p>返回的是否为统计分析（即SQL）结果</p>
+ * @method void setAnalysis(boolean $Analysis) 设置<p>返回的是否为统计分析（即SQL）结果</p>
+ * @method array getResults() 获取<p>匹配检索条件的原始日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResults(array $Results) 设置匹配检索条件的原始日志
+ * @method void setResults(array $Results) 设置<p>匹配检索条件的原始日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getColNames() 获取日志统计分析结果的列名
-当UseNewAnalysis为false时生效
+ * @method array getColNames() 获取<p>日志统计分析结果的列名<br>当UseNewAnalysis为false时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setColNames(array $ColNames) 设置日志统计分析结果的列名
-当UseNewAnalysis为false时生效
+ * @method void setColNames(array $ColNames) 设置<p>日志统计分析结果的列名<br>当UseNewAnalysis为false时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAnalysisResults() 获取日志统计分析结果
-当UseNewAnalysis为false时生效
+ * @method array getAnalysisResults() 获取<p>日志统计分析结果<br>当UseNewAnalysis为false时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAnalysisResults(array $AnalysisResults) 设置日志统计分析结果
-当UseNewAnalysis为false时生效
+ * @method void setAnalysisResults(array $AnalysisResults) 设置<p>日志统计分析结果<br>当UseNewAnalysis为false时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAnalysisRecords() 获取日志统计分析结果
-当UseNewAnalysis为true时生效
+ * @method array getAnalysisRecords() 获取<p>日志统计分析结果<br>当UseNewAnalysis为true时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAnalysisRecords(array $AnalysisRecords) 设置日志统计分析结果
-当UseNewAnalysis为true时生效
+ * @method void setAnalysisRecords(array $AnalysisRecords) 设置<p>日志统计分析结果<br>当UseNewAnalysis为true时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getColumns() 获取日志统计分析结果的列属性
-当UseNewAnalysis为true时生效
+ * @method array getColumns() 获取<p>日志统计分析结果的列属性<br>当UseNewAnalysis为true时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setColumns(array $Columns) 设置日志统计分析结果的列属性
-当UseNewAnalysis为true时生效
+ * @method void setColumns(array $Columns) 设置<p>日志统计分析结果的列属性<br>当UseNewAnalysis为true时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getSamplingRate() 获取本次统计分析使用的采样率
- * @method void setSamplingRate(float $SamplingRate) 设置本次统计分析使用的采样率
- * @method SearchLogTopics getTopics() 获取使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。
+ * @method float getSamplingRate() 获取<p>本次统计分析使用的采样率</p>
+ * @method void setSamplingRate(float $SamplingRate) 设置<p>本次统计分析使用的采样率</p>
+ * @method SearchLogTopics getTopics() 获取<p>使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopics(SearchLogTopics $Topics) 设置使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。
+ * @method void setTopics(SearchLogTopics $Topics) 设置<p>使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -72,64 +58,57 @@ use TencentCloud\Common\AbstractModel;
 class SearchLogResponse extends AbstractModel
 {
     /**
-     * @var string 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。
-注意：
-* 仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context
+     * @var string <p>透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。<br>注意：</p><ul><li>仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context</li></ul>
      */
     public $Context;
 
     /**
-     * @var boolean 符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
-注意：仅当检索分析语句(Query)不包含SQL时有效
+     * @var boolean <p>符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志<br>注意：仅当检索分析语句(Query)不包含SQL时有效</p>
      */
     public $ListOver;
 
     /**
-     * @var boolean 返回的是否为统计分析（即SQL）结果
+     * @var boolean <p>返回的是否为统计分析（即SQL）结果</p>
      */
     public $Analysis;
 
     /**
-     * @var array 匹配检索条件的原始日志
+     * @var array <p>匹配检索条件的原始日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Results;
 
     /**
-     * @var array 日志统计分析结果的列名
-当UseNewAnalysis为false时生效
+     * @var array <p>日志统计分析结果的列名<br>当UseNewAnalysis为false时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ColNames;
 
     /**
-     * @var array 日志统计分析结果
-当UseNewAnalysis为false时生效
+     * @var array <p>日志统计分析结果<br>当UseNewAnalysis为false时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AnalysisResults;
 
     /**
-     * @var array 日志统计分析结果
-当UseNewAnalysis为true时生效
+     * @var array <p>日志统计分析结果<br>当UseNewAnalysis为true时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AnalysisRecords;
 
     /**
-     * @var array 日志统计分析结果的列属性
-当UseNewAnalysis为true时生效
+     * @var array <p>日志统计分析结果的列属性<br>当UseNewAnalysis为true时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Columns;
 
     /**
-     * @var float 本次统计分析使用的采样率
+     * @var float <p>本次统计分析使用的采样率</p>
      */
     public $SamplingRate;
 
     /**
-     * @var SearchLogTopics 使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。
+     * @var SearchLogTopics <p>使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Topics;
@@ -140,28 +119,21 @@ class SearchLogResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Context 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。
-注意：
-* 仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context
-     * @param boolean $ListOver 符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
-注意：仅当检索分析语句(Query)不包含SQL时有效
-     * @param boolean $Analysis 返回的是否为统计分析（即SQL）结果
-     * @param array $Results 匹配检索条件的原始日志
+     * @param string $Context <p>透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。<br>注意：</p><ul><li>仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context</li></ul>
+     * @param boolean $ListOver <p>符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志<br>注意：仅当检索分析语句(Query)不包含SQL时有效</p>
+     * @param boolean $Analysis <p>返回的是否为统计分析（即SQL）结果</p>
+     * @param array $Results <p>匹配检索条件的原始日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ColNames 日志统计分析结果的列名
-当UseNewAnalysis为false时生效
+     * @param array $ColNames <p>日志统计分析结果的列名<br>当UseNewAnalysis为false时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AnalysisResults 日志统计分析结果
-当UseNewAnalysis为false时生效
+     * @param array $AnalysisResults <p>日志统计分析结果<br>当UseNewAnalysis为false时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AnalysisRecords 日志统计分析结果
-当UseNewAnalysis为true时生效
+     * @param array $AnalysisRecords <p>日志统计分析结果<br>当UseNewAnalysis为true时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Columns 日志统计分析结果的列属性
-当UseNewAnalysis为true时生效
+     * @param array $Columns <p>日志统计分析结果的列属性<br>当UseNewAnalysis为true时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $SamplingRate 本次统计分析使用的采样率
-     * @param SearchLogTopics $Topics 使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。
+     * @param float $SamplingRate <p>本次统计分析使用的采样率</p>
+     * @param SearchLogTopics $Topics <p>使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

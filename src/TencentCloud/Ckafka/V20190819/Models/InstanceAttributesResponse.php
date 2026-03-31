@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVip(string $Vip) 设置<p>虚拟IP</p>
  * @method string getVport() 获取<p>虚拟端口</p>
  * @method void setVport(string $Vport) 设置<p>虚拟端口</p>
- * @method integer getStatus() 获取<p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
- * @method void setStatus(integer $Status) 设置<p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
+ * @method integer getStatus() 获取<p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败</p>
+ * @method void setStatus(integer $Status) 设置<p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败</p>
  * @method integer getBandwidth() 获取<p>实例带宽，单位：Mbps</p>
  * @method void setBandwidth(integer $Bandwidth) 设置<p>实例带宽，单位：Mbps</p>
  * @method integer getDiskSize() 获取<p>实例的存储大小，单位：GB</p>
@@ -72,8 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxGroupNum(integer $MaxGroupNum) 设置<p>最大分组数</p>
  * @method integer getCvm() 获取<p>售卖类型,0:标准版,1:专业版</p>
  * @method void setCvm(integer $Cvm) 设置<p>售卖类型,0:标准版,1:专业版</p>
- * @method string getInstanceType() 获取<p>实例类型  枚举列表: profession  :专业版  <br />standards2  :标准版premium   :高级版serverless  :serverless版</p>
- * @method void setInstanceType(string $InstanceType) 设置<p>实例类型  枚举列表: profession  :专业版  <br />standards2  :标准版premium   :高级版serverless  :serverless版</p>
+ * @method string getInstanceType() 获取<p>实例类型  枚举列表:<br>profession  :专业版<br>standards2  :标准版<br>premium   :高级版<br>serverless  :serverless版</p>
+ * @method void setInstanceType(string $InstanceType) 设置<p>实例类型  枚举列表:<br>profession  :专业版<br>standards2  :标准版<br>premium   :高级版<br>serverless  :serverless版</p>
  * @method array getFeatures() 获取<p>表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。</p>
  * @method void setFeatures(array $Features) 设置<p>表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。</p>
  * @method DynamicRetentionTime getRetentionTimeConfig() 获取<p>动态消息保留策略</p>
@@ -96,12 +96,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxMessageByte(integer $MaxMessageByte) 设置<p>实例级别消息最大大小</p>
  * @method string getInstanceChargeType() 获取<p>实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月</p>
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置<p>实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月</p>
- * @method integer getElasticBandwidthSwitch() 获取<p>是否开启弹性带宽白名单 <br />1:已开启弹性带宽白名单;0:未开启弹性带宽白名单;</p>
- * @method void setElasticBandwidthSwitch(integer $ElasticBandwidthSwitch) 设置<p>是否开启弹性带宽白名单 <br />1:已开启弹性带宽白名单;0:未开启弹性带宽白名单;</p>
- * @method integer getElasticBandwidthOpenStatus() 获取<p>弹性带宽开通状态1:未开启弹性带宽;16: 开启弹性带宽中;32:开启弹性带宽成功;33:关闭弹性带宽中;34:关闭弹性带宽成功;64:开启弹性带宽失败;65:关闭弹性带宽失败;</p>
- * @method void setElasticBandwidthOpenStatus(integer $ElasticBandwidthOpenStatus) 设置<p>弹性带宽开通状态1:未开启弹性带宽;16: 开启弹性带宽中;32:开启弹性带宽成功;33:关闭弹性带宽中;34:关闭弹性带宽成功;64:开启弹性带宽失败;65:关闭弹性带宽失败;</p>
- * @method string getClusterType() 获取<p>集群类型<br />CLOUD_IDC IDC集群CLOUD_CVM_SHARE CVM共享集群CLOUD_CVM_YUNTI 云梯CVM集群CLOUD_CVM    CVM集群CLOUD_CDC CDC集群CLOUD_EKS_TSE EKS集群</p>
- * @method void setClusterType(string $ClusterType) 设置<p>集群类型<br />CLOUD_IDC IDC集群CLOUD_CVM_SHARE CVM共享集群CLOUD_CVM_YUNTI 云梯CVM集群CLOUD_CVM    CVM集群CLOUD_CDC CDC集群CLOUD_EKS_TSE EKS集群</p>
+ * @method integer getElasticBandwidthSwitch() 获取<p>是否开启弹性带宽白名单<br>1:已开启弹性带宽白名单;<br>0:未开启弹性带宽白名单;</p>
+ * @method void setElasticBandwidthSwitch(integer $ElasticBandwidthSwitch) 设置<p>是否开启弹性带宽白名单<br>1:已开启弹性带宽白名单;<br>0:未开启弹性带宽白名单;</p>
+ * @method integer getElasticBandwidthOpenStatus() 获取<p>弹性带宽开通状态<br>1:未开启弹性带宽;<br>16: 开启弹性带宽中;<br>32:开启弹性带宽成功;<br>33:关闭弹性带宽中;<br>34:关闭弹性带宽成功;<br>64:开启弹性带宽失败;<br>65:关闭弹性带宽失败;</p>
+ * @method void setElasticBandwidthOpenStatus(integer $ElasticBandwidthOpenStatus) 设置<p>弹性带宽开通状态<br>1:未开启弹性带宽;<br>16: 开启弹性带宽中;<br>32:开启弹性带宽成功;<br>33:关闭弹性带宽中;<br>34:关闭弹性带宽成功;<br>64:开启弹性带宽失败;<br>65:关闭弹性带宽失败;</p>
+ * @method string getClusterType() 获取<p>集群类型<br>CLOUD_IDC IDC集群<br>CLOUD_CVM_SHARE CVM共享集群<br>CLOUD_CVM_YUNTI 云梯CVM集群<br>CLOUD_CVM    CVM集群<br>CLOUD_CDC CDC集群<br>CLOUD_EKS_TSE EKS集群</p>
+ * @method void setClusterType(string $ClusterType) 设置<p>集群类型<br>CLOUD_IDC IDC集群<br>CLOUD_CVM_SHARE CVM共享集群<br>CLOUD_CVM_YUNTI 云梯CVM集群<br>CLOUD_CVM    CVM集群<br>CLOUD_CDC CDC集群<br>CLOUD_EKS_TSE EKS集群</p>
  * @method integer getFreePartitionNumber() 获取<p>免费分区数量</p>
  * @method void setFreePartitionNumber(integer $FreePartitionNumber) 设置<p>免费分区数量</p>
  * @method integer getElasticFloatBandwidth() 获取<p>弹性带宽上浮值</p>
@@ -112,10 +112,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) 设置<p>集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭</p>
  * @method integer getDeleteProtectionEnable() 获取<p>实例删除保护开关: 1 开启 0 关闭</p>
  * @method void setDeleteProtectionEnable(integer $DeleteProtectionEnable) 设置<p>实例删除保护开关: 1 开启 0 关闭</p>
- * @method integer getRetentionBytes() 获取<p>实例级别消息保留大小</p>单位：bytes<br>默认值：-1
- * @method void setRetentionBytes(integer $RetentionBytes) 设置<p>实例级别消息保留大小</p>单位：bytes<br>默认值：-1
- * @method integer getTransactionalIdExpirationMs() 获取<p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p>单位：ms
- * @method void setTransactionalIdExpirationMs(integer $TransactionalIdExpirationMs) 设置<p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p>单位：ms
+ * @method integer getRetentionBytes() 获取<p>实例级别消息保留大小</p><p>单位：bytes</p><p>默认值：-1</p>
+ * @method void setRetentionBytes(integer $RetentionBytes) 设置<p>实例级别消息保留大小</p><p>单位：bytes</p><p>默认值：-1</p>
+ * @method integer getTransactionalIdExpirationMs() 获取<p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p><p>单位：ms</p>
+ * @method void setTransactionalIdExpirationMs(integer $TransactionalIdExpirationMs) 设置<p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p><p>单位：ms</p>
  */
 class InstanceAttributesResponse extends AbstractModel
 {
@@ -145,7 +145,7 @@ class InstanceAttributesResponse extends AbstractModel
     public $Vport;
 
     /**
-     * @var integer <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
+     * @var integer <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败</p>
      */
     public $Status;
 
@@ -250,7 +250,7 @@ class InstanceAttributesResponse extends AbstractModel
     public $Cvm;
 
     /**
-     * @var string <p>实例类型  枚举列表: profession  :专业版  <br />standards2  :标准版premium   :高级版serverless  :serverless版</p>
+     * @var string <p>实例类型  枚举列表:<br>profession  :专业版<br>standards2  :标准版<br>premium   :高级版<br>serverless  :serverless版</p>
      */
     public $InstanceType;
 
@@ -310,17 +310,17 @@ class InstanceAttributesResponse extends AbstractModel
     public $InstanceChargeType;
 
     /**
-     * @var integer <p>是否开启弹性带宽白名单 <br />1:已开启弹性带宽白名单;0:未开启弹性带宽白名单;</p>
+     * @var integer <p>是否开启弹性带宽白名单<br>1:已开启弹性带宽白名单;<br>0:未开启弹性带宽白名单;</p>
      */
     public $ElasticBandwidthSwitch;
 
     /**
-     * @var integer <p>弹性带宽开通状态1:未开启弹性带宽;16: 开启弹性带宽中;32:开启弹性带宽成功;33:关闭弹性带宽中;34:关闭弹性带宽成功;64:开启弹性带宽失败;65:关闭弹性带宽失败;</p>
+     * @var integer <p>弹性带宽开通状态<br>1:未开启弹性带宽;<br>16: 开启弹性带宽中;<br>32:开启弹性带宽成功;<br>33:关闭弹性带宽中;<br>34:关闭弹性带宽成功;<br>64:开启弹性带宽失败;<br>65:关闭弹性带宽失败;</p>
      */
     public $ElasticBandwidthOpenStatus;
 
     /**
-     * @var string <p>集群类型<br />CLOUD_IDC IDC集群CLOUD_CVM_SHARE CVM共享集群CLOUD_CVM_YUNTI 云梯CVM集群CLOUD_CVM    CVM集群CLOUD_CDC CDC集群CLOUD_EKS_TSE EKS集群</p>
+     * @var string <p>集群类型<br>CLOUD_IDC IDC集群<br>CLOUD_CVM_SHARE CVM共享集群<br>CLOUD_CVM_YUNTI 云梯CVM集群<br>CLOUD_CVM    CVM集群<br>CLOUD_CDC CDC集群<br>CLOUD_EKS_TSE EKS集群</p>
      */
     public $ClusterType;
 
@@ -350,12 +350,12 @@ class InstanceAttributesResponse extends AbstractModel
     public $DeleteProtectionEnable;
 
     /**
-     * @var integer <p>实例级别消息保留大小</p>单位：bytes<br>默认值：-1
+     * @var integer <p>实例级别消息保留大小</p><p>单位：bytes</p><p>默认值：-1</p>
      */
     public $RetentionBytes;
 
     /**
-     * @var integer <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p>单位：ms
+     * @var integer <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p><p>单位：ms</p>
      */
     public $TransactionalIdExpirationMs;
 
@@ -365,7 +365,7 @@ class InstanceAttributesResponse extends AbstractModel
      * @param array $VipList <p>接入点 VIP 列表信息</p>
      * @param string $Vip <p>虚拟IP</p>
      * @param string $Vport <p>虚拟端口</p>
-     * @param integer $Status <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
+     * @param integer $Status <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败</p>
      * @param integer $Bandwidth <p>实例带宽，单位：Mbps</p>
      * @param integer $DiskSize <p>实例的存储大小，单位：GB</p>
      * @param integer $ZoneId <p>可用区</p>
@@ -386,7 +386,7 @@ class InstanceAttributesResponse extends AbstractModel
      * @param string $Version <p>ckafka集群实例版本</p>
      * @param integer $MaxGroupNum <p>最大分组数</p>
      * @param integer $Cvm <p>售卖类型,0:标准版,1:专业版</p>
-     * @param string $InstanceType <p>实例类型  枚举列表: profession  :专业版  <br />standards2  :标准版premium   :高级版serverless  :serverless版</p>
+     * @param string $InstanceType <p>实例类型  枚举列表:<br>profession  :专业版<br>standards2  :标准版<br>premium   :高级版<br>serverless  :serverless版</p>
      * @param array $Features <p>表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。</p>
      * @param DynamicRetentionTime $RetentionTimeConfig <p>动态消息保留策略</p>
      * @param integer $MaxConnection <p>最大连接数</p>
@@ -398,16 +398,16 @@ class InstanceAttributesResponse extends AbstractModel
      * @param string $SystemMaintenanceTime <p>系统维护时间</p>
      * @param integer $MaxMessageByte <p>实例级别消息最大大小</p>
      * @param string $InstanceChargeType <p>实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月</p>
-     * @param integer $ElasticBandwidthSwitch <p>是否开启弹性带宽白名单 <br />1:已开启弹性带宽白名单;0:未开启弹性带宽白名单;</p>
-     * @param integer $ElasticBandwidthOpenStatus <p>弹性带宽开通状态1:未开启弹性带宽;16: 开启弹性带宽中;32:开启弹性带宽成功;33:关闭弹性带宽中;34:关闭弹性带宽成功;64:开启弹性带宽失败;65:关闭弹性带宽失败;</p>
-     * @param string $ClusterType <p>集群类型<br />CLOUD_IDC IDC集群CLOUD_CVM_SHARE CVM共享集群CLOUD_CVM_YUNTI 云梯CVM集群CLOUD_CVM    CVM集群CLOUD_CDC CDC集群CLOUD_EKS_TSE EKS集群</p>
+     * @param integer $ElasticBandwidthSwitch <p>是否开启弹性带宽白名单<br>1:已开启弹性带宽白名单;<br>0:未开启弹性带宽白名单;</p>
+     * @param integer $ElasticBandwidthOpenStatus <p>弹性带宽开通状态<br>1:未开启弹性带宽;<br>16: 开启弹性带宽中;<br>32:开启弹性带宽成功;<br>33:关闭弹性带宽中;<br>34:关闭弹性带宽成功;<br>64:开启弹性带宽失败;<br>65:关闭弹性带宽失败;</p>
+     * @param string $ClusterType <p>集群类型<br>CLOUD_IDC IDC集群<br>CLOUD_CVM_SHARE CVM共享集群<br>CLOUD_CVM_YUNTI 云梯CVM集群<br>CLOUD_CVM    CVM集群<br>CLOUD_CDC CDC集群<br>CLOUD_EKS_TSE EKS集群</p>
      * @param integer $FreePartitionNumber <p>免费分区数量</p>
      * @param integer $ElasticFloatBandwidth <p>弹性带宽上浮值</p>
      * @param string $CustomCertId <p>ssl自定义证书id  仅自定义证书实例集群返回</p>
      * @param integer $UncleanLeaderElectionEnable <p>集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭</p>
      * @param integer $DeleteProtectionEnable <p>实例删除保护开关: 1 开启 0 关闭</p>
-     * @param integer $RetentionBytes <p>实例级别消息保留大小</p>单位：bytes<br>默认值：-1
-     * @param integer $TransactionalIdExpirationMs <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p>单位：ms
+     * @param integer $RetentionBytes <p>实例级别消息保留大小</p><p>单位：bytes</p><p>默认值：-1</p>
+     * @param integer $TransactionalIdExpirationMs <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p><p>单位：ms</p>
      */
     function __construct()
     {

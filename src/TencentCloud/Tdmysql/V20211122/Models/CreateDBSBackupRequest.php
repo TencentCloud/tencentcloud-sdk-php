@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDBSBackup请求参数结构体
  *
- * @method string getBackupMethod() 获取<p>备份方式：physical、snapshot 这个值和DescribeDBSBackupPolicy接口返回的backupMethod保持一致</p>枚举值：<ul><li> physical： 物理备份</li><li> snapshot： 快照备份</li></ul>
- * @method void setBackupMethod(string $BackupMethod) 设置<p>备份方式：physical、snapshot 这个值和DescribeDBSBackupPolicy接口返回的backupMethod保持一致</p>枚举值：<ul><li> physical： 物理备份</li><li> snapshot： 快照备份</li></ul>
+ * @method string getBackupMethod() 获取<p>备份方式：physical、snapshot 这个值和DescribeDBSBackupPolicy接口返回的backupMethod保持一致</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>snapshot： 快照备份</li></ul>
+ * @method void setBackupMethod(string $BackupMethod) 设置<p>备份方式：physical、snapshot 这个值和DescribeDBSBackupPolicy接口返回的backupMethod保持一致</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>snapshot： 快照备份</li></ul>
  * @method string getBackupType() 获取<p>备份类型：暂时只支持full</p>
  * @method void setBackupType(string $BackupType) 设置<p>备份类型：暂时只支持full</p>
  * @method string getInstanceId() 获取<p>实例ID</p>
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateDBSBackupRequest extends AbstractModel
 {
     /**
-     * @var string <p>备份方式：physical、snapshot 这个值和DescribeDBSBackupPolicy接口返回的backupMethod保持一致</p>枚举值：<ul><li> physical： 物理备份</li><li> snapshot： 快照备份</li></ul>
+     * @var string <p>备份方式：physical、snapshot 这个值和DescribeDBSBackupPolicy接口返回的backupMethod保持一致</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>snapshot： 快照备份</li></ul>
      */
     public $BackupMethod;
 
@@ -52,7 +52,7 @@ class CreateDBSBackupRequest extends AbstractModel
     public $BackupName;
 
     /**
-     * @param string $BackupMethod <p>备份方式：physical、snapshot 这个值和DescribeDBSBackupPolicy接口返回的backupMethod保持一致</p>枚举值：<ul><li> physical： 物理备份</li><li> snapshot： 快照备份</li></ul>
+     * @param string $BackupMethod <p>备份方式：physical、snapshot 这个值和DescribeDBSBackupPolicy接口返回的backupMethod保持一致</p><p>枚举值：</p><ul><li>physical： 物理备份</li><li>snapshot： 快照备份</li></ul>
      * @param string $BackupType <p>备份类型：暂时只支持full</p>
      * @param string $InstanceId <p>实例ID</p>
      * @param string $BackupName <p>备份备注</p>

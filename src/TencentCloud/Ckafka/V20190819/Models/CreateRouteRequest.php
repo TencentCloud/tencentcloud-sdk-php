@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置<p>vpc网络Id,当vipType为3时必填</p>
  * @method string getSubnetId() 获取<p>vpc子网id,当vipType为3时必填</p>
  * @method void setSubnetId(string $SubnetId) 设置<p>vpc子网id,当vipType为3时必填</p>
- * @method integer getAccessType() 获取<p>访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0vipType=3,支持 0,1,3,4,5vipType=7,支持0,1,3vipType=1,支持1,3</p>
- * @method void setAccessType(integer $AccessType) 设置<p>访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0vipType=3,支持 0,1,3,4,5vipType=7,支持0,1,3vipType=1,支持1,3</p>
+ * @method integer getAccessType() 获取<p>访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0<br>vipType=3,支持 0,1,3,4,5<br>vipType=7,支持0,1,3<br>vipType=1,支持1,3</p>
+ * @method void setAccessType(integer $AccessType) 设置<p>访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0<br>vipType=3,支持 0,1,3,4,5<br>vipType=7,支持0,1,3<br>vipType=1,支持1,3</p>
  * @method integer getAuthFlag() 获取<p>是否需要权限管理,该字段已废弃</p>
  * @method void setAuthFlag(integer $AuthFlag) 设置<p>是否需要权限管理,该字段已废弃</p>
  * @method integer getCallerAppid() 获取<p>调用方appId</p>
@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNote(string $Note) 设置<p>备注信息</p>
  * @method array getSecurityGroupIds() 获取<p>关联安全组有序列表</p>
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置<p>关联安全组有序列表</p>
+ * @method array getIpWhitelist() 获取<p>公网路由IP白名单预设配置</p><p>入参限制：vipType=1</p>
+ * @method void setIpWhitelist(array $IpWhitelist) 设置<p>公网路由IP白名单预设配置</p><p>入参限制：vipType=1</p>
  */
 class CreateRouteRequest extends AbstractModel
 {
@@ -66,7 +68,7 @@ class CreateRouteRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var integer <p>访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0vipType=3,支持 0,1,3,4,5vipType=7,支持0,1,3vipType=1,支持1,3</p>
+     * @var integer <p>访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0<br>vipType=3,支持 0,1,3,4,5<br>vipType=7,支持0,1,3<br>vipType=1,支持1,3</p>
      */
     public $AccessType;
 
@@ -101,17 +103,23 @@ class CreateRouteRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
+     * @var array <p>公网路由IP白名单预设配置</p><p>入参限制：vipType=1</p>
+     */
+    public $IpWhitelist;
+
+    /**
      * @param string $InstanceId <p>ckafka集群实例id,可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
      * @param integer $VipType <p>路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)</p>
      * @param string $VpcId <p>vpc网络Id,当vipType为3时必填</p>
      * @param string $SubnetId <p>vpc子网id,当vipType为3时必填</p>
-     * @param integer $AccessType <p>访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0vipType=3,支持 0,1,3,4,5vipType=7,支持0,1,3vipType=1,支持1,3</p>
+     * @param integer $AccessType <p>访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0<br>vipType=3,支持 0,1,3,4,5<br>vipType=7,支持0,1,3<br>vipType=1,支持1,3</p>
      * @param integer $AuthFlag <p>是否需要权限管理,该字段已废弃</p>
      * @param integer $CallerAppid <p>调用方appId</p>
      * @param integer $PublicNetwork <p>公网带宽,公网路由必传,且是3的倍数,无默认值</p>
      * @param string $Ip <p>vip地址</p>
      * @param string $Note <p>备注信息</p>
      * @param array $SecurityGroupIds <p>关联安全组有序列表</p>
+     * @param array $IpWhitelist <p>公网路由IP白名单预设配置</p><p>入参限制：vipType=1</p>
      */
     function __construct()
     {
@@ -168,6 +176,15 @@ class CreateRouteRequest extends AbstractModel
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("IpWhitelist",$param) and $param["IpWhitelist"] !== null) {
+            $this->IpWhitelist = [];
+            foreach ($param["IpWhitelist"] as $key => $value){
+                $obj = new IpWhitelistDTO();
+                $obj->deserialize($value);
+                array_push($this->IpWhitelist, $obj);
+            }
         }
     }
 }

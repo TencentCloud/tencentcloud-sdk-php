@@ -58,6 +58,10 @@ UpdateFailed：更新失败
  * @method void setImageRegistryCredentials(array $ImageRegistryCredentials) 设置镜像拉取凭证
  * @method array getTags() 获取腾讯云标签
  * @method void setTags(array $Tags) 设置腾讯云标签
+ * @method string getImageCacheType() 获取镜像缓存类型
+ * @method void setImageCacheType(string $ImageCacheType) 设置镜像缓存类型
+ * @method string getSnapshotter() 获取镜像缓存所属snapshotter类型
+ * @method void setSnapshotter(string $Snapshotter) 设置镜像缓存所属snapshotter类型
  */
 class ImageCache extends AbstractModel
 {
@@ -133,6 +137,16 @@ UpdateFailed：更新失败
     public $Tags;
 
     /**
+     * @var string 镜像缓存类型
+     */
+    public $ImageCacheType;
+
+    /**
+     * @var string 镜像缓存所属snapshotter类型
+     */
+    public $Snapshotter;
+
+    /**
      * @param string $ImageCacheId 镜像缓存Id
      * @param string $ImageCacheName 镜像缓存名称
      * @param integer $ImageCacheSize 镜像缓存大小。单位：GiB
@@ -152,6 +166,8 @@ UpdateFailed：更新失败
      * @param integer $RetentionDays 镜像缓存保留时间天数，过期将会自动清理，默认为0，永不过期。
      * @param array $ImageRegistryCredentials 镜像拉取凭证
      * @param array $Tags 腾讯云标签
+     * @param string $ImageCacheType 镜像缓存类型
+     * @param string $Snapshotter 镜像缓存所属snapshotter类型
      */
     function __construct()
     {
@@ -231,6 +247,14 @@ UpdateFailed：更新失败
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("ImageCacheType",$param) and $param["ImageCacheType"] !== null) {
+            $this->ImageCacheType = $param["ImageCacheType"];
+        }
+
+        if (array_key_exists("Snapshotter",$param) and $param["Snapshotter"] !== null) {
+            $this->Snapshotter = $param["Snapshotter"];
         }
     }
 }

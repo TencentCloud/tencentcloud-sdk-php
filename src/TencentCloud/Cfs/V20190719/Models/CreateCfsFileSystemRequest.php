@@ -20,202 +20,170 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCfsFileSystem请求参数结构体
  *
- * @method string getZone() 获取可用区名称，例如ap-beijing-1，请参考 [概览](https://cloud.tencent.com/document/product/582/13225) 文档中的地域与可用区列表
- * @method void setZone(string $Zone) 设置可用区名称，例如ap-beijing-1，请参考 [概览](https://cloud.tencent.com/document/product/582/13225) 文档中的地域与可用区列表
- * @method string getNetInterface() 获取网络类型，可选值为 VPC，CCN；其中 VPC 为私有网络， CCN 为云联网。通用标准型/性能型请选择VPC，Turbo标准型/性能型请选择CCN。
- * @method void setNetInterface(string $NetInterface) 设置网络类型，可选值为 VPC，CCN；其中 VPC 为私有网络， CCN 为云联网。通用标准型/性能型请选择VPC，Turbo标准型/性能型请选择CCN。
- * @method string getPGroupId() 获取权限组 ID,pgroupbasic 是默认权限组，通过控制查询权限组列表接口获取[DescribeCfsPGroups](https://cloud.tencent.com/document/product/582/38157)
- * @method void setPGroupId(string $PGroupId) 设置权限组 ID,pgroupbasic 是默认权限组，通过控制查询权限组列表接口获取[DescribeCfsPGroups](https://cloud.tencent.com/document/product/582/38157)
- * @method string getProtocol() 获取文件系统协议类型， 值为 NFS、CIFS、TURBO ; 若留空则默认为 NFS协议，turbo系列必须选择TURBO，不支持NFS、CIFS
- * @method void setProtocol(string $Protocol) 设置文件系统协议类型， 值为 NFS、CIFS、TURBO ; 若留空则默认为 NFS协议，turbo系列必须选择TURBO，不支持NFS、CIFS
- * @method string getStorageType() 获取文件系统存储类型，默认值为 SD ；其中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。
- * @method void setStorageType(string $StorageType) 设置文件系统存储类型，默认值为 SD ；其中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。
- * @method string getVpcId() 获取私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填.通过查询私有网络接口获取，
-[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)
- * @method void setVpcId(string $VpcId) 设置私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填.通过查询私有网络接口获取，
-[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)
- * @method string getSubnetId() 获取子网 ID，若网络类型选择的是VPC，该字段为必填。通过查询子网接口获取，
-[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)
- * @method void setSubnetId(string $SubnetId) 设置子网 ID，若网络类型选择的是VPC，该字段为必填。通过查询子网接口获取，
-[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)
- * @method string getMountIP() 获取指定IP地址，仅VPC网络支持；若不填写、将在该子网下随机分配 IP，Turbo系列当前不支持指定
- * @method void setMountIP(string $MountIP) 设置指定IP地址，仅VPC网络支持；若不填写、将在该子网下随机分配 IP，Turbo系列当前不支持指定
- * @method string getFsName() 获取用户自定义文件系统名称
- * @method void setFsName(string $FsName) 设置用户自定义文件系统名称
- * @method array getResourceTags() 获取文件系统标签
- * @method void setResourceTags(array $ResourceTags) 设置文件系统标签
- * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。用于保证请求幂等性的字符串失效时间为2小时。
- * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。用于保证请求幂等性的字符串失效时间为2小时。
- * @method string getCcnId() 获取云联网ID， 若网络类型选择的是CCN，该字段为必填;通过查询云联网列表接口获取，通过接口
-[DescribeCcns](https://cloud.tencent.com/document/product/215/19199)
-
- * @method void setCcnId(string $CcnId) 设置云联网ID， 若网络类型选择的是CCN，该字段为必填;通过查询云联网列表接口获取，通过接口
-[DescribeCcns](https://cloud.tencent.com/document/product/215/19199)
-
- * @method string getCidrBlock() 获取云联网中CFS使用的网段， 若网络类型选择的是Ccn，该字段为必填，且不能和Ccn中已经绑定的网段冲突
- * @method void setCidrBlock(string $CidrBlock) 设置云联网中CFS使用的网段， 若网络类型选择的是Ccn，该字段为必填，且不能和Ccn中已经绑定的网段冲突
- * @method integer getCapacity() 获取文件系统容量，turbo系列必填，单位为GiB。 turbo标准型单位GB，起售20TiB，即20480 GiB；扩容步长10TiB，即10240 GiB。turbo性能型起售10TiB，即10240 GiB；扩容步长10TiB，10240 GiB。
- * @method void setCapacity(integer $Capacity) 设置文件系统容量，turbo系列必填，单位为GiB。 turbo标准型单位GB，起售20TiB，即20480 GiB；扩容步长10TiB，即10240 GiB。turbo性能型起售10TiB，即10240 GiB；扩容步长10TiB，10240 GiB。
- * @method string getSnapshotId() 获取文件系统快照ID，通过查询快照列表获取该参数，
-[DescribeCfsSnapshots](https://cloud.tencent.com/document/product/582/80206)
- * @method void setSnapshotId(string $SnapshotId) 设置文件系统快照ID，通过查询快照列表获取该参数，
-[DescribeCfsSnapshots](https://cloud.tencent.com/document/product/582/80206)
- * @method string getAutoSnapshotPolicyId() 获取定期快照策略ID，通过查询快照策略信息获取,
-[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/product/582/38157)
- * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置定期快照策略ID，通过查询快照策略信息获取,
-[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/product/582/38157)
- * @method boolean getEnableAutoScaleUp() 获取是否开启默认扩容，仅turbo类型文件存储支持
- * @method void setEnableAutoScaleUp(boolean $EnableAutoScaleUp) 设置是否开启默认扩容，仅turbo类型文件存储支持
- * @method string getCfsVersion() 获取v1.5：创建普通版的通用文件系统；
-v3.1：创建增强版的通用文件系统
-说明：增强版的通用系统需要开通白名单才能使用，如有需要请提交工单与我们联系。
- * @method void setCfsVersion(string $CfsVersion) 设置v1.5：创建普通版的通用文件系统；
-v3.1：创建增强版的通用文件系统
-说明：增强版的通用系统需要开通白名单才能使用，如有需要请提交工单与我们联系。
- * @method string getMetaType() 获取turbo文件系统元数据属性
-basic：创建标准型的元数据
-enhanced：创建增强型的元数据
- * @method void setMetaType(string $MetaType) 设置turbo文件系统元数据属性
-basic：创建标准型的元数据
-enhanced：创建增强型的元数据
+ * @method string getZone() 获取<p>可用区名称，例如ap-beijing-1，请参考 <a href="https://cloud.tencent.com/document/product/582/13225">概览</a> 文档中的地域与可用区列表</p>
+ * @method void setZone(string $Zone) 设置<p>可用区名称，例如ap-beijing-1，请参考 <a href="https://cloud.tencent.com/document/product/582/13225">概览</a> 文档中的地域与可用区列表</p>
+ * @method string getNetInterface() 获取<p>网络类型，可选值为 VPC，CCN；其中 VPC 为私有网络， CCN 为云联网。通用标准型/性能型请选择VPC，Turbo标准型/性能型请选择CCN。</p>
+ * @method void setNetInterface(string $NetInterface) 设置<p>网络类型，可选值为 VPC，CCN；其中 VPC 为私有网络， CCN 为云联网。通用标准型/性能型请选择VPC，Turbo标准型/性能型请选择CCN。</p>
+ * @method string getPGroupId() 获取<p>权限组 ID,pgroupbasic 是默认权限组，通过控制查询权限组列表接口获取<a href="https://cloud.tencent.com/document/product/582/38157">DescribeCfsPGroups</a></p>
+ * @method void setPGroupId(string $PGroupId) 设置<p>权限组 ID,pgroupbasic 是默认权限组，通过控制查询权限组列表接口获取<a href="https://cloud.tencent.com/document/product/582/38157">DescribeCfsPGroups</a></p>
+ * @method string getProtocol() 获取<p>文件系统协议类型， 值为 NFS、CIFS、TURBO ; 若留空则默认为 NFS协议，turbo系列必须选择TURBO，不支持NFS、CIFS</p>
+ * @method void setProtocol(string $Protocol) 设置<p>文件系统协议类型， 值为 NFS、CIFS、TURBO ; 若留空则默认为 NFS协议，turbo系列必须选择TURBO，不支持NFS、CIFS</p>
+ * @method string getStorageType() 获取<p>文件系统存储类型，默认值为 SD ；其中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。</p>
+ * @method void setStorageType(string $StorageType) 设置<p>文件系统存储类型，默认值为 SD ；其中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。</p>
+ * @method string getVpcId() 获取<p>私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填.通过查询私有网络接口获取，<br><a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a></p>
+ * @method void setVpcId(string $VpcId) 设置<p>私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填.通过查询私有网络接口获取，<br><a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a></p>
+ * @method string getSubnetId() 获取<p>子网 ID，若网络类型选择的是VPC，该字段为必填。通过查询子网接口获取，<br><a href="https://cloud.tencent.com/document/product/215/15784">DescribeSubnets</a></p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网 ID，若网络类型选择的是VPC，该字段为必填。通过查询子网接口获取，<br><a href="https://cloud.tencent.com/document/product/215/15784">DescribeSubnets</a></p>
+ * @method string getMountIP() 获取<p>指定IP地址，仅VPC网络支持；若不填写、将在该子网下随机分配 IP，Turbo系列当前不支持指定</p>
+ * @method void setMountIP(string $MountIP) 设置<p>指定IP地址，仅VPC网络支持；若不填写、将在该子网下随机分配 IP，Turbo系列当前不支持指定</p>
+ * @method string getFsName() 获取<p>用户自定义文件系统名称</p>
+ * @method void setFsName(string $FsName) 设置<p>用户自定义文件系统名称</p>
+ * @method boolean getEncrypted() 获取<p>文件系统是否加密，若留空则默认为不加密</p>
+ * @method void setEncrypted(boolean $Encrypted) 设置<p>文件系统是否加密，若留空则默认为不加密</p>
+ * @method array getResourceTags() 获取<p>文件系统标签</p>
+ * @method void setResourceTags(array $ResourceTags) 设置<p>文件系统标签</p>
+ * @method string getClientToken() 获取<p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。用于保证请求幂等性的字符串失效时间为2小时。</p>
+ * @method void setClientToken(string $ClientToken) 设置<p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。用于保证请求幂等性的字符串失效时间为2小时。</p>
+ * @method string getCcnId() 获取<p>云联网ID， 若网络类型选择的是CCN，该字段为必填;通过查询云联网列表接口获取，通过接口<br><a href="https://cloud.tencent.com/document/product/215/19199">DescribeCcns</a></p>
+ * @method void setCcnId(string $CcnId) 设置<p>云联网ID， 若网络类型选择的是CCN，该字段为必填;通过查询云联网列表接口获取，通过接口<br><a href="https://cloud.tencent.com/document/product/215/19199">DescribeCcns</a></p>
+ * @method string getCidrBlock() 获取<p>云联网中CFS使用的网段， 若网络类型选择的是Ccn，该字段为必填，且不能和Ccn中已经绑定的网段冲突</p>
+ * @method void setCidrBlock(string $CidrBlock) 设置<p>云联网中CFS使用的网段， 若网络类型选择的是Ccn，该字段为必填，且不能和Ccn中已经绑定的网段冲突</p>
+ * @method integer getCapacity() 获取<p>文件系统容量，turbo系列必填，单位为GiB。 turbo标准型单位GB，起售20TiB，即20480 GiB；扩容步长10TiB，即10240 GiB。turbo性能型起售10TiB，即10240 GiB；扩容步长10TiB，10240 GiB。</p>
+ * @method void setCapacity(integer $Capacity) 设置<p>文件系统容量，turbo系列必填，单位为GiB。 turbo标准型单位GB，起售20TiB，即20480 GiB；扩容步长10TiB，即10240 GiB。turbo性能型起售10TiB，即10240 GiB；扩容步长10TiB，10240 GiB。</p>
+ * @method string getSnapshotId() 获取<p>文件系统快照ID，通过查询快照列表获取该参数，<br><a href="https://cloud.tencent.com/document/product/582/80206">DescribeCfsSnapshots</a></p>
+ * @method void setSnapshotId(string $SnapshotId) 设置<p>文件系统快照ID，通过查询快照列表获取该参数，<br><a href="https://cloud.tencent.com/document/product/582/80206">DescribeCfsSnapshots</a></p>
+ * @method string getAutoSnapshotPolicyId() 获取<p>定期快照策略ID，通过查询快照策略信息获取,<br><a href="https://cloud.tencent.com/document/product/582/38157">DescribeAutoSnapshotPolicies</a></p>
+ * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置<p>定期快照策略ID，通过查询快照策略信息获取,<br><a href="https://cloud.tencent.com/document/product/582/38157">DescribeAutoSnapshotPolicies</a></p>
+ * @method boolean getEnableAutoScaleUp() 获取<p>是否开启默认扩容，仅turbo类型文件存储支持</p>
+ * @method void setEnableAutoScaleUp(boolean $EnableAutoScaleUp) 设置<p>是否开启默认扩容，仅turbo类型文件存储支持</p>
+ * @method string getCfsVersion() 获取<p>v1.5：创建普通版的通用文件系统；<br>v3.1：创建增强版的通用文件系统<br>说明：增强版的通用系统需要开通白名单才能使用，如有需要请提交工单与我们联系。</p>
+ * @method void setCfsVersion(string $CfsVersion) 设置<p>v1.5：创建普通版的通用文件系统；<br>v3.1：创建增强版的通用文件系统<br>说明：增强版的通用系统需要开通白名单才能使用，如有需要请提交工单与我们联系。</p>
+ * @method string getMetaType() 获取<p>turbo文件系统元数据属性<br>basic：创建标准型的元数据<br>enhanced：创建增强型的元数据</p>
+ * @method void setMetaType(string $MetaType) 设置<p>turbo文件系统元数据属性<br>basic：创建标准型的元数据<br>enhanced：创建增强型的元数据</p>
  */
 class CreateCfsFileSystemRequest extends AbstractModel
 {
     /**
-     * @var string 可用区名称，例如ap-beijing-1，请参考 [概览](https://cloud.tencent.com/document/product/582/13225) 文档中的地域与可用区列表
+     * @var string <p>可用区名称，例如ap-beijing-1，请参考 <a href="https://cloud.tencent.com/document/product/582/13225">概览</a> 文档中的地域与可用区列表</p>
      */
     public $Zone;
 
     /**
-     * @var string 网络类型，可选值为 VPC，CCN；其中 VPC 为私有网络， CCN 为云联网。通用标准型/性能型请选择VPC，Turbo标准型/性能型请选择CCN。
+     * @var string <p>网络类型，可选值为 VPC，CCN；其中 VPC 为私有网络， CCN 为云联网。通用标准型/性能型请选择VPC，Turbo标准型/性能型请选择CCN。</p>
      */
     public $NetInterface;
 
     /**
-     * @var string 权限组 ID,pgroupbasic 是默认权限组，通过控制查询权限组列表接口获取[DescribeCfsPGroups](https://cloud.tencent.com/document/product/582/38157)
+     * @var string <p>权限组 ID,pgroupbasic 是默认权限组，通过控制查询权限组列表接口获取<a href="https://cloud.tencent.com/document/product/582/38157">DescribeCfsPGroups</a></p>
      */
     public $PGroupId;
 
     /**
-     * @var string 文件系统协议类型， 值为 NFS、CIFS、TURBO ; 若留空则默认为 NFS协议，turbo系列必须选择TURBO，不支持NFS、CIFS
+     * @var string <p>文件系统协议类型， 值为 NFS、CIFS、TURBO ; 若留空则默认为 NFS协议，turbo系列必须选择TURBO，不支持NFS、CIFS</p>
      */
     public $Protocol;
 
     /**
-     * @var string 文件系统存储类型，默认值为 SD ；其中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。
+     * @var string <p>文件系统存储类型，默认值为 SD ；其中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。</p>
      */
     public $StorageType;
 
     /**
-     * @var string 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填.通过查询私有网络接口获取，
-[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)
+     * @var string <p>私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填.通过查询私有网络接口获取，<br><a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a></p>
      */
     public $VpcId;
 
     /**
-     * @var string 子网 ID，若网络类型选择的是VPC，该字段为必填。通过查询子网接口获取，
-[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)
+     * @var string <p>子网 ID，若网络类型选择的是VPC，该字段为必填。通过查询子网接口获取，<br><a href="https://cloud.tencent.com/document/product/215/15784">DescribeSubnets</a></p>
      */
     public $SubnetId;
 
     /**
-     * @var string 指定IP地址，仅VPC网络支持；若不填写、将在该子网下随机分配 IP，Turbo系列当前不支持指定
+     * @var string <p>指定IP地址，仅VPC网络支持；若不填写、将在该子网下随机分配 IP，Turbo系列当前不支持指定</p>
      */
     public $MountIP;
 
     /**
-     * @var string 用户自定义文件系统名称
+     * @var string <p>用户自定义文件系统名称</p>
      */
     public $FsName;
 
     /**
-     * @var array 文件系统标签
+     * @var boolean <p>文件系统是否加密，若留空则默认为不加密</p>
+     */
+    public $Encrypted;
+
+    /**
+     * @var array <p>文件系统标签</p>
      */
     public $ResourceTags;
 
     /**
-     * @var string 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。用于保证请求幂等性的字符串失效时间为2小时。
+     * @var string <p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。用于保证请求幂等性的字符串失效时间为2小时。</p>
      */
     public $ClientToken;
 
     /**
-     * @var string 云联网ID， 若网络类型选择的是CCN，该字段为必填;通过查询云联网列表接口获取，通过接口
-[DescribeCcns](https://cloud.tencent.com/document/product/215/19199)
-
+     * @var string <p>云联网ID， 若网络类型选择的是CCN，该字段为必填;通过查询云联网列表接口获取，通过接口<br><a href="https://cloud.tencent.com/document/product/215/19199">DescribeCcns</a></p>
      */
     public $CcnId;
 
     /**
-     * @var string 云联网中CFS使用的网段， 若网络类型选择的是Ccn，该字段为必填，且不能和Ccn中已经绑定的网段冲突
+     * @var string <p>云联网中CFS使用的网段， 若网络类型选择的是Ccn，该字段为必填，且不能和Ccn中已经绑定的网段冲突</p>
      */
     public $CidrBlock;
 
     /**
-     * @var integer 文件系统容量，turbo系列必填，单位为GiB。 turbo标准型单位GB，起售20TiB，即20480 GiB；扩容步长10TiB，即10240 GiB。turbo性能型起售10TiB，即10240 GiB；扩容步长10TiB，10240 GiB。
+     * @var integer <p>文件系统容量，turbo系列必填，单位为GiB。 turbo标准型单位GB，起售20TiB，即20480 GiB；扩容步长10TiB，即10240 GiB。turbo性能型起售10TiB，即10240 GiB；扩容步长10TiB，10240 GiB。</p>
      */
     public $Capacity;
 
     /**
-     * @var string 文件系统快照ID，通过查询快照列表获取该参数，
-[DescribeCfsSnapshots](https://cloud.tencent.com/document/product/582/80206)
+     * @var string <p>文件系统快照ID，通过查询快照列表获取该参数，<br><a href="https://cloud.tencent.com/document/product/582/80206">DescribeCfsSnapshots</a></p>
      */
     public $SnapshotId;
 
     /**
-     * @var string 定期快照策略ID，通过查询快照策略信息获取,
-[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/product/582/38157)
+     * @var string <p>定期快照策略ID，通过查询快照策略信息获取,<br><a href="https://cloud.tencent.com/document/product/582/38157">DescribeAutoSnapshotPolicies</a></p>
      */
     public $AutoSnapshotPolicyId;
 
     /**
-     * @var boolean 是否开启默认扩容，仅turbo类型文件存储支持
+     * @var boolean <p>是否开启默认扩容，仅turbo类型文件存储支持</p>
      */
     public $EnableAutoScaleUp;
 
     /**
-     * @var string v1.5：创建普通版的通用文件系统；
-v3.1：创建增强版的通用文件系统
-说明：增强版的通用系统需要开通白名单才能使用，如有需要请提交工单与我们联系。
+     * @var string <p>v1.5：创建普通版的通用文件系统；<br>v3.1：创建增强版的通用文件系统<br>说明：增强版的通用系统需要开通白名单才能使用，如有需要请提交工单与我们联系。</p>
      */
     public $CfsVersion;
 
     /**
-     * @var string turbo文件系统元数据属性
-basic：创建标准型的元数据
-enhanced：创建增强型的元数据
+     * @var string <p>turbo文件系统元数据属性<br>basic：创建标准型的元数据<br>enhanced：创建增强型的元数据</p>
      */
     public $MetaType;
 
     /**
-     * @param string $Zone 可用区名称，例如ap-beijing-1，请参考 [概览](https://cloud.tencent.com/document/product/582/13225) 文档中的地域与可用区列表
-     * @param string $NetInterface 网络类型，可选值为 VPC，CCN；其中 VPC 为私有网络， CCN 为云联网。通用标准型/性能型请选择VPC，Turbo标准型/性能型请选择CCN。
-     * @param string $PGroupId 权限组 ID,pgroupbasic 是默认权限组，通过控制查询权限组列表接口获取[DescribeCfsPGroups](https://cloud.tencent.com/document/product/582/38157)
-     * @param string $Protocol 文件系统协议类型， 值为 NFS、CIFS、TURBO ; 若留空则默认为 NFS协议，turbo系列必须选择TURBO，不支持NFS、CIFS
-     * @param string $StorageType 文件系统存储类型，默认值为 SD ；其中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。
-     * @param string $VpcId 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填.通过查询私有网络接口获取，
-[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)
-     * @param string $SubnetId 子网 ID，若网络类型选择的是VPC，该字段为必填。通过查询子网接口获取，
-[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)
-     * @param string $MountIP 指定IP地址，仅VPC网络支持；若不填写、将在该子网下随机分配 IP，Turbo系列当前不支持指定
-     * @param string $FsName 用户自定义文件系统名称
-     * @param array $ResourceTags 文件系统标签
-     * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。用于保证请求幂等性的字符串失效时间为2小时。
-     * @param string $CcnId 云联网ID， 若网络类型选择的是CCN，该字段为必填;通过查询云联网列表接口获取，通过接口
-[DescribeCcns](https://cloud.tencent.com/document/product/215/19199)
-
-     * @param string $CidrBlock 云联网中CFS使用的网段， 若网络类型选择的是Ccn，该字段为必填，且不能和Ccn中已经绑定的网段冲突
-     * @param integer $Capacity 文件系统容量，turbo系列必填，单位为GiB。 turbo标准型单位GB，起售20TiB，即20480 GiB；扩容步长10TiB，即10240 GiB。turbo性能型起售10TiB，即10240 GiB；扩容步长10TiB，10240 GiB。
-     * @param string $SnapshotId 文件系统快照ID，通过查询快照列表获取该参数，
-[DescribeCfsSnapshots](https://cloud.tencent.com/document/product/582/80206)
-     * @param string $AutoSnapshotPolicyId 定期快照策略ID，通过查询快照策略信息获取,
-[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/product/582/38157)
-     * @param boolean $EnableAutoScaleUp 是否开启默认扩容，仅turbo类型文件存储支持
-     * @param string $CfsVersion v1.5：创建普通版的通用文件系统；
-v3.1：创建增强版的通用文件系统
-说明：增强版的通用系统需要开通白名单才能使用，如有需要请提交工单与我们联系。
-     * @param string $MetaType turbo文件系统元数据属性
-basic：创建标准型的元数据
-enhanced：创建增强型的元数据
+     * @param string $Zone <p>可用区名称，例如ap-beijing-1，请参考 <a href="https://cloud.tencent.com/document/product/582/13225">概览</a> 文档中的地域与可用区列表</p>
+     * @param string $NetInterface <p>网络类型，可选值为 VPC，CCN；其中 VPC 为私有网络， CCN 为云联网。通用标准型/性能型请选择VPC，Turbo标准型/性能型请选择CCN。</p>
+     * @param string $PGroupId <p>权限组 ID,pgroupbasic 是默认权限组，通过控制查询权限组列表接口获取<a href="https://cloud.tencent.com/document/product/582/38157">DescribeCfsPGroups</a></p>
+     * @param string $Protocol <p>文件系统协议类型， 值为 NFS、CIFS、TURBO ; 若留空则默认为 NFS协议，turbo系列必须选择TURBO，不支持NFS、CIFS</p>
+     * @param string $StorageType <p>文件系统存储类型，默认值为 SD ；其中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。</p>
+     * @param string $VpcId <p>私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填.通过查询私有网络接口获取，<br><a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a></p>
+     * @param string $SubnetId <p>子网 ID，若网络类型选择的是VPC，该字段为必填。通过查询子网接口获取，<br><a href="https://cloud.tencent.com/document/product/215/15784">DescribeSubnets</a></p>
+     * @param string $MountIP <p>指定IP地址，仅VPC网络支持；若不填写、将在该子网下随机分配 IP，Turbo系列当前不支持指定</p>
+     * @param string $FsName <p>用户自定义文件系统名称</p>
+     * @param boolean $Encrypted <p>文件系统是否加密，若留空则默认为不加密</p>
+     * @param array $ResourceTags <p>文件系统标签</p>
+     * @param string $ClientToken <p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。用于保证请求幂等性的字符串失效时间为2小时。</p>
+     * @param string $CcnId <p>云联网ID， 若网络类型选择的是CCN，该字段为必填;通过查询云联网列表接口获取，通过接口<br><a href="https://cloud.tencent.com/document/product/215/19199">DescribeCcns</a></p>
+     * @param string $CidrBlock <p>云联网中CFS使用的网段， 若网络类型选择的是Ccn，该字段为必填，且不能和Ccn中已经绑定的网段冲突</p>
+     * @param integer $Capacity <p>文件系统容量，turbo系列必填，单位为GiB。 turbo标准型单位GB，起售20TiB，即20480 GiB；扩容步长10TiB，即10240 GiB。turbo性能型起售10TiB，即10240 GiB；扩容步长10TiB，10240 GiB。</p>
+     * @param string $SnapshotId <p>文件系统快照ID，通过查询快照列表获取该参数，<br><a href="https://cloud.tencent.com/document/product/582/80206">DescribeCfsSnapshots</a></p>
+     * @param string $AutoSnapshotPolicyId <p>定期快照策略ID，通过查询快照策略信息获取,<br><a href="https://cloud.tencent.com/document/product/582/38157">DescribeAutoSnapshotPolicies</a></p>
+     * @param boolean $EnableAutoScaleUp <p>是否开启默认扩容，仅turbo类型文件存储支持</p>
+     * @param string $CfsVersion <p>v1.5：创建普通版的通用文件系统；<br>v3.1：创建增强版的通用文件系统<br>说明：增强版的通用系统需要开通白名单才能使用，如有需要请提交工单与我们联系。</p>
+     * @param string $MetaType <p>turbo文件系统元数据属性<br>basic：创建标准型的元数据<br>enhanced：创建增强型的元数据</p>
      */
     function __construct()
     {
@@ -264,6 +232,10 @@ enhanced：创建增强型的元数据
 
         if (array_key_exists("FsName",$param) and $param["FsName"] !== null) {
             $this->FsName = $param["FsName"];
+        }
+
+        if (array_key_exists("Encrypted",$param) and $param["Encrypted"] !== null) {
+            $this->Encrypted = $param["Encrypted"];
         }
 
         if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {

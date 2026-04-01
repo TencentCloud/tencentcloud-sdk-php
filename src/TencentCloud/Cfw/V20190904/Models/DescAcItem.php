@@ -96,6 +96,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置规则创建时间
  * @method string getUpdateTime() 获取规则最近更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置规则最近更新时间
+ * @method string getDestValueType() 获取目的值的类型，与TargetType或DestType所代表的目的类型含义有所不同，如目的类型是template,但template分ip模板和域名模板，故需通过DestValueType进一步区分
+ * @method void setDestValueType(string $DestValueType) 设置目的值的类型，与TargetType或DestType所代表的目的类型含义有所不同，如目的类型是template,但template分ip模板和域名模板，故需通过DestValueType进一步区分
+ * @method integer getRulePartition() 获取规则分区，1最前分区，2中间分区，3最后分区
+ * @method void setRulePartition(integer $RulePartition) 设置规则分区，1最前分区，2中间分区，3最后分区
  */
 class DescAcItem extends AbstractModel
 {
@@ -286,6 +290,16 @@ class DescAcItem extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 目的值的类型，与TargetType或DestType所代表的目的类型含义有所不同，如目的类型是template,但template分ip模板和域名模板，故需通过DestValueType进一步区分
+     */
+    public $DestValueType;
+
+    /**
+     * @var integer 规则分区，1最前分区，2中间分区，3最后分区
+     */
+    public $RulePartition;
+
+    /**
      * @param string $SourceContent 访问源
      * @param string $TargetContent 访问目的
      * @param string $Protocol 协议
@@ -324,6 +338,8 @@ class DescAcItem extends AbstractModel
      * @param string $CityKey 省份、城市简称
      * @param string $CreateTime 规则创建时间
      * @param string $UpdateTime 规则最近更新时间
+     * @param string $DestValueType 目的值的类型，与TargetType或DestType所代表的目的类型含义有所不同，如目的类型是template,但template分ip模板和域名模板，故需通过DestValueType进一步区分
+     * @param integer $RulePartition 规则分区，1最前分区，2中间分区，3最后分区
      */
     function __construct()
     {
@@ -489,6 +505,14 @@ class DescAcItem extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("DestValueType",$param) and $param["DestValueType"] !== null) {
+            $this->DestValueType = $param["DestValueType"];
+        }
+
+        if (array_key_exists("RulePartition",$param) and $param["RulePartition"] !== null) {
+            $this->RulePartition = $param["RulePartition"];
         }
     }
 }

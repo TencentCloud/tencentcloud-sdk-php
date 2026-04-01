@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstance请求参数结构体
  *
- * @method string getInstanceId() 获取集群实例ID
- * @method void setInstanceId(string $InstanceId) 设置集群实例ID
- * @method boolean getIsOpenApi() 获取是否是open api查询
- * @method void setIsOpenApi(boolean $IsOpenApi) 设置是否是open api查询
+ * @method string getInstanceId() 获取<p>集群实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>集群实例ID</p>
+ * @method boolean getIsOpenApi() 获取<p>是否是open api查询</p>
+ * @method void setIsOpenApi(boolean $IsOpenApi) 设置<p>是否是open api查询</p>
  */
 class DescribeInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 集群实例ID
+     * @var string <p>集群实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var boolean 是否是open api查询
+     * @var boolean <p>是否是open api查询</p>
      */
     public $IsOpenApi;
 
     /**
-     * @param string $InstanceId 集群实例ID
-     * @param boolean $IsOpenApi 是否是open api查询
+     * @param string $InstanceId <p>集群实例ID</p>
+     * @param boolean $IsOpenApi <p>是否是open api查询</p>
      */
     function __construct()
     {

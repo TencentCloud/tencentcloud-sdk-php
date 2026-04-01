@@ -137,7 +137,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
  * @method Models\DeleteImageProcessingTemplateResponse DeleteImageProcessingTemplate(Models\DeleteImageProcessingTemplateRequest $req) 删除用户自定义图片处理模板。
  * @method Models\DeleteImageSpriteTemplateResponse DeleteImageSpriteTemplate(Models\DeleteImageSpriteTemplateRequest $req) 删除雪碧图模板。
  * @method Models\DeleteJustInTimeTranscodeTemplateResponse DeleteJustInTimeTranscodeTemplate(Models\DeleteJustInTimeTranscodeTemplateRequest $req) 删除即时转码模板。
- * @method Models\DeleteLLMComprehendTemplateResponse DeleteLLMComprehendTemplate(Models\DeleteLLMComprehendTemplateRequest $req) 删除用户自定义图像异步处理模板。
+ * @method Models\DeleteLLMComprehendTemplateResponse DeleteLLMComprehendTemplate(Models\DeleteLLMComprehendTemplateRequest $req) 删除用户自定义大模型解析模板。
 
 注意：模板 ID 为 10000 以下的为系统预置模板，不允许删除。
  * @method Models\DeleteMPSTemplateResponse DeleteMPSTemplate(Models\DeleteMPSTemplateRequest $req) 删除用户自定义 MPS 任务模板。

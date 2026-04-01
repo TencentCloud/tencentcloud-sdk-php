@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setState(string $State) 设置流量镜像状态, 支持RUNNING/STOPED（vpc），RUNNING（公网IP），当采集vpc流量镜像时，此参数为必填。
  * @method string getDirection() 获取流量镜像采集方向，支持EGRESS/INGRESS/ALL（vpc），ALL（公网IP）。
  * @method void setDirection(string $Direction) 设置流量镜像采集方向，支持EGRESS/INGRESS/ALL（vpc），ALL（公网IP）。
- * @method array getCollectorSrcs() 获取流量镜像的采集对象。
- * @method void setCollectorSrcs(array $CollectorSrcs) 设置流量镜像的采集对象。
+ * @method array getCollectorSrcs() 获取流量镜像的采集对象 (最多支持20个采集对象)。
+ * @method void setCollectorSrcs(array $CollectorSrcs) 设置流量镜像的采集对象 (最多支持20个采集对象)。
  * @method string getNatId() 获取流量镜像过滤的natgw实例。
  * @method void setNatId(string $NatId) 设置流量镜像过滤的natgw实例。
  * @method array getCollectorNormalFilters() 获取需要过滤的五元组规则。
@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置创建的流量镜像的类型，支持VPC/PUBLICIP，默认为VPC类型。
  * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+ * @method array getIngressFilterRules() 获取流量镜像入站过滤规则。
+ * @method void setIngressFilterRules(array $IngressFilterRules) 设置流量镜像入站过滤规则。
+ * @method array getEgressFilterRules() 获取流量镜像出站过滤规则。
+ * @method void setEgressFilterRules(array $EgressFilterRules) 设置流量镜像出站过滤规则。
  */
 class CreateTrafficMirrorRequest extends AbstractModel
 {
@@ -73,7 +77,7 @@ class CreateTrafficMirrorRequest extends AbstractModel
     public $Direction;
 
     /**
-     * @var array 流量镜像的采集对象。
+     * @var array 流量镜像的采集对象 (最多支持20个采集对象)。
      */
     public $CollectorSrcs;
 
@@ -108,18 +112,30 @@ class CreateTrafficMirrorRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var array 流量镜像入站过滤规则。
+     */
+    public $IngressFilterRules;
+
+    /**
+     * @var array 流量镜像出站过滤规则。
+     */
+    public $EgressFilterRules;
+
+    /**
      * @param string $VpcId VPC实例ID。
      * @param string $TrafficMirrorName 流量镜像名字。
      * @param string $TrafficMirrorDescribe 流量镜像描述。
      * @param string $State 流量镜像状态, 支持RUNNING/STOPED（vpc），RUNNING（公网IP），当采集vpc流量镜像时，此参数为必填。
      * @param string $Direction 流量镜像采集方向，支持EGRESS/INGRESS/ALL（vpc），ALL（公网IP）。
-     * @param array $CollectorSrcs 流量镜像的采集对象。
+     * @param array $CollectorSrcs 流量镜像的采集对象 (最多支持20个采集对象)。
      * @param string $NatId 流量镜像过滤的natgw实例。
      * @param array $CollectorNormalFilters 需要过滤的五元组规则。
      * @param TrafficMirrorTarget $CollectorTarget 流量镜像的目的地址。
      * @param string $SubnetId 流量镜像采集流量的发送端所属子网ID。
      * @param string $Type 创建的流量镜像的类型，支持VPC/PUBLICIP，默认为VPC类型。
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     * @param array $IngressFilterRules 流量镜像入站过滤规则。
+     * @param array $EgressFilterRules 流量镜像出站过滤规则。
      */
     function __construct()
     {
@@ -190,6 +206,24 @@ class CreateTrafficMirrorRequest extends AbstractModel
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("IngressFilterRules",$param) and $param["IngressFilterRules"] !== null) {
+            $this->IngressFilterRules = [];
+            foreach ($param["IngressFilterRules"] as $key => $value){
+                $obj = new TrafficMirrorFilter();
+                $obj->deserialize($value);
+                array_push($this->IngressFilterRules, $obj);
+            }
+        }
+
+        if (array_key_exists("EgressFilterRules",$param) and $param["EgressFilterRules"] !== null) {
+            $this->EgressFilterRules = [];
+            foreach ($param["EgressFilterRules"] as $key => $value){
+                $obj = new TrafficMirrorFilter();
+                $obj->deserialize($value);
+                array_push($this->EgressFilterRules, $obj);
             }
         }
     }

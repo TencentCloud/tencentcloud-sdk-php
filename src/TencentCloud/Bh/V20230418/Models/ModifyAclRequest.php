@@ -28,48 +28,48 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAllowAnyAccount(boolean $AllowAnyAccount) 设置是否允许任意账号登录
  * @method integer getId() 获取访问权限ID
  * @method void setId(integer $Id) 设置访问权限ID
- * @method boolean getAllowClipFileUp() 获取是否开启剪贴板文件上行
- * @method void setAllowClipFileUp(boolean $AllowClipFileUp) 设置是否开启剪贴板文件上行
- * @method boolean getAllowClipFileDown() 获取是否开启剪贴板文件下行
- * @method void setAllowClipFileDown(boolean $AllowClipFileDown) 设置是否开启剪贴板文件下行
- * @method boolean getAllowClipTextUp() 获取是否开启剪贴板文本（含图片）上行
- * @method void setAllowClipTextUp(boolean $AllowClipTextUp) 设置是否开启剪贴板文本（含图片）上行
- * @method boolean getAllowClipTextDown() 获取是否开启剪贴板文本（含图片）下行
- * @method void setAllowClipTextDown(boolean $AllowClipTextDown) 设置是否开启剪贴板文本（含图片）下行
- * @method boolean getAllowFileUp() 获取是否开启文件传输上传
- * @method void setAllowFileUp(boolean $AllowFileUp) 设置是否开启文件传输上传
- * @method integer getMaxFileUpSize() 获取文件传输上传大小限制（预留参数，目前暂未使用）
- * @method void setMaxFileUpSize(integer $MaxFileUpSize) 设置文件传输上传大小限制（预留参数，目前暂未使用）
- * @method boolean getAllowFileDown() 获取是否开启文件传输下载
- * @method void setAllowFileDown(boolean $AllowFileDown) 设置是否开启文件传输下载
- * @method integer getMaxFileDownSize() 获取文件传输下载大小限制（预留参数，目前暂未使用）
- * @method void setMaxFileDownSize(integer $MaxFileDownSize) 设置文件传输下载大小限制（预留参数，目前暂未使用）
+ * @method boolean getAllowClipFileUp() 获取是否开启剪贴板文件上行，不传时默认为false
+ * @method void setAllowClipFileUp(boolean $AllowClipFileUp) 设置是否开启剪贴板文件上行，不传时默认为false
+ * @method boolean getAllowClipFileDown() 获取是否开启剪贴板文件下行，不传时默认为false
+ * @method void setAllowClipFileDown(boolean $AllowClipFileDown) 设置是否开启剪贴板文件下行，不传时默认为false
+ * @method boolean getAllowClipTextUp() 获取是否开启剪贴板文本（含图片）上行，不传时默认为false
+ * @method void setAllowClipTextUp(boolean $AllowClipTextUp) 设置是否开启剪贴板文本（含图片）上行，不传时默认为false
+ * @method boolean getAllowClipTextDown() 获取是否开启剪贴板文本（含图片）下行，不传时默认为false
+ * @method void setAllowClipTextDown(boolean $AllowClipTextDown) 设置是否开启剪贴板文本（含图片）下行，不传时默认为false
+ * @method boolean getAllowFileUp() 获取是否开启文件传输上传，不传时默认为false
+ * @method void setAllowFileUp(boolean $AllowFileUp) 设置是否开启文件传输上传，不传时默认为false
+ * @method integer getMaxFileUpSize() 获取文件传输上传大小限制（预留参数，目前暂未使用），不传时默认为0
+ * @method void setMaxFileUpSize(integer $MaxFileUpSize) 设置文件传输上传大小限制（预留参数，目前暂未使用），不传时默认为0
+ * @method boolean getAllowFileDown() 获取是否开启文件传输下载，不传时默认为false
+ * @method void setAllowFileDown(boolean $AllowFileDown) 设置是否开启文件传输下载，不传时默认为false
+ * @method integer getMaxFileDownSize() 获取文件传输下载大小限制（预留参数，目前暂未使用），不传时默认为0
+ * @method void setMaxFileDownSize(integer $MaxFileDownSize) 设置文件传输下载大小限制（预留参数，目前暂未使用），不传时默认为0
  * @method array getUserIdSet() 获取关联的用户ID
  * @method void setUserIdSet(array $UserIdSet) 设置关联的用户ID
  * @method array getUserGroupIdSet() 获取关联的用户组ID
  * @method void setUserGroupIdSet(array $UserGroupIdSet) 设置关联的用户组ID
  * @method array getDeviceIdSet() 获取关联的资产ID
  * @method void setDeviceIdSet(array $DeviceIdSet) 设置关联的资产ID
- * @method array getAppAssetIdSet() 获取关联的应用资产ID集合
- * @method void setAppAssetIdSet(array $AppAssetIdSet) 设置关联的应用资产ID集合
- * @method array getDeviceGroupIdSet() 获取关联的资产组ID
- * @method void setDeviceGroupIdSet(array $DeviceGroupIdSet) 设置关联的资产组ID
- * @method array getAccountSet() 获取关联的账号
- * @method void setAccountSet(array $AccountSet) 设置关联的账号
- * @method array getCmdTemplateIdSet() 获取关联的高危命令模板ID
- * @method void setCmdTemplateIdSet(array $CmdTemplateIdSet) 设置关联的高危命令模板ID
- * @method array getACTemplateIdSet() 获取关联高危DB模板ID
- * @method void setACTemplateIdSet(array $ACTemplateIdSet) 设置关联高危DB模板ID
- * @method boolean getAllowDiskFileUp() 获取是否开启 RDP 磁盘映射文件上传
- * @method void setAllowDiskFileUp(boolean $AllowDiskFileUp) 设置是否开启 RDP 磁盘映射文件上传
- * @method boolean getAllowDiskFileDown() 获取是否开启 RDP 磁盘映射文件下载
- * @method void setAllowDiskFileDown(boolean $AllowDiskFileDown) 设置是否开启 RDP 磁盘映射文件下载
- * @method boolean getAllowShellFileUp() 获取是否开启rz sz文件上传
- * @method void setAllowShellFileUp(boolean $AllowShellFileUp) 设置是否开启rz sz文件上传
- * @method boolean getAllowShellFileDown() 获取是否开启rz sz文件下载
- * @method void setAllowShellFileDown(boolean $AllowShellFileDown) 设置是否开启rz sz文件下载
- * @method boolean getAllowFileDel() 获取是否开启 SFTP 文件删除
- * @method void setAllowFileDel(boolean $AllowFileDel) 设置是否开启 SFTP 文件删除
+ * @method array getAppAssetIdSet() 获取关联的应用资产ID集合，不传时表示不选择任何应用资产
+ * @method void setAppAssetIdSet(array $AppAssetIdSet) 设置关联的应用资产ID集合，不传时表示不选择任何应用资产
+ * @method array getDeviceGroupIdSet() 获取关联的资产组ID，不传时表示不选择任何资产组
+ * @method void setDeviceGroupIdSet(array $DeviceGroupIdSet) 设置关联的资产组ID，不传时表示不选择任何资产组
+ * @method array getAccountSet() 获取关联的资产账号，不传时表示不选择任何资产账号
+ * @method void setAccountSet(array $AccountSet) 设置关联的资产账号，不传时表示不选择任何资产账号
+ * @method array getCmdTemplateIdSet() 获取关联的高危命令模板ID，不传时表示不选择任何模板
+ * @method void setCmdTemplateIdSet(array $CmdTemplateIdSet) 设置关联的高危命令模板ID，不传时表示不选择任何模板
+ * @method array getACTemplateIdSet() 获取关联高危DB模板ID，不传时表示不选择任何模板
+ * @method void setACTemplateIdSet(array $ACTemplateIdSet) 设置关联高危DB模板ID，不传时表示不选择任何模板
+ * @method boolean getAllowDiskFileUp() 获取是否开启 RDP 磁盘映射文件上传，不传时默认为false
+ * @method void setAllowDiskFileUp(boolean $AllowDiskFileUp) 设置是否开启 RDP 磁盘映射文件上传，不传时默认为false
+ * @method boolean getAllowDiskFileDown() 获取是否开启 RDP 磁盘映射文件下载，不传时默认为false
+ * @method void setAllowDiskFileDown(boolean $AllowDiskFileDown) 设置是否开启 RDP 磁盘映射文件下载，不传时默认为false
+ * @method boolean getAllowShellFileUp() 获取是否开启rz sz文件上传，不传时默认为false
+ * @method void setAllowShellFileUp(boolean $AllowShellFileUp) 设置是否开启rz sz文件上传，不传时默认为false
+ * @method boolean getAllowShellFileDown() 获取是否开启rz sz文件下载，不传时默认为false
+ * @method void setAllowShellFileDown(boolean $AllowShellFileDown) 设置是否开启rz sz文件下载，不传时默认为false
+ * @method boolean getAllowFileDel() 获取是否开启 SFTP 文件删除，不传时默认为false
+ * @method void setAllowFileDel(boolean $AllowFileDel) 设置是否开启 SFTP 文件删除，不传时默认为false
  * @method string getValidateFrom() 获取访问权限生效时间，如:"2021-09-22T00:00:00+00:00"
 生效、失效时间不填则访问权限长期有效
  * @method void setValidateFrom(string $ValidateFrom) 设置访问权限生效时间，如:"2021-09-22T00:00:00+00:00"
@@ -80,12 +80,12 @@ use TencentCloud\Common\AbstractModel;
 生效、失效时间不填则访问权限长期有效
  * @method string getDepartmentId() 获取权限所属部门的ID，如：1.2.3
  * @method void setDepartmentId(string $DepartmentId) 设置权限所属部门的ID，如：1.2.3
- * @method boolean getAllowAccessCredential() 获取是否允许使用访问串
- * @method void setAllowAccessCredential(boolean $AllowAccessCredential) 设置是否允许使用访问串
- * @method boolean getAllowKeyboardLogger() 获取是否允许键盘记录
- * @method void setAllowKeyboardLogger(boolean $AllowKeyboardLogger) 设置是否允许键盘记录
- * @method integer getMaxAccessCredentialDuration() 获取访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍
- * @method void setMaxAccessCredentialDuration(integer $MaxAccessCredentialDuration) 设置访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍
+ * @method boolean getAllowAccessCredential() 获取是否允许使用访问串，不传时默认为true
+ * @method void setAllowAccessCredential(boolean $AllowAccessCredential) 设置是否允许使用访问串，不传时默认为true
+ * @method boolean getAllowKeyboardLogger() 获取是否允许键盘记录，不传时默认为false
+ * @method void setAllowKeyboardLogger(boolean $AllowKeyboardLogger) 设置是否允许键盘记录，不传时默认为false
+ * @method integer getMaxAccessCredentialDuration() 获取访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍，不传时默认为9999天对应的秒数
+ * @method void setMaxAccessCredentialDuration(integer $MaxAccessCredentialDuration) 设置访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍，不传时默认为9999天对应的秒数
  */
 class ModifyAclRequest extends AbstractModel
 {
@@ -110,42 +110,42 @@ class ModifyAclRequest extends AbstractModel
     public $Id;
 
     /**
-     * @var boolean 是否开启剪贴板文件上行
+     * @var boolean 是否开启剪贴板文件上行，不传时默认为false
      */
     public $AllowClipFileUp;
 
     /**
-     * @var boolean 是否开启剪贴板文件下行
+     * @var boolean 是否开启剪贴板文件下行，不传时默认为false
      */
     public $AllowClipFileDown;
 
     /**
-     * @var boolean 是否开启剪贴板文本（含图片）上行
+     * @var boolean 是否开启剪贴板文本（含图片）上行，不传时默认为false
      */
     public $AllowClipTextUp;
 
     /**
-     * @var boolean 是否开启剪贴板文本（含图片）下行
+     * @var boolean 是否开启剪贴板文本（含图片）下行，不传时默认为false
      */
     public $AllowClipTextDown;
 
     /**
-     * @var boolean 是否开启文件传输上传
+     * @var boolean 是否开启文件传输上传，不传时默认为false
      */
     public $AllowFileUp;
 
     /**
-     * @var integer 文件传输上传大小限制（预留参数，目前暂未使用）
+     * @var integer 文件传输上传大小限制（预留参数，目前暂未使用），不传时默认为0
      */
     public $MaxFileUpSize;
 
     /**
-     * @var boolean 是否开启文件传输下载
+     * @var boolean 是否开启文件传输下载，不传时默认为false
      */
     public $AllowFileDown;
 
     /**
-     * @var integer 文件传输下载大小限制（预留参数，目前暂未使用）
+     * @var integer 文件传输下载大小限制（预留参数，目前暂未使用），不传时默认为0
      */
     public $MaxFileDownSize;
 
@@ -165,52 +165,52 @@ class ModifyAclRequest extends AbstractModel
     public $DeviceIdSet;
 
     /**
-     * @var array 关联的应用资产ID集合
+     * @var array 关联的应用资产ID集合，不传时表示不选择任何应用资产
      */
     public $AppAssetIdSet;
 
     /**
-     * @var array 关联的资产组ID
+     * @var array 关联的资产组ID，不传时表示不选择任何资产组
      */
     public $DeviceGroupIdSet;
 
     /**
-     * @var array 关联的账号
+     * @var array 关联的资产账号，不传时表示不选择任何资产账号
      */
     public $AccountSet;
 
     /**
-     * @var array 关联的高危命令模板ID
+     * @var array 关联的高危命令模板ID，不传时表示不选择任何模板
      */
     public $CmdTemplateIdSet;
 
     /**
-     * @var array 关联高危DB模板ID
+     * @var array 关联高危DB模板ID，不传时表示不选择任何模板
      */
     public $ACTemplateIdSet;
 
     /**
-     * @var boolean 是否开启 RDP 磁盘映射文件上传
+     * @var boolean 是否开启 RDP 磁盘映射文件上传，不传时默认为false
      */
     public $AllowDiskFileUp;
 
     /**
-     * @var boolean 是否开启 RDP 磁盘映射文件下载
+     * @var boolean 是否开启 RDP 磁盘映射文件下载，不传时默认为false
      */
     public $AllowDiskFileDown;
 
     /**
-     * @var boolean 是否开启rz sz文件上传
+     * @var boolean 是否开启rz sz文件上传，不传时默认为false
      */
     public $AllowShellFileUp;
 
     /**
-     * @var boolean 是否开启rz sz文件下载
+     * @var boolean 是否开启rz sz文件下载，不传时默认为false
      */
     public $AllowShellFileDown;
 
     /**
-     * @var boolean 是否开启 SFTP 文件删除
+     * @var boolean 是否开启 SFTP 文件删除，不传时默认为false
      */
     public $AllowFileDel;
 
@@ -232,17 +232,17 @@ class ModifyAclRequest extends AbstractModel
     public $DepartmentId;
 
     /**
-     * @var boolean 是否允许使用访问串
+     * @var boolean 是否允许使用访问串，不传时默认为true
      */
     public $AllowAccessCredential;
 
     /**
-     * @var boolean 是否允许键盘记录
+     * @var boolean 是否允许键盘记录，不传时默认为false
      */
     public $AllowKeyboardLogger;
 
     /**
-     * @var integer 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍
+     * @var integer 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍，不传时默认为9999天对应的秒数
      */
     public $MaxAccessCredentialDuration;
 
@@ -251,35 +251,35 @@ class ModifyAclRequest extends AbstractModel
      * @param boolean $AllowDiskRedirect 是否开启磁盘映射
      * @param boolean $AllowAnyAccount 是否允许任意账号登录
      * @param integer $Id 访问权限ID
-     * @param boolean $AllowClipFileUp 是否开启剪贴板文件上行
-     * @param boolean $AllowClipFileDown 是否开启剪贴板文件下行
-     * @param boolean $AllowClipTextUp 是否开启剪贴板文本（含图片）上行
-     * @param boolean $AllowClipTextDown 是否开启剪贴板文本（含图片）下行
-     * @param boolean $AllowFileUp 是否开启文件传输上传
-     * @param integer $MaxFileUpSize 文件传输上传大小限制（预留参数，目前暂未使用）
-     * @param boolean $AllowFileDown 是否开启文件传输下载
-     * @param integer $MaxFileDownSize 文件传输下载大小限制（预留参数，目前暂未使用）
+     * @param boolean $AllowClipFileUp 是否开启剪贴板文件上行，不传时默认为false
+     * @param boolean $AllowClipFileDown 是否开启剪贴板文件下行，不传时默认为false
+     * @param boolean $AllowClipTextUp 是否开启剪贴板文本（含图片）上行，不传时默认为false
+     * @param boolean $AllowClipTextDown 是否开启剪贴板文本（含图片）下行，不传时默认为false
+     * @param boolean $AllowFileUp 是否开启文件传输上传，不传时默认为false
+     * @param integer $MaxFileUpSize 文件传输上传大小限制（预留参数，目前暂未使用），不传时默认为0
+     * @param boolean $AllowFileDown 是否开启文件传输下载，不传时默认为false
+     * @param integer $MaxFileDownSize 文件传输下载大小限制（预留参数，目前暂未使用），不传时默认为0
      * @param array $UserIdSet 关联的用户ID
      * @param array $UserGroupIdSet 关联的用户组ID
      * @param array $DeviceIdSet 关联的资产ID
-     * @param array $AppAssetIdSet 关联的应用资产ID集合
-     * @param array $DeviceGroupIdSet 关联的资产组ID
-     * @param array $AccountSet 关联的账号
-     * @param array $CmdTemplateIdSet 关联的高危命令模板ID
-     * @param array $ACTemplateIdSet 关联高危DB模板ID
-     * @param boolean $AllowDiskFileUp 是否开启 RDP 磁盘映射文件上传
-     * @param boolean $AllowDiskFileDown 是否开启 RDP 磁盘映射文件下载
-     * @param boolean $AllowShellFileUp 是否开启rz sz文件上传
-     * @param boolean $AllowShellFileDown 是否开启rz sz文件下载
-     * @param boolean $AllowFileDel 是否开启 SFTP 文件删除
+     * @param array $AppAssetIdSet 关联的应用资产ID集合，不传时表示不选择任何应用资产
+     * @param array $DeviceGroupIdSet 关联的资产组ID，不传时表示不选择任何资产组
+     * @param array $AccountSet 关联的资产账号，不传时表示不选择任何资产账号
+     * @param array $CmdTemplateIdSet 关联的高危命令模板ID，不传时表示不选择任何模板
+     * @param array $ACTemplateIdSet 关联高危DB模板ID，不传时表示不选择任何模板
+     * @param boolean $AllowDiskFileUp 是否开启 RDP 磁盘映射文件上传，不传时默认为false
+     * @param boolean $AllowDiskFileDown 是否开启 RDP 磁盘映射文件下载，不传时默认为false
+     * @param boolean $AllowShellFileUp 是否开启rz sz文件上传，不传时默认为false
+     * @param boolean $AllowShellFileDown 是否开启rz sz文件下载，不传时默认为false
+     * @param boolean $AllowFileDel 是否开启 SFTP 文件删除，不传时默认为false
      * @param string $ValidateFrom 访问权限生效时间，如:"2021-09-22T00:00:00+00:00"
 生效、失效时间不填则访问权限长期有效
      * @param string $ValidateTo 访问权限失效时间，如:"2021-09-23T00:00:00+00:00"
 生效、失效时间不填则访问权限长期有效
      * @param string $DepartmentId 权限所属部门的ID，如：1.2.3
-     * @param boolean $AllowAccessCredential 是否允许使用访问串
-     * @param boolean $AllowKeyboardLogger 是否允许键盘记录
-     * @param integer $MaxAccessCredentialDuration 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍
+     * @param boolean $AllowAccessCredential 是否允许使用访问串，不传时默认为true
+     * @param boolean $AllowKeyboardLogger 是否允许键盘记录，不传时默认为false
+     * @param integer $MaxAccessCredentialDuration 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍，不传时默认为9999天对应的秒数
      */
     function __construct()
     {

@@ -20,98 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 集群配置信息
  *
- * @method string getConfKey() 获取配置项名称
- * @method void setConfKey(string $ConfKey) 设置配置项名称
- * @method string getConfValue() 获取配置项内容
- * @method void setConfValue(string $ConfValue) 设置配置项内容
- * @method string getDefaultValue() 获取默认值
- * @method void setDefaultValue(string $DefaultValue) 设置默认值
- * @method boolean getNeedRestart() 获取是否需要重启
- * @method void setNeedRestart(boolean $NeedRestart) 设置是否需要重启
- * @method boolean getEditable() 获取是否可编辑
- * @method void setEditable(boolean $Editable) 设置是否可编辑
- * @method string getConfDesc() 获取配置项解释
- * @method void setConfDesc(string $ConfDesc) 设置配置项解释
- * @method string getFileName() 获取文件名称
- * @method void setFileName(string $FileName) 设置文件名称
- * @method string getModifyRuleType() 获取规则名称类型
- * @method void setModifyRuleType(string $ModifyRuleType) 设置规则名称类型
- * @method string getModifyRuleValue() 获取规则名称内容
- * @method void setModifyRuleValue(string $ModifyRuleValue) 设置规则名称内容
- * @method string getUin() 获取修改人的uin
- * @method void setUin(string $Uin) 设置修改人的uin
- * @method string getModifyTime() 获取修改时间
- * @method void setModifyTime(string $ModifyTime) 设置修改时间
+ * @method string getConfKey() 获取<p>配置项名称</p>
+ * @method void setConfKey(string $ConfKey) 设置<p>配置项名称</p>
+ * @method string getConfValue() 获取<p>配置项内容</p>
+ * @method void setConfValue(string $ConfValue) 设置<p>配置项内容</p>
+ * @method string getDefaultValue() 获取<p>默认值</p>
+ * @method void setDefaultValue(string $DefaultValue) 设置<p>默认值</p>
+ * @method boolean getNeedRestart() 获取<p>是否需要重启</p>
+ * @method void setNeedRestart(boolean $NeedRestart) 设置<p>是否需要重启</p>
+ * @method boolean getEditable() 获取<p>是否可编辑</p>
+ * @method void setEditable(boolean $Editable) 设置<p>是否可编辑</p>
+ * @method string getConfDesc() 获取<p>配置项解释</p>
+ * @method void setConfDesc(string $ConfDesc) 设置<p>配置项解释</p>
+ * @method string getFileName() 获取<p>文件名称</p>
+ * @method void setFileName(string $FileName) 设置<p>文件名称</p>
+ * @method string getModifyRuleType() 获取<p>规则名称类型</p>
+ * @method void setModifyRuleType(string $ModifyRuleType) 设置<p>规则名称类型</p>
+ * @method string getModifyRuleValue() 获取<p>规则名称内容</p>
+ * @method void setModifyRuleValue(string $ModifyRuleValue) 设置<p>规则名称内容</p>
+ * @method string getUin() 获取<p>修改人的uin</p>
+ * @method void setUin(string $Uin) 设置<p>修改人的uin</p>
+ * @method string getModifyTime() 获取<p>修改时间</p>
+ * @method void setModifyTime(string $ModifyTime) 设置<p>修改时间</p>
+ * @method string getValueRange() 获取<p>取值范围</p>
+ * @method void setValueRange(string $ValueRange) 设置<p>取值范围</p>
+ * @method string getAbnormalParam() 获取<p>标记异常</p>
+ * @method void setAbnormalParam(string $AbnormalParam) 设置<p>标记异常</p>
  */
 class InstanceConfigInfo extends AbstractModel
 {
     /**
-     * @var string 配置项名称
+     * @var string <p>配置项名称</p>
      */
     public $ConfKey;
 
     /**
-     * @var string 配置项内容
+     * @var string <p>配置项内容</p>
      */
     public $ConfValue;
 
     /**
-     * @var string 默认值
+     * @var string <p>默认值</p>
      */
     public $DefaultValue;
 
     /**
-     * @var boolean 是否需要重启
+     * @var boolean <p>是否需要重启</p>
      */
     public $NeedRestart;
 
     /**
-     * @var boolean 是否可编辑
+     * @var boolean <p>是否可编辑</p>
      */
     public $Editable;
 
     /**
-     * @var string 配置项解释
+     * @var string <p>配置项解释</p>
      */
     public $ConfDesc;
 
     /**
-     * @var string 文件名称
+     * @var string <p>文件名称</p>
      */
     public $FileName;
 
     /**
-     * @var string 规则名称类型
+     * @var string <p>规则名称类型</p>
      */
     public $ModifyRuleType;
 
     /**
-     * @var string 规则名称内容
+     * @var string <p>规则名称内容</p>
      */
     public $ModifyRuleValue;
 
     /**
-     * @var string 修改人的uin
+     * @var string <p>修改人的uin</p>
      */
     public $Uin;
 
     /**
-     * @var string 修改时间
+     * @var string <p>修改时间</p>
      */
     public $ModifyTime;
 
     /**
-     * @param string $ConfKey 配置项名称
-     * @param string $ConfValue 配置项内容
-     * @param string $DefaultValue 默认值
-     * @param boolean $NeedRestart 是否需要重启
-     * @param boolean $Editable 是否可编辑
-     * @param string $ConfDesc 配置项解释
-     * @param string $FileName 文件名称
-     * @param string $ModifyRuleType 规则名称类型
-     * @param string $ModifyRuleValue 规则名称内容
-     * @param string $Uin 修改人的uin
-     * @param string $ModifyTime 修改时间
+     * @var string <p>取值范围</p>
+     */
+    public $ValueRange;
+
+    /**
+     * @var string <p>标记异常</p>
+     */
+    public $AbnormalParam;
+
+    /**
+     * @param string $ConfKey <p>配置项名称</p>
+     * @param string $ConfValue <p>配置项内容</p>
+     * @param string $DefaultValue <p>默认值</p>
+     * @param boolean $NeedRestart <p>是否需要重启</p>
+     * @param boolean $Editable <p>是否可编辑</p>
+     * @param string $ConfDesc <p>配置项解释</p>
+     * @param string $FileName <p>文件名称</p>
+     * @param string $ModifyRuleType <p>规则名称类型</p>
+     * @param string $ModifyRuleValue <p>规则名称内容</p>
+     * @param string $Uin <p>修改人的uin</p>
+     * @param string $ModifyTime <p>修改时间</p>
+     * @param string $ValueRange <p>取值范围</p>
+     * @param string $AbnormalParam <p>标记异常</p>
      */
     function __construct()
     {
@@ -168,6 +184,14 @@ class InstanceConfigInfo extends AbstractModel
 
         if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
             $this->ModifyTime = $param["ModifyTime"];
+        }
+
+        if (array_key_exists("ValueRange",$param) and $param["ValueRange"] !== null) {
+            $this->ValueRange = $param["ValueRange"];
+        }
+
+        if (array_key_exists("AbnormalParam",$param) and $param["AbnormalParam"] !== null) {
+            $this->AbnormalParam = $param["AbnormalParam"];
         }
     }
 }

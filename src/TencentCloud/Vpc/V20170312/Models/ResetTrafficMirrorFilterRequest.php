@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNatId(string $NatId) 设置流量镜像需要过滤的natgw实例ID
  * @method array getCollectorNormalFilters() 获取流量镜像需要过滤的五元组规则
  * @method void setCollectorNormalFilters(array $CollectorNormalFilters) 设置流量镜像需要过滤的五元组规则
+ * @method array getIngressFilterRules() 获取流量镜像入站过滤规则。
+ * @method void setIngressFilterRules(array $IngressFilterRules) 设置流量镜像入站过滤规则。
+ * @method array getEgressFilterRules() 获取流量镜像出站过滤规则。
+ * @method void setEgressFilterRules(array $EgressFilterRules) 设置流量镜像出站过滤规则。
  */
 class ResetTrafficMirrorFilterRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class ResetTrafficMirrorFilterRequest extends AbstractModel
     public $CollectorNormalFilters;
 
     /**
+     * @var array 流量镜像入站过滤规则。
+     */
+    public $IngressFilterRules;
+
+    /**
+     * @var array 流量镜像出站过滤规则。
+     */
+    public $EgressFilterRules;
+
+    /**
      * @param string $TrafficMirrorId 流量镜像实例ID
      * @param string $NatId 流量镜像需要过滤的natgw实例ID
      * @param array $CollectorNormalFilters 流量镜像需要过滤的五元组规则
+     * @param array $IngressFilterRules 流量镜像入站过滤规则。
+     * @param array $EgressFilterRules 流量镜像出站过滤规则。
      */
     function __construct()
     {
@@ -76,6 +92,24 @@ class ResetTrafficMirrorFilterRequest extends AbstractModel
                 $obj = new TrafficMirrorFilter();
                 $obj->deserialize($value);
                 array_push($this->CollectorNormalFilters, $obj);
+            }
+        }
+
+        if (array_key_exists("IngressFilterRules",$param) and $param["IngressFilterRules"] !== null) {
+            $this->IngressFilterRules = [];
+            foreach ($param["IngressFilterRules"] as $key => $value){
+                $obj = new TrafficMirrorFilter();
+                $obj->deserialize($value);
+                array_push($this->IngressFilterRules, $obj);
+            }
+        }
+
+        if (array_key_exists("EgressFilterRules",$param) and $param["EgressFilterRules"] !== null) {
+            $this->EgressFilterRules = [];
+            foreach ($param["EgressFilterRules"] as $key => $value){
+                $obj = new TrafficMirrorFilter();
+                $obj->deserialize($value);
+                array_push($this->EgressFilterRules, $obj);
             }
         }
     }

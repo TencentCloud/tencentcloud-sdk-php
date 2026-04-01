@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RemoveBandwidthPackageResources请求参数结构体
  *
- * @method array getResourceIds() 获取资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'。EIP资源列表可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取，LB资源列表可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685)接口获取。
- * @method void setResourceIds(array $ResourceIds) 设置资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'。EIP资源列表可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取，LB资源列表可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685)接口获取。
+ * @method array getResourceIds() 获取资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'。<li>EIP资源列表：可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取。高防EIP、Anycast EIP、精品BGP EIP默认不支持从共享带宽包中移除，其中高防EIP和精品BGP IP可以迁移到其他同线路类型的共享带宽包中。</li><li>LB资源列表：可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685)接口获取。</li>
+
+ * @method void setResourceIds(array $ResourceIds) 设置资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'。<li>EIP资源列表：可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取。高防EIP、Anycast EIP、精品BGP EIP默认不支持从共享带宽包中移除，其中高防EIP和精品BGP IP可以迁移到其他同线路类型的共享带宽包中。</li><li>LB资源列表：可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685)接口获取。</li>
+
  * @method string getBandwidthPackageId() 获取带宽包唯一标识ID，形如'bwp-xxxx'，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
  * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置带宽包唯一标识ID，形如'bwp-xxxx'，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
  * @method string getResourceType() 获取资源类型，可选值：
@@ -38,7 +40,8 @@ use TencentCloud\Common\AbstractModel;
 class RemoveBandwidthPackageResourcesRequest extends AbstractModel
 {
     /**
-     * @var array 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'。EIP资源列表可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取，LB资源列表可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685)接口获取。
+     * @var array 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'。<li>EIP资源列表：可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取。高防EIP、Anycast EIP、精品BGP EIP默认不支持从共享带宽包中移除，其中高防EIP和精品BGP IP可以迁移到其他同线路类型的共享带宽包中。</li><li>LB资源列表：可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685)接口获取。</li>
+
      */
     public $ResourceIds;
 
@@ -65,7 +68,8 @@ class RemoveBandwidthPackageResourcesRequest extends AbstractModel
     public $InternetChargeType;
 
     /**
-     * @param array $ResourceIds 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'。EIP资源列表可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取，LB资源列表可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685)接口获取。
+     * @param array $ResourceIds 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'。<li>EIP资源列表：可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取。高防EIP、Anycast EIP、精品BGP EIP默认不支持从共享带宽包中移除，其中高防EIP和精品BGP IP可以迁移到其他同线路类型的共享带宽包中。</li><li>LB资源列表：可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685)接口获取。</li>
+
      * @param string $BandwidthPackageId 带宽包唯一标识ID，形如'bwp-xxxx'，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
      * @param string $ResourceType 资源类型，可选值：
 <li>Address：弹性公网IP</li>

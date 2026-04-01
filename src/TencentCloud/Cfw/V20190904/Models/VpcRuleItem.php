@@ -116,6 +116,10 @@ log：观察
  * @method void setCreateTime(string $CreateTime) 设置规则创建时间
  * @method string getUpdateTime() 获取规则最近更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置规则最近更新时间
+ * @method string getDestValueType() 获取目的值的类型，与TargetType或DestType所代表的目的类型含义有所不同，如目的类型是template,但template分ip模板和域名模板，故需通过DestValueType进一步区分
+ * @method void setDestValueType(string $DestValueType) 设置目的值的类型，与TargetType或DestType所代表的目的类型含义有所不同，如目的类型是template,但template分ip模板和域名模板，故需通过DestValueType进一步区分
+ * @method integer getRulePartition() 获取规则分区，1最前分区，2中间分区，3最后分区，增删改查规则时无需传入此参数
+ * @method void setRulePartition(integer $RulePartition) 设置规则分区，1最前分区，2中间分区，3最后分区，增删改查规则时无需传入此参数
  */
 class VpcRuleItem extends AbstractModel
 {
@@ -276,6 +280,16 @@ log：观察
     public $UpdateTime;
 
     /**
+     * @var string 目的值的类型，与TargetType或DestType所代表的目的类型含义有所不同，如目的类型是template,但template分ip模板和域名模板，故需通过DestValueType进一步区分
+     */
+    public $DestValueType;
+
+    /**
+     * @var integer 规则分区，1最前分区，2中间分区，3最后分区，增删改查规则时无需传入此参数
+     */
+    public $RulePartition;
+
+    /**
      * @param string $SourceContent 访问源示例：
 net：IP/CIDR(192.168.0.2)
      * @param string $SourceType 访问源类型，类型可以为：net
@@ -324,6 +338,8 @@ log：观察
      * @param integer $Invalid 是否是无效规则，0 表示有效规则，1 表示无效规则，出参场景返回使用
      * @param string $CreateTime 规则创建时间
      * @param string $UpdateTime 规则最近更新时间
+     * @param string $DestValueType 目的值的类型，与TargetType或DestType所代表的目的类型含义有所不同，如目的类型是template,但template分ip模板和域名模板，故需通过DestValueType进一步区分
+     * @param integer $RulePartition 规则分区，1最前分区，2中间分区，3最后分区，增删改查规则时无需传入此参数
      */
     function __construct()
     {
@@ -449,6 +465,14 @@ log：观察
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("DestValueType",$param) and $param["DestValueType"] !== null) {
+            $this->DestValueType = $param["DestValueType"];
+        }
+
+        if (array_key_exists("RulePartition",$param) and $param["RulePartition"] !== null) {
+            $this->RulePartition = $param["RulePartition"];
         }
     }
 }

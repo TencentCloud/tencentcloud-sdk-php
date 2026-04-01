@@ -20,90 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 服务基本信息
  *
- * @method string getServerName() 获取服务名
- * @method void setServerName(string $ServerName) 设置服务名
- * @method string getDefaultDomainName() 获取默认服务域名
- * @method void setDefaultDomainName(string $DefaultDomainName) 设置默认服务域名
- * @method string getCustomDomainName() 获取自定义域名
- * @method void setCustomDomainName(string $CustomDomainName) 设置自定义域名
- * @method string getStatus() 获取服务状态：running/deploying/deploy_failed
- * @method void setStatus(string $Status) 设置服务状态：running/deploying/deploy_failed
- * @method string getUpdateTime() 获取更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
- * @method array getAccessTypes() 获取公网访问类型
- * @method void setAccessTypes(array $AccessTypes) 设置公网访问类型
- * @method array getCustomDomainNames() 获取展示自定义域名
- * @method void setCustomDomainNames(array $CustomDomainNames) 设置展示自定义域名
- * @method string getServerType() 获取服务类型: function 云函数2.0；container 容器服务
- * @method void setServerType(string $ServerType) 设置服务类型: function 云函数2.0；container 容器服务
- * @method string getTrafficType() 获取流量类型，目前只有 FLOW
- * @method void setTrafficType(string $TrafficType) 设置流量类型，目前只有 FLOW
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method string getServerName() 获取<p>服务名</p>
+ * @method void setServerName(string $ServerName) 设置<p>服务名</p>
+ * @method string getDefaultDomainName() 获取<p>默认服务域名</p>
+ * @method void setDefaultDomainName(string $DefaultDomainName) 设置<p>默认服务域名</p>
+ * @method string getCustomDomainName() 获取<p>自定义域名</p>
+ * @method void setCustomDomainName(string $CustomDomainName) 设置<p>自定义域名</p>
+ * @method string getStatus() 获取<p>服务状态：creating/create_failed/freezing/freeze_fail/froze/unfreezing/unfreeze_fail/normal/deleting/delete_failed/abnormal</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>create_failed： 创建失败</li><li>freezing： 冻结中</li><li>freeze_fail： 冻结失败</li><li>froze： 已冻结</li><li>unfreezing： 解冻中</li><li>unfreeze_fail： 解冻失败</li><li>normal： 正常</li><li>deleting： 删除中</li><li>delete_failed： 删除失败</li><li>abnormal： 服务异常</li></ul>
+ * @method void setStatus(string $Status) 设置<p>服务状态：creating/create_failed/freezing/freeze_fail/froze/unfreezing/unfreeze_fail/normal/deleting/delete_failed/abnormal</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>create_failed： 创建失败</li><li>freezing： 冻结中</li><li>freeze_fail： 冻结失败</li><li>froze： 已冻结</li><li>unfreezing： 解冻中</li><li>unfreeze_fail： 解冻失败</li><li>normal： 正常</li><li>deleting： 删除中</li><li>delete_failed： 删除失败</li><li>abnormal： 服务异常</li></ul>
+ * @method string getUpdateTime() 获取<p>更新时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
+ * @method array getAccessTypes() 获取<p>公网访问类型</p>
+ * @method void setAccessTypes(array $AccessTypes) 设置<p>公网访问类型</p>
+ * @method array getCustomDomainNames() 获取<p>展示自定义域名</p>
+ * @method void setCustomDomainNames(array $CustomDomainNames) 设置<p>展示自定义域名</p>
+ * @method string getServerType() 获取<p>服务类型: function 云函数2.0；container 容器服务</p>
+ * @method void setServerType(string $ServerType) 设置<p>服务类型: function 云函数2.0；container 容器服务</p>
+ * @method string getTrafficType() 获取<p>流量类型，目前只有 FLOW</p>
+ * @method void setTrafficType(string $TrafficType) 设置<p>流量类型，目前只有 FLOW</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
  */
 class ServerBaseInfo extends AbstractModel
 {
     /**
-     * @var string 服务名
+     * @var string <p>服务名</p>
      */
     public $ServerName;
 
     /**
-     * @var string 默认服务域名
+     * @var string <p>默认服务域名</p>
      */
     public $DefaultDomainName;
 
     /**
-     * @var string 自定义域名
+     * @var string <p>自定义域名</p>
      */
     public $CustomDomainName;
 
     /**
-     * @var string 服务状态：running/deploying/deploy_failed
+     * @var string <p>服务状态：creating/create_failed/freezing/freeze_fail/froze/unfreezing/unfreeze_fail/normal/deleting/delete_failed/abnormal</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>create_failed： 创建失败</li><li>freezing： 冻结中</li><li>freeze_fail： 冻结失败</li><li>froze： 已冻结</li><li>unfreezing： 解冻中</li><li>unfreeze_fail： 解冻失败</li><li>normal： 正常</li><li>deleting： 删除中</li><li>delete_failed： 删除失败</li><li>abnormal： 服务异常</li></ul>
      */
     public $Status;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var array 公网访问类型
+     * @var array <p>公网访问类型</p>
      */
     public $AccessTypes;
 
     /**
-     * @var array 展示自定义域名
+     * @var array <p>展示自定义域名</p>
      */
     public $CustomDomainNames;
 
     /**
-     * @var string 服务类型: function 云函数2.0；container 容器服务
+     * @var string <p>服务类型: function 云函数2.0；container 容器服务</p>
      */
     public $ServerType;
 
     /**
-     * @var string 流量类型，目前只有 FLOW
+     * @var string <p>流量类型，目前只有 FLOW</p>
      */
     public $TrafficType;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @param string $ServerName 服务名
-     * @param string $DefaultDomainName 默认服务域名
-     * @param string $CustomDomainName 自定义域名
-     * @param string $Status 服务状态：running/deploying/deploy_failed
-     * @param string $UpdateTime 更新时间
-     * @param array $AccessTypes 公网访问类型
-     * @param array $CustomDomainNames 展示自定义域名
-     * @param string $ServerType 服务类型: function 云函数2.0；container 容器服务
-     * @param string $TrafficType 流量类型，目前只有 FLOW
-     * @param string $CreateTime 创建时间
+     * @param string $ServerName <p>服务名</p>
+     * @param string $DefaultDomainName <p>默认服务域名</p>
+     * @param string $CustomDomainName <p>自定义域名</p>
+     * @param string $Status <p>服务状态：creating/create_failed/freezing/freeze_fail/froze/unfreezing/unfreeze_fail/normal/deleting/delete_failed/abnormal</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>create_failed： 创建失败</li><li>freezing： 冻结中</li><li>freeze_fail： 冻结失败</li><li>froze： 已冻结</li><li>unfreezing： 解冻中</li><li>unfreeze_fail： 解冻失败</li><li>normal： 正常</li><li>deleting： 删除中</li><li>delete_failed： 删除失败</li><li>abnormal： 服务异常</li></ul>
+     * @param string $UpdateTime <p>更新时间</p>
+     * @param array $AccessTypes <p>公网访问类型</p>
+     * @param array $CustomDomainNames <p>展示自定义域名</p>
+     * @param string $ServerType <p>服务类型: function 云函数2.0；container 容器服务</p>
+     * @param string $TrafficType <p>流量类型，目前只有 FLOW</p>
+     * @param string $CreateTime <p>创建时间</p>
      */
     function __construct()
     {

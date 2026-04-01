@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 大模型解析模板详情。
  *
- * @method integer getDefinition() 获取图片异步处理模板唯一标识。
- * @method void setDefinition(integer $Definition) 设置图片异步处理模板唯一标识。
- * @method string getName() 获取图片异步处理模板名称。
- * @method void setName(string $Name) 设置图片异步处理模板名称。
- * @method string getComment() 获取图片异步处理模板描述信息。
- * @method void setComment(string $Comment) 设置图片异步处理模板描述信息。
- * @method string getLevel() 获取解析级别，可选值为：
-- Audio: 音频级解析
-- Video: 视频级解析
- * @method void setLevel(string $Level) 设置解析级别，可选值为：
-- Audio: 音频级解析
-- Video: 视频级解析
- * @method LLMComprehendSummary getSummary() 获取分段摘要解析配置
- * @method void setSummary(LLMComprehendSummary $Summary) 设置分段摘要解析配置
- * @method LLMComprehendAsr getAsr() 获取文本转录解析配置
- * @method void setAsr(LLMComprehendAsr $Asr) 设置文本转录解析配置
- * @method string getCreateTime() 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method string getUpdateTime() 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method void setUpdateTime(string $UpdateTime) 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method integer getDefinition() 获取<p>图片异步处理模板唯一标识。</p>
+ * @method void setDefinition(integer $Definition) 设置<p>图片异步处理模板唯一标识。</p>
+ * @method string getName() 获取<p>图片异步处理模板名称。</p>
+ * @method void setName(string $Name) 设置<p>图片异步处理模板名称。</p>
+ * @method string getComment() 获取<p>图片异步处理模板描述信息。</p>
+ * @method void setComment(string $Comment) 设置<p>图片异步处理模板描述信息。</p>
+ * @method string getLevel() 获取<p>解析级别，可选值为：</p><ul><li>Audio: 音频级解析</li><li>Video: 视频级解析</li></ul>
+ * @method void setLevel(string $Level) 设置<p>解析级别，可选值为：</p><ul><li>Audio: 音频级解析</li><li>Video: 视频级解析</li></ul>
+ * @method LLMComprehendSummary getSummary() 获取<p>分段摘要解析配置</p>
+ * @method void setSummary(LLMComprehendSummary $Summary) 设置<p>分段摘要解析配置</p>
+ * @method LLMComprehendAsr getAsr() 获取<p>文本转录解析配置</p>
+ * @method void setAsr(LLMComprehendAsr $Asr) 设置<p>文本转录解析配置</p>
+ * @method LLMComprehendFaceRecognition getFaceRecognition() 获取<p>人脸识别解析配置</p>
+ * @method void setFaceRecognition(LLMComprehendFaceRecognition $FaceRecognition) 设置<p>人脸识别解析配置</p>
+ * @method string getCreateTime() 获取<p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method string getUpdateTime() 获取<p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
  */
 class LLMComprehendTemplateItem extends AbstractModel
 {
     /**
-     * @var integer 图片异步处理模板唯一标识。
+     * @var integer <p>图片异步处理模板唯一标识。</p>
      */
     public $Definition;
 
     /**
-     * @var string 图片异步处理模板名称。
+     * @var string <p>图片异步处理模板名称。</p>
      */
     public $Name;
 
     /**
-     * @var string 图片异步处理模板描述信息。
+     * @var string <p>图片异步处理模板描述信息。</p>
      */
     public $Comment;
 
     /**
-     * @var string 解析级别，可选值为：
-- Audio: 音频级解析
-- Video: 视频级解析
+     * @var string <p>解析级别，可选值为：</p><ul><li>Audio: 音频级解析</li><li>Video: 视频级解析</li></ul>
      */
     public $Level;
 
     /**
-     * @var LLMComprehendSummary 分段摘要解析配置
+     * @var LLMComprehendSummary <p>分段摘要解析配置</p>
      */
     public $Summary;
 
     /**
-     * @var LLMComprehendAsr 文本转录解析配置
+     * @var LLMComprehendAsr <p>文本转录解析配置</p>
      */
     public $Asr;
 
     /**
-     * @var string 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @var LLMComprehendFaceRecognition <p>人脸识别解析配置</p>
+     */
+    public $FaceRecognition;
+
+    /**
+     * @var string <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @var string <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public $UpdateTime;
 
     /**
-     * @param integer $Definition 图片异步处理模板唯一标识。
-     * @param string $Name 图片异步处理模板名称。
-     * @param string $Comment 图片异步处理模板描述信息。
-     * @param string $Level 解析级别，可选值为：
-- Audio: 音频级解析
-- Video: 视频级解析
-     * @param LLMComprehendSummary $Summary 分段摘要解析配置
-     * @param LLMComprehendAsr $Asr 文本转录解析配置
-     * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param integer $Definition <p>图片异步处理模板唯一标识。</p>
+     * @param string $Name <p>图片异步处理模板名称。</p>
+     * @param string $Comment <p>图片异步处理模板描述信息。</p>
+     * @param string $Level <p>解析级别，可选值为：</p><ul><li>Audio: 音频级解析</li><li>Video: 视频级解析</li></ul>
+     * @param LLMComprehendSummary $Summary <p>分段摘要解析配置</p>
+     * @param LLMComprehendAsr $Asr <p>文本转录解析配置</p>
+     * @param LLMComprehendFaceRecognition $FaceRecognition <p>人脸识别解析配置</p>
+     * @param string $CreateTime <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param string $UpdateTime <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     function __construct()
     {
@@ -134,6 +134,11 @@ class LLMComprehendTemplateItem extends AbstractModel
         if (array_key_exists("Asr",$param) and $param["Asr"] !== null) {
             $this->Asr = new LLMComprehendAsr();
             $this->Asr->deserialize($param["Asr"]);
+        }
+
+        if (array_key_exists("FaceRecognition",$param) and $param["FaceRecognition"] !== null) {
+            $this->FaceRecognition = new LLMComprehendFaceRecognition();
+            $this->FaceRecognition->deserialize($param["FaceRecognition"]);
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {

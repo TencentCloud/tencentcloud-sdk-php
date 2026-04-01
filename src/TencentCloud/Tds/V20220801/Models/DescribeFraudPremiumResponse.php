@@ -20,94 +20,108 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFraudPremium返回参数结构体
  *
- * @method string getAppVersion() 获取App版本信息
- * @method void setAppVersion(string $AppVersion) 设置App版本信息
- * @method string getBrand() 获取品牌
- * @method void setBrand(string $Brand) 设置品牌
- * @method string getClientIp() 获取客户端IP
- * @method void setClientIp(string $ClientIp) 设置客户端IP
- * @method string getModel() 获取机型
- * @method void setModel(string $Model) 设置机型
- * @method string getNetworkType() 获取网络类型
- * @method void setNetworkType(string $NetworkType) 设置网络类型
- * @method string getPackageName() 获取应用包名
- * @method void setPackageName(string $PackageName) 设置应用包名
- * @method string getPlatform() 获取平台（2-Android，3-iOS，4-H5，5-微信小程序）
- * @method void setPlatform(string $Platform) 设置平台（2-Android，3-iOS，4-H5，5-微信小程序）
- * @method string getSystemVersion() 获取系统版本
- * @method void setSystemVersion(string $SystemVersion) 设置系统版本
- * @method string getSdkBuildNo() 获取SDK版本号
- * @method void setSdkBuildNo(string $SdkBuildNo) 设置SDK版本号
- * @method array getRiskInfos() 获取实时风险信息
- * @method void setRiskInfos(array $RiskInfos) 设置实时风险信息
- * @method array getHistRiskInfos() 获取离线风险信息
- * @method void setHistRiskInfos(array $HistRiskInfos) 设置离线风险信息
- * @method string getOpenid() 获取设备匿名标识
- * @method void setOpenid(string $Openid) 设置设备匿名标识
+ * @method string getAppVersion() 获取<p>App版本信息</p>
+ * @method void setAppVersion(string $AppVersion) 设置<p>App版本信息</p>
+ * @method string getBrand() 获取<p>品牌</p>
+ * @method void setBrand(string $Brand) 设置<p>品牌</p>
+ * @method string getClientIp() 获取<p>客户端IP</p>
+ * @method void setClientIp(string $ClientIp) 设置<p>客户端IP</p>
+ * @method string getModel() 获取<p>机型</p>
+ * @method void setModel(string $Model) 设置<p>机型</p>
+ * @method string getNetworkType() 获取<p>网络类型</p>
+ * @method void setNetworkType(string $NetworkType) 设置<p>网络类型</p>
+ * @method string getPackageName() 获取<p>应用包名</p>
+ * @method void setPackageName(string $PackageName) 设置<p>应用包名</p>
+ * @method string getPlatform() 获取<p>平台（2-Android，3-iOS，4-H5，5-微信小程序）</p>
+ * @method void setPlatform(string $Platform) 设置<p>平台（2-Android，3-iOS，4-H5，5-微信小程序）</p>
+ * @method string getSystemVersion() 获取<p>系统版本</p>
+ * @method void setSystemVersion(string $SystemVersion) 设置<p>系统版本</p>
+ * @method string getSdkBuildNo() 获取<p>SDK版本号</p>
+ * @method void setSdkBuildNo(string $SdkBuildNo) 设置<p>SDK版本号</p>
+ * @method array getRiskInfos() 获取<p>实时风险信息</p>
+ * @method void setRiskInfos(array $RiskInfos) 设置<p>实时风险信息</p>
+ * @method array getHistRiskInfos() 获取<p>离线风险信息</p>
+ * @method void setHistRiskInfos(array $HistRiskInfos) 设置<p>离线风险信息</p>
+ * @method string getOpenid() 获取<p>设备匿名标识</p>
+ * @method void setOpenid(string $Openid) 设置<p>设备匿名标识</p>
+ * @method string getRiskCheckTimestamp() 获取<p>检测时间戳（毫秒）</p>
+ * @method void setRiskCheckTimestamp(string $RiskCheckTimestamp) 设置<p>检测时间戳（毫秒）</p>
+ * @method array getExtraInfos() 获取<p>额外信息</p>
+ * @method void setExtraInfos(array $ExtraInfos) 设置<p>额外信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeFraudPremiumResponse extends AbstractModel
 {
     /**
-     * @var string App版本信息
+     * @var string <p>App版本信息</p>
      */
     public $AppVersion;
 
     /**
-     * @var string 品牌
+     * @var string <p>品牌</p>
      */
     public $Brand;
 
     /**
-     * @var string 客户端IP
+     * @var string <p>客户端IP</p>
      */
     public $ClientIp;
 
     /**
-     * @var string 机型
+     * @var string <p>机型</p>
      */
     public $Model;
 
     /**
-     * @var string 网络类型
+     * @var string <p>网络类型</p>
      */
     public $NetworkType;
 
     /**
-     * @var string 应用包名
+     * @var string <p>应用包名</p>
      */
     public $PackageName;
 
     /**
-     * @var string 平台（2-Android，3-iOS，4-H5，5-微信小程序）
+     * @var string <p>平台（2-Android，3-iOS，4-H5，5-微信小程序）</p>
      */
     public $Platform;
 
     /**
-     * @var string 系统版本
+     * @var string <p>系统版本</p>
      */
     public $SystemVersion;
 
     /**
-     * @var string SDK版本号
+     * @var string <p>SDK版本号</p>
      */
     public $SdkBuildNo;
 
     /**
-     * @var array 实时风险信息
+     * @var array <p>实时风险信息</p>
      */
     public $RiskInfos;
 
     /**
-     * @var array 离线风险信息
+     * @var array <p>离线风险信息</p>
      */
     public $HistRiskInfos;
 
     /**
-     * @var string 设备匿名标识
+     * @var string <p>设备匿名标识</p>
      */
     public $Openid;
+
+    /**
+     * @var string <p>检测时间戳（毫秒）</p>
+     */
+    public $RiskCheckTimestamp;
+
+    /**
+     * @var array <p>额外信息</p>
+     */
+    public $ExtraInfos;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -115,18 +129,20 @@ class DescribeFraudPremiumResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AppVersion App版本信息
-     * @param string $Brand 品牌
-     * @param string $ClientIp 客户端IP
-     * @param string $Model 机型
-     * @param string $NetworkType 网络类型
-     * @param string $PackageName 应用包名
-     * @param string $Platform 平台（2-Android，3-iOS，4-H5，5-微信小程序）
-     * @param string $SystemVersion 系统版本
-     * @param string $SdkBuildNo SDK版本号
-     * @param array $RiskInfos 实时风险信息
-     * @param array $HistRiskInfos 离线风险信息
-     * @param string $Openid 设备匿名标识
+     * @param string $AppVersion <p>App版本信息</p>
+     * @param string $Brand <p>品牌</p>
+     * @param string $ClientIp <p>客户端IP</p>
+     * @param string $Model <p>机型</p>
+     * @param string $NetworkType <p>网络类型</p>
+     * @param string $PackageName <p>应用包名</p>
+     * @param string $Platform <p>平台（2-Android，3-iOS，4-H5，5-微信小程序）</p>
+     * @param string $SystemVersion <p>系统版本</p>
+     * @param string $SdkBuildNo <p>SDK版本号</p>
+     * @param array $RiskInfos <p>实时风险信息</p>
+     * @param array $HistRiskInfos <p>离线风险信息</p>
+     * @param string $Openid <p>设备匿名标识</p>
+     * @param string $RiskCheckTimestamp <p>检测时间戳（毫秒）</p>
+     * @param array $ExtraInfos <p>额外信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -198,6 +214,19 @@ class DescribeFraudPremiumResponse extends AbstractModel
 
         if (array_key_exists("Openid",$param) and $param["Openid"] !== null) {
             $this->Openid = $param["Openid"];
+        }
+
+        if (array_key_exists("RiskCheckTimestamp",$param) and $param["RiskCheckTimestamp"] !== null) {
+            $this->RiskCheckTimestamp = $param["RiskCheckTimestamp"];
+        }
+
+        if (array_key_exists("ExtraInfos",$param) and $param["ExtraInfos"] !== null) {
+            $this->ExtraInfos = [];
+            foreach ($param["ExtraInfos"] as $key => $value){
+                $obj = new ExtraInfo();
+                $obj->deserialize($value);
+                array_push($this->ExtraInfos, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

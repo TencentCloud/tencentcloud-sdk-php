@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLLMComprehendTemplates请求参数结构体
  *
- * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method array getDefinitions() 获取大模型解析模板唯一标识过滤条件，数组长度最大值：100。
- * @method void setDefinitions(array $Definitions) 设置大模型解析模板唯一标识过滤条件，数组长度最大值：100。
- * @method integer getOffset() 获取分页偏移量，默认值：0。
- * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
- * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：100。
- * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：10，最大值：100。
+ * @method integer getSubAppId() 获取<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method void setSubAppId(integer $SubAppId) 设置<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method array getDefinitions() 获取<p>大模型解析模板唯一标识过滤条件，数组长度最大值：100。</p>
+ * @method void setDefinitions(array $Definitions) 设置<p>大模型解析模板唯一标识过滤条件，数组长度最大值：100。</p>
+ * @method integer getOffset() 获取<p>分页偏移量，默认值：0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移量，默认值：0。</p>
+ * @method integer getLimit() 获取<p>返回记录条数，默认值：10，最大值：100。</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回记录条数，默认值：10，最大值：100。</p>
  */
 class DescribeLLMComprehendTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * @var integer <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var array 大模型解析模板唯一标识过滤条件，数组长度最大值：100。
+     * @var array <p>大模型解析模板唯一标识过滤条件，数组长度最大值：100。</p>
      */
     public $Definitions;
 
     /**
-     * @var integer 分页偏移量，默认值：0。
+     * @var integer <p>分页偏移量，默认值：0。</p>
      */
     public $Offset;
 
     /**
-     * @var integer 返回记录条数，默认值：10，最大值：100。
+     * @var integer <p>返回记录条数，默认值：10，最大值：100。</p>
      */
     public $Limit;
 
     /**
-     * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     * @param array $Definitions 大模型解析模板唯一标识过滤条件，数组长度最大值：100。
-     * @param integer $Offset 分页偏移量，默认值：0。
-     * @param integer $Limit 返回记录条数，默认值：10，最大值：100。
+     * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param array $Definitions <p>大模型解析模板唯一标识过滤条件，数组长度最大值：100。</p>
+     * @param integer $Offset <p>分页偏移量，默认值：0。</p>
+     * @param integer $Limit <p>返回记录条数，默认值：10，最大值：100。</p>
      */
     function __construct()
     {

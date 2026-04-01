@@ -20,26 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * KV配置
  *
- * @method string getConfKey() 获取key
- * @method void setConfKey(string $ConfKey) 设置key
- * @method string getConfValue() 获取value
- * @method void setConfValue(string $ConfValue) 设置value
+ * @method string getConfKey() 获取<p>key</p>
+ * @method void setConfKey(string $ConfKey) 设置<p>key</p>
+ * @method string getConfValue() 获取<p>value</p>
+ * @method void setConfValue(string $ConfValue) 设置<p>value</p>
+ * @method string getModifyType() 获取<p>add/delete/update</p>
+ * @method void setModifyType(string $ModifyType) 设置<p>add/delete/update</p>
+ * @method boolean getNeedRestart() 获取<p>是否需要重启</p>
+ * @method void setNeedRestart(boolean $NeedRestart) 设置<p>是否需要重启</p>
+ * @method string getOriginalConfValue() 获取<p>修改前的值</p>
+ * @method void setOriginalConfValue(string $OriginalConfValue) 设置<p>修改前的值</p>
  */
 class InstanceConfigItem extends AbstractModel
 {
     /**
-     * @var string key
+     * @var string <p>key</p>
      */
     public $ConfKey;
 
     /**
-     * @var string value
+     * @var string <p>value</p>
      */
     public $ConfValue;
 
     /**
-     * @param string $ConfKey key
-     * @param string $ConfValue value
+     * @var string <p>add/delete/update</p>
+     */
+    public $ModifyType;
+
+    /**
+     * @var boolean <p>是否需要重启</p>
+     */
+    public $NeedRestart;
+
+    /**
+     * @var string <p>修改前的值</p>
+     */
+    public $OriginalConfValue;
+
+    /**
+     * @param string $ConfKey <p>key</p>
+     * @param string $ConfValue <p>value</p>
+     * @param string $ModifyType <p>add/delete/update</p>
+     * @param boolean $NeedRestart <p>是否需要重启</p>
+     * @param string $OriginalConfValue <p>修改前的值</p>
      */
     function __construct()
     {
@@ -60,6 +84,18 @@ class InstanceConfigItem extends AbstractModel
 
         if (array_key_exists("ConfValue",$param) and $param["ConfValue"] !== null) {
             $this->ConfValue = $param["ConfValue"];
+        }
+
+        if (array_key_exists("ModifyType",$param) and $param["ModifyType"] !== null) {
+            $this->ModifyType = $param["ModifyType"];
+        }
+
+        if (array_key_exists("NeedRestart",$param) and $param["NeedRestart"] !== null) {
+            $this->NeedRestart = $param["NeedRestart"];
+        }
+
+        if (array_key_exists("OriginalConfValue",$param) and $param["OriginalConfValue"] !== null) {
+            $this->OriginalConfValue = $param["OriginalConfValue"];
         }
     }
 }

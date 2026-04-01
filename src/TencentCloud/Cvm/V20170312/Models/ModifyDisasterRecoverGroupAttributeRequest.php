@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDisasterRecoverGroupAttribute请求参数结构体
  *
- * @method string getDisasterRecoverGroupId() 获取分散置放群组ID，可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
- * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) 设置分散置放群组ID，可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
- * @method string getName() 获取分散置放群组名称，长度1-60个字符，支持中、英文。
- * @method void setName(string $Name) 设置分散置放群组名称，长度1-60个字符，支持中、英文。
+ * @method string getDisasterRecoverGroupId() 获取<p>分散置放群组ID，可使用<a href="https://cloud.tencent.com/document/api/213/17810">DescribeDisasterRecoverGroups</a>接口获取。</p>
+ * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) 设置<p>分散置放群组ID，可使用<a href="https://cloud.tencent.com/document/api/213/17810">DescribeDisasterRecoverGroups</a>接口获取。</p>
+ * @method string getName() 获取<p>分散置放群组名称，长度1-60个字符，支持中、英文。</p>
+ * @method void setName(string $Name) 设置<p>分散置放群组名称，长度1-60个字符，支持中、英文。</p>
+ * @method integer getAffinity() 获取<p>分散置放群组的亲和度，在置放群组的实例会按该亲和度分布，亲和度的取值范围是：1-10。</p><p>取值范围：[1, 10]</p><p>调整只能从小调到大，不能从大调到小</p>
+ * @method void setAffinity(integer $Affinity) 设置<p>分散置放群组的亲和度，在置放群组的实例会按该亲和度分布，亲和度的取值范围是：1-10。</p><p>取值范围：[1, 10]</p><p>调整只能从小调到大，不能从大调到小</p>
  */
 class ModifyDisasterRecoverGroupAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 分散置放群组ID，可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
+     * @var string <p>分散置放群组ID，可使用<a href="https://cloud.tencent.com/document/api/213/17810">DescribeDisasterRecoverGroups</a>接口获取。</p>
      */
     public $DisasterRecoverGroupId;
 
     /**
-     * @var string 分散置放群组名称，长度1-60个字符，支持中、英文。
+     * @var string <p>分散置放群组名称，长度1-60个字符，支持中、英文。</p>
      */
     public $Name;
 
     /**
-     * @param string $DisasterRecoverGroupId 分散置放群组ID，可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
-     * @param string $Name 分散置放群组名称，长度1-60个字符，支持中、英文。
+     * @var integer <p>分散置放群组的亲和度，在置放群组的实例会按该亲和度分布，亲和度的取值范围是：1-10。</p><p>取值范围：[1, 10]</p><p>调整只能从小调到大，不能从大调到小</p>
+     */
+    public $Affinity;
+
+    /**
+     * @param string $DisasterRecoverGroupId <p>分散置放群组ID，可使用<a href="https://cloud.tencent.com/document/api/213/17810">DescribeDisasterRecoverGroups</a>接口获取。</p>
+     * @param string $Name <p>分散置放群组名称，长度1-60个字符，支持中、英文。</p>
+     * @param integer $Affinity <p>分散置放群组的亲和度，在置放群组的实例会按该亲和度分布，亲和度的取值范围是：1-10。</p><p>取值范围：[1, 10]</p><p>调整只能从小调到大，不能从大调到小</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyDisasterRecoverGroupAttributeRequest extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Affinity",$param) and $param["Affinity"] !== null) {
+            $this->Affinity = $param["Affinity"];
         }
     }
 }

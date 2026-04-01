@@ -14,39 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vod\V20180717\Models;
+namespace TencentCloud\Tke\V20220501\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLLMComprehendTemplates返回参数结构体
+ * ScaleNodePool返回参数结构体
  *
- * @method integer getTotalCount() 获取<p>符合过滤条件的记录总数。</p>
- * @method void setTotalCount(integer $TotalCount) 设置<p>符合过滤条件的记录总数。</p>
- * @method array getLLMComprehendTemplateSet() 获取<p>大模型解析模板详情列表。</p>
- * @method void setLLMComprehendTemplateSet(array $LLMComprehendTemplateSet) 设置<p>大模型解析模板详情列表。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeLLMComprehendTemplatesResponse extends AbstractModel
+class ScaleNodePoolResponse extends AbstractModel
 {
-    /**
-     * @var integer <p>符合过滤条件的记录总数。</p>
-     */
-    public $TotalCount;
-
-    /**
-     * @var array <p>大模型解析模板详情列表。</p>
-     */
-    public $LLMComprehendTemplateSet;
-
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param integer $TotalCount <p>符合过滤条件的记录总数。</p>
-     * @param array $LLMComprehendTemplateSet <p>大模型解析模板详情列表。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,19 +46,6 @@ class DescribeLLMComprehendTemplatesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("LLMComprehendTemplateSet",$param) and $param["LLMComprehendTemplateSet"] !== null) {
-            $this->LLMComprehendTemplateSet = [];
-            foreach ($param["LLMComprehendTemplateSet"] as $key => $value){
-                $obj = new LLMComprehendTemplateItem();
-                $obj->deserialize($value);
-                array_push($this->LLMComprehendTemplateSet, $obj);
-            }
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

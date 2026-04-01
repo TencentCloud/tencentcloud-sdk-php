@@ -41,6 +41,7 @@ use TencentCloud\Tke\V20220501\Models as Models;
  * @method Models\ModifyHealthCheckPolicyResponse ModifyHealthCheckPolicy(Models\ModifyHealthCheckPolicyRequest $req) 修改健康检测策略
  * @method Models\ModifyNodePoolResponse ModifyNodePool(Models\ModifyNodePoolRequest $req) 更新 TKE 节点池
  * @method Models\RebootMachinesResponse RebootMachines(Models\RebootMachinesRequest $req) 重启原生节点实例
+ * @method Models\ScaleNodePoolResponse ScaleNodePool(Models\ScaleNodePoolRequest $req) 设置 TKE 节点池期望节点数
  * @method Models\SetMachineLoginResponse SetMachineLogin(Models\SetMachineLoginRequest $req) 设置是否开启节点登录
  * @method Models\StartMachinesResponse StartMachines(Models\StartMachinesRequest $req) 本接口 (StartMachines) 用于启动一个或多个原生节点实例。
 

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMediaInfos返回参数结构体
  *
- * @method array getMediaInfoSet() 获取媒体文件信息列表。
- * @method void setMediaInfoSet(array $MediaInfoSet) 设置媒体文件信息列表。
- * @method array getNotExistFileIdSet() 获取不存在的文件 ID 列表。
- * @method void setNotExistFileIdSet(array $NotExistFileIdSet) 设置不存在的文件 ID 列表。
+ * @method array getMediaInfoSet() 获取<p>媒体文件信息列表。</p>
+ * @method void setMediaInfoSet(array $MediaInfoSet) 设置<p>媒体文件信息列表。</p>
+ * @method array getNotExistFileIdSet() 获取<p>不存在的文件 ID 列表。</p>
+ * @method void setNotExistFileIdSet(array $NotExistFileIdSet) 设置<p>不存在的文件 ID 列表。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeMediaInfosResponse extends AbstractModel
 {
     /**
-     * @var array 媒体文件信息列表。
+     * @var array <p>媒体文件信息列表。</p>
      */
     public $MediaInfoSet;
 
     /**
-     * @var array 不存在的文件 ID 列表。
+     * @var array <p>不存在的文件 ID 列表。</p>
      */
     public $NotExistFileIdSet;
 
@@ -45,8 +45,8 @@ class DescribeMediaInfosResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $MediaInfoSet 媒体文件信息列表。
-     * @param array $NotExistFileIdSet 不存在的文件 ID 列表。
+     * @param array $MediaInfoSet <p>媒体文件信息列表。</p>
+     * @param array $NotExistFileIdSet <p>不存在的文件 ID 列表。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

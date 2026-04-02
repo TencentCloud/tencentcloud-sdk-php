@@ -20,182 +20,198 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 点播文件信息
  *
- * @method MediaBasicInfo getBasicInfo() 获取基础信息。包括视频名称、分类、播放地址、封面图片等。
+ * @method MediaBasicInfo getBasicInfo() 获取<p>基础信息。包括视频名称、分类、播放地址、封面图片等。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBasicInfo(MediaBasicInfo $BasicInfo) 设置基础信息。包括视频名称、分类、播放地址、封面图片等。
+ * @method void setBasicInfo(MediaBasicInfo $BasicInfo) 设置<p>基础信息。包括视频名称、分类、播放地址、封面图片等。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MediaMetaData getMetaData() 获取元信息。包括大小、时长、视频流信息、音频流信息等。
+ * @method MediaMetaData getMetaData() 获取<p>元信息。包括大小、时长、视频流信息、音频流信息等。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMetaData(MediaMetaData $MetaData) 设置元信息。包括大小、时长、视频流信息、音频流信息等。
+ * @method void setMetaData(MediaMetaData $MetaData) 设置<p>元信息。包括大小、时长、视频流信息、音频流信息等。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MediaTranscodeInfo getTranscodeInfo() 获取转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
+ * @method MediaTranscodeInfo getTranscodeInfo() 获取<p>转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTranscodeInfo(MediaTranscodeInfo $TranscodeInfo) 设置转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
+ * @method void setTranscodeInfo(MediaTranscodeInfo $TranscodeInfo) 设置<p>转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MediaAnimatedGraphicsInfo getAnimatedGraphicsInfo() 获取转动图结果信息。对视频转动图（如 gif）后，动图相关信息。
+ * @method MediaAnimatedGraphicsInfo getAnimatedGraphicsInfo() 获取<p>转动图结果信息。对视频转动图（如 gif）后，动图相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAnimatedGraphicsInfo(MediaAnimatedGraphicsInfo $AnimatedGraphicsInfo) 设置转动图结果信息。对视频转动图（如 gif）后，动图相关信息。
+ * @method void setAnimatedGraphicsInfo(MediaAnimatedGraphicsInfo $AnimatedGraphicsInfo) 设置<p>转动图结果信息。对视频转动图（如 gif）后，动图相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MediaSampleSnapshotInfo getSampleSnapshotInfo() 获取采样截图信息。对视频采样截图后，相关截图信息。
+ * @method MediaSampleSnapshotInfo getSampleSnapshotInfo() 获取<p>采样截图信息。对视频采样截图后，相关截图信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSampleSnapshotInfo(MediaSampleSnapshotInfo $SampleSnapshotInfo) 设置采样截图信息。对视频采样截图后，相关截图信息。
+ * @method void setSampleSnapshotInfo(MediaSampleSnapshotInfo $SampleSnapshotInfo) 设置<p>采样截图信息。对视频采样截图后，相关截图信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MediaImageSpriteInfo getImageSpriteInfo() 获取雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。
+ * @method MediaImageSpriteInfo getImageSpriteInfo() 获取<p>雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImageSpriteInfo(MediaImageSpriteInfo $ImageSpriteInfo) 设置雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。
+ * @method void setImageSpriteInfo(MediaImageSpriteInfo $ImageSpriteInfo) 设置<p>雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MediaSnapshotByTimeOffsetInfo getSnapshotByTimeOffsetInfo() 获取指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。
+ * @method MediaSnapshotByTimeOffsetInfo getSnapshotByTimeOffsetInfo() 获取<p>指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSnapshotByTimeOffsetInfo(MediaSnapshotByTimeOffsetInfo $SnapshotByTimeOffsetInfo) 设置指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。
+ * @method void setSnapshotByTimeOffsetInfo(MediaSnapshotByTimeOffsetInfo $SnapshotByTimeOffsetInfo) 设置<p>指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MediaKeyFrameDescInfo getKeyFrameDescInfo() 获取视频打点信息。对视频设置的各个打点信息。
+ * @method MediaKeyFrameDescInfo getKeyFrameDescInfo() 获取<p>视频打点信息。对视频设置的各个打点信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKeyFrameDescInfo(MediaKeyFrameDescInfo $KeyFrameDescInfo) 设置视频打点信息。对视频设置的各个打点信息。
+ * @method void setKeyFrameDescInfo(MediaKeyFrameDescInfo $KeyFrameDescInfo) 设置<p>视频打点信息。对视频设置的各个打点信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MediaAdaptiveDynamicStreamingInfo getAdaptiveDynamicStreamingInfo() 获取转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
+ * @method MediaAdaptiveDynamicStreamingInfo getAdaptiveDynamicStreamingInfo() 获取<p>转自适应码流信息。包括规格、加密类型、打包格式等相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAdaptiveDynamicStreamingInfo(MediaAdaptiveDynamicStreamingInfo $AdaptiveDynamicStreamingInfo) 设置转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
+ * @method void setAdaptiveDynamicStreamingInfo(MediaAdaptiveDynamicStreamingInfo $AdaptiveDynamicStreamingInfo) 设置<p>转自适应码流信息。包括规格、加密类型、打包格式等相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MediaMiniProgramReviewInfo getMiniProgramReviewInfo() 获取小程序审核信息。
+ * @method MediaMiniProgramReviewInfo getMiniProgramReviewInfo() 获取<p>小程序审核信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMiniProgramReviewInfo(MediaMiniProgramReviewInfo $MiniProgramReviewInfo) 设置小程序审核信息。
+ * @method void setMiniProgramReviewInfo(MediaMiniProgramReviewInfo $MiniProgramReviewInfo) 设置<p>小程序审核信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MediaSubtitleInfo getSubtitleInfo() 获取字幕信息。
+ * @method MediaSubtitleInfo getSubtitleInfo() 获取<p>字幕信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubtitleInfo(MediaSubtitleInfo $SubtitleInfo) 设置字幕信息。
+ * @method void setSubtitleInfo(MediaSubtitleInfo $SubtitleInfo) 设置<p>字幕信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFileId() 获取媒体文件唯一标识 ID。
- * @method void setFileId(string $FileId) 设置媒体文件唯一标识 ID。
- * @method FileReviewInfo getReviewInfo() 获取审核信息。
+ * @method string getFileId() 获取<p>媒体文件唯一标识 ID。</p>
+ * @method void setFileId(string $FileId) 设置<p>媒体文件唯一标识 ID。</p>
+ * @method FileReviewInfo getReviewInfo() 获取<p>审核信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReviewInfo(FileReviewInfo $ReviewInfo) 设置审核信息。
+ * @method void setReviewInfo(FileReviewInfo $ReviewInfo) 设置<p>审核信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MPSAiMediaInfo getMPSAiMediaInfo() 获取MPS智能媒资信息
- * @method void setMPSAiMediaInfo(MPSAiMediaInfo $MPSAiMediaInfo) 设置MPS智能媒资信息
- * @method ImageUnderstandingInfo getImageUnderstandingInfo() 获取图片理解信息。
+ * @method MPSAiMediaInfo getMPSAiMediaInfo() 获取<p>MPS智能媒资信息</p>
+ * @method void setMPSAiMediaInfo(MPSAiMediaInfo $MPSAiMediaInfo) 设置<p>MPS智能媒资信息</p>
+ * @method ImageUnderstandingInfo getImageUnderstandingInfo() 获取<p>图片理解信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImageUnderstandingInfo(ImageUnderstandingInfo $ImageUnderstandingInfo) 设置图片理解信息。
+ * @method void setImageUnderstandingInfo(ImageUnderstandingInfo $ImageUnderstandingInfo) 设置<p>图片理解信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method KnowledgeBasesInfo getKnowledgeBasesInfo() 获取<p>智能知识库信息。</p>
+ * @method void setKnowledgeBasesInfo(KnowledgeBasesInfo $KnowledgeBasesInfo) 设置<p>智能知识库信息。</p>
+ * @method FaceRecognitionInfo getFaceRecognitionInfo() 获取<p>人脸识别信息。</p>
+ * @method void setFaceRecognitionInfo(FaceRecognitionInfo $FaceRecognitionInfo) 设置<p>人脸识别信息。</p>
  */
 class MediaInfo extends AbstractModel
 {
     /**
-     * @var MediaBasicInfo 基础信息。包括视频名称、分类、播放地址、封面图片等。
+     * @var MediaBasicInfo <p>基础信息。包括视频名称、分类、播放地址、封面图片等。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BasicInfo;
 
     /**
-     * @var MediaMetaData 元信息。包括大小、时长、视频流信息、音频流信息等。
+     * @var MediaMetaData <p>元信息。包括大小、时长、视频流信息、音频流信息等。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetaData;
 
     /**
-     * @var MediaTranscodeInfo 转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
+     * @var MediaTranscodeInfo <p>转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TranscodeInfo;
 
     /**
-     * @var MediaAnimatedGraphicsInfo 转动图结果信息。对视频转动图（如 gif）后，动图相关信息。
+     * @var MediaAnimatedGraphicsInfo <p>转动图结果信息。对视频转动图（如 gif）后，动图相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AnimatedGraphicsInfo;
 
     /**
-     * @var MediaSampleSnapshotInfo 采样截图信息。对视频采样截图后，相关截图信息。
+     * @var MediaSampleSnapshotInfo <p>采样截图信息。对视频采样截图后，相关截图信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SampleSnapshotInfo;
 
     /**
-     * @var MediaImageSpriteInfo 雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。
+     * @var MediaImageSpriteInfo <p>雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageSpriteInfo;
 
     /**
-     * @var MediaSnapshotByTimeOffsetInfo 指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。
+     * @var MediaSnapshotByTimeOffsetInfo <p>指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotByTimeOffsetInfo;
 
     /**
-     * @var MediaKeyFrameDescInfo 视频打点信息。对视频设置的各个打点信息。
+     * @var MediaKeyFrameDescInfo <p>视频打点信息。对视频设置的各个打点信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeyFrameDescInfo;
 
     /**
-     * @var MediaAdaptiveDynamicStreamingInfo 转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
+     * @var MediaAdaptiveDynamicStreamingInfo <p>转自适应码流信息。包括规格、加密类型、打包格式等相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdaptiveDynamicStreamingInfo;
 
     /**
-     * @var MediaMiniProgramReviewInfo 小程序审核信息。
+     * @var MediaMiniProgramReviewInfo <p>小程序审核信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MiniProgramReviewInfo;
 
     /**
-     * @var MediaSubtitleInfo 字幕信息。
+     * @var MediaSubtitleInfo <p>字幕信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubtitleInfo;
 
     /**
-     * @var string 媒体文件唯一标识 ID。
+     * @var string <p>媒体文件唯一标识 ID。</p>
      */
     public $FileId;
 
     /**
-     * @var FileReviewInfo 审核信息。
+     * @var FileReviewInfo <p>审核信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReviewInfo;
 
     /**
-     * @var MPSAiMediaInfo MPS智能媒资信息
+     * @var MPSAiMediaInfo <p>MPS智能媒资信息</p>
      */
     public $MPSAiMediaInfo;
 
     /**
-     * @var ImageUnderstandingInfo 图片理解信息。
+     * @var ImageUnderstandingInfo <p>图片理解信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageUnderstandingInfo;
 
     /**
-     * @param MediaBasicInfo $BasicInfo 基础信息。包括视频名称、分类、播放地址、封面图片等。
+     * @var KnowledgeBasesInfo <p>智能知识库信息。</p>
+     */
+    public $KnowledgeBasesInfo;
+
+    /**
+     * @var FaceRecognitionInfo <p>人脸识别信息。</p>
+     */
+    public $FaceRecognitionInfo;
+
+    /**
+     * @param MediaBasicInfo $BasicInfo <p>基础信息。包括视频名称、分类、播放地址、封面图片等。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaMetaData $MetaData 元信息。包括大小、时长、视频流信息、音频流信息等。
+     * @param MediaMetaData $MetaData <p>元信息。包括大小、时长、视频流信息、音频流信息等。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaTranscodeInfo $TranscodeInfo 转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
+     * @param MediaTranscodeInfo $TranscodeInfo <p>转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaAnimatedGraphicsInfo $AnimatedGraphicsInfo 转动图结果信息。对视频转动图（如 gif）后，动图相关信息。
+     * @param MediaAnimatedGraphicsInfo $AnimatedGraphicsInfo <p>转动图结果信息。对视频转动图（如 gif）后，动图相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaSampleSnapshotInfo $SampleSnapshotInfo 采样截图信息。对视频采样截图后，相关截图信息。
+     * @param MediaSampleSnapshotInfo $SampleSnapshotInfo <p>采样截图信息。对视频采样截图后，相关截图信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaImageSpriteInfo $ImageSpriteInfo 雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。
+     * @param MediaImageSpriteInfo $ImageSpriteInfo <p>雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaSnapshotByTimeOffsetInfo $SnapshotByTimeOffsetInfo 指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。
+     * @param MediaSnapshotByTimeOffsetInfo $SnapshotByTimeOffsetInfo <p>指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaKeyFrameDescInfo $KeyFrameDescInfo 视频打点信息。对视频设置的各个打点信息。
+     * @param MediaKeyFrameDescInfo $KeyFrameDescInfo <p>视频打点信息。对视频设置的各个打点信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaAdaptiveDynamicStreamingInfo $AdaptiveDynamicStreamingInfo 转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
+     * @param MediaAdaptiveDynamicStreamingInfo $AdaptiveDynamicStreamingInfo <p>转自适应码流信息。包括规格、加密类型、打包格式等相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaMiniProgramReviewInfo $MiniProgramReviewInfo 小程序审核信息。
+     * @param MediaMiniProgramReviewInfo $MiniProgramReviewInfo <p>小程序审核信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaSubtitleInfo $SubtitleInfo 字幕信息。
+     * @param MediaSubtitleInfo $SubtitleInfo <p>字幕信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FileId 媒体文件唯一标识 ID。
-     * @param FileReviewInfo $ReviewInfo 审核信息。
+     * @param string $FileId <p>媒体文件唯一标识 ID。</p>
+     * @param FileReviewInfo $ReviewInfo <p>审核信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MPSAiMediaInfo $MPSAiMediaInfo MPS智能媒资信息
-     * @param ImageUnderstandingInfo $ImageUnderstandingInfo 图片理解信息。
+     * @param MPSAiMediaInfo $MPSAiMediaInfo <p>MPS智能媒资信息</p>
+     * @param ImageUnderstandingInfo $ImageUnderstandingInfo <p>图片理解信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param KnowledgeBasesInfo $KnowledgeBasesInfo <p>智能知识库信息。</p>
+     * @param FaceRecognitionInfo $FaceRecognitionInfo <p>人脸识别信息。</p>
      */
     function __construct()
     {
@@ -282,6 +298,16 @@ class MediaInfo extends AbstractModel
         if (array_key_exists("ImageUnderstandingInfo",$param) and $param["ImageUnderstandingInfo"] !== null) {
             $this->ImageUnderstandingInfo = new ImageUnderstandingInfo();
             $this->ImageUnderstandingInfo->deserialize($param["ImageUnderstandingInfo"]);
+        }
+
+        if (array_key_exists("KnowledgeBasesInfo",$param) and $param["KnowledgeBasesInfo"] !== null) {
+            $this->KnowledgeBasesInfo = new KnowledgeBasesInfo();
+            $this->KnowledgeBasesInfo->deserialize($param["KnowledgeBasesInfo"]);
+        }
+
+        if (array_key_exists("FaceRecognitionInfo",$param) and $param["FaceRecognitionInfo"] !== null) {
+            $this->FaceRecognitionInfo = new FaceRecognitionInfo();
+            $this->FaceRecognitionInfo->deserialize($param["FaceRecognitionInfo"]);
         }
     }
 }

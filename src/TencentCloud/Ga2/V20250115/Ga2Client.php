@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Ga2\V20250115\Models as Models;
 
 /**
+ * @method Models\CreateGlobalAcceleratorResponse CreateGlobalAccelerator(Models\CreateGlobalAcceleratorRequest $req) 创建全球加速实例
  * @method Models\DescribeCrossBorderSettlementResponse DescribeCrossBorderSettlement(Models\DescribeCrossBorderSettlementRequest $req) 查询跨境账单
  */
 

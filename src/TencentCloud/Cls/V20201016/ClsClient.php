@@ -26,6 +26,9 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\AddMachineGroupInfoResponse AddMachineGroupInfo(Models\AddMachineGroupInfoRequest $req) 用于添加机器组信息
  * @method Models\ApplyConfigToMachineGroupResponse ApplyConfigToMachineGroup(Models\ApplyConfigToMachineGroupRequest $req) 应用采集配置到指定机器组
  * @method Models\CancelRebuildIndexTaskResponse CancelRebuildIndexTask(Models\CancelRebuildIndexTaskRequest $req) 取消重建索引任务
+ * @method Models\ChatCompletionsResponse ChatCompletions(Models\ChatCompletionsRequest $req) 调用接口，发起一次对话请求。
+本接口支持智能生成检索分析语句等日志服务AI功能。
+⚠️注意：通过SSE流式调用此接口时，请务必设置请求域名（Endpoint）为 cls.ai.tencentcloudapi.com。
  * @method Models\CheckFunctionResponse CheckFunction(Models\CheckFunctionRequest $req) 本接口用于数据加工DSL函数的语法校验。
  * @method Models\CheckRechargeKafkaServerResponse CheckRechargeKafkaServer(Models\CheckRechargeKafkaServerRequest $req) 本接口用于校验Kafka服务集群是否可以正常访问
  * @method Models\CloseKafkaConsumerResponse CloseKafkaConsumer(Models\CloseKafkaConsumerRequest $req) 关闭Kafka协议消费

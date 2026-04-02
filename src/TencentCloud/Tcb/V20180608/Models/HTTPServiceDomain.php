@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDNSStatus(string $DNSStatus) 设置DNS解析状态。OK： 解析正常，INVALID：解析不正确，域名未解析到当前Cname域名。
  * @method array getRoutes() 获取HTTP访问服务路由信息
  * @method void setRoutes(array $Routes) 设置HTTP访问服务路由信息
+ * @method HTTPServiceExtension getExtension() 获取扩展字段，内部包含headers处理等
+ * @method void setExtension(HTTPServiceExtension $Extension) 设置扩展字段，内部包含headers处理等
  * @method string getCreateTime() 获取域名创建时间
  * @method void setCreateTime(string $CreateTime) 设置域名创建时间
  * @method string getUpdateTime() 获取域名更新时间
@@ -105,6 +107,11 @@ class HTTPServiceDomain extends AbstractModel
     public $Routes;
 
     /**
+     * @var HTTPServiceExtension 扩展字段，内部包含headers处理等
+     */
+    public $Extension;
+
+    /**
      * @var string 域名创建时间
      */
     public $CreateTime;
@@ -126,6 +133,7 @@ class HTTPServiceDomain extends AbstractModel
      * @param string $Status 状态。PROCESSING、FAIL，SUCCESS。
      * @param string $DNSStatus DNS解析状态。OK： 解析正常，INVALID：解析不正确，域名未解析到当前Cname域名。
      * @param array $Routes HTTP访问服务路由信息
+     * @param HTTPServiceExtension $Extension 扩展字段，内部包含headers处理等
      * @param string $CreateTime 域名创建时间
      * @param string $UpdateTime 域名更新时间
      */
@@ -189,6 +197,11 @@ class HTTPServiceDomain extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Routes, $obj);
             }
+        }
+
+        if (array_key_exists("Extension",$param) and $param["Extension"] !== null) {
+            $this->Extension = new HTTPServiceExtension();
+            $this->Extension->deserialize($param["Extension"]);
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {

@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 筛选条件定义
  *
- * @method string getName() 获取属性名称, 若存在多个Filter时，Filter间的关系为逻辑或（OR）关系。
- * @method void setName(string $Name) 设置属性名称, 若存在多个Filter时，Filter间的关系为逻辑或（OR）关系。
- * @method array getValues() 获取属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
- * @method void setValues(array $Values) 设置属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
+ * @method string getName() 获取筛选字段名，对应实体属性名（驼峰命名）
+ * @method void setName(string $Name) 设置筛选字段名，对应实体属性名（驼峰命名）
+ * @method string getOperator() 获取筛选操作符：EQ/NE/GT/GE/LT/LE/LIKE/IN，默认EQ
+ * @method void setOperator(string $Operator) 设置筛选操作符：EQ/NE/GT/GE/LT/LE/LIKE/IN，默认EQ
+ * @method array getValues() 获取筛选值列表，EQ/NE/GT/GE/LT/LE/LIKE取第一个值，IN使用完整列表
+ * @method void setValues(array $Values) 设置筛选值列表，EQ/NE/GT/GE/LT/LE/LIKE取第一个值，IN使用完整列表
  */
 class Filter extends AbstractModel
 {
     /**
-     * @var string 属性名称, 若存在多个Filter时，Filter间的关系为逻辑或（OR）关系。
+     * @var string 筛选字段名，对应实体属性名（驼峰命名）
      */
     public $Name;
 
     /**
-     * @var array 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
+     * @var string 筛选操作符：EQ/NE/GT/GE/LT/LE/LIKE/IN，默认EQ
+     */
+    public $Operator;
+
+    /**
+     * @var array 筛选值列表，EQ/NE/GT/GE/LT/LE/LIKE取第一个值，IN使用完整列表
      */
     public $Values;
 
     /**
-     * @param string $Name 属性名称, 若存在多个Filter时，Filter间的关系为逻辑或（OR）关系。
-     * @param array $Values 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
+     * @param string $Name 筛选字段名，对应实体属性名（驼峰命名）
+     * @param string $Operator 筛选操作符：EQ/NE/GT/GE/LT/LE/LIKE/IN，默认EQ
+     * @param array $Values 筛选值列表，EQ/NE/GT/GE/LT/LE/LIKE取第一个值，IN使用完整列表
      */
     function __construct()
     {
@@ -56,6 +64,10 @@ class Filter extends AbstractModel
         }
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = $param["Operator"];
         }
 
         if (array_key_exists("Values",$param) and $param["Values"] !== null) {

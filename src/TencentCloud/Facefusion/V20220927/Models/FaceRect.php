@@ -20,42 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 人脸框信息
  *
- * @method integer getX() 获取人脸框左上角横坐标。
- * @method void setX(integer $X) 设置人脸框左上角横坐标。
- * @method integer getY() 获取人脸框左上角纵坐标。
- * @method void setY(integer $Y) 设置人脸框左上角纵坐标。
- * @method integer getWidth() 获取人脸框宽度。
- * @method void setWidth(integer $Width) 设置人脸框宽度。
- * @method integer getHeight() 获取人脸框高度。
- * @method void setHeight(integer $Height) 设置人脸框高度。
+ * @method integer getX() 获取<p>人脸框左上角横坐标。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setX(integer $X) 设置<p>人脸框左上角横坐标。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getY() 获取<p>人脸框左上角纵坐标。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setY(integer $Y) 设置<p>人脸框左上角纵坐标。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWidth() 获取<p>人脸框宽度。<br>单位：px</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWidth(integer $Width) 设置<p>人脸框宽度。<br>单位：px</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHeight() 获取<p>人脸框高度。<br>单位：px</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHeight(integer $Height) 设置<p>人脸框高度。<br>单位：px</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FaceRect extends AbstractModel
 {
     /**
-     * @var integer 人脸框左上角横坐标。
+     * @var integer <p>人脸框左上角横坐标。</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $X;
 
     /**
-     * @var integer 人脸框左上角纵坐标。
+     * @var integer <p>人脸框左上角纵坐标。</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Y;
 
     /**
-     * @var integer 人脸框宽度。
+     * @var integer <p>人脸框宽度。<br>单位：px</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Width;
 
     /**
-     * @var integer 人脸框高度。
+     * @var integer <p>人脸框高度。<br>单位：px</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Height;
 
     /**
-     * @param integer $X 人脸框左上角横坐标。
-     * @param integer $Y 人脸框左上角纵坐标。
-     * @param integer $Width 人脸框宽度。
-     * @param integer $Height 人脸框高度。
+     * @param integer $X <p>人脸框左上角横坐标。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Y <p>人脸框左上角纵坐标。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Width <p>人脸框宽度。<br>单位：px</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Height <p>人脸框高度。<br>单位：px</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 大模型安全检测综合结果
  *
- * @method array getSensitiveResult() 获取 仅输出侧：涉敏信息
- * @method void setSensitiveResult(array $SensitiveResult) 设置 仅输出侧：涉敏信息
- * @method array getKeyWordsResult() 获取 输入输出均检测：关键词库命中信息
- * @method void setKeyWordsResult(array $KeyWordsResult) 设置 输入输出均检测：关键词库命中信息
- * @method array getDataCategoryResult() 获取输入输出均检测：数据分类分级结果
- * @method void setDataCategoryResult(array $DataCategoryResult) 设置输入输出均检测：数据分类分级结果
- * @method PromptDetectResult getPromptInjectionResult() 获取 仅输入侧检出：prompt检测的结果
- * @method void setPromptInjectionResult(PromptDetectResult $PromptInjectionResult) 设置 仅输入侧检出：prompt检测的结果
- * @method string getRuleId() 获取命中的规则ID
- * @method void setRuleId(string $RuleId) 设置命中的规则ID
- * @method string getRuleName() 获取命中的规则名称
- * @method void setRuleName(string $RuleName) 设置命中的规则名称
- * @method string getAction() 获取规则动作
- * @method void setAction(string $Action) 设置规则动作
- * @method string getPayload() 获取攻击payload
- * @method void setPayload(string $Payload) 设置攻击payload
+ * @method array getSensitiveResult() 获取<p>仅输出侧：涉敏信息</p>
+ * @method void setSensitiveResult(array $SensitiveResult) 设置<p>仅输出侧：涉敏信息</p>
+ * @method array getKeyWordsResult() 获取<p>输入输出均检测：关键词库命中信息</p>
+ * @method void setKeyWordsResult(array $KeyWordsResult) 设置<p>输入输出均检测：关键词库命中信息</p>
+ * @method array getDataCategoryResult() 获取<p>输入输出均检测：数据分类分级结果</p>
+ * @method void setDataCategoryResult(array $DataCategoryResult) 设置<p>输入输出均检测：数据分类分级结果</p>
+ * @method PromptDetectResult getPromptInjectionResult() 获取<p>仅输入侧检出：prompt检测的结果</p>
+ * @method void setPromptInjectionResult(PromptDetectResult $PromptInjectionResult) 设置<p>仅输入侧检出：prompt检测的结果</p>
+ * @method string getRuleId() 获取<p>命中的规则ID</p>
+ * @method void setRuleId(string $RuleId) 设置<p>命中的规则ID</p>
+ * @method string getRuleName() 获取<p>命中的规则名称</p>
+ * @method void setRuleName(string $RuleName) 设置<p>命中的规则名称</p>
+ * @method string getAction() 获取<p>规则动作</p>
+ * @method void setAction(string $Action) 设置<p>规则动作</p>
+ * @method string getPayload() 获取<p>攻击payload</p>
+ * @method void setPayload(string $Payload) 设置<p>攻击payload</p>
  */
 class LLMDetectResult extends AbstractModel
 {
     /**
-     * @var array  仅输出侧：涉敏信息
+     * @var array <p>仅输出侧：涉敏信息</p>
      */
     public $SensitiveResult;
 
     /**
-     * @var array  输入输出均检测：关键词库命中信息
+     * @var array <p>输入输出均检测：关键词库命中信息</p>
      */
     public $KeyWordsResult;
 
     /**
-     * @var array 输入输出均检测：数据分类分级结果
+     * @var array <p>输入输出均检测：数据分类分级结果</p>
      */
     public $DataCategoryResult;
 
     /**
-     * @var PromptDetectResult  仅输入侧检出：prompt检测的结果
+     * @var PromptDetectResult <p>仅输入侧检出：prompt检测的结果</p>
      */
     public $PromptInjectionResult;
 
     /**
-     * @var string 命中的规则ID
+     * @var string <p>命中的规则ID</p>
      */
     public $RuleId;
 
     /**
-     * @var string 命中的规则名称
+     * @var string <p>命中的规则名称</p>
      */
     public $RuleName;
 
     /**
-     * @var string 规则动作
+     * @var string <p>规则动作</p>
      */
     public $Action;
 
     /**
-     * @var string 攻击payload
+     * @var string <p>攻击payload</p>
      */
     public $Payload;
 
     /**
-     * @param array $SensitiveResult  仅输出侧：涉敏信息
-     * @param array $KeyWordsResult  输入输出均检测：关键词库命中信息
-     * @param array $DataCategoryResult 输入输出均检测：数据分类分级结果
-     * @param PromptDetectResult $PromptInjectionResult  仅输入侧检出：prompt检测的结果
-     * @param string $RuleId 命中的规则ID
-     * @param string $RuleName 命中的规则名称
-     * @param string $Action 规则动作
-     * @param string $Payload 攻击payload
+     * @param array $SensitiveResult <p>仅输出侧：涉敏信息</p>
+     * @param array $KeyWordsResult <p>输入输出均检测：关键词库命中信息</p>
+     * @param array $DataCategoryResult <p>输入输出均检测：数据分类分级结果</p>
+     * @param PromptDetectResult $PromptInjectionResult <p>仅输入侧检出：prompt检测的结果</p>
+     * @param string $RuleId <p>命中的规则ID</p>
+     * @param string $RuleName <p>命中的规则名称</p>
+     * @param string $Action <p>规则动作</p>
+     * @param string $Payload <p>攻击payload</p>
      */
     function __construct()
     {

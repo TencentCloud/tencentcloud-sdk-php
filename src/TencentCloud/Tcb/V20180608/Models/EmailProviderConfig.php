@@ -20,26 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 邮箱登录配置
  *
- * @method EmailSmtpConfig getSmtpConfig() 获取smtp配置
- * @method void setSmtpConfig(EmailSmtpConfig $SmtpConfig) 设置smtp配置
- * @method string getOn() 获取可选：TRUE，FALSE，如果On为TRUE，则表示采用默认代发。
- * @method void setOn(string $On) 设置可选：TRUE，FALSE，如果On为TRUE，则表示采用默认代发。
+ * @method EmailSmtpConfig getSmtpConfig() 获取<p>smtp配置</p>
+ * @method void setSmtpConfig(EmailSmtpConfig $SmtpConfig) 设置<p>smtp配置</p>
+ * @method string getOn() 获取<p>可选：TRUE，FALSE，如果On为TRUE，则表示采用默认代发。</p>
+ * @method void setOn(string $On) 设置<p>可选：TRUE，FALSE，如果On为TRUE，则表示采用默认代发。</p>
+ * @method EmailTemplateConfig getTemplateConfig() 获取<p>邮件模板配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTemplateConfig(EmailTemplateConfig $TemplateConfig) 设置<p>邮件模板配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EmailProviderConfig extends AbstractModel
 {
     /**
-     * @var EmailSmtpConfig smtp配置
+     * @var EmailSmtpConfig <p>smtp配置</p>
      */
     public $SmtpConfig;
 
     /**
-     * @var string 可选：TRUE，FALSE，如果On为TRUE，则表示采用默认代发。
+     * @var string <p>可选：TRUE，FALSE，如果On为TRUE，则表示采用默认代发。</p>
      */
     public $On;
 
     /**
-     * @param EmailSmtpConfig $SmtpConfig smtp配置
-     * @param string $On 可选：TRUE，FALSE，如果On为TRUE，则表示采用默认代发。
+     * @var EmailTemplateConfig <p>邮件模板配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TemplateConfig;
+
+    /**
+     * @param EmailSmtpConfig $SmtpConfig <p>smtp配置</p>
+     * @param string $On <p>可选：TRUE，FALSE，如果On为TRUE，则表示采用默认代发。</p>
+     * @param EmailTemplateConfig $TemplateConfig <p>邮件模板配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -61,6 +73,11 @@ class EmailProviderConfig extends AbstractModel
 
         if (array_key_exists("On",$param) and $param["On"] !== null) {
             $this->On = $param["On"];
+        }
+
+        if (array_key_exists("TemplateConfig",$param) and $param["TemplateConfig"] !== null) {
+            $this->TemplateConfig = new EmailTemplateConfig();
+            $this->TemplateConfig->deserialize($param["TemplateConfig"]);
         }
     }
 }

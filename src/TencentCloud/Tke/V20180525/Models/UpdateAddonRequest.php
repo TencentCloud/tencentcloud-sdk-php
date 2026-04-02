@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddonName(string $AddonName) 设置addon名称，请从容器服务控制台进入集群详情页后，在组件管理页面中获取。
  * @method string getAddonVersion() 获取addon版本（不传默认不更新，不传AddonVersion时RawValues必传）
  * @method void setAddonVersion(string $AddonVersion) 设置addon版本（不传默认不更新，不传AddonVersion时RawValues必传）
- * @method string getRawValues() 获取addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取，不传RawValues时AddonVersion必传）。
- * @method void setRawValues(string $RawValues) 设置addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取，不传RawValues时AddonVersion必传）。
+ * @method string getRawValues() 获取addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取，不传RawValues时AddonVersion必传）。不同的addon组件支持的RawValues参数参考文档：https://cloud.tencent.com/document/product/457/39048。
+ * @method void setRawValues(string $RawValues) 设置addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取，不传RawValues时AddonVersion必传）。不同的addon组件支持的RawValues参数参考文档：https://cloud.tencent.com/document/product/457/39048。
  * @method string getUpdateStrategy() 获取addon参数的更新策略，支持replace和merge两种策略，默认值为merge，兼容旧版本API。replace：使用新RawValues全量替换addon原RawValues，merge：根据新RawValues新增或更新addon原RawValues中对应参数。
  * @method void setUpdateStrategy(string $UpdateStrategy) 设置addon参数的更新策略，支持replace和merge两种策略，默认值为merge，兼容旧版本API。replace：使用新RawValues全量替换addon原RawValues，merge：根据新RawValues新增或更新addon原RawValues中对应参数。
  * @method boolean getDryRun() 获取是否仅做更新检查，设置为true时仅做检查，不会更新组件。默认值为 false。
@@ -51,7 +51,7 @@ class UpdateAddonRequest extends AbstractModel
     public $AddonVersion;
 
     /**
-     * @var string addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取，不传RawValues时AddonVersion必传）。
+     * @var string addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取，不传RawValues时AddonVersion必传）。不同的addon组件支持的RawValues参数参考文档：https://cloud.tencent.com/document/product/457/39048。
      */
     public $RawValues;
 
@@ -69,7 +69,7 @@ class UpdateAddonRequest extends AbstractModel
      * @param string $ClusterId 集群ID，请从容器服务控制台集群列表中获取（https://console.cloud.tencent.com/tke2/cluster）。
      * @param string $AddonName addon名称，请从容器服务控制台进入集群详情页后，在组件管理页面中获取。
      * @param string $AddonVersion addon版本（不传默认不更新，不传AddonVersion时RawValues必传）
-     * @param string $RawValues addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取，不传RawValues时AddonVersion必传）。
+     * @param string $RawValues addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取，不传RawValues时AddonVersion必传）。不同的addon组件支持的RawValues参数参考文档：https://cloud.tencent.com/document/product/457/39048。
      * @param string $UpdateStrategy addon参数的更新策略，支持replace和merge两种策略，默认值为merge，兼容旧版本API。replace：使用新RawValues全量替换addon原RawValues，merge：根据新RawValues新增或更新addon原RawValues中对应参数。
      * @param boolean $DryRun 是否仅做更新检查，设置为true时仅做检查，不会更新组件。默认值为 false。
      */

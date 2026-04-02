@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQPSPolicy(HTTPServiceRouteQPSPolicy $QPSPolicy) 设置QPS限频策略
  * @method boolean getEnable() 获取是否开启路由
  * @method void setEnable(boolean $Enable) 设置是否开启路由
+ * @method HTTPServiceExtension getExtension() 获取扩展字段，内部包含headers处理等
+ * @method void setExtension(HTTPServiceExtension $Extension) 设置扩展字段，内部包含headers处理等
  */
 class HTTPServiceRouteParam extends AbstractModel
 {
@@ -87,6 +89,11 @@ class HTTPServiceRouteParam extends AbstractModel
     public $Enable;
 
     /**
+     * @var HTTPServiceExtension 扩展字段，内部包含headers处理等
+     */
+    public $Extension;
+
+    /**
      * @param string $Path 路径
      * @param string $UpstreamResourceType 上游服务类型。创建时必填，修改时可选填。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse
      * @param string $UpstreamResourceName 上游服务名。创建时必填，修改时可选填
@@ -96,6 +103,7 @@ class HTTPServiceRouteParam extends AbstractModel
      * @param boolean $EnablePathTransmission 是否开启路径透传。默认关闭
      * @param HTTPServiceRouteQPSPolicy $QPSPolicy QPS限频策略
      * @param boolean $Enable 是否开启路由
+     * @param HTTPServiceExtension $Extension 扩展字段，内部包含headers处理等
      */
     function __construct()
     {
@@ -146,6 +154,11 @@ class HTTPServiceRouteParam extends AbstractModel
 
         if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
             $this->Enable = $param["Enable"];
+        }
+
+        if (array_key_exists("Extension",$param) and $param["Extension"] !== null) {
+            $this->Extension = new HTTPServiceExtension();
+            $this->Extension->deserialize($param["Extension"]);
         }
     }
 }

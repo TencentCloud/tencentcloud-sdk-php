@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQPSPolicy(HTTPServiceRouteQPSPolicy $QPSPolicy) 设置QPS限频策略
  * @method boolean getEnable() 获取是否开启路由
  * @method void setEnable(boolean $Enable) 设置是否开启路由
+ * @method HTTPServiceExtension getExtension() 获取扩展字段，内部包含headers处理等
+ * @method void setExtension(HTTPServiceExtension $Extension) 设置扩展字段，内部包含headers处理等
  * @method string getCreateTime() 获取路由创建时间
  * @method void setCreateTime(string $CreateTime) 设置路由创建时间
  * @method string getUpdateTime() 获取路由更新时间
@@ -91,6 +93,11 @@ class HTTPServiceRoute extends AbstractModel
     public $Enable;
 
     /**
+     * @var HTTPServiceExtension 扩展字段，内部包含headers处理等
+     */
+    public $Extension;
+
+    /**
      * @var string 路由创建时间
      */
     public $CreateTime;
@@ -110,6 +117,7 @@ class HTTPServiceRoute extends AbstractModel
      * @param boolean $EnablePathTransmission 是否开启路径透传
      * @param HTTPServiceRouteQPSPolicy $QPSPolicy QPS限频策略
      * @param boolean $Enable 是否开启路由
+     * @param HTTPServiceExtension $Extension 扩展字段，内部包含headers处理等
      * @param string $CreateTime 路由创建时间
      * @param string $UpdateTime 路由更新时间
      */
@@ -162,6 +170,11 @@ class HTTPServiceRoute extends AbstractModel
 
         if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
             $this->Enable = $param["Enable"];
+        }
+
+        if (array_key_exists("Extension",$param) and $param["Extension"] !== null) {
+            $this->Extension = new HTTPServiceExtension();
+            $this->Extension->deserialize($param["Extension"]);
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AI 换衣参数配置
  *
- * @method array getClothesFileInfos() 获取输入需要更换的**衣物**图片列表。目前最大支持4张图片。
- * @method void setClothesFileInfos(array $ClothesFileInfos) 设置输入需要更换的**衣物**图片列表。目前最大支持4张图片。
- * @method string getPrompt() 获取AI换衣的提示词。
- * @method void setPrompt(string $Prompt) 设置AI换衣的提示词。
+ * @method array getClothesFileInfos() 获取<p>输入需要更换的<strong>衣物</strong>图片列表。各类型最大支持衣物数量：</p><ul><li>change_clothes：4 张图片；</li><li>change_clothes_under：1 张图片；</li><li>change_clothes_full_wear：1 张图片；</li><li>change_clothes_top_wear：1 张图片；</li><li>change_clothes_bottom_wear：1 张图片；</li></ul>
+ * @method void setClothesFileInfos(array $ClothesFileInfos) 设置<p>输入需要更换的<strong>衣物</strong>图片列表。各类型最大支持衣物数量：</p><ul><li>change_clothes：4 张图片；</li><li>change_clothes_under：1 张图片；</li><li>change_clothes_full_wear：1 张图片；</li><li>change_clothes_top_wear：1 张图片；</li><li>change_clothes_bottom_wear：1 张图片；</li></ul>
+ * @method string getPrompt() 获取<p>AI换衣的提示词。<strong>仅Type为change_clothes有效。</strong></p>
+ * @method void setPrompt(string $Prompt) 设置<p>AI换衣的提示词。<strong>仅Type为change_clothes有效。</strong></p>
  */
 class ChangeClothesConfig extends AbstractModel
 {
     /**
-     * @var array 输入需要更换的**衣物**图片列表。目前最大支持4张图片。
+     * @var array <p>输入需要更换的<strong>衣物</strong>图片列表。各类型最大支持衣物数量：</p><ul><li>change_clothes：4 张图片；</li><li>change_clothes_under：1 张图片；</li><li>change_clothes_full_wear：1 张图片；</li><li>change_clothes_top_wear：1 张图片；</li><li>change_clothes_bottom_wear：1 张图片；</li></ul>
      */
     public $ClothesFileInfos;
 
     /**
-     * @var string AI换衣的提示词。
+     * @var string <p>AI换衣的提示词。<strong>仅Type为change_clothes有效。</strong></p>
      */
     public $Prompt;
 
     /**
-     * @param array $ClothesFileInfos 输入需要更换的**衣物**图片列表。目前最大支持4张图片。
-     * @param string $Prompt AI换衣的提示词。
+     * @param array $ClothesFileInfos <p>输入需要更换的<strong>衣物</strong>图片列表。各类型最大支持衣物数量：</p><ul><li>change_clothes：4 张图片；</li><li>change_clothes_under：1 张图片；</li><li>change_clothes_full_wear：1 张图片；</li><li>change_clothes_top_wear：1 张图片；</li><li>change_clothes_bottom_wear：1 张图片；</li></ul>
+     * @param string $Prompt <p>AI换衣的提示词。<strong>仅Type为change_clothes有效。</strong></p>
      */
     function __construct()
     {

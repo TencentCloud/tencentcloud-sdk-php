@@ -24,8 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。</b>
  * @method string getTemplateType() 获取需要删除的 MPS 模板的类型。取值：
 <li>Transcode: 删除转码模板。</li>
+<li>AIAnalysis: 创建智能分析模板。</li>
+<li>SmartSubtitle: 创建智能字幕模板。</li>
+<li>SmartErase: 创建智能擦除模板。</li>
  * @method void setTemplateType(string $TemplateType) 设置需要删除的 MPS 模板的类型。取值：
 <li>Transcode: 删除转码模板。</li>
+<li>AIAnalysis: 创建智能分析模板。</li>
+<li>SmartSubtitle: 创建智能字幕模板。</li>
+<li>SmartErase: 创建智能擦除模板。</li>
  * @method integer getDefinition() 获取MPS 任务模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置MPS 任务模板唯一标识。
  */
@@ -39,6 +45,9 @@ class DeleteMPSTemplateRequest extends AbstractModel
     /**
      * @var string 需要删除的 MPS 模板的类型。取值：
 <li>Transcode: 删除转码模板。</li>
+<li>AIAnalysis: 创建智能分析模板。</li>
+<li>SmartSubtitle: 创建智能字幕模板。</li>
+<li>SmartErase: 创建智能擦除模板。</li>
      */
     public $TemplateType;
 
@@ -51,6 +60,9 @@ class DeleteMPSTemplateRequest extends AbstractModel
      * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。</b>
      * @param string $TemplateType 需要删除的 MPS 模板的类型。取值：
 <li>Transcode: 删除转码模板。</li>
+<li>AIAnalysis: 创建智能分析模板。</li>
+<li>SmartSubtitle: 创建智能字幕模板。</li>
+<li>SmartErase: 创建智能擦除模板。</li>
      * @param integer $Definition MPS 任务模板唯一标识。
      */
     function __construct()

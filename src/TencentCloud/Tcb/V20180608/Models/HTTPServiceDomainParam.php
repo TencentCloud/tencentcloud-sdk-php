@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 创建或修改HTTP访问服务输入的域名信息，修改HTTP访问服务域名时对应字段不传参数表示不需要修改。
  *
- * @method string getDomain() 获取域名。全局唯一。如果域名在其他环境下占用或者腾讯云CDN占用，可能会导致创建失败
- * @method void setDomain(string $Domain) 设置域名。全局唯一。如果域名在其他环境下占用或者腾讯云CDN占用，可能会导致创建失败
- * @method string getAccessType() 获取绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）
- * @method void setAccessType(string $AccessType) 设置绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）
- * @method string getCertId() 获取证书ID。当前账户下SSL平台的证书ID
- * @method void setCertId(string $CertId) 设置证书ID。当前账户下SSL平台的证书ID
- * @method string getProtocol() 获取协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向
- * @method void setProtocol(string $Protocol) 设置协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向
- * @method string getCustomCname() 获取自定义CNAME。对应AccessType: Custom
- * @method void setCustomCname(string $CustomCname) 设置自定义CNAME。对应AccessType: Custom
- * @method boolean getEnable() 获取域名开启状态，不传默认开启
- * @method void setEnable(boolean $Enable) 设置域名开启状态，不传默认开启
- * @method array getRoutes() 获取创建/修改的HTTP访问服务路由列表。如果不传，仅创建或修改域名信息。列表最大支持传入20个
- * @method void setRoutes(array $Routes) 设置创建/修改的HTTP访问服务路由列表。如果不传，仅创建或修改域名信息。列表最大支持传入20个
+ * @method string getDomain() 获取<p>域名。全局唯一。如果域名在其他环境下占用或者腾讯云CDN占用，可能会导致创建失败</p>
+ * @method void setDomain(string $Domain) 设置<p>域名。全局唯一。如果域名在其他环境下占用或者腾讯云CDN占用，可能会导致创建失败</p>
+ * @method string getAccessType() 获取<p>绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）</p>
+ * @method void setAccessType(string $AccessType) 设置<p>绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）</p>
+ * @method string getCertId() 获取<p>证书ID。当前账户下SSL平台的证书ID</p>
+ * @method void setCertId(string $CertId) 设置<p>证书ID。当前账户下SSL平台的证书ID</p>
+ * @method string getProtocol() 获取<p>协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向</p>
+ * @method void setProtocol(string $Protocol) 设置<p>协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向</p>
+ * @method string getCustomCname() 获取<p>自定义CNAME。对应AccessType: Custom</p>
+ * @method void setCustomCname(string $CustomCname) 设置<p>自定义CNAME。对应AccessType: Custom</p>
+ * @method boolean getEnable() 获取<p>域名开启状态，不传默认开启</p>
+ * @method void setEnable(boolean $Enable) 设置<p>域名开启状态，不传默认开启</p>
+ * @method array getRoutes() 获取<p>创建/修改的HTTP访问服务路由列表。如果不传，仅创建或修改域名信息。列表最大支持传入20个</p>
+ * @method void setRoutes(array $Routes) 设置<p>创建/修改的HTTP访问服务路由列表。如果不传，仅创建或修改域名信息。列表最大支持传入20个</p>
+ * @method HTTPServiceExtension getExtension() 获取<p>扩展字段，内部包含headers处理等</p>
+ * @method void setExtension(HTTPServiceExtension $Extension) 设置<p>扩展字段，内部包含headers处理等</p>
  */
 class HTTPServiceDomainParam extends AbstractModel
 {
     /**
-     * @var string 域名。全局唯一。如果域名在其他环境下占用或者腾讯云CDN占用，可能会导致创建失败
+     * @var string <p>域名。全局唯一。如果域名在其他环境下占用或者腾讯云CDN占用，可能会导致创建失败</p>
      */
     public $Domain;
 
     /**
-     * @var string 绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）
+     * @var string <p>绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）</p>
      */
     public $AccessType;
 
     /**
-     * @var string 证书ID。当前账户下SSL平台的证书ID
+     * @var string <p>证书ID。当前账户下SSL平台的证书ID</p>
      */
     public $CertId;
 
     /**
-     * @var string 协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向
+     * @var string <p>协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向</p>
      */
     public $Protocol;
 
     /**
-     * @var string 自定义CNAME。对应AccessType: Custom
+     * @var string <p>自定义CNAME。对应AccessType: Custom</p>
      */
     public $CustomCname;
 
     /**
-     * @var boolean 域名开启状态，不传默认开启
+     * @var boolean <p>域名开启状态，不传默认开启</p>
      */
     public $Enable;
 
     /**
-     * @var array 创建/修改的HTTP访问服务路由列表。如果不传，仅创建或修改域名信息。列表最大支持传入20个
+     * @var array <p>创建/修改的HTTP访问服务路由列表。如果不传，仅创建或修改域名信息。列表最大支持传入20个</p>
      */
     public $Routes;
 
     /**
-     * @param string $Domain 域名。全局唯一。如果域名在其他环境下占用或者腾讯云CDN占用，可能会导致创建失败
-     * @param string $AccessType 绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）
-     * @param string $CertId 证书ID。当前账户下SSL平台的证书ID
-     * @param string $Protocol 协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向
-     * @param string $CustomCname 自定义CNAME。对应AccessType: Custom
-     * @param boolean $Enable 域名开启状态，不传默认开启
-     * @param array $Routes 创建/修改的HTTP访问服务路由列表。如果不传，仅创建或修改域名信息。列表最大支持传入20个
+     * @var HTTPServiceExtension <p>扩展字段，内部包含headers处理等</p>
+     */
+    public $Extension;
+
+    /**
+     * @param string $Domain <p>域名。全局唯一。如果域名在其他环境下占用或者腾讯云CDN占用，可能会导致创建失败</p>
+     * @param string $AccessType <p>绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）</p>
+     * @param string $CertId <p>证书ID。当前账户下SSL平台的证书ID</p>
+     * @param string $Protocol <p>协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向</p>
+     * @param string $CustomCname <p>自定义CNAME。对应AccessType: Custom</p>
+     * @param boolean $Enable <p>域名开启状态，不传默认开启</p>
+     * @param array $Routes <p>创建/修改的HTTP访问服务路由列表。如果不传，仅创建或修改域名信息。列表最大支持传入20个</p>
+     * @param HTTPServiceExtension $Extension <p>扩展字段，内部包含headers处理等</p>
      */
     function __construct()
     {
@@ -125,6 +133,11 @@ class HTTPServiceDomainParam extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Routes, $obj);
             }
+        }
+
+        if (array_key_exists("Extension",$param) and $param["Extension"] !== null) {
+            $this->Extension = new HTTPServiceExtension();
+            $this->Extension->deserialize($param["Extension"]);
         }
     }
 }

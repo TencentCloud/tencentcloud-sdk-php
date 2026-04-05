@@ -165,6 +165,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
    2. 查询时间跨度不超过90天。
  * @method Models\DescribeVideoDatabaseEntryTaskDetailResponse DescribeVideoDatabaseEntryTaskDetail(Models\DescribeVideoDatabaseEntryTaskDetailRequest $req) 根据任务ID查询视频入库任务的状态。
  * @method Models\DescribeVideoSearchTaskDetailResponse DescribeVideoSearchTaskDetail(Models\DescribeVideoSearchTaskDetailRequest $req) 根据任务ID查询视频检索任务的状态。
+ * @method Models\DescribeVoicesResponse DescribeVoices(Models\DescribeVoicesRequest $req) 同步接口。查询可用音色，支持通过类型、标签、语言等条件检索音色
  * @method Models\DescribeWatermarkTemplatesResponse DescribeWatermarkTemplates(Models\DescribeWatermarkTemplatesRequest $req) 查询用户自定义水印模板，支持根据条件，分页查询。
  * @method Models\DescribeWordSamplesResponse DescribeWordSamples(Models\DescribeWordSamplesRequest $req) 该接口用于根据应用场景、关键词、标签，分页查询关键词样本信息。
  * @method Models\DescribeWorkflowsResponse DescribeWorkflows(Models\DescribeWorkflowsRequest $req) 根据工作流 ID，获取工作流详情列表。

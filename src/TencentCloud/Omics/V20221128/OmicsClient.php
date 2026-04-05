@@ -29,6 +29,8 @@ use TencentCloud\Omics\V20221128\Models as Models;
  * @method Models\DeleteVolumeResponse DeleteVolume(Models\DeleteVolumeRequest $req) 删除缓存卷。
  * @method Models\DeleteVolumeDataResponse DeleteVolumeData(Models\DeleteVolumeDataRequest $req) 删除缓存卷数据。
  * @method Models\DescribeEnvironmentsResponse DescribeEnvironments(Models\DescribeEnvironmentsRequest $req) 查询环境列表。
+ * @method Models\DescribeHPCClustersResponse DescribeHPCClusters(Models\DescribeHPCClustersRequest $req) 查询HPC集群列表。
+ * @method Models\DescribeHPCNodesResponse DescribeHPCNodes(Models\DescribeHPCNodesRequest $req) 查询HPC节点列表。
  * @method Models\DescribeRunGroupsResponse DescribeRunGroups(Models\DescribeRunGroupsRequest $req) 查询任务批次列表。
  * @method Models\DescribeRunsResponse DescribeRuns(Models\DescribeRunsRequest $req) 查询任务列表。
  * @method Models\DescribeTablesResponse DescribeTables(Models\DescribeTablesRequest $req) 查询表格。
@@ -39,6 +41,7 @@ use TencentCloud\Omics\V20221128\Models as Models;
  * @method Models\GetRunStatusResponse GetRunStatus(Models\GetRunStatusRequest $req) 查询任务详情。
  * @method Models\ImportTableFileResponse ImportTableFile(Models\ImportTableFileRequest $req) 导入表格文件。
  * @method Models\ModifyVolumeResponse ModifyVolume(Models\ModifyVolumeRequest $req) 修改缓存卷。
+ * @method Models\RebootHPCNodesResponse RebootHPCNodes(Models\RebootHPCNodesRequest $req) 重启HPC节点
  * @method Models\RetryRunsResponse RetryRuns(Models\RetryRunsRequest $req) 重试任务。
  * @method Models\RunApplicationResponse RunApplication(Models\RunApplicationRequest $req) 运行应用。
  * @method Models\RunWorkflowResponse RunWorkflow(Models\RunWorkflowRequest $req) 运行工作流。

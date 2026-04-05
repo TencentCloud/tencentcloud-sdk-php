@@ -20,78 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * tsf-privilege模块，数据项
  *
- * @method string getProgramItemId() 获取数据项ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)接口查询已创建的数据集或登陆控制台进行查看；也可以通过调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
-
- * @method void setProgramItemId(string $ProgramItemId) 设置数据项ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)接口查询已创建的数据集或登陆控制台进行查看；也可以通过调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
-
- * @method Resource getResource() 获取资源
- * @method void setResource(Resource $Resource) 设置资源
- * @method array getValueList() 获取数据值列表
- * @method void setValueList(array $ValueList) 设置数据值列表
- * @method boolean getIsAll() 获取全选标识，true: 全选；false: 非全选
- * @method void setIsAll(boolean $IsAll) 设置全选标识，true: 全选；false: 非全选
- * @method integer getCreationTime() 获取创建时间，时间戳格式【Long】
- * @method void setCreationTime(integer $CreationTime) 设置创建时间，时间戳格式【Long】
- * @method integer getLastUpdateTime() 获取最后更新时间，时间戳格式【Long】，单位毫秒
- * @method void setLastUpdateTime(integer $LastUpdateTime) 设置最后更新时间，时间戳格式【Long】，单位毫秒
- * @method boolean getDeleteFlag() 获取删除标识，true: 可删除；false: 不可删除
- * @method void setDeleteFlag(boolean $DeleteFlag) 设置删除标识，true: 可删除；false: 不可删除
- * @method string getProgramId() 获取数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口获取
- * @method void setProgramId(string $ProgramId) 设置数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口获取
+ * @method string getProgramItemId() 获取<p>数据项ID，调用<a href="https://console.cloud.tencent.com/tsf/privilege?rid=1&amp;tab=program">DescribePrograms</a>接口查询已创建的数据集或登录控制台进行查看；也可以通过调用<a href="https://cloud.tencent.com/document/api/649/108544">CreateProgram</a>创建新的数据集。</p>
+ * @method void setProgramItemId(string $ProgramItemId) 设置<p>数据项ID，调用<a href="https://console.cloud.tencent.com/tsf/privilege?rid=1&amp;tab=program">DescribePrograms</a>接口查询已创建的数据集或登录控制台进行查看；也可以通过调用<a href="https://cloud.tencent.com/document/api/649/108544">CreateProgram</a>创建新的数据集。</p>
+ * @method Resource getResource() 获取<p>资源</p>
+ * @method void setResource(Resource $Resource) 设置<p>资源</p>
+ * @method array getValueList() 获取<p>数据值列表</p>
+ * @method void setValueList(array $ValueList) 设置<p>数据值列表</p>
+ * @method boolean getIsAll() 获取<p>全选标识，true: 全选；false: 非全选</p>
+ * @method void setIsAll(boolean $IsAll) 设置<p>全选标识，true: 全选；false: 非全选</p>
+ * @method integer getCreationTime() 获取<p>创建时间，时间戳格式【Long】</p>
+ * @method void setCreationTime(integer $CreationTime) 设置<p>创建时间，时间戳格式【Long】</p>
+ * @method integer getLastUpdateTime() 获取<p>最后更新时间，时间戳格式【Long】，单位毫秒</p>
+ * @method void setLastUpdateTime(integer $LastUpdateTime) 设置<p>最后更新时间，时间戳格式【Long】，单位毫秒</p>
+ * @method boolean getDeleteFlag() 获取<p>删除标识，true: 可删除；false: 不可删除</p>
+ * @method void setDeleteFlag(boolean $DeleteFlag) 设置<p>删除标识，true: 可删除；false: 不可删除</p>
+ * @method string getProgramId() 获取<p>数据集ID，调用<a href="https://console.cloud.tencent.com/tsf/privilege?rid=1&amp;tab=program">DescribePrograms</a>查询接口获取</p>
+ * @method void setProgramId(string $ProgramId) 设置<p>数据集ID，调用<a href="https://console.cloud.tencent.com/tsf/privilege?rid=1&amp;tab=program">DescribePrograms</a>查询接口获取</p>
  */
 class ProgramItem extends AbstractModel
 {
     /**
-     * @var string 数据项ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)接口查询已创建的数据集或登陆控制台进行查看；也可以通过调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
-
+     * @var string <p>数据项ID，调用<a href="https://console.cloud.tencent.com/tsf/privilege?rid=1&amp;tab=program">DescribePrograms</a>接口查询已创建的数据集或登录控制台进行查看；也可以通过调用<a href="https://cloud.tencent.com/document/api/649/108544">CreateProgram</a>创建新的数据集。</p>
      */
     public $ProgramItemId;
 
     /**
-     * @var Resource 资源
+     * @var Resource <p>资源</p>
      */
     public $Resource;
 
     /**
-     * @var array 数据值列表
+     * @var array <p>数据值列表</p>
      */
     public $ValueList;
 
     /**
-     * @var boolean 全选标识，true: 全选；false: 非全选
+     * @var boolean <p>全选标识，true: 全选；false: 非全选</p>
      */
     public $IsAll;
 
     /**
-     * @var integer 创建时间，时间戳格式【Long】
+     * @var integer <p>创建时间，时间戳格式【Long】</p>
      */
     public $CreationTime;
 
     /**
-     * @var integer 最后更新时间，时间戳格式【Long】，单位毫秒
+     * @var integer <p>最后更新时间，时间戳格式【Long】，单位毫秒</p>
      */
     public $LastUpdateTime;
 
     /**
-     * @var boolean 删除标识，true: 可删除；false: 不可删除
+     * @var boolean <p>删除标识，true: 可删除；false: 不可删除</p>
      */
     public $DeleteFlag;
 
     /**
-     * @var string 数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口获取
+     * @var string <p>数据集ID，调用<a href="https://console.cloud.tencent.com/tsf/privilege?rid=1&amp;tab=program">DescribePrograms</a>查询接口获取</p>
      */
     public $ProgramId;
 
     /**
-     * @param string $ProgramItemId 数据项ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)接口查询已创建的数据集或登陆控制台进行查看；也可以通过调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
-
-     * @param Resource $Resource 资源
-     * @param array $ValueList 数据值列表
-     * @param boolean $IsAll 全选标识，true: 全选；false: 非全选
-     * @param integer $CreationTime 创建时间，时间戳格式【Long】
-     * @param integer $LastUpdateTime 最后更新时间，时间戳格式【Long】，单位毫秒
-     * @param boolean $DeleteFlag 删除标识，true: 可删除；false: 不可删除
-     * @param string $ProgramId 数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口获取
+     * @param string $ProgramItemId <p>数据项ID，调用<a href="https://console.cloud.tencent.com/tsf/privilege?rid=1&amp;tab=program">DescribePrograms</a>接口查询已创建的数据集或登录控制台进行查看；也可以通过调用<a href="https://cloud.tencent.com/document/api/649/108544">CreateProgram</a>创建新的数据集。</p>
+     * @param Resource $Resource <p>资源</p>
+     * @param array $ValueList <p>数据值列表</p>
+     * @param boolean $IsAll <p>全选标识，true: 全选；false: 非全选</p>
+     * @param integer $CreationTime <p>创建时间，时间戳格式【Long】</p>
+     * @param integer $LastUpdateTime <p>最后更新时间，时间戳格式【Long】，单位毫秒</p>
+     * @param boolean $DeleteFlag <p>删除标识，true: 可删除；false: 不可删除</p>
+     * @param string $ProgramId <p>数据集ID，调用<a href="https://console.cloud.tencent.com/tsf/privilege?rid=1&amp;tab=program">DescribePrograms</a>查询接口获取</p>
      */
     function __construct()
     {

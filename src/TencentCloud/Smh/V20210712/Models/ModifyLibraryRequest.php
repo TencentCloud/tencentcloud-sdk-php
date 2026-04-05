@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLibrary请求参数结构体
  *
- * @method string getLibraryId() 获取媒体库 ID
- * @method void setLibraryId(string $LibraryId) 设置媒体库 ID
- * @method string getName() 获取媒体库名称，最多 50 个字符。如不传则不修改。
- * @method void setName(string $Name) 设置媒体库名称，最多 50 个字符。如不传则不修改。
- * @method string getRemark() 获取备注，最多 250 个字符。如不传则不修改。
- * @method void setRemark(string $Remark) 设置备注，最多 250 个字符。如不传则不修改。
- * @method LibraryExtension getLibraryExtension() 获取媒体库配置项，部分参数在新建后不可更改，且仅修改传入的参数。如不传该参数则不修改任何配置项。
- * @method void setLibraryExtension(LibraryExtension $LibraryExtension) 设置媒体库配置项，部分参数在新建后不可更改，且仅修改传入的参数。如不传该参数则不修改任何配置项。
+ * @method string getLibraryId() 获取<p>媒体库 ID</p>
+ * @method void setLibraryId(string $LibraryId) 设置<p>媒体库 ID</p>
+ * @method string getName() 获取<p>媒体库名称，最多 50 个字符。如不传则不修改。</p>
+ * @method void setName(string $Name) 设置<p>媒体库名称，最多 50 个字符。如不传则不修改。</p>
+ * @method string getRemark() 获取<p>备注，最多 250 个字符。如不传则不修改。</p>
+ * @method void setRemark(string $Remark) 设置<p>备注，最多 250 个字符。如不传则不修改。</p>
+ * @method LibraryExtension getLibraryExtension() 获取<p>媒体库配置项，部分参数在新建后不可更改，且仅修改传入的参数。如不传该参数则不修改任何配置项。</p>
+ * @method void setLibraryExtension(LibraryExtension $LibraryExtension) 设置<p>媒体库配置项，部分参数在新建后不可更改，且仅修改传入的参数。如不传该参数则不修改任何配置项。</p>
  */
 class ModifyLibraryRequest extends AbstractModel
 {
     /**
-     * @var string 媒体库 ID
+     * @var string <p>媒体库 ID</p>
      */
     public $LibraryId;
 
     /**
-     * @var string 媒体库名称，最多 50 个字符。如不传则不修改。
+     * @var string <p>媒体库名称，最多 50 个字符。如不传则不修改。</p>
      */
     public $Name;
 
     /**
-     * @var string 备注，最多 250 个字符。如不传则不修改。
+     * @var string <p>备注，最多 250 个字符。如不传则不修改。</p>
      */
     public $Remark;
 
     /**
-     * @var LibraryExtension 媒体库配置项，部分参数在新建后不可更改，且仅修改传入的参数。如不传该参数则不修改任何配置项。
+     * @var LibraryExtension <p>媒体库配置项，部分参数在新建后不可更改，且仅修改传入的参数。如不传该参数则不修改任何配置项。</p>
      */
     public $LibraryExtension;
 
     /**
-     * @param string $LibraryId 媒体库 ID
-     * @param string $Name 媒体库名称，最多 50 个字符。如不传则不修改。
-     * @param string $Remark 备注，最多 250 个字符。如不传则不修改。
-     * @param LibraryExtension $LibraryExtension 媒体库配置项，部分参数在新建后不可更改，且仅修改传入的参数。如不传该参数则不修改任何配置项。
+     * @param string $LibraryId <p>媒体库 ID</p>
+     * @param string $Name <p>媒体库名称，最多 50 个字符。如不传则不修改。</p>
+     * @param string $Remark <p>备注，最多 250 个字符。如不传则不修改。</p>
+     * @param LibraryExtension $LibraryExtension <p>媒体库配置项，部分参数在新建后不可更改，且仅修改传入的参数。如不传该参数则不修改任何配置项。</p>
      */
     function __construct()
     {

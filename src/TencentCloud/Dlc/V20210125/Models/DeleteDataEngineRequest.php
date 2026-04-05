@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteDataEngine请求参数结构体
  *
- * @method array getDataEngineNames() 获取删除虚拟集群的名称数组
- * @method void setDataEngineNames(array $DataEngineNames) 设置删除虚拟集群的名称数组
+ * @method array getDataEngineNames() 获取<p>删除虚拟集群的名称数组</p>
+ * @method void setDataEngineNames(array $DataEngineNames) 设置<p>删除虚拟集群的名称数组</p>
  */
 class DeleteDataEngineRequest extends AbstractModel
 {
     /**
-     * @var array 删除虚拟集群的名称数组
+     * @var array <p>删除虚拟集群的名称数组</p>
      */
     public $DataEngineNames;
 
     /**
-     * @param array $DataEngineNames 删除虚拟集群的名称数组
+     * @param array $DataEngineNames <p>删除虚拟集群的名称数组</p>
      */
     function __construct()
     {

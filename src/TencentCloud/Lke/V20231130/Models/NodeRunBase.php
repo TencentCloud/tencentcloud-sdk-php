@@ -20,166 +20,102 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 节点运行的基本信息
  *
- * @method string getNodeRunId() 获取节点运行的ID
- * @method void setNodeRunId(string $NodeRunId) 设置节点运行的ID
- * @method string getNodeId() 获取节点ID
- * @method void setNodeId(string $NodeId) 设置节点ID
- * @method string getWorkflowRunId() 获取工作流运行实例的ID
- * @method void setWorkflowRunId(string $WorkflowRunId) 设置工作流运行实例的ID
- * @method string getNodeName() 获取节点名称
- * @method void setNodeName(string $NodeName) 设置节点名称
- * @method integer getNodeType() 获取节点类型。
-1： 开始节点
-2：参数提取节点
-3：大模型节点
-4：知识问答节点
-5：知识检索节点
-6：标签提取节点
-7：代码执行节点
-8：工具节点
-9：逻辑判断节点
-10：回复节点
-11：选项卡节点
-12：循环节点
-13：意图识别节点
-14：工作流节点
-15：插件节点
-16：结束节点
-17: 变量聚合节点数据
-18: 批处理节点
-19: 消息队列节点
- * @method void setNodeType(integer $NodeType) 设置节点类型。
-1： 开始节点
-2：参数提取节点
-3：大模型节点
-4：知识问答节点
-5：知识检索节点
-6：标签提取节点
-7：代码执行节点
-8：工具节点
-9：逻辑判断节点
-10：回复节点
-11：选项卡节点
-12：循环节点
-13：意图识别节点
-14：工作流节点
-15：插件节点
-16：结束节点
-17: 变量聚合节点数据
-18: 批处理节点
-19: 消息队列节点
- * @method integer getState() 获取运行状态。0: 初始状态；1: 运行中；2: 运行成功； 3: 运行失败； 4: 已取消
- * @method void setState(integer $State) 设置运行状态。0: 初始状态；1: 运行中；2: 运行成功； 3: 运行失败； 4: 已取消
- * @method string getFailCode() 获取错误码
- * @method void setFailCode(string $FailCode) 设置错误码
- * @method string getFailMessage() 获取错误信息
- * @method void setFailMessage(string $FailMessage) 设置错误信息
- * @method integer getCostMilliseconds() 获取消耗时间（毫秒）
- * @method void setCostMilliseconds(integer $CostMilliseconds) 设置消耗时间（毫秒）
- * @method integer getTotalTokens() 获取消耗的token总数
- * @method void setTotalTokens(integer $TotalTokens) 设置消耗的token总数
+ * @method string getNodeRunId() 获取<p>节点运行的ID</p>
+ * @method void setNodeRunId(string $NodeRunId) 设置<p>节点运行的ID</p>
+ * @method string getNodeId() 获取<p>节点ID</p>
+ * @method void setNodeId(string $NodeId) 设置<p>节点ID</p>
+ * @method string getWorkflowRunId() 获取<p>工作流运行实例的ID</p>
+ * @method void setWorkflowRunId(string $WorkflowRunId) 设置<p>工作流运行实例的ID</p>
+ * @method string getNodeName() 获取<p>节点名称</p>
+ * @method void setNodeName(string $NodeName) 设置<p>节点名称</p>
+ * @method integer getNodeType() 获取<p>节点类型。<br>1： 开始节点<br>2：参数提取节点<br>3：大模型节点<br>4：知识问答节点<br>5：知识检索节点<br>6：标签提取节点<br>7：代码执行节点<br>8：工具节点<br>9：逻辑判断节点<br>10：回复节点<br>11：选项卡节点<br>12：循环节点<br>13：意图识别节点<br>14：工作流节点<br>15：插件节点<br>16：结束节点<br>17: 变量聚合节点数据<br>18: 批处理节点<br>19: 消息队列节点</p>
+ * @method void setNodeType(integer $NodeType) 设置<p>节点类型。<br>1： 开始节点<br>2：参数提取节点<br>3：大模型节点<br>4：知识问答节点<br>5：知识检索节点<br>6：标签提取节点<br>7：代码执行节点<br>8：工具节点<br>9：逻辑判断节点<br>10：回复节点<br>11：选项卡节点<br>12：循环节点<br>13：意图识别节点<br>14：工作流节点<br>15：插件节点<br>16：结束节点<br>17: 变量聚合节点数据<br>18: 批处理节点<br>19: 消息队列节点</p>
+ * @method integer getState() 获取<p>运行状态。0: 初始状态；1: 运行中；2: 运行成功； 3: 运行失败； 4: 已取消</p>
+ * @method void setState(integer $State) 设置<p>运行状态。0: 初始状态；1: 运行中；2: 运行成功； 3: 运行失败； 4: 已取消</p>
+ * @method string getFailCode() 获取<p>错误码</p>
+ * @method void setFailCode(string $FailCode) 设置<p>错误码</p>
+ * @method string getFailMessage() 获取<p>错误信息</p>
+ * @method void setFailMessage(string $FailMessage) 设置<p>错误信息</p>
+ * @method integer getCostMilliseconds() 获取<p>消耗时间（毫秒）</p>
+ * @method void setCostMilliseconds(integer $CostMilliseconds) 设置<p>消耗时间（毫秒）</p>
+ * @method integer getTotalTokens() 获取<p>消耗的token总数</p>
+ * @method void setTotalTokens(integer $TotalTokens) 设置<p>消耗的token总数</p>
+ * @method array getBranchIndexList() 获取<p>分支下标列表</p><p>单位：无</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBranchIndexList(array $BranchIndexList) 设置<p>分支下标列表</p><p>单位：无</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodeRunBase extends AbstractModel
 {
     /**
-     * @var string 节点运行的ID
+     * @var string <p>节点运行的ID</p>
      */
     public $NodeRunId;
 
     /**
-     * @var string 节点ID
+     * @var string <p>节点ID</p>
      */
     public $NodeId;
 
     /**
-     * @var string 工作流运行实例的ID
+     * @var string <p>工作流运行实例的ID</p>
      */
     public $WorkflowRunId;
 
     /**
-     * @var string 节点名称
+     * @var string <p>节点名称</p>
      */
     public $NodeName;
 
     /**
-     * @var integer 节点类型。
-1： 开始节点
-2：参数提取节点
-3：大模型节点
-4：知识问答节点
-5：知识检索节点
-6：标签提取节点
-7：代码执行节点
-8：工具节点
-9：逻辑判断节点
-10：回复节点
-11：选项卡节点
-12：循环节点
-13：意图识别节点
-14：工作流节点
-15：插件节点
-16：结束节点
-17: 变量聚合节点数据
-18: 批处理节点
-19: 消息队列节点
+     * @var integer <p>节点类型。<br>1： 开始节点<br>2：参数提取节点<br>3：大模型节点<br>4：知识问答节点<br>5：知识检索节点<br>6：标签提取节点<br>7：代码执行节点<br>8：工具节点<br>9：逻辑判断节点<br>10：回复节点<br>11：选项卡节点<br>12：循环节点<br>13：意图识别节点<br>14：工作流节点<br>15：插件节点<br>16：结束节点<br>17: 变量聚合节点数据<br>18: 批处理节点<br>19: 消息队列节点</p>
      */
     public $NodeType;
 
     /**
-     * @var integer 运行状态。0: 初始状态；1: 运行中；2: 运行成功； 3: 运行失败； 4: 已取消
+     * @var integer <p>运行状态。0: 初始状态；1: 运行中；2: 运行成功； 3: 运行失败； 4: 已取消</p>
      */
     public $State;
 
     /**
-     * @var string 错误码
+     * @var string <p>错误码</p>
      */
     public $FailCode;
 
     /**
-     * @var string 错误信息
+     * @var string <p>错误信息</p>
      */
     public $FailMessage;
 
     /**
-     * @var integer 消耗时间（毫秒）
+     * @var integer <p>消耗时间（毫秒）</p>
      */
     public $CostMilliseconds;
 
     /**
-     * @var integer 消耗的token总数
+     * @var integer <p>消耗的token总数</p>
      */
     public $TotalTokens;
 
     /**
-     * @param string $NodeRunId 节点运行的ID
-     * @param string $NodeId 节点ID
-     * @param string $WorkflowRunId 工作流运行实例的ID
-     * @param string $NodeName 节点名称
-     * @param integer $NodeType 节点类型。
-1： 开始节点
-2：参数提取节点
-3：大模型节点
-4：知识问答节点
-5：知识检索节点
-6：标签提取节点
-7：代码执行节点
-8：工具节点
-9：逻辑判断节点
-10：回复节点
-11：选项卡节点
-12：循环节点
-13：意图识别节点
-14：工作流节点
-15：插件节点
-16：结束节点
-17: 变量聚合节点数据
-18: 批处理节点
-19: 消息队列节点
-     * @param integer $State 运行状态。0: 初始状态；1: 运行中；2: 运行成功； 3: 运行失败； 4: 已取消
-     * @param string $FailCode 错误码
-     * @param string $FailMessage 错误信息
-     * @param integer $CostMilliseconds 消耗时间（毫秒）
-     * @param integer $TotalTokens 消耗的token总数
+     * @var array <p>分支下标列表</p><p>单位：无</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BranchIndexList;
+
+    /**
+     * @param string $NodeRunId <p>节点运行的ID</p>
+     * @param string $NodeId <p>节点ID</p>
+     * @param string $WorkflowRunId <p>工作流运行实例的ID</p>
+     * @param string $NodeName <p>节点名称</p>
+     * @param integer $NodeType <p>节点类型。<br>1： 开始节点<br>2：参数提取节点<br>3：大模型节点<br>4：知识问答节点<br>5：知识检索节点<br>6：标签提取节点<br>7：代码执行节点<br>8：工具节点<br>9：逻辑判断节点<br>10：回复节点<br>11：选项卡节点<br>12：循环节点<br>13：意图识别节点<br>14：工作流节点<br>15：插件节点<br>16：结束节点<br>17: 变量聚合节点数据<br>18: 批处理节点<br>19: 消息队列节点</p>
+     * @param integer $State <p>运行状态。0: 初始状态；1: 运行中；2: 运行成功； 3: 运行失败； 4: 已取消</p>
+     * @param string $FailCode <p>错误码</p>
+     * @param string $FailMessage <p>错误信息</p>
+     * @param integer $CostMilliseconds <p>消耗时间（毫秒）</p>
+     * @param integer $TotalTokens <p>消耗的token总数</p>
+     * @param array $BranchIndexList <p>分支下标列表</p><p>单位：无</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -232,6 +168,10 @@ class NodeRunBase extends AbstractModel
 
         if (array_key_exists("TotalTokens",$param) and $param["TotalTokens"] !== null) {
             $this->TotalTokens = $param["TotalTokens"];
+        }
+
+        if (array_key_exists("BranchIndexList",$param) and $param["BranchIndexList"] !== null) {
+            $this->BranchIndexList = $param["BranchIndexList"];
         }
     }
 }

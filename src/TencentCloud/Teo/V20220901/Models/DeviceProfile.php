@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 客户端设备配置
  *
- * @method string getClientType() 获取客户端设备类型。取值有：<li>iOS；</li><li>Android；</li><li>WebView。</li>
- * @method void setClientType(string $ClientType) 设置客户端设备类型。取值有：<li>iOS；</li><li>Android；</li><li>WebView。</li>
+ * @method string getClientType() 获取客户端设备类型。取值有：<li>iOS；</li><li>Android；</li><li>WebView；</li><li>WeChatMiniProgram。</li>
+ * @method void setClientType(string $ClientType) 设置客户端设备类型。取值有：<li>iOS；</li><li>Android；</li><li>WebView；</li><li>WeChatMiniProgram。</li>
  * @method integer getHighRiskMinScore() 获取判定请求为高风险的最低值，取值范围为 1～99。数值越大请求风险越高越接近 Bot 客户端发起的请求。默认值为 50，对应含义 51～100 为高风险。
  * @method void setHighRiskMinScore(integer $HighRiskMinScore) 设置判定请求为高风险的最低值，取值范围为 1～99。数值越大请求风险越高越接近 Bot 客户端发起的请求。默认值为 50，对应含义 51～100 为高风险。
  * @method SecurityAction getHighRiskRequestAction() 获取高风险请求的处置方式。SecurityAction 的 Name 取值支持：<li>Deny：拦截；</li><li>Monitor：观察；</li><li>Redirect：重定向；</li><li>Challenge：挑战。</li>默认值为 Monitor。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DeviceProfile extends AbstractModel
 {
     /**
-     * @var string 客户端设备类型。取值有：<li>iOS；</li><li>Android；</li><li>WebView。</li>
+     * @var string 客户端设备类型。取值有：<li>iOS；</li><li>Android；</li><li>WebView；</li><li>WeChatMiniProgram。</li>
      */
     public $ClientType;
 
@@ -59,7 +59,7 @@ class DeviceProfile extends AbstractModel
     public $MediumRiskRequestAction;
 
     /**
-     * @param string $ClientType 客户端设备类型。取值有：<li>iOS；</li><li>Android；</li><li>WebView。</li>
+     * @param string $ClientType 客户端设备类型。取值有：<li>iOS；</li><li>Android；</li><li>WebView；</li><li>WeChatMiniProgram。</li>
      * @param integer $HighRiskMinScore 判定请求为高风险的最低值，取值范围为 1～99。数值越大请求风险越高越接近 Bot 客户端发起的请求。默认值为 50，对应含义 51～100 为高风险。
      * @param SecurityAction $HighRiskRequestAction 高风险请求的处置方式。SecurityAction 的 Name 取值支持：<li>Deny：拦截；</li><li>Monitor：观察；</li><li>Redirect：重定向；</li><li>Challenge：挑战。</li>默认值为 Monitor。
      * @param integer $MediumRiskMinScore 判定请求为中风险的最低值，取值范围为 1～99。数值越大请求风险越高越接近 Bot 客户端发起的请求。默认值为 15，对应含义 16～50 为中风险。

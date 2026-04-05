@@ -20,141 +20,141 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 工作流运行节点信息
  *
- * @method string getNodeId() 获取节点ID
+ * @method string getNodeId() 获取<p>节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNodeId(string $NodeId) 设置节点ID
+ * @method void setNodeId(string $NodeId) 设置<p>节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getNodeType() 获取节点类型
+ * @method integer getNodeType() 获取<p>节点类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNodeType(integer $NodeType) 设置节点类型
+ * @method void setNodeType(integer $NodeType) 设置<p>节点类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNodeName() 获取节点名称
+ * @method string getNodeName() 获取<p>节点名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNodeName(string $NodeName) 设置节点名称
+ * @method void setNodeName(string $NodeName) 设置<p>节点名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取状态
+ * @method integer getStatus() 获取<p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置状态
+ * @method void setStatus(integer $Status) 设置<p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInput() 获取输入
+ * @method string getInput() 获取<p>输入</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInput(string $Input) 设置输入
+ * @method void setInput(string $Input) 设置<p>输入</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOutput() 获取输出
+ * @method string getOutput() 获取<p>输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutput(string $Output) 设置输出
+ * @method void setOutput(string $Output) 设置<p>输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskOutput() 获取任务输出
+ * @method string getTaskOutput() 获取<p>任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskOutput(string $TaskOutput) 设置任务输出
+ * @method void setTaskOutput(string $TaskOutput) 设置<p>任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFailMessage() 获取错误信息
+ * @method string getFailMessage() 获取<p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFailMessage(string $FailMessage) 设置错误信息
+ * @method void setFailMessage(string $FailMessage) 设置<p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCostMilliSeconds() 获取花费时长
+ * @method integer getCostMilliSeconds() 获取<p>花费时长，单位为毫秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCostMilliSeconds(integer $CostMilliSeconds) 设置花费时长
+ * @method void setCostMilliSeconds(integer $CostMilliSeconds) 设置<p>花费时长，单位为毫秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getStatisticInfos() 获取大模型输出信息
+ * @method array getStatisticInfos() 获取<p>大模型输出信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatisticInfos(array $StatisticInfos) 设置大模型输出信息
+ * @method void setStatisticInfos(array $StatisticInfos) 设置<p>大模型输出信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFailCode() 获取错误代码
+ * @method string getFailCode() 获取<p>错误代码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFailCode(string $FailCode) 设置错误代码
+ * @method void setFailCode(string $FailCode) 设置<p>错误代码</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowRunNodeInfo extends AbstractModel
 {
     /**
-     * @var string 节点ID
+     * @var string <p>节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeId;
 
     /**
-     * @var integer 节点类型
+     * @var integer <p>节点类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeType;
 
     /**
-     * @var string 节点名称
+     * @var string <p>节点名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeName;
 
     /**
-     * @var integer 状态
+     * @var integer <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var string 输入
+     * @var string <p>输入</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Input;
 
     /**
-     * @var string 输出
+     * @var string <p>输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
 
     /**
-     * @var string 任务输出
+     * @var string <p>任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskOutput;
 
     /**
-     * @var string 错误信息
+     * @var string <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailMessage;
 
     /**
-     * @var integer 花费时长
+     * @var integer <p>花费时长，单位为毫秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CostMilliSeconds;
 
     /**
-     * @var array 大模型输出信息
+     * @var array <p>大模型输出信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatisticInfos;
 
     /**
-     * @var string 错误代码
+     * @var string <p>错误代码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailCode;
 
     /**
-     * @param string $NodeId 节点ID
+     * @param string $NodeId <p>节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $NodeType 节点类型
+     * @param integer $NodeType <p>节点类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NodeName 节点名称
+     * @param string $NodeName <p>节点名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 状态
+     * @param integer $Status <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Input 输入
+     * @param string $Input <p>输入</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Output 输出
+     * @param string $Output <p>输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskOutput 任务输出
+     * @param string $TaskOutput <p>任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FailMessage 错误信息
+     * @param string $FailMessage <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CostMilliSeconds 花费时长
+     * @param integer $CostMilliSeconds <p>花费时长，单位为毫秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $StatisticInfos 大模型输出信息
+     * @param array $StatisticInfos <p>大模型输出信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FailCode 错误代码
+     * @param string $FailCode <p>错误代码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

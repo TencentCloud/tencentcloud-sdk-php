@@ -67,6 +67,7 @@ use TencentCloud\Cvm\V20170312\Models as Models;
 * 每个地域最多只支持创建500个自定义镜像，删除镜像可以释放账户的配额。
 * 当镜像正在被其它账户分享时，不允许删除。
  * @method Models\DeleteInstancesActionTimerResponse DeleteInstancesActionTimer(Models\DeleteInstancesActionTimerRequest $req) 本接口 (DeleteInstancesActionTimer) 用于删除定时任务。
+ * @method Models\DeleteInstancesDisasterRecoverGroupsResponse DeleteInstancesDisasterRecoverGroups(Models\DeleteInstancesDisasterRecoverGroupsRequest $req) 本接口 (DeleteInstancesDisasterRecoverGroups) 用于将云服务器实例从指定的置放群组中批量移除。
  * @method Models\DeleteKeyPairsResponse DeleteKeyPairs(Models\DeleteKeyPairsRequest $req) 本接口 (DeleteKeyPairs) 用于删除已在腾讯云托管的密钥对。
 
 * 可以同时删除多个密钥对。

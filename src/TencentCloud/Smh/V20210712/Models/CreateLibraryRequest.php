@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLibrary请求参数结构体
  *
- * @method string getName() 获取媒体库名称，最多 50 个字符
- * @method void setName(string $Name) 设置媒体库名称，最多 50 个字符
- * @method string getRemark() 获取备注，最多 250 个字符
- * @method void setRemark(string $Remark) 设置备注，最多 250 个字符
- * @method string getBucketName() 获取存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。
- * @method void setBucketName(string $BucketName) 设置存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。
- * @method string getBucketRegion() 获取存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。
- * @method void setBucketRegion(string $BucketRegion) 设置存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。
- * @method LibraryExtension getLibraryExtension() 获取媒体库配置项，部分参数新建后不可更改
- * @method void setLibraryExtension(LibraryExtension $LibraryExtension) 设置媒体库配置项，部分参数新建后不可更改
+ * @method string getName() 获取<p>媒体库名称，最多 50 个字符</p>
+ * @method void setName(string $Name) 设置<p>媒体库名称，最多 50 个字符</p>
+ * @method string getRemark() 获取<p>备注，最多 250 个字符</p>
+ * @method void setRemark(string $Remark) 设置<p>备注，最多 250 个字符</p>
+ * @method string getBucketName() 获取<p>存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。</p>
+ * @method void setBucketName(string $BucketName) 设置<p>存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。</p>
+ * @method string getBucketRegion() 获取<p>存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。</p>
+ * @method void setBucketRegion(string $BucketRegion) 设置<p>存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。</p>
+ * @method LibraryExtension getLibraryExtension() 获取<p>媒体库配置项，部分参数新建后不可更改</p>
+ * @method void setLibraryExtension(LibraryExtension $LibraryExtension) 设置<p>媒体库配置项，部分参数新建后不可更改</p>
  */
 class CreateLibraryRequest extends AbstractModel
 {
     /**
-     * @var string 媒体库名称，最多 50 个字符
+     * @var string <p>媒体库名称，最多 50 个字符</p>
      */
     public $Name;
 
     /**
-     * @var string 备注，最多 250 个字符
+     * @var string <p>备注，最多 250 个字符</p>
      */
     public $Remark;
 
     /**
-     * @var string 存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。
+     * @var string <p>存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。</p>
      */
     public $BucketName;
 
     /**
-     * @var string 存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。
+     * @var string <p>存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。</p>
      */
     public $BucketRegion;
 
     /**
-     * @var LibraryExtension 媒体库配置项，部分参数新建后不可更改
+     * @var LibraryExtension <p>媒体库配置项，部分参数新建后不可更改</p>
      */
     public $LibraryExtension;
 
     /**
-     * @param string $Name 媒体库名称，最多 50 个字符
-     * @param string $Remark 备注，最多 250 个字符
-     * @param string $BucketName 存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。
-     * @param string $BucketRegion 存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。
-     * @param LibraryExtension $LibraryExtension 媒体库配置项，部分参数新建后不可更改
+     * @param string $Name <p>媒体库名称，最多 50 个字符</p>
+     * @param string $Remark <p>备注，最多 250 个字符</p>
+     * @param string $BucketName <p>存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。</p>
+     * @param string $BucketRegion <p>存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。</p>
+     * @param LibraryExtension $LibraryExtension <p>媒体库配置项，部分参数新建后不可更改</p>
      */
     function __construct()
     {

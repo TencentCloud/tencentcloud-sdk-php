@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageNumber(integer $PageNumber) 设置页码，整型，配合 PageSize 使用，默认值为 1。
  * @method integer getPageSize() 获取每页数目，整型，配合 PageNumber 使用，默认值为 20，最大值为 100。
  * @method void setPageSize(integer $PageSize) 设置每页数目，整型，配合 PageNumber 使用，默认值为 20，最大值为 100。
+ * @method integer getOffset() 获取偏移量，从0开始。
+ * @method void setOffset(integer $Offset) 设置偏移量，从0开始。
+ * @method integer getLimit() 获取单次列出的数量限制，不超过100.
+ * @method void setLimit(integer $Limit) 设置单次列出的数量限制，不超过100.
  */
 class DescribeLibrariesRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class DescribeLibrariesRequest extends AbstractModel
     public $PageSize;
 
     /**
+     * @var integer 偏移量，从0开始。
+     */
+    public $Offset;
+
+    /**
+     * @var integer 单次列出的数量限制，不超过100.
+     */
+    public $Limit;
+
+    /**
      * @param array $LibraryIds 按照一个或者多个媒体库 ID 查询，每次请求的上限为 100 个。
      * @param integer $PageNumber 页码，整型，配合 PageSize 使用，默认值为 1。
      * @param integer $PageSize 每页数目，整型，配合 PageNumber 使用，默认值为 20，最大值为 100。
+     * @param integer $Offset 偏移量，从0开始。
+     * @param integer $Limit 单次列出的数量限制，不超过100.
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class DescribeLibrariesRequest extends AbstractModel
 
         if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
             $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

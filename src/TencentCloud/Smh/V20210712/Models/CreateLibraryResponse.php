@@ -20,17 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLibrary返回参数结构体
  *
- * @method string getLibraryId() 获取媒体库 ID
- * @method void setLibraryId(string $LibraryId) 设置媒体库 ID
+ * @method string getLibraryId() 获取<p>媒体库 ID</p>
+ * @method void setLibraryId(string $LibraryId) 设置<p>媒体库 ID</p>
+ * @method string getAccessDomain() 获取
+ * @method void setAccessDomain(string $AccessDomain) 设置
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateLibraryResponse extends AbstractModel
 {
     /**
-     * @var string 媒体库 ID
+     * @var string <p>媒体库 ID</p>
      */
     public $LibraryId;
+
+    /**
+     * @var string 
+     */
+    public $AccessDomain;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class CreateLibraryResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $LibraryId 媒体库 ID
+     * @param string $LibraryId <p>媒体库 ID</p>
+     * @param string $AccessDomain 
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,10 @@ class CreateLibraryResponse extends AbstractModel
         }
         if (array_key_exists("LibraryId",$param) and $param["LibraryId"] !== null) {
             $this->LibraryId = $param["LibraryId"];
+        }
+
+        if (array_key_exists("AccessDomain",$param) and $param["AccessDomain"] !== null) {
+            $this->AccessDomain = $param["AccessDomain"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

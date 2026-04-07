@@ -20,294 +20,226 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCluster请求参数结构体
  *
- * @method string getProductVersion() 获取EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：[产品版本名称](https://cloud.tencent.com/document/product/589/66338)
- * @method void setProductVersion(string $ProductVersion) 设置EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：[产品版本名称](https://cloud.tencent.com/document/product/589/66338)
- * @method boolean getEnableSupportHAFlag() 获取是否开启节点高可用。取值范围：
-<li>true：表示开启节点高可用。</li>
-<li>false：表示不开启节点高可用。</li>
- * @method void setEnableSupportHAFlag(boolean $EnableSupportHAFlag) 设置是否开启节点高可用。取值范围：
-<li>true：表示开启节点高可用。</li>
-<li>false：表示不开启节点高可用。</li>
- * @method string getInstanceName() 获取实例名称。
-<li>长度限制为6-36个字符。</li>
-<li>只允许包含中文、字母、数字、-、_。</li>
- * @method void setInstanceName(string $InstanceName) 设置实例名称。
-<li>长度限制为6-36个字符。</li>
-<li>只允许包含中文、字母、数字、-、_。</li>
- * @method string getInstanceChargeType() 获取实例计费模式。取值范围：
-<li>PREPAID：预付费，即包年包月。</li>
-<li>POSTPAID_BY_HOUR：按小时后付费。</li>
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费模式。取值范围：
-<li>PREPAID：预付费，即包年包月。</li>
-<li>POSTPAID_BY_HOUR：按小时后付费。</li>
- * @method LoginSettings getLoginSettings() 获取实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。
-<li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li>
-<li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
- * @method void setLoginSettings(LoginSettings $LoginSettings) 设置实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。
-<li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li>
-<li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
- * @method SceneSoftwareConfig getSceneSoftwareConfig() 获取集群应用场景以及支持部署组件配置
- * @method void setSceneSoftwareConfig(SceneSoftwareConfig $SceneSoftwareConfig) 设置集群应用场景以及支持部署组件配置
- * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
- * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
- * @method array getSecurityGroupIds() 获取实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
- * @method array getScriptBootstrapActionConfig() 获取[引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。
- * @method void setScriptBootstrapActionConfig(array $ScriptBootstrapActionConfig) 设置[引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。
- * @method string getClientToken() 获取唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808
- * @method void setClientToken(string $ClientToken) 设置唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808
- * @method string getNeedMasterWan() 获取是否开启集群Master节点公网。取值范围：
-<li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li>
-<li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
- * @method void setNeedMasterWan(string $NeedMasterWan) 设置是否开启集群Master节点公网。取值范围：
-<li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li>
-<li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
- * @method boolean getEnableRemoteLoginFlag() 获取是否开启外网远程登录。（在SecurityGroupId不为空时，该参数无效）不填默认为不开启 取值范围：
-<li>true：表示开启</li>
-<li>false：表示不开启</li>
- * @method void setEnableRemoteLoginFlag(boolean $EnableRemoteLoginFlag) 设置是否开启外网远程登录。（在SecurityGroupId不为空时，该参数无效）不填默认为不开启 取值范围：
-<li>true：表示开启</li>
-<li>false：表示不开启</li>
- * @method boolean getEnableKerberosFlag() 获取是否开启Kerberos认证。默认不开启 取值范围：
-<li>true：表示开启</li>
-<li>false：表示不开启</li>
- * @method void setEnableKerberosFlag(boolean $EnableKerberosFlag) 设置是否开启Kerberos认证。默认不开启 取值范围：
-<li>true：表示开启</li>
-<li>false：表示不开启</li>
- * @method string getCustomConf() 获取[自定义软件配置](https://cloud.tencent.com/document/product/589/35655?from_cn_redirect=1)
- * @method void setCustomConf(string $CustomConf) 设置[自定义软件配置](https://cloud.tencent.com/document/product/589/35655?from_cn_redirect=1)
- * @method array getTags() 获取标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。
- * @method void setTags(array $Tags) 设置标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。
- * @method array getDisasterRecoverGroupIds() 获取分散置放群组ID列表，当前只支持指定一个。
-该参数可以通过调用 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)的返回值中的DisasterRecoverGroupId字段来获取。
- * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) 设置分散置放群组ID列表，当前只支持指定一个。
-该参数可以通过调用 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)的返回值中的DisasterRecoverGroupId字段来获取。
- * @method boolean getEnableCbsEncryptFlag() 获取是否开启集群维度CBS加密。默认不加密 取值范围：
-<li>true：表示加密</li>
-<li>false：表示不加密</li>
- * @method void setEnableCbsEncryptFlag(boolean $EnableCbsEncryptFlag) 设置是否开启集群维度CBS加密。默认不加密 取值范围：
-<li>true：表示加密</li>
-<li>false：表示不加密</li>
- * @method CustomMetaDBInfo getMetaDBInfo() 获取MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填
-当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId
-当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass
- * @method void setMetaDBInfo(CustomMetaDBInfo $MetaDBInfo) 设置MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填
-当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId
-当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass
- * @method array getDependService() 获取共享组件信息
- * @method void setDependService(array $DependService) 设置共享组件信息
- * @method array getZoneResourceConfiguration() 获取节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
- * @method void setZoneResourceConfiguration(array $ZoneResourceConfiguration) 设置节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
- * @method string getCosBucket() 获取cos桶路径，创建StarRocks存算分离集群时用到
- * @method void setCosBucket(string $CosBucket) 设置cos桶路径，创建StarRocks存算分离集群时用到
- * @method array getNodeMarks() 获取节点标识信息，目前只提供给tf平台使用
- * @method void setNodeMarks(array $NodeMarks) 设置节点标识信息，目前只提供给tf平台使用
- * @method string getLoadBalancerId() 获取clb id
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置clb id
- * @method string getDefaultMetaVersion() 获取数据库版本：mysql8/tdsql8/mysql5
- * @method void setDefaultMetaVersion(string $DefaultMetaVersion) 设置数据库版本：mysql8/tdsql8/mysql5
- * @method integer getNeedCdbAudit() 获取是否开通数据库审计
- * @method void setNeedCdbAudit(integer $NeedCdbAudit) 设置是否开通数据库审计
- * @method string getSgIP() 获取安全指定来源ip
- * @method void setSgIP(string $SgIP) 设置安全指定来源ip
+ * @method string getProductVersion() 获取<p>EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：<a href="https://cloud.tencent.com/document/product/589/66338">产品版本名称</a></p>
+ * @method void setProductVersion(string $ProductVersion) 设置<p>EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：<a href="https://cloud.tencent.com/document/product/589/66338">产品版本名称</a></p>
+ * @method boolean getEnableSupportHAFlag() 获取<p>是否开启节点高可用。取值范围：</p><li>true：表示开启节点高可用。</li><li>false：表示不开启节点高可用。</li>
+ * @method void setEnableSupportHAFlag(boolean $EnableSupportHAFlag) 设置<p>是否开启节点高可用。取值范围：</p><li>true：表示开启节点高可用。</li><li>false：表示不开启节点高可用。</li>
+ * @method string getInstanceName() 获取<p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li>
+ * @method string getInstanceChargeType() 获取<p>实例计费模式。取值范围：</p><li>PREPAID：预付费，即包年包月。</li><li>POSTPAID_BY_HOUR：按小时后付费。</li>
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置<p>实例计费模式。取值范围：</p><li>PREPAID：预付费，即包年包月。</li><li>POSTPAID_BY_HOUR：按小时后付费。</li>
+ * @method LoginSettings getLoginSettings() 获取<p>实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。</p><li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li><li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
+ * @method void setLoginSettings(LoginSettings $LoginSettings) 设置<p>实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。</p><li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li><li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
+ * @method SceneSoftwareConfig getSceneSoftwareConfig() 获取<p>集群应用场景以及支持部署组件配置</p>
+ * @method void setSceneSoftwareConfig(SceneSoftwareConfig $SceneSoftwareConfig) 设置<p>集群应用场景以及支持部署组件配置</p>
+ * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取<p>即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
+ * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置<p>即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
+ * @method array getSecurityGroupIds() 获取<p>实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的SecurityGroupId字段来获取。</p>
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置<p>实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的SecurityGroupId字段来获取。</p>
+ * @method array getScriptBootstrapActionConfig() 获取<p><a href="https://cloud.tencent.com/document/product/589/35656">引导操作</a>脚本设置。</p>
+ * @method void setScriptBootstrapActionConfig(array $ScriptBootstrapActionConfig) 设置<p><a href="https://cloud.tencent.com/document/product/589/35656">引导操作</a>脚本设置。</p>
+ * @method string getClientToken() 获取<p>唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808</p>
+ * @method void setClientToken(string $ClientToken) 设置<p>唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808</p>
+ * @method string getNeedMasterWan() 获取<p>是否开启集群Master节点公网。取值范围：</p><li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li><li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
+ * @method void setNeedMasterWan(string $NeedMasterWan) 设置<p>是否开启集群Master节点公网。取值范围：</p><li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li><li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
+ * @method boolean getEnableRemoteLoginFlag() 获取<p>是否开启外网远程登录。（在SecurityGroupId不为空时，该参数无效）不填默认为不开启 取值范围：</p><li>true：表示开启</li><li>false：表示不开启</li>
+ * @method void setEnableRemoteLoginFlag(boolean $EnableRemoteLoginFlag) 设置<p>是否开启外网远程登录。（在SecurityGroupId不为空时，该参数无效）不填默认为不开启 取值范围：</p><li>true：表示开启</li><li>false：表示不开启</li>
+ * @method boolean getEnableKerberosFlag() 获取<p>是否开启Kerberos认证。默认不开启 取值范围：</p><li>true：表示开启</li><li>false：表示不开启</li>
+ * @method void setEnableKerberosFlag(boolean $EnableKerberosFlag) 设置<p>是否开启Kerberos认证。默认不开启 取值范围：</p><li>true：表示开启</li><li>false：表示不开启</li>
+ * @method string getCustomConf() 获取<p><a href="https://cloud.tencent.com/document/product/589/35655?from_cn_redirect=1">自定义软件配置</a></p>
+ * @method void setCustomConf(string $CustomConf) 设置<p><a href="https://cloud.tencent.com/document/product/589/35655?from_cn_redirect=1">自定义软件配置</a></p>
+ * @method array getTags() 获取<p>标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。</p>
+ * @method void setTags(array $Tags) 设置<p>标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。</p>
+ * @method array getDisasterRecoverGroupIds() 获取<p>分散置放群组ID列表，当前只支持指定一个。<br>该参数可以通过调用 <a href="https://cloud.tencent.com/document/product/213/17810">DescribeDisasterRecoverGroups</a>的返回值中的DisasterRecoverGroupId字段来获取。</p>
+ * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) 设置<p>分散置放群组ID列表，当前只支持指定一个。<br>该参数可以通过调用 <a href="https://cloud.tencent.com/document/product/213/17810">DescribeDisasterRecoverGroups</a>的返回值中的DisasterRecoverGroupId字段来获取。</p>
+ * @method boolean getEnableCbsEncryptFlag() 获取<p>是否开启集群维度CBS加密。默认不加密 取值范围：</p><li>true：表示加密</li><li>false：表示不加密</li>
+ * @method void setEnableCbsEncryptFlag(boolean $EnableCbsEncryptFlag) 设置<p>是否开启集群维度CBS加密。默认不加密 取值范围：</p><li>true：表示加密</li><li>false：表示不加密</li>
+ * @method CustomMetaDBInfo getMetaDBInfo() 获取<p>MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填<br>当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId<br>当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass</p>
+ * @method void setMetaDBInfo(CustomMetaDBInfo $MetaDBInfo) 设置<p>MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填<br>当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId<br>当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass</p>
+ * @method array getDependService() 获取<p>共享组件信息</p>
+ * @method void setDependService(array $DependService) 设置<p>共享组件信息</p>
+ * @method array getZoneResourceConfiguration() 获取<p>节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。</p>
+ * @method void setZoneResourceConfiguration(array $ZoneResourceConfiguration) 设置<p>节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。</p>
+ * @method string getCosBucket() 获取<p>cos桶路径，创建StarRocks存算分离集群时用到</p>
+ * @method void setCosBucket(string $CosBucket) 设置<p>cos桶路径，创建StarRocks存算分离集群时用到</p>
+ * @method array getNodeMarks() 获取<p>节点标识信息，目前只提供给tf平台使用</p>
+ * @method void setNodeMarks(array $NodeMarks) 设置<p>节点标识信息，目前只提供给tf平台使用</p>
+ * @method string getLoadBalancerId() 获取<p>clb id</p>
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置<p>clb id</p>
+ * @method string getDefaultMetaVersion() 获取<p>数据库版本：mysql8/tdsql8/mysql5</p>
+ * @method void setDefaultMetaVersion(string $DefaultMetaVersion) 设置<p>数据库版本：mysql8/tdsql8/mysql5</p>
+ * @method integer getNeedCdbAudit() 获取<p>是否开通数据库审计</p>
+ * @method void setNeedCdbAudit(integer $NeedCdbAudit) 设置<p>是否开通数据库审计</p>
+ * @method string getSgIP() 获取<p>安全指定来源ip</p>
+ * @method void setSgIP(string $SgIP) 设置<p>安全指定来源ip</p>
+ * @method integer getPartitionNumber() 获取<p>分区置放群组分区</p>
+ * @method void setPartitionNumber(integer $PartitionNumber) 设置<p>分区置放群组分区</p>
  */
 class CreateClusterRequest extends AbstractModel
 {
     /**
-     * @var string EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：[产品版本名称](https://cloud.tencent.com/document/product/589/66338)
+     * @var string <p>EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：<a href="https://cloud.tencent.com/document/product/589/66338">产品版本名称</a></p>
      */
     public $ProductVersion;
 
     /**
-     * @var boolean 是否开启节点高可用。取值范围：
-<li>true：表示开启节点高可用。</li>
-<li>false：表示不开启节点高可用。</li>
+     * @var boolean <p>是否开启节点高可用。取值范围：</p><li>true：表示开启节点高可用。</li><li>false：表示不开启节点高可用。</li>
      */
     public $EnableSupportHAFlag;
 
     /**
-     * @var string 实例名称。
-<li>长度限制为6-36个字符。</li>
-<li>只允许包含中文、字母、数字、-、_。</li>
+     * @var string <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li>
      */
     public $InstanceName;
 
     /**
-     * @var string 实例计费模式。取值范围：
-<li>PREPAID：预付费，即包年包月。</li>
-<li>POSTPAID_BY_HOUR：按小时后付费。</li>
+     * @var string <p>实例计费模式。取值范围：</p><li>PREPAID：预付费，即包年包月。</li><li>POSTPAID_BY_HOUR：按小时后付费。</li>
      */
     public $InstanceChargeType;
 
     /**
-     * @var LoginSettings 实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。
-<li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li>
-<li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
+     * @var LoginSettings <p>实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。</p><li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li><li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
      */
     public $LoginSettings;
 
     /**
-     * @var SceneSoftwareConfig 集群应用场景以及支持部署组件配置
+     * @var SceneSoftwareConfig <p>集群应用场景以及支持部署组件配置</p>
      */
     public $SceneSoftwareConfig;
 
     /**
-     * @var InstanceChargePrepaid 即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+     * @var InstanceChargePrepaid <p>即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
      */
     public $InstanceChargePrepaid;
 
     /**
-     * @var array 实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
+     * @var array <p>实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的SecurityGroupId字段来获取。</p>
      */
     public $SecurityGroupIds;
 
     /**
-     * @var array [引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。
+     * @var array <p><a href="https://cloud.tencent.com/document/product/589/35656">引导操作</a>脚本设置。</p>
      */
     public $ScriptBootstrapActionConfig;
 
     /**
-     * @var string 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808
+     * @var string <p>唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808</p>
      */
     public $ClientToken;
 
     /**
-     * @var string 是否开启集群Master节点公网。取值范围：
-<li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li>
-<li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
+     * @var string <p>是否开启集群Master节点公网。取值范围：</p><li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li><li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
      */
     public $NeedMasterWan;
 
     /**
-     * @var boolean 是否开启外网远程登录。（在SecurityGroupId不为空时，该参数无效）不填默认为不开启 取值范围：
-<li>true：表示开启</li>
-<li>false：表示不开启</li>
+     * @var boolean <p>是否开启外网远程登录。（在SecurityGroupId不为空时，该参数无效）不填默认为不开启 取值范围：</p><li>true：表示开启</li><li>false：表示不开启</li>
      */
     public $EnableRemoteLoginFlag;
 
     /**
-     * @var boolean 是否开启Kerberos认证。默认不开启 取值范围：
-<li>true：表示开启</li>
-<li>false：表示不开启</li>
+     * @var boolean <p>是否开启Kerberos认证。默认不开启 取值范围：</p><li>true：表示开启</li><li>false：表示不开启</li>
      */
     public $EnableKerberosFlag;
 
     /**
-     * @var string [自定义软件配置](https://cloud.tencent.com/document/product/589/35655?from_cn_redirect=1)
+     * @var string <p><a href="https://cloud.tencent.com/document/product/589/35655?from_cn_redirect=1">自定义软件配置</a></p>
      */
     public $CustomConf;
 
     /**
-     * @var array 标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。
+     * @var array <p>标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。</p>
      */
     public $Tags;
 
     /**
-     * @var array 分散置放群组ID列表，当前只支持指定一个。
-该参数可以通过调用 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)的返回值中的DisasterRecoverGroupId字段来获取。
+     * @var array <p>分散置放群组ID列表，当前只支持指定一个。<br>该参数可以通过调用 <a href="https://cloud.tencent.com/document/product/213/17810">DescribeDisasterRecoverGroups</a>的返回值中的DisasterRecoverGroupId字段来获取。</p>
      */
     public $DisasterRecoverGroupIds;
 
     /**
-     * @var boolean 是否开启集群维度CBS加密。默认不加密 取值范围：
-<li>true：表示加密</li>
-<li>false：表示不加密</li>
+     * @var boolean <p>是否开启集群维度CBS加密。默认不加密 取值范围：</p><li>true：表示加密</li><li>false：表示不加密</li>
      */
     public $EnableCbsEncryptFlag;
 
     /**
-     * @var CustomMetaDBInfo MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填
-当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId
-当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass
+     * @var CustomMetaDBInfo <p>MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填<br>当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId<br>当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass</p>
      */
     public $MetaDBInfo;
 
     /**
-     * @var array 共享组件信息
+     * @var array <p>共享组件信息</p>
      */
     public $DependService;
 
     /**
-     * @var array 节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
+     * @var array <p>节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。</p>
      */
     public $ZoneResourceConfiguration;
 
     /**
-     * @var string cos桶路径，创建StarRocks存算分离集群时用到
+     * @var string <p>cos桶路径，创建StarRocks存算分离集群时用到</p>
      */
     public $CosBucket;
 
     /**
-     * @var array 节点标识信息，目前只提供给tf平台使用
+     * @var array <p>节点标识信息，目前只提供给tf平台使用</p>
      */
     public $NodeMarks;
 
     /**
-     * @var string clb id
+     * @var string <p>clb id</p>
      */
     public $LoadBalancerId;
 
     /**
-     * @var string 数据库版本：mysql8/tdsql8/mysql5
+     * @var string <p>数据库版本：mysql8/tdsql8/mysql5</p>
      */
     public $DefaultMetaVersion;
 
     /**
-     * @var integer 是否开通数据库审计
+     * @var integer <p>是否开通数据库审计</p>
      */
     public $NeedCdbAudit;
 
     /**
-     * @var string 安全指定来源ip
+     * @var string <p>安全指定来源ip</p>
      */
     public $SgIP;
 
     /**
-     * @param string $ProductVersion EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：[产品版本名称](https://cloud.tencent.com/document/product/589/66338)
-     * @param boolean $EnableSupportHAFlag 是否开启节点高可用。取值范围：
-<li>true：表示开启节点高可用。</li>
-<li>false：表示不开启节点高可用。</li>
-     * @param string $InstanceName 实例名称。
-<li>长度限制为6-36个字符。</li>
-<li>只允许包含中文、字母、数字、-、_。</li>
-     * @param string $InstanceChargeType 实例计费模式。取值范围：
-<li>PREPAID：预付费，即包年包月。</li>
-<li>POSTPAID_BY_HOUR：按小时后付费。</li>
-     * @param LoginSettings $LoginSettings 实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。
-<li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li>
-<li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
-     * @param SceneSoftwareConfig $SceneSoftwareConfig 集群应用场景以及支持部署组件配置
-     * @param InstanceChargePrepaid $InstanceChargePrepaid 即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
-     * @param array $SecurityGroupIds 实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
-     * @param array $ScriptBootstrapActionConfig [引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。
-     * @param string $ClientToken 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808
-     * @param string $NeedMasterWan 是否开启集群Master节点公网。取值范围：
-<li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li>
-<li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
-     * @param boolean $EnableRemoteLoginFlag 是否开启外网远程登录。（在SecurityGroupId不为空时，该参数无效）不填默认为不开启 取值范围：
-<li>true：表示开启</li>
-<li>false：表示不开启</li>
-     * @param boolean $EnableKerberosFlag 是否开启Kerberos认证。默认不开启 取值范围：
-<li>true：表示开启</li>
-<li>false：表示不开启</li>
-     * @param string $CustomConf [自定义软件配置](https://cloud.tencent.com/document/product/589/35655?from_cn_redirect=1)
-     * @param array $Tags 标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。
-     * @param array $DisasterRecoverGroupIds 分散置放群组ID列表，当前只支持指定一个。
-该参数可以通过调用 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)的返回值中的DisasterRecoverGroupId字段来获取。
-     * @param boolean $EnableCbsEncryptFlag 是否开启集群维度CBS加密。默认不加密 取值范围：
-<li>true：表示加密</li>
-<li>false：表示不加密</li>
-     * @param CustomMetaDBInfo $MetaDBInfo MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填
-当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId
-当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass
-     * @param array $DependService 共享组件信息
-     * @param array $ZoneResourceConfiguration 节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
-     * @param string $CosBucket cos桶路径，创建StarRocks存算分离集群时用到
-     * @param array $NodeMarks 节点标识信息，目前只提供给tf平台使用
-     * @param string $LoadBalancerId clb id
-     * @param string $DefaultMetaVersion 数据库版本：mysql8/tdsql8/mysql5
-     * @param integer $NeedCdbAudit 是否开通数据库审计
-     * @param string $SgIP 安全指定来源ip
+     * @var integer <p>分区置放群组分区</p>
+     */
+    public $PartitionNumber;
+
+    /**
+     * @param string $ProductVersion <p>EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：<a href="https://cloud.tencent.com/document/product/589/66338">产品版本名称</a></p>
+     * @param boolean $EnableSupportHAFlag <p>是否开启节点高可用。取值范围：</p><li>true：表示开启节点高可用。</li><li>false：表示不开启节点高可用。</li>
+     * @param string $InstanceName <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li>
+     * @param string $InstanceChargeType <p>实例计费模式。取值范围：</p><li>PREPAID：预付费，即包年包月。</li><li>POSTPAID_BY_HOUR：按小时后付费。</li>
+     * @param LoginSettings $LoginSettings <p>实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。</p><li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li><li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
+     * @param SceneSoftwareConfig $SceneSoftwareConfig <p>集群应用场景以及支持部署组件配置</p>
+     * @param InstanceChargePrepaid $InstanceChargePrepaid <p>即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
+     * @param array $SecurityGroupIds <p>实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的SecurityGroupId字段来获取。</p>
+     * @param array $ScriptBootstrapActionConfig <p><a href="https://cloud.tencent.com/document/product/589/35656">引导操作</a>脚本设置。</p>
+     * @param string $ClientToken <p>唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808</p>
+     * @param string $NeedMasterWan <p>是否开启集群Master节点公网。取值范围：</p><li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li><li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
+     * @param boolean $EnableRemoteLoginFlag <p>是否开启外网远程登录。（在SecurityGroupId不为空时，该参数无效）不填默认为不开启 取值范围：</p><li>true：表示开启</li><li>false：表示不开启</li>
+     * @param boolean $EnableKerberosFlag <p>是否开启Kerberos认证。默认不开启 取值范围：</p><li>true：表示开启</li><li>false：表示不开启</li>
+     * @param string $CustomConf <p><a href="https://cloud.tencent.com/document/product/589/35655?from_cn_redirect=1">自定义软件配置</a></p>
+     * @param array $Tags <p>标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。</p>
+     * @param array $DisasterRecoverGroupIds <p>分散置放群组ID列表，当前只支持指定一个。<br>该参数可以通过调用 <a href="https://cloud.tencent.com/document/product/213/17810">DescribeDisasterRecoverGroups</a>的返回值中的DisasterRecoverGroupId字段来获取。</p>
+     * @param boolean $EnableCbsEncryptFlag <p>是否开启集群维度CBS加密。默认不加密 取值范围：</p><li>true：表示加密</li><li>false：表示不加密</li>
+     * @param CustomMetaDBInfo $MetaDBInfo <p>MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填<br>当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId<br>当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass</p>
+     * @param array $DependService <p>共享组件信息</p>
+     * @param array $ZoneResourceConfiguration <p>节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。</p>
+     * @param string $CosBucket <p>cos桶路径，创建StarRocks存算分离集群时用到</p>
+     * @param array $NodeMarks <p>节点标识信息，目前只提供给tf平台使用</p>
+     * @param string $LoadBalancerId <p>clb id</p>
+     * @param string $DefaultMetaVersion <p>数据库版本：mysql8/tdsql8/mysql5</p>
+     * @param integer $NeedCdbAudit <p>是否开通数据库审计</p>
+     * @param string $SgIP <p>安全指定来源ip</p>
+     * @param integer $PartitionNumber <p>分区置放群组分区</p>
      */
     function __construct()
     {
@@ -453,6 +385,10 @@ class CreateClusterRequest extends AbstractModel
 
         if (array_key_exists("SgIP",$param) and $param["SgIP"] !== null) {
             $this->SgIP = $param["SgIP"];
+        }
+
+        if (array_key_exists("PartitionNumber",$param) and $param["PartitionNumber"] !== null) {
+            $this->PartitionNumber = $param["PartitionNumber"];
         }
     }
 }

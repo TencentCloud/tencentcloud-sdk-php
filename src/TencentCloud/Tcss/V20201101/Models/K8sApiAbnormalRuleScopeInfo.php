@@ -20,98 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * k8s api 异常事件规则配置范围
  *
- * @method string getScope() 获取范围
-系统事件:
-ANONYMOUS_ACCESS: 匿名访问
-ABNORMAL_UA_REQ: 异常UA请求
-ANONYMOUS_ABNORMAL_PERMISSION: 匿名用户权限异动
-GET_CREDENTIALS: 凭据信息获取
-MOUNT_SENSITIVE_PATH: 敏感路径挂载
-COMMAND_RUN: 命令执行
-PRIVILEGE_CONTAINER: 特权容器
-EXCEPTION_CRONTAB_TASK: 异常定时任务
-STATICS_POD: 静态pod创建
-ABNORMAL_CREATE_POD: 异常pod创建
-USER_DEFINED: 用户自定义
- * @method void setScope(string $Scope) 设置范围
-系统事件:
-ANONYMOUS_ACCESS: 匿名访问
-ABNORMAL_UA_REQ: 异常UA请求
-ANONYMOUS_ABNORMAL_PERMISSION: 匿名用户权限异动
-GET_CREDENTIALS: 凭据信息获取
-MOUNT_SENSITIVE_PATH: 敏感路径挂载
-COMMAND_RUN: 命令执行
-PRIVILEGE_CONTAINER: 特权容器
-EXCEPTION_CRONTAB_TASK: 异常定时任务
-STATICS_POD: 静态pod创建
-ABNORMAL_CREATE_POD: 异常pod创建
-USER_DEFINED: 用户自定义
- * @method string getAction() 获取动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行)
- * @method void setAction(string $Action) 设置动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行)
- * @method string getRiskLevel() 获取威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示
- * @method void setRiskLevel(string $RiskLevel) 设置威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示
- * @method boolean getStatus() 获取开关状态(true:开 false:关) 适用于系统规则
- * @method void setStatus(boolean $Status) 设置开关状态(true:开 false:关) 适用于系统规则
- * @method boolean getIsDelete() 获取是否被删除 适用于自定义规则入参
- * @method void setIsDelete(boolean $IsDelete) 设置是否被删除 适用于自定义规则入参
+ * @method string getScope() 获取<p>范围<br>系统事件:<br>ANONYMOUS_ACCESS: 匿名访问<br>ABNORMAL_UA_REQ: 异常UA请求<br>ANONYMOUS_ABNORMAL_PERMISSION: 匿名用户权限异动<br>GET_CREDENTIALS: 凭据信息获取<br>MOUNT_SENSITIVE_PATH: 敏感路径挂载<br>COMMAND_RUN: 命令执行<br>PRIVILEGE_CONTAINER: 特权容器<br>EXCEPTION_CRONTAB_TASK: 异常定时任务<br>STATICS_POD: 静态pod创建<br>ABNORMAL_CREATE_POD: 异常pod创建<br>USER_DEFINED: 用户自定义</p>
+ * @method void setScope(string $Scope) 设置<p>范围<br>系统事件:<br>ANONYMOUS_ACCESS: 匿名访问<br>ABNORMAL_UA_REQ: 异常UA请求<br>ANONYMOUS_ABNORMAL_PERMISSION: 匿名用户权限异动<br>GET_CREDENTIALS: 凭据信息获取<br>MOUNT_SENSITIVE_PATH: 敏感路径挂载<br>COMMAND_RUN: 命令执行<br>PRIVILEGE_CONTAINER: 特权容器<br>EXCEPTION_CRONTAB_TASK: 异常定时任务<br>STATICS_POD: 静态pod创建<br>ABNORMAL_CREATE_POD: 异常pod创建<br>USER_DEFINED: 用户自定义</p>
+ * @method string getAction() 获取<p>动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行)</p>
+ * @method void setAction(string $Action) 设置<p>动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行)</p>
+ * @method string getRiskLevel() 获取<p>威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示</p>
+ * @method void setRiskLevel(string $RiskLevel) 设置<p>威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示</p>
+ * @method boolean getStatus() 获取<p>开关状态(true:开 false:关) 适用于系统规则</p>
+ * @method void setStatus(boolean $Status) 设置<p>开关状态(true:开 false:关) 适用于系统规则</p>
+ * @method boolean getIsDelete() 获取<p>是否被删除 适用于自定义规则入参</p>
+ * @method void setIsDelete(boolean $IsDelete) 设置<p>是否被删除 适用于自定义规则入参</p>
+ * @method string getRuleTypeZH() 获取<p>规则类型对应中文</p>
+ * @method void setRuleTypeZH(string $RuleTypeZH) 设置<p>规则类型对应中文</p>
  */
 class K8sApiAbnormalRuleScopeInfo extends AbstractModel
 {
     /**
-     * @var string 范围
-系统事件:
-ANONYMOUS_ACCESS: 匿名访问
-ABNORMAL_UA_REQ: 异常UA请求
-ANONYMOUS_ABNORMAL_PERMISSION: 匿名用户权限异动
-GET_CREDENTIALS: 凭据信息获取
-MOUNT_SENSITIVE_PATH: 敏感路径挂载
-COMMAND_RUN: 命令执行
-PRIVILEGE_CONTAINER: 特权容器
-EXCEPTION_CRONTAB_TASK: 异常定时任务
-STATICS_POD: 静态pod创建
-ABNORMAL_CREATE_POD: 异常pod创建
-USER_DEFINED: 用户自定义
+     * @var string <p>范围<br>系统事件:<br>ANONYMOUS_ACCESS: 匿名访问<br>ABNORMAL_UA_REQ: 异常UA请求<br>ANONYMOUS_ABNORMAL_PERMISSION: 匿名用户权限异动<br>GET_CREDENTIALS: 凭据信息获取<br>MOUNT_SENSITIVE_PATH: 敏感路径挂载<br>COMMAND_RUN: 命令执行<br>PRIVILEGE_CONTAINER: 特权容器<br>EXCEPTION_CRONTAB_TASK: 异常定时任务<br>STATICS_POD: 静态pod创建<br>ABNORMAL_CREATE_POD: 异常pod创建<br>USER_DEFINED: 用户自定义</p>
      */
     public $Scope;
 
     /**
-     * @var string 动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行)
+     * @var string <p>动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行)</p>
      */
     public $Action;
 
     /**
-     * @var string 威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示
+     * @var string <p>威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示</p>
      */
     public $RiskLevel;
 
     /**
-     * @var boolean 开关状态(true:开 false:关) 适用于系统规则
+     * @var boolean <p>开关状态(true:开 false:关) 适用于系统规则</p>
      */
     public $Status;
 
     /**
-     * @var boolean 是否被删除 适用于自定义规则入参
+     * @var boolean <p>是否被删除 适用于自定义规则入参</p>
      */
     public $IsDelete;
 
     /**
-     * @param string $Scope 范围
-系统事件:
-ANONYMOUS_ACCESS: 匿名访问
-ABNORMAL_UA_REQ: 异常UA请求
-ANONYMOUS_ABNORMAL_PERMISSION: 匿名用户权限异动
-GET_CREDENTIALS: 凭据信息获取
-MOUNT_SENSITIVE_PATH: 敏感路径挂载
-COMMAND_RUN: 命令执行
-PRIVILEGE_CONTAINER: 特权容器
-EXCEPTION_CRONTAB_TASK: 异常定时任务
-STATICS_POD: 静态pod创建
-ABNORMAL_CREATE_POD: 异常pod创建
-USER_DEFINED: 用户自定义
-     * @param string $Action 动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行)
-     * @param string $RiskLevel 威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示
-     * @param boolean $Status 开关状态(true:开 false:关) 适用于系统规则
-     * @param boolean $IsDelete 是否被删除 适用于自定义规则入参
+     * @var string <p>规则类型对应中文</p>
+     */
+    public $RuleTypeZH;
+
+    /**
+     * @param string $Scope <p>范围<br>系统事件:<br>ANONYMOUS_ACCESS: 匿名访问<br>ABNORMAL_UA_REQ: 异常UA请求<br>ANONYMOUS_ABNORMAL_PERMISSION: 匿名用户权限异动<br>GET_CREDENTIALS: 凭据信息获取<br>MOUNT_SENSITIVE_PATH: 敏感路径挂载<br>COMMAND_RUN: 命令执行<br>PRIVILEGE_CONTAINER: 特权容器<br>EXCEPTION_CRONTAB_TASK: 异常定时任务<br>STATICS_POD: 静态pod创建<br>ABNORMAL_CREATE_POD: 异常pod创建<br>USER_DEFINED: 用户自定义</p>
+     * @param string $Action <p>动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行)</p>
+     * @param string $RiskLevel <p>威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示</p>
+     * @param boolean $Status <p>开关状态(true:开 false:关) 适用于系统规则</p>
+     * @param boolean $IsDelete <p>是否被删除 适用于自定义规则入参</p>
+     * @param string $RuleTypeZH <p>规则类型对应中文</p>
      */
     function __construct()
     {
@@ -144,6 +104,10 @@ USER_DEFINED: 用户自定义
 
         if (array_key_exists("IsDelete",$param) and $param["IsDelete"] !== null) {
             $this->IsDelete = $param["IsDelete"];
+        }
+
+        if (array_key_exists("RuleTypeZH",$param) and $param["RuleTypeZH"] !== null) {
+            $this->RuleTypeZH = $param["RuleTypeZH"];
         }
     }
 }

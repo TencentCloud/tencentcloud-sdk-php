@@ -20,36 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddInstances返回参数结构体
  *
- * @method string getTranId() 获取冻结流水，一次开通一个冻结流水。
- * @method void setTranId(string $TranId) 设置冻结流水，一次开通一个冻结流水。
- * @method array getDealNames() 获取后付费订单号。
- * @method void setDealNames(array $DealNames) 设置后付费订单号。
- * @method array getResourceIds() 获取发货资源id列表。
- * @method void setResourceIds(array $ResourceIds) 设置发货资源id列表。
- * @method array getBigDealIds() 获取大订单号
- * @method void setBigDealIds(array $BigDealIds) 设置大订单号
+ * @method string getTranId() 获取<p>冻结流水，一次开通一个冻结流水。</p>
+ * @method void setTranId(string $TranId) 设置<p>冻结流水，一次开通一个冻结流水。</p>
+ * @method array getDealNames() 获取<p>付费的订单号。说明：建议您使用 <a href="https://cloud.tencent.com/document/product/1003/52131">DescribeResourcesByDealName</a> 接口查询订单关联实例。</p>
+ * @method void setDealNames(array $DealNames) 设置<p>付费的订单号。说明：建议您使用 <a href="https://cloud.tencent.com/document/product/1003/52131">DescribeResourcesByDealName</a> 接口查询订单关联实例。</p>
+ * @method array getResourceIds() 获取<p>发货资源id列表。</p>
+ * @method void setResourceIds(array $ResourceIds) 设置<p>发货资源id列表。</p>
+ * @method array getBigDealIds() 获取<p>大订单号</p>
+ * @method void setBigDealIds(array $BigDealIds) 设置<p>大订单号</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class AddInstancesResponse extends AbstractModel
 {
     /**
-     * @var string 冻结流水，一次开通一个冻结流水。
+     * @var string <p>冻结流水，一次开通一个冻结流水。</p>
      */
     public $TranId;
 
     /**
-     * @var array 后付费订单号。
+     * @var array <p>付费的订单号。说明：建议您使用 <a href="https://cloud.tencent.com/document/product/1003/52131">DescribeResourcesByDealName</a> 接口查询订单关联实例。</p>
      */
     public $DealNames;
 
     /**
-     * @var array 发货资源id列表。
+     * @var array <p>发货资源id列表。</p>
+     * @deprecated
      */
     public $ResourceIds;
 
     /**
-     * @var array 大订单号
+     * @var array <p>大订单号</p>
      */
     public $BigDealIds;
 
@@ -59,10 +60,10 @@ class AddInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TranId 冻结流水，一次开通一个冻结流水。
-     * @param array $DealNames 后付费订单号。
-     * @param array $ResourceIds 发货资源id列表。
-     * @param array $BigDealIds 大订单号
+     * @param string $TranId <p>冻结流水，一次开通一个冻结流水。</p>
+     * @param array $DealNames <p>付费的订单号。说明：建议您使用 <a href="https://cloud.tencent.com/document/product/1003/52131">DescribeResourcesByDealName</a> 接口查询订单关联实例。</p>
+     * @param array $ResourceIds <p>发货资源id列表。</p>
+     * @param array $BigDealIds <p>大订单号</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

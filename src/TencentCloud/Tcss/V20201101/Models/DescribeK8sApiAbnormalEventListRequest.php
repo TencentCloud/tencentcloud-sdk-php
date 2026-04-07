@@ -20,90 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeK8sApiAbnormalEventList请求参数结构体
  *
- * @method array getFilters() 获取过滤条件。
-<li>TimeRange - string -是否必填: 否 - 时间范围筛选 ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
-<li>MatchRules - string  - 是否必填: 否 -命中规则筛选</li>
-<li>RiskLevel - string  - 是否必填: 否 -威胁等级筛选</li>
-<li>Status - string  - 是否必填: 否 -事件状态筛选</li>
-<li>MatchRuleType - string  - 是否必填: 否 -命中规则类型筛选</li>
-<li>ClusterRunningStatus - string  - 是否必填: 否 -集群运行状态</li>
-<li>ClusterName - string  - 是否必填: 否 -集群名称</li>
-<li>ClusterID - string  - 是否必填: 否 -集群ID</li>
- * @method void setFilters(array $Filters) 设置过滤条件。
-<li>TimeRange - string -是否必填: 否 - 时间范围筛选 ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
-<li>MatchRules - string  - 是否必填: 否 -命中规则筛选</li>
-<li>RiskLevel - string  - 是否必填: 否 -威胁等级筛选</li>
-<li>Status - string  - 是否必填: 否 -事件状态筛选</li>
-<li>MatchRuleType - string  - 是否必填: 否 -命中规则类型筛选</li>
-<li>ClusterRunningStatus - string  - 是否必填: 否 -集群运行状态</li>
-<li>ClusterName - string  - 是否必填: 否 -集群名称</li>
-<li>ClusterID - string  - 是否必填: 否 -集群ID</li>
- * @method integer getLimit() 获取需要返回的数量，默认为10，最大值为100
- * @method void setLimit(integer $Limit) 设置需要返回的数量，默认为10，最大值为100
- * @method integer getOffset() 获取偏移量，默认为0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method string getOrder() 获取排序方式
- * @method void setOrder(string $Order) 设置排序方式
- * @method string getBy() 获取排序字段
-LatestFoundTime: 最近生成时间
-AlarmCount: 告警数量
- * @method void setBy(string $By) 设置排序字段
-LatestFoundTime: 最近生成时间
-AlarmCount: 告警数量
+ * @method array getFilters() 获取<p>过滤条件。</p><li>TimeRange - string -是否必填: 否 - 时间范围筛选 ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li><li>MatchRules - string  - 是否必填: 否 -命中规则筛选</li><li>RiskLevel - string  - 是否必填: 否 -威胁等级筛选</li><li>Status - string  - 是否必填: 否 -事件状态筛选</li><li>MatchRuleType - string  - 是否必填: 否 -命中规则类型筛选</li><li>ClusterRunningStatus - string  - 是否必填: 否 -集群运行状态</li><li>ClusterName - string  - 是否必填: 否 -集群名称</li><li>ClusterID - string  - 是否必填: 否 -集群ID</li>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件。</p><li>TimeRange - string -是否必填: 否 - 时间范围筛选 ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li><li>MatchRules - string  - 是否必填: 否 -命中规则筛选</li><li>RiskLevel - string  - 是否必填: 否 -威胁等级筛选</li><li>Status - string  - 是否必填: 否 -事件状态筛选</li><li>MatchRuleType - string  - 是否必填: 否 -命中规则类型筛选</li><li>ClusterRunningStatus - string  - 是否必填: 否 -集群运行状态</li><li>ClusterName - string  - 是否必填: 否 -集群名称</li><li>ClusterID - string  - 是否必填: 否 -集群ID</li>
+ * @method integer getLimit() 获取<p>需要返回的数量，默认为10，最大值为100</p>
+ * @method void setLimit(integer $Limit) 设置<p>需要返回的数量，默认为10，最大值为100</p>
+ * @method integer getOffset() 获取<p>偏移量，默认为0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为0。</p>
+ * @method string getOrder() 获取<p>排序方式</p>
+ * @method void setOrder(string $Order) 设置<p>排序方式</p>
+ * @method string getBy() 获取<p>排序字段<br>LatestFoundTime: 最近生成时间<br>AlarmCount: 告警数量</p>
+ * @method void setBy(string $By) 设置<p>排序字段<br>LatestFoundTime: 最近生成时间<br>AlarmCount: 告警数量</p>
  */
 class DescribeK8sApiAbnormalEventListRequest extends AbstractModel
 {
     /**
-     * @var array 过滤条件。
-<li>TimeRange - string -是否必填: 否 - 时间范围筛选 ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
-<li>MatchRules - string  - 是否必填: 否 -命中规则筛选</li>
-<li>RiskLevel - string  - 是否必填: 否 -威胁等级筛选</li>
-<li>Status - string  - 是否必填: 否 -事件状态筛选</li>
-<li>MatchRuleType - string  - 是否必填: 否 -命中规则类型筛选</li>
-<li>ClusterRunningStatus - string  - 是否必填: 否 -集群运行状态</li>
-<li>ClusterName - string  - 是否必填: 否 -集群名称</li>
-<li>ClusterID - string  - 是否必填: 否 -集群ID</li>
+     * @var array <p>过滤条件。</p><li>TimeRange - string -是否必填: 否 - 时间范围筛选 ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li><li>MatchRules - string  - 是否必填: 否 -命中规则筛选</li><li>RiskLevel - string  - 是否必填: 否 -威胁等级筛选</li><li>Status - string  - 是否必填: 否 -事件状态筛选</li><li>MatchRuleType - string  - 是否必填: 否 -命中规则类型筛选</li><li>ClusterRunningStatus - string  - 是否必填: 否 -集群运行状态</li><li>ClusterName - string  - 是否必填: 否 -集群名称</li><li>ClusterID - string  - 是否必填: 否 -集群ID</li>
      */
     public $Filters;
 
     /**
-     * @var integer 需要返回的数量，默认为10，最大值为100
+     * @var integer <p>需要返回的数量，默认为10，最大值为100</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量，默认为0。
+     * @var integer <p>偏移量，默认为0。</p>
      */
     public $Offset;
 
     /**
-     * @var string 排序方式
+     * @var string <p>排序方式</p>
      */
     public $Order;
 
     /**
-     * @var string 排序字段
-LatestFoundTime: 最近生成时间
-AlarmCount: 告警数量
+     * @var string <p>排序字段<br>LatestFoundTime: 最近生成时间<br>AlarmCount: 告警数量</p>
      */
     public $By;
 
     /**
-     * @param array $Filters 过滤条件。
-<li>TimeRange - string -是否必填: 否 - 时间范围筛选 ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
-<li>MatchRules - string  - 是否必填: 否 -命中规则筛选</li>
-<li>RiskLevel - string  - 是否必填: 否 -威胁等级筛选</li>
-<li>Status - string  - 是否必填: 否 -事件状态筛选</li>
-<li>MatchRuleType - string  - 是否必填: 否 -命中规则类型筛选</li>
-<li>ClusterRunningStatus - string  - 是否必填: 否 -集群运行状态</li>
-<li>ClusterName - string  - 是否必填: 否 -集群名称</li>
-<li>ClusterID - string  - 是否必填: 否 -集群ID</li>
-     * @param integer $Limit 需要返回的数量，默认为10，最大值为100
-     * @param integer $Offset 偏移量，默认为0。
-     * @param string $Order 排序方式
-     * @param string $By 排序字段
-LatestFoundTime: 最近生成时间
-AlarmCount: 告警数量
+     * @param array $Filters <p>过滤条件。</p><li>TimeRange - string -是否必填: 否 - 时间范围筛选 ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li><li>MatchRules - string  - 是否必填: 否 -命中规则筛选</li><li>RiskLevel - string  - 是否必填: 否 -威胁等级筛选</li><li>Status - string  - 是否必填: 否 -事件状态筛选</li><li>MatchRuleType - string  - 是否必填: 否 -命中规则类型筛选</li><li>ClusterRunningStatus - string  - 是否必填: 否 -集群运行状态</li><li>ClusterName - string  - 是否必填: 否 -集群名称</li><li>ClusterID - string  - 是否必填: 否 -集群ID</li>
+     * @param integer $Limit <p>需要返回的数量，默认为10，最大值为100</p>
+     * @param integer $Offset <p>偏移量，默认为0。</p>
+     * @param string $Order <p>排序方式</p>
+     * @param string $By <p>排序字段<br>LatestFoundTime: 最近生成时间<br>AlarmCount: 告警数量</p>
      */
     function __construct()
     {

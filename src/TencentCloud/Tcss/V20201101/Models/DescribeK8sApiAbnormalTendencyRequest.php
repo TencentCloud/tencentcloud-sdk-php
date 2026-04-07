@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeK8sApiAbnormalTendency请求参数结构体
  *
- * @method integer getTendencyPeriod() 获取趋势周期(默认为7天)
- * @method void setTendencyPeriod(integer $TendencyPeriod) 设置趋势周期(默认为7天)
+ * @method integer getTendencyPeriod() 获取<p>趋势周期(默认为7天)</p>
+ * @method void setTendencyPeriod(integer $TendencyPeriod) 设置<p>趋势周期(默认为7天)</p>
  */
 class DescribeK8sApiAbnormalTendencyRequest extends AbstractModel
 {
     /**
-     * @var integer 趋势周期(默认为7天)
+     * @var integer <p>趋势周期(默认为7天)</p>
      */
     public $TendencyPeriod;
 
     /**
-     * @param integer $TendencyPeriod 趋势周期(默认为7天)
+     * @param integer $TendencyPeriod <p>趋势周期(默认为7天)</p>
      */
     function __construct()
     {

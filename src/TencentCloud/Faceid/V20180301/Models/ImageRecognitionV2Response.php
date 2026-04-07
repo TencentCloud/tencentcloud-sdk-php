@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ImageRecognitionV2返回参数结构体
  *
- * @method float getSim() 获取<p>相似度。- 取值范围 [0.00, 100.00]。- 推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为万分之一）</p>
- * @method void setSim(float $Sim) 设置<p>相似度。- 取值范围 [0.00, 100.00]。- 推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为万分之一）</p>
+ * @method float getSim() 获取<p>相似度。- 取值范围 [0.00, 100.00]。- 推荐相似度大于等于70时可判断为同一人（采用固定阈值70，误通过率为万分之一，不支持调整阈值）</p>
+ * @method void setSim(float $Sim) 设置<p>相似度。- 取值范围 [0.00, 100.00]。- 推荐相似度大于等于70时可判断为同一人（采用固定阈值70，误通过率为万分之一，不支持调整阈值）</p>
  * @method string getResult() 获取<p>业务错误码。</p><ul><li>成功情况返回Success。</li><li>错误情况请参考下方错误码 列表中FailedOperation部分</li></ul>
  * @method void setResult(string $Result) 设置<p>业务错误码。</p><ul><li>成功情况返回Success。</li><li>错误情况请参考下方错误码 列表中FailedOperation部分</li></ul>
  * @method string getDescription() 获取<p>业务结果描述。</p>
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class ImageRecognitionV2Response extends AbstractModel
 {
     /**
-     * @var float <p>相似度。- 取值范围 [0.00, 100.00]。- 推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为万分之一）</p>
+     * @var float <p>相似度。- 取值范围 [0.00, 100.00]。- 推荐相似度大于等于70时可判断为同一人（采用固定阈值70，误通过率为万分之一，不支持调整阈值）</p>
      */
     public $Sim;
 
@@ -59,7 +59,7 @@ class ImageRecognitionV2Response extends AbstractModel
     public $RequestId;
 
     /**
-     * @param float $Sim <p>相似度。- 取值范围 [0.00, 100.00]。- 推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为万分之一）</p>
+     * @param float $Sim <p>相似度。- 取值范围 [0.00, 100.00]。- 推荐相似度大于等于70时可判断为同一人（采用固定阈值70，误通过率为万分之一，不支持调整阈值）</p>
      * @param string $Result <p>业务错误码。</p><ul><li>成功情况返回Success。</li><li>错误情况请参考下方错误码 列表中FailedOperation部分</li></ul>
      * @param string $Description <p>业务结果描述。</p>
      * @param string $Extra <p>调用接口中自定义的描述字段。</p>

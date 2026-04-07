@@ -20,262 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 资源详情
  *
- * @method string getSpec() 获取节点规格描述，如CVM.SA2。
- * @method void setSpec(string $Spec) 设置节点规格描述，如CVM.SA2。
- * @method integer getStorageType() 获取取值范围:
-"LOCAL_SSD"   3     //本地SSD 
-"CLOUD_SSD"   4     //云SSD 
-"CLOUD_PREMIUM"  5  //高效云盘
-"CLOUD_HSSD"   6    //增强型SSD云硬盘 
-"CLOUD_THROUGHPUT" 11//吞吐型云硬盘 
-"CLOUD_TSSD"  12     //极速型SSD云硬盘 
-"CLOUD_BSSD"    13   //通用型SSD云硬盘 
-"CLOUD_BIGDATA" 14   //大数据型云硬盘
-"CLOUD_HIGHIO"  15   //高IO型云硬盘 
-
-该类型字段为无效字段，实际系统盘类型会根据数据盘类型和节点类型判断，如果节点支持所选的数据盘类型，系统盘类型会跟数据盘保持一致，建议使用CreateCluster接口
- * @method void setStorageType(integer $StorageType) 设置取值范围:
-"LOCAL_SSD"   3     //本地SSD 
-"CLOUD_SSD"   4     //云SSD 
-"CLOUD_PREMIUM"  5  //高效云盘
-"CLOUD_HSSD"   6    //增强型SSD云硬盘 
-"CLOUD_THROUGHPUT" 11//吞吐型云硬盘 
-"CLOUD_TSSD"  12     //极速型SSD云硬盘 
-"CLOUD_BSSD"    13   //通用型SSD云硬盘 
-"CLOUD_BIGDATA" 14   //大数据型云硬盘
-"CLOUD_HIGHIO"  15   //高IO型云硬盘 
-
-该类型字段为无效字段，实际系统盘类型会根据数据盘类型和节点类型判断，如果节点支持所选的数据盘类型，系统盘类型会跟数据盘保持一致，建议使用CreateCluster接口
- * @method string getDiskType() 获取数据盘类型 取值范围：
-
-CLOUD_SSD：表示云SSD。
-
-CLOUD_PREMIUM：表示高效云盘。
-
-CLOUD_BASIC：表示云硬盘。
-
-LOCAL_BASIC：表示本地盘。
-
-LOCAL_SSD：表示本地SSD。
-
-CLOUD_HSSD：表示增强型SSD云硬盘。
-
-CLOUD_THROUGHPUT：表示吞吐型云硬盘。
-
-CLOUD_TSSD：表示极速型SSD云硬盘。
-
-CLOUD_BIGDATA：表示大数据型云硬盘。
-
-CLOUD_HIGHIO：表示高IO型云硬盘。
-
-CLOUD_BSSD：表示通用型SSD云硬盘。
-
-REMOTE_SSD：表示远端SSD盘。
- * @method void setDiskType(string $DiskType) 设置数据盘类型 取值范围：
-
-CLOUD_SSD：表示云SSD。
-
-CLOUD_PREMIUM：表示高效云盘。
-
-CLOUD_BASIC：表示云硬盘。
-
-LOCAL_BASIC：表示本地盘。
-
-LOCAL_SSD：表示本地SSD。
-
-CLOUD_HSSD：表示增强型SSD云硬盘。
-
-CLOUD_THROUGHPUT：表示吞吐型云硬盘。
-
-CLOUD_TSSD：表示极速型SSD云硬盘。
-
-CLOUD_BIGDATA：表示大数据型云硬盘。
-
-CLOUD_HIGHIO：表示高IO型云硬盘。
-
-CLOUD_BSSD：表示通用型SSD云硬盘。
-
-REMOTE_SSD：表示远端SSD盘。
- * @method integer getMemSize() 获取内存容量,单位为M
- * @method void setMemSize(integer $MemSize) 设置内存容量,单位为M
- * @method integer getCpu() 获取CPU核数
- * @method void setCpu(integer $Cpu) 设置CPU核数
- * @method integer getDiskSize() 获取数据盘容量
- * @method void setDiskSize(integer $DiskSize) 设置数据盘容量
- * @method integer getRootSize() 获取系统盘容量
- * @method void setRootSize(integer $RootSize) 设置系统盘容量
- * @method array getMultiDisks() 获取云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks
+ * @method string getSpec() 获取<p>节点规格描述，如CVM.SA2。</p>
+ * @method void setSpec(string $Spec) 设置<p>节点规格描述，如CVM.SA2。</p>
+ * @method integer getStorageType() 获取<p>取值范围:<br>&quot;LOCAL_SSD&quot;   3     //本地SSD<br>&quot;CLOUD_SSD&quot;   4     //云SSD<br>&quot;CLOUD_PREMIUM&quot;  5  //高效云盘<br>&quot;CLOUD_HSSD&quot;   6    //增强型SSD云硬盘<br>&quot;CLOUD_THROUGHPUT&quot; 11//吞吐型云硬盘<br>&quot;CLOUD_TSSD&quot;  12     //极速型SSD云硬盘<br>&quot;CLOUD_BSSD&quot;    13   //通用型SSD云硬盘<br>&quot;CLOUD_BIGDATA&quot; 14   //大数据型云硬盘<br>&quot;CLOUD_HIGHIO&quot;  15   //高IO型云硬盘 </p><p>该类型字段为无效字段，实际系统盘类型会根据数据盘类型和节点类型判断，如果节点支持所选的数据盘类型，系统盘类型会跟数据盘保持一致，建议使用CreateCluster接口</p>
+ * @method void setStorageType(integer $StorageType) 设置<p>取值范围:<br>&quot;LOCAL_SSD&quot;   3     //本地SSD<br>&quot;CLOUD_SSD&quot;   4     //云SSD<br>&quot;CLOUD_PREMIUM&quot;  5  //高效云盘<br>&quot;CLOUD_HSSD&quot;   6    //增强型SSD云硬盘<br>&quot;CLOUD_THROUGHPUT&quot; 11//吞吐型云硬盘<br>&quot;CLOUD_TSSD&quot;  12     //极速型SSD云硬盘<br>&quot;CLOUD_BSSD&quot;    13   //通用型SSD云硬盘<br>&quot;CLOUD_BIGDATA&quot; 14   //大数据型云硬盘<br>&quot;CLOUD_HIGHIO&quot;  15   //高IO型云硬盘 </p><p>该类型字段为无效字段，实际系统盘类型会根据数据盘类型和节点类型判断，如果节点支持所选的数据盘类型，系统盘类型会跟数据盘保持一致，建议使用CreateCluster接口</p>
+ * @method string getDiskType() 获取<p>数据盘类型 取值范围：</p><p>CLOUD_SSD：表示云SSD。</p><p>CLOUD_PREMIUM：表示高效云盘。</p><p>CLOUD_BASIC：表示云硬盘。</p><p>LOCAL_BASIC：表示本地盘。</p><p>LOCAL_SSD：表示本地SSD。</p><p>CLOUD_HSSD：表示增强型SSD云硬盘。</p><p>CLOUD_THROUGHPUT：表示吞吐型云硬盘。</p><p>CLOUD_TSSD：表示极速型SSD云硬盘。</p><p>CLOUD_BIGDATA：表示大数据型云硬盘。</p><p>CLOUD_HIGHIO：表示高IO型云硬盘。</p><p>CLOUD_BSSD：表示通用型SSD云硬盘。</p><p>REMOTE_SSD：表示远端SSD盘。</p>
+ * @method void setDiskType(string $DiskType) 设置<p>数据盘类型 取值范围：</p><p>CLOUD_SSD：表示云SSD。</p><p>CLOUD_PREMIUM：表示高效云盘。</p><p>CLOUD_BASIC：表示云硬盘。</p><p>LOCAL_BASIC：表示本地盘。</p><p>LOCAL_SSD：表示本地SSD。</p><p>CLOUD_HSSD：表示增强型SSD云硬盘。</p><p>CLOUD_THROUGHPUT：表示吞吐型云硬盘。</p><p>CLOUD_TSSD：表示极速型SSD云硬盘。</p><p>CLOUD_BIGDATA：表示大数据型云硬盘。</p><p>CLOUD_HIGHIO：表示高IO型云硬盘。</p><p>CLOUD_BSSD：表示通用型SSD云硬盘。</p><p>REMOTE_SSD：表示远端SSD盘。</p>
+ * @method integer getMemSize() 获取<p>内存容量,单位为M</p>
+ * @method void setMemSize(integer $MemSize) 设置<p>内存容量,单位为M</p>
+ * @method integer getCpu() 获取<p>CPU核数</p>
+ * @method void setCpu(integer $Cpu) 设置<p>CPU核数</p>
+ * @method integer getDiskSize() 获取<p>数据盘容量</p>
+ * @method void setDiskSize(integer $DiskSize) 设置<p>数据盘容量</p>
+ * @method integer getRootSize() 获取<p>系统盘容量</p>
+ * @method void setRootSize(integer $RootSize) 设置<p>系统盘容量</p>
+ * @method array getMultiDisks() 获取<p>云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMultiDisks(array $MultiDisks) 设置云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks
+ * @method void setMultiDisks(array $MultiDisks) 设置<p>云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTags() 获取需要绑定的标签列表
+ * @method array getTags() 获取<p>需要绑定的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTags(array $Tags) 设置需要绑定的标签列表
+ * @method void setTags(array $Tags) 设置<p>需要绑定的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceType() 获取规格类型，如S2.MEDIUM8
- * @method void setInstanceType(string $InstanceType) 设置规格类型，如S2.MEDIUM8
- * @method integer getLocalDiskNum() 获取本地盘数量，该字段已废弃
- * @method void setLocalDiskNum(integer $LocalDiskNum) 设置本地盘数量，该字段已废弃
- * @method integer getDiskNum() 获取本地盘数量，如2
- * @method void setDiskNum(integer $DiskNum) 设置本地盘数量，如2
- * @method string getGpuDesc() 获取GPU信息
- * @method void setGpuDesc(string $GpuDesc) 设置GPU信息
+ * @method string getInstanceType() 获取<p>规格类型，如S2.MEDIUM8</p>
+ * @method void setInstanceType(string $InstanceType) 设置<p>规格类型，如S2.MEDIUM8</p>
+ * @method integer getLocalDiskNum() 获取<p>本地盘数量，该字段已废弃</p>
+ * @method void setLocalDiskNum(integer $LocalDiskNum) 设置<p>本地盘数量，该字段已废弃</p>
+ * @method integer getDiskNum() 获取<p>本地盘数量，如2</p>
+ * @method void setDiskNum(integer $DiskNum) 设置<p>本地盘数量，如2</p>
+ * @method string getGpuDesc() 获取<p>GPU信息</p>
+ * @method void setGpuDesc(string $GpuDesc) 设置<p>GPU信息</p>
+ * @method integer getPartitionNumber() 获取<p>分区置放群组分区数</p>
+ * @method void setPartitionNumber(integer $PartitionNumber) 设置<p>分区置放群组分区数</p>
  */
 class Resource extends AbstractModel
 {
     /**
-     * @var string 节点规格描述，如CVM.SA2。
+     * @var string <p>节点规格描述，如CVM.SA2。</p>
      */
     public $Spec;
 
     /**
-     * @var integer 取值范围:
-"LOCAL_SSD"   3     //本地SSD 
-"CLOUD_SSD"   4     //云SSD 
-"CLOUD_PREMIUM"  5  //高效云盘
-"CLOUD_HSSD"   6    //增强型SSD云硬盘 
-"CLOUD_THROUGHPUT" 11//吞吐型云硬盘 
-"CLOUD_TSSD"  12     //极速型SSD云硬盘 
-"CLOUD_BSSD"    13   //通用型SSD云硬盘 
-"CLOUD_BIGDATA" 14   //大数据型云硬盘
-"CLOUD_HIGHIO"  15   //高IO型云硬盘 
-
-该类型字段为无效字段，实际系统盘类型会根据数据盘类型和节点类型判断，如果节点支持所选的数据盘类型，系统盘类型会跟数据盘保持一致，建议使用CreateCluster接口
+     * @var integer <p>取值范围:<br>&quot;LOCAL_SSD&quot;   3     //本地SSD<br>&quot;CLOUD_SSD&quot;   4     //云SSD<br>&quot;CLOUD_PREMIUM&quot;  5  //高效云盘<br>&quot;CLOUD_HSSD&quot;   6    //增强型SSD云硬盘<br>&quot;CLOUD_THROUGHPUT&quot; 11//吞吐型云硬盘<br>&quot;CLOUD_TSSD&quot;  12     //极速型SSD云硬盘<br>&quot;CLOUD_BSSD&quot;    13   //通用型SSD云硬盘<br>&quot;CLOUD_BIGDATA&quot; 14   //大数据型云硬盘<br>&quot;CLOUD_HIGHIO&quot;  15   //高IO型云硬盘 </p><p>该类型字段为无效字段，实际系统盘类型会根据数据盘类型和节点类型判断，如果节点支持所选的数据盘类型，系统盘类型会跟数据盘保持一致，建议使用CreateCluster接口</p>
      */
     public $StorageType;
 
     /**
-     * @var string 数据盘类型 取值范围：
-
-CLOUD_SSD：表示云SSD。
-
-CLOUD_PREMIUM：表示高效云盘。
-
-CLOUD_BASIC：表示云硬盘。
-
-LOCAL_BASIC：表示本地盘。
-
-LOCAL_SSD：表示本地SSD。
-
-CLOUD_HSSD：表示增强型SSD云硬盘。
-
-CLOUD_THROUGHPUT：表示吞吐型云硬盘。
-
-CLOUD_TSSD：表示极速型SSD云硬盘。
-
-CLOUD_BIGDATA：表示大数据型云硬盘。
-
-CLOUD_HIGHIO：表示高IO型云硬盘。
-
-CLOUD_BSSD：表示通用型SSD云硬盘。
-
-REMOTE_SSD：表示远端SSD盘。
+     * @var string <p>数据盘类型 取值范围：</p><p>CLOUD_SSD：表示云SSD。</p><p>CLOUD_PREMIUM：表示高效云盘。</p><p>CLOUD_BASIC：表示云硬盘。</p><p>LOCAL_BASIC：表示本地盘。</p><p>LOCAL_SSD：表示本地SSD。</p><p>CLOUD_HSSD：表示增强型SSD云硬盘。</p><p>CLOUD_THROUGHPUT：表示吞吐型云硬盘。</p><p>CLOUD_TSSD：表示极速型SSD云硬盘。</p><p>CLOUD_BIGDATA：表示大数据型云硬盘。</p><p>CLOUD_HIGHIO：表示高IO型云硬盘。</p><p>CLOUD_BSSD：表示通用型SSD云硬盘。</p><p>REMOTE_SSD：表示远端SSD盘。</p>
      */
     public $DiskType;
 
     /**
-     * @var integer 内存容量,单位为M
+     * @var integer <p>内存容量,单位为M</p>
      */
     public $MemSize;
 
     /**
-     * @var integer CPU核数
+     * @var integer <p>CPU核数</p>
      */
     public $Cpu;
 
     /**
-     * @var integer 数据盘容量
+     * @var integer <p>数据盘容量</p>
      */
     public $DiskSize;
 
     /**
-     * @var integer 系统盘容量
+     * @var integer <p>系统盘容量</p>
      */
     public $RootSize;
 
     /**
-     * @var array 云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks
+     * @var array <p>云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MultiDisks;
 
     /**
-     * @var array 需要绑定的标签列表
+     * @var array <p>需要绑定的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
-     * @var string 规格类型，如S2.MEDIUM8
+     * @var string <p>规格类型，如S2.MEDIUM8</p>
      */
     public $InstanceType;
 
     /**
-     * @var integer 本地盘数量，该字段已废弃
+     * @var integer <p>本地盘数量，该字段已废弃</p>
      */
     public $LocalDiskNum;
 
     /**
-     * @var integer 本地盘数量，如2
+     * @var integer <p>本地盘数量，如2</p>
      */
     public $DiskNum;
 
     /**
-     * @var string GPU信息
+     * @var string <p>GPU信息</p>
      */
     public $GpuDesc;
 
     /**
-     * @param string $Spec 节点规格描述，如CVM.SA2。
-     * @param integer $StorageType 取值范围:
-"LOCAL_SSD"   3     //本地SSD 
-"CLOUD_SSD"   4     //云SSD 
-"CLOUD_PREMIUM"  5  //高效云盘
-"CLOUD_HSSD"   6    //增强型SSD云硬盘 
-"CLOUD_THROUGHPUT" 11//吞吐型云硬盘 
-"CLOUD_TSSD"  12     //极速型SSD云硬盘 
-"CLOUD_BSSD"    13   //通用型SSD云硬盘 
-"CLOUD_BIGDATA" 14   //大数据型云硬盘
-"CLOUD_HIGHIO"  15   //高IO型云硬盘 
+     * @var integer <p>分区置放群组分区数</p>
+     */
+    public $PartitionNumber;
 
-该类型字段为无效字段，实际系统盘类型会根据数据盘类型和节点类型判断，如果节点支持所选的数据盘类型，系统盘类型会跟数据盘保持一致，建议使用CreateCluster接口
-     * @param string $DiskType 数据盘类型 取值范围：
-
-CLOUD_SSD：表示云SSD。
-
-CLOUD_PREMIUM：表示高效云盘。
-
-CLOUD_BASIC：表示云硬盘。
-
-LOCAL_BASIC：表示本地盘。
-
-LOCAL_SSD：表示本地SSD。
-
-CLOUD_HSSD：表示增强型SSD云硬盘。
-
-CLOUD_THROUGHPUT：表示吞吐型云硬盘。
-
-CLOUD_TSSD：表示极速型SSD云硬盘。
-
-CLOUD_BIGDATA：表示大数据型云硬盘。
-
-CLOUD_HIGHIO：表示高IO型云硬盘。
-
-CLOUD_BSSD：表示通用型SSD云硬盘。
-
-REMOTE_SSD：表示远端SSD盘。
-     * @param integer $MemSize 内存容量,单位为M
-     * @param integer $Cpu CPU核数
-     * @param integer $DiskSize 数据盘容量
-     * @param integer $RootSize 系统盘容量
-     * @param array $MultiDisks 云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks
+    /**
+     * @param string $Spec <p>节点规格描述，如CVM.SA2。</p>
+     * @param integer $StorageType <p>取值范围:<br>&quot;LOCAL_SSD&quot;   3     //本地SSD<br>&quot;CLOUD_SSD&quot;   4     //云SSD<br>&quot;CLOUD_PREMIUM&quot;  5  //高效云盘<br>&quot;CLOUD_HSSD&quot;   6    //增强型SSD云硬盘<br>&quot;CLOUD_THROUGHPUT&quot; 11//吞吐型云硬盘<br>&quot;CLOUD_TSSD&quot;  12     //极速型SSD云硬盘<br>&quot;CLOUD_BSSD&quot;    13   //通用型SSD云硬盘<br>&quot;CLOUD_BIGDATA&quot; 14   //大数据型云硬盘<br>&quot;CLOUD_HIGHIO&quot;  15   //高IO型云硬盘 </p><p>该类型字段为无效字段，实际系统盘类型会根据数据盘类型和节点类型判断，如果节点支持所选的数据盘类型，系统盘类型会跟数据盘保持一致，建议使用CreateCluster接口</p>
+     * @param string $DiskType <p>数据盘类型 取值范围：</p><p>CLOUD_SSD：表示云SSD。</p><p>CLOUD_PREMIUM：表示高效云盘。</p><p>CLOUD_BASIC：表示云硬盘。</p><p>LOCAL_BASIC：表示本地盘。</p><p>LOCAL_SSD：表示本地SSD。</p><p>CLOUD_HSSD：表示增强型SSD云硬盘。</p><p>CLOUD_THROUGHPUT：表示吞吐型云硬盘。</p><p>CLOUD_TSSD：表示极速型SSD云硬盘。</p><p>CLOUD_BIGDATA：表示大数据型云硬盘。</p><p>CLOUD_HIGHIO：表示高IO型云硬盘。</p><p>CLOUD_BSSD：表示通用型SSD云硬盘。</p><p>REMOTE_SSD：表示远端SSD盘。</p>
+     * @param integer $MemSize <p>内存容量,单位为M</p>
+     * @param integer $Cpu <p>CPU核数</p>
+     * @param integer $DiskSize <p>数据盘容量</p>
+     * @param integer $RootSize <p>系统盘容量</p>
+     * @param array $MultiDisks <p>云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Tags 需要绑定的标签列表
+     * @param array $Tags <p>需要绑定的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceType 规格类型，如S2.MEDIUM8
-     * @param integer $LocalDiskNum 本地盘数量，该字段已废弃
-     * @param integer $DiskNum 本地盘数量，如2
-     * @param string $GpuDesc GPU信息
+     * @param string $InstanceType <p>规格类型，如S2.MEDIUM8</p>
+     * @param integer $LocalDiskNum <p>本地盘数量，该字段已废弃</p>
+     * @param integer $DiskNum <p>本地盘数量，如2</p>
+     * @param string $GpuDesc <p>GPU信息</p>
+     * @param integer $PartitionNumber <p>分区置放群组分区数</p>
      */
     function __construct()
     {
@@ -350,6 +218,10 @@ REMOTE_SSD：表示远端SSD盘。
 
         if (array_key_exists("GpuDesc",$param) and $param["GpuDesc"] !== null) {
             $this->GpuDesc = $param["GpuDesc"];
+        }
+
+        if (array_key_exists("PartitionNumber",$param) and $param["PartitionNumber"] !== null) {
+            $this->PartitionNumber = $param["PartitionNumber"];
         }
     }
 }

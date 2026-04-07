@@ -20,210 +20,194 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ScaleOutCluster请求参数结构体
  *
- * @method string getInstanceChargeType() 获取节点计费模式。取值范围：
-<li>PREPAID：预付费，即包年包月。</li>
-<li>POSTPAID_BY_HOUR：按小时后付费。</li>
-<li>SPOTPAID：竞价付费（仅支持TASK节点）。</li>
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置节点计费模式。取值范围：
-<li>PREPAID：预付费，即包年包月。</li>
-<li>POSTPAID_BY_HOUR：按小时后付费。</li>
-<li>SPOTPAID：竞价付费（仅支持TASK节点）。</li>
- * @method string getInstanceId() 获取集群实例ID。
- * @method void setInstanceId(string $InstanceId) 设置集群实例ID。
- * @method ScaleOutNodeConfig getScaleOutNodeConfig() 获取扩容节点类型以及数量
- * @method void setScaleOutNodeConfig(ScaleOutNodeConfig $ScaleOutNodeConfig) 设置扩容节点类型以及数量
- * @method string getClientToken() 获取唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-****-****-****-fae36063280
- * @method void setClientToken(string $ClientToken) 设置唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-****-****-****-fae36063280
- * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
- * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
- * @method array getScriptBootstrapActionConfig() 获取[引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。
- * @method void setScriptBootstrapActionConfig(array $ScriptBootstrapActionConfig) 设置[引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。
- * @method array getSoftDeployInfo() 获取扩容部署服务，新增节点将默认继承当前节点类型中所部署服务，部署服务含默认可选服务，该参数仅支持可选服务填写，如：存量task节点已部署HDFS、YARN、impala；使用api扩容task节不部署impala时，部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)。
- * @method void setSoftDeployInfo(array $SoftDeployInfo) 设置扩容部署服务，新增节点将默认继承当前节点类型中所部署服务，部署服务含默认可选服务，该参数仅支持可选服务填写，如：存量task节点已部署HDFS、YARN、impala；使用api扩容task节不部署impala时，部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)。
- * @method array getServiceNodeInfo() 获取部署进程，默认部署扩容服务的全部进程，支持修改部署进程，如：当前task节点部署服务为：HDFS、YARN、impala，默认部署服务为：DataNode,NodeManager,ImpalaServer，若用户需修改部署进程信息，部署进程：	DataNode,NodeManager,ImpalaServerCoordinator或DataNode,NodeManager,ImpalaServerExecutor。[进程名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)。
- * @method void setServiceNodeInfo(array $ServiceNodeInfo) 设置部署进程，默认部署扩容服务的全部进程，支持修改部署进程，如：当前task节点部署服务为：HDFS、YARN、impala，默认部署服务为：DataNode,NodeManager,ImpalaServer，若用户需修改部署进程信息，部署进程：	DataNode,NodeManager,ImpalaServerCoordinator或DataNode,NodeManager,ImpalaServerExecutor。[进程名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)。
- * @method array getDisasterRecoverGroupIds() 获取分散置放群组ID列表，当前只支持指定一个。
-该参数可以通过调用 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)的返回值中的DisasterRecoverGroupId字段来获取。
- * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) 设置分散置放群组ID列表，当前只支持指定一个。
-该参数可以通过调用 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)的返回值中的DisasterRecoverGroupId字段来获取。
- * @method array getTags() 获取扩容节点绑定标签列表。
- * @method void setTags(array $Tags) 设置扩容节点绑定标签列表。
- * @method string getHardwareSourceType() 获取扩容所选资源类型，可选范围为"HOST","POD","MNode"，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型
- * @method void setHardwareSourceType(string $HardwareSourceType) 设置扩容所选资源类型，可选范围为"HOST","POD","MNode"，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型
- * @method PodSpecInfo getPodSpecInfo() 获取Pod相关资源信息
- * @method void setPodSpecInfo(PodSpecInfo $PodSpecInfo) 设置Pod相关资源信息
- * @method string getClickHouseClusterName() 获取使用clickhouse集群扩容时，选择的机器分组名称
- * @method void setClickHouseClusterName(string $ClickHouseClusterName) 设置使用clickhouse集群扩容时，选择的机器分组名称
- * @method string getClickHouseClusterType() 获取使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
- * @method void setClickHouseClusterType(string $ClickHouseClusterType) 设置使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
- * @method string getYarnNodeLabel() 获取扩容指定 Yarn Node Label
- * @method void setYarnNodeLabel(string $YarnNodeLabel) 设置扩容指定 Yarn Node Label
- * @method boolean getEnableStartServiceFlag() 获取扩容后是否启动服务，默认取值否
-<li>true：是</li>
-<li>false：否</li>
- * @method void setEnableStartServiceFlag(boolean $EnableStartServiceFlag) 设置扩容后是否启动服务，默认取值否
-<li>true：是</li>
-<li>false：否</li>
- * @method NodeResourceSpec getResourceSpec() 获取规格设置
- * @method void setResourceSpec(NodeResourceSpec $ResourceSpec) 设置规格设置
- * @method string getZone() 获取实例所属的可用区，例如ap-guangzhou-1。该参数也可以通过调用[DescribeZones](https://cloud.tencent.com/document/product/213/15707) 的返回值中的Zone字段来获取。
- * @method void setZone(string $Zone) 设置实例所属的可用区，例如ap-guangzhou-1。该参数也可以通过调用[DescribeZones](https://cloud.tencent.com/document/product/213/15707) 的返回值中的Zone字段来获取。
- * @method string getSubnetId() 获取子网，默认是集群创建时的子网
- * @method void setSubnetId(string $SubnetId) 设置子网，默认是集群创建时的子网
- * @method array getScaleOutServiceConfGroupsInfo() 获取扩容指定配置组
- * @method void setScaleOutServiceConfGroupsInfo(array $ScaleOutServiceConfGroupsInfo) 设置扩容指定配置组
- * @method NodeMark getNodeMarks() 获取节点标记信息，当前只提供给tf平台使用
- * @method void setNodeMarks(NodeMark $NodeMarks) 设置节点标记信息，当前只提供给tf平台使用
- * @method string getWarehouseName() 获取扩容指定计算组名称
- * @method void setWarehouseName(string $WarehouseName) 设置扩容指定计算组名称
+ * @method string getInstanceChargeType() 获取<p>节点计费模式。取值范围：</p><li>PREPAID：预付费，即包年包月。</li><li>POSTPAID_BY_HOUR：按小时后付费。</li><li>SPOTPAID：竞价付费（仅支持TASK节点）。</li>
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置<p>节点计费模式。取值范围：</p><li>PREPAID：预付费，即包年包月。</li><li>POSTPAID_BY_HOUR：按小时后付费。</li><li>SPOTPAID：竞价付费（仅支持TASK节点）。</li>
+ * @method string getInstanceId() 获取<p>集群实例ID。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>集群实例ID。</p>
+ * @method ScaleOutNodeConfig getScaleOutNodeConfig() 获取<p>扩容节点类型以及数量</p>
+ * @method void setScaleOutNodeConfig(ScaleOutNodeConfig $ScaleOutNodeConfig) 设置<p>扩容节点类型以及数量</p>
+ * @method string getClientToken() 获取<p>唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280</p>
+ * @method void setClientToken(string $ClientToken) 设置<p>唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280</p>
+ * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取<p>即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
+ * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置<p>即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
+ * @method array getScriptBootstrapActionConfig() 获取<p><a href="https://cloud.tencent.com/document/product/589/35656">引导操作</a>脚本设置。</p>
+ * @method void setScriptBootstrapActionConfig(array $ScriptBootstrapActionConfig) 设置<p><a href="https://cloud.tencent.com/document/product/589/35656">引导操作</a>脚本设置。</p>
+ * @method array getSoftDeployInfo() 获取<p>扩容部署服务，新增节点将默认继承当前节点类型中所部署服务，部署服务含默认可选服务，该参数仅支持可选服务填写，如：存量task节点已部署HDFS、YARN、impala；使用api扩容task节不部署impala时，部署服务仅填写HDFS、YARN。<a href="https://cloud.tencent.com/document/product/589/98760">组件名对应的映射关系表</a>。</p>
+ * @method void setSoftDeployInfo(array $SoftDeployInfo) 设置<p>扩容部署服务，新增节点将默认继承当前节点类型中所部署服务，部署服务含默认可选服务，该参数仅支持可选服务填写，如：存量task节点已部署HDFS、YARN、impala；使用api扩容task节不部署impala时，部署服务仅填写HDFS、YARN。<a href="https://cloud.tencent.com/document/product/589/98760">组件名对应的映射关系表</a>。</p>
+ * @method array getServiceNodeInfo() 获取<p>部署进程，默认部署扩容服务的全部进程，支持修改部署进程，如：当前task节点部署服务为：HDFS、YARN、impala，默认部署服务为：DataNode,NodeManager,ImpalaServer，若用户需修改部署进程信息，部署进程：    DataNode,NodeManager,ImpalaServerCoordinator或DataNode,NodeManager,ImpalaServerExecutor。<a href="https://cloud.tencent.com/document/product/589/98760">进程名对应的映射关系表</a>。</p>
+ * @method void setServiceNodeInfo(array $ServiceNodeInfo) 设置<p>部署进程，默认部署扩容服务的全部进程，支持修改部署进程，如：当前task节点部署服务为：HDFS、YARN、impala，默认部署服务为：DataNode,NodeManager,ImpalaServer，若用户需修改部署进程信息，部署进程：    DataNode,NodeManager,ImpalaServerCoordinator或DataNode,NodeManager,ImpalaServerExecutor。<a href="https://cloud.tencent.com/document/product/589/98760">进程名对应的映射关系表</a>。</p>
+ * @method array getDisasterRecoverGroupIds() 获取<p>分散置放群组ID列表，当前只支持指定一个。<br>该参数可以通过调用 <a href="https://cloud.tencent.com/document/product/213/17810">DescribeDisasterRecoverGroups</a>的返回值中的DisasterRecoverGroupId字段来获取。</p>
+ * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) 设置<p>分散置放群组ID列表，当前只支持指定一个。<br>该参数可以通过调用 <a href="https://cloud.tencent.com/document/product/213/17810">DescribeDisasterRecoverGroups</a>的返回值中的DisasterRecoverGroupId字段来获取。</p>
+ * @method array getTags() 获取<p>扩容节点绑定标签列表。</p>
+ * @method void setTags(array $Tags) 设置<p>扩容节点绑定标签列表。</p>
+ * @method string getHardwareSourceType() 获取<p>扩容所选资源类型，可选范围为&quot;HOST&quot;,&quot;POD&quot;,&quot;MNode&quot;，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型</p>
+ * @method void setHardwareSourceType(string $HardwareSourceType) 设置<p>扩容所选资源类型，可选范围为&quot;HOST&quot;,&quot;POD&quot;,&quot;MNode&quot;，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型</p>
+ * @method PodSpecInfo getPodSpecInfo() 获取<p>Pod相关资源信息</p>
+ * @method void setPodSpecInfo(PodSpecInfo $PodSpecInfo) 设置<p>Pod相关资源信息</p>
+ * @method string getClickHouseClusterName() 获取<p>使用clickhouse集群扩容时，选择的机器分组名称</p>
+ * @method void setClickHouseClusterName(string $ClickHouseClusterName) 设置<p>使用clickhouse集群扩容时，选择的机器分组名称</p>
+ * @method string getClickHouseClusterType() 获取<p>使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组</p>
+ * @method void setClickHouseClusterType(string $ClickHouseClusterType) 设置<p>使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组</p>
+ * @method string getYarnNodeLabel() 获取<p>扩容指定 Yarn Node Label</p>
+ * @method void setYarnNodeLabel(string $YarnNodeLabel) 设置<p>扩容指定 Yarn Node Label</p>
+ * @method boolean getEnableStartServiceFlag() 获取<p>扩容后是否启动服务，默认取值否</p><li>true：是</li><li>false：否</li>
+ * @method void setEnableStartServiceFlag(boolean $EnableStartServiceFlag) 设置<p>扩容后是否启动服务，默认取值否</p><li>true：是</li><li>false：否</li>
+ * @method NodeResourceSpec getResourceSpec() 获取<p>规格设置</p>
+ * @method void setResourceSpec(NodeResourceSpec $ResourceSpec) 设置<p>规格设置</p>
+ * @method string getZone() 获取<p>实例所属的可用区，例如ap-guangzhou-1。该参数也可以通过调用<a href="https://cloud.tencent.com/document/product/213/15707">DescribeZones</a> 的返回值中的Zone字段来获取。</p>
+ * @method void setZone(string $Zone) 设置<p>实例所属的可用区，例如ap-guangzhou-1。该参数也可以通过调用<a href="https://cloud.tencent.com/document/product/213/15707">DescribeZones</a> 的返回值中的Zone字段来获取。</p>
+ * @method string getSubnetId() 获取<p>子网，默认是集群创建时的子网</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网，默认是集群创建时的子网</p>
+ * @method array getScaleOutServiceConfGroupsInfo() 获取<p>扩容指定配置组</p>
+ * @method void setScaleOutServiceConfGroupsInfo(array $ScaleOutServiceConfGroupsInfo) 设置<p>扩容指定配置组</p>
+ * @method NodeMark getNodeMarks() 获取<p>节点标记信息，当前只提供给tf平台使用</p>
+ * @method void setNodeMarks(NodeMark $NodeMarks) 设置<p>节点标记信息，当前只提供给tf平台使用</p>
+ * @method string getWarehouseName() 获取<p>扩容指定计算组名称</p>
+ * @method void setWarehouseName(string $WarehouseName) 设置<p>扩容指定计算组名称</p>
+ * @method integer getPartitionNumber() 获取<p>分区置放群组分区</p>
+ * @method void setPartitionNumber(integer $PartitionNumber) 设置<p>分区置放群组分区</p>
  */
 class ScaleOutClusterRequest extends AbstractModel
 {
     /**
-     * @var string 节点计费模式。取值范围：
-<li>PREPAID：预付费，即包年包月。</li>
-<li>POSTPAID_BY_HOUR：按小时后付费。</li>
-<li>SPOTPAID：竞价付费（仅支持TASK节点）。</li>
+     * @var string <p>节点计费模式。取值范围：</p><li>PREPAID：预付费，即包年包月。</li><li>POSTPAID_BY_HOUR：按小时后付费。</li><li>SPOTPAID：竞价付费（仅支持TASK节点）。</li>
      */
     public $InstanceChargeType;
 
     /**
-     * @var string 集群实例ID。
+     * @var string <p>集群实例ID。</p>
      */
     public $InstanceId;
 
     /**
-     * @var ScaleOutNodeConfig 扩容节点类型以及数量
+     * @var ScaleOutNodeConfig <p>扩容节点类型以及数量</p>
      */
     public $ScaleOutNodeConfig;
 
     /**
-     * @var string 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-****-****-****-fae36063280
+     * @var string <p>唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280</p>
      */
     public $ClientToken;
 
     /**
-     * @var InstanceChargePrepaid 即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+     * @var InstanceChargePrepaid <p>即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
      */
     public $InstanceChargePrepaid;
 
     /**
-     * @var array [引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。
+     * @var array <p><a href="https://cloud.tencent.com/document/product/589/35656">引导操作</a>脚本设置。</p>
      */
     public $ScriptBootstrapActionConfig;
 
     /**
-     * @var array 扩容部署服务，新增节点将默认继承当前节点类型中所部署服务，部署服务含默认可选服务，该参数仅支持可选服务填写，如：存量task节点已部署HDFS、YARN、impala；使用api扩容task节不部署impala时，部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)。
+     * @var array <p>扩容部署服务，新增节点将默认继承当前节点类型中所部署服务，部署服务含默认可选服务，该参数仅支持可选服务填写，如：存量task节点已部署HDFS、YARN、impala；使用api扩容task节不部署impala时，部署服务仅填写HDFS、YARN。<a href="https://cloud.tencent.com/document/product/589/98760">组件名对应的映射关系表</a>。</p>
      */
     public $SoftDeployInfo;
 
     /**
-     * @var array 部署进程，默认部署扩容服务的全部进程，支持修改部署进程，如：当前task节点部署服务为：HDFS、YARN、impala，默认部署服务为：DataNode,NodeManager,ImpalaServer，若用户需修改部署进程信息，部署进程：	DataNode,NodeManager,ImpalaServerCoordinator或DataNode,NodeManager,ImpalaServerExecutor。[进程名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)。
+     * @var array <p>部署进程，默认部署扩容服务的全部进程，支持修改部署进程，如：当前task节点部署服务为：HDFS、YARN、impala，默认部署服务为：DataNode,NodeManager,ImpalaServer，若用户需修改部署进程信息，部署进程：    DataNode,NodeManager,ImpalaServerCoordinator或DataNode,NodeManager,ImpalaServerExecutor。<a href="https://cloud.tencent.com/document/product/589/98760">进程名对应的映射关系表</a>。</p>
      */
     public $ServiceNodeInfo;
 
     /**
-     * @var array 分散置放群组ID列表，当前只支持指定一个。
-该参数可以通过调用 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)的返回值中的DisasterRecoverGroupId字段来获取。
+     * @var array <p>分散置放群组ID列表，当前只支持指定一个。<br>该参数可以通过调用 <a href="https://cloud.tencent.com/document/product/213/17810">DescribeDisasterRecoverGroups</a>的返回值中的DisasterRecoverGroupId字段来获取。</p>
      */
     public $DisasterRecoverGroupIds;
 
     /**
-     * @var array 扩容节点绑定标签列表。
+     * @var array <p>扩容节点绑定标签列表。</p>
      */
     public $Tags;
 
     /**
-     * @var string 扩容所选资源类型，可选范围为"HOST","POD","MNode"，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型
+     * @var string <p>扩容所选资源类型，可选范围为&quot;HOST&quot;,&quot;POD&quot;,&quot;MNode&quot;，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型</p>
      */
     public $HardwareSourceType;
 
     /**
-     * @var PodSpecInfo Pod相关资源信息
+     * @var PodSpecInfo <p>Pod相关资源信息</p>
      */
     public $PodSpecInfo;
 
     /**
-     * @var string 使用clickhouse集群扩容时，选择的机器分组名称
+     * @var string <p>使用clickhouse集群扩容时，选择的机器分组名称</p>
      */
     public $ClickHouseClusterName;
 
     /**
-     * @var string 使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
+     * @var string <p>使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组</p>
      */
     public $ClickHouseClusterType;
 
     /**
-     * @var string 扩容指定 Yarn Node Label
+     * @var string <p>扩容指定 Yarn Node Label</p>
      */
     public $YarnNodeLabel;
 
     /**
-     * @var boolean 扩容后是否启动服务，默认取值否
-<li>true：是</li>
-<li>false：否</li>
+     * @var boolean <p>扩容后是否启动服务，默认取值否</p><li>true：是</li><li>false：否</li>
      */
     public $EnableStartServiceFlag;
 
     /**
-     * @var NodeResourceSpec 规格设置
+     * @var NodeResourceSpec <p>规格设置</p>
      */
     public $ResourceSpec;
 
     /**
-     * @var string 实例所属的可用区，例如ap-guangzhou-1。该参数也可以通过调用[DescribeZones](https://cloud.tencent.com/document/product/213/15707) 的返回值中的Zone字段来获取。
+     * @var string <p>实例所属的可用区，例如ap-guangzhou-1。该参数也可以通过调用<a href="https://cloud.tencent.com/document/product/213/15707">DescribeZones</a> 的返回值中的Zone字段来获取。</p>
      */
     public $Zone;
 
     /**
-     * @var string 子网，默认是集群创建时的子网
+     * @var string <p>子网，默认是集群创建时的子网</p>
      */
     public $SubnetId;
 
     /**
-     * @var array 扩容指定配置组
+     * @var array <p>扩容指定配置组</p>
      */
     public $ScaleOutServiceConfGroupsInfo;
 
     /**
-     * @var NodeMark 节点标记信息，当前只提供给tf平台使用
+     * @var NodeMark <p>节点标记信息，当前只提供给tf平台使用</p>
      */
     public $NodeMarks;
 
     /**
-     * @var string 扩容指定计算组名称
+     * @var string <p>扩容指定计算组名称</p>
      */
     public $WarehouseName;
 
     /**
-     * @param string $InstanceChargeType 节点计费模式。取值范围：
-<li>PREPAID：预付费，即包年包月。</li>
-<li>POSTPAID_BY_HOUR：按小时后付费。</li>
-<li>SPOTPAID：竞价付费（仅支持TASK节点）。</li>
-     * @param string $InstanceId 集群实例ID。
-     * @param ScaleOutNodeConfig $ScaleOutNodeConfig 扩容节点类型以及数量
-     * @param string $ClientToken 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-****-****-****-fae36063280
-     * @param InstanceChargePrepaid $InstanceChargePrepaid 即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
-     * @param array $ScriptBootstrapActionConfig [引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。
-     * @param array $SoftDeployInfo 扩容部署服务，新增节点将默认继承当前节点类型中所部署服务，部署服务含默认可选服务，该参数仅支持可选服务填写，如：存量task节点已部署HDFS、YARN、impala；使用api扩容task节不部署impala时，部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)。
-     * @param array $ServiceNodeInfo 部署进程，默认部署扩容服务的全部进程，支持修改部署进程，如：当前task节点部署服务为：HDFS、YARN、impala，默认部署服务为：DataNode,NodeManager,ImpalaServer，若用户需修改部署进程信息，部署进程：	DataNode,NodeManager,ImpalaServerCoordinator或DataNode,NodeManager,ImpalaServerExecutor。[进程名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)。
-     * @param array $DisasterRecoverGroupIds 分散置放群组ID列表，当前只支持指定一个。
-该参数可以通过调用 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)的返回值中的DisasterRecoverGroupId字段来获取。
-     * @param array $Tags 扩容节点绑定标签列表。
-     * @param string $HardwareSourceType 扩容所选资源类型，可选范围为"HOST","POD","MNode"，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型
-     * @param PodSpecInfo $PodSpecInfo Pod相关资源信息
-     * @param string $ClickHouseClusterName 使用clickhouse集群扩容时，选择的机器分组名称
-     * @param string $ClickHouseClusterType 使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
-     * @param string $YarnNodeLabel 扩容指定 Yarn Node Label
-     * @param boolean $EnableStartServiceFlag 扩容后是否启动服务，默认取值否
-<li>true：是</li>
-<li>false：否</li>
-     * @param NodeResourceSpec $ResourceSpec 规格设置
-     * @param string $Zone 实例所属的可用区，例如ap-guangzhou-1。该参数也可以通过调用[DescribeZones](https://cloud.tencent.com/document/product/213/15707) 的返回值中的Zone字段来获取。
-     * @param string $SubnetId 子网，默认是集群创建时的子网
-     * @param array $ScaleOutServiceConfGroupsInfo 扩容指定配置组
-     * @param NodeMark $NodeMarks 节点标记信息，当前只提供给tf平台使用
-     * @param string $WarehouseName 扩容指定计算组名称
+     * @var integer <p>分区置放群组分区</p>
+     */
+    public $PartitionNumber;
+
+    /**
+     * @param string $InstanceChargeType <p>节点计费模式。取值范围：</p><li>PREPAID：预付费，即包年包月。</li><li>POSTPAID_BY_HOUR：按小时后付费。</li><li>SPOTPAID：竞价付费（仅支持TASK节点）。</li>
+     * @param string $InstanceId <p>集群实例ID。</p>
+     * @param ScaleOutNodeConfig $ScaleOutNodeConfig <p>扩容节点类型以及数量</p>
+     * @param string $ClientToken <p>唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280</p>
+     * @param InstanceChargePrepaid $InstanceChargePrepaid <p>即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
+     * @param array $ScriptBootstrapActionConfig <p><a href="https://cloud.tencent.com/document/product/589/35656">引导操作</a>脚本设置。</p>
+     * @param array $SoftDeployInfo <p>扩容部署服务，新增节点将默认继承当前节点类型中所部署服务，部署服务含默认可选服务，该参数仅支持可选服务填写，如：存量task节点已部署HDFS、YARN、impala；使用api扩容task节不部署impala时，部署服务仅填写HDFS、YARN。<a href="https://cloud.tencent.com/document/product/589/98760">组件名对应的映射关系表</a>。</p>
+     * @param array $ServiceNodeInfo <p>部署进程，默认部署扩容服务的全部进程，支持修改部署进程，如：当前task节点部署服务为：HDFS、YARN、impala，默认部署服务为：DataNode,NodeManager,ImpalaServer，若用户需修改部署进程信息，部署进程：    DataNode,NodeManager,ImpalaServerCoordinator或DataNode,NodeManager,ImpalaServerExecutor。<a href="https://cloud.tencent.com/document/product/589/98760">进程名对应的映射关系表</a>。</p>
+     * @param array $DisasterRecoverGroupIds <p>分散置放群组ID列表，当前只支持指定一个。<br>该参数可以通过调用 <a href="https://cloud.tencent.com/document/product/213/17810">DescribeDisasterRecoverGroups</a>的返回值中的DisasterRecoverGroupId字段来获取。</p>
+     * @param array $Tags <p>扩容节点绑定标签列表。</p>
+     * @param string $HardwareSourceType <p>扩容所选资源类型，可选范围为&quot;HOST&quot;,&quot;POD&quot;,&quot;MNode&quot;，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型</p>
+     * @param PodSpecInfo $PodSpecInfo <p>Pod相关资源信息</p>
+     * @param string $ClickHouseClusterName <p>使用clickhouse集群扩容时，选择的机器分组名称</p>
+     * @param string $ClickHouseClusterType <p>使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组</p>
+     * @param string $YarnNodeLabel <p>扩容指定 Yarn Node Label</p>
+     * @param boolean $EnableStartServiceFlag <p>扩容后是否启动服务，默认取值否</p><li>true：是</li><li>false：否</li>
+     * @param NodeResourceSpec $ResourceSpec <p>规格设置</p>
+     * @param string $Zone <p>实例所属的可用区，例如ap-guangzhou-1。该参数也可以通过调用<a href="https://cloud.tencent.com/document/product/213/15707">DescribeZones</a> 的返回值中的Zone字段来获取。</p>
+     * @param string $SubnetId <p>子网，默认是集群创建时的子网</p>
+     * @param array $ScaleOutServiceConfGroupsInfo <p>扩容指定配置组</p>
+     * @param NodeMark $NodeMarks <p>节点标记信息，当前只提供给tf平台使用</p>
+     * @param string $WarehouseName <p>扩容指定计算组名称</p>
+     * @param integer $PartitionNumber <p>分区置放群组分区</p>
      */
     function __construct()
     {
@@ -344,6 +328,10 @@ class ScaleOutClusterRequest extends AbstractModel
 
         if (array_key_exists("WarehouseName",$param) and $param["WarehouseName"] !== null) {
             $this->WarehouseName = $param["WarehouseName"];
+        }
+
+        if (array_key_exists("PartitionNumber",$param) and $param["PartitionNumber"] !== null) {
+            $this->PartitionNumber = $param["PartitionNumber"];
         }
     }
 }

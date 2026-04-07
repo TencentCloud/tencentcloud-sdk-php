@@ -20,167 +20,155 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddInstances请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method integer getCpu() 获取Cpu核数
- * @method void setCpu(integer $Cpu) 设置Cpu核数
- * @method integer getMemory() 获取内存，单位为GB
- * @method void setMemory(integer $Memory) 设置内存，单位为GB
- * @method integer getReadOnlyCount() 获取新增只读实例数，取值范围为(0,15]
- * @method void setReadOnlyCount(integer $ReadOnlyCount) 设置新增只读实例数，取值范围为(0,15]
- * @method string getDeviceType() 获取实例机器类型，支持值如下：
-- common：表示通用型
-- exclusive：表示独享型
- * @method void setDeviceType(string $DeviceType) 设置实例机器类型，支持值如下：
-- common：表示通用型
-- exclusive：表示独享型
- * @method string getInstanceGrpId() 获取实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
- * @method void setInstanceGrpId(string $InstanceGrpId) 设置实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
- * @method string getVpcId() 获取所属VPC网络ID。
- * @method void setVpcId(string $VpcId) 设置所属VPC网络ID。
- * @method string getSubnetId() 获取所属子网ID，如果设置了VpcId，则SubnetId必填。
- * @method void setSubnetId(string $SubnetId) 设置所属子网ID，如果设置了VpcId，则SubnetId必填。
- * @method integer getPort() 获取新增RO组时使用的Port，取值范围为[0,65535)
- * @method void setPort(integer $Port) 设置新增RO组时使用的Port，取值范围为[0,65535)
- * @method string getInstanceName() 获取实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，'_','-','.'
- * @method void setInstanceName(string $InstanceName) 设置实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，'_','-','.'
- * @method integer getAutoVoucher() 获取是否自动选择代金券 1是 0否 默认为0
- * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动选择代金券 1是 0否 默认为0
- * @method string getDbType() 获取数据库类型，取值范围: 
-<li> MYSQL </li>
- * @method void setDbType(string $DbType) 设置数据库类型，取值范围: 
-<li> MYSQL </li>
- * @method string getOrderSource() 获取订单来源，字符串长度范围为[0,64)
- * @method void setOrderSource(string $OrderSource) 设置订单来源，字符串长度范围为[0,64)
- * @method integer getDealMode() 获取交易模式 0-下单并支付 1-下单
- * @method void setDealMode(integer $DealMode) 设置交易模式 0-下单并支付 1-下单
- * @method integer getParamTemplateId() 获取参数模板ID
- * @method void setParamTemplateId(integer $ParamTemplateId) 设置参数模板ID
- * @method array getInstanceParams() 获取参数列表，ParamTemplateId 传入时InstanceParams才有效
- * @method void setInstanceParams(array $InstanceParams) 设置参数列表，ParamTemplateId 传入时InstanceParams才有效
- * @method array getSecurityGroupIds() 获取安全组ID，新建只读实例时可以指定安全组。
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID，新建只读实例时可以指定安全组。
- * @method UpgradeProxy getUpgradeProxy() 获取proxy同步升级
- * @method void setUpgradeProxy(UpgradeProxy $UpgradeProxy) 设置proxy同步升级
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method integer getCpu() 获取<p>Cpu核数</p>
+ * @method void setCpu(integer $Cpu) 设置<p>Cpu核数</p>
+ * @method integer getMemory() 获取<p>内存，单位为GB</p>
+ * @method void setMemory(integer $Memory) 设置<p>内存，单位为GB</p>
+ * @method integer getReadOnlyCount() 获取<p>新增只读实例数，取值范围为(0,15]</p>
+ * @method void setReadOnlyCount(integer $ReadOnlyCount) 设置<p>新增只读实例数，取值范围为(0,15]</p>
+ * @method string getDeviceType() 获取<p>实例机器类型，支持值如下：</p><ul><li>common：表示通用型</li><li>exclusive：表示独享型</li></ul>
+ * @method void setDeviceType(string $DeviceType) 设置<p>实例机器类型，支持值如下：</p><ul><li>common：表示通用型</li><li>exclusive：表示独享型</li></ul>
+ * @method string getInstanceGrpId() 获取<p>实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。</p>
+ * @method void setInstanceGrpId(string $InstanceGrpId) 设置<p>实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。</p>
+ * @method string getVpcId() 获取<p>所属VPC网络ID。</p>
+ * @method void setVpcId(string $VpcId) 设置<p>所属VPC网络ID。</p>
+ * @method string getSubnetId() 获取<p>所属子网ID，如果设置了VpcId，则SubnetId必填。</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>所属子网ID，如果设置了VpcId，则SubnetId必填。</p>
+ * @method integer getPort() 获取<p>新增RO组时使用的Port，取值范围为[0,65535)</p>
+ * @method void setPort(integer $Port) 设置<p>新增RO组时使用的Port，取值范围为[0,65535)</p>
+ * @method string getInstanceName() 获取<p>实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，&#39;_&#39;,&#39;-&#39;,&#39;.&#39;</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，&#39;_&#39;,&#39;-&#39;,&#39;.&#39;</p>
+ * @method integer getAutoVoucher() 获取<p>是否自动选择代金券 1是 0否 默认为0</p>
+ * @method void setAutoVoucher(integer $AutoVoucher) 设置<p>是否自动选择代金券 1是 0否 默认为0</p>
+ * @method string getDbType() 获取<p>数据库类型，取值范围: </p><li> MYSQL </li>
+ * @method void setDbType(string $DbType) 设置<p>数据库类型，取值范围: </p><li> MYSQL </li>
+ * @method string getOrderSource() 获取<p>订单来源，字符串长度范围为[0,64)</p>
+ * @method void setOrderSource(string $OrderSource) 设置<p>订单来源，字符串长度范围为[0,64)</p>
+ * @method integer getDealMode() 获取<p>交易模式 0-下单并支付 1-下单</p>
+ * @method void setDealMode(integer $DealMode) 设置<p>交易模式 0-下单并支付 1-下单</p>
+ * @method integer getParamTemplateId() 获取<p>参数模板ID</p>
+ * @method void setParamTemplateId(integer $ParamTemplateId) 设置<p>参数模板ID</p>
+ * @method array getInstanceParams() 获取<p>参数列表，ParamTemplateId 传入时InstanceParams才有效</p>
+ * @method void setInstanceParams(array $InstanceParams) 设置<p>参数列表，ParamTemplateId 传入时InstanceParams才有效</p>
+ * @method array getSecurityGroupIds() 获取<p>安全组ID，新建只读实例时可以指定安全组。</p>
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置<p>安全组ID，新建只读实例时可以指定安全组。</p>
+ * @method UpgradeProxy getUpgradeProxy() 获取<p>proxy同步升级</p>
+ * @method void setUpgradeProxy(UpgradeProxy $UpgradeProxy) 设置<p>proxy同步升级</p>
  */
 class AddInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var integer Cpu核数
+     * @var integer <p>Cpu核数</p>
      */
     public $Cpu;
 
     /**
-     * @var integer 内存，单位为GB
+     * @var integer <p>内存，单位为GB</p>
      */
     public $Memory;
 
     /**
-     * @var integer 新增只读实例数，取值范围为(0,15]
+     * @var integer <p>新增只读实例数，取值范围为(0,15]</p>
      */
     public $ReadOnlyCount;
 
     /**
-     * @var string 实例机器类型，支持值如下：
-- common：表示通用型
-- exclusive：表示独享型
+     * @var string <p>实例机器类型，支持值如下：</p><ul><li>common：表示通用型</li><li>exclusive：表示独享型</li></ul>
      */
     public $DeviceType;
 
     /**
-     * @var string 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
+     * @var string <p>实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。</p>
      * @deprecated
      */
     public $InstanceGrpId;
 
     /**
-     * @var string 所属VPC网络ID。
+     * @var string <p>所属VPC网络ID。</p>
      */
     public $VpcId;
 
     /**
-     * @var string 所属子网ID，如果设置了VpcId，则SubnetId必填。
+     * @var string <p>所属子网ID，如果设置了VpcId，则SubnetId必填。</p>
      */
     public $SubnetId;
 
     /**
-     * @var integer 新增RO组时使用的Port，取值范围为[0,65535)
+     * @var integer <p>新增RO组时使用的Port，取值范围为[0,65535)</p>
      */
     public $Port;
 
     /**
-     * @var string 实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，'_','-','.'
+     * @var string <p>实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，&#39;_&#39;,&#39;-&#39;,&#39;.&#39;</p>
      */
     public $InstanceName;
 
     /**
-     * @var integer 是否自动选择代金券 1是 0否 默认为0
+     * @var integer <p>是否自动选择代金券 1是 0否 默认为0</p>
      */
     public $AutoVoucher;
 
     /**
-     * @var string 数据库类型，取值范围: 
-<li> MYSQL </li>
+     * @var string <p>数据库类型，取值范围: </p><li> MYSQL </li>
      */
     public $DbType;
 
     /**
-     * @var string 订单来源，字符串长度范围为[0,64)
+     * @var string <p>订单来源，字符串长度范围为[0,64)</p>
      */
     public $OrderSource;
 
     /**
-     * @var integer 交易模式 0-下单并支付 1-下单
+     * @var integer <p>交易模式 0-下单并支付 1-下单</p>
      */
     public $DealMode;
 
     /**
-     * @var integer 参数模板ID
+     * @var integer <p>参数模板ID</p>
      */
     public $ParamTemplateId;
 
     /**
-     * @var array 参数列表，ParamTemplateId 传入时InstanceParams才有效
+     * @var array <p>参数列表，ParamTemplateId 传入时InstanceParams才有效</p>
      */
     public $InstanceParams;
 
     /**
-     * @var array 安全组ID，新建只读实例时可以指定安全组。
+     * @var array <p>安全组ID，新建只读实例时可以指定安全组。</p>
      */
     public $SecurityGroupIds;
 
     /**
-     * @var UpgradeProxy proxy同步升级
+     * @var UpgradeProxy <p>proxy同步升级</p>
      */
     public $UpgradeProxy;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param integer $Cpu Cpu核数
-     * @param integer $Memory 内存，单位为GB
-     * @param integer $ReadOnlyCount 新增只读实例数，取值范围为(0,15]
-     * @param string $DeviceType 实例机器类型，支持值如下：
-- common：表示通用型
-- exclusive：表示独享型
-     * @param string $InstanceGrpId 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
-     * @param string $VpcId 所属VPC网络ID。
-     * @param string $SubnetId 所属子网ID，如果设置了VpcId，则SubnetId必填。
-     * @param integer $Port 新增RO组时使用的Port，取值范围为[0,65535)
-     * @param string $InstanceName 实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，'_','-','.'
-     * @param integer $AutoVoucher 是否自动选择代金券 1是 0否 默认为0
-     * @param string $DbType 数据库类型，取值范围: 
-<li> MYSQL </li>
-     * @param string $OrderSource 订单来源，字符串长度范围为[0,64)
-     * @param integer $DealMode 交易模式 0-下单并支付 1-下单
-     * @param integer $ParamTemplateId 参数模板ID
-     * @param array $InstanceParams 参数列表，ParamTemplateId 传入时InstanceParams才有效
-     * @param array $SecurityGroupIds 安全组ID，新建只读实例时可以指定安全组。
-     * @param UpgradeProxy $UpgradeProxy proxy同步升级
+     * @param string $ClusterId <p>集群ID</p>
+     * @param integer $Cpu <p>Cpu核数</p>
+     * @param integer $Memory <p>内存，单位为GB</p>
+     * @param integer $ReadOnlyCount <p>新增只读实例数，取值范围为(0,15]</p>
+     * @param string $DeviceType <p>实例机器类型，支持值如下：</p><ul><li>common：表示通用型</li><li>exclusive：表示独享型</li></ul>
+     * @param string $InstanceGrpId <p>实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。</p>
+     * @param string $VpcId <p>所属VPC网络ID。</p>
+     * @param string $SubnetId <p>所属子网ID，如果设置了VpcId，则SubnetId必填。</p>
+     * @param integer $Port <p>新增RO组时使用的Port，取值范围为[0,65535)</p>
+     * @param string $InstanceName <p>实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，&#39;_&#39;,&#39;-&#39;,&#39;.&#39;</p>
+     * @param integer $AutoVoucher <p>是否自动选择代金券 1是 0否 默认为0</p>
+     * @param string $DbType <p>数据库类型，取值范围: </p><li> MYSQL </li>
+     * @param string $OrderSource <p>订单来源，字符串长度范围为[0,64)</p>
+     * @param integer $DealMode <p>交易模式 0-下单并支付 1-下单</p>
+     * @param integer $ParamTemplateId <p>参数模板ID</p>
+     * @param array $InstanceParams <p>参数列表，ParamTemplateId 传入时InstanceParams才有效</p>
+     * @param array $SecurityGroupIds <p>安全组ID，新建只读实例时可以指定安全组。</p>
+     * @param UpgradeProxy $UpgradeProxy <p>proxy同步升级</p>
      */
     function __construct()
     {

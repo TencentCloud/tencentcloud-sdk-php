@@ -20,24 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeK8sApiAbnormalEventList返回参数结构体
  *
- * @method array getList() 获取事件列表
- * @method void setList(array $List) 设置事件列表
- * @method integer getTotalCount() 获取总数量
- * @method void setTotalCount(integer $TotalCount) 设置总数量
+ * @method array getList() 获取<p>事件列表</p>
+ * @method void setList(array $List) 设置<p>事件列表</p>
+ * @method integer getTotalCount() 获取<p>总数量</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>总数量</p>
+ * @method array getRuleTypeZhSet() 获取<p>k8s告警类型和对应中文翻译</p>
+ * @method void setRuleTypeZhSet(array $RuleTypeZhSet) 设置<p>k8s告警类型和对应中文翻译</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeK8sApiAbnormalEventListResponse extends AbstractModel
 {
     /**
-     * @var array 事件列表
+     * @var array <p>事件列表</p>
      */
     public $List;
 
     /**
-     * @var integer 总数量
+     * @var integer <p>总数量</p>
      */
     public $TotalCount;
+
+    /**
+     * @var array <p>k8s告警类型和对应中文翻译</p>
+     */
+    public $RuleTypeZhSet;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +52,9 @@ class DescribeK8sApiAbnormalEventListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $List 事件列表
-     * @param integer $TotalCount 总数量
+     * @param array $List <p>事件列表</p>
+     * @param integer $TotalCount <p>总数量</p>
+     * @param array $RuleTypeZhSet <p>k8s告警类型和对应中文翻译</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -73,6 +81,15 @@ class DescribeK8sApiAbnormalEventListResponse extends AbstractModel
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("RuleTypeZhSet",$param) and $param["RuleTypeZhSet"] !== null) {
+            $this->RuleTypeZhSet = [];
+            foreach ($param["RuleTypeZhSet"] as $key => $value){
+                $obj = new K8SAPIRuleTypeZhItem();
+                $obj->deserialize($value);
+                array_push($this->RuleTypeZhSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

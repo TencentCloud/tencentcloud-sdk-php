@@ -20,102 +20,110 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 内容通知模板元素
  *
- * @method array getQCloudYehe() 获取官网通知渠道配置
+ * @method array getQCloudYehe() 获取<p>官网通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQCloudYehe(array $QCloudYehe) 设置官网通知渠道配置
+ * @method void setQCloudYehe(array $QCloudYehe) 设置<p>官网通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getWeWorkRobot() 获取企业微信机器人通知渠道配置
+ * @method array getWeWorkRobot() 获取<p>企业微信机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWeWorkRobot(array $WeWorkRobot) 设置企业微信机器人通知渠道配置
+ * @method void setWeWorkRobot(array $WeWorkRobot) 设置<p>企业微信机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDingDingRobot() 获取钉钉机器人通知渠道配置
+ * @method array getDingDingRobot() 获取<p>钉钉机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDingDingRobot(array $DingDingRobot) 设置钉钉机器人通知渠道配置
+ * @method void setDingDingRobot(array $DingDingRobot) 设置<p>钉钉机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getFeiShuRobot() 获取飞书机器人通知渠道配置
+ * @method array getFeiShuRobot() 获取<p>飞书机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFeiShuRobot(array $FeiShuRobot) 设置飞书机器人通知渠道配置
+ * @method void setFeiShuRobot(array $FeiShuRobot) 设置<p>飞书机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getWebhook() 获取自定义Webhook通知渠道配置
+ * @method array getWebhook() 获取<p>自定义Webhook通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWebhook(array $Webhook) 设置自定义Webhook通知渠道配置
+ * @method void setWebhook(array $Webhook) 设置<p>自定义Webhook通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTeamsRobot() 获取Teams机器人通知渠道配置
+ * @method array getTeamsRobot() 获取<p>Teams机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTeamsRobot(array $TeamsRobot) 设置Teams机器人通知渠道配置
+ * @method void setTeamsRobot(array $TeamsRobot) 设置<p>Teams机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPagerDutyRobot() 获取PagerDutyRobot机器人通知渠道配置
+ * @method array getPagerDutyRobot() 获取<p>PagerDutyRobot机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPagerDutyRobot(array $PagerDutyRobot) 设置PagerDutyRobot机器人通知渠道配置
+ * @method void setPagerDutyRobot(array $PagerDutyRobot) 设置<p>PagerDutyRobot机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getGoogleChatRobot() 获取GoogleChat
- * @method void setGoogleChatRobot(array $GoogleChatRobot) 设置GoogleChat
+ * @method array getGoogleChatRobot() 获取<p>GoogleChat</p>
+ * @method void setGoogleChatRobot(array $GoogleChatRobot) 设置<p>GoogleChat</p>
+ * @method array getSlackRobot() 获取<p>Slack</p>
+ * @method void setSlackRobot(array $SlackRobot) 设置<p>Slack</p>
  */
 class NoticeContentTmplItem extends AbstractModel
 {
     /**
-     * @var array 官网通知渠道配置
+     * @var array <p>官网通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QCloudYehe;
 
     /**
-     * @var array 企业微信机器人通知渠道配置
+     * @var array <p>企业微信机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WeWorkRobot;
 
     /**
-     * @var array 钉钉机器人通知渠道配置
+     * @var array <p>钉钉机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DingDingRobot;
 
     /**
-     * @var array 飞书机器人通知渠道配置
+     * @var array <p>飞书机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FeiShuRobot;
 
     /**
-     * @var array 自定义Webhook通知渠道配置
+     * @var array <p>自定义Webhook通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Webhook;
 
     /**
-     * @var array Teams机器人通知渠道配置
+     * @var array <p>Teams机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TeamsRobot;
 
     /**
-     * @var array PagerDutyRobot机器人通知渠道配置
+     * @var array <p>PagerDutyRobot机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PagerDutyRobot;
 
     /**
-     * @var array GoogleChat
+     * @var array <p>GoogleChat</p>
      */
     public $GoogleChatRobot;
 
     /**
-     * @param array $QCloudYehe 官网通知渠道配置
+     * @var array <p>Slack</p>
+     */
+    public $SlackRobot;
+
+    /**
+     * @param array $QCloudYehe <p>官网通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $WeWorkRobot 企业微信机器人通知渠道配置
+     * @param array $WeWorkRobot <p>企业微信机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DingDingRobot 钉钉机器人通知渠道配置
+     * @param array $DingDingRobot <p>钉钉机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $FeiShuRobot 飞书机器人通知渠道配置
+     * @param array $FeiShuRobot <p>飞书机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Webhook 自定义Webhook通知渠道配置
+     * @param array $Webhook <p>自定义Webhook通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TeamsRobot Teams机器人通知渠道配置
+     * @param array $TeamsRobot <p>Teams机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $PagerDutyRobot PagerDutyRobot机器人通知渠道配置
+     * @param array $PagerDutyRobot <p>PagerDutyRobot机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $GoogleChatRobot GoogleChat
+     * @param array $GoogleChatRobot <p>GoogleChat</p>
+     * @param array $SlackRobot <p>Slack</p>
      */
     function __construct()
     {
@@ -199,6 +207,15 @@ class NoticeContentTmplItem extends AbstractModel
                 $obj = new GoogleChatRobotNoticeTmplMatcher();
                 $obj->deserialize($value);
                 array_push($this->GoogleChatRobot, $obj);
+            }
+        }
+
+        if (array_key_exists("SlackRobot",$param) and $param["SlackRobot"] !== null) {
+            $this->SlackRobot = [];
+            foreach ($param["SlackRobot"] as $key => $value){
+                $obj = new SlackRobotNoticeTmplMatcher();
+                $obj->deserialize($value);
+                array_push($this->SlackRobot, $obj);
             }
         }
     }

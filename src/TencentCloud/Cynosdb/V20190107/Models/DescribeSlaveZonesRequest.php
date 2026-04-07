@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置可用区
  * @method integer getOssClusterId() 获取云架集群ID
  * @method void setOssClusterId(integer $OssClusterId) 设置云架集群ID
+ * @method string getStorageVersion() 获取存储架构类型。枚举值：1.0/2.0  默认值：1.0
+ * @method void setStorageVersion(string $StorageVersion) 设置存储架构类型。枚举值：1.0/2.0  默认值：1.0
  */
 class DescribeSlaveZonesRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeSlaveZonesRequest extends AbstractModel
     public $OssClusterId;
 
     /**
+     * @var string 存储架构类型。枚举值：1.0/2.0  默认值：1.0
+     */
+    public $StorageVersion;
+
+    /**
      * @param string $Zone 可用区
      * @param integer $OssClusterId 云架集群ID
+     * @param string $StorageVersion 存储架构类型。枚举值：1.0/2.0  默认值：1.0
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeSlaveZonesRequest extends AbstractModel
 
         if (array_key_exists("OssClusterId",$param) and $param["OssClusterId"] !== null) {
             $this->OssClusterId = $param["OssClusterId"];
+        }
+
+        if (array_key_exists("StorageVersion",$param) and $param["StorageVersion"] !== null) {
+            $this->StorageVersion = $param["StorageVersion"];
         }
     }
 }

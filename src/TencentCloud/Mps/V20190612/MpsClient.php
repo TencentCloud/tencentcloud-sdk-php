@@ -23,6 +23,8 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Mps\V20190612\Models as Models;
 
 /**
+ * @method Models\ActivateSSAIResponse ActivateSSAI(Models\ActivateSSAIRequest $req) 开通SSAI
+ * @method Models\ActivateStreamPackageResponse ActivateStreamPackage(Models\ActivateStreamPackageRequest $req) 创建媒体封装用户。
  * @method Models\BatchDeleteStreamLinkFlowResponse BatchDeleteStreamLinkFlow(Models\BatchDeleteStreamLinkFlowRequest $req) 批量删除媒体传输流。
  * @method Models\BatchProcessMediaResponse BatchProcessMedia(Models\BatchProcessMediaRequest $req) 对 URL视频链接批量发起处理任务，功能包括：
 智能字幕（语音全文、语音热词、语音翻译）
@@ -70,6 +72,11 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\CreateStreamLinkInputResponse CreateStreamLinkInput(Models\CreateStreamLinkInputRequest $req) 创建媒体传输的输入配置。
  * @method Models\CreateStreamLinkOutputInfoResponse CreateStreamLinkOutputInfo(Models\CreateStreamLinkOutputInfoRequest $req) 创建媒体传输流的输出信息。
  * @method Models\CreateStreamLinkSecurityGroupResponse CreateStreamLinkSecurityGroup(Models\CreateStreamLinkSecurityGroupRequest $req) 创建安全组，数量限制5个。
+ * @method Models\CreateStreamPackageLinearAssemblyChannelResponse CreateStreamPackageLinearAssemblyChannel(Models\CreateStreamPackageLinearAssemblyChannelRequest $req) 创建媒体包装频道。
+ * @method Models\CreateStreamPackageLinearAssemblyProgramResponse CreateStreamPackageLinearAssemblyProgram(Models\CreateStreamPackageLinearAssemblyProgramRequest $req) 创建线性组装Program。
+ * @method Models\CreateStreamPackageSSAIChannelResponse CreateStreamPackageSSAIChannel(Models\CreateStreamPackageSSAIChannelRequest $req) 创建SSAI广告插入配置。
+ * @method Models\CreateStreamPackageSourceResponse CreateStreamPackageSource(Models\CreateStreamPackageSourceRequest $req) 创建媒体包装频道。
+ * @method Models\CreateStreamPackageSourceLocationResponse CreateStreamPackageSourceLocation(Models\CreateStreamPackageSourceLocationRequest $req) 创建媒体包装频道。
  * @method Models\CreateSubtitleEmbedTemplateResponse CreateSubtitleEmbedTemplate(Models\CreateSubtitleEmbedTemplateRequest $req) 创建自定义字幕压制模板
  * @method Models\CreateTranscodeTemplateResponse CreateTranscodeTemplate(Models\CreateTranscodeTemplateRequest $req) 创建用户自定义转码模板，数量上限：1000
  * @method Models\CreateVideoDatabaseEntryTaskResponse CreateVideoDatabaseEntryTask(Models\CreateVideoDatabaseEntryTaskRequest $req) 对URL链接或COS中的视频发起入库任务。
@@ -112,6 +119,14 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DeleteStreamLinkFlowResponse DeleteStreamLinkFlow(Models\DeleteStreamLinkFlowRequest $req) 删除媒体传输的传输流配置。
  * @method Models\DeleteStreamLinkOutputResponse DeleteStreamLinkOutput(Models\DeleteStreamLinkOutputRequest $req) 删除媒体传输流的输出配置。
  * @method Models\DeleteStreamLinkSecurityGroupResponse DeleteStreamLinkSecurityGroup(Models\DeleteStreamLinkSecurityGroupRequest $req) 删除安全组。
+ * @method Models\DeleteStreamPackageLinearAssemblyChannelResponse DeleteStreamPackageLinearAssemblyChannel(Models\DeleteStreamPackageLinearAssemblyChannelRequest $req) 删除媒体包装Channel。
+ * @method Models\DeleteStreamPackageLinearAssemblyChannelsResponse DeleteStreamPackageLinearAssemblyChannels(Models\DeleteStreamPackageLinearAssemblyChannelsRequest $req) 批量删除媒体包装Channel。
+ * @method Models\DeleteStreamPackageLinearAssemblyProgramResponse DeleteStreamPackageLinearAssemblyProgram(Models\DeleteStreamPackageLinearAssemblyProgramRequest $req) 删除线性组装Program。
+ * @method Models\DeleteStreamPackageLinearAssemblyProgramsResponse DeleteStreamPackageLinearAssemblyPrograms(Models\DeleteStreamPackageLinearAssemblyProgramsRequest $req) 批量删除线性组装Program。
+ * @method Models\DeleteStreamPackageLinearAssemblyProgramsByChannelResponse DeleteStreamPackageLinearAssemblyProgramsByChannel(Models\DeleteStreamPackageLinearAssemblyProgramsByChannelRequest $req) 批量删除同一Channel下的ID
+ * @method Models\DeleteStreamPackageSSAIChannelResponse DeleteStreamPackageSSAIChannel(Models\DeleteStreamPackageSSAIChannelRequest $req) 删除广告插入配置。
+ * @method Models\DeleteStreamPackageSourceResponse DeleteStreamPackageSource(Models\DeleteStreamPackageSourceRequest $req) 批量删除媒体包装Source。
+ * @method Models\DeleteStreamPackageSourceLocationResponse DeleteStreamPackageSourceLocation(Models\DeleteStreamPackageSourceLocationRequest $req) 删除媒体包装SourceLocation。
  * @method Models\DeleteSubtitleEmbedTemplateResponse DeleteSubtitleEmbedTemplate(Models\DeleteSubtitleEmbedTemplateRequest $req) 删除用户自定义字幕压制模板。
  * @method Models\DeleteTranscodeTemplateResponse DeleteTranscodeTemplate(Models\DeleteTranscodeTemplateRequest $req) 删除用户自定义转码模板。
  * @method Models\DeleteWatermarkTemplateResponse DeleteWatermarkTemplate(Models\DeleteWatermarkTemplateRequest $req) 删除用户自定义水印模板。
@@ -132,10 +147,12 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DescribeImageSpriteTemplatesResponse DescribeImageSpriteTemplates(Models\DescribeImageSpriteTemplatesRequest $req) 查询雪碧图模板，支持根据条件，分页查询。
  * @method Models\DescribeImageTaskDetailResponse DescribeImageTaskDetail(Models\DescribeImageTaskDetailRequest $req) 通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询7天之内提交的任务）。
  * @method Models\DescribeLiveRecordTemplatesResponse DescribeLiveRecordTemplates(Models\DescribeLiveRecordTemplatesRequest $req) 获取直播录制模板
+ * @method Models\DescribeMDPMPSUserInfoResponse DescribeMDPMPSUserInfo(Models\DescribeMDPMPSUserInfoRequest $req) 查询用户开通mps信息，是否开通/授权。
  * @method Models\DescribeMediaMetaDataResponse DescribeMediaMetaData(Models\DescribeMediaMetaDataRequest $req) 获取媒体的元信息，包括视频画面宽、高、编码格式、时长、帧率等。
  * @method Models\DescribePersonSamplesResponse DescribePersonSamples(Models\DescribePersonSamplesRequest $req) 该接口用于查询素材样本信息，支持根据素材 ID、名称、标签，分页查询。
  * @method Models\DescribeProcessImageTemplatesResponse DescribeProcessImageTemplates(Models\DescribeProcessImageTemplatesRequest $req) 查询图片处理模板列表。
  * @method Models\DescribeQualityControlTemplatesResponse DescribeQualityControlTemplates(Models\DescribeQualityControlTemplatesRequest $req) 查询用户自定义媒体质检模板，支持根据条件，分页查询。
+ * @method Models\DescribeSSAIActivateStateResponse DescribeSSAIActivateState(Models\DescribeSSAIActivateStateRequest $req) 查询SSAI开通状态
  * @method Models\DescribeSampleSnapshotTemplatesResponse DescribeSampleSnapshotTemplates(Models\DescribeSampleSnapshotTemplatesRequest $req) 查询采样截图模板，支持根据条件，分页查询。
  * @method Models\DescribeSchedulesResponse DescribeSchedules(Models\DescribeSchedulesRequest $req) 查询编排。
  * @method Models\DescribeSmartEraseTemplatesResponse DescribeSmartEraseTemplates(Models\DescribeSmartEraseTemplatesRequest $req) 根据智能擦除模板唯一标识，获取智能擦除模板详情列表。返回结果包含符合条件的所有用户自定义智能擦除模板及系统预置智能擦除模板
@@ -154,6 +171,22 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DescribeStreamLinkFlowsResponse DescribeStreamLinkFlows(Models\DescribeStreamLinkFlowsRequest $req) 批量查询媒体输入流的配置信息。
  * @method Models\DescribeStreamLinkRegionsResponse DescribeStreamLinkRegions(Models\DescribeStreamLinkRegionsRequest $req) 查询媒体传输所有地区。
  * @method Models\DescribeStreamLinkSecurityGroupsResponse DescribeStreamLinkSecurityGroups(Models\DescribeStreamLinkSecurityGroupsRequest $req) 批量查询安全组信息。
+ * @method Models\DescribeStreamPackageActivateStateResponse DescribeStreamPackageActivateState(Models\DescribeStreamPackageActivateStateRequest $req) 查询媒体封装用户开通情况。
+ * @method Models\DescribeStreamPackageLinearAssemblyChannelResponse DescribeStreamPackageLinearAssemblyChannel(Models\DescribeStreamPackageLinearAssemblyChannelRequest $req) 查询媒体包装线性组装频道信息。
+ * @method Models\DescribeStreamPackageLinearAssemblyChannelAlertsResponse DescribeStreamPackageLinearAssemblyChannelAlerts(Models\DescribeStreamPackageLinearAssemblyChannelAlertsRequest $req) 查询线性组装频道告警信息。
+ * @method Models\DescribeStreamPackageLinearAssemblyChannelsResponse DescribeStreamPackageLinearAssemblyChannels(Models\DescribeStreamPackageLinearAssemblyChannelsRequest $req) 查询线性组装频道信息列表。
+ * @method Models\DescribeStreamPackageLinearAssemblyProgramResponse DescribeStreamPackageLinearAssemblyProgram(Models\DescribeStreamPackageLinearAssemblyProgramRequest $req) 查询媒体包装Program信息。
+ * @method Models\DescribeStreamPackageLinearAssemblyProgramSchedulesResponse DescribeStreamPackageLinearAssemblyProgramSchedules(Models\DescribeStreamPackageLinearAssemblyProgramSchedulesRequest $req) 查询Programe信息列表。
+ * @method Models\DescribeStreamPackageLinearAssemblyProgramsResponse DescribeStreamPackageLinearAssemblyPrograms(Models\DescribeStreamPackageLinearAssemblyProgramsRequest $req) 查询Programe信息列表。
+ * @method Models\DescribeStreamPackageLinearAssemblyUsageResponse DescribeStreamPackageLinearAssemblyUsage(Models\DescribeStreamPackageLinearAssemblyUsageRequest $req) 频道线性组装用量查询
+ * @method Models\DescribeStreamPackageSSAIChannelResponse DescribeStreamPackageSSAIChannel(Models\DescribeStreamPackageSSAIChannelRequest $req) 查询广告插入配置。
+ * @method Models\DescribeStreamPackageSSAIChannelsResponse DescribeStreamPackageSSAIChannels(Models\DescribeStreamPackageSSAIChannelsRequest $req) 批量查询广告插入配置。
+ * @method Models\DescribeStreamPackageSSAIUsageResponse DescribeStreamPackageSSAIUsage(Models\DescribeStreamPackageSSAIUsageRequest $req) SSAI广告替换用量查询
+ * @method Models\DescribeStreamPackageSourceResponse DescribeStreamPackageSource(Models\DescribeStreamPackageSourceRequest $req) 查询媒体包装Source信息。
+ * @method Models\DescribeStreamPackageSourceAlertsResponse DescribeStreamPackageSourceAlerts(Models\DescribeStreamPackageSourceAlertsRequest $req) 查询线性组装Source告警信息。
+ * @method Models\DescribeStreamPackageSourceLocationResponse DescribeStreamPackageSourceLocation(Models\DescribeStreamPackageSourceLocationRequest $req) 查询媒体包装SourceLocation信息。
+ * @method Models\DescribeStreamPackageSourceLocationsResponse DescribeStreamPackageSourceLocations(Models\DescribeStreamPackageSourceLocationsRequest $req) 查询SourceLocation信息列表。
+ * @method Models\DescribeStreamPackageSourcesResponse DescribeStreamPackageSources(Models\DescribeStreamPackageSourcesRequest $req) 查询Source信息列表。
  * @method Models\DescribeSubtitleEmbedTemplatesResponse DescribeSubtitleEmbedTemplates(Models\DescribeSubtitleEmbedTemplatesRequest $req) 根据字幕压制模板唯一标识，获取字幕压制模板详情列表。返回结果包含符合条件的所有用户自定义字幕压制模板及系统预置字幕压制模板
  * @method Models\DescribeTaskDetailResponse DescribeTaskDetail(Models\DescribeTaskDetailRequest $req) 通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询7天之内提交的任务）。
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) * 该接口用于查询任务列表；
@@ -214,6 +247,11 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\ModifyStreamLinkInputResponse ModifyStreamLinkInput(Models\ModifyStreamLinkInputRequest $req) 修改媒体传输流的输入信息。
  * @method Models\ModifyStreamLinkOutputInfoResponse ModifyStreamLinkOutputInfo(Models\ModifyStreamLinkOutputInfoRequest $req) 修改媒体传输流的输出配置。
  * @method Models\ModifyStreamLinkSecurityGroupResponse ModifyStreamLinkSecurityGroup(Models\ModifyStreamLinkSecurityGroupRequest $req) 更新安全组。
+ * @method Models\ModifyStreamPackageLinearAssemblyChannelResponse ModifyStreamPackageLinearAssemblyChannel(Models\ModifyStreamPackageLinearAssemblyChannelRequest $req) 修改媒体包装Source信息。
+ * @method Models\ModifyStreamPackageLinearAssemblyProgramResponse ModifyStreamPackageLinearAssemblyProgram(Models\ModifyStreamPackageLinearAssemblyProgramRequest $req) 修改媒体包装Program信息。
+ * @method Models\ModifyStreamPackageSSAIChannelResponse ModifyStreamPackageSSAIChannel(Models\ModifyStreamPackageSSAIChannelRequest $req) 修改广告插入配置。
+ * @method Models\ModifyStreamPackageSourceResponse ModifyStreamPackageSource(Models\ModifyStreamPackageSourceRequest $req) 修改媒体包装Source信息。
+ * @method Models\ModifyStreamPackageSourceLocationResponse ModifyStreamPackageSourceLocation(Models\ModifyStreamPackageSourceLocationRequest $req) 修改媒体包装SourceLocation信息。
  * @method Models\ModifySubtitleEmbedTemplateResponse ModifySubtitleEmbedTemplate(Models\ModifySubtitleEmbedTemplateRequest $req) 修改用户自定义字幕压制模板。
  * @method Models\ModifyTranscodeTemplateResponse ModifyTranscodeTemplate(Models\ModifyTranscodeTemplateRequest $req) 修改用户自定义转码模板信息。
  * @method Models\ModifyWatermarkTemplateResponse ModifyWatermarkTemplate(Models\ModifyWatermarkTemplateRequest $req) 修改用户自定义水印模板，水印类型不允许修改。
@@ -252,7 +290,9 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\RecognizeMediaForZhiXueResponse RecognizeMediaForZhiXue(Models\RecognizeMediaForZhiXueRequest $req) 智能媒体识别，包含表情和动作识别。仅用于智学，其他调用无效。
  * @method Models\ResetWorkflowResponse ResetWorkflow(Models\ResetWorkflowRequest $req) 重新设置一个已经存在且处于禁用状态的工作流。
  * @method Models\StartStreamLinkFlowResponse StartStreamLinkFlow(Models\StartStreamLinkFlowRequest $req) 启动媒体传输流。
+ * @method Models\StartStreamPackageLinearAssemblyChannelResponse StartStreamPackageLinearAssemblyChannel(Models\StartStreamPackageLinearAssemblyChannelRequest $req) 启动媒体包装频道。
  * @method Models\StopStreamLinkFlowResponse StopStreamLinkFlow(Models\StopStreamLinkFlowRequest $req) 停止媒体传输流。
+ * @method Models\StopStreamPackageLinearAssemblyChannelResponse StopStreamPackageLinearAssemblyChannel(Models\StopStreamPackageLinearAssemblyChannelRequest $req) 停止线性组装频道。
  * @method Models\SyncDubbingResponse SyncDubbing(Models\SyncDubbingRequest $req) 同步接口，返回克隆音色Id或合成音频结果
  * @method Models\TextTranslationResponse TextTranslation(Models\TextTranslationRequest $req) 文本翻译
  * @method Models\WithdrawsWatermarkResponse WithdrawsWatermark(Models\WithdrawsWatermarkRequest $req) 提取视频中的盲水印。

@@ -116,6 +116,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\ModifyInstanceAccountResponse ModifyInstanceAccount(Models\ModifyInstanceAccountRequest $req) 本接口（ModifyInstanceAccount）用于修改实例账号。
  * @method Models\ModifyInstanceAvailabilityZonesResponse ModifyInstanceAvailabilityZones(Models\ModifyInstanceAvailabilityZonesRequest $req) 本接口（ModifyInstanceAvailabilityZones）用于变更实例可用区
  * @method Models\ModifyInstanceBackupModeResponse ModifyInstanceBackupMode(Models\ModifyInstanceBackupModeRequest $req) 本接口（ModifyInstanceBackupMode）用于修改实例的备份模式。
+ * @method Models\ModifyInstanceChargeTypeResponse ModifyInstanceChargeType(Models\ModifyInstanceChargeTypeRequest $req) 本接口用于变更实例的计费类型
  * @method Models\ModifyInstanceEventResponse ModifyInstanceEvent(Models\ModifyInstanceEventRequest $req) 本接口（ModifyInstanceEvent）用于修改实例的运维事件的执行计划。
  * @method Models\ModifyInstanceLogDeliveryResponse ModifyInstanceLogDelivery(Models\ModifyInstanceLogDeliveryRequest $req) 本接口（ModifyInstanceLogDelivery）用于开启或关闭投递实例日志到CLS。
  * @method Models\ModifyInstanceParamsResponse ModifyInstanceParams(Models\ModifyInstanceParamsRequest $req) 本接口（ModifyInstanceParams）用于修改 Redis 实例的参数配置。

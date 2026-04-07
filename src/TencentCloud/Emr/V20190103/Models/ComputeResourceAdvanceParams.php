@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 计算资源高级设置
  *
- * @method array getLabels() 获取节点Label数组
- * @method void setLabels(array $Labels) 设置节点Label数组
- * @method array getTaints() 获取节点污点
- * @method void setTaints(array $Taints) 设置节点污点
- * @method string getPreStartUserScript() 获取base64 编码的用户脚本，在初始化节点之前执行
- * @method void setPreStartUserScript(string $PreStartUserScript) 设置base64 编码的用户脚本，在初始化节点之前执行
- * @method string getUserScript() 获取base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看
- * @method void setUserScript(string $UserScript) 设置base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看
+ * @method array getLabels() 获取<p>节点Label数组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLabels(array $Labels) 设置<p>节点Label数组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTaints() 获取<p>节点污点</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaints(array $Taints) 设置<p>节点污点</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPreStartUserScript() 获取<p>base64 编码的用户脚本，在初始化节点之前执行</p>
+ * @method void setPreStartUserScript(string $PreStartUserScript) 设置<p>base64 编码的用户脚本，在初始化节点之前执行</p>
+ * @method string getUserScript() 获取<p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看</p>
+ * @method void setUserScript(string $UserScript) 设置<p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看</p>
  */
 class ComputeResourceAdvanceParams extends AbstractModel
 {
     /**
-     * @var array 节点Label数组
+     * @var array <p>节点Label数组</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Labels;
 
     /**
-     * @var array 节点污点
+     * @var array <p>节点污点</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Taints;
 
     /**
-     * @var string base64 编码的用户脚本，在初始化节点之前执行
+     * @var string <p>base64 编码的用户脚本，在初始化节点之前执行</p>
      */
     public $PreStartUserScript;
 
     /**
-     * @var string base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看
+     * @var string <p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看</p>
      */
     public $UserScript;
 
     /**
-     * @param array $Labels 节点Label数组
-     * @param array $Taints 节点污点
-     * @param string $PreStartUserScript base64 编码的用户脚本，在初始化节点之前执行
-     * @param string $UserScript base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看
+     * @param array $Labels <p>节点Label数组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Taints <p>节点污点</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PreStartUserScript <p>base64 编码的用户脚本，在初始化节点之前执行</p>
+     * @param string $UserScript <p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看</p>
      */
     function __construct()
     {

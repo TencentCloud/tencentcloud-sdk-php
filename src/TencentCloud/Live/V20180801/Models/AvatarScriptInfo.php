@@ -20,94 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数字人直播间话术信息。
  *
- * @method string getScriptId() 获取数字人直播间话术 ID。
- * @method void setScriptId(string $ScriptId) 设置数字人直播间话术 ID。
- * @method string getTitle() 获取话术标题。
- * @method void setTitle(string $Title) 设置话术标题。
- * @method string getContent() 获取话术内容。
- * @method void setContent(string $Content) 设置话术内容。
- * @method string getStatus() 获取话术状态。
-PENDING --未生成。
-PROCESSING --生成中。
-READY --已生成。
- * @method void setStatus(string $Status) 设置话术状态。
-PENDING --未生成。
-PROCESSING --生成中。
-READY --已生成。
- * @method integer getDuration() 获取时长。单位：毫秒。
- * @method void setDuration(integer $Duration) 设置时长。单位：毫秒。
- * @method integer getPosition() 获取话术位置。
- * @method void setPosition(integer $Position) 设置话术位置。
- * @method string getCreateTime() 获取话术创建时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
- * @method void setCreateTime(string $CreateTime) 设置话术创建时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
- * @method string getUpdateTime() 获取话术最后更新时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
- * @method void setUpdateTime(string $UpdateTime) 设置话术最后更新时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
+ * @method string getScriptId() 获取<p>数字人直播间话术 ID。</p>
+ * @method void setScriptId(string $ScriptId) 设置<p>数字人直播间话术 ID。</p>
+ * @method string getProductId() 获取<p>数字人直播间产品 ID。</p>
+ * @method void setProductId(string $ProductId) 设置<p>数字人直播间产品 ID。</p>
+ * @method string getTitle() 获取<p>话术标题。</p>
+ * @method void setTitle(string $Title) 设置<p>话术标题。</p>
+ * @method string getContent() 获取<p>话术内容。</p>
+ * @method void setContent(string $Content) 设置<p>话术内容。</p>
+ * @method string getStatus() 获取<p>话术状态。PENDING --未生成。PROCESSING --生成中。READY --已生成。FAILED-失败</p><p>枚举值：</p><ul><li>FAILED： 失败</li></ul>
+ * @method void setStatus(string $Status) 设置<p>话术状态。PENDING --未生成。PROCESSING --生成中。READY --已生成。FAILED-失败</p><p>枚举值：</p><ul><li>FAILED： 失败</li></ul>
+ * @method integer getDuration() 获取<p>时长。单位：毫秒。</p>
+ * @method void setDuration(integer $Duration) 设置<p>时长。单位：毫秒。</p>
+ * @method integer getPosition() 获取<p>话术位置。</p>
+ * @method void setPosition(integer $Position) 设置<p>话术位置。</p>
+ * @method string getCreateTime() 获取<p>话术创建时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>话术创建时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
+ * @method string getUpdateTime() 获取<p>话术最后更新时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>话术最后更新时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
  */
 class AvatarScriptInfo extends AbstractModel
 {
     /**
-     * @var string 数字人直播间话术 ID。
+     * @var string <p>数字人直播间话术 ID。</p>
      */
     public $ScriptId;
 
     /**
-     * @var string 话术标题。
+     * @var string <p>数字人直播间产品 ID。</p>
+     */
+    public $ProductId;
+
+    /**
+     * @var string <p>话术标题。</p>
      */
     public $Title;
 
     /**
-     * @var string 话术内容。
+     * @var string <p>话术内容。</p>
      */
     public $Content;
 
     /**
-     * @var string 话术状态。
-PENDING --未生成。
-PROCESSING --生成中。
-READY --已生成。
+     * @var string <p>话术状态。PENDING --未生成。PROCESSING --生成中。READY --已生成。FAILED-失败</p><p>枚举值：</p><ul><li>FAILED： 失败</li></ul>
      */
     public $Status;
 
     /**
-     * @var integer 时长。单位：毫秒。
+     * @var integer <p>时长。单位：毫秒。</p>
      */
     public $Duration;
 
     /**
-     * @var integer 话术位置。
+     * @var integer <p>话术位置。</p>
      */
     public $Position;
 
     /**
-     * @var string 话术创建时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
+     * @var string <p>话术创建时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 话术最后更新时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
+     * @var string <p>话术最后更新时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
      */
     public $UpdateTime;
 
     /**
-     * @param string $ScriptId 数字人直播间话术 ID。
-     * @param string $Title 话术标题。
-     * @param string $Content 话术内容。
-     * @param string $Status 话术状态。
-PENDING --未生成。
-PROCESSING --生成中。
-READY --已生成。
-     * @param integer $Duration 时长。单位：毫秒。
-     * @param integer $Position 话术位置。
-     * @param string $CreateTime 话术创建时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
-     * @param string $UpdateTime 话术最后更新时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
+     * @param string $ScriptId <p>数字人直播间话术 ID。</p>
+     * @param string $ProductId <p>数字人直播间产品 ID。</p>
+     * @param string $Title <p>话术标题。</p>
+     * @param string $Content <p>话术内容。</p>
+     * @param string $Status <p>话术状态。PENDING --未生成。PROCESSING --生成中。READY --已生成。FAILED-失败</p><p>枚举值：</p><ul><li>FAILED： 失败</li></ul>
+     * @param integer $Duration <p>时长。单位：毫秒。</p>
+     * @param integer $Position <p>话术位置。</p>
+     * @param string $CreateTime <p>话术创建时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
+     * @param string $UpdateTime <p>话术最后更新时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
      */
     function __construct()
     {
@@ -124,6 +112,10 @@ READY --已生成。
         }
         if (array_key_exists("ScriptId",$param) and $param["ScriptId"] !== null) {
             $this->ScriptId = $param["ScriptId"];
+        }
+
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
         }
 
         if (array_key_exists("Title",$param) and $param["Title"] !== null) {

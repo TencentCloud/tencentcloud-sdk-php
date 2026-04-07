@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInstances返回参数结构体
  *
- * @method string getDealId() 获取交易的ID。
- * @method void setDealId(string $DealId) 设置交易的ID。
- * @method array getInstanceIds() 获取实例ID。
- * @method void setInstanceIds(array $InstanceIds) 设置实例ID。
- * @method string getDealName() 获取订单号。
- * @method void setDealName(string $DealName) 设置订单号。
+ * @method string getDealId() 获取<p>交易的ID。</p>
+ * @method void setDealId(string $DealId) 设置<p>交易的ID。</p>
+ * @method array getInstanceIds() 获取<p>实例ID。</p>
+ * @method void setInstanceIds(array $InstanceIds) 设置<p>实例ID。</p>
+ * @method string getDealName() 获取<p>订单号。</p>
+ * @method void setDealName(string $DealName) 设置<p>订单号。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateInstancesResponse extends AbstractModel
 {
     /**
-     * @var string 交易的ID。
+     * @var string <p>交易的ID。</p>
      * @deprecated
      */
     public $DealId;
 
     /**
-     * @var array 实例ID。
+     * @var array <p>实例ID。</p>
      */
     public $InstanceIds;
 
     /**
-     * @var string 订单号。
+     * @var string <p>订单号。</p>
      */
     public $DealName;
 
@@ -53,9 +53,9 @@ class CreateInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DealId 交易的ID。
-     * @param array $InstanceIds 实例ID。
-     * @param string $DealName 订单号。
+     * @param string $DealId <p>交易的ID。</p>
+     * @param array $InstanceIds <p>实例ID。</p>
+     * @param string $DealName <p>订单号。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

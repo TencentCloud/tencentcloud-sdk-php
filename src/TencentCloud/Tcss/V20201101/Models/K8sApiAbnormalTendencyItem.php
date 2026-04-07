@@ -20,106 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * k8sapi异常请求趋势Item
  *
- * @method string getDate() 获取日期
- * @method void setDate(string $Date) 设置日期
- * @method integer getExceptionUARequestCount() 获取异常UA请求事件数
- * @method void setExceptionUARequestCount(integer $ExceptionUARequestCount) 设置异常UA请求事件数
- * @method integer getAnonymousUserRightCount() 获取匿名用户权限事件数
- * @method void setAnonymousUserRightCount(integer $AnonymousUserRightCount) 设置匿名用户权限事件数
- * @method integer getCredentialInformationObtainCount() 获取凭据信息获取事件数
- * @method void setCredentialInformationObtainCount(integer $CredentialInformationObtainCount) 设置凭据信息获取事件数
- * @method integer getSensitiveDataMountCount() 获取敏感数据挂载事件数
- * @method void setSensitiveDataMountCount(integer $SensitiveDataMountCount) 设置敏感数据挂载事件数
- * @method integer getCmdExecCount() 获取命令执行事件数
- * @method void setCmdExecCount(integer $CmdExecCount) 设置命令执行事件数
- * @method integer getAbnormalScheduledTaskCount() 获取异常定时任务事件数
- * @method void setAbnormalScheduledTaskCount(integer $AbnormalScheduledTaskCount) 设置异常定时任务事件数
- * @method integer getStaticsPodCreateCount() 获取静态Pod创建数
- * @method void setStaticsPodCreateCount(integer $StaticsPodCreateCount) 设置静态Pod创建数
- * @method integer getDoubtfulContainerCreateCount() 获取可疑容器创建数
- * @method void setDoubtfulContainerCreateCount(integer $DoubtfulContainerCreateCount) 设置可疑容器创建数
- * @method integer getUserDefinedRuleCount() 获取自定义规则事件数
- * @method void setUserDefinedRuleCount(integer $UserDefinedRuleCount) 设置自定义规则事件数
- * @method integer getAnonymousAccessCount() 获取匿名访问事件数
- * @method void setAnonymousAccessCount(integer $AnonymousAccessCount) 设置匿名访问事件数
- * @method integer getPrivilegeContainerCount() 获取特权容器事件数
- * @method void setPrivilegeContainerCount(integer $PrivilegeContainerCount) 设置特权容器事件数
+ * @method string getDate() 获取<p>日期</p>
+ * @method void setDate(string $Date) 设置<p>日期</p>
+ * @method integer getExceptionUARequestCount() 获取<p>异常UA请求事件数</p>
+ * @method void setExceptionUARequestCount(integer $ExceptionUARequestCount) 设置<p>异常UA请求事件数</p>
+ * @method integer getAnonymousUserRightCount() 获取<p>匿名用户权限事件数</p>
+ * @method void setAnonymousUserRightCount(integer $AnonymousUserRightCount) 设置<p>匿名用户权限事件数</p>
+ * @method integer getCredentialInformationObtainCount() 获取<p>凭据信息获取事件数</p>
+ * @method void setCredentialInformationObtainCount(integer $CredentialInformationObtainCount) 设置<p>凭据信息获取事件数</p>
+ * @method integer getSensitiveDataMountCount() 获取<p>敏感数据挂载事件数</p>
+ * @method void setSensitiveDataMountCount(integer $SensitiveDataMountCount) 设置<p>敏感数据挂载事件数</p>
+ * @method integer getCmdExecCount() 获取<p>命令执行事件数</p>
+ * @method void setCmdExecCount(integer $CmdExecCount) 设置<p>命令执行事件数</p>
+ * @method integer getAbnormalScheduledTaskCount() 获取<p>异常定时任务事件数</p>
+ * @method void setAbnormalScheduledTaskCount(integer $AbnormalScheduledTaskCount) 设置<p>异常定时任务事件数</p>
+ * @method integer getStaticsPodCreateCount() 获取<p>静态Pod创建数</p>
+ * @method void setStaticsPodCreateCount(integer $StaticsPodCreateCount) 设置<p>静态Pod创建数</p>
+ * @method integer getDoubtfulContainerCreateCount() 获取<p>可疑容器创建数</p>
+ * @method void setDoubtfulContainerCreateCount(integer $DoubtfulContainerCreateCount) 设置<p>可疑容器创建数</p>
+ * @method integer getUserDefinedRuleCount() 获取<p>自定义规则事件数</p>
+ * @method void setUserDefinedRuleCount(integer $UserDefinedRuleCount) 设置<p>自定义规则事件数</p>
+ * @method integer getAnonymousAccessCount() 获取<p>匿名访问事件数</p>
+ * @method void setAnonymousAccessCount(integer $AnonymousAccessCount) 设置<p>匿名访问事件数</p>
+ * @method integer getPrivilegeContainerCount() 获取<p>特权容器事件数</p>
+ * @method void setPrivilegeContainerCount(integer $PrivilegeContainerCount) 设置<p>特权容器事件数</p>
+ * @method array getRuleTypeCountSet() 获取<p>规则类型对应告警数量</p>
+ * @method void setRuleTypeCountSet(array $RuleTypeCountSet) 设置<p>规则类型对应告警数量</p>
  */
 class K8sApiAbnormalTendencyItem extends AbstractModel
 {
     /**
-     * @var string 日期
+     * @var string <p>日期</p>
      */
     public $Date;
 
     /**
-     * @var integer 异常UA请求事件数
+     * @var integer <p>异常UA请求事件数</p>
      */
     public $ExceptionUARequestCount;
 
     /**
-     * @var integer 匿名用户权限事件数
+     * @var integer <p>匿名用户权限事件数</p>
      */
     public $AnonymousUserRightCount;
 
     /**
-     * @var integer 凭据信息获取事件数
+     * @var integer <p>凭据信息获取事件数</p>
      */
     public $CredentialInformationObtainCount;
 
     /**
-     * @var integer 敏感数据挂载事件数
+     * @var integer <p>敏感数据挂载事件数</p>
      */
     public $SensitiveDataMountCount;
 
     /**
-     * @var integer 命令执行事件数
+     * @var integer <p>命令执行事件数</p>
      */
     public $CmdExecCount;
 
     /**
-     * @var integer 异常定时任务事件数
+     * @var integer <p>异常定时任务事件数</p>
      */
     public $AbnormalScheduledTaskCount;
 
     /**
-     * @var integer 静态Pod创建数
+     * @var integer <p>静态Pod创建数</p>
      */
     public $StaticsPodCreateCount;
 
     /**
-     * @var integer 可疑容器创建数
+     * @var integer <p>可疑容器创建数</p>
      */
     public $DoubtfulContainerCreateCount;
 
     /**
-     * @var integer 自定义规则事件数
+     * @var integer <p>自定义规则事件数</p>
      */
     public $UserDefinedRuleCount;
 
     /**
-     * @var integer 匿名访问事件数
+     * @var integer <p>匿名访问事件数</p>
      */
     public $AnonymousAccessCount;
 
     /**
-     * @var integer 特权容器事件数
+     * @var integer <p>特权容器事件数</p>
      */
     public $PrivilegeContainerCount;
 
     /**
-     * @param string $Date 日期
-     * @param integer $ExceptionUARequestCount 异常UA请求事件数
-     * @param integer $AnonymousUserRightCount 匿名用户权限事件数
-     * @param integer $CredentialInformationObtainCount 凭据信息获取事件数
-     * @param integer $SensitiveDataMountCount 敏感数据挂载事件数
-     * @param integer $CmdExecCount 命令执行事件数
-     * @param integer $AbnormalScheduledTaskCount 异常定时任务事件数
-     * @param integer $StaticsPodCreateCount 静态Pod创建数
-     * @param integer $DoubtfulContainerCreateCount 可疑容器创建数
-     * @param integer $UserDefinedRuleCount 自定义规则事件数
-     * @param integer $AnonymousAccessCount 匿名访问事件数
-     * @param integer $PrivilegeContainerCount 特权容器事件数
+     * @var array <p>规则类型对应告警数量</p>
+     */
+    public $RuleTypeCountSet;
+
+    /**
+     * @param string $Date <p>日期</p>
+     * @param integer $ExceptionUARequestCount <p>异常UA请求事件数</p>
+     * @param integer $AnonymousUserRightCount <p>匿名用户权限事件数</p>
+     * @param integer $CredentialInformationObtainCount <p>凭据信息获取事件数</p>
+     * @param integer $SensitiveDataMountCount <p>敏感数据挂载事件数</p>
+     * @param integer $CmdExecCount <p>命令执行事件数</p>
+     * @param integer $AbnormalScheduledTaskCount <p>异常定时任务事件数</p>
+     * @param integer $StaticsPodCreateCount <p>静态Pod创建数</p>
+     * @param integer $DoubtfulContainerCreateCount <p>可疑容器创建数</p>
+     * @param integer $UserDefinedRuleCount <p>自定义规则事件数</p>
+     * @param integer $AnonymousAccessCount <p>匿名访问事件数</p>
+     * @param integer $PrivilegeContainerCount <p>特权容器事件数</p>
+     * @param array $RuleTypeCountSet <p>规则类型对应告警数量</p>
      */
     function __construct()
     {
@@ -180,6 +188,15 @@ class K8sApiAbnormalTendencyItem extends AbstractModel
 
         if (array_key_exists("PrivilegeContainerCount",$param) and $param["PrivilegeContainerCount"] !== null) {
             $this->PrivilegeContainerCount = $param["PrivilegeContainerCount"];
+        }
+
+        if (array_key_exists("RuleTypeCountSet",$param) and $param["RuleTypeCountSet"] !== null) {
+            $this->RuleTypeCountSet = [];
+            foreach ($param["RuleTypeCountSet"] as $key => $value){
+                $obj = new K8SAPIRuleTypeCountItem();
+                $obj->deserialize($value);
+                array_push($this->RuleTypeCountSet, $obj);
+            }
         }
     }
 }

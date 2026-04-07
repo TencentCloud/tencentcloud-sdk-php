@@ -14,24 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcb\V20180608\Models;
+namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ReinstateEnv请求参数结构体
+ * DescribeSSAIActivateState请求参数结构体
  *
- * @method string getEnvId() 获取环境ID
- * @method void setEnvId(string $EnvId) 设置环境ID
+
  */
-class ReinstateEnvRequest extends AbstractModel
+class DescribeSSAIActivateStateRequest extends AbstractModel
 {
-    /**
-     * @var string 环境ID
-     */
-    public $EnvId;
+
 
     /**
-     * @param string $EnvId 环境ID
+
      */
     function __construct()
     {
@@ -46,8 +42,6 @@ class ReinstateEnvRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
-            $this->EnvId = $param["EnvId"];
-        }
+
     }
 }

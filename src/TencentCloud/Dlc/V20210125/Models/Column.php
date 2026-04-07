@@ -20,106 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据表列信息。
  *
- * @method string getName() 获取列名称，不区分大小写，最大支持25个字符。
- * @method void setName(string $Name) 设置列名称，不区分大小写，最大支持25个字符。
- * @method string getType() 获取string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array|map|struct|uniontype
- * @method void setType(string $Type) 设置string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array|map|struct|uniontype
- * @method string getComment() 获取对该类的注释。
+ * @method string getName() 获取<p>列名称，不区分大小写，最大支持25个字符。</p>
+ * @method void setName(string $Name) 设置<p>列名称，不区分大小写，最大支持25个字符。</p>
+ * @method string getType() 获取<p>string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array|map|struct|uniontype</p>
+ * @method void setType(string $Type) 设置<p>string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array|map|struct|uniontype</p>
+ * @method string getComment() 获取<p>对该类的注释。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setComment(string $Comment) 设置对该类的注释。
+ * @method void setComment(string $Comment) 设置<p>对该类的注释。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPrecision() 获取表示整个 numeric 的长度
- * @method void setPrecision(integer $Precision) 设置表示整个 numeric 的长度
- * @method integer getScale() 获取表示小数部分的长度
- * @method void setScale(integer $Scale) 设置表示小数部分的长度
- * @method string getNullable() 获取是否为null
- * @method void setNullable(string $Nullable) 设置是否为null
- * @method integer getPosition() 获取字段位置，小的在前
- * @method void setPosition(integer $Position) 设置字段位置，小的在前
- * @method string getCreateTime() 获取字段创建时间
- * @method void setCreateTime(string $CreateTime) 设置字段创建时间
- * @method string getModifiedTime() 获取字段修改时间
- * @method void setModifiedTime(string $ModifiedTime) 设置字段修改时间
- * @method boolean getIsPartition() 获取是否为分区字段
- * @method void setIsPartition(boolean $IsPartition) 设置是否为分区字段
- * @method DataMaskStrategyInfo getDataMaskStrategyInfo() 获取数据脱敏策略信息
+ * @method integer getPrecision() 获取<p>表示整个 numeric 的长度</p>
+ * @method void setPrecision(integer $Precision) 设置<p>表示整个 numeric 的长度</p>
+ * @method integer getScale() 获取<p>表示小数部分的长度</p>
+ * @method void setScale(integer $Scale) 设置<p>表示小数部分的长度</p>
+ * @method string getNullable() 获取<p>是否为null</p>
+ * @method void setNullable(string $Nullable) 设置<p>是否为null</p>
+ * @method integer getPosition() 获取<p>字段位置，小的在前</p>
+ * @method void setPosition(integer $Position) 设置<p>字段位置，小的在前</p>
+ * @method string getCreateTime() 获取<p>字段创建时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>字段创建时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
+ * @method string getModifiedTime() 获取<p>字段修改时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
+ * @method void setModifiedTime(string $ModifiedTime) 设置<p>字段修改时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
+ * @method boolean getIsPartition() 获取<p>是否为分区字段</p>
+ * @method void setIsPartition(boolean $IsPartition) 设置<p>是否为分区字段</p>
+ * @method DataMaskStrategyInfo getDataMaskStrategyInfo() 获取<p>数据脱敏策略信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataMaskStrategyInfo(DataMaskStrategyInfo $DataMaskStrategyInfo) 设置数据脱敏策略信息
+ * @method void setDataMaskStrategyInfo(DataMaskStrategyInfo $DataMaskStrategyInfo) 设置<p>数据脱敏策略信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTypeText() 获取<p>数据字段说明</p>
+ * @method void setTypeText(string $TypeText) 设置<p>数据字段说明</p>
  */
 class Column extends AbstractModel
 {
     /**
-     * @var string 列名称，不区分大小写，最大支持25个字符。
+     * @var string <p>列名称，不区分大小写，最大支持25个字符。</p>
      */
     public $Name;
 
     /**
-     * @var string string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array|map|struct|uniontype
+     * @var string <p>string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array|map|struct|uniontype</p>
      */
     public $Type;
 
     /**
-     * @var string 对该类的注释。
+     * @var string <p>对该类的注释。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Comment;
 
     /**
-     * @var integer 表示整个 numeric 的长度
+     * @var integer <p>表示整个 numeric 的长度</p>
      */
     public $Precision;
 
     /**
-     * @var integer 表示小数部分的长度
+     * @var integer <p>表示小数部分的长度</p>
      */
     public $Scale;
 
     /**
-     * @var string 是否为null
+     * @var string <p>是否为null</p>
      */
     public $Nullable;
 
     /**
-     * @var integer 字段位置，小的在前
+     * @var integer <p>字段位置，小的在前</p>
      */
     public $Position;
 
     /**
-     * @var string 字段创建时间
+     * @var string <p>字段创建时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 字段修改时间
+     * @var string <p>字段修改时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
      */
     public $ModifiedTime;
 
     /**
-     * @var boolean 是否为分区字段
+     * @var boolean <p>是否为分区字段</p>
      */
     public $IsPartition;
 
     /**
-     * @var DataMaskStrategyInfo 数据脱敏策略信息
+     * @var DataMaskStrategyInfo <p>数据脱敏策略信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataMaskStrategyInfo;
 
     /**
-     * @param string $Name 列名称，不区分大小写，最大支持25个字符。
-     * @param string $Type string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array|map|struct|uniontype
-     * @param string $Comment 对该类的注释。
+     * @var string <p>数据字段说明</p>
+     */
+    public $TypeText;
+
+    /**
+     * @param string $Name <p>列名称，不区分大小写，最大支持25个字符。</p>
+     * @param string $Type <p>string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array|map|struct|uniontype</p>
+     * @param string $Comment <p>对该类的注释。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Precision 表示整个 numeric 的长度
-     * @param integer $Scale 表示小数部分的长度
-     * @param string $Nullable 是否为null
-     * @param integer $Position 字段位置，小的在前
-     * @param string $CreateTime 字段创建时间
-     * @param string $ModifiedTime 字段修改时间
-     * @param boolean $IsPartition 是否为分区字段
-     * @param DataMaskStrategyInfo $DataMaskStrategyInfo 数据脱敏策略信息
+     * @param integer $Precision <p>表示整个 numeric 的长度</p>
+     * @param integer $Scale <p>表示小数部分的长度</p>
+     * @param string $Nullable <p>是否为null</p>
+     * @param integer $Position <p>字段位置，小的在前</p>
+     * @param string $CreateTime <p>字段创建时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
+     * @param string $ModifiedTime <p>字段修改时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
+     * @param boolean $IsPartition <p>是否为分区字段</p>
+     * @param DataMaskStrategyInfo $DataMaskStrategyInfo <p>数据脱敏策略信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TypeText <p>数据字段说明</p>
      */
     function __construct()
     {
@@ -177,6 +185,10 @@ class Column extends AbstractModel
         if (array_key_exists("DataMaskStrategyInfo",$param) and $param["DataMaskStrategyInfo"] !== null) {
             $this->DataMaskStrategyInfo = new DataMaskStrategyInfo();
             $this->DataMaskStrategyInfo->deserialize($param["DataMaskStrategyInfo"]);
+        }
+
+        if (array_key_exists("TypeText",$param) and $param["TypeText"] !== null) {
+            $this->TypeText = $param["TypeText"];
         }
     }
 }

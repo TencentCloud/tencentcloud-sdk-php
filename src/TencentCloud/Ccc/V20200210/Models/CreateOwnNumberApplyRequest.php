@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMobileNddPrefix(string $MobileNddPrefix) 设置国内长途手机前缀码
  * @method boolean getLocalNumberTrimAC() 获取同市固话去掉区号
  * @method void setLocalNumberTrimAC(boolean $LocalNumberTrimAC) 设置同市固话去掉区号
+ * @method boolean getCalleeFormatPassthrough() 获取被叫格式透传 （完成透传用户输入，不做处理）
+ * @method void setCalleeFormatPassthrough(boolean $CalleeFormatPassthrough) 设置被叫格式透传 （完成透传用户输入，不做处理）
+ * @method boolean getCallerFormatPassthrough() 获取主叫格式透传 （完成透传用户输入，不做处理）
+ * @method void setCallerFormatPassthrough(boolean $CallerFormatPassthrough) 设置主叫格式透传 （完成透传用户输入，不做处理）
+ * @method string getInternationalNumberPrefix() 获取国际长途前缀码
+ * @method void setInternationalNumberPrefix(string $InternationalNumberPrefix) 设置国际长途前缀码
  */
 class CreateOwnNumberApplyRequest extends AbstractModel
 {
@@ -66,12 +72,30 @@ class CreateOwnNumberApplyRequest extends AbstractModel
     public $LocalNumberTrimAC;
 
     /**
+     * @var boolean 被叫格式透传 （完成透传用户输入，不做处理）
+     */
+    public $CalleeFormatPassthrough;
+
+    /**
+     * @var boolean 主叫格式透传 （完成透传用户输入，不做处理）
+     */
+    public $CallerFormatPassthrough;
+
+    /**
+     * @var string 国际长途前缀码
+     */
+    public $InternationalNumberPrefix;
+
+    /**
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param integer $SipTrunkId SIP通道ID
      * @param array $DetailList 线路相关参数
      * @param string $Prefix 送号前缀
      * @param string $MobileNddPrefix 国内长途手机前缀码
      * @param boolean $LocalNumberTrimAC 同市固话去掉区号
+     * @param boolean $CalleeFormatPassthrough 被叫格式透传 （完成透传用户输入，不做处理）
+     * @param boolean $CallerFormatPassthrough 主叫格式透传 （完成透传用户输入，不做处理）
+     * @param string $InternationalNumberPrefix 国际长途前缀码
      */
     function __construct()
     {
@@ -113,6 +137,18 @@ class CreateOwnNumberApplyRequest extends AbstractModel
 
         if (array_key_exists("LocalNumberTrimAC",$param) and $param["LocalNumberTrimAC"] !== null) {
             $this->LocalNumberTrimAC = $param["LocalNumberTrimAC"];
+        }
+
+        if (array_key_exists("CalleeFormatPassthrough",$param) and $param["CalleeFormatPassthrough"] !== null) {
+            $this->CalleeFormatPassthrough = $param["CalleeFormatPassthrough"];
+        }
+
+        if (array_key_exists("CallerFormatPassthrough",$param) and $param["CallerFormatPassthrough"] !== null) {
+            $this->CallerFormatPassthrough = $param["CallerFormatPassthrough"];
+        }
+
+        if (array_key_exists("InternationalNumberPrefix",$param) and $param["InternationalNumberPrefix"] !== null) {
+            $this->InternationalNumberPrefix = $param["InternationalNumberPrefix"];
         }
     }
 }

@@ -20,53 +20,53 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ScaleOutInstance返回参数结构体
  *
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
- * @method array getDealNames() 获取订单号。
+ * @method string getInstanceId() 获取<p>实例ID。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID。</p>
+ * @method array getDealNames() 获取<p>订单号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDealNames(array $DealNames) 设置订单号。
+ * @method void setDealNames(array $DealNames) 设置<p>订单号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getClientToken() 获取客户端Token。
- * @method void setClientToken(string $ClientToken) 设置客户端Token。
- * @method integer getFlowId() 获取扩容流程ID。
- * @method void setFlowId(integer $FlowId) 设置扩容流程ID。
- * @method string getBillId() 获取大订单号。
- * @method void setBillId(string $BillId) 设置大订单号。
- * @method string getTraceId() 获取扩容TraceId
- * @method void setTraceId(string $TraceId) 设置扩容TraceId
+ * @method string getClientToken() 获取<p>客户端Token。</p>
+ * @method void setClientToken(string $ClientToken) 设置<p>客户端Token。</p>
+ * @method integer getFlowId() 获取<p>扩容流程ID。</p>
+ * @method void setFlowId(integer $FlowId) 设置<p>扩容流程ID。</p>
+ * @method string getBillId() 获取<p>大订单号。</p>
+ * @method void setBillId(string $BillId) 设置<p>大订单号。</p>
+ * @method string getTraceId() 获取<p>扩容TraceId</p>
+ * @method void setTraceId(string $TraceId) 设置<p>扩容TraceId</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ScaleOutInstanceResponse extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string <p>实例ID。</p>
      */
     public $InstanceId;
 
     /**
-     * @var array 订单号。
+     * @var array <p>订单号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DealNames;
 
     /**
-     * @var string 客户端Token。
+     * @var string <p>客户端Token。</p>
      */
     public $ClientToken;
 
     /**
-     * @var integer 扩容流程ID。
+     * @var integer <p>扩容流程ID。</p>
      */
     public $FlowId;
 
     /**
-     * @var string 大订单号。
+     * @var string <p>大订单号。</p>
      */
     public $BillId;
 
     /**
-     * @var string 扩容TraceId
+     * @var string <p>扩容TraceId</p>
      */
     public $TraceId;
 
@@ -76,13 +76,13 @@ class ScaleOutInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $InstanceId 实例ID。
-     * @param array $DealNames 订单号。
+     * @param string $InstanceId <p>实例ID。</p>
+     * @param array $DealNames <p>订单号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ClientToken 客户端Token。
-     * @param integer $FlowId 扩容流程ID。
-     * @param string $BillId 大订单号。
-     * @param string $TraceId 扩容TraceId
+     * @param string $ClientToken <p>客户端Token。</p>
+     * @param integer $FlowId <p>扩容流程ID。</p>
+     * @param string $BillId <p>大订单号。</p>
+     * @param string $TraceId <p>扩容TraceId</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

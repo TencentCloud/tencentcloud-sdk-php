@@ -133,6 +133,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeClusterRollOutSequenceTagsResponse DescribeClusterRollOutSequenceTags(Models\DescribeClusterRollOutSequenceTagsRequest $req) 查询集群发布序列标签
  * @method Models\DescribeClusterRouteTablesResponse DescribeClusterRouteTables(Models\DescribeClusterRouteTablesRequest $req) 查询集群路由表
  * @method Models\DescribeClusterRoutesResponse DescribeClusterRoutes(Models\DescribeClusterRoutesRequest $req) 查询集群路由
+ * @method Models\DescribeClusterSchedulerPolicyResponse DescribeClusterSchedulerPolicy(Models\DescribeClusterSchedulerPolicyRequest $req) 查询集群调度策略
  * @method Models\DescribeClusterSecurityResponse DescribeClusterSecurity(Models\DescribeClusterSecurityRequest $req) 集群的密钥信息
  * @method Models\DescribeClusterStatusResponse DescribeClusterStatus(Models\DescribeClusterStatusRequest $req) 查看集群状态列表
  * @method Models\DescribeClusterVirtualNodeResponse DescribeClusterVirtualNode(Models\DescribeClusterVirtualNodeRequest $req) 查看超级节点列表
@@ -249,6 +250,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\ModifyClusterNodePoolResponse ModifyClusterNodePool(Models\ModifyClusterNodePoolRequest $req) 编辑节点池
  * @method Models\ModifyClusterRollOutSequenceTagsResponse ModifyClusterRollOutSequenceTags(Models\ModifyClusterRollOutSequenceTagsRequest $req) 更新集群发布序列标签
  * @method Models\ModifyClusterRuntimeConfigResponse ModifyClusterRuntimeConfig(Models\ModifyClusterRuntimeConfigRequest $req) 修改集群及节点池维度运行时配置
+ * @method Models\ModifyClusterSchedulerPolicyResponse ModifyClusterSchedulerPolicy(Models\ModifyClusterSchedulerPolicyRequest $req) 修改集群调度策略
  * @method Models\ModifyClusterTagsResponse ModifyClusterTags(Models\ModifyClusterTagsRequest $req) 修改集群标签
  * @method Models\ModifyClusterVirtualNodePoolResponse ModifyClusterVirtualNodePool(Models\ModifyClusterVirtualNodePoolRequest $req) 修改超级节点池
  * @method Models\ModifyExternalNodePoolResponse ModifyExternalNodePool(Models\ModifyExternalNodePoolRequest $req) 修改第三方节点池

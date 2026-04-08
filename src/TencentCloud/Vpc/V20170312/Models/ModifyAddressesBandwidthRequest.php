@@ -20,48 +20,44 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAddressesBandwidth请求参数结构体
  *
- * @method array getAddressIds() 获取EIP唯一标识ID列表，形如'eip-xxxx'，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
-
- * @method void setAddressIds(array $AddressIds) 设置EIP唯一标识ID列表，形如'eip-xxxx'，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
-
- * @method integer getInternetMaxBandwidthOut() 获取调整带宽目标值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。
- * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置调整带宽目标值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。
- * @method string getStartTime() 获取包月带宽起始时间(已废弃，输入无效)
- * @method void setStartTime(string $StartTime) 设置包月带宽起始时间(已废弃，输入无效)
- * @method string getEndTime() 获取包月带宽结束时间(已废弃，输入无效)
- * @method void setEndTime(string $EndTime) 设置包月带宽结束时间(已废弃，输入无效)
+ * @method array getAddressIds() 获取<p>EIP唯一标识ID列表，形如&#39;eip-xxxx&#39;，可以使用<a href="https://cloud.tencent.com/document/product/215/16702">DescribeAddresses</a>接口获取AddressId。</p>
+ * @method void setAddressIds(array $AddressIds) 设置<p>EIP唯一标识ID列表，形如&#39;eip-xxxx&#39;，可以使用<a href="https://cloud.tencent.com/document/product/215/16702">DescribeAddresses</a>接口获取AddressId。</p>
+ * @method integer getInternetMaxBandwidthOut() 获取<p>调整带宽目标值，可调整的带宽上限值参考产品文档<a href="https://cloud.tencent.com/document/product/1199/48333">带宽上限</a>。</p>
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置<p>调整带宽目标值，可调整的带宽上限值参考产品文档<a href="https://cloud.tencent.com/document/product/1199/48333">带宽上限</a>。</p>
+ * @method string getStartTime() 获取<p>包月带宽起始时间(已废弃，输入无效)</p>
+ * @method void setStartTime(string $StartTime) 设置<p>包月带宽起始时间(已废弃，输入无效)</p>
+ * @method string getEndTime() 获取<p>包月带宽结束时间(已废弃，输入无效)</p>
+ * @method void setEndTime(string $EndTime) 设置<p>包月带宽结束时间(已废弃，输入无效)</p>
  */
 class ModifyAddressesBandwidthRequest extends AbstractModel
 {
     /**
-     * @var array EIP唯一标识ID列表，形如'eip-xxxx'，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
-
+     * @var array <p>EIP唯一标识ID列表，形如&#39;eip-xxxx&#39;，可以使用<a href="https://cloud.tencent.com/document/product/215/16702">DescribeAddresses</a>接口获取AddressId。</p>
      */
     public $AddressIds;
 
     /**
-     * @var integer 调整带宽目标值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。
+     * @var integer <p>调整带宽目标值，可调整的带宽上限值参考产品文档<a href="https://cloud.tencent.com/document/product/1199/48333">带宽上限</a>。</p>
      */
     public $InternetMaxBandwidthOut;
 
     /**
-     * @var string 包月带宽起始时间(已废弃，输入无效)
+     * @var string <p>包月带宽起始时间(已废弃，输入无效)</p>
      * @deprecated
      */
     public $StartTime;
 
     /**
-     * @var string 包月带宽结束时间(已废弃，输入无效)
+     * @var string <p>包月带宽结束时间(已废弃，输入无效)</p>
      * @deprecated
      */
     public $EndTime;
 
     /**
-     * @param array $AddressIds EIP唯一标识ID列表，形如'eip-xxxx'，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
-
-     * @param integer $InternetMaxBandwidthOut 调整带宽目标值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。
-     * @param string $StartTime 包月带宽起始时间(已废弃，输入无效)
-     * @param string $EndTime 包月带宽结束时间(已废弃，输入无效)
+     * @param array $AddressIds <p>EIP唯一标识ID列表，形如&#39;eip-xxxx&#39;，可以使用<a href="https://cloud.tencent.com/document/product/215/16702">DescribeAddresses</a>接口获取AddressId。</p>
+     * @param integer $InternetMaxBandwidthOut <p>调整带宽目标值，可调整的带宽上限值参考产品文档<a href="https://cloud.tencent.com/document/product/1199/48333">带宽上限</a>。</p>
+     * @param string $StartTime <p>包月带宽起始时间(已废弃，输入无效)</p>
+     * @param string $EndTime <p>包月带宽结束时间(已废弃，输入无效)</p>
      */
     function __construct()
     {

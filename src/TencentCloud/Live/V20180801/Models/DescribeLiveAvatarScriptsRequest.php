@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLiveAvatarScripts请求参数结构体
  *
- * @method string getRoomId() 获取数字人直播间 ID。
- * @method void setRoomId(string $RoomId) 设置数字人直播间 ID。
- * @method string getScriptId() 获取数字人直播间话术 ID。
- * @method void setScriptId(string $ScriptId) 设置数字人直播间话术 ID。
- * @method integer getPageIndex() 获取分页查询的页数。
- * @method void setPageIndex(integer $PageIndex) 设置分页查询的页数。
- * @method integer getPageSize() 获取分页查询的每页个数。
- * @method void setPageSize(integer $PageSize) 设置分页查询的每页个数。
+ * @method string getRoomId() 获取<p>数字人直播间 ID。</p>
+ * @method void setRoomId(string $RoomId) 设置<p>数字人直播间 ID。</p>
+ * @method string getScriptId() 获取<p>数字人直播间话术 ID。</p>
+ * @method void setScriptId(string $ScriptId) 设置<p>数字人直播间话术 ID。</p>
+ * @method integer getPageIndex() 获取<p>分页查询的页数。</p>
+ * @method void setPageIndex(integer $PageIndex) 设置<p>分页查询的页数。</p>
+ * @method integer getPageSize() 获取<p>分页查询的每页个数。</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>分页查询的每页个数。</p>
+ * @method string getProductId() 获取<p>数字人该话术所属的产品 ID。</p>
+ * @method void setProductId(string $ProductId) 设置<p>数字人该话术所属的产品 ID。</p>
  */
 class DescribeLiveAvatarScriptsRequest extends AbstractModel
 {
     /**
-     * @var string 数字人直播间 ID。
+     * @var string <p>数字人直播间 ID。</p>
      */
     public $RoomId;
 
     /**
-     * @var string 数字人直播间话术 ID。
+     * @var string <p>数字人直播间话术 ID。</p>
      */
     public $ScriptId;
 
     /**
-     * @var integer 分页查询的页数。
+     * @var integer <p>分页查询的页数。</p>
      */
     public $PageIndex;
 
     /**
-     * @var integer 分页查询的每页个数。
+     * @var integer <p>分页查询的每页个数。</p>
      */
     public $PageSize;
 
     /**
-     * @param string $RoomId 数字人直播间 ID。
-     * @param string $ScriptId 数字人直播间话术 ID。
-     * @param integer $PageIndex 分页查询的页数。
-     * @param integer $PageSize 分页查询的每页个数。
+     * @var string <p>数字人该话术所属的产品 ID。</p>
+     */
+    public $ProductId;
+
+    /**
+     * @param string $RoomId <p>数字人直播间 ID。</p>
+     * @param string $ScriptId <p>数字人直播间话术 ID。</p>
+     * @param integer $PageIndex <p>分页查询的页数。</p>
+     * @param integer $PageSize <p>分页查询的每页个数。</p>
+     * @param string $ProductId <p>数字人该话术所属的产品 ID。</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeLiveAvatarScriptsRequest extends AbstractModel
 
         if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
             $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
         }
     }
 }

@@ -32,10 +32,12 @@ use TencentCloud\Common\AbstractModel;
 <li>CUSTOM: 用户自定义规则。</li>
  * @method string getAttesterSource() 获取认证方法。取值有：
 <li>TC-RCE: 使用风险识别 RCE 进行认证；</li>
-<li>TC-CAPTCHA: 使用天御验证码进行认证。</li>
+<li>TC-CAPTCHA: 使用天御验证码进行认证；</li>
+<li>TC-EO-CAPTCHA: 使用 EdgeOne 人机校验进行认证。</li>
  * @method void setAttesterSource(string $AttesterSource) 设置认证方法。取值有：
 <li>TC-RCE: 使用风险识别 RCE 进行认证；</li>
-<li>TC-CAPTCHA: 使用天御验证码进行认证。</li>
+<li>TC-CAPTCHA: 使用天御验证码进行认证；</li>
+<li>TC-EO-CAPTCHA: 使用 EdgeOne 人机校验进行认证。</li>
  * @method string getAttesterDuration() 获取认证有效时间。默认为 60s，支持的单位有：
 <li>s：秒，取值范围 60～43200；</li>
 <li>m：分，取值范围 1～720；</li>
@@ -52,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
 <li>当 AttesterSource 参数值为 TC-CAPTCHA 时，此字段必填。</li>
  * @method void setTCCaptchaOption(TCCaptchaOption $TCCaptchaOption) 设置TC-CAPTCHA 认证的配置信息。
 <li>当 AttesterSource 参数值为 TC-CAPTCHA 时，此字段必填。</li>
+ * @method TCEOCaptchaOption getTCEOCaptchaOption() 获取TC-EO-CAPTCHA 认证的配置信息。
+<li>当 AttesterSource 参数值为 TC-EO-CAPTCHA 时，此字段必填。</li>
+ * @method void setTCEOCaptchaOption(TCEOCaptchaOption $TCEOCaptchaOption) 设置TC-EO-CAPTCHA 认证的配置信息。
+<li>当 AttesterSource 参数值为 TC-EO-CAPTCHA 时，此字段必填。</li>
  */
 class ClientAttester extends AbstractModel
 {
@@ -75,7 +81,8 @@ class ClientAttester extends AbstractModel
     /**
      * @var string 认证方法。取值有：
 <li>TC-RCE: 使用风险识别 RCE 进行认证；</li>
-<li>TC-CAPTCHA: 使用天御验证码进行认证。</li>
+<li>TC-CAPTCHA: 使用天御验证码进行认证；</li>
+<li>TC-EO-CAPTCHA: 使用 EdgeOne 人机校验进行认证。</li>
      */
     public $AttesterSource;
 
@@ -100,6 +107,12 @@ class ClientAttester extends AbstractModel
     public $TCCaptchaOption;
 
     /**
+     * @var TCEOCaptchaOption TC-EO-CAPTCHA 认证的配置信息。
+<li>当 AttesterSource 参数值为 TC-EO-CAPTCHA 时，此字段必填。</li>
+     */
+    public $TCEOCaptchaOption;
+
+    /**
      * @param string $Id 认证选项 ID。
      * @param string $Name 认证选项名称。
      * @param string $Type 认证规则类型。仅出参返回，取值有：
@@ -107,7 +120,8 @@ class ClientAttester extends AbstractModel
 <li>CUSTOM: 用户自定义规则。</li>
      * @param string $AttesterSource 认证方法。取值有：
 <li>TC-RCE: 使用风险识别 RCE 进行认证；</li>
-<li>TC-CAPTCHA: 使用天御验证码进行认证。</li>
+<li>TC-CAPTCHA: 使用天御验证码进行认证；</li>
+<li>TC-EO-CAPTCHA: 使用 EdgeOne 人机校验进行认证。</li>
      * @param string $AttesterDuration 认证有效时间。默认为 60s，支持的单位有：
 <li>s：秒，取值范围 60～43200；</li>
 <li>m：分，取值范围 1～720；</li>
@@ -116,6 +130,8 @@ class ClientAttester extends AbstractModel
 <li>当 AttesterSource 参数值为 TC-RCE 时，此字段必填。</li>
      * @param TCCaptchaOption $TCCaptchaOption TC-CAPTCHA 认证的配置信息。
 <li>当 AttesterSource 参数值为 TC-CAPTCHA 时，此字段必填。</li>
+     * @param TCEOCaptchaOption $TCEOCaptchaOption TC-EO-CAPTCHA 认证的配置信息。
+<li>当 AttesterSource 参数值为 TC-EO-CAPTCHA 时，此字段必填。</li>
      */
     function __construct()
     {
@@ -158,6 +174,11 @@ class ClientAttester extends AbstractModel
         if (array_key_exists("TCCaptchaOption",$param) and $param["TCCaptchaOption"] !== null) {
             $this->TCCaptchaOption = new TCCaptchaOption();
             $this->TCCaptchaOption->deserialize($param["TCCaptchaOption"]);
+        }
+
+        if (array_key_exists("TCEOCaptchaOption",$param) and $param["TCEOCaptchaOption"] !== null) {
+            $this->TCEOCaptchaOption = new TCEOCaptchaOption();
+            $this->TCEOCaptchaOption->deserialize($param["TCEOCaptchaOption"]);
         }
     }
 }

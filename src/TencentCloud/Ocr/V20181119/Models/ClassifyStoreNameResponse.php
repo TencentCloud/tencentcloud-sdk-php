@@ -20,17 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ClassifyStoreName返回参数结构体
  *
- * @method array getStoreLabel() 获取门头照标签
- * @method void setStoreLabel(array $StoreLabel) 设置门头照标签
+ * @method array getStoreLabel() 获取<p>门头照标签</p>
+ * @method void setStoreLabel(array $StoreLabel) 设置<p>门头照标签</p>
+ * @method string getSceneType() 获取<p>具体场景标签，输出3个最匹配的场景， 注：仅SceneType配置为true时支持。</p>
+ * @method void setSceneType(string $SceneType) 设置<p>具体场景标签，输出3个最匹配的场景， 注：仅SceneType配置为true时支持。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ClassifyStoreNameResponse extends AbstractModel
 {
     /**
-     * @var array 门头照标签
+     * @var array <p>门头照标签</p>
      */
     public $StoreLabel;
+
+    /**
+     * @var string <p>具体场景标签，输出3个最匹配的场景， 注：仅SceneType配置为true时支持。</p>
+     */
+    public $SceneType;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class ClassifyStoreNameResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $StoreLabel 门头照标签
+     * @param array $StoreLabel <p>门头照标签</p>
+     * @param string $SceneType <p>具体场景标签，输出3个最匹配的场景， 注：仅SceneType配置为true时支持。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,10 @@ class ClassifyStoreNameResponse extends AbstractModel
         }
         if (array_key_exists("StoreLabel",$param) and $param["StoreLabel"] !== null) {
             $this->StoreLabel = $param["StoreLabel"];
+        }
+
+        if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
+            $this->SceneType = $param["SceneType"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

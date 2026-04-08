@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 扩展调度器(Extender)管理的扩展资源
  *
- * @method string getName() 获取自定义资源的名称
- * @method void setName(string $Name) 设置自定义资源的名称
+ * @method string getName() 获取<p>自定义资源的名称</p>
+ * @method void setName(string $Name) 设置<p>自定义资源的名称</p>
+ * @method boolean getIgnoredByScheduler() 获取<p>调度器是否忽略该资源的默认处理</p>
+ * @method void setIgnoredByScheduler(boolean $IgnoredByScheduler) 设置<p>调度器是否忽略该资源的默认处理</p>
  */
 class ExtenderManagedResource extends AbstractModel
 {
     /**
-     * @var string 自定义资源的名称
+     * @var string <p>自定义资源的名称</p>
      */
     public $Name;
 
     /**
-     * @param string $Name 自定义资源的名称
+     * @var boolean <p>调度器是否忽略该资源的默认处理</p>
+     */
+    public $IgnoredByScheduler;
+
+    /**
+     * @param string $Name <p>自定义资源的名称</p>
+     * @param boolean $IgnoredByScheduler <p>调度器是否忽略该资源的默认处理</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class ExtenderManagedResource extends AbstractModel
         }
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("IgnoredByScheduler",$param) and $param["IgnoredByScheduler"] !== null) {
+            $this->IgnoredByScheduler = $param["IgnoredByScheduler"];
         }
     }
 }

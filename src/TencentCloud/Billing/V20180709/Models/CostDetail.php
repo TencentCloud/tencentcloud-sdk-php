@@ -20,146 +20,170 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 消耗明细数据类型
  *
- * @method string getPayerUin() 获取支付者uin
- * @method void setPayerUin(string $PayerUin) 设置支付者uin
- * @method string getBusinessCodeName() 获取产品名称
- * @method void setBusinessCodeName(string $BusinessCodeName) 设置产品名称
- * @method string getProductCodeName() 获取子产品名称
- * @method void setProductCodeName(string $ProductCodeName) 设置子产品名称
- * @method string getPayModeName() 获取计费模式名称
- * @method void setPayModeName(string $PayModeName) 设置计费模式名称
- * @method string getProjectName() 获取项目名称
- * @method void setProjectName(string $ProjectName) 设置项目名称
- * @method string getRegionName() 获取区域名称
- * @method void setRegionName(string $RegionName) 设置区域名称
- * @method string getZoneName() 获取地区名称
- * @method void setZoneName(string $ZoneName) 设置地区名称
- * @method string getResourceId() 获取资源id
- * @method void setResourceId(string $ResourceId) 设置资源id
- * @method string getResourceName() 获取资源名称
- * @method void setResourceName(string $ResourceName) 设置资源名称
- * @method string getActionTypeName() 获取类型名称
- * @method void setActionTypeName(string $ActionTypeName) 设置类型名称
- * @method string getOrderId() 获取订单id
- * @method void setOrderId(string $OrderId) 设置订单id
- * @method string getBillId() 获取交易id
- * @method void setBillId(string $BillId) 设置交易id
- * @method string getFeeBeginTime() 获取费用开始时间
- * @method void setFeeBeginTime(string $FeeBeginTime) 设置费用开始时间
- * @method string getFeeEndTime() 获取费用结束时间
- * @method void setFeeEndTime(string $FeeEndTime) 设置费用结束时间
- * @method array getComponentSet() 获取组件明细
- * @method void setComponentSet(array $ComponentSet) 设置组件明细
- * @method string getProductCode() 获取子产品名称代码
- * @method void setProductCode(string $ProductCode) 设置子产品名称代码
- * @method array getTags() 获取标签信息	
- * @method void setTags(array $Tags) 设置标签信息	
+ * @method string getPayerUin() 获取<p>支付者uin</p>
+ * @method void setPayerUin(string $PayerUin) 设置<p>支付者uin</p>
+ * @method string getBusinessCodeName() 获取<p>产品名称</p>
+ * @method void setBusinessCodeName(string $BusinessCodeName) 设置<p>产品名称</p>
+ * @method string getProductCodeName() 获取<p>子产品名称</p>
+ * @method void setProductCodeName(string $ProductCodeName) 设置<p>子产品名称</p>
+ * @method string getPayModeName() 获取<p>计费模式名称</p>
+ * @method void setPayModeName(string $PayModeName) 设置<p>计费模式名称</p>
+ * @method string getProjectName() 获取<p>项目名称</p>
+ * @method void setProjectName(string $ProjectName) 设置<p>项目名称</p>
+ * @method string getRegionName() 获取<p>区域名称</p>
+ * @method void setRegionName(string $RegionName) 设置<p>区域名称</p>
+ * @method string getZoneName() 获取<p>地区名称</p>
+ * @method void setZoneName(string $ZoneName) 设置<p>地区名称</p>
+ * @method string getResourceId() 获取<p>资源id</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>资源id</p>
+ * @method string getResourceName() 获取<p>资源名称</p>
+ * @method void setResourceName(string $ResourceName) 设置<p>资源名称</p>
+ * @method string getActionTypeName() 获取<p>类型名称</p>
+ * @method void setActionTypeName(string $ActionTypeName) 设置<p>类型名称</p>
+ * @method string getOrderId() 获取<p>订单id</p>
+ * @method void setOrderId(string $OrderId) 设置<p>订单id</p>
+ * @method string getBillId() 获取<p>交易id</p>
+ * @method void setBillId(string $BillId) 设置<p>交易id</p>
+ * @method string getFeeBeginTime() 获取<p>费用开始时间</p>
+ * @method void setFeeBeginTime(string $FeeBeginTime) 设置<p>费用开始时间</p>
+ * @method string getFeeEndTime() 获取<p>费用结束时间</p>
+ * @method void setFeeEndTime(string $FeeEndTime) 设置<p>费用结束时间</p>
+ * @method array getComponentSet() 获取<p>组件明细</p>
+ * @method void setComponentSet(array $ComponentSet) 设置<p>组件明细</p>
+ * @method string getProductCode() 获取<p>子产品名称代码</p>
+ * @method void setProductCode(string $ProductCode) 设置<p>子产品名称代码</p>
+ * @method array getTags() 获取<p>标签信息</p>
+ * @method void setTags(array $Tags) 设置<p>标签信息</p>
+ * @method string getOperateUin() 获取<p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
+ * @method void setOperateUin(string $OperateUin) 设置<p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
+ * @method string getOwnerUin() 获取<p>使用者UIN：实际使用资源的账号 ID</p>
+ * @method void setOwnerUin(string $OwnerUin) 设置<p>使用者UIN：实际使用资源的账号 ID</p>
+ * @method string getPayTime() 获取<p>扣费时间：结算扣费时间</p>
+ * @method void setPayTime(string $PayTime) 设置<p>扣费时间：结算扣费时间</p>
  */
 class CostDetail extends AbstractModel
 {
     /**
-     * @var string 支付者uin
+     * @var string <p>支付者uin</p>
      */
     public $PayerUin;
 
     /**
-     * @var string 产品名称
+     * @var string <p>产品名称</p>
      */
     public $BusinessCodeName;
 
     /**
-     * @var string 子产品名称
+     * @var string <p>子产品名称</p>
      */
     public $ProductCodeName;
 
     /**
-     * @var string 计费模式名称
+     * @var string <p>计费模式名称</p>
      */
     public $PayModeName;
 
     /**
-     * @var string 项目名称
+     * @var string <p>项目名称</p>
      */
     public $ProjectName;
 
     /**
-     * @var string 区域名称
+     * @var string <p>区域名称</p>
      */
     public $RegionName;
 
     /**
-     * @var string 地区名称
+     * @var string <p>地区名称</p>
      */
     public $ZoneName;
 
     /**
-     * @var string 资源id
+     * @var string <p>资源id</p>
      */
     public $ResourceId;
 
     /**
-     * @var string 资源名称
+     * @var string <p>资源名称</p>
      */
     public $ResourceName;
 
     /**
-     * @var string 类型名称
+     * @var string <p>类型名称</p>
      */
     public $ActionTypeName;
 
     /**
-     * @var string 订单id
+     * @var string <p>订单id</p>
      */
     public $OrderId;
 
     /**
-     * @var string 交易id
+     * @var string <p>交易id</p>
      */
     public $BillId;
 
     /**
-     * @var string 费用开始时间
+     * @var string <p>费用开始时间</p>
      */
     public $FeeBeginTime;
 
     /**
-     * @var string 费用结束时间
+     * @var string <p>费用结束时间</p>
      */
     public $FeeEndTime;
 
     /**
-     * @var array 组件明细
+     * @var array <p>组件明细</p>
      */
     public $ComponentSet;
 
     /**
-     * @var string 子产品名称代码
+     * @var string <p>子产品名称代码</p>
      */
     public $ProductCode;
 
     /**
-     * @var array 标签信息	
+     * @var array <p>标签信息</p>
      */
     public $Tags;
 
     /**
-     * @param string $PayerUin 支付者uin
-     * @param string $BusinessCodeName 产品名称
-     * @param string $ProductCodeName 子产品名称
-     * @param string $PayModeName 计费模式名称
-     * @param string $ProjectName 项目名称
-     * @param string $RegionName 区域名称
-     * @param string $ZoneName 地区名称
-     * @param string $ResourceId 资源id
-     * @param string $ResourceName 资源名称
-     * @param string $ActionTypeName 类型名称
-     * @param string $OrderId 订单id
-     * @param string $BillId 交易id
-     * @param string $FeeBeginTime 费用开始时间
-     * @param string $FeeEndTime 费用结束时间
-     * @param array $ComponentSet 组件明细
-     * @param string $ProductCode 子产品名称代码
-     * @param array $Tags 标签信息	
+     * @var string <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
+     */
+    public $OperateUin;
+
+    /**
+     * @var string <p>使用者UIN：实际使用资源的账号 ID</p>
+     */
+    public $OwnerUin;
+
+    /**
+     * @var string <p>扣费时间：结算扣费时间</p>
+     */
+    public $PayTime;
+
+    /**
+     * @param string $PayerUin <p>支付者uin</p>
+     * @param string $BusinessCodeName <p>产品名称</p>
+     * @param string $ProductCodeName <p>子产品名称</p>
+     * @param string $PayModeName <p>计费模式名称</p>
+     * @param string $ProjectName <p>项目名称</p>
+     * @param string $RegionName <p>区域名称</p>
+     * @param string $ZoneName <p>地区名称</p>
+     * @param string $ResourceId <p>资源id</p>
+     * @param string $ResourceName <p>资源名称</p>
+     * @param string $ActionTypeName <p>类型名称</p>
+     * @param string $OrderId <p>订单id</p>
+     * @param string $BillId <p>交易id</p>
+     * @param string $FeeBeginTime <p>费用开始时间</p>
+     * @param string $FeeEndTime <p>费用结束时间</p>
+     * @param array $ComponentSet <p>组件明细</p>
+     * @param string $ProductCode <p>子产品名称代码</p>
+     * @param array $Tags <p>标签信息</p>
+     * @param string $OperateUin <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
+     * @param string $OwnerUin <p>使用者UIN：实际使用资源的账号 ID</p>
+     * @param string $PayTime <p>扣费时间：结算扣费时间</p>
      */
     function __construct()
     {
@@ -250,6 +274,18 @@ class CostDetail extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("OperateUin",$param) and $param["OperateUin"] !== null) {
+            $this->OperateUin = $param["OperateUin"];
+        }
+
+        if (array_key_exists("OwnerUin",$param) and $param["OwnerUin"] !== null) {
+            $this->OwnerUin = $param["OwnerUin"];
+        }
+
+        if (array_key_exists("PayTime",$param) and $param["PayTime"] !== null) {
+            $this->PayTime = $param["PayTime"];
         }
     }
 }

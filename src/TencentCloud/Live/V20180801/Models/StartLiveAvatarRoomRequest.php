@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartLiveAvatarRoom请求参数结构体
  *
- * @method string getRoomId() 获取数字人直播间 ID。
- * @method void setRoomId(string $RoomId) 设置数字人直播间 ID。
- * @method string getComment() 获取目标地址描述。
- * @method void setComment(string $Comment) 设置目标地址描述。
- * @method string getToUrl() 获取推流目标地址。
- * @method void setToUrl(string $ToUrl) 设置推流目标地址。
- * @method string getOperator() 获取操作者。
- * @method void setOperator(string $Operator) 设置操作者。
+ * @method string getRoomId() 获取<p>数字人直播间 ID。</p>
+ * @method void setRoomId(string $RoomId) 设置<p>数字人直播间 ID。</p>
+ * @method string getComment() 获取<p>目标地址描述。</p>
+ * @method void setComment(string $Comment) 设置<p>目标地址描述。</p>
+ * @method string getToUrl() 获取<p>推流目标地址。</p>
+ * @method void setToUrl(string $ToUrl) 设置<p>推流目标地址。</p>
+ * @method string getOperator() 获取<p>操作者。</p>
+ * @method void setOperator(string $Operator) 设置<p>操作者。</p>
+ * @method string getRoomType() 获取<p>房间类型。AIGC：AIGC形象房间；PRESET：预设形象房间</p><p>枚举值：</p><ul><li>AIGC： AIGC形象房间</li><li>PRESET： 预设形象房间</li></ul>
+ * @method void setRoomType(string $RoomType) 设置<p>房间类型。AIGC：AIGC形象房间；PRESET：预设形象房间</p><p>枚举值：</p><ul><li>AIGC： AIGC形象房间</li><li>PRESET： 预设形象房间</li></ul>
  */
 class StartLiveAvatarRoomRequest extends AbstractModel
 {
     /**
-     * @var string 数字人直播间 ID。
+     * @var string <p>数字人直播间 ID。</p>
      */
     public $RoomId;
 
     /**
-     * @var string 目标地址描述。
+     * @var string <p>目标地址描述。</p>
      */
     public $Comment;
 
     /**
-     * @var string 推流目标地址。
+     * @var string <p>推流目标地址。</p>
      */
     public $ToUrl;
 
     /**
-     * @var string 操作者。
+     * @var string <p>操作者。</p>
      */
     public $Operator;
 
     /**
-     * @param string $RoomId 数字人直播间 ID。
-     * @param string $Comment 目标地址描述。
-     * @param string $ToUrl 推流目标地址。
-     * @param string $Operator 操作者。
+     * @var string <p>房间类型。AIGC：AIGC形象房间；PRESET：预设形象房间</p><p>枚举值：</p><ul><li>AIGC： AIGC形象房间</li><li>PRESET： 预设形象房间</li></ul>
+     */
+    public $RoomType;
+
+    /**
+     * @param string $RoomId <p>数字人直播间 ID。</p>
+     * @param string $Comment <p>目标地址描述。</p>
+     * @param string $ToUrl <p>推流目标地址。</p>
+     * @param string $Operator <p>操作者。</p>
+     * @param string $RoomType <p>房间类型。AIGC：AIGC形象房间；PRESET：预设形象房间</p><p>枚举值：</p><ul><li>AIGC： AIGC形象房间</li><li>PRESET： 预设形象房间</li></ul>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class StartLiveAvatarRoomRequest extends AbstractModel
 
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = $param["Operator"];
+        }
+
+        if (array_key_exists("RoomType",$param) and $param["RoomType"] !== null) {
+            $this->RoomType = $param["RoomType"];
         }
     }
 }

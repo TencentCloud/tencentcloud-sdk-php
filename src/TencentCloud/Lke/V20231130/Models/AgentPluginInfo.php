@@ -20,86 +20,86 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Agent 的插件信息
  *
- * @method string getPluginId() 获取插件id
- * @method void setPluginId(string $PluginId) 设置插件id
- * @method array getHeaders() 获取应用配置的插件header信息
- * @method void setHeaders(array $Headers) 设置应用配置的插件header信息
- * @method AgentModelInfo getModel() 获取插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型
+ * @method string getPluginId() 获取<p>插件id</p>
+ * @method void setPluginId(string $PluginId) 设置<p>插件id</p>
+ * @method array getHeaders() 获取<p>应用配置的插件header信息</p>
+ * @method void setHeaders(array $Headers) 设置<p>应用配置的插件header信息</p>
+ * @method AgentModelInfo getModel() 获取<p>插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModel(AgentModelInfo $Model) 设置插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型
+ * @method void setModel(AgentModelInfo $Model) 设置<p>插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPluginInfoType() 获取插件信息类型; 0: 未指定类型; 1: 知识库问答插件
- * @method void setPluginInfoType(integer $PluginInfoType) 设置插件信息类型; 0: 未指定类型; 1: 知识库问答插件
- * @method AgentKnowledgeQAPlugin getKnowledgeQa() 获取知识库问答插件配置
+ * @method integer getPluginInfoType() 获取<p>插件信息类型; 0: 未指定类型; 1: 知识库问答插件</p>
+ * @method void setPluginInfoType(integer $PluginInfoType) 设置<p>插件信息类型; 0: 未指定类型; 1: 知识库问答插件</p>
+ * @method AgentKnowledgeQAPlugin getKnowledgeQa() 获取<p>知识库问答插件配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKnowledgeQa(AgentKnowledgeQAPlugin $KnowledgeQa) 设置知识库问答插件配置
+ * @method void setKnowledgeQa(AgentKnowledgeQAPlugin $KnowledgeQa) 设置<p>知识库问答插件配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getEnableRoleAuth() 获取是否使用一键授权
+ * @method boolean getEnableRoleAuth() 获取<p>是否使用一键授权</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnableRoleAuth(boolean $EnableRoleAuth) 设置是否使用一键授权
+ * @method void setEnableRoleAuth(boolean $EnableRoleAuth) 设置<p>是否使用一键授权</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getQuery() 获取应用配置的插件query信息
- * @method void setQuery(array $Query) 设置应用配置的插件query信息
- * @method integer getMcpType() 获取MCP类型
- * @method void setMcpType(integer $McpType) 设置MCP类型
+ * @method array getQuery() 获取<p>应用配置的插件query信息</p>
+ * @method void setQuery(array $Query) 设置<p>应用配置的插件query信息</p>
+ * @method integer getMcpType() 获取<p>MCP类型</p><p>枚举值：</p><ul><li>0： SSE 模式</li><li>1： Streamable Http 模式</li></ul>
+ * @method void setMcpType(integer $McpType) 设置<p>MCP类型</p><p>枚举值：</p><ul><li>0： SSE 模式</li><li>1： Streamable Http 模式</li></ul>
  */
 class AgentPluginInfo extends AbstractModel
 {
     /**
-     * @var string 插件id
+     * @var string <p>插件id</p>
      */
     public $PluginId;
 
     /**
-     * @var array 应用配置的插件header信息
+     * @var array <p>应用配置的插件header信息</p>
      */
     public $Headers;
 
     /**
-     * @var AgentModelInfo 插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型
+     * @var AgentModelInfo <p>插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Model;
 
     /**
-     * @var integer 插件信息类型; 0: 未指定类型; 1: 知识库问答插件
+     * @var integer <p>插件信息类型; 0: 未指定类型; 1: 知识库问答插件</p>
      */
     public $PluginInfoType;
 
     /**
-     * @var AgentKnowledgeQAPlugin 知识库问答插件配置
+     * @var AgentKnowledgeQAPlugin <p>知识库问答插件配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KnowledgeQa;
 
     /**
-     * @var boolean 是否使用一键授权
+     * @var boolean <p>是否使用一键授权</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableRoleAuth;
 
     /**
-     * @var array 应用配置的插件query信息
+     * @var array <p>应用配置的插件query信息</p>
      */
     public $Query;
 
     /**
-     * @var integer MCP类型
+     * @var integer <p>MCP类型</p><p>枚举值：</p><ul><li>0： SSE 模式</li><li>1： Streamable Http 模式</li></ul>
      */
     public $McpType;
 
     /**
-     * @param string $PluginId 插件id
-     * @param array $Headers 应用配置的插件header信息
-     * @param AgentModelInfo $Model 插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型
+     * @param string $PluginId <p>插件id</p>
+     * @param array $Headers <p>应用配置的插件header信息</p>
+     * @param AgentModelInfo $Model <p>插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PluginInfoType 插件信息类型; 0: 未指定类型; 1: 知识库问答插件
-     * @param AgentKnowledgeQAPlugin $KnowledgeQa 知识库问答插件配置
+     * @param integer $PluginInfoType <p>插件信息类型; 0: 未指定类型; 1: 知识库问答插件</p>
+     * @param AgentKnowledgeQAPlugin $KnowledgeQa <p>知识库问答插件配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $EnableRoleAuth 是否使用一键授权
+     * @param boolean $EnableRoleAuth <p>是否使用一键授权</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Query 应用配置的插件query信息
-     * @param integer $McpType MCP类型
+     * @param array $Query <p>应用配置的插件query信息</p>
+     * @param integer $McpType <p>MCP类型</p><p>枚举值：</p><ul><li>0： SSE 模式</li><li>1： Streamable Http 模式</li></ul>
      */
     function __construct()
     {

@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLiveAvatarScript请求参数结构体
  *
- * @method string getTitle() 获取话术标题。限制500字节。
- * @method void setTitle(string $Title) 设置话术标题。限制500字节。
- * @method string getContent() 获取话术内容。中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。
- * @method void setContent(string $Content) 设置话术内容。中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。
- * @method string getRoomId() 获取话术所属的数字人直播间 ID。
- * @method void setRoomId(string $RoomId) 设置话术所属的数字人直播间 ID。
- * @method integer getSpecifyPosition() 获取话术插入时，可根据已有话术位置，指定新话术插入位置。
-如已有三条话术100，200，300。
-新话术可选择150插入到第一条和第二条中间。
- * @method void setSpecifyPosition(integer $SpecifyPosition) 设置话术插入时，可根据已有话术位置，指定新话术插入位置。
-如已有三条话术100，200，300。
-新话术可选择150插入到第一条和第二条中间。
- * @method string getOperator() 获取操作者。
- * @method void setOperator(string $Operator) 设置操作者。
+ * @method string getTitle() 获取<p>话术标题。限制500字节。</p>
+ * @method void setTitle(string $Title) 设置<p>话术标题。限制500字节。</p>
+ * @method string getContent() 获取<p>话术内容。中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。</p>
+ * @method void setContent(string $Content) 设置<p>话术内容。中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。</p>
+ * @method string getRoomId() 获取<p>话术所属的数字人直播间 ID。</p>
+ * @method void setRoomId(string $RoomId) 设置<p>话术所属的数字人直播间 ID。</p>
+ * @method integer getSpecifyPosition() 获取<p>话术插入时，可根据已有话术位置，指定新话术插入位置。<br>如已有三条话术100，200，300。<br>新话术可选择150插入到第一条和第二条中间。</p>
+ * @method void setSpecifyPosition(integer $SpecifyPosition) 设置<p>话术插入时，可根据已有话术位置，指定新话术插入位置。<br>如已有三条话术100，200，300。<br>新话术可选择150插入到第一条和第二条中间。</p>
+ * @method string getOperator() 获取<p>操作者。</p>
+ * @method void setOperator(string $Operator) 设置<p>操作者。</p>
+ * @method string getProductId() 获取<p>话术所属的数字人产品 ID。</p>
+ * @method void setProductId(string $ProductId) 设置<p>话术所属的数字人产品 ID。</p>
  */
 class CreateLiveAvatarScriptRequest extends AbstractModel
 {
     /**
-     * @var string 话术标题。限制500字节。
+     * @var string <p>话术标题。限制500字节。</p>
      */
     public $Title;
 
     /**
-     * @var string 话术内容。中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。
+     * @var string <p>话术内容。中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。</p>
      */
     public $Content;
 
     /**
-     * @var string 话术所属的数字人直播间 ID。
+     * @var string <p>话术所属的数字人直播间 ID。</p>
      */
     public $RoomId;
 
     /**
-     * @var integer 话术插入时，可根据已有话术位置，指定新话术插入位置。
-如已有三条话术100，200，300。
-新话术可选择150插入到第一条和第二条中间。
+     * @var integer <p>话术插入时，可根据已有话术位置，指定新话术插入位置。<br>如已有三条话术100，200，300。<br>新话术可选择150插入到第一条和第二条中间。</p>
      */
     public $SpecifyPosition;
 
     /**
-     * @var string 操作者。
+     * @var string <p>操作者。</p>
      */
     public $Operator;
 
     /**
-     * @param string $Title 话术标题。限制500字节。
-     * @param string $Content 话术内容。中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。
-     * @param string $RoomId 话术所属的数字人直播间 ID。
-     * @param integer $SpecifyPosition 话术插入时，可根据已有话术位置，指定新话术插入位置。
-如已有三条话术100，200，300。
-新话术可选择150插入到第一条和第二条中间。
-     * @param string $Operator 操作者。
+     * @var string <p>话术所属的数字人产品 ID。</p>
+     */
+    public $ProductId;
+
+    /**
+     * @param string $Title <p>话术标题。限制500字节。</p>
+     * @param string $Content <p>话术内容。中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。</p>
+     * @param string $RoomId <p>话术所属的数字人直播间 ID。</p>
+     * @param integer $SpecifyPosition <p>话术插入时，可根据已有话术位置，指定新话术插入位置。<br>如已有三条话术100，200，300。<br>新话术可选择150插入到第一条和第二条中间。</p>
+     * @param string $Operator <p>操作者。</p>
+     * @param string $ProductId <p>话术所属的数字人产品 ID。</p>
      */
     function __construct()
     {
@@ -104,6 +104,10 @@ class CreateLiveAvatarScriptRequest extends AbstractModel
 
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = $param["Operator"];
+        }
+
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
         }
     }
 }

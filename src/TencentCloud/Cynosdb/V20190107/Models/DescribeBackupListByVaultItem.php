@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackupListByVaultItem
  *
- * @method string getClusterId() 获取集群id
- * @method void setClusterId(string $ClusterId) 设置集群id
- * @method string getClusterName() 获取集群name
- * @method void setClusterName(string $ClusterName) 设置集群name
- * @method BackupFileInfo getBackupFileInfo() 获取备份信息
- * @method void setBackupFileInfo(BackupFileInfo $BackupFileInfo) 设置备份信息
+ * @method string getClusterId() 获取<p>集群id</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群id</p>
+ * @method string getClusterName() 获取<p>集群name</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群name</p>
+ * @method BackupFileInfo getBackupFileInfo() 获取<p>备份信息</p>
+ * @method void setBackupFileInfo(BackupFileInfo $BackupFileInfo) 设置<p>备份信息</p>
  */
 class DescribeBackupListByVaultItem extends AbstractModel
 {
     /**
-     * @var string 集群id
+     * @var string <p>集群id</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 集群name
+     * @var string <p>集群name</p>
      */
     public $ClusterName;
 
     /**
-     * @var BackupFileInfo 备份信息
+     * @var BackupFileInfo <p>备份信息</p>
      */
     public $BackupFileInfo;
 
     /**
-     * @param string $ClusterId 集群id
-     * @param string $ClusterName 集群name
-     * @param BackupFileInfo $BackupFileInfo 备份信息
+     * @param string $ClusterId <p>集群id</p>
+     * @param string $ClusterName <p>集群name</p>
+     * @param BackupFileInfo $BackupFileInfo <p>备份信息</p>
      */
     function __construct()
     {

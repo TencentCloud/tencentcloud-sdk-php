@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserId(string $UserId) 设置输入在线媒体流机器人的UserId，用于进房发起拉流转推任务。
  * @method string getUserSig() 获取输入在线媒体流机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
  * @method void setUserSig(string $UserSig) 设置输入在线媒体流机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
- * @method string getStreamUrl() 获取源流URL【必填】。如果是视频流，分辨率请保持不变。
- * @method void setStreamUrl(string $StreamUrl) 设置源流URL【必填】。如果是视频流，分辨率请保持不变。
+ * @method string getStreamUrl() 获取源流URL【必填】。如果是视频流，分辨率请保持不变，视频流的最大分辨率限制1080p，最大帧率限制30fps。
+ * @method void setStreamUrl(string $StreamUrl) 设置源流URL【必填】。如果是视频流，分辨率请保持不变，视频流的最大分辨率限制1080p，最大帧率限制30fps。
  * @method string getPrivateMapKey() 获取TRTC房间权限加密串，只有在TRTC控制台启用了高级权限控制的时候需要携带，在TRTC控制台如果开启高级权限控制后，TRTC 的后台服务系统会校验一个叫做 [PrivateMapKey] 的“权限票据”，权限票据中包含了一个加密后的 RoomId 和一个加密后的“权限位列表”。由于 PrivateMapKey 中包含 RoomId，所以只提供了 UserSig 没有提供 PrivateMapKey 时，并不能进入指定的房间。
  * @method void setPrivateMapKey(string $PrivateMapKey) 设置TRTC房间权限加密串，只有在TRTC控制台启用了高级权限控制的时候需要携带，在TRTC控制台如果开启高级权限控制后，TRTC 的后台服务系统会校验一个叫做 [PrivateMapKey] 的“权限票据”，权限票据中包含了一个加密后的 RoomId 和一个加密后的“权限位列表”。由于 PrivateMapKey 中包含 RoomId，所以只提供了 UserSig 没有提供 PrivateMapKey 时，并不能进入指定的房间。
  * @method VideoEncodeParams getVideoEncodeParams() 获取【本字段已废弃】视频编码参数。可选，如果不填，保持原始流的参数。
@@ -60,12 +60,14 @@ use TencentCloud\Common\AbstractModel;
 
  * @method integer getMaxDuration() 获取循环播放最大时长,仅支持RepeatNum设置-1时生效，取值范围[1, 10080]，单位分钟。
  * @method void setMaxDuration(integer $MaxDuration) 设置循环播放最大时长,仅支持RepeatNum设置-1时生效，取值范围[1, 10080]，单位分钟。
- * @method integer getVolume() 获取音量，取值范围[0, 100]，默认100，表示原音量。
- * @method void setVolume(integer $Volume) 设置音量，取值范围[0, 100]，默认100，表示原音量。
+ * @method integer getVolume() 获取音量，取值范围[0, 200]，默认100，表示原音量。
+ * @method void setVolume(integer $Volume) 设置音量，取值范围[0, 200]，默认100，表示原音量。
  * @method boolean getEnableProgress() 获取开启播放进度回调, 默认false，当开启后，播放进度会通过trtc custom data 回调给播放端
  * @method void setEnableProgress(boolean $EnableProgress) 设置开启播放进度回调, 默认false，当开启后，播放进度会通过trtc custom data 回调给播放端
  * @method float getTempo() 获取播放倍速，默认1.0，可取[0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0]
  * @method void setTempo(float $Tempo) 设置播放倍速，默认1.0，可取[0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0]
+ * @method integer getIdleTimeout() 获取播放任务处于空闲状态的最大时长（秒）, 不填时任务会自适应销毁，可取[0, 600]，空闲状态超过设置的 IdleTimeout 后，该播放任务会自动销毁
+ * @method void setIdleTimeout(integer $IdleTimeout) 设置播放任务处于空闲状态的最大时长（秒）, 不填时任务会自适应销毁，可取[0, 600]，空闲状态超过设置的 IdleTimeout 后，该播放任务会自动销毁
  */
 class StartStreamIngestRequest extends AbstractModel
 {
@@ -98,7 +100,7 @@ class StartStreamIngestRequest extends AbstractModel
     public $UserSig;
 
     /**
-     * @var string 源流URL【必填】。如果是视频流，分辨率请保持不变。
+     * @var string 源流URL【必填】。如果是视频流，分辨率请保持不变，视频流的最大分辨率限制1080p，最大帧率限制30fps。
      */
     public $StreamUrl;
 
@@ -149,7 +151,7 @@ class StartStreamIngestRequest extends AbstractModel
     public $MaxDuration;
 
     /**
-     * @var integer 音量，取值范围[0, 100]，默认100，表示原音量。
+     * @var integer 音量，取值范围[0, 200]，默认100，表示原音量。
      */
     public $Volume;
 
@@ -164,6 +166,11 @@ class StartStreamIngestRequest extends AbstractModel
     public $Tempo;
 
     /**
+     * @var integer 播放任务处于空闲状态的最大时长（秒）, 不填时任务会自适应销毁，可取[0, 600]，空闲状态超过设置的 IdleTimeout 后，该播放任务会自动销毁
+     */
+    public $IdleTimeout;
+
+    /**
      * @param integer $SdkAppId TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和TRTC的房间所对应的SdkAppId相同。
      * @param string $RoomId TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，录制的TRTC房间所对应的RoomId。
      * @param integer $RoomIdType TRTC房间号的类型。
@@ -172,7 +179,7 @@ class StartStreamIngestRequest extends AbstractModel
 1: 32位整型的RoomId（默认）
      * @param string $UserId 输入在线媒体流机器人的UserId，用于进房发起拉流转推任务。
      * @param string $UserSig 输入在线媒体流机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
-     * @param string $StreamUrl 源流URL【必填】。如果是视频流，分辨率请保持不变。
+     * @param string $StreamUrl 源流URL【必填】。如果是视频流，分辨率请保持不变，视频流的最大分辨率限制1080p，最大帧率限制30fps。
      * @param string $PrivateMapKey TRTC房间权限加密串，只有在TRTC控制台启用了高级权限控制的时候需要携带，在TRTC控制台如果开启高级权限控制后，TRTC 的后台服务系统会校验一个叫做 [PrivateMapKey] 的“权限票据”，权限票据中包含了一个加密后的 RoomId 和一个加密后的“权限位列表”。由于 PrivateMapKey 中包含 RoomId，所以只提供了 UserSig 没有提供 PrivateMapKey 时，并不能进入指定的房间。
      * @param VideoEncodeParams $VideoEncodeParams 【本字段已废弃】视频编码参数。可选，如果不填，保持原始流的参数。
      * @param AudioEncodeParams $AudioEncodeParams 【本字段已废弃】音频编码参数。可选，如果不填，保持原始流的参数。
@@ -184,9 +191,10 @@ class StartStreamIngestRequest extends AbstractModel
  - -1 循环播放, 需要主动调用停止接口或设置MaxDuration
 
      * @param integer $MaxDuration 循环播放最大时长,仅支持RepeatNum设置-1时生效，取值范围[1, 10080]，单位分钟。
-     * @param integer $Volume 音量，取值范围[0, 100]，默认100，表示原音量。
+     * @param integer $Volume 音量，取值范围[0, 200]，默认100，表示原音量。
      * @param boolean $EnableProgress 开启播放进度回调, 默认false，当开启后，播放进度会通过trtc custom data 回调给播放端
      * @param float $Tempo 播放倍速，默认1.0，可取[0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0]
+     * @param integer $IdleTimeout 播放任务处于空闲状态的最大时长（秒）, 不填时任务会自适应销毁，可取[0, 600]，空闲状态超过设置的 IdleTimeout 后，该播放任务会自动销毁
      */
     function __construct()
     {
@@ -269,6 +277,10 @@ class StartStreamIngestRequest extends AbstractModel
 
         if (array_key_exists("Tempo",$param) and $param["Tempo"] !== null) {
             $this->Tempo = $param["Tempo"];
+        }
+
+        if (array_key_exists("IdleTimeout",$param) and $param["IdleTimeout"] !== null) {
+            $this->IdleTimeout = $param["IdleTimeout"];
         }
     }
 }

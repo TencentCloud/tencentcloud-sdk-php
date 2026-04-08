@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * redolog信息
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getClusterName() 获取集群名称
- * @method void setClusterName(string $ClusterName) 设置集群名称
- * @method RedoLogItem getRedoFileInfo() 获取RedoLog文件信息
- * @method void setRedoFileInfo(RedoLogItem $RedoFileInfo) 设置RedoLog文件信息
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method string getClusterName() 获取<p>集群名称</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名称</p>
+ * @method RedoLogItem getRedoFileInfo() 获取<p>RedoLog文件信息</p>
+ * @method void setRedoFileInfo(RedoLogItem $RedoFileInfo) 设置<p>RedoLog文件信息</p>
  */
 class DescribeRedoLogListByVaultItem extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 集群名称
+     * @var string <p>集群名称</p>
      */
     public $ClusterName;
 
     /**
-     * @var RedoLogItem RedoLog文件信息
+     * @var RedoLogItem <p>RedoLog文件信息</p>
      */
     public $RedoFileInfo;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param string $ClusterName 集群名称
-     * @param RedoLogItem $RedoFileInfo RedoLog文件信息
+     * @param string $ClusterId <p>集群ID</p>
+     * @param string $ClusterName <p>集群名称</p>
+     * @param RedoLogItem $RedoFileInfo <p>RedoLog文件信息</p>
      */
     function __construct()
     {

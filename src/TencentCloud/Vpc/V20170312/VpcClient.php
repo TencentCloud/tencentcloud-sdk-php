@@ -239,6 +239,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * 子网创建后会自动关联到默认路由表。
 * 创建子网同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
  * @method Models\CreateTrafficMirrorResponse CreateTrafficMirror(Models\CreateTrafficMirrorRequest $req) 本接口（CreateTrafficMirror）用于创建流量镜像实例。
+ * @method Models\CreateTrafficMirrorFilterRulesResponse CreateTrafficMirrorFilterRules(Models\CreateTrafficMirrorFilterRulesRequest $req) 创建流量镜像五元组过滤规则。
  * @method Models\CreateTrafficPackagesResponse CreateTrafficPackages(Models\CreateTrafficPackagesRequest $req) 本接口 (CreateTrafficPackages) 用于创建共享流量包。
  * @method Models\CreateVpcResponse CreateVpc(Models\CreateVpcRequest $req) 本接口（CreateVpc）用于创建私有网络（VPC）。
 * 用户可以创建的最小网段子网掩码为28（有16个IP地址），10.0.0.0/12，172.16.0.0/12最大网段子网掩码为12（1,048,576个IP地址），192.168.0.0/16最大网段子网掩码为16（65,536个IP地址）如果需要规划VPC网段请参见[网络规划](https://cloud.tencent.com/document/product/215/30313)。
@@ -332,6 +333,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * 删除子网前，请清理该子网下所有资源，包括云服务器、负载均衡、云数据、NoSQL、弹性网卡等资源。
  * @method Models\DeleteTemplateMemberResponse DeleteTemplateMember(Models\DeleteTemplateMemberRequest $req) 删除模板对象中的IP地址、协议端口、IP地址组、协议端口组。
  * @method Models\DeleteTrafficMirrorResponse DeleteTrafficMirror(Models\DeleteTrafficMirrorRequest $req) 本接口（DeleteTrafficMirror）用于删除流量镜像实例。
+ * @method Models\DeleteTrafficMirrorFilterRulesResponse DeleteTrafficMirrorFilterRules(Models\DeleteTrafficMirrorFilterRulesRequest $req) 删除流量镜像五元组过滤规则。
  * @method Models\DeleteTrafficPackagesResponse DeleteTrafficPackages(Models\DeleteTrafficPackagesRequest $req) 删除共享带宽包（仅非活动状态的流量包可删除）。
  * @method Models\DeleteVpcResponse DeleteVpc(Models\DeleteVpcRequest $req) 本接口（DeleteVpc）用于删除私有网络。
 * 删除前请确保 VPC 内已经没有相关资源，例如云服务器、云数据库、NoSQL、VPN网关、专线网关、负载均衡、对等连接、与之互通的基础网络设备等。
@@ -469,6 +471,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DescribeTenantCcnsResponse DescribeTenantCcns(Models\DescribeTenantCcnsRequest $req) 本接口（DescribeTenantCcns）用于获取要锁定的云联网实例列表。
 该接口一般用来封禁出口限速的云联网实例, 目前联通内部运营系统通过云API调用, 因为出口限速无法按地域间封禁, 只能按更粗的云联网实例粒度封禁, 如果是地域间限速, 一般可以通过更细的限速实例粒度封禁（DescribeCrossBorderCcnRegionBandwidthLimits）
 如有需要, 可以封禁任意云联网实例, 可接入到内部运营系统
+ * @method Models\DescribeTrafficMirrorFilterRulesResponse DescribeTrafficMirrorFilterRules(Models\DescribeTrafficMirrorFilterRulesRequest $req) 查询流量镜像五元组过滤规则。
  * @method Models\DescribeTrafficMirrorsResponse DescribeTrafficMirrors(Models\DescribeTrafficMirrorsRequest $req) 本接口（DescribeTrafficMirrors）用于查询流量镜像实例信息。
  * @method Models\DescribeTrafficPackagesResponse DescribeTrafficPackages(Models\DescribeTrafficPackagesRequest $req) 本接口 (DescribeTrafficPackages)  用于查询共享流量包详细信息，包括共享流量包唯一标识ID，名称，流量使用信息等
  * @method Models\DescribeTrafficQosPolicyResponse DescribeTrafficQosPolicy(Models\DescribeTrafficQosPolicyRequest $req) 查询流量调度规则
@@ -696,6 +699,7 @@ LimitTypes取值范围：
  * @method Models\ModifyTemplateMemberResponse ModifyTemplateMember(Models\ModifyTemplateMemberRequest $req) 修改模板对象中的IP地址、协议端口、IP地址组、协议端口组。
  * @method Models\ModifyTrafficMirrorAttributeResponse ModifyTrafficMirrorAttribute(Models\ModifyTrafficMirrorAttributeRequest $req) 本接口（ModifyTrafficMirrorAttribute）用于修改流量镜像实例属性。
 注意：只支持修改名字和描述信息
+ * @method Models\ModifyTrafficMirrorFilterRulesResponse ModifyTrafficMirrorFilterRules(Models\ModifyTrafficMirrorFilterRulesRequest $req) 修改流量镜像五元组过滤规则。
  * @method Models\ModifyVpcAttributeResponse ModifyVpcAttribute(Models\ModifyVpcAttributeRequest $req) 本接口（ModifyVpcAttribute）用于修改私有网络（VPC）的相关属性。
  * @method Models\ModifyVpcEndPointAttributeResponse ModifyVpcEndPointAttribute(Models\ModifyVpcEndPointAttributeRequest $req) 本接口（ModifyVpcEndPointAttribute）用于修改终端节点属性。
  * @method Models\ModifyVpcEndPointServiceAttributeResponse ModifyVpcEndPointServiceAttribute(Models\ModifyVpcEndPointServiceAttributeRequest $req) 本接口（ModifyVpcEndPointServiceAttribute）用于修改终端节点服务属性。

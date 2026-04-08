@@ -20,94 +20,94 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 文件信息内容
  *
- * @method integer getDocBizId() 获取实时文档解析接口返回的 DocBizId
+ * @method string getDocBizId() 获取<p>实时文档解析接口返回的 DocBizId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDocBizId(integer $DocBizId) 设置实时文档解析接口返回的 DocBizId
+ * @method void setDocBizId(string $DocBizId) 设置<p>实时文档解析接口返回的 DocBizId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFileName() 获取文件名称
+ * @method string getFileName() 获取<p>文件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileName(string $FileName) 设置文件名称
+ * @method void setFileName(string $FileName) 设置<p>文件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFileType() 获取文件类型
+ * @method string getFileType() 获取<p>文件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileType(string $FileType) 设置文件类型
+ * @method void setFileType(string $FileType) 设置<p>文件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getFileSize() 获取文件大小
+ * @method string getFileSize() 获取<p>文件大小，单位为Byte</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileSize(integer $FileSize) 设置文件大小
+ * @method void setFileSize(string $FileSize) 设置<p>文件大小，单位为Byte</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFileUrl() 获取文件 URL
+ * @method string getFileUrl() 获取<p>文件 URL</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileUrl(string $FileUrl) 设置文件 URL
+ * @method void setFileUrl(string $FileUrl) 设置<p>文件 URL</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDocId() 获取实时文档解析接口返回的 doc_id。
+ * @method string getDocId() 获取<p>实时文档解析接口返回的 doc_id。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDocId(integer $DocId) 设置实时文档解析接口返回的 doc_id。
+ * @method void setDocId(string $DocId) 设置<p>实时文档解析接口返回的 doc_id。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCreateTime() 获取文件创建时间
+ * @method string getCreateTime() 获取<p>文件创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(integer $CreateTime) 设置文件创建时间
+ * @method void setCreateTime(string $CreateTime) 设置<p>文件创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class FileInfoContent extends AbstractModel
 {
     /**
-     * @var integer 实时文档解析接口返回的 DocBizId
+     * @var string <p>实时文档解析接口返回的 DocBizId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     public $DocBizId;
 
     /**
-     * @var string 文件名称
+     * @var string <p>文件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileName;
 
     /**
-     * @var string 文件类型
+     * @var string <p>文件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileType;
 
     /**
-     * @var integer 文件大小
+     * @var string <p>文件大小，单位为Byte</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileSize;
 
     /**
-     * @var string 文件 URL
+     * @var string <p>文件 URL</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileUrl;
 
     /**
-     * @var integer 实时文档解析接口返回的 doc_id。
+     * @var string <p>实时文档解析接口返回的 doc_id。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DocId;
 
     /**
-     * @var integer 文件创建时间
+     * @var string <p>文件创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @param integer $DocBizId 实时文档解析接口返回的 DocBizId
+     * @param string $DocBizId <p>实时文档解析接口返回的 DocBizId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FileName 文件名称
+     * @param string $FileName <p>文件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FileType 文件类型
+     * @param string $FileType <p>文件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $FileSize 文件大小
+     * @param string $FileSize <p>文件大小，单位为Byte</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FileUrl 文件 URL
+     * @param string $FileUrl <p>文件 URL</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DocId 实时文档解析接口返回的 doc_id。
+     * @param string $DocId <p>实时文档解析接口返回的 doc_id。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CreateTime 文件创建时间
+     * @param string $CreateTime <p>文件创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

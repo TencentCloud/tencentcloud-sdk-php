@@ -14,37 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLiveAvatarScripts返回参数结构体
+ * EraseHandwrittenImageOCR返回参数结构体
  *
- * @method array getInfoList() 获取<p>数字人直播间话术信息列表。</p>
- * @method void setInfoList(array $InfoList) 设置<p>数字人直播间话术信息列表。</p>
- * @method integer getLimitCreateNum() 获取<p>限制可创建的数字人直播间话术总条数。</p>
- * @method void setLimitCreateNum(integer $LimitCreateNum) 设置<p>限制可创建的数字人直播间话术总条数。</p>
- * @method integer getTotalNum() 获取<p>当前数字人直播间话术总条数。</p>
- * @method void setTotalNum(integer $TotalNum) 设置<p>当前数字人直播间话术总条数。</p>
+ * @method string getImage() 获取图像处理后的jpg图片，base64格式
+ * @method void setImage(string $Image) 设置图像处理后的jpg图片，base64格式
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeLiveAvatarScriptsResponse extends AbstractModel
+class EraseHandwrittenImageOCRResponse extends AbstractModel
 {
     /**
-     * @var array <p>数字人直播间话术信息列表。</p>
+     * @var string 图像处理后的jpg图片，base64格式
      */
-    public $InfoList;
-
-    /**
-     * @var integer <p>限制可创建的数字人直播间话术总条数。</p>
-     */
-    public $LimitCreateNum;
-
-    /**
-     * @var integer <p>当前数字人直播间话术总条数。</p>
-     */
-    public $TotalNum;
+    public $Image;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +38,7 @@ class DescribeLiveAvatarScriptsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $InfoList <p>数字人直播间话术信息列表。</p>
-     * @param integer $LimitCreateNum <p>限制可创建的数字人直播间话术总条数。</p>
-     * @param integer $TotalNum <p>当前数字人直播间话术总条数。</p>
+     * @param string $Image 图像处理后的jpg图片，base64格式
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,21 +54,8 @@ class DescribeLiveAvatarScriptsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InfoList",$param) and $param["InfoList"] !== null) {
-            $this->InfoList = [];
-            foreach ($param["InfoList"] as $key => $value){
-                $obj = new AvatarScriptInfo();
-                $obj->deserialize($value);
-                array_push($this->InfoList, $obj);
-            }
-        }
-
-        if (array_key_exists("LimitCreateNum",$param) and $param["LimitCreateNum"] !== null) {
-            $this->LimitCreateNum = $param["LimitCreateNum"];
-        }
-
-        if (array_key_exists("TotalNum",$param) and $param["TotalNum"] !== null) {
-            $this->TotalNum = $param["TotalNum"];
+        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
+            $this->Image = $param["Image"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

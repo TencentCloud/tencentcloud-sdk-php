@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * binlog备份信息
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getClusterName() 获取集群名称
- * @method void setClusterName(string $ClusterName) 设置集群名称
- * @method BinlogItem getBinlogFileInfo() 获取Binlog文件信息
- * @method void setBinlogFileInfo(BinlogItem $BinlogFileInfo) 设置Binlog文件信息
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method string getClusterName() 获取<p>集群名称</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名称</p>
+ * @method BinlogItem getBinlogFileInfo() 获取<p>Binlog文件信息</p>
+ * @method void setBinlogFileInfo(BinlogItem $BinlogFileInfo) 设置<p>Binlog文件信息</p>
  */
 class DescribeBinlogListByVaultItem extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 集群名称
+     * @var string <p>集群名称</p>
      */
     public $ClusterName;
 
     /**
-     * @var BinlogItem Binlog文件信息
+     * @var BinlogItem <p>Binlog文件信息</p>
      */
     public $BinlogFileInfo;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param string $ClusterName 集群名称
-     * @param BinlogItem $BinlogFileInfo Binlog文件信息
+     * @param string $ClusterId <p>集群ID</p>
+     * @param string $ClusterName <p>集群名称</p>
+     * @param BinlogItem $BinlogFileInfo <p>Binlog文件信息</p>
      */
     function __construct()
     {

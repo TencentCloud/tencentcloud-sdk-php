@@ -20,50 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 扩展调度器(Extenders)
  *
- * @method string getFilterVerb() 获取过滤阶段接口
- * @method void setFilterVerb(string $FilterVerb) 设置过滤阶段接口
- * @method string getPrioritizeVerb() 获取打分阶段扩展接口
- * @method void setPrioritizeVerb(string $PrioritizeVerb) 设置打分阶段扩展接口
- * @method integer getWeight() 获取打分阶段节点分数的权重,取值范围限定(0,2】
- * @method void setWeight(integer $Weight) 设置打分阶段节点分数的权重,取值范围限定(0,2】
- * @method array getManagedResources() 获取扩展调度器(Extender)管理的扩展资源
- * @method void setManagedResources(array $ManagedResources) 设置扩展调度器(Extender)管理的扩展资源
- * @method ExtenderClientConfig getExtenderClientConfig() 获取extender客户端配置
- * @method void setExtenderClientConfig(ExtenderClientConfig $ExtenderClientConfig) 设置extender客户端配置
+ * @method string getFilterVerb() 获取<p>过滤阶段接口</p>
+ * @method void setFilterVerb(string $FilterVerb) 设置<p>过滤阶段接口</p>
+ * @method string getPrioritizeVerb() 获取<p>打分阶段扩展接口</p>
+ * @method void setPrioritizeVerb(string $PrioritizeVerb) 设置<p>打分阶段扩展接口</p>
+ * @method integer getWeight() 获取<p>打分阶段节点分数的权重,取值范围限定(0,2】</p>
+ * @method void setWeight(integer $Weight) 设置<p>打分阶段节点分数的权重,取值范围限定(0,2】</p>
+ * @method array getManagedResources() 获取<p>扩展调度器(Extender)管理的扩展资源</p>
+ * @method void setManagedResources(array $ManagedResources) 设置<p>扩展调度器(Extender)管理的扩展资源</p>
+ * @method ExtenderClientConfig getExtenderClientConfig() 获取<p>extender客户端配置</p>
+ * @method void setExtenderClientConfig(ExtenderClientConfig $ExtenderClientConfig) 设置<p>extender客户端配置</p>
+ * @method string getPreemptVerb() 获取<p>抢占接口</p>
+ * @method void setPreemptVerb(string $PreemptVerb) 设置<p>抢占接口</p>
+ * @method boolean getNodeCacheCapable() 获取<p>节点缓存能力</p>
+ * @method void setNodeCacheCapable(boolean $NodeCacheCapable) 设置<p>节点缓存能力</p>
  */
 class Extenders extends AbstractModel
 {
     /**
-     * @var string 过滤阶段接口
+     * @var string <p>过滤阶段接口</p>
      */
     public $FilterVerb;
 
     /**
-     * @var string 打分阶段扩展接口
+     * @var string <p>打分阶段扩展接口</p>
      */
     public $PrioritizeVerb;
 
     /**
-     * @var integer 打分阶段节点分数的权重,取值范围限定(0,2】
+     * @var integer <p>打分阶段节点分数的权重,取值范围限定(0,2】</p>
      */
     public $Weight;
 
     /**
-     * @var array 扩展调度器(Extender)管理的扩展资源
+     * @var array <p>扩展调度器(Extender)管理的扩展资源</p>
      */
     public $ManagedResources;
 
     /**
-     * @var ExtenderClientConfig extender客户端配置
+     * @var ExtenderClientConfig <p>extender客户端配置</p>
      */
     public $ExtenderClientConfig;
 
     /**
-     * @param string $FilterVerb 过滤阶段接口
-     * @param string $PrioritizeVerb 打分阶段扩展接口
-     * @param integer $Weight 打分阶段节点分数的权重,取值范围限定(0,2】
-     * @param array $ManagedResources 扩展调度器(Extender)管理的扩展资源
-     * @param ExtenderClientConfig $ExtenderClientConfig extender客户端配置
+     * @var string <p>抢占接口</p>
+     */
+    public $PreemptVerb;
+
+    /**
+     * @var boolean <p>节点缓存能力</p>
+     */
+    public $NodeCacheCapable;
+
+    /**
+     * @param string $FilterVerb <p>过滤阶段接口</p>
+     * @param string $PrioritizeVerb <p>打分阶段扩展接口</p>
+     * @param integer $Weight <p>打分阶段节点分数的权重,取值范围限定(0,2】</p>
+     * @param array $ManagedResources <p>扩展调度器(Extender)管理的扩展资源</p>
+     * @param ExtenderClientConfig $ExtenderClientConfig <p>extender客户端配置</p>
+     * @param string $PreemptVerb <p>抢占接口</p>
+     * @param boolean $NodeCacheCapable <p>节点缓存能力</p>
      */
     function __construct()
     {
@@ -102,6 +118,14 @@ class Extenders extends AbstractModel
         if (array_key_exists("ExtenderClientConfig",$param) and $param["ExtenderClientConfig"] !== null) {
             $this->ExtenderClientConfig = new ExtenderClientConfig();
             $this->ExtenderClientConfig->deserialize($param["ExtenderClientConfig"]);
+        }
+
+        if (array_key_exists("PreemptVerb",$param) and $param["PreemptVerb"] !== null) {
+            $this->PreemptVerb = $param["PreemptVerb"];
+        }
+
+        if (array_key_exists("NodeCacheCapable",$param) and $param["NodeCacheCapable"] !== null) {
+            $this->NodeCacheCapable = $param["NodeCacheCapable"];
         }
     }
 }

@@ -116,6 +116,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\ModifyPackageDomainResponse ModifyPackageDomain(Models\ModifyPackageDomainRequest $req) 套餐绑定、解绑、更换域名
  * @method Models\ModifyRecordResponse ModifyRecord(Models\ModifyRecordRequest $req) 修改记录
  * @method Models\ModifyRecordBatchResponse ModifyRecordBatch(Models\ModifyRecordBatchRequest $req) 批量修改记录
+ * @method Models\ModifyRecordBatchV3Response ModifyRecordBatchV3(Models\ModifyRecordBatchV3Request $req) 批量修改记录
  * @method Models\ModifyRecordFieldsResponse ModifyRecordFields(Models\ModifyRecordFieldsRequest $req) 修改记录可选字段
  * @method Models\ModifyRecordGroupResponse ModifyRecordGroup(Models\ModifyRecordGroupRequest $req) 修改记录分组
  * @method Models\ModifyRecordRemarkResponse ModifyRecordRemark(Models\ModifyRecordRemarkRequest $req) 设置记录备注

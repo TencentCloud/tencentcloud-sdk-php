@@ -20,218 +20,206 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 对话记录内容详情
  *
- * @method string getType() 获取消息内容类型
-text：文本
-image：图片
-file：文件
-option_cards：选项卡
-custom_params：用户自定义业务参数
-sandbox：云桌面
-custom_variables：自定义输入参数
-web_search: 网页搜索内容
-file_collection：文件收集信息
-widget：widget信息
-widget_action：用户端widget动作信息
- * @method void setType(string $Type) 设置消息内容类型
-text：文本
-image：图片
-file：文件
-option_cards：选项卡
-custom_params：用户自定义业务参数
-sandbox：云桌面
-custom_variables：自定义输入参数
-web_search: 网页搜索内容
-file_collection：文件收集信息
-widget：widget信息
-widget_action：用户端widget动作信息
- * @method string getText() 获取文本内容
+ * @method string getType() 获取<p>消息内容类型<br>text：文本<br>image：图片<br>file：文件<br>option_cards：选项卡<br>custom_params：用户自定义业务参数<br>sandbox：云桌面<br>custom_variables：自定义输入参数<br>web_search: 网页搜索内容<br>file_collection：文件收集信息<br>widget：widget信息<br>widget_action：用户端widget动作信息</p>
+ * @method void setType(string $Type) 设置<p>消息内容类型<br>text：文本<br>image：图片<br>file：文件<br>option_cards：选项卡<br>custom_params：用户自定义业务参数<br>sandbox：云桌面<br>custom_variables：自定义输入参数<br>web_search: 网页搜索内容<br>file_collection：文件收集信息<br>widget：widget信息<br>widget_action：用户端widget动作信息</p>
+ * @method string getText() 获取<p>文本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setText(string $Text) 设置文本内容
+ * @method void setText(string $Text) 设置<p>文本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getQuoteInfos() 获取引用信息
+ * @method array getQuoteInfos() 获取<p>引用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQuoteInfos(array $QuoteInfos) 设置引用信息
+ * @method void setQuoteInfos(array $QuoteInfos) 设置<p>引用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getReferences() 获取参考文献信息
+ * @method array getReferences() 获取<p>参考文献信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReferences(array $References) 设置参考文献信息
+ * @method void setReferences(array $References) 设置<p>参考文献信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ImageInfoContent getImage() 获取图片信息
+ * @method ImageInfoContent getImage() 获取<p>图片信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImage(ImageInfoContent $Image) 设置图片信息
+ * @method void setImage(ImageInfoContent $Image) 设置<p>图片信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method FileInfoContent getFile() 获取文件信息
+ * @method FileInfoContent getFile() 获取<p>文件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFile(FileInfoContent $File) 设置文件信息
+ * @method void setFile(FileInfoContent $File) 设置<p>文件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getOptionCards() 获取选项卡信息
+ * @method array getOptionCards() 获取<p>选项卡信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOptionCards(array $OptionCards) 设置选项卡信息
+ * @method void setOptionCards(array $OptionCards) 设置<p>选项卡信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getCustomParams() 获取用户自定义业务参数信息
+ * @method array getCustomParams() 获取<p>用户自定义业务参数信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCustomParams(array $CustomParams) 设置用户自定义业务参数信息
+ * @method void setCustomParams(array $CustomParams) 设置<p>用户自定义业务参数信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getCustomVariables() 获取自定义变量
+ * @method array getCustomVariables() 获取<p>自定义变量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCustomVariables(array $CustomVariables) 设置自定义变量
+ * @method void setCustomVariables(array $CustomVariables) 设置<p>自定义变量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method SandboxContent getSandbox() 获取沙盒信息
+ * @method SandboxContent getSandbox() 获取<p>沙盒信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSandbox(SandboxContent $Sandbox) 设置沙盒信息
+ * @method void setSandbox(SandboxContent $Sandbox) 设置<p>沙盒信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method WebSearchContent getWebSearch() 获取网页搜索内容
+ * @method WebSearchContent getWebSearch() 获取<p>网页搜索内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWebSearch(WebSearchContent $WebSearch) 设置网页搜索内容
+ * @method void setWebSearch(WebSearchContent $WebSearch) 设置<p>网页搜索内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method FileCollection getFileCollection() 获取文件收集信息
+ * @method FileCollection getFileCollection() 获取<p>文件收集信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileCollection(FileCollection $FileCollection) 设置文件收集信息
+ * @method void setFileCollection(FileCollection $FileCollection) 设置<p>文件收集信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Widget getWidget() 获取Widget信息
+ * @method Widget getWidget() 获取<p>Widget信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWidget(Widget $Widget) 设置Widget信息
+ * @method void setWidget(Widget $Widget) 设置<p>Widget信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method WidgetAction getWidgetAction() 获取Widget动作信息
+ * @method WidgetAction getWidgetAction() 获取<p>Widget动作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWidgetAction(WidgetAction $WidgetAction) 设置Widget动作信息
+ * @method void setWidgetAction(WidgetAction $WidgetAction) 设置<p>Widget动作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTasks() 获取<p>任务列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTasks(array $Tasks) 设置<p>任务列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method Questionnaire getQuestionnaire() 获取<p>问卷信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQuestionnaire(Questionnaire $Questionnaire) 设置<p>问卷信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getOptionMode() 获取<p>选项卡模式</p>
+ * @method void setOptionMode(integer $OptionMode) 设置<p>选项卡模式</p>
  */
 class Content extends AbstractModel
 {
     /**
-     * @var string 消息内容类型
-text：文本
-image：图片
-file：文件
-option_cards：选项卡
-custom_params：用户自定义业务参数
-sandbox：云桌面
-custom_variables：自定义输入参数
-web_search: 网页搜索内容
-file_collection：文件收集信息
-widget：widget信息
-widget_action：用户端widget动作信息
+     * @var string <p>消息内容类型<br>text：文本<br>image：图片<br>file：文件<br>option_cards：选项卡<br>custom_params：用户自定义业务参数<br>sandbox：云桌面<br>custom_variables：自定义输入参数<br>web_search: 网页搜索内容<br>file_collection：文件收集信息<br>widget：widget信息<br>widget_action：用户端widget动作信息</p>
      */
     public $Type;
 
     /**
-     * @var string 文本内容
+     * @var string <p>文本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
-     * @var array 引用信息
+     * @var array <p>引用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QuoteInfos;
 
     /**
-     * @var array 参考文献信息
+     * @var array <p>参考文献信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $References;
 
     /**
-     * @var ImageInfoContent 图片信息
+     * @var ImageInfoContent <p>图片信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Image;
 
     /**
-     * @var FileInfoContent 文件信息
+     * @var FileInfoContent <p>文件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $File;
 
     /**
-     * @var array 选项卡信息
+     * @var array <p>选项卡信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OptionCards;
 
     /**
-     * @var array 用户自定义业务参数信息
+     * @var array <p>用户自定义业务参数信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomParams;
 
     /**
-     * @var array 自定义变量
+     * @var array <p>自定义变量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomVariables;
 
     /**
-     * @var SandboxContent 沙盒信息
+     * @var SandboxContent <p>沙盒信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sandbox;
 
     /**
-     * @var WebSearchContent 网页搜索内容
+     * @var WebSearchContent <p>网页搜索内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WebSearch;
 
     /**
-     * @var FileCollection 文件收集信息
+     * @var FileCollection <p>文件收集信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileCollection;
 
     /**
-     * @var Widget Widget信息
+     * @var Widget <p>Widget信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Widget;
 
     /**
-     * @var WidgetAction Widget动作信息
+     * @var WidgetAction <p>Widget动作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WidgetAction;
 
     /**
-     * @param string $Type 消息内容类型
-text：文本
-image：图片
-file：文件
-option_cards：选项卡
-custom_params：用户自定义业务参数
-sandbox：云桌面
-custom_variables：自定义输入参数
-web_search: 网页搜索内容
-file_collection：文件收集信息
-widget：widget信息
-widget_action：用户端widget动作信息
-     * @param string $Text 文本内容
+     * @var array <p>任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $QuoteInfos 引用信息
+     */
+    public $Tasks;
+
+    /**
+     * @var Questionnaire <p>问卷信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $References 参考文献信息
+     */
+    public $Questionnaire;
+
+    /**
+     * @var integer <p>选项卡模式</p>
+     */
+    public $OptionMode;
+
+    /**
+     * @param string $Type <p>消息内容类型<br>text：文本<br>image：图片<br>file：文件<br>option_cards：选项卡<br>custom_params：用户自定义业务参数<br>sandbox：云桌面<br>custom_variables：自定义输入参数<br>web_search: 网页搜索内容<br>file_collection：文件收集信息<br>widget：widget信息<br>widget_action：用户端widget动作信息</p>
+     * @param string $Text <p>文本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageInfoContent $Image 图片信息
+     * @param array $QuoteInfos <p>引用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileInfoContent $File 文件信息
+     * @param array $References <p>参考文献信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $OptionCards 选项卡信息
+     * @param ImageInfoContent $Image <p>图片信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $CustomParams 用户自定义业务参数信息
+     * @param FileInfoContent $File <p>文件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $CustomVariables 自定义变量
+     * @param array $OptionCards <p>选项卡信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SandboxContent $Sandbox 沙盒信息
+     * @param array $CustomParams <p>用户自定义业务参数信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WebSearchContent $WebSearch 网页搜索内容
+     * @param array $CustomVariables <p>自定义变量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileCollection $FileCollection 文件收集信息
+     * @param SandboxContent $Sandbox <p>沙盒信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Widget $Widget Widget信息
+     * @param WebSearchContent $WebSearch <p>网页搜索内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WidgetAction $WidgetAction Widget动作信息
+     * @param FileCollection $FileCollection <p>文件收集信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param Widget $Widget <p>Widget信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WidgetAction $WidgetAction <p>Widget动作信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tasks <p>任务列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Questionnaire $Questionnaire <p>问卷信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $OptionMode <p>选项卡模式</p>
      */
     function __construct()
     {
@@ -317,6 +305,24 @@ widget_action：用户端widget动作信息
         if (array_key_exists("WidgetAction",$param) and $param["WidgetAction"] !== null) {
             $this->WidgetAction = new WidgetAction();
             $this->WidgetAction->deserialize($param["WidgetAction"]);
+        }
+
+        if (array_key_exists("Tasks",$param) and $param["Tasks"] !== null) {
+            $this->Tasks = [];
+            foreach ($param["Tasks"] as $key => $value){
+                $obj = new AgentTask();
+                $obj->deserialize($value);
+                array_push($this->Tasks, $obj);
+            }
+        }
+
+        if (array_key_exists("Questionnaire",$param) and $param["Questionnaire"] !== null) {
+            $this->Questionnaire = new Questionnaire();
+            $this->Questionnaire->deserialize($param["Questionnaire"]);
+        }
+
+        if (array_key_exists("OptionMode",$param) and $param["OptionMode"] !== null) {
+            $this->OptionMode = $param["OptionMode"];
         }
     }
 }

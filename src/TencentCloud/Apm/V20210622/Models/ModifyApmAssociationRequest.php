@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyApmAssociation请求参数结构体
  *
- * @method string getProductName() 获取关联的产品名，当前只支持Prometheus、CKafka
- * @method void setProductName(string $ProductName) 设置关联的产品名，当前只支持Prometheus、CKafka
- * @method integer getStatus() 获取关联关系的状态：// 关联关系状态：1（启用）、2（不启用）
- * @method void setStatus(integer $Status) 设置关联关系的状态：// 关联关系状态：1（启用）、2（不启用）
- * @method string getInstanceId() 获取业务系统ID
- * @method void setInstanceId(string $InstanceId) 设置业务系统ID
- * @method string getPeerId() 获取关联的产品实例ID
- * @method void setPeerId(string $PeerId) 设置关联的产品实例ID
- * @method string getTopic() 获取CKafka消息主题
- * @method void setTopic(string $Topic) 设置CKafka消息主题
+ * @method string getProductName() 获取<p>关联的产品名，当前只支持Prometheus、CKafka</p>
+ * @method void setProductName(string $ProductName) 设置<p>关联的产品名，当前只支持Prometheus、CKafka</p>
+ * @method integer getStatus() 获取<p>关联关系的状态：// 关联关系状态：1（启用）、2（不启用）</p>
+ * @method void setStatus(integer $Status) 设置<p>关联关系的状态：// 关联关系状态：1（启用）、2（不启用）</p>
+ * @method string getInstanceId() 获取<p>业务系统ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>业务系统ID</p>
+ * @method string getPeerId() 获取<p>关联的产品实例ID</p>
+ * @method void setPeerId(string $PeerId) 设置<p>关联的产品实例ID</p>
+ * @method string getTopic() 获取<p>CKafka消息主题</p>
+ * @method void setTopic(string $Topic) 设置<p>CKafka消息主题</p>
+ * @method string getMetricTopic() 获取<p>Ckafka消息主题</p>
+ * @method void setMetricTopic(string $MetricTopic) 设置<p>Ckafka消息主题</p>
  */
 class ModifyApmAssociationRequest extends AbstractModel
 {
     /**
-     * @var string 关联的产品名，当前只支持Prometheus、CKafka
+     * @var string <p>关联的产品名，当前只支持Prometheus、CKafka</p>
      */
     public $ProductName;
 
     /**
-     * @var integer 关联关系的状态：// 关联关系状态：1（启用）、2（不启用）
+     * @var integer <p>关联关系的状态：// 关联关系状态：1（启用）、2（不启用）</p>
      */
     public $Status;
 
     /**
-     * @var string 业务系统ID
+     * @var string <p>业务系统ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 关联的产品实例ID
+     * @var string <p>关联的产品实例ID</p>
      */
     public $PeerId;
 
     /**
-     * @var string CKafka消息主题
+     * @var string <p>CKafka消息主题</p>
      */
     public $Topic;
 
     /**
-     * @param string $ProductName 关联的产品名，当前只支持Prometheus、CKafka
-     * @param integer $Status 关联关系的状态：// 关联关系状态：1（启用）、2（不启用）
-     * @param string $InstanceId 业务系统ID
-     * @param string $PeerId 关联的产品实例ID
-     * @param string $Topic CKafka消息主题
+     * @var string <p>Ckafka消息主题</p>
+     */
+    public $MetricTopic;
+
+    /**
+     * @param string $ProductName <p>关联的产品名，当前只支持Prometheus、CKafka</p>
+     * @param integer $Status <p>关联关系的状态：// 关联关系状态：1（启用）、2（不启用）</p>
+     * @param string $InstanceId <p>业务系统ID</p>
+     * @param string $PeerId <p>关联的产品实例ID</p>
+     * @param string $Topic <p>CKafka消息主题</p>
+     * @param string $MetricTopic <p>Ckafka消息主题</p>
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ModifyApmAssociationRequest extends AbstractModel
 
         if (array_key_exists("Topic",$param) and $param["Topic"] !== null) {
             $this->Topic = $param["Topic"];
+        }
+
+        if (array_key_exists("MetricTopic",$param) and $param["MetricTopic"] !== null) {
+            $this->MetricTopic = $param["MetricTopic"];
         }
     }
 }

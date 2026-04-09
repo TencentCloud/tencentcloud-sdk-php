@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 对视频转自适应码流的输入参数类型
  *
- * @method integer getDefinition() 获取转自适应码流模板 ID。
- * @method void setDefinition(integer $Definition) 设置转自适应码流模板 ID。
- * @method array getWatermarkSet() 获取水印列表，支持多张图片或文字水印，最大可支持 10 张。
- * @method void setWatermarkSet(array $WatermarkSet) 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
- * @method TraceWatermarkInput getTraceWatermark() 获取溯源水印。
- * @method void setTraceWatermark(TraceWatermarkInput $TraceWatermark) 设置溯源水印。
- * @method CopyRightWatermarkInput getCopyRightWatermark() 获取版权水印。
- * @method void setCopyRightWatermark(CopyRightWatermarkInput $CopyRightWatermark) 设置版权水印。
- * @method BlindWatermarkInput getBlindWatermark() 获取数字水印。
- * @method void setBlindWatermark(BlindWatermarkInput $BlindWatermark) 设置数字水印。
- * @method array getSubtitleSet() 获取字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。
- * @method void setSubtitleSet(array $SubtitleSet) 设置字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。
+ * @method integer getDefinition() 获取<p>转自适应码流模板 ID。</p>
+ * @method void setDefinition(integer $Definition) 设置<p>转自适应码流模板 ID。</p>
+ * @method array getWatermarkSet() 获取<p>水印列表，支持多张图片或文字水印，最大可支持 10 张。</p>
+ * @method void setWatermarkSet(array $WatermarkSet) 设置<p>水印列表，支持多张图片或文字水印，最大可支持 10 张。</p>
+ * @method TraceWatermarkInput getTraceWatermark() 获取<p>溯源水印。</p>
+ * @method void setTraceWatermark(TraceWatermarkInput $TraceWatermark) 设置<p>溯源水印。</p>
+ * @method CopyRightWatermarkInput getCopyRightWatermark() 获取<p>版权水印。</p>
+ * @method void setCopyRightWatermark(CopyRightWatermarkInput $CopyRightWatermark) 设置<p>版权水印。</p>
+ * @method BlindWatermarkInput getBlindWatermark() 获取<p>数字水印。</p>
+ * @method void setBlindWatermark(BlindWatermarkInput $BlindWatermark) 设置<p>数字水印。</p>
+ * @method array getSubtitleSet() 获取<p>外挂字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。</p>
+ * @method void setSubtitleSet(array $SubtitleSet) 设置<p>外挂字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。</p>
+ * @method array getSubtitleInfoSet() 获取<p>字幕压制信息列表。最大可支持 2 个。</p>
+ * @method void setSubtitleInfoSet(array $SubtitleInfoSet) 设置<p>字幕压制信息列表。最大可支持 2 个。</p>
  */
 class AdaptiveDynamicStreamingTaskInput extends AbstractModel
 {
     /**
-     * @var integer 转自适应码流模板 ID。
+     * @var integer <p>转自适应码流模板 ID。</p>
      */
     public $Definition;
 
     /**
-     * @var array 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+     * @var array <p>水印列表，支持多张图片或文字水印，最大可支持 10 张。</p>
      */
     public $WatermarkSet;
 
     /**
-     * @var TraceWatermarkInput 溯源水印。
+     * @var TraceWatermarkInput <p>溯源水印。</p>
      */
     public $TraceWatermark;
 
     /**
-     * @var CopyRightWatermarkInput 版权水印。
+     * @var CopyRightWatermarkInput <p>版权水印。</p>
      */
     public $CopyRightWatermark;
 
     /**
-     * @var BlindWatermarkInput 数字水印。
+     * @var BlindWatermarkInput <p>数字水印。</p>
      */
     public $BlindWatermark;
 
     /**
-     * @var array 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。
+     * @var array <p>外挂字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。</p>
      */
     public $SubtitleSet;
 
     /**
-     * @param integer $Definition 转自适应码流模板 ID。
-     * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
-     * @param TraceWatermarkInput $TraceWatermark 溯源水印。
-     * @param CopyRightWatermarkInput $CopyRightWatermark 版权水印。
-     * @param BlindWatermarkInput $BlindWatermark 数字水印。
-     * @param array $SubtitleSet 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。
+     * @var array <p>字幕压制信息列表。最大可支持 2 个。</p>
+     */
+    public $SubtitleInfoSet;
+
+    /**
+     * @param integer $Definition <p>转自适应码流模板 ID。</p>
+     * @param array $WatermarkSet <p>水印列表，支持多张图片或文字水印，最大可支持 10 张。</p>
+     * @param TraceWatermarkInput $TraceWatermark <p>溯源水印。</p>
+     * @param CopyRightWatermarkInput $CopyRightWatermark <p>版权水印。</p>
+     * @param BlindWatermarkInput $BlindWatermark <p>数字水印。</p>
+     * @param array $SubtitleSet <p>外挂字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。</p>
+     * @param array $SubtitleInfoSet <p>字幕压制信息列表。最大可支持 2 个。</p>
      */
     function __construct()
     {
@@ -116,6 +124,15 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
 
         if (array_key_exists("SubtitleSet",$param) and $param["SubtitleSet"] !== null) {
             $this->SubtitleSet = $param["SubtitleSet"];
+        }
+
+        if (array_key_exists("SubtitleInfoSet",$param) and $param["SubtitleInfoSet"] !== null) {
+            $this->SubtitleInfoSet = [];
+            foreach ($param["SubtitleInfoSet"] as $key => $value){
+                $obj = new SubtitleInfoInput();
+                $obj->deserialize($value);
+                array_push($this->SubtitleInfoSet, $obj);
+            }
         }
     }
 }

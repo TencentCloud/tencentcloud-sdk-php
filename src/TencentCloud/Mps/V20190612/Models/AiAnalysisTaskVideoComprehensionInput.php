@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 视频（音频）理解任务输入
  *
- * @method integer getDefinition() 获取视频（音频）理解模板ID
- * @method void setDefinition(integer $Definition) 设置视频（音频）理解模板ID
+ * @method integer getDefinition() 获取<p>视频（音频）理解模板ID</p>
+ * @method void setDefinition(integer $Definition) 设置<p>视频（音频）理解模板ID</p>
+ * @method string getExtendedParameter() 获取<p>扩展参数。</p>
+ * @method void setExtendedParameter(string $ExtendedParameter) 设置<p>扩展参数。</p>
  */
 class AiAnalysisTaskVideoComprehensionInput extends AbstractModel
 {
     /**
-     * @var integer 视频（音频）理解模板ID
+     * @var integer <p>视频（音频）理解模板ID</p>
      */
     public $Definition;
 
     /**
-     * @param integer $Definition 视频（音频）理解模板ID
+     * @var string <p>扩展参数。</p>
+     */
+    public $ExtendedParameter;
+
+    /**
+     * @param integer $Definition <p>视频（音频）理解模板ID</p>
+     * @param string $ExtendedParameter <p>扩展参数。</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class AiAnalysisTaskVideoComprehensionInput extends AbstractModel
         }
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
             $this->Definition = $param["Definition"];
+        }
+
+        if (array_key_exists("ExtendedParameter",$param) and $param["ExtendedParameter"] !== null) {
+            $this->ExtendedParameter = $param["ExtendedParameter"];
         }
     }
 }

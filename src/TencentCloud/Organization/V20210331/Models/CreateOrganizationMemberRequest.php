@@ -20,98 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateOrganizationMember请求参数结构体
  *
- * @method string getName() 获取成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
- * @method void setName(string $Name) 设置成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
- * @method string getPolicyType() 获取关系策略。取值：Financial
- * @method void setPolicyType(string $PolicyType) 设置关系策略。取值：Financial
- * @method array getPermissionIds() 获取成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨（若需要开启资金划拨权限，请联系您的商务经理内部开通。）、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析、9-预算管理、10-信用额度设置（若需要开启信用额度设置权限，请联系您的商务经理内部开通。），1、2 默认必须
- * @method void setPermissionIds(array $PermissionIds) 设置成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨（若需要开启资金划拨权限，请联系您的商务经理内部开通。）、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析、9-预算管理、10-信用额度设置（若需要开启信用额度设置权限，请联系您的商务经理内部开通。），1、2 默认必须
- * @method integer getNodeId() 获取成员所属部门的节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
- * @method void setNodeId(integer $NodeId) 设置成员所属部门的节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
- * @method string getAccountName() 获取账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
- * @method void setAccountName(string $AccountName) 设置账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
- * @method string getRemark() 获取备注。
- * @method void setRemark(string $Remark) 设置备注。
- * @method integer getRecordId() 获取成员创建记录ID。创建异常重试时需要
- * @method void setRecordId(integer $RecordId) 设置成员创建记录ID。创建异常重试时需要
- * @method string getPayUin() 获取代付者Uin。成员代付费时需要
- * @method void setPayUin(string $PayUin) 设置代付者Uin。成员代付费时需要
- * @method array getIdentityRoleID() 获取成员访问身份ID列表。可以调用ListOrganizationIdentity获取，1默认支持
- * @method void setIdentityRoleID(array $IdentityRoleID) 设置成员访问身份ID列表。可以调用ListOrganizationIdentity获取，1默认支持
- * @method integer getAuthRelationId() 获取认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取
- * @method void setAuthRelationId(integer $AuthRelationId) 设置认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取
- * @method array getTags() 获取成员标签列表。最大10个
- * @method void setTags(array $Tags) 设置成员标签列表。最大10个
+ * @method string getName() 获取<p>成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&amp;._[]-:,</p>
+ * @method void setName(string $Name) 设置<p>成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&amp;._[]-:,</p>
+ * @method string getPolicyType() 获取<p>关系策略。取值：Financial</p>
+ * @method void setPolicyType(string $PolicyType) 设置<p>关系策略。取值：Financial</p>
+ * @method array getPermissionIds() 获取<p>成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨（若需要开启资金划拨权限，请联系您的商务经理内部开通。）、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析、9-预算管理、10-信用额度设置（若需要开启信用额度设置权限，请联系您的商务经理内部开通。），1、2 默认必须</p>
+ * @method void setPermissionIds(array $PermissionIds) 设置<p>成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨（若需要开启资金划拨权限，请联系您的商务经理内部开通。）、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析、9-预算管理、10-信用额度设置（若需要开启信用额度设置权限，请联系您的商务经理内部开通。），1、2 默认必须</p>
+ * @method integer getNodeId() 获取<p>成员所属部门的节点ID。可以通过<a href="https://cloud.tencent.com/document/product/850/82926">DescribeOrganizationNodes</a>获取</p>
+ * @method void setNodeId(integer $NodeId) 设置<p>成员所属部门的节点ID。可以通过<a href="https://cloud.tencent.com/document/product/850/82926">DescribeOrganizationNodes</a>获取</p>
+ * @method string getAccountName() 获取<p>账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&amp;._[]-:,</p>
+ * @method void setAccountName(string $AccountName) 设置<p>账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&amp;._[]-:,</p>
+ * @method string getRemark() 获取<p>备注。</p>
+ * @method void setRemark(string $Remark) 设置<p>备注。</p>
+ * @method integer getRecordId() 获取<p>成员创建记录ID。创建异常重试时需要</p>
+ * @method void setRecordId(integer $RecordId) 设置<p>成员创建记录ID。创建异常重试时需要</p>
+ * @method string getPayUin() 获取<p>代付者Uin。成员代付费时需要</p>
+ * @method void setPayUin(string $PayUin) 设置<p>代付者Uin。成员代付费时需要</p>
+ * @method array getIdentityRoleID() 获取<p>成员访问身份ID列表。可以调用ListOrganizationIdentity获取，1默认支持</p>
+ * @method void setIdentityRoleID(array $IdentityRoleID) 设置<p>成员访问身份ID列表。可以调用ListOrganizationIdentity获取，1默认支持</p>
+ * @method integer getAuthRelationId() 获取<p>认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取</p>
+ * @method void setAuthRelationId(integer $AuthRelationId) 设置<p>认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取</p>
+ * @method array getTags() 获取<p>成员标签列表。最大10个</p>
+ * @method void setTags(array $Tags) 设置<p>成员标签列表。最大10个</p>
  */
 class CreateOrganizationMemberRequest extends AbstractModel
 {
     /**
-     * @var string 成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
+     * @var string <p>成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&amp;._[]-:,</p>
      */
     public $Name;
 
     /**
-     * @var string 关系策略。取值：Financial
+     * @var string <p>关系策略。取值：Financial</p>
      */
     public $PolicyType;
 
     /**
-     * @var array 成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨（若需要开启资金划拨权限，请联系您的商务经理内部开通。）、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析、9-预算管理、10-信用额度设置（若需要开启信用额度设置权限，请联系您的商务经理内部开通。），1、2 默认必须
+     * @var array <p>成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨（若需要开启资金划拨权限，请联系您的商务经理内部开通。）、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析、9-预算管理、10-信用额度设置（若需要开启信用额度设置权限，请联系您的商务经理内部开通。），1、2 默认必须</p>
      */
     public $PermissionIds;
 
     /**
-     * @var integer 成员所属部门的节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
+     * @var integer <p>成员所属部门的节点ID。可以通过<a href="https://cloud.tencent.com/document/product/850/82926">DescribeOrganizationNodes</a>获取</p>
      */
     public $NodeId;
 
     /**
-     * @var string 账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
+     * @var string <p>账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&amp;._[]-:,</p>
      */
     public $AccountName;
 
     /**
-     * @var string 备注。
+     * @var string <p>备注。</p>
      */
     public $Remark;
 
     /**
-     * @var integer 成员创建记录ID。创建异常重试时需要
+     * @var integer <p>成员创建记录ID。创建异常重试时需要</p>
      */
     public $RecordId;
 
     /**
-     * @var string 代付者Uin。成员代付费时需要
+     * @var string <p>代付者Uin。成员代付费时需要</p>
      */
     public $PayUin;
 
     /**
-     * @var array 成员访问身份ID列表。可以调用ListOrganizationIdentity获取，1默认支持
+     * @var array <p>成员访问身份ID列表。可以调用ListOrganizationIdentity获取，1默认支持</p>
      */
     public $IdentityRoleID;
 
     /**
-     * @var integer 认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取
+     * @var integer <p>认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取</p>
      */
     public $AuthRelationId;
 
     /**
-     * @var array 成员标签列表。最大10个
+     * @var array <p>成员标签列表。最大10个</p>
      */
     public $Tags;
 
     /**
-     * @param string $Name 成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
-     * @param string $PolicyType 关系策略。取值：Financial
-     * @param array $PermissionIds 成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨（若需要开启资金划拨权限，请联系您的商务经理内部开通。）、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析、9-预算管理、10-信用额度设置（若需要开启信用额度设置权限，请联系您的商务经理内部开通。），1、2 默认必须
-     * @param integer $NodeId 成员所属部门的节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
-     * @param string $AccountName 账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
-     * @param string $Remark 备注。
-     * @param integer $RecordId 成员创建记录ID。创建异常重试时需要
-     * @param string $PayUin 代付者Uin。成员代付费时需要
-     * @param array $IdentityRoleID 成员访问身份ID列表。可以调用ListOrganizationIdentity获取，1默认支持
-     * @param integer $AuthRelationId 认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取
-     * @param array $Tags 成员标签列表。最大10个
+     * @param string $Name <p>成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&amp;._[]-:,</p>
+     * @param string $PolicyType <p>关系策略。取值：Financial</p>
+     * @param array $PermissionIds <p>成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨（若需要开启资金划拨权限，请联系您的商务经理内部开通。）、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析、9-预算管理、10-信用额度设置（若需要开启信用额度设置权限，请联系您的商务经理内部开通。），1、2 默认必须</p>
+     * @param integer $NodeId <p>成员所属部门的节点ID。可以通过<a href="https://cloud.tencent.com/document/product/850/82926">DescribeOrganizationNodes</a>获取</p>
+     * @param string $AccountName <p>账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&amp;._[]-:,</p>
+     * @param string $Remark <p>备注。</p>
+     * @param integer $RecordId <p>成员创建记录ID。创建异常重试时需要</p>
+     * @param string $PayUin <p>代付者Uin。成员代付费时需要</p>
+     * @param array $IdentityRoleID <p>成员访问身份ID列表。可以调用ListOrganizationIdentity获取，1默认支持</p>
+     * @param integer $AuthRelationId <p>认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取</p>
+     * @param array $Tags <p>成员标签列表。最大10个</p>
      */
     function __construct()
     {

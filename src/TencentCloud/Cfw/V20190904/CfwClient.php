@@ -36,6 +36,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\CreateBlockIgnoreRuleNewResponse CreateBlockIgnoreRuleNew(Models\CreateBlockIgnoreRuleNewRequest $req) 批量添加入侵防御封禁列表、放通列表规则
  * @method Models\CreateChooseVpcsResponse CreateChooseVpcs(Models\CreateChooseVpcsRequest $req) 创建、选择vpc
  * @method Models\CreateDatabaseWhiteListRulesResponse CreateDatabaseWhiteListRules(Models\CreateDatabaseWhiteListRulesRequest $req) 创建暴露数据库白名单规则
+ * @method Models\CreateNatFwDnatRuleResponse CreateNatFwDnatRule(Models\CreateNatFwDnatRuleRequest $req) 创建Nat防火墙Dnat规则
  * @method Models\CreateNatFwInstanceResponse CreateNatFwInstance(Models\CreateNatFwInstanceRequest $req) 创建NAT防火墙实例（Region参数必填）
  * @method Models\CreateNatFwInstanceWithDomainResponse CreateNatFwInstanceWithDomain(Models\CreateNatFwInstanceWithDomainRequest $req) 创建防火墙实例和接入域名（Region参数必填）
  * @method Models\CreateSecurityGroupRulesResponse CreateSecurityGroupRules(Models\CreateSecurityGroupRulesRequest $req) 创建企业安全组规则
@@ -44,6 +45,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DeleteAddressTemplateResponse DeleteAddressTemplate(Models\DeleteAddressTemplateRequest $req) 删除地址模板规则
  * @method Models\DeleteBlockIgnoreRuleListResponse DeleteBlockIgnoreRuleList(Models\DeleteBlockIgnoreRuleListRequest $req) 批量删除入侵防御封禁列表、放通列表规则
  * @method Models\DeleteBlockIgnoreRuleNewResponse DeleteBlockIgnoreRuleNew(Models\DeleteBlockIgnoreRuleNewRequest $req) 批量删除入侵防御封禁列表、放通列表规则（新）
+ * @method Models\DeleteNatFwDnatRuleResponse DeleteNatFwDnatRule(Models\DeleteNatFwDnatRuleRequest $req) 删除Nat防火墙Dnat规则
  * @method Models\DeleteNatFwInstanceResponse DeleteNatFwInstance(Models\DeleteNatFwInstanceRequest $req) 销毁防火墙实例
  * @method Models\DeleteRemoteAccessDomainResponse DeleteRemoteAccessDomain(Models\DeleteRemoteAccessDomainRequest $req) 删除远程运维域名
  * @method Models\DeleteResourceGroupResponse DeleteResourceGroup(Models\DeleteResourceGroupRequest $req) DeleteResourceGroup-资产中心资产组删除

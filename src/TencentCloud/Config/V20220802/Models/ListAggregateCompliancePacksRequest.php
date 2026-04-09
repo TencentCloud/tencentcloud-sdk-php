@@ -20,90 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListAggregateCompliancePacks请求参数结构体
  *
- * @method integer getLimit() 获取数量
- * @method void setLimit(integer $Limit) 设置数量
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method string getAccountGroupId() 获取账号组ID
- * @method void setAccountGroupId(string $AccountGroupId) 设置账号组ID
- * @method string getCompliancePackName() 获取合规包名称
- * @method void setCompliancePackName(string $CompliancePackName) 设置合规包名称
- * @method array getRiskLevel() 获取风险等级
-1：高风险。
-2：中风险。
-3：低风险。
- * @method void setRiskLevel(array $RiskLevel) 设置风险等级
-1：高风险。
-2：中风险。
-3：低风险。
- * @method string getStatus() 获取合规包状态 ACTIVE、NO_ACTIVE
- * @method void setStatus(string $Status) 设置合规包状态 ACTIVE、NO_ACTIVE
- * @method array getComplianceResult() 获取评估状态合规： 'COMPLIANT'
-不合规： 'NON_COMPLIANT'
- * @method void setComplianceResult(array $ComplianceResult) 设置评估状态合规： 'COMPLIANT'
-不合规： 'NON_COMPLIANT'
- * @method string getOrderType() 获取排序类型, 倒序：desc，顺序：asc
- * @method void setOrderType(string $OrderType) 设置排序类型, 倒序：desc，顺序：asc
+ * @method integer getLimit() 获取<p>数量</p>
+ * @method void setLimit(integer $Limit) 设置<p>数量</p>
+ * @method integer getOffset() 获取<p>偏移量</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量</p>
+ * @method string getAccountGroupId() 获取<p>账号组ID</p>
+ * @method void setAccountGroupId(string $AccountGroupId) 设置<p>账号组ID</p>
+ * @method string getCompliancePackName() 获取<p>合规包名称</p>
+ * @method void setCompliancePackName(string $CompliancePackName) 设置<p>合规包名称</p>
+ * @method array getRiskLevel() 获取<p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p>
+ * @method void setRiskLevel(array $RiskLevel) 设置<p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p>
+ * @method string getStatus() 获取<p>合规包状态 ACTIVE、NO_ACTIVE</p>
+ * @method void setStatus(string $Status) 设置<p>合规包状态 ACTIVE、NO_ACTIVE</p>
+ * @method array getComplianceResult() 获取<p>评估状态合规： &#39;COMPLIANT&#39;<br>不合规： &#39;NON_COMPLIANT&#39;</p>
+ * @method void setComplianceResult(array $ComplianceResult) 设置<p>评估状态合规： &#39;COMPLIANT&#39;<br>不合规： &#39;NON_COMPLIANT&#39;</p>
+ * @method string getOrderType() 获取<p>排序类型, 倒序：desc，顺序：asc</p>
+ * @method void setOrderType(string $OrderType) 设置<p>排序类型, 倒序：desc，顺序：asc</p>
+ * @method string getIncludeCompliancePackRuleResult() 获取<p>包含合规包结果定义</p><p>枚举值：</p><ul><li>NO： 不包含</li></ul><p>默认值：空</p><p>此字段为新增，因此不传或者传了YES都会默认返回包含合规结果数据，其他枚举值后面视情况丰富</p>
+ * @method void setIncludeCompliancePackRuleResult(string $IncludeCompliancePackRuleResult) 设置<p>包含合规包结果定义</p><p>枚举值：</p><ul><li>NO： 不包含</li></ul><p>默认值：空</p><p>此字段为新增，因此不传或者传了YES都会默认返回包含合规结果数据，其他枚举值后面视情况丰富</p>
  */
 class ListAggregateCompliancePacksRequest extends AbstractModel
 {
     /**
-     * @var integer 数量
+     * @var integer <p>数量</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量
+     * @var integer <p>偏移量</p>
      */
     public $Offset;
 
     /**
-     * @var string 账号组ID
+     * @var string <p>账号组ID</p>
      */
     public $AccountGroupId;
 
     /**
-     * @var string 合规包名称
+     * @var string <p>合规包名称</p>
      */
     public $CompliancePackName;
 
     /**
-     * @var array 风险等级
-1：高风险。
-2：中风险。
-3：低风险。
+     * @var array <p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p>
      */
     public $RiskLevel;
 
     /**
-     * @var string 合规包状态 ACTIVE、NO_ACTIVE
+     * @var string <p>合规包状态 ACTIVE、NO_ACTIVE</p>
      */
     public $Status;
 
     /**
-     * @var array 评估状态合规： 'COMPLIANT'
-不合规： 'NON_COMPLIANT'
+     * @var array <p>评估状态合规： &#39;COMPLIANT&#39;<br>不合规： &#39;NON_COMPLIANT&#39;</p>
      */
     public $ComplianceResult;
 
     /**
-     * @var string 排序类型, 倒序：desc，顺序：asc
+     * @var string <p>排序类型, 倒序：desc，顺序：asc</p>
      */
     public $OrderType;
 
     /**
-     * @param integer $Limit 数量
-     * @param integer $Offset 偏移量
-     * @param string $AccountGroupId 账号组ID
-     * @param string $CompliancePackName 合规包名称
-     * @param array $RiskLevel 风险等级
-1：高风险。
-2：中风险。
-3：低风险。
-     * @param string $Status 合规包状态 ACTIVE、NO_ACTIVE
-     * @param array $ComplianceResult 评估状态合规： 'COMPLIANT'
-不合规： 'NON_COMPLIANT'
-     * @param string $OrderType 排序类型, 倒序：desc，顺序：asc
+     * @var string <p>包含合规包结果定义</p><p>枚举值：</p><ul><li>NO： 不包含</li></ul><p>默认值：空</p><p>此字段为新增，因此不传或者传了YES都会默认返回包含合规结果数据，其他枚举值后面视情况丰富</p>
+     */
+    public $IncludeCompliancePackRuleResult;
+
+    /**
+     * @param integer $Limit <p>数量</p>
+     * @param integer $Offset <p>偏移量</p>
+     * @param string $AccountGroupId <p>账号组ID</p>
+     * @param string $CompliancePackName <p>合规包名称</p>
+     * @param array $RiskLevel <p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p>
+     * @param string $Status <p>合规包状态 ACTIVE、NO_ACTIVE</p>
+     * @param array $ComplianceResult <p>评估状态合规： &#39;COMPLIANT&#39;<br>不合规： &#39;NON_COMPLIANT&#39;</p>
+     * @param string $OrderType <p>排序类型, 倒序：desc，顺序：asc</p>
+     * @param string $IncludeCompliancePackRuleResult <p>包含合规包结果定义</p><p>枚举值：</p><ul><li>NO： 不包含</li></ul><p>默认值：空</p><p>此字段为新增，因此不传或者传了YES都会默认返回包含合规结果数据，其他枚举值后面视情况丰富</p>
      */
     function __construct()
     {
@@ -148,6 +140,10 @@ class ListAggregateCompliancePacksRequest extends AbstractModel
 
         if (array_key_exists("OrderType",$param) and $param["OrderType"] !== null) {
             $this->OrderType = $param["OrderType"];
+        }
+
+        if (array_key_exists("IncludeCompliancePackRuleResult",$param) and $param["IncludeCompliancePackRuleResult"] !== null) {
+            $this->IncludeCompliancePackRuleResult = $param["IncludeCompliancePackRuleResult"];
         }
     }
 }

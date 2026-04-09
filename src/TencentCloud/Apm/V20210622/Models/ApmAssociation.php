@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 展示apm业务系统与其他云产品关联关系返回体
  *
- * @method string getPeerId() 获取关联产品的实例ID
+ * @method string getPeerId() 获取<p>关联产品的实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPeerId(string $PeerId) 设置关联产品的实例ID
+ * @method void setPeerId(string $PeerId) 设置<p>关联产品的实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取关联关系状态：1（启用）、2（不启用）、3（已失效）
+ * @method integer getStatus() 获取<p>关联关系状态：1（启用）、2（不启用）、3（已失效）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置关联关系状态：1（启用）、2（不启用）、3（已失效）
+ * @method void setStatus(integer $Status) 设置<p>关联关系状态：1（启用）、2（不启用）、3（已失效）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTopic() 获取CKafka消息主题
- * @method void setTopic(string $Topic) 设置CKafka消息主题
+ * @method string getTopic() 获取<p>CKafka消息主题</p>
+ * @method void setTopic(string $Topic) 设置<p>CKafka消息主题</p>
+ * @method string getMetricTopic() 获取<p>Ckafka消费主题</p><p>用于Kafka指标投递</p>
+ * @method void setMetricTopic(string $MetricTopic) 设置<p>Ckafka消费主题</p><p>用于Kafka指标投递</p>
  */
 class ApmAssociation extends AbstractModel
 {
     /**
-     * @var string 关联产品的实例ID
+     * @var string <p>关联产品的实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PeerId;
 
     /**
-     * @var integer 关联关系状态：1（启用）、2（不启用）、3（已失效）
+     * @var integer <p>关联关系状态：1（启用）、2（不启用）、3（已失效）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var string CKafka消息主题
+     * @var string <p>CKafka消息主题</p>
      */
     public $Topic;
 
     /**
-     * @param string $PeerId 关联产品的实例ID
+     * @var string <p>Ckafka消费主题</p><p>用于Kafka指标投递</p>
+     */
+    public $MetricTopic;
+
+    /**
+     * @param string $PeerId <p>关联产品的实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 关联关系状态：1（启用）、2（不启用）、3（已失效）
+     * @param integer $Status <p>关联关系状态：1（启用）、2（不启用）、3（已失效）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Topic CKafka消息主题
+     * @param string $Topic <p>CKafka消息主题</p>
+     * @param string $MetricTopic <p>Ckafka消费主题</p><p>用于Kafka指标投递</p>
      */
     function __construct()
     {
@@ -80,6 +88,10 @@ class ApmAssociation extends AbstractModel
 
         if (array_key_exists("Topic",$param) and $param["Topic"] !== null) {
             $this->Topic = $param["Topic"];
+        }
+
+        if (array_key_exists("MetricTopic",$param) and $param["MetricTopic"] !== null) {
+            $this->MetricTopic = $param["MetricTopic"];
         }
     }
 }

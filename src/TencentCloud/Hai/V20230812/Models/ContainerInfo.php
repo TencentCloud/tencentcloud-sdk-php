@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 容器信息
  *
- * @method ImageInfo getImage() 获取镜像相关信息
- * @method void setImage(ImageInfo $Image) 设置镜像相关信息
- * @method string getPort() 获取服务监听端口
- * @method void setPort(string $Port) 设置服务监听端口
- * @method array getScripts() 获取启动命令
- * @method void setScripts(array $Scripts) 设置启动命令
- * @method array getEnvs() 获取环境变量列表
- * @method void setEnvs(array $Envs) 设置环境变量列表
- * @method array getStorages() 获取存储挂载配置
- * @method void setStorages(array $Storages) 设置存储挂载配置
+ * @method ImageInfo getImage() 获取<p>镜像相关信息</p>
+ * @method void setImage(ImageInfo $Image) 设置<p>镜像相关信息</p>
+ * @method string getPort() 获取<p>服务监听端口</p>
+ * @method void setPort(string $Port) 设置<p>服务监听端口</p>
+ * @method array getScripts() 获取<p>启动命令</p>
+ * @method void setScripts(array $Scripts) 设置<p>启动命令</p>
+ * @method array getEnvs() 获取<p>环境变量列表</p>
+ * @method void setEnvs(array $Envs) 设置<p>环境变量列表</p>
+ * @method array getStorages() 获取<p>存储挂载配置</p>
+ * @method void setStorages(array $Storages) 设置<p>存储挂载配置</p>
+ * @method ProbeInfo getProbe() 获取<p>探针信息</p>
+ * @method void setProbe(ProbeInfo $Probe) 设置<p>探针信息</p>
  */
 class ContainerInfo extends AbstractModel
 {
     /**
-     * @var ImageInfo 镜像相关信息
+     * @var ImageInfo <p>镜像相关信息</p>
      */
     public $Image;
 
     /**
-     * @var string 服务监听端口
+     * @var string <p>服务监听端口</p>
      */
     public $Port;
 
     /**
-     * @var array 启动命令
+     * @var array <p>启动命令</p>
      */
     public $Scripts;
 
     /**
-     * @var array 环境变量列表
+     * @var array <p>环境变量列表</p>
      */
     public $Envs;
 
     /**
-     * @var array 存储挂载配置
+     * @var array <p>存储挂载配置</p>
      */
     public $Storages;
 
     /**
-     * @param ImageInfo $Image 镜像相关信息
-     * @param string $Port 服务监听端口
-     * @param array $Scripts 启动命令
-     * @param array $Envs 环境变量列表
-     * @param array $Storages 存储挂载配置
+     * @var ProbeInfo <p>探针信息</p>
+     */
+    public $Probe;
+
+    /**
+     * @param ImageInfo $Image <p>镜像相关信息</p>
+     * @param string $Port <p>服务监听端口</p>
+     * @param array $Scripts <p>启动命令</p>
+     * @param array $Envs <p>环境变量列表</p>
+     * @param array $Storages <p>存储挂载配置</p>
+     * @param ProbeInfo $Probe <p>探针信息</p>
      */
     function __construct()
     {
@@ -107,6 +115,11 @@ class ContainerInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Storages, $obj);
             }
+        }
+
+        if (array_key_exists("Probe",$param) and $param["Probe"] !== null) {
+            $this->Probe = new ProbeInfo();
+            $this->Probe->deserialize($param["Probe"]);
         }
     }
 }

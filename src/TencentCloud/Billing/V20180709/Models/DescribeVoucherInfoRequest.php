@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置<p>一页多少条数据，默认是20条，最大不超过1000</p>
  * @method integer getOffset() 获取<p>第多少页，默认是1</p>
  * @method void setOffset(integer $Offset) 设置<p>第多少页，默认是1</p>
- * @method string getStatus() 获取<p>券状态：待使用：unUsed，已使用：&nbsp;used，已发货：delivered，已作废：&nbsp;cancel，已过期：overdue</p>
- * @method void setStatus(string $Status) 设置<p>券状态：待使用：unUsed，已使用：&nbsp;used，已发货：delivered，已作废：&nbsp;cancel，已过期：overdue</p>
+ * @method string getStatus() 获取<p>券状态：待使用：unUsed，已使用：xa0used，已发货：delivered，已作废：xa0cancel，已过期：overdue</p>
+ * @method void setStatus(string $Status) 设置<p>券状态：待使用：unUsed，已使用：xa0used，已发货：delivered，已作废：xa0cancel，已过期：overdue</p>
  * @method string getVoucherId() 获取<p>代金券id</p>
  * @method void setVoucherId(string $VoucherId) 设置<p>代金券id</p>
  * @method string getCodeId() 获取<p>代金券订单id</p>
@@ -82,7 +82,7 @@ class DescribeVoucherInfoRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string <p>券状态：待使用：unUsed，已使用：&nbsp;used，已发货：delivered，已作废：&nbsp;cancel，已过期：overdue</p>
+     * @var string <p>券状态：待使用：unUsed，已使用：xa0used，已发货：delivered，已作废：xa0cancel，已过期：overdue</p>
      */
     public $Status;
 
@@ -194,7 +194,7 @@ class DescribeVoucherInfoRequest extends AbstractModel
     /**
      * @param integer $Limit <p>一页多少条数据，默认是20条，最大不超过1000</p>
      * @param integer $Offset <p>第多少页，默认是1</p>
-     * @param string $Status <p>券状态：待使用：unUsed，已使用：&nbsp;used，已发货：delivered，已作废：&nbsp;cancel，已过期：overdue</p>
+     * @param string $Status <p>券状态：待使用：unUsed，已使用：xa0used，已发货：delivered，已作废：xa0cancel，已过期：overdue</p>
      * @param string $VoucherId <p>代金券id</p>
      * @param string $CodeId <p>代金券订单id</p>
      * @param string $ProductCode <p>商品码</p>

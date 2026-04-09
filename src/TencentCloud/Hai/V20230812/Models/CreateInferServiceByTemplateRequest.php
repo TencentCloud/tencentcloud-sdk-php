@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInferServiceByTemplate请求参数结构体
  *
- * @method string getTemplateId() 获取模版ID
- * @method void setTemplateId(string $TemplateId) 设置模版ID
- * @method string getServiceName() 获取服务名称
- * @method void setServiceName(string $ServiceName) 设置服务名称
- * @method integer getReplicas() 获取副本数
- * @method void setReplicas(integer $Replicas) 设置副本数
- * @method string getServiceChargeType() 获取付费方式，POSTPAID_BY_HOUR按量后付费
- * @method void setServiceChargeType(string $ServiceChargeType) 设置付费方式，POSTPAID_BY_HOUR按量后付费
- * @method HyperParam getHyperParam() 获取描述了服务的超参数配置
- * @method void setHyperParam(HyperParam $HyperParam) 设置描述了服务的超参数配置
- * @method NetworkSetting getNetworkSetting() 获取网络设置
- * @method void setNetworkSetting(NetworkSetting $NetworkSetting) 设置网络设置
+ * @method string getTemplateId() 获取<p>模版ID</p>
+ * @method void setTemplateId(string $TemplateId) 设置<p>模版ID</p>
+ * @method string getServiceName() 获取<p>服务名称</p>
+ * @method void setServiceName(string $ServiceName) 设置<p>服务名称</p>
+ * @method integer getReplicas() 获取<p>副本数</p>
+ * @method void setReplicas(integer $Replicas) 设置<p>副本数</p>
+ * @method string getServiceChargeType() 获取<p>付费方式，POSTPAID_BY_HOUR按量后付费</p>
+ * @method void setServiceChargeType(string $ServiceChargeType) 设置<p>付费方式，POSTPAID_BY_HOUR按量后付费</p>
+ * @method HyperParam getHyperParam() 获取<p>描述了服务的超参数配置</p>
+ * @method void setHyperParam(HyperParam $HyperParam) 设置<p>描述了服务的超参数配置</p>
+ * @method NetworkSetting getNetworkSetting() 获取<p>网络设置</p>
+ * @method void setNetworkSetting(NetworkSetting $NetworkSetting) 设置<p>网络设置</p>
  */
 class CreateInferServiceByTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 模版ID
+     * @var string <p>模版ID</p>
      */
     public $TemplateId;
 
     /**
-     * @var string 服务名称
+     * @var string <p>服务名称</p>
      */
     public $ServiceName;
 
     /**
-     * @var integer 副本数
+     * @var integer <p>副本数</p>
      */
     public $Replicas;
 
     /**
-     * @var string 付费方式，POSTPAID_BY_HOUR按量后付费
+     * @var string <p>付费方式，POSTPAID_BY_HOUR按量后付费</p>
      */
     public $ServiceChargeType;
 
     /**
-     * @var HyperParam 描述了服务的超参数配置
+     * @var HyperParam <p>描述了服务的超参数配置</p>
      */
     public $HyperParam;
 
     /**
-     * @var NetworkSetting 网络设置
+     * @var NetworkSetting <p>网络设置</p>
      */
     public $NetworkSetting;
 
     /**
-     * @param string $TemplateId 模版ID
-     * @param string $ServiceName 服务名称
-     * @param integer $Replicas 副本数
-     * @param string $ServiceChargeType 付费方式，POSTPAID_BY_HOUR按量后付费
-     * @param HyperParam $HyperParam 描述了服务的超参数配置
-     * @param NetworkSetting $NetworkSetting 网络设置
+     * @param string $TemplateId <p>模版ID</p>
+     * @param string $ServiceName <p>服务名称</p>
+     * @param integer $Replicas <p>副本数</p>
+     * @param string $ServiceChargeType <p>付费方式，POSTPAID_BY_HOUR按量后付费</p>
+     * @param HyperParam $HyperParam <p>描述了服务的超参数配置</p>
+     * @param NetworkSetting $NetworkSetting <p>网络设置</p>
      */
     function __construct()
     {

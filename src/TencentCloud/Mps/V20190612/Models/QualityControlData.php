@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 媒体质检结果输出。
  *
- * @method boolean getNoAudio() 获取为true时表示视频无音频轨。
- * @method void setNoAudio(boolean $NoAudio) 设置为true时表示视频无音频轨。
- * @method boolean getNoVideo() 获取为true时表示视频无视频轨。
- * @method void setNoVideo(boolean $NoVideo) 设置为true时表示视频无视频轨。
- * @method integer getQualityEvaluationScore() 获取视频无参考质量评分，百分制。
- * @method void setQualityEvaluationScore(integer $QualityEvaluationScore) 设置视频无参考质量评分，百分制。
- * @method float getQualityEvaluationMeanOpinionScore() 获取视频无参考质量评分，MOS分数。
- * @method void setQualityEvaluationMeanOpinionScore(float $QualityEvaluationMeanOpinionScore) 设置视频无参考质量评分，MOS分数。
- * @method array getQualityControlResultSet() 获取内容质检检出异常项。
- * @method void setQualityControlResultSet(array $QualityControlResultSet) 设置内容质检检出异常项。
- * @method array getContainerDiagnoseResultSet() 获取格式诊断检出异常项。
- * @method void setContainerDiagnoseResultSet(array $ContainerDiagnoseResultSet) 设置格式诊断检出异常项。
+ * @method boolean getNoAudio() 获取<p>为true时表示视频无音频轨。</p>
+ * @method void setNoAudio(boolean $NoAudio) 设置<p>为true时表示视频无音频轨。</p>
+ * @method boolean getNoVideo() 获取<p>为true时表示视频无视频轨。</p>
+ * @method void setNoVideo(boolean $NoVideo) 设置<p>为true时表示视频无视频轨。</p>
+ * @method integer getQualityEvaluationScore() 获取<p>视频无参考质量评分，百分制。</p>
+ * @method void setQualityEvaluationScore(integer $QualityEvaluationScore) 设置<p>视频无参考质量评分，百分制。</p>
+ * @method float getQualityEvaluationMeanOpinionScore() 获取<p>视频无参考质量评分，MOS分数。</p>
+ * @method void setQualityEvaluationMeanOpinionScore(float $QualityEvaluationMeanOpinionScore) 设置<p>视频无参考质量评分，MOS分数。</p>
+ * @method integer getAestheticEvaluationScore() 获取<p>视频美学评分，范围：[0,100]。</p>
+ * @method void setAestheticEvaluationScore(integer $AestheticEvaluationScore) 设置<p>视频美学评分，范围：[0,100]。</p>
+ * @method array getQualityControlResultSet() 获取<p>内容质检检出异常项。</p>
+ * @method void setQualityControlResultSet(array $QualityControlResultSet) 设置<p>内容质检检出异常项。</p>
+ * @method array getContainerDiagnoseResultSet() 获取<p>格式诊断检出异常项。</p>
+ * @method void setContainerDiagnoseResultSet(array $ContainerDiagnoseResultSet) 设置<p>格式诊断检出异常项。</p>
  */
 class QualityControlData extends AbstractModel
 {
     /**
-     * @var boolean 为true时表示视频无音频轨。
+     * @var boolean <p>为true时表示视频无音频轨。</p>
      */
     public $NoAudio;
 
     /**
-     * @var boolean 为true时表示视频无视频轨。
+     * @var boolean <p>为true时表示视频无视频轨。</p>
      */
     public $NoVideo;
 
     /**
-     * @var integer 视频无参考质量评分，百分制。
+     * @var integer <p>视频无参考质量评分，百分制。</p>
      */
     public $QualityEvaluationScore;
 
     /**
-     * @var float 视频无参考质量评分，MOS分数。
+     * @var float <p>视频无参考质量评分，MOS分数。</p>
      */
     public $QualityEvaluationMeanOpinionScore;
 
     /**
-     * @var array 内容质检检出异常项。
+     * @var integer <p>视频美学评分，范围：[0,100]。</p>
+     */
+    public $AestheticEvaluationScore;
+
+    /**
+     * @var array <p>内容质检检出异常项。</p>
      */
     public $QualityControlResultSet;
 
     /**
-     * @var array 格式诊断检出异常项。
+     * @var array <p>格式诊断检出异常项。</p>
      */
     public $ContainerDiagnoseResultSet;
 
     /**
-     * @param boolean $NoAudio 为true时表示视频无音频轨。
-     * @param boolean $NoVideo 为true时表示视频无视频轨。
-     * @param integer $QualityEvaluationScore 视频无参考质量评分，百分制。
-     * @param float $QualityEvaluationMeanOpinionScore 视频无参考质量评分，MOS分数。
-     * @param array $QualityControlResultSet 内容质检检出异常项。
-     * @param array $ContainerDiagnoseResultSet 格式诊断检出异常项。
+     * @param boolean $NoAudio <p>为true时表示视频无音频轨。</p>
+     * @param boolean $NoVideo <p>为true时表示视频无视频轨。</p>
+     * @param integer $QualityEvaluationScore <p>视频无参考质量评分，百分制。</p>
+     * @param float $QualityEvaluationMeanOpinionScore <p>视频无参考质量评分，MOS分数。</p>
+     * @param integer $AestheticEvaluationScore <p>视频美学评分，范围：[0,100]。</p>
+     * @param array $QualityControlResultSet <p>内容质检检出异常项。</p>
+     * @param array $ContainerDiagnoseResultSet <p>格式诊断检出异常项。</p>
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class QualityControlData extends AbstractModel
 
         if (array_key_exists("QualityEvaluationMeanOpinionScore",$param) and $param["QualityEvaluationMeanOpinionScore"] !== null) {
             $this->QualityEvaluationMeanOpinionScore = $param["QualityEvaluationMeanOpinionScore"];
+        }
+
+        if (array_key_exists("AestheticEvaluationScore",$param) and $param["AestheticEvaluationScore"] !== null) {
+            $this->AestheticEvaluationScore = $param["AestheticEvaluationScore"];
         }
 
         if (array_key_exists("QualityControlResultSet",$param) and $param["QualityControlResultSet"] !== null) {

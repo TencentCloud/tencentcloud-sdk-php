@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 片头片尾任务输入类型
  *
- * @method integer getDefinition() 获取片头片尾识别模板 ID。
- * @method void setDefinition(integer $Definition) 设置片头片尾识别模板 ID。
+ * @method integer getDefinition() 获取<p>片头片尾识别模板 ID。</p>
+ * @method void setDefinition(integer $Definition) 设置<p>片头片尾识别模板 ID。</p>
+ * @method string getExtendedParameter() 获取<p>扩展参数。</p>
+ * @method void setExtendedParameter(string $ExtendedParameter) 设置<p>扩展参数。</p>
  */
 class AiAnalysisTaskHeadTailInput extends AbstractModel
 {
     /**
-     * @var integer 片头片尾识别模板 ID。
+     * @var integer <p>片头片尾识别模板 ID。</p>
      */
     public $Definition;
 
     /**
-     * @param integer $Definition 片头片尾识别模板 ID。
+     * @var string <p>扩展参数。</p>
+     */
+    public $ExtendedParameter;
+
+    /**
+     * @param integer $Definition <p>片头片尾识别模板 ID。</p>
+     * @param string $ExtendedParameter <p>扩展参数。</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class AiAnalysisTaskHeadTailInput extends AbstractModel
         }
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
             $this->Definition = $param["Definition"];
+        }
+
+        if (array_key_exists("ExtendedParameter",$param) and $param["ExtendedParameter"] !== null) {
+            $this->ExtendedParameter = $param["ExtendedParameter"];
         }
     }
 }

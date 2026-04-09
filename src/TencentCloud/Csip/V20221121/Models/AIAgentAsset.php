@@ -20,102 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Ai Agent 资产信息列表项
  *
- * @method string getID() 获取ID 标识
- * @method void setID(string $ID) 设置ID 标识
- * @method string getAgentName() 获取agent 名称
- * @method void setAgentName(string $AgentName) 设置agent 名称
- * @method array getAgentModel() 获取agent 使用模型名称
- * @method void setAgentModel(array $AgentModel) 设置agent 使用模型名称
- * @method string getInstanceID() 获取实例 ID
- * @method void setInstanceID(string $InstanceID) 设置实例 ID
- * @method array getMetadataRiskList() 获取metadata 风险列表。有如下枚举值: 1. AK_TMP  2. USER_DATA
- * @method void setMetadataRiskList(array $MetadataRiskList) 设置metadata 风险列表。有如下枚举值: 1. AK_TMP  2. USER_DATA
- * @method string getIdentityTimeFirst() 获取首次检出时间
- * @method void setIdentityTimeFirst(string $IdentityTimeFirst) 设置首次检出时间
- * @method string getIdentityTimeLast() 获取最近检出时间
- * @method void setIdentityTimeLast(string $IdentityTimeLast) 设置最近检出时间
- * @method string getIdentityMethod() 获取检出方式。有如下枚举值 1. FINGER 资产指纹方式检出 2. NETWORK 网络访问方式检出
- * @method void setIdentityMethod(string $IdentityMethod) 设置检出方式。有如下枚举值 1. FINGER 资产指纹方式检出 2. NETWORK 网络访问方式检出
- * @method string getExposureStatus() 获取暴露状态。有如下枚举值。1. EXPOSED；2.UNEXPOSED；
-3. UNKNOWN;
- * @method void setExposureStatus(string $ExposureStatus) 设置暴露状态。有如下枚举值。1. EXPOSED；2.UNEXPOSED；
-3. UNKNOWN;
- * @method string getMetadataRiskURL() 获取metadata 有风险时对应路径
- * @method void setMetadataRiskURL(string $MetadataRiskURL) 设置metadata 有风险时对应路径
- * @method SkillState getSkillState() 获取无
- * @method void setSkillState(SkillState $SkillState) 设置无
+ * @method string getID() 获取<p>ID 标识</p>
+ * @method void setID(string $ID) 设置<p>ID 标识</p>
+ * @method string getAgentName() 获取<p>agent 名称</p>
+ * @method void setAgentName(string $AgentName) 设置<p>agent 名称</p>
+ * @method array getAgentModel() 获取<p>agent 使用模型名称</p>
+ * @method void setAgentModel(array $AgentModel) 设置<p>agent 使用模型名称</p>
+ * @method string getInstanceID() 获取<p>实例 ID</p>
+ * @method void setInstanceID(string $InstanceID) 设置<p>实例 ID</p>
+ * @method string getInstanceName() 获取<p>实例名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称</p>
+ * @method array getMetadataRiskList() 获取<p>metadata 风险列表。有如下枚举值: 1. AK_TMP  2. USER_DATA</p>
+ * @method void setMetadataRiskList(array $MetadataRiskList) 设置<p>metadata 风险列表。有如下枚举值: 1. AK_TMP  2. USER_DATA</p>
+ * @method string getIdentityTimeFirst() 获取<p>首次检出时间</p>
+ * @method void setIdentityTimeFirst(string $IdentityTimeFirst) 设置<p>首次检出时间</p>
+ * @method string getIdentityTimeLast() 获取<p>最近检出时间</p>
+ * @method void setIdentityTimeLast(string $IdentityTimeLast) 设置<p>最近检出时间</p>
+ * @method string getIdentityMethod() 获取<p>检出方式。有如下枚举值 1. FINGER 资产指纹方式检出 2. NETWORK 网络访问方式检出</p>
+ * @method void setIdentityMethod(string $IdentityMethod) 设置<p>检出方式。有如下枚举值 1. FINGER 资产指纹方式检出 2. NETWORK 网络访问方式检出</p>
+ * @method string getExposureStatus() 获取<p>暴露状态。有如下枚举值。1. EXPOSED；2.UNEXPOSED；</p><ol start="3"><li>UNKNOWN;</li></ol>
+ * @method void setExposureStatus(string $ExposureStatus) 设置<p>暴露状态。有如下枚举值。1. EXPOSED；2.UNEXPOSED；</p><ol start="3"><li>UNKNOWN;</li></ol>
+ * @method string getMetadataRiskURL() 获取<p>metadata 有风险时对应路径</p>
+ * @method void setMetadataRiskURL(string $MetadataRiskURL) 设置<p>metadata 有风险时对应路径</p>
+ * @method SkillState getSkillState() 获取<p>无</p>
+ * @method void setSkillState(SkillState $SkillState) 设置<p>无</p>
  */
 class AIAgentAsset extends AbstractModel
 {
     /**
-     * @var string ID 标识
+     * @var string <p>ID 标识</p>
      */
     public $ID;
 
     /**
-     * @var string agent 名称
+     * @var string <p>agent 名称</p>
      */
     public $AgentName;
 
     /**
-     * @var array agent 使用模型名称
+     * @var array <p>agent 使用模型名称</p>
      */
     public $AgentModel;
 
     /**
-     * @var string 实例 ID
+     * @var string <p>实例 ID</p>
      */
     public $InstanceID;
 
     /**
-     * @var array metadata 风险列表。有如下枚举值: 1. AK_TMP  2. USER_DATA
+     * @var string <p>实例名称</p>
+     */
+    public $InstanceName;
+
+    /**
+     * @var array <p>metadata 风险列表。有如下枚举值: 1. AK_TMP  2. USER_DATA</p>
      */
     public $MetadataRiskList;
 
     /**
-     * @var string 首次检出时间
+     * @var string <p>首次检出时间</p>
      */
     public $IdentityTimeFirst;
 
     /**
-     * @var string 最近检出时间
+     * @var string <p>最近检出时间</p>
      */
     public $IdentityTimeLast;
 
     /**
-     * @var string 检出方式。有如下枚举值 1. FINGER 资产指纹方式检出 2. NETWORK 网络访问方式检出
+     * @var string <p>检出方式。有如下枚举值 1. FINGER 资产指纹方式检出 2. NETWORK 网络访问方式检出</p>
      */
     public $IdentityMethod;
 
     /**
-     * @var string 暴露状态。有如下枚举值。1. EXPOSED；2.UNEXPOSED；
-3. UNKNOWN;
+     * @var string <p>暴露状态。有如下枚举值。1. EXPOSED；2.UNEXPOSED；</p><ol start="3"><li>UNKNOWN;</li></ol>
      */
     public $ExposureStatus;
 
     /**
-     * @var string metadata 有风险时对应路径
+     * @var string <p>metadata 有风险时对应路径</p>
      */
     public $MetadataRiskURL;
 
     /**
-     * @var SkillState 无
+     * @var SkillState <p>无</p>
      */
     public $SkillState;
 
     /**
-     * @param string $ID ID 标识
-     * @param string $AgentName agent 名称
-     * @param array $AgentModel agent 使用模型名称
-     * @param string $InstanceID 实例 ID
-     * @param array $MetadataRiskList metadata 风险列表。有如下枚举值: 1. AK_TMP  2. USER_DATA
-     * @param string $IdentityTimeFirst 首次检出时间
-     * @param string $IdentityTimeLast 最近检出时间
-     * @param string $IdentityMethod 检出方式。有如下枚举值 1. FINGER 资产指纹方式检出 2. NETWORK 网络访问方式检出
-     * @param string $ExposureStatus 暴露状态。有如下枚举值。1. EXPOSED；2.UNEXPOSED；
-3. UNKNOWN;
-     * @param string $MetadataRiskURL metadata 有风险时对应路径
-     * @param SkillState $SkillState 无
+     * @param string $ID <p>ID 标识</p>
+     * @param string $AgentName <p>agent 名称</p>
+     * @param array $AgentModel <p>agent 使用模型名称</p>
+     * @param string $InstanceID <p>实例 ID</p>
+     * @param string $InstanceName <p>实例名称</p>
+     * @param array $MetadataRiskList <p>metadata 风险列表。有如下枚举值: 1. AK_TMP  2. USER_DATA</p>
+     * @param string $IdentityTimeFirst <p>首次检出时间</p>
+     * @param string $IdentityTimeLast <p>最近检出时间</p>
+     * @param string $IdentityMethod <p>检出方式。有如下枚举值 1. FINGER 资产指纹方式检出 2. NETWORK 网络访问方式检出</p>
+     * @param string $ExposureStatus <p>暴露状态。有如下枚举值。1. EXPOSED；2.UNEXPOSED；</p><ol start="3"><li>UNKNOWN;</li></ol>
+     * @param string $MetadataRiskURL <p>metadata 有风险时对应路径</p>
+     * @param SkillState $SkillState <p>无</p>
      */
     function __construct()
     {
@@ -144,6 +148,10 @@ class AIAgentAsset extends AbstractModel
 
         if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
             $this->InstanceID = $param["InstanceID"];
+        }
+
+        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
+            $this->InstanceName = $param["InstanceName"];
         }
 
         if (array_key_exists("MetadataRiskList",$param) and $param["MetadataRiskList"] !== null) {

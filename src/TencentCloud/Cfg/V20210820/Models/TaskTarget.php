@@ -20,54 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 演练目标
  *
- * @method integer getTargetId() 获取目标标签ID
- * @method void setTargetId(integer $TargetId) 设置目标标签ID
- * @method string getTargetDesc() 获取目标描述
- * @method void setTargetDesc(string $TargetDesc) 设置目标描述
- * @method integer getType() 获取1:演练场景
-2:演练目标
- * @method void setType(integer $Type) 设置1:演练场景
-2:演练目标
- * @method integer getSource() 获取1:平台 2:用户个人
- * @method void setSource(integer $Source) 设置1:平台 2:用户个人
- * @method integer getTargetStatus() 获取目标标签是否已被删除
- * @method void setTargetStatus(integer $TargetStatus) 设置目标标签是否已被删除
+ * @method integer getTargetId() 获取<p>目标标签ID</p>
+ * @method void setTargetId(integer $TargetId) 设置<p>目标标签ID</p>
+ * @method string getTargetDesc() 获取<p>目标描述</p>
+ * @method void setTargetDesc(string $TargetDesc) 设置<p>目标描述</p>
+ * @method integer getType() 获取<p>1:演练场景<br>2:演练目标</p>
+ * @method void setType(integer $Type) 设置<p>1:演练场景<br>2:演练目标</p>
+ * @method integer getSource() 获取<p>1:平台 2:用户个人</p>
+ * @method void setSource(integer $Source) 设置<p>1:平台 2:用户个人</p>
+ * @method integer getTargetStatus() 获取<p>目标标签是否已被删除</p><p>枚举值：</p><ul><li>0： 未删除</li><li>1： 已删除</li></ul>
+ * @method void setTargetStatus(integer $TargetStatus) 设置<p>目标标签是否已被删除</p><p>枚举值：</p><ul><li>0： 未删除</li><li>1： 已删除</li></ul>
  */
 class TaskTarget extends AbstractModel
 {
     /**
-     * @var integer 目标标签ID
+     * @var integer <p>目标标签ID</p>
      */
     public $TargetId;
 
     /**
-     * @var string 目标描述
+     * @var string <p>目标描述</p>
      */
     public $TargetDesc;
 
     /**
-     * @var integer 1:演练场景
-2:演练目标
+     * @var integer <p>1:演练场景<br>2:演练目标</p>
      */
     public $Type;
 
     /**
-     * @var integer 1:平台 2:用户个人
+     * @var integer <p>1:平台 2:用户个人</p>
      */
     public $Source;
 
     /**
-     * @var integer 目标标签是否已被删除
+     * @var integer <p>目标标签是否已被删除</p><p>枚举值：</p><ul><li>0： 未删除</li><li>1： 已删除</li></ul>
      */
     public $TargetStatus;
 
     /**
-     * @param integer $TargetId 目标标签ID
-     * @param string $TargetDesc 目标描述
-     * @param integer $Type 1:演练场景
-2:演练目标
-     * @param integer $Source 1:平台 2:用户个人
-     * @param integer $TargetStatus 目标标签是否已被删除
+     * @param integer $TargetId <p>目标标签ID</p>
+     * @param string $TargetDesc <p>目标描述</p>
+     * @param integer $Type <p>1:演练场景<br>2:演练目标</p>
+     * @param integer $Source <p>1:平台 2:用户个人</p>
+     * @param integer $TargetStatus <p>目标标签是否已被删除</p><p>枚举值：</p><ul><li>0： 未删除</li><li>1： 已删除</li></ul>
      */
     function __construct()
     {

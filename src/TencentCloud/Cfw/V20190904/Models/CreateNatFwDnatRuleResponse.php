@@ -14,39 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ess\V20201111\Models;
+namespace TencentCloud\Cfw\V20190904\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateOrganizationAuthUrl返回参数结构体
+ * CreateNatFwDnatRule返回参数结构体
  *
- * @method string getAuthUrl() 获取<p>生成的认证链接。</p><p>注： <code>链接有效期统一30天</code></p>
- * @method void setAuthUrl(string $AuthUrl) 设置<p>生成的认证链接。</p><p>注： <code>链接有效期统一30天</code></p>
- * @method integer getExpiredTime() 获取<p>链接过期时间，格式为Unix标准时间戳（秒）</p>
- * @method void setExpiredTime(integer $ExpiredTime) 设置<p>链接过期时间，格式为Unix标准时间戳（秒）</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateOrganizationAuthUrlResponse extends AbstractModel
+class CreateNatFwDnatRuleResponse extends AbstractModel
 {
-    /**
-     * @var string <p>生成的认证链接。</p><p>注： <code>链接有效期统一30天</code></p>
-     */
-    public $AuthUrl;
-
-    /**
-     * @var integer <p>链接过期时间，格式为Unix标准时间戳（秒）</p>
-     */
-    public $ExpiredTime;
-
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param string $AuthUrl <p>生成的认证链接。</p><p>注： <code>链接有效期统一30天</code></p>
-     * @param integer $ExpiredTime <p>链接过期时间，格式为Unix标准时间戳（秒）</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,14 +46,6 @@ class CreateOrganizationAuthUrlResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AuthUrl",$param) and $param["AuthUrl"] !== null) {
-            $this->AuthUrl = $param["AuthUrl"];
-        }
-
-        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
-            $this->ExpiredTime = $param["ExpiredTime"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

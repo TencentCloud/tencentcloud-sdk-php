@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询-保护策略
  *
- * @method array getTaskPolicyIdList() 获取保护策略ID列表
- * @method void setTaskPolicyIdList(array $TaskPolicyIdList) 设置保护策略ID列表
- * @method string getTaskPolicyStatus() 获取保护策略状态
- * @method void setTaskPolicyStatus(string $TaskPolicyStatus) 设置保护策略状态
- * @method string getTaskPolicyRule() 获取策略规则
- * @method void setTaskPolicyRule(string $TaskPolicyRule) 设置策略规则
- * @method integer getTaskPolicyDealType() 获取护栏策略生效处理策略 1:顺序执行，2:暂停
- * @method void setTaskPolicyDealType(integer $TaskPolicyDealType) 设置护栏策略生效处理策略 1:顺序执行，2:暂停
+ * @method array getTaskPolicyIdList() 获取<p>保护策略ID列表</p>
+ * @method void setTaskPolicyIdList(array $TaskPolicyIdList) 设置<p>保护策略ID列表</p>
+ * @method string getTaskPolicyStatus() 获取<p>保护策略状态</p><p>枚举值：</p><ul><li>已触发： 表示已触发护栏策略</li><li>未触发： 表示未触发护栏策略</li><li>已恢复： 表示护栏策略已恢复</li></ul>
+ * @method void setTaskPolicyStatus(string $TaskPolicyStatus) 设置<p>保护策略状态</p><p>枚举值：</p><ul><li>已触发： 表示已触发护栏策略</li><li>未触发： 表示未触发护栏策略</li><li>已恢复： 表示护栏策略已恢复</li></ul>
+ * @method string getTaskPolicyRule() 获取<p>策略规则</p>
+ * @method void setTaskPolicyRule(string $TaskPolicyRule) 设置<p>策略规则</p>
+ * @method integer getTaskPolicyDealType() 获取<p>护栏策略生效处理策略 1:顺序执行，2:暂停</p>
+ * @method void setTaskPolicyDealType(integer $TaskPolicyDealType) 设置<p>护栏策略生效处理策略 1:顺序执行，2:暂停</p>
  */
 class DescribePolicy extends AbstractModel
 {
     /**
-     * @var array 保护策略ID列表
+     * @var array <p>保护策略ID列表</p>
      */
     public $TaskPolicyIdList;
 
     /**
-     * @var string 保护策略状态
+     * @var string <p>保护策略状态</p><p>枚举值：</p><ul><li>已触发： 表示已触发护栏策略</li><li>未触发： 表示未触发护栏策略</li><li>已恢复： 表示护栏策略已恢复</li></ul>
      */
     public $TaskPolicyStatus;
 
     /**
-     * @var string 策略规则
+     * @var string <p>策略规则</p>
      */
     public $TaskPolicyRule;
 
     /**
-     * @var integer 护栏策略生效处理策略 1:顺序执行，2:暂停
+     * @var integer <p>护栏策略生效处理策略 1:顺序执行，2:暂停</p>
      */
     public $TaskPolicyDealType;
 
     /**
-     * @param array $TaskPolicyIdList 保护策略ID列表
-     * @param string $TaskPolicyStatus 保护策略状态
-     * @param string $TaskPolicyRule 策略规则
-     * @param integer $TaskPolicyDealType 护栏策略生效处理策略 1:顺序执行，2:暂停
+     * @param array $TaskPolicyIdList <p>保护策略ID列表</p>
+     * @param string $TaskPolicyStatus <p>保护策略状态</p><p>枚举值：</p><ul><li>已触发： 表示已触发护栏策略</li><li>未触发： 表示未触发护栏策略</li><li>已恢复： 表示护栏策略已恢复</li></ul>
+     * @param string $TaskPolicyRule <p>策略规则</p>
+     * @param integer $TaskPolicyDealType <p>护栏策略生效处理策略 1:顺序执行，2:暂停</p>
      */
     function __construct()
     {

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 机器选取规则
  *
- * @method integer getTaskGroupInstancesExecuteMode() 获取实例选取模式
- * @method void setTaskGroupInstancesExecuteMode(integer $TaskGroupInstancesExecuteMode) 设置实例选取模式
- * @method integer getTaskGroupInstancesExecutePercent() 获取按比例选取模式下选取比例
- * @method void setTaskGroupInstancesExecutePercent(integer $TaskGroupInstancesExecutePercent) 设置按比例选取模式下选取比例
- * @method integer getTaskGroupInstancesExecuteNum() 获取按数量选取模式下选取数量
- * @method void setTaskGroupInstancesExecuteNum(integer $TaskGroupInstancesExecuteNum) 设置按数量选取模式下选取数量
+ * @method integer getTaskGroupInstancesExecuteMode() 获取<p>实例选取模式</p><p>枚举值：</p><ul><li>1： 全部注入</li><li>2： 随机选取指定比例注入</li><li>3： 随机选取指定数量注入</li></ul>
+ * @method void setTaskGroupInstancesExecuteMode(integer $TaskGroupInstancesExecuteMode) 设置<p>实例选取模式</p><p>枚举值：</p><ul><li>1： 全部注入</li><li>2： 随机选取指定比例注入</li><li>3： 随机选取指定数量注入</li></ul>
+ * @method integer getTaskGroupInstancesExecutePercent() 获取<p>按比例选取模式下选取比例</p>
+ * @method void setTaskGroupInstancesExecutePercent(integer $TaskGroupInstancesExecutePercent) 设置<p>按比例选取模式下选取比例</p>
+ * @method integer getTaskGroupInstancesExecuteNum() 获取<p>按数量选取模式下选取数量</p>
+ * @method void setTaskGroupInstancesExecuteNum(integer $TaskGroupInstancesExecuteNum) 设置<p>按数量选取模式下选取数量</p>
  */
 class TaskGroupInstancesExecuteRules extends AbstractModel
 {
     /**
-     * @var integer 实例选取模式
+     * @var integer <p>实例选取模式</p><p>枚举值：</p><ul><li>1： 全部注入</li><li>2： 随机选取指定比例注入</li><li>3： 随机选取指定数量注入</li></ul>
      */
     public $TaskGroupInstancesExecuteMode;
 
     /**
-     * @var integer 按比例选取模式下选取比例
+     * @var integer <p>按比例选取模式下选取比例</p>
      */
     public $TaskGroupInstancesExecutePercent;
 
     /**
-     * @var integer 按数量选取模式下选取数量
+     * @var integer <p>按数量选取模式下选取数量</p>
      */
     public $TaskGroupInstancesExecuteNum;
 
     /**
-     * @param integer $TaskGroupInstancesExecuteMode 实例选取模式
-     * @param integer $TaskGroupInstancesExecutePercent 按比例选取模式下选取比例
-     * @param integer $TaskGroupInstancesExecuteNum 按数量选取模式下选取数量
+     * @param integer $TaskGroupInstancesExecuteMode <p>实例选取模式</p><p>枚举值：</p><ul><li>1： 全部注入</li><li>2： 随机选取指定比例注入</li><li>3： 随机选取指定数量注入</li></ul>
+     * @param integer $TaskGroupInstancesExecutePercent <p>按比例选取模式下选取比例</p>
+     * @param integer $TaskGroupInstancesExecuteNum <p>按数量选取模式下选取数量</p>
      */
     function __construct()
     {

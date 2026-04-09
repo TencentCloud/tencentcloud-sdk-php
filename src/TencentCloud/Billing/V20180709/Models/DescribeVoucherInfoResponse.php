@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalBalance(integer $TotalBalance) 设置<p>总余额（微分）</p>
  * @method array getVoucherInfos() 获取<p>代金券相关信息</p>
  * @method void setVoucherInfos(array $VoucherInfos) 设置<p>代金券相关信息</p>
+ * @method string getUnit() 获取<p>接口返回的金额字段单位</p><p>默认值：micro</p><p>金额单位：micro（微分）<br>代金券发放和使用按8位高精度处理，所以金额单位默认为micro（微分），如需CNY或USD请按以下公式换算<br>CNY：1 micro = 10⁻⁸ 元<br>USD：1 micro = 10⁻⁸ 美元</p>
+ * @method void setUnit(string $Unit) 设置<p>接口返回的金额字段单位</p><p>默认值：micro</p><p>金额单位：micro（微分）<br>代金券发放和使用按8位高精度处理，所以金额单位默认为micro（微分），如需CNY或USD请按以下公式换算<br>CNY：1 micro = 10⁻⁸ 元<br>USD：1 micro = 10⁻⁸ 美元</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,6 +49,11 @@ class DescribeVoucherInfoResponse extends AbstractModel
     public $VoucherInfos;
 
     /**
+     * @var string <p>接口返回的金额字段单位</p><p>默认值：micro</p><p>金额单位：micro（微分）<br>代金券发放和使用按8位高精度处理，所以金额单位默认为micro（微分），如需CNY或USD请按以下公式换算<br>CNY：1 micro = 10⁻⁸ 元<br>USD：1 micro = 10⁻⁸ 美元</p>
+     */
+    public $Unit;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +62,7 @@ class DescribeVoucherInfoResponse extends AbstractModel
      * @param integer $TotalCount <p>券总数</p>
      * @param integer $TotalBalance <p>总余额（微分）</p>
      * @param array $VoucherInfos <p>代金券相关信息</p>
+     * @param string $Unit <p>接口返回的金额字段单位</p><p>默认值：micro</p><p>金额单位：micro（微分）<br>代金券发放和使用按8位高精度处理，所以金额单位默认为micro（微分），如需CNY或USD请按以下公式换算<br>CNY：1 micro = 10⁻⁸ 元<br>USD：1 micro = 10⁻⁸ 美元</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -85,6 +93,10 @@ class DescribeVoucherInfoResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->VoucherInfos, $obj);
             }
+        }
+
+        if (array_key_exists("Unit",$param) and $param["Unit"] !== null) {
+            $this->Unit = $param["Unit"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

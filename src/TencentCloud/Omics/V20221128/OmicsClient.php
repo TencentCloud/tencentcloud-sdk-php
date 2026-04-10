@@ -28,17 +28,23 @@ use TencentCloud\Omics\V20221128\Models as Models;
  * @method Models\DeleteEnvironmentResponse DeleteEnvironment(Models\DeleteEnvironmentRequest $req) 删除环境。
  * @method Models\DeleteVolumeResponse DeleteVolume(Models\DeleteVolumeRequest $req) 删除缓存卷。
  * @method Models\DeleteVolumeDataResponse DeleteVolumeData(Models\DeleteVolumeDataRequest $req) 删除缓存卷数据。
+ * @method Models\DescribeApplicationVersionsResponse DescribeApplicationVersions(Models\DescribeApplicationVersionsRequest $req) 查询应用版本列表
+ * @method Models\DescribeApplicationsResponse DescribeApplications(Models\DescribeApplicationsRequest $req) 查询项目应用列表
  * @method Models\DescribeEnvironmentsResponse DescribeEnvironments(Models\DescribeEnvironmentsRequest $req) 查询环境列表。
  * @method Models\DescribeHPCClustersResponse DescribeHPCClusters(Models\DescribeHPCClustersRequest $req) 查询HPC集群列表。
  * @method Models\DescribeHPCNodesResponse DescribeHPCNodes(Models\DescribeHPCNodesRequest $req) 查询HPC节点列表。
+ * @method Models\DescribeInputTemplatesResponse DescribeInputTemplates(Models\DescribeInputTemplatesRequest $req) 查询运行参数模板列表
+ * @method Models\DescribeProjectsResponse DescribeProjects(Models\DescribeProjectsRequest $req) 查询项目列表
  * @method Models\DescribeRunGroupsResponse DescribeRunGroups(Models\DescribeRunGroupsRequest $req) 查询任务批次列表。
  * @method Models\DescribeRunsResponse DescribeRuns(Models\DescribeRunsRequest $req) 查询任务列表。
  * @method Models\DescribeTablesResponse DescribeTables(Models\DescribeTablesRequest $req) 查询表格。
  * @method Models\DescribeTablesRowsResponse DescribeTablesRows(Models\DescribeTablesRowsRequest $req) 查询表格行数据。
  * @method Models\DescribeVolumesResponse DescribeVolumes(Models\DescribeVolumesRequest $req) 查询缓存卷列表。
+ * @method Models\GetInputTemplateFileResponse GetInputTemplateFile(Models\GetInputTemplateFileRequest $req) 查询运行参数模板内容
  * @method Models\GetRunCallsResponse GetRunCalls(Models\GetRunCallsRequest $req) 查询作业详情。
  * @method Models\GetRunMetadataFileResponse GetRunMetadataFile(Models\GetRunMetadataFileRequest $req) 获取任务详情文件。
  * @method Models\GetRunStatusResponse GetRunStatus(Models\GetRunStatusRequest $req) 查询任务详情。
+ * @method Models\ImportCommonApplicationResponse ImportCommonApplication(Models\ImportCommonApplicationRequest $req) 导入公共应用到项目
  * @method Models\ImportTableFileResponse ImportTableFile(Models\ImportTableFileRequest $req) 导入表格文件。
  * @method Models\ModifyVolumeResponse ModifyVolume(Models\ModifyVolumeRequest $req) 修改缓存卷。
  * @method Models\RebootHPCNodesResponse RebootHPCNodes(Models\RebootHPCNodesRequest $req) 重启HPC节点

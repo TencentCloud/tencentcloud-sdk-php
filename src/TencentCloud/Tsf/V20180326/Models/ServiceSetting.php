@@ -20,186 +20,194 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 容器网络设置。
  *
- * @method integer getAccessType() 获取0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问
- * @method void setAccessType(integer $AccessType) 设置0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问
- * @method array getProtocolPorts() 获取容器端口映射
- * @method void setProtocolPorts(array $ProtocolPorts) 设置容器端口映射
- * @method string getSubnetId() 获取子网ID
- * @method void setSubnetId(string $SubnetId) 设置子网ID
- * @method boolean getDisableService() 获取是否创建 k8s service，默认为 false
- * @method void setDisableService(boolean $DisableService) 设置是否创建 k8s service，默认为 false
- * @method boolean getHeadlessService() 获取service 是否为 headless 类型
- * @method void setHeadlessService(boolean $HeadlessService) 设置service 是否为 headless 类型
- * @method boolean getAllowDeleteService() 获取当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用
- * @method void setAllowDeleteService(boolean $AllowDeleteService) 设置当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用
- * @method boolean getOpenSessionAffinity() 获取开启SessionAffinity，true为开启，false为不开启，默认为false
- * @method void setOpenSessionAffinity(boolean $OpenSessionAffinity) 设置开启SessionAffinity，true为开启，false为不开启，默认为false
- * @method integer getSessionAffinityTimeoutSeconds() 获取SessionAffinity会话时间，默认10800
- * @method void setSessionAffinityTimeoutSeconds(integer $SessionAffinityTimeoutSeconds) 设置SessionAffinity会话时间，默认10800
- * @method string getServiceName() 获取服务名称
- * @method void setServiceName(string $ServiceName) 设置服务名称
- * @method string getExternalTrafficStrategy() 获取外部流量策略
- * @method void setExternalTrafficStrategy(string $ExternalTrafficStrategy) 设置外部流量策略
- * @method string getExternalTrafficPolicy() 获取外部流量策略
- * @method void setExternalTrafficPolicy(string $ExternalTrafficPolicy) 设置外部流量策略
- * @method string getLoadBalancerProvisioner() 获取负载均衡提供者
- * @method void setLoadBalancerProvisioner(string $LoadBalancerProvisioner) 设置负载均衡提供者
- * @method string getLoadBalancingType() 获取负载均衡类型，Intranet表示内网，Internet表示外网
- * @method void setLoadBalancingType(string $LoadBalancingType) 设置负载均衡类型，Intranet表示内网，Internet表示外网
- * @method string getClusterIp() 获取k8s负载均衡内网vip
- * @method void setClusterIp(string $ClusterIp) 设置k8s负载均衡内网vip
- * @method integer getDisableServiceInt() 获取禁用服务Int记录
- * @method void setDisableServiceInt(integer $DisableServiceInt) 设置禁用服务Int记录
- * @method integer getOpenSessionAffinityInt() 获取开启SessionAffinity Int记录
- * @method void setOpenSessionAffinityInt(integer $OpenSessionAffinityInt) 设置开启SessionAffinity Int记录
- * @method integer getHeadlessServiceInt() 获取开启HeadlessService int记录
- * @method void setHeadlessServiceInt(integer $HeadlessServiceInt) 设置开启HeadlessService int记录
- * @method string getName() 获取服务名称
- * @method void setName(string $Name) 设置服务名称
- * @method string getVpcId() 获取VPC网络ID
- * @method void setVpcId(string $VpcId) 设置VPC网络ID
- * @method string getLoadBalancingIp() 获取负载均衡VIP
- * @method void setLoadBalancingIp(string $LoadBalancingIp) 设置负载均衡VIP
- * @method string getLoadBalancerId() 获取负载均衡id
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡id
- * @method string getExistingLoadBalancerId() 获取已存在的负载均衡id
- * @method void setExistingLoadBalancerId(string $ExistingLoadBalancerId) 设置已存在的负载均衡id
+ * @method integer getAccessType() 获取<p>0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问</p>
+ * @method void setAccessType(integer $AccessType) 设置<p>0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问</p>
+ * @method array getProtocolPorts() 获取<p>容器端口映射</p>
+ * @method void setProtocolPorts(array $ProtocolPorts) 设置<p>容器端口映射</p>
+ * @method string getSubnetId() 获取<p>子网ID</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网ID</p>
+ * @method boolean getDisableService() 获取<p>是否创建 k8s service，默认为 false</p>
+ * @method void setDisableService(boolean $DisableService) 设置<p>是否创建 k8s service，默认为 false</p>
+ * @method boolean getHeadlessService() 获取<p>service 是否为 headless 类型</p>
+ * @method void setHeadlessService(boolean $HeadlessService) 设置<p>service 是否为 headless 类型</p>
+ * @method boolean getAllowDeleteService() 获取<p>当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用</p>
+ * @method void setAllowDeleteService(boolean $AllowDeleteService) 设置<p>当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用</p>
+ * @method boolean getOpenSessionAffinity() 获取<p>开启SessionAffinity，true为开启，false为不开启，默认为false</p>
+ * @method void setOpenSessionAffinity(boolean $OpenSessionAffinity) 设置<p>开启SessionAffinity，true为开启，false为不开启，默认为false</p>
+ * @method integer getSessionAffinityTimeoutSeconds() 获取<p>SessionAffinity会话时间，默认10800</p>
+ * @method void setSessionAffinityTimeoutSeconds(integer $SessionAffinityTimeoutSeconds) 设置<p>SessionAffinity会话时间，默认10800</p>
+ * @method string getServiceName() 获取<p>服务名称</p>
+ * @method void setServiceName(string $ServiceName) 设置<p>服务名称</p>
+ * @method string getExternalTrafficStrategy() 获取<p>外部流量策略</p>
+ * @method void setExternalTrafficStrategy(string $ExternalTrafficStrategy) 设置<p>外部流量策略</p>
+ * @method string getExternalTrafficPolicy() 获取<p>外部流量策略</p>
+ * @method void setExternalTrafficPolicy(string $ExternalTrafficPolicy) 设置<p>外部流量策略</p>
+ * @method string getLoadBalancerProvisioner() 获取<p>负载均衡提供者</p>
+ * @method void setLoadBalancerProvisioner(string $LoadBalancerProvisioner) 设置<p>负载均衡提供者</p>
+ * @method string getLoadBalancingType() 获取<p>负载均衡类型，Intranet表示内网，Internet表示外网</p>
+ * @method void setLoadBalancingType(string $LoadBalancingType) 设置<p>负载均衡类型，Intranet表示内网，Internet表示外网</p>
+ * @method string getClusterIp() 获取<p>k8s负载均衡内网vip</p>
+ * @method void setClusterIp(string $ClusterIp) 设置<p>k8s负载均衡内网vip</p>
+ * @method integer getDisableServiceInt() 获取<p>禁用服务Int记录</p>
+ * @method void setDisableServiceInt(integer $DisableServiceInt) 设置<p>禁用服务Int记录</p>
+ * @method integer getOpenSessionAffinityInt() 获取<p>开启SessionAffinity Int记录</p>
+ * @method void setOpenSessionAffinityInt(integer $OpenSessionAffinityInt) 设置<p>开启SessionAffinity Int记录</p>
+ * @method integer getHeadlessServiceInt() 获取<p>开启HeadlessService int记录</p>
+ * @method void setHeadlessServiceInt(integer $HeadlessServiceInt) 设置<p>开启HeadlessService int记录</p>
+ * @method string getName() 获取<p>服务名称</p>
+ * @method void setName(string $Name) 设置<p>服务名称</p>
+ * @method string getVpcId() 获取<p>VPC网络ID</p>
+ * @method void setVpcId(string $VpcId) 设置<p>VPC网络ID</p>
+ * @method string getLoadBalancingIp() 获取<p>负载均衡VIP</p>
+ * @method void setLoadBalancingIp(string $LoadBalancingIp) 设置<p>负载均衡VIP</p>
+ * @method string getLoadBalancerId() 获取<p>负载均衡id</p>
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置<p>负载均衡id</p>
+ * @method string getExistingLoadBalancerId() 获取<p>已存在的负载均衡id</p>
+ * @method void setExistingLoadBalancerId(string $ExistingLoadBalancerId) 设置<p>已存在的负载均衡id</p>
+ * @method boolean getEnableGlobalService() 获取<p>是否为全局服务（仅TCS环境使用）</p>
+ * @method void setEnableGlobalService(boolean $EnableGlobalService) 设置<p>是否为全局服务（仅TCS环境使用）</p>
  */
 class ServiceSetting extends AbstractModel
 {
     /**
-     * @var integer 0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问
+     * @var integer <p>0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问</p>
      */
     public $AccessType;
 
     /**
-     * @var array 容器端口映射
+     * @var array <p>容器端口映射</p>
      */
     public $ProtocolPorts;
 
     /**
-     * @var string 子网ID
+     * @var string <p>子网ID</p>
      */
     public $SubnetId;
 
     /**
-     * @var boolean 是否创建 k8s service，默认为 false
+     * @var boolean <p>是否创建 k8s service，默认为 false</p>
      */
     public $DisableService;
 
     /**
-     * @var boolean service 是否为 headless 类型
+     * @var boolean <p>service 是否为 headless 类型</p>
      */
     public $HeadlessService;
 
     /**
-     * @var boolean 当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用
+     * @var boolean <p>当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用</p>
      */
     public $AllowDeleteService;
 
     /**
-     * @var boolean 开启SessionAffinity，true为开启，false为不开启，默认为false
+     * @var boolean <p>开启SessionAffinity，true为开启，false为不开启，默认为false</p>
      */
     public $OpenSessionAffinity;
 
     /**
-     * @var integer SessionAffinity会话时间，默认10800
+     * @var integer <p>SessionAffinity会话时间，默认10800</p>
      */
     public $SessionAffinityTimeoutSeconds;
 
     /**
-     * @var string 服务名称
+     * @var string <p>服务名称</p>
      */
     public $ServiceName;
 
     /**
-     * @var string 外部流量策略
+     * @var string <p>外部流量策略</p>
      */
     public $ExternalTrafficStrategy;
 
     /**
-     * @var string 外部流量策略
+     * @var string <p>外部流量策略</p>
      */
     public $ExternalTrafficPolicy;
 
     /**
-     * @var string 负载均衡提供者
+     * @var string <p>负载均衡提供者</p>
      */
     public $LoadBalancerProvisioner;
 
     /**
-     * @var string 负载均衡类型，Intranet表示内网，Internet表示外网
+     * @var string <p>负载均衡类型，Intranet表示内网，Internet表示外网</p>
      */
     public $LoadBalancingType;
 
     /**
-     * @var string k8s负载均衡内网vip
+     * @var string <p>k8s负载均衡内网vip</p>
      */
     public $ClusterIp;
 
     /**
-     * @var integer 禁用服务Int记录
+     * @var integer <p>禁用服务Int记录</p>
      */
     public $DisableServiceInt;
 
     /**
-     * @var integer 开启SessionAffinity Int记录
+     * @var integer <p>开启SessionAffinity Int记录</p>
      */
     public $OpenSessionAffinityInt;
 
     /**
-     * @var integer 开启HeadlessService int记录
+     * @var integer <p>开启HeadlessService int记录</p>
      */
     public $HeadlessServiceInt;
 
     /**
-     * @var string 服务名称
+     * @var string <p>服务名称</p>
      */
     public $Name;
 
     /**
-     * @var string VPC网络ID
+     * @var string <p>VPC网络ID</p>
      */
     public $VpcId;
 
     /**
-     * @var string 负载均衡VIP
+     * @var string <p>负载均衡VIP</p>
      */
     public $LoadBalancingIp;
 
     /**
-     * @var string 负载均衡id
+     * @var string <p>负载均衡id</p>
      */
     public $LoadBalancerId;
 
     /**
-     * @var string 已存在的负载均衡id
+     * @var string <p>已存在的负载均衡id</p>
      */
     public $ExistingLoadBalancerId;
 
     /**
-     * @param integer $AccessType 0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问
-     * @param array $ProtocolPorts 容器端口映射
-     * @param string $SubnetId 子网ID
-     * @param boolean $DisableService 是否创建 k8s service，默认为 false
-     * @param boolean $HeadlessService service 是否为 headless 类型
-     * @param boolean $AllowDeleteService 当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用
-     * @param boolean $OpenSessionAffinity 开启SessionAffinity，true为开启，false为不开启，默认为false
-     * @param integer $SessionAffinityTimeoutSeconds SessionAffinity会话时间，默认10800
-     * @param string $ServiceName 服务名称
-     * @param string $ExternalTrafficStrategy 外部流量策略
-     * @param string $ExternalTrafficPolicy 外部流量策略
-     * @param string $LoadBalancerProvisioner 负载均衡提供者
-     * @param string $LoadBalancingType 负载均衡类型，Intranet表示内网，Internet表示外网
-     * @param string $ClusterIp k8s负载均衡内网vip
-     * @param integer $DisableServiceInt 禁用服务Int记录
-     * @param integer $OpenSessionAffinityInt 开启SessionAffinity Int记录
-     * @param integer $HeadlessServiceInt 开启HeadlessService int记录
-     * @param string $Name 服务名称
-     * @param string $VpcId VPC网络ID
-     * @param string $LoadBalancingIp 负载均衡VIP
-     * @param string $LoadBalancerId 负载均衡id
-     * @param string $ExistingLoadBalancerId 已存在的负载均衡id
+     * @var boolean <p>是否为全局服务（仅TCS环境使用）</p>
+     */
+    public $EnableGlobalService;
+
+    /**
+     * @param integer $AccessType <p>0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问</p>
+     * @param array $ProtocolPorts <p>容器端口映射</p>
+     * @param string $SubnetId <p>子网ID</p>
+     * @param boolean $DisableService <p>是否创建 k8s service，默认为 false</p>
+     * @param boolean $HeadlessService <p>service 是否为 headless 类型</p>
+     * @param boolean $AllowDeleteService <p>当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用</p>
+     * @param boolean $OpenSessionAffinity <p>开启SessionAffinity，true为开启，false为不开启，默认为false</p>
+     * @param integer $SessionAffinityTimeoutSeconds <p>SessionAffinity会话时间，默认10800</p>
+     * @param string $ServiceName <p>服务名称</p>
+     * @param string $ExternalTrafficStrategy <p>外部流量策略</p>
+     * @param string $ExternalTrafficPolicy <p>外部流量策略</p>
+     * @param string $LoadBalancerProvisioner <p>负载均衡提供者</p>
+     * @param string $LoadBalancingType <p>负载均衡类型，Intranet表示内网，Internet表示外网</p>
+     * @param string $ClusterIp <p>k8s负载均衡内网vip</p>
+     * @param integer $DisableServiceInt <p>禁用服务Int记录</p>
+     * @param integer $OpenSessionAffinityInt <p>开启SessionAffinity Int记录</p>
+     * @param integer $HeadlessServiceInt <p>开启HeadlessService int记录</p>
+     * @param string $Name <p>服务名称</p>
+     * @param string $VpcId <p>VPC网络ID</p>
+     * @param string $LoadBalancingIp <p>负载均衡VIP</p>
+     * @param string $LoadBalancerId <p>负载均衡id</p>
+     * @param string $ExistingLoadBalancerId <p>已存在的负载均衡id</p>
+     * @param boolean $EnableGlobalService <p>是否为全局服务（仅TCS环境使用）</p>
      */
     function __construct()
     {
@@ -305,6 +313,10 @@ class ServiceSetting extends AbstractModel
 
         if (array_key_exists("ExistingLoadBalancerId",$param) and $param["ExistingLoadBalancerId"] !== null) {
             $this->ExistingLoadBalancerId = $param["ExistingLoadBalancerId"];
+        }
+
+        if (array_key_exists("EnableGlobalService",$param) and $param["EnableGlobalService"] !== null) {
+            $this->EnableGlobalService = $param["EnableGlobalService"];
         }
     }
 }

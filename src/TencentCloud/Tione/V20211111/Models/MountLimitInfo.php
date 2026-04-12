@@ -20,85 +20,85 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 挂载限制
  *
- * @method string getType() 获取数据源类型英文名
- * @method void setType(string $Type) 设置数据源类型英文名
- * @method string getStorageId() 获取数据源所属存储实例ID
- * @method void setStorageId(string $StorageId) 设置数据源所属存储实例ID
- * @method string getStorageName() 获取数据源所属存储实例名称
- * @method void setStorageName(string $StorageName) 设置数据源所属存储实例名称
- * @method boolean getLimitMount() 获取限制开关是否开启，只有开启时才有限制
- * @method void setLimitMount(boolean $LimitMount) 设置限制开关是否开启，只有开启时才有限制
- * @method string getCreator() 获取创建者uin
- * @method void setCreator(string $Creator) 设置创建者uin
- * @method string getCreatorName() 获取创建者名称
- * @method void setCreatorName(string $CreatorName) 设置创建者名称
- * @method string getCreateTime() 获取创建时间, 格式为yyyy-mm-ddThh:mm:ssZ
- * @method void setCreateTime(string $CreateTime) 设置创建时间, 格式为yyyy-mm-ddThh:mm:ssZ
- * @method string getUpdateTime() 获取更新时间, 格式为yyyy-mm-ddThh:mm:ssZ
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间, 格式为yyyy-mm-ddThh:mm:ssZ
- * @method StorageExtraConf getExtraConf() 获取额外配置
+ * @method string getType() 获取<p>数据源类型英文名</p>
+ * @method void setType(string $Type) 设置<p>数据源类型英文名</p>
+ * @method string getStorageId() 获取<p>数据源所属存储实例ID</p>
+ * @method void setStorageId(string $StorageId) 设置<p>数据源所属存储实例ID</p>
+ * @method string getStorageName() 获取<p>数据源所属存储实例名称</p>
+ * @method void setStorageName(string $StorageName) 设置<p>数据源所属存储实例名称</p>
+ * @method boolean getLimitMount() 获取<p>限制开关是否开启，只有开启时才有限制</p>
+ * @method void setLimitMount(boolean $LimitMount) 设置<p>限制开关是否开启，只有开启时才有限制</p>
+ * @method string getCreator() 获取<p>创建者uin</p>
+ * @method void setCreator(string $Creator) 设置<p>创建者uin</p>
+ * @method string getCreatorName() 获取<p>创建者名称</p>
+ * @method void setCreatorName(string $CreatorName) 设置<p>创建者名称</p>
+ * @method string getCreateTime() 获取<p>创建时间, 格式为yyyy-mm-ddThh:mm:ssZ</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间, 格式为yyyy-mm-ddThh:mm:ssZ</p>
+ * @method string getUpdateTime() 获取<p>更新时间, 格式为yyyy-mm-ddThh:mm:ssZ</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间, 格式为yyyy-mm-ddThh:mm:ssZ</p>
+ * @method StorageExtraConf getExtraConf() 获取<p>额外配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExtraConf(StorageExtraConf $ExtraConf) 设置额外配置
+ * @method void setExtraConf(StorageExtraConf $ExtraConf) 设置<p>额外配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class MountLimitInfo extends AbstractModel
 {
     /**
-     * @var string 数据源类型英文名
+     * @var string <p>数据源类型英文名</p>
      */
     public $Type;
 
     /**
-     * @var string 数据源所属存储实例ID
+     * @var string <p>数据源所属存储实例ID</p>
      */
     public $StorageId;
 
     /**
-     * @var string 数据源所属存储实例名称
+     * @var string <p>数据源所属存储实例名称</p>
      */
     public $StorageName;
 
     /**
-     * @var boolean 限制开关是否开启，只有开启时才有限制
+     * @var boolean <p>限制开关是否开启，只有开启时才有限制</p>
      */
     public $LimitMount;
 
     /**
-     * @var string 创建者uin
+     * @var string <p>创建者uin</p>
      */
     public $Creator;
 
     /**
-     * @var string 创建者名称
+     * @var string <p>创建者名称</p>
      */
     public $CreatorName;
 
     /**
-     * @var string 创建时间, 格式为yyyy-mm-ddThh:mm:ssZ
+     * @var string <p>创建时间, 格式为yyyy-mm-ddThh:mm:ssZ</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间, 格式为yyyy-mm-ddThh:mm:ssZ
+     * @var string <p>更新时间, 格式为yyyy-mm-ddThh:mm:ssZ</p>
      */
     public $UpdateTime;
 
     /**
-     * @var StorageExtraConf 额外配置
+     * @var StorageExtraConf <p>额外配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtraConf;
 
     /**
-     * @param string $Type 数据源类型英文名
-     * @param string $StorageId 数据源所属存储实例ID
-     * @param string $StorageName 数据源所属存储实例名称
-     * @param boolean $LimitMount 限制开关是否开启，只有开启时才有限制
-     * @param string $Creator 创建者uin
-     * @param string $CreatorName 创建者名称
-     * @param string $CreateTime 创建时间, 格式为yyyy-mm-ddThh:mm:ssZ
-     * @param string $UpdateTime 更新时间, 格式为yyyy-mm-ddThh:mm:ssZ
-     * @param StorageExtraConf $ExtraConf 额外配置
+     * @param string $Type <p>数据源类型英文名</p>
+     * @param string $StorageId <p>数据源所属存储实例ID</p>
+     * @param string $StorageName <p>数据源所属存储实例名称</p>
+     * @param boolean $LimitMount <p>限制开关是否开启，只有开启时才有限制</p>
+     * @param string $Creator <p>创建者uin</p>
+     * @param string $CreatorName <p>创建者名称</p>
+     * @param string $CreateTime <p>创建时间, 格式为yyyy-mm-ddThh:mm:ssZ</p>
+     * @param string $UpdateTime <p>更新时间, 格式为yyyy-mm-ddThh:mm:ssZ</p>
+     * @param StorageExtraConf $ExtraConf <p>额外配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

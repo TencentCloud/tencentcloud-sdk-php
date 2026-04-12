@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppMicroServiceType(string $AppMicroServiceType) 设置应用微服务类型
  * @method string getK8sNamespaceName() 获取k8s 命名空间名称
  * @method void setK8sNamespaceName(string $K8sNamespaceName) 设置k8s 命名空间名称
+ * @method string getCreateTime() 获取创建时间
+ * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method string getUpdatedTime() 获取更新时间
+ * @method void setUpdatedTime(string $UpdatedTime) 设置更新时间
  */
 class SimpleGroup extends AbstractModel
 {
@@ -122,6 +126,16 @@ class SimpleGroup extends AbstractModel
     public $K8sNamespaceName;
 
     /**
+     * @var string 创建时间
+     */
+    public $CreateTime;
+
+    /**
+     * @var string 更新时间
+     */
+    public $UpdatedTime;
+
+    /**
      * @param string $GroupId 部署组ID
      * @param string $GroupName 部署组名称
      * @param string $ApplicationId 应用ID
@@ -136,6 +150,8 @@ class SimpleGroup extends AbstractModel
      * @param string $GroupResourceType 部署组资源类型
      * @param string $AppMicroServiceType 应用微服务类型
      * @param string $K8sNamespaceName k8s 命名空间名称
+     * @param string $CreateTime 创建时间
+     * @param string $UpdatedTime 更新时间
      */
     function __construct()
     {
@@ -204,6 +220,14 @@ class SimpleGroup extends AbstractModel
 
         if (array_key_exists("K8sNamespaceName",$param) and $param["K8sNamespaceName"] !== null) {
             $this->K8sNamespaceName = $param["K8sNamespaceName"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UpdatedTime",$param) and $param["UpdatedTime"] !== null) {
+            $this->UpdatedTime = $param["UpdatedTime"];
         }
     }
 }

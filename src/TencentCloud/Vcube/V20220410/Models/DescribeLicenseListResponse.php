@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLicenseList返回参数结构体
  *
- * @method integer getCount() 获取临期license数量
- * @method void setCount(integer $Count) 设置临期license数量
- * @method Overview getOverview() 获取正式license总览统计数据
- * @method void setOverview(Overview $Overview) 设置正式license总览统计数据
- * @method array getLicenseList() 获取临期license列表
- * @method void setLicenseList(array $LicenseList) 设置临期license列表
- * @method Overview getTrialOverview() 获取测试license总览统计数据
- * @method void setTrialOverview(Overview $TrialOverview) 设置测试license总览统计数据
+ * @method integer getCount() 获取<p>临期license数量</p>
+ * @method void setCount(integer $Count) 设置<p>临期license数量</p>
+ * @method Overview getOverview() 获取<p>正式license总览统计数据</p>
+ * @method void setOverview(Overview $Overview) 设置<p>正式license总览统计数据</p>
+ * @method array getLicenseList() 获取<p>临期license列表</p>
+ * @method void setLicenseList(array $LicenseList) 设置<p>临期license列表</p>
+ * @method Overview getTrialOverview() 获取<p>测试license总览统计数据</p>
+ * @method void setTrialOverview(Overview $TrialOverview) 设置<p>测试license总览统计数据</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeLicenseListResponse extends AbstractModel
 {
     /**
-     * @var integer 临期license数量
+     * @var integer <p>临期license数量</p>
      */
     public $Count;
 
     /**
-     * @var Overview 正式license总览统计数据
+     * @var Overview <p>正式license总览统计数据</p>
      */
     public $Overview;
 
     /**
-     * @var array 临期license列表
+     * @var array <p>临期license列表</p>
      */
     public $LicenseList;
 
     /**
-     * @var Overview 测试license总览统计数据
+     * @var Overview <p>测试license总览统计数据</p>
      */
     public $TrialOverview;
 
@@ -59,10 +59,10 @@ class DescribeLicenseListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Count 临期license数量
-     * @param Overview $Overview 正式license总览统计数据
-     * @param array $LicenseList 临期license列表
-     * @param Overview $TrialOverview 测试license总览统计数据
+     * @param integer $Count <p>临期license数量</p>
+     * @param Overview $Overview <p>正式license总览统计数据</p>
+     * @param array $LicenseList <p>临期license列表</p>
+     * @param Overview $TrialOverview <p>测试license总览统计数据</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

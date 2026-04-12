@@ -20,105 +20,129 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 微服务
  *
- * @method string getMicroserviceId() 获取微服务ID
+ * @method string getMicroserviceId() 获取<p>微服务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMicroserviceId(string $MicroserviceId) 设置微服务ID
+ * @method void setMicroserviceId(string $MicroserviceId) 设置<p>微服务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMicroserviceName() 获取微服务名称
+ * @method string getMicroserviceName() 获取<p>微服务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMicroserviceName(string $MicroserviceName) 设置微服务名称
+ * @method void setMicroserviceName(string $MicroserviceName) 设置<p>微服务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMicroserviceDesc() 获取微服务描述
+ * @method string getMicroserviceDesc() 获取<p>微服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMicroserviceDesc(string $MicroserviceDesc) 设置微服务描述
+ * @method void setMicroserviceDesc(string $MicroserviceDesc) 设置<p>微服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCreateTime() 获取创建时间
+ * @method integer getCreateTime() 获取<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(integer $CreateTime) 设置创建时间
+ * @method void setCreateTime(integer $CreateTime) 设置<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getUpdateTime() 获取更新时间
+ * @method integer getUpdateTime() 获取<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(integer $UpdateTime) 设置更新时间
+ * @method void setUpdateTime(integer $UpdateTime) 设置<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNamespaceId() 获取命名空间ID
+ * @method string getNamespaceId() 获取<p>命名空间ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNamespaceId(string $NamespaceId) 设置命名空间ID
+ * @method void setNamespaceId(string $NamespaceId) 设置<p>命名空间ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRunInstanceCount() 获取微服务的运行实例数目
+ * @method integer getRunInstanceCount() 获取<p>微服务的运行实例数目</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRunInstanceCount(integer $RunInstanceCount) 设置微服务的运行实例数目
+ * @method void setRunInstanceCount(integer $RunInstanceCount) 设置<p>微服务的运行实例数目</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCriticalInstanceCount() 获取微服务的离线实例数目
+ * @method integer getCriticalInstanceCount() 获取<p>微服务的离线实例数目</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCriticalInstanceCount(integer $CriticalInstanceCount) 设置微服务的离线实例数目
+ * @method void setCriticalInstanceCount(integer $CriticalInstanceCount) 设置<p>微服务的离线实例数目</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getDeleteDisabled() 获取<p>是否禁用删除按钮，true：是；false：否。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeleteDisabled(boolean $DeleteDisabled) 设置<p>是否禁用删除按钮，true：是；false：否。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeleteDisabledReason() 获取<p>禁用删除原因。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeleteDisabledReason(string $DeleteDisabledReason) 设置<p>禁用删除原因。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Microservice extends AbstractModel
 {
     /**
-     * @var string 微服务ID
+     * @var string <p>微服务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MicroserviceId;
 
     /**
-     * @var string 微服务名称
+     * @var string <p>微服务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MicroserviceName;
 
     /**
-     * @var string 微服务描述
+     * @var string <p>微服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MicroserviceDesc;
 
     /**
-     * @var integer 创建时间
+     * @var integer <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var integer 更新时间
+     * @var integer <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
-     * @var string 命名空间ID
+     * @var string <p>命名空间ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NamespaceId;
 
     /**
-     * @var integer 微服务的运行实例数目
+     * @var integer <p>微服务的运行实例数目</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunInstanceCount;
 
     /**
-     * @var integer 微服务的离线实例数目
+     * @var integer <p>微服务的离线实例数目</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CriticalInstanceCount;
 
     /**
-     * @param string $MicroserviceId 微服务ID
+     * @var boolean <p>是否禁用删除按钮，true：是；false：否。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MicroserviceName 微服务名称
+     */
+    public $DeleteDisabled;
+
+    /**
+     * @var string <p>禁用删除原因。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MicroserviceDesc 微服务描述
+     */
+    public $DeleteDisabledReason;
+
+    /**
+     * @param string $MicroserviceId <p>微服务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CreateTime 创建时间
+     * @param string $MicroserviceName <p>微服务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $UpdateTime 更新时间
+     * @param string $MicroserviceDesc <p>微服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NamespaceId 命名空间ID
+     * @param integer $CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RunInstanceCount 微服务的运行实例数目
+     * @param integer $UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CriticalInstanceCount 微服务的离线实例数目
+     * @param string $NamespaceId <p>命名空间ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RunInstanceCount <p>微服务的运行实例数目</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CriticalInstanceCount <p>微服务的离线实例数目</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $DeleteDisabled <p>是否禁用删除按钮，true：是；false：否。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeleteDisabledReason <p>禁用删除原因。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +188,14 @@ class Microservice extends AbstractModel
 
         if (array_key_exists("CriticalInstanceCount",$param) and $param["CriticalInstanceCount"] !== null) {
             $this->CriticalInstanceCount = $param["CriticalInstanceCount"];
+        }
+
+        if (array_key_exists("DeleteDisabled",$param) and $param["DeleteDisabled"] !== null) {
+            $this->DeleteDisabled = $param["DeleteDisabled"];
+        }
+
+        if (array_key_exists("DeleteDisabledReason",$param) and $param["DeleteDisabledReason"] !== null) {
+            $this->DeleteDisabledReason = $param["DeleteDisabledReason"];
         }
     }
 }

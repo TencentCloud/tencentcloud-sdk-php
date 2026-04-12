@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 版本管理配置组工作模式信息。
  *
- * @method string getConfigGroupType() 获取配置组类型，可选项如下：<li>l7_acceleration: 七层加速配置组；</li><li>edge_functions: 边缘函数配置组。</li>
- * @method void setConfigGroupType(string $ConfigGroupType) 设置配置组类型，可选项如下：<li>l7_acceleration: 七层加速配置组；</li><li>edge_functions: 边缘函数配置组。</li>
+ * @method string getConfigGroupType() 获取配置组类型，可选项如下：<li>l7_acceleration: 七层加速配置组；</li><li>edge_functions: 边缘函数配置组。</li><li>web_security: Web 防护配置组。</li>
+ * @method void setConfigGroupType(string $ConfigGroupType) 设置配置组类型，可选项如下：<li>l7_acceleration: 七层加速配置组；</li><li>edge_functions: 边缘函数配置组。</li><li>web_security: Web 防护配置组。</li>
  * @method string getWorkMode() 获取工作模式，可选项如下：<li>immediate_effect: 即时生效模式；</li><li>version_control: 版本管理模式。</li>
  * @method void setWorkMode(string $WorkMode) 设置工作模式，可选项如下：<li>immediate_effect: 即时生效模式；</li><li>version_control: 版本管理模式。</li>
  */
 class ConfigGroupWorkModeInfo extends AbstractModel
 {
     /**
-     * @var string 配置组类型，可选项如下：<li>l7_acceleration: 七层加速配置组；</li><li>edge_functions: 边缘函数配置组。</li>
+     * @var string 配置组类型，可选项如下：<li>l7_acceleration: 七层加速配置组；</li><li>edge_functions: 边缘函数配置组。</li><li>web_security: Web 防护配置组。</li>
      */
     public $ConfigGroupType;
 
@@ -38,7 +38,7 @@ class ConfigGroupWorkModeInfo extends AbstractModel
     public $WorkMode;
 
     /**
-     * @param string $ConfigGroupType 配置组类型，可选项如下：<li>l7_acceleration: 七层加速配置组；</li><li>edge_functions: 边缘函数配置组。</li>
+     * @param string $ConfigGroupType 配置组类型，可选项如下：<li>l7_acceleration: 七层加速配置组；</li><li>edge_functions: 边缘函数配置组。</li><li>web_security: Web 防护配置组。</li>
      * @param string $WorkMode 工作模式，可选项如下：<li>immediate_effect: 即时生效模式；</li><li>version_control: 版本管理模式。</li>
      */
     function __construct()

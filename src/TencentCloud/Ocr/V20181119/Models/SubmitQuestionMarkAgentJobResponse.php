@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SubmitQuestionMarkAgentJob返回参数结构体
  *
- * @method string getJobId() 获取任务唯一ID。由服务端生成.
- * @method void setJobId(string $JobId) 设置任务唯一ID。由服务端生成.
- * @method array getQuestionInfo() 获取切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空）
- * @method void setQuestionInfo(array $QuestionInfo) 设置切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空）
- * @method string getQuestionCount() 获取题目切题数量，作为计费题目数总量
- * @method void setQuestionCount(string $QuestionCount) 设置题目切题数量，作为计费题目数总量
+ * @method string getJobId() 获取<p>任务唯一ID。由服务端生成.</p>
+ * @method void setJobId(string $JobId) 设置<p>任务唯一ID。由服务端生成.</p>
+ * @method array getQuestionInfo() 获取<p>切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空）</p>
+ * @method void setQuestionInfo(array $QuestionInfo) 设置<p>切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空）</p>
+ * @method string getQuestionCount() 获取<p>题目切题数量，作为计费题目数总量</p>
+ * @method void setQuestionCount(string $QuestionCount) 设置<p>题目切题数量，作为计费题目数总量</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class SubmitQuestionMarkAgentJobResponse extends AbstractModel
 {
     /**
-     * @var string 任务唯一ID。由服务端生成.
+     * @var string <p>任务唯一ID。由服务端生成.</p>
      */
     public $JobId;
 
     /**
-     * @var array 切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空）
+     * @var array <p>切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空）</p>
      */
     public $QuestionInfo;
 
     /**
-     * @var string 题目切题数量，作为计费题目数总量
+     * @var string <p>题目切题数量，作为计费题目数总量</p>
      */
     public $QuestionCount;
 
@@ -52,9 +52,9 @@ class SubmitQuestionMarkAgentJobResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $JobId 任务唯一ID。由服务端生成.
-     * @param array $QuestionInfo 切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空）
-     * @param string $QuestionCount 题目切题数量，作为计费题目数总量
+     * @param string $JobId <p>任务唯一ID。由服务端生成.</p>
+     * @param array $QuestionInfo <p>切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空）</p>
+     * @param string $QuestionCount <p>题目切题数量，作为计费题目数总量</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

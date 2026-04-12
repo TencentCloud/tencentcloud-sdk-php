@@ -20,53 +20,53 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 挂载的实例列表
  *
- * @method string getType() 获取类型英文名
- * @method void setType(string $Type) 设置类型英文名
- * @method string getStorageId() 获取存储实例ID
- * @method void setStorageId(string $StorageId) 设置存储实例ID
- * @method string getStorageName() 获取存储实例名称
- * @method void setStorageName(string $StorageName) 设置存储实例名称
- * @method integer getStatus() 获取状态，0可挂载 1不可挂载(挂载限制)
- * @method void setStatus(integer $Status) 设置状态，0可挂载 1不可挂载(挂载限制)
- * @method StorageExtraConf getExtraConf() 获取额外配置
+ * @method string getType() 获取<p>类型英文名</p>
+ * @method void setType(string $Type) 设置<p>类型英文名</p>
+ * @method string getStorageId() 获取<p>存储实例ID</p>
+ * @method void setStorageId(string $StorageId) 设置<p>存储实例ID</p>
+ * @method string getStorageName() 获取<p>存储实例名称</p>
+ * @method void setStorageName(string $StorageName) 设置<p>存储实例名称</p>
+ * @method integer getStatus() 获取<p>状态</p><p>枚举值：</p><ul><li>0： 可挂载（正常）</li><li>1： 不可挂载（挂载限制）</li><li>2： 不可挂载（存储配置关闭）</li></ul>
+ * @method void setStatus(integer $Status) 设置<p>状态</p><p>枚举值：</p><ul><li>0： 可挂载（正常）</li><li>1： 不可挂载（挂载限制）</li><li>2： 不可挂载（存储配置关闭）</li></ul>
+ * @method StorageExtraConf getExtraConf() 获取<p>额外配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExtraConf(StorageExtraConf $ExtraConf) 设置额外配置
+ * @method void setExtraConf(StorageExtraConf $ExtraConf) 设置<p>额外配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class MountInstanceInfo extends AbstractModel
 {
     /**
-     * @var string 类型英文名
+     * @var string <p>类型英文名</p>
      */
     public $Type;
 
     /**
-     * @var string 存储实例ID
+     * @var string <p>存储实例ID</p>
      */
     public $StorageId;
 
     /**
-     * @var string 存储实例名称
+     * @var string <p>存储实例名称</p>
      */
     public $StorageName;
 
     /**
-     * @var integer 状态，0可挂载 1不可挂载(挂载限制)
+     * @var integer <p>状态</p><p>枚举值：</p><ul><li>0： 可挂载（正常）</li><li>1： 不可挂载（挂载限制）</li><li>2： 不可挂载（存储配置关闭）</li></ul>
      */
     public $Status;
 
     /**
-     * @var StorageExtraConf 额外配置
+     * @var StorageExtraConf <p>额外配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtraConf;
 
     /**
-     * @param string $Type 类型英文名
-     * @param string $StorageId 存储实例ID
-     * @param string $StorageName 存储实例名称
-     * @param integer $Status 状态，0可挂载 1不可挂载(挂载限制)
-     * @param StorageExtraConf $ExtraConf 额外配置
+     * @param string $Type <p>类型英文名</p>
+     * @param string $StorageId <p>存储实例ID</p>
+     * @param string $StorageName <p>存储实例名称</p>
+     * @param integer $Status <p>状态</p><p>枚举值：</p><ul><li>0： 可挂载（正常）</li><li>1： 不可挂载（挂载限制）</li><li>2： 不可挂载（存储配置关闭）</li></ul>
+     * @param StorageExtraConf $ExtraConf <p>额外配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

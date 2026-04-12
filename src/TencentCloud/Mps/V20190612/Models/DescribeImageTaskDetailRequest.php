@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeImageTaskDetail请求参数结构体
  *
- * @method string getTaskId() 获取图片处理任务的任务 ID。
- * @method void setTaskId(string $TaskId) 设置图片处理任务的任务 ID。
+ * @method string getTaskId() 获取<p>图片处理任务的任务 ID。</p>
+ * @method void setTaskId(string $TaskId) 设置<p>图片处理任务的任务 ID。</p>
  */
 class DescribeImageTaskDetailRequest extends AbstractModel
 {
     /**
-     * @var string 图片处理任务的任务 ID。
+     * @var string <p>图片处理任务的任务 ID。</p>
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId 图片处理任务的任务 ID。
+     * @param string $TaskId <p>图片处理任务的任务 ID。</p>
      */
     function __construct()
     {

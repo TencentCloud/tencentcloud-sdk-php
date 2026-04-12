@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUsableStatus(string $UsableStatus) 设置开启/禁用，enabled/disabled
  * @method integer getMaxQps() 获取QPS值。开启限流规则时，必填
  * @method void setMaxQps(integer $MaxQps) 设置QPS值。开启限流规则时，必填
+ * @method boolean getUsePathAndMethodFormat() 获取旧格式 method 与 path 分开，新格式 path-<Method>,如 /checkToken-GET，默认为新格式
+ * @method void setUsePathAndMethodFormat(boolean $UsePathAndMethodFormat) 设置旧格式 method 与 path 分开，新格式 path-<Method>,如 /checkToken-GET，默认为新格式
  */
 class UpdateApiRateLimitRulesRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class UpdateApiRateLimitRulesRequest extends AbstractModel
     public $MaxQps;
 
     /**
+     * @var boolean 旧格式 method 与 path 分开，新格式 path-<Method>,如 /checkToken-GET，默认为新格式
+     */
+    public $UsePathAndMethodFormat;
+
+    /**
      * @param array $ApiIds API ID 列表
      * @param string $UsableStatus 开启/禁用，enabled/disabled
      * @param integer $MaxQps QPS值。开启限流规则时，必填
+     * @param boolean $UsePathAndMethodFormat 旧格式 method 与 path 分开，新格式 path-<Method>,如 /checkToken-GET，默认为新格式
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class UpdateApiRateLimitRulesRequest extends AbstractModel
 
         if (array_key_exists("MaxQps",$param) and $param["MaxQps"] !== null) {
             $this->MaxQps = $param["MaxQps"];
+        }
+
+        if (array_key_exists("UsePathAndMethodFormat",$param) and $param["UsePathAndMethodFormat"] !== null) {
+            $this->UsePathAndMethodFormat = $param["UsePathAndMethodFormat"];
         }
     }
 }

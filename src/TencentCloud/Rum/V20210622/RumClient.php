@@ -35,6 +35,8 @@ use TencentCloud\Rum\V20210622\Models as Models;
  * @method Models\DescribeAppMetricsDataResponse DescribeAppMetricsData(Models\DescribeAppMetricsDataRequest $req) 获取 app 监控指标数据
  * @method Models\DescribeAppSingleCaseDetailListResponse DescribeAppSingleCaseDetailList(Models\DescribeAppSingleCaseDetailListRequest $req) 查询 app 监控个例样本详情列表
  * @method Models\DescribeAppSingleCaseListResponse DescribeAppSingleCaseList(Models\DescribeAppSingleCaseListRequest $req) 查询 app 监控个例聚合列表
+ * @method Models\DescribeApplicationExitReportDetailResponse DescribeApplicationExitReportDetail(Models\DescribeApplicationExitReportDetailRequest $req) 获取应用退出个例上报详情
+ * @method Models\DescribeApplicationExitReportListResponse DescribeApplicationExitReportList(Models\DescribeApplicationExitReportListRequest $req) 获取应用退出个例上报列表
  * @method Models\DescribeDataResponse DescribeData(Models\DescribeDataRequest $req) 转发monitor查询
  * @method Models\DescribeDataBridgeUrlV2Response DescribeDataBridgeUrlV2(Models\DescribeDataBridgeUrlV2Request $req) 获取DescribeDataBridgeUrl信息
  * @method Models\DescribeDataCustomUrlResponse DescribeDataCustomUrl(Models\DescribeDataCustomUrlRequest $req) 获取DescribeDataCustomUrl信息
@@ -68,6 +70,20 @@ use TencentCloud\Rum\V20210622\Models as Models;
  * @method Models\DescribeDataWebVitalsPageV2Response DescribeDataWebVitalsPageV2(Models\DescribeDataWebVitalsPageV2Request $req) 获取DescribeDataWebVitalsPage信息，用户核心活动信息
 页面加载性能之Web Vitals。性能关键点
  * @method Models\DescribeErrorResponse DescribeError(Models\DescribeErrorRequest $req) 获取首页错误信息
+ * @method Models\DescribeExceptionDetailResponse DescribeExceptionDetail(Models\DescribeExceptionDetailRequest $req) 获取异常问题详情数据
+ * @method Models\DescribeExceptionReportListResponse DescribeExceptionReportList(Models\DescribeExceptionReportListRequest $req) 获取异常个例列表
+ * @method Models\DescribeFOOMMallocProblemDetailResponse DescribeFOOMMallocProblemDetail(Models\DescribeFOOMMallocProblemDetailRequest $req) 获取FOOM内存分配问题详情数据
+ * @method Models\DescribeFOOMMallocProblemListResponse DescribeFOOMMallocProblemList(Models\DescribeFOOMMallocProblemListRequest $req) 获取FOOM内存分配问题列表数据
+ * @method Models\DescribeFOOMMallocReportListResponse DescribeFOOMMallocReportList(Models\DescribeFOOMMallocReportListRequest $req) 获取FOOM内存分配问题上报列表
+ * @method Models\DescribeFOOMProblemDetailResponse DescribeFOOMProblemDetail(Models\DescribeFOOMProblemDetailRequest $req) 获取FOOM问题详情数据
+ * @method Models\DescribeFOOMProblemListResponse DescribeFOOMProblemList(Models\DescribeFOOMProblemListRequest $req) 获取FOOM问题列表数据
+ * @method Models\DescribeFOOMReportListResponse DescribeFOOMReportList(Models\DescribeFOOMReportListRequest $req) 获取FOOM问题上报列表
+ * @method Models\DescribeIssuesDistributionResponse DescribeIssuesDistribution(Models\DescribeIssuesDistributionRequest $req) 获取问题分布数据
+ * @method Models\DescribeIssuesListResponse DescribeIssuesList(Models\DescribeIssuesListRequest $req) 获取问题列表数据
+ * @method Models\DescribeIssuesStatisticsTrendResponse DescribeIssuesStatisticsTrend(Models\DescribeIssuesStatisticsTrendRequest $req) 获取问题趋势数据
+ * @method Models\DescribeLagANRProblemAccountDetailResponse DescribeLagANRProblemAccountDetail(Models\DescribeLagANRProblemAccountDetailRequest $req) 获取卡顿ANR问题用户详情
+ * @method Models\DescribeLagANRProblemFeatureAccountsResponse DescribeLagANRProblemFeatureAccounts(Models\DescribeLagANRProblemFeatureAccountsRequest $req) 获取卡顿ANR问题用户列表
+ * @method Models\DescribeLagANRProblemListResponse DescribeLagANRProblemList(Models\DescribeLagANRProblemListRequest $req) 获取卡顿ANR问题列表数据
  * @method Models\DescribeProjectLimitsResponse DescribeProjectLimits(Models\DescribeProjectLimitsRequest $req) 获取应用上报抽样信息
  * @method Models\DescribeProjectsResponse DescribeProjects(Models\DescribeProjectsRequest $req) 获取项目列表（实例创建的团队下的项目列表）
  * @method Models\DescribePvListResponse DescribePvList(Models\DescribePvListRequest $req) 获取项目下的PV列表
@@ -82,6 +98,8 @@ use TencentCloud\Rum\V20210622\Models as Models;
  * @method Models\DescribeScoresV2Response DescribeScoresV2(Models\DescribeScoresV2Request $req) 获取首页分数列表
  * @method Models\DescribeTawAreasResponse DescribeTawAreas(Models\DescribeTawAreasRequest $req) 查询片区信息
  * @method Models\DescribeTawInstancesResponse DescribeTawInstances(Models\DescribeTawInstancesRequest $req) 查询实例信息
+ * @method Models\DescribeTokenResponse DescribeToken(Models\DescribeTokenRequest $req) 查询令牌
+ * @method Models\DescribeTopIssuesResponse DescribeTopIssues(Models\DescribeTopIssuesRequest $req) 查询top问题列表
  * @method Models\DescribeUvListResponse DescribeUvList(Models\DescribeUvListRequest $req) 获取项目下的UV列表
  * @method Models\DescribeWhitelistsResponse DescribeWhitelists(Models\DescribeWhitelistsRequest $req) 获取白名单列表
  * @method Models\ModifyInstanceResponse ModifyInstance(Models\ModifyInstanceRequest $req) 修改 RUM 业务系统

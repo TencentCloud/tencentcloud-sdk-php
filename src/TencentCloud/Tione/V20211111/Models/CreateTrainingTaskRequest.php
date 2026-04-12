@@ -20,214 +20,218 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTrainingTask请求参数结构体
  *
- * @method string getName() 获取训练任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
- * @method void setName(string $Name) 设置训练任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
- * @method string getChargeType() 获取计费模式，eg：PREPAID 包年包月（资源组）;
-POSTPAID_BY_HOUR 按量计费
- * @method void setChargeType(string $ChargeType) 设置计费模式，eg：PREPAID 包年包月（资源组）;
-POSTPAID_BY_HOUR 按量计费
- * @method array getResourceConfigInfos() 获取资源配置，需填写对应算力规格ID和节点数量，算力规格ID查询接口为DescribeBillingSpecsPrice，eg：[{"Role":"WORKER", "InstanceType": "TI.S.MEDIUM.POST", "InstanceNum": 1}]
- * @method void setResourceConfigInfos(array $ResourceConfigInfos) 设置资源配置，需填写对应算力规格ID和节点数量，算力规格ID查询接口为DescribeBillingSpecsPrice，eg：[{"Role":"WORKER", "InstanceType": "TI.S.MEDIUM.POST", "InstanceNum": 1}]
- * @method string getFrameworkName() 获取训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH
- * @method void setFrameworkName(string $FrameworkName) 设置训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH
- * @method string getFrameworkVersion() 获取训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：1.15、1.9
- * @method void setFrameworkVersion(string $FrameworkVersion) 设置训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：1.15、1.9
- * @method string getFrameworkEnvironment() 获取训练框架环境，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
- * @method void setFrameworkEnvironment(string $FrameworkEnvironment) 设置训练框架环境，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
- * @method string getResourceGroupId() 获取预付费专用资源组ID，通过DescribeBillingResourceGroups接口查询
- * @method void setResourceGroupId(string $ResourceGroupId) 设置预付费专用资源组ID，通过DescribeBillingResourceGroups接口查询
- * @method array getTags() 获取标签配置
- * @method void setTags(array $Tags) 设置标签配置
- * @method ImageInfo getImageInfo() 获取自定义镜像信息
- * @method void setImageInfo(ImageInfo $ImageInfo) 设置自定义镜像信息
- * @method CosPathInfo getCodePackagePath() 获取COS代码包路径
- * @method void setCodePackagePath(CosPathInfo $CodePackagePath) 设置COS代码包路径
- * @method StartCmdInfo getStartCmdInfo() 获取任务的启动命令，按任务训练模式输入，如遇特殊字符导致配置失败，可使用EncodedStartCmdInfo参数
- * @method void setStartCmdInfo(StartCmdInfo $StartCmdInfo) 设置任务的启动命令，按任务训练模式输入，如遇特殊字符导致配置失败，可使用EncodedStartCmdInfo参数
- * @method string getTrainingMode() 获取训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
- * @method void setTrainingMode(string $TrainingMode) 设置训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
- * @method array getDataConfigs() 获取数据配置，依赖DataSource字段，数量不超过10个
- * @method void setDataConfigs(array $DataConfigs) 设置数据配置，依赖DataSource字段，数量不超过10个
- * @method string getVpcId() 获取VPC Id
- * @method void setVpcId(string $VpcId) 设置VPC Id
- * @method string getSubnetId() 获取子网Id
- * @method void setSubnetId(string $SubnetId) 设置子网Id
- * @method CosPathInfo getOutput() 获取COS训练输出路径
- * @method void setOutput(CosPathInfo $Output) 设置COS训练输出路径
- * @method LogConfig getLogConfig() 获取CLS日志配置
- * @method void setLogConfig(LogConfig $LogConfig) 设置CLS日志配置
- * @method string getTuningParameters() 获取调优参数，不超过2048个字符
- * @method void setTuningParameters(string $TuningParameters) 设置调优参数，不超过2048个字符
- * @method boolean getLogEnable() 获取是否上报日志
- * @method void setLogEnable(boolean $LogEnable) 设置是否上报日志
- * @method string getRemark() 获取备注，不超过1024个字符
- * @method void setRemark(string $Remark) 设置备注，不超过1024个字符
- * @method string getDataSource() 获取数据来源，eg：DATASET、COS、CFS、CFSTurbo、HDFS、GooseFSx
- * @method void setDataSource(string $DataSource) 设置数据来源，eg：DATASET、COS、CFS、CFSTurbo、HDFS、GooseFSx
- * @method string getCallbackUrl() 获取回调地址，用于创建/启动/停止训练任务的异步回调。回调格式&内容详见：[[TI-ONE接口回调说明]](https://cloud.tencent.com/document/product/851/84292)
- * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址，用于创建/启动/停止训练任务的异步回调。回调格式&内容详见：[[TI-ONE接口回调说明]](https://cloud.tencent.com/document/product/851/84292)
- * @method EncodedStartCmdInfo getEncodedStartCmdInfo() 获取编码后的任务启动命令，与StartCmdInfo同时配置时，仅当前参数生效
- * @method void setEncodedStartCmdInfo(EncodedStartCmdInfo $EncodedStartCmdInfo) 设置编码后的任务启动命令，与StartCmdInfo同时配置时，仅当前参数生效
- * @method array getCodeRepos() 获取代码仓库配置
- * @method void setCodeRepos(array $CodeRepos) 设置代码仓库配置
- * @method ExposeNetworkConfig getExposeNetworkConfig() 获取网络暴露配置
- * @method void setExposeNetworkConfig(ExposeNetworkConfig $ExposeNetworkConfig) 设置网络暴露配置
+ * @method string getName() 获取<p>训练任务名称，不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
+ * @method void setName(string $Name) 设置<p>训练任务名称，不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
+ * @method string getChargeType() 获取<p>计费模式，eg：PREPAID 包年包月（资源组）;<br>POSTPAID_BY_HOUR 按量计费</p>
+ * @method void setChargeType(string $ChargeType) 设置<p>计费模式，eg：PREPAID 包年包月（资源组）;<br>POSTPAID_BY_HOUR 按量计费</p>
+ * @method array getResourceConfigInfos() 获取<p>资源配置，需填写对应算力规格ID和节点数量，算力规格ID查询接口为DescribeBillingSpecsPrice，eg：[{&quot;Role&quot;:&quot;WORKER&quot;, &quot;InstanceType&quot;: &quot;TI.S.MEDIUM.POST&quot;, &quot;InstanceNum&quot;: 1}]</p>
+ * @method void setResourceConfigInfos(array $ResourceConfigInfos) 设置<p>资源配置，需填写对应算力规格ID和节点数量，算力规格ID查询接口为DescribeBillingSpecsPrice，eg：[{&quot;Role&quot;:&quot;WORKER&quot;, &quot;InstanceType&quot;: &quot;TI.S.MEDIUM.POST&quot;, &quot;InstanceNum&quot;: 1}]</p>
+ * @method string getFrameworkName() 获取<p>训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH</p>
+ * @method void setFrameworkName(string $FrameworkName) 设置<p>训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH</p>
+ * @method string getFrameworkVersion() 获取<p>训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：1.15、1.9</p>
+ * @method void setFrameworkVersion(string $FrameworkVersion) 设置<p>训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：1.15、1.9</p>
+ * @method string getFrameworkEnvironment() 获取<p>训练框架环境，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu</p>
+ * @method void setFrameworkEnvironment(string $FrameworkEnvironment) 设置<p>训练框架环境，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu</p>
+ * @method string getResourceGroupId() 获取<p>预付费专用资源组ID，通过DescribeBillingResourceGroups接口查询</p>
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置<p>预付费专用资源组ID，通过DescribeBillingResourceGroups接口查询</p>
+ * @method array getTags() 获取<p>标签配置</p>
+ * @method void setTags(array $Tags) 设置<p>标签配置</p>
+ * @method ImageInfo getImageInfo() 获取<p>自定义镜像信息</p>
+ * @method void setImageInfo(ImageInfo $ImageInfo) 设置<p>自定义镜像信息</p>
+ * @method CosPathInfo getCodePackagePath() 获取<p>COS代码包路径</p>
+ * @method void setCodePackagePath(CosPathInfo $CodePackagePath) 设置<p>COS代码包路径</p>
+ * @method StartCmdInfo getStartCmdInfo() 获取<p>任务的启动命令，按任务训练模式输入，如遇特殊字符导致配置失败，可使用EncodedStartCmdInfo参数</p>
+ * @method void setStartCmdInfo(StartCmdInfo $StartCmdInfo) 设置<p>任务的启动命令，按任务训练模式输入，如遇特殊字符导致配置失败，可使用EncodedStartCmdInfo参数</p>
+ * @method string getTrainingMode() 获取<p>训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD</p>
+ * @method void setTrainingMode(string $TrainingMode) 设置<p>训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD</p>
+ * @method array getDataConfigs() 获取<p>数据配置，依赖DataSource字段，数量不超过10个</p>
+ * @method void setDataConfigs(array $DataConfigs) 设置<p>数据配置，依赖DataSource字段，数量不超过10个</p>
+ * @method string getVpcId() 获取<p>VPC Id</p>
+ * @method void setVpcId(string $VpcId) 设置<p>VPC Id</p>
+ * @method string getSubnetId() 获取<p>子网Id</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网Id</p>
+ * @method CosPathInfo getOutput() 获取<p>COS训练输出路径</p>
+ * @method void setOutput(CosPathInfo $Output) 设置<p>COS训练输出路径</p>
+ * @method LogConfig getLogConfig() 获取<p>CLS日志配置</p>
+ * @method void setLogConfig(LogConfig $LogConfig) 设置<p>CLS日志配置</p>
+ * @method string getTuningParameters() 获取<p>调优参数，不超过2048个字符</p>
+ * @method void setTuningParameters(string $TuningParameters) 设置<p>调优参数，不超过2048个字符</p>
+ * @method boolean getLogEnable() 获取<p>是否上报日志</p>
+ * @method void setLogEnable(boolean $LogEnable) 设置<p>是否上报日志</p>
+ * @method string getRemark() 获取<p>备注，不超过1024个字符</p>
+ * @method void setRemark(string $Remark) 设置<p>备注，不超过1024个字符</p>
+ * @method string getDataSource() 获取<p>数据来源，eg：DATASET、COS、CFS、CFSTurbo、HDFS、GooseFSx</p>
+ * @method void setDataSource(string $DataSource) 设置<p>数据来源，eg：DATASET、COS、CFS、CFSTurbo、HDFS、GooseFSx</p>
+ * @method string getCallbackUrl() 获取<p>回调地址，用于创建/启动/停止训练任务的异步回调。回调格式&amp;内容详见：<a href="https://cloud.tencent.com/document/product/851/84292">[TI-ONE接口回调说明]</a></p>
+ * @method void setCallbackUrl(string $CallbackUrl) 设置<p>回调地址，用于创建/启动/停止训练任务的异步回调。回调格式&amp;内容详见：<a href="https://cloud.tencent.com/document/product/851/84292">[TI-ONE接口回调说明]</a></p>
+ * @method EncodedStartCmdInfo getEncodedStartCmdInfo() 获取<p>编码后的任务启动命令，与StartCmdInfo同时配置时，仅当前参数生效</p>
+ * @method void setEncodedStartCmdInfo(EncodedStartCmdInfo $EncodedStartCmdInfo) 设置<p>编码后的任务启动命令，与StartCmdInfo同时配置时，仅当前参数生效</p>
+ * @method array getCodeRepos() 获取<p>代码仓库配置</p>
+ * @method void setCodeRepos(array $CodeRepos) 设置<p>代码仓库配置</p>
+ * @method ExposeNetworkConfig getExposeNetworkConfig() 获取<p>网络暴露配置</p>
+ * @method void setExposeNetworkConfig(ExposeNetworkConfig $ExposeNetworkConfig) 设置<p>网络暴露配置</p>
+ * @method array getEnvs() 获取<p>环境变量</p>
+ * @method void setEnvs(array $Envs) 设置<p>环境变量</p>
  */
 class CreateTrainingTaskRequest extends AbstractModel
 {
     /**
-     * @var string 训练任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
+     * @var string <p>训练任务名称，不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
      */
     public $Name;
 
     /**
-     * @var string 计费模式，eg：PREPAID 包年包月（资源组）;
-POSTPAID_BY_HOUR 按量计费
+     * @var string <p>计费模式，eg：PREPAID 包年包月（资源组）;<br>POSTPAID_BY_HOUR 按量计费</p>
      */
     public $ChargeType;
 
     /**
-     * @var array 资源配置，需填写对应算力规格ID和节点数量，算力规格ID查询接口为DescribeBillingSpecsPrice，eg：[{"Role":"WORKER", "InstanceType": "TI.S.MEDIUM.POST", "InstanceNum": 1}]
+     * @var array <p>资源配置，需填写对应算力规格ID和节点数量，算力规格ID查询接口为DescribeBillingSpecsPrice，eg：[{&quot;Role&quot;:&quot;WORKER&quot;, &quot;InstanceType&quot;: &quot;TI.S.MEDIUM.POST&quot;, &quot;InstanceNum&quot;: 1}]</p>
      */
     public $ResourceConfigInfos;
 
     /**
-     * @var string 训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH
+     * @var string <p>训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH</p>
      */
     public $FrameworkName;
 
     /**
-     * @var string 训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：1.15、1.9
+     * @var string <p>训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：1.15、1.9</p>
      */
     public $FrameworkVersion;
 
     /**
-     * @var string 训练框架环境，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
+     * @var string <p>训练框架环境，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu</p>
      */
     public $FrameworkEnvironment;
 
     /**
-     * @var string 预付费专用资源组ID，通过DescribeBillingResourceGroups接口查询
+     * @var string <p>预付费专用资源组ID，通过DescribeBillingResourceGroups接口查询</p>
      */
     public $ResourceGroupId;
 
     /**
-     * @var array 标签配置
+     * @var array <p>标签配置</p>
      */
     public $Tags;
 
     /**
-     * @var ImageInfo 自定义镜像信息
+     * @var ImageInfo <p>自定义镜像信息</p>
      */
     public $ImageInfo;
 
     /**
-     * @var CosPathInfo COS代码包路径
+     * @var CosPathInfo <p>COS代码包路径</p>
      */
     public $CodePackagePath;
 
     /**
-     * @var StartCmdInfo 任务的启动命令，按任务训练模式输入，如遇特殊字符导致配置失败，可使用EncodedStartCmdInfo参数
+     * @var StartCmdInfo <p>任务的启动命令，按任务训练模式输入，如遇特殊字符导致配置失败，可使用EncodedStartCmdInfo参数</p>
      */
     public $StartCmdInfo;
 
     /**
-     * @var string 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
+     * @var string <p>训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD</p>
      */
     public $TrainingMode;
 
     /**
-     * @var array 数据配置，依赖DataSource字段，数量不超过10个
+     * @var array <p>数据配置，依赖DataSource字段，数量不超过10个</p>
      */
     public $DataConfigs;
 
     /**
-     * @var string VPC Id
+     * @var string <p>VPC Id</p>
      */
     public $VpcId;
 
     /**
-     * @var string 子网Id
+     * @var string <p>子网Id</p>
      */
     public $SubnetId;
 
     /**
-     * @var CosPathInfo COS训练输出路径
+     * @var CosPathInfo <p>COS训练输出路径</p>
      */
     public $Output;
 
     /**
-     * @var LogConfig CLS日志配置
+     * @var LogConfig <p>CLS日志配置</p>
      */
     public $LogConfig;
 
     /**
-     * @var string 调优参数，不超过2048个字符
+     * @var string <p>调优参数，不超过2048个字符</p>
      */
     public $TuningParameters;
 
     /**
-     * @var boolean 是否上报日志
+     * @var boolean <p>是否上报日志</p>
      */
     public $LogEnable;
 
     /**
-     * @var string 备注，不超过1024个字符
+     * @var string <p>备注，不超过1024个字符</p>
      */
     public $Remark;
 
     /**
-     * @var string 数据来源，eg：DATASET、COS、CFS、CFSTurbo、HDFS、GooseFSx
+     * @var string <p>数据来源，eg：DATASET、COS、CFS、CFSTurbo、HDFS、GooseFSx</p>
      */
     public $DataSource;
 
     /**
-     * @var string 回调地址，用于创建/启动/停止训练任务的异步回调。回调格式&内容详见：[[TI-ONE接口回调说明]](https://cloud.tencent.com/document/product/851/84292)
+     * @var string <p>回调地址，用于创建/启动/停止训练任务的异步回调。回调格式&amp;内容详见：<a href="https://cloud.tencent.com/document/product/851/84292">[TI-ONE接口回调说明]</a></p>
      */
     public $CallbackUrl;
 
     /**
-     * @var EncodedStartCmdInfo 编码后的任务启动命令，与StartCmdInfo同时配置时，仅当前参数生效
+     * @var EncodedStartCmdInfo <p>编码后的任务启动命令，与StartCmdInfo同时配置时，仅当前参数生效</p>
      */
     public $EncodedStartCmdInfo;
 
     /**
-     * @var array 代码仓库配置
+     * @var array <p>代码仓库配置</p>
      */
     public $CodeRepos;
 
     /**
-     * @var ExposeNetworkConfig 网络暴露配置
+     * @var ExposeNetworkConfig <p>网络暴露配置</p>
      */
     public $ExposeNetworkConfig;
 
     /**
-     * @param string $Name 训练任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
-     * @param string $ChargeType 计费模式，eg：PREPAID 包年包月（资源组）;
-POSTPAID_BY_HOUR 按量计费
-     * @param array $ResourceConfigInfos 资源配置，需填写对应算力规格ID和节点数量，算力规格ID查询接口为DescribeBillingSpecsPrice，eg：[{"Role":"WORKER", "InstanceType": "TI.S.MEDIUM.POST", "InstanceNum": 1}]
-     * @param string $FrameworkName 训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH
-     * @param string $FrameworkVersion 训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：1.15、1.9
-     * @param string $FrameworkEnvironment 训练框架环境，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
-     * @param string $ResourceGroupId 预付费专用资源组ID，通过DescribeBillingResourceGroups接口查询
-     * @param array $Tags 标签配置
-     * @param ImageInfo $ImageInfo 自定义镜像信息
-     * @param CosPathInfo $CodePackagePath COS代码包路径
-     * @param StartCmdInfo $StartCmdInfo 任务的启动命令，按任务训练模式输入，如遇特殊字符导致配置失败，可使用EncodedStartCmdInfo参数
-     * @param string $TrainingMode 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
-     * @param array $DataConfigs 数据配置，依赖DataSource字段，数量不超过10个
-     * @param string $VpcId VPC Id
-     * @param string $SubnetId 子网Id
-     * @param CosPathInfo $Output COS训练输出路径
-     * @param LogConfig $LogConfig CLS日志配置
-     * @param string $TuningParameters 调优参数，不超过2048个字符
-     * @param boolean $LogEnable 是否上报日志
-     * @param string $Remark 备注，不超过1024个字符
-     * @param string $DataSource 数据来源，eg：DATASET、COS、CFS、CFSTurbo、HDFS、GooseFSx
-     * @param string $CallbackUrl 回调地址，用于创建/启动/停止训练任务的异步回调。回调格式&内容详见：[[TI-ONE接口回调说明]](https://cloud.tencent.com/document/product/851/84292)
-     * @param EncodedStartCmdInfo $EncodedStartCmdInfo 编码后的任务启动命令，与StartCmdInfo同时配置时，仅当前参数生效
-     * @param array $CodeRepos 代码仓库配置
-     * @param ExposeNetworkConfig $ExposeNetworkConfig 网络暴露配置
+     * @var array <p>环境变量</p>
+     */
+    public $Envs;
+
+    /**
+     * @param string $Name <p>训练任务名称，不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
+     * @param string $ChargeType <p>计费模式，eg：PREPAID 包年包月（资源组）;<br>POSTPAID_BY_HOUR 按量计费</p>
+     * @param array $ResourceConfigInfos <p>资源配置，需填写对应算力规格ID和节点数量，算力规格ID查询接口为DescribeBillingSpecsPrice，eg：[{&quot;Role&quot;:&quot;WORKER&quot;, &quot;InstanceType&quot;: &quot;TI.S.MEDIUM.POST&quot;, &quot;InstanceNum&quot;: 1}]</p>
+     * @param string $FrameworkName <p>训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH</p>
+     * @param string $FrameworkVersion <p>训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：1.15、1.9</p>
+     * @param string $FrameworkEnvironment <p>训练框架环境，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu</p>
+     * @param string $ResourceGroupId <p>预付费专用资源组ID，通过DescribeBillingResourceGroups接口查询</p>
+     * @param array $Tags <p>标签配置</p>
+     * @param ImageInfo $ImageInfo <p>自定义镜像信息</p>
+     * @param CosPathInfo $CodePackagePath <p>COS代码包路径</p>
+     * @param StartCmdInfo $StartCmdInfo <p>任务的启动命令，按任务训练模式输入，如遇特殊字符导致配置失败，可使用EncodedStartCmdInfo参数</p>
+     * @param string $TrainingMode <p>训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD</p>
+     * @param array $DataConfigs <p>数据配置，依赖DataSource字段，数量不超过10个</p>
+     * @param string $VpcId <p>VPC Id</p>
+     * @param string $SubnetId <p>子网Id</p>
+     * @param CosPathInfo $Output <p>COS训练输出路径</p>
+     * @param LogConfig $LogConfig <p>CLS日志配置</p>
+     * @param string $TuningParameters <p>调优参数，不超过2048个字符</p>
+     * @param boolean $LogEnable <p>是否上报日志</p>
+     * @param string $Remark <p>备注，不超过1024个字符</p>
+     * @param string $DataSource <p>数据来源，eg：DATASET、COS、CFS、CFSTurbo、HDFS、GooseFSx</p>
+     * @param string $CallbackUrl <p>回调地址，用于创建/启动/停止训练任务的异步回调。回调格式&amp;内容详见：<a href="https://cloud.tencent.com/document/product/851/84292">[TI-ONE接口回调说明]</a></p>
+     * @param EncodedStartCmdInfo $EncodedStartCmdInfo <p>编码后的任务启动命令，与StartCmdInfo同时配置时，仅当前参数生效</p>
+     * @param array $CodeRepos <p>代码仓库配置</p>
+     * @param ExposeNetworkConfig $ExposeNetworkConfig <p>网络暴露配置</p>
+     * @param array $Envs <p>环境变量</p>
      */
     function __construct()
     {
@@ -367,6 +371,15 @@ POSTPAID_BY_HOUR 按量计费
         if (array_key_exists("ExposeNetworkConfig",$param) and $param["ExposeNetworkConfig"] !== null) {
             $this->ExposeNetworkConfig = new ExposeNetworkConfig();
             $this->ExposeNetworkConfig->deserialize($param["ExposeNetworkConfig"]);
+        }
+
+        if (array_key_exists("Envs",$param) and $param["Envs"] !== null) {
+            $this->Envs = [];
+            foreach ($param["Envs"] as $key => $value){
+                $obj = new EnvVar();
+                $obj->deserialize($value);
+                array_push($this->Envs, $obj);
+            }
         }
     }
 }

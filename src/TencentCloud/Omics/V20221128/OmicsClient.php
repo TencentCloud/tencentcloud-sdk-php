@@ -35,6 +35,7 @@ use TencentCloud\Omics\V20221128\Models as Models;
  * @method Models\DescribeHPCNodesResponse DescribeHPCNodes(Models\DescribeHPCNodesRequest $req) 查询HPC节点列表。
  * @method Models\DescribeInputTemplatesResponse DescribeInputTemplates(Models\DescribeInputTemplatesRequest $req) 查询运行参数模板列表
  * @method Models\DescribeProjectsResponse DescribeProjects(Models\DescribeProjectsRequest $req) 查询项目列表
+ * @method Models\DescribePublicApplicationsResponse DescribePublicApplications(Models\DescribePublicApplicationsRequest $req) 查询公共应用列表。
  * @method Models\DescribeRunGroupsResponse DescribeRunGroups(Models\DescribeRunGroupsRequest $req) 查询任务批次列表。
  * @method Models\DescribeRunsResponse DescribeRuns(Models\DescribeRunsRequest $req) 查询任务列表。
  * @method Models\DescribeTablesResponse DescribeTables(Models\DescribeTablesRequest $req) 查询表格。

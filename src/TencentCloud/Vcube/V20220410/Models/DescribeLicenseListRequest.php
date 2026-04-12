@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLicenseList请求参数结构体
  *
-
+ * @method integer getPageNumber() 获取<p>页码，从0开始</p>
+ * @method void setPageNumber(integer $PageNumber) 设置<p>页码，从0开始</p>
+ * @method integer getPageSize() 获取<p>每页数据量</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页数据量</p>
+ * @method string getPlatform() 获取<p>pc端还是mobile端</p>
+ * @method void setPlatform(string $Platform) 设置<p>pc端还是mobile端</p>
  */
 class DescribeLicenseListRequest extends AbstractModel
 {
-
+    /**
+     * @var integer <p>页码，从0开始</p>
+     */
+    public $PageNumber;
 
     /**
+     * @var integer <p>每页数据量</p>
+     */
+    public $PageSize;
 
+    /**
+     * @var string <p>pc端还是mobile端</p>
+     */
+    public $Platform;
+
+    /**
+     * @param integer $PageNumber <p>页码，从0开始</p>
+     * @param integer $PageSize <p>每页数据量</p>
+     * @param string $Platform <p>pc端还是mobile端</p>
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class DescribeLicenseListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {
+            $this->PageNumber = $param["PageNumber"];
+        }
 
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("Platform",$param) and $param["Platform"] !== null) {
+            $this->Platform = $param["Platform"];
+        }
     }
 }

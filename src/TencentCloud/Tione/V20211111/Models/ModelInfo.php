@@ -20,138 +20,134 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 模型描述信息
  *
- * @method string getModelVersionId() 获取模型版本id, DescribeTrainingModelVersion查询模型接口时的id
-自动学习类型的模型填写自动学习的任务id
- * @method void setModelVersionId(string $ModelVersionId) 设置模型版本id, DescribeTrainingModelVersion查询模型接口时的id
-自动学习类型的模型填写自动学习的任务id
- * @method string getModelId() 获取模型id
- * @method void setModelId(string $ModelId) 设置模型id
- * @method string getModelName() 获取模型名
- * @method void setModelName(string $ModelName) 设置模型名
- * @method string getModelVersion() 获取模型版本
- * @method void setModelVersion(string $ModelVersion) 设置模型版本
- * @method string getModelSource() 获取模型来源
- * @method void setModelSource(string $ModelSource) 设置模型来源
- * @method CosPathInfo getCosPathInfo() 获取cos路径信息
- * @method void setCosPathInfo(CosPathInfo $CosPathInfo) 设置cos路径信息
- * @method GooseFSx getGooseFSx() 获取GooseFSx的配置，ModelSource为GooseFSx时有效
+ * @method string getModelVersionId() 获取<p>模型版本id, DescribeTrainingModelVersion查询模型接口时的id<br>自动学习类型的模型填写自动学习的任务id</p>
+ * @method void setModelVersionId(string $ModelVersionId) 设置<p>模型版本id, DescribeTrainingModelVersion查询模型接口时的id<br>自动学习类型的模型填写自动学习的任务id</p>
+ * @method string getModelId() 获取<p>模型id</p>
+ * @method void setModelId(string $ModelId) 设置<p>模型id</p>
+ * @method string getModelName() 获取<p>模型名</p>
+ * @method void setModelName(string $ModelName) 设置<p>模型名</p>
+ * @method string getModelVersion() 获取<p>模型版本</p>
+ * @method void setModelVersion(string $ModelVersion) 设置<p>模型版本</p>
+ * @method string getModelSource() 获取<p>模型来源</p>
+ * @method void setModelSource(string $ModelSource) 设置<p>模型来源</p>
+ * @method CosPathInfo getCosPathInfo() 获取<p>cos路径信息</p>
+ * @method void setCosPathInfo(CosPathInfo $CosPathInfo) 设置<p>cos路径信息</p>
+ * @method GooseFSx getGooseFSx() 获取<p>GooseFSx的配置，ModelSource为GooseFSx时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGooseFSx(GooseFSx $GooseFSx) 设置GooseFSx的配置，ModelSource为GooseFSx时有效
+ * @method void setGooseFSx(GooseFSx $GooseFSx) 设置<p>GooseFSx的配置，ModelSource为GooseFSx时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAlgorithmFramework() 获取模型对应的算法框架，预留
+ * @method string getAlgorithmFramework() 获取<p>模型对应的算法框架，预留</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlgorithmFramework(string $AlgorithmFramework) 设置模型对应的算法框架，预留
+ * @method void setAlgorithmFramework(string $AlgorithmFramework) 设置<p>模型对应的算法框架，预留</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getModelType() 获取默认为 NORMAL, 已加速模型: ACCELERATE, 自动学习模型 AUTO_ML
+ * @method string getModelType() 获取<p>默认为 NORMAL, 已加速模型: ACCELERATE, 自动学习模型 AUTO_ML</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModelType(string $ModelType) 设置默认为 NORMAL, 已加速模型: ACCELERATE, 自动学习模型 AUTO_ML
+ * @method void setModelType(string $ModelType) 设置<p>默认为 NORMAL, 已加速模型: ACCELERATE, 自动学习模型 AUTO_ML</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getModelFormat() 获取模型格式
+ * @method string getModelFormat() 获取<p>模型格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModelFormat(string $ModelFormat) 设置模型格式
+ * @method void setModelFormat(string $ModelFormat) 设置<p>模型格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getIsPrivateModel() 获取是否为私有化大模型
+ * @method boolean getIsPrivateModel() 获取<p>是否为私有化大模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsPrivateModel(boolean $IsPrivateModel) 设置是否为私有化大模型
+ * @method void setIsPrivateModel(boolean $IsPrivateModel) 设置<p>是否为私有化大模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getModelCategory() 获取模型的类别 多模态MultiModal, 文本大模型 LLM
- * @method void setModelCategory(string $ModelCategory) 设置模型的类别 多模态MultiModal, 文本大模型 LLM
- * @method PublicDataSourceFS getPublicDataSource() 获取数据源的配置
- * @method void setPublicDataSource(PublicDataSourceFS $PublicDataSource) 设置数据源的配置
+ * @method string getModelCategory() 获取<p>模型的类别 多模态MultiModal, 文本大模型 LLM</p>
+ * @method void setModelCategory(string $ModelCategory) 设置<p>模型的类别 多模态MultiModal, 文本大模型 LLM</p>
+ * @method PublicDataSourceFS getPublicDataSource() 获取<p>数据源的配置</p>
+ * @method void setPublicDataSource(PublicDataSourceFS $PublicDataSource) 设置<p>数据源的配置</p>
  */
 class ModelInfo extends AbstractModel
 {
     /**
-     * @var string 模型版本id, DescribeTrainingModelVersion查询模型接口时的id
-自动学习类型的模型填写自动学习的任务id
+     * @var string <p>模型版本id, DescribeTrainingModelVersion查询模型接口时的id<br>自动学习类型的模型填写自动学习的任务id</p>
      */
     public $ModelVersionId;
 
     /**
-     * @var string 模型id
+     * @var string <p>模型id</p>
      */
     public $ModelId;
 
     /**
-     * @var string 模型名
+     * @var string <p>模型名</p>
      */
     public $ModelName;
 
     /**
-     * @var string 模型版本
+     * @var string <p>模型版本</p>
      */
     public $ModelVersion;
 
     /**
-     * @var string 模型来源
+     * @var string <p>模型来源</p>
      */
     public $ModelSource;
 
     /**
-     * @var CosPathInfo cos路径信息
+     * @var CosPathInfo <p>cos路径信息</p>
      */
     public $CosPathInfo;
 
     /**
-     * @var GooseFSx GooseFSx的配置，ModelSource为GooseFSx时有效
+     * @var GooseFSx <p>GooseFSx的配置，ModelSource为GooseFSx时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GooseFSx;
 
     /**
-     * @var string 模型对应的算法框架，预留
+     * @var string <p>模型对应的算法框架，预留</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlgorithmFramework;
 
     /**
-     * @var string 默认为 NORMAL, 已加速模型: ACCELERATE, 自动学习模型 AUTO_ML
+     * @var string <p>默认为 NORMAL, 已加速模型: ACCELERATE, 自动学习模型 AUTO_ML</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModelType;
 
     /**
-     * @var string 模型格式
+     * @var string <p>模型格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModelFormat;
 
     /**
-     * @var boolean 是否为私有化大模型
+     * @var boolean <p>是否为私有化大模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsPrivateModel;
 
     /**
-     * @var string 模型的类别 多模态MultiModal, 文本大模型 LLM
+     * @var string <p>模型的类别 多模态MultiModal, 文本大模型 LLM</p>
      */
     public $ModelCategory;
 
     /**
-     * @var PublicDataSourceFS 数据源的配置
+     * @var PublicDataSourceFS <p>数据源的配置</p>
      */
     public $PublicDataSource;
 
     /**
-     * @param string $ModelVersionId 模型版本id, DescribeTrainingModelVersion查询模型接口时的id
-自动学习类型的模型填写自动学习的任务id
-     * @param string $ModelId 模型id
-     * @param string $ModelName 模型名
-     * @param string $ModelVersion 模型版本
-     * @param string $ModelSource 模型来源
-     * @param CosPathInfo $CosPathInfo cos路径信息
-     * @param GooseFSx $GooseFSx GooseFSx的配置，ModelSource为GooseFSx时有效
+     * @param string $ModelVersionId <p>模型版本id, DescribeTrainingModelVersion查询模型接口时的id<br>自动学习类型的模型填写自动学习的任务id</p>
+     * @param string $ModelId <p>模型id</p>
+     * @param string $ModelName <p>模型名</p>
+     * @param string $ModelVersion <p>模型版本</p>
+     * @param string $ModelSource <p>模型来源</p>
+     * @param CosPathInfo $CosPathInfo <p>cos路径信息</p>
+     * @param GooseFSx $GooseFSx <p>GooseFSx的配置，ModelSource为GooseFSx时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AlgorithmFramework 模型对应的算法框架，预留
+     * @param string $AlgorithmFramework <p>模型对应的算法框架，预留</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ModelType 默认为 NORMAL, 已加速模型: ACCELERATE, 自动学习模型 AUTO_ML
+     * @param string $ModelType <p>默认为 NORMAL, 已加速模型: ACCELERATE, 自动学习模型 AUTO_ML</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ModelFormat 模型格式
+     * @param string $ModelFormat <p>模型格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $IsPrivateModel 是否为私有化大模型
+     * @param boolean $IsPrivateModel <p>是否为私有化大模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ModelCategory 模型的类别 多模态MultiModal, 文本大模型 LLM
-     * @param PublicDataSourceFS $PublicDataSource 数据源的配置
+     * @param string $ModelCategory <p>模型的类别 多模态MultiModal, 文本大模型 LLM</p>
+     * @param PublicDataSourceFS $PublicDataSource <p>数据源的配置</p>
      */
     function __construct()
     {

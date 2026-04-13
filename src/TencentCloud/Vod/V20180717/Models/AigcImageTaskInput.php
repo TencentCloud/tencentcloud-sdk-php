@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AIGC 生图任务的输入。
  *
- * @method string getModelName() 获取模型名称。
- * @method void setModelName(string $ModelName) 设置模型名称。
- * @method string getModelVersion() 获取模型版本。
- * @method void setModelVersion(string $ModelVersion) 设置模型版本。
- * @method array getFileInfos() 获取AIGC生图任务输入文件信息。
- * @method void setFileInfos(array $FileInfos) 设置AIGC生图任务输入文件信息。
- * @method string getPrompt() 获取生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。
- * @method void setPrompt(string $Prompt) 设置生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。
- * @method string getNegativePrompt() 获取要阻止模型生成图片的提示词。最大支持1000字符。
- * @method void setNegativePrompt(string $NegativePrompt) 设置要阻止模型生成图片的提示词。最大支持1000字符。
- * @method string getEnhancePrompt() 获取是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
- * @method void setEnhancePrompt(string $EnhancePrompt) 设置是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
- * @method string getGenerationMode() 获取生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li> 
- * @method void setGenerationMode(string $GenerationMode) 设置生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li> 
- * @method AigcImageOutputConfig getOutputConfig() 获取AIGC 生图输出结果文件输出。
- * @method void setOutputConfig(AigcImageOutputConfig $OutputConfig) 设置AIGC 生图输出结果文件输出。
+ * @method string getModelName() 获取<p>模型名称。</p>
+ * @method void setModelName(string $ModelName) 设置<p>模型名称。</p>
+ * @method string getModelVersion() 获取<p>模型版本。</p>
+ * @method void setModelVersion(string $ModelVersion) 设置<p>模型版本。</p>
+ * @method array getFileInfos() 获取<p>AIGC生图任务输入文件信息。</p>
+ * @method void setFileInfos(array $FileInfos) 设置<p>AIGC生图任务输入文件信息。</p>
+ * @method string getPrompt() 获取<p>生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。</p>
+ * @method void setPrompt(string $Prompt) 设置<p>生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。</p>
+ * @method string getNegativePrompt() 获取<p>要阻止模型生成图片的提示词。最大支持1000字符。</p>
+ * @method void setNegativePrompt(string $NegativePrompt) 设置<p>要阻止模型生成图片的提示词。最大支持1000字符。</p>
+ * @method string getEnhancePrompt() 获取<p>是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
+ * @method void setEnhancePrompt(string $EnhancePrompt) 设置<p>是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
+ * @method string getGenerationMode() 获取<p>生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li></p>
+ * @method void setGenerationMode(string $GenerationMode) 设置<p>生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li></p>
+ * @method AigcImageOutputConfig getOutputConfig() 获取<p>AIGC 生图输出结果文件输出。</p>
+ * @method void setOutputConfig(AigcImageOutputConfig $OutputConfig) 设置<p>AIGC 生图输出结果文件输出。</p>
+ * @method integer getSeed() 获取<p>模型随机种子。</p>
+ * @method void setSeed(integer $Seed) 设置<p>模型随机种子。</p>
  */
 class AigcImageTaskInput extends AbstractModel
 {
     /**
-     * @var string 模型名称。
+     * @var string <p>模型名称。</p>
      */
     public $ModelName;
 
     /**
-     * @var string 模型版本。
+     * @var string <p>模型版本。</p>
      */
     public $ModelVersion;
 
     /**
-     * @var array AIGC生图任务输入文件信息。
+     * @var array <p>AIGC生图任务输入文件信息。</p>
      */
     public $FileInfos;
 
     /**
-     * @var string 生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。
+     * @var string <p>生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。</p>
      */
     public $Prompt;
 
     /**
-     * @var string 要阻止模型生成图片的提示词。最大支持1000字符。
+     * @var string <p>要阻止模型生成图片的提示词。最大支持1000字符。</p>
      */
     public $NegativePrompt;
 
     /**
-     * @var string 是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
+     * @var string <p>是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
      */
     public $EnhancePrompt;
 
     /**
-     * @var string 生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li> 
+     * @var string <p>生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li></p>
      */
     public $GenerationMode;
 
     /**
-     * @var AigcImageOutputConfig AIGC 生图输出结果文件输出。
+     * @var AigcImageOutputConfig <p>AIGC 生图输出结果文件输出。</p>
      */
     public $OutputConfig;
 
     /**
-     * @param string $ModelName 模型名称。
-     * @param string $ModelVersion 模型版本。
-     * @param array $FileInfos AIGC生图任务输入文件信息。
-     * @param string $Prompt 生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。
-     * @param string $NegativePrompt 要阻止模型生成图片的提示词。最大支持1000字符。
-     * @param string $EnhancePrompt 是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
-     * @param string $GenerationMode 生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li> 
-     * @param AigcImageOutputConfig $OutputConfig AIGC 生图输出结果文件输出。
+     * @var integer <p>模型随机种子。</p>
+     */
+    public $Seed;
+
+    /**
+     * @param string $ModelName <p>模型名称。</p>
+     * @param string $ModelVersion <p>模型版本。</p>
+     * @param array $FileInfos <p>AIGC生图任务输入文件信息。</p>
+     * @param string $Prompt <p>生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。</p>
+     * @param string $NegativePrompt <p>要阻止模型生成图片的提示词。最大支持1000字符。</p>
+     * @param string $EnhancePrompt <p>是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
+     * @param string $GenerationMode <p>生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li></p>
+     * @param AigcImageOutputConfig $OutputConfig <p>AIGC 生图输出结果文件输出。</p>
+     * @param integer $Seed <p>模型随机种子。</p>
      */
     function __construct()
     {
@@ -138,6 +146,10 @@ class AigcImageTaskInput extends AbstractModel
         if (array_key_exists("OutputConfig",$param) and $param["OutputConfig"] !== null) {
             $this->OutputConfig = new AigcImageOutputConfig();
             $this->OutputConfig->deserialize($param["OutputConfig"]);
+        }
+
+        if (array_key_exists("Seed",$param) and $param["Seed"] !== null) {
+            $this->Seed = $param["Seed"];
         }
     }
 }

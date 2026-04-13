@@ -20,270 +20,263 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstance返回参数结构体
  *
- * @method string getInstanceType() 获取实例类型
-BASIC 基础版
-PRO  专业版
-PLATINUM 铂金版
- * @method void setInstanceType(string $InstanceType) 设置实例类型
-BASIC 基础版
-PRO  专业版
-PLATINUM 铂金版
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method integer getTopicNum() 获取主题数量
- * @method void setTopicNum(integer $TopicNum) 设置主题数量
- * @method integer getTopicNumLimit() 获取实例最大主题数量
- * @method void setTopicNumLimit(integer $TopicNumLimit) 设置实例最大主题数量
- * @method integer getTpsLimit() 获取TPS限流值
- * @method void setTpsLimit(integer $TpsLimit) 设置TPS限流值
- * @method integer getCreatedTime() 获取创建时间，秒为单位
- * @method void setCreatedTime(integer $CreatedTime) 设置创建时间，秒为单位
- * @method string getRemark() 获取备注信息
- * @method void setRemark(string $Remark) 设置备注信息
- * @method string getInstanceStatus() 获取实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中
- * @method void setInstanceStatus(string $InstanceStatus) 设置实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中
- * @method string getSkuCode() 获取实例规格
- * @method void setSkuCode(string $SkuCode) 设置实例规格
- * @method integer getMaxSubscriptionPerClient() 获取单客户端最大订阅数
- * @method void setMaxSubscriptionPerClient(integer $MaxSubscriptionPerClient) 设置单客户端最大订阅数
- * @method integer getAuthorizationPolicyLimit() 获取授权规则条数
- * @method void setAuthorizationPolicyLimit(integer $AuthorizationPolicyLimit) 设置授权规则条数
- * @method integer getClientNumLimit() 获取客户端数量上限
- * @method void setClientNumLimit(integer $ClientNumLimit) 设置客户端数量上限
- * @method string getDeviceCertificateProvisionType() 获取客户端证书注册方式：
-JITP：自动注册
-API：通过API手动注册
- * @method void setDeviceCertificateProvisionType(string $DeviceCertificateProvisionType) 设置客户端证书注册方式：
-JITP：自动注册
-API：通过API手动注册
- * @method boolean getAutomaticActivation() 获取自动注册设备证书时是否自动激活
- * @method void setAutomaticActivation(boolean $AutomaticActivation) 设置自动注册设备证书时是否自动激活
- * @method integer getRenewFlag() 获取是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费
- * @method void setRenewFlag(integer $RenewFlag) 设置是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费
- * @method string getPayMode() 获取计费模式， POSTPAID，按量计费 PREPAID，包年包月
- * @method void setPayMode(string $PayMode) 设置计费模式， POSTPAID，按量计费 PREPAID，包年包月
- * @method integer getExpiryTime() 获取到期时间，毫秒级时间戳
- * @method void setExpiryTime(integer $ExpiryTime) 设置到期时间，毫秒级时间戳
- * @method integer getDestroyTime() 获取预销毁时间，毫秒级时间戳
- * @method void setDestroyTime(integer $DestroyTime) 设置预销毁时间，毫秒级时间戳
- * @method string getX509Mode() 获取TLS,单向认证    mTLS,双向认证    BYOC;一机一证
- * @method void setX509Mode(string $X509Mode) 设置TLS,单向认证    mTLS,双向认证    BYOC;一机一证
- * @method integer getMaxCaNum() 获取最大Ca配额
- * @method void setMaxCaNum(integer $MaxCaNum) 设置最大Ca配额
- * @method string getRegistrationCode() 获取证书注册码
- * @method void setRegistrationCode(string $RegistrationCode) 设置证书注册码
- * @method integer getMaxSubscription() 获取集群最大订阅数
- * @method void setMaxSubscription(integer $MaxSubscription) 设置集群最大订阅数
- * @method boolean getAuthorizationPolicy() 获取授权策略开关
- * @method void setAuthorizationPolicy(boolean $AuthorizationPolicy) 设置授权策略开关
- * @method integer getSharedSubscriptionGroupLimit() 获取共享订阅组数最大限制
- * @method void setSharedSubscriptionGroupLimit(integer $SharedSubscriptionGroupLimit) 设置共享订阅组数最大限制
- * @method integer getMaxTopicFilterPerSharedSubscriptionGroup() 获取单个共享订阅组TopicFilter数限制
- * @method void setMaxTopicFilterPerSharedSubscriptionGroup(integer $MaxTopicFilterPerSharedSubscriptionGroup) 设置单个共享订阅组TopicFilter数限制
- * @method integer getAutoSubscriptionPolicyLimit() 获取自动订阅规则条数限制
- * @method void setAutoSubscriptionPolicyLimit(integer $AutoSubscriptionPolicyLimit) 设置自动订阅规则条数限制
- * @method integer getMaxTopicFilterPerAutoSubscriptionPolicy() 获取单条自动订阅规则TopicFilter数限制
- * @method void setMaxTopicFilterPerAutoSubscriptionPolicy(integer $MaxTopicFilterPerAutoSubscriptionPolicy) 设置单条自动订阅规则TopicFilter数限制
- * @method boolean getUseDefaultServerCert() 获取是否使用默认的服务端证书
- * @method void setUseDefaultServerCert(boolean $UseDefaultServerCert) 设置是否使用默认的服务端证书
- * @method integer getTrustedCaLimit() 获取服务端CA最大数量
- * @method void setTrustedCaLimit(integer $TrustedCaLimit) 设置服务端CA最大数量
- * @method integer getServerCertLimit() 获取服务端证书最大数量
- * @method void setServerCertLimit(integer $ServerCertLimit) 设置服务端证书最大数量
- * @method integer getTopicPrefixSlashLimit() 获取topic前缀最大层级
- * @method void setTopicPrefixSlashLimit(integer $TopicPrefixSlashLimit) 设置topic前缀最大层级
- * @method integer getMessageRate() 获取单客户端发送消息限速，单位 条/秒
- * @method void setMessageRate(integer $MessageRate) 设置单客户端发送消息限速，单位 条/秒
- * @method string getTransportLayerSecurity() 获取服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1
- * @method void setTransportLayerSecurity(string $TransportLayerSecurity) 设置服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1
- * @method integer getMessageEnrichmentRuleLimit() 获取消息属性增强规则配额
- * @method void setMessageEnrichmentRuleLimit(integer $MessageEnrichmentRuleLimit) 设置消息属性增强规则配额
+ * @method string getInstanceType() 获取<p>实例类型<br>BASIC 基础版<br>PRO  专业版<br>PLATINUM 铂金版</p>
+ * @method void setInstanceType(string $InstanceType) 设置<p>实例类型<br>BASIC 基础版<br>PRO  专业版<br>PLATINUM 铂金版</p>
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getInstanceName() 获取<p>实例名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称</p>
+ * @method integer getTopicNum() 获取<p>主题数量</p>
+ * @method void setTopicNum(integer $TopicNum) 设置<p>主题数量</p>
+ * @method integer getTopicNumLimit() 获取<p>实例最大主题数量</p>
+ * @method void setTopicNumLimit(integer $TopicNumLimit) 设置<p>实例最大主题数量</p>
+ * @method integer getTpsLimit() 获取<p>TPS限流值</p>
+ * @method void setTpsLimit(integer $TpsLimit) 设置<p>TPS限流值</p>
+ * @method integer getCreatedTime() 获取<p>创建时间，秒为单位</p>
+ * @method void setCreatedTime(integer $CreatedTime) 设置<p>创建时间，秒为单位</p>
+ * @method string getRemark() 获取<p>备注信息</p>
+ * @method void setRemark(string $Remark) 设置<p>备注信息</p>
+ * @method string getInstanceStatus() 获取<p>实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中</p>
+ * @method void setInstanceStatus(string $InstanceStatus) 设置<p>实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中</p>
+ * @method string getSkuCode() 获取<p>实例规格</p>
+ * @method void setSkuCode(string $SkuCode) 设置<p>实例规格</p>
+ * @method integer getMaxSubscriptionPerClient() 获取<p>单客户端最大订阅数</p>
+ * @method void setMaxSubscriptionPerClient(integer $MaxSubscriptionPerClient) 设置<p>单客户端最大订阅数</p>
+ * @method integer getAuthorizationPolicyLimit() 获取<p>授权规则条数</p>
+ * @method void setAuthorizationPolicyLimit(integer $AuthorizationPolicyLimit) 设置<p>授权规则条数</p>
+ * @method integer getClientNumLimit() 获取<p>客户端数量上限</p>
+ * @method void setClientNumLimit(integer $ClientNumLimit) 设置<p>客户端数量上限</p>
+ * @method string getDeviceCertificateProvisionType() 获取<p>客户端证书注册方式：<br>JITP：自动注册<br>API：通过API手动注册</p>
+ * @method void setDeviceCertificateProvisionType(string $DeviceCertificateProvisionType) 设置<p>客户端证书注册方式：<br>JITP：自动注册<br>API：通过API手动注册</p>
+ * @method boolean getAutomaticActivation() 获取<p>自动注册设备证书时是否自动激活</p>
+ * @method void setAutomaticActivation(boolean $AutomaticActivation) 设置<p>自动注册设备证书时是否自动激活</p>
+ * @method integer getRenewFlag() 获取<p>是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费</p>
+ * @method void setRenewFlag(integer $RenewFlag) 设置<p>是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费</p>
+ * @method string getPayMode() 获取<p>计费模式， POSTPAID，按量计费 PREPAID，包年包月</p>
+ * @method void setPayMode(string $PayMode) 设置<p>计费模式， POSTPAID，按量计费 PREPAID，包年包月</p>
+ * @method integer getExpiryTime() 获取<p>到期时间，毫秒级时间戳</p>
+ * @method void setExpiryTime(integer $ExpiryTime) 设置<p>到期时间，毫秒级时间戳</p>
+ * @method integer getDestroyTime() 获取<p>预销毁时间，毫秒级时间戳</p>
+ * @method void setDestroyTime(integer $DestroyTime) 设置<p>预销毁时间，毫秒级时间戳</p>
+ * @method string getX509Mode() 获取<p>TLS,单向认证    mTLS,双向认证    BYOC;一机一证</p>
+ * @method void setX509Mode(string $X509Mode) 设置<p>TLS,单向认证    mTLS,双向认证    BYOC;一机一证</p>
+ * @method integer getMaxCaNum() 获取<p>最大Ca配额</p>
+ * @method void setMaxCaNum(integer $MaxCaNum) 设置<p>最大Ca配额</p>
+ * @method string getRegistrationCode() 获取<p>证书注册码</p>
+ * @method void setRegistrationCode(string $RegistrationCode) 设置<p>证书注册码</p>
+ * @method integer getMaxSubscription() 获取<p>集群最大订阅数</p>
+ * @method void setMaxSubscription(integer $MaxSubscription) 设置<p>集群最大订阅数</p>
+ * @method boolean getAuthorizationPolicy() 获取<p>授权策略开关</p>
+ * @method void setAuthorizationPolicy(boolean $AuthorizationPolicy) 设置<p>授权策略开关</p>
+ * @method integer getSharedSubscriptionGroupLimit() 获取<p>共享订阅组数最大限制</p>
+ * @method void setSharedSubscriptionGroupLimit(integer $SharedSubscriptionGroupLimit) 设置<p>共享订阅组数最大限制</p>
+ * @method integer getMaxTopicFilterPerSharedSubscriptionGroup() 获取<p>单个共享订阅组TopicFilter数限制</p>
+ * @method void setMaxTopicFilterPerSharedSubscriptionGroup(integer $MaxTopicFilterPerSharedSubscriptionGroup) 设置<p>单个共享订阅组TopicFilter数限制</p>
+ * @method integer getAutoSubscriptionPolicyLimit() 获取<p>自动订阅规则条数限制</p>
+ * @method void setAutoSubscriptionPolicyLimit(integer $AutoSubscriptionPolicyLimit) 设置<p>自动订阅规则条数限制</p>
+ * @method integer getMaxTopicFilterPerAutoSubscriptionPolicy() 获取<p>单条自动订阅规则TopicFilter数限制</p>
+ * @method void setMaxTopicFilterPerAutoSubscriptionPolicy(integer $MaxTopicFilterPerAutoSubscriptionPolicy) 设置<p>单条自动订阅规则TopicFilter数限制</p>
+ * @method boolean getUseDefaultServerCert() 获取<p>是否使用默认的服务端证书</p>
+ * @method void setUseDefaultServerCert(boolean $UseDefaultServerCert) 设置<p>是否使用默认的服务端证书</p>
+ * @method integer getTrustedCaLimit() 获取<p>服务端CA最大数量</p>
+ * @method void setTrustedCaLimit(integer $TrustedCaLimit) 设置<p>服务端CA最大数量</p>
+ * @method integer getServerCertLimit() 获取<p>服务端证书最大数量</p>
+ * @method void setServerCertLimit(integer $ServerCertLimit) 设置<p>服务端证书最大数量</p>
+ * @method integer getTopicPrefixSlashLimit() 获取<p>topic前缀最大层级</p>
+ * @method void setTopicPrefixSlashLimit(integer $TopicPrefixSlashLimit) 设置<p>topic前缀最大层级</p>
+ * @method integer getMessageRate() 获取<p>单客户端发送消息限速，单位 条/秒</p>
+ * @method void setMessageRate(integer $MessageRate) 设置<p>单客户端发送消息限速，单位 条/秒</p>
+ * @method string getTransportLayerSecurity() 获取<p>服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1</p>
+ * @method void setTransportLayerSecurity(string $TransportLayerSecurity) 设置<p>服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1</p>
+ * @method integer getMessageEnrichmentRuleLimit() 获取<p>消息属性增强规则配额</p>
+ * @method void setMessageEnrichmentRuleLimit(integer $MessageEnrichmentRuleLimit) 设置<p>消息属性增强规则配额</p>
+ * @method integer getBlockRuleLimit() 获取<p>封禁规则最大数量</p>
+ * @method void setBlockRuleLimit(integer $BlockRuleLimit) 设置<p>封禁规则最大数量</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeInstanceResponse extends AbstractModel
 {
     /**
-     * @var string 实例类型
-BASIC 基础版
-PRO  专业版
-PLATINUM 铂金版
+     * @var string <p>实例类型<br>BASIC 基础版<br>PRO  专业版<br>PLATINUM 铂金版</p>
      */
     public $InstanceType;
 
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
      */
     public $InstanceName;
 
     /**
-     * @var integer 主题数量
+     * @var integer <p>主题数量</p>
      */
     public $TopicNum;
 
     /**
-     * @var integer 实例最大主题数量
+     * @var integer <p>实例最大主题数量</p>
      */
     public $TopicNumLimit;
 
     /**
-     * @var integer TPS限流值
+     * @var integer <p>TPS限流值</p>
      */
     public $TpsLimit;
 
     /**
-     * @var integer 创建时间，秒为单位
+     * @var integer <p>创建时间，秒为单位</p>
      */
     public $CreatedTime;
 
     /**
-     * @var string 备注信息
+     * @var string <p>备注信息</p>
      */
     public $Remark;
 
     /**
-     * @var string 实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中
+     * @var string <p>实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中</p>
      */
     public $InstanceStatus;
 
     /**
-     * @var string 实例规格
+     * @var string <p>实例规格</p>
      */
     public $SkuCode;
 
     /**
-     * @var integer 单客户端最大订阅数
+     * @var integer <p>单客户端最大订阅数</p>
      */
     public $MaxSubscriptionPerClient;
 
     /**
-     * @var integer 授权规则条数
+     * @var integer <p>授权规则条数</p>
      */
     public $AuthorizationPolicyLimit;
 
     /**
-     * @var integer 客户端数量上限
+     * @var integer <p>客户端数量上限</p>
      */
     public $ClientNumLimit;
 
     /**
-     * @var string 客户端证书注册方式：
-JITP：自动注册
-API：通过API手动注册
+     * @var string <p>客户端证书注册方式：<br>JITP：自动注册<br>API：通过API手动注册</p>
      */
     public $DeviceCertificateProvisionType;
 
     /**
-     * @var boolean 自动注册设备证书时是否自动激活
+     * @var boolean <p>自动注册设备证书时是否自动激活</p>
      */
     public $AutomaticActivation;
 
     /**
-     * @var integer 是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费
+     * @var integer <p>是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费</p>
      */
     public $RenewFlag;
 
     /**
-     * @var string 计费模式， POSTPAID，按量计费 PREPAID，包年包月
+     * @var string <p>计费模式， POSTPAID，按量计费 PREPAID，包年包月</p>
      */
     public $PayMode;
 
     /**
-     * @var integer 到期时间，毫秒级时间戳
+     * @var integer <p>到期时间，毫秒级时间戳</p>
      */
     public $ExpiryTime;
 
     /**
-     * @var integer 预销毁时间，毫秒级时间戳
+     * @var integer <p>预销毁时间，毫秒级时间戳</p>
      */
     public $DestroyTime;
 
     /**
-     * @var string TLS,单向认证    mTLS,双向认证    BYOC;一机一证
+     * @var string <p>TLS,单向认证    mTLS,双向认证    BYOC;一机一证</p>
      */
     public $X509Mode;
 
     /**
-     * @var integer 最大Ca配额
+     * @var integer <p>最大Ca配额</p>
      */
     public $MaxCaNum;
 
     /**
-     * @var string 证书注册码
+     * @var string <p>证书注册码</p>
      */
     public $RegistrationCode;
 
     /**
-     * @var integer 集群最大订阅数
+     * @var integer <p>集群最大订阅数</p>
      */
     public $MaxSubscription;
 
     /**
-     * @var boolean 授权策略开关
+     * @var boolean <p>授权策略开关</p>
      */
     public $AuthorizationPolicy;
 
     /**
-     * @var integer 共享订阅组数最大限制
+     * @var integer <p>共享订阅组数最大限制</p>
      */
     public $SharedSubscriptionGroupLimit;
 
     /**
-     * @var integer 单个共享订阅组TopicFilter数限制
+     * @var integer <p>单个共享订阅组TopicFilter数限制</p>
+     * @deprecated
      */
     public $MaxTopicFilterPerSharedSubscriptionGroup;
 
     /**
-     * @var integer 自动订阅规则条数限制
+     * @var integer <p>自动订阅规则条数限制</p>
      */
     public $AutoSubscriptionPolicyLimit;
 
     /**
-     * @var integer 单条自动订阅规则TopicFilter数限制
+     * @var integer <p>单条自动订阅规则TopicFilter数限制</p>
      */
     public $MaxTopicFilterPerAutoSubscriptionPolicy;
 
     /**
-     * @var boolean 是否使用默认的服务端证书
+     * @var boolean <p>是否使用默认的服务端证书</p>
      */
     public $UseDefaultServerCert;
 
     /**
-     * @var integer 服务端CA最大数量
+     * @var integer <p>服务端CA最大数量</p>
      */
     public $TrustedCaLimit;
 
     /**
-     * @var integer 服务端证书最大数量
+     * @var integer <p>服务端证书最大数量</p>
      */
     public $ServerCertLimit;
 
     /**
-     * @var integer topic前缀最大层级
+     * @var integer <p>topic前缀最大层级</p>
      */
     public $TopicPrefixSlashLimit;
 
     /**
-     * @var integer 单客户端发送消息限速，单位 条/秒
+     * @var integer <p>单客户端发送消息限速，单位 条/秒</p>
      */
     public $MessageRate;
 
     /**
-     * @var string 服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1
+     * @var string <p>服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1</p>
      */
     public $TransportLayerSecurity;
 
     /**
-     * @var integer 消息属性增强规则配额
+     * @var integer <p>消息属性增强规则配额</p>
      */
     public $MessageEnrichmentRuleLimit;
+
+    /**
+     * @var integer <p>封禁规则最大数量</p>
+     */
+    public $BlockRuleLimit;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -291,46 +284,42 @@ API：通过API手动注册
     public $RequestId;
 
     /**
-     * @param string $InstanceType 实例类型
-BASIC 基础版
-PRO  专业版
-PLATINUM 铂金版
-     * @param string $InstanceId 实例ID
-     * @param string $InstanceName 实例名称
-     * @param integer $TopicNum 主题数量
-     * @param integer $TopicNumLimit 实例最大主题数量
-     * @param integer $TpsLimit TPS限流值
-     * @param integer $CreatedTime 创建时间，秒为单位
-     * @param string $Remark 备注信息
-     * @param string $InstanceStatus 实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中
-     * @param string $SkuCode 实例规格
-     * @param integer $MaxSubscriptionPerClient 单客户端最大订阅数
-     * @param integer $AuthorizationPolicyLimit 授权规则条数
-     * @param integer $ClientNumLimit 客户端数量上限
-     * @param string $DeviceCertificateProvisionType 客户端证书注册方式：
-JITP：自动注册
-API：通过API手动注册
-     * @param boolean $AutomaticActivation 自动注册设备证书时是否自动激活
-     * @param integer $RenewFlag 是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费
-     * @param string $PayMode 计费模式， POSTPAID，按量计费 PREPAID，包年包月
-     * @param integer $ExpiryTime 到期时间，毫秒级时间戳
-     * @param integer $DestroyTime 预销毁时间，毫秒级时间戳
-     * @param string $X509Mode TLS,单向认证    mTLS,双向认证    BYOC;一机一证
-     * @param integer $MaxCaNum 最大Ca配额
-     * @param string $RegistrationCode 证书注册码
-     * @param integer $MaxSubscription 集群最大订阅数
-     * @param boolean $AuthorizationPolicy 授权策略开关
-     * @param integer $SharedSubscriptionGroupLimit 共享订阅组数最大限制
-     * @param integer $MaxTopicFilterPerSharedSubscriptionGroup 单个共享订阅组TopicFilter数限制
-     * @param integer $AutoSubscriptionPolicyLimit 自动订阅规则条数限制
-     * @param integer $MaxTopicFilterPerAutoSubscriptionPolicy 单条自动订阅规则TopicFilter数限制
-     * @param boolean $UseDefaultServerCert 是否使用默认的服务端证书
-     * @param integer $TrustedCaLimit 服务端CA最大数量
-     * @param integer $ServerCertLimit 服务端证书最大数量
-     * @param integer $TopicPrefixSlashLimit topic前缀最大层级
-     * @param integer $MessageRate 单客户端发送消息限速，单位 条/秒
-     * @param string $TransportLayerSecurity 服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1
-     * @param integer $MessageEnrichmentRuleLimit 消息属性增强规则配额
+     * @param string $InstanceType <p>实例类型<br>BASIC 基础版<br>PRO  专业版<br>PLATINUM 铂金版</p>
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $InstanceName <p>实例名称</p>
+     * @param integer $TopicNum <p>主题数量</p>
+     * @param integer $TopicNumLimit <p>实例最大主题数量</p>
+     * @param integer $TpsLimit <p>TPS限流值</p>
+     * @param integer $CreatedTime <p>创建时间，秒为单位</p>
+     * @param string $Remark <p>备注信息</p>
+     * @param string $InstanceStatus <p>实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中</p>
+     * @param string $SkuCode <p>实例规格</p>
+     * @param integer $MaxSubscriptionPerClient <p>单客户端最大订阅数</p>
+     * @param integer $AuthorizationPolicyLimit <p>授权规则条数</p>
+     * @param integer $ClientNumLimit <p>客户端数量上限</p>
+     * @param string $DeviceCertificateProvisionType <p>客户端证书注册方式：<br>JITP：自动注册<br>API：通过API手动注册</p>
+     * @param boolean $AutomaticActivation <p>自动注册设备证书时是否自动激活</p>
+     * @param integer $RenewFlag <p>是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费</p>
+     * @param string $PayMode <p>计费模式， POSTPAID，按量计费 PREPAID，包年包月</p>
+     * @param integer $ExpiryTime <p>到期时间，毫秒级时间戳</p>
+     * @param integer $DestroyTime <p>预销毁时间，毫秒级时间戳</p>
+     * @param string $X509Mode <p>TLS,单向认证    mTLS,双向认证    BYOC;一机一证</p>
+     * @param integer $MaxCaNum <p>最大Ca配额</p>
+     * @param string $RegistrationCode <p>证书注册码</p>
+     * @param integer $MaxSubscription <p>集群最大订阅数</p>
+     * @param boolean $AuthorizationPolicy <p>授权策略开关</p>
+     * @param integer $SharedSubscriptionGroupLimit <p>共享订阅组数最大限制</p>
+     * @param integer $MaxTopicFilterPerSharedSubscriptionGroup <p>单个共享订阅组TopicFilter数限制</p>
+     * @param integer $AutoSubscriptionPolicyLimit <p>自动订阅规则条数限制</p>
+     * @param integer $MaxTopicFilterPerAutoSubscriptionPolicy <p>单条自动订阅规则TopicFilter数限制</p>
+     * @param boolean $UseDefaultServerCert <p>是否使用默认的服务端证书</p>
+     * @param integer $TrustedCaLimit <p>服务端CA最大数量</p>
+     * @param integer $ServerCertLimit <p>服务端证书最大数量</p>
+     * @param integer $TopicPrefixSlashLimit <p>topic前缀最大层级</p>
+     * @param integer $MessageRate <p>单客户端发送消息限速，单位 条/秒</p>
+     * @param string $TransportLayerSecurity <p>服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1</p>
+     * @param integer $MessageEnrichmentRuleLimit <p>消息属性增强规则配额</p>
+     * @param integer $BlockRuleLimit <p>封禁规则最大数量</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -484,6 +473,10 @@ API：通过API手动注册
 
         if (array_key_exists("MessageEnrichmentRuleLimit",$param) and $param["MessageEnrichmentRuleLimit"] !== null) {
             $this->MessageEnrichmentRuleLimit = $param["MessageEnrichmentRuleLimit"];
+        }
+
+        if (array_key_exists("BlockRuleLimit",$param) and $param["BlockRuleLimit"] !== null) {
+            $this->BlockRuleLimit = $param["BlockRuleLimit"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

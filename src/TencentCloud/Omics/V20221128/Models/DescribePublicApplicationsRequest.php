@@ -20,26 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePublicApplications请求参数结构体
  *
- * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
- * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
- * @method integer getOffset() 获取偏移量，默认为0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
+ * @method integer getLimit() 获取<p>返回数量，默认为20，最大值为100。</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认为20，最大值为100。</p>
+ * @method integer getOffset() 获取<p>偏移量，默认为0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为0。</p>
+ * @method string getParentAppId() 获取<p>父应用ID</p>
+ * @method void setParentAppId(string $ParentAppId) 设置<p>父应用ID</p>
+ * @method string getAppType() 获取<p>应用类型</p><p>枚举值：</p><ul><li>WDL： WDL</li><li>NEXTFLOW： NEXTFLOW</li></ul>
+ * @method void setAppType(string $AppType) 设置<p>应用类型</p><p>枚举值：</p><ul><li>WDL： WDL</li><li>NEXTFLOW： NEXTFLOW</li></ul>
  */
 class DescribePublicApplicationsRequest extends AbstractModel
 {
     /**
-     * @var integer 返回数量，默认为20，最大值为100。
+     * @var integer <p>返回数量，默认为20，最大值为100。</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量，默认为0。
+     * @var integer <p>偏移量，默认为0。</p>
      */
     public $Offset;
 
     /**
-     * @param integer $Limit 返回数量，默认为20，最大值为100。
-     * @param integer $Offset 偏移量，默认为0。
+     * @var string <p>父应用ID</p>
+     */
+    public $ParentAppId;
+
+    /**
+     * @var string <p>应用类型</p><p>枚举值：</p><ul><li>WDL： WDL</li><li>NEXTFLOW： NEXTFLOW</li></ul>
+     */
+    public $AppType;
+
+    /**
+     * @param integer $Limit <p>返回数量，默认为20，最大值为100。</p>
+     * @param integer $Offset <p>偏移量，默认为0。</p>
+     * @param string $ParentAppId <p>父应用ID</p>
+     * @param string $AppType <p>应用类型</p><p>枚举值：</p><ul><li>WDL： WDL</li><li>NEXTFLOW： NEXTFLOW</li></ul>
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class DescribePublicApplicationsRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("ParentAppId",$param) and $param["ParentAppId"] !== null) {
+            $this->ParentAppId = $param["ParentAppId"];
+        }
+
+        if (array_key_exists("AppType",$param) and $param["AppType"] !== null) {
+            $this->AppType = $param["AppType"];
         }
     }
 }

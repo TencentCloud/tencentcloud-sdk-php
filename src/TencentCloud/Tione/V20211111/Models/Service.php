@@ -91,8 +91,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppId(integer $AppId) 设置app_id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBusinessStatus() 获取服务的业务状态
+CREATING 创建中
+CREATE_FAILED 创建失败
+CREATE_SUCCEED 创建成功
+ARREARS_STOP 因欠费停止
+WHITELIST_STOP 白名单额度不足
+RELEASE_FAILED 资源释放失败
+WHITELIST_RELEASE_FAILED 白名单资源释放失败
+TIMEOUT_EXCEPTION 创建超时异常
+BILLING 计费中
+WHITELIST_USING 白名单试用中
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessStatus(string $BusinessStatus) 设置服务的业务状态
+CREATING 创建中
+CREATE_FAILED 创建失败
+CREATE_SUCCEED 创建成功
+ARREARS_STOP 因欠费停止
+WHITELIST_STOP 白名单额度不足
+RELEASE_FAILED 资源释放失败
+WHITELIST_RELEASE_FAILED 白名单资源释放失败
+TIMEOUT_EXCEPTION 创建超时异常
+BILLING 计费中
+WHITELIST_USING 白名单试用中
 注意：此字段可能返回 null，表示取不到有效值。
  * @method ServiceLimit getServiceLimit() 获取已废弃,以ServiceInfo中的对应为准
  * @method void setServiceLimit(ServiceLimit $ServiceLimit) 设置已废弃,以ServiceInfo中的对应为准
@@ -105,8 +125,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取服务状态
 CREATING 创建中
 CREATE_FAILED 创建失败
-Normal	正常运行中
-Stopped  已停止
+TIMEOUT_EXCEPTION 创建超时异常
+Normal 正常运行中
+Stopped 已停止
 Stopping 停止中
 Abnormal 异常
 Pending 启动中
@@ -115,8 +136,9 @@ Waiting 就绪中
  * @method void setStatus(string $Status) 设置服务状态
 CREATING 创建中
 CREATE_FAILED 创建失败
-Normal	正常运行中
-Stopped  已停止
+TIMEOUT_EXCEPTION 创建超时异常
+Normal 正常运行中
+Stopped 已停止
 Stopping 停止中
 Abnormal 异常
 Pending 启动中
@@ -288,6 +310,16 @@ class Service extends AbstractModel
 
     /**
      * @var string 服务的业务状态
+CREATING 创建中
+CREATE_FAILED 创建失败
+CREATE_SUCCEED 创建成功
+ARREARS_STOP 因欠费停止
+WHITELIST_STOP 白名单额度不足
+RELEASE_FAILED 资源释放失败
+WHITELIST_RELEASE_FAILED 白名单资源释放失败
+TIMEOUT_EXCEPTION 创建超时异常
+BILLING 计费中
+WHITELIST_USING 白名单试用中
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessStatus;
@@ -314,8 +346,9 @@ class Service extends AbstractModel
      * @var string 服务状态
 CREATING 创建中
 CREATE_FAILED 创建失败
-Normal	正常运行中
-Stopped  已停止
+TIMEOUT_EXCEPTION 创建超时异常
+Normal 正常运行中
+Stopped 已停止
 Stopping 停止中
 Abnormal 异常
 Pending 启动中
@@ -438,6 +471,16 @@ DEFAULT: 其他来源
      * @param integer $AppId app_id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BusinessStatus 服务的业务状态
+CREATING 创建中
+CREATE_FAILED 创建失败
+CREATE_SUCCEED 创建成功
+ARREARS_STOP 因欠费停止
+WHITELIST_STOP 白名单额度不足
+RELEASE_FAILED 资源释放失败
+WHITELIST_RELEASE_FAILED 白名单资源释放失败
+TIMEOUT_EXCEPTION 创建超时异常
+BILLING 计费中
+WHITELIST_USING 白名单试用中
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceLimit $ServiceLimit 已废弃,以ServiceInfo中的对应为准
      * @param ScheduledAction $ScheduledAction 已废弃,以ServiceInfo中的对应为准
@@ -446,8 +489,9 @@ DEFAULT: 其他来源
      * @param string $Status 服务状态
 CREATING 创建中
 CREATE_FAILED 创建失败
-Normal	正常运行中
-Stopped  已停止
+TIMEOUT_EXCEPTION 创建超时异常
+Normal 正常运行中
+Stopped 已停止
 Stopping 停止中
 Abnormal 异常
 Pending 启动中

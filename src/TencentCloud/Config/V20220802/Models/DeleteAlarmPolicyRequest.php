@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ags\V20250920\Models;
+namespace TencentCloud\Config\V20220802\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 沙箱工具日志采集相关配置
+ * DeleteAlarmPolicy请求参数结构体
  *
- * @method CLSConfig getCLSConfig() 获取<p>日志推送CLS的配置。</p>
- * @method void setCLSConfig(CLSConfig $CLSConfig) 设置<p>日志推送CLS的配置。</p>
+ * @method integer getAlarmPolicyId() 获取告警策略id
+ * @method void setAlarmPolicyId(integer $AlarmPolicyId) 设置告警策略id
  */
-class LogConfiguration extends AbstractModel
+class DeleteAlarmPolicyRequest extends AbstractModel
 {
     /**
-     * @var CLSConfig <p>日志推送CLS的配置。</p>
+     * @var integer 告警策略id
      */
-    public $CLSConfig;
+    public $AlarmPolicyId;
 
     /**
-     * @param CLSConfig $CLSConfig <p>日志推送CLS的配置。</p>
+     * @param integer $AlarmPolicyId 告警策略id
      */
     function __construct()
     {
@@ -46,9 +46,8 @@ class LogConfiguration extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CLSConfig",$param) and $param["CLSConfig"] !== null) {
-            $this->CLSConfig = new CLSConfig();
-            $this->CLSConfig->deserialize($param["CLSConfig"]);
+        if (array_key_exists("AlarmPolicyId",$param) and $param["AlarmPolicyId"] !== null) {
+            $this->AlarmPolicyId = $param["AlarmPolicyId"];
         }
     }
 }

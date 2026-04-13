@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateInfo(array $TemplateInfo) 设置日志命中规则模板的基本信息
  * @method integer getTrxId() 获取事务ID
  * @method void setTrxId(integer $TrxId) 设置事务ID
+ * @method integer getClientPort() 获取客户端端口
+ * @method void setClientPort(integer $ClientPort) 设置客户端端口
  */
 class AuditLog extends AbstractModel
 {
@@ -178,6 +180,11 @@ class AuditLog extends AbstractModel
     public $TrxId;
 
     /**
+     * @var integer 客户端端口
+     */
+    public $ClientPort;
+
+    /**
      * @param integer $AffectRows 影响行数。
      * @param integer $ErrCode 错误码。
      * @param string $SqlType SQL类型。
@@ -200,6 +207,7 @@ class AuditLog extends AbstractModel
      * @param integer $NsTime 开始时间，与timestamp构成一个精确到纳秒的时间。
      * @param array $TemplateInfo 日志命中规则模板的基本信息
      * @param integer $TrxId 事务ID
+     * @param integer $ClientPort 客户端端口
      */
     function __construct()
     {
@@ -305,6 +313,10 @@ class AuditLog extends AbstractModel
 
         if (array_key_exists("TrxId",$param) and $param["TrxId"] !== null) {
             $this->TrxId = $param["TrxId"];
+        }
+
+        if (array_key_exists("ClientPort",$param) and $param["ClientPort"] !== null) {
+            $this->ClientPort = $param["ClientPort"];
         }
     }
 }

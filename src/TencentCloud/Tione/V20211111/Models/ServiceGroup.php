@@ -20,334 +20,266 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 在线服务一个服务组的信息
  *
- * @method string getServiceGroupId() 获取服务组id
- * @method void setServiceGroupId(string $ServiceGroupId) 设置服务组id
- * @method string getServiceGroupName() 获取服务组名
- * @method void setServiceGroupName(string $ServiceGroupName) 设置服务组名
- * @method string getCreatedBy() 获取创建者
- * @method void setCreatedBy(string $CreatedBy) 设置创建者
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getUpdateTime() 获取更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
- * @method string getUin() 获取主账号
- * @method void setUin(string $Uin) 设置主账号
- * @method integer getServiceCount() 获取服务组下服务总数
+ * @method string getServiceGroupId() 获取<p>服务组id</p>
+ * @method void setServiceGroupId(string $ServiceGroupId) 设置<p>服务组id</p>
+ * @method string getServiceGroupName() 获取<p>服务组名</p>
+ * @method void setServiceGroupName(string $ServiceGroupName) 设置<p>服务组名</p>
+ * @method string getCreatedBy() 获取<p>创建者</p>
+ * @method void setCreatedBy(string $CreatedBy) 设置<p>创建者</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getUpdateTime() 获取<p>更新时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
+ * @method string getUin() 获取<p>主账号</p>
+ * @method void setUin(string $Uin) 设置<p>主账号</p>
+ * @method integer getServiceCount() 获取<p>服务组下服务总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServiceCount(integer $ServiceCount) 设置服务组下服务总数
+ * @method void setServiceCount(integer $ServiceCount) 设置<p>服务组下服务总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRunningServiceCount() 获取服务组下在运行的服务数量
+ * @method integer getRunningServiceCount() 获取<p>服务组下在运行的服务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRunningServiceCount(integer $RunningServiceCount) 设置服务组下在运行的服务数量
+ * @method void setRunningServiceCount(integer $RunningServiceCount) 设置<p>服务组下在运行的服务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getServices() 获取服务描述
+ * @method array getServices() 获取<p>服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServices(array $Services) 设置服务描述
+ * @method void setServices(array $Services) 设置<p>服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取服务组状态，与服务一致
- CREATING 创建中
-     CREATE_FAILED 创建失败
-     Normal	正常运行中
-     Stopped  已停止
-     Stopping 停止中
-     Abnormal 异常
-     Pending 启动中
-     Waiting 就绪中
+ * @method string getStatus() 获取<p>服务组状态，与服务一致<br> CREATING 创建中<br>     CREATE_FAILED 创建失败<br>     Normal    正常运行中<br>     Stopped  已停止<br>     Stopping 停止中<br>     Abnormal 异常<br>     Pending 启动中<br>     Waiting 就绪中</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置服务组状态，与服务一致
- CREATING 创建中
-     CREATE_FAILED 创建失败
-     Normal	正常运行中
-     Stopped  已停止
-     Stopping 停止中
-     Abnormal 异常
-     Pending 启动中
-     Waiting 就绪中
+ * @method void setStatus(string $Status) 设置<p>服务组状态，与服务一致<br> CREATING 创建中<br>     CREATE_FAILED 创建失败<br>     Normal    正常运行中<br>     Stopped  已停止<br>     Stopping 停止中<br>     Abnormal 异常<br>     Pending 启动中<br>     Waiting 就绪中</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTags() 获取服务组标签
+ * @method array getTags() 获取<p>服务组标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTags(array $Tags) 设置服务组标签
+ * @method void setTags(array $Tags) 设置<p>服务组标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLatestVersion() 获取服务组下最高版本
+ * @method string getLatestVersion() 获取<p>服务组下最高版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLatestVersion(string $LatestVersion) 设置服务组下最高版本
+ * @method void setLatestVersion(string $LatestVersion) 设置<p>服务组下最高版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBusinessStatus() 获取服务的业务状态
-CREATING 创建中
-     CREATE_FAILED 创建失败
-     ARREARS_STOP 因欠费被强制停止
-     BILLING 计费中
-     WHITELIST_USING 白名单试用中
-     WHITELIST_STOP 白名单额度不足
+ * @method string getBusinessStatus() 获取<p>服务的业务状态<br>CREATING 创建中<br>     CREATE_FAILED 创建失败<br>     ARREARS_STOP 因欠费被强制停止<br>     BILLING 计费中<br>     WHITELIST_USING 白名单试用中<br>     WHITELIST_STOP 白名单额度不足</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBusinessStatus(string $BusinessStatus) 设置服务的业务状态
-CREATING 创建中
-     CREATE_FAILED 创建失败
-     ARREARS_STOP 因欠费被强制停止
-     BILLING 计费中
-     WHITELIST_USING 白名单试用中
-     WHITELIST_STOP 白名单额度不足
+ * @method void setBusinessStatus(string $BusinessStatus) 设置<p>服务的业务状态<br>CREATING 创建中<br>     CREATE_FAILED 创建失败<br>     ARREARS_STOP 因欠费被强制停止<br>     BILLING 计费中<br>     WHITELIST_USING 白名单试用中<br>     WHITELIST_STOP 白名单额度不足</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBillingInfo() 获取服务的计费信息
+ * @method string getBillingInfo() 获取<p>服务的计费信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBillingInfo(string $BillingInfo) 设置服务的计费信息
+ * @method void setBillingInfo(string $BillingInfo) 设置<p>服务的计费信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateSource() 获取服务的创建来源
+ * @method string getCreateSource() 获取<p>服务的创建来源</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateSource(string $CreateSource) 设置服务的创建来源
+ * @method void setCreateSource(string $CreateSource) 设置<p>服务的创建来源</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWeightUpdateStatus() 获取服务组的权重更新状态 
-UPDATING 更新中
-     UPDATED 更新成功
-     UPDATE_FAILED 更新失败
+ * @method string getWeightUpdateStatus() 获取<p>服务组的权重更新状态<br>UPDATING 更新中<br>     UPDATED 更新成功<br>     UPDATE_FAILED 更新失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWeightUpdateStatus(string $WeightUpdateStatus) 设置服务组的权重更新状态 
-UPDATING 更新中
-     UPDATED 更新成功
-     UPDATE_FAILED 更新失败
+ * @method void setWeightUpdateStatus(string $WeightUpdateStatus) 设置<p>服务组的权重更新状态<br>UPDATING 更新中<br>     UPDATED 更新成功<br>     UPDATE_FAILED 更新失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getReplicasCount() 获取服务组下运行的pod数量
+ * @method integer getReplicasCount() 获取<p>服务组下运行的pod数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReplicasCount(integer $ReplicasCount) 设置服务组下运行的pod数量
+ * @method void setReplicasCount(integer $ReplicasCount) 设置<p>服务组下运行的pod数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAvailableReplicasCount() 获取服务组下期望的pod数
+ * @method integer getAvailableReplicasCount() 获取<p>服务组下期望的pod数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAvailableReplicasCount(integer $AvailableReplicasCount) 设置服务组下期望的pod数
+ * @method void setAvailableReplicasCount(integer $AvailableReplicasCount) 设置<p>服务组下期望的pod数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSubUin() 获取服务组的subuin
- * @method void setSubUin(string $SubUin) 设置服务组的subuin
- * @method integer getAppId() 获取服务组的app_id
- * @method void setAppId(integer $AppId) 设置服务组的app_id
- * @method boolean getAuthorizationEnable() 获取是否开启鉴权
- * @method void setAuthorizationEnable(boolean $AuthorizationEnable) 设置是否开启鉴权
- * @method array getAuthTokens() 获取限流鉴权 token 列表
- * @method void setAuthTokens(array $AuthTokens) 设置限流鉴权 token 列表
- * @method string getMonitorSource() 获取用于监控的创建来源字段
- * @method void setMonitorSource(string $MonitorSource) 设置用于监控的创建来源字段
- * @method string getSubUinName() 获取子用户的 nickname
- * @method void setSubUinName(string $SubUinName) 设置子用户的 nickname
- * @method LogConfig getGatewayLogConfig() 获取网关日志投递相关配置
- * @method void setGatewayLogConfig(LogConfig $GatewayLogConfig) 设置网关日志投递相关配置
- * @method GatewayConfig getGatewayConfig() 获取网关路由相关配置
- * @method void setGatewayConfig(GatewayConfig $GatewayConfig) 设置网关路由相关配置
+ * @method string getSubUin() 获取<p>服务组的subuin</p>
+ * @method void setSubUin(string $SubUin) 设置<p>服务组的subuin</p>
+ * @method integer getAppId() 获取<p>服务组的app_id</p>
+ * @method void setAppId(integer $AppId) 设置<p>服务组的app_id</p>
+ * @method boolean getAuthorizationEnable() 获取<p>是否开启鉴权</p>
+ * @method void setAuthorizationEnable(boolean $AuthorizationEnable) 设置<p>是否开启鉴权</p>
+ * @method array getAuthTokens() 获取<p>限流鉴权 token 列表</p>
+ * @method void setAuthTokens(array $AuthTokens) 设置<p>限流鉴权 token 列表</p>
+ * @method string getMonitorSource() 获取<p>用于监控的创建来源字段</p>
+ * @method void setMonitorSource(string $MonitorSource) 设置<p>用于监控的创建来源字段</p>
+ * @method string getSubUinName() 获取<p>子用户的 nickname</p>
+ * @method void setSubUinName(string $SubUinName) 设置<p>子用户的 nickname</p>
+ * @method LogConfig getGatewayLogConfig() 获取<p>网关日志投递相关配置</p>
+ * @method void setGatewayLogConfig(LogConfig $GatewayLogConfig) 设置<p>网关日志投递相关配置</p>
+ * @method GatewayConfig getGatewayConfig() 获取<p>网关路由相关配置</p>
+ * @method void setGatewayConfig(GatewayConfig $GatewayConfig) 设置<p>网关路由相关配置</p>
  */
 class ServiceGroup extends AbstractModel
 {
     /**
-     * @var string 服务组id
+     * @var string <p>服务组id</p>
      */
     public $ServiceGroupId;
 
     /**
-     * @var string 服务组名
+     * @var string <p>服务组名</p>
      */
     public $ServiceGroupName;
 
     /**
-     * @var string 创建者
+     * @var string <p>创建者</p>
      */
     public $CreatedBy;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 主账号
+     * @var string <p>主账号</p>
      */
     public $Uin;
 
     /**
-     * @var integer 服务组下服务总数
+     * @var integer <p>服务组下服务总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceCount;
 
     /**
-     * @var integer 服务组下在运行的服务数量
+     * @var integer <p>服务组下在运行的服务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunningServiceCount;
 
     /**
-     * @var array 服务描述
+     * @var array <p>服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Services;
 
     /**
-     * @var string 服务组状态，与服务一致
- CREATING 创建中
-     CREATE_FAILED 创建失败
-     Normal	正常运行中
-     Stopped  已停止
-     Stopping 停止中
-     Abnormal 异常
-     Pending 启动中
-     Waiting 就绪中
+     * @var string <p>服务组状态，与服务一致<br> CREATING 创建中<br>     CREATE_FAILED 创建失败<br>     Normal    正常运行中<br>     Stopped  已停止<br>     Stopping 停止中<br>     Abnormal 异常<br>     Pending 启动中<br>     Waiting 就绪中</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var array 服务组标签
+     * @var array <p>服务组标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
-     * @var string 服务组下最高版本
+     * @var string <p>服务组下最高版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LatestVersion;
 
     /**
-     * @var string 服务的业务状态
-CREATING 创建中
-     CREATE_FAILED 创建失败
-     ARREARS_STOP 因欠费被强制停止
-     BILLING 计费中
-     WHITELIST_USING 白名单试用中
-     WHITELIST_STOP 白名单额度不足
+     * @var string <p>服务的业务状态<br>CREATING 创建中<br>     CREATE_FAILED 创建失败<br>     ARREARS_STOP 因欠费被强制停止<br>     BILLING 计费中<br>     WHITELIST_USING 白名单试用中<br>     WHITELIST_STOP 白名单额度不足</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessStatus;
 
     /**
-     * @var string 服务的计费信息
+     * @var string <p>服务的计费信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillingInfo;
 
     /**
-     * @var string 服务的创建来源
+     * @var string <p>服务的创建来源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateSource;
 
     /**
-     * @var string 服务组的权重更新状态 
-UPDATING 更新中
-     UPDATED 更新成功
-     UPDATE_FAILED 更新失败
+     * @var string <p>服务组的权重更新状态<br>UPDATING 更新中<br>     UPDATED 更新成功<br>     UPDATE_FAILED 更新失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WeightUpdateStatus;
 
     /**
-     * @var integer 服务组下运行的pod数量
+     * @var integer <p>服务组下运行的pod数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReplicasCount;
 
     /**
-     * @var integer 服务组下期望的pod数
+     * @var integer <p>服务组下期望的pod数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AvailableReplicasCount;
 
     /**
-     * @var string 服务组的subuin
+     * @var string <p>服务组的subuin</p>
      */
     public $SubUin;
 
     /**
-     * @var integer 服务组的app_id
+     * @var integer <p>服务组的app_id</p>
      */
     public $AppId;
 
     /**
-     * @var boolean 是否开启鉴权
+     * @var boolean <p>是否开启鉴权</p>
      */
     public $AuthorizationEnable;
 
     /**
-     * @var array 限流鉴权 token 列表
+     * @var array <p>限流鉴权 token 列表</p>
      */
     public $AuthTokens;
 
     /**
-     * @var string 用于监控的创建来源字段
+     * @var string <p>用于监控的创建来源字段</p>
      */
     public $MonitorSource;
 
     /**
-     * @var string 子用户的 nickname
+     * @var string <p>子用户的 nickname</p>
      */
     public $SubUinName;
 
     /**
-     * @var LogConfig 网关日志投递相关配置
+     * @var LogConfig <p>网关日志投递相关配置</p>
      */
     public $GatewayLogConfig;
 
     /**
-     * @var GatewayConfig 网关路由相关配置
+     * @var GatewayConfig <p>网关路由相关配置</p>
      */
     public $GatewayConfig;
 
     /**
-     * @param string $ServiceGroupId 服务组id
-     * @param string $ServiceGroupName 服务组名
-     * @param string $CreatedBy 创建者
-     * @param string $CreateTime 创建时间
-     * @param string $UpdateTime 更新时间
-     * @param string $Uin 主账号
-     * @param integer $ServiceCount 服务组下服务总数
+     * @param string $ServiceGroupId <p>服务组id</p>
+     * @param string $ServiceGroupName <p>服务组名</p>
+     * @param string $CreatedBy <p>创建者</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $UpdateTime <p>更新时间</p>
+     * @param string $Uin <p>主账号</p>
+     * @param integer $ServiceCount <p>服务组下服务总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RunningServiceCount 服务组下在运行的服务数量
+     * @param integer $RunningServiceCount <p>服务组下在运行的服务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Services 服务描述
+     * @param array $Services <p>服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 服务组状态，与服务一致
- CREATING 创建中
-     CREATE_FAILED 创建失败
-     Normal	正常运行中
-     Stopped  已停止
-     Stopping 停止中
-     Abnormal 异常
-     Pending 启动中
-     Waiting 就绪中
+     * @param string $Status <p>服务组状态，与服务一致<br> CREATING 创建中<br>     CREATE_FAILED 创建失败<br>     Normal    正常运行中<br>     Stopped  已停止<br>     Stopping 停止中<br>     Abnormal 异常<br>     Pending 启动中<br>     Waiting 就绪中</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Tags 服务组标签
+     * @param array $Tags <p>服务组标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LatestVersion 服务组下最高版本
+     * @param string $LatestVersion <p>服务组下最高版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BusinessStatus 服务的业务状态
-CREATING 创建中
-     CREATE_FAILED 创建失败
-     ARREARS_STOP 因欠费被强制停止
-     BILLING 计费中
-     WHITELIST_USING 白名单试用中
-     WHITELIST_STOP 白名单额度不足
+     * @param string $BusinessStatus <p>服务的业务状态<br>CREATING 创建中<br>     CREATE_FAILED 创建失败<br>     ARREARS_STOP 因欠费被强制停止<br>     BILLING 计费中<br>     WHITELIST_USING 白名单试用中<br>     WHITELIST_STOP 白名单额度不足</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BillingInfo 服务的计费信息
+     * @param string $BillingInfo <p>服务的计费信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateSource 服务的创建来源
+     * @param string $CreateSource <p>服务的创建来源</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WeightUpdateStatus 服务组的权重更新状态 
-UPDATING 更新中
-     UPDATED 更新成功
-     UPDATE_FAILED 更新失败
+     * @param string $WeightUpdateStatus <p>服务组的权重更新状态<br>UPDATING 更新中<br>     UPDATED 更新成功<br>     UPDATE_FAILED 更新失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ReplicasCount 服务组下运行的pod数量
+     * @param integer $ReplicasCount <p>服务组下运行的pod数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AvailableReplicasCount 服务组下期望的pod数
+     * @param integer $AvailableReplicasCount <p>服务组下期望的pod数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SubUin 服务组的subuin
-     * @param integer $AppId 服务组的app_id
-     * @param boolean $AuthorizationEnable 是否开启鉴权
-     * @param array $AuthTokens 限流鉴权 token 列表
-     * @param string $MonitorSource 用于监控的创建来源字段
-     * @param string $SubUinName 子用户的 nickname
-     * @param LogConfig $GatewayLogConfig 网关日志投递相关配置
-     * @param GatewayConfig $GatewayConfig 网关路由相关配置
+     * @param string $SubUin <p>服务组的subuin</p>
+     * @param integer $AppId <p>服务组的app_id</p>
+     * @param boolean $AuthorizationEnable <p>是否开启鉴权</p>
+     * @param array $AuthTokens <p>限流鉴权 token 列表</p>
+     * @param string $MonitorSource <p>用于监控的创建来源字段</p>
+     * @param string $SubUinName <p>子用户的 nickname</p>
+     * @param LogConfig $GatewayLogConfig <p>网关日志投递相关配置</p>
+     * @param GatewayConfig $GatewayConfig <p>网关路由相关配置</p>
      */
     function __construct()
     {

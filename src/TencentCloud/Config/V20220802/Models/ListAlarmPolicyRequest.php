@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ags\V20250920\Models;
+namespace TencentCloud\Config\V20220802\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 沙箱工具日志采集相关配置
+ * ListAlarmPolicy请求参数结构体
  *
- * @method CLSConfig getCLSConfig() 获取<p>日志推送CLS的配置。</p>
- * @method void setCLSConfig(CLSConfig $CLSConfig) 设置<p>日志推送CLS的配置。</p>
+ * @method integer getOffset() 获取页码
+ * @method void setOffset(integer $Offset) 设置页码
  */
-class LogConfiguration extends AbstractModel
+class ListAlarmPolicyRequest extends AbstractModel
 {
     /**
-     * @var CLSConfig <p>日志推送CLS的配置。</p>
+     * @var integer 页码
      */
-    public $CLSConfig;
+    public $Offset;
 
     /**
-     * @param CLSConfig $CLSConfig <p>日志推送CLS的配置。</p>
+     * @param integer $Offset 页码
      */
     function __construct()
     {
@@ -46,9 +46,8 @@ class LogConfiguration extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CLSConfig",$param) and $param["CLSConfig"] !== null) {
-            $this->CLSConfig = new CLSConfig();
-            $this->CLSConfig->deserialize($param["CLSConfig"]);
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

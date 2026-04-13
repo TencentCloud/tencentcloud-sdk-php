@@ -20,122 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRecord请求参数结构体
  *
- * @method string getDomain() 获取域名
- * @method void setDomain(string $Domain) 设置域名
- * @method string getRecordType() 获取记录类型，可通过接口DescribeRecordType获得，大写英文，比如：A 。
- * @method void setRecordType(string $RecordType) 设置记录类型，可通过接口DescribeRecordType获得，大写英文，比如：A 。
- * @method string getRecordLine() 获取记录线路，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息。比如：默认。
- * @method void setRecordLine(string $RecordLine) 设置记录线路，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息。比如：默认。
- * @method string getValue() 获取记录值，如 IP : 200.200.200.200， CNAME : cname.dnspod.com.， MX : mail.dnspod.com.。
- * @method void setValue(string $Value) 设置记录值，如 IP : 200.200.200.200， CNAME : cname.dnspod.com.， MX : mail.dnspod.com.。
- * @method integer getRecordId() 获取记录 ID 。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
- * @method void setRecordId(integer $RecordId) 设置记录 ID 。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
- * @method integer getDomainId() 获取域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
- * @method void setDomainId(integer $DomainId) 设置域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
- * @method string getSubDomain() 获取主机记录，如 www，如果不传，默认为 @。
- * @method void setSubDomain(string $SubDomain) 设置主机记录，如 www，如果不传，默认为 @。
- * @method string getRecordLineId() 获取线路的 ID，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
- * @method void setRecordLineId(string $RecordLineId) 设置线路的 ID，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
- * @method integer getMX() 获取MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围1-65535。
- * @method void setMX(integer $MX) 设置MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围1-65535。
- * @method integer getTTL() 获取TTL，范围1-604800，不同等级域名最小值不同。
- * @method void setTTL(integer $TTL) 设置TTL，范围1-604800，不同等级域名最小值不同。
- * @method integer getWeight() 获取权重信息，0到100的整数。0 表示关闭，不传该参数，表示不设置权重信息。
- * @method void setWeight(integer $Weight) 设置权重信息，0到100的整数。0 表示关闭，不传该参数，表示不设置权重信息。
- * @method string getStatus() 获取记录初始状态，取值范围为 ENABLE 和 DISABLE 。默认为 ENABLE ，如果传入 DISABLE，解析不会生效，也不会验证负载均衡的限制。
- * @method void setStatus(string $Status) 设置记录初始状态，取值范围为 ENABLE 和 DISABLE 。默认为 ENABLE ，如果传入 DISABLE，解析不会生效，也不会验证负载均衡的限制。
- * @method string getRemark() 获取记录的备注信息。传空删除备注。
- * @method void setRemark(string $Remark) 设置记录的备注信息。传空删除备注。
- * @method string getDnssecConflictMode() 获取开启DNSSEC时，强制将其它记录修改为CNAME/URL记录
- * @method void setDnssecConflictMode(string $DnssecConflictMode) 设置开启DNSSEC时，强制将其它记录修改为CNAME/URL记录
+ * @method string getDomain() 获取<p>域名</p>
+ * @method void setDomain(string $Domain) 设置<p>域名</p>
+ * @method string getRecordType() 获取<p>记录类型，可通过接口DescribeRecordType获得，大写英文，比如：A 。</p>
+ * @method void setRecordType(string $RecordType) 设置<p>记录类型，可通过接口DescribeRecordType获得，大写英文，比如：A 。</p>
+ * @method string getRecordLine() 获取<p>记录线路，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息。比如：默认。</p>
+ * @method void setRecordLine(string $RecordLine) 设置<p>记录线路，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息。比如：默认。</p>
+ * @method string getValue() 获取<p>记录值，如 IP : 200.200.200.200， CNAME : cname.dnspod.com.， MX : mail.dnspod.com.。</p>
+ * @method void setValue(string $Value) 设置<p>记录值，如 IP : 200.200.200.200， CNAME : cname.dnspod.com.， MX : mail.dnspod.com.。</p>
+ * @method integer getRecordId() 获取<p>记录 ID 。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId</p>
+ * @method void setRecordId(integer $RecordId) 设置<p>记录 ID 。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId</p>
+ * @method integer getDomainId() 获取<p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId</p>
+ * @method void setDomainId(integer $DomainId) 设置<p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId</p>
+ * @method string getSubDomain() 获取<p>主机记录，如 www，如果不传，默认为 @。</p>
+ * @method void setSubDomain(string $SubDomain) 设置<p>主机记录，如 www，如果不传，默认为 @。</p>
+ * @method string getRecordLineId() 获取<p>线路的 ID，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。</p>
+ * @method void setRecordLineId(string $RecordLineId) 设置<p>线路的 ID，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。</p>
+ * @method integer getMX() 获取<p>MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围0-65535。</p><p>取值范围：[0, 65535]</p>
+ * @method void setMX(integer $MX) 设置<p>MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围0-65535。</p><p>取值范围：[0, 65535]</p>
+ * @method integer getTTL() 获取<p>TTL，范围1-604800，不同等级域名最小值不同。</p>
+ * @method void setTTL(integer $TTL) 设置<p>TTL，范围1-604800，不同等级域名最小值不同。</p>
+ * @method integer getWeight() 获取<p>权重信息，0到100的整数。0 表示关闭，不传该参数，表示不设置权重信息。</p>
+ * @method void setWeight(integer $Weight) 设置<p>权重信息，0到100的整数。0 表示关闭，不传该参数，表示不设置权重信息。</p>
+ * @method string getStatus() 获取<p>记录初始状态，取值范围为 ENABLE 和 DISABLE 。默认为 ENABLE ，如果传入 DISABLE，解析不会生效，也不会验证负载均衡的限制。</p>
+ * @method void setStatus(string $Status) 设置<p>记录初始状态，取值范围为 ENABLE 和 DISABLE 。默认为 ENABLE ，如果传入 DISABLE，解析不会生效，也不会验证负载均衡的限制。</p>
+ * @method string getRemark() 获取<p>记录的备注信息。传空删除备注。</p>
+ * @method void setRemark(string $Remark) 设置<p>记录的备注信息。传空删除备注。</p>
+ * @method string getDnssecConflictMode() 获取<p>开启DNSSEC时，强制将其它记录修改为CNAME/URL记录</p>
+ * @method void setDnssecConflictMode(string $DnssecConflictMode) 设置<p>开启DNSSEC时，强制将其它记录修改为CNAME/URL记录</p>
  */
 class ModifyRecordRequest extends AbstractModel
 {
     /**
-     * @var string 域名
+     * @var string <p>域名</p>
      */
     public $Domain;
 
     /**
-     * @var string 记录类型，可通过接口DescribeRecordType获得，大写英文，比如：A 。
+     * @var string <p>记录类型，可通过接口DescribeRecordType获得，大写英文，比如：A 。</p>
      */
     public $RecordType;
 
     /**
-     * @var string 记录线路，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息。比如：默认。
+     * @var string <p>记录线路，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息。比如：默认。</p>
      */
     public $RecordLine;
 
     /**
-     * @var string 记录值，如 IP : 200.200.200.200， CNAME : cname.dnspod.com.， MX : mail.dnspod.com.。
+     * @var string <p>记录值，如 IP : 200.200.200.200， CNAME : cname.dnspod.com.， MX : mail.dnspod.com.。</p>
      */
     public $Value;
 
     /**
-     * @var integer 记录 ID 。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
+     * @var integer <p>记录 ID 。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId</p>
      */
     public $RecordId;
 
     /**
-     * @var integer 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+     * @var integer <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId</p>
      */
     public $DomainId;
 
     /**
-     * @var string 主机记录，如 www，如果不传，默认为 @。
+     * @var string <p>主机记录，如 www，如果不传，默认为 @。</p>
      */
     public $SubDomain;
 
     /**
-     * @var string 线路的 ID，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+     * @var string <p>线路的 ID，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。</p>
      */
     public $RecordLineId;
 
     /**
-     * @var integer MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围1-65535。
+     * @var integer <p>MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围0-65535。</p><p>取值范围：[0, 65535]</p>
      */
     public $MX;
 
     /**
-     * @var integer TTL，范围1-604800，不同等级域名最小值不同。
+     * @var integer <p>TTL，范围1-604800，不同等级域名最小值不同。</p>
      */
     public $TTL;
 
     /**
-     * @var integer 权重信息，0到100的整数。0 表示关闭，不传该参数，表示不设置权重信息。
+     * @var integer <p>权重信息，0到100的整数。0 表示关闭，不传该参数，表示不设置权重信息。</p>
      */
     public $Weight;
 
     /**
-     * @var string 记录初始状态，取值范围为 ENABLE 和 DISABLE 。默认为 ENABLE ，如果传入 DISABLE，解析不会生效，也不会验证负载均衡的限制。
+     * @var string <p>记录初始状态，取值范围为 ENABLE 和 DISABLE 。默认为 ENABLE ，如果传入 DISABLE，解析不会生效，也不会验证负载均衡的限制。</p>
      */
     public $Status;
 
     /**
-     * @var string 记录的备注信息。传空删除备注。
+     * @var string <p>记录的备注信息。传空删除备注。</p>
      */
     public $Remark;
 
     /**
-     * @var string 开启DNSSEC时，强制将其它记录修改为CNAME/URL记录
+     * @var string <p>开启DNSSEC时，强制将其它记录修改为CNAME/URL记录</p>
      */
     public $DnssecConflictMode;
 
     /**
-     * @param string $Domain 域名
-     * @param string $RecordType 记录类型，可通过接口DescribeRecordType获得，大写英文，比如：A 。
-     * @param string $RecordLine 记录线路，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息。比如：默认。
-     * @param string $Value 记录值，如 IP : 200.200.200.200， CNAME : cname.dnspod.com.， MX : mail.dnspod.com.。
-     * @param integer $RecordId 记录 ID 。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
-     * @param integer $DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
-     * @param string $SubDomain 主机记录，如 www，如果不传，默认为 @。
-     * @param string $RecordLineId 线路的 ID，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
-     * @param integer $MX MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围1-65535。
-     * @param integer $TTL TTL，范围1-604800，不同等级域名最小值不同。
-     * @param integer $Weight 权重信息，0到100的整数。0 表示关闭，不传该参数，表示不设置权重信息。
-     * @param string $Status 记录初始状态，取值范围为 ENABLE 和 DISABLE 。默认为 ENABLE ，如果传入 DISABLE，解析不会生效，也不会验证负载均衡的限制。
-     * @param string $Remark 记录的备注信息。传空删除备注。
-     * @param string $DnssecConflictMode 开启DNSSEC时，强制将其它记录修改为CNAME/URL记录
+     * @param string $Domain <p>域名</p>
+     * @param string $RecordType <p>记录类型，可通过接口DescribeRecordType获得，大写英文，比如：A 。</p>
+     * @param string $RecordLine <p>记录线路，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息。比如：默认。</p>
+     * @param string $Value <p>记录值，如 IP : 200.200.200.200， CNAME : cname.dnspod.com.， MX : mail.dnspod.com.。</p>
+     * @param integer $RecordId <p>记录 ID 。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId</p>
+     * @param integer $DomainId <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId</p>
+     * @param string $SubDomain <p>主机记录，如 www，如果不传，默认为 @。</p>
+     * @param string $RecordLineId <p>线路的 ID，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。</p>
+     * @param integer $MX <p>MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围0-65535。</p><p>取值范围：[0, 65535]</p>
+     * @param integer $TTL <p>TTL，范围1-604800，不同等级域名最小值不同。</p>
+     * @param integer $Weight <p>权重信息，0到100的整数。0 表示关闭，不传该参数，表示不设置权重信息。</p>
+     * @param string $Status <p>记录初始状态，取值范围为 ENABLE 和 DISABLE 。默认为 ENABLE ，如果传入 DISABLE，解析不会生效，也不会验证负载均衡的限制。</p>
+     * @param string $Remark <p>记录的备注信息。传空删除备注。</p>
+     * @param string $DnssecConflictMode <p>开启DNSSEC时，强制将其它记录修改为CNAME/URL记录</p>
      */
     function __construct()
     {

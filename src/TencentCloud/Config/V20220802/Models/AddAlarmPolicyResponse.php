@@ -14,23 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dnspod\V20210323\Models;
+namespace TencentCloud\Config\V20220802\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyRecord返回参数结构体
+ * AddAlarmPolicy返回参数结构体
  *
- * @method integer getRecordId() 获取<p>记录ID</p>
- * @method void setRecordId(integer $RecordId) 设置<p>记录ID</p>
+ * @method integer getAlarmPolicyId() 获取告警策略唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlarmPolicyId(integer $AlarmPolicyId) 设置告警策略唯一id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyRecordResponse extends AbstractModel
+class AddAlarmPolicyResponse extends AbstractModel
 {
     /**
-     * @var integer <p>记录ID</p>
+     * @var integer 告警策略唯一id
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $RecordId;
+    public $AlarmPolicyId;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +41,8 @@ class ModifyRecordResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $RecordId <p>记录ID</p>
+     * @param integer $AlarmPolicyId 告警策略唯一id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +58,8 @@ class ModifyRecordResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RecordId",$param) and $param["RecordId"] !== null) {
-            $this->RecordId = $param["RecordId"];
+        if (array_key_exists("AlarmPolicyId",$param) and $param["AlarmPolicyId"] !== null) {
+            $this->AlarmPolicyId = $param["AlarmPolicyId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

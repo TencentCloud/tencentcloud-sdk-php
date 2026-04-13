@@ -25,6 +25,7 @@ use TencentCloud\Config\V20220802\Models as Models;
 /**
  * @method Models\AddAggregateCompliancePackResponse AddAggregateCompliancePack(Models\AddAggregateCompliancePackRequest $req) 账号组新建合规包
  * @method Models\AddAggregateConfigRuleResponse AddAggregateConfigRule(Models\AddAggregateConfigRuleRequest $req) 账号组新建规则
+ * @method Models\AddAlarmPolicyResponse AddAlarmPolicy(Models\AddAlarmPolicyRequest $req) 新增告警监控规则
  * @method Models\AddCompliancePackResponse AddCompliancePack(Models\AddCompliancePackRequest $req) 新建合规包
  * @method Models\AddConfigRuleResponse AddConfigRule(Models\AddConfigRuleRequest $req) 新建 规则
  * @method Models\CloseAggregateConfigRuleResponse CloseAggregateConfigRule(Models\CloseAggregateConfigRuleRequest $req) 账号组关闭规则
@@ -34,6 +35,7 @@ use TencentCloud\Config\V20220802\Models as Models;
  * @method Models\CreateRemediationResponse CreateRemediation(Models\CreateRemediationRequest $req) 新增规则修正设置
  * @method Models\DeleteAggregateCompliancePackResponse DeleteAggregateCompliancePack(Models\DeleteAggregateCompliancePackRequest $req) 账号组删除合规包
  * @method Models\DeleteAggregateConfigRuleResponse DeleteAggregateConfigRule(Models\DeleteAggregateConfigRuleRequest $req) 账号组删除规则
+ * @method Models\DeleteAlarmPolicyResponse DeleteAlarmPolicy(Models\DeleteAlarmPolicyRequest $req) 删除告警规则
  * @method Models\DeleteCompliancePackResponse DeleteCompliancePack(Models\DeleteCompliancePackRequest $req) 删除合规包
  * @method Models\DeleteConfigRuleResponse DeleteConfigRule(Models\DeleteConfigRuleRequest $req) 删除规则
  * @method Models\DeleteRemediationsResponse DeleteRemediations(Models\DeleteRemediationsRequest $req) 删除规则修正设置
@@ -56,6 +58,7 @@ use TencentCloud\Config\V20220802\Models as Models;
  * @method Models\ListAggregateConfigRulesResponse ListAggregateConfigRules(Models\ListAggregateConfigRulesRequest $req) 账号组获取规则列表
  * @method Models\ListAggregateDiscoveredResourcesResponse ListAggregateDiscoveredResources(Models\ListAggregateDiscoveredResourcesRequest $req) 账号组获取资源列表
  * @method Models\ListAggregatorsResponse ListAggregators(Models\ListAggregatorsRequest $req) 账号组列表
+ * @method Models\ListAlarmPolicyResponse ListAlarmPolicy(Models\ListAlarmPolicyRequest $req) 告警规则列表
  * @method Models\ListCompliancePacksResponse ListCompliancePacks(Models\ListCompliancePacksRequest $req) 获取合规包列表
  * @method Models\ListConfigRuleEvaluationResultsResponse ListConfigRuleEvaluationResults(Models\ListConfigRuleEvaluationResultsRequest $req)  获取评估结果--规则维度（某个规则下资源的评估结果列表）
  * @method Models\ListConfigRulesResponse ListConfigRules(Models\ListConfigRulesRequest $req) 获取规则列表
@@ -76,6 +79,7 @@ use TencentCloud\Config\V20220802\Models as Models;
  * @method Models\UpdateAggregateCompliancePackStatusResponse UpdateAggregateCompliancePackStatus(Models\UpdateAggregateCompliancePackStatusRequest $req) 账号组开启、关闭合规包
  * @method Models\UpdateAggregateConfigDeliverResponse UpdateAggregateConfigDeliver(Models\UpdateAggregateConfigDeliverRequest $req) 账号组编辑投递设置
  * @method Models\UpdateAggregateConfigRuleResponse UpdateAggregateConfigRule(Models\UpdateAggregateConfigRuleRequest $req) 账号组编辑规则
+ * @method Models\UpdateAlarmPolicyResponse UpdateAlarmPolicy(Models\UpdateAlarmPolicyRequest $req) 更新告警规则
  * @method Models\UpdateCompliancePackResponse UpdateCompliancePack(Models\UpdateCompliancePackRequest $req) 编辑合规包
  * @method Models\UpdateCompliancePackStatusResponse UpdateCompliancePackStatus(Models\UpdateCompliancePackStatusRequest $req) 开启、关闭合规包
  * @method Models\UpdateConfigDeliverResponse UpdateConfigDeliver(Models\UpdateConfigDeliverRequest $req) 编辑投递设置

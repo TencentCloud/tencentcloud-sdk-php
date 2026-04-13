@@ -20,105 +20,117 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 监听者任务信息
  *
- * @method string getTaskId() 获取任务id
+ * @method string getTaskId() 获取<p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskId(string $TaskId) 设置任务id
+ * @method void setTaskId(string $TaskId) 设置<p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskName() 获取任务名称
+ * @method string getTaskName() 获取<p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskName(string $TaskName) 设置任务名称
+ * @method void setTaskName(string $TaskName) 设置<p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkflowId() 获取工作流id
+ * @method string getWorkflowId() 获取<p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowId(string $WorkflowId) 设置工作流id
+ * @method void setWorkflowId(string $WorkflowId) 设置<p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkflowName() 获取工作流名称
+ * @method string getWorkflowName() 获取<p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowName(string $WorkflowName) 设置工作流名称
+ * @method void setWorkflowName(string $WorkflowName) 设置<p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTaskTypeId() 获取任务类型id
+ * @method integer getTaskTypeId() 获取<p>任务类型id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskTypeId(integer $TaskTypeId) 设置任务类型id
+ * @method void setTaskTypeId(integer $TaskTypeId) 设置<p>任务类型id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskType() 获取任务类型名称
+ * @method string getTaskType() 获取<p>任务类型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskType(string $TaskType) 设置任务类型名称
+ * @method void setTaskType(string $TaskType) 设置<p>任务类型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProjectId() 获取项目id
+ * @method string getProjectId() 获取<p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectId(string $ProjectId) 设置项目id
+ * @method void setProjectId(string $ProjectId) 设置<p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCycleType() 获取任务周期类型
+ * @method string getCycleType() 获取<p>任务周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCycleType(string $CycleType) 设置任务周期类型
+ * @method void setCycleType(string $CycleType) 设置<p>任务周期类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEventName() 获取<p>事件名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEventName(string $EventName) 设置<p>事件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class EventListenerTaskInfo extends AbstractModel
 {
     /**
-     * @var string 任务id
+     * @var string <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
-     * @var string 任务名称
+     * @var string <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskName;
 
     /**
-     * @var string 工作流id
+     * @var string <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowId;
 
     /**
-     * @var string 工作流名称
+     * @var string <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowName;
 
     /**
-     * @var integer 任务类型id
+     * @var integer <p>任务类型id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskTypeId;
 
     /**
-     * @var string 任务类型名称
+     * @var string <p>任务类型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskType;
 
     /**
-     * @var string 项目id
+     * @var string <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
-     * @var string 任务周期类型
+     * @var string <p>任务周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CycleType;
 
     /**
-     * @param string $TaskId 任务id
+     * @var string <p>事件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskName 任务名称
+     */
+    public $EventName;
+
+    /**
+     * @param string $TaskId <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkflowId 工作流id
+     * @param string $TaskName <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkflowName 工作流名称
+     * @param string $WorkflowId <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TaskTypeId 任务类型id
+     * @param string $WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskType 任务类型名称
+     * @param integer $TaskTypeId <p>任务类型id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProjectId 项目id
+     * @param string $TaskType <p>任务类型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CycleType 任务周期类型
+     * @param string $ProjectId <p>项目id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CycleType <p>任务周期类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EventName <p>事件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +176,10 @@ class EventListenerTaskInfo extends AbstractModel
 
         if (array_key_exists("CycleType",$param) and $param["CycleType"] !== null) {
             $this->CycleType = $param["CycleType"];
+        }
+
+        if (array_key_exists("EventName",$param) and $param["EventName"] !== null) {
+            $this->EventName = $param["EventName"];
         }
     }
 }

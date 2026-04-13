@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInputRegion(string $InputRegion) 设置<p>输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。</p>
  * @method string getSceneType() 获取<p>场景类型。取值如下：<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li><li>其他 ModelName 暂不支持。</li></p>
  * @method void setSceneType(string $SceneType) 设置<p>场景类型。取值如下：<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li><li>其他 ModelName 暂不支持。</li></p>
+ * @method integer getSeed() 获取<p>模型随机种子。</p>
+ * @method void setSeed(integer $Seed) 设置<p>模型随机种子。</p>
  */
 class AigcVideoTaskInput extends AbstractModel
 {
@@ -115,6 +117,11 @@ class AigcVideoTaskInput extends AbstractModel
     public $SceneType;
 
     /**
+     * @var integer <p>模型随机种子。</p>
+     */
+    public $Seed;
+
+    /**
      * @param string $ModelName <p>模型名称。</p>
      * @param string $ModelVersion <p>模型版本。</p>
      * @param array $FileInfos <p>AIGC 生视频任务输入文件信息。</p>
@@ -128,6 +135,7 @@ class AigcVideoTaskInput extends AbstractModel
      * @param AigcVideoOutputConfig $OutputConfig <p>AIGC 生图输出结果文件输出。</p>
      * @param string $InputRegion <p>输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。</p>
      * @param string $SceneType <p>场景类型。取值如下：<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li><li>其他 ModelName 暂不支持。</li></p>
+     * @param integer $Seed <p>模型随机种子。</p>
      */
     function __construct()
     {
@@ -203,6 +211,10 @@ class AigcVideoTaskInput extends AbstractModel
 
         if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
             $this->SceneType = $param["SceneType"];
+        }
+
+        if (array_key_exists("Seed",$param) and $param["Seed"] !== null) {
+            $this->Seed = $param["Seed"];
         }
     }
 }

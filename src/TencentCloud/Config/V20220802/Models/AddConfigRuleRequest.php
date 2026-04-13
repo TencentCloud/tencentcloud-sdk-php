@@ -20,114 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddConfigRule请求参数结构体
  *
- * @method string getIdentifier() 获取规则模板标识，预设规则模板为Identifier, 自定义规则为云函数arn（region:functionName）
- * @method void setIdentifier(string $Identifier) 设置规则模板标识，预设规则模板为Identifier, 自定义规则为云函数arn（region:functionName）
- * @method string getIdentifierType() 获取规则模板类型，SYSTEM, CUSTOMIZE
- * @method void setIdentifierType(string $IdentifierType) 设置规则模板类型，SYSTEM, CUSTOMIZE
- * @method string getRuleName() 获取规则名称
- * @method void setRuleName(string $RuleName) 设置规则名称
- * @method array getResourceType() 获取规则支持的资源
- * @method void setResourceType(array $ResourceType) 设置规则支持的资源
- * @method array getTriggerType() 获取触发类型，最多支持两种
- * @method void setTriggerType(array $TriggerType) 设置触发类型，最多支持两种
- * @method integer getRiskLevel() 获取风险等级
-1：高风险。
-2：中风险。
-3：低风险。
- * @method void setRiskLevel(integer $RiskLevel) 设置风险等级
-1：高风险。
-2：中风险。
-3：低风险。
- * @method array getInputParameter() 获取入参
- * @method void setInputParameter(array $InputParameter) 设置入参
- * @method string getDescription() 获取规则描述。长度范围0~1024字符
- * @method void setDescription(string $Description) 设置规则描述。长度范围0~1024字符
- * @method array getRegionsScope() 获取规则评估地域范围，规则仅对指定地域中的资源生效。
-支持的地域范围config:ListResourceRegions返回的地域
- * @method void setRegionsScope(array $RegionsScope) 设置规则评估地域范围，规则仅对指定地域中的资源生效。
-支持的地域范围config:ListResourceRegions返回的地域
- * @method array getTagsScope() 获取规则评估标签范围，规则仅对绑定指定标签的资源生效。
- * @method void setTagsScope(array $TagsScope) 设置规则评估标签范围，规则仅对绑定指定标签的资源生效。
- * @method array getExcludeResourceIdsScope() 获取规则对指定资源ID无效，即不对该资源执行评估。
- * @method void setExcludeResourceIdsScope(array $ExcludeResourceIdsScope) 设置规则对指定资源ID无效，即不对该资源执行评估。
+ * @method string getIdentifier() 获取<p>规则模板标识，预设规则模板为Identifier, 自定义规则为云函数arn（region:functionName）</p>
+ * @method void setIdentifier(string $Identifier) 设置<p>规则模板标识，预设规则模板为Identifier, 自定义规则为云函数arn（region:functionName）</p>
+ * @method string getIdentifierType() 获取<p>规则模板类型，SYSTEM, CUSTOMIZE</p>
+ * @method void setIdentifierType(string $IdentifierType) 设置<p>规则模板类型，SYSTEM, CUSTOMIZE</p>
+ * @method string getRuleName() 获取<p>规则名称</p>
+ * @method void setRuleName(string $RuleName) 设置<p>规则名称</p>
+ * @method array getResourceType() 获取<p>规则支持的资源</p>
+ * @method void setResourceType(array $ResourceType) 设置<p>规则支持的资源</p>
+ * @method array getTriggerType() 获取<p>触发类型，最多支持两种</p>
+ * @method void setTriggerType(array $TriggerType) 设置<p>触发类型，最多支持两种</p>
+ * @method integer getRiskLevel() 获取<p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p>
+ * @method void setRiskLevel(integer $RiskLevel) 设置<p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p>
+ * @method array getInputParameter() 获取<p>入参</p>
+ * @method void setInputParameter(array $InputParameter) 设置<p>入参</p>
+ * @method string getDescription() 获取<p>规则描述。长度范围0~1024字符</p>
+ * @method void setDescription(string $Description) 设置<p>规则描述。长度范围0~1024字符</p>
+ * @method array getRegionsScope() 获取<p>规则评估地域范围，规则仅对指定地域中的资源生效。<br>支持的地域范围config:ListResourceRegions返回的地域</p>
+ * @method void setRegionsScope(array $RegionsScope) 设置<p>规则评估地域范围，规则仅对指定地域中的资源生效。<br>支持的地域范围config:ListResourceRegions返回的地域</p>
+ * @method array getTagsScope() 获取<p>规则评估标签范围，规则仅对绑定指定标签的资源生效。</p>
+ * @method void setTagsScope(array $TagsScope) 设置<p>规则评估标签范围，规则仅对绑定指定标签的资源生效。</p>
+ * @method array getExcludeResourceIdsScope() 获取<p>规则对指定资源ID无效，即不对该资源执行评估。</p>
+ * @method void setExcludeResourceIdsScope(array $ExcludeResourceIdsScope) 设置<p>规则对指定资源ID无效，即不对该资源执行评估。</p>
  */
 class AddConfigRuleRequest extends AbstractModel
 {
     /**
-     * @var string 规则模板标识，预设规则模板为Identifier, 自定义规则为云函数arn（region:functionName）
+     * @var string <p>规则模板标识，预设规则模板为Identifier, 自定义规则为云函数arn（region:functionName）</p>
      */
     public $Identifier;
 
     /**
-     * @var string 规则模板类型，SYSTEM, CUSTOMIZE
+     * @var string <p>规则模板类型，SYSTEM, CUSTOMIZE</p>
      */
     public $IdentifierType;
 
     /**
-     * @var string 规则名称
+     * @var string <p>规则名称</p>
      */
     public $RuleName;
 
     /**
-     * @var array 规则支持的资源
+     * @var array <p>规则支持的资源</p>
      */
     public $ResourceType;
 
     /**
-     * @var array 触发类型，最多支持两种
+     * @var array <p>触发类型，最多支持两种</p>
      */
     public $TriggerType;
 
     /**
-     * @var integer 风险等级
-1：高风险。
-2：中风险。
-3：低风险。
+     * @var integer <p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p>
      */
     public $RiskLevel;
 
     /**
-     * @var array 入参
+     * @var array <p>入参</p>
      */
     public $InputParameter;
 
     /**
-     * @var string 规则描述。长度范围0~1024字符
+     * @var string <p>规则描述。长度范围0~1024字符</p>
      */
     public $Description;
 
     /**
-     * @var array 规则评估地域范围，规则仅对指定地域中的资源生效。
-支持的地域范围config:ListResourceRegions返回的地域
+     * @var array <p>规则评估地域范围，规则仅对指定地域中的资源生效。<br>支持的地域范围config:ListResourceRegions返回的地域</p>
      */
     public $RegionsScope;
 
     /**
-     * @var array 规则评估标签范围，规则仅对绑定指定标签的资源生效。
+     * @var array <p>规则评估标签范围，规则仅对绑定指定标签的资源生效。</p>
      */
     public $TagsScope;
 
     /**
-     * @var array 规则对指定资源ID无效，即不对该资源执行评估。
+     * @var array <p>规则对指定资源ID无效，即不对该资源执行评估。</p>
      */
     public $ExcludeResourceIdsScope;
 
     /**
-     * @param string $Identifier 规则模板标识，预设规则模板为Identifier, 自定义规则为云函数arn（region:functionName）
-     * @param string $IdentifierType 规则模板类型，SYSTEM, CUSTOMIZE
-     * @param string $RuleName 规则名称
-     * @param array $ResourceType 规则支持的资源
-     * @param array $TriggerType 触发类型，最多支持两种
-     * @param integer $RiskLevel 风险等级
-1：高风险。
-2：中风险。
-3：低风险。
-     * @param array $InputParameter 入参
-     * @param string $Description 规则描述。长度范围0~1024字符
-     * @param array $RegionsScope 规则评估地域范围，规则仅对指定地域中的资源生效。
-支持的地域范围config:ListResourceRegions返回的地域
-     * @param array $TagsScope 规则评估标签范围，规则仅对绑定指定标签的资源生效。
-     * @param array $ExcludeResourceIdsScope 规则对指定资源ID无效，即不对该资源执行评估。
+     * @param string $Identifier <p>规则模板标识，预设规则模板为Identifier, 自定义规则为云函数arn（region:functionName）</p>
+     * @param string $IdentifierType <p>规则模板类型，SYSTEM, CUSTOMIZE</p>
+     * @param string $RuleName <p>规则名称</p>
+     * @param array $ResourceType <p>规则支持的资源</p>
+     * @param array $TriggerType <p>触发类型，最多支持两种</p>
+     * @param integer $RiskLevel <p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p>
+     * @param array $InputParameter <p>入参</p>
+     * @param string $Description <p>规则描述。长度范围0~1024字符</p>
+     * @param array $RegionsScope <p>规则评估地域范围，规则仅对指定地域中的资源生效。<br>支持的地域范围config:ListResourceRegions返回的地域</p>
+     * @param array $TagsScope <p>规则评估标签范围，规则仅对绑定指定标签的资源生效。</p>
+     * @param array $ExcludeResourceIdsScope <p>规则对指定资源ID无效，即不对该资源执行评估。</p>
      */
     function __construct()
     {

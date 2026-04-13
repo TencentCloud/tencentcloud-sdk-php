@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLogs返回参数结构体
  *
- * @method string getContext() 获取分页的游标
+ * @method string getContext() 获取<p>分页的游标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setContext(string $Context) 设置分页的游标
+ * @method void setContext(string $Context) 设置<p>分页的游标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getContent() 获取日志数组
+ * @method array getContent() 获取<p>日志数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setContent(array $Content) 设置日志数组
+ * @method void setContent(array $Content) 设置<p>日志数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -34,13 +34,13 @@ use TencentCloud\Common\AbstractModel;
 class DescribeLogsResponse extends AbstractModel
 {
     /**
-     * @var string 分页的游标
+     * @var string <p>分页的游标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Context;
 
     /**
-     * @var array 日志数组
+     * @var array <p>日志数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
@@ -51,9 +51,9 @@ class DescribeLogsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Context 分页的游标
+     * @param string $Context <p>分页的游标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Content 日志数组
+     * @param array $Content <p>日志数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

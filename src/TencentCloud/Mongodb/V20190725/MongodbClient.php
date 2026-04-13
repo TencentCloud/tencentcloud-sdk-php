@@ -97,6 +97,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\RenewDBInstancesResponse RenewDBInstances(Models\RenewDBInstancesRequest $req) 本接口(RenewDBInstance)用于续费云数据库实例，仅支持付费模式为包年包月的实例。按量计费实例不需要续费。
  * @method Models\ResetDBInstancePasswordResponse ResetDBInstancePassword(Models\ResetDBInstancePasswordRequest $req) 本接口（ResetDBInstancePassword）用于重置实例访问密码。
  * @method Models\RestartNodesResponse RestartNodes(Models\RestartNodesRequest $req) 本接口（RestartNodes）用于批量重启数据库节点。
+ * @method Models\RestoreDBInstanceResponse RestoreDBInstance(Models\RestoreDBInstanceRequest $req) 本接口(RestoreDBInstance)用于回档数据库实例到指定时间点。
  * @method Models\SetAccountUserPrivilegeResponse SetAccountUserPrivilege(Models\SetAccountUserPrivilegeRequest $req) 本接口（SetAccountUserPrivilege）用于设置实例的账号权限。
  * @method Models\SetBackupRulesResponse SetBackupRules(Models\SetBackupRulesRequest $req) 本接口（SetBackupRules）用于设置 MongoDB 云数据库的自动备份规则。
  * @method Models\SetDBInstanceDeletionProtectionResponse SetDBInstanceDeletionProtection(Models\SetDBInstanceDeletionProtectionRequest $req) 本接口（SetDBInstanceDeletionProtection）用于设置实例销毁保护

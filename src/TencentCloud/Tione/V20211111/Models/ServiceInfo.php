@@ -20,472 +20,440 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 推理服务在集群中的信息
  *
- * @method integer getReplicas() 获取期望运行的Pod数量，停止状态是0
-不同计费模式和调节模式下对应关系如下
-PREPAID 和 POSTPAID_BY_HOUR:
-手动调节模式下对应 实例数量
-自动调节模式下对应 基于时间的默认策略的实例数量
-HYBRID_PAID:
-后付费实例手动调节模式下对应 实例数量
-后付费实例自动调节模式下对应 时间策略的默认策略的实例数量
+ * @method integer getReplicas() 获取<p>期望运行的Pod数量，停止状态是0<br>不同计费模式和调节模式下对应关系如下<br>PREPAID 和 POSTPAID_BY_HOUR:<br>手动调节模式下对应 实例数量<br>自动调节模式下对应 基于时间的默认策略的实例数量<br>HYBRID_PAID:<br>后付费实例手动调节模式下对应 实例数量<br>后付费实例自动调节模式下对应 时间策略的默认策略的实例数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReplicas(integer $Replicas) 设置期望运行的Pod数量，停止状态是0
-不同计费模式和调节模式下对应关系如下
-PREPAID 和 POSTPAID_BY_HOUR:
-手动调节模式下对应 实例数量
-自动调节模式下对应 基于时间的默认策略的实例数量
-HYBRID_PAID:
-后付费实例手动调节模式下对应 实例数量
-后付费实例自动调节模式下对应 时间策略的默认策略的实例数量
+ * @method void setReplicas(integer $Replicas) 设置<p>期望运行的Pod数量，停止状态是0<br>不同计费模式和调节模式下对应关系如下<br>PREPAID 和 POSTPAID_BY_HOUR:<br>手动调节模式下对应 实例数量<br>自动调节模式下对应 基于时间的默认策略的实例数量<br>HYBRID_PAID:<br>后付费实例手动调节模式下对应 实例数量<br>后付费实例自动调节模式下对应 时间策略的默认策略的实例数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ImageInfo getImageInfo() 获取镜像信息
+ * @method ImageInfo getImageInfo() 获取<p>镜像信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImageInfo(ImageInfo $ImageInfo) 设置镜像信息
+ * @method void setImageInfo(ImageInfo $ImageInfo) 设置<p>镜像信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getEnv() 获取环境变量
+ * @method array getEnv() 获取<p>环境变量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnv(array $Env) 设置环境变量
+ * @method void setEnv(array $Env) 设置<p>环境变量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ResourceInfo getResources() 获取资源信息
+ * @method ResourceInfo getResources() 获取<p>资源信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResources(ResourceInfo $Resources) 设置资源信息
+ * @method void setResources(ResourceInfo $Resources) 设置<p>资源信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceType() 获取后付费实例对应的机型规格
- * @method void setInstanceType(string $InstanceType) 设置后付费实例对应的机型规格
- * @method ModelInfo getModelInfo() 获取模型信息
- * @method void setModelInfo(ModelInfo $ModelInfo) 设置模型信息
- * @method boolean getLogEnable() 获取是否启用日志
- * @method void setLogEnable(boolean $LogEnable) 设置是否启用日志
- * @method LogConfig getLogConfig() 获取日志配置
- * @method void setLogConfig(LogConfig $LogConfig) 设置日志配置
- * @method boolean getAuthorizationEnable() 获取是否开启鉴权
- * @method void setAuthorizationEnable(boolean $AuthorizationEnable) 设置是否开启鉴权
- * @method HorizontalPodAutoscaler getHorizontalPodAutoscaler() 获取hpa配置
- * @method void setHorizontalPodAutoscaler(HorizontalPodAutoscaler $HorizontalPodAutoscaler) 设置hpa配置
- * @method WorkloadStatus getStatus() 获取服务的状态描述
+ * @method string getInstanceType() 获取<p>后付费实例对应的机型规格</p>
+ * @method void setInstanceType(string $InstanceType) 设置<p>后付费实例对应的机型规格</p>
+ * @method ModelInfo getModelInfo() 获取<p>模型信息</p>
+ * @method void setModelInfo(ModelInfo $ModelInfo) 设置<p>模型信息</p>
+ * @method boolean getLogEnable() 获取<p>是否启用日志</p>
+ * @method void setLogEnable(boolean $LogEnable) 设置<p>是否启用日志</p>
+ * @method LogConfig getLogConfig() 获取<p>日志配置</p>
+ * @method void setLogConfig(LogConfig $LogConfig) 设置<p>日志配置</p>
+ * @method boolean getAuthorizationEnable() 获取<p>是否开启鉴权</p>
+ * @method void setAuthorizationEnable(boolean $AuthorizationEnable) 设置<p>是否开启鉴权</p>
+ * @method HorizontalPodAutoscaler getHorizontalPodAutoscaler() 获取<p>hpa配置</p>
+ * @method void setHorizontalPodAutoscaler(HorizontalPodAutoscaler $HorizontalPodAutoscaler) 设置<p>hpa配置</p>
+ * @method WorkloadStatus getStatus() 获取<p>服务的状态描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(WorkloadStatus $Status) 设置服务的状态描述
+ * @method void setStatus(WorkloadStatus $Status) 设置<p>服务的状态描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getWeight() 获取权重
+ * @method integer getWeight() 获取<p>权重</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWeight(integer $Weight) 设置权重
+ * @method void setWeight(integer $Weight) 设置<p>权重</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ResourceInfo getResourceTotal() 获取资源总量
+ * @method ResourceInfo getResourceTotal() 获取<p>资源总量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceTotal(ResourceInfo $ResourceTotal) 设置资源总量
+ * @method void setResourceTotal(ResourceInfo $ResourceTotal) 设置<p>资源总量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOldReplicas() 获取历史实例数
+ * @method integer getOldReplicas() 获取<p>历史实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOldReplicas(integer $OldReplicas) 设置历史实例数
+ * @method void setOldReplicas(integer $OldReplicas) 设置<p>历史实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getHybridBillingPrepaidReplicas() 获取计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1
+ * @method integer getHybridBillingPrepaidReplicas() 获取<p>计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHybridBillingPrepaidReplicas(integer $HybridBillingPrepaidReplicas) 设置计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1
+ * @method void setHybridBillingPrepaidReplicas(integer $HybridBillingPrepaidReplicas) 设置<p>计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOldHybridBillingPrepaidReplicas() 获取历史 HYBRID_PAID 时的实例数，用户恢复服务
+ * @method integer getOldHybridBillingPrepaidReplicas() 获取<p>历史 HYBRID_PAID 时的实例数，用户恢复服务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOldHybridBillingPrepaidReplicas(integer $OldHybridBillingPrepaidReplicas) 设置历史 HYBRID_PAID 时的实例数，用户恢复服务
+ * @method void setOldHybridBillingPrepaidReplicas(integer $OldHybridBillingPrepaidReplicas) 设置<p>历史 HYBRID_PAID 时的实例数，用户恢复服务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getModelHotUpdateEnable() 获取是否开启模型的热更新。默认不开启
+ * @method boolean getModelHotUpdateEnable() 获取<p>是否开启模型的热更新。默认不开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModelHotUpdateEnable(boolean $ModelHotUpdateEnable) 设置是否开启模型的热更新。默认不开启
+ * @method void setModelHotUpdateEnable(boolean $ModelHotUpdateEnable) 设置<p>是否开启模型的热更新。默认不开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceAlias() 获取服务的规格别名
- * @method void setInstanceAlias(string $InstanceAlias) 设置服务的规格别名
- * @method string getScaleMode() 获取实例数量调节方式,默认为手动
-支持：自动 - "AUTO", 手动 - "MANUAL"
+ * @method string getInstanceAlias() 获取<p>服务的规格别名</p>
+ * @method void setInstanceAlias(string $InstanceAlias) 设置<p>服务的规格别名</p>
+ * @method string getScaleMode() 获取<p>实例数量调节方式,默认为手动<br>支持：自动 - &quot;AUTO&quot;, 手动 - &quot;MANUAL&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScaleMode(string $ScaleMode) 设置实例数量调节方式,默认为手动
-支持：自动 - "AUTO", 手动 - "MANUAL"
+ * @method void setScaleMode(string $ScaleMode) 设置<p>实例数量调节方式,默认为手动<br>支持：自动 - &quot;AUTO&quot;, 手动 - &quot;MANUAL&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getCronScaleJobs() 获取定时伸缩任务
+ * @method array getCronScaleJobs() 获取<p>定时伸缩任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCronScaleJobs(array $CronScaleJobs) 设置定时伸缩任务
+ * @method void setCronScaleJobs(array $CronScaleJobs) 设置<p>定时伸缩任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getScaleStrategy() 获取定时伸缩策略
+ * @method string getScaleStrategy() 获取<p>定时伸缩策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScaleStrategy(string $ScaleStrategy) 设置定时伸缩策略
+ * @method void setScaleStrategy(string $ScaleStrategy) 设置<p>定时伸缩策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ScheduledAction getScheduledAction() 获取定时停止的配置
+ * @method ScheduledAction getScheduledAction() 获取<p>定时停止的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScheduledAction(ScheduledAction $ScheduledAction) 设置定时停止的配置
+ * @method void setScheduledAction(ScheduledAction $ScheduledAction) 设置<p>定时停止的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPodList() 获取实例列表
+ * @method array getPodList() 获取<p>实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPodList(array $PodList) 设置实例列表
+ * @method void setPodList(array $PodList) 设置<p>实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Pod getPods() 获取Pod列表信息
+ * @method Pod getPods() 获取<p>Pod列表信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPods(Pod $Pods) 设置Pod列表信息
+ * @method void setPods(Pod $Pods) 设置<p>Pod列表信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPodInfos() 获取Pod列表信息
+ * @method array getPodInfos() 获取<p>Pod列表信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPodInfos(array $PodInfos) 设置Pod列表信息
+ * @method void setPodInfos(array $PodInfos) 设置<p>Pod列表信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ServiceLimit getServiceLimit() 获取服务限速限流相关配置
+ * @method ServiceLimit getServiceLimit() 获取<p>服务限速限流相关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServiceLimit(ServiceLimit $ServiceLimit) 设置服务限速限流相关配置
+ * @method void setServiceLimit(ServiceLimit $ServiceLimit) 设置<p>服务限速限流相关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getModelTurboEnable() 获取是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
+ * @method boolean getModelTurboEnable() 获取<p>是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModelTurboEnable(boolean $ModelTurboEnable) 设置是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
+ * @method void setModelTurboEnable(boolean $ModelTurboEnable) 设置<p>是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method VolumeMount getVolumeMount() 获取挂载
+ * @method VolumeMount getVolumeMount() 获取<p>挂载</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVolumeMount(VolumeMount $VolumeMount) 设置挂载
+ * @method void setVolumeMount(VolumeMount $VolumeMount) 设置<p>挂载</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method InferCodeInfo getInferCodeInfo() 获取推理代码信息
+ * @method InferCodeInfo getInferCodeInfo() 获取<p>推理代码信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInferCodeInfo(InferCodeInfo $InferCodeInfo) 设置推理代码信息
+ * @method void setInferCodeInfo(InferCodeInfo $InferCodeInfo) 设置<p>推理代码信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCommand() 获取服务的启动命令
+ * @method string getCommand() 获取<p>服务的启动命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCommand(string $Command) 设置服务的启动命令
+ * @method void setCommand(string $Command) 设置<p>服务的启动命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ServiceEIP getServiceEIP() 获取开启TIONE内网访问外部设置
+ * @method ServiceEIP getServiceEIP() 获取<p>开启TIONE内网访问外部设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServiceEIP(ServiceEIP $ServiceEIP) 设置开启TIONE内网访问外部设置
+ * @method void setServiceEIP(ServiceEIP $ServiceEIP) 设置<p>开启TIONE内网访问外部设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getServicePort() 获取服务端口，默认为8501
+ * @method integer getServicePort() 获取<p>服务端口，默认为8501</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServicePort(integer $ServicePort) 设置服务端口，默认为8501
+ * @method void setServicePort(integer $ServicePort) 设置<p>服务端口，默认为8501</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTerminationGracePeriodSeconds() 获取服务的优雅退出时限。单位为秒，默认值为30，最小为1
- * @method void setTerminationGracePeriodSeconds(integer $TerminationGracePeriodSeconds) 设置服务的优雅退出时限。单位为秒，默认值为30，最小为1
- * @method array getPreStopCommand() 获取服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
- * @method void setPreStopCommand(array $PreStopCommand) 设置服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
- * @method boolean getGrpcEnable() 获取是否启用grpc端口
- * @method void setGrpcEnable(boolean $GrpcEnable) 设置是否启用grpc端口
- * @method HealthProbe getHealthProbe() 获取健康探针
- * @method void setHealthProbe(HealthProbe $HealthProbe) 设置健康探针
- * @method RollingUpdate getRollingUpdate() 获取滚动更新配置
- * @method void setRollingUpdate(RollingUpdate $RollingUpdate) 设置滚动更新配置
- * @method integer getInstancePerReplicas() 获取单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1
- * @method void setInstancePerReplicas(integer $InstancePerReplicas) 设置单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1
- * @method array getVolumeMounts() 获取批量数据盘挂载配置
- * @method void setVolumeMounts(array $VolumeMounts) 设置批量数据盘挂载配置
- * @method string getSchedulingStrategy() 获取调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
- * @method void setSchedulingStrategy(string $SchedulingStrategy) 设置调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
- * @method integer getNodeCount() 获取服务实际运行的节点数
- * @method void setNodeCount(integer $NodeCount) 设置服务实际运行的节点数
+ * @method integer getTerminationGracePeriodSeconds() 获取<p>服务的优雅退出时限。单位为秒，默认值为30，最小为1</p>
+ * @method void setTerminationGracePeriodSeconds(integer $TerminationGracePeriodSeconds) 设置<p>服务的优雅退出时限。单位为秒，默认值为30，最小为1</p>
+ * @method array getPreStopCommand() 获取<p>服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束</p>
+ * @method void setPreStopCommand(array $PreStopCommand) 设置<p>服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束</p>
+ * @method boolean getGrpcEnable() 获取<p>是否启用grpc端口</p>
+ * @method void setGrpcEnable(boolean $GrpcEnable) 设置<p>是否启用grpc端口</p>
+ * @method HealthProbe getHealthProbe() 获取<p>健康探针</p>
+ * @method void setHealthProbe(HealthProbe $HealthProbe) 设置<p>健康探针</p>
+ * @method RollingUpdate getRollingUpdate() 获取<p>滚动更新配置</p>
+ * @method void setRollingUpdate(RollingUpdate $RollingUpdate) 设置<p>滚动更新配置</p>
+ * @method integer getInstancePerReplicas() 获取<p>单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1</p>
+ * @method void setInstancePerReplicas(integer $InstancePerReplicas) 设置<p>单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1</p>
+ * @method array getVolumeMounts() 获取<p>批量数据盘挂载配置</p>
+ * @method void setVolumeMounts(array $VolumeMounts) 设置<p>批量数据盘挂载配置</p>
+ * @method string getSchedulingStrategy() 获取<p>调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用</p>
+ * @method void setSchedulingStrategy(string $SchedulingStrategy) 设置<p>调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用</p>
+ * @method integer getNodeCount() 获取<p>服务实际运行的节点数</p>
+ * @method void setNodeCount(integer $NodeCount) 设置<p>服务实际运行的节点数</p>
  */
 class ServiceInfo extends AbstractModel
 {
     /**
-     * @var integer 期望运行的Pod数量，停止状态是0
-不同计费模式和调节模式下对应关系如下
-PREPAID 和 POSTPAID_BY_HOUR:
-手动调节模式下对应 实例数量
-自动调节模式下对应 基于时间的默认策略的实例数量
-HYBRID_PAID:
-后付费实例手动调节模式下对应 实例数量
-后付费实例自动调节模式下对应 时间策略的默认策略的实例数量
+     * @var integer <p>期望运行的Pod数量，停止状态是0<br>不同计费模式和调节模式下对应关系如下<br>PREPAID 和 POSTPAID_BY_HOUR:<br>手动调节模式下对应 实例数量<br>自动调节模式下对应 基于时间的默认策略的实例数量<br>HYBRID_PAID:<br>后付费实例手动调节模式下对应 实例数量<br>后付费实例自动调节模式下对应 时间策略的默认策略的实例数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Replicas;
 
     /**
-     * @var ImageInfo 镜像信息
+     * @var ImageInfo <p>镜像信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageInfo;
 
     /**
-     * @var array 环境变量
+     * @var array <p>环境变量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Env;
 
     /**
-     * @var ResourceInfo 资源信息
+     * @var ResourceInfo <p>资源信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resources;
 
     /**
-     * @var string 后付费实例对应的机型规格
+     * @var string <p>后付费实例对应的机型规格</p>
      */
     public $InstanceType;
 
     /**
-     * @var ModelInfo 模型信息
+     * @var ModelInfo <p>模型信息</p>
      */
     public $ModelInfo;
 
     /**
-     * @var boolean 是否启用日志
+     * @var boolean <p>是否启用日志</p>
      */
     public $LogEnable;
 
     /**
-     * @var LogConfig 日志配置
+     * @var LogConfig <p>日志配置</p>
      */
     public $LogConfig;
 
     /**
-     * @var boolean 是否开启鉴权
+     * @var boolean <p>是否开启鉴权</p>
      */
     public $AuthorizationEnable;
 
     /**
-     * @var HorizontalPodAutoscaler hpa配置
+     * @var HorizontalPodAutoscaler <p>hpa配置</p>
      */
     public $HorizontalPodAutoscaler;
 
     /**
-     * @var WorkloadStatus 服务的状态描述
+     * @var WorkloadStatus <p>服务的状态描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var integer 权重
+     * @var integer <p>权重</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weight;
 
     /**
-     * @var ResourceInfo 资源总量
+     * @var ResourceInfo <p>资源总量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceTotal;
 
     /**
-     * @var integer 历史实例数
+     * @var integer <p>历史实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OldReplicas;
 
     /**
-     * @var integer 计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1
+     * @var integer <p>计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HybridBillingPrepaidReplicas;
 
     /**
-     * @var integer 历史 HYBRID_PAID 时的实例数，用户恢复服务
+     * @var integer <p>历史 HYBRID_PAID 时的实例数，用户恢复服务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OldHybridBillingPrepaidReplicas;
 
     /**
-     * @var boolean 是否开启模型的热更新。默认不开启
+     * @var boolean <p>是否开启模型的热更新。默认不开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModelHotUpdateEnable;
 
     /**
-     * @var string 服务的规格别名
+     * @var string <p>服务的规格别名</p>
      */
     public $InstanceAlias;
 
     /**
-     * @var string 实例数量调节方式,默认为手动
-支持：自动 - "AUTO", 手动 - "MANUAL"
+     * @var string <p>实例数量调节方式,默认为手动<br>支持：自动 - &quot;AUTO&quot;, 手动 - &quot;MANUAL&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScaleMode;
 
     /**
-     * @var array 定时伸缩任务
+     * @var array <p>定时伸缩任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CronScaleJobs;
 
     /**
-     * @var string 定时伸缩策略
+     * @var string <p>定时伸缩策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScaleStrategy;
 
     /**
-     * @var ScheduledAction 定时停止的配置
+     * @var ScheduledAction <p>定时停止的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduledAction;
 
     /**
-     * @var array 实例列表
+     * @var array <p>实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     public $PodList;
 
     /**
-     * @var Pod Pod列表信息
+     * @var Pod <p>Pod列表信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     public $Pods;
 
     /**
-     * @var array Pod列表信息
+     * @var array <p>Pod列表信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PodInfos;
 
     /**
-     * @var ServiceLimit 服务限速限流相关配置
+     * @var ServiceLimit <p>服务限速限流相关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceLimit;
 
     /**
-     * @var boolean 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
+     * @var boolean <p>是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModelTurboEnable;
 
     /**
-     * @var VolumeMount 挂载
+     * @var VolumeMount <p>挂载</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VolumeMount;
 
     /**
-     * @var InferCodeInfo 推理代码信息
+     * @var InferCodeInfo <p>推理代码信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InferCodeInfo;
 
     /**
-     * @var string 服务的启动命令
+     * @var string <p>服务的启动命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Command;
 
     /**
-     * @var ServiceEIP 开启TIONE内网访问外部设置
+     * @var ServiceEIP <p>开启TIONE内网访问外部设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceEIP;
 
     /**
-     * @var integer 服务端口，默认为8501
+     * @var integer <p>服务端口，默认为8501</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServicePort;
 
     /**
-     * @var integer 服务的优雅退出时限。单位为秒，默认值为30，最小为1
+     * @var integer <p>服务的优雅退出时限。单位为秒，默认值为30，最小为1</p>
      */
     public $TerminationGracePeriodSeconds;
 
     /**
-     * @var array 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
+     * @var array <p>服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束</p>
      */
     public $PreStopCommand;
 
     /**
-     * @var boolean 是否启用grpc端口
+     * @var boolean <p>是否启用grpc端口</p>
      */
     public $GrpcEnable;
 
     /**
-     * @var HealthProbe 健康探针
+     * @var HealthProbe <p>健康探针</p>
      */
     public $HealthProbe;
 
     /**
-     * @var RollingUpdate 滚动更新配置
+     * @var RollingUpdate <p>滚动更新配置</p>
      */
     public $RollingUpdate;
 
     /**
-     * @var integer 单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1
+     * @var integer <p>单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1</p>
      */
     public $InstancePerReplicas;
 
     /**
-     * @var array 批量数据盘挂载配置
+     * @var array <p>批量数据盘挂载配置</p>
      */
     public $VolumeMounts;
 
     /**
-     * @var string 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
+     * @var string <p>调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用</p>
      */
     public $SchedulingStrategy;
 
     /**
-     * @var integer 服务实际运行的节点数
+     * @var integer <p>服务实际运行的节点数</p>
      */
     public $NodeCount;
 
     /**
-     * @param integer $Replicas 期望运行的Pod数量，停止状态是0
-不同计费模式和调节模式下对应关系如下
-PREPAID 和 POSTPAID_BY_HOUR:
-手动调节模式下对应 实例数量
-自动调节模式下对应 基于时间的默认策略的实例数量
-HYBRID_PAID:
-后付费实例手动调节模式下对应 实例数量
-后付费实例自动调节模式下对应 时间策略的默认策略的实例数量
+     * @param integer $Replicas <p>期望运行的Pod数量，停止状态是0<br>不同计费模式和调节模式下对应关系如下<br>PREPAID 和 POSTPAID_BY_HOUR:<br>手动调节模式下对应 实例数量<br>自动调节模式下对应 基于时间的默认策略的实例数量<br>HYBRID_PAID:<br>后付费实例手动调节模式下对应 实例数量<br>后付费实例自动调节模式下对应 时间策略的默认策略的实例数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageInfo $ImageInfo 镜像信息
+     * @param ImageInfo $ImageInfo <p>镜像信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Env 环境变量
+     * @param array $Env <p>环境变量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceInfo $Resources 资源信息
+     * @param ResourceInfo $Resources <p>资源信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceType 后付费实例对应的机型规格
-     * @param ModelInfo $ModelInfo 模型信息
-     * @param boolean $LogEnable 是否启用日志
-     * @param LogConfig $LogConfig 日志配置
-     * @param boolean $AuthorizationEnable 是否开启鉴权
-     * @param HorizontalPodAutoscaler $HorizontalPodAutoscaler hpa配置
-     * @param WorkloadStatus $Status 服务的状态描述
+     * @param string $InstanceType <p>后付费实例对应的机型规格</p>
+     * @param ModelInfo $ModelInfo <p>模型信息</p>
+     * @param boolean $LogEnable <p>是否启用日志</p>
+     * @param LogConfig $LogConfig <p>日志配置</p>
+     * @param boolean $AuthorizationEnable <p>是否开启鉴权</p>
+     * @param HorizontalPodAutoscaler $HorizontalPodAutoscaler <p>hpa配置</p>
+     * @param WorkloadStatus $Status <p>服务的状态描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Weight 权重
+     * @param integer $Weight <p>权重</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceInfo $ResourceTotal 资源总量
+     * @param ResourceInfo $ResourceTotal <p>资源总量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $OldReplicas 历史实例数
+     * @param integer $OldReplicas <p>历史实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $HybridBillingPrepaidReplicas 计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1
+     * @param integer $HybridBillingPrepaidReplicas <p>计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $OldHybridBillingPrepaidReplicas 历史 HYBRID_PAID 时的实例数，用户恢复服务
+     * @param integer $OldHybridBillingPrepaidReplicas <p>历史 HYBRID_PAID 时的实例数，用户恢复服务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $ModelHotUpdateEnable 是否开启模型的热更新。默认不开启
+     * @param boolean $ModelHotUpdateEnable <p>是否开启模型的热更新。默认不开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceAlias 服务的规格别名
-     * @param string $ScaleMode 实例数量调节方式,默认为手动
-支持：自动 - "AUTO", 手动 - "MANUAL"
+     * @param string $InstanceAlias <p>服务的规格别名</p>
+     * @param string $ScaleMode <p>实例数量调节方式,默认为手动<br>支持：自动 - &quot;AUTO&quot;, 手动 - &quot;MANUAL&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $CronScaleJobs 定时伸缩任务
+     * @param array $CronScaleJobs <p>定时伸缩任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ScaleStrategy 定时伸缩策略
+     * @param string $ScaleStrategy <p>定时伸缩策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduledAction $ScheduledAction 定时停止的配置
+     * @param ScheduledAction $ScheduledAction <p>定时停止的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $PodList 实例列表
+     * @param array $PodList <p>实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Pod $Pods Pod列表信息
+     * @param Pod $Pods <p>Pod列表信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $PodInfos Pod列表信息
+     * @param array $PodInfos <p>Pod列表信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceLimit $ServiceLimit 服务限速限流相关配置
+     * @param ServiceLimit $ServiceLimit <p>服务限速限流相关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $ModelTurboEnable 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
+     * @param boolean $ModelTurboEnable <p>是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VolumeMount $VolumeMount 挂载
+     * @param VolumeMount $VolumeMount <p>挂载</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InferCodeInfo $InferCodeInfo 推理代码信息
+     * @param InferCodeInfo $InferCodeInfo <p>推理代码信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Command 服务的启动命令
+     * @param string $Command <p>服务的启动命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceEIP $ServiceEIP 开启TIONE内网访问外部设置
+     * @param ServiceEIP $ServiceEIP <p>开启TIONE内网访问外部设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ServicePort 服务端口，默认为8501
+     * @param integer $ServicePort <p>服务端口，默认为8501</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TerminationGracePeriodSeconds 服务的优雅退出时限。单位为秒，默认值为30，最小为1
-     * @param array $PreStopCommand 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
-     * @param boolean $GrpcEnable 是否启用grpc端口
-     * @param HealthProbe $HealthProbe 健康探针
-     * @param RollingUpdate $RollingUpdate 滚动更新配置
-     * @param integer $InstancePerReplicas 单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1
-     * @param array $VolumeMounts 批量数据盘挂载配置
-     * @param string $SchedulingStrategy 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
-     * @param integer $NodeCount 服务实际运行的节点数
+     * @param integer $TerminationGracePeriodSeconds <p>服务的优雅退出时限。单位为秒，默认值为30，最小为1</p>
+     * @param array $PreStopCommand <p>服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束</p>
+     * @param boolean $GrpcEnable <p>是否启用grpc端口</p>
+     * @param HealthProbe $HealthProbe <p>健康探针</p>
+     * @param RollingUpdate $RollingUpdate <p>滚动更新配置</p>
+     * @param integer $InstancePerReplicas <p>单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1</p>
+     * @param array $VolumeMounts <p>批量数据盘挂载配置</p>
+     * @param string $SchedulingStrategy <p>调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用</p>
+     * @param integer $NodeCount <p>服务实际运行的节点数</p>
      */
     function __construct()
     {

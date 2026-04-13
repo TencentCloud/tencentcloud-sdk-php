@@ -20,46 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 外部挂载信息
  *
- * @method CFSConfig getCFSConfig() 获取cfs的配置信息
- * @method void setCFSConfig(CFSConfig $CFSConfig) 设置cfs的配置信息
- * @method string getVolumeSourceType() 获取挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS
- * @method void setVolumeSourceType(string $VolumeSourceType) 设置挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS
- * @method string getMountPath() 获取自定义容器内挂载路径
+ * @method CFSConfig getCFSConfig() 获取<p>cfs的配置信息</p>
+ * @method void setCFSConfig(CFSConfig $CFSConfig) 设置<p>cfs的配置信息</p>
+ * @method string getVolumeSourceType() 获取<p>挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS</p>
+ * @method void setVolumeSourceType(string $VolumeSourceType) 设置<p>挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS</p>
+ * @method string getMountPath() 获取<p>自定义容器内挂载路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMountPath(string $MountPath) 设置自定义容器内挂载路径
+ * @method void setMountPath(string $MountPath) 设置<p>自定义容器内挂载路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method PublicDataSourceFS getPublicDataSource() 获取挂载数据源时的配置信息
- * @method void setPublicDataSource(PublicDataSourceFS $PublicDataSource) 设置挂载数据源时的配置信息
+ * @method PublicDataSourceFS getPublicDataSource() 获取<p>挂载数据源时的配置信息</p>
+ * @method void setPublicDataSource(PublicDataSourceFS $PublicDataSource) 设置<p>挂载数据源时的配置信息</p>
  */
 class VolumeMount extends AbstractModel
 {
     /**
-     * @var CFSConfig cfs的配置信息
+     * @var CFSConfig <p>cfs的配置信息</p>
      */
     public $CFSConfig;
 
     /**
-     * @var string 挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS
+     * @var string <p>挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS</p>
      */
     public $VolumeSourceType;
 
     /**
-     * @var string 自定义容器内挂载路径
+     * @var string <p>自定义容器内挂载路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MountPath;
 
     /**
-     * @var PublicDataSourceFS 挂载数据源时的配置信息
+     * @var PublicDataSourceFS <p>挂载数据源时的配置信息</p>
      */
     public $PublicDataSource;
 
     /**
-     * @param CFSConfig $CFSConfig cfs的配置信息
-     * @param string $VolumeSourceType 挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS
-     * @param string $MountPath 自定义容器内挂载路径
+     * @param CFSConfig $CFSConfig <p>cfs的配置信息</p>
+     * @param string $VolumeSourceType <p>挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS</p>
+     * @param string $MountPath <p>自定义容器内挂载路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PublicDataSourceFS $PublicDataSource 挂载数据源时的配置信息
+     * @param PublicDataSourceFS $PublicDataSource <p>挂载数据源时的配置信息</p>
      */
     function __construct()
     {

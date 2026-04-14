@@ -76,6 +76,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceAttribute(string $InstanceAttribute) 设置实例属性
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNodeName() 获取节点名称
+ * @method void setNodeName(string $NodeName) 设置节点名称
+ * @method string getDuration() 获取包销时长
+ * @method void setDuration(string $Duration) 设置包销时长
+ * @method string getResourceId() 获取预付费资源ID
+ * @method void setResourceId(string $ResourceId) 设置预付费资源ID
  */
 class SuperNodeInfo extends AbstractModel
 {
@@ -164,6 +170,21 @@ class SuperNodeInfo extends AbstractModel
     public $InstanceAttribute;
 
     /**
+     * @var string 节点名称
+     */
+    public $NodeName;
+
+    /**
+     * @var string 包销时长
+     */
+    public $Duration;
+
+    /**
+     * @var string 预付费资源ID
+     */
+    public $ResourceId;
+
+    /**
      * @param string $Name 实例名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoRenewFlag 自动续费标识
@@ -192,6 +213,9 @@ class SuperNodeInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceAttribute 实例属性
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NodeName 节点名称
+     * @param string $Duration 包销时长
+     * @param string $ResourceId 预付费资源ID
      */
     function __construct()
     {
@@ -260,6 +284,18 @@ class SuperNodeInfo extends AbstractModel
 
         if (array_key_exists("InstanceAttribute",$param) and $param["InstanceAttribute"] !== null) {
             $this->InstanceAttribute = $param["InstanceAttribute"];
+        }
+
+        if (array_key_exists("NodeName",$param) and $param["NodeName"] !== null) {
+            $this->NodeName = $param["NodeName"];
+        }
+
+        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
+            $this->Duration = $param["Duration"];
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
         }
     }
 }

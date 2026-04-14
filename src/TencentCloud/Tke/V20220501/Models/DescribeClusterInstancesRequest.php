@@ -32,6 +32,8 @@ InstanceIds(实例ID),InstanceType(实例类型：Regular，Native，Super，Ext
 InstanceIds(实例ID),InstanceType(实例类型：Regular，Native，Super，External),VagueIpAddress(模糊匹配IP),Labels(k8s节点label),NodePoolNames(节点池名称),VagueInstanceName(模糊匹配节点名),InstanceStates(节点状态),Unschedulable(是否封锁),NodePoolIds(节点池ID)
  * @method SortBy getSortBy() 获取排序信息
  * @method void setSortBy(SortBy $SortBy) 设置排序信息
+ * @method boolean getNeedTags() 获取是否返回节点云标签
+ * @method void setNeedTags(boolean $NeedTags) 设置是否返回节点云标签
  */
 class DescribeClusterInstancesRequest extends AbstractModel
 {
@@ -62,12 +64,18 @@ InstanceIds(实例ID),InstanceType(实例类型：Regular，Native，Super，Ext
     public $SortBy;
 
     /**
+     * @var boolean 是否返回节点云标签
+     */
+    public $NeedTags;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param integer $Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      * @param integer $Limit 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      * @param array $Filters 过滤条件列表:
 InstanceIds(实例ID),InstanceType(实例类型：Regular，Native，Super，External),VagueIpAddress(模糊匹配IP),Labels(k8s节点label),NodePoolNames(节点池名称),VagueInstanceName(模糊匹配节点名),InstanceStates(节点状态),Unschedulable(是否封锁),NodePoolIds(节点池ID)
      * @param SortBy $SortBy 排序信息
+     * @param boolean $NeedTags 是否返回节点云标签
      */
     function __construct()
     {
@@ -106,6 +114,10 @@ InstanceIds(实例ID),InstanceType(实例类型：Regular，Native，Super，Ext
         if (array_key_exists("SortBy",$param) and $param["SortBy"] !== null) {
             $this->SortBy = new SortBy();
             $this->SortBy->deserialize($param["SortBy"]);
+        }
+
+        if (array_key_exists("NeedTags",$param) and $param["NeedTags"] !== null) {
+            $this->NeedTags = $param["NeedTags"];
         }
     }
 }

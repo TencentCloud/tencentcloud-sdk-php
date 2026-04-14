@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method array getNames() 获取第三方节点列表
- * @method void setNames(array $Names) 设置第三方节点列表
- * @method boolean getForce() 获取是否强制删除：如果第三方节点上有运行中Pod，则非强制删除状态下不会进行删除
- * @method void setForce(boolean $Force) 设置是否强制删除：如果第三方节点上有运行中Pod，则非强制删除状态下不会进行删除
+ * @method array getNames() 获取注册节点列表
+ * @method void setNames(array $Names) 设置注册节点列表
+ * @method boolean getForce() 获取是否强制删除：如果注册节点上有运行中Pod，则非强制删除状态下不会进行删除
+ * @method void setForce(boolean $Force) 设置是否强制删除：如果注册节点上有运行中Pod，则非强制删除状态下不会进行删除
  */
 class DeleteExternalNodeRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DeleteExternalNodeRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array 第三方节点列表
+     * @var array 注册节点列表
      */
     public $Names;
 
     /**
-     * @var boolean 是否强制删除：如果第三方节点上有运行中Pod，则非强制删除状态下不会进行删除
+     * @var boolean 是否强制删除：如果注册节点上有运行中Pod，则非强制删除状态下不会进行删除
      */
     public $Force;
 
     /**
      * @param string $ClusterId 集群ID
-     * @param array $Names 第三方节点列表
-     * @param boolean $Force 是否强制删除：如果第三方节点上有运行中Pod，则非强制删除状态下不会进行删除
+     * @param array $Names 注册节点列表
+     * @param boolean $Force 是否强制删除：如果注册节点上有运行中Pod，则非强制删除状态下不会进行删除
      */
     function __construct()
     {

@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置节点池总数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getNodePoolSet() 获取第三方节点池列表
+ * @method array getNodePoolSet() 获取注册节点池列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNodePoolSet(array $NodePoolSet) 设置第三方节点池列表
+ * @method void setNodePoolSet(array $NodePoolSet) 设置注册节点池列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ class DescribeExternalNodePoolsResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array 第三方节点池列表
+     * @var array 注册节点池列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodePoolSet;
@@ -53,7 +53,7 @@ class DescribeExternalNodePoolsResponse extends AbstractModel
     /**
      * @param integer $TotalCount 节点池总数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $NodePoolSet 第三方节点池列表
+     * @param array $NodePoolSet 注册节点池列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

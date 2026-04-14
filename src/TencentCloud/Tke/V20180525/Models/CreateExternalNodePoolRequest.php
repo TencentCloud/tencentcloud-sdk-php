@@ -28,16 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContainerRuntime(string $ContainerRuntime) 设置运行时
  * @method string getRuntimeVersion() 获取运行时版本
  * @method void setRuntimeVersion(string $RuntimeVersion) 设置运行时版本
- * @method array getLabels() 获取第三方节点label
- * @method void setLabels(array $Labels) 设置第三方节点label
- * @method array getTaints() 获取第三方节点taint
- * @method void setTaints(array $Taints) 设置第三方节点taint
- * @method InstanceAdvancedSettings getInstanceAdvancedSettings() 获取第三方节点高级设置
- * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) 设置第三方节点高级设置
+ * @method array getLabels() 获取注册节点标签
+ * @method void setLabels(array $Labels) 设置注册节点标签
+ * @method array getTaints() 获取注册节点污点
+ * @method void setTaints(array $Taints) 设置注册节点污点
+ * @method InstanceAdvancedSettings getInstanceAdvancedSettings() 获取注册节点高级设置
+ * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) 设置注册节点高级设置
  * @method boolean getDeletionProtection() 获取删除保护开关
  * @method void setDeletionProtection(boolean $DeletionProtection) 设置删除保护开关
- * @method string getNodeType() 获取节点类型
- * @method void setNodeType(string $NodeType) 设置节点类型
+ * @method string getNodeType() 获取节点类型，支持 CPU、GPU
+ * @method void setNodeType(string $NodeType) 设置节点类型，支持 CPU、GPU
  */
 class CreateExternalNodePoolRequest extends AbstractModel
 {
@@ -62,17 +62,17 @@ class CreateExternalNodePoolRequest extends AbstractModel
     public $RuntimeVersion;
 
     /**
-     * @var array 第三方节点label
+     * @var array 注册节点标签
      */
     public $Labels;
 
     /**
-     * @var array 第三方节点taint
+     * @var array 注册节点污点
      */
     public $Taints;
 
     /**
-     * @var InstanceAdvancedSettings 第三方节点高级设置
+     * @var InstanceAdvancedSettings 注册节点高级设置
      */
     public $InstanceAdvancedSettings;
 
@@ -82,7 +82,7 @@ class CreateExternalNodePoolRequest extends AbstractModel
     public $DeletionProtection;
 
     /**
-     * @var string 节点类型
+     * @var string 节点类型，支持 CPU、GPU
      */
     public $NodeType;
 
@@ -91,11 +91,11 @@ class CreateExternalNodePoolRequest extends AbstractModel
      * @param string $Name 节点池名称
      * @param string $ContainerRuntime 运行时
      * @param string $RuntimeVersion 运行时版本
-     * @param array $Labels 第三方节点label
-     * @param array $Taints 第三方节点taint
-     * @param InstanceAdvancedSettings $InstanceAdvancedSettings 第三方节点高级设置
+     * @param array $Labels 注册节点标签
+     * @param array $Taints 注册节点污点
+     * @param InstanceAdvancedSettings $InstanceAdvancedSettings 注册节点高级设置
      * @param boolean $DeletionProtection 删除保护开关
-     * @param string $NodeType 节点类型
+     * @param string $NodeType 节点类型，支持 CPU、GPU
      */
     function __construct()
     {

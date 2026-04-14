@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tke\V20180525\Models;
+namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeExternalNodeSupportConfig请求参数结构体
+ * DeleteProject请求参数结构体
  *
- * @method string getClusterId() 获取集群Id，可通过查看集群的基本信息->基础信息页获取
- * @method void setClusterId(string $ClusterId) 设置集群Id，可通过查看集群的基本信息->基础信息页获取
+ * @method string getProjectId() 获取<p>项目id</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目id</p>
  */
-class DescribeExternalNodeSupportConfigRequest extends AbstractModel
+class DeleteProjectRequest extends AbstractModel
 {
     /**
-     * @var string 集群Id，可通过查看集群的基本信息->基础信息页获取
+     * @var string <p>项目id</p>
      */
-    public $ClusterId;
+    public $ProjectId;
 
     /**
-     * @param string $ClusterId 集群Id，可通过查看集群的基本信息->基础信息页获取
+     * @param string $ProjectId <p>项目id</p>
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeExternalNodeSupportConfigRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
     }
 }

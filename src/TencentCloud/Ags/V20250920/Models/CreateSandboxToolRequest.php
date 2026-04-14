@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomConfiguration(CustomConfiguration $CustomConfiguration) 设置<p>沙箱工具自定义配置</p>
  * @method LogConfiguration getLogConfiguration() 获取<p>沙箱工具日志推送相关配置</p>
  * @method void setLogConfiguration(LogConfiguration $LogConfiguration) 设置<p>沙箱工具日志推送相关配置</p>
+ * @method boolean getPersistent() 获取<p>常驻沙箱标识</p>
+ * @method void setPersistent(boolean $Persistent) 设置<p>常驻沙箱标识</p>
  */
 class CreateSandboxToolRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class CreateSandboxToolRequest extends AbstractModel
     public $LogConfiguration;
 
     /**
+     * @var boolean <p>常驻沙箱标识</p>
+     */
+    public $Persistent;
+
+    /**
      * @param string $ToolName <p>沙箱工具名称，长度 1-50 字符，支持英文、数字、下划线和连接线。同一 AppId 下沙箱工具名称必须唯一</p>
      * @param string $ToolType <p>沙箱工具类型，目前支持：browser、code-interpreter、custom</p>
      * @param NetworkConfiguration $NetworkConfiguration <p>网络配置</p>
@@ -112,6 +119,7 @@ class CreateSandboxToolRequest extends AbstractModel
      * @param array $StorageMounts <p>沙箱工具存储配置</p>
      * @param CustomConfiguration $CustomConfiguration <p>沙箱工具自定义配置</p>
      * @param LogConfiguration $LogConfiguration <p>沙箱工具日志推送相关配置</p>
+     * @param boolean $Persistent <p>常驻沙箱标识</p>
      */
     function __construct()
     {
@@ -181,6 +189,10 @@ class CreateSandboxToolRequest extends AbstractModel
         if (array_key_exists("LogConfiguration",$param) and $param["LogConfiguration"] !== null) {
             $this->LogConfiguration = new LogConfiguration();
             $this->LogConfiguration->deserialize($param["LogConfiguration"]);
+        }
+
+        if (array_key_exists("Persistent",$param) and $param["Persistent"] !== null) {
+            $this->Persistent = $param["Persistent"];
         }
     }
 }

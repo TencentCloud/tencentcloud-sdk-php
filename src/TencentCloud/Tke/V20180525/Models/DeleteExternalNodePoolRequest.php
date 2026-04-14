@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method array getNodePoolIds() 获取第三方节点池ID列表
- * @method void setNodePoolIds(array $NodePoolIds) 设置第三方节点池ID列表
- * @method boolean getForce() 获取是否强制删除，在第三方节点上有pod的情况下，如果选择非强制删除，则删除会失败
- * @method void setForce(boolean $Force) 设置是否强制删除，在第三方节点上有pod的情况下，如果选择非强制删除，则删除会失败
+ * @method array getNodePoolIds() 获取注册节点池ID列表
+ * @method void setNodePoolIds(array $NodePoolIds) 设置注册节点池ID列表
+ * @method boolean getForce() 获取是否强制删除，在注册节点上有pod的情况下，如果选择非强制删除，则删除会失败
+ * @method void setForce(boolean $Force) 设置是否强制删除，在注册节点上有pod的情况下，如果选择非强制删除，则删除会失败
  */
 class DeleteExternalNodePoolRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DeleteExternalNodePoolRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array 第三方节点池ID列表
+     * @var array 注册节点池ID列表
      */
     public $NodePoolIds;
 
     /**
-     * @var boolean 是否强制删除，在第三方节点上有pod的情况下，如果选择非强制删除，则删除会失败
+     * @var boolean 是否强制删除，在注册节点上有pod的情况下，如果选择非强制删除，则删除会失败
      */
     public $Force;
 
     /**
      * @param string $ClusterId 集群ID
-     * @param array $NodePoolIds 第三方节点池ID列表
-     * @param boolean $Force 是否强制删除，在第三方节点上有pod的情况下，如果选择非强制删除，则删除会失败
+     * @param array $NodePoolIds 注册节点池ID列表
+     * @param boolean $Force 是否强制删除，在注册节点上有pod的情况下，如果选择非强制删除，则删除会失败
      */
     function __construct()
     {

@@ -47,6 +47,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
 2. 计算不同转码方式的 BD-Rate。
  * @method Models\CreatePersonSampleResponse CreatePersonSample(Models\CreatePersonSampleRequest $req) 该接口用于创建素材样本，用于通过五官定位等技术，进行内容识别、内容不适宜等视频处理。
  * @method Models\CreateProcessImageTemplateResponse CreateProcessImageTemplate(Models\CreateProcessImageTemplateRequest $req) 创建图片处理模板
+ * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 剧集项目创建
  * @method Models\CreateQualityControlTemplateResponse CreateQualityControlTemplate(Models\CreateQualityControlTemplateRequest $req) 创建媒体质检模板，数量上限：50。
  * @method Models\CreateSampleSnapshotTemplateResponse CreateSampleSnapshotTemplate(Models\CreateSampleSnapshotTemplateRequest $req) 创建用户自定义采样截图模板，数量上限：16。
  * @method Models\CreateScheduleResponse CreateSchedule(Models\CreateScheduleRequest $req) 对 COS 中指定 Bucket 的目录下上传的媒体文件，设置处理规则，包括：
@@ -109,6 +110,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DeleteLiveRecordTemplateResponse DeleteLiveRecordTemplate(Models\DeleteLiveRecordTemplateRequest $req) 删除直播录制模板
  * @method Models\DeletePersonSampleResponse DeletePersonSample(Models\DeletePersonSampleRequest $req) 该接口用于根据素材 ID，删除素材样本。
  * @method Models\DeleteProcessImageTemplateResponse DeleteProcessImageTemplate(Models\DeleteProcessImageTemplateRequest $req) 删除图片处理模板
+ * @method Models\DeleteProjectResponse DeleteProject(Models\DeleteProjectRequest $req) 剧集项目删除接口
  * @method Models\DeleteQualityControlTemplateResponse DeleteQualityControlTemplate(Models\DeleteQualityControlTemplateRequest $req) 删除媒体质检模板
  * @method Models\DeleteSampleSnapshotTemplateResponse DeleteSampleSnapshotTemplate(Models\DeleteSampleSnapshotTemplateRequest $req) 删除用户自定义采样截图模板。
  * @method Models\DeleteScheduleResponse DeleteSchedule(Models\DeleteScheduleRequest $req) 删除编排
@@ -286,6 +288,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
 - 智能内容审核（例如鉴黄、敏感信息检测）；
 - 智能内容分析（例如标签、分类、封面、按帧标签、拆条、集锦、片头片尾、游戏打点）；
 - 智能内容识别（例如人脸、文本全文、文本关键词、语音全文、语音关键词、语音翻译、物体识别）；
+ * @method Models\QueryProjectResponse QueryProject(Models\QueryProjectRequest $req) 剧集项目查询
  * @method Models\RecognizeAudioResponse RecognizeAudio(Models\RecognizeAudioRequest $req) 同步接口，返回语音识别结果
  * @method Models\RecognizeMediaForZhiXueResponse RecognizeMediaForZhiXue(Models\RecognizeMediaForZhiXueRequest $req) 智能媒体识别，包含表情和动作识别。仅用于智学，其他调用无效。
  * @method Models\ResetWorkflowResponse ResetWorkflow(Models\ResetWorkflowRequest $req) 重新设置一个已经存在且处于禁用状态的工作流。
@@ -295,6 +298,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\StopStreamPackageLinearAssemblyChannelResponse StopStreamPackageLinearAssemblyChannel(Models\StopStreamPackageLinearAssemblyChannelRequest $req) 停止线性组装频道。
  * @method Models\SyncDubbingResponse SyncDubbing(Models\SyncDubbingRequest $req) 同步接口，返回克隆音色Id或合成音频结果
  * @method Models\TextTranslationResponse TextTranslation(Models\TextTranslationRequest $req) 文本翻译
+ * @method Models\UpdateProjectResponse UpdateProject(Models\UpdateProjectRequest $req) 剧集项目更新
  * @method Models\WithdrawsWatermarkResponse WithdrawsWatermark(Models\WithdrawsWatermarkRequest $req) 提取视频中的盲水印。
  */
 

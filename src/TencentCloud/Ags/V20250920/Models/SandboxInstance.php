@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setToolName(string $ToolName) 设置<p>所属沙箱工具名称</p>
  * @method string getStatus() 获取<p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）</p>
  * @method void setStatus(string $Status) 设置<p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）</p>
+ * @method boolean getPersistent() 获取<p>是否常驻实例</p>
+ * @method void setPersistent(boolean $Persistent) 设置<p>是否常驻实例</p>
  * @method integer getTimeoutSeconds() 获取<p>超时时间（秒），null 表示无超时设置</p>
  * @method void setTimeoutSeconds(integer $TimeoutSeconds) 设置<p>超时时间（秒），null 表示无超时设置</p>
  * @method string getExpiresAt() 获取<p>过期时间（ISO 8601 格式），null 表示无过期时间</p>
@@ -68,6 +70,11 @@ class SandboxInstance extends AbstractModel
      * @var string <p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）</p>
      */
     public $Status;
+
+    /**
+     * @var boolean <p>是否常驻实例</p>
+     */
+    public $Persistent;
 
     /**
      * @var integer <p>超时时间（秒），null 表示无超时设置</p>
@@ -119,6 +126,7 @@ class SandboxInstance extends AbstractModel
      * @param string $ToolId <p>所属沙箱工具 ID</p>
      * @param string $ToolName <p>所属沙箱工具名称</p>
      * @param string $Status <p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）</p>
+     * @param boolean $Persistent <p>是否常驻实例</p>
      * @param integer $TimeoutSeconds <p>超时时间（秒），null 表示无超时设置</p>
      * @param string $ExpiresAt <p>过期时间（ISO 8601 格式），null 表示无过期时间</p>
      * @param string $StopReason <p>停止原因：manual（手动）、timeout（超时）、error（错误）、system（系统），仅在状态为 STOPPED、STOP_FAILED 或 FAILED 时有值。当 provider 停止失败时，状态为 STOP_FAILED，原因为 error</p>
@@ -156,6 +164,10 @@ class SandboxInstance extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Persistent",$param) and $param["Persistent"] !== null) {
+            $this->Persistent = $param["Persistent"];
         }
 
         if (array_key_exists("TimeoutSeconds",$param) and $param["TimeoutSeconds"] !== null) {

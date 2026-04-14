@@ -18,23 +18,23 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 开启第三方节点池支持配置信息
+ * 开启注册节点池支持配置信息
  *
- * @method string getNetworkType() 获取集群网络插件类型，支持：Flannel、CiliumBGP、CiliumVXLan
- * @method void setNetworkType(string $NetworkType) 设置集群网络插件类型，支持：Flannel、CiliumBGP、CiliumVXLan
+ * @method string getNetworkType() 获取容器网络类型，支持：HostNetwork、CiliumBGP
+ * @method void setNetworkType(string $NetworkType) 设置容器网络类型，支持：HostNetwork、CiliumBGP
  * @method string getSubnetId() 获取子网ID
  * @method void setSubnetId(string $SubnetId) 设置子网ID
- * @method string getClusterCIDR() 获取Pod CIDR
+ * @method string getClusterCIDR() 获取集群CIDR，网络模式HostNetwork 时无需填写
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterCIDR(string $ClusterCIDR) 设置Pod CIDR
+ * @method void setClusterCIDR(string $ClusterCIDR) 设置集群CIDR，网络模式HostNetwork 时无需填写
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getEnabled() 获取是否开启第三方节点池支持
- * @method void setEnabled(boolean $Enabled) 设置是否开启第三方节点池支持
+ * @method boolean getEnabled() 获取【已废弃】是否开启专线连接能力
+ * @method void setEnabled(boolean $Enabled) 设置【已废弃】是否开启专线连接能力
  */
 class ClusterExternalConfig extends AbstractModel
 {
     /**
-     * @var string 集群网络插件类型，支持：Flannel、CiliumBGP、CiliumVXLan
+     * @var string 容器网络类型，支持：HostNetwork、CiliumBGP
      */
     public $NetworkType;
 
@@ -44,22 +44,22 @@ class ClusterExternalConfig extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var string Pod CIDR
+     * @var string 集群CIDR，网络模式HostNetwork 时无需填写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterCIDR;
 
     /**
-     * @var boolean 是否开启第三方节点池支持
+     * @var boolean 【已废弃】是否开启专线连接能力
      */
     public $Enabled;
 
     /**
-     * @param string $NetworkType 集群网络插件类型，支持：Flannel、CiliumBGP、CiliumVXLan
+     * @param string $NetworkType 容器网络类型，支持：HostNetwork、CiliumBGP
      * @param string $SubnetId 子网ID
-     * @param string $ClusterCIDR Pod CIDR
+     * @param string $ClusterCIDR 集群CIDR，网络模式HostNetwork 时无需填写
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $Enabled 是否开启第三方节点池支持
+     * @param boolean $Enabled 【已废弃】是否开启专线连接能力
      */
     function __construct()
     {

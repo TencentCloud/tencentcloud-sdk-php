@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 水印图输入框
  *
- * @method integer getX() 获取水印图框X坐标值。当值大于0时，坐标轴原点位于原图左侧，方向指右；当值小于0时，坐标轴原点位于原图右侧，方向指左。
- * @method void setX(integer $X) 设置水印图框X坐标值。当值大于0时，坐标轴原点位于原图左侧，方向指右；当值小于0时，坐标轴原点位于原图右侧，方向指左。
- * @method integer getY() 获取水印图框Y坐标值。当值大于0时，坐标轴原点位于原图上侧，方向指下；当值小于0时，坐标轴原点位于原图下侧，方向指上。
- * @method void setY(integer $Y) 设置水印图框Y坐标值。当值大于0时，坐标轴原点位于原图上侧，方向指下；当值小于0时，坐标轴原点位于原图下侧，方向指上。
- * @method integer getWidth() 获取水印图框宽度。
- * @method void setWidth(integer $Width) 设置水印图框宽度。
- * @method integer getHeight() 获取水印图框高度。
- * @method void setHeight(integer $Height) 设置水印图框高度。
+ * @method integer getX() 获取<p>水印图框X坐标值。当值大于0时，坐标轴原点位于原图左侧，方向指右；当值小于0时，坐标轴原点位于原图右侧，方向指左。</p>
+ * @method void setX(integer $X) 设置<p>水印图框X坐标值。当值大于0时，坐标轴原点位于原图左侧，方向指右；当值小于0时，坐标轴原点位于原图右侧，方向指左。</p>
+ * @method integer getY() 获取<p>水印图框Y坐标值。当值大于0时，坐标轴原点位于原图上侧，方向指下；当值小于0时，坐标轴原点位于原图下侧，方向指上。</p>
+ * @method void setY(integer $Y) 设置<p>水印图框Y坐标值。当值大于0时，坐标轴原点位于原图上侧，方向指下；当值小于0时，坐标轴原点位于原图下侧，方向指上。</p>
+ * @method integer getWidth() 获取<p>水印图框宽度。<br>单位：px</p>
+ * @method void setWidth(integer $Width) 设置<p>水印图框宽度。<br>单位：px</p>
+ * @method integer getHeight() 获取<p>水印图框高度。<br>单位：px</p>
+ * @method void setHeight(integer $Height) 设置<p>水印图框高度。<br>单位：px</p>
  */
 class LogoRect extends AbstractModel
 {
     /**
-     * @var integer 水印图框X坐标值。当值大于0时，坐标轴原点位于原图左侧，方向指右；当值小于0时，坐标轴原点位于原图右侧，方向指左。
+     * @var integer <p>水印图框X坐标值。当值大于0时，坐标轴原点位于原图左侧，方向指右；当值小于0时，坐标轴原点位于原图右侧，方向指左。</p>
      */
     public $X;
 
     /**
-     * @var integer 水印图框Y坐标值。当值大于0时，坐标轴原点位于原图上侧，方向指下；当值小于0时，坐标轴原点位于原图下侧，方向指上。
+     * @var integer <p>水印图框Y坐标值。当值大于0时，坐标轴原点位于原图上侧，方向指下；当值小于0时，坐标轴原点位于原图下侧，方向指上。</p>
      */
     public $Y;
 
     /**
-     * @var integer 水印图框宽度。
+     * @var integer <p>水印图框宽度。<br>单位：px</p>
      */
     public $Width;
 
     /**
-     * @var integer 水印图框高度。
+     * @var integer <p>水印图框高度。<br>单位：px</p>
      */
     public $Height;
 
     /**
-     * @param integer $X 水印图框X坐标值。当值大于0时，坐标轴原点位于原图左侧，方向指右；当值小于0时，坐标轴原点位于原图右侧，方向指左。
-     * @param integer $Y 水印图框Y坐标值。当值大于0时，坐标轴原点位于原图上侧，方向指下；当值小于0时，坐标轴原点位于原图下侧，方向指上。
-     * @param integer $Width 水印图框宽度。
-     * @param integer $Height 水印图框高度。
+     * @param integer $X <p>水印图框X坐标值。当值大于0时，坐标轴原点位于原图左侧，方向指右；当值小于0时，坐标轴原点位于原图右侧，方向指左。</p>
+     * @param integer $Y <p>水印图框Y坐标值。当值大于0时，坐标轴原点位于原图上侧，方向指下；当值小于0时，坐标轴原点位于原图下侧，方向指上。</p>
+     * @param integer $Width <p>水印图框宽度。<br>单位：px</p>
+     * @param integer $Height <p>水印图框高度。<br>单位：px</p>
      */
     function __construct()
     {

@@ -114,6 +114,10 @@ use TencentCloud\Common\AbstractModel;
 - ins-q47ofw6 表示这个实例是一个 CVM 的实例
 - eks-f8mvyaep 表示这个实例是一个 CXM 的实例
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取原生节点云标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置原生节点云标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NativeNodeInfo extends AbstractModel
 {
@@ -281,6 +285,12 @@ class NativeNodeInfo extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var array 原生节点云标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $MachineName 节点名称
      * @param string $MachineState Machine 状态
      * @param string $Zone Machine 所在可用区
@@ -327,6 +337,8 @@ class NativeNodeInfo extends AbstractModel
 
 - ins-q47ofw6 表示这个实例是一个 CVM 的实例
 - eks-f8mvyaep 表示这个实例是一个 CXM 的实例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 原生节点云标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -464,6 +476,15 @@ class NativeNodeInfo extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

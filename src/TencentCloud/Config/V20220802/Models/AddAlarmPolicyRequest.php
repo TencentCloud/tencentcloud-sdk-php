@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddAlarmPolicy请求参数结构体
  *
- * @method string getName() 获取告警策略名
- * @method void setName(string $Name) 设置告警策略名
- * @method array getEventScope() 获取事件范围  1：当前账号  2：多账号
- * @method void setEventScope(array $EventScope) 设置事件范围  1：当前账号  2：多账号
- * @method array getRiskLevel() 获取风险等级 1：高风险  2：中风险 3：低风险
- * @method void setRiskLevel(array $RiskLevel) 设置风险等级 1：高风险  2：中风险 3：低风险
- * @method string getNoticeTime() 获取通知时间段
- * @method void setNoticeTime(string $NoticeTime) 设置通知时间段
- * @method string getNotificationMechanism() 获取通知机制
- * @method void setNotificationMechanism(string $NotificationMechanism) 设置通知机制
- * @method integer getStatus() 获取状态 1：启用 2：停用
- * @method void setStatus(integer $Status) 设置状态 1：启用 2：停用
- * @method array getNoticePeriod() 获取通知周期
- * @method void setNoticePeriod(array $NoticePeriod) 设置通知周期
- * @method string getDescription() 获取策略描述
- * @method void setDescription(string $Description) 设置策略描述
+ * @method string getName() 获取<p>告警策略名</p>
+ * @method void setName(string $Name) 设置<p>告警策略名</p>
+ * @method integer getType() 获取<p>事件类型 1：资源不合规事件</p>
+ * @method void setType(integer $Type) 设置<p>事件类型 1：资源不合规事件</p>
+ * @method array getEventScope() 获取<p>事件范围  1：当前账号  2：多账号</p>
+ * @method void setEventScope(array $EventScope) 设置<p>事件范围  1：当前账号  2：多账号</p>
+ * @method array getRiskLevel() 获取<p>风险等级 1：高风险  2：中风险 3：低风险</p>
+ * @method void setRiskLevel(array $RiskLevel) 设置<p>风险等级 1：高风险  2：中风险 3：低风险</p>
+ * @method string getNoticeTime() 获取<p>通知时间段</p>
+ * @method void setNoticeTime(string $NoticeTime) 设置<p>通知时间段</p>
+ * @method string getNotificationMechanism() 获取<p>通知机制</p>
+ * @method void setNotificationMechanism(string $NotificationMechanism) 设置<p>通知机制</p>
+ * @method integer getStatus() 获取<p>状态 1：启用 2：停用</p>
+ * @method void setStatus(integer $Status) 设置<p>状态 1：启用 2：停用</p>
+ * @method array getNoticePeriod() 获取<p>通知周期</p>
+ * @method void setNoticePeriod(array $NoticePeriod) 设置<p>通知周期</p>
+ * @method string getDescription() 获取<p>策略描述</p>
+ * @method void setDescription(string $Description) 设置<p>策略描述</p>
  */
 class AddAlarmPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 告警策略名
+     * @var string <p>告警策略名</p>
      */
     public $Name;
 
     /**
-     * @var array 事件范围  1：当前账号  2：多账号
+     * @var integer <p>事件类型 1：资源不合规事件</p>
+     */
+    public $Type;
+
+    /**
+     * @var array <p>事件范围  1：当前账号  2：多账号</p>
      */
     public $EventScope;
 
     /**
-     * @var array 风险等级 1：高风险  2：中风险 3：低风险
+     * @var array <p>风险等级 1：高风险  2：中风险 3：低风险</p>
      */
     public $RiskLevel;
 
     /**
-     * @var string 通知时间段
+     * @var string <p>通知时间段</p>
      */
     public $NoticeTime;
 
     /**
-     * @var string 通知机制
+     * @var string <p>通知机制</p>
      */
     public $NotificationMechanism;
 
     /**
-     * @var integer 状态 1：启用 2：停用
+     * @var integer <p>状态 1：启用 2：停用</p>
      */
     public $Status;
 
     /**
-     * @var array 通知周期
+     * @var array <p>通知周期</p>
      */
     public $NoticePeriod;
 
     /**
-     * @var string 策略描述
+     * @var string <p>策略描述</p>
      */
     public $Description;
 
     /**
-     * @param string $Name 告警策略名
-     * @param array $EventScope 事件范围  1：当前账号  2：多账号
-     * @param array $RiskLevel 风险等级 1：高风险  2：中风险 3：低风险
-     * @param string $NoticeTime 通知时间段
-     * @param string $NotificationMechanism 通知机制
-     * @param integer $Status 状态 1：启用 2：停用
-     * @param array $NoticePeriod 通知周期
-     * @param string $Description 策略描述
+     * @param string $Name <p>告警策略名</p>
+     * @param integer $Type <p>事件类型 1：资源不合规事件</p>
+     * @param array $EventScope <p>事件范围  1：当前账号  2：多账号</p>
+     * @param array $RiskLevel <p>风险等级 1：高风险  2：中风险 3：低风险</p>
+     * @param string $NoticeTime <p>通知时间段</p>
+     * @param string $NotificationMechanism <p>通知机制</p>
+     * @param integer $Status <p>状态 1：启用 2：停用</p>
+     * @param array $NoticePeriod <p>通知周期</p>
+     * @param string $Description <p>策略描述</p>
      */
     function __construct()
     {
@@ -104,6 +112,10 @@ class AddAlarmPolicyRequest extends AbstractModel
         }
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
 
         if (array_key_exists("EventScope",$param) and $param["EventScope"] !== null) {

@@ -44,6 +44,7 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。创建 5.x 集群消费组的接口文档见 [CreateConsumerGroup](https://cloud.tencent.com/document/api/1493/97943)。
  * @method Models\CreateRocketMQGroupV2Response CreateRocketMQGroupV2(Models\CreateRocketMQGroupV2Request $req) 创建 RocketMQ 消费组。
 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。创建 5.x 集群消费组的接口文档见 [CreateConsumerGroup](https://cloud.tencent.com/document/api/1493/97943)。
+ * @method Models\CreateRocketMQMigrationTaskResponse CreateRocketMQMigrationTask(Models\CreateRocketMQMigrationTaskRequest $req) 创建RocketMQ元数据迁移任务，用于批量创建主题和消费组数据
  * @method Models\CreateRocketMQNamespaceResponse CreateRocketMQNamespace(Models\CreateRocketMQNamespaceRequest $req) 创建 RocketMQ 命名空间。
 当前 API 适用集群：4.x 虚拟集群和 4.x 专享集群，其他集群类型均不支持该功能。
  * @method Models\CreateRocketMQRoleResponse CreateRocketMQRole(Models\CreateRocketMQRoleRequest $req) 创建角色。

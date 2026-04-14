@@ -141,6 +141,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\SetExternalSAMLIdentityProviderResponse SetExternalSAMLIdentityProvider(Models\SetExternalSAMLIdentityProviderRequest $req) 配置SAML身份提供商信息
  * @method Models\UpdateCustomPolicyForRoleConfigurationResponse UpdateCustomPolicyForRoleConfiguration(Models\UpdateCustomPolicyForRoleConfigurationRequest $req) 为权限配置修改自定义策略
  * @method Models\UpdateGroupResponse UpdateGroup(Models\UpdateGroupRequest $req) 修改用户组信息
+ * @method Models\UpdateIPWhitelistResponse UpdateIPWhitelist(Models\UpdateIPWhitelistRequest $req) 更新新建ip白名单
  * @method Models\UpdateOrganizationIdentityResponse UpdateOrganizationIdentity(Models\UpdateOrganizationIdentityRequest $req) 更新组织身份
  * @method Models\UpdateOrganizationMemberResponse UpdateOrganizationMember(Models\UpdateOrganizationMemberRequest $req) 更新组织成员信息
  * @method Models\UpdateOrganizationMemberEmailBindResponse UpdateOrganizationMemberEmailBind(Models\UpdateOrganizationMemberEmailBindRequest $req) 修改绑定成员邮箱

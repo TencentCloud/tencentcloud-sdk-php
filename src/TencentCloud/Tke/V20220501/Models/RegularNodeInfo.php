@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoscalingGroupId(string $AutoscalingGroupId) 设置自动伸缩组ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取普通节点云标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置普通节点云标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RegularNodeInfo extends AbstractModel
 {
@@ -44,9 +48,17 @@ class RegularNodeInfo extends AbstractModel
     public $AutoscalingGroupId;
 
     /**
+     * @var array 普通节点云标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings 节点配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AutoscalingGroupId 自动伸缩组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 普通节点云标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -69,6 +81,15 @@ class RegularNodeInfo extends AbstractModel
 
         if (array_key_exists("AutoscalingGroupId",$param) and $param["AutoscalingGroupId"] !== null) {
             $this->AutoscalingGroupId = $param["AutoscalingGroupId"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

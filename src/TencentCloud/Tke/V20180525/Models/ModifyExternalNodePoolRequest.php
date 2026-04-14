@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodePoolId(string $NodePoolId) 设置节点池ID
  * @method string getName() 获取节点池名称
  * @method void setName(string $Name) 设置节点池名称
- * @method array getLabels() 获取第三方节点label
- * @method void setLabels(array $Labels) 设置第三方节点label
- * @method array getTaints() 获取第三方节点taint
- * @method void setTaints(array $Taints) 设置第三方节点taint
+ * @method array getLabels() 获取注册节点标签
+ * @method void setLabels(array $Labels) 设置注册节点标签
+ * @method array getTaints() 获取注册节点污点
+ * @method void setTaints(array $Taints) 设置注册节点污点
  * @method boolean getDeletionProtection() 获取删除保护开关
  * @method void setDeletionProtection(boolean $DeletionProtection) 设置删除保护开关
  * @method string getUserScript() 获取base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看
@@ -53,12 +53,12 @@ class ModifyExternalNodePoolRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var array 第三方节点label
+     * @var array 注册节点标签
      */
     public $Labels;
 
     /**
-     * @var array 第三方节点taint
+     * @var array 注册节点污点
      */
     public $Taints;
 
@@ -76,8 +76,8 @@ class ModifyExternalNodePoolRequest extends AbstractModel
      * @param string $ClusterId 集群ID
      * @param string $NodePoolId 节点池ID
      * @param string $Name 节点池名称
-     * @param array $Labels 第三方节点label
-     * @param array $Taints 第三方节点taint
+     * @param array $Labels 注册节点标签
+     * @param array $Taints 注册节点污点
      * @param boolean $DeletionProtection 删除保护开关
      * @param string $UserScript base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看
      */

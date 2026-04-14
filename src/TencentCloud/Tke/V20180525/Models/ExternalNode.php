@@ -18,91 +18,91 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 第三方节点
+ * 注册节点
  *
- * @method string getName() 获取第三方节点名称
- * @method void setName(string $Name) 设置第三方节点名称
- * @method string getNodePoolId() 获取第三方节点所属节点池
+ * @method string getName() 获取<p>注册节点名称</p>
+ * @method void setName(string $Name) 设置<p>注册节点名称</p>
+ * @method string getNodePoolId() 获取<p>注册节点所属节点池</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNodePoolId(string $NodePoolId) 设置第三方节点所属节点池
+ * @method void setNodePoolId(string $NodePoolId) 设置<p>注册节点所属节点池</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIP() 获取第三方IP地址
- * @method void setIP(string $IP) 设置第三方IP地址
- * @method string getLocation() 获取第三方地域
- * @method void setLocation(string $Location) 设置第三方地域
- * @method string getStatus() 获取第三方节点状态
- * @method void setStatus(string $Status) 设置第三方节点状态
- * @method string getCreatedTime() 获取创建时间
+ * @method string getIP() 获取<p>注册节点IP地址</p>
+ * @method void setIP(string $IP) 设置<p>注册节点IP地址</p>
+ * @method string getLocation() 获取<p>注册节点地域</p>
+ * @method void setLocation(string $Location) 设置<p>注册节点地域</p>
+ * @method string getStatus() 获取<p>注册节点状态</p><p>枚举值：</p><ul><li>Running： 运行中</li><li>Failed： 异常状态</li><li>Terminating： 删除中</li><li>Draining： 驱逐中</li></ul>
+ * @method void setStatus(string $Status) 设置<p>注册节点状态</p><p>枚举值：</p><ul><li>Running： 运行中</li><li>Failed： 异常状态</li><li>Terminating： 删除中</li><li>Draining： 驱逐中</li></ul>
+ * @method string getCreatedTime() 获取<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间
+ * @method void setCreatedTime(string $CreatedTime) 设置<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getReason() 获取异常原因
+ * @method string getReason() 获取<p>异常原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReason(string $Reason) 设置异常原因
+ * @method void setReason(string $Reason) 设置<p>异常原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getUnschedulable() 获取是否封锁。true表示已封锁，false表示未封锁
+ * @method boolean getUnschedulable() 获取<p>是否封锁。true表示已封锁，false表示未封锁</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUnschedulable(boolean $Unschedulable) 设置是否封锁。true表示已封锁，false表示未封锁
+ * @method void setUnschedulable(boolean $Unschedulable) 设置<p>是否封锁。true表示已封锁，false表示未封锁</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ExternalNode extends AbstractModel
 {
     /**
-     * @var string 第三方节点名称
+     * @var string <p>注册节点名称</p>
      */
     public $Name;
 
     /**
-     * @var string 第三方节点所属节点池
+     * @var string <p>注册节点所属节点池</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodePoolId;
 
     /**
-     * @var string 第三方IP地址
+     * @var string <p>注册节点IP地址</p>
      */
     public $IP;
 
     /**
-     * @var string 第三方地域
+     * @var string <p>注册节点地域</p>
      */
     public $Location;
 
     /**
-     * @var string 第三方节点状态
+     * @var string <p>注册节点状态</p><p>枚举值：</p><ul><li>Running： 运行中</li><li>Failed： 异常状态</li><li>Terminating： 删除中</li><li>Draining： 驱逐中</li></ul>
      */
     public $Status;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedTime;
 
     /**
-     * @var string 异常原因
+     * @var string <p>异常原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Reason;
 
     /**
-     * @var boolean 是否封锁。true表示已封锁，false表示未封锁
+     * @var boolean <p>是否封锁。true表示已封锁，false表示未封锁</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Unschedulable;
 
     /**
-     * @param string $Name 第三方节点名称
-     * @param string $NodePoolId 第三方节点所属节点池
+     * @param string $Name <p>注册节点名称</p>
+     * @param string $NodePoolId <p>注册节点所属节点池</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IP 第三方IP地址
-     * @param string $Location 第三方地域
-     * @param string $Status 第三方节点状态
-     * @param string $CreatedTime 创建时间
+     * @param string $IP <p>注册节点IP地址</p>
+     * @param string $Location <p>注册节点地域</p>
+     * @param string $Status <p>注册节点状态</p><p>枚举值：</p><ul><li>Running： 运行中</li><li>Failed： 异常状态</li><li>Terminating： 删除中</li><li>Draining： 驱逐中</li></ul>
+     * @param string $CreatedTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Reason 异常原因
+     * @param string $Reason <p>异常原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $Unschedulable 是否封锁。true表示已封锁，false表示未封锁
+     * @param boolean $Unschedulable <p>是否封锁。true表示已封锁，false表示未封锁</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

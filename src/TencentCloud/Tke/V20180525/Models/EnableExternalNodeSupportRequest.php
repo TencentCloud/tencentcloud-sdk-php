@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群Id
  * @method void setClusterId(string $ClusterId) 设置集群Id
- * @method ClusterExternalConfig getClusterExternalConfig() 获取开启第三方节点池支持配置信息
- * @method void setClusterExternalConfig(ClusterExternalConfig $ClusterExternalConfig) 设置开启第三方节点池支持配置信息
+ * @method ClusterExternalConfig getClusterExternalConfig() 获取开启注册节点池支持配置信息
+ * @method void setClusterExternalConfig(ClusterExternalConfig $ClusterExternalConfig) 设置开启注册节点池支持配置信息
  */
 class EnableExternalNodeSupportRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class EnableExternalNodeSupportRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var ClusterExternalConfig 开启第三方节点池支持配置信息
+     * @var ClusterExternalConfig 开启注册节点池支持配置信息
      */
     public $ClusterExternalConfig;
 
     /**
      * @param string $ClusterId 集群Id
-     * @param ClusterExternalConfig $ClusterExternalConfig 开启第三方节点池支持配置信息
+     * @param ClusterExternalConfig $ClusterExternalConfig 开启注册节点池支持配置信息
      */
     function __construct()
     {

@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConsoleId(string $ConsoleId) 设置<p>DataSight控制台ConsoleId</p>
  * @method array getAccessMode() 获取<p>访问方式：public - 公网，internal - 内网</p>
  * @method void setAccessMode(array $AccessMode) 设置<p>访问方式：public - 公网，internal - 内网</p>
- * @method integer getLoginMode() 获取<p>登录方式：0 - 账号密码鉴权，1 - 匿名登陆，2 - 第三方认证登录</p>
- * @method void setLoginMode(integer $LoginMode) 设置<p>登录方式：0 - 账号密码鉴权，1 - 匿名登陆，2 - 第三方认证登录</p>
+ * @method integer getLoginMode() 获取<p>登录方式</p><p>枚举值：</p><ul><li>0： 账号密码鉴权</li><li>1： 匿名登录</li><li>2： 第三方认证登录</li></ul>
+ * @method void setLoginMode(integer $LoginMode) 设置<p>登录方式</p><p>枚举值：</p><ul><li>0： 账号密码鉴权</li><li>1： 匿名登录</li><li>2： 第三方认证登录</li></ul>
  * @method string getDomainPrefix() 获取<p>自定义域名前缀</p>
  * @method void setDomainPrefix(string $DomainPrefix) 设置<p>自定义域名前缀</p>
- * @method array getAccounts() 获取<p>用户账号信息</p><p>“账号密码鉴权“登录方式必传</p>
- * @method void setAccounts(array $Accounts) 设置<p>用户账号信息</p><p>“账号密码鉴权“登录方式必传</p>
+ * @method array getAccounts() 获取<p>用户账号信息</p><p>“账号密码鉴权”登录方式必传</p>
+ * @method void setAccounts(array $Accounts) 设置<p>用户账号信息</p><p>“账号密码鉴权”登录方式必传</p>
  * @method AnonymousLoginInfo getAnonymousLogin() 获取<p>匿名登录账号信息</p><p>“匿名登录”登录方式必传</p>
  * @method void setAnonymousLogin(AnonymousLoginInfo $AnonymousLogin) 设置<p>匿名登录账号信息</p><p>“匿名登录”登录方式必传</p>
  * @method integer getIntranetType() 获取<p>内网类型，默认为0</p>
@@ -64,7 +64,7 @@ class ModifyConsoleRequest extends AbstractModel
     public $AccessMode;
 
     /**
-     * @var integer <p>登录方式：0 - 账号密码鉴权，1 - 匿名登陆，2 - 第三方认证登录</p>
+     * @var integer <p>登录方式</p><p>枚举值：</p><ul><li>0： 账号密码鉴权</li><li>1： 匿名登录</li><li>2： 第三方认证登录</li></ul>
      */
     public $LoginMode;
 
@@ -74,7 +74,7 @@ class ModifyConsoleRequest extends AbstractModel
     public $DomainPrefix;
 
     /**
-     * @var array <p>用户账号信息</p><p>“账号密码鉴权“登录方式必传</p>
+     * @var array <p>用户账号信息</p><p>“账号密码鉴权”登录方式必传</p>
      */
     public $Accounts;
 
@@ -131,9 +131,9 @@ class ModifyConsoleRequest extends AbstractModel
     /**
      * @param string $ConsoleId <p>DataSight控制台ConsoleId</p>
      * @param array $AccessMode <p>访问方式：public - 公网，internal - 内网</p>
-     * @param integer $LoginMode <p>登录方式：0 - 账号密码鉴权，1 - 匿名登陆，2 - 第三方认证登录</p>
+     * @param integer $LoginMode <p>登录方式</p><p>枚举值：</p><ul><li>0： 账号密码鉴权</li><li>1： 匿名登录</li><li>2： 第三方认证登录</li></ul>
      * @param string $DomainPrefix <p>自定义域名前缀</p>
-     * @param array $Accounts <p>用户账号信息</p><p>“账号密码鉴权“登录方式必传</p>
+     * @param array $Accounts <p>用户账号信息</p><p>“账号密码鉴权”登录方式必传</p>
      * @param AnonymousLoginInfo $AnonymousLogin <p>匿名登录账号信息</p><p>“匿名登录”登录方式必传</p>
      * @param integer $IntranetType <p>内网类型，默认为0</p>
      * @param string $IntranetRegion <p>内网地域</p>

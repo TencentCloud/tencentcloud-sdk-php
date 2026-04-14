@@ -44,6 +44,7 @@ use TencentCloud\Vclm\V20240523\Models as Models;
 ●默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
  * @method Models\SubmitImageAnimateJobResponse SubmitImageAnimateJob(Models\SubmitImageAnimateJobRequest $req) 用于提交图片跳舞任务。图片跳舞能力支持舞蹈动作结合图片生成跳舞视频，满足社交娱乐、互动营销等场景的需求。
  * @method Models\SubmitImageToVideoGeneralJobResponse SubmitImageToVideoGeneralJob(Models\SubmitImageToVideoGeneralJobRequest $req) 图生视频通用能力接口
+ * @method Models\SubmitImageToVideoViduJobResponse SubmitImageToVideoViduJob(Models\SubmitImageToVideoViduJobRequest $req) 提交Vidu图生视频任务接口
  * @method Models\SubmitPortraitSingJobResponse SubmitPortraitSingJob(Models\SubmitPortraitSingJobRequest $req) 用于提交图片唱演任务。
 支持提交音频和图片生成唱演视频，满足社交娱乐、互动营销等场景的需求。
  * @method Models\SubmitTemplateToVideoJobResponse SubmitTemplateToVideoJob(Models\SubmitTemplateToVideoJobRequest $req) 提交视频特效任务接口

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getNodePoolId() 获取节点池ID
- * @method void setNodePoolId(string $NodePoolId) 设置节点池ID
+ * @method string getNodePoolId() 获取注册节点池ID
+ * @method void setNodePoolId(string $NodePoolId) 设置注册节点池ID
  * @method string getInterface() 获取网卡名
  * @method void setInterface(string $Interface) 设置网卡名
  * @method string getName() 获取节点名称
@@ -39,7 +39,7 @@ class DescribeExternalNodeScriptRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 节点池ID
+     * @var string 注册节点池ID
      */
     public $NodePoolId;
 
@@ -60,7 +60,7 @@ class DescribeExternalNodeScriptRequest extends AbstractModel
 
     /**
      * @param string $ClusterId 集群ID
-     * @param string $NodePoolId 节点池ID
+     * @param string $NodePoolId 注册节点池ID
      * @param string $Interface 网卡名
      * @param string $Name 节点名称
      * @param boolean $Internal 是否内网获取节点初始化脚本

@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tke\V20180525\Models;
+namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeExternalNodeSupportConfig请求参数结构体
+ * 术语表
  *
- * @method string getClusterId() 获取集群Id，可通过查看集群的基本信息->基础信息页获取
- * @method void setClusterId(string $ClusterId) 设置集群Id，可通过查看集群的基本信息->基础信息页获取
+ * @method string getSrc() 获取<p>术语原语言</p>
+ * @method void setSrc(string $Src) 设置<p>术语原语言</p>
+ * @method string getDst() 获取<p>术语目标语言</p>
+ * @method void setDst(string $Dst) 设置<p>术语目标语言</p>
  */
-class DescribeExternalNodeSupportConfigRequest extends AbstractModel
+class TermBase extends AbstractModel
 {
     /**
-     * @var string 集群Id，可通过查看集群的基本信息->基础信息页获取
+     * @var string <p>术语原语言</p>
      */
-    public $ClusterId;
+    public $Src;
 
     /**
-     * @param string $ClusterId 集群Id，可通过查看集群的基本信息->基础信息页获取
+     * @var string <p>术语目标语言</p>
+     */
+    public $Dst;
+
+    /**
+     * @param string $Src <p>术语原语言</p>
+     * @param string $Dst <p>术语目标语言</p>
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeExternalNodeSupportConfigRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists("Src",$param) and $param["Src"] !== null) {
+            $this->Src = $param["Src"];
+        }
+
+        if (array_key_exists("Dst",$param) and $param["Dst"] !== null) {
+            $this->Dst = $param["Dst"];
         }
     }
 }

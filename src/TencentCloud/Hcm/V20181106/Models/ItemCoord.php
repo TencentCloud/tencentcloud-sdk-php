@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 目标算式在图片上的坐标信息
  *
- * @method integer getHeight() 获取算式高度
- * @method void setHeight(integer $Height) 设置算式高度
- * @method integer getWidth() 获取算式宽度
- * @method void setWidth(integer $Width) 设置算式宽度
- * @method integer getX() 获取算式图的左上角横坐标
- * @method void setX(integer $X) 设置算式图的左上角横坐标
- * @method integer getY() 获取算式图的左上角纵坐标
- * @method void setY(integer $Y) 设置算式图的左上角纵坐标
+ * @method integer getHeight() 获取<p>算式高度（单位：px）</p>
+ * @method void setHeight(integer $Height) 设置<p>算式高度（单位：px）</p>
+ * @method integer getWidth() 获取<p>算式宽度（单位：px）</p>
+ * @method void setWidth(integer $Width) 设置<p>算式宽度（单位：px）</p>
+ * @method integer getX() 获取<p>算式图的左上角横坐标</p>
+ * @method void setX(integer $X) 设置<p>算式图的左上角横坐标</p>
+ * @method integer getY() 获取<p>算式图的左上角纵坐标</p>
+ * @method void setY(integer $Y) 设置<p>算式图的左上角纵坐标</p>
  */
 class ItemCoord extends AbstractModel
 {
     /**
-     * @var integer 算式高度
+     * @var integer <p>算式高度（单位：px）</p>
      */
     public $Height;
 
     /**
-     * @var integer 算式宽度
+     * @var integer <p>算式宽度（单位：px）</p>
      */
     public $Width;
 
     /**
-     * @var integer 算式图的左上角横坐标
+     * @var integer <p>算式图的左上角横坐标</p>
      */
     public $X;
 
     /**
-     * @var integer 算式图的左上角纵坐标
+     * @var integer <p>算式图的左上角纵坐标</p>
      */
     public $Y;
 
     /**
-     * @param integer $Height 算式高度
-     * @param integer $Width 算式宽度
-     * @param integer $X 算式图的左上角横坐标
-     * @param integer $Y 算式图的左上角纵坐标
+     * @param integer $Height <p>算式高度（单位：px）</p>
+     * @param integer $Width <p>算式宽度（单位：px）</p>
+     * @param integer $X <p>算式图的左上角横坐标</p>
+     * @param integer $Y <p>算式图的左上角纵坐标</p>
      */
     function __construct()
     {

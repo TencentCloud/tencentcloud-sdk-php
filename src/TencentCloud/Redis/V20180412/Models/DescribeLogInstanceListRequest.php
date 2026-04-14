@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) 设置<p>设置日志筛选字段，过滤并返回符合条件的日志。</p>
  * @method string getLogSubType() 获取<p>日志子类型。</p><p>枚举值：</p><ul><li>write： 写日志。</li><li>read： 读日志。</li><li>all： 读写日志。</li></ul>
  * @method void setLogSubType(string $LogSubType) 设置<p>日志子类型。</p><p>枚举值：</p><ul><li>write： 写日志。</li><li>read： 读日志。</li><li>all： 读写日志。</li></ul>
- * @method string getLogSwitch() 获取<p>日志开关。不传查询所有日志实例。</p><ul><li>on：开启。</li><li>off：关闭。</li></ul>
- * @method void setLogSwitch(string $LogSwitch) 设置<p>日志开关。不传查询所有日志实例。</p><ul><li>on：开启。</li><li>off：关闭。</li></ul>
+ * @method string getLogSwitch() 获取<p>日志开关。</p><p>枚举值：</p><ul><li>on： 开启</li><li>off： 关闭</li></ul><p>默认值：off</p>
+ * @method void setLogSwitch(string $LogSwitch) 设置<p>日志开关。</p><p>枚举值：</p><ul><li>on： 开启</li><li>off： 关闭</li></ul><p>默认值：off</p>
  */
 class DescribeLogInstanceListRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeLogInstanceListRequest extends AbstractModel
     public $LogSubType;
 
     /**
-     * @var string <p>日志开关。不传查询所有日志实例。</p><ul><li>on：开启。</li><li>off：关闭。</li></ul>
+     * @var string <p>日志开关。</p><p>枚举值：</p><ul><li>on： 开启</li><li>off： 关闭</li></ul><p>默认值：off</p>
      */
     public $LogSwitch;
 
@@ -71,7 +71,7 @@ class DescribeLogInstanceListRequest extends AbstractModel
      * @param integer $Offset <p>分页偏移量。默认为0。取值为 Limit 整数倍。计算公式：offset=limit*(页码-1)。</p>
      * @param array $Filters <p>设置日志筛选字段，过滤并返回符合条件的日志。</p>
      * @param string $LogSubType <p>日志子类型。</p><p>枚举值：</p><ul><li>write： 写日志。</li><li>read： 读日志。</li><li>all： 读写日志。</li></ul>
-     * @param string $LogSwitch <p>日志开关。不传查询所有日志实例。</p><ul><li>on：开启。</li><li>off：关闭。</li></ul>
+     * @param string $LogSwitch <p>日志开关。</p><p>枚举值：</p><ul><li>on： 开启</li><li>off： 关闭</li></ul><p>默认值：off</p>
      */
     function __construct()
     {

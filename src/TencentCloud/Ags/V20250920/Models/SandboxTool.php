@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置<p>沙箱工具状态，取值：CREATING（创建中）、ACTIVE（可用）、DELETING（删除中）、FAILED（失败）</p>
  * @method string getDescription() 获取<p>沙箱工具描述信息，最大长度 200 字符</p>
  * @method void setDescription(string $Description) 设置<p>沙箱工具描述信息，最大长度 200 字符</p>
+ * @method boolean getPersistent() 获取<p>是否常驻沙箱</p>
+ * @method void setPersistent(boolean $Persistent) 设置<p>是否常驻沙箱</p>
  * @method integer getDefaultTimeoutSeconds() 获取<p>默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时</p>
  * @method void setDefaultTimeoutSeconds(integer $DefaultTimeoutSeconds) 设置<p>默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时</p>
  * @method NetworkConfiguration getNetworkConfiguration() 获取<p>网络配置</p>
@@ -77,6 +79,11 @@ class SandboxTool extends AbstractModel
      * @var string <p>沙箱工具描述信息，最大长度 200 字符</p>
      */
     public $Description;
+
+    /**
+     * @var boolean <p>是否常驻沙箱</p>
+     */
+    public $Persistent;
 
     /**
      * @var integer <p>默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时</p>
@@ -134,6 +141,7 @@ class SandboxTool extends AbstractModel
      * @param string $ToolType <p>沙箱工具类型，取值：browser（浏览器工具）、code-interpreter（代码解释器工具）、computer（计算机控制工具）、mobile（移动设备工具）</p>
      * @param string $Status <p>沙箱工具状态，取值：CREATING（创建中）、ACTIVE（可用）、DELETING（删除中）、FAILED（失败）</p>
      * @param string $Description <p>沙箱工具描述信息，最大长度 200 字符</p>
+     * @param boolean $Persistent <p>是否常驻沙箱</p>
      * @param integer $DefaultTimeoutSeconds <p>默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时</p>
      * @param NetworkConfiguration $NetworkConfiguration <p>网络配置</p>
      * @param array $Tags <p>标签规格，包含资源标签绑定关系。用于为沙箱工具绑定标签，支持多种资源类型的标签绑定</p>
@@ -176,6 +184,10 @@ class SandboxTool extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("Persistent",$param) and $param["Persistent"] !== null) {
+            $this->Persistent = $param["Persistent"];
         }
 
         if (array_key_exists("DefaultTimeoutSeconds",$param) and $param["DefaultTimeoutSeconds"] !== null) {

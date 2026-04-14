@@ -23,13 +23,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取名称
  * @method void setName(string $Name) 设置名称
  * @method string getStartAt() 获取开始时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartAt(string $StartAt) 设置开始时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndAt() 获取结束时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndAt(string $EndAt) 设置结束时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取当前状态
  * @method void setStatus(string $Status) 设置当前状态
  * @method string getMessage() 获取执行信息
  * @method void setMessage(string $Message) 设置执行信息
+ * @method string getDetail() 获取错误详情
+ * @method void setDetail(string $Detail) 设置错误详情
  */
 class Step extends AbstractModel
 {
@@ -40,11 +46,13 @@ class Step extends AbstractModel
 
     /**
      * @var string 开始时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartAt;
 
     /**
      * @var string 结束时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndAt;
 
@@ -59,11 +67,19 @@ class Step extends AbstractModel
     public $Message;
 
     /**
+     * @var string 错误详情
+     */
+    public $Detail;
+
+    /**
      * @param string $Name 名称
      * @param string $StartAt 开始时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndAt 结束时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 当前状态
      * @param string $Message 执行信息
+     * @param string $Detail 错误详情
      */
     function __construct()
     {
@@ -96,6 +112,10 @@ class Step extends AbstractModel
 
         if (array_key_exists("Message",$param) and $param["Message"] !== null) {
             $this->Message = $param["Message"];
+        }
+
+        if (array_key_exists("Detail",$param) and $param["Detail"] !== null) {
+            $this->Detail = $param["Detail"];
         }
     }
 }

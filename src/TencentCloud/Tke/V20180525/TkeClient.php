@@ -51,7 +51,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\CreateEdgeCVMInstancesResponse CreateEdgeCVMInstances(Models\CreateEdgeCVMInstancesRequest $req) 创建边缘容器CVM机器
  * @method Models\CreateEdgeLogConfigResponse CreateEdgeLogConfig(Models\CreateEdgeLogConfigRequest $req) 创建边缘集群日志采集配置
  * @method Models\CreateEksLogConfigResponse CreateEksLogConfig(Models\CreateEksLogConfigRequest $req) 为弹性集群创建日志采集配置
- * @method Models\CreateExternalNodePoolResponse CreateExternalNodePool(Models\CreateExternalNodePoolRequest $req) 创建第三方节点池
+ * @method Models\CreateExternalNodePoolResponse CreateExternalNodePool(Models\CreateExternalNodePoolRequest $req) 创建注册节点池
  * @method Models\CreateGlobalMaintenanceWindowAndExclusionsResponse CreateGlobalMaintenanceWindowAndExclusions(Models\CreateGlobalMaintenanceWindowAndExclusionsRequest $req) 创建全局维护时间窗口和排除项
  * @method Models\CreateImageCacheResponse CreateImageCache(Models\CreateImageCacheRequest $req) 创建镜像缓存的接口。创建过程中，请勿删除EKSCI实例和云盘，否则镜像缓存将创建失败。
  * @method Models\CreatePrometheusAlertPolicyResponse CreatePrometheusAlertPolicy(Models\CreatePrometheusAlertPolicyRequest $req) 创建告警策略
@@ -84,8 +84,8 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DeleteEKSContainerInstancesResponse DeleteEKSContainerInstances(Models\DeleteEKSContainerInstancesRequest $req) 删除容器实例，可批量删除
  * @method Models\DeleteEdgeCVMInstancesResponse DeleteEdgeCVMInstances(Models\DeleteEdgeCVMInstancesRequest $req) 删除边缘容器CVM实例
  * @method Models\DeleteEdgeClusterInstancesResponse DeleteEdgeClusterInstances(Models\DeleteEdgeClusterInstancesRequest $req) 删除边缘计算实例
- * @method Models\DeleteExternalNodeResponse DeleteExternalNode(Models\DeleteExternalNodeRequest $req) 删除第三方节点
- * @method Models\DeleteExternalNodePoolResponse DeleteExternalNodePool(Models\DeleteExternalNodePoolRequest $req) 删除第三方节点池
+ * @method Models\DeleteExternalNodeResponse DeleteExternalNode(Models\DeleteExternalNodeRequest $req) 删除注册节点
+ * @method Models\DeleteExternalNodePoolResponse DeleteExternalNodePool(Models\DeleteExternalNodePoolRequest $req) 删除注册节点池
  * @method Models\DeleteGlobalMaintenanceWindowAndExclusionResponse DeleteGlobalMaintenanceWindowAndExclusion(Models\DeleteGlobalMaintenanceWindowAndExclusionRequest $req) 删除全集维护时间窗口和排除项
  * @method Models\DeleteImageCachesResponse DeleteImageCaches(Models\DeleteImageCachesRequest $req) 批量删除镜像缓存
  * @method Models\DeleteLogConfigsResponse DeleteLogConfigs(Models\DeleteLogConfigsRequest $req) 删除集群内采集规则
@@ -156,10 +156,10 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeEnableVpcCniProgressResponse DescribeEnableVpcCniProgress(Models\DescribeEnableVpcCniProgressRequest $req) 本接口用于查询开启vpc-cni模式的任务进度
  * @method Models\DescribeEncryptionStatusResponse DescribeEncryptionStatus(Models\DescribeEncryptionStatusRequest $req) 查询etcd数据是否进行加密
  * @method Models\DescribeExistedInstancesResponse DescribeExistedInstances(Models\DescribeExistedInstancesRequest $req) 查询已经存在的节点，判断是否可以加入集群
- * @method Models\DescribeExternalNodeResponse DescribeExternalNode(Models\DescribeExternalNodeRequest $req) 查看第三方节点列表
- * @method Models\DescribeExternalNodePoolsResponse DescribeExternalNodePools(Models\DescribeExternalNodePoolsRequest $req) 查看第三方节点池列表
- * @method Models\DescribeExternalNodeScriptResponse DescribeExternalNodeScript(Models\DescribeExternalNodeScriptRequest $req) 获取第三方节点添加脚本
- * @method Models\DescribeExternalNodeSupportConfigResponse DescribeExternalNodeSupportConfig(Models\DescribeExternalNodeSupportConfigRequest $req) 查看开启第三方节点池配置信息
+ * @method Models\DescribeExternalNodeResponse DescribeExternalNode(Models\DescribeExternalNodeRequest $req) 查看注册节点列表
+ * @method Models\DescribeExternalNodePoolsResponse DescribeExternalNodePools(Models\DescribeExternalNodePoolsRequest $req) 查看注册节点池列表
+ * @method Models\DescribeExternalNodeScriptResponse DescribeExternalNodeScript(Models\DescribeExternalNodeScriptRequest $req) 获取注册节点初始化脚本
+ * @method Models\DescribeExternalNodeSupportConfigResponse DescribeExternalNodeSupportConfig(Models\DescribeExternalNodeSupportConfigRequest $req) 查看开启注册节点池配置信息
  * @method Models\DescribeGlobalMaintenanceWindowAndExclusionsResponse DescribeGlobalMaintenanceWindowAndExclusions(Models\DescribeGlobalMaintenanceWindowAndExclusionsRequest $req) 获取全局维护时间窗口和排除项
  * @method Models\DescribeIPAMDResponse DescribeIPAMD(Models\DescribeIPAMDRequest $req) 获取eniipamd组件信息
  * @method Models\DescribeImageCachesResponse DescribeImageCaches(Models\DescribeImageCachesRequest $req) 查询镜像缓存信息接口
@@ -218,14 +218,14 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DisableEventPersistenceResponse DisableEventPersistence(Models\DisableEventPersistenceRequest $req) 关闭事件持久化功能
  * @method Models\DisableVpcCniNetworkTypeResponse DisableVpcCniNetworkType(Models\DisableVpcCniNetworkTypeRequest $req) 提供给附加了VPC-CNI能力的Global-Route集群关闭VPC-CNI
  * @method Models\DrainClusterVirtualNodeResponse DrainClusterVirtualNode(Models\DrainClusterVirtualNodeRequest $req) 驱逐超级节点
- * @method Models\DrainExternalNodeResponse DrainExternalNode(Models\DrainExternalNodeRequest $req) 驱逐第三方节点
+ * @method Models\DrainExternalNodeResponse DrainExternalNode(Models\DrainExternalNodeRequest $req) 驱逐注册节点
  * @method Models\EnableClusterAuditResponse EnableClusterAudit(Models\EnableClusterAuditRequest $req) 开启集群审计
  * @method Models\EnableClusterDeletionProtectionResponse EnableClusterDeletionProtection(Models\EnableClusterDeletionProtectionRequest $req) 启用集群删除保护
  * @method Models\EnableControlPlaneLogsResponse EnableControlPlaneLogs(Models\EnableControlPlaneLogsRequest $req) 创建插件日志采集配置
  * @method Models\EnableEksEventPersistenceResponse EnableEksEventPersistence(Models\EnableEksEventPersistenceRequest $req) Eks集群开启事件持久化功能
  * @method Models\EnableEncryptionProtectionResponse EnableEncryptionProtection(Models\EnableEncryptionProtectionRequest $req) 开启加密数据保护，需要先开启KMS能力，完成KMS授权
  * @method Models\EnableEventPersistenceResponse EnableEventPersistence(Models\EnableEventPersistenceRequest $req) 开启事件持久化功能
- * @method Models\EnableExternalNodeSupportResponse EnableExternalNodeSupport(Models\EnableExternalNodeSupportRequest $req) 开启第三方节点池支持
+ * @method Models\EnableExternalNodeSupportResponse EnableExternalNodeSupport(Models\EnableExternalNodeSupportRequest $req) 开启注册节点池支持
  * @method Models\EnableVpcCniNetworkTypeResponse EnableVpcCniNetworkType(Models\EnableVpcCniNetworkTypeRequest $req) GR集群可以通过本接口附加vpc-cni容器网络插件，开启vpc-cni容器网络能力
  * @method Models\ForwardTKEEdgeApplicationRequestV3Response ForwardTKEEdgeApplicationRequestV3(Models\ForwardTKEEdgeApplicationRequestV3Request $req) 操作TKEEdge集群的addon
  * @method Models\GetClusterLevelPriceResponse GetClusterLevelPrice(Models\GetClusterLevelPriceRequest $req) 获取集群规模价格
@@ -253,7 +253,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\ModifyClusterSchedulerPolicyResponse ModifyClusterSchedulerPolicy(Models\ModifyClusterSchedulerPolicyRequest $req) 修改集群调度策略
  * @method Models\ModifyClusterTagsResponse ModifyClusterTags(Models\ModifyClusterTagsRequest $req) 修改集群标签
  * @method Models\ModifyClusterVirtualNodePoolResponse ModifyClusterVirtualNodePool(Models\ModifyClusterVirtualNodePoolRequest $req) 修改超级节点池
- * @method Models\ModifyExternalNodePoolResponse ModifyExternalNodePool(Models\ModifyExternalNodePoolRequest $req) 修改第三方节点池
+ * @method Models\ModifyExternalNodePoolResponse ModifyExternalNodePool(Models\ModifyExternalNodePoolRequest $req) 修改注册节点池
  * @method Models\ModifyGlobalMaintenanceWindowAndExclusionsResponse ModifyGlobalMaintenanceWindowAndExclusions(Models\ModifyGlobalMaintenanceWindowAndExclusionsRequest $req) 更新全局维护时间窗口和排除项
  * @method Models\ModifyMasterComponentResponse ModifyMasterComponent(Models\ModifyMasterComponentRequest $req) 修改master组件，支持kube-apiserver、kube-scheduler、kube-controller-manager副本数调整为0和恢复
  * @method Models\ModifyNodePoolDesiredCapacityAboutAsgResponse ModifyNodePoolDesiredCapacityAboutAsg(Models\ModifyNodePoolDesiredCapacityAboutAsgRequest $req) 修改节点池关联伸缩组的期望实例数

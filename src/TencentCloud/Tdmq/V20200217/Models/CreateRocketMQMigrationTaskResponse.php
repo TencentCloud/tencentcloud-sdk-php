@@ -14,31 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateAuditKeywordLib返回参数结构体
+ * CreateRocketMQMigrationTask返回参数结构体
  *
- * @method string getLibId() 获取<p>新建的词库 Id。</p>
- * @method void setLibId(string $LibId) 设置<p>新建的词库 Id。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateAuditKeywordLibResponse extends AbstractModel
+class CreateRocketMQMigrationTaskResponse extends AbstractModel
 {
-    /**
-     * @var string <p>新建的词库 Id。</p>
-     */
-    public $LibId;
-
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param string $LibId <p>新建的词库 Id。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,10 +46,6 @@ class CreateAuditKeywordLibResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LibId",$param) and $param["LibId"] !== null) {
-            $this->LibId = $param["LibId"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tke\V20180525\Models;
+namespace TencentCloud\Organization\V20210331\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeExternalNodeSupportConfig请求参数结构体
+ * UpdateIPWhitelist请求参数结构体
  *
- * @method string getClusterId() 获取集群Id，可通过查看集群的基本信息->基础信息页获取
- * @method void setClusterId(string $ClusterId) 设置集群Id，可通过查看集群的基本信息->基础信息页获取
+ * @method string getZoneId() 获取空间ID
+ * @method void setZoneId(string $ZoneId) 设置空间ID
+ * @method array getIpWhitelist() 获取ip白名单（上限100个）
+ * @method void setIpWhitelist(array $IpWhitelist) 设置ip白名单（上限100个）
  */
-class DescribeExternalNodeSupportConfigRequest extends AbstractModel
+class UpdateIPWhitelistRequest extends AbstractModel
 {
     /**
-     * @var string 集群Id，可通过查看集群的基本信息->基础信息页获取
+     * @var string 空间ID
      */
-    public $ClusterId;
+    public $ZoneId;
 
     /**
-     * @param string $ClusterId 集群Id，可通过查看集群的基本信息->基础信息页获取
+     * @var array ip白名单（上限100个）
+     */
+    public $IpWhitelist;
+
+    /**
+     * @param string $ZoneId 空间ID
+     * @param array $IpWhitelist ip白名单（上限100个）
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeExternalNodeSupportConfigRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("IpWhitelist",$param) and $param["IpWhitelist"] !== null) {
+            $this->IpWhitelist = $param["IpWhitelist"];
         }
     }
 }

@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateServiceConfigs请求参数结构体
  *
- * @method string getServiceId() 获取服务ID
- * @method void setServiceId(string $ServiceId) 设置服务ID
- * @method integer getTargetReplicas() 获取期望副本数
- * @method void setTargetReplicas(integer $TargetReplicas) 设置期望副本数
+ * @method string getServiceId() 获取<p>服务ID</p>
+ * @method void setServiceId(string $ServiceId) 设置<p>服务ID</p>
+ * @method integer getTargetReplicas() 获取<p>期望副本数</p>
+ * @method void setTargetReplicas(integer $TargetReplicas) 设置<p>期望副本数</p>
+ * @method array getDeploymentConfigs() 获取<p>启动参数、环境变量等参数</p>
+ * @method void setDeploymentConfigs(array $DeploymentConfigs) 设置<p>启动参数、环境变量等参数</p>
  */
 class UpdateServiceConfigsRequest extends AbstractModel
 {
     /**
-     * @var string 服务ID
+     * @var string <p>服务ID</p>
      */
     public $ServiceId;
 
     /**
-     * @var integer 期望副本数
+     * @var integer <p>期望副本数</p>
      */
     public $TargetReplicas;
 
     /**
-     * @param string $ServiceId 服务ID
-     * @param integer $TargetReplicas 期望副本数
+     * @var array <p>启动参数、环境变量等参数</p>
+     */
+    public $DeploymentConfigs;
+
+    /**
+     * @param string $ServiceId <p>服务ID</p>
+     * @param integer $TargetReplicas <p>期望副本数</p>
+     * @param array $DeploymentConfigs <p>启动参数、环境变量等参数</p>
      */
     function __construct()
     {
@@ -60,6 +68,15 @@ class UpdateServiceConfigsRequest extends AbstractModel
 
         if (array_key_exists("TargetReplicas",$param) and $param["TargetReplicas"] !== null) {
             $this->TargetReplicas = $param["TargetReplicas"];
+        }
+
+        if (array_key_exists("DeploymentConfigs",$param) and $param["DeploymentConfigs"] !== null) {
+            $this->DeploymentConfigs = [];
+            foreach ($param["DeploymentConfigs"] as $key => $value){
+                $obj = new DeploymentConfig();
+                $obj->deserialize($value);
+                array_push($this->DeploymentConfigs, $obj);
+            }
         }
     }
 }

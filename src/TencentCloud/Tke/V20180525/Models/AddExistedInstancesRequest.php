@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageId(string $ImageId) 设置节点镜像
  * @method string getNodeType() 获取直接添加为原生节点
  * @method void setNodeType(string $NodeType) 设置直接添加为原生节点
+ * @method array getTags() 获取云标签列表
+ * @method void setTags(array $Tags) 设置云标签列表
+ * @method string getRenewFlag() 获取自动续费标识，NOTIFY_AND_AUTO_RENEW（通知过期且自动续费）、NOTIFY_AND_MANUAL_RENEW（通知过期不自动续费）
+ * @method void setRenewFlag(string $RenewFlag) 设置自动续费标识，NOTIFY_AND_AUTO_RENEW（通知过期且自动续费）、NOTIFY_AND_MANUAL_RENEW（通知过期不自动续费）
  */
 class AddExistedInstancesRequest extends AbstractModel
 {
@@ -108,6 +112,16 @@ class AddExistedInstancesRequest extends AbstractModel
     public $NodeType;
 
     /**
+     * @var array 云标签列表
+     */
+    public $Tags;
+
+    /**
+     * @var string 自动续费标识，NOTIFY_AND_AUTO_RENEW（通知过期且自动续费）、NOTIFY_AND_MANUAL_RENEW（通知过期不自动续费）
+     */
+    public $RenewFlag;
+
+    /**
      * @param string $ClusterId 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
      * @param array $InstanceIds 实例列表，不支持竞价实例（请登录 [CVM控制台](https://console.cloud.tencent.com/cvm) 获取待添加节点ID ）
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings 实例额外需要设置参数信息(默认值)
@@ -120,6 +134,8 @@ class AddExistedInstancesRequest extends AbstractModel
      * @param array $InstanceAdvancedSettingsOverrides 参数InstanceAdvancedSettingsOverride数组用于定制化地配置各台instance，与InstanceIds顺序对应。当传入InstanceAdvancedSettingsOverrides数组时，将覆盖默认参数InstanceAdvancedSettings；当没有传入参数InstanceAdvancedSettingsOverrides时，InstanceAdvancedSettings参数对每台instance生效。参数InstanceAdvancedSettingsOverride数组的长度应与InstanceIds数组一致；当长度大于InstanceIds数组长度时将报错；当长度小于InstanceIds数组时，没有对应配置的instance将使用默认配置。
      * @param string $ImageId 节点镜像
      * @param string $NodeType 直接添加为原生节点
+     * @param array $Tags 云标签列表
+     * @param string $RenewFlag 自动续费标识，NOTIFY_AND_AUTO_RENEW（通知过期且自动续费）、NOTIFY_AND_MANUAL_RENEW（通知过期不自动续费）
      */
     function __construct()
     {
@@ -189,6 +205,19 @@ class AddExistedInstancesRequest extends AbstractModel
 
         if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
             $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
+            $this->RenewFlag = $param["RenewFlag"];
         }
     }
 }

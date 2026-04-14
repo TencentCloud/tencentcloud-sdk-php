@@ -46,10 +46,12 @@ major 大版本原地升级
  * @method void setResetParam(UpgradeNodeResetParam $ResetParam) 设置当节点重新加入集群时候所使用的参数，参考添加已有节点接口
  * @method boolean getSkipPreCheck() 获取是否忽略节点升级前检查，默认值 false
  * @method void setSkipPreCheck(boolean $SkipPreCheck) 设置是否忽略节点升级前检查，默认值 false
- * @method float getMaxNotReadyPercent() 获取最大可容忍的不可用Pod比例
- * @method void setMaxNotReadyPercent(float $MaxNotReadyPercent) 设置最大可容忍的不可用Pod比例
+ * @method float getMaxNotReadyPercent() 获取最大可容忍的不可用Pod比例，如果设置 0 表示不做校验
+ * @method void setMaxNotReadyPercent(float $MaxNotReadyPercent) 设置最大可容忍的不可用Pod比例，如果设置 0 表示不做校验
  * @method boolean getUpgradeRunTime() 获取是否升级节点运行时，默认false不升级
  * @method void setUpgradeRunTime(boolean $UpgradeRunTime) 设置是否升级节点运行时，默认false不升级
+ * @method integer getConcurrent() 获取支持多个节点并行升级，默认值为 1，最大并行数为15
+ * @method void setConcurrent(integer $Concurrent) 设置支持多个节点并行升级，默认值为 1，最大并行数为15
  */
 class UpgradeClusterInstancesRequest extends AbstractModel
 {
@@ -91,7 +93,7 @@ major 大版本原地升级
     public $SkipPreCheck;
 
     /**
-     * @var float 最大可容忍的不可用Pod比例
+     * @var float 最大可容忍的不可用Pod比例，如果设置 0 表示不做校验
      */
     public $MaxNotReadyPercent;
 
@@ -99,6 +101,11 @@ major 大版本原地升级
      * @var boolean 是否升级节点运行时，默认false不升级
      */
     public $UpgradeRunTime;
+
+    /**
+     * @var integer 支持多个节点并行升级，默认值为 1，最大并行数为15
+     */
+    public $Concurrent;
 
     /**
      * @param string $ClusterId 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
@@ -114,8 +121,9 @@ major 大版本原地升级
 ](https://cloud.tencent.com/document/api/457/50366) 获取
      * @param UpgradeNodeResetParam $ResetParam 当节点重新加入集群时候所使用的参数，参考添加已有节点接口
      * @param boolean $SkipPreCheck 是否忽略节点升级前检查，默认值 false
-     * @param float $MaxNotReadyPercent 最大可容忍的不可用Pod比例
+     * @param float $MaxNotReadyPercent 最大可容忍的不可用Pod比例，如果设置 0 表示不做校验
      * @param boolean $UpgradeRunTime 是否升级节点运行时，默认false不升级
+     * @param integer $Concurrent 支持多个节点并行升级，默认值为 1，最大并行数为15
      */
     function __construct()
     {
@@ -161,6 +169,10 @@ major 大版本原地升级
 
         if (array_key_exists("UpgradeRunTime",$param) and $param["UpgradeRunTime"] !== null) {
             $this->UpgradeRunTime = $param["UpgradeRunTime"];
+        }
+
+        if (array_key_exists("Concurrent",$param) and $param["Concurrent"] !== null) {
+            $this->Concurrent = $param["Concurrent"];
         }
     }
 }

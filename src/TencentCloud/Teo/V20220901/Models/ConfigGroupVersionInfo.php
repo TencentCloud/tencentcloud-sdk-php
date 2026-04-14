@@ -26,12 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVersionNumber(string $VersionNumber) 设置版本号。
  * @method string getGroupId() 获取配置组 ID。
  * @method void setGroupId(string $GroupId) 设置配置组 ID。
- * @method string getGroupType() 获取配置组类型。取值有：
-<li>l7_acceleration ：七层加速配置组。</li>
-<li>edge_functions ：边缘函数配置组。</li>
- * @method void setGroupType(string $GroupType) 设置配置组类型。取值有：
-<li>l7_acceleration ：七层加速配置组。</li>
-<li>edge_functions ：边缘函数配置组。</li>
+ * @method string getGroupType() 获取配置组类型，可选项如下：<li>l7_acceleration: 七层加速配置组；</li><li>edge_functions: 边缘函数配置组；</li><li>web_security: Web 防护配置组。</li>
+ * @method void setGroupType(string $GroupType) 设置配置组类型，可选项如下：<li>l7_acceleration: 七层加速配置组；</li><li>edge_functions: 边缘函数配置组；</li><li>web_security: Web 防护配置组。</li>
  * @method string getDescription() 获取版本描述。
  * @method void setDescription(string $Description) 设置版本描述。
  * @method string getStatus() 获取版本状态，取值有：
@@ -63,9 +59,7 @@ class ConfigGroupVersionInfo extends AbstractModel
     public $GroupId;
 
     /**
-     * @var string 配置组类型。取值有：
-<li>l7_acceleration ：七层加速配置组。</li>
-<li>edge_functions ：边缘函数配置组。</li>
+     * @var string 配置组类型，可选项如下：<li>l7_acceleration: 七层加速配置组；</li><li>edge_functions: 边缘函数配置组；</li><li>web_security: Web 防护配置组。</li>
      */
     public $GroupType;
 
@@ -91,9 +85,7 @@ class ConfigGroupVersionInfo extends AbstractModel
      * @param string $VersionId 版本 ID。
      * @param string $VersionNumber 版本号。
      * @param string $GroupId 配置组 ID。
-     * @param string $GroupType 配置组类型。取值有：
-<li>l7_acceleration ：七层加速配置组。</li>
-<li>edge_functions ：边缘函数配置组。</li>
+     * @param string $GroupType 配置组类型，可选项如下：<li>l7_acceleration: 七层加速配置组；</li><li>edge_functions: 边缘函数配置组；</li><li>web_security: Web 防护配置组。</li>
      * @param string $Description 版本描述。
      * @param string $Status 版本状态，取值有：
 <li>creating：创建中；</li>

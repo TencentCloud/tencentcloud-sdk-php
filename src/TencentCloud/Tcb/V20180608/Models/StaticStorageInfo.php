@@ -20,50 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 静态CDN资源信息
  *
- * @method string getStaticDomain() 获取静态CDN域名
- * @method void setStaticDomain(string $StaticDomain) 设置静态CDN域名
- * @method string getDefaultDirName() 获取静态CDN默认文件夹，当前为根目录
- * @method void setDefaultDirName(string $DefaultDirName) 设置静态CDN默认文件夹，当前为根目录
- * @method string getStatus() 获取资源状态(process/online/offline/init)
- * @method void setStatus(string $Status) 设置资源状态(process/online/offline/init)
- * @method string getRegion() 获取cos所属区域
- * @method void setRegion(string $Region) 设置cos所属区域
- * @method string getBucket() 获取bucket信息
- * @method void setBucket(string $Bucket) 设置bucket信息
+ * @method string getStaticDomain() 获取<p>静态CDN域名</p>
+ * @method void setStaticDomain(string $StaticDomain) 设置<p>静态CDN域名</p>
+ * @method string getDefaultDirName() 获取<p>静态CDN默认文件夹，当前为根目录</p>
+ * @method void setDefaultDirName(string $DefaultDirName) 设置<p>静态CDN默认文件夹，当前为根目录</p>
+ * @method string getStatus() 获取<p>资源状态(process/online/offline/init)</p>
+ * @method void setStatus(string $Status) 设置<p>资源状态(process/online/offline/init)</p>
+ * @method string getRegion() 获取<p>cos所属区域</p>
+ * @method void setRegion(string $Region) 设置<p>cos所属区域</p>
+ * @method string getBucket() 获取<p>bucket信息</p>
+ * @method void setBucket(string $Bucket) 设置<p>bucket信息</p>
+ * @method integer getAccessExpire() 获取<p>到期时间（秒级时间戳）</p>
+ * @method void setAccessExpire(integer $AccessExpire) 设置<p>到期时间（秒级时间戳）</p>
+ * @method ExternalStorage getExternalStorage() 获取<p>外部存储。</p>
+ * @method void setExternalStorage(ExternalStorage $ExternalStorage) 设置<p>外部存储。</p>
  */
 class StaticStorageInfo extends AbstractModel
 {
     /**
-     * @var string 静态CDN域名
+     * @var string <p>静态CDN域名</p>
      */
     public $StaticDomain;
 
     /**
-     * @var string 静态CDN默认文件夹，当前为根目录
+     * @var string <p>静态CDN默认文件夹，当前为根目录</p>
      */
     public $DefaultDirName;
 
     /**
-     * @var string 资源状态(process/online/offline/init)
+     * @var string <p>资源状态(process/online/offline/init)</p>
      */
     public $Status;
 
     /**
-     * @var string cos所属区域
+     * @var string <p>cos所属区域</p>
      */
     public $Region;
 
     /**
-     * @var string bucket信息
+     * @var string <p>bucket信息</p>
      */
     public $Bucket;
 
     /**
-     * @param string $StaticDomain 静态CDN域名
-     * @param string $DefaultDirName 静态CDN默认文件夹，当前为根目录
-     * @param string $Status 资源状态(process/online/offline/init)
-     * @param string $Region cos所属区域
-     * @param string $Bucket bucket信息
+     * @var integer <p>到期时间（秒级时间戳）</p>
+     */
+    public $AccessExpire;
+
+    /**
+     * @var ExternalStorage <p>外部存储。</p>
+     */
+    public $ExternalStorage;
+
+    /**
+     * @param string $StaticDomain <p>静态CDN域名</p>
+     * @param string $DefaultDirName <p>静态CDN默认文件夹，当前为根目录</p>
+     * @param string $Status <p>资源状态(process/online/offline/init)</p>
+     * @param string $Region <p>cos所属区域</p>
+     * @param string $Bucket <p>bucket信息</p>
+     * @param integer $AccessExpire <p>到期时间（秒级时间戳）</p>
+     * @param ExternalStorage $ExternalStorage <p>外部存储。</p>
      */
     function __construct()
     {
@@ -96,6 +112,15 @@ class StaticStorageInfo extends AbstractModel
 
         if (array_key_exists("Bucket",$param) and $param["Bucket"] !== null) {
             $this->Bucket = $param["Bucket"];
+        }
+
+        if (array_key_exists("AccessExpire",$param) and $param["AccessExpire"] !== null) {
+            $this->AccessExpire = $param["AccessExpire"];
+        }
+
+        if (array_key_exists("ExternalStorage",$param) and $param["ExternalStorage"] !== null) {
+            $this->ExternalStorage = new ExternalStorage();
+            $this->ExternalStorage->deserialize($param["ExternalStorage"]);
         }
     }
 }

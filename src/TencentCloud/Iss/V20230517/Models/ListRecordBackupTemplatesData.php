@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询录像上云模板列表返回数据
  *
- * @method string getTemplateId() 获取模板ID
- * @method void setTemplateId(string $TemplateId) 设置模板ID
- * @method string getTemplateName() 获取模板名称
- * @method void setTemplateName(string $TemplateName) 设置模板名称
- * @method array getTimeSections() 获取上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
- * @method void setTimeSections(array $TimeSections) 设置上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
- * @method array getDevTimeSections() 获取录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
- * @method void setDevTimeSections(array $DevTimeSections) 设置录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
- * @method integer getScale() 获取上云倍速（支持1，2，4倍速）
- * @method void setScale(integer $Scale) 设置上云倍速（支持1，2，4倍速）
- * @method string getCreateAt() 获取创建时间
- * @method void setCreateAt(string $CreateAt) 设置创建时间
- * @method string getUpdateAt() 获取更新时间
- * @method void setUpdateAt(string $UpdateAt) 设置更新时间
+ * @method string getTemplateId() 获取<p>模板ID</p>
+ * @method void setTemplateId(string $TemplateId) 设置<p>模板ID</p>
+ * @method string getTemplateName() 获取<p>模板名称</p>
+ * @method void setTemplateName(string $TemplateName) 设置<p>模板名称</p>
+ * @method array getTimeSections() 获取<p>上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
+ * @method void setTimeSections(array $TimeSections) 设置<p>上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
+ * @method array getDevTimeSections() 获取<p>录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
+ * @method void setDevTimeSections(array $DevTimeSections) 设置<p>录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
+ * @method integer getScale() 获取<p>上云倍速（支持1，2，4倍速）</p>
+ * @method void setScale(integer $Scale) 设置<p>上云倍速（支持1，2，4倍速）</p>
+ * @method string getCreateAt() 获取<p>创建时间</p>
+ * @method void setCreateAt(string $CreateAt) 设置<p>创建时间</p>
+ * @method string getUpdateAt() 获取<p>更新时间</p>
+ * @method void setUpdateAt(string $UpdateAt) 设置<p>更新时间</p>
+ * @method integer getDayOffset() 获取<p>周期偏移量，默认1，表示拉去昨天的，0表示拉去今天的，3表示拉去前天的</p>
+ * @method void setDayOffset(integer $DayOffset) 设置<p>周期偏移量，默认1，表示拉去昨天的，0表示拉去今天的，3表示拉去前天的</p>
  */
 class ListRecordBackupTemplatesData extends AbstractModel
 {
     /**
-     * @var string 模板ID
+     * @var string <p>模板ID</p>
      */
     public $TemplateId;
 
     /**
-     * @var string 模板名称
+     * @var string <p>模板名称</p>
      */
     public $TemplateName;
 
     /**
-     * @var array 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
+     * @var array <p>上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
      */
     public $TimeSections;
 
     /**
-     * @var array 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
+     * @var array <p>录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
      */
     public $DevTimeSections;
 
     /**
-     * @var integer 上云倍速（支持1，2，4倍速）
+     * @var integer <p>上云倍速（支持1，2，4倍速）</p>
      */
     public $Scale;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateAt;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
      */
     public $UpdateAt;
 
     /**
-     * @param string $TemplateId 模板ID
-     * @param string $TemplateName 模板名称
-     * @param array $TimeSections 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-     * @param array $DevTimeSections 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-     * @param integer $Scale 上云倍速（支持1，2，4倍速）
-     * @param string $CreateAt 创建时间
-     * @param string $UpdateAt 更新时间
+     * @var integer <p>周期偏移量，默认1，表示拉去昨天的，0表示拉去今天的，3表示拉去前天的</p>
+     */
+    public $DayOffset;
+
+    /**
+     * @param string $TemplateId <p>模板ID</p>
+     * @param string $TemplateName <p>模板名称</p>
+     * @param array $TimeSections <p>上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
+     * @param array $DevTimeSections <p>录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
+     * @param integer $Scale <p>上云倍速（支持1，2，4倍速）</p>
+     * @param string $CreateAt <p>创建时间</p>
+     * @param string $UpdateAt <p>更新时间</p>
+     * @param integer $DayOffset <p>周期偏移量，默认1，表示拉去昨天的，0表示拉去今天的，3表示拉去前天的</p>
      */
     function __construct()
     {
@@ -130,6 +138,10 @@ class ListRecordBackupTemplatesData extends AbstractModel
 
         if (array_key_exists("UpdateAt",$param) and $param["UpdateAt"] !== null) {
             $this->UpdateAt = $param["UpdateAt"];
+        }
+
+        if (array_key_exists("DayOffset",$param) and $param["DayOffset"] !== null) {
+            $this->DayOffset = $param["DayOffset"];
         }
     }
 }

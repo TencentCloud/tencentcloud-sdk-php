@@ -20,31 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWorkloadGroup返回参数结构体
  *
- * @method array getWorkloadGroups() 获取资源组信息
- * @method void setWorkloadGroups(array $WorkloadGroups) 设置资源组信息
- * @method string getStatus() 获取是否开启资源组：开启-open、关闭-close
- * @method void setStatus(string $Status) 设置是否开启资源组：开启-open、关闭-close
- * @method string getErrorMsg() 获取错误信息
- * @method void setErrorMsg(string $ErrorMsg) 设置错误信息
+ * @method array getWorkloadGroups() 获取<p>资源组信息</p>
+ * @method void setWorkloadGroups(array $WorkloadGroups) 设置<p>资源组信息</p>
+ * @method string getStatus() 获取<p>是否开启资源组：开启-open、关闭-close</p>
+ * @method void setStatus(string $Status) 设置<p>是否开启资源组：开启-open、关闭-close</p>
+ * @method string getErrorMsg() 获取<p>错误信息</p>
+ * @method void setErrorMsg(string $ErrorMsg) 设置<p>错误信息</p>
+ * @method integer getMonitorStatus() 获取<p>是否开启监控，0：未开启，1：开启</p>
+ * @method void setMonitorStatus(integer $MonitorStatus) 设置<p>是否开启监控，0：未开启，1：开启</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeWorkloadGroupResponse extends AbstractModel
 {
     /**
-     * @var array 资源组信息
+     * @var array <p>资源组信息</p>
      */
     public $WorkloadGroups;
 
     /**
-     * @var string 是否开启资源组：开启-open、关闭-close
+     * @var string <p>是否开启资源组：开启-open、关闭-close</p>
      */
     public $Status;
 
     /**
-     * @var string 错误信息
+     * @var string <p>错误信息</p>
      */
     public $ErrorMsg;
+
+    /**
+     * @var integer <p>是否开启监控，0：未开启，1：开启</p>
+     */
+    public $MonitorStatus;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +59,10 @@ class DescribeWorkloadGroupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $WorkloadGroups 资源组信息
-     * @param string $Status 是否开启资源组：开启-open、关闭-close
-     * @param string $ErrorMsg 错误信息
+     * @param array $WorkloadGroups <p>资源组信息</p>
+     * @param string $Status <p>是否开启资源组：开启-open、关闭-close</p>
+     * @param string $ErrorMsg <p>错误信息</p>
+     * @param integer $MonitorStatus <p>是否开启监控，0：未开启，1：开启</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -85,6 +93,10 @@ class DescribeWorkloadGroupResponse extends AbstractModel
 
         if (array_key_exists("ErrorMsg",$param) and $param["ErrorMsg"] !== null) {
             $this->ErrorMsg = $param["ErrorMsg"];
+        }
+
+        if (array_key_exists("MonitorStatus",$param) and $param["MonitorStatus"] !== null) {
+            $this->MonitorStatus = $param["MonitorStatus"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

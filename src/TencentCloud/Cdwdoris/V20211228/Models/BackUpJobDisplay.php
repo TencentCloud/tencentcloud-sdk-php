@@ -78,6 +78,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncryption(string $Encryption) 设置备份任务创建时记录的加密类型：SSE-COS/SSE-KMS/disabled
  * @method boolean getEncryptionEnabled() 获取是否开通加密存储：0-未开通，1-已开通
  * @method void setEncryptionEnabled(boolean $EncryptionEnabled) 设置是否开通加密存储：0-未开通，1-已开通
+ * @method integer getScheduleId() 获取任务调度id
+ * @method void setScheduleId(integer $ScheduleId) 设置任务调度id
  */
 class BackUpJobDisplay extends AbstractModel
 {
@@ -227,6 +229,11 @@ class BackUpJobDisplay extends AbstractModel
     public $EncryptionEnabled;
 
     /**
+     * @var integer 任务调度id
+     */
+    public $ScheduleId;
+
+    /**
      * @param integer $JobId 备份实例id
      * @param string $Snapshot 备份实例名
      * @param integer $BackUpSize 备份数据量
@@ -256,6 +263,7 @@ class BackUpJobDisplay extends AbstractModel
      * @param BucketEncryptionInfo $BucketEncryption 桶加密状态信息
      * @param string $Encryption 备份任务创建时记录的加密类型：SSE-COS/SSE-KMS/disabled
      * @param boolean $EncryptionEnabled 是否开通加密存储：0-未开通，1-已开通
+     * @param integer $ScheduleId 任务调度id
      */
     function __construct()
     {
@@ -388,6 +396,10 @@ class BackUpJobDisplay extends AbstractModel
 
         if (array_key_exists("EncryptionEnabled",$param) and $param["EncryptionEnabled"] !== null) {
             $this->EncryptionEnabled = $param["EncryptionEnabled"];
+        }
+
+        if (array_key_exists("ScheduleId",$param) and $param["ScheduleId"] !== null) {
+            $this->ScheduleId = $param["ScheduleId"];
         }
     }
 }

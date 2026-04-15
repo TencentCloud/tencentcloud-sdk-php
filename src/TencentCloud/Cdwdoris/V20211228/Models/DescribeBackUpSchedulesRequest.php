@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 2-数据迁移（包括跨集群迁移和cos迁移）
  * @method array getEncryptionFilters() 获取0-未加密；1-已加密
  * @method void setEncryptionFilters(array $EncryptionFilters) 设置0-未加密；1-已加密
+ * @method integer getScheduleId() 获取调度任务id过滤
+ * @method void setScheduleId(integer $ScheduleId) 设置调度任务id过滤
  */
 class DescribeBackUpSchedulesRequest extends AbstractModel
 {
@@ -47,11 +49,17 @@ class DescribeBackUpSchedulesRequest extends AbstractModel
     public $EncryptionFilters;
 
     /**
+     * @var integer 调度任务id过滤
+     */
+    public $ScheduleId;
+
+    /**
      * @param integer $ApplicationType 任务类型
 0-不限制，或使用TypeFilters过滤；
 1-备份恢复（包括周期备份和一次性备份）；
 2-数据迁移（包括跨集群迁移和cos迁移）
      * @param array $EncryptionFilters 0-未加密；1-已加密
+     * @param integer $ScheduleId 调度任务id过滤
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeBackUpSchedulesRequest extends AbstractModel
 
         if (array_key_exists("EncryptionFilters",$param) and $param["EncryptionFilters"] !== null) {
             $this->EncryptionFilters = $param["EncryptionFilters"];
+        }
+
+        if (array_key_exists("ScheduleId",$param) and $param["ScheduleId"] !== null) {
+            $this->ScheduleId = $param["ScheduleId"];
         }
     }
 }

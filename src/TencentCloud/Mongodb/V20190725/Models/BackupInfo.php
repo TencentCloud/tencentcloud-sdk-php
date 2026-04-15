@@ -20,154 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 备份信息。
  *
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
- * @method integer getBackupType() 获取备份方式。
-- 0：自动备份。
-- 1：手动备份。
- * @method void setBackupType(integer $BackupType) 设置备份方式。
-- 0：自动备份。
-- 1：手动备份。
- * @method string getBackupName() 获取备份文件名称。
- * @method void setBackupName(string $BackupName) 设置备份文件名称。
- * @method string getBackupDesc() 获取备份任务备注信息。
- * @method void setBackupDesc(string $BackupDesc) 设置备份任务备注信息。
- * @method integer getBackupSize() 获取备份文件大小，单位：KB。
- * @method void setBackupSize(integer $BackupSize) 设置备份文件大小，单位：KB。
- * @method string getStartTime() 获取备份开始时间。
- * @method void setStartTime(string $StartTime) 设置备份开始时间。
- * @method string getEndTime() 获取备份结束时间。
- * @method void setEndTime(string $EndTime) 设置备份结束时间。
- * @method integer getStatus() 获取备份状态。
-- 1：备份中。
-- 2：备份成功。
- * @method void setStatus(integer $Status) 设置备份状态。
-- 1：备份中。
-- 2：备份成功。
- * @method integer getBackupMethod() 获取备份方式。
-- 0：逻辑备份。
-- 1：物理备份。
-- 3：快照备份。
-**说明:**
-- 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
-- 实例开通存储加密，则备份方式不能为物理备份。
- * @method void setBackupMethod(integer $BackupMethod) 设置备份方式。
-- 0：逻辑备份。
-- 1：物理备份。
-- 3：快照备份。
-**说明:**
-- 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
-- 实例开通存储加密，则备份方式不能为物理备份。
- * @method integer getBackId() 获取备份记录 ID。
- * @method void setBackId(integer $BackId) 设置备份记录 ID。
- * @method string getDeleteTime() 获取备份删除时间。
- * @method void setDeleteTime(string $DeleteTime) 设置备份删除时间。
- * @method string getBackupRegion() 获取异地备份地域。
- * @method void setBackupRegion(string $BackupRegion) 设置异地备份地域。
- * @method string getRestoreTime() 获取备份支持的回档时间。
- * @method void setRestoreTime(string $RestoreTime) 设置备份支持的回档时间。
+ * @method string getInstanceId() 获取<p>实例ID。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID。</p>
+ * @method integer getBackupType() 获取<p>备份方式。</p><ul><li>0：自动备份。</li><li>1：手动备份。</li></ul>
+ * @method void setBackupType(integer $BackupType) 设置<p>备份方式。</p><ul><li>0：自动备份。</li><li>1：手动备份。</li></ul>
+ * @method string getBackupName() 获取<p>备份文件名称。</p>
+ * @method void setBackupName(string $BackupName) 设置<p>备份文件名称。</p>
+ * @method string getBackupDesc() 获取<p>备份任务备注信息。</p>
+ * @method void setBackupDesc(string $BackupDesc) 设置<p>备份任务备注信息。</p>
+ * @method integer getBackupSize() 获取<p>备份文件大小，单位：KB。</p>
+ * @method void setBackupSize(integer $BackupSize) 设置<p>备份文件大小，单位：KB。</p>
+ * @method string getStartTime() 获取<p>备份开始时间。</p>
+ * @method void setStartTime(string $StartTime) 设置<p>备份开始时间。</p>
+ * @method string getEndTime() 获取<p>备份结束时间。</p>
+ * @method void setEndTime(string $EndTime) 设置<p>备份结束时间。</p>
+ * @method integer getStatus() 获取<p>备份状态。</p><ul><li>1：备份中。</li><li>2：备份成功。</li></ul>
+ * @method void setStatus(integer $Status) 设置<p>备份状态。</p><ul><li>1：备份中。</li><li>2：备份成功。</li></ul>
+ * @method integer getBackupMethod() 获取<p>备份方式。</p><ul><li>0：逻辑备份。</li><li>1：物理备份。</li><li>3：快照备份。<br><strong>说明:</strong></li><li>通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。</li><li>实例开通存储加密，则备份方式不能为物理备份。</li></ul>
+ * @method void setBackupMethod(integer $BackupMethod) 设置<p>备份方式。</p><ul><li>0：逻辑备份。</li><li>1：物理备份。</li><li>3：快照备份。<br><strong>说明:</strong></li><li>通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。</li><li>实例开通存储加密，则备份方式不能为物理备份。</li></ul>
+ * @method integer getBackId() 获取<p>备份记录 ID。</p>
+ * @method void setBackId(integer $BackId) 设置<p>备份记录 ID。</p>
+ * @method string getDeleteTime() 获取<p>备份删除时间。</p>
+ * @method void setDeleteTime(string $DeleteTime) 设置<p>备份删除时间。</p>
+ * @method string getBackupRegion() 获取<p>异地备份地域。</p>
+ * @method void setBackupRegion(string $BackupRegion) 设置<p>异地备份地域。</p>
+ * @method string getRestoreTime() 获取<p>备份支持的回档时间。</p>
+ * @method void setRestoreTime(string $RestoreTime) 设置<p>备份支持的回档时间。</p>
  */
 class BackupInfo extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string <p>实例ID。</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 备份方式。
-- 0：自动备份。
-- 1：手动备份。
+     * @var integer <p>备份方式。</p><ul><li>0：自动备份。</li><li>1：手动备份。</li></ul>
      */
     public $BackupType;
 
     /**
-     * @var string 备份文件名称。
+     * @var string <p>备份文件名称。</p>
      */
     public $BackupName;
 
     /**
-     * @var string 备份任务备注信息。
+     * @var string <p>备份任务备注信息。</p>
      */
     public $BackupDesc;
 
     /**
-     * @var integer 备份文件大小，单位：KB。
+     * @var integer <p>备份文件大小，单位：KB。</p>
      */
     public $BackupSize;
 
     /**
-     * @var string 备份开始时间。
+     * @var string <p>备份开始时间。</p>
      */
     public $StartTime;
 
     /**
-     * @var string 备份结束时间。
+     * @var string <p>备份结束时间。</p>
      */
     public $EndTime;
 
     /**
-     * @var integer 备份状态。
-- 1：备份中。
-- 2：备份成功。
+     * @var integer <p>备份状态。</p><ul><li>1：备份中。</li><li>2：备份成功。</li></ul>
      */
     public $Status;
 
     /**
-     * @var integer 备份方式。
-- 0：逻辑备份。
-- 1：物理备份。
-- 3：快照备份。
-**说明:**
-- 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
-- 实例开通存储加密，则备份方式不能为物理备份。
+     * @var integer <p>备份方式。</p><ul><li>0：逻辑备份。</li><li>1：物理备份。</li><li>3：快照备份。<br><strong>说明:</strong></li><li>通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。</li><li>实例开通存储加密，则备份方式不能为物理备份。</li></ul>
      */
     public $BackupMethod;
 
     /**
-     * @var integer 备份记录 ID。
+     * @var integer <p>备份记录 ID。</p>
      */
     public $BackId;
 
     /**
-     * @var string 备份删除时间。
+     * @var string <p>备份删除时间。</p>
      */
     public $DeleteTime;
 
     /**
-     * @var string 异地备份地域。
+     * @var string <p>异地备份地域。</p>
      */
     public $BackupRegion;
 
     /**
-     * @var string 备份支持的回档时间。
+     * @var string <p>备份支持的回档时间。</p>
      */
     public $RestoreTime;
 
     /**
-     * @param string $InstanceId 实例ID。
-     * @param integer $BackupType 备份方式。
-- 0：自动备份。
-- 1：手动备份。
-     * @param string $BackupName 备份文件名称。
-     * @param string $BackupDesc 备份任务备注信息。
-     * @param integer $BackupSize 备份文件大小，单位：KB。
-     * @param string $StartTime 备份开始时间。
-     * @param string $EndTime 备份结束时间。
-     * @param integer $Status 备份状态。
-- 1：备份中。
-- 2：备份成功。
-     * @param integer $BackupMethod 备份方式。
-- 0：逻辑备份。
-- 1：物理备份。
-- 3：快照备份。
-**说明:**
-- 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
-- 实例开通存储加密，则备份方式不能为物理备份。
-     * @param integer $BackId 备份记录 ID。
-     * @param string $DeleteTime 备份删除时间。
-     * @param string $BackupRegion 异地备份地域。
-     * @param string $RestoreTime 备份支持的回档时间。
+     * @param string $InstanceId <p>实例ID。</p>
+     * @param integer $BackupType <p>备份方式。</p><ul><li>0：自动备份。</li><li>1：手动备份。</li></ul>
+     * @param string $BackupName <p>备份文件名称。</p>
+     * @param string $BackupDesc <p>备份任务备注信息。</p>
+     * @param integer $BackupSize <p>备份文件大小，单位：KB。</p>
+     * @param string $StartTime <p>备份开始时间。</p>
+     * @param string $EndTime <p>备份结束时间。</p>
+     * @param integer $Status <p>备份状态。</p><ul><li>1：备份中。</li><li>2：备份成功。</li></ul>
+     * @param integer $BackupMethod <p>备份方式。</p><ul><li>0：逻辑备份。</li><li>1：物理备份。</li><li>3：快照备份。<br><strong>说明:</strong></li><li>通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。</li><li>实例开通存储加密，则备份方式不能为物理备份。</li></ul>
+     * @param integer $BackId <p>备份记录 ID。</p>
+     * @param string $DeleteTime <p>备份删除时间。</p>
+     * @param string $BackupRegion <p>异地备份地域。</p>
+     * @param string $RestoreTime <p>备份支持的回档时间。</p>
      */
     function __construct()
     {

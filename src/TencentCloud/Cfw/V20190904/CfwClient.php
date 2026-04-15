@@ -80,6 +80,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DescribeIpsModeSwitchResponse DescribeIpsModeSwitch(Models\DescribeIpsModeSwitchRequest $req) 获取入侵防御防护模式
  * @method Models\DescribeLogStorageStatisticResponse DescribeLogStorageStatistic(Models\DescribeLogStorageStatisticRequest $req) 租户日志存储统计
  * @method Models\DescribeLogsResponse DescribeLogs(Models\DescribeLogsRequest $req) 日志审计日志查询
+ * @method Models\DescribeNDRAssetIdentificationListResponse DescribeNDRAssetIdentificationList(Models\DescribeNDRAssetIdentificationListRequest $req) DescribeNDRAssetIdentificationList - 获取NDR资产识别结果列表
  * @method Models\DescribeNatAcRuleResponse DescribeNatAcRule(Models\DescribeNatAcRuleRequest $req) 查询NAT访问控制列表
  * @method Models\DescribeNatFwDnatRuleResponse DescribeNatFwDnatRule(Models\DescribeNatFwDnatRuleRequest $req) 查询Nat防火墙Dnat规则
  * @method Models\DescribeNatFwInfoCountResponse DescribeNatFwInfoCount(Models\DescribeNatFwInfoCountRequest $req) 获取当前用户接入nat防火墙的所有子网数及natfw实例个数

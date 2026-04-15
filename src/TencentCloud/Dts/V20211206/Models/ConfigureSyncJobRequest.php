@@ -20,150 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ConfigureSyncJob请求参数结构体
  *
- * @method string getJobId() 获取同步实例id（即标识一个同步作业），形如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
-
- * @method void setJobId(string $JobId) 设置同步实例id（即标识一个同步作业），形如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
-
- * @method string getSrcAccessType() 获取源端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云),注意具体可选值依赖当前链路
- * @method void setSrcAccessType(string $SrcAccessType) 设置源端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云),注意具体可选值依赖当前链路
- * @method string getDstAccessType() 获取目标端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、ckafka(CKafka实例),注意具体可选值依赖当前链路
- * @method void setDstAccessType(string $DstAccessType) 设置目标端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、ckafka(CKafka实例),注意具体可选值依赖当前链路
- * @method Objects getObjects() 获取同步库表对象信息
- * @method void setObjects(Objects $Objects) 设置同步库表对象信息
- * @method string getJobName() 获取同步任务名称
- * @method void setJobName(string $JobName) 设置同步任务名称
- * @method string getJobMode() 获取枚举值是 liteMode 和 fullMode ，分别对应精简模式或正常模式
- * @method void setJobMode(string $JobMode) 设置枚举值是 liteMode 和 fullMode ，分别对应精简模式或正常模式
- * @method string getRunMode() 获取运行模式，取值如：Immediate(表示立即运行，默认为此项值)、Timed(表示定时运行)
- * @method void setRunMode(string $RunMode) 设置运行模式，取值如：Immediate(表示立即运行，默认为此项值)、Timed(表示定时运行)
- * @method string getExpectRunTime() 获取期待启动时间，当RunMode取值为Timed时，此值必填，形如："2006-01-02 15:04:05"
- * @method void setExpectRunTime(string $ExpectRunTime) 设置期待启动时间，当RunMode取值为Timed时，此值必填，形如："2006-01-02 15:04:05"
- * @method string getSrcConnectType() 获取源端tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，SrcInfos中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
- * @method void setSrcConnectType(string $SrcConnectType) 设置源端tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，SrcInfos中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
- * @method Endpoint getSrcInfo() 获取源端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。
- * @method void setSrcInfo(Endpoint $SrcInfo) 设置源端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。
- * @method SyncDBEndpointInfos getSrcInfos() 获取源端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。
- * @method void setSrcInfos(SyncDBEndpointInfos $SrcInfos) 设置源端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。
- * @method string getSrcNodeType() 获取枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
- * @method void setSrcNodeType(string $SrcNodeType) 设置枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
- * @method Endpoint getDstInfo() 获取目标端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。
- * @method void setDstInfo(Endpoint $DstInfo) 设置目标端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。
- * @method SyncDBEndpointInfos getDstInfos() 获取目标端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。
- * @method void setDstInfos(SyncDBEndpointInfos $DstInfos) 设置目标端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。
- * @method string getDstNodeType() 获取枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
- * @method void setDstNodeType(string $DstNodeType) 设置枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
- * @method Options getOptions() 获取同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速
- * @method void setOptions(Options $Options) 设置同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速
- * @method integer getAutoRetryTimeRangeMinutes() 获取自动重试的时间段、可设置5至720分钟、0表示不重试
- * @method void setAutoRetryTimeRangeMinutes(integer $AutoRetryTimeRangeMinutes) 设置自动重试的时间段、可设置5至720分钟、0表示不重试
+ * @method string getJobId() 获取<p>同步实例id（即标识一个同步作业），形如sync-werwfs23，可通过<a href="https://cloud.tencent.com/document/product/571/82103">DescribeSyncJobs</a>接口获取。</p>
+ * @method void setJobId(string $JobId) 设置<p>同步实例id（即标识一个同步作业），形如sync-werwfs23，可通过<a href="https://cloud.tencent.com/document/product/571/82103">DescribeSyncJobs</a>接口获取。</p>
+ * @method string getSrcAccessType() 获取<p>源端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云),注意具体可选值依赖当前链路</p>
+ * @method void setSrcAccessType(string $SrcAccessType) 设置<p>源端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云),注意具体可选值依赖当前链路</p>
+ * @method string getDstAccessType() 获取<p>目标端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、ckafka(CKafka实例),注意具体可选值依赖当前链路</p>
+ * @method void setDstAccessType(string $DstAccessType) 设置<p>目标端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、ckafka(CKafka实例),注意具体可选值依赖当前链路</p>
+ * @method Objects getObjects() 获取<p>同步库表对象信息</p>
+ * @method void setObjects(Objects $Objects) 设置<p>同步库表对象信息</p>
+ * @method string getJobName() 获取<p>同步任务名称</p>
+ * @method void setJobName(string $JobName) 设置<p>同步任务名称</p>
+ * @method string getJobMode() 获取<p>配置任务模式，默认值为fullMode</p><p>枚举值：</p><ul><li>fullMode： 正常模式</li></ul>
+ * @method void setJobMode(string $JobMode) 设置<p>配置任务模式，默认值为fullMode</p><p>枚举值：</p><ul><li>fullMode： 正常模式</li></ul>
+ * @method string getRunMode() 获取<p>运行模式，取值如：Immediate(表示立即运行，默认为此项值)、Timed(表示定时运行)</p>
+ * @method void setRunMode(string $RunMode) 设置<p>运行模式，取值如：Immediate(表示立即运行，默认为此项值)、Timed(表示定时运行)</p>
+ * @method string getExpectRunTime() 获取<p>期待启动时间，当RunMode取值为Timed时，此值必填，形如：&quot;2006-01-02 15:04:05&quot;</p>
+ * @method void setExpectRunTime(string $ExpectRunTime) 设置<p>期待启动时间，当RunMode取值为Timed时，此值必填，形如：&quot;2006-01-02 15:04:05&quot;</p>
+ * @method string getSrcConnectType() 获取<p>源端tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，SrcInfos中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。</p>
+ * @method void setSrcConnectType(string $SrcConnectType) 设置<p>源端tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，SrcInfos中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。</p>
+ * @method Endpoint getSrcInfo() 获取<p>源端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。</p>
+ * @method void setSrcInfo(Endpoint $SrcInfo) 设置<p>源端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。</p>
+ * @method SyncDBEndpointInfos getSrcInfos() 获取<p>源端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。</p>
+ * @method void setSrcInfos(SyncDBEndpointInfos $SrcInfos) 设置<p>源端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。</p>
+ * @method string getSrcNodeType() 获取<p>枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster</p>
+ * @method void setSrcNodeType(string $SrcNodeType) 设置<p>枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster</p>
+ * @method Endpoint getDstInfo() 获取<p>目标端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。</p>
+ * @method void setDstInfo(Endpoint $DstInfo) 设置<p>目标端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。</p>
+ * @method SyncDBEndpointInfos getDstInfos() 获取<p>目标端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。</p>
+ * @method void setDstInfos(SyncDBEndpointInfos $DstInfos) 设置<p>目标端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。</p>
+ * @method string getDstNodeType() 获取<p>枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster</p>
+ * @method void setDstNodeType(string $DstNodeType) 设置<p>枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster</p>
+ * @method Options getOptions() 获取<p>同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速</p>
+ * @method void setOptions(Options $Options) 设置<p>同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速</p>
+ * @method integer getAutoRetryTimeRangeMinutes() 获取<p>自动重试的时间段、可设置5至720分钟、0表示不重试</p>
+ * @method void setAutoRetryTimeRangeMinutes(integer $AutoRetryTimeRangeMinutes) 设置<p>自动重试的时间段、可设置5至720分钟、0表示不重试</p>
  */
 class ConfigureSyncJobRequest extends AbstractModel
 {
     /**
-     * @var string 同步实例id（即标识一个同步作业），形如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
-
+     * @var string <p>同步实例id（即标识一个同步作业），形如sync-werwfs23，可通过<a href="https://cloud.tencent.com/document/product/571/82103">DescribeSyncJobs</a>接口获取。</p>
      */
     public $JobId;
 
     /**
-     * @var string 源端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云),注意具体可选值依赖当前链路
+     * @var string <p>源端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云),注意具体可选值依赖当前链路</p>
      */
     public $SrcAccessType;
 
     /**
-     * @var string 目标端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、ckafka(CKafka实例),注意具体可选值依赖当前链路
+     * @var string <p>目标端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、ckafka(CKafka实例),注意具体可选值依赖当前链路</p>
      */
     public $DstAccessType;
 
     /**
-     * @var Objects 同步库表对象信息
+     * @var Objects <p>同步库表对象信息</p>
      */
     public $Objects;
 
     /**
-     * @var string 同步任务名称
+     * @var string <p>同步任务名称</p>
      */
     public $JobName;
 
     /**
-     * @var string 枚举值是 liteMode 和 fullMode ，分别对应精简模式或正常模式
+     * @var string <p>配置任务模式，默认值为fullMode</p><p>枚举值：</p><ul><li>fullMode： 正常模式</li></ul>
      */
     public $JobMode;
 
     /**
-     * @var string 运行模式，取值如：Immediate(表示立即运行，默认为此项值)、Timed(表示定时运行)
+     * @var string <p>运行模式，取值如：Immediate(表示立即运行，默认为此项值)、Timed(表示定时运行)</p>
      */
     public $RunMode;
 
     /**
-     * @var string 期待启动时间，当RunMode取值为Timed时，此值必填，形如："2006-01-02 15:04:05"
+     * @var string <p>期待启动时间，当RunMode取值为Timed时，此值必填，形如：&quot;2006-01-02 15:04:05&quot;</p>
      */
     public $ExpectRunTime;
 
     /**
-     * @var string 源端tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，SrcInfos中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
+     * @var string <p>源端tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，SrcInfos中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。</p>
      */
     public $SrcConnectType;
 
     /**
-     * @var Endpoint 源端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。
+     * @var Endpoint <p>源端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。</p>
      */
     public $SrcInfo;
 
     /**
-     * @var SyncDBEndpointInfos 源端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。
+     * @var SyncDBEndpointInfos <p>源端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。</p>
      */
     public $SrcInfos;
 
     /**
-     * @var string 枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
+     * @var string <p>枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster</p>
      */
     public $SrcNodeType;
 
     /**
-     * @var Endpoint 目标端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。
+     * @var Endpoint <p>目标端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。</p>
      */
     public $DstInfo;
 
     /**
-     * @var SyncDBEndpointInfos 目标端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。
+     * @var SyncDBEndpointInfos <p>目标端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。</p>
      */
     public $DstInfos;
 
     /**
-     * @var string 枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
+     * @var string <p>枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster</p>
      */
     public $DstNodeType;
 
     /**
-     * @var Options 同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速
+     * @var Options <p>同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速</p>
      */
     public $Options;
 
     /**
-     * @var integer 自动重试的时间段、可设置5至720分钟、0表示不重试
+     * @var integer <p>自动重试的时间段、可设置5至720分钟、0表示不重试</p>
      */
     public $AutoRetryTimeRangeMinutes;
 
     /**
-     * @param string $JobId 同步实例id（即标识一个同步作业），形如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
-
-     * @param string $SrcAccessType 源端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云),注意具体可选值依赖当前链路
-     * @param string $DstAccessType 目标端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、ckafka(CKafka实例),注意具体可选值依赖当前链路
-     * @param Objects $Objects 同步库表对象信息
-     * @param string $JobName 同步任务名称
-     * @param string $JobMode 枚举值是 liteMode 和 fullMode ，分别对应精简模式或正常模式
-     * @param string $RunMode 运行模式，取值如：Immediate(表示立即运行，默认为此项值)、Timed(表示定时运行)
-     * @param string $ExpectRunTime 期待启动时间，当RunMode取值为Timed时，此值必填，形如："2006-01-02 15:04:05"
-     * @param string $SrcConnectType 源端tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，SrcInfos中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
-     * @param Endpoint $SrcInfo 源端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。
-     * @param SyncDBEndpointInfos $SrcInfos 源端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。
-     * @param string $SrcNodeType 枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
-     * @param Endpoint $DstInfo 目标端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。
-     * @param SyncDBEndpointInfos $DstInfos 目标端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。
-     * @param string $DstNodeType 枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
-     * @param Options $Options 同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速
-     * @param integer $AutoRetryTimeRangeMinutes 自动重试的时间段、可设置5至720分钟、0表示不重试
+     * @param string $JobId <p>同步实例id（即标识一个同步作业），形如sync-werwfs23，可通过<a href="https://cloud.tencent.com/document/product/571/82103">DescribeSyncJobs</a>接口获取。</p>
+     * @param string $SrcAccessType <p>源端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云),注意具体可选值依赖当前链路</p>
+     * @param string $DstAccessType <p>目标端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、ckafka(CKafka实例),注意具体可选值依赖当前链路</p>
+     * @param Objects $Objects <p>同步库表对象信息</p>
+     * @param string $JobName <p>同步任务名称</p>
+     * @param string $JobMode <p>配置任务模式，默认值为fullMode</p><p>枚举值：</p><ul><li>fullMode： 正常模式</li></ul>
+     * @param string $RunMode <p>运行模式，取值如：Immediate(表示立即运行，默认为此项值)、Timed(表示定时运行)</p>
+     * @param string $ExpectRunTime <p>期待启动时间，当RunMode取值为Timed时，此值必填，形如：&quot;2006-01-02 15:04:05&quot;</p>
+     * @param string $SrcConnectType <p>源端tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，SrcInfos中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。</p>
+     * @param Endpoint $SrcInfo <p>源端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。</p>
+     * @param SyncDBEndpointInfos $SrcInfos <p>源端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。</p>
+     * @param string $SrcNodeType <p>枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster</p>
+     * @param Endpoint $DstInfo <p>目标端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。</p>
+     * @param SyncDBEndpointInfos $DstInfos <p>目标端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。</p>
+     * @param string $DstNodeType <p>枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster</p>
+     * @param Options $Options <p>同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速</p>
+     * @param integer $AutoRetryTimeRangeMinutes <p>自动重试的时间段、可设置5至720分钟、0表示不重试</p>
      */
     function __construct()
     {

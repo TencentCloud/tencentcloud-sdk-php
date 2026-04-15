@@ -44,6 +44,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\DescribeAutoScaleGroupGlobalConfResponse DescribeAutoScaleGroupGlobalConf(Models\DescribeAutoScaleGroupGlobalConfRequest $req) 获取自动扩缩容全局配置
  * @method Models\DescribeAutoScaleRecordsResponse DescribeAutoScaleRecords(Models\DescribeAutoScaleRecordsRequest $req) 获取集群的自动扩缩容的详细记录
  * @method Models\DescribeAutoScaleStrategiesResponse DescribeAutoScaleStrategies(Models\DescribeAutoScaleStrategiesRequest $req) 获取自动扩缩容规则
+ * @method Models\DescribeBootScriptResponse DescribeBootScript(Models\DescribeBootScriptRequest $req) 获取引导脚本
  * @method Models\DescribeClusterFlowStatusDetailResponse DescribeClusterFlowStatusDetail(Models\DescribeClusterFlowStatusDetailRequest $req) 查询EMR任务运行详情状态
  * @method Models\DescribeClusterNodesResponse DescribeClusterNodes(Models\DescribeClusterNodesRequest $req) 查询集群节点信息
  * @method Models\DescribeCvmQuotaResponse DescribeCvmQuota(Models\DescribeCvmQuotaRequest $req) 获取账户的CVM配额
@@ -93,6 +94,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\ModifyAutoRenewFlagResponse ModifyAutoRenewFlag(Models\ModifyAutoRenewFlagRequest $req) 前提：预付费集群
 资源级别开启或关闭自动续费
  * @method Models\ModifyAutoScaleStrategyResponse ModifyAutoScaleStrategy(Models\ModifyAutoScaleStrategyRequest $req) 修改自动扩缩容规则
+ * @method Models\ModifyBootScriptResponse ModifyBootScript(Models\ModifyBootScriptRequest $req) 修改引导脚本
  * @method Models\ModifyGlobalConfigResponse ModifyGlobalConfig(Models\ModifyGlobalConfigRequest $req) 修改YARN资源调度的全局配置
  * @method Models\ModifyInspectionSettingsResponse ModifyInspectionSettings(Models\ModifyInspectionSettingsRequest $req) 设置巡检任务配置
  * @method Models\ModifyInstanceBasicResponse ModifyInstanceBasic(Models\ModifyInstanceBasicRequest $req) 修改集群名称

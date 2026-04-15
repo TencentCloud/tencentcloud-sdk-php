@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFrameInterpolate(string $FrameInterpolate) 设置<p>是否开启vidu智能插帧。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
  * @method string getLogoAdd() 获取<p>是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li><br>目前支持的模型有 Vidu，其他模型暂不支持。</p>
  * @method void setLogoAdd(string $LogoAdd) 设置<p>是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li><br>目前支持的模型有 Vidu，其他模型暂不支持。</p>
+ * @method string getEnableBGM() 获取<p>是否为生成的视频添加背景音乐。</p><p>枚举值：</p><ul><li>Enabled： 系统将从预设 BGM 库中自动挑选合适的音乐并添加。</li><li>Disabled： 不添加BGM。</li></ul><p>默认值：Disabled</p>
+ * @method void setEnableBGM(string $EnableBGM) 设置<p>是否为生成的视频添加背景音乐。</p><p>枚举值：</p><ul><li>Enabled： 系统将从预设 BGM 库中自动挑选合适的音乐并添加。</li><li>Disabled： 不添加BGM。</li></ul><p>默认值：Disabled</p>
  */
 class AigcVideoOutputConfig extends AbstractModel
 {
@@ -129,6 +131,11 @@ class AigcVideoOutputConfig extends AbstractModel
     public $LogoAdd;
 
     /**
+     * @var string <p>是否为生成的视频添加背景音乐。</p><p>枚举值：</p><ul><li>Enabled： 系统将从预设 BGM 库中自动挑选合适的音乐并添加。</li><li>Disabled： 不添加BGM。</li></ul><p>默认值：Disabled</p>
+     */
+    public $EnableBGM;
+
+    /**
      * @param string $StorageMode <p>存储模式</p><p>枚举值：</p><ul><li>Temporary： 临时存储，生成的视频文件不会存储到云点播，可在事件通知中获取到临时访问的 URL，有效期 7 天</li><li>Permanent： 永久存储，生成的视频文件将存储到云点播，可在事件通知中获取到 FileId</li></ul><p>默认值：Temporary</p>
      * @param string $MediaName <p>输出媒体文件名，最长 64 个字符。缺省由系统指定生成文件名。</p>
      * @param integer $ClassId <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。</p><li>默认值：0，表示其他分类。</li>
@@ -144,6 +151,7 @@ class AigcVideoOutputConfig extends AbstractModel
      * @param string $OffPeak <p>是否开启错峰。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
      * @param string $FrameInterpolate <p>是否开启vidu智能插帧。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
      * @param string $LogoAdd <p>是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li><br>目前支持的模型有 Vidu，其他模型暂不支持。</p>
+     * @param string $EnableBGM <p>是否为生成的视频添加背景音乐。</p><p>枚举值：</p><ul><li>Enabled： 系统将从预设 BGM 库中自动挑选合适的音乐并添加。</li><li>Disabled： 不添加BGM。</li></ul><p>默认值：Disabled</p>
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ class AigcVideoOutputConfig extends AbstractModel
 
         if (array_key_exists("LogoAdd",$param) and $param["LogoAdd"] !== null) {
             $this->LogoAdd = $param["LogoAdd"];
+        }
+
+        if (array_key_exists("EnableBGM",$param) and $param["EnableBGM"] !== null) {
+            $this->EnableBGM = $param["EnableBGM"];
         }
     }
 }

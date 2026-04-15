@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTreeJobs请求参数结构体
  *
- * @method array getFilters() 获取筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录
- * @method void setFilters(array $Filters) 设置筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录
- * @method string getWorkSpaceId() 获取工作空间 Serialid
- * @method void setWorkSpaceId(string $WorkSpaceId) 设置工作空间 Serialid
+ * @method array getFilters() 获取<p>筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录</p>
+ * @method void setFilters(array $Filters) 设置<p>筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录</p>
+ * @method string getWorkSpaceId() 获取<p>工作空间 Serialid</p>
+ * @method void setWorkSpaceId(string $WorkSpaceId) 设置<p>工作空间 Serialid</p>
  */
 class DescribeTreeJobsRequest extends AbstractModel
 {
     /**
-     * @var array 筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录
+     * @var array <p>筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录</p>
      */
     public $Filters;
 
     /**
-     * @var string 工作空间 Serialid
+     * @var string <p>工作空间 Serialid</p>
      */
     public $WorkSpaceId;
 
     /**
-     * @param array $Filters 筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录
-     * @param string $WorkSpaceId 工作空间 Serialid
+     * @param array $Filters <p>筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录</p>
+     * @param string $WorkSpaceId <p>工作空间 Serialid</p>
      */
     function __construct()
     {

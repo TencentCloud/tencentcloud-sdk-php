@@ -27,6 +27,7 @@ use TencentCloud\Tdmysql\V20211122\Models as Models;
  * @method Models\CreateDBSBackupResponse CreateDBSBackup(Models\CreateDBSBackupRequest $req) 创建实例手工备份  CreateDBSBackup
  * @method Models\DeleteDBSBackupSetsResponse DeleteDBSBackupSets(Models\DeleteDBSBackupSetsRequest $req) 删除实例手工备份 DeleteDBSBackupSets
  * @method Models\DescribeDBParametersResponse DescribeDBParameters(Models\DescribeDBParametersRequest $req) 本接口（DescribeDBParameters）用于获取实例的当前参数设置。
+ * @method Models\DescribeDBSArchiveLogsResponse DescribeDBSArchiveLogs(Models\DescribeDBSArchiveLogsRequest $req) 查询实例归档日志列表 DescribeDBSArchiveLogs
  * @method Models\DescribeDBSAvailableRecoveryTimeResponse DescribeDBSAvailableRecoveryTime(Models\DescribeDBSAvailableRecoveryTimeRequest $req) 获取可恢复时间 DescribeDBSAvailableRecoveryTime
  * @method Models\DescribeDBSCloneInstancesResponse DescribeDBSCloneInstances(Models\DescribeDBSCloneInstancesRequest $req) 查询实例克隆列表 DescribeDBSCloneInstances
  * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) 本接口（DescribeDBSecurityGroups）用于查询实例安全组信息

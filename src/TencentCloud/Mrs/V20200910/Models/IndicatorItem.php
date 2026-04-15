@@ -20,130 +20,139 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 检验指标项
  *
- * @method string getCode() 获取英文缩写
- * @method void setCode(string $Code) 设置英文缩写
- * @method string getScode() 获取标准缩写
- * @method void setScode(string $Scode) 设置标准缩写
- * @method string getName() 获取项目名称
- * @method void setName(string $Name) 设置项目名称
- * @method string getSname() 获取标准名
- * @method void setSname(string $Sname) 设置标准名
- * @method string getResult() 获取结果
- * @method void setResult(string $Result) 设置结果
- * @method string getUnit() 获取单位
- * @method void setUnit(string $Unit) 设置单位
- * @method string getRange() 获取参考范围
- * @method void setRange(string $Range) 设置参考范围
- * @method string getArrow() 获取上下箭头
- * @method void setArrow(string $Arrow) 设置上下箭头
- * @method boolean getNormal() 获取是否正常
- * @method void setNormal(boolean $Normal) 设置是否正常
- * @method string getItemString() 获取项目原文
- * @method void setItemString(string $ItemString) 设置项目原文
- * @method integer getId() 获取指标项ID
- * @method void setId(integer $Id) 设置指标项ID
- * @method Coordinate getCoords() 获取指标项坐标位置
- * @method void setCoords(Coordinate $Coords) 设置指标项坐标位置
- * @method string getInferNormal() 获取推测结果是否异常
- * @method void setInferNormal(string $InferNormal) 设置推测结果是否异常
- * @method string getSample() 获取标本
- * @method void setSample(string $Sample) 设置标本
- * @method string getMethod() 获取检测方法
- * @method void setMethod(string $Method) 设置检测方法
+ * @method string getCode() 获取<p>英文缩写</p>
+ * @method void setCode(string $Code) 设置<p>英文缩写</p>
+ * @method string getScode() 获取<p>标准缩写</p>
+ * @method void setScode(string $Scode) 设置<p>标准缩写</p>
+ * @method string getName() 获取<p>项目名称</p>
+ * @method void setName(string $Name) 设置<p>项目名称</p>
+ * @method string getSname() 获取<p>标准名</p>
+ * @method void setSname(string $Sname) 设置<p>标准名</p>
+ * @method string getResult() 获取<p>结果</p>
+ * @method void setResult(string $Result) 设置<p>结果</p>
+ * @method string getUnit() 获取<p>单位</p>
+ * @method void setUnit(string $Unit) 设置<p>单位</p>
+ * @method string getRange() 获取<p>参考范围</p>
+ * @method void setRange(string $Range) 设置<p>参考范围</p>
+ * @method string getArrow() 获取<p>上下箭头</p>
+ * @method void setArrow(string $Arrow) 设置<p>上下箭头</p>
+ * @method boolean getNormal() 获取<p>是否正常</p>
+ * @method void setNormal(boolean $Normal) 设置<p>是否正常</p>
+ * @method string getItemString() 获取<p>项目原文</p>
+ * @method void setItemString(string $ItemString) 设置<p>项目原文</p>
+ * @method integer getId() 获取<p>指标项ID</p>
+ * @method void setId(integer $Id) 设置<p>指标项ID</p>
+ * @method Coordinate getCoords() 获取<p>指标项坐标位置</p>
+ * @method void setCoords(Coordinate $Coords) 设置<p>指标项坐标位置</p>
+ * @method string getInferNormal() 获取<p>推测结果是否异常</p>
+ * @method void setInferNormal(string $InferNormal) 设置<p>推测结果是否异常</p>
+ * @method string getSample() 获取<p>标本</p>
+ * @method void setSample(string $Sample) 设置<p>标本</p>
+ * @method string getMethod() 获取<p>检测方法</p>
+ * @method void setMethod(string $Method) 设置<p>检测方法</p>
+ * @method ItemCoordinate getItemCoords() 获取<p>检验指标项坐标信息</p>
+ * @method void setItemCoords(ItemCoordinate $ItemCoords) 设置<p>检验指标项坐标信息</p>
  */
 class IndicatorItem extends AbstractModel
 {
     /**
-     * @var string 英文缩写
+     * @var string <p>英文缩写</p>
      */
     public $Code;
 
     /**
-     * @var string 标准缩写
+     * @var string <p>标准缩写</p>
      */
     public $Scode;
 
     /**
-     * @var string 项目名称
+     * @var string <p>项目名称</p>
      */
     public $Name;
 
     /**
-     * @var string 标准名
+     * @var string <p>标准名</p>
      */
     public $Sname;
 
     /**
-     * @var string 结果
+     * @var string <p>结果</p>
      */
     public $Result;
 
     /**
-     * @var string 单位
+     * @var string <p>单位</p>
      */
     public $Unit;
 
     /**
-     * @var string 参考范围
+     * @var string <p>参考范围</p>
      */
     public $Range;
 
     /**
-     * @var string 上下箭头
+     * @var string <p>上下箭头</p>
      */
     public $Arrow;
 
     /**
-     * @var boolean 是否正常
+     * @var boolean <p>是否正常</p>
      */
     public $Normal;
 
     /**
-     * @var string 项目原文
+     * @var string <p>项目原文</p>
      */
     public $ItemString;
 
     /**
-     * @var integer 指标项ID
+     * @var integer <p>指标项ID</p>
      */
     public $Id;
 
     /**
-     * @var Coordinate 指标项坐标位置
+     * @var Coordinate <p>指标项坐标位置</p>
+     * @deprecated
      */
     public $Coords;
 
     /**
-     * @var string 推测结果是否异常
+     * @var string <p>推测结果是否异常</p>
      */
     public $InferNormal;
 
     /**
-     * @var string 标本
+     * @var string <p>标本</p>
      */
     public $Sample;
 
     /**
-     * @var string 检测方法
+     * @var string <p>检测方法</p>
      */
     public $Method;
 
     /**
-     * @param string $Code 英文缩写
-     * @param string $Scode 标准缩写
-     * @param string $Name 项目名称
-     * @param string $Sname 标准名
-     * @param string $Result 结果
-     * @param string $Unit 单位
-     * @param string $Range 参考范围
-     * @param string $Arrow 上下箭头
-     * @param boolean $Normal 是否正常
-     * @param string $ItemString 项目原文
-     * @param integer $Id 指标项ID
-     * @param Coordinate $Coords 指标项坐标位置
-     * @param string $InferNormal 推测结果是否异常
-     * @param string $Sample 标本
-     * @param string $Method 检测方法
+     * @var ItemCoordinate <p>检验指标项坐标信息</p>
+     */
+    public $ItemCoords;
+
+    /**
+     * @param string $Code <p>英文缩写</p>
+     * @param string $Scode <p>标准缩写</p>
+     * @param string $Name <p>项目名称</p>
+     * @param string $Sname <p>标准名</p>
+     * @param string $Result <p>结果</p>
+     * @param string $Unit <p>单位</p>
+     * @param string $Range <p>参考范围</p>
+     * @param string $Arrow <p>上下箭头</p>
+     * @param boolean $Normal <p>是否正常</p>
+     * @param string $ItemString <p>项目原文</p>
+     * @param integer $Id <p>指标项ID</p>
+     * @param Coordinate $Coords <p>指标项坐标位置</p>
+     * @param string $InferNormal <p>推测结果是否异常</p>
+     * @param string $Sample <p>标本</p>
+     * @param string $Method <p>检测方法</p>
+     * @param ItemCoordinate $ItemCoords <p>检验指标项坐标信息</p>
      */
     function __construct()
     {
@@ -217,6 +226,11 @@ class IndicatorItem extends AbstractModel
 
         if (array_key_exists("Method",$param) and $param["Method"] !== null) {
             $this->Method = $param["Method"];
+        }
+
+        if (array_key_exists("ItemCoords",$param) and $param["ItemCoords"] !== null) {
+            $this->ItemCoords = new ItemCoordinate();
+            $this->ItemCoords->deserialize($param["ItemCoords"]);
         }
     }
 }

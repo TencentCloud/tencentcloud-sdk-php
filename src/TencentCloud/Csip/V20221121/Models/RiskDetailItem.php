@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRiskRuleId(string $RiskRuleId) 设置风险规则ID
  * @method string getCheckStatus() 获取风险验证状态
  * @method void setCheckStatus(string $CheckStatus) 设置风险验证状态
+ * @method integer getAppID() 获取
+ * @method void setAppID(integer $AppID) 设置
  */
 class RiskDetailItem extends AbstractModel
 {
@@ -115,6 +117,11 @@ class RiskDetailItem extends AbstractModel
     public $CheckStatus;
 
     /**
+     * @var integer 
+     */
+    public $AppID;
+
+    /**
      * @param string $CreateTime 首次发现时间
      * @param string $UpdateTime 更新时间
      * @param integer $RiskStatus 风险状态
@@ -128,6 +135,7 @@ class RiskDetailItem extends AbstractModel
      * @param integer $RiskId 风险ID
      * @param string $RiskRuleId 风险规则ID
      * @param string $CheckStatus 风险验证状态
+     * @param integer $AppID 
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class RiskDetailItem extends AbstractModel
 
         if (array_key_exists("CheckStatus",$param) and $param["CheckStatus"] !== null) {
             $this->CheckStatus = $param["CheckStatus"];
+        }
+
+        if (array_key_exists("AppID",$param) and $param["AppID"] !== null) {
+            $this->AppID = $param["AppID"];
         }
     }
 }

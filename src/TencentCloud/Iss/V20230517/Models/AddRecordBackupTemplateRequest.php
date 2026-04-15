@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddRecordBackupTemplate请求参数结构体
  *
- * @method string getTemplateName() 获取模板名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，模板名称全局唯一，不能为空，不能重复）
- * @method void setTemplateName(string $TemplateName) 设置模板名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，模板名称全局唯一，不能为空，不能重复）
- * @method array getTimeSections() 获取上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
- * @method void setTimeSections(array $TimeSections) 设置上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
- * @method array getDevTimeSections() 获取录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
- * @method void setDevTimeSections(array $DevTimeSections) 设置录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
- * @method integer getScale() 获取上云倍速（支持1，2，4倍速）
- * @method void setScale(integer $Scale) 设置上云倍速（支持1，2，4倍速）
+ * @method string getTemplateName() 获取<p>模板名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，模板名称全局唯一，不能为空，不能重复）</p>
+ * @method void setTemplateName(string $TemplateName) 设置<p>模板名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，模板名称全局唯一，不能为空，不能重复）</p>
+ * @method array getTimeSections() 获取<p>上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
+ * @method void setTimeSections(array $TimeSections) 设置<p>上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
+ * @method array getDevTimeSections() 获取<p>录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
+ * @method void setDevTimeSections(array $DevTimeSections) 设置<p>录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
+ * @method integer getScale() 获取<p>上云倍速（支持1，2，4倍速）</p>
+ * @method void setScale(integer $Scale) 设置<p>上云倍速（支持1，2，4倍速）</p>
+ * @method integer getDayOffset() 获取<p>周期偏移量，默认1，表示拉取昨天的设备录像，0表示取去今天的设备录像，3表示拉取前天的设备录像</p><p>取值范围：[0, 90]</p><p>默认值：1</p>
+ * @method void setDayOffset(integer $DayOffset) 设置<p>周期偏移量，默认1，表示拉取昨天的设备录像，0表示取去今天的设备录像，3表示拉取前天的设备录像</p><p>取值范围：[0, 90]</p><p>默认值：1</p>
  */
 class AddRecordBackupTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 模板名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，模板名称全局唯一，不能为空，不能重复）
+     * @var string <p>模板名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，模板名称全局唯一，不能为空，不能重复）</p>
      */
     public $TemplateName;
 
     /**
-     * @var array 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
+     * @var array <p>上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
      */
     public $TimeSections;
 
     /**
-     * @var array 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
+     * @var array <p>录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
      */
     public $DevTimeSections;
 
     /**
-     * @var integer 上云倍速（支持1，2，4倍速）
+     * @var integer <p>上云倍速（支持1，2，4倍速）</p>
      */
     public $Scale;
 
     /**
-     * @param string $TemplateName 模板名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，模板名称全局唯一，不能为空，不能重复）
-     * @param array $TimeSections 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-     * @param array $DevTimeSections 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-     * @param integer $Scale 上云倍速（支持1，2，4倍速）
+     * @var integer <p>周期偏移量，默认1，表示拉取昨天的设备录像，0表示取去今天的设备录像，3表示拉取前天的设备录像</p><p>取值范围：[0, 90]</p><p>默认值：1</p>
+     */
+    public $DayOffset;
+
+    /**
+     * @param string $TemplateName <p>模板名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，模板名称全局唯一，不能为空，不能重复）</p>
+     * @param array $TimeSections <p>上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
+     * @param array $DevTimeSections <p>录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
+     * @param integer $Scale <p>上云倍速（支持1，2，4倍速）</p>
+     * @param integer $DayOffset <p>周期偏移量，默认1，表示拉取昨天的设备录像，0表示取去今天的设备录像，3表示拉取前天的设备录像</p><p>取值范围：[0, 90]</p><p>默认值：1</p>
      */
     function __construct()
     {
@@ -94,6 +102,10 @@ class AddRecordBackupTemplateRequest extends AbstractModel
 
         if (array_key_exists("Scale",$param) and $param["Scale"] !== null) {
             $this->Scale = $param["Scale"];
+        }
+
+        if (array_key_exists("DayOffset",$param) and $param["DayOffset"] !== null) {
+            $this->DayOffset = $param["DayOffset"];
         }
     }
 }

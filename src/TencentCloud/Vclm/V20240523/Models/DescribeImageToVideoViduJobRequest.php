@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dts\V20211206\Models;
+namespace TencentCloud\Vclm\V20240523\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * OnlineDDL类型
+ * DescribeImageToVideoViduJob请求参数结构体
  *
- * @method string getStatus() 获取状态，ON-启用，OFF-不启用。
- * @method void setStatus(string $Status) 设置状态，ON-启用，OFF-不启用。
+ * @method string getJobId() 获取<p>任务ID</p>
+ * @method void setJobId(string $JobId) 设置<p>任务ID</p>
  */
-class OnlineDDL extends AbstractModel
+class DescribeImageToVideoViduJobRequest extends AbstractModel
 {
     /**
-     * @var string 状态，ON-启用，OFF-不启用。
+     * @var string <p>任务ID</p>
      */
-    public $Status;
+    public $JobId;
 
     /**
-     * @param string $Status 状态，ON-启用，OFF-不启用。
+     * @param string $JobId <p>任务ID</p>
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class OnlineDDL extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
+            $this->JobId = $param["JobId"];
         }
     }
 }

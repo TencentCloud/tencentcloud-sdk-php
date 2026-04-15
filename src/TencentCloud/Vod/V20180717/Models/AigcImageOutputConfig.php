@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInputComplianceCheck(string $InputComplianceCheck) 设置<p>是否开启输入内容的合规性检查。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
  * @method string getOutputComplianceCheck() 获取<p>是否开启输出内容的合规性检查。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
  * @method void setOutputComplianceCheck(string $OutputComplianceCheck) 设置<p>是否开启输出内容的合规性检查。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
+ * @method integer getOutputImageCount() 获取<p>生成图片张数。*<em>仅ModelName为Kling时有效，可选值 1-9 *</em>。</p>
+ * @method void setOutputImageCount(integer $OutputImageCount) 设置<p>生成图片张数。*<em>仅ModelName为Kling时有效，可选值 1-9 *</em>。</p>
  */
 class AigcImageOutputConfig extends AbstractModel
 {
@@ -87,6 +89,11 @@ class AigcImageOutputConfig extends AbstractModel
     public $OutputComplianceCheck;
 
     /**
+     * @var integer <p>生成图片张数。*<em>仅ModelName为Kling时有效，可选值 1-9 *</em>。</p>
+     */
+    public $OutputImageCount;
+
+    /**
      * @param string $StorageMode <p>存储模式</p><p>枚举值：</p><ul><li>Temporary： 临时存储，生成的视频文件不会存储到云点播，可在事件通知中获取到临时访问的 URL，有效期 7 天</li><li>Permanent： 永久存储，生成的视频文件将存储到云点播，可在事件通知中获取到 FileId</li></ul><p>默认值：Temporary</p>
      * @param string $MediaName <p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。</p>
      * @param integer $ClassId <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。</p><li>默认值：0，表示其他分类。</li>
@@ -96,6 +103,7 @@ class AigcImageOutputConfig extends AbstractModel
      * @param string $PersonGeneration <p>是否允许人物或人脸生成。取值有： <li>AllowAdult：允许生成成人；</li> <li>Disallowed：禁止在图片中包含人物或人脸；</li></p>
      * @param string $InputComplianceCheck <p>是否开启输入内容的合规性检查。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
      * @param string $OutputComplianceCheck <p>是否开启输出内容的合规性检查。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
+     * @param integer $OutputImageCount <p>生成图片张数。*<em>仅ModelName为Kling时有效，可选值 1-9 *</em>。</p>
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class AigcImageOutputConfig extends AbstractModel
 
         if (array_key_exists("OutputComplianceCheck",$param) and $param["OutputComplianceCheck"] !== null) {
             $this->OutputComplianceCheck = $param["OutputComplianceCheck"];
+        }
+
+        if (array_key_exists("OutputImageCount",$param) and $param["OutputImageCount"] !== null) {
+            $this->OutputImageCount = $param["OutputImageCount"];
         }
     }
 }

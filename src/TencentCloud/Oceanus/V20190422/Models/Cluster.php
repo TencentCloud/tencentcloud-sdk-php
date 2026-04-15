@@ -20,614 +20,634 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述用户创建的集群信息
  *
- * @method string getClusterId() 获取集群 ID
- * @method void setClusterId(string $ClusterId) 设置集群 ID
- * @method string getName() 获取集群名称
- * @method void setName(string $Name) 设置集群名称
- * @method string getRegion() 获取地域
- * @method void setRegion(string $Region) 设置地域
- * @method integer getAppId() 获取用户 AppID
- * @method void setAppId(integer $AppId) 设置用户 AppID
- * @method string getOwnerUin() 获取主账号 UIN
- * @method void setOwnerUin(string $OwnerUin) 设置主账号 UIN
- * @method string getCreatorUin() 获取创建者 UIN
- * @method void setCreatorUin(string $CreatorUin) 设置创建者 UIN
- * @method integer getStatus() 获取集群状态, 1 未初始化,3 初始化中，2 运行中
- * @method void setStatus(integer $Status) 设置集群状态, 1 未初始化,3 初始化中，2 运行中
- * @method string getRemark() 获取描述
- * @method void setRemark(string $Remark) 设置描述
- * @method string getCreateTime() 获取集群创建时间
- * @method void setCreateTime(string $CreateTime) 设置集群创建时间
- * @method string getUpdateTime() 获取最后一次操作集群的时间
- * @method void setUpdateTime(string $UpdateTime) 设置最后一次操作集群的时间
- * @method integer getCuNum() 获取CU 数量
- * @method void setCuNum(integer $CuNum) 设置CU 数量
- * @method integer getCuMem() 获取CU 内存规格
- * @method void setCuMem(integer $CuMem) 设置CU 内存规格
- * @method string getZone() 获取可用区
- * @method void setZone(string $Zone) 设置可用区
- * @method string getStatusDesc() 获取状态描述
- * @method void setStatusDesc(string $StatusDesc) 设置状态描述
- * @method array getCCNs() 获取网络
- * @method void setCCNs(array $CCNs) 设置网络
- * @method integer getNetEnvironmentType() 获取网络
- * @method void setNetEnvironmentType(integer $NetEnvironmentType) 设置网络
- * @method integer getFreeCuNum() 获取空闲 CU
- * @method void setFreeCuNum(integer $FreeCuNum) 设置空闲 CU
- * @method array getTags() 获取集群绑定的标签
+ * @method string getClusterId() 获取<p>集群 ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群 ID</p>
+ * @method string getName() 获取<p>集群名称</p>
+ * @method void setName(string $Name) 设置<p>集群名称</p>
+ * @method string getRegion() 获取<p>地域</p>
+ * @method void setRegion(string $Region) 设置<p>地域</p>
+ * @method integer getAppId() 获取<p>用户 AppID</p>
+ * @method void setAppId(integer $AppId) 设置<p>用户 AppID</p>
+ * @method string getOwnerUin() 获取<p>主账号 UIN</p>
+ * @method void setOwnerUin(string $OwnerUin) 设置<p>主账号 UIN</p>
+ * @method string getCreatorUin() 获取<p>创建者 UIN</p>
+ * @method void setCreatorUin(string $CreatorUin) 设置<p>创建者 UIN</p>
+ * @method integer getStatus() 获取<p>集群状态, 1 未初始化,3 初始化中，2 运行中</p>
+ * @method void setStatus(integer $Status) 设置<p>集群状态, 1 未初始化,3 初始化中，2 运行中</p>
+ * @method string getRemark() 获取<p>描述</p>
+ * @method void setRemark(string $Remark) 设置<p>描述</p>
+ * @method string getCreateTime() 获取<p>集群创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>集群创建时间</p>
+ * @method string getUpdateTime() 获取<p>最后一次操作集群的时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>最后一次操作集群的时间</p>
+ * @method integer getCuNum() 获取<p>CU 数量</p>
+ * @method void setCuNum(integer $CuNum) 设置<p>CU 数量</p>
+ * @method integer getCuMem() 获取<p>CU 内存规格</p>
+ * @method void setCuMem(integer $CuMem) 设置<p>CU 内存规格</p>
+ * @method string getZone() 获取<p>可用区</p>
+ * @method void setZone(string $Zone) 设置<p>可用区</p>
+ * @method string getStatusDesc() 获取<p>状态描述</p>
+ * @method void setStatusDesc(string $StatusDesc) 设置<p>状态描述</p>
+ * @method array getCCNs() 获取<p>网络</p>
+ * @method void setCCNs(array $CCNs) 设置<p>网络</p>
+ * @method integer getNetEnvironmentType() 获取<p>网络</p>
+ * @method void setNetEnvironmentType(integer $NetEnvironmentType) 设置<p>网络</p>
+ * @method integer getFreeCuNum() 获取<p>空闲 CU</p>
+ * @method void setFreeCuNum(integer $FreeCuNum) 设置<p>空闲 CU</p>
+ * @method array getTags() 获取<p>集群绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTags(array $Tags) 设置集群绑定的标签
+ * @method void setTags(array $Tags) 设置<p>集群绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIsolatedTime() 获取集群隔离时间; 没隔离时间，则为 -
+ * @method string getIsolatedTime() 获取<p>集群隔离时间; 没隔离时间，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsolatedTime(string $IsolatedTime) 设置集群隔离时间; 没隔离时间，则为 -
+ * @method void setIsolatedTime(string $IsolatedTime) 设置<p>集群隔离时间; 没隔离时间，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExpireTime() 获取集群过期时间; 没过期概念，则为 -
+ * @method string getExpireTime() 获取<p>集群过期时间; 没过期概念，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExpireTime(string $ExpireTime) 设置集群过期时间; 没过期概念，则为 -
+ * @method void setExpireTime(string $ExpireTime) 设置<p>集群过期时间; 没过期概念，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSecondsUntilExpiry() 获取距离过期还有多少秒; 没过期概念，则为 -
+ * @method string getSecondsUntilExpiry() 获取<p>距离过期还有多少秒; 没过期概念，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSecondsUntilExpiry(string $SecondsUntilExpiry) 设置距离过期还有多少秒; 没过期概念，则为 -
+ * @method void setSecondsUntilExpiry(string $SecondsUntilExpiry) 设置<p>距离过期还有多少秒; 没过期概念，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAutoRenewFlag() 获取自动续费标记，0 表示默认状态 (用户未设置，即初始状态，用户开通了预付费不停服特权会进行自动续费)， 1 表示自动续费，2表示明确不自动续费(用户设置)
+ * @method integer getAutoRenewFlag() 获取<p>自动续费标记，0 表示默认状态 (用户未设置，即初始状态，用户开通了预付费不停服特权会进行自动续费)， 1 表示自动续费，2表示明确不自动续费(用户设置)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记，0 表示默认状态 (用户未设置，即初始状态，用户开通了预付费不停服特权会进行自动续费)， 1 表示自动续费，2表示明确不自动续费(用户设置)
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置<p>自动续费标记，0 表示默认状态 (用户未设置，即初始状态，用户开通了预付费不停服特权会进行自动续费)， 1 表示自动续费，2表示明确不自动续费(用户设置)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDefaultCOSBucket() 获取集群的默认 COS 存储桶
+ * @method string getDefaultCOSBucket() 获取<p>集群的默认 COS 存储桶</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDefaultCOSBucket(string $DefaultCOSBucket) 设置集群的默认 COS 存储桶
+ * @method void setDefaultCOSBucket(string $DefaultCOSBucket) 设置<p>集群的默认 COS 存储桶</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCLSLogSet() 获取集群的CLS 日志集 LogSet
+ * @method string getCLSLogSet() 获取<p>集群的CLS 日志集 LogSet</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCLSLogSet(string $CLSLogSet) 设置集群的CLS 日志集 LogSet
+ * @method void setCLSLogSet(string $CLSLogSet) 设置<p>集群的CLS 日志集 LogSet</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCLSTopicId() 获取集群的CLS 日志主题 TopicId
+ * @method string getCLSTopicId() 获取<p>集群的CLS 日志主题 TopicId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCLSTopicId(string $CLSTopicId) 设置集群的CLS 日志主题 TopicId
+ * @method void setCLSTopicId(string $CLSTopicId) 设置<p>集群的CLS 日志主题 TopicId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCLSLogName() 获取集群的CLS 日志集  名字
+ * @method string getCLSLogName() 获取<p>集群的CLS 日志集  名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCLSLogName(string $CLSLogName) 设置集群的CLS 日志集  名字
+ * @method void setCLSLogName(string $CLSLogName) 设置<p>集群的CLS 日志集  名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCLSTopicName() 获取集群的CLS 日志主题  名字
+ * @method string getCLSTopicName() 获取<p>集群的CLS 日志主题  名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCLSTopicName(string $CLSTopicName) 设置集群的CLS 日志主题  名字
+ * @method void setCLSTopicName(string $CLSTopicName) 设置<p>集群的CLS 日志主题  名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ClusterVersion getVersion() 获取集群的版本信息
+ * @method ClusterVersion getVersion() 获取<p>集群的版本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVersion(ClusterVersion $Version) 设置集群的版本信息
+ * @method void setVersion(ClusterVersion $Version) 设置<p>集群的版本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getFreeCu() 获取细粒度资源下的空闲CU
+ * @method float getFreeCu() 获取<p>细粒度资源下的空闲CU</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFreeCu(float $FreeCu) 设置细粒度资源下的空闲CU
+ * @method void setFreeCu(float $FreeCu) 设置<p>细粒度资源下的空闲CU</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDefaultLogCollectConf() 获取集群的默认日志采集配置
+ * @method string getDefaultLogCollectConf() 获取<p>集群的默认日志采集配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDefaultLogCollectConf(string $DefaultLogCollectConf) 设置集群的默认日志采集配置
+ * @method void setDefaultLogCollectConf(string $DefaultLogCollectConf) 设置<p>集群的默认日志采集配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCustomizedDNSEnabled() 获取取值：0-没有设置，1-已设置，2-不允许设置
+ * @method integer getCustomizedDNSEnabled() 获取<p>取值：0-没有设置，1-已设置，2-不允许设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCustomizedDNSEnabled(integer $CustomizedDNSEnabled) 设置取值：0-没有设置，1-已设置，2-不允许设置
+ * @method void setCustomizedDNSEnabled(integer $CustomizedDNSEnabled) 设置<p>取值：0-没有设置，1-已设置，2-不允许设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getCorrelations() 获取空间信息
+ * @method array getCorrelations() 获取<p>空间信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCorrelations(array $Correlations) 设置空间信息
+ * @method void setCorrelations(array $Correlations) 设置<p>空间信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getRunningCu() 获取运行CU
+ * @method float getRunningCu() 获取<p>运行CU</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRunningCu(float $RunningCu) 设置运行CU
+ * @method void setRunningCu(float $RunningCu) 设置<p>运行CU</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPayMode() 获取0 后付费,1 预付费
+ * @method integer getPayMode() 获取<p>0 后付费,1 预付费</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPayMode(integer $PayMode) 设置0 后付费,1 预付费
+ * @method void setPayMode(integer $PayMode) 设置<p>0 后付费,1 预付费</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsNeedManageNode() 获取前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要
+ * @method integer getIsNeedManageNode() 获取<p>前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsNeedManageNode(integer $IsNeedManageNode) 设置前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要
+ * @method void setIsNeedManageNode(integer $IsNeedManageNode) 设置<p>前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getClusterSessions() 获取session集群信息
+ * @method array getClusterSessions() 获取<p>session集群信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterSessions(array $ClusterSessions) 设置session集群信息
+ * @method void setClusterSessions(array $ClusterSessions) 设置<p>session集群信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getArchGeneration() 获取V3版本 = 2
+ * @method integer getArchGeneration() 获取<p>V3版本 = 2</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setArchGeneration(integer $ArchGeneration) 设置V3版本 = 2
+ * @method void setArchGeneration(integer $ArchGeneration) 设置<p>V3版本 = 2</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getClusterType() 获取0:TKE, 1:EKS
+ * @method integer getClusterType() 获取<p>0:TKE, 1:EKS</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterType(integer $ClusterType) 设置0:TKE, 1:EKS
+ * @method void setClusterType(integer $ClusterType) 设置<p>0:TKE, 1:EKS</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getOrders() 获取订单信息
+ * @method array getOrders() 获取<p>订单信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOrders(array $Orders) 设置订单信息
+ * @method void setOrders(array $Orders) 设置<p>订单信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSqlGateways() 获取Gateway信息
+ * @method array getSqlGateways() 获取<p>Gateway信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSqlGateways(array $SqlGateways) 设置Gateway信息
+ * @method void setSqlGateways(array $SqlGateways) 设置<p>Gateway信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getWebUIType() 获取0 公网访问 // 1 内网访问	
+ * @method integer getWebUIType() 获取<p>0 公网访问 // 1 内网访问</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWebUIType(integer $WebUIType) 设置0 公网访问 // 1 内网访问	
+ * @method void setWebUIType(integer $WebUIType) 设置<p>0 公网访问 // 1 内网访问</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getType() 获取2 独享集群
+ * @method integer getType() 获取<p>2 独享集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(integer $Type) 设置2 独享集群
+ * @method void setType(integer $Type) 设置<p>2 独享集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method SubEks getSubEks() 获取子eks集群
+ * @method SubEks getSubEks() 获取<p>子eks集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubEks(SubEks $SubEks) 设置子eks集群
+ * @method void setSubEks(SubEks $SubEks) 设置<p>子eks集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAgentSerialId() 获取上级集群
+ * @method string getAgentSerialId() 获取<p>上级集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAgentSerialId(string $AgentSerialId) 设置上级集群
+ * @method void setAgentSerialId(string $AgentSerialId) 设置<p>上级集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getResourceType() 获取资源类型
+ * @method integer getResourceType() 获取<p>资源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceType(integer $ResourceType) 设置资源类型
+ * @method void setResourceType(integer $ResourceType) 设置<p>资源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBillingResourceMode() 获取集群类型
+ * @method string getBillingResourceMode() 获取<p>集群类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBillingResourceMode(string $BillingResourceMode) 设置集群类型
+ * @method void setBillingResourceMode(string $BillingResourceMode) 设置<p>集群类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMemRatio() 获取Cu比例
+ * @method integer getMemRatio() 获取<p>Cu比例</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMemRatio(integer $MemRatio) 设置Cu比例
+ * @method void setMemRatio(integer $MemRatio) 设置<p>Cu比例</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCrossTenantEniMode() 获取是否开启跨租户弹性网卡
- * @method void setCrossTenantEniMode(integer $CrossTenantEniMode) 设置是否开启跨租户弹性网卡
- * @method float getTotalCpu() 获取总的CPU
- * @method void setTotalCpu(float $TotalCpu) 设置总的CPU
- * @method float getTotalMem() 获取总的内存
- * @method void setTotalMem(float $TotalMem) 设置总的内存
- * @method float getRunningCpu() 获取运行的CPU
- * @method void setRunningCpu(float $RunningCpu) 设置运行的CPU
- * @method float getRunningMem() 获取运行的内存
- * @method void setRunningMem(float $RunningMem) 设置运行的内存
- * @method Setats getSetats() 获取setats集群
+ * @method integer getCrossTenantEniMode() 获取<p>是否开启跨租户弹性网卡</p>
+ * @method void setCrossTenantEniMode(integer $CrossTenantEniMode) 设置<p>是否开启跨租户弹性网卡</p>
+ * @method float getTotalCpu() 获取<p>总的CPU</p>
+ * @method void setTotalCpu(float $TotalCpu) 设置<p>总的CPU</p>
+ * @method float getTotalMem() 获取<p>总的内存</p>
+ * @method void setTotalMem(float $TotalMem) 设置<p>总的内存</p>
+ * @method float getRunningCpu() 获取<p>运行的CPU</p>
+ * @method void setRunningCpu(float $RunningCpu) 设置<p>运行的CPU</p>
+ * @method float getRunningMem() 获取<p>运行的内存</p>
+ * @method void setRunningMem(float $RunningMem) 设置<p>运行的内存</p>
+ * @method Setats getSetats() 获取<p>setats集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSetats(Setats $Setats) 设置setats集群
+ * @method void setSetats(Setats $Setats) 设置<p>setats集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getYarns() 获取[]
+ * @method array getYarns() 获取<p>[]</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setYarns(array $Yarns) 设置[]
+ * @method void setYarns(array $Yarns) 设置<p>[]</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDeploymentMode() 获取0 单可用区 1多可用区
+ * @method integer getDeploymentMode() 获取<p>0 单可用区 1多可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeploymentMode(integer $DeploymentMode) 设置0 单可用区 1多可用区
+ * @method void setDeploymentMode(integer $DeploymentMode) 设置<p>0 单可用区 1多可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSlaveZones() 获取备可用区
+ * @method array getSlaveZones() 获取<p>备可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSlaveZones(array $SlaveZones) 设置备可用区
+ * @method void setSlaveZones(array $SlaveZones) 设置<p>备可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLogCOSBucket() 获取集群的日志cos存储
- * @method void setLogCOSBucket(string $LogCOSBucket) 设置集群的日志cos存储
- * @method string getCdcId() 获取Cdc集群Id
+ * @method string getLogCOSBucket() 获取<p>集群的日志cos存储</p>
+ * @method void setLogCOSBucket(string $LogCOSBucket) 设置<p>集群的日志cos存储</p>
+ * @method string getCdcId() 获取<p>Cdc集群Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCdcId(string $CdcId) 设置Cdc集群Id
+ * @method void setCdcId(string $CdcId) 设置<p>Cdc集群Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterProcessMsg() 获取<p>集群进度</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterProcessMsg(string $ClusterProcessMsg) 设置<p>集群进度</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxCuPerJob() 获取<p>单作业最大可配置 CU 数</p>
+ * @method void setMaxCuPerJob(integer $MaxCuPerJob) 设置<p>单作业最大可配置 CU 数</p>
  */
 class Cluster extends AbstractModel
 {
     /**
-     * @var string 集群 ID
+     * @var string <p>集群 ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 集群名称
+     * @var string <p>集群名称</p>
      */
     public $Name;
 
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
      */
     public $Region;
 
     /**
-     * @var integer 用户 AppID
+     * @var integer <p>用户 AppID</p>
      */
     public $AppId;
 
     /**
-     * @var string 主账号 UIN
+     * @var string <p>主账号 UIN</p>
      */
     public $OwnerUin;
 
     /**
-     * @var string 创建者 UIN
+     * @var string <p>创建者 UIN</p>
      */
     public $CreatorUin;
 
     /**
-     * @var integer 集群状态, 1 未初始化,3 初始化中，2 运行中
+     * @var integer <p>集群状态, 1 未初始化,3 初始化中，2 运行中</p>
      */
     public $Status;
 
     /**
-     * @var string 描述
+     * @var string <p>描述</p>
      */
     public $Remark;
 
     /**
-     * @var string 集群创建时间
+     * @var string <p>集群创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 最后一次操作集群的时间
+     * @var string <p>最后一次操作集群的时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var integer CU 数量
+     * @var integer <p>CU 数量</p>
      */
     public $CuNum;
 
     /**
-     * @var integer CU 内存规格
+     * @var integer <p>CU 内存规格</p>
      */
     public $CuMem;
 
     /**
-     * @var string 可用区
+     * @var string <p>可用区</p>
      */
     public $Zone;
 
     /**
-     * @var string 状态描述
+     * @var string <p>状态描述</p>
      */
     public $StatusDesc;
 
     /**
-     * @var array 网络
+     * @var array <p>网络</p>
      */
     public $CCNs;
 
     /**
-     * @var integer 网络
+     * @var integer <p>网络</p>
      */
     public $NetEnvironmentType;
 
     /**
-     * @var integer 空闲 CU
+     * @var integer <p>空闲 CU</p>
      */
     public $FreeCuNum;
 
     /**
-     * @var array 集群绑定的标签
+     * @var array <p>集群绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
-     * @var string 集群隔离时间; 没隔离时间，则为 -
+     * @var string <p>集群隔离时间; 没隔离时间，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsolatedTime;
 
     /**
-     * @var string 集群过期时间; 没过期概念，则为 -
+     * @var string <p>集群过期时间; 没过期概念，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
 
     /**
-     * @var string 距离过期还有多少秒; 没过期概念，则为 -
+     * @var string <p>距离过期还有多少秒; 没过期概念，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecondsUntilExpiry;
 
     /**
-     * @var integer 自动续费标记，0 表示默认状态 (用户未设置，即初始状态，用户开通了预付费不停服特权会进行自动续费)， 1 表示自动续费，2表示明确不自动续费(用户设置)
+     * @var integer <p>自动续费标记，0 表示默认状态 (用户未设置，即初始状态，用户开通了预付费不停服特权会进行自动续费)， 1 表示自动续费，2表示明确不自动续费(用户设置)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoRenewFlag;
 
     /**
-     * @var string 集群的默认 COS 存储桶
+     * @var string <p>集群的默认 COS 存储桶</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultCOSBucket;
 
     /**
-     * @var string 集群的CLS 日志集 LogSet
+     * @var string <p>集群的CLS 日志集 LogSet</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CLSLogSet;
 
     /**
-     * @var string 集群的CLS 日志主题 TopicId
+     * @var string <p>集群的CLS 日志主题 TopicId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CLSTopicId;
 
     /**
-     * @var string 集群的CLS 日志集  名字
+     * @var string <p>集群的CLS 日志集  名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CLSLogName;
 
     /**
-     * @var string 集群的CLS 日志主题  名字
+     * @var string <p>集群的CLS 日志主题  名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CLSTopicName;
 
     /**
-     * @var ClusterVersion 集群的版本信息
+     * @var ClusterVersion <p>集群的版本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
-     * @var float 细粒度资源下的空闲CU
+     * @var float <p>细粒度资源下的空闲CU</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FreeCu;
 
     /**
-     * @var string 集群的默认日志采集配置
+     * @var string <p>集群的默认日志采集配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultLogCollectConf;
 
     /**
-     * @var integer 取值：0-没有设置，1-已设置，2-不允许设置
+     * @var integer <p>取值：0-没有设置，1-已设置，2-不允许设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomizedDNSEnabled;
 
     /**
-     * @var array 空间信息
+     * @var array <p>空间信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Correlations;
 
     /**
-     * @var float 运行CU
+     * @var float <p>运行CU</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunningCu;
 
     /**
-     * @var integer 0 后付费,1 预付费
+     * @var integer <p>0 后付费,1 预付费</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayMode;
 
     /**
-     * @var integer 前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要
+     * @var integer <p>前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsNeedManageNode;
 
     /**
-     * @var array session集群信息
+     * @var array <p>session集群信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterSessions;
 
     /**
-     * @var integer V3版本 = 2
+     * @var integer <p>V3版本 = 2</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ArchGeneration;
 
     /**
-     * @var integer 0:TKE, 1:EKS
+     * @var integer <p>0:TKE, 1:EKS</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterType;
 
     /**
-     * @var array 订单信息
+     * @var array <p>订单信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Orders;
 
     /**
-     * @var array Gateway信息
+     * @var array <p>Gateway信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SqlGateways;
 
     /**
-     * @var integer 0 公网访问 // 1 内网访问	
+     * @var integer <p>0 公网访问 // 1 内网访问</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WebUIType;
 
     /**
-     * @var integer 2 独享集群
+     * @var integer <p>2 独享集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
-     * @var SubEks 子eks集群
+     * @var SubEks <p>子eks集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubEks;
 
     /**
-     * @var string 上级集群
+     * @var string <p>上级集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AgentSerialId;
 
     /**
-     * @var integer 资源类型
+     * @var integer <p>资源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceType;
 
     /**
-     * @var string 集群类型
+     * @var string <p>集群类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillingResourceMode;
 
     /**
-     * @var integer Cu比例
+     * @var integer <p>Cu比例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemRatio;
 
     /**
-     * @var integer 是否开启跨租户弹性网卡
+     * @var integer <p>是否开启跨租户弹性网卡</p>
      */
     public $CrossTenantEniMode;
 
     /**
-     * @var float 总的CPU
+     * @var float <p>总的CPU</p>
      */
     public $TotalCpu;
 
     /**
-     * @var float 总的内存
+     * @var float <p>总的内存</p>
      */
     public $TotalMem;
 
     /**
-     * @var float 运行的CPU
+     * @var float <p>运行的CPU</p>
      */
     public $RunningCpu;
 
     /**
-     * @var float 运行的内存
+     * @var float <p>运行的内存</p>
      */
     public $RunningMem;
 
     /**
-     * @var Setats setats集群
+     * @var Setats <p>setats集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Setats;
 
     /**
-     * @var array []
+     * @var array <p>[]</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Yarns;
 
     /**
-     * @var integer 0 单可用区 1多可用区
+     * @var integer <p>0 单可用区 1多可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeploymentMode;
 
     /**
-     * @var array 备可用区
+     * @var array <p>备可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SlaveZones;
 
     /**
-     * @var string 集群的日志cos存储
+     * @var string <p>集群的日志cos存储</p>
      */
     public $LogCOSBucket;
 
     /**
-     * @var string Cdc集群Id
+     * @var string <p>Cdc集群Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CdcId;
 
     /**
-     * @param string $ClusterId 集群 ID
-     * @param string $Name 集群名称
-     * @param string $Region 地域
-     * @param integer $AppId 用户 AppID
-     * @param string $OwnerUin 主账号 UIN
-     * @param string $CreatorUin 创建者 UIN
-     * @param integer $Status 集群状态, 1 未初始化,3 初始化中，2 运行中
-     * @param string $Remark 描述
-     * @param string $CreateTime 集群创建时间
-     * @param string $UpdateTime 最后一次操作集群的时间
-     * @param integer $CuNum CU 数量
-     * @param integer $CuMem CU 内存规格
-     * @param string $Zone 可用区
-     * @param string $StatusDesc 状态描述
-     * @param array $CCNs 网络
-     * @param integer $NetEnvironmentType 网络
-     * @param integer $FreeCuNum 空闲 CU
-     * @param array $Tags 集群绑定的标签
+     * @var string <p>集群进度</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IsolatedTime 集群隔离时间; 没隔离时间，则为 -
+     */
+    public $ClusterProcessMsg;
+
+    /**
+     * @var integer <p>单作业最大可配置 CU 数</p>
+     */
+    public $MaxCuPerJob;
+
+    /**
+     * @param string $ClusterId <p>集群 ID</p>
+     * @param string $Name <p>集群名称</p>
+     * @param string $Region <p>地域</p>
+     * @param integer $AppId <p>用户 AppID</p>
+     * @param string $OwnerUin <p>主账号 UIN</p>
+     * @param string $CreatorUin <p>创建者 UIN</p>
+     * @param integer $Status <p>集群状态, 1 未初始化,3 初始化中，2 运行中</p>
+     * @param string $Remark <p>描述</p>
+     * @param string $CreateTime <p>集群创建时间</p>
+     * @param string $UpdateTime <p>最后一次操作集群的时间</p>
+     * @param integer $CuNum <p>CU 数量</p>
+     * @param integer $CuMem <p>CU 内存规格</p>
+     * @param string $Zone <p>可用区</p>
+     * @param string $StatusDesc <p>状态描述</p>
+     * @param array $CCNs <p>网络</p>
+     * @param integer $NetEnvironmentType <p>网络</p>
+     * @param integer $FreeCuNum <p>空闲 CU</p>
+     * @param array $Tags <p>集群绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExpireTime 集群过期时间; 没过期概念，则为 -
+     * @param string $IsolatedTime <p>集群隔离时间; 没隔离时间，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SecondsUntilExpiry 距离过期还有多少秒; 没过期概念，则为 -
+     * @param string $ExpireTime <p>集群过期时间; 没过期概念，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AutoRenewFlag 自动续费标记，0 表示默认状态 (用户未设置，即初始状态，用户开通了预付费不停服特权会进行自动续费)， 1 表示自动续费，2表示明确不自动续费(用户设置)
+     * @param string $SecondsUntilExpiry <p>距离过期还有多少秒; 没过期概念，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DefaultCOSBucket 集群的默认 COS 存储桶
+     * @param integer $AutoRenewFlag <p>自动续费标记，0 表示默认状态 (用户未设置，即初始状态，用户开通了预付费不停服特权会进行自动续费)， 1 表示自动续费，2表示明确不自动续费(用户设置)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CLSLogSet 集群的CLS 日志集 LogSet
+     * @param string $DefaultCOSBucket <p>集群的默认 COS 存储桶</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CLSTopicId 集群的CLS 日志主题 TopicId
+     * @param string $CLSLogSet <p>集群的CLS 日志集 LogSet</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CLSLogName 集群的CLS 日志集  名字
+     * @param string $CLSTopicId <p>集群的CLS 日志主题 TopicId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CLSTopicName 集群的CLS 日志主题  名字
+     * @param string $CLSLogName <p>集群的CLS 日志集  名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterVersion $Version 集群的版本信息
+     * @param string $CLSTopicName <p>集群的CLS 日志主题  名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $FreeCu 细粒度资源下的空闲CU
+     * @param ClusterVersion $Version <p>集群的版本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DefaultLogCollectConf 集群的默认日志采集配置
+     * @param float $FreeCu <p>细粒度资源下的空闲CU</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CustomizedDNSEnabled 取值：0-没有设置，1-已设置，2-不允许设置
+     * @param string $DefaultLogCollectConf <p>集群的默认日志采集配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Correlations 空间信息
+     * @param integer $CustomizedDNSEnabled <p>取值：0-没有设置，1-已设置，2-不允许设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $RunningCu 运行CU
+     * @param array $Correlations <p>空间信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PayMode 0 后付费,1 预付费
+     * @param float $RunningCu <p>运行CU</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsNeedManageNode 前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要
+     * @param integer $PayMode <p>0 后付费,1 预付费</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ClusterSessions session集群信息
+     * @param integer $IsNeedManageNode <p>前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ArchGeneration V3版本 = 2
+     * @param array $ClusterSessions <p>session集群信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ClusterType 0:TKE, 1:EKS
+     * @param integer $ArchGeneration <p>V3版本 = 2</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Orders 订单信息
+     * @param integer $ClusterType <p>0:TKE, 1:EKS</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SqlGateways Gateway信息
+     * @param array $Orders <p>订单信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $WebUIType 0 公网访问 // 1 内网访问	
+     * @param array $SqlGateways <p>Gateway信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Type 2 独享集群
+     * @param integer $WebUIType <p>0 公网访问 // 1 内网访问</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubEks $SubEks 子eks集群
+     * @param integer $Type <p>2 独享集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AgentSerialId 上级集群
+     * @param SubEks $SubEks <p>子eks集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ResourceType 资源类型
+     * @param string $AgentSerialId <p>上级集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BillingResourceMode 集群类型
+     * @param integer $ResourceType <p>资源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MemRatio Cu比例
+     * @param string $BillingResourceMode <p>集群类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CrossTenantEniMode 是否开启跨租户弹性网卡
-     * @param float $TotalCpu 总的CPU
-     * @param float $TotalMem 总的内存
-     * @param float $RunningCpu 运行的CPU
-     * @param float $RunningMem 运行的内存
-     * @param Setats $Setats setats集群
+     * @param integer $MemRatio <p>Cu比例</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Yarns []
+     * @param integer $CrossTenantEniMode <p>是否开启跨租户弹性网卡</p>
+     * @param float $TotalCpu <p>总的CPU</p>
+     * @param float $TotalMem <p>总的内存</p>
+     * @param float $RunningCpu <p>运行的CPU</p>
+     * @param float $RunningMem <p>运行的内存</p>
+     * @param Setats $Setats <p>setats集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DeploymentMode 0 单可用区 1多可用区
+     * @param array $Yarns <p>[]</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SlaveZones 备可用区
+     * @param integer $DeploymentMode <p>0 单可用区 1多可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LogCOSBucket 集群的日志cos存储
-     * @param string $CdcId Cdc集群Id
+     * @param array $SlaveZones <p>备可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LogCOSBucket <p>集群的日志cos存储</p>
+     * @param string $CdcId <p>Cdc集群Id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterProcessMsg <p>集群进度</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxCuPerJob <p>单作业最大可配置 CU 数</p>
      */
     function __construct()
     {
@@ -915,6 +935,14 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
             $this->CdcId = $param["CdcId"];
+        }
+
+        if (array_key_exists("ClusterProcessMsg",$param) and $param["ClusterProcessMsg"] !== null) {
+            $this->ClusterProcessMsg = $param["ClusterProcessMsg"];
+        }
+
+        if (array_key_exists("MaxCuPerJob",$param) and $param["MaxCuPerJob"] !== null) {
+            $this->MaxCuPerJob = $param["MaxCuPerJob"];
         }
     }
 }

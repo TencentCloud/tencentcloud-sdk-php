@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHasCN(boolean $HasCN) 设置是否包含CN节点
  * @method array getExistingJarConfList() 获取实例已经存在的jar包列表
  * @method void setExistingJarConfList(array $ExistingJarConfList) 设置实例已经存在的jar包列表
+ * @method string getIPDBFileSizeLimit() 获取ipdb的文件大小 byte
+ * @method void setIPDBFileSizeLimit(string $IPDBFileSizeLimit) 设置ipdb的文件大小 byte
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -61,6 +63,11 @@ class DescribeClusterConfigsResponse extends AbstractModel
     public $ExistingJarConfList;
 
     /**
+     * @var string ipdb的文件大小 byte
+     */
+    public $IPDBFileSizeLimit;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -71,6 +78,7 @@ class DescribeClusterConfigsResponse extends AbstractModel
      * @param string $ErrorMsg 错误信息
      * @param boolean $HasCN 是否包含CN节点
      * @param array $ExistingJarConfList 实例已经存在的jar包列表
+     * @param string $IPDBFileSizeLimit ipdb的文件大小 byte
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -114,6 +122,10 @@ class DescribeClusterConfigsResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ExistingJarConfList, $obj);
             }
+        }
+
+        if (array_key_exists("IPDBFileSizeLimit",$param) and $param["IPDBFileSizeLimit"] !== null) {
+            $this->IPDBFileSizeLimit = $param["IPDBFileSizeLimit"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

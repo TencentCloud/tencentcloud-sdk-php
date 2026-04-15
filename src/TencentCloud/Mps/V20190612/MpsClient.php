@@ -297,7 +297,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\StopStreamLinkFlowResponse StopStreamLinkFlow(Models\StopStreamLinkFlowRequest $req) 停止媒体传输流。
  * @method Models\StopStreamPackageLinearAssemblyChannelResponse StopStreamPackageLinearAssemblyChannel(Models\StopStreamPackageLinearAssemblyChannelRequest $req) 停止线性组装频道。
  * @method Models\SyncDubbingResponse SyncDubbing(Models\SyncDubbingRequest $req) 同步接口，返回克隆音色Id或合成音频结果
- * @method Models\TextTranslationResponse TextTranslation(Models\TextTranslationRequest $req) 文本翻译
+ * @method Models\TextTranslationResponse TextTranslation(Models\TextTranslationRequest $req) 文本翻译，使用 翻译字幕（附加语种）计费项，按1100字符（按照 Unicode 码点数 统计，hello 算5个字符，你好 算2个字符）/分钟折算到时长计费
  * @method Models\UpdateProjectResponse UpdateProject(Models\UpdateProjectRequest $req) 剧集项目更新
  * @method Models\WithdrawsWatermarkResponse WithdrawsWatermark(Models\WithdrawsWatermarkRequest $req) 提取视频中的盲水印。
  */

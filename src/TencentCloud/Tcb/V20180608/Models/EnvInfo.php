@@ -20,234 +20,210 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 环境信息
  *
- * @method string getEnvId() 获取账户下该环境唯一标识
- * @method void setEnvId(string $EnvId) 设置账户下该环境唯一标识
- * @method string getSource() 获取环境来源。包含以下取值：
-<li>miniapp：微信小程序</li>
-<li>qcloud ：腾讯云</li>
- * @method void setSource(string $Source) 设置环境来源。包含以下取值：
-<li>miniapp：微信小程序</li>
-<li>qcloud ：腾讯云</li>
- * @method string getAlias() 获取环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
- * @method void setAlias(string $Alias) 设置环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getUpdateTime() 获取最后修改时间
- * @method void setUpdateTime(string $UpdateTime) 设置最后修改时间
- * @method string getStatus() 获取环境状态。包含以下取值：
-<li>NORMAL：正常可用</li>
-<li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
- * @method void setStatus(string $Status) 设置环境状态。包含以下取值：
-<li>NORMAL：正常可用</li>
-<li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
- * @method array getDatabases() 获取数据库列表
- * @method void setDatabases(array $Databases) 设置数据库列表
- * @method array getStorages() 获取存储列表
- * @method void setStorages(array $Storages) 设置存储列表
- * @method array getFunctions() 获取函数列表
- * @method void setFunctions(array $Functions) 设置函数列表
- * @method string getPackageId() 获取tcb产品套餐ID，参考DescribePackages接口的返回值。
- * @method void setPackageId(string $PackageId) 设置tcb产品套餐ID，参考DescribePackages接口的返回值。
- * @method string getPackageName() 获取套餐中文名称，参考DescribePackages接口的返回值。
- * @method void setPackageName(string $PackageName) 设置套餐中文名称，参考DescribePackages接口的返回值。
- * @method array getLogServices() 获取云日志服务列表
- * @method void setLogServices(array $LogServices) 设置云日志服务列表
- * @method array getStaticStorages() 获取静态资源信息
- * @method void setStaticStorages(array $StaticStorages) 设置静态资源信息
- * @method boolean getIsAutoDegrade() 获取是否到期自动降为免费版
- * @method void setIsAutoDegrade(boolean $IsAutoDegrade) 设置是否到期自动降为免费版
- * @method string getEnvChannel() 获取环境渠道
- * @method void setEnvChannel(string $EnvChannel) 设置环境渠道
- * @method string getPayMode() 获取支付方式。包含以下取值：
-<li> prepayment：预付费</li>
-<li> postpaid：后付费</li>
- * @method void setPayMode(string $PayMode) 设置支付方式。包含以下取值：
-<li> prepayment：预付费</li>
-<li> postpaid：后付费</li>
- * @method boolean getIsDefault() 获取是否为默认环境
- * @method void setIsDefault(boolean $IsDefault) 设置是否为默认环境
- * @method string getRegion() 获取环境所属地域
- * @method void setRegion(string $Region) 设置环境所属地域
- * @method array getTags() 获取环境标签列表
- * @method void setTags(array $Tags) 设置环境标签列表
- * @method array getCustomLogServices() 获取自定义日志服务
- * @method void setCustomLogServices(array $CustomLogServices) 设置自定义日志服务
- * @method string getEnvType() 获取环境类型：baas, run, hoting, weda
- * @method void setEnvType(string $EnvType) 设置环境类型：baas, run, hoting, weda
- * @method boolean getIsDauPackage() 获取是否是dau新套餐
- * @method void setIsDauPackage(boolean $IsDauPackage) 设置是否是dau新套餐
- * @method string getPackageType() 获取套餐类型:空\baas\tcbr
- * @method void setPackageType(string $PackageType) 设置套餐类型:空\baas\tcbr
- * @method string getArchitectureType() 获取架构类型
- * @method void setArchitectureType(string $ArchitectureType) 设置架构类型
- * @method string getRecycle() 获取回收标志，默认为空
- * @method void setRecycle(string $Recycle) 设置回收标志，默认为空
+ * @method string getEnvId() 获取<p>账户下该环境唯一标识</p>
+ * @method void setEnvId(string $EnvId) 设置<p>账户下该环境唯一标识</p>
+ * @method string getSource() 获取<p>环境来源。包含以下取值：</p><li>miniapp：微信小程序</li><li>qcloud ：腾讯云</li>
+ * @method void setSource(string $Source) 设置<p>环境来源。包含以下取值：</p><li>miniapp：微信小程序</li><li>qcloud ：腾讯云</li>
+ * @method string getAlias() 获取<p>环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符</p>
+ * @method void setAlias(string $Alias) 设置<p>环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getUpdateTime() 获取<p>最后修改时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>最后修改时间</p>
+ * @method string getStatus() 获取<p>环境状态。包含以下取值：</p><li>NORMAL：正常可用</li><li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
+ * @method void setStatus(string $Status) 设置<p>环境状态。包含以下取值：</p><li>NORMAL：正常可用</li><li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
+ * @method array getDatabases() 获取<p>数据库列表</p>
+ * @method void setDatabases(array $Databases) 设置<p>数据库列表</p>
+ * @method array getStorages() 获取<p>存储列表</p>
+ * @method void setStorages(array $Storages) 设置<p>存储列表</p>
+ * @method array getFunctions() 获取<p>函数列表</p>
+ * @method void setFunctions(array $Functions) 设置<p>函数列表</p>
+ * @method string getPackageId() 获取<p>tcb产品套餐ID，参考DescribePackages接口的返回值。</p>
+ * @method void setPackageId(string $PackageId) 设置<p>tcb产品套餐ID，参考DescribePackages接口的返回值。</p>
+ * @method string getPackageName() 获取<p>套餐中文名称，参考DescribePackages接口的返回值。</p>
+ * @method void setPackageName(string $PackageName) 设置<p>套餐中文名称，参考DescribePackages接口的返回值。</p>
+ * @method array getLogServices() 获取<p>云日志服务列表</p>
+ * @method void setLogServices(array $LogServices) 设置<p>云日志服务列表</p>
+ * @method array getStaticStorages() 获取<p>静态资源信息</p>
+ * @method void setStaticStorages(array $StaticStorages) 设置<p>静态资源信息</p>
+ * @method boolean getIsAutoDegrade() 获取<p>是否到期自动降为免费版</p>
+ * @method void setIsAutoDegrade(boolean $IsAutoDegrade) 设置<p>是否到期自动降为免费版</p>
+ * @method string getEnvChannel() 获取<p>环境渠道</p>
+ * @method void setEnvChannel(string $EnvChannel) 设置<p>环境渠道</p>
+ * @method string getPayMode() 获取<p>支付方式。包含以下取值：</p><li> prepayment：预付费</li><li> postpaid：后付费</li>
+ * @method void setPayMode(string $PayMode) 设置<p>支付方式。包含以下取值：</p><li> prepayment：预付费</li><li> postpaid：后付费</li>
+ * @method boolean getIsDefault() 获取<p>是否为默认环境</p>
+ * @method void setIsDefault(boolean $IsDefault) 设置<p>是否为默认环境</p>
+ * @method string getRegion() 获取<p>环境所属地域</p>
+ * @method void setRegion(string $Region) 设置<p>环境所属地域</p>
+ * @method array getTags() 获取<p>环境标签列表</p>
+ * @method void setTags(array $Tags) 设置<p>环境标签列表</p>
+ * @method array getCustomLogServices() 获取<p>自定义日志服务</p>
+ * @method void setCustomLogServices(array $CustomLogServices) 设置<p>自定义日志服务</p>
+ * @method string getEnvType() 获取<p>环境类型：baas, run, hoting, weda</p>
+ * @method void setEnvType(string $EnvType) 设置<p>环境类型：baas, run, hoting, weda</p>
+ * @method boolean getIsDauPackage() 获取<p>是否是dau新套餐</p>
+ * @method void setIsDauPackage(boolean $IsDauPackage) 设置<p>是否是dau新套餐</p>
+ * @method string getPackageType() 获取<p>套餐类型:空\baas\tcbr</p>
+ * @method void setPackageType(string $PackageType) 设置<p>套餐类型:空\baas\tcbr</p>
+ * @method string getArchitectureType() 获取<p>架构类型</p>
+ * @method void setArchitectureType(string $ArchitectureType) 设置<p>架构类型</p>
+ * @method string getRecycle() 获取<p>回收标志，默认为空</p>
+ * @method void setRecycle(string $Recycle) 设置<p>回收标志，默认为空</p>
  */
 class EnvInfo extends AbstractModel
 {
     /**
-     * @var string 账户下该环境唯一标识
+     * @var string <p>账户下该环境唯一标识</p>
      */
     public $EnvId;
 
     /**
-     * @var string 环境来源。包含以下取值：
-<li>miniapp：微信小程序</li>
-<li>qcloud ：腾讯云</li>
+     * @var string <p>环境来源。包含以下取值：</p><li>miniapp：微信小程序</li><li>qcloud ：腾讯云</li>
      */
     public $Source;
 
     /**
-     * @var string 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+     * @var string <p>环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符</p>
      */
     public $Alias;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 最后修改时间
+     * @var string <p>最后修改时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 环境状态。包含以下取值：
-<li>NORMAL：正常可用</li>
-<li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
+     * @var string <p>环境状态。包含以下取值：</p><li>NORMAL：正常可用</li><li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
      */
     public $Status;
 
     /**
-     * @var array 数据库列表
+     * @var array <p>数据库列表</p>
      */
     public $Databases;
 
     /**
-     * @var array 存储列表
+     * @var array <p>存储列表</p>
      */
     public $Storages;
 
     /**
-     * @var array 函数列表
+     * @var array <p>函数列表</p>
      */
     public $Functions;
 
     /**
-     * @var string tcb产品套餐ID，参考DescribePackages接口的返回值。
+     * @var string <p>tcb产品套餐ID，参考DescribePackages接口的返回值。</p>
      */
     public $PackageId;
 
     /**
-     * @var string 套餐中文名称，参考DescribePackages接口的返回值。
+     * @var string <p>套餐中文名称，参考DescribePackages接口的返回值。</p>
      */
     public $PackageName;
 
     /**
-     * @var array 云日志服务列表
+     * @var array <p>云日志服务列表</p>
      */
     public $LogServices;
 
     /**
-     * @var array 静态资源信息
+     * @var array <p>静态资源信息</p>
      */
     public $StaticStorages;
 
     /**
-     * @var boolean 是否到期自动降为免费版
+     * @var boolean <p>是否到期自动降为免费版</p>
      */
     public $IsAutoDegrade;
 
     /**
-     * @var string 环境渠道
+     * @var string <p>环境渠道</p>
      */
     public $EnvChannel;
 
     /**
-     * @var string 支付方式。包含以下取值：
-<li> prepayment：预付费</li>
-<li> postpaid：后付费</li>
+     * @var string <p>支付方式。包含以下取值：</p><li> prepayment：预付费</li><li> postpaid：后付费</li>
      */
     public $PayMode;
 
     /**
-     * @var boolean 是否为默认环境
+     * @var boolean <p>是否为默认环境</p>
      */
     public $IsDefault;
 
     /**
-     * @var string 环境所属地域
+     * @var string <p>环境所属地域</p>
      */
     public $Region;
 
     /**
-     * @var array 环境标签列表
+     * @var array <p>环境标签列表</p>
      */
     public $Tags;
 
     /**
-     * @var array 自定义日志服务
+     * @var array <p>自定义日志服务</p>
      */
     public $CustomLogServices;
 
     /**
-     * @var string 环境类型：baas, run, hoting, weda
+     * @var string <p>环境类型：baas, run, hoting, weda</p>
      */
     public $EnvType;
 
     /**
-     * @var boolean 是否是dau新套餐
+     * @var boolean <p>是否是dau新套餐</p>
      */
     public $IsDauPackage;
 
     /**
-     * @var string 套餐类型:空\baas\tcbr
+     * @var string <p>套餐类型:空\baas\tcbr</p>
      */
     public $PackageType;
 
     /**
-     * @var string 架构类型
+     * @var string <p>架构类型</p>
      */
     public $ArchitectureType;
 
     /**
-     * @var string 回收标志，默认为空
+     * @var string <p>回收标志，默认为空</p>
      */
     public $Recycle;
 
     /**
-     * @param string $EnvId 账户下该环境唯一标识
-     * @param string $Source 环境来源。包含以下取值：
-<li>miniapp：微信小程序</li>
-<li>qcloud ：腾讯云</li>
-     * @param string $Alias 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
-     * @param string $CreateTime 创建时间
-     * @param string $UpdateTime 最后修改时间
-     * @param string $Status 环境状态。包含以下取值：
-<li>NORMAL：正常可用</li>
-<li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
-     * @param array $Databases 数据库列表
-     * @param array $Storages 存储列表
-     * @param array $Functions 函数列表
-     * @param string $PackageId tcb产品套餐ID，参考DescribePackages接口的返回值。
-     * @param string $PackageName 套餐中文名称，参考DescribePackages接口的返回值。
-     * @param array $LogServices 云日志服务列表
-     * @param array $StaticStorages 静态资源信息
-     * @param boolean $IsAutoDegrade 是否到期自动降为免费版
-     * @param string $EnvChannel 环境渠道
-     * @param string $PayMode 支付方式。包含以下取值：
-<li> prepayment：预付费</li>
-<li> postpaid：后付费</li>
-     * @param boolean $IsDefault 是否为默认环境
-     * @param string $Region 环境所属地域
-     * @param array $Tags 环境标签列表
-     * @param array $CustomLogServices 自定义日志服务
-     * @param string $EnvType 环境类型：baas, run, hoting, weda
-     * @param boolean $IsDauPackage 是否是dau新套餐
-     * @param string $PackageType 套餐类型:空\baas\tcbr
-     * @param string $ArchitectureType 架构类型
-     * @param string $Recycle 回收标志，默认为空
+     * @param string $EnvId <p>账户下该环境唯一标识</p>
+     * @param string $Source <p>环境来源。包含以下取值：</p><li>miniapp：微信小程序</li><li>qcloud ：腾讯云</li>
+     * @param string $Alias <p>环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $UpdateTime <p>最后修改时间</p>
+     * @param string $Status <p>环境状态。包含以下取值：</p><li>NORMAL：正常可用</li><li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
+     * @param array $Databases <p>数据库列表</p>
+     * @param array $Storages <p>存储列表</p>
+     * @param array $Functions <p>函数列表</p>
+     * @param string $PackageId <p>tcb产品套餐ID，参考DescribePackages接口的返回值。</p>
+     * @param string $PackageName <p>套餐中文名称，参考DescribePackages接口的返回值。</p>
+     * @param array $LogServices <p>云日志服务列表</p>
+     * @param array $StaticStorages <p>静态资源信息</p>
+     * @param boolean $IsAutoDegrade <p>是否到期自动降为免费版</p>
+     * @param string $EnvChannel <p>环境渠道</p>
+     * @param string $PayMode <p>支付方式。包含以下取值：</p><li> prepayment：预付费</li><li> postpaid：后付费</li>
+     * @param boolean $IsDefault <p>是否为默认环境</p>
+     * @param string $Region <p>环境所属地域</p>
+     * @param array $Tags <p>环境标签列表</p>
+     * @param array $CustomLogServices <p>自定义日志服务</p>
+     * @param string $EnvType <p>环境类型：baas, run, hoting, weda</p>
+     * @param boolean $IsDauPackage <p>是否是dau新套餐</p>
+     * @param string $PackageType <p>套餐类型:空\baas\tcbr</p>
+     * @param string $ArchitectureType <p>架构类型</p>
+     * @param string $Recycle <p>回收标志，默认为空</p>
      */
     function __construct()
     {

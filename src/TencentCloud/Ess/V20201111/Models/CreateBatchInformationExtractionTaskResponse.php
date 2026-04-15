@@ -20,24 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBatchInformationExtractionTask返回参数结构体
  *
- * @method array getTaskIds() 获取合同智能提取的任务ID列表，每个任务ID为32位字符串。
-建议开发者保存此任务ID，后续查询合同智能提取详情需要此任务ID。
-
-注意：`返回的索引和ResourceIds数组一致`
- * @method void setTaskIds(array $TaskIds) 设置合同智能提取的任务ID列表，每个任务ID为32位字符串。
-建议开发者保存此任务ID，后续查询合同智能提取详情需要此任务ID。
-
-注意：`返回的索引和ResourceIds数组一致`
+ * @method array getTaskIds() 获取<p>合同智能提取的任务ID列表，每个任务ID为32位字符串。<br>建议开发者保存此任务ID，后续查询合同智能提取详情需要此任务ID。</p><p>注意：<code>返回的索引和ResourceIds数组一致</code></p>
+ * @method void setTaskIds(array $TaskIds) 设置<p>合同智能提取的任务ID列表，每个任务ID为32位字符串。<br>建议开发者保存此任务ID，后续查询合同智能提取详情需要此任务ID。</p><p>注意：<code>返回的索引和ResourceIds数组一致</code></p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateBatchInformationExtractionTaskResponse extends AbstractModel
 {
     /**
-     * @var array 合同智能提取的任务ID列表，每个任务ID为32位字符串。
-建议开发者保存此任务ID，后续查询合同智能提取详情需要此任务ID。
-
-注意：`返回的索引和ResourceIds数组一致`
+     * @var array <p>合同智能提取的任务ID列表，每个任务ID为32位字符串。<br>建议开发者保存此任务ID，后续查询合同智能提取详情需要此任务ID。</p><p>注意：<code>返回的索引和ResourceIds数组一致</code></p>
      */
     public $TaskIds;
 
@@ -47,10 +38,7 @@ class CreateBatchInformationExtractionTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $TaskIds 合同智能提取的任务ID列表，每个任务ID为32位字符串。
-建议开发者保存此任务ID，后续查询合同智能提取详情需要此任务ID。
-
-注意：`返回的索引和ResourceIds数组一致`
+     * @param array $TaskIds <p>合同智能提取的任务ID列表，每个任务ID为32位字符串。<br>建议开发者保存此任务ID，后续查询合同智能提取详情需要此任务ID。</p><p>注意：<code>返回的索引和ResourceIds数组一致</code></p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

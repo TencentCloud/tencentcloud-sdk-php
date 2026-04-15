@@ -76,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSetatsUiUrl(string $SetatsUiUrl) 设置<p>Setats UI url</p>
  * @method string getImageVersion() 获取<p>setats镜像版本</p>
  * @method void setImageVersion(string $ImageVersion) 设置<p>setats镜像版本</p>
+ * @method integer getWebUIType() 获取<p>类型：0 公网，1 内网</p><p>枚举值：</p><ul><li>0： 公网</li><li>1： 内网</li></ul><p>默认值：0</p>
+ * @method void setWebUIType(integer $WebUIType) 设置<p>类型：0 公网，1 内网</p><p>枚举值：</p><ul><li>0： 公网</li><li>1： 内网</li></ul><p>默认值：0</p>
  */
 class Setats extends AbstractModel
 {
@@ -172,6 +174,11 @@ class Setats extends AbstractModel
     public $ImageVersion;
 
     /**
+     * @var integer <p>类型：0 公网，1 内网</p><p>枚举值：</p><ul><li>0： 公网</li><li>1： 内网</li></ul><p>默认值：0</p>
+     */
+    public $WebUIType;
+
+    /**
      * @param string $SetatsSerialId <p>setats serialId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status <p>1  // 停止<br>2  // 运行中<br>3  // 初始化中<br>4  // 扩容中<br>5  // Warehoouse未配置<br>6  // Warehoouse配置中<br>7  // 重启中<br>-2 // 已删除(集群被销毁时更新为此状态)</p>
@@ -200,6 +207,7 @@ class Setats extends AbstractModel
      * @param integer $Type <p>setats 集群类型</p>
      * @param string $SetatsUiUrl <p>Setats UI url</p>
      * @param string $ImageVersion <p>setats镜像版本</p>
+     * @param integer $WebUIType <p>类型：0 公网，1 内网</p><p>枚举值：</p><ul><li>0： 公网</li><li>1： 内网</li></ul><p>默认值：0</p>
      */
     function __construct()
     {
@@ -284,6 +292,10 @@ class Setats extends AbstractModel
 
         if (array_key_exists("ImageVersion",$param) and $param["ImageVersion"] !== null) {
             $this->ImageVersion = $param["ImageVersion"];
+        }
+
+        if (array_key_exists("WebUIType",$param) and $param["WebUIType"] !== null) {
+            $this->WebUIType = $param["WebUIType"];
         }
     }
 }

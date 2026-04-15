@@ -160,6 +160,10 @@ Changing  变更中
  * @method void setSlaveInstances(array $SlaveInstances) 设置对应备集群
  * @method string getSyncerIp() 获取ccr服务部署节点ip
  * @method void setSyncerIp(string $SyncerIp) 设置ccr服务部署节点ip
+ * @method integer getEnableSqlConv() 获取是否支持sql convertor
+ * @method void setEnableSqlConv(integer $EnableSqlConv) 设置是否支持sql convertor
+ * @method string getTimeZone() 获取集群时区，默认+08:00
+ * @method void setTimeZone(string $TimeZone) 设置集群时区，默认+08:00
  */
 class InstanceInfo extends AbstractModel
 {
@@ -479,6 +483,16 @@ Changing  变更中
     public $SyncerIp;
 
     /**
+     * @var integer 是否支持sql convertor
+     */
+    public $EnableSqlConv;
+
+    /**
+     * @var string 集群时区，默认+08:00
+     */
+    public $TimeZone;
+
+    /**
      * @param string $InstanceId 集群实例ID, "cdwdoris-xxxx" 字符串类型
      * @param string $InstanceName 集群实例名称
      * @param string $Status 状态,
@@ -549,6 +563,8 @@ Changing  变更中
      * @param string $MasterInstance 对应主集群
      * @param array $SlaveInstances 对应备集群
      * @param string $SyncerIp ccr服务部署节点ip
+     * @param integer $EnableSqlConv 是否支持sql convertor
+     * @param string $TimeZone 集群时区，默认+08:00
      */
     function __construct()
     {
@@ -814,6 +830,14 @@ Changing  变更中
 
         if (array_key_exists("SyncerIp",$param) and $param["SyncerIp"] !== null) {
             $this->SyncerIp = $param["SyncerIp"];
+        }
+
+        if (array_key_exists("EnableSqlConv",$param) and $param["EnableSqlConv"] !== null) {
+            $this->EnableSqlConv = $param["EnableSqlConv"];
+        }
+
+        if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
+            $this->TimeZone = $param["TimeZone"];
         }
     }
 }

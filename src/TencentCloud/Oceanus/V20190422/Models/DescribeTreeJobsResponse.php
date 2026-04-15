@@ -20,25 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTreeJobs返回参数结构体
  *
- * @method string getParentId() 获取父节点ID
+ * @method string getParentId() 获取<p>父节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParentId(string $ParentId) 设置父节点ID
+ * @method void setParentId(string $ParentId) 设置<p>父节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getId() 获取当前文件夹ID
+ * @method string getId() 获取<p>当前文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setId(string $Id) 设置当前文件夹ID
+ * @method void setId(string $Id) 设置<p>当前文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取当前文件夹名
+ * @method string getName() 获取<p>当前文件夹名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置当前文件夹名
+ * @method void setName(string $Name) 设置<p>当前文件夹名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getJobSet() 获取当前文件夹下的作业列表
+ * @method array getJobSet() 获取<p>当前文件夹下的作业列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setJobSet(array $JobSet) 设置当前文件夹下的作业列表
+ * @method void setJobSet(array $JobSet) 设置<p>当前文件夹下的作业列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getChildren() 获取迭代子目录
+ * @method array getChildren() 获取<p>迭代子目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setChildren(array $Children) 设置迭代子目录
+ * @method void setChildren(array $Children) 设置<p>迭代子目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -46,31 +46,31 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTreeJobsResponse extends AbstractModel
 {
     /**
-     * @var string 父节点ID
+     * @var string <p>父节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParentId;
 
     /**
-     * @var string 当前文件夹ID
+     * @var string <p>当前文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
-     * @var string 当前文件夹名
+     * @var string <p>当前文件夹名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var array 当前文件夹下的作业列表
+     * @var array <p>当前文件夹下的作业列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JobSet;
 
     /**
-     * @var array 迭代子目录
+     * @var array <p>迭代子目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Children;
@@ -81,15 +81,15 @@ class DescribeTreeJobsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ParentId 父节点ID
+     * @param string $ParentId <p>父节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Id 当前文件夹ID
+     * @param string $Id <p>当前文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 当前文件夹名
+     * @param string $Name <p>当前文件夹名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $JobSet 当前文件夹下的作业列表
+     * @param array $JobSet <p>当前文件夹下的作业列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Children 迭代子目录
+     * @param array $Children <p>迭代子目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

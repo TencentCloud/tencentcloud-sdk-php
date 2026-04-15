@@ -20,46 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StorageInfo 资源信息
  *
- * @method string getRegion() 获取资源所属地域。
-当前支持ap-shanghai
- * @method void setRegion(string $Region) 设置资源所属地域。
-当前支持ap-shanghai
- * @method string getBucket() 获取桶名，存储资源的唯一标识
- * @method void setBucket(string $Bucket) 设置桶名，存储资源的唯一标识
- * @method string getCdnDomain() 获取cdn 域名
- * @method void setCdnDomain(string $CdnDomain) 设置cdn 域名
- * @method string getAppId() 获取资源所属用户的腾讯云appId
- * @method void setAppId(string $AppId) 设置资源所属用户的腾讯云appId
+ * @method string getRegion() 获取<p>资源所属地域。<br>当前支持ap-shanghai</p>
+ * @method void setRegion(string $Region) 设置<p>资源所属地域。<br>当前支持ap-shanghai</p>
+ * @method string getBucket() 获取<p>桶名，存储资源的唯一标识</p>
+ * @method void setBucket(string $Bucket) 设置<p>桶名，存储资源的唯一标识</p>
+ * @method string getCdnDomain() 获取<p>cdn 域名</p>
+ * @method void setCdnDomain(string $CdnDomain) 设置<p>cdn 域名</p>
+ * @method string getAppId() 获取<p>资源所属用户的腾讯云appId</p>
+ * @method void setAppId(string $AppId) 设置<p>资源所属用户的腾讯云appId</p>
+ * @method ExternalStorage getExternalStorage() 获取<p>外部存储介质相关信息。</p>
+ * @method void setExternalStorage(ExternalStorage $ExternalStorage) 设置<p>外部存储介质相关信息。</p>
  */
 class StorageInfo extends AbstractModel
 {
     /**
-     * @var string 资源所属地域。
-当前支持ap-shanghai
+     * @var string <p>资源所属地域。<br>当前支持ap-shanghai</p>
      */
     public $Region;
 
     /**
-     * @var string 桶名，存储资源的唯一标识
+     * @var string <p>桶名，存储资源的唯一标识</p>
      */
     public $Bucket;
 
     /**
-     * @var string cdn 域名
+     * @var string <p>cdn 域名</p>
      */
     public $CdnDomain;
 
     /**
-     * @var string 资源所属用户的腾讯云appId
+     * @var string <p>资源所属用户的腾讯云appId</p>
      */
     public $AppId;
 
     /**
-     * @param string $Region 资源所属地域。
-当前支持ap-shanghai
-     * @param string $Bucket 桶名，存储资源的唯一标识
-     * @param string $CdnDomain cdn 域名
-     * @param string $AppId 资源所属用户的腾讯云appId
+     * @var ExternalStorage <p>外部存储介质相关信息。</p>
+     */
+    public $ExternalStorage;
+
+    /**
+     * @param string $Region <p>资源所属地域。<br>当前支持ap-shanghai</p>
+     * @param string $Bucket <p>桶名，存储资源的唯一标识</p>
+     * @param string $CdnDomain <p>cdn 域名</p>
+     * @param string $AppId <p>资源所属用户的腾讯云appId</p>
+     * @param ExternalStorage $ExternalStorage <p>外部存储介质相关信息。</p>
      */
     function __construct()
     {
@@ -88,6 +92,11 @@ class StorageInfo extends AbstractModel
 
         if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
             $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("ExternalStorage",$param) and $param["ExternalStorage"] !== null) {
+            $this->ExternalStorage = new ExternalStorage();
+            $this->ExternalStorage->deserialize($param["ExternalStorage"]);
         }
     }
 }

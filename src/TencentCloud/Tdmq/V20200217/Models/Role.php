@@ -20,58 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 角色实例
  *
- * @method string getRoleName() 获取角色名称。
- * @method void setRoleName(string $RoleName) 设置角色名称。
- * @method string getToken() 获取角色token值。
- * @method void setToken(string $Token) 设置角色token值。
- * @method string getRemark() 获取备注说明。
- * @method void setRemark(string $Remark) 设置备注说明。
- * @method string getCreateTime() 获取创建时间。
- * @method void setCreateTime(string $CreateTime) 设置创建时间。
- * @method string getUpdateTime() 获取更新时间。
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间。
- * @method string getPermType() 获取授权类型（Cluster：集群；TopicAndGroup：主题或消费组）
- * @method void setPermType(string $PermType) 设置授权类型（Cluster：集群；TopicAndGroup：主题或消费组）
+ * @method string getRoleName() 获取<p>角色名称。</p>
+ * @method void setRoleName(string $RoleName) 设置<p>角色名称。</p>
+ * @method string getToken() 获取<p>角色token值。</p>
+ * @method void setToken(string $Token) 设置<p>角色token值。</p>
+ * @method string getRemark() 获取<p>备注说明。</p>
+ * @method void setRemark(string $Remark) 设置<p>备注说明。</p>
+ * @method string getCreateTime() 获取<p>创建时间。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间。</p>
+ * @method string getUpdateTime() 获取<p>更新时间。</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间。</p>
+ * @method string getPermType() 获取<p>授权类型（Cluster：集群；TopicAndGroup：主题或消费组）</p>
+ * @method void setPermType(string $PermType) 设置<p>授权类型（Cluster：集群；TopicAndGroup：主题或消费组）</p>
+ * @method string getTokenType() 获取<p>角色类型</p><p>枚举值：</p><ul><li>Temporary： 轮转密钥</li><li>Permanent： 永久密钥</li></ul>
+ * @method void setTokenType(string $TokenType) 设置<p>角色类型</p><p>枚举值：</p><ul><li>Temporary： 轮转密钥</li><li>Permanent： 永久密钥</li></ul>
+ * @method string getSecretName() 获取<p>SSM 唯一 ID</p>
+ * @method void setSecretName(string $SecretName) 设置<p>SSM 唯一 ID</p>
+ * @method integer getRotateFreq() 获取<p>轮转周期</p><p>单位：天</p>
+ * @method void setRotateFreq(integer $RotateFreq) 设置<p>轮转周期</p><p>单位：天</p>
  */
 class Role extends AbstractModel
 {
     /**
-     * @var string 角色名称。
+     * @var string <p>角色名称。</p>
      */
     public $RoleName;
 
     /**
-     * @var string 角色token值。
+     * @var string <p>角色token值。</p>
      */
     public $Token;
 
     /**
-     * @var string 备注说明。
+     * @var string <p>备注说明。</p>
      */
     public $Remark;
 
     /**
-     * @var string 创建时间。
+     * @var string <p>创建时间。</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间。
+     * @var string <p>更新时间。</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 授权类型（Cluster：集群；TopicAndGroup：主题或消费组）
+     * @var string <p>授权类型（Cluster：集群；TopicAndGroup：主题或消费组）</p>
      */
     public $PermType;
 
     /**
-     * @param string $RoleName 角色名称。
-     * @param string $Token 角色token值。
-     * @param string $Remark 备注说明。
-     * @param string $CreateTime 创建时间。
-     * @param string $UpdateTime 更新时间。
-     * @param string $PermType 授权类型（Cluster：集群；TopicAndGroup：主题或消费组）
+     * @var string <p>角色类型</p><p>枚举值：</p><ul><li>Temporary： 轮转密钥</li><li>Permanent： 永久密钥</li></ul>
+     */
+    public $TokenType;
+
+    /**
+     * @var string <p>SSM 唯一 ID</p>
+     */
+    public $SecretName;
+
+    /**
+     * @var integer <p>轮转周期</p><p>单位：天</p>
+     */
+    public $RotateFreq;
+
+    /**
+     * @param string $RoleName <p>角色名称。</p>
+     * @param string $Token <p>角色token值。</p>
+     * @param string $Remark <p>备注说明。</p>
+     * @param string $CreateTime <p>创建时间。</p>
+     * @param string $UpdateTime <p>更新时间。</p>
+     * @param string $PermType <p>授权类型（Cluster：集群；TopicAndGroup：主题或消费组）</p>
+     * @param string $TokenType <p>角色类型</p><p>枚举值：</p><ul><li>Temporary： 轮转密钥</li><li>Permanent： 永久密钥</li></ul>
+     * @param string $SecretName <p>SSM 唯一 ID</p>
+     * @param integer $RotateFreq <p>轮转周期</p><p>单位：天</p>
      */
     function __construct()
     {
@@ -108,6 +132,18 @@ class Role extends AbstractModel
 
         if (array_key_exists("PermType",$param) and $param["PermType"] !== null) {
             $this->PermType = $param["PermType"];
+        }
+
+        if (array_key_exists("TokenType",$param) and $param["TokenType"] !== null) {
+            $this->TokenType = $param["TokenType"];
+        }
+
+        if (array_key_exists("SecretName",$param) and $param["SecretName"] !== null) {
+            $this->SecretName = $param["SecretName"];
+        }
+
+        if (array_key_exists("RotateFreq",$param) and $param["RotateFreq"] !== null) {
+            $this->RotateFreq = $param["RotateFreq"];
         }
     }
 }

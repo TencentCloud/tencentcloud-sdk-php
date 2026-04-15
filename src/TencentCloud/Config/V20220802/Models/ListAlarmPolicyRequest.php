@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListAlarmPolicy请求参数结构体
  *
- * @method integer getOffset() 获取页码
- * @method void setOffset(integer $Offset) 设置页码
+ * @method integer getOffset() 获取<p>页码</p>
+ * @method void setOffset(integer $Offset) 设置<p>页码</p>
+ * @method integer getLimit() 获取<p>每页展示数量</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页展示数量</p>
  */
 class ListAlarmPolicyRequest extends AbstractModel
 {
     /**
-     * @var integer 页码
+     * @var integer <p>页码</p>
      */
     public $Offset;
 
     /**
-     * @param integer $Offset 页码
+     * @var integer <p>每页展示数量</p>
+     */
+    public $Limit;
+
+    /**
+     * @param integer $Offset <p>页码</p>
+     * @param integer $Limit <p>每页展示数量</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class ListAlarmPolicyRequest extends AbstractModel
         }
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

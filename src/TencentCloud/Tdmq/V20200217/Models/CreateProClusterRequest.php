@@ -20,106 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateProCluster请求参数结构体
  *
- * @method array getZoneIds() 获取多可用区部署选择三个可用区，示例[200002,200003,200004]
-
-单可用区部署选择一个可用区，示例[200002]
- * @method void setZoneIds(array $ZoneIds) 设置多可用区部署选择三个可用区，示例[200002,200003,200004]
-
-单可用区部署选择一个可用区，示例[200002]
- * @method string getProductName() 获取集群规格代号
-参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
- * @method void setProductName(string $ProductName) 设置集群规格代号
-参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
- * @method integer getAutoRenewFlag() 获取1: true，开启自动按月续费
-
-0: false，关闭自动按月续费
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置1: true，开启自动按月续费
-
-0: false，关闭自动按月续费
- * @method integer getTimeSpan() 获取购买时长，取值范围：1～50
- * @method void setTimeSpan(integer $TimeSpan) 设置购买时长，取值范围：1～50
- * @method string getClusterName() 获取集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
- * @method void setClusterName(string $ClusterName) 设置集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
- * @method integer getAutoVoucher() 获取是否自动选择代金券 1是 0否 默认为0
- * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动选择代金券 1是 0否 默认为0
- * @method integer getStorageSize() 获取存储规格
-参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
- * @method void setStorageSize(integer $StorageSize) 设置存储规格
-参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
- * @method VpcInfo getVpc() 获取vpc网络标签
- * @method void setVpc(VpcInfo $Vpc) 设置vpc网络标签
- * @method array getTags() 获取集群的标签列表(已废弃)
- * @method void setTags(array $Tags) 设置集群的标签列表(已废弃)
+ * @method array getZoneIds() 获取<p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>当选择PULSAR.P2.MINI1 时只支持两个可用区，其他支持三个可用区</p>
+ * @method void setZoneIds(array $ZoneIds) 设置<p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>当选择PULSAR.P2.MINI1 时只支持两个可用区，其他支持三个可用区</p>
+ * @method string getProductName() 获取<p>集群规格代号<br>参考 <a href="https://cloud.tencent.com/document/product/1179/83705">专业集群规格</a></p>
+ * @method void setProductName(string $ProductName) 设置<p>集群规格代号<br>参考 <a href="https://cloud.tencent.com/document/product/1179/83705">专业集群规格</a></p>
+ * @method integer getAutoRenewFlag() 获取<p>1: true，开启自动按月续费</p><p>0: false，关闭自动按月续费</p>
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置<p>1: true，开启自动按月续费</p><p>0: false，关闭自动按月续费</p>
+ * @method integer getTimeSpan() 获取<p>购买时长，取值范围：1～50</p>
+ * @method void setTimeSpan(integer $TimeSpan) 设置<p>购买时长，取值范围：1～50</p>
+ * @method string getClusterName() 获取<p>集群名称不能为空，支持数字、字母、中文以及符号 “-_=:.”，长度不超过64个字符</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名称不能为空，支持数字、字母、中文以及符号 “-_=:.”，长度不超过64个字符</p>
+ * @method integer getAutoVoucher() 获取<p>是否自动选择代金券 1是 0否 默认为0</p>
+ * @method void setAutoVoucher(integer $AutoVoucher) 设置<p>是否自动选择代金券 1是 0否 默认为0</p>
+ * @method integer getStorageSize() 获取<p>存储规格<br>参考 <a href="https://cloud.tencent.com/document/product/1179/83705">专业集群规格</a></p>
+ * @method void setStorageSize(integer $StorageSize) 设置<p>存储规格<br>参考 <a href="https://cloud.tencent.com/document/product/1179/83705">专业集群规格</a></p>
+ * @method VpcInfo getVpc() 获取<p>vpc网络标签</p>
+ * @method void setVpc(VpcInfo $Vpc) 设置<p>vpc网络标签</p>
+ * @method array getTags() 获取<p>集群的标签列表(已废弃)</p>
+ * @method void setTags(array $Tags) 设置<p>集群的标签列表(已废弃)</p>
+ * @method string getInstanceVersion() 获取<p>集群版本信息</p>
+ * @method void setInstanceVersion(string $InstanceVersion) 设置<p>集群版本信息</p>
  */
 class CreateProClusterRequest extends AbstractModel
 {
     /**
-     * @var array 多可用区部署选择三个可用区，示例[200002,200003,200004]
-
-单可用区部署选择一个可用区，示例[200002]
+     * @var array <p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>当选择PULSAR.P2.MINI1 时只支持两个可用区，其他支持三个可用区</p>
      */
     public $ZoneIds;
 
     /**
-     * @var string 集群规格代号
-参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
+     * @var string <p>集群规格代号<br>参考 <a href="https://cloud.tencent.com/document/product/1179/83705">专业集群规格</a></p>
      */
     public $ProductName;
 
     /**
-     * @var integer 1: true，开启自动按月续费
-
-0: false，关闭自动按月续费
+     * @var integer <p>1: true，开启自动按月续费</p><p>0: false，关闭自动按月续费</p>
      */
     public $AutoRenewFlag;
 
     /**
-     * @var integer 购买时长，取值范围：1～50
+     * @var integer <p>购买时长，取值范围：1～50</p>
      */
     public $TimeSpan;
 
     /**
-     * @var string 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
+     * @var string <p>集群名称不能为空，支持数字、字母、中文以及符号 “-_=:.”，长度不超过64个字符</p>
      */
     public $ClusterName;
 
     /**
-     * @var integer 是否自动选择代金券 1是 0否 默认为0
+     * @var integer <p>是否自动选择代金券 1是 0否 默认为0</p>
      */
     public $AutoVoucher;
 
     /**
-     * @var integer 存储规格
-参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
+     * @var integer <p>存储规格<br>参考 <a href="https://cloud.tencent.com/document/product/1179/83705">专业集群规格</a></p>
      */
     public $StorageSize;
 
     /**
-     * @var VpcInfo vpc网络标签
+     * @var VpcInfo <p>vpc网络标签</p>
      */
     public $Vpc;
 
     /**
-     * @var array 集群的标签列表(已废弃)
+     * @var array <p>集群的标签列表(已废弃)</p>
      */
     public $Tags;
 
     /**
-     * @param array $ZoneIds 多可用区部署选择三个可用区，示例[200002,200003,200004]
+     * @var string <p>集群版本信息</p>
+     */
+    public $InstanceVersion;
 
-单可用区部署选择一个可用区，示例[200002]
-     * @param string $ProductName 集群规格代号
-参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
-     * @param integer $AutoRenewFlag 1: true，开启自动按月续费
-
-0: false，关闭自动按月续费
-     * @param integer $TimeSpan 购买时长，取值范围：1～50
-     * @param string $ClusterName 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
-     * @param integer $AutoVoucher 是否自动选择代金券 1是 0否 默认为0
-     * @param integer $StorageSize 存储规格
-参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
-     * @param VpcInfo $Vpc vpc网络标签
-     * @param array $Tags 集群的标签列表(已废弃)
+    /**
+     * @param array $ZoneIds <p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>当选择PULSAR.P2.MINI1 时只支持两个可用区，其他支持三个可用区</p>
+     * @param string $ProductName <p>集群规格代号<br>参考 <a href="https://cloud.tencent.com/document/product/1179/83705">专业集群规格</a></p>
+     * @param integer $AutoRenewFlag <p>1: true，开启自动按月续费</p><p>0: false，关闭自动按月续费</p>
+     * @param integer $TimeSpan <p>购买时长，取值范围：1～50</p>
+     * @param string $ClusterName <p>集群名称不能为空，支持数字、字母、中文以及符号 “-_=:.”，长度不超过64个字符</p>
+     * @param integer $AutoVoucher <p>是否自动选择代金券 1是 0否 默认为0</p>
+     * @param integer $StorageSize <p>存储规格<br>参考 <a href="https://cloud.tencent.com/document/product/1179/83705">专业集群规格</a></p>
+     * @param VpcInfo $Vpc <p>vpc网络标签</p>
+     * @param array $Tags <p>集群的标签列表(已废弃)</p>
+     * @param string $InstanceVersion <p>集群版本信息</p>
      */
     function __construct()
     {
@@ -174,6 +158,10 @@ class CreateProClusterRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("InstanceVersion",$param) and $param["InstanceVersion"] !== null) {
+            $this->InstanceVersion = $param["InstanceVersion"];
         }
     }
 }

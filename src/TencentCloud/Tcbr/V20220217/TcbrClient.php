@@ -40,6 +40,8 @@ use TencentCloud\Tcbr\V20220217\Models as Models;
  * @method Models\OperateServerManageResponse OperateServerManage(Models\OperateServerManageRequest $req) 操作发布单
  * @method Models\ReleaseGrayResponse ReleaseGray(Models\ReleaseGrayRequest $req) 灰度发布
  * @method Models\SearchClsLogResponse SearchClsLog(Models\SearchClsLogRequest $req) 查询日志信息
+ * @method Models\StartVersionInstanceResponse StartVersionInstance(Models\StartVersionInstanceRequest $req) 启动版本实例
+ * @method Models\StopVersionInstanceResponse StopVersionInstance(Models\StopVersionInstanceRequest $req) 停止版本实例
  * @method Models\SubmitServerRollbackResponse SubmitServerRollback(Models\SubmitServerRollbackRequest $req) 回滚版本
  * @method Models\UpdateCloudRunServerResponse UpdateCloudRunServer(Models\UpdateCloudRunServerRequest $req) 更新云托管服务
  */

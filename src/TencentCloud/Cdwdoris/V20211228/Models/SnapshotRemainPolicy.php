@@ -26,6 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemainDays(integer $RemainDays) 设置保留快照的时间
  * @method integer getRemainLatestNum() 获取保留最新快照的数量
  * @method void setRemainLatestNum(integer $RemainLatestNum) 设置保留最新快照的数量
+ * @method integer getRemainDaysUnit() 获取天数单位
+0：天
+1：季度
+2：年
+ * @method void setRemainDaysUnit(integer $RemainDaysUnit) 设置天数单位
+0：天
+1：季度
+2：年
  */
 class SnapshotRemainPolicy extends AbstractModel
 {
@@ -45,9 +53,21 @@ class SnapshotRemainPolicy extends AbstractModel
     public $RemainLatestNum;
 
     /**
+     * @var integer 天数单位
+0：天
+1：季度
+2：年
+     */
+    public $RemainDaysUnit;
+
+    /**
      * @param integer $Type 0-不主动删除；1-超过指定时间周期自动删除；2-保留指定数据快照
      * @param integer $RemainDays 保留快照的时间
      * @param integer $RemainLatestNum 保留最新快照的数量
+     * @param integer $RemainDaysUnit 天数单位
+0：天
+1：季度
+2：年
      */
     function __construct()
     {
@@ -72,6 +92,10 @@ class SnapshotRemainPolicy extends AbstractModel
 
         if (array_key_exists("RemainLatestNum",$param) and $param["RemainLatestNum"] !== null) {
             $this->RemainLatestNum = $param["RemainLatestNum"];
+        }
+
+        if (array_key_exists("RemainDaysUnit",$param) and $param["RemainDaysUnit"] !== null) {
+            $this->RemainDaysUnit = $param["RemainDaysUnit"];
         }
     }
 }

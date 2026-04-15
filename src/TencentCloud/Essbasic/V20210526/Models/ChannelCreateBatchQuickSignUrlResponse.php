@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCreateBatchQuickSignUrl返回参数结构体
  *
- * @method FlowApproverUrlInfo getFlowApproverUrlInfo() 获取签署人签署链接信息
- * @method void setFlowApproverUrlInfo(FlowApproverUrlInfo $FlowApproverUrlInfo) 设置签署人签署链接信息
+ * @method FlowApproverUrlInfo getFlowApproverUrlInfo() 获取<p>签署人签署链接信息</p>
+ * @method void setFlowApproverUrlInfo(FlowApproverUrlInfo $FlowApproverUrlInfo) 设置<p>签署人签署链接信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ChannelCreateBatchQuickSignUrlResponse extends AbstractModel
 {
     /**
-     * @var FlowApproverUrlInfo 签署人签署链接信息
+     * @var FlowApproverUrlInfo <p>签署人签署链接信息</p>
      */
     public $FlowApproverUrlInfo;
 
@@ -38,7 +38,7 @@ class ChannelCreateBatchQuickSignUrlResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param FlowApproverUrlInfo $FlowApproverUrlInfo 签署人签署链接信息
+     * @param FlowApproverUrlInfo $FlowApproverUrlInfo <p>签署人签署链接信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWorkloadGroup请求参数结构体
  *
- * @method string getInstanceId() 获取集群id
- * @method void setInstanceId(string $InstanceId) 设置集群id
+ * @method string getInstanceId() 获取<p>集群id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>集群id</p>
  */
 class DescribeWorkloadGroupRequest extends AbstractModel
 {
     /**
-     * @var string 集群id
+     * @var string <p>集群id</p>
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId 集群id
+     * @param string $InstanceId <p>集群id</p>
      */
     function __construct()
     {

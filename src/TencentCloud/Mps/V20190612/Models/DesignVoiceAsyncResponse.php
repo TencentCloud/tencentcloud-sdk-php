@@ -14,30 +14,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dts\V20211206\Models;
+namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeMigrationJobs返回参数结构体
+ * DesignVoiceAsync返回参数结构体
  *
- * @method integer getTotalCount() 获取<p>迁移任务数量</p>
- * @method void setTotalCount(integer $TotalCount) 设置<p>迁移任务数量</p>
- * @method array getJobList() 获取<p>迁移任务列表</p>
- * @method void setJobList(array $JobList) 设置<p>迁移任务列表</p>
+ * @method integer getErrorCode() 获取<p>错误码，成功时返回0</p>
+ * @method void setErrorCode(integer $ErrorCode) 设置<p>错误码，成功时返回0</p>
+ * @method string getMsg() 获取<p>错误信息，成功时返回success</p>
+ * @method void setMsg(string $Msg) 设置<p>错误信息，成功时返回success</p>
+ * @method string getTaskId() 获取<p>任务id，查询任务时使用</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务id，查询任务时使用</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeMigrationJobsResponse extends AbstractModel
+class DesignVoiceAsyncResponse extends AbstractModel
 {
     /**
-     * @var integer <p>迁移任务数量</p>
+     * @var integer <p>错误码，成功时返回0</p>
      */
-    public $TotalCount;
+    public $ErrorCode;
 
     /**
-     * @var array <p>迁移任务列表</p>
+     * @var string <p>错误信息，成功时返回success</p>
      */
-    public $JobList;
+    public $Msg;
+
+    /**
+     * @var string <p>任务id，查询任务时使用</p>
+     */
+    public $TaskId;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +52,9 @@ class DescribeMigrationJobsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount <p>迁移任务数量</p>
-     * @param array $JobList <p>迁移任务列表</p>
+     * @param integer $ErrorCode <p>错误码，成功时返回0</p>
+     * @param string $Msg <p>错误信息，成功时返回success</p>
+     * @param string $TaskId <p>任务id，查询任务时使用</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +70,16 @@ class DescribeMigrationJobsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("ErrorCode",$param) and $param["ErrorCode"] !== null) {
+            $this->ErrorCode = $param["ErrorCode"];
         }
 
-        if (array_key_exists("JobList",$param) and $param["JobList"] !== null) {
-            $this->JobList = [];
-            foreach ($param["JobList"] as $key => $value){
-                $obj = new JobItem();
-                $obj->deserialize($value);
-                array_push($this->JobList, $obj);
-            }
+        if (array_key_exists("Msg",$param) and $param["Msg"] !== null) {
+            $this->Msg = $param["Msg"];
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 - ar（阿拉伯语）
 - id（印尼语）
 - th（泰语）
+ * @method array getPronunciationDict() 获取多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。
+ * @method void setPronunciationDict(array $PronunciationDict) 设置多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。
+ * @method integer getAlignmentMode() 获取默认为0，0表示不生成字幕，1表示生成字幕
+ * @method void setAlignmentMode(integer $AlignmentMode) 设置默认为0，0表示不生成字幕，1表示生成字幕
  */
 class TextToSpeechRequest extends AbstractModel
 {
@@ -98,6 +102,16 @@ class TextToSpeechRequest extends AbstractModel
     public $Language;
 
     /**
+     * @var array 多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。
+     */
+    public $PronunciationDict;
+
+    /**
+     * @var integer 默认为0，0表示不生成字幕，1表示生成字幕
+     */
+    public $AlignmentMode;
+
+    /**
      * @param string $Text 需要转语音的文字内容，长度范围：[1, 255]
      * @param Voice $Voice 文本转语音的声音配置
      * @param integer $SdkAppId TRTC的SdkAppId
@@ -113,6 +127,8 @@ class TextToSpeechRequest extends AbstractModel
 - ar（阿拉伯语）
 - id（印尼语）
 - th（泰语）
+     * @param array $PronunciationDict 多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。
+     * @param integer $AlignmentMode 默认为0，0表示不生成字幕，1表示生成字幕
      */
     function __construct()
     {
@@ -155,6 +171,19 @@ class TextToSpeechRequest extends AbstractModel
 
         if (array_key_exists("Language",$param) and $param["Language"] !== null) {
             $this->Language = $param["Language"];
+        }
+
+        if (array_key_exists("PronunciationDict",$param) and $param["PronunciationDict"] !== null) {
+            $this->PronunciationDict = [];
+            foreach ($param["PronunciationDict"] as $key => $value){
+                $obj = new PronunciationDict();
+                $obj->deserialize($value);
+                array_push($this->PronunciationDict, $obj);
+            }
+        }
+
+        if (array_key_exists("AlignmentMode",$param) and $param["AlignmentMode"] !== null) {
+            $this->AlignmentMode = $param["AlignmentMode"];
         }
     }
 }

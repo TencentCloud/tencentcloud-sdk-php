@@ -18,49 +18,29 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TextToSpeechSSE请求参数结构体
+ * AsyncTextToSpeech请求参数结构体
  *
- * @method string getText() 获取需要转语音的文字内容，长度范围：[1, 255]
- * @method void setText(string $Text) 设置需要转语音的文字内容，长度范围：[1, 255]
+ * @method string getText() 获取需要转语音的文字内容，最大允许50000字符，注意 1汉字=2字符
+ * @method void setText(string $Text) 设置需要转语音的文字内容，最大允许50000字符，注意 1汉字=2字符
  * @method Voice getVoice() 获取文本转语音的声音配置
  * @method void setVoice(Voice $Voice) 设置文本转语音的声音配置
  * @method integer getSdkAppId() 获取TRTC的SdkAppId
  * @method void setSdkAppId(integer $SdkAppId) 设置TRTC的SdkAppId
  * @method AudioFormat getAudioFormat() 获取文本转语音的输出音频的格式
  * @method void setAudioFormat(AudioFormat $AudioFormat) 设置文本转语音的输出音频的格式
- * @method string getAPIKey() 获取TTS的API密钥
- * @method void setAPIKey(string $APIKey) 设置TTS的API密钥
  * @method string getModel() 获取TTS的模型，当前固定为：flow_01_turbo
  * @method void setModel(string $Model) 设置TTS的模型，当前固定为：flow_01_turbo
- * @method string getLanguage() 获取 需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：
-- zh（中文）
-- en（英文）
-- yue（粤语）
-- ja（日语）
-- ko（韩语）
-- ar（阿拉伯语）
-- id（印尼语）
-- th（泰语）
-
- * @method void setLanguage(string $Language) 设置 需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：
-- zh（中文）
-- en（英文）
-- yue（粤语）
-- ja（日语）
-- ko（韩语）
-- ar（阿拉伯语）
-- id（印尼语）
-- th（泰语）
-
  * @method array getPronunciationDict() 获取多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。
  * @method void setPronunciationDict(array $PronunciationDict) 设置多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。
  * @method integer getAlignmentMode() 获取默认为0，0表示不生成字幕，1表示生成字幕
  * @method void setAlignmentMode(integer $AlignmentMode) 设置默认为0，0表示不生成字幕，1表示生成字幕
+ * @method string getLanguageCode() 获取需要合成的语言（ISO 639-1），默认自动识别，支持的语言如下：  zh（中文） en（英文） yue（粤语） ja（日语） ko（韩语） ar（阿拉伯语） id（印尼语） th（泰语）
+ * @method void setLanguageCode(string $LanguageCode) 设置需要合成的语言（ISO 639-1），默认自动识别，支持的语言如下：  zh（中文） en（英文） yue（粤语） ja（日语） ko（韩语） ar（阿拉伯语） id（印尼语） th（泰语）
  */
-class TextToSpeechSSERequest extends AbstractModel
+class AsyncTextToSpeechRequest extends AbstractModel
 {
     /**
-     * @var string 需要转语音的文字内容，长度范围：[1, 255]
+     * @var string 需要转语音的文字内容，最大允许50000字符，注意 1汉字=2字符
      */
     public $Text;
 
@@ -80,29 +60,9 @@ class TextToSpeechSSERequest extends AbstractModel
     public $AudioFormat;
 
     /**
-     * @var string TTS的API密钥
-     * @deprecated
-     */
-    public $APIKey;
-
-    /**
      * @var string TTS的模型，当前固定为：flow_01_turbo
      */
     public $Model;
-
-    /**
-     * @var string  需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：
-- zh（中文）
-- en（英文）
-- yue（粤语）
-- ja（日语）
-- ko（韩语）
-- ar（阿拉伯语）
-- id（印尼语）
-- th（泰语）
-
-     */
-    public $Language;
 
     /**
      * @var array 多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。
@@ -115,24 +75,19 @@ class TextToSpeechSSERequest extends AbstractModel
     public $AlignmentMode;
 
     /**
-     * @param string $Text 需要转语音的文字内容，长度范围：[1, 255]
+     * @var string 需要合成的语言（ISO 639-1），默认自动识别，支持的语言如下：  zh（中文） en（英文） yue（粤语） ja（日语） ko（韩语） ar（阿拉伯语） id（印尼语） th（泰语）
+     */
+    public $LanguageCode;
+
+    /**
+     * @param string $Text 需要转语音的文字内容，最大允许50000字符，注意 1汉字=2字符
      * @param Voice $Voice 文本转语音的声音配置
      * @param integer $SdkAppId TRTC的SdkAppId
      * @param AudioFormat $AudioFormat 文本转语音的输出音频的格式
-     * @param string $APIKey TTS的API密钥
      * @param string $Model TTS的模型，当前固定为：flow_01_turbo
-     * @param string $Language  需要合成的语言（ISO 639-1），默认自动识别，支持如下语言：
-- zh（中文）
-- en（英文）
-- yue（粤语）
-- ja（日语）
-- ko（韩语）
-- ar（阿拉伯语）
-- id（印尼语）
-- th（泰语）
-
      * @param array $PronunciationDict 多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。
      * @param integer $AlignmentMode 默认为0，0表示不生成字幕，1表示生成字幕
+     * @param string $LanguageCode 需要合成的语言（ISO 639-1），默认自动识别，支持的语言如下：  zh（中文） en（英文） yue（粤语） ja（日语） ko（韩语） ar（阿拉伯语） id（印尼语） th（泰语）
      */
     function __construct()
     {
@@ -165,16 +120,8 @@ class TextToSpeechSSERequest extends AbstractModel
             $this->AudioFormat->deserialize($param["AudioFormat"]);
         }
 
-        if (array_key_exists("APIKey",$param) and $param["APIKey"] !== null) {
-            $this->APIKey = $param["APIKey"];
-        }
-
         if (array_key_exists("Model",$param) and $param["Model"] !== null) {
             $this->Model = $param["Model"];
-        }
-
-        if (array_key_exists("Language",$param) and $param["Language"] !== null) {
-            $this->Language = $param["Language"];
         }
 
         if (array_key_exists("PronunciationDict",$param) and $param["PronunciationDict"] !== null) {
@@ -188,6 +135,10 @@ class TextToSpeechSSERequest extends AbstractModel
 
         if (array_key_exists("AlignmentMode",$param) and $param["AlignmentMode"] !== null) {
             $this->AlignmentMode = $param["AlignmentMode"];
+        }
+
+        if (array_key_exists("LanguageCode",$param) and $param["LanguageCode"] !== null) {
+            $this->LanguageCode = $param["LanguageCode"];
         }
     }
 }

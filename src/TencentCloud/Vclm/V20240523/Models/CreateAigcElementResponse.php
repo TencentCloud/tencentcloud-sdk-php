@@ -14,30 +14,51 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dts\V20211206\Models;
+namespace TencentCloud\Vclm\V20240523\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeMigrationJobs返回参数结构体
+ * CreateAigcElement返回参数结构体
  *
- * @method integer getTotalCount() 获取<p>迁移任务数量</p>
- * @method void setTotalCount(integer $TotalCount) 设置<p>迁移任务数量</p>
- * @method array getJobList() 获取<p>迁移任务列表</p>
- * @method void setJobList(array $JobList) 设置<p>迁移任务列表</p>
+ * @method string getJobId() 获取<p>任务ID。</p>
+ * @method void setJobId(string $JobId) 设置<p>任务ID。</p>
+ * @method string getElementId() 获取
+ * @method void setElementId(string $ElementId) 设置
+ * @method string getStatus() 获取
+ * @method void setStatus(string $Status) 设置
+ * @method array getProvider() 获取
+ * @method void setProvider(array $Provider) 设置
+ * @method string getCreatedAt() 获取
+ * @method void setCreatedAt(string $CreatedAt) 设置
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeMigrationJobsResponse extends AbstractModel
+class CreateAigcElementResponse extends AbstractModel
 {
     /**
-     * @var integer <p>迁移任务数量</p>
+     * @var string <p>任务ID。</p>
      */
-    public $TotalCount;
+    public $JobId;
 
     /**
-     * @var array <p>迁移任务列表</p>
+     * @var string 
      */
-    public $JobList;
+    public $ElementId;
+
+    /**
+     * @var string 
+     */
+    public $Status;
+
+    /**
+     * @var array 
+     */
+    public $Provider;
+
+    /**
+     * @var string 
+     */
+    public $CreatedAt;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +66,11 @@ class DescribeMigrationJobsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount <p>迁移任务数量</p>
-     * @param array $JobList <p>迁移任务列表</p>
+     * @param string $JobId <p>任务ID。</p>
+     * @param string $ElementId 
+     * @param string $Status 
+     * @param array $Provider 
+     * @param string $CreatedAt 
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +86,24 @@ class DescribeMigrationJobsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
+            $this->JobId = $param["JobId"];
         }
 
-        if (array_key_exists("JobList",$param) and $param["JobList"] !== null) {
-            $this->JobList = [];
-            foreach ($param["JobList"] as $key => $value){
-                $obj = new JobItem();
-                $obj->deserialize($value);
-                array_push($this->JobList, $obj);
-            }
+        if (array_key_exists("ElementId",$param) and $param["ElementId"] !== null) {
+            $this->ElementId = $param["ElementId"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Provider",$param) and $param["Provider"] !== null) {
+            $this->Provider = $param["Provider"];
+        }
+
+        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
+            $this->CreatedAt = $param["CreatedAt"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

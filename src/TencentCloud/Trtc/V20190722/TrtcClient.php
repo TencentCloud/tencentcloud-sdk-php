@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Trtc\V20190722\Models as Models;
 
 /**
+ * @method Models\AsyncTextToSpeechResponse AsyncTextToSpeech(Models\AsyncTextToSpeechRequest $req) 异步语音合成
  * @method Models\ControlAIConversationResponse ControlAIConversation(Models\ControlAIConversationRequest $req) 提供服务端控制机器人的功能
  * @method Models\CreateBasicModerationResponse CreateBasicModeration(Models\CreateBasicModerationRequest $req) 接口说明：
 启动终端审核功能，完成房间内的音频审核。
@@ -63,6 +64,7 @@ use TencentCloud\Trtc\V20190722\Models as Models;
  * @method Models\DeleteVoicePrintResponse DeleteVoicePrint(Models\DeleteVoicePrintRequest $req) 传入声纹ID，删除之前注册的声纹信息
  * @method Models\DescribeAIConversationResponse DescribeAIConversation(Models\DescribeAIConversationRequest $req) 查询AI对话任务状态。
  * @method Models\DescribeAITranscriptionResponse DescribeAITranscription(Models\DescribeAITranscriptionRequest $req) 查询AI转录任务状态。
+ * @method Models\DescribeAsyncTextToSpeechResponse DescribeAsyncTextToSpeech(Models\DescribeAsyncTextToSpeechRequest $req) 查询异步语音合成状态
  * @method Models\DescribeCallDetailInfoResponse DescribeCallDetailInfo(Models\DescribeCallDetailInfoRequest $req) 查询指定时间内的用户列表及用户通话质量数据，最大可查询14天内数据。DataType 不为null，查询起止时间不超过1个小时，查询用户不超过6个，支持跨天查询。DataType为null时，查询起止时间不超过4个小时， 默认查询6个用户，同时支持每页查询100以内用户个数（PageSize不超过100）。接口用于查询质量问题，不推荐作为计费使用。（同老接口DescribeCallDetail）
 **注意**：
 1.该接口只用于历史数据统计或核对数据使用，实时类关键业务逻辑不能使用。

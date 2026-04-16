@@ -29,6 +29,9 @@ use TencentCloud\Common\AbstractModel;
 - TextToSpeech 非流式接口
 
  支持 pcm,wav,mp3,  默认: pcm
+
+- AsyncTextToSpeech
+支持pcm,mp3, 默认：mp3
  * @method void setFormat(string $Format) 设置生成的音频格式
 
 - TextToSpeechSSE 流式接口
@@ -38,6 +41,9 @@ use TencentCloud\Common\AbstractModel;
 - TextToSpeech 非流式接口
 
  支持 pcm,wav,mp3,  默认: pcm
+
+- AsyncTextToSpeech
+支持pcm,mp3, 默认：mp3
  * @method integer getSampleRate() 获取生成的音频采样率，默认24000
 可选
 - 16000
@@ -61,6 +67,9 @@ class AudioFormat extends AbstractModel
 - TextToSpeech 非流式接口
 
  支持 pcm,wav,mp3,  默认: pcm
+
+- AsyncTextToSpeech
+支持pcm,mp3, 默认：mp3
      */
     public $Format;
 
@@ -87,6 +96,9 @@ class AudioFormat extends AbstractModel
 - TextToSpeech 非流式接口
 
  支持 pcm,wav,mp3,  默认: pcm
+
+- AsyncTextToSpeech
+支持pcm,mp3, 默认：mp3
      * @param integer $SampleRate 生成的音频采样率，默认24000
 可选
 - 16000

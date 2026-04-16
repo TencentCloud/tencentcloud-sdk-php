@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dts\V20211206\Models;
+namespace TencentCloud\Vclm\V20240523\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeMigrationJobs返回参数结构体
+ * DeleteAigcElement返回参数结构体
  *
- * @method integer getTotalCount() 获取<p>迁移任务数量</p>
- * @method void setTotalCount(integer $TotalCount) 设置<p>迁移任务数量</p>
- * @method array getJobList() 获取<p>迁移任务列表</p>
- * @method void setJobList(array $JobList) 设置<p>迁移任务列表</p>
+ * @method string getElementId() 获取
+ * @method void setElementId(string $ElementId) 设置
+ * @method boolean getDeleted() 获取
+ * @method void setDeleted(boolean $Deleted) 设置
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeMigrationJobsResponse extends AbstractModel
+class DeleteAigcElementResponse extends AbstractModel
 {
     /**
-     * @var integer <p>迁移任务数量</p>
+     * @var string 
      */
-    public $TotalCount;
+    public $ElementId;
 
     /**
-     * @var array <p>迁移任务列表</p>
+     * @var boolean 
      */
-    public $JobList;
+    public $Deleted;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class DescribeMigrationJobsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount <p>迁移任务数量</p>
-     * @param array $JobList <p>迁移任务列表</p>
+     * @param string $ElementId 
+     * @param boolean $Deleted 
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +62,12 @@ class DescribeMigrationJobsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("ElementId",$param) and $param["ElementId"] !== null) {
+            $this->ElementId = $param["ElementId"];
         }
 
-        if (array_key_exists("JobList",$param) and $param["JobList"] !== null) {
-            $this->JobList = [];
-            foreach ($param["JobList"] as $key => $value){
-                $obj = new JobItem();
-                $obj->deserialize($value);
-                array_push($this->JobList, $obj);
-            }
+        if (array_key_exists("Deleted",$param) and $param["Deleted"] !== null) {
+            $this->Deleted = $param["Deleted"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

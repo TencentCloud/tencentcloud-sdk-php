@@ -47,6 +47,7 @@ use TencentCloud\Dts\V20211206\Models as Models;
  * @method Models\DeleteConsumerGroupResponse DeleteConsumerGroup(Models\DeleteConsumerGroupRequest $req) 本接口(DeleteConsumerGroup)用于删除一个订阅任务的消费组。
  * @method Models\DeleteSyncCompareTaskResponse DeleteSyncCompareTask(Models\DeleteSyncCompareTaskRequest $req) 删除一致性校验任务。当一致性校验任务状态为success、failed、canceled 时可以执行此操作。
  * @method Models\DescribeCheckSyncJobResultResponse DescribeCheckSyncJobResult(Models\DescribeCheckSyncJobResultRequest $req) 查询同步校验任务结果，检查必要参数和周边配置
+ * @method Models\DescribeCompareDiffItemsResponse DescribeCompareDiffItems(Models\DescribeCompareDiffItemsRequest $req) 本接口用于查询一致性校验任务中，不一致数据块的详情信息
  * @method Models\DescribeCompareReportResponse DescribeCompareReport(Models\DescribeCompareReportRequest $req) 查询一致性校验任务详情
  * @method Models\DescribeCompareTasksResponse DescribeCompareTasks(Models\DescribeCompareTasksRequest $req) 查询一致性校验任务列表。
  * @method Models\DescribeConsumerGroupsResponse DescribeConsumerGroups(Models\DescribeConsumerGroupsRequest $req) 本接口(DescribeConsumerGroups)用于获取订阅实例配置的消费者组详情。
@@ -66,6 +67,7 @@ use TencentCloud\Dts\V20211206\Models as Models;
  * @method Models\DescribeSubscribeDetailResponse DescribeSubscribeDetail(Models\DescribeSubscribeDetailRequest $req) 本接口(DescribeSubscribeDetail)获取数据订阅实例的配置信息。
  * @method Models\DescribeSubscribeJobsResponse DescribeSubscribeJobs(Models\DescribeSubscribeJobsRequest $req) 本接口(DescribeSubscribes)获取数据订阅实例信息列表，默认分页，每次返回20条
  * @method Models\DescribeSubscribeReturnableResponse DescribeSubscribeReturnable(Models\DescribeSubscribeReturnableRequest $req) 本接口(DescribeSubscribeReturnable)用于查询订阅任务是否可以销毁和退货。
+ * @method Models\DescribeSyncCompareDiffItemsResponse DescribeSyncCompareDiffItems(Models\DescribeSyncCompareDiffItemsRequest $req) 本接口用于查询一致性校验任务中，不一致数据块的详情信息
  * @method Models\DescribeSyncCompareReportResponse DescribeSyncCompareReport(Models\DescribeSyncCompareReportRequest $req) 查询一致性校验任务详情
  * @method Models\DescribeSyncCompareTasksResponse DescribeSyncCompareTasks(Models\DescribeSyncCompareTasksRequest $req) 查询一致性校验任务列表。通过该接口可查看改任务下所有一致性校验任务。
  * @method Models\DescribeSyncJobsResponse DescribeSyncJobs(Models\DescribeSyncJobsRequest $req) 查询同步任务信息

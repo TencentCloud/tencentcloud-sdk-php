@@ -18,26 +18,29 @@ namespace TencentCloud\Dts\V20211206\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeMigrationJobs返回参数结构体
+ * DescribeCompareDiffItems返回参数结构体
  *
- * @method integer getTotalCount() 获取<p>迁移任务数量</p>
- * @method void setTotalCount(integer $TotalCount) 设置<p>迁移任务数量</p>
- * @method array getJobList() 获取<p>迁移任务列表</p>
- * @method void setJobList(array $JobList) 设置<p>迁移任务列表</p>
+ * @method integer getTotalCount() 获取查询结果的数量
+ * @method void setTotalCount(integer $TotalCount) 设置查询结果的数量
+ * @method array getItems() 获取查询结果详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setItems(array $Items) 设置查询结果详情
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeMigrationJobsResponse extends AbstractModel
+class DescribeCompareDiffItemsResponse extends AbstractModel
 {
     /**
-     * @var integer <p>迁移任务数量</p>
+     * @var integer 查询结果的数量
      */
     public $TotalCount;
 
     /**
-     * @var array <p>迁移任务列表</p>
+     * @var array 查询结果详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $JobList;
+    public $Items;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +48,9 @@ class DescribeMigrationJobsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount <p>迁移任务数量</p>
-     * @param array $JobList <p>迁移任务列表</p>
+     * @param integer $TotalCount 查询结果的数量
+     * @param array $Items 查询结果详情
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,12 +70,12 @@ class DescribeMigrationJobsResponse extends AbstractModel
             $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("JobList",$param) and $param["JobList"] !== null) {
-            $this->JobList = [];
-            foreach ($param["JobList"] as $key => $value){
-                $obj = new JobItem();
+        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
+            $this->Items = [];
+            foreach ($param["Items"] as $key => $value){
+                $obj = new DiffChunkItem();
                 $obj->deserialize($value);
-                array_push($this->JobList, $obj);
+                array_push($this->Items, $obj);
             }
         }
 

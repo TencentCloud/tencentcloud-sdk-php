@@ -20,49 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 疑似攻击风险详情
  *
- * @method string getType() 获取疑似的攻击痕迹类型
-SuspectedSpoofingAttack：翻拍攻击
-SuspectedSynthesisImage：疑似合成图片
-SuspectedSynthesisVideo：疑似合成视频
-SuspectedeAnomalyAttack：人脸特征疑似非真人
-SuspectedAdversarialAttack：疑似对抗样本攻击
-SuspectedBlackIndustry：疑似黑产批量模版攻击
-SuspectedWatermark：疑似存在水印
+ * @method string getType() 获取<p>疑似的攻击痕迹类型SuspectedSpoofingAttack：翻拍攻击SuspectedSynthesisImage：疑似合成图片SuspectedSynthesisVideo：疑似合成视频SuspectedAnomalyAttack：人脸特征疑似非真人SuspectedAdversarialAttack：疑似对抗样本攻击SuspectedBlackIndustry：疑似黑产批量模板攻击SuspectedWatermark：疑似存在水印</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置疑似的攻击痕迹类型
-SuspectedSpoofingAttack：翻拍攻击
-SuspectedSynthesisImage：疑似合成图片
-SuspectedSynthesisVideo：疑似合成视频
-SuspectedeAnomalyAttack：人脸特征疑似非真人
-SuspectedAdversarialAttack：疑似对抗样本攻击
-SuspectedBlackIndustry：疑似黑产批量模版攻击
-SuspectedWatermark：疑似存在水印
+ * @method void setType(string $Type) 设置<p>疑似的攻击痕迹类型SuspectedSpoofingAttack：翻拍攻击SuspectedSynthesisImage：疑似合成图片SuspectedSynthesisVideo：疑似合成视频SuspectedAnomalyAttack：人脸特征疑似非真人SuspectedAdversarialAttack：疑似对抗样本攻击SuspectedBlackIndustry：疑似黑产批量模板攻击SuspectedWatermark：疑似存在水印</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AttackRiskDetail extends AbstractModel
 {
     /**
-     * @var string 疑似的攻击痕迹类型
-SuspectedSpoofingAttack：翻拍攻击
-SuspectedSynthesisImage：疑似合成图片
-SuspectedSynthesisVideo：疑似合成视频
-SuspectedeAnomalyAttack：人脸特征疑似非真人
-SuspectedAdversarialAttack：疑似对抗样本攻击
-SuspectedBlackIndustry：疑似黑产批量模版攻击
-SuspectedWatermark：疑似存在水印
+     * @var string <p>疑似的攻击痕迹类型SuspectedSpoofingAttack：翻拍攻击SuspectedSynthesisImage：疑似合成图片SuspectedSynthesisVideo：疑似合成视频SuspectedAnomalyAttack：人脸特征疑似非真人SuspectedAdversarialAttack：疑似对抗样本攻击SuspectedBlackIndustry：疑似黑产批量模板攻击SuspectedWatermark：疑似存在水印</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
-     * @param string $Type 疑似的攻击痕迹类型
-SuspectedSpoofingAttack：翻拍攻击
-SuspectedSynthesisImage：疑似合成图片
-SuspectedSynthesisVideo：疑似合成视频
-SuspectedeAnomalyAttack：人脸特征疑似非真人
-SuspectedAdversarialAttack：疑似对抗样本攻击
-SuspectedBlackIndustry：疑似黑产批量模版攻击
-SuspectedWatermark：疑似存在水印
+     * @param string $Type <p>疑似的攻击痕迹类型SuspectedSpoofingAttack：翻拍攻击SuspectedSynthesisImage：疑似合成图片SuspectedSynthesisVideo：疑似合成视频SuspectedAnomalyAttack：人脸特征疑似非真人SuspectedAdversarialAttack：疑似对抗样本攻击SuspectedBlackIndustry：疑似黑产批量模板攻击SuspectedWatermark：疑似存在水印</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

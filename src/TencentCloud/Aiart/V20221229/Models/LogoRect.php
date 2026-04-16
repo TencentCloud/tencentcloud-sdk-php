@@ -20,57 +20,57 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 输入框
  *
- * @method integer getX() 获取左上角X坐标
+ * @method integer getX() 获取<p>左上角X坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setX(integer $X) 设置左上角X坐标
+ * @method void setX(integer $X) 设置<p>左上角X坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getY() 获取左上角Y坐标
+ * @method integer getY() 获取<p>左上角Y坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setY(integer $Y) 设置左上角Y坐标
+ * @method void setY(integer $Y) 设置<p>左上角Y坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getWidth() 获取方框宽度
+ * @method integer getWidth() 获取<p>方框宽度<br>单位为 px</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWidth(integer $Width) 设置方框宽度
+ * @method void setWidth(integer $Width) 设置<p>方框宽度<br>单位为 px</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getHeight() 获取方框高度
+ * @method integer getHeight() 获取<p>方框高度<br>单位为 px</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHeight(integer $Height) 设置方框高度
+ * @method void setHeight(integer $Height) 设置<p>方框高度<br>单位为 px</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class LogoRect extends AbstractModel
 {
     /**
-     * @var integer 左上角X坐标
+     * @var integer <p>左上角X坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $X;
 
     /**
-     * @var integer 左上角Y坐标
+     * @var integer <p>左上角Y坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Y;
 
     /**
-     * @var integer 方框宽度
+     * @var integer <p>方框宽度<br>单位为 px</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Width;
 
     /**
-     * @var integer 方框高度
+     * @var integer <p>方框高度<br>单位为 px</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Height;
 
     /**
-     * @param integer $X 左上角X坐标
+     * @param integer $X <p>左上角X坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Y 左上角Y坐标
+     * @param integer $Y <p>左上角Y坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Width 方框宽度
+     * @param integer $Width <p>方框宽度<br>单位为 px</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Height 方框高度
+     * @param integer $Height <p>方框高度<br>单位为 px</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method CLSConfig getCLSConfig() 获取<p>日志推送CLS的配置。</p>
  * @method void setCLSConfig(CLSConfig $CLSConfig) 设置<p>日志推送CLS的配置。</p>
+ * @method LogSources getLogSources() 获取<p>日志源配置</p>
+ * @method void setLogSources(LogSources $LogSources) 设置<p>日志源配置</p>
  */
 class LogConfiguration extends AbstractModel
 {
@@ -31,7 +33,13 @@ class LogConfiguration extends AbstractModel
     public $CLSConfig;
 
     /**
+     * @var LogSources <p>日志源配置</p>
+     */
+    public $LogSources;
+
+    /**
      * @param CLSConfig $CLSConfig <p>日志推送CLS的配置。</p>
+     * @param LogSources $LogSources <p>日志源配置</p>
      */
     function __construct()
     {
@@ -49,6 +57,11 @@ class LogConfiguration extends AbstractModel
         if (array_key_exists("CLSConfig",$param) and $param["CLSConfig"] !== null) {
             $this->CLSConfig = new CLSConfig();
             $this->CLSConfig->deserialize($param["CLSConfig"]);
+        }
+
+        if (array_key_exists("LogSources",$param) and $param["LogSources"] !== null) {
+            $this->LogSources = new LogSources();
+            $this->LogSources->deserialize($param["LogSources"]);
         }
     }
 }

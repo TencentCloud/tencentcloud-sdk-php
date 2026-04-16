@@ -24,6 +24,9 @@ use TencentCloud\Vclm\V20240523\Models as Models;
 
 /**
  * @method Models\CheckAnimateImageJobResponse CheckAnimateImageJob(Models\CheckAnimateImageJobRequest $req) 检查图片跳舞输入图
+ * @method Models\CreateAigcElementResponse CreateAigcElement(Models\CreateAigcElementRequest $req) 提交视频特效任务接口
+ * @method Models\DeleteAigcElementResponse DeleteAigcElement(Models\DeleteAigcElementRequest $req) 删除主体库
+ * @method Models\DescribeAigcElementResponse DescribeAigcElement(Models\DescribeAigcElementRequest $req) 提交视频特效任务接口
  * @method Models\DescribeAigcVideoJobResponse DescribeAigcVideoJob(Models\DescribeAigcVideoJobRequest $req) 查询生视频任务
  * @method Models\DescribeHumanActorJobResponse DescribeHumanActorJob(Models\DescribeHumanActorJobRequest $req) 通过JobId提交请求，获取人像驱动任务的结果信息。
  * @method Models\DescribeHunyuanToVideoJobResponse DescribeHunyuanToVideoJob(Models\DescribeHunyuanToVideoJobRequest $req) 查询混元生视频任务

@@ -18,11 +18,11 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 模版检索详细信息
+ * 模板检索详细信息
  *
- * @method string getHitGroup() 获取<p>命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库</p>
+ * @method string getHitGroup() 获取<p>命中的模板类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模板库</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHitGroup(string $HitGroup) 设置<p>命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库</p>
+ * @method void setHitGroup(string $HitGroup) 设置<p>命中的模板类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模板库</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method float getSimilarityScore() 获取<p>请求图像与命中攻击模板的相似度，相似度取值范围[0,2]，取值越小表示命中攻击模板的概率越高。默认阈值为0.6，当SimilarityScore≥0.6时判断为正常，SimilarityScore&lt;0.6是判断为攻击。</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class RetrievalLivenessExtraInfo extends AbstractModel
 {
     /**
-     * @var string <p>命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库</p>
+     * @var string <p>命中的模板类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模板库</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HitGroup;
@@ -54,7 +54,7 @@ class RetrievalLivenessExtraInfo extends AbstractModel
     public $HitTemplate;
 
     /**
-     * @param string $HitGroup <p>命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库</p>
+     * @param string $HitGroup <p>命中的模板类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模板库</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $SimilarityScore <p>请求图像与命中攻击模板的相似度，相似度取值范围[0,2]，取值越小表示命中攻击模板的概率越高。默认阈值为0.6，当SimilarityScore≥0.6时判断为正常，SimilarityScore&lt;0.6是判断为攻击。</p>
 注意：此字段可能返回 null，表示取不到有效值。

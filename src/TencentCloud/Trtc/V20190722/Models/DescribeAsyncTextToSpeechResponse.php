@@ -14,30 +14,49 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dts\V20211206\Models;
+namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeMigrationJobs返回参数结构体
+ * DescribeAsyncTextToSpeech返回参数结构体
  *
- * @method integer getTotalCount() 获取<p>迁移任务数量</p>
- * @method void setTotalCount(integer $TotalCount) 设置<p>迁移任务数量</p>
- * @method array getJobList() 获取<p>迁移任务列表</p>
- * @method void setJobList(array $JobList) 设置<p>迁移任务列表</p>
+ * @method string getStatus() 获取任务状态
+- Processing，处理中
+- Success，任务成功
+- Failed，任务失败
+- Expired，任务过期
+ * @method void setStatus(string $Status) 设置任务状态
+- Processing，处理中
+- Success，任务成功
+- Failed，任务失败
+- Expired，任务过期
+ * @method string getAudioDownloadUrl() 获取音频下载url
+ * @method void setAudioDownloadUrl(string $AudioDownloadUrl) 设置音频下载url
+ * @method string getSubtitleDownloadUrl() 获取字幕下载url
+ * @method void setSubtitleDownloadUrl(string $SubtitleDownloadUrl) 设置字幕下载url
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeMigrationJobsResponse extends AbstractModel
+class DescribeAsyncTextToSpeechResponse extends AbstractModel
 {
     /**
-     * @var integer <p>迁移任务数量</p>
+     * @var string 任务状态
+- Processing，处理中
+- Success，任务成功
+- Failed，任务失败
+- Expired，任务过期
      */
-    public $TotalCount;
+    public $Status;
 
     /**
-     * @var array <p>迁移任务列表</p>
+     * @var string 音频下载url
      */
-    public $JobList;
+    public $AudioDownloadUrl;
+
+    /**
+     * @var string 字幕下载url
+     */
+    public $SubtitleDownloadUrl;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +64,13 @@ class DescribeMigrationJobsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount <p>迁移任务数量</p>
-     * @param array $JobList <p>迁移任务列表</p>
+     * @param string $Status 任务状态
+- Processing，处理中
+- Success，任务成功
+- Failed，任务失败
+- Expired，任务过期
+     * @param string $AudioDownloadUrl 音频下载url
+     * @param string $SubtitleDownloadUrl 字幕下载url
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +86,16 @@ class DescribeMigrationJobsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
-        if (array_key_exists("JobList",$param) and $param["JobList"] !== null) {
-            $this->JobList = [];
-            foreach ($param["JobList"] as $key => $value){
-                $obj = new JobItem();
-                $obj->deserialize($value);
-                array_push($this->JobList, $obj);
-            }
+        if (array_key_exists("AudioDownloadUrl",$param) and $param["AudioDownloadUrl"] !== null) {
+            $this->AudioDownloadUrl = $param["AudioDownloadUrl"];
+        }
+
+        if (array_key_exists("SubtitleDownloadUrl",$param) and $param["SubtitleDownloadUrl"] !== null) {
+            $this->SubtitleDownloadUrl = $param["SubtitleDownloadUrl"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

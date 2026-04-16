@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLoadTask请求参数结构体
  *
- * @method string getClusterId() 获取集群 ID
- * @method void setClusterId(string $ClusterId) 设置集群 ID
- * @method LoadTaskCreationAttrs getLoadTaskCreationAttrs() 获取创建预热任务参数
- * @method void setLoadTaskCreationAttrs(LoadTaskCreationAttrs $LoadTaskCreationAttrs) 设置创建预热任务参数
+ * @method string getClusterId() 获取<p>集群 ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群 ID</p>
+ * @method LoadTaskCreationAttrs getLoadTaskCreationAttrs() 获取<p>创建预热任务参数</p>
+ * @method void setLoadTaskCreationAttrs(LoadTaskCreationAttrs $LoadTaskCreationAttrs) 设置<p>创建预热任务参数</p>
  */
 class CreateLoadTaskRequest extends AbstractModel
 {
     /**
-     * @var string 集群 ID
+     * @var string <p>集群 ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var LoadTaskCreationAttrs 创建预热任务参数
+     * @var LoadTaskCreationAttrs <p>创建预热任务参数</p>
      */
     public $LoadTaskCreationAttrs;
 
     /**
-     * @param string $ClusterId 集群 ID
-     * @param LoadTaskCreationAttrs $LoadTaskCreationAttrs 创建预热任务参数
+     * @param string $ClusterId <p>集群 ID</p>
+     * @param LoadTaskCreationAttrs $LoadTaskCreationAttrs <p>创建预热任务参数</p>
      */
     function __construct()
     {

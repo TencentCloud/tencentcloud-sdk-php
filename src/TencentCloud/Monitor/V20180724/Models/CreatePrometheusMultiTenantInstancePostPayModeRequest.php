@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePrometheusMultiTenantInstancePostPayMode请求参数结构体
  *
- * @method string getInstanceName() 获取实例名
- * @method void setInstanceName(string $InstanceName) 设置实例名
- * @method string getVpcId() 获取VPC ID(可通过 vpc:DescribeVpcs 接口获取，与实例同地域)
- * @method void setVpcId(string $VpcId) 设置VPC ID(可通过 vpc:DescribeVpcs 接口获取，与实例同地域)
- * @method string getSubnetId() 获取子网 ID(可通过 vpc:DescribeSubnets 接口获取)
- * @method void setSubnetId(string $SubnetId) 设置子网 ID(可通过 vpc:DescribeSubnets 接口获取)
- * @method integer getDataRetentionTime() 获取数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
- * @method void setDataRetentionTime(integer $DataRetentionTime) 设置数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
- * @method string getZone() 获取可用区(与子网同可用区)
- * @method void setZone(string $Zone) 设置可用区(与子网同可用区)
- * @method array getTagSpecification() 获取实例的标签
- * @method void setTagSpecification(array $TagSpecification) 设置实例的标签
- * @method string getGrafanaInstanceId() 获取需要关联的 Grafana 实例
- * @method void setGrafanaInstanceId(string $GrafanaInstanceId) 设置需要关联的 Grafana 实例
+ * @method string getInstanceName() 获取<p>实例名</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名</p>
+ * @method string getVpcId() 获取<p>VPC ID(可通过 vpc:DescribeVpcs 接口获取，与实例同地域)</p>
+ * @method void setVpcId(string $VpcId) 设置<p>VPC ID(可通过 vpc:DescribeVpcs 接口获取，与实例同地域)</p>
+ * @method string getSubnetId() 获取<p>子网 ID(可通过 vpc:DescribeSubnets 接口获取)</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网 ID(可通过 vpc:DescribeSubnets 接口获取)</p>
+ * @method integer getDataRetentionTime() 获取<p>数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一</p>
+ * @method void setDataRetentionTime(integer $DataRetentionTime) 设置<p>数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一</p>
+ * @method string getZone() 获取<p>可用区(与子网同可用区)</p>
+ * @method void setZone(string $Zone) 设置<p>可用区(与子网同可用区)</p>
+ * @method array getTagSpecification() 获取<p>实例的标签</p>
+ * @method void setTagSpecification(array $TagSpecification) 设置<p>实例的标签</p>
+ * @method string getGrafanaInstanceId() 获取<p>需要关联的 Grafana 实例</p>
+ * @method void setGrafanaInstanceId(string $GrafanaInstanceId) 设置<p>需要关联的 Grafana 实例</p>
+ * @method array getInstanceAttributes() 获取<p>标识prom实例特殊属性</p><p>归档存储时长(天):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p>
+ * @method void setInstanceAttributes(array $InstanceAttributes) 设置<p>标识prom实例特殊属性</p><p>归档存储时长(天):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p>
  */
 class CreatePrometheusMultiTenantInstancePostPayModeRequest extends AbstractModel
 {
     /**
-     * @var string 实例名
+     * @var string <p>实例名</p>
      */
     public $InstanceName;
 
     /**
-     * @var string VPC ID(可通过 vpc:DescribeVpcs 接口获取，与实例同地域)
+     * @var string <p>VPC ID(可通过 vpc:DescribeVpcs 接口获取，与实例同地域)</p>
      */
     public $VpcId;
 
     /**
-     * @var string 子网 ID(可通过 vpc:DescribeSubnets 接口获取)
+     * @var string <p>子网 ID(可通过 vpc:DescribeSubnets 接口获取)</p>
      */
     public $SubnetId;
 
     /**
-     * @var integer 数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
+     * @var integer <p>数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一</p>
      */
     public $DataRetentionTime;
 
     /**
-     * @var string 可用区(与子网同可用区)
+     * @var string <p>可用区(与子网同可用区)</p>
      */
     public $Zone;
 
     /**
-     * @var array 实例的标签
+     * @var array <p>实例的标签</p>
      */
     public $TagSpecification;
 
     /**
-     * @var string 需要关联的 Grafana 实例
+     * @var string <p>需要关联的 Grafana 实例</p>
      */
     public $GrafanaInstanceId;
 
     /**
-     * @param string $InstanceName 实例名
-     * @param string $VpcId VPC ID(可通过 vpc:DescribeVpcs 接口获取，与实例同地域)
-     * @param string $SubnetId 子网 ID(可通过 vpc:DescribeSubnets 接口获取)
-     * @param integer $DataRetentionTime 数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
-     * @param string $Zone 可用区(与子网同可用区)
-     * @param array $TagSpecification 实例的标签
-     * @param string $GrafanaInstanceId 需要关联的 Grafana 实例
+     * @var array <p>标识prom实例特殊属性</p><p>归档存储时长(天):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p>
+     */
+    public $InstanceAttributes;
+
+    /**
+     * @param string $InstanceName <p>实例名</p>
+     * @param string $VpcId <p>VPC ID(可通过 vpc:DescribeVpcs 接口获取，与实例同地域)</p>
+     * @param string $SubnetId <p>子网 ID(可通过 vpc:DescribeSubnets 接口获取)</p>
+     * @param integer $DataRetentionTime <p>数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一</p>
+     * @param string $Zone <p>可用区(与子网同可用区)</p>
+     * @param array $TagSpecification <p>实例的标签</p>
+     * @param string $GrafanaInstanceId <p>需要关联的 Grafana 实例</p>
+     * @param array $InstanceAttributes <p>标识prom实例特殊属性</p><p>归档存储时长(天):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p>
      */
     function __construct()
     {
@@ -125,6 +133,15 @@ class CreatePrometheusMultiTenantInstancePostPayModeRequest extends AbstractMode
 
         if (array_key_exists("GrafanaInstanceId",$param) and $param["GrafanaInstanceId"] !== null) {
             $this->GrafanaInstanceId = $param["GrafanaInstanceId"];
+        }
+
+        if (array_key_exists("InstanceAttributes",$param) and $param["InstanceAttributes"] !== null) {
+            $this->InstanceAttributes = [];
+            foreach ($param["InstanceAttributes"] as $key => $value){
+                $obj = new PrometheusRuleKV();
+                $obj->deserialize($value);
+                array_push($this->InstanceAttributes, $obj);
+            }
         }
     }
 }

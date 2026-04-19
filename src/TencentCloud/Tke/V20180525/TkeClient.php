@@ -255,6 +255,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\ModifyClusterVirtualNodePoolResponse ModifyClusterVirtualNodePool(Models\ModifyClusterVirtualNodePoolRequest $req) 修改超级节点池
  * @method Models\ModifyExternalNodePoolResponse ModifyExternalNodePool(Models\ModifyExternalNodePoolRequest $req) 修改注册节点池
  * @method Models\ModifyGlobalMaintenanceWindowAndExclusionsResponse ModifyGlobalMaintenanceWindowAndExclusions(Models\ModifyGlobalMaintenanceWindowAndExclusionsRequest $req) 更新全局维护时间窗口和排除项
+ * @method Models\ModifyLogConfigResponse ModifyLogConfig(Models\ModifyLogConfigRequest $req) 修改日志采集配置
  * @method Models\ModifyMasterComponentResponse ModifyMasterComponent(Models\ModifyMasterComponentRequest $req) 修改master组件，支持kube-apiserver、kube-scheduler、kube-controller-manager副本数调整为0和恢复
  * @method Models\ModifyNodePoolDesiredCapacityAboutAsgResponse ModifyNodePoolDesiredCapacityAboutAsg(Models\ModifyNodePoolDesiredCapacityAboutAsgRequest $req) 修改节点池关联伸缩组的期望实例数
  * @method Models\ModifyNodePoolInstanceTypesResponse ModifyNodePoolInstanceTypes(Models\ModifyNodePoolInstanceTypesRequest $req) 修改节点池的机型配置

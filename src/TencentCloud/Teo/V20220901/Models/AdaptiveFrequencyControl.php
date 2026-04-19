@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEnabled() 获取自适应频控是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li>
  * @method void setEnabled(string $Enabled) 设置自适应频控是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li>
+ * @method string getId() 获取自适应频控的规则 ID，仅作为出参返回。
+ * @method void setId(string $Id) 设置自适应频控的规则 ID，仅作为出参返回。
  * @method string getSensitivity() 获取自适应频控的限制等级，当 Enabled 为 on 时，此字段必填。取值有：<li>Loose：宽松；</li><li>Moderate：适中；</li><li>Strict：严格。</li>
  * @method void setSensitivity(string $Sensitivity) 设置自适应频控的限制等级，当 Enabled 为 on 时，此字段必填。取值有：<li>Loose：宽松；</li><li>Moderate：适中；</li><li>Strict：严格。</li>
  * @method SecurityAction getAction() 获取自适应频控的处置方式，当 Enabled 为 on 时，此字段必填。SecurityAction 的 Name 取值支持：<li>Monitor：观察；</li><li>Deny：拦截；</li><li>Challenge：挑战，其中ChallengeActionParameters.Name仅支持JSChallenge。</li>
@@ -35,6 +37,11 @@ class AdaptiveFrequencyControl extends AbstractModel
     public $Enabled;
 
     /**
+     * @var string 自适应频控的规则 ID，仅作为出参返回。
+     */
+    public $Id;
+
+    /**
      * @var string 自适应频控的限制等级，当 Enabled 为 on 时，此字段必填。取值有：<li>Loose：宽松；</li><li>Moderate：适中；</li><li>Strict：严格。</li>
      */
     public $Sensitivity;
@@ -46,6 +53,7 @@ class AdaptiveFrequencyControl extends AbstractModel
 
     /**
      * @param string $Enabled 自适应频控是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li>
+     * @param string $Id 自适应频控的规则 ID，仅作为出参返回。
      * @param string $Sensitivity 自适应频控的限制等级，当 Enabled 为 on 时，此字段必填。取值有：<li>Loose：宽松；</li><li>Moderate：适中；</li><li>Strict：严格。</li>
      * @param SecurityAction $Action 自适应频控的处置方式，当 Enabled 为 on 时，此字段必填。SecurityAction 的 Name 取值支持：<li>Monitor：观察；</li><li>Deny：拦截；</li><li>Challenge：挑战，其中ChallengeActionParameters.Name仅支持JSChallenge。</li>
      */
@@ -64,6 +72,10 @@ class AdaptiveFrequencyControl extends AbstractModel
         }
         if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
             $this->Enabled = $param["Enabled"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
 
         if (array_key_exists("Sensitivity",$param) and $param["Sensitivity"] !== null) {

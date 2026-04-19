@@ -20,170 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 表示一项资产的信息。
  *
- * @method integer getCustomerAssetId() 获取客户资产的ID。
- * @method void setCustomerAssetId(integer $CustomerAssetId) 设置客户资产的ID。
- * @method string getAssetType() 获取资产类别。
- * @method void setAssetType(string $AssetType) 设置资产类别。
- * @method string getAssetName() 获取资产的名称。
- * @method void setAssetName(string $AssetName) 设置资产的名称。
- * @method string getImageTag() 获取当资产为镜像时，这个字段为镜像Tag。
- * @method void setImageTag(string $ImageTag) 设置当资产为镜像时，这个字段为镜像Tag。
- * @method string getHostIP() 获取资产所在的主机IP。
- * @method void setHostIP(string $HostIP) 设置资产所在的主机IP。
- * @method string getNodeName() 获取资产所属的节点的名称
- * @method void setNodeName(string $NodeName) 设置资产所属的节点的名称
- * @method string getCheckStatus() 获取检测状态
-
-CHECK_INIT, 待检测
-
-CHECK_RUNNING, 检测中
-
-CHECK_FINISHED, 检测完成
-
-CHECK_FAILED, 检测失败
- * @method void setCheckStatus(string $CheckStatus) 设置检测状态
-
-CHECK_INIT, 待检测
-
-CHECK_RUNNING, 检测中
-
-CHECK_FINISHED, 检测完成
-
-CHECK_FAILED, 检测失败
- * @method integer getPassedPolicyItemCount() 获取此类资产通过的检测项的数目。
- * @method void setPassedPolicyItemCount(integer $PassedPolicyItemCount) 设置此类资产通过的检测项的数目。
- * @method integer getFailedPolicyItemCount() 获取此类资产未通过的检测的数目。
- * @method void setFailedPolicyItemCount(integer $FailedPolicyItemCount) 设置此类资产未通过的检测的数目。
- * @method string getLastCheckTime() 获取上次检测的时间。
- * @method void setLastCheckTime(string $LastCheckTime) 设置上次检测的时间。
- * @method string getCheckResult() 获取检测结果：
-RESULT_FAILED: 未通过。
-RESULT_PASSED: 通过。
- * @method void setCheckResult(string $CheckResult) 设置检测结果：
-RESULT_FAILED: 未通过。
-RESULT_PASSED: 通过。
- * @method string getInstanceId() 获取主机节点的实例id
- * @method void setInstanceId(string $InstanceId) 设置主机节点的实例id
- * @method ImageRegistryInfo getImageRegistryInfo() 获取镜像仓库信息
- * @method void setImageRegistryInfo(ImageRegistryInfo $ImageRegistryInfo) 设置镜像仓库信息
- * @method string getClusterID() 获取集群id
- * @method void setClusterID(string $ClusterID) 设置集群id
- * @method string getClusterName() 获取集群名称
- * @method void setClusterName(string $ClusterName) 设置集群名称
+ * @method integer getCustomerAssetId() 获取<p>客户资产的ID。</p>
+ * @method void setCustomerAssetId(integer $CustomerAssetId) 设置<p>客户资产的ID。</p>
+ * @method string getAssetType() 获取<p>资产类别。</p>
+ * @method void setAssetType(string $AssetType) 设置<p>资产类别。</p>
+ * @method string getAssetName() 获取<p>资产的名称。</p>
+ * @method void setAssetName(string $AssetName) 设置<p>资产的名称。</p>
+ * @method string getImageTag() 获取<p>当资产为镜像时，这个字段为镜像Tag。</p>
+ * @method void setImageTag(string $ImageTag) 设置<p>当资产为镜像时，这个字段为镜像Tag。</p>
+ * @method string getHostIP() 获取<p>资产所在的主机IP。</p>
+ * @method void setHostIP(string $HostIP) 设置<p>资产所在的主机IP。</p>
+ * @method string getNodeName() 获取<p>资产所属的节点的名称</p>
+ * @method void setNodeName(string $NodeName) 设置<p>资产所属的节点的名称</p>
+ * @method string getCheckStatus() 获取<p>检测状态</p><p>CHECK_INIT, 待检测</p><p>CHECK_RUNNING, 检测中</p><p>CHECK_FINISHED, 检测完成</p><p>CHECK_FAILED, 检测失败</p>
+ * @method void setCheckStatus(string $CheckStatus) 设置<p>检测状态</p><p>CHECK_INIT, 待检测</p><p>CHECK_RUNNING, 检测中</p><p>CHECK_FINISHED, 检测完成</p><p>CHECK_FAILED, 检测失败</p>
+ * @method integer getPassedPolicyItemCount() 获取<p>此类资产通过的检测项的数目。</p>
+ * @method void setPassedPolicyItemCount(integer $PassedPolicyItemCount) 设置<p>此类资产通过的检测项的数目。</p>
+ * @method integer getFailedPolicyItemCount() 获取<p>此类资产未通过的检测的数目。</p>
+ * @method void setFailedPolicyItemCount(integer $FailedPolicyItemCount) 设置<p>此类资产未通过的检测的数目。</p>
+ * @method string getLastCheckTime() 获取<p>上次检测的时间。</p>
+ * @method void setLastCheckTime(string $LastCheckTime) 设置<p>上次检测的时间。</p>
+ * @method string getCheckResult() 获取<p>检测结果：<br>RESULT_FAILED: 未通过。<br>RESULT_PASSED: 通过。</p>
+ * @method void setCheckResult(string $CheckResult) 设置<p>检测结果：<br>RESULT_FAILED: 未通过。<br>RESULT_PASSED: 通过。</p>
+ * @method string getInstanceId() 获取<p>主机节点的实例id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>主机节点的实例id</p>
+ * @method ImageRegistryInfo getImageRegistryInfo() 获取<p>镜像仓库信息</p>
+ * @method void setImageRegistryInfo(ImageRegistryInfo $ImageRegistryInfo) 设置<p>镜像仓库信息</p>
+ * @method string getClusterID() 获取<p>集群id</p>
+ * @method void setClusterID(string $ClusterID) 设置<p>集群id</p>
+ * @method string getClusterName() 获取<p>集群名称</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名称</p>
+ * @method string getAssetUniqueID() 获取<p>资产唯一ID</p><p>默认值：-</p>
+ * @method void setAssetUniqueID(string $AssetUniqueID) 设置<p>资产唯一ID</p><p>默认值：-</p>
  */
 class ComplianceAssetInfo extends AbstractModel
 {
     /**
-     * @var integer 客户资产的ID。
+     * @var integer <p>客户资产的ID。</p>
      */
     public $CustomerAssetId;
 
     /**
-     * @var string 资产类别。
+     * @var string <p>资产类别。</p>
      */
     public $AssetType;
 
     /**
-     * @var string 资产的名称。
+     * @var string <p>资产的名称。</p>
      */
     public $AssetName;
 
     /**
-     * @var string 当资产为镜像时，这个字段为镜像Tag。
+     * @var string <p>当资产为镜像时，这个字段为镜像Tag。</p>
      */
     public $ImageTag;
 
     /**
-     * @var string 资产所在的主机IP。
+     * @var string <p>资产所在的主机IP。</p>
      */
     public $HostIP;
 
     /**
-     * @var string 资产所属的节点的名称
+     * @var string <p>资产所属的节点的名称</p>
      */
     public $NodeName;
 
     /**
-     * @var string 检测状态
-
-CHECK_INIT, 待检测
-
-CHECK_RUNNING, 检测中
-
-CHECK_FINISHED, 检测完成
-
-CHECK_FAILED, 检测失败
+     * @var string <p>检测状态</p><p>CHECK_INIT, 待检测</p><p>CHECK_RUNNING, 检测中</p><p>CHECK_FINISHED, 检测完成</p><p>CHECK_FAILED, 检测失败</p>
      */
     public $CheckStatus;
 
     /**
-     * @var integer 此类资产通过的检测项的数目。
+     * @var integer <p>此类资产通过的检测项的数目。</p>
      */
     public $PassedPolicyItemCount;
 
     /**
-     * @var integer 此类资产未通过的检测的数目。
+     * @var integer <p>此类资产未通过的检测的数目。</p>
      */
     public $FailedPolicyItemCount;
 
     /**
-     * @var string 上次检测的时间。
+     * @var string <p>上次检测的时间。</p>
      */
     public $LastCheckTime;
 
     /**
-     * @var string 检测结果：
-RESULT_FAILED: 未通过。
-RESULT_PASSED: 通过。
+     * @var string <p>检测结果：<br>RESULT_FAILED: 未通过。<br>RESULT_PASSED: 通过。</p>
      */
     public $CheckResult;
 
     /**
-     * @var string 主机节点的实例id
+     * @var string <p>主机节点的实例id</p>
      */
     public $InstanceId;
 
     /**
-     * @var ImageRegistryInfo 镜像仓库信息
+     * @var ImageRegistryInfo <p>镜像仓库信息</p>
      */
     public $ImageRegistryInfo;
 
     /**
-     * @var string 集群id
+     * @var string <p>集群id</p>
      */
     public $ClusterID;
 
     /**
-     * @var string 集群名称
+     * @var string <p>集群名称</p>
      */
     public $ClusterName;
 
     /**
-     * @param integer $CustomerAssetId 客户资产的ID。
-     * @param string $AssetType 资产类别。
-     * @param string $AssetName 资产的名称。
-     * @param string $ImageTag 当资产为镜像时，这个字段为镜像Tag。
-     * @param string $HostIP 资产所在的主机IP。
-     * @param string $NodeName 资产所属的节点的名称
-     * @param string $CheckStatus 检测状态
+     * @var string <p>资产唯一ID</p><p>默认值：-</p>
+     */
+    public $AssetUniqueID;
 
-CHECK_INIT, 待检测
-
-CHECK_RUNNING, 检测中
-
-CHECK_FINISHED, 检测完成
-
-CHECK_FAILED, 检测失败
-     * @param integer $PassedPolicyItemCount 此类资产通过的检测项的数目。
-     * @param integer $FailedPolicyItemCount 此类资产未通过的检测的数目。
-     * @param string $LastCheckTime 上次检测的时间。
-     * @param string $CheckResult 检测结果：
-RESULT_FAILED: 未通过。
-RESULT_PASSED: 通过。
-     * @param string $InstanceId 主机节点的实例id
-     * @param ImageRegistryInfo $ImageRegistryInfo 镜像仓库信息
-     * @param string $ClusterID 集群id
-     * @param string $ClusterName 集群名称
+    /**
+     * @param integer $CustomerAssetId <p>客户资产的ID。</p>
+     * @param string $AssetType <p>资产类别。</p>
+     * @param string $AssetName <p>资产的名称。</p>
+     * @param string $ImageTag <p>当资产为镜像时，这个字段为镜像Tag。</p>
+     * @param string $HostIP <p>资产所在的主机IP。</p>
+     * @param string $NodeName <p>资产所属的节点的名称</p>
+     * @param string $CheckStatus <p>检测状态</p><p>CHECK_INIT, 待检测</p><p>CHECK_RUNNING, 检测中</p><p>CHECK_FINISHED, 检测完成</p><p>CHECK_FAILED, 检测失败</p>
+     * @param integer $PassedPolicyItemCount <p>此类资产通过的检测项的数目。</p>
+     * @param integer $FailedPolicyItemCount <p>此类资产未通过的检测的数目。</p>
+     * @param string $LastCheckTime <p>上次检测的时间。</p>
+     * @param string $CheckResult <p>检测结果：<br>RESULT_FAILED: 未通过。<br>RESULT_PASSED: 通过。</p>
+     * @param string $InstanceId <p>主机节点的实例id</p>
+     * @param ImageRegistryInfo $ImageRegistryInfo <p>镜像仓库信息</p>
+     * @param string $ClusterID <p>集群id</p>
+     * @param string $ClusterName <p>集群名称</p>
+     * @param string $AssetUniqueID <p>资产唯一ID</p><p>默认值：-</p>
      */
     function __construct()
     {
@@ -257,6 +225,10 @@ RESULT_PASSED: 通过。
 
         if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
             $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("AssetUniqueID",$param) and $param["AssetUniqueID"] !== null) {
+            $this->AssetUniqueID = $param["AssetUniqueID"];
         }
     }
 }

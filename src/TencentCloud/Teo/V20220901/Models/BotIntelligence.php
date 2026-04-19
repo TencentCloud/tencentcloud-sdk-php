@@ -20,8 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Bot 智能分析的具体配置。
  *
- * @method BotRatings getBotRatings() 获取基于客户端和请求特征，将请求来源分为人类来源请求、合法 Bot 请求、疑似 Bot 请求和高风险 Bot 请求，并提供请求处置选项。
- * @method void setBotRatings(BotRatings $BotRatings) 设置基于客户端和请求特征，将请求来源分为人类来源请求、合法 Bot 请求、疑似 Bot 请求和高风险 Bot 请求，并提供请求处置选项。
  * @method string getEnabled() 获取Bot 智能分析的具体配置开关。取值有：
 
 on：开启；
@@ -30,14 +28,13 @@ off：关闭。
 
 on：开启；
 off：关闭。
+ * @method string getId() 获取Bot 智能分析的规则 ID，仅作为出参返回。
+ * @method void setId(string $Id) 设置Bot 智能分析的规则 ID，仅作为出参返回。
+ * @method BotRatings getBotRatings() 获取基于客户端和请求特征，将请求来源分为人类来源请求、合法 Bot 请求、疑似 Bot 请求和高风险 Bot 请求，并提供请求处置选项。
+ * @method void setBotRatings(BotRatings $BotRatings) 设置基于客户端和请求特征，将请求来源分为人类来源请求、合法 Bot 请求、疑似 Bot 请求和高风险 Bot 请求，并提供请求处置选项。
  */
 class BotIntelligence extends AbstractModel
 {
-    /**
-     * @var BotRatings 基于客户端和请求特征，将请求来源分为人类来源请求、合法 Bot 请求、疑似 Bot 请求和高风险 Bot 请求，并提供请求处置选项。
-     */
-    public $BotRatings;
-
     /**
      * @var string Bot 智能分析的具体配置开关。取值有：
 
@@ -47,11 +44,22 @@ off：关闭。
     public $Enabled;
 
     /**
-     * @param BotRatings $BotRatings 基于客户端和请求特征，将请求来源分为人类来源请求、合法 Bot 请求、疑似 Bot 请求和高风险 Bot 请求，并提供请求处置选项。
+     * @var string Bot 智能分析的规则 ID，仅作为出参返回。
+     */
+    public $Id;
+
+    /**
+     * @var BotRatings 基于客户端和请求特征，将请求来源分为人类来源请求、合法 Bot 请求、疑似 Bot 请求和高风险 Bot 请求，并提供请求处置选项。
+     */
+    public $BotRatings;
+
+    /**
      * @param string $Enabled Bot 智能分析的具体配置开关。取值有：
 
 on：开启；
 off：关闭。
+     * @param string $Id Bot 智能分析的规则 ID，仅作为出参返回。
+     * @param BotRatings $BotRatings 基于客户端和请求特征，将请求来源分为人类来源请求、合法 Bot 请求、疑似 Bot 请求和高风险 Bot 请求，并提供请求处置选项。
      */
     function __construct()
     {
@@ -66,13 +74,17 @@ off：关闭。
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
+            $this->Enabled = $param["Enabled"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
         if (array_key_exists("BotRatings",$param) and $param["BotRatings"] !== null) {
             $this->BotRatings = new BotRatings();
             $this->BotRatings->deserialize($param["BotRatings"]);
-        }
-
-        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
-            $this->Enabled = $param["Enabled"];
         }
     }
 }

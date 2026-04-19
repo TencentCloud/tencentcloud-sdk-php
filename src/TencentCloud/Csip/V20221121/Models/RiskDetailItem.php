@@ -20,122 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 风险详情
  *
- * @method string getCreateTime() 获取首次发现时间
- * @method void setCreateTime(string $CreateTime) 设置首次发现时间
- * @method string getUpdateTime() 获取更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
- * @method integer getRiskStatus() 获取风险状态
- * @method void setRiskStatus(integer $RiskStatus) 设置风险状态
- * @method string getRiskContent() 获取风险内容
- * @method void setRiskContent(string $RiskContent) 设置风险内容
- * @method string getProvider() 获取云厂商
- * @method void setProvider(string $Provider) 设置云厂商
- * @method string getProviderName() 获取云厂商名称
- * @method void setProviderName(string $ProviderName) 设置云厂商名称
- * @method string getCloudAccountId() 获取云账号
- * @method void setCloudAccountId(string $CloudAccountId) 设置云账号
- * @method string getCloudAccountName() 获取云账号名称
- * @method void setCloudAccountName(string $CloudAccountName) 设置云账号名称
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method integer getRiskId() 获取风险ID
- * @method void setRiskId(integer $RiskId) 设置风险ID
- * @method string getRiskRuleId() 获取风险规则ID
- * @method void setRiskRuleId(string $RiskRuleId) 设置风险规则ID
- * @method string getCheckStatus() 获取风险验证状态
- * @method void setCheckStatus(string $CheckStatus) 设置风险验证状态
- * @method integer getAppID() 获取
- * @method void setAppID(integer $AppID) 设置
+ * @method string getCreateTime() 获取<p>首次发现时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>首次发现时间</p>
+ * @method string getUpdateTime() 获取<p>更新时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
+ * @method integer getRiskStatus() 获取<p>风险状态</p>
+ * @method void setRiskStatus(integer $RiskStatus) 设置<p>风险状态</p>
+ * @method string getRiskContent() 获取<p>风险内容</p>
+ * @method void setRiskContent(string $RiskContent) 设置<p>风险内容</p>
+ * @method string getProvider() 获取<p>云厂商</p>
+ * @method void setProvider(string $Provider) 设置<p>云厂商</p>
+ * @method string getProviderName() 获取<p>云厂商名称</p>
+ * @method void setProviderName(string $ProviderName) 设置<p>云厂商名称</p>
+ * @method string getCloudAccountId() 获取<p>云账号</p>
+ * @method void setCloudAccountId(string $CloudAccountId) 设置<p>云账号</p>
+ * @method string getCloudAccountName() 获取<p>云账号名称</p>
+ * @method void setCloudAccountName(string $CloudAccountName) 设置<p>云账号名称</p>
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getInstanceName() 获取<p>实例名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称</p>
+ * @method integer getRiskId() 获取<p>风险ID</p>
+ * @method void setRiskId(integer $RiskId) 设置<p>风险ID</p>
+ * @method string getRiskRuleId() 获取<p>风险规则ID</p>
+ * @method void setRiskRuleId(string $RiskRuleId) 设置<p>风险规则ID</p>
+ * @method string getCheckStatus() 获取<p>风险验证状态</p>
+ * @method void setCheckStatus(string $CheckStatus) 设置<p>风险验证状态</p>
+ * @method integer getAppID() 获取<p>用户AppID</p>
+ * @method void setAppID(integer $AppID) 设置<p>用户AppID</p>
  */
 class RiskDetailItem extends AbstractModel
 {
     /**
-     * @var string 首次发现时间
+     * @var string <p>首次发现时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var integer 风险状态
+     * @var integer <p>风险状态</p>
      */
     public $RiskStatus;
 
     /**
-     * @var string 风险内容
+     * @var string <p>风险内容</p>
      */
     public $RiskContent;
 
     /**
-     * @var string 云厂商
+     * @var string <p>云厂商</p>
      */
     public $Provider;
 
     /**
-     * @var string 云厂商名称
+     * @var string <p>云厂商名称</p>
      */
     public $ProviderName;
 
     /**
-     * @var string 云账号
+     * @var string <p>云账号</p>
      */
     public $CloudAccountId;
 
     /**
-     * @var string 云账号名称
+     * @var string <p>云账号名称</p>
      */
     public $CloudAccountName;
 
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
      */
     public $InstanceName;
 
     /**
-     * @var integer 风险ID
+     * @var integer <p>风险ID</p>
      */
     public $RiskId;
 
     /**
-     * @var string 风险规则ID
+     * @var string <p>风险规则ID</p>
      */
     public $RiskRuleId;
 
     /**
-     * @var string 风险验证状态
+     * @var string <p>风险验证状态</p>
      */
     public $CheckStatus;
 
     /**
-     * @var integer 
+     * @var integer <p>用户AppID</p>
      */
     public $AppID;
 
     /**
-     * @param string $CreateTime 首次发现时间
-     * @param string $UpdateTime 更新时间
-     * @param integer $RiskStatus 风险状态
-     * @param string $RiskContent 风险内容
-     * @param string $Provider 云厂商
-     * @param string $ProviderName 云厂商名称
-     * @param string $CloudAccountId 云账号
-     * @param string $CloudAccountName 云账号名称
-     * @param string $InstanceId 实例ID
-     * @param string $InstanceName 实例名称
-     * @param integer $RiskId 风险ID
-     * @param string $RiskRuleId 风险规则ID
-     * @param string $CheckStatus 风险验证状态
-     * @param integer $AppID 
+     * @param string $CreateTime <p>首次发现时间</p>
+     * @param string $UpdateTime <p>更新时间</p>
+     * @param integer $RiskStatus <p>风险状态</p>
+     * @param string $RiskContent <p>风险内容</p>
+     * @param string $Provider <p>云厂商</p>
+     * @param string $ProviderName <p>云厂商名称</p>
+     * @param string $CloudAccountId <p>云账号</p>
+     * @param string $CloudAccountName <p>云账号名称</p>
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $InstanceName <p>实例名称</p>
+     * @param integer $RiskId <p>风险ID</p>
+     * @param string $RiskRuleId <p>风险规则ID</p>
+     * @param string $CheckStatus <p>风险验证状态</p>
+     * @param integer $AppID <p>用户AppID</p>
      */
     function __construct()
     {

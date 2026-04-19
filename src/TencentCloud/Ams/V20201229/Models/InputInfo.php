@@ -20,38 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 输入信息详情
  *
- * @method string getType() 获取该字段表示文件访问类型，取值为**URL**（资源链接）和**COS** (腾讯云对象存储)。
- * @method void setType(string $Type) 设置该字段表示文件访问类型，取值为**URL**（资源链接）和**COS** (腾讯云对象存储)。
- * @method string getUrl() 获取该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。
- * @method void setUrl(string $Url) 设置该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。
- * @method BucketInfo getBucketInfo() 获取该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空。
+ * @method string getType() 获取<p>该字段表示文件访问类型，取值为<strong>URL</strong>（资源链接）和<strong>COS</strong> (腾讯云对象存储)。</p>
+ * @method void setType(string $Type) 设置<p>该字段表示文件访问类型，取值为<strong>URL</strong>（资源链接）和<strong>COS</strong> (腾讯云对象存储)。</p>
+ * @method string getUrl() 获取<p>该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。</p>
+ * @method void setUrl(string $Url) 设置<p>该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。</p>
+ * @method BucketInfo getBucketInfo() 获取<p>该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBucketInfo(BucketInfo $BucketInfo) 设置该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空。
+ * @method void setBucketInfo(BucketInfo $BucketInfo) 设置<p>该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getImageUrlList() 获取<p>大模型审核可选输入图片列表</p>
+ * @method void setImageUrlList(array $ImageUrlList) 设置<p>大模型审核可选输入图片列表</p>
+ * @method string getTextContent() 获取<p>大模型审核场景下，base64编码的审核要求内容</p>
+ * @method void setTextContent(string $TextContent) 设置<p>大模型审核场景下，base64编码的审核要求内容</p>
  */
 class InputInfo extends AbstractModel
 {
     /**
-     * @var string 该字段表示文件访问类型，取值为**URL**（资源链接）和**COS** (腾讯云对象存储)。
+     * @var string <p>该字段表示文件访问类型，取值为<strong>URL</strong>（资源链接）和<strong>COS</strong> (腾讯云对象存储)。</p>
      */
     public $Type;
 
     /**
-     * @var string 该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。
+     * @var string <p>该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。</p>
      */
     public $Url;
 
     /**
-     * @var BucketInfo 该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空。
+     * @var BucketInfo <p>该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BucketInfo;
 
     /**
-     * @param string $Type 该字段表示文件访问类型，取值为**URL**（资源链接）和**COS** (腾讯云对象存储)。
-     * @param string $Url 该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。
-     * @param BucketInfo $BucketInfo 该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空。
+     * @var array <p>大模型审核可选输入图片列表</p>
+     */
+    public $ImageUrlList;
+
+    /**
+     * @var string <p>大模型审核场景下，base64编码的审核要求内容</p>
+     */
+    public $TextContent;
+
+    /**
+     * @param string $Type <p>该字段表示文件访问类型，取值为<strong>URL</strong>（资源链接）和<strong>COS</strong> (腾讯云对象存储)。</p>
+     * @param string $Url <p>该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。</p>
+     * @param BucketInfo $BucketInfo <p>该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ImageUrlList <p>大模型审核可选输入图片列表</p>
+     * @param string $TextContent <p>大模型审核场景下，base64编码的审核要求内容</p>
      */
     function __construct()
     {
@@ -77,6 +93,14 @@ class InputInfo extends AbstractModel
         if (array_key_exists("BucketInfo",$param) and $param["BucketInfo"] !== null) {
             $this->BucketInfo = new BucketInfo();
             $this->BucketInfo->deserialize($param["BucketInfo"]);
+        }
+
+        if (array_key_exists("ImageUrlList",$param) and $param["ImageUrlList"] !== null) {
+            $this->ImageUrlList = $param["ImageUrlList"];
+        }
+
+        if (array_key_exists("TextContent",$param) and $param["TextContent"] !== null) {
+            $this->TextContent = $param["TextContent"];
         }
     }
 }

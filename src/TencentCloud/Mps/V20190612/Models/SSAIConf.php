@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SSAI广告插入配置。
  *
- * @method string getAdsUrl() 获取<p>广告决策服务器URL(ADS)。</p>
- * @method void setAdsUrl(string $AdsUrl) 设置<p>广告决策服务器URL(ADS)。</p>
+ * @method string getAdsUrl() 获取<p>广告决策服务器URL(ADS)。注意：填了AdsUrl会自动代替覆盖AdsUrls[0]</p>
+ * @method void setAdsUrl(string $AdsUrl) 设置<p>广告决策服务器URL(ADS)。注意：填了AdsUrl会自动代替覆盖AdsUrls[0]</p>
+ * @method array getAdsUrls() 获取<p>广告决策服务器URL数组(ADS)</p>
+ * @method void setAdsUrls(array $AdsUrls) 设置<p>广告决策服务器URL数组(ADS)</p>
  * @method array getConfigAliases() 获取<p>参数配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigAliases(array $ConfigAliases) 设置<p>参数配置。</p>
@@ -50,8 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceCDNPrefix(string $SourceCDNPrefix) 设置<p>源流CDN前缀，需要以http://或者https://开头。</p>
  * @method string getAdCDNPrefix() 获取<p>广告CDN前缀，需要以http://或者https://开头。</p>
  * @method void setAdCDNPrefix(string $AdCDNPrefix) 设置<p>广告CDN前缀，需要以http://或者https://开头。</p>
- * @method string getPreRollAdsUrl() 获取<p>预加载广告决策服务地址。</p>
- * @method void setPreRollAdsUrl(string $PreRollAdsUrl) 设置<p>预加载广告决策服务地址。</p>
+ * @method string getPreRollAdsUrl() 获取<p>预加载广告决策服务地址。注意：填了PreRollAdsUrl会自动代替覆盖PreRollAdsUrls[0]</p>
+ * @method void setPreRollAdsUrl(string $PreRollAdsUrl) 设置<p>预加载广告决策服务地址。注意：填了PreRollAdsUrl会自动代替覆盖PreRollAdsUrls[0]</p>
+ * @method array getPreRollAdsUrls() 获取<p>预加载广告决策服务地址数组</p>
+ * @method void setPreRollAdsUrls(array $PreRollAdsUrls) 设置<p>预加载广告决策服务地址数组</p>
  * @method integer getPreRollMaxAllowedDuration() 获取<p>预加载广告最大允许时长，0-3600。</p>
  * @method void setPreRollMaxAllowedDuration(integer $PreRollMaxAllowedDuration) 设置<p>预加载广告最大允许时长，0-3600。</p>
  * @method boolean getMultiRequest() 获取<p>是否开启多次请求ADS,开启后将优先请求ADS，请求失败后再请求兜底广告</p>
@@ -60,9 +64,14 @@ use TencentCloud\Common\AbstractModel;
 class SSAIConf extends AbstractModel
 {
     /**
-     * @var string <p>广告决策服务器URL(ADS)。</p>
+     * @var string <p>广告决策服务器URL(ADS)。注意：填了AdsUrl会自动代替覆盖AdsUrls[0]</p>
      */
     public $AdsUrl;
+
+    /**
+     * @var array <p>广告决策服务器URL数组(ADS)</p>
+     */
+    public $AdsUrls;
 
     /**
      * @var array <p>参数配置。</p>
@@ -119,9 +128,14 @@ class SSAIConf extends AbstractModel
     public $AdCDNPrefix;
 
     /**
-     * @var string <p>预加载广告决策服务地址。</p>
+     * @var string <p>预加载广告决策服务地址。注意：填了PreRollAdsUrl会自动代替覆盖PreRollAdsUrls[0]</p>
      */
     public $PreRollAdsUrl;
+
+    /**
+     * @var array <p>预加载广告决策服务地址数组</p>
+     */
+    public $PreRollAdsUrls;
 
     /**
      * @var integer <p>预加载广告最大允许时长，0-3600。</p>
@@ -134,7 +148,8 @@ class SSAIConf extends AbstractModel
     public $MultiRequest;
 
     /**
-     * @param string $AdsUrl <p>广告决策服务器URL(ADS)。</p>
+     * @param string $AdsUrl <p>广告决策服务器URL(ADS)。注意：填了AdsUrl会自动代替覆盖AdsUrls[0]</p>
+     * @param array $AdsUrls <p>广告决策服务器URL数组(ADS)</p>
      * @param array $ConfigAliases <p>参数配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AdMarkerPassthrough <p>是否开启广告标记透传。</p>
@@ -149,7 +164,8 @@ class SSAIConf extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SourceCDNPrefix <p>源流CDN前缀，需要以http://或者https://开头。</p>
      * @param string $AdCDNPrefix <p>广告CDN前缀，需要以http://或者https://开头。</p>
-     * @param string $PreRollAdsUrl <p>预加载广告决策服务地址。</p>
+     * @param string $PreRollAdsUrl <p>预加载广告决策服务地址。注意：填了PreRollAdsUrl会自动代替覆盖PreRollAdsUrls[0]</p>
+     * @param array $PreRollAdsUrls <p>预加载广告决策服务地址数组</p>
      * @param integer $PreRollMaxAllowedDuration <p>预加载广告最大允许时长，0-3600。</p>
      * @param boolean $MultiRequest <p>是否开启多次请求ADS,开启后将优先请求ADS，请求失败后再请求兜底广告</p>
      */
@@ -168,6 +184,10 @@ class SSAIConf extends AbstractModel
         }
         if (array_key_exists("AdsUrl",$param) and $param["AdsUrl"] !== null) {
             $this->AdsUrl = $param["AdsUrl"];
+        }
+
+        if (array_key_exists("AdsUrls",$param) and $param["AdsUrls"] !== null) {
+            $this->AdsUrls = $param["AdsUrls"];
         }
 
         if (array_key_exists("ConfigAliases",$param) and $param["ConfigAliases"] !== null) {
@@ -217,6 +237,10 @@ class SSAIConf extends AbstractModel
 
         if (array_key_exists("PreRollAdsUrl",$param) and $param["PreRollAdsUrl"] !== null) {
             $this->PreRollAdsUrl = $param["PreRollAdsUrl"];
+        }
+
+        if (array_key_exists("PreRollAdsUrls",$param) and $param["PreRollAdsUrls"] !== null) {
+            $this->PreRollAdsUrls = $param["PreRollAdsUrls"];
         }
 
         if (array_key_exists("PreRollMaxAllowedDuration",$param) and $param["PreRollMaxAllowedDuration"] !== null) {

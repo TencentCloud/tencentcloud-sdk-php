@@ -14,39 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Aiart\V20221229\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ReplaceBackground返回参数结构体
+ * ModifyLogConfig返回参数结构体
  *
- * @method string getResultImage() 获取<p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p>
- * @method void setResultImage(string $ResultImage) 设置<p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p>
- * @method string getMaskImage() 获取<p>如果 MaskUrl 未传，则返回使用内置商品分割算法得到的 Mask 结果。</p>
- * @method void setMaskImage(string $MaskImage) 设置<p>如果 MaskUrl 未传，则返回使用内置商品分割算法得到的 Mask 结果。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class ReplaceBackgroundResponse extends AbstractModel
+class ModifyLogConfigResponse extends AbstractModel
 {
-    /**
-     * @var string <p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p>
-     */
-    public $ResultImage;
-
-    /**
-     * @var string <p>如果 MaskUrl 未传，则返回使用内置商品分割算法得到的 Mask 结果。</p>
-     */
-    public $MaskImage;
-
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param string $ResultImage <p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p>
-     * @param string $MaskImage <p>如果 MaskUrl 未传，则返回使用内置商品分割算法得到的 Mask 结果。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,14 +46,6 @@ class ReplaceBackgroundResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResultImage",$param) and $param["ResultImage"] !== null) {
-            $this->ResultImage = $param["ResultImage"];
-        }
-
-        if (array_key_exists("MaskImage",$param) and $param["MaskImage"] !== null) {
-            $this->MaskImage = $param["MaskImage"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

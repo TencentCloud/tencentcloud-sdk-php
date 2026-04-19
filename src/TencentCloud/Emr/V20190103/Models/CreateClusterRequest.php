@@ -74,6 +74,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSgIP(string $SgIP) 设置<p>安全指定来源ip</p>
  * @method integer getPartitionNumber() 获取<p>分区置放群组分区</p>
  * @method void setPartitionNumber(integer $PartitionNumber) 设置<p>分区置放群组分区</p>
+ * @method integer getWebUiVersion() 获取<p>服务ui地址</p><p>枚举值：</p><ul><li>0： 服务ui地址，只返回1条服务ui地址</li><li>1： 服务ui地址，如果服务含有多个ui地址将全部返回，例如impala的Impalad、StateStore、Catalogd</li></ul><p>默认值：0</p>
+ * @method void setWebUiVersion(integer $WebUiVersion) 设置<p>服务ui地址</p><p>枚举值：</p><ul><li>0： 服务ui地址，只返回1条服务ui地址</li><li>1： 服务ui地址，如果服务含有多个ui地址将全部返回，例如impala的Impalad、StateStore、Catalogd</li></ul><p>默认值：0</p>
  */
 class CreateClusterRequest extends AbstractModel
 {
@@ -213,6 +215,11 @@ class CreateClusterRequest extends AbstractModel
     public $PartitionNumber;
 
     /**
+     * @var integer <p>服务ui地址</p><p>枚举值：</p><ul><li>0： 服务ui地址，只返回1条服务ui地址</li><li>1： 服务ui地址，如果服务含有多个ui地址将全部返回，例如impala的Impalad、StateStore、Catalogd</li></ul><p>默认值：0</p>
+     */
+    public $WebUiVersion;
+
+    /**
      * @param string $ProductVersion <p>EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：<a href="https://cloud.tencent.com/document/product/589/66338">产品版本名称</a></p>
      * @param boolean $EnableSupportHAFlag <p>是否开启节点高可用。取值范围：</p><li>true：表示开启节点高可用。</li><li>false：表示不开启节点高可用。</li>
      * @param string $InstanceName <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li>
@@ -240,6 +247,7 @@ class CreateClusterRequest extends AbstractModel
      * @param integer $NeedCdbAudit <p>是否开通数据库审计</p>
      * @param string $SgIP <p>安全指定来源ip</p>
      * @param integer $PartitionNumber <p>分区置放群组分区</p>
+     * @param integer $WebUiVersion <p>服务ui地址</p><p>枚举值：</p><ul><li>0： 服务ui地址，只返回1条服务ui地址</li><li>1： 服务ui地址，如果服务含有多个ui地址将全部返回，例如impala的Impalad、StateStore、Catalogd</li></ul><p>默认值：0</p>
      */
     function __construct()
     {
@@ -389,6 +397,10 @@ class CreateClusterRequest extends AbstractModel
 
         if (array_key_exists("PartitionNumber",$param) and $param["PartitionNumber"] !== null) {
             $this->PartitionNumber = $param["PartitionNumber"];
+        }
+
+        if (array_key_exists("WebUiVersion",$param) and $param["WebUiVersion"] !== null) {
+            $this->WebUiVersion = $param["WebUiVersion"];
         }
     }
 }

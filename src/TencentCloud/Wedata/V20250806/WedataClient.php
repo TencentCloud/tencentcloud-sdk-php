@@ -159,6 +159,7 @@ use TencentCloud\Wedata\V20250806\Models as Models;
  * @method Models\ListTaskVersionsResponse ListTaskVersions(Models\ListTaskVersionsRequest $req) 任务保存版本列表
  * @method Models\ListTasksResponse ListTasks(Models\ListTasksRequest $req) 查询任务分页信息
  * @method Models\ListTenantRolesResponse ListTenantRoles(Models\ListTenantRolesRequest $req) 获取所有主账号角色列表
+ * @method Models\ListTriggerTaskRunsResponse ListTriggerTaskRuns(Models\ListTriggerTaskRunsRequest $req) 查询工作流运行
  * @method Models\ListTriggerTaskVersionsResponse ListTriggerTaskVersions(Models\ListTriggerTaskVersionsRequest $req) 任务保存版本列表
  * @method Models\ListTriggerTasksResponse ListTriggerTasks(Models\ListTriggerTasksRequest $req) 查询任务分页信息
  * @method Models\ListTriggerWorkflowRunsResponse ListTriggerWorkflowRuns(Models\ListTriggerWorkflowRunsRequest $req) 查询工作流运行

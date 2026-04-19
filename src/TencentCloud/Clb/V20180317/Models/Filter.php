@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 过滤器条件
  *
- * @method string getName() 获取过滤器的名称
- * @method void setName(string $Name) 设置过滤器的名称
- * @method array getValues() 获取过滤器的值数组
- * @method void setValues(array $Values) 设置过滤器的值数组
+ * @method string getName() 获取<p>过滤器的名称</p>
+ * @method void setName(string $Name) 设置<p>过滤器的名称</p>
+ * @method array getValues() 获取<p>过滤器的值数组</p>
+ * @method void setValues(array $Values) 设置<p>过滤器的值数组</p>
  */
 class Filter extends AbstractModel
 {
     /**
-     * @var string 过滤器的名称
+     * @var string <p>过滤器的名称</p>
      */
     public $Name;
 
     /**
-     * @var array 过滤器的值数组
+     * @var array <p>过滤器的值数组</p>
      */
     public $Values;
 
     /**
-     * @param string $Name 过滤器的名称
-     * @param array $Values 过滤器的值数组
+     * @param string $Name <p>过滤器的名称</p>
+     * @param array $Values <p>过滤器的值数组</p>
      */
     function __construct()
     {

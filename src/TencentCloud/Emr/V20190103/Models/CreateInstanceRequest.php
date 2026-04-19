@@ -98,6 +98,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSgIP(string $SgIP) 设置<p>安全组指定来源ip</p>
  * @method integer getPartitionNumber() 获取<p>分区置放群组分区</p>
  * @method void setPartitionNumber(integer $PartitionNumber) 设置<p>分区置放群组分区</p>
+ * @method integer getWebUiVersion() 获取<p>服务ui地址</p><p>枚举值：</p><ul><li>0： 服务ui地址，只返回1条服务ui地址</li><li>1： 服务ui地址，如果服务含有多个ui地址将全部返回，例如impala的Impalad、StateStore、Catalogd</li></ul><p>默认值：0</p>
+ * @method void setWebUiVersion(integer $WebUiVersion) 设置<p>服务ui地址</p><p>枚举值：</p><ul><li>0： 服务ui地址，只返回1条服务ui地址</li><li>1： 服务ui地址，如果服务含有多个ui地址将全部返回，例如impala的Impalad、StateStore、Catalogd</li></ul><p>默认值：0</p>
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -297,6 +299,11 @@ class CreateInstanceRequest extends AbstractModel
     public $PartitionNumber;
 
     /**
+     * @var integer <p>服务ui地址</p><p>枚举值：</p><ul><li>0： 服务ui地址，只返回1条服务ui地址</li><li>1： 服务ui地址，如果服务含有多个ui地址将全部返回，例如impala的Impalad、StateStore、Catalogd</li></ul><p>默认值：0</p>
+     */
+    public $WebUiVersion;
+
+    /**
      * @param integer $ProductId <p>产品ID，不同产品ID表示不同的EMR产品版本。取值范围：<br>51:表示STARROCKS-V1.4.0<br>54:表示STARROCKS-V2.0.0<br>27:表示KAFKA-V1.0.0<br>50:表示KAFKA-V2.0.0<br>16:表示EMR-V2.3.0<br>20:表示EMR-V2.5.0<br>30:表示EMR-V2.6.0<br>38:表示EMR-V2.7.0<br>25:表示EMR-V3.1.0<br>33:表示EMR-V3.2.1<br>34:表示EMR-V3.3.0<br>37:表示EMR-V3.4.0<br>44:表示EMR-V3.5.0<br>53:表示EMR-V3.6.0<br>58:表示EMR-3.6.1<br>59:表示EMR-serverless-1.0.0<br>60:表示EMR-TKE-1.1.0<br>61:表示SR-V2.1.0<br>62:表示SR-V2.1.0-SharedData<br>63:表示SR-V2.1.0.tlinux<br>64:表示统一元数据管理项目<br>65:表示EMR-TKE-AI-1.0.0<br>66:表示RSS-1.0.0<br>67:表示SR-V2.2.0<br>68:表示SR-V2.2.0.tlinux<br>69:表示EMR-AI-1.1.0<br>70:表示SR-V2.2.1<br>71:表示EMR-3.7.0<br>72:表示EMR-serverless-1.0.1<br>73:表示KAFKA-2.0.1<br>74:表示SR-V2.2.2<br>75:表示EMR-TKE-AI-1.1.0<br>76:表示EMR-V3.7.1<br>77:表示SERVERLESS-TCBASE-1.0.0<br>78:表示EMR-V3.6.2<br>79:表示STARROCKS-V2.2.2<br>80:表示EMR-AI-V1.1.1</p>
      * @param array $Software <p>部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：<a href="https://cloud.tencent.com/document/product/589/20279">组件版本</a> ；<br>填写实例值：hive、flink。</p>
      * @param integer $SupportHA <p>是否开启节点高可用。取值范围：</p><li>0：表示不开启节点高可用。</li><li>1：表示开启节点高可用。</li>
@@ -336,6 +343,7 @@ class CreateInstanceRequest extends AbstractModel
      * @param integer $NeedCdbAudit <p>是否开通审计：0:不开通,1:开通</p>
      * @param string $SgIP <p>安全组指定来源ip</p>
      * @param integer $PartitionNumber <p>分区置放群组分区</p>
+     * @param integer $WebUiVersion <p>服务ui地址</p><p>枚举值：</p><ul><li>0： 服务ui地址，只返回1条服务ui地址</li><li>1： 服务ui地址，如果服务含有多个ui地址将全部返回，例如impala的Impalad、StateStore、Catalogd</li></ul><p>默认值：0</p>
      */
     function __construct()
     {
@@ -535,6 +543,10 @@ class CreateInstanceRequest extends AbstractModel
 
         if (array_key_exists("PartitionNumber",$param) and $param["PartitionNumber"] !== null) {
             $this->PartitionNumber = $param["PartitionNumber"];
+        }
+
+        if (array_key_exists("WebUiVersion",$param) and $param["WebUiVersion"] !== null) {
+            $this->WebUiVersion = $param["WebUiVersion"];
         }
     }
 }

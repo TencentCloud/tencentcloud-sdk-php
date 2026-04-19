@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPrometheusInstanceAttributes请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID
- * @method void setInstanceId(string $InstanceId) 设置实例 ID
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method integer getDataRetentionTime() 获取数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
- * @method void setDataRetentionTime(integer $DataRetentionTime) 设置数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
+ * @method string getInstanceId() 获取<p>实例 ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID</p>
+ * @method string getInstanceName() 获取<p>实例名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称</p>
+ * @method integer getDataRetentionTime() 获取<p>数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一</p>
+ * @method void setDataRetentionTime(integer $DataRetentionTime) 设置<p>数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一</p>
+ * @method array getInstanceAttributes() 获取<p>标识prom实例特殊属性</p><p>归档存储时长(天):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p>
+ * @method void setInstanceAttributes(array $InstanceAttributes) 设置<p>标识prom实例特殊属性</p><p>归档存储时长(天):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p>
  */
 class ModifyPrometheusInstanceAttributesRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID
+     * @var string <p>实例 ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
      */
     public $InstanceName;
 
     /**
-     * @var integer 数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
+     * @var integer <p>数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一</p>
      */
     public $DataRetentionTime;
 
     /**
-     * @param string $InstanceId 实例 ID
-     * @param string $InstanceName 实例名称
-     * @param integer $DataRetentionTime 数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
+     * @var array <p>标识prom实例特殊属性</p><p>归档存储时长(天):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p>
+     */
+    public $InstanceAttributes;
+
+    /**
+     * @param string $InstanceId <p>实例 ID</p>
+     * @param string $InstanceName <p>实例名称</p>
+     * @param integer $DataRetentionTime <p>数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一</p>
+     * @param array $InstanceAttributes <p>标识prom实例特殊属性</p><p>归档存储时长(天):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p>
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class ModifyPrometheusInstanceAttributesRequest extends AbstractModel
 
         if (array_key_exists("DataRetentionTime",$param) and $param["DataRetentionTime"] !== null) {
             $this->DataRetentionTime = $param["DataRetentionTime"];
+        }
+
+        if (array_key_exists("InstanceAttributes",$param) and $param["InstanceAttributes"] !== null) {
+            $this->InstanceAttributes = [];
+            foreach ($param["InstanceAttributes"] as $key => $value){
+                $obj = new PrometheusRuleKV();
+                $obj->deserialize($value);
+                array_push($this->InstanceAttributes, $obj);
+            }
         }
     }
 }

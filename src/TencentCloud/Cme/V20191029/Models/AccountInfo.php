@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 制作云用户账号信息。
  *
- * @method string getUserId() 获取用户 Id。
- * @method void setUserId(string $UserId) 设置用户 Id。
- * @method string getPhone() 获取用户手机号码。
- * @method void setPhone(string $Phone) 设置用户手机号码。
- * @method string getNick() 获取用户昵称。
- * @method void setNick(string $Nick) 设置用户昵称。
- * @method string getStatus() 获取账号状态，取值：
-<li>Normal：有效；</li>
-<li>Stopped：无效。</li>
- * @method void setStatus(string $Status) 设置账号状态，取值：
-<li>Normal：有效；</li>
-<li>Stopped：无效。</li>
+ * @method string getUserId() 获取<p>用户 Id。</p>
+ * @method void setUserId(string $UserId) 设置<p>用户 Id。</p>
+ * @method string getPhone() 获取<p>用户手机号码。</p>
+ * @method void setPhone(string $Phone) 设置<p>用户手机号码。</p>
+ * @method string getNick() 获取<p>用户昵称。</p>
+ * @method void setNick(string $Nick) 设置<p>用户昵称。</p>
+ * @method string getStatus() 获取<p>账号状态，取值：</p><li>Normal：有效；</li><li>Stopped：无效。</li>
+ * @method void setStatus(string $Status) 设置<p>账号状态，取值：</p><li>Normal：有效；</li><li>Stopped：无效。</li>
+ * @method string getCreateTime() 获取<p>账户的创建时间。</p><p>参数格式：使用 ISO 日期格式。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>账户的创建时间。</p><p>参数格式：使用 ISO 日期格式。</p>
  */
 class AccountInfo extends AbstractModel
 {
     /**
-     * @var string 用户 Id。
+     * @var string <p>用户 Id。</p>
      */
     public $UserId;
 
     /**
-     * @var string 用户手机号码。
+     * @var string <p>用户手机号码。</p>
      */
     public $Phone;
 
     /**
-     * @var string 用户昵称。
+     * @var string <p>用户昵称。</p>
      */
     public $Nick;
 
     /**
-     * @var string 账号状态，取值：
-<li>Normal：有效；</li>
-<li>Stopped：无效。</li>
+     * @var string <p>账号状态，取值：</p><li>Normal：有效；</li><li>Stopped：无效。</li>
      */
     public $Status;
 
     /**
-     * @param string $UserId 用户 Id。
-     * @param string $Phone 用户手机号码。
-     * @param string $Nick 用户昵称。
-     * @param string $Status 账号状态，取值：
-<li>Normal：有效；</li>
-<li>Stopped：无效。</li>
+     * @var string <p>账户的创建时间。</p><p>参数格式：使用 ISO 日期格式。</p>
+     */
+    public $CreateTime;
+
+    /**
+     * @param string $UserId <p>用户 Id。</p>
+     * @param string $Phone <p>用户手机号码。</p>
+     * @param string $Nick <p>用户昵称。</p>
+     * @param string $Status <p>账号状态，取值：</p><li>Normal：有效；</li><li>Stopped：无效。</li>
+     * @param string $CreateTime <p>账户的创建时间。</p><p>参数格式：使用 ISO 日期格式。</p>
      */
     function __construct()
     {
@@ -92,6 +92,10 @@ class AccountInfo extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

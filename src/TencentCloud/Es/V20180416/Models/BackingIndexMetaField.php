@@ -20,70 +20,78 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 后备索引元数据字段
  *
- * @method string getIndexName() 获取后备索引名
+ * @method string getIndexName() 获取<p>后备索引名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndexName(string $IndexName) 设置后备索引名
+ * @method void setIndexName(string $IndexName) 设置<p>后备索引名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIndexStatus() 获取后备索引状态
+ * @method string getIndexStatus() 获取<p>后备索引状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndexStatus(string $IndexStatus) 设置后备索引状态
+ * @method void setIndexStatus(string $IndexStatus) 设置<p>后备索引状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIndexStorage() 获取后备索引存储大小
+ * @method integer getIndexStorage() 获取<p>后备索引存储大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndexStorage(integer $IndexStorage) 设置后备索引存储大小
+ * @method void setIndexStorage(integer $IndexStorage) 设置<p>后备索引存储大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIndexPhrase() 获取后备索引当前生命周期
+ * @method string getIndexPhrase() 获取<p>后备索引当前生命周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndexPhrase(string $IndexPhrase) 设置后备索引当前生命周期
+ * @method void setIndexPhrase(string $IndexPhrase) 设置<p>后备索引当前生命周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIndexCreateTime() 获取后备索引创建时间
+ * @method string getIndexCreateTime() 获取<p>后备索引创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndexCreateTime(string $IndexCreateTime) 设置后备索引创建时间
+ * @method void setIndexCreateTime(string $IndexCreateTime) 设置<p>后备索引创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIndexUuid() 获取<p>索引Uuid</p>
+ * @method void setIndexUuid(string $IndexUuid) 设置<p>索引Uuid</p>
  */
 class BackingIndexMetaField extends AbstractModel
 {
     /**
-     * @var string 后备索引名
+     * @var string <p>后备索引名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexName;
 
     /**
-     * @var string 后备索引状态
+     * @var string <p>后备索引状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexStatus;
 
     /**
-     * @var integer 后备索引存储大小
+     * @var integer <p>后备索引存储大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexStorage;
 
     /**
-     * @var string 后备索引当前生命周期
+     * @var string <p>后备索引当前生命周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexPhrase;
 
     /**
-     * @var string 后备索引创建时间
+     * @var string <p>后备索引创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexCreateTime;
 
     /**
-     * @param string $IndexName 后备索引名
+     * @var string <p>索引Uuid</p>
+     */
+    public $IndexUuid;
+
+    /**
+     * @param string $IndexName <p>后备索引名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IndexStatus 后备索引状态
+     * @param string $IndexStatus <p>后备索引状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IndexStorage 后备索引存储大小
+     * @param integer $IndexStorage <p>后备索引存储大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IndexPhrase 后备索引当前生命周期
+     * @param string $IndexPhrase <p>后备索引当前生命周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IndexCreateTime 后备索引创建时间
+     * @param string $IndexCreateTime <p>后备索引创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IndexUuid <p>索引Uuid</p>
      */
     function __construct()
     {
@@ -116,6 +124,10 @@ class BackingIndexMetaField extends AbstractModel
 
         if (array_key_exists("IndexCreateTime",$param) and $param["IndexCreateTime"] !== null) {
             $this->IndexCreateTime = $param["IndexCreateTime"];
+        }
+
+        if (array_key_exists("IndexUuid",$param) and $param["IndexUuid"] !== null) {
+            $this->IndexUuid = $param["IndexUuid"];
         }
     }
 }

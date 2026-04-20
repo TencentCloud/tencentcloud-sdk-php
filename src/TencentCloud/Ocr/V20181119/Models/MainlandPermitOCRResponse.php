@@ -20,99 +20,99 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MainlandPermitOCR返回参数结构体
  *
- * @method string getName() 获取中文姓名
- * @method void setName(string $Name) 设置中文姓名
- * @method string getEnglishName() 获取英文姓名
- * @method void setEnglishName(string $EnglishName) 设置英文姓名
- * @method string getSex() 获取性别
- * @method void setSex(string $Sex) 设置性别
- * @method string getBirthday() 获取出生日期
- * @method void setBirthday(string $Birthday) 设置出生日期
- * @method string getIssueAuthority() 获取签发机关
- * @method void setIssueAuthority(string $IssueAuthority) 设置签发机关
- * @method string getValidDate() 获取有效期限
- * @method void setValidDate(string $ValidDate) 设置有效期限
- * @method string getNumber() 获取证件号
- * @method void setNumber(string $Number) 设置证件号
- * @method string getIssueAddress() 获取签发地点
- * @method void setIssueAddress(string $IssueAddress) 设置签发地点
- * @method string getIssueNumber() 获取签发次数
- * @method void setIssueNumber(string $IssueNumber) 设置签发次数
- * @method string getType() 获取证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。
- * @method void setType(string $Type) 设置证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。
- * @method string getProfile() 获取RetProfile为True时返回头像字段， Base64编码
- * @method void setProfile(string $Profile) 设置RetProfile为True时返回头像字段， Base64编码
- * @method string getNationality() 获取国籍
- * @method void setNationality(string $Nationality) 设置国籍
- * @method MainlandTravelPermitBackInfos getMainlandTravelPermitBackInfos() 获取背面字段信息
- * @method void setMainlandTravelPermitBackInfos(MainlandTravelPermitBackInfos $MainlandTravelPermitBackInfos) 设置背面字段信息
+ * @method string getName() 获取<p>中文姓名</p>
+ * @method void setName(string $Name) 设置<p>中文姓名</p>
+ * @method string getEnglishName() 获取<p>英文姓名</p>
+ * @method void setEnglishName(string $EnglishName) 设置<p>英文姓名</p>
+ * @method string getSex() 获取<p>性别</p>
+ * @method void setSex(string $Sex) 设置<p>性别</p>
+ * @method string getBirthday() 获取<p>出生日期</p>
+ * @method void setBirthday(string $Birthday) 设置<p>出生日期</p>
+ * @method string getIssueAuthority() 获取<p>签发机关</p>
+ * @method void setIssueAuthority(string $IssueAuthority) 设置<p>签发机关</p>
+ * @method string getValidDate() 获取<p>有效期限</p>
+ * @method void setValidDate(string $ValidDate) 设置<p>有效期限</p>
+ * @method string getNumber() 获取<p>证件号</p>
+ * @method void setNumber(string $Number) 设置<p>证件号</p>
+ * @method string getIssueAddress() 获取<p>签发地点</p>
+ * @method void setIssueAddress(string $IssueAddress) 设置<p>签发地点</p>
+ * @method string getIssueNumber() 获取<p>签发次数</p>
+ * @method void setIssueNumber(string $IssueNumber) 设置<p>签发次数</p>
+ * @method string getType() 获取<p>证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。</p>
+ * @method void setType(string $Type) 设置<p>证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。</p>
+ * @method string getProfile() 获取<p>RetProfile为True时返回头像字段， Base64编码</p>
+ * @method void setProfile(string $Profile) 设置<p>RetProfile为True时返回头像字段， Base64编码</p>
+ * @method string getNationality() 获取<p>国籍</p>
+ * @method void setNationality(string $Nationality) 设置<p>国籍</p>
+ * @method MainlandTravelPermitBackInfos getMainlandTravelPermitBackInfos() 获取<p>背面字段信息</p>
+ * @method void setMainlandTravelPermitBackInfos(MainlandTravelPermitBackInfos $MainlandTravelPermitBackInfos) 设置<p>背面字段信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class MainlandPermitOCRResponse extends AbstractModel
 {
     /**
-     * @var string 中文姓名
+     * @var string <p>中文姓名</p>
      */
     public $Name;
 
     /**
-     * @var string 英文姓名
+     * @var string <p>英文姓名</p>
      */
     public $EnglishName;
 
     /**
-     * @var string 性别
+     * @var string <p>性别</p>
      */
     public $Sex;
 
     /**
-     * @var string 出生日期
+     * @var string <p>出生日期</p>
      */
     public $Birthday;
 
     /**
-     * @var string 签发机关
+     * @var string <p>签发机关</p>
      */
     public $IssueAuthority;
 
     /**
-     * @var string 有效期限
+     * @var string <p>有效期限</p>
      */
     public $ValidDate;
 
     /**
-     * @var string 证件号
+     * @var string <p>证件号</p>
      */
     public $Number;
 
     /**
-     * @var string 签发地点
+     * @var string <p>签发地点</p>
      */
     public $IssueAddress;
 
     /**
-     * @var string 签发次数
+     * @var string <p>签发次数</p>
      */
     public $IssueNumber;
 
     /**
-     * @var string 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。
+     * @var string <p>证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。</p>
      */
     public $Type;
 
     /**
-     * @var string RetProfile为True时返回头像字段， Base64编码
+     * @var string <p>RetProfile为True时返回头像字段， Base64编码</p>
      */
     public $Profile;
 
     /**
-     * @var string 国籍
+     * @var string <p>国籍</p>
      */
     public $Nationality;
 
     /**
-     * @var MainlandTravelPermitBackInfos 背面字段信息
+     * @var MainlandTravelPermitBackInfos <p>背面字段信息</p>
      */
     public $MainlandTravelPermitBackInfos;
 
@@ -122,19 +122,19 @@ class MainlandPermitOCRResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Name 中文姓名
-     * @param string $EnglishName 英文姓名
-     * @param string $Sex 性别
-     * @param string $Birthday 出生日期
-     * @param string $IssueAuthority 签发机关
-     * @param string $ValidDate 有效期限
-     * @param string $Number 证件号
-     * @param string $IssueAddress 签发地点
-     * @param string $IssueNumber 签发次数
-     * @param string $Type 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。
-     * @param string $Profile RetProfile为True时返回头像字段， Base64编码
-     * @param string $Nationality 国籍
-     * @param MainlandTravelPermitBackInfos $MainlandTravelPermitBackInfos 背面字段信息
+     * @param string $Name <p>中文姓名</p>
+     * @param string $EnglishName <p>英文姓名</p>
+     * @param string $Sex <p>性别</p>
+     * @param string $Birthday <p>出生日期</p>
+     * @param string $IssueAuthority <p>签发机关</p>
+     * @param string $ValidDate <p>有效期限</p>
+     * @param string $Number <p>证件号</p>
+     * @param string $IssueAddress <p>签发地点</p>
+     * @param string $IssueNumber <p>签发次数</p>
+     * @param string $Type <p>证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。</p>
+     * @param string $Profile <p>RetProfile为True时返回头像字段， Base64编码</p>
+     * @param string $Nationality <p>国籍</p>
+     * @param MainlandTravelPermitBackInfos $MainlandTravelPermitBackInfos <p>背面字段信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

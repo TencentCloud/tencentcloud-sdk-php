@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Tdw类型入参
  *
- * @method string getBid() 获取Tdw的bid
- * @method void setBid(string $Bid) 设置Tdw的bid
- * @method string getTid() 获取Tdw的tid
- * @method void setTid(string $Tid) 设置Tdw的tid
- * @method boolean getIsDomestic() 获取默认true
- * @method void setIsDomestic(boolean $IsDomestic) 设置默认true
- * @method string getTdwHost() 获取TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com
- * @method void setTdwHost(string $TdwHost) 设置TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com
- * @method integer getTdwPort() 获取TDW端口，默认8099
- * @method void setTdwPort(integer $TdwPort) 设置TDW端口，默认8099
+ * @method string getBid() 获取<p>Tdw的bid</p>
+ * @method void setBid(string $Bid) 设置<p>Tdw的bid</p>
+ * @method string getTid() 获取<p>Tdw的tid</p>
+ * @method void setTid(string $Tid) 设置<p>Tdw的tid</p>
+ * @method boolean getIsDomestic() 获取<p>默认true</p>
+ * @method void setIsDomestic(boolean $IsDomestic) 设置<p>默认true</p>
+ * @method string getTdwHost() 获取<p>TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com</p>
+ * @method void setTdwHost(string $TdwHost) 设置<p>TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com</p>
+ * @method integer getTdwPort() 获取<p>TDW端口，默认8099</p>
+ * @method void setTdwPort(integer $TdwPort) 设置<p>TDW端口，默认8099</p>
  */
 class TdwParam extends AbstractModel
 {
     /**
-     * @var string Tdw的bid
+     * @var string <p>Tdw的bid</p>
      */
     public $Bid;
 
     /**
-     * @var string Tdw的tid
+     * @var string <p>Tdw的tid</p>
      */
     public $Tid;
 
     /**
-     * @var boolean 默认true
+     * @var boolean <p>默认true</p>
      */
     public $IsDomestic;
 
     /**
-     * @var string TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com
+     * @var string <p>TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com</p>
      */
     public $TdwHost;
 
     /**
-     * @var integer TDW端口，默认8099
+     * @var integer <p>TDW端口，默认8099</p>
      */
     public $TdwPort;
 
     /**
-     * @param string $Bid Tdw的bid
-     * @param string $Tid Tdw的tid
-     * @param boolean $IsDomestic 默认true
-     * @param string $TdwHost TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com
-     * @param integer $TdwPort TDW端口，默认8099
+     * @param string $Bid <p>Tdw的bid</p>
+     * @param string $Tid <p>Tdw的tid</p>
+     * @param boolean $IsDomestic <p>默认true</p>
+     * @param string $TdwHost <p>TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com</p>
+     * @param integer $TdwPort <p>TDW端口，默认8099</p>
      */
     function __construct()
     {

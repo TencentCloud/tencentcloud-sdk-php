@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyStreamPackageLinearAssemblyProgram请求参数结构体
  *
- * @method string getId() 获取Program Id。
- * @method void setId(string $Id) 设置Program Id。
- * @method string getName() 获取修改后的名称。
- * @method void setName(string $Name) 设置修改后的名称。
- * @method string getSourceType() 获取编排的目标source的类型，分直播和点播。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD
- * @method void setSourceType(string $SourceType) 设置编排的目标source的类型，分直播和点播。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD
- * @method string getSourceLocationId() 获取关联的source location。	
- * @method void setSourceLocationId(string $SourceLocationId) 设置关联的source location。	
- * @method string getSourceName() 获取关联的直播or点播，source名称，location下全局唯一。
- * @method void setSourceName(string $SourceName) 设置关联的直播or点播，source名称，location下全局唯一。
- * @method PlaybackInfoReq getPlaybackConf() 获取PlaybackConf。
- * @method void setPlaybackConf(PlaybackInfoReq $PlaybackConf) 设置PlaybackConf。
- * @method array getAdBreaks() 获取AdBreaks。
- * @method void setAdBreaks(array $AdBreaks) 设置AdBreaks。
+ * @method string getId() 获取<p>Program Id。</p>
+ * @method void setId(string $Id) 设置<p>Program Id。</p>
+ * @method string getName() 获取<p>修改后的名称。</p>
+ * @method void setName(string $Name) 设置<p>修改后的名称。</p>
+ * @method string getSourceType() 获取<p>编排的目标source的类型，分直播和点播。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD</p>
+ * @method void setSourceType(string $SourceType) 设置<p>编排的目标source的类型，分直播和点播。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD</p>
+ * @method string getSourceLocationId() 获取<p>关联的source location。</p>
+ * @method void setSourceLocationId(string $SourceLocationId) 设置<p>关联的source location。</p>
+ * @method string getSourceName() 获取<p>关联的直播or点播，source名称，location下全局唯一。</p>
+ * @method void setSourceName(string $SourceName) 设置<p>关联的直播or点播，source名称，location下全局唯一。</p>
+ * @method PlaybackInfoReq getPlaybackConf() 获取<p>PlaybackConf。</p>
+ * @method void setPlaybackConf(PlaybackInfoReq $PlaybackConf) 设置<p>PlaybackConf。</p>
+ * @method array getAdBreaks() 获取<p>AdBreaks。</p>
+ * @method void setAdBreaks(array $AdBreaks) 设置<p>AdBreaks。</p>
+ * @method string getVodAcquisitionMethod() 获取<p>VOD获取方式，支持PreCaching和DynamicUpdating，默认PreCaching，仅Linear频道支持</p>
+ * @method void setVodAcquisitionMethod(string $VodAcquisitionMethod) 设置<p>VOD获取方式，支持PreCaching和DynamicUpdating，默认PreCaching，仅Linear频道支持</p>
  */
 class ModifyStreamPackageLinearAssemblyProgramRequest extends AbstractModel
 {
     /**
-     * @var string Program Id。
+     * @var string <p>Program Id。</p>
      */
     public $Id;
 
     /**
-     * @var string 修改后的名称。
+     * @var string <p>修改后的名称。</p>
      */
     public $Name;
 
     /**
-     * @var string 编排的目标source的类型，分直播和点播。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD
+     * @var string <p>编排的目标source的类型，分直播和点播。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD</p>
      */
     public $SourceType;
 
     /**
-     * @var string 关联的source location。	
+     * @var string <p>关联的source location。</p>
      */
     public $SourceLocationId;
 
     /**
-     * @var string 关联的直播or点播，source名称，location下全局唯一。
+     * @var string <p>关联的直播or点播，source名称，location下全局唯一。</p>
      */
     public $SourceName;
 
     /**
-     * @var PlaybackInfoReq PlaybackConf。
+     * @var PlaybackInfoReq <p>PlaybackConf。</p>
      */
     public $PlaybackConf;
 
     /**
-     * @var array AdBreaks。
+     * @var array <p>AdBreaks。</p>
      */
     public $AdBreaks;
 
     /**
-     * @param string $Id Program Id。
-     * @param string $Name 修改后的名称。
-     * @param string $SourceType 编排的目标source的类型，分直播和点播。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD
-     * @param string $SourceLocationId 关联的source location。	
-     * @param string $SourceName 关联的直播or点播，source名称，location下全局唯一。
-     * @param PlaybackInfoReq $PlaybackConf PlaybackConf。
-     * @param array $AdBreaks AdBreaks。
+     * @var string <p>VOD获取方式，支持PreCaching和DynamicUpdating，默认PreCaching，仅Linear频道支持</p>
+     */
+    public $VodAcquisitionMethod;
+
+    /**
+     * @param string $Id <p>Program Id。</p>
+     * @param string $Name <p>修改后的名称。</p>
+     * @param string $SourceType <p>编排的目标source的类型，分直播和点播。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD</p>
+     * @param string $SourceLocationId <p>关联的source location。</p>
+     * @param string $SourceName <p>关联的直播or点播，source名称，location下全局唯一。</p>
+     * @param PlaybackInfoReq $PlaybackConf <p>PlaybackConf。</p>
+     * @param array $AdBreaks <p>AdBreaks。</p>
+     * @param string $VodAcquisitionMethod <p>VOD获取方式，支持PreCaching和DynamicUpdating，默认PreCaching，仅Linear频道支持</p>
      */
     function __construct()
     {
@@ -126,6 +134,10 @@ class ModifyStreamPackageLinearAssemblyProgramRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AdBreaks, $obj);
             }
+        }
+
+        if (array_key_exists("VodAcquisitionMethod",$param) and $param["VodAcquisitionMethod"] !== null) {
+            $this->VodAcquisitionMethod = $param["VodAcquisitionMethod"];
         }
     }
 }

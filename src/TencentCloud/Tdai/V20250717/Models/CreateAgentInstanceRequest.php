@@ -30,6 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParameters(array $Parameters) 设置<p>智能体实例的参数列表</p>
  * @method array getTags() 获取<p>资源的标签信息</p>
  * @method void setTags(array $Tags) 设置<p>资源的标签信息</p>
+ * @method string getInstanceType() 获取<p>无</p>
+ * @method void setInstanceType(string $InstanceType) 设置<p>无</p>
+ * @method integer getTemplateId() 获取<p>无</p>
+ * @method void setTemplateId(integer $TemplateId) 设置<p>无</p>
+ * @method array getSkills() 获取<p>无</p>
+ * @method void setSkills(array $Skills) 设置<p>无</p>
+ * @method integer getSoulId() 获取<p>无</p>
+ * @method void setSoulId(integer $SoulId) 设置<p>无</p>
+ * @method string getDescription() 获取<p>无</p>
+ * @method void setDescription(string $Description) 设置<p>无</p>
  */
 class CreateAgentInstanceRequest extends AbstractModel
 {
@@ -59,11 +69,41 @@ class CreateAgentInstanceRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string <p>无</p>
+     */
+    public $InstanceType;
+
+    /**
+     * @var integer <p>无</p>
+     */
+    public $TemplateId;
+
+    /**
+     * @var array <p>无</p>
+     */
+    public $Skills;
+
+    /**
+     * @var integer <p>无</p>
+     */
+    public $SoulId;
+
+    /**
+     * @var string <p>无</p>
+     */
+    public $Description;
+
+    /**
      * @param string $AgentId <p>智能体ID</p>
      * @param string $AgentVersion <p>智能体版本</p>
      * @param string $InstanceName <p>实例名</p>
      * @param array $Parameters <p>智能体实例的参数列表</p>
      * @param array $Tags <p>资源的标签信息</p>
+     * @param string $InstanceType <p>无</p>
+     * @param integer $TemplateId <p>无</p>
+     * @param array $Skills <p>无</p>
+     * @param integer $SoulId <p>无</p>
+     * @param string $Description <p>无</p>
      */
     function __construct()
     {
@@ -106,6 +146,26 @@ class CreateAgentInstanceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
+        }
+
+        if (array_key_exists("Skills",$param) and $param["Skills"] !== null) {
+            $this->Skills = $param["Skills"];
+        }
+
+        if (array_key_exists("SoulId",$param) and $param["SoulId"] !== null) {
+            $this->SoulId = $param["SoulId"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

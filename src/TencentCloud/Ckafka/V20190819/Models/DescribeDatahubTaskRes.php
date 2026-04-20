@@ -20,154 +20,178 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询Datahub任务信息
  *
- * @method string getTaskId() 获取任务ID
- * @method void setTaskId(string $TaskId) 设置任务ID
- * @method string getTaskName() 获取任务名称
- * @method void setTaskName(string $TaskName) 设置任务名称
- * @method string getTaskType() 获取任务类型，SOURCE数据接入，SINK数据流出
- * @method void setTaskType(string $TaskType) 设置任务类型，SOURCE数据接入，SINK数据流出
- * @method integer getStatus() 获取状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败
- * @method void setStatus(integer $Status) 设置状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败
- * @method DatahubResource getSourceResource() 获取数据源
- * @method void setSourceResource(DatahubResource $SourceResource) 设置数据源
- * @method DatahubResource getTargetResource() 获取数据目标
- * @method void setTargetResource(DatahubResource $TargetResource) 设置数据目标
- * @method array getConnections() 获取Connection列表
- * @method void setConnections(array $Connections) 设置Connection列表
- * @method string getCreateTime() 获取任务创建时间
- * @method void setCreateTime(string $CreateTime) 设置任务创建时间
- * @method TransformParam getTransformParam() 获取消息处理规则
+ * @method string getTaskId() 获取<p>任务ID</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务ID</p>
+ * @method string getTaskName() 获取<p>任务名称</p>
+ * @method void setTaskName(string $TaskName) 设置<p>任务名称</p>
+ * @method string getTaskType() 获取<p>任务类型，SOURCE数据接入，SINK数据流出</p>
+ * @method void setTaskType(string $TaskType) 设置<p>任务类型，SOURCE数据接入，SINK数据流出</p>
+ * @method integer getStatus() 获取<p>状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败</p>
+ * @method void setStatus(integer $Status) 设置<p>状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败</p>
+ * @method DatahubResource getSourceResource() 获取<p>数据源</p>
+ * @method void setSourceResource(DatahubResource $SourceResource) 设置<p>数据源</p>
+ * @method DatahubResource getTargetResource() 获取<p>数据目标</p>
+ * @method void setTargetResource(DatahubResource $TargetResource) 设置<p>数据目标</p>
+ * @method array getConnections() 获取<p>Connection列表</p>
+ * @method void setConnections(array $Connections) 设置<p>Connection列表</p>
+ * @method string getCreateTime() 获取<p>任务创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>任务创建时间</p>
+ * @method TransformParam getTransformParam() 获取<p>消息处理规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTransformParam(TransformParam $TransformParam) 设置消息处理规则
+ * @method void setTransformParam(TransformParam $TransformParam) 设置<p>消息处理规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDatahubId() 获取数据接入ID
- * @method void setDatahubId(string $DatahubId) 设置数据接入ID
- * @method string getSchemaId() 获取绑定的SchemaId
- * @method void setSchemaId(string $SchemaId) 设置绑定的SchemaId
- * @method string getSchemaName() 获取绑定的Schema名称
- * @method void setSchemaName(string $SchemaName) 设置绑定的Schema名称
- * @method TransformsParam getTransformsParam() 获取数据处理规则
+ * @method string getDatahubId() 获取<p>数据接入ID</p>
+ * @method void setDatahubId(string $DatahubId) 设置<p>数据接入ID</p>
+ * @method string getSchemaId() 获取<p>绑定的SchemaId</p>
+ * @method void setSchemaId(string $SchemaId) 设置<p>绑定的SchemaId</p>
+ * @method string getSchemaName() 获取<p>绑定的Schema名称</p>
+ * @method void setSchemaName(string $SchemaName) 设置<p>绑定的Schema名称</p>
+ * @method TransformsParam getTransformsParam() 获取<p>数据处理规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTransformsParam(TransformsParam $TransformsParam) 设置数据处理规则
+ * @method void setTransformsParam(TransformsParam $TransformsParam) 设置<p>数据处理规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getErrorMessage() 获取异常信息
- * @method void setErrorMessage(string $ErrorMessage) 设置异常信息
- * @method array getTags() 获取任务标签列表
- * @method void setTags(array $Tags) 设置任务标签列表
- * @method string getDescription() 获取任务描述信息	
- * @method void setDescription(string $Description) 设置任务描述信息	
- * @method integer getIsolateStatus() 获取1:正常 2:隔离中
- * @method void setIsolateStatus(integer $IsolateStatus) 设置1:正常 2:隔离中
+ * @method string getErrorMessage() 获取<p>异常信息</p>
+ * @method void setErrorMessage(string $ErrorMessage) 设置<p>异常信息</p>
+ * @method array getTags() 获取<p>任务标签列表</p>
+ * @method void setTags(array $Tags) 设置<p>任务标签列表</p>
+ * @method string getDescription() 获取<p>任务描述信息</p>
+ * @method void setDescription(string $Description) 设置<p>任务描述信息</p>
+ * @method integer getIsolateStatus() 获取<p>1:正常 2:隔离中</p>
+ * @method void setIsolateStatus(integer $IsolateStatus) 设置<p>1:正常 2:隔离中</p>
+ * @method integer getTaskMax() 获取<p>并发数</p><p>默认值：1</p>
+ * @method void setTaskMax(integer $TaskMax) 设置<p>并发数</p><p>默认值：1</p>
+ * @method integer getSyncThrottleLimit() 获取<p>并发流量预估参考上限，MB/s</p>
+ * @method void setSyncThrottleLimit(integer $SyncThrottleLimit) 设置<p>并发流量预估参考上限，MB/s</p>
+ * @method boolean getAutoExpandFlag() 获取<p>自动扩容 true:自动扩容 false:手动扩容</p><p>默认值：true</p>
+ * @method void setAutoExpandFlag(boolean $AutoExpandFlag) 设置<p>自动扩容 true:自动扩容 false:手动扩容</p><p>默认值：true</p>
  */
 class DescribeDatahubTaskRes extends AbstractModel
 {
     /**
-     * @var string 任务ID
+     * @var string <p>任务ID</p>
      */
     public $TaskId;
 
     /**
-     * @var string 任务名称
+     * @var string <p>任务名称</p>
      */
     public $TaskName;
 
     /**
-     * @var string 任务类型，SOURCE数据接入，SINK数据流出
+     * @var string <p>任务类型，SOURCE数据接入，SINK数据流出</p>
      */
     public $TaskType;
 
     /**
-     * @var integer 状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败
+     * @var integer <p>状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败</p>
      */
     public $Status;
 
     /**
-     * @var DatahubResource 数据源
+     * @var DatahubResource <p>数据源</p>
      */
     public $SourceResource;
 
     /**
-     * @var DatahubResource 数据目标
+     * @var DatahubResource <p>数据目标</p>
      */
     public $TargetResource;
 
     /**
-     * @var array Connection列表
+     * @var array <p>Connection列表</p>
      */
     public $Connections;
 
     /**
-     * @var string 任务创建时间
+     * @var string <p>任务创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var TransformParam 消息处理规则
+     * @var TransformParam <p>消息处理规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TransformParam;
 
     /**
-     * @var string 数据接入ID
+     * @var string <p>数据接入ID</p>
      */
     public $DatahubId;
 
     /**
-     * @var string 绑定的SchemaId
+     * @var string <p>绑定的SchemaId</p>
      */
     public $SchemaId;
 
     /**
-     * @var string 绑定的Schema名称
+     * @var string <p>绑定的Schema名称</p>
      */
     public $SchemaName;
 
     /**
-     * @var TransformsParam 数据处理规则
+     * @var TransformsParam <p>数据处理规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TransformsParam;
 
     /**
-     * @var string 异常信息
+     * @var string <p>异常信息</p>
      */
     public $ErrorMessage;
 
     /**
-     * @var array 任务标签列表
+     * @var array <p>任务标签列表</p>
      */
     public $Tags;
 
     /**
-     * @var string 任务描述信息	
+     * @var string <p>任务描述信息</p>
      */
     public $Description;
 
     /**
-     * @var integer 1:正常 2:隔离中
+     * @var integer <p>1:正常 2:隔离中</p>
      */
     public $IsolateStatus;
 
     /**
-     * @param string $TaskId 任务ID
-     * @param string $TaskName 任务名称
-     * @param string $TaskType 任务类型，SOURCE数据接入，SINK数据流出
-     * @param integer $Status 状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败
-     * @param DatahubResource $SourceResource 数据源
-     * @param DatahubResource $TargetResource 数据目标
-     * @param array $Connections Connection列表
-     * @param string $CreateTime 任务创建时间
-     * @param TransformParam $TransformParam 消息处理规则
+     * @var integer <p>并发数</p><p>默认值：1</p>
+     */
+    public $TaskMax;
+
+    /**
+     * @var integer <p>并发流量预估参考上限，MB/s</p>
+     */
+    public $SyncThrottleLimit;
+
+    /**
+     * @var boolean <p>自动扩容 true:自动扩容 false:手动扩容</p><p>默认值：true</p>
+     */
+    public $AutoExpandFlag;
+
+    /**
+     * @param string $TaskId <p>任务ID</p>
+     * @param string $TaskName <p>任务名称</p>
+     * @param string $TaskType <p>任务类型，SOURCE数据接入，SINK数据流出</p>
+     * @param integer $Status <p>状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败</p>
+     * @param DatahubResource $SourceResource <p>数据源</p>
+     * @param DatahubResource $TargetResource <p>数据目标</p>
+     * @param array $Connections <p>Connection列表</p>
+     * @param string $CreateTime <p>任务创建时间</p>
+     * @param TransformParam $TransformParam <p>消息处理规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DatahubId 数据接入ID
-     * @param string $SchemaId 绑定的SchemaId
-     * @param string $SchemaName 绑定的Schema名称
-     * @param TransformsParam $TransformsParam 数据处理规则
+     * @param string $DatahubId <p>数据接入ID</p>
+     * @param string $SchemaId <p>绑定的SchemaId</p>
+     * @param string $SchemaName <p>绑定的Schema名称</p>
+     * @param TransformsParam $TransformsParam <p>数据处理规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ErrorMessage 异常信息
-     * @param array $Tags 任务标签列表
-     * @param string $Description 任务描述信息	
-     * @param integer $IsolateStatus 1:正常 2:隔离中
+     * @param string $ErrorMessage <p>异常信息</p>
+     * @param array $Tags <p>任务标签列表</p>
+     * @param string $Description <p>任务描述信息</p>
+     * @param integer $IsolateStatus <p>1:正常 2:隔离中</p>
+     * @param integer $TaskMax <p>并发数</p><p>默认值：1</p>
+     * @param integer $SyncThrottleLimit <p>并发流量预估参考上限，MB/s</p>
+     * @param boolean $AutoExpandFlag <p>自动扩容 true:自动扩容 false:手动扩容</p><p>默认值：true</p>
      */
     function __construct()
     {
@@ -262,6 +286,18 @@ class DescribeDatahubTaskRes extends AbstractModel
 
         if (array_key_exists("IsolateStatus",$param) and $param["IsolateStatus"] !== null) {
             $this->IsolateStatus = $param["IsolateStatus"];
+        }
+
+        if (array_key_exists("TaskMax",$param) and $param["TaskMax"] !== null) {
+            $this->TaskMax = $param["TaskMax"];
+        }
+
+        if (array_key_exists("SyncThrottleLimit",$param) and $param["SyncThrottleLimit"] !== null) {
+            $this->SyncThrottleLimit = $param["SyncThrottleLimit"];
+        }
+
+        if (array_key_exists("AutoExpandFlag",$param) and $param["AutoExpandFlag"] !== null) {
+            $this->AutoExpandFlag = $param["AutoExpandFlag"];
         }
     }
 }

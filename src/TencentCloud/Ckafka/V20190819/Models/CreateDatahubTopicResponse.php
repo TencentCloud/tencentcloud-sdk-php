@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDatahubTopic返回参数结构体
  *
- * @method DatahubTopicResp getResult() 获取返回创建结果
- * @method void setResult(DatahubTopicResp $Result) 设置返回创建结果
+ * @method DatahubTopicResp getResult() 获取<p>返回创建结果</p>
+ * @method void setResult(DatahubTopicResp $Result) 设置<p>返回创建结果</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateDatahubTopicResponse extends AbstractModel
 {
     /**
-     * @var DatahubTopicResp 返回创建结果
+     * @var DatahubTopicResp <p>返回创建结果</p>
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class CreateDatahubTopicResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param DatahubTopicResp $Result 返回创建结果
+     * @param DatahubTopicResp $Result <p>返回创建结果</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

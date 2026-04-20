@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OpenKafkaConsumer返回参数结构体
  *
- * @method string getTopicID() 获取KafkaConsumer 消费时使用的Topic参数
- * @method void setTopicID(string $TopicID) 设置KafkaConsumer 消费时使用的Topic参数
+ * @method string getTopicID() 获取<p>KafkaConsumer 消费时使用的Topic参数</p>
+ * @method void setTopicID(string $TopicID) 设置<p>KafkaConsumer 消费时使用的Topic参数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class OpenKafkaConsumerResponse extends AbstractModel
 {
     /**
-     * @var string KafkaConsumer 消费时使用的Topic参数
+     * @var string <p>KafkaConsumer 消费时使用的Topic参数</p>
      */
     public $TopicID;
 
@@ -38,7 +38,7 @@ class OpenKafkaConsumerResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TopicID KafkaConsumer 消费时使用的Topic参数
+     * @param string $TopicID <p>KafkaConsumer 消费时使用的Topic参数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

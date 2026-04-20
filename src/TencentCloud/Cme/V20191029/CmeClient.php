@@ -36,6 +36,7 @@ use TencentCloud\Cme\V20191029\Models as Models;
 <li>媒体转推项目：用于媒体文件转直播输出。</li>
  * @method Models\CreateTeamResponse CreateTeam(Models\CreateTeamRequest $req) 创建一个团队。
  * @method Models\CreateVideoEncodingPresetResponse CreateVideoEncodingPreset(Models\CreateVideoEncodingPresetRequest $req) 指定导出的参数，创建一个视频编码配置
+ * @method Models\DeleteAccountResponse DeleteAccount(Models\DeleteAccountRequest $req) 删除平台归属的账户。
  * @method Models\DeleteClassResponse DeleteClass(Models\DeleteClassRequest $req) 删除分类信息，删除时检验下述限制：
 <li>分类路径必须存在；</li>
 <li>分类下没有绑定素材。</li>
@@ -71,6 +72,7 @@ use TencentCloud\Cme\V20191029\Models as Models;
  * @method Models\ExportVideoByVideoSegmentationDataResponse ExportVideoByVideoSegmentationData(Models\ExportVideoByVideoSegmentationDataRequest $req) 使用视频智能拆条数据导出视频，将指定的视频拆条片段导出为一个视频(内测中，请勿使用)。
  * @method Models\ExportVideoEditProjectResponse ExportVideoEditProject(Models\ExportVideoEditProjectRequest $req) 导出视频编辑项目，支持指定输出的模板。
  * @method Models\FlattenListMediaResponse FlattenListMedia(Models\FlattenListMediaRequest $req) 平铺分类路径下及其子分类下的所有媒体基础信息，返回当前分类及子分类中的所有媒体的基础信息。
+ * @method Models\ForbidAccountResponse ForbidAccount(Models\ForbidAccountRequest $req) 禁用账号。
  * @method Models\GenerateVideoSegmentationSchemeByAiResponse GenerateVideoSegmentationSchemeByAi(Models\GenerateVideoSegmentationSchemeByAiRequest $req) <li>发起视频智能拆条任务，支持智能生成和平精英集锦、王者荣耀集锦、足球集锦、篮球集锦 、人物集锦、新闻拆条等任务。</li>
 <li>和平精英集锦和王者荣耀集锦根据击杀场景进行拆条，足球集锦和篮球集锦根据进球场景进行拆条，人物集锦根据人物人脸特征进行拆条，新闻拆条根据导播进行拆条。</li>
 <li>【本接口内测中，暂不建议使用】</li>

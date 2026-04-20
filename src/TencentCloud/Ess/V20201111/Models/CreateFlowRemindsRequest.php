@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFlowReminds请求参数结构体
  *
- * @method UserInfo getOperator() 获取执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method array getFlowIds() 获取需执行催办的签署流程ID数组，最多包含100个。
- * @method void setFlowIds(array $FlowIds) 设置需执行催办的签署流程ID数组，最多包含100个。
- * @method Agent getAgent() 获取代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
- * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method UserInfo getOperator() 获取<p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+ * @method void setOperator(UserInfo $Operator) 设置<p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+ * @method array getFlowIds() 获取<p>需执行催办的签署流程ID数组，最多包含100个。</p>
+ * @method void setFlowIds(array $FlowIds) 设置<p>需执行催办的签署流程ID数组，最多包含100个。</p>
+ * @method Agent getAgent() 获取<p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+ * @method void setAgent(Agent $Agent) 设置<p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+ * @method array getRemindTypes() 获取<p>指定通知方式，枚举值：SMS / EMAIL；为空则按签署人原始 NotifyType 处理</p>
+ * @method void setRemindTypes(array $RemindTypes) 设置<p>指定通知方式，枚举值：SMS / EMAIL；为空则按签署人原始 NotifyType 处理</p>
+ * @method array getRemindEmailInfos() 获取<p>邮箱覆盖列表，为指定签署人使用特定邮箱发送邮件催办</p>
+ * @method void setRemindEmailInfos(array $RemindEmailInfos) 设置<p>邮箱覆盖列表，为指定签署人使用特定邮箱发送邮件催办</p>
  */
 class CreateFlowRemindsRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @var UserInfo <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public $Operator;
 
     /**
-     * @var array 需执行催办的签署流程ID数组，最多包含100个。
+     * @var array <p>需执行催办的签署流程ID数组，最多包含100个。</p>
      */
     public $FlowIds;
 
     /**
-     * @var Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @var Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public $Agent;
 
     /**
-     * @param UserInfo $Operator 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param array $FlowIds 需执行催办的签署流程ID数组，最多包含100个。
-     * @param Agent $Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @var array <p>指定通知方式，枚举值：SMS / EMAIL；为空则按签署人原始 NotifyType 处理</p>
+     */
+    public $RemindTypes;
+
+    /**
+     * @var array <p>邮箱覆盖列表，为指定签署人使用特定邮箱发送邮件催办</p>
+     */
+    public $RemindEmailInfos;
+
+    /**
+     * @param UserInfo $Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+     * @param array $FlowIds <p>需执行催办的签署流程ID数组，最多包含100个。</p>
+     * @param Agent $Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+     * @param array $RemindTypes <p>指定通知方式，枚举值：SMS / EMAIL；为空则按签署人原始 NotifyType 处理</p>
+     * @param array $RemindEmailInfos <p>邮箱覆盖列表，为指定签署人使用特定邮箱发送邮件催办</p>
      */
     function __construct()
     {
@@ -82,6 +90,19 @@ class CreateFlowRemindsRequest extends AbstractModel
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
             $this->Agent = new Agent();
             $this->Agent->deserialize($param["Agent"]);
+        }
+
+        if (array_key_exists("RemindTypes",$param) and $param["RemindTypes"] !== null) {
+            $this->RemindTypes = $param["RemindTypes"];
+        }
+
+        if (array_key_exists("RemindEmailInfos",$param) and $param["RemindEmailInfos"] !== null) {
+            $this->RemindEmailInfos = [];
+            foreach ($param["RemindEmailInfos"] as $key => $value){
+                $obj = new RemindEmailInfo();
+                $obj->deserialize($value);
+                array_push($this->RemindEmailInfos, $obj);
+            }
         }
     }
 }

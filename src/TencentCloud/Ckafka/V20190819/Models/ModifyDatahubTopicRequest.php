@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDatahubTopic请求参数结构体
  *
- * @method string getName() 获取弹性topic名称
- * @method void setName(string $Name) 设置弹性topic名称
- * @method integer getRetentionMs() 获取消息保留时间，单位：ms，当前最小值为60000ms。
- * @method void setRetentionMs(integer $RetentionMs) 设置消息保留时间，单位：ms，当前最小值为60000ms。
- * @method string getNote() 获取主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
- * @method void setNote(string $Note) 设置主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
- * @method array getTags() 获取标签列表
- * @method void setTags(array $Tags) 设置标签列表
+ * @method string getName() 获取<p>弹性topic名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/86863">DescribeDatahubTopics</a></p>
+ * @method void setName(string $Name) 设置<p>弹性topic名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/86863">DescribeDatahubTopics</a></p>
+ * @method integer getRetentionMs() 获取<p>消息保留时间，单位：ms，当前最小值为60000ms。</p>
+ * @method void setRetentionMs(integer $RetentionMs) 设置<p>消息保留时间，单位：ms，当前最小值为60000ms。</p>
+ * @method string getNote() 获取<p>主题备注</p><p>入参限制：不超过64个字符</p>
+ * @method void setNote(string $Note) 设置<p>主题备注</p><p>入参限制：不超过64个字符</p>
+ * @method array getTags() 获取<p>标签列表</p>
+ * @method void setTags(array $Tags) 设置<p>标签列表</p>
  */
 class ModifyDatahubTopicRequest extends AbstractModel
 {
     /**
-     * @var string 弹性topic名称
+     * @var string <p>弹性topic名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/86863">DescribeDatahubTopics</a></p>
      */
     public $Name;
 
     /**
-     * @var integer 消息保留时间，单位：ms，当前最小值为60000ms。
+     * @var integer <p>消息保留时间，单位：ms，当前最小值为60000ms。</p>
      */
     public $RetentionMs;
 
     /**
-     * @var string 主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
+     * @var string <p>主题备注</p><p>入参限制：不超过64个字符</p>
      */
     public $Note;
 
     /**
-     * @var array 标签列表
+     * @var array <p>标签列表</p>
      */
     public $Tags;
 
     /**
-     * @param string $Name 弹性topic名称
-     * @param integer $RetentionMs 消息保留时间，单位：ms，当前最小值为60000ms。
-     * @param string $Note 主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
-     * @param array $Tags 标签列表
+     * @param string $Name <p>弹性topic名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/86863">DescribeDatahubTopics</a></p>
+     * @param integer $RetentionMs <p>消息保留时间，单位：ms，当前最小值为60000ms。</p>
+     * @param string $Note <p>主题备注</p><p>入参限制：不超过64个字符</p>
+     * @param array $Tags <p>标签列表</p>
      */
     function __construct()
     {

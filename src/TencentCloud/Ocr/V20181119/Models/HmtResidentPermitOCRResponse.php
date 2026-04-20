@@ -20,88 +20,85 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HmtResidentPermitOCR返回参数结构体
  *
- * @method string getName() 获取证件姓名
- * @method void setName(string $Name) 设置证件姓名
- * @method string getSex() 获取性别
- * @method void setSex(string $Sex) 设置性别
- * @method string getBirth() 获取出生日期
- * @method void setBirth(string $Birth) 设置出生日期
- * @method string getAddress() 获取地址
- * @method void setAddress(string $Address) 设置地址
- * @method string getIdCardNo() 获取身份证号
- * @method void setIdCardNo(string $IdCardNo) 设置身份证号
- * @method integer getCardType() 获取0-正面
-1-反面
- * @method void setCardType(integer $CardType) 设置0-正面
-1-反面
- * @method string getValidDate() 获取证件有效期限
- * @method void setValidDate(string $ValidDate) 设置证件有效期限
- * @method string getAuthority() 获取签发机关
- * @method void setAuthority(string $Authority) 设置签发机关
- * @method string getVisaNum() 获取签发次数
- * @method void setVisaNum(string $VisaNum) 设置签发次数
- * @method string getPassNo() 获取通行证号码
- * @method void setPassNo(string $PassNo) 设置通行证号码
- * @method PortraitImageInfo getPortraitImageInfo() 获取头像和坐标信息
- * @method void setPortraitImageInfo(PortraitImageInfo $PortraitImageInfo) 设置头像和坐标信息
+ * @method string getName() 获取<p>证件姓名</p>
+ * @method void setName(string $Name) 设置<p>证件姓名</p>
+ * @method string getSex() 获取<p>性别</p>
+ * @method void setSex(string $Sex) 设置<p>性别</p>
+ * @method string getBirth() 获取<p>出生日期</p>
+ * @method void setBirth(string $Birth) 设置<p>出生日期</p>
+ * @method string getAddress() 获取<p>地址</p>
+ * @method void setAddress(string $Address) 设置<p>地址</p>
+ * @method string getIdCardNo() 获取<p>身份证号</p>
+ * @method void setIdCardNo(string $IdCardNo) 设置<p>身份证号</p>
+ * @method integer getCardType() 获取<p>0-正面<br>1-反面</p>
+ * @method void setCardType(integer $CardType) 设置<p>0-正面<br>1-反面</p>
+ * @method string getValidDate() 获取<p>证件有效期限</p>
+ * @method void setValidDate(string $ValidDate) 设置<p>证件有效期限</p>
+ * @method string getAuthority() 获取<p>签发机关</p>
+ * @method void setAuthority(string $Authority) 设置<p>签发机关</p>
+ * @method string getVisaNum() 获取<p>签发次数</p>
+ * @method void setVisaNum(string $VisaNum) 设置<p>签发次数</p>
+ * @method string getPassNo() 获取<p>通行证号码</p>
+ * @method void setPassNo(string $PassNo) 设置<p>通行证号码</p>
+ * @method PortraitImageInfo getPortraitImageInfo() 获取<p>头像和坐标信息</p>
+ * @method void setPortraitImageInfo(PortraitImageInfo $PortraitImageInfo) 设置<p>头像和坐标信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class HmtResidentPermitOCRResponse extends AbstractModel
 {
     /**
-     * @var string 证件姓名
+     * @var string <p>证件姓名</p>
      */
     public $Name;
 
     /**
-     * @var string 性别
+     * @var string <p>性别</p>
      */
     public $Sex;
 
     /**
-     * @var string 出生日期
+     * @var string <p>出生日期</p>
      */
     public $Birth;
 
     /**
-     * @var string 地址
+     * @var string <p>地址</p>
      */
     public $Address;
 
     /**
-     * @var string 身份证号
+     * @var string <p>身份证号</p>
      */
     public $IdCardNo;
 
     /**
-     * @var integer 0-正面
-1-反面
+     * @var integer <p>0-正面<br>1-反面</p>
      */
     public $CardType;
 
     /**
-     * @var string 证件有效期限
+     * @var string <p>证件有效期限</p>
      */
     public $ValidDate;
 
     /**
-     * @var string 签发机关
+     * @var string <p>签发机关</p>
      */
     public $Authority;
 
     /**
-     * @var string 签发次数
+     * @var string <p>签发次数</p>
      */
     public $VisaNum;
 
     /**
-     * @var string 通行证号码
+     * @var string <p>通行证号码</p>
      */
     public $PassNo;
 
     /**
-     * @var PortraitImageInfo 头像和坐标信息
+     * @var PortraitImageInfo <p>头像和坐标信息</p>
      */
     public $PortraitImageInfo;
 
@@ -111,18 +108,17 @@ class HmtResidentPermitOCRResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Name 证件姓名
-     * @param string $Sex 性别
-     * @param string $Birth 出生日期
-     * @param string $Address 地址
-     * @param string $IdCardNo 身份证号
-     * @param integer $CardType 0-正面
-1-反面
-     * @param string $ValidDate 证件有效期限
-     * @param string $Authority 签发机关
-     * @param string $VisaNum 签发次数
-     * @param string $PassNo 通行证号码
-     * @param PortraitImageInfo $PortraitImageInfo 头像和坐标信息
+     * @param string $Name <p>证件姓名</p>
+     * @param string $Sex <p>性别</p>
+     * @param string $Birth <p>出生日期</p>
+     * @param string $Address <p>地址</p>
+     * @param string $IdCardNo <p>身份证号</p>
+     * @param integer $CardType <p>0-正面<br>1-反面</p>
+     * @param string $ValidDate <p>证件有效期限</p>
+     * @param string $Authority <p>签发机关</p>
+     * @param string $VisaNum <p>签发次数</p>
+     * @param string $PassNo <p>通行证号码</p>
+     * @param PortraitImageInfo $PortraitImageInfo <p>头像和坐标信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

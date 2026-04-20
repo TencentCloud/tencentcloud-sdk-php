@@ -20,162 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddSmsSign请求参数结构体
  *
- * @method string getSignName() 获取签名名称。
-注：不能重复申请已通过或待审核的签名。
- * @method void setSignName(string $SignName) 设置签名名称。
-注：不能重复申请已通过或待审核的签名。
- * @method integer getSignType() 获取签名类型。其中每种类型后面标注了其可选的 DocumentType（证明类型）：
-0：公司，可选 DocumentType 有（0，1）。
-1：APP，可选 DocumentType 有（0，1，2，3，4） 。
-4：商标，可选 DocumentType 有（7）。
-5：政府/机关事业单位/其他机构，可选 DocumentType 有（2，3）。
-注1：必须按照对应关系选择证明类型，否则会审核失败。
-注2：签名类型2（网站）、3（公众号）、6（小程序）已不再支持，具体可参考 [关于腾讯云短信签名申请规则更新的公告](https://cloud.tencent.com/document/product/382/116397)。
- * @method void setSignType(integer $SignType) 设置签名类型。其中每种类型后面标注了其可选的 DocumentType（证明类型）：
-0：公司，可选 DocumentType 有（0，1）。
-1：APP，可选 DocumentType 有（0，1，2，3，4） 。
-4：商标，可选 DocumentType 有（7）。
-5：政府/机关事业单位/其他机构，可选 DocumentType 有（2，3）。
-注1：必须按照对应关系选择证明类型，否则会审核失败。
-注2：签名类型2（网站）、3（公众号）、6（小程序）已不再支持，具体可参考 [关于腾讯云短信签名申请规则更新的公告](https://cloud.tencent.com/document/product/382/116397)。
- * @method integer getDocumentType() 获取证明类型：
-0：三证合一。
-1：企业营业执照。
-2：组织机构代码证书。
-3：社会信用代码证书。
-4：应用后台管理截图（个人开发APP）。
-7：商标注册书。
-注：证明类型5（网站备案后台截图）、6（小程序设置页面截图）、8（公众号设置页面截图）已不再支持，具体可参考 [关于腾讯云短信签名申请规则更新的公告](https://cloud.tencent.com/document/product/382/116397)。
- * @method void setDocumentType(integer $DocumentType) 设置证明类型：
-0：三证合一。
-1：企业营业执照。
-2：组织机构代码证书。
-3：社会信用代码证书。
-4：应用后台管理截图（个人开发APP）。
-7：商标注册书。
-注：证明类型5（网站备案后台截图）、6（小程序设置页面截图）、8（公众号设置页面截图）已不再支持，具体可参考 [关于腾讯云短信签名申请规则更新的公告](https://cloud.tencent.com/document/product/382/116397)。
- * @method integer getInternational() 获取是否国际/港澳台短信：
-0：表示国内短信。
-1：表示国际/港澳台短信。
- * @method void setInternational(integer $International) 设置是否国际/港澳台短信：
-0：表示国内短信。
-1：表示国际/港澳台短信。
- * @method integer getSignPurpose() 获取签名用途：
-0：自用。
-1：他用。
- * @method void setSignPurpose(integer $SignPurpose) 设置签名用途：
-0：自用。
-1：他用。
- * @method string getProofImage() 获取签名对应的资质证明图片需先进行 base64 编码格式转换，将转换后的字符串去掉前缀`data:image/jpeg;base64,`再赋值给该参数。
- * @method void setProofImage(string $ProofImage) 设置签名对应的资质证明图片需先进行 base64 编码格式转换，将转换后的字符串去掉前缀`data:image/jpeg;base64,`再赋值给该参数。
- * @method string getCommissionImage() 获取委托授权证明。选择 SignPurpose 为他用之后需要提交委托的授权证明。
-图片需先进行 base64 编码格式转换，将转换后的字符串去掉前缀`data:image/jpeg;base64,`再赋值给该参数。
-注：只有 SignPurpose 在选择为 1（他用）时，这个字段才会生效。
- * @method void setCommissionImage(string $CommissionImage) 设置委托授权证明。选择 SignPurpose 为他用之后需要提交委托的授权证明。
-图片需先进行 base64 编码格式转换，将转换后的字符串去掉前缀`data:image/jpeg;base64,`再赋值给该参数。
-注：只有 SignPurpose 在选择为 1（他用）时，这个字段才会生效。
- * @method string getRemark() 获取签名的申请备注。
- * @method void setRemark(string $Remark) 设置签名的申请备注。
- * @method integer getQualificationId() 获取已审核通过的国内短信的资质 ID。资质 ID 信息可前往国内短信的 [实名资质管理](https://console.cloud.tencent.com/smsv2/enterprise) 页查看。<dx-alert infotype="notice" title="说明"><ul><li>国内短信需填写资质ID，国际短信无需填写。</li></ul></dx-alert>
- * @method void setQualificationId(integer $QualificationId) 设置已审核通过的国内短信的资质 ID。资质 ID 信息可前往国内短信的 [实名资质管理](https://console.cloud.tencent.com/smsv2/enterprise) 页查看。<dx-alert infotype="notice" title="说明"><ul><li>国内短信需填写资质ID，国际短信无需填写。</li></ul></dx-alert>
+ * @method string getSignName() 获取<p>签名名称。<br>注：不能重复申请已通过或待审核的签名。</p>
+ * @method void setSignName(string $SignName) 设置<p>签名名称。<br>注：不能重复申请已通过或待审核的签名。</p>
+ * @method integer getSignType() 获取<p>签名类型。其中每种类型后面标注了其可选的 DocumentType（证明类型）：<br>0：公司，可选 DocumentType 有（0，1）。<br>1：APP，可选 DocumentType 有（0，1，2，3，4） 。<br>4：商标，可选 DocumentType 有（7）。<br>5：政府/机关事业单位/其他机构，可选 DocumentType 有（2，3）。<br>注1：必须按照对应关系选择证明类型，否则会审核失败。<br>注2：签名类型2（网站）、3（公众号）、6（小程序）已不再支持，具体可参考 <a href="https://cloud.tencent.com/document/product/382/116397">关于腾讯云短信签名申请规则更新的公告</a>。<br>注3：申请国内短信签名已不再支持签名类型1（APP），具体可参考 <a href="https://cloud.tencent.com/announce/detail/2256">关于腾讯云短信签名申请规则更新的公告</a>。</p>
+ * @method void setSignType(integer $SignType) 设置<p>签名类型。其中每种类型后面标注了其可选的 DocumentType（证明类型）：<br>0：公司，可选 DocumentType 有（0，1）。<br>1：APP，可选 DocumentType 有（0，1，2，3，4） 。<br>4：商标，可选 DocumentType 有（7）。<br>5：政府/机关事业单位/其他机构，可选 DocumentType 有（2，3）。<br>注1：必须按照对应关系选择证明类型，否则会审核失败。<br>注2：签名类型2（网站）、3（公众号）、6（小程序）已不再支持，具体可参考 <a href="https://cloud.tencent.com/document/product/382/116397">关于腾讯云短信签名申请规则更新的公告</a>。<br>注3：申请国内短信签名已不再支持签名类型1（APP），具体可参考 <a href="https://cloud.tencent.com/announce/detail/2256">关于腾讯云短信签名申请规则更新的公告</a>。</p>
+ * @method integer getDocumentType() 获取<p>证明类型：<br>0：三证合一。<br>1：企业营业执照。<br>2：组织机构代码证书。<br>3：社会信用代码证书。<br>4：应用后台管理截图（个人开发APP）。<br>7：商标注册书。<br>注1：证明类型5（网站备案后台截图）、6（小程序设置页面截图）、8（公众号设置页面截图）已不再支持，具体可参考 <a href="https://cloud.tencent.com/document/product/382/116397">关于腾讯云短信签名申请规则更新的公告</a>。<br>注2：申请国内短信签名已不再支持证明类型4（应用后台管理截图），具体可参考 <a href="https://cloud.tencent.com/announce/detail/2256">关于腾讯云短信签名申请规则更新的公告</a>。</p>
+ * @method void setDocumentType(integer $DocumentType) 设置<p>证明类型：<br>0：三证合一。<br>1：企业营业执照。<br>2：组织机构代码证书。<br>3：社会信用代码证书。<br>4：应用后台管理截图（个人开发APP）。<br>7：商标注册书。<br>注1：证明类型5（网站备案后台截图）、6（小程序设置页面截图）、8（公众号设置页面截图）已不再支持，具体可参考 <a href="https://cloud.tencent.com/document/product/382/116397">关于腾讯云短信签名申请规则更新的公告</a>。<br>注2：申请国内短信签名已不再支持证明类型4（应用后台管理截图），具体可参考 <a href="https://cloud.tencent.com/announce/detail/2256">关于腾讯云短信签名申请规则更新的公告</a>。</p>
+ * @method integer getInternational() 获取<p>是否国际/港澳台短信：<br>0：表示国内短信。<br>1：表示国际/港澳台短信。</p>
+ * @method void setInternational(integer $International) 设置<p>是否国际/港澳台短信：<br>0：表示国内短信。<br>1：表示国际/港澳台短信。</p>
+ * @method integer getSignPurpose() 获取<p>签名用途：<br>0：自用。<br>1：他用。</p>
+ * @method void setSignPurpose(integer $SignPurpose) 设置<p>签名用途：<br>0：自用。<br>1：他用。</p>
+ * @method string getProofImage() 获取<p>签名对应的资质证明图片需先进行 base64 编码格式转换，将转换后的字符串去掉前缀<code>data:image/jpeg;base64,</code>再赋值给该参数。</p>
+ * @method void setProofImage(string $ProofImage) 设置<p>签名对应的资质证明图片需先进行 base64 编码格式转换，将转换后的字符串去掉前缀<code>data:image/jpeg;base64,</code>再赋值给该参数。</p>
+ * @method string getCommissionImage() 获取<p>委托授权证明。选择 SignPurpose 为他用之后需要提交委托的授权证明。<br>图片需先进行 base64 编码格式转换，将转换后的字符串去掉前缀<code>data:image/jpeg;base64,</code>再赋值给该参数。<br>注：只有 SignPurpose 在选择为 1（他用）时，这个字段才会生效。</p>
+ * @method void setCommissionImage(string $CommissionImage) 设置<p>委托授权证明。选择 SignPurpose 为他用之后需要提交委托的授权证明。<br>图片需先进行 base64 编码格式转换，将转换后的字符串去掉前缀<code>data:image/jpeg;base64,</code>再赋值给该参数。<br>注：只有 SignPurpose 在选择为 1（他用）时，这个字段才会生效。</p>
+ * @method string getRemark() 获取<p>签名的申请备注。</p>
+ * @method void setRemark(string $Remark) 设置<p>签名的申请备注。</p>
+ * @method integer getQualificationId() 获取<p>已审核通过的国内短信的资质 ID。资质 ID 信息可前往国内短信的 <a href="https://console.cloud.tencent.com/smsv2/enterprise">实名资质管理</a> 页查看。<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">说明</div>        <div class="rno-document-tip-desc"><ul><li>国内短信需填写资质ID，国际短信无需填写。</li></ul></div>    </div></blockquote></p>
+ * @method void setQualificationId(integer $QualificationId) 设置<p>已审核通过的国内短信的资质 ID。资质 ID 信息可前往国内短信的 <a href="https://console.cloud.tencent.com/smsv2/enterprise">实名资质管理</a> 页查看。<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">说明</div>        <div class="rno-document-tip-desc"><ul><li>国内短信需填写资质ID，国际短信无需填写。</li></ul></div>    </div></blockquote></p>
  */
 class AddSmsSignRequest extends AbstractModel
 {
     /**
-     * @var string 签名名称。
-注：不能重复申请已通过或待审核的签名。
+     * @var string <p>签名名称。<br>注：不能重复申请已通过或待审核的签名。</p>
      */
     public $SignName;
 
     /**
-     * @var integer 签名类型。其中每种类型后面标注了其可选的 DocumentType（证明类型）：
-0：公司，可选 DocumentType 有（0，1）。
-1：APP，可选 DocumentType 有（0，1，2，3，4） 。
-4：商标，可选 DocumentType 有（7）。
-5：政府/机关事业单位/其他机构，可选 DocumentType 有（2，3）。
-注1：必须按照对应关系选择证明类型，否则会审核失败。
-注2：签名类型2（网站）、3（公众号）、6（小程序）已不再支持，具体可参考 [关于腾讯云短信签名申请规则更新的公告](https://cloud.tencent.com/document/product/382/116397)。
+     * @var integer <p>签名类型。其中每种类型后面标注了其可选的 DocumentType（证明类型）：<br>0：公司，可选 DocumentType 有（0，1）。<br>1：APP，可选 DocumentType 有（0，1，2，3，4） 。<br>4：商标，可选 DocumentType 有（7）。<br>5：政府/机关事业单位/其他机构，可选 DocumentType 有（2，3）。<br>注1：必须按照对应关系选择证明类型，否则会审核失败。<br>注2：签名类型2（网站）、3（公众号）、6（小程序）已不再支持，具体可参考 <a href="https://cloud.tencent.com/document/product/382/116397">关于腾讯云短信签名申请规则更新的公告</a>。<br>注3：申请国内短信签名已不再支持签名类型1（APP），具体可参考 <a href="https://cloud.tencent.com/announce/detail/2256">关于腾讯云短信签名申请规则更新的公告</a>。</p>
      */
     public $SignType;
 
     /**
-     * @var integer 证明类型：
-0：三证合一。
-1：企业营业执照。
-2：组织机构代码证书。
-3：社会信用代码证书。
-4：应用后台管理截图（个人开发APP）。
-7：商标注册书。
-注：证明类型5（网站备案后台截图）、6（小程序设置页面截图）、8（公众号设置页面截图）已不再支持，具体可参考 [关于腾讯云短信签名申请规则更新的公告](https://cloud.tencent.com/document/product/382/116397)。
+     * @var integer <p>证明类型：<br>0：三证合一。<br>1：企业营业执照。<br>2：组织机构代码证书。<br>3：社会信用代码证书。<br>4：应用后台管理截图（个人开发APP）。<br>7：商标注册书。<br>注1：证明类型5（网站备案后台截图）、6（小程序设置页面截图）、8（公众号设置页面截图）已不再支持，具体可参考 <a href="https://cloud.tencent.com/document/product/382/116397">关于腾讯云短信签名申请规则更新的公告</a>。<br>注2：申请国内短信签名已不再支持证明类型4（应用后台管理截图），具体可参考 <a href="https://cloud.tencent.com/announce/detail/2256">关于腾讯云短信签名申请规则更新的公告</a>。</p>
      */
     public $DocumentType;
 
     /**
-     * @var integer 是否国际/港澳台短信：
-0：表示国内短信。
-1：表示国际/港澳台短信。
+     * @var integer <p>是否国际/港澳台短信：<br>0：表示国内短信。<br>1：表示国际/港澳台短信。</p>
      */
     public $International;
 
     /**
-     * @var integer 签名用途：
-0：自用。
-1：他用。
+     * @var integer <p>签名用途：<br>0：自用。<br>1：他用。</p>
      */
     public $SignPurpose;
 
     /**
-     * @var string 签名对应的资质证明图片需先进行 base64 编码格式转换，将转换后的字符串去掉前缀`data:image/jpeg;base64,`再赋值给该参数。
+     * @var string <p>签名对应的资质证明图片需先进行 base64 编码格式转换，将转换后的字符串去掉前缀<code>data:image/jpeg;base64,</code>再赋值给该参数。</p>
      */
     public $ProofImage;
 
     /**
-     * @var string 委托授权证明。选择 SignPurpose 为他用之后需要提交委托的授权证明。
-图片需先进行 base64 编码格式转换，将转换后的字符串去掉前缀`data:image/jpeg;base64,`再赋值给该参数。
-注：只有 SignPurpose 在选择为 1（他用）时，这个字段才会生效。
+     * @var string <p>委托授权证明。选择 SignPurpose 为他用之后需要提交委托的授权证明。<br>图片需先进行 base64 编码格式转换，将转换后的字符串去掉前缀<code>data:image/jpeg;base64,</code>再赋值给该参数。<br>注：只有 SignPurpose 在选择为 1（他用）时，这个字段才会生效。</p>
      */
     public $CommissionImage;
 
     /**
-     * @var string 签名的申请备注。
+     * @var string <p>签名的申请备注。</p>
      */
     public $Remark;
 
     /**
-     * @var integer 已审核通过的国内短信的资质 ID。资质 ID 信息可前往国内短信的 [实名资质管理](https://console.cloud.tencent.com/smsv2/enterprise) 页查看。<dx-alert infotype="notice" title="说明"><ul><li>国内短信需填写资质ID，国际短信无需填写。</li></ul></dx-alert>
+     * @var integer <p>已审核通过的国内短信的资质 ID。资质 ID 信息可前往国内短信的 <a href="https://console.cloud.tencent.com/smsv2/enterprise">实名资质管理</a> 页查看。<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">说明</div>        <div class="rno-document-tip-desc"><ul><li>国内短信需填写资质ID，国际短信无需填写。</li></ul></div>    </div></blockquote></p>
      */
     public $QualificationId;
 
     /**
-     * @param string $SignName 签名名称。
-注：不能重复申请已通过或待审核的签名。
-     * @param integer $SignType 签名类型。其中每种类型后面标注了其可选的 DocumentType（证明类型）：
-0：公司，可选 DocumentType 有（0，1）。
-1：APP，可选 DocumentType 有（0，1，2，3，4） 。
-4：商标，可选 DocumentType 有（7）。
-5：政府/机关事业单位/其他机构，可选 DocumentType 有（2，3）。
-注1：必须按照对应关系选择证明类型，否则会审核失败。
-注2：签名类型2（网站）、3（公众号）、6（小程序）已不再支持，具体可参考 [关于腾讯云短信签名申请规则更新的公告](https://cloud.tencent.com/document/product/382/116397)。
-     * @param integer $DocumentType 证明类型：
-0：三证合一。
-1：企业营业执照。
-2：组织机构代码证书。
-3：社会信用代码证书。
-4：应用后台管理截图（个人开发APP）。
-7：商标注册书。
-注：证明类型5（网站备案后台截图）、6（小程序设置页面截图）、8（公众号设置页面截图）已不再支持，具体可参考 [关于腾讯云短信签名申请规则更新的公告](https://cloud.tencent.com/document/product/382/116397)。
-     * @param integer $International 是否国际/港澳台短信：
-0：表示国内短信。
-1：表示国际/港澳台短信。
-     * @param integer $SignPurpose 签名用途：
-0：自用。
-1：他用。
-     * @param string $ProofImage 签名对应的资质证明图片需先进行 base64 编码格式转换，将转换后的字符串去掉前缀`data:image/jpeg;base64,`再赋值给该参数。
-     * @param string $CommissionImage 委托授权证明。选择 SignPurpose 为他用之后需要提交委托的授权证明。
-图片需先进行 base64 编码格式转换，将转换后的字符串去掉前缀`data:image/jpeg;base64,`再赋值给该参数。
-注：只有 SignPurpose 在选择为 1（他用）时，这个字段才会生效。
-     * @param string $Remark 签名的申请备注。
-     * @param integer $QualificationId 已审核通过的国内短信的资质 ID。资质 ID 信息可前往国内短信的 [实名资质管理](https://console.cloud.tencent.com/smsv2/enterprise) 页查看。<dx-alert infotype="notice" title="说明"><ul><li>国内短信需填写资质ID，国际短信无需填写。</li></ul></dx-alert>
+     * @param string $SignName <p>签名名称。<br>注：不能重复申请已通过或待审核的签名。</p>
+     * @param integer $SignType <p>签名类型。其中每种类型后面标注了其可选的 DocumentType（证明类型）：<br>0：公司，可选 DocumentType 有（0，1）。<br>1：APP，可选 DocumentType 有（0，1，2，3，4） 。<br>4：商标，可选 DocumentType 有（7）。<br>5：政府/机关事业单位/其他机构，可选 DocumentType 有（2，3）。<br>注1：必须按照对应关系选择证明类型，否则会审核失败。<br>注2：签名类型2（网站）、3（公众号）、6（小程序）已不再支持，具体可参考 <a href="https://cloud.tencent.com/document/product/382/116397">关于腾讯云短信签名申请规则更新的公告</a>。<br>注3：申请国内短信签名已不再支持签名类型1（APP），具体可参考 <a href="https://cloud.tencent.com/announce/detail/2256">关于腾讯云短信签名申请规则更新的公告</a>。</p>
+     * @param integer $DocumentType <p>证明类型：<br>0：三证合一。<br>1：企业营业执照。<br>2：组织机构代码证书。<br>3：社会信用代码证书。<br>4：应用后台管理截图（个人开发APP）。<br>7：商标注册书。<br>注1：证明类型5（网站备案后台截图）、6（小程序设置页面截图）、8（公众号设置页面截图）已不再支持，具体可参考 <a href="https://cloud.tencent.com/document/product/382/116397">关于腾讯云短信签名申请规则更新的公告</a>。<br>注2：申请国内短信签名已不再支持证明类型4（应用后台管理截图），具体可参考 <a href="https://cloud.tencent.com/announce/detail/2256">关于腾讯云短信签名申请规则更新的公告</a>。</p>
+     * @param integer $International <p>是否国际/港澳台短信：<br>0：表示国内短信。<br>1：表示国际/港澳台短信。</p>
+     * @param integer $SignPurpose <p>签名用途：<br>0：自用。<br>1：他用。</p>
+     * @param string $ProofImage <p>签名对应的资质证明图片需先进行 base64 编码格式转换，将转换后的字符串去掉前缀<code>data:image/jpeg;base64,</code>再赋值给该参数。</p>
+     * @param string $CommissionImage <p>委托授权证明。选择 SignPurpose 为他用之后需要提交委托的授权证明。<br>图片需先进行 base64 编码格式转换，将转换后的字符串去掉前缀<code>data:image/jpeg;base64,</code>再赋值给该参数。<br>注：只有 SignPurpose 在选择为 1（他用）时，这个字段才会生效。</p>
+     * @param string $Remark <p>签名的申请备注。</p>
+     * @param integer $QualificationId <p>已审核通过的国内短信的资质 ID。资质 ID 信息可前往国内短信的 <a href="https://console.cloud.tencent.com/smsv2/enterprise">实名资质管理</a> 页查看。<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">说明</div>        <div class="rno-document-tip-desc"><ul><li>国内短信需填写资质ID，国际短信无需填写。</li></ul></div>    </div></blockquote></p>
      */
     function __construct()
     {

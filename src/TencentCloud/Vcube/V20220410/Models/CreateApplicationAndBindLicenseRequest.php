@@ -20,106 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateApplicationAndBindLicense请求参数结构体
  *
- * @method string getAppName() 获取应用名
- * @method void setAppName(string $AppName) 设置应用名
- * @method string getBundleId() 获取应用ID
- * @method void setBundleId(string $BundleId) 设置应用ID
- * @method string getPackageName() 获取包名
- * @method void setPackageName(string $PackageName) 设置包名
- * @method array getResourceIds() 获取资源包ID
- * @method void setResourceIds(array $ResourceIds) 设置资源包ID
- * @method string getCompanyPermit() 获取营业执照
- * @method void setCompanyPermit(string $CompanyPermit) 设置营业执照
- * @method string getCompanyType() 获取公司类型
- * @method void setCompanyType(string $CompanyType) 设置公司类型
- * @method string getCompanyName() 获取公司名称
- * @method void setCompanyName(string $CompanyName) 设置公司名称
- * @method array getXMagicResourceIds() 获取优图资源id列表
- * @method void setXMagicResourceIds(array $XMagicResourceIds) 设置优图资源id列表
- * @method string getMacBundleId() 获取Mac 进程名
- * @method void setMacBundleId(string $MacBundleId) 设置Mac 进程名
- * @method string getWinProcessName() 获取Windows 进程名
- * @method void setWinProcessName(string $WinProcessName) 设置Windows 进程名
- * @method array getDomainList() 获取要开通的域名列表
- * @method void setDomainList(array $DomainList) 设置要开通的域名列表
- * @method string getPlatform() 获取要开通的端，web/mobile/pc
- * @method void setPlatform(string $Platform) 设置要开通的端，web/mobile/pc
+ * @method string getAppName() 获取<p>应用名</p>
+ * @method void setAppName(string $AppName) 设置<p>应用名</p>
+ * @method string getBundleId() 获取<p>应用ID</p>
+ * @method void setBundleId(string $BundleId) 设置<p>应用ID</p>
+ * @method string getPackageName() 获取<p>包名</p>
+ * @method void setPackageName(string $PackageName) 设置<p>包名</p>
+ * @method string getBundleName() 获取<p>鸿蒙包包名</p>
+ * @method void setBundleName(string $BundleName) 设置<p>鸿蒙包包名</p>
+ * @method array getResourceIds() 获取<p>资源包ID</p>
+ * @method void setResourceIds(array $ResourceIds) 设置<p>资源包ID</p>
+ * @method string getCompanyPermit() 获取<p>营业执照</p>
+ * @method void setCompanyPermit(string $CompanyPermit) 设置<p>营业执照</p>
+ * @method string getCompanyType() 获取<p>公司类型</p>
+ * @method void setCompanyType(string $CompanyType) 设置<p>公司类型</p>
+ * @method string getCompanyName() 获取<p>公司名称</p>
+ * @method void setCompanyName(string $CompanyName) 设置<p>公司名称</p>
+ * @method array getXMagicResourceIds() 获取<p>优图资源id列表</p>
+ * @method void setXMagicResourceIds(array $XMagicResourceIds) 设置<p>优图资源id列表</p>
+ * @method string getMacBundleId() 获取<p>Mac 进程名</p>
+ * @method void setMacBundleId(string $MacBundleId) 设置<p>Mac 进程名</p>
+ * @method string getWinProcessName() 获取<p>Windows 进程名</p>
+ * @method void setWinProcessName(string $WinProcessName) 设置<p>Windows 进程名</p>
+ * @method array getDomainList() 获取<p>要开通的域名列表</p>
+ * @method void setDomainList(array $DomainList) 设置<p>要开通的域名列表</p>
+ * @method string getPlatform() 获取<p>要开通的端，web/mobile/pc</p>
+ * @method void setPlatform(string $Platform) 设置<p>要开通的端，web/mobile/pc</p>
  */
 class CreateApplicationAndBindLicenseRequest extends AbstractModel
 {
     /**
-     * @var string 应用名
+     * @var string <p>应用名</p>
      */
     public $AppName;
 
     /**
-     * @var string 应用ID
+     * @var string <p>应用ID</p>
      */
     public $BundleId;
 
     /**
-     * @var string 包名
+     * @var string <p>包名</p>
      */
     public $PackageName;
 
     /**
-     * @var array 资源包ID
+     * @var string <p>鸿蒙包包名</p>
+     */
+    public $BundleName;
+
+    /**
+     * @var array <p>资源包ID</p>
      */
     public $ResourceIds;
 
     /**
-     * @var string 营业执照
+     * @var string <p>营业执照</p>
      */
     public $CompanyPermit;
 
     /**
-     * @var string 公司类型
+     * @var string <p>公司类型</p>
      */
     public $CompanyType;
 
     /**
-     * @var string 公司名称
+     * @var string <p>公司名称</p>
      */
     public $CompanyName;
 
     /**
-     * @var array 优图资源id列表
+     * @var array <p>优图资源id列表</p>
      */
     public $XMagicResourceIds;
 
     /**
-     * @var string Mac 进程名
+     * @var string <p>Mac 进程名</p>
      */
     public $MacBundleId;
 
     /**
-     * @var string Windows 进程名
+     * @var string <p>Windows 进程名</p>
      */
     public $WinProcessName;
 
     /**
-     * @var array 要开通的域名列表
+     * @var array <p>要开通的域名列表</p>
      */
     public $DomainList;
 
     /**
-     * @var string 要开通的端，web/mobile/pc
+     * @var string <p>要开通的端，web/mobile/pc</p>
      */
     public $Platform;
 
     /**
-     * @param string $AppName 应用名
-     * @param string $BundleId 应用ID
-     * @param string $PackageName 包名
-     * @param array $ResourceIds 资源包ID
-     * @param string $CompanyPermit 营业执照
-     * @param string $CompanyType 公司类型
-     * @param string $CompanyName 公司名称
-     * @param array $XMagicResourceIds 优图资源id列表
-     * @param string $MacBundleId Mac 进程名
-     * @param string $WinProcessName Windows 进程名
-     * @param array $DomainList 要开通的域名列表
-     * @param string $Platform 要开通的端，web/mobile/pc
+     * @param string $AppName <p>应用名</p>
+     * @param string $BundleId <p>应用ID</p>
+     * @param string $PackageName <p>包名</p>
+     * @param string $BundleName <p>鸿蒙包包名</p>
+     * @param array $ResourceIds <p>资源包ID</p>
+     * @param string $CompanyPermit <p>营业执照</p>
+     * @param string $CompanyType <p>公司类型</p>
+     * @param string $CompanyName <p>公司名称</p>
+     * @param array $XMagicResourceIds <p>优图资源id列表</p>
+     * @param string $MacBundleId <p>Mac 进程名</p>
+     * @param string $WinProcessName <p>Windows 进程名</p>
+     * @param array $DomainList <p>要开通的域名列表</p>
+     * @param string $Platform <p>要开通的端，web/mobile/pc</p>
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class CreateApplicationAndBindLicenseRequest extends AbstractModel
 
         if (array_key_exists("PackageName",$param) and $param["PackageName"] !== null) {
             $this->PackageName = $param["PackageName"];
+        }
+
+        if (array_key_exists("BundleName",$param) and $param["BundleName"] !== null) {
+            $this->BundleName = $param["BundleName"];
         }
 
         if (array_key_exists("ResourceIds",$param) and $param["ResourceIds"] !== null) {

@@ -20,138 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyConnectResource请求参数结构体
  *
- * @method string getResourceId() 获取连接源的Id
- * @method void setResourceId(string $ResourceId) 设置连接源的Id
- * @method string getResourceName() 获取连接源名称，为空时不修改
- * @method void setResourceName(string $ResourceName) 设置连接源名称，为空时不修改
- * @method string getDescription() 获取连接源描述，为空时不修改
- * @method void setDescription(string $Description) 设置连接源描述，为空时不修改
- * @method string getType() 获取连接源类型，修改数据源参数时，需要与原Type相同，否则编辑数据源无效
- * @method void setType(string $Type) 设置连接源类型，修改数据源参数时，需要与原Type相同，否则编辑数据源无效
- * @method DtsModifyConnectParam getDtsConnectParam() 获取Dts配置，Type为DTS时必填
- * @method void setDtsConnectParam(DtsModifyConnectParam $DtsConnectParam) 设置Dts配置，Type为DTS时必填
- * @method MongoDBModifyConnectParam getMongoDBConnectParam() 获取MongoDB配置，Type为MONGODB时必填
- * @method void setMongoDBConnectParam(MongoDBModifyConnectParam $MongoDBConnectParam) 设置MongoDB配置，Type为MONGODB时必填
- * @method EsModifyConnectParam getEsConnectParam() 获取Es配置，Type为ES时必填
- * @method void setEsConnectParam(EsModifyConnectParam $EsConnectParam) 设置Es配置，Type为ES时必填
- * @method ClickHouseModifyConnectParam getClickHouseConnectParam() 获取ClickHouse配置，Type为CLICKHOUSE时必填
- * @method void setClickHouseConnectParam(ClickHouseModifyConnectParam $ClickHouseConnectParam) 设置ClickHouse配置，Type为CLICKHOUSE时必填
- * @method MySQLModifyConnectParam getMySQLConnectParam() 获取MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时必填
- * @method void setMySQLConnectParam(MySQLModifyConnectParam $MySQLConnectParam) 设置MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时必填
- * @method PostgreSQLModifyConnectParam getPostgreSQLConnectParam() 获取PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填
- * @method void setPostgreSQLConnectParam(PostgreSQLModifyConnectParam $PostgreSQLConnectParam) 设置PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填
- * @method MariaDBModifyConnectParam getMariaDBConnectParam() 获取MariaDB配置，Type为MARIADB时必填
- * @method void setMariaDBConnectParam(MariaDBModifyConnectParam $MariaDBConnectParam) 设置MariaDB配置，Type为MARIADB时必填
- * @method SQLServerModifyConnectParam getSQLServerConnectParam() 获取SQLServer配置，Type为SQLSERVER时必填
- * @method void setSQLServerConnectParam(SQLServerModifyConnectParam $SQLServerConnectParam) 设置SQLServer配置，Type为SQLSERVER时必填
- * @method CtsdbModifyConnectParam getCtsdbConnectParam() 获取Ctsdb配置，Type为CTSDB
- * @method void setCtsdbConnectParam(CtsdbModifyConnectParam $CtsdbConnectParam) 设置Ctsdb配置，Type为CTSDB
- * @method DorisModifyConnectParam getDorisConnectParam() 获取Doris配置，Type为DORIS
- * @method void setDorisConnectParam(DorisModifyConnectParam $DorisConnectParam) 设置Doris配置，Type为DORIS
- * @method KafkaConnectParam getKafkaConnectParam() 获取Kafka配置，Type为 KAFKA 时必填
- * @method void setKafkaConnectParam(KafkaConnectParam $KafkaConnectParam) 设置Kafka配置，Type为 KAFKA 时必填
- * @method MqttConnectParam getMqttConnectParam() 获取MQTT配置，Type为 MQTT 时必填
- * @method void setMqttConnectParam(MqttConnectParam $MqttConnectParam) 设置MQTT配置，Type为 MQTT 时必填
+ * @method string getResourceId() 获取<p>连接源的Id</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>连接源的Id</p>
+ * @method string getResourceName() 获取<p>连接源名称，为空时不修改</p>
+ * @method void setResourceName(string $ResourceName) 设置<p>连接源名称，为空时不修改</p>
+ * @method string getDescription() 获取<p>连接源描述，为空时不修改</p>
+ * @method void setDescription(string $Description) 设置<p>连接源描述，为空时不修改</p>
+ * @method string getType() 获取<p>连接源类型，修改数据源参数时，需要与原Type相同，否则编辑数据源无效</p>
+ * @method void setType(string $Type) 设置<p>连接源类型，修改数据源参数时，需要与原Type相同，否则编辑数据源无效</p>
+ * @method DtsModifyConnectParam getDtsConnectParam() 获取<p>Dts配置，Type为DTS时必填</p>
+ * @method void setDtsConnectParam(DtsModifyConnectParam $DtsConnectParam) 设置<p>Dts配置，Type为DTS时必填</p>
+ * @method MongoDBModifyConnectParam getMongoDBConnectParam() 获取<p>MongoDB配置，Type为MONGODB时必填</p>
+ * @method void setMongoDBConnectParam(MongoDBModifyConnectParam $MongoDBConnectParam) 设置<p>MongoDB配置，Type为MONGODB时必填</p>
+ * @method EsModifyConnectParam getEsConnectParam() 获取<p>Es配置，Type为ES时必填</p>
+ * @method void setEsConnectParam(EsModifyConnectParam $EsConnectParam) 设置<p>Es配置，Type为ES时必填</p>
+ * @method ClickHouseModifyConnectParam getClickHouseConnectParam() 获取<p>ClickHouse配置，Type为CLICKHOUSE时必填</p>
+ * @method void setClickHouseConnectParam(ClickHouseModifyConnectParam $ClickHouseConnectParam) 设置<p>ClickHouse配置，Type为CLICKHOUSE时必填</p>
+ * @method MySQLModifyConnectParam getMySQLConnectParam() 获取<p>MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时必填</p>
+ * @method void setMySQLConnectParam(MySQLModifyConnectParam $MySQLConnectParam) 设置<p>MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时必填</p>
+ * @method PostgreSQLModifyConnectParam getPostgreSQLConnectParam() 获取<p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填</p>
+ * @method void setPostgreSQLConnectParam(PostgreSQLModifyConnectParam $PostgreSQLConnectParam) 设置<p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填</p>
+ * @method MariaDBModifyConnectParam getMariaDBConnectParam() 获取<p>MariaDB配置，Type为MARIADB时必填</p>
+ * @method void setMariaDBConnectParam(MariaDBModifyConnectParam $MariaDBConnectParam) 设置<p>MariaDB配置，Type为MARIADB时必填</p>
+ * @method SQLServerModifyConnectParam getSQLServerConnectParam() 获取<p>SQLServer配置，Type为SQLSERVER时必填</p>
+ * @method void setSQLServerConnectParam(SQLServerModifyConnectParam $SQLServerConnectParam) 设置<p>SQLServer配置，Type为SQLSERVER时必填</p>
+ * @method CtsdbModifyConnectParam getCtsdbConnectParam() 获取<p>Ctsdb配置，Type为CTSDB</p>
+ * @method void setCtsdbConnectParam(CtsdbModifyConnectParam $CtsdbConnectParam) 设置<p>Ctsdb配置，Type为CTSDB</p>
+ * @method DorisModifyConnectParam getDorisConnectParam() 获取<p>Doris配置，Type为DORIS</p>
+ * @method void setDorisConnectParam(DorisModifyConnectParam $DorisConnectParam) 设置<p>Doris配置，Type为DORIS</p>
+ * @method KafkaConnectParam getKafkaConnectParam() 获取<p>Kafka配置，Type为 KAFKA 时必填</p>
+ * @method void setKafkaConnectParam(KafkaConnectParam $KafkaConnectParam) 设置<p>Kafka配置，Type为 KAFKA 时必填</p>
+ * @method MqttConnectParam getMqttConnectParam() 获取<p>MQTT配置，Type为 MQTT 时必填</p>
+ * @method void setMqttConnectParam(MqttConnectParam $MqttConnectParam) 设置<p>MQTT配置，Type为 MQTT 时必填</p>
  */
 class ModifyConnectResourceRequest extends AbstractModel
 {
     /**
-     * @var string 连接源的Id
+     * @var string <p>连接源的Id</p>
      */
     public $ResourceId;
 
     /**
-     * @var string 连接源名称，为空时不修改
+     * @var string <p>连接源名称，为空时不修改</p>
      */
     public $ResourceName;
 
     /**
-     * @var string 连接源描述，为空时不修改
+     * @var string <p>连接源描述，为空时不修改</p>
      */
     public $Description;
 
     /**
-     * @var string 连接源类型，修改数据源参数时，需要与原Type相同，否则编辑数据源无效
+     * @var string <p>连接源类型，修改数据源参数时，需要与原Type相同，否则编辑数据源无效</p>
      */
     public $Type;
 
     /**
-     * @var DtsModifyConnectParam Dts配置，Type为DTS时必填
+     * @var DtsModifyConnectParam <p>Dts配置，Type为DTS时必填</p>
      */
     public $DtsConnectParam;
 
     /**
-     * @var MongoDBModifyConnectParam MongoDB配置，Type为MONGODB时必填
+     * @var MongoDBModifyConnectParam <p>MongoDB配置，Type为MONGODB时必填</p>
      */
     public $MongoDBConnectParam;
 
     /**
-     * @var EsModifyConnectParam Es配置，Type为ES时必填
+     * @var EsModifyConnectParam <p>Es配置，Type为ES时必填</p>
      */
     public $EsConnectParam;
 
     /**
-     * @var ClickHouseModifyConnectParam ClickHouse配置，Type为CLICKHOUSE时必填
+     * @var ClickHouseModifyConnectParam <p>ClickHouse配置，Type为CLICKHOUSE时必填</p>
      */
     public $ClickHouseConnectParam;
 
     /**
-     * @var MySQLModifyConnectParam MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时必填
+     * @var MySQLModifyConnectParam <p>MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时必填</p>
      */
     public $MySQLConnectParam;
 
     /**
-     * @var PostgreSQLModifyConnectParam PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填
+     * @var PostgreSQLModifyConnectParam <p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填</p>
      */
     public $PostgreSQLConnectParam;
 
     /**
-     * @var MariaDBModifyConnectParam MariaDB配置，Type为MARIADB时必填
+     * @var MariaDBModifyConnectParam <p>MariaDB配置，Type为MARIADB时必填</p>
      */
     public $MariaDBConnectParam;
 
     /**
-     * @var SQLServerModifyConnectParam SQLServer配置，Type为SQLSERVER时必填
+     * @var SQLServerModifyConnectParam <p>SQLServer配置，Type为SQLSERVER时必填</p>
      */
     public $SQLServerConnectParam;
 
     /**
-     * @var CtsdbModifyConnectParam Ctsdb配置，Type为CTSDB
+     * @var CtsdbModifyConnectParam <p>Ctsdb配置，Type为CTSDB</p>
      */
     public $CtsdbConnectParam;
 
     /**
-     * @var DorisModifyConnectParam Doris配置，Type为DORIS
+     * @var DorisModifyConnectParam <p>Doris配置，Type为DORIS</p>
      */
     public $DorisConnectParam;
 
     /**
-     * @var KafkaConnectParam Kafka配置，Type为 KAFKA 时必填
+     * @var KafkaConnectParam <p>Kafka配置，Type为 KAFKA 时必填</p>
      */
     public $KafkaConnectParam;
 
     /**
-     * @var MqttConnectParam MQTT配置，Type为 MQTT 时必填
+     * @var MqttConnectParam <p>MQTT配置，Type为 MQTT 时必填</p>
      */
     public $MqttConnectParam;
 
     /**
-     * @param string $ResourceId 连接源的Id
-     * @param string $ResourceName 连接源名称，为空时不修改
-     * @param string $Description 连接源描述，为空时不修改
-     * @param string $Type 连接源类型，修改数据源参数时，需要与原Type相同，否则编辑数据源无效
-     * @param DtsModifyConnectParam $DtsConnectParam Dts配置，Type为DTS时必填
-     * @param MongoDBModifyConnectParam $MongoDBConnectParam MongoDB配置，Type为MONGODB时必填
-     * @param EsModifyConnectParam $EsConnectParam Es配置，Type为ES时必填
-     * @param ClickHouseModifyConnectParam $ClickHouseConnectParam ClickHouse配置，Type为CLICKHOUSE时必填
-     * @param MySQLModifyConnectParam $MySQLConnectParam MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时必填
-     * @param PostgreSQLModifyConnectParam $PostgreSQLConnectParam PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填
-     * @param MariaDBModifyConnectParam $MariaDBConnectParam MariaDB配置，Type为MARIADB时必填
-     * @param SQLServerModifyConnectParam $SQLServerConnectParam SQLServer配置，Type为SQLSERVER时必填
-     * @param CtsdbModifyConnectParam $CtsdbConnectParam Ctsdb配置，Type为CTSDB
-     * @param DorisModifyConnectParam $DorisConnectParam Doris配置，Type为DORIS
-     * @param KafkaConnectParam $KafkaConnectParam Kafka配置，Type为 KAFKA 时必填
-     * @param MqttConnectParam $MqttConnectParam MQTT配置，Type为 MQTT 时必填
+     * @param string $ResourceId <p>连接源的Id</p>
+     * @param string $ResourceName <p>连接源名称，为空时不修改</p>
+     * @param string $Description <p>连接源描述，为空时不修改</p>
+     * @param string $Type <p>连接源类型，修改数据源参数时，需要与原Type相同，否则编辑数据源无效</p>
+     * @param DtsModifyConnectParam $DtsConnectParam <p>Dts配置，Type为DTS时必填</p>
+     * @param MongoDBModifyConnectParam $MongoDBConnectParam <p>MongoDB配置，Type为MONGODB时必填</p>
+     * @param EsModifyConnectParam $EsConnectParam <p>Es配置，Type为ES时必填</p>
+     * @param ClickHouseModifyConnectParam $ClickHouseConnectParam <p>ClickHouse配置，Type为CLICKHOUSE时必填</p>
+     * @param MySQLModifyConnectParam $MySQLConnectParam <p>MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时必填</p>
+     * @param PostgreSQLModifyConnectParam $PostgreSQLConnectParam <p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填</p>
+     * @param MariaDBModifyConnectParam $MariaDBConnectParam <p>MariaDB配置，Type为MARIADB时必填</p>
+     * @param SQLServerModifyConnectParam $SQLServerConnectParam <p>SQLServer配置，Type为SQLSERVER时必填</p>
+     * @param CtsdbModifyConnectParam $CtsdbConnectParam <p>Ctsdb配置，Type为CTSDB</p>
+     * @param DorisModifyConnectParam $DorisConnectParam <p>Doris配置，Type为DORIS</p>
+     * @param KafkaConnectParam $KafkaConnectParam <p>Kafka配置，Type为 KAFKA 时必填</p>
+     * @param MqttConnectParam $MqttConnectParam <p>MQTT配置，Type为 MQTT 时必填</p>
      */
     function __construct()
     {

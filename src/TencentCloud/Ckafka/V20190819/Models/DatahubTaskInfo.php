@@ -20,114 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Datahub任务信息
  *
- * @method string getTaskId() 获取任务Id
- * @method void setTaskId(string $TaskId) 设置任务Id
- * @method string getTaskName() 获取任务名称
- * @method void setTaskName(string $TaskName) 设置任务名称
- * @method string getTaskType() 获取任务类型，SOURCE数据接入，SINK数据流出
- * @method void setTaskType(string $TaskType) 设置任务类型，SOURCE数据接入，SINK数据流出
- * @method integer getStatus() 获取状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败
- * @method void setStatus(integer $Status) 设置状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败
- * @method DatahubResource getSourceResource() 获取数据源
- * @method void setSourceResource(DatahubResource $SourceResource) 设置数据源
- * @method DatahubResource getTargetResource() 获取数据目标
- * @method void setTargetResource(DatahubResource $TargetResource) 设置数据目标
- * @method string getCreateTime() 获取任务创建时间
- * @method void setCreateTime(string $CreateTime) 设置任务创建时间
- * @method string getErrorMessage() 获取异常信息
- * @method void setErrorMessage(string $ErrorMessage) 设置异常信息
- * @method float getTaskProgress() 获取创建进度百分比
- * @method void setTaskProgress(float $TaskProgress) 设置创建进度百分比
- * @method string getTaskCurrentStep() 获取任务当前处于的步骤
- * @method void setTaskCurrentStep(string $TaskCurrentStep) 设置任务当前处于的步骤
- * @method string getDatahubId() 获取Datahub转储Id
- * @method void setDatahubId(string $DatahubId) 设置Datahub转储Id
- * @method array getStepList() 获取步骤列表
- * @method void setStepList(array $StepList) 设置步骤列表
- * @method string getDescription() 获取任务描述信息
- * @method void setDescription(string $Description) 设置任务描述信息
+ * @method string getTaskId() 获取<p>任务Id</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务Id</p>
+ * @method string getTaskName() 获取<p>任务名称</p>
+ * @method void setTaskName(string $TaskName) 设置<p>任务名称</p>
+ * @method string getTaskType() 获取<p>任务类型，SOURCE数据接入，SINK数据流出</p>
+ * @method void setTaskType(string $TaskType) 设置<p>任务类型，SOURCE数据接入，SINK数据流出</p>
+ * @method integer getStatus() 获取<p>状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败</p>
+ * @method void setStatus(integer $Status) 设置<p>状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败</p>
+ * @method DatahubResource getSourceResource() 获取<p>数据源</p>
+ * @method void setSourceResource(DatahubResource $SourceResource) 设置<p>数据源</p>
+ * @method DatahubResource getTargetResource() 获取<p>数据目标</p>
+ * @method void setTargetResource(DatahubResource $TargetResource) 设置<p>数据目标</p>
+ * @method string getCreateTime() 获取<p>任务创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>任务创建时间</p>
+ * @method string getErrorMessage() 获取<p>异常信息</p>
+ * @method void setErrorMessage(string $ErrorMessage) 设置<p>异常信息</p>
+ * @method float getTaskProgress() 获取<p>创建进度百分比</p>
+ * @method void setTaskProgress(float $TaskProgress) 设置<p>创建进度百分比</p>
+ * @method string getTaskCurrentStep() 获取<p>任务当前处于的步骤</p>
+ * @method void setTaskCurrentStep(string $TaskCurrentStep) 设置<p>任务当前处于的步骤</p>
+ * @method string getDatahubId() 获取<p>Datahub转储Id</p>
+ * @method void setDatahubId(string $DatahubId) 设置<p>Datahub转储Id</p>
+ * @method array getStepList() 获取<p>步骤列表</p>
+ * @method void setStepList(array $StepList) 设置<p>步骤列表</p>
+ * @method string getDescription() 获取<p>任务描述信息</p>
+ * @method void setDescription(string $Description) 设置<p>任务描述信息</p>
+ * @method integer getTaskMax() 获取<p>任务并发数</p><p>默认值：1</p>
+ * @method void setTaskMax(integer $TaskMax) 设置<p>任务并发数</p><p>默认值：1</p>
+ * @method integer getSyncThrottleLimit() 获取<p>任务同步限流值,单位MB/s</p><p>默认值：20MB/s</p>
+ * @method void setSyncThrottleLimit(integer $SyncThrottleLimit) 设置<p>任务同步限流值,单位MB/s</p><p>默认值：20MB/s</p>
+ * @method boolean getAutoExpandFlag() 获取<p>任务是否自动扩容标识</p><p>枚举值：</p><ul><li>true： 自动扩容</li><li>false： 手动扩容</li></ul><p>默认值：true</p>
+ * @method void setAutoExpandFlag(boolean $AutoExpandFlag) 设置<p>任务是否自动扩容标识</p><p>枚举值：</p><ul><li>true： 自动扩容</li><li>false： 手动扩容</li></ul><p>默认值：true</p>
  */
 class DatahubTaskInfo extends AbstractModel
 {
     /**
-     * @var string 任务Id
+     * @var string <p>任务Id</p>
      */
     public $TaskId;
 
     /**
-     * @var string 任务名称
+     * @var string <p>任务名称</p>
      */
     public $TaskName;
 
     /**
-     * @var string 任务类型，SOURCE数据接入，SINK数据流出
+     * @var string <p>任务类型，SOURCE数据接入，SINK数据流出</p>
      */
     public $TaskType;
 
     /**
-     * @var integer 状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败
+     * @var integer <p>状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败</p>
      */
     public $Status;
 
     /**
-     * @var DatahubResource 数据源
+     * @var DatahubResource <p>数据源</p>
      */
     public $SourceResource;
 
     /**
-     * @var DatahubResource 数据目标
+     * @var DatahubResource <p>数据目标</p>
      */
     public $TargetResource;
 
     /**
-     * @var string 任务创建时间
+     * @var string <p>任务创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 异常信息
+     * @var string <p>异常信息</p>
      */
     public $ErrorMessage;
 
     /**
-     * @var float 创建进度百分比
+     * @var float <p>创建进度百分比</p>
      */
     public $TaskProgress;
 
     /**
-     * @var string 任务当前处于的步骤
+     * @var string <p>任务当前处于的步骤</p>
      */
     public $TaskCurrentStep;
 
     /**
-     * @var string Datahub转储Id
+     * @var string <p>Datahub转储Id</p>
      */
     public $DatahubId;
 
     /**
-     * @var array 步骤列表
+     * @var array <p>步骤列表</p>
      */
     public $StepList;
 
     /**
-     * @var string 任务描述信息
+     * @var string <p>任务描述信息</p>
      */
     public $Description;
 
     /**
-     * @param string $TaskId 任务Id
-     * @param string $TaskName 任务名称
-     * @param string $TaskType 任务类型，SOURCE数据接入，SINK数据流出
-     * @param integer $Status 状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败
-     * @param DatahubResource $SourceResource 数据源
-     * @param DatahubResource $TargetResource 数据目标
-     * @param string $CreateTime 任务创建时间
-     * @param string $ErrorMessage 异常信息
-     * @param float $TaskProgress 创建进度百分比
-     * @param string $TaskCurrentStep 任务当前处于的步骤
-     * @param string $DatahubId Datahub转储Id
-     * @param array $StepList 步骤列表
-     * @param string $Description 任务描述信息
+     * @var integer <p>任务并发数</p><p>默认值：1</p>
+     */
+    public $TaskMax;
+
+    /**
+     * @var integer <p>任务同步限流值,单位MB/s</p><p>默认值：20MB/s</p>
+     */
+    public $SyncThrottleLimit;
+
+    /**
+     * @var boolean <p>任务是否自动扩容标识</p><p>枚举值：</p><ul><li>true： 自动扩容</li><li>false： 手动扩容</li></ul><p>默认值：true</p>
+     */
+    public $AutoExpandFlag;
+
+    /**
+     * @param string $TaskId <p>任务Id</p>
+     * @param string $TaskName <p>任务名称</p>
+     * @param string $TaskType <p>任务类型，SOURCE数据接入，SINK数据流出</p>
+     * @param integer $Status <p>状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败</p>
+     * @param DatahubResource $SourceResource <p>数据源</p>
+     * @param DatahubResource $TargetResource <p>数据目标</p>
+     * @param string $CreateTime <p>任务创建时间</p>
+     * @param string $ErrorMessage <p>异常信息</p>
+     * @param float $TaskProgress <p>创建进度百分比</p>
+     * @param string $TaskCurrentStep <p>任务当前处于的步骤</p>
+     * @param string $DatahubId <p>Datahub转储Id</p>
+     * @param array $StepList <p>步骤列表</p>
+     * @param string $Description <p>任务描述信息</p>
+     * @param integer $TaskMax <p>任务并发数</p><p>默认值：1</p>
+     * @param integer $SyncThrottleLimit <p>任务同步限流值,单位MB/s</p><p>默认值：20MB/s</p>
+     * @param boolean $AutoExpandFlag <p>任务是否自动扩容标识</p><p>枚举值：</p><ul><li>true： 自动扩容</li><li>false： 手动扩容</li></ul><p>默认值：true</p>
      */
     function __construct()
     {
@@ -194,6 +218,18 @@ class DatahubTaskInfo extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("TaskMax",$param) and $param["TaskMax"] !== null) {
+            $this->TaskMax = $param["TaskMax"];
+        }
+
+        if (array_key_exists("SyncThrottleLimit",$param) and $param["SyncThrottleLimit"] !== null) {
+            $this->SyncThrottleLimit = $param["SyncThrottleLimit"];
+        }
+
+        if (array_key_exists("AutoExpandFlag",$param) and $param["AutoExpandFlag"] !== null) {
+            $this->AutoExpandFlag = $param["AutoExpandFlag"];
         }
     }
 }

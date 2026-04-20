@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() 获取查询结果总数量
  * @method void setTotalCount(integer $TotalCount) 设置查询结果总数量
- * @method array getItems() 获取智能体实例列表
- * @method void setItems(array $Items) 设置智能体实例列表
+ * @method array getItems() 获取<p>智能体实例列表</p>
+ * @method void setItems(array $Items) 设置<p>智能体实例列表</p>
+ * @method array getStatusCounts() 获取<p>无</p>
+ * @method void setStatusCounts(array $StatusCounts) 设置<p>无</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,9 +37,14 @@ class DescribeAgentInstancesResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array 智能体实例列表
+     * @var array <p>智能体实例列表</p>
      */
     public $Items;
+
+    /**
+     * @var array <p>无</p>
+     */
+    public $StatusCounts;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -46,7 +53,8 @@ class DescribeAgentInstancesResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 查询结果总数量
-     * @param array $Items 智能体实例列表
+     * @param array $Items <p>智能体实例列表</p>
+     * @param array $StatusCounts <p>无</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -72,6 +80,15 @@ class DescribeAgentInstancesResponse extends AbstractModel
                 $obj = new AgentInstance();
                 $obj->deserialize($value);
                 array_push($this->Items, $obj);
+            }
+        }
+
+        if (array_key_exists("StatusCounts",$param) and $param["StatusCounts"] !== null) {
+            $this->StatusCounts = [];
+            foreach ($param["StatusCounts"] as $key => $value){
+                $obj = new StatusItem();
+                $obj->deserialize($value);
+                array_push($this->StatusCounts, $obj);
             }
         }
 

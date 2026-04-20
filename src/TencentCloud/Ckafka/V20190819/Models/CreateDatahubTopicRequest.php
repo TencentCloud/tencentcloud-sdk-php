@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDatahubTopic请求参数结构体
  *
- * @method string getName() 获取名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)
- * @method void setName(string $Name) 设置名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)
- * @method integer getPartitionNum() 获取Partition个数，大于0
- * @method void setPartitionNum(integer $PartitionNum) 设置Partition个数，大于0
- * @method integer getRetentionMs() 获取消息保留时间，单位ms，当前最小值为60000ms
- * @method void setRetentionMs(integer $RetentionMs) 设置消息保留时间，单位ms，当前最小值为60000ms
- * @method string getNote() 获取主题备注，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
- * @method void setNote(string $Note) 设置主题备注，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
- * @method array getTags() 获取标签列表
- * @method void setTags(array $Tags) 设置标签列表
+ * @method string getName() 获取<p>名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)，可通过接口DescribeAppInfo获取。</p>
+ * @method void setName(string $Name) 设置<p>名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)，可通过接口DescribeAppInfo获取。</p>
+ * @method integer getPartitionNum() 获取<p>Partition个数，最大值为500，大于0</p>
+ * @method void setPartitionNum(integer $PartitionNum) 设置<p>Partition个数，最大值为500，大于0</p>
+ * @method integer getRetentionMs() 获取<p>消息保留时间，单位ms，当前最小值为60000ms</p>
+ * @method void setRetentionMs(integer $RetentionMs) 设置<p>消息保留时间，单位ms，当前最小值为60000ms</p>
+ * @method string getNote() 获取<p>主题备注，是一个不超过 64 个字符的字符串，可以包含字母、数字和横划线(-)。</p>
+ * @method void setNote(string $Note) 设置<p>主题备注，是一个不超过 64 个字符的字符串，可以包含字母、数字和横划线(-)。</p>
+ * @method array getTags() 获取<p>标签列表</p>
+ * @method void setTags(array $Tags) 设置<p>标签列表</p>
  */
 class CreateDatahubTopicRequest extends AbstractModel
 {
     /**
-     * @var string 名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * @var string <p>名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)，可通过接口DescribeAppInfo获取。</p>
      */
     public $Name;
 
     /**
-     * @var integer Partition个数，大于0
+     * @var integer <p>Partition个数，最大值为500，大于0</p>
      */
     public $PartitionNum;
 
     /**
-     * @var integer 消息保留时间，单位ms，当前最小值为60000ms
+     * @var integer <p>消息保留时间，单位ms，当前最小值为60000ms</p>
      */
     public $RetentionMs;
 
     /**
-     * @var string 主题备注，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * @var string <p>主题备注，是一个不超过 64 个字符的字符串，可以包含字母、数字和横划线(-)。</p>
      */
     public $Note;
 
     /**
-     * @var array 标签列表
+     * @var array <p>标签列表</p>
      */
     public $Tags;
 
     /**
-     * @param string $Name 名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)
-     * @param integer $PartitionNum Partition个数，大于0
-     * @param integer $RetentionMs 消息保留时间，单位ms，当前最小值为60000ms
-     * @param string $Note 主题备注，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
-     * @param array $Tags 标签列表
+     * @param string $Name <p>名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)，可通过接口DescribeAppInfo获取。</p>
+     * @param integer $PartitionNum <p>Partition个数，最大值为500，大于0</p>
+     * @param integer $RetentionMs <p>消息保留时间，单位ms，当前最小值为60000ms</p>
+     * @param string $Note <p>主题备注，是一个不超过 64 个字符的字符串，可以包含字母、数字和横划线(-)。</p>
+     * @param array $Tags <p>标签列表</p>
      */
     function __construct()
     {

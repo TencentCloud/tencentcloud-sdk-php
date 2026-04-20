@@ -20,269 +20,293 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询模型服务详情的响应
  *
- * @method integer getAppID() 获取腾讯云AppID
- * @method void setAppID(integer $AppID) 设置腾讯云AppID
- * @method string getUin() 获取腾讯云Uin
- * @method void setUin(string $Uin) 设置腾讯云Uin
- * @method string getInstanceID() 获取实例ID
- * @method void setInstanceID(string $InstanceID) 设置实例ID
- * @method string getID() 获取模型ID
- * @method void setID(string $ID) 设置模型ID
- * @method string getName() 获取模型名称
- * @method void setName(string $Name) 设置模型名称
- * @method string getDescription() 获取描述
- * @method void setDescription(string $Description) 设置描述
- * @method string getPubPath() 获取访问路径
- * @method void setPubPath(string $PubPath) 设置访问路径
- * @method string getPathMatchType() 获取路径匹配方式：absolute，prefix，regex
- * @method void setPathMatchType(string $PathMatchType) 设置路径匹配方式：absolute，prefix，regex
- * @method array getTargetModels() 获取目标模型列表
+ * @method integer getAppID() 获取<p>腾讯云AppID</p>
+ * @method void setAppID(integer $AppID) 设置<p>腾讯云AppID</p>
+ * @method string getUin() 获取<p>腾讯云Uin</p>
+ * @method void setUin(string $Uin) 设置<p>腾讯云Uin</p>
+ * @method string getInstanceID() 获取<p>实例ID</p>
+ * @method void setInstanceID(string $InstanceID) 设置<p>实例ID</p>
+ * @method string getID() 获取<p>模型ID</p>
+ * @method void setID(string $ID) 设置<p>模型ID</p>
+ * @method string getName() 获取<p>模型名称</p>
+ * @method void setName(string $Name) 设置<p>模型名称</p>
+ * @method string getDescription() 获取<p>描述</p>
+ * @method void setDescription(string $Description) 设置<p>描述</p>
+ * @method string getPubPath() 获取<p>访问路径</p>
+ * @method void setPubPath(string $PubPath) 设置<p>访问路径</p>
+ * @method string getPathMatchType() 获取<p>路径匹配方式：absolute，prefix，regex</p>
+ * @method void setPathMatchType(string $PathMatchType) 设置<p>路径匹配方式：absolute，prefix，regex</p>
+ * @method array getTargetModels() 获取<p>目标模型列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTargetModels(array $TargetModels) 设置目标模型列表
+ * @method void setTargetModels(array $TargetModels) 设置<p>目标模型列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getModelNames() 获取模板模型的名称列表
+ * @method array getModelNames() 获取<p>模板模型的名称列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModelNames(array $ModelNames) 设置模板模型的名称列表
+ * @method void setModelNames(array $ModelNames) 设置<p>模板模型的名称列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getInvokeLimitConfigStatus() 获取是否开启限流
- * @method void setInvokeLimitConfigStatus(boolean $InvokeLimitConfigStatus) 设置是否开启限流
- * @method InvokeLimitConfigDTO getInvokeLimitConfig() 获取限流配置
- * @method void setInvokeLimitConfig(InvokeLimitConfigDTO $InvokeLimitConfig) 设置限流配置
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getLastUpdateTime() 获取最后修改时间
- * @method void setLastUpdateTime(string $LastUpdateTime) 设置最后修改时间
- * @method boolean getTokenLimitStatus() 获取是否开启token控制
- * @method void setTokenLimitStatus(boolean $TokenLimitStatus) 设置是否开启token控制
- * @method TokenLimitConfigDTO getTokenLimitConfig() 获取token控制
- * @method void setTokenLimitConfig(TokenLimitConfigDTO $TokenLimitConfig) 设置token控制
- * @method boolean getTmsStatus() 获取是否开启tms配置
- * @method void setTmsStatus(boolean $TmsStatus) 设置是否开启tms配置
- * @method TmsConfigDTO getTmsConfig() 获取tms配置
- * @method void setTmsConfig(TmsConfigDTO $TmsConfig) 设置tms配置
- * @method boolean getIpWhiteStatus() 获取是否开启IP白名单
- * @method void setIpWhiteStatus(boolean $IpWhiteStatus) 设置是否开启IP白名单
- * @method array getIpWhiteList() 获取IP白名单列表
+ * @method boolean getInvokeLimitConfigStatus() 获取<p>是否开启限流</p>
+ * @method void setInvokeLimitConfigStatus(boolean $InvokeLimitConfigStatus) 设置<p>是否开启限流</p>
+ * @method InvokeLimitConfigDTO getInvokeLimitConfig() 获取<p>限流配置</p>
+ * @method void setInvokeLimitConfig(InvokeLimitConfigDTO $InvokeLimitConfig) 设置<p>限流配置</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getLastUpdateTime() 获取<p>最后修改时间</p>
+ * @method void setLastUpdateTime(string $LastUpdateTime) 设置<p>最后修改时间</p>
+ * @method boolean getTokenLimitStatus() 获取<p>是否开启token控制</p>
+ * @method void setTokenLimitStatus(boolean $TokenLimitStatus) 设置<p>是否开启token控制</p>
+ * @method TokenLimitConfigDTO getTokenLimitConfig() 获取<p>token控制</p>
+ * @method void setTokenLimitConfig(TokenLimitConfigDTO $TokenLimitConfig) 设置<p>token控制</p>
+ * @method boolean getTmsStatus() 获取<p>是否开启tms配置</p>
+ * @method void setTmsStatus(boolean $TmsStatus) 设置<p>是否开启tms配置</p>
+ * @method TmsConfigDTO getTmsConfig() 获取<p>tms配置</p>
+ * @method void setTmsConfig(TmsConfigDTO $TmsConfig) 设置<p>tms配置</p>
+ * @method boolean getIpWhiteStatus() 获取<p>是否开启IP白名单</p>
+ * @method void setIpWhiteStatus(boolean $IpWhiteStatus) 设置<p>是否开启IP白名单</p>
+ * @method array getIpWhiteList() 获取<p>IP白名单列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIpWhiteList(array $IpWhiteList) 设置IP白名单列表
+ * @method void setIpWhiteList(array $IpWhiteList) 设置<p>IP白名单列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getIpBlackStatus() 获取是否开启IP黑名单
- * @method void setIpBlackStatus(boolean $IpBlackStatus) 设置是否开启IP黑名单
- * @method array getIpBlackList() 获取IP黑名单列表
+ * @method boolean getIpBlackStatus() 获取<p>是否开启IP黑名单</p>
+ * @method void setIpBlackStatus(boolean $IpBlackStatus) 设置<p>是否开启IP黑名单</p>
+ * @method array getIpBlackList() 获取<p>IP黑名单列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIpBlackList(array $IpBlackList) 设置IP黑名单列表
+ * @method void setIpBlackList(array $IpBlackList) 设置<p>IP黑名单列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPluginConfigs() 获取插件配置
+ * @method array getPluginConfigs() 获取<p>插件配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPluginConfigs(array $PluginConfigs) 设置插件配置
+ * @method void setPluginConfigs(array $PluginConfigs) 设置<p>插件配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTimeout() 获取超时配置，单位秒
- * @method void setTimeout(integer $Timeout) 设置超时配置，单位秒
- * @method string getStatus() 获取状态：normal，disabled
- * @method void setStatus(string $Status) 设置状态：normal，disabled
- * @method integer getRelateAgentAppNum() 获取关联应用数
- * @method void setRelateAgentAppNum(integer $RelateAgentAppNum) 设置关联应用数
- * @method string getUrl() 获取请求路径
- * @method void setUrl(string $Url) 设置请求路径
- * @method boolean getPromptModerateStatus() 获取是否开启提示词安全检测
+ * @method integer getTimeout() 获取<p>超时配置，单位秒</p>
+ * @method void setTimeout(integer $Timeout) 设置<p>超时配置，单位秒</p>
+ * @method string getStatus() 获取<p>状态：normal，disabled</p>
+ * @method void setStatus(string $Status) 设置<p>状态：normal，disabled</p>
+ * @method integer getRelateAgentAppNum() 获取<p>关联应用数</p>
+ * @method void setRelateAgentAppNum(integer $RelateAgentAppNum) 设置<p>关联应用数</p>
+ * @method string getUrl() 获取<p>请求路径</p>
+ * @method void setUrl(string $Url) 设置<p>请求路径</p>
+ * @method boolean getPromptModerateStatus() 获取<p>是否开启提示词安全检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPromptModerateStatus(boolean $PromptModerateStatus) 设置是否开启提示词安全检测
+ * @method void setPromptModerateStatus(boolean $PromptModerateStatus) 设置<p>是否开启提示词安全检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method PromptModerateConfigDTO getPromptModerateConfig() 获取提示词安全检测配置
+ * @method PromptModerateConfigDTO getPromptModerateConfig() 获取<p>提示词安全检测配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPromptModerateConfig(PromptModerateConfigDTO $PromptModerateConfig) 设置提示词安全检测配置
+ * @method void setPromptModerateConfig(PromptModerateConfigDTO $PromptModerateConfig) 设置<p>提示词安全检测配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getSensitiveDataCheckStatus() 获取<p>是否开启敏感数据检测</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSensitiveDataCheckStatus(boolean $SensitiveDataCheckStatus) 设置<p>是否开启敏感数据检测</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method SensitiveDataCheckConfigDTO getSensitiveDataCheckConfig() 获取<p>敏感数据检测配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSensitiveDataCheckConfig(SensitiveDataCheckConfigDTO $SensitiveDataCheckConfig) 设置<p>敏感数据检测配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeModelServiceResponseVO extends AbstractModel
 {
     /**
-     * @var integer 腾讯云AppID
+     * @var integer <p>腾讯云AppID</p>
      */
     public $AppID;
 
     /**
-     * @var string 腾讯云Uin
+     * @var string <p>腾讯云Uin</p>
      */
     public $Uin;
 
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceID;
 
     /**
-     * @var string 模型ID
+     * @var string <p>模型ID</p>
      */
     public $ID;
 
     /**
-     * @var string 模型名称
+     * @var string <p>模型名称</p>
      */
     public $Name;
 
     /**
-     * @var string 描述
+     * @var string <p>描述</p>
      */
     public $Description;
 
     /**
-     * @var string 访问路径
+     * @var string <p>访问路径</p>
      */
     public $PubPath;
 
     /**
-     * @var string 路径匹配方式：absolute，prefix，regex
+     * @var string <p>路径匹配方式：absolute，prefix，regex</p>
      */
     public $PathMatchType;
 
     /**
-     * @var array 目标模型列表
+     * @var array <p>目标模型列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetModels;
 
     /**
-     * @var array 模板模型的名称列表
+     * @var array <p>模板模型的名称列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModelNames;
 
     /**
-     * @var boolean 是否开启限流
+     * @var boolean <p>是否开启限流</p>
      */
     public $InvokeLimitConfigStatus;
 
     /**
-     * @var InvokeLimitConfigDTO 限流配置
+     * @var InvokeLimitConfigDTO <p>限流配置</p>
      */
     public $InvokeLimitConfig;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 最后修改时间
+     * @var string <p>最后修改时间</p>
      */
     public $LastUpdateTime;
 
     /**
-     * @var boolean 是否开启token控制
+     * @var boolean <p>是否开启token控制</p>
      */
     public $TokenLimitStatus;
 
     /**
-     * @var TokenLimitConfigDTO token控制
+     * @var TokenLimitConfigDTO <p>token控制</p>
      */
     public $TokenLimitConfig;
 
     /**
-     * @var boolean 是否开启tms配置
+     * @var boolean <p>是否开启tms配置</p>
      */
     public $TmsStatus;
 
     /**
-     * @var TmsConfigDTO tms配置
+     * @var TmsConfigDTO <p>tms配置</p>
      */
     public $TmsConfig;
 
     /**
-     * @var boolean 是否开启IP白名单
+     * @var boolean <p>是否开启IP白名单</p>
      */
     public $IpWhiteStatus;
 
     /**
-     * @var array IP白名单列表
+     * @var array <p>IP白名单列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpWhiteList;
 
     /**
-     * @var boolean 是否开启IP黑名单
+     * @var boolean <p>是否开启IP黑名单</p>
      */
     public $IpBlackStatus;
 
     /**
-     * @var array IP黑名单列表
+     * @var array <p>IP黑名单列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpBlackList;
 
     /**
-     * @var array 插件配置
+     * @var array <p>插件配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PluginConfigs;
 
     /**
-     * @var integer 超时配置，单位秒
+     * @var integer <p>超时配置，单位秒</p>
      */
     public $Timeout;
 
     /**
-     * @var string 状态：normal，disabled
+     * @var string <p>状态：normal，disabled</p>
      */
     public $Status;
 
     /**
-     * @var integer 关联应用数
+     * @var integer <p>关联应用数</p>
      */
     public $RelateAgentAppNum;
 
     /**
-     * @var string 请求路径
+     * @var string <p>请求路径</p>
      */
     public $Url;
 
     /**
-     * @var boolean 是否开启提示词安全检测
+     * @var boolean <p>是否开启提示词安全检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PromptModerateStatus;
 
     /**
-     * @var PromptModerateConfigDTO 提示词安全检测配置
+     * @var PromptModerateConfigDTO <p>提示词安全检测配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PromptModerateConfig;
 
     /**
-     * @param integer $AppID 腾讯云AppID
-     * @param string $Uin 腾讯云Uin
-     * @param string $InstanceID 实例ID
-     * @param string $ID 模型ID
-     * @param string $Name 模型名称
-     * @param string $Description 描述
-     * @param string $PubPath 访问路径
-     * @param string $PathMatchType 路径匹配方式：absolute，prefix，regex
-     * @param array $TargetModels 目标模型列表
+     * @var boolean <p>是否开启敏感数据检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ModelNames 模板模型的名称列表
+     */
+    public $SensitiveDataCheckStatus;
+
+    /**
+     * @var SensitiveDataCheckConfigDTO <p>敏感数据检测配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $InvokeLimitConfigStatus 是否开启限流
-     * @param InvokeLimitConfigDTO $InvokeLimitConfig 限流配置
-     * @param string $CreateTime 创建时间
-     * @param string $LastUpdateTime 最后修改时间
-     * @param boolean $TokenLimitStatus 是否开启token控制
-     * @param TokenLimitConfigDTO $TokenLimitConfig token控制
-     * @param boolean $TmsStatus 是否开启tms配置
-     * @param TmsConfigDTO $TmsConfig tms配置
-     * @param boolean $IpWhiteStatus 是否开启IP白名单
-     * @param array $IpWhiteList IP白名单列表
+     */
+    public $SensitiveDataCheckConfig;
+
+    /**
+     * @param integer $AppID <p>腾讯云AppID</p>
+     * @param string $Uin <p>腾讯云Uin</p>
+     * @param string $InstanceID <p>实例ID</p>
+     * @param string $ID <p>模型ID</p>
+     * @param string $Name <p>模型名称</p>
+     * @param string $Description <p>描述</p>
+     * @param string $PubPath <p>访问路径</p>
+     * @param string $PathMatchType <p>路径匹配方式：absolute，prefix，regex</p>
+     * @param array $TargetModels <p>目标模型列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $IpBlackStatus 是否开启IP黑名单
-     * @param array $IpBlackList IP黑名单列表
+     * @param array $ModelNames <p>模板模型的名称列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $PluginConfigs 插件配置
+     * @param boolean $InvokeLimitConfigStatus <p>是否开启限流</p>
+     * @param InvokeLimitConfigDTO $InvokeLimitConfig <p>限流配置</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $LastUpdateTime <p>最后修改时间</p>
+     * @param boolean $TokenLimitStatus <p>是否开启token控制</p>
+     * @param TokenLimitConfigDTO $TokenLimitConfig <p>token控制</p>
+     * @param boolean $TmsStatus <p>是否开启tms配置</p>
+     * @param TmsConfigDTO $TmsConfig <p>tms配置</p>
+     * @param boolean $IpWhiteStatus <p>是否开启IP白名单</p>
+     * @param array $IpWhiteList <p>IP白名单列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Timeout 超时配置，单位秒
-     * @param string $Status 状态：normal，disabled
-     * @param integer $RelateAgentAppNum 关联应用数
-     * @param string $Url 请求路径
-     * @param boolean $PromptModerateStatus 是否开启提示词安全检测
+     * @param boolean $IpBlackStatus <p>是否开启IP黑名单</p>
+     * @param array $IpBlackList <p>IP黑名单列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PromptModerateConfigDTO $PromptModerateConfig 提示词安全检测配置
+     * @param array $PluginConfigs <p>插件配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Timeout <p>超时配置，单位秒</p>
+     * @param string $Status <p>状态：normal，disabled</p>
+     * @param integer $RelateAgentAppNum <p>关联应用数</p>
+     * @param string $Url <p>请求路径</p>
+     * @param boolean $PromptModerateStatus <p>是否开启提示词安全检测</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PromptModerateConfigDTO $PromptModerateConfig <p>提示词安全检测配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $SensitiveDataCheckStatus <p>是否开启敏感数据检测</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SensitiveDataCheckConfigDTO $SensitiveDataCheckConfig <p>敏感数据检测配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -426,6 +450,15 @@ class DescribeModelServiceResponseVO extends AbstractModel
         if (array_key_exists("PromptModerateConfig",$param) and $param["PromptModerateConfig"] !== null) {
             $this->PromptModerateConfig = new PromptModerateConfigDTO();
             $this->PromptModerateConfig->deserialize($param["PromptModerateConfig"]);
+        }
+
+        if (array_key_exists("SensitiveDataCheckStatus",$param) and $param["SensitiveDataCheckStatus"] !== null) {
+            $this->SensitiveDataCheckStatus = $param["SensitiveDataCheckStatus"];
+        }
+
+        if (array_key_exists("SensitiveDataCheckConfig",$param) and $param["SensitiveDataCheckConfig"] !== null) {
+            $this->SensitiveDataCheckConfig = new SensitiveDataCheckConfigDTO();
+            $this->SensitiveDataCheckConfig->deserialize($param["SensitiveDataCheckConfig"]);
         }
     }
 }

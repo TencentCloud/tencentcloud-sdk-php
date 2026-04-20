@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteConnectResource请求参数结构体
  *
- * @method string getResourceId() 获取连接源的Id
- * @method void setResourceId(string $ResourceId) 设置连接源的Id
+ * @method string getResourceId() 获取<p>连接源的Id</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>连接源的Id</p>
  */
 class DeleteConnectResourceRequest extends AbstractModel
 {
     /**
-     * @var string 连接源的Id
+     * @var string <p>连接源的Id</p>
      */
     public $ResourceId;
 
     /**
-     * @param string $ResourceId 连接源的Id
+     * @param string $ResourceId <p>连接源的Id</p>
      */
     function __construct()
     {

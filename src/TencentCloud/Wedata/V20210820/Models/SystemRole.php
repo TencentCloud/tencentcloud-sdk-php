@@ -20,113 +20,137 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 角色对象
  *
- * @method string getRoleId() 获取角色id
- * @method void setRoleId(string $RoleId) 设置角色id
- * @method string getName() 获取角色名称
+ * @method string getRoleId() 获取<p>角色id</p>
+ * @method void setRoleId(string $RoleId) 设置<p>角色id</p>
+ * @method string getName() 获取<p>角色名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置角色名称
+ * @method void setName(string $Name) 设置<p>角色名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNameCn() 获取角色昵称
+ * @method string getNameCn() 获取<p>角色昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNameCn(string $NameCn) 设置角色昵称
+ * @method void setNameCn(string $NameCn) 设置<p>角色昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDescription() 获取描述
+ * @method string getDescription() 获取<p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescription(string $Description) 设置描述
+ * @method void setDescription(string $Description) 设置<p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPrivileges() 获取角色权限
+ * @method array getPrivileges() 获取<p>角色权限</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPrivileges(array $Privileges) 设置角色权限
+ * @method void setPrivileges(array $Privileges) 设置<p>角色权限</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getMethodPaths() 获取方法路径
+ * @method array getMethodPaths() 获取<p>方法路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMethodPaths(array $MethodPaths) 设置方法路径
+ * @method void setMethodPaths(array $MethodPaths) 设置<p>方法路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRoleType() 获取角色类型, 分为System,Tenant,Project,Commercial
+ * @method string getRoleType() 获取<p>角色类型, 分为System,Tenant,Project,Commercial</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRoleType(string $RoleType) 设置角色类型, 分为System,Tenant,Project,Commercial
+ * @method void setRoleType(string $RoleType) 设置<p>角色类型, 分为System,Tenant,Project,Commercial</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getSystemInit() 获取是否系统默认
+ * @method boolean getSystemInit() 获取<p>是否系统默认</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSystemInit(boolean $SystemInit) 设置是否系统默认
+ * @method void setSystemInit(boolean $SystemInit) 设置<p>是否系统默认</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getParams() 获取自定义参数
+ * @method string getParams() 获取<p>自定义参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParams(string $Params) 设置自定义参数
+ * @method void setParams(string $Params) 设置<p>自定义参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreateTimeStr() 获取<p>创建时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTimeStr(string $CreateTimeStr) 设置<p>创建时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreator() 获取<p>创建人</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreator(string $Creator) 设置<p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SystemRole extends AbstractModel
 {
     /**
-     * @var string 角色id
+     * @var string <p>角色id</p>
      */
     public $RoleId;
 
     /**
-     * @var string 角色名称
+     * @var string <p>角色名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var string 角色昵称
+     * @var string <p>角色昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NameCn;
 
     /**
-     * @var string 描述
+     * @var string <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
-     * @var array 角色权限
+     * @var array <p>角色权限</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Privileges;
 
     /**
-     * @var array 方法路径
+     * @var array <p>方法路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MethodPaths;
 
     /**
-     * @var string 角色类型, 分为System,Tenant,Project,Commercial
+     * @var string <p>角色类型, 分为System,Tenant,Project,Commercial</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoleType;
 
     /**
-     * @var boolean 是否系统默认
+     * @var boolean <p>是否系统默认</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SystemInit;
 
     /**
-     * @var string 自定义参数
+     * @var string <p>自定义参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Params;
 
     /**
-     * @param string $RoleId 角色id
-     * @param string $Name 角色名称
+     * @var string <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NameCn 角色昵称
+     */
+    public $CreateTimeStr;
+
+    /**
+     * @var string <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Description 描述
+     */
+    public $Creator;
+
+    /**
+     * @param string $RoleId <p>角色id</p>
+     * @param string $Name <p>角色名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Privileges 角色权限
+     * @param string $NameCn <p>角色昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $MethodPaths 方法路径
+     * @param string $Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RoleType 角色类型, 分为System,Tenant,Project,Commercial
+     * @param array $Privileges <p>角色权限</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $SystemInit 是否系统默认
+     * @param array $MethodPaths <p>方法路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Params 自定义参数
+     * @param string $RoleType <p>角色类型, 分为System,Tenant,Project,Commercial</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $SystemInit <p>是否系统默认</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Params <p>自定义参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateTimeStr <p>创建时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Creator <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -181,6 +205,14 @@ class SystemRole extends AbstractModel
 
         if (array_key_exists("Params",$param) and $param["Params"] !== null) {
             $this->Params = $param["Params"];
+        }
+
+        if (array_key_exists("CreateTimeStr",$param) and $param["CreateTimeStr"] !== null) {
+            $this->CreateTimeStr = $param["CreateTimeStr"];
+        }
+
+        if (array_key_exists("Creator",$param) and $param["Creator"] !== null) {
+            $this->Creator = $param["Creator"];
         }
     }
 }

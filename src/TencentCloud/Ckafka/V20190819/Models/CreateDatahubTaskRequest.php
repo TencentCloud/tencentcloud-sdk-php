@@ -20,99 +20,99 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDatahubTask请求参数结构体
  *
- * @method string getTaskName() 获取任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含)
- * @method void setTaskName(string $TaskName) 设置任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含)
- * @method string getTaskType() 获取任务类型，SOURCE数据接入，SINK数据流出
- * @method void setTaskType(string $TaskType) 设置任务类型，SOURCE数据接入，SINK数据流出
- * @method DatahubResource getSourceResource() 获取数据源
- * @method void setSourceResource(DatahubResource $SourceResource) 设置数据源
- * @method DatahubResource getTargetResource() 获取数据目标
- * @method void setTargetResource(DatahubResource $TargetResource) 设置数据目标
- * @method TransformParam getTransformParam() 获取数据处理规则
- * @method void setTransformParam(TransformParam $TransformParam) 设置数据处理规则
- * @method PrivateLinkParam getPrivateLinkParam() 获取实例连接参数【已废弃】
- * @method void setPrivateLinkParam(PrivateLinkParam $PrivateLinkParam) 设置实例连接参数【已废弃】
- * @method string getSchemaId() 获取选择所要绑定的SchemaId
- * @method void setSchemaId(string $SchemaId) 设置选择所要绑定的SchemaId
- * @method TransformsParam getTransformsParam() 获取数据处理规则
- * @method void setTransformsParam(TransformsParam $TransformsParam) 设置数据处理规则
- * @method string getTaskId() 获取任务Id
- * @method void setTaskId(string $TaskId) 设置任务Id
- * @method array getTags() 获取标签列表
- * @method void setTags(array $Tags) 设置标签列表
- * @method string getDescription() 获取任务描述信息
- * @method void setDescription(string $Description) 设置任务描述信息
+ * @method string getTaskName() 获取<p>任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含)</p>
+ * @method void setTaskName(string $TaskName) 设置<p>任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含)</p>
+ * @method string getTaskType() 获取<p>任务类型，SOURCE数据接入，SINK数据流出</p>
+ * @method void setTaskType(string $TaskType) 设置<p>任务类型，SOURCE数据接入，SINK数据流出</p>
+ * @method DatahubResource getSourceResource() 获取<p>数据源</p>
+ * @method void setSourceResource(DatahubResource $SourceResource) 设置<p>数据源</p>
+ * @method DatahubResource getTargetResource() 获取<p>数据目标</p>
+ * @method void setTargetResource(DatahubResource $TargetResource) 设置<p>数据目标</p>
+ * @method TransformParam getTransformParam() 获取<p>数据处理规则</p>
+ * @method void setTransformParam(TransformParam $TransformParam) 设置<p>数据处理规则</p>
+ * @method PrivateLinkParam getPrivateLinkParam() 获取<p>实例连接参数【已废弃】</p>
+ * @method void setPrivateLinkParam(PrivateLinkParam $PrivateLinkParam) 设置<p>实例连接参数【已废弃】</p>
+ * @method string getSchemaId() 获取<p>选择所要绑定的SchemaId</p>
+ * @method void setSchemaId(string $SchemaId) 设置<p>选择所要绑定的SchemaId</p>
+ * @method TransformsParam getTransformsParam() 获取<p>数据处理规则</p>
+ * @method void setTransformsParam(TransformsParam $TransformsParam) 设置<p>数据处理规则</p>
+ * @method string getTaskId() 获取<p>任务Id</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务Id</p>
+ * @method array getTags() 获取<p>标签列表</p>
+ * @method void setTags(array $Tags) 设置<p>标签列表</p>
+ * @method string getDescription() 获取<p>任务描述信息</p>
+ * @method void setDescription(string $Description) 设置<p>任务描述信息</p>
  */
 class CreateDatahubTaskRequest extends AbstractModel
 {
     /**
-     * @var string 任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含)
+     * @var string <p>任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含)</p>
      */
     public $TaskName;
 
     /**
-     * @var string 任务类型，SOURCE数据接入，SINK数据流出
+     * @var string <p>任务类型，SOURCE数据接入，SINK数据流出</p>
      */
     public $TaskType;
 
     /**
-     * @var DatahubResource 数据源
+     * @var DatahubResource <p>数据源</p>
      */
     public $SourceResource;
 
     /**
-     * @var DatahubResource 数据目标
+     * @var DatahubResource <p>数据目标</p>
      */
     public $TargetResource;
 
     /**
-     * @var TransformParam 数据处理规则
+     * @var TransformParam <p>数据处理规则</p>
      */
     public $TransformParam;
 
     /**
-     * @var PrivateLinkParam 实例连接参数【已废弃】
+     * @var PrivateLinkParam <p>实例连接参数【已废弃】</p>
      * @deprecated
      */
     public $PrivateLinkParam;
 
     /**
-     * @var string 选择所要绑定的SchemaId
+     * @var string <p>选择所要绑定的SchemaId</p>
      */
     public $SchemaId;
 
     /**
-     * @var TransformsParam 数据处理规则
+     * @var TransformsParam <p>数据处理规则</p>
      */
     public $TransformsParam;
 
     /**
-     * @var string 任务Id
+     * @var string <p>任务Id</p>
      */
     public $TaskId;
 
     /**
-     * @var array 标签列表
+     * @var array <p>标签列表</p>
      */
     public $Tags;
 
     /**
-     * @var string 任务描述信息
+     * @var string <p>任务描述信息</p>
      */
     public $Description;
 
     /**
-     * @param string $TaskName 任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含)
-     * @param string $TaskType 任务类型，SOURCE数据接入，SINK数据流出
-     * @param DatahubResource $SourceResource 数据源
-     * @param DatahubResource $TargetResource 数据目标
-     * @param TransformParam $TransformParam 数据处理规则
-     * @param PrivateLinkParam $PrivateLinkParam 实例连接参数【已废弃】
-     * @param string $SchemaId 选择所要绑定的SchemaId
-     * @param TransformsParam $TransformsParam 数据处理规则
-     * @param string $TaskId 任务Id
-     * @param array $Tags 标签列表
-     * @param string $Description 任务描述信息
+     * @param string $TaskName <p>任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含)</p>
+     * @param string $TaskType <p>任务类型，SOURCE数据接入，SINK数据流出</p>
+     * @param DatahubResource $SourceResource <p>数据源</p>
+     * @param DatahubResource $TargetResource <p>数据目标</p>
+     * @param TransformParam $TransformParam <p>数据处理规则</p>
+     * @param PrivateLinkParam $PrivateLinkParam <p>实例连接参数【已废弃】</p>
+     * @param string $SchemaId <p>选择所要绑定的SchemaId</p>
+     * @param TransformsParam $TransformsParam <p>数据处理规则</p>
+     * @param string $TaskId <p>任务Id</p>
+     * @param array $Tags <p>标签列表</p>
+     * @param string $Description <p>任务描述信息</p>
      */
     function __construct()
     {

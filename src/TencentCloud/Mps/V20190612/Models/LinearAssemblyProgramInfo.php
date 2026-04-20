@@ -20,98 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 频道线性组装program信息。
  *
- * @method string getName() 获取program名称。
- * @method void setName(string $Name) 设置program名称。
- * @method string getSourceType() 获取编排的目标source的类型，分直播和点播。
- * @method void setSourceType(string $SourceType) 设置编排的目标source的类型，分直播和点播。
- * @method string getSourceLocationId() 获取关联的source location id。
- * @method void setSourceLocationId(string $SourceLocationId) 设置关联的source location id。
- * @method string getSourceId() 获取SourceId，唯一标识一个source。
- * @method void setSourceId(string $SourceId) 设置SourceId，唯一标识一个source。
- * @method string getSourceName() 获取关联的直播or点播，source名称，location下全局唯一。
- * @method void setSourceName(string $SourceName) 设置关联的直播or点播，source名称，location下全局唯一。
- * @method string getAttachedChannel() 获取绑定的channel。
- * @method void setAttachedChannel(string $AttachedChannel) 设置绑定的channel。
- * @method PlaybackInfo getPlaybackConf() 获取播放配置。
- * @method void setPlaybackConf(PlaybackInfo $PlaybackConf) 设置播放配置。
- * @method array getAdBreaks() 获取AdBreaks。
- * @method void setAdBreaks(array $AdBreaks) 设置AdBreaks。
- * @method string getId() 获取Id。
- * @method void setId(string $Id) 设置Id。
- * @method string getRegion() 获取Region。
- * @method void setRegion(string $Region) 设置Region。
- * @method string getSourceLocationName() 获取SourceLocation名称。
- * @method void setSourceLocationName(string $SourceLocationName) 设置SourceLocation名称。
+ * @method string getName() 获取<p>program名称。</p>
+ * @method void setName(string $Name) 设置<p>program名称。</p>
+ * @method string getSourceType() 获取<p>编排的目标source的类型，分直播和点播。</p>
+ * @method void setSourceType(string $SourceType) 设置<p>编排的目标source的类型，分直播和点播。</p>
+ * @method string getSourceLocationId() 获取<p>关联的source location id。</p>
+ * @method void setSourceLocationId(string $SourceLocationId) 设置<p>关联的source location id。</p>
+ * @method string getSourceId() 获取<p>SourceId，唯一标识一个source。</p>
+ * @method void setSourceId(string $SourceId) 设置<p>SourceId，唯一标识一个source。</p>
+ * @method string getSourceName() 获取<p>关联的直播or点播，source名称，location下全局唯一。</p>
+ * @method void setSourceName(string $SourceName) 设置<p>关联的直播or点播，source名称，location下全局唯一。</p>
+ * @method string getAttachedChannel() 获取<p>绑定的channel。</p>
+ * @method void setAttachedChannel(string $AttachedChannel) 设置<p>绑定的channel。</p>
+ * @method PlaybackInfo getPlaybackConf() 获取<p>播放配置。</p>
+ * @method void setPlaybackConf(PlaybackInfo $PlaybackConf) 设置<p>播放配置。</p>
+ * @method array getAdBreaks() 获取<p>AdBreaks。</p>
+ * @method void setAdBreaks(array $AdBreaks) 设置<p>AdBreaks。</p>
+ * @method string getId() 获取<p>Id。</p>
+ * @method void setId(string $Id) 设置<p>Id。</p>
+ * @method string getRegion() 获取<p>Region。</p>
+ * @method void setRegion(string $Region) 设置<p>Region。</p>
+ * @method string getSourceLocationName() 获取<p>SourceLocation名称。</p>
+ * @method void setSourceLocationName(string $SourceLocationName) 设置<p>SourceLocation名称。</p>
+ * @method string getVodAcquisitionMethod() 获取<p>VOD获取方式，支持PreCaching和DynamicUpdating，默认PreCaching，仅Linear频道支持</p>
+ * @method void setVodAcquisitionMethod(string $VodAcquisitionMethod) 设置<p>VOD获取方式，支持PreCaching和DynamicUpdating，默认PreCaching，仅Linear频道支持</p>
  */
 class LinearAssemblyProgramInfo extends AbstractModel
 {
     /**
-     * @var string program名称。
+     * @var string <p>program名称。</p>
      */
     public $Name;
 
     /**
-     * @var string 编排的目标source的类型，分直播和点播。
+     * @var string <p>编排的目标source的类型，分直播和点播。</p>
      */
     public $SourceType;
 
     /**
-     * @var string 关联的source location id。
+     * @var string <p>关联的source location id。</p>
      */
     public $SourceLocationId;
 
     /**
-     * @var string SourceId，唯一标识一个source。
+     * @var string <p>SourceId，唯一标识一个source。</p>
      */
     public $SourceId;
 
     /**
-     * @var string 关联的直播or点播，source名称，location下全局唯一。
+     * @var string <p>关联的直播or点播，source名称，location下全局唯一。</p>
      */
     public $SourceName;
 
     /**
-     * @var string 绑定的channel。
+     * @var string <p>绑定的channel。</p>
      */
     public $AttachedChannel;
 
     /**
-     * @var PlaybackInfo 播放配置。
+     * @var PlaybackInfo <p>播放配置。</p>
      */
     public $PlaybackConf;
 
     /**
-     * @var array AdBreaks。
+     * @var array <p>AdBreaks。</p>
      */
     public $AdBreaks;
 
     /**
-     * @var string Id。
+     * @var string <p>Id。</p>
      */
     public $Id;
 
     /**
-     * @var string Region。
+     * @var string <p>Region。</p>
      */
     public $Region;
 
     /**
-     * @var string SourceLocation名称。
+     * @var string <p>SourceLocation名称。</p>
      */
     public $SourceLocationName;
 
     /**
-     * @param string $Name program名称。
-     * @param string $SourceType 编排的目标source的类型，分直播和点播。
-     * @param string $SourceLocationId 关联的source location id。
-     * @param string $SourceId SourceId，唯一标识一个source。
-     * @param string $SourceName 关联的直播or点播，source名称，location下全局唯一。
-     * @param string $AttachedChannel 绑定的channel。
-     * @param PlaybackInfo $PlaybackConf 播放配置。
-     * @param array $AdBreaks AdBreaks。
-     * @param string $Id Id。
-     * @param string $Region Region。
-     * @param string $SourceLocationName SourceLocation名称。
+     * @var string <p>VOD获取方式，支持PreCaching和DynamicUpdating，默认PreCaching，仅Linear频道支持</p>
+     */
+    public $VodAcquisitionMethod;
+
+    /**
+     * @param string $Name <p>program名称。</p>
+     * @param string $SourceType <p>编排的目标source的类型，分直播和点播。</p>
+     * @param string $SourceLocationId <p>关联的source location id。</p>
+     * @param string $SourceId <p>SourceId，唯一标识一个source。</p>
+     * @param string $SourceName <p>关联的直播or点播，source名称，location下全局唯一。</p>
+     * @param string $AttachedChannel <p>绑定的channel。</p>
+     * @param PlaybackInfo $PlaybackConf <p>播放配置。</p>
+     * @param array $AdBreaks <p>AdBreaks。</p>
+     * @param string $Id <p>Id。</p>
+     * @param string $Region <p>Region。</p>
+     * @param string $SourceLocationName <p>SourceLocation名称。</p>
+     * @param string $VodAcquisitionMethod <p>VOD获取方式，支持PreCaching和DynamicUpdating，默认PreCaching，仅Linear频道支持</p>
      */
     function __construct()
     {
@@ -174,6 +182,10 @@ class LinearAssemblyProgramInfo extends AbstractModel
 
         if (array_key_exists("SourceLocationName",$param) and $param["SourceLocationName"] !== null) {
             $this->SourceLocationName = $param["SourceLocationName"];
+        }
+
+        if (array_key_exists("VodAcquisitionMethod",$param) and $param["VodAcquisitionMethod"] !== null) {
+            $this->VodAcquisitionMethod = $param["VodAcquisitionMethod"];
         }
     }
 }

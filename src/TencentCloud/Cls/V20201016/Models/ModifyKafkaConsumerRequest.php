@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyKafkaConsumer请求参数结构体
  *
- * @method string getFromTopicId() 获取日志主题Id。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
- * @method void setFromTopicId(string $FromTopicId) 设置日志主题Id。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
- * @method integer getCompression() 获取压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩
- * @method void setCompression(integer $Compression) 设置压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩
- * @method KafkaConsumerContent getConsumerContent() 获取kafka协议消费数据格式
- * @method void setConsumerContent(KafkaConsumerContent $ConsumerContent) 设置kafka协议消费数据格式
+ * @method string getFromTopicId() 获取<p>日志主题Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a> 获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a> 获取日志主题Id。</li></ul>
+ * @method void setFromTopicId(string $FromTopicId) 设置<p>日志主题Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a> 获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a> 获取日志主题Id。</li></ul>
+ * @method integer getCompression() 获取<p>压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩</p>
+ * @method void setCompression(integer $Compression) 设置<p>压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩</p>
+ * @method KafkaConsumerContent getConsumerContent() 获取<p>kafka协议消费数据格式</p>
+ * @method void setConsumerContent(KafkaConsumerContent $ConsumerContent) 设置<p>kafka协议消费数据格式</p>
+ * @method integer getHasServicesLog() 获取<p>是否开启投递服务日志。1：关闭，2：开启。</p>
+ * @method void setHasServicesLog(integer $HasServicesLog) 设置<p>是否开启投递服务日志。1：关闭，2：开启。</p>
+ * @method integer getScopeType() 获取<p>消费范围类型，0:最新，1:历史+最新</p>
+ * @method void setScopeType(integer $ScopeType) 设置<p>消费范围类型，0:最新，1:历史+最新</p>
  */
 class ModifyKafkaConsumerRequest extends AbstractModel
 {
     /**
-     * @var string 日志主题Id。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+     * @var string <p>日志主题Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a> 获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a> 获取日志主题Id。</li></ul>
      */
     public $FromTopicId;
 
     /**
-     * @var integer 压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩
+     * @var integer <p>压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩</p>
      */
     public $Compression;
 
     /**
-     * @var KafkaConsumerContent kafka协议消费数据格式
+     * @var KafkaConsumerContent <p>kafka协议消费数据格式</p>
      */
     public $ConsumerContent;
 
     /**
-     * @param string $FromTopicId 日志主题Id。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
-     * @param integer $Compression 压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩
-     * @param KafkaConsumerContent $ConsumerContent kafka协议消费数据格式
+     * @var integer <p>是否开启投递服务日志。1：关闭，2：开启。</p>
+     */
+    public $HasServicesLog;
+
+    /**
+     * @var integer <p>消费范围类型，0:最新，1:历史+最新</p>
+     */
+    public $ScopeType;
+
+    /**
+     * @param string $FromTopicId <p>日志主题Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a> 获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a> 获取日志主题Id。</li></ul>
+     * @param integer $Compression <p>压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩</p>
+     * @param KafkaConsumerContent $ConsumerContent <p>kafka协议消费数据格式</p>
+     * @param integer $HasServicesLog <p>是否开启投递服务日志。1：关闭，2：开启。</p>
+     * @param integer $ScopeType <p>消费范围类型，0:最新，1:历史+最新</p>
      */
     function __construct()
     {
@@ -81,6 +89,14 @@ class ModifyKafkaConsumerRequest extends AbstractModel
         if (array_key_exists("ConsumerContent",$param) and $param["ConsumerContent"] !== null) {
             $this->ConsumerContent = new KafkaConsumerContent();
             $this->ConsumerContent->deserialize($param["ConsumerContent"]);
+        }
+
+        if (array_key_exists("HasServicesLog",$param) and $param["HasServicesLog"] !== null) {
+            $this->HasServicesLog = $param["HasServicesLog"];
+        }
+
+        if (array_key_exists("ScopeType",$param) and $param["ScopeType"] !== null) {
+            $this->ScopeType = $param["ScopeType"];
         }
     }
 }

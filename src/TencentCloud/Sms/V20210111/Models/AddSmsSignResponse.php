@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddSmsSign返回参数结构体
  *
- * @method AddSignStatus getAddSignStatus() 获取添加签名响应
- * @method void setAddSignStatus(AddSignStatus $AddSignStatus) 设置添加签名响应
+ * @method AddSignStatus getAddSignStatus() 获取<p>添加签名响应</p>
+ * @method void setAddSignStatus(AddSignStatus $AddSignStatus) 设置<p>添加签名响应</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class AddSmsSignResponse extends AbstractModel
 {
     /**
-     * @var AddSignStatus 添加签名响应
+     * @var AddSignStatus <p>添加签名响应</p>
      */
     public $AddSignStatus;
 
@@ -38,7 +38,7 @@ class AddSmsSignResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param AddSignStatus $AddSignStatus 添加签名响应
+     * @param AddSignStatus $AddSignStatus <p>添加签名响应</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

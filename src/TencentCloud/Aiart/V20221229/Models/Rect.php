@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 人脸框坐标
  *
- * @method integer getX() 获取人脸框左上角横坐标。
- * @method void setX(integer $X) 设置人脸框左上角横坐标。
- * @method integer getY() 获取人脸框左上角纵坐标。
- * @method void setY(integer $Y) 设置人脸框左上角纵坐标。
- * @method integer getWidth() 获取人脸框宽度。
- * @method void setWidth(integer $Width) 设置人脸框宽度。
- * @method integer getHeight() 获取人脸框高度。
- * @method void setHeight(integer $Height) 设置人脸框高度。
+ * @method integer getX() 获取<p>人脸框左上角横坐标。</p>
+ * @method void setX(integer $X) 设置<p>人脸框左上角横坐标。</p>
+ * @method integer getY() 获取<p>人脸框左上角纵坐标。</p>
+ * @method void setY(integer $Y) 设置<p>人脸框左上角纵坐标。</p>
+ * @method integer getWidth() 获取<p>人脸框宽度。<br>单位：px</p>
+ * @method void setWidth(integer $Width) 设置<p>人脸框宽度。<br>单位：px</p>
+ * @method integer getHeight() 获取<p>人脸框高度。<br>单位：px</p>
+ * @method void setHeight(integer $Height) 设置<p>人脸框高度。<br>单位：px</p>
  */
 class Rect extends AbstractModel
 {
     /**
-     * @var integer 人脸框左上角横坐标。
+     * @var integer <p>人脸框左上角横坐标。</p>
      */
     public $X;
 
     /**
-     * @var integer 人脸框左上角纵坐标。
+     * @var integer <p>人脸框左上角纵坐标。</p>
      */
     public $Y;
 
     /**
-     * @var integer 人脸框宽度。
+     * @var integer <p>人脸框宽度。<br>单位：px</p>
      */
     public $Width;
 
     /**
-     * @var integer 人脸框高度。
+     * @var integer <p>人脸框高度。<br>单位：px</p>
      */
     public $Height;
 
     /**
-     * @param integer $X 人脸框左上角横坐标。
-     * @param integer $Y 人脸框左上角纵坐标。
-     * @param integer $Width 人脸框宽度。
-     * @param integer $Height 人脸框高度。
+     * @param integer $X <p>人脸框左上角横坐标。</p>
+     * @param integer $Y <p>人脸框左上角纵坐标。</p>
+     * @param integer $Width <p>人脸框宽度。<br>单位：px</p>
+     * @param integer $Height <p>人脸框高度。<br>单位：px</p>
      */
     function __construct()
     {

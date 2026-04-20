@@ -20,106 +20,162 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 智能体实例
  *
- * @method string getInstanceId() 获取智能体实例ID
- * @method void setInstanceId(string $InstanceId) 设置智能体实例ID
- * @method string getInstanceName() 获取智能体实例名称
- * @method void setInstanceName(string $InstanceName) 设置智能体实例名称
- * @method string getAgentId() 获取智能体ID
- * @method void setAgentId(string $AgentId) 设置智能体ID
- * @method string getAgentName() 获取智能体名称
- * @method void setAgentName(string $AgentName) 设置智能体名称
- * @method string getAgentInternalName() 获取智能体类型
- * @method void setAgentInternalName(string $AgentInternalName) 设置智能体类型
- * @method string getAgentType() 获取智能体服务模式
- * @method void setAgentType(string $AgentType) 设置智能体服务模式
- * @method string getAgentVersion() 获取智能体版本
- * @method void setAgentVersion(string $AgentVersion) 设置智能体版本
- * @method string getStatus() 获取智能体实例状态
- * @method void setStatus(string $Status) 设置智能体实例状态
- * @method array getParameters() 获取智能体实例参数列表
- * @method void setParameters(array $Parameters) 设置智能体实例参数列表
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getUpdateTime() 获取修改时间
- * @method void setUpdateTime(string $UpdateTime) 设置修改时间
- * @method array getTags() 获取资源绑定Tag列表
- * @method void setTags(array $Tags) 设置资源绑定Tag列表
+ * @method string getInstanceId() 获取<p>智能体实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>智能体实例ID</p>
+ * @method string getInstanceName() 获取<p>智能体实例名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>智能体实例名称</p>
+ * @method string getAgentId() 获取<p>智能体ID</p>
+ * @method void setAgentId(string $AgentId) 设置<p>智能体ID</p>
+ * @method string getAgentName() 获取<p>智能体名称</p>
+ * @method void setAgentName(string $AgentName) 设置<p>智能体名称</p>
+ * @method string getAgentInternalName() 获取<p>智能体类型</p>
+ * @method void setAgentInternalName(string $AgentInternalName) 设置<p>智能体类型</p>
+ * @method string getAgentType() 获取<p>智能体服务模式</p>
+ * @method void setAgentType(string $AgentType) 设置<p>智能体服务模式</p>
+ * @method string getAgentVersion() 获取<p>智能体版本</p>
+ * @method void setAgentVersion(string $AgentVersion) 设置<p>智能体版本</p>
+ * @method string getStatus() 获取<p>智能体实例状态</p>
+ * @method void setStatus(string $Status) 设置<p>智能体实例状态</p>
+ * @method array getParameters() 获取<p>智能体实例参数列表</p>
+ * @method void setParameters(array $Parameters) 设置<p>智能体实例参数列表</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getUpdateTime() 获取<p>修改时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>修改时间</p>
+ * @method array getTags() 获取<p>资源绑定Tag列表</p>
+ * @method void setTags(array $Tags) 设置<p>资源绑定Tag列表</p>
+ * @method string getDeployPlace() 获取<p>部署位置,intranet-共享版，userVpc-专享版</p>
+ * @method void setDeployPlace(string $DeployPlace) 设置<p>部署位置,intranet-共享版，userVpc-专享版</p>
+ * @method array getPolicyIds() 获取<p>关联的告警策略ID。</p>
+ * @method void setPolicyIds(array $PolicyIds) 设置<p>关联的告警策略ID。</p>
+ * @method ClawConfigInfo getClawConfig() 获取<p>无</p>
+ * @method void setClawConfig(ClawConfigInfo $ClawConfig) 设置<p>无</p>
+ * @method string getInstanceType() 获取<p>无</p>
+ * @method void setInstanceType(string $InstanceType) 设置<p>无</p>
+ * @method array getAllowedActions() 获取<p>无</p>
+ * @method void setAllowedActions(array $AllowedActions) 设置<p>无</p>
+ * @method string getLastActiveTime() 获取<p>无</p>
+ * @method void setLastActiveTime(string $LastActiveTime) 设置<p>无</p>
+ * @method string getDescription() 获取<p>无</p>
+ * @method void setDescription(string $Description) 设置<p>无</p>
  */
 class AgentInstance extends AbstractModel
 {
     /**
-     * @var string 智能体实例ID
+     * @var string <p>智能体实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 智能体实例名称
+     * @var string <p>智能体实例名称</p>
      */
     public $InstanceName;
 
     /**
-     * @var string 智能体ID
+     * @var string <p>智能体ID</p>
      */
     public $AgentId;
 
     /**
-     * @var string 智能体名称
+     * @var string <p>智能体名称</p>
      */
     public $AgentName;
 
     /**
-     * @var string 智能体类型
+     * @var string <p>智能体类型</p>
      */
     public $AgentInternalName;
 
     /**
-     * @var string 智能体服务模式
+     * @var string <p>智能体服务模式</p>
      */
     public $AgentType;
 
     /**
-     * @var string 智能体版本
+     * @var string <p>智能体版本</p>
      */
     public $AgentVersion;
 
     /**
-     * @var string 智能体实例状态
+     * @var string <p>智能体实例状态</p>
      */
     public $Status;
 
     /**
-     * @var array 智能体实例参数列表
+     * @var array <p>智能体实例参数列表</p>
      */
     public $Parameters;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 修改时间
+     * @var string <p>修改时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var array 资源绑定Tag列表
+     * @var array <p>资源绑定Tag列表</p>
      */
     public $Tags;
 
     /**
-     * @param string $InstanceId 智能体实例ID
-     * @param string $InstanceName 智能体实例名称
-     * @param string $AgentId 智能体ID
-     * @param string $AgentName 智能体名称
-     * @param string $AgentInternalName 智能体类型
-     * @param string $AgentType 智能体服务模式
-     * @param string $AgentVersion 智能体版本
-     * @param string $Status 智能体实例状态
-     * @param array $Parameters 智能体实例参数列表
-     * @param string $CreateTime 创建时间
-     * @param string $UpdateTime 修改时间
-     * @param array $Tags 资源绑定Tag列表
+     * @var string <p>部署位置,intranet-共享版，userVpc-专享版</p>
+     */
+    public $DeployPlace;
+
+    /**
+     * @var array <p>关联的告警策略ID。</p>
+     */
+    public $PolicyIds;
+
+    /**
+     * @var ClawConfigInfo <p>无</p>
+     */
+    public $ClawConfig;
+
+    /**
+     * @var string <p>无</p>
+     */
+    public $InstanceType;
+
+    /**
+     * @var array <p>无</p>
+     */
+    public $AllowedActions;
+
+    /**
+     * @var string <p>无</p>
+     */
+    public $LastActiveTime;
+
+    /**
+     * @var string <p>无</p>
+     */
+    public $Description;
+
+    /**
+     * @param string $InstanceId <p>智能体实例ID</p>
+     * @param string $InstanceName <p>智能体实例名称</p>
+     * @param string $AgentId <p>智能体ID</p>
+     * @param string $AgentName <p>智能体名称</p>
+     * @param string $AgentInternalName <p>智能体类型</p>
+     * @param string $AgentType <p>智能体服务模式</p>
+     * @param string $AgentVersion <p>智能体版本</p>
+     * @param string $Status <p>智能体实例状态</p>
+     * @param array $Parameters <p>智能体实例参数列表</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $UpdateTime <p>修改时间</p>
+     * @param array $Tags <p>资源绑定Tag列表</p>
+     * @param string $DeployPlace <p>部署位置,intranet-共享版，userVpc-专享版</p>
+     * @param array $PolicyIds <p>关联的告警策略ID。</p>
+     * @param ClawConfigInfo $ClawConfig <p>无</p>
+     * @param string $InstanceType <p>无</p>
+     * @param array $AllowedActions <p>无</p>
+     * @param string $LastActiveTime <p>无</p>
+     * @param string $Description <p>无</p>
      */
     function __construct()
     {
@@ -190,6 +246,35 @@ class AgentInstance extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("DeployPlace",$param) and $param["DeployPlace"] !== null) {
+            $this->DeployPlace = $param["DeployPlace"];
+        }
+
+        if (array_key_exists("PolicyIds",$param) and $param["PolicyIds"] !== null) {
+            $this->PolicyIds = $param["PolicyIds"];
+        }
+
+        if (array_key_exists("ClawConfig",$param) and $param["ClawConfig"] !== null) {
+            $this->ClawConfig = new ClawConfigInfo();
+            $this->ClawConfig->deserialize($param["ClawConfig"]);
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("AllowedActions",$param) and $param["AllowedActions"] !== null) {
+            $this->AllowedActions = $param["AllowedActions"];
+        }
+
+        if (array_key_exists("LastActiveTime",$param) and $param["LastActiveTime"] !== null) {
+            $this->LastActiveTime = $param["LastActiveTime"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

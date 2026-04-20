@@ -47,6 +47,7 @@ use TencentCloud\Common\AbstractModel;
 <li>ClientIPCountry：回源时携带客户端 IP 所属地域信息；</li>
 <li>UpstreamFollowRedirect：回源跟随重定向参数配置；</li>
 <li>UpstreamRequest：回源请求参数；</li>
+<li>Shield：源站卸载配置；</li>
 <li>TLSConfig：SSL/TLS 安全；</li>
 <li>ModifyOrigin：修改源站；</li>
 <li>HTTPUpstreamTimeout：七层回源超时配置；</li>
@@ -86,6 +87,7 @@ use TencentCloud\Common\AbstractModel;
 <li>ClientIPCountry：回源时携带客户端 IP 所属地域信息；</li>
 <li>UpstreamFollowRedirect：回源跟随重定向参数配置；</li>
 <li>UpstreamRequest：回源请求参数；</li>
+<li>Shield：源站卸载配置；</li>
 <li>TLSConfig：SSL/TLS 安全；</li>
 <li>ModifyOrigin：修改源站；</li>
 <li>HTTPUpstreamTimeout：七层回源超时配置；</li>
@@ -202,6 +204,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpstreamRequestParameters(UpstreamRequestParameters $UpstreamRequestParameters) 设置回源请求参数配置参数，当 Name 取值为 UpstreamRequest 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ShieldParameters getShieldParameters() 获取源站卸载配置参数，当 Name 取值为 Shield 时，该参数必填。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setShieldParameters(ShieldParameters $ShieldParameters) 设置源站卸载配置参数，当 Name 取值为 Shield 时，该参数必填。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method TLSConfigParameters getTLSConfigParameters() 获取SSL/TLS 安全配置参数，当 Name 取值为 TLSConfig 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTLSConfigParameters(TLSConfigParameters $TLSConfigParameters) 设置SSL/TLS 安全配置参数，当 Name 取值为 TLSConfig 时，该参数必填。
@@ -277,6 +283,7 @@ class RuleEngineAction extends AbstractModel
 <li>ClientIPCountry：回源时携带客户端 IP 所属地域信息；</li>
 <li>UpstreamFollowRedirect：回源跟随重定向参数配置；</li>
 <li>UpstreamRequest：回源请求参数；</li>
+<li>Shield：源站卸载配置；</li>
 <li>TLSConfig：SSL/TLS 安全；</li>
 <li>ModifyOrigin：修改源站；</li>
 <li>HTTPUpstreamTimeout：七层回源超时配置；</li>
@@ -449,6 +456,12 @@ class RuleEngineAction extends AbstractModel
     public $UpstreamRequestParameters;
 
     /**
+     * @var ShieldParameters 源站卸载配置参数，当 Name 取值为 Shield 时，该参数必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ShieldParameters;
+
+    /**
      * @var TLSConfigParameters SSL/TLS 安全配置参数，当 Name 取值为 TLSConfig 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -546,6 +559,7 @@ class RuleEngineAction extends AbstractModel
 <li>ClientIPCountry：回源时携带客户端 IP 所属地域信息；</li>
 <li>UpstreamFollowRedirect：回源跟随重定向参数配置；</li>
 <li>UpstreamRequest：回源请求参数；</li>
+<li>Shield：源站卸载配置；</li>
 <li>TLSConfig：SSL/TLS 安全；</li>
 <li>ModifyOrigin：修改源站；</li>
 <li>HTTPUpstreamTimeout：七层回源超时配置；</li>
@@ -609,6 +623,8 @@ class RuleEngineAction extends AbstractModel
      * @param UpstreamFollowRedirectParameters $UpstreamFollowRedirectParameters 回源跟随重定向参数配置，当 Name 取值为 UpstreamFollowRedirect 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UpstreamRequestParameters $UpstreamRequestParameters 回源请求参数配置参数，当 Name 取值为 UpstreamRequest 时，该参数必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ShieldParameters $ShieldParameters 源站卸载配置参数，当 Name 取值为 Shield 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TLSConfigParameters $TLSConfigParameters SSL/TLS 安全配置参数，当 Name 取值为 TLSConfig 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -778,6 +794,11 @@ class RuleEngineAction extends AbstractModel
         if (array_key_exists("UpstreamRequestParameters",$param) and $param["UpstreamRequestParameters"] !== null) {
             $this->UpstreamRequestParameters = new UpstreamRequestParameters();
             $this->UpstreamRequestParameters->deserialize($param["UpstreamRequestParameters"]);
+        }
+
+        if (array_key_exists("ShieldParameters",$param) and $param["ShieldParameters"] !== null) {
+            $this->ShieldParameters = new ShieldParameters();
+            $this->ShieldParameters->deserialize($param["ShieldParameters"]);
         }
 
         if (array_key_exists("TLSConfigParameters",$param) and $param["TLSConfigParameters"] !== null) {

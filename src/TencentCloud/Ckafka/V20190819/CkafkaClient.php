@@ -32,9 +32,9 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\CreateAclResponse CreateAcl(Models\CreateAclRequest $req) 添加 ACL 策略
  * @method Models\CreateAclRuleResponse CreateAclRule(Models\CreateAclRuleRequest $req) 添加 ACL 规则
  * @method Models\CreateCdcClusterResponse CreateCdcCluster(Models\CreateCdcClusterRequest $req) 用于cdc的专用ckafka集群
- * @method Models\CreateConnectResourceResponse CreateConnectResource(Models\CreateConnectResourceRequest $req) 创建Datahub连接源
+ * @method Models\CreateConnectResourceResponse CreateConnectResource(Models\CreateConnectResourceRequest $req) 创建连接器连接
  * @method Models\CreateConsumerResponse CreateConsumer(Models\CreateConsumerRequest $req) 创建消费者组
- * @method Models\CreateDatahubTaskResponse CreateDatahubTask(Models\CreateDatahubTaskRequest $req) 创建DIP转储任务
+ * @method Models\CreateDatahubTaskResponse CreateDatahubTask(Models\CreateDatahubTaskRequest $req) 创建连接器任务
  * @method Models\CreateDatahubTopicResponse CreateDatahubTopic(Models\CreateDatahubTopicRequest $req) 创建DIP主题
  * @method Models\CreateInstancePreResponse CreateInstancePre(Models\CreateInstancePreRequest $req) 创建实例(预付费包年包月),  仅支持创建专业版实例
  * @method Models\CreatePartitionResponse CreatePartition(Models\CreatePartitionRequest $req) 本接口用于增加主题中的分区
@@ -47,8 +47,8 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 添加用户
  * @method Models\DeleteAclResponse DeleteAcl(Models\DeleteAclRequest $req) 删除ACL
  * @method Models\DeleteAclRuleResponse DeleteAclRule(Models\DeleteAclRuleRequest $req) 删除ACL规则
- * @method Models\DeleteConnectResourceResponse DeleteConnectResource(Models\DeleteConnectResourceRequest $req) 删除Datahub连接源
- * @method Models\DeleteDatahubTaskResponse DeleteDatahubTask(Models\DeleteDatahubTaskRequest $req) 删除Dip任务
+ * @method Models\DeleteConnectResourceResponse DeleteConnectResource(Models\DeleteConnectResourceRequest $req) 删除连接器连接
+ * @method Models\DeleteDatahubTaskResponse DeleteDatahubTask(Models\DeleteDatahubTaskRequest $req) 删除连接器任务
  * @method Models\DeleteDatahubTopicResponse DeleteDatahubTopic(Models\DeleteDatahubTopicRequest $req) 删除DIP主题
  * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) 删除消费组
  * @method Models\DeleteGroupSubscribeTopicResponse DeleteGroupSubscribeTopic(Models\DeleteGroupSubscribeTopicRequest $req) 删除消费分组订阅的topic(消费分组必须是Empty 状态)
@@ -60,16 +60,17 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DeleteTopicIpWhiteListResponse DeleteTopicIpWhiteList(Models\DeleteTopicIpWhiteListRequest $req) 删除主题IP白名单
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) 删除用户
  * @method Models\DescribeACLResponse DescribeACL(Models\DescribeACLRequest $req) 枚举ACL
+ * @method Models\DescribeAccessPolicyResponse DescribeAccessPolicy(Models\DescribeAccessPolicyRequest $req) 查询实例公网IP白名单列表接口
  * @method Models\DescribeAclRuleResponse DescribeAclRule(Models\DescribeAclRuleRequest $req) 查询ACL规则列表
  * @method Models\DescribeCkafkaVersionResponse DescribeCkafkaVersion(Models\DescribeCkafkaVersionRequest $req) 查询实例版本信息
  * @method Models\DescribeCkafkaZoneResponse DescribeCkafkaZone(Models\DescribeCkafkaZoneRequest $req) 用于查看ckafka的可用区列表
- * @method Models\DescribeConnectResourceResponse DescribeConnectResource(Models\DescribeConnectResourceRequest $req) 查询Datahub连接源
- * @method Models\DescribeConnectResourcesResponse DescribeConnectResources(Models\DescribeConnectResourcesRequest $req) 查询Datahub连接源列表
+ * @method Models\DescribeConnectResourceResponse DescribeConnectResource(Models\DescribeConnectResourceRequest $req) 查询连接器连接详情
+ * @method Models\DescribeConnectResourcesResponse DescribeConnectResources(Models\DescribeConnectResourcesRequest $req) 查询连接器连接列表
  * @method Models\DescribeConsumerGroupResponse DescribeConsumerGroup(Models\DescribeConsumerGroupRequest $req) 查询消费分组信息
  * @method Models\DescribeCvmInfoResponse DescribeCvmInfo(Models\DescribeCvmInfoRequest $req) 本接口用于获取实例对应后端CVM信息，包括cvmId和ip等。用于专业版，标准版返回数据为空
  * @method Models\DescribeDatahubGroupOffsetsResponse DescribeDatahubGroupOffsets(Models\DescribeDatahubGroupOffsetsRequest $req) 获取Datahub消费分组offset
- * @method Models\DescribeDatahubTaskResponse DescribeDatahubTask(Models\DescribeDatahubTaskRequest $req) 查询Datahub任务信息
- * @method Models\DescribeDatahubTasksResponse DescribeDatahubTasks(Models\DescribeDatahubTasksRequest $req) 查询Datahub任务列表
+ * @method Models\DescribeDatahubTaskResponse DescribeDatahubTask(Models\DescribeDatahubTaskRequest $req) 查询连接器任务详情
+ * @method Models\DescribeDatahubTasksResponse DescribeDatahubTasks(Models\DescribeDatahubTasksRequest $req) 查询连接器任务列表
  * @method Models\DescribeDatahubTopicResponse DescribeDatahubTopic(Models\DescribeDatahubTopicRequest $req) 获取DIP主题属性
  * @method Models\DescribeDatahubTopicsResponse DescribeDatahubTopics(Models\DescribeDatahubTopicsRequest $req) 查询DIP主题列表
  * @method Models\DescribeGroupResponse DescribeGroup(Models\DescribeGroupRequest $req) 枚举消费分组(精简版)
@@ -101,9 +102,10 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\FetchMessageListByTimestampResponse FetchMessageListByTimestamp(Models\FetchMessageListByTimestampRequest $req) 根据时间戳查询消息列表
  * @method Models\InquireCkafkaPriceResponse InquireCkafkaPrice(Models\InquireCkafkaPriceRequest $req) Ckafka实例购买/续费询价
  * @method Models\InstanceScalingDownResponse InstanceScalingDown(Models\InstanceScalingDownRequest $req) 按量实例缩容
+ * @method Models\ModifyAccessPolicyResponse ModifyAccessPolicy(Models\ModifyAccessPolicyRequest $req) 修改实例公网IP白名单列表接口
  * @method Models\ModifyAclRuleResponse ModifyAclRule(Models\ModifyAclRuleRequest $req) 修改ACL策略，目前只支持预设规则的是否应用到新增topic这一项的修改
- * @method Models\ModifyConnectResourceResponse ModifyConnectResource(Models\ModifyConnectResourceRequest $req) 编辑Datahub连接源
- * @method Models\ModifyDatahubTaskResponse ModifyDatahubTask(Models\ModifyDatahubTaskRequest $req) 修改Datahub任务
+ * @method Models\ModifyConnectResourceResponse ModifyConnectResource(Models\ModifyConnectResourceRequest $req) 编辑连接器连接
+ * @method Models\ModifyDatahubTaskResponse ModifyDatahubTask(Models\ModifyDatahubTaskRequest $req) 修改连接器任务
  * @method Models\ModifyDatahubTopicResponse ModifyDatahubTopic(Models\ModifyDatahubTopicRequest $req) 修改DIP主题属性
  * @method Models\ModifyGroupOffsetsResponse ModifyGroupOffsets(Models\ModifyGroupOffsetsRequest $req) 设置Groups 消费分组offset
  * @method Models\ModifyInstanceAttributesResponse ModifyInstanceAttributes(Models\ModifyInstanceAttributesRequest $req) 设置实例属性
@@ -111,10 +113,10 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\ModifyPasswordResponse ModifyPassword(Models\ModifyPasswordRequest $req) 修改密码
  * @method Models\ModifyRoutineMaintenanceTaskResponse ModifyRoutineMaintenanceTask(Models\ModifyRoutineMaintenanceTaskRequest $req) 设置自动化运维属性
  * @method Models\ModifyTopicAttributesResponse ModifyTopicAttributes(Models\ModifyTopicAttributesRequest $req) 本接口用于修改主题属性。
- * @method Models\PauseDatahubTaskResponse PauseDatahubTask(Models\PauseDatahubTaskRequest $req) 暂停Dip任务
+ * @method Models\PauseDatahubTaskResponse PauseDatahubTask(Models\PauseDatahubTaskRequest $req) 暂停连接器任务
  * @method Models\RenewCkafkaInstanceResponse RenewCkafkaInstance(Models\RenewCkafkaInstanceRequest $req) 续费Ckafka实例, 目前只支持国内站包年包月实例续费
- * @method Models\RestartDatahubTaskResponse RestartDatahubTask(Models\RestartDatahubTaskRequest $req) Datahub任务异常时，重启Datahub任务
- * @method Models\ResumeDatahubTaskResponse ResumeDatahubTask(Models\ResumeDatahubTaskRequest $req) 恢复Dip任务
+ * @method Models\RestartDatahubTaskResponse RestartDatahubTask(Models\RestartDatahubTaskRequest $req) 连接器任务异常时，重启连接器任务
+ * @method Models\ResumeDatahubTaskResponse ResumeDatahubTask(Models\ResumeDatahubTaskRequest $req) 恢复连接器任务
  * @method Models\SendMessageResponse SendMessage(Models\SendMessageRequest $req) 通过HTTP接入层发送消息
  * @method Models\UpgradeBrokerVersionResponse UpgradeBrokerVersion(Models\UpgradeBrokerVersionRequest $req) broker版本升级
  */

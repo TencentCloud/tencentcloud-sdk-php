@@ -24,20 +24,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置查询开始位置
  * @method integer getLimit() 获取列表查询数量
  * @method void setLimit(integer $Limit) 设置列表查询数量
- * @method string getInstanceId() 获取实例ID，为空时查询所有，如果填写则会根据InstanceId筛选
- * @method void setInstanceId(string $InstanceId) 设置实例ID，为空时查询所有，如果填写则会根据InstanceId筛选
- * @method string getInstanceName() 获取实例名，为空时查询所有，如果填写则会根据InstanceName筛选
- * @method void setInstanceName(string $InstanceName) 设置实例名，为空时查询所有，如果填写则会根据InstanceName筛选
- * @method string getAgentId() 获取智能体ID，为空时查询所有，如果填写则会根据AgentId筛选
- * @method void setAgentId(string $AgentId) 设置智能体ID，为空时查询所有，如果填写则会根据AgentId筛选
- * @method string getAgentName() 获取智能体名称，为空时查询所有，如果填写则会根据AgentName筛选
- * @method void setAgentName(string $AgentName) 设置智能体名称，为空时查询所有，如果填写则会根据AgentName筛选
- * @method string getAgentInternalName() 获取智能体类型，为空时查询所有，如果填写则会根据AgentName筛选
- * @method void setAgentInternalName(string $AgentInternalName) 设置智能体类型，为空时查询所有，如果填写则会根据AgentName筛选
- * @method string getStatus() 获取智能体实例状态，为空时查询所有，如果填写则会根据Status筛选
- * @method void setStatus(string $Status) 设置智能体实例状态，为空时查询所有，如果填写则会根据Status筛选
- * @method array getTagFilter() 获取标签过滤信息
- * @method void setTagFilter(array $TagFilter) 设置标签过滤信息
+ * @method string getInstanceId() 获取<p>实例ID，为空时查询所有，如果填写则会根据InstanceId筛选</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID，为空时查询所有，如果填写则会根据InstanceId筛选</p>
+ * @method string getInstanceName() 获取<p>实例名，为空时查询所有，如果填写则会根据InstanceName筛选</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名，为空时查询所有，如果填写则会根据InstanceName筛选</p>
+ * @method string getAgentId() 获取<p>智能体ID，为空时查询所有，如果填写则会根据AgentId筛选</p>
+ * @method void setAgentId(string $AgentId) 设置<p>智能体ID，为空时查询所有，如果填写则会根据AgentId筛选</p>
+ * @method string getAgentName() 获取<p>智能体名称，为空时查询所有，如果填写则会根据AgentName筛选</p>
+ * @method void setAgentName(string $AgentName) 设置<p>智能体名称，为空时查询所有，如果填写则会根据AgentName筛选</p>
+ * @method string getAgentInternalName() 获取<p>智能体类型，为空时查询所有，如果填写则会根据AgentName筛选</p>
+ * @method void setAgentInternalName(string $AgentInternalName) 设置<p>智能体类型，为空时查询所有，如果填写则会根据AgentName筛选</p>
+ * @method string getStatus() 获取<p>智能体实例状态，为空时查询所有，如果填写则会根据Status筛选</p>
+ * @method void setStatus(string $Status) 设置<p>智能体实例状态，为空时查询所有，如果填写则会根据Status筛选</p>
+ * @method array getTagFilter() 获取<p>标签过滤信息</p>
+ * @method void setTagFilter(array $TagFilter) 设置<p>标签过滤信息</p>
+ * @method string getInstanceType() 获取<p>实例类型</p>
+ * @method void setInstanceType(string $InstanceType) 设置<p>实例类型</p>
  */
 class DescribeAgentInstancesRequest extends AbstractModel
 {
@@ -52,50 +54,56 @@ class DescribeAgentInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 实例ID，为空时查询所有，如果填写则会根据InstanceId筛选
+     * @var string <p>实例ID，为空时查询所有，如果填写则会根据InstanceId筛选</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名，为空时查询所有，如果填写则会根据InstanceName筛选
+     * @var string <p>实例名，为空时查询所有，如果填写则会根据InstanceName筛选</p>
      */
     public $InstanceName;
 
     /**
-     * @var string 智能体ID，为空时查询所有，如果填写则会根据AgentId筛选
+     * @var string <p>智能体ID，为空时查询所有，如果填写则会根据AgentId筛选</p>
      */
     public $AgentId;
 
     /**
-     * @var string 智能体名称，为空时查询所有，如果填写则会根据AgentName筛选
+     * @var string <p>智能体名称，为空时查询所有，如果填写则会根据AgentName筛选</p>
      */
     public $AgentName;
 
     /**
-     * @var string 智能体类型，为空时查询所有，如果填写则会根据AgentName筛选
+     * @var string <p>智能体类型，为空时查询所有，如果填写则会根据AgentName筛选</p>
      */
     public $AgentInternalName;
 
     /**
-     * @var string 智能体实例状态，为空时查询所有，如果填写则会根据Status筛选
+     * @var string <p>智能体实例状态，为空时查询所有，如果填写则会根据Status筛选</p>
      */
     public $Status;
 
     /**
-     * @var array 标签过滤信息
+     * @var array <p>标签过滤信息</p>
      */
     public $TagFilter;
 
     /**
+     * @var string <p>实例类型</p>
+     */
+    public $InstanceType;
+
+    /**
      * @param integer $Offset 查询开始位置
      * @param integer $Limit 列表查询数量
-     * @param string $InstanceId 实例ID，为空时查询所有，如果填写则会根据InstanceId筛选
-     * @param string $InstanceName 实例名，为空时查询所有，如果填写则会根据InstanceName筛选
-     * @param string $AgentId 智能体ID，为空时查询所有，如果填写则会根据AgentId筛选
-     * @param string $AgentName 智能体名称，为空时查询所有，如果填写则会根据AgentName筛选
-     * @param string $AgentInternalName 智能体类型，为空时查询所有，如果填写则会根据AgentName筛选
-     * @param string $Status 智能体实例状态，为空时查询所有，如果填写则会根据Status筛选
-     * @param array $TagFilter 标签过滤信息
+     * @param string $InstanceId <p>实例ID，为空时查询所有，如果填写则会根据InstanceId筛选</p>
+     * @param string $InstanceName <p>实例名，为空时查询所有，如果填写则会根据InstanceName筛选</p>
+     * @param string $AgentId <p>智能体ID，为空时查询所有，如果填写则会根据AgentId筛选</p>
+     * @param string $AgentName <p>智能体名称，为空时查询所有，如果填写则会根据AgentName筛选</p>
+     * @param string $AgentInternalName <p>智能体类型，为空时查询所有，如果填写则会根据AgentName筛选</p>
+     * @param string $Status <p>智能体实例状态，为空时查询所有，如果填写则会根据Status筛选</p>
+     * @param array $TagFilter <p>标签过滤信息</p>
+     * @param string $InstanceType <p>实例类型</p>
      */
     function __construct()
     {
@@ -149,6 +157,10 @@ class DescribeAgentInstancesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagFilter, $obj);
             }
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConnectResources请求参数结构体
  *
- * @method string getType() 获取连接源类型
- * @method void setType(string $Type) 设置连接源类型
- * @method string getSearchWord() 获取连接源名称的关键字查询,支持模糊匹配
- * @method void setSearchWord(string $SearchWord) 设置连接源名称的关键字查询,支持模糊匹配
- * @method integer getOffset() 获取分页偏移量，默认为0
- * @method void setOffset(integer $Offset) 设置分页偏移量，默认为0
- * @method integer getLimit() 获取返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)
- * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)
- * @method string getResourceRegion() 获取连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)
- * @method void setResourceRegion(string $ResourceRegion) 设置连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)
+ * @method string getType() 获取<p>连接源类型</p>
+ * @method void setType(string $Type) 设置<p>连接源类型</p>
+ * @method string getSearchWord() 获取<p>连接源名称的关键字查询,支持模糊匹配</p>
+ * @method void setSearchWord(string $SearchWord) 设置<p>连接源名称的关键字查询,支持模糊匹配</p>
+ * @method integer getOffset() 获取<p>分页偏移量，默认为0</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移量，默认为0</p>
+ * @method integer getLimit() 获取<p>返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)</p>
+ * @method string getResourceRegion() 获取<p>连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)</p>
+ * @method void setResourceRegion(string $ResourceRegion) 设置<p>连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)</p>
  */
 class DescribeConnectResourcesRequest extends AbstractModel
 {
     /**
-     * @var string 连接源类型
+     * @var string <p>连接源类型</p>
      */
     public $Type;
 
     /**
-     * @var string 连接源名称的关键字查询,支持模糊匹配
+     * @var string <p>连接源名称的关键字查询,支持模糊匹配</p>
      */
     public $SearchWord;
 
     /**
-     * @var integer 分页偏移量，默认为0
+     * @var integer <p>分页偏移量，默认为0</p>
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)
+     * @var integer <p>返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)</p>
      */
     public $Limit;
 
     /**
-     * @var string 连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)
+     * @var string <p>连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)</p>
      */
     public $ResourceRegion;
 
     /**
-     * @param string $Type 连接源类型
-     * @param string $SearchWord 连接源名称的关键字查询,支持模糊匹配
-     * @param integer $Offset 分页偏移量，默认为0
-     * @param integer $Limit 返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)
-     * @param string $ResourceRegion 连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)
+     * @param string $Type <p>连接源类型</p>
+     * @param string $SearchWord <p>连接源名称的关键字查询,支持模糊匹配</p>
+     * @param integer $Offset <p>分页偏移量，默认为0</p>
+     * @param integer $Limit <p>返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)</p>
+     * @param string $ResourceRegion <p>连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)</p>
      */
     function __construct()
     {

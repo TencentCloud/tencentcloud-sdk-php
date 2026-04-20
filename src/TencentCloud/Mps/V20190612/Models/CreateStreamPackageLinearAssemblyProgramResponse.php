@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateStreamPackageLinearAssemblyProgram返回参数结构体
  *
- * @method LinearAssemblyProgramInfo getInfo() 获取channel信息。
- * @method void setInfo(LinearAssemblyProgramInfo $Info) 设置channel信息。
+ * @method LinearAssemblyProgramInfo getInfo() 获取<p>channel信息。</p>
+ * @method void setInfo(LinearAssemblyProgramInfo $Info) 设置<p>channel信息。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateStreamPackageLinearAssemblyProgramResponse extends AbstractModel
 {
     /**
-     * @var LinearAssemblyProgramInfo channel信息。
+     * @var LinearAssemblyProgramInfo <p>channel信息。</p>
      */
     public $Info;
 
@@ -38,7 +38,7 @@ class CreateStreamPackageLinearAssemblyProgramResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param LinearAssemblyProgramInfo $Info channel信息。
+     * @param LinearAssemblyProgramInfo $Info <p>channel信息。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,242 +20,250 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询连接源具体数据的返参
  *
- * @method string getResourceId() 获取连接源的Id
- * @method void setResourceId(string $ResourceId) 设置连接源的Id
- * @method string getResourceName() 获取连接源名称
- * @method void setResourceName(string $ResourceName) 设置连接源名称
- * @method string getDescription() 获取连接源描述
- * @method void setDescription(string $Description) 设置连接源描述
- * @method string getType() 获取连接源类型
- * @method void setType(string $Type) 设置连接源类型
- * @method integer getStatus() 获取连接源的状态
- * @method void setStatus(integer $Status) 设置连接源的状态
- * @method string getCreateTime() 获取连接源的创建时间
- * @method void setCreateTime(string $CreateTime) 设置连接源的创建时间
- * @method string getErrorMessage() 获取连接源的异常信息
- * @method void setErrorMessage(string $ErrorMessage) 设置连接源的异常信息
- * @method integer getDatahubTaskCount() 获取该连接源关联的Datahub任务数
- * @method void setDatahubTaskCount(integer $DatahubTaskCount) 设置该连接源关联的Datahub任务数
- * @method string getCurrentStep() 获取连接源的当前所处步骤
- * @method void setCurrentStep(string $CurrentStep) 设置连接源的当前所处步骤
- * @method float getTaskProgress() 获取创建进度百分比
- * @method void setTaskProgress(float $TaskProgress) 设置创建进度百分比
- * @method array getStepList() 获取步骤列表
- * @method void setStepList(array $StepList) 设置步骤列表
- * @method DtsConnectParam getDtsConnectParam() 获取Dts配置，Type为DTS时返回
+ * @method string getResourceId() 获取<p>连接源的Id</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>连接源的Id</p>
+ * @method string getResourceName() 获取<p>连接源名称</p>
+ * @method void setResourceName(string $ResourceName) 设置<p>连接源名称</p>
+ * @method string getDescription() 获取<p>连接源描述</p>
+ * @method void setDescription(string $Description) 设置<p>连接源描述</p>
+ * @method string getType() 获取<p>连接源类型</p>
+ * @method void setType(string $Type) 设置<p>连接源类型</p>
+ * @method integer getStatus() 获取<p>连接源的状态</p>
+ * @method void setStatus(integer $Status) 设置<p>连接源的状态</p>
+ * @method string getCreateTime() 获取<p>连接源的创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>连接源的创建时间</p>
+ * @method string getErrorMessage() 获取<p>连接源的异常信息</p>
+ * @method void setErrorMessage(string $ErrorMessage) 设置<p>连接源的异常信息</p>
+ * @method integer getDatahubTaskCount() 获取<p>该连接源关联的Datahub任务数</p>
+ * @method void setDatahubTaskCount(integer $DatahubTaskCount) 设置<p>该连接源关联的Datahub任务数</p>
+ * @method string getCurrentStep() 获取<p>连接源的当前所处步骤</p>
+ * @method void setCurrentStep(string $CurrentStep) 设置<p>连接源的当前所处步骤</p>
+ * @method float getTaskProgress() 获取<p>创建进度百分比</p>
+ * @method void setTaskProgress(float $TaskProgress) 设置<p>创建进度百分比</p>
+ * @method array getStepList() 获取<p>步骤列表</p>
+ * @method void setStepList(array $StepList) 设置<p>步骤列表</p>
+ * @method DtsConnectParam getDtsConnectParam() 获取<p>Dts配置，Type为DTS时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDtsConnectParam(DtsConnectParam $DtsConnectParam) 设置Dts配置，Type为DTS时返回
+ * @method void setDtsConnectParam(DtsConnectParam $DtsConnectParam) 设置<p>Dts配置，Type为DTS时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MongoDBConnectParam getMongoDBConnectParam() 获取MongoDB配置，Type为MONGODB时返回
+ * @method MongoDBConnectParam getMongoDBConnectParam() 获取<p>MongoDB配置，Type为MONGODB时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMongoDBConnectParam(MongoDBConnectParam $MongoDBConnectParam) 设置MongoDB配置，Type为MONGODB时返回
+ * @method void setMongoDBConnectParam(MongoDBConnectParam $MongoDBConnectParam) 设置<p>MongoDB配置，Type为MONGODB时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method EsConnectParam getEsConnectParam() 获取Es配置，Type为ES时返回
+ * @method EsConnectParam getEsConnectParam() 获取<p>Es配置，Type为ES时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEsConnectParam(EsConnectParam $EsConnectParam) 设置Es配置，Type为ES时返回
+ * @method void setEsConnectParam(EsConnectParam $EsConnectParam) 设置<p>Es配置，Type为ES时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ClickHouseConnectParam getClickHouseConnectParam() 获取ClickHouse配置，Type为CLICKHOUSE时返回
+ * @method ClickHouseConnectParam getClickHouseConnectParam() 获取<p>ClickHouse配置，Type为CLICKHOUSE时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClickHouseConnectParam(ClickHouseConnectParam $ClickHouseConnectParam) 设置ClickHouse配置，Type为CLICKHOUSE时返回
+ * @method void setClickHouseConnectParam(ClickHouseConnectParam $ClickHouseConnectParam) 设置<p>ClickHouse配置，Type为CLICKHOUSE时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MySQLConnectParam getMySQLConnectParam() 获取MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回
+ * @method MySQLConnectParam getMySQLConnectParam() 获取<p>MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMySQLConnectParam(MySQLConnectParam $MySQLConnectParam) 设置MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回
+ * @method void setMySQLConnectParam(MySQLConnectParam $MySQLConnectParam) 设置<p>MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method PostgreSQLConnectParam getPostgreSQLConnectParam() 获取PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时返回
+ * @method PostgreSQLConnectParam getPostgreSQLConnectParam() 获取<p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPostgreSQLConnectParam(PostgreSQLConnectParam $PostgreSQLConnectParam) 设置PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时返回
+ * @method void setPostgreSQLConnectParam(PostgreSQLConnectParam $PostgreSQLConnectParam) 设置<p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MariaDBConnectParam getMariaDBConnectParam() 获取MariaDB配置，Type为MARIADB时返回
+ * @method MariaDBConnectParam getMariaDBConnectParam() 获取<p>MariaDB配置，Type为MARIADB时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMariaDBConnectParam(MariaDBConnectParam $MariaDBConnectParam) 设置MariaDB配置，Type为MARIADB时返回
+ * @method void setMariaDBConnectParam(MariaDBConnectParam $MariaDBConnectParam) 设置<p>MariaDB配置，Type为MARIADB时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method SQLServerConnectParam getSQLServerConnectParam() 获取SQLServer配置，Type为SQLSERVER时返回
+ * @method SQLServerConnectParam getSQLServerConnectParam() 获取<p>SQLServer配置，Type为SQLSERVER时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSQLServerConnectParam(SQLServerConnectParam $SQLServerConnectParam) 设置SQLServer配置，Type为SQLSERVER时返回
+ * @method void setSQLServerConnectParam(SQLServerConnectParam $SQLServerConnectParam) 设置<p>SQLServer配置，Type为SQLSERVER时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CtsdbConnectParam getCtsdbConnectParam() 获取Ctsdb配置，Type为CTSDB时返回
+ * @method CtsdbConnectParam getCtsdbConnectParam() 获取<p>Ctsdb配置，Type为CTSDB时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCtsdbConnectParam(CtsdbConnectParam $CtsdbConnectParam) 设置Ctsdb配置，Type为CTSDB时返回
+ * @method void setCtsdbConnectParam(CtsdbConnectParam $CtsdbConnectParam) 设置<p>Ctsdb配置，Type为CTSDB时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DorisConnectParam getDorisConnectParam() 获取Doris 配置，Type 为 DORIS 时返回
+ * @method DorisConnectParam getDorisConnectParam() 获取<p>Doris 配置，Type 为 DORIS 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDorisConnectParam(DorisConnectParam $DorisConnectParam) 设置Doris 配置，Type 为 DORIS 时返回
+ * @method void setDorisConnectParam(DorisConnectParam $DorisConnectParam) 设置<p>Doris 配置，Type 为 DORIS 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method KafkaConnectParam getKafkaConnectParam() 获取Kafka配置，Type 为 KAFKA 时返回
+ * @method KafkaConnectParam getKafkaConnectParam() 获取<p>Kafka配置，Type 为 KAFKA 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKafkaConnectParam(KafkaConnectParam $KafkaConnectParam) 设置Kafka配置，Type 为 KAFKA 时返回
+ * @method void setKafkaConnectParam(KafkaConnectParam $KafkaConnectParam) 设置<p>Kafka配置，Type 为 KAFKA 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MqttConnectParam getMqttConnectParam() 获取MQTT配置，Type 为 MQTT 时返回
+ * @method MqttConnectParam getMqttConnectParam() 获取<p>MQTT配置，Type 为 MQTT 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMqttConnectParam(MqttConnectParam $MqttConnectParam) 设置MQTT配置，Type 为 MQTT 时返回
+ * @method void setMqttConnectParam(MqttConnectParam $MqttConnectParam) 设置<p>MQTT配置，Type 为 MQTT 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取<p>标签列表</p>
+ * @method void setTags(array $Tags) 设置<p>标签列表</p>
  */
 class DescribeConnectResource extends AbstractModel
 {
     /**
-     * @var string 连接源的Id
+     * @var string <p>连接源的Id</p>
      */
     public $ResourceId;
 
     /**
-     * @var string 连接源名称
+     * @var string <p>连接源名称</p>
      */
     public $ResourceName;
 
     /**
-     * @var string 连接源描述
+     * @var string <p>连接源描述</p>
      */
     public $Description;
 
     /**
-     * @var string 连接源类型
+     * @var string <p>连接源类型</p>
      */
     public $Type;
 
     /**
-     * @var integer 连接源的状态
+     * @var integer <p>连接源的状态</p>
      */
     public $Status;
 
     /**
-     * @var string 连接源的创建时间
+     * @var string <p>连接源的创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 连接源的异常信息
+     * @var string <p>连接源的异常信息</p>
      */
     public $ErrorMessage;
 
     /**
-     * @var integer 该连接源关联的Datahub任务数
+     * @var integer <p>该连接源关联的Datahub任务数</p>
      */
     public $DatahubTaskCount;
 
     /**
-     * @var string 连接源的当前所处步骤
+     * @var string <p>连接源的当前所处步骤</p>
      */
     public $CurrentStep;
 
     /**
-     * @var float 创建进度百分比
+     * @var float <p>创建进度百分比</p>
      */
     public $TaskProgress;
 
     /**
-     * @var array 步骤列表
+     * @var array <p>步骤列表</p>
      */
     public $StepList;
 
     /**
-     * @var DtsConnectParam Dts配置，Type为DTS时返回
+     * @var DtsConnectParam <p>Dts配置，Type为DTS时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DtsConnectParam;
 
     /**
-     * @var MongoDBConnectParam MongoDB配置，Type为MONGODB时返回
+     * @var MongoDBConnectParam <p>MongoDB配置，Type为MONGODB时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MongoDBConnectParam;
 
     /**
-     * @var EsConnectParam Es配置，Type为ES时返回
+     * @var EsConnectParam <p>Es配置，Type为ES时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EsConnectParam;
 
     /**
-     * @var ClickHouseConnectParam ClickHouse配置，Type为CLICKHOUSE时返回
+     * @var ClickHouseConnectParam <p>ClickHouse配置，Type为CLICKHOUSE时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClickHouseConnectParam;
 
     /**
-     * @var MySQLConnectParam MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回
+     * @var MySQLConnectParam <p>MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MySQLConnectParam;
 
     /**
-     * @var PostgreSQLConnectParam PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时返回
+     * @var PostgreSQLConnectParam <p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PostgreSQLConnectParam;
 
     /**
-     * @var MariaDBConnectParam MariaDB配置，Type为MARIADB时返回
+     * @var MariaDBConnectParam <p>MariaDB配置，Type为MARIADB时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MariaDBConnectParam;
 
     /**
-     * @var SQLServerConnectParam SQLServer配置，Type为SQLSERVER时返回
+     * @var SQLServerConnectParam <p>SQLServer配置，Type为SQLSERVER时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SQLServerConnectParam;
 
     /**
-     * @var CtsdbConnectParam Ctsdb配置，Type为CTSDB时返回
+     * @var CtsdbConnectParam <p>Ctsdb配置，Type为CTSDB时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CtsdbConnectParam;
 
     /**
-     * @var DorisConnectParam Doris 配置，Type 为 DORIS 时返回
+     * @var DorisConnectParam <p>Doris 配置，Type 为 DORIS 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DorisConnectParam;
 
     /**
-     * @var KafkaConnectParam Kafka配置，Type 为 KAFKA 时返回
+     * @var KafkaConnectParam <p>Kafka配置，Type 为 KAFKA 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KafkaConnectParam;
 
     /**
-     * @var MqttConnectParam MQTT配置，Type 为 MQTT 时返回
+     * @var MqttConnectParam <p>MQTT配置，Type 为 MQTT 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MqttConnectParam;
 
     /**
-     * @param string $ResourceId 连接源的Id
-     * @param string $ResourceName 连接源名称
-     * @param string $Description 连接源描述
-     * @param string $Type 连接源类型
-     * @param integer $Status 连接源的状态
-     * @param string $CreateTime 连接源的创建时间
-     * @param string $ErrorMessage 连接源的异常信息
-     * @param integer $DatahubTaskCount 该连接源关联的Datahub任务数
-     * @param string $CurrentStep 连接源的当前所处步骤
-     * @param float $TaskProgress 创建进度百分比
-     * @param array $StepList 步骤列表
-     * @param DtsConnectParam $DtsConnectParam Dts配置，Type为DTS时返回
+     * @var array <p>标签列表</p>
+     */
+    public $Tags;
+
+    /**
+     * @param string $ResourceId <p>连接源的Id</p>
+     * @param string $ResourceName <p>连接源名称</p>
+     * @param string $Description <p>连接源描述</p>
+     * @param string $Type <p>连接源类型</p>
+     * @param integer $Status <p>连接源的状态</p>
+     * @param string $CreateTime <p>连接源的创建时间</p>
+     * @param string $ErrorMessage <p>连接源的异常信息</p>
+     * @param integer $DatahubTaskCount <p>该连接源关联的Datahub任务数</p>
+     * @param string $CurrentStep <p>连接源的当前所处步骤</p>
+     * @param float $TaskProgress <p>创建进度百分比</p>
+     * @param array $StepList <p>步骤列表</p>
+     * @param DtsConnectParam $DtsConnectParam <p>Dts配置，Type为DTS时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MongoDBConnectParam $MongoDBConnectParam MongoDB配置，Type为MONGODB时返回
+     * @param MongoDBConnectParam $MongoDBConnectParam <p>MongoDB配置，Type为MONGODB时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EsConnectParam $EsConnectParam Es配置，Type为ES时返回
+     * @param EsConnectParam $EsConnectParam <p>Es配置，Type为ES时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClickHouseConnectParam $ClickHouseConnectParam ClickHouse配置，Type为CLICKHOUSE时返回
+     * @param ClickHouseConnectParam $ClickHouseConnectParam <p>ClickHouse配置，Type为CLICKHOUSE时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MySQLConnectParam $MySQLConnectParam MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回
+     * @param MySQLConnectParam $MySQLConnectParam <p>MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PostgreSQLConnectParam $PostgreSQLConnectParam PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时返回
+     * @param PostgreSQLConnectParam $PostgreSQLConnectParam <p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MariaDBConnectParam $MariaDBConnectParam MariaDB配置，Type为MARIADB时返回
+     * @param MariaDBConnectParam $MariaDBConnectParam <p>MariaDB配置，Type为MARIADB时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SQLServerConnectParam $SQLServerConnectParam SQLServer配置，Type为SQLSERVER时返回
+     * @param SQLServerConnectParam $SQLServerConnectParam <p>SQLServer配置，Type为SQLSERVER时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CtsdbConnectParam $CtsdbConnectParam Ctsdb配置，Type为CTSDB时返回
+     * @param CtsdbConnectParam $CtsdbConnectParam <p>Ctsdb配置，Type为CTSDB时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DorisConnectParam $DorisConnectParam Doris 配置，Type 为 DORIS 时返回
+     * @param DorisConnectParam $DorisConnectParam <p>Doris 配置，Type 为 DORIS 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KafkaConnectParam $KafkaConnectParam Kafka配置，Type 为 KAFKA 时返回
+     * @param KafkaConnectParam $KafkaConnectParam <p>Kafka配置，Type 为 KAFKA 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MqttConnectParam $MqttConnectParam MQTT配置，Type 为 MQTT 时返回
+     * @param MqttConnectParam $MqttConnectParam <p>MQTT配置，Type 为 MQTT 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags <p>标签列表</p>
      */
     function __construct()
     {
@@ -372,6 +380,15 @@ class DescribeConnectResource extends AbstractModel
         if (array_key_exists("MqttConnectParam",$param) and $param["MqttConnectParam"] !== null) {
             $this->MqttConnectParam = new MqttConnectParam();
             $this->MqttConnectParam->deserialize($param["MqttConnectParam"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

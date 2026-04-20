@@ -20,210 +20,218 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Ckafka配置
  *
- * @method boolean getSelfBuilt() 获取是否为自建集群
- * @method void setSelfBuilt(boolean $SelfBuilt) 设置是否为自建集群
- * @method string getResource() 获取ckafka集群实例Id
- * @method void setResource(string $Resource) 设置ckafka集群实例Id
- * @method string getTopic() 获取主题名，多个以“,”分隔
- * @method void setTopic(string $Topic) 设置主题名，多个以“,”分隔
- * @method string getOffsetType() 获取Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp
+ * @method boolean getSelfBuilt() 获取<p>是否为自建集群</p>
+ * @method void setSelfBuilt(boolean $SelfBuilt) 设置<p>是否为自建集群</p>
+ * @method string getResource() 获取<p>ckafka集群实例Id</p>
+ * @method void setResource(string $Resource) 设置<p>ckafka集群实例Id</p>
+ * @method string getTopic() 获取<p>主题名，多个以“,”分隔</p>
+ * @method void setTopic(string $Topic) 设置<p>主题名，多个以“,”分隔</p>
+ * @method string getOffsetType() 获取<p>Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOffsetType(string $OffsetType) 设置Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp
+ * @method void setOffsetType(string $OffsetType) 设置<p>Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStartTime() 获取Offset类型为timestamp时必传，传时间戳，精确到秒
+ * @method integer getStartTime() 获取<p>Offset类型为timestamp时必传，传时间戳，精确到秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartTime(integer $StartTime) 设置Offset类型为timestamp时必传，传时间戳，精确到秒
+ * @method void setStartTime(integer $StartTime) 设置<p>Offset类型为timestamp时必传，传时间戳，精确到秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResourceName() 获取实例资源名称
+ * @method string getResourceName() 获取<p>实例资源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceName(string $ResourceName) 设置实例资源名称
+ * @method void setResourceName(string $ResourceName) 设置<p>实例资源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getZoneId() 获取可用区
+ * @method integer getZoneId() 获取<p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setZoneId(integer $ZoneId) 设置可用区
+ * @method void setZoneId(integer $ZoneId) 设置<p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTopicId() 获取主题Id
+ * @method string getTopicId() 获取<p>主题Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopicId(string $TopicId) 设置主题Id
+ * @method void setTopicId(string $TopicId) 设置<p>主题Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPartitionNum() 获取Topic的分区数
+ * @method integer getPartitionNum() 获取<p>Topic的分区数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPartitionNum(integer $PartitionNum) 设置Topic的分区数
+ * @method void setPartitionNum(integer $PartitionNum) 设置<p>Topic的分区数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getEnableToleration() 获取启用容错实例/开启死信队列
+ * @method boolean getEnableToleration() 获取<p>启用容错实例/开启死信队列</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnableToleration(boolean $EnableToleration) 设置启用容错实例/开启死信队列
+ * @method void setEnableToleration(boolean $EnableToleration) 设置<p>启用容错实例/开启死信队列</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getQpsLimit() 获取Qps 限制
- * @method void setQpsLimit(integer $QpsLimit) 设置Qps 限制
- * @method array getTableMappings() 获取Table到Topic的路由，「分发到多个topic」开关打开时必传
+ * @method integer getQpsLimit() 获取<p>Qps 限制</p>
+ * @method void setQpsLimit(integer $QpsLimit) 设置<p>Qps 限制</p>
+ * @method array getTableMappings() 获取<p>Table到Topic的路由，「分发到多个topic」开关打开时必传</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTableMappings(array $TableMappings) 设置Table到Topic的路由，「分发到多个topic」开关打开时必传
+ * @method void setTableMappings(array $TableMappings) 设置<p>Table到Topic的路由，「分发到多个topic」开关打开时必传</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getUseTableMapping() 获取「分发到多个topic」开关，默认为false
- * @method void setUseTableMapping(boolean $UseTableMapping) 设置「分发到多个topic」开关，默认为false
- * @method boolean getUseAutoCreateTopic() 获取使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
- * @method void setUseAutoCreateTopic(boolean $UseAutoCreateTopic) 设置使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
- * @method string getCompressionType() 获取写入Topic时是否进行压缩，不开启填"none"，开启的话，填写"open"。
- * @method void setCompressionType(string $CompressionType) 设置写入Topic时是否进行压缩，不开启填"none"，开启的话，填写"open"。
- * @method integer getMsgMultiple() 获取源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
- * @method void setMsgMultiple(integer $MsgMultiple) 设置源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
- * @method string getConnectorSyncType() 获取数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写"META_SYNC_INSTANCE_TYPE", 同步元数据及全部topic内消息的填写"META_AND_DATA_SYNC_INSTANCE_TYPE"; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写"DATA_SYNC_TYPE"
- * @method void setConnectorSyncType(string $ConnectorSyncType) 设置数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写"META_SYNC_INSTANCE_TYPE", 同步元数据及全部topic内消息的填写"META_AND_DATA_SYNC_INSTANCE_TYPE"; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写"DATA_SYNC_TYPE"
- * @method boolean getKeepPartition() 获取数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false
- * @method void setKeepPartition(boolean $KeepPartition) 设置数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false
- * @method string getTopicRegularExpression() 获取正则匹配Topic列表
- * @method void setTopicRegularExpression(string $TopicRegularExpression) 设置正则匹配Topic列表
- * @method string getPrefix() 获取Topic 前缀
- * @method void setPrefix(string $Prefix) 设置Topic 前缀
- * @method string getSeparator() 获取Topic前缀分隔符
- * @method void setSeparator(string $Separator) 设置Topic前缀分隔符
+ * @method boolean getUseTableMapping() 获取<p>「分发到多个topic」开关，默认为false</p>
+ * @method void setUseTableMapping(boolean $UseTableMapping) 设置<p>「分发到多个topic」开关，默认为false</p>
+ * @method boolean getUseAutoCreateTopic() 获取<p>使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）</p>
+ * @method void setUseAutoCreateTopic(boolean $UseAutoCreateTopic) 设置<p>使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）</p>
+ * @method string getCompressionType() 获取<p>写入Topic时是否进行压缩，不开启填&quot;none&quot;，开启的话，填写&quot;open&quot;。</p>
+ * @method void setCompressionType(string $CompressionType) 设置<p>写入Topic时是否进行压缩，不开启填&quot;none&quot;，开启的话，填写&quot;open&quot;。</p>
+ * @method integer getMsgMultiple() 获取<p>源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)</p>
+ * @method void setMsgMultiple(integer $MsgMultiple) 设置<p>源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)</p>
+ * @method string getConnectorSyncType() 获取<p>数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写&quot;META_SYNC_INSTANCE_TYPE&quot;, 同步元数据及全部topic内消息的填写&quot;META_AND_DATA_SYNC_INSTANCE_TYPE&quot;; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写&quot;DATA_SYNC_TYPE&quot;</p>
+ * @method void setConnectorSyncType(string $ConnectorSyncType) 设置<p>数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写&quot;META_SYNC_INSTANCE_TYPE&quot;, 同步元数据及全部topic内消息的填写&quot;META_AND_DATA_SYNC_INSTANCE_TYPE&quot;; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写&quot;DATA_SYNC_TYPE&quot;</p>
+ * @method boolean getKeepPartition() 获取<p>数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false</p>
+ * @method void setKeepPartition(boolean $KeepPartition) 设置<p>数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false</p>
+ * @method string getTopicRegularExpression() 获取<p>正则匹配Topic列表</p>
+ * @method void setTopicRegularExpression(string $TopicRegularExpression) 设置<p>正则匹配Topic列表</p>
+ * @method string getPrefix() 获取<p>Topic 前缀</p>
+ * @method void setPrefix(string $Prefix) 设置<p>Topic 前缀</p>
+ * @method string getSeparator() 获取<p>Topic前缀分隔符</p>
+ * @method void setSeparator(string $Separator) 设置<p>Topic前缀分隔符</p>
+ * @method array getTopicList() 获取<p>多选topic列表</p>
+ * @method void setTopicList(array $TopicList) 设置<p>多选topic列表</p>
  */
 class KafkaParam extends AbstractModel
 {
     /**
-     * @var boolean 是否为自建集群
+     * @var boolean <p>是否为自建集群</p>
      */
     public $SelfBuilt;
 
     /**
-     * @var string ckafka集群实例Id
+     * @var string <p>ckafka集群实例Id</p>
      */
     public $Resource;
 
     /**
-     * @var string 主题名，多个以“,”分隔
+     * @var string <p>主题名，多个以“,”分隔</p>
      */
     public $Topic;
 
     /**
-     * @var string Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp
+     * @var string <p>Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OffsetType;
 
     /**
-     * @var integer Offset类型为timestamp时必传，传时间戳，精确到秒
+     * @var integer <p>Offset类型为timestamp时必传，传时间戳，精确到秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
-     * @var string 实例资源名称
+     * @var string <p>实例资源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceName;
 
     /**
-     * @var integer 可用区
+     * @var integer <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneId;
 
     /**
-     * @var string 主题Id
+     * @var string <p>主题Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicId;
 
     /**
-     * @var integer Topic的分区数
+     * @var integer <p>Topic的分区数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PartitionNum;
 
     /**
-     * @var boolean 启用容错实例/开启死信队列
+     * @var boolean <p>启用容错实例/开启死信队列</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableToleration;
 
     /**
-     * @var integer Qps 限制
+     * @var integer <p>Qps 限制</p>
      */
     public $QpsLimit;
 
     /**
-     * @var array Table到Topic的路由，「分发到多个topic」开关打开时必传
+     * @var array <p>Table到Topic的路由，「分发到多个topic」开关打开时必传</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableMappings;
 
     /**
-     * @var boolean 「分发到多个topic」开关，默认为false
+     * @var boolean <p>「分发到多个topic」开关，默认为false</p>
      */
     public $UseTableMapping;
 
     /**
-     * @var boolean 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
+     * @var boolean <p>使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）</p>
      */
     public $UseAutoCreateTopic;
 
     /**
-     * @var string 写入Topic时是否进行压缩，不开启填"none"，开启的话，填写"open"。
+     * @var string <p>写入Topic时是否进行压缩，不开启填&quot;none&quot;，开启的话，填写&quot;open&quot;。</p>
      */
     public $CompressionType;
 
     /**
-     * @var integer 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+     * @var integer <p>源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)</p>
      */
     public $MsgMultiple;
 
     /**
-     * @var string 数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写"META_SYNC_INSTANCE_TYPE", 同步元数据及全部topic内消息的填写"META_AND_DATA_SYNC_INSTANCE_TYPE"; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写"DATA_SYNC_TYPE"
+     * @var string <p>数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写&quot;META_SYNC_INSTANCE_TYPE&quot;, 同步元数据及全部topic内消息的填写&quot;META_AND_DATA_SYNC_INSTANCE_TYPE&quot;; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写&quot;DATA_SYNC_TYPE&quot;</p>
      */
     public $ConnectorSyncType;
 
     /**
-     * @var boolean 数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false
+     * @var boolean <p>数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false</p>
      */
     public $KeepPartition;
 
     /**
-     * @var string 正则匹配Topic列表
+     * @var string <p>正则匹配Topic列表</p>
      */
     public $TopicRegularExpression;
 
     /**
-     * @var string Topic 前缀
+     * @var string <p>Topic 前缀</p>
      */
     public $Prefix;
 
     /**
-     * @var string Topic前缀分隔符
+     * @var string <p>Topic前缀分隔符</p>
      */
     public $Separator;
 
     /**
-     * @param boolean $SelfBuilt 是否为自建集群
-     * @param string $Resource ckafka集群实例Id
-     * @param string $Topic 主题名，多个以“,”分隔
-     * @param string $OffsetType Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp
+     * @var array <p>多选topic列表</p>
+     */
+    public $TopicList;
+
+    /**
+     * @param boolean $SelfBuilt <p>是否为自建集群</p>
+     * @param string $Resource <p>ckafka集群实例Id</p>
+     * @param string $Topic <p>主题名，多个以“,”分隔</p>
+     * @param string $OffsetType <p>Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $StartTime Offset类型为timestamp时必传，传时间戳，精确到秒
+     * @param integer $StartTime <p>Offset类型为timestamp时必传，传时间戳，精确到秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResourceName 实例资源名称
+     * @param string $ResourceName <p>实例资源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ZoneId 可用区
+     * @param integer $ZoneId <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TopicId 主题Id
+     * @param string $TopicId <p>主题Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PartitionNum Topic的分区数
+     * @param integer $PartitionNum <p>Topic的分区数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $EnableToleration 启用容错实例/开启死信队列
+     * @param boolean $EnableToleration <p>启用容错实例/开启死信队列</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $QpsLimit Qps 限制
-     * @param array $TableMappings Table到Topic的路由，「分发到多个topic」开关打开时必传
+     * @param integer $QpsLimit <p>Qps 限制</p>
+     * @param array $TableMappings <p>Table到Topic的路由，「分发到多个topic」开关打开时必传</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $UseTableMapping 「分发到多个topic」开关，默认为false
-     * @param boolean $UseAutoCreateTopic 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
-     * @param string $CompressionType 写入Topic时是否进行压缩，不开启填"none"，开启的话，填写"open"。
-     * @param integer $MsgMultiple 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
-     * @param string $ConnectorSyncType 数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写"META_SYNC_INSTANCE_TYPE", 同步元数据及全部topic内消息的填写"META_AND_DATA_SYNC_INSTANCE_TYPE"; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写"DATA_SYNC_TYPE"
-     * @param boolean $KeepPartition 数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false
-     * @param string $TopicRegularExpression 正则匹配Topic列表
-     * @param string $Prefix Topic 前缀
-     * @param string $Separator Topic前缀分隔符
+     * @param boolean $UseTableMapping <p>「分发到多个topic」开关，默认为false</p>
+     * @param boolean $UseAutoCreateTopic <p>使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）</p>
+     * @param string $CompressionType <p>写入Topic时是否进行压缩，不开启填&quot;none&quot;，开启的话，填写&quot;open&quot;。</p>
+     * @param integer $MsgMultiple <p>源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)</p>
+     * @param string $ConnectorSyncType <p>数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写&quot;META_SYNC_INSTANCE_TYPE&quot;, 同步元数据及全部topic内消息的填写&quot;META_AND_DATA_SYNC_INSTANCE_TYPE&quot;; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写&quot;DATA_SYNC_TYPE&quot;</p>
+     * @param boolean $KeepPartition <p>数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false</p>
+     * @param string $TopicRegularExpression <p>正则匹配Topic列表</p>
+     * @param string $Prefix <p>Topic 前缀</p>
+     * @param string $Separator <p>Topic前缀分隔符</p>
+     * @param array $TopicList <p>多选topic列表</p>
      */
     function __construct()
     {
@@ -325,6 +333,10 @@ class KafkaParam extends AbstractModel
 
         if (array_key_exists("Separator",$param) and $param["Separator"] !== null) {
             $this->Separator = $param["Separator"];
+        }
+
+        if (array_key_exists("TopicList",$param) and $param["TopicList"] !== null) {
+            $this->TopicList = $param["TopicList"];
         }
     }
 }

@@ -20,162 +20,178 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyModelService请求参数结构体
  *
- * @method string getInstanceID() 获取实例
- * @method void setInstanceID(string $InstanceID) 设置实例
- * @method string getID() 获取模型服务ID
- * @method void setID(string $ID) 设置模型服务ID
- * @method string getName() 获取模型服务名称
- * @method void setName(string $Name) 设置模型服务名称
- * @method string getDescription() 获取描述
- * @method void setDescription(string $Description) 设置描述
- * @method array getTargetModels() 获取模板模型列表
- * @method void setTargetModels(array $TargetModels) 设置模板模型列表
- * @method boolean getInvokeLimitConfigStatus() 获取是否开启限流
- * @method void setInvokeLimitConfigStatus(boolean $InvokeLimitConfigStatus) 设置是否开启限流
- * @method InvokeLimitConfigDTO getInvokeLimitConfig() 获取限流配置
- * @method void setInvokeLimitConfig(InvokeLimitConfigDTO $InvokeLimitConfig) 设置限流配置
- * @method boolean getTokenLimitStatus() 获取是否开启token控制
- * @method void setTokenLimitStatus(boolean $TokenLimitStatus) 设置是否开启token控制
- * @method TokenLimitConfigDTO getTokenLimitConfig() 获取token控制
- * @method void setTokenLimitConfig(TokenLimitConfigDTO $TokenLimitConfig) 设置token控制
- * @method boolean getTmsStatus() 获取是否开启内容安全
- * @method void setTmsStatus(boolean $TmsStatus) 设置是否开启内容安全
- * @method TmsConfigDTO getTmsConfig() 获取内容安全配置
- * @method void setTmsConfig(TmsConfigDTO $TmsConfig) 设置内容安全配置
- * @method boolean getIpWhiteStatus() 获取是否开启IP白名单
- * @method void setIpWhiteStatus(boolean $IpWhiteStatus) 设置是否开启IP白名单
- * @method array getIpWhiteList() 获取IP白名单
- * @method void setIpWhiteList(array $IpWhiteList) 设置IP白名单
- * @method boolean getIpBlackStatus() 获取是否开启IP黑名单
- * @method void setIpBlackStatus(boolean $IpBlackStatus) 设置是否开启IP黑名单
- * @method array getIpBlackList() 获取IP黑名单
- * @method void setIpBlackList(array $IpBlackList) 设置IP黑名单
- * @method array getPluginConfigs() 获取插件配置
- * @method void setPluginConfigs(array $PluginConfigs) 设置插件配置
- * @method integer getTimeout() 获取超时配置，秒
- * @method void setTimeout(integer $Timeout) 设置超时配置，秒
- * @method boolean getPromptModerateStatus() 获取是否开启提示词安全检测配置
- * @method void setPromptModerateStatus(boolean $PromptModerateStatus) 设置是否开启提示词安全检测配置
- * @method PromptModerateConfigDTO getPromptModerateConfig() 获取提示词安全检测配置
- * @method void setPromptModerateConfig(PromptModerateConfigDTO $PromptModerateConfig) 设置提示词安全检测配置
+ * @method string getInstanceID() 获取<p>实例</p>
+ * @method void setInstanceID(string $InstanceID) 设置<p>实例</p>
+ * @method string getID() 获取<p>模型服务ID</p>
+ * @method void setID(string $ID) 设置<p>模型服务ID</p>
+ * @method string getName() 获取<p>模型服务名称</p>
+ * @method void setName(string $Name) 设置<p>模型服务名称</p>
+ * @method string getDescription() 获取<p>描述</p>
+ * @method void setDescription(string $Description) 设置<p>描述</p>
+ * @method array getTargetModels() 获取<p>模板模型列表</p>
+ * @method void setTargetModels(array $TargetModels) 设置<p>模板模型列表</p>
+ * @method boolean getInvokeLimitConfigStatus() 获取<p>是否开启限流</p>
+ * @method void setInvokeLimitConfigStatus(boolean $InvokeLimitConfigStatus) 设置<p>是否开启限流</p>
+ * @method InvokeLimitConfigDTO getInvokeLimitConfig() 获取<p>限流配置</p>
+ * @method void setInvokeLimitConfig(InvokeLimitConfigDTO $InvokeLimitConfig) 设置<p>限流配置</p>
+ * @method boolean getTokenLimitStatus() 获取<p>是否开启token控制</p>
+ * @method void setTokenLimitStatus(boolean $TokenLimitStatus) 设置<p>是否开启token控制</p>
+ * @method TokenLimitConfigDTO getTokenLimitConfig() 获取<p>token控制</p>
+ * @method void setTokenLimitConfig(TokenLimitConfigDTO $TokenLimitConfig) 设置<p>token控制</p>
+ * @method boolean getTmsStatus() 获取<p>是否开启内容安全</p>
+ * @method void setTmsStatus(boolean $TmsStatus) 设置<p>是否开启内容安全</p>
+ * @method TmsConfigDTO getTmsConfig() 获取<p>内容安全配置</p>
+ * @method void setTmsConfig(TmsConfigDTO $TmsConfig) 设置<p>内容安全配置</p>
+ * @method boolean getIpWhiteStatus() 获取<p>是否开启IP白名单</p>
+ * @method void setIpWhiteStatus(boolean $IpWhiteStatus) 设置<p>是否开启IP白名单</p>
+ * @method array getIpWhiteList() 获取<p>IP白名单</p>
+ * @method void setIpWhiteList(array $IpWhiteList) 设置<p>IP白名单</p>
+ * @method boolean getIpBlackStatus() 获取<p>是否开启IP黑名单</p>
+ * @method void setIpBlackStatus(boolean $IpBlackStatus) 设置<p>是否开启IP黑名单</p>
+ * @method array getIpBlackList() 获取<p>IP黑名单</p>
+ * @method void setIpBlackList(array $IpBlackList) 设置<p>IP黑名单</p>
+ * @method array getPluginConfigs() 获取<p>插件配置</p>
+ * @method void setPluginConfigs(array $PluginConfigs) 设置<p>插件配置</p>
+ * @method integer getTimeout() 获取<p>超时配置，秒</p>
+ * @method void setTimeout(integer $Timeout) 设置<p>超时配置，秒</p>
+ * @method boolean getPromptModerateStatus() 获取<p>是否开启提示词安全检测配置</p>
+ * @method void setPromptModerateStatus(boolean $PromptModerateStatus) 设置<p>是否开启提示词安全检测配置</p>
+ * @method PromptModerateConfigDTO getPromptModerateConfig() 获取<p>提示词安全检测配置</p>
+ * @method void setPromptModerateConfig(PromptModerateConfigDTO $PromptModerateConfig) 设置<p>提示词安全检测配置</p>
+ * @method boolean getSensitiveDataCheckStatus() 获取<p>是否开启敏感数据检测</p>
+ * @method void setSensitiveDataCheckStatus(boolean $SensitiveDataCheckStatus) 设置<p>是否开启敏感数据检测</p>
+ * @method SensitiveDataCheckConfigDTO getSensitiveDataCheckConfig() 获取<p>敏感数据检测配置</p>
+ * @method void setSensitiveDataCheckConfig(SensitiveDataCheckConfigDTO $SensitiveDataCheckConfig) 设置<p>敏感数据检测配置</p>
  */
 class ModifyModelServiceRequest extends AbstractModel
 {
     /**
-     * @var string 实例
+     * @var string <p>实例</p>
      */
     public $InstanceID;
 
     /**
-     * @var string 模型服务ID
+     * @var string <p>模型服务ID</p>
      */
     public $ID;
 
     /**
-     * @var string 模型服务名称
+     * @var string <p>模型服务名称</p>
      */
     public $Name;
 
     /**
-     * @var string 描述
+     * @var string <p>描述</p>
      */
     public $Description;
 
     /**
-     * @var array 模板模型列表
+     * @var array <p>模板模型列表</p>
      */
     public $TargetModels;
 
     /**
-     * @var boolean 是否开启限流
+     * @var boolean <p>是否开启限流</p>
      */
     public $InvokeLimitConfigStatus;
 
     /**
-     * @var InvokeLimitConfigDTO 限流配置
+     * @var InvokeLimitConfigDTO <p>限流配置</p>
      */
     public $InvokeLimitConfig;
 
     /**
-     * @var boolean 是否开启token控制
+     * @var boolean <p>是否开启token控制</p>
      */
     public $TokenLimitStatus;
 
     /**
-     * @var TokenLimitConfigDTO token控制
+     * @var TokenLimitConfigDTO <p>token控制</p>
      */
     public $TokenLimitConfig;
 
     /**
-     * @var boolean 是否开启内容安全
+     * @var boolean <p>是否开启内容安全</p>
      */
     public $TmsStatus;
 
     /**
-     * @var TmsConfigDTO 内容安全配置
+     * @var TmsConfigDTO <p>内容安全配置</p>
      */
     public $TmsConfig;
 
     /**
-     * @var boolean 是否开启IP白名单
+     * @var boolean <p>是否开启IP白名单</p>
      */
     public $IpWhiteStatus;
 
     /**
-     * @var array IP白名单
+     * @var array <p>IP白名单</p>
      */
     public $IpWhiteList;
 
     /**
-     * @var boolean 是否开启IP黑名单
+     * @var boolean <p>是否开启IP黑名单</p>
      */
     public $IpBlackStatus;
 
     /**
-     * @var array IP黑名单
+     * @var array <p>IP黑名单</p>
      */
     public $IpBlackList;
 
     /**
-     * @var array 插件配置
+     * @var array <p>插件配置</p>
      */
     public $PluginConfigs;
 
     /**
-     * @var integer 超时配置，秒
+     * @var integer <p>超时配置，秒</p>
      */
     public $Timeout;
 
     /**
-     * @var boolean 是否开启提示词安全检测配置
+     * @var boolean <p>是否开启提示词安全检测配置</p>
      */
     public $PromptModerateStatus;
 
     /**
-     * @var PromptModerateConfigDTO 提示词安全检测配置
+     * @var PromptModerateConfigDTO <p>提示词安全检测配置</p>
      */
     public $PromptModerateConfig;
 
     /**
-     * @param string $InstanceID 实例
-     * @param string $ID 模型服务ID
-     * @param string $Name 模型服务名称
-     * @param string $Description 描述
-     * @param array $TargetModels 模板模型列表
-     * @param boolean $InvokeLimitConfigStatus 是否开启限流
-     * @param InvokeLimitConfigDTO $InvokeLimitConfig 限流配置
-     * @param boolean $TokenLimitStatus 是否开启token控制
-     * @param TokenLimitConfigDTO $TokenLimitConfig token控制
-     * @param boolean $TmsStatus 是否开启内容安全
-     * @param TmsConfigDTO $TmsConfig 内容安全配置
-     * @param boolean $IpWhiteStatus 是否开启IP白名单
-     * @param array $IpWhiteList IP白名单
-     * @param boolean $IpBlackStatus 是否开启IP黑名单
-     * @param array $IpBlackList IP黑名单
-     * @param array $PluginConfigs 插件配置
-     * @param integer $Timeout 超时配置，秒
-     * @param boolean $PromptModerateStatus 是否开启提示词安全检测配置
-     * @param PromptModerateConfigDTO $PromptModerateConfig 提示词安全检测配置
+     * @var boolean <p>是否开启敏感数据检测</p>
+     */
+    public $SensitiveDataCheckStatus;
+
+    /**
+     * @var SensitiveDataCheckConfigDTO <p>敏感数据检测配置</p>
+     */
+    public $SensitiveDataCheckConfig;
+
+    /**
+     * @param string $InstanceID <p>实例</p>
+     * @param string $ID <p>模型服务ID</p>
+     * @param string $Name <p>模型服务名称</p>
+     * @param string $Description <p>描述</p>
+     * @param array $TargetModels <p>模板模型列表</p>
+     * @param boolean $InvokeLimitConfigStatus <p>是否开启限流</p>
+     * @param InvokeLimitConfigDTO $InvokeLimitConfig <p>限流配置</p>
+     * @param boolean $TokenLimitStatus <p>是否开启token控制</p>
+     * @param TokenLimitConfigDTO $TokenLimitConfig <p>token控制</p>
+     * @param boolean $TmsStatus <p>是否开启内容安全</p>
+     * @param TmsConfigDTO $TmsConfig <p>内容安全配置</p>
+     * @param boolean $IpWhiteStatus <p>是否开启IP白名单</p>
+     * @param array $IpWhiteList <p>IP白名单</p>
+     * @param boolean $IpBlackStatus <p>是否开启IP黑名单</p>
+     * @param array $IpBlackList <p>IP黑名单</p>
+     * @param array $PluginConfigs <p>插件配置</p>
+     * @param integer $Timeout <p>超时配置，秒</p>
+     * @param boolean $PromptModerateStatus <p>是否开启提示词安全检测配置</p>
+     * @param PromptModerateConfigDTO $PromptModerateConfig <p>提示词安全检测配置</p>
+     * @param boolean $SensitiveDataCheckStatus <p>是否开启敏感数据检测</p>
+     * @param SensitiveDataCheckConfigDTO $SensitiveDataCheckConfig <p>敏感数据检测配置</p>
      */
     function __construct()
     {
@@ -278,6 +294,15 @@ class ModifyModelServiceRequest extends AbstractModel
         if (array_key_exists("PromptModerateConfig",$param) and $param["PromptModerateConfig"] !== null) {
             $this->PromptModerateConfig = new PromptModerateConfigDTO();
             $this->PromptModerateConfig->deserialize($param["PromptModerateConfig"]);
+        }
+
+        if (array_key_exists("SensitiveDataCheckStatus",$param) and $param["SensitiveDataCheckStatus"] !== null) {
+            $this->SensitiveDataCheckStatus = $param["SensitiveDataCheckStatus"];
+        }
+
+        if (array_key_exists("SensitiveDataCheckConfig",$param) and $param["SensitiveDataCheckConfig"] !== null) {
+            $this->SensitiveDataCheckConfig = new SensitiveDataCheckConfigDTO();
+            $this->SensitiveDataCheckConfig->deserialize($param["SensitiveDataCheckConfig"]);
         }
     }
 }

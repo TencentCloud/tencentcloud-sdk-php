@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDatahubTask请求参数结构体
  *
- * @method string getTaskId() 获取任务id
- * @method void setTaskId(string $TaskId) 设置任务id
+ * @method string getTaskId() 获取<p>任务id</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务id</p>
  */
 class DescribeDatahubTaskRequest extends AbstractModel
 {
     /**
-     * @var string 任务id
+     * @var string <p>任务id</p>
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId 任务id
+     * @param string $TaskId <p>任务id</p>
      */
     function __construct()
     {

@@ -20,34 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDatahubTask请求参数结构体
  *
- * @method string getTaskId() 获取任务id
- * @method void setTaskId(string $TaskId) 设置任务id
- * @method string getTaskName() 获取任务名称
- * @method void setTaskName(string $TaskName) 设置任务名称
- * @method string getDescription() 获取任务描述信息
- * @method void setDescription(string $Description) 设置任务描述信息
+ * @method string getTaskId() 获取<p>任务id</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务id</p>
+ * @method string getTaskName() 获取<p>任务名称</p>
+ * @method void setTaskName(string $TaskName) 设置<p>任务名称</p>
+ * @method string getDescription() 获取<p>任务描述信息</p>
+ * @method void setDescription(string $Description) 设置<p>任务描述信息</p>
+ * @method integer getTasksMax() 获取<p>任务并发上限</p>
+ * @method void setTasksMax(integer $TasksMax) 设置<p>任务并发上限</p>
+ * @method integer getSyncThrottleLimit() 获取<p>数据同步限流值上限</p>单位：MB/s
+ * @method void setSyncThrottleLimit(integer $SyncThrottleLimit) 设置<p>数据同步限流值上限</p>单位：MB/s
+ * @method boolean getAutoExpandFlag() 获取<p>开启自动扩容</p>枚举值：<ul><li> true： 自动扩容</li><li> false： 手动扩容</li></ul>
+ * @method void setAutoExpandFlag(boolean $AutoExpandFlag) 设置<p>开启自动扩容</p>枚举值：<ul><li> true： 自动扩容</li><li> false： 手动扩容</li></ul>
  */
 class ModifyDatahubTaskRequest extends AbstractModel
 {
     /**
-     * @var string 任务id
+     * @var string <p>任务id</p>
      */
     public $TaskId;
 
     /**
-     * @var string 任务名称
+     * @var string <p>任务名称</p>
      */
     public $TaskName;
 
     /**
-     * @var string 任务描述信息
+     * @var string <p>任务描述信息</p>
      */
     public $Description;
 
     /**
-     * @param string $TaskId 任务id
-     * @param string $TaskName 任务名称
-     * @param string $Description 任务描述信息
+     * @var integer <p>任务并发上限</p>
+     */
+    public $TasksMax;
+
+    /**
+     * @var integer <p>数据同步限流值上限</p>单位：MB/s
+     */
+    public $SyncThrottleLimit;
+
+    /**
+     * @var boolean <p>开启自动扩容</p>枚举值：<ul><li> true： 自动扩容</li><li> false： 手动扩容</li></ul>
+     */
+    public $AutoExpandFlag;
+
+    /**
+     * @param string $TaskId <p>任务id</p>
+     * @param string $TaskName <p>任务名称</p>
+     * @param string $Description <p>任务描述信息</p>
+     * @param integer $TasksMax <p>任务并发上限</p>
+     * @param integer $SyncThrottleLimit <p>数据同步限流值上限</p>单位：MB/s
+     * @param boolean $AutoExpandFlag <p>开启自动扩容</p>枚举值：<ul><li> true： 自动扩容</li><li> false： 手动扩容</li></ul>
      */
     function __construct()
     {
@@ -72,6 +96,18 @@ class ModifyDatahubTaskRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("TasksMax",$param) and $param["TasksMax"] !== null) {
+            $this->TasksMax = $param["TasksMax"];
+        }
+
+        if (array_key_exists("SyncThrottleLimit",$param) and $param["SyncThrottleLimit"] !== null) {
+            $this->SyncThrottleLimit = $param["SyncThrottleLimit"];
+        }
+
+        if (array_key_exists("AutoExpandFlag",$param) and $param["AutoExpandFlag"] !== null) {
+            $this->AutoExpandFlag = $param["AutoExpandFlag"];
         }
     }
 }

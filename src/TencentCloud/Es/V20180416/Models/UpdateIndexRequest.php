@@ -20,66 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateIndex请求参数结构体
  *
- * @method string getInstanceId() 获取ES集群ID
- * @method void setInstanceId(string $InstanceId) 设置ES集群ID
- * @method string getIndexType() 获取更新的索引类型。auto：自治索引；normal：普通索引
- * @method void setIndexType(string $IndexType) 设置更新的索引类型。auto：自治索引；normal：普通索引
- * @method string getIndexName() 获取更新的索引名
- * @method void setIndexName(string $IndexName) 设置更新的索引名
- * @method string getUpdateMetaJson() 获取更新的索引元数据JSON，如mappings、settings
- * @method void setUpdateMetaJson(string $UpdateMetaJson) 设置更新的索引元数据JSON，如mappings、settings
- * @method string getUsername() 获取集群访问用户名
- * @method void setUsername(string $Username) 设置集群访问用户名
- * @method string getPassword() 获取集群访问密码
- * @method void setPassword(string $Password) 设置集群访问密码
- * @method boolean getRolloverBackingIndex() 获取是否滚动后备索引
- * @method void setRolloverBackingIndex(boolean $RolloverBackingIndex) 设置是否滚动后备索引
+ * @method string getInstanceId() 获取<p>ES集群ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>ES集群ID</p>
+ * @method string getIndexType() 获取<p>更新的索引类型。auto：自治索引；normal：普通索引</p>
+ * @method void setIndexType(string $IndexType) 设置<p>更新的索引类型。auto：自治索引；normal：普通索引</p>
+ * @method string getIndexName() 获取<p>更新的索引名</p>
+ * @method void setIndexName(string $IndexName) 设置<p>更新的索引名</p>
+ * @method string getUpdateMetaJson() 获取<p>更新的索引元数据JSON，如mappings、settings</p>
+ * @method void setUpdateMetaJson(string $UpdateMetaJson) 设置<p>更新的索引元数据JSON，如mappings、settings</p>
+ * @method string getUsername() 获取<p>集群访问用户名</p>
+ * @method void setUsername(string $Username) 设置<p>集群访问用户名</p>
+ * @method string getPassword() 获取<p>集群访问密码</p>
+ * @method void setPassword(string $Password) 设置<p>集群访问密码</p>
+ * @method boolean getRolloverBackingIndex() 获取<p>是否滚动后备索引</p>
+ * @method void setRolloverBackingIndex(boolean $RolloverBackingIndex) 设置<p>是否滚动后备索引</p>
+ * @method boolean getMountIndex() 获取<p>是否为取回完全卸载索引</p>
+ * @method void setMountIndex(boolean $MountIndex) 设置<p>是否为取回完全卸载索引</p>
+ * @method string getIndexUuid() 获取<p>索引Uuid</p>
+ * @method void setIndexUuid(string $IndexUuid) 设置<p>索引Uuid</p>
+ * @method string getBackingIndexName() 获取<p>后备索引名</p>
+ * @method void setBackingIndexName(string $BackingIndexName) 设置<p>后备索引名</p>
  */
 class UpdateIndexRequest extends AbstractModel
 {
     /**
-     * @var string ES集群ID
+     * @var string <p>ES集群ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 更新的索引类型。auto：自治索引；normal：普通索引
+     * @var string <p>更新的索引类型。auto：自治索引；normal：普通索引</p>
      */
     public $IndexType;
 
     /**
-     * @var string 更新的索引名
+     * @var string <p>更新的索引名</p>
      */
     public $IndexName;
 
     /**
-     * @var string 更新的索引元数据JSON，如mappings、settings
+     * @var string <p>更新的索引元数据JSON，如mappings、settings</p>
      */
     public $UpdateMetaJson;
 
     /**
-     * @var string 集群访问用户名
+     * @var string <p>集群访问用户名</p>
      */
     public $Username;
 
     /**
-     * @var string 集群访问密码
+     * @var string <p>集群访问密码</p>
      */
     public $Password;
 
     /**
-     * @var boolean 是否滚动后备索引
+     * @var boolean <p>是否滚动后备索引</p>
      */
     public $RolloverBackingIndex;
 
     /**
-     * @param string $InstanceId ES集群ID
-     * @param string $IndexType 更新的索引类型。auto：自治索引；normal：普通索引
-     * @param string $IndexName 更新的索引名
-     * @param string $UpdateMetaJson 更新的索引元数据JSON，如mappings、settings
-     * @param string $Username 集群访问用户名
-     * @param string $Password 集群访问密码
-     * @param boolean $RolloverBackingIndex 是否滚动后备索引
+     * @var boolean <p>是否为取回完全卸载索引</p>
+     */
+    public $MountIndex;
+
+    /**
+     * @var string <p>索引Uuid</p>
+     */
+    public $IndexUuid;
+
+    /**
+     * @var string <p>后备索引名</p>
+     */
+    public $BackingIndexName;
+
+    /**
+     * @param string $InstanceId <p>ES集群ID</p>
+     * @param string $IndexType <p>更新的索引类型。auto：自治索引；normal：普通索引</p>
+     * @param string $IndexName <p>更新的索引名</p>
+     * @param string $UpdateMetaJson <p>更新的索引元数据JSON，如mappings、settings</p>
+     * @param string $Username <p>集群访问用户名</p>
+     * @param string $Password <p>集群访问密码</p>
+     * @param boolean $RolloverBackingIndex <p>是否滚动后备索引</p>
+     * @param boolean $MountIndex <p>是否为取回完全卸载索引</p>
+     * @param string $IndexUuid <p>索引Uuid</p>
+     * @param string $BackingIndexName <p>后备索引名</p>
      */
     function __construct()
     {
@@ -120,6 +144,18 @@ class UpdateIndexRequest extends AbstractModel
 
         if (array_key_exists("RolloverBackingIndex",$param) and $param["RolloverBackingIndex"] !== null) {
             $this->RolloverBackingIndex = $param["RolloverBackingIndex"];
+        }
+
+        if (array_key_exists("MountIndex",$param) and $param["MountIndex"] !== null) {
+            $this->MountIndex = $param["MountIndex"];
+        }
+
+        if (array_key_exists("IndexUuid",$param) and $param["IndexUuid"] !== null) {
+            $this->IndexUuid = $param["IndexUuid"];
+        }
+
+        if (array_key_exists("BackingIndexName",$param) and $param["BackingIndexName"] !== null) {
+            $this->BackingIndexName = $param["BackingIndexName"];
         }
     }
 }

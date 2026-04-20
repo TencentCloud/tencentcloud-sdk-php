@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateStreamPackageLinearAssemblyProgram请求参数结构体
  *
- * @method string getName() 获取Program名称。
- * @method void setName(string $Name) 设置Program名称。
- * @method string getAttachedChannel() 获取绑定的channel。
- * @method void setAttachedChannel(string $AttachedChannel) 设置绑定的channel。
- * @method string getSourceType() 获取编排的目标source的类型，分直播Live和点播VOD。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD
- * @method void setSourceType(string $SourceType) 设置编排的目标source的类型，分直播Live和点播VOD。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD
- * @method string getSourceLocationId() 获取关联的source location。
- * @method void setSourceLocationId(string $SourceLocationId) 设置关联的source location。
- * @method string getSourceName() 获取关联的直播or点播，source名称，location下全局唯一。
- * @method void setSourceName(string $SourceName) 设置关联的直播or点播，source名称，location下全局唯一。
- * @method PlaybackInfoReq getPlaybackConf() 获取PlaybackConf。
- * @method void setPlaybackConf(PlaybackInfoReq $PlaybackConf) 设置PlaybackConf。
- * @method array getAdBreaks() 获取AdBreaks，只有source类型为Vod时有效。
- * @method void setAdBreaks(array $AdBreaks) 设置AdBreaks，只有source类型为Vod时有效。
+ * @method string getName() 获取<p>Program名称。</p>
+ * @method void setName(string $Name) 设置<p>Program名称。</p>
+ * @method string getAttachedChannel() 获取<p>绑定的channel。</p>
+ * @method void setAttachedChannel(string $AttachedChannel) 设置<p>绑定的channel。</p>
+ * @method string getSourceType() 获取<p>编排的目标source的类型，分直播Live和点播VOD。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD</p>
+ * @method void setSourceType(string $SourceType) 设置<p>编排的目标source的类型，分直播Live和点播VOD。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD</p>
+ * @method string getSourceLocationId() 获取<p>关联的source location。</p>
+ * @method void setSourceLocationId(string $SourceLocationId) 设置<p>关联的source location。</p>
+ * @method string getSourceName() 获取<p>关联的直播or点播，source名称，location下全局唯一。</p>
+ * @method void setSourceName(string $SourceName) 设置<p>关联的直播or点播，source名称，location下全局唯一。</p>
+ * @method PlaybackInfoReq getPlaybackConf() 获取<p>PlaybackConf。</p>
+ * @method void setPlaybackConf(PlaybackInfoReq $PlaybackConf) 设置<p>PlaybackConf。</p>
+ * @method array getAdBreaks() 获取<p>AdBreaks，只有source类型为Vod时有效。</p>
+ * @method void setAdBreaks(array $AdBreaks) 设置<p>AdBreaks，只有source类型为Vod时有效。</p>
+ * @method string getVodAcquisitionMethod() 获取<p>VOD获取方式，支持PreCaching和DynamicUpdating，默认PreCaching，仅Linear频道支持</p>
+ * @method void setVodAcquisitionMethod(string $VodAcquisitionMethod) 设置<p>VOD获取方式，支持PreCaching和DynamicUpdating，默认PreCaching，仅Linear频道支持</p>
  */
 class CreateStreamPackageLinearAssemblyProgramRequest extends AbstractModel
 {
     /**
-     * @var string Program名称。
+     * @var string <p>Program名称。</p>
      */
     public $Name;
 
     /**
-     * @var string 绑定的channel。
+     * @var string <p>绑定的channel。</p>
      */
     public $AttachedChannel;
 
     /**
-     * @var string 编排的目标source的类型，分直播Live和点播VOD。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD
+     * @var string <p>编排的目标source的类型，分直播Live和点播VOD。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD</p>
      */
     public $SourceType;
 
     /**
-     * @var string 关联的source location。
+     * @var string <p>关联的source location。</p>
      */
     public $SourceLocationId;
 
     /**
-     * @var string 关联的直播or点播，source名称，location下全局唯一。
+     * @var string <p>关联的直播or点播，source名称，location下全局唯一。</p>
      */
     public $SourceName;
 
     /**
-     * @var PlaybackInfoReq PlaybackConf。
+     * @var PlaybackInfoReq <p>PlaybackConf。</p>
      */
     public $PlaybackConf;
 
     /**
-     * @var array AdBreaks，只有source类型为Vod时有效。
+     * @var array <p>AdBreaks，只有source类型为Vod时有效。</p>
      */
     public $AdBreaks;
 
     /**
-     * @param string $Name Program名称。
-     * @param string $AttachedChannel 绑定的channel。
-     * @param string $SourceType 编排的目标source的类型，分直播Live和点播VOD。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD
-     * @param string $SourceLocationId 关联的source location。
-     * @param string $SourceName 关联的直播or点播，source名称，location下全局唯一。
-     * @param PlaybackInfoReq $PlaybackConf PlaybackConf。
-     * @param array $AdBreaks AdBreaks，只有source类型为Vod时有效。
+     * @var string <p>VOD获取方式，支持PreCaching和DynamicUpdating，默认PreCaching，仅Linear频道支持</p>
+     */
+    public $VodAcquisitionMethod;
+
+    /**
+     * @param string $Name <p>Program名称。</p>
+     * @param string $AttachedChannel <p>绑定的channel。</p>
+     * @param string $SourceType <p>编排的目标source的类型，分直播Live和点播VOD。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD</p>
+     * @param string $SourceLocationId <p>关联的source location。</p>
+     * @param string $SourceName <p>关联的直播or点播，source名称，location下全局唯一。</p>
+     * @param PlaybackInfoReq $PlaybackConf <p>PlaybackConf。</p>
+     * @param array $AdBreaks <p>AdBreaks，只有source类型为Vod时有效。</p>
+     * @param string $VodAcquisitionMethod <p>VOD获取方式，支持PreCaching和DynamicUpdating，默认PreCaching，仅Linear频道支持</p>
      */
     function __construct()
     {
@@ -126,6 +134,10 @@ class CreateStreamPackageLinearAssemblyProgramRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AdBreaks, $obj);
             }
+        }
+
+        if (array_key_exists("VodAcquisitionMethod",$param) and $param["VodAcquisitionMethod"] !== null) {
+            $this->VodAcquisitionMethod = $param["VodAcquisitionMethod"];
         }
     }
 }

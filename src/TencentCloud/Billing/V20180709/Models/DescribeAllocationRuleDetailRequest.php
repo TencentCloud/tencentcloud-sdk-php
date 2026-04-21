@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAllocationRuleDetail请求参数结构体
  *
- * @method integer getRuleId() 获取所查询公摊规则ID
- * @method void setRuleId(integer $RuleId) 设置所查询公摊规则ID
- * @method string getMonth() 获取月份，不传默认当前月
- * @method void setMonth(string $Month) 设置月份，不传默认当前月
+ * @method integer getRuleId() 获取<p>所查询公摊规则ID</p>
+ * @method void setRuleId(integer $RuleId) 设置<p>所查询公摊规则ID</p>
+ * @method string getMonth() 获取<p>月份，不传默认当前月</p>
+ * @method void setMonth(string $Month) 设置<p>月份，不传默认当前月</p>
  */
 class DescribeAllocationRuleDetailRequest extends AbstractModel
 {
     /**
-     * @var integer 所查询公摊规则ID
+     * @var integer <p>所查询公摊规则ID</p>
      */
     public $RuleId;
 
     /**
-     * @var string 月份，不传默认当前月
+     * @var string <p>月份，不传默认当前月</p>
      */
     public $Month;
 
     /**
-     * @param integer $RuleId 所查询公摊规则ID
-     * @param string $Month 月份，不传默认当前月
+     * @param integer $RuleId <p>所查询公摊规则ID</p>
+     * @param string $Month <p>月份，不传默认当前月</p>
      */
     function __construct()
     {

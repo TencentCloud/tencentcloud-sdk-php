@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAllocationTrendByMonth返回参数结构体
  *
- * @method AllocationBillTrendDetail getCurrent() 获取当月费用信息
- * @method void setCurrent(AllocationBillTrendDetail $Current) 设置当月费用信息
- * @method array getPrevious() 获取之前月份费用信息
- * @method void setPrevious(array $Previous) 设置之前月份费用信息
- * @method AllocationStat getStat() 获取费用统计信息
- * @method void setStat(AllocationStat $Stat) 设置费用统计信息
+ * @method AllocationBillTrendDetail getCurrent() 获取<p>当月费用信息</p>
+ * @method void setCurrent(AllocationBillTrendDetail $Current) 设置<p>当月费用信息</p>
+ * @method array getPrevious() 获取<p>之前月份费用信息</p>
+ * @method void setPrevious(array $Previous) 设置<p>之前月份费用信息</p>
+ * @method AllocationStat getStat() 获取<p>费用统计信息</p>
+ * @method void setStat(AllocationStat $Stat) 设置<p>费用统计信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAllocationTrendByMonthResponse extends AbstractModel
 {
     /**
-     * @var AllocationBillTrendDetail 当月费用信息
+     * @var AllocationBillTrendDetail <p>当月费用信息</p>
      */
     public $Current;
 
     /**
-     * @var array 之前月份费用信息
+     * @var array <p>之前月份费用信息</p>
      */
     public $Previous;
 
     /**
-     * @var AllocationStat 费用统计信息
+     * @var AllocationStat <p>费用统计信息</p>
      */
     public $Stat;
 
@@ -52,9 +52,9 @@ class DescribeAllocationTrendByMonthResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param AllocationBillTrendDetail $Current 当月费用信息
-     * @param array $Previous 之前月份费用信息
-     * @param AllocationStat $Stat 费用统计信息
+     * @param AllocationBillTrendDetail $Current <p>当月费用信息</p>
+     * @param array $Previous <p>之前月份费用信息</p>
+     * @param AllocationStat $Stat <p>费用统计信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

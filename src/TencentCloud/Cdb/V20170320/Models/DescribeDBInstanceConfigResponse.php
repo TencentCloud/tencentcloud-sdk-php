@@ -20,56 +20,56 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstanceConfig返回参数结构体
  *
- * @method integer getProtectMode() 获取主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。
- * @method void setProtectMode(integer $ProtectMode) 设置主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。
- * @method integer getDeployMode() 获取主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。
- * @method void setDeployMode(integer $DeployMode) 设置主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。
- * @method string getZone() 获取实例可用区信息，格式如 "ap-shanghai-2"。
- * @method void setZone(string $Zone) 设置实例可用区信息，格式如 "ap-shanghai-2"。
- * @method SlaveConfig getSlaveConfig() 获取备库的配置信息。
+ * @method integer getProtectMode() 获取<p>主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。</p>
+ * @method void setProtectMode(integer $ProtectMode) 设置<p>主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。</p>
+ * @method integer getDeployMode() 获取<p>主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。</p>
+ * @method void setDeployMode(integer $DeployMode) 设置<p>主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。</p>
+ * @method string getZone() 获取<p>实例可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p>
+ * @method void setZone(string $Zone) 设置<p>实例可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p>
+ * @method SlaveConfig getSlaveConfig() 获取<p>备库的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSlaveConfig(SlaveConfig $SlaveConfig) 设置备库的配置信息。
+ * @method void setSlaveConfig(SlaveConfig $SlaveConfig) 设置<p>备库的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BackupConfig getBackupConfig() 获取强同步实例第二备库的配置信息。
+ * @method BackupConfig getBackupConfig() 获取<p>强同步实例第二备库的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBackupConfig(BackupConfig $BackupConfig) 设置强同步实例第二备库的配置信息。
+ * @method void setBackupConfig(BackupConfig $BackupConfig) 设置<p>强同步实例第二备库的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getSwitched() 获取是否切换备库。
- * @method void setSwitched(boolean $Switched) 设置是否切换备库。
+ * @method boolean getSwitched() 获取<p>是否切换备库。</p>
+ * @method void setSwitched(boolean $Switched) 设置<p>是否切换备库。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDBInstanceConfigResponse extends AbstractModel
 {
     /**
-     * @var integer 主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。
+     * @var integer <p>主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。</p>
      */
     public $ProtectMode;
 
     /**
-     * @var integer 主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。
+     * @var integer <p>主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。</p>
      */
     public $DeployMode;
 
     /**
-     * @var string 实例可用区信息，格式如 "ap-shanghai-2"。
+     * @var string <p>实例可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p>
      */
     public $Zone;
 
     /**
-     * @var SlaveConfig 备库的配置信息。
+     * @var SlaveConfig <p>备库的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SlaveConfig;
 
     /**
-     * @var BackupConfig 强同步实例第二备库的配置信息。
+     * @var BackupConfig <p>强同步实例第二备库的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupConfig;
 
     /**
-     * @var boolean 是否切换备库。
+     * @var boolean <p>是否切换备库。</p>
      */
     public $Switched;
 
@@ -79,14 +79,14 @@ class DescribeDBInstanceConfigResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $ProtectMode 主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。
-     * @param integer $DeployMode 主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。
-     * @param string $Zone 实例可用区信息，格式如 "ap-shanghai-2"。
-     * @param SlaveConfig $SlaveConfig 备库的配置信息。
+     * @param integer $ProtectMode <p>主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。</p>
+     * @param integer $DeployMode <p>主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。</p>
+     * @param string $Zone <p>实例可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p>
+     * @param SlaveConfig $SlaveConfig <p>备库的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BackupConfig $BackupConfig 强同步实例第二备库的配置信息。
+     * @param BackupConfig $BackupConfig <p>强同步实例第二备库的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $Switched 是否切换备库。
+     * @param boolean $Switched <p>是否切换备库。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

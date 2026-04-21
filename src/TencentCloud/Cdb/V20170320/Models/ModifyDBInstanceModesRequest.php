@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceModes请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
- * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
- * @method string getMode() 获取云数据库的模式，目前仅支持传入 "protectMode" 表示修改主从同步方式。
- * @method void setMode(string $Mode) 设置云数据库的模式，目前仅支持传入 "protectMode" 表示修改主从同步方式。
- * @method integer getProtectMode() 获取数据同步方式，可选值：0-异步复制，1-半同步复制，2-强同步复制。
- * @method void setProtectMode(integer $ProtectMode) 设置数据同步方式，可选值：0-异步复制，1-半同步复制，2-强同步复制。
+ * @method string getInstanceId() 获取<p>实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。</p>
+ * @method string getMode() 获取<p>云数据库的模式，目前仅支持传入 &quot;protectMode&quot; 表示修改主从同步方式。</p>
+ * @method void setMode(string $Mode) 设置<p>云数据库的模式，目前仅支持传入 &quot;protectMode&quot; 表示修改主从同步方式。</p>
+ * @method integer getProtectMode() 获取<p>数据同步方式，可选值：0-异步复制，1-半同步复制，2-强同步复制。</p>
+ * @method void setProtectMode(integer $ProtectMode) 设置<p>数据同步方式，可选值：0-异步复制，1-半同步复制，2-强同步复制。</p>
  */
 class ModifyDBInstanceModesRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * @var string <p>实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 云数据库的模式，目前仅支持传入 "protectMode" 表示修改主从同步方式。
+     * @var string <p>云数据库的模式，目前仅支持传入 &quot;protectMode&quot; 表示修改主从同步方式。</p>
      */
     public $Mode;
 
     /**
-     * @var integer 数据同步方式，可选值：0-异步复制，1-半同步复制，2-强同步复制。
+     * @var integer <p>数据同步方式，可选值：0-异步复制，1-半同步复制，2-强同步复制。</p>
      */
     public $ProtectMode;
 
     /**
-     * @param string $InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
-     * @param string $Mode 云数据库的模式，目前仅支持传入 "protectMode" 表示修改主从同步方式。
-     * @param integer $ProtectMode 数据同步方式，可选值：0-异步复制，1-半同步复制，2-强同步复制。
+     * @param string $InstanceId <p>实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。</p>
+     * @param string $Mode <p>云数据库的模式，目前仅支持传入 &quot;protectMode&quot; 表示修改主从同步方式。</p>
+     * @param integer $ProtectMode <p>数据同步方式，可选值：0-异步复制，1-半同步复制，2-强同步复制。</p>
      */
     function __construct()
     {

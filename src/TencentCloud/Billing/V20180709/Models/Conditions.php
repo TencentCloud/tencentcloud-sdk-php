@@ -20,162 +20,162 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 账单筛选条件对象
  *
- * @method integer getTimeRange() 获取只支持6和12两个值
- * @method void setTimeRange(integer $TimeRange) 设置只支持6和12两个值
- * @method string getBusinessCode() 获取产品名称代码
- * @method void setBusinessCode(string $BusinessCode) 设置产品名称代码
- * @method integer getProjectId() 获取项目ID
- * @method void setProjectId(integer $ProjectId) 设置项目ID
- * @method integer getRegionId() 获取地域ID
- * @method void setRegionId(integer $RegionId) 设置地域ID
- * @method string getPayMode() 获取付费模式，可选prePay和postPay
- * @method void setPayMode(string $PayMode) 设置付费模式，可选prePay和postPay
- * @method string getResourceKeyword() 获取资源关键字
- * @method void setResourceKeyword(string $ResourceKeyword) 设置资源关键字
- * @method array getBusinessCodes() 获取产品名称代码
- * @method void setBusinessCodes(array $BusinessCodes) 设置产品名称代码
- * @method array getProductCodes() 获取子产品名称代码
- * @method void setProductCodes(array $ProductCodes) 设置子产品名称代码
- * @method array getRegionIds() 获取地域ID
- * @method void setRegionIds(array $RegionIds) 设置地域ID
- * @method array getProjectIds() 获取项目ID
- * @method void setProjectIds(array $ProjectIds) 设置项目ID
- * @method array getPayModes() 获取付费模式，可选prePay和postPay
- * @method void setPayModes(array $PayModes) 设置付费模式，可选prePay和postPay
- * @method array getActionTypes() 获取交易类型
- * @method void setActionTypes(array $ActionTypes) 设置交易类型
- * @method integer getHideFreeCost() 获取是否隐藏0元流水
- * @method void setHideFreeCost(integer $HideFreeCost) 设置是否隐藏0元流水
- * @method string getOrderByCost() 获取排序规则，可选desc和asc
- * @method void setOrderByCost(string $OrderByCost) 设置排序规则，可选desc和asc
- * @method array getBillIds() 获取交易ID
- * @method void setBillIds(array $BillIds) 设置交易ID
- * @method array getComponentCodes() 获取组件编码
- * @method void setComponentCodes(array $ComponentCodes) 设置组件编码
- * @method array getFileIds() 获取文件ID
- * @method void setFileIds(array $FileIds) 设置文件ID
- * @method array getFileTypes() 获取文件类型
- * @method void setFileTypes(array $FileTypes) 设置文件类型
- * @method array getStatus() 获取状态
- * @method void setStatus(array $Status) 设置状态
+ * @method integer getTimeRange() 获取<p>只支持6个月和12个月两个值</p>
+ * @method void setTimeRange(integer $TimeRange) 设置<p>只支持6个月和12个月两个值</p>
+ * @method string getBusinessCode() 获取<p>产品名称代码</p>
+ * @method void setBusinessCode(string $BusinessCode) 设置<p>产品名称代码</p>
+ * @method integer getProjectId() 获取<p>项目ID</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>项目ID</p>
+ * @method integer getRegionId() 获取<p>地域ID</p>
+ * @method void setRegionId(integer $RegionId) 设置<p>地域ID</p>
+ * @method string getPayMode() 获取<p>付费模式，可选prePay和postPay</p>
+ * @method void setPayMode(string $PayMode) 设置<p>付费模式，可选prePay和postPay</p>
+ * @method string getResourceKeyword() 获取<p>资源关键字</p>
+ * @method void setResourceKeyword(string $ResourceKeyword) 设置<p>资源关键字</p>
+ * @method array getBusinessCodes() 获取<p>产品名称代码</p>
+ * @method void setBusinessCodes(array $BusinessCodes) 设置<p>产品名称代码</p>
+ * @method array getProductCodes() 获取<p>子产品名称代码</p>
+ * @method void setProductCodes(array $ProductCodes) 设置<p>子产品名称代码</p>
+ * @method array getRegionIds() 获取<p>地域ID</p>
+ * @method void setRegionIds(array $RegionIds) 设置<p>地域ID</p>
+ * @method array getProjectIds() 获取<p>项目ID</p>
+ * @method void setProjectIds(array $ProjectIds) 设置<p>项目ID</p>
+ * @method array getPayModes() 获取<p>付费模式，可选prePay和postPay</p>
+ * @method void setPayModes(array $PayModes) 设置<p>付费模式，可选prePay和postPay</p>
+ * @method array getActionTypes() 获取<p>交易类型</p>
+ * @method void setActionTypes(array $ActionTypes) 设置<p>交易类型</p>
+ * @method integer getHideFreeCost() 获取<p>是否隐藏0元流水</p>
+ * @method void setHideFreeCost(integer $HideFreeCost) 设置<p>是否隐藏0元流水</p>
+ * @method string getOrderByCost() 获取<p>排序规则，可选desc和asc</p>
+ * @method void setOrderByCost(string $OrderByCost) 设置<p>排序规则，可选desc和asc</p>
+ * @method array getBillIds() 获取<p>交易ID</p>
+ * @method void setBillIds(array $BillIds) 设置<p>交易ID</p>
+ * @method array getComponentCodes() 获取<p>组件编码</p>
+ * @method void setComponentCodes(array $ComponentCodes) 设置<p>组件编码</p>
+ * @method array getFileIds() 获取<p>文件ID</p>
+ * @method void setFileIds(array $FileIds) 设置<p>文件ID</p>
+ * @method array getFileTypes() 获取<p>文件类型</p>
+ * @method void setFileTypes(array $FileTypes) 设置<p>文件类型</p>
+ * @method array getStatus() 获取<p>状态</p>
+ * @method void setStatus(array $Status) 设置<p>状态</p>
  */
 class Conditions extends AbstractModel
 {
     /**
-     * @var integer 只支持6和12两个值
+     * @var integer <p>只支持6个月和12个月两个值</p>
      */
     public $TimeRange;
 
     /**
-     * @var string 产品名称代码
+     * @var string <p>产品名称代码</p>
      */
     public $BusinessCode;
 
     /**
-     * @var integer 项目ID
+     * @var integer <p>项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var integer 地域ID
+     * @var integer <p>地域ID</p>
      */
     public $RegionId;
 
     /**
-     * @var string 付费模式，可选prePay和postPay
+     * @var string <p>付费模式，可选prePay和postPay</p>
      */
     public $PayMode;
 
     /**
-     * @var string 资源关键字
+     * @var string <p>资源关键字</p>
      */
     public $ResourceKeyword;
 
     /**
-     * @var array 产品名称代码
+     * @var array <p>产品名称代码</p>
      */
     public $BusinessCodes;
 
     /**
-     * @var array 子产品名称代码
+     * @var array <p>子产品名称代码</p>
      */
     public $ProductCodes;
 
     /**
-     * @var array 地域ID
+     * @var array <p>地域ID</p>
      */
     public $RegionIds;
 
     /**
-     * @var array 项目ID
+     * @var array <p>项目ID</p>
      */
     public $ProjectIds;
 
     /**
-     * @var array 付费模式，可选prePay和postPay
+     * @var array <p>付费模式，可选prePay和postPay</p>
      */
     public $PayModes;
 
     /**
-     * @var array 交易类型
+     * @var array <p>交易类型</p>
      */
     public $ActionTypes;
 
     /**
-     * @var integer 是否隐藏0元流水
+     * @var integer <p>是否隐藏0元流水</p>
      */
     public $HideFreeCost;
 
     /**
-     * @var string 排序规则，可选desc和asc
+     * @var string <p>排序规则，可选desc和asc</p>
      */
     public $OrderByCost;
 
     /**
-     * @var array 交易ID
+     * @var array <p>交易ID</p>
      */
     public $BillIds;
 
     /**
-     * @var array 组件编码
+     * @var array <p>组件编码</p>
      */
     public $ComponentCodes;
 
     /**
-     * @var array 文件ID
+     * @var array <p>文件ID</p>
      */
     public $FileIds;
 
     /**
-     * @var array 文件类型
+     * @var array <p>文件类型</p>
      */
     public $FileTypes;
 
     /**
-     * @var array 状态
+     * @var array <p>状态</p>
      */
     public $Status;
 
     /**
-     * @param integer $TimeRange 只支持6和12两个值
-     * @param string $BusinessCode 产品名称代码
-     * @param integer $ProjectId 项目ID
-     * @param integer $RegionId 地域ID
-     * @param string $PayMode 付费模式，可选prePay和postPay
-     * @param string $ResourceKeyword 资源关键字
-     * @param array $BusinessCodes 产品名称代码
-     * @param array $ProductCodes 子产品名称代码
-     * @param array $RegionIds 地域ID
-     * @param array $ProjectIds 项目ID
-     * @param array $PayModes 付费模式，可选prePay和postPay
-     * @param array $ActionTypes 交易类型
-     * @param integer $HideFreeCost 是否隐藏0元流水
-     * @param string $OrderByCost 排序规则，可选desc和asc
-     * @param array $BillIds 交易ID
-     * @param array $ComponentCodes 组件编码
-     * @param array $FileIds 文件ID
-     * @param array $FileTypes 文件类型
-     * @param array $Status 状态
+     * @param integer $TimeRange <p>只支持6个月和12个月两个值</p>
+     * @param string $BusinessCode <p>产品名称代码</p>
+     * @param integer $ProjectId <p>项目ID</p>
+     * @param integer $RegionId <p>地域ID</p>
+     * @param string $PayMode <p>付费模式，可选prePay和postPay</p>
+     * @param string $ResourceKeyword <p>资源关键字</p>
+     * @param array $BusinessCodes <p>产品名称代码</p>
+     * @param array $ProductCodes <p>子产品名称代码</p>
+     * @param array $RegionIds <p>地域ID</p>
+     * @param array $ProjectIds <p>项目ID</p>
+     * @param array $PayModes <p>付费模式，可选prePay和postPay</p>
+     * @param array $ActionTypes <p>交易类型</p>
+     * @param integer $HideFreeCost <p>是否隐藏0元流水</p>
+     * @param string $OrderByCost <p>排序规则，可选desc和asc</p>
+     * @param array $BillIds <p>交易ID</p>
+     * @param array $ComponentCodes <p>组件编码</p>
+     * @param array $FileIds <p>文件ID</p>
+     * @param array $FileTypes <p>文件类型</p>
+     * @param array $Status <p>状态</p>
      */
     function __construct()
     {

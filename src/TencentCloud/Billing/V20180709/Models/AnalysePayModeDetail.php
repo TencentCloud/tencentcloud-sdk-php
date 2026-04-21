@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 成本分析支付方式复杂类型
  *
- * @method string getPayMode() 获取计费模式code
- * @method void setPayMode(string $PayMode) 设置计费模式code
- * @method string getPayModeName() 获取计费模式Name
- * @method void setPayModeName(string $PayModeName) 设置计费模式Name
+ * @method string getPayMode() 获取<p>计费模式code</p><p>枚举值：</p><ul><li>prePay： 包年包月</li><li>postPay： 按量计费</li></ul>
+ * @method void setPayMode(string $PayMode) 设置<p>计费模式code</p><p>枚举值：</p><ul><li>prePay： 包年包月</li><li>postPay： 按量计费</li></ul>
+ * @method string getPayModeName() 获取<p>计费模式Name</p>
+ * @method void setPayModeName(string $PayModeName) 设置<p>计费模式Name</p>
  */
 class AnalysePayModeDetail extends AbstractModel
 {
     /**
-     * @var string 计费模式code
+     * @var string <p>计费模式code</p><p>枚举值：</p><ul><li>prePay： 包年包月</li><li>postPay： 按量计费</li></ul>
      */
     public $PayMode;
 
     /**
-     * @var string 计费模式Name
+     * @var string <p>计费模式Name</p>
      */
     public $PayModeName;
 
     /**
-     * @param string $PayMode 计费模式code
-     * @param string $PayModeName 计费模式Name
+     * @param string $PayMode <p>计费模式code</p><p>枚举值：</p><ul><li>prePay： 包年包月</li><li>postPay： 按量计费</li></ul>
+     * @param string $PayModeName <p>计费模式Name</p>
      */
     function __construct()
     {

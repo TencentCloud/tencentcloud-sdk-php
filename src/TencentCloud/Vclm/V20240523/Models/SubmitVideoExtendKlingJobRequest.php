@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrompt(string $Prompt) 设置<p>正向文本提示词  不能超过2500个字符</p>
  * @method string getNegativePrompt() 获取<p>负向文本提示词  不能超过2500个字符</p>
  * @method void setNegativePrompt(string $NegativePrompt) 设置<p>负向文本提示词  不能超过2500个字符</p>
+ * @method string getExternalTaskId() 获取
+ * @method void setExternalTaskId(string $ExternalTaskId) 设置
  * @method float getCfgScale() 获取<p>提示词参考强度  取值范围：[0,1]，数值越大参考强度越大</p>
  * @method void setCfgScale(float $CfgScale) 设置<p>提示词参考强度  取值范围：[0,1]，数值越大参考强度越大</p>
  * @method string getCallbackUrl() 获取<p>本次任务结果回调通知地址，如果配置，服务端会在任务状态发生变更时主动通知</p>
@@ -53,6 +55,11 @@ class SubmitVideoExtendKlingJobRequest extends AbstractModel
     public $NegativePrompt;
 
     /**
+     * @var string 
+     */
+    public $ExternalTaskId;
+
+    /**
      * @var float <p>提示词参考强度  取值范围：[0,1]，数值越大参考强度越大</p>
      */
     public $CfgScale;
@@ -76,6 +83,7 @@ class SubmitVideoExtendKlingJobRequest extends AbstractModel
      * @param string $VideoId <p>视频ID  支持通过文本、图片和视频延长生成的视频的ID（原视频不能超过3分钟）  请注意，基于目前的清理策略、视频生成30天之后会被清理，则无法进行延长</p>
      * @param string $Prompt <p>正向文本提示词  不能超过2500个字符</p>
      * @param string $NegativePrompt <p>负向文本提示词  不能超过2500个字符</p>
+     * @param string $ExternalTaskId 
      * @param float $CfgScale <p>提示词参考强度  取值范围：[0,1]，数值越大参考强度越大</p>
      * @param string $CallbackUrl <p>本次任务结果回调通知地址，如果配置，服务端会在任务状态发生变更时主动通知</p>
      * @param integer $LogoAdd <p>为生成视频添加标识的开关，默认为1。传0 需前往  <a href="https://console.cloud.tencent.com/vtc/setting">控制台</a>  申请开启显式标识自主完成后方可生效。<br>1：添加标识；<br>0：不添加标识；<br>其他数值：默认按1处理。<br>建议您使用显著标识来提示，该视频是 AI 生成的视频。</p>
@@ -104,6 +112,10 @@ class SubmitVideoExtendKlingJobRequest extends AbstractModel
 
         if (array_key_exists("NegativePrompt",$param) and $param["NegativePrompt"] !== null) {
             $this->NegativePrompt = $param["NegativePrompt"];
+        }
+
+        if (array_key_exists("ExternalTaskId",$param) and $param["ExternalTaskId"] !== null) {
+            $this->ExternalTaskId = $param["ExternalTaskId"];
         }
 
         if (array_key_exists("CfgScale",$param) and $param["CfgScale"] !== null) {

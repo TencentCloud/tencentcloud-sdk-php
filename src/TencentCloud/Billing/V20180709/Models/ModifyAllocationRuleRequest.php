@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAllocationRule请求参数结构体
  *
- * @method integer getRuleId() 获取所编辑公摊规则ID
- * @method void setRuleId(integer $RuleId) 设置所编辑公摊规则ID
- * @method string getName() 获取编辑后公摊规则名称
- * @method void setName(string $Name) 设置编辑后公摊规则名称
- * @method integer getType() 获取公摊策略类型，枚举值如下： 1 - 自定义分摊占比 2 - 等比分摊 3 - 按占比分摊
- * @method void setType(integer $Type) 设置公摊策略类型，枚举值如下： 1 - 自定义分摊占比 2 - 等比分摊 3 - 按占比分摊
- * @method AllocationRuleExpression getRuleDetail() 获取编辑后公摊规则表达式
- * @method void setRuleDetail(AllocationRuleExpression $RuleDetail) 设置编辑后公摊规则表达式
- * @method array getRatioDetail() 获取编辑后公摊比例表达式
- * @method void setRatioDetail(array $RatioDetail) 设置编辑后公摊比例表达式
- * @method string getMonth() 获取月份，不传默认当前月
- * @method void setMonth(string $Month) 设置月份，不传默认当前月
+ * @method integer getRuleId() 获取<p>所编辑公摊规则ID</p>
+ * @method void setRuleId(integer $RuleId) 设置<p>所编辑公摊规则ID</p>
+ * @method string getName() 获取<p>编辑后公摊规则名称</p>
+ * @method void setName(string $Name) 设置<p>编辑后公摊规则名称</p>
+ * @method integer getType() 获取<p>公摊策略类型，枚举值如下： 1 - 自定义分摊占比 2 - 等比分摊 3 - 按占比分摊</p>
+ * @method void setType(integer $Type) 设置<p>公摊策略类型，枚举值如下： 1 - 自定义分摊占比 2 - 等比分摊 3 - 按占比分摊</p>
+ * @method AllocationRuleExpression getRuleDetail() 获取<p>编辑后公摊规则表达式</p>
+ * @method void setRuleDetail(AllocationRuleExpression $RuleDetail) 设置<p>编辑后公摊规则表达式</p>
+ * @method array getRatioDetail() 获取<p>编辑后公摊比例表达式</p>
+ * @method void setRatioDetail(array $RatioDetail) 设置<p>编辑后公摊比例表达式</p>
+ * @method string getMonth() 获取<p>月份，不传默认当前月</p>
+ * @method void setMonth(string $Month) 设置<p>月份，不传默认当前月</p>
  */
 class ModifyAllocationRuleRequest extends AbstractModel
 {
     /**
-     * @var integer 所编辑公摊规则ID
+     * @var integer <p>所编辑公摊规则ID</p>
      */
     public $RuleId;
 
     /**
-     * @var string 编辑后公摊规则名称
+     * @var string <p>编辑后公摊规则名称</p>
      */
     public $Name;
 
     /**
-     * @var integer 公摊策略类型，枚举值如下： 1 - 自定义分摊占比 2 - 等比分摊 3 - 按占比分摊
+     * @var integer <p>公摊策略类型，枚举值如下： 1 - 自定义分摊占比 2 - 等比分摊 3 - 按占比分摊</p>
      */
     public $Type;
 
     /**
-     * @var AllocationRuleExpression 编辑后公摊规则表达式
+     * @var AllocationRuleExpression <p>编辑后公摊规则表达式</p>
      */
     public $RuleDetail;
 
     /**
-     * @var array 编辑后公摊比例表达式
+     * @var array <p>编辑后公摊比例表达式</p>
      */
     public $RatioDetail;
 
     /**
-     * @var string 月份，不传默认当前月
+     * @var string <p>月份，不传默认当前月</p>
      */
     public $Month;
 
     /**
-     * @param integer $RuleId 所编辑公摊规则ID
-     * @param string $Name 编辑后公摊规则名称
-     * @param integer $Type 公摊策略类型，枚举值如下： 1 - 自定义分摊占比 2 - 等比分摊 3 - 按占比分摊
-     * @param AllocationRuleExpression $RuleDetail 编辑后公摊规则表达式
-     * @param array $RatioDetail 编辑后公摊比例表达式
-     * @param string $Month 月份，不传默认当前月
+     * @param integer $RuleId <p>所编辑公摊规则ID</p>
+     * @param string $Name <p>编辑后公摊规则名称</p>
+     * @param integer $Type <p>公摊策略类型，枚举值如下： 1 - 自定义分摊占比 2 - 等比分摊 3 - 按占比分摊</p>
+     * @param AllocationRuleExpression $RuleDetail <p>编辑后公摊规则表达式</p>
+     * @param array $RatioDetail <p>编辑后公摊比例表达式</p>
+     * @param string $Month <p>月份，不传默认当前月</p>
      */
     function __construct()
     {

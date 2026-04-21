@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteIndex请求参数结构体
  *
- * @method string getInstanceId() 获取ES集群ID
- * @method void setInstanceId(string $InstanceId) 设置ES集群ID
- * @method string getIndexType() 获取删除的索引类型。auto：自治索引；normal：普通索引
- * @method void setIndexType(string $IndexType) 设置删除的索引类型。auto：自治索引；normal：普通索引
- * @method string getIndexName() 获取删除的索引名
- * @method void setIndexName(string $IndexName) 设置删除的索引名
- * @method string getUsername() 获取集群访问用户名
- * @method void setUsername(string $Username) 设置集群访问用户名
- * @method string getPassword() 获取集群访问密码
- * @method void setPassword(string $Password) 设置集群访问密码
- * @method string getBackingIndexName() 获取后备索引名
- * @method void setBackingIndexName(string $BackingIndexName) 设置后备索引名
+ * @method string getInstanceId() 获取<p>ES集群ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>ES集群ID</p>
+ * @method string getIndexType() 获取<p>删除的索引类型。auto：自治索引；normal：普通索引</p>
+ * @method void setIndexType(string $IndexType) 设置<p>删除的索引类型。auto：自治索引；normal：普通索引</p>
+ * @method string getIndexName() 获取<p>删除的索引名</p>
+ * @method void setIndexName(string $IndexName) 设置<p>删除的索引名</p>
+ * @method string getUsername() 获取<p>集群访问用户名</p>
+ * @method void setUsername(string $Username) 设置<p>集群访问用户名</p>
+ * @method string getPassword() 获取<p>集群访问密码</p>
+ * @method void setPassword(string $Password) 设置<p>集群访问密码</p>
+ * @method string getBackingIndexName() 获取<p>后备索引名</p>
+ * @method void setBackingIndexName(string $BackingIndexName) 设置<p>后备索引名</p>
+ * @method string getIndexPhrase() 获取<p>索引生命阶段</p>
+ * @method void setIndexPhrase(string $IndexPhrase) 设置<p>索引生命阶段</p>
  */
 class DeleteIndexRequest extends AbstractModel
 {
     /**
-     * @var string ES集群ID
+     * @var string <p>ES集群ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 删除的索引类型。auto：自治索引；normal：普通索引
+     * @var string <p>删除的索引类型。auto：自治索引；normal：普通索引</p>
      */
     public $IndexType;
 
     /**
-     * @var string 删除的索引名
+     * @var string <p>删除的索引名</p>
      */
     public $IndexName;
 
     /**
-     * @var string 集群访问用户名
+     * @var string <p>集群访问用户名</p>
      */
     public $Username;
 
     /**
-     * @var string 集群访问密码
+     * @var string <p>集群访问密码</p>
      */
     public $Password;
 
     /**
-     * @var string 后备索引名
+     * @var string <p>后备索引名</p>
      */
     public $BackingIndexName;
 
     /**
-     * @param string $InstanceId ES集群ID
-     * @param string $IndexType 删除的索引类型。auto：自治索引；normal：普通索引
-     * @param string $IndexName 删除的索引名
-     * @param string $Username 集群访问用户名
-     * @param string $Password 集群访问密码
-     * @param string $BackingIndexName 后备索引名
+     * @var string <p>索引生命阶段</p>
+     */
+    public $IndexPhrase;
+
+    /**
+     * @param string $InstanceId <p>ES集群ID</p>
+     * @param string $IndexType <p>删除的索引类型。auto：自治索引；normal：普通索引</p>
+     * @param string $IndexName <p>删除的索引名</p>
+     * @param string $Username <p>集群访问用户名</p>
+     * @param string $Password <p>集群访问密码</p>
+     * @param string $BackingIndexName <p>后备索引名</p>
+     * @param string $IndexPhrase <p>索引生命阶段</p>
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DeleteIndexRequest extends AbstractModel
 
         if (array_key_exists("BackingIndexName",$param) and $param["BackingIndexName"] !== null) {
             $this->BackingIndexName = $param["BackingIndexName"];
+        }
+
+        if (array_key_exists("IndexPhrase",$param) and $param["IndexPhrase"] !== null) {
+            $this->IndexPhrase = $param["IndexPhrase"];
         }
     }
 }

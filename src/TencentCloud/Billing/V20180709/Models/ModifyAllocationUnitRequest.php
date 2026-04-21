@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAllocationUnit请求参数结构体
  *
- * @method integer getId() 获取所修改分账单元ID
- * @method void setId(integer $Id) 设置所修改分账单元ID
- * @method string getName() 获取修改后分账单元名称
- * @method void setName(string $Name) 设置修改后分账单元名称
- * @method string getSourceName() 获取修改后分账单元源组织名称
- * @method void setSourceName(string $SourceName) 设置修改后分账单元源组织名称
- * @method string getSourceId() 获取修改后分账单元源组织ID
- * @method void setSourceId(string $SourceId) 设置修改后分账单元源组织ID
- * @method string getRemark() 获取分账单元备注说明
- * @method void setRemark(string $Remark) 设置分账单元备注说明
- * @method string getMonth() 获取月份，不传默认当前月
- * @method void setMonth(string $Month) 设置月份，不传默认当前月
+ * @method integer getId() 获取<p>所修改分账单元ID</p>
+ * @method void setId(integer $Id) 设置<p>所修改分账单元ID</p>
+ * @method string getName() 获取<p>修改后分账单元名称</p>
+ * @method void setName(string $Name) 设置<p>修改后分账单元名称</p>
+ * @method string getSourceName() 获取<p>修改后分账单元源组织名称</p>
+ * @method void setSourceName(string $SourceName) 设置<p>修改后分账单元源组织名称</p>
+ * @method string getSourceId() 获取<p>修改后分账单元源组织ID</p>
+ * @method void setSourceId(string $SourceId) 设置<p>修改后分账单元源组织ID</p>
+ * @method string getRemark() 获取<p>分账单元备注说明</p>
+ * @method void setRemark(string $Remark) 设置<p>分账单元备注说明</p>
+ * @method string getMonth() 获取<p>月份，不传默认当前月</p>
+ * @method void setMonth(string $Month) 设置<p>月份，不传默认当前月</p>
  */
 class ModifyAllocationUnitRequest extends AbstractModel
 {
     /**
-     * @var integer 所修改分账单元ID
+     * @var integer <p>所修改分账单元ID</p>
      */
     public $Id;
 
     /**
-     * @var string 修改后分账单元名称
+     * @var string <p>修改后分账单元名称</p>
      */
     public $Name;
 
     /**
-     * @var string 修改后分账单元源组织名称
+     * @var string <p>修改后分账单元源组织名称</p>
      */
     public $SourceName;
 
     /**
-     * @var string 修改后分账单元源组织ID
+     * @var string <p>修改后分账单元源组织ID</p>
      */
     public $SourceId;
 
     /**
-     * @var string 分账单元备注说明
+     * @var string <p>分账单元备注说明</p>
      */
     public $Remark;
 
     /**
-     * @var string 月份，不传默认当前月
+     * @var string <p>月份，不传默认当前月</p>
      */
     public $Month;
 
     /**
-     * @param integer $Id 所修改分账单元ID
-     * @param string $Name 修改后分账单元名称
-     * @param string $SourceName 修改后分账单元源组织名称
-     * @param string $SourceId 修改后分账单元源组织ID
-     * @param string $Remark 分账单元备注说明
-     * @param string $Month 月份，不传默认当前月
+     * @param integer $Id <p>所修改分账单元ID</p>
+     * @param string $Name <p>修改后分账单元名称</p>
+     * @param string $SourceName <p>修改后分账单元源组织名称</p>
+     * @param string $SourceId <p>修改后分账单元源组织ID</p>
+     * @param string $Remark <p>分账单元备注说明</p>
+     * @param string $Month <p>月份，不传默认当前月</p>
      */
     function __construct()
     {

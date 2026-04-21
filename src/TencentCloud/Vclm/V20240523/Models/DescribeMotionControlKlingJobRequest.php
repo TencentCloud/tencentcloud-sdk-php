@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getJobId() 获取<p>任务ID</p>
  * @method void setJobId(string $JobId) 设置<p>任务ID</p>
+ * @method string getExternalTaskId() 获取
+ * @method void setExternalTaskId(string $ExternalTaskId) 设置
  */
 class DescribeMotionControlKlingJobRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeMotionControlKlingJobRequest extends AbstractModel
     public $JobId;
 
     /**
+     * @var string 
+     */
+    public $ExternalTaskId;
+
+    /**
      * @param string $JobId <p>任务ID</p>
+     * @param string $ExternalTaskId 
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeMotionControlKlingJobRequest extends AbstractModel
         }
         if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
             $this->JobId = $param["JobId"];
+        }
+
+        if (array_key_exists("ExternalTaskId",$param) and $param["ExternalTaskId"] !== null) {
+            $this->ExternalTaskId = $param["ExternalTaskId"];
         }
     }
 }

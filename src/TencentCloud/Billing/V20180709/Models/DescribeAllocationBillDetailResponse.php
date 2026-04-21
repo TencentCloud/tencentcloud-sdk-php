@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAllocationBillDetail返回参数结构体
  *
- * @method integer getRecordNum() 获取总条数
- * @method void setRecordNum(integer $RecordNum) 设置总条数
- * @method AllocationOverviewTotal getTotal() 获取分账账单概览金额汇总
- * @method void setTotal(AllocationOverviewTotal $Total) 设置分账账单概览金额汇总
- * @method array getDetail() 获取分账账单明细
- * @method void setDetail(array $Detail) 设置分账账单明细
+ * @method integer getRecordNum() 获取<p>总条数</p>
+ * @method void setRecordNum(integer $RecordNum) 设置<p>总条数</p>
+ * @method AllocationOverviewTotal getTotal() 获取<p>分账账单概览金额汇总</p>
+ * @method void setTotal(AllocationOverviewTotal $Total) 设置<p>分账账单概览金额汇总</p>
+ * @method array getDetail() 获取<p>分账账单明细</p>
+ * @method void setDetail(array $Detail) 设置<p>分账账单明细</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAllocationBillDetailResponse extends AbstractModel
 {
     /**
-     * @var integer 总条数
+     * @var integer <p>总条数</p>
      */
     public $RecordNum;
 
     /**
-     * @var AllocationOverviewTotal 分账账单概览金额汇总
+     * @var AllocationOverviewTotal <p>分账账单概览金额汇总</p>
      */
     public $Total;
 
     /**
-     * @var array 分账账单明细
+     * @var array <p>分账账单明细</p>
      */
     public $Detail;
 
@@ -52,9 +52,9 @@ class DescribeAllocationBillDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $RecordNum 总条数
-     * @param AllocationOverviewTotal $Total 分账账单概览金额汇总
-     * @param array $Detail 分账账单明细
+     * @param integer $RecordNum <p>总条数</p>
+     * @param AllocationOverviewTotal $Total <p>分账账单概览金额汇总</p>
+     * @param array $Detail <p>分账账单明细</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

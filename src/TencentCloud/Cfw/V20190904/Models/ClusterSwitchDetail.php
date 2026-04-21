@@ -20,182 +20,178 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 集群模式防火墙开关数据详情
  *
- * @method string getInsObj() 获取实例对象可以是ccnid类型:ccn-ad21xuds形式;nat网关类型:nat-da12daxd形式;ip类型:1.1.1.1形式等
- * @method void setInsObj(string $InsObj) 设置实例对象可以是ccnid类型:ccn-ad21xuds形式;nat网关类型:nat-da12daxd形式;ip类型:1.1.1.1形式等
- * @method string getObjName() 获取实例对象名称
- * @method void setObjName(string $ObjName) 设置实例对象名称
- * @method string getFwType() 获取防火墙类型，ew：vpc间防火墙；nat：nat防火墙；border：互联网边界防火墙
- * @method void setFwType(string $FwType) 设置防火墙类型，ew：vpc间防火墙；nat：nat防火墙；border：互联网边界防火墙
- * @method string getAssetType() 获取资产类型，ccn：ccn实例类型；nat：nat网关类型
- * @method void setAssetType(string $AssetType) 设置资产类型，ccn：ccn实例类型；nat：nat网关类型
- * @method string getRegion() 获取地域
- * @method void setRegion(string $Region) 设置地域
- * @method integer getStatus() 获取开关状态
-0 : 关闭
-1 : 开启
-2 : 开启中
-3 : 关闭中
-4 : 异常
- * @method void setStatus(integer $Status) 设置开关状态
-0 : 关闭
-1 : 开启
-2 : 开启中
-3 : 关闭中
-4 : 异常
- * @method integer getSwitchMode() 获取开关接入模式，1：自动接入；2，手动接入，0：未选择
- * @method void setSwitchMode(integer $SwitchMode) 设置开关接入模式，1：自动接入；2，手动接入，0：未选择
- * @method integer getNonCluster() 获取实例对象是否处于非集群接入场景（主备模式）
- * @method void setNonCluster(integer $NonCluster) 设置实例对象是否处于非集群接入场景（主备模式）
- * @method integer getIpVersion() 获取ip版本，0：ipv4；1：ipv6
- * @method void setIpVersion(integer $IpVersion) 设置ip版本，0：ipv4；1：ipv6
- * @method array getAttachIns() 获取关联实例
+ * @method string getInsObj() 获取<p>实例对象可以是ccnid类型:ccn-ad21xuds形式;nat网关类型:nat-da12daxd形式;ip类型:1.1.1.1形式等</p>
+ * @method void setInsObj(string $InsObj) 设置<p>实例对象可以是ccnid类型:ccn-ad21xuds形式;nat网关类型:nat-da12daxd形式;ip类型:1.1.1.1形式等</p>
+ * @method string getObjName() 获取<p>实例对象名称</p>
+ * @method void setObjName(string $ObjName) 设置<p>实例对象名称</p>
+ * @method string getFwType() 获取<p>防火墙类型，ew：vpc间防火墙；nat：nat防火墙；border：互联网边界防火墙</p>
+ * @method void setFwType(string $FwType) 设置<p>防火墙类型，ew：vpc间防火墙；nat：nat防火墙；border：互联网边界防火墙</p>
+ * @method string getAssetType() 获取<p>资产类型，ccn：ccn实例类型；nat：nat网关类型</p>
+ * @method void setAssetType(string $AssetType) 设置<p>资产类型，ccn：ccn实例类型；nat：nat网关类型</p>
+ * @method string getRegion() 获取<p>地域</p>
+ * @method void setRegion(string $Region) 设置<p>地域</p>
+ * @method integer getStatus() 获取<p>开关状态<br>0 : 关闭<br>1 : 开启<br>2 : 开启中<br>3 : 关闭中<br>4 : 异常</p>
+ * @method void setStatus(integer $Status) 设置<p>开关状态<br>0 : 关闭<br>1 : 开启<br>2 : 开启中<br>3 : 关闭中<br>4 : 异常</p>
+ * @method integer getSwitchMode() 获取<p>开关接入模式，1：自动接入；2，手动接入，0：未选择</p>
+ * @method void setSwitchMode(integer $SwitchMode) 设置<p>开关接入模式，1：自动接入；2，手动接入，0：未选择</p>
+ * @method integer getNonCluster() 获取<p>实例对象是否处于非集群接入场景（主备模式）</p>
+ * @method void setNonCluster(integer $NonCluster) 设置<p>实例对象是否处于非集群接入场景（主备模式）</p>
+ * @method integer getIpVersion() 获取<p>ip版本，0：ipv4；1：ipv6</p>
+ * @method void setIpVersion(integer $IpVersion) 设置<p>ip版本，0：ipv4；1：ipv6</p>
+ * @method array getAttachIns() 获取<p>关联实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAttachIns(array $AttachIns) 设置关联实例
+ * @method void setAttachIns(array $AttachIns) 设置<p>关联实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getEndpoints() 获取引流私有网络端点信息
+ * @method array getEndpoints() 获取<p>引流私有网络端点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEndpoints(array $Endpoints) 设置引流私有网络端点信息
+ * @method void setEndpoints(array $Endpoints) 设置<p>引流私有网络端点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIdpsaction() 获取入侵防护模式,0:观察;1:拦截;2:严格;3:关闭
- * @method void setIdpsaction(integer $Idpsaction) 设置入侵防护模式,0:观察;1:拦截;2:严格;3:关闭
- * @method integer getTransEnable() 获取//透明模式开关,0:未开启,1:已开启
- * @method void setTransEnable(integer $TransEnable) 设置//透明模式开关,0:未开启,1:已开启
- * @method integer getEnable() 获取开关状态 0关闭 1开启
- * @method void setEnable(integer $Enable) 设置开关状态 0关闭 1开启
- * @method integer getRoutingMode() 获取路由模式：0：多路由表，1：策略路由
- * @method void setRoutingMode(integer $RoutingMode) 设置路由模式：0：多路由表，1：策略路由
- * @method integer getIsPeer() 获取是否跨租户开关 1是 0不是
- * @method void setIsPeer(integer $IsPeer) 设置是否跨租户开关 1是 0不是
- * @method string getPeerAppid() 获取跨租户appid
- * @method void setPeerAppid(string $PeerAppid) 设置跨租户appid
- * @method integer getPeerStatus() 获取跨租户操作状态 1不允许操作 0可以
- * @method void setPeerStatus(integer $PeerStatus) 设置跨租户操作状态 1不允许操作 0可以
+ * @method integer getIdpsaction() 获取<p>入侵防护模式,0:观察;1:拦截;2:严格;3:关闭</p>
+ * @method void setIdpsaction(integer $Idpsaction) 设置<p>入侵防护模式,0:观察;1:拦截;2:严格;3:关闭</p>
+ * @method integer getTransEnable() 获取<p>//透明模式开关,0:未开启,1:已开启</p>
+ * @method void setTransEnable(integer $TransEnable) 设置<p>//透明模式开关,0:未开启,1:已开启</p>
+ * @method integer getEnable() 获取<p>开关状态 0关闭 1开启</p>
+ * @method void setEnable(integer $Enable) 设置<p>开关状态 0关闭 1开启</p>
+ * @method integer getRoutingMode() 获取<p>路由模式：0：多路由表，1：策略路由</p>
+ * @method void setRoutingMode(integer $RoutingMode) 设置<p>路由模式：0：多路由表，1：策略路由</p>
+ * @method integer getIsPeer() 获取<p>是否跨租户开关 1是 0不是</p>
+ * @method void setIsPeer(integer $IsPeer) 设置<p>是否跨租户开关 1是 0不是</p>
+ * @method string getPeerAppid() 获取<p>跨租户appid</p>
+ * @method void setPeerAppid(string $PeerAppid) 设置<p>跨租户appid</p>
+ * @method integer getPeerStatus() 获取<p>跨租户操作状态 1不允许操作 0可以</p>
+ * @method void setPeerStatus(integer $PeerStatus) 设置<p>跨租户操作状态 1不允许操作 0可以</p>
+ * @method integer getBypass() 获取<p>Bypass状态</p>
+ * @method void setBypass(integer $Bypass) 设置<p>Bypass状态</p>
+ * @method string getProgress() 获取<p>防火墙开关操作时的进度状态：</p><p>// 开启 — 自动模式（3步）<br>&quot;AUTO_OPEN_ORCHESTRATING&quot; // 步骤1: 预编排策略路由<br>&quot;AUTO_OPEN_CREATING_RESOURCES&quot; // 步骤2: 创建引流网络和资源<br>&quot;AUTO_OPEN_PUSHING_ROUTES&quot; // 步骤3: 创建策略路由</p><p>// 开启 — 手动模式（1步）<br>&quot;MANUAL_OPEN_CREATING_RESOURCES&quot; // 步骤1: 创建引流网络和资源</p><p>// 关闭 — 自动模式（2步）<br>&quot;AUTO_CLOSE_DELETING_ROUTES&quot; // 步骤1: 删除策略路由<br>&quot;AUTO_CLOSE_DELETING_RESOURCES&quot; // 步骤2: 删除引流网络和资源<br>// 关闭 — 手动模式（1步）<br>&quot;MANUAL_CLOSE_DELETING_RESOURCES&quot; // 步骤1: 删除引流网络和资源</p><p>// 修改 — 自动模式（3步）<br>&quot;AUTO_MODIFY_ORCHESTRATING&quot; // 步骤1: 预编排策略路由<br>&quot;AUTO_MODIFY_DELETING_ROUTES&quot; // 步骤2: 删除旧策略路由<br>&quot;AUTO_MODIFY_PUSHING_ROUTES&quot; // 步骤3: 创建新策略路由</p><p>// 修改 — 手动模式（1步，仅 VPC 防火墙存在手动模式修改）<br>&quot;MANUAL_MODIFY_UPDATING_RESOURCES&quot; // 步骤1: 更新引流网络和资源</p>
+ * @method void setProgress(string $Progress) 设置<p>防火墙开关操作时的进度状态：</p><p>// 开启 — 自动模式（3步）<br>&quot;AUTO_OPEN_ORCHESTRATING&quot; // 步骤1: 预编排策略路由<br>&quot;AUTO_OPEN_CREATING_RESOURCES&quot; // 步骤2: 创建引流网络和资源<br>&quot;AUTO_OPEN_PUSHING_ROUTES&quot; // 步骤3: 创建策略路由</p><p>// 开启 — 手动模式（1步）<br>&quot;MANUAL_OPEN_CREATING_RESOURCES&quot; // 步骤1: 创建引流网络和资源</p><p>// 关闭 — 自动模式（2步）<br>&quot;AUTO_CLOSE_DELETING_ROUTES&quot; // 步骤1: 删除策略路由<br>&quot;AUTO_CLOSE_DELETING_RESOURCES&quot; // 步骤2: 删除引流网络和资源<br>// 关闭 — 手动模式（1步）<br>&quot;MANUAL_CLOSE_DELETING_RESOURCES&quot; // 步骤1: 删除引流网络和资源</p><p>// 修改 — 自动模式（3步）<br>&quot;AUTO_MODIFY_ORCHESTRATING&quot; // 步骤1: 预编排策略路由<br>&quot;AUTO_MODIFY_DELETING_ROUTES&quot; // 步骤2: 删除旧策略路由<br>&quot;AUTO_MODIFY_PUSHING_ROUTES&quot; // 步骤3: 创建新策略路由</p><p>// 修改 — 手动模式（1步，仅 VPC 防火墙存在手动模式修改）<br>&quot;MANUAL_MODIFY_UPDATING_RESOURCES&quot; // 步骤1: 更新引流网络和资源</p>
  */
 class ClusterSwitchDetail extends AbstractModel
 {
     /**
-     * @var string 实例对象可以是ccnid类型:ccn-ad21xuds形式;nat网关类型:nat-da12daxd形式;ip类型:1.1.1.1形式等
+     * @var string <p>实例对象可以是ccnid类型:ccn-ad21xuds形式;nat网关类型:nat-da12daxd形式;ip类型:1.1.1.1形式等</p>
      */
     public $InsObj;
 
     /**
-     * @var string 实例对象名称
+     * @var string <p>实例对象名称</p>
      */
     public $ObjName;
 
     /**
-     * @var string 防火墙类型，ew：vpc间防火墙；nat：nat防火墙；border：互联网边界防火墙
+     * @var string <p>防火墙类型，ew：vpc间防火墙；nat：nat防火墙；border：互联网边界防火墙</p>
      */
     public $FwType;
 
     /**
-     * @var string 资产类型，ccn：ccn实例类型；nat：nat网关类型
+     * @var string <p>资产类型，ccn：ccn实例类型；nat：nat网关类型</p>
      */
     public $AssetType;
 
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
      */
     public $Region;
 
     /**
-     * @var integer 开关状态
-0 : 关闭
-1 : 开启
-2 : 开启中
-3 : 关闭中
-4 : 异常
+     * @var integer <p>开关状态<br>0 : 关闭<br>1 : 开启<br>2 : 开启中<br>3 : 关闭中<br>4 : 异常</p>
      */
     public $Status;
 
     /**
-     * @var integer 开关接入模式，1：自动接入；2，手动接入，0：未选择
+     * @var integer <p>开关接入模式，1：自动接入；2，手动接入，0：未选择</p>
      */
     public $SwitchMode;
 
     /**
-     * @var integer 实例对象是否处于非集群接入场景（主备模式）
+     * @var integer <p>实例对象是否处于非集群接入场景（主备模式）</p>
      */
     public $NonCluster;
 
     /**
-     * @var integer ip版本，0：ipv4；1：ipv6
+     * @var integer <p>ip版本，0：ipv4；1：ipv6</p>
      */
     public $IpVersion;
 
     /**
-     * @var array 关联实例
+     * @var array <p>关联实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttachIns;
 
     /**
-     * @var array 引流私有网络端点信息
+     * @var array <p>引流私有网络端点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Endpoints;
 
     /**
-     * @var integer 入侵防护模式,0:观察;1:拦截;2:严格;3:关闭
+     * @var integer <p>入侵防护模式,0:观察;1:拦截;2:严格;3:关闭</p>
      */
     public $Idpsaction;
 
     /**
-     * @var integer //透明模式开关,0:未开启,1:已开启
+     * @var integer <p>//透明模式开关,0:未开启,1:已开启</p>
      */
     public $TransEnable;
 
     /**
-     * @var integer 开关状态 0关闭 1开启
+     * @var integer <p>开关状态 0关闭 1开启</p>
      */
     public $Enable;
 
     /**
-     * @var integer 路由模式：0：多路由表，1：策略路由
+     * @var integer <p>路由模式：0：多路由表，1：策略路由</p>
      */
     public $RoutingMode;
 
     /**
-     * @var integer 是否跨租户开关 1是 0不是
+     * @var integer <p>是否跨租户开关 1是 0不是</p>
      */
     public $IsPeer;
 
     /**
-     * @var string 跨租户appid
+     * @var string <p>跨租户appid</p>
      */
     public $PeerAppid;
 
     /**
-     * @var integer 跨租户操作状态 1不允许操作 0可以
+     * @var integer <p>跨租户操作状态 1不允许操作 0可以</p>
      */
     public $PeerStatus;
 
     /**
-     * @param string $InsObj 实例对象可以是ccnid类型:ccn-ad21xuds形式;nat网关类型:nat-da12daxd形式;ip类型:1.1.1.1形式等
-     * @param string $ObjName 实例对象名称
-     * @param string $FwType 防火墙类型，ew：vpc间防火墙；nat：nat防火墙；border：互联网边界防火墙
-     * @param string $AssetType 资产类型，ccn：ccn实例类型；nat：nat网关类型
-     * @param string $Region 地域
-     * @param integer $Status 开关状态
-0 : 关闭
-1 : 开启
-2 : 开启中
-3 : 关闭中
-4 : 异常
-     * @param integer $SwitchMode 开关接入模式，1：自动接入；2，手动接入，0：未选择
-     * @param integer $NonCluster 实例对象是否处于非集群接入场景（主备模式）
-     * @param integer $IpVersion ip版本，0：ipv4；1：ipv6
-     * @param array $AttachIns 关联实例
+     * @var integer <p>Bypass状态</p>
+     */
+    public $Bypass;
+
+    /**
+     * @var string <p>防火墙开关操作时的进度状态：</p><p>// 开启 — 自动模式（3步）<br>&quot;AUTO_OPEN_ORCHESTRATING&quot; // 步骤1: 预编排策略路由<br>&quot;AUTO_OPEN_CREATING_RESOURCES&quot; // 步骤2: 创建引流网络和资源<br>&quot;AUTO_OPEN_PUSHING_ROUTES&quot; // 步骤3: 创建策略路由</p><p>// 开启 — 手动模式（1步）<br>&quot;MANUAL_OPEN_CREATING_RESOURCES&quot; // 步骤1: 创建引流网络和资源</p><p>// 关闭 — 自动模式（2步）<br>&quot;AUTO_CLOSE_DELETING_ROUTES&quot; // 步骤1: 删除策略路由<br>&quot;AUTO_CLOSE_DELETING_RESOURCES&quot; // 步骤2: 删除引流网络和资源<br>// 关闭 — 手动模式（1步）<br>&quot;MANUAL_CLOSE_DELETING_RESOURCES&quot; // 步骤1: 删除引流网络和资源</p><p>// 修改 — 自动模式（3步）<br>&quot;AUTO_MODIFY_ORCHESTRATING&quot; // 步骤1: 预编排策略路由<br>&quot;AUTO_MODIFY_DELETING_ROUTES&quot; // 步骤2: 删除旧策略路由<br>&quot;AUTO_MODIFY_PUSHING_ROUTES&quot; // 步骤3: 创建新策略路由</p><p>// 修改 — 手动模式（1步，仅 VPC 防火墙存在手动模式修改）<br>&quot;MANUAL_MODIFY_UPDATING_RESOURCES&quot; // 步骤1: 更新引流网络和资源</p>
+     */
+    public $Progress;
+
+    /**
+     * @param string $InsObj <p>实例对象可以是ccnid类型:ccn-ad21xuds形式;nat网关类型:nat-da12daxd形式;ip类型:1.1.1.1形式等</p>
+     * @param string $ObjName <p>实例对象名称</p>
+     * @param string $FwType <p>防火墙类型，ew：vpc间防火墙；nat：nat防火墙；border：互联网边界防火墙</p>
+     * @param string $AssetType <p>资产类型，ccn：ccn实例类型；nat：nat网关类型</p>
+     * @param string $Region <p>地域</p>
+     * @param integer $Status <p>开关状态<br>0 : 关闭<br>1 : 开启<br>2 : 开启中<br>3 : 关闭中<br>4 : 异常</p>
+     * @param integer $SwitchMode <p>开关接入模式，1：自动接入；2，手动接入，0：未选择</p>
+     * @param integer $NonCluster <p>实例对象是否处于非集群接入场景（主备模式）</p>
+     * @param integer $IpVersion <p>ip版本，0：ipv4；1：ipv6</p>
+     * @param array $AttachIns <p>关联实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Endpoints 引流私有网络端点信息
+     * @param array $Endpoints <p>引流私有网络端点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Idpsaction 入侵防护模式,0:观察;1:拦截;2:严格;3:关闭
-     * @param integer $TransEnable //透明模式开关,0:未开启,1:已开启
-     * @param integer $Enable 开关状态 0关闭 1开启
-     * @param integer $RoutingMode 路由模式：0：多路由表，1：策略路由
-     * @param integer $IsPeer 是否跨租户开关 1是 0不是
-     * @param string $PeerAppid 跨租户appid
-     * @param integer $PeerStatus 跨租户操作状态 1不允许操作 0可以
+     * @param integer $Idpsaction <p>入侵防护模式,0:观察;1:拦截;2:严格;3:关闭</p>
+     * @param integer $TransEnable <p>//透明模式开关,0:未开启,1:已开启</p>
+     * @param integer $Enable <p>开关状态 0关闭 1开启</p>
+     * @param integer $RoutingMode <p>路由模式：0：多路由表，1：策略路由</p>
+     * @param integer $IsPeer <p>是否跨租户开关 1是 0不是</p>
+     * @param string $PeerAppid <p>跨租户appid</p>
+     * @param integer $PeerStatus <p>跨租户操作状态 1不允许操作 0可以</p>
+     * @param integer $Bypass <p>Bypass状态</p>
+     * @param string $Progress <p>防火墙开关操作时的进度状态：</p><p>// 开启 — 自动模式（3步）<br>&quot;AUTO_OPEN_ORCHESTRATING&quot; // 步骤1: 预编排策略路由<br>&quot;AUTO_OPEN_CREATING_RESOURCES&quot; // 步骤2: 创建引流网络和资源<br>&quot;AUTO_OPEN_PUSHING_ROUTES&quot; // 步骤3: 创建策略路由</p><p>// 开启 — 手动模式（1步）<br>&quot;MANUAL_OPEN_CREATING_RESOURCES&quot; // 步骤1: 创建引流网络和资源</p><p>// 关闭 — 自动模式（2步）<br>&quot;AUTO_CLOSE_DELETING_ROUTES&quot; // 步骤1: 删除策略路由<br>&quot;AUTO_CLOSE_DELETING_RESOURCES&quot; // 步骤2: 删除引流网络和资源<br>// 关闭 — 手动模式（1步）<br>&quot;MANUAL_CLOSE_DELETING_RESOURCES&quot; // 步骤1: 删除引流网络和资源</p><p>// 修改 — 自动模式（3步）<br>&quot;AUTO_MODIFY_ORCHESTRATING&quot; // 步骤1: 预编排策略路由<br>&quot;AUTO_MODIFY_DELETING_ROUTES&quot; // 步骤2: 删除旧策略路由<br>&quot;AUTO_MODIFY_PUSHING_ROUTES&quot; // 步骤3: 创建新策略路由</p><p>// 修改 — 手动模式（1步，仅 VPC 防火墙存在手动模式修改）<br>&quot;MANUAL_MODIFY_UPDATING_RESOURCES&quot; // 步骤1: 更新引流网络和资源</p>
      */
     function __construct()
     {
@@ -290,6 +286,14 @@ class ClusterSwitchDetail extends AbstractModel
 
         if (array_key_exists("PeerStatus",$param) and $param["PeerStatus"] !== null) {
             $this->PeerStatus = $param["PeerStatus"];
+        }
+
+        if (array_key_exists("Bypass",$param) and $param["Bypass"] !== null) {
+            $this->Bypass = $param["Bypass"];
+        }
+
+        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
+            $this->Progress = $param["Progress"];
         }
     }
 }

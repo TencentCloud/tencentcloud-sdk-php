@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGatherRuleDetail返回参数结构体
  *
- * @method integer getId() 获取归集规则ID
- * @method void setId(integer $Id) 设置归集规则ID
- * @method string getUin() 获取归集规则所属UIN
- * @method void setUin(string $Uin) 设置归集规则所属UIN
- * @method string getUpdateTime() 获取归集规则最后更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置归集规则最后更新时间
- * @method AllocationRuleExpression getRuleDetail() 获取归集规则详情
- * @method void setRuleDetail(AllocationRuleExpression $RuleDetail) 设置归集规则详情
+ * @method integer getId() 获取<p>归集规则ID</p>
+ * @method void setId(integer $Id) 设置<p>归集规则ID</p>
+ * @method string getUin() 获取<p>归集规则所属UIN</p>
+ * @method void setUin(string $Uin) 设置<p>归集规则所属UIN</p>
+ * @method string getUpdateTime() 获取<p>归集规则最后更新时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>归集规则最后更新时间</p>
+ * @method AllocationRuleExpression getRuleDetail() 获取<p>归集规则详情</p>
+ * @method void setRuleDetail(AllocationRuleExpression $RuleDetail) 设置<p>归集规则详情</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeGatherRuleDetailResponse extends AbstractModel
 {
     /**
-     * @var integer 归集规则ID
+     * @var integer <p>归集规则ID</p>
      */
     public $Id;
 
     /**
-     * @var string 归集规则所属UIN
+     * @var string <p>归集规则所属UIN</p>
      */
     public $Uin;
 
     /**
-     * @var string 归集规则最后更新时间
+     * @var string <p>归集规则最后更新时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var AllocationRuleExpression 归集规则详情
+     * @var AllocationRuleExpression <p>归集规则详情</p>
      */
     public $RuleDetail;
 
@@ -59,10 +59,10 @@ class DescribeGatherRuleDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Id 归集规则ID
-     * @param string $Uin 归集规则所属UIN
-     * @param string $UpdateTime 归集规则最后更新时间
-     * @param AllocationRuleExpression $RuleDetail 归集规则详情
+     * @param integer $Id <p>归集规则ID</p>
+     * @param string $Uin <p>归集规则所属UIN</p>
+     * @param string $UpdateTime <p>归集规则最后更新时间</p>
+     * @param AllocationRuleExpression $RuleDetail <p>归集规则详情</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

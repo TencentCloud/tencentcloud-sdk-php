@@ -20,114 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGeneralOTSpanList请求参数结构体
  *
- * @method string getInstanceId() 获取业务系统 ID
- * @method void setInstanceId(string $InstanceId) 设置业务系统 ID
- * @method integer getStartTime() 获取Span 查询开始时间戳（单位：秒）
- * @method void setStartTime(integer $StartTime) 设置Span 查询开始时间戳（单位：秒）
- * @method integer getEndTime() 获取Span 查询结束时间戳（单位：秒）
- * @method void setEndTime(integer $EndTime) 设置Span 查询结束时间戳（单位：秒）
- * @method array getFilters() 获取通用过滤参数
- * @method void setFilters(array $Filters) 设置通用过滤参数
- * @method OrderBy getOrderBy() 获取排序
-现支持的 Key 有：
-
-- startTime(开始时间)
-- endTime(结束时间)
-- duration(响应时间)
-
-现支持的 Value 有：
-
-- desc(降序排序)
-- asc(升序排序)
- * @method void setOrderBy(OrderBy $OrderBy) 设置排序
-现支持的 Key 有：
-
-- startTime(开始时间)
-- endTime(结束时间)
-- duration(响应时间)
-
-现支持的 Value 有：
-
-- desc(降序排序)
-- asc(升序排序)
- * @method string getBusinessName() 获取业务自身服务名，控制台用户请填写taw
- * @method void setBusinessName(string $BusinessName) 设置业务自身服务名，控制台用户请填写taw
- * @method integer getLimit() 获取单页项目个数，默认为10000，合法取值范围为0～10000
- * @method void setLimit(integer $Limit) 设置单页项目个数，默认为10000，合法取值范围为0～10000
- * @method integer getOffset() 获取分页
- * @method void setOffset(integer $Offset) 设置分页
+ * @method string getInstanceId() 获取<p>业务系统 ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>业务系统 ID</p>
+ * @method integer getStartTime() 获取<p>Span 查询开始时间戳（单位：秒）</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>Span 查询开始时间戳（单位：秒）</p>
+ * @method integer getEndTime() 获取<p>Span 查询结束时间戳（单位：秒）</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>Span 查询结束时间戳（单位：秒）</p>
+ * @method array getFilters() 获取<p>通用过滤参数 支持的过滤key如service.name</p>
+ * @method void setFilters(array $Filters) 设置<p>通用过滤参数 支持的过滤key如service.name</p>
+ * @method OrderBy getOrderBy() 获取<p>排序<br>现支持的 Key 有：</p><ul><li>startTime(开始时间)</li><li>endTime(结束时间)</li><li>duration(响应时间)</li></ul><p>现支持的 Value 有：</p><ul><li>desc(降序排序)</li><li>asc(升序排序)</li></ul>
+ * @method void setOrderBy(OrderBy $OrderBy) 设置<p>排序<br>现支持的 Key 有：</p><ul><li>startTime(开始时间)</li><li>endTime(结束时间)</li><li>duration(响应时间)</li></ul><p>现支持的 Value 有：</p><ul><li>desc(降序排序)</li><li>asc(升序排序)</li></ul>
+ * @method string getBusinessName() 获取<p>业务自身服务名，控制台用户请填写taw</p>
+ * @method void setBusinessName(string $BusinessName) 设置<p>业务自身服务名，控制台用户请填写taw</p>
+ * @method integer getLimit() 获取<p>单页项目个数，默认为10000，合法取值范围为0～10000</p>
+ * @method void setLimit(integer $Limit) 设置<p>单页项目个数，默认为10000，合法取值范围为0～10000</p>
+ * @method integer getOffset() 获取<p>分页</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页</p>
  */
 class DescribeGeneralOTSpanListRequest extends AbstractModel
 {
     /**
-     * @var string 业务系统 ID
+     * @var string <p>业务系统 ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer Span 查询开始时间戳（单位：秒）
+     * @var integer <p>Span 查询开始时间戳（单位：秒）</p>
      */
     public $StartTime;
 
     /**
-     * @var integer Span 查询结束时间戳（单位：秒）
+     * @var integer <p>Span 查询结束时间戳（单位：秒）</p>
      */
     public $EndTime;
 
     /**
-     * @var array 通用过滤参数
+     * @var array <p>通用过滤参数 支持的过滤key如service.name</p>
      */
     public $Filters;
 
     /**
-     * @var OrderBy 排序
-现支持的 Key 有：
-
-- startTime(开始时间)
-- endTime(结束时间)
-- duration(响应时间)
-
-现支持的 Value 有：
-
-- desc(降序排序)
-- asc(升序排序)
+     * @var OrderBy <p>排序<br>现支持的 Key 有：</p><ul><li>startTime(开始时间)</li><li>endTime(结束时间)</li><li>duration(响应时间)</li></ul><p>现支持的 Value 有：</p><ul><li>desc(降序排序)</li><li>asc(升序排序)</li></ul>
      */
     public $OrderBy;
 
     /**
-     * @var string 业务自身服务名，控制台用户请填写taw
+     * @var string <p>业务自身服务名，控制台用户请填写taw</p>
      */
     public $BusinessName;
 
     /**
-     * @var integer 单页项目个数，默认为10000，合法取值范围为0～10000
+     * @var integer <p>单页项目个数，默认为10000，合法取值范围为0～10000</p>
      */
     public $Limit;
 
     /**
-     * @var integer 分页
+     * @var integer <p>分页</p>
      */
     public $Offset;
 
     /**
-     * @param string $InstanceId 业务系统 ID
-     * @param integer $StartTime Span 查询开始时间戳（单位：秒）
-     * @param integer $EndTime Span 查询结束时间戳（单位：秒）
-     * @param array $Filters 通用过滤参数
-     * @param OrderBy $OrderBy 排序
-现支持的 Key 有：
-
-- startTime(开始时间)
-- endTime(结束时间)
-- duration(响应时间)
-
-现支持的 Value 有：
-
-- desc(降序排序)
-- asc(升序排序)
-     * @param string $BusinessName 业务自身服务名，控制台用户请填写taw
-     * @param integer $Limit 单页项目个数，默认为10000，合法取值范围为0～10000
-     * @param integer $Offset 分页
+     * @param string $InstanceId <p>业务系统 ID</p>
+     * @param integer $StartTime <p>Span 查询开始时间戳（单位：秒）</p>
+     * @param integer $EndTime <p>Span 查询结束时间戳（单位：秒）</p>
+     * @param array $Filters <p>通用过滤参数 支持的过滤key如service.name</p>
+     * @param OrderBy $OrderBy <p>排序<br>现支持的 Key 有：</p><ul><li>startTime(开始时间)</li><li>endTime(结束时间)</li><li>duration(响应时间)</li></ul><p>现支持的 Value 有：</p><ul><li>desc(降序排序)</li><li>asc(升序排序)</li></ul>
+     * @param string $BusinessName <p>业务自身服务名，控制台用户请填写taw</p>
+     * @param integer $Limit <p>单页项目个数，默认为10000，合法取值范围为0～10000</p>
+     * @param integer $Offset <p>分页</p>
      */
     function __construct()
     {

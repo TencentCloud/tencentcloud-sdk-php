@@ -30,10 +30,14 @@ use TencentCloud\Bi\V20220105\Models as Models;
  * @method Models\CreateEmbedTokenResponse CreateEmbedToken(Models\CreateEmbedTokenRequest $req) 创建嵌出报表-强鉴权
  * @method Models\CreatePermissionRanksResponse CreatePermissionRanks(Models\CreatePermissionRanksRequest $req) 创建行列权限
  * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 创建项目
+ * @method Models\CreateUserGroupResponse CreateUserGroup(Models\CreateUserGroupRequest $req) CreateUserGroup
+ * @method Models\CreateUserGroupMemberResponse CreateUserGroupMember(Models\CreateUserGroupMemberRequest $req) CreateUserGroupMember
  * @method Models\CreateUserRoleResponse CreateUserRole(Models\CreateUserRoleRequest $req) 创建用户角色
  * @method Models\CreateUserRoleProjectResponse CreateUserRoleProject(Models\CreateUserRoleProjectRequest $req) 项目内-创建用户角色
  * @method Models\DeleteDatasourceResponse DeleteDatasource(Models\DeleteDatasourceRequest $req) 删除数据源
  * @method Models\DeleteProjectResponse DeleteProject(Models\DeleteProjectRequest $req) 删除项目
+ * @method Models\DeleteUserGroupResponse DeleteUserGroup(Models\DeleteUserGroupRequest $req) DeleteUserGroup
+ * @method Models\DeleteUserGroupMemberResponse DeleteUserGroupMember(Models\DeleteUserGroupMemberRequest $req) DeleteUserGroupMember
  * @method Models\DeleteUserRoleResponse DeleteUserRole(Models\DeleteUserRoleRequest $req) 删除用户角色，会删除用户
  * @method Models\DeleteUserRoleProjectResponse DeleteUserRoleProject(Models\DeleteUserRoleProjectRequest $req) 项目内-删除用户角色
  * @method Models\DescribeDatasourceListResponse DescribeDatasourceList(Models\DescribeDatasourceListRequest $req) 查询数据源列表
@@ -43,6 +47,10 @@ use TencentCloud\Bi\V20220105\Models as Models;
  * @method Models\DescribePermissionStatusInfoResponse DescribePermissionStatusInfo(Models\DescribePermissionStatusInfoRequest $req) 查询行列权限初始状态1
  * @method Models\DescribeProjectInfoResponse DescribeProjectInfo(Models\DescribeProjectInfoRequest $req) 项目详情接口
  * @method Models\DescribeProjectListResponse DescribeProjectList(Models\DescribeProjectListRequest $req) 项目信息
+ * @method Models\DescribeResourceUserGroupPageListResponse DescribeResourceUserGroupPageList(Models\DescribeResourceUserGroupPageListRequest $req) 用户组资源权限查询接口
+ * @method Models\DescribeUserGroupInfoResponse DescribeUserGroupInfo(Models\DescribeUserGroupInfoRequest $req) DescribeUserGroupInfo
+ * @method Models\DescribeUserGroupMemberListResponse DescribeUserGroupMemberList(Models\DescribeUserGroupMemberListRequest $req) DescribeUserGroupMemberList
+ * @method Models\DescribeUserGroupTreeListResponse DescribeUserGroupTreeList(Models\DescribeUserGroupTreeListRequest $req) 用户组数查询接口
  * @method Models\DescribeUserProjectListResponse DescribeUserProjectList(Models\DescribeUserProjectListRequest $req) 项目内-用户接口
  * @method Models\DescribeUserRoleListResponse DescribeUserRoleList(Models\DescribeUserRoleListRequest $req) 用户角色列表
  * @method Models\DescribeUserRoleProjectListResponse DescribeUserRoleProjectList(Models\DescribeUserRoleProjectListRequest $req) 项目内-用户角色列表
@@ -50,8 +58,13 @@ use TencentCloud\Bi\V20220105\Models as Models;
  * @method Models\ModifyDatasourceResponse ModifyDatasource(Models\ModifyDatasourceRequest $req) 更新数据源
  * @method Models\ModifyDatasourceCloudResponse ModifyDatasourceCloud(Models\ModifyDatasourceCloudRequest $req) 更新云数据库
  * @method Models\ModifyProjectResponse ModifyProject(Models\ModifyProjectRequest $req) 修改项目信息
+ * @method Models\ModifyResourceUserGroupResponse ModifyResourceUserGroup(Models\ModifyResourceUserGroupRequest $req) 更新用户组权限
+ * @method Models\ModifyResourceUserGroupResourceResponse ModifyResourceUserGroupResource(Models\ModifyResourceUserGroupResourceRequest $req) 按资源 - 更新用户组权限
+ * @method Models\ModifyUserDetailInfoResponse ModifyUserDetailInfo(Models\ModifyUserDetailInfoRequest $req) 修改用户角色信息
+ * @method Models\ModifyUserGroupResponse ModifyUserGroup(Models\ModifyUserGroupRequest $req) ModifyUserGroup
  * @method Models\ModifyUserRoleResponse ModifyUserRole(Models\ModifyUserRoleRequest $req) 修改用户角色信息
  * @method Models\ModifyUserRoleProjectResponse ModifyUserRoleProject(Models\ModifyUserRoleProjectRequest $req) 项目-修改用户角色信息
+ * @method Models\QueryUserGroupMemberResponse QueryUserGroupMember(Models\QueryUserGroupMemberRequest $req) QueryUserGroupMember
  */
 
 class BiClient extends AbstractClient

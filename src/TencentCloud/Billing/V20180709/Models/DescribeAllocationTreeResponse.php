@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAllocationTree返回参数结构体
  *
- * @method integer getId() 获取分账单元ID
- * @method void setId(integer $Id) 设置分账单元ID
- * @method string getName() 获取分账单元名称
- * @method void setName(string $Name) 设置分账单元名称
- * @method string getTreeNodeUniqKey() 获取分账单元唯一标识
- * @method void setTreeNodeUniqKey(string $TreeNodeUniqKey) 设置分账单元唯一标识
- * @method array getChildren() 获取子树
- * @method void setChildren(array $Children) 设置子树
+ * @method integer getId() 获取<p>分账单元ID</p>
+ * @method void setId(integer $Id) 设置<p>分账单元ID</p>
+ * @method string getName() 获取<p>分账单元名称</p>
+ * @method void setName(string $Name) 设置<p>分账单元名称</p>
+ * @method string getTreeNodeUniqKey() 获取<p>分账单元唯一标识</p>
+ * @method void setTreeNodeUniqKey(string $TreeNodeUniqKey) 设置<p>分账单元唯一标识</p>
+ * @method array getChildren() 获取<p>子树</p>
+ * @method void setChildren(array $Children) 设置<p>子树</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAllocationTreeResponse extends AbstractModel
 {
     /**
-     * @var integer 分账单元ID
+     * @var integer <p>分账单元ID</p>
      */
     public $Id;
 
     /**
-     * @var string 分账单元名称
+     * @var string <p>分账单元名称</p>
      */
     public $Name;
 
     /**
-     * @var string 分账单元唯一标识
+     * @var string <p>分账单元唯一标识</p>
      */
     public $TreeNodeUniqKey;
 
     /**
-     * @var array 子树
+     * @var array <p>子树</p>
      */
     public $Children;
 
@@ -59,10 +59,10 @@ class DescribeAllocationTreeResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Id 分账单元ID
-     * @param string $Name 分账单元名称
-     * @param string $TreeNodeUniqKey 分账单元唯一标识
-     * @param array $Children 子树
+     * @param integer $Id <p>分账单元ID</p>
+     * @param string $Name <p>分账单元名称</p>
+     * @param string $TreeNodeUniqKey <p>分账单元唯一标识</p>
+     * @param array $Children <p>子树</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

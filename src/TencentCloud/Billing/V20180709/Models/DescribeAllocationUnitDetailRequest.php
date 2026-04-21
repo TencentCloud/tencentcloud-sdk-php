@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAllocationUnitDetail请求参数结构体
  *
- * @method integer getId() 获取所查询分账单元Id
- * @method void setId(integer $Id) 设置所查询分账单元Id
- * @method string getMonth() 获取月份，不传默认当前月
- * @method void setMonth(string $Month) 设置月份，不传默认当前月
+ * @method integer getId() 获取<p>所查询分账单元Id</p>
+ * @method void setId(integer $Id) 设置<p>所查询分账单元Id</p>
+ * @method string getMonth() 获取<p>月份，不传默认当前月</p>
+ * @method void setMonth(string $Month) 设置<p>月份，不传默认当前月</p>
  */
 class DescribeAllocationUnitDetailRequest extends AbstractModel
 {
     /**
-     * @var integer 所查询分账单元Id
+     * @var integer <p>所查询分账单元Id</p>
      */
     public $Id;
 
     /**
-     * @var string 月份，不传默认当前月
+     * @var string <p>月份，不传默认当前月</p>
      */
     public $Month;
 
     /**
-     * @param integer $Id 所查询分账单元Id
-     * @param string $Month 月份，不传默认当前月
+     * @param integer $Id <p>所查询分账单元Id</p>
+     * @param string $Month <p>月份，不传默认当前月</p>
      */
     function __construct()
     {

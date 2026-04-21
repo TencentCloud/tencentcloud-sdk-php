@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询过滤参数
  *
- * @method string getType() 获取过滤方式（=, !=, in）
- * @method void setType(string $Type) 设置过滤方式（=, !=, in）
- * @method string getKey() 获取过滤维度名
- * @method void setKey(string $Key) 设置过滤维度名
- * @method string getValue() 获取过滤值，in过滤方式用逗号分割多个值
- * @method void setValue(string $Value) 设置过滤值，in过滤方式用逗号分割多个值
+ * @method string getType() 获取<p>过滤方式（=, !=, in）</p>
+ * @method void setType(string $Type) 设置<p>过滤方式（=, !=, in）</p>
+ * @method string getKey() 获取<p>过滤维度名</p><p>详情参考实际接口字段描述</p>
+ * @method void setKey(string $Key) 设置<p>过滤维度名</p><p>详情参考实际接口字段描述</p>
+ * @method string getValue() 获取<p>过滤值，in过滤方式用逗号分割多个值</p>
+ * @method void setValue(string $Value) 设置<p>过滤值，in过滤方式用逗号分割多个值</p>
  */
 class Filter extends AbstractModel
 {
     /**
-     * @var string 过滤方式（=, !=, in）
+     * @var string <p>过滤方式（=, !=, in）</p>
      */
     public $Type;
 
     /**
-     * @var string 过滤维度名
+     * @var string <p>过滤维度名</p><p>详情参考实际接口字段描述</p>
      */
     public $Key;
 
     /**
-     * @var string 过滤值，in过滤方式用逗号分割多个值
+     * @var string <p>过滤值，in过滤方式用逗号分割多个值</p>
      */
     public $Value;
 
     /**
-     * @param string $Type 过滤方式（=, !=, in）
-     * @param string $Key 过滤维度名
-     * @param string $Value 过滤值，in过滤方式用逗号分割多个值
+     * @param string $Type <p>过滤方式（=, !=, in）</p>
+     * @param string $Key <p>过滤维度名</p><p>详情参考实际接口字段描述</p>
+     * @param string $Value <p>过滤值，in过滤方式用逗号分割多个值</p>
      */
     function __construct()
     {

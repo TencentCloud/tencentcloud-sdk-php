@@ -20,18 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 镜像相关配置
  *
- * @method string getImageRegistryUrl() 获取tcr仓库地址
- * @method void setImageRegistryUrl(string $ImageRegistryUrl) 设置tcr仓库地址
+ * @method string getImageRegistryUrl() 获取<p>tcr仓库地址</p>
+ * @method void setImageRegistryUrl(string $ImageRegistryUrl) 设置<p>tcr仓库地址</p>
+ * @method string getImageRegistryUsername() 获取<p>仓库用户名</p>
+ * @method void setImageRegistryUsername(string $ImageRegistryUsername) 设置<p>仓库用户名</p>
+ * @method string getImageRegistryPassword() 获取<p>仓库密码</p>
+ * @method void setImageRegistryPassword(string $ImageRegistryPassword) 设置<p>仓库密码</p>
  */
 class ImageInfo extends AbstractModel
 {
     /**
-     * @var string tcr仓库地址
+     * @var string <p>tcr仓库地址</p>
      */
     public $ImageRegistryUrl;
 
     /**
-     * @param string $ImageRegistryUrl tcr仓库地址
+     * @var string <p>仓库用户名</p>
+     */
+    public $ImageRegistryUsername;
+
+    /**
+     * @var string <p>仓库密码</p>
+     */
+    public $ImageRegistryPassword;
+
+    /**
+     * @param string $ImageRegistryUrl <p>tcr仓库地址</p>
+     * @param string $ImageRegistryUsername <p>仓库用户名</p>
+     * @param string $ImageRegistryPassword <p>仓库密码</p>
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class ImageInfo extends AbstractModel
         }
         if (array_key_exists("ImageRegistryUrl",$param) and $param["ImageRegistryUrl"] !== null) {
             $this->ImageRegistryUrl = $param["ImageRegistryUrl"];
+        }
+
+        if (array_key_exists("ImageRegistryUsername",$param) and $param["ImageRegistryUsername"] !== null) {
+            $this->ImageRegistryUsername = $param["ImageRegistryUsername"];
+        }
+
+        if (array_key_exists("ImageRegistryPassword",$param) and $param["ImageRegistryPassword"] !== null) {
+            $this->ImageRegistryPassword = $param["ImageRegistryPassword"];
         }
     }
 }

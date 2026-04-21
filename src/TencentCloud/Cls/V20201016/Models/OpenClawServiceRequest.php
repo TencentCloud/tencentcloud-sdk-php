@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTag() 获取<p>标签类型</p><p>枚举值：</p><ul><li>OpenClaw： OpenClaw类型</li><li>ClawPro： ClawPro类型</li></ul>
  * @method void setTag(string $Tag) 设置<p>标签类型</p><p>枚举值：</p><ul><li>OpenClaw： OpenClaw类型</li><li>ClawPro： ClawPro类型</li></ul>
+ * @method boolean getEnableTrace() 获取<p>是否创建 trace 主题，默认为 false</p><p>枚举值：</p><ul><li>true： 创建trace 主题</li><li>false： 不创建trace 主题</li></ul>
+ * @method void setEnableTrace(boolean $EnableTrace) 设置<p>是否创建 trace 主题，默认为 false</p><p>枚举值：</p><ul><li>true： 创建trace 主题</li><li>false： 不创建trace 主题</li></ul>
  */
 class OpenClawServiceRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class OpenClawServiceRequest extends AbstractModel
     public $Tag;
 
     /**
+     * @var boolean <p>是否创建 trace 主题，默认为 false</p><p>枚举值：</p><ul><li>true： 创建trace 主题</li><li>false： 不创建trace 主题</li></ul>
+     */
+    public $EnableTrace;
+
+    /**
      * @param string $Tag <p>标签类型</p><p>枚举值：</p><ul><li>OpenClaw： OpenClaw类型</li><li>ClawPro： ClawPro类型</li></ul>
+     * @param boolean $EnableTrace <p>是否创建 trace 主题，默认为 false</p><p>枚举值：</p><ul><li>true： 创建trace 主题</li><li>false： 不创建trace 主题</li></ul>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class OpenClawServiceRequest extends AbstractModel
         }
         if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
             $this->Tag = $param["Tag"];
+        }
+
+        if (array_key_exists("EnableTrace",$param) and $param["EnableTrace"] !== null) {
+            $this->EnableTrace = $param["EnableTrace"];
         }
     }
 }

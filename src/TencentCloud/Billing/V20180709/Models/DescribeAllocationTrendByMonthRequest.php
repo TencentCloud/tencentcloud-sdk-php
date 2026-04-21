@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAllocationTrendByMonth请求参数结构体
  *
- * @method string getMonth() 获取账单月份，格式为2024-02，不传默认当前月
- * @method void setMonth(string $Month) 设置账单月份，格式为2024-02，不传默认当前月
- * @method string getTreeNodeUniqKey() 获取分账单元唯一标识
- * @method void setTreeNodeUniqKey(string $TreeNodeUniqKey) 设置分账单元唯一标识
- * @method string getBusinessCode() 获取产品编码，用作筛选
- * @method void setBusinessCode(string $BusinessCode) 设置产品编码，用作筛选
+ * @method string getMonth() 获取<p>账单月份，格式为2024-02，不传默认当前月</p>
+ * @method void setMonth(string $Month) 设置<p>账单月份，格式为2024-02，不传默认当前月</p>
+ * @method string getTreeNodeUniqKey() 获取<p>分账单元唯一标识</p>
+ * @method void setTreeNodeUniqKey(string $TreeNodeUniqKey) 设置<p>分账单元唯一标识</p>
+ * @method string getBusinessCode() 获取<p>产品编码，用作筛选</p>
+ * @method void setBusinessCode(string $BusinessCode) 设置<p>产品编码，用作筛选</p>
  */
 class DescribeAllocationTrendByMonthRequest extends AbstractModel
 {
     /**
-     * @var string 账单月份，格式为2024-02，不传默认当前月
+     * @var string <p>账单月份，格式为2024-02，不传默认当前月</p>
      */
     public $Month;
 
     /**
-     * @var string 分账单元唯一标识
+     * @var string <p>分账单元唯一标识</p>
      */
     public $TreeNodeUniqKey;
 
     /**
-     * @var string 产品编码，用作筛选
+     * @var string <p>产品编码，用作筛选</p>
      */
     public $BusinessCode;
 
     /**
-     * @param string $Month 账单月份，格式为2024-02，不传默认当前月
-     * @param string $TreeNodeUniqKey 分账单元唯一标识
-     * @param string $BusinessCode 产品编码，用作筛选
+     * @param string $Month <p>账单月份，格式为2024-02，不传默认当前月</p>
+     * @param string $TreeNodeUniqKey <p>分账单元唯一标识</p>
+     * @param string $BusinessCode <p>产品编码，用作筛选</p>
      */
     function __construct()
     {

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAllocationTree请求参数结构体
  *
- * @method string getMonth() 获取月份，不传默认当前月
- * @method void setMonth(string $Month) 设置月份，不传默认当前月
+ * @method string getMonth() 获取<p>月份，不传默认当前月</p>
+ * @method void setMonth(string $Month) 设置<p>月份，不传默认当前月</p>
  */
 class DescribeAllocationTreeRequest extends AbstractModel
 {
     /**
-     * @var string 月份，不传默认当前月
+     * @var string <p>月份，不传默认当前月</p>
      */
     public $Month;
 
     /**
-     * @param string $Month 月份，不传默认当前月
+     * @param string $Month <p>月份，不传默认当前月</p>
      */
     function __construct()
     {

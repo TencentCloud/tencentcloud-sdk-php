@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionLogConfigId(string $SessionLogConfigId) 设置<p>采集配置id。会话日志</p><p><a href="https://cloud.tencent.com/document/product/614/33494">采集概述文档</a> - <a href="https://cloud.tencent.com/document/product/614/57497">LogListener 采集配置导入</a></p>
  * @method string getSessionLogConfigName() 获取<p>采集配置名称。会话日志</p>
  * @method void setSessionLogConfigName(string $SessionLogConfigName) 设置<p>采集配置名称。会话日志</p>
+ * @method string getTraceTopicId() 获取<p>trace 主题 ID</p>
+ * @method void setTraceTopicId(string $TraceTopicId) 设置<p>trace 主题 ID</p>
+ * @method string getTraceTopicName() 获取<p>trace 主题名称</p>
+ * @method void setTraceTopicName(string $TraceTopicName) 设置<p>trace 主题名称</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -110,6 +114,16 @@ class OpenClawServiceResponse extends AbstractModel
     public $SessionLogConfigName;
 
     /**
+     * @var string <p>trace 主题 ID</p>
+     */
+    public $TraceTopicId;
+
+    /**
+     * @var string <p>trace 主题名称</p>
+     */
+    public $TraceTopicName;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -127,6 +141,8 @@ class OpenClawServiceResponse extends AbstractModel
      * @param string $AppLogConfigName <p>采集配置名称。应用日志</p>
      * @param string $SessionLogConfigId <p>采集配置id。会话日志</p><p><a href="https://cloud.tencent.com/document/product/614/33494">采集概述文档</a> - <a href="https://cloud.tencent.com/document/product/614/57497">LogListener 采集配置导入</a></p>
      * @param string $SessionLogConfigName <p>采集配置名称。会话日志</p>
+     * @param string $TraceTopicId <p>trace 主题 ID</p>
+     * @param string $TraceTopicName <p>trace 主题名称</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -188,6 +204,14 @@ class OpenClawServiceResponse extends AbstractModel
 
         if (array_key_exists("SessionLogConfigName",$param) and $param["SessionLogConfigName"] !== null) {
             $this->SessionLogConfigName = $param["SessionLogConfigName"];
+        }
+
+        if (array_key_exists("TraceTopicId",$param) and $param["TraceTopicId"] !== null) {
+            $this->TraceTopicId = $param["TraceTopicId"];
+        }
+
+        if (array_key_exists("TraceTopicName",$param) and $param["TraceTopicName"] !== null) {
+            $this->TraceTopicName = $param["TraceTopicName"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

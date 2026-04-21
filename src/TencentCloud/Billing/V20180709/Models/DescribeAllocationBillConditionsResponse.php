@@ -20,120 +20,120 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAllocationBillConditions返回参数结构体
  *
- * @method array getBusiness() 获取产品筛选列表
- * @method void setBusiness(array $Business) 设置产品筛选列表
- * @method array getProduct() 获取子产品筛选列表
- * @method void setProduct(array $Product) 设置子产品筛选列表
- * @method array getItem() 获取组件名称筛选列表
- * @method void setItem(array $Item) 设置组件名称筛选列表
- * @method array getRegion() 获取地域筛选列表
- * @method void setRegion(array $Region) 设置地域筛选列表
- * @method array getInstanceType() 获取实例类型筛选列表
- * @method void setInstanceType(array $InstanceType) 设置实例类型筛选列表
- * @method array getPayMode() 获取计费模式筛选列表
- * @method void setPayMode(array $PayMode) 设置计费模式筛选列表
- * @method array getProject() 获取项目筛选列表
- * @method void setProject(array $Project) 设置项目筛选列表
- * @method array getTag() 获取标签筛选列表
- * @method void setTag(array $Tag) 设置标签筛选列表
- * @method array getOwnerUin() 获取使用者 UIN 筛选列表
- * @method void setOwnerUin(array $OwnerUin) 设置使用者 UIN 筛选列表
- * @method array getOperateUin() 获取操作者 UIN 筛选列表
- * @method void setOperateUin(array $OperateUin) 设置操作者 UIN 筛选列表
- * @method array getBillDay() 获取日期筛选列表
- * @method void setBillDay(array $BillDay) 设置日期筛选列表
- * @method array getActionType() 获取交易类型筛选列表
- * @method void setActionType(array $ActionType) 设置交易类型筛选列表
- * @method array getComponent() 获取组件类型筛选列表
- * @method void setComponent(array $Component) 设置组件类型筛选列表
- * @method array getZone() 获取可用区筛选列表
- * @method void setZone(array $Zone) 设置可用区筛选列表
- * @method array getAllocationTreeNode() 获取分账单元筛选列表
- * @method void setAllocationTreeNode(array $AllocationTreeNode) 设置分账单元筛选列表
- * @method array getTagKey() 获取分账标签键
- * @method void setTagKey(array $TagKey) 设置分账标签键
+ * @method array getBusiness() 获取<p>产品筛选列表</p>
+ * @method void setBusiness(array $Business) 设置<p>产品筛选列表</p>
+ * @method array getProduct() 获取<p>子产品筛选列表</p>
+ * @method void setProduct(array $Product) 设置<p>子产品筛选列表</p>
+ * @method array getItem() 获取<p>组件名称筛选列表</p>
+ * @method void setItem(array $Item) 设置<p>组件名称筛选列表</p>
+ * @method array getRegion() 获取<p>地域筛选列表</p>
+ * @method void setRegion(array $Region) 设置<p>地域筛选列表</p>
+ * @method array getInstanceType() 获取<p>实例类型筛选列表</p>
+ * @method void setInstanceType(array $InstanceType) 设置<p>实例类型筛选列表</p>
+ * @method array getPayMode() 获取<p>计费模式筛选列表</p>
+ * @method void setPayMode(array $PayMode) 设置<p>计费模式筛选列表</p>
+ * @method array getProject() 获取<p>项目筛选列表</p>
+ * @method void setProject(array $Project) 设置<p>项目筛选列表</p>
+ * @method array getTag() 获取<p>标签筛选列表</p>
+ * @method void setTag(array $Tag) 设置<p>标签筛选列表</p>
+ * @method array getOwnerUin() 获取<p>使用者 UIN 筛选列表</p>
+ * @method void setOwnerUin(array $OwnerUin) 设置<p>使用者 UIN 筛选列表</p>
+ * @method array getOperateUin() 获取<p>操作者 UIN 筛选列表</p>
+ * @method void setOperateUin(array $OperateUin) 设置<p>操作者 UIN 筛选列表</p>
+ * @method array getBillDay() 获取<p>日期筛选列表</p>
+ * @method void setBillDay(array $BillDay) 设置<p>日期筛选列表</p>
+ * @method array getActionType() 获取<p>交易类型筛选列表</p>
+ * @method void setActionType(array $ActionType) 设置<p>交易类型筛选列表</p>
+ * @method array getComponent() 获取<p>组件类型筛选列表</p>
+ * @method void setComponent(array $Component) 设置<p>组件类型筛选列表</p>
+ * @method array getZone() 获取<p>可用区筛选列表</p>
+ * @method void setZone(array $Zone) 设置<p>可用区筛选列表</p>
+ * @method array getAllocationTreeNode() 获取<p>分账单元筛选列表</p>
+ * @method void setAllocationTreeNode(array $AllocationTreeNode) 设置<p>分账单元筛选列表</p>
+ * @method array getTagKey() 获取<p>分账标签键</p>
+ * @method void setTagKey(array $TagKey) 设置<p>分账标签键</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAllocationBillConditionsResponse extends AbstractModel
 {
     /**
-     * @var array 产品筛选列表
+     * @var array <p>产品筛选列表</p>
      */
     public $Business;
 
     /**
-     * @var array 子产品筛选列表
+     * @var array <p>子产品筛选列表</p>
      */
     public $Product;
 
     /**
-     * @var array 组件名称筛选列表
+     * @var array <p>组件名称筛选列表</p>
      */
     public $Item;
 
     /**
-     * @var array 地域筛选列表
+     * @var array <p>地域筛选列表</p>
      */
     public $Region;
 
     /**
-     * @var array 实例类型筛选列表
+     * @var array <p>实例类型筛选列表</p>
      */
     public $InstanceType;
 
     /**
-     * @var array 计费模式筛选列表
+     * @var array <p>计费模式筛选列表</p>
      */
     public $PayMode;
 
     /**
-     * @var array 项目筛选列表
+     * @var array <p>项目筛选列表</p>
      */
     public $Project;
 
     /**
-     * @var array 标签筛选列表
+     * @var array <p>标签筛选列表</p>
      */
     public $Tag;
 
     /**
-     * @var array 使用者 UIN 筛选列表
+     * @var array <p>使用者 UIN 筛选列表</p>
      */
     public $OwnerUin;
 
     /**
-     * @var array 操作者 UIN 筛选列表
+     * @var array <p>操作者 UIN 筛选列表</p>
      */
     public $OperateUin;
 
     /**
-     * @var array 日期筛选列表
+     * @var array <p>日期筛选列表</p>
      */
     public $BillDay;
 
     /**
-     * @var array 交易类型筛选列表
+     * @var array <p>交易类型筛选列表</p>
      */
     public $ActionType;
 
     /**
-     * @var array 组件类型筛选列表
+     * @var array <p>组件类型筛选列表</p>
      */
     public $Component;
 
     /**
-     * @var array 可用区筛选列表
+     * @var array <p>可用区筛选列表</p>
      */
     public $Zone;
 
     /**
-     * @var array 分账单元筛选列表
+     * @var array <p>分账单元筛选列表</p>
      */
     public $AllocationTreeNode;
 
     /**
-     * @var array 分账标签键
+     * @var array <p>分账标签键</p>
      */
     public $TagKey;
 
@@ -143,22 +143,22 @@ class DescribeAllocationBillConditionsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Business 产品筛选列表
-     * @param array $Product 子产品筛选列表
-     * @param array $Item 组件名称筛选列表
-     * @param array $Region 地域筛选列表
-     * @param array $InstanceType 实例类型筛选列表
-     * @param array $PayMode 计费模式筛选列表
-     * @param array $Project 项目筛选列表
-     * @param array $Tag 标签筛选列表
-     * @param array $OwnerUin 使用者 UIN 筛选列表
-     * @param array $OperateUin 操作者 UIN 筛选列表
-     * @param array $BillDay 日期筛选列表
-     * @param array $ActionType 交易类型筛选列表
-     * @param array $Component 组件类型筛选列表
-     * @param array $Zone 可用区筛选列表
-     * @param array $AllocationTreeNode 分账单元筛选列表
-     * @param array $TagKey 分账标签键
+     * @param array $Business <p>产品筛选列表</p>
+     * @param array $Product <p>子产品筛选列表</p>
+     * @param array $Item <p>组件名称筛选列表</p>
+     * @param array $Region <p>地域筛选列表</p>
+     * @param array $InstanceType <p>实例类型筛选列表</p>
+     * @param array $PayMode <p>计费模式筛选列表</p>
+     * @param array $Project <p>项目筛选列表</p>
+     * @param array $Tag <p>标签筛选列表</p>
+     * @param array $OwnerUin <p>使用者 UIN 筛选列表</p>
+     * @param array $OperateUin <p>操作者 UIN 筛选列表</p>
+     * @param array $BillDay <p>日期筛选列表</p>
+     * @param array $ActionType <p>交易类型筛选列表</p>
+     * @param array $Component <p>组件类型筛选列表</p>
+     * @param array $Zone <p>可用区筛选列表</p>
+     * @param array $AllocationTreeNode <p>分账单元筛选列表</p>
+     * @param array $TagKey <p>分账标签键</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

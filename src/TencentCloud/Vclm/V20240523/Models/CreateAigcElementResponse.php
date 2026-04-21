@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getJobId() 获取<p>任务ID。</p>
  * @method void setJobId(string $JobId) 设置<p>任务ID。</p>
- * @method string getElementId() 获取
- * @method void setElementId(string $ElementId) 设置
- * @method string getStatus() 获取
- * @method void setStatus(string $Status) 设置
- * @method array getProvider() 获取
- * @method void setProvider(array $Provider) 设置
- * @method string getCreatedAt() 获取
- * @method void setCreatedAt(string $CreatedAt) 设置
+ * @method string getElementId() 获取<p>主体Id</p>
+ * @method void setElementId(string $ElementId) 设置<p>主体Id</p>
+ * @method string getStatus() 获取<p>任务状态</p><p>默认值：任务状态</p>
+ * @method void setStatus(string $Status) 设置<p>任务状态</p><p>默认值：任务状态</p>
+ * @method array getProvider() 获取<p>厂商</p>
+ * @method void setProvider(array $Provider) 设置<p>厂商</p>
+ * @method string getCreatedAt() 获取<p>任务创建时间</p>
+ * @method void setCreatedAt(string $CreatedAt) 设置<p>任务创建时间</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -41,22 +41,22 @@ class CreateAigcElementResponse extends AbstractModel
     public $JobId;
 
     /**
-     * @var string 
+     * @var string <p>主体Id</p>
      */
     public $ElementId;
 
     /**
-     * @var string 
+     * @var string <p>任务状态</p><p>默认值：任务状态</p>
      */
     public $Status;
 
     /**
-     * @var array 
+     * @var array <p>厂商</p>
      */
     public $Provider;
 
     /**
-     * @var string 
+     * @var string <p>任务创建时间</p>
      */
     public $CreatedAt;
 
@@ -67,10 +67,10 @@ class CreateAigcElementResponse extends AbstractModel
 
     /**
      * @param string $JobId <p>任务ID。</p>
-     * @param string $ElementId 
-     * @param string $Status 
-     * @param array $Provider 
-     * @param string $CreatedAt 
+     * @param string $ElementId <p>主体Id</p>
+     * @param string $Status <p>任务状态</p><p>默认值：任务状态</p>
+     * @param array $Provider <p>厂商</p>
+     * @param string $CreatedAt <p>任务创建时间</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

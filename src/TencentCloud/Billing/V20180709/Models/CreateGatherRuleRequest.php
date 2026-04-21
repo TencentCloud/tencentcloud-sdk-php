@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateGatherRule请求参数结构体
  *
- * @method integer getId() 获取规则所属分账单元ID
- * @method void setId(integer $Id) 设置规则所属分账单元ID
- * @method GatherRuleSummary getRuleList() 获取归集规则详情
- * @method void setRuleList(GatherRuleSummary $RuleList) 设置归集规则详情
- * @method string getMonth() 获取月份，不传默认当前月
- * @method void setMonth(string $Month) 设置月份，不传默认当前月
+ * @method integer getId() 获取<p>规则所属分账单元ID</p>
+ * @method void setId(integer $Id) 设置<p>规则所属分账单元ID</p>
+ * @method GatherRuleSummary getRuleList() 获取<p>归集规则详情</p>
+ * @method void setRuleList(GatherRuleSummary $RuleList) 设置<p>归集规则详情</p>
+ * @method string getMonth() 获取<p>月份，不传默认当前月</p>
+ * @method void setMonth(string $Month) 设置<p>月份，不传默认当前月</p>
  */
 class CreateGatherRuleRequest extends AbstractModel
 {
     /**
-     * @var integer 规则所属分账单元ID
+     * @var integer <p>规则所属分账单元ID</p>
      */
     public $Id;
 
     /**
-     * @var GatherRuleSummary 归集规则详情
+     * @var GatherRuleSummary <p>归集规则详情</p>
      */
     public $RuleList;
 
     /**
-     * @var string 月份，不传默认当前月
+     * @var string <p>月份，不传默认当前月</p>
      */
     public $Month;
 
     /**
-     * @param integer $Id 规则所属分账单元ID
-     * @param GatherRuleSummary $RuleList 归集规则详情
-     * @param string $Month 月份，不传默认当前月
+     * @param integer $Id <p>规则所属分账单元ID</p>
+     * @param GatherRuleSummary $RuleList <p>归集规则详情</p>
+     * @param string $Month <p>月份，不传默认当前月</p>
      */
     function __construct()
     {

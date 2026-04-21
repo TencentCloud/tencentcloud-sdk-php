@@ -20,66 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAllocationRuleSummary请求参数结构体
  *
- * @method integer getLimit() 获取每次获取数据量，最大值1000
- * @method void setLimit(integer $Limit) 设置每次获取数据量，最大值1000
- * @method integer getOffset() 获取分页偏移量
- * @method void setOffset(integer $Offset) 设置分页偏移量
- * @method string getMonth() 获取月份，不传默认当前月
- * @method void setMonth(string $Month) 设置月份，不传默认当前月
- * @method integer getType() 获取公摊策略类型，用于筛选。
-枚举值如下： 
-1 - 自定义分摊占比 
-2 - 等比分摊 
-3 - 按占比分摊
- * @method void setType(integer $Type) 设置公摊策略类型，用于筛选。
-枚举值如下： 
-1 - 自定义分摊占比 
-2 - 等比分摊 
-3 - 按占比分摊
- * @method string getName() 获取公摊规则名称或分账单元名称，用于模糊筛选。
- * @method void setName(string $Name) 设置公摊规则名称或分账单元名称，用于模糊筛选。
+ * @method integer getLimit() 获取<p>每次获取数据量，最大值1000</p>
+ * @method void setLimit(integer $Limit) 设置<p>每次获取数据量，最大值1000</p>
+ * @method integer getOffset() 获取<p>分页偏移量</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移量</p>
+ * @method string getMonth() 获取<p>月份，不传默认当前月</p>
+ * @method void setMonth(string $Month) 设置<p>月份，不传默认当前月</p>
+ * @method integer getType() 获取<p>公摊策略类型，用于筛选。<br>枚举值如下：<br>1 - 自定义分摊占比<br>2 - 等比分摊<br>3 - 按占比分摊</p>
+ * @method void setType(integer $Type) 设置<p>公摊策略类型，用于筛选。<br>枚举值如下：<br>1 - 自定义分摊占比<br>2 - 等比分摊<br>3 - 按占比分摊</p>
+ * @method string getName() 获取<p>公摊规则名称或分账单元名称，用于模糊筛选。</p>
+ * @method void setName(string $Name) 设置<p>公摊规则名称或分账单元名称，用于模糊筛选。</p>
  */
 class DescribeAllocationRuleSummaryRequest extends AbstractModel
 {
     /**
-     * @var integer 每次获取数据量，最大值1000
+     * @var integer <p>每次获取数据量，最大值1000</p>
      */
     public $Limit;
 
     /**
-     * @var integer 分页偏移量
+     * @var integer <p>分页偏移量</p>
      */
     public $Offset;
 
     /**
-     * @var string 月份，不传默认当前月
+     * @var string <p>月份，不传默认当前月</p>
      */
     public $Month;
 
     /**
-     * @var integer 公摊策略类型，用于筛选。
-枚举值如下： 
-1 - 自定义分摊占比 
-2 - 等比分摊 
-3 - 按占比分摊
+     * @var integer <p>公摊策略类型，用于筛选。<br>枚举值如下：<br>1 - 自定义分摊占比<br>2 - 等比分摊<br>3 - 按占比分摊</p>
      */
     public $Type;
 
     /**
-     * @var string 公摊规则名称或分账单元名称，用于模糊筛选。
+     * @var string <p>公摊规则名称或分账单元名称，用于模糊筛选。</p>
      */
     public $Name;
 
     /**
-     * @param integer $Limit 每次获取数据量，最大值1000
-     * @param integer $Offset 分页偏移量
-     * @param string $Month 月份，不传默认当前月
-     * @param integer $Type 公摊策略类型，用于筛选。
-枚举值如下： 
-1 - 自定义分摊占比 
-2 - 等比分摊 
-3 - 按占比分摊
-     * @param string $Name 公摊规则名称或分账单元名称，用于模糊筛选。
+     * @param integer $Limit <p>每次获取数据量，最大值1000</p>
+     * @param integer $Offset <p>分页偏移量</p>
+     * @param string $Month <p>月份，不传默认当前月</p>
+     * @param integer $Type <p>公摊策略类型，用于筛选。<br>枚举值如下：<br>1 - 自定义分摊占比<br>2 - 等比分摊<br>3 - 按占比分摊</p>
+     * @param string $Name <p>公摊规则名称或分账单元名称，用于模糊筛选。</p>
      */
     function __construct()
     {

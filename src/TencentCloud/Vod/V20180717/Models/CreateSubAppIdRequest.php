@@ -20,70 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSubAppId请求参数结构体
  *
- * @method string getName() 获取应用名称，长度限制：40个字符。
- * @method void setName(string $Name) 设置应用名称，长度限制：40个字符。
- * @method string getDescription() 获取应用简介，长度限制： 300个字符。不填则应用简介默认为空。
- * @method void setDescription(string $Description) 设置应用简介，长度限制： 300个字符。不填则应用简介默认为空。
- * @method string getType() 获取应用类型， 取值有：<li>AllInOne：一体化；</li><li>Professional：专业版。</li>默认值为 AllInOne。
- * @method void setType(string $Type) 设置应用类型， 取值有：<li>AllInOne：一体化；</li><li>Professional：专业版。</li>默认值为 AllInOne。
- * @method string getMode() 获取此应用的模式，可选值为：
-- fileid：仅FileID模式
-- fileid+path：FileID & Path模式
-留空时默认选择仅FileID模式
- * @method void setMode(string $Mode) 设置此应用的模式，可选值为：
-- fileid：仅FileID模式
-- fileid+path：FileID & Path模式
-留空时默认选择仅FileID模式
- * @method string getStorageRegion() 获取存储地域
- * @method void setStorageRegion(string $StorageRegion) 设置存储地域
- * @method array getTags() 获取此应用需要绑定的tag
- * @method void setTags(array $Tags) 设置此应用需要绑定的tag
+ * @method string getName() 获取<p>应用名称，长度限制：40个字符。</p>
+ * @method void setName(string $Name) 设置<p>应用名称，长度限制：40个字符。</p>
+ * @method string getDescription() 获取<p>应用简介，长度限制： 300个字符。不填则应用简介默认为空。</p>
+ * @method void setDescription(string $Description) 设置<p>应用简介，长度限制： 300个字符。不填则应用简介默认为空。</p>
+ * @method string getType() 获取<p>应用类型， 取值有：<li>AllInOne：一体化；</li><li>Professional：专业版。</li>默认值为 AllInOne。</p>
+ * @method void setType(string $Type) 设置<p>应用类型， 取值有：<li>AllInOne：一体化；</li><li>Professional：专业版。</li>默认值为 AllInOne。</p>
+ * @method string getMode() 获取<p>此应用的模式，可选值为：</p><ul><li>fileid：仅FileID模式</li><li>fileid+path：FileID &amp; Path模式<br>留空时默认选择仅FileID模式</li></ul>
+ * @method void setMode(string $Mode) 设置<p>此应用的模式，可选值为：</p><ul><li>fileid：仅FileID模式</li><li>fileid+path：FileID &amp; Path模式<br>留空时默认选择仅FileID模式</li></ul>
+ * @method string getStorageRegion() 获取<p>Mode是仅fileid时，用于设置默认存储地域，可选。<br>Mode是fileid+path时，用于指定存储地域，必填。</p><p>取值参考：<a href="https://cloud.tencent.com/document/product/266/9760">已支持地域列表</a></p>
+ * @method void setStorageRegion(string $StorageRegion) 设置<p>Mode是仅fileid时，用于设置默认存储地域，可选。<br>Mode是fileid+path时，用于指定存储地域，必填。</p><p>取值参考：<a href="https://cloud.tencent.com/document/product/266/9760">已支持地域列表</a></p>
+ * @method array getTags() 获取<p>此应用需要绑定的tag</p>
+ * @method void setTags(array $Tags) 设置<p>此应用需要绑定的tag</p>
  */
 class CreateSubAppIdRequest extends AbstractModel
 {
     /**
-     * @var string 应用名称，长度限制：40个字符。
+     * @var string <p>应用名称，长度限制：40个字符。</p>
      */
     public $Name;
 
     /**
-     * @var string 应用简介，长度限制： 300个字符。不填则应用简介默认为空。
+     * @var string <p>应用简介，长度限制： 300个字符。不填则应用简介默认为空。</p>
      */
     public $Description;
 
     /**
-     * @var string 应用类型， 取值有：<li>AllInOne：一体化；</li><li>Professional：专业版。</li>默认值为 AllInOne。
+     * @var string <p>应用类型， 取值有：<li>AllInOne：一体化；</li><li>Professional：专业版。</li>默认值为 AllInOne。</p>
      */
     public $Type;
 
     /**
-     * @var string 此应用的模式，可选值为：
-- fileid：仅FileID模式
-- fileid+path：FileID & Path模式
-留空时默认选择仅FileID模式
+     * @var string <p>此应用的模式，可选值为：</p><ul><li>fileid：仅FileID模式</li><li>fileid+path：FileID &amp; Path模式<br>留空时默认选择仅FileID模式</li></ul>
      */
     public $Mode;
 
     /**
-     * @var string 存储地域
+     * @var string <p>Mode是仅fileid时，用于设置默认存储地域，可选。<br>Mode是fileid+path时，用于指定存储地域，必填。</p><p>取值参考：<a href="https://cloud.tencent.com/document/product/266/9760">已支持地域列表</a></p>
      */
     public $StorageRegion;
 
     /**
-     * @var array 此应用需要绑定的tag
+     * @var array <p>此应用需要绑定的tag</p>
      */
     public $Tags;
 
     /**
-     * @param string $Name 应用名称，长度限制：40个字符。
-     * @param string $Description 应用简介，长度限制： 300个字符。不填则应用简介默认为空。
-     * @param string $Type 应用类型， 取值有：<li>AllInOne：一体化；</li><li>Professional：专业版。</li>默认值为 AllInOne。
-     * @param string $Mode 此应用的模式，可选值为：
-- fileid：仅FileID模式
-- fileid+path：FileID & Path模式
-留空时默认选择仅FileID模式
-     * @param string $StorageRegion 存储地域
-     * @param array $Tags 此应用需要绑定的tag
+     * @param string $Name <p>应用名称，长度限制：40个字符。</p>
+     * @param string $Description <p>应用简介，长度限制： 300个字符。不填则应用简介默认为空。</p>
+     * @param string $Type <p>应用类型， 取值有：<li>AllInOne：一体化；</li><li>Professional：专业版。</li>默认值为 AllInOne。</p>
+     * @param string $Mode <p>此应用的模式，可选值为：</p><ul><li>fileid：仅FileID模式</li><li>fileid+path：FileID &amp; Path模式<br>留空时默认选择仅FileID模式</li></ul>
+     * @param string $StorageRegion <p>Mode是仅fileid时，用于设置默认存储地域，可选。<br>Mode是fileid+path时，用于指定存储地域，必填。</p><p>取值参考：<a href="https://cloud.tencent.com/document/product/266/9760">已支持地域列表</a></p>
+     * @param array $Tags <p>此应用需要绑定的tag</p>
      */
     function __construct()
     {

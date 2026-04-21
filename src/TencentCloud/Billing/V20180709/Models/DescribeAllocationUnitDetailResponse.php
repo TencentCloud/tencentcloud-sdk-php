@@ -20,71 +20,71 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAllocationUnitDetail返回参数结构体
  *
- * @method integer getId() 获取分账单元ID
- * @method void setId(integer $Id) 设置分账单元ID
- * @method string getUin() 获取分账单元所属UIN
- * @method void setUin(string $Uin) 设置分账单元所属UIN
- * @method string getName() 获取分账单元名称
- * @method void setName(string $Name) 设置分账单元名称
- * @method integer getParentId() 获取分账单元父节点ID
- * @method void setParentId(integer $ParentId) 设置分账单元父节点ID
- * @method string getSourceName() 获取源组织名称
- * @method void setSourceName(string $SourceName) 设置源组织名称
- * @method string getSourceId() 获取源组织ID
- * @method void setSourceId(string $SourceId) 设置源组织ID
- * @method string getRemark() 获取备注说明
- * @method void setRemark(string $Remark) 设置备注说明
- * @method string getTreeNodeUniqKey() 获取分账单元标识
- * @method void setTreeNodeUniqKey(string $TreeNodeUniqKey) 设置分账单元标识
- * @method integer getRuleId() 获取若分账单元设置归集规则，返回归集规则ID，若无分账规则，则不返回
- * @method void setRuleId(integer $RuleId) 设置若分账单元设置归集规则，返回归集规则ID，若无分账规则，则不返回
+ * @method integer getId() 获取<p>分账单元ID</p>
+ * @method void setId(integer $Id) 设置<p>分账单元ID</p>
+ * @method string getUin() 获取<p>分账单元所属UIN</p>
+ * @method void setUin(string $Uin) 设置<p>分账单元所属UIN</p>
+ * @method string getName() 获取<p>分账单元名称</p>
+ * @method void setName(string $Name) 设置<p>分账单元名称</p>
+ * @method integer getParentId() 获取<p>分账单元父节点ID</p>
+ * @method void setParentId(integer $ParentId) 设置<p>分账单元父节点ID</p>
+ * @method string getSourceName() 获取<p>源组织名称</p>
+ * @method void setSourceName(string $SourceName) 设置<p>源组织名称</p>
+ * @method string getSourceId() 获取<p>源组织ID</p>
+ * @method void setSourceId(string $SourceId) 设置<p>源组织ID</p>
+ * @method string getRemark() 获取<p>备注说明</p>
+ * @method void setRemark(string $Remark) 设置<p>备注说明</p>
+ * @method string getTreeNodeUniqKey() 获取<p>分账单元标识</p>
+ * @method void setTreeNodeUniqKey(string $TreeNodeUniqKey) 设置<p>分账单元标识</p>
+ * @method integer getRuleId() 获取<p>若分账单元设置归集规则，返回归集规则ID，若无分账规则，则不返回</p>
+ * @method void setRuleId(integer $RuleId) 设置<p>若分账单元设置归集规则，返回归集规则ID，若无分账规则，则不返回</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAllocationUnitDetailResponse extends AbstractModel
 {
     /**
-     * @var integer 分账单元ID
+     * @var integer <p>分账单元ID</p>
      */
     public $Id;
 
     /**
-     * @var string 分账单元所属UIN
+     * @var string <p>分账单元所属UIN</p>
      */
     public $Uin;
 
     /**
-     * @var string 分账单元名称
+     * @var string <p>分账单元名称</p>
      */
     public $Name;
 
     /**
-     * @var integer 分账单元父节点ID
+     * @var integer <p>分账单元父节点ID</p>
      */
     public $ParentId;
 
     /**
-     * @var string 源组织名称
+     * @var string <p>源组织名称</p>
      */
     public $SourceName;
 
     /**
-     * @var string 源组织ID
+     * @var string <p>源组织ID</p>
      */
     public $SourceId;
 
     /**
-     * @var string 备注说明
+     * @var string <p>备注说明</p>
      */
     public $Remark;
 
     /**
-     * @var string 分账单元标识
+     * @var string <p>分账单元标识</p>
      */
     public $TreeNodeUniqKey;
 
     /**
-     * @var integer 若分账单元设置归集规则，返回归集规则ID，若无分账规则，则不返回
+     * @var integer <p>若分账单元设置归集规则，返回归集规则ID，若无分账规则，则不返回</p>
      */
     public $RuleId;
 
@@ -94,15 +94,15 @@ class DescribeAllocationUnitDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Id 分账单元ID
-     * @param string $Uin 分账单元所属UIN
-     * @param string $Name 分账单元名称
-     * @param integer $ParentId 分账单元父节点ID
-     * @param string $SourceName 源组织名称
-     * @param string $SourceId 源组织ID
-     * @param string $Remark 备注说明
-     * @param string $TreeNodeUniqKey 分账单元标识
-     * @param integer $RuleId 若分账单元设置归集规则，返回归集规则ID，若无分账规则，则不返回
+     * @param integer $Id <p>分账单元ID</p>
+     * @param string $Uin <p>分账单元所属UIN</p>
+     * @param string $Name <p>分账单元名称</p>
+     * @param integer $ParentId <p>分账单元父节点ID</p>
+     * @param string $SourceName <p>源组织名称</p>
+     * @param string $SourceId <p>源组织ID</p>
+     * @param string $Remark <p>备注说明</p>
+     * @param string $TreeNodeUniqKey <p>分账单元标识</p>
+     * @param integer $RuleId <p>若分账单元设置归集规则，返回归集规则ID，若无分账规则，则不返回</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

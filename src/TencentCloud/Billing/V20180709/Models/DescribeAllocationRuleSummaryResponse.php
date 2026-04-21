@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAllocationRuleSummary返回参数结构体
  *
- * @method array getRuleList() 获取公摊规则表达式
- * @method void setRuleList(array $RuleList) 设置公摊规则表达式
- * @method integer getTotal() 获取规则总数
- * @method void setTotal(integer $Total) 设置规则总数
+ * @method array getRuleList() 获取<p>公摊规则表达式</p>
+ * @method void setRuleList(array $RuleList) 设置<p>公摊规则表达式</p>
+ * @method integer getTotal() 获取<p>规则总数</p>
+ * @method void setTotal(integer $Total) 设置<p>规则总数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAllocationRuleSummaryResponse extends AbstractModel
 {
     /**
-     * @var array 公摊规则表达式
+     * @var array <p>公摊规则表达式</p>
      */
     public $RuleList;
 
     /**
-     * @var integer 规则总数
+     * @var integer <p>规则总数</p>
      */
     public $Total;
 
@@ -45,8 +45,8 @@ class DescribeAllocationRuleSummaryResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $RuleList 公摊规则表达式
-     * @param integer $Total 规则总数
+     * @param array $RuleList <p>公摊规则表达式</p>
+     * @param integer $Total <p>规则总数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

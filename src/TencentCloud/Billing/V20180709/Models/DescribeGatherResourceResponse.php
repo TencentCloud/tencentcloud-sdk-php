@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGatherResource返回参数结构体
  *
- * @method integer getRecordNum() 获取总条数
- * @method void setRecordNum(integer $RecordNum) 设置总条数
- * @method array getGatherResourceSummary() 获取资源归集汇总
+ * @method integer getRecordNum() 获取<p>总条数</p>
+ * @method void setRecordNum(integer $RecordNum) 设置<p>总条数</p>
+ * @method array getGatherResourceSummary() 获取<p>资源归集汇总</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGatherResourceSummary(array $GatherResourceSummary) 设置资源归集汇总
+ * @method void setGatherResourceSummary(array $GatherResourceSummary) 设置<p>资源归集汇总</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLastUpdateTime() 获取数据更新时间
+ * @method string getLastUpdateTime() 获取<p>数据更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLastUpdateTime(string $LastUpdateTime) 设置数据更新时间
+ * @method void setLastUpdateTime(string $LastUpdateTime) 设置<p>数据更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -36,18 +36,18 @@ use TencentCloud\Common\AbstractModel;
 class DescribeGatherResourceResponse extends AbstractModel
 {
     /**
-     * @var integer 总条数
+     * @var integer <p>总条数</p>
      */
     public $RecordNum;
 
     /**
-     * @var array 资源归集汇总
+     * @var array <p>资源归集汇总</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatherResourceSummary;
 
     /**
-     * @var string 数据更新时间
+     * @var string <p>数据更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastUpdateTime;
@@ -58,10 +58,10 @@ class DescribeGatherResourceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $RecordNum 总条数
-     * @param array $GatherResourceSummary 资源归集汇总
+     * @param integer $RecordNum <p>总条数</p>
+     * @param array $GatherResourceSummary <p>资源归集汇总</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LastUpdateTime 数据更新时间
+     * @param string $LastUpdateTime <p>数据更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

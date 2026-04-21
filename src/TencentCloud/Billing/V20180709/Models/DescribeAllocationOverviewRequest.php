@@ -20,154 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAllocationOverview请求参数结构体
  *
- * @method integer getLimit() 获取数量，最大值为1000
- * @method void setLimit(integer $Limit) 设置数量，最大值为1000
- * @method integer getOffset() 获取分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
- * @method void setOffset(integer $Offset) 设置分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
- * @method string getMonth() 获取账单月份，格式为2024-02，不传默认当前月
- * @method void setMonth(string $Month) 设置账单月份，格式为2024-02，不传默认当前月
- * @method string getPeriodType() 获取统计周期，枚举值如下
-month - 月
-day - 日
- * @method void setPeriodType(string $PeriodType) 设置统计周期，枚举值如下
-month - 月
-day - 日
- * @method array getTreeNodeUniqKeys() 获取分账单元唯一标识，用作筛选
- * @method void setTreeNodeUniqKeys(array $TreeNodeUniqKeys) 设置分账单元唯一标识，用作筛选
- * @method string getSort() 获取排序字段，枚举值如下： 
-GatherCashPayAmount - 归集费用(现金)
-GatherVoucherPayAmount- 归集费用(优惠券)
-GatherIncentivePayAmount -  归集费用(赠送金)
-GatherTransferPayAmount - 归集费用(分成金)
-AllocateCashPayAmount - 分摊费用(现金)
-AllocateVoucherPayAmount - 分摊费用(优惠券)
-AllocateIncentivePayAmount - 分摊费用(赠送金)
-AllocateTransferPayAmount - 分摊费用(分成金)
-TotalCashPayAmount - 合计费用(现金)
-TotalVoucherPayAmount - 合计费用(优惠券)
-TotalIncentivePayAmount - 合计费用(赠送金)
-TotalTransferPayAmount - 合计费用(分成金)
-GatherRealCost - 归集费用(折后总额)
-AllocateRealCost - 分摊费用(折后总额)
-RealTotalCost - 合计费用(折后总额)
-Ratio  - 占比(折后总额)
- * @method void setSort(string $Sort) 设置排序字段，枚举值如下： 
-GatherCashPayAmount - 归集费用(现金)
-GatherVoucherPayAmount- 归集费用(优惠券)
-GatherIncentivePayAmount -  归集费用(赠送金)
-GatherTransferPayAmount - 归集费用(分成金)
-AllocateCashPayAmount - 分摊费用(现金)
-AllocateVoucherPayAmount - 分摊费用(优惠券)
-AllocateIncentivePayAmount - 分摊费用(赠送金)
-AllocateTransferPayAmount - 分摊费用(分成金)
-TotalCashPayAmount - 合计费用(现金)
-TotalVoucherPayAmount - 合计费用(优惠券)
-TotalIncentivePayAmount - 合计费用(赠送金)
-TotalTransferPayAmount - 合计费用(分成金)
-GatherRealCost - 归集费用(折后总额)
-AllocateRealCost - 分摊费用(折后总额)
-RealTotalCost - 合计费用(折后总额)
-Ratio  - 占比(折后总额)
- * @method string getSortType() 获取排序类型，枚举值如下：
-asc - 升序
-desc - 降序
- * @method void setSortType(string $SortType) 设置排序类型，枚举值如下：
-asc - 升序
-desc - 降序
- * @method array getBillDates() 获取日期，用作筛选
- * @method void setBillDates(array $BillDates) 设置日期，用作筛选
+ * @method integer getLimit() 获取<p>数量，最大值为1000</p>
+ * @method void setLimit(integer $Limit) 设置<p>数量，最大值为1000</p>
+ * @method integer getOffset() 获取<p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推</p>
+ * @method string getMonth() 获取<p>账单月份，格式为2024-02，不传默认当前月</p>
+ * @method void setMonth(string $Month) 设置<p>账单月份，格式为2024-02，不传默认当前月</p>
+ * @method string getPeriodType() 获取<p>统计周期，枚举值如下<br>month - 月<br>day - 日</p>
+ * @method void setPeriodType(string $PeriodType) 设置<p>统计周期，枚举值如下<br>month - 月<br>day - 日</p>
+ * @method array getTreeNodeUniqKeys() 获取<p>分账单元唯一标识，用作筛选</p>
+ * @method void setTreeNodeUniqKeys(array $TreeNodeUniqKeys) 设置<p>分账单元唯一标识，用作筛选</p>
+ * @method string getSort() 获取<p>排序字段，枚举值如下：<br>GatherCashPayAmount - 归集费用(现金)<br>GatherVoucherPayAmount- 归集费用(优惠券)<br>GatherIncentivePayAmount -  归集费用(赠送金)<br>GatherTransferPayAmount - 归集费用(分成金)<br>AllocateCashPayAmount - 分摊费用(现金)<br>AllocateVoucherPayAmount - 分摊费用(优惠券)<br>AllocateIncentivePayAmount - 分摊费用(赠送金)<br>AllocateTransferPayAmount - 分摊费用(分成金)<br>TotalCashPayAmount - 合计费用(现金)<br>TotalVoucherPayAmount - 合计费用(优惠券)<br>TotalIncentivePayAmount - 合计费用(赠送金)<br>TotalTransferPayAmount - 合计费用(分成金)<br>GatherRealCost - 归集费用(折后总额)<br>AllocateRealCost - 分摊费用(折后总额)<br>RealTotalCost - 合计费用(折后总额)<br>Ratio  - 占比(折后总额)</p>
+ * @method void setSort(string $Sort) 设置<p>排序字段，枚举值如下：<br>GatherCashPayAmount - 归集费用(现金)<br>GatherVoucherPayAmount- 归集费用(优惠券)<br>GatherIncentivePayAmount -  归集费用(赠送金)<br>GatherTransferPayAmount - 归集费用(分成金)<br>AllocateCashPayAmount - 分摊费用(现金)<br>AllocateVoucherPayAmount - 分摊费用(优惠券)<br>AllocateIncentivePayAmount - 分摊费用(赠送金)<br>AllocateTransferPayAmount - 分摊费用(分成金)<br>TotalCashPayAmount - 合计费用(现金)<br>TotalVoucherPayAmount - 合计费用(优惠券)<br>TotalIncentivePayAmount - 合计费用(赠送金)<br>TotalTransferPayAmount - 合计费用(分成金)<br>GatherRealCost - 归集费用(折后总额)<br>AllocateRealCost - 分摊费用(折后总额)<br>RealTotalCost - 合计费用(折后总额)<br>Ratio  - 占比(折后总额)</p>
+ * @method string getSortType() 获取<p>排序类型，枚举值如下：<br>asc - 升序<br>desc - 降序</p>
+ * @method void setSortType(string $SortType) 设置<p>排序类型，枚举值如下：<br>asc - 升序<br>desc - 降序</p>
+ * @method array getBillDates() 获取<p>日期，用作筛选</p>
+ * @method void setBillDates(array $BillDates) 设置<p>日期，用作筛选</p>
  */
 class DescribeAllocationOverviewRequest extends AbstractModel
 {
     /**
-     * @var integer 数量，最大值为1000
+     * @var integer <p>数量，最大值为1000</p>
      */
     public $Limit;
 
     /**
-     * @var integer 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
+     * @var integer <p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推</p>
      */
     public $Offset;
 
     /**
-     * @var string 账单月份，格式为2024-02，不传默认当前月
+     * @var string <p>账单月份，格式为2024-02，不传默认当前月</p>
      */
     public $Month;
 
     /**
-     * @var string 统计周期，枚举值如下
-month - 月
-day - 日
+     * @var string <p>统计周期，枚举值如下<br>month - 月<br>day - 日</p>
      */
     public $PeriodType;
 
     /**
-     * @var array 分账单元唯一标识，用作筛选
+     * @var array <p>分账单元唯一标识，用作筛选</p>
      */
     public $TreeNodeUniqKeys;
 
     /**
-     * @var string 排序字段，枚举值如下： 
-GatherCashPayAmount - 归集费用(现金)
-GatherVoucherPayAmount- 归集费用(优惠券)
-GatherIncentivePayAmount -  归集费用(赠送金)
-GatherTransferPayAmount - 归集费用(分成金)
-AllocateCashPayAmount - 分摊费用(现金)
-AllocateVoucherPayAmount - 分摊费用(优惠券)
-AllocateIncentivePayAmount - 分摊费用(赠送金)
-AllocateTransferPayAmount - 分摊费用(分成金)
-TotalCashPayAmount - 合计费用(现金)
-TotalVoucherPayAmount - 合计费用(优惠券)
-TotalIncentivePayAmount - 合计费用(赠送金)
-TotalTransferPayAmount - 合计费用(分成金)
-GatherRealCost - 归集费用(折后总额)
-AllocateRealCost - 分摊费用(折后总额)
-RealTotalCost - 合计费用(折后总额)
-Ratio  - 占比(折后总额)
+     * @var string <p>排序字段，枚举值如下：<br>GatherCashPayAmount - 归集费用(现金)<br>GatherVoucherPayAmount- 归集费用(优惠券)<br>GatherIncentivePayAmount -  归集费用(赠送金)<br>GatherTransferPayAmount - 归集费用(分成金)<br>AllocateCashPayAmount - 分摊费用(现金)<br>AllocateVoucherPayAmount - 分摊费用(优惠券)<br>AllocateIncentivePayAmount - 分摊费用(赠送金)<br>AllocateTransferPayAmount - 分摊费用(分成金)<br>TotalCashPayAmount - 合计费用(现金)<br>TotalVoucherPayAmount - 合计费用(优惠券)<br>TotalIncentivePayAmount - 合计费用(赠送金)<br>TotalTransferPayAmount - 合计费用(分成金)<br>GatherRealCost - 归集费用(折后总额)<br>AllocateRealCost - 分摊费用(折后总额)<br>RealTotalCost - 合计费用(折后总额)<br>Ratio  - 占比(折后总额)</p>
      */
     public $Sort;
 
     /**
-     * @var string 排序类型，枚举值如下：
-asc - 升序
-desc - 降序
+     * @var string <p>排序类型，枚举值如下：<br>asc - 升序<br>desc - 降序</p>
      */
     public $SortType;
 
     /**
-     * @var array 日期，用作筛选
+     * @var array <p>日期，用作筛选</p>
      */
     public $BillDates;
 
     /**
-     * @param integer $Limit 数量，最大值为1000
-     * @param integer $Offset 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
-     * @param string $Month 账单月份，格式为2024-02，不传默认当前月
-     * @param string $PeriodType 统计周期，枚举值如下
-month - 月
-day - 日
-     * @param array $TreeNodeUniqKeys 分账单元唯一标识，用作筛选
-     * @param string $Sort 排序字段，枚举值如下： 
-GatherCashPayAmount - 归集费用(现金)
-GatherVoucherPayAmount- 归集费用(优惠券)
-GatherIncentivePayAmount -  归集费用(赠送金)
-GatherTransferPayAmount - 归集费用(分成金)
-AllocateCashPayAmount - 分摊费用(现金)
-AllocateVoucherPayAmount - 分摊费用(优惠券)
-AllocateIncentivePayAmount - 分摊费用(赠送金)
-AllocateTransferPayAmount - 分摊费用(分成金)
-TotalCashPayAmount - 合计费用(现金)
-TotalVoucherPayAmount - 合计费用(优惠券)
-TotalIncentivePayAmount - 合计费用(赠送金)
-TotalTransferPayAmount - 合计费用(分成金)
-GatherRealCost - 归集费用(折后总额)
-AllocateRealCost - 分摊费用(折后总额)
-RealTotalCost - 合计费用(折后总额)
-Ratio  - 占比(折后总额)
-     * @param string $SortType 排序类型，枚举值如下：
-asc - 升序
-desc - 降序
-     * @param array $BillDates 日期，用作筛选
+     * @param integer $Limit <p>数量，最大值为1000</p>
+     * @param integer $Offset <p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推</p>
+     * @param string $Month <p>账单月份，格式为2024-02，不传默认当前月</p>
+     * @param string $PeriodType <p>统计周期，枚举值如下<br>month - 月<br>day - 日</p>
+     * @param array $TreeNodeUniqKeys <p>分账单元唯一标识，用作筛选</p>
+     * @param string $Sort <p>排序字段，枚举值如下：<br>GatherCashPayAmount - 归集费用(现金)<br>GatherVoucherPayAmount- 归集费用(优惠券)<br>GatherIncentivePayAmount -  归集费用(赠送金)<br>GatherTransferPayAmount - 归集费用(分成金)<br>AllocateCashPayAmount - 分摊费用(现金)<br>AllocateVoucherPayAmount - 分摊费用(优惠券)<br>AllocateIncentivePayAmount - 分摊费用(赠送金)<br>AllocateTransferPayAmount - 分摊费用(分成金)<br>TotalCashPayAmount - 合计费用(现金)<br>TotalVoucherPayAmount - 合计费用(优惠券)<br>TotalIncentivePayAmount - 合计费用(赠送金)<br>TotalTransferPayAmount - 合计费用(分成金)<br>GatherRealCost - 归集费用(折后总额)<br>AllocateRealCost - 分摊费用(折后总额)<br>RealTotalCost - 合计费用(折后总额)<br>Ratio  - 占比(折后总额)</p>
+     * @param string $SortType <p>排序类型，枚举值如下：<br>asc - 升序<br>desc - 降序</p>
+     * @param array $BillDates <p>日期，用作筛选</p>
      */
     function __construct()
     {

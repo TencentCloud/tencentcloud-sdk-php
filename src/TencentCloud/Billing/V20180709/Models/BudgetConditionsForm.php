@@ -20,165 +20,165 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 预算管理自定义费用范围参数
  *
- * @method array getBusiness() 获取产品
+ * @method array getBusiness() 获取<p>产品</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBusiness(array $Business) 设置产品
+ * @method void setBusiness(array $Business) 设置<p>产品</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPayMode() 获取计费模式
+ * @method array getPayMode() 获取<p>计费模式</p><p>枚举值：</p><ul><li>prePay： 包年包月</li><li>postPay： 按量计费</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPayMode(array $PayMode) 设置计费模式
+ * @method void setPayMode(array $PayMode) 设置<p>计费模式</p><p>枚举值：</p><ul><li>prePay： 包年包月</li><li>postPay： 按量计费</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getProductCodes() 获取子产品
+ * @method array getProductCodes() 获取<p>子产品</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProductCodes(array $ProductCodes) 设置子产品
+ * @method void setProductCodes(array $ProductCodes) 设置<p>子产品</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getComponentCodes() 获取组件编码
+ * @method array getComponentCodes() 获取<p>组件编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setComponentCodes(array $ComponentCodes) 设置组件编码
+ * @method void setComponentCodes(array $ComponentCodes) 设置<p>组件编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getZoneIds() 获取地域
+ * @method array getZoneIds() 获取<p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setZoneIds(array $ZoneIds) 设置地域
+ * @method void setZoneIds(array $ZoneIds) 设置<p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getRegionIds() 获取可用区
+ * @method array getRegionIds() 获取<p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegionIds(array $RegionIds) 设置可用区
+ * @method void setRegionIds(array $RegionIds) 设置<p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getProjectIds() 获取项目
+ * @method array getProjectIds() 获取<p>项目</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectIds(array $ProjectIds) 设置项目
+ * @method void setProjectIds(array $ProjectIds) 设置<p>项目</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getActionTypes() 获取交易类型
+ * @method array getActionTypes() 获取<p>交易类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setActionTypes(array $ActionTypes) 设置交易类型
+ * @method void setActionTypes(array $ActionTypes) 设置<p>交易类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getConsumptionTypes() 获取消耗类型
+ * @method array getConsumptionTypes() 获取<p>消耗类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConsumptionTypes(array $ConsumptionTypes) 设置消耗类型
+ * @method void setConsumptionTypes(array $ConsumptionTypes) 设置<p>消耗类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTags() 获取标签
+ * @method array getTags() 获取<p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTags(array $Tags) 设置标签
+ * @method void setTags(array $Tags) 设置<p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPayerUins() 获取 末级分账单元
+ * @method array getPayerUins() 获取<p>末级分账单元</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPayerUins(array $PayerUins) 设置 末级分账单元
+ * @method void setPayerUins(array $PayerUins) 设置<p>末级分账单元</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getOwnerUins() 获取主用户Uin
+ * @method array getOwnerUins() 获取<p>主用户Uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOwnerUins(array $OwnerUins) 设置主用户Uin
+ * @method void setOwnerUins(array $OwnerUins) 设置<p>主用户Uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTreeNodeUniqKeys() 获取 末级分账单元唯一键
+ * @method array getTreeNodeUniqKeys() 获取<p>末级分账单元唯一键</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTreeNodeUniqKeys(array $TreeNodeUniqKeys) 设置 末级分账单元唯一键
+ * @method void setTreeNodeUniqKeys(array $TreeNodeUniqKeys) 设置<p>末级分账单元唯一键</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class BudgetConditionsForm extends AbstractModel
 {
     /**
-     * @var array 产品
+     * @var array <p>产品</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Business;
 
     /**
-     * @var array 计费模式
+     * @var array <p>计费模式</p><p>枚举值：</p><ul><li>prePay： 包年包月</li><li>postPay： 按量计费</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayMode;
 
     /**
-     * @var array 子产品
+     * @var array <p>子产品</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductCodes;
 
     /**
-     * @var array 组件编码
+     * @var array <p>组件编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComponentCodes;
 
     /**
-     * @var array 地域
+     * @var array <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneIds;
 
     /**
-     * @var array 可用区
+     * @var array <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionIds;
 
     /**
-     * @var array 项目
+     * @var array <p>项目</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectIds;
 
     /**
-     * @var array 交易类型
+     * @var array <p>交易类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionTypes;
 
     /**
-     * @var array 消耗类型
+     * @var array <p>消耗类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConsumptionTypes;
 
     /**
-     * @var array 标签
+     * @var array <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
-     * @var array  末级分账单元
+     * @var array <p>末级分账单元</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayerUins;
 
     /**
-     * @var array 主用户Uin
+     * @var array <p>主用户Uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OwnerUins;
 
     /**
-     * @var array  末级分账单元唯一键
+     * @var array <p>末级分账单元唯一键</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TreeNodeUniqKeys;
 
     /**
-     * @param array $Business 产品
+     * @param array $Business <p>产品</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $PayMode 计费模式
+     * @param array $PayMode <p>计费模式</p><p>枚举值：</p><ul><li>prePay： 包年包月</li><li>postPay： 按量计费</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ProductCodes 子产品
+     * @param array $ProductCodes <p>子产品</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ComponentCodes 组件编码
+     * @param array $ComponentCodes <p>组件编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ZoneIds 地域
+     * @param array $ZoneIds <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $RegionIds 可用区
+     * @param array $RegionIds <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ProjectIds 项目
+     * @param array $ProjectIds <p>项目</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ActionTypes 交易类型
+     * @param array $ActionTypes <p>交易类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ConsumptionTypes 消耗类型
+     * @param array $ConsumptionTypes <p>消耗类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Tags 标签
+     * @param array $Tags <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $PayerUins  末级分账单元
+     * @param array $PayerUins <p>末级分账单元</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $OwnerUins 主用户Uin
+     * @param array $OwnerUins <p>主用户Uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TreeNodeUniqKeys  末级分账单元唯一键
+     * @param array $TreeNodeUniqKeys <p>末级分账单元唯一键</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

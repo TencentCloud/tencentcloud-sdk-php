@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAllocationUnit返回参数结构体
  *
- * @method integer getId() 获取新增分账单元ID
- * @method void setId(integer $Id) 设置新增分账单元ID
- * @method string getTreeNodeUniqKey() 获取分账单元唯一标识
- * @method void setTreeNodeUniqKey(string $TreeNodeUniqKey) 设置分账单元唯一标识
+ * @method integer getId() 获取<p>新增分账单元ID</p>
+ * @method void setId(integer $Id) 设置<p>新增分账单元ID</p>
+ * @method string getTreeNodeUniqKey() 获取<p>分账单元唯一标识</p>
+ * @method void setTreeNodeUniqKey(string $TreeNodeUniqKey) 设置<p>分账单元唯一标识</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateAllocationUnitResponse extends AbstractModel
 {
     /**
-     * @var integer 新增分账单元ID
+     * @var integer <p>新增分账单元ID</p>
      */
     public $Id;
 
     /**
-     * @var string 分账单元唯一标识
+     * @var string <p>分账单元唯一标识</p>
      */
     public $TreeNodeUniqKey;
 
@@ -45,8 +45,8 @@ class CreateAllocationUnitResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Id 新增分账单元ID
-     * @param string $TreeNodeUniqKey 分账单元唯一标识
+     * @param integer $Id <p>新增分账单元ID</p>
+     * @param string $TreeNodeUniqKey <p>分账单元唯一标识</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

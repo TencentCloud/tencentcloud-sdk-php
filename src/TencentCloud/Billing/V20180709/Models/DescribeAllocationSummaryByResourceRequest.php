@@ -20,246 +20,178 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAllocationSummaryByResource请求参数结构体
  *
- * @method integer getLimit() 获取数量，最大值为1000
-
- * @method void setLimit(integer $Limit) 设置数量，最大值为1000
-
- * @method integer getOffset() 获取分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
- * @method void setOffset(integer $Offset) 设置分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
- * @method string getMonth() 获取账单月份，格式为2024-02，不传默认当前月
-
- * @method void setMonth(string $Month) 设置账单月份，格式为2024-02，不传默认当前月
-
- * @method string getPeriodType() 获取统计周期，枚举值如下
-month - 月
-day - 日
- * @method void setPeriodType(string $PeriodType) 设置统计周期，枚举值如下
-month - 月
-day - 日
- * @method array getTreeNodeUniqKeys() 获取分账单元唯一标识，用作筛选
- * @method void setTreeNodeUniqKeys(array $TreeNodeUniqKeys) 设置分账单元唯一标识，用作筛选
- * @method string getSort() 获取排序字段，枚举值如下：
-RiTimeSpan - 预留实例抵扣时长
-ExtendPayAmount1 - 预留实例抵扣组件原价
-RealCost - 折后总价
-CashPayAmount - 现金金额
-VoucherPayAmount - 代金券金额
-IncentivePayAmount - 赠送金金额
-TransferPayAmount -分成金金额
-Cost - 组件原价
- * @method void setSort(string $Sort) 设置排序字段，枚举值如下：
-RiTimeSpan - 预留实例抵扣时长
-ExtendPayAmount1 - 预留实例抵扣组件原价
-RealCost - 折后总价
-CashPayAmount - 现金金额
-VoucherPayAmount - 代金券金额
-IncentivePayAmount - 赠送金金额
-TransferPayAmount -分成金金额
-Cost - 组件原价
- * @method string getSortType() 获取排序类型，枚举值如下：
-asc - 升序
-desc - 降序
- * @method void setSortType(string $SortType) 设置排序类型，枚举值如下：
-asc - 升序
-desc - 降序
- * @method array getBillDates() 获取日期，用作筛选
- * @method void setBillDates(array $BillDates) 设置日期，用作筛选
- * @method array getBusinessCodes() 获取产品编码，用作筛选
- * @method void setBusinessCodes(array $BusinessCodes) 设置产品编码，用作筛选
- * @method array getOwnerUins() 获取使用者UIN，用作筛选
- * @method void setOwnerUins(array $OwnerUins) 设置使用者UIN，用作筛选
- * @method array getOperateUins() 获取操作者UIN，用作筛选
- * @method void setOperateUins(array $OperateUins) 设置操作者UIN，用作筛选
- * @method array getPayModes() 获取计费模式编码，用作筛选
- * @method void setPayModes(array $PayModes) 设置计费模式编码，用作筛选
- * @method array getActionTypes() 获取交易类型编码，用作筛选
- * @method void setActionTypes(array $ActionTypes) 设置交易类型编码，用作筛选
- * @method array getProductCodes() 获取子产品编码，用作筛选
- * @method void setProductCodes(array $ProductCodes) 设置子产品编码，用作筛选
- * @method array getRegionIds() 获取地域ID，用作筛选
- * @method void setRegionIds(array $RegionIds) 设置地域ID，用作筛选
- * @method array getZoneIds() 获取可用区ID，用作筛选
- * @method void setZoneIds(array $ZoneIds) 设置可用区ID，用作筛选
- * @method array getInstanceTypes() 获取实例类型编码，用作筛选
- * @method void setInstanceTypes(array $InstanceTypes) 设置实例类型编码，用作筛选
- * @method array getTag() 获取标签，用作筛选
- * @method void setTag(array $Tag) 设置标签，用作筛选
- * @method string getSearchKey() 获取模糊搜索：支持标签、资源id、资源别名
- * @method void setSearchKey(string $SearchKey) 设置模糊搜索：支持标签、资源id、资源别名
- * @method array getProjectIds() 获取项目ID，用作筛选
- * @method void setProjectIds(array $ProjectIds) 设置项目ID，用作筛选
- * @method array getAllocationType() 获取费用归集类型，枚举值如下：
-0 - 分摊 
-1 - 归集 
--1 -  未分配
- * @method void setAllocationType(array $AllocationType) 设置费用归集类型，枚举值如下：
-0 - 分摊 
-1 - 归集 
--1 -  未分配
+ * @method integer getLimit() 获取<p>数量，最大值为1000</p>
+ * @method void setLimit(integer $Limit) 设置<p>数量，最大值为1000</p>
+ * @method integer getOffset() 获取<p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推</p>
+ * @method string getMonth() 获取<p>账单月份，格式为2024-02，不传默认当前月</p>
+ * @method void setMonth(string $Month) 设置<p>账单月份，格式为2024-02，不传默认当前月</p>
+ * @method string getPeriodType() 获取<p>统计周期，枚举值如下<br>month - 月<br>day - 日</p>
+ * @method void setPeriodType(string $PeriodType) 设置<p>统计周期，枚举值如下<br>month - 月<br>day - 日</p>
+ * @method array getTreeNodeUniqKeys() 获取<p>分账单元唯一标识，用作筛选</p>
+ * @method void setTreeNodeUniqKeys(array $TreeNodeUniqKeys) 设置<p>分账单元唯一标识，用作筛选</p>
+ * @method string getSort() 获取<p>排序字段，枚举值如下：<br>RiTimeSpan - 预留实例抵扣时长<br>ExtendPayAmount1 - 预留实例抵扣组件原价<br>RealCost - 折后总价<br>CashPayAmount - 现金金额<br>VoucherPayAmount - 代金券金额<br>IncentivePayAmount - 赠送金金额<br>TransferPayAmount -分成金金额<br>Cost - 组件原价</p>
+ * @method void setSort(string $Sort) 设置<p>排序字段，枚举值如下：<br>RiTimeSpan - 预留实例抵扣时长<br>ExtendPayAmount1 - 预留实例抵扣组件原价<br>RealCost - 折后总价<br>CashPayAmount - 现金金额<br>VoucherPayAmount - 代金券金额<br>IncentivePayAmount - 赠送金金额<br>TransferPayAmount -分成金金额<br>Cost - 组件原价</p>
+ * @method string getSortType() 获取<p>排序类型，枚举值如下：<br>asc - 升序<br>desc - 降序</p>
+ * @method void setSortType(string $SortType) 设置<p>排序类型，枚举值如下：<br>asc - 升序<br>desc - 降序</p>
+ * @method array getBillDates() 获取<p>日期，用作筛选</p>
+ * @method void setBillDates(array $BillDates) 设置<p>日期，用作筛选</p>
+ * @method array getBusinessCodes() 获取<p>产品编码，用作筛选</p>
+ * @method void setBusinessCodes(array $BusinessCodes) 设置<p>产品编码，用作筛选</p>
+ * @method array getOwnerUins() 获取<p>使用者UIN，用作筛选</p>
+ * @method void setOwnerUins(array $OwnerUins) 设置<p>使用者UIN，用作筛选</p>
+ * @method array getOperateUins() 获取<p>操作者UIN，用作筛选</p>
+ * @method void setOperateUins(array $OperateUins) 设置<p>操作者UIN，用作筛选</p>
+ * @method array getPayModes() 获取<p>计费模式编码，用作筛选</p>
+ * @method void setPayModes(array $PayModes) 设置<p>计费模式编码，用作筛选</p>
+ * @method array getActionTypes() 获取<p>交易类型编码，用作筛选</p>
+ * @method void setActionTypes(array $ActionTypes) 设置<p>交易类型编码，用作筛选</p>
+ * @method array getProductCodes() 获取<p>子产品编码，用作筛选</p>
+ * @method void setProductCodes(array $ProductCodes) 设置<p>子产品编码，用作筛选</p>
+ * @method array getRegionIds() 获取<p>地域ID，用作筛选</p>
+ * @method void setRegionIds(array $RegionIds) 设置<p>地域ID，用作筛选</p>
+ * @method array getZoneIds() 获取<p>可用区ID，用作筛选</p>
+ * @method void setZoneIds(array $ZoneIds) 设置<p>可用区ID，用作筛选</p>
+ * @method array getInstanceTypes() 获取<p>实例类型编码，用作筛选</p>
+ * @method void setInstanceTypes(array $InstanceTypes) 设置<p>实例类型编码，用作筛选</p>
+ * @method array getTag() 获取<p>标签，用作筛选</p>
+ * @method void setTag(array $Tag) 设置<p>标签，用作筛选</p>
+ * @method string getSearchKey() 获取<p>模糊搜索：支持标签、资源id、资源别名</p>
+ * @method void setSearchKey(string $SearchKey) 设置<p>模糊搜索：支持标签、资源id、资源别名</p>
+ * @method array getProjectIds() 获取<p>项目ID，用作筛选</p>
+ * @method void setProjectIds(array $ProjectIds) 设置<p>项目ID，用作筛选</p>
+ * @method array getAllocationType() 获取<p>费用归集类型，枚举值如下：<br>0 - 分摊<br>1 - 归集<br>-1 -  未分配</p>
+ * @method void setAllocationType(array $AllocationType) 设置<p>费用归集类型，枚举值如下：<br>0 - 分摊<br>1 - 归集<br>-1 -  未分配</p>
  */
 class DescribeAllocationSummaryByResourceRequest extends AbstractModel
 {
     /**
-     * @var integer 数量，最大值为1000
-
+     * @var integer <p>数量，最大值为1000</p>
      */
     public $Limit;
 
     /**
-     * @var integer 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
+     * @var integer <p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推</p>
      */
     public $Offset;
 
     /**
-     * @var string 账单月份，格式为2024-02，不传默认当前月
-
+     * @var string <p>账单月份，格式为2024-02，不传默认当前月</p>
      */
     public $Month;
 
     /**
-     * @var string 统计周期，枚举值如下
-month - 月
-day - 日
+     * @var string <p>统计周期，枚举值如下<br>month - 月<br>day - 日</p>
      */
     public $PeriodType;
 
     /**
-     * @var array 分账单元唯一标识，用作筛选
+     * @var array <p>分账单元唯一标识，用作筛选</p>
      */
     public $TreeNodeUniqKeys;
 
     /**
-     * @var string 排序字段，枚举值如下：
-RiTimeSpan - 预留实例抵扣时长
-ExtendPayAmount1 - 预留实例抵扣组件原价
-RealCost - 折后总价
-CashPayAmount - 现金金额
-VoucherPayAmount - 代金券金额
-IncentivePayAmount - 赠送金金额
-TransferPayAmount -分成金金额
-Cost - 组件原价
+     * @var string <p>排序字段，枚举值如下：<br>RiTimeSpan - 预留实例抵扣时长<br>ExtendPayAmount1 - 预留实例抵扣组件原价<br>RealCost - 折后总价<br>CashPayAmount - 现金金额<br>VoucherPayAmount - 代金券金额<br>IncentivePayAmount - 赠送金金额<br>TransferPayAmount -分成金金额<br>Cost - 组件原价</p>
      */
     public $Sort;
 
     /**
-     * @var string 排序类型，枚举值如下：
-asc - 升序
-desc - 降序
+     * @var string <p>排序类型，枚举值如下：<br>asc - 升序<br>desc - 降序</p>
      */
     public $SortType;
 
     /**
-     * @var array 日期，用作筛选
+     * @var array <p>日期，用作筛选</p>
      */
     public $BillDates;
 
     /**
-     * @var array 产品编码，用作筛选
+     * @var array <p>产品编码，用作筛选</p>
      */
     public $BusinessCodes;
 
     /**
-     * @var array 使用者UIN，用作筛选
+     * @var array <p>使用者UIN，用作筛选</p>
      */
     public $OwnerUins;
 
     /**
-     * @var array 操作者UIN，用作筛选
+     * @var array <p>操作者UIN，用作筛选</p>
      */
     public $OperateUins;
 
     /**
-     * @var array 计费模式编码，用作筛选
+     * @var array <p>计费模式编码，用作筛选</p>
      */
     public $PayModes;
 
     /**
-     * @var array 交易类型编码，用作筛选
+     * @var array <p>交易类型编码，用作筛选</p>
      */
     public $ActionTypes;
 
     /**
-     * @var array 子产品编码，用作筛选
+     * @var array <p>子产品编码，用作筛选</p>
      */
     public $ProductCodes;
 
     /**
-     * @var array 地域ID，用作筛选
+     * @var array <p>地域ID，用作筛选</p>
      */
     public $RegionIds;
 
     /**
-     * @var array 可用区ID，用作筛选
+     * @var array <p>可用区ID，用作筛选</p>
      */
     public $ZoneIds;
 
     /**
-     * @var array 实例类型编码，用作筛选
+     * @var array <p>实例类型编码，用作筛选</p>
      */
     public $InstanceTypes;
 
     /**
-     * @var array 标签，用作筛选
+     * @var array <p>标签，用作筛选</p>
      */
     public $Tag;
 
     /**
-     * @var string 模糊搜索：支持标签、资源id、资源别名
+     * @var string <p>模糊搜索：支持标签、资源id、资源别名</p>
      */
     public $SearchKey;
 
     /**
-     * @var array 项目ID，用作筛选
+     * @var array <p>项目ID，用作筛选</p>
      */
     public $ProjectIds;
 
     /**
-     * @var array 费用归集类型，枚举值如下：
-0 - 分摊 
-1 - 归集 
--1 -  未分配
+     * @var array <p>费用归集类型，枚举值如下：<br>0 - 分摊<br>1 - 归集<br>-1 -  未分配</p>
      */
     public $AllocationType;
 
     /**
-     * @param integer $Limit 数量，最大值为1000
-
-     * @param integer $Offset 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
-     * @param string $Month 账单月份，格式为2024-02，不传默认当前月
-
-     * @param string $PeriodType 统计周期，枚举值如下
-month - 月
-day - 日
-     * @param array $TreeNodeUniqKeys 分账单元唯一标识，用作筛选
-     * @param string $Sort 排序字段，枚举值如下：
-RiTimeSpan - 预留实例抵扣时长
-ExtendPayAmount1 - 预留实例抵扣组件原价
-RealCost - 折后总价
-CashPayAmount - 现金金额
-VoucherPayAmount - 代金券金额
-IncentivePayAmount - 赠送金金额
-TransferPayAmount -分成金金额
-Cost - 组件原价
-     * @param string $SortType 排序类型，枚举值如下：
-asc - 升序
-desc - 降序
-     * @param array $BillDates 日期，用作筛选
-     * @param array $BusinessCodes 产品编码，用作筛选
-     * @param array $OwnerUins 使用者UIN，用作筛选
-     * @param array $OperateUins 操作者UIN，用作筛选
-     * @param array $PayModes 计费模式编码，用作筛选
-     * @param array $ActionTypes 交易类型编码，用作筛选
-     * @param array $ProductCodes 子产品编码，用作筛选
-     * @param array $RegionIds 地域ID，用作筛选
-     * @param array $ZoneIds 可用区ID，用作筛选
-     * @param array $InstanceTypes 实例类型编码，用作筛选
-     * @param array $Tag 标签，用作筛选
-     * @param string $SearchKey 模糊搜索：支持标签、资源id、资源别名
-     * @param array $ProjectIds 项目ID，用作筛选
-     * @param array $AllocationType 费用归集类型，枚举值如下：
-0 - 分摊 
-1 - 归集 
--1 -  未分配
+     * @param integer $Limit <p>数量，最大值为1000</p>
+     * @param integer $Offset <p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推</p>
+     * @param string $Month <p>账单月份，格式为2024-02，不传默认当前月</p>
+     * @param string $PeriodType <p>统计周期，枚举值如下<br>month - 月<br>day - 日</p>
+     * @param array $TreeNodeUniqKeys <p>分账单元唯一标识，用作筛选</p>
+     * @param string $Sort <p>排序字段，枚举值如下：<br>RiTimeSpan - 预留实例抵扣时长<br>ExtendPayAmount1 - 预留实例抵扣组件原价<br>RealCost - 折后总价<br>CashPayAmount - 现金金额<br>VoucherPayAmount - 代金券金额<br>IncentivePayAmount - 赠送金金额<br>TransferPayAmount -分成金金额<br>Cost - 组件原价</p>
+     * @param string $SortType <p>排序类型，枚举值如下：<br>asc - 升序<br>desc - 降序</p>
+     * @param array $BillDates <p>日期，用作筛选</p>
+     * @param array $BusinessCodes <p>产品编码，用作筛选</p>
+     * @param array $OwnerUins <p>使用者UIN，用作筛选</p>
+     * @param array $OperateUins <p>操作者UIN，用作筛选</p>
+     * @param array $PayModes <p>计费模式编码，用作筛选</p>
+     * @param array $ActionTypes <p>交易类型编码，用作筛选</p>
+     * @param array $ProductCodes <p>子产品编码，用作筛选</p>
+     * @param array $RegionIds <p>地域ID，用作筛选</p>
+     * @param array $ZoneIds <p>可用区ID，用作筛选</p>
+     * @param array $InstanceTypes <p>实例类型编码，用作筛选</p>
+     * @param array $Tag <p>标签，用作筛选</p>
+     * @param string $SearchKey <p>模糊搜索：支持标签、资源id、资源别名</p>
+     * @param array $ProjectIds <p>项目ID，用作筛选</p>
+     * @param array $AllocationType <p>费用归集类型，枚举值如下：<br>0 - 分摊<br>1 - 归集<br>-1 -  未分配</p>
      */
     function __construct()
     {

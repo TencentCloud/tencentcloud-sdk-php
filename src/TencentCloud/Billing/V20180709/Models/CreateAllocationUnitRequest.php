@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAllocationUnit请求参数结构体
  *
- * @method integer getParentId() 获取新增分账单元父节点ID
- * @method void setParentId(integer $ParentId) 设置新增分账单元父节点ID
- * @method string getName() 获取新增分账单元名称
- * @method void setName(string $Name) 设置新增分账单元名称
- * @method string getMonth() 获取月份，不传默认当前月
- * @method void setMonth(string $Month) 设置月份，不传默认当前月
+ * @method integer getParentId() 获取<p>新增分账单元父节点ID</p>
+ * @method void setParentId(integer $ParentId) 设置<p>新增分账单元父节点ID</p>
+ * @method string getName() 获取<p>新增分账单元名称</p>
+ * @method void setName(string $Name) 设置<p>新增分账单元名称</p>
+ * @method string getMonth() 获取<p>月份，不传默认当前月</p>
+ * @method void setMonth(string $Month) 设置<p>月份，不传默认当前月</p>
  */
 class CreateAllocationUnitRequest extends AbstractModel
 {
     /**
-     * @var integer 新增分账单元父节点ID
+     * @var integer <p>新增分账单元父节点ID</p>
      */
     public $ParentId;
 
     /**
-     * @var string 新增分账单元名称
+     * @var string <p>新增分账单元名称</p>
      */
     public $Name;
 
     /**
-     * @var string 月份，不传默认当前月
+     * @var string <p>月份，不传默认当前月</p>
      */
     public $Month;
 
     /**
-     * @param integer $ParentId 新增分账单元父节点ID
-     * @param string $Name 新增分账单元名称
-     * @param string $Month 月份，不传默认当前月
+     * @param integer $ParentId <p>新增分账单元父节点ID</p>
+     * @param string $Name <p>新增分账单元名称</p>
+     * @param string $Month <p>月份，不传默认当前月</p>
      */
     function __construct()
     {

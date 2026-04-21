@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAigcElement请求参数结构体
  *
- * @method string getElementId() 获取
- * @method void setElementId(string $ElementId) 设置
+ * @method string getElementId() 获取<p>主体Id</p>
+ * @method void setElementId(string $ElementId) 设置<p>主体Id</p>
  */
 class DescribeAigcElementRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>主体Id</p>
      */
     public $ElementId;
 
     /**
-     * @param string $ElementId 
+     * @param string $ElementId <p>主体Id</p>
      */
     function __construct()
     {

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAllocationMonthOverview返回参数结构体
  *
- * @method array getDetail() 获取分账账单月概览详情
- * @method void setDetail(array $Detail) 设置分账账单月概览详情
- * @method AllocationOverviewTotal getTotal() 获取分账账单概览金额汇总
- * @method void setTotal(AllocationOverviewTotal $Total) 设置分账账单概览金额汇总
+ * @method array getDetail() 获取<p>分账账单月概览详情</p>
+ * @method void setDetail(array $Detail) 设置<p>分账账单月概览详情</p>
+ * @method AllocationOverviewTotal getTotal() 获取<p>分账账单概览金额汇总</p>
+ * @method void setTotal(AllocationOverviewTotal $Total) 设置<p>分账账单概览金额汇总</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAllocationMonthOverviewResponse extends AbstractModel
 {
     /**
-     * @var array 分账账单月概览详情
+     * @var array <p>分账账单月概览详情</p>
      */
     public $Detail;
 
     /**
-     * @var AllocationOverviewTotal 分账账单概览金额汇总
+     * @var AllocationOverviewTotal <p>分账账单概览金额汇总</p>
      */
     public $Total;
 
@@ -45,8 +45,8 @@ class DescribeAllocationMonthOverviewResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Detail 分账账单月概览详情
-     * @param AllocationOverviewTotal $Total 分账账单概览金额汇总
+     * @param array $Detail <p>分账账单月概览详情</p>
+     * @param AllocationOverviewTotal $Total <p>分账账单概览金额汇总</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

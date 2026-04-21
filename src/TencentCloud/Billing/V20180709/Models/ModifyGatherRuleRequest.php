@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyGatherRule请求参数结构体
  *
- * @method integer getId() 获取所编辑归集规则ID
- * @method void setId(integer $Id) 设置所编辑归集规则ID
- * @method AllocationRuleExpression getRuleDetail() 获取所编辑分账规则详情
- * @method void setRuleDetail(AllocationRuleExpression $RuleDetail) 设置所编辑分账规则详情
- * @method string getMonth() 获取月份，不传默认当前月
- * @method void setMonth(string $Month) 设置月份，不传默认当前月
+ * @method integer getId() 获取<p>所编辑归集规则ID</p>
+ * @method void setId(integer $Id) 设置<p>所编辑归集规则ID</p>
+ * @method AllocationRuleExpression getRuleDetail() 获取<p>所编辑分账规则详情</p>
+ * @method void setRuleDetail(AllocationRuleExpression $RuleDetail) 设置<p>所编辑分账规则详情</p>
+ * @method string getMonth() 获取<p>月份，不传默认当前月</p>
+ * @method void setMonth(string $Month) 设置<p>月份，不传默认当前月</p>
  */
 class ModifyGatherRuleRequest extends AbstractModel
 {
     /**
-     * @var integer 所编辑归集规则ID
+     * @var integer <p>所编辑归集规则ID</p>
      */
     public $Id;
 
     /**
-     * @var AllocationRuleExpression 所编辑分账规则详情
+     * @var AllocationRuleExpression <p>所编辑分账规则详情</p>
      */
     public $RuleDetail;
 
     /**
-     * @var string 月份，不传默认当前月
+     * @var string <p>月份，不传默认当前月</p>
      */
     public $Month;
 
     /**
-     * @param integer $Id 所编辑归集规则ID
-     * @param AllocationRuleExpression $RuleDetail 所编辑分账规则详情
-     * @param string $Month 月份，不传默认当前月
+     * @param integer $Id <p>所编辑归集规则ID</p>
+     * @param AllocationRuleExpression $RuleDetail <p>所编辑分账规则详情</p>
+     * @param string $Month <p>月份，不传默认当前月</p>
      */
     function __construct()
     {

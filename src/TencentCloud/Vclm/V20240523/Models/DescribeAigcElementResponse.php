@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedAt(string $CreatedAt) 设置<p>创建时间</p>
  * @method string getUpdatedAt() 获取<p>更新时间</p>
  * @method void setUpdatedAt(string $UpdatedAt) 设置<p>更新时间</p>
+ * @method string getElementVoiceId() 获取<p>音色Id</p>
+ * @method void setElementVoiceId(string $ElementVoiceId) 设置<p>音色Id</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -110,6 +112,11 @@ class DescribeAigcElementResponse extends AbstractModel
     public $UpdatedAt;
 
     /**
+     * @var string <p>音色Id</p>
+     */
+    public $ElementVoiceId;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -127,6 +134,7 @@ class DescribeAigcElementResponse extends AbstractModel
      * @param array $ProviderDetails <p>厂商聚合字段</p>
      * @param string $CreatedAt <p>创建时间</p>
      * @param string $UpdatedAt <p>更新时间</p>
+     * @param string $ElementVoiceId <p>音色Id</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -199,6 +207,10 @@ class DescribeAigcElementResponse extends AbstractModel
 
         if (array_key_exists("UpdatedAt",$param) and $param["UpdatedAt"] !== null) {
             $this->UpdatedAt = $param["UpdatedAt"];
+        }
+
+        if (array_key_exists("ElementVoiceId",$param) and $param["ElementVoiceId"] !== null) {
+            $this->ElementVoiceId = $param["ElementVoiceId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

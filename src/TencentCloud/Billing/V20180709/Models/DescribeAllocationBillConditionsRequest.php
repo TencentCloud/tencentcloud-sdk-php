@@ -20,154 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAllocationBillConditions请求参数结构体
  *
- * @method string getMonth() 获取账单月份，格式为2024-02，不传默认当前月
- * @method void setMonth(string $Month) 设置账单月份，格式为2024-02，不传默认当前月
- * @method array getTreeNodeUniqKeys() 获取分账单元唯一标识，用作筛选
- * @method void setTreeNodeUniqKeys(array $TreeNodeUniqKeys) 设置分账单元唯一标识，用作筛选
- * @method array getBillDates() 获取日期
- * @method void setBillDates(array $BillDates) 设置日期
- * @method array getBusinessCodes() 获取产品编码
- * @method void setBusinessCodes(array $BusinessCodes) 设置产品编码
- * @method array getOwnerUins() 获取使用者UIN
- * @method void setOwnerUins(array $OwnerUins) 设置使用者UIN
- * @method array getOperateUins() 获取操作者UIN
- * @method void setOperateUins(array $OperateUins) 设置操作者UIN
- * @method array getPayModes() 获取计费模式编码
- * @method void setPayModes(array $PayModes) 设置计费模式编码
- * @method array getActionTypes() 获取交易类型编码
- * @method void setActionTypes(array $ActionTypes) 设置交易类型编码
- * @method array getProductCodes() 获取子产品编码
- * @method void setProductCodes(array $ProductCodes) 设置子产品编码
- * @method array getRegionIds() 获取地域ID
- * @method void setRegionIds(array $RegionIds) 设置地域ID
- * @method array getZoneIds() 获取可用区ID
- * @method void setZoneIds(array $ZoneIds) 设置可用区ID
- * @method array getInstanceTypes() 获取实例类型编码
- * @method void setInstanceTypes(array $InstanceTypes) 设置实例类型编码
- * @method array getTag() 获取标签
- * @method void setTag(array $Tag) 设置标签
- * @method array getComponentCodes() 获取组件类型编码
- * @method void setComponentCodes(array $ComponentCodes) 设置组件类型编码
- * @method array getItemCodes() 获取组件名称编码
- * @method void setItemCodes(array $ItemCodes) 设置组件名称编码
- * @method string getSearchKey() 获取模糊搜索条件
- * @method void setSearchKey(string $SearchKey) 设置模糊搜索条件
- * @method array getProjectIds() 获取项目id
- * @method void setProjectIds(array $ProjectIds) 设置项目id
- * @method array getAllocationType() 获取费用归集类型
- * @method void setAllocationType(array $AllocationType) 设置费用归集类型
+ * @method string getMonth() 获取<p>账单月份，格式为2024-02，不传默认当前月</p>
+ * @method void setMonth(string $Month) 设置<p>账单月份，格式为2024-02，不传默认当前月</p>
+ * @method array getTreeNodeUniqKeys() 获取<p>分账单元唯一标识，用作筛选</p>
+ * @method void setTreeNodeUniqKeys(array $TreeNodeUniqKeys) 设置<p>分账单元唯一标识，用作筛选</p>
+ * @method array getBillDates() 获取<p>日期</p>
+ * @method void setBillDates(array $BillDates) 设置<p>日期</p>
+ * @method array getBusinessCodes() 获取<p>产品编码</p>
+ * @method void setBusinessCodes(array $BusinessCodes) 设置<p>产品编码</p>
+ * @method array getOwnerUins() 获取<p>使用者UIN</p>
+ * @method void setOwnerUins(array $OwnerUins) 设置<p>使用者UIN</p>
+ * @method array getOperateUins() 获取<p>操作者UIN</p>
+ * @method void setOperateUins(array $OperateUins) 设置<p>操作者UIN</p>
+ * @method array getPayModes() 获取<p>计费模式编码</p>
+ * @method void setPayModes(array $PayModes) 设置<p>计费模式编码</p>
+ * @method array getActionTypes() 获取<p>交易类型编码</p>
+ * @method void setActionTypes(array $ActionTypes) 设置<p>交易类型编码</p>
+ * @method array getProductCodes() 获取<p>子产品编码</p>
+ * @method void setProductCodes(array $ProductCodes) 设置<p>子产品编码</p>
+ * @method array getRegionIds() 获取<p>地域ID</p>
+ * @method void setRegionIds(array $RegionIds) 设置<p>地域ID</p>
+ * @method array getZoneIds() 获取<p>可用区ID</p>
+ * @method void setZoneIds(array $ZoneIds) 设置<p>可用区ID</p>
+ * @method array getInstanceTypes() 获取<p>实例类型编码</p>
+ * @method void setInstanceTypes(array $InstanceTypes) 设置<p>实例类型编码</p>
+ * @method array getTag() 获取<p>标签</p>
+ * @method void setTag(array $Tag) 设置<p>标签</p>
+ * @method array getComponentCodes() 获取<p>组件类型编码</p>
+ * @method void setComponentCodes(array $ComponentCodes) 设置<p>组件类型编码</p>
+ * @method array getItemCodes() 获取<p>组件名称编码</p>
+ * @method void setItemCodes(array $ItemCodes) 设置<p>组件名称编码</p>
+ * @method string getSearchKey() 获取<p>模糊搜索条件</p>
+ * @method void setSearchKey(string $SearchKey) 设置<p>模糊搜索条件</p>
+ * @method array getProjectIds() 获取<p>项目id</p>
+ * @method void setProjectIds(array $ProjectIds) 设置<p>项目id</p>
+ * @method array getAllocationType() 获取<p>费用归集类型</p><p>枚举值：</p><ul><li>0： 分摊</li><li>1： 归集</li><li>-1： 未分配</li></ul>
+ * @method void setAllocationType(array $AllocationType) 设置<p>费用归集类型</p><p>枚举值：</p><ul><li>0： 分摊</li><li>1： 归集</li><li>-1： 未分配</li></ul>
  */
 class DescribeAllocationBillConditionsRequest extends AbstractModel
 {
     /**
-     * @var string 账单月份，格式为2024-02，不传默认当前月
+     * @var string <p>账单月份，格式为2024-02，不传默认当前月</p>
      */
     public $Month;
 
     /**
-     * @var array 分账单元唯一标识，用作筛选
+     * @var array <p>分账单元唯一标识，用作筛选</p>
      */
     public $TreeNodeUniqKeys;
 
     /**
-     * @var array 日期
+     * @var array <p>日期</p>
      */
     public $BillDates;
 
     /**
-     * @var array 产品编码
+     * @var array <p>产品编码</p>
      */
     public $BusinessCodes;
 
     /**
-     * @var array 使用者UIN
+     * @var array <p>使用者UIN</p>
      */
     public $OwnerUins;
 
     /**
-     * @var array 操作者UIN
+     * @var array <p>操作者UIN</p>
      */
     public $OperateUins;
 
     /**
-     * @var array 计费模式编码
+     * @var array <p>计费模式编码</p>
      */
     public $PayModes;
 
     /**
-     * @var array 交易类型编码
+     * @var array <p>交易类型编码</p>
      */
     public $ActionTypes;
 
     /**
-     * @var array 子产品编码
+     * @var array <p>子产品编码</p>
      */
     public $ProductCodes;
 
     /**
-     * @var array 地域ID
+     * @var array <p>地域ID</p>
      */
     public $RegionIds;
 
     /**
-     * @var array 可用区ID
+     * @var array <p>可用区ID</p>
      */
     public $ZoneIds;
 
     /**
-     * @var array 实例类型编码
+     * @var array <p>实例类型编码</p>
      */
     public $InstanceTypes;
 
     /**
-     * @var array 标签
+     * @var array <p>标签</p>
      */
     public $Tag;
 
     /**
-     * @var array 组件类型编码
+     * @var array <p>组件类型编码</p>
      */
     public $ComponentCodes;
 
     /**
-     * @var array 组件名称编码
+     * @var array <p>组件名称编码</p>
      */
     public $ItemCodes;
 
     /**
-     * @var string 模糊搜索条件
+     * @var string <p>模糊搜索条件</p>
      */
     public $SearchKey;
 
     /**
-     * @var array 项目id
+     * @var array <p>项目id</p>
      */
     public $ProjectIds;
 
     /**
-     * @var array 费用归集类型
+     * @var array <p>费用归集类型</p><p>枚举值：</p><ul><li>0： 分摊</li><li>1： 归集</li><li>-1： 未分配</li></ul>
      */
     public $AllocationType;
 
     /**
-     * @param string $Month 账单月份，格式为2024-02，不传默认当前月
-     * @param array $TreeNodeUniqKeys 分账单元唯一标识，用作筛选
-     * @param array $BillDates 日期
-     * @param array $BusinessCodes 产品编码
-     * @param array $OwnerUins 使用者UIN
-     * @param array $OperateUins 操作者UIN
-     * @param array $PayModes 计费模式编码
-     * @param array $ActionTypes 交易类型编码
-     * @param array $ProductCodes 子产品编码
-     * @param array $RegionIds 地域ID
-     * @param array $ZoneIds 可用区ID
-     * @param array $InstanceTypes 实例类型编码
-     * @param array $Tag 标签
-     * @param array $ComponentCodes 组件类型编码
-     * @param array $ItemCodes 组件名称编码
-     * @param string $SearchKey 模糊搜索条件
-     * @param array $ProjectIds 项目id
-     * @param array $AllocationType 费用归集类型
+     * @param string $Month <p>账单月份，格式为2024-02，不传默认当前月</p>
+     * @param array $TreeNodeUniqKeys <p>分账单元唯一标识，用作筛选</p>
+     * @param array $BillDates <p>日期</p>
+     * @param array $BusinessCodes <p>产品编码</p>
+     * @param array $OwnerUins <p>使用者UIN</p>
+     * @param array $OperateUins <p>操作者UIN</p>
+     * @param array $PayModes <p>计费模式编码</p>
+     * @param array $ActionTypes <p>交易类型编码</p>
+     * @param array $ProductCodes <p>子产品编码</p>
+     * @param array $RegionIds <p>地域ID</p>
+     * @param array $ZoneIds <p>可用区ID</p>
+     * @param array $InstanceTypes <p>实例类型编码</p>
+     * @param array $Tag <p>标签</p>
+     * @param array $ComponentCodes <p>组件类型编码</p>
+     * @param array $ItemCodes <p>组件名称编码</p>
+     * @param string $SearchKey <p>模糊搜索条件</p>
+     * @param array $ProjectIds <p>项目id</p>
+     * @param array $AllocationType <p>费用归集类型</p><p>枚举值：</p><ul><li>0： 分摊</li><li>1： 归集</li><li>-1： 未分配</li></ul>
      */
     function __construct()
     {

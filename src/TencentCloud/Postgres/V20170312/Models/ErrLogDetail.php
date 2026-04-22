@@ -20,42 +20,126 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 错误日志详情
  *
- * @method string getUserName() 获取用户名
- * @method void setUserName(string $UserName) 设置用户名
- * @method string getDatabase() 获取数据库名字
- * @method void setDatabase(string $Database) 设置数据库名字
- * @method string getErrTime() 获取错误发生时间
- * @method void setErrTime(string $ErrTime) 设置错误发生时间
- * @method string getErrMsg() 获取错误消息
- * @method void setErrMsg(string $ErrMsg) 设置错误消息
+ * @method string getUserName() 获取<p>用户名</p>
+ * @method void setUserName(string $UserName) 设置<p>用户名</p>
+ * @method string getDatabase() 获取<p>数据库名字</p>
+ * @method void setDatabase(string $Database) 设置<p>数据库名字</p>
+ * @method string getErrTime() 获取<p>错误发生时间</p>
+ * @method void setErrTime(string $ErrTime) 设置<p>错误发生时间</p>
+ * @method string getErrMsg() 获取<p>错误消息</p>
+ * @method void setErrMsg(string $ErrMsg) 设置<p>错误消息</p>
+ * @method integer getProcessId() 获取<p>进程ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProcessId(integer $ProcessId) 设置<p>进程ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClientAddr() 获取<p>客户端地址</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClientAddr(string $ClientAddr) 设置<p>客户端地址</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSessionId() 获取<p>会话ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessionId(string $SessionId) 设置<p>会话ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSessionStartTime() 获取<p>会话开始时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessionStartTime(string $SessionStartTime) 设置<p>会话开始时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVirtualTransactionId() 获取<p>虚拟事务ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVirtualTransactionId(string $VirtualTransactionId) 设置<p>虚拟事务ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSqlStateCode() 获取<p>SQLSTATE错误码</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSqlStateCode(string $SqlStateCode) 设置<p>SQLSTATE错误码</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationName() 获取<p>客户端应用名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationName(string $ApplicationName) 设置<p>客户端应用名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ErrLogDetail extends AbstractModel
 {
     /**
-     * @var string 用户名
+     * @var string <p>用户名</p>
      */
     public $UserName;
 
     /**
-     * @var string 数据库名字
+     * @var string <p>数据库名字</p>
      */
     public $Database;
 
     /**
-     * @var string 错误发生时间
+     * @var string <p>错误发生时间</p>
      */
     public $ErrTime;
 
     /**
-     * @var string 错误消息
+     * @var string <p>错误消息</p>
      */
     public $ErrMsg;
 
     /**
-     * @param string $UserName 用户名
-     * @param string $Database 数据库名字
-     * @param string $ErrTime 错误发生时间
-     * @param string $ErrMsg 错误消息
+     * @var integer <p>进程ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProcessId;
+
+    /**
+     * @var string <p>客户端地址</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClientAddr;
+
+    /**
+     * @var string <p>会话ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SessionId;
+
+    /**
+     * @var string <p>会话开始时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SessionStartTime;
+
+    /**
+     * @var string <p>虚拟事务ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VirtualTransactionId;
+
+    /**
+     * @var string <p>SQLSTATE错误码</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SqlStateCode;
+
+    /**
+     * @var string <p>客户端应用名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationName;
+
+    /**
+     * @param string $UserName <p>用户名</p>
+     * @param string $Database <p>数据库名字</p>
+     * @param string $ErrTime <p>错误发生时间</p>
+     * @param string $ErrMsg <p>错误消息</p>
+     * @param integer $ProcessId <p>进程ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClientAddr <p>客户端地址</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SessionId <p>会话ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SessionStartTime <p>会话开始时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VirtualTransactionId <p>虚拟事务ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SqlStateCode <p>SQLSTATE错误码</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationName <p>客户端应用名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -84,6 +168,34 @@ class ErrLogDetail extends AbstractModel
 
         if (array_key_exists("ErrMsg",$param) and $param["ErrMsg"] !== null) {
             $this->ErrMsg = $param["ErrMsg"];
+        }
+
+        if (array_key_exists("ProcessId",$param) and $param["ProcessId"] !== null) {
+            $this->ProcessId = $param["ProcessId"];
+        }
+
+        if (array_key_exists("ClientAddr",$param) and $param["ClientAddr"] !== null) {
+            $this->ClientAddr = $param["ClientAddr"];
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("SessionStartTime",$param) and $param["SessionStartTime"] !== null) {
+            $this->SessionStartTime = $param["SessionStartTime"];
+        }
+
+        if (array_key_exists("VirtualTransactionId",$param) and $param["VirtualTransactionId"] !== null) {
+            $this->VirtualTransactionId = $param["VirtualTransactionId"];
+        }
+
+        if (array_key_exists("SqlStateCode",$param) and $param["SqlStateCode"] !== null) {
+            $this->SqlStateCode = $param["SqlStateCode"];
+        }
+
+        if (array_key_exists("ApplicationName",$param) and $param["ApplicationName"] !== null) {
+            $this->ApplicationName = $param["ApplicationName"];
         }
     }
 }

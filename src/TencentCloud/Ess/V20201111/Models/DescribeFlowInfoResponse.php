@@ -20,34 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFlowInfo返回参数结构体
  *
- * @method array getFlowDetailInfos() 获取合同流程的详细信息。
-如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
- * @method void setFlowDetailInfos(array $FlowDetailInfos) 设置合同流程的详细信息。
-如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
- * @method string getFlowGroupId() 获取合同组ID，只有在查询合同组信息时才会返回。
- * @method void setFlowGroupId(string $FlowGroupId) 设置合同组ID，只有在查询合同组信息时才会返回。
- * @method string getFlowGroupName() 获取合同组名称，只有在查询合同组信息时才会返回。
- * @method void setFlowGroupName(string $FlowGroupName) 设置合同组名称，只有在查询合同组信息时才会返回。
+ * @method array getFlowDetailInfos() 获取<p>合同流程的详细信息。<br>如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。</p>
+ * @method void setFlowDetailInfos(array $FlowDetailInfos) 设置<p>合同流程的详细信息。<br>如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。</p>
+ * @method string getFlowGroupId() 获取<p>合同组ID，只有在查询合同组信息时才会返回。</p>
+ * @method void setFlowGroupId(string $FlowGroupId) 设置<p>合同组ID，只有在查询合同组信息时才会返回。</p>
+ * @method string getFlowGroupName() 获取<p>合同组名称，只有在查询合同组信息时才会返回。</p>
+ * @method void setFlowGroupName(string $FlowGroupName) 设置<p>合同组名称，只有在查询合同组信息时才会返回。</p>
+ * @method array getFlowGroupRemarks() 获取<p>合同组合同备注列表</p>
+ * @method void setFlowGroupRemarks(array $FlowGroupRemarks) 设置<p>合同组合同备注列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeFlowInfoResponse extends AbstractModel
 {
     /**
-     * @var array 合同流程的详细信息。
-如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
+     * @var array <p>合同流程的详细信息。<br>如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。</p>
      */
     public $FlowDetailInfos;
 
     /**
-     * @var string 合同组ID，只有在查询合同组信息时才会返回。
+     * @var string <p>合同组ID，只有在查询合同组信息时才会返回。</p>
      */
     public $FlowGroupId;
 
     /**
-     * @var string 合同组名称，只有在查询合同组信息时才会返回。
+     * @var string <p>合同组名称，只有在查询合同组信息时才会返回。</p>
      */
     public $FlowGroupName;
+
+    /**
+     * @var array <p>合同组合同备注列表</p>
+     */
+    public $FlowGroupRemarks;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -55,10 +59,10 @@ class DescribeFlowInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $FlowDetailInfos 合同流程的详细信息。
-如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
-     * @param string $FlowGroupId 合同组ID，只有在查询合同组信息时才会返回。
-     * @param string $FlowGroupName 合同组名称，只有在查询合同组信息时才会返回。
+     * @param array $FlowDetailInfos <p>合同流程的详细信息。<br>如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。</p>
+     * @param string $FlowGroupId <p>合同组ID，只有在查询合同组信息时才会返回。</p>
+     * @param string $FlowGroupName <p>合同组名称，只有在查询合同组信息时才会返回。</p>
+     * @param array $FlowGroupRemarks <p>合同组合同备注列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -89,6 +93,10 @@ class DescribeFlowInfoResponse extends AbstractModel
 
         if (array_key_exists("FlowGroupName",$param) and $param["FlowGroupName"] !== null) {
             $this->FlowGroupName = $param["FlowGroupName"];
+        }
+
+        if (array_key_exists("FlowGroupRemarks",$param) and $param["FlowGroupRemarks"] !== null) {
+            $this->FlowGroupRemarks = $param["FlowGroupRemarks"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

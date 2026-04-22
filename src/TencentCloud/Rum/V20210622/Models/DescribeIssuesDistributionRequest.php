@@ -20,146 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIssuesDistribution请求参数结构体
  *
- * @method string getProductId() 获取产品Id
- * @method void setProductId(string $ProductId) 设置产品Id
- * @method string getFormListString() 获取接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息
- * @method void setFormListString(string $FormListString) 设置接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息
- * @method string getDimType() 获取分布维度是自定义维度时，填‘user_custom’
- * @method void setDimType(string $DimType) 设置分布维度是自定义维度时，填‘user_custom’
- * @method string getDimension() 获取维度，e.g. os_version, app_version, model等
- * @method void setDimension(string $Dimension) 设置维度，e.g. os_version, app_version, model等
- * @method array getIntervals() 获取数字类型字段的区间范围
- * @method void setIntervals(array $Intervals) 设置数字类型字段的区间范围
- * @method string getParamToken() 获取提供给前端使用，当填写本字段时，会覆盖 form_list 的值
- * @method void setParamToken(string $ParamToken) 设置提供给前端使用，当填写本字段时，会覆盖 form_list 的值
- * @method string getIssueId() 获取问题Id
- * @method void setIssueId(string $IssueId) 设置问题Id
- * @method integer getIssueType() 获取问题类型
- * @method void setIssueType(integer $IssueType) 设置问题类型
- * @method integer getParamLimit() 获取限制返回的个数，默认返回所有值
- * @method void setParamLimit(integer $ParamLimit) 设置限制返回的个数，默认返回所有值
- * @method string getMapKey() 获取键
- * @method void setMapKey(string $MapKey) 设置键
- * @method string getMapName() 获取名称
- * @method void setMapName(string $MapName) 设置名称
- * @method integer getMetricType() 获取指标类型
- * @method void setMetricType(integer $MetricType) 设置指标类型
- * @method integer getPageSize() 获取每页数目
- * @method void setPageSize(integer $PageSize) 设置每页数目
- * @method integer getPageNumber() 获取页码
- * @method void setPageNumber(integer $PageNumber) 设置页码
- * @method string getUserCustomKey() 获取用户自定义维度key
- * @method void setUserCustomKey(string $UserCustomKey) 设置用户自定义维度key
- * @method string getExtraData() 获取拓展字段
- * @method void setExtraData(string $ExtraData) 设置拓展字段
- * @method string getRequestHeader() 获取请求头
- * @method void setRequestHeader(string $RequestHeader) 设置请求头
+ * @method string getProductId() 获取<p>产品Id</p>
+ * @method void setProductId(string $ProductId) 设置<p>产品Id</p>
+ * @method string getFormListString() 获取<p>接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息</p>
+ * @method void setFormListString(string $FormListString) 设置<p>接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息</p>
+ * @method string getDimType() 获取<p>分布维度是自定义维度时，填‘user_custom’</p>
+ * @method void setDimType(string $DimType) 设置<p>分布维度是自定义维度时，填‘user_custom’</p>
+ * @method string getDimension() 获取<p>维度，e.g. os_version, app_version, model等</p>
+ * @method void setDimension(string $Dimension) 设置<p>维度，e.g. os_version, app_version, model等</p>
+ * @method array getIntervals() 获取<p>数字类型字段的区间范围</p>
+ * @method void setIntervals(array $Intervals) 设置<p>数字类型字段的区间范围</p>
+ * @method string getParamToken() 获取<p>提供给前端使用，当填写本字段时，会覆盖 form_list 的值</p>
+ * @method void setParamToken(string $ParamToken) 设置<p>提供给前端使用，当填写本字段时，会覆盖 form_list 的值</p>
+ * @method string getIssueId() 获取<p>问题Id</p>
+ * @method void setIssueId(string $IssueId) 设置<p>问题Id</p>
+ * @method integer getIssueType() 获取<p>问题类型</p>
+ * @method void setIssueType(integer $IssueType) 设置<p>问题类型</p>
+ * @method integer getParamLimit() 获取<p>限制返回的个数，默认返回所有值</p>
+ * @method void setParamLimit(integer $ParamLimit) 设置<p>限制返回的个数，默认返回所有值</p>
+ * @method string getMapKey() 获取<p>键</p>
+ * @method void setMapKey(string $MapKey) 设置<p>键</p>
+ * @method string getMapName() 获取<p>名称</p>
+ * @method void setMapName(string $MapName) 设置<p>名称</p>
+ * @method integer getMetricType() 获取<p>指标类型</p>
+ * @method void setMetricType(integer $MetricType) 设置<p>指标类型</p>
+ * @method integer getPageSize() 获取<p>每页数目</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页数目</p>
+ * @method integer getPageNumber() 获取<p>页码</p>
+ * @method void setPageNumber(integer $PageNumber) 设置<p>页码</p>
+ * @method string getUserCustomKey() 获取<p>用户自定义维度key</p>
+ * @method void setUserCustomKey(string $UserCustomKey) 设置<p>用户自定义维度key</p>
+ * @method string getExtraData() 获取<p>拓展字段</p>
+ * @method void setExtraData(string $ExtraData) 设置<p>拓展字段</p>
+ * @method string getRequestHeader() 获取<p>请求头</p>
+ * @method void setRequestHeader(string $RequestHeader) 设置<p>请求头</p>
  */
 class DescribeIssuesDistributionRequest extends AbstractModel
 {
     /**
-     * @var string 产品Id
+     * @var string <p>产品Id</p>
      */
     public $ProductId;
 
     /**
-     * @var string 接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息
+     * @var string <p>接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息</p>
      */
     public $FormListString;
 
     /**
-     * @var string 分布维度是自定义维度时，填‘user_custom’
+     * @var string <p>分布维度是自定义维度时，填‘user_custom’</p>
      */
     public $DimType;
 
     /**
-     * @var string 维度，e.g. os_version, app_version, model等
+     * @var string <p>维度，e.g. os_version, app_version, model等</p>
      */
     public $Dimension;
 
     /**
-     * @var array 数字类型字段的区间范围
+     * @var array <p>数字类型字段的区间范围</p>
      */
     public $Intervals;
 
     /**
-     * @var string 提供给前端使用，当填写本字段时，会覆盖 form_list 的值
+     * @var string <p>提供给前端使用，当填写本字段时，会覆盖 form_list 的值</p>
      */
     public $ParamToken;
 
     /**
-     * @var string 问题Id
+     * @var string <p>问题Id</p>
      */
     public $IssueId;
 
     /**
-     * @var integer 问题类型
+     * @var integer <p>问题类型</p>
      */
     public $IssueType;
 
     /**
-     * @var integer 限制返回的个数，默认返回所有值
+     * @var integer <p>限制返回的个数，默认返回所有值</p>
      */
     public $ParamLimit;
 
     /**
-     * @var string 键
+     * @var string <p>键</p>
      */
     public $MapKey;
 
     /**
-     * @var string 名称
+     * @var string <p>名称</p>
      */
     public $MapName;
 
     /**
-     * @var integer 指标类型
+     * @var integer <p>指标类型</p>
      */
     public $MetricType;
 
     /**
-     * @var integer 每页数目
+     * @var integer <p>每页数目</p>
      */
     public $PageSize;
 
     /**
-     * @var integer 页码
+     * @var integer <p>页码</p>
      */
     public $PageNumber;
 
     /**
-     * @var string 用户自定义维度key
+     * @var string <p>用户自定义维度key</p>
      */
     public $UserCustomKey;
 
     /**
-     * @var string 拓展字段
+     * @var string <p>拓展字段</p>
      */
     public $ExtraData;
 
     /**
-     * @var string 请求头
+     * @var string <p>请求头</p>
      */
     public $RequestHeader;
 
     /**
-     * @param string $ProductId 产品Id
-     * @param string $FormListString 接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息
-     * @param string $DimType 分布维度是自定义维度时，填‘user_custom’
-     * @param string $Dimension 维度，e.g. os_version, app_version, model等
-     * @param array $Intervals 数字类型字段的区间范围
-     * @param string $ParamToken 提供给前端使用，当填写本字段时，会覆盖 form_list 的值
-     * @param string $IssueId 问题Id
-     * @param integer $IssueType 问题类型
-     * @param integer $ParamLimit 限制返回的个数，默认返回所有值
-     * @param string $MapKey 键
-     * @param string $MapName 名称
-     * @param integer $MetricType 指标类型
-     * @param integer $PageSize 每页数目
-     * @param integer $PageNumber 页码
-     * @param string $UserCustomKey 用户自定义维度key
-     * @param string $ExtraData 拓展字段
-     * @param string $RequestHeader 请求头
+     * @param string $ProductId <p>产品Id</p>
+     * @param string $FormListString <p>接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息</p>
+     * @param string $DimType <p>分布维度是自定义维度时，填‘user_custom’</p>
+     * @param string $Dimension <p>维度，e.g. os_version, app_version, model等</p>
+     * @param array $Intervals <p>数字类型字段的区间范围</p>
+     * @param string $ParamToken <p>提供给前端使用，当填写本字段时，会覆盖 form_list 的值</p>
+     * @param string $IssueId <p>问题Id</p>
+     * @param integer $IssueType <p>问题类型</p>
+     * @param integer $ParamLimit <p>限制返回的个数，默认返回所有值</p>
+     * @param string $MapKey <p>键</p>
+     * @param string $MapName <p>名称</p>
+     * @param integer $MetricType <p>指标类型</p>
+     * @param integer $PageSize <p>每页数目</p>
+     * @param integer $PageNumber <p>页码</p>
+     * @param string $UserCustomKey <p>用户自定义维度key</p>
+     * @param string $ExtraData <p>拓展字段</p>
+     * @param string $RequestHeader <p>请求头</p>
      */
     function __construct()
     {

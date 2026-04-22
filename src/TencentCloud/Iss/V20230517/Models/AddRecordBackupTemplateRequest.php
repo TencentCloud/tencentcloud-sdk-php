@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDevTimeSections(array $DevTimeSections) 设置<p>录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
  * @method integer getScale() 获取<p>上云倍速（支持1，2，4倍速）</p>
  * @method void setScale(integer $Scale) 设置<p>上云倍速（支持1，2，4倍速）</p>
- * @method integer getDayOffset() 获取<p>周期偏移量，默认1，表示拉取昨天的设备录像，0表示取去今天的设备录像，3表示拉取前天的设备录像</p><p>取值范围：[0, 90]</p><p>默认值：1</p>
- * @method void setDayOffset(integer $DayOffset) 设置<p>周期偏移量，默认1，表示拉取昨天的设备录像，0表示取去今天的设备录像，3表示拉取前天的设备录像</p><p>取值范围：[0, 90]</p><p>默认值：1</p>
+ * @method integer getDayOffset() 获取<p>周期偏移量，默认1，表示拉取昨天的设备录像，0表示拉取今天的设备录像，3表示拉取前天的设备录像</p><p>取值范围：[0, 90]</p><p>默认值：1</p>
+ * @method void setDayOffset(integer $DayOffset) 设置<p>周期偏移量，默认1，表示拉取昨天的设备录像，0表示拉取今天的设备录像，3表示拉取前天的设备录像</p><p>取值范围：[0, 90]</p><p>默认值：1</p>
  */
 class AddRecordBackupTemplateRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class AddRecordBackupTemplateRequest extends AbstractModel
     public $Scale;
 
     /**
-     * @var integer <p>周期偏移量，默认1，表示拉取昨天的设备录像，0表示取去今天的设备录像，3表示拉取前天的设备录像</p><p>取值范围：[0, 90]</p><p>默认值：1</p>
+     * @var integer <p>周期偏移量，默认1，表示拉取昨天的设备录像，0表示拉取今天的设备录像，3表示拉取前天的设备录像</p><p>取值范围：[0, 90]</p><p>默认值：1</p>
      */
     public $DayOffset;
 
@@ -63,7 +63,7 @@ class AddRecordBackupTemplateRequest extends AbstractModel
      * @param array $TimeSections <p>上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
      * @param array $DevTimeSections <p>录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
      * @param integer $Scale <p>上云倍速（支持1，2，4倍速）</p>
-     * @param integer $DayOffset <p>周期偏移量，默认1，表示拉取昨天的设备录像，0表示取去今天的设备录像，3表示拉取前天的设备录像</p><p>取值范围：[0, 90]</p><p>默认值：1</p>
+     * @param integer $DayOffset <p>周期偏移量，默认1，表示拉取昨天的设备录像，0表示拉取今天的设备录像，3表示拉取前天的设备录像</p><p>取值范围：[0, 90]</p><p>默认值：1</p>
      */
     function __construct()
     {

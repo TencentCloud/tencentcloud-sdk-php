@@ -20,174 +20,182 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 告警通知模板详情
  *
- * @method string getId() 获取告警通知模板 ID
+ * @method string getId() 获取<p>告警通知模板 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setId(string $Id) 设置告警通知模板 ID
+ * @method void setId(string $Id) 设置<p>告警通知模板 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取告警通知模板名称
+ * @method string getName() 获取<p>告警通知模板名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置告警通知模板名称
+ * @method void setName(string $Name) 设置<p>告警通知模板名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdatedAt() 获取上次修改时间
+ * @method string getUpdatedAt() 获取<p>上次修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdatedAt(string $UpdatedAt) 设置上次修改时间
+ * @method void setUpdatedAt(string $UpdatedAt) 设置<p>上次修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdatedBy() 获取上次修改人
+ * @method string getUpdatedBy() 获取<p>上次修改人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdatedBy(string $UpdatedBy) 设置上次修改人
+ * @method void setUpdatedBy(string $UpdatedBy) 设置<p>上次修改人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNoticeType() 获取告警通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=全部通知
+ * @method string getNoticeType() 获取<p>告警通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=全部通知</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNoticeType(string $NoticeType) 设置告警通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=全部通知
+ * @method void setNoticeType(string $NoticeType) 设置<p>告警通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=全部通知</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getUserNotices() 获取用户通知列表
+ * @method array getUserNotices() 获取<p>用户通知列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserNotices(array $UserNotices) 设置用户通知列表
+ * @method void setUserNotices(array $UserNotices) 设置<p>用户通知列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getURLNotices() 获取回调通知列表
+ * @method array getURLNotices() 获取<p>回调通知列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setURLNotices(array $URLNotices) 设置回调通知列表
+ * @method void setURLNotices(array $URLNotices) 设置<p>回调通知列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsPreset() 获取是否是系统预设通知模板 0=否 1=是
+ * @method integer getIsPreset() 获取<p>是否是系统预设通知模板 0=否 1=是</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsPreset(integer $IsPreset) 设置是否是系统预设通知模板 0=否 1=是
+ * @method void setIsPreset(integer $IsPreset) 设置<p>是否是系统预设通知模板 0=否 1=是</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNoticeLanguage() 获取通知语言 zh-CN=中文 en-US=英文
+ * @method string getNoticeLanguage() 获取<p>通知语言 zh-CN=中文 en-US=英文</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNoticeLanguage(string $NoticeLanguage) 设置通知语言 zh-CN=中文 en-US=英文
+ * @method void setNoticeLanguage(string $NoticeLanguage) 设置<p>通知语言 zh-CN=中文 en-US=英文</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPolicyIds() 获取告警通知模板绑定的告警策略ID列表
+ * @method array getPolicyIds() 获取<p>告警通知模板绑定的告警策略ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPolicyIds(array $PolicyIds) 设置告警通知模板绑定的告警策略ID列表
+ * @method void setPolicyIds(array $PolicyIds) 设置<p>告警通知模板绑定的告警策略ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAMPConsumerId() 获取后台 amp consumer id
+ * @method string getAMPConsumerId() 获取<p>后台 amp consumer id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAMPConsumerId(string $AMPConsumerId) 设置后台 amp consumer id
+ * @method void setAMPConsumerId(string $AMPConsumerId) 设置<p>后台 amp consumer id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getCLSNotices() 获取推送cls渠道
+ * @method array getCLSNotices() 获取<p>推送cls渠道</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCLSNotices(array $CLSNotices) 设置推送cls渠道
+ * @method void setCLSNotices(array $CLSNotices) 设置<p>推送cls渠道</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTags() 获取通知模板绑定的标签
+ * @method array getTags() 获取<p>通知模板绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTags(array $Tags) 设置通知模板绑定的标签
+ * @method void setTags(array $Tags) 设置<p>通知模板绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsLoginFree() 获取是否免登录，0-否，1-是
- * @method void setIsLoginFree(integer $IsLoginFree) 设置是否免登录，0-否，1-是
+ * @method integer getIsLoginFree() 获取<p>是否免登录，0-否，1-是</p>
+ * @method void setIsLoginFree(integer $IsLoginFree) 设置<p>是否免登录，0-否，1-是</p>
+ * @method string getTimeZoneName() 获取<p>IANA 时区名</p>
+ * @method void setTimeZoneName(string $TimeZoneName) 设置<p>IANA 时区名</p>
  */
 class AlarmNotice extends AbstractModel
 {
     /**
-     * @var string 告警通知模板 ID
+     * @var string <p>告警通知模板 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
-     * @var string 告警通知模板名称
+     * @var string <p>告警通知模板名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var string 上次修改时间
+     * @var string <p>上次修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedAt;
 
     /**
-     * @var string 上次修改人
+     * @var string <p>上次修改人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedBy;
 
     /**
-     * @var string 告警通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=全部通知
+     * @var string <p>告警通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=全部通知</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NoticeType;
 
     /**
-     * @var array 用户通知列表
+     * @var array <p>用户通知列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserNotices;
 
     /**
-     * @var array 回调通知列表
+     * @var array <p>回调通知列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $URLNotices;
 
     /**
-     * @var integer 是否是系统预设通知模板 0=否 1=是
+     * @var integer <p>是否是系统预设通知模板 0=否 1=是</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsPreset;
 
     /**
-     * @var string 通知语言 zh-CN=中文 en-US=英文
+     * @var string <p>通知语言 zh-CN=中文 en-US=英文</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NoticeLanguage;
 
     /**
-     * @var array 告警通知模板绑定的告警策略ID列表
+     * @var array <p>告警通知模板绑定的告警策略ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyIds;
 
     /**
-     * @var string 后台 amp consumer id
+     * @var string <p>后台 amp consumer id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AMPConsumerId;
 
     /**
-     * @var array 推送cls渠道
+     * @var array <p>推送cls渠道</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CLSNotices;
 
     /**
-     * @var array 通知模板绑定的标签
+     * @var array <p>通知模板绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
-     * @var integer 是否免登录，0-否，1-是
+     * @var integer <p>是否免登录，0-否，1-是</p>
      */
     public $IsLoginFree;
 
     /**
-     * @param string $Id 告警通知模板 ID
+     * @var string <p>IANA 时区名</p>
+     */
+    public $TimeZoneName;
+
+    /**
+     * @param string $Id <p>告警通知模板 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 告警通知模板名称
+     * @param string $Name <p>告警通知模板名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdatedAt 上次修改时间
+     * @param string $UpdatedAt <p>上次修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdatedBy 上次修改人
+     * @param string $UpdatedBy <p>上次修改人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NoticeType 告警通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=全部通知
+     * @param string $NoticeType <p>告警通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=全部通知</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $UserNotices 用户通知列表
+     * @param array $UserNotices <p>用户通知列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $URLNotices 回调通知列表
+     * @param array $URLNotices <p>回调通知列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsPreset 是否是系统预设通知模板 0=否 1=是
+     * @param integer $IsPreset <p>是否是系统预设通知模板 0=否 1=是</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NoticeLanguage 通知语言 zh-CN=中文 en-US=英文
+     * @param string $NoticeLanguage <p>通知语言 zh-CN=中文 en-US=英文</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $PolicyIds 告警通知模板绑定的告警策略ID列表
+     * @param array $PolicyIds <p>告警通知模板绑定的告警策略ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AMPConsumerId 后台 amp consumer id
+     * @param string $AMPConsumerId <p>后台 amp consumer id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $CLSNotices 推送cls渠道
+     * @param array $CLSNotices <p>推送cls渠道</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Tags 通知模板绑定的标签
+     * @param array $Tags <p>通知模板绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsLoginFree 是否免登录，0-否，1-是
+     * @param integer $IsLoginFree <p>是否免登录，0-否，1-是</p>
+     * @param string $TimeZoneName <p>IANA 时区名</p>
      */
     function __construct()
     {
@@ -276,6 +284,10 @@ class AlarmNotice extends AbstractModel
 
         if (array_key_exists("IsLoginFree",$param) and $param["IsLoginFree"] !== null) {
             $this->IsLoginFree = $param["IsLoginFree"];
+        }
+
+        if (array_key_exists("TimeZoneName",$param) and $param["TimeZoneName"] !== null) {
+            $this->TimeZoneName = $param["TimeZoneName"];
         }
     }
 }

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBErrlogs返回参数结构体
  *
- * @method integer getTotalCount() 获取查询到的日志数量，最大值为10000条。
- * @method void setTotalCount(integer $TotalCount) 设置查询到的日志数量，最大值为10000条。
- * @method array getDetails() 获取错误日志详细信息集合。
- * @method void setDetails(array $Details) 设置错误日志详细信息集合。
+ * @method integer getTotalCount() 获取<p>查询到的日志数量，最大值为10000条。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>查询到的日志数量，最大值为10000条。</p>
+ * @method array getDetails() 获取<p>错误日志详细信息集合。</p>
+ * @method void setDetails(array $Details) 设置<p>错误日志详细信息集合。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDBErrlogsResponse extends AbstractModel
 {
     /**
-     * @var integer 查询到的日志数量，最大值为10000条。
+     * @var integer <p>查询到的日志数量，最大值为10000条。</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 错误日志详细信息集合。
+     * @var array <p>错误日志详细信息集合。</p>
      */
     public $Details;
 
@@ -45,8 +45,8 @@ class DescribeDBErrlogsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 查询到的日志数量，最大值为10000条。
-     * @param array $Details 错误日志详细信息集合。
+     * @param integer $TotalCount <p>查询到的日志数量，最大值为10000条。</p>
+     * @param array $Details <p>错误日志详细信息集合。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

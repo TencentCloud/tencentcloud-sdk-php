@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopIssues请求参数结构体
  *
- * @method string getProductId() 获取产品Id
- * @method void setProductId(string $ProductId) 设置产品Id
- * @method CompareCondition getCompare() 获取需要对比的查询条件，没有则不填
- * @method void setCompare(CompareCondition $Compare) 设置需要对比的查询条件，没有则不填
- * @method CompareCondition getCondition() 获取查询条件
- * @method void setCondition(CompareCondition $Condition) 设置查询条件
- * @method integer getIssueType() 获取问题类型
- * @method void setIssueType(integer $IssueType) 设置问题类型
- * @method string getSortField() 获取排序字段
- * @method void setSortField(string $SortField) 设置排序字段
- * @method string getSortType() 获取排序方式
- * @method void setSortType(string $SortType) 设置排序方式
- * @method integer getTopNum() 获取topN
- * @method void setTopNum(integer $TopNum) 设置topN
- * @method string getExtraData() 获取拓展字段
- * @method void setExtraData(string $ExtraData) 设置拓展字段
- * @method string getRequestHeader() 获取请求头
- * @method void setRequestHeader(string $RequestHeader) 设置请求头
+ * @method string getProductId() 获取<p>产品Id</p>
+ * @method void setProductId(string $ProductId) 设置<p>产品Id</p>
+ * @method CompareCondition getCompare() 获取<p>需要对比的查询条件，没有则不填</p>
+ * @method void setCompare(CompareCondition $Compare) 设置<p>需要对比的查询条件，没有则不填</p>
+ * @method CompareCondition getCondition() 获取<p>查询条件</p>
+ * @method void setCondition(CompareCondition $Condition) 设置<p>查询条件</p>
+ * @method integer getIssueType() 获取<p>问题类型</p>
+ * @method void setIssueType(integer $IssueType) 设置<p>问题类型</p>
+ * @method string getSortField() 获取<p>排序字段</p>
+ * @method void setSortField(string $SortField) 设置<p>排序字段</p>
+ * @method string getSortType() 获取<p>排序方式</p>
+ * @method void setSortType(string $SortType) 设置<p>排序方式</p>
+ * @method integer getTopNum() 获取<p>topN</p>
+ * @method void setTopNum(integer $TopNum) 设置<p>topN</p>
+ * @method string getExtraData() 获取<p>拓展字段</p>
+ * @method void setExtraData(string $ExtraData) 设置<p>拓展字段</p>
+ * @method string getRequestHeader() 获取<p>请求头</p>
+ * @method void setRequestHeader(string $RequestHeader) 设置<p>请求头</p>
  */
 class DescribeTopIssuesRequest extends AbstractModel
 {
     /**
-     * @var string 产品Id
+     * @var string <p>产品Id</p>
      */
     public $ProductId;
 
     /**
-     * @var CompareCondition 需要对比的查询条件，没有则不填
+     * @var CompareCondition <p>需要对比的查询条件，没有则不填</p>
      */
     public $Compare;
 
     /**
-     * @var CompareCondition 查询条件
+     * @var CompareCondition <p>查询条件</p>
      */
     public $Condition;
 
     /**
-     * @var integer 问题类型
+     * @var integer <p>问题类型</p>
      */
     public $IssueType;
 
     /**
-     * @var string 排序字段
+     * @var string <p>排序字段</p>
      */
     public $SortField;
 
     /**
-     * @var string 排序方式
+     * @var string <p>排序方式</p>
      */
     public $SortType;
 
     /**
-     * @var integer topN
+     * @var integer <p>topN</p>
      */
     public $TopNum;
 
     /**
-     * @var string 拓展字段
+     * @var string <p>拓展字段</p>
      */
     public $ExtraData;
 
     /**
-     * @var string 请求头
+     * @var string <p>请求头</p>
      */
     public $RequestHeader;
 
     /**
-     * @param string $ProductId 产品Id
-     * @param CompareCondition $Compare 需要对比的查询条件，没有则不填
-     * @param CompareCondition $Condition 查询条件
-     * @param integer $IssueType 问题类型
-     * @param string $SortField 排序字段
-     * @param string $SortType 排序方式
-     * @param integer $TopNum topN
-     * @param string $ExtraData 拓展字段
-     * @param string $RequestHeader 请求头
+     * @param string $ProductId <p>产品Id</p>
+     * @param CompareCondition $Compare <p>需要对比的查询条件，没有则不填</p>
+     * @param CompareCondition $Condition <p>查询条件</p>
+     * @param integer $IssueType <p>问题类型</p>
+     * @param string $SortField <p>排序字段</p>
+     * @param string $SortType <p>排序方式</p>
+     * @param integer $TopNum <p>topN</p>
+     * @param string $ExtraData <p>拓展字段</p>
+     * @param string $RequestHeader <p>请求头</p>
      */
     function __construct()
     {

@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDevice(Device $Device) 设置<p>该字段表示待检测对象对应的设备相关信息，若填入则可甄别相应违规风险设备。</p>
  * @method string getType() 获取<p>服务类型，可为空，默认为 IMAGE。</p><p>枚举值：</p><ul><li>IMAGE： 一般图片异步检测</li><li>IMAGE_LLM： 大模型图片异步检测</li></ul>
  * @method void setType(string $Type) 设置<p>服务类型，可为空，默认为 IMAGE。</p><p>枚举值：</p><ul><li>IMAGE： 一般图片异步检测</li><li>IMAGE_LLM： 大模型图片异步检测</li></ul>
+ * @method array getFileUrlList() 获取<p>该字段表示待审核的图片资源链接，最多支持传入4张图片</p>
+ * @method void setFileUrlList(array $FileUrlList) 设置<p>该字段表示待审核的图片资源链接，最多支持传入4张图片</p>
+ * @method string getTextContent() 获取<p>待审核的文本内容，需为UTF-8编码并以Base64格式传入，字数限制5000字内。</p>
+ * @method void setTextContent(string $TextContent) 设置<p>待审核的文本内容，需为UTF-8编码并以Base64格式传入，字数限制5000字内。</p>
  */
 class CreateImageModerationAsyncTaskRequest extends AbstractModel
 {
@@ -94,6 +98,16 @@ class CreateImageModerationAsyncTaskRequest extends AbstractModel
     public $Type;
 
     /**
+     * @var array <p>该字段表示待审核的图片资源链接，最多支持传入4张图片</p>
+     */
+    public $FileUrlList;
+
+    /**
+     * @var string <p>待审核的文本内容，需为UTF-8编码并以Base64格式传入，字数限制5000字内。</p>
+     */
+    public $TextContent;
+
+    /**
      * @param string $CallbackUrl <p>接收审核信息回调地址，审核过程中产生的所有结果发送至此地址。</p>
      * @param string $BizType <p>该字段表示策略的具体编号，用于接口调度，在内容安全控制台中可配置。若不传入Biztype参数（留空），则代表采用默认的识别策略；传入则会在审核时根据业务场景采取不同的审核策略。<br>备注：Biztype仅为数字、字母与下划线的组合，长度为3-32个字符；不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。</p>
      * @param string $DataId <p>该字段表示您为待检测对象分配的数据ID，传入后可方便您对文件进行标识和管理。<br>取值：由英文字母（大小写均可）、数字及四个特殊符号（_，-，@，#）组成，<strong>长度不超过64个字符</strong>。</p>
@@ -104,6 +118,8 @@ class CreateImageModerationAsyncTaskRequest extends AbstractModel
      * @param User $User <p>该字段表示待检测对象对应的用户相关信息，若填入则可甄别相应违规风险用户。</p>
      * @param Device $Device <p>该字段表示待检测对象对应的设备相关信息，若填入则可甄别相应违规风险设备。</p>
      * @param string $Type <p>服务类型，可为空，默认为 IMAGE。</p><p>枚举值：</p><ul><li>IMAGE： 一般图片异步检测</li><li>IMAGE_LLM： 大模型图片异步检测</li></ul>
+     * @param array $FileUrlList <p>该字段表示待审核的图片资源链接，最多支持传入4张图片</p>
+     * @param string $TextContent <p>待审核的文本内容，需为UTF-8编码并以Base64格式传入，字数限制5000字内。</p>
      */
     function __construct()
     {
@@ -158,6 +174,14 @@ class CreateImageModerationAsyncTaskRequest extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("FileUrlList",$param) and $param["FileUrlList"] !== null) {
+            $this->FileUrlList = $param["FileUrlList"];
+        }
+
+        if (array_key_exists("TextContent",$param) and $param["TextContent"] !== null) {
+            $this->TextContent = $param["TextContent"];
         }
     }
 }

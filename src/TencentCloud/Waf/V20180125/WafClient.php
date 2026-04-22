@@ -27,6 +27,8 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\AddAntiInfoLeakRulesResponse AddAntiInfoLeakRules(Models\AddAntiInfoLeakRulesRequest $req) 添加信息防泄漏规则
  * @method Models\AddAreaBanAreasResponse AddAreaBanAreas(Models\AddAreaBanAreasRequest $req) 添加地域封禁中的地域信息
  * @method Models\AddAttackWhiteRuleResponse AddAttackWhiteRule(Models\AddAttackWhiteRuleRequest $req) 供用户控制台调用，增加Tiga规则引擎白名单。
+ * @method Models\AddBatchCustomRuleResponse AddBatchCustomRule(Models\AddBatchCustomRuleRequest $req) 批量新增自定义规则接口
+ * @method Models\AddBatchCustomWhiteRuleResponse AddBatchCustomWhiteRule(Models\AddBatchCustomWhiteRuleRequest $req) 增加批量精准白名单规则
  * @method Models\AddBypassAllRuleResponse AddBypassAllRule(Models\AddBypassAllRuleRequest $req) 添加一键bypass能力支持,直接添加APPID
  * @method Models\AddCustomRuleResponse AddCustomRule(Models\AddCustomRuleRequest $req) 增加访问控制（自定义策略）
  * @method Models\AddCustomWhiteRuleResponse AddCustomWhiteRule(Models\AddCustomWhiteRuleRequest $req) 增加精准白名单规则
@@ -43,12 +45,15 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\CreateOwaspWhiteRuleResponse CreateOwaspWhiteRule(Models\CreateOwaspWhiteRuleRequest $req) 添加规则引擎白名单
  * @method Models\CreatePostCKafkaFlowResponse CreatePostCKafkaFlow(Models\CreatePostCKafkaFlowRequest $req) 创建CKafka投递流任务
  * @method Models\CreatePostCLSFlowResponse CreatePostCLSFlow(Models\CreatePostCLSFlowRequest $req) 创建CLS投递流任务
+ * @method Models\CreateProtectGroupResponse CreateProtectGroup(Models\CreateProtectGroupRequest $req) 新建防护对象组
  * @method Models\CreateRateLimitV2Response CreateRateLimitV2(Models\CreateRateLimitV2Request $req) 创建限流规则
  * @method Models\DeleteAccessExportResponse DeleteAccessExport(Models\DeleteAccessExportRequest $req) 本接口用于删除访问日志导出
  * @method Models\DeleteAntiFakeUrlResponse DeleteAntiFakeUrl(Models\DeleteAntiFakeUrlRequest $req) 删除防篡改url
  * @method Models\DeleteAntiInfoLeakRuleResponse DeleteAntiInfoLeakRule(Models\DeleteAntiInfoLeakRuleRequest $req) 信息防泄漏删除规则
  * @method Models\DeleteAttackDownloadRecordResponse DeleteAttackDownloadRecord(Models\DeleteAttackDownloadRecordRequest $req) 删除攻击日志下载任务记录
  * @method Models\DeleteAttackWhiteRuleResponse DeleteAttackWhiteRule(Models\DeleteAttackWhiteRuleRequest $req) 供用户控制台调用，删除Tiga规则引擎白名单。
+ * @method Models\DeleteBatchCustomRuleResponse DeleteBatchCustomRule(Models\DeleteBatchCustomRuleRequest $req) [自定义规则]-批量删除接口
+ * @method Models\DeleteBatchCustomWhiteRuleResponse DeleteBatchCustomWhiteRule(Models\DeleteBatchCustomWhiteRuleRequest $req) 删除批量精准白名单规则
  * @method Models\DeleteBatchIpAccessControlResponse DeleteBatchIpAccessControl(Models\DeleteBatchIpAccessControlRequest $req) 批量黑白名单删除接口
  * @method Models\DeleteBotSceneUCBRuleResponse DeleteBotSceneUCBRule(Models\DeleteBotSceneUCBRuleRequest $req) 场景化后删除Bot的UCB自定义规则
  * @method Models\DeleteCCRuleResponse DeleteCCRule(Models\DeleteCCRuleRequest $req) Waf  CC V2 Delete接口
@@ -61,6 +66,8 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DeleteIpAccessControlV2Response DeleteIpAccessControlV2(Models\DeleteIpAccessControlV2Request $req) Waf IP黑白名单最新版本删除接口
  * @method Models\DeleteOwaspRuleStatusResponse DeleteOwaspRuleStatus(Models\DeleteOwaspRuleStatusRequest $req) 解除门神规则的状态锁
  * @method Models\DeleteOwaspWhiteRuleResponse DeleteOwaspWhiteRule(Models\DeleteOwaspWhiteRuleRequest $req) 删除用户规则引擎白名单
+ * @method Models\DeleteProtectGroupResponse DeleteProtectGroup(Models\DeleteProtectGroupRequest $req) 删除防护对象组
+ * @method Models\DeleteProtectGroupDomainResponse DeleteProtectGroupDomain(Models\DeleteProtectGroupDomainRequest $req) 解除防护对象组中的域名绑定
  * @method Models\DeleteRateLimitsV2Response DeleteRateLimitsV2(Models\DeleteRateLimitsV2Request $req) 删除自研版限流规则
  * @method Models\DeleteSessionResponse DeleteSession(Models\DeleteSessionRequest $req) 删除CC攻击的session设置
  * @method Models\DeleteSpartaProtectionResponse DeleteSpartaProtection(Models\DeleteSpartaProtectionRequest $req) SaaS型WAF删除防护域名
@@ -81,6 +88,8 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeAttackTypeResponse DescribeAttackType(Models\DescribeAttackTypeRequest $req) 查询指定域名TOP N攻击类型
  * @method Models\DescribeAttackWhiteRuleResponse DescribeAttackWhiteRule(Models\DescribeAttackWhiteRuleRequest $req) 获取用户规则白名单列表
  * @method Models\DescribeAutoDenyIPResponse DescribeAutoDenyIP(Models\DescribeAutoDenyIPRequest $req) 描述WAF自动封禁IP详情,对齐自动封堵状态
+ * @method Models\DescribeBatchCustomRuleListResponse DescribeBatchCustomRuleList(Models\DescribeBatchCustomRuleListRequest $req) 批量自定义规则列表接口
+ * @method Models\DescribeBatchCustomWhiteRulesResponse DescribeBatchCustomWhiteRules(Models\DescribeBatchCustomWhiteRulesRequest $req) 获取批量精准白名单的规则列表
  * @method Models\DescribeBatchIpAccessControlResponse DescribeBatchIpAccessControl(Models\DescribeBatchIpAccessControlRequest $req) Waf 批量防护IP黑白名单查询
  * @method Models\DescribeBotIdRuleResponse DescribeBotIdRule(Models\DescribeBotIdRuleRequest $req) 获取BotId规则列表1
  * @method Models\DescribeBotSceneListResponse DescribeBotSceneList(Models\DescribeBotSceneListRequest $req) 获取BOT场景列表与概览
@@ -123,6 +132,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribePortsResponse DescribePorts(Models\DescribePortsRequest $req) 获取Saas型WAF防护端口列表
  * @method Models\DescribePostCKafkaFlowsResponse DescribePostCKafkaFlows(Models\DescribePostCKafkaFlowsRequest $req) 获取CKafka投递流任务列表
  * @method Models\DescribePostCLSFlowsResponse DescribePostCLSFlows(Models\DescribePostCLSFlowsRequest $req) 获取CLS投递流任务列表
+ * @method Models\DescribeProtectGroupResponse DescribeProtectGroup(Models\DescribeProtectGroupRequest $req) 获取防护对象组详情
  * @method Models\DescribeProtectionModesResponse DescribeProtectionModes(Models\DescribeProtectionModesRequest $req) 查询Tiga引擎大类规则及其防护模式
  * @method Models\DescribeRateLimitsV2Response DescribeRateLimitsV2(Models\DescribeRateLimitsV2Request $req) 查询限流规则列表接口
  * @method Models\DescribeRuleLimitResponse DescribeRuleLimit(Models\DescribeRuleLimitRequest $req) 获取各个模块具体的规格限制
@@ -168,6 +178,10 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\ModifyAreaBanRuleResponse ModifyAreaBanRule(Models\ModifyAreaBanRuleRequest $req) 添加（编辑）地域封禁中的地域信息
  * @method Models\ModifyAreaBanStatusResponse ModifyAreaBanStatus(Models\ModifyAreaBanStatusRequest $req) 修改防护域名的地域封禁状态
  * @method Models\ModifyAttackWhiteRuleResponse ModifyAttackWhiteRule(Models\ModifyAttackWhiteRuleRequest $req) 供用户控制台调用，修改Tiga规则引擎白名单。
+ * @method Models\ModifyBatchCustomRuleResponse ModifyBatchCustomRule(Models\ModifyBatchCustomRuleRequest $req) 批量编辑自定义规则接口
+ * @method Models\ModifyBatchCustomRuleStatusResponse ModifyBatchCustomRuleStatus(Models\ModifyBatchCustomRuleStatusRequest $req) 批量自定义规则开关接口
+ * @method Models\ModifyBatchCustomWhiteRuleResponse ModifyBatchCustomWhiteRule(Models\ModifyBatchCustomWhiteRuleRequest $req) 修改批量精准白名单规则
+ * @method Models\ModifyBatchCustomWhiteRuleStatusResponse ModifyBatchCustomWhiteRuleStatus(Models\ModifyBatchCustomWhiteRuleStatusRequest $req) 更新批量精准白名单规则
  * @method Models\ModifyBatchIpAccessControlResponse ModifyBatchIpAccessControl(Models\ModifyBatchIpAccessControlRequest $req) 批量IP黑白名单新增接口
  * @method Models\ModifyBotIdRuleResponse ModifyBotIdRule(Models\ModifyBotIdRuleRequest $req) 修改Bot-ID规则配置1
  * @method Models\ModifyBotSceneStatusResponse ModifyBotSceneStatus(Models\ModifyBotSceneStatusRequest $req) bot子场景开关
@@ -201,6 +215,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\ModifyOwaspRuleTypeLevelResponse ModifyOwaspRuleTypeLevel(Models\ModifyOwaspRuleTypeLevelRequest $req) 更新规则类型的防护等级
  * @method Models\ModifyOwaspRuleTypeStatusResponse ModifyOwaspRuleTypeStatus(Models\ModifyOwaspRuleTypeStatusRequest $req) 更新规则类型的开关
  * @method Models\ModifyOwaspWhiteRuleResponse ModifyOwaspWhiteRule(Models\ModifyOwaspWhiteRuleRequest $req) 编辑规则引擎白名单
+ * @method Models\ModifyProtectGroupResponse ModifyProtectGroup(Models\ModifyProtectGroupRequest $req) 编辑防护对象组
  * @method Models\ModifyProtectionLevelResponse ModifyProtectionLevel(Models\ModifyProtectionLevelRequest $req) 更改防护等级
  * @method Models\ModifyProtectionStatusResponse ModifyProtectionStatus(Models\ModifyProtectionStatusRequest $req) 开启、关闭WAF开关
  * @method Models\ModifySpartaProtectionResponse ModifySpartaProtection(Models\ModifySpartaProtectionRequest $req) 编辑SaaS型WAF域名配置

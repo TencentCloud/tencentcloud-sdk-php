@@ -1185,6 +1185,23 @@ use TencentCloud\Ess\V20201111\Models as Models;
 4. <font color='red'>需要授权企业或被授权企业的超管或者法人打开链接</font>走开通逻辑。
  * @method Models\ModifySingleSignOnEmployeesResponse ModifySingleSignOnEmployees(Models\ModifySingleSignOnEmployeesRequest $req) 此接口（ModifySingleSignOnEmployees）用于修改单点登录企业员工。
  注意： 此接口只能修改未跟腾讯电子签绑定的单点登录企业员工， 如果企业员工的单点登录信息已经和腾讯电子签里面的企业员工绑定，需要在腾讯电子签小程序进行个人信息变更操作。
+ * @method Models\OperateFlowRemarksResponse OperateFlowRemarks(Models\OperateFlowRemarksRequest $req) 此接口（OperateFlowRemarks）用于对企业合同备注进行管理操作，支持新增，创建和删除。
+
+
+用户可以通过接口对合同备注进行管理，支持对创建后的备注进行搜索关联的合同流程。
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/cac8af24804ab4f7455be2d5b39a43e5.png)
+
+注：
+
+对合同备注进行操作前，操作人需要获取对应权限：合同操作 - 设置合同类型及备注。
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/ce4f0ca867ab5020f4fdfecc39050f0f.png)
+
+
+没有对应权限的用户，并且不属于超管、法人，该合同的参与方（包含签署方与发起方），将无法对对应合同的备注进行编辑，如果备注内容包含敏感信息，将会对其进行打码显示。
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e5ef298c41f999b656f6b620c8b3d888.png)
  * @method Models\OperateSealsResponse OperateSeals(Models\OperateSealsRequest $req) 修改印章状态（停用、启用）
  * @method Models\OperateTemplateResponse OperateTemplate(Models\OperateTemplateRequest $req) 此接口（OperateTemplate）用于对企业自有模板进行管理操作，所有操作都会有对应的回调触发，具体参考回调文档 <a href="https://qian.tencent.com/developers/company/callback_types_templates" target="_blank">模板操作相关回调</a>
 

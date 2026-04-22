@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeApplicationExitReportDetail请求参数结构体
  *
- * @method string getProductId() 获取产品Id
- * @method void setProductId(string $ProductId) 设置产品Id
- * @method string getParamToken() 获取提供给前端使用，当填写本字段时，会覆盖 formlist 的值
- * @method void setParamToken(string $ParamToken) 设置提供给前端使用，当填写本字段时，会覆盖 formlist 的值
- * @method string getClientIdentify() 获取问题Id
- * @method void setClientIdentify(string $ClientIdentify) 设置问题Id
- * @method integer getStartEventTime() 获取开始时间
- * @method void setStartEventTime(integer $StartEventTime) 设置开始时间
- * @method integer getEndEventTime() 获取结束时间
- * @method void setEndEventTime(integer $EndEventTime) 设置结束时间
- * @method string getExtraData() 获取拓展数据
- * @method void setExtraData(string $ExtraData) 设置拓展数据
- * @method string getRequestHeader() 获取请求头
- * @method void setRequestHeader(string $RequestHeader) 设置请求头
+ * @method string getProductId() 获取<p>产品Id</p>
+ * @method void setProductId(string $ProductId) 设置<p>产品Id</p>
+ * @method string getParamToken() 获取<p>提供给前端使用，当填写本字段时，会覆盖 formlist 的值</p>
+ * @method void setParamToken(string $ParamToken) 设置<p>提供给前端使用，当填写本字段时，会覆盖 formlist 的值</p>
+ * @method string getClientIdentify() 获取<p>问题Id</p>
+ * @method void setClientIdentify(string $ClientIdentify) 设置<p>问题Id</p>
+ * @method integer getStartEventTime() 获取<p>开始时间</p>
+ * @method void setStartEventTime(integer $StartEventTime) 设置<p>开始时间</p>
+ * @method integer getEndEventTime() 获取<p>结束时间</p>
+ * @method void setEndEventTime(integer $EndEventTime) 设置<p>结束时间</p>
+ * @method string getExtraData() 获取<p>拓展数据</p>
+ * @method void setExtraData(string $ExtraData) 设置<p>拓展数据</p>
+ * @method string getRequestHeader() 获取<p>请求头</p>
+ * @method void setRequestHeader(string $RequestHeader) 设置<p>请求头</p>
  */
 class DescribeApplicationExitReportDetailRequest extends AbstractModel
 {
     /**
-     * @var string 产品Id
+     * @var string <p>产品Id</p>
      */
     public $ProductId;
 
     /**
-     * @var string 提供给前端使用，当填写本字段时，会覆盖 formlist 的值
+     * @var string <p>提供给前端使用，当填写本字段时，会覆盖 formlist 的值</p>
      */
     public $ParamToken;
 
     /**
-     * @var string 问题Id
+     * @var string <p>问题Id</p>
      */
     public $ClientIdentify;
 
     /**
-     * @var integer 开始时间
+     * @var integer <p>开始时间</p>
      */
     public $StartEventTime;
 
     /**
-     * @var integer 结束时间
+     * @var integer <p>结束时间</p>
      */
     public $EndEventTime;
 
     /**
-     * @var string 拓展数据
+     * @var string <p>拓展数据</p>
      */
     public $ExtraData;
 
     /**
-     * @var string 请求头
+     * @var string <p>请求头</p>
      */
     public $RequestHeader;
 
     /**
-     * @param string $ProductId 产品Id
-     * @param string $ParamToken 提供给前端使用，当填写本字段时，会覆盖 formlist 的值
-     * @param string $ClientIdentify 问题Id
-     * @param integer $StartEventTime 开始时间
-     * @param integer $EndEventTime 结束时间
-     * @param string $ExtraData 拓展数据
-     * @param string $RequestHeader 请求头
+     * @param string $ProductId <p>产品Id</p>
+     * @param string $ParamToken <p>提供给前端使用，当填写本字段时，会覆盖 formlist 的值</p>
+     * @param string $ClientIdentify <p>问题Id</p>
+     * @param integer $StartEventTime <p>开始时间</p>
+     * @param integer $EndEventTime <p>结束时间</p>
+     * @param string $ExtraData <p>拓展数据</p>
+     * @param string $RequestHeader <p>请求头</p>
      */
     function __construct()
     {

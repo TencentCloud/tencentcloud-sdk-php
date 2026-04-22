@@ -91,6 +91,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\InquiryPriceRenewInstanceResponse InquiryPriceRenewInstance(Models\InquiryPriceRenewInstanceRequest $req) 续费询价。
  * @method Models\InquiryPriceScaleOutInstanceResponse InquiryPriceScaleOutInstance(Models\InquiryPriceScaleOutInstanceRequest $req) 扩容询价. 当扩容时候，请通过该接口查询价格。
  * @method Models\InquiryPriceUpdateInstanceResponse InquiryPriceUpdateInstance(Models\InquiryPriceUpdateInstanceRequest $req) 变配询价
+ * @method Models\InstallSoftwareResponse InstallSoftware(Models\InstallSoftwareRequest $req) 安装组件。对于依赖元数据库的组件，有可能会需要下单一个cdb。可根据InstallSoftWareInfo查看当前集群可安装的组件，以及哪些组件有可能需要cdb。
  * @method Models\ModifyAutoRenewFlagResponse ModifyAutoRenewFlag(Models\ModifyAutoRenewFlagRequest $req) 前提：预付费集群
 资源级别开启或关闭自动续费
  * @method Models\ModifyAutoScaleStrategyResponse ModifyAutoScaleStrategy(Models\ModifyAutoScaleStrategyRequest $req) 修改自动扩缩容规则

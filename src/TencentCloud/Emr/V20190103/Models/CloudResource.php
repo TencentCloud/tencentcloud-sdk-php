@@ -20,110 +20,150 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 容器集群Pod请求资源信息
  *
- * @method string getComponentName() 获取组件角色名
- * @method void setComponentName(string $ComponentName) 设置组件角色名
- * @method integer getPodNumber() 获取pod请求数量
- * @method void setPodNumber(integer $PodNumber) 设置pod请求数量
- * @method integer getLimitCpu() 获取Cpu请求数量最大值
- * @method void setLimitCpu(integer $LimitCpu) 设置Cpu请求数量最大值
- * @method integer getLimitMemory() 获取内存请求数量最大值
- * @method void setLimitMemory(integer $LimitMemory) 设置内存请求数量最大值
- * @method string getService() 获取服务名称，如HIVE
- * @method void setService(string $Service) 设置服务名称，如HIVE
- * @method VolumeSetting getVolumeDir() 获取数据卷目录设置
+ * @method string getComponentName() 获取<p>组件角色名</p>
+ * @method void setComponentName(string $ComponentName) 设置<p>组件角色名</p>
+ * @method integer getPodNumber() 获取<p>pod请求数量</p>
+ * @method void setPodNumber(integer $PodNumber) 设置<p>pod请求数量</p>
+ * @method integer getLimitCpu() 获取<p>Cpu请求数量最大值</p>
+ * @method void setLimitCpu(integer $LimitCpu) 设置<p>Cpu请求数量最大值</p>
+ * @method integer getLimitMemory() 获取<p>内存请求数量最大值</p>
+ * @method void setLimitMemory(integer $LimitMemory) 设置<p>内存请求数量最大值</p>
+ * @method string getService() 获取<p>服务名称，如HIVE</p>
+ * @method void setService(string $Service) 设置<p>服务名称，如HIVE</p>
+ * @method VolumeSetting getVolumeDir() 获取<p>数据卷目录设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVolumeDir(VolumeSetting $VolumeDir) 设置数据卷目录设置
+ * @method void setVolumeDir(VolumeSetting $VolumeDir) 设置<p>数据卷目录设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ExternalAccess getExternalAccess() 获取组件外部访问设置
+ * @method ExternalAccess getExternalAccess() 获取<p>组件外部访问设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExternalAccess(ExternalAccess $ExternalAccess) 设置组件外部访问设置
+ * @method void setExternalAccess(ExternalAccess $ExternalAccess) 设置<p>组件外部访问设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method NodeAffinity getAffinity() 获取节点亲和性设置
+ * @method NodeAffinity getAffinity() 获取<p>节点亲和性设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAffinity(NodeAffinity $Affinity) 设置节点亲和性设置
+ * @method void setAffinity(NodeAffinity $Affinity) 设置<p>节点亲和性设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDisks() 获取所选数据盘信息
+ * @method array getDisks() 获取<p>所选数据盘信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDisks(array $Disks) 设置所选数据盘信息
+ * @method void setDisks(array $Disks) 设置<p>所选数据盘信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTolerations() 获取容忍
+ * @method array getTolerations() 获取<p>容忍</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTolerations(array $Tolerations) 设置容忍
+ * @method void setTolerations(array $Tolerations) 设置<p>容忍</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method PodAffinitySpec getPodAffinity() 获取<p>pod亲和性</p>
+ * @method void setPodAffinity(PodAffinitySpec $PodAffinity) 设置<p>pod亲和性</p>
+ * @method PodAffinitySpec getPodAntiAffinity() 获取<p>pod反亲和性</p>
+ * @method void setPodAntiAffinity(PodAffinitySpec $PodAntiAffinity) 设置<p>pod反亲和性</p>
+ * @method array getTopologySpreadConstraints() 获取<p>拓扑分布约束</p>
+ * @method void setTopologySpreadConstraints(array $TopologySpreadConstraints) 设置<p>拓扑分布约束</p>
+ * @method array getPodLabels() 获取<p>pod标签</p>
+ * @method void setPodLabels(array $PodLabels) 设置<p>pod标签</p>
+ * @method boolean getEnableDefaultRayCluster() 获取<p>是否创建默认raycluster</p>
+ * @method void setEnableDefaultRayCluster(boolean $EnableDefaultRayCluster) 设置<p>是否创建默认raycluster</p>
  */
 class CloudResource extends AbstractModel
 {
     /**
-     * @var string 组件角色名
+     * @var string <p>组件角色名</p>
      */
     public $ComponentName;
 
     /**
-     * @var integer pod请求数量
+     * @var integer <p>pod请求数量</p>
      */
     public $PodNumber;
 
     /**
-     * @var integer Cpu请求数量最大值
+     * @var integer <p>Cpu请求数量最大值</p>
      */
     public $LimitCpu;
 
     /**
-     * @var integer 内存请求数量最大值
+     * @var integer <p>内存请求数量最大值</p>
      */
     public $LimitMemory;
 
     /**
-     * @var string 服务名称，如HIVE
+     * @var string <p>服务名称，如HIVE</p>
      */
     public $Service;
 
     /**
-     * @var VolumeSetting 数据卷目录设置
+     * @var VolumeSetting <p>数据卷目录设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VolumeDir;
 
     /**
-     * @var ExternalAccess 组件外部访问设置
+     * @var ExternalAccess <p>组件外部访问设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExternalAccess;
 
     /**
-     * @var NodeAffinity 节点亲和性设置
+     * @var NodeAffinity <p>节点亲和性设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Affinity;
 
     /**
-     * @var array 所选数据盘信息
+     * @var array <p>所选数据盘信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Disks;
 
     /**
-     * @var array 容忍
+     * @var array <p>容忍</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tolerations;
 
     /**
-     * @param string $ComponentName 组件角色名
-     * @param integer $PodNumber pod请求数量
-     * @param integer $LimitCpu Cpu请求数量最大值
-     * @param integer $LimitMemory 内存请求数量最大值
-     * @param string $Service 服务名称，如HIVE
-     * @param VolumeSetting $VolumeDir 数据卷目录设置
+     * @var PodAffinitySpec <p>pod亲和性</p>
+     */
+    public $PodAffinity;
+
+    /**
+     * @var PodAffinitySpec <p>pod反亲和性</p>
+     */
+    public $PodAntiAffinity;
+
+    /**
+     * @var array <p>拓扑分布约束</p>
+     */
+    public $TopologySpreadConstraints;
+
+    /**
+     * @var array <p>pod标签</p>
+     */
+    public $PodLabels;
+
+    /**
+     * @var boolean <p>是否创建默认raycluster</p>
+     */
+    public $EnableDefaultRayCluster;
+
+    /**
+     * @param string $ComponentName <p>组件角色名</p>
+     * @param integer $PodNumber <p>pod请求数量</p>
+     * @param integer $LimitCpu <p>Cpu请求数量最大值</p>
+     * @param integer $LimitMemory <p>内存请求数量最大值</p>
+     * @param string $Service <p>服务名称，如HIVE</p>
+     * @param VolumeSetting $VolumeDir <p>数据卷目录设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExternalAccess $ExternalAccess 组件外部访问设置
+     * @param ExternalAccess $ExternalAccess <p>组件外部访问设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NodeAffinity $Affinity 节点亲和性设置
+     * @param NodeAffinity $Affinity <p>节点亲和性设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Disks 所选数据盘信息
+     * @param array $Disks <p>所选数据盘信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Tolerations 容忍
+     * @param array $Tolerations <p>容忍</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param PodAffinitySpec $PodAffinity <p>pod亲和性</p>
+     * @param PodAffinitySpec $PodAntiAffinity <p>pod反亲和性</p>
+     * @param array $TopologySpreadConstraints <p>拓扑分布约束</p>
+     * @param array $PodLabels <p>pod标签</p>
+     * @param boolean $EnableDefaultRayCluster <p>是否创建默认raycluster</p>
      */
     function __construct()
     {
@@ -189,6 +229,38 @@ class CloudResource extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tolerations, $obj);
             }
+        }
+
+        if (array_key_exists("PodAffinity",$param) and $param["PodAffinity"] !== null) {
+            $this->PodAffinity = new PodAffinitySpec();
+            $this->PodAffinity->deserialize($param["PodAffinity"]);
+        }
+
+        if (array_key_exists("PodAntiAffinity",$param) and $param["PodAntiAffinity"] !== null) {
+            $this->PodAntiAffinity = new PodAffinitySpec();
+            $this->PodAntiAffinity->deserialize($param["PodAntiAffinity"]);
+        }
+
+        if (array_key_exists("TopologySpreadConstraints",$param) and $param["TopologySpreadConstraints"] !== null) {
+            $this->TopologySpreadConstraints = [];
+            foreach ($param["TopologySpreadConstraints"] as $key => $value){
+                $obj = new TopologySpreadConstraint();
+                $obj->deserialize($value);
+                array_push($this->TopologySpreadConstraints, $obj);
+            }
+        }
+
+        if (array_key_exists("PodLabels",$param) and $param["PodLabels"] !== null) {
+            $this->PodLabels = [];
+            foreach ($param["PodLabels"] as $key => $value){
+                $obj = new StringMap();
+                $obj->deserialize($value);
+                array_push($this->PodLabels, $obj);
+            }
+        }
+
+        if (array_key_exists("EnableDefaultRayCluster",$param) and $param["EnableDefaultRayCluster"] !== null) {
+            $this->EnableDefaultRayCluster = $param["EnableDefaultRayCluster"];
         }
     }
 }

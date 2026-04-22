@@ -1,0 +1,65 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Emr\V20190103\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * 角色的部署信息
+ *
+ * @method string getComponentName() 获取角色名称
+ * @method void setComponentName(string $ComponentName) 设置角色名称
+ * @method array getDeployHostUuidList() 获取待安装的节点uuid列表
+ * @method void setDeployHostUuidList(array $DeployHostUuidList) 设置待安装的节点uuid列表
+ */
+class ComponentDeployInfo extends AbstractModel
+{
+    /**
+     * @var string 角色名称
+     */
+    public $ComponentName;
+
+    /**
+     * @var array 待安装的节点uuid列表
+     */
+    public $DeployHostUuidList;
+
+    /**
+     * @param string $ComponentName 角色名称
+     * @param array $DeployHostUuidList 待安装的节点uuid列表
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("ComponentName",$param) and $param["ComponentName"] !== null) {
+            $this->ComponentName = $param["ComponentName"];
+        }
+
+        if (array_key_exists("DeployHostUuidList",$param) and $param["DeployHostUuidList"] !== null) {
+            $this->DeployHostUuidList = $param["DeployHostUuidList"];
+        }
+    }
+}

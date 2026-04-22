@@ -20,98 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeExceptionReportList请求参数结构体
  *
- * @method string getProductId() 获取产品Id
- * @method void setProductId(string $ProductId) 设置产品Id
- * @method string getFormListString() 获取接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息
- * @method void setFormListString(string $FormListString) 设置接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息
- * @method string getParamToken() 获取提供给前端使用，当填写本字段时，会覆盖 form_list 的值
- * @method void setParamToken(string $ParamToken) 设置提供给前端使用，当填写本字段时，会覆盖 form_list 的值
- * @method integer getIssueType() 获取问题类型
- * @method void setIssueType(integer $IssueType) 设置问题类型
- * @method string getSortField() 获取排序字段
- * @method void setSortField(string $SortField) 设置排序字段
- * @method string getSortType() 获取排序方式
- * @method void setSortType(string $SortType) 设置排序方式
- * @method string getFeature() 获取特征
- * @method void setFeature(string $Feature) 设置特征
- * @method integer getPageSize() 获取每页数目
- * @method void setPageSize(integer $PageSize) 设置每页数目
- * @method integer getPageNumber() 获取页码
- * @method void setPageNumber(integer $PageNumber) 设置页码
- * @method string getExtraData() 获取拓展字段
- * @method void setExtraData(string $ExtraData) 设置拓展字段
- * @method string getRequestHeader() 获取请求头
- * @method void setRequestHeader(string $RequestHeader) 设置请求头
+ * @method string getProductId() 获取<p>产品Id</p>
+ * @method void setProductId(string $ProductId) 设置<p>产品Id</p>
+ * @method string getFormListString() 获取<p>接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息</p>
+ * @method void setFormListString(string $FormListString) 设置<p>接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息</p>
+ * @method string getParamToken() 获取<p>提供给前端使用，当填写本字段时，会覆盖 form_list 的值</p>
+ * @method void setParamToken(string $ParamToken) 设置<p>提供给前端使用，当填写本字段时，会覆盖 form_list 的值</p>
+ * @method integer getIssueType() 获取<p>问题类型</p>
+ * @method void setIssueType(integer $IssueType) 设置<p>问题类型</p>
+ * @method string getSortField() 获取<p>排序字段</p>
+ * @method void setSortField(string $SortField) 设置<p>排序字段</p>
+ * @method string getSortType() 获取<p>排序方式</p>
+ * @method void setSortType(string $SortType) 设置<p>排序方式</p>
+ * @method string getFeature() 获取<p>特征</p>
+ * @method void setFeature(string $Feature) 设置<p>特征</p>
+ * @method integer getPageSize() 获取<p>每页数目</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页数目</p>
+ * @method integer getPageNumber() 获取<p>页码</p>
+ * @method void setPageNumber(integer $PageNumber) 设置<p>页码</p>
+ * @method string getExtraData() 获取<p>拓展字段</p>
+ * @method void setExtraData(string $ExtraData) 设置<p>拓展字段</p>
+ * @method string getRequestHeader() 获取<p>请求头</p>
+ * @method void setRequestHeader(string $RequestHeader) 设置<p>请求头</p>
  */
 class DescribeExceptionReportListRequest extends AbstractModel
 {
     /**
-     * @var string 产品Id
+     * @var string <p>产品Id</p>
      */
     public $ProductId;
 
     /**
-     * @var string 接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息
+     * @var string <p>接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息</p>
      */
     public $FormListString;
 
     /**
-     * @var string 提供给前端使用，当填写本字段时，会覆盖 form_list 的值
+     * @var string <p>提供给前端使用，当填写本字段时，会覆盖 form_list 的值</p>
      */
     public $ParamToken;
 
     /**
-     * @var integer 问题类型
+     * @var integer <p>问题类型</p>
      */
     public $IssueType;
 
     /**
-     * @var string 排序字段
+     * @var string <p>排序字段</p>
      */
     public $SortField;
 
     /**
-     * @var string 排序方式
+     * @var string <p>排序方式</p>
      */
     public $SortType;
 
     /**
-     * @var string 特征
+     * @var string <p>特征</p>
      */
     public $Feature;
 
     /**
-     * @var integer 每页数目
+     * @var integer <p>每页数目</p>
      */
     public $PageSize;
 
     /**
-     * @var integer 页码
+     * @var integer <p>页码</p>
      */
     public $PageNumber;
 
     /**
-     * @var string 拓展字段
+     * @var string <p>拓展字段</p>
      */
     public $ExtraData;
 
     /**
-     * @var string 请求头
+     * @var string <p>请求头</p>
      */
     public $RequestHeader;
 
     /**
-     * @param string $ProductId 产品Id
-     * @param string $FormListString 接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息
-     * @param string $ParamToken 提供给前端使用，当填写本字段时，会覆盖 form_list 的值
-     * @param integer $IssueType 问题类型
-     * @param string $SortField 排序字段
-     * @param string $SortType 排序方式
-     * @param string $Feature 特征
-     * @param integer $PageSize 每页数目
-     * @param integer $PageNumber 页码
-     * @param string $ExtraData 拓展字段
-     * @param string $RequestHeader 请求头
+     * @param string $ProductId <p>产品Id</p>
+     * @param string $FormListString <p>接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息</p>
+     * @param string $ParamToken <p>提供给前端使用，当填写本字段时，会覆盖 form_list 的值</p>
+     * @param integer $IssueType <p>问题类型</p>
+     * @param string $SortField <p>排序字段</p>
+     * @param string $SortType <p>排序方式</p>
+     * @param string $Feature <p>特征</p>
+     * @param integer $PageSize <p>每页数目</p>
+     * @param integer $PageNumber <p>页码</p>
+     * @param string $ExtraData <p>拓展字段</p>
+     * @param string $RequestHeader <p>请求头</p>
      */
     function __construct()
     {

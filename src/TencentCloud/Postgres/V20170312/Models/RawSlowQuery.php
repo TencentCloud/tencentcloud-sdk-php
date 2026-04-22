@@ -20,58 +20,118 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 慢SQL查询接口返回 慢SQL列表详情
  *
- * @method string getRawQuery() 获取慢SQL 语句
- * @method void setRawQuery(string $RawQuery) 设置慢SQL 语句
- * @method string getDatabaseName() 获取慢SQL 查询的数据库
- * @method void setDatabaseName(string $DatabaseName) 设置慢SQL 查询的数据库
- * @method float getDuration() 获取慢SQL执行 耗时
- * @method void setDuration(float $Duration) 设置慢SQL执行 耗时
- * @method string getClientAddr() 获取执行慢SQL的客户端
- * @method void setClientAddr(string $ClientAddr) 设置执行慢SQL的客户端
- * @method string getUserName() 获取执行慢SQL的用户名
- * @method void setUserName(string $UserName) 设置执行慢SQL的用户名
- * @method string getSessionStartTime() 获取慢SQL执行的开始时间
- * @method void setSessionStartTime(string $SessionStartTime) 设置慢SQL执行的开始时间
+ * @method string getRawQuery() 获取<p>慢SQL 语句</p>
+ * @method void setRawQuery(string $RawQuery) 设置<p>慢SQL 语句</p>
+ * @method string getDatabaseName() 获取<p>慢SQL 查询的数据库</p>
+ * @method void setDatabaseName(string $DatabaseName) 设置<p>慢SQL 查询的数据库</p>
+ * @method float getDuration() 获取<p>慢SQL执行 耗时</p>
+ * @method void setDuration(float $Duration) 设置<p>慢SQL执行 耗时</p>
+ * @method string getClientAddr() 获取<p>执行慢SQL的客户端</p>
+ * @method void setClientAddr(string $ClientAddr) 设置<p>执行慢SQL的客户端</p>
+ * @method string getUserName() 获取<p>执行慢SQL的用户名</p>
+ * @method void setUserName(string $UserName) 设置<p>执行慢SQL的用户名</p>
+ * @method string getSessionStartTime() 获取<p>慢SQL执行的开始时间</p>
+ * @method void setSessionStartTime(string $SessionStartTime) 设置<p>慢SQL执行的开始时间</p>
+ * @method integer getProcessId() 获取<p>执行慢SQL的进程ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProcessId(integer $ProcessId) 设置<p>执行慢SQL的进程ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSessionId() 获取<p>执行慢SQL的会话ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessionId(string $SessionId) 设置<p>执行慢SQL的会话ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVirtualTransactionId() 获取<p>执行慢SQL的事务ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVirtualTransactionId(string $VirtualTransactionId) 设置<p>执行慢SQL的事务ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSqlStateCode() 获取<p>执行慢SQL的状态码</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSqlStateCode(string $SqlStateCode) 设置<p>执行慢SQL的状态码</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationName() 获取<p>执行慢SQL的客户端名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationName(string $ApplicationName) 设置<p>执行慢SQL的客户端名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RawSlowQuery extends AbstractModel
 {
     /**
-     * @var string 慢SQL 语句
+     * @var string <p>慢SQL 语句</p>
      */
     public $RawQuery;
 
     /**
-     * @var string 慢SQL 查询的数据库
+     * @var string <p>慢SQL 查询的数据库</p>
      */
     public $DatabaseName;
 
     /**
-     * @var float 慢SQL执行 耗时
+     * @var float <p>慢SQL执行 耗时</p>
      */
     public $Duration;
 
     /**
-     * @var string 执行慢SQL的客户端
+     * @var string <p>执行慢SQL的客户端</p>
      */
     public $ClientAddr;
 
     /**
-     * @var string 执行慢SQL的用户名
+     * @var string <p>执行慢SQL的用户名</p>
      */
     public $UserName;
 
     /**
-     * @var string 慢SQL执行的开始时间
+     * @var string <p>慢SQL执行的开始时间</p>
      */
     public $SessionStartTime;
 
     /**
-     * @param string $RawQuery 慢SQL 语句
-     * @param string $DatabaseName 慢SQL 查询的数据库
-     * @param float $Duration 慢SQL执行 耗时
-     * @param string $ClientAddr 执行慢SQL的客户端
-     * @param string $UserName 执行慢SQL的用户名
-     * @param string $SessionStartTime 慢SQL执行的开始时间
+     * @var integer <p>执行慢SQL的进程ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProcessId;
+
+    /**
+     * @var string <p>执行慢SQL的会话ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SessionId;
+
+    /**
+     * @var string <p>执行慢SQL的事务ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VirtualTransactionId;
+
+    /**
+     * @var string <p>执行慢SQL的状态码</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SqlStateCode;
+
+    /**
+     * @var string <p>执行慢SQL的客户端名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationName;
+
+    /**
+     * @param string $RawQuery <p>慢SQL 语句</p>
+     * @param string $DatabaseName <p>慢SQL 查询的数据库</p>
+     * @param float $Duration <p>慢SQL执行 耗时</p>
+     * @param string $ClientAddr <p>执行慢SQL的客户端</p>
+     * @param string $UserName <p>执行慢SQL的用户名</p>
+     * @param string $SessionStartTime <p>慢SQL执行的开始时间</p>
+     * @param integer $ProcessId <p>执行慢SQL的进程ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SessionId <p>执行慢SQL的会话ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VirtualTransactionId <p>执行慢SQL的事务ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SqlStateCode <p>执行慢SQL的状态码</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationName <p>执行慢SQL的客户端名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -108,6 +168,26 @@ class RawSlowQuery extends AbstractModel
 
         if (array_key_exists("SessionStartTime",$param) and $param["SessionStartTime"] !== null) {
             $this->SessionStartTime = $param["SessionStartTime"];
+        }
+
+        if (array_key_exists("ProcessId",$param) and $param["ProcessId"] !== null) {
+            $this->ProcessId = $param["ProcessId"];
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("VirtualTransactionId",$param) and $param["VirtualTransactionId"] !== null) {
+            $this->VirtualTransactionId = $param["VirtualTransactionId"];
+        }
+
+        if (array_key_exists("SqlStateCode",$param) and $param["SqlStateCode"] !== null) {
+            $this->SqlStateCode = $param["SqlStateCode"];
+        }
+
+        if (array_key_exists("ApplicationName",$param) and $param["ApplicationName"] !== null) {
+            $this->ApplicationName = $param["ApplicationName"];
         }
     }
 }

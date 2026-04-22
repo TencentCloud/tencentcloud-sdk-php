@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeExceptionDetail请求参数结构体
  *
- * @method string getProductId() 获取产品Id
- * @method void setProductId(string $ProductId) 设置产品Id
- * @method string getClientIdentify() 获取消息唯一标识
- * @method void setClientIdentify(string $ClientIdentify) 设置消息唯一标识
- * @method integer getClusterStackType() 获取集群堆栈类型
- * @method void setClusterStackType(integer $ClusterStackType) 设置集群堆栈类型
- * @method string getFeature() 获取特征
- * @method void setFeature(string $Feature) 设置特征
- * @method integer getIssueType() 获取问题类型
- * @method void setIssueType(integer $IssueType) 设置问题类型
- * @method integer getStartEventTime() 获取事件开始时间
- * @method void setStartEventTime(integer $StartEventTime) 设置事件开始时间
- * @method integer getEndEventTime() 获取事件结束时间
- * @method void setEndEventTime(integer $EndEventTime) 设置事件结束时间
- * @method string getExtraData() 获取拓展数据
- * @method void setExtraData(string $ExtraData) 设置拓展数据
- * @method string getRequestHeader() 获取请求头
- * @method void setRequestHeader(string $RequestHeader) 设置请求头
+ * @method string getProductId() 获取<p>产品Id</p>
+ * @method void setProductId(string $ProductId) 设置<p>产品Id</p>
+ * @method string getClientIdentify() 获取<p>消息唯一标识</p>
+ * @method void setClientIdentify(string $ClientIdentify) 设置<p>消息唯一标识</p>
+ * @method integer getClusterStackType() 获取<p>集群堆栈类型</p>
+ * @method void setClusterStackType(integer $ClusterStackType) 设置<p>集群堆栈类型</p>
+ * @method string getFeature() 获取<p>特征</p>
+ * @method void setFeature(string $Feature) 设置<p>特征</p>
+ * @method integer getIssueType() 获取<p>问题类型</p>
+ * @method void setIssueType(integer $IssueType) 设置<p>问题类型</p>
+ * @method integer getStartEventTime() 获取<p>事件开始时间</p>
+ * @method void setStartEventTime(integer $StartEventTime) 设置<p>事件开始时间</p>
+ * @method integer getEndEventTime() 获取<p>事件结束时间</p>
+ * @method void setEndEventTime(integer $EndEventTime) 设置<p>事件结束时间</p>
+ * @method string getExtraData() 获取<p>拓展数据</p>
+ * @method void setExtraData(string $ExtraData) 设置<p>拓展数据</p>
+ * @method string getRequestHeader() 获取<p>请求头</p>
+ * @method void setRequestHeader(string $RequestHeader) 设置<p>请求头</p>
  */
 class DescribeExceptionDetailRequest extends AbstractModel
 {
     /**
-     * @var string 产品Id
+     * @var string <p>产品Id</p>
      */
     public $ProductId;
 
     /**
-     * @var string 消息唯一标识
+     * @var string <p>消息唯一标识</p>
      */
     public $ClientIdentify;
 
     /**
-     * @var integer 集群堆栈类型
+     * @var integer <p>集群堆栈类型</p>
      */
     public $ClusterStackType;
 
     /**
-     * @var string 特征
+     * @var string <p>特征</p>
      */
     public $Feature;
 
     /**
-     * @var integer 问题类型
+     * @var integer <p>问题类型</p>
      */
     public $IssueType;
 
     /**
-     * @var integer 事件开始时间
+     * @var integer <p>事件开始时间</p>
      */
     public $StartEventTime;
 
     /**
-     * @var integer 事件结束时间
+     * @var integer <p>事件结束时间</p>
      */
     public $EndEventTime;
 
     /**
-     * @var string 拓展数据
+     * @var string <p>拓展数据</p>
      */
     public $ExtraData;
 
     /**
-     * @var string 请求头
+     * @var string <p>请求头</p>
      */
     public $RequestHeader;
 
     /**
-     * @param string $ProductId 产品Id
-     * @param string $ClientIdentify 消息唯一标识
-     * @param integer $ClusterStackType 集群堆栈类型
-     * @param string $Feature 特征
-     * @param integer $IssueType 问题类型
-     * @param integer $StartEventTime 事件开始时间
-     * @param integer $EndEventTime 事件结束时间
-     * @param string $ExtraData 拓展数据
-     * @param string $RequestHeader 请求头
+     * @param string $ProductId <p>产品Id</p>
+     * @param string $ClientIdentify <p>消息唯一标识</p>
+     * @param integer $ClusterStackType <p>集群堆栈类型</p>
+     * @param string $Feature <p>特征</p>
+     * @param integer $IssueType <p>问题类型</p>
+     * @param integer $StartEventTime <p>事件开始时间</p>
+     * @param integer $EndEventTime <p>事件结束时间</p>
+     * @param string $ExtraData <p>拓展数据</p>
+     * @param string $RequestHeader <p>请求头</p>
      */
     function __construct()
     {

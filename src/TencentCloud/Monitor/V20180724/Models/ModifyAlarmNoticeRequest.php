@@ -20,90 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAlarmNotice请求参数结构体
  *
- * @method string getModule() 获取模块名，这里填“monitor”
- * @method void setModule(string $Module) 设置模块名，这里填“monitor”
- * @method string getName() 获取告警通知规则名称 60字符以内
- * @method void setName(string $Name) 设置告警通知规则名称 60字符以内
- * @method string getNoticeType() 获取通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=都通知
- * @method void setNoticeType(string $NoticeType) 设置通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=都通知
- * @method string getNoticeLanguage() 获取通知语言 zh-CN=中文 en-US=英文
- * @method void setNoticeLanguage(string $NoticeLanguage) 设置通知语言 zh-CN=中文 en-US=英文
- * @method string getNoticeId() 获取告警通知模板 ID
- * @method void setNoticeId(string $NoticeId) 设置告警通知模板 ID
- * @method array getUserNotices() 获取用户通知 最多5个
- * @method void setUserNotices(array $UserNotices) 设置用户通知 最多5个
- * @method array getURLNotices() 获取回调通知 最多6个
- * @method void setURLNotices(array $URLNotices) 设置回调通知 最多6个
- * @method array getCLSNotices() 获取告警通知推送到CLS服务 最多1个
- * @method void setCLSNotices(array $CLSNotices) 设置告警通知推送到CLS服务 最多1个
- * @method array getPolicyIds() 获取告警通知模板绑定的告警策略ID列表
- * @method void setPolicyIds(array $PolicyIds) 设置告警通知模板绑定的告警策略ID列表
- * @method integer getIsLoginFree() 获取是否免登录，0-否，1-是
- * @method void setIsLoginFree(integer $IsLoginFree) 设置是否免登录，0-否，1-是
+ * @method string getModule() 获取<p>模块名，这里填“monitor”</p>
+ * @method void setModule(string $Module) 设置<p>模块名，这里填“monitor”</p>
+ * @method string getName() 获取<p>告警通知规则名称 60字符以内</p>
+ * @method void setName(string $Name) 设置<p>告警通知规则名称 60字符以内</p>
+ * @method string getNoticeType() 获取<p>通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=都通知</p>
+ * @method void setNoticeType(string $NoticeType) 设置<p>通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=都通知</p>
+ * @method string getNoticeLanguage() 获取<p>通知语言 zh-CN=中文 en-US=英文</p>
+ * @method void setNoticeLanguage(string $NoticeLanguage) 设置<p>通知语言 zh-CN=中文 en-US=英文</p>
+ * @method string getNoticeId() 获取<p>告警通知模板 ID</p>
+ * @method void setNoticeId(string $NoticeId) 设置<p>告警通知模板 ID</p>
+ * @method array getUserNotices() 获取<p>用户通知 最多5个</p>
+ * @method void setUserNotices(array $UserNotices) 设置<p>用户通知 最多5个</p>
+ * @method array getURLNotices() 获取<p>回调通知 最多6个</p>
+ * @method void setURLNotices(array $URLNotices) 设置<p>回调通知 最多6个</p>
+ * @method array getCLSNotices() 获取<p>告警通知推送到CLS服务 最多1个</p>
+ * @method void setCLSNotices(array $CLSNotices) 设置<p>告警通知推送到CLS服务 最多1个</p>
+ * @method array getPolicyIds() 获取<p>告警通知模板绑定的告警策略ID列表</p>
+ * @method void setPolicyIds(array $PolicyIds) 设置<p>告警通知模板绑定的告警策略ID列表</p>
+ * @method integer getIsLoginFree() 获取<p>是否免登录，0-否，1-是</p>
+ * @method void setIsLoginFree(integer $IsLoginFree) 设置<p>是否免登录，0-否，1-是</p>
+ * @method string getTimeZoneName() 获取<p>IANA 时区名</p>
+ * @method void setTimeZoneName(string $TimeZoneName) 设置<p>IANA 时区名</p>
  */
 class ModifyAlarmNoticeRequest extends AbstractModel
 {
     /**
-     * @var string 模块名，这里填“monitor”
+     * @var string <p>模块名，这里填“monitor”</p>
      */
     public $Module;
 
     /**
-     * @var string 告警通知规则名称 60字符以内
+     * @var string <p>告警通知规则名称 60字符以内</p>
      */
     public $Name;
 
     /**
-     * @var string 通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=都通知
+     * @var string <p>通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=都通知</p>
      */
     public $NoticeType;
 
     /**
-     * @var string 通知语言 zh-CN=中文 en-US=英文
+     * @var string <p>通知语言 zh-CN=中文 en-US=英文</p>
      */
     public $NoticeLanguage;
 
     /**
-     * @var string 告警通知模板 ID
+     * @var string <p>告警通知模板 ID</p>
      */
     public $NoticeId;
 
     /**
-     * @var array 用户通知 最多5个
+     * @var array <p>用户通知 最多5个</p>
      */
     public $UserNotices;
 
     /**
-     * @var array 回调通知 最多6个
+     * @var array <p>回调通知 最多6个</p>
      */
     public $URLNotices;
 
     /**
-     * @var array 告警通知推送到CLS服务 最多1个
+     * @var array <p>告警通知推送到CLS服务 最多1个</p>
      */
     public $CLSNotices;
 
     /**
-     * @var array 告警通知模板绑定的告警策略ID列表
+     * @var array <p>告警通知模板绑定的告警策略ID列表</p>
      */
     public $PolicyIds;
 
     /**
-     * @var integer 是否免登录，0-否，1-是
+     * @var integer <p>是否免登录，0-否，1-是</p>
      */
     public $IsLoginFree;
 
     /**
-     * @param string $Module 模块名，这里填“monitor”
-     * @param string $Name 告警通知规则名称 60字符以内
-     * @param string $NoticeType 通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=都通知
-     * @param string $NoticeLanguage 通知语言 zh-CN=中文 en-US=英文
-     * @param string $NoticeId 告警通知模板 ID
-     * @param array $UserNotices 用户通知 最多5个
-     * @param array $URLNotices 回调通知 最多6个
-     * @param array $CLSNotices 告警通知推送到CLS服务 最多1个
-     * @param array $PolicyIds 告警通知模板绑定的告警策略ID列表
-     * @param integer $IsLoginFree 是否免登录，0-否，1-是
+     * @var string <p>IANA 时区名</p>
+     */
+    public $TimeZoneName;
+
+    /**
+     * @param string $Module <p>模块名，这里填“monitor”</p>
+     * @param string $Name <p>告警通知规则名称 60字符以内</p>
+     * @param string $NoticeType <p>通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=都通知</p>
+     * @param string $NoticeLanguage <p>通知语言 zh-CN=中文 en-US=英文</p>
+     * @param string $NoticeId <p>告警通知模板 ID</p>
+     * @param array $UserNotices <p>用户通知 最多5个</p>
+     * @param array $URLNotices <p>回调通知 最多6个</p>
+     * @param array $CLSNotices <p>告警通知推送到CLS服务 最多1个</p>
+     * @param array $PolicyIds <p>告警通知模板绑定的告警策略ID列表</p>
+     * @param integer $IsLoginFree <p>是否免登录，0-否，1-是</p>
+     * @param string $TimeZoneName <p>IANA 时区名</p>
      */
     function __construct()
     {
@@ -171,6 +179,10 @@ class ModifyAlarmNoticeRequest extends AbstractModel
 
         if (array_key_exists("IsLoginFree",$param) and $param["IsLoginFree"] !== null) {
             $this->IsLoginFree = $param["IsLoginFree"];
+        }
+
+        if (array_key_exists("TimeZoneName",$param) and $param["TimeZoneName"] !== null) {
+            $this->TimeZoneName = $param["TimeZoneName"];
         }
     }
 }

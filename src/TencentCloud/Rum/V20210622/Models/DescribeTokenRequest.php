@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeToken请求参数结构体
  *
- * @method string getFormListString() 获取筛选条件
- * @method void setFormListString(string $FormListString) 设置筛选条件
- * @method string getFormListAString() 获取仅对比模式下填写，筛选条件A
- * @method void setFormListAString(string $FormListAString) 设置仅对比模式下填写，筛选条件A
- * @method string getFormListBString() 获取仅对比模式下填写，筛选条件B
- * @method void setFormListBString(string $FormListBString) 设置仅对比模式下填写，筛选条件B
- * @method string getRequestHeader() 获取请求头
- * @method void setRequestHeader(string $RequestHeader) 设置请求头
- * @method string getExtraData() 获取拓展字段
- * @method void setExtraData(string $ExtraData) 设置拓展字段
+ * @method string getFormListString() 获取<p>筛选条件</p>
+ * @method void setFormListString(string $FormListString) 设置<p>筛选条件</p>
+ * @method string getFormListAString() 获取<p>仅对比模式下填写，筛选条件A</p>
+ * @method void setFormListAString(string $FormListAString) 设置<p>仅对比模式下填写，筛选条件A</p>
+ * @method string getFormListBString() 获取<p>仅对比模式下填写，筛选条件B</p>
+ * @method void setFormListBString(string $FormListBString) 设置<p>仅对比模式下填写，筛选条件B</p>
+ * @method string getRequestHeader() 获取<p>请求头</p>
+ * @method void setRequestHeader(string $RequestHeader) 设置<p>请求头</p>
+ * @method string getExtraData() 获取<p>拓展字段</p>
+ * @method void setExtraData(string $ExtraData) 设置<p>拓展字段</p>
  */
 class DescribeTokenRequest extends AbstractModel
 {
     /**
-     * @var string 筛选条件
+     * @var string <p>筛选条件</p>
      */
     public $FormListString;
 
     /**
-     * @var string 仅对比模式下填写，筛选条件A
+     * @var string <p>仅对比模式下填写，筛选条件A</p>
      */
     public $FormListAString;
 
     /**
-     * @var string 仅对比模式下填写，筛选条件B
+     * @var string <p>仅对比模式下填写，筛选条件B</p>
      */
     public $FormListBString;
 
     /**
-     * @var string 请求头
+     * @var string <p>请求头</p>
      */
     public $RequestHeader;
 
     /**
-     * @var string 拓展字段
+     * @var string <p>拓展字段</p>
      */
     public $ExtraData;
 
     /**
-     * @param string $FormListString 筛选条件
-     * @param string $FormListAString 仅对比模式下填写，筛选条件A
-     * @param string $FormListBString 仅对比模式下填写，筛选条件B
-     * @param string $RequestHeader 请求头
-     * @param string $ExtraData 拓展字段
+     * @param string $FormListString <p>筛选条件</p>
+     * @param string $FormListAString <p>仅对比模式下填写，筛选条件A</p>
+     * @param string $FormListBString <p>仅对比模式下填写，筛选条件B</p>
+     * @param string $RequestHeader <p>请求头</p>
+     * @param string $ExtraData <p>拓展字段</p>
      */
     function __construct()
     {

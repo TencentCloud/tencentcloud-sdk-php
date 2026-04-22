@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPreStartUserScript(string $PreStartUserScript) 设置<p>base64 编码的用户脚本，在初始化节点之前执行</p>
  * @method string getUserScript() 获取<p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看</p>
  * @method void setUserScript(string $UserScript) 设置<p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看</p>
+ * @method string getTkeClusterNodePool() 获取<p>节点组Id</p>
+ * @method void setTkeClusterNodePool(string $TkeClusterNodePool) 设置<p>节点组Id</p>
  */
 class ComputeResourceAdvanceParams extends AbstractModel
 {
@@ -58,12 +60,18 @@ class ComputeResourceAdvanceParams extends AbstractModel
     public $UserScript;
 
     /**
+     * @var string <p>节点组Id</p>
+     */
+    public $TkeClusterNodePool;
+
+    /**
      * @param array $Labels <p>节点Label数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Taints <p>节点污点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PreStartUserScript <p>base64 编码的用户脚本，在初始化节点之前执行</p>
      * @param string $UserScript <p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看</p>
+     * @param string $TkeClusterNodePool <p>节点组Id</p>
      */
     function __construct()
     {
@@ -102,6 +110,10 @@ class ComputeResourceAdvanceParams extends AbstractModel
 
         if (array_key_exists("UserScript",$param) and $param["UserScript"] !== null) {
             $this->UserScript = $param["UserScript"];
+        }
+
+        if (array_key_exists("TkeClusterNodePool",$param) and $param["TkeClusterNodePool"] !== null) {
+            $this->TkeClusterNodePool = $param["TkeClusterNodePool"];
         }
     }
 }

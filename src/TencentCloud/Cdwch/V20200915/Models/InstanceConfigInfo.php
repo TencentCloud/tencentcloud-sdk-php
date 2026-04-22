@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setValueRange(string $ValueRange) 设置<p>取值范围</p>
  * @method string getAbnormalParam() 获取<p>标记异常</p>
  * @method void setAbnormalParam(string $AbnormalParam) 设置<p>标记异常</p>
+ * @method string getConfigEffective() 获取<p>是否生效</p>
+ * @method void setConfigEffective(string $ConfigEffective) 设置<p>是否生效</p>
  */
 class InstanceConfigInfo extends AbstractModel
 {
@@ -115,6 +117,11 @@ class InstanceConfigInfo extends AbstractModel
     public $AbnormalParam;
 
     /**
+     * @var string <p>是否生效</p>
+     */
+    public $ConfigEffective;
+
+    /**
      * @param string $ConfKey <p>配置项名称</p>
      * @param string $ConfValue <p>配置项内容</p>
      * @param string $DefaultValue <p>默认值</p>
@@ -128,6 +135,7 @@ class InstanceConfigInfo extends AbstractModel
      * @param string $ModifyTime <p>修改时间</p>
      * @param string $ValueRange <p>取值范围</p>
      * @param string $AbnormalParam <p>标记异常</p>
+     * @param string $ConfigEffective <p>是否生效</p>
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class InstanceConfigInfo extends AbstractModel
 
         if (array_key_exists("AbnormalParam",$param) and $param["AbnormalParam"] !== null) {
             $this->AbnormalParam = $param["AbnormalParam"];
+        }
+
+        if (array_key_exists("ConfigEffective",$param) and $param["ConfigEffective"] !== null) {
+            $this->ConfigEffective = $param["ConfigEffective"];
         }
     }
 }

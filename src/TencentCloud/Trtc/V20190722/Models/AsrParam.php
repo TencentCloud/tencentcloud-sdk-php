@@ -114,6 +114,18 @@ use TencentCloud\Common\AbstractModel;
 
  * @method integer getVadLevel() 获取vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。
  * @method void setVadLevel(integer $VadLevel) 设置vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。
+ * @method integer getFilterDirty() 获取是否过滤脏词（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 2]，默认值为 0。
+0：不过滤脏词；1：过滤脏词；2：将脏词替换为 " * "。
+ * @method void setFilterDirty(integer $FilterDirty) 设置是否过滤脏词（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 2]，默认值为 0。
+0：不过滤脏词；1：过滤脏词；2：将脏词替换为 " * "。
+ * @method integer getFilterModal() 获取是否过滤语气词（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 2]，默认值为 0。
+0：不过滤语气词；1：部分过滤；2：严格过滤。
+ * @method void setFilterModal(integer $FilterModal) 设置是否过滤语气词（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 2]，默认值为 0。
+0：不过滤语气词；1：部分过滤；2：严格过滤。
+ * @method integer getFilterPunc() 获取是否过滤句末的句号（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 1]，默认值为 0。
+0：不过滤句末的句号；1：过滤句末的句号。
+ * @method void setFilterPunc(integer $FilterPunc) 设置是否过滤句末的句号（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 1]，默认值为 0。
+0：不过滤句末的句号；1：过滤句末的句号。
  */
 class AsrParam extends AbstractModel
 {
@@ -185,6 +197,24 @@ class AsrParam extends AbstractModel
     public $VadLevel;
 
     /**
+     * @var integer 是否过滤脏词（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 2]，默认值为 0。
+0：不过滤脏词；1：过滤脏词；2：将脏词替换为 " * "。
+     */
+    public $FilterDirty;
+
+    /**
+     * @var integer 是否过滤语气词（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 2]，默认值为 0。
+0：不过滤语气词；1：部分过滤；2：严格过滤。
+     */
+    public $FilterModal;
+
+    /**
+     * @var integer 是否过滤句末的句号（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 1]，默认值为 0。
+0：不过滤句末的句号；1：过滤句末的句号。
+     */
+    public $FilterPunc;
+
+    /**
      * @param string $Lang 转录服务使用的模型类型。示例值"16k_zh_en"。语音转文本不同套餐版本支持的语言如下：
 
 基础语言引擎：
@@ -232,6 +262,12 @@ class AsrParam extends AbstractModel
      * @param array $AlternativeLanguage 发起模糊识别为高级版能力,默认按照高级版收费,仅支持填写除"zh-dialect"和"zh-yue"以外的高级版语言。注意：最多只能填写4种语言。
 
      * @param integer $VadLevel vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。
+     * @param integer $FilterDirty 是否过滤脏词（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 2]，默认值为 0。
+0：不过滤脏词；1：过滤脏词；2：将脏词替换为 " * "。
+     * @param integer $FilterModal 是否过滤语气词（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 2]，默认值为 0。
+0：不过滤语气词；1：部分过滤；2：严格过滤。
+     * @param integer $FilterPunc 是否过滤句末的句号（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 1]，默认值为 0。
+0：不过滤句末的句号；1：过滤句末的句号。
      */
     function __construct()
     {
@@ -264,6 +300,18 @@ class AsrParam extends AbstractModel
 
         if (array_key_exists("VadLevel",$param) and $param["VadLevel"] !== null) {
             $this->VadLevel = $param["VadLevel"];
+        }
+
+        if (array_key_exists("FilterDirty",$param) and $param["FilterDirty"] !== null) {
+            $this->FilterDirty = $param["FilterDirty"];
+        }
+
+        if (array_key_exists("FilterModal",$param) and $param["FilterModal"] !== null) {
+            $this->FilterModal = $param["FilterModal"];
+        }
+
+        if (array_key_exists("FilterPunc",$param) and $param["FilterPunc"] !== null) {
+            $this->FilterPunc = $param["FilterPunc"];
         }
     }
 }

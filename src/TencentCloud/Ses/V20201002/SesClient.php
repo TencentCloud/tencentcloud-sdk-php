@@ -37,7 +37,8 @@ use TencentCloud\Ses\V20201002\Models as Models;
  * @method Models\DeleteBlackListResponse DeleteBlackList(Models\DeleteBlackListRequest $req) 邮箱被拉黑之后，用户如果确认收件邮箱有效或者已经处于激活状态，可以从腾讯云地址库中删除该黑名单之后继续投递。
  * @method Models\DeleteCustomBlackListResponse DeleteCustomBlackList(Models\DeleteCustomBlackListRequest $req) 删除自定义黑名单邮箱地址
  * @method Models\DeleteEmailAddressResponse DeleteEmailAddress(Models\DeleteEmailAddressRequest $req) 删除发信人地址
- * @method Models\DeleteEmailIdentityResponse DeleteEmailIdentity(Models\DeleteEmailIdentityRequest $req) 删除发信域名，删除后，将不可再使用该域名进行发信
+ * @method Models\DeleteEmailIdentityResponse DeleteEmailIdentity(Models\DeleteEmailIdentityRequest $req) **发信域名删除接口仅限于企业用户使用**
+删除发信域名，删除后，将不可再使用该域名进行发信
  * @method Models\DeleteEmailTemplateResponse DeleteEmailTemplate(Models\DeleteEmailTemplateRequest $req) 删除发信模板
  * @method Models\DeleteReceiverResponse DeleteReceiver(Models\DeleteReceiverRequest $req) 根据收件id删除收件人列表,同时删除列表中的所有收件邮箱
  * @method Models\GetAbuseReportResponse GetAbuseReport(Models\GetAbuseReportRequest $req) 获取垃圾投诉数据

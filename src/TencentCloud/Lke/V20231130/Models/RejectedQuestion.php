@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperator(string $Operator) 设置操作人
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEnableScope() 获取拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableScope(integer $EnableScope) 设置拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RejectedQuestion extends AbstractModel
 {
@@ -122,6 +126,12 @@ class RejectedQuestion extends AbstractModel
     public $Operator;
 
     /**
+     * @var integer 拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableScope;
+
+    /**
      * @param string $RejectedBizId 拒答问题ID
 
 
@@ -143,6 +153,8 @@ class RejectedQuestion extends AbstractModel
 
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Operator 操作人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EnableScope 拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -188,6 +200,10 @@ class RejectedQuestion extends AbstractModel
 
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = $param["Operator"];
+        }
+
+        if (array_key_exists("EnableScope",$param) and $param["EnableScope"] !== null) {
+            $this->EnableScope = $param["EnableScope"];
         }
     }
 }

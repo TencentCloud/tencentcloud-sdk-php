@@ -20,146 +20,178 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAutoCalloutTask请求参数结构体
  *
- * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
- * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
- * @method integer getNotBefore() 获取任务起始时间戳，Unix 秒级时间戳
- * @method void setNotBefore(integer $NotBefore) 设置任务起始时间戳，Unix 秒级时间戳
- * @method array getCallees() 获取被叫号码列表
- * @method void setCallees(array $Callees) 设置被叫号码列表
- * @method array getCallers() 获取主叫号码列表
- * @method void setCallers(array $Callers) 设置主叫号码列表
- * @method integer getIvrId() 获取呼叫使用的 IVR Id，不填时需要填写 AIAgentId
- * @method void setIvrId(integer $IvrId) 设置呼叫使用的 IVR Id，不填时需要填写 AIAgentId
- * @method string getName() 获取任务名
- * @method void setName(string $Name) 设置任务名
- * @method string getDescription() 获取任务描述
- * @method void setDescription(string $Description) 设置任务描述
- * @method integer getNotAfter() 获取任务停止时间戳，Unix 秒级时间戳
- * @method void setNotAfter(integer $NotAfter) 设置任务停止时间戳，Unix 秒级时间戳
- * @method integer getTries() 获取最大尝试次数，1-3 次
- * @method void setTries(integer $Tries) 设置最大尝试次数，1-3 次
- * @method array getVariables() 获取自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处
- * @method void setVariables(array $Variables) 设置自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处
- * @method string getUUI() 获取用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处
- * @method void setUUI(string $UUI) 设置用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处
- * @method array getCalleeAttributes() 获取被叫属性
- * @method void setCalleeAttributes(array $CalleeAttributes) 设置被叫属性
- * @method string getTimeZone() 获取IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
- * @method void setTimeZone(string $TimeZone) 设置IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
- * @method array getAvailableTime() 获取可用时间段
- * @method void setAvailableTime(array $AvailableTime) 设置可用时间段
- * @method integer getAIAgentId() 获取智能体 ID，不填写时需要填写 IvrId
- * @method void setAIAgentId(integer $AIAgentId) 设置智能体 ID，不填写时需要填写 IvrId
- * @method integer getRetryInterval() 获取任务失败重试时间间隔，重试间隔 600秒～86400 秒
- * @method void setRetryInterval(integer $RetryInterval) 设置任务失败重试时间间隔，重试间隔 600秒～86400 秒
- * @method integer getMaxRingTimeoutSecond() 获取最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
- * @method void setMaxRingTimeoutSecond(integer $MaxRingTimeoutSecond) 设置最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+ * @method integer getSdkAppId() 获取<p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+ * @method void setSdkAppId(integer $SdkAppId) 设置<p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+ * @method integer getNotBefore() 获取<p>任务起始时间戳，Unix 秒级时间戳</p>
+ * @method void setNotBefore(integer $NotBefore) 设置<p>任务起始时间戳，Unix 秒级时间戳</p>
+ * @method array getCallees() 获取<p>被叫号码列表</p>
+ * @method void setCallees(array $Callees) 设置<p>被叫号码列表</p>
+ * @method array getCallers() 获取<p>主叫号码列表</p>
+ * @method void setCallers(array $Callers) 设置<p>主叫号码列表</p>
+ * @method integer getIvrId() 获取<p>呼叫使用的 IVR Id，不填时需要填写 AIAgentId</p>
+ * @method void setIvrId(integer $IvrId) 设置<p>呼叫使用的 IVR Id，不填时需要填写 AIAgentId</p>
+ * @method string getName() 获取<p>任务名</p>
+ * @method void setName(string $Name) 设置<p>任务名</p>
+ * @method string getDescription() 获取<p>任务描述</p>
+ * @method void setDescription(string $Description) 设置<p>任务描述</p>
+ * @method integer getNotAfter() 获取<p>任务停止时间戳，Unix 秒级时间戳</p>
+ * @method void setNotAfter(integer $NotAfter) 设置<p>任务停止时间戳，Unix 秒级时间戳</p>
+ * @method integer getTries() 获取<p>最大尝试次数，1-3 次</p>
+ * @method void setTries(integer $Tries) 设置<p>最大尝试次数，1-3 次</p>
+ * @method array getVariables() 获取<p>自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处</p>
+ * @method void setVariables(array $Variables) 设置<p>自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处</p>
+ * @method string getUUI() 获取<p>用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处</p>
+ * @method void setUUI(string $UUI) 设置<p>用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处</p>
+ * @method array getCalleeAttributes() 获取<p>被叫属性</p>
+ * @method void setCalleeAttributes(array $CalleeAttributes) 设置<p>被叫属性</p>
+ * @method string getTimeZone() 获取<p>IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones</p>
+ * @method void setTimeZone(string $TimeZone) 设置<p>IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones</p>
+ * @method array getAvailableTime() 获取<p>可用时间段</p>
+ * @method void setAvailableTime(array $AvailableTime) 设置<p>可用时间段</p>
+ * @method integer getAIAgentId() 获取<p>智能体 ID，不填写时需要填写 IvrId</p>
+ * @method void setAIAgentId(integer $AIAgentId) 设置<p>智能体 ID，不填写时需要填写 IvrId</p>
+ * @method integer getRetryInterval() 获取<p>任务失败重试时间间隔，重试间隔 600秒～86400 秒</p>
+ * @method void setRetryInterval(integer $RetryInterval) 设置<p>任务失败重试时间间隔，重试间隔 600秒～86400 秒</p>
+ * @method integer getMaxRingTimeoutSecond() 获取<p>最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数</p>
+ * @method void setMaxRingTimeoutSecond(integer $MaxRingTimeoutSecond) 设置<p>最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数</p>
+ * @method array getRetryHangupTypes() 获取<p>根据限定的挂断原因(可选挂断状态码:202,203,204,205,206,207,208,210,212,213,215,216,217,218,219,221,222,234)进行重试，只对使用AIAgentID的任务有效，挂断状态码说明</p><p><a href="https://cloud.tencent.com/document/product/679/123938">详见</a></p>
+ * @method void setRetryHangupTypes(array $RetryHangupTypes) 设置<p>根据限定的挂断原因(可选挂断状态码:202,203,204,205,206,207,208,210,212,213,215,216,217,218,219,221,222,234)进行重试，只对使用AIAgentID的任务有效，挂断状态码说明</p><p><a href="https://cloud.tencent.com/document/product/679/123938">详见</a></p>
+ * @method array getRetryTags() 获取<p>根据限定的话后标签进行重试，只对使用对话模型的AIAgentID任务有效，标签信息可在智能体配置中查询</p>
+ * @method void setRetryTags(array $RetryTags) 设置<p>根据限定的话后标签进行重试，只对使用对话模型的AIAgentID任务有效，标签信息可在智能体配置中查询</p>
+ * @method array getAvailableWorkTimeConfig() 获取<p>生效的工作时间配置。建议使用此字段代替AvailableTime 字段，当同时使用时，优先生效AvailableTime。</p>
+ * @method void setAvailableWorkTimeConfig(array $AvailableWorkTimeConfig) 设置<p>生效的工作时间配置。建议使用此字段代替AvailableTime 字段，当同时使用时，优先生效AvailableTime。</p>
+ * @method array getTriggerStrategy() 获取<p>触发策略</p>
+ * @method void setTriggerStrategy(array $TriggerStrategy) 设置<p>触发策略</p>
  */
 class CreateAutoCalloutTaskRequest extends AbstractModel
 {
     /**
-     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * @var integer <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public $SdkAppId;
 
     /**
-     * @var integer 任务起始时间戳，Unix 秒级时间戳
+     * @var integer <p>任务起始时间戳，Unix 秒级时间戳</p>
      */
     public $NotBefore;
 
     /**
-     * @var array 被叫号码列表
+     * @var array <p>被叫号码列表</p>
      */
     public $Callees;
 
     /**
-     * @var array 主叫号码列表
+     * @var array <p>主叫号码列表</p>
      */
     public $Callers;
 
     /**
-     * @var integer 呼叫使用的 IVR Id，不填时需要填写 AIAgentId
+     * @var integer <p>呼叫使用的 IVR Id，不填时需要填写 AIAgentId</p>
      */
     public $IvrId;
 
     /**
-     * @var string 任务名
+     * @var string <p>任务名</p>
      */
     public $Name;
 
     /**
-     * @var string 任务描述
+     * @var string <p>任务描述</p>
      */
     public $Description;
 
     /**
-     * @var integer 任务停止时间戳，Unix 秒级时间戳
+     * @var integer <p>任务停止时间戳，Unix 秒级时间戳</p>
      */
     public $NotAfter;
 
     /**
-     * @var integer 最大尝试次数，1-3 次
+     * @var integer <p>最大尝试次数，1-3 次</p>
      */
     public $Tries;
 
     /**
-     * @var array 自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处
+     * @var array <p>自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处</p>
      */
     public $Variables;
 
     /**
-     * @var string 用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处
+     * @var string <p>用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处</p>
      */
     public $UUI;
 
     /**
-     * @var array 被叫属性
+     * @var array <p>被叫属性</p>
      */
     public $CalleeAttributes;
 
     /**
-     * @var string IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
+     * @var string <p>IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones</p>
      */
     public $TimeZone;
 
     /**
-     * @var array 可用时间段
+     * @var array <p>可用时间段</p>
      */
     public $AvailableTime;
 
     /**
-     * @var integer 智能体 ID，不填写时需要填写 IvrId
+     * @var integer <p>智能体 ID，不填写时需要填写 IvrId</p>
      */
     public $AIAgentId;
 
     /**
-     * @var integer 任务失败重试时间间隔，重试间隔 600秒～86400 秒
+     * @var integer <p>任务失败重试时间间隔，重试间隔 600秒～86400 秒</p>
      */
     public $RetryInterval;
 
     /**
-     * @var integer 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+     * @var integer <p>最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数</p>
      */
     public $MaxRingTimeoutSecond;
 
     /**
-     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
-     * @param integer $NotBefore 任务起始时间戳，Unix 秒级时间戳
-     * @param array $Callees 被叫号码列表
-     * @param array $Callers 主叫号码列表
-     * @param integer $IvrId 呼叫使用的 IVR Id，不填时需要填写 AIAgentId
-     * @param string $Name 任务名
-     * @param string $Description 任务描述
-     * @param integer $NotAfter 任务停止时间戳，Unix 秒级时间戳
-     * @param integer $Tries 最大尝试次数，1-3 次
-     * @param array $Variables 自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处
-     * @param string $UUI 用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处
-     * @param array $CalleeAttributes 被叫属性
-     * @param string $TimeZone IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
-     * @param array $AvailableTime 可用时间段
-     * @param integer $AIAgentId 智能体 ID，不填写时需要填写 IvrId
-     * @param integer $RetryInterval 任务失败重试时间间隔，重试间隔 600秒～86400 秒
-     * @param integer $MaxRingTimeoutSecond 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+     * @var array <p>根据限定的挂断原因(可选挂断状态码:202,203,204,205,206,207,208,210,212,213,215,216,217,218,219,221,222,234)进行重试，只对使用AIAgentID的任务有效，挂断状态码说明</p><p><a href="https://cloud.tencent.com/document/product/679/123938">详见</a></p>
+     */
+    public $RetryHangupTypes;
+
+    /**
+     * @var array <p>根据限定的话后标签进行重试，只对使用对话模型的AIAgentID任务有效，标签信息可在智能体配置中查询</p>
+     */
+    public $RetryTags;
+
+    /**
+     * @var array <p>生效的工作时间配置。建议使用此字段代替AvailableTime 字段，当同时使用时，优先生效AvailableTime。</p>
+     */
+    public $AvailableWorkTimeConfig;
+
+    /**
+     * @var array <p>触发策略</p>
+     */
+    public $TriggerStrategy;
+
+    /**
+     * @param integer $SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+     * @param integer $NotBefore <p>任务起始时间戳，Unix 秒级时间戳</p>
+     * @param array $Callees <p>被叫号码列表</p>
+     * @param array $Callers <p>主叫号码列表</p>
+     * @param integer $IvrId <p>呼叫使用的 IVR Id，不填时需要填写 AIAgentId</p>
+     * @param string $Name <p>任务名</p>
+     * @param string $Description <p>任务描述</p>
+     * @param integer $NotAfter <p>任务停止时间戳，Unix 秒级时间戳</p>
+     * @param integer $Tries <p>最大尝试次数，1-3 次</p>
+     * @param array $Variables <p>自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处</p>
+     * @param string $UUI <p>用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处</p>
+     * @param array $CalleeAttributes <p>被叫属性</p>
+     * @param string $TimeZone <p>IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones</p>
+     * @param array $AvailableTime <p>可用时间段</p>
+     * @param integer $AIAgentId <p>智能体 ID，不填写时需要填写 IvrId</p>
+     * @param integer $RetryInterval <p>任务失败重试时间间隔，重试间隔 600秒～86400 秒</p>
+     * @param integer $MaxRingTimeoutSecond <p>最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数</p>
+     * @param array $RetryHangupTypes <p>根据限定的挂断原因(可选挂断状态码:202,203,204,205,206,207,208,210,212,213,215,216,217,218,219,221,222,234)进行重试，只对使用AIAgentID的任务有效，挂断状态码说明</p><p><a href="https://cloud.tencent.com/document/product/679/123938">详见</a></p>
+     * @param array $RetryTags <p>根据限定的话后标签进行重试，只对使用对话模型的AIAgentID任务有效，标签信息可在智能体配置中查询</p>
+     * @param array $AvailableWorkTimeConfig <p>生效的工作时间配置。建议使用此字段代替AvailableTime 字段，当同时使用时，优先生效AvailableTime。</p>
+     * @param array $TriggerStrategy <p>触发策略</p>
      */
     function __construct()
     {
@@ -255,6 +287,37 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
 
         if (array_key_exists("MaxRingTimeoutSecond",$param) and $param["MaxRingTimeoutSecond"] !== null) {
             $this->MaxRingTimeoutSecond = $param["MaxRingTimeoutSecond"];
+        }
+
+        if (array_key_exists("RetryHangupTypes",$param) and $param["RetryHangupTypes"] !== null) {
+            $this->RetryHangupTypes = $param["RetryHangupTypes"];
+        }
+
+        if (array_key_exists("RetryTags",$param) and $param["RetryTags"] !== null) {
+            $this->RetryTags = [];
+            foreach ($param["RetryTags"] as $key => $value){
+                $obj = new RetryTagItem();
+                $obj->deserialize($value);
+                array_push($this->RetryTags, $obj);
+            }
+        }
+
+        if (array_key_exists("AvailableWorkTimeConfig",$param) and $param["AvailableWorkTimeConfig"] !== null) {
+            $this->AvailableWorkTimeConfig = [];
+            foreach ($param["AvailableWorkTimeConfig"] as $key => $value){
+                $obj = new AvailableTimeConfig();
+                $obj->deserialize($value);
+                array_push($this->AvailableWorkTimeConfig, $obj);
+            }
+        }
+
+        if (array_key_exists("TriggerStrategy",$param) and $param["TriggerStrategy"] !== null) {
+            $this->TriggerStrategy = [];
+            foreach ($param["TriggerStrategy"] as $key => $value){
+                $obj = new TriggerStrategyItem();
+                $obj->deserialize($value);
+                array_push($this->TriggerStrategy, $obj);
+            }
         }
     }
 }

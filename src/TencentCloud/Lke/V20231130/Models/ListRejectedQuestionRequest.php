@@ -20,44 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListRejectedQuestion请求参数结构体
  *
- * @method string getBotBizId() 获取应用ID, 获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
- * @method void setBotBizId(string $BotBizId) 设置应用ID, 获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
- * @method integer getPageNumber() 获取页码（必须大于0）
- * @method void setPageNumber(integer $PageNumber) 设置页码（必须大于0）
- * @method integer getPageSize() 获取每页数量（取值范围1-200）
- * @method void setPageSize(integer $PageSize) 设置每页数量（取值范围1-200）
- * @method string getQuery() 获取查询内容
-
- * @method void setQuery(string $Query) 设置查询内容
+ * @method string getBotBizId() 获取<p>应用ID, 获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p>
+ * @method void setBotBizId(string $BotBizId) 设置<p>应用ID, 获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p>
+ * @method integer getPageNumber() 获取<p>页码（必须大于0）</p><p>默认值：1</p>
+ * @method void setPageNumber(integer $PageNumber) 设置<p>页码（必须大于0）</p><p>默认值：1</p>
+ * @method integer getPageSize() 获取<p>每页数量（取值范围1-200）</p><p>默认值：15</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页数量（取值范围1-200）</p><p>默认值：15</p>
+ * @method string getQuery() 获取<p>查询内容</p>
+ * @method void setQuery(string $Query) 设置<p>查询内容</p>
+ * @method array getFilters() 获取<p>过滤条件：<br>生效： EnableScope: 1,2,3,4</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件：<br>生效： EnableScope: 1,2,3,4</p>
  */
 class ListRejectedQuestionRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID, 获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
+     * @var string <p>应用ID, 获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p>
      */
     public $BotBizId;
 
     /**
-     * @var integer 页码（必须大于0）
+     * @var integer <p>页码（必须大于0）</p><p>默认值：1</p>
      */
     public $PageNumber;
 
     /**
-     * @var integer 每页数量（取值范围1-200）
+     * @var integer <p>每页数量（取值范围1-200）</p><p>默认值：15</p>
      */
     public $PageSize;
 
     /**
-     * @var string 查询内容
-
+     * @var string <p>查询内容</p>
      */
     public $Query;
 
     /**
-     * @param string $BotBizId 应用ID, 获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
-     * @param integer $PageNumber 页码（必须大于0）
-     * @param integer $PageSize 每页数量（取值范围1-200）
-     * @param string $Query 查询内容
+     * @var array <p>过滤条件：<br>生效： EnableScope: 1,2,3,4</p>
+     */
+    public $Filters;
+
+    /**
+     * @param string $BotBizId <p>应用ID, 获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p>
+     * @param integer $PageNumber <p>页码（必须大于0）</p><p>默认值：1</p>
+     * @param integer $PageSize <p>每页数量（取值范围1-200）</p><p>默认值：15</p>
+     * @param string $Query <p>查询内容</p>
+     * @param array $Filters <p>过滤条件：<br>生效： EnableScope: 1,2,3,4</p>
      */
     function __construct()
     {
@@ -86,6 +92,15 @@ class ListRejectedQuestionRequest extends AbstractModel
 
         if (array_key_exists("Query",$param) and $param["Query"] !== null) {
             $this->Query = $param["Query"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new FilterItem();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

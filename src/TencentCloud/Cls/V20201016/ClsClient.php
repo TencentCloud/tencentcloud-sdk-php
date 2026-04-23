@@ -75,6 +75,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
 - 所选时间范围对应日志写流量不能超出5TB。
 - 重建索引时间范围以日志时间为准，日志上传时间与重建索引时间范围有超过1小时的偏差时（例如16:00上传了一条02:00的日志到 CLS，重建00:00～12:00的日志索引）不会被重建且后续无法进行检索。新上报一条日志到已经被重建的日志时间范围时，也不会被重建且后续无法进行检索。
  * @method Models\CreateScheduledSqlResponse CreateScheduledSql(Models\CreateScheduledSqlRequest $req) 本接口用于创建定时SQL分析任务
+ * @method Models\CreateSearchViewResponse CreateSearchView(Models\CreateSearchViewRequest $req) 新建查询视图
  * @method Models\CreateShipperResponse CreateShipper(Models\CreateShipperRequest $req) 新建投递到COS的任务，【！！！注意】使用此接口，需要检查是否配置了投递COS的角色和权限。如果没有配置，请参考文档投递权限查看和配置https://cloud.tencent.com/document/product/614/71623。
  * @method Models\CreateSplunkDeliverResponse CreateSplunkDeliver(Models\CreateSplunkDeliverRequest $req) 创建Splunk投递任务
  * @method Models\CreateTopicResponse CreateTopic(Models\CreateTopicRequest $req) 本接口用于创建日志或指标主题。
@@ -108,6 +109,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\DeleteNetworkApplicationResponse DeleteNetworkApplication(Models\DeleteNetworkApplicationRequest $req) 删除网络应用
  * @method Models\DeleteNoticeContentResponse DeleteNoticeContent(Models\DeleteNoticeContentRequest $req) 该接口用于删除通知内容配置
  * @method Models\DeleteScheduledSqlResponse DeleteScheduledSql(Models\DeleteScheduledSqlRequest $req) 本接口用于删除定时SQL分析任务
+ * @method Models\DeleteSearchViewResponse DeleteSearchView(Models\DeleteSearchViewRequest $req) 删除查询视图
  * @method Models\DeleteShipperResponse DeleteShipper(Models\DeleteShipperRequest $req) 删除投递COS任务
  * @method Models\DeleteSplunkDeliverResponse DeleteSplunkDeliver(Models\DeleteSplunkDeliverRequest $req) 删除Splunk投递任务
  * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) 本接口用于删除日志或指标主题。
@@ -161,6 +163,7 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
  * @method Models\DescribePartitionsResponse DescribePartitions(Models\DescribePartitionsRequest $req) 该接口已废弃，如需获取分区数量，请使用DescribeTopics接口。
  * @method Models\DescribeRebuildIndexTasksResponse DescribeRebuildIndexTasks(Models\DescribeRebuildIndexTasksRequest $req) 获取重建索引任务列表
  * @method Models\DescribeScheduledSqlInfoResponse DescribeScheduledSqlInfo(Models\DescribeScheduledSqlInfoRequest $req) 本接口用于获取定时SQL分析任务列表
+ * @method Models\DescribeSearchViewsResponse DescribeSearchViews(Models\DescribeSearchViewsRequest $req) 获取查询视图列表
  * @method Models\DescribeShipperTasksResponse DescribeShipperTasks(Models\DescribeShipperTasksRequest $req) 获取投递任务列表
  * @method Models\DescribeShippersResponse DescribeShippers(Models\DescribeShippersRequest $req) 获取投递到COS的任务配置信息
  * @method Models\DescribeSplunkDeliversResponse DescribeSplunkDelivers(Models\DescribeSplunkDeliversRequest $req) 获取Splunk投递任务列表
@@ -202,6 +205,7 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
  * @method Models\ModifyNetworkApplicationResponse ModifyNetworkApplication(Models\ModifyNetworkApplicationRequest $req) 修改网络应用
  * @method Models\ModifyNoticeContentResponse ModifyNoticeContent(Models\ModifyNoticeContentRequest $req) 该接口用于修改通知内容配置
  * @method Models\ModifyScheduledSqlResponse ModifyScheduledSql(Models\ModifyScheduledSqlRequest $req) 本接口用于修改定时SQL分析任务
+ * @method Models\ModifySearchViewResponse ModifySearchView(Models\ModifySearchViewRequest $req) 修改查询视图
  * @method Models\ModifyShipperResponse ModifyShipper(Models\ModifyShipperRequest $req) 修改现有的投递规则，客户如果使用此接口，需要自行处理CLS对指定bucket的写权限。
  * @method Models\ModifySplunkDeliverResponse ModifySplunkDeliver(Models\ModifySplunkDeliverRequest $req) 修改splunk投递任务相关信息
  * @method Models\ModifyTopicResponse ModifyTopic(Models\ModifyTopicRequest $req) 本接口用于修改日志或指标主题。

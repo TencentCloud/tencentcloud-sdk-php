@@ -20,81 +20,81 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 大模型token统计信息
  *
- * @method string getModelName() 获取模型名称
+ * @method string getModelName() 获取<p>模型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModelName(string $ModelName) 设置模型名称
+ * @method void setModelName(string $ModelName) 设置<p>模型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getFirstTokenCost() 获取首Token耗时
+ * @method integer getFirstTokenCost() 获取<p>首Token耗时</p><p>单位：ms</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFirstTokenCost(integer $FirstTokenCost) 设置首Token耗时
+ * @method void setFirstTokenCost(integer $FirstTokenCost) 设置<p>首Token耗时</p><p>单位：ms</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalCost() 获取总耗时
+ * @method integer getTotalCost() 获取<p>总耗时</p><p>单位：ms</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalCost(integer $TotalCost) 设置总耗时
+ * @method void setTotalCost(integer $TotalCost) 设置<p>总耗时</p><p>单位：ms</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getInputTokens() 获取输入Token数量
+ * @method integer getInputTokens() 获取<p>输入Token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInputTokens(integer $InputTokens) 设置输入Token数量
+ * @method void setInputTokens(integer $InputTokens) 设置<p>输入Token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOutputTokens() 获取输出Token数量
+ * @method integer getOutputTokens() 获取<p>输出Token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutputTokens(integer $OutputTokens) 设置输出Token数量
+ * @method void setOutputTokens(integer $OutputTokens) 设置<p>输出Token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalTokens() 获取总Token数量
+ * @method integer getTotalTokens() 获取<p>总Token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalTokens(integer $TotalTokens) 设置总Token数量
+ * @method void setTotalTokens(integer $TotalTokens) 设置<p>总Token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class StatisticInfo extends AbstractModel
 {
     /**
-     * @var string 模型名称
+     * @var string <p>模型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModelName;
 
     /**
-     * @var integer 首Token耗时
+     * @var integer <p>首Token耗时</p><p>单位：ms</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FirstTokenCost;
 
     /**
-     * @var integer 总耗时
+     * @var integer <p>总耗时</p><p>单位：ms</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCost;
 
     /**
-     * @var integer 输入Token数量
+     * @var integer <p>输入Token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputTokens;
 
     /**
-     * @var integer 输出Token数量
+     * @var integer <p>输出Token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputTokens;
 
     /**
-     * @var integer 总Token数量
+     * @var integer <p>总Token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalTokens;
 
     /**
-     * @param string $ModelName 模型名称
+     * @param string $ModelName <p>模型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $FirstTokenCost 首Token耗时
+     * @param integer $FirstTokenCost <p>首Token耗时</p><p>单位：ms</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalCost 总耗时
+     * @param integer $TotalCost <p>总耗时</p><p>单位：ms</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $InputTokens 输入Token数量
+     * @param integer $InputTokens <p>输入Token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $OutputTokens 输出Token数量
+     * @param integer $OutputTokens <p>输出Token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalTokens 总Token数量
+     * @param integer $TotalTokens <p>总Token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

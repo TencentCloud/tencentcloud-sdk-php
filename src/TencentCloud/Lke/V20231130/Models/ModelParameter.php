@@ -20,81 +20,81 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 模型参数范围
  *
- * @method string getName() 获取超参名称
+ * @method string getName() 获取<p>超参名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置超参名称
+ * @method void setName(string $Name) 设置<p>超参名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getType() 获取类型
- * @method void setType(string $Type) 设置类型
- * @method string getDefaultValue() 获取默认值
- * @method void setDefaultValue(string $DefaultValue) 设置默认值
- * @method array getEnumValues() 获取枚举值
- * @method void setEnumValues(array $EnumValues) 设置枚举值
- * @method float getDefault() 获取默认值
+ * @method string getType() 获取<p>类型</p><p>枚举值：</p><ul><li>string： 字符类型</li><li>int： 整数类型</li><li>float： 浮点数类型</li><li>array： 数组类型</li></ul>
+ * @method void setType(string $Type) 设置<p>类型</p><p>枚举值：</p><ul><li>string： 字符类型</li><li>int： 整数类型</li><li>float： 浮点数类型</li><li>array： 数组类型</li></ul>
+ * @method string getDefaultValue() 获取<p>默认值</p>
+ * @method void setDefaultValue(string $DefaultValue) 设置<p>默认值</p>
+ * @method array getEnumValues() 获取<p>枚举值</p>
+ * @method void setEnumValues(array $EnumValues) 设置<p>枚举值</p>
+ * @method float getDefault() 获取<p>默认值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDefault(float $Default) 设置默认值
+ * @method void setDefault(float $Default) 设置<p>默认值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getMin() 获取最小值
+ * @method float getMin() 获取<p>最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMin(float $Min) 设置最小值
+ * @method void setMin(float $Min) 设置<p>最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getMax() 获取最大值
+ * @method float getMax() 获取<p>最大值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMax(float $Max) 设置最大值
+ * @method void setMax(float $Max) 设置<p>最大值</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ModelParameter extends AbstractModel
 {
     /**
-     * @var string 超参名称
+     * @var string <p>超参名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var string 类型
+     * @var string <p>类型</p><p>枚举值：</p><ul><li>string： 字符类型</li><li>int： 整数类型</li><li>float： 浮点数类型</li><li>array： 数组类型</li></ul>
      */
     public $Type;
 
     /**
-     * @var string 默认值
+     * @var string <p>默认值</p>
      */
     public $DefaultValue;
 
     /**
-     * @var array 枚举值
+     * @var array <p>枚举值</p>
      */
     public $EnumValues;
 
     /**
-     * @var float 默认值
+     * @var float <p>默认值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Default;
 
     /**
-     * @var float 最小值
+     * @var float <p>最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Min;
 
     /**
-     * @var float 最大值
+     * @var float <p>最大值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Max;
 
     /**
-     * @param string $Name 超参名称
+     * @param string $Name <p>超参名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Type 类型
-     * @param string $DefaultValue 默认值
-     * @param array $EnumValues 枚举值
-     * @param float $Default 默认值
+     * @param string $Type <p>类型</p><p>枚举值：</p><ul><li>string： 字符类型</li><li>int： 整数类型</li><li>float： 浮点数类型</li><li>array： 数组类型</li></ul>
+     * @param string $DefaultValue <p>默认值</p>
+     * @param array $EnumValues <p>枚举值</p>
+     * @param float $Default <p>默认值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $Min 最小值
+     * @param float $Min <p>最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $Max 最大值
+     * @param float $Max <p>最大值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

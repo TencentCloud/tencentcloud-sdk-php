@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoginUin(string $LoginUin) 设置登录用户主账号(集成商模式必填)
  * @method string getLoginSubAccountUin() 获取登录用户子账号(集成商模式必填)
  * @method void setLoginSubAccountUin(string $LoginSubAccountUin) 设置登录用户子账号(集成商模式必填)
+ * @method string getQuery() 获取查询内容
+ * @method void setQuery(string $Query) 设置查询内容
  */
 class ListWorkflowRunsRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ListWorkflowRunsRequest extends AbstractModel
     public $LoginSubAccountUin;
 
     /**
+     * @var string 查询内容
+     */
+    public $Query;
+
+    /**
      * @param string $AppBizId 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      * @param integer $PageSize 每页数量(取值范围1-200)
      * @param integer $RunEnv 运行环境。0: 测试环境； 1: 正式环境
      * @param integer $Page 页码(必须大于0)
      * @param string $LoginUin 登录用户主账号(集成商模式必填)
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)
+     * @param string $Query 查询内容
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class ListWorkflowRunsRequest extends AbstractModel
 
         if (array_key_exists("LoginSubAccountUin",$param) and $param["LoginSubAccountUin"] !== null) {
             $this->LoginSubAccountUin = $param["LoginSubAccountUin"];
+        }
+
+        if (array_key_exists("Query",$param) and $param["Query"] !== null) {
+            $this->Query = $param["Query"];
         }
     }
 }

@@ -20,54 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRejectedQuestion请求参数结构体
  *
- * @method string getBotBizId() 获取应用ID, 获取方式参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
- * @method void setBotBizId(string $BotBizId) 设置应用ID, 获取方式参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
- * @method string getQuestion() 获取拒答问题
-
-
- * @method void setQuestion(string $Question) 设置拒答问题
-
-
- * @method integer getBusinessSource() 获取拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加
- * @method void setBusinessSource(integer $BusinessSource) 设置拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加
- * @method string getBusinessId() 获取拒答问题来源的数据源唯一id
-
-
- * @method void setBusinessId(string $BusinessId) 设置拒答问题来源的数据源唯一id
+ * @method string getBotBizId() 获取<p>应用ID, 获取方式参看如何获取<a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a></p>
+ * @method void setBotBizId(string $BotBizId) 设置<p>应用ID, 获取方式参看如何获取<a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a></p>
+ * @method string getQuestion() 获取<p>拒答问题</p>
+ * @method void setQuestion(string $Question) 设置<p>拒答问题</p>
+ * @method integer getBusinessSource() 获取<p>拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加</p>
+ * @method void setBusinessSource(integer $BusinessSource) 设置<p>拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加</p>
+ * @method string getBusinessId() 获取<p>拒答问题来源的数据源唯一id</p>
+ * @method void setBusinessId(string $BusinessId) 设置<p>拒答问题来源的数据源唯一id</p>
+ * @method integer getEnableScope() 获取<p>拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效 默认值：2。</p>
+ * @method void setEnableScope(integer $EnableScope) 设置<p>拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效 默认值：2。</p>
  */
 class CreateRejectedQuestionRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID, 获取方式参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+     * @var string <p>应用ID, 获取方式参看如何获取<a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a></p>
      */
     public $BotBizId;
 
     /**
-     * @var string 拒答问题
-
-
+     * @var string <p>拒答问题</p>
      */
     public $Question;
 
     /**
-     * @var integer 拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加
+     * @var integer <p>拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加</p>
      */
     public $BusinessSource;
 
     /**
-     * @var string 拒答问题来源的数据源唯一id
-
-
+     * @var string <p>拒答问题来源的数据源唯一id</p>
      */
     public $BusinessId;
 
     /**
-     * @param string $BotBizId 应用ID, 获取方式参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
-     * @param string $Question 拒答问题
+     * @var integer <p>拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效 默认值：2。</p>
+     */
+    public $EnableScope;
 
-
-     * @param integer $BusinessSource 拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加
-     * @param string $BusinessId 拒答问题来源的数据源唯一id
+    /**
+     * @param string $BotBizId <p>应用ID, 获取方式参看如何获取<a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a></p>
+     * @param string $Question <p>拒答问题</p>
+     * @param integer $BusinessSource <p>拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加</p>
+     * @param string $BusinessId <p>拒答问题来源的数据源唯一id</p>
+     * @param integer $EnableScope <p>拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效 默认值：2。</p>
      */
     function __construct()
     {
@@ -96,6 +92,10 @@ class CreateRejectedQuestionRequest extends AbstractModel
 
         if (array_key_exists("BusinessId",$param) and $param["BusinessId"] !== null) {
             $this->BusinessId = $param["BusinessId"];
+        }
+
+        if (array_key_exists("EnableScope",$param) and $param["EnableScope"] !== null) {
+            $this->EnableScope = $param["EnableScope"];
         }
     }
 }

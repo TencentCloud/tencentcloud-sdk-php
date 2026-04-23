@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeDBInstance返回参数结构体
  *
- * @method array getDealIds() 获取订单 ID。
- * @method void setDealIds(array $DealIds) 设置订单 ID。
- * @method string getAsyncRequestId() 获取异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/236/20410)。
- * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/236/20410)。
+ * @method array getDealIds() 获取<p>订单 ID。</p>
+ * @method void setDealIds(array $DealIds) 设置<p>订单 ID。</p>
+ * @method string getAsyncRequestId() 获取<p>异步任务的请求 ID，可使用此 ID <a href="https://cloud.tencent.com/document/product/236/20410">查询异步任务的执行结果</a>。</p>
+ * @method void setAsyncRequestId(string $AsyncRequestId) 设置<p>异步任务的请求 ID，可使用此 ID <a href="https://cloud.tencent.com/document/product/236/20410">查询异步任务的执行结果</a>。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class UpgradeDBInstanceResponse extends AbstractModel
 {
     /**
-     * @var array 订单 ID。
+     * @var array <p>订单 ID。</p>
      */
     public $DealIds;
 
     /**
-     * @var string 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/236/20410)。
+     * @var string <p>异步任务的请求 ID，可使用此 ID <a href="https://cloud.tencent.com/document/product/236/20410">查询异步任务的执行结果</a>。</p>
      */
     public $AsyncRequestId;
 
@@ -45,8 +45,8 @@ class UpgradeDBInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DealIds 订单 ID。
-     * @param string $AsyncRequestId 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/236/20410)。
+     * @param array $DealIds <p>订单 ID。</p>
+     * @param string $AsyncRequestId <p>异步任务的请求 ID，可使用此 ID <a href="https://cloud.tencent.com/document/product/236/20410">查询异步任务的执行结果</a>。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

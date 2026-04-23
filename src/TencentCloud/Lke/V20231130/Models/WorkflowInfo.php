@@ -20,94 +20,102 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 工作流信息
  *
- * @method string getWorkflowId() 获取工作流ID
+ * @method string getWorkflowId() 获取<p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowId(string $WorkflowId) 设置工作流ID
+ * @method void setWorkflowId(string $WorkflowId) 设置<p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkflowName() 获取工作流名称
+ * @method string getWorkflowName() 获取<p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowName(string $WorkflowName) 设置工作流名称
+ * @method void setWorkflowName(string $WorkflowName) 设置<p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkflowRunId() 获取工作流运行ID
+ * @method string getWorkflowRunId() 获取<p>工作流运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowRunId(string $WorkflowRunId) 设置工作流运行ID
+ * @method void setWorkflowRunId(string $WorkflowRunId) 设置<p>工作流运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getOptionCards() 获取选项卡
+ * @method array getOptionCards() 获取<p>选项卡</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOptionCards(array $OptionCards) 设置选项卡
+ * @method void setOptionCards(array $OptionCards) 设置<p>选项卡</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getOutputs() 获取多气泡的输出结果
+ * @method array getOutputs() 获取<p>多气泡的输出结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutputs(array $Outputs) 设置多气泡的输出结果
+ * @method void setOutputs(array $Outputs) 设置<p>多气泡的输出结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkflowReleaseTime() 获取工作流发布时间，unix时间戳
+ * @method string getWorkflowReleaseTime() 获取<p>工作流发布时间，unix时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowReleaseTime(string $WorkflowReleaseTime) 设置工作流发布时间，unix时间戳
+ * @method void setWorkflowReleaseTime(string $WorkflowReleaseTime) 设置<p>工作流发布时间，unix时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getContents() 获取工作流多气泡输出
+ * @method array getContents() 获取<p>工作流多气泡输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setContents(array $Contents) 设置工作流多气泡输出
+ * @method void setContents(array $Contents) 设置<p>工作流多气泡输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getOptionMode() 获取<p>标识选项卡为单选还是双选</p><p>枚举值：</p><ul><li>0： 单选</li><li>1： 多选</li></ul>
+ * @method void setOptionMode(integer $OptionMode) 设置<p>标识选项卡为单选还是双选</p><p>枚举值：</p><ul><li>0： 单选</li><li>1： 多选</li></ul>
  */
 class WorkflowInfo extends AbstractModel
 {
     /**
-     * @var string 工作流ID
+     * @var string <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowId;
 
     /**
-     * @var string 工作流名称
+     * @var string <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowName;
 
     /**
-     * @var string 工作流运行ID
+     * @var string <p>工作流运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowRunId;
 
     /**
-     * @var array 选项卡
+     * @var array <p>选项卡</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OptionCards;
 
     /**
-     * @var array 多气泡的输出结果
+     * @var array <p>多气泡的输出结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Outputs;
 
     /**
-     * @var string 工作流发布时间，unix时间戳
+     * @var string <p>工作流发布时间，unix时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowReleaseTime;
 
     /**
-     * @var array 工作流多气泡输出
+     * @var array <p>工作流多气泡输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Contents;
 
     /**
-     * @param string $WorkflowId 工作流ID
+     * @var integer <p>标识选项卡为单选还是双选</p><p>枚举值：</p><ul><li>0： 单选</li><li>1： 多选</li></ul>
+     */
+    public $OptionMode;
+
+    /**
+     * @param string $WorkflowId <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkflowName 工作流名称
+     * @param string $WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkflowRunId 工作流运行ID
+     * @param string $WorkflowRunId <p>工作流运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $OptionCards 选项卡
+     * @param array $OptionCards <p>选项卡</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Outputs 多气泡的输出结果
+     * @param array $Outputs <p>多气泡的输出结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkflowReleaseTime 工作流发布时间，unix时间戳
+     * @param string $WorkflowReleaseTime <p>工作流发布时间，unix时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Contents 工作流多气泡输出
+     * @param array $Contents <p>工作流多气泡输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $OptionMode <p>标识选项卡为单选还是双选</p><p>枚举值：</p><ul><li>0： 单选</li><li>1： 多选</li></ul>
      */
     function __construct()
     {
@@ -153,6 +161,10 @@ class WorkflowInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Contents, $obj);
             }
+        }
+
+        if (array_key_exists("OptionMode",$param) and $param["OptionMode"] !== null) {
+            $this->OptionMode = $param["OptionMode"];
         }
     }
 }

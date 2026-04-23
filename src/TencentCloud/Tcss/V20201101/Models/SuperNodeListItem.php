@@ -20,162 +20,170 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 超级节点信息
  *
- * @method string getNodeID() 获取超级节点ID
- * @method void setNodeID(string $NodeID) 设置超级节点ID
- * @method string getNodeName() 获取超级节点名称
- * @method void setNodeName(string $NodeName) 设置超级节点名称
- * @method string getClusterName() 获取所属集群名
- * @method void setClusterName(string $ClusterName) 设置所属集群名
- * @method string getClusterID() 获取所属集群ID
- * @method void setClusterID(string $ClusterID) 设置所属集群ID
- * @method string getStatus() 获取节点状态:Running,Ready,Notready,Initializing,Failed,Error
- * @method void setStatus(string $Status) 设置节点状态:Running,Ready,Notready,Initializing,Failed,Error
- * @method string getSubNetID() 获取子网ID
- * @method void setSubNetID(string $SubNetID) 设置子网ID
- * @method string getSubNetName() 获取子网名称
- * @method void setSubNetName(string $SubNetName) 设置子网名称
- * @method string getSubNetCidr() 获取子网网段
- * @method void setSubNetCidr(string $SubNetCidr) 设置子网网段
- * @method string getZoneID() 获取可用区ID
- * @method void setZoneID(string $ZoneID) 设置可用区ID
- * @method string getZone() 获取可用区
- * @method void setZone(string $Zone) 设置可用区
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method integer getRelatePodCount() 获取关联pod数
- * @method void setRelatePodCount(integer $RelatePodCount) 设置关联pod数
- * @method integer getRelateContainerCount() 获取关联容器数
- * @method void setRelateContainerCount(integer $RelateContainerCount) 设置关联容器数
- * @method string getAgentStatus() 获取agent安装状态UNINSTALL:未安装;INSTALLED:已安装;INSTALLING:安装中;
- * @method void setAgentStatus(string $AgentStatus) 设置agent安装状态UNINSTALL:未安装;INSTALLED:已安装;INSTALLING:安装中;
- * @method string getNodeUniqueID() 获取节点唯一id
- * @method void setNodeUniqueID(string $NodeUniqueID) 设置节点唯一id
- * @method string getClusterAccessedStatus() 获取集群接入状态
- * @method void setClusterAccessedStatus(string $ClusterAccessedStatus) 设置集群接入状态
- * @method integer getChargeCoresCnt() 获取计费核数
- * @method void setChargeCoresCnt(integer $ChargeCoresCnt) 设置计费核数
- * @method string getDefendStatus() 获取防护状态:
-已防护: Defended
-未防护: UnDefended
- * @method void setDefendStatus(string $DefendStatus) 设置防护状态:
-已防护: Defended
-未防护: UnDefended
+ * @method string getNodeID() 获取<p>超级节点ID</p>
+ * @method void setNodeID(string $NodeID) 设置<p>超级节点ID</p>
+ * @method string getNodeName() 获取<p>超级节点名称</p>
+ * @method void setNodeName(string $NodeName) 设置<p>超级节点名称</p>
+ * @method string getClusterName() 获取<p>所属集群名</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>所属集群名</p>
+ * @method string getClusterID() 获取<p>所属集群ID</p>
+ * @method void setClusterID(string $ClusterID) 设置<p>所属集群ID</p>
+ * @method string getStatus() 获取<p>节点状态:Running,Ready,Notready,Initializing,Failed,Error</p>
+ * @method void setStatus(string $Status) 设置<p>节点状态:Running,Ready,Notready,Initializing,Failed,Error</p>
+ * @method string getSubNetID() 获取<p>子网ID</p>
+ * @method void setSubNetID(string $SubNetID) 设置<p>子网ID</p>
+ * @method string getSubNetName() 获取<p>子网名称</p>
+ * @method void setSubNetName(string $SubNetName) 设置<p>子网名称</p>
+ * @method string getSubNetCidr() 获取<p>子网网段</p>
+ * @method void setSubNetCidr(string $SubNetCidr) 设置<p>子网网段</p>
+ * @method string getZoneID() 获取<p>可用区ID</p>
+ * @method void setZoneID(string $ZoneID) 设置<p>可用区ID</p>
+ * @method string getZone() 获取<p>可用区</p>
+ * @method void setZone(string $Zone) 设置<p>可用区</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method integer getRelatePodCount() 获取<p>关联pod数</p>
+ * @method void setRelatePodCount(integer $RelatePodCount) 设置<p>关联pod数</p>
+ * @method integer getRelateContainerCount() 获取<p>关联容器数</p>
+ * @method void setRelateContainerCount(integer $RelateContainerCount) 设置<p>关联容器数</p>
+ * @method string getAgentStatus() 获取<p>agent安装状态UNINSTALL:未安装;INSTALLED:已安装;INSTALLING:安装中;</p>
+ * @method void setAgentStatus(string $AgentStatus) 设置<p>agent安装状态UNINSTALL:未安装;INSTALLED:已安装;INSTALLING:安装中;</p>
+ * @method string getNodeUniqueID() 获取<p>节点唯一id</p>
+ * @method void setNodeUniqueID(string $NodeUniqueID) 设置<p>节点唯一id</p>
+ * @method string getClusterAccessedStatus() 获取<p>集群接入状态</p>
+ * @method void setClusterAccessedStatus(string $ClusterAccessedStatus) 设置<p>集群接入状态</p>
+ * @method integer getChargeCoresCnt() 获取<p>计费核数</p>
+ * @method void setChargeCoresCnt(integer $ChargeCoresCnt) 设置<p>计费核数</p>
+ * @method string getDefendStatus() 获取<p>防护状态:<br>已防护: Defended<br>未防护: UnDefended</p>
+ * @method void setDefendStatus(string $DefendStatus) 设置<p>防护状态:<br>已防护: Defended<br>未防护: UnDefended</p>
+ * @method string getClusterAccessedSubStatus() 获取<p>集群接入子状态</p><p>枚举值：</p><ul><li>AccessedSubNone： 无</li><li>AccessedSubUninstallException： 卸载异常</li><li>AccessedSubTimeout： 接入超时</li><li>AccessedSubUninstallTimeout： 卸载超时</li><li>AccessedSubResourceException： 集群组件检查异常-Deployment/DaemonSet等异常</li><li>AccessedSubCAMPermissionDenied： CAM权限不够</li></ul>
+ * @method void setClusterAccessedSubStatus(string $ClusterAccessedSubStatus) 设置<p>集群接入子状态</p><p>枚举值：</p><ul><li>AccessedSubNone： 无</li><li>AccessedSubUninstallException： 卸载异常</li><li>AccessedSubTimeout： 接入超时</li><li>AccessedSubUninstallTimeout： 卸载超时</li><li>AccessedSubResourceException： 集群组件检查异常-Deployment/DaemonSet等异常</li><li>AccessedSubCAMPermissionDenied： CAM权限不够</li></ul>
+ * @method string getClusterAccessedErrorReason() 获取<p>失败具体原因描述</p>
+ * @method void setClusterAccessedErrorReason(string $ClusterAccessedErrorReason) 设置<p>失败具体原因描述</p>
  */
 class SuperNodeListItem extends AbstractModel
 {
     /**
-     * @var string 超级节点ID
+     * @var string <p>超级节点ID</p>
      */
     public $NodeID;
 
     /**
-     * @var string 超级节点名称
+     * @var string <p>超级节点名称</p>
      */
     public $NodeName;
 
     /**
-     * @var string 所属集群名
+     * @var string <p>所属集群名</p>
      */
     public $ClusterName;
 
     /**
-     * @var string 所属集群ID
+     * @var string <p>所属集群ID</p>
      */
     public $ClusterID;
 
     /**
-     * @var string 节点状态:Running,Ready,Notready,Initializing,Failed,Error
+     * @var string <p>节点状态:Running,Ready,Notready,Initializing,Failed,Error</p>
      */
     public $Status;
 
     /**
-     * @var string 子网ID
+     * @var string <p>子网ID</p>
      */
     public $SubNetID;
 
     /**
-     * @var string 子网名称
+     * @var string <p>子网名称</p>
      */
     public $SubNetName;
 
     /**
-     * @var string 子网网段
+     * @var string <p>子网网段</p>
      */
     public $SubNetCidr;
 
     /**
-     * @var string 可用区ID
+     * @var string <p>可用区ID</p>
      */
     public $ZoneID;
 
     /**
-     * @var string 可用区
+     * @var string <p>可用区</p>
      */
     public $Zone;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer 关联pod数
+     * @var integer <p>关联pod数</p>
      */
     public $RelatePodCount;
 
     /**
-     * @var integer 关联容器数
+     * @var integer <p>关联容器数</p>
      */
     public $RelateContainerCount;
 
     /**
-     * @var string agent安装状态UNINSTALL:未安装;INSTALLED:已安装;INSTALLING:安装中;
+     * @var string <p>agent安装状态UNINSTALL:未安装;INSTALLED:已安装;INSTALLING:安装中;</p>
      */
     public $AgentStatus;
 
     /**
-     * @var string 节点唯一id
+     * @var string <p>节点唯一id</p>
      */
     public $NodeUniqueID;
 
     /**
-     * @var string 集群接入状态
+     * @var string <p>集群接入状态</p>
      */
     public $ClusterAccessedStatus;
 
     /**
-     * @var integer 计费核数
+     * @var integer <p>计费核数</p>
      */
     public $ChargeCoresCnt;
 
     /**
-     * @var string 防护状态:
-已防护: Defended
-未防护: UnDefended
+     * @var string <p>防护状态:<br>已防护: Defended<br>未防护: UnDefended</p>
      */
     public $DefendStatus;
 
     /**
-     * @param string $NodeID 超级节点ID
-     * @param string $NodeName 超级节点名称
-     * @param string $ClusterName 所属集群名
-     * @param string $ClusterID 所属集群ID
-     * @param string $Status 节点状态:Running,Ready,Notready,Initializing,Failed,Error
-     * @param string $SubNetID 子网ID
-     * @param string $SubNetName 子网名称
-     * @param string $SubNetCidr 子网网段
-     * @param string $ZoneID 可用区ID
-     * @param string $Zone 可用区
-     * @param string $CreateTime 创建时间
-     * @param integer $RelatePodCount 关联pod数
-     * @param integer $RelateContainerCount 关联容器数
-     * @param string $AgentStatus agent安装状态UNINSTALL:未安装;INSTALLED:已安装;INSTALLING:安装中;
-     * @param string $NodeUniqueID 节点唯一id
-     * @param string $ClusterAccessedStatus 集群接入状态
-     * @param integer $ChargeCoresCnt 计费核数
-     * @param string $DefendStatus 防护状态:
-已防护: Defended
-未防护: UnDefended
+     * @var string <p>集群接入子状态</p><p>枚举值：</p><ul><li>AccessedSubNone： 无</li><li>AccessedSubUninstallException： 卸载异常</li><li>AccessedSubTimeout： 接入超时</li><li>AccessedSubUninstallTimeout： 卸载超时</li><li>AccessedSubResourceException： 集群组件检查异常-Deployment/DaemonSet等异常</li><li>AccessedSubCAMPermissionDenied： CAM权限不够</li></ul>
+     */
+    public $ClusterAccessedSubStatus;
+
+    /**
+     * @var string <p>失败具体原因描述</p>
+     */
+    public $ClusterAccessedErrorReason;
+
+    /**
+     * @param string $NodeID <p>超级节点ID</p>
+     * @param string $NodeName <p>超级节点名称</p>
+     * @param string $ClusterName <p>所属集群名</p>
+     * @param string $ClusterID <p>所属集群ID</p>
+     * @param string $Status <p>节点状态:Running,Ready,Notready,Initializing,Failed,Error</p>
+     * @param string $SubNetID <p>子网ID</p>
+     * @param string $SubNetName <p>子网名称</p>
+     * @param string $SubNetCidr <p>子网网段</p>
+     * @param string $ZoneID <p>可用区ID</p>
+     * @param string $Zone <p>可用区</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param integer $RelatePodCount <p>关联pod数</p>
+     * @param integer $RelateContainerCount <p>关联容器数</p>
+     * @param string $AgentStatus <p>agent安装状态UNINSTALL:未安装;INSTALLED:已安装;INSTALLING:安装中;</p>
+     * @param string $NodeUniqueID <p>节点唯一id</p>
+     * @param string $ClusterAccessedStatus <p>集群接入状态</p>
+     * @param integer $ChargeCoresCnt <p>计费核数</p>
+     * @param string $DefendStatus <p>防护状态:<br>已防护: Defended<br>未防护: UnDefended</p>
+     * @param string $ClusterAccessedSubStatus <p>集群接入子状态</p><p>枚举值：</p><ul><li>AccessedSubNone： 无</li><li>AccessedSubUninstallException： 卸载异常</li><li>AccessedSubTimeout： 接入超时</li><li>AccessedSubUninstallTimeout： 卸载超时</li><li>AccessedSubResourceException： 集群组件检查异常-Deployment/DaemonSet等异常</li><li>AccessedSubCAMPermissionDenied： CAM权限不够</li></ul>
+     * @param string $ClusterAccessedErrorReason <p>失败具体原因描述</p>
      */
     function __construct()
     {
@@ -260,6 +268,14 @@ class SuperNodeListItem extends AbstractModel
 
         if (array_key_exists("DefendStatus",$param) and $param["DefendStatus"] !== null) {
             $this->DefendStatus = $param["DefendStatus"];
+        }
+
+        if (array_key_exists("ClusterAccessedSubStatus",$param) and $param["ClusterAccessedSubStatus"] !== null) {
+            $this->ClusterAccessedSubStatus = $param["ClusterAccessedSubStatus"];
+        }
+
+        if (array_key_exists("ClusterAccessedErrorReason",$param) and $param["ClusterAccessedErrorReason"] !== null) {
+            $this->ClusterAccessedErrorReason = $param["ClusterAccessedErrorReason"];
         }
     }
 }

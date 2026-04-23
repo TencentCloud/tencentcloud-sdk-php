@@ -20,210 +20,218 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 容器安全主机列表
  *
- * @method string getHostID() 获取主机id
- * @method void setHostID(string $HostID) 设置主机id
- * @method string getHostIP() 获取主机ip即内网ip
- * @method void setHostIP(string $HostIP) 设置主机ip即内网ip
- * @method string getHostName() 获取主机名称
- * @method void setHostName(string $HostName) 设置主机名称
- * @method string getGroup() 获取业务组
- * @method void setGroup(string $Group) 设置业务组
- * @method string getDockerVersion() 获取docker 版本
- * @method void setDockerVersion(string $DockerVersion) 设置docker 版本
- * @method string getDockerFileSystemDriver() 获取docker 文件系统类型
- * @method void setDockerFileSystemDriver(string $DockerFileSystemDriver) 设置docker 文件系统类型
- * @method integer getImageCnt() 获取镜像个数
- * @method void setImageCnt(integer $ImageCnt) 设置镜像个数
- * @method integer getContainerCnt() 获取容器个数
- * @method void setContainerCnt(integer $ContainerCnt) 设置容器个数
- * @method string getStatus() 获取agent运行状态
- * @method void setStatus(string $Status) 设置agent运行状态
- * @method boolean getIsContainerd() 获取是否是Containerd
- * @method void setIsContainerd(boolean $IsContainerd) 设置是否是Containerd
- * @method string getMachineType() 获取主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器；
- * @method void setMachineType(string $MachineType) 设置主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器；
- * @method string getPublicIp() 获取外网ip
- * @method void setPublicIp(string $PublicIp) 设置外网ip
- * @method string getUuid() 获取主机uuid
- * @method void setUuid(string $Uuid) 设置主机uuid
- * @method string getInstanceID() 获取主机实例ID
- * @method void setInstanceID(string $InstanceID) 设置主机实例ID
- * @method integer getRegionID() 获取地域ID
- * @method void setRegionID(integer $RegionID) 设置地域ID
- * @method ProjectInfo getProject() 获取所属项目
- * @method void setProject(ProjectInfo $Project) 设置所属项目
- * @method array getTags() 获取标签
- * @method void setTags(array $Tags) 设置标签
- * @method string getClusterID() 获取集群id
- * @method void setClusterID(string $ClusterID) 设置集群id
- * @method string getClusterName() 获取集群名称
- * @method void setClusterName(string $ClusterName) 设置集群名称
- * @method string getClusterAccessedStatus() 获取集群接入状态
- * @method void setClusterAccessedStatus(string $ClusterAccessedStatus) 设置集群接入状态
- * @method integer getChargeCoresCnt() 获取计费核数
- * @method void setChargeCoresCnt(integer $ChargeCoresCnt) 设置计费核数
- * @method string getDefendStatus() 获取防护状态:
-已防护: Defended
-未防护: UnDefended
- * @method void setDefendStatus(string $DefendStatus) 设置防护状态:
-已防护: Defended
-未防护: UnDefended
- * @method integer getCoresCnt() 获取核数
- * @method void setCoresCnt(integer $CoresCnt) 设置核数
- * @method string getLastOnlineTime() 获取最近在线时间
- * @method void setLastOnlineTime(string $LastOnlineTime) 设置最近在线时间
+ * @method string getHostID() 获取<p>主机id</p>
+ * @method void setHostID(string $HostID) 设置<p>主机id</p>
+ * @method string getHostIP() 获取<p>主机ip即内网ip</p>
+ * @method void setHostIP(string $HostIP) 设置<p>主机ip即内网ip</p>
+ * @method string getHostName() 获取<p>主机名称</p>
+ * @method void setHostName(string $HostName) 设置<p>主机名称</p>
+ * @method string getGroup() 获取<p>业务组</p>
+ * @method void setGroup(string $Group) 设置<p>业务组</p>
+ * @method string getDockerVersion() 获取<p>docker 版本</p>
+ * @method void setDockerVersion(string $DockerVersion) 设置<p>docker 版本</p>
+ * @method string getDockerFileSystemDriver() 获取<p>docker 文件系统类型</p>
+ * @method void setDockerFileSystemDriver(string $DockerFileSystemDriver) 设置<p>docker 文件系统类型</p>
+ * @method integer getImageCnt() 获取<p>镜像个数</p>
+ * @method void setImageCnt(integer $ImageCnt) 设置<p>镜像个数</p>
+ * @method integer getContainerCnt() 获取<p>容器个数</p>
+ * @method void setContainerCnt(integer $ContainerCnt) 设置<p>容器个数</p>
+ * @method string getStatus() 获取<p>agent运行状态</p>
+ * @method void setStatus(string $Status) 设置<p>agent运行状态</p>
+ * @method boolean getIsContainerd() 获取<p>是否是Containerd</p>
+ * @method void setIsContainerd(boolean $IsContainerd) 设置<p>是否是Containerd</p>
+ * @method string getMachineType() 获取<p>主机来源：[&quot;CVM&quot;, &quot;ECM&quot;, &quot;LH&quot;, &quot;BM&quot;]  中的之一为腾讯云服务器；[&quot;Other&quot;]之一非腾讯云服务器；</p>
+ * @method void setMachineType(string $MachineType) 设置<p>主机来源：[&quot;CVM&quot;, &quot;ECM&quot;, &quot;LH&quot;, &quot;BM&quot;]  中的之一为腾讯云服务器；[&quot;Other&quot;]之一非腾讯云服务器；</p>
+ * @method string getPublicIp() 获取<p>外网ip</p>
+ * @method void setPublicIp(string $PublicIp) 设置<p>外网ip</p>
+ * @method string getUuid() 获取<p>主机uuid</p>
+ * @method void setUuid(string $Uuid) 设置<p>主机uuid</p>
+ * @method string getInstanceID() 获取<p>主机实例ID</p>
+ * @method void setInstanceID(string $InstanceID) 设置<p>主机实例ID</p>
+ * @method integer getRegionID() 获取<p>地域ID</p>
+ * @method void setRegionID(integer $RegionID) 设置<p>地域ID</p>
+ * @method ProjectInfo getProject() 获取<p>所属项目</p>
+ * @method void setProject(ProjectInfo $Project) 设置<p>所属项目</p>
+ * @method array getTags() 获取<p>标签</p>
+ * @method void setTags(array $Tags) 设置<p>标签</p>
+ * @method string getClusterID() 获取<p>集群id</p>
+ * @method void setClusterID(string $ClusterID) 设置<p>集群id</p>
+ * @method string getClusterName() 获取<p>集群名称</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名称</p>
+ * @method string getClusterAccessedStatus() 获取<p>集群接入状态</p>
+ * @method void setClusterAccessedStatus(string $ClusterAccessedStatus) 设置<p>集群接入状态</p>
+ * @method string getClusterAccessedSubStatus() 获取<p>集群接入子状态</p><p>枚举值：</p><ul><li>AccessedSubNone： 无</li><li>AccessedSubUninstallException： 卸载异常</li><li>AccessedSubTimeout： 接入超时</li><li>AccessedSubUninstallTimeout： 卸载超时</li><li>AccessedSubResourceException： 集群组件检查异常-Deployment/DaemonSet等异常</li><li>AccessedSubCAMPermissionDenied： CAM权限不够</li></ul>
+ * @method void setClusterAccessedSubStatus(string $ClusterAccessedSubStatus) 设置<p>集群接入子状态</p><p>枚举值：</p><ul><li>AccessedSubNone： 无</li><li>AccessedSubUninstallException： 卸载异常</li><li>AccessedSubTimeout： 接入超时</li><li>AccessedSubUninstallTimeout： 卸载超时</li><li>AccessedSubResourceException： 集群组件检查异常-Deployment/DaemonSet等异常</li><li>AccessedSubCAMPermissionDenied： CAM权限不够</li></ul>
+ * @method string getClusterAccessedErrorReason() 获取<p>失败具体原因描述</p>
+ * @method void setClusterAccessedErrorReason(string $ClusterAccessedErrorReason) 设置<p>失败具体原因描述</p>
+ * @method integer getChargeCoresCnt() 获取<p>计费核数</p>
+ * @method void setChargeCoresCnt(integer $ChargeCoresCnt) 设置<p>计费核数</p>
+ * @method string getDefendStatus() 获取<p>防护状态:<br>已防护: Defended<br>未防护: UnDefended</p>
+ * @method void setDefendStatus(string $DefendStatus) 设置<p>防护状态:<br>已防护: Defended<br>未防护: UnDefended</p>
+ * @method integer getCoresCnt() 获取<p>核数</p>
+ * @method void setCoresCnt(integer $CoresCnt) 设置<p>核数</p>
+ * @method string getLastOnlineTime() 获取<p>最近在线时间</p>
+ * @method void setLastOnlineTime(string $LastOnlineTime) 设置<p>最近在线时间</p>
  */
 class HostInfo extends AbstractModel
 {
     /**
-     * @var string 主机id
+     * @var string <p>主机id</p>
      */
     public $HostID;
 
     /**
-     * @var string 主机ip即内网ip
+     * @var string <p>主机ip即内网ip</p>
      */
     public $HostIP;
 
     /**
-     * @var string 主机名称
+     * @var string <p>主机名称</p>
      */
     public $HostName;
 
     /**
-     * @var string 业务组
+     * @var string <p>业务组</p>
      */
     public $Group;
 
     /**
-     * @var string docker 版本
+     * @var string <p>docker 版本</p>
      */
     public $DockerVersion;
 
     /**
-     * @var string docker 文件系统类型
+     * @var string <p>docker 文件系统类型</p>
      */
     public $DockerFileSystemDriver;
 
     /**
-     * @var integer 镜像个数
+     * @var integer <p>镜像个数</p>
      */
     public $ImageCnt;
 
     /**
-     * @var integer 容器个数
+     * @var integer <p>容器个数</p>
      */
     public $ContainerCnt;
 
     /**
-     * @var string agent运行状态
+     * @var string <p>agent运行状态</p>
      */
     public $Status;
 
     /**
-     * @var boolean 是否是Containerd
+     * @var boolean <p>是否是Containerd</p>
      */
     public $IsContainerd;
 
     /**
-     * @var string 主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器；
+     * @var string <p>主机来源：[&quot;CVM&quot;, &quot;ECM&quot;, &quot;LH&quot;, &quot;BM&quot;]  中的之一为腾讯云服务器；[&quot;Other&quot;]之一非腾讯云服务器；</p>
      */
     public $MachineType;
 
     /**
-     * @var string 外网ip
+     * @var string <p>外网ip</p>
      */
     public $PublicIp;
 
     /**
-     * @var string 主机uuid
+     * @var string <p>主机uuid</p>
      */
     public $Uuid;
 
     /**
-     * @var string 主机实例ID
+     * @var string <p>主机实例ID</p>
      */
     public $InstanceID;
 
     /**
-     * @var integer 地域ID
+     * @var integer <p>地域ID</p>
      */
     public $RegionID;
 
     /**
-     * @var ProjectInfo 所属项目
+     * @var ProjectInfo <p>所属项目</p>
      */
     public $Project;
 
     /**
-     * @var array 标签
+     * @var array <p>标签</p>
      */
     public $Tags;
 
     /**
-     * @var string 集群id
+     * @var string <p>集群id</p>
      */
     public $ClusterID;
 
     /**
-     * @var string 集群名称
+     * @var string <p>集群名称</p>
      */
     public $ClusterName;
 
     /**
-     * @var string 集群接入状态
+     * @var string <p>集群接入状态</p>
      */
     public $ClusterAccessedStatus;
 
     /**
-     * @var integer 计费核数
+     * @var string <p>集群接入子状态</p><p>枚举值：</p><ul><li>AccessedSubNone： 无</li><li>AccessedSubUninstallException： 卸载异常</li><li>AccessedSubTimeout： 接入超时</li><li>AccessedSubUninstallTimeout： 卸载超时</li><li>AccessedSubResourceException： 集群组件检查异常-Deployment/DaemonSet等异常</li><li>AccessedSubCAMPermissionDenied： CAM权限不够</li></ul>
+     */
+    public $ClusterAccessedSubStatus;
+
+    /**
+     * @var string <p>失败具体原因描述</p>
+     */
+    public $ClusterAccessedErrorReason;
+
+    /**
+     * @var integer <p>计费核数</p>
      */
     public $ChargeCoresCnt;
 
     /**
-     * @var string 防护状态:
-已防护: Defended
-未防护: UnDefended
+     * @var string <p>防护状态:<br>已防护: Defended<br>未防护: UnDefended</p>
      */
     public $DefendStatus;
 
     /**
-     * @var integer 核数
+     * @var integer <p>核数</p>
      */
     public $CoresCnt;
 
     /**
-     * @var string 最近在线时间
+     * @var string <p>最近在线时间</p>
      */
     public $LastOnlineTime;
 
     /**
-     * @param string $HostID 主机id
-     * @param string $HostIP 主机ip即内网ip
-     * @param string $HostName 主机名称
-     * @param string $Group 业务组
-     * @param string $DockerVersion docker 版本
-     * @param string $DockerFileSystemDriver docker 文件系统类型
-     * @param integer $ImageCnt 镜像个数
-     * @param integer $ContainerCnt 容器个数
-     * @param string $Status agent运行状态
-     * @param boolean $IsContainerd 是否是Containerd
-     * @param string $MachineType 主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器；
-     * @param string $PublicIp 外网ip
-     * @param string $Uuid 主机uuid
-     * @param string $InstanceID 主机实例ID
-     * @param integer $RegionID 地域ID
-     * @param ProjectInfo $Project 所属项目
-     * @param array $Tags 标签
-     * @param string $ClusterID 集群id
-     * @param string $ClusterName 集群名称
-     * @param string $ClusterAccessedStatus 集群接入状态
-     * @param integer $ChargeCoresCnt 计费核数
-     * @param string $DefendStatus 防护状态:
-已防护: Defended
-未防护: UnDefended
-     * @param integer $CoresCnt 核数
-     * @param string $LastOnlineTime 最近在线时间
+     * @param string $HostID <p>主机id</p>
+     * @param string $HostIP <p>主机ip即内网ip</p>
+     * @param string $HostName <p>主机名称</p>
+     * @param string $Group <p>业务组</p>
+     * @param string $DockerVersion <p>docker 版本</p>
+     * @param string $DockerFileSystemDriver <p>docker 文件系统类型</p>
+     * @param integer $ImageCnt <p>镜像个数</p>
+     * @param integer $ContainerCnt <p>容器个数</p>
+     * @param string $Status <p>agent运行状态</p>
+     * @param boolean $IsContainerd <p>是否是Containerd</p>
+     * @param string $MachineType <p>主机来源：[&quot;CVM&quot;, &quot;ECM&quot;, &quot;LH&quot;, &quot;BM&quot;]  中的之一为腾讯云服务器；[&quot;Other&quot;]之一非腾讯云服务器；</p>
+     * @param string $PublicIp <p>外网ip</p>
+     * @param string $Uuid <p>主机uuid</p>
+     * @param string $InstanceID <p>主机实例ID</p>
+     * @param integer $RegionID <p>地域ID</p>
+     * @param ProjectInfo $Project <p>所属项目</p>
+     * @param array $Tags <p>标签</p>
+     * @param string $ClusterID <p>集群id</p>
+     * @param string $ClusterName <p>集群名称</p>
+     * @param string $ClusterAccessedStatus <p>集群接入状态</p>
+     * @param string $ClusterAccessedSubStatus <p>集群接入子状态</p><p>枚举值：</p><ul><li>AccessedSubNone： 无</li><li>AccessedSubUninstallException： 卸载异常</li><li>AccessedSubTimeout： 接入超时</li><li>AccessedSubUninstallTimeout： 卸载超时</li><li>AccessedSubResourceException： 集群组件检查异常-Deployment/DaemonSet等异常</li><li>AccessedSubCAMPermissionDenied： CAM权限不够</li></ul>
+     * @param string $ClusterAccessedErrorReason <p>失败具体原因描述</p>
+     * @param integer $ChargeCoresCnt <p>计费核数</p>
+     * @param string $DefendStatus <p>防护状态:<br>已防护: Defended<br>未防护: UnDefended</p>
+     * @param integer $CoresCnt <p>核数</p>
+     * @param string $LastOnlineTime <p>最近在线时间</p>
      */
     function __construct()
     {
@@ -322,6 +330,14 @@ class HostInfo extends AbstractModel
 
         if (array_key_exists("ClusterAccessedStatus",$param) and $param["ClusterAccessedStatus"] !== null) {
             $this->ClusterAccessedStatus = $param["ClusterAccessedStatus"];
+        }
+
+        if (array_key_exists("ClusterAccessedSubStatus",$param) and $param["ClusterAccessedSubStatus"] !== null) {
+            $this->ClusterAccessedSubStatus = $param["ClusterAccessedSubStatus"];
+        }
+
+        if (array_key_exists("ClusterAccessedErrorReason",$param) and $param["ClusterAccessedErrorReason"] !== null) {
+            $this->ClusterAccessedErrorReason = $param["ClusterAccessedErrorReason"];
         }
 
         if (array_key_exists("ChargeCoresCnt",$param) and $param["ChargeCoresCnt"] !== null) {

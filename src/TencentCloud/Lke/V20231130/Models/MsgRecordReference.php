@@ -20,90 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 聊天详情Refer
  *
- * @method string getId() 获取id
- * @method void setId(string $Id) 设置id
- * @method string getUrl() 获取链接
- * @method void setUrl(string $Url) 设置链接
- * @method integer getType() 获取类型
- * @method void setType(integer $Type) 设置类型
- * @method string getName() 获取名称
- * @method void setName(string $Name) 设置名称
- * @method string getDocId() 获取来源文档ID
- * @method void setDocId(string $DocId) 设置来源文档ID
- * @method string getKnowledgeName() 获取知识库名称
- * @method void setKnowledgeName(string $KnowledgeName) 设置知识库名称
- * @method string getKnowledgeBizId() 获取知识库业务id
- * @method void setKnowledgeBizId(string $KnowledgeBizId) 设置知识库业务id
- * @method string getDocBizId() 获取文档业务id
- * @method void setDocBizId(string $DocBizId) 设置文档业务id
- * @method string getQaBizId() 获取问答业务id
- * @method void setQaBizId(string $QaBizId) 设置问答业务id
- * @method integer getIndex() 获取文档索引id
- * @method void setIndex(integer $Index) 设置文档索引id
+ * @method string getId() 获取<p>id</p>
+ * @method void setId(string $Id) 设置<p>id</p>
+ * @method string getUrl() 获取<p>链接</p>
+ * @method void setUrl(string $Url) 设置<p>链接</p>
+ * @method integer getType() 获取<p>类型</p><p>枚举值：</p><ul><li>1： 问答</li><li>2： 文档片段</li><li>4： 联网检索到的内容</li></ul>
+ * @method void setType(integer $Type) 设置<p>类型</p><p>枚举值：</p><ul><li>1： 问答</li><li>2： 文档片段</li><li>4： 联网检索到的内容</li></ul>
+ * @method string getName() 获取<p>名称</p>
+ * @method void setName(string $Name) 设置<p>名称</p>
+ * @method string getDocId() 获取<p>来源文档ID</p>
+ * @method void setDocId(string $DocId) 设置<p>来源文档ID</p>
+ * @method string getKnowledgeName() 获取<p>知识库名称</p>
+ * @method void setKnowledgeName(string $KnowledgeName) 设置<p>知识库名称</p>
+ * @method string getKnowledgeBizId() 获取<p>知识库业务id</p>
+ * @method void setKnowledgeBizId(string $KnowledgeBizId) 设置<p>知识库业务id</p>
+ * @method string getDocBizId() 获取<p>文档业务id</p>
+ * @method void setDocBizId(string $DocBizId) 设置<p>文档业务id</p>
+ * @method string getQaBizId() 获取<p>问答业务id</p>
+ * @method void setQaBizId(string $QaBizId) 设置<p>问答业务id</p>
+ * @method integer getIndex() 获取<p>文档索引id</p>
+ * @method void setIndex(integer $Index) 设置<p>文档索引id</p>
  */
 class MsgRecordReference extends AbstractModel
 {
     /**
-     * @var string id
+     * @var string <p>id</p>
      */
     public $Id;
 
     /**
-     * @var string 链接
+     * @var string <p>链接</p>
      */
     public $Url;
 
     /**
-     * @var integer 类型
+     * @var integer <p>类型</p><p>枚举值：</p><ul><li>1： 问答</li><li>2： 文档片段</li><li>4： 联网检索到的内容</li></ul>
      */
     public $Type;
 
     /**
-     * @var string 名称
+     * @var string <p>名称</p>
      */
     public $Name;
 
     /**
-     * @var string 来源文档ID
+     * @var string <p>来源文档ID</p>
      */
     public $DocId;
 
     /**
-     * @var string 知识库名称
+     * @var string <p>知识库名称</p>
      */
     public $KnowledgeName;
 
     /**
-     * @var string 知识库业务id
+     * @var string <p>知识库业务id</p>
      */
     public $KnowledgeBizId;
 
     /**
-     * @var string 文档业务id
+     * @var string <p>文档业务id</p>
      */
     public $DocBizId;
 
     /**
-     * @var string 问答业务id
+     * @var string <p>问答业务id</p>
      */
     public $QaBizId;
 
     /**
-     * @var integer 文档索引id
+     * @var integer <p>文档索引id</p>
      */
     public $Index;
 
     /**
-     * @param string $Id id
-     * @param string $Url 链接
-     * @param integer $Type 类型
-     * @param string $Name 名称
-     * @param string $DocId 来源文档ID
-     * @param string $KnowledgeName 知识库名称
-     * @param string $KnowledgeBizId 知识库业务id
-     * @param string $DocBizId 文档业务id
-     * @param string $QaBizId 问答业务id
-     * @param integer $Index 文档索引id
+     * @param string $Id <p>id</p>
+     * @param string $Url <p>链接</p>
+     * @param integer $Type <p>类型</p><p>枚举值：</p><ul><li>1： 问答</li><li>2： 文档片段</li><li>4： 联网检索到的内容</li></ul>
+     * @param string $Name <p>名称</p>
+     * @param string $DocId <p>来源文档ID</p>
+     * @param string $KnowledgeName <p>知识库名称</p>
+     * @param string $KnowledgeBizId <p>知识库业务id</p>
+     * @param string $DocBizId <p>文档业务id</p>
+     * @param string $QaBizId <p>问答业务id</p>
+     * @param integer $Index <p>文档索引id</p>
      */
     function __construct()
     {

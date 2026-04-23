@@ -24,17 +24,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeId(string $NodeId) 设置<p>节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getNodeType() 获取<p>节点类型</p>
+ * @method integer getNodeType() 获取<p>节点类型</p><p>枚举值：</p><ul><li>0： 未指定</li><li>1： 开始节点</li><li>2： 参数提取节点</li><li>3： 大模型节点</li><li>4： 知识问答节点</li><li>5： 知识检索节点</li><li>6： 标签提取节点</li><li>7： 代码执行节点</li><li>8： 工具节点</li><li>9： 逻辑判断节点</li><li>10： 消息节点</li><li>11： 选项卡节点</li><li>12： 循环节点</li><li>13： 意图识别节点</li><li>14： 工作流节点</li><li>15： 插件节点</li><li>16： 结束节点</li><li>17： 变量聚合节点</li><li>18： 批处理节点</li><li>19： 消息队列节点</li><li>20： 数据库节点</li><li>21： 变量赋值节点</li><li>22： 变量转换节点</li><li>23： Agent节点</li><li>24： 注释节点</li><li>25： 文件收集节点</li><li>26： 文本收集节点</li><li>27： Widget 节点</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNodeType(integer $NodeType) 设置<p>节点类型</p>
+ * @method void setNodeType(integer $NodeType) 设置<p>节点类型</p><p>枚举值：</p><ul><li>0： 未指定</li><li>1： 开始节点</li><li>2： 参数提取节点</li><li>3： 大模型节点</li><li>4： 知识问答节点</li><li>5： 知识检索节点</li><li>6： 标签提取节点</li><li>7： 代码执行节点</li><li>8： 工具节点</li><li>9： 逻辑判断节点</li><li>10： 消息节点</li><li>11： 选项卡节点</li><li>12： 循环节点</li><li>13： 意图识别节点</li><li>14： 工作流节点</li><li>15： 插件节点</li><li>16： 结束节点</li><li>17： 变量聚合节点</li><li>18： 批处理节点</li><li>19： 消息队列节点</li><li>20： 数据库节点</li><li>21： 变量赋值节点</li><li>22： 变量转换节点</li><li>23： Agent节点</li><li>24： 注释节点</li><li>25： 文件收集节点</li><li>26： 文本收集节点</li><li>27： Widget 节点</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNodeName() 获取<p>节点名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeName(string $NodeName) 设置<p>节点名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取<p>状态</p>
+ * @method integer getStatus() 获取<p>状态</p><p>枚举值：</p><ul><li>0： 初始状态</li><li>1： 运行中</li><li>2： 运行成功</li><li>3： 运行失败</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置<p>状态</p>
+ * @method void setStatus(integer $Status) 设置<p>状态</p><p>枚举值：</p><ul><li>0： 初始状态</li><li>1： 运行中</li><li>2： 运行成功</li><li>3： 运行失败</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInput() 获取<p>输入</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,7 +74,7 @@ class WorkflowRunNodeInfo extends AbstractModel
     public $NodeId;
 
     /**
-     * @var integer <p>节点类型</p>
+     * @var integer <p>节点类型</p><p>枚举值：</p><ul><li>0： 未指定</li><li>1： 开始节点</li><li>2： 参数提取节点</li><li>3： 大模型节点</li><li>4： 知识问答节点</li><li>5： 知识检索节点</li><li>6： 标签提取节点</li><li>7： 代码执行节点</li><li>8： 工具节点</li><li>9： 逻辑判断节点</li><li>10： 消息节点</li><li>11： 选项卡节点</li><li>12： 循环节点</li><li>13： 意图识别节点</li><li>14： 工作流节点</li><li>15： 插件节点</li><li>16： 结束节点</li><li>17： 变量聚合节点</li><li>18： 批处理节点</li><li>19： 消息队列节点</li><li>20： 数据库节点</li><li>21： 变量赋值节点</li><li>22： 变量转换节点</li><li>23： Agent节点</li><li>24： 注释节点</li><li>25： 文件收集节点</li><li>26： 文本收集节点</li><li>27： Widget 节点</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeType;
@@ -86,7 +86,7 @@ class WorkflowRunNodeInfo extends AbstractModel
     public $NodeName;
 
     /**
-     * @var integer <p>状态</p>
+     * @var integer <p>状态</p><p>枚举值：</p><ul><li>0： 初始状态</li><li>1： 运行中</li><li>2： 运行成功</li><li>3： 运行失败</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -136,11 +136,11 @@ class WorkflowRunNodeInfo extends AbstractModel
     /**
      * @param string $NodeId <p>节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $NodeType <p>节点类型</p>
+     * @param integer $NodeType <p>节点类型</p><p>枚举值：</p><ul><li>0： 未指定</li><li>1： 开始节点</li><li>2： 参数提取节点</li><li>3： 大模型节点</li><li>4： 知识问答节点</li><li>5： 知识检索节点</li><li>6： 标签提取节点</li><li>7： 代码执行节点</li><li>8： 工具节点</li><li>9： 逻辑判断节点</li><li>10： 消息节点</li><li>11： 选项卡节点</li><li>12： 循环节点</li><li>13： 意图识别节点</li><li>14： 工作流节点</li><li>15： 插件节点</li><li>16： 结束节点</li><li>17： 变量聚合节点</li><li>18： 批处理节点</li><li>19： 消息队列节点</li><li>20： 数据库节点</li><li>21： 变量赋值节点</li><li>22： 变量转换节点</li><li>23： Agent节点</li><li>24： 注释节点</li><li>25： 文件收集节点</li><li>26： 文本收集节点</li><li>27： Widget 节点</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NodeName <p>节点名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status <p>状态</p>
+     * @param integer $Status <p>状态</p><p>枚举值：</p><ul><li>0： 初始状态</li><li>1： 运行中</li><li>2： 运行成功</li><li>3： 运行失败</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Input <p>输入</p>
 注意：此字段可能返回 null，表示取不到有效值。

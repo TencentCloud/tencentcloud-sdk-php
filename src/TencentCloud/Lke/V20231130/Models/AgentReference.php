@@ -20,153 +20,153 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Agent中的参考来源
  *
- * @method string getDocId() 获取来源文档ID
+ * @method string getDocId() 获取<p>来源文档ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDocId(string $DocId) 设置来源文档ID
+ * @method void setDocId(string $DocId) 设置<p>来源文档ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getId() 获取id
+ * @method string getId() 获取<p>id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setId(string $Id) 设置id
+ * @method void setId(string $Id) 设置<p>id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取名称
+ * @method string getName() 获取<p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置名称
+ * @method void setName(string $Name) 设置<p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getType() 获取类型
+ * @method integer getType() 获取<p>类型</p><p>枚举值：</p><ul><li>1： 问答</li><li>2： 文档片段</li><li>4： 联网检索到的内容</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(integer $Type) 设置类型
+ * @method void setType(integer $Type) 设置<p>类型</p><p>枚举值：</p><ul><li>1： 问答</li><li>2： 文档片段</li><li>4： 联网检索到的内容</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUrl() 获取链接
+ * @method string getUrl() 获取<p>链接</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUrl(string $Url) 设置链接
+ * @method void setUrl(string $Url) 设置<p>链接</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDocBizId() 获取文档业务ID
+ * @method string getDocBizId() 获取<p>文档业务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDocBizId(string $DocBizId) 设置文档业务ID
+ * @method void setDocBizId(string $DocBizId) 设置<p>文档业务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDocName() 获取文档名称
+ * @method string getDocName() 获取<p>文档名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDocName(string $DocName) 设置文档名称
+ * @method void setDocName(string $DocName) 设置<p>文档名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getQaBizId() 获取问答业务ID
+ * @method string getQaBizId() 获取<p>问答业务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQaBizId(string $QaBizId) 设置问答业务ID
+ * @method void setQaBizId(string $QaBizId) 设置<p>问答业务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIndex() 获取搜索引擎索引
+ * @method integer getIndex() 获取<p>搜索引擎索引</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndex(integer $Index) 设置搜索引擎索引
+ * @method void setIndex(integer $Index) 设置<p>搜索引擎索引</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTitle() 获取标题
+ * @method string getTitle() 获取<p>标题</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTitle(string $Title) 设置标题
+ * @method void setTitle(string $Title) 设置<p>标题</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getKnowledgeName() 获取知识库名称
+ * @method string getKnowledgeName() 获取<p>知识库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKnowledgeName(string $KnowledgeName) 设置知识库名称
+ * @method void setKnowledgeName(string $KnowledgeName) 设置<p>知识库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getKnowledgeBizId() 获取知识库标识
+ * @method string getKnowledgeBizId() 获取<p>知识库标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKnowledgeBizId(string $KnowledgeBizId) 设置知识库标识
+ * @method void setKnowledgeBizId(string $KnowledgeBizId) 设置<p>知识库标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AgentReference extends AbstractModel
 {
     /**
-     * @var string 来源文档ID
+     * @var string <p>来源文档ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DocId;
 
     /**
-     * @var string id
+     * @var string <p>id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
-     * @var string 名称
+     * @var string <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var integer 类型
+     * @var integer <p>类型</p><p>枚举值：</p><ul><li>1： 问答</li><li>2： 文档片段</li><li>4： 联网检索到的内容</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
-     * @var string 链接
+     * @var string <p>链接</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
     /**
-     * @var string 文档业务ID
+     * @var string <p>文档业务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DocBizId;
 
     /**
-     * @var string 文档名称
+     * @var string <p>文档名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DocName;
 
     /**
-     * @var string 问答业务ID
+     * @var string <p>问答业务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QaBizId;
 
     /**
-     * @var integer 搜索引擎索引
+     * @var integer <p>搜索引擎索引</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Index;
 
     /**
-     * @var string 标题
+     * @var string <p>标题</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Title;
 
     /**
-     * @var string 知识库名称
+     * @var string <p>知识库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KnowledgeName;
 
     /**
-     * @var string 知识库标识
+     * @var string <p>知识库标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KnowledgeBizId;
 
     /**
-     * @param string $DocId 来源文档ID
+     * @param string $DocId <p>来源文档ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Id id
+     * @param string $Id <p>id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 名称
+     * @param string $Name <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Type 类型
+     * @param integer $Type <p>类型</p><p>枚举值：</p><ul><li>1： 问答</li><li>2： 文档片段</li><li>4： 联网检索到的内容</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Url 链接
+     * @param string $Url <p>链接</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DocBizId 文档业务ID
+     * @param string $DocBizId <p>文档业务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DocName 文档名称
+     * @param string $DocName <p>文档名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $QaBizId 问答业务ID
+     * @param string $QaBizId <p>问答业务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Index 搜索引擎索引
+     * @param integer $Index <p>搜索引擎索引</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Title 标题
+     * @param string $Title <p>标题</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $KnowledgeName 知识库名称
+     * @param string $KnowledgeName <p>知识库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $KnowledgeBizId 知识库标识
+     * @param string $KnowledgeBizId <p>知识库标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

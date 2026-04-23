@@ -20,79 +20,91 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 多写配置
  *
- * @method string getURL() 获取多写url
- * @method void setURL(string $URL) 设置多写url
- * @method string getURLRelabelConfig() 获取RelabelConfig
+ * @method string getURL() 获取<p>多写url</p>
+ * @method void setURL(string $URL) 设置<p>多写url</p>
+ * @method string getURLRelabelConfig() 获取<p>RelabelConfig</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setURLRelabelConfig(string $URLRelabelConfig) 设置RelabelConfig
+ * @method void setURLRelabelConfig(string $URLRelabelConfig) 设置<p>RelabelConfig</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BasicAuth getBasicAuth() 获取鉴权
+ * @method BasicAuth getBasicAuth() 获取<p>鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBasicAuth(BasicAuth $BasicAuth) 设置鉴权
+ * @method void setBasicAuth(BasicAuth $BasicAuth) 设置<p>鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMaxBlockSize() 获取最大block
+ * @method string getMaxBlockSize() 获取<p>最大block</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxBlockSize(string $MaxBlockSize) 设置最大block
+ * @method void setMaxBlockSize(string $MaxBlockSize) 设置<p>最大block</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLabel() 获取Label
+ * @method string getLabel() 获取<p>Label</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabel(string $Label) 设置Label
+ * @method void setLabel(string $Label) 设置<p>Label</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getHeaders() 获取HTTP 额外添加的头
+ * @method array getHeaders() 获取<p>HTTP 额外添加的头</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHeaders(array $Headers) 设置HTTP 额外添加的头
+ * @method void setHeaders(array $Headers) 设置<p>HTTP 额外添加的头</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRemoteWriteType() 获取<p>数据多写类型:<br>1- 只多写采集指标<br>2- 只多写预聚合指标<br>3- 同时多写采集和预聚合指标</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemoteWriteType(integer $RemoteWriteType) 设置<p>数据多写类型:<br>1- 只多写采集指标<br>2- 只多写预聚合指标<br>3- 同时多写采集和预聚合指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RemoteWrite extends AbstractModel
 {
     /**
-     * @var string 多写url
+     * @var string <p>多写url</p>
      */
     public $URL;
 
     /**
-     * @var string RelabelConfig
+     * @var string <p>RelabelConfig</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $URLRelabelConfig;
 
     /**
-     * @var BasicAuth 鉴权
+     * @var BasicAuth <p>鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BasicAuth;
 
     /**
-     * @var string 最大block
+     * @var string <p>最大block</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     public $MaxBlockSize;
 
     /**
-     * @var string Label
+     * @var string <p>Label</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     public $Label;
 
     /**
-     * @var array HTTP 额外添加的头
+     * @var array <p>HTTP 额外添加的头</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Headers;
 
     /**
-     * @param string $URL 多写url
-     * @param string $URLRelabelConfig RelabelConfig
+     * @var integer <p>数据多写类型:<br>1- 只多写采集指标<br>2- 只多写预聚合指标<br>3- 同时多写采集和预聚合指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BasicAuth $BasicAuth 鉴权
+     */
+    public $RemoteWriteType;
+
+    /**
+     * @param string $URL <p>多写url</p>
+     * @param string $URLRelabelConfig <p>RelabelConfig</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MaxBlockSize 最大block
+     * @param BasicAuth $BasicAuth <p>鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Label Label
+     * @param string $MaxBlockSize <p>最大block</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Headers HTTP 额外添加的头
+     * @param string $Label <p>Label</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Headers <p>HTTP 额外添加的头</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RemoteWriteType <p>数据多写类型:<br>1- 只多写采集指标<br>2- 只多写预聚合指标<br>3- 同时多写采集和预聚合指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -136,6 +148,10 @@ class RemoteWrite extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Headers, $obj);
             }
+        }
+
+        if (array_key_exists("RemoteWriteType",$param) and $param["RemoteWriteType"] !== null) {
+            $this->RemoteWriteType = $param["RemoteWriteType"];
         }
     }
 }

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 模型详情
  *
- * @method string getModelName() 获取模型名称
- * @method void setModelName(string $ModelName) 设置模型名称
- * @method ModelParams getModelParams() 获取模型参数
- * @method void setModelParams(ModelParams $ModelParams) 设置模型参数
- * @method integer getHistoryLimit() 获取限制
- * @method void setHistoryLimit(integer $HistoryLimit) 设置限制
- * @method string getAliasName() 获取模型别名
- * @method void setAliasName(string $AliasName) 设置模型别名
+ * @method string getAliasName() 获取<p>模型别名</p>
+ * @method void setAliasName(string $AliasName) 设置<p>模型别名</p>
+ * @method integer getHistoryLimit() 获取<p>限制</p>
+ * @method void setHistoryLimit(integer $HistoryLimit) 设置<p>限制</p>
+ * @method string getModelName() 获取<p>模型名称</p>
+ * @method void setModelName(string $ModelName) 设置<p>模型名称</p>
+ * @method ModelParams getModelParams() 获取<p>模型参数</p>
+ * @method void setModelParams(ModelParams $ModelParams) 设置<p>模型参数</p>
  */
 class AppModelDetailInfo extends AbstractModel
 {
     /**
-     * @var string 模型名称
-     */
-    public $ModelName;
-
-    /**
-     * @var ModelParams 模型参数
-     */
-    public $ModelParams;
-
-    /**
-     * @var integer 限制
-     */
-    public $HistoryLimit;
-
-    /**
-     * @var string 模型别名
+     * @var string <p>模型别名</p>
      */
     public $AliasName;
 
     /**
-     * @param string $ModelName 模型名称
-     * @param ModelParams $ModelParams 模型参数
-     * @param integer $HistoryLimit 限制
-     * @param string $AliasName 模型别名
+     * @var integer <p>限制</p>
+     */
+    public $HistoryLimit;
+
+    /**
+     * @var string <p>模型名称</p>
+     */
+    public $ModelName;
+
+    /**
+     * @var ModelParams <p>模型参数</p>
+     */
+    public $ModelParams;
+
+    /**
+     * @param string $AliasName <p>模型别名</p>
+     * @param integer $HistoryLimit <p>限制</p>
+     * @param string $ModelName <p>模型名称</p>
+     * @param ModelParams $ModelParams <p>模型参数</p>
      */
     function __construct()
     {
@@ -70,6 +70,14 @@ class AppModelDetailInfo extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("AliasName",$param) and $param["AliasName"] !== null) {
+            $this->AliasName = $param["AliasName"];
+        }
+
+        if (array_key_exists("HistoryLimit",$param) and $param["HistoryLimit"] !== null) {
+            $this->HistoryLimit = $param["HistoryLimit"];
+        }
+
         if (array_key_exists("ModelName",$param) and $param["ModelName"] !== null) {
             $this->ModelName = $param["ModelName"];
         }
@@ -77,14 +85,6 @@ class AppModelDetailInfo extends AbstractModel
         if (array_key_exists("ModelParams",$param) and $param["ModelParams"] !== null) {
             $this->ModelParams = new ModelParams();
             $this->ModelParams->deserialize($param["ModelParams"]);
-        }
-
-        if (array_key_exists("HistoryLimit",$param) and $param["HistoryLimit"] !== null) {
-            $this->HistoryLimit = $param["HistoryLimit"];
-        }
-
-        if (array_key_exists("AliasName",$param) and $param["AliasName"] !== null) {
-            $this->AliasName = $param["AliasName"];
         }
     }
 }

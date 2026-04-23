@@ -20,66 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 广告插入频道配置信息。
  *
- * @method string getID() 获取频道ID，全局唯一标识。
- * @method void setID(string $ID) 设置频道ID，全局唯一标识。
- * @method string getName() 获取频道名称。
- * @method void setName(string $Name) 设置频道名称。
- * @method string getContentSource() 获取广告源信息。
- * @method void setContentSource(string $ContentSource) 设置广告源信息。
- * @method string getPlaybackPrefix() 获取播放地址。
- * @method void setPlaybackPrefix(string $PlaybackPrefix) 设置播放地址。
- * @method SSAIConf getSSAIInfo() 获取广告插入SSAI配置信息。
- * @method void setSSAIInfo(SSAIConf $SSAIInfo) 设置广告插入SSAI配置信息。
- * @method string getRegion() 获取地域信息。
- * @method void setRegion(string $Region) 设置地域信息。
- * @method string getSessionInitPrefix() 获取用于clickthrough地址
- * @method void setSessionInitPrefix(string $SessionInitPrefix) 设置用于clickthrough地址
+ * @method string getID() 获取<p>频道ID，全局唯一标识。</p>
+ * @method void setID(string $ID) 设置<p>频道ID，全局唯一标识。</p>
+ * @method string getName() 获取<p>频道名称。</p>
+ * @method void setName(string $Name) 设置<p>频道名称。</p>
+ * @method string getContentSource() 获取<p>广告源信息。</p>
+ * @method void setContentSource(string $ContentSource) 设置<p>广告源信息。</p>
+ * @method string getPlaybackPrefix() 获取<p>播放地址。兼容旧版本参数，推荐使用HlsPlaybackPrefix或DashPlaybackPrefix</p>
+ * @method void setPlaybackPrefix(string $PlaybackPrefix) 设置<p>播放地址。兼容旧版本参数，推荐使用HlsPlaybackPrefix或DashPlaybackPrefix</p>
+ * @method string getHlsPlaybackPrefix() 获取<p>hls播放地址</p>
+ * @method void setHlsPlaybackPrefix(string $HlsPlaybackPrefix) 设置<p>hls播放地址</p>
+ * @method string getDashPlaybackPrefix() 获取<p>dash播放地址</p>
+ * @method void setDashPlaybackPrefix(string $DashPlaybackPrefix) 设置<p>dash播放地址</p>
+ * @method SSAIConf getSSAIInfo() 获取<p>广告插入SSAI配置信息。</p>
+ * @method void setSSAIInfo(SSAIConf $SSAIInfo) 设置<p>广告插入SSAI配置信息。</p>
+ * @method string getRegion() 获取<p>地域信息。</p>
+ * @method void setRegion(string $Region) 设置<p>地域信息。</p>
+ * @method string getSessionInitPrefix() 获取<p>用于clickthrough地址</p>
+ * @method void setSessionInitPrefix(string $SessionInitPrefix) 设置<p>用于clickthrough地址</p>
  */
 class SSAIChannelInfo extends AbstractModel
 {
     /**
-     * @var string 频道ID，全局唯一标识。
+     * @var string <p>频道ID，全局唯一标识。</p>
      */
     public $ID;
 
     /**
-     * @var string 频道名称。
+     * @var string <p>频道名称。</p>
      */
     public $Name;
 
     /**
-     * @var string 广告源信息。
+     * @var string <p>广告源信息。</p>
      */
     public $ContentSource;
 
     /**
-     * @var string 播放地址。
+     * @var string <p>播放地址。兼容旧版本参数，推荐使用HlsPlaybackPrefix或DashPlaybackPrefix</p>
      */
     public $PlaybackPrefix;
 
     /**
-     * @var SSAIConf 广告插入SSAI配置信息。
+     * @var string <p>hls播放地址</p>
+     */
+    public $HlsPlaybackPrefix;
+
+    /**
+     * @var string <p>dash播放地址</p>
+     */
+    public $DashPlaybackPrefix;
+
+    /**
+     * @var SSAIConf <p>广告插入SSAI配置信息。</p>
      */
     public $SSAIInfo;
 
     /**
-     * @var string 地域信息。
+     * @var string <p>地域信息。</p>
      */
     public $Region;
 
     /**
-     * @var string 用于clickthrough地址
+     * @var string <p>用于clickthrough地址</p>
      */
     public $SessionInitPrefix;
 
     /**
-     * @param string $ID 频道ID，全局唯一标识。
-     * @param string $Name 频道名称。
-     * @param string $ContentSource 广告源信息。
-     * @param string $PlaybackPrefix 播放地址。
-     * @param SSAIConf $SSAIInfo 广告插入SSAI配置信息。
-     * @param string $Region 地域信息。
-     * @param string $SessionInitPrefix 用于clickthrough地址
+     * @param string $ID <p>频道ID，全局唯一标识。</p>
+     * @param string $Name <p>频道名称。</p>
+     * @param string $ContentSource <p>广告源信息。</p>
+     * @param string $PlaybackPrefix <p>播放地址。兼容旧版本参数，推荐使用HlsPlaybackPrefix或DashPlaybackPrefix</p>
+     * @param string $HlsPlaybackPrefix <p>hls播放地址</p>
+     * @param string $DashPlaybackPrefix <p>dash播放地址</p>
+     * @param SSAIConf $SSAIInfo <p>广告插入SSAI配置信息。</p>
+     * @param string $Region <p>地域信息。</p>
+     * @param string $SessionInitPrefix <p>用于clickthrough地址</p>
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class SSAIChannelInfo extends AbstractModel
 
         if (array_key_exists("PlaybackPrefix",$param) and $param["PlaybackPrefix"] !== null) {
             $this->PlaybackPrefix = $param["PlaybackPrefix"];
+        }
+
+        if (array_key_exists("HlsPlaybackPrefix",$param) and $param["HlsPlaybackPrefix"] !== null) {
+            $this->HlsPlaybackPrefix = $param["HlsPlaybackPrefix"];
+        }
+
+        if (array_key_exists("DashPlaybackPrefix",$param) and $param["DashPlaybackPrefix"] !== null) {
+            $this->DashPlaybackPrefix = $param["DashPlaybackPrefix"];
         }
 
         if (array_key_exists("SSAIInfo",$param) and $param["SSAIInfo"] !== null) {

@@ -20,266 +20,266 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 模型信息
  *
- * @method string getModelName() 获取模型名称
+ * @method string getModelName() 获取<p>模型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModelName(string $ModelName) 设置模型名称
+ * @method void setModelName(string $ModelName) 设置<p>模型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getModelDesc() 获取模型描述
+ * @method string getModelDesc() 获取<p>模型描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModelDesc(string $ModelDesc) 设置模型描述
+ * @method void setModelDesc(string $ModelDesc) 设置<p>模型描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAliasName() 获取模型名称
+ * @method string getAliasName() 获取<p>模型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAliasName(string $AliasName) 设置模型名称
+ * @method void setAliasName(string $AliasName) 设置<p>模型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getResourceStatus() 获取资源状态 1：资源可用；2：资源已用尽
+ * @method integer getResourceStatus() 获取<p>资源状态 1：资源可用；2：资源已用尽</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceStatus(integer $ResourceStatus) 设置资源状态 1：资源可用；2：资源已用尽
+ * @method void setResourceStatus(integer $ResourceStatus) 设置<p>资源状态 1：资源可用；2：资源已用尽</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPromptWordsLimit() 获取提示词内容字符限制
+ * @method string getPromptWordsLimit() 获取<p>提示词内容字符限制</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPromptWordsLimit(string $PromptWordsLimit) 设置提示词内容字符限制
+ * @method void setPromptWordsLimit(string $PromptWordsLimit) 设置<p>提示词内容字符限制</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ModelParameter getTopP() 获取通过核心采样控制内容生成的多样性，较高的Top P值会导致生成更多样的内容
+ * @method ModelParameter getTopP() 获取<p>通过核心采样控制内容生成的多样性，较高的Top P值会导致生成更多样的内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopP(ModelParameter $TopP) 设置通过核心采样控制内容生成的多样性，较高的Top P值会导致生成更多样的内容
+ * @method void setTopP(ModelParameter $TopP) 设置<p>通过核心采样控制内容生成的多样性，较高的Top P值会导致生成更多样的内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ModelParameter getTemperature() 获取温度控制随机性
+ * @method ModelParameter getTemperature() 获取<p>温度控制随机性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTemperature(ModelParameter $Temperature) 设置温度控制随机性
+ * @method void setTemperature(ModelParameter $Temperature) 设置<p>温度控制随机性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ModelParameter getMaxTokens() 获取最多能生成的token数量
+ * @method ModelParameter getMaxTokens() 获取<p>最多能生成的token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxTokens(ModelParameter $MaxTokens) 设置最多能生成的token数量
+ * @method void setMaxTokens(ModelParameter $MaxTokens) 设置<p>最多能生成的token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSource() 获取模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型
- * @method void setSource(string $Source) 设置模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型
- * @method string getIcon() 获取模型图标
- * @method void setIcon(string $Icon) 设置模型图标
- * @method boolean getIsFree() 获取是否免费
- * @method void setIsFree(boolean $IsFree) 设置是否免费
- * @method integer getInputLenLimit() 获取模型对话框可输入的上限
+ * @method string getSource() 获取<p>模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型</p>
+ * @method void setSource(string $Source) 设置<p>模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型</p>
+ * @method string getIcon() 获取<p>模型图标</p>
+ * @method void setIcon(string $Icon) 设置<p>模型图标</p>
+ * @method boolean getIsFree() 获取<p>是否免费</p>
+ * @method void setIsFree(boolean $IsFree) 设置<p>是否免费</p>
+ * @method integer getInputLenLimit() 获取<p>模型对话框可输入的上限</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInputLenLimit(integer $InputLenLimit) 设置模型对话框可输入的上限
+ * @method void setInputLenLimit(integer $InputLenLimit) 设置<p>模型对话框可输入的上限</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSupportWorkflowStatus() 获取支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；
+ * @method integer getSupportWorkflowStatus() 获取<p>支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSupportWorkflowStatus(integer $SupportWorkflowStatus) 设置支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；
+ * @method void setSupportWorkflowStatus(integer $SupportWorkflowStatus) 设置<p>支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getModelCategory() 获取模型类别 generate：生成模型，thought：思考模型
- * @method void setModelCategory(string $ModelCategory) 设置模型类别 generate：生成模型，thought：思考模型
- * @method boolean getIsDefault() 获取是否默认模型
- * @method void setIsDefault(boolean $IsDefault) 设置是否默认模型
- * @method integer getRoleLenLimit() 获取角色提示词输入长度限制
- * @method void setRoleLenLimit(integer $RoleLenLimit) 设置角色提示词输入长度限制
- * @method boolean getIsExclusive() 获取是否专属并发模型
- * @method void setIsExclusive(boolean $IsExclusive) 设置是否专属并发模型
- * @method integer getSupportAiCallStatus() 获取模型支持智能通话效果
- * @method void setSupportAiCallStatus(integer $SupportAiCallStatus) 设置模型支持智能通话效果
- * @method integer getConcurrency() 获取专属并发数
- * @method void setConcurrency(integer $Concurrency) 设置专属并发数
- * @method array getModelTags() 获取模型标签
+ * @method string getModelCategory() 获取<p>模型类别 generate：生成模型，thought：思考模型</p>
+ * @method void setModelCategory(string $ModelCategory) 设置<p>模型类别 generate：生成模型，thought：思考模型</p>
+ * @method boolean getIsDefault() 获取<p>是否默认模型</p>
+ * @method void setIsDefault(boolean $IsDefault) 设置<p>是否默认模型</p>
+ * @method integer getRoleLenLimit() 获取<p>角色提示词输入长度限制</p>
+ * @method void setRoleLenLimit(integer $RoleLenLimit) 设置<p>角色提示词输入长度限制</p>
+ * @method boolean getIsExclusive() 获取<p>是否专属并发模型</p>
+ * @method void setIsExclusive(boolean $IsExclusive) 设置<p>是否专属并发模型</p>
+ * @method integer getSupportAiCallStatus() 获取<p>模型支持智能通话效果</p><p>枚举值：</p><ul><li>0： 模型不支持</li><li>1： 模型支持ai通话</li><li>2： 模型ai通话支持效果不佳</li></ul>
+ * @method void setSupportAiCallStatus(integer $SupportAiCallStatus) 设置<p>模型支持智能通话效果</p><p>枚举值：</p><ul><li>0： 模型不支持</li><li>1： 模型支持ai通话</li><li>2： 模型ai通话支持效果不佳</li></ul>
+ * @method integer getConcurrency() 获取<p>专属并发数</p>
+ * @method void setConcurrency(integer $Concurrency) 设置<p>专属并发数</p>
+ * @method array getModelTags() 获取<p>模型标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModelTags(array $ModelTags) 设置模型标签
+ * @method void setModelTags(array $ModelTags) 设置<p>模型标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getModelParams() 获取模型超参定义
+ * @method array getModelParams() 获取<p>模型超参定义</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModelParams(array $ModelParams) 设置模型超参定义
+ * @method void setModelParams(array $ModelParams) 设置<p>模型超参定义</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProviderName() 获取提供商名称
- * @method void setProviderName(string $ProviderName) 设置提供商名称
- * @method string getProviderAliasName() 获取提供商别名
- * @method void setProviderAliasName(string $ProviderAliasName) 设置提供商别名
- * @method string getProviderType() 获取提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商
- * @method void setProviderType(string $ProviderType) 设置提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商
- * @method boolean getIsCloseModelParams() 获取是否关闭模型超参
- * @method void setIsCloseModelParams(boolean $IsCloseModelParams) 设置是否关闭模型超参
- * @method boolean getIsDeepThinking() 获取是否支持深度思考
- * @method void setIsDeepThinking(boolean $IsDeepThinking) 设置是否支持深度思考
+ * @method string getProviderName() 获取<p>提供商名称</p>
+ * @method void setProviderName(string $ProviderName) 设置<p>提供商名称</p>
+ * @method string getProviderAliasName() 获取<p>提供商别名</p>
+ * @method void setProviderAliasName(string $ProviderAliasName) 设置<p>提供商别名</p>
+ * @method string getProviderType() 获取<p>提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商</p>
+ * @method void setProviderType(string $ProviderType) 设置<p>提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商</p>
+ * @method boolean getIsCloseModelParams() 获取<p>是否关闭模型超参</p>
+ * @method void setIsCloseModelParams(boolean $IsCloseModelParams) 设置<p>是否关闭模型超参</p>
+ * @method boolean getIsDeepThinking() 获取<p>是否支持深度思考</p>
+ * @method void setIsDeepThinking(boolean $IsDeepThinking) 设置<p>是否支持深度思考</p>
  */
 class ModelInfo extends AbstractModel
 {
     /**
-     * @var string 模型名称
+     * @var string <p>模型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModelName;
 
     /**
-     * @var string 模型描述
+     * @var string <p>模型描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModelDesc;
 
     /**
-     * @var string 模型名称
+     * @var string <p>模型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AliasName;
 
     /**
-     * @var integer 资源状态 1：资源可用；2：资源已用尽
+     * @var integer <p>资源状态 1：资源可用；2：资源已用尽</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceStatus;
 
     /**
-     * @var string 提示词内容字符限制
+     * @var string <p>提示词内容字符限制</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PromptWordsLimit;
 
     /**
-     * @var ModelParameter 通过核心采样控制内容生成的多样性，较高的Top P值会导致生成更多样的内容
+     * @var ModelParameter <p>通过核心采样控制内容生成的多样性，较高的Top P值会导致生成更多样的内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopP;
 
     /**
-     * @var ModelParameter 温度控制随机性
+     * @var ModelParameter <p>温度控制随机性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Temperature;
 
     /**
-     * @var ModelParameter 最多能生成的token数量
+     * @var ModelParameter <p>最多能生成的token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxTokens;
 
     /**
-     * @var string 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型
+     * @var string <p>模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型</p>
      */
     public $Source;
 
     /**
-     * @var string 模型图标
+     * @var string <p>模型图标</p>
      */
     public $Icon;
 
     /**
-     * @var boolean 是否免费
+     * @var boolean <p>是否免费</p>
      */
     public $IsFree;
 
     /**
-     * @var integer 模型对话框可输入的上限
+     * @var integer <p>模型对话框可输入的上限</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputLenLimit;
 
     /**
-     * @var integer 支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；
+     * @var integer <p>支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SupportWorkflowStatus;
 
     /**
-     * @var string 模型类别 generate：生成模型，thought：思考模型
+     * @var string <p>模型类别 generate：生成模型，thought：思考模型</p>
      */
     public $ModelCategory;
 
     /**
-     * @var boolean 是否默认模型
+     * @var boolean <p>是否默认模型</p>
      */
     public $IsDefault;
 
     /**
-     * @var integer 角色提示词输入长度限制
+     * @var integer <p>角色提示词输入长度限制</p>
      */
     public $RoleLenLimit;
 
     /**
-     * @var boolean 是否专属并发模型
+     * @var boolean <p>是否专属并发模型</p>
      */
     public $IsExclusive;
 
     /**
-     * @var integer 模型支持智能通话效果
+     * @var integer <p>模型支持智能通话效果</p><p>枚举值：</p><ul><li>0： 模型不支持</li><li>1： 模型支持ai通话</li><li>2： 模型ai通话支持效果不佳</li></ul>
      */
     public $SupportAiCallStatus;
 
     /**
-     * @var integer 专属并发数
+     * @var integer <p>专属并发数</p>
      */
     public $Concurrency;
 
     /**
-     * @var array 模型标签
+     * @var array <p>模型标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModelTags;
 
     /**
-     * @var array 模型超参定义
+     * @var array <p>模型超参定义</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModelParams;
 
     /**
-     * @var string 提供商名称
+     * @var string <p>提供商名称</p>
      */
     public $ProviderName;
 
     /**
-     * @var string 提供商别名
+     * @var string <p>提供商别名</p>
      */
     public $ProviderAliasName;
 
     /**
-     * @var string 提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商
+     * @var string <p>提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商</p>
      */
     public $ProviderType;
 
     /**
-     * @var boolean 是否关闭模型超参
+     * @var boolean <p>是否关闭模型超参</p>
      */
     public $IsCloseModelParams;
 
     /**
-     * @var boolean 是否支持深度思考
+     * @var boolean <p>是否支持深度思考</p>
      */
     public $IsDeepThinking;
 
     /**
-     * @param string $ModelName 模型名称
+     * @param string $ModelName <p>模型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ModelDesc 模型描述
+     * @param string $ModelDesc <p>模型描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AliasName 模型名称
+     * @param string $AliasName <p>模型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ResourceStatus 资源状态 1：资源可用；2：资源已用尽
+     * @param integer $ResourceStatus <p>资源状态 1：资源可用；2：资源已用尽</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PromptWordsLimit 提示词内容字符限制
+     * @param string $PromptWordsLimit <p>提示词内容字符限制</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModelParameter $TopP 通过核心采样控制内容生成的多样性，较高的Top P值会导致生成更多样的内容
+     * @param ModelParameter $TopP <p>通过核心采样控制内容生成的多样性，较高的Top P值会导致生成更多样的内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModelParameter $Temperature 温度控制随机性
+     * @param ModelParameter $Temperature <p>温度控制随机性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModelParameter $MaxTokens 最多能生成的token数量
+     * @param ModelParameter $MaxTokens <p>最多能生成的token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Source 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型
-     * @param string $Icon 模型图标
-     * @param boolean $IsFree 是否免费
-     * @param integer $InputLenLimit 模型对话框可输入的上限
+     * @param string $Source <p>模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型</p>
+     * @param string $Icon <p>模型图标</p>
+     * @param boolean $IsFree <p>是否免费</p>
+     * @param integer $InputLenLimit <p>模型对话框可输入的上限</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SupportWorkflowStatus 支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；
+     * @param integer $SupportWorkflowStatus <p>支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ModelCategory 模型类别 generate：生成模型，thought：思考模型
-     * @param boolean $IsDefault 是否默认模型
-     * @param integer $RoleLenLimit 角色提示词输入长度限制
-     * @param boolean $IsExclusive 是否专属并发模型
-     * @param integer $SupportAiCallStatus 模型支持智能通话效果
-     * @param integer $Concurrency 专属并发数
-     * @param array $ModelTags 模型标签
+     * @param string $ModelCategory <p>模型类别 generate：生成模型，thought：思考模型</p>
+     * @param boolean $IsDefault <p>是否默认模型</p>
+     * @param integer $RoleLenLimit <p>角色提示词输入长度限制</p>
+     * @param boolean $IsExclusive <p>是否专属并发模型</p>
+     * @param integer $SupportAiCallStatus <p>模型支持智能通话效果</p><p>枚举值：</p><ul><li>0： 模型不支持</li><li>1： 模型支持ai通话</li><li>2： 模型ai通话支持效果不佳</li></ul>
+     * @param integer $Concurrency <p>专属并发数</p>
+     * @param array $ModelTags <p>模型标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ModelParams 模型超参定义
+     * @param array $ModelParams <p>模型超参定义</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProviderName 提供商名称
-     * @param string $ProviderAliasName 提供商别名
-     * @param string $ProviderType 提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商
-     * @param boolean $IsCloseModelParams 是否关闭模型超参
-     * @param boolean $IsDeepThinking 是否支持深度思考
+     * @param string $ProviderName <p>提供商名称</p>
+     * @param string $ProviderAliasName <p>提供商别名</p>
+     * @param string $ProviderType <p>提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商</p>
+     * @param boolean $IsCloseModelParams <p>是否关闭模型超参</p>
+     * @param boolean $IsDeepThinking <p>是否支持深度思考</p>
      */
     function __construct()
     {

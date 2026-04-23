@@ -195,6 +195,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) * 该接口用于查询任务列表；
 * 当列表数据比较多时，单次接口调用无法拉取整个列表，可通过 ScrollToken 参数，分批拉取；
 * 只能查询到最近七天（168小时）内的任务。
+ * @method Models\DescribeTextToSpeechAsyncTaskResponse DescribeTextToSpeechAsyncTask(Models\DescribeTextToSpeechAsyncTaskRequest $req) 查询异步语音合成任务结果
  * @method Models\DescribeTranscodeTemplatesResponse DescribeTranscodeTemplates(Models\DescribeTranscodeTemplatesRequest $req) 根据转码模板唯一标识，获取转码模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置转码模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
  * @method Models\DescribeUsageDataResponse DescribeUsageData(Models\DescribeUsageDataRequest $req) 该接口返回查询时间范围内每天使用的媒体处理用量信息。
    1. 可以查询最近365天内的媒体处理统计数据。
@@ -299,6 +300,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\StopStreamLinkFlowResponse StopStreamLinkFlow(Models\StopStreamLinkFlowRequest $req) 停止媒体传输流。
  * @method Models\StopStreamPackageLinearAssemblyChannelResponse StopStreamPackageLinearAssemblyChannel(Models\StopStreamPackageLinearAssemblyChannelRequest $req) 停止线性组装频道。
  * @method Models\SyncDubbingResponse SyncDubbing(Models\SyncDubbingRequest $req) 同步接口，返回克隆音色Id或合成音频结果
+ * @method Models\TextToSpeechAsyncResponse TextToSpeechAsync(Models\TextToSpeechAsyncRequest $req) 异步语音合成接口，支持长文本转语音
  * @method Models\TextTranslationResponse TextTranslation(Models\TextTranslationRequest $req) 文本翻译，使用 翻译字幕（附加语种）计费项，按1100字符（按照 Unicode 码点数 统计，hello 算5个字符，你好 算2个字符）/分钟折算到时长计费
  * @method Models\UpdateProjectResponse UpdateProject(Models\UpdateProjectRequest $req) 剧集项目更新
  * @method Models\WithdrawsWatermarkResponse WithdrawsWatermark(Models\WithdrawsWatermarkRequest $req) 提取视频中的盲水印。

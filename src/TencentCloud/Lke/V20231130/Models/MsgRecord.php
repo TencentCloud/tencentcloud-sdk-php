@@ -20,358 +20,310 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 消息详情
  *
- * @method string getContent() 获取内容
- * @method void setContent(string $Content) 设置内容
- * @method string getSessionId() 获取当前记录所对应的 Session ID
+ * @method string getContent() 获取<p>内容</p>
+ * @method void setContent(string $Content) 设置<p>内容</p>
+ * @method string getSessionId() 获取<p>当前记录所对应的 Session ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSessionId(string $SessionId) 设置当前记录所对应的 Session ID
+ * @method void setSessionId(string $SessionId) 设置<p>当前记录所对应的 Session ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRecordId() 获取记录ID
- * @method void setRecordId(string $RecordId) 设置记录ID
- * @method string getRelatedRecordId() 获取关联记录ID
- * @method void setRelatedRecordId(string $RelatedRecordId) 设置关联记录ID
- * @method boolean getIsFromSelf() 获取是否来自自己
- * @method void setIsFromSelf(boolean $IsFromSelf) 设置是否来自自己
- * @method string getFromName() 获取发送者名称
- * @method void setFromName(string $FromName) 设置发送者名称
- * @method string getFromAvatar() 获取发送者头像
- * @method void setFromAvatar(string $FromAvatar) 设置发送者头像
- * @method string getTimestamp() 获取时间戳
- * @method void setTimestamp(string $Timestamp) 设置时间戳
- * @method boolean getHasRead() 获取是否已读
- * @method void setHasRead(boolean $HasRead) 设置是否已读
- * @method integer getScore() 获取评价
- * @method void setScore(integer $Score) 设置评价
- * @method boolean getCanRating() 获取是否评分
- * @method void setCanRating(boolean $CanRating) 设置是否评分
- * @method boolean getCanFeedback() 获取是否展示反馈按钮
+ * @method string getRecordId() 获取<p>记录ID</p>
+ * @method void setRecordId(string $RecordId) 设置<p>记录ID</p>
+ * @method string getRelatedRecordId() 获取<p>关联记录ID</p>
+ * @method void setRelatedRecordId(string $RelatedRecordId) 设置<p>关联记录ID</p>
+ * @method boolean getIsFromSelf() 获取<p>是否来自自己</p>
+ * @method void setIsFromSelf(boolean $IsFromSelf) 设置<p>是否来自自己</p>
+ * @method string getFromName() 获取<p>发送者名称</p>
+ * @method void setFromName(string $FromName) 设置<p>发送者名称</p>
+ * @method string getFromAvatar() 获取<p>发送者头像</p>
+ * @method void setFromAvatar(string $FromAvatar) 设置<p>发送者头像</p>
+ * @method string getTimestamp() 获取<p>时间戳</p>
+ * @method void setTimestamp(string $Timestamp) 设置<p>时间戳</p>
+ * @method boolean getHasRead() 获取<p>是否已读</p>
+ * @method void setHasRead(boolean $HasRead) 设置<p>是否已读</p>
+ * @method integer getScore() 获取<p>评价</p>
+ * @method void setScore(integer $Score) 设置<p>评价</p>
+ * @method boolean getCanRating() 获取<p>是否评分</p>
+ * @method void setCanRating(boolean $CanRating) 设置<p>是否评分</p>
+ * @method boolean getCanFeedback() 获取<p>是否展示反馈按钮</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCanFeedback(boolean $CanFeedback) 设置是否展示反馈按钮
+ * @method void setCanFeedback(boolean $CanFeedback) 设置<p>是否展示反馈按钮</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getType() 获取记录类型
- * @method void setType(integer $Type) 设置记录类型
- * @method array getReferences() 获取引用来源
- * @method void setReferences(array $References) 设置引用来源
- * @method array getReasons() 获取评价原因
- * @method void setReasons(array $Reasons) 设置评价原因
- * @method boolean getIsLlmGenerated() 获取是否大模型
- * @method void setIsLlmGenerated(boolean $IsLlmGenerated) 设置是否大模型
- * @method array getImageUrls() 获取图片链接，可公有读
+ * @method integer getType() 获取<p>记录类型</p>
+ * @method void setType(integer $Type) 设置<p>记录类型</p>
+ * @method array getReferences() 获取<p>引用来源</p>
+ * @method void setReferences(array $References) 设置<p>引用来源</p>
+ * @method array getReasons() 获取<p>评价原因</p>
+ * @method void setReasons(array $Reasons) 设置<p>评价原因</p>
+ * @method boolean getIsLlmGenerated() 获取<p>是否大模型</p>
+ * @method void setIsLlmGenerated(boolean $IsLlmGenerated) 设置<p>是否大模型</p>
+ * @method array getImageUrls() 获取<p>图片链接，可公有读</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImageUrls(array $ImageUrls) 设置图片链接，可公有读
+ * @method void setImageUrls(array $ImageUrls) 设置<p>图片链接，可公有读</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method TokenStat getTokenStat() 获取当次 token 统计信息
+ * @method TokenStat getTokenStat() 获取<p>当次 token 统计信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTokenStat(TokenStat $TokenStat) 设置当次 token 统计信息
+ * @method void setTokenStat(TokenStat $TokenStat) 设置<p>当次 token 统计信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getReplyMethod() 获取回复方式
-1:大模型直接回复;
-2:保守回复, 未知问题回复;
-3:拒答问题回复;
-4:敏感回复;
-5:问答对直接回复, 已采纳问答对优先回复;
-6:欢迎语回复;
-7:并发超限回复;
-8:全局干预知识;
-9:任务流程过程回复, 当历史记录中 task_flow.type = 0 时, 为大模型回复;
-10:任务流程答案回复;
-11:搜索引擎回复;
-12:知识润色后回复;
-13:图片理解回复;
-14:实时文档回复;
+ * @method integer getReplyMethod() 获取<p>回复方式<br>1:大模型直接回复;<br>2:保守回复, 未知问题回复;<br>3:拒答问题回复;<br>4:敏感回复;<br>5:问答对直接回复, 已采纳问答对优先回复;<br>6:欢迎语回复;<br>7:并发超限回复;<br>8:全局干预知识;<br>9:任务流程过程回复, 当历史记录中 task_flow.type = 0 时, 为大模型回复;<br>10:任务流程答案回复;<br>11:搜索引擎回复;<br>12:知识润色后回复;<br>13:图片理解回复;<br>14:实时文档回复;</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReplyMethod(integer $ReplyMethod) 设置回复方式
-1:大模型直接回复;
-2:保守回复, 未知问题回复;
-3:拒答问题回复;
-4:敏感回复;
-5:问答对直接回复, 已采纳问答对优先回复;
-6:欢迎语回复;
-7:并发超限回复;
-8:全局干预知识;
-9:任务流程过程回复, 当历史记录中 task_flow.type = 0 时, 为大模型回复;
-10:任务流程答案回复;
-11:搜索引擎回复;
-12:知识润色后回复;
-13:图片理解回复;
-14:实时文档回复;
+ * @method void setReplyMethod(integer $ReplyMethod) 设置<p>回复方式<br>1:大模型直接回复;<br>2:保守回复, 未知问题回复;<br>3:拒答问题回复;<br>4:敏感回复;<br>5:问答对直接回复, 已采纳问答对优先回复;<br>6:欢迎语回复;<br>7:并发超限回复;<br>8:全局干预知识;<br>9:任务流程过程回复, 当历史记录中 task_flow.type = 0 时, 为大模型回复;<br>10:任务流程答案回复;<br>11:搜索引擎回复;<br>12:知识润色后回复;<br>13:图片理解回复;<br>14:实时文档回复;</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getOptionCards() 获取选项卡, 用于多轮对话
+ * @method array getOptionCards() 获取<p>选项卡, 用于多轮对话</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOptionCards(array $OptionCards) 设置选项卡, 用于多轮对话
+ * @method void setOptionCards(array $OptionCards) 设置<p>选项卡, 用于多轮对话</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method TaskFlowInfo getTaskFlow() 获取任务信息
+ * @method TaskFlowInfo getTaskFlow() 获取<p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskFlow(TaskFlowInfo $TaskFlow) 设置任务信息
+ * @method void setTaskFlow(TaskFlowInfo $TaskFlow) 设置<p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getFileInfos() 获取用户传入的文件信息
+ * @method array getFileInfos() 获取<p>用户传入的文件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileInfos(array $FileInfos) 设置用户传入的文件信息
+ * @method void setFileInfos(array $FileInfos) 设置<p>用户传入的文件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getQuoteInfos() 获取参考来源引用位置信息
+ * @method array getQuoteInfos() 获取<p>参考来源引用位置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQuoteInfos(array $QuoteInfos) 设置参考来源引用位置信息
+ * @method void setQuoteInfos(array $QuoteInfos) 设置<p>参考来源引用位置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AgentThought getAgentThought() 获取Agent的思考过程信息
+ * @method AgentThought getAgentThought() 获取<p>Agent的思考过程信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAgentThought(AgentThought $AgentThought) 设置Agent的思考过程信息
+ * @method void setAgentThought(AgentThought $AgentThought) 设置<p>Agent的思考过程信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ExtraInfo getExtraInfo() 获取扩展信息
+ * @method ExtraInfo getExtraInfo() 获取<p>扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExtraInfo(ExtraInfo $ExtraInfo) 设置扩展信息
+ * @method void setExtraInfo(ExtraInfo $ExtraInfo) 设置<p>扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method WorkflowInfo getWorkFlow() 获取工作流信息
+ * @method WorkflowInfo getWorkFlow() 获取<p>工作流信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkFlow(WorkflowInfo $WorkFlow) 设置工作流信息
+ * @method void setWorkFlow(WorkflowInfo $WorkFlow) 设置<p>工作流信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getWidgets() 获取Widget信息
+ * @method array getWidgets() 获取<p>Widget信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWidgets(array $Widgets) 设置Widget信息
+ * @method void setWidgets(array $Widgets) 设置<p>Widget信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method WidgetAction getWidgetAction() 获取Widget动作信息
+ * @method WidgetAction getWidgetAction() 获取<p>Widget动作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWidgetAction(WidgetAction $WidgetAction) 设置Widget动作信息
+ * @method void setWidgetAction(WidgetAction $WidgetAction) 设置<p>Widget动作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAudios() 获取音频信息
+ * @method array getAudios() 获取<p>音频信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAudios(array $Audios) 设置音频信息
+ * @method void setAudios(array $Audios) 设置<p>音频信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getOptionMode() 获取<p>标识选项卡为单选还是双选</p><p>枚举值：</p><ul><li>0： 单选</li><li>1： 双选</li></ul>
+ * @method void setOptionMode(integer $OptionMode) 设置<p>标识选项卡为单选还是双选</p><p>枚举值：</p><ul><li>0： 单选</li><li>1： 双选</li></ul>
  */
 class MsgRecord extends AbstractModel
 {
     /**
-     * @var string 内容
+     * @var string <p>内容</p>
      */
     public $Content;
 
     /**
-     * @var string 当前记录所对应的 Session ID
+     * @var string <p>当前记录所对应的 Session ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SessionId;
 
     /**
-     * @var string 记录ID
+     * @var string <p>记录ID</p>
      */
     public $RecordId;
 
     /**
-     * @var string 关联记录ID
+     * @var string <p>关联记录ID</p>
      */
     public $RelatedRecordId;
 
     /**
-     * @var boolean 是否来自自己
+     * @var boolean <p>是否来自自己</p>
      */
     public $IsFromSelf;
 
     /**
-     * @var string 发送者名称
+     * @var string <p>发送者名称</p>
      */
     public $FromName;
 
     /**
-     * @var string 发送者头像
+     * @var string <p>发送者头像</p>
      */
     public $FromAvatar;
 
     /**
-     * @var string 时间戳
+     * @var string <p>时间戳</p>
      */
     public $Timestamp;
 
     /**
-     * @var boolean 是否已读
+     * @var boolean <p>是否已读</p>
      */
     public $HasRead;
 
     /**
-     * @var integer 评价
+     * @var integer <p>评价</p>
      */
     public $Score;
 
     /**
-     * @var boolean 是否评分
+     * @var boolean <p>是否评分</p>
      */
     public $CanRating;
 
     /**
-     * @var boolean 是否展示反馈按钮
+     * @var boolean <p>是否展示反馈按钮</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CanFeedback;
 
     /**
-     * @var integer 记录类型
+     * @var integer <p>记录类型</p>
      */
     public $Type;
 
     /**
-     * @var array 引用来源
+     * @var array <p>引用来源</p>
      */
     public $References;
 
     /**
-     * @var array 评价原因
+     * @var array <p>评价原因</p>
      */
     public $Reasons;
 
     /**
-     * @var boolean 是否大模型
+     * @var boolean <p>是否大模型</p>
      */
     public $IsLlmGenerated;
 
     /**
-     * @var array 图片链接，可公有读
+     * @var array <p>图片链接，可公有读</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageUrls;
 
     /**
-     * @var TokenStat 当次 token 统计信息
+     * @var TokenStat <p>当次 token 统计信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TokenStat;
 
     /**
-     * @var integer 回复方式
-1:大模型直接回复;
-2:保守回复, 未知问题回复;
-3:拒答问题回复;
-4:敏感回复;
-5:问答对直接回复, 已采纳问答对优先回复;
-6:欢迎语回复;
-7:并发超限回复;
-8:全局干预知识;
-9:任务流程过程回复, 当历史记录中 task_flow.type = 0 时, 为大模型回复;
-10:任务流程答案回复;
-11:搜索引擎回复;
-12:知识润色后回复;
-13:图片理解回复;
-14:实时文档回复;
+     * @var integer <p>回复方式<br>1:大模型直接回复;<br>2:保守回复, 未知问题回复;<br>3:拒答问题回复;<br>4:敏感回复;<br>5:问答对直接回复, 已采纳问答对优先回复;<br>6:欢迎语回复;<br>7:并发超限回复;<br>8:全局干预知识;<br>9:任务流程过程回复, 当历史记录中 task_flow.type = 0 时, 为大模型回复;<br>10:任务流程答案回复;<br>11:搜索引擎回复;<br>12:知识润色后回复;<br>13:图片理解回复;<br>14:实时文档回复;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReplyMethod;
 
     /**
-     * @var array 选项卡, 用于多轮对话
+     * @var array <p>选项卡, 用于多轮对话</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OptionCards;
 
     /**
-     * @var TaskFlowInfo 任务信息
+     * @var TaskFlowInfo <p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskFlow;
 
     /**
-     * @var array 用户传入的文件信息
+     * @var array <p>用户传入的文件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileInfos;
 
     /**
-     * @var array 参考来源引用位置信息
+     * @var array <p>参考来源引用位置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QuoteInfos;
 
     /**
-     * @var AgentThought Agent的思考过程信息
+     * @var AgentThought <p>Agent的思考过程信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AgentThought;
 
     /**
-     * @var ExtraInfo 扩展信息
+     * @var ExtraInfo <p>扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtraInfo;
 
     /**
-     * @var WorkflowInfo 工作流信息
+     * @var WorkflowInfo <p>工作流信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkFlow;
 
     /**
-     * @var array Widget信息
+     * @var array <p>Widget信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Widgets;
 
     /**
-     * @var WidgetAction Widget动作信息
+     * @var WidgetAction <p>Widget动作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WidgetAction;
 
     /**
-     * @var array 音频信息
+     * @var array <p>音频信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Audios;
 
     /**
-     * @param string $Content 内容
-     * @param string $SessionId 当前记录所对应的 Session ID
+     * @var integer <p>标识选项卡为单选还是双选</p><p>枚举值：</p><ul><li>0： 单选</li><li>1： 双选</li></ul>
+     */
+    public $OptionMode;
+
+    /**
+     * @param string $Content <p>内容</p>
+     * @param string $SessionId <p>当前记录所对应的 Session ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RecordId 记录ID
-     * @param string $RelatedRecordId 关联记录ID
-     * @param boolean $IsFromSelf 是否来自自己
-     * @param string $FromName 发送者名称
-     * @param string $FromAvatar 发送者头像
-     * @param string $Timestamp 时间戳
-     * @param boolean $HasRead 是否已读
-     * @param integer $Score 评价
-     * @param boolean $CanRating 是否评分
-     * @param boolean $CanFeedback 是否展示反馈按钮
+     * @param string $RecordId <p>记录ID</p>
+     * @param string $RelatedRecordId <p>关联记录ID</p>
+     * @param boolean $IsFromSelf <p>是否来自自己</p>
+     * @param string $FromName <p>发送者名称</p>
+     * @param string $FromAvatar <p>发送者头像</p>
+     * @param string $Timestamp <p>时间戳</p>
+     * @param boolean $HasRead <p>是否已读</p>
+     * @param integer $Score <p>评价</p>
+     * @param boolean $CanRating <p>是否评分</p>
+     * @param boolean $CanFeedback <p>是否展示反馈按钮</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Type 记录类型
-     * @param array $References 引用来源
-     * @param array $Reasons 评价原因
-     * @param boolean $IsLlmGenerated 是否大模型
-     * @param array $ImageUrls 图片链接，可公有读
+     * @param integer $Type <p>记录类型</p>
+     * @param array $References <p>引用来源</p>
+     * @param array $Reasons <p>评价原因</p>
+     * @param boolean $IsLlmGenerated <p>是否大模型</p>
+     * @param array $ImageUrls <p>图片链接，可公有读</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TokenStat $TokenStat 当次 token 统计信息
+     * @param TokenStat $TokenStat <p>当次 token 统计信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ReplyMethod 回复方式
-1:大模型直接回复;
-2:保守回复, 未知问题回复;
-3:拒答问题回复;
-4:敏感回复;
-5:问答对直接回复, 已采纳问答对优先回复;
-6:欢迎语回复;
-7:并发超限回复;
-8:全局干预知识;
-9:任务流程过程回复, 当历史记录中 task_flow.type = 0 时, 为大模型回复;
-10:任务流程答案回复;
-11:搜索引擎回复;
-12:知识润色后回复;
-13:图片理解回复;
-14:实时文档回复;
+     * @param integer $ReplyMethod <p>回复方式<br>1:大模型直接回复;<br>2:保守回复, 未知问题回复;<br>3:拒答问题回复;<br>4:敏感回复;<br>5:问答对直接回复, 已采纳问答对优先回复;<br>6:欢迎语回复;<br>7:并发超限回复;<br>8:全局干预知识;<br>9:任务流程过程回复, 当历史记录中 task_flow.type = 0 时, 为大模型回复;<br>10:任务流程答案回复;<br>11:搜索引擎回复;<br>12:知识润色后回复;<br>13:图片理解回复;<br>14:实时文档回复;</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $OptionCards 选项卡, 用于多轮对话
+     * @param array $OptionCards <p>选项卡, 用于多轮对话</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskFlowInfo $TaskFlow 任务信息
+     * @param TaskFlowInfo $TaskFlow <p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $FileInfos 用户传入的文件信息
+     * @param array $FileInfos <p>用户传入的文件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $QuoteInfos 参考来源引用位置信息
+     * @param array $QuoteInfos <p>参考来源引用位置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AgentThought $AgentThought Agent的思考过程信息
+     * @param AgentThought $AgentThought <p>Agent的思考过程信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExtraInfo $ExtraInfo 扩展信息
+     * @param ExtraInfo $ExtraInfo <p>扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowInfo $WorkFlow 工作流信息
+     * @param WorkflowInfo $WorkFlow <p>工作流信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Widgets Widget信息
+     * @param array $Widgets <p>Widget信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WidgetAction $WidgetAction Widget动作信息
+     * @param WidgetAction $WidgetAction <p>Widget动作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Audios 音频信息
+     * @param array $Audios <p>音频信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $OptionMode <p>标识选项卡为单选还是双选</p><p>枚举值：</p><ul><li>0： 单选</li><li>1： 双选</li></ul>
      */
     function __construct()
     {
@@ -531,6 +483,10 @@ class MsgRecord extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Audios, $obj);
             }
+        }
+
+        if (array_key_exists("OptionMode",$param) and $param["OptionMode"] !== null) {
+            $this->OptionMode = $param["OptionMode"];
         }
     }
 }

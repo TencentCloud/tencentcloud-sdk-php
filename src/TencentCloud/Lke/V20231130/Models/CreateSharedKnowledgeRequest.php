@@ -20,43 +20,51 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSharedKnowledge请求参数结构体
  *
- * @method string getKnowledgeName() 获取共享知识库名称，字符数量范围：[1, 50]
- * @method void setKnowledgeName(string $KnowledgeName) 设置共享知识库名称，字符数量范围：[1, 50]
- * @method string getKnowledgeDescription() 获取共享知识库描述，字符数量上限2000
- * @method void setKnowledgeDescription(string $KnowledgeDescription) 设置共享知识库描述，字符数量上限2000
- * @method string getEmbeddingModel() 获取Embedding模型，字符数量上限128
- * @method void setEmbeddingModel(string $EmbeddingModel) 设置Embedding模型，字符数量上限128
- * @method integer getKnowledgeType() 获取共享知识库类型，0普通，1公众号
- * @method void setKnowledgeType(integer $KnowledgeType) 设置共享知识库类型，0普通，1公众号
+ * @method string getKnowledgeName() 获取<p>共享知识库名称，字符数量范围：[1, 50]</p>
+ * @method void setKnowledgeName(string $KnowledgeName) 设置<p>共享知识库名称，字符数量范围：[1, 50]</p>
+ * @method string getKnowledgeDescription() 获取<p>共享知识库描述，字符数量上限2000</p>
+ * @method void setKnowledgeDescription(string $KnowledgeDescription) 设置<p>共享知识库描述，字符数量上限2000</p>
+ * @method string getEmbeddingModel() 获取<p>Embedding模型，字符数量上限128</p>
+ * @method void setEmbeddingModel(string $EmbeddingModel) 设置<p>Embedding模型，字符数量上限128</p>
+ * @method integer getKnowledgeType() 获取<p>共享知识库类型，0普通，1公众号</p>
+ * @method void setKnowledgeType(integer $KnowledgeType) 设置<p>共享知识库类型，0普通，1公众号</p>
+ * @method ESConfig getEsConfig() 获取<p>ES存储配置</p>
+ * @method void setEsConfig(ESConfig $EsConfig) 设置<p>ES存储配置</p>
  */
 class CreateSharedKnowledgeRequest extends AbstractModel
 {
     /**
-     * @var string 共享知识库名称，字符数量范围：[1, 50]
+     * @var string <p>共享知识库名称，字符数量范围：[1, 50]</p>
      */
     public $KnowledgeName;
 
     /**
-     * @var string 共享知识库描述，字符数量上限2000
+     * @var string <p>共享知识库描述，字符数量上限2000</p>
      */
     public $KnowledgeDescription;
 
     /**
-     * @var string Embedding模型，字符数量上限128
+     * @var string <p>Embedding模型，字符数量上限128</p>
      * @deprecated
      */
     public $EmbeddingModel;
 
     /**
-     * @var integer 共享知识库类型，0普通，1公众号
+     * @var integer <p>共享知识库类型，0普通，1公众号</p>
      */
     public $KnowledgeType;
 
     /**
-     * @param string $KnowledgeName 共享知识库名称，字符数量范围：[1, 50]
-     * @param string $KnowledgeDescription 共享知识库描述，字符数量上限2000
-     * @param string $EmbeddingModel Embedding模型，字符数量上限128
-     * @param integer $KnowledgeType 共享知识库类型，0普通，1公众号
+     * @var ESConfig <p>ES存储配置</p>
+     */
+    public $EsConfig;
+
+    /**
+     * @param string $KnowledgeName <p>共享知识库名称，字符数量范围：[1, 50]</p>
+     * @param string $KnowledgeDescription <p>共享知识库描述，字符数量上限2000</p>
+     * @param string $EmbeddingModel <p>Embedding模型，字符数量上限128</p>
+     * @param integer $KnowledgeType <p>共享知识库类型，0普通，1公众号</p>
+     * @param ESConfig $EsConfig <p>ES存储配置</p>
      */
     function __construct()
     {
@@ -85,6 +93,11 @@ class CreateSharedKnowledgeRequest extends AbstractModel
 
         if (array_key_exists("KnowledgeType",$param) and $param["KnowledgeType"] !== null) {
             $this->KnowledgeType = $param["KnowledgeType"];
+        }
+
+        if (array_key_exists("EsConfig",$param) and $param["EsConfig"] !== null) {
+            $this->EsConfig = new ESConfig();
+            $this->EsConfig->deserialize($param["EsConfig"]);
         }
     }
 }

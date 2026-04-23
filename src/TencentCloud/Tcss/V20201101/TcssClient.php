@@ -49,6 +49,8 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\AddNetworkFirewallPolicyYamlDetailResponse AddNetworkFirewallPolicyYamlDetail(Models\AddNetworkFirewallPolicyYamlDetailRequest $req) 功能已下线待三合一重构
 
 容器网络创建Yaml网络策略添加任务
+ * @method Models\AddOrModifyMaliciousConnectionWhiteListResponse AddOrModifyMaliciousConnectionWhiteList(Models\AddOrModifyMaliciousConnectionWhiteListRequest $req) 增加或修改恶意外连的白名单
+ * @method Models\AddOrModifyVirusWhiteListRuleResponse AddOrModifyVirusWhiteListRule(Models\AddOrModifyVirusWhiteListRuleRequest $req) 新增或修改木马白名单规则
  * @method Models\CheckNetworkFirewallPolicyYamlResponse CheckNetworkFirewallPolicyYaml(Models\CheckNetworkFirewallPolicyYamlRequest $req) 功能已下线待三合一重构
 
 容器网络创建检查Yaml网络策略任务
@@ -126,6 +128,7 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DeleteRiskSyscallEventsResponse DeleteRiskSyscallEvents(Models\DeleteRiskSyscallEventsRequest $req) 删除运行时高危系统调用事件
  * @method Models\DeleteRiskSyscallWhiteListsResponse DeleteRiskSyscallWhiteLists(Models\DeleteRiskSyscallWhiteListsRequest $req) 删除运行时高危系统调用白名单
  * @method Models\DeleteSearchTemplateResponse DeleteSearchTemplate(Models\DeleteSearchTemplateRequest $req) 删除检索模板
+ * @method Models\DeleteVirusWhiteListRuleResponse DeleteVirusWhiteListRule(Models\DeleteVirusWhiteListRuleRequest $req) 删除木马白名单规则
  * @method Models\DescribeABTestConfigResponse DescribeABTestConfig(Models\DescribeABTestConfigRequest $req) 获取用户当前灰度配置
  * @method Models\DescribeAbnormalProcessDetailResponse DescribeAbnormalProcessDetail(Models\DescribeAbnormalProcessDetailRequest $req) 查询运行时异常进程事件详细信息
  * @method Models\DescribeAbnormalProcessEventTendencyResponse DescribeAbnormalProcessEventTendency(Models\DescribeAbnormalProcessEventTendencyRequest $req) 查询待处理异常进程事件趋势
@@ -335,13 +338,16 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeVirusEventTendencyResponse DescribeVirusEventTendency(Models\DescribeVirusEventTendencyRequest $req) 查询木马事件趋势
  * @method Models\DescribeVirusListResponse DescribeVirusList(Models\DescribeVirusListRequest $req) 查询运行时文件查杀事件列表
  * @method Models\DescribeVirusManualScanEstimateTimeoutResponse DescribeVirusManualScanEstimateTimeout(Models\DescribeVirusManualScanEstimateTimeoutRequest $req) 查询木马一键检测预估超时时间
+ * @method Models\DescribeVirusMonitorConfigResponse DescribeVirusMonitorConfig(Models\DescribeVirusMonitorConfigRequest $req) 运行时查询文件查杀实时监控设置信息
  * @method Models\DescribeVirusMonitorSettingResponse DescribeVirusMonitorSetting(Models\DescribeVirusMonitorSettingRequest $req) 运行时查询文件查杀实时监控设置
  * @method Models\DescribeVirusSampleDownloadUrlResponse DescribeVirusSampleDownloadUrl(Models\DescribeVirusSampleDownloadUrlRequest $req) 查询木马样本下载url
+ * @method Models\DescribeVirusScanConfigResponse DescribeVirusScanConfig(Models\DescribeVirusScanConfigRequest $req) 运行时查询文件查杀新设置
  * @method Models\DescribeVirusScanSettingResponse DescribeVirusScanSetting(Models\DescribeVirusScanSettingRequest $req) 运行时查询文件查杀设置
  * @method Models\DescribeVirusScanTaskStatusResponse DescribeVirusScanTaskStatus(Models\DescribeVirusScanTaskStatusRequest $req) 运行时查询文件查杀任务状态
  * @method Models\DescribeVirusScanTimeoutSettingResponse DescribeVirusScanTimeoutSetting(Models\DescribeVirusScanTimeoutSettingRequest $req) 运行时文件扫描超时设置查询
  * @method Models\DescribeVirusSummaryResponse DescribeVirusSummary(Models\DescribeVirusSummaryRequest $req) 运行时查询木马概览信息
  * @method Models\DescribeVirusTaskListResponse DescribeVirusTaskList(Models\DescribeVirusTaskListRequest $req) 运行时查询文件查杀任务列表
+ * @method Models\DescribeVirusWhiteListRulesResponse DescribeVirusWhiteListRules(Models\DescribeVirusWhiteListRulesRequest $req) 查询木马白名单规则列表
  * @method Models\DescribeVulContainerListResponse DescribeVulContainerList(Models\DescribeVulContainerListRequest $req) 查询受漏洞的容器列表
  * @method Models\DescribeVulDefenceEventResponse DescribeVulDefenceEvent(Models\DescribeVulDefenceEventRequest $req) 查询漏洞防御事件列表
  * @method Models\DescribeVulDefenceEventDetailResponse DescribeVulDefenceEventDetail(Models\DescribeVulDefenceEventDetailRequest $req) 查询漏洞防御事件详情

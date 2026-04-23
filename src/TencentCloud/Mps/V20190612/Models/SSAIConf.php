@@ -60,6 +60,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPreRollMaxAllowedDuration(integer $PreRollMaxAllowedDuration) 设置<p>预加载广告最大允许时长，0-3600。</p>
  * @method boolean getMultiRequest() 获取<p>是否开启多次请求ADS,开启后将优先请求ADS，请求失败后再请求兜底广告</p>
  * @method void setMultiRequest(boolean $MultiRequest) 设置<p>是否开启多次请求ADS,开启后将优先请求ADS，请求失败后再请求兜底广告</p>
+ * @method string getDashOriginManifestType() 获取<p>dash周期类型：SinglePeriod 或 MultiPeriod，默认 MultiPeriod</p>
+ * @method void setDashOriginManifestType(string $DashOriginManifestType) 设置<p>dash周期类型：SinglePeriod 或 MultiPeriod，默认 MultiPeriod</p>
+ * @method boolean getSlateOnEmptyVast() 获取<p>Empty VAST时是否播放Slate，默认开启(true)</p>
+ * @method void setSlateOnEmptyVast(boolean $SlateOnEmptyVast) 设置<p>Empty VAST时是否播放Slate，默认开启(true)</p>
+ * @method integer getSCTEMarkerDuration() 获取<p>SCTE marker duration，默认180，范围0-3600</p>
+ * @method void setSCTEMarkerDuration(integer $SCTEMarkerDuration) 设置<p>SCTE marker duration，默认180，范围0-3600</p>
+ * @method string getSecurityGroupId() 获取<p>安全组Id</p>
+ * @method void setSecurityGroupId(string $SecurityGroupId) 设置<p>安全组Id</p>
  */
 class SSAIConf extends AbstractModel
 {
@@ -148,6 +156,26 @@ class SSAIConf extends AbstractModel
     public $MultiRequest;
 
     /**
+     * @var string <p>dash周期类型：SinglePeriod 或 MultiPeriod，默认 MultiPeriod</p>
+     */
+    public $DashOriginManifestType;
+
+    /**
+     * @var boolean <p>Empty VAST时是否播放Slate，默认开启(true)</p>
+     */
+    public $SlateOnEmptyVast;
+
+    /**
+     * @var integer <p>SCTE marker duration，默认180，范围0-3600</p>
+     */
+    public $SCTEMarkerDuration;
+
+    /**
+     * @var string <p>安全组Id</p>
+     */
+    public $SecurityGroupId;
+
+    /**
      * @param string $AdsUrl <p>广告决策服务器URL(ADS)。注意：填了AdsUrl会自动代替覆盖AdsUrls[0]</p>
      * @param array $AdsUrls <p>广告决策服务器URL数组(ADS)</p>
      * @param array $ConfigAliases <p>参数配置。</p>
@@ -168,6 +196,10 @@ class SSAIConf extends AbstractModel
      * @param array $PreRollAdsUrls <p>预加载广告决策服务地址数组</p>
      * @param integer $PreRollMaxAllowedDuration <p>预加载广告最大允许时长，0-3600。</p>
      * @param boolean $MultiRequest <p>是否开启多次请求ADS,开启后将优先请求ADS，请求失败后再请求兜底广告</p>
+     * @param string $DashOriginManifestType <p>dash周期类型：SinglePeriod 或 MultiPeriod，默认 MultiPeriod</p>
+     * @param boolean $SlateOnEmptyVast <p>Empty VAST时是否播放Slate，默认开启(true)</p>
+     * @param integer $SCTEMarkerDuration <p>SCTE marker duration，默认180，范围0-3600</p>
+     * @param string $SecurityGroupId <p>安全组Id</p>
      */
     function __construct()
     {
@@ -249,6 +281,22 @@ class SSAIConf extends AbstractModel
 
         if (array_key_exists("MultiRequest",$param) and $param["MultiRequest"] !== null) {
             $this->MultiRequest = $param["MultiRequest"];
+        }
+
+        if (array_key_exists("DashOriginManifestType",$param) and $param["DashOriginManifestType"] !== null) {
+            $this->DashOriginManifestType = $param["DashOriginManifestType"];
+        }
+
+        if (array_key_exists("SlateOnEmptyVast",$param) and $param["SlateOnEmptyVast"] !== null) {
+            $this->SlateOnEmptyVast = $param["SlateOnEmptyVast"];
+        }
+
+        if (array_key_exists("SCTEMarkerDuration",$param) and $param["SCTEMarkerDuration"] !== null) {
+            $this->SCTEMarkerDuration = $param["SCTEMarkerDuration"];
+        }
+
+        if (array_key_exists("SecurityGroupId",$param) and $param["SecurityGroupId"] !== null) {
+            $this->SecurityGroupId = $param["SecurityGroupId"];
         }
     }
 }

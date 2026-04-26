@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateNotebook返回参数结构体
  *
- * @method string getId() 获取notebook标志
- * @method void setId(string $Id) 设置notebook标志
+ * @method string getId() 获取<p>notebook标志</p>
+ * @method void setId(string $Id) 设置<p>notebook标志</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateNotebookResponse extends AbstractModel
 {
     /**
-     * @var string notebook标志
+     * @var string <p>notebook标志</p>
      */
     public $Id;
 
@@ -38,7 +38,7 @@ class CreateNotebookResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Id notebook标志
+     * @param string $Id <p>notebook标志</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

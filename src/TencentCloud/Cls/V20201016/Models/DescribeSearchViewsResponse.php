@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSearchViews返回参数结构体
  *
- * @method array getInfos() 获取<p>Splunk投递任务信息列表</p>
- * @method void setInfos(array $Infos) 设置<p>Splunk投递任务信息列表</p>
+ * @method array getInfos() 获取<p>查询视图详细信息</p>
+ * @method void setInfos(array $Infos) 设置<p>查询视图详细信息</p>
  * @method integer getTotal() 获取<p>符合条件的任务总数。</p>
  * @method void setTotal(integer $Total) 设置<p>符合条件的任务总数。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSearchViewsResponse extends AbstractModel
 {
     /**
-     * @var array <p>Splunk投递任务信息列表</p>
+     * @var array <p>查询视图详细信息</p>
      */
     public $Infos;
 
@@ -45,7 +45,7 @@ class DescribeSearchViewsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Infos <p>Splunk投递任务信息列表</p>
+     * @param array $Infos <p>查询视图详细信息</p>
      * @param integer $Total <p>符合条件的任务总数。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

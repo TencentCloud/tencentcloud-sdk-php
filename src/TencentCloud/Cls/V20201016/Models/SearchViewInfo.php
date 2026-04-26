@@ -18,7 +18,7 @@ namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 检索视图信息
+ * 查询视图信息
  *
  * @method string getViewId() 获取<p>视图ID</p>
  * @method void setViewId(string $ViewId) 设置<p>视图ID</p>

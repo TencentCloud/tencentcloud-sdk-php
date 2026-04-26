@@ -20,114 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 不满意回复
  *
- * @method string getReplyBizId() 获取不满意回复ID
+ * @method string getReplyBizId() 获取<p>不满意回复ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReplyBizId(string $ReplyBizId) 设置不满意回复ID
+ * @method void setReplyBizId(string $ReplyBizId) 设置<p>不满意回复ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRecordBizId() 获取消息记录ID
+ * @method string getRecordBizId() 获取<p>消息记录ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecordBizId(string $RecordBizId) 设置消息记录ID
+ * @method void setRecordBizId(string $RecordBizId) 设置<p>消息记录ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getQuestion() 获取用户问题
+ * @method string getQuestion() 获取<p>用户问题</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQuestion(string $Question) 设置用户问题
+ * @method void setQuestion(string $Question) 设置<p>用户问题</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAnswer() 获取问题回复
+ * @method string getAnswer() 获取<p>问题回复</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAnswer(string $Answer) 设置问题回复
+ * @method void setAnswer(string $Answer) 设置<p>问题回复</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getReasons() 获取错误类型
+ * @method array getReasons() 获取<p>错误类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReasons(array $Reasons) 设置错误类型
+ * @method void setReasons(array $Reasons) 设置<p>错误类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错
+ * @method integer getStatus() 获取<p>处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错
+ * @method void setStatus(integer $Status) 设置<p>处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间，秒级时间戳
- * @method void setCreateTime(string $CreateTime) 设置创建时间，秒级时间戳
- * @method string getUpdateTime() 获取更新时间,秒级时间戳
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间,秒级时间戳
- * @method string getOperator() 获取操作人
- * @method void setOperator(string $Operator) 设置操作人
- * @method string getFeedbackContent() 获取自定义反馈
- * @method void setFeedbackContent(string $FeedbackContent) 设置自定义反馈
+ * @method string getCreateTime() 获取<p>创建时间，秒级时间戳</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间，秒级时间戳</p>
+ * @method string getUpdateTime() 获取<p>更新时间,秒级时间戳</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间,秒级时间戳</p>
+ * @method string getOperator() 获取<p>操作人</p>
+ * @method void setOperator(string $Operator) 设置<p>操作人</p>
+ * @method string getFeedbackContent() 获取<p>自定义反馈</p>
+ * @method void setFeedbackContent(string $FeedbackContent) 设置<p>自定义反馈</p>
  */
 class UnsatisfiedReply extends AbstractModel
 {
     /**
-     * @var string 不满意回复ID
+     * @var string <p>不满意回复ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReplyBizId;
 
     /**
-     * @var string 消息记录ID
+     * @var string <p>消息记录ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordBizId;
 
     /**
-     * @var string 用户问题
+     * @var string <p>用户问题</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Question;
 
     /**
-     * @var string 问题回复
+     * @var string <p>问题回复</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Answer;
 
     /**
-     * @var array 错误类型
+     * @var array <p>错误类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Reasons;
 
     /**
-     * @var integer 处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错
+     * @var integer <p>处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var string 创建时间，秒级时间戳
+     * @var string <p>创建时间，秒级时间戳</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间,秒级时间戳
+     * @var string <p>更新时间,秒级时间戳</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 操作人
+     * @var string <p>操作人</p>
      */
     public $Operator;
 
     /**
-     * @var string 自定义反馈
+     * @var string <p>自定义反馈</p>
      */
     public $FeedbackContent;
 
     /**
-     * @param string $ReplyBizId 不满意回复ID
+     * @param string $ReplyBizId <p>不满意回复ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RecordBizId 消息记录ID
+     * @param string $RecordBizId <p>消息记录ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Question 用户问题
+     * @param string $Question <p>用户问题</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Answer 问题回复
+     * @param string $Answer <p>问题回复</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Reasons 错误类型
+     * @param array $Reasons <p>错误类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错
+     * @param integer $Status <p>处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间，秒级时间戳
-     * @param string $UpdateTime 更新时间,秒级时间戳
-     * @param string $Operator 操作人
-     * @param string $FeedbackContent 自定义反馈
+     * @param string $CreateTime <p>创建时间，秒级时间戳</p>
+     * @param string $UpdateTime <p>更新时间,秒级时间戳</p>
+     * @param string $Operator <p>操作人</p>
+     * @param string $FeedbackContent <p>自定义反馈</p>
      */
     function __construct()
     {

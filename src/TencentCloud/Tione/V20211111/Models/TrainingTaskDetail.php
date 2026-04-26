@@ -20,446 +20,454 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 训练任务详情
  *
- * @method string getId() 获取训练任务ID
- * @method void setId(string $Id) 设置训练任务ID
- * @method string getName() 获取训练任务名称
- * @method void setName(string $Name) 设置训练任务名称
- * @method string getUin() 获取主账号uin
- * @method void setUin(string $Uin) 设置主账号uin
- * @method string getSubUin() 获取子账号uin
- * @method void setSubUin(string $SubUin) 设置子账号uin
- * @method string getSubUinName() 获取创建者名称
+ * @method string getId() 获取<p>训练任务ID</p>
+ * @method void setId(string $Id) 设置<p>训练任务ID</p>
+ * @method string getName() 获取<p>训练任务名称</p>
+ * @method void setName(string $Name) 设置<p>训练任务名称</p>
+ * @method string getUin() 获取<p>主账号uin</p>
+ * @method void setUin(string $Uin) 设置<p>主账号uin</p>
+ * @method string getSubUin() 获取<p>子账号uin</p>
+ * @method void setSubUin(string $SubUin) 设置<p>子账号uin</p>
+ * @method string getSubUinName() 获取<p>创建者名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubUinName(string $SubUinName) 设置创建者名称
+ * @method void setSubUinName(string $SubUinName) 设置<p>创建者名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegion() 获取地域
- * @method void setRegion(string $Region) 设置地域
- * @method string getFrameworkName() 获取训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH
+ * @method string getRegion() 获取<p>地域</p>
+ * @method void setRegion(string $Region) 设置<p>地域</p>
+ * @method string getFrameworkName() 获取<p>训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFrameworkName(string $FrameworkName) 设置训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH
+ * @method void setFrameworkName(string $FrameworkName) 设置<p>训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFrameworkVersion() 获取训练框架版本
+ * @method string getFrameworkVersion() 获取<p>训练框架版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFrameworkVersion(string $FrameworkVersion) 设置训练框架版本
+ * @method void setFrameworkVersion(string $FrameworkVersion) 设置<p>训练框架版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFrameworkEnvironment() 获取框架运行环境
+ * @method string getFrameworkEnvironment() 获取<p>框架运行环境</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFrameworkEnvironment(string $FrameworkEnvironment) 设置框架运行环境
+ * @method void setFrameworkEnvironment(string $FrameworkEnvironment) 设置<p>框架运行环境</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getChargeType() 获取计费模式
- * @method void setChargeType(string $ChargeType) 设置计费模式
- * @method string getResourceGroupId() 获取预付费专用资源组
+ * @method string getChargeType() 获取<p>计费模式</p>
+ * @method void setChargeType(string $ChargeType) 设置<p>计费模式</p>
+ * @method string getResourceGroupId() 获取<p>预付费专用资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceGroupId(string $ResourceGroupId) 设置预付费专用资源组
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置<p>预付费专用资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getResourceConfigInfos() 获取资源配置
- * @method void setResourceConfigInfos(array $ResourceConfigInfos) 设置资源配置
- * @method array getTags() 获取标签
+ * @method array getResourceConfigInfos() 获取<p>资源配置</p>
+ * @method void setResourceConfigInfos(array $ResourceConfigInfos) 设置<p>资源配置</p>
+ * @method array getTags() 获取<p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTags(array $Tags) 设置标签
+ * @method void setTags(array $Tags) 设置<p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTrainingMode() 获取训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD
+ * @method string getTrainingMode() 获取<p>训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTrainingMode(string $TrainingMode) 设置训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD
+ * @method void setTrainingMode(string $TrainingMode) 设置<p>训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CosPathInfo getCodePackagePath() 获取代码包
- * @method void setCodePackagePath(CosPathInfo $CodePackagePath) 设置代码包
- * @method StartCmdInfo getStartCmdInfo() 获取启动命令信息
- * @method void setStartCmdInfo(StartCmdInfo $StartCmdInfo) 设置启动命令信息
- * @method string getDataSource() 获取数据来源，eg：DATASET、COS
+ * @method CosPathInfo getCodePackagePath() 获取<p>代码包</p>
+ * @method void setCodePackagePath(CosPathInfo $CodePackagePath) 设置<p>代码包</p>
+ * @method StartCmdInfo getStartCmdInfo() 获取<p>启动命令信息</p>
+ * @method void setStartCmdInfo(StartCmdInfo $StartCmdInfo) 设置<p>启动命令信息</p>
+ * @method string getDataSource() 获取<p>数据来源，eg：DATASET、COS</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataSource(string $DataSource) 设置数据来源，eg：DATASET、COS
+ * @method void setDataSource(string $DataSource) 设置<p>数据来源，eg：DATASET、COS</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDataConfigs() 获取数据配置
+ * @method array getDataConfigs() 获取<p>数据配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataConfigs(array $DataConfigs) 设置数据配置
+ * @method void setDataConfigs(array $DataConfigs) 设置<p>数据配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTuningParameters() 获取调优参数
+ * @method string getTuningParameters() 获取<p>调优参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTuningParameters(string $TuningParameters) 设置调优参数
+ * @method void setTuningParameters(string $TuningParameters) 设置<p>调优参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CosPathInfo getOutput() 获取训练输出
- * @method void setOutput(CosPathInfo $Output) 设置训练输出
- * @method boolean getLogEnable() 获取是否上报日志
- * @method void setLogEnable(boolean $LogEnable) 设置是否上报日志
- * @method LogConfig getLogConfig() 获取日志配置
+ * @method CosPathInfo getOutput() 获取<p>训练输出</p>
+ * @method void setOutput(CosPathInfo $Output) 设置<p>训练输出</p>
+ * @method boolean getLogEnable() 获取<p>是否上报日志</p>
+ * @method void setLogEnable(boolean $LogEnable) 设置<p>是否上报日志</p>
+ * @method LogConfig getLogConfig() 获取<p>日志配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLogConfig(LogConfig $LogConfig) 设置日志配置
+ * @method void setLogConfig(LogConfig $LogConfig) 设置<p>日志配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVpcId() 获取VPC ID
+ * @method string getVpcId() 获取<p>VPC ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVpcId(string $VpcId) 设置VPC ID
+ * @method void setVpcId(string $VpcId) 设置<p>VPC ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSubnetId() 获取子网ID
+ * @method string getSubnetId() 获取<p>子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubnetId(string $SubnetId) 设置子网ID
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ImageInfo getImageInfo() 获取自定义镜像信息
+ * @method ImageInfo getImageInfo() 获取<p>自定义镜像信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImageInfo(ImageInfo $ImageInfo) 设置自定义镜像信息
+ * @method void setImageInfo(ImageInfo $ImageInfo) 设置<p>自定义镜像信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRuntimeInSeconds() 获取运行时长
+ * @method integer getRuntimeInSeconds() 获取<p>运行时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuntimeInSeconds(integer $RuntimeInSeconds) 设置运行时长
+ * @method void setRuntimeInSeconds(integer $RuntimeInSeconds) 设置<p>运行时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getStartTime() 获取训练开始时间
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getStartTime() 获取<p>训练开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartTime(string $StartTime) 设置训练开始时间
+ * @method void setStartTime(string $StartTime) 设置<p>训练开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getChargeStatus() 获取计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
- * @method void setChargeStatus(string $ChargeStatus) 设置计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
- * @method string getLatestInstanceId() 获取最近一次实例ID
+ * @method string getChargeStatus() 获取<p>计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中</p>
+ * @method void setChargeStatus(string $ChargeStatus) 设置<p>计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中</p>
+ * @method string getLatestInstanceId() 获取<p>最近一次实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLatestInstanceId(string $LatestInstanceId) 设置最近一次实例ID
+ * @method void setLatestInstanceId(string $LatestInstanceId) 设置<p>最近一次实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTensorBoardId() 获取TensorBoard ID
+ * @method string getTensorBoardId() 获取<p>TensorBoard ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTensorBoardId(string $TensorBoardId) 设置TensorBoard ID
+ * @method void setTensorBoardId(string $TensorBoardId) 设置<p>TensorBoard ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRemark() 获取备注
+ * @method string getRemark() 获取<p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRemark(string $Remark) 设置备注
+ * @method void setRemark(string $Remark) 设置<p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFailureReason() 获取失败原因
+ * @method string getFailureReason() 获取<p>失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFailureReason(string $FailureReason) 设置失败原因
+ * @method void setFailureReason(string $FailureReason) 设置<p>失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
- * @method string getEndTime() 获取训练结束时间
+ * @method string getUpdateTime() 获取<p>更新时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
+ * @method string getEndTime() 获取<p>训练结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEndTime(string $EndTime) 设置训练结束时间
+ * @method void setEndTime(string $EndTime) 设置<p>训练结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBillingInfo() 获取计费金额信息，eg：2.00元/小时 (按量计费)
+ * @method string getBillingInfo() 获取<p>计费金额信息，eg：2.00元/小时 (按量计费)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBillingInfo(string $BillingInfo) 设置计费金额信息，eg：2.00元/小时 (按量计费)
+ * @method void setBillingInfo(string $BillingInfo) 设置<p>计费金额信息，eg：2.00元/小时 (按量计费)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResourceGroupName() 获取预付费专用资源组名称
+ * @method string getResourceGroupName() 获取<p>预付费专用资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceGroupName(string $ResourceGroupName) 设置预付费专用资源组名称
+ * @method void setResourceGroupName(string $ResourceGroupName) 设置<p>预付费专用资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMessage() 获取任务信息
+ * @method string getMessage() 获取<p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMessage(string $Message) 设置任务信息
+ * @method void setMessage(string $Message) 设置<p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
- * @method void setStatus(string $Status) 设置任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
- * @method string getCallbackUrl() 获取回调地址
+ * @method string getStatus() 获取<p>任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成</p>
+ * @method void setStatus(string $Status) 设置<p>任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成</p>
+ * @method string getCallbackUrl() 获取<p>回调地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址
+ * @method void setCallbackUrl(string $CallbackUrl) 设置<p>回调地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getCodeRepos() 获取任务关联的代码仓库配置
- * @method void setCodeRepos(array $CodeRepos) 设置任务关联的代码仓库配置
- * @method ExposeNetworkConfig getExposeNetworkConfig() 获取暴露网络配置
- * @method void setExposeNetworkConfig(ExposeNetworkConfig $ExposeNetworkConfig) 设置暴露网络配置
+ * @method array getCodeRepos() 获取<p>任务关联的代码仓库配置</p>
+ * @method void setCodeRepos(array $CodeRepos) 设置<p>任务关联的代码仓库配置</p>
+ * @method ExposeNetworkConfig getExposeNetworkConfig() 获取<p>暴露网络配置</p>
+ * @method void setExposeNetworkConfig(ExposeNetworkConfig $ExposeNetworkConfig) 设置<p>暴露网络配置</p>
+ * @method OperatorInfo getOperatorInfo() 获取<p>操作者信息</p>
+ * @method void setOperatorInfo(OperatorInfo $OperatorInfo) 设置<p>操作者信息</p>
  */
 class TrainingTaskDetail extends AbstractModel
 {
     /**
-     * @var string 训练任务ID
+     * @var string <p>训练任务ID</p>
      */
     public $Id;
 
     /**
-     * @var string 训练任务名称
+     * @var string <p>训练任务名称</p>
      */
     public $Name;
 
     /**
-     * @var string 主账号uin
+     * @var string <p>主账号uin</p>
      */
     public $Uin;
 
     /**
-     * @var string 子账号uin
+     * @var string <p>子账号uin</p>
      */
     public $SubUin;
 
     /**
-     * @var string 创建者名称
+     * @var string <p>创建者名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubUinName;
 
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
      */
     public $Region;
 
     /**
-     * @var string 训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH
+     * @var string <p>训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FrameworkName;
 
     /**
-     * @var string 训练框架版本
+     * @var string <p>训练框架版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FrameworkVersion;
 
     /**
-     * @var string 框架运行环境
+     * @var string <p>框架运行环境</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FrameworkEnvironment;
 
     /**
-     * @var string 计费模式
+     * @var string <p>计费模式</p>
      */
     public $ChargeType;
 
     /**
-     * @var string 预付费专用资源组
+     * @var string <p>预付费专用资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupId;
 
     /**
-     * @var array 资源配置
+     * @var array <p>资源配置</p>
      */
     public $ResourceConfigInfos;
 
     /**
-     * @var array 标签
+     * @var array <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
-     * @var string 训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD
+     * @var string <p>训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrainingMode;
 
     /**
-     * @var CosPathInfo 代码包
+     * @var CosPathInfo <p>代码包</p>
      */
     public $CodePackagePath;
 
     /**
-     * @var StartCmdInfo 启动命令信息
+     * @var StartCmdInfo <p>启动命令信息</p>
      */
     public $StartCmdInfo;
 
     /**
-     * @var string 数据来源，eg：DATASET、COS
+     * @var string <p>数据来源，eg：DATASET、COS</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSource;
 
     /**
-     * @var array 数据配置
+     * @var array <p>数据配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataConfigs;
 
     /**
-     * @var string 调优参数
+     * @var string <p>调优参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TuningParameters;
 
     /**
-     * @var CosPathInfo 训练输出
+     * @var CosPathInfo <p>训练输出</p>
      */
     public $Output;
 
     /**
-     * @var boolean 是否上报日志
+     * @var boolean <p>是否上报日志</p>
      */
     public $LogEnable;
 
     /**
-     * @var LogConfig 日志配置
+     * @var LogConfig <p>日志配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogConfig;
 
     /**
-     * @var string VPC ID
+     * @var string <p>VPC ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
-     * @var string 子网ID
+     * @var string <p>子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
     /**
-     * @var ImageInfo 自定义镜像信息
+     * @var ImageInfo <p>自定义镜像信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageInfo;
 
     /**
-     * @var integer 运行时长
+     * @var integer <p>运行时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuntimeInSeconds;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 训练开始时间
+     * @var string <p>训练开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
-     * @var string 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+     * @var string <p>计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中</p>
      */
     public $ChargeStatus;
 
     /**
-     * @var string 最近一次实例ID
+     * @var string <p>最近一次实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LatestInstanceId;
 
     /**
-     * @var string TensorBoard ID
+     * @var string <p>TensorBoard ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TensorBoardId;
 
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
-     * @var string 失败原因
+     * @var string <p>失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailureReason;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 训练结束时间
+     * @var string <p>训练结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
-     * @var string 计费金额信息，eg：2.00元/小时 (按量计费)
+     * @var string <p>计费金额信息，eg：2.00元/小时 (按量计费)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillingInfo;
 
     /**
-     * @var string 预付费专用资源组名称
+     * @var string <p>预付费专用资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupName;
 
     /**
-     * @var string 任务信息
+     * @var string <p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
-     * @var string 任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
+     * @var string <p>任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成</p>
      */
     public $Status;
 
     /**
-     * @var string 回调地址
+     * @var string <p>回调地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CallbackUrl;
 
     /**
-     * @var array 任务关联的代码仓库配置
+     * @var array <p>任务关联的代码仓库配置</p>
      */
     public $CodeRepos;
 
     /**
-     * @var ExposeNetworkConfig 暴露网络配置
+     * @var ExposeNetworkConfig <p>暴露网络配置</p>
      */
     public $ExposeNetworkConfig;
 
     /**
-     * @param string $Id 训练任务ID
-     * @param string $Name 训练任务名称
-     * @param string $Uin 主账号uin
-     * @param string $SubUin 子账号uin
-     * @param string $SubUinName 创建者名称
+     * @var OperatorInfo <p>操作者信息</p>
+     */
+    public $OperatorInfo;
+
+    /**
+     * @param string $Id <p>训练任务ID</p>
+     * @param string $Name <p>训练任务名称</p>
+     * @param string $Uin <p>主账号uin</p>
+     * @param string $SubUin <p>子账号uin</p>
+     * @param string $SubUinName <p>创建者名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Region 地域
-     * @param string $FrameworkName 训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH
+     * @param string $Region <p>地域</p>
+     * @param string $FrameworkName <p>训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FrameworkVersion 训练框架版本
+     * @param string $FrameworkVersion <p>训练框架版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FrameworkEnvironment 框架运行环境
+     * @param string $FrameworkEnvironment <p>框架运行环境</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ChargeType 计费模式
-     * @param string $ResourceGroupId 预付费专用资源组
+     * @param string $ChargeType <p>计费模式</p>
+     * @param string $ResourceGroupId <p>预付费专用资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ResourceConfigInfos 资源配置
-     * @param array $Tags 标签
+     * @param array $ResourceConfigInfos <p>资源配置</p>
+     * @param array $Tags <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TrainingMode 训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD
+     * @param string $TrainingMode <p>训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CosPathInfo $CodePackagePath 代码包
-     * @param StartCmdInfo $StartCmdInfo 启动命令信息
-     * @param string $DataSource 数据来源，eg：DATASET、COS
+     * @param CosPathInfo $CodePackagePath <p>代码包</p>
+     * @param StartCmdInfo $StartCmdInfo <p>启动命令信息</p>
+     * @param string $DataSource <p>数据来源，eg：DATASET、COS</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DataConfigs 数据配置
+     * @param array $DataConfigs <p>数据配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TuningParameters 调优参数
+     * @param string $TuningParameters <p>调优参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CosPathInfo $Output 训练输出
-     * @param boolean $LogEnable 是否上报日志
-     * @param LogConfig $LogConfig 日志配置
+     * @param CosPathInfo $Output <p>训练输出</p>
+     * @param boolean $LogEnable <p>是否上报日志</p>
+     * @param LogConfig $LogConfig <p>日志配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VpcId VPC ID
+     * @param string $VpcId <p>VPC ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SubnetId 子网ID
+     * @param string $SubnetId <p>子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageInfo $ImageInfo 自定义镜像信息
+     * @param ImageInfo $ImageInfo <p>自定义镜像信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RuntimeInSeconds 运行时长
+     * @param integer $RuntimeInSeconds <p>运行时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间
-     * @param string $StartTime 训练开始时间
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $StartTime <p>训练开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ChargeStatus 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
-     * @param string $LatestInstanceId 最近一次实例ID
+     * @param string $ChargeStatus <p>计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中</p>
+     * @param string $LatestInstanceId <p>最近一次实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TensorBoardId TensorBoard ID
+     * @param string $TensorBoardId <p>TensorBoard ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Remark 备注
+     * @param string $Remark <p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FailureReason 失败原因
+     * @param string $FailureReason <p>失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime 更新时间
-     * @param string $EndTime 训练结束时间
+     * @param string $UpdateTime <p>更新时间</p>
+     * @param string $EndTime <p>训练结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BillingInfo 计费金额信息，eg：2.00元/小时 (按量计费)
+     * @param string $BillingInfo <p>计费金额信息，eg：2.00元/小时 (按量计费)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResourceGroupName 预付费专用资源组名称
+     * @param string $ResourceGroupName <p>预付费专用资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Message 任务信息
+     * @param string $Message <p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
-     * @param string $CallbackUrl 回调地址
+     * @param string $Status <p>任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成</p>
+     * @param string $CallbackUrl <p>回调地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $CodeRepos 任务关联的代码仓库配置
-     * @param ExposeNetworkConfig $ExposeNetworkConfig 暴露网络配置
+     * @param array $CodeRepos <p>任务关联的代码仓库配置</p>
+     * @param ExposeNetworkConfig $ExposeNetworkConfig <p>暴露网络配置</p>
+     * @param OperatorInfo $OperatorInfo <p>操作者信息</p>
      */
     function __construct()
     {
@@ -666,6 +674,11 @@ class TrainingTaskDetail extends AbstractModel
         if (array_key_exists("ExposeNetworkConfig",$param) and $param["ExposeNetworkConfig"] !== null) {
             $this->ExposeNetworkConfig = new ExposeNetworkConfig();
             $this->ExposeNetworkConfig->deserialize($param["ExposeNetworkConfig"]);
+        }
+
+        if (array_key_exists("OperatorInfo",$param) and $param["OperatorInfo"] !== null) {
+            $this->OperatorInfo = new OperatorInfo();
+            $this->OperatorInfo->deserialize($param["OperatorInfo"]);
         }
     }
 }

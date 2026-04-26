@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
  *
- * @method integer getX() 获取左上角x
- * @method void setX(integer $X) 设置左上角x
- * @method integer getY() 获取左上角y
- * @method void setY(integer $Y) 设置左上角y
- * @method integer getWidth() 获取宽width
- * @method void setWidth(integer $Width) 设置宽width
- * @method integer getHeight() 获取高height
- * @method void setHeight(integer $Height) 设置高height
+ * @method integer getX() 获取<p>左上角x。</p>
+ * @method void setX(integer $X) 设置<p>左上角x。</p>
+ * @method integer getY() 获取<p>左上角y。</p>
+ * @method void setY(integer $Y) 设置<p>左上角y。</p>
+ * @method integer getWidth() 获取<p>宽width。</p>
+ * @method void setWidth(integer $Width) 设置<p>宽width。</p>
+ * @method integer getHeight() 获取<p>高height。</p>
+ * @method void setHeight(integer $Height) 设置<p>高height。</p>
  */
 class ItemCoord extends AbstractModel
 {
     /**
-     * @var integer 左上角x
+     * @var integer <p>左上角x。</p>
      */
     public $X;
 
     /**
-     * @var integer 左上角y
+     * @var integer <p>左上角y。</p>
      */
     public $Y;
 
     /**
-     * @var integer 宽width
+     * @var integer <p>宽width。</p>
      */
     public $Width;
 
     /**
-     * @var integer 高height
+     * @var integer <p>高height。</p>
      */
     public $Height;
 
     /**
-     * @param integer $X 左上角x
-     * @param integer $Y 左上角y
-     * @param integer $Width 宽width
-     * @param integer $Height 高height
+     * @param integer $X <p>左上角x。</p>
+     * @param integer $Y <p>左上角y。</p>
+     * @param integer $Width <p>宽width。</p>
+     * @param integer $Height <p>高height。</p>
      */
     function __construct()
     {

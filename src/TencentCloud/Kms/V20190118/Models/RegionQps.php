@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ocr\V20181119\Models;
+namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 坐标
+ * 地域的QPS扩展包
  *
- * @method integer getX() 获取<p>横坐标。</p>
- * @method void setX(integer $X) 设置<p>横坐标。</p>
- * @method integer getY() 获取<p>纵坐标。</p>
- * @method void setY(integer $Y) 设置<p>纵坐标。</p>
+ * @method string getRegion() 获取<p>地域</p>
+ * @method void setRegion(string $Region) 设置<p>地域</p>
+ * @method integer getQps() 获取<p>qps的大小</p>
+ * @method void setQps(integer $Qps) 设置<p>qps的大小</p>
  */
-class Coord extends AbstractModel
+class RegionQps extends AbstractModel
 {
     /**
-     * @var integer <p>横坐标。</p>
+     * @var string <p>地域</p>
      */
-    public $X;
+    public $Region;
 
     /**
-     * @var integer <p>纵坐标。</p>
+     * @var integer <p>qps的大小</p>
      */
-    public $Y;
+    public $Qps;
 
     /**
-     * @param integer $X <p>横坐标。</p>
-     * @param integer $Y <p>纵坐标。</p>
+     * @param string $Region <p>地域</p>
+     * @param integer $Qps <p>qps的大小</p>
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class Coord extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("X",$param) and $param["X"] !== null) {
-            $this->X = $param["X"];
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
         }
 
-        if (array_key_exists("Y",$param) and $param["Y"] !== null) {
-            $this->Y = $param["Y"];
+        if (array_key_exists("Qps",$param) and $param["Qps"] !== null) {
+            $this->Qps = $param["Qps"];
         }
     }
 }

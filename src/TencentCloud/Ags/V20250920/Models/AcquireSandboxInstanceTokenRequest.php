@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AcquireSandboxInstanceToken请求参数结构体
  *
- * @method string getInstanceId() 获取沙箱实例ID，生成的访问Token将仅可用于访问此沙箱实例
- * @method void setInstanceId(string $InstanceId) 设置沙箱实例ID，生成的访问Token将仅可用于访问此沙箱实例
+ * @method string getInstanceId() 获取<p>沙箱实例ID，生成的访问Token将仅可用于访问此沙箱实例</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>沙箱实例ID，生成的访问Token将仅可用于访问此沙箱实例</p>
  */
 class AcquireSandboxInstanceTokenRequest extends AbstractModel
 {
     /**
-     * @var string 沙箱实例ID，生成的访问Token将仅可用于访问此沙箱实例
+     * @var string <p>沙箱实例ID，生成的访问Token将仅可用于访问此沙箱实例</p>
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId 沙箱实例ID，生成的访问Token将仅可用于访问此沙箱实例
+     * @param string $InstanceId <p>沙箱实例ID，生成的访问Token将仅可用于访问此沙箱实例</p>
      */
     function __construct()
     {

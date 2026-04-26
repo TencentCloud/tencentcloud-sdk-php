@@ -33,6 +33,11 @@ use TencentCloud\Common\AbstractModel;
 
 
  * @method void setRejectedBizId(string $RejectedBizId) 设置拒答问题来源的数据源唯一id, 通过调用ListRejectedQuestion接口获取
+
+
+
+ * @method integer getEnableScope() 获取拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+ * @method void setEnableScope(integer $EnableScope) 设置拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
  */
 class ModifyRejectedQuestionRequest extends AbstractModel
 {
@@ -57,11 +62,20 @@ class ModifyRejectedQuestionRequest extends AbstractModel
     public $RejectedBizId;
 
     /**
+     * @var integer 拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+     */
+    public $EnableScope;
+
+    /**
      * @param string $BotBizId 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      * @param string $Question 拒答问题
 
 
      * @param string $RejectedBizId 拒答问题来源的数据源唯一id, 通过调用ListRejectedQuestion接口获取
+
+
+
+     * @param integer $EnableScope 拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
      */
     function __construct()
     {
@@ -86,6 +100,10 @@ class ModifyRejectedQuestionRequest extends AbstractModel
 
         if (array_key_exists("RejectedBizId",$param) and $param["RejectedBizId"] !== null) {
             $this->RejectedBizId = $param["RejectedBizId"];
+        }
+
+        if (array_key_exists("EnableScope",$param) and $param["EnableScope"] !== null) {
+            $this->EnableScope = $param["EnableScope"];
         }
     }
 }

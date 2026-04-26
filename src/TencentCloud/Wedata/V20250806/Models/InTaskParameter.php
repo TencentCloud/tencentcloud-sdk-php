@@ -20,57 +20,69 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 参数传递-引用参数
  *
- * @method string getParamKey() 获取参数名
+ * @method string getParamKey() 获取<p>参数名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParamKey(string $ParamKey) 设置参数名
+ * @method void setParamKey(string $ParamKey) 设置<p>参数名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getParamDesc() 获取参数描述：格式为 项目标识.任务名称.参数名；例：project_wedata_1.sh_250820_104107.pp_out
+ * @method string getParamDesc() 获取<p>参数描述：格式为 项目标识.任务名称.参数名；例：project_wedata_1.sh_250820_104107.pp_out</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParamDesc(string $ParamDesc) 设置参数描述：格式为 项目标识.任务名称.参数名；例：project_wedata_1.sh_250820_104107.pp_out
+ * @method void setParamDesc(string $ParamDesc) 设置<p>参数描述：格式为 项目标识.任务名称.参数名；例：project_wedata_1.sh_250820_104107.pp_out</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFromTaskId() 获取父任务ID
+ * @method string getFromTaskId() 获取<p>父任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFromTaskId(string $FromTaskId) 设置父任务ID
+ * @method void setFromTaskId(string $FromTaskId) 设置<p>父任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFromParamKey() 获取父任务参数key
+ * @method string getFromParamKey() 获取<p>父任务参数key</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFromParamKey(string $FromParamKey) 设置父任务参数key
+ * @method void setFromParamKey(string $FromParamKey) 设置<p>父任务参数key</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getType() 获取<p>任务输入类型，默认使用TASK</p><p>枚举值：</p><ul><li>TASK： 来源为父任务</li><li>CONSTANT： 常量值，目前仅for-each节点支持</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setType(string $Type) 设置<p>任务输入类型，默认使用TASK</p><p>枚举值：</p><ul><li>TASK： 来源为父任务</li><li>CONSTANT： 常量值，目前仅for-each节点支持</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class InTaskParameter extends AbstractModel
 {
     /**
-     * @var string 参数名
+     * @var string <p>参数名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParamKey;
 
     /**
-     * @var string 参数描述：格式为 项目标识.任务名称.参数名；例：project_wedata_1.sh_250820_104107.pp_out
+     * @var string <p>参数描述：格式为 项目标识.任务名称.参数名；例：project_wedata_1.sh_250820_104107.pp_out</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParamDesc;
 
     /**
-     * @var string 父任务ID
+     * @var string <p>父任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FromTaskId;
 
     /**
-     * @var string 父任务参数key
+     * @var string <p>父任务参数key</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FromParamKey;
 
     /**
-     * @param string $ParamKey 参数名
+     * @var string <p>任务输入类型，默认使用TASK</p><p>枚举值：</p><ul><li>TASK： 来源为父任务</li><li>CONSTANT： 常量值，目前仅for-each节点支持</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ParamDesc 参数描述：格式为 项目标识.任务名称.参数名；例：project_wedata_1.sh_250820_104107.pp_out
+     */
+    public $Type;
+
+    /**
+     * @param string $ParamKey <p>参数名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FromTaskId 父任务ID
+     * @param string $ParamDesc <p>参数描述：格式为 项目标识.任务名称.参数名；例：project_wedata_1.sh_250820_104107.pp_out</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FromParamKey 父任务参数key
+     * @param string $FromTaskId <p>父任务ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FromParamKey <p>父任务参数key</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Type <p>任务输入类型，默认使用TASK</p><p>枚举值：</p><ul><li>TASK： 来源为父任务</li><li>CONSTANT： 常量值，目前仅for-each节点支持</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +112,10 @@ class InTaskParameter extends AbstractModel
 
         if (array_key_exists("FromParamKey",$param) and $param["FromParamKey"] !== null) {
             $this->FromParamKey = $param["FromParamKey"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

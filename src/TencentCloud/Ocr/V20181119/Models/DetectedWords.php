@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）
  *
- * @method integer getConfidence() 获取置信度 0 ~100
- * @method void setConfidence(integer $Confidence) 设置置信度 0 ~100
- * @method string getCharacter() 获取候选字Character
- * @method void setCharacter(string $Character) 设置候选字Character
+ * @method integer getConfidence() 获取<p>置信度 0 ~100。</p>
+ * @method void setConfidence(integer $Confidence) 设置<p>置信度 0 ~100。</p>
+ * @method string getCharacter() 获取<p>候选字Character。</p>
+ * @method void setCharacter(string $Character) 设置<p>候选字Character。</p>
  */
 class DetectedWords extends AbstractModel
 {
     /**
-     * @var integer 置信度 0 ~100
+     * @var integer <p>置信度 0 ~100。</p>
      */
     public $Confidence;
 
     /**
-     * @var string 候选字Character
+     * @var string <p>候选字Character。</p>
      */
     public $Character;
 
     /**
-     * @param integer $Confidence 置信度 0 ~100
-     * @param string $Character 候选字Character
+     * @param integer $Confidence <p>置信度 0 ~100。</p>
+     * @param string $Character <p>候选字Character。</p>
      */
     function __construct()
     {

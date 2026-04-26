@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setViewId(string $ViewId) 设置<p>视图ID</p>
  * @method string getViewName() 获取<p>视图名称</p><p>参数格式：<code>^[a-z0-9][a-z0-9_-]{1,61}[a-z0-9]$</code></p>
  * @method void setViewName(string $ViewName) 设置<p>视图名称</p><p>参数格式：<code>^[a-z0-9][a-z0-9_-]{1,61}[a-z0-9]$</code></p>
- * @method string getViewType() 获取<p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul>
- * @method void setViewType(string $ViewType) 设置<p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul>
- * @method array getTopics() 获取<p>视图主题配置信息</p>
- * @method void setTopics(array $Topics) 设置<p>视图主题配置信息</p>
- * @method string getDescription() 获取<p>配置描述信息</p>
- * @method void setDescription(string $Description) 设置<p>配置描述信息</p>
+ * @method string getViewType() 获取<p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
+ * @method void setViewType(string $ViewType) 设置<p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
+ * @method array getTopics() 获取<p>查询视图中包含的主题，最大可包含10个主题</p>
+ * @method void setTopics(array $Topics) 设置<p>查询视图中包含的主题，最大可包含10个主题</p>
+ * @method string getDescription() 获取<p>描述信息</p>
+ * @method void setDescription(string $Description) 设置<p>描述信息</p>
  */
 class ModifySearchViewRequest extends AbstractModel
 {
@@ -44,26 +44,26 @@ class ModifySearchViewRequest extends AbstractModel
     public $ViewName;
 
     /**
-     * @var string <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul>
+     * @var string <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
      */
     public $ViewType;
 
     /**
-     * @var array <p>视图主题配置信息</p>
+     * @var array <p>查询视图中包含的主题，最大可包含10个主题</p>
      */
     public $Topics;
 
     /**
-     * @var string <p>配置描述信息</p>
+     * @var string <p>描述信息</p>
      */
     public $Description;
 
     /**
      * @param string $ViewId <p>视图ID</p>
      * @param string $ViewName <p>视图名称</p><p>参数格式：<code>^[a-z0-9][a-z0-9_-]{1,61}[a-z0-9]$</code></p>
-     * @param string $ViewType <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul>
-     * @param array $Topics <p>视图主题配置信息</p>
-     * @param string $Description <p>配置描述信息</p>
+     * @param string $ViewType <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
+     * @param array $Topics <p>查询视图中包含的主题，最大可包含10个主题</p>
+     * @param string $Description <p>描述信息</p>
      */
     function __construct()
     {

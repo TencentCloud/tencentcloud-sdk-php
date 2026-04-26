@@ -20,24 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AcquireSandboxInstanceToken返回参数结构体
  *
- * @method string getToken() 获取访问Token
- * @method void setToken(string $Token) 设置访问Token
- * @method string getExpiresAt() 获取过期时间
- * @method void setExpiresAt(string $ExpiresAt) 设置过期时间
+ * @method string getToken() 获取<p>访问Token</p>
+ * @method void setToken(string $Token) 设置<p>访问Token</p>
+ * @method string getExpiresAt() 获取<p>过期时间</p>
+ * @method void setExpiresAt(string $ExpiresAt) 设置<p>过期时间</p>
+ * @method string getTrafficToken() 获取<p>非管控面（envd）的访问Token</p>
+ * @method void setTrafficToken(string $TrafficToken) 设置<p>非管控面（envd）的访问Token</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class AcquireSandboxInstanceTokenResponse extends AbstractModel
 {
     /**
-     * @var string 访问Token
+     * @var string <p>访问Token</p>
      */
     public $Token;
 
     /**
-     * @var string 过期时间
+     * @var string <p>过期时间</p>
      */
     public $ExpiresAt;
+
+    /**
+     * @var string <p>非管控面（envd）的访问Token</p>
+     */
+    public $TrafficToken;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +52,9 @@ class AcquireSandboxInstanceTokenResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Token 访问Token
-     * @param string $ExpiresAt 过期时间
+     * @param string $Token <p>访问Token</p>
+     * @param string $ExpiresAt <p>过期时间</p>
+     * @param string $TrafficToken <p>非管控面（envd）的访问Token</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +76,10 @@ class AcquireSandboxInstanceTokenResponse extends AbstractModel
 
         if (array_key_exists("ExpiresAt",$param) and $param["ExpiresAt"] !== null) {
             $this->ExpiresAt = $param["ExpiresAt"];
+        }
+
+        if (array_key_exists("TrafficToken",$param) and $param["TrafficToken"] !== null) {
+            $this->TrafficToken = $param["TrafficToken"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

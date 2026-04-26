@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateInfo(array $TemplateInfo) 设置日志命中规则模板的基本信息
  * @method integer getTrxId() 获取 事务ID
  * @method void setTrxId(integer $TrxId) 设置 事务ID
+ * @method integer getClientPort() 获取端口
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClientPort(integer $ClientPort) 设置端口
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AuditLog extends AbstractModel
 {
@@ -164,6 +168,12 @@ class AuditLog extends AbstractModel
     public $TrxId;
 
     /**
+     * @var integer 端口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClientPort;
+
+    /**
      * @param integer $AffectRows 影响行数。
      * @param integer $ErrCode 错误码。
      * @param string $SqlType SQL 类型。
@@ -184,6 +194,8 @@ class AuditLog extends AbstractModel
      * @param integer $TrxLivingTime 事物持续时间，微秒。
      * @param array $TemplateInfo 日志命中规则模板的基本信息
      * @param integer $TrxId  事务ID
+     * @param integer $ClientPort 端口
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -281,6 +293,10 @@ class AuditLog extends AbstractModel
 
         if (array_key_exists("TrxId",$param) and $param["TrxId"] !== null) {
             $this->TrxId = $param["TrxId"];
+        }
+
+        if (array_key_exists("ClientPort",$param) and $param["ClientPort"] !== null) {
+            $this->ClientPort = $param["ClientPort"];
         }
     }
 }

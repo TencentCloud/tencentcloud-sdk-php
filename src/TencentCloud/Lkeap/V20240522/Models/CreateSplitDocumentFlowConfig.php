@@ -20,156 +20,84 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 创建智能文档拆分任务的配置信息
  *
- * @method string getTableResultType() 获取Markdown文件中表格返回的形式
-0，表格以MD形式返回
-1，表格以HTML形式返回
-默认为
- * @method void setTableResultType(string $TableResultType) 设置Markdown文件中表格返回的形式
-0，表格以MD形式返回
-1，表格以HTML形式返回
-默认为
- * @method string getResultType() 获取智能文档解析返回结果的格式
-0：只返回全文MD；
-1：只返回每一页的OCR原始Json；
-2：只返回每一页的MD；
-3：返回全文MD + 每一页的OCR原始Json；
-4：返回全文MD + 每一页的MD；
-5：返回全文md，每一页ocr原始json，每一页md。
-
-
- * @method void setResultType(string $ResultType) 设置智能文档解析返回结果的格式
-0：只返回全文MD；
-1：只返回每一页的OCR原始Json；
-2：只返回每一页的MD；
-3：返回全文MD + 每一页的OCR原始Json；
-4：返回全文MD + 每一页的MD；
-5：返回全文md，每一页ocr原始json，每一页md。
-
-
- * @method boolean getEnableMllm() 获取是否开启mllm
- * @method void setEnableMllm(boolean $EnableMllm) 设置是否开启mllm
- * @method integer getMaxChunkSize() 获取最大分片长度
- * @method void setMaxChunkSize(integer $MaxChunkSize) 设置最大分片长度
- * @method boolean getIgnoreFailedPage() 获取是否忽略返回失败页码
- * @method void setIgnoreFailedPage(boolean $IgnoreFailedPage) 设置是否忽略返回失败页码
- * @method string getSplitResultType() 获取智能文档解析返回结果的格式
-0：只返回全文MD；
-1：只返回每一页的OCR原始Json；
-2：只返回每一页的MD；
-3：返回全文MD + 每一页的OCR原始Json；
-4：返回全文MD + 每一页的MD；
-5：返回全文md，每一页ocr原始json，每一页md。
-
-
- * @method void setSplitResultType(string $SplitResultType) 设置智能文档解析返回结果的格式
-0：只返回全文MD；
-1：只返回每一页的OCR原始Json；
-2：只返回每一页的MD；
-3：返回全文MD + 每一页的OCR原始Json；
-4：返回全文MD + 每一页的MD；
-5：返回全文md，每一页ocr原始json，每一页md。
-
-
- * @method string getSplitTableResultType() 获取Markdown文件中表格返回的形式
-0，表格以MD形式返回
-1，表格以HTML形式返回
-默认为
- * @method void setSplitTableResultType(string $SplitTableResultType) 设置Markdown文件中表格返回的形式
-0，表格以MD形式返回
-1，表格以HTML形式返回
-默认为
+ * @method string getTableResultType() 获取<p>Markdown文件中表格返回的形式<br>0，表格以MD形式返回<br>1，表格以HTML形式返回<br>默认为</p>
+ * @method void setTableResultType(string $TableResultType) 设置<p>Markdown文件中表格返回的形式<br>0，表格以MD形式返回<br>1，表格以HTML形式返回<br>默认为</p>
+ * @method string getResultType() 获取<p>智能文档解析返回结果的格式<br>0：只返回全文MD；<br>1：只返回每一页的OCR原始Json；<br>2：只返回每一页的MD；<br>3：返回全文MD + 每一页的OCR原始Json；<br>4：返回全文MD + 每一页的MD；<br>5：返回全文md，每一页ocr原始json，每一页md。</p>
+ * @method void setResultType(string $ResultType) 设置<p>智能文档解析返回结果的格式<br>0：只返回全文MD；<br>1：只返回每一页的OCR原始Json；<br>2：只返回每一页的MD；<br>3：返回全文MD + 每一页的OCR原始Json；<br>4：返回全文MD + 每一页的MD；<br>5：返回全文md，每一页ocr原始json，每一页md。</p>
+ * @method boolean getEnableMllm() 获取<p>是否开启mllm</p>
+ * @method void setEnableMllm(boolean $EnableMllm) 设置<p>是否开启mllm</p>
+ * @method integer getMaxChunkSize() 获取<p>最大分片长度</p>
+ * @method void setMaxChunkSize(integer $MaxChunkSize) 设置<p>最大分片长度</p>
+ * @method boolean getIgnoreFailedPage() 获取<p>是否忽略返回失败页码</p>
+ * @method void setIgnoreFailedPage(boolean $IgnoreFailedPage) 设置<p>是否忽略返回失败页码</p>
+ * @method string getSplitResultType() 获取<p>智能文档解析返回结果的格式<br>0：只返回全文MD；<br>1：只返回每一页的OCR原始Json；<br>2：只返回每一页的MD；<br>3：返回全文MD + 每一页的OCR原始Json；<br>4：返回全文MD + 每一页的MD；<br>5：返回全文md，每一页ocr原始json，每一页md。</p>
+ * @method void setSplitResultType(string $SplitResultType) 设置<p>智能文档解析返回结果的格式<br>0：只返回全文MD；<br>1：只返回每一页的OCR原始Json；<br>2：只返回每一页的MD；<br>3：返回全文MD + 每一页的OCR原始Json；<br>4：返回全文MD + 每一页的MD；<br>5：返回全文md，每一页ocr原始json，每一页md。</p>
+ * @method string getSplitTableResultType() 获取<p>Markdown文件中表格返回的形式<br>0，表格以MD形式返回<br>1，表格以HTML形式返回<br>默认为</p>
+ * @method void setSplitTableResultType(string $SplitTableResultType) 设置<p>Markdown文件中表格返回的形式<br>0，表格以MD形式返回<br>1，表格以HTML形式返回<br>默认为</p>
+ * @method boolean getReturnPageFormat() 获取<p>Markdown文件中是否包含页码信息</p>
+ * @method void setReturnPageFormat(boolean $ReturnPageFormat) 设置<p>Markdown文件中是否包含页码信息</p>
+ * @method string getPageFormat() 获取<p>自定义输出页码样式,{{p}}为页码占位符，开启ReturnPageFormat生效。未填默认样式:<page_num>page {{p}}</page_num></p>
+ * @method void setPageFormat(string $PageFormat) 设置<p>自定义输出页码样式,{{p}}为页码占位符，开启ReturnPageFormat生效。未填默认样式:<page_num>page {{p}}</page_num></p>
  */
 class CreateSplitDocumentFlowConfig extends AbstractModel
 {
     /**
-     * @var string Markdown文件中表格返回的形式
-0，表格以MD形式返回
-1，表格以HTML形式返回
-默认为
+     * @var string <p>Markdown文件中表格返回的形式<br>0，表格以MD形式返回<br>1，表格以HTML形式返回<br>默认为</p>
      * @deprecated
      */
     public $TableResultType;
 
     /**
-     * @var string 智能文档解析返回结果的格式
-0：只返回全文MD；
-1：只返回每一页的OCR原始Json；
-2：只返回每一页的MD；
-3：返回全文MD + 每一页的OCR原始Json；
-4：返回全文MD + 每一页的MD；
-5：返回全文md，每一页ocr原始json，每一页md。
-
-
+     * @var string <p>智能文档解析返回结果的格式<br>0：只返回全文MD；<br>1：只返回每一页的OCR原始Json；<br>2：只返回每一页的MD；<br>3：返回全文MD + 每一页的OCR原始Json；<br>4：返回全文MD + 每一页的MD；<br>5：返回全文md，每一页ocr原始json，每一页md。</p>
      * @deprecated
      */
     public $ResultType;
 
     /**
-     * @var boolean 是否开启mllm
+     * @var boolean <p>是否开启mllm</p>
      */
     public $EnableMllm;
 
     /**
-     * @var integer 最大分片长度
+     * @var integer <p>最大分片长度</p>
      */
     public $MaxChunkSize;
 
     /**
-     * @var boolean 是否忽略返回失败页码
+     * @var boolean <p>是否忽略返回失败页码</p>
      */
     public $IgnoreFailedPage;
 
     /**
-     * @var string 智能文档解析返回结果的格式
-0：只返回全文MD；
-1：只返回每一页的OCR原始Json；
-2：只返回每一页的MD；
-3：返回全文MD + 每一页的OCR原始Json；
-4：返回全文MD + 每一页的MD；
-5：返回全文md，每一页ocr原始json，每一页md。
-
-
+     * @var string <p>智能文档解析返回结果的格式<br>0：只返回全文MD；<br>1：只返回每一页的OCR原始Json；<br>2：只返回每一页的MD；<br>3：返回全文MD + 每一页的OCR原始Json；<br>4：返回全文MD + 每一页的MD；<br>5：返回全文md，每一页ocr原始json，每一页md。</p>
      */
     public $SplitResultType;
 
     /**
-     * @var string Markdown文件中表格返回的形式
-0，表格以MD形式返回
-1，表格以HTML形式返回
-默认为
+     * @var string <p>Markdown文件中表格返回的形式<br>0，表格以MD形式返回<br>1，表格以HTML形式返回<br>默认为</p>
      */
     public $SplitTableResultType;
 
     /**
-     * @param string $TableResultType Markdown文件中表格返回的形式
-0，表格以MD形式返回
-1，表格以HTML形式返回
-默认为
-     * @param string $ResultType 智能文档解析返回结果的格式
-0：只返回全文MD；
-1：只返回每一页的OCR原始Json；
-2：只返回每一页的MD；
-3：返回全文MD + 每一页的OCR原始Json；
-4：返回全文MD + 每一页的MD；
-5：返回全文md，每一页ocr原始json，每一页md。
+     * @var boolean <p>Markdown文件中是否包含页码信息</p>
+     */
+    public $ReturnPageFormat;
 
+    /**
+     * @var string <p>自定义输出页码样式,{{p}}为页码占位符，开启ReturnPageFormat生效。未填默认样式:<page_num>page {{p}}</page_num></p>
+     */
+    public $PageFormat;
 
-     * @param boolean $EnableMllm 是否开启mllm
-     * @param integer $MaxChunkSize 最大分片长度
-     * @param boolean $IgnoreFailedPage 是否忽略返回失败页码
-     * @param string $SplitResultType 智能文档解析返回结果的格式
-0：只返回全文MD；
-1：只返回每一页的OCR原始Json；
-2：只返回每一页的MD；
-3：返回全文MD + 每一页的OCR原始Json；
-4：返回全文MD + 每一页的MD；
-5：返回全文md，每一页ocr原始json，每一页md。
-
-
-     * @param string $SplitTableResultType Markdown文件中表格返回的形式
-0，表格以MD形式返回
-1，表格以HTML形式返回
-默认为
+    /**
+     * @param string $TableResultType <p>Markdown文件中表格返回的形式<br>0，表格以MD形式返回<br>1，表格以HTML形式返回<br>默认为</p>
+     * @param string $ResultType <p>智能文档解析返回结果的格式<br>0：只返回全文MD；<br>1：只返回每一页的OCR原始Json；<br>2：只返回每一页的MD；<br>3：返回全文MD + 每一页的OCR原始Json；<br>4：返回全文MD + 每一页的MD；<br>5：返回全文md，每一页ocr原始json，每一页md。</p>
+     * @param boolean $EnableMllm <p>是否开启mllm</p>
+     * @param integer $MaxChunkSize <p>最大分片长度</p>
+     * @param boolean $IgnoreFailedPage <p>是否忽略返回失败页码</p>
+     * @param string $SplitResultType <p>智能文档解析返回结果的格式<br>0：只返回全文MD；<br>1：只返回每一页的OCR原始Json；<br>2：只返回每一页的MD；<br>3：返回全文MD + 每一页的OCR原始Json；<br>4：返回全文MD + 每一页的MD；<br>5：返回全文md，每一页ocr原始json，每一页md。</p>
+     * @param string $SplitTableResultType <p>Markdown文件中表格返回的形式<br>0，表格以MD形式返回<br>1，表格以HTML形式返回<br>默认为</p>
+     * @param boolean $ReturnPageFormat <p>Markdown文件中是否包含页码信息</p>
+     * @param string $PageFormat <p>自定义输出页码样式,{{p}}为页码占位符，开启ReturnPageFormat生效。未填默认样式:<page_num>page {{p}}</page_num></p>
      */
     function __construct()
     {
@@ -210,6 +138,14 @@ class CreateSplitDocumentFlowConfig extends AbstractModel
 
         if (array_key_exists("SplitTableResultType",$param) and $param["SplitTableResultType"] !== null) {
             $this->SplitTableResultType = $param["SplitTableResultType"];
+        }
+
+        if (array_key_exists("ReturnPageFormat",$param) and $param["ReturnPageFormat"] !== null) {
+            $this->ReturnPageFormat = $param["ReturnPageFormat"];
+        }
+
+        if (array_key_exists("PageFormat",$param) and $param["PageFormat"] !== null) {
+            $this->PageFormat = $param["PageFormat"];
         }
     }
 }

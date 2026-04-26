@@ -106,6 +106,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppId(string $AppId) 设置<p>任务AppId</p>
  * @method array getEnvs() 获取<p>环境变量</p>
  * @method void setEnvs(array $Envs) 设置<p>环境变量</p>
+ * @method OperatorInfo getLatestOperatorInfo() 获取<p>操作者信息</p>
+ * @method void setLatestOperatorInfo(OperatorInfo $LatestOperatorInfo) 设置<p>操作者信息</p>
  */
 class TrainingTaskSetItem extends AbstractModel
 {
@@ -265,6 +267,11 @@ class TrainingTaskSetItem extends AbstractModel
     public $Envs;
 
     /**
+     * @var OperatorInfo <p>操作者信息</p>
+     */
+    public $LatestOperatorInfo;
+
+    /**
      * @param string $Id <p>训练任务ID</p>
      * @param string $Name <p>训练任务名称</p>
      * @param string $FrameworkName <p>框架名称</p>
@@ -308,6 +315,7 @@ class TrainingTaskSetItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppId <p>任务AppId</p>
      * @param array $Envs <p>环境变量</p>
+     * @param OperatorInfo $LatestOperatorInfo <p>操作者信息</p>
      */
     function __construct()
     {
@@ -449,6 +457,11 @@ class TrainingTaskSetItem extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Envs, $obj);
             }
+        }
+
+        if (array_key_exists("LatestOperatorInfo",$param) and $param["LatestOperatorInfo"] !== null) {
+            $this->LatestOperatorInfo = new OperatorInfo();
+            $this->LatestOperatorInfo->deserialize($param["LatestOperatorInfo"]);
         }
     }
 }

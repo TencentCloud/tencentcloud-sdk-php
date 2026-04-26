@@ -20,161 +20,157 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据配置
  *
- * @method string getMappingPath() 获取映射路径
- * @method void setMappingPath(string $MappingPath) 设置映射路径
- * @method string getDataSourceUsage() 获取存储用途
-可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER
+ * @method string getMappingPath() 获取<p>映射路径</p>
+ * @method void setMappingPath(string $MappingPath) 设置<p>映射路径</p>
+ * @method string getDataSourceUsage() 获取<p>存储用途<br>可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataSourceUsage(string $DataSourceUsage) 设置存储用途
-可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER
+ * @method void setDataSourceUsage(string $DataSourceUsage) 设置<p>存储用途<br>可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDataSourceType() 获取DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS
+ * @method string getDataSourceType() 获取<p>DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataSourceType(string $DataSourceType) 设置DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS
+ * @method void setDataSourceType(string $DataSourceType) 设置<p>DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DataSetConfig getDataSetSource() 获取来自数据集的数据
+ * @method DataSetConfig getDataSetSource() 获取<p>来自数据集的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataSetSource(DataSetConfig $DataSetSource) 设置来自数据集的数据
+ * @method void setDataSetSource(DataSetConfig $DataSetSource) 设置<p>来自数据集的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CosPathInfo getCOSSource() 获取来自cos的数据
+ * @method CosPathInfo getCOSSource() 获取<p>来自cos的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCOSSource(CosPathInfo $COSSource) 设置来自cos的数据
+ * @method void setCOSSource(CosPathInfo $COSSource) 设置<p>来自cos的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CFSConfig getCFSSource() 获取来自CFS的数据
+ * @method CFSConfig getCFSSource() 获取<p>来自CFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCFSSource(CFSConfig $CFSSource) 设置来自CFS的数据
+ * @method void setCFSSource(CFSConfig $CFSSource) 设置<p>来自CFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method HDFSConfig getHDFSSource() 获取来自HDFS的数据
+ * @method HDFSConfig getHDFSSource() 获取<p>来自HDFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHDFSSource(HDFSConfig $HDFSSource) 设置来自HDFS的数据
+ * @method void setHDFSSource(HDFSConfig $HDFSSource) 设置<p>来自HDFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method GooseFS getGooseFSSource() 获取配置GooseFS的数据
+ * @method GooseFS getGooseFSSource() 获取<p>配置GooseFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGooseFSSource(GooseFS $GooseFSSource) 设置配置GooseFS的数据
+ * @method void setGooseFSSource(GooseFS $GooseFSSource) 设置<p>配置GooseFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CFSTurbo getCFSTurboSource() 获取配置TurboFS的数据
+ * @method CFSTurbo getCFSTurboSource() 获取<p>配置TurboFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCFSTurboSource(CFSTurbo $CFSTurboSource) 设置配置TurboFS的数据
+ * @method void setCFSTurboSource(CFSTurbo $CFSTurboSource) 设置<p>配置TurboFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method LocalDisk getLocalDiskSource() 获取来自本地磁盘的信息
+ * @method LocalDisk getLocalDiskSource() 获取<p>来自本地磁盘的信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLocalDiskSource(LocalDisk $LocalDiskSource) 设置来自本地磁盘的信息
+ * @method void setLocalDiskSource(LocalDisk $LocalDiskSource) 设置<p>来自本地磁盘的信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CBSConfig getCBSSource() 获取CBS配置信息
+ * @method CBSConfig getCBSSource() 获取<p>CBS配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCBSSource(CBSConfig $CBSSource) 设置CBS配置信息
+ * @method void setCBSSource(CBSConfig $CBSSource) 设置<p>CBS配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method HostPath getHostPathSource() 获取主机路径信息
- * @method void setHostPathSource(HostPath $HostPathSource) 设置主机路径信息
- * @method PublicDataSourceFS getPublicDataSource() 获取公有云数据源
+ * @method HostPath getHostPathSource() 获取<p>主机路径信息</p>
+ * @method void setHostPathSource(HostPath $HostPathSource) 设置<p>主机路径信息</p>
+ * @method PublicDataSourceFS getPublicDataSource() 获取<p>公有云数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPublicDataSource(PublicDataSourceFS $PublicDataSource) 设置公有云数据源
+ * @method void setPublicDataSource(PublicDataSourceFS $PublicDataSource) 设置<p>公有云数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataConfig extends AbstractModel
 {
     /**
-     * @var string 映射路径
+     * @var string <p>映射路径</p>
      */
     public $MappingPath;
 
     /**
-     * @var string 存储用途
-可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER
+     * @var string <p>存储用途<br>可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSourceUsage;
 
     /**
-     * @var string DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS
+     * @var string <p>DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSourceType;
 
     /**
-     * @var DataSetConfig 来自数据集的数据
+     * @var DataSetConfig <p>来自数据集的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSetSource;
 
     /**
-     * @var CosPathInfo 来自cos的数据
+     * @var CosPathInfo <p>来自cos的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $COSSource;
 
     /**
-     * @var CFSConfig 来自CFS的数据
+     * @var CFSConfig <p>来自CFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CFSSource;
 
     /**
-     * @var HDFSConfig 来自HDFS的数据
+     * @var HDFSConfig <p>来自HDFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HDFSSource;
 
     /**
-     * @var GooseFS 配置GooseFS的数据
+     * @var GooseFS <p>配置GooseFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GooseFSSource;
 
     /**
-     * @var CFSTurbo 配置TurboFS的数据
+     * @var CFSTurbo <p>配置TurboFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CFSTurboSource;
 
     /**
-     * @var LocalDisk 来自本地磁盘的信息
+     * @var LocalDisk <p>来自本地磁盘的信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LocalDiskSource;
 
     /**
-     * @var CBSConfig CBS配置信息
+     * @var CBSConfig <p>CBS配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CBSSource;
 
     /**
-     * @var HostPath 主机路径信息
+     * @var HostPath <p>主机路径信息</p>
      */
     public $HostPathSource;
 
     /**
-     * @var PublicDataSourceFS 公有云数据源
+     * @var PublicDataSourceFS <p>公有云数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicDataSource;
 
     /**
-     * @param string $MappingPath 映射路径
-     * @param string $DataSourceUsage 存储用途
-可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER
+     * @param string $MappingPath <p>映射路径</p>
+     * @param string $DataSourceUsage <p>存储用途<br>可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DataSourceType DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS
+     * @param string $DataSourceType <p>DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataSetConfig $DataSetSource 来自数据集的数据
+     * @param DataSetConfig $DataSetSource <p>来自数据集的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CosPathInfo $COSSource 来自cos的数据
+     * @param CosPathInfo $COSSource <p>来自cos的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CFSConfig $CFSSource 来自CFS的数据
+     * @param CFSConfig $CFSSource <p>来自CFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HDFSConfig $HDFSSource 来自HDFS的数据
+     * @param HDFSConfig $HDFSSource <p>来自HDFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GooseFS $GooseFSSource 配置GooseFS的数据
+     * @param GooseFS $GooseFSSource <p>配置GooseFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CFSTurbo $CFSTurboSource 配置TurboFS的数据
+     * @param CFSTurbo $CFSTurboSource <p>配置TurboFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LocalDisk $LocalDiskSource 来自本地磁盘的信息
+     * @param LocalDisk $LocalDiskSource <p>来自本地磁盘的信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CBSConfig $CBSSource CBS配置信息
+     * @param CBSConfig $CBSSource <p>CBS配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HostPath $HostPathSource 主机路径信息
-     * @param PublicDataSourceFS $PublicDataSource 公有云数据源
+     * @param HostPath $HostPathSource <p>主机路径信息</p>
+     * @param PublicDataSourceFS $PublicDataSource <p>公有云数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -20,25 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSearchView请求参数结构体
  *
- * @method string getLogsetId() 获取<p>日志集id</p><p>标记视图所属该日志集，用于查询日志集下的查询视图配置</p>
- * @method void setLogsetId(string $LogsetId) 设置<p>日志集id</p><p>标记视图所属该日志集，用于查询日志集下的查询视图配置</p>
+ * @method string getLogsetId() 获取<p>日志集id</p><p>查询视图所属的日志集，仅用于管理查询视图，查询视图中包含的主题可与该日志集无关</p>
+ * @method void setLogsetId(string $LogsetId) 设置<p>日志集id</p><p>查询视图所属的日志集，仅用于管理查询视图，查询视图中包含的主题可与该日志集无关</p>
  * @method string getLogsetRegion() 获取<p>日志集所属地域</p><p>参数格式：ap-guangzhou</p>
  * @method void setLogsetRegion(string $LogsetRegion) 设置<p>日志集所属地域</p><p>参数格式：ap-guangzhou</p>
  * @method string getViewName() 获取<p>视图名称</p><p>入参限制：最大支持255字符，不能包含&quot;|&quot;字符。</p>
  * @method void setViewName(string $ViewName) 设置<p>视图名称</p><p>入参限制：最大支持255字符，不能包含&quot;|&quot;字符。</p>
- * @method string getViewType() 获取<p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
- * @method void setViewType(string $ViewType) 设置<p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
- * @method array getTopics() 获取<p>视图主题配置信息</p><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
- * @method void setTopics(array $Topics) 设置<p>视图主题配置信息</p><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
- * @method string getDescription() 获取<p>配置描述信息</p>
- * @method void setDescription(string $Description) 设置<p>配置描述信息</p>
- * @method string getViewIdPrefix() 获取<p>自定义视图id前缀</p><p>参数格式：<code>^[a-z0-9][a-z0-9_-]{1,61}[a-z0-9]$</code></p><p>配置成功之后ViewId格式: ${ViewIdPrefix}-view</p>
- * @method void setViewIdPrefix(string $ViewIdPrefix) 设置<p>自定义视图id前缀</p><p>参数格式：<code>^[a-z0-9][a-z0-9_-]{1,61}[a-z0-9]$</code></p><p>配置成功之后ViewId格式: ${ViewIdPrefix}-view</p>
+ * @method string getViewType() 获取<p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题类型应该与ViewType类型匹配</p>
+ * @method void setViewType(string $ViewType) 设置<p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题类型应该与ViewType类型匹配</p>
+ * @method array getTopics() 获取<p>查询视图中包含的主题，最大可包含10个主题</p><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
+ * @method void setTopics(array $Topics) 设置<p>查询视图中包含的主题，最大可包含10个主题</p><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
+ * @method string getViewIdPrefix() 获取<p>自定义查询视图id前缀</p><p>参数格式：<code>^[a-z0-9][a-z0-9_-]{1,61}[a-z0-9]$</code></p><p>创建成功的查询视图 ViewId 格式为 ${ViewIdPrefix}-view</p>
+ * @method void setViewIdPrefix(string $ViewIdPrefix) 设置<p>自定义查询视图id前缀</p><p>参数格式：<code>^[a-z0-9][a-z0-9_-]{1,61}[a-z0-9]$</code></p><p>创建成功的查询视图 ViewId 格式为 ${ViewIdPrefix}-view</p>
+ * @method string getDescription() 获取<p>描述信息</p>
+ * @method void setDescription(string $Description) 设置<p>描述信息</p>
  */
 class CreateSearchViewRequest extends AbstractModel
 {
     /**
-     * @var string <p>日志集id</p><p>标记视图所属该日志集，用于查询日志集下的查询视图配置</p>
+     * @var string <p>日志集id</p><p>查询视图所属的日志集，仅用于管理查询视图，查询视图中包含的主题可与该日志集无关</p>
      */
     public $LogsetId;
 
@@ -53,33 +53,33 @@ class CreateSearchViewRequest extends AbstractModel
     public $ViewName;
 
     /**
-     * @var string <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
+     * @var string <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题类型应该与ViewType类型匹配</p>
      */
     public $ViewType;
 
     /**
-     * @var array <p>视图主题配置信息</p><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
+     * @var array <p>查询视图中包含的主题，最大可包含10个主题</p><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
      */
     public $Topics;
 
     /**
-     * @var string <p>配置描述信息</p>
-     */
-    public $Description;
-
-    /**
-     * @var string <p>自定义视图id前缀</p><p>参数格式：<code>^[a-z0-9][a-z0-9_-]{1,61}[a-z0-9]$</code></p><p>配置成功之后ViewId格式: ${ViewIdPrefix}-view</p>
+     * @var string <p>自定义查询视图id前缀</p><p>参数格式：<code>^[a-z0-9][a-z0-9_-]{1,61}[a-z0-9]$</code></p><p>创建成功的查询视图 ViewId 格式为 ${ViewIdPrefix}-view</p>
      */
     public $ViewIdPrefix;
 
     /**
-     * @param string $LogsetId <p>日志集id</p><p>标记视图所属该日志集，用于查询日志集下的查询视图配置</p>
+     * @var string <p>描述信息</p>
+     */
+    public $Description;
+
+    /**
+     * @param string $LogsetId <p>日志集id</p><p>查询视图所属的日志集，仅用于管理查询视图，查询视图中包含的主题可与该日志集无关</p>
      * @param string $LogsetRegion <p>日志集所属地域</p><p>参数格式：ap-guangzhou</p>
      * @param string $ViewName <p>视图名称</p><p>入参限制：最大支持255字符，不能包含&quot;|&quot;字符。</p>
-     * @param string $ViewType <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
-     * @param array $Topics <p>视图主题配置信息</p><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
-     * @param string $Description <p>配置描述信息</p>
-     * @param string $ViewIdPrefix <p>自定义视图id前缀</p><p>参数格式：<code>^[a-z0-9][a-z0-9_-]{1,61}[a-z0-9]$</code></p><p>配置成功之后ViewId格式: ${ViewIdPrefix}-view</p>
+     * @param string $ViewType <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题类型应该与ViewType类型匹配</p>
+     * @param array $Topics <p>查询视图中包含的主题，最大可包含10个主题</p><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
+     * @param string $ViewIdPrefix <p>自定义查询视图id前缀</p><p>参数格式：<code>^[a-z0-9][a-z0-9_-]{1,61}[a-z0-9]$</code></p><p>创建成功的查询视图 ViewId 格式为 ${ViewIdPrefix}-view</p>
+     * @param string $Description <p>描述信息</p>
      */
     function __construct()
     {
@@ -119,12 +119,12 @@ class CreateSearchViewRequest extends AbstractModel
             }
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
-        }
-
         if (array_key_exists("ViewIdPrefix",$param) and $param["ViewIdPrefix"] !== null) {
             $this->ViewIdPrefix = $param["ViewIdPrefix"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

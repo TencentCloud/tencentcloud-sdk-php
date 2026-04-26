@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMountOptions(array $MountOptions) 设置<p>沙箱实例存储挂载配置</p>
  * @method CustomConfiguration getCustomConfiguration() 获取<p>沙箱实例自定义配置</p>
  * @method void setCustomConfiguration(CustomConfiguration $CustomConfiguration) 设置<p>沙箱实例自定义配置</p>
- * @method string getAuthMode() 获取<p>沙箱访问认证模式</p><p>枚举值：</p><ul><li>DEFAULT： 跟随系统策略</li><li>TOKEN： Token认证</li><li>NONE： 免认证 </li></ul><p>默认值：DEFAULT</p>
- * @method void setAuthMode(string $AuthMode) 设置<p>沙箱访问认证模式</p><p>枚举值：</p><ul><li>DEFAULT： 跟随系统策略</li><li>TOKEN： Token认证</li><li>NONE： 免认证 </li></ul><p>默认值：DEFAULT</p>
+ * @method string getAuthMode() 获取<p>沙箱访问认证模式</p><p>枚举值：</p><ul><li>DEFAULT： 默认，即 TOKEN 认证</li><li>TOKEN： Token认证，即所有端口访问都需携带TOKEN</li><li>NONE： 免认证，即所有端口访问无需携带TOKEN</li><li>PUBLIC： 公开模式，即ENVD管理端口（49983）访问需携带TOKEN，其他端口无需携带TOKEN</li></ul><p>默认值：DEFAULT</p>
+ * @method void setAuthMode(string $AuthMode) 设置<p>沙箱访问认证模式</p><p>枚举值：</p><ul><li>DEFAULT： 默认，即 TOKEN 认证</li><li>TOKEN： Token认证，即所有端口访问都需携带TOKEN</li><li>NONE： 免认证，即所有端口访问无需携带TOKEN</li><li>PUBLIC： 公开模式，即ENVD管理端口（49983）访问需携带TOKEN，其他端口无需携带TOKEN</li></ul><p>默认值：DEFAULT</p>
  * @method array getMetadata() 获取<p>沙箱元数据</p>
  * @method void setMetadata(array $Metadata) 设置<p>沙箱元数据</p>
  */
@@ -70,7 +70,7 @@ class StartSandboxInstanceRequest extends AbstractModel
     public $CustomConfiguration;
 
     /**
-     * @var string <p>沙箱访问认证模式</p><p>枚举值：</p><ul><li>DEFAULT： 跟随系统策略</li><li>TOKEN： Token认证</li><li>NONE： 免认证 </li></ul><p>默认值：DEFAULT</p>
+     * @var string <p>沙箱访问认证模式</p><p>枚举值：</p><ul><li>DEFAULT： 默认，即 TOKEN 认证</li><li>TOKEN： Token认证，即所有端口访问都需携带TOKEN</li><li>NONE： 免认证，即所有端口访问无需携带TOKEN</li><li>PUBLIC： 公开模式，即ENVD管理端口（49983）访问需携带TOKEN，其他端口无需携带TOKEN</li></ul><p>默认值：DEFAULT</p>
      */
     public $AuthMode;
 
@@ -86,7 +86,7 @@ class StartSandboxInstanceRequest extends AbstractModel
      * @param string $ClientToken <p>幂等性 Token，长度不超过 64 字符</p>
      * @param array $MountOptions <p>沙箱实例存储挂载配置</p>
      * @param CustomConfiguration $CustomConfiguration <p>沙箱实例自定义配置</p>
-     * @param string $AuthMode <p>沙箱访问认证模式</p><p>枚举值：</p><ul><li>DEFAULT： 跟随系统策略</li><li>TOKEN： Token认证</li><li>NONE： 免认证 </li></ul><p>默认值：DEFAULT</p>
+     * @param string $AuthMode <p>沙箱访问认证模式</p><p>枚举值：</p><ul><li>DEFAULT： 默认，即 TOKEN 认证</li><li>TOKEN： Token认证，即所有端口访问都需携带TOKEN</li><li>NONE： 免认证，即所有端口访问无需携带TOKEN</li><li>PUBLIC： 公开模式，即ENVD管理端口（49983）访问需携带TOKEN，其他端口无需携带TOKEN</li></ul><p>默认值：DEFAULT</p>
      * @param array $Metadata <p>沙箱元数据</p>
      */
     function __construct()

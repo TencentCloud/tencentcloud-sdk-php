@@ -18,10 +18,10 @@ namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 视图检索日志主题配置
+ * 查询视图主题配置
  *
- * @method string getRegion() 获取<p>日志集与日志主题所属地域</p><p>参数格式：ap-guangzhou</p>
- * @method void setRegion(string $Region) 设置<p>日志集与日志主题所属地域</p><p>参数格式：ap-guangzhou</p>
+ * @method string getRegion() 获取<p>日志集与主题所属地域</p><p>参数格式：ap-guangzhou</p><p>同一查询视图内，包含的各个主题需为相同地域</p>
+ * @method void setRegion(string $Region) 设置<p>日志集与主题所属地域</p><p>参数格式：ap-guangzhou</p><p>同一查询视图内，包含的各个主题需为相同地域</p>
  * @method string getLogsetId() 获取<p>日志集id</p>
  * @method void setLogsetId(string $LogsetId) 设置<p>日志集id</p>
  * @method string getTopicId() 获取<p>日志主题id</p>
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ViewSearchTopic extends AbstractModel
 {
     /**
-     * @var string <p>日志集与日志主题所属地域</p><p>参数格式：ap-guangzhou</p>
+     * @var string <p>日志集与主题所属地域</p><p>参数格式：ap-guangzhou</p><p>同一查询视图内，包含的各个主题需为相同地域</p>
      */
     public $Region;
 
@@ -45,7 +45,7 @@ class ViewSearchTopic extends AbstractModel
     public $TopicId;
 
     /**
-     * @param string $Region <p>日志集与日志主题所属地域</p><p>参数格式：ap-guangzhou</p>
+     * @param string $Region <p>日志集与主题所属地域</p><p>参数格式：ap-guangzhou</p><p>同一查询视图内，包含的各个主题需为相同地域</p>
      * @param string $LogsetId <p>日志集id</p>
      * @param string $TopicId <p>日志主题id</p>
      */

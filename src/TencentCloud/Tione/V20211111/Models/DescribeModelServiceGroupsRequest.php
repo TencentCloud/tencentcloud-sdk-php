@@ -20,71 +20,75 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeModelServiceGroups请求参数结构体
  *
- * @method integer getOffset() 获取偏移量，默认为0
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0
- * @method integer getLimit() 获取返回数量，默认为20，最大值为100
- * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100
- * @method string getOrder() 获取输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
- * @method void setOrder(string $Order) 设置输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
- * @method string getOrderField() 获取排序的依据字段， 取值范围 "CreateTime" "UpdateTime"
- * @method void setOrderField(string $OrderField) 设置排序的依据字段， 取值范围 "CreateTime" "UpdateTime"
- * @method array getFilters() 获取分页参数，支持的分页过滤Name包括：
-["ClusterId", "ServiceId", "ServiceGroupName", "ServiceGroupId","Status","CreatedBy","ModelVersionId"]
- * @method void setFilters(array $Filters) 设置分页参数，支持的分页过滤Name包括：
-["ClusterId", "ServiceId", "ServiceGroupName", "ServiceGroupId","Status","CreatedBy","ModelVersionId"]
- * @method array getTagFilters() 获取标签过滤参数
- * @method void setTagFilters(array $TagFilters) 设置标签过滤参数
- * @method string getServiceCategory() 获取服务分类
- * @method void setServiceCategory(string $ServiceCategory) 设置服务分类
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method integer getOffset() 获取<p>偏移量，默认为0</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为0</p>
+ * @method integer getLimit() 获取<p>返回数量，默认为20，最大值为100</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认为20，最大值为100</p>
+ * @method string getOrder() 获取<p>输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列</p>
+ * @method void setOrder(string $Order) 设置<p>输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列</p>
+ * @method string getOrderField() 获取<p>排序的依据字段， 取值范围 &quot;CreateTime&quot; &quot;UpdateTime&quot;</p>
+ * @method void setOrderField(string $OrderField) 设置<p>排序的依据字段， 取值范围 &quot;CreateTime&quot; &quot;UpdateTime&quot;</p>
+ * @method array getFilters() 获取<p>分页参数，支持的分页过滤Name包括：<br>[&quot;ClusterId&quot;, &quot;ServiceId&quot;, &quot;ServiceGroupName&quot;, &quot;ServiceGroupId&quot;,&quot;Status&quot;,&quot;CreatedBy&quot;,&quot;ModelVersionId&quot;]</p>
+ * @method void setFilters(array $Filters) 设置<p>分页参数，支持的分页过滤Name包括：<br>[&quot;ClusterId&quot;, &quot;ServiceId&quot;, &quot;ServiceGroupName&quot;, &quot;ServiceGroupId&quot;,&quot;Status&quot;,&quot;CreatedBy&quot;,&quot;ModelVersionId&quot;]</p>
+ * @method array getTagFilters() 获取<p>标签过滤参数</p>
+ * @method void setTagFilters(array $TagFilters) 设置<p>标签过滤参数</p>
+ * @method string getServiceCategory() 获取<p>服务分类</p>
+ * @method void setServiceCategory(string $ServiceCategory) 设置<p>服务分类</p>
  */
 class DescribeModelServiceGroupsRequest extends AbstractModel
 {
     /**
-     * @var integer 偏移量，默认为0
+     * @var string <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public $TiProjectId;
+
+    /**
+     * @var integer <p>偏移量，默认为0</p>
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认为20，最大值为100
+     * @var integer <p>返回数量，默认为20，最大值为100</p>
      */
     public $Limit;
 
     /**
-     * @var string 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
+     * @var string <p>输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列</p>
      */
     public $Order;
 
     /**
-     * @var string 排序的依据字段， 取值范围 "CreateTime" "UpdateTime"
+     * @var string <p>排序的依据字段， 取值范围 &quot;CreateTime&quot; &quot;UpdateTime&quot;</p>
      */
     public $OrderField;
 
     /**
-     * @var array 分页参数，支持的分页过滤Name包括：
-["ClusterId", "ServiceId", "ServiceGroupName", "ServiceGroupId","Status","CreatedBy","ModelVersionId"]
+     * @var array <p>分页参数，支持的分页过滤Name包括：<br>[&quot;ClusterId&quot;, &quot;ServiceId&quot;, &quot;ServiceGroupName&quot;, &quot;ServiceGroupId&quot;,&quot;Status&quot;,&quot;CreatedBy&quot;,&quot;ModelVersionId&quot;]</p>
      */
     public $Filters;
 
     /**
-     * @var array 标签过滤参数
+     * @var array <p>标签过滤参数</p>
      */
     public $TagFilters;
 
     /**
-     * @var string 服务分类
+     * @var string <p>服务分类</p>
      * @deprecated
      */
     public $ServiceCategory;
 
     /**
-     * @param integer $Offset 偏移量，默认为0
-     * @param integer $Limit 返回数量，默认为20，最大值为100
-     * @param string $Order 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
-     * @param string $OrderField 排序的依据字段， 取值范围 "CreateTime" "UpdateTime"
-     * @param array $Filters 分页参数，支持的分页过滤Name包括：
-["ClusterId", "ServiceId", "ServiceGroupName", "ServiceGroupId","Status","CreatedBy","ModelVersionId"]
-     * @param array $TagFilters 标签过滤参数
-     * @param string $ServiceCategory 服务分类
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @param integer $Offset <p>偏移量，默认为0</p>
+     * @param integer $Limit <p>返回数量，默认为20，最大值为100</p>
+     * @param string $Order <p>输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列</p>
+     * @param string $OrderField <p>排序的依据字段， 取值范围 &quot;CreateTime&quot; &quot;UpdateTime&quot;</p>
+     * @param array $Filters <p>分页参数，支持的分页过滤Name包括：<br>[&quot;ClusterId&quot;, &quot;ServiceId&quot;, &quot;ServiceGroupName&quot;, &quot;ServiceGroupId&quot;,&quot;Status&quot;,&quot;CreatedBy&quot;,&quot;ModelVersionId&quot;]</p>
+     * @param array $TagFilters <p>标签过滤参数</p>
+     * @param string $ServiceCategory <p>服务分类</p>
      */
     function __construct()
     {
@@ -99,6 +103,10 @@ class DescribeModelServiceGroupsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
+        }
+
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
         }

@@ -18,7 +18,7 @@ namespace TencentCloud\Cdwch\V20200915\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 实例描述信息
+ * 实例的描述信息
  *
  * @method string getInstanceId() 获取<p>集群实例ID, &quot;cdw-xxxx&quot; 字符串类型</p>
  * @method void setInstanceId(string $InstanceId) 设置<p>集群实例ID, &quot;cdw-xxxx&quot; 字符串类型</p>
@@ -134,6 +134,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceType(string $InstanceType) 设置<p>实例类型：标准型 standard，无keeper节点类型noKeeper；</p>
  * @method string getEnableConfigKeyValue() 获取<p>keyvalue视图</p>
  * @method void setEnableConfigKeyValue(string $EnableConfigKeyValue) 设置<p>keyvalue视图</p>
+ * @method boolean getHttpsEnabled() 获取<p>实例是否开启HTTPS</p><p>枚举值：</p><ul><li>true： 已开启HTTPS</li><li>false： 未开启HTTPS</li></ul>
+ * @method void setHttpsEnabled(boolean $HttpsEnabled) 设置<p>实例是否开启HTTPS</p><p>枚举值：</p><ul><li>true： 已开启HTTPS</li><li>false： 未开启HTTPS</li></ul>
  */
 class InstanceInfo extends AbstractModel
 {
@@ -423,6 +425,11 @@ class InstanceInfo extends AbstractModel
     public $EnableConfigKeyValue;
 
     /**
+     * @var boolean <p>实例是否开启HTTPS</p><p>枚举值：</p><ul><li>true： 已开启HTTPS</li><li>false： 未开启HTTPS</li></ul>
+     */
+    public $HttpsEnabled;
+
+    /**
      * @param string $InstanceId <p>集群实例ID, &quot;cdw-xxxx&quot; 字符串类型</p>
      * @param string $InstanceName <p>集群实例名称</p>
      * @param string $Status <p>状态,<br>Init 创建中; Serving 运行中；<br>Deleted已销毁；Deleting 销毁中；<br>Modify 集群变更中；</p>
@@ -480,6 +487,7 @@ class InstanceInfo extends AbstractModel
      * @param string $ShowRip <p>是否显示rip</p>
      * @param string $InstanceType <p>实例类型：标准型 standard，无keeper节点类型noKeeper；</p>
      * @param string $EnableConfigKeyValue <p>keyvalue视图</p>
+     * @param boolean $HttpsEnabled <p>实例是否开启HTTPS</p><p>枚举值：</p><ul><li>true： 已开启HTTPS</li><li>false： 未开启HTTPS</li></ul>
      */
     function __construct()
     {
@@ -734,6 +742,10 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("EnableConfigKeyValue",$param) and $param["EnableConfigKeyValue"] !== null) {
             $this->EnableConfigKeyValue = $param["EnableConfigKeyValue"];
+        }
+
+        if (array_key_exists("HttpsEnabled",$param) and $param["HttpsEnabled"] !== null) {
+            $this->HttpsEnabled = $param["HttpsEnabled"];
         }
     }
 }

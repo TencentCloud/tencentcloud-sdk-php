@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeliverConsumer(string $DeliverConsumer) 设置投递者
  * @method string getDeliverConsumerName() 获取投递者名称
  * @method void setDeliverConsumerName(string $DeliverConsumerName) 设置投递者名称
+ * @method string getDeliverError() 获取投递异常错误
+ * @method void setDeliverError(string $DeliverError) 设置投递异常错误
  */
 class DeliverSummary extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DeliverSummary extends AbstractModel
     public $DeliverConsumerName;
 
     /**
+     * @var string 投递异常错误
+     */
+    public $DeliverError;
+
+    /**
      * @param string $DeliverType 投递类型，store（存储类），mq（消息通道）
      * @param string $DeliverSubType 投递子类型：cls，ckafka。
      * @param string $DeliverConsumer 投递者
      * @param string $DeliverConsumerName 投递者名称
+     * @param string $DeliverError 投递异常错误
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DeliverSummary extends AbstractModel
 
         if (array_key_exists("DeliverConsumerName",$param) and $param["DeliverConsumerName"] !== null) {
             $this->DeliverConsumerName = $param["DeliverConsumerName"];
+        }
+
+        if (array_key_exists("DeliverError",$param) and $param["DeliverError"] !== null) {
+            $this->DeliverError = $param["DeliverError"];
         }
     }
 }

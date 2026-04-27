@@ -20,130 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 子域名详情
  *
- * @method integer getId() 获取主键ID
- * @method void setId(integer $Id) 设置主键ID
- * @method string getSubDomain() 获取子域名
- * @method void setSubDomain(string $SubDomain) 设置子域名
- * @method string getIp() 获取Ip
- * @method void setIp(string $Ip) 设置Ip
- * @method string getCountry() 获取国家
- * @method void setCountry(string $Country) 设置国家
- * @method string getProvince() 获取省份
- * @method void setProvince(string $Province) 设置省份
- * @method string getCity() 获取城市
- * @method void setCity(string $City) 设置城市
- * @method string getIsp() 获取互联网服务提供商
- * @method void setIsp(string $Isp) 设置互联网服务提供商
- * @method DisplayToolCommon getDisplayToolCommon() 获取公共字段
- * @method void setDisplayToolCommon(DisplayToolCommon $DisplayToolCommon) 设置公共字段
- * @method integer getIsCloudAsset() 获取是否为云资产：0-非云资产 1-是云资产
- * @method void setIsCloudAsset(integer $IsCloudAsset) 设置是否为云资产：0-非云资产 1-是云资产
- * @method integer getCloudAssetStatus() 获取云资产是否下线：-1-已下线 0-正常
- * @method void setCloudAssetStatus(integer $CloudAssetStatus) 设置云资产是否下线：-1-已下线 0-正常
- * @method integer getAvailabilityRate() 获取可用率（百分比）
- * @method void setAvailabilityRate(integer $AvailabilityRate) 设置可用率（百分比）
- * @method integer getAvailabilityState() 获取可用状态 1:异常 0:正常
- * @method void setAvailabilityState(integer $AvailabilityState) 设置可用状态 1:异常 0:正常
- * @method integer getAnalysisState() 获取域名解析状态 1:异常 0:正常
- * @method void setAnalysisState(integer $AnalysisState) 设置域名解析状态 1:异常 0:正常
- * @method integer getAverageDelay() 获取平均时延：单位ms
- * @method void setAverageDelay(integer $AverageDelay) 设置平均时延：单位ms
- * @method integer getLossRate() 获取丢包率（百分比）
- * @method void setLossRate(integer $LossRate) 设置丢包率（百分比）
+ * @method integer getId() 获取<p>主键ID</p>
+ * @method void setId(integer $Id) 设置<p>主键ID</p>
+ * @method string getSubDomain() 获取<p>子域名</p>
+ * @method void setSubDomain(string $SubDomain) 设置<p>子域名</p>
+ * @method string getIp() 获取<p>Ip</p>
+ * @method void setIp(string $Ip) 设置<p>Ip</p>
+ * @method string getCountry() 获取<p>国家</p>
+ * @method void setCountry(string $Country) 设置<p>国家</p>
+ * @method string getProvince() 获取<p>省份</p>
+ * @method void setProvince(string $Province) 设置<p>省份</p>
+ * @method string getCity() 获取<p>城市</p>
+ * @method void setCity(string $City) 设置<p>城市</p>
+ * @method string getIsp() 获取<p>互联网服务提供商</p>
+ * @method void setIsp(string $Isp) 设置<p>互联网服务提供商</p>
+ * @method DisplayToolCommon getDisplayToolCommon() 获取<p>公共字段</p>
+ * @method void setDisplayToolCommon(DisplayToolCommon $DisplayToolCommon) 设置<p>公共字段</p>
+ * @method integer getIsCloudAsset() 获取<p>是否为云资产：0-非云资产 1-是云资产</p>
+ * @method void setIsCloudAsset(integer $IsCloudAsset) 设置<p>是否为云资产：0-非云资产 1-是云资产</p>
+ * @method integer getCloudAssetStatus() 获取<p>云资产是否下线：-1-已下线 0-正常</p>
+ * @method void setCloudAssetStatus(integer $CloudAssetStatus) 设置<p>云资产是否下线：-1-已下线 0-正常</p>
+ * @method integer getAvailabilityRate() 获取<p>可用率（百分比）</p>
+ * @method void setAvailabilityRate(integer $AvailabilityRate) 设置<p>可用率（百分比）</p>
+ * @method integer getAvailabilityState() 获取<p>可用状态 1:异常 0:正常</p>
+ * @method void setAvailabilityState(integer $AvailabilityState) 设置<p>可用状态 1:异常 0:正常</p>
+ * @method integer getAnalysisState() 获取<p>域名解析状态 1:异常 0:正常</p>
+ * @method void setAnalysisState(integer $AnalysisState) 设置<p>域名解析状态 1:异常 0:正常</p>
+ * @method integer getAverageDelay() 获取<p>平均时延：单位ms</p>
+ * @method void setAverageDelay(integer $AverageDelay) 设置<p>平均时延：单位ms</p>
+ * @method integer getLossRate() 获取<p>丢包率（百分比）</p>
+ * @method void setLossRate(integer $LossRate) 设置<p>丢包率（百分比）</p>
+ * @method string getDnsType() 获取<p>DNS解析类型</p><p>A、AAAA、MX、CNAME、NX</p>
+ * @method void setDnsType(string $DnsType) 设置<p>DNS解析类型</p><p>A、AAAA、MX、CNAME、NX</p>
+ * @method string getDnsValue() 获取<p>DNS解析值</p>
+ * @method void setDnsValue(string $DnsValue) 设置<p>DNS解析值</p>
  */
 class DisplaySubDomain extends AbstractModel
 {
     /**
-     * @var integer 主键ID
+     * @var integer <p>主键ID</p>
      */
     public $Id;
 
     /**
-     * @var string 子域名
+     * @var string <p>子域名</p>
      */
     public $SubDomain;
 
     /**
-     * @var string Ip
+     * @var string <p>Ip</p>
      */
     public $Ip;
 
     /**
-     * @var string 国家
+     * @var string <p>国家</p>
      */
     public $Country;
 
     /**
-     * @var string 省份
+     * @var string <p>省份</p>
      */
     public $Province;
 
     /**
-     * @var string 城市
+     * @var string <p>城市</p>
      */
     public $City;
 
     /**
-     * @var string 互联网服务提供商
+     * @var string <p>互联网服务提供商</p>
      */
     public $Isp;
 
     /**
-     * @var DisplayToolCommon 公共字段
+     * @var DisplayToolCommon <p>公共字段</p>
      */
     public $DisplayToolCommon;
 
     /**
-     * @var integer 是否为云资产：0-非云资产 1-是云资产
+     * @var integer <p>是否为云资产：0-非云资产 1-是云资产</p>
      */
     public $IsCloudAsset;
 
     /**
-     * @var integer 云资产是否下线：-1-已下线 0-正常
+     * @var integer <p>云资产是否下线：-1-已下线 0-正常</p>
      */
     public $CloudAssetStatus;
 
     /**
-     * @var integer 可用率（百分比）
+     * @var integer <p>可用率（百分比）</p>
      */
     public $AvailabilityRate;
 
     /**
-     * @var integer 可用状态 1:异常 0:正常
+     * @var integer <p>可用状态 1:异常 0:正常</p>
      */
     public $AvailabilityState;
 
     /**
-     * @var integer 域名解析状态 1:异常 0:正常
+     * @var integer <p>域名解析状态 1:异常 0:正常</p>
      */
     public $AnalysisState;
 
     /**
-     * @var integer 平均时延：单位ms
+     * @var integer <p>平均时延：单位ms</p>
      */
     public $AverageDelay;
 
     /**
-     * @var integer 丢包率（百分比）
+     * @var integer <p>丢包率（百分比）</p>
      */
     public $LossRate;
 
     /**
-     * @param integer $Id 主键ID
-     * @param string $SubDomain 子域名
-     * @param string $Ip Ip
-     * @param string $Country 国家
-     * @param string $Province 省份
-     * @param string $City 城市
-     * @param string $Isp 互联网服务提供商
-     * @param DisplayToolCommon $DisplayToolCommon 公共字段
-     * @param integer $IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
-     * @param integer $CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
-     * @param integer $AvailabilityRate 可用率（百分比）
-     * @param integer $AvailabilityState 可用状态 1:异常 0:正常
-     * @param integer $AnalysisState 域名解析状态 1:异常 0:正常
-     * @param integer $AverageDelay 平均时延：单位ms
-     * @param integer $LossRate 丢包率（百分比）
+     * @var string <p>DNS解析类型</p><p>A、AAAA、MX、CNAME、NX</p>
+     */
+    public $DnsType;
+
+    /**
+     * @var string <p>DNS解析值</p>
+     */
+    public $DnsValue;
+
+    /**
+     * @param integer $Id <p>主键ID</p>
+     * @param string $SubDomain <p>子域名</p>
+     * @param string $Ip <p>Ip</p>
+     * @param string $Country <p>国家</p>
+     * @param string $Province <p>省份</p>
+     * @param string $City <p>城市</p>
+     * @param string $Isp <p>互联网服务提供商</p>
+     * @param DisplayToolCommon $DisplayToolCommon <p>公共字段</p>
+     * @param integer $IsCloudAsset <p>是否为云资产：0-非云资产 1-是云资产</p>
+     * @param integer $CloudAssetStatus <p>云资产是否下线：-1-已下线 0-正常</p>
+     * @param integer $AvailabilityRate <p>可用率（百分比）</p>
+     * @param integer $AvailabilityState <p>可用状态 1:异常 0:正常</p>
+     * @param integer $AnalysisState <p>域名解析状态 1:异常 0:正常</p>
+     * @param integer $AverageDelay <p>平均时延：单位ms</p>
+     * @param integer $LossRate <p>丢包率（百分比）</p>
+     * @param string $DnsType <p>DNS解析类型</p><p>A、AAAA、MX、CNAME、NX</p>
+     * @param string $DnsValue <p>DNS解析值</p>
      */
     function __construct()
     {
@@ -217,6 +233,14 @@ class DisplaySubDomain extends AbstractModel
 
         if (array_key_exists("LossRate",$param) and $param["LossRate"] !== null) {
             $this->LossRate = $param["LossRate"];
+        }
+
+        if (array_key_exists("DnsType",$param) and $param["DnsType"] !== null) {
+            $this->DnsType = $param["DnsType"];
+        }
+
+        if (array_key_exists("DnsValue",$param) and $param["DnsValue"] !== null) {
+            $this->DnsValue = $param["DnsValue"];
         }
     }
 }

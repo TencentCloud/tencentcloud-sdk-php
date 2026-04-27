@@ -20,154 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListQA请求参数结构体
  *
- * @method string getBotBizId() 获取应用ID
-若要操作共享知识库，传KnowledgeBizId
- * @method void setBotBizId(string $BotBizId) 设置应用ID
-若要操作共享知识库，传KnowledgeBizId
- * @method integer getPageNumber() 获取页码（取值范围>0）
- * @method void setPageNumber(integer $PageNumber) 设置页码（取值范围>0）
- * @method integer getPageSize() 获取每页大小(取值范围1-200)
- * @method void setPageSize(integer $PageSize) 设置每页大小(取值范围1-200)
- * @method string getQuery() 获取查询问题
-
-输入特定标识 lke:system:untagged  将查询所有未关联标签的问答
- * @method void setQuery(string $Query) 设置查询问题
-
-输入特定标识 lke:system:untagged  将查询所有未关联标签的问答
- * @method array getAcceptStatus() 获取校验状态(1未校验2采纳3不采纳)
-如果不填默认值为空数组，表示不筛选，返回所有状态
- * @method void setAcceptStatus(array $AcceptStatus) 设置校验状态(1未校验2采纳3不采纳)
-如果不填默认值为空数组，表示不筛选，返回所有状态
- * @method array getReleaseStatus() 获取发布状态(2,4导入成功 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
-如果不填默认值为空数组，表示不筛选返回所有状态
- * @method void setReleaseStatus(array $ReleaseStatus) 设置发布状态(2,4导入成功 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
-如果不填默认值为空数组，表示不筛选返回所有状态
- * @method string getDocBizId() 获取文档ID
- * @method void setDocBizId(string $DocBizId) 设置文档ID
- * @method integer getSource() 获取来源(1 文档生成 2 批量导入 3 手动添加)
-不填默认值为0，表示不过滤，返回所有状态
- * @method void setSource(integer $Source) 设置来源(1 文档生成 2 批量导入 3 手动添加)
-不填默认值为0，表示不过滤，返回所有状态
- * @method string getQueryAnswer() 获取查询答案
- * @method void setQueryAnswer(string $QueryAnswer) 设置查询答案
- * @method string getCateBizId() 获取分类ID
- * @method void setCateBizId(string $CateBizId) 设置分类ID
- * @method array getQaBizIds() 获取QA业务ID列表
- * @method void setQaBizIds(array $QaBizIds) 设置QA业务ID列表
- * @method string getQueryType() 获取查询类型 filename 名称、 attribute 标签
-如果不填默认值为"filename"
- * @method void setQueryType(string $QueryType) 设置查询类型 filename 名称、 attribute 标签
-如果不填默认值为"filename"
- * @method integer getShowCurrCate() 获取是否只展示当前分类的数据 0不是，1是
- * @method void setShowCurrCate(integer $ShowCurrCate) 设置是否只展示当前分类的数据 0不是，1是
- * @method integer getEnableScope() 获取问答生效域检索，不检索不传。枚举值如下：
-1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
- * @method void setEnableScope(integer $EnableScope) 设置问答生效域检索，不检索不传。枚举值如下：
-1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
+ * @method string getBotBizId() 获取<p>应用ID<br>若要操作共享知识库，传KnowledgeBizId</p>
+ * @method void setBotBizId(string $BotBizId) 设置<p>应用ID<br>若要操作共享知识库，传KnowledgeBizId</p>
+ * @method integer getPageNumber() 获取<p>页码（取值范围&gt;0）</p>
+ * @method void setPageNumber(integer $PageNumber) 设置<p>页码（取值范围&gt;0）</p>
+ * @method integer getPageSize() 获取<p>每页大小(取值范围1-200)</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页大小(取值范围1-200)</p>
+ * @method string getQuery() 获取<p>查询问题</p><p>输入特定标识 lke:system:untagged  将查询所有未关联标签的问答</p>
+ * @method void setQuery(string $Query) 设置<p>查询问题</p><p>输入特定标识 lke:system:untagged  将查询所有未关联标签的问答</p>
+ * @method array getAcceptStatus() 获取<p>校验状态(1未校验2采纳3不采纳)<br>如果不填默认值为空数组，表示不筛选，返回所有状态</p>
+ * @method void setAcceptStatus(array $AcceptStatus) 设置<p>校验状态(1未校验2采纳3不采纳)<br>如果不填默认值为空数组，表示不筛选，返回所有状态</p>
+ * @method array getReleaseStatus() 获取<p>发布状态(2,4导入成功 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)<br>如果不填默认值为空数组，表示不筛选返回所有状态</p>
+ * @method void setReleaseStatus(array $ReleaseStatus) 设置<p>发布状态(2,4导入成功 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)<br>如果不填默认值为空数组，表示不筛选返回所有状态</p>
+ * @method string getDocBizId() 获取<p>文档ID</p>
+ * @method void setDocBizId(string $DocBizId) 设置<p>文档ID</p>
+ * @method integer getSource() 获取<p>来源(1 文档生成 2 批量导入 3 手动添加)<br>不填默认值为0，表示不过滤，返回所有状态</p>
+ * @method void setSource(integer $Source) 设置<p>来源(1 文档生成 2 批量导入 3 手动添加)<br>不填默认值为0，表示不过滤，返回所有状态</p>
+ * @method string getQueryAnswer() 获取<p>查询答案</p>
+ * @method void setQueryAnswer(string $QueryAnswer) 设置<p>查询答案</p>
+ * @method string getCateBizId() 获取<p>分类ID</p>
+ * @method void setCateBizId(string $CateBizId) 设置<p>分类ID</p>
+ * @method array getQaBizIds() 获取<p>QA业务ID列表</p>
+ * @method void setQaBizIds(array $QaBizIds) 设置<p>QA业务ID列表</p>
+ * @method string getQueryType() 获取<p>查询类型 filename 名称、 attribute 标签<br>如果不填默认值为&quot;filename&quot;</p>
+ * @method void setQueryType(string $QueryType) 设置<p>查询类型 filename 名称、 attribute 标签<br>如果不填默认值为&quot;filename&quot;</p>
+ * @method integer getShowCurrCate() 获取<p>是否只展示当前分类的数据 0不是，1是</p>
+ * @method void setShowCurrCate(integer $ShowCurrCate) 设置<p>是否只展示当前分类的数据 0不是，1是</p>
+ * @method integer getEnableScope() 获取<p>问答生效域检索，不检索不传。枚举值如下：<br>1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。</p>
+ * @method void setEnableScope(integer $EnableScope) 设置<p>问答生效域检索，不检索不传。枚举值如下：<br>1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。</p>
+ * @method TimeRange getCreateTime() 获取<p>问答创建时间范围</p>
+ * @method void setCreateTime(TimeRange $CreateTime) 设置<p>问答创建时间范围</p>
+ * @method TimeRange getUpdateTime() 获取<p>问答更新时间范围</p>
+ * @method void setUpdateTime(TimeRange $UpdateTime) 设置<p>问答更新时间范围</p>
  */
 class ListQARequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
-若要操作共享知识库，传KnowledgeBizId
+     * @var string <p>应用ID<br>若要操作共享知识库，传KnowledgeBizId</p>
      */
     public $BotBizId;
 
     /**
-     * @var integer 页码（取值范围>0）
+     * @var integer <p>页码（取值范围&gt;0）</p>
      */
     public $PageNumber;
 
     /**
-     * @var integer 每页大小(取值范围1-200)
+     * @var integer <p>每页大小(取值范围1-200)</p>
      */
     public $PageSize;
 
     /**
-     * @var string 查询问题
-
-输入特定标识 lke:system:untagged  将查询所有未关联标签的问答
+     * @var string <p>查询问题</p><p>输入特定标识 lke:system:untagged  将查询所有未关联标签的问答</p>
      */
     public $Query;
 
     /**
-     * @var array 校验状态(1未校验2采纳3不采纳)
-如果不填默认值为空数组，表示不筛选，返回所有状态
+     * @var array <p>校验状态(1未校验2采纳3不采纳)<br>如果不填默认值为空数组，表示不筛选，返回所有状态</p>
      */
     public $AcceptStatus;
 
     /**
-     * @var array 发布状态(2,4导入成功 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
-如果不填默认值为空数组，表示不筛选返回所有状态
+     * @var array <p>发布状态(2,4导入成功 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)<br>如果不填默认值为空数组，表示不筛选返回所有状态</p>
      */
     public $ReleaseStatus;
 
     /**
-     * @var string 文档ID
+     * @var string <p>文档ID</p>
      */
     public $DocBizId;
 
     /**
-     * @var integer 来源(1 文档生成 2 批量导入 3 手动添加)
-不填默认值为0，表示不过滤，返回所有状态
+     * @var integer <p>来源(1 文档生成 2 批量导入 3 手动添加)<br>不填默认值为0，表示不过滤，返回所有状态</p>
      */
     public $Source;
 
     /**
-     * @var string 查询答案
+     * @var string <p>查询答案</p>
      */
     public $QueryAnswer;
 
     /**
-     * @var string 分类ID
+     * @var string <p>分类ID</p>
      */
     public $CateBizId;
 
     /**
-     * @var array QA业务ID列表
+     * @var array <p>QA业务ID列表</p>
      */
     public $QaBizIds;
 
     /**
-     * @var string 查询类型 filename 名称、 attribute 标签
-如果不填默认值为"filename"
+     * @var string <p>查询类型 filename 名称、 attribute 标签<br>如果不填默认值为&quot;filename&quot;</p>
      */
     public $QueryType;
 
     /**
-     * @var integer 是否只展示当前分类的数据 0不是，1是
+     * @var integer <p>是否只展示当前分类的数据 0不是，1是</p>
      */
     public $ShowCurrCate;
 
     /**
-     * @var integer 问答生效域检索，不检索不传。枚举值如下：
-1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
+     * @var integer <p>问答生效域检索，不检索不传。枚举值如下：<br>1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。</p>
      */
     public $EnableScope;
 
     /**
-     * @param string $BotBizId 应用ID
-若要操作共享知识库，传KnowledgeBizId
-     * @param integer $PageNumber 页码（取值范围>0）
-     * @param integer $PageSize 每页大小(取值范围1-200)
-     * @param string $Query 查询问题
+     * @var TimeRange <p>问答创建时间范围</p>
+     */
+    public $CreateTime;
 
-输入特定标识 lke:system:untagged  将查询所有未关联标签的问答
-     * @param array $AcceptStatus 校验状态(1未校验2采纳3不采纳)
-如果不填默认值为空数组，表示不筛选，返回所有状态
-     * @param array $ReleaseStatus 发布状态(2,4导入成功 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
-如果不填默认值为空数组，表示不筛选返回所有状态
-     * @param string $DocBizId 文档ID
-     * @param integer $Source 来源(1 文档生成 2 批量导入 3 手动添加)
-不填默认值为0，表示不过滤，返回所有状态
-     * @param string $QueryAnswer 查询答案
-     * @param string $CateBizId 分类ID
-     * @param array $QaBizIds QA业务ID列表
-     * @param string $QueryType 查询类型 filename 名称、 attribute 标签
-如果不填默认值为"filename"
-     * @param integer $ShowCurrCate 是否只展示当前分类的数据 0不是，1是
-     * @param integer $EnableScope 问答生效域检索，不检索不传。枚举值如下：
-1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
+    /**
+     * @var TimeRange <p>问答更新时间范围</p>
+     */
+    public $UpdateTime;
+
+    /**
+     * @param string $BotBizId <p>应用ID<br>若要操作共享知识库，传KnowledgeBizId</p>
+     * @param integer $PageNumber <p>页码（取值范围&gt;0）</p>
+     * @param integer $PageSize <p>每页大小(取值范围1-200)</p>
+     * @param string $Query <p>查询问题</p><p>输入特定标识 lke:system:untagged  将查询所有未关联标签的问答</p>
+     * @param array $AcceptStatus <p>校验状态(1未校验2采纳3不采纳)<br>如果不填默认值为空数组，表示不筛选，返回所有状态</p>
+     * @param array $ReleaseStatus <p>发布状态(2,4导入成功 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)<br>如果不填默认值为空数组，表示不筛选返回所有状态</p>
+     * @param string $DocBizId <p>文档ID</p>
+     * @param integer $Source <p>来源(1 文档生成 2 批量导入 3 手动添加)<br>不填默认值为0，表示不过滤，返回所有状态</p>
+     * @param string $QueryAnswer <p>查询答案</p>
+     * @param string $CateBizId <p>分类ID</p>
+     * @param array $QaBizIds <p>QA业务ID列表</p>
+     * @param string $QueryType <p>查询类型 filename 名称、 attribute 标签<br>如果不填默认值为&quot;filename&quot;</p>
+     * @param integer $ShowCurrCate <p>是否只展示当前分类的数据 0不是，1是</p>
+     * @param integer $EnableScope <p>问答生效域检索，不检索不传。枚举值如下：<br>1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。</p>
+     * @param TimeRange $CreateTime <p>问答创建时间范围</p>
+     * @param TimeRange $UpdateTime <p>问答更新时间范围</p>
      */
     function __construct()
     {
@@ -236,6 +220,16 @@ class ListQARequest extends AbstractModel
 
         if (array_key_exists("EnableScope",$param) and $param["EnableScope"] !== null) {
             $this->EnableScope = $param["EnableScope"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = new TimeRange();
+            $this->CreateTime->deserialize($param["CreateTime"]);
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = new TimeRange();
+            $this->UpdateTime->deserialize($param["UpdateTime"]);
         }
     }
 }

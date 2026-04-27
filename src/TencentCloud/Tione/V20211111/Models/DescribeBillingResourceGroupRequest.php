@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getResourceGroupId() 获取资源组id, 取值为创建资源组接口(CreateBillingResourceGroup)响应中的ResourceGroupId
  * @method void setResourceGroupId(string $ResourceGroupId) 设置资源组id, 取值为创建资源组接口(CreateBillingResourceGroup)响应中的ResourceGroupId
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
  * @method array getFilters() 获取过滤条件
 注意: 
 1. Filter.Name 只支持以下枚举值:
@@ -55,6 +57,11 @@ class DescribeBillingResourceGroupRequest extends AbstractModel
      * @var string 资源组id, 取值为创建资源组接口(CreateBillingResourceGroup)响应中的ResourceGroupId
      */
     public $ResourceGroupId;
+
+    /**
+     * @var string <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public $TiProjectId;
 
     /**
      * @var array 过滤条件
@@ -91,6 +98,7 @@ class DescribeBillingResourceGroupRequest extends AbstractModel
 
     /**
      * @param string $ResourceGroupId 资源组id, 取值为创建资源组接口(CreateBillingResourceGroup)响应中的ResourceGroupId
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
      * @param array $Filters 过滤条件
 注意: 
 1. Filter.Name 只支持以下枚举值:
@@ -120,6 +128,10 @@ class DescribeBillingResourceGroupRequest extends AbstractModel
         }
         if (array_key_exists("ResourceGroupId",$param) and $param["ResourceGroupId"] !== null) {
             $this->ResourceGroupId = $param["ResourceGroupId"];
+        }
+
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
         }
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {

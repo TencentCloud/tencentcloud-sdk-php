@@ -20,69 +20,76 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackupConfig返回参数结构体
  *
- * @method integer getBackupTimeBeg() 获取表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
- * @method void setBackupTimeBeg(integer $BackupTimeBeg) 设置表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
- * @method integer getBackupTimeEnd() 获取表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
- * @method void setBackupTimeEnd(integer $BackupTimeEnd) 设置表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
- * @method integer getReserveDuration() 获取表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800
- * @method void setReserveDuration(integer $ReserveDuration) 设置表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800
- * @method array getBackupFreq() 获取备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
- * @method void setBackupFreq(array $BackupFreq) 设置备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
- * @method string getBackupType() 获取备份方式，logic-逻辑备份，snapshot-快照备份
- * @method void setBackupType(string $BackupType) 设置备份方式，logic-逻辑备份，snapshot-快照备份
- * @method string getLogicCrossRegionsConfigUpdateTime() 获取跨地域逻辑备份配置修改时间
- * @method void setLogicCrossRegionsConfigUpdateTime(string $LogicCrossRegionsConfigUpdateTime) 设置跨地域逻辑备份配置修改时间
- * @method LogicBackupConfigInfo getLogicBackupConfig() 获取自动逻辑备份配置
- * @method void setLogicBackupConfig(LogicBackupConfigInfo $LogicBackupConfig) 设置自动逻辑备份配置
- * @method BackupConfigInfo getSnapshotSecondaryBackupConfig() 获取二级快照备份配置信息
+ * @method integer getBackupTimeBeg() 获取<p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
+ * @method void setBackupTimeBeg(integer $BackupTimeBeg) 设置<p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
+ * @method integer getBackupTimeEnd() 获取<p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
+ * @method void setBackupTimeEnd(integer $BackupTimeEnd) 设置<p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
+ * @method integer getReserveDuration() 获取<p>表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600<em>24</em>7=604800</p>
+ * @method void setReserveDuration(integer $ReserveDuration) 设置<p>表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600<em>24</em>7=604800</p>
+ * @method array getBackupFreq() 获取<p>备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份</p>
+ * @method void setBackupFreq(array $BackupFreq) 设置<p>备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份</p>
+ * @method string getBackupType() 获取<p>备份方式，logic-逻辑备份，snapshot-快照备份</p>
+ * @method void setBackupType(string $BackupType) 设置<p>备份方式，logic-逻辑备份，snapshot-快照备份</p>
+ * @method string getLogicCrossRegionsConfigUpdateTime() 获取<p>跨地域逻辑备份配置修改时间</p>
+ * @method void setLogicCrossRegionsConfigUpdateTime(string $LogicCrossRegionsConfigUpdateTime) 设置<p>跨地域逻辑备份配置修改时间</p>
+ * @method LogicBackupConfigInfo getLogicBackupConfig() 获取<p>自动逻辑备份配置</p>
+ * @method void setLogicBackupConfig(LogicBackupConfigInfo $LogicBackupConfig) 设置<p>自动逻辑备份配置</p>
+ * @method BackupConfigInfo getSnapshotSecondaryBackupConfig() 获取<p>二级快照备份配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSnapshotSecondaryBackupConfig(BackupConfigInfo $SnapshotSecondaryBackupConfig) 设置二级快照备份配置信息
+ * @method void setSnapshotSecondaryBackupConfig(BackupConfigInfo $SnapshotSecondaryBackupConfig) 设置<p>二级快照备份配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method SparseBackupConfigRsp getSparseBackupConfig() 获取<p>稀疏备份配置</p>
+ * @method void setSparseBackupConfig(SparseBackupConfigRsp $SparseBackupConfig) 设置<p>稀疏备份配置</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBackupConfigResponse extends AbstractModel
 {
     /**
-     * @var integer 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
+     * @var integer <p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
      */
     public $BackupTimeBeg;
 
     /**
-     * @var integer 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
+     * @var integer <p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
      */
     public $BackupTimeEnd;
 
     /**
-     * @var integer 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800
+     * @var integer <p>表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600<em>24</em>7=604800</p>
      */
     public $ReserveDuration;
 
     /**
-     * @var array 备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
+     * @var array <p>备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份</p>
      */
     public $BackupFreq;
 
     /**
-     * @var string 备份方式，logic-逻辑备份，snapshot-快照备份
+     * @var string <p>备份方式，logic-逻辑备份，snapshot-快照备份</p>
      */
     public $BackupType;
 
     /**
-     * @var string 跨地域逻辑备份配置修改时间
+     * @var string <p>跨地域逻辑备份配置修改时间</p>
      */
     public $LogicCrossRegionsConfigUpdateTime;
 
     /**
-     * @var LogicBackupConfigInfo 自动逻辑备份配置
+     * @var LogicBackupConfigInfo <p>自动逻辑备份配置</p>
      */
     public $LogicBackupConfig;
 
     /**
-     * @var BackupConfigInfo 二级快照备份配置信息
+     * @var BackupConfigInfo <p>二级快照备份配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotSecondaryBackupConfig;
+
+    /**
+     * @var SparseBackupConfigRsp <p>稀疏备份配置</p>
+     */
+    public $SparseBackupConfig;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -90,15 +97,16 @@ class DescribeBackupConfigResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $BackupTimeBeg 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
-     * @param integer $BackupTimeEnd 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
-     * @param integer $ReserveDuration 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800
-     * @param array $BackupFreq 备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
-     * @param string $BackupType 备份方式，logic-逻辑备份，snapshot-快照备份
-     * @param string $LogicCrossRegionsConfigUpdateTime 跨地域逻辑备份配置修改时间
-     * @param LogicBackupConfigInfo $LogicBackupConfig 自动逻辑备份配置
-     * @param BackupConfigInfo $SnapshotSecondaryBackupConfig 二级快照备份配置信息
+     * @param integer $BackupTimeBeg <p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
+     * @param integer $BackupTimeEnd <p>表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200</p>
+     * @param integer $ReserveDuration <p>表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600<em>24</em>7=604800</p>
+     * @param array $BackupFreq <p>备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份</p>
+     * @param string $BackupType <p>备份方式，logic-逻辑备份，snapshot-快照备份</p>
+     * @param string $LogicCrossRegionsConfigUpdateTime <p>跨地域逻辑备份配置修改时间</p>
+     * @param LogicBackupConfigInfo $LogicBackupConfig <p>自动逻辑备份配置</p>
+     * @param BackupConfigInfo $SnapshotSecondaryBackupConfig <p>二级快照备份配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param SparseBackupConfigRsp $SparseBackupConfig <p>稀疏备份配置</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -146,6 +154,11 @@ class DescribeBackupConfigResponse extends AbstractModel
         if (array_key_exists("SnapshotSecondaryBackupConfig",$param) and $param["SnapshotSecondaryBackupConfig"] !== null) {
             $this->SnapshotSecondaryBackupConfig = new BackupConfigInfo();
             $this->SnapshotSecondaryBackupConfig->deserialize($param["SnapshotSecondaryBackupConfig"]);
+        }
+
+        if (array_key_exists("SparseBackupConfig",$param) and $param["SparseBackupConfig"] !== null) {
+            $this->SparseBackupConfig = new SparseBackupConfigRsp();
+            $this->SparseBackupConfig->deserialize($param["SparseBackupConfig"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

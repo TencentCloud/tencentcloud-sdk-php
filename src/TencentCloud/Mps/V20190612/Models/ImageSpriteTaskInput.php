@@ -20,86 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 对视频截雪碧图任务输入参数类型
  *
- * @method integer getDefinition() 获取雪碧图模板 ID。
- * @method void setDefinition(integer $Definition) 设置雪碧图模板 ID。
- * @method TaskOutputStorage getOutputStorage() 获取截取雪碧图后文件的目标存储，不填则继承上层的 OutputStorage 值。
+ * @method integer getDefinition() 获取<p>雪碧图模板 ID。</p>
+ * @method void setDefinition(integer $Definition) 设置<p>雪碧图模板 ID。</p>
+ * @method TaskOutputStorage getOutputStorage() 获取<p>截取雪碧图后文件的目标存储，不填则继承上层的 OutputStorage 值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置截取雪碧图后文件的目标存储，不填则继承上层的 OutputStorage 值。
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置<p>截取雪碧图后文件的目标存储，不填则继承上层的 OutputStorage 值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOutputObjectPath() 获取截取雪碧图后，雪碧图图片文件的输出路径，可以为相对路径或者绝对路径。
-若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
-相对路径示例：
-<li>文件名_{变量名}.{format}</li>
-<li>文件名.{format}</li>
-绝对路径示例：
-<li>/自定义路径/文件名_{变量名}.{format}</li>
-如果不填，则默认为相对路径：`{inputName}_imageSprite_{definition}_{number}.{format}`。
- * @method void setOutputObjectPath(string $OutputObjectPath) 设置截取雪碧图后，雪碧图图片文件的输出路径，可以为相对路径或者绝对路径。
-若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
-相对路径示例：
-<li>文件名_{变量名}.{format}</li>
-<li>文件名.{format}</li>
-绝对路径示例：
-<li>/自定义路径/文件名_{变量名}.{format}</li>
-如果不填，则默认为相对路径：`{inputName}_imageSprite_{definition}_{number}.{format}`。
- * @method string getWebVttObjectName() 获取截取雪碧图后，Web VTT 文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：`{inputName}_imageSprite_{definition}.{format}`。
- * @method void setWebVttObjectName(string $WebVttObjectName) 设置截取雪碧图后，Web VTT 文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：`{inputName}_imageSprite_{definition}.{format}`。
- * @method NumberFormat getObjectNumberFormat() 获取截取雪碧图后输出路径中的`{number}`变量的规则。
+ * @method string getOutputObjectPath() 获取<p>截取雪碧图后，雪碧图图片文件的输出路径，可以为相对路径或者绝对路径。<br>若需定义输出路径，路径需以<code>.{format}</code>结尾。变量名请参考 <a href="https://cloud.tencent.com/document/product/862/37039">文件名变量说明</a>。<br>相对路径示例：</p><li>文件名_{变量名}.{format}</li><li>文件名.{format}</li>绝对路径示例：<li>/自定义路径/文件名_{变量名}.{format}</li>如果不填，则默认为相对路径：<code>{inputName}_imageSprite_{definition}_{number}.{format}</code>。
+ * @method void setOutputObjectPath(string $OutputObjectPath) 设置<p>截取雪碧图后，雪碧图图片文件的输出路径，可以为相对路径或者绝对路径。<br>若需定义输出路径，路径需以<code>.{format}</code>结尾。变量名请参考 <a href="https://cloud.tencent.com/document/product/862/37039">文件名变量说明</a>。<br>相对路径示例：</p><li>文件名_{变量名}.{format}</li><li>文件名.{format}</li>绝对路径示例：<li>/自定义路径/文件名_{变量名}.{format}</li>如果不填，则默认为相对路径：<code>{inputName}_imageSprite_{definition}_{number}.{format}</code>。
+ * @method string getWebVttObjectName() 获取<p>截取雪碧图后，Web VTT 文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：<code>{inputName}_imageSprite_{definition}.{format}</code>。</p>
+ * @method void setWebVttObjectName(string $WebVttObjectName) 设置<p>截取雪碧图后，Web VTT 文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：<code>{inputName}_imageSprite_{definition}.{format}</code>。</p>
+ * @method NumberFormat getObjectNumberFormat() 获取<p>截取雪碧图后输出路径中的<code>{number}</code>变量的规则。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setObjectNumberFormat(NumberFormat $ObjectNumberFormat) 设置截取雪碧图后输出路径中的`{number}`变量的规则。
+ * @method void setObjectNumberFormat(NumberFormat $ObjectNumberFormat) 设置<p>截取雪碧图后输出路径中的<code>{number}</code>变量的规则。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExtInfo() 获取<p>扩展参数。</p>
+ * @method void setExtInfo(string $ExtInfo) 设置<p>扩展参数。</p>
  */
 class ImageSpriteTaskInput extends AbstractModel
 {
     /**
-     * @var integer 雪碧图模板 ID。
+     * @var integer <p>雪碧图模板 ID。</p>
      */
     public $Definition;
 
     /**
-     * @var TaskOutputStorage 截取雪碧图后文件的目标存储，不填则继承上层的 OutputStorage 值。
+     * @var TaskOutputStorage <p>截取雪碧图后文件的目标存储，不填则继承上层的 OutputStorage 值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputStorage;
 
     /**
-     * @var string 截取雪碧图后，雪碧图图片文件的输出路径，可以为相对路径或者绝对路径。
-若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
-相对路径示例：
-<li>文件名_{变量名}.{format}</li>
-<li>文件名.{format}</li>
-绝对路径示例：
-<li>/自定义路径/文件名_{变量名}.{format}</li>
-如果不填，则默认为相对路径：`{inputName}_imageSprite_{definition}_{number}.{format}`。
+     * @var string <p>截取雪碧图后，雪碧图图片文件的输出路径，可以为相对路径或者绝对路径。<br>若需定义输出路径，路径需以<code>.{format}</code>结尾。变量名请参考 <a href="https://cloud.tencent.com/document/product/862/37039">文件名变量说明</a>。<br>相对路径示例：</p><li>文件名_{变量名}.{format}</li><li>文件名.{format}</li>绝对路径示例：<li>/自定义路径/文件名_{变量名}.{format}</li>如果不填，则默认为相对路径：<code>{inputName}_imageSprite_{definition}_{number}.{format}</code>。
      */
     public $OutputObjectPath;
 
     /**
-     * @var string 截取雪碧图后，Web VTT 文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：`{inputName}_imageSprite_{definition}.{format}`。
+     * @var string <p>截取雪碧图后，Web VTT 文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：<code>{inputName}_imageSprite_{definition}.{format}</code>。</p>
      */
     public $WebVttObjectName;
 
     /**
-     * @var NumberFormat 截取雪碧图后输出路径中的`{number}`变量的规则。
+     * @var NumberFormat <p>截取雪碧图后输出路径中的<code>{number}</code>变量的规则。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ObjectNumberFormat;
 
     /**
-     * @param integer $Definition 雪碧图模板 ID。
-     * @param TaskOutputStorage $OutputStorage 截取雪碧图后文件的目标存储，不填则继承上层的 OutputStorage 值。
+     * @var string <p>扩展参数。</p>
+     */
+    public $ExtInfo;
+
+    /**
+     * @param integer $Definition <p>雪碧图模板 ID。</p>
+     * @param TaskOutputStorage $OutputStorage <p>截取雪碧图后文件的目标存储，不填则继承上层的 OutputStorage 值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OutputObjectPath 截取雪碧图后，雪碧图图片文件的输出路径，可以为相对路径或者绝对路径。
-若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
-相对路径示例：
-<li>文件名_{变量名}.{format}</li>
-<li>文件名.{format}</li>
-绝对路径示例：
-<li>/自定义路径/文件名_{变量名}.{format}</li>
-如果不填，则默认为相对路径：`{inputName}_imageSprite_{definition}_{number}.{format}`。
-     * @param string $WebVttObjectName 截取雪碧图后，Web VTT 文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：`{inputName}_imageSprite_{definition}.{format}`。
-     * @param NumberFormat $ObjectNumberFormat 截取雪碧图后输出路径中的`{number}`变量的规则。
+     * @param string $OutputObjectPath <p>截取雪碧图后，雪碧图图片文件的输出路径，可以为相对路径或者绝对路径。<br>若需定义输出路径，路径需以<code>.{format}</code>结尾。变量名请参考 <a href="https://cloud.tencent.com/document/product/862/37039">文件名变量说明</a>。<br>相对路径示例：</p><li>文件名_{变量名}.{format}</li><li>文件名.{format}</li>绝对路径示例：<li>/自定义路径/文件名_{变量名}.{format}</li>如果不填，则默认为相对路径：<code>{inputName}_imageSprite_{definition}_{number}.{format}</code>。
+     * @param string $WebVttObjectName <p>截取雪碧图后，Web VTT 文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：<code>{inputName}_imageSprite_{definition}.{format}</code>。</p>
+     * @param NumberFormat $ObjectNumberFormat <p>截取雪碧图后输出路径中的<code>{number}</code>变量的规则。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExtInfo <p>扩展参数。</p>
      */
     function __construct()
     {
@@ -134,6 +114,10 @@ class ImageSpriteTaskInput extends AbstractModel
         if (array_key_exists("ObjectNumberFormat",$param) and $param["ObjectNumberFormat"] !== null) {
             $this->ObjectNumberFormat = new NumberFormat();
             $this->ObjectNumberFormat->deserialize($param["ObjectNumberFormat"]);
+        }
+
+        if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
+            $this->ExtInfo = $param["ExtInfo"];
         }
     }
 }

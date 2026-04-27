@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAction(string $Action) 设置<p>规则动作</p>
  * @method string getPayload() 获取<p>攻击payload</p>
  * @method void setPayload(string $Payload) 设置<p>攻击payload</p>
+ * @method array getImageResult() 获取<p>图片检测结果</p>
+ * @method void setImageResult(array $ImageResult) 设置<p>图片检测结果</p>
  */
 class LLMDetectResult extends AbstractModel
 {
@@ -80,6 +82,11 @@ class LLMDetectResult extends AbstractModel
     public $Payload;
 
     /**
+     * @var array <p>图片检测结果</p>
+     */
+    public $ImageResult;
+
+    /**
      * @param array $SensitiveResult <p>仅输出侧：涉敏信息</p>
      * @param array $KeyWordsResult <p>输入输出均检测：关键词库命中信息</p>
      * @param array $DataCategoryResult <p>输入输出均检测：数据分类分级结果</p>
@@ -88,6 +95,7 @@ class LLMDetectResult extends AbstractModel
      * @param string $RuleName <p>命中的规则名称</p>
      * @param string $Action <p>规则动作</p>
      * @param string $Payload <p>攻击payload</p>
+     * @param array $ImageResult <p>图片检测结果</p>
      */
     function __construct()
     {
@@ -143,6 +151,15 @@ class LLMDetectResult extends AbstractModel
 
         if (array_key_exists("Payload",$param) and $param["Payload"] !== null) {
             $this->Payload = $param["Payload"];
+        }
+
+        if (array_key_exists("ImageResult",$param) and $param["ImageResult"] !== null) {
+            $this->ImageResult = [];
+            foreach ($param["ImageResult"] as $key => $value){
+                $obj = new ImageResult();
+                $obj->deserialize($value);
+                array_push($this->ImageResult, $obj);
+            }
         }
     }
 }

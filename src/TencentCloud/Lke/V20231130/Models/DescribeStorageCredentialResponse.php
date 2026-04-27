@@ -20,92 +20,92 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStorageCredential返回参数结构体
  *
- * @method Credentials getCredentials() 获取密钥信息
- * @method void setCredentials(Credentials $Credentials) 设置密钥信息
- * @method integer getExpiredTime() 获取失效时间
- * @method void setExpiredTime(integer $ExpiredTime) 设置失效时间
- * @method integer getStartTime() 获取开始时间
- * @method void setStartTime(integer $StartTime) 设置开始时间
- * @method string getBucket() 获取对象存储桶
- * @method void setBucket(string $Bucket) 设置对象存储桶
- * @method string getRegion() 获取对象存储可用区
- * @method void setRegion(string $Region) 设置对象存储可用区
- * @method string getFilePath() 获取文件存储目录
- * @method void setFilePath(string $FilePath) 设置文件存储目录
- * @method string getType() 获取存储类型
- * @method void setType(string $Type) 设置存储类型
- * @method string getCorpUin() 获取企业主账号
- * @method void setCorpUin(string $CorpUin) 设置企业主账号
- * @method string getImagePath() 获取图片存储目录
- * @method void setImagePath(string $ImagePath) 设置图片存储目录
- * @method string getUploadPath() 获取上传存储路径，到具体文件
- * @method void setUploadPath(string $UploadPath) 设置上传存储路径，到具体文件
- * @method string getUploadUrl() 获取文件上传地址，使用put请求上传文件到该地址
- * @method void setUploadUrl(string $UploadUrl) 设置文件上传地址，使用put请求上传文件到该地址
- * @method string getFileUrl() 获取文件的预签名地址，支持下载
- * @method void setFileUrl(string $FileUrl) 设置文件的预签名地址，支持下载
+ * @method Credentials getCredentials() 获取<p>密钥信息</p>
+ * @method void setCredentials(Credentials $Credentials) 设置<p>密钥信息</p>
+ * @method integer getExpiredTime() 获取<p>失效时间，为 Unix 时间戳</p><p>单位：秒</p>
+ * @method void setExpiredTime(integer $ExpiredTime) 设置<p>失效时间，为 Unix 时间戳</p><p>单位：秒</p>
+ * @method integer getStartTime() 获取<p>开始时间，为 Unix 时间戳</p><p>单位：秒</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>开始时间，为 Unix 时间戳</p><p>单位：秒</p>
+ * @method string getBucket() 获取<p>对象存储桶</p>
+ * @method void setBucket(string $Bucket) 设置<p>对象存储桶</p>
+ * @method string getRegion() 获取<p>对象存储可用区</p>
+ * @method void setRegion(string $Region) 设置<p>对象存储可用区</p>
+ * @method string getFilePath() 获取<p>文件存储目录</p>
+ * @method void setFilePath(string $FilePath) 设置<p>文件存储目录</p>
+ * @method string getType() 获取<p>存储类型</p>
+ * @method void setType(string $Type) 设置<p>存储类型</p>
+ * @method string getCorpUin() 获取<p>企业主账号</p>
+ * @method void setCorpUin(string $CorpUin) 设置<p>企业主账号</p>
+ * @method string getImagePath() 获取<p>图片存储目录</p>
+ * @method void setImagePath(string $ImagePath) 设置<p>图片存储目录</p>
+ * @method string getUploadPath() 获取<p>上传存储路径，到具体文件</p>
+ * @method void setUploadPath(string $UploadPath) 设置<p>上传存储路径，到具体文件</p>
+ * @method string getUploadUrl() 获取<p>文件上传地址，使用put请求上传文件到该地址</p>
+ * @method void setUploadUrl(string $UploadUrl) 设置<p>文件上传地址，使用put请求上传文件到该地址</p>
+ * @method string getFileUrl() 获取<p>文件的预签名地址，支持下载</p>
+ * @method void setFileUrl(string $FileUrl) 设置<p>文件的预签名地址，支持下载</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeStorageCredentialResponse extends AbstractModel
 {
     /**
-     * @var Credentials 密钥信息
+     * @var Credentials <p>密钥信息</p>
      */
     public $Credentials;
 
     /**
-     * @var integer 失效时间
+     * @var integer <p>失效时间，为 Unix 时间戳</p><p>单位：秒</p>
      */
     public $ExpiredTime;
 
     /**
-     * @var integer 开始时间
+     * @var integer <p>开始时间，为 Unix 时间戳</p><p>单位：秒</p>
      */
     public $StartTime;
 
     /**
-     * @var string 对象存储桶
+     * @var string <p>对象存储桶</p>
      */
     public $Bucket;
 
     /**
-     * @var string 对象存储可用区
+     * @var string <p>对象存储可用区</p>
      */
     public $Region;
 
     /**
-     * @var string 文件存储目录
+     * @var string <p>文件存储目录</p>
      */
     public $FilePath;
 
     /**
-     * @var string 存储类型
+     * @var string <p>存储类型</p>
      */
     public $Type;
 
     /**
-     * @var string 企业主账号
+     * @var string <p>企业主账号</p>
      */
     public $CorpUin;
 
     /**
-     * @var string 图片存储目录
+     * @var string <p>图片存储目录</p>
      */
     public $ImagePath;
 
     /**
-     * @var string 上传存储路径，到具体文件
+     * @var string <p>上传存储路径，到具体文件</p>
      */
     public $UploadPath;
 
     /**
-     * @var string 文件上传地址，使用put请求上传文件到该地址
+     * @var string <p>文件上传地址，使用put请求上传文件到该地址</p>
      */
     public $UploadUrl;
 
     /**
-     * @var string 文件的预签名地址，支持下载
+     * @var string <p>文件的预签名地址，支持下载</p>
      */
     public $FileUrl;
 
@@ -115,18 +115,18 @@ class DescribeStorageCredentialResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param Credentials $Credentials 密钥信息
-     * @param integer $ExpiredTime 失效时间
-     * @param integer $StartTime 开始时间
-     * @param string $Bucket 对象存储桶
-     * @param string $Region 对象存储可用区
-     * @param string $FilePath 文件存储目录
-     * @param string $Type 存储类型
-     * @param string $CorpUin 企业主账号
-     * @param string $ImagePath 图片存储目录
-     * @param string $UploadPath 上传存储路径，到具体文件
-     * @param string $UploadUrl 文件上传地址，使用put请求上传文件到该地址
-     * @param string $FileUrl 文件的预签名地址，支持下载
+     * @param Credentials $Credentials <p>密钥信息</p>
+     * @param integer $ExpiredTime <p>失效时间，为 Unix 时间戳</p><p>单位：秒</p>
+     * @param integer $StartTime <p>开始时间，为 Unix 时间戳</p><p>单位：秒</p>
+     * @param string $Bucket <p>对象存储桶</p>
+     * @param string $Region <p>对象存储可用区</p>
+     * @param string $FilePath <p>文件存储目录</p>
+     * @param string $Type <p>存储类型</p>
+     * @param string $CorpUin <p>企业主账号</p>
+     * @param string $ImagePath <p>图片存储目录</p>
+     * @param string $UploadPath <p>上传存储路径，到具体文件</p>
+     * @param string $UploadUrl <p>文件上传地址，使用put请求上传文件到该地址</p>
+     * @param string $FileUrl <p>文件的预签名地址，支持下载</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDBInstance返回参数结构体
  *
- * @method string getDealId() 获取订单ID
- * @method void setDealId(string $DealId) 设置订单ID
- * @method array getInstanceIds() 获取创建的实例ID列表
- * @method void setInstanceIds(array $InstanceIds) 设置创建的实例ID列表
+ * @method string getDealId() 获取<p>订单ID</p>
+ * @method void setDealId(string $DealId) 设置<p>订单ID</p>
+ * @method array getInstanceIds() 获取<p>创建的实例ID列表</p>
+ * @method void setInstanceIds(array $InstanceIds) 设置<p>创建的实例ID列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateDBInstanceResponse extends AbstractModel
 {
     /**
-     * @var string 订单ID
+     * @var string <p>订单ID</p>
      */
     public $DealId;
 
     /**
-     * @var array 创建的实例ID列表
+     * @var array <p>创建的实例ID列表</p>
      */
     public $InstanceIds;
 
@@ -45,8 +45,8 @@ class CreateDBInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DealId 订单ID
-     * @param array $InstanceIds 创建的实例ID列表
+     * @param string $DealId <p>订单ID</p>
+     * @param array $InstanceIds <p>创建的实例ID列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

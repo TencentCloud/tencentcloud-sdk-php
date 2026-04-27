@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 **说明**：变更后的分片数量不能小于当前现有的数量。切勿同时发起调整节点数、调整分片数与调整节点规格的任务。
  * @method void setReplicateSetNum(integer $ReplicateSetNum) 设置分片集群实例，指变更配置后实例的分片数量。取值范围：[2,36] 。
 **说明**：变更后的分片数量不能小于当前现有的数量。切勿同时发起调整节点数、调整分片数与调整节点规格的任务。
+ * @method integer getCpu() 获取变更配置后实例CPU大小，单位：C。具体售卖的CPU规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+注意：通用 I 型实例询价时必须传入与内存对应的 CPU 核数大小
+ * @method void setCpu(integer $Cpu) 设置变更配置后实例CPU大小，单位：C。具体售卖的CPU规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+注意：通用 I 型实例询价时必须传入与内存对应的 CPU 核数大小
  */
 class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel
 {
@@ -71,6 +75,12 @@ class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel
     public $ReplicateSetNum;
 
     /**
+     * @var integer 变更配置后实例CPU大小，单位：C。具体售卖的CPU规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+注意：通用 I 型实例询价时必须传入与内存对应的 CPU 核数大小
+     */
+    public $Cpu;
+
+    /**
      * @param string $InstanceId 实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      * @param integer $Memory 变更配置后实例内存大小，单位：GB。具体售卖的内存规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
      * @param integer $Volume 变更配置后实例磁盘大小，单位：GB。每一个 CPU 规格对应的最大磁盘与最小磁盘范围，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
@@ -80,6 +90,8 @@ class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel
 **说明**：切勿同时发起调整节点数、调整分片数、调整节点规格的任务。
      * @param integer $ReplicateSetNum 分片集群实例，指变更配置后实例的分片数量。取值范围：[2,36] 。
 **说明**：变更后的分片数量不能小于当前现有的数量。切勿同时发起调整节点数、调整分片数与调整节点规格的任务。
+     * @param integer $Cpu 变更配置后实例CPU大小，单位：C。具体售卖的CPU规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+注意：通用 I 型实例询价时必须传入与内存对应的 CPU 核数大小
      */
     function __construct()
     {
@@ -112,6 +124,10 @@ class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel
 
         if (array_key_exists("ReplicateSetNum",$param) and $param["ReplicateSetNum"] !== null) {
             $this->ReplicateSetNum = $param["ReplicateSetNum"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
         }
     }
 }

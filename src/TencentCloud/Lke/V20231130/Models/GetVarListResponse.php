@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetVarList返回参数结构体
  *
- * @method integer getTotal() 获取变量总数
- * @method void setTotal(integer $Total) 设置变量总数
- * @method array getList() 获取变量信息列表
- * @method void setList(array $List) 设置变量信息列表
+ * @method integer getTotal() 获取<p>变量总数</p>
+ * @method void setTotal(integer $Total) 设置<p>变量总数</p>
+ * @method array getList() 获取<p>变量信息列表</p>
+ * @method void setList(array $List) 设置<p>变量信息列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetVarListResponse extends AbstractModel
 {
     /**
-     * @var integer 变量总数
+     * @var integer <p>变量总数</p>
      */
     public $Total;
 
     /**
-     * @var array 变量信息列表
+     * @var array <p>变量信息列表</p>
      */
     public $List;
 
@@ -45,8 +45,8 @@ class GetVarListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total 变量总数
-     * @param array $List 变量信息列表
+     * @param integer $Total <p>变量总数</p>
+     * @param array $List <p>变量信息列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

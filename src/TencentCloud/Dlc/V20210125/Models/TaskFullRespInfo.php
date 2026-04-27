@@ -20,670 +20,682 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 任务实例。
  *
- * @method string getDatabaseName() 获取任务所属Database的名称。
- * @method void setDatabaseName(string $DatabaseName) 设置任务所属Database的名称。
- * @method integer getDataAmount() 获取任务数据量。
- * @method void setDataAmount(integer $DataAmount) 设置任务数据量。
- * @method string getId() 获取任务Id。
- * @method void setId(string $Id) 设置任务Id。
- * @method integer getUsedTime() 获取计算耗时，单位： ms
- * @method void setUsedTime(integer $UsedTime) 设置计算耗时，单位： ms
- * @method string getOutputPath() 获取任务输出路径。
- * @method void setOutputPath(string $OutputPath) 设置任务输出路径。
- * @method string getCreateTime() 获取任务创建时间。
- * @method void setCreateTime(string $CreateTime) 设置任务创建时间。
- * @method integer getState() 获取任务状态：0 初始化， 1 执行中， 2 执行成功，3 数据写入中，4 排队中。-1 执行失败，-3 已取消。
- * @method void setState(integer $State) 设置任务状态：0 初始化， 1 执行中， 2 执行成功，3 数据写入中，4 排队中。-1 执行失败，-3 已取消。
- * @method string getSQLType() 获取任务SQL类型，DDL|DML等
- * @method void setSQLType(string $SQLType) 设置任务SQL类型，DDL|DML等
- * @method string getSQL() 获取任务SQL语句
- * @method void setSQL(string $SQL) 设置任务SQL语句
- * @method boolean getResultExpired() 获取结果是否过期。
- * @method void setResultExpired(boolean $ResultExpired) 设置结果是否过期。
- * @method string getRowAffectInfo() 获取数据影响统计信息。
- * @method void setRowAffectInfo(string $RowAffectInfo) 设置数据影响统计信息。
- * @method string getDataSet() 获取任务结果数据表。
+ * @method string getDatabaseName() 获取<p>任务所属Database的名称。</p>
+ * @method void setDatabaseName(string $DatabaseName) 设置<p>任务所属Database的名称。</p>
+ * @method integer getDataAmount() 获取<p>任务数据量。</p>
+ * @method void setDataAmount(integer $DataAmount) 设置<p>任务数据量。</p>
+ * @method string getId() 获取<p>任务Id。</p>
+ * @method void setId(string $Id) 设置<p>任务Id。</p>
+ * @method integer getUsedTime() 获取<p>计算耗时，单位： ms</p>
+ * @method void setUsedTime(integer $UsedTime) 设置<p>计算耗时，单位： ms</p>
+ * @method string getOutputPath() 获取<p>任务输出路径。</p>
+ * @method void setOutputPath(string $OutputPath) 设置<p>任务输出路径。</p>
+ * @method string getCreateTime() 获取<p>任务创建时间。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>任务创建时间。</p>
+ * @method integer getState() 获取<p>任务状态：0 初始化， 1 执行中， 2 执行成功，3 数据写入中，4 排队中。-1 执行失败，-3 已取消。</p>
+ * @method void setState(integer $State) 设置<p>任务状态：0 初始化， 1 执行中， 2 执行成功，3 数据写入中，4 排队中。-1 执行失败，-3 已取消。</p>
+ * @method string getSQLType() 获取<p>任务SQL类型，DDL|DML等</p>
+ * @method void setSQLType(string $SQLType) 设置<p>任务SQL类型，DDL|DML等</p>
+ * @method string getSQL() 获取<p>任务SQL语句</p>
+ * @method void setSQL(string $SQL) 设置<p>任务SQL语句</p>
+ * @method boolean getResultExpired() 获取<p>结果是否过期。</p>
+ * @method void setResultExpired(boolean $ResultExpired) 设置<p>结果是否过期。</p>
+ * @method string getRowAffectInfo() 获取<p>数据影响统计信息。</p>
+ * @method void setRowAffectInfo(string $RowAffectInfo) 设置<p>数据影响统计信息。</p>
+ * @method string getDataSet() 获取<p>任务结果数据表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataSet(string $DataSet) 设置任务结果数据表。
+ * @method void setDataSet(string $DataSet) 设置<p>任务结果数据表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getError() 获取失败信息, 例如：errorMessage。该字段已废弃。
- * @method void setError(string $Error) 设置失败信息, 例如：errorMessage。该字段已废弃。
- * @method integer getPercentage() 获取任务执行进度num/100(%)
- * @method void setPercentage(integer $Percentage) 设置任务执行进度num/100(%)
- * @method string getOutputMessage() 获取任务执行输出信息。
- * @method void setOutputMessage(string $OutputMessage) 设置任务执行输出信息。
- * @method string getTaskType() 获取执行SQL的引擎类型
- * @method void setTaskType(string $TaskType) 设置执行SQL的引擎类型
- * @method string getProgressDetail() 获取任务进度明细
+ * @method string getError() 获取<p>失败信息, 例如：errorMessage。该字段已废弃。</p>
+ * @method void setError(string $Error) 设置<p>失败信息, 例如：errorMessage。该字段已废弃。</p>
+ * @method integer getPercentage() 获取<p>任务执行进度num/100(%)</p>
+ * @method void setPercentage(integer $Percentage) 设置<p>任务执行进度num/100(%)</p>
+ * @method string getOutputMessage() 获取<p>任务执行输出信息。</p>
+ * @method void setOutputMessage(string $OutputMessage) 设置<p>任务执行输出信息。</p>
+ * @method string getTaskType() 获取<p>执行SQL的引擎类型</p>
+ * @method void setTaskType(string $TaskType) 设置<p>执行SQL的引擎类型</p>
+ * @method string getProgressDetail() 获取<p>任务进度明细</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProgressDetail(string $ProgressDetail) 设置任务进度明细
+ * @method void setProgressDetail(string $ProgressDetail) 设置<p>任务进度明细</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取任务结束时间
+ * @method string getUpdateTime() 获取<p>任务结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(string $UpdateTime) 设置任务结束时间
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>任务结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDataEngineId() 获取计算资源id
+ * @method string getDataEngineId() 获取<p>计算资源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataEngineId(string $DataEngineId) 设置计算资源id
+ * @method void setDataEngineId(string $DataEngineId) 设置<p>计算资源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOperateUin() 获取执行sql的子uin
+ * @method string getOperateUin() 获取<p>执行sql的子uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperateUin(string $OperateUin) 设置执行sql的子uin
+ * @method void setOperateUin(string $OperateUin) 设置<p>执行sql的子uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDataEngineName() 获取计算资源名字
+ * @method string getDataEngineName() 获取<p>计算资源名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataEngineName(string $DataEngineName) 设置计算资源名字
+ * @method void setDataEngineName(string $DataEngineName) 设置<p>计算资源名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInputType() 获取导入类型是本地导入还是cos
+ * @method string getInputType() 获取<p>导入类型是本地导入还是cos</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInputType(string $InputType) 设置导入类型是本地导入还是cos
+ * @method void setInputType(string $InputType) 设置<p>导入类型是本地导入还是cos</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInputConf() 获取导入配置
+ * @method string getInputConf() 获取<p>导入配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInputConf(string $InputConf) 设置导入配置
+ * @method void setInputConf(string $InputConf) 设置<p>导入配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDataNumber() 获取数据条数
+ * @method integer getDataNumber() 获取<p>数据条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataNumber(integer $DataNumber) 设置数据条数
+ * @method void setDataNumber(integer $DataNumber) 设置<p>数据条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getCanDownload() 获取查询数据能不能下载
+ * @method boolean getCanDownload() 获取<p>查询数据能不能下载</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCanDownload(boolean $CanDownload) 设置查询数据能不能下载
+ * @method void setCanDownload(boolean $CanDownload) 设置<p>查询数据能不能下载</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUserAlias() 获取用户别名
+ * @method string getUserAlias() 获取<p>用户别名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserAlias(string $UserAlias) 设置用户别名
+ * @method void setUserAlias(string $UserAlias) 设置<p>用户别名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSparkJobName() 获取spark应用作业名
+ * @method string getSparkJobName() 获取<p>spark应用作业名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSparkJobName(string $SparkJobName) 设置spark应用作业名
+ * @method void setSparkJobName(string $SparkJobName) 设置<p>spark应用作业名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSparkJobId() 获取spark应用作业Id
+ * @method string getSparkJobId() 获取<p>spark应用作业Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSparkJobId(string $SparkJobId) 设置spark应用作业Id
+ * @method void setSparkJobId(string $SparkJobId) 设置<p>spark应用作业Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSparkJobFile() 获取spark应用入口jar文件
+ * @method string getSparkJobFile() 获取<p>spark应用入口jar文件</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSparkJobFile(string $SparkJobFile) 设置spark应用入口jar文件
+ * @method void setSparkJobFile(string $SparkJobFile) 设置<p>spark应用入口jar文件</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUiUrl() 获取spark ui url
+ * @method string getUiUrl() 获取<p>spark ui url</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUiUrl(string $UiUrl) 设置spark ui url
+ * @method void setUiUrl(string $UiUrl) 设置<p>spark ui url</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalTime() 获取任务耗时，单位： ms
+ * @method integer getTotalTime() 获取<p>任务耗时，单位： ms</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalTime(integer $TotalTime) 设置任务耗时，单位： ms
+ * @method void setTotalTime(integer $TotalTime) 设置<p>任务耗时，单位： ms</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCmdArgs() 获取spark app job执行task的程序入口参数
+ * @method string getCmdArgs() 获取<p>spark app job执行task的程序入口参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCmdArgs(string $CmdArgs) 设置spark app job执行task的程序入口参数
+ * @method void setCmdArgs(string $CmdArgs) 设置<p>spark app job执行task的程序入口参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getImageVersion() 获取集群镜像大版本名称
+ * @method string getImageVersion() 获取<p>集群镜像大版本名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImageVersion(string $ImageVersion) 设置集群镜像大版本名称
+ * @method void setImageVersion(string $ImageVersion) 设置<p>集群镜像大版本名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDriverSize() 获取driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
+ * @method string getDriverSize() 获取<p>driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDriverSize(string $DriverSize) 设置driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
+ * @method void setDriverSize(string $DriverSize) 设置<p>driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExecutorSize() 获取executor规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
+ * @method string getExecutorSize() 获取<p>executor规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecutorSize(string $ExecutorSize) 设置executor规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
+ * @method void setExecutorSize(string $ExecutorSize) 设置<p>executor规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getExecutorNums() 获取指定executor数量，最小值为1，最大值小于集群规格
+ * @method integer getExecutorNums() 获取<p>指定executor数量，最小值为1，最大值小于集群规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecutorNums(integer $ExecutorNums) 设置指定executor数量，最小值为1，最大值小于集群规格
+ * @method void setExecutorNums(integer $ExecutorNums) 设置<p>指定executor数量，最小值为1，最大值小于集群规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getExecutorMaxNumbers() 获取指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）
+ * @method integer getExecutorMaxNumbers() 获取<p>指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecutorMaxNumbers(integer $ExecutorMaxNumbers) 设置指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）
+ * @method void setExecutorMaxNumbers(integer $ExecutorMaxNumbers) 设置<p>指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CommonMetrics getCommonMetrics() 获取任务公共指标数据
+ * @method CommonMetrics getCommonMetrics() 获取<p>任务公共指标数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCommonMetrics(CommonMetrics $CommonMetrics) 设置任务公共指标数据
+ * @method void setCommonMetrics(CommonMetrics $CommonMetrics) 设置<p>任务公共指标数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method SparkMonitorMetrics getSparkMonitorMetrics() 获取spark任务指标数据
+ * @method SparkMonitorMetrics getSparkMonitorMetrics() 获取<p>spark任务指标数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSparkMonitorMetrics(SparkMonitorMetrics $SparkMonitorMetrics) 设置spark任务指标数据
+ * @method void setSparkMonitorMetrics(SparkMonitorMetrics $SparkMonitorMetrics) 设置<p>spark任务指标数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method PrestoMonitorMetrics getPrestoMonitorMetrics() 获取presto任务指标数据
+ * @method PrestoMonitorMetrics getPrestoMonitorMetrics() 获取<p>presto任务指标数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPrestoMonitorMetrics(PrestoMonitorMetrics $PrestoMonitorMetrics) 设置presto任务指标数据
+ * @method void setPrestoMonitorMetrics(PrestoMonitorMetrics $PrestoMonitorMetrics) 设置<p>presto任务指标数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResultFormat() 获取结果文件格式：默认为csv
+ * @method string getResultFormat() 获取<p>结果文件格式：默认为csv</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResultFormat(string $ResultFormat) 设置结果文件格式：默认为csv
+ * @method void setResultFormat(string $ResultFormat) 设置<p>结果文件格式：默认为csv</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEngineTypeDetail() 获取引擎类型，SparkSQL：SparkSQL 引擎；SparkBatch：Spark作业引擎；PrestoSQL：Presto引擎
+ * @method string getEngineTypeDetail() 获取<p>引擎类型，SparkSQL：SparkSQL 引擎；SparkBatch：Spark作业引擎；PrestoSQL：Presto引擎</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineTypeDetail(string $EngineTypeDetail) 设置引擎类型，SparkSQL：SparkSQL 引擎；SparkBatch：Spark作业引擎；PrestoSQL：Presto引擎
+ * @method void setEngineTypeDetail(string $EngineTypeDetail) 设置<p>引擎类型，SparkSQL：SparkSQL 引擎；SparkBatch：Spark作业引擎；PrestoSQL：Presto引擎</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResourceGroupName() 获取spark引擎资源组名称
+ * @method string getResourceGroupName() 获取<p>spark引擎资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceGroupName(string $ResourceGroupName) 设置spark引擎资源组名称
+ * @method void setResourceGroupName(string $ResourceGroupName) 设置<p>spark引擎资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSource() 获取任务来源信息,如thirdPartyApi,dataExploration, sparkAppTask等
- * @method void setSource(string $Source) 设置任务来源信息,如thirdPartyApi,dataExploration, sparkAppTask等
- * @method string getSourceExtra() 获取子渠道信息，一般由第三方调用定义
- * @method void setSourceExtra(string $SourceExtra) 设置子渠道信息，一般由第三方调用定义
- * @method string getCreatorUin() 获取创建人uin
- * @method void setCreatorUin(string $CreatorUin) 设置创建人uin
- * @method string getCreatorAlias() 获取创建人名字
- * @method void setCreatorAlias(string $CreatorAlias) 设置创建人名字
- * @method string getCustomizedConf() 获取引擎参数
- * @method void setCustomizedConf(string $CustomizedConf) 设置引擎参数
- * @method integer getTaskTimeSum() 获取单位秒，累计 CPU* 秒 ( 累计 CPU * 时 = 累计 CPU* 秒/ 3600)，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
-示例值：4329
- * @method void setTaskTimeSum(integer $TaskTimeSum) 设置单位秒，累计 CPU* 秒 ( 累计 CPU * 时 = 累计 CPU* 秒/ 3600)，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
-示例值：4329
- * @method integer getStageStartTime() 获取引擎执行时间
- * @method void setStageStartTime(integer $StageStartTime) 设置引擎执行时间
- * @method integer getInputRecordsSum() 获取数据扫描条数
- * @method void setInputRecordsSum(integer $InputRecordsSum) 设置数据扫描条数
- * @method integer getAnalysisStatusType() 获取健康状态
- * @method void setAnalysisStatusType(integer $AnalysisStatusType) 设置健康状态
- * @method integer getOutputRecordsSum() 获取输出总行数
- * @method void setOutputRecordsSum(integer $OutputRecordsSum) 设置输出总行数
- * @method integer getOutputBytesSum() 获取输出总大小
- * @method void setOutputBytesSum(integer $OutputBytesSum) 设置输出总大小
- * @method integer getOutputFilesNum() 获取输出文件个数
- * @method void setOutputFilesNum(integer $OutputFilesNum) 设置输出文件个数
- * @method integer getOutputSmallFilesNum() 获取输出小文件个数
- * @method void setOutputSmallFilesNum(integer $OutputSmallFilesNum) 设置输出小文件个数
- * @method integer getShuffleReadRecordsSum() 获取数据shuffle行数
- * @method void setShuffleReadRecordsSum(integer $ShuffleReadRecordsSum) 设置数据shuffle行数
- * @method integer getShuffleReadBytesSum() 获取数据shuffle大小
- * @method void setShuffleReadBytesSum(integer $ShuffleReadBytesSum) 设置数据shuffle大小
- * @method string getSparkAppId() 获取spark作业id
- * @method void setSparkAppId(string $SparkAppId) 设置spark作业id
- * @method string getTaskCategory() 获取任务大类，DLC2.0中任务区分为两大类，sql任务和作业任务
- * @method void setTaskCategory(string $TaskCategory) 设置任务大类，DLC2.0中任务区分为两大类，sql任务和作业任务
- * @method string getTaskName() 获取任务名称
- * @method void setTaskName(string $TaskName) 设置任务名称
- * @method string getEngineType() 获取引擎类型，用做任务详情页跳转引擎tab
- * @method void setEngineType(string $EngineType) 设置引擎类型，用做任务详情页跳转引擎tab
- * @method boolean getEngineHasListenerConfig() 获取引擎是否支持洞察数据采集
- * @method void setEngineHasListenerConfig(boolean $EngineHasListenerConfig) 设置引擎是否支持洞察数据采集
- * @method string getResourceGroupId() 获取spark引擎资源组id
- * @method void setResourceGroupId(string $ResourceGroupId) 设置spark引擎资源组id
- * @method integer getJobTimeSum() 获取任务计算耗时
- * @method void setJobTimeSum(integer $JobTimeSum) 设置任务计算耗时
- * @method string getLaunchTime() 获取任务启动耗时
- * @method void setLaunchTime(string $LaunchTime) 设置任务启动耗时
- * @method integer getGpuDriverSize() 获取Gpu Driver 规格
- * @method void setGpuDriverSize(integer $GpuDriverSize) 设置Gpu Driver 规格
- * @method integer getGpuExecutorSize() 获取Gpu Executor 规格
- * @method void setGpuExecutorSize(integer $GpuExecutorSize) 设置Gpu Executor 规格
+ * @method string getSource() 获取<p>任务来源信息,如thirdPartyApi,dataExploration, sparkAppTask等</p>
+ * @method void setSource(string $Source) 设置<p>任务来源信息,如thirdPartyApi,dataExploration, sparkAppTask等</p>
+ * @method string getSourceExtra() 获取<p>子渠道信息，一般由第三方调用定义</p>
+ * @method void setSourceExtra(string $SourceExtra) 设置<p>子渠道信息，一般由第三方调用定义</p>
+ * @method string getCreatorUin() 获取<p>创建人uin</p>
+ * @method void setCreatorUin(string $CreatorUin) 设置<p>创建人uin</p>
+ * @method string getCreatorAlias() 获取<p>创建人名字</p>
+ * @method void setCreatorAlias(string $CreatorAlias) 设置<p>创建人名字</p>
+ * @method string getCustomizedConf() 获取<p>引擎参数</p>
+ * @method void setCustomizedConf(string $CustomizedConf) 设置<p>引擎参数</p>
+ * @method integer getTaskTimeSum() 获取<p>单位秒，累计 CPU* 秒 ( 累计 CPU * 时 = 累计 CPU* 秒/ 3600)，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和<br>示例值：4329</p>
+ * @method void setTaskTimeSum(integer $TaskTimeSum) 设置<p>单位秒，累计 CPU* 秒 ( 累计 CPU * 时 = 累计 CPU* 秒/ 3600)，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和<br>示例值：4329</p>
+ * @method integer getStageStartTime() 获取<p>引擎执行时间</p>
+ * @method void setStageStartTime(integer $StageStartTime) 设置<p>引擎执行时间</p>
+ * @method integer getInputRecordsSum() 获取<p>数据扫描条数</p>
+ * @method void setInputRecordsSum(integer $InputRecordsSum) 设置<p>数据扫描条数</p>
+ * @method integer getAnalysisStatusType() 获取<p>健康状态</p>
+ * @method void setAnalysisStatusType(integer $AnalysisStatusType) 设置<p>健康状态</p>
+ * @method integer getOutputRecordsSum() 获取<p>输出总行数</p>
+ * @method void setOutputRecordsSum(integer $OutputRecordsSum) 设置<p>输出总行数</p>
+ * @method integer getOutputBytesSum() 获取<p>输出总大小</p>
+ * @method void setOutputBytesSum(integer $OutputBytesSum) 设置<p>输出总大小</p>
+ * @method integer getOutputFilesNum() 获取<p>输出文件个数</p>
+ * @method void setOutputFilesNum(integer $OutputFilesNum) 设置<p>输出文件个数</p>
+ * @method integer getOutputSmallFilesNum() 获取<p>输出小文件个数</p>
+ * @method void setOutputSmallFilesNum(integer $OutputSmallFilesNum) 设置<p>输出小文件个数</p>
+ * @method integer getShuffleReadRecordsSum() 获取<p>数据shuffle行数</p>
+ * @method void setShuffleReadRecordsSum(integer $ShuffleReadRecordsSum) 设置<p>数据shuffle行数</p>
+ * @method integer getShuffleReadBytesSum() 获取<p>数据shuffle大小</p>
+ * @method void setShuffleReadBytesSum(integer $ShuffleReadBytesSum) 设置<p>数据shuffle大小</p>
+ * @method string getSparkAppId() 获取<p>spark作业id</p>
+ * @method void setSparkAppId(string $SparkAppId) 设置<p>spark作业id</p>
+ * @method string getTaskCategory() 获取<p>任务大类，DLC2.0中任务区分为两大类，sql任务和作业任务</p>
+ * @method void setTaskCategory(string $TaskCategory) 设置<p>任务大类，DLC2.0中任务区分为两大类，sql任务和作业任务</p>
+ * @method string getTaskName() 获取<p>任务名称</p>
+ * @method void setTaskName(string $TaskName) 设置<p>任务名称</p>
+ * @method string getEngineType() 获取<p>引擎类型，用做任务详情页跳转引擎tab</p>
+ * @method void setEngineType(string $EngineType) 设置<p>引擎类型，用做任务详情页跳转引擎tab</p>
+ * @method boolean getEngineHasListenerConfig() 获取<p>引擎是否支持洞察数据采集</p>
+ * @method void setEngineHasListenerConfig(boolean $EngineHasListenerConfig) 设置<p>引擎是否支持洞察数据采集</p>
+ * @method string getResourceGroupId() 获取<p>spark引擎资源组id</p>
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置<p>spark引擎资源组id</p>
+ * @method integer getJobTimeSum() 获取<p>任务计算耗时</p>
+ * @method void setJobTimeSum(integer $JobTimeSum) 设置<p>任务计算耗时</p>
+ * @method string getLaunchTime() 获取<p>任务启动耗时</p>
+ * @method void setLaunchTime(string $LaunchTime) 设置<p>任务启动耗时</p>
+ * @method integer getGpuDriverSize() 获取<p>Gpu Driver 规格</p>
+ * @method void setGpuDriverSize(integer $GpuDriverSize) 设置<p>Gpu Driver 规格</p>
+ * @method integer getGpuExecutorSize() 获取<p>Gpu Executor 规格</p>
+ * @method void setGpuExecutorSize(integer $GpuExecutorSize) 设置<p>Gpu Executor 规格</p>
+ * @method integer getShuffleWriteBytesSum() 获取<p>ShuffleWrite数据量</p>
+ * @method void setShuffleWriteBytesSum(integer $ShuffleWriteBytesSum) 设置<p>ShuffleWrite数据量</p>
+ * @method integer getActiveCore() 获取<p>活跃core</p>
+ * @method void setActiveCore(integer $ActiveCore) 设置<p>活跃core</p>
  */
 class TaskFullRespInfo extends AbstractModel
 {
     /**
-     * @var string 任务所属Database的名称。
+     * @var string <p>任务所属Database的名称。</p>
      */
     public $DatabaseName;
 
     /**
-     * @var integer 任务数据量。
+     * @var integer <p>任务数据量。</p>
      */
     public $DataAmount;
 
     /**
-     * @var string 任务Id。
+     * @var string <p>任务Id。</p>
      */
     public $Id;
 
     /**
-     * @var integer 计算耗时，单位： ms
+     * @var integer <p>计算耗时，单位： ms</p>
      */
     public $UsedTime;
 
     /**
-     * @var string 任务输出路径。
+     * @var string <p>任务输出路径。</p>
      */
     public $OutputPath;
 
     /**
-     * @var string 任务创建时间。
+     * @var string <p>任务创建时间。</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer 任务状态：0 初始化， 1 执行中， 2 执行成功，3 数据写入中，4 排队中。-1 执行失败，-3 已取消。
+     * @var integer <p>任务状态：0 初始化， 1 执行中， 2 执行成功，3 数据写入中，4 排队中。-1 执行失败，-3 已取消。</p>
      */
     public $State;
 
     /**
-     * @var string 任务SQL类型，DDL|DML等
+     * @var string <p>任务SQL类型，DDL|DML等</p>
      */
     public $SQLType;
 
     /**
-     * @var string 任务SQL语句
+     * @var string <p>任务SQL语句</p>
      */
     public $SQL;
 
     /**
-     * @var boolean 结果是否过期。
+     * @var boolean <p>结果是否过期。</p>
      */
     public $ResultExpired;
 
     /**
-     * @var string 数据影响统计信息。
+     * @var string <p>数据影响统计信息。</p>
      */
     public $RowAffectInfo;
 
     /**
-     * @var string 任务结果数据表。
+     * @var string <p>任务结果数据表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSet;
 
     /**
-     * @var string 失败信息, 例如：errorMessage。该字段已废弃。
+     * @var string <p>失败信息, 例如：errorMessage。该字段已废弃。</p>
      */
     public $Error;
 
     /**
-     * @var integer 任务执行进度num/100(%)
+     * @var integer <p>任务执行进度num/100(%)</p>
      */
     public $Percentage;
 
     /**
-     * @var string 任务执行输出信息。
+     * @var string <p>任务执行输出信息。</p>
      */
     public $OutputMessage;
 
     /**
-     * @var string 执行SQL的引擎类型
+     * @var string <p>执行SQL的引擎类型</p>
      */
     public $TaskType;
 
     /**
-     * @var string 任务进度明细
+     * @var string <p>任务进度明细</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProgressDetail;
 
     /**
-     * @var string 任务结束时间
+     * @var string <p>任务结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
-     * @var string 计算资源id
+     * @var string <p>计算资源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataEngineId;
 
     /**
-     * @var string 执行sql的子uin
+     * @var string <p>执行sql的子uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperateUin;
 
     /**
-     * @var string 计算资源名字
+     * @var string <p>计算资源名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataEngineName;
 
     /**
-     * @var string 导入类型是本地导入还是cos
+     * @var string <p>导入类型是本地导入还是cos</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputType;
 
     /**
-     * @var string 导入配置
+     * @var string <p>导入配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputConf;
 
     /**
-     * @var integer 数据条数
+     * @var integer <p>数据条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataNumber;
 
     /**
-     * @var boolean 查询数据能不能下载
+     * @var boolean <p>查询数据能不能下载</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CanDownload;
 
     /**
-     * @var string 用户别名
+     * @var string <p>用户别名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserAlias;
 
     /**
-     * @var string spark应用作业名
+     * @var string <p>spark应用作业名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SparkJobName;
 
     /**
-     * @var string spark应用作业Id
+     * @var string <p>spark应用作业Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SparkJobId;
 
     /**
-     * @var string spark应用入口jar文件
+     * @var string <p>spark应用入口jar文件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SparkJobFile;
 
     /**
-     * @var string spark ui url
+     * @var string <p>spark ui url</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UiUrl;
 
     /**
-     * @var integer 任务耗时，单位： ms
+     * @var integer <p>任务耗时，单位： ms</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalTime;
 
     /**
-     * @var string spark app job执行task的程序入口参数
+     * @var string <p>spark app job执行task的程序入口参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CmdArgs;
 
     /**
-     * @var string 集群镜像大版本名称
+     * @var string <p>集群镜像大版本名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageVersion;
 
     /**
-     * @var string driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
+     * @var string <p>driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DriverSize;
 
     /**
-     * @var string executor规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
+     * @var string <p>executor规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutorSize;
 
     /**
-     * @var integer 指定executor数量，最小值为1，最大值小于集群规格
+     * @var integer <p>指定executor数量，最小值为1，最大值小于集群规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutorNums;
 
     /**
-     * @var integer 指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）
+     * @var integer <p>指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutorMaxNumbers;
 
     /**
-     * @var CommonMetrics 任务公共指标数据
+     * @var CommonMetrics <p>任务公共指标数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CommonMetrics;
 
     /**
-     * @var SparkMonitorMetrics spark任务指标数据
+     * @var SparkMonitorMetrics <p>spark任务指标数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SparkMonitorMetrics;
 
     /**
-     * @var PrestoMonitorMetrics presto任务指标数据
+     * @var PrestoMonitorMetrics <p>presto任务指标数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrestoMonitorMetrics;
 
     /**
-     * @var string 结果文件格式：默认为csv
+     * @var string <p>结果文件格式：默认为csv</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResultFormat;
 
     /**
-     * @var string 引擎类型，SparkSQL：SparkSQL 引擎；SparkBatch：Spark作业引擎；PrestoSQL：Presto引擎
+     * @var string <p>引擎类型，SparkSQL：SparkSQL 引擎；SparkBatch：Spark作业引擎；PrestoSQL：Presto引擎</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineTypeDetail;
 
     /**
-     * @var string spark引擎资源组名称
+     * @var string <p>spark引擎资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupName;
 
     /**
-     * @var string 任务来源信息,如thirdPartyApi,dataExploration, sparkAppTask等
+     * @var string <p>任务来源信息,如thirdPartyApi,dataExploration, sparkAppTask等</p>
      */
     public $Source;
 
     /**
-     * @var string 子渠道信息，一般由第三方调用定义
+     * @var string <p>子渠道信息，一般由第三方调用定义</p>
      */
     public $SourceExtra;
 
     /**
-     * @var string 创建人uin
+     * @var string <p>创建人uin</p>
      */
     public $CreatorUin;
 
     /**
-     * @var string 创建人名字
+     * @var string <p>创建人名字</p>
      */
     public $CreatorAlias;
 
     /**
-     * @var string 引擎参数
+     * @var string <p>引擎参数</p>
      */
     public $CustomizedConf;
 
     /**
-     * @var integer 单位秒，累计 CPU* 秒 ( 累计 CPU * 时 = 累计 CPU* 秒/ 3600)，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
-示例值：4329
+     * @var integer <p>单位秒，累计 CPU* 秒 ( 累计 CPU * 时 = 累计 CPU* 秒/ 3600)，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和<br>示例值：4329</p>
      */
     public $TaskTimeSum;
 
     /**
-     * @var integer 引擎执行时间
+     * @var integer <p>引擎执行时间</p>
      */
     public $StageStartTime;
 
     /**
-     * @var integer 数据扫描条数
+     * @var integer <p>数据扫描条数</p>
      */
     public $InputRecordsSum;
 
     /**
-     * @var integer 健康状态
+     * @var integer <p>健康状态</p>
      */
     public $AnalysisStatusType;
 
     /**
-     * @var integer 输出总行数
+     * @var integer <p>输出总行数</p>
      */
     public $OutputRecordsSum;
 
     /**
-     * @var integer 输出总大小
+     * @var integer <p>输出总大小</p>
      */
     public $OutputBytesSum;
 
     /**
-     * @var integer 输出文件个数
+     * @var integer <p>输出文件个数</p>
      */
     public $OutputFilesNum;
 
     /**
-     * @var integer 输出小文件个数
+     * @var integer <p>输出小文件个数</p>
      */
     public $OutputSmallFilesNum;
 
     /**
-     * @var integer 数据shuffle行数
+     * @var integer <p>数据shuffle行数</p>
      */
     public $ShuffleReadRecordsSum;
 
     /**
-     * @var integer 数据shuffle大小
+     * @var integer <p>数据shuffle大小</p>
      */
     public $ShuffleReadBytesSum;
 
     /**
-     * @var string spark作业id
+     * @var string <p>spark作业id</p>
      */
     public $SparkAppId;
 
     /**
-     * @var string 任务大类，DLC2.0中任务区分为两大类，sql任务和作业任务
+     * @var string <p>任务大类，DLC2.0中任务区分为两大类，sql任务和作业任务</p>
      */
     public $TaskCategory;
 
     /**
-     * @var string 任务名称
+     * @var string <p>任务名称</p>
      */
     public $TaskName;
 
     /**
-     * @var string 引擎类型，用做任务详情页跳转引擎tab
+     * @var string <p>引擎类型，用做任务详情页跳转引擎tab</p>
      */
     public $EngineType;
 
     /**
-     * @var boolean 引擎是否支持洞察数据采集
+     * @var boolean <p>引擎是否支持洞察数据采集</p>
      */
     public $EngineHasListenerConfig;
 
     /**
-     * @var string spark引擎资源组id
+     * @var string <p>spark引擎资源组id</p>
      */
     public $ResourceGroupId;
 
     /**
-     * @var integer 任务计算耗时
+     * @var integer <p>任务计算耗时</p>
      */
     public $JobTimeSum;
 
     /**
-     * @var string 任务启动耗时
+     * @var string <p>任务启动耗时</p>
      */
     public $LaunchTime;
 
     /**
-     * @var integer Gpu Driver 规格
+     * @var integer <p>Gpu Driver 规格</p>
      */
     public $GpuDriverSize;
 
     /**
-     * @var integer Gpu Executor 规格
+     * @var integer <p>Gpu Executor 规格</p>
      */
     public $GpuExecutorSize;
 
     /**
-     * @param string $DatabaseName 任务所属Database的名称。
-     * @param integer $DataAmount 任务数据量。
-     * @param string $Id 任务Id。
-     * @param integer $UsedTime 计算耗时，单位： ms
-     * @param string $OutputPath 任务输出路径。
-     * @param string $CreateTime 任务创建时间。
-     * @param integer $State 任务状态：0 初始化， 1 执行中， 2 执行成功，3 数据写入中，4 排队中。-1 执行失败，-3 已取消。
-     * @param string $SQLType 任务SQL类型，DDL|DML等
-     * @param string $SQL 任务SQL语句
-     * @param boolean $ResultExpired 结果是否过期。
-     * @param string $RowAffectInfo 数据影响统计信息。
-     * @param string $DataSet 任务结果数据表。
+     * @var integer <p>ShuffleWrite数据量</p>
+     */
+    public $ShuffleWriteBytesSum;
+
+    /**
+     * @var integer <p>活跃core</p>
+     */
+    public $ActiveCore;
+
+    /**
+     * @param string $DatabaseName <p>任务所属Database的名称。</p>
+     * @param integer $DataAmount <p>任务数据量。</p>
+     * @param string $Id <p>任务Id。</p>
+     * @param integer $UsedTime <p>计算耗时，单位： ms</p>
+     * @param string $OutputPath <p>任务输出路径。</p>
+     * @param string $CreateTime <p>任务创建时间。</p>
+     * @param integer $State <p>任务状态：0 初始化， 1 执行中， 2 执行成功，3 数据写入中，4 排队中。-1 执行失败，-3 已取消。</p>
+     * @param string $SQLType <p>任务SQL类型，DDL|DML等</p>
+     * @param string $SQL <p>任务SQL语句</p>
+     * @param boolean $ResultExpired <p>结果是否过期。</p>
+     * @param string $RowAffectInfo <p>数据影响统计信息。</p>
+     * @param string $DataSet <p>任务结果数据表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Error 失败信息, 例如：errorMessage。该字段已废弃。
-     * @param integer $Percentage 任务执行进度num/100(%)
-     * @param string $OutputMessage 任务执行输出信息。
-     * @param string $TaskType 执行SQL的引擎类型
-     * @param string $ProgressDetail 任务进度明细
+     * @param string $Error <p>失败信息, 例如：errorMessage。该字段已废弃。</p>
+     * @param integer $Percentage <p>任务执行进度num/100(%)</p>
+     * @param string $OutputMessage <p>任务执行输出信息。</p>
+     * @param string $TaskType <p>执行SQL的引擎类型</p>
+     * @param string $ProgressDetail <p>任务进度明细</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime 任务结束时间
+     * @param string $UpdateTime <p>任务结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DataEngineId 计算资源id
+     * @param string $DataEngineId <p>计算资源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OperateUin 执行sql的子uin
+     * @param string $OperateUin <p>执行sql的子uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DataEngineName 计算资源名字
+     * @param string $DataEngineName <p>计算资源名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InputType 导入类型是本地导入还是cos
+     * @param string $InputType <p>导入类型是本地导入还是cos</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InputConf 导入配置
+     * @param string $InputConf <p>导入配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DataNumber 数据条数
+     * @param integer $DataNumber <p>数据条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $CanDownload 查询数据能不能下载
+     * @param boolean $CanDownload <p>查询数据能不能下载</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UserAlias 用户别名
+     * @param string $UserAlias <p>用户别名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SparkJobName spark应用作业名
+     * @param string $SparkJobName <p>spark应用作业名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SparkJobId spark应用作业Id
+     * @param string $SparkJobId <p>spark应用作业Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SparkJobFile spark应用入口jar文件
+     * @param string $SparkJobFile <p>spark应用入口jar文件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UiUrl spark ui url
+     * @param string $UiUrl <p>spark ui url</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalTime 任务耗时，单位： ms
+     * @param integer $TotalTime <p>任务耗时，单位： ms</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CmdArgs spark app job执行task的程序入口参数
+     * @param string $CmdArgs <p>spark app job执行task的程序入口参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ImageVersion 集群镜像大版本名称
+     * @param string $ImageVersion <p>集群镜像大版本名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DriverSize driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
+     * @param string $DriverSize <p>driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExecutorSize executor规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
+     * @param string $ExecutorSize <p>executor规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ExecutorNums 指定executor数量，最小值为1，最大值小于集群规格
+     * @param integer $ExecutorNums <p>指定executor数量，最小值为1，最大值小于集群规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ExecutorMaxNumbers 指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）
+     * @param integer $ExecutorMaxNumbers <p>指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CommonMetrics $CommonMetrics 任务公共指标数据
+     * @param CommonMetrics $CommonMetrics <p>任务公共指标数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SparkMonitorMetrics $SparkMonitorMetrics spark任务指标数据
+     * @param SparkMonitorMetrics $SparkMonitorMetrics <p>spark任务指标数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PrestoMonitorMetrics $PrestoMonitorMetrics presto任务指标数据
+     * @param PrestoMonitorMetrics $PrestoMonitorMetrics <p>presto任务指标数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResultFormat 结果文件格式：默认为csv
+     * @param string $ResultFormat <p>结果文件格式：默认为csv</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EngineTypeDetail 引擎类型，SparkSQL：SparkSQL 引擎；SparkBatch：Spark作业引擎；PrestoSQL：Presto引擎
+     * @param string $EngineTypeDetail <p>引擎类型，SparkSQL：SparkSQL 引擎；SparkBatch：Spark作业引擎；PrestoSQL：Presto引擎</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResourceGroupName spark引擎资源组名称
+     * @param string $ResourceGroupName <p>spark引擎资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Source 任务来源信息,如thirdPartyApi,dataExploration, sparkAppTask等
-     * @param string $SourceExtra 子渠道信息，一般由第三方调用定义
-     * @param string $CreatorUin 创建人uin
-     * @param string $CreatorAlias 创建人名字
-     * @param string $CustomizedConf 引擎参数
-     * @param integer $TaskTimeSum 单位秒，累计 CPU* 秒 ( 累计 CPU * 时 = 累计 CPU* 秒/ 3600)，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
-示例值：4329
-     * @param integer $StageStartTime 引擎执行时间
-     * @param integer $InputRecordsSum 数据扫描条数
-     * @param integer $AnalysisStatusType 健康状态
-     * @param integer $OutputRecordsSum 输出总行数
-     * @param integer $OutputBytesSum 输出总大小
-     * @param integer $OutputFilesNum 输出文件个数
-     * @param integer $OutputSmallFilesNum 输出小文件个数
-     * @param integer $ShuffleReadRecordsSum 数据shuffle行数
-     * @param integer $ShuffleReadBytesSum 数据shuffle大小
-     * @param string $SparkAppId spark作业id
-     * @param string $TaskCategory 任务大类，DLC2.0中任务区分为两大类，sql任务和作业任务
-     * @param string $TaskName 任务名称
-     * @param string $EngineType 引擎类型，用做任务详情页跳转引擎tab
-     * @param boolean $EngineHasListenerConfig 引擎是否支持洞察数据采集
-     * @param string $ResourceGroupId spark引擎资源组id
-     * @param integer $JobTimeSum 任务计算耗时
-     * @param string $LaunchTime 任务启动耗时
-     * @param integer $GpuDriverSize Gpu Driver 规格
-     * @param integer $GpuExecutorSize Gpu Executor 规格
+     * @param string $Source <p>任务来源信息,如thirdPartyApi,dataExploration, sparkAppTask等</p>
+     * @param string $SourceExtra <p>子渠道信息，一般由第三方调用定义</p>
+     * @param string $CreatorUin <p>创建人uin</p>
+     * @param string $CreatorAlias <p>创建人名字</p>
+     * @param string $CustomizedConf <p>引擎参数</p>
+     * @param integer $TaskTimeSum <p>单位秒，累计 CPU* 秒 ( 累计 CPU * 时 = 累计 CPU* 秒/ 3600)，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和<br>示例值：4329</p>
+     * @param integer $StageStartTime <p>引擎执行时间</p>
+     * @param integer $InputRecordsSum <p>数据扫描条数</p>
+     * @param integer $AnalysisStatusType <p>健康状态</p>
+     * @param integer $OutputRecordsSum <p>输出总行数</p>
+     * @param integer $OutputBytesSum <p>输出总大小</p>
+     * @param integer $OutputFilesNum <p>输出文件个数</p>
+     * @param integer $OutputSmallFilesNum <p>输出小文件个数</p>
+     * @param integer $ShuffleReadRecordsSum <p>数据shuffle行数</p>
+     * @param integer $ShuffleReadBytesSum <p>数据shuffle大小</p>
+     * @param string $SparkAppId <p>spark作业id</p>
+     * @param string $TaskCategory <p>任务大类，DLC2.0中任务区分为两大类，sql任务和作业任务</p>
+     * @param string $TaskName <p>任务名称</p>
+     * @param string $EngineType <p>引擎类型，用做任务详情页跳转引擎tab</p>
+     * @param boolean $EngineHasListenerConfig <p>引擎是否支持洞察数据采集</p>
+     * @param string $ResourceGroupId <p>spark引擎资源组id</p>
+     * @param integer $JobTimeSum <p>任务计算耗时</p>
+     * @param string $LaunchTime <p>任务启动耗时</p>
+     * @param integer $GpuDriverSize <p>Gpu Driver 规格</p>
+     * @param integer $GpuExecutorSize <p>Gpu Executor 规格</p>
+     * @param integer $ShuffleWriteBytesSum <p>ShuffleWrite数据量</p>
+     * @param integer $ActiveCore <p>活跃core</p>
      */
     function __construct()
     {
@@ -971,6 +983,14 @@ class TaskFullRespInfo extends AbstractModel
 
         if (array_key_exists("GpuExecutorSize",$param) and $param["GpuExecutorSize"] !== null) {
             $this->GpuExecutorSize = $param["GpuExecutorSize"];
+        }
+
+        if (array_key_exists("ShuffleWriteBytesSum",$param) and $param["ShuffleWriteBytesSum"] !== null) {
+            $this->ShuffleWriteBytesSum = $param["ShuffleWriteBytesSum"];
+        }
+
+        if (array_key_exists("ActiveCore",$param) and $param["ActiveCore"] !== null) {
+            $this->ActiveCore = $param["ActiveCore"];
         }
     }
 }

@@ -20,370 +20,362 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Notebook列表元素
  *
- * @method string getId() 获取notebook ID
- * @method void setId(string $Id) 设置notebook ID
- * @method string getName() 获取notebook 名称
- * @method void setName(string $Name) 设置notebook 名称
- * @method string getChargeType() 获取计费模式
- * @method void setChargeType(string $ChargeType) 设置计费模式
- * @method ResourceConf getResourceConf() 获取资源配置
- * @method void setResourceConf(ResourceConf $ResourceConf) 设置资源配置
- * @method string getResourceGroupId() 获取预付费资源组
+ * @method string getId() 获取<p>notebook ID</p>
+ * @method void setId(string $Id) 设置<p>notebook ID</p>
+ * @method string getName() 获取<p>notebook 名称</p>
+ * @method void setName(string $Name) 设置<p>notebook 名称</p>
+ * @method string getChargeType() 获取<p>计费模式</p>
+ * @method void setChargeType(string $ChargeType) 设置<p>计费模式</p>
+ * @method ResourceConf getResourceConf() 获取<p>资源配置</p>
+ * @method void setResourceConf(ResourceConf $ResourceConf) 设置<p>资源配置</p>
+ * @method string getResourceGroupId() 获取<p>预付费资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceGroupId(string $ResourceGroupId) 设置预付费资源组
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置<p>预付费资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getVolumeSizeInGB() 获取存储卷大小
+ * @method integer getVolumeSizeInGB() 获取<p>存储卷大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVolumeSizeInGB(integer $VolumeSizeInGB) 设置存储卷大小
+ * @method void setVolumeSizeInGB(integer $VolumeSizeInGB) 设置<p>存储卷大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getBillingInfos() 获取计费金额信息，eg：2.00元/小时 (for后付费)
+ * @method array getBillingInfos() 获取<p>计费金额信息，eg：2.00元/小时 (for后付费)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBillingInfos(array $BillingInfos) 设置计费金额信息，eg：2.00元/小时 (for后付费)
+ * @method void setBillingInfos(array $BillingInfos) 设置<p>计费金额信息，eg：2.00元/小时 (for后付费)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTags() 获取标签配置
+ * @method array getTags() 获取<p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTags(array $Tags) 设置标签配置
+ * @method void setTags(array $Tags) 设置<p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getStartTime() 获取启动时间
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getStartTime() 获取<p>启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartTime(string $StartTime) 设置启动时间
+ * @method void setStartTime(string $StartTime) 设置<p>启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
- * @method integer getRuntimeInSeconds() 获取运行时间
+ * @method string getUpdateTime() 获取<p>更新时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
+ * @method integer getRuntimeInSeconds() 获取<p>运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuntimeInSeconds(integer $RuntimeInSeconds) 设置运行时间
+ * @method void setRuntimeInSeconds(integer $RuntimeInSeconds) 设置<p>运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getChargeStatus() 获取计费状态
+ * @method string getChargeStatus() 获取<p>计费状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setChargeStatus(string $ChargeStatus) 设置计费状态
+ * @method void setChargeStatus(string $ChargeStatus) 设置<p>计费状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取状态
- * @method void setStatus(string $Status) 设置状态
- * @method string getFailureReason() 获取错误原因
+ * @method string getStatus() 获取<p>状态</p>
+ * @method void setStatus(string $Status) 设置<p>状态</p>
+ * @method string getFailureReason() 获取<p>错误原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFailureReason(string $FailureReason) 设置错误原因
+ * @method void setFailureReason(string $FailureReason) 设置<p>错误原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEndTime() 获取结束时间
+ * @method string getEndTime() 获取<p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method void setEndTime(string $EndTime) 设置<p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPodName() 获取Pod名称
+ * @method string getPodName() 获取<p>Pod名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPodName(string $PodName) 设置Pod名称
+ * @method void setPodName(string $PodName) 设置<p>Pod名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceTypeAlias() 获取后付费资源规格名称
+ * @method string getInstanceTypeAlias() 获取<p>后付费资源规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceTypeAlias(string $InstanceTypeAlias) 设置后付费资源规格名称
+ * @method void setInstanceTypeAlias(string $InstanceTypeAlias) 设置<p>后付费资源规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResourceGroupName() 获取预付费资源组名称
+ * @method string getResourceGroupName() 获取<p>预付费资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceGroupName(string $ResourceGroupName) 设置预付费资源组名称
+ * @method void setResourceGroupName(string $ResourceGroupName) 设置<p>预付费资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getAutoStopping() 获取是否自动终止
- * @method void setAutoStopping(boolean $AutoStopping) 设置是否自动终止
- * @method integer getAutomaticStopTime() 获取自动停止时间
+ * @method boolean getAutoStopping() 获取<p>是否自动终止</p>
+ * @method void setAutoStopping(boolean $AutoStopping) 设置<p>是否自动终止</p>
+ * @method integer getAutomaticStopTime() 获取<p>自动停止时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAutomaticStopTime(integer $AutomaticStopTime) 设置自动停止时间
+ * @method void setAutomaticStopTime(integer $AutomaticStopTime) 设置<p>自动停止时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVolumeSourceType() 获取存储的类型。取值包含： 
-    FREE:        预付费的免费存储
-    CLOUD_PREMIUM： 高性能云硬盘
-    CLOUD_SSD： SSD云硬盘
-    CFS:     CFS存储，包含NFS和turbo
+ * @method string getVolumeSourceType() 获取<p>存储的类型。取值包含：<br>    FREE:        预付费的免费存储<br>    CLOUD_PREMIUM： 高性能云硬盘<br>    CLOUD_SSD： SSD云硬盘<br>    CFS:     CFS存储，包含NFS和turbo</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVolumeSourceType(string $VolumeSourceType) 设置存储的类型。取值包含： 
-    FREE:        预付费的免费存储
-    CLOUD_PREMIUM： 高性能云硬盘
-    CLOUD_SSD： SSD云硬盘
-    CFS:     CFS存储，包含NFS和turbo
+ * @method void setVolumeSourceType(string $VolumeSourceType) 设置<p>存储的类型。取值包含：<br>    FREE:        预付费的免费存储<br>    CLOUD_PREMIUM： 高性能云硬盘<br>    CLOUD_SSD： SSD云硬盘<br>    CFS:     CFS存储，包含NFS和turbo</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CFSConfig getVolumeSourceCFS() 获取CFS存储的配置
+ * @method CFSConfig getVolumeSourceCFS() 获取<p>CFS存储的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVolumeSourceCFS(CFSConfig $VolumeSourceCFS) 设置CFS存储的配置
+ * @method void setVolumeSourceCFS(CFSConfig $VolumeSourceCFS) 设置<p>CFS存储的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMessage() 获取notebook 信息
+ * @method string getMessage() 获取<p>notebook 信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMessage(string $Message) 设置notebook 信息
+ * @method void setMessage(string $Message) 设置<p>notebook 信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getUserTypes() 获取notebook用户类型
+ * @method array getUserTypes() 获取<p>notebook用户类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserTypes(array $UserTypes) 设置notebook用户类型
+ * @method void setUserTypes(array $UserTypes) 设置<p>notebook用户类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method SSHConfig getSSHConfig() 获取SSH配置
+ * @method SSHConfig getSSHConfig() 获取<p>SSH配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSSHConfig(SSHConfig $SSHConfig) 设置SSH配置
+ * @method void setSSHConfig(SSHConfig $SSHConfig) 设置<p>SSH配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method GooseFS getVolumeSourceGooseFS() 获取GooseFS存储配置
+ * @method GooseFS getVolumeSourceGooseFS() 获取<p>GooseFS存储配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVolumeSourceGooseFS(GooseFS $VolumeSourceGooseFS) 设置GooseFS存储配置
+ * @method void setVolumeSourceGooseFS(GooseFS $VolumeSourceGooseFS) 设置<p>GooseFS存储配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSubUin() 获取子用户ID
+ * @method string getSubUin() 获取<p>子用户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubUin(string $SubUin) 设置子用户ID
+ * @method void setSubUin(string $SubUin) 设置<p>子用户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSubUinName() 获取子用户名称
- * @method void setSubUinName(string $SubUinName) 设置子用户名称
- * @method string getAppId() 获取AppId
+ * @method string getSubUinName() 获取<p>子用户名称</p>
+ * @method void setSubUinName(string $SubUinName) 设置<p>子用户名称</p>
+ * @method string getAppId() 获取<p>AppId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppId(string $AppId) 设置AppId
+ * @method void setAppId(string $AppId) 设置<p>AppId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ExposePortConfig getExposePortConfig() 获取容器服务暴露端口配置
- * @method void setExposePortConfig(ExposePortConfig $ExposePortConfig) 设置容器服务暴露端口配置
- * @method string getDescription() 获取描述
+ * @method ExposePortConfig getExposePortConfig() 获取<p>容器服务暴露端口配置</p>
+ * @method void setExposePortConfig(ExposePortConfig $ExposePortConfig) 设置<p>容器服务暴露端口配置</p>
+ * @method string getDescription() 获取<p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescription(string $Description) 设置描述
+ * @method void setDescription(string $Description) 设置<p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method OperatorInfo getLatestOperatorInfo() 获取<p>操作者信息</p>
+ * @method void setLatestOperatorInfo(OperatorInfo $LatestOperatorInfo) 设置<p>操作者信息</p>
  */
 class NotebookSetItem extends AbstractModel
 {
     /**
-     * @var string notebook ID
+     * @var string <p>notebook ID</p>
      */
     public $Id;
 
     /**
-     * @var string notebook 名称
+     * @var string <p>notebook 名称</p>
      */
     public $Name;
 
     /**
-     * @var string 计费模式
+     * @var string <p>计费模式</p>
      */
     public $ChargeType;
 
     /**
-     * @var ResourceConf 资源配置
+     * @var ResourceConf <p>资源配置</p>
      */
     public $ResourceConf;
 
     /**
-     * @var string 预付费资源组
+     * @var string <p>预付费资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupId;
 
     /**
-     * @var integer 存储卷大小
+     * @var integer <p>存储卷大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VolumeSizeInGB;
 
     /**
-     * @var array 计费金额信息，eg：2.00元/小时 (for后付费)
+     * @var array <p>计费金额信息，eg：2.00元/小时 (for后付费)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillingInfos;
 
     /**
-     * @var array 标签配置
+     * @var array <p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 启动时间
+     * @var string <p>启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var integer 运行时间
+     * @var integer <p>运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuntimeInSeconds;
 
     /**
-     * @var string 计费状态
+     * @var string <p>计费状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChargeStatus;
 
     /**
-     * @var string 状态
+     * @var string <p>状态</p>
      */
     public $Status;
 
     /**
-     * @var string 错误原因
+     * @var string <p>错误原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailureReason;
 
     /**
-     * @var string 结束时间
+     * @var string <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
-     * @var string Pod名称
+     * @var string <p>Pod名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PodName;
 
     /**
-     * @var string 后付费资源规格名称
+     * @var string <p>后付费资源规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceTypeAlias;
 
     /**
-     * @var string 预付费资源组名称
+     * @var string <p>预付费资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupName;
 
     /**
-     * @var boolean 是否自动终止
+     * @var boolean <p>是否自动终止</p>
      */
     public $AutoStopping;
 
     /**
-     * @var integer 自动停止时间
+     * @var integer <p>自动停止时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutomaticStopTime;
 
     /**
-     * @var string 存储的类型。取值包含： 
-    FREE:        预付费的免费存储
-    CLOUD_PREMIUM： 高性能云硬盘
-    CLOUD_SSD： SSD云硬盘
-    CFS:     CFS存储，包含NFS和turbo
+     * @var string <p>存储的类型。取值包含：<br>    FREE:        预付费的免费存储<br>    CLOUD_PREMIUM： 高性能云硬盘<br>    CLOUD_SSD： SSD云硬盘<br>    CFS:     CFS存储，包含NFS和turbo</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VolumeSourceType;
 
     /**
-     * @var CFSConfig CFS存储的配置
+     * @var CFSConfig <p>CFS存储的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VolumeSourceCFS;
 
     /**
-     * @var string notebook 信息
+     * @var string <p>notebook 信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
-     * @var array notebook用户类型
+     * @var array <p>notebook用户类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserTypes;
 
     /**
-     * @var SSHConfig SSH配置
+     * @var SSHConfig <p>SSH配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SSHConfig;
 
     /**
-     * @var GooseFS GooseFS存储配置
+     * @var GooseFS <p>GooseFS存储配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VolumeSourceGooseFS;
 
     /**
-     * @var string 子用户ID
+     * @var string <p>子用户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubUin;
 
     /**
-     * @var string 子用户名称
+     * @var string <p>子用户名称</p>
      */
     public $SubUinName;
 
     /**
-     * @var string AppId
+     * @var string <p>AppId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
-     * @var ExposePortConfig 容器服务暴露端口配置
+     * @var ExposePortConfig <p>容器服务暴露端口配置</p>
      */
     public $ExposePortConfig;
 
     /**
-     * @var string 描述
+     * @var string <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
-     * @param string $Id notebook ID
-     * @param string $Name notebook 名称
-     * @param string $ChargeType 计费模式
-     * @param ResourceConf $ResourceConf 资源配置
-     * @param string $ResourceGroupId 预付费资源组
+     * @var OperatorInfo <p>操作者信息</p>
+     */
+    public $LatestOperatorInfo;
+
+    /**
+     * @param string $Id <p>notebook ID</p>
+     * @param string $Name <p>notebook 名称</p>
+     * @param string $ChargeType <p>计费模式</p>
+     * @param ResourceConf $ResourceConf <p>资源配置</p>
+     * @param string $ResourceGroupId <p>预付费资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $VolumeSizeInGB 存储卷大小
+     * @param integer $VolumeSizeInGB <p>存储卷大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $BillingInfos 计费金额信息，eg：2.00元/小时 (for后付费)
+     * @param array $BillingInfos <p>计费金额信息，eg：2.00元/小时 (for后付费)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Tags 标签配置
+     * @param array $Tags <p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间
-     * @param string $StartTime 启动时间
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $StartTime <p>启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime 更新时间
-     * @param integer $RuntimeInSeconds 运行时间
+     * @param string $UpdateTime <p>更新时间</p>
+     * @param integer $RuntimeInSeconds <p>运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ChargeStatus 计费状态
+     * @param string $ChargeStatus <p>计费状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 状态
-     * @param string $FailureReason 错误原因
+     * @param string $Status <p>状态</p>
+     * @param string $FailureReason <p>错误原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EndTime 结束时间
+     * @param string $EndTime <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PodName Pod名称
+     * @param string $PodName <p>Pod名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceTypeAlias 后付费资源规格名称
+     * @param string $InstanceTypeAlias <p>后付费资源规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResourceGroupName 预付费资源组名称
+     * @param string $ResourceGroupName <p>预付费资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $AutoStopping 是否自动终止
-     * @param integer $AutomaticStopTime 自动停止时间
+     * @param boolean $AutoStopping <p>是否自动终止</p>
+     * @param integer $AutomaticStopTime <p>自动停止时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VolumeSourceType 存储的类型。取值包含： 
-    FREE:        预付费的免费存储
-    CLOUD_PREMIUM： 高性能云硬盘
-    CLOUD_SSD： SSD云硬盘
-    CFS:     CFS存储，包含NFS和turbo
+     * @param string $VolumeSourceType <p>存储的类型。取值包含：<br>    FREE:        预付费的免费存储<br>    CLOUD_PREMIUM： 高性能云硬盘<br>    CLOUD_SSD： SSD云硬盘<br>    CFS:     CFS存储，包含NFS和turbo</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CFSConfig $VolumeSourceCFS CFS存储的配置
+     * @param CFSConfig $VolumeSourceCFS <p>CFS存储的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Message notebook 信息
+     * @param string $Message <p>notebook 信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $UserTypes notebook用户类型
+     * @param array $UserTypes <p>notebook用户类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SSHConfig $SSHConfig SSH配置
+     * @param SSHConfig $SSHConfig <p>SSH配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GooseFS $VolumeSourceGooseFS GooseFS存储配置
+     * @param GooseFS $VolumeSourceGooseFS <p>GooseFS存储配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SubUin 子用户ID
+     * @param string $SubUin <p>子用户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SubUinName 子用户名称
-     * @param string $AppId AppId
+     * @param string $SubUinName <p>子用户名称</p>
+     * @param string $AppId <p>AppId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExposePortConfig $ExposePortConfig 容器服务暴露端口配置
-     * @param string $Description 描述
+     * @param ExposePortConfig $ExposePortConfig <p>容器服务暴露端口配置</p>
+     * @param string $Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperatorInfo $LatestOperatorInfo <p>操作者信息</p>
      */
     function __construct()
     {
@@ -534,6 +526,11 @@ class NotebookSetItem extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("LatestOperatorInfo",$param) and $param["LatestOperatorInfo"] !== null) {
+            $this->LatestOperatorInfo = new OperatorInfo();
+            $this->LatestOperatorInfo->deserialize($param["LatestOperatorInfo"]);
         }
     }
 }

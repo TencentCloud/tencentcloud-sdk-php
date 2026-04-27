@@ -20,98 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLivePadTemplate请求参数结构体
  *
- * @method string getTemplateName() 获取模板名称。
-长度上限：255字节。
-仅支持中文、英文、数字、_、-。
- * @method void setTemplateName(string $TemplateName) 设置模板名称。
-长度上限：255字节。
-仅支持中文、英文、数字、_、-。
- * @method string getUrl() 获取垫片内容。
- * @method void setUrl(string $Url) 设置垫片内容。
- * @method string getDescription() 获取描述信息。
-长度上限：1024字节。
-仅支持中文、英文、数字、_、-。
- * @method void setDescription(string $Description) 设置描述信息。
-长度上限：1024字节。
-仅支持中文、英文、数字、_、-。
- * @method integer getWaitDuration() 获取断流等待时间。
-取值范围：0-30000。
-单位：ms。
- * @method void setWaitDuration(integer $WaitDuration) 设置断流等待时间。
-取值范围：0-30000。
-单位：ms。
- * @method integer getMaxDuration() 获取最大垫片时长。
-取值范围：0 - 正无穷。
-单位：ms。
- * @method void setMaxDuration(integer $MaxDuration) 设置最大垫片时长。
-取值范围：0 - 正无穷。
-单位：ms。
- * @method integer getType() 获取垫片内容类型：
-1：图片，2：视频。
-默认值：1。
- * @method void setType(integer $Type) 设置垫片内容类型：
-1：图片，2：视频。
-默认值：1。
+ * @method string getTemplateName() 获取<p>模板名称。<br>长度上限：255字节。<br>仅支持中文、英文、数字、_、-。</p>
+ * @method void setTemplateName(string $TemplateName) 设置<p>模板名称。<br>长度上限：255字节。<br>仅支持中文、英文、数字、_、-。</p>
+ * @method string getUrl() 获取<p>垫片内容。</p>
+ * @method void setUrl(string $Url) 设置<p>垫片内容。</p>
+ * @method string getDescription() 获取<p>描述信息。<br>长度上限：1024字节。<br>仅支持中文、英文、数字、_、-。</p>
+ * @method void setDescription(string $Description) 设置<p>描述信息。<br>长度上限：1024字节。<br>仅支持中文、英文、数字、_、-。</p>
+ * @method integer getWaitDuration() 获取<p>断流等待时间。<br>取值范围：0-30000。<br>单位：ms。</p>
+ * @method void setWaitDuration(integer $WaitDuration) 设置<p>断流等待时间。<br>取值范围：0-30000。<br>单位：ms。</p>
+ * @method integer getMaxDuration() 获取<p>最大垫片时长。<br>取值范围：0 - 正无穷。<br>单位：ms。</p>
+ * @method void setMaxDuration(integer $MaxDuration) 设置<p>最大垫片时长。<br>取值范围：0 - 正无穷。<br>单位：ms。</p>
+ * @method integer getType() 获取<p>垫片内容类型：<br>1：图片，2：视频。<br>默认值：1。</p>
+ * @method void setType(integer $Type) 设置<p>垫片内容类型：<br>1：图片，2：视频。<br>默认值：1。</p>
+ * @method integer getTriggerCondition() 获取<p>断流垫片触发条件</p><p>枚举值：</p><ul><li>0： 主动及异常断流</li><li>1： 异常断流</li></ul><p>默认值：0</p>
+ * @method void setTriggerCondition(integer $TriggerCondition) 设置<p>断流垫片触发条件</p><p>枚举值：</p><ul><li>0： 主动及异常断流</li><li>1： 异常断流</li></ul><p>默认值：0</p>
  */
 class CreateLivePadTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 模板名称。
-长度上限：255字节。
-仅支持中文、英文、数字、_、-。
+     * @var string <p>模板名称。<br>长度上限：255字节。<br>仅支持中文、英文、数字、_、-。</p>
      */
     public $TemplateName;
 
     /**
-     * @var string 垫片内容。
+     * @var string <p>垫片内容。</p>
      */
     public $Url;
 
     /**
-     * @var string 描述信息。
-长度上限：1024字节。
-仅支持中文、英文、数字、_、-。
+     * @var string <p>描述信息。<br>长度上限：1024字节。<br>仅支持中文、英文、数字、_、-。</p>
      */
     public $Description;
 
     /**
-     * @var integer 断流等待时间。
-取值范围：0-30000。
-单位：ms。
+     * @var integer <p>断流等待时间。<br>取值范围：0-30000。<br>单位：ms。</p>
      */
     public $WaitDuration;
 
     /**
-     * @var integer 最大垫片时长。
-取值范围：0 - 正无穷。
-单位：ms。
+     * @var integer <p>最大垫片时长。<br>取值范围：0 - 正无穷。<br>单位：ms。</p>
      */
     public $MaxDuration;
 
     /**
-     * @var integer 垫片内容类型：
-1：图片，2：视频。
-默认值：1。
+     * @var integer <p>垫片内容类型：<br>1：图片，2：视频。<br>默认值：1。</p>
      */
     public $Type;
 
     /**
-     * @param string $TemplateName 模板名称。
-长度上限：255字节。
-仅支持中文、英文、数字、_、-。
-     * @param string $Url 垫片内容。
-     * @param string $Description 描述信息。
-长度上限：1024字节。
-仅支持中文、英文、数字、_、-。
-     * @param integer $WaitDuration 断流等待时间。
-取值范围：0-30000。
-单位：ms。
-     * @param integer $MaxDuration 最大垫片时长。
-取值范围：0 - 正无穷。
-单位：ms。
-     * @param integer $Type 垫片内容类型：
-1：图片，2：视频。
-默认值：1。
+     * @var integer <p>断流垫片触发条件</p><p>枚举值：</p><ul><li>0： 主动及异常断流</li><li>1： 异常断流</li></ul><p>默认值：0</p>
+     */
+    public $TriggerCondition;
+
+    /**
+     * @param string $TemplateName <p>模板名称。<br>长度上限：255字节。<br>仅支持中文、英文、数字、_、-。</p>
+     * @param string $Url <p>垫片内容。</p>
+     * @param string $Description <p>描述信息。<br>长度上限：1024字节。<br>仅支持中文、英文、数字、_、-。</p>
+     * @param integer $WaitDuration <p>断流等待时间。<br>取值范围：0-30000。<br>单位：ms。</p>
+     * @param integer $MaxDuration <p>最大垫片时长。<br>取值范围：0 - 正无穷。<br>单位：ms。</p>
+     * @param integer $Type <p>垫片内容类型：<br>1：图片，2：视频。<br>默认值：1。</p>
+     * @param integer $TriggerCondition <p>断流垫片触发条件</p><p>枚举值：</p><ul><li>0： 主动及异常断流</li><li>1： 异常断流</li></ul><p>默认值：0</p>
      */
     function __construct()
     {
@@ -148,6 +116,10 @@ class CreateLivePadTemplateRequest extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("TriggerCondition",$param) and $param["TriggerCondition"] !== null) {
+            $this->TriggerCondition = $param["TriggerCondition"];
         }
     }
 }

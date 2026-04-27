@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 模型详情
  *
- * @method string getModelName() 获取模型名称
- * @method void setModelName(string $ModelName) 设置模型名称
- * @method string getModelId() 获取模型ID
- * @method void setModelId(string $ModelId) 设置模型ID
- * @method string getDescription() 获取应用描述	
- * @method void setDescription(string $Description) 设置应用描述	
- * @method string getCommunityUrl() 获取官方社区链接	
- * @method void setCommunityUrl(string $CommunityUrl) 设置官方社区链接	
- * @method string getGuideUrl() 获取最佳实践链接
- * @method void setGuideUrl(string $GuideUrl) 设置最佳实践链接
- * @method string getModelState() 获取模型状态
- * @method void setModelState(string $ModelState) 设置模型状态
- * @method array getTags() 获取应用对应的标签，如机器学习
- * @method void setTags(array $Tags) 设置应用对应的标签，如机器学习
- * @method string getConfigEnvironment() 获取配置环境
- * @method void setConfigEnvironment(string $ConfigEnvironment) 设置配置环境
+ * @method string getModelName() 获取<p>模型名称</p>
+ * @method void setModelName(string $ModelName) 设置<p>模型名称</p>
+ * @method string getModelId() 获取<p>模型ID</p>
+ * @method void setModelId(string $ModelId) 设置<p>模型ID</p>
+ * @method string getDescription() 获取<p>应用描述</p>
+ * @method void setDescription(string $Description) 设置<p>应用描述</p>
+ * @method string getCommunityUrl() 获取<p>官方社区链接</p>
+ * @method void setCommunityUrl(string $CommunityUrl) 设置<p>官方社区链接</p>
+ * @method string getGuideUrl() 获取<p>最佳实践链接</p>
+ * @method void setGuideUrl(string $GuideUrl) 设置<p>最佳实践链接</p>
+ * @method string getModelState() 获取<p>模型状态</p>
+ * @method void setModelState(string $ModelState) 设置<p>模型状态</p>
+ * @method array getTags() 获取<p>应用对应的标签，如机器学习</p>
+ * @method void setTags(array $Tags) 设置<p>应用对应的标签，如机器学习</p>
+ * @method string getConfigEnvironment() 获取<p>配置环境</p>
+ * @method void setConfigEnvironment(string $ConfigEnvironment) 设置<p>配置环境</p>
  */
 class ModelDetail extends AbstractModel
 {
     /**
-     * @var string 模型名称
+     * @var string <p>模型名称</p>
      */
     public $ModelName;
 
     /**
-     * @var string 模型ID
+     * @var string <p>模型ID</p>
      */
     public $ModelId;
 
     /**
-     * @var string 应用描述	
+     * @var string <p>应用描述</p>
      */
     public $Description;
 
     /**
-     * @var string 官方社区链接	
+     * @var string <p>官方社区链接</p>
      */
     public $CommunityUrl;
 
     /**
-     * @var string 最佳实践链接
+     * @var string <p>最佳实践链接</p>
      */
     public $GuideUrl;
 
     /**
-     * @var string 模型状态
+     * @var string <p>模型状态</p>
      */
     public $ModelState;
 
     /**
-     * @var array 应用对应的标签，如机器学习
+     * @var array <p>应用对应的标签，如机器学习</p>
      */
     public $Tags;
 
     /**
-     * @var string 配置环境
+     * @var string <p>配置环境</p>
      */
     public $ConfigEnvironment;
 
     /**
-     * @param string $ModelName 模型名称
-     * @param string $ModelId 模型ID
-     * @param string $Description 应用描述	
-     * @param string $CommunityUrl 官方社区链接	
-     * @param string $GuideUrl 最佳实践链接
-     * @param string $ModelState 模型状态
-     * @param array $Tags 应用对应的标签，如机器学习
-     * @param string $ConfigEnvironment 配置环境
+     * @param string $ModelName <p>模型名称</p>
+     * @param string $ModelId <p>模型ID</p>
+     * @param string $Description <p>应用描述</p>
+     * @param string $CommunityUrl <p>官方社区链接</p>
+     * @param string $GuideUrl <p>最佳实践链接</p>
+     * @param string $ModelState <p>模型状态</p>
+     * @param array $Tags <p>应用对应的标签，如机器学习</p>
+     * @param string $ConfigEnvironment <p>配置环境</p>
      */
     function __construct()
     {

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceGroupId(string $ResourceGroupId) 设置资源组id
  * @method string getResourceInstanceId() 获取资源组节点id
  * @method void setResourceInstanceId(string $ResourceInstanceId) 设置资源组节点id
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
  */
 class DescribeBillingResourceInstanceRunningJobsRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeBillingResourceInstanceRunningJobsRequest extends AbstractModel
     public $ResourceInstanceId;
 
     /**
+     * @var string <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public $TiProjectId;
+
+    /**
      * @param string $ResourceGroupId 资源组id
      * @param string $ResourceInstanceId 资源组节点id
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeBillingResourceInstanceRunningJobsRequest extends AbstractModel
 
         if (array_key_exists("ResourceInstanceId",$param) and $param["ResourceInstanceId"] !== null) {
             $this->ResourceInstanceId = $param["ResourceInstanceId"];
+        }
+
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
         }
     }
 }

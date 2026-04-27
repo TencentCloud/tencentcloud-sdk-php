@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSelectingSubtitleAreasConfig(SelectingSubtitleAreasConfig $SelectingSubtitleAreasConfig) 设置<p>字幕OCR提取框选区域配置</p>
  * @method integer getSubtitleEmbedId() 获取<p>压制模板id，只有ProcessType为0或2（任务类型为ASR或OCR）时才允许填写。开启多个翻译语言时，不允许填写。</p>
  * @method void setSubtitleEmbedId(integer $SubtitleEmbedId) 设置<p>压制模板id，只有ProcessType为0或2（任务类型为ASR或OCR）时才允许填写。开启多个翻译语言时，不允许填写。</p>
+ * @method integer getSpeakerMode() 获取<p>说话人识别开关，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别。</p>
+ * @method void setSpeakerMode(integer $SpeakerMode) 设置<p>说话人识别开关，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别。</p>
+ * @method integer getSpeakerLabel() 获取<p>说话人识别输出到字幕文件，可选值：<br>0：表示不输出到字幕文件；<br>1：表示输出到vtt字幕文件<br>注意：使用此参数SpeakerMode的值不能为0。</p>
+ * @method void setSpeakerLabel(integer $SpeakerLabel) 设置<p>说话人识别输出到字幕文件，可选值：<br>0：表示不输出到字幕文件；<br>1：表示输出到vtt字幕文件<br>注意：使用此参数SpeakerMode的值不能为0。</p>
  */
 class ModifySmartSubtitleTemplateRequest extends AbstractModel
 {
@@ -108,6 +112,16 @@ class ModifySmartSubtitleTemplateRequest extends AbstractModel
     public $SubtitleEmbedId;
 
     /**
+     * @var integer <p>说话人识别开关，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别。</p>
+     */
+    public $SpeakerMode;
+
+    /**
+     * @var integer <p>说话人识别输出到字幕文件，可选值：<br>0：表示不输出到字幕文件；<br>1：表示输出到vtt字幕文件<br>注意：使用此参数SpeakerMode的值不能为0。</p>
+     */
+    public $SpeakerLabel;
+
+    /**
      * @param integer $Definition <p>智能字幕模板唯一标识</p>
      * @param string $TranslateSwitch <p>字幕翻译开关<br><code>ON</code>: 开启翻译<br><code>OFF</code>: 关闭翻译</p><p><strong>注意</strong>：纯字幕翻译方式下，不传默认是打开的，不允许传空或<code>OFF</code>；</p>
      * @param string $Name <p>智能字幕模板名称<br>长度限制：64 个字符。</p>
@@ -120,6 +134,8 @@ class ModifySmartSubtitleTemplateRequest extends AbstractModel
      * @param integer $ProcessType <p>字幕处理类型：</p><ul><li>0：ASR识别字幕</li><li>1：纯字幕翻译</li><li>2：OCR识别字幕</li></ul><p><strong>注意</strong>：不传的情况下，默认是ASR方式</p>
      * @param SelectingSubtitleAreasConfig $SelectingSubtitleAreasConfig <p>字幕OCR提取框选区域配置</p>
      * @param integer $SubtitleEmbedId <p>压制模板id，只有ProcessType为0或2（任务类型为ASR或OCR）时才允许填写。开启多个翻译语言时，不允许填写。</p>
+     * @param integer $SpeakerMode <p>说话人识别开关，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别。</p>
+     * @param integer $SpeakerLabel <p>说话人识别输出到字幕文件，可选值：<br>0：表示不输出到字幕文件；<br>1：表示输出到vtt字幕文件<br>注意：使用此参数SpeakerMode的值不能为0。</p>
      */
     function __construct()
     {
@@ -182,6 +198,14 @@ class ModifySmartSubtitleTemplateRequest extends AbstractModel
 
         if (array_key_exists("SubtitleEmbedId",$param) and $param["SubtitleEmbedId"] !== null) {
             $this->SubtitleEmbedId = $param["SubtitleEmbedId"];
+        }
+
+        if (array_key_exists("SpeakerMode",$param) and $param["SpeakerMode"] !== null) {
+            $this->SpeakerMode = $param["SpeakerMode"];
+        }
+
+        if (array_key_exists("SpeakerLabel",$param) and $param["SpeakerLabel"] !== null) {
+            $this->SpeakerLabel = $param["SpeakerLabel"];
         }
     }
 }

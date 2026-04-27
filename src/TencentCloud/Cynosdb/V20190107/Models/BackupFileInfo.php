@@ -20,138 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 备份文件信息
  *
- * @method integer getSnapshotId() 获取快照文件ID，已废弃，请使用BackupId
- * @method void setSnapshotId(integer $SnapshotId) 设置快照文件ID，已废弃，请使用BackupId
- * @method string getFileName() 获取备份文件名
- * @method void setFileName(string $FileName) 设置备份文件名
- * @method integer getFileSize() 获取备份文件大小
- * @method void setFileSize(integer $FileSize) 设置备份文件大小
- * @method string getStartTime() 获取备份开始时间
- * @method void setStartTime(string $StartTime) 设置备份开始时间
- * @method string getFinishTime() 获取备份完成时间
- * @method void setFinishTime(string $FinishTime) 设置备份完成时间
- * @method string getBackupType() 获取备份类型：snapshot，快照备份；logic，逻辑备份
- * @method void setBackupType(string $BackupType) 设置备份类型：snapshot，快照备份；logic，逻辑备份
- * @method string getBackupMethod() 获取备份方式：auto，自动备份；manual，手动备份
- * @method void setBackupMethod(string $BackupMethod) 设置备份方式：auto，自动备份；manual，手动备份
- * @method string getBackupStatus() 获取备份文件状态：success：备份成功；fail：备份失败；creating：备份文件创建中；deleting：备份文件删除中
- * @method void setBackupStatus(string $BackupStatus) 设置备份文件状态：success：备份成功；fail：备份失败；creating：备份文件创建中；deleting：备份文件删除中
- * @method string getSnapshotTime() 获取备份文件时间
- * @method void setSnapshotTime(string $SnapshotTime) 设置备份文件时间
- * @method integer getBackupId() 获取备份ID
- * @method void setBackupId(integer $BackupId) 设置备份ID
- * @method string getSnapShotType() 获取快照类型，可选值：full，全量；increment，增量
- * @method void setSnapShotType(string $SnapShotType) 设置快照类型，可选值：full，全量；increment，增量
- * @method string getBackupName() 获取备份文件备注
- * @method void setBackupName(string $BackupName) 设置备份文件备注
- * @method string getCopyStatus() 获取投递状态
- * @method void setCopyStatus(string $CopyStatus) 设置投递状态
- * @method string getEncryptKeyId() 获取秘钥id
- * @method void setEncryptKeyId(string $EncryptKeyId) 设置秘钥id
- * @method string getEncryptRegion() 获取秘钥地域
- * @method void setEncryptRegion(string $EncryptRegion) 设置秘钥地域
- * @method array getVaultInfos() 获取保险箱信息
- * @method void setVaultInfos(array $VaultInfos) 设置保险箱信息
+ * @method integer getSnapshotId() 获取<p>快照文件ID，已废弃，请使用BackupId</p>
+ * @method void setSnapshotId(integer $SnapshotId) 设置<p>快照文件ID，已废弃，请使用BackupId</p>
+ * @method string getFileName() 获取<p>备份文件名</p>
+ * @method void setFileName(string $FileName) 设置<p>备份文件名</p>
+ * @method integer getFileSize() 获取<p>备份文件大小</p>
+ * @method void setFileSize(integer $FileSize) 设置<p>备份文件大小</p>
+ * @method string getStartTime() 获取<p>备份开始时间</p>
+ * @method void setStartTime(string $StartTime) 设置<p>备份开始时间</p>
+ * @method string getFinishTime() 获取<p>备份完成时间</p>
+ * @method void setFinishTime(string $FinishTime) 设置<p>备份完成时间</p>
+ * @method string getBackupType() 获取<p>备份类型：snapshot，快照备份；logic，逻辑备份</p>
+ * @method void setBackupType(string $BackupType) 设置<p>备份类型：snapshot，快照备份；logic，逻辑备份</p>
+ * @method string getBackupMethod() 获取<p>备份方式：auto，自动备份；manual，手动备份</p>
+ * @method void setBackupMethod(string $BackupMethod) 设置<p>备份方式：auto，自动备份；manual，手动备份</p>
+ * @method string getBackupStatus() 获取<p>备份文件状态：success：备份成功；fail：备份失败；creating：备份文件创建中；deleting：备份文件删除中</p>
+ * @method void setBackupStatus(string $BackupStatus) 设置<p>备份文件状态：success：备份成功；fail：备份失败；creating：备份文件创建中；deleting：备份文件删除中</p>
+ * @method string getSnapshotTime() 获取<p>备份文件时间</p>
+ * @method void setSnapshotTime(string $SnapshotTime) 设置<p>备份文件时间</p>
+ * @method integer getBackupId() 获取<p>备份ID</p>
+ * @method void setBackupId(integer $BackupId) 设置<p>备份ID</p>
+ * @method string getSnapShotType() 获取<p>快照类型，可选值：full，全量；increment，增量</p>
+ * @method void setSnapShotType(string $SnapShotType) 设置<p>快照类型，可选值：full，全量；increment，增量</p>
+ * @method string getBackupName() 获取<p>备份文件备注</p>
+ * @method void setBackupName(string $BackupName) 设置<p>备份文件备注</p>
+ * @method string getCopyStatus() 获取<p>投递状态</p>
+ * @method void setCopyStatus(string $CopyStatus) 设置<p>投递状态</p>
+ * @method string getEncryptKeyId() 获取<p>秘钥id</p>
+ * @method void setEncryptKeyId(string $EncryptKeyId) 设置<p>秘钥id</p>
+ * @method string getEncryptRegion() 获取<p>秘钥地域</p>
+ * @method void setEncryptRegion(string $EncryptRegion) 设置<p>秘钥地域</p>
+ * @method array getVaultInfos() 获取<p>保险箱信息</p>
+ * @method void setVaultInfos(array $VaultInfos) 设置<p>保险箱信息</p>
+ * @method string getBackupPeriodStrategy() 获取<p>备份周期策略</p>
+ * @method void setBackupPeriodStrategy(string $BackupPeriodStrategy) 设置<p>备份周期策略</p>
  */
 class BackupFileInfo extends AbstractModel
 {
     /**
-     * @var integer 快照文件ID，已废弃，请使用BackupId
+     * @var integer <p>快照文件ID，已废弃，请使用BackupId</p>
      */
     public $SnapshotId;
 
     /**
-     * @var string 备份文件名
+     * @var string <p>备份文件名</p>
      */
     public $FileName;
 
     /**
-     * @var integer 备份文件大小
+     * @var integer <p>备份文件大小</p>
      */
     public $FileSize;
 
     /**
-     * @var string 备份开始时间
+     * @var string <p>备份开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var string 备份完成时间
+     * @var string <p>备份完成时间</p>
      */
     public $FinishTime;
 
     /**
-     * @var string 备份类型：snapshot，快照备份；logic，逻辑备份
+     * @var string <p>备份类型：snapshot，快照备份；logic，逻辑备份</p>
      */
     public $BackupType;
 
     /**
-     * @var string 备份方式：auto，自动备份；manual，手动备份
+     * @var string <p>备份方式：auto，自动备份；manual，手动备份</p>
      */
     public $BackupMethod;
 
     /**
-     * @var string 备份文件状态：success：备份成功；fail：备份失败；creating：备份文件创建中；deleting：备份文件删除中
+     * @var string <p>备份文件状态：success：备份成功；fail：备份失败；creating：备份文件创建中；deleting：备份文件删除中</p>
      */
     public $BackupStatus;
 
     /**
-     * @var string 备份文件时间
+     * @var string <p>备份文件时间</p>
      */
     public $SnapshotTime;
 
     /**
-     * @var integer 备份ID
+     * @var integer <p>备份ID</p>
      */
     public $BackupId;
 
     /**
-     * @var string 快照类型，可选值：full，全量；increment，增量
+     * @var string <p>快照类型，可选值：full，全量；increment，增量</p>
      */
     public $SnapShotType;
 
     /**
-     * @var string 备份文件备注
+     * @var string <p>备份文件备注</p>
      */
     public $BackupName;
 
     /**
-     * @var string 投递状态
+     * @var string <p>投递状态</p>
      */
     public $CopyStatus;
 
     /**
-     * @var string 秘钥id
+     * @var string <p>秘钥id</p>
      */
     public $EncryptKeyId;
 
     /**
-     * @var string 秘钥地域
+     * @var string <p>秘钥地域</p>
      */
     public $EncryptRegion;
 
     /**
-     * @var array 保险箱信息
+     * @var array <p>保险箱信息</p>
      */
     public $VaultInfos;
 
     /**
-     * @param integer $SnapshotId 快照文件ID，已废弃，请使用BackupId
-     * @param string $FileName 备份文件名
-     * @param integer $FileSize 备份文件大小
-     * @param string $StartTime 备份开始时间
-     * @param string $FinishTime 备份完成时间
-     * @param string $BackupType 备份类型：snapshot，快照备份；logic，逻辑备份
-     * @param string $BackupMethod 备份方式：auto，自动备份；manual，手动备份
-     * @param string $BackupStatus 备份文件状态：success：备份成功；fail：备份失败；creating：备份文件创建中；deleting：备份文件删除中
-     * @param string $SnapshotTime 备份文件时间
-     * @param integer $BackupId 备份ID
-     * @param string $SnapShotType 快照类型，可选值：full，全量；increment，增量
-     * @param string $BackupName 备份文件备注
-     * @param string $CopyStatus 投递状态
-     * @param string $EncryptKeyId 秘钥id
-     * @param string $EncryptRegion 秘钥地域
-     * @param array $VaultInfos 保险箱信息
+     * @var string <p>备份周期策略</p>
+     */
+    public $BackupPeriodStrategy;
+
+    /**
+     * @param integer $SnapshotId <p>快照文件ID，已废弃，请使用BackupId</p>
+     * @param string $FileName <p>备份文件名</p>
+     * @param integer $FileSize <p>备份文件大小</p>
+     * @param string $StartTime <p>备份开始时间</p>
+     * @param string $FinishTime <p>备份完成时间</p>
+     * @param string $BackupType <p>备份类型：snapshot，快照备份；logic，逻辑备份</p>
+     * @param string $BackupMethod <p>备份方式：auto，自动备份；manual，手动备份</p>
+     * @param string $BackupStatus <p>备份文件状态：success：备份成功；fail：备份失败；creating：备份文件创建中；deleting：备份文件删除中</p>
+     * @param string $SnapshotTime <p>备份文件时间</p>
+     * @param integer $BackupId <p>备份ID</p>
+     * @param string $SnapShotType <p>快照类型，可选值：full，全量；increment，增量</p>
+     * @param string $BackupName <p>备份文件备注</p>
+     * @param string $CopyStatus <p>投递状态</p>
+     * @param string $EncryptKeyId <p>秘钥id</p>
+     * @param string $EncryptRegion <p>秘钥地域</p>
+     * @param array $VaultInfos <p>保险箱信息</p>
+     * @param string $BackupPeriodStrategy <p>备份周期策略</p>
      */
     function __construct()
     {
@@ -233,6 +241,10 @@ class BackupFileInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->VaultInfos, $obj);
             }
+        }
+
+        if (array_key_exists("BackupPeriodStrategy",$param) and $param["BackupPeriodStrategy"] !== null) {
+            $this->BackupPeriodStrategy = $param["BackupPeriodStrategy"];
         }
     }
 }

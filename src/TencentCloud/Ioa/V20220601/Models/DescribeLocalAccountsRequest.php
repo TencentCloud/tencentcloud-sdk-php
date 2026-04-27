@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLocalAccounts请求参数结构体
  *
+ * @method string getDomainInstanceId() 获取管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+ * @method void setDomainInstanceId(string $DomainInstanceId) 设置管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
  * @method Condition getCondition() 获取查询条件：过滤或排序
 1、UserName，string类型，姓名
 是否必填：否
@@ -30,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 过滤支持：是，支持eq、like、ilike
 排序支持：否
 3、Phone，string类型，手机号
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+4、Email，string类型，邮箱
 是否必填：否
 过滤支持：是，支持eq、like、ilike
 排序支持：否
@@ -46,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 是否必填：否
 过滤支持：是，支持eq、like、ilike
 排序支持：否
+4、Email，string类型，邮箱
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
  * @method integer getAccountGroupId() 获取获取账号的分组ID，不传默认获取全网根账号组
  * @method void setAccountGroupId(integer $AccountGroupId) 设置获取账号的分组ID，不传默认获取全网根账号组
  * @method integer getShowFlag() 获取是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户
@@ -53,6 +63,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeLocalAccountsRequest extends AbstractModel
 {
+    /**
+     * @var string 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     */
+    public $DomainInstanceId;
+
     /**
      * @var Condition 查询条件：过滤或排序
 1、UserName，string类型，姓名
@@ -64,6 +79,10 @@ class DescribeLocalAccountsRequest extends AbstractModel
 过滤支持：是，支持eq、like、ilike
 排序支持：否
 3、Phone，string类型，手机号
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+4、Email，string类型，邮箱
 是否必填：否
 过滤支持：是，支持eq、like、ilike
 排序支持：否
@@ -81,6 +100,7 @@ class DescribeLocalAccountsRequest extends AbstractModel
     public $ShowFlag;
 
     /**
+     * @param string $DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
      * @param Condition $Condition 查询条件：过滤或排序
 1、UserName，string类型，姓名
 是否必填：否
@@ -91,6 +111,10 @@ class DescribeLocalAccountsRequest extends AbstractModel
 过滤支持：是，支持eq、like、ilike
 排序支持：否
 3、Phone，string类型，手机号
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+4、Email，string类型，邮箱
 是否必填：否
 过滤支持：是，支持eq、like、ilike
 排序支持：否
@@ -110,6 +134,10 @@ class DescribeLocalAccountsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("DomainInstanceId",$param) and $param["DomainInstanceId"] !== null) {
+            $this->DomainInstanceId = $param["DomainInstanceId"];
+        }
+
         if (array_key_exists("Condition",$param) and $param["Condition"] !== null) {
             $this->Condition = new Condition();
             $this->Condition->deserialize($param["Condition"]);

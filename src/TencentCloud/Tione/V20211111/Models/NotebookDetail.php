@@ -20,502 +20,490 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 类型NotebookDetail
  *
- * @method string getId() 获取notebook  ID
- * @method void setId(string $Id) 设置notebook  ID
- * @method string getName() 获取notebook 名称
- * @method void setName(string $Name) 设置notebook 名称
- * @method string getLifecycleScriptId() 获取生命周期脚本
+ * @method string getId() 获取<p>notebook  ID</p>
+ * @method void setId(string $Id) 设置<p>notebook  ID</p>
+ * @method string getName() 获取<p>notebook 名称</p>
+ * @method void setName(string $Name) 设置<p>notebook 名称</p>
+ * @method string getLifecycleScriptId() 获取<p>生命周期脚本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLifecycleScriptId(string $LifecycleScriptId) 设置生命周期脚本
+ * @method void setLifecycleScriptId(string $LifecycleScriptId) 设置<p>生命周期脚本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPodName() 获取Pod-Name
+ * @method string getPodName() 获取<p>Pod-Name</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPodName(string $PodName) 设置Pod-Name
+ * @method void setPodName(string $PodName) 设置<p>Pod-Name</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取Update-Time
- * @method void setUpdateTime(string $UpdateTime) 设置Update-Time
- * @method boolean getDirectInternetAccess() 获取是否访问公网
- * @method void setDirectInternetAccess(boolean $DirectInternetAccess) 设置是否访问公网
- * @method string getResourceGroupId() 获取预付费专用资源组
+ * @method string getUpdateTime() 获取<p>Update-Time</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>Update-Time</p>
+ * @method boolean getDirectInternetAccess() 获取<p>是否访问公网</p>
+ * @method void setDirectInternetAccess(boolean $DirectInternetAccess) 设置<p>是否访问公网</p>
+ * @method string getResourceGroupId() 获取<p>预付费专用资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceGroupId(string $ResourceGroupId) 设置预付费专用资源组
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置<p>预付费专用资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTags() 获取标签配置
+ * @method array getTags() 获取<p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTags(array $Tags) 设置标签配置
+ * @method void setTags(array $Tags) 设置<p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getAutoStopping() 获取是否自动停止
- * @method void setAutoStopping(boolean $AutoStopping) 设置是否自动停止
- * @method array getAdditionalCodeRepoIds() 获取其他GIT存储库，最多3个，单个
-长度不超过512字符
+ * @method boolean getAutoStopping() 获取<p>是否自动停止</p>
+ * @method void setAutoStopping(boolean $AutoStopping) 设置<p>是否自动停止</p>
+ * @method array getAdditionalCodeRepoIds() 获取<p>其他GIT存储库，最多3个，单个<br>长度不超过512字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAdditionalCodeRepoIds(array $AdditionalCodeRepoIds) 设置其他GIT存储库，最多3个，单个
-长度不超过512字符
+ * @method void setAdditionalCodeRepoIds(array $AdditionalCodeRepoIds) 设置<p>其他GIT存储库，最多3个，单个<br>长度不超过512字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAutomaticStopTime() 获取自动停止时间，单位小时
+ * @method integer getAutomaticStopTime() 获取<p>自动停止时间，单位小时</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAutomaticStopTime(integer $AutomaticStopTime) 设置自动停止时间，单位小时
+ * @method void setAutomaticStopTime(integer $AutomaticStopTime) 设置<p>自动停止时间，单位小时</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ResourceConf getResourceConf() 获取资源配置
- * @method void setResourceConf(ResourceConf $ResourceConf) 设置资源配置
- * @method string getDefaultCodeRepoId() 获取默认GIT存储库，长度不超过512字符
- * @method void setDefaultCodeRepoId(string $DefaultCodeRepoId) 设置默认GIT存储库，长度不超过512字符
- * @method string getEndTime() 获取训练输出
+ * @method ResourceConf getResourceConf() 获取<p>资源配置</p>
+ * @method void setResourceConf(ResourceConf $ResourceConf) 设置<p>资源配置</p>
+ * @method string getDefaultCodeRepoId() 获取<p>默认GIT存储库，长度不超过512字符</p>
+ * @method void setDefaultCodeRepoId(string $DefaultCodeRepoId) 设置<p>默认GIT存储库，长度不超过512字符</p>
+ * @method string getEndTime() 获取<p>训练输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEndTime(string $EndTime) 设置训练输出
+ * @method void setEndTime(string $EndTime) 设置<p>训练输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getLogEnable() 获取是否上报日志
- * @method void setLogEnable(boolean $LogEnable) 设置是否上报日志
- * @method LogConfig getLogConfig() 获取日志配置
+ * @method boolean getLogEnable() 获取<p>是否上报日志</p>
+ * @method void setLogEnable(boolean $LogEnable) 设置<p>是否上报日志</p>
+ * @method LogConfig getLogConfig() 获取<p>日志配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLogConfig(LogConfig $LogConfig) 设置日志配置
+ * @method void setLogConfig(LogConfig $LogConfig) 设置<p>日志配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVpcId() 获取VPC ID
+ * @method string getVpcId() 获取<p>VPC ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVpcId(string $VpcId) 设置VPC ID
+ * @method void setVpcId(string $VpcId) 设置<p>VPC ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSubnetId() 获取子网ID
+ * @method string getSubnetId() 获取<p>子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubnetId(string $SubnetId) 设置子网ID
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取任务状态
- * @method void setStatus(string $Status) 设置任务状态
- * @method integer getRuntimeInSeconds() 获取运行时长
+ * @method string getStatus() 获取<p>任务状态</p>
+ * @method void setStatus(string $Status) 设置<p>任务状态</p>
+ * @method integer getRuntimeInSeconds() 获取<p>运行时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuntimeInSeconds(integer $RuntimeInSeconds) 设置运行时长
+ * @method void setRuntimeInSeconds(integer $RuntimeInSeconds) 设置<p>运行时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getStartTime() 获取训练开始时间
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getStartTime() 获取<p>训练开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartTime(string $StartTime) 设置训练开始时间
+ * @method void setStartTime(string $StartTime) 设置<p>训练开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getChargeStatus() 获取计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+ * @method string getChargeStatus() 获取<p>计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setChargeStatus(string $ChargeStatus) 设置计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+ * @method void setChargeStatus(string $ChargeStatus) 设置<p>计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getRootAccess() 获取是否ROOT权限
- * @method void setRootAccess(boolean $RootAccess) 设置是否ROOT权限
- * @method array getBillingInfos() 获取计贺金额信息，eg:2.00元/小时
+ * @method boolean getRootAccess() 获取<p>是否ROOT权限</p>
+ * @method void setRootAccess(boolean $RootAccess) 设置<p>是否ROOT权限</p>
+ * @method array getBillingInfos() 获取<p>计贺金额信息，eg:2.00元/小时</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBillingInfos(array $BillingInfos) 设置计贺金额信息，eg:2.00元/小时
+ * @method void setBillingInfos(array $BillingInfos) 设置<p>计贺金额信息，eg:2.00元/小时</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getVolumeSizeInGB() 获取存储卷大小 （单位时GB，最小10GB，必须是10G的倍数）
+ * @method integer getVolumeSizeInGB() 获取<p>存储卷大小 （单位时GB，最小10GB，必须是10G的倍数）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVolumeSizeInGB(integer $VolumeSizeInGB) 设置存储卷大小 （单位时GB，最小10GB，必须是10G的倍数）
+ * @method void setVolumeSizeInGB(integer $VolumeSizeInGB) 设置<p>存储卷大小 （单位时GB，最小10GB，必须是10G的倍数）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFailureReason() 获取失败原因
+ * @method string getFailureReason() 获取<p>失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFailureReason(string $FailureReason) 设置失败原因
+ * @method void setFailureReason(string $FailureReason) 设置<p>失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getChargeType() 获取计算资源付费模式 (- PREPAID：预付费，即包年包月 - POSTPAID_BY_HOUR：按小时后付费)
- * @method void setChargeType(string $ChargeType) 设置计算资源付费模式 (- PREPAID：预付费，即包年包月 - POSTPAID_BY_HOUR：按小时后付费)
- * @method string getInstanceTypeAlias() 获取后付费资源规格说明
+ * @method string getChargeType() 获取<p>计算资源付费模式 (- PREPAID：预付费，即包年包月 - POSTPAID_BY_HOUR：按小时后付费)</p>
+ * @method void setChargeType(string $ChargeType) 设置<p>计算资源付费模式 (- PREPAID：预付费，即包年包月 - POSTPAID_BY_HOUR：按小时后付费)</p>
+ * @method string getInstanceTypeAlias() 获取<p>后付费资源规格说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceTypeAlias(string $InstanceTypeAlias) 设置后付费资源规格说明
+ * @method void setInstanceTypeAlias(string $InstanceTypeAlias) 设置<p>后付费资源规格说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResourceGroupName() 获取预付费资源组名称
+ * @method string getResourceGroupName() 获取<p>预付费资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceGroupName(string $ResourceGroupName) 设置预付费资源组名称
+ * @method void setResourceGroupName(string $ResourceGroupName) 设置<p>预付费资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVolumeSourceType() 获取存储的类型。取值包含： 
-    FREE:        预付费的免费存储
-    CLOUD_PREMIUM： 高性能云硬盘
-    CLOUD_SSD： SSD云硬盘
-    CFS:     CFS存储，包含NFS和turbo
+ * @method string getVolumeSourceType() 获取<p>存储的类型。取值包含：<br>    FREE:        预付费的免费存储<br>    CLOUD_PREMIUM： 高性能云硬盘<br>    CLOUD_SSD： SSD云硬盘<br>    CFS:     CFS存储，包含NFS和turbo</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVolumeSourceType(string $VolumeSourceType) 设置存储的类型。取值包含： 
-    FREE:        预付费的免费存储
-    CLOUD_PREMIUM： 高性能云硬盘
-    CLOUD_SSD： SSD云硬盘
-    CFS:     CFS存储，包含NFS和turbo
+ * @method void setVolumeSourceType(string $VolumeSourceType) 设置<p>存储的类型。取值包含：<br>    FREE:        预付费的免费存储<br>    CLOUD_PREMIUM： 高性能云硬盘<br>    CLOUD_SSD： SSD云硬盘<br>    CFS:     CFS存储，包含NFS和turbo</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CFSConfig getVolumeSourceCFS() 获取CFS存储的配置
+ * @method CFSConfig getVolumeSourceCFS() 获取<p>CFS存储的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVolumeSourceCFS(CFSConfig $VolumeSourceCFS) 设置CFS存储的配置
+ * @method void setVolumeSourceCFS(CFSConfig $VolumeSourceCFS) 设置<p>CFS存储的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDataConfigs() 获取数据配置
+ * @method array getDataConfigs() 获取<p>数据配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataConfigs(array $DataConfigs) 设置数据配置
+ * @method void setDataConfigs(array $DataConfigs) 设置<p>数据配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMessage() 获取notebook 信息
+ * @method string getMessage() 获取<p>notebook 信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMessage(string $Message) 设置notebook 信息
+ * @method void setMessage(string $Message) 设置<p>notebook 信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDataSource() 获取数据源来源，eg：WeData_HDFS
+ * @method string getDataSource() 获取<p>数据源来源，eg：WeData_HDFS</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataSource(string $DataSource) 设置数据源来源，eg：WeData_HDFS
+ * @method void setDataSource(string $DataSource) 设置<p>数据源来源，eg：WeData_HDFS</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ImageInfo getImageInfo() 获取镜像信息
- * @method void setImageInfo(ImageInfo $ImageInfo) 设置镜像信息
- * @method string getImageType() 获取镜像类型
+ * @method ImageInfo getImageInfo() 获取<p>镜像信息</p>
+ * @method void setImageInfo(ImageInfo $ImageInfo) 设置<p>镜像信息</p>
+ * @method string getImageType() 获取<p>镜像类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImageType(string $ImageType) 设置镜像类型
+ * @method void setImageType(string $ImageType) 设置<p>镜像类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method SSHConfig getSSHConfig() 获取SSH配置
+ * @method SSHConfig getSSHConfig() 获取<p>SSH配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSSHConfig(SSHConfig $SSHConfig) 设置SSH配置
+ * @method void setSSHConfig(SSHConfig $SSHConfig) 设置<p>SSH配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method GooseFS getVolumeSourceGooseFS() 获取GooseFS存储配置
+ * @method GooseFS getVolumeSourceGooseFS() 获取<p>GooseFS存储配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVolumeSourceGooseFS(GooseFS $VolumeSourceGooseFS) 设置GooseFS存储配置
+ * @method void setVolumeSourceGooseFS(GooseFS $VolumeSourceGooseFS) 设置<p>GooseFS存储配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSubUin() 获取子用户ID
- * @method void setSubUin(string $SubUin) 设置子用户ID
- * @method string getResourceGroupInstanceId() 获取调度节点ID
- * @method void setResourceGroupInstanceId(string $ResourceGroupInstanceId) 设置调度节点ID
- * @method string getSubUinName() 获取子用户名称
- * @method void setSubUinName(string $SubUinName) 设置子用户名称
- * @method string getJobCreateTime() 获取任务实例创建时间
- * @method void setJobCreateTime(string $JobCreateTime) 设置任务实例创建时间
- * @method string getAppId() 获取Appid
+ * @method string getSubUin() 获取<p>子用户ID</p>
+ * @method void setSubUin(string $SubUin) 设置<p>子用户ID</p>
+ * @method string getResourceGroupInstanceId() 获取<p>调度节点ID</p>
+ * @method void setResourceGroupInstanceId(string $ResourceGroupInstanceId) 设置<p>调度节点ID</p>
+ * @method string getSubUinName() 获取<p>子用户名称</p>
+ * @method void setSubUinName(string $SubUinName) 设置<p>子用户名称</p>
+ * @method string getJobCreateTime() 获取<p>任务实例创建时间</p>
+ * @method void setJobCreateTime(string $JobCreateTime) 设置<p>任务实例创建时间</p>
+ * @method string getAppId() 获取<p>Appid</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppId(string $AppId) 设置Appid
+ * @method void setAppId(string $AppId) 设置<p>Appid</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDescription() 获取描述
+ * @method string getDescription() 获取<p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescription(string $Description) 设置描述
+ * @method void setDescription(string $Description) 设置<p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method OperatorInfo getLatestOperatorInfo() 获取<p>最后操作者信息</p>
+ * @method void setLatestOperatorInfo(OperatorInfo $LatestOperatorInfo) 设置<p>最后操作者信息</p>
  */
 class NotebookDetail extends AbstractModel
 {
     /**
-     * @var string notebook  ID
+     * @var string <p>notebook  ID</p>
      */
     public $Id;
 
     /**
-     * @var string notebook 名称
+     * @var string <p>notebook 名称</p>
      */
     public $Name;
 
     /**
-     * @var string 生命周期脚本
+     * @var string <p>生命周期脚本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LifecycleScriptId;
 
     /**
-     * @var string Pod-Name
+     * @var string <p>Pod-Name</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PodName;
 
     /**
-     * @var string Update-Time
+     * @var string <p>Update-Time</p>
      */
     public $UpdateTime;
 
     /**
-     * @var boolean 是否访问公网
+     * @var boolean <p>是否访问公网</p>
      */
     public $DirectInternetAccess;
 
     /**
-     * @var string 预付费专用资源组
+     * @var string <p>预付费专用资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupId;
 
     /**
-     * @var array 标签配置
+     * @var array <p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
-     * @var boolean 是否自动停止
+     * @var boolean <p>是否自动停止</p>
      */
     public $AutoStopping;
 
     /**
-     * @var array 其他GIT存储库，最多3个，单个
-长度不超过512字符
+     * @var array <p>其他GIT存储库，最多3个，单个<br>长度不超过512字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdditionalCodeRepoIds;
 
     /**
-     * @var integer 自动停止时间，单位小时
+     * @var integer <p>自动停止时间，单位小时</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutomaticStopTime;
 
     /**
-     * @var ResourceConf 资源配置
+     * @var ResourceConf <p>资源配置</p>
      */
     public $ResourceConf;
 
     /**
-     * @var string 默认GIT存储库，长度不超过512字符
+     * @var string <p>默认GIT存储库，长度不超过512字符</p>
      */
     public $DefaultCodeRepoId;
 
     /**
-     * @var string 训练输出
+     * @var string <p>训练输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
-     * @var boolean 是否上报日志
+     * @var boolean <p>是否上报日志</p>
      */
     public $LogEnable;
 
     /**
-     * @var LogConfig 日志配置
+     * @var LogConfig <p>日志配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogConfig;
 
     /**
-     * @var string VPC ID
+     * @var string <p>VPC ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
-     * @var string 子网ID
+     * @var string <p>子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
     /**
-     * @var string 任务状态
+     * @var string <p>任务状态</p>
      */
     public $Status;
 
     /**
-     * @var integer 运行时长
+     * @var integer <p>运行时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuntimeInSeconds;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 训练开始时间
+     * @var string <p>训练开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
-     * @var string 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+     * @var string <p>计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChargeStatus;
 
     /**
-     * @var boolean 是否ROOT权限
+     * @var boolean <p>是否ROOT权限</p>
      */
     public $RootAccess;
 
     /**
-     * @var array 计贺金额信息，eg:2.00元/小时
+     * @var array <p>计贺金额信息，eg:2.00元/小时</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillingInfos;
 
     /**
-     * @var integer 存储卷大小 （单位时GB，最小10GB，必须是10G的倍数）
+     * @var integer <p>存储卷大小 （单位时GB，最小10GB，必须是10G的倍数）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VolumeSizeInGB;
 
     /**
-     * @var string 失败原因
+     * @var string <p>失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailureReason;
 
     /**
-     * @var string 计算资源付费模式 (- PREPAID：预付费，即包年包月 - POSTPAID_BY_HOUR：按小时后付费)
+     * @var string <p>计算资源付费模式 (- PREPAID：预付费，即包年包月 - POSTPAID_BY_HOUR：按小时后付费)</p>
      */
     public $ChargeType;
 
     /**
-     * @var string 后付费资源规格说明
+     * @var string <p>后付费资源规格说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceTypeAlias;
 
     /**
-     * @var string 预付费资源组名称
+     * @var string <p>预付费资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupName;
 
     /**
-     * @var string 存储的类型。取值包含： 
-    FREE:        预付费的免费存储
-    CLOUD_PREMIUM： 高性能云硬盘
-    CLOUD_SSD： SSD云硬盘
-    CFS:     CFS存储，包含NFS和turbo
+     * @var string <p>存储的类型。取值包含：<br>    FREE:        预付费的免费存储<br>    CLOUD_PREMIUM： 高性能云硬盘<br>    CLOUD_SSD： SSD云硬盘<br>    CFS:     CFS存储，包含NFS和turbo</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VolumeSourceType;
 
     /**
-     * @var CFSConfig CFS存储的配置
+     * @var CFSConfig <p>CFS存储的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VolumeSourceCFS;
 
     /**
-     * @var array 数据配置
+     * @var array <p>数据配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataConfigs;
 
     /**
-     * @var string notebook 信息
+     * @var string <p>notebook 信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
-     * @var string 数据源来源，eg：WeData_HDFS
+     * @var string <p>数据源来源，eg：WeData_HDFS</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSource;
 
     /**
-     * @var ImageInfo 镜像信息
+     * @var ImageInfo <p>镜像信息</p>
      */
     public $ImageInfo;
 
     /**
-     * @var string 镜像类型
+     * @var string <p>镜像类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageType;
 
     /**
-     * @var SSHConfig SSH配置
+     * @var SSHConfig <p>SSH配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SSHConfig;
 
     /**
-     * @var GooseFS GooseFS存储配置
+     * @var GooseFS <p>GooseFS存储配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VolumeSourceGooseFS;
 
     /**
-     * @var string 子用户ID
+     * @var string <p>子用户ID</p>
      */
     public $SubUin;
 
     /**
-     * @var string 调度节点ID
+     * @var string <p>调度节点ID</p>
      */
     public $ResourceGroupInstanceId;
 
     /**
-     * @var string 子用户名称
+     * @var string <p>子用户名称</p>
      */
     public $SubUinName;
 
     /**
-     * @var string 任务实例创建时间
+     * @var string <p>任务实例创建时间</p>
      */
     public $JobCreateTime;
 
     /**
-     * @var string Appid
+     * @var string <p>Appid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
-     * @var string 描述
+     * @var string <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
-     * @param string $Id notebook  ID
-     * @param string $Name notebook 名称
-     * @param string $LifecycleScriptId 生命周期脚本
+     * @var OperatorInfo <p>最后操作者信息</p>
+     */
+    public $LatestOperatorInfo;
+
+    /**
+     * @param string $Id <p>notebook  ID</p>
+     * @param string $Name <p>notebook 名称</p>
+     * @param string $LifecycleScriptId <p>生命周期脚本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PodName Pod-Name
+     * @param string $PodName <p>Pod-Name</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime Update-Time
-     * @param boolean $DirectInternetAccess 是否访问公网
-     * @param string $ResourceGroupId 预付费专用资源组
+     * @param string $UpdateTime <p>Update-Time</p>
+     * @param boolean $DirectInternetAccess <p>是否访问公网</p>
+     * @param string $ResourceGroupId <p>预付费专用资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Tags 标签配置
+     * @param array $Tags <p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $AutoStopping 是否自动停止
-     * @param array $AdditionalCodeRepoIds 其他GIT存储库，最多3个，单个
-长度不超过512字符
+     * @param boolean $AutoStopping <p>是否自动停止</p>
+     * @param array $AdditionalCodeRepoIds <p>其他GIT存储库，最多3个，单个<br>长度不超过512字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AutomaticStopTime 自动停止时间，单位小时
+     * @param integer $AutomaticStopTime <p>自动停止时间，单位小时</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceConf $ResourceConf 资源配置
-     * @param string $DefaultCodeRepoId 默认GIT存储库，长度不超过512字符
-     * @param string $EndTime 训练输出
+     * @param ResourceConf $ResourceConf <p>资源配置</p>
+     * @param string $DefaultCodeRepoId <p>默认GIT存储库，长度不超过512字符</p>
+     * @param string $EndTime <p>训练输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $LogEnable 是否上报日志
-     * @param LogConfig $LogConfig 日志配置
+     * @param boolean $LogEnable <p>是否上报日志</p>
+     * @param LogConfig $LogConfig <p>日志配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VpcId VPC ID
+     * @param string $VpcId <p>VPC ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SubnetId 子网ID
+     * @param string $SubnetId <p>子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 任务状态
-     * @param integer $RuntimeInSeconds 运行时长
+     * @param string $Status <p>任务状态</p>
+     * @param integer $RuntimeInSeconds <p>运行时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间
-     * @param string $StartTime 训练开始时间
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $StartTime <p>训练开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ChargeStatus 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+     * @param string $ChargeStatus <p>计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $RootAccess 是否ROOT权限
-     * @param array $BillingInfos 计贺金额信息，eg:2.00元/小时
+     * @param boolean $RootAccess <p>是否ROOT权限</p>
+     * @param array $BillingInfos <p>计贺金额信息，eg:2.00元/小时</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $VolumeSizeInGB 存储卷大小 （单位时GB，最小10GB，必须是10G的倍数）
+     * @param integer $VolumeSizeInGB <p>存储卷大小 （单位时GB，最小10GB，必须是10G的倍数）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FailureReason 失败原因
+     * @param string $FailureReason <p>失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ChargeType 计算资源付费模式 (- PREPAID：预付费，即包年包月 - POSTPAID_BY_HOUR：按小时后付费)
-     * @param string $InstanceTypeAlias 后付费资源规格说明
+     * @param string $ChargeType <p>计算资源付费模式 (- PREPAID：预付费，即包年包月 - POSTPAID_BY_HOUR：按小时后付费)</p>
+     * @param string $InstanceTypeAlias <p>后付费资源规格说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResourceGroupName 预付费资源组名称
+     * @param string $ResourceGroupName <p>预付费资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VolumeSourceType 存储的类型。取值包含： 
-    FREE:        预付费的免费存储
-    CLOUD_PREMIUM： 高性能云硬盘
-    CLOUD_SSD： SSD云硬盘
-    CFS:     CFS存储，包含NFS和turbo
+     * @param string $VolumeSourceType <p>存储的类型。取值包含：<br>    FREE:        预付费的免费存储<br>    CLOUD_PREMIUM： 高性能云硬盘<br>    CLOUD_SSD： SSD云硬盘<br>    CFS:     CFS存储，包含NFS和turbo</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CFSConfig $VolumeSourceCFS CFS存储的配置
+     * @param CFSConfig $VolumeSourceCFS <p>CFS存储的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DataConfigs 数据配置
+     * @param array $DataConfigs <p>数据配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Message notebook 信息
+     * @param string $Message <p>notebook 信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DataSource 数据源来源，eg：WeData_HDFS
+     * @param string $DataSource <p>数据源来源，eg：WeData_HDFS</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageInfo $ImageInfo 镜像信息
-     * @param string $ImageType 镜像类型
+     * @param ImageInfo $ImageInfo <p>镜像信息</p>
+     * @param string $ImageType <p>镜像类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SSHConfig $SSHConfig SSH配置
+     * @param SSHConfig $SSHConfig <p>SSH配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GooseFS $VolumeSourceGooseFS GooseFS存储配置
+     * @param GooseFS $VolumeSourceGooseFS <p>GooseFS存储配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SubUin 子用户ID
-     * @param string $ResourceGroupInstanceId 调度节点ID
-     * @param string $SubUinName 子用户名称
-     * @param string $JobCreateTime 任务实例创建时间
-     * @param string $AppId Appid
+     * @param string $SubUin <p>子用户ID</p>
+     * @param string $ResourceGroupInstanceId <p>调度节点ID</p>
+     * @param string $SubUinName <p>子用户名称</p>
+     * @param string $JobCreateTime <p>任务实例创建时间</p>
+     * @param string $AppId <p>Appid</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Description 描述
+     * @param string $Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperatorInfo $LatestOperatorInfo <p>最后操作者信息</p>
      */
     function __construct()
     {
@@ -724,6 +712,11 @@ class NotebookDetail extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("LatestOperatorInfo",$param) and $param["LatestOperatorInfo"] !== null) {
+            $this->LatestOperatorInfo = new OperatorInfo();
+            $this->LatestOperatorInfo->deserialize($param["LatestOperatorInfo"]);
         }
     }
 }

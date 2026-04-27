@@ -20,74 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSubDomain请求参数结构体
  *
- * @method integer getCustomerId() 获取企业Id
- * @method void setCustomerId(integer $CustomerId) 设置企业Id
- * @method string getSubDomain() 获取子域名
- * @method void setSubDomain(string $SubDomain) 设置子域名
- * @method string getIp() 获取Ip
- * @method void setIp(string $Ip) 设置Ip
- * @method string getCountry() 获取国家
- * @method void setCountry(string $Country) 设置国家
- * @method string getProvince() 获取省
- * @method void setProvince(string $Province) 设置省
- * @method string getCity() 获取城市
- * @method void setCity(string $City) 设置城市
- * @method string getIsp() 获取Isp
- * @method void setIsp(string $Isp) 设置Isp
- * @method string getEnterpriseUid() 获取子公司
- * @method void setEnterpriseUid(string $EnterpriseUid) 设置子公司
+ * @method integer getCustomerId() 获取<p>企业Id</p>
+ * @method void setCustomerId(integer $CustomerId) 设置<p>企业Id</p>
+ * @method string getSubDomain() 获取<p>子域名</p>
+ * @method void setSubDomain(string $SubDomain) 设置<p>子域名</p>
+ * @method string getIp() 获取<p>Ip</p>
+ * @method void setIp(string $Ip) 设置<p>Ip</p>
+ * @method string getCountry() 获取<p>国家</p>
+ * @method void setCountry(string $Country) 设置<p>国家</p>
+ * @method string getProvince() 获取<p>省</p>
+ * @method void setProvince(string $Province) 设置<p>省</p>
+ * @method string getCity() 获取<p>城市</p>
+ * @method void setCity(string $City) 设置<p>城市</p>
+ * @method string getIsp() 获取<p>Isp</p>
+ * @method void setIsp(string $Isp) 设置<p>Isp</p>
+ * @method string getEnterpriseUid() 获取<p>子公司</p>
+ * @method void setEnterpriseUid(string $EnterpriseUid) 设置<p>子公司</p>
+ * @method string getDnsType() 获取<p>DNS解析类型。A、AAAA、CNAME等</p>
+ * @method void setDnsType(string $DnsType) 设置<p>DNS解析类型。A、AAAA、CNAME等</p>
+ * @method string getDnsValue() 获取<p>DNS解析值。域名或者ip</p>
+ * @method void setDnsValue(string $DnsValue) 设置<p>DNS解析值。域名或者ip</p>
  */
 class CreateSubDomainRequest extends AbstractModel
 {
     /**
-     * @var integer 企业Id
+     * @var integer <p>企业Id</p>
      */
     public $CustomerId;
 
     /**
-     * @var string 子域名
+     * @var string <p>子域名</p>
      */
     public $SubDomain;
 
     /**
-     * @var string Ip
+     * @var string <p>Ip</p>
      */
     public $Ip;
 
     /**
-     * @var string 国家
+     * @var string <p>国家</p>
      */
     public $Country;
 
     /**
-     * @var string 省
+     * @var string <p>省</p>
      */
     public $Province;
 
     /**
-     * @var string 城市
+     * @var string <p>城市</p>
      */
     public $City;
 
     /**
-     * @var string Isp
+     * @var string <p>Isp</p>
      */
     public $Isp;
 
     /**
-     * @var string 子公司
+     * @var string <p>子公司</p>
      */
     public $EnterpriseUid;
 
     /**
-     * @param integer $CustomerId 企业Id
-     * @param string $SubDomain 子域名
-     * @param string $Ip Ip
-     * @param string $Country 国家
-     * @param string $Province 省
-     * @param string $City 城市
-     * @param string $Isp Isp
-     * @param string $EnterpriseUid 子公司
+     * @var string <p>DNS解析类型。A、AAAA、CNAME等</p>
+     */
+    public $DnsType;
+
+    /**
+     * @var string <p>DNS解析值。域名或者ip</p>
+     */
+    public $DnsValue;
+
+    /**
+     * @param integer $CustomerId <p>企业Id</p>
+     * @param string $SubDomain <p>子域名</p>
+     * @param string $Ip <p>Ip</p>
+     * @param string $Country <p>国家</p>
+     * @param string $Province <p>省</p>
+     * @param string $City <p>城市</p>
+     * @param string $Isp <p>Isp</p>
+     * @param string $EnterpriseUid <p>子公司</p>
+     * @param string $DnsType <p>DNS解析类型。A、AAAA、CNAME等</p>
+     * @param string $DnsValue <p>DNS解析值。域名或者ip</p>
      */
     function __construct()
     {
@@ -132,6 +148,14 @@ class CreateSubDomainRequest extends AbstractModel
 
         if (array_key_exists("EnterpriseUid",$param) and $param["EnterpriseUid"] !== null) {
             $this->EnterpriseUid = $param["EnterpriseUid"];
+        }
+
+        if (array_key_exists("DnsType",$param) and $param["DnsType"] !== null) {
+            $this->DnsType = $param["DnsType"];
+        }
+
+        if (array_key_exists("DnsValue",$param) and $param["DnsValue"] !== null) {
+            $this->DnsValue = $param["DnsValue"];
         }
     }
 }

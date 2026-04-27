@@ -20,450 +20,202 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 智能字幕模板详情
  *
- * @method integer getDefinition() 获取智能字幕模板唯一标识
- * @method void setDefinition(integer $Definition) 设置智能字幕模板唯一标识
- * @method string getName() 获取智能字幕模板名称
+ * @method integer getDefinition() 获取<p>智能字幕模板唯一标识</p>
+ * @method void setDefinition(integer $Definition) 设置<p>智能字幕模板唯一标识</p>
+ * @method string getName() 获取<p>智能字幕模板名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置智能字幕模板名称
+ * @method void setName(string $Name) 设置<p>智能字幕模板名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getComment() 获取智能字幕模板描述信息
+ * @method string getComment() 获取<p>智能字幕模板描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setComment(string $Comment) 设置智能字幕模板描述信息
+ * @method void setComment(string $Comment) 设置<p>智能字幕模板描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getType() 获取模板类型，取值范围：
-* Preset：系统预置模板；
-* Custom：用户自定义模板。
+ * @method string getType() 获取<p>模板类型，取值范围：</p><ul><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置模板类型，取值范围：
-* Preset：系统预置模板；
-* Custom：用户自定义模板。
+ * @method void setType(string $Type) 设置<p>模板类型，取值范围：</p><ul><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AsrHotWordsConfigure getAsrHotWordsConfigure() 获取ASR热词库参数
+ * @method AsrHotWordsConfigure getAsrHotWordsConfigure() 获取<p>ASR热词库参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAsrHotWordsConfigure(AsrHotWordsConfigure $AsrHotWordsConfigure) 设置ASR热词库参数
+ * @method void setAsrHotWordsConfigure(AsrHotWordsConfigure $AsrHotWordsConfigure) 设置<p>ASR热词库参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAsrHotWordsLibraryName() 获取模板关联热词库名称
+ * @method string getAsrHotWordsLibraryName() 获取<p>模板关联热词库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAsrHotWordsLibraryName(string $AsrHotWordsLibraryName) 设置模板关联热词库名称
+ * @method void setAsrHotWordsLibraryName(string $AsrHotWordsLibraryName) 设置<p>模板关联热词库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVideoSrcLanguage() 获取智能字幕视频源语言列表：
-
-`zh`：简体中文
-`yue`：中文粵语
-`zh-PY`：中英粤
-`zh_medical`：中文医疗
-`zh_dialect`：中文方言
-`prime_zh`：中英方言
-`zh_en`：中英
-`en`：英语
-`ja`：日语
-`ko`：韩语
-`fr`：法语
-`es`：西班牙语
-`it`：意大利语
-`de`：德语
-`tr`：土耳其语
-`ru`：俄语
-`pt`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`vi`：越南语
-`id`：印度尼西亚语
-`ms`：马来语
-`th`：泰语
-`ar`：阿拉伯语
-`hi`：印地语
-`fil`：菲律宾语
-`auto`：自动识别（仅在纯字幕翻译中支持）
- * @method void setVideoSrcLanguage(string $VideoSrcLanguage) 设置智能字幕视频源语言列表：
-
-`zh`：简体中文
-`yue`：中文粵语
-`zh-PY`：中英粤
-`zh_medical`：中文医疗
-`zh_dialect`：中文方言
-`prime_zh`：中英方言
-`zh_en`：中英
-`en`：英语
-`ja`：日语
-`ko`：韩语
-`fr`：法语
-`es`：西班牙语
-`it`：意大利语
-`de`：德语
-`tr`：土耳其语
-`ru`：俄语
-`pt`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`vi`：越南语
-`id`：印度尼西亚语
-`ms`：马来语
-`th`：泰语
-`ar`：阿拉伯语
-`hi`：印地语
-`fil`：菲律宾语
-`auto`：自动识别（仅在纯字幕翻译中支持）
- * @method string getSubtitleFormat() 获取智能字幕文件格式
-- vtt: WebVTT 格式
-- srt: SRT格式
-- original：与源字幕文件一致（用于纯字幕翻译模板）
-- 不填或填空：不生成字幕文件
+ * @method string getVideoSrcLanguage() 获取<p>智能字幕视频源语言列表：</p><p><code>zh</code>：简体中文<br><code>yue</code>：中文粵语<br><code>zh-PY</code>：中英粤<br><code>zh_medical</code>：中文医疗<br><code>zh_dialect</code>：中文方言<br><code>prime_zh</code>：中英方言<br><code>zh_en</code>：中英<br><code>en</code>：英语<br><code>ja</code>：日语<br><code>ko</code>：韩语<br><code>fr</code>：法语<br><code>es</code>：西班牙语<br><code>it</code>：意大利语<br><code>de</code>：德语<br><code>tr</code>：土耳其语<br><code>ru</code>：俄语<br><code>pt</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>vi</code>：越南语<br><code>id</code>：印度尼西亚语<br><code>ms</code>：马来语<br><code>th</code>：泰语<br><code>ar</code>：阿拉伯语<br><code>hi</code>：印地语<br><code>fil</code>：菲律宾语<br><code>auto</code>：自动识别（仅在纯字幕翻译中支持）</p>
+ * @method void setVideoSrcLanguage(string $VideoSrcLanguage) 设置<p>智能字幕视频源语言列表：</p><p><code>zh</code>：简体中文<br><code>yue</code>：中文粵语<br><code>zh-PY</code>：中英粤<br><code>zh_medical</code>：中文医疗<br><code>zh_dialect</code>：中文方言<br><code>prime_zh</code>：中英方言<br><code>zh_en</code>：中英<br><code>en</code>：英语<br><code>ja</code>：日语<br><code>ko</code>：韩语<br><code>fr</code>：法语<br><code>es</code>：西班牙语<br><code>it</code>：意大利语<br><code>de</code>：德语<br><code>tr</code>：土耳其语<br><code>ru</code>：俄语<br><code>pt</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>vi</code>：越南语<br><code>id</code>：印度尼西亚语<br><code>ms</code>：马来语<br><code>th</code>：泰语<br><code>ar</code>：阿拉伯语<br><code>hi</code>：印地语<br><code>fil</code>：菲律宾语<br><code>auto</code>：自动识别（仅在纯字幕翻译中支持）</p>
+ * @method string getSubtitleFormat() 获取<p>智能字幕文件格式</p><ul><li>vtt: WebVTT 格式</li><li>srt: SRT格式</li><li>original：与源字幕文件一致（用于纯字幕翻译模板）</li><li>不填或填空：不生成字幕文件</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubtitleFormat(string $SubtitleFormat) 设置智能字幕文件格式
-- vtt: WebVTT 格式
-- srt: SRT格式
-- original：与源字幕文件一致（用于纯字幕翻译模板）
-- 不填或填空：不生成字幕文件
+ * @method void setSubtitleFormat(string $SubtitleFormat) 设置<p>智能字幕文件格式</p><ul><li>vtt: WebVTT 格式</li><li>srt: SRT格式</li><li>original：与源字幕文件一致（用于纯字幕翻译模板）</li><li>不填或填空：不生成字幕文件</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSubtitleType() 获取智能字幕字幕语言类型
-0: 源语言
-1: 翻译语言
-2: 源语言+翻译语言
-当TranslateSwitch为OFF时仅支持取0
-当TranslateSwitch为ON时仅支持取1或2
- * @method void setSubtitleType(integer $SubtitleType) 设置智能字幕字幕语言类型
-0: 源语言
-1: 翻译语言
-2: 源语言+翻译语言
-当TranslateSwitch为OFF时仅支持取0
-当TranslateSwitch为ON时仅支持取1或2
- * @method string getTranslateSwitch() 获取字幕翻译开关
-ON: 开启翻译
-OFF: 关闭翻译
+ * @method integer getSubtitleType() 获取<p>智能字幕字幕语言类型<br>0: 源语言<br>1: 翻译语言<br>2: 源语言+翻译语言<br>当TranslateSwitch为OFF时仅支持取0<br>当TranslateSwitch为ON时仅支持取1或2</p>
+ * @method void setSubtitleType(integer $SubtitleType) 设置<p>智能字幕字幕语言类型<br>0: 源语言<br>1: 翻译语言<br>2: 源语言+翻译语言<br>当TranslateSwitch为OFF时仅支持取0<br>当TranslateSwitch为ON时仅支持取1或2</p>
+ * @method string getTranslateSwitch() 获取<p>字幕翻译开关<br>ON: 开启翻译<br>OFF: 关闭翻译</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTranslateSwitch(string $TranslateSwitch) 设置字幕翻译开关
-ON: 开启翻译
-OFF: 关闭翻译
+ * @method void setTranslateSwitch(string $TranslateSwitch) 设置<p>字幕翻译开关<br>ON: 开启翻译<br>OFF: 关闭翻译</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTranslateDstLanguage() 获取字幕翻译目标语言
-当TranslateSwitch为ON的时候生效
-`zh`：简体中文
-`zh-TW`：繁体中文
-`en`：英语
-`ja`：日语
-`ko`：韩语
-`fr`：法语
-`es`：西班牙语 
-`it`：意大利语
-`de`：德语
-`tr`：土耳其语
-`ru`：俄语
-`pt`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`vi`：越南语
-`id`：印度尼西亚语 
-`ms`：马来语
-`th`：泰语
-`ar`：阿拉伯语
-`hi`：印地语
-`fil`：菲律宾语
-
-
-**注意**：多语言方式，则使用 `/` 分割，如：`en/ja`，表示英语和日语。
-
+ * @method string getTranslateDstLanguage() 获取<p>字幕翻译目标语言<br>当TranslateSwitch为ON的时候生效<br><code>zh</code>：简体中文<br><code>zh-TW</code>：繁体中文<br><code>en</code>：英语<br><code>ja</code>：日语<br><code>ko</code>：韩语<br><code>fr</code>：法语<br><code>es</code>：西班牙语<br><code>it</code>：意大利语<br><code>de</code>：德语<br><code>tr</code>：土耳其语<br><code>ru</code>：俄语<br><code>pt</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>vi</code>：越南语<br><code>id</code>：印度尼西亚语<br><code>ms</code>：马来语<br><code>th</code>：泰语<br><code>ar</code>：阿拉伯语<br><code>hi</code>：印地语<br><code>fil</code>：菲律宾语</p><p><strong>注意</strong>：多语言方式，则使用 <code>/</code> 分割，如：<code>en/ja</code>，表示英语和日语。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTranslateDstLanguage(string $TranslateDstLanguage) 设置字幕翻译目标语言
-当TranslateSwitch为ON的时候生效
-`zh`：简体中文
-`zh-TW`：繁体中文
-`en`：英语
-`ja`：日语
-`ko`：韩语
-`fr`：法语
-`es`：西班牙语 
-`it`：意大利语
-`de`：德语
-`tr`：土耳其语
-`ru`：俄语
-`pt`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`vi`：越南语
-`id`：印度尼西亚语 
-`ms`：马来语
-`th`：泰语
-`ar`：阿拉伯语
-`hi`：印地语
-`fil`：菲律宾语
-
-
-**注意**：多语言方式，则使用 `/` 分割，如：`en/ja`，表示英语和日语。
-
+ * @method void setTranslateDstLanguage(string $TranslateDstLanguage) 设置<p>字幕翻译目标语言<br>当TranslateSwitch为ON的时候生效<br><code>zh</code>：简体中文<br><code>zh-TW</code>：繁体中文<br><code>en</code>：英语<br><code>ja</code>：日语<br><code>ko</code>：韩语<br><code>fr</code>：法语<br><code>es</code>：西班牙语<br><code>it</code>：意大利语<br><code>de</code>：德语<br><code>tr</code>：土耳其语<br><code>ru</code>：俄语<br><code>pt</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>vi</code>：越南语<br><code>id</code>：印度尼西亚语<br><code>ms</code>：马来语<br><code>th</code>：泰语<br><code>ar</code>：阿拉伯语<br><code>hi</code>：印地语<br><code>fil</code>：菲律宾语</p><p><strong>注意</strong>：多语言方式，则使用 <code>/</code> 分割，如：<code>en/ja</code>，表示英语和日语。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
- * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
- * @method string getUpdateTime() 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
- * @method void setUpdateTime(string $UpdateTime) 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
- * @method string getAliasName() 获取智能字幕预设模板别名
+ * @method string getCreateTime() 获取<p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
+ * @method string getUpdateTime() 获取<p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
+ * @method string getAliasName() 获取<p>智能字幕预设模板别名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAliasName(string $AliasName) 设置智能字幕预设模板别名
+ * @method void setAliasName(string $AliasName) 设置<p>智能字幕预设模板别名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getProcessType() 获取字幕处理类型：
-- 0：ASR识别字幕
-- 1：纯字幕翻译
-- 2:  OCR识别字幕
- * @method void setProcessType(integer $ProcessType) 设置字幕处理类型：
-- 0：ASR识别字幕
-- 1：纯字幕翻译
-- 2:  OCR识别字幕
- * @method SelectingSubtitleAreasConfig getSelectingSubtitleAreasConfig() 获取字幕OCR提取框选区域配置信息
+ * @method integer getProcessType() 获取<p>字幕处理类型：</p><ul><li>0：ASR识别字幕</li><li>1：纯字幕翻译</li><li>2:  OCR识别字幕</li></ul>
+ * @method void setProcessType(integer $ProcessType) 设置<p>字幕处理类型：</p><ul><li>0：ASR识别字幕</li><li>1：纯字幕翻译</li><li>2:  OCR识别字幕</li></ul>
+ * @method SelectingSubtitleAreasConfig getSelectingSubtitleAreasConfig() 获取<p>字幕OCR提取框选区域配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSelectingSubtitleAreasConfig(SelectingSubtitleAreasConfig $SelectingSubtitleAreasConfig) 设置字幕OCR提取框选区域配置信息
+ * @method void setSelectingSubtitleAreasConfig(SelectingSubtitleAreasConfig $SelectingSubtitleAreasConfig) 设置<p>字幕OCR提取框选区域配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSubtitleEmbedId() 获取<p>字幕压制模板id</p>
+ * @method void setSubtitleEmbedId(integer $SubtitleEmbedId) 设置<p>字幕压制模板id</p>
+ * @method integer getSpeakerMode() 获取<p>说话人识别模式，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别；<br>默认值：0</p>
+ * @method void setSpeakerMode(integer $SpeakerMode) 设置<p>说话人识别模式，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别；<br>默认值：0</p>
+ * @method integer getSpeakerLabel() 获取<p>说话人识别输出到字幕文件，可选值：<br>0：表示不输出到字幕文件；<br>1：表示输出到vtt字幕文件<br>注意：使用此参数SpeakerMode的值不能为0；<br>默认值：0</p>
+ * @method void setSpeakerLabel(integer $SpeakerLabel) 设置<p>说话人识别输出到字幕文件，可选值：<br>0：表示不输出到字幕文件；<br>1：表示输出到vtt字幕文件<br>注意：使用此参数SpeakerMode的值不能为0；<br>默认值：0</p>
  */
 class SmartSubtitleTemplateItem extends AbstractModel
 {
     /**
-     * @var integer 智能字幕模板唯一标识
+     * @var integer <p>智能字幕模板唯一标识</p>
      */
     public $Definition;
 
     /**
-     * @var string 智能字幕模板名称
+     * @var string <p>智能字幕模板名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var string 智能字幕模板描述信息
+     * @var string <p>智能字幕模板描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Comment;
 
     /**
-     * @var string 模板类型，取值范围：
-* Preset：系统预置模板；
-* Custom：用户自定义模板。
+     * @var string <p>模板类型，取值范围：</p><ul><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
-     * @var AsrHotWordsConfigure ASR热词库参数
+     * @var AsrHotWordsConfigure <p>ASR热词库参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsrHotWordsConfigure;
 
     /**
-     * @var string 模板关联热词库名称
+     * @var string <p>模板关联热词库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsrHotWordsLibraryName;
 
     /**
-     * @var string 智能字幕视频源语言列表：
-
-`zh`：简体中文
-`yue`：中文粵语
-`zh-PY`：中英粤
-`zh_medical`：中文医疗
-`zh_dialect`：中文方言
-`prime_zh`：中英方言
-`zh_en`：中英
-`en`：英语
-`ja`：日语
-`ko`：韩语
-`fr`：法语
-`es`：西班牙语
-`it`：意大利语
-`de`：德语
-`tr`：土耳其语
-`ru`：俄语
-`pt`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`vi`：越南语
-`id`：印度尼西亚语
-`ms`：马来语
-`th`：泰语
-`ar`：阿拉伯语
-`hi`：印地语
-`fil`：菲律宾语
-`auto`：自动识别（仅在纯字幕翻译中支持）
+     * @var string <p>智能字幕视频源语言列表：</p><p><code>zh</code>：简体中文<br><code>yue</code>：中文粵语<br><code>zh-PY</code>：中英粤<br><code>zh_medical</code>：中文医疗<br><code>zh_dialect</code>：中文方言<br><code>prime_zh</code>：中英方言<br><code>zh_en</code>：中英<br><code>en</code>：英语<br><code>ja</code>：日语<br><code>ko</code>：韩语<br><code>fr</code>：法语<br><code>es</code>：西班牙语<br><code>it</code>：意大利语<br><code>de</code>：德语<br><code>tr</code>：土耳其语<br><code>ru</code>：俄语<br><code>pt</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>vi</code>：越南语<br><code>id</code>：印度尼西亚语<br><code>ms</code>：马来语<br><code>th</code>：泰语<br><code>ar</code>：阿拉伯语<br><code>hi</code>：印地语<br><code>fil</code>：菲律宾语<br><code>auto</code>：自动识别（仅在纯字幕翻译中支持）</p>
      */
     public $VideoSrcLanguage;
 
     /**
-     * @var string 智能字幕文件格式
-- vtt: WebVTT 格式
-- srt: SRT格式
-- original：与源字幕文件一致（用于纯字幕翻译模板）
-- 不填或填空：不生成字幕文件
+     * @var string <p>智能字幕文件格式</p><ul><li>vtt: WebVTT 格式</li><li>srt: SRT格式</li><li>original：与源字幕文件一致（用于纯字幕翻译模板）</li><li>不填或填空：不生成字幕文件</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubtitleFormat;
 
     /**
-     * @var integer 智能字幕字幕语言类型
-0: 源语言
-1: 翻译语言
-2: 源语言+翻译语言
-当TranslateSwitch为OFF时仅支持取0
-当TranslateSwitch为ON时仅支持取1或2
+     * @var integer <p>智能字幕字幕语言类型<br>0: 源语言<br>1: 翻译语言<br>2: 源语言+翻译语言<br>当TranslateSwitch为OFF时仅支持取0<br>当TranslateSwitch为ON时仅支持取1或2</p>
      */
     public $SubtitleType;
 
     /**
-     * @var string 字幕翻译开关
-ON: 开启翻译
-OFF: 关闭翻译
+     * @var string <p>字幕翻译开关<br>ON: 开启翻译<br>OFF: 关闭翻译</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TranslateSwitch;
 
     /**
-     * @var string 字幕翻译目标语言
-当TranslateSwitch为ON的时候生效
-`zh`：简体中文
-`zh-TW`：繁体中文
-`en`：英语
-`ja`：日语
-`ko`：韩语
-`fr`：法语
-`es`：西班牙语 
-`it`：意大利语
-`de`：德语
-`tr`：土耳其语
-`ru`：俄语
-`pt`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`vi`：越南语
-`id`：印度尼西亚语 
-`ms`：马来语
-`th`：泰语
-`ar`：阿拉伯语
-`hi`：印地语
-`fil`：菲律宾语
-
-
-**注意**：多语言方式，则使用 `/` 分割，如：`en/ja`，表示英语和日语。
-
+     * @var string <p>字幕翻译目标语言<br>当TranslateSwitch为ON的时候生效<br><code>zh</code>：简体中文<br><code>zh-TW</code>：繁体中文<br><code>en</code>：英语<br><code>ja</code>：日语<br><code>ko</code>：韩语<br><code>fr</code>：法语<br><code>es</code>：西班牙语<br><code>it</code>：意大利语<br><code>de</code>：德语<br><code>tr</code>：土耳其语<br><code>ru</code>：俄语<br><code>pt</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>vi</code>：越南语<br><code>id</code>：印度尼西亚语<br><code>ms</code>：马来语<br><code>th</code>：泰语<br><code>ar</code>：阿拉伯语<br><code>hi</code>：印地语<br><code>fil</code>：菲律宾语</p><p><strong>注意</strong>：多语言方式，则使用 <code>/</code> 分割，如：<code>en/ja</code>，表示英语和日语。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TranslateDstLanguage;
 
     /**
-     * @var string 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * @var string <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * @var string <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 智能字幕预设模板别名
+     * @var string <p>智能字幕预设模板别名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AliasName;
 
     /**
-     * @var integer 字幕处理类型：
-- 0：ASR识别字幕
-- 1：纯字幕翻译
-- 2:  OCR识别字幕
+     * @var integer <p>字幕处理类型：</p><ul><li>0：ASR识别字幕</li><li>1：纯字幕翻译</li><li>2:  OCR识别字幕</li></ul>
      */
     public $ProcessType;
 
     /**
-     * @var SelectingSubtitleAreasConfig 字幕OCR提取框选区域配置信息
+     * @var SelectingSubtitleAreasConfig <p>字幕OCR提取框选区域配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SelectingSubtitleAreasConfig;
 
     /**
-     * @param integer $Definition 智能字幕模板唯一标识
-     * @param string $Name 智能字幕模板名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Comment 智能字幕模板描述信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Type 模板类型，取值范围：
-* Preset：系统预置模板；
-* Custom：用户自定义模板。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AsrHotWordsConfigure $AsrHotWordsConfigure ASR热词库参数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AsrHotWordsLibraryName 模板关联热词库名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VideoSrcLanguage 智能字幕视频源语言列表：
+     * @var integer <p>字幕压制模板id</p>
+     */
+    public $SubtitleEmbedId;
 
-`zh`：简体中文
-`yue`：中文粵语
-`zh-PY`：中英粤
-`zh_medical`：中文医疗
-`zh_dialect`：中文方言
-`prime_zh`：中英方言
-`zh_en`：中英
-`en`：英语
-`ja`：日语
-`ko`：韩语
-`fr`：法语
-`es`：西班牙语
-`it`：意大利语
-`de`：德语
-`tr`：土耳其语
-`ru`：俄语
-`pt`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`vi`：越南语
-`id`：印度尼西亚语
-`ms`：马来语
-`th`：泰语
-`ar`：阿拉伯语
-`hi`：印地语
-`fil`：菲律宾语
-`auto`：自动识别（仅在纯字幕翻译中支持）
-     * @param string $SubtitleFormat 智能字幕文件格式
-- vtt: WebVTT 格式
-- srt: SRT格式
-- original：与源字幕文件一致（用于纯字幕翻译模板）
-- 不填或填空：不生成字幕文件
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SubtitleType 智能字幕字幕语言类型
-0: 源语言
-1: 翻译语言
-2: 源语言+翻译语言
-当TranslateSwitch为OFF时仅支持取0
-当TranslateSwitch为ON时仅支持取1或2
-     * @param string $TranslateSwitch 字幕翻译开关
-ON: 开启翻译
-OFF: 关闭翻译
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TranslateDstLanguage 字幕翻译目标语言
-当TranslateSwitch为ON的时候生效
-`zh`：简体中文
-`zh-TW`：繁体中文
-`en`：英语
-`ja`：日语
-`ko`：韩语
-`fr`：法语
-`es`：西班牙语 
-`it`：意大利语
-`de`：德语
-`tr`：土耳其语
-`ru`：俄语
-`pt`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`vi`：越南语
-`id`：印度尼西亚语 
-`ms`：马来语
-`th`：泰语
-`ar`：阿拉伯语
-`hi`：印地语
-`fil`：菲律宾语
+    /**
+     * @var integer <p>说话人识别模式，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别；<br>默认值：0</p>
+     */
+    public $SpeakerMode;
 
+    /**
+     * @var integer <p>说话人识别输出到字幕文件，可选值：<br>0：表示不输出到字幕文件；<br>1：表示输出到vtt字幕文件<br>注意：使用此参数SpeakerMode的值不能为0；<br>默认值：0</p>
+     */
+    public $SpeakerLabel;
 
-**注意**：多语言方式，则使用 `/` 分割，如：`en/ja`，表示英语和日语。
-
+    /**
+     * @param integer $Definition <p>智能字幕模板唯一标识</p>
+     * @param string $Name <p>智能字幕模板名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-     * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-     * @param string $AliasName 智能字幕预设模板别名
+     * @param string $Comment <p>智能字幕模板描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ProcessType 字幕处理类型：
-- 0：ASR识别字幕
-- 1：纯字幕翻译
-- 2:  OCR识别字幕
-     * @param SelectingSubtitleAreasConfig $SelectingSubtitleAreasConfig 字幕OCR提取框选区域配置信息
+     * @param string $Type <p>模板类型，取值范围：</p><ul><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param AsrHotWordsConfigure $AsrHotWordsConfigure <p>ASR热词库参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AsrHotWordsLibraryName <p>模板关联热词库名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VideoSrcLanguage <p>智能字幕视频源语言列表：</p><p><code>zh</code>：简体中文<br><code>yue</code>：中文粵语<br><code>zh-PY</code>：中英粤<br><code>zh_medical</code>：中文医疗<br><code>zh_dialect</code>：中文方言<br><code>prime_zh</code>：中英方言<br><code>zh_en</code>：中英<br><code>en</code>：英语<br><code>ja</code>：日语<br><code>ko</code>：韩语<br><code>fr</code>：法语<br><code>es</code>：西班牙语<br><code>it</code>：意大利语<br><code>de</code>：德语<br><code>tr</code>：土耳其语<br><code>ru</code>：俄语<br><code>pt</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>vi</code>：越南语<br><code>id</code>：印度尼西亚语<br><code>ms</code>：马来语<br><code>th</code>：泰语<br><code>ar</code>：阿拉伯语<br><code>hi</code>：印地语<br><code>fil</code>：菲律宾语<br><code>auto</code>：自动识别（仅在纯字幕翻译中支持）</p>
+     * @param string $SubtitleFormat <p>智能字幕文件格式</p><ul><li>vtt: WebVTT 格式</li><li>srt: SRT格式</li><li>original：与源字幕文件一致（用于纯字幕翻译模板）</li><li>不填或填空：不生成字幕文件</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SubtitleType <p>智能字幕字幕语言类型<br>0: 源语言<br>1: 翻译语言<br>2: 源语言+翻译语言<br>当TranslateSwitch为OFF时仅支持取0<br>当TranslateSwitch为ON时仅支持取1或2</p>
+     * @param string $TranslateSwitch <p>字幕翻译开关<br>ON: 开启翻译<br>OFF: 关闭翻译</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TranslateDstLanguage <p>字幕翻译目标语言<br>当TranslateSwitch为ON的时候生效<br><code>zh</code>：简体中文<br><code>zh-TW</code>：繁体中文<br><code>en</code>：英语<br><code>ja</code>：日语<br><code>ko</code>：韩语<br><code>fr</code>：法语<br><code>es</code>：西班牙语<br><code>it</code>：意大利语<br><code>de</code>：德语<br><code>tr</code>：土耳其语<br><code>ru</code>：俄语<br><code>pt</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>vi</code>：越南语<br><code>id</code>：印度尼西亚语<br><code>ms</code>：马来语<br><code>th</code>：泰语<br><code>ar</code>：阿拉伯语<br><code>hi</code>：印地语<br><code>fil</code>：菲律宾语</p><p><strong>注意</strong>：多语言方式，则使用 <code>/</code> 分割，如：<code>en/ja</code>，表示英语和日语。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateTime <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
+     * @param string $UpdateTime <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
+     * @param string $AliasName <p>智能字幕预设模板别名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ProcessType <p>字幕处理类型：</p><ul><li>0：ASR识别字幕</li><li>1：纯字幕翻译</li><li>2:  OCR识别字幕</li></ul>
+     * @param SelectingSubtitleAreasConfig $SelectingSubtitleAreasConfig <p>字幕OCR提取框选区域配置信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SubtitleEmbedId <p>字幕压制模板id</p>
+     * @param integer $SpeakerMode <p>说话人识别模式，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别；<br>默认值：0</p>
+     * @param integer $SpeakerLabel <p>说话人识别输出到字幕文件，可选值：<br>0：表示不输出到字幕文件；<br>1：表示输出到vtt字幕文件<br>注意：使用此参数SpeakerMode的值不能为0；<br>默认值：0</p>
      */
     function __construct()
     {
@@ -542,6 +294,18 @@ OFF: 关闭翻译
         if (array_key_exists("SelectingSubtitleAreasConfig",$param) and $param["SelectingSubtitleAreasConfig"] !== null) {
             $this->SelectingSubtitleAreasConfig = new SelectingSubtitleAreasConfig();
             $this->SelectingSubtitleAreasConfig->deserialize($param["SelectingSubtitleAreasConfig"]);
+        }
+
+        if (array_key_exists("SubtitleEmbedId",$param) and $param["SubtitleEmbedId"] !== null) {
+            $this->SubtitleEmbedId = $param["SubtitleEmbedId"];
+        }
+
+        if (array_key_exists("SpeakerMode",$param) and $param["SpeakerMode"] !== null) {
+            $this->SpeakerMode = $param["SpeakerMode"];
+        }
+
+        if (array_key_exists("SpeakerLabel",$param) and $param["SpeakerLabel"] !== null) {
+            $this->SpeakerLabel = $param["SpeakerLabel"];
         }
     }
 }

@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListQA返回参数结构体
  *
- * @method string getTotal() 获取问答数量
- * @method void setTotal(string $Total) 设置问答数量
- * @method string getWaitVerifyTotal() 获取待校验问答数量
- * @method void setWaitVerifyTotal(string $WaitVerifyTotal) 设置待校验问答数量
- * @method string getNotAcceptedTotal() 获取未采纳问答数量
- * @method void setNotAcceptedTotal(string $NotAcceptedTotal) 设置未采纳问答数量
- * @method string getAcceptedTotal() 获取已采纳问答数量
- * @method void setAcceptedTotal(string $AcceptedTotal) 设置已采纳问答数量
- * @method integer getPageNumber() 获取页码
- * @method void setPageNumber(integer $PageNumber) 设置页码
- * @method array getList() 获取问答详情
- * @method void setList(array $List) 设置问答详情
+ * @method string getTotal() 获取<p>问答数量</p>
+ * @method void setTotal(string $Total) 设置<p>问答数量</p>
+ * @method string getWaitVerifyTotal() 获取<p>待校验问答数量</p>
+ * @method void setWaitVerifyTotal(string $WaitVerifyTotal) 设置<p>待校验问答数量</p>
+ * @method string getNotAcceptedTotal() 获取<p>未采纳问答数量</p>
+ * @method void setNotAcceptedTotal(string $NotAcceptedTotal) 设置<p>未采纳问答数量</p>
+ * @method string getAcceptedTotal() 获取<p>已采纳问答数量</p>
+ * @method void setAcceptedTotal(string $AcceptedTotal) 设置<p>已采纳问答数量</p>
+ * @method integer getPageNumber() 获取<p>页码</p>
+ * @method void setPageNumber(integer $PageNumber) 设置<p>页码</p>
+ * @method array getList() 获取<p>问答详情</p>
+ * @method void setList(array $List) 设置<p>问答详情</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ListQAResponse extends AbstractModel
 {
     /**
-     * @var string 问答数量
+     * @var string <p>问答数量</p>
      */
     public $Total;
 
     /**
-     * @var string 待校验问答数量
+     * @var string <p>待校验问答数量</p>
      */
     public $WaitVerifyTotal;
 
     /**
-     * @var string 未采纳问答数量
+     * @var string <p>未采纳问答数量</p>
      */
     public $NotAcceptedTotal;
 
     /**
-     * @var string 已采纳问答数量
+     * @var string <p>已采纳问答数量</p>
      */
     public $AcceptedTotal;
 
     /**
-     * @var integer 页码
+     * @var integer <p>页码</p>
      */
     public $PageNumber;
 
     /**
-     * @var array 问答详情
+     * @var array <p>问答详情</p>
      */
     public $List;
 
@@ -73,12 +73,12 @@ class ListQAResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Total 问答数量
-     * @param string $WaitVerifyTotal 待校验问答数量
-     * @param string $NotAcceptedTotal 未采纳问答数量
-     * @param string $AcceptedTotal 已采纳问答数量
-     * @param integer $PageNumber 页码
-     * @param array $List 问答详情
+     * @param string $Total <p>问答数量</p>
+     * @param string $WaitVerifyTotal <p>待校验问答数量</p>
+     * @param string $NotAcceptedTotal <p>未采纳问答数量</p>
+     * @param string $AcceptedTotal <p>已采纳问答数量</p>
+     * @param integer $PageNumber <p>页码</p>
+     * @param array $List <p>问答详情</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

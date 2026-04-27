@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListLineage请求参数结构体
  *
- * @method string getResourceUniqueId() 获取实体唯一ID
- * @method void setResourceUniqueId(string $ResourceUniqueId) 设置实体唯一ID
- * @method string getResourceType() 获取实体类型 TABLE|METRIC|MODEL|SERVICE|COLUMN
- * @method void setResourceType(string $ResourceType) 设置实体类型 TABLE|METRIC|MODEL|SERVICE|COLUMN
- * @method string getDirection() 获取血缘方向 INPUT｜OUTPUT
- * @method void setDirection(string $Direction) 设置血缘方向 INPUT｜OUTPUT
- * @method integer getPageNumber() 获取页码
- * @method void setPageNumber(integer $PageNumber) 设置页码
- * @method integer getPageSize() 获取分页大小
- * @method void setPageSize(integer $PageSize) 设置分页大小
- * @method string getPlatform() 获取来源：WEDATA|THIRD 默认WEDATA
- * @method void setPlatform(string $Platform) 设置来源：WEDATA|THIRD 默认WEDATA
+ * @method string getResourceUniqueId() 获取<p>实体唯一ID</p>
+ * @method void setResourceUniqueId(string $ResourceUniqueId) 设置<p>实体唯一ID</p>
+ * @method string getResourceType() 获取<p>实体类型 TABLE|METRIC|MODEL|SERVICE|COLUMN</p>
+ * @method void setResourceType(string $ResourceType) 设置<p>实体类型 TABLE|METRIC|MODEL|SERVICE|COLUMN</p>
+ * @method string getDirection() 获取<p>血缘方向 INPUT｜OUTPUT</p>
+ * @method void setDirection(string $Direction) 设置<p>血缘方向 INPUT｜OUTPUT</p>
+ * @method integer getPageNumber() 获取<p>页码</p>
+ * @method void setPageNumber(integer $PageNumber) 设置<p>页码</p>
+ * @method integer getPageSize() 获取<p>分页大小</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>分页大小</p>
+ * @method string getPlatform() 获取<p>来源：WEDATA|THIRD 默认WEDATA</p>
+ * @method void setPlatform(string $Platform) 设置<p>来源：WEDATA|THIRD 默认WEDATA</p>
  */
 class ListLineageRequest extends AbstractModel
 {
     /**
-     * @var string 实体唯一ID
+     * @var string <p>实体唯一ID</p>
      */
     public $ResourceUniqueId;
 
     /**
-     * @var string 实体类型 TABLE|METRIC|MODEL|SERVICE|COLUMN
+     * @var string <p>实体类型 TABLE|METRIC|MODEL|SERVICE|COLUMN</p>
      */
     public $ResourceType;
 
     /**
-     * @var string 血缘方向 INPUT｜OUTPUT
+     * @var string <p>血缘方向 INPUT｜OUTPUT</p>
      */
     public $Direction;
 
     /**
-     * @var integer 页码
+     * @var integer <p>页码</p>
      */
     public $PageNumber;
 
     /**
-     * @var integer 分页大小
+     * @var integer <p>分页大小</p>
      */
     public $PageSize;
 
     /**
-     * @var string 来源：WEDATA|THIRD 默认WEDATA
+     * @var string <p>来源：WEDATA|THIRD 默认WEDATA</p>
      */
     public $Platform;
 
     /**
-     * @param string $ResourceUniqueId 实体唯一ID
-     * @param string $ResourceType 实体类型 TABLE|METRIC|MODEL|SERVICE|COLUMN
-     * @param string $Direction 血缘方向 INPUT｜OUTPUT
-     * @param integer $PageNumber 页码
-     * @param integer $PageSize 分页大小
-     * @param string $Platform 来源：WEDATA|THIRD 默认WEDATA
+     * @param string $ResourceUniqueId <p>实体唯一ID</p>
+     * @param string $ResourceType <p>实体类型 TABLE|METRIC|MODEL|SERVICE|COLUMN</p>
+     * @param string $Direction <p>血缘方向 INPUT｜OUTPUT</p>
+     * @param integer $PageNumber <p>页码</p>
+     * @param integer $PageSize <p>分页大小</p>
+     * @param string $Platform <p>来源：WEDATA|THIRD 默认WEDATA</p>
      */
     function __construct()
     {

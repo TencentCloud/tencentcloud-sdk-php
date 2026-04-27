@@ -25,6 +25,7 @@ use TencentCloud\Bi\V20220105\Models as Models;
 /**
  * @method Models\ApplyEmbedIntervalResponse ApplyEmbedInterval(Models\ApplyEmbedIntervalRequest $req) 申请延长Token可用时间接口-强鉴权
  * @method Models\ClearEmbedTokenResponse ClearEmbedToken(Models\ClearEmbedTokenRequest $req) 强鉴权token 清理，只有企业管理员才能调用该接口
+ * @method Models\CreateAuthApiKeyResponse CreateAuthApiKey(Models\CreateAuthApiKeyRequest $req) 创建ApiKey
  * @method Models\CreateDatasourceResponse CreateDatasource(Models\CreateDatasourceRequest $req) 创建数据源
  * @method Models\CreateDatasourceCloudResponse CreateDatasourceCloud(Models\CreateDatasourceCloudRequest $req) 创建云数据库
  * @method Models\CreateEmbedTokenResponse CreateEmbedToken(Models\CreateEmbedTokenRequest $req) 创建嵌出报表-强鉴权
@@ -34,12 +35,15 @@ use TencentCloud\Bi\V20220105\Models as Models;
  * @method Models\CreateUserGroupMemberResponse CreateUserGroupMember(Models\CreateUserGroupMemberRequest $req) CreateUserGroupMember
  * @method Models\CreateUserRoleResponse CreateUserRole(Models\CreateUserRoleRequest $req) 创建用户角色
  * @method Models\CreateUserRoleProjectResponse CreateUserRoleProject(Models\CreateUserRoleProjectRequest $req) 项目内-创建用户角色
+ * @method Models\DeleteAuthApiKeyResponse DeleteAuthApiKey(Models\DeleteAuthApiKeyRequest $req) 删除ApiKey
  * @method Models\DeleteDatasourceResponse DeleteDatasource(Models\DeleteDatasourceRequest $req) 删除数据源
  * @method Models\DeleteProjectResponse DeleteProject(Models\DeleteProjectRequest $req) 删除项目
  * @method Models\DeleteUserGroupResponse DeleteUserGroup(Models\DeleteUserGroupRequest $req) DeleteUserGroup
  * @method Models\DeleteUserGroupMemberResponse DeleteUserGroupMember(Models\DeleteUserGroupMemberRequest $req) DeleteUserGroupMember
  * @method Models\DeleteUserRoleResponse DeleteUserRole(Models\DeleteUserRoleRequest $req) 删除用户角色，会删除用户
  * @method Models\DeleteUserRoleProjectResponse DeleteUserRoleProject(Models\DeleteUserRoleProjectRequest $req) 项目内-删除用户角色
+ * @method Models\DescribeAuthApiKeyInfoResponse DescribeAuthApiKeyInfo(Models\DescribeAuthApiKeyInfoRequest $req) ApiKey信息
+ * @method Models\DescribeAuthApiKeyListResponse DescribeAuthApiKeyList(Models\DescribeAuthApiKeyListRequest $req) ApiKey列表
  * @method Models\DescribeDatasourceListResponse DescribeDatasourceList(Models\DescribeDatasourceListRequest $req) 查询数据源列表
  * @method Models\DescribePageWidgetListResponse DescribePageWidgetList(Models\DescribePageWidgetListRequest $req) 查询页面组件信息
  * @method Models\DescribePermissionRanksInfoResponse DescribePermissionRanksInfo(Models\DescribePermissionRanksInfoRequest $req) 根据角色或标签查询行列权限配置
@@ -55,6 +59,7 @@ use TencentCloud\Bi\V20220105\Models as Models;
  * @method Models\DescribeUserRoleListResponse DescribeUserRoleList(Models\DescribeUserRoleListRequest $req) 用户角色列表
  * @method Models\DescribeUserRoleProjectListResponse DescribeUserRoleProjectList(Models\DescribeUserRoleProjectListRequest $req) 项目内-用户角色列表
  * @method Models\ExportScreenPageResponse ExportScreenPage(Models\ExportScreenPageRequest $req) 页面截图导出
+ * @method Models\ModifyAuthApiKeyResponse ModifyAuthApiKey(Models\ModifyAuthApiKeyRequest $req) 更新ApiKey
  * @method Models\ModifyDatasourceResponse ModifyDatasource(Models\ModifyDatasourceRequest $req) 更新数据源
  * @method Models\ModifyDatasourceCloudResponse ModifyDatasourceCloud(Models\ModifyDatasourceCloudRequest $req) 更新云数据库
  * @method Models\ModifyProjectResponse ModifyProject(Models\ModifyProjectRequest $req) 修改项目信息

@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNotebooks请求参数结构体
  *
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
  * @method integer getOffset() 获取偏移量，默认为0
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取每页返回的实例数，默认为10
@@ -57,6 +59,11 @@ LifecycleScriptId（生命周期ID）：ls-12312312311312
  */
 class DescribeNotebooksRequest extends AbstractModel
 {
+    /**
+     * @var string <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public $TiProjectId;
+
     /**
      * @var integer 偏移量，默认为0
      */
@@ -99,6 +106,7 @@ LifecycleScriptId（生命周期ID）：ls-12312312311312
     public $TagFilters;
 
     /**
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 每页返回的实例数，默认为10
      * @param string $Order 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列。默认为DESC
@@ -130,6 +138,10 @@ LifecycleScriptId（生命周期ID）：ls-12312312311312
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
+        }
+
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
         }

@@ -20,34 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 智能字幕翻译的输入。
  *
- * @method integer getDefinition() 获取智能字幕模板 ID。
- * @method void setDefinition(integer $Definition) 设置智能字幕模板 ID。
- * @method RawSmartSubtitleParameter getRawParameter() 获取智能字幕自定义参数，当 Definition 填 0 时有效。
-该参数用于高度定制场景，建议您优先使用 Definition 指定智能字幕参数。
+ * @method integer getDefinition() 获取<p>智能字幕模板 ID。</p>
+ * @method void setDefinition(integer $Definition) 设置<p>智能字幕模板 ID。</p>
+ * @method RawSmartSubtitleParameter getRawParameter() 获取<p>智能字幕自定义参数，当 Definition 填 0 时有效。<br>该参数用于高度定制场景，建议您优先使用 Definition 指定智能字幕参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRawParameter(RawSmartSubtitleParameter $RawParameter) 设置智能字幕自定义参数，当 Definition 填 0 时有效。
-该参数用于高度定制场景，建议您优先使用 Definition 指定智能字幕参数。
+ * @method void setRawParameter(RawSmartSubtitleParameter $RawParameter) 设置<p>智能字幕自定义参数，当 Definition 填 0 时有效。<br>该参数用于高度定制场景，建议您优先使用 Definition 指定智能字幕参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUserExtPara() 获取<p>扩展参数。</p>
+ * @method void setUserExtPara(string $UserExtPara) 设置<p>扩展参数。</p>
  */
 class SmartSubtitleTaskResultInput extends AbstractModel
 {
     /**
-     * @var integer 智能字幕模板 ID。
+     * @var integer <p>智能字幕模板 ID。</p>
      */
     public $Definition;
 
     /**
-     * @var RawSmartSubtitleParameter 智能字幕自定义参数，当 Definition 填 0 时有效。
-该参数用于高度定制场景，建议您优先使用 Definition 指定智能字幕参数。
+     * @var RawSmartSubtitleParameter <p>智能字幕自定义参数，当 Definition 填 0 时有效。<br>该参数用于高度定制场景，建议您优先使用 Definition 指定智能字幕参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RawParameter;
 
     /**
-     * @param integer $Definition 智能字幕模板 ID。
-     * @param RawSmartSubtitleParameter $RawParameter 智能字幕自定义参数，当 Definition 填 0 时有效。
-该参数用于高度定制场景，建议您优先使用 Definition 指定智能字幕参数。
+     * @var string <p>扩展参数。</p>
+     */
+    public $UserExtPara;
+
+    /**
+     * @param integer $Definition <p>智能字幕模板 ID。</p>
+     * @param RawSmartSubtitleParameter $RawParameter <p>智能字幕自定义参数，当 Definition 填 0 时有效。<br>该参数用于高度定制场景，建议您优先使用 Definition 指定智能字幕参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UserExtPara <p>扩展参数。</p>
      */
     function __construct()
     {
@@ -69,6 +73,10 @@ class SmartSubtitleTaskResultInput extends AbstractModel
         if (array_key_exists("RawParameter",$param) and $param["RawParameter"] !== null) {
             $this->RawParameter = new RawSmartSubtitleParameter();
             $this->RawParameter->deserialize($param["RawParameter"]);
+        }
+
+        if (array_key_exists("UserExtPara",$param) and $param["UserExtPara"] !== null) {
+            $this->UserExtPara = $param["UserExtPara"];
         }
     }
 }

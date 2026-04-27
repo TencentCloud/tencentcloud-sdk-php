@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRows(array $Rows) 设置记录
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSnapshotId() 获取分页快照id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSnapshotId(string $SnapshotId) 设置分页快照id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatabaseRealViewVOPageVO extends AbstractModel
 {
@@ -74,6 +78,12 @@ class DatabaseRealViewVOPageVO extends AbstractModel
     public $Rows;
 
     /**
+     * @var string 分页快照id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SnapshotId;
+
+    /**
      * @param integer $PageNumber 分页页码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PageSize 分页大小
@@ -83,6 +93,8 @@ class DatabaseRealViewVOPageVO extends AbstractModel
      * @param integer $TotalPageNumber 总分页页码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Rows 记录
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SnapshotId 分页快照id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -121,6 +133,10 @@ class DatabaseRealViewVOPageVO extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Rows, $obj);
             }
+        }
+
+        if (array_key_exists("SnapshotId",$param) and $param["SnapshotId"] !== null) {
+            $this->SnapshotId = $param["SnapshotId"];
         }
     }
 }

@@ -20,57 +20,57 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 资源组节点运行任务信息
  *
- * @method string getPodName() 获取pod名称
+ * @method string getPodName() 获取<p>pod名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPodName(string $PodName) 设置pod名称
+ * @method void setPodName(string $PodName) 设置<p>pod名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskType() 获取任务类型
+ * @method string getTaskType() 获取<p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskType(string $TaskType) 设置任务类型
+ * @method void setTaskType(string $TaskType) 设置<p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskId() 获取任务id
+ * @method string getTaskId() 获取<p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskId(string $TaskId) 设置任务id
+ * @method void setTaskId(string $TaskId) 设置<p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskName() 获取任务自定义名称
+ * @method string getTaskName() 获取<p>任务自定义名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskName(string $TaskName) 设置任务自定义名称
+ * @method void setTaskName(string $TaskName) 设置<p>任务自定义名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceInstanceRunningJobInfo extends AbstractModel
 {
     /**
-     * @var string pod名称
+     * @var string <p>pod名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PodName;
 
     /**
-     * @var string 任务类型
+     * @var string <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskType;
 
     /**
-     * @var string 任务id
+     * @var string <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
-     * @var string 任务自定义名称
+     * @var string <p>任务自定义名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskName;
 
     /**
-     * @param string $PodName pod名称
+     * @param string $PodName <p>pod名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskType 任务类型
+     * @param string $TaskType <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskId 任务id
+     * @param string $TaskId <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskName 任务自定义名称
+     * @param string $TaskName <p>任务自定义名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

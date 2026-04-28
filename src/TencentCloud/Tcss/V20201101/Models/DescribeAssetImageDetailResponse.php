@@ -20,234 +20,241 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAssetImageDetail返回参数结构体
  *
- * @method string getImageID() 获取镜像ID
- * @method void setImageID(string $ImageID) 设置镜像ID
- * @method string getImageName() 获取镜像名称
- * @method void setImageName(string $ImageName) 设置镜像名称
- * @method string getImageDigest() 获取镜像摘要
- * @method void setImageDigest(string $ImageDigest) 设置镜像摘要
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method integer getSize() 获取镜像大小
- * @method void setSize(integer $Size) 设置镜像大小
- * @method integer getHostCnt() 获取关联主机个数(包含普通节点数和超级节点数)
- * @method void setHostCnt(integer $HostCnt) 设置关联主机个数(包含普通节点数和超级节点数)
- * @method integer getContainerCnt() 获取关联容器个数
- * @method void setContainerCnt(integer $ContainerCnt) 设置关联容器个数
- * @method integer getSuperNodeCnt() 获取超级节点数
- * @method void setSuperNodeCnt(integer $SuperNodeCnt) 设置超级节点数
- * @method string getScanTime() 获取最近扫描时间
- * @method void setScanTime(string $ScanTime) 设置最近扫描时间
- * @method integer getVulCnt() 获取漏洞个数
- * @method void setVulCnt(integer $VulCnt) 设置漏洞个数
- * @method integer getRiskCnt() 获取风险行为数
- * @method void setRiskCnt(integer $RiskCnt) 设置风险行为数
- * @method integer getSensitiveInfoCnt() 获取敏感信息数
- * @method void setSensitiveInfoCnt(integer $SensitiveInfoCnt) 设置敏感信息数
- * @method boolean getIsTrustImage() 获取是否信任镜像
- * @method void setIsTrustImage(boolean $IsTrustImage) 设置是否信任镜像
- * @method string getOsName() 获取镜像系统
- * @method void setOsName(string $OsName) 设置镜像系统
- * @method string getAgentError() 获取agent镜像扫描错误
- * @method void setAgentError(string $AgentError) 设置agent镜像扫描错误
- * @method string getScanError() 获取后端镜像扫描错误
- * @method void setScanError(string $ScanError) 设置后端镜像扫描错误
- * @method string getArchitecture() 获取系统架构
- * @method void setArchitecture(string $Architecture) 设置系统架构
- * @method string getAuthor() 获取作者
- * @method void setAuthor(string $Author) 设置作者
- * @method string getBuildHistory() 获取构建历史
- * @method void setBuildHistory(string $BuildHistory) 设置构建历史
- * @method integer getScanVirusProgress() 获取木马扫描进度
- * @method void setScanVirusProgress(integer $ScanVirusProgress) 设置木马扫描进度
- * @method integer getScanVulProgress() 获取漏洞扫进度
- * @method void setScanVulProgress(integer $ScanVulProgress) 设置漏洞扫进度
- * @method integer getScanRiskProgress() 获取敏感信息扫描进度
- * @method void setScanRiskProgress(integer $ScanRiskProgress) 设置敏感信息扫描进度
- * @method string getScanVirusError() 获取木马扫描错误
- * @method void setScanVirusError(string $ScanVirusError) 设置木马扫描错误
- * @method string getScanVulError() 获取漏洞扫描错误
- * @method void setScanVulError(string $ScanVulError) 设置漏洞扫描错误
- * @method string getScanRiskError() 获取敏感信息错误
- * @method void setScanRiskError(string $ScanRiskError) 设置敏感信息错误
- * @method string getScanStatus() 获取镜像扫描状态
- * @method void setScanStatus(string $ScanStatus) 设置镜像扫描状态
- * @method integer getVirusCnt() 获取木马病毒数
- * @method void setVirusCnt(integer $VirusCnt) 设置木马病毒数
- * @method integer getStatus() 获取镜像扫描状态
- * @method void setStatus(integer $Status) 设置镜像扫描状态
- * @method integer getRemainScanTime() 获取剩余扫描时间
- * @method void setRemainScanTime(integer $RemainScanTime) 设置剩余扫描时间
- * @method integer getIsAuthorized() 获取授权为：1，未授权为：0
- * @method void setIsAuthorized(integer $IsAuthorized) 设置授权为：1，未授权为：0
- * @method string getSolution() 获取解决方案
- * @method void setSolution(string $Solution) 设置解决方案
- * @method string getReason() 获取原因
- * @method void setReason(string $Reason) 设置原因
+ * @method string getImageID() 获取<p>镜像ID</p>
+ * @method void setImageID(string $ImageID) 设置<p>镜像ID</p>
+ * @method string getImageName() 获取<p>镜像名称</p>
+ * @method void setImageName(string $ImageName) 设置<p>镜像名称</p>
+ * @method string getImageDigest() 获取<p>镜像摘要</p>
+ * @method void setImageDigest(string $ImageDigest) 设置<p>镜像摘要</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method integer getSize() 获取<p>镜像大小</p>
+ * @method void setSize(integer $Size) 设置<p>镜像大小</p>
+ * @method integer getHostCnt() 获取<p>关联主机个数(包含普通节点数和超级节点数)</p>
+ * @method void setHostCnt(integer $HostCnt) 设置<p>关联主机个数(包含普通节点数和超级节点数)</p>
+ * @method integer getContainerCnt() 获取<p>关联容器个数</p>
+ * @method void setContainerCnt(integer $ContainerCnt) 设置<p>关联容器个数</p>
+ * @method integer getSuperNodeCnt() 获取<p>超级节点数</p>
+ * @method void setSuperNodeCnt(integer $SuperNodeCnt) 设置<p>超级节点数</p>
+ * @method string getScanTime() 获取<p>最近扫描时间</p>
+ * @method void setScanTime(string $ScanTime) 设置<p>最近扫描时间</p>
+ * @method integer getVulCnt() 获取<p>漏洞个数</p>
+ * @method void setVulCnt(integer $VulCnt) 设置<p>漏洞个数</p>
+ * @method integer getRiskCnt() 获取<p>风险行为数</p>
+ * @method void setRiskCnt(integer $RiskCnt) 设置<p>风险行为数</p>
+ * @method integer getSensitiveInfoCnt() 获取<p>敏感信息数</p>
+ * @method void setSensitiveInfoCnt(integer $SensitiveInfoCnt) 设置<p>敏感信息数</p>
+ * @method boolean getIsTrustImage() 获取<p>是否信任镜像</p>
+ * @method void setIsTrustImage(boolean $IsTrustImage) 设置<p>是否信任镜像</p>
+ * @method string getOsName() 获取<p>镜像系统</p>
+ * @method void setOsName(string $OsName) 设置<p>镜像系统</p>
+ * @method string getAgentError() 获取<p>agent镜像扫描错误</p>
+ * @method void setAgentError(string $AgentError) 设置<p>agent镜像扫描错误</p>
+ * @method string getScanError() 获取<p>后端镜像扫描错误</p>
+ * @method void setScanError(string $ScanError) 设置<p>后端镜像扫描错误</p>
+ * @method string getArchitecture() 获取<p>系统架构</p>
+ * @method void setArchitecture(string $Architecture) 设置<p>系统架构</p>
+ * @method string getAuthor() 获取<p>作者</p>
+ * @method void setAuthor(string $Author) 设置<p>作者</p>
+ * @method string getBuildHistory() 获取<p>构建历史</p>
+ * @method void setBuildHistory(string $BuildHistory) 设置<p>构建历史</p>
+ * @method integer getScanVirusProgress() 获取<p>木马扫描进度</p>
+ * @method void setScanVirusProgress(integer $ScanVirusProgress) 设置<p>木马扫描进度</p>
+ * @method integer getScanVulProgress() 获取<p>漏洞扫进度</p>
+ * @method void setScanVulProgress(integer $ScanVulProgress) 设置<p>漏洞扫进度</p>
+ * @method integer getScanRiskProgress() 获取<p>敏感信息扫描进度</p>
+ * @method void setScanRiskProgress(integer $ScanRiskProgress) 设置<p>敏感信息扫描进度</p>
+ * @method string getScanVirusError() 获取<p>木马扫描错误</p>
+ * @method void setScanVirusError(string $ScanVirusError) 设置<p>木马扫描错误</p>
+ * @method string getScanVulError() 获取<p>漏洞扫描错误</p>
+ * @method void setScanVulError(string $ScanVulError) 设置<p>漏洞扫描错误</p>
+ * @method string getScanRiskError() 获取<p>敏感信息错误</p>
+ * @method void setScanRiskError(string $ScanRiskError) 设置<p>敏感信息错误</p>
+ * @method string getScanStatus() 获取<p>镜像扫描状态</p>
+ * @method void setScanStatus(string $ScanStatus) 设置<p>镜像扫描状态</p>
+ * @method integer getVirusCnt() 获取<p>木马病毒数</p>
+ * @method void setVirusCnt(integer $VirusCnt) 设置<p>木马病毒数</p>
+ * @method integer getStatus() 获取<p>镜像扫描状态</p>
+ * @method void setStatus(integer $Status) 设置<p>镜像扫描状态</p>
+ * @method integer getRemainScanTime() 获取<p>剩余扫描时间</p>
+ * @method void setRemainScanTime(integer $RemainScanTime) 设置<p>剩余扫描时间</p>
+ * @method integer getIsAuthorized() 获取<p>授权为：1，未授权为：0</p>
+ * @method void setIsAuthorized(integer $IsAuthorized) 设置<p>授权为：1，未授权为：0</p>
+ * @method string getSolution() 获取<p>解决方案</p>
+ * @method void setSolution(string $Solution) 设置<p>解决方案</p>
+ * @method string getReason() 获取<p>原因</p>
+ * @method void setReason(string $Reason) 设置<p>原因</p>
+ * @method array getRepoDigests() 获取<p>仓库Digests</p>
+ * @method void setRepoDigests(array $RepoDigests) 设置<p>仓库Digests</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAssetImageDetailResponse extends AbstractModel
 {
     /**
-     * @var string 镜像ID
+     * @var string <p>镜像ID</p>
      */
     public $ImageID;
 
     /**
-     * @var string 镜像名称
+     * @var string <p>镜像名称</p>
      */
     public $ImageName;
 
     /**
-     * @var string 镜像摘要
+     * @var string <p>镜像摘要</p>
      */
     public $ImageDigest;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer 镜像大小
+     * @var integer <p>镜像大小</p>
      */
     public $Size;
 
     /**
-     * @var integer 关联主机个数(包含普通节点数和超级节点数)
+     * @var integer <p>关联主机个数(包含普通节点数和超级节点数)</p>
      */
     public $HostCnt;
 
     /**
-     * @var integer 关联容器个数
+     * @var integer <p>关联容器个数</p>
      */
     public $ContainerCnt;
 
     /**
-     * @var integer 超级节点数
+     * @var integer <p>超级节点数</p>
      */
     public $SuperNodeCnt;
 
     /**
-     * @var string 最近扫描时间
+     * @var string <p>最近扫描时间</p>
      */
     public $ScanTime;
 
     /**
-     * @var integer 漏洞个数
+     * @var integer <p>漏洞个数</p>
      */
     public $VulCnt;
 
     /**
-     * @var integer 风险行为数
+     * @var integer <p>风险行为数</p>
      */
     public $RiskCnt;
 
     /**
-     * @var integer 敏感信息数
+     * @var integer <p>敏感信息数</p>
      */
     public $SensitiveInfoCnt;
 
     /**
-     * @var boolean 是否信任镜像
+     * @var boolean <p>是否信任镜像</p>
      */
     public $IsTrustImage;
 
     /**
-     * @var string 镜像系统
+     * @var string <p>镜像系统</p>
      */
     public $OsName;
 
     /**
-     * @var string agent镜像扫描错误
+     * @var string <p>agent镜像扫描错误</p>
      */
     public $AgentError;
 
     /**
-     * @var string 后端镜像扫描错误
+     * @var string <p>后端镜像扫描错误</p>
      */
     public $ScanError;
 
     /**
-     * @var string 系统架构
+     * @var string <p>系统架构</p>
      */
     public $Architecture;
 
     /**
-     * @var string 作者
+     * @var string <p>作者</p>
      */
     public $Author;
 
     /**
-     * @var string 构建历史
+     * @var string <p>构建历史</p>
      */
     public $BuildHistory;
 
     /**
-     * @var integer 木马扫描进度
+     * @var integer <p>木马扫描进度</p>
      */
     public $ScanVirusProgress;
 
     /**
-     * @var integer 漏洞扫进度
+     * @var integer <p>漏洞扫进度</p>
      */
     public $ScanVulProgress;
 
     /**
-     * @var integer 敏感信息扫描进度
+     * @var integer <p>敏感信息扫描进度</p>
      */
     public $ScanRiskProgress;
 
     /**
-     * @var string 木马扫描错误
+     * @var string <p>木马扫描错误</p>
      */
     public $ScanVirusError;
 
     /**
-     * @var string 漏洞扫描错误
+     * @var string <p>漏洞扫描错误</p>
      */
     public $ScanVulError;
 
     /**
-     * @var string 敏感信息错误
+     * @var string <p>敏感信息错误</p>
      */
     public $ScanRiskError;
 
     /**
-     * @var string 镜像扫描状态
+     * @var string <p>镜像扫描状态</p>
      */
     public $ScanStatus;
 
     /**
-     * @var integer 木马病毒数
+     * @var integer <p>木马病毒数</p>
      */
     public $VirusCnt;
 
     /**
-     * @var integer 镜像扫描状态
+     * @var integer <p>镜像扫描状态</p>
      */
     public $Status;
 
     /**
-     * @var integer 剩余扫描时间
+     * @var integer <p>剩余扫描时间</p>
      */
     public $RemainScanTime;
 
     /**
-     * @var integer 授权为：1，未授权为：0
+     * @var integer <p>授权为：1，未授权为：0</p>
      */
     public $IsAuthorized;
 
     /**
-     * @var string 解决方案
+     * @var string <p>解决方案</p>
      */
     public $Solution;
 
     /**
-     * @var string 原因
+     * @var string <p>原因</p>
      */
     public $Reason;
+
+    /**
+     * @var array <p>仓库Digests</p>
+     */
+    public $RepoDigests;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -255,38 +262,39 @@ class DescribeAssetImageDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ImageID 镜像ID
-     * @param string $ImageName 镜像名称
-     * @param string $ImageDigest 镜像摘要
-     * @param string $CreateTime 创建时间
-     * @param integer $Size 镜像大小
-     * @param integer $HostCnt 关联主机个数(包含普通节点数和超级节点数)
-     * @param integer $ContainerCnt 关联容器个数
-     * @param integer $SuperNodeCnt 超级节点数
-     * @param string $ScanTime 最近扫描时间
-     * @param integer $VulCnt 漏洞个数
-     * @param integer $RiskCnt 风险行为数
-     * @param integer $SensitiveInfoCnt 敏感信息数
-     * @param boolean $IsTrustImage 是否信任镜像
-     * @param string $OsName 镜像系统
-     * @param string $AgentError agent镜像扫描错误
-     * @param string $ScanError 后端镜像扫描错误
-     * @param string $Architecture 系统架构
-     * @param string $Author 作者
-     * @param string $BuildHistory 构建历史
-     * @param integer $ScanVirusProgress 木马扫描进度
-     * @param integer $ScanVulProgress 漏洞扫进度
-     * @param integer $ScanRiskProgress 敏感信息扫描进度
-     * @param string $ScanVirusError 木马扫描错误
-     * @param string $ScanVulError 漏洞扫描错误
-     * @param string $ScanRiskError 敏感信息错误
-     * @param string $ScanStatus 镜像扫描状态
-     * @param integer $VirusCnt 木马病毒数
-     * @param integer $Status 镜像扫描状态
-     * @param integer $RemainScanTime 剩余扫描时间
-     * @param integer $IsAuthorized 授权为：1，未授权为：0
-     * @param string $Solution 解决方案
-     * @param string $Reason 原因
+     * @param string $ImageID <p>镜像ID</p>
+     * @param string $ImageName <p>镜像名称</p>
+     * @param string $ImageDigest <p>镜像摘要</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param integer $Size <p>镜像大小</p>
+     * @param integer $HostCnt <p>关联主机个数(包含普通节点数和超级节点数)</p>
+     * @param integer $ContainerCnt <p>关联容器个数</p>
+     * @param integer $SuperNodeCnt <p>超级节点数</p>
+     * @param string $ScanTime <p>最近扫描时间</p>
+     * @param integer $VulCnt <p>漏洞个数</p>
+     * @param integer $RiskCnt <p>风险行为数</p>
+     * @param integer $SensitiveInfoCnt <p>敏感信息数</p>
+     * @param boolean $IsTrustImage <p>是否信任镜像</p>
+     * @param string $OsName <p>镜像系统</p>
+     * @param string $AgentError <p>agent镜像扫描错误</p>
+     * @param string $ScanError <p>后端镜像扫描错误</p>
+     * @param string $Architecture <p>系统架构</p>
+     * @param string $Author <p>作者</p>
+     * @param string $BuildHistory <p>构建历史</p>
+     * @param integer $ScanVirusProgress <p>木马扫描进度</p>
+     * @param integer $ScanVulProgress <p>漏洞扫进度</p>
+     * @param integer $ScanRiskProgress <p>敏感信息扫描进度</p>
+     * @param string $ScanVirusError <p>木马扫描错误</p>
+     * @param string $ScanVulError <p>漏洞扫描错误</p>
+     * @param string $ScanRiskError <p>敏感信息错误</p>
+     * @param string $ScanStatus <p>镜像扫描状态</p>
+     * @param integer $VirusCnt <p>木马病毒数</p>
+     * @param integer $Status <p>镜像扫描状态</p>
+     * @param integer $RemainScanTime <p>剩余扫描时间</p>
+     * @param integer $IsAuthorized <p>授权为：1，未授权为：0</p>
+     * @param string $Solution <p>解决方案</p>
+     * @param string $Reason <p>原因</p>
+     * @param array $RepoDigests <p>仓库Digests</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -428,6 +436,10 @@ class DescribeAssetImageDetailResponse extends AbstractModel
 
         if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
             $this->Reason = $param["Reason"];
+        }
+
+        if (array_key_exists("RepoDigests",$param) and $param["RepoDigests"] !== null) {
+            $this->RepoDigests = $param["RepoDigests"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

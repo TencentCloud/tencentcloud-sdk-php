@@ -20,62 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisIsolateDBInstances请求参数结构体
  *
- * @method array getDBInstanceIdSet() 获取实例ID列表。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。支持同时解隔离多个实例。
- * @method void setDBInstanceIdSet(array $DBInstanceIdSet) 设置实例ID列表。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。支持同时解隔离多个实例。
- * @method integer getPeriod() 获取购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：该参数不生效</li>
- * @method void setPeriod(integer $Period) 设置购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：该参数不生效</li>
- * @method boolean getAutoVoucher() 获取是否使用代金券：
-<li>true：使用</li>
-<li>false：不使用</li>
-默认值：false
- * @method void setAutoVoucher(boolean $AutoVoucher) 设置是否使用代金券：
-<li>true：使用</li>
-<li>false：不使用</li>
-默认值：false
- * @method array getVoucherIds() 获取代金券id列表。
- * @method void setVoucherIds(array $VoucherIds) 设置代金券id列表。
+ * @method array getDBInstanceIdSet() 获取<p>实例ID列表。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取。支持同时解隔离多个实例。</p>
+ * @method void setDBInstanceIdSet(array $DBInstanceIdSet) 设置<p>实例ID列表。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取。支持同时解隔离多个实例。</p>
+ * @method integer getPeriod() 获取<p>购买时长，单位：月。</p><li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li><li>后付费：该参数不生效</li>
+ * @method void setPeriod(integer $Period) 设置<p>购买时长，单位：月。</p><li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li><li>后付费：该参数不生效</li>
+ * @method boolean getAutoVoucher() 获取<p>是否使用代金券：</p><li>true：使用</li><li>false：不使用</li>默认值：false
+ * @method void setAutoVoucher(boolean $AutoVoucher) 设置<p>是否使用代金券：</p><li>true：使用</li><li>false：不使用</li>默认值：false
+ * @method array getVoucherIds() 获取<p>代金券id列表。</p>
+ * @method void setVoucherIds(array $VoucherIds) 设置<p>代金券id列表。</p>
  */
 class DisIsolateDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var array 实例ID列表。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。支持同时解隔离多个实例。
+     * @var array <p>实例ID列表。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取。支持同时解隔离多个实例。</p>
      */
     public $DBInstanceIdSet;
 
     /**
-     * @var integer 购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：该参数不生效</li>
+     * @var integer <p>购买时长，单位：月。</p><li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li><li>后付费：该参数不生效</li>
      */
     public $Period;
 
     /**
-     * @var boolean 是否使用代金券：
-<li>true：使用</li>
-<li>false：不使用</li>
-默认值：false
+     * @var boolean <p>是否使用代金券：</p><li>true：使用</li><li>false：不使用</li>默认值：false
      */
     public $AutoVoucher;
 
     /**
-     * @var array 代金券id列表。
+     * @var array <p>代金券id列表。</p>
      */
     public $VoucherIds;
 
     /**
-     * @param array $DBInstanceIdSet 实例ID列表。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。支持同时解隔离多个实例。
-     * @param integer $Period 购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：该参数不生效</li>
-     * @param boolean $AutoVoucher 是否使用代金券：
-<li>true：使用</li>
-<li>false：不使用</li>
-默认值：false
-     * @param array $VoucherIds 代金券id列表。
+     * @param array $DBInstanceIdSet <p>实例ID列表。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取。支持同时解隔离多个实例。</p>
+     * @param integer $Period <p>购买时长，单位：月。</p><li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li><li>后付费：该参数不生效</li>
+     * @param boolean $AutoVoucher <p>是否使用代金券：</p><li>true：使用</li><li>false：不使用</li>默认值：false
+     * @param array $VoucherIds <p>代金券id列表。</p>
      */
     function __construct()
     {

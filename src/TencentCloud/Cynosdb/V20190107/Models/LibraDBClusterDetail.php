@@ -20,242 +20,254 @@ use TencentCloud\Common\AbstractModel;
 /**
  * libra集群详情
  *
- * @method string getClusterId() 获取集群id
- * @method void setClusterId(string $ClusterId) 设置集群id
- * @method string getClusterName() 获取集群名称
- * @method void setClusterName(string $ClusterName) 设置集群名称
- * @method string getRegion() 获取地域
- * @method void setRegion(string $Region) 设置地域
- * @method string getStatus() 获取状态
- * @method void setStatus(string $Status) 设置状态
- * @method string getStatusDesc() 获取状态描述
- * @method void setStatusDesc(string $StatusDesc) 设置状态描述
- * @method integer getStorage() 获取存储大小
- * @method void setStorage(integer $Storage) 设置存储大小
- * @method string getVpcName() 获取VPC名称
- * @method void setVpcName(string $VpcName) 设置VPC名称
- * @method string getVpcId() 获取vpc唯一id
- * @method void setVpcId(string $VpcId) 设置vpc唯一id
- * @method string getSubnetName() 获取子网名称
- * @method void setSubnetName(string $SubnetName) 设置子网名称
- * @method string getSubnetId() 获取子网ID
- * @method void setSubnetId(string $SubnetId) 设置子网ID
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getDbVersion() 获取数据库版本
- * @method void setDbVersion(string $DbVersion) 设置数据库版本
- * @method integer getUsedStorage() 获取使用容量
- * @method void setUsedStorage(integer $UsedStorage) 设置使用容量
- * @method string getVip() 获取vip地址
- * @method void setVip(string $Vip) 设置vip地址
- * @method integer getVport() 获取vport端口
- * @method void setVport(integer $Vport) 设置vport端口
- * @method array getRoAddr() 获取集群只读实例的vip地址和vport端口
- * @method void setRoAddr(array $RoAddr) 设置集群只读实例的vip地址和vport端口
- * @method string getCynosVersion() 获取cynos版本
- * @method void setCynosVersion(string $CynosVersion) 设置cynos版本
- * @method string getIsFreeze() 获取是否冻结
- * @method void setIsFreeze(string $IsFreeze) 设置是否冻结
- * @method array getTasks() 获取任务列表
- * @method void setTasks(array $Tasks) 设置任务列表
- * @method string getMasterZone() 获取主可用区
- * @method void setMasterZone(string $MasterZone) 设置主可用区
- * @method array getInstanceSet() 获取实例集合
- * @method void setInstanceSet(array $InstanceSet) 设置实例集合
- * @method integer getPayMode() 获取付费模式
- * @method void setPayMode(integer $PayMode) 设置付费模式
- * @method string getPeriodEndTime() 获取到期时间
- * @method void setPeriodEndTime(string $PeriodEndTime) 设置到期时间
- * @method integer getProjectID() 获取项目id
- * @method void setProjectID(integer $ProjectID) 设置项目id
- * @method integer getRenewFlag() 获取自动续费标识
- * @method void setRenewFlag(integer $RenewFlag) 设置自动续费标识
- * @method string getCynosVersionTag() 获取版本标签
- * @method void setCynosVersionTag(string $CynosVersionTag) 设置版本标签
- * @method string getNoSupportAddRo() 获取不支持添加ro yes-不支持添加ro， no/null/"" 支持添加ro
- * @method void setNoSupportAddRo(string $NoSupportAddRo) 设置不支持添加ro yes-不支持添加ro， no/null/"" 支持添加ro
- * @method string getZone() 获取可用区
- * @method void setZone(string $Zone) 设置可用区
- * @method string getPhysicalZone() 获取物理可用区
- * @method void setPhysicalZone(string $PhysicalZone) 设置物理可用区
+ * @method string getClusterId() 获取<p>集群id</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群id</p>
+ * @method string getClusterName() 获取<p>集群名称</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名称</p>
+ * @method string getRegion() 获取<p>地域</p>
+ * @method void setRegion(string $Region) 设置<p>地域</p>
+ * @method string getStatus() 获取<p>状态</p>
+ * @method void setStatus(string $Status) 设置<p>状态</p>
+ * @method string getStatusDesc() 获取<p>状态描述</p>
+ * @method void setStatusDesc(string $StatusDesc) 设置<p>状态描述</p>
+ * @method integer getStorage() 获取<p>存储大小</p>
+ * @method void setStorage(integer $Storage) 设置<p>存储大小</p>
+ * @method string getVpcName() 获取<p>VPC名称</p>
+ * @method void setVpcName(string $VpcName) 设置<p>VPC名称</p>
+ * @method string getVpcId() 获取<p>vpc唯一id</p>
+ * @method void setVpcId(string $VpcId) 设置<p>vpc唯一id</p>
+ * @method string getSubnetName() 获取<p>子网名称</p>
+ * @method void setSubnetName(string $SubnetName) 设置<p>子网名称</p>
+ * @method string getSubnetId() 获取<p>子网ID</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网ID</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getDbVersion() 获取<p>数据库版本</p>
+ * @method void setDbVersion(string $DbVersion) 设置<p>数据库版本</p>
+ * @method integer getUsedStorage() 获取<p>使用容量</p>
+ * @method void setUsedStorage(integer $UsedStorage) 设置<p>使用容量</p>
+ * @method string getVip() 获取<p>vip地址</p>
+ * @method void setVip(string $Vip) 设置<p>vip地址</p>
+ * @method integer getVport() 获取<p>vport端口</p>
+ * @method void setVport(integer $Vport) 设置<p>vport端口</p>
+ * @method array getRoAddr() 获取<p>集群只读实例的vip地址和vport端口</p>
+ * @method void setRoAddr(array $RoAddr) 设置<p>集群只读实例的vip地址和vport端口</p>
+ * @method string getCynosVersion() 获取<p>cynos版本</p>
+ * @method void setCynosVersion(string $CynosVersion) 设置<p>cynos版本</p>
+ * @method string getIsFreeze() 获取<p>是否冻结</p>
+ * @method void setIsFreeze(string $IsFreeze) 设置<p>是否冻结</p>
+ * @method array getTasks() 获取<p>任务列表</p>
+ * @method void setTasks(array $Tasks) 设置<p>任务列表</p>
+ * @method string getMasterZone() 获取<p>主可用区</p>
+ * @method void setMasterZone(string $MasterZone) 设置<p>主可用区</p>
+ * @method array getInstanceSet() 获取<p>实例集合</p>
+ * @method void setInstanceSet(array $InstanceSet) 设置<p>实例集合</p>
+ * @method integer getPayMode() 获取<p>付费模式</p>
+ * @method void setPayMode(integer $PayMode) 设置<p>付费模式</p>
+ * @method string getPeriodEndTime() 获取<p>到期时间</p>
+ * @method void setPeriodEndTime(string $PeriodEndTime) 设置<p>到期时间</p>
+ * @method integer getProjectID() 获取<p>项目id</p>
+ * @method void setProjectID(integer $ProjectID) 设置<p>项目id</p>
+ * @method integer getRenewFlag() 获取<p>自动续费标识</p>
+ * @method void setRenewFlag(integer $RenewFlag) 设置<p>自动续费标识</p>
+ * @method string getCynosVersionTag() 获取<p>版本标签</p>
+ * @method void setCynosVersionTag(string $CynosVersionTag) 设置<p>版本标签</p>
+ * @method string getNoSupportAddRo() 获取<p>不支持添加ro yes-不支持添加ro， no/null/&quot;&quot; 支持添加ro</p>
+ * @method void setNoSupportAddRo(string $NoSupportAddRo) 设置<p>不支持添加ro yes-不支持添加ro， no/null/&quot;&quot; 支持添加ro</p>
+ * @method string getZone() 获取<p>可用区</p>
+ * @method void setZone(string $Zone) 设置<p>可用区</p>
+ * @method string getPhysicalZone() 获取<p>物理可用区</p>
+ * @method void setPhysicalZone(string $PhysicalZone) 设置<p>物理可用区</p>
+ * @method UpgradeAnalysisInstanceVersionInfo getAnalysisUpgradeVersionInfo() 获取<p>版本升级灰度信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAnalysisUpgradeVersionInfo(UpgradeAnalysisInstanceVersionInfo $AnalysisUpgradeVersionInfo) 设置<p>版本升级灰度信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LibraDBClusterDetail extends AbstractModel
 {
     /**
-     * @var string 集群id
+     * @var string <p>集群id</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 集群名称
+     * @var string <p>集群名称</p>
      */
     public $ClusterName;
 
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
      */
     public $Region;
 
     /**
-     * @var string 状态
+     * @var string <p>状态</p>
      */
     public $Status;
 
     /**
-     * @var string 状态描述
+     * @var string <p>状态描述</p>
      */
     public $StatusDesc;
 
     /**
-     * @var integer 存储大小
+     * @var integer <p>存储大小</p>
      */
     public $Storage;
 
     /**
-     * @var string VPC名称
+     * @var string <p>VPC名称</p>
      */
     public $VpcName;
 
     /**
-     * @var string vpc唯一id
+     * @var string <p>vpc唯一id</p>
      */
     public $VpcId;
 
     /**
-     * @var string 子网名称
+     * @var string <p>子网名称</p>
      */
     public $SubnetName;
 
     /**
-     * @var string 子网ID
+     * @var string <p>子网ID</p>
      */
     public $SubnetId;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 数据库版本
+     * @var string <p>数据库版本</p>
      */
     public $DbVersion;
 
     /**
-     * @var integer 使用容量
+     * @var integer <p>使用容量</p>
      */
     public $UsedStorage;
 
     /**
-     * @var string vip地址
+     * @var string <p>vip地址</p>
      */
     public $Vip;
 
     /**
-     * @var integer vport端口
+     * @var integer <p>vport端口</p>
      */
     public $Vport;
 
     /**
-     * @var array 集群只读实例的vip地址和vport端口
+     * @var array <p>集群只读实例的vip地址和vport端口</p>
      */
     public $RoAddr;
 
     /**
-     * @var string cynos版本
+     * @var string <p>cynos版本</p>
      */
     public $CynosVersion;
 
     /**
-     * @var string 是否冻结
+     * @var string <p>是否冻结</p>
      */
     public $IsFreeze;
 
     /**
-     * @var array 任务列表
+     * @var array <p>任务列表</p>
      */
     public $Tasks;
 
     /**
-     * @var string 主可用区
+     * @var string <p>主可用区</p>
      */
     public $MasterZone;
 
     /**
-     * @var array 实例集合
+     * @var array <p>实例集合</p>
      */
     public $InstanceSet;
 
     /**
-     * @var integer 付费模式
+     * @var integer <p>付费模式</p>
      */
     public $PayMode;
 
     /**
-     * @var string 到期时间
+     * @var string <p>到期时间</p>
      */
     public $PeriodEndTime;
 
     /**
-     * @var integer 项目id
+     * @var integer <p>项目id</p>
      */
     public $ProjectID;
 
     /**
-     * @var integer 自动续费标识
+     * @var integer <p>自动续费标识</p>
      */
     public $RenewFlag;
 
     /**
-     * @var string 版本标签
+     * @var string <p>版本标签</p>
      */
     public $CynosVersionTag;
 
     /**
-     * @var string 不支持添加ro yes-不支持添加ro， no/null/"" 支持添加ro
+     * @var string <p>不支持添加ro yes-不支持添加ro， no/null/&quot;&quot; 支持添加ro</p>
      */
     public $NoSupportAddRo;
 
     /**
-     * @var string 可用区
+     * @var string <p>可用区</p>
      */
     public $Zone;
 
     /**
-     * @var string 物理可用区
+     * @var string <p>物理可用区</p>
      */
     public $PhysicalZone;
 
     /**
-     * @param string $ClusterId 集群id
-     * @param string $ClusterName 集群名称
-     * @param string $Region 地域
-     * @param string $Status 状态
-     * @param string $StatusDesc 状态描述
-     * @param integer $Storage 存储大小
-     * @param string $VpcName VPC名称
-     * @param string $VpcId vpc唯一id
-     * @param string $SubnetName 子网名称
-     * @param string $SubnetId 子网ID
-     * @param string $CreateTime 创建时间
-     * @param string $DbVersion 数据库版本
-     * @param integer $UsedStorage 使用容量
-     * @param string $Vip vip地址
-     * @param integer $Vport vport端口
-     * @param array $RoAddr 集群只读实例的vip地址和vport端口
-     * @param string $CynosVersion cynos版本
-     * @param string $IsFreeze 是否冻结
-     * @param array $Tasks 任务列表
-     * @param string $MasterZone 主可用区
-     * @param array $InstanceSet 实例集合
-     * @param integer $PayMode 付费模式
-     * @param string $PeriodEndTime 到期时间
-     * @param integer $ProjectID 项目id
-     * @param integer $RenewFlag 自动续费标识
-     * @param string $CynosVersionTag 版本标签
-     * @param string $NoSupportAddRo 不支持添加ro yes-不支持添加ro， no/null/"" 支持添加ro
-     * @param string $Zone 可用区
-     * @param string $PhysicalZone 物理可用区
+     * @var UpgradeAnalysisInstanceVersionInfo <p>版本升级灰度信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AnalysisUpgradeVersionInfo;
+
+    /**
+     * @param string $ClusterId <p>集群id</p>
+     * @param string $ClusterName <p>集群名称</p>
+     * @param string $Region <p>地域</p>
+     * @param string $Status <p>状态</p>
+     * @param string $StatusDesc <p>状态描述</p>
+     * @param integer $Storage <p>存储大小</p>
+     * @param string $VpcName <p>VPC名称</p>
+     * @param string $VpcId <p>vpc唯一id</p>
+     * @param string $SubnetName <p>子网名称</p>
+     * @param string $SubnetId <p>子网ID</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $DbVersion <p>数据库版本</p>
+     * @param integer $UsedStorage <p>使用容量</p>
+     * @param string $Vip <p>vip地址</p>
+     * @param integer $Vport <p>vport端口</p>
+     * @param array $RoAddr <p>集群只读实例的vip地址和vport端口</p>
+     * @param string $CynosVersion <p>cynos版本</p>
+     * @param string $IsFreeze <p>是否冻结</p>
+     * @param array $Tasks <p>任务列表</p>
+     * @param string $MasterZone <p>主可用区</p>
+     * @param array $InstanceSet <p>实例集合</p>
+     * @param integer $PayMode <p>付费模式</p>
+     * @param string $PeriodEndTime <p>到期时间</p>
+     * @param integer $ProjectID <p>项目id</p>
+     * @param integer $RenewFlag <p>自动续费标识</p>
+     * @param string $CynosVersionTag <p>版本标签</p>
+     * @param string $NoSupportAddRo <p>不支持添加ro yes-不支持添加ro， no/null/&quot;&quot; 支持添加ro</p>
+     * @param string $Zone <p>可用区</p>
+     * @param string $PhysicalZone <p>物理可用区</p>
+     * @param UpgradeAnalysisInstanceVersionInfo $AnalysisUpgradeVersionInfo <p>版本升级灰度信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -399,6 +411,11 @@ class LibraDBClusterDetail extends AbstractModel
 
         if (array_key_exists("PhysicalZone",$param) and $param["PhysicalZone"] !== null) {
             $this->PhysicalZone = $param["PhysicalZone"];
+        }
+
+        if (array_key_exists("AnalysisUpgradeVersionInfo",$param) and $param["AnalysisUpgradeVersionInfo"] !== null) {
+            $this->AnalysisUpgradeVersionInfo = new UpgradeAnalysisInstanceVersionInfo();
+            $this->AnalysisUpgradeVersionInfo->deserialize($param["AnalysisUpgradeVersionInfo"]);
         }
     }
 }

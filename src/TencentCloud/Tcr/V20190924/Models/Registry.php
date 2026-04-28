@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAIFeature(boolean $AIFeature) 设置<p>是否支持AI特性</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnableCosMAZ() 获取<p>cos桶是否开启多AZ特性</p>
+ * @method void setEnableCosMAZ(boolean $EnableCosMAZ) 设置<p>cos桶是否开启多AZ特性</p>
+ * @method boolean getEnableCosVersioning() 获取<p>cos桶是否开启版本控制</p>
+ * @method void setEnableCosVersioning(boolean $EnableCosVersioning) 设置<p>cos桶是否开启版本控制</p>
  */
 class Registry extends AbstractModel
 {
@@ -146,6 +150,16 @@ class Registry extends AbstractModel
     public $AIFeature;
 
     /**
+     * @var boolean <p>cos桶是否开启多AZ特性</p>
+     */
+    public $EnableCosMAZ;
+
+    /**
+     * @var boolean <p>cos桶是否开启版本控制</p>
+     */
+    public $EnableCosVersioning;
+
+    /**
      * @param string $RegistryId <p>实例ID</p>
      * @param string $RegistryName <p>实例名称</p>
      * @param string $RegistryType <p>实例规格</p>
@@ -164,6 +178,8 @@ class Registry extends AbstractModel
      * @param boolean $DeletionProtection <p>是否开启实例删除保护，false表示不开启</p>
      * @param boolean $AIFeature <p>是否支持AI特性</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableCosMAZ <p>cos桶是否开启多AZ特性</p>
+     * @param boolean $EnableCosVersioning <p>cos桶是否开启版本控制</p>
      */
     function __construct()
     {
@@ -245,6 +261,14 @@ class Registry extends AbstractModel
 
         if (array_key_exists("AIFeature",$param) and $param["AIFeature"] !== null) {
             $this->AIFeature = $param["AIFeature"];
+        }
+
+        if (array_key_exists("EnableCosMAZ",$param) and $param["EnableCosMAZ"] !== null) {
+            $this->EnableCosMAZ = $param["EnableCosMAZ"];
+        }
+
+        if (array_key_exists("EnableCosVersioning",$param) and $param["EnableCosVersioning"] !== null) {
+            $this->EnableCosVersioning = $param["EnableCosVersioning"];
         }
     }
 }

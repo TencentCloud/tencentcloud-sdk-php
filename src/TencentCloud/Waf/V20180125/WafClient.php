@@ -161,7 +161,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\EnableRateLimitsV2Response EnableRateLimitsV2(Models\EnableRateLimitsV2Request $req) 批量更改自研版限流规则开关
  * @method Models\FreshAntiFakeUrlResponse FreshAntiFakeUrl(Models\FreshAntiFakeUrlRequest $req) 刷新防篡改url
  * @method Models\GenerateDealsAndPayNewResponse GenerateDealsAndPayNew(Models\GenerateDealsAndPayNewRequest $req) 计费资源购买、续费下单接口
- * @method Models\GenerateLLMSecAnswerResponse GenerateLLMSecAnswer(Models\GenerateLLMSecAnswerRequest $req) 大模型安全代答生成接口。当用户输入或模型输出命中内容安全风险检测规则时，调用本接口由大模型实时生成安全合规的替代回答。
+ * @method Models\GenerateLLMSecAnswerResponse GenerateLLMSecAnswer(Models\GenerateLLMSecAnswerRequest $req) 大模型安全代答生成接口。当用户输入命中内容安全风险检测规则时，调用本接口由大模型实时生成安全合规的替代回答。
  * @method Models\GetAttackDownloadRecordsResponse GetAttackDownloadRecords(Models\GetAttackDownloadRecordsRequest $req) 查询下载攻击日志任务记录列表
  * @method Models\GetAttackHistogramResponse GetAttackHistogram(Models\GetAttackHistogramRequest $req) 生成攻击日志的产生时间柱状图
  * @method Models\GetAttackTotalCountResponse GetAttackTotalCount(Models\GetAttackTotalCountRequest $req) 按照条件查询展示攻击总次数

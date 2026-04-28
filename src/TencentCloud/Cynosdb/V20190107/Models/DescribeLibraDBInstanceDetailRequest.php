@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLibraDBInstanceDetail请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getInstanceId() 获取只读分析引擎实例 ID
- * @method void setInstanceId(string $InstanceId) 设置只读分析引擎实例 ID
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method string getInstanceId() 获取<p>只读分析引擎实例 ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>只读分析引擎实例 ID</p>
  */
 class DescribeLibraDBInstanceDetailRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 只读分析引擎实例 ID
+     * @var string <p>只读分析引擎实例 ID</p>
      */
     public $InstanceId;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param string $InstanceId 只读分析引擎实例 ID
+     * @param string $ClusterId <p>集群ID</p>
+     * @param string $InstanceId <p>只读分析引擎实例 ID</p>
      */
     function __construct()
     {

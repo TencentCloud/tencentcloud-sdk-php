@@ -20,78 +20,86 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 任务配置
  *
- * @method integer getChunkType() 获取切片类型  0:自定义切片，1：智能切片
- * @method void setChunkType(integer $ChunkType) 设置切片类型  0:自定义切片，1：智能切片
- * @method integer getMaxChunkSize() 获取/智能切片：最小值 1000，默认 4800 自定义切片：正整数即可,默认值 1000
- * @method void setMaxChunkSize(integer $MaxChunkSize) 设置/智能切片：最小值 1000，默认 4800 自定义切片：正整数即可,默认值 1000
- * @method array getDelimiters() 获取 切片分隔符,自定义切片使用：默认值为：["\n\n", "\n", "。", "！", "？", "，", ""]
+ * @method integer getChunkType() 获取<p>切片类型  0:自定义切片，1：智能切片</p>
+ * @method void setChunkType(integer $ChunkType) 设置<p>切片类型  0:自定义切片，1：智能切片</p>
+ * @method integer getMaxChunkSize() 获取<p>/智能切片：最小值 1000，默认 4800 自定义切片：正整数即可,默认值 1000</p>
+ * @method void setMaxChunkSize(integer $MaxChunkSize) 设置<p>/智能切片：最小值 1000，默认 4800 自定义切片：正整数即可,默认值 1000</p>
+ * @method array getDelimiters() 获取<p>切片分隔符,自定义切片使用：默认值为：[&quot;\n\n&quot;, &quot;\n&quot;, &quot;。&quot;, &quot;！&quot;, &quot;？&quot;, &quot;，&quot;, &quot;&quot;]</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDelimiters(array $Delimiters) 设置 切片分隔符,自定义切片使用：默认值为：["\n\n", "\n", "。", "！", "？", "，", ""]
+ * @method void setDelimiters(array $Delimiters) 设置<p>切片分隔符,自定义切片使用：默认值为：[&quot;\n\n&quot;, &quot;\n&quot;, &quot;。&quot;, &quot;！&quot;, &quot;？&quot;, &quot;，&quot;, &quot;&quot;]</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getChunkOverlap() 获取自定义切片使用:默认0 可重叠字符长度
- * @method void setChunkOverlap(integer $ChunkOverlap) 设置自定义切片使用:默认0 可重叠字符长度
- * @method array getColumns() 获取表格类文档解析
- * @method void setColumns(array $Columns) 设置表格类文档解析
- * @method array getIndexes() 获取带检索的索引列表
- * @method void setIndexes(array $Indexes) 设置带检索的索引列表
- * @method integer getGenDocSummary() 获取0：不生成文档摘要，1：生成文档概要。默认0，当取1时，GenParaSummary必须也为1
- * @method void setGenDocSummary(integer $GenDocSummary) 设置0：不生成文档摘要，1：生成文档概要。默认0，当取1时，GenParaSummary必须也为1
- * @method integer getGenParaSummary() 获取0：不生成段落摘要，1：生成段落概要。默认0
- * @method void setGenParaSummary(integer $GenParaSummary) 设置0：不生成段落摘要，1：生成段落概要。默认0
+ * @method integer getChunkOverlap() 获取<p>自定义切片使用:默认0 可重叠字符长度</p>
+ * @method void setChunkOverlap(integer $ChunkOverlap) 设置<p>自定义切片使用:默认0 可重叠字符长度</p>
+ * @method array getColumns() 获取<p>表格类文档解析</p>
+ * @method void setColumns(array $Columns) 设置<p>表格类文档解析</p>
+ * @method array getIndexes() 获取<p>带检索的索引列表</p>
+ * @method void setIndexes(array $Indexes) 设置<p>带检索的索引列表</p>
+ * @method integer getGenDocSummary() 获取<p>0：不生成文档摘要，1：生成文档概要。默认0，当取1时，GenParaSummary必须也为1</p>
+ * @method void setGenDocSummary(integer $GenDocSummary) 设置<p>0：不生成文档摘要，1：生成文档概要。默认0，当取1时，GenParaSummary必须也为1</p>
+ * @method integer getGenParaSummary() 获取<p>0：不生成段落摘要，1：生成段落概要。默认0</p>
+ * @method void setGenParaSummary(integer $GenParaSummary) 设置<p>0：不生成段落摘要，1：生成段落概要。默认0</p>
+ * @method integer getEnableImageUnderstanding() 获取<p>0：不开启图片理解，1：开启图片理解。默认1</p><p>取值范围：[1, 10000]</p><p>默认值：1</p>
+ * @method void setEnableImageUnderstanding(integer $EnableImageUnderstanding) 设置<p>0：不开启图片理解，1：开启图片理解。默认1</p><p>取值范围：[1, 10000]</p><p>默认值：1</p>
  */
 class KnowledgeTaskConfig extends AbstractModel
 {
     /**
-     * @var integer 切片类型  0:自定义切片，1：智能切片
+     * @var integer <p>切片类型  0:自定义切片，1：智能切片</p>
      */
     public $ChunkType;
 
     /**
-     * @var integer /智能切片：最小值 1000，默认 4800 自定义切片：正整数即可,默认值 1000
+     * @var integer <p>/智能切片：最小值 1000，默认 4800 自定义切片：正整数即可,默认值 1000</p>
      */
     public $MaxChunkSize;
 
     /**
-     * @var array  切片分隔符,自定义切片使用：默认值为：["\n\n", "\n", "。", "！", "？", "，", ""]
+     * @var array <p>切片分隔符,自定义切片使用：默认值为：[&quot;\n\n&quot;, &quot;\n&quot;, &quot;。&quot;, &quot;！&quot;, &quot;？&quot;, &quot;，&quot;, &quot;&quot;]</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Delimiters;
 
     /**
-     * @var integer 自定义切片使用:默认0 可重叠字符长度
+     * @var integer <p>自定义切片使用:默认0 可重叠字符长度</p>
      */
     public $ChunkOverlap;
 
     /**
-     * @var array 表格类文档解析
+     * @var array <p>表格类文档解析</p>
      */
     public $Columns;
 
     /**
-     * @var array 带检索的索引列表
+     * @var array <p>带检索的索引列表</p>
      */
     public $Indexes;
 
     /**
-     * @var integer 0：不生成文档摘要，1：生成文档概要。默认0，当取1时，GenParaSummary必须也为1
+     * @var integer <p>0：不生成文档摘要，1：生成文档概要。默认0，当取1时，GenParaSummary必须也为1</p>
      */
     public $GenDocSummary;
 
     /**
-     * @var integer 0：不生成段落摘要，1：生成段落概要。默认0
+     * @var integer <p>0：不生成段落摘要，1：生成段落概要。默认0</p>
      */
     public $GenParaSummary;
 
     /**
-     * @param integer $ChunkType 切片类型  0:自定义切片，1：智能切片
-     * @param integer $MaxChunkSize /智能切片：最小值 1000，默认 4800 自定义切片：正整数即可,默认值 1000
-     * @param array $Delimiters  切片分隔符,自定义切片使用：默认值为：["\n\n", "\n", "。", "！", "？", "，", ""]
+     * @var integer <p>0：不开启图片理解，1：开启图片理解。默认1</p><p>取值范围：[1, 10000]</p><p>默认值：1</p>
+     */
+    public $EnableImageUnderstanding;
+
+    /**
+     * @param integer $ChunkType <p>切片类型  0:自定义切片，1：智能切片</p>
+     * @param integer $MaxChunkSize <p>/智能切片：最小值 1000，默认 4800 自定义切片：正整数即可,默认值 1000</p>
+     * @param array $Delimiters <p>切片分隔符,自定义切片使用：默认值为：[&quot;\n\n&quot;, &quot;\n&quot;, &quot;。&quot;, &quot;！&quot;, &quot;？&quot;, &quot;，&quot;, &quot;&quot;]</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ChunkOverlap 自定义切片使用:默认0 可重叠字符长度
-     * @param array $Columns 表格类文档解析
-     * @param array $Indexes 带检索的索引列表
-     * @param integer $GenDocSummary 0：不生成文档摘要，1：生成文档概要。默认0，当取1时，GenParaSummary必须也为1
-     * @param integer $GenParaSummary 0：不生成段落摘要，1：生成段落概要。默认0
+     * @param integer $ChunkOverlap <p>自定义切片使用:默认0 可重叠字符长度</p>
+     * @param array $Columns <p>表格类文档解析</p>
+     * @param array $Indexes <p>带检索的索引列表</p>
+     * @param integer $GenDocSummary <p>0：不生成文档摘要，1：生成文档概要。默认0，当取1时，GenParaSummary必须也为1</p>
+     * @param integer $GenParaSummary <p>0：不生成段落摘要，1：生成段落概要。默认0</p>
+     * @param integer $EnableImageUnderstanding <p>0：不开启图片理解，1：开启图片理解。默认1</p><p>取值范围：[1, 10000]</p><p>默认值：1</p>
      */
     function __construct()
     {
@@ -141,6 +149,10 @@ class KnowledgeTaskConfig extends AbstractModel
 
         if (array_key_exists("GenParaSummary",$param) and $param["GenParaSummary"] !== null) {
             $this->GenParaSummary = $param["GenParaSummary"];
+        }
+
+        if (array_key_exists("EnableImageUnderstanding",$param) and $param["EnableImageUnderstanding"] !== null) {
+            $this->EnableImageUnderstanding = $param["EnableImageUnderstanding"];
         }
     }
 }

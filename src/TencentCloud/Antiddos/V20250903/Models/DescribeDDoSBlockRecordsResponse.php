@@ -14,30 +14,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dts\V20211206\Models;
+namespace TencentCloud\Antiddos\V20250903\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeMigrateDBInstances返回参数结构体
+ * DescribeDDoSBlockRecords返回参数结构体
  *
- * @method integer getTotalCount() 获取<p>符合筛选条件的数量</p>
- * @method void setTotalCount(integer $TotalCount) 设置<p>符合筛选条件的数量</p>
- * @method array getInstances() 获取<p>实例列表</p>
- * @method void setInstances(array $Instances) 设置<p>实例列表</p>
+ * @method integer getTotalCount() 获取<p>封堵解封记录总数。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>封堵解封记录总数。</p>
+ * @method array getBlockRecords() 获取<p>封堵解封记录。</p>
+ * @method void setBlockRecords(array $BlockRecords) 设置<p>封堵解封记录。</p>
+ * @method DDoSUnblockQuota getUnblockQuotaInfo() 获取<p>解封次数配额信息。</p>
+ * @method void setUnblockQuotaInfo(DDoSUnblockQuota $UnblockQuotaInfo) 设置<p>解封次数配额信息。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeMigrateDBInstancesResponse extends AbstractModel
+class DescribeDDoSBlockRecordsResponse extends AbstractModel
 {
     /**
-     * @var integer <p>符合筛选条件的数量</p>
+     * @var integer <p>封堵解封记录总数。</p>
      */
     public $TotalCount;
 
     /**
-     * @var array <p>实例列表</p>
+     * @var array <p>封堵解封记录。</p>
      */
-    public $Instances;
+    public $BlockRecords;
+
+    /**
+     * @var DDoSUnblockQuota <p>解封次数配额信息。</p>
+     */
+    public $UnblockQuotaInfo;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +52,9 @@ class DescribeMigrateDBInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount <p>符合筛选条件的数量</p>
-     * @param array $Instances <p>实例列表</p>
+     * @param integer $TotalCount <p>封堵解封记录总数。</p>
+     * @param array $BlockRecords <p>封堵解封记录。</p>
+     * @param DDoSUnblockQuota $UnblockQuotaInfo <p>解封次数配额信息。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,13 +74,18 @@ class DescribeMigrateDBInstancesResponse extends AbstractModel
             $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("Instances",$param) and $param["Instances"] !== null) {
-            $this->Instances = [];
-            foreach ($param["Instances"] as $key => $value){
-                $obj = new MigrateDBItem();
+        if (array_key_exists("BlockRecords",$param) and $param["BlockRecords"] !== null) {
+            $this->BlockRecords = [];
+            foreach ($param["BlockRecords"] as $key => $value){
+                $obj = new DDoSBlockRecord();
                 $obj->deserialize($value);
-                array_push($this->Instances, $obj);
+                array_push($this->BlockRecords, $obj);
             }
+        }
+
+        if (array_key_exists("UnblockQuotaInfo",$param) and $param["UnblockQuotaInfo"] !== null) {
+            $this->UnblockQuotaInfo = new DDoSUnblockQuota();
+            $this->UnblockQuotaInfo->deserialize($param["UnblockQuotaInfo"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

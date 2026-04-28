@@ -20,246 +20,246 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Serverless索引空间信息
  *
- * @method string getSpaceId() 获取Serverless索引空间ID
- * @method void setSpaceId(string $SpaceId) 设置Serverless索引空间ID
- * @method string getSpaceName() 获取Serverless索引空间名
- * @method void setSpaceName(string $SpaceName) 设置Serverless索引空间名
- * @method integer getStatus() 获取Serverless索引空间状态，0正常，-1已删除
- * @method void setStatus(integer $Status) 设置Serverless索引空间状态，0正常，-1已删除
- * @method string getCreateTime() 获取创建日期
- * @method void setCreateTime(string $CreateTime) 设置创建日期
- * @method integer getIndexCount() 获取空间内索引数量
- * @method void setIndexCount(integer $IndexCount) 设置空间内索引数量
- * @method string getKibanaUrl() 获取kibana公网uri
+ * @method string getSpaceId() 获取<p>Serverless索引空间ID</p>
+ * @method void setSpaceId(string $SpaceId) 设置<p>Serverless索引空间ID</p>
+ * @method string getSpaceName() 获取<p>Serverless索引空间名</p>
+ * @method void setSpaceName(string $SpaceName) 设置<p>Serverless索引空间名</p>
+ * @method integer getStatus() 获取<p>Serverless索引空间状态</p><p>枚举值：</p><ul><li>0： 创建中</li><li>1： 正常</li><li>2： 流程中</li><li>-3： 已删除</li><li>-4： 隔离中</li></ul>
+ * @method void setStatus(integer $Status) 设置<p>Serverless索引空间状态</p><p>枚举值：</p><ul><li>0： 创建中</li><li>1： 正常</li><li>2： 流程中</li><li>-3： 已删除</li><li>-4： 隔离中</li></ul>
+ * @method string getCreateTime() 获取<p>创建日期</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建日期</p>
+ * @method integer getIndexCount() 获取<p>空间内索引数量</p>
+ * @method void setIndexCount(integer $IndexCount) 设置<p>空间内索引数量</p>
+ * @method string getKibanaUrl() 获取<p>kibana公网uri</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKibanaUrl(string $KibanaUrl) 设置kibana公网uri
+ * @method void setKibanaUrl(string $KibanaUrl) 设置<p>kibana公网uri</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getKibanaPrivateUrl() 获取kibana内网url
+ * @method string getKibanaPrivateUrl() 获取<p>kibana内网url</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKibanaPrivateUrl(string $KibanaPrivateUrl) 设置kibana内网url
+ * @method void setKibanaPrivateUrl(string $KibanaPrivateUrl) 设置<p>kibana内网url</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIndexAccessUrl() 获取空间内网访问地址
+ * @method string getIndexAccessUrl() 获取<p>空间内网访问地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndexAccessUrl(string $IndexAccessUrl) 设置空间内网访问地址
+ * @method void setIndexAccessUrl(string $IndexAccessUrl) 设置<p>空间内网访问地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method EsAcl getKibanaPublicAcl() 获取空间白名单
+ * @method EsAcl getKibanaPublicAcl() 获取<p>空间白名单</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKibanaPublicAcl(EsAcl $KibanaPublicAcl) 设置空间白名单
+ * @method void setKibanaPublicAcl(EsAcl $KibanaPublicAcl) 设置<p>空间白名单</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getKibanaEmbedUrl() 获取空间检索分析域名
+ * @method string getKibanaEmbedUrl() 获取<p>空间检索分析域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKibanaEmbedUrl(string $KibanaEmbedUrl) 设置空间检索分析域名
+ * @method void setKibanaEmbedUrl(string $KibanaEmbedUrl) 设置<p>空间检索分析域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DiData getDiDataList() 获取数据联路
+ * @method DiData getDiDataList() 获取<p>数据联路</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiDataList(DiData $DiDataList) 设置数据联路
+ * @method void setDiDataList(DiData $DiDataList) 设置<p>数据联路</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getVpcInfo() 获取空间vpc信息
+ * @method array getVpcInfo() 获取<p>空间vpc信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVpcInfo(array $VpcInfo) 设置空间vpc信息
+ * @method void setVpcInfo(array $VpcInfo) 设置<p>空间vpc信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegion() 获取地域
+ * @method string getRegion() 获取<p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegion(string $Region) 设置地域
+ * @method void setRegion(string $Region) 设置<p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getZone() 获取可用区
+ * @method string getZone() 获取<p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setZone(string $Zone) 设置可用区
+ * @method void setZone(string $Zone) 设置<p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getEnableKibanaPublicAccess() 获取kibana公网开关，0关闭，1开启
+ * @method integer getEnableKibanaPublicAccess() 获取<p>kibana公网开关，0关闭，1开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnableKibanaPublicAccess(integer $EnableKibanaPublicAccess) 设置kibana公网开关，0关闭，1开启
+ * @method void setEnableKibanaPublicAccess(integer $EnableKibanaPublicAccess) 设置<p>kibana公网开关，0关闭，1开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getEnableKibanaPrivateAccess() 获取kibana内网开关，0关闭，1开启
+ * @method integer getEnableKibanaPrivateAccess() 获取<p>kibana内网开关，0关闭，1开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnableKibanaPrivateAccess(integer $EnableKibanaPrivateAccess) 设置kibana内网开关，0关闭，1开启
+ * @method void setEnableKibanaPrivateAccess(integer $EnableKibanaPrivateAccess) 设置<p>kibana内网开关，0关闭，1开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAppId() 获取空间所属appid
+ * @method integer getAppId() 获取<p>空间所属appid</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppId(integer $AppId) 设置空间所属appid
+ * @method void setAppId(integer $AppId) 设置<p>空间所属appid</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getKibanaLanguage() 获取//默认en， 可选zh-CN
+ * @method string getKibanaLanguage() 获取<p>//默认en， 可选zh-CN</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKibanaLanguage(string $KibanaLanguage) 设置//默认en， 可选zh-CN
+ * @method void setKibanaLanguage(string $KibanaLanguage) 设置<p>//默认en， 可选zh-CN</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getClusterType() 获取0
+ * @method integer getClusterType() 获取<p>0</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterType(integer $ClusterType) 设置0
+ * @method void setClusterType(integer $ClusterType) 设置<p>0</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTagList() 获取空间标签信息
+ * @method array getTagList() 获取<p>空间标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTagList(array $TagList) 设置空间标签信息
+ * @method void setTagList(array $TagList) 设置<p>空间标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getEnableMcpAccess() 获取是否开启mcp服务
- * @method void setEnableMcpAccess(integer $EnableMcpAccess) 设置是否开启mcp服务
- * @method string getMcpAccess() 获取mcp的访问地址
- * @method void setMcpAccess(string $McpAccess) 设置mcp的访问地址
+ * @method integer getEnableMcpAccess() 获取<p>是否开启mcp服务</p>
+ * @method void setEnableMcpAccess(integer $EnableMcpAccess) 设置<p>是否开启mcp服务</p>
+ * @method string getMcpAccess() 获取<p>mcp的访问地址</p>
+ * @method void setMcpAccess(string $McpAccess) 设置<p>mcp的访问地址</p>
  */
 class ServerlessSpace extends AbstractModel
 {
     /**
-     * @var string Serverless索引空间ID
+     * @var string <p>Serverless索引空间ID</p>
      */
     public $SpaceId;
 
     /**
-     * @var string Serverless索引空间名
+     * @var string <p>Serverless索引空间名</p>
      */
     public $SpaceName;
 
     /**
-     * @var integer Serverless索引空间状态，0正常，-1已删除
+     * @var integer <p>Serverless索引空间状态</p><p>枚举值：</p><ul><li>0： 创建中</li><li>1： 正常</li><li>2： 流程中</li><li>-3： 已删除</li><li>-4： 隔离中</li></ul>
      */
     public $Status;
 
     /**
-     * @var string 创建日期
+     * @var string <p>创建日期</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer 空间内索引数量
+     * @var integer <p>空间内索引数量</p>
      */
     public $IndexCount;
 
     /**
-     * @var string kibana公网uri
+     * @var string <p>kibana公网uri</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KibanaUrl;
 
     /**
-     * @var string kibana内网url
+     * @var string <p>kibana内网url</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KibanaPrivateUrl;
 
     /**
-     * @var string 空间内网访问地址
+     * @var string <p>空间内网访问地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexAccessUrl;
 
     /**
-     * @var EsAcl 空间白名单
+     * @var EsAcl <p>空间白名单</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KibanaPublicAcl;
 
     /**
-     * @var string 空间检索分析域名
+     * @var string <p>空间检索分析域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KibanaEmbedUrl;
 
     /**
-     * @var DiData 数据联路
+     * @var DiData <p>数据联路</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiDataList;
 
     /**
-     * @var array 空间vpc信息
+     * @var array <p>空间vpc信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcInfo;
 
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
-     * @var string 可用区
+     * @var string <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
     /**
-     * @var integer kibana公网开关，0关闭，1开启
+     * @var integer <p>kibana公网开关，0关闭，1开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableKibanaPublicAccess;
 
     /**
-     * @var integer kibana内网开关，0关闭，1开启
+     * @var integer <p>kibana内网开关，0关闭，1开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableKibanaPrivateAccess;
 
     /**
-     * @var integer 空间所属appid
+     * @var integer <p>空间所属appid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
-     * @var string //默认en， 可选zh-CN
+     * @var string <p>//默认en， 可选zh-CN</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KibanaLanguage;
 
     /**
-     * @var integer 0
+     * @var integer <p>0</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterType;
 
     /**
-     * @var array 空间标签信息
+     * @var array <p>空间标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagList;
 
     /**
-     * @var integer 是否开启mcp服务
+     * @var integer <p>是否开启mcp服务</p>
      */
     public $EnableMcpAccess;
 
     /**
-     * @var string mcp的访问地址
+     * @var string <p>mcp的访问地址</p>
      */
     public $McpAccess;
 
     /**
-     * @param string $SpaceId Serverless索引空间ID
-     * @param string $SpaceName Serverless索引空间名
-     * @param integer $Status Serverless索引空间状态，0正常，-1已删除
-     * @param string $CreateTime 创建日期
-     * @param integer $IndexCount 空间内索引数量
-     * @param string $KibanaUrl kibana公网uri
+     * @param string $SpaceId <p>Serverless索引空间ID</p>
+     * @param string $SpaceName <p>Serverless索引空间名</p>
+     * @param integer $Status <p>Serverless索引空间状态</p><p>枚举值：</p><ul><li>0： 创建中</li><li>1： 正常</li><li>2： 流程中</li><li>-3： 已删除</li><li>-4： 隔离中</li></ul>
+     * @param string $CreateTime <p>创建日期</p>
+     * @param integer $IndexCount <p>空间内索引数量</p>
+     * @param string $KibanaUrl <p>kibana公网uri</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $KibanaPrivateUrl kibana内网url
+     * @param string $KibanaPrivateUrl <p>kibana内网url</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IndexAccessUrl 空间内网访问地址
+     * @param string $IndexAccessUrl <p>空间内网访问地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EsAcl $KibanaPublicAcl 空间白名单
+     * @param EsAcl $KibanaPublicAcl <p>空间白名单</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $KibanaEmbedUrl 空间检索分析域名
+     * @param string $KibanaEmbedUrl <p>空间检索分析域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiData $DiDataList 数据联路
+     * @param DiData $DiDataList <p>数据联路</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $VpcInfo 空间vpc信息
+     * @param array $VpcInfo <p>空间vpc信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Region 地域
+     * @param string $Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Zone 可用区
+     * @param string $Zone <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $EnableKibanaPublicAccess kibana公网开关，0关闭，1开启
+     * @param integer $EnableKibanaPublicAccess <p>kibana公网开关，0关闭，1开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $EnableKibanaPrivateAccess kibana内网开关，0关闭，1开启
+     * @param integer $EnableKibanaPrivateAccess <p>kibana内网开关，0关闭，1开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AppId 空间所属appid
+     * @param integer $AppId <p>空间所属appid</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $KibanaLanguage //默认en， 可选zh-CN
+     * @param string $KibanaLanguage <p>//默认en， 可选zh-CN</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ClusterType 0
+     * @param integer $ClusterType <p>0</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TagList 空间标签信息
+     * @param array $TagList <p>空间标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $EnableMcpAccess 是否开启mcp服务
-     * @param string $McpAccess mcp的访问地址
+     * @param integer $EnableMcpAccess <p>是否开启mcp服务</p>
+     * @param string $McpAccess <p>mcp的访问地址</p>
      */
     function __construct()
     {

@@ -101,6 +101,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\EnablePolicyTypeResponse EnablePolicyType(Models\EnablePolicyTypeRequest $req) 启用策略类型
  * @method Models\GetExternalSAMLIdentityProviderResponse GetExternalSAMLIdentityProvider(Models\GetExternalSAMLIdentityProviderRequest $req) 查询SAML身份提供商配置信息
  * @method Models\GetGroupResponse GetGroup(Models\GetGroupRequest $req) 查询用户组信息
+ * @method Models\GetIPWhitelistResponse GetIPWhitelist(Models\GetIPWhitelistRequest $req) 获取CIC的ip白名单
  * @method Models\GetProvisioningTaskStatusResponse GetProvisioningTaskStatus(Models\GetProvisioningTaskStatusRequest $req) 查询用户同步异步任务的状态
  * @method Models\GetRoleConfigurationResponse GetRoleConfiguration(Models\GetRoleConfigurationRequest $req) 查询权限配置信息
  * @method Models\GetSCIMSynchronizationStatusResponse GetSCIMSynchronizationStatus(Models\GetSCIMSynchronizationStatusRequest $req) 获取SCIM同步状态

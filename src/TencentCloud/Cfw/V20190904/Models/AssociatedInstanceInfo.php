@@ -20,90 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 企业安全组关联实例信息
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method integer getType() 获取实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库
- * @method void setType(integer $Type) 设置实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库
- * @method string getVpcId() 获取私有网络ID
- * @method void setVpcId(string $VpcId) 设置私有网络ID
- * @method string getVpcName() 获取私有网络名称
- * @method void setVpcName(string $VpcName) 设置私有网络名称
- * @method string getPublicIp() 获取公网IP
- * @method void setPublicIp(string $PublicIp) 设置公网IP
- * @method string getIp() 获取内网IP
- * @method void setIp(string $Ip) 设置内网IP
- * @method integer getSecurityGroupCount() 获取关联安全组数量
- * @method void setSecurityGroupCount(integer $SecurityGroupCount) 设置关联安全组数量
- * @method integer getSecurityGroupRuleCount() 获取关联安全组规则数量
- * @method void setSecurityGroupRuleCount(integer $SecurityGroupRuleCount) 设置关联安全组规则数量
- * @method string getCdbId() 获取关联数据库代理Id
- * @method void setCdbId(string $CdbId) 设置关联数据库代理Id
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getInstanceName() 获取<p>实例名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称</p>
+ * @method integer getType() 获取<p>实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库</p>
+ * @method void setType(integer $Type) 设置<p>实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库</p>
+ * @method string getVpcId() 获取<p>私有网络ID</p>
+ * @method void setVpcId(string $VpcId) 设置<p>私有网络ID</p>
+ * @method string getVpcName() 获取<p>私有网络名称</p>
+ * @method void setVpcName(string $VpcName) 设置<p>私有网络名称</p>
+ * @method string getPublicIp() 获取<p>公网IP</p>
+ * @method void setPublicIp(string $PublicIp) 设置<p>公网IP</p>
+ * @method string getIp() 获取<p>内网IP</p>
+ * @method void setIp(string $Ip) 设置<p>内网IP</p>
+ * @method integer getSecurityGroupCount() 获取<p>关联安全组数量</p>
+ * @method void setSecurityGroupCount(integer $SecurityGroupCount) 设置<p>关联安全组数量</p>
+ * @method integer getSecurityGroupRuleCount() 获取<p>关联安全组规则数量</p>
+ * @method void setSecurityGroupRuleCount(integer $SecurityGroupRuleCount) 设置<p>关联安全组规则数量</p>
+ * @method string getCdbId() 获取<p>关联数据库代理Id</p>
+ * @method void setCdbId(string $CdbId) 设置<p>关联数据库代理Id</p>
+ * @method string getTkeClusterId() 获取<p>容器服务集群ID</p>
+ * @method void setTkeClusterId(string $TkeClusterId) 设置<p>容器服务集群ID</p>
  */
 class AssociatedInstanceInfo extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
      */
     public $InstanceName;
 
     /**
-     * @var integer 实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库
+     * @var integer <p>实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库</p>
      */
     public $Type;
 
     /**
-     * @var string 私有网络ID
+     * @var string <p>私有网络ID</p>
      */
     public $VpcId;
 
     /**
-     * @var string 私有网络名称
+     * @var string <p>私有网络名称</p>
      */
     public $VpcName;
 
     /**
-     * @var string 公网IP
+     * @var string <p>公网IP</p>
      */
     public $PublicIp;
 
     /**
-     * @var string 内网IP
+     * @var string <p>内网IP</p>
      */
     public $Ip;
 
     /**
-     * @var integer 关联安全组数量
+     * @var integer <p>关联安全组数量</p>
      */
     public $SecurityGroupCount;
 
     /**
-     * @var integer 关联安全组规则数量
+     * @var integer <p>关联安全组规则数量</p>
      */
     public $SecurityGroupRuleCount;
 
     /**
-     * @var string 关联数据库代理Id
+     * @var string <p>关联数据库代理Id</p>
      */
     public $CdbId;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $InstanceName 实例名称
-     * @param integer $Type 实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库
-     * @param string $VpcId 私有网络ID
-     * @param string $VpcName 私有网络名称
-     * @param string $PublicIp 公网IP
-     * @param string $Ip 内网IP
-     * @param integer $SecurityGroupCount 关联安全组数量
-     * @param integer $SecurityGroupRuleCount 关联安全组规则数量
-     * @param string $CdbId 关联数据库代理Id
+     * @var string <p>容器服务集群ID</p>
+     */
+    public $TkeClusterId;
+
+    /**
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $InstanceName <p>实例名称</p>
+     * @param integer $Type <p>实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库</p>
+     * @param string $VpcId <p>私有网络ID</p>
+     * @param string $VpcName <p>私有网络名称</p>
+     * @param string $PublicIp <p>公网IP</p>
+     * @param string $Ip <p>内网IP</p>
+     * @param integer $SecurityGroupCount <p>关联安全组数量</p>
+     * @param integer $SecurityGroupRuleCount <p>关联安全组规则数量</p>
+     * @param string $CdbId <p>关联数据库代理Id</p>
+     * @param string $TkeClusterId <p>容器服务集群ID</p>
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class AssociatedInstanceInfo extends AbstractModel
 
         if (array_key_exists("CdbId",$param) and $param["CdbId"] !== null) {
             $this->CdbId = $param["CdbId"];
+        }
+
+        if (array_key_exists("TkeClusterId",$param) and $param["TkeClusterId"] !== null) {
+            $this->TkeClusterId = $param["TkeClusterId"];
         }
     }
 }

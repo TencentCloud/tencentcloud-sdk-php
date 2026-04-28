@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcss\V20201101\Models;
+namespace TencentCloud\Tione\V20211111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAssetImageDetail请求参数结构体
+ * 描述label详细信息
  *
- * @method string getImageID() 获取<p>镜像id</p>
- * @method void setImageID(string $ImageID) 设置<p>镜像id</p>
+ * @method string getLabelName() 获取标签名称
+ * @method void setLabelName(string $LabelName) 设置标签名称
+ * @method string getLabelColor() 获取标签的颜色
+ * @method void setLabelColor(string $LabelColor) 设置标签的颜色
  */
-class DescribeAssetImageDetailRequest extends AbstractModel
+class LabelValue extends AbstractModel
 {
     /**
-     * @var string <p>镜像id</p>
+     * @var string 标签名称
      */
-    public $ImageID;
+    public $LabelName;
 
     /**
-     * @param string $ImageID <p>镜像id</p>
+     * @var string 标签的颜色
+     */
+    public $LabelColor;
+
+    /**
+     * @param string $LabelName 标签名称
+     * @param string $LabelColor 标签的颜色
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeAssetImageDetailRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageID",$param) and $param["ImageID"] !== null) {
-            $this->ImageID = $param["ImageID"];
+        if (array_key_exists("LabelName",$param) and $param["LabelName"] !== null) {
+            $this->LabelName = $param["LabelName"];
+        }
+
+        if (array_key_exists("LabelColor",$param) and $param["LabelColor"] !== null) {
+            $this->LabelColor = $param["LabelColor"];
         }
     }
 }

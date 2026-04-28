@@ -14,39 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dts\V20211206\Models;
+namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeMigrateDBInstances返回参数结构体
+ * ModifyChcNetworkMode返回参数结构体
  *
- * @method integer getTotalCount() 获取<p>符合筛选条件的数量</p>
- * @method void setTotalCount(integer $TotalCount) 设置<p>符合筛选条件的数量</p>
- * @method array getInstances() 获取<p>实例列表</p>
- * @method void setInstances(array $Instances) 设置<p>实例列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeMigrateDBInstancesResponse extends AbstractModel
+class ModifyChcNetworkModeResponse extends AbstractModel
 {
-    /**
-     * @var integer <p>符合筛选条件的数量</p>
-     */
-    public $TotalCount;
-
-    /**
-     * @var array <p>实例列表</p>
-     */
-    public $Instances;
-
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param integer $TotalCount <p>符合筛选条件的数量</p>
-     * @param array $Instances <p>实例列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,19 +46,6 @@ class DescribeMigrateDBInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("Instances",$param) and $param["Instances"] !== null) {
-            $this->Instances = [];
-            foreach ($param["Instances"] as $key => $value){
-                $obj = new MigrateDBItem();
-                $obj->deserialize($value);
-                array_push($this->Instances, $obj);
-            }
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

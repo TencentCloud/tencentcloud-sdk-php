@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchByText请求参数结构体
  *
- * @method string getQuery() 获取查询词
- * @method void setQuery(string $Query) 设置查询词
+ * @method string getQuery() 获取<p>查询词</p>
+ * @method void setQuery(string $Query) 设置<p>查询词</p>
  */
 class SearchByTextRequest extends AbstractModel
 {
     /**
-     * @var string 查询词
+     * @var string <p>查询词</p>
      */
     public $Query;
 
     /**
-     * @param string $Query 查询词
+     * @param string $Query <p>查询词</p>
      */
     function __construct()
     {

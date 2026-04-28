@@ -62,8 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMultiRequest(boolean $MultiRequest) 设置<p>是否开启多次请求ADS,开启后将优先请求ADS，请求失败后再请求兜底广告</p>
  * @method string getDashOriginManifestType() 获取<p>dash周期类型：SinglePeriod 或 MultiPeriod，默认 MultiPeriod</p>
  * @method void setDashOriginManifestType(string $DashOriginManifestType) 设置<p>dash周期类型：SinglePeriod 或 MultiPeriod，默认 MultiPeriod</p>
- * @method boolean getSlateOnEmptyVast() 获取<p>Empty VAST时是否播放Slate，默认开启(true)</p>
- * @method void setSlateOnEmptyVast(boolean $SlateOnEmptyVast) 设置<p>Empty VAST时是否播放Slate，默认开启(true)</p>
+ * @method boolean getSlateOnEmptyVast() 获取<p>广告为空时是否插入Slate，默认开启(true)</p>
+ * @method void setSlateOnEmptyVast(boolean $SlateOnEmptyVast) 设置<p>广告为空时是否插入Slate，默认开启(true)</p>
  * @method integer getSCTEMarkerDuration() 获取<p>SCTE marker duration，默认180，范围0-3600</p>
  * @method void setSCTEMarkerDuration(integer $SCTEMarkerDuration) 设置<p>SCTE marker duration，默认180，范围0-3600</p>
  * @method string getSecurityGroupId() 获取<p>安全组Id</p>
@@ -161,7 +161,7 @@ class SSAIConf extends AbstractModel
     public $DashOriginManifestType;
 
     /**
-     * @var boolean <p>Empty VAST时是否播放Slate，默认开启(true)</p>
+     * @var boolean <p>广告为空时是否插入Slate，默认开启(true)</p>
      */
     public $SlateOnEmptyVast;
 
@@ -197,7 +197,7 @@ class SSAIConf extends AbstractModel
      * @param integer $PreRollMaxAllowedDuration <p>预加载广告最大允许时长，0-3600。</p>
      * @param boolean $MultiRequest <p>是否开启多次请求ADS,开启后将优先请求ADS，请求失败后再请求兜底广告</p>
      * @param string $DashOriginManifestType <p>dash周期类型：SinglePeriod 或 MultiPeriod，默认 MultiPeriod</p>
-     * @param boolean $SlateOnEmptyVast <p>Empty VAST时是否播放Slate，默认开启(true)</p>
+     * @param boolean $SlateOnEmptyVast <p>广告为空时是否插入Slate，默认开启(true)</p>
      * @param integer $SCTEMarkerDuration <p>SCTE marker duration，默认180，范围0-3600</p>
      * @param string $SecurityGroupId <p>安全组Id</p>
      */

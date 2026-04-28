@@ -100,6 +100,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveDataCheckConfig(SensitiveDataCheckConfigDTO $SensitiveDataCheckConfig) 设置<p>敏感数据检测配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTargetSelect() 获取<p>负载方式</p><p>枚举值：</p><ul><li>random： 随机</li><li>consistentHash： 会话保持</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTargetSelect(string $TargetSelect) 设置<p>负载方式</p><p>枚举值：</p><ul><li>random： 随机</li><li>consistentHash： 会话保持</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFindHostKeyMethod() 获取<p>会话判断方式</p><p>枚举值：</p><ul><li>fromClientIP： 从客户端IP判断</li><li>fromHeader： 从请求header判断</li><li>autoDetect： 自动探测</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFindHostKeyMethod(string $FindHostKeyMethod) 设置<p>会话判断方式</p><p>枚举值：</p><ul><li>fromClientIP： 从客户端IP判断</li><li>fromHeader： 从请求header判断</li><li>autoDetect： 自动探测</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHostKeyHeaderName() 获取<p>会话判断header名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHostKeyHeaderName(string $HostKeyHeaderName) 设置<p>会话判断header名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getFallbackStatus() 获取<p>是否开启备份模型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFallbackStatus(boolean $FallbackStatus) 设置<p>是否开启备份模型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getFallbackModels() 获取<p>备份模型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFallbackModels(array $FallbackModels) 设置<p>备份模型</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeModelServiceResponseVO extends AbstractModel
 {
@@ -268,6 +288,36 @@ class DescribeModelServiceResponseVO extends AbstractModel
     public $SensitiveDataCheckConfig;
 
     /**
+     * @var string <p>负载方式</p><p>枚举值：</p><ul><li>random： 随机</li><li>consistentHash： 会话保持</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TargetSelect;
+
+    /**
+     * @var string <p>会话判断方式</p><p>枚举值：</p><ul><li>fromClientIP： 从客户端IP判断</li><li>fromHeader： 从请求header判断</li><li>autoDetect： 自动探测</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FindHostKeyMethod;
+
+    /**
+     * @var string <p>会话判断header名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HostKeyHeaderName;
+
+    /**
+     * @var boolean <p>是否开启备份模型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FallbackStatus;
+
+    /**
+     * @var array <p>备份模型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FallbackModels;
+
+    /**
      * @param integer $AppID <p>腾讯云AppID</p>
      * @param string $Uin <p>腾讯云Uin</p>
      * @param string $InstanceID <p>实例ID</p>
@@ -307,6 +357,16 @@ class DescribeModelServiceResponseVO extends AbstractModel
      * @param boolean $SensitiveDataCheckStatus <p>是否开启敏感数据检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveDataCheckConfigDTO $SensitiveDataCheckConfig <p>敏感数据检测配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TargetSelect <p>负载方式</p><p>枚举值：</p><ul><li>random： 随机</li><li>consistentHash： 会话保持</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FindHostKeyMethod <p>会话判断方式</p><p>枚举值：</p><ul><li>fromClientIP： 从客户端IP判断</li><li>fromHeader： 从请求header判断</li><li>autoDetect： 自动探测</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HostKeyHeaderName <p>会话判断header名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $FallbackStatus <p>是否开启备份模型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $FallbackModels <p>备份模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -459,6 +519,31 @@ class DescribeModelServiceResponseVO extends AbstractModel
         if (array_key_exists("SensitiveDataCheckConfig",$param) and $param["SensitiveDataCheckConfig"] !== null) {
             $this->SensitiveDataCheckConfig = new SensitiveDataCheckConfigDTO();
             $this->SensitiveDataCheckConfig->deserialize($param["SensitiveDataCheckConfig"]);
+        }
+
+        if (array_key_exists("TargetSelect",$param) and $param["TargetSelect"] !== null) {
+            $this->TargetSelect = $param["TargetSelect"];
+        }
+
+        if (array_key_exists("FindHostKeyMethod",$param) and $param["FindHostKeyMethod"] !== null) {
+            $this->FindHostKeyMethod = $param["FindHostKeyMethod"];
+        }
+
+        if (array_key_exists("HostKeyHeaderName",$param) and $param["HostKeyHeaderName"] !== null) {
+            $this->HostKeyHeaderName = $param["HostKeyHeaderName"];
+        }
+
+        if (array_key_exists("FallbackStatus",$param) and $param["FallbackStatus"] !== null) {
+            $this->FallbackStatus = $param["FallbackStatus"];
+        }
+
+        if (array_key_exists("FallbackModels",$param) and $param["FallbackModels"] !== null) {
+            $this->FallbackModels = [];
+            foreach ($param["FallbackModels"] as $key => $value){
+                $obj = new TargetModelDTO();
+                $obj->deserialize($value);
+                array_push($this->FallbackModels, $obj);
+            }
         }
     }
 }

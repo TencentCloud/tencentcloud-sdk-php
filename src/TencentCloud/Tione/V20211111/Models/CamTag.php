@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcss\V20201101\Models;
+namespace TencentCloud\Tione\V20211111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAssetImageDetail请求参数结构体
+ * cam详细信息
  *
- * @method string getImageID() 获取<p>镜像id</p>
- * @method void setImageID(string $ImageID) 设置<p>镜像id</p>
+ * @method string getKey() 获取tag键值
+ * @method void setKey(string $Key) 设置tag键值
+ * @method string getValue() 获取tag值
+ * @method void setValue(string $Value) 设置tag值
  */
-class DescribeAssetImageDetailRequest extends AbstractModel
+class CamTag extends AbstractModel
 {
     /**
-     * @var string <p>镜像id</p>
+     * @var string tag键值
      */
-    public $ImageID;
+    public $Key;
 
     /**
-     * @param string $ImageID <p>镜像id</p>
+     * @var string tag值
+     */
+    public $Value;
+
+    /**
+     * @param string $Key tag键值
+     * @param string $Value tag值
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeAssetImageDetailRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageID",$param) and $param["ImageID"] !== null) {
-            $this->ImageID = $param["ImageID"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
+        }
+
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

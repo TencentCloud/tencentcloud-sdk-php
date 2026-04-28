@@ -20,90 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 场景
  *
- * @method string getSceneId() 获取场景ID
- * @method void setSceneId(string $SceneId) 设置场景ID
- * @method string getSceneName() 获取场景名称
- * @method void setSceneName(string $SceneName) 设置场景名称
- * @method array getSkills() 获取技能列表，包含：rag（知识检索）、data_analytics（数据分析）、data_prediction（数据预测）
- * @method void setSkills(array $Skills) 设置技能列表，包含：rag（知识检索）、data_analytics（数据分析）、data_prediction（数据预测）
- * @method string getPrompt() 获取提示词文本
- * @method void setPrompt(string $Prompt) 设置提示词文本
- * @method string getDescription() 获取描述
- * @method void setDescription(string $Description) 设置描述
- * @method SearchConfig getSearchConfig() 获取检索配置
- * @method void setSearchConfig(SearchConfig $SearchConfig) 设置检索配置
- * @method array getExampleQAList() 获取示例问答列表
- * @method void setExampleQAList(array $ExampleQAList) 设置示例问答列表
- * @method string getCreateTime() 获取记录的创建时间
- * @method void setCreateTime(string $CreateTime) 设置记录的创建时间
- * @method string getUpdateTime() 获取记录的最后更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置记录的最后更新时间
- * @method string getCreatorUin() 获取创建者Uin
- * @method void setCreatorUin(string $CreatorUin) 设置创建者Uin
+ * @method string getSceneId() 获取<p>场景ID</p>
+ * @method void setSceneId(string $SceneId) 设置<p>场景ID</p>
+ * @method string getSceneName() 获取<p>场景名称</p>
+ * @method void setSceneName(string $SceneName) 设置<p>场景名称</p>
+ * @method array getSkills() 获取<p>技能列表，包含：rag（知识检索）、data_analytics（数据分析）、data_prediction（数据预测）</p>
+ * @method void setSkills(array $Skills) 设置<p>技能列表，包含：rag（知识检索）、data_analytics（数据分析）、data_prediction（数据预测）</p>
+ * @method string getPrompt() 获取<p>提示词文本</p>
+ * @method void setPrompt(string $Prompt) 设置<p>提示词文本</p>
+ * @method string getDescription() 获取<p>描述</p>
+ * @method void setDescription(string $Description) 设置<p>描述</p>
+ * @method SearchConfig getSearchConfig() 获取<p>检索配置</p>
+ * @method void setSearchConfig(SearchConfig $SearchConfig) 设置<p>检索配置</p>
+ * @method array getExampleQAList() 获取<p>示例问答列表</p>
+ * @method void setExampleQAList(array $ExampleQAList) 设置<p>示例问答列表</p>
+ * @method string getCreateTime() 获取<p>记录的创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>记录的创建时间</p>
+ * @method string getUpdateTime() 获取<p>记录的最后更新时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>记录的最后更新时间</p>
+ * @method string getCreatorUin() 获取<p>创建者Uin</p>
+ * @method void setCreatorUin(string $CreatorUin) 设置<p>创建者Uin</p>
+ * @method string getKnowledge() 获取<p>知识</p>
+ * @method void setKnowledge(string $Knowledge) 设置<p>知识</p>
  */
 class Scene extends AbstractModel
 {
     /**
-     * @var string 场景ID
+     * @var string <p>场景ID</p>
      */
     public $SceneId;
 
     /**
-     * @var string 场景名称
+     * @var string <p>场景名称</p>
      */
     public $SceneName;
 
     /**
-     * @var array 技能列表，包含：rag（知识检索）、data_analytics（数据分析）、data_prediction（数据预测）
+     * @var array <p>技能列表，包含：rag（知识检索）、data_analytics（数据分析）、data_prediction（数据预测）</p>
      */
     public $Skills;
 
     /**
-     * @var string 提示词文本
+     * @var string <p>提示词文本</p>
      */
     public $Prompt;
 
     /**
-     * @var string 描述
+     * @var string <p>描述</p>
      */
     public $Description;
 
     /**
-     * @var SearchConfig 检索配置
+     * @var SearchConfig <p>检索配置</p>
      */
     public $SearchConfig;
 
     /**
-     * @var array 示例问答列表
+     * @var array <p>示例问答列表</p>
      */
     public $ExampleQAList;
 
     /**
-     * @var string 记录的创建时间
+     * @var string <p>记录的创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 记录的最后更新时间
+     * @var string <p>记录的最后更新时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 创建者Uin
+     * @var string <p>创建者Uin</p>
      */
     public $CreatorUin;
 
     /**
-     * @param string $SceneId 场景ID
-     * @param string $SceneName 场景名称
-     * @param array $Skills 技能列表，包含：rag（知识检索）、data_analytics（数据分析）、data_prediction（数据预测）
-     * @param string $Prompt 提示词文本
-     * @param string $Description 描述
-     * @param SearchConfig $SearchConfig 检索配置
-     * @param array $ExampleQAList 示例问答列表
-     * @param string $CreateTime 记录的创建时间
-     * @param string $UpdateTime 记录的最后更新时间
-     * @param string $CreatorUin 创建者Uin
+     * @var string <p>知识</p>
+     */
+    public $Knowledge;
+
+    /**
+     * @param string $SceneId <p>场景ID</p>
+     * @param string $SceneName <p>场景名称</p>
+     * @param array $Skills <p>技能列表，包含：rag（知识检索）、data_analytics（数据分析）、data_prediction（数据预测）</p>
+     * @param string $Prompt <p>提示词文本</p>
+     * @param string $Description <p>描述</p>
+     * @param SearchConfig $SearchConfig <p>检索配置</p>
+     * @param array $ExampleQAList <p>示例问答列表</p>
+     * @param string $CreateTime <p>记录的创建时间</p>
+     * @param string $UpdateTime <p>记录的最后更新时间</p>
+     * @param string $CreatorUin <p>创建者Uin</p>
+     * @param string $Knowledge <p>知识</p>
      */
     function __construct()
     {
@@ -162,6 +170,10 @@ class Scene extends AbstractModel
 
         if (array_key_exists("CreatorUin",$param) and $param["CreatorUin"] !== null) {
             $this->CreatorUin = $param["CreatorUin"];
+        }
+
+        if (array_key_exists("Knowledge",$param) and $param["Knowledge"] !== null) {
+            $this->Knowledge = $param["Knowledge"];
         }
     }
 }

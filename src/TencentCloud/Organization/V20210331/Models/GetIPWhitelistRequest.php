@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcss\V20201101\Models;
+namespace TencentCloud\Organization\V20210331\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAssetImageDetail请求参数结构体
+ * GetIPWhitelist请求参数结构体
  *
- * @method string getImageID() 获取<p>镜像id</p>
- * @method void setImageID(string $ImageID) 设置<p>镜像id</p>
+ * @method string getZoneId() 获取空间ID
+ * @method void setZoneId(string $ZoneId) 设置空间ID
  */
-class DescribeAssetImageDetailRequest extends AbstractModel
+class GetIPWhitelistRequest extends AbstractModel
 {
     /**
-     * @var string <p>镜像id</p>
+     * @var string 空间ID
      */
-    public $ImageID;
+    public $ZoneId;
 
     /**
-     * @param string $ImageID <p>镜像id</p>
+     * @param string $ZoneId 空间ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeAssetImageDetailRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageID",$param) and $param["ImageID"] !== null) {
-            $this->ImageID = $param["ImageID"];
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
         }
     }
 }

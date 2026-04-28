@@ -62,6 +62,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSensitiveDataCheckStatus(boolean $SensitiveDataCheckStatus) 设置<p>是否开启敏感数据检测</p>
  * @method SensitiveDataCheckConfigDTO getSensitiveDataCheckConfig() 获取<p>敏感数据检测配置</p>
  * @method void setSensitiveDataCheckConfig(SensitiveDataCheckConfigDTO $SensitiveDataCheckConfig) 设置<p>敏感数据检测配置</p>
+ * @method string getTargetSelect() 获取<p>负载方式</p><p>枚举值：</p><ul><li>random： 随机</li><li>consistentHash： 会话保持</li></ul>
+ * @method void setTargetSelect(string $TargetSelect) 设置<p>负载方式</p><p>枚举值：</p><ul><li>random： 随机</li><li>consistentHash： 会话保持</li></ul>
+ * @method string getFindHostKeyMethod() 获取<p>会话判断方式</p><p>枚举值：</p><ul><li>fromClientIP： 从客户端IP判断</li><li>fromHeader： 从请求header判断</li><li>autoDetect： 自动探测</li></ul>
+ * @method void setFindHostKeyMethod(string $FindHostKeyMethod) 设置<p>会话判断方式</p><p>枚举值：</p><ul><li>fromClientIP： 从客户端IP判断</li><li>fromHeader： 从请求header判断</li><li>autoDetect： 自动探测</li></ul>
+ * @method string getHostKeyHeaderName() 获取<p>会话判断header名称</p>
+ * @method void setHostKeyHeaderName(string $HostKeyHeaderName) 设置<p>会话判断header名称</p>
+ * @method boolean getFallbackStatus() 获取<p>是否开启备份模型</p>
+ * @method void setFallbackStatus(boolean $FallbackStatus) 设置<p>是否开启备份模型</p>
+ * @method array getFallbackModels() 获取<p>备份模型</p>
+ * @method void setFallbackModels(array $FallbackModels) 设置<p>备份模型</p>
  */
 class ModifyModelServiceRequest extends AbstractModel
 {
@@ -171,6 +181,31 @@ class ModifyModelServiceRequest extends AbstractModel
     public $SensitiveDataCheckConfig;
 
     /**
+     * @var string <p>负载方式</p><p>枚举值：</p><ul><li>random： 随机</li><li>consistentHash： 会话保持</li></ul>
+     */
+    public $TargetSelect;
+
+    /**
+     * @var string <p>会话判断方式</p><p>枚举值：</p><ul><li>fromClientIP： 从客户端IP判断</li><li>fromHeader： 从请求header判断</li><li>autoDetect： 自动探测</li></ul>
+     */
+    public $FindHostKeyMethod;
+
+    /**
+     * @var string <p>会话判断header名称</p>
+     */
+    public $HostKeyHeaderName;
+
+    /**
+     * @var boolean <p>是否开启备份模型</p>
+     */
+    public $FallbackStatus;
+
+    /**
+     * @var array <p>备份模型</p>
+     */
+    public $FallbackModels;
+
+    /**
      * @param string $InstanceID <p>实例</p>
      * @param string $ID <p>模型服务ID</p>
      * @param string $Name <p>模型服务名称</p>
@@ -192,6 +227,11 @@ class ModifyModelServiceRequest extends AbstractModel
      * @param PromptModerateConfigDTO $PromptModerateConfig <p>提示词安全检测配置</p>
      * @param boolean $SensitiveDataCheckStatus <p>是否开启敏感数据检测</p>
      * @param SensitiveDataCheckConfigDTO $SensitiveDataCheckConfig <p>敏感数据检测配置</p>
+     * @param string $TargetSelect <p>负载方式</p><p>枚举值：</p><ul><li>random： 随机</li><li>consistentHash： 会话保持</li></ul>
+     * @param string $FindHostKeyMethod <p>会话判断方式</p><p>枚举值：</p><ul><li>fromClientIP： 从客户端IP判断</li><li>fromHeader： 从请求header判断</li><li>autoDetect： 自动探测</li></ul>
+     * @param string $HostKeyHeaderName <p>会话判断header名称</p>
+     * @param boolean $FallbackStatus <p>是否开启备份模型</p>
+     * @param array $FallbackModels <p>备份模型</p>
      */
     function __construct()
     {
@@ -303,6 +343,31 @@ class ModifyModelServiceRequest extends AbstractModel
         if (array_key_exists("SensitiveDataCheckConfig",$param) and $param["SensitiveDataCheckConfig"] !== null) {
             $this->SensitiveDataCheckConfig = new SensitiveDataCheckConfigDTO();
             $this->SensitiveDataCheckConfig->deserialize($param["SensitiveDataCheckConfig"]);
+        }
+
+        if (array_key_exists("TargetSelect",$param) and $param["TargetSelect"] !== null) {
+            $this->TargetSelect = $param["TargetSelect"];
+        }
+
+        if (array_key_exists("FindHostKeyMethod",$param) and $param["FindHostKeyMethod"] !== null) {
+            $this->FindHostKeyMethod = $param["FindHostKeyMethod"];
+        }
+
+        if (array_key_exists("HostKeyHeaderName",$param) and $param["HostKeyHeaderName"] !== null) {
+            $this->HostKeyHeaderName = $param["HostKeyHeaderName"];
+        }
+
+        if (array_key_exists("FallbackStatus",$param) and $param["FallbackStatus"] !== null) {
+            $this->FallbackStatus = $param["FallbackStatus"];
+        }
+
+        if (array_key_exists("FallbackModels",$param) and $param["FallbackModels"] !== null) {
+            $this->FallbackModels = [];
+            foreach ($param["FallbackModels"] as $key => $value){
+                $obj = new TargetModelDTO();
+                $obj->deserialize($value);
+                array_push($this->FallbackModels, $obj);
+            }
         }
     }
 }

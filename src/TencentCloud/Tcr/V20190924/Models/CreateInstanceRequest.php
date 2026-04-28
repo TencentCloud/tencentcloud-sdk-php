@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInstance请求参数结构体
  *
- * @method string getRegistryName() 获取企业版实例名称
- * @method void setRegistryName(string $RegistryName) 设置企业版实例名称
- * @method string getRegistryType() 获取企业版实例类型（basic 基础版；standard 标准版；premium 高级版）
- * @method void setRegistryType(string $RegistryType) 设置企业版实例类型（basic 基础版；standard 标准版；premium 高级版）
- * @method TagSpecification getTagSpecification() 获取云标签描述
- * @method void setTagSpecification(TagSpecification $TagSpecification) 设置云标签描述
- * @method integer getRegistryChargeType() 获取实例计费类型，0表示按量计费，1表示预付费，默认为按量计费
- * @method void setRegistryChargeType(integer $RegistryChargeType) 设置实例计费类型，0表示按量计费，1表示预付费，默认为按量计费
- * @method RegistryChargePrepaid getRegistryChargePrepaid() 获取预付费自动续费标识和购买时长
- * @method void setRegistryChargePrepaid(RegistryChargePrepaid $RegistryChargePrepaid) 设置预付费自动续费标识和购买时长
- * @method boolean getSyncTag() 获取是否同步TCR云标签至生成的COS Bucket
- * @method void setSyncTag(boolean $SyncTag) 设置是否同步TCR云标签至生成的COS Bucket
- * @method boolean getEnableCosMAZ() 获取是否开启Cos桶多AZ特性
- * @method void setEnableCosMAZ(boolean $EnableCosMAZ) 设置是否开启Cos桶多AZ特性
- * @method boolean getDeletionProtection() 获取是否开启实例删除保护
- * @method void setDeletionProtection(boolean $DeletionProtection) 设置是否开启实例删除保护
+ * @method string getRegistryName() 获取<p>企业版实例名称</p>
+ * @method void setRegistryName(string $RegistryName) 设置<p>企业版实例名称</p>
+ * @method string getRegistryType() 获取<p>企业版实例类型（basic 基础版；standard 标准版；premium 高级版）</p>
+ * @method void setRegistryType(string $RegistryType) 设置<p>企业版实例类型（basic 基础版；standard 标准版；premium 高级版）</p>
+ * @method TagSpecification getTagSpecification() 获取<p>云标签描述</p>
+ * @method void setTagSpecification(TagSpecification $TagSpecification) 设置<p>云标签描述</p>
+ * @method integer getRegistryChargeType() 获取<p>实例计费类型，0表示按量计费，1表示预付费，默认为按量计费</p>
+ * @method void setRegistryChargeType(integer $RegistryChargeType) 设置<p>实例计费类型，0表示按量计费，1表示预付费，默认为按量计费</p>
+ * @method RegistryChargePrepaid getRegistryChargePrepaid() 获取<p>预付费自动续费标识和购买时长</p>
+ * @method void setRegistryChargePrepaid(RegistryChargePrepaid $RegistryChargePrepaid) 设置<p>预付费自动续费标识和购买时长</p>
+ * @method boolean getSyncTag() 获取<p>是否同步TCR云标签至生成的COS Bucket</p>
+ * @method void setSyncTag(boolean $SyncTag) 设置<p>是否同步TCR云标签至生成的COS Bucket</p>
+ * @method boolean getEnableCosMAZ() 获取<p>是否开启Cos桶多AZ特性</p>
+ * @method void setEnableCosMAZ(boolean $EnableCosMAZ) 设置<p>是否开启Cos桶多AZ特性</p>
+ * @method boolean getDeletionProtection() 获取<p>是否开启实例删除保护</p>
+ * @method void setDeletionProtection(boolean $DeletionProtection) 设置<p>是否开启实例删除保护</p>
+ * @method boolean getEnableCosVersioning() 获取<p>是否开启cos桶多版本控制</p>
+ * @method void setEnableCosVersioning(boolean $EnableCosVersioning) 设置<p>是否开启cos桶多版本控制</p>
  */
 class CreateInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 企业版实例名称
+     * @var string <p>企业版实例名称</p>
      */
     public $RegistryName;
 
     /**
-     * @var string 企业版实例类型（basic 基础版；standard 标准版；premium 高级版）
+     * @var string <p>企业版实例类型（basic 基础版；standard 标准版；premium 高级版）</p>
      */
     public $RegistryType;
 
     /**
-     * @var TagSpecification 云标签描述
+     * @var TagSpecification <p>云标签描述</p>
      */
     public $TagSpecification;
 
     /**
-     * @var integer 实例计费类型，0表示按量计费，1表示预付费，默认为按量计费
+     * @var integer <p>实例计费类型，0表示按量计费，1表示预付费，默认为按量计费</p>
      */
     public $RegistryChargeType;
 
     /**
-     * @var RegistryChargePrepaid 预付费自动续费标识和购买时长
+     * @var RegistryChargePrepaid <p>预付费自动续费标识和购买时长</p>
      */
     public $RegistryChargePrepaid;
 
     /**
-     * @var boolean 是否同步TCR云标签至生成的COS Bucket
+     * @var boolean <p>是否同步TCR云标签至生成的COS Bucket</p>
      */
     public $SyncTag;
 
     /**
-     * @var boolean 是否开启Cos桶多AZ特性
+     * @var boolean <p>是否开启Cos桶多AZ特性</p>
      */
     public $EnableCosMAZ;
 
     /**
-     * @var boolean 是否开启实例删除保护
+     * @var boolean <p>是否开启实例删除保护</p>
      */
     public $DeletionProtection;
 
     /**
-     * @param string $RegistryName 企业版实例名称
-     * @param string $RegistryType 企业版实例类型（basic 基础版；standard 标准版；premium 高级版）
-     * @param TagSpecification $TagSpecification 云标签描述
-     * @param integer $RegistryChargeType 实例计费类型，0表示按量计费，1表示预付费，默认为按量计费
-     * @param RegistryChargePrepaid $RegistryChargePrepaid 预付费自动续费标识和购买时长
-     * @param boolean $SyncTag 是否同步TCR云标签至生成的COS Bucket
-     * @param boolean $EnableCosMAZ 是否开启Cos桶多AZ特性
-     * @param boolean $DeletionProtection 是否开启实例删除保护
+     * @var boolean <p>是否开启cos桶多版本控制</p>
+     */
+    public $EnableCosVersioning;
+
+    /**
+     * @param string $RegistryName <p>企业版实例名称</p>
+     * @param string $RegistryType <p>企业版实例类型（basic 基础版；standard 标准版；premium 高级版）</p>
+     * @param TagSpecification $TagSpecification <p>云标签描述</p>
+     * @param integer $RegistryChargeType <p>实例计费类型，0表示按量计费，1表示预付费，默认为按量计费</p>
+     * @param RegistryChargePrepaid $RegistryChargePrepaid <p>预付费自动续费标识和购买时长</p>
+     * @param boolean $SyncTag <p>是否同步TCR云标签至生成的COS Bucket</p>
+     * @param boolean $EnableCosMAZ <p>是否开启Cos桶多AZ特性</p>
+     * @param boolean $DeletionProtection <p>是否开启实例删除保护</p>
+     * @param boolean $EnableCosVersioning <p>是否开启cos桶多版本控制</p>
      */
     function __construct()
     {
@@ -134,6 +142,10 @@ class CreateInstanceRequest extends AbstractModel
 
         if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
             $this->DeletionProtection = $param["DeletionProtection"];
+        }
+
+        if (array_key_exists("EnableCosVersioning",$param) and $param["EnableCosVersioning"] !== null) {
+            $this->EnableCosVersioning = $param["EnableCosVersioning"];
         }
     }
 }

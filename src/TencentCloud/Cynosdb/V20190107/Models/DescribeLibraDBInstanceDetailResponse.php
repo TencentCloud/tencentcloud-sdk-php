@@ -20,334 +20,344 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLibraDBInstanceDetail返回参数结构体
  *
- * @method string getUin() 获取主账号
+ * @method string getUin() 获取<p>主账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUin(string $Uin) 设置主账号
+ * @method void setUin(string $Uin) 设置<p>主账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAppId() 获取账号唯一ID
+ * @method integer getAppId() 获取<p>账号唯一ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppId(integer $AppId) 设置账号唯一ID
+ * @method void setAppId(integer $AppId) 设置<p>账号唯一ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getClusterId() 获取集群ID
+ * @method string getClusterId() 获取<p>集群ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getClusterName() 获取集群名称
+ * @method string getClusterName() 获取<p>集群名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterName(string $ClusterName) 设置集群名称
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceId() 获取实例ID
+ * @method string getInstanceId() 获取<p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceName() 获取实例名称
+ * @method string getInstanceName() 获取<p>实例名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceName(string $InstanceName) 设置实例名称
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getProjectId() 获取项目ID
+ * @method integer getProjectId() 获取<p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectId(integer $ProjectId) 设置项目ID
+ * @method void setProjectId(integer $ProjectId) 设置<p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegion() 获取地域
+ * @method string getRegion() 获取<p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegion(string $Region) 设置地域
+ * @method void setRegion(string $Region) 设置<p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getZone() 获取可用区
+ * @method string getZone() 获取<p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setZone(string $Zone) 设置可用区
+ * @method void setZone(string $Zone) 设置<p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取实例状态
+ * @method string getStatus() 获取<p>实例状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置实例状态
+ * @method void setStatus(string $Status) 设置<p>实例状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatusDesc() 获取状态描述
+ * @method string getStatusDesc() 获取<p>状态描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatusDesc(string $StatusDesc) 设置状态描述
+ * @method void setStatusDesc(string $StatusDesc) 设置<p>状态描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLibraDBVersion() 获取Libra分析引擎版本
+ * @method string getLibraDBVersion() 获取<p>Libra分析引擎版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLibraDBVersion(string $LibraDBVersion) 设置Libra分析引擎版本
+ * @method void setLibraDBVersion(string $LibraDBVersion) 设置<p>Libra分析引擎版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCpu() 获取cpu核数
+ * @method integer getCpu() 获取<p>cpu核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCpu(integer $Cpu) 设置cpu核数
+ * @method void setCpu(integer $Cpu) 设置<p>cpu核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMemory() 获取内存大小
+ * @method integer getMemory() 获取<p>内存大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMemory(integer $Memory) 设置内存大小
+ * @method void setMemory(integer $Memory) 设置<p>内存大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStorage() 获取存储大小
+ * @method integer getStorage() 获取<p>存储大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStorage(integer $Storage) 设置存储大小
+ * @method void setStorage(integer $Storage) 设置<p>存储大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStorageType() 获取存储类型
+ * @method string getStorageType() 获取<p>存储类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStorageType(string $StorageType) 设置存储类型
+ * @method void setStorageType(string $StorageType) 设置<p>存储类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceType() 获取实例类型
+ * @method string getInstanceType() 获取<p>实例类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceType(string $InstanceType) 设置实例类型
+ * @method void setInstanceType(string $InstanceType) 设置<p>实例类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceRole() 获取实例角色
+ * @method string getInstanceRole() 获取<p>实例角色</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceRole(string $InstanceRole) 设置实例角色
+ * @method void setInstanceRole(string $InstanceRole) 设置<p>实例角色</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取更新时间
+ * @method string getUpdateTime() 获取<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间
+ * @method string getCreateTime() 获取<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPayMode() 获取售卖方式
+ * @method integer getPayMode() 获取<p>售卖方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPayMode(integer $PayMode) 设置售卖方式
+ * @method void setPayMode(integer $PayMode) 设置<p>售卖方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPeriodStartTime() 获取售卖开始时间
+ * @method string getPeriodStartTime() 获取<p>售卖开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPeriodStartTime(string $PeriodStartTime) 设置售卖开始时间
+ * @method void setPeriodStartTime(string $PeriodStartTime) 设置<p>售卖开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPeriodEndTime() 获取售卖结束时间
+ * @method string getPeriodEndTime() 获取<p>售卖结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPeriodEndTime(string $PeriodEndTime) 设置售卖结束时间
+ * @method void setPeriodEndTime(string $PeriodEndTime) 设置<p>售卖结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRenewFlag() 获取续费标识
+ * @method integer getRenewFlag() 获取<p>续费标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRenewFlag(integer $RenewFlag) 设置续费标识
+ * @method void setRenewFlag(integer $RenewFlag) 设置<p>续费标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getNetType() 获取网络类型
+ * @method integer getNetType() 获取<p>网络类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNetType(integer $NetType) 设置网络类型
+ * @method void setNetType(integer $NetType) 设置<p>网络类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVpcId() 获取私有网络ID
+ * @method string getVpcId() 获取<p>私有网络ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVpcId(string $VpcId) 设置私有网络ID
+ * @method void setVpcId(string $VpcId) 设置<p>私有网络ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSubnetId() 获取子网ID
+ * @method string getSubnetId() 获取<p>子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubnetId(string $SubnetId) 设置子网ID
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVip() 获取虚拟IP
+ * @method string getVip() 获取<p>虚拟IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVip(string $Vip) 设置虚拟IP
+ * @method void setVip(string $Vip) 设置<p>虚拟IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getVport() 获取端口
+ * @method integer getVport() 获取<p>端口</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVport(integer $Vport) 设置端口
+ * @method void setVport(integer $Vport) 设置<p>端口</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method InstanceNetInfo getInstanceNetInfo() 获取实例网络信息
+ * @method InstanceNetInfo getInstanceNetInfo() 获取<p>实例网络信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceNetInfo(InstanceNetInfo $InstanceNetInfo) 设置实例网络信息
+ * @method void setInstanceNetInfo(InstanceNetInfo $InstanceNetInfo) 设置<p>实例网络信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getResourceTags() 获取实例标签信息
+ * @method array getResourceTags() 获取<p>实例标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceTags(array $ResourceTags) 设置实例标签信息
+ * @method void setResourceTags(array $ResourceTags) 设置<p>实例标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getNodeInfo() 获取实例节点信息
- * @method void setNodeInfo(array $NodeInfo) 设置实例节点信息
- * @method integer getNodeCount() 获取实例节点个数
- * @method void setNodeCount(integer $NodeCount) 设置实例节点个数
+ * @method array getNodeInfo() 获取<p>实例节点信息</p>
+ * @method void setNodeInfo(array $NodeInfo) 设置<p>实例节点信息</p>
+ * @method integer getNodeCount() 获取<p>实例节点个数</p>
+ * @method void setNodeCount(integer $NodeCount) 设置<p>实例节点个数</p>
+ * @method UpgradeAnalysisInstanceVersionInfo getAnalysisUpgradeVersionInfo() 获取<p>分析实例升级版本之后信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAnalysisUpgradeVersionInfo(UpgradeAnalysisInstanceVersionInfo $AnalysisUpgradeVersionInfo) 设置<p>分析实例升级版本之后信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeLibraDBInstanceDetailResponse extends AbstractModel
 {
     /**
-     * @var string 主账号
+     * @var string <p>主账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
     /**
-     * @var integer 账号唯一ID
+     * @var integer <p>账号唯一ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
 
     /**
-     * @var string 集群名称
+     * @var string <p>集群名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterName;
 
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
     /**
-     * @var integer 项目ID
+     * @var integer <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
-     * @var string 可用区
+     * @var string <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
     /**
-     * @var string 实例状态
+     * @var string <p>实例状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var string 状态描述
+     * @var string <p>状态描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusDesc;
 
     /**
-     * @var string Libra分析引擎版本
+     * @var string <p>Libra分析引擎版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LibraDBVersion;
 
     /**
-     * @var integer cpu核数
+     * @var integer <p>cpu核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cpu;
 
     /**
-     * @var integer 内存大小
+     * @var integer <p>内存大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Memory;
 
     /**
-     * @var integer 存储大小
+     * @var integer <p>存储大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Storage;
 
     /**
-     * @var string 存储类型
+     * @var string <p>存储类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StorageType;
 
     /**
-     * @var string 实例类型
+     * @var string <p>实例类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
     /**
-     * @var string 实例角色
+     * @var string <p>实例角色</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceRole;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var integer 售卖方式
+     * @var integer <p>售卖方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayMode;
 
     /**
-     * @var string 售卖开始时间
+     * @var string <p>售卖开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PeriodStartTime;
 
     /**
-     * @var string 售卖结束时间
+     * @var string <p>售卖结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PeriodEndTime;
 
     /**
-     * @var integer 续费标识
+     * @var integer <p>续费标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RenewFlag;
 
     /**
-     * @var integer 网络类型
+     * @var integer <p>网络类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetType;
 
     /**
-     * @var string 私有网络ID
+     * @var string <p>私有网络ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
-     * @var string 子网ID
+     * @var string <p>子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
     /**
-     * @var string 虚拟IP
+     * @var string <p>虚拟IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vip;
 
     /**
-     * @var integer 端口
+     * @var integer <p>端口</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vport;
 
     /**
-     * @var InstanceNetInfo 实例网络信息
+     * @var InstanceNetInfo <p>实例网络信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceNetInfo;
 
     /**
-     * @var array 实例标签信息
+     * @var array <p>实例标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceTags;
 
     /**
-     * @var array 实例节点信息
+     * @var array <p>实例节点信息</p>
      */
     public $NodeInfo;
 
     /**
-     * @var integer 实例节点个数
+     * @var integer <p>实例节点个数</p>
      */
     public $NodeCount;
+
+    /**
+     * @var UpgradeAnalysisInstanceVersionInfo <p>分析实例升级版本之后信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AnalysisUpgradeVersionInfo;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -355,70 +365,72 @@ class DescribeLibraDBInstanceDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Uin 主账号
+     * @param string $Uin <p>主账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AppId 账号唯一ID
+     * @param integer $AppId <p>账号唯一ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ClusterId 集群ID
+     * @param string $ClusterId <p>集群ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ClusterName 集群名称
+     * @param string $ClusterName <p>集群名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceId 实例ID
+     * @param string $InstanceId <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceName 实例名称
+     * @param string $InstanceName <p>实例名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ProjectId 项目ID
+     * @param integer $ProjectId <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Region 地域
+     * @param string $Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Zone 可用区
+     * @param string $Zone <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 实例状态
+     * @param string $Status <p>实例状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StatusDesc 状态描述
+     * @param string $StatusDesc <p>状态描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LibraDBVersion Libra分析引擎版本
+     * @param string $LibraDBVersion <p>Libra分析引擎版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Cpu cpu核数
+     * @param integer $Cpu <p>cpu核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Memory 内存大小
+     * @param integer $Memory <p>内存大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Storage 存储大小
+     * @param integer $Storage <p>存储大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StorageType 存储类型
+     * @param string $StorageType <p>存储类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceType 实例类型
+     * @param string $InstanceType <p>实例类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceRole 实例角色
+     * @param string $InstanceRole <p>实例角色</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime 更新时间
+     * @param string $UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间
+     * @param string $CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PayMode 售卖方式
+     * @param integer $PayMode <p>售卖方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PeriodStartTime 售卖开始时间
+     * @param string $PeriodStartTime <p>售卖开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PeriodEndTime 售卖结束时间
+     * @param string $PeriodEndTime <p>售卖结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RenewFlag 续费标识
+     * @param integer $RenewFlag <p>续费标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $NetType 网络类型
+     * @param integer $NetType <p>网络类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VpcId 私有网络ID
+     * @param string $VpcId <p>私有网络ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SubnetId 子网ID
+     * @param string $SubnetId <p>子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Vip 虚拟IP
+     * @param string $Vip <p>虚拟IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Vport 端口
+     * @param integer $Vport <p>端口</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceNetInfo $InstanceNetInfo 实例网络信息
+     * @param InstanceNetInfo $InstanceNetInfo <p>实例网络信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ResourceTags 实例标签信息
+     * @param array $ResourceTags <p>实例标签信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $NodeInfo 实例节点信息
-     * @param integer $NodeCount 实例节点个数
+     * @param array $NodeInfo <p>实例节点信息</p>
+     * @param integer $NodeCount <p>实例节点个数</p>
+     * @param UpgradeAnalysisInstanceVersionInfo $AnalysisUpgradeVersionInfo <p>分析实例升级版本之后信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -575,6 +587,11 @@ class DescribeLibraDBInstanceDetailResponse extends AbstractModel
 
         if (array_key_exists("NodeCount",$param) and $param["NodeCount"] !== null) {
             $this->NodeCount = $param["NodeCount"];
+        }
+
+        if (array_key_exists("AnalysisUpgradeVersionInfo",$param) and $param["AnalysisUpgradeVersionInfo"] !== null) {
+            $this->AnalysisUpgradeVersionInfo = new UpgradeAnalysisInstanceVersionInfo();
+            $this->AnalysisUpgradeVersionInfo->deserialize($param["AnalysisUpgradeVersionInfo"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

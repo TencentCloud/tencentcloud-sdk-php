@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyKnowledgeBase请求参数结构体
  *
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method string getOperateType() 获取操作类型：Create，Update，Delete
- * @method void setOperateType(string $OperateType) 设置操作类型：Create，Update，Delete
- * @method string getKnowledgeBaseId() 获取知识库id，update和delete时必填
- * @method void setKnowledgeBaseId(string $KnowledgeBaseId) 设置知识库id，update和delete时必填
- * @method string getKnowledgeBaseName() 获取知识库名称，create和update时必填。只允许字母、数字、汉字、下划线
- * @method void setKnowledgeBaseName(string $KnowledgeBaseName) 设置知识库名称，create和update时必填。只允许字母、数字、汉字、下划线
- * @method string getKnowledgeBaseDesc() 获取知识库描述，create和update时必填
- * @method void setKnowledgeBaseDesc(string $KnowledgeBaseDesc) 设置知识库描述，create和update时必填
- * @method integer getUseScope() 获取1仅自己使用，2指定用户，0全员
- * @method void setUseScope(integer $UseScope) 设置1仅自己使用，2指定用户，0全员
- * @method array getAuthorityUins() 获取可使用用户列表
- * @method void setAuthorityUins(array $AuthorityUins) 设置可使用用户列表
+ * @method string getInstanceId() 获取<p>实例id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例id</p>
+ * @method string getOperateType() 获取<p>操作类型：Create，Update，Delete</p>
+ * @method void setOperateType(string $OperateType) 设置<p>操作类型：Create，Update，Delete</p>
+ * @method string getKnowledgeBaseId() 获取<p>知识库id，update和delete时必填</p>
+ * @method void setKnowledgeBaseId(string $KnowledgeBaseId) 设置<p>知识库id，update和delete时必填</p>
+ * @method string getKnowledgeBaseName() 获取<p>知识库名称，create和update时必填。只允许字母、数字、汉字、下划线</p>
+ * @method void setKnowledgeBaseName(string $KnowledgeBaseName) 设置<p>知识库名称，create和update时必填。只允许字母、数字、汉字、下划线</p>
+ * @method string getKnowledgeBaseDesc() 获取<p>知识库描述，create和update时必填</p>
+ * @method void setKnowledgeBaseDesc(string $KnowledgeBaseDesc) 设置<p>知识库描述，create和update时必填</p>
+ * @method integer getUseScope() 获取<p>1仅自己使用，2指定用户，0全员</p>
+ * @method void setUseScope(integer $UseScope) 设置<p>1仅自己使用，2指定用户，0全员</p>
+ * @method array getAuthorityUins() 获取<p>可使用用户列表</p>
+ * @method void setAuthorityUins(array $AuthorityUins) 设置<p>可使用用户列表</p>
+ * @method KnowledgeTaskConfig getConfig() 获取<p>知识库任务配置</p>
+ * @method void setConfig(KnowledgeTaskConfig $Config) 设置<p>知识库任务配置</p>
  */
 class ModifyKnowledgeBaseRequest extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string <p>实例id</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 操作类型：Create，Update，Delete
+     * @var string <p>操作类型：Create，Update，Delete</p>
      */
     public $OperateType;
 
     /**
-     * @var string 知识库id，update和delete时必填
+     * @var string <p>知识库id，update和delete时必填</p>
      */
     public $KnowledgeBaseId;
 
     /**
-     * @var string 知识库名称，create和update时必填。只允许字母、数字、汉字、下划线
+     * @var string <p>知识库名称，create和update时必填。只允许字母、数字、汉字、下划线</p>
      */
     public $KnowledgeBaseName;
 
     /**
-     * @var string 知识库描述，create和update时必填
+     * @var string <p>知识库描述，create和update时必填</p>
      */
     public $KnowledgeBaseDesc;
 
     /**
-     * @var integer 1仅自己使用，2指定用户，0全员
+     * @var integer <p>1仅自己使用，2指定用户，0全员</p>
      */
     public $UseScope;
 
     /**
-     * @var array 可使用用户列表
+     * @var array <p>可使用用户列表</p>
      */
     public $AuthorityUins;
 
     /**
-     * @param string $InstanceId 实例id
-     * @param string $OperateType 操作类型：Create，Update，Delete
-     * @param string $KnowledgeBaseId 知识库id，update和delete时必填
-     * @param string $KnowledgeBaseName 知识库名称，create和update时必填。只允许字母、数字、汉字、下划线
-     * @param string $KnowledgeBaseDesc 知识库描述，create和update时必填
-     * @param integer $UseScope 1仅自己使用，2指定用户，0全员
-     * @param array $AuthorityUins 可使用用户列表
+     * @var KnowledgeTaskConfig <p>知识库任务配置</p>
+     */
+    public $Config;
+
+    /**
+     * @param string $InstanceId <p>实例id</p>
+     * @param string $OperateType <p>操作类型：Create，Update，Delete</p>
+     * @param string $KnowledgeBaseId <p>知识库id，update和delete时必填</p>
+     * @param string $KnowledgeBaseName <p>知识库名称，create和update时必填。只允许字母、数字、汉字、下划线</p>
+     * @param string $KnowledgeBaseDesc <p>知识库描述，create和update时必填</p>
+     * @param integer $UseScope <p>1仅自己使用，2指定用户，0全员</p>
+     * @param array $AuthorityUins <p>可使用用户列表</p>
+     * @param KnowledgeTaskConfig $Config <p>知识库任务配置</p>
      */
     function __construct()
     {
@@ -120,6 +128,11 @@ class ModifyKnowledgeBaseRequest extends AbstractModel
 
         if (array_key_exists("AuthorityUins",$param) and $param["AuthorityUins"] !== null) {
             $this->AuthorityUins = $param["AuthorityUins"];
+        }
+
+        if (array_key_exists("Config",$param) and $param["Config"] !== null) {
+            $this->Config = new KnowledgeTaskConfig();
+            $this->Config->deserialize($param["Config"]);
         }
     }
 }

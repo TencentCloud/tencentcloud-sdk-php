@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDocumentSummary(string $DocumentSummary) 设置<p>文档摘要</p>
  * @method string getWebUrl() 获取<p>网页地址</p>
  * @method void setWebUrl(string $WebUrl) 设置<p>网页地址</p>
+ * @method array getCapabilities() 获取<p>文件能力标识列表</p>
+ * @method void setCapabilities(array $Capabilities) 设置<p>文件能力标识列表</p>
  */
 class FileInfo extends AbstractModel
 {
@@ -115,6 +117,11 @@ class FileInfo extends AbstractModel
     public $WebUrl;
 
     /**
+     * @var array <p>文件能力标识列表</p>
+     */
+    public $Capabilities;
+
+    /**
      * @param string $FileName <p>文件名称</p>
      * @param float $FileSize <p>文件大小，字节</p>
      * @param integer $Type <p>文件类型,0=文本,1=表格，默认0</p>
@@ -128,6 +135,7 @@ class FileInfo extends AbstractModel
      * @param integer $IsShowCase <p>是否官方示例，0=否，1=是</p>
      * @param string $DocumentSummary <p>文档摘要</p>
      * @param string $WebUrl <p>网页地址</p>
+     * @param array $Capabilities <p>文件能力标识列表</p>
      */
     function __construct()
     {
@@ -193,6 +201,10 @@ class FileInfo extends AbstractModel
 
         if (array_key_exists("WebUrl",$param) and $param["WebUrl"] !== null) {
             $this->WebUrl = $param["WebUrl"];
+        }
+
+        if (array_key_exists("Capabilities",$param) and $param["Capabilities"] !== null) {
+            $this->Capabilities = $param["Capabilities"];
         }
     }
 }

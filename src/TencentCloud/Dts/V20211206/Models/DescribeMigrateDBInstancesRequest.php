@@ -20,90 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMigrateDBInstances请求参数结构体
  *
- * @method string getDatabaseType() 获取数据库类型，如mysql,percona,mariadb,tdsqlmysql,mariadb,postgresql,cynosdbmysql,redis,tendis,keewidb,tdstore,mongodb,clickhouse,sqlserver等。
- * @method void setDatabaseType(string $DatabaseType) 设置数据库类型，如mysql,percona,mariadb,tdsqlmysql,mariadb,postgresql,cynosdbmysql,redis,tendis,keewidb,tdstore,mongodb,clickhouse,sqlserver等。
- * @method string getMigrateRole() 获取实例作为迁移的源还是目标,src(表示源)，dst(表示目标)
- * @method void setMigrateRole(string $MigrateRole) 设置实例作为迁移的源还是目标,src(表示源)，dst(表示目标)
- * @method string getInstanceId() 获取云数据库实例ID，可通过对应业务实例列表获取实例信息。
- * @method void setInstanceId(string $InstanceId) 设置云数据库实例ID，可通过对应业务实例列表获取实例信息。
- * @method string getInstanceName() 获取云数据库名称，可通过对应业务实例列表获取实例信息。
- * @method void setInstanceName(string $InstanceName) 设置云数据库名称，可通过对应业务实例列表获取实例信息。
- * @method integer getLimit() 获取返回数量限制
- * @method void setLimit(integer $Limit) 设置返回数量限制
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method string getAccountMode() 获取资源所属账号 为空值或self(表示本账号内资源)、other(表示其他账户资源)
- * @method void setAccountMode(string $AccountMode) 设置资源所属账号 为空值或self(表示本账号内资源)、other(表示其他账户资源)
- * @method string getTmpSecretId() 获取临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
- * @method void setTmpSecretId(string $TmpSecretId) 设置临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
- * @method string getTmpSecretKey() 获取临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
- * @method void setTmpSecretKey(string $TmpSecretKey) 设置临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
- * @method string getTmpToken() 获取临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
- * @method void setTmpToken(string $TmpToken) 设置临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
+ * @method string getDatabaseType() 获取<p>数据库类型，如mysql,percona,mariadb,tdsqlmysql,mariadb,postgresql,cynosdbmysql,redis,tendis,keewidb,tdstore,mongodb,clickhouse,sqlserver等。</p>
+ * @method void setDatabaseType(string $DatabaseType) 设置<p>数据库类型，如mysql,percona,mariadb,tdsqlmysql,mariadb,postgresql,cynosdbmysql,redis,tendis,keewidb,tdstore,mongodb,clickhouse,sqlserver等。</p>
+ * @method string getMigrateRole() 获取<p>实例作为迁移的源还是目标,src(表示源)，dst(表示目标)</p>
+ * @method void setMigrateRole(string $MigrateRole) 设置<p>实例作为迁移的源还是目标,src(表示源)，dst(表示目标)</p>
+ * @method string getInstanceId() 获取<p>云数据库实例ID，可通过对应业务实例列表获取实例信息。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>云数据库实例ID，可通过对应业务实例列表获取实例信息。</p>
+ * @method string getInstanceName() 获取<p>云数据库名称，可通过对应业务实例列表获取实例信息。</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>云数据库名称，可通过对应业务实例列表获取实例信息。</p>
+ * @method integer getLimit() 获取<p>返回数量限制</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量限制</p>
+ * @method integer getOffset() 获取<p>偏移量</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量</p>
+ * @method string getAccountMode() 获取<p>资源所属账号 为空值或self(表示本账号内资源)、other(表示其他账户资源)</p>
+ * @method void setAccountMode(string $AccountMode) 设置<p>资源所属账号 为空值或self(表示本账号内资源)、other(表示其他账户资源)</p>
+ * @method string getTmpSecretId() 获取<p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
+ * @method void setTmpSecretId(string $TmpSecretId) 设置<p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
+ * @method string getTmpSecretKey() 获取<p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
+ * @method void setTmpSecretKey(string $TmpSecretKey) 设置<p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
+ * @method string getTmpToken() 获取<p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
+ * @method void setTmpToken(string $TmpToken) 设置<p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
  */
 class DescribeMigrateDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 数据库类型，如mysql,percona,mariadb,tdsqlmysql,mariadb,postgresql,cynosdbmysql,redis,tendis,keewidb,tdstore,mongodb,clickhouse,sqlserver等。
+     * @var string <p>数据库类型，如mysql,percona,mariadb,tdsqlmysql,mariadb,postgresql,cynosdbmysql,redis,tendis,keewidb,tdstore,mongodb,clickhouse,sqlserver等。</p>
      */
     public $DatabaseType;
 
     /**
-     * @var string 实例作为迁移的源还是目标,src(表示源)，dst(表示目标)
+     * @var string <p>实例作为迁移的源还是目标,src(表示源)，dst(表示目标)</p>
      */
     public $MigrateRole;
 
     /**
-     * @var string 云数据库实例ID，可通过对应业务实例列表获取实例信息。
+     * @var string <p>云数据库实例ID，可通过对应业务实例列表获取实例信息。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 云数据库名称，可通过对应业务实例列表获取实例信息。
+     * @var string <p>云数据库名称，可通过对应业务实例列表获取实例信息。</p>
      */
     public $InstanceName;
 
     /**
-     * @var integer 返回数量限制
+     * @var integer <p>返回数量限制</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量
+     * @var integer <p>偏移量</p>
      */
     public $Offset;
 
     /**
-     * @var string 资源所属账号 为空值或self(表示本账号内资源)、other(表示其他账户资源)
+     * @var string <p>资源所属账号 为空值或self(表示本账号内资源)、other(表示其他账户资源)</p>
      */
     public $AccountMode;
 
     /**
-     * @var string 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
+     * @var string <p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
      */
     public $TmpSecretId;
 
     /**
-     * @var string 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
+     * @var string <p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
      */
     public $TmpSecretKey;
 
     /**
-     * @var string 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
+     * @var string <p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
      */
     public $TmpToken;
 
     /**
-     * @param string $DatabaseType 数据库类型，如mysql,percona,mariadb,tdsqlmysql,mariadb,postgresql,cynosdbmysql,redis,tendis,keewidb,tdstore,mongodb,clickhouse,sqlserver等。
-     * @param string $MigrateRole 实例作为迁移的源还是目标,src(表示源)，dst(表示目标)
-     * @param string $InstanceId 云数据库实例ID，可通过对应业务实例列表获取实例信息。
-     * @param string $InstanceName 云数据库名称，可通过对应业务实例列表获取实例信息。
-     * @param integer $Limit 返回数量限制
-     * @param integer $Offset 偏移量
-     * @param string $AccountMode 资源所属账号 为空值或self(表示本账号内资源)、other(表示其他账户资源)
-     * @param string $TmpSecretId 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
-     * @param string $TmpSecretKey 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
-     * @param string $TmpToken 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
+     * @param string $DatabaseType <p>数据库类型，如mysql,percona,mariadb,tdsqlmysql,mariadb,postgresql,cynosdbmysql,redis,tendis,keewidb,tdstore,mongodb,clickhouse,sqlserver等。</p>
+     * @param string $MigrateRole <p>实例作为迁移的源还是目标,src(表示源)，dst(表示目标)</p>
+     * @param string $InstanceId <p>云数据库实例ID，可通过对应业务实例列表获取实例信息。</p>
+     * @param string $InstanceName <p>云数据库名称，可通过对应业务实例列表获取实例信息。</p>
+     * @param integer $Limit <p>返回数量限制</p>
+     * @param integer $Offset <p>偏移量</p>
+     * @param string $AccountMode <p>资源所属账号 为空值或self(表示本账号内资源)、other(表示其他账户资源)</p>
+     * @param string $TmpSecretId <p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
+     * @param string $TmpSecretKey <p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
+     * @param string $TmpToken <p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
      */
     function __construct()
     {

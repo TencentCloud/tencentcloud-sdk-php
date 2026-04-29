@@ -415,6 +415,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 本接口支持定额发票的发票号码、发票代码、金额(大小写)、发票消费类型、地区及是否有公司印章等关键字段的识别。
 
 默认接口请求频率限制：5次/秒。
+ * @method Models\RecognizeAgentResponse RecognizeAgent(Models\RecognizeAgentRequest $req) 支持对输入图的内容进行判断、分类以及总结；支持用户对通用文字识别输出结构进行自定义。
  * @method Models\RecognizeContainerOCRResponse RecognizeContainerOCR(Models\RecognizeContainerOCRRequest $req) 本接口支持集装箱箱门信息识别，识别字段包括集装箱箱号、类型、总重量、有效承重、容量、自身重量，具备集装箱箱号、类型不完整或者不清晰的告警功能。
 默认接口请求频率限制：5次/秒。
  * @method Models\RecognizeEncryptedIDCardOCRResponse RecognizeEncryptedIDCardOCR(Models\RecognizeEncryptedIDCardOCRRequest $req) 身份证识别（安全加密版）接口实现了数据加密传输，能够有效防止个人身份证隐私信息不被窃取泄露。
@@ -791,6 +792,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 存在个别特殊情况下核验结果不准确，请选用前知悉；
 按周更新企业信息变更情况，如遇到未及时更新的情况，可联系在线客服转产品团队进行人工处理。
  * @method Models\VerifyOfdVatInvoiceOCRResponse VerifyOfdVatInvoiceOCR(Models\VerifyOfdVatInvoiceOCRRequest $req) 本接口支持OFD格式的增值税电子普通发票、增值税电子专用发票、电子发票（普通发票）、电子发票（增值税专用发票）、电子发票（铁路电子客票）、电子发票（航空运输电子客票行程单）识别，返回发票代码、发票号码、开票日期、验证码、机器编号、密码区，购买方和销售方信息，包括名称、纳税人识别号、地址电话、开户行及账号，以及价税合计、开票人、收款人、复核人、税额、不含税金额等字段信息。
+ * @method Models\VerifyScenePhotoResponse VerifyScenePhoto(Models\VerifyScenePhotoRequest $req) 提供针对特定场景（如商户门头照、车牌等）图片的PS篡改、AIGC合成、图片质量检测能力，可应用于业务流程中对特定场景图片真实性、有效性校验的场景。
  * @method Models\VinOCRResponse VinOCR(Models\VinOCRRequest $req) 本接口支持图片内车辆识别代号（VIN）的检测和识别。
 默认接口请求频率限制：10次/秒。
  * @method Models\WaybillOCRResponse WaybillOCR(Models\WaybillOCRRequest $req) 本接口支持市面上主流版式电子运单的识别，包括收件人和寄件人的姓名、电话、地址以及运单号等字段。

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InvokeVideosKeywordsAnalyzer返回参数结构体
  *
- * @method array getKeywords() 获取基于搜索结果的总结
- * @method void setKeywords(array $Keywords) 设置基于搜索结果的总结
+ * @method array getKeywords() 获取根据视频内容生成的关键词
+ * @method void setKeywords(array $Keywords) 设置根据视频内容生成的关键词
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class InvokeVideosKeywordsAnalyzerResponse extends AbstractModel
 {
     /**
-     * @var array 基于搜索结果的总结
+     * @var array 根据视频内容生成的关键词
      */
     public $Keywords;
 
@@ -38,7 +38,7 @@ class InvokeVideosKeywordsAnalyzerResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Keywords 基于搜索结果的总结
+     * @param array $Keywords 根据视频内容生成的关键词
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

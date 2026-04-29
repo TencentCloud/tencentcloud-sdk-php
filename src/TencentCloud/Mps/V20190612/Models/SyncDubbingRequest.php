@@ -32,8 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioUrl(string $AudioUrl) 设置<p>克隆音频Url，AudioData为空时有效</p>
  * @method string getAudioLang() 获取<p>克隆音频语言，默认中文。<br>当前支持语言同TextLang</p>
  * @method void setAudioLang(string $AudioLang) 设置<p>克隆音频语言，默认中文。<br>当前支持语言同TextLang</p>
+ * @method VoiceProfile getVoiceProfile() 获取<p>音色属性</p>
+ * @method void setVoiceProfile(VoiceProfile $VoiceProfile) 设置<p>音色属性</p>
  * @method SyncDubbingOutputOption getOutput() 获取<p>输出相关参数</p><p>可以指定输出形式等</p>
  * @method void setOutput(SyncDubbingOutputOption $Output) 设置<p>输出相关参数</p><p>可以指定输出形式等</p>
+ * @method string getResourceId() 获取<p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
  * @method string getExtParam() 获取<p>扩展参数，json字符串</p><p>synExt    Object    语音合成扩展参数<br>    -duration    Float    合成音频时长，单位秒，示例：5.2<br>    -sampleRate    Integer    合成音频采样率，默认16000，支持[8000,16000,22050,32000,44100]<br>    -pitch    Integer    音调，默认0原音色输出，取值[-12, 12]<br>cloneExt    Object    音色克隆扩展参数<br>    -timeRanges    Float[][]    指定克隆音频时间范围，默认[[0, 20]]，示例[[5.2, 10], [45, 59.8]]</p>
  * @method void setExtParam(string $ExtParam) 设置<p>扩展参数，json字符串</p><p>synExt    Object    语音合成扩展参数<br>    -duration    Float    合成音频时长，单位秒，示例：5.2<br>    -sampleRate    Integer    合成音频采样率，默认16000，支持[8000,16000,22050,32000,44100]<br>    -pitch    Integer    音调，默认0原音色输出，取值[-12, 12]<br>cloneExt    Object    音色克隆扩展参数<br>    -timeRanges    Float[][]    指定克隆音频时间范围，默认[[0, 20]]，示例[[5.2, 10], [45, 59.8]]</p>
  */
@@ -70,9 +74,19 @@ class SyncDubbingRequest extends AbstractModel
     public $AudioLang;
 
     /**
+     * @var VoiceProfile <p>音色属性</p>
+     */
+    public $VoiceProfile;
+
+    /**
      * @var SyncDubbingOutputOption <p>输出相关参数</p><p>可以指定输出形式等</p>
      */
     public $Output;
+
+    /**
+     * @var string <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
+     */
+    public $ResourceId;
 
     /**
      * @var string <p>扩展参数，json字符串</p><p>synExt    Object    语音合成扩展参数<br>    -duration    Float    合成音频时长，单位秒，示例：5.2<br>    -sampleRate    Integer    合成音频采样率，默认16000，支持[8000,16000,22050,32000,44100]<br>    -pitch    Integer    音调，默认0原音色输出，取值[-12, 12]<br>cloneExt    Object    音色克隆扩展参数<br>    -timeRanges    Float[][]    指定克隆音频时间范围，默认[[0, 20]]，示例[[5.2, 10], [45, 59.8]]</p>
@@ -86,7 +100,9 @@ class SyncDubbingRequest extends AbstractModel
      * @param string $AudioData <p>克隆音频base64编码。</p>
      * @param string $AudioUrl <p>克隆音频Url，AudioData为空时有效</p>
      * @param string $AudioLang <p>克隆音频语言，默认中文。<br>当前支持语言同TextLang</p>
+     * @param VoiceProfile $VoiceProfile <p>音色属性</p>
      * @param SyncDubbingOutputOption $Output <p>输出相关参数</p><p>可以指定输出形式等</p>
+     * @param string $ResourceId <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
      * @param string $ExtParam <p>扩展参数，json字符串</p><p>synExt    Object    语音合成扩展参数<br>    -duration    Float    合成音频时长，单位秒，示例：5.2<br>    -sampleRate    Integer    合成音频采样率，默认16000，支持[8000,16000,22050,32000,44100]<br>    -pitch    Integer    音调，默认0原音色输出，取值[-12, 12]<br>cloneExt    Object    音色克隆扩展参数<br>    -timeRanges    Float[][]    指定克隆音频时间范围，默认[[0, 20]]，示例[[5.2, 10], [45, 59.8]]</p>
      */
     function __construct()
@@ -126,9 +142,18 @@ class SyncDubbingRequest extends AbstractModel
             $this->AudioLang = $param["AudioLang"];
         }
 
+        if (array_key_exists("VoiceProfile",$param) and $param["VoiceProfile"] !== null) {
+            $this->VoiceProfile = new VoiceProfile();
+            $this->VoiceProfile->deserialize($param["VoiceProfile"]);
+        }
+
         if (array_key_exists("Output",$param) and $param["Output"] !== null) {
             $this->Output = new SyncDubbingOutputOption();
             $this->Output->deserialize($param["Output"]);
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
         }
 
         if (array_key_exists("ExtParam",$param) and $param["ExtParam"] !== null) {

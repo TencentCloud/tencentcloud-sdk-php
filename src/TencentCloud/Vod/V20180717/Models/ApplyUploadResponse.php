@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ApplyUpload返回参数结构体
  *
- * @method string getStorageBucket() 获取存储桶，用于上传接口 URL 的 bucket_name。
- * @method void setStorageBucket(string $StorageBucket) 设置存储桶，用于上传接口 URL 的 bucket_name。
- * @method string getStorageRegion() 获取存储园区，用于上传接口 Host 的 Region。
- * @method void setStorageRegion(string $StorageRegion) 设置存储园区，用于上传接口 Host 的 Region。
- * @method string getVodSessionKey() 获取点播会话，用于确认上传接口的参数 VodSessionKey。
- * @method void setVodSessionKey(string $VodSessionKey) 设置点播会话，用于确认上传接口的参数 VodSessionKey。
- * @method string getMediaStoragePath() 获取媒体存储路径，用于上传接口存储媒体的对象键（Key）。
- * @method void setMediaStoragePath(string $MediaStoragePath) 设置媒体存储路径，用于上传接口存储媒体的对象键（Key）。
- * @method string getCoverStoragePath() 获取封面存储路径，用于上传接口存储封面的对象键（Key）。
- * @method void setCoverStoragePath(string $CoverStoragePath) 设置封面存储路径，用于上传接口存储封面的对象键（Key）。
- * @method TempCertificate getTempCertificate() 获取临时凭证，用于上传接口的权限验证。
- * @method void setTempCertificate(TempCertificate $TempCertificate) 设置临时凭证，用于上传接口的权限验证。
+ * @method string getStorageBucket() 获取<p>存储桶，用于上传接口 URL 的 bucket_name。</p>
+ * @method void setStorageBucket(string $StorageBucket) 设置<p>存储桶，用于上传接口 URL 的 bucket_name。</p>
+ * @method string getStorageRegion() 获取<p>存储园区，用于上传接口 Host 的 Region。</p>
+ * @method void setStorageRegion(string $StorageRegion) 设置<p>存储园区，用于上传接口 Host 的 Region。</p>
+ * @method string getVodSessionKey() 获取<p>点播会话，用于确认上传接口的参数 VodSessionKey。</p>
+ * @method void setVodSessionKey(string $VodSessionKey) 设置<p>点播会话，用于确认上传接口的参数 VodSessionKey。</p>
+ * @method string getMediaStoragePath() 获取<p>媒体存储路径，用于上传接口存储媒体的对象键（Key）。</p>
+ * @method void setMediaStoragePath(string $MediaStoragePath) 设置<p>媒体存储路径，用于上传接口存储媒体的对象键（Key）。</p>
+ * @method string getCoverStoragePath() 获取<p>封面存储路径，用于上传接口存储封面的对象键（Key）。</p>
+ * @method void setCoverStoragePath(string $CoverStoragePath) 设置<p>封面存储路径，用于上传接口存储封面的对象键（Key）。</p>
+ * @method TempCertificate getTempCertificate() 获取<p>临时凭证，用于上传接口的权限验证。</p>
+ * @method void setTempCertificate(TempCertificate $TempCertificate) 设置<p>临时凭证，用于上传接口的权限验证。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ApplyUploadResponse extends AbstractModel
 {
     /**
-     * @var string 存储桶，用于上传接口 URL 的 bucket_name。
+     * @var string <p>存储桶，用于上传接口 URL 的 bucket_name。</p>
      */
     public $StorageBucket;
 
     /**
-     * @var string 存储园区，用于上传接口 Host 的 Region。
+     * @var string <p>存储园区，用于上传接口 Host 的 Region。</p>
      */
     public $StorageRegion;
 
     /**
-     * @var string 点播会话，用于确认上传接口的参数 VodSessionKey。
+     * @var string <p>点播会话，用于确认上传接口的参数 VodSessionKey。</p>
      */
     public $VodSessionKey;
 
     /**
-     * @var string 媒体存储路径，用于上传接口存储媒体的对象键（Key）。
+     * @var string <p>媒体存储路径，用于上传接口存储媒体的对象键（Key）。</p>
      */
     public $MediaStoragePath;
 
     /**
-     * @var string 封面存储路径，用于上传接口存储封面的对象键（Key）。
+     * @var string <p>封面存储路径，用于上传接口存储封面的对象键（Key）。</p>
      */
     public $CoverStoragePath;
 
     /**
-     * @var TempCertificate 临时凭证，用于上传接口的权限验证。
+     * @var TempCertificate <p>临时凭证，用于上传接口的权限验证。</p>
      */
     public $TempCertificate;
 
@@ -73,12 +73,12 @@ class ApplyUploadResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $StorageBucket 存储桶，用于上传接口 URL 的 bucket_name。
-     * @param string $StorageRegion 存储园区，用于上传接口 Host 的 Region。
-     * @param string $VodSessionKey 点播会话，用于确认上传接口的参数 VodSessionKey。
-     * @param string $MediaStoragePath 媒体存储路径，用于上传接口存储媒体的对象键（Key）。
-     * @param string $CoverStoragePath 封面存储路径，用于上传接口存储封面的对象键（Key）。
-     * @param TempCertificate $TempCertificate 临时凭证，用于上传接口的权限验证。
+     * @param string $StorageBucket <p>存储桶，用于上传接口 URL 的 bucket_name。</p>
+     * @param string $StorageRegion <p>存储园区，用于上传接口 Host 的 Region。</p>
+     * @param string $VodSessionKey <p>点播会话，用于确认上传接口的参数 VodSessionKey。</p>
+     * @param string $MediaStoragePath <p>媒体存储路径，用于上传接口存储媒体的对象键（Key）。</p>
+     * @param string $CoverStoragePath <p>封面存储路径，用于上传接口存储封面的对象键（Key）。</p>
+     * @param TempCertificate $TempCertificate <p>临时凭证，用于上传接口的权限验证。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

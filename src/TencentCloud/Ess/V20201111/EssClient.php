@@ -916,6 +916,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 
 嵌入页面长相如下：
 ![image](https://qcloudimg.tencent-cloud.cn/raw/c68047feddbc106e261870687b6ab89d.jpg)
+ * @method Models\DescribeContractReviewChecklistResponse DescribeContractReviewChecklist(Models\DescribeContractReviewChecklistRequest $req) 此接口（DescribeContractReviewChecklist）用于获取已有的合同风险审查清单详情。
  * @method Models\DescribeContractReviewChecklistWebUrlResponse DescribeContractReviewChecklistWebUrl(Models\DescribeContractReviewChecklistWebUrlRequest $req) 此接口（DescribeContractReviewChecklistWebUrl）用来创建查看审查要点清单web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
 
 适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
@@ -1124,6 +1125,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 注：
 1. `大文件转换所需的时间可能会比较长`
 2.  `本接口返回的文件资源ID就是PDF资源ID，可以直接用于【用PDF文件创建签署流程】接口发起合同。`
+ * @method Models\ImportContractReviewChecklistResponse ImportContractReviewChecklist(Models\ImportContractReviewChecklistRequest $req) 此接口（ImportRiskIdentificationChecklist）用于创建或更新合同审查清单。
  * @method Models\ModifyApplicationCallbackInfoResponse ModifyApplicationCallbackInfo(Models\ModifyApplicationCallbackInfoRequest $req) 新增/删除企业应用集成中的回调配置。
 新增回调配置只会增加不存在的CallbackUrl；删除操作将针对找到的相同CallbackUrl的配置进行删除。
 请确保回调地址能够接收并处理 HTTP POST 请求，并返回状态码 200 以表示处理正常。

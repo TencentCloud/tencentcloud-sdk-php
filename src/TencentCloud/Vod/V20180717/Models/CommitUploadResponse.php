@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CommitUpload返回参数结构体
  *
- * @method string getFileId() 获取媒体文件的唯一标识。
- * @method void setFileId(string $FileId) 设置媒体文件的唯一标识。
- * @method string getMediaUrl() 获取媒体播放地址。
- * @method void setMediaUrl(string $MediaUrl) 设置媒体播放地址。
- * @method string getCoverUrl() 获取媒体封面地址。
- * @method void setCoverUrl(string $CoverUrl) 设置媒体封面地址。
+ * @method string getFileId() 获取<p>媒体文件的唯一标识。</p>
+ * @method void setFileId(string $FileId) 设置<p>媒体文件的唯一标识。</p>
+ * @method string getMediaUrl() 获取<p>媒体播放地址。</p>
+ * @method void setMediaUrl(string $MediaUrl) 设置<p>媒体播放地址。</p>
+ * @method string getCoverUrl() 获取<p>媒体封面地址。</p>
+ * @method void setCoverUrl(string $CoverUrl) 设置<p>媒体封面地址。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CommitUploadResponse extends AbstractModel
 {
     /**
-     * @var string 媒体文件的唯一标识。
+     * @var string <p>媒体文件的唯一标识。</p>
      */
     public $FileId;
 
     /**
-     * @var string 媒体播放地址。
+     * @var string <p>媒体播放地址。</p>
      */
     public $MediaUrl;
 
     /**
-     * @var string 媒体封面地址。
+     * @var string <p>媒体封面地址。</p>
      */
     public $CoverUrl;
 
@@ -52,9 +52,9 @@ class CommitUploadResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $FileId 媒体文件的唯一标识。
-     * @param string $MediaUrl 媒体播放地址。
-     * @param string $CoverUrl 媒体封面地址。
+     * @param string $FileId <p>媒体文件的唯一标识。</p>
+     * @param string $MediaUrl <p>媒体播放地址。</p>
+     * @param string $CoverUrl <p>媒体封面地址。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

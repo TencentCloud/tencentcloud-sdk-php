@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAttackType(string $AttackType) 设置攻击类型(对应交互事件名称)。
  * @method integer getAttackStatus() 获取攻击状态。
  * @method void setAttackStatus(integer $AttackStatus) 设置攻击状态。
- * @method integer getAttackMaxBandWidth() 获取攻击最大带宽。
- * @method void setAttackMaxBandWidth(integer $AttackMaxBandWidth) 设置攻击最大带宽。
- * @method integer getAttackPacketMaxRate() 获取攻击包速率峰值。
- * @method void setAttackPacketMaxRate(integer $AttackPacketMaxRate) 设置攻击包速率峰值。
+ * @method integer getAttackMaxBandWidth() 获取攻击最大带宽，单位为 bps。
+ * @method void setAttackMaxBandWidth(integer $AttackMaxBandWidth) 设置攻击最大带宽，单位为 bps。
+ * @method integer getAttackPacketMaxRate() 获取攻击包速率峰值，单位为 pps。
+ * @method void setAttackPacketMaxRate(integer $AttackPacketMaxRate) 设置攻击包速率峰值，单位为 pps。
  * @method integer getAttackStartTime() 获取攻击开始时间，单位为s。
  * @method void setAttackStartTime(integer $AttackStartTime) 设置攻击开始时间，单位为s。
  * @method integer getAttackEndTime() 获取攻击结束时间，单位为s。
@@ -73,12 +73,12 @@ class DDoSAttackEvent extends AbstractModel
     public $AttackStatus;
 
     /**
-     * @var integer 攻击最大带宽。
+     * @var integer 攻击最大带宽，单位为 bps。
      */
     public $AttackMaxBandWidth;
 
     /**
-     * @var integer 攻击包速率峰值。
+     * @var integer 攻击包速率峰值，单位为 pps。
      */
     public $AttackPacketMaxRate;
 
@@ -122,8 +122,8 @@ class DDoSAttackEvent extends AbstractModel
      * @param string $EventId 事件ID。
      * @param string $AttackType 攻击类型(对应交互事件名称)。
      * @param integer $AttackStatus 攻击状态。
-     * @param integer $AttackMaxBandWidth 攻击最大带宽。
-     * @param integer $AttackPacketMaxRate 攻击包速率峰值。
+     * @param integer $AttackMaxBandWidth 攻击最大带宽，单位为 bps。
+     * @param integer $AttackPacketMaxRate 攻击包速率峰值，单位为 pps。
      * @param integer $AttackStartTime 攻击开始时间，单位为s。
      * @param integer $AttackEndTime 攻击结束时间，单位为s。
      * @param integer $PolicyId DDoS策略组ID。

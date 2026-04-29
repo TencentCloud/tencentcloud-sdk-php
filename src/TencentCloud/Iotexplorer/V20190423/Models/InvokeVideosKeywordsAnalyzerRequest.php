@@ -44,8 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注：
 1. 单位为毫秒（ms）
 2. 时间区间必须控制在某一个自然天内，不支持跨天
- * @method integer getKeywordsMaxNum() 获取返回的关键字最大数量，默认为5；最大不能超过10
- * @method void setKeywordsMaxNum(integer $KeywordsMaxNum) 设置返回的关键字最大数量，默认为5；最大不能超过10
+ * @method integer getKeywordsMaxNum() 获取返回的关键词的最大数量，默认为5；最大不能超过10
+ * @method void setKeywordsMaxNum(integer $KeywordsMaxNum) 设置返回的关键词的最大数量，默认为5；最大不能超过10
+ * @method string getKeywordsLang() 获取返回的关键词的语言类型，支持的类型有：en-US、zh-CN
+ * @method void setKeywordsLang(string $KeywordsLang) 设置返回的关键词的语言类型，支持的类型有：en-US、zh-CN
  */
 class InvokeVideosKeywordsAnalyzerRequest extends AbstractModel
 {
@@ -78,9 +80,14 @@ class InvokeVideosKeywordsAnalyzerRequest extends AbstractModel
     public $EndTimeMs;
 
     /**
-     * @var integer 返回的关键字最大数量，默认为5；最大不能超过10
+     * @var integer 返回的关键词的最大数量，默认为5；最大不能超过10
      */
     public $KeywordsMaxNum;
+
+    /**
+     * @var string 返回的关键词的语言类型，支持的类型有：en-US、zh-CN
+     */
+    public $KeywordsLang;
 
     /**
      * @param string $ProductId 产品ID
@@ -95,7 +102,8 @@ class InvokeVideosKeywordsAnalyzerRequest extends AbstractModel
 注：
 1. 单位为毫秒（ms）
 2. 时间区间必须控制在某一个自然天内，不支持跨天
-     * @param integer $KeywordsMaxNum 返回的关键字最大数量，默认为5；最大不能超过10
+     * @param integer $KeywordsMaxNum 返回的关键词的最大数量，默认为5；最大不能超过10
+     * @param string $KeywordsLang 返回的关键词的语言类型，支持的类型有：en-US、zh-CN
      */
     function __construct()
     {
@@ -128,6 +136,10 @@ class InvokeVideosKeywordsAnalyzerRequest extends AbstractModel
 
         if (array_key_exists("KeywordsMaxNum",$param) and $param["KeywordsMaxNum"] !== null) {
             $this->KeywordsMaxNum = $param["KeywordsMaxNum"];
+        }
+
+        if (array_key_exists("KeywordsLang",$param) and $param["KeywordsLang"] !== null) {
+            $this->KeywordsLang = $param["KeywordsLang"];
         }
     }
 }

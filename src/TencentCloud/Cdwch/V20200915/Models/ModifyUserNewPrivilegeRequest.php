@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyUserNewPrivilege请求参数结构体
  *
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method string getCluster() 获取cluster名称
- * @method void setCluster(string $Cluster) 设置cluster名称
- * @method string getUserName() 获取用户名
- * @method void setUserName(string $UserName) 设置用户名
- * @method boolean getAllDatabase() 获取是否所有数据库表
- * @method void setAllDatabase(boolean $AllDatabase) 设置是否所有数据库表
- * @method array getGlobalPrivileges() 获取全局权限
- * @method void setGlobalPrivileges(array $GlobalPrivileges) 设置全局权限
- * @method array getDatabasePrivilegeList() 获取数据库表权限
- * @method void setDatabasePrivilegeList(array $DatabasePrivilegeList) 设置数据库表权限
+ * @method string getInstanceId() 获取<p>实例id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例id</p>
+ * @method string getCluster() 获取<p>clickhouse逻辑集群名称，可通过连接集群执行 <code>SHOW CLUSTERS</code> 查询获得</p>
+ * @method void setCluster(string $Cluster) 设置<p>clickhouse逻辑集群名称，可通过连接集群执行 <code>SHOW CLUSTERS</code> 查询获得</p>
+ * @method string getUserName() 获取<p>用户名</p>
+ * @method void setUserName(string $UserName) 设置<p>用户名</p>
+ * @method boolean getAllDatabase() 获取<p>是否所有数据库表</p>
+ * @method void setAllDatabase(boolean $AllDatabase) 设置<p>是否所有数据库表</p>
+ * @method array getGlobalPrivileges() 获取<p>全局权限</p>
+ * @method void setGlobalPrivileges(array $GlobalPrivileges) 设置<p>全局权限</p>
+ * @method array getDatabasePrivilegeList() 获取<p>数据库表权限</p>
+ * @method void setDatabasePrivilegeList(array $DatabasePrivilegeList) 设置<p>数据库表权限</p>
  */
 class ModifyUserNewPrivilegeRequest extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string <p>实例id</p>
      */
     public $InstanceId;
 
     /**
-     * @var string cluster名称
+     * @var string <p>clickhouse逻辑集群名称，可通过连接集群执行 <code>SHOW CLUSTERS</code> 查询获得</p>
      */
     public $Cluster;
 
     /**
-     * @var string 用户名
+     * @var string <p>用户名</p>
      */
     public $UserName;
 
     /**
-     * @var boolean 是否所有数据库表
+     * @var boolean <p>是否所有数据库表</p>
      */
     public $AllDatabase;
 
     /**
-     * @var array 全局权限
+     * @var array <p>全局权限</p>
      */
     public $GlobalPrivileges;
 
     /**
-     * @var array 数据库表权限
+     * @var array <p>数据库表权限</p>
      */
     public $DatabasePrivilegeList;
 
     /**
-     * @param string $InstanceId 实例id
-     * @param string $Cluster cluster名称
-     * @param string $UserName 用户名
-     * @param boolean $AllDatabase 是否所有数据库表
-     * @param array $GlobalPrivileges 全局权限
-     * @param array $DatabasePrivilegeList 数据库表权限
+     * @param string $InstanceId <p>实例id</p>
+     * @param string $Cluster <p>clickhouse逻辑集群名称，可通过连接集群执行 <code>SHOW CLUSTERS</code> 查询获得</p>
+     * @param string $UserName <p>用户名</p>
+     * @param boolean $AllDatabase <p>是否所有数据库表</p>
+     * @param array $GlobalPrivileges <p>全局权限</p>
+     * @param array $DatabasePrivilegeList <p>数据库表权限</p>
      */
     function __construct()
     {

@@ -74,6 +74,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVectorSearchRadius(float $VectorSearchRadius) 设置向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5
  * @method integer getVectorSearchTopK() 获取指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100
  * @method void setVectorSearchTopK(integer $VectorSearchTopK) 设置指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100
+ * @method string getOrder() 获取搜索结果的排序方式，可选值：
+
+- `CORRELATION`：按相关性（默认）
+- `TIME_ASC`：按时间升序
+- `TIME_DESC`：按时间降序
+ * @method void setOrder(string $Order) 设置搜索结果的排序方式，可选值：
+
+- `CORRELATION`：按相关性（默认）
+- `TIME_ASC`：按时间升序
+- `TIME_DESC`：按时间降序
  */
 class InvokeAISearchServiceRequest extends AbstractModel
 {
@@ -157,6 +167,15 @@ class InvokeAISearchServiceRequest extends AbstractModel
     public $VectorSearchTopK;
 
     /**
+     * @var string 搜索结果的排序方式，可选值：
+
+- `CORRELATION`：按相关性（默认）
+- `TIME_ASC`：按时间升序
+- `TIME_DESC`：按时间降序
+     */
+    public $Order;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
      * @param string $Query 自然语言查询
@@ -184,6 +203,11 @@ class InvokeAISearchServiceRequest extends AbstractModel
      * @param integer $Limit 最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50
      * @param float $VectorSearchRadius 向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5
      * @param integer $VectorSearchTopK 指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100
+     * @param string $Order 搜索结果的排序方式，可选值：
+
+- `CORRELATION`：按相关性（默认）
+- `TIME_ASC`：按时间升序
+- `TIME_DESC`：按时间降序
      */
     function __construct()
     {
@@ -248,6 +272,10 @@ class InvokeAISearchServiceRequest extends AbstractModel
 
         if (array_key_exists("VectorSearchTopK",$param) and $param["VectorSearchTopK"] !== null) {
             $this->VectorSearchTopK = $param["VectorSearchTopK"];
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
         }
     }
 }

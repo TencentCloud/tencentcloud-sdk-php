@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCategory(string $Category) 设置<p>音色类别</p><p>枚举值：</p><ul><li>system： 系统音色</li></ul>
  * @method string getGender() 获取<p>性别</p><p>枚举值：</p><ul><li>male： 男</li><li>famale： 女</li></ul>
  * @method void setGender(string $Gender) 设置<p>性别</p><p>枚举值：</p><ul><li>male： 男</li><li>famale： 女</li></ul>
+ * @method string getAge() 获取<p>年龄</p><p>枚举值：</p><ul><li>child： 儿童</li><li>teenager： 少年</li><li>youth： 青年</li><li>middle_aged： 中年</li><li>senior： 老年</li><li>unknown： 未知</li></ul>
+ * @method void setAge(string $Age) 设置<p>年龄</p><p>枚举值：</p><ul><li>child： 儿童</li><li>teenager： 少年</li><li>youth： 青年</li><li>middle_aged： 中年</li><li>senior： 老年</li><li>unknown： 未知</li></ul>
  * @method array getLanguages() 获取<p>支持语种列表</p><p>如：en</p>
  * @method void setLanguages(array $Languages) 设置<p>支持语种列表</p><p>如：en</p>
  * @method string getAudioUrl() 获取<p>试听音频URL</p>
@@ -67,6 +69,11 @@ class VoiceInfo extends AbstractModel
     public $Gender;
 
     /**
+     * @var string <p>年龄</p><p>枚举值：</p><ul><li>child： 儿童</li><li>teenager： 少年</li><li>youth： 青年</li><li>middle_aged： 中年</li><li>senior： 老年</li><li>unknown： 未知</li></ul>
+     */
+    public $Age;
+
+    /**
      * @var array <p>支持语种列表</p><p>如：en</p>
      */
     public $Languages;
@@ -92,6 +99,7 @@ class VoiceInfo extends AbstractModel
      * @param string $Description <p>音色描述信息</p>
      * @param string $Category <p>音色类别</p><p>枚举值：</p><ul><li>system： 系统音色</li></ul>
      * @param string $Gender <p>性别</p><p>枚举值：</p><ul><li>male： 男</li><li>famale： 女</li></ul>
+     * @param string $Age <p>年龄</p><p>枚举值：</p><ul><li>child： 儿童</li><li>teenager： 少年</li><li>youth： 青年</li><li>middle_aged： 中年</li><li>senior： 老年</li><li>unknown： 未知</li></ul>
      * @param array $Languages <p>支持语种列表</p><p>如：en</p>
      * @param string $AudioUrl <p>试听音频URL</p>
      * @param array $Labels <p>标签列表</p><p>如：温柔</p>
@@ -128,6 +136,10 @@ class VoiceInfo extends AbstractModel
 
         if (array_key_exists("Gender",$param) and $param["Gender"] !== null) {
             $this->Gender = $param["Gender"];
+        }
+
+        if (array_key_exists("Age",$param) and $param["Age"] !== null) {
+            $this->Age = $param["Age"];
         }
 
         if (array_key_exists("Languages",$param) and $param["Languages"] !== null) {

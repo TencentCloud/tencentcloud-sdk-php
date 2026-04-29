@@ -31,6 +31,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\ConvertPreToPostClusterResponse ConvertPreToPostCluster(Models\ConvertPreToPostClusterRequest $req) 包月集群转按量集群（不含cdb）
  * @method Models\CreateCloudInstanceResponse CreateCloudInstance(Models\CreateCloudInstanceRequest $req) 创建EMR容器集群实例
  * @method Models\CreateClusterResponse CreateCluster(Models\CreateClusterRequest $req) 创建EMR集群实例
+ * @method Models\CreateDynamicInstanceResponse CreateDynamicInstance(Models\CreateDynamicInstanceRequest $req) 创建容器EMR-TKE集群DynamicInstance
  * @method Models\CreateGroupsSTDResponse CreateGroupsSTD(Models\CreateGroupsSTDRequest $req) 用户管理-批量创建用户组
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 创建EMR集群实例
  * @method Models\CreateSLInstanceResponse CreateSLInstance(Models\CreateSLInstanceRequest $req) 本接口（CreateSLInstance）用于创建Serverless实例、如HBase、Starrocks、TCBase等
@@ -49,6 +50,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\DescribeClusterNodesResponse DescribeClusterNodes(Models\DescribeClusterNodesRequest $req) 查询集群节点信息
  * @method Models\DescribeCvmQuotaResponse DescribeCvmQuota(Models\DescribeCvmQuotaRequest $req) 获取账户的CVM配额
  * @method Models\DescribeDAGInfoResponse DescribeDAGInfo(Models\DescribeDAGInfoRequest $req) 查询DAG信息
+ * @method Models\DescribeDynamicInstanceListResponse DescribeDynamicInstanceList(Models\DescribeDynamicInstanceListRequest $req) 描述容器EMR-TKE集群DynamicInstance列表
  * @method Models\DescribeEMREventListResponse DescribeEMREventList(Models\DescribeEMREventListRequest $req) 查询EMR事件监控数据
  * @method Models\DescribeEmrApplicationStaticsResponse DescribeEmrApplicationStatics(Models\DescribeEmrApplicationStaticsRequest $req) yarn application 统计接口查询
  * @method Models\DescribeEmrOverviewMetricsResponse DescribeEmrOverviewMetrics(Models\DescribeEmrOverviewMetricsRequest $req) 查询监控概览页指标数据
@@ -96,6 +98,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
 资源级别开启或关闭自动续费
  * @method Models\ModifyAutoScaleStrategyResponse ModifyAutoScaleStrategy(Models\ModifyAutoScaleStrategyRequest $req) 修改自动扩缩容规则
  * @method Models\ModifyBootScriptResponse ModifyBootScript(Models\ModifyBootScriptRequest $req) 修改引导脚本
+ * @method Models\ModifyDynamicInstanceResponse ModifyDynamicInstance(Models\ModifyDynamicInstanceRequest $req) 更新容器EMR-TKE集群DynamicInstance
  * @method Models\ModifyGlobalConfigResponse ModifyGlobalConfig(Models\ModifyGlobalConfigRequest $req) 修改YARN资源调度的全局配置
  * @method Models\ModifyInspectionSettingsResponse ModifyInspectionSettings(Models\ModifyInspectionSettingsRequest $req) 设置巡检任务配置
  * @method Models\ModifyInstanceBasicResponse ModifyInstanceBasic(Models\ModifyInstanceBasicRequest $req) 修改集群名称
@@ -129,6 +132,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\StartStopServiceOrMonitorResponse StartStopServiceOrMonitor(Models\StartStopServiceOrMonitorRequest $req) 用于启停服务 重启服务等功能
  * @method Models\SyncPodStateResponse SyncPodState(Models\SyncPodStateRequest $req) EMR同步TKE中POD状态
  * @method Models\TerminateClusterNodesResponse TerminateClusterNodes(Models\TerminateClusterNodesRequest $req) 销毁集群节点
+ * @method Models\TerminateDynamicInstancesResponse TerminateDynamicInstances(Models\TerminateDynamicInstancesRequest $req) 销毁容器EMR-TKE集群DynamicInstance
  * @method Models\TerminateInstanceResponse TerminateInstance(Models\TerminateInstanceRequest $req) 销毁EMR实例。此接口仅支持弹性MapReduce正式计费版本。
  * @method Models\TerminateSLInstanceResponse TerminateSLInstance(Models\TerminateSLInstanceRequest $req) 本接口（TerminateSLInstance）用于销毁Serverless HBase实例
  * @method Models\TerminateTasksResponse TerminateTasks(Models\TerminateTasksRequest $req) 缩容Task节点

@@ -20,94 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCkSqlApis请求参数结构体
  *
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method string getApiType() 获取api接口名称,GetClusters:获取集群cluster列表
-GetSystemUsers:获取系统用户列表
-CheckNodeCluster: 检查节点是否隶属一个cluster
-GetClusterDatabases: 获取一个cluster下的数据库列表
-GetClusterTables: 获取一个cluster下的数据库表列表
-GetPrivilegeUsers: 获取授权的用户列表
-GET_USER_CLUSTER_PRIVILEGES:获取用户cluster下的权限   
-GetUserClusterNewPrivileges:获取用户cluster下的权限 (新版）
-RevokeClusterUser:解绑cluster用户
-DeleteSystemUser:删除系统用户 —— 必须所有cluster先解绑
-GetUserOptionMessages:获取用户配置备注信息
-GET_USER_CONFIGS:获取用户配置列表  QUOTA、PROFILE、POLICY
- * @method void setApiType(string $ApiType) 设置api接口名称,GetClusters:获取集群cluster列表
-GetSystemUsers:获取系统用户列表
-CheckNodeCluster: 检查节点是否隶属一个cluster
-GetClusterDatabases: 获取一个cluster下的数据库列表
-GetClusterTables: 获取一个cluster下的数据库表列表
-GetPrivilegeUsers: 获取授权的用户列表
-GET_USER_CLUSTER_PRIVILEGES:获取用户cluster下的权限   
-GetUserClusterNewPrivileges:获取用户cluster下的权限 (新版）
-RevokeClusterUser:解绑cluster用户
-DeleteSystemUser:删除系统用户 —— 必须所有cluster先解绑
-GetUserOptionMessages:获取用户配置备注信息
-GET_USER_CONFIGS:获取用户配置列表  QUOTA、PROFILE、POLICY
- * @method string getCluster() 获取集群名称，当ApiType取值为GET_SYSTEM_USERS，GET_PRIVILEGE_USERS，GET_CLUSTER_DATABASES，GET_CLUSTER_TABLES 时，此参数必填
- * @method void setCluster(string $Cluster) 设置集群名称，当ApiType取值为GET_SYSTEM_USERS，GET_PRIVILEGE_USERS，GET_CLUSTER_DATABASES，GET_CLUSTER_TABLES 时，此参数必填
- * @method string getUserName() 获取用户名称，api与user相关的必填
- * @method void setUserName(string $UserName) 设置用户名称，api与user相关的必填
- * @method string getUserType() 获取账户的类型
- * @method void setUserType(string $UserType) 设置账户的类型
+ * @method string getInstanceId() 获取<p>实例id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例id</p>
+ * @method string getApiType() 获取<p>api接口名称,GetClusters:获取集群cluster列表<br>GetSystemUsers:获取系统用户列表<br>CheckNodeCluster: 检查节点是否隶属一个cluster<br>GetClusterDatabases: 获取一个cluster下的数据库列表<br>GetClusterTables: 获取一个cluster下的数据库表列表<br>GetPrivilegeUsers: 获取授权的用户列表<br>GET_USER_CLUSTER_PRIVILEGES:获取用户cluster下的权限<br>GetUserClusterNewPrivileges:获取用户cluster下的权限 (新版）<br>RevokeClusterUser:解绑cluster用户<br>DeleteSystemUser:删除系统用户 —— 必须所有cluster先解绑<br>GetUserOptionMessages:获取用户配置备注信息<br>GET_USER_CONFIGS:获取用户配置列表  QUOTA、PROFILE、POLICY</p>
+ * @method void setApiType(string $ApiType) 设置<p>api接口名称,GetClusters:获取集群cluster列表<br>GetSystemUsers:获取系统用户列表<br>CheckNodeCluster: 检查节点是否隶属一个cluster<br>GetClusterDatabases: 获取一个cluster下的数据库列表<br>GetClusterTables: 获取一个cluster下的数据库表列表<br>GetPrivilegeUsers: 获取授权的用户列表<br>GET_USER_CLUSTER_PRIVILEGES:获取用户cluster下的权限<br>GetUserClusterNewPrivileges:获取用户cluster下的权限 (新版）<br>RevokeClusterUser:解绑cluster用户<br>DeleteSystemUser:删除系统用户 —— 必须所有cluster先解绑<br>GetUserOptionMessages:获取用户配置备注信息<br>GET_USER_CONFIGS:获取用户配置列表  QUOTA、PROFILE、POLICY</p>
+ * @method string getCluster() 获取<p>clickhouse逻辑集群名称，可通过连接集群执行 <code>SHOW CLUSTERS</code> 查询获得。当 ApiType 取值为 GET_SYSTEM_USERS、GET_PRIVILEGE_USERS、GET_CLUSTER_DATABASES或GET_CLUSTER_TABLES 时，本参数必填。</p>
+ * @method void setCluster(string $Cluster) 设置<p>clickhouse逻辑集群名称，可通过连接集群执行 <code>SHOW CLUSTERS</code> 查询获得。当 ApiType 取值为 GET_SYSTEM_USERS、GET_PRIVILEGE_USERS、GET_CLUSTER_DATABASES或GET_CLUSTER_TABLES 时，本参数必填。</p>
+ * @method string getUserName() 获取<p>用户名称，api与user相关的必填</p>
+ * @method void setUserName(string $UserName) 设置<p>用户名称，api与user相关的必填</p>
+ * @method string getUserType() 获取<p>账户的类型</p>
+ * @method void setUserType(string $UserType) 设置<p>账户的类型</p>
  */
 class DescribeCkSqlApisRequest extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string <p>实例id</p>
      */
     public $InstanceId;
 
     /**
-     * @var string api接口名称,GetClusters:获取集群cluster列表
-GetSystemUsers:获取系统用户列表
-CheckNodeCluster: 检查节点是否隶属一个cluster
-GetClusterDatabases: 获取一个cluster下的数据库列表
-GetClusterTables: 获取一个cluster下的数据库表列表
-GetPrivilegeUsers: 获取授权的用户列表
-GET_USER_CLUSTER_PRIVILEGES:获取用户cluster下的权限   
-GetUserClusterNewPrivileges:获取用户cluster下的权限 (新版）
-RevokeClusterUser:解绑cluster用户
-DeleteSystemUser:删除系统用户 —— 必须所有cluster先解绑
-GetUserOptionMessages:获取用户配置备注信息
-GET_USER_CONFIGS:获取用户配置列表  QUOTA、PROFILE、POLICY
+     * @var string <p>api接口名称,GetClusters:获取集群cluster列表<br>GetSystemUsers:获取系统用户列表<br>CheckNodeCluster: 检查节点是否隶属一个cluster<br>GetClusterDatabases: 获取一个cluster下的数据库列表<br>GetClusterTables: 获取一个cluster下的数据库表列表<br>GetPrivilegeUsers: 获取授权的用户列表<br>GET_USER_CLUSTER_PRIVILEGES:获取用户cluster下的权限<br>GetUserClusterNewPrivileges:获取用户cluster下的权限 (新版）<br>RevokeClusterUser:解绑cluster用户<br>DeleteSystemUser:删除系统用户 —— 必须所有cluster先解绑<br>GetUserOptionMessages:获取用户配置备注信息<br>GET_USER_CONFIGS:获取用户配置列表  QUOTA、PROFILE、POLICY</p>
      */
     public $ApiType;
 
     /**
-     * @var string 集群名称，当ApiType取值为GET_SYSTEM_USERS，GET_PRIVILEGE_USERS，GET_CLUSTER_DATABASES，GET_CLUSTER_TABLES 时，此参数必填
+     * @var string <p>clickhouse逻辑集群名称，可通过连接集群执行 <code>SHOW CLUSTERS</code> 查询获得。当 ApiType 取值为 GET_SYSTEM_USERS、GET_PRIVILEGE_USERS、GET_CLUSTER_DATABASES或GET_CLUSTER_TABLES 时，本参数必填。</p>
      */
     public $Cluster;
 
     /**
-     * @var string 用户名称，api与user相关的必填
+     * @var string <p>用户名称，api与user相关的必填</p>
      */
     public $UserName;
 
     /**
-     * @var string 账户的类型
+     * @var string <p>账户的类型</p>
      */
     public $UserType;
 
     /**
-     * @param string $InstanceId 实例id
-     * @param string $ApiType api接口名称,GetClusters:获取集群cluster列表
-GetSystemUsers:获取系统用户列表
-CheckNodeCluster: 检查节点是否隶属一个cluster
-GetClusterDatabases: 获取一个cluster下的数据库列表
-GetClusterTables: 获取一个cluster下的数据库表列表
-GetPrivilegeUsers: 获取授权的用户列表
-GET_USER_CLUSTER_PRIVILEGES:获取用户cluster下的权限   
-GetUserClusterNewPrivileges:获取用户cluster下的权限 (新版）
-RevokeClusterUser:解绑cluster用户
-DeleteSystemUser:删除系统用户 —— 必须所有cluster先解绑
-GetUserOptionMessages:获取用户配置备注信息
-GET_USER_CONFIGS:获取用户配置列表  QUOTA、PROFILE、POLICY
-     * @param string $Cluster 集群名称，当ApiType取值为GET_SYSTEM_USERS，GET_PRIVILEGE_USERS，GET_CLUSTER_DATABASES，GET_CLUSTER_TABLES 时，此参数必填
-     * @param string $UserName 用户名称，api与user相关的必填
-     * @param string $UserType 账户的类型
+     * @param string $InstanceId <p>实例id</p>
+     * @param string $ApiType <p>api接口名称,GetClusters:获取集群cluster列表<br>GetSystemUsers:获取系统用户列表<br>CheckNodeCluster: 检查节点是否隶属一个cluster<br>GetClusterDatabases: 获取一个cluster下的数据库列表<br>GetClusterTables: 获取一个cluster下的数据库表列表<br>GetPrivilegeUsers: 获取授权的用户列表<br>GET_USER_CLUSTER_PRIVILEGES:获取用户cluster下的权限<br>GetUserClusterNewPrivileges:获取用户cluster下的权限 (新版）<br>RevokeClusterUser:解绑cluster用户<br>DeleteSystemUser:删除系统用户 —— 必须所有cluster先解绑<br>GetUserOptionMessages:获取用户配置备注信息<br>GET_USER_CONFIGS:获取用户配置列表  QUOTA、PROFILE、POLICY</p>
+     * @param string $Cluster <p>clickhouse逻辑集群名称，可通过连接集群执行 <code>SHOW CLUSTERS</code> 查询获得。当 ApiType 取值为 GET_SYSTEM_USERS、GET_PRIVILEGE_USERS、GET_CLUSTER_DATABASES或GET_CLUSTER_TABLES 时，本参数必填。</p>
+     * @param string $UserName <p>用户名称，api与user相关的必填</p>
+     * @param string $UserType <p>账户的类型</p>
      */
     function __construct()
     {

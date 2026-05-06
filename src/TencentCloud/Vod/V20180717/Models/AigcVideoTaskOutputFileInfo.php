@@ -20,82 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AIGC 生视频任务的输出文件信息。
  *
- * @method string getStorageMode() 获取存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li>
-默认值：Temporary
- * @method void setStorageMode(string $StorageMode) 设置存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li>
-默认值：Temporary
- * @method string getMediaName() 获取输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。
- * @method void setMediaName(string $MediaName) 设置输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。
- * @method integer getClassId() 获取分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。
-
- * @method void setClassId(integer $ClassId) 设置分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。
-
- * @method string getExpireTime() 获取输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method void setExpireTime(string $ExpireTime) 设置输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method string getFileType() 获取文件类型，例如 mp4、flv 等。
- * @method void setFileType(string $FileType) 设置文件类型，例如 mp4、flv 等。
- * @method string getFileUrl() 获取媒体文件播放地址。
- * @method void setFileUrl(string $FileUrl) 设置媒体文件播放地址。
- * @method string getFileId() 获取媒体文件 ID。当 StorageMode 为 Permanent 时有效。
- * @method void setFileId(string $FileId) 设置媒体文件 ID。当 StorageMode 为 Permanent 时有效。
- * @method MediaMetaData getMetaData() 获取输出视频的元信息。当 StorageMode 为 Permanent 时有效。
- * @method void setMetaData(MediaMetaData $MetaData) 设置输出视频的元信息。当 StorageMode 为 Permanent 时有效。
+ * @method string getStorageMode() 获取<p>存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li><br>默认值：Temporary</p>
+ * @method void setStorageMode(string $StorageMode) 设置<p>存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li><br>默认值：Temporary</p>
+ * @method string getMediaName() 获取<p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。</p>
+ * @method void setMediaName(string $MediaName) 设置<p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。</p>
+ * @method integer getClassId() 获取<p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。</p>
+ * @method void setClassId(integer $ClassId) 设置<p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。</p>
+ * @method string getExpireTime() 获取<p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
+ * @method void setExpireTime(string $ExpireTime) 设置<p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
+ * @method string getFileType() 获取<p>文件类型，例如 mp4、flv 等。</p>
+ * @method void setFileType(string $FileType) 设置<p>文件类型，例如 mp4、flv 等。</p>
+ * @method string getFileUrl() 获取<p>媒体文件播放地址。</p>
+ * @method void setFileUrl(string $FileUrl) 设置<p>媒体文件播放地址。</p>
+ * @method string getFileContent() 获取<p>文件内容。当 UsageType 为 position_info 时有返回值。</p>
+ * @method void setFileContent(string $FileContent) 设置<p>文件内容。当 UsageType 为 position_info 时有返回值。</p>
+ * @method string getFileId() 获取<p>媒体文件 ID。当 StorageMode 为 Permanent 时有效。</p>
+ * @method void setFileId(string $FileId) 设置<p>媒体文件 ID。当 StorageMode 为 Permanent 时有效。</p>
+ * @method MediaMetaData getMetaData() 获取<p>输出视频的元信息。当 StorageMode 为 Permanent 时有效。</p>
+ * @method void setMetaData(MediaMetaData $MetaData) 设置<p>输出视频的元信息。当 StorageMode 为 Permanent 时有效。</p>
+ * @method string getUsageType() 获取<p>文件的用途类型。</p><p>枚举值：</p><ul><li>scene_url： 3D 场景文件，FileUrl 字段有返回值。</li><li>point_url： 点云文件，FileUrl 字段有返回值。</li><li>mesh_url： 原始网格模型文，FileUrl 字段有返回值。</li><li>mesh_simplified_url： 简化后的网格模型文件，FileUrl 字段有返回值。</li><li>position_info： 场景空间位置信息，FileContent 字段有返回值。</li><li>image_url： 生成的图片，FileUrl 字段有返回值。</li></ul>
+ * @method void setUsageType(string $UsageType) 设置<p>文件的用途类型。</p><p>枚举值：</p><ul><li>scene_url： 3D 场景文件，FileUrl 字段有返回值。</li><li>point_url： 点云文件，FileUrl 字段有返回值。</li><li>mesh_url： 原始网格模型文，FileUrl 字段有返回值。</li><li>mesh_simplified_url： 简化后的网格模型文件，FileUrl 字段有返回值。</li><li>position_info： 场景空间位置信息，FileContent 字段有返回值。</li><li>image_url： 生成的图片，FileUrl 字段有返回值。</li></ul>
  */
 class AigcVideoTaskOutputFileInfo extends AbstractModel
 {
     /**
-     * @var string 存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li>
-默认值：Temporary
+     * @var string <p>存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li><br>默认值：Temporary</p>
      */
     public $StorageMode;
 
     /**
-     * @var string 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。
+     * @var string <p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。</p>
      */
     public $MediaName;
 
     /**
-     * @var integer 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。
-
+     * @var integer <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。</p>
      */
     public $ClassId;
 
     /**
-     * @var string 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @var string <p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
      */
     public $ExpireTime;
 
     /**
-     * @var string 文件类型，例如 mp4、flv 等。
+     * @var string <p>文件类型，例如 mp4、flv 等。</p>
      */
     public $FileType;
 
     /**
-     * @var string 媒体文件播放地址。
+     * @var string <p>媒体文件播放地址。</p>
      */
     public $FileUrl;
 
     /**
-     * @var string 媒体文件 ID。当 StorageMode 为 Permanent 时有效。
+     * @var string <p>文件内容。当 UsageType 为 position_info 时有返回值。</p>
+     */
+    public $FileContent;
+
+    /**
+     * @var string <p>媒体文件 ID。当 StorageMode 为 Permanent 时有效。</p>
      */
     public $FileId;
 
     /**
-     * @var MediaMetaData 输出视频的元信息。当 StorageMode 为 Permanent 时有效。
+     * @var MediaMetaData <p>输出视频的元信息。当 StorageMode 为 Permanent 时有效。</p>
      */
     public $MetaData;
 
     /**
-     * @param string $StorageMode 存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li>
-默认值：Temporary
-     * @param string $MediaName 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。
-     * @param integer $ClassId 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。
+     * @var string <p>文件的用途类型。</p><p>枚举值：</p><ul><li>scene_url： 3D 场景文件，FileUrl 字段有返回值。</li><li>point_url： 点云文件，FileUrl 字段有返回值。</li><li>mesh_url： 原始网格模型文，FileUrl 字段有返回值。</li><li>mesh_simplified_url： 简化后的网格模型文件，FileUrl 字段有返回值。</li><li>position_info： 场景空间位置信息，FileContent 字段有返回值。</li><li>image_url： 生成的图片，FileUrl 字段有返回值。</li></ul>
+     */
+    public $UsageType;
 
-     * @param string $ExpireTime 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param string $FileType 文件类型，例如 mp4、flv 等。
-     * @param string $FileUrl 媒体文件播放地址。
-     * @param string $FileId 媒体文件 ID。当 StorageMode 为 Permanent 时有效。
-     * @param MediaMetaData $MetaData 输出视频的元信息。当 StorageMode 为 Permanent 时有效。
+    /**
+     * @param string $StorageMode <p>存储模式。取值有： <li>Permanent：永久存储；</li> <li>Temporary：临时存储；</li><br>默认值：Temporary</p>
+     * @param string $MediaName <p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。当 StorageMode 为 Permanent 时有效。</p>
+     * @param integer $ClassId <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。当 StorageMode 为 Permanent 时有效。</p>
+     * @param string $ExpireTime <p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
+     * @param string $FileType <p>文件类型，例如 mp4、flv 等。</p>
+     * @param string $FileUrl <p>媒体文件播放地址。</p>
+     * @param string $FileContent <p>文件内容。当 UsageType 为 position_info 时有返回值。</p>
+     * @param string $FileId <p>媒体文件 ID。当 StorageMode 为 Permanent 时有效。</p>
+     * @param MediaMetaData $MetaData <p>输出视频的元信息。当 StorageMode 为 Permanent 时有效。</p>
+     * @param string $UsageType <p>文件的用途类型。</p><p>枚举值：</p><ul><li>scene_url： 3D 场景文件，FileUrl 字段有返回值。</li><li>point_url： 点云文件，FileUrl 字段有返回值。</li><li>mesh_url： 原始网格模型文，FileUrl 字段有返回值。</li><li>mesh_simplified_url： 简化后的网格模型文件，FileUrl 字段有返回值。</li><li>position_info： 场景空间位置信息，FileContent 字段有返回值。</li><li>image_url： 生成的图片，FileUrl 字段有返回值。</li></ul>
      */
     function __construct()
     {
@@ -134,6 +142,10 @@ class AigcVideoTaskOutputFileInfo extends AbstractModel
             $this->FileUrl = $param["FileUrl"];
         }
 
+        if (array_key_exists("FileContent",$param) and $param["FileContent"] !== null) {
+            $this->FileContent = $param["FileContent"];
+        }
+
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
             $this->FileId = $param["FileId"];
         }
@@ -141,6 +153,10 @@ class AigcVideoTaskOutputFileInfo extends AbstractModel
         if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
             $this->MetaData = new MediaMetaData();
             $this->MetaData->deserialize($param["MetaData"]);
+        }
+
+        if (array_key_exists("UsageType",$param) and $param["UsageType"] !== null) {
+            $this->UsageType = $param["UsageType"];
         }
     }
 }

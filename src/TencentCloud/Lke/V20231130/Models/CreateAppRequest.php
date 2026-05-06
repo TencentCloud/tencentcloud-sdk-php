@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateApp请求参数结构体
  *
- * @method string getAppType() 获取应用类型；knowledge_qa-知识问答管理
- * @method void setAppType(string $AppType) 设置应用类型；knowledge_qa-知识问答管理
- * @method BaseConfig getBaseConfig() 获取应用基础配置
- * @method void setBaseConfig(BaseConfig $BaseConfig) 设置应用基础配置
- * @method string getPattern() 获取应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
- * @method void setPattern(string $Pattern) 设置应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
- * @method string getAgentType() 获取智能体类型 dialogue 对话式智能体，wechat 公众号智能体
- * @method void setAgentType(string $AgentType) 设置智能体类型 dialogue 对话式智能体，wechat 公众号智能体
+ * @method string getAppType() 获取<p>应用类型；<code>&quot;knowledge_qa&quot;</code> 知识问答应用（包含标准模式 单工作流 Multi-Agent 等模式）</p>
+ * @method void setAppType(string $AppType) 设置<p>应用类型；<code>&quot;knowledge_qa&quot;</code> 知识问答应用（包含标准模式 单工作流 Multi-Agent 等模式）</p>
+ * @method BaseConfig getBaseConfig() 获取<p>应用基础配置</p>
+ * @method void setBaseConfig(BaseConfig $BaseConfig) 设置<p>应用基础配置</p>
+ * @method string getPattern() 获取<p>应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式,ClawAgent:Claw模式</p>
+ * @method void setPattern(string $Pattern) 设置<p>应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式,ClawAgent:Claw模式</p>
+ * @method string getAgentType() 获取<p>智能体类型，用于区分应用最终以何种智能体形态对外服务（对话(&quot;dialogue&quot;) / 公众号(&quot;wechat&quot;)）。当前 ADP 创建页面不区分对话/公众号智能体，ADP 创建页默认走对话智能体。</p>
+ * @method void setAgentType(string $AgentType) 设置<p>智能体类型，用于区分应用最终以何种智能体形态对外服务（对话(&quot;dialogue&quot;) / 公众号(&quot;wechat&quot;)）。当前 ADP 创建页面不区分对话/公众号智能体，ADP 创建页默认走对话智能体。</p>
  */
 class CreateAppRequest extends AbstractModel
 {
     /**
-     * @var string 应用类型；knowledge_qa-知识问答管理
+     * @var string <p>应用类型；<code>&quot;knowledge_qa&quot;</code> 知识问答应用（包含标准模式 单工作流 Multi-Agent 等模式）</p>
      */
     public $AppType;
 
     /**
-     * @var BaseConfig 应用基础配置
+     * @var BaseConfig <p>应用基础配置</p>
      */
     public $BaseConfig;
 
     /**
-     * @var string 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+     * @var string <p>应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式,ClawAgent:Claw模式</p>
      */
     public $Pattern;
 
     /**
-     * @var string 智能体类型 dialogue 对话式智能体，wechat 公众号智能体
+     * @var string <p>智能体类型，用于区分应用最终以何种智能体形态对外服务（对话(&quot;dialogue&quot;) / 公众号(&quot;wechat&quot;)）。当前 ADP 创建页面不区分对话/公众号智能体，ADP 创建页默认走对话智能体。</p>
      */
     public $AgentType;
 
     /**
-     * @param string $AppType 应用类型；knowledge_qa-知识问答管理
-     * @param BaseConfig $BaseConfig 应用基础配置
-     * @param string $Pattern 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
-     * @param string $AgentType 智能体类型 dialogue 对话式智能体，wechat 公众号智能体
+     * @param string $AppType <p>应用类型；<code>&quot;knowledge_qa&quot;</code> 知识问答应用（包含标准模式 单工作流 Multi-Agent 等模式）</p>
+     * @param BaseConfig $BaseConfig <p>应用基础配置</p>
+     * @param string $Pattern <p>应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式,ClawAgent:Claw模式</p>
+     * @param string $AgentType <p>智能体类型，用于区分应用最终以何种智能体形态对外服务（对话(&quot;dialogue&quot;) / 公众号(&quot;wechat&quot;)）。当前 ADP 创建页面不区分对话/公众号智能体，ADP 创建页默认走对话智能体。</p>
      */
     function __construct()
     {

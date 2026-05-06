@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputConfig(AigcImageOutputConfig $OutputConfig) 设置<p>生图任务的输出媒体文件配置。</p>
  * @method string getInputRegion() 获取<p>输入的区域信息。可选值：</p><ul><li>Mainland：中国大陆；</li><li>Oversea：海外；</li><li>OverseaUSWest：海外-美西；</li></ul>
  * @method void setInputRegion(string $InputRegion) 设置<p>输入的区域信息。可选值：</p><ul><li>Mainland：中国大陆；</li><li>Oversea：海外；</li><li>OverseaUSWest：海外-美西；</li></ul>
+ * @method string getSceneType() 获取<p>场景类型。取值如下：<li>当 ModelName 为 Hunyuan 时：   3d_panorama 表示全景图；</li><li>其他 ModelName 暂不支持。</li></p>
+ * @method void setSceneType(string $SceneType) 设置<p>场景类型。取值如下：<li>当 ModelName 为 Hunyuan 时：   3d_panorama 表示全景图；</li><li>其他 ModelName 暂不支持。</li></p>
  * @method integer getSeed() 获取<p>模型随机种子。</p>
  * @method void setSeed(integer $Seed) 设置<p>模型随机种子。</p>
  * @method string getSessionId() 获取<p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
@@ -97,6 +99,11 @@ class CreateAigcImageTaskRequest extends AbstractModel
     public $InputRegion;
 
     /**
+     * @var string <p>场景类型。取值如下：<li>当 ModelName 为 Hunyuan 时：   3d_panorama 表示全景图；</li><li>其他 ModelName 暂不支持。</li></p>
+     */
+    public $SceneType;
+
+    /**
      * @var integer <p>模型随机种子。</p>
      */
     public $Seed;
@@ -131,6 +138,7 @@ class CreateAigcImageTaskRequest extends AbstractModel
      * @param string $EnhancePrompt <p>是否自动优化提示词。开启时将自动优化传入的 Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
      * @param AigcImageOutputConfig $OutputConfig <p>生图任务的输出媒体文件配置。</p>
      * @param string $InputRegion <p>输入的区域信息。可选值：</p><ul><li>Mainland：中国大陆；</li><li>Oversea：海外；</li><li>OverseaUSWest：海外-美西；</li></ul>
+     * @param string $SceneType <p>场景类型。取值如下：<li>当 ModelName 为 Hunyuan 时：   3d_panorama 表示全景图；</li><li>其他 ModelName 暂不支持。</li></p>
      * @param integer $Seed <p>模型随机种子。</p>
      * @param string $SessionId <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
      * @param string $SessionContext <p>来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。</p>
@@ -190,6 +198,10 @@ class CreateAigcImageTaskRequest extends AbstractModel
 
         if (array_key_exists("InputRegion",$param) and $param["InputRegion"] !== null) {
             $this->InputRegion = $param["InputRegion"];
+        }
+
+        if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
+            $this->SceneType = $param["SceneType"];
         }
 
         if (array_key_exists("Seed",$param) and $param["Seed"] !== null) {

@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateApp返回参数结构体
  *
- * @method string getAppBizId() 获取应用ID
+ * @method string getAppBizId() 获取<p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppBizId(string $AppBizId) 设置应用ID
+ * @method void setAppBizId(string $AppBizId) 设置<p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getIsCustomList() 获取判断账户应用列表权限是否是自定义的，用户交互提示
+ * @method boolean getIsCustomList() 获取<p>判断账户应用列表权限是否是自定义的，用户交互提示</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsCustomList(boolean $IsCustomList) 设置判断账户应用列表权限是否是自定义的，用户交互提示
+ * @method void setIsCustomList(boolean $IsCustomList) 设置<p>判断账户应用列表权限是否是自定义的，用户交互提示</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -34,13 +34,13 @@ use TencentCloud\Common\AbstractModel;
 class CreateAppResponse extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppBizId;
 
     /**
-     * @var boolean 判断账户应用列表权限是否是自定义的，用户交互提示
+     * @var boolean <p>判断账户应用列表权限是否是自定义的，用户交互提示</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsCustomList;
@@ -51,9 +51,9 @@ class CreateAppResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AppBizId 应用ID
+     * @param string $AppBizId <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $IsCustomList 判断账户应用列表权限是否是自定义的，用户交互提示
+     * @param boolean $IsCustomList <p>判断账户应用列表权限是否是自定义的，用户交互提示</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

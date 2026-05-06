@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputConfig(AigcImageOutputConfig $OutputConfig) 设置<p>AIGC 生图输出结果文件输出。</p>
  * @method integer getSeed() 获取<p>模型随机种子。</p>
  * @method void setSeed(integer $Seed) 设置<p>模型随机种子。</p>
+ * @method string getSceneType() 获取<p>场景类型。取值如下：<li>当 ModelName 为 Hunyuan 时：   3d_panorama 表示全景图；</li><li>其他 ModelName 暂不支持。</li></p>
+ * @method void setSceneType(string $SceneType) 设置<p>场景类型。取值如下：<li>当 ModelName 为 Hunyuan 时：   3d_panorama 表示全景图；</li><li>其他 ModelName 暂不支持。</li></p>
  */
 class AigcImageTaskInput extends AbstractModel
 {
@@ -87,6 +89,11 @@ class AigcImageTaskInput extends AbstractModel
     public $Seed;
 
     /**
+     * @var string <p>场景类型。取值如下：<li>当 ModelName 为 Hunyuan 时：   3d_panorama 表示全景图；</li><li>其他 ModelName 暂不支持。</li></p>
+     */
+    public $SceneType;
+
+    /**
      * @param string $ModelName <p>模型名称。</p>
      * @param string $ModelVersion <p>模型版本。</p>
      * @param array $FileInfos <p>AIGC生图任务输入文件信息。</p>
@@ -96,6 +103,7 @@ class AigcImageTaskInput extends AbstractModel
      * @param string $GenerationMode <p>生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li></p>
      * @param AigcImageOutputConfig $OutputConfig <p>AIGC 生图输出结果文件输出。</p>
      * @param integer $Seed <p>模型随机种子。</p>
+     * @param string $SceneType <p>场景类型。取值如下：<li>当 ModelName 为 Hunyuan 时：   3d_panorama 表示全景图；</li><li>其他 ModelName 暂不支持。</li></p>
      */
     function __construct()
     {
@@ -150,6 +158,10 @@ class AigcImageTaskInput extends AbstractModel
 
         if (array_key_exists("Seed",$param) and $param["Seed"] !== null) {
             $this->Seed = $param["Seed"];
+        }
+
+        if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
+            $this->SceneType = $param["SceneType"];
         }
     }
 }

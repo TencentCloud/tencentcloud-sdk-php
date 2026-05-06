@@ -24,6 +24,7 @@ use TencentCloud\Ai3d\V20250513\Models as Models;
 
 /**
  * @method Models\Convert3DFormatResponse Convert3DFormat(Models\Convert3DFormatRequest $req) 输入3D模型文件后，可进行3D模型文件格式转换。
+ * @method Models\DescribeHunyuanTo3DMotionJobResponse DescribeHunyuanTo3DMotionJob(Models\DescribeHunyuanTo3DMotionJobRequest $req) 查询组件生成任务。
  * @method Models\DescribeHunyuanTo3DUVJobResponse DescribeHunyuanTo3DUVJob(Models\DescribeHunyuanTo3DUVJobRequest $req) 查询组件拆分任务。
  * @method Models\DescribeProfileTo3DJobResponse DescribeProfileTo3DJob(Models\DescribeProfileTo3DJobRequest $req) 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
@@ -37,6 +38,8 @@ use TencentCloud\Ai3d\V20250513\Models as Models;
  * @method Models\QueryHunyuanTo3DRapidJobResponse QueryHunyuanTo3DRapidJob(Models\QueryHunyuanTo3DRapidJobRequest $req) 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
  * @method Models\SubmitHunyuan3DPartJobResponse SubmitHunyuan3DPartJob(Models\SubmitHunyuan3DPartJobRequest $req) 输入3D模型文件后，根据模型结构自动进行组件识别生成。
+ * @method Models\SubmitHunyuanTo3DMotionJobResponse SubmitHunyuanTo3DMotionJob(Models\SubmitHunyuanTo3DMotionJobRequest $req) 输入文本后，可根据文本描述生成对应的 3D人物 动作数据，输出带动画数据的FBX文件。
+默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
  * @method Models\SubmitHunyuanTo3DProJobResponse SubmitHunyuanTo3DProJob(Models\SubmitHunyuanTo3DProJobRequest $req) 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
 默认提供3个并发，代表最多能同时处理3个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
  * @method Models\SubmitHunyuanTo3DRapidJobResponse SubmitHunyuanTo3DRapidJob(Models\SubmitHunyuanTo3DRapidJobRequest $req) 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。

@@ -44,11 +44,11 @@ use TencentCloud\Common\AbstractModel;
 <li>origins：源站组。</li>
  * @method array getOriginValue() 获取源站信息：
 <li>当 OriginType 为 custom 时，表示一个或多个源站，如`["8.8.8.8","9.9.9.9"]` 或 `OriginValue=["test.com"]`；</li>
-<li>当 OriginType 为 loadbalancer 时，表示一个负载均衡，如`["lb-xdffsfasdfs"]`；</li>
+<li>当 OriginType 为 loadbalancer 时，表示一个负载均衡，如`["lb-3pbiw4d9iqz0"]`；</li>
 <li>当 OriginType 为 origins 时，要求有且仅有一个元素，表示源站组ID，如`["origin-537f5b41-162a-11ed-abaa-525400c5da15"]`。</li>
  * @method void setOriginValue(array $OriginValue) 设置源站信息：
 <li>当 OriginType 为 custom 时，表示一个或多个源站，如`["8.8.8.8","9.9.9.9"]` 或 `OriginValue=["test.com"]`；</li>
-<li>当 OriginType 为 loadbalancer 时，表示一个负载均衡，如`["lb-xdffsfasdfs"]`；</li>
+<li>当 OriginType 为 loadbalancer 时，表示一个负载均衡，如`["lb-3pbiw4d9iqz0"]`；</li>
 <li>当 OriginType 为 origins 时，要求有且仅有一个元素，表示源站组ID，如`["origin-537f5b41-162a-11ed-abaa-525400c5da15"]`。</li>
  * @method string getRuleId() 获取规则ID。
  * @method void setRuleId(string $RuleId) 设置规则ID。
@@ -80,8 +80,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionPersist(boolean $SessionPersist) 设置是否开启会话保持，取值有：
 <li>true：开启；</li>
 <li>false：关闭。</li>默认值：false。
- * @method integer getSessionPersistTime() 获取会话保持的时间，只有当SessionPersist为true时，该值才会生效。
- * @method void setSessionPersistTime(integer $SessionPersistTime) 设置会话保持的时间，只有当SessionPersist为true时，该值才会生效。
+ * @method integer getSessionPersistTime() 获取会话保持的时间，单位为秒，只有当SessionPersist为true时，该值才会生效。
+ * @method void setSessionPersistTime(integer $SessionPersistTime) 设置会话保持的时间，单位为秒，只有当SessionPersist为true时，该值才会生效。
  * @method string getOriginPort() 获取源站端口，支持格式：
 <li>单端口，如：80。</li>
 <li>端口段：81-82，表示81，82两个端口。</li>
@@ -119,7 +119,7 @@ class ApplicationProxyRule extends AbstractModel
     /**
      * @var array 源站信息：
 <li>当 OriginType 为 custom 时，表示一个或多个源站，如`["8.8.8.8","9.9.9.9"]` 或 `OriginValue=["test.com"]`；</li>
-<li>当 OriginType 为 loadbalancer 时，表示一个负载均衡，如`["lb-xdffsfasdfs"]`；</li>
+<li>当 OriginType 为 loadbalancer 时，表示一个负载均衡，如`["lb-3pbiw4d9iqz0"]`；</li>
 <li>当 OriginType 为 origins 时，要求有且仅有一个元素，表示源站组ID，如`["origin-537f5b41-162a-11ed-abaa-525400c5da15"]`。</li>
      */
     public $OriginValue;
@@ -156,7 +156,7 @@ class ApplicationProxyRule extends AbstractModel
     public $SessionPersist;
 
     /**
-     * @var integer 会话保持的时间，只有当SessionPersist为true时，该值才会生效。
+     * @var integer 会话保持的时间，单位为秒，只有当SessionPersist为true时，该值才会生效。
      */
     public $SessionPersistTime;
 
@@ -186,7 +186,7 @@ class ApplicationProxyRule extends AbstractModel
 <li>origins：源站组。</li>
      * @param array $OriginValue 源站信息：
 <li>当 OriginType 为 custom 时，表示一个或多个源站，如`["8.8.8.8","9.9.9.9"]` 或 `OriginValue=["test.com"]`；</li>
-<li>当 OriginType 为 loadbalancer 时，表示一个负载均衡，如`["lb-xdffsfasdfs"]`；</li>
+<li>当 OriginType 为 loadbalancer 时，表示一个负载均衡，如`["lb-3pbiw4d9iqz0"]`；</li>
 <li>当 OriginType 为 origins 时，要求有且仅有一个元素，表示源站组ID，如`["origin-537f5b41-162a-11ed-abaa-525400c5da15"]`。</li>
      * @param string $RuleId 规则ID。
      * @param string $Status 状态，取值有：
@@ -203,7 +203,7 @@ class ApplicationProxyRule extends AbstractModel
      * @param boolean $SessionPersist 是否开启会话保持，取值有：
 <li>true：开启；</li>
 <li>false：关闭。</li>默认值：false。
-     * @param integer $SessionPersistTime 会话保持的时间，只有当SessionPersist为true时，该值才会生效。
+     * @param integer $SessionPersistTime 会话保持的时间，单位为秒，只有当SessionPersist为true时，该值才会生效。
      * @param string $OriginPort 源站端口，支持格式：
 <li>单端口，如：80。</li>
 <li>端口段：81-82，表示81，82两个端口。</li>

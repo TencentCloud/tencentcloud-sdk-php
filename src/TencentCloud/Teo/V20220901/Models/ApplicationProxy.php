@@ -62,8 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccelerateType(integer $AccelerateType) 设置是否开启加速，取值有：
 <li>0：关闭加速；</li>
 <li>1：开启加速。</li>
- * @method integer getSessionPersistTime() 获取会话保持时间。
- * @method void setSessionPersistTime(integer $SessionPersistTime) 设置会话保持时间。
+ * @method integer getSessionPersistTime() 获取会话保持时间，单位为秒。
+ * @method void setSessionPersistTime(integer $SessionPersistTime) 设置会话保持时间，单位为秒。
  * @method string getStatus() 获取状态，取值有：
 <li>online：启用；</li>
 <li>offline：停用；</li>
@@ -161,7 +161,7 @@ class ApplicationProxy extends AbstractModel
     public $AccelerateType;
 
     /**
-     * @var integer 会话保持时间。
+     * @var integer 会话保持时间，单位为秒。
      */
     public $SessionPersistTime;
 
@@ -237,7 +237,7 @@ class ApplicationProxy extends AbstractModel
      * @param integer $AccelerateType 是否开启加速，取值有：
 <li>0：关闭加速；</li>
 <li>1：开启加速。</li>
-     * @param integer $SessionPersistTime 会话保持时间。
+     * @param integer $SessionPersistTime 会话保持时间，单位为秒。
      * @param string $Status 状态，取值有：
 <li>online：启用；</li>
 <li>offline：停用；</li>

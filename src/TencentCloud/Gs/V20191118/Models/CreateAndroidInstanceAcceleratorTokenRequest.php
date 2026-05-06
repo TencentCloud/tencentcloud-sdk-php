@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAndroidInstanceIds(array $AndroidInstanceIds) 设置实例 ID 列表。每次请求的实例的上限为 500。
  * @method string getUserIP() 获取用户IP，可以根据该 IP 选择就近加速点。如果不填，将自动选择就近加速点。
  * @method void setUserIP(string $UserIP) 设置用户IP，可以根据该 IP 选择就近加速点。如果不填，将自动选择就近加速点。
+ * @method string getExpirationDuration() 获取有效期，默认为 12 小时，最长为 7 天，建议设置不要过长，否则泄漏风险越大。支持 s（秒）、m（分）、h（小时）、d（天）等单位，比如 1d、24h、86400s 都表示一天，1h2m3s 表示一小时两分三秒
+ * @method void setExpirationDuration(string $ExpirationDuration) 设置有效期，默认为 12 小时，最长为 7 天，建议设置不要过长，否则泄漏风险越大。支持 s（秒）、m（分）、h（小时）、d（天）等单位，比如 1d、24h、86400s 都表示一天，1h2m3s 表示一小时两分三秒
  */
 class CreateAndroidInstanceAcceleratorTokenRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateAndroidInstanceAcceleratorTokenRequest extends AbstractModel
     public $UserIP;
 
     /**
+     * @var string 有效期，默认为 12 小时，最长为 7 天，建议设置不要过长，否则泄漏风险越大。支持 s（秒）、m（分）、h（小时）、d（天）等单位，比如 1d、24h、86400s 都表示一天，1h2m3s 表示一小时两分三秒
+     */
+    public $ExpirationDuration;
+
+    /**
      * @param array $AndroidInstanceIds 实例 ID 列表。每次请求的实例的上限为 500。
      * @param string $UserIP 用户IP，可以根据该 IP 选择就近加速点。如果不填，将自动选择就近加速点。
+     * @param string $ExpirationDuration 有效期，默认为 12 小时，最长为 7 天，建议设置不要过长，否则泄漏风险越大。支持 s（秒）、m（分）、h（小时）、d（天）等单位，比如 1d、24h、86400s 都表示一天，1h2m3s 表示一小时两分三秒
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreateAndroidInstanceAcceleratorTokenRequest extends AbstractModel
 
         if (array_key_exists("UserIP",$param) and $param["UserIP"] !== null) {
             $this->UserIP = $param["UserIP"];
+        }
+
+        if (array_key_exists("ExpirationDuration",$param) and $param["ExpirationDuration"] !== null) {
+            $this->ExpirationDuration = $param["ExpirationDuration"];
         }
     }
 }

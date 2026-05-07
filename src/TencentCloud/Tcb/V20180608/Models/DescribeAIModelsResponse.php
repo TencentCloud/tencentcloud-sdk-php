@@ -14,30 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ess\V20201111\Models;
+namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateMultiFlowSignQRCode返回参数结构体
+ * DescribeAIModels返回参数结构体
  *
- * @method SignQrCode getQrCode() 获取<p>一码多签签署码的基本信息，用户可扫描该二维码进行签署操作。</p>
- * @method void setQrCode(SignQrCode $QrCode) 设置<p>一码多签签署码的基本信息，用户可扫描该二维码进行签署操作。</p>
- * @method SignUrl getSignUrls() 获取<p>一码多签签署码的链接信息，适用于客户系统整合二维码功能。通过链接，用户可直接访问电子签名小程序并签署合同。</p>
- * @method void setSignUrls(SignUrl $SignUrls) 设置<p>一码多签签署码的链接信息，适用于客户系统整合二维码功能。通过链接，用户可直接访问电子签名小程序并签署合同。</p>
+ * @method array getAIModels() 获取模型列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAIModels(array $AIModels) 设置模型列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateMultiFlowSignQRCodeResponse extends AbstractModel
+class DescribeAIModelsResponse extends AbstractModel
 {
     /**
-     * @var SignQrCode <p>一码多签签署码的基本信息，用户可扫描该二维码进行签署操作。</p>
+     * @var array 模型列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $QrCode;
-
-    /**
-     * @var SignUrl <p>一码多签签署码的链接信息，适用于客户系统整合二维码功能。通过链接，用户可直接访问电子签名小程序并签署合同。</p>
-     */
-    public $SignUrls;
+    public $AIModels;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +41,8 @@ class CreateMultiFlowSignQRCodeResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param SignQrCode $QrCode <p>一码多签签署码的基本信息，用户可扫描该二维码进行签署操作。</p>
-     * @param SignUrl $SignUrls <p>一码多签签署码的链接信息，适用于客户系统整合二维码功能。通过链接，用户可直接访问电子签名小程序并签署合同。</p>
+     * @param array $AIModels 模型列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,14 +58,13 @@ class CreateMultiFlowSignQRCodeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("QrCode",$param) and $param["QrCode"] !== null) {
-            $this->QrCode = new SignQrCode();
-            $this->QrCode->deserialize($param["QrCode"]);
-        }
-
-        if (array_key_exists("SignUrls",$param) and $param["SignUrls"] !== null) {
-            $this->SignUrls = new SignUrl();
-            $this->SignUrls->deserialize($param["SignUrls"]);
+        if (array_key_exists("AIModels",$param) and $param["AIModels"] !== null) {
+            $this->AIModels = [];
+            foreach ($param["AIModels"] as $key => $value){
+                $obj = new AIModelGroup();
+                $obj->deserialize($value);
+                array_push($this->AIModels, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

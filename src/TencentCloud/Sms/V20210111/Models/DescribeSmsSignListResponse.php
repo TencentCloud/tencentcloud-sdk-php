@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSmsSignList返回参数结构体
  *
- * @method array getDescribeSignListStatusSet() 获取获取签名信息响应
- * @method void setDescribeSignListStatusSet(array $DescribeSignListStatusSet) 设置获取签名信息响应
+ * @method array getDescribeSignListStatusSet() 获取<p>获取签名信息响应</p>
+ * @method void setDescribeSignListStatusSet(array $DescribeSignListStatusSet) 设置<p>获取签名信息响应</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSmsSignListResponse extends AbstractModel
 {
     /**
-     * @var array 获取签名信息响应
+     * @var array <p>获取签名信息响应</p>
      */
     public $DescribeSignListStatusSet;
 
@@ -38,7 +38,7 @@ class DescribeSmsSignListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DescribeSignListStatusSet 获取签名信息响应
+     * @param array $DescribeSignListStatusSet <p>获取签名信息响应</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

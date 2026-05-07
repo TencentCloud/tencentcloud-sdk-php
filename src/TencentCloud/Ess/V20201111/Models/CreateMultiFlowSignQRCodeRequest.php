@@ -20,201 +20,149 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateMultiFlowSignQRCode请求参数结构体
  *
- * @method UserInfo getOperator() 获取执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method string getTemplateId() 获取合同模板ID，为32位字符串。
-可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
- * @method void setTemplateId(string $TemplateId) 设置合同模板ID，为32位字符串。
-可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
- * @method string getFlowName() 获取合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
-该名称还将用于合同签署完成后的下载文件名。
- * @method void setFlowName(string $FlowName) 设置合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
-该名称还将用于合同签署完成后的下载文件名。
- * @method integer getMaxFlowNum() 获取通过此二维码可发起的流程最大限额，如未明确指定，默认为5份。
-一旦发起流程数超越该限制，该二维码将自动失效。
- * @method void setMaxFlowNum(integer $MaxFlowNum) 设置通过此二维码可发起的流程最大限额，如未明确指定，默认为5份。
-一旦发起流程数超越该限制，该二维码将自动失效。
- * @method integer getQrEffectiveDay() 获取二维码的有效期限，默认为7天，最高设定不得超过90天。
-一旦超过二维码的有效期限，该二维码将自动失效。
- * @method void setQrEffectiveDay(integer $QrEffectiveDay) 设置二维码的有效期限，默认为7天，最高设定不得超过90天。
-一旦超过二维码的有效期限，该二维码将自动失效。
- * @method integer getFlowEffectiveDay() 获取合同流程的签署有效期限，若未设定签署截止日期，则默认为自合同流程创建起的7天内截止。
-若在签署截止日期前未完成签署，合同状态将变更为已过期，从而导致合同无效。
-最长设定期限不得超过30天。
- * @method void setFlowEffectiveDay(integer $FlowEffectiveDay) 设置合同流程的签署有效期限，若未设定签署截止日期，则默认为自合同流程创建起的7天内截止。
-若在签署截止日期前未完成签署，合同状态将变更为已过期，从而导致合同无效。
-最长设定期限不得超过30天。
- * @method array getRestrictions() 获取指定签署人信息。
-在指定签署人后，仅允许特定签署人通过扫描二维码进行签署。
- * @method void setRestrictions(array $Restrictions) 设置指定签署人信息。
-在指定签署人后，仅允许特定签署人通过扫描二维码进行签署。
- * @method string getUserData() 获取调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
-在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
-回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
- * @method void setUserData(string $UserData) 设置调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
-在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
-回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
- * @method string getCallbackUrl() 获取已废弃，回调配置统一使用企业应用管理-应用集成-企业版应用中的配置 
-<br/> 通过一码多扫二维码发起的合同，回调消息可参考文档 https://qian.tencent.com/developers/company/callback_types_contracts_sign
-<br/> 用户通过签署二维码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档 https://qian.tencent.com/developers/company/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83
-
- * @method void setCallbackUrl(string $CallbackUrl) 设置已废弃，回调配置统一使用企业应用管理-应用集成-企业版应用中的配置 
-<br/> 通过一码多扫二维码发起的合同，回调消息可参考文档 https://qian.tencent.com/developers/company/callback_types_contracts_sign
-<br/> 用户通过签署二维码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档 https://qian.tencent.com/developers/company/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83
-
- * @method Agent getAgent() 获取代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
- * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
- * @method ApproverRestriction getApproverRestrictions() 获取限制二维码用户条件（已弃用）
- * @method void setApproverRestrictions(ApproverRestriction $ApproverRestrictions) 设置限制二维码用户条件（已弃用）
- * @method array getApproverComponentLimitTypes() 获取指定签署方在使用个人印章签署控件（SIGN_SIGNATURE） 时可使用的签署方式：自由书写、正楷临摹、系统签名、个人印章。
- * @method void setApproverComponentLimitTypes(array $ApproverComponentLimitTypes) 设置指定签署方在使用个人印章签署控件（SIGN_SIGNATURE） 时可使用的签署方式：自由书写、正楷临摹、系统签名、个人印章。
- * @method boolean getForbidPersonalMultipleSign() 获取禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
- * @method void setForbidPersonalMultipleSign(boolean $ForbidPersonalMultipleSign) 设置禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
- * @method boolean getFlowNameAppendScannerInfo() 获取合同流程名称是否应包含扫码签署人的信息，且遵循特定格式（flowname-姓名-手机号后四位）。
-例如，通过参数FlowName设定的扫码发起合同名称为“员工入职合同”，当扫码人张三（手机号18800009527）扫码签署时，合同名称将自动生成为“员工入职合同-张三-9527”。
- * @method void setFlowNameAppendScannerInfo(boolean $FlowNameAppendScannerInfo) 设置合同流程名称是否应包含扫码签署人的信息，且遵循特定格式（flowname-姓名-手机号后四位）。
-例如，通过参数FlowName设定的扫码发起合同名称为“员工入职合同”，当扫码人张三（手机号18800009527）扫码签署时，合同名称将自动生成为“员工入职合同-张三-9527”。
- * @method string getQrCodeName() 获取签署二维码的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成,会在生成的二维码图片上展示，若为空，则使用FlowName
- * @method void setQrCodeName(string $QrCodeName) 设置签署二维码的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成,会在生成的二维码图片上展示，若为空，则使用FlowName
- * @method integer getQrCodeExpiredOn() 获取签署二维码截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为签署二维码创建后的7天时截止，最长可设置为签署二维码创建后的365天时截止。
- * @method void setQrCodeExpiredOn(integer $QrCodeExpiredOn) 设置签署二维码截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为签署二维码创建后的7天时截止，最长可设置为签署二维码创建后的365天时截止。
+ * @method UserInfo getOperator() 获取<p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+ * @method void setOperator(UserInfo $Operator) 设置<p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+ * @method string getTemplateId() 获取<p>合同模板ID，为32位字符串。<br>可登录腾讯电子签控制台，在 &quot;模板&quot;-&gt;&quot;模板中心&quot;-&gt;&quot;列表展示设置&quot;选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。</p>
+ * @method void setTemplateId(string $TemplateId) 设置<p>合同模板ID，为32位字符串。<br>可登录腾讯电子签控制台，在 &quot;模板&quot;-&gt;&quot;模板中心&quot;-&gt;&quot;列表展示设置&quot;选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。</p>
+ * @method string getFlowName() 获取<p>合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。<br>该名称还将用于合同签署完成后的下载文件名。</p>
+ * @method void setFlowName(string $FlowName) 设置<p>合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。<br>该名称还将用于合同签署完成后的下载文件名。</p>
+ * @method integer getMaxFlowNum() 获取<p>通过此二维码可发起的流程最大限额，如未明确指定，默认为5份。<br>一旦发起流程数超越该限制，该二维码将自动失效。</p>
+ * @method void setMaxFlowNum(integer $MaxFlowNum) 设置<p>通过此二维码可发起的流程最大限额，如未明确指定，默认为5份。<br>一旦发起流程数超越该限制，该二维码将自动失效。</p>
+ * @method integer getQrEffectiveDay() 获取<p>二维码的有效期限，默认为7天，最高设定不得超过90天。<br>一旦超过二维码的有效期限，该二维码将自动失效。</p>
+ * @method void setQrEffectiveDay(integer $QrEffectiveDay) 设置<p>二维码的有效期限，默认为7天，最高设定不得超过90天。<br>一旦超过二维码的有效期限，该二维码将自动失效。</p>
+ * @method integer getFlowEffectiveDay() 获取<p>合同流程的签署有效期限，若未设定签署截止日期，则默认为自合同流程创建起的7天内截止。<br>若在签署截止日期前未完成签署，合同状态将变更为已过期，从而导致合同无效。<br>最长设定期限不得超过30天。</p>
+ * @method void setFlowEffectiveDay(integer $FlowEffectiveDay) 设置<p>合同流程的签署有效期限，若未设定签署截止日期，则默认为自合同流程创建起的7天内截止。<br>若在签署截止日期前未完成签署，合同状态将变更为已过期，从而导致合同无效。<br>最长设定期限不得超过30天。</p>
+ * @method integer getFlowDisplayType() 获取<p>在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：<br> <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li><li> <b>3</b> :文书</li></ul></p><p>效果如下:<br><img src="https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png" alt="FlowDisplayType"></p><p>枚举值：</p><ul><li>0： 合同</li><li>1： 文件</li><li>2： 协议</li><li>3： 文书</li></ul><p>默认值：0</p>
+ * @method void setFlowDisplayType(integer $FlowDisplayType) 设置<p>在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：<br> <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li><li> <b>3</b> :文书</li></ul></p><p>效果如下:<br><img src="https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png" alt="FlowDisplayType"></p><p>枚举值：</p><ul><li>0： 合同</li><li>1： 文件</li><li>2： 协议</li><li>3： 文书</li></ul><p>默认值：0</p>
+ * @method array getRestrictions() 获取<p>指定签署人信息。<br>在指定签署人后，仅允许特定签署人通过扫描二维码进行签署。</p>
+ * @method void setRestrictions(array $Restrictions) 设置<p>指定签署人信息。<br>在指定签署人后，仅允许特定签署人通过扫描二维码进行签署。</p>
+ * @method string getUserData() 获取<p>调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。<br>在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。<br>回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。</p>
+ * @method void setUserData(string $UserData) 设置<p>调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。<br>在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。<br>回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。</p>
+ * @method string getCallbackUrl() 获取<p>已废弃，回调配置统一使用企业应用管理-应用集成-企业版应用中的配置<br><br> 通过一码多扫二维码发起的合同，回调消息可参考文档 https://qian.tencent.com/developers/company/callback_types_contracts_sign<br><br> 用户通过签署二维码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档 https://qian.tencent.com/developers/company/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83</p>
+ * @method void setCallbackUrl(string $CallbackUrl) 设置<p>已废弃，回调配置统一使用企业应用管理-应用集成-企业版应用中的配置<br><br> 通过一码多扫二维码发起的合同，回调消息可参考文档 https://qian.tencent.com/developers/company/callback_types_contracts_sign<br><br> 用户通过签署二维码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档 https://qian.tencent.com/developers/company/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83</p>
+ * @method Agent getAgent() 获取<p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+ * @method void setAgent(Agent $Agent) 设置<p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+ * @method ApproverRestriction getApproverRestrictions() 获取<p>限制二维码用户条件（已弃用）</p>
+ * @method void setApproverRestrictions(ApproverRestriction $ApproverRestrictions) 设置<p>限制二维码用户条件（已弃用）</p>
+ * @method array getApproverComponentLimitTypes() 获取<p>指定签署方在使用个人印章签署控件（SIGN_SIGNATURE） 时可使用的签署方式：自由书写、正楷临摹、系统签名、个人印章。</p>
+ * @method void setApproverComponentLimitTypes(array $ApproverComponentLimitTypes) 设置<p>指定签署方在使用个人印章签署控件（SIGN_SIGNATURE） 时可使用的签署方式：自由书写、正楷临摹、系统签名、个人印章。</p>
+ * @method boolean getForbidPersonalMultipleSign() 获取<p>禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。</p>
+ * @method void setForbidPersonalMultipleSign(boolean $ForbidPersonalMultipleSign) 设置<p>禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。</p>
+ * @method boolean getFlowNameAppendScannerInfo() 获取<p>合同流程名称是否应包含扫码签署人的信息，且遵循特定格式（flowname-姓名-手机号后四位）。<br>例如，通过参数FlowName设定的扫码发起合同名称为“员工入职合同”，当扫码人张三（手机号18800009527）扫码签署时，合同名称将自动生成为“员工入职合同-张三-9527”。</p>
+ * @method void setFlowNameAppendScannerInfo(boolean $FlowNameAppendScannerInfo) 设置<p>合同流程名称是否应包含扫码签署人的信息，且遵循特定格式（flowname-姓名-手机号后四位）。<br>例如，通过参数FlowName设定的扫码发起合同名称为“员工入职合同”，当扫码人张三（手机号18800009527）扫码签署时，合同名称将自动生成为“员工入职合同-张三-9527”。</p>
+ * @method string getQrCodeName() 获取<p>签署二维码的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成,会在生成的二维码图片上展示，若为空，则使用FlowName</p>
+ * @method void setQrCodeName(string $QrCodeName) 设置<p>签署二维码的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成,会在生成的二维码图片上展示，若为空，则使用FlowName</p>
+ * @method integer getQrCodeExpiredOn() 获取<p>签署二维码截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为签署二维码创建后的7天时截止，最长可设置为签署二维码创建后的365天时截止。</p>
+ * @method void setQrCodeExpiredOn(integer $QrCodeExpiredOn) 设置<p>签署二维码截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为签署二维码创建后的7天时截止，最长可设置为签署二维码创建后的365天时截止。</p>
  */
 class CreateMultiFlowSignQRCodeRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @var UserInfo <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public $Operator;
 
     /**
-     * @var string 合同模板ID，为32位字符串。
-可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
+     * @var string <p>合同模板ID，为32位字符串。<br>可登录腾讯电子签控制台，在 &quot;模板&quot;-&gt;&quot;模板中心&quot;-&gt;&quot;列表展示设置&quot;选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。</p>
      */
     public $TemplateId;
 
     /**
-     * @var string 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
-该名称还将用于合同签署完成后的下载文件名。
+     * @var string <p>合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。<br>该名称还将用于合同签署完成后的下载文件名。</p>
      */
     public $FlowName;
 
     /**
-     * @var integer 通过此二维码可发起的流程最大限额，如未明确指定，默认为5份。
-一旦发起流程数超越该限制，该二维码将自动失效。
+     * @var integer <p>通过此二维码可发起的流程最大限额，如未明确指定，默认为5份。<br>一旦发起流程数超越该限制，该二维码将自动失效。</p>
      */
     public $MaxFlowNum;
 
     /**
-     * @var integer 二维码的有效期限，默认为7天，最高设定不得超过90天。
-一旦超过二维码的有效期限，该二维码将自动失效。
+     * @var integer <p>二维码的有效期限，默认为7天，最高设定不得超过90天。<br>一旦超过二维码的有效期限，该二维码将自动失效。</p>
      * @deprecated
      */
     public $QrEffectiveDay;
 
     /**
-     * @var integer 合同流程的签署有效期限，若未设定签署截止日期，则默认为自合同流程创建起的7天内截止。
-若在签署截止日期前未完成签署，合同状态将变更为已过期，从而导致合同无效。
-最长设定期限不得超过30天。
+     * @var integer <p>合同流程的签署有效期限，若未设定签署截止日期，则默认为自合同流程创建起的7天内截止。<br>若在签署截止日期前未完成签署，合同状态将变更为已过期，从而导致合同无效。<br>最长设定期限不得超过30天。</p>
      */
     public $FlowEffectiveDay;
 
     /**
-     * @var array 指定签署人信息。
-在指定签署人后，仅允许特定签署人通过扫描二维码进行签署。
+     * @var integer <p>在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：<br> <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li><li> <b>3</b> :文书</li></ul></p><p>效果如下:<br><img src="https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png" alt="FlowDisplayType"></p><p>枚举值：</p><ul><li>0： 合同</li><li>1： 文件</li><li>2： 协议</li><li>3： 文书</li></ul><p>默认值：0</p>
+     */
+    public $FlowDisplayType;
+
+    /**
+     * @var array <p>指定签署人信息。<br>在指定签署人后，仅允许特定签署人通过扫描二维码进行签署。</p>
      */
     public $Restrictions;
 
     /**
-     * @var string 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
-在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
-回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
+     * @var string <p>调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。<br>在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。<br>回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。</p>
      */
     public $UserData;
 
     /**
-     * @var string 已废弃，回调配置统一使用企业应用管理-应用集成-企业版应用中的配置 
-<br/> 通过一码多扫二维码发起的合同，回调消息可参考文档 https://qian.tencent.com/developers/company/callback_types_contracts_sign
-<br/> 用户通过签署二维码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档 https://qian.tencent.com/developers/company/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83
-
+     * @var string <p>已废弃，回调配置统一使用企业应用管理-应用集成-企业版应用中的配置<br><br> 通过一码多扫二维码发起的合同，回调消息可参考文档 https://qian.tencent.com/developers/company/callback_types_contracts_sign<br><br> 用户通过签署二维码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档 https://qian.tencent.com/developers/company/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83</p>
      * @deprecated
      */
     public $CallbackUrl;
 
     /**
-     * @var Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @var Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public $Agent;
 
     /**
-     * @var ApproverRestriction 限制二维码用户条件（已弃用）
+     * @var ApproverRestriction <p>限制二维码用户条件（已弃用）</p>
      * @deprecated
      */
     public $ApproverRestrictions;
 
     /**
-     * @var array 指定签署方在使用个人印章签署控件（SIGN_SIGNATURE） 时可使用的签署方式：自由书写、正楷临摹、系统签名、个人印章。
+     * @var array <p>指定签署方在使用个人印章签署控件（SIGN_SIGNATURE） 时可使用的签署方式：自由书写、正楷临摹、系统签名、个人印章。</p>
      */
     public $ApproverComponentLimitTypes;
 
     /**
-     * @var boolean 禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
+     * @var boolean <p>禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。</p>
      */
     public $ForbidPersonalMultipleSign;
 
     /**
-     * @var boolean 合同流程名称是否应包含扫码签署人的信息，且遵循特定格式（flowname-姓名-手机号后四位）。
-例如，通过参数FlowName设定的扫码发起合同名称为“员工入职合同”，当扫码人张三（手机号18800009527）扫码签署时，合同名称将自动生成为“员工入职合同-张三-9527”。
+     * @var boolean <p>合同流程名称是否应包含扫码签署人的信息，且遵循特定格式（flowname-姓名-手机号后四位）。<br>例如，通过参数FlowName设定的扫码发起合同名称为“员工入职合同”，当扫码人张三（手机号18800009527）扫码签署时，合同名称将自动生成为“员工入职合同-张三-9527”。</p>
      */
     public $FlowNameAppendScannerInfo;
 
     /**
-     * @var string 签署二维码的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成,会在生成的二维码图片上展示，若为空，则使用FlowName
+     * @var string <p>签署二维码的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成,会在生成的二维码图片上展示，若为空，则使用FlowName</p>
      */
     public $QrCodeName;
 
     /**
-     * @var integer 签署二维码截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为签署二维码创建后的7天时截止，最长可设置为签署二维码创建后的365天时截止。
+     * @var integer <p>签署二维码截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为签署二维码创建后的7天时截止，最长可设置为签署二维码创建后的365天时截止。</p>
      */
     public $QrCodeExpiredOn;
 
     /**
-     * @param UserInfo $Operator 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param string $TemplateId 合同模板ID，为32位字符串。
-可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
-     * @param string $FlowName 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
-该名称还将用于合同签署完成后的下载文件名。
-     * @param integer $MaxFlowNum 通过此二维码可发起的流程最大限额，如未明确指定，默认为5份。
-一旦发起流程数超越该限制，该二维码将自动失效。
-     * @param integer $QrEffectiveDay 二维码的有效期限，默认为7天，最高设定不得超过90天。
-一旦超过二维码的有效期限，该二维码将自动失效。
-     * @param integer $FlowEffectiveDay 合同流程的签署有效期限，若未设定签署截止日期，则默认为自合同流程创建起的7天内截止。
-若在签署截止日期前未完成签署，合同状态将变更为已过期，从而导致合同无效。
-最长设定期限不得超过30天。
-     * @param array $Restrictions 指定签署人信息。
-在指定签署人后，仅允许特定签署人通过扫描二维码进行签署。
-     * @param string $UserData 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
-在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
-回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
-     * @param string $CallbackUrl 已废弃，回调配置统一使用企业应用管理-应用集成-企业版应用中的配置 
-<br/> 通过一码多扫二维码发起的合同，回调消息可参考文档 https://qian.tencent.com/developers/company/callback_types_contracts_sign
-<br/> 用户通过签署二维码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档 https://qian.tencent.com/developers/company/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83
-
-     * @param Agent $Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
-     * @param ApproverRestriction $ApproverRestrictions 限制二维码用户条件（已弃用）
-     * @param array $ApproverComponentLimitTypes 指定签署方在使用个人印章签署控件（SIGN_SIGNATURE） 时可使用的签署方式：自由书写、正楷临摹、系统签名、个人印章。
-     * @param boolean $ForbidPersonalMultipleSign 禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
-     * @param boolean $FlowNameAppendScannerInfo 合同流程名称是否应包含扫码签署人的信息，且遵循特定格式（flowname-姓名-手机号后四位）。
-例如，通过参数FlowName设定的扫码发起合同名称为“员工入职合同”，当扫码人张三（手机号18800009527）扫码签署时，合同名称将自动生成为“员工入职合同-张三-9527”。
-     * @param string $QrCodeName 签署二维码的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成,会在生成的二维码图片上展示，若为空，则使用FlowName
-     * @param integer $QrCodeExpiredOn 签署二维码截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为签署二维码创建后的7天时截止，最长可设置为签署二维码创建后的365天时截止。
+     * @param UserInfo $Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+     * @param string $TemplateId <p>合同模板ID，为32位字符串。<br>可登录腾讯电子签控制台，在 &quot;模板&quot;-&gt;&quot;模板中心&quot;-&gt;&quot;列表展示设置&quot;选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。</p>
+     * @param string $FlowName <p>合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。<br>该名称还将用于合同签署完成后的下载文件名。</p>
+     * @param integer $MaxFlowNum <p>通过此二维码可发起的流程最大限额，如未明确指定，默认为5份。<br>一旦发起流程数超越该限制，该二维码将自动失效。</p>
+     * @param integer $QrEffectiveDay <p>二维码的有效期限，默认为7天，最高设定不得超过90天。<br>一旦超过二维码的有效期限，该二维码将自动失效。</p>
+     * @param integer $FlowEffectiveDay <p>合同流程的签署有效期限，若未设定签署截止日期，则默认为自合同流程创建起的7天内截止。<br>若在签署截止日期前未完成签署，合同状态将变更为已过期，从而导致合同无效。<br>最长设定期限不得超过30天。</p>
+     * @param integer $FlowDisplayType <p>在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：<br> <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li><li> <b>3</b> :文书</li></ul></p><p>效果如下:<br><img src="https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png" alt="FlowDisplayType"></p><p>枚举值：</p><ul><li>0： 合同</li><li>1： 文件</li><li>2： 协议</li><li>3： 文书</li></ul><p>默认值：0</p>
+     * @param array $Restrictions <p>指定签署人信息。<br>在指定签署人后，仅允许特定签署人通过扫描二维码进行签署。</p>
+     * @param string $UserData <p>调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。<br>在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。<br>回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。</p>
+     * @param string $CallbackUrl <p>已废弃，回调配置统一使用企业应用管理-应用集成-企业版应用中的配置<br><br> 通过一码多扫二维码发起的合同，回调消息可参考文档 https://qian.tencent.com/developers/company/callback_types_contracts_sign<br><br> 用户通过签署二维码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档 https://qian.tencent.com/developers/company/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83</p>
+     * @param Agent $Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+     * @param ApproverRestriction $ApproverRestrictions <p>限制二维码用户条件（已弃用）</p>
+     * @param array $ApproverComponentLimitTypes <p>指定签署方在使用个人印章签署控件（SIGN_SIGNATURE） 时可使用的签署方式：自由书写、正楷临摹、系统签名、个人印章。</p>
+     * @param boolean $ForbidPersonalMultipleSign <p>禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。</p>
+     * @param boolean $FlowNameAppendScannerInfo <p>合同流程名称是否应包含扫码签署人的信息，且遵循特定格式（flowname-姓名-手机号后四位）。<br>例如，通过参数FlowName设定的扫码发起合同名称为“员工入职合同”，当扫码人张三（手机号18800009527）扫码签署时，合同名称将自动生成为“员工入职合同-张三-9527”。</p>
+     * @param string $QrCodeName <p>签署二维码的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成,会在生成的二维码图片上展示，若为空，则使用FlowName</p>
+     * @param integer $QrCodeExpiredOn <p>签署二维码截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为签署二维码创建后的7天时截止，最长可设置为签署二维码创建后的365天时截止。</p>
      */
     function __construct()
     {
@@ -252,6 +200,10 @@ class CreateMultiFlowSignQRCodeRequest extends AbstractModel
 
         if (array_key_exists("FlowEffectiveDay",$param) and $param["FlowEffectiveDay"] !== null) {
             $this->FlowEffectiveDay = $param["FlowEffectiveDay"];
+        }
+
+        if (array_key_exists("FlowDisplayType",$param) and $param["FlowDisplayType"] !== null) {
+            $this->FlowDisplayType = $param["FlowDisplayType"];
         }
 
         if (array_key_exists("Restrictions",$param) and $param["Restrictions"] !== null) {

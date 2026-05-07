@@ -20,70 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 参与方填写控件信息
  *
- * @method string getRecipientId() 获取签署方经办人在合同流程中的参与方ID，与控件绑定，是控件的归属方
- * @method void setRecipientId(string $RecipientId) 设置签署方经办人在合同流程中的参与方ID，与控件绑定，是控件的归属方
- * @method string getRecipientFillStatus() 获取参与方填写状态
-<ul>
-<li>**空值** : 此参与方没有填写控件</li>
-<li>**0**:  未填写, 表示此参与方还没有填写合同的填写控件</li>
-<li>**1**:  已填写, 表示此参与方已经填写所有的填写控件</li></ul>
-
- * @method void setRecipientFillStatus(string $RecipientFillStatus) 设置参与方填写状态
-<ul>
-<li>**空值** : 此参与方没有填写控件</li>
-<li>**0**:  未填写, 表示此参与方还没有填写合同的填写控件</li>
-<li>**1**:  已填写, 表示此参与方已经填写所有的填写控件</li></ul>
-
- * @method boolean getIsPromoter() 获取是否为发起方
-<ul><li>true-发起方</li>
-<li>false-参与方</li></ul>
- * @method void setIsPromoter(boolean $IsPromoter) 设置是否为发起方
-<ul><li>true-发起方</li>
-<li>false-参与方</li></ul>
- * @method array getComponents() 获取改参与方填写控件信息列表
- * @method void setComponents(array $Components) 设置改参与方填写控件信息列表
+ * @method string getRecipientId() 获取<p>签署方经办人在合同流程中的参与方ID，与控件绑定，是控件的归属方</p>
+ * @method void setRecipientId(string $RecipientId) 设置<p>签署方经办人在合同流程中的参与方ID，与控件绑定，是控件的归属方</p>
+ * @method string getRecipientFillStatus() 获取<p>参与方填写状态</p><ul><li>**空值** : 此参与方没有填写控件</li><li>**0**:  未填写, 表示此参与方还没有填写合同的填写控件</li><li>**1**:  已填写, 表示此参与方已经填写所有的填写控件</li></ul>
+ * @method void setRecipientFillStatus(string $RecipientFillStatus) 设置<p>参与方填写状态</p><ul><li>**空值** : 此参与方没有填写控件</li><li>**0**:  未填写, 表示此参与方还没有填写合同的填写控件</li><li>**1**:  已填写, 表示此参与方已经填写所有的填写控件</li></ul>
+ * @method boolean getIsPromoter() 获取<p>是否为发起方</p><ul><li>true-发起方</li><li>false-参与方</li></ul>
+ * @method void setIsPromoter(boolean $IsPromoter) 设置<p>是否为发起方</p><ul><li>true-发起方</li><li>false-参与方</li></ul>
+ * @method array getComponents() 获取<p>该参与方填写控件信息列表</p>
+ * @method void setComponents(array $Components) 设置<p>该参与方填写控件信息列表</p>
+ * @method array getSignComponents() 获取<p>该参与方签批控件信息</p>
+ * @method void setSignComponents(array $SignComponents) 设置<p>该参与方签批控件信息</p>
  */
 class RecipientComponentInfo extends AbstractModel
 {
     /**
-     * @var string 签署方经办人在合同流程中的参与方ID，与控件绑定，是控件的归属方
+     * @var string <p>签署方经办人在合同流程中的参与方ID，与控件绑定，是控件的归属方</p>
      */
     public $RecipientId;
 
     /**
-     * @var string 参与方填写状态
-<ul>
-<li>**空值** : 此参与方没有填写控件</li>
-<li>**0**:  未填写, 表示此参与方还没有填写合同的填写控件</li>
-<li>**1**:  已填写, 表示此参与方已经填写所有的填写控件</li></ul>
-
+     * @var string <p>参与方填写状态</p><ul><li>**空值** : 此参与方没有填写控件</li><li>**0**:  未填写, 表示此参与方还没有填写合同的填写控件</li><li>**1**:  已填写, 表示此参与方已经填写所有的填写控件</li></ul>
      */
     public $RecipientFillStatus;
 
     /**
-     * @var boolean 是否为发起方
-<ul><li>true-发起方</li>
-<li>false-参与方</li></ul>
+     * @var boolean <p>是否为发起方</p><ul><li>true-发起方</li><li>false-参与方</li></ul>
      */
     public $IsPromoter;
 
     /**
-     * @var array 改参与方填写控件信息列表
+     * @var array <p>该参与方填写控件信息列表</p>
      */
     public $Components;
 
     /**
-     * @param string $RecipientId 签署方经办人在合同流程中的参与方ID，与控件绑定，是控件的归属方
-     * @param string $RecipientFillStatus 参与方填写状态
-<ul>
-<li>**空值** : 此参与方没有填写控件</li>
-<li>**0**:  未填写, 表示此参与方还没有填写合同的填写控件</li>
-<li>**1**:  已填写, 表示此参与方已经填写所有的填写控件</li></ul>
+     * @var array <p>该参与方签批控件信息</p>
+     */
+    public $SignComponents;
 
-     * @param boolean $IsPromoter 是否为发起方
-<ul><li>true-发起方</li>
-<li>false-参与方</li></ul>
-     * @param array $Components 改参与方填写控件信息列表
+    /**
+     * @param string $RecipientId <p>签署方经办人在合同流程中的参与方ID，与控件绑定，是控件的归属方</p>
+     * @param string $RecipientFillStatus <p>参与方填写状态</p><ul><li>**空值** : 此参与方没有填写控件</li><li>**0**:  未填写, 表示此参与方还没有填写合同的填写控件</li><li>**1**:  已填写, 表示此参与方已经填写所有的填写控件</li></ul>
+     * @param boolean $IsPromoter <p>是否为发起方</p><ul><li>true-发起方</li><li>false-参与方</li></ul>
+     * @param array $Components <p>该参与方填写控件信息列表</p>
+     * @param array $SignComponents <p>该参与方签批控件信息</p>
      */
     function __construct()
     {
@@ -116,6 +96,15 @@ class RecipientComponentInfo extends AbstractModel
                 $obj = new FilledComponent();
                 $obj->deserialize($value);
                 array_push($this->Components, $obj);
+            }
+        }
+
+        if (array_key_exists("SignComponents",$param) and $param["SignComponents"] !== null) {
+            $this->SignComponents = [];
+            foreach ($param["SignComponents"] as $key => $value){
+                $obj = new FilledComponent();
+                $obj->deserialize($value);
+                array_push($this->SignComponents, $obj);
             }
         }
     }

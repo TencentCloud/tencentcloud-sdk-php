@@ -22,68 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() 获取站点 ID。
  * @method void setZoneId(string $ZoneId) 设置站点 ID。
+ * @method string getArea() 获取数据投递区域，可选值：<ul><li>mainland：中国大陆境内；</li><li>overseas：全球（不含中国大陆）。</li></ul>
+ * @method void setArea(string $Area) 设置数据投递区域，可选值：<ul><li>mainland：中国大陆境内；</li><li>overseas：全球（不含中国大陆）。</li></ul>
+ * @method string getLogType() 获取数据投递类型，可选值：<ul><li>domain：站点加速日志；</li><li>application：四层代理日志；</li><li>function：边缘函数运行日志；</li><li>web-rateLiming：速率限制和 CC 攻击防护日志；</li><li>web-attack：托管规则日志；</li><li>web-rule：自定义规则日志；</li><li>web-bot：Bot管理日志。</li></ul>
+ * @method void setLogType(string $LogType) 设置数据投递类型，可选值：<ul><li>domain：站点加速日志；</li><li>application：四层代理日志；</li><li>function：边缘函数运行日志；</li><li>web-rateLiming：速率限制和 CC 攻击防护日志；</li><li>web-attack：托管规则日志；</li><li>web-rule：自定义规则日志；</li><li>web-bot：Bot管理日志。</li></ul>
  * @method string getTaskName() 获取实时日志投递任务的名称，格式为数字、英文、-和_组合，最多 200 个字符。
  * @method void setTaskName(string $TaskName) 设置实时日志投递任务的名称，格式为数字、英文、-和_组合，最多 200 个字符。
- * @method string getTaskType() 获取实时日志投递任务类型，取值有：
-<li>cls: 推送到腾讯云 CLS；</li>
-<li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li>
-<li>s3：推送到 AWS S3 兼容存储桶地址；</li>
-<li>log_analysis：推送到 EdgeOne 日志分析，该任务类型仅支持“站点加速日志”这一数据投递类型。</li>
- * @method void setTaskType(string $TaskType) 设置实时日志投递任务类型，取值有：
-<li>cls: 推送到腾讯云 CLS；</li>
-<li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li>
-<li>s3：推送到 AWS S3 兼容存储桶地址；</li>
-<li>log_analysis：推送到 EdgeOne 日志分析，该任务类型仅支持“站点加速日志”这一数据投递类型。</li>
- * @method array getEntityList() 获取实时日志投递任务对应的实体列表。取值示例如下：
-<li>七层域名：domain.example.com</li>
-<li>四层代理实例：sid-2s69eb5wcms7</li>
-<li>边缘函数实例：test-zone-2mxigizoh9l9-1257626257</li>
- * @method void setEntityList(array $EntityList) 设置实时日志投递任务对应的实体列表。取值示例如下：
-<li>七层域名：domain.example.com</li>
-<li>四层代理实例：sid-2s69eb5wcms7</li>
-<li>边缘函数实例：test-zone-2mxigizoh9l9-1257626257</li>
- * @method string getLogType() 获取数据投递类型，取值有：
-<li>domain：站点加速日志；</li>
-<li>application：四层代理日志；</li>
-<li>function：边缘函数运行日志；</li>
-<li>web-rateLiming：速率限制和 CC 攻击防护日志；</li>
-<li>web-attack：托管规则日志；</li>
-<li>web-rule：自定义规则日志；</li>
-<li>web-bot：Bot管理日志。</li>
- * @method void setLogType(string $LogType) 设置数据投递类型，取值有：
-<li>domain：站点加速日志；</li>
-<li>application：四层代理日志；</li>
-<li>function：边缘函数运行日志；</li>
-<li>web-rateLiming：速率限制和 CC 攻击防护日志；</li>
-<li>web-attack：托管规则日志；</li>
-<li>web-rule：自定义规则日志；</li>
-<li>web-bot：Bot管理日志。</li>
- * @method string getArea() 获取数据投递区域，取值有：
-<li>mainland：中国大陆境内；</li>
-<li>overseas：全球（不含中国大陆）。</li>
- * @method void setArea(string $Area) 设置数据投递区域，取值有：
-<li>mainland：中国大陆境内；</li>
-<li>overseas：全球（不含中国大陆）。</li>
- * @method array getFields() 获取投递的预设字段列表。取值参考：
-<li>[站点加速日志（七层访问日志）](https://cloud.tencent.com/document/product/1552/105791)</li>
-<li>[四层代理日志](https://cloud.tencent.com/document/product/1552/105792)</li>
-<li>[边缘函数运行日志](https://cloud.tencent.com/document/product/1552/115585)</li>
- * @method void setFields(array $Fields) 设置投递的预设字段列表。取值参考：
-<li>[站点加速日志（七层访问日志）](https://cloud.tencent.com/document/product/1552/105791)</li>
-<li>[四层代理日志](https://cloud.tencent.com/document/product/1552/105792)</li>
-<li>[边缘函数运行日志](https://cloud.tencent.com/document/product/1552/115585)</li>
+ * @method string getTaskType() 获取实时日志投递任务类型，取值有：<ul><li>cls: 推送到腾讯云 CLS；</li><li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li><li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析，仅当 LogType = domain 或 web-attack 时支持。</li></ul>
+ * @method void setTaskType(string $TaskType) 设置实时日志投递任务类型，取值有：<ul><li>cls: 推送到腾讯云 CLS；</li><li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li><li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析，仅当 LogType = domain 或 web-attack 时支持。</li></ul>
+ * @method array getEntityList() 获取实时日志投递任务对应的实体列表。取值示例如下：<ul><li>七层域名：domain.example.com</li><li>四层代理实例：sid-2s69eb5wcms7</li><li>边缘函数实例：test-zone-2mxigizoh9l9-1257626257</li></ul>
+ * @method void setEntityList(array $EntityList) 设置实时日志投递任务对应的实体列表。取值示例如下：<ul><li>七层域名：domain.example.com</li><li>四层代理实例：sid-2s69eb5wcms7</li><li>边缘函数实例：test-zone-2mxigizoh9l9-1257626257</li></ul>
+ * @method array getFields() 获取投递的预设字段列表。取值参考：<ul><li>[站点加速日志（七层访问日志）](https://cloud.tencent.com/document/product/1552/105791)</li><li>[四层代理日志](https://cloud.tencent.com/document/product/1552/105792)</li><li>[边缘函数运行日志](https://cloud.tencent.com/document/product/1552/115585)</li></ul>
+ * @method void setFields(array $Fields) 设置投递的预设字段列表。取值参考：<ul><li>[站点加速日志（七层访问日志）](https://cloud.tencent.com/document/product/1552/105791)</li><li>[四层代理日志](https://cloud.tencent.com/document/product/1552/105792)</li><li>[边缘函数运行日志](https://cloud.tencent.com/document/product/1552/115585)</li></ul>
  * @method array getCustomFields() 获取投递的自定义字段列表，支持在 HTTP 请求头、响应头、Cookie、请求正文中提取指定内容。自定义字段名称不能重复，且最多不能超过 200 个字段。单个实时日志推送任务最多添加 5 个请求正文类型的自定义字段。目前仅站点加速日志（LogType=domain）支持添加自定义字段。
  * @method void setCustomFields(array $CustomFields) 设置投递的自定义字段列表，支持在 HTTP 请求头、响应头、Cookie、请求正文中提取指定内容。自定义字段名称不能重复，且最多不能超过 200 个字段。单个实时日志推送任务最多添加 5 个请求正文类型的自定义字段。目前仅站点加速日志（LogType=domain）支持添加自定义字段。
  * @method array getDeliveryConditions() 获取日志投递的过滤条件，不填表示投递全量日志。
  * @method void setDeliveryConditions(array $DeliveryConditions) 设置日志投递的过滤条件，不填表示投递全量日志。
  * @method integer getSample() 获取采样比例，采用千分制，取值范围为1-1000，例如：填写 605 表示采样比例为 60.5%。不填表示采样比例为 100%。
  * @method void setSample(integer $Sample) 设置采样比例，采用千分制，取值范围为1-1000，例如：填写 605 表示采样比例为 60.5%。不填表示采样比例为 100%。
- * @method LogFormat getLogFormat() 获取日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：
-<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
-<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
- * @method void setLogFormat(LogFormat $LogFormat) 设置日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：
-<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
-<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
+ * @method LogFormat getLogFormat() 获取日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：<ul><li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li><li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li></ul>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
+ * @method void setLogFormat(LogFormat $LogFormat) 设置日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：<ul><li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li><li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li></ul>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
  * @method CLSTopic getCLS() 获取CLS 的配置信息。当 TaskType 取值为 cls 时，该参数必填。
  * @method void setCLS(CLSTopic $CLS) 设置CLS 的配置信息。当 TaskType 取值为 cls 时，该参数必填。
  * @method CustomEndpoint getCustomEndpoint() 获取自定义 HTTP 服务的配置信息。当 TaskType 取值为 custom_endpoint 时，该参数必填。
@@ -99,51 +57,32 @@ class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel
     public $ZoneId;
 
     /**
+     * @var string 数据投递区域，可选值：<ul><li>mainland：中国大陆境内；</li><li>overseas：全球（不含中国大陆）。</li></ul>
+     */
+    public $Area;
+
+    /**
+     * @var string 数据投递类型，可选值：<ul><li>domain：站点加速日志；</li><li>application：四层代理日志；</li><li>function：边缘函数运行日志；</li><li>web-rateLiming：速率限制和 CC 攻击防护日志；</li><li>web-attack：托管规则日志；</li><li>web-rule：自定义规则日志；</li><li>web-bot：Bot管理日志。</li></ul>
+     */
+    public $LogType;
+
+    /**
      * @var string 实时日志投递任务的名称，格式为数字、英文、-和_组合，最多 200 个字符。
      */
     public $TaskName;
 
     /**
-     * @var string 实时日志投递任务类型，取值有：
-<li>cls: 推送到腾讯云 CLS；</li>
-<li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li>
-<li>s3：推送到 AWS S3 兼容存储桶地址；</li>
-<li>log_analysis：推送到 EdgeOne 日志分析，该任务类型仅支持“站点加速日志”这一数据投递类型。</li>
+     * @var string 实时日志投递任务类型，取值有：<ul><li>cls: 推送到腾讯云 CLS；</li><li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li><li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析，仅当 LogType = domain 或 web-attack 时支持。</li></ul>
      */
     public $TaskType;
 
     /**
-     * @var array 实时日志投递任务对应的实体列表。取值示例如下：
-<li>七层域名：domain.example.com</li>
-<li>四层代理实例：sid-2s69eb5wcms7</li>
-<li>边缘函数实例：test-zone-2mxigizoh9l9-1257626257</li>
+     * @var array 实时日志投递任务对应的实体列表。取值示例如下：<ul><li>七层域名：domain.example.com</li><li>四层代理实例：sid-2s69eb5wcms7</li><li>边缘函数实例：test-zone-2mxigizoh9l9-1257626257</li></ul>
      */
     public $EntityList;
 
     /**
-     * @var string 数据投递类型，取值有：
-<li>domain：站点加速日志；</li>
-<li>application：四层代理日志；</li>
-<li>function：边缘函数运行日志；</li>
-<li>web-rateLiming：速率限制和 CC 攻击防护日志；</li>
-<li>web-attack：托管规则日志；</li>
-<li>web-rule：自定义规则日志；</li>
-<li>web-bot：Bot管理日志。</li>
-     */
-    public $LogType;
-
-    /**
-     * @var string 数据投递区域，取值有：
-<li>mainland：中国大陆境内；</li>
-<li>overseas：全球（不含中国大陆）。</li>
-     */
-    public $Area;
-
-    /**
-     * @var array 投递的预设字段列表。取值参考：
-<li>[站点加速日志（七层访问日志）](https://cloud.tencent.com/document/product/1552/105791)</li>
-<li>[四层代理日志](https://cloud.tencent.com/document/product/1552/105792)</li>
-<li>[边缘函数运行日志](https://cloud.tencent.com/document/product/1552/115585)</li>
+     * @var array 投递的预设字段列表。取值参考：<ul><li>[站点加速日志（七层访问日志）](https://cloud.tencent.com/document/product/1552/105791)</li><li>[四层代理日志](https://cloud.tencent.com/document/product/1552/105792)</li><li>[边缘函数运行日志](https://cloud.tencent.com/document/product/1552/115585)</li></ul>
      */
     public $Fields;
 
@@ -163,9 +102,7 @@ class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel
     public $Sample;
 
     /**
-     * @var LogFormat 日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：
-<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
-<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
+     * @var LogFormat 日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：<ul><li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li><li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li></ul>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
      */
     public $LogFormat;
 
@@ -186,37 +123,16 @@ class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel
 
     /**
      * @param string $ZoneId 站点 ID。
+     * @param string $Area 数据投递区域，可选值：<ul><li>mainland：中国大陆境内；</li><li>overseas：全球（不含中国大陆）。</li></ul>
+     * @param string $LogType 数据投递类型，可选值：<ul><li>domain：站点加速日志；</li><li>application：四层代理日志；</li><li>function：边缘函数运行日志；</li><li>web-rateLiming：速率限制和 CC 攻击防护日志；</li><li>web-attack：托管规则日志；</li><li>web-rule：自定义规则日志；</li><li>web-bot：Bot管理日志。</li></ul>
      * @param string $TaskName 实时日志投递任务的名称，格式为数字、英文、-和_组合，最多 200 个字符。
-     * @param string $TaskType 实时日志投递任务类型，取值有：
-<li>cls: 推送到腾讯云 CLS；</li>
-<li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li>
-<li>s3：推送到 AWS S3 兼容存储桶地址；</li>
-<li>log_analysis：推送到 EdgeOne 日志分析，该任务类型仅支持“站点加速日志”这一数据投递类型。</li>
-     * @param array $EntityList 实时日志投递任务对应的实体列表。取值示例如下：
-<li>七层域名：domain.example.com</li>
-<li>四层代理实例：sid-2s69eb5wcms7</li>
-<li>边缘函数实例：test-zone-2mxigizoh9l9-1257626257</li>
-     * @param string $LogType 数据投递类型，取值有：
-<li>domain：站点加速日志；</li>
-<li>application：四层代理日志；</li>
-<li>function：边缘函数运行日志；</li>
-<li>web-rateLiming：速率限制和 CC 攻击防护日志；</li>
-<li>web-attack：托管规则日志；</li>
-<li>web-rule：自定义规则日志；</li>
-<li>web-bot：Bot管理日志。</li>
-     * @param string $Area 数据投递区域，取值有：
-<li>mainland：中国大陆境内；</li>
-<li>overseas：全球（不含中国大陆）。</li>
-     * @param array $Fields 投递的预设字段列表。取值参考：
-<li>[站点加速日志（七层访问日志）](https://cloud.tencent.com/document/product/1552/105791)</li>
-<li>[四层代理日志](https://cloud.tencent.com/document/product/1552/105792)</li>
-<li>[边缘函数运行日志](https://cloud.tencent.com/document/product/1552/115585)</li>
+     * @param string $TaskType 实时日志投递任务类型，取值有：<ul><li>cls: 推送到腾讯云 CLS；</li><li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li><li>s3：推送到 AWS S3 兼容存储桶地址；</li><li>log_analysis：推送到 EdgeOne 日志分析，仅当 LogType = domain 或 web-attack 时支持。</li></ul>
+     * @param array $EntityList 实时日志投递任务对应的实体列表。取值示例如下：<ul><li>七层域名：domain.example.com</li><li>四层代理实例：sid-2s69eb5wcms7</li><li>边缘函数实例：test-zone-2mxigizoh9l9-1257626257</li></ul>
+     * @param array $Fields 投递的预设字段列表。取值参考：<ul><li>[站点加速日志（七层访问日志）](https://cloud.tencent.com/document/product/1552/105791)</li><li>[四层代理日志](https://cloud.tencent.com/document/product/1552/105792)</li><li>[边缘函数运行日志](https://cloud.tencent.com/document/product/1552/115585)</li></ul>
      * @param array $CustomFields 投递的自定义字段列表，支持在 HTTP 请求头、响应头、Cookie、请求正文中提取指定内容。自定义字段名称不能重复，且最多不能超过 200 个字段。单个实时日志推送任务最多添加 5 个请求正文类型的自定义字段。目前仅站点加速日志（LogType=domain）支持添加自定义字段。
      * @param array $DeliveryConditions 日志投递的过滤条件，不填表示投递全量日志。
      * @param integer $Sample 采样比例，采用千分制，取值范围为1-1000，例如：填写 605 表示采样比例为 60.5%。不填表示采样比例为 100%。
-     * @param LogFormat $LogFormat 日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：
-<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
-<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
+     * @param LogFormat $LogFormat 日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：<ul><li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li><li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li></ul>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
      * @param CLSTopic $CLS CLS 的配置信息。当 TaskType 取值为 cls 时，该参数必填。
      * @param CustomEndpoint $CustomEndpoint 自定义 HTTP 服务的配置信息。当 TaskType 取值为 custom_endpoint 时，该参数必填。
      * @param S3 $S3 AWS S3 兼容存储桶的配置信息。当 TaskType 取值为 s3 时，该参数必填。
@@ -238,6 +154,14 @@ class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel
             $this->ZoneId = $param["ZoneId"];
         }
 
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("LogType",$param) and $param["LogType"] !== null) {
+            $this->LogType = $param["LogType"];
+        }
+
         if (array_key_exists("TaskName",$param) and $param["TaskName"] !== null) {
             $this->TaskName = $param["TaskName"];
         }
@@ -248,14 +172,6 @@ class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel
 
         if (array_key_exists("EntityList",$param) and $param["EntityList"] !== null) {
             $this->EntityList = $param["EntityList"];
-        }
-
-        if (array_key_exists("LogType",$param) and $param["LogType"] !== null) {
-            $this->LogType = $param["LogType"];
-        }
-
-        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
-            $this->Area = $param["Area"];
         }
 
         if (array_key_exists("Fields",$param) and $param["Fields"] !== null) {

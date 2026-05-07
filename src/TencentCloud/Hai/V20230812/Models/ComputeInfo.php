@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 资源相关信息
  *
- * @method array getComputeResources() 获取资源类型及数量
- * @method void setComputeResources(array $ComputeResources) 设置资源类型及数量
- * @method integer getReplicas() 获取副本数
- * @method void setReplicas(integer $Replicas) 设置副本数
+ * @method array getComputeResources() 获取<p>资源类型及数量</p>
+ * @method void setComputeResources(array $ComputeResources) 设置<p>资源类型及数量</p>
+ * @method integer getReplicas() 获取<p>副本数</p>
+ * @method void setReplicas(integer $Replicas) 设置<p>副本数</p>
  */
 class ComputeInfo extends AbstractModel
 {
     /**
-     * @var array 资源类型及数量
+     * @var array <p>资源类型及数量</p>
      */
     public $ComputeResources;
 
     /**
-     * @var integer 副本数
+     * @var integer <p>副本数</p>
      */
     public $Replicas;
 
     /**
-     * @param array $ComputeResources 资源类型及数量
-     * @param integer $Replicas 副本数
+     * @param array $ComputeResources <p>资源类型及数量</p>
+     * @param integer $Replicas <p>副本数</p>
      */
     function __construct()
     {

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeOriginStreamInfo请求参数结构体
+ * DescribeAIModels请求参数结构体
  *
- * @method string getDomainName() 获取<p>域名。</p>
- * @method void setDomainName(string $DomainName) 设置<p>域名。</p>
+ * @method string getEnvId() 获取环境id
+ * @method void setEnvId(string $EnvId) 设置环境id
  */
-class DescribeOriginStreamInfoRequest extends AbstractModel
+class DescribeAIModelsRequest extends AbstractModel
 {
     /**
-     * @var string <p>域名。</p>
+     * @var string 环境id
      */
-    public $DomainName;
+    public $EnvId;
 
     /**
-     * @param string $DomainName <p>域名。</p>
+     * @param string $EnvId 环境id
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeOriginStreamInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
-            $this->DomainName = $param["DomainName"];
+        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
+            $this->EnvId = $param["EnvId"];
         }
     }
 }

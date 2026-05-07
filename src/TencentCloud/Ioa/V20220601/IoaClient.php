@@ -58,6 +58,7 @@ use TencentCloud\Ioa\V20220601\Models as Models;
  * @method Models\GrantResourcesByAccountGroupsResponse GrantResourcesByAccountGroups(Models\GrantResourcesByAccountGroupsRequest $req) 添加资源授权到账号组
  * @method Models\GrantResourcesByAccountsResponse GrantResourcesByAccounts(Models\GrantResourcesByAccountsRequest $req) 添加资源授权到账号组
  * @method Models\GrantResourcesByVirtualGroupsResponse GrantResourcesByVirtualGroups(Models\GrantResourcesByVirtualGroupsRequest $req) 添加资源授权到账号组
+ * @method Models\ModifyBusinessResourceResponse ModifyBusinessResource(Models\ModifyBusinessResourceRequest $req) 修改业务资源，会对一些必填参数进行校验和参数合法性校验，修改业务资源时，先调用下校验相同业务资源接口，看资源是不是有冲突。修改时也会做校验，但没有返回对应的异常信息,私有化调用path为：capi/GatewayResource/ModifyBusinessResource
  * @method Models\ModifyDeviceTrustStatusResponse ModifyDeviceTrustStatus(Models\ModifyDeviceTrustStatusRequest $req) 给接入设备加黑加白,私有化调用path为：capi/NGN/ModifyDeviceTrustStatus
  * @method Models\ModifyVirtualDeviceGroupsResponse ModifyVirtualDeviceGroups(Models\ModifyVirtualDeviceGroupsRequest $req) 终端自定义分组增减终端，私有化调用path为：/capi/Assets/Device/ModifyVirtualDeviceGroups
  */

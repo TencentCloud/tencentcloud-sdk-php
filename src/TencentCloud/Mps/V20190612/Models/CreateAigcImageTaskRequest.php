@@ -20,10 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAigcImageTask请求参数结构体
  *
- * @method string getModelName() 获取<p>模型名称。<br>当前支持的模型列表：<br>Hunyuan,<br>GEM，<br>Qwen。</p>
- * @method void setModelName(string $ModelName) 设置<p>模型名称。<br>当前支持的模型列表：<br>Hunyuan,<br>GEM，<br>Qwen。</p>
- * @method string getModelVersion() 获取<p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>GEM， 可选[2.5,3.0]。</li></ol>
- * @method void setModelVersion(string $ModelVersion) 设置<p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>GEM， 可选[2.5,3.0]。</li></ol>
+ * @method string getModelName() 获取<p>模型名称。<br>当前支持的模型列表：<br>Hunyuan,<br>GEM，<br>Qwen，<br>Vidu，<br>Kling。</p>
+ * @method void setModelName(string $ModelName) 设置<p>模型名称。<br>当前支持的模型列表：<br>Hunyuan,<br>GEM，<br>Qwen，<br>Vidu，<br>Kling。</p>
+ * @method string getModelVersion() 获取<p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>GEM，可选[2.5,3.0,3.1]。</li><li>Vidu，可选[q2]。</li><li>Kling，可选[2.1、O1、3.0、3.0-Omni]</li></ol>
+ * @method void setModelVersion(string $ModelVersion) 设置<p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>GEM，可选[2.5,3.0,3.1]。</li><li>Vidu，可选[q2]。</li><li>Kling，可选[2.1、O1、3.0、3.0-Omni]</li></ol>
+ * @method string getSceneType() 获取<p>场景化生图使用，仅部分模型支持。</p><p>枚举值：</p><ul><li>3d_panorama： 全景图。仅Hunyuan支持。</li></ul>
+ * @method void setSceneType(string $SceneType) 设置<p>场景化生图使用，仅部分模型支持。</p><p>枚举值：</p><ul><li>3d_panorama： 全景图。仅Hunyuan支持。</li></ul>
  * @method string getPrompt() 获取<p>生成图片的描述。(注：最大支持1000字符)。当未传入参考图片时，此参数必填。</p>
  * @method void setPrompt(string $Prompt) 设置<p>生成图片的描述。(注：最大支持1000字符)。当未传入参考图片时，此参数必填。</p>
  * @method string getNegativePrompt() 获取<p>用于描述您想要阻止模型生成的内容。 注意：部分模型支持。 例如： 顶部照明、明亮的色彩 人物、动物 多辆汽车、风。</p>
@@ -44,14 +46,19 @@ use TencentCloud\Common\AbstractModel;
 class CreateAigcImageTaskRequest extends AbstractModel
 {
     /**
-     * @var string <p>模型名称。<br>当前支持的模型列表：<br>Hunyuan,<br>GEM，<br>Qwen。</p>
+     * @var string <p>模型名称。<br>当前支持的模型列表：<br>Hunyuan,<br>GEM，<br>Qwen，<br>Vidu，<br>Kling。</p>
      */
     public $ModelName;
 
     /**
-     * @var string <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>GEM， 可选[2.5,3.0]。</li></ol>
+     * @var string <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>GEM，可选[2.5,3.0,3.1]。</li><li>Vidu，可选[q2]。</li><li>Kling，可选[2.1、O1、3.0、3.0-Omni]</li></ol>
      */
     public $ModelVersion;
+
+    /**
+     * @var string <p>场景化生图使用，仅部分模型支持。</p><p>枚举值：</p><ul><li>3d_panorama： 全景图。仅Hunyuan支持。</li></ul>
+     */
+    public $SceneType;
 
     /**
      * @var string <p>生成图片的描述。(注：最大支持1000字符)。当未传入参考图片时，此参数必填。</p>
@@ -94,8 +101,9 @@ class CreateAigcImageTaskRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @param string $ModelName <p>模型名称。<br>当前支持的模型列表：<br>Hunyuan,<br>GEM，<br>Qwen。</p>
-     * @param string $ModelVersion <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>GEM， 可选[2.5,3.0]。</li></ol>
+     * @param string $ModelName <p>模型名称。<br>当前支持的模型列表：<br>Hunyuan,<br>GEM，<br>Qwen，<br>Vidu，<br>Kling。</p>
+     * @param string $ModelVersion <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>GEM，可选[2.5,3.0,3.1]。</li><li>Vidu，可选[q2]。</li><li>Kling，可选[2.1、O1、3.0、3.0-Omni]</li></ol>
+     * @param string $SceneType <p>场景化生图使用，仅部分模型支持。</p><p>枚举值：</p><ul><li>3d_panorama： 全景图。仅Hunyuan支持。</li></ul>
      * @param string $Prompt <p>生成图片的描述。(注：最大支持1000字符)。当未传入参考图片时，此参数必填。</p>
      * @param string $NegativePrompt <p>用于描述您想要阻止模型生成的内容。 注意：部分模型支持。 例如： 顶部照明、明亮的色彩 人物、动物 多辆汽车、风。</p>
      * @param boolean $EnhancePrompt <p>默认取值为False，模型会严格地遵循指令。如果需要更精细的prompt获得最佳效果，可将此参数设置为True，将自动优化传入的prompt，以提升生成质量。</p>
@@ -124,6 +132,10 @@ class CreateAigcImageTaskRequest extends AbstractModel
 
         if (array_key_exists("ModelVersion",$param) and $param["ModelVersion"] !== null) {
             $this->ModelVersion = $param["ModelVersion"];
+        }
+
+        if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
+            $this->SceneType = $param["SceneType"];
         }
 
         if (array_key_exists("Prompt",$param) and $param["Prompt"] !== null) {

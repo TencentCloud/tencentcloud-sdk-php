@@ -70,8 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionPersist(boolean $SessionPersist) 设置是否开启会话保持，取值有：
 <li>true：开启；</li>
 <li>false：关闭。</li>不填为false。
- * @method integer getSessionPersistTime() 获取会话保持的时间，只有当SessionPersist为true时，该值才会生效。
- * @method void setSessionPersistTime(integer $SessionPersistTime) 设置会话保持的时间，只有当SessionPersist为true时，该值才会生效。
+ * @method integer getSessionPersistTime() 获取会话保持的时间，单位为秒，只有当SessionPersist为true时，该值才会生效。
+ * @method void setSessionPersistTime(integer $SessionPersistTime) 设置会话保持的时间，单位为秒，只有当SessionPersist为true时，该值才会生效。
  * @method string getOriginPort() 获取源站端口，支持格式：
 <li>单端口：80；</li>
 <li>端口段：81-90，81至90端口。</li>
@@ -145,7 +145,7 @@ class ModifyApplicationProxyRuleRequest extends AbstractModel
     public $SessionPersist;
 
     /**
-     * @var integer 会话保持的时间，只有当SessionPersist为true时，该值才会生效。
+     * @var integer 会话保持的时间，单位为秒，只有当SessionPersist为true时，该值才会生效。
      */
     public $SessionPersistTime;
 
@@ -187,7 +187,7 @@ class ModifyApplicationProxyRuleRequest extends AbstractModel
      * @param boolean $SessionPersist 是否开启会话保持，取值有：
 <li>true：开启；</li>
 <li>false：关闭。</li>不填为false。
-     * @param integer $SessionPersistTime 会话保持的时间，只有当SessionPersist为true时，该值才会生效。
+     * @param integer $SessionPersistTime 会话保持的时间，单位为秒，只有当SessionPersist为true时，该值才会生效。
      * @param string $OriginPort 源站端口，支持格式：
 <li>单端口：80；</li>
 <li>端口段：81-90，81至90端口。</li>

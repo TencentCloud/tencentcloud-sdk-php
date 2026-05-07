@@ -20,38 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSmsSignList请求参数结构体
  *
- * @method array getSignIdSet() 获取签名 ID 数组。
-注：默认数组最大长度100。
- * @method void setSignIdSet(array $SignIdSet) 设置签名 ID 数组。
-注：默认数组最大长度100。
- * @method integer getInternational() 获取是否国际/港澳台短信：
-0：表示国内短信。
-1：表示国际/港澳台短信。
- * @method void setInternational(integer $International) 设置是否国际/港澳台短信：
-0：表示国内短信。
-1：表示国际/港澳台短信。
+ * @method integer getInternational() 获取<p>是否国际/港澳台短信：<br>0：表示国内短信。<br>1：表示国际/港澳台短信。</p>
+ * @method void setInternational(integer $International) 设置<p>是否国际/港澳台短信：<br>0：表示国内短信。<br>1：表示国际/港澳台短信。</p>
+ * @method array getSignIdSet() 获取<p>签名 ID 数组。<br>注：默认数组最大长度100。</p>
+ * @method void setSignIdSet(array $SignIdSet) 设置<p>签名 ID 数组。<br>注：默认数组最大长度100。</p>
+ * @method integer getLimit() 获取<p>最大上限，最多100。注：默认为10，SignIdSet 为空时启用。</p>
+ * @method void setLimit(integer $Limit) 设置<p>最大上限，最多100。注：默认为10，SignIdSet 为空时启用。</p>
+ * @method integer getOffset() 获取<p>偏移量。注：默认为0，SignIdSet 为空时启用。</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量。注：默认为0，SignIdSet 为空时启用。</p>
  */
 class DescribeSmsSignListRequest extends AbstractModel
 {
     /**
-     * @var array 签名 ID 数组。
-注：默认数组最大长度100。
-     */
-    public $SignIdSet;
-
-    /**
-     * @var integer 是否国际/港澳台短信：
-0：表示国内短信。
-1：表示国际/港澳台短信。
+     * @var integer <p>是否国际/港澳台短信：<br>0：表示国内短信。<br>1：表示国际/港澳台短信。</p>
      */
     public $International;
 
     /**
-     * @param array $SignIdSet 签名 ID 数组。
-注：默认数组最大长度100。
-     * @param integer $International 是否国际/港澳台短信：
-0：表示国内短信。
-1：表示国际/港澳台短信。
+     * @var array <p>签名 ID 数组。<br>注：默认数组最大长度100。</p>
+     */
+    public $SignIdSet;
+
+    /**
+     * @var integer <p>最大上限，最多100。注：默认为10，SignIdSet 为空时启用。</p>
+     */
+    public $Limit;
+
+    /**
+     * @var integer <p>偏移量。注：默认为0，SignIdSet 为空时启用。</p>
+     */
+    public $Offset;
+
+    /**
+     * @param integer $International <p>是否国际/港澳台短信：<br>0：表示国内短信。<br>1：表示国际/港澳台短信。</p>
+     * @param array $SignIdSet <p>签名 ID 数组。<br>注：默认数组最大长度100。</p>
+     * @param integer $Limit <p>最大上限，最多100。注：默认为10，SignIdSet 为空时启用。</p>
+     * @param integer $Offset <p>偏移量。注：默认为0，SignIdSet 为空时启用。</p>
      */
     function __construct()
     {
@@ -66,12 +70,20 @@ class DescribeSmsSignListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("International",$param) and $param["International"] !== null) {
+            $this->International = $param["International"];
+        }
+
         if (array_key_exists("SignIdSet",$param) and $param["SignIdSet"] !== null) {
             $this->SignIdSet = $param["SignIdSet"];
         }
 
-        if (array_key_exists("International",$param) and $param["International"] !== null) {
-            $this->International = $param["International"];
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

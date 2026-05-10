@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudio(string $Audio) 设置Base64编码的音频数据
  * @method array getAlignments() 获取字幕对齐数据
  * @method void setAlignments(array $Alignments) 设置字幕对齐数据
+ * @method integer getTotalDurationMs() 获取音频时长
+ * @method void setTotalDurationMs(integer $TotalDurationMs) 设置音频时长
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class TextToSpeechResponse extends AbstractModel
     public $Alignments;
 
     /**
+     * @var integer 音频时长
+     */
+    public $TotalDurationMs;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class TextToSpeechResponse extends AbstractModel
     /**
      * @param string $Audio Base64编码的音频数据
      * @param array $Alignments 字幕对齐数据
+     * @param integer $TotalDurationMs 音频时长
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -73,6 +81,10 @@ class TextToSpeechResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Alignments, $obj);
             }
+        }
+
+        if (array_key_exists("TotalDurationMs",$param) and $param["TotalDurationMs"] !== null) {
+            $this->TotalDurationMs = $param["TotalDurationMs"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

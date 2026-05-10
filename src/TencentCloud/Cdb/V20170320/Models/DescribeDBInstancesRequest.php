@@ -20,306 +20,298 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstances请求参数结构体
  *
- * @method integer getProjectId() 获取项目 ID。
- * @method void setProjectId(integer $ProjectId) 设置项目 ID。
- * @method array getInstanceTypes() 获取实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。
- * @method void setInstanceTypes(array $InstanceTypes) 设置实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。
- * @method array getVips() 获取实例的内网 IP 地址。
- * @method void setVips(array $Vips) 设置实例的内网 IP 地址。
- * @method array getStatus() 获取实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 已隔离（可在回收站恢复开机）
- * @method void setStatus(array $Status) 设置实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 已隔离（可在回收站恢复开机）
- * @method integer getOffset() 获取偏移量，默认值为 0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认值为 0。
- * @method integer getLimit() 获取单次请求返回的数量，默认值为 20，最大值为 2000。
- * @method void setLimit(integer $Limit) 设置单次请求返回的数量，默认值为 20，最大值为 2000。
- * @method string getSecurityGroupId() 获取安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。
- * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。
- * @method array getPayTypes() 获取付费类型，可取值：0 - 包年包月，1 - 小时计费。
- * @method void setPayTypes(array $PayTypes) 设置付费类型，可取值：0 - 包年包月，1 - 小时计费。
- * @method array getInstanceNames() 获取实例名称。
- * @method void setInstanceNames(array $InstanceNames) 设置实例名称。
- * @method array getTaskStatus() 获取实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行<br>34 - 原地升级待执行
- * @method void setTaskStatus(array $TaskStatus) 设置实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行<br>34 - 原地升级待执行
- * @method array getEngineVersions() 获取实例数据库引擎版本，可能取值：5.1、5.5、5.6 和 5.7。
- * @method void setEngineVersions(array $EngineVersions) 设置实例数据库引擎版本，可能取值：5.1、5.5、5.6 和 5.7。
- * @method array getVpcIds() 获取私有网络的 ID。
- * @method void setVpcIds(array $VpcIds) 设置私有网络的 ID。
- * @method array getZoneIds() 获取可用区的 ID。
- * @method void setZoneIds(array $ZoneIds) 设置可用区的 ID。
- * @method array getSubnetIds() 获取子网 ID。
- * @method void setSubnetIds(array $SubnetIds) 设置子网 ID。
- * @method array getCdbErrors() 获取是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。
- * @method void setCdbErrors(array $CdbErrors) 设置是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。
- * @method string getOrderBy() 获取返回结果集排序的字段，目前支持："instanceId"，"instanceName"，"createTime"，"deadlineTime"。
- * @method void setOrderBy(string $OrderBy) 设置返回结果集排序的字段，目前支持："instanceId"，"instanceName"，"createTime"，"deadlineTime"。
- * @method string getOrderDirection() 获取返回结果集排序方式。目前支持值："ASC" - 表示升序，"DESC" - 表示降序，默认为 "DESC"。
- * @method void setOrderDirection(string $OrderDirection) 设置返回结果集排序方式。目前支持值："ASC" - 表示升序，"DESC" - 表示降序，默认为 "DESC"。
- * @method integer getWithSecurityGroup() 获取是否以安全组 ID 为过滤条件。
-说明：0表示否，1表示是。
- * @method void setWithSecurityGroup(integer $WithSecurityGroup) 设置是否以安全组 ID 为过滤条件。
-说明：0表示否，1表示是。
- * @method integer getWithExCluster() 获取是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。
- * @method void setWithExCluster(integer $WithExCluster) 设置是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。
- * @method string getExClusterId() 获取独享集群 ID。
- * @method void setExClusterId(string $ExClusterId) 设置独享集群 ID。
- * @method array getInstanceIds() 获取实例 ID。
- * @method void setInstanceIds(array $InstanceIds) 设置实例 ID。
- * @method integer getInitFlag() 获取初始化标记，可取值：0 - 未初始化，1 - 初始化。
- * @method void setInitFlag(integer $InitFlag) 设置初始化标记，可取值：0 - 未初始化，1 - 初始化。
- * @method integer getWithDr() 获取是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。
- * @method void setWithDr(integer $WithDr) 设置是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。
- * @method integer getWithRo() 获取是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
- * @method void setWithRo(integer $WithRo) 设置是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
- * @method integer getWithMaster() 获取是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
- * @method void setWithMaster(integer $WithMaster) 设置是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
- * @method array getDeployGroupIds() 获取置放群组ID列表。
- * @method void setDeployGroupIds(array $DeployGroupIds) 设置置放群组ID列表。
- * @method array getTagKeysForSearch() 获取是否以标签键为过滤条件。
- * @method void setTagKeysForSearch(array $TagKeysForSearch) 设置是否以标签键为过滤条件。
- * @method array getCageIds() 获取金融围拢 ID 。
- * @method void setCageIds(array $CageIds) 设置金融围拢 ID 。
- * @method array getTagValues() 获取标签值
- * @method void setTagValues(array $TagValues) 设置标签值
- * @method array getUniqueVpcIds() 获取私有网络字符型vpcId
- * @method void setUniqueVpcIds(array $UniqueVpcIds) 设置私有网络字符型vpcId
- * @method array getUniqSubnetIds() 获取私有网络字符型subnetId
- * @method void setUniqSubnetIds(array $UniqSubnetIds) 设置私有网络字符型subnetId
- * @method array getTags() 获取标签键值
-请注意，创建中的实例无法查询到标签。
- * @method void setTags(array $Tags) 设置标签键值
-请注意，创建中的实例无法查询到标签。
- * @method array getProxyVips() 获取数据库代理 IP 。
- * @method void setProxyVips(array $ProxyVips) 设置数据库代理 IP 。
- * @method array getProxyIds() 获取数据库代理 ID 。
- * @method void setProxyIds(array $ProxyIds) 设置数据库代理 ID 。
- * @method array getEngineTypes() 获取数据库引擎类型。可选值为：InnoDB、RocksDB。
- * @method void setEngineTypes(array $EngineTypes) 设置数据库引擎类型。可选值为：InnoDB、RocksDB。
- * @method boolean getQueryClusterInfo() 获取是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。
- * @method void setQueryClusterInfo(boolean $QueryClusterInfo) 设置是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。
+ * @method integer getProjectId() 获取<p>项目 ID。</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>项目 ID。</p>
+ * @method array getInstanceTypes() 获取<p>实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。</p>
+ * @method void setInstanceTypes(array $InstanceTypes) 设置<p>实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。</p>
+ * @method array getVips() 获取<p>实例的内网 IP 地址。</p>
+ * @method void setVips(array $Vips) 设置<p>实例的内网 IP 地址。</p>
+ * @method array getStatus() 获取<p>实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 已隔离（可在回收站恢复开机）</p>
+ * @method void setStatus(array $Status) 设置<p>实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 已隔离（可在回收站恢复开机）</p>
+ * @method integer getOffset() 获取<p>偏移量，默认值为 0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认值为 0。</p>
+ * @method integer getLimit() 获取<p>单次请求返回的数量，默认值为 20，最大值为 2000。</p>
+ * @method void setLimit(integer $Limit) 设置<p>单次请求返回的数量，默认值为 20，最大值为 2000。</p>
+ * @method string getSecurityGroupId() 获取<p>安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。</p>
+ * @method void setSecurityGroupId(string $SecurityGroupId) 设置<p>安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。</p>
+ * @method array getPayTypes() 获取<p>付费类型，可取值：0 - 包年包月，1 - 小时计费。</p>
+ * @method void setPayTypes(array $PayTypes) 设置<p>付费类型，可取值：0 - 包年包月，1 - 小时计费。</p>
+ * @method array getInstanceNames() 获取<p>实例名称。</p>
+ * @method void setInstanceNames(array $InstanceNames) 设置<p>实例名称。</p>
+ * @method array getTaskStatus() 获取<p>实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行<br>34 - 原地升级待执行</p>
+ * @method void setTaskStatus(array $TaskStatus) 设置<p>实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行<br>34 - 原地升级待执行</p>
+ * @method array getEngineVersions() 获取<p>实例数据库引擎版本，可能取值：5.1、5.5、5.6 和 5.7。</p>
+ * @method void setEngineVersions(array $EngineVersions) 设置<p>实例数据库引擎版本，可能取值：5.1、5.5、5.6 和 5.7。</p>
+ * @method array getVpcIds() 获取<p>私有网络的 ID。</p>
+ * @method void setVpcIds(array $VpcIds) 设置<p>私有网络的 ID。</p>
+ * @method array getZoneIds() 获取<p>可用区的 ID。</p>
+ * @method void setZoneIds(array $ZoneIds) 设置<p>可用区的 ID。</p>
+ * @method array getSubnetIds() 获取<p>子网 ID。</p>
+ * @method void setSubnetIds(array $SubnetIds) 设置<p>子网 ID。</p>
+ * @method array getCdbErrors() 获取<p>是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。</p>
+ * @method void setCdbErrors(array $CdbErrors) 设置<p>是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。</p>
+ * @method string getOrderBy() 获取<p>返回结果集排序的字段，目前支持：&quot;instanceId&quot;，&quot;instanceName&quot;，&quot;createTime&quot;，&quot;deadlineTime&quot;。</p>
+ * @method void setOrderBy(string $OrderBy) 设置<p>返回结果集排序的字段，目前支持：&quot;instanceId&quot;，&quot;instanceName&quot;，&quot;createTime&quot;，&quot;deadlineTime&quot;。</p>
+ * @method string getOrderDirection() 获取<p>返回结果集排序方式。目前支持值：&quot;ASC&quot; - 表示升序，&quot;DESC&quot; - 表示降序，默认为 &quot;DESC&quot;。</p>
+ * @method void setOrderDirection(string $OrderDirection) 设置<p>返回结果集排序方式。目前支持值：&quot;ASC&quot; - 表示升序，&quot;DESC&quot; - 表示降序，默认为 &quot;DESC&quot;。</p>
+ * @method integer getWithSecurityGroup() 获取<p>是否以安全组 ID 为过滤条件。<br>说明：0表示否，1表示是。</p>
+ * @method void setWithSecurityGroup(integer $WithSecurityGroup) 设置<p>是否以安全组 ID 为过滤条件。<br>说明：0表示否，1表示是。</p>
+ * @method integer getWithExCluster() 获取<p>是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。</p>
+ * @method void setWithExCluster(integer $WithExCluster) 设置<p>是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。</p>
+ * @method string getExClusterId() 获取<p>独享集群 ID。</p>
+ * @method void setExClusterId(string $ExClusterId) 设置<p>独享集群 ID。</p>
+ * @method array getInstanceIds() 获取<p>实例 ID。</p>
+ * @method void setInstanceIds(array $InstanceIds) 设置<p>实例 ID。</p>
+ * @method integer getInitFlag() 获取<p>初始化标记，可取值：0 - 未初始化，1 - 初始化。</p>
+ * @method void setInitFlag(integer $InitFlag) 设置<p>初始化标记，可取值：0 - 未初始化，1 - 初始化。</p>
+ * @method integer getWithDr() 获取<p>是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。</p>
+ * @method void setWithDr(integer $WithDr) 设置<p>是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。</p>
+ * @method integer getWithRo() 获取<p>是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。</p>
+ * @method void setWithRo(integer $WithRo) 设置<p>是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。</p>
+ * @method integer getWithMaster() 获取<p>是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。</p>
+ * @method void setWithMaster(integer $WithMaster) 设置<p>是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。</p>
+ * @method array getDeployGroupIds() 获取<p>置放群组ID列表。</p>
+ * @method void setDeployGroupIds(array $DeployGroupIds) 设置<p>置放群组ID列表。</p>
+ * @method array getTagKeysForSearch() 获取<p>是否以标签键为过滤条件。</p>
+ * @method void setTagKeysForSearch(array $TagKeysForSearch) 设置<p>是否以标签键为过滤条件。</p>
+ * @method array getCageIds() 获取<p>金融围拢 ID 。</p>
+ * @method void setCageIds(array $CageIds) 设置<p>金融围拢 ID 。</p>
+ * @method array getTagValues() 获取<p>标签值</p>
+ * @method void setTagValues(array $TagValues) 设置<p>标签值</p>
+ * @method array getUniqueVpcIds() 获取<p>私有网络字符型vpcId</p>
+ * @method void setUniqueVpcIds(array $UniqueVpcIds) 设置<p>私有网络字符型vpcId</p>
+ * @method array getUniqSubnetIds() 获取<p>私有网络字符型subnetId</p>
+ * @method void setUniqSubnetIds(array $UniqSubnetIds) 设置<p>私有网络字符型subnetId</p>
+ * @method array getTags() 获取<p>标签键值<br>请注意，创建中的实例无法查询到标签。</p>
+ * @method void setTags(array $Tags) 设置<p>标签键值<br>请注意，创建中的实例无法查询到标签。</p>
+ * @method array getProxyVips() 获取<p>数据库代理 IP 。</p>
+ * @method void setProxyVips(array $ProxyVips) 设置<p>数据库代理 IP 。</p>
+ * @method array getProxyIds() 获取<p>数据库代理 ID 。</p>
+ * @method void setProxyIds(array $ProxyIds) 设置<p>数据库代理 ID 。</p>
+ * @method array getEngineTypes() 获取<p>数据库引擎类型。可选值为：InnoDB、RocksDB。</p>
+ * @method void setEngineTypes(array $EngineTypes) 设置<p>数据库引擎类型。可选值为：InnoDB、RocksDB。</p>
+ * @method boolean getQueryClusterInfo() 获取<p>是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。</p>
+ * @method void setQueryClusterInfo(boolean $QueryClusterInfo) 设置<p>是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。</p>
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var integer 项目 ID。
+     * @var integer <p>项目 ID。</p>
      */
     public $ProjectId;
 
     /**
-     * @var array 实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。
+     * @var array <p>实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。</p>
      */
     public $InstanceTypes;
 
     /**
-     * @var array 实例的内网 IP 地址。
+     * @var array <p>实例的内网 IP 地址。</p>
      */
     public $Vips;
 
     /**
-     * @var array 实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 已隔离（可在回收站恢复开机）
+     * @var array <p>实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 已隔离（可在回收站恢复开机）</p>
      */
     public $Status;
 
     /**
-     * @var integer 偏移量，默认值为 0。
+     * @var integer <p>偏移量，默认值为 0。</p>
      */
     public $Offset;
 
     /**
-     * @var integer 单次请求返回的数量，默认值为 20，最大值为 2000。
+     * @var integer <p>单次请求返回的数量，默认值为 20，最大值为 2000。</p>
      */
     public $Limit;
 
     /**
-     * @var string 安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。
+     * @var string <p>安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。</p>
      */
     public $SecurityGroupId;
 
     /**
-     * @var array 付费类型，可取值：0 - 包年包月，1 - 小时计费。
+     * @var array <p>付费类型，可取值：0 - 包年包月，1 - 小时计费。</p>
      */
     public $PayTypes;
 
     /**
-     * @var array 实例名称。
+     * @var array <p>实例名称。</p>
      */
     public $InstanceNames;
 
     /**
-     * @var array 实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行<br>34 - 原地升级待执行
+     * @var array <p>实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行<br>34 - 原地升级待执行</p>
      */
     public $TaskStatus;
 
     /**
-     * @var array 实例数据库引擎版本，可能取值：5.1、5.5、5.6 和 5.7。
+     * @var array <p>实例数据库引擎版本，可能取值：5.1、5.5、5.6 和 5.7。</p>
      */
     public $EngineVersions;
 
     /**
-     * @var array 私有网络的 ID。
+     * @var array <p>私有网络的 ID。</p>
      */
     public $VpcIds;
 
     /**
-     * @var array 可用区的 ID。
+     * @var array <p>可用区的 ID。</p>
      */
     public $ZoneIds;
 
     /**
-     * @var array 子网 ID。
+     * @var array <p>子网 ID。</p>
      */
     public $SubnetIds;
 
     /**
-     * @var array 是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。
+     * @var array <p>是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。</p>
      */
     public $CdbErrors;
 
     /**
-     * @var string 返回结果集排序的字段，目前支持："instanceId"，"instanceName"，"createTime"，"deadlineTime"。
+     * @var string <p>返回结果集排序的字段，目前支持：&quot;instanceId&quot;，&quot;instanceName&quot;，&quot;createTime&quot;，&quot;deadlineTime&quot;。</p>
      */
     public $OrderBy;
 
     /**
-     * @var string 返回结果集排序方式。目前支持值："ASC" - 表示升序，"DESC" - 表示降序，默认为 "DESC"。
+     * @var string <p>返回结果集排序方式。目前支持值：&quot;ASC&quot; - 表示升序，&quot;DESC&quot; - 表示降序，默认为 &quot;DESC&quot;。</p>
      */
     public $OrderDirection;
 
     /**
-     * @var integer 是否以安全组 ID 为过滤条件。
-说明：0表示否，1表示是。
+     * @var integer <p>是否以安全组 ID 为过滤条件。<br>说明：0表示否，1表示是。</p>
      */
     public $WithSecurityGroup;
 
     /**
-     * @var integer 是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。
+     * @var integer <p>是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。</p>
      */
     public $WithExCluster;
 
     /**
-     * @var string 独享集群 ID。
+     * @var string <p>独享集群 ID。</p>
      */
     public $ExClusterId;
 
     /**
-     * @var array 实例 ID。
+     * @var array <p>实例 ID。</p>
      */
     public $InstanceIds;
 
     /**
-     * @var integer 初始化标记，可取值：0 - 未初始化，1 - 初始化。
+     * @var integer <p>初始化标记，可取值：0 - 未初始化，1 - 初始化。</p>
      */
     public $InitFlag;
 
     /**
-     * @var integer 是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。
+     * @var integer <p>是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。</p>
      */
     public $WithDr;
 
     /**
-     * @var integer 是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
+     * @var integer <p>是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。</p>
      */
     public $WithRo;
 
     /**
-     * @var integer 是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
+     * @var integer <p>是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。</p>
      */
     public $WithMaster;
 
     /**
-     * @var array 置放群组ID列表。
+     * @var array <p>置放群组ID列表。</p>
      */
     public $DeployGroupIds;
 
     /**
-     * @var array 是否以标签键为过滤条件。
+     * @var array <p>是否以标签键为过滤条件。</p>
      */
     public $TagKeysForSearch;
 
     /**
-     * @var array 金融围拢 ID 。
+     * @var array <p>金融围拢 ID 。</p>
      */
     public $CageIds;
 
     /**
-     * @var array 标签值
+     * @var array <p>标签值</p>
      */
     public $TagValues;
 
     /**
-     * @var array 私有网络字符型vpcId
+     * @var array <p>私有网络字符型vpcId</p>
      */
     public $UniqueVpcIds;
 
     /**
-     * @var array 私有网络字符型subnetId
+     * @var array <p>私有网络字符型subnetId</p>
      */
     public $UniqSubnetIds;
 
     /**
-     * @var array 标签键值
-请注意，创建中的实例无法查询到标签。
+     * @var array <p>标签键值<br>请注意，创建中的实例无法查询到标签。</p>
      */
     public $Tags;
 
     /**
-     * @var array 数据库代理 IP 。
+     * @var array <p>数据库代理 IP 。</p>
      */
     public $ProxyVips;
 
     /**
-     * @var array 数据库代理 ID 。
+     * @var array <p>数据库代理 ID 。</p>
      */
     public $ProxyIds;
 
     /**
-     * @var array 数据库引擎类型。可选值为：InnoDB、RocksDB。
+     * @var array <p>数据库引擎类型。可选值为：InnoDB、RocksDB。</p>
      */
     public $EngineTypes;
 
     /**
-     * @var boolean 是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。
+     * @var boolean <p>是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。</p>
      */
     public $QueryClusterInfo;
 
     /**
-     * @param integer $ProjectId 项目 ID。
-     * @param array $InstanceTypes 实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。
-     * @param array $Vips 实例的内网 IP 地址。
-     * @param array $Status 实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 已隔离（可在回收站恢复开机）
-     * @param integer $Offset 偏移量，默认值为 0。
-     * @param integer $Limit 单次请求返回的数量，默认值为 20，最大值为 2000。
-     * @param string $SecurityGroupId 安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。
-     * @param array $PayTypes 付费类型，可取值：0 - 包年包月，1 - 小时计费。
-     * @param array $InstanceNames 实例名称。
-     * @param array $TaskStatus 实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行<br>34 - 原地升级待执行
-     * @param array $EngineVersions 实例数据库引擎版本，可能取值：5.1、5.5、5.6 和 5.7。
-     * @param array $VpcIds 私有网络的 ID。
-     * @param array $ZoneIds 可用区的 ID。
-     * @param array $SubnetIds 子网 ID。
-     * @param array $CdbErrors 是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。
-     * @param string $OrderBy 返回结果集排序的字段，目前支持："instanceId"，"instanceName"，"createTime"，"deadlineTime"。
-     * @param string $OrderDirection 返回结果集排序方式。目前支持值："ASC" - 表示升序，"DESC" - 表示降序，默认为 "DESC"。
-     * @param integer $WithSecurityGroup 是否以安全组 ID 为过滤条件。
-说明：0表示否，1表示是。
-     * @param integer $WithExCluster 是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。
-     * @param string $ExClusterId 独享集群 ID。
-     * @param array $InstanceIds 实例 ID。
-     * @param integer $InitFlag 初始化标记，可取值：0 - 未初始化，1 - 初始化。
-     * @param integer $WithDr 是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。
-     * @param integer $WithRo 是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
-     * @param integer $WithMaster 是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
-     * @param array $DeployGroupIds 置放群组ID列表。
-     * @param array $TagKeysForSearch 是否以标签键为过滤条件。
-     * @param array $CageIds 金融围拢 ID 。
-     * @param array $TagValues 标签值
-     * @param array $UniqueVpcIds 私有网络字符型vpcId
-     * @param array $UniqSubnetIds 私有网络字符型subnetId
-     * @param array $Tags 标签键值
-请注意，创建中的实例无法查询到标签。
-     * @param array $ProxyVips 数据库代理 IP 。
-     * @param array $ProxyIds 数据库代理 ID 。
-     * @param array $EngineTypes 数据库引擎类型。可选值为：InnoDB、RocksDB。
-     * @param boolean $QueryClusterInfo 是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。
+     * @param integer $ProjectId <p>项目 ID。</p>
+     * @param array $InstanceTypes <p>实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。</p>
+     * @param array $Vips <p>实例的内网 IP 地址。</p>
+     * @param array $Status <p>实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 已隔离（可在回收站恢复开机）</p>
+     * @param integer $Offset <p>偏移量，默认值为 0。</p>
+     * @param integer $Limit <p>单次请求返回的数量，默认值为 20，最大值为 2000。</p>
+     * @param string $SecurityGroupId <p>安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。</p>
+     * @param array $PayTypes <p>付费类型，可取值：0 - 包年包月，1 - 小时计费。</p>
+     * @param array $InstanceNames <p>实例名称。</p>
+     * @param array $TaskStatus <p>实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行<br>34 - 原地升级待执行</p>
+     * @param array $EngineVersions <p>实例数据库引擎版本，可能取值：5.1、5.5、5.6 和 5.7。</p>
+     * @param array $VpcIds <p>私有网络的 ID。</p>
+     * @param array $ZoneIds <p>可用区的 ID。</p>
+     * @param array $SubnetIds <p>子网 ID。</p>
+     * @param array $CdbErrors <p>是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。</p>
+     * @param string $OrderBy <p>返回结果集排序的字段，目前支持：&quot;instanceId&quot;，&quot;instanceName&quot;，&quot;createTime&quot;，&quot;deadlineTime&quot;。</p>
+     * @param string $OrderDirection <p>返回结果集排序方式。目前支持值：&quot;ASC&quot; - 表示升序，&quot;DESC&quot; - 表示降序，默认为 &quot;DESC&quot;。</p>
+     * @param integer $WithSecurityGroup <p>是否以安全组 ID 为过滤条件。<br>说明：0表示否，1表示是。</p>
+     * @param integer $WithExCluster <p>是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。</p>
+     * @param string $ExClusterId <p>独享集群 ID。</p>
+     * @param array $InstanceIds <p>实例 ID。</p>
+     * @param integer $InitFlag <p>初始化标记，可取值：0 - 未初始化，1 - 初始化。</p>
+     * @param integer $WithDr <p>是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。</p>
+     * @param integer $WithRo <p>是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。</p>
+     * @param integer $WithMaster <p>是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。</p>
+     * @param array $DeployGroupIds <p>置放群组ID列表。</p>
+     * @param array $TagKeysForSearch <p>是否以标签键为过滤条件。</p>
+     * @param array $CageIds <p>金融围拢 ID 。</p>
+     * @param array $TagValues <p>标签值</p>
+     * @param array $UniqueVpcIds <p>私有网络字符型vpcId</p>
+     * @param array $UniqSubnetIds <p>私有网络字符型subnetId</p>
+     * @param array $Tags <p>标签键值<br>请注意，创建中的实例无法查询到标签。</p>
+     * @param array $ProxyVips <p>数据库代理 IP 。</p>
+     * @param array $ProxyIds <p>数据库代理 ID 。</p>
+     * @param array $EngineTypes <p>数据库引擎类型。可选值为：InnoDB、RocksDB。</p>
+     * @param boolean $QueryClusterInfo <p>是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。</p>
      */
     function __construct()
     {

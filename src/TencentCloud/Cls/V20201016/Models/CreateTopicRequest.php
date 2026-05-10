@@ -20,222 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTopic请求参数结构体
  *
- * @method string getLogsetId() 获取日志集ID
-- 通过[获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
- * @method void setLogsetId(string $LogsetId) 设置日志集ID
-- 通过[获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
- * @method string getTopicName() 获取主题名称
-名称限制
-- 不能为空字符串
-- 不能包含字符'|'
-- 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
-
- * @method void setTopicName(string $TopicName) 设置主题名称
-名称限制
-- 不能为空字符串
-- 不能包含字符'|'
-- 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
-
- * @method integer getPartitionCount() 获取主题分区个数。默认创建1个，最大支持创建10个分区。
- * @method void setPartitionCount(integer $PartitionCount) 设置主题分区个数。默认创建1个，最大支持创建10个分区。
- * @method array getTags() 获取标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。
- * @method void setTags(array $Tags) 设置标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。
- * @method boolean getAutoSplit() 获取是否开启自动分裂，默认值为true
- * @method void setAutoSplit(boolean $AutoSplit) 设置是否开启自动分裂，默认值为true
- * @method integer getMaxSplitPartitions() 获取开启自动分裂后，每个主题能够允许的最大分区数，默认值为50
- * @method void setMaxSplitPartitions(integer $MaxSplitPartitions) 设置开启自动分裂后，每个主题能够允许的最大分区数，默认值为50
- * @method string getStorageType() 获取日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。指标主题不支持该配置。
- * @method void setStorageType(string $StorageType) 设置日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。指标主题不支持该配置。
- * @method integer getPeriod() 获取存储时间，单位天。
-- 日志主题：日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
-- 日志主题：日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
-- 指标主题：支持1至3600天，值为3640时代表永久保存。
- * @method void setPeriod(integer $Period) 设置存储时间，单位天。
-- 日志主题：日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
-- 日志主题：日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
-- 指标主题：支持1至3600天，值为3640时代表永久保存。
- * @method string getDescribes() 获取主题描述
- * @method void setDescribes(string $Describes) 设置主题描述
- * @method integer getHotPeriod() 获取0：日志主题关闭日志沉降。
-非0：日志主题开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
-仅在StorageType为 hot 时生效，指标主题不支持该配置。
- * @method void setHotPeriod(integer $HotPeriod) 设置0：日志主题关闭日志沉降。
-非0：日志主题开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
-仅在StorageType为 hot 时生效，指标主题不支持该配置。
- * @method integer getEncryption() 获取加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
-0或者不传： 不加密
-1：kms-cls 云产品密钥加密
-
-支持地域：ap-beijing,ap-guangzhou,ap-shanghai,ap-singapore,ap-bangkok,ap-jakarta,eu-frankfurt,ap-seoul,ap-tokyo
- * @method void setEncryption(integer $Encryption) 设置加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
-0或者不传： 不加密
-1：kms-cls 云产品密钥加密
-
-支持地域：ap-beijing,ap-guangzhou,ap-shanghai,ap-singapore,ap-bangkok,ap-jakarta,eu-frankfurt,ap-seoul,ap-tokyo
- * @method integer getBizType() 获取主题类型
-- 0:日志主题，默认值
-- 1:指标主题
- * @method void setBizType(integer $BizType) 设置主题类型
-- 0:日志主题，默认值
-- 1:指标主题
- * @method string getTopicId() 获取主题自定义ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。
-- 用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符
-- 尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。
-- 如果指定该字段，需保证全地域唯一
- * @method void setTopicId(string $TopicId) 设置主题自定义ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。
-- 用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符
-- 尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。
-- 如果指定该字段，需保证全地域唯一
- * @method boolean getIsWebTracking() 获取免鉴权开关。 false：关闭； true：开启。默认为false。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。指标主题不支持该配置。
- * @method void setIsWebTracking(boolean $IsWebTracking) 设置免鉴权开关。 false：关闭； true：开启。默认为false。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。指标主题不支持该配置。
- * @method TopicExtendInfo getExtends() 获取主题扩展信息
- * @method void setExtends(TopicExtendInfo $Extends) 设置主题扩展信息
- * @method boolean getIsSourceFrom() 获取开启记录公网来源ip和服务端接收时间
- * @method void setIsSourceFrom(boolean $IsSourceFrom) 设置开启记录公网来源ip和服务端接收时间
+ * @method string getLogsetId() 获取<p>日志集ID</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/58624">获取日志集列表</a>获取日志集Id。</li></ul>
+ * @method void setLogsetId(string $LogsetId) 设置<p>日志集ID</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/58624">获取日志集列表</a>获取日志集Id。</li></ul>
+ * @method string getTopicName() 获取<p>主题名称<br>名称限制</p><ul><li>不能为空字符串</li><li>不能包含字符&#39;|&#39;</li><li>不能使用以下名称[&quot;cls_service_log&quot;,&quot;loglistener_status&quot;,&quot;loglistener_alarm&quot;,&quot;loglistener_business&quot;,&quot;cls_service_metric&quot;]</li></ul>
+ * @method void setTopicName(string $TopicName) 设置<p>主题名称<br>名称限制</p><ul><li>不能为空字符串</li><li>不能包含字符&#39;|&#39;</li><li>不能使用以下名称[&quot;cls_service_log&quot;,&quot;loglistener_status&quot;,&quot;loglistener_alarm&quot;,&quot;loglistener_business&quot;,&quot;cls_service_metric&quot;]</li></ul>
+ * @method integer getPartitionCount() 获取<p>主题分区个数。默认创建1个，最大支持创建10个分区。</p>
+ * @method void setPartitionCount(integer $PartitionCount) 设置<p>主题分区个数。默认创建1个，最大支持创建10个分区。</p>
+ * @method array getTags() 获取<p>标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。</p>
+ * @method void setTags(array $Tags) 设置<p>标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。</p>
+ * @method boolean getAutoSplit() 获取<p>是否开启自动分裂，默认值为true</p>
+ * @method void setAutoSplit(boolean $AutoSplit) 设置<p>是否开启自动分裂，默认值为true</p>
+ * @method integer getMaxSplitPartitions() 获取<p>开启自动分裂后，每个主题能够允许的最大分区数，默认值为50</p>
+ * @method void setMaxSplitPartitions(integer $MaxSplitPartitions) 设置<p>开启自动分裂后，每个主题能够允许的最大分区数，默认值为50</p>
+ * @method string getStorageType() 获取<p>日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。指标主题不支持该配置。</p>
+ * @method void setStorageType(string $StorageType) 设置<p>日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。指标主题不支持该配置。</p>
+ * @method integer getPeriod() 获取<p>存储时间，单位天。</p><ul><li>日志主题：日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。</li><li>日志主题：日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。</li><li>指标主题：支持1至3600天，值为3640时代表永久保存。</li></ul>
+ * @method void setPeriod(integer $Period) 设置<p>存储时间，单位天。</p><ul><li>日志主题：日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。</li><li>日志主题：日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。</li><li>指标主题：支持1至3600天，值为3640时代表永久保存。</li></ul>
+ * @method string getDescribes() 获取<p>主题描述</p>
+ * @method void setDescribes(string $Describes) 设置<p>主题描述</p>
+ * @method integer getHotPeriod() 获取<p>0：日志主题关闭日志沉降。<br>非0：日志主题开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。<br>仅在StorageType为 hot 时生效，指标主题不支持该配置。</p>
+ * @method void setHotPeriod(integer $HotPeriod) 设置<p>0：日志主题关闭日志沉降。<br>非0：日志主题开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。<br>仅在StorageType为 hot 时生效，指标主题不支持该配置。</p>
+ * @method integer getEncryption() 获取<p>加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。<br>0或者不传： 不加密<br>1：kms-cls 云产品密钥加密</p><p>支持地域：ap-beijing,ap-guangzhou,ap-shanghai,ap-singapore,ap-bangkok,ap-jakarta,eu-frankfurt,ap-seoul,ap-tokyo</p>
+ * @method void setEncryption(integer $Encryption) 设置<p>加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。<br>0或者不传： 不加密<br>1：kms-cls 云产品密钥加密</p><p>支持地域：ap-beijing,ap-guangzhou,ap-shanghai,ap-singapore,ap-bangkok,ap-jakarta,eu-frankfurt,ap-seoul,ap-tokyo</p>
+ * @method integer getBizType() 获取<p>主题类型</p><ul><li>0:日志主题，默认值</li><li>1:指标主题</li></ul>
+ * @method void setBizType(integer $BizType) 设置<p>主题类型</p><ul><li>0:日志主题，默认值</li><li>1:指标主题</li></ul>
+ * @method string getTopicId() 获取<p>主题自定义ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。</p><ul><li>用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符</li><li>尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。</li><li>如果指定该字段，需保证全地域唯一</li></ul>
+ * @method void setTopicId(string $TopicId) 设置<p>主题自定义ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。</p><ul><li>用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符</li><li>尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。</li><li>如果指定该字段，需保证全地域唯一</li></ul>
+ * @method boolean getIsWebTracking() 获取<p>免鉴权开关。 false：关闭； true：开启。默认为false。<br>开启后将支持指定操作匿名访问该日志主题。详情请参见<a href="https://cloud.tencent.com/document/product/614/41035">日志主题</a>。指标主题不支持该配置。</p>
+ * @method void setIsWebTracking(boolean $IsWebTracking) 设置<p>免鉴权开关。 false：关闭； true：开启。默认为false。<br>开启后将支持指定操作匿名访问该日志主题。详情请参见<a href="https://cloud.tencent.com/document/product/614/41035">日志主题</a>。指标主题不支持该配置。</p>
+ * @method TopicExtendInfo getExtends() 获取<p>主题扩展信息</p>
+ * @method void setExtends(TopicExtendInfo $Extends) 设置<p>主题扩展信息</p>
+ * @method boolean getIsSourceFrom() 获取<p>开启记录公网来源ip和服务端接收时间</p>
+ * @method void setIsSourceFrom(boolean $IsSourceFrom) 设置<p>开启记录公网来源ip和服务端接收时间</p>
+ * @method integer getBillingMode() 获取<p>计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul><p>默认值：0</p><p>通过接口调用时默认值为0，通过控制台调用时默认值为1</p>
+ * @method void setBillingMode(integer $BillingMode) 设置<p>计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul><p>默认值：0</p><p>通过接口调用时默认值为0，通过控制台调用时默认值为1</p>
  */
 class CreateTopicRequest extends AbstractModel
 {
     /**
-     * @var string 日志集ID
-- 通过[获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
+     * @var string <p>日志集ID</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/58624">获取日志集列表</a>获取日志集Id。</li></ul>
      */
     public $LogsetId;
 
     /**
-     * @var string 主题名称
-名称限制
-- 不能为空字符串
-- 不能包含字符'|'
-- 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
-
+     * @var string <p>主题名称<br>名称限制</p><ul><li>不能为空字符串</li><li>不能包含字符&#39;|&#39;</li><li>不能使用以下名称[&quot;cls_service_log&quot;,&quot;loglistener_status&quot;,&quot;loglistener_alarm&quot;,&quot;loglistener_business&quot;,&quot;cls_service_metric&quot;]</li></ul>
      */
     public $TopicName;
 
     /**
-     * @var integer 主题分区个数。默认创建1个，最大支持创建10个分区。
+     * @var integer <p>主题分区个数。默认创建1个，最大支持创建10个分区。</p>
      */
     public $PartitionCount;
 
     /**
-     * @var array 标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。
+     * @var array <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。</p>
      */
     public $Tags;
 
     /**
-     * @var boolean 是否开启自动分裂，默认值为true
+     * @var boolean <p>是否开启自动分裂，默认值为true</p>
      */
     public $AutoSplit;
 
     /**
-     * @var integer 开启自动分裂后，每个主题能够允许的最大分区数，默认值为50
+     * @var integer <p>开启自动分裂后，每个主题能够允许的最大分区数，默认值为50</p>
      */
     public $MaxSplitPartitions;
 
     /**
-     * @var string 日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。指标主题不支持该配置。
+     * @var string <p>日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。指标主题不支持该配置。</p>
      */
     public $StorageType;
 
     /**
-     * @var integer 存储时间，单位天。
-- 日志主题：日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
-- 日志主题：日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
-- 指标主题：支持1至3600天，值为3640时代表永久保存。
+     * @var integer <p>存储时间，单位天。</p><ul><li>日志主题：日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。</li><li>日志主题：日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。</li><li>指标主题：支持1至3600天，值为3640时代表永久保存。</li></ul>
      */
     public $Period;
 
     /**
-     * @var string 主题描述
+     * @var string <p>主题描述</p>
      */
     public $Describes;
 
     /**
-     * @var integer 0：日志主题关闭日志沉降。
-非0：日志主题开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
-仅在StorageType为 hot 时生效，指标主题不支持该配置。
+     * @var integer <p>0：日志主题关闭日志沉降。<br>非0：日志主题开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。<br>仅在StorageType为 hot 时生效，指标主题不支持该配置。</p>
      */
     public $HotPeriod;
 
     /**
-     * @var integer 加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
-0或者不传： 不加密
-1：kms-cls 云产品密钥加密
-
-支持地域：ap-beijing,ap-guangzhou,ap-shanghai,ap-singapore,ap-bangkok,ap-jakarta,eu-frankfurt,ap-seoul,ap-tokyo
+     * @var integer <p>加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。<br>0或者不传： 不加密<br>1：kms-cls 云产品密钥加密</p><p>支持地域：ap-beijing,ap-guangzhou,ap-shanghai,ap-singapore,ap-bangkok,ap-jakarta,eu-frankfurt,ap-seoul,ap-tokyo</p>
      */
     public $Encryption;
 
     /**
-     * @var integer 主题类型
-- 0:日志主题，默认值
-- 1:指标主题
+     * @var integer <p>主题类型</p><ul><li>0:日志主题，默认值</li><li>1:指标主题</li></ul>
      */
     public $BizType;
 
     /**
-     * @var string 主题自定义ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。
-- 用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符
-- 尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。
-- 如果指定该字段，需保证全地域唯一
+     * @var string <p>主题自定义ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。</p><ul><li>用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符</li><li>尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。</li><li>如果指定该字段，需保证全地域唯一</li></ul>
      */
     public $TopicId;
 
     /**
-     * @var boolean 免鉴权开关。 false：关闭； true：开启。默认为false。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。指标主题不支持该配置。
+     * @var boolean <p>免鉴权开关。 false：关闭； true：开启。默认为false。<br>开启后将支持指定操作匿名访问该日志主题。详情请参见<a href="https://cloud.tencent.com/document/product/614/41035">日志主题</a>。指标主题不支持该配置。</p>
      */
     public $IsWebTracking;
 
     /**
-     * @var TopicExtendInfo 主题扩展信息
+     * @var TopicExtendInfo <p>主题扩展信息</p>
      */
     public $Extends;
 
     /**
-     * @var boolean 开启记录公网来源ip和服务端接收时间
+     * @var boolean <p>开启记录公网来源ip和服务端接收时间</p>
      */
     public $IsSourceFrom;
 
     /**
-     * @param string $LogsetId 日志集ID
-- 通过[获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
-     * @param string $TopicName 主题名称
-名称限制
-- 不能为空字符串
-- 不能包含字符'|'
-- 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
+     * @var integer <p>计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul><p>默认值：0</p><p>通过接口调用时默认值为0，通过控制台调用时默认值为1</p>
+     */
+    public $BillingMode;
 
-     * @param integer $PartitionCount 主题分区个数。默认创建1个，最大支持创建10个分区。
-     * @param array $Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。
-     * @param boolean $AutoSplit 是否开启自动分裂，默认值为true
-     * @param integer $MaxSplitPartitions 开启自动分裂后，每个主题能够允许的最大分区数，默认值为50
-     * @param string $StorageType 日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。指标主题不支持该配置。
-     * @param integer $Period 存储时间，单位天。
-- 日志主题：日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
-- 日志主题：日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
-- 指标主题：支持1至3600天，值为3640时代表永久保存。
-     * @param string $Describes 主题描述
-     * @param integer $HotPeriod 0：日志主题关闭日志沉降。
-非0：日志主题开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
-仅在StorageType为 hot 时生效，指标主题不支持该配置。
-     * @param integer $Encryption 加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
-0或者不传： 不加密
-1：kms-cls 云产品密钥加密
-
-支持地域：ap-beijing,ap-guangzhou,ap-shanghai,ap-singapore,ap-bangkok,ap-jakarta,eu-frankfurt,ap-seoul,ap-tokyo
-     * @param integer $BizType 主题类型
-- 0:日志主题，默认值
-- 1:指标主题
-     * @param string $TopicId 主题自定义ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。
-- 用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符
-- 尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。
-- 如果指定该字段，需保证全地域唯一
-     * @param boolean $IsWebTracking 免鉴权开关。 false：关闭； true：开启。默认为false。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。指标主题不支持该配置。
-     * @param TopicExtendInfo $Extends 主题扩展信息
-     * @param boolean $IsSourceFrom 开启记录公网来源ip和服务端接收时间
+    /**
+     * @param string $LogsetId <p>日志集ID</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/58624">获取日志集列表</a>获取日志集Id。</li></ul>
+     * @param string $TopicName <p>主题名称<br>名称限制</p><ul><li>不能为空字符串</li><li>不能包含字符&#39;|&#39;</li><li>不能使用以下名称[&quot;cls_service_log&quot;,&quot;loglistener_status&quot;,&quot;loglistener_alarm&quot;,&quot;loglistener_business&quot;,&quot;cls_service_metric&quot;]</li></ul>
+     * @param integer $PartitionCount <p>主题分区个数。默认创建1个，最大支持创建10个分区。</p>
+     * @param array $Tags <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。</p>
+     * @param boolean $AutoSplit <p>是否开启自动分裂，默认值为true</p>
+     * @param integer $MaxSplitPartitions <p>开启自动分裂后，每个主题能够允许的最大分区数，默认值为50</p>
+     * @param string $StorageType <p>日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。指标主题不支持该配置。</p>
+     * @param integer $Period <p>存储时间，单位天。</p><ul><li>日志主题：日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。</li><li>日志主题：日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。</li><li>指标主题：支持1至3600天，值为3640时代表永久保存。</li></ul>
+     * @param string $Describes <p>主题描述</p>
+     * @param integer $HotPeriod <p>0：日志主题关闭日志沉降。<br>非0：日志主题开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。<br>仅在StorageType为 hot 时生效，指标主题不支持该配置。</p>
+     * @param integer $Encryption <p>加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。<br>0或者不传： 不加密<br>1：kms-cls 云产品密钥加密</p><p>支持地域：ap-beijing,ap-guangzhou,ap-shanghai,ap-singapore,ap-bangkok,ap-jakarta,eu-frankfurt,ap-seoul,ap-tokyo</p>
+     * @param integer $BizType <p>主题类型</p><ul><li>0:日志主题，默认值</li><li>1:指标主题</li></ul>
+     * @param string $TopicId <p>主题自定义ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。</p><ul><li>用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符</li><li>尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。</li><li>如果指定该字段，需保证全地域唯一</li></ul>
+     * @param boolean $IsWebTracking <p>免鉴权开关。 false：关闭； true：开启。默认为false。<br>开启后将支持指定操作匿名访问该日志主题。详情请参见<a href="https://cloud.tencent.com/document/product/614/41035">日志主题</a>。指标主题不支持该配置。</p>
+     * @param TopicExtendInfo $Extends <p>主题扩展信息</p>
+     * @param boolean $IsSourceFrom <p>开启记录公网来源ip和服务端接收时间</p>
+     * @param integer $BillingMode <p>计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul><p>默认值：0</p><p>通过接口调用时默认值为0，通过控制台调用时默认值为1</p>
      */
     function __construct()
     {
@@ -318,6 +242,10 @@ class CreateTopicRequest extends AbstractModel
 
         if (array_key_exists("IsSourceFrom",$param) and $param["IsSourceFrom"] !== null) {
             $this->IsSourceFrom = $param["IsSourceFrom"];
+        }
+
+        if (array_key_exists("BillingMode",$param) and $param["BillingMode"] !== null) {
+            $this->BillingMode = $param["BillingMode"];
         }
     }
 }

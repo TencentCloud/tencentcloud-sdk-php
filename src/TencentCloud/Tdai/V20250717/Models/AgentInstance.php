@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLastActiveTime(string $LastActiveTime) 设置<p>无</p>
  * @method string getDescription() 获取<p>无</p>
  * @method void setDescription(string $Description) 设置<p>无</p>
+ * @method CreatingProgress getCreatingProgress() 获取<p>发货进度详情</p>
+ * @method void setCreatingProgress(CreatingProgress $CreatingProgress) 设置<p>发货进度详情</p>
  */
 class AgentInstance extends AbstractModel
 {
@@ -157,6 +159,11 @@ class AgentInstance extends AbstractModel
     public $Description;
 
     /**
+     * @var CreatingProgress <p>发货进度详情</p>
+     */
+    public $CreatingProgress;
+
+    /**
      * @param string $InstanceId <p>智能体实例ID</p>
      * @param string $InstanceName <p>智能体实例名称</p>
      * @param string $AgentId <p>智能体ID</p>
@@ -176,6 +183,7 @@ class AgentInstance extends AbstractModel
      * @param array $AllowedActions <p>无</p>
      * @param string $LastActiveTime <p>无</p>
      * @param string $Description <p>无</p>
+     * @param CreatingProgress $CreatingProgress <p>发货进度详情</p>
      */
     function __construct()
     {
@@ -275,6 +283,11 @@ class AgentInstance extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("CreatingProgress",$param) and $param["CreatingProgress"] !== null) {
+            $this->CreatingProgress = new CreatingProgress();
+            $this->CreatingProgress->deserialize($param["CreatingProgress"]);
         }
     }
 }

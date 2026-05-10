@@ -325,7 +325,9 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\SubmitTaskResponse SubmitTask(Models\SubmitTaskRequest $req) <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
 提交任务。本接口已废弃，请使用接口CreateTaskVersionDs。
  * @method Models\SubmitTaskTestRunResponse SubmitTaskTestRun(Models\SubmitTaskTestRunRequest $req) 无
- * @method Models\SubmitWorkflowResponse SubmitWorkflow(Models\SubmitWorkflowRequest $req) 提交工作流。本接口已废弃，请使用接口BatchCreateTaskVersionAsync。
+ * @method Models\SubmitWorkflowResponse SubmitWorkflow(Models\SubmitWorkflowRequest $req) 接口已经废弃，调用会产生脏数据
+
+提交工作流。本接口已废弃，请使用接口BatchCreateTaskVersionAsync。
  * @method Models\SuspendIntegrationTaskResponse SuspendIntegrationTask(Models\SuspendIntegrationTaskRequest $req) 暂停集成任务
  * @method Models\TaskLogResponse TaskLog(Models\TaskLogRequest $req) 查询Inlong manager日志
  * @method Models\TriggerDsEventResponse TriggerDsEvent(Models\TriggerDsEventRequest $req) 事件管理-触发事件

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioDownloadUrl(string $AudioDownloadUrl) 设置音频下载url
  * @method string getSubtitleDownloadUrl() 获取字幕下载url
  * @method void setSubtitleDownloadUrl(string $SubtitleDownloadUrl) 设置字幕下载url
+ * @method integer getTotalDurationMs() 获取音频时长
+ * @method void setTotalDurationMs(integer $TotalDurationMs) 设置音频时长
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -59,6 +61,11 @@ class DescribeAsyncTextToSpeechResponse extends AbstractModel
     public $SubtitleDownloadUrl;
 
     /**
+     * @var integer 音频时长
+     */
+    public $TotalDurationMs;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -71,6 +78,7 @@ class DescribeAsyncTextToSpeechResponse extends AbstractModel
 - Expired，任务过期
      * @param string $AudioDownloadUrl 音频下载url
      * @param string $SubtitleDownloadUrl 字幕下载url
+     * @param integer $TotalDurationMs 音频时长
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -96,6 +104,10 @@ class DescribeAsyncTextToSpeechResponse extends AbstractModel
 
         if (array_key_exists("SubtitleDownloadUrl",$param) and $param["SubtitleDownloadUrl"] !== null) {
             $this->SubtitleDownloadUrl = $param["SubtitleDownloadUrl"];
+        }
+
+        if (array_key_exists("TotalDurationMs",$param) and $param["TotalDurationMs"] !== null) {
+            $this->TotalDurationMs = $param["TotalDurationMs"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

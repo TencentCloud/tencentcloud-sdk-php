@@ -20,70 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAssetImageRegistryList请求参数结构体
  *
- * @method integer getLimit() 获取需要返回的数量，默认为10，最大值为100
- * @method void setLimit(integer $Limit) 设置需要返回的数量，默认为10，最大值为100
- * @method integer getOffset() 获取偏移量，默认为0
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0
- * @method array getFilters() 获取过滤字段
-IsAuthorized是否授权，取值全部all，未授权0，已授权1
- * @method void setFilters(array $Filters) 设置过滤字段
-IsAuthorized是否授权，取值全部all，未授权0，已授权1
- * @method string getBy() 获取排序字段
- * @method void setBy(string $By) 设置排序字段
- * @method string getOrder() 获取排序方式，asc，desc
- * @method void setOrder(string $Order) 设置排序方式，asc，desc
- * @method boolean getOnlyShowLatest() 获取是否仅展示各repository最新的镜像, 默认为false
- * @method void setOnlyShowLatest(boolean $OnlyShowLatest) 设置是否仅展示各repository最新的镜像, 默认为false
- * @method boolean getIsRunning() 获取是否仅展示运行中容器镜像
- * @method void setIsRunning(boolean $IsRunning) 设置是否仅展示运行中容器镜像
+ * @method integer getLimit() 获取<p>需要返回的数量，默认为10，最大值为100</p>
+ * @method void setLimit(integer $Limit) 设置<p>需要返回的数量，默认为10，最大值为100</p>
+ * @method integer getOffset() 获取<p>偏移量，默认为0</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为0</p>
+ * @method array getFilters() 获取<p>过滤字段<br>IsAuthorized是否授权，取值全部all，未授权0，已授权1</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤字段<br>IsAuthorized是否授权，取值全部all，未授权0，已授权1</p>
+ * @method string getBy() 获取<p>排序字段</p>
+ * @method void setBy(string $By) 设置<p>排序字段</p>
+ * @method string getOrder() 获取<p>排序方式，asc，desc</p>
+ * @method void setOrder(string $Order) 设置<p>排序方式，asc，desc</p>
+ * @method boolean getOnlyShowLatest() 获取<p>是否仅展示各repository最新的镜像, 默认为false</p>
+ * @method void setOnlyShowLatest(boolean $OnlyShowLatest) 设置<p>是否仅展示各repository最新的镜像, 默认为false</p>
+ * @method boolean getIsRunning() 获取<p>是否仅展示运行中容器镜像</p>
+ * @method void setIsRunning(boolean $IsRunning) 设置<p>是否仅展示运行中容器镜像</p>
  */
 class DescribeAssetImageRegistryListRequest extends AbstractModel
 {
     /**
-     * @var integer 需要返回的数量，默认为10，最大值为100
+     * @var integer <p>需要返回的数量，默认为10，最大值为100</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量，默认为0
+     * @var integer <p>偏移量，默认为0</p>
      */
     public $Offset;
 
     /**
-     * @var array 过滤字段
-IsAuthorized是否授权，取值全部all，未授权0，已授权1
+     * @var array <p>过滤字段<br>IsAuthorized是否授权，取值全部all，未授权0，已授权1</p>
      */
     public $Filters;
 
     /**
-     * @var string 排序字段
+     * @var string <p>排序字段</p>
      */
     public $By;
 
     /**
-     * @var string 排序方式，asc，desc
+     * @var string <p>排序方式，asc，desc</p>
      */
     public $Order;
 
     /**
-     * @var boolean 是否仅展示各repository最新的镜像, 默认为false
+     * @var boolean <p>是否仅展示各repository最新的镜像, 默认为false</p>
      */
     public $OnlyShowLatest;
 
     /**
-     * @var boolean 是否仅展示运行中容器镜像
+     * @var boolean <p>是否仅展示运行中容器镜像</p>
      */
     public $IsRunning;
 
     /**
-     * @param integer $Limit 需要返回的数量，默认为10，最大值为100
-     * @param integer $Offset 偏移量，默认为0
-     * @param array $Filters 过滤字段
-IsAuthorized是否授权，取值全部all，未授权0，已授权1
-     * @param string $By 排序字段
-     * @param string $Order 排序方式，asc，desc
-     * @param boolean $OnlyShowLatest 是否仅展示各repository最新的镜像, 默认为false
-     * @param boolean $IsRunning 是否仅展示运行中容器镜像
+     * @param integer $Limit <p>需要返回的数量，默认为10，最大值为100</p>
+     * @param integer $Offset <p>偏移量，默认为0</p>
+     * @param array $Filters <p>过滤字段<br>IsAuthorized是否授权，取值全部all，未授权0，已授权1</p>
+     * @param string $By <p>排序字段</p>
+     * @param string $Order <p>排序方式，asc，desc</p>
+     * @param boolean $OnlyShowLatest <p>是否仅展示各repository最新的镜像, 默认为false</p>
+     * @param boolean $IsRunning <p>是否仅展示运行中容器镜像</p>
      */
     function __construct()
     {

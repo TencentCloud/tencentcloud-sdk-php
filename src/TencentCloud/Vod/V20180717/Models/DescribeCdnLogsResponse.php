@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCdnLogs返回参数结构体
  *
- * @method integer getTotalCount() 获取日志下载链接总数量。
- * @method void setTotalCount(integer $TotalCount) 设置日志下载链接总数量。
- * @method array getOverseaCdnLogs() 获取海外CDN节点的日志下载列表。如果域名没有开启海外加速，忽略该参数。
- * @method void setOverseaCdnLogs(array $OverseaCdnLogs) 设置海外CDN节点的日志下载列表。如果域名没有开启海外加速，忽略该参数。
- * @method array getDomesticCdnLogs() 获取国内CDN节点的日志下载列表。
- * @method void setDomesticCdnLogs(array $DomesticCdnLogs) 设置国内CDN节点的日志下载列表。
+ * @method integer getTotalCount() 获取<p>日志下载链接总数量。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>日志下载链接总数量。</p>
+ * @method array getOverseaCdnLogs() 获取<p>海外CDN节点的日志下载列表。如果域名没有开启海外加速，忽略该参数。</p>
+ * @method void setOverseaCdnLogs(array $OverseaCdnLogs) 设置<p>海外CDN节点的日志下载列表。如果域名没有开启海外加速，忽略该参数。</p>
+ * @method array getDomesticCdnLogs() 获取<p>国内CDN节点的日志下载列表。</p>
+ * @method void setDomesticCdnLogs(array $DomesticCdnLogs) 设置<p>国内CDN节点的日志下载列表。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCdnLogsResponse extends AbstractModel
 {
     /**
-     * @var integer 日志下载链接总数量。
+     * @var integer <p>日志下载链接总数量。</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 海外CDN节点的日志下载列表。如果域名没有开启海外加速，忽略该参数。
+     * @var array <p>海外CDN节点的日志下载列表。如果域名没有开启海外加速，忽略该参数。</p>
      */
     public $OverseaCdnLogs;
 
     /**
-     * @var array 国内CDN节点的日志下载列表。
+     * @var array <p>国内CDN节点的日志下载列表。</p>
      */
     public $DomesticCdnLogs;
 
@@ -52,9 +52,9 @@ class DescribeCdnLogsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 日志下载链接总数量。
-     * @param array $OverseaCdnLogs 海外CDN节点的日志下载列表。如果域名没有开启海外加速，忽略该参数。
-     * @param array $DomesticCdnLogs 国内CDN节点的日志下载列表。
+     * @param integer $TotalCount <p>日志下载链接总数量。</p>
+     * @param array $OverseaCdnLogs <p>海外CDN节点的日志下载列表。如果域名没有开启海外加速，忽略该参数。</p>
+     * @param array $DomesticCdnLogs <p>国内CDN节点的日志下载列表。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

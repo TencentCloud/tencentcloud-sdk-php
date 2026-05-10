@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 备机信息
  *
- * @method SlaveInstanceInfo getFirst() 获取第一备机信息
- * @method void setFirst(SlaveInstanceInfo $First) 设置第一备机信息
- * @method SlaveInstanceInfo getSecond() 获取第二备机信息
- * @method void setSecond(SlaveInstanceInfo $Second) 设置第二备机信息
+ * @method SlaveInstanceInfo getFirst() 获取<p>第一备机信息</p>
+ * @method void setFirst(SlaveInstanceInfo $First) 设置<p>第一备机信息</p>
+ * @method SlaveInstanceInfo getSecond() 获取<p>第二备机信息</p>
+ * @method void setSecond(SlaveInstanceInfo $Second) 设置<p>第二备机信息</p>
  */
 class SlaveInfo extends AbstractModel
 {
     /**
-     * @var SlaveInstanceInfo 第一备机信息
+     * @var SlaveInstanceInfo <p>第一备机信息</p>
      */
     public $First;
 
     /**
-     * @var SlaveInstanceInfo 第二备机信息
+     * @var SlaveInstanceInfo <p>第二备机信息</p>
      */
     public $Second;
 
     /**
-     * @param SlaveInstanceInfo $First 第一备机信息
-     * @param SlaveInstanceInfo $Second 第二备机信息
+     * @param SlaveInstanceInfo $First <p>第一备机信息</p>
+     * @param SlaveInstanceInfo $Second <p>第二备机信息</p>
      */
     function __construct()
     {

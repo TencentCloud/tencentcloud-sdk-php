@@ -20,58 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 存储配置
  *
- * @method string getType() 获取存储类型
- * @method void setType(string $Type) 设置存储类型
- * @method string getBucketName() 获取对象存储桶名称
- * @method void setBucketName(string $BucketName) 设置对象存储桶名称
- * @method string getEndpoint() 获取存储连接地址
- * @method void setEndpoint(string $Endpoint) 设置存储连接地址
- * @method string getKeyID() 获取存储连接用户密码
- * @method void setKeyID(string $KeyID) 设置存储连接用户密码
- * @method string getDstPath() 获取存储挂载目的目录
- * @method void setDstPath(string $DstPath) 设置存储挂载目的目录
- * @method string getSrcPath() 获取存储挂载源目录
- * @method void setSrcPath(string $SrcPath) 设置存储挂载源目录
+ * @method string getType() 获取<p>存储类型</p>
+ * @method void setType(string $Type) 设置<p>存储类型</p>
+ * @method string getBucketName() 获取<p>对象存储桶名称</p>
+ * @method void setBucketName(string $BucketName) 设置<p>对象存储桶名称</p>
+ * @method string getEndpoint() 获取<p>存储连接地址</p>
+ * @method void setEndpoint(string $Endpoint) 设置<p>存储连接地址</p>
+ * @method string getKeyID() 获取<p>存储连接用户密码</p>
+ * @method void setKeyID(string $KeyID) 设置<p>存储连接用户密码</p>
+ * @method string getDstPath() 获取<p>存储挂载目的目录</p>
+ * @method void setDstPath(string $DstPath) 设置<p>存储挂载目的目录</p>
+ * @method string getSrcPath() 获取<p>存储挂载源目录</p>
+ * @method void setSrcPath(string $SrcPath) 设置<p>存储挂载源目录</p>
+ * @method string getMountIP() 获取<p>cfs 实例ip</p>
+ * @method void setMountIP(string $MountIP) 设置<p>cfs 实例ip</p>
+ * @method boolean getReadOnly() 获取<p>默认读写</p>
+ * @method void setReadOnly(boolean $ReadOnly) 设置<p>默认读写</p>
+ * @method string getInstanceId() 获取<p>CFS 实例 ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>CFS 实例 ID</p>
  */
 class VolumeConf extends AbstractModel
 {
     /**
-     * @var string 存储类型
+     * @var string <p>存储类型</p>
      */
     public $Type;
 
     /**
-     * @var string 对象存储桶名称
+     * @var string <p>对象存储桶名称</p>
      */
     public $BucketName;
 
     /**
-     * @var string 存储连接地址
+     * @var string <p>存储连接地址</p>
      */
     public $Endpoint;
 
     /**
-     * @var string 存储连接用户密码
+     * @var string <p>存储连接用户密码</p>
      */
     public $KeyID;
 
     /**
-     * @var string 存储挂载目的目录
+     * @var string <p>存储挂载目的目录</p>
      */
     public $DstPath;
 
     /**
-     * @var string 存储挂载源目录
+     * @var string <p>存储挂载源目录</p>
      */
     public $SrcPath;
 
     /**
-     * @param string $Type 存储类型
-     * @param string $BucketName 对象存储桶名称
-     * @param string $Endpoint 存储连接地址
-     * @param string $KeyID 存储连接用户密码
-     * @param string $DstPath 存储挂载目的目录
-     * @param string $SrcPath 存储挂载源目录
+     * @var string <p>cfs 实例ip</p>
+     */
+    public $MountIP;
+
+    /**
+     * @var boolean <p>默认读写</p>
+     */
+    public $ReadOnly;
+
+    /**
+     * @var string <p>CFS 实例 ID</p>
+     */
+    public $InstanceId;
+
+    /**
+     * @param string $Type <p>存储类型</p>
+     * @param string $BucketName <p>对象存储桶名称</p>
+     * @param string $Endpoint <p>存储连接地址</p>
+     * @param string $KeyID <p>存储连接用户密码</p>
+     * @param string $DstPath <p>存储挂载目的目录</p>
+     * @param string $SrcPath <p>存储挂载源目录</p>
+     * @param string $MountIP <p>cfs 实例ip</p>
+     * @param boolean $ReadOnly <p>默认读写</p>
+     * @param string $InstanceId <p>CFS 实例 ID</p>
      */
     function __construct()
     {
@@ -108,6 +132,18 @@ class VolumeConf extends AbstractModel
 
         if (array_key_exists("SrcPath",$param) and $param["SrcPath"] !== null) {
             $this->SrcPath = $param["SrcPath"];
+        }
+
+        if (array_key_exists("MountIP",$param) and $param["MountIP"] !== null) {
+            $this->MountIP = $param["MountIP"];
+        }
+
+        if (array_key_exists("ReadOnly",$param) and $param["ReadOnly"] !== null) {
+            $this->ReadOnly = $param["ReadOnly"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

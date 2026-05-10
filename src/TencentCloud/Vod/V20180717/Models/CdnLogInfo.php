@@ -20,54 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CDN 日志信息
  *
- * @method string getDate() 获取日志所属日期， 格式为：yyyy-MM-dd ，如2018-03-01。
- * @method void setDate(string $Date) 设置日志所属日期， 格式为：yyyy-MM-dd ，如2018-03-01。
- * @method string getName() 获取日志名称，格式为：日期小时-域名
-如 example.com。
- * @method void setName(string $Name) 设置日志名称，格式为：日期小时-域名
-如 example.com。
- * @method string getUrl() 获取日志下载链接，24小时内下载有效。
- * @method void setUrl(string $Url) 设置日志下载链接，24小时内下载有效。
- * @method string getStartTime() 获取日志起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
- * @method void setStartTime(string $StartTime) 设置日志起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
- * @method string getEndTime() 获取日志结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
- * @method void setEndTime(string $EndTime) 设置日志结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+ * @method string getDate() 获取<p>日志所属日期， 格式为：yyyy-MM-dd ，如2018-03-01。</p>
+ * @method void setDate(string $Date) 设置<p>日志所属日期， 格式为：yyyy-MM-dd ，如2018-03-01。</p>
+ * @method string getName() 获取<p>日志名称，格式为：日期小时-域名<br>如 example.com。</p>
+ * @method void setName(string $Name) 设置<p>日志名称，格式为：日期小时-域名<br>如 example.com。</p>
+ * @method string getUrl() 获取<p>日志下载链接，24小时内下载有效。</p>
+ * @method void setUrl(string $Url) 设置<p>日志下载链接，24小时内下载有效。</p>
+ * @method string getStartTime() 获取<p>日志起始时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method void setStartTime(string $StartTime) 设置<p>日志起始时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method string getEndTime() 获取<p>日志结束时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method void setEndTime(string $EndTime) 设置<p>日志结束时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
  */
 class CdnLogInfo extends AbstractModel
 {
     /**
-     * @var string 日志所属日期， 格式为：yyyy-MM-dd ，如2018-03-01。
+     * @var string <p>日志所属日期， 格式为：yyyy-MM-dd ，如2018-03-01。</p>
      */
     public $Date;
 
     /**
-     * @var string 日志名称，格式为：日期小时-域名
-如 example.com。
+     * @var string <p>日志名称，格式为：日期小时-域名<br>如 example.com。</p>
      */
     public $Name;
 
     /**
-     * @var string 日志下载链接，24小时内下载有效。
+     * @var string <p>日志下载链接，24小时内下载有效。</p>
      */
     public $Url;
 
     /**
-     * @var string 日志起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @var string <p>日志起始时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public $StartTime;
 
     /**
-     * @var string 日志结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @var string <p>日志结束时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public $EndTime;
 
     /**
-     * @param string $Date 日志所属日期， 格式为：yyyy-MM-dd ，如2018-03-01。
-     * @param string $Name 日志名称，格式为：日期小时-域名
-如 example.com。
-     * @param string $Url 日志下载链接，24小时内下载有效。
-     * @param string $StartTime 日志起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-     * @param string $EndTime 日志结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @param string $Date <p>日志所属日期， 格式为：yyyy-MM-dd ，如2018-03-01。</p>
+     * @param string $Name <p>日志名称，格式为：日期小时-域名<br>如 example.com。</p>
+     * @param string $Url <p>日志下载链接，24小时内下载有效。</p>
+     * @param string $StartTime <p>日志起始时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param string $EndTime <p>日志结束时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     function __construct()
     {

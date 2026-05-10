@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getType() 获取数据源类型英文名
  * @method void setType(string $Type) 设置数据源类型英文名
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取分页大小
@@ -35,6 +37,11 @@ class DescribeMountInstancesRequest extends AbstractModel
     public $Type;
 
     /**
+     * @var string <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public $TiProjectId;
+
+    /**
      * @var integer 偏移量
      */
     public $Offset;
@@ -46,6 +53,7 @@ class DescribeMountInstancesRequest extends AbstractModel
 
     /**
      * @param string $Type 数据源类型英文名
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
      * @param integer $Offset 偏移量
      * @param integer $Limit 分页大小
      */
@@ -64,6 +72,10 @@ class DescribeMountInstancesRequest extends AbstractModel
         }
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {

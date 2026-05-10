@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 服务部署信息
  *
- * @method ContainerInfo getContainer() 获取容器配置
- * @method void setContainer(ContainerInfo $Container) 设置容器配置
- * @method integer getContainerCount() 获取容器数量
- * @method void setContainerCount(integer $ContainerCount) 设置容器数量
+ * @method ContainerInfo getContainer() 获取<p>容器配置</p>
+ * @method void setContainer(ContainerInfo $Container) 设置<p>容器配置</p>
+ * @method integer getContainerCount() 获取<p>容器数量</p>
+ * @method void setContainerCount(integer $ContainerCount) 设置<p>容器数量</p>
  */
 class DeploymentConfig extends AbstractModel
 {
     /**
-     * @var ContainerInfo 容器配置
+     * @var ContainerInfo <p>容器配置</p>
      */
     public $Container;
 
     /**
-     * @var integer 容器数量
+     * @var integer <p>容器数量</p>
      */
     public $ContainerCount;
 
     /**
-     * @param ContainerInfo $Container 容器配置
-     * @param integer $ContainerCount 容器数量
+     * @param ContainerInfo $Container <p>容器配置</p>
+     * @param integer $ContainerCount <p>容器数量</p>
      */
     function __construct()
     {

@@ -20,278 +20,234 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 主题基本信息
  *
- * @method string getLogsetId() 获取日志集ID
- * @method void setLogsetId(string $LogsetId) 设置日志集ID
- * @method string getTopicId() 获取主题ID
- * @method void setTopicId(string $TopicId) 设置主题ID
- * @method string getTopicName() 获取主题名称
- * @method void setTopicName(string $TopicName) 设置主题名称
- * @method integer getPartitionCount() 获取主题分区个数
- * @method void setPartitionCount(integer $PartitionCount) 设置主题分区个数
- * @method boolean getIndex() 获取主题是否开启索引（主题类型需为日志主题）
- * @method void setIndex(boolean $Index) 设置主题是否开启索引（主题类型需为日志主题）
- * @method integer getAssumerUin() 获取AssumerUin非空则表示创建该日志主题的服务方Uin
- * @method void setAssumerUin(integer $AssumerUin) 设置AssumerUin非空则表示创建该日志主题的服务方Uin
- * @method string getAssumerName() 获取云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
- * @method void setAssumerName(string $AssumerName) 设置云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
- * @method string getCreateTime() 获取创建时间。格式：yyyy-MM-dd HH:mm:ss
- * @method void setCreateTime(string $CreateTime) 设置创建时间。格式：yyyy-MM-dd HH:mm:ss
- * @method boolean getStatus() 获取主题是否开启采集，true：开启采集；false：关闭采集。
-创建日志主题时默认开启，可通过SDK调用ModifyTopic修改此字段。
-控制台目前不支持修改此参数。
- * @method void setStatus(boolean $Status) 设置主题是否开启采集，true：开启采集；false：关闭采集。
-创建日志主题时默认开启，可通过SDK调用ModifyTopic修改此字段。
-控制台目前不支持修改此参数。
- * @method array getTags() 获取主题绑定的标签信息
- * @method void setTags(array $Tags) 设置主题绑定的标签信息
- * @method string getRoleName() 获取RoleName非空则表示创建该日志主题的服务方使用的角色
- * @method void setRoleName(string $RoleName) 设置RoleName非空则表示创建该日志主题的服务方使用的角色
- * @method boolean getAutoSplit() 获取该主题是否开启自动分裂
- * @method void setAutoSplit(boolean $AutoSplit) 设置该主题是否开启自动分裂
- * @method integer getMaxSplitPartitions() 获取若开启自动分裂的话，该主题能够允许的最大分区数
- * @method void setMaxSplitPartitions(integer $MaxSplitPartitions) 设置若开启自动分裂的话，该主题能够允许的最大分区数
- * @method string getStorageType() 获取主题的存储类型
-
-- hot: 标准存储
-- cold: 低频存储
- * @method void setStorageType(string $StorageType) 设置主题的存储类型
-
-- hot: 标准存储
-- cold: 低频存储
- * @method integer getPeriod() 获取生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
- * @method void setPeriod(integer $Period) 设置生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
- * @method string getSubAssumerName() 获取云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
- * @method void setSubAssumerName(string $SubAssumerName) 设置云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
- * @method string getDescribes() 获取主题描述
- * @method void setDescribes(string $Describes) 设置主题描述
- * @method integer getHotPeriod() 获取开启日志沉降，标准存储的生命周期， hotPeriod < Period。
-标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
-HotPeriod=0为没有开启日志沉降。
- * @method void setHotPeriod(integer $HotPeriod) 设置开启日志沉降，标准存储的生命周期， hotPeriod < Period。
-标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
-HotPeriod=0为没有开启日志沉降。
- * @method string getKeyId() 获取kms-cls服务秘钥id
- * @method void setKeyId(string $KeyId) 设置kms-cls服务秘钥id
- * @method integer getBizType() 获取主题类型。
-- 0: 日志主题 
-- 1: 指标主题
- * @method void setBizType(integer $BizType) 设置主题类型。
-- 0: 日志主题 
-- 1: 指标主题
- * @method boolean getIsWebTracking() 获取免鉴权开关。 false：关闭； true：开启。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
- * @method void setIsWebTracking(boolean $IsWebTracking) 设置免鉴权开关。 false：关闭； true：开启。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
- * @method TopicExtendInfo getExtends() 获取日志主题扩展信息
- * @method void setExtends(TopicExtendInfo $Extends) 设置日志主题扩展信息
- * @method string getTopicAsyncTaskID() 获取异步迁移任务ID
- * @method void setTopicAsyncTaskID(string $TopicAsyncTaskID) 设置异步迁移任务ID
- * @method integer getMigrationStatus() 获取异步迁移状态
-- 1：进行中
-- 2：已完成
-- 3：失败
-- 4：已取消
- * @method void setMigrationStatus(integer $MigrationStatus) 设置异步迁移状态
-- 1：进行中
-- 2：已完成
-- 3：失败
-- 4：已取消
- * @method string getEffectiveDate() 获取异步迁移完成后，预计生效日期
-时间格式：yyyy-MM-dd HH:mm:ss
- * @method void setEffectiveDate(string $EffectiveDate) 设置异步迁移完成后，预计生效日期
-时间格式：yyyy-MM-dd HH:mm:ss
- * @method boolean getIsSourceFrom() 获取IsSourceFrom 开启记录公网来源ip和服务端接收时间
- * @method void setIsSourceFrom(boolean $IsSourceFrom) 设置IsSourceFrom 开启记录公网来源ip和服务端接收时间
+ * @method string getLogsetId() 获取<p>日志集ID</p>
+ * @method void setLogsetId(string $LogsetId) 设置<p>日志集ID</p>
+ * @method string getTopicId() 获取<p>主题ID</p>
+ * @method void setTopicId(string $TopicId) 设置<p>主题ID</p>
+ * @method string getTopicName() 获取<p>主题名称</p>
+ * @method void setTopicName(string $TopicName) 设置<p>主题名称</p>
+ * @method integer getPartitionCount() 获取<p>主题分区个数</p>
+ * @method void setPartitionCount(integer $PartitionCount) 设置<p>主题分区个数</p>
+ * @method boolean getIndex() 获取<p>主题是否开启索引（主题类型需为日志主题）</p>
+ * @method void setIndex(boolean $Index) 设置<p>主题是否开启索引（主题类型需为日志主题）</p>
+ * @method integer getAssumerUin() 获取<p>AssumerUin非空则表示创建该日志主题的服务方Uin</p>
+ * @method void setAssumerUin(integer $AssumerUin) 设置<p>AssumerUin非空则表示创建该日志主题的服务方Uin</p>
+ * @method string getAssumerName() 获取<p>云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE</p>
+ * @method void setAssumerName(string $AssumerName) 设置<p>云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE</p>
+ * @method string getCreateTime() 获取<p>创建时间。格式：yyyy-MM-dd HH:mm:ss</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间。格式：yyyy-MM-dd HH:mm:ss</p>
+ * @method boolean getStatus() 获取<p>主题是否开启采集，true：开启采集；false：关闭采集。<br>创建日志主题时默认开启，可通过SDK调用ModifyTopic修改此字段。<br>控制台目前不支持修改此参数。</p>
+ * @method void setStatus(boolean $Status) 设置<p>主题是否开启采集，true：开启采集；false：关闭采集。<br>创建日志主题时默认开启，可通过SDK调用ModifyTopic修改此字段。<br>控制台目前不支持修改此参数。</p>
+ * @method array getTags() 获取<p>主题绑定的标签信息</p>
+ * @method void setTags(array $Tags) 设置<p>主题绑定的标签信息</p>
+ * @method string getRoleName() 获取<p>RoleName非空则表示创建该日志主题的服务方使用的角色</p>
+ * @method void setRoleName(string $RoleName) 设置<p>RoleName非空则表示创建该日志主题的服务方使用的角色</p>
+ * @method boolean getAutoSplit() 获取<p>该主题是否开启自动分裂</p>
+ * @method void setAutoSplit(boolean $AutoSplit) 设置<p>该主题是否开启自动分裂</p>
+ * @method integer getMaxSplitPartitions() 获取<p>若开启自动分裂的话，该主题能够允许的最大分区数</p>
+ * @method void setMaxSplitPartitions(integer $MaxSplitPartitions) 设置<p>若开启自动分裂的话，该主题能够允许的最大分区数</p>
+ * @method string getStorageType() 获取<p>主题的存储类型</p><ul><li>hot: 标准存储</li><li>cold: 低频存储</li></ul>
+ * @method void setStorageType(string $StorageType) 设置<p>主题的存储类型</p><ul><li>hot: 标准存储</li><li>cold: 低频存储</li></ul>
+ * @method integer getPeriod() 获取<p>生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存</p>
+ * @method void setPeriod(integer $Period) 设置<p>生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存</p>
+ * @method string getSubAssumerName() 获取<p>云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。</p>
+ * @method void setSubAssumerName(string $SubAssumerName) 设置<p>云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。</p>
+ * @method string getDescribes() 获取<p>主题描述</p>
+ * @method void setDescribes(string $Describes) 设置<p>主题描述</p>
+ * @method integer getHotPeriod() 获取<p>开启日志沉降，标准存储的生命周期， hotPeriod &lt; Period。<br>标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）<br>HotPeriod=0为没有开启日志沉降。</p>
+ * @method void setHotPeriod(integer $HotPeriod) 设置<p>开启日志沉降，标准存储的生命周期， hotPeriod &lt; Period。<br>标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）<br>HotPeriod=0为没有开启日志沉降。</p>
+ * @method string getKeyId() 获取<p>kms-cls服务秘钥id</p>
+ * @method void setKeyId(string $KeyId) 设置<p>kms-cls服务秘钥id</p>
+ * @method integer getBizType() 获取<p>主题类型。</p><ul><li>0: 日志主题 </li><li>1: 指标主题</li></ul>
+ * @method void setBizType(integer $BizType) 设置<p>主题类型。</p><ul><li>0: 日志主题 </li><li>1: 指标主题</li></ul>
+ * @method boolean getIsWebTracking() 获取<p>免鉴权开关。 false：关闭； true：开启。<br>开启后将支持指定操作匿名访问该日志主题。详情请参见<a href="https://cloud.tencent.com/document/product/614/41035">日志主题</a>。</p>
+ * @method void setIsWebTracking(boolean $IsWebTracking) 设置<p>免鉴权开关。 false：关闭； true：开启。<br>开启后将支持指定操作匿名访问该日志主题。详情请参见<a href="https://cloud.tencent.com/document/product/614/41035">日志主题</a>。</p>
+ * @method TopicExtendInfo getExtends() 获取<p>日志主题扩展信息</p>
+ * @method void setExtends(TopicExtendInfo $Extends) 设置<p>日志主题扩展信息</p>
+ * @method string getTopicAsyncTaskID() 获取<p>异步迁移任务ID</p>
+ * @method void setTopicAsyncTaskID(string $TopicAsyncTaskID) 设置<p>异步迁移任务ID</p>
+ * @method integer getMigrationStatus() 获取<p>异步迁移状态</p><ul><li>1：进行中</li><li>2：已完成</li><li>3：失败</li><li>4：已取消</li></ul>
+ * @method void setMigrationStatus(integer $MigrationStatus) 设置<p>异步迁移状态</p><ul><li>1：进行中</li><li>2：已完成</li><li>3：失败</li><li>4：已取消</li></ul>
+ * @method string getEffectiveDate() 获取<p>异步迁移完成后，预计生效日期<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
+ * @method void setEffectiveDate(string $EffectiveDate) 设置<p>异步迁移完成后，预计生效日期<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
+ * @method boolean getIsSourceFrom() 获取<p>IsSourceFrom 开启记录公网来源ip和服务端接收时间</p>
+ * @method void setIsSourceFrom(boolean $IsSourceFrom) 设置<p>IsSourceFrom 开启记录公网来源ip和服务端接收时间</p>
+ * @method integer getBillingMode() 获取<p>当前计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
+ * @method void setBillingMode(integer $BillingMode) 设置<p>当前计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
+ * @method integer getNewBillingMode() 获取<p>如果有异步任务，任务成功后的新计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
+ * @method void setNewBillingMode(integer $NewBillingMode) 设置<p>如果有异步任务，任务成功后的新计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
  */
 class TopicInfo extends AbstractModel
 {
     /**
-     * @var string 日志集ID
+     * @var string <p>日志集ID</p>
      */
     public $LogsetId;
 
     /**
-     * @var string 主题ID
+     * @var string <p>主题ID</p>
      */
     public $TopicId;
 
     /**
-     * @var string 主题名称
+     * @var string <p>主题名称</p>
      */
     public $TopicName;
 
     /**
-     * @var integer 主题分区个数
+     * @var integer <p>主题分区个数</p>
      */
     public $PartitionCount;
 
     /**
-     * @var boolean 主题是否开启索引（主题类型需为日志主题）
+     * @var boolean <p>主题是否开启索引（主题类型需为日志主题）</p>
      */
     public $Index;
 
     /**
-     * @var integer AssumerUin非空则表示创建该日志主题的服务方Uin
+     * @var integer <p>AssumerUin非空则表示创建该日志主题的服务方Uin</p>
      */
     public $AssumerUin;
 
     /**
-     * @var string 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+     * @var string <p>云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE</p>
      */
     public $AssumerName;
 
     /**
-     * @var string 创建时间。格式：yyyy-MM-dd HH:mm:ss
+     * @var string <p>创建时间。格式：yyyy-MM-dd HH:mm:ss</p>
      */
     public $CreateTime;
 
     /**
-     * @var boolean 主题是否开启采集，true：开启采集；false：关闭采集。
-创建日志主题时默认开启，可通过SDK调用ModifyTopic修改此字段。
-控制台目前不支持修改此参数。
+     * @var boolean <p>主题是否开启采集，true：开启采集；false：关闭采集。<br>创建日志主题时默认开启，可通过SDK调用ModifyTopic修改此字段。<br>控制台目前不支持修改此参数。</p>
      */
     public $Status;
 
     /**
-     * @var array 主题绑定的标签信息
+     * @var array <p>主题绑定的标签信息</p>
      */
     public $Tags;
 
     /**
-     * @var string RoleName非空则表示创建该日志主题的服务方使用的角色
+     * @var string <p>RoleName非空则表示创建该日志主题的服务方使用的角色</p>
      */
     public $RoleName;
 
     /**
-     * @var boolean 该主题是否开启自动分裂
+     * @var boolean <p>该主题是否开启自动分裂</p>
      */
     public $AutoSplit;
 
     /**
-     * @var integer 若开启自动分裂的话，该主题能够允许的最大分区数
+     * @var integer <p>若开启自动分裂的话，该主题能够允许的最大分区数</p>
      */
     public $MaxSplitPartitions;
 
     /**
-     * @var string 主题的存储类型
-
-- hot: 标准存储
-- cold: 低频存储
+     * @var string <p>主题的存储类型</p><ul><li>hot: 标准存储</li><li>cold: 低频存储</li></ul>
      */
     public $StorageType;
 
     /**
-     * @var integer 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
+     * @var integer <p>生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存</p>
      */
     public $Period;
 
     /**
-     * @var string 云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
+     * @var string <p>云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。</p>
      */
     public $SubAssumerName;
 
     /**
-     * @var string 主题描述
+     * @var string <p>主题描述</p>
      */
     public $Describes;
 
     /**
-     * @var integer 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
-标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
-HotPeriod=0为没有开启日志沉降。
+     * @var integer <p>开启日志沉降，标准存储的生命周期， hotPeriod &lt; Period。<br>标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）<br>HotPeriod=0为没有开启日志沉降。</p>
      */
     public $HotPeriod;
 
     /**
-     * @var string kms-cls服务秘钥id
+     * @var string <p>kms-cls服务秘钥id</p>
      */
     public $KeyId;
 
     /**
-     * @var integer 主题类型。
-- 0: 日志主题 
-- 1: 指标主题
+     * @var integer <p>主题类型。</p><ul><li>0: 日志主题 </li><li>1: 指标主题</li></ul>
      */
     public $BizType;
 
     /**
-     * @var boolean 免鉴权开关。 false：关闭； true：开启。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
+     * @var boolean <p>免鉴权开关。 false：关闭； true：开启。<br>开启后将支持指定操作匿名访问该日志主题。详情请参见<a href="https://cloud.tencent.com/document/product/614/41035">日志主题</a>。</p>
      */
     public $IsWebTracking;
 
     /**
-     * @var TopicExtendInfo 日志主题扩展信息
+     * @var TopicExtendInfo <p>日志主题扩展信息</p>
      */
     public $Extends;
 
     /**
-     * @var string 异步迁移任务ID
+     * @var string <p>异步迁移任务ID</p>
      */
     public $TopicAsyncTaskID;
 
     /**
-     * @var integer 异步迁移状态
-- 1：进行中
-- 2：已完成
-- 3：失败
-- 4：已取消
+     * @var integer <p>异步迁移状态</p><ul><li>1：进行中</li><li>2：已完成</li><li>3：失败</li><li>4：已取消</li></ul>
      */
     public $MigrationStatus;
 
     /**
-     * @var string 异步迁移完成后，预计生效日期
-时间格式：yyyy-MM-dd HH:mm:ss
+     * @var string <p>异步迁移完成后，预计生效日期<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
      */
     public $EffectiveDate;
 
     /**
-     * @var boolean IsSourceFrom 开启记录公网来源ip和服务端接收时间
+     * @var boolean <p>IsSourceFrom 开启记录公网来源ip和服务端接收时间</p>
      */
     public $IsSourceFrom;
 
     /**
-     * @param string $LogsetId 日志集ID
-     * @param string $TopicId 主题ID
-     * @param string $TopicName 主题名称
-     * @param integer $PartitionCount 主题分区个数
-     * @param boolean $Index 主题是否开启索引（主题类型需为日志主题）
-     * @param integer $AssumerUin AssumerUin非空则表示创建该日志主题的服务方Uin
-     * @param string $AssumerName 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
-     * @param string $CreateTime 创建时间。格式：yyyy-MM-dd HH:mm:ss
-     * @param boolean $Status 主题是否开启采集，true：开启采集；false：关闭采集。
-创建日志主题时默认开启，可通过SDK调用ModifyTopic修改此字段。
-控制台目前不支持修改此参数。
-     * @param array $Tags 主题绑定的标签信息
-     * @param string $RoleName RoleName非空则表示创建该日志主题的服务方使用的角色
-     * @param boolean $AutoSplit 该主题是否开启自动分裂
-     * @param integer $MaxSplitPartitions 若开启自动分裂的话，该主题能够允许的最大分区数
-     * @param string $StorageType 主题的存储类型
+     * @var integer <p>当前计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
+     */
+    public $BillingMode;
 
-- hot: 标准存储
-- cold: 低频存储
-     * @param integer $Period 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
-     * @param string $SubAssumerName 云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
-     * @param string $Describes 主题描述
-     * @param integer $HotPeriod 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
-标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
-HotPeriod=0为没有开启日志沉降。
-     * @param string $KeyId kms-cls服务秘钥id
-     * @param integer $BizType 主题类型。
-- 0: 日志主题 
-- 1: 指标主题
-     * @param boolean $IsWebTracking 免鉴权开关。 false：关闭； true：开启。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
-     * @param TopicExtendInfo $Extends 日志主题扩展信息
-     * @param string $TopicAsyncTaskID 异步迁移任务ID
-     * @param integer $MigrationStatus 异步迁移状态
-- 1：进行中
-- 2：已完成
-- 3：失败
-- 4：已取消
-     * @param string $EffectiveDate 异步迁移完成后，预计生效日期
-时间格式：yyyy-MM-dd HH:mm:ss
-     * @param boolean $IsSourceFrom IsSourceFrom 开启记录公网来源ip和服务端接收时间
+    /**
+     * @var integer <p>如果有异步任务，任务成功后的新计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
+     */
+    public $NewBillingMode;
+
+    /**
+     * @param string $LogsetId <p>日志集ID</p>
+     * @param string $TopicId <p>主题ID</p>
+     * @param string $TopicName <p>主题名称</p>
+     * @param integer $PartitionCount <p>主题分区个数</p>
+     * @param boolean $Index <p>主题是否开启索引（主题类型需为日志主题）</p>
+     * @param integer $AssumerUin <p>AssumerUin非空则表示创建该日志主题的服务方Uin</p>
+     * @param string $AssumerName <p>云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE</p>
+     * @param string $CreateTime <p>创建时间。格式：yyyy-MM-dd HH:mm:ss</p>
+     * @param boolean $Status <p>主题是否开启采集，true：开启采集；false：关闭采集。<br>创建日志主题时默认开启，可通过SDK调用ModifyTopic修改此字段。<br>控制台目前不支持修改此参数。</p>
+     * @param array $Tags <p>主题绑定的标签信息</p>
+     * @param string $RoleName <p>RoleName非空则表示创建该日志主题的服务方使用的角色</p>
+     * @param boolean $AutoSplit <p>该主题是否开启自动分裂</p>
+     * @param integer $MaxSplitPartitions <p>若开启自动分裂的话，该主题能够允许的最大分区数</p>
+     * @param string $StorageType <p>主题的存储类型</p><ul><li>hot: 标准存储</li><li>cold: 低频存储</li></ul>
+     * @param integer $Period <p>生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存</p>
+     * @param string $SubAssumerName <p>云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。</p>
+     * @param string $Describes <p>主题描述</p>
+     * @param integer $HotPeriod <p>开启日志沉降，标准存储的生命周期， hotPeriod &lt; Period。<br>标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）<br>HotPeriod=0为没有开启日志沉降。</p>
+     * @param string $KeyId <p>kms-cls服务秘钥id</p>
+     * @param integer $BizType <p>主题类型。</p><ul><li>0: 日志主题 </li><li>1: 指标主题</li></ul>
+     * @param boolean $IsWebTracking <p>免鉴权开关。 false：关闭； true：开启。<br>开启后将支持指定操作匿名访问该日志主题。详情请参见<a href="https://cloud.tencent.com/document/product/614/41035">日志主题</a>。</p>
+     * @param TopicExtendInfo $Extends <p>日志主题扩展信息</p>
+     * @param string $TopicAsyncTaskID <p>异步迁移任务ID</p>
+     * @param integer $MigrationStatus <p>异步迁移状态</p><ul><li>1：进行中</li><li>2：已完成</li><li>3：失败</li><li>4：已取消</li></ul>
+     * @param string $EffectiveDate <p>异步迁移完成后，预计生效日期<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
+     * @param boolean $IsSourceFrom <p>IsSourceFrom 开启记录公网来源ip和服务端接收时间</p>
+     * @param integer $BillingMode <p>当前计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
+     * @param integer $NewBillingMode <p>如果有异步任务，任务成功后的新计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
      */
     function __construct()
     {
@@ -414,6 +370,14 @@ HotPeriod=0为没有开启日志沉降。
 
         if (array_key_exists("IsSourceFrom",$param) and $param["IsSourceFrom"] !== null) {
             $this->IsSourceFrom = $param["IsSourceFrom"];
+        }
+
+        if (array_key_exists("BillingMode",$param) and $param["BillingMode"] !== null) {
+            $this->BillingMode = $param["BillingMode"];
+        }
+
+        if (array_key_exists("NewBillingMode",$param) and $param["NewBillingMode"] !== null) {
+            $this->NewBillingMode = $param["NewBillingMode"];
         }
     }
 }

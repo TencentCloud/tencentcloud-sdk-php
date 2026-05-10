@@ -73,8 +73,10 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
  * @method Models\DescribeMessageEnrichmentRulesResponse DescribeMessageEnrichmentRules(Models\DescribeMessageEnrichmentRulesRequest $req) 查询消息属性增强规则
  * @method Models\DescribeMessageListResponse DescribeMessageList(Models\DescribeMessageListRequest $req) 根据一级Topic查询消息列表
  * @method Models\DescribeProductSKUListResponse DescribeProductSKUList(Models\DescribeProductSKUListRequest $req) 获取产品售卖规格
+ * @method Models\DescribeSharedSubscriptionClientResponse DescribeSharedSubscriptionClient(Models\DescribeSharedSubscriptionClientRequest $req) 查询共享订阅组详情信息
  * @method Models\DescribeSharedSubscriptionGroupsResponse DescribeSharedSubscriptionGroups(Models\DescribeSharedSubscriptionGroupsRequest $req) 查询集群下共享订阅组列表
  * @method Models\DescribeSharedSubscriptionLagResponse DescribeSharedSubscriptionLag(Models\DescribeSharedSubscriptionLagRequest $req) 查询共享订阅消息堆积量
+ * @method Models\DescribeSharedSubscriptionsResponse DescribeSharedSubscriptions(Models\DescribeSharedSubscriptionsRequest $req) 查询共享订阅组订阅列表
  * @method Models\DescribeTopicResponse DescribeTopic(Models\DescribeTopicRequest $req) 查询mqtt主题详情
  * @method Models\DescribeTopicListResponse DescribeTopicList(Models\DescribeTopicListRequest $req) 获取主题列表，Filter参数使用说明如下：
 

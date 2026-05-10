@@ -20,151 +20,99 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 预付费商品实例
  *
- * @method string getProductType() 获取预付费商品实例类型，取值有：
-<li>StarterPackage：点播新手包。</li>
-<li>MiniProgramPlugin：点播小程序插件。</li>
-<li>ResourcePackage：点播资源包。</li>
- * @method void setProductType(string $ProductType) 设置预付费商品实例类型，取值有：
-<li>StarterPackage：点播新手包。</li>
-<li>MiniProgramPlugin：点播小程序插件。</li>
-<li>ResourcePackage：点播资源包。</li>
- * @method string getStartTime() 获取资源包实例起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
- * @method void setStartTime(string $StartTime) 设置资源包实例起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
- * @method string getExpireTime() 获取资源包实例过期日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
- * @method void setExpireTime(string $ExpireTime) 设置资源包实例过期日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
- * @method string getProductInstanceId() 获取资源包实例ID。对应每个资源包，系统会分配相应的资源。续费或者升级资源包时，需要带上这个资源ID。
- * @method void setProductInstanceId(string $ProductInstanceId) 设置资源包实例ID。对应每个资源包，系统会分配相应的资源。续费或者升级资源包时，需要带上这个资源ID。
- * @method string getLastConsumeDate() 获取系统最近一次扣除资源包的日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
- * @method void setLastConsumeDate(string $LastConsumeDate) 设置系统最近一次扣除资源包的日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
- * @method integer getBindStatus() 获取资源包绑定 License 状态，取值有：
-<li>0：未绑定。</li>
-<li>1：已绑定。</li>
- * @method void setBindStatus(integer $BindStatus) 设置资源包绑定 License 状态，取值有：
-<li>0：未绑定。</li>
-<li>1：已绑定。</li>
- * @method array getProductInstanceResourceSet() 获取预付费资源包实例中包含的资源包列表。
- * @method void setProductInstanceResourceSet(array $ProductInstanceResourceSet) 设置预付费资源包实例中包含的资源包列表。
- * @method array getResourceSet() 获取预付费资源包实例中包含的资源包列表。
- * @method void setResourceSet(array $ResourceSet) 设置预付费资源包实例中包含的资源包列表。
- * @method string getProductInstanceStatus() 获取资源包实例的状态，取值有：
-<li>Effective：生效，可用于计费抵扣。</li>
-<li>Isolated：隔离，不可用于计费抵扣。</li>
- * @method void setProductInstanceStatus(string $ProductInstanceStatus) 设置资源包实例的状态，取值有：
-<li>Effective：生效，可用于计费抵扣。</li>
-<li>Isolated：隔离，不可用于计费抵扣。</li>
- * @method string getRefundStatus() 获取资源包实例的可退还状态，取值有：
-<li>FullRefund：可全额退款。</li>
-<li>Denied：不可退款。</li>
- * @method void setRefundStatus(string $RefundStatus) 设置资源包实例的可退还状态，取值有：
-<li>FullRefund：可全额退款。</li>
-<li>Denied：不可退款。</li>
- * @method string getRenewStatus() 获取自动续费状态，取值有：
-<li>Never：不自动续费。</li>
-<li>Expire：到期自动续费。</li>
-<li>ExpireOrUseOut：到期或用完自动续费。</li>
-<li>NotSupport：不支持。</li>
- * @method void setRenewStatus(string $RenewStatus) 设置自动续费状态，取值有：
-<li>Never：不自动续费。</li>
-<li>Expire：到期自动续费。</li>
-<li>ExpireOrUseOut：到期或用完自动续费。</li>
-<li>NotSupport：不支持。</li>
+ * @method string getProductType() 获取<p>预付费商品实例类型，取值有：</p><li>StarterPackage：点播新手包。</li><li>MiniProgramPlugin：点播小程序插件。</li><li>ResourcePackage：点播资源包。</li>
+ * @method void setProductType(string $ProductType) 设置<p>预付费商品实例类型，取值有：</p><li>StarterPackage：点播新手包。</li><li>MiniProgramPlugin：点播小程序插件。</li><li>ResourcePackage：点播资源包。</li>
+ * @method string getStartTime() 获取<p>资源包实例起始日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method void setStartTime(string $StartTime) 设置<p>资源包实例起始日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method string getExpireTime() 获取<p>资源包实例过期日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method void setExpireTime(string $ExpireTime) 设置<p>资源包实例过期日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method string getProductInstanceId() 获取<p>资源包实例ID。对应每个资源包，系统会分配相应的资源。续费或者升级资源包时，需要带上这个资源ID。</p>
+ * @method void setProductInstanceId(string $ProductInstanceId) 设置<p>资源包实例ID。对应每个资源包，系统会分配相应的资源。续费或者升级资源包时，需要带上这个资源ID。</p>
+ * @method string getLastConsumeDate() 获取<p>系统最近一次扣除资源包的日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method void setLastConsumeDate(string $LastConsumeDate) 设置<p>系统最近一次扣除资源包的日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+ * @method integer getBindStatus() 获取<p>资源包绑定 License 状态，取值有：</p><li>0：未绑定。</li><li>1：已绑定。</li>
+ * @method void setBindStatus(integer $BindStatus) 设置<p>资源包绑定 License 状态，取值有：</p><li>0：未绑定。</li><li>1：已绑定。</li>
+ * @method array getProductInstanceResourceSet() 获取<p>预付费资源包实例中包含的资源包列表。</p>
+ * @method void setProductInstanceResourceSet(array $ProductInstanceResourceSet) 设置<p>预付费资源包实例中包含的资源包列表。</p>
+ * @method array getResourceSet() 获取<p>预付费资源包实例中包含的资源包列表。</p>
+ * @method void setResourceSet(array $ResourceSet) 设置<p>预付费资源包实例中包含的资源包列表。</p>
+ * @method string getProductInstanceStatus() 获取<p>资源包实例的状态，取值有：</p><li>Effective：生效，可用于计费抵扣。</li><li>Isolated：隔离，不可用于计费抵扣。</li>
+ * @method void setProductInstanceStatus(string $ProductInstanceStatus) 设置<p>资源包实例的状态，取值有：</p><li>Effective：生效，可用于计费抵扣。</li><li>Isolated：隔离，不可用于计费抵扣。</li>
+ * @method string getRefundStatus() 获取<p>资源包实例的可退还状态，取值有：</p><li>FullRefund：可全额退款。</li><li>Denied：不可退款。</li>
+ * @method void setRefundStatus(string $RefundStatus) 设置<p>资源包实例的可退还状态，取值有：</p><li>FullRefund：可全额退款。</li><li>Denied：不可退款。</li>
+ * @method string getRenewStatus() 获取<p>自动续费状态，取值有：</p><li>Never：不自动续费。</li><li>Expire：到期自动续费。</li><li>ExpireOrUseOut：到期或用完自动续费。</li><li>NotSupport：不支持。</li>
+ * @method void setRenewStatus(string $RenewStatus) 设置<p>自动续费状态，取值有：</p><li>Never：不自动续费。</li><li>Expire：到期自动续费。</li><li>ExpireOrUseOut：到期或用完自动续费。</li><li>NotSupport：不支持。</li>
  */
 class ProductInstance extends AbstractModel
 {
     /**
-     * @var string 预付费商品实例类型，取值有：
-<li>StarterPackage：点播新手包。</li>
-<li>MiniProgramPlugin：点播小程序插件。</li>
-<li>ResourcePackage：点播资源包。</li>
+     * @var string <p>预付费商品实例类型，取值有：</p><li>StarterPackage：点播新手包。</li><li>MiniProgramPlugin：点播小程序插件。</li><li>ResourcePackage：点播资源包。</li>
      */
     public $ProductType;
 
     /**
-     * @var string 资源包实例起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @var string <p>资源包实例起始日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public $StartTime;
 
     /**
-     * @var string 资源包实例过期日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @var string <p>资源包实例过期日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public $ExpireTime;
 
     /**
-     * @var string 资源包实例ID。对应每个资源包，系统会分配相应的资源。续费或者升级资源包时，需要带上这个资源ID。
+     * @var string <p>资源包实例ID。对应每个资源包，系统会分配相应的资源。续费或者升级资源包时，需要带上这个资源ID。</p>
      */
     public $ProductInstanceId;
 
     /**
-     * @var string 系统最近一次扣除资源包的日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @var string <p>系统最近一次扣除资源包的日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public $LastConsumeDate;
 
     /**
-     * @var integer 资源包绑定 License 状态，取值有：
-<li>0：未绑定。</li>
-<li>1：已绑定。</li>
+     * @var integer <p>资源包绑定 License 状态，取值有：</p><li>0：未绑定。</li><li>1：已绑定。</li>
      */
     public $BindStatus;
 
     /**
-     * @var array 预付费资源包实例中包含的资源包列表。
+     * @var array <p>预付费资源包实例中包含的资源包列表。</p>
      * @deprecated
      */
     public $ProductInstanceResourceSet;
 
     /**
-     * @var array 预付费资源包实例中包含的资源包列表。
+     * @var array <p>预付费资源包实例中包含的资源包列表。</p>
      */
     public $ResourceSet;
 
     /**
-     * @var string 资源包实例的状态，取值有：
-<li>Effective：生效，可用于计费抵扣。</li>
-<li>Isolated：隔离，不可用于计费抵扣。</li>
+     * @var string <p>资源包实例的状态，取值有：</p><li>Effective：生效，可用于计费抵扣。</li><li>Isolated：隔离，不可用于计费抵扣。</li>
      */
     public $ProductInstanceStatus;
 
     /**
-     * @var string 资源包实例的可退还状态，取值有：
-<li>FullRefund：可全额退款。</li>
-<li>Denied：不可退款。</li>
+     * @var string <p>资源包实例的可退还状态，取值有：</p><li>FullRefund：可全额退款。</li><li>Denied：不可退款。</li>
      */
     public $RefundStatus;
 
     /**
-     * @var string 自动续费状态，取值有：
-<li>Never：不自动续费。</li>
-<li>Expire：到期自动续费。</li>
-<li>ExpireOrUseOut：到期或用完自动续费。</li>
-<li>NotSupport：不支持。</li>
+     * @var string <p>自动续费状态，取值有：</p><li>Never：不自动续费。</li><li>Expire：到期自动续费。</li><li>ExpireOrUseOut：到期或用完自动续费。</li><li>NotSupport：不支持。</li>
      */
     public $RenewStatus;
 
     /**
-     * @param string $ProductType 预付费商品实例类型，取值有：
-<li>StarterPackage：点播新手包。</li>
-<li>MiniProgramPlugin：点播小程序插件。</li>
-<li>ResourcePackage：点播资源包。</li>
-     * @param string $StartTime 资源包实例起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-     * @param string $ExpireTime 资源包实例过期日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-     * @param string $ProductInstanceId 资源包实例ID。对应每个资源包，系统会分配相应的资源。续费或者升级资源包时，需要带上这个资源ID。
-     * @param string $LastConsumeDate 系统最近一次扣除资源包的日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-     * @param integer $BindStatus 资源包绑定 License 状态，取值有：
-<li>0：未绑定。</li>
-<li>1：已绑定。</li>
-     * @param array $ProductInstanceResourceSet 预付费资源包实例中包含的资源包列表。
-     * @param array $ResourceSet 预付费资源包实例中包含的资源包列表。
-     * @param string $ProductInstanceStatus 资源包实例的状态，取值有：
-<li>Effective：生效，可用于计费抵扣。</li>
-<li>Isolated：隔离，不可用于计费抵扣。</li>
-     * @param string $RefundStatus 资源包实例的可退还状态，取值有：
-<li>FullRefund：可全额退款。</li>
-<li>Denied：不可退款。</li>
-     * @param string $RenewStatus 自动续费状态，取值有：
-<li>Never：不自动续费。</li>
-<li>Expire：到期自动续费。</li>
-<li>ExpireOrUseOut：到期或用完自动续费。</li>
-<li>NotSupport：不支持。</li>
+     * @param string $ProductType <p>预付费商品实例类型，取值有：</p><li>StarterPackage：点播新手包。</li><li>MiniProgramPlugin：点播小程序插件。</li><li>ResourcePackage：点播资源包。</li>
+     * @param string $StartTime <p>资源包实例起始日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param string $ExpireTime <p>资源包实例过期日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param string $ProductInstanceId <p>资源包实例ID。对应每个资源包，系统会分配相应的资源。续费或者升级资源包时，需要带上这个资源ID。</p>
+     * @param string $LastConsumeDate <p>系统最近一次扣除资源包的日期。使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param integer $BindStatus <p>资源包绑定 License 状态，取值有：</p><li>0：未绑定。</li><li>1：已绑定。</li>
+     * @param array $ProductInstanceResourceSet <p>预付费资源包实例中包含的资源包列表。</p>
+     * @param array $ResourceSet <p>预付费资源包实例中包含的资源包列表。</p>
+     * @param string $ProductInstanceStatus <p>资源包实例的状态，取值有：</p><li>Effective：生效，可用于计费抵扣。</li><li>Isolated：隔离，不可用于计费抵扣。</li>
+     * @param string $RefundStatus <p>资源包实例的可退还状态，取值有：</p><li>FullRefund：可全额退款。</li><li>Denied：不可退款。</li>
+     * @param string $RenewStatus <p>自动续费状态，取值有：</p><li>Never：不自动续费。</li><li>Expire：到期自动续费。</li><li>ExpireOrUseOut：到期或用完自动续费。</li><li>NotSupport：不支持。</li>
      */
     function __construct()
     {

@@ -20,154 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 主实例信息
  *
- * @method string getRegion() 获取地域信息
- * @method void setRegion(string $Region) 设置地域信息
- * @method integer getRegionId() 获取地域ID
- * @method void setRegionId(integer $RegionId) 设置地域ID
- * @method integer getZoneId() 获取可用区ID
- * @method void setZoneId(integer $ZoneId) 设置可用区ID
- * @method string getZone() 获取可用区信息
- * @method void setZone(string $Zone) 设置可用区信息
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getResourceId() 获取实例长ID
- * @method void setResourceId(string $ResourceId) 设置实例长ID
- * @method integer getStatus() 获取实例状态
- * @method void setStatus(integer $Status) 设置实例状态
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method integer getInstanceType() 获取实例类型
- * @method void setInstanceType(integer $InstanceType) 设置实例类型
- * @method integer getTaskStatus() 获取任务状态
- * @method void setTaskStatus(integer $TaskStatus) 设置任务状态
- * @method integer getMemory() 获取内存容量
- * @method void setMemory(integer $Memory) 设置内存容量
- * @method integer getVolume() 获取硬盘容量
- * @method void setVolume(integer $Volume) 设置硬盘容量
- * @method string getDeviceType() 获取实例机型
- * @method void setDeviceType(string $DeviceType) 设置实例机型
- * @method integer getQps() 获取每秒查询数
- * @method void setQps(integer $Qps) 设置每秒查询数
- * @method integer getVpcId() 获取私有网络ID
- * @method void setVpcId(integer $VpcId) 设置私有网络ID
- * @method integer getSubnetId() 获取子网ID
- * @method void setSubnetId(integer $SubnetId) 设置子网ID
- * @method string getExClusterId() 获取独享集群ID
- * @method void setExClusterId(string $ExClusterId) 设置独享集群ID
- * @method string getExClusterName() 获取独享集群名称
- * @method void setExClusterName(string $ExClusterName) 设置独享集群名称
+ * @method string getRegion() 获取<p>地域信息</p>
+ * @method void setRegion(string $Region) 设置<p>地域信息</p>
+ * @method integer getRegionId() 获取<p>地域ID</p>
+ * @method void setRegionId(integer $RegionId) 设置<p>地域ID</p>
+ * @method integer getZoneId() 获取<p>可用区ID</p>
+ * @method void setZoneId(integer $ZoneId) 设置<p>可用区ID</p>
+ * @method string getZone() 获取<p>可用区信息</p>
+ * @method void setZone(string $Zone) 设置<p>可用区信息</p>
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getResourceId() 获取<p>实例长ID</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>实例长ID</p>
+ * @method integer getStatus() 获取<p>实例状态</p>
+ * @method void setStatus(integer $Status) 设置<p>实例状态</p>
+ * @method string getInstanceName() 获取<p>实例名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称</p>
+ * @method integer getInstanceType() 获取<p>实例类型</p>
+ * @method void setInstanceType(integer $InstanceType) 设置<p>实例类型</p>
+ * @method integer getTaskStatus() 获取<p>任务状态</p>
+ * @method void setTaskStatus(integer $TaskStatus) 设置<p>任务状态</p>
+ * @method integer getMemory() 获取<p>内存容量</p>
+ * @method void setMemory(integer $Memory) 设置<p>内存容量</p>
+ * @method integer getVolume() 获取<p>硬盘容量</p>
+ * @method void setVolume(integer $Volume) 设置<p>硬盘容量</p>
+ * @method string getDeviceType() 获取<p>实例机型</p>
+ * @method void setDeviceType(string $DeviceType) 设置<p>实例机型</p>
+ * @method integer getQps() 获取<p>每秒查询数</p>
+ * @method void setQps(integer $Qps) 设置<p>每秒查询数</p>
+ * @method integer getVpcId() 获取<p>私有网络ID</p>
+ * @method void setVpcId(integer $VpcId) 设置<p>私有网络ID</p>
+ * @method integer getSubnetId() 获取<p>子网ID</p>
+ * @method void setSubnetId(integer $SubnetId) 设置<p>子网ID</p>
+ * @method string getExClusterId() 获取<p>独享集群ID</p>
+ * @method void setExClusterId(string $ExClusterId) 设置<p>独享集群ID</p>
+ * @method string getExClusterName() 获取<p>独享集群名称</p>
+ * @method void setExClusterName(string $ExClusterName) 设置<p>独享集群名称</p>
  */
 class MasterInfo extends AbstractModel
 {
     /**
-     * @var string 地域信息
+     * @var string <p>地域信息</p>
      */
     public $Region;
 
     /**
-     * @var integer 地域ID
+     * @var integer <p>地域ID</p>
      */
     public $RegionId;
 
     /**
-     * @var integer 可用区ID
+     * @var integer <p>可用区ID</p>
      */
     public $ZoneId;
 
     /**
-     * @var string 可用区信息
+     * @var string <p>可用区信息</p>
      */
     public $Zone;
 
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 实例长ID
+     * @var string <p>实例长ID</p>
      */
     public $ResourceId;
 
     /**
-     * @var integer 实例状态
+     * @var integer <p>实例状态</p>
      */
     public $Status;
 
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
      */
     public $InstanceName;
 
     /**
-     * @var integer 实例类型
+     * @var integer <p>实例类型</p>
      */
     public $InstanceType;
 
     /**
-     * @var integer 任务状态
+     * @var integer <p>任务状态</p>
      */
     public $TaskStatus;
 
     /**
-     * @var integer 内存容量
+     * @var integer <p>内存容量</p>
      */
     public $Memory;
 
     /**
-     * @var integer 硬盘容量
+     * @var integer <p>硬盘容量</p>
      */
     public $Volume;
 
     /**
-     * @var string 实例机型
+     * @var string <p>实例机型</p>
      */
     public $DeviceType;
 
     /**
-     * @var integer 每秒查询数
+     * @var integer <p>每秒查询数</p>
      */
     public $Qps;
 
     /**
-     * @var integer 私有网络ID
+     * @var integer <p>私有网络ID</p>
      */
     public $VpcId;
 
     /**
-     * @var integer 子网ID
+     * @var integer <p>子网ID</p>
      */
     public $SubnetId;
 
     /**
-     * @var string 独享集群ID
+     * @var string <p>独享集群ID</p>
      */
     public $ExClusterId;
 
     /**
-     * @var string 独享集群名称
+     * @var string <p>独享集群名称</p>
      */
     public $ExClusterName;
 
     /**
-     * @param string $Region 地域信息
-     * @param integer $RegionId 地域ID
-     * @param integer $ZoneId 可用区ID
-     * @param string $Zone 可用区信息
-     * @param string $InstanceId 实例ID
-     * @param string $ResourceId 实例长ID
-     * @param integer $Status 实例状态
-     * @param string $InstanceName 实例名称
-     * @param integer $InstanceType 实例类型
-     * @param integer $TaskStatus 任务状态
-     * @param integer $Memory 内存容量
-     * @param integer $Volume 硬盘容量
-     * @param string $DeviceType 实例机型
-     * @param integer $Qps 每秒查询数
-     * @param integer $VpcId 私有网络ID
-     * @param integer $SubnetId 子网ID
-     * @param string $ExClusterId 独享集群ID
-     * @param string $ExClusterName 独享集群名称
+     * @param string $Region <p>地域信息</p>
+     * @param integer $RegionId <p>地域ID</p>
+     * @param integer $ZoneId <p>可用区ID</p>
+     * @param string $Zone <p>可用区信息</p>
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $ResourceId <p>实例长ID</p>
+     * @param integer $Status <p>实例状态</p>
+     * @param string $InstanceName <p>实例名称</p>
+     * @param integer $InstanceType <p>实例类型</p>
+     * @param integer $TaskStatus <p>任务状态</p>
+     * @param integer $Memory <p>内存容量</p>
+     * @param integer $Volume <p>硬盘容量</p>
+     * @param string $DeviceType <p>实例机型</p>
+     * @param integer $Qps <p>每秒查询数</p>
+     * @param integer $VpcId <p>私有网络ID</p>
+     * @param integer $SubnetId <p>子网ID</p>
+     * @param string $ExClusterId <p>独享集群ID</p>
+     * @param string $ExClusterName <p>独享集群名称</p>
      */
     function __construct()
     {

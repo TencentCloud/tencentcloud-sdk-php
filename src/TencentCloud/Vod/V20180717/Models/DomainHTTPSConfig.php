@@ -20,30 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 域名 HTTPS 配置信息
  *
- * @method string getCertExpireTime() 获取证书过期时间。
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
- * @method void setCertExpireTime(string $CertExpireTime) 设置证书过期时间。
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
- * @method string getCloudCertId() 获取腾讯云 SSL 产品中的证书 ID。
- * @method void setCloudCertId(string $CloudCertId) 设置腾讯云 SSL 产品中的证书 ID。
+ * @method string getCertExpireTime() 获取<p>证书过期时间。<li>格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</li></p><p>参数格式：YYYY-MM-DDThh:mm:ss+08:00</p>
+ * @method void setCertExpireTime(string $CertExpireTime) 设置<p>证书过期时间。<li>格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</li></p><p>参数格式：YYYY-MM-DDThh:mm:ss+08:00</p>
+ * @method string getCloudCertId() 获取<p>腾讯云 SSL 产品中的证书 ID。</p>
+ * @method void setCloudCertId(string $CloudCertId) 设置<p>腾讯云 SSL 产品中的证书 ID。</p>
  */
 class DomainHTTPSConfig extends AbstractModel
 {
     /**
-     * @var string 证书过期时间。
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+     * @var string <p>证书过期时间。<li>格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</li></p><p>参数格式：YYYY-MM-DDThh:mm:ss+08:00</p>
      */
     public $CertExpireTime;
 
     /**
-     * @var string 腾讯云 SSL 产品中的证书 ID。
+     * @var string <p>腾讯云 SSL 产品中的证书 ID。</p>
      */
     public $CloudCertId;
 
     /**
-     * @param string $CertExpireTime 证书过期时间。
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
-     * @param string $CloudCertId 腾讯云 SSL 产品中的证书 ID。
+     * @param string $CertExpireTime <p>证书过期时间。<li>格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</li></p><p>参数格式：YYYY-MM-DDThh:mm:ss+08:00</p>
+     * @param string $CloudCertId <p>腾讯云 SSL 产品中的证书 ID。</p>
      */
     function __construct()
     {

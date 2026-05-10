@@ -24,8 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileId(string $FileId) 设置<p>媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 <a href="/document/product/266/7830">视频上传完成事件通知</a> 或 <a href="https://console.cloud.tencent.com/vod/media">云点播控制台</a> 获取该字段。</p>
  * @method integer getSubAppId() 获取<p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
  * @method void setSubAppId(integer $SubAppId) 设置<p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
- * @method string getMPSProcessMediaParams() 获取<p>该参数用于透传至媒体处理服务（MPS），以便从云点播侧发起 MPS 视频处理任务。<br>视频处理参数详情请参考：<a href="https://cloud.tencent.com/document/api/862/37578">MPS 发起媒体处理</a>。<br>填写说明：</p><ol><li>目前仅需要配置 MPS “发起媒体处理”接口中任务配置相关的参数，如 AiAnalysisTask 与 MediaProcessTask，其他参数无需填写。若包含其它参数，系统将自动忽略；</li><li>当前仅支持通过此方式发起智能擦除及音视频增强任务。若配置了其他任务类型的相关参数，系统将自动忽略这些参数；</li><li>音视频增强任务目前不支持使用预置模板发起，可通过 <a href="https://cloud.tencent.com/document/product/266/122580">CreateMPSTemplate</a> 接口创建自定义模板。</li></ol>
- * @method void setMPSProcessMediaParams(string $MPSProcessMediaParams) 设置<p>该参数用于透传至媒体处理服务（MPS），以便从云点播侧发起 MPS 视频处理任务。<br>视频处理参数详情请参考：<a href="https://cloud.tencent.com/document/api/862/37578">MPS 发起媒体处理</a>。<br>填写说明：</p><ol><li>目前仅需要配置 MPS “发起媒体处理”接口中任务配置相关的参数，如 AiAnalysisTask 与 MediaProcessTask，其他参数无需填写。若包含其它参数，系统将自动忽略；</li><li>当前仅支持通过此方式发起智能擦除及音视频增强任务。若配置了其他任务类型的相关参数，系统将自动忽略这些参数；</li><li>音视频增强任务目前不支持使用预置模板发起，可通过 <a href="https://cloud.tencent.com/document/product/266/122580">CreateMPSTemplate</a> 接口创建自定义模板。</li></ol>
+ * @method string getMPSProcessMediaParams() 获取<p>可选参数，该参数用于透传至媒体处理服务（MPS），以便从云点播侧发起 MPS 视频处理任务。不同类型的视频处理参数详情请参考 <a href="https://cloud.tencent.com/document/product/266/131209">使用MPS 媒体 AI 能力</a>，可通过<a href="https://cloud.tencent.com/document/product/266/122580">CreateMPSTemplate</a> 接口创建自定义模板。</p>
+ * @method void setMPSProcessMediaParams(string $MPSProcessMediaParams) 设置<p>可选参数，该参数用于透传至媒体处理服务（MPS），以便从云点播侧发起 MPS 视频处理任务。不同类型的视频处理参数详情请参考 <a href="https://cloud.tencent.com/document/product/266/131209">使用MPS 媒体 AI 能力</a>，可通过<a href="https://cloud.tencent.com/document/product/266/122580">CreateMPSTemplate</a> 接口创建自定义模板。</p>
+ * @method MPSAiAnalysisTaskInput getAiAnalysisTask() 获取<p>视频内容分析类型任务参数，MPSProcessMediaParams为空时有效。</p>
+ * @method void setAiAnalysisTask(MPSAiAnalysisTaskInput $AiAnalysisTask) 设置<p>视频内容分析类型任务参数，MPSProcessMediaParams为空时有效。</p>
+ * @method MPSSmartSubtitlesTaskInput getSmartSubtitlesTask() 获取<p>智能字幕类型任务参数，MPSProcessMediaParams为空时有效。</p>
+ * @method void setSmartSubtitlesTask(MPSSmartSubtitlesTaskInput $SmartSubtitlesTask) 设置<p>智能字幕类型任务参数，MPSProcessMediaParams为空时有效。</p>
+ * @method MPSSmartEraseTaskInput getSmartEraseTask() 获取<p>智能擦除类型任务参数，MPSProcessMediaParams为空时有效。</p>
+ * @method void setSmartEraseTask(MPSSmartEraseTaskInput $SmartEraseTask) 设置<p>智能擦除类型任务参数，MPSProcessMediaParams为空时有效。</p>
  * @method string getExtInfo() 获取<p>保留字段，特殊用途时使用。</p>
  * @method void setExtInfo(string $ExtInfo) 设置<p>保留字段，特殊用途时使用。</p>
  */
@@ -42,9 +48,24 @@ class ProcessMediaByMPSRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var string <p>该参数用于透传至媒体处理服务（MPS），以便从云点播侧发起 MPS 视频处理任务。<br>视频处理参数详情请参考：<a href="https://cloud.tencent.com/document/api/862/37578">MPS 发起媒体处理</a>。<br>填写说明：</p><ol><li>目前仅需要配置 MPS “发起媒体处理”接口中任务配置相关的参数，如 AiAnalysisTask 与 MediaProcessTask，其他参数无需填写。若包含其它参数，系统将自动忽略；</li><li>当前仅支持通过此方式发起智能擦除及音视频增强任务。若配置了其他任务类型的相关参数，系统将自动忽略这些参数；</li><li>音视频增强任务目前不支持使用预置模板发起，可通过 <a href="https://cloud.tencent.com/document/product/266/122580">CreateMPSTemplate</a> 接口创建自定义模板。</li></ol>
+     * @var string <p>可选参数，该参数用于透传至媒体处理服务（MPS），以便从云点播侧发起 MPS 视频处理任务。不同类型的视频处理参数详情请参考 <a href="https://cloud.tencent.com/document/product/266/131209">使用MPS 媒体 AI 能力</a>，可通过<a href="https://cloud.tencent.com/document/product/266/122580">CreateMPSTemplate</a> 接口创建自定义模板。</p>
      */
     public $MPSProcessMediaParams;
+
+    /**
+     * @var MPSAiAnalysisTaskInput <p>视频内容分析类型任务参数，MPSProcessMediaParams为空时有效。</p>
+     */
+    public $AiAnalysisTask;
+
+    /**
+     * @var MPSSmartSubtitlesTaskInput <p>智能字幕类型任务参数，MPSProcessMediaParams为空时有效。</p>
+     */
+    public $SmartSubtitlesTask;
+
+    /**
+     * @var MPSSmartEraseTaskInput <p>智能擦除类型任务参数，MPSProcessMediaParams为空时有效。</p>
+     */
+    public $SmartEraseTask;
 
     /**
      * @var string <p>保留字段，特殊用途时使用。</p>
@@ -54,7 +75,10 @@ class ProcessMediaByMPSRequest extends AbstractModel
     /**
      * @param string $FileId <p>媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 <a href="/document/product/266/7830">视频上传完成事件通知</a> 或 <a href="https://console.cloud.tencent.com/vod/media">云点播控制台</a> 获取该字段。</p>
      * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
-     * @param string $MPSProcessMediaParams <p>该参数用于透传至媒体处理服务（MPS），以便从云点播侧发起 MPS 视频处理任务。<br>视频处理参数详情请参考：<a href="https://cloud.tencent.com/document/api/862/37578">MPS 发起媒体处理</a>。<br>填写说明：</p><ol><li>目前仅需要配置 MPS “发起媒体处理”接口中任务配置相关的参数，如 AiAnalysisTask 与 MediaProcessTask，其他参数无需填写。若包含其它参数，系统将自动忽略；</li><li>当前仅支持通过此方式发起智能擦除及音视频增强任务。若配置了其他任务类型的相关参数，系统将自动忽略这些参数；</li><li>音视频增强任务目前不支持使用预置模板发起，可通过 <a href="https://cloud.tencent.com/document/product/266/122580">CreateMPSTemplate</a> 接口创建自定义模板。</li></ol>
+     * @param string $MPSProcessMediaParams <p>可选参数，该参数用于透传至媒体处理服务（MPS），以便从云点播侧发起 MPS 视频处理任务。不同类型的视频处理参数详情请参考 <a href="https://cloud.tencent.com/document/product/266/131209">使用MPS 媒体 AI 能力</a>，可通过<a href="https://cloud.tencent.com/document/product/266/122580">CreateMPSTemplate</a> 接口创建自定义模板。</p>
+     * @param MPSAiAnalysisTaskInput $AiAnalysisTask <p>视频内容分析类型任务参数，MPSProcessMediaParams为空时有效。</p>
+     * @param MPSSmartSubtitlesTaskInput $SmartSubtitlesTask <p>智能字幕类型任务参数，MPSProcessMediaParams为空时有效。</p>
+     * @param MPSSmartEraseTaskInput $SmartEraseTask <p>智能擦除类型任务参数，MPSProcessMediaParams为空时有效。</p>
      * @param string $ExtInfo <p>保留字段，特殊用途时使用。</p>
      */
     function __construct()
@@ -80,6 +104,21 @@ class ProcessMediaByMPSRequest extends AbstractModel
 
         if (array_key_exists("MPSProcessMediaParams",$param) and $param["MPSProcessMediaParams"] !== null) {
             $this->MPSProcessMediaParams = $param["MPSProcessMediaParams"];
+        }
+
+        if (array_key_exists("AiAnalysisTask",$param) and $param["AiAnalysisTask"] !== null) {
+            $this->AiAnalysisTask = new MPSAiAnalysisTaskInput();
+            $this->AiAnalysisTask->deserialize($param["AiAnalysisTask"]);
+        }
+
+        if (array_key_exists("SmartSubtitlesTask",$param) and $param["SmartSubtitlesTask"] !== null) {
+            $this->SmartSubtitlesTask = new MPSSmartSubtitlesTaskInput();
+            $this->SmartSubtitlesTask->deserialize($param["SmartSubtitlesTask"]);
+        }
+
+        if (array_key_exists("SmartEraseTask",$param) and $param["SmartEraseTask"] !== null) {
+            $this->SmartEraseTask = new MPSSmartEraseTaskInput();
+            $this->SmartEraseTask->deserialize($param["SmartEraseTask"]);
         }
 
         if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {

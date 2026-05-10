@@ -42,6 +42,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuery(array $Query) 设置<p>应用配置的插件query信息</p>
  * @method integer getMcpType() 获取<p>MCP类型</p><p>枚举值：</p><ul><li>0： SSE 模式</li><li>1： Streamable Http 模式</li></ul>
  * @method void setMcpType(integer $McpType) 设置<p>MCP类型</p><p>枚举值：</p><ul><li>0： SSE 模式</li><li>1： Streamable Http 模式</li></ul>
+ * @method integer getAuthMode() 获取<p>OAuth授权主体</p><p>枚举值：</p><ul><li>0： 开发者授权</li><li>1： 使用者授权</li></ul>
+ * @method void setAuthMode(integer $AuthMode) 设置<p>OAuth授权主体</p><p>枚举值：</p><ul><li>0： 开发者授权</li><li>1： 使用者授权</li></ul>
+ * @method integer getAuthType() 获取<p>授权方式</p><p>枚举值：</p><ul><li>0： 无鉴权</li><li>1： api key鉴权</li><li>2： 支持CAM授权</li><li>3： 支持Oauth2.0授权</li></ul>
+ * @method void setAuthType(integer $AuthType) 设置<p>授权方式</p><p>枚举值：</p><ul><li>0： 无鉴权</li><li>1： api key鉴权</li><li>2： 支持CAM授权</li><li>3： 支持Oauth2.0授权</li></ul>
+ * @method integer getAuthConfigStatus() 获取<p>授权配置状态</p><p>枚举值：</p><ul><li>0： 不需要授权</li><li>1： 未配置</li><li>2： 已配置</li></ul>
+ * @method void setAuthConfigStatus(integer $AuthConfigStatus) 设置<p>授权配置状态</p><p>枚举值：</p><ul><li>0： 不需要授权</li><li>1： 未配置</li><li>2： 已配置</li></ul>
+ * @method integer getPluginClass() 获取<p>插件用途类型</p><p>枚举值：</p><ul><li>0： 工具类</li><li>1： 连接器类</li></ul>
+ * @method void setPluginClass(integer $PluginClass) 设置<p>插件用途类型</p><p>枚举值：</p><ul><li>0： 工具类</li><li>1： 连接器类</li></ul>
+ * @method integer getPluginStatus() 获取<p>插件状态</p><p>枚举值：</p><ul><li>1： 成功</li><li>2： 不可用</li></ul>
+ * @method void setPluginStatus(integer $PluginStatus) 设置<p>插件状态</p><p>枚举值：</p><ul><li>1： 成功</li><li>2： 不可用</li></ul>
  */
 class AgentPluginInfo extends AbstractModel
 {
@@ -89,6 +99,31 @@ class AgentPluginInfo extends AbstractModel
     public $McpType;
 
     /**
+     * @var integer <p>OAuth授权主体</p><p>枚举值：</p><ul><li>0： 开发者授权</li><li>1： 使用者授权</li></ul>
+     */
+    public $AuthMode;
+
+    /**
+     * @var integer <p>授权方式</p><p>枚举值：</p><ul><li>0： 无鉴权</li><li>1： api key鉴权</li><li>2： 支持CAM授权</li><li>3： 支持Oauth2.0授权</li></ul>
+     */
+    public $AuthType;
+
+    /**
+     * @var integer <p>授权配置状态</p><p>枚举值：</p><ul><li>0： 不需要授权</li><li>1： 未配置</li><li>2： 已配置</li></ul>
+     */
+    public $AuthConfigStatus;
+
+    /**
+     * @var integer <p>插件用途类型</p><p>枚举值：</p><ul><li>0： 工具类</li><li>1： 连接器类</li></ul>
+     */
+    public $PluginClass;
+
+    /**
+     * @var integer <p>插件状态</p><p>枚举值：</p><ul><li>1： 成功</li><li>2： 不可用</li></ul>
+     */
+    public $PluginStatus;
+
+    /**
      * @param string $PluginId <p>插件id</p>
      * @param array $Headers <p>应用配置的插件header信息</p>
      * @param AgentModelInfo $Model <p>插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型</p>
@@ -100,6 +135,11 @@ class AgentPluginInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Query <p>应用配置的插件query信息</p>
      * @param integer $McpType <p>MCP类型</p><p>枚举值：</p><ul><li>0： SSE 模式</li><li>1： Streamable Http 模式</li></ul>
+     * @param integer $AuthMode <p>OAuth授权主体</p><p>枚举值：</p><ul><li>0： 开发者授权</li><li>1： 使用者授权</li></ul>
+     * @param integer $AuthType <p>授权方式</p><p>枚举值：</p><ul><li>0： 无鉴权</li><li>1： api key鉴权</li><li>2： 支持CAM授权</li><li>3： 支持Oauth2.0授权</li></ul>
+     * @param integer $AuthConfigStatus <p>授权配置状态</p><p>枚举值：</p><ul><li>0： 不需要授权</li><li>1： 未配置</li><li>2： 已配置</li></ul>
+     * @param integer $PluginClass <p>插件用途类型</p><p>枚举值：</p><ul><li>0： 工具类</li><li>1： 连接器类</li></ul>
+     * @param integer $PluginStatus <p>插件状态</p><p>枚举值：</p><ul><li>1： 成功</li><li>2： 不可用</li></ul>
      */
     function __construct()
     {
@@ -156,6 +196,26 @@ class AgentPluginInfo extends AbstractModel
 
         if (array_key_exists("McpType",$param) and $param["McpType"] !== null) {
             $this->McpType = $param["McpType"];
+        }
+
+        if (array_key_exists("AuthMode",$param) and $param["AuthMode"] !== null) {
+            $this->AuthMode = $param["AuthMode"];
+        }
+
+        if (array_key_exists("AuthType",$param) and $param["AuthType"] !== null) {
+            $this->AuthType = $param["AuthType"];
+        }
+
+        if (array_key_exists("AuthConfigStatus",$param) and $param["AuthConfigStatus"] !== null) {
+            $this->AuthConfigStatus = $param["AuthConfigStatus"];
+        }
+
+        if (array_key_exists("PluginClass",$param) and $param["PluginClass"] !== null) {
+            $this->PluginClass = $param["PluginClass"];
+        }
+
+        if (array_key_exists("PluginStatus",$param) and $param["PluginStatus"] !== null) {
+            $this->PluginStatus = $param["PluginStatus"];
         }
     }
 }

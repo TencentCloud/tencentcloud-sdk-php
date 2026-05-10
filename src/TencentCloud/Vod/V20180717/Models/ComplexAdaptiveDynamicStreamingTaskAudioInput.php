@@ -20,62 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 自适应码流任务多语言音频流输入参数。
  *
- * @method string getFileId() 获取音频源的媒体 ID。固定取该媒体中的首个音频流，视频流和其它音频流（如有）将被忽略。
- * @method void setFileId(string $FileId) 设置音频源的媒体 ID。固定取该媒体中的首个音频流，视频流和其它音频流（如有）将被忽略。
- * @method string getName() 获取输出的自适应码流中的音频流名称，长度限制为16个字符。
- * @method void setName(string $Name) 设置输出的自适应码流中的音频流名称，长度限制为16个字符。
- * @method string getLanguage() 获取输出的自适应码流中的音频流语言，长度限制为16个字符。要求符合 RFC5646 规范。
- * @method void setLanguage(string $Language) 设置输出的自适应码流中的音频流语言，长度限制为16个字符。要求符合 RFC5646 规范。
- * @method string getDefault() 获取是否设置为自适应码流的默认音频。取值：
-<li>YES：设置为默认音频；</li>
-<li>NO：不设置为默认音频（默认值）。</li>
-
- * @method void setDefault(string $Default) 设置是否设置为自适应码流的默认音频。取值：
-<li>YES：设置为默认音频；</li>
-<li>NO：不设置为默认音频（默认值）。</li>
-
- * @method integer getAudioTrackIdx() 获取音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。
- * @method void setAudioTrackIdx(integer $AudioTrackIdx) 设置音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。
+ * @method string getFileId() 获取<p>音频源的媒体 ID。固定取该媒体源文件中的首个音频流，视频流和其它音频流（如有）将被忽略。</p>
+ * @method void setFileId(string $FileId) 设置<p>音频源的媒体 ID。固定取该媒体源文件中的首个音频流，视频流和其它音频流（如有）将被忽略。</p>
+ * @method string getName() 获取<p>输出的自适应码流中的音频流名称，长度限制为16个字符。</p>
+ * @method void setName(string $Name) 设置<p>输出的自适应码流中的音频流名称，长度限制为16个字符。</p>
+ * @method string getLanguage() 获取<p>输出的自适应码流中的音频流语言，长度限制为16个字符。要求符合 RFC5646 规范。</p>
+ * @method void setLanguage(string $Language) 设置<p>输出的自适应码流中的音频流语言，长度限制为16个字符。要求符合 RFC5646 规范。</p>
+ * @method string getDefault() 获取<p>是否设置为自适应码流的默认音频。取值：</p><li>YES：设置为默认音频；</li><li>NO：不设置为默认音频（默认值）。</li>
+ * @method void setDefault(string $Default) 设置<p>是否设置为自适应码流的默认音频。取值：</p><li>YES：设置为默认音频；</li><li>NO：不设置为默认音频（默认值）。</li>
+ * @method integer getAudioTrackIdx() 获取<p>音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。</p>
+ * @method void setAudioTrackIdx(integer $AudioTrackIdx) 设置<p>音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。</p>
  */
 class ComplexAdaptiveDynamicStreamingTaskAudioInput extends AbstractModel
 {
     /**
-     * @var string 音频源的媒体 ID。固定取该媒体中的首个音频流，视频流和其它音频流（如有）将被忽略。
+     * @var string <p>音频源的媒体 ID。固定取该媒体源文件中的首个音频流，视频流和其它音频流（如有）将被忽略。</p>
      */
     public $FileId;
 
     /**
-     * @var string 输出的自适应码流中的音频流名称，长度限制为16个字符。
+     * @var string <p>输出的自适应码流中的音频流名称，长度限制为16个字符。</p>
      */
     public $Name;
 
     /**
-     * @var string 输出的自适应码流中的音频流语言，长度限制为16个字符。要求符合 RFC5646 规范。
+     * @var string <p>输出的自适应码流中的音频流语言，长度限制为16个字符。要求符合 RFC5646 规范。</p>
      */
     public $Language;
 
     /**
-     * @var string 是否设置为自适应码流的默认音频。取值：
-<li>YES：设置为默认音频；</li>
-<li>NO：不设置为默认音频（默认值）。</li>
-
+     * @var string <p>是否设置为自适应码流的默认音频。取值：</p><li>YES：设置为默认音频；</li><li>NO：不设置为默认音频（默认值）。</li>
      */
     public $Default;
 
     /**
-     * @var integer 音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。
+     * @var integer <p>音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。</p>
      */
     public $AudioTrackIdx;
 
     /**
-     * @param string $FileId 音频源的媒体 ID。固定取该媒体中的首个音频流，视频流和其它音频流（如有）将被忽略。
-     * @param string $Name 输出的自适应码流中的音频流名称，长度限制为16个字符。
-     * @param string $Language 输出的自适应码流中的音频流语言，长度限制为16个字符。要求符合 RFC5646 规范。
-     * @param string $Default 是否设置为自适应码流的默认音频。取值：
-<li>YES：设置为默认音频；</li>
-<li>NO：不设置为默认音频（默认值）。</li>
-
-     * @param integer $AudioTrackIdx 音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。
+     * @param string $FileId <p>音频源的媒体 ID。固定取该媒体源文件中的首个音频流，视频流和其它音频流（如有）将被忽略。</p>
+     * @param string $Name <p>输出的自适应码流中的音频流名称，长度限制为16个字符。</p>
+     * @param string $Language <p>输出的自适应码流中的音频流语言，长度限制为16个字符。要求符合 RFC5646 规范。</p>
+     * @param string $Default <p>是否设置为自适应码流的默认音频。取值：</p><li>YES：设置为默认音频；</li><li>NO：不设置为默认音频（默认值）。</li>
+     * @param integer $AudioTrackIdx <p>音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。</p>
      */
     function __construct()
     {

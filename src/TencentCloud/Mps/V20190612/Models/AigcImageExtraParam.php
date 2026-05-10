@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResolution(string $Resolution) 设置<p>指定图片输出分辨率。</p><p>支持该参数的模型：<br>支持选择: 720P, 1080P, 2K, 4K。</p>
  * @method integer getLogoAdd() 获取<p>是否添加图标水印。默认不加。1-添加，0-不添加。</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
  * @method void setLogoAdd(integer $LogoAdd) 设置<p>是否添加图标水印。默认不加。1-添加，0-不添加。</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+ * @method string getOutputFormat() 获取<p>指定图片的输出格式，支持jpeg, png。</p>
+ * @method void setOutputFormat(string $OutputFormat) 设置<p>指定图片的输出格式，支持jpeg, png。</p>
  */
 class AigcImageExtraParam extends AbstractModel
 {
@@ -45,9 +47,15 @@ class AigcImageExtraParam extends AbstractModel
     public $LogoAdd;
 
     /**
+     * @var string <p>指定图片的输出格式，支持jpeg, png。</p>
+     */
+    public $OutputFormat;
+
+    /**
      * @param string $AspectRatio <p>指定所生成视频的宽高比。</p><p>不同模型支持的宽高比:</p><ol><li>GEM支持：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9。</li></ol><p>注：具体模型的宽高比参数，可查看相应模型官网获取更完整描述。</p>
      * @param string $Resolution <p>指定图片输出分辨率。</p><p>支持该参数的模型：<br>支持选择: 720P, 1080P, 2K, 4K。</p>
      * @param integer $LogoAdd <p>是否添加图标水印。默认不加。1-添加，0-不添加。</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     * @param string $OutputFormat <p>指定图片的输出格式，支持jpeg, png。</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class AigcImageExtraParam extends AbstractModel
 
         if (array_key_exists("LogoAdd",$param) and $param["LogoAdd"] !== null) {
             $this->LogoAdd = $param["LogoAdd"];
+        }
+
+        if (array_key_exists("OutputFormat",$param) and $param["OutputFormat"] !== null) {
+            $this->OutputFormat = $param["OutputFormat"];
         }
     }
 }

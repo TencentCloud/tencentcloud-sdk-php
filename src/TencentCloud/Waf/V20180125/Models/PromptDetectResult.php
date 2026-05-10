@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * prompt注入检测结果结构体
  *
- * @method string getResult() 获取检测结果
- * @method void setResult(string $Result) 设置检测结果
- * @method integer getConfidence() 获取置信度
- * @method void setConfidence(integer $Confidence) 设置置信度
+ * @method string getResult() 获取<p>检测结果</p>
+ * @method void setResult(string $Result) 设置<p>检测结果</p>
+ * @method integer getConfidence() 获取<p>置信度</p>
+ * @method void setConfidence(integer $Confidence) 设置<p>置信度</p>
+ * @method array getCategory() 获取<p>检出类别</p>
+ * @method void setCategory(array $Category) 设置<p>检出类别</p>
  */
 class PromptDetectResult extends AbstractModel
 {
     /**
-     * @var string 检测结果
+     * @var string <p>检测结果</p>
      */
     public $Result;
 
     /**
-     * @var integer 置信度
+     * @var integer <p>置信度</p>
      */
     public $Confidence;
 
     /**
-     * @param string $Result 检测结果
-     * @param integer $Confidence 置信度
+     * @var array <p>检出类别</p>
+     */
+    public $Category;
+
+    /**
+     * @param string $Result <p>检测结果</p>
+     * @param integer $Confidence <p>置信度</p>
+     * @param array $Category <p>检出类别</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class PromptDetectResult extends AbstractModel
 
         if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
             $this->Confidence = $param["Confidence"];
+        }
+
+        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
+            $this->Category = $param["Category"];
         }
     }
 }

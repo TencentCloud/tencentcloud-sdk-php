@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDataSource请求参数结构体
  *
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
  * @method string getName() 获取数据源名称
  * @method void setName(string $Name) 设置数据源名称
  * @method string getType() 获取数据源类型英文名
@@ -35,6 +37,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class CreateDataSourceRequest extends AbstractModel
 {
+    /**
+     * @var string <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public $TiProjectId;
+
     /**
      * @var string 数据源名称
      */
@@ -66,6 +73,7 @@ class CreateDataSourceRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
      * @param string $Name 数据源名称
      * @param string $Type 数据源类型英文名
      * @param string $Permission 数据源权限，取值有RW RO
@@ -86,6 +94,10 @@ class CreateDataSourceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
+        }
+
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
         }

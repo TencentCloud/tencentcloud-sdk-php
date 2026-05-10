@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Ioa\V20220601\Models as Models;
 
 /**
+ * @method Models\BindBusinessResourceConnectorGroupResponse BindBusinessResourceConnectorGroup(Models\BindBusinessResourceConnectorGroupRequest $req) saas版本，创建/修改业务资源后，调用绑定连接器接口,私有化调用path为：capi/GatewayResource/BindBusinessResourceConnectorGroup
  * @method Models\CreateBusinessResourceResponse CreateBusinessResource(Models\CreateBusinessResourceRequest $req) 创建业务资源，会对一些必填参数进行校验和参数合法性校验，创建业务资源时，先调用下校验相同业务资源接口，看资源是不是有冲突。创建时也会做校验，但没有返回对应的异常信息，私有化调用path为：capi/GatewayResource/CreateBusinessResource
  * @method Models\CreateDLPFileDetectTaskResponse CreateDLPFileDetectTask(Models\CreateDLPFileDetectTaskRequest $req) 创建文件鉴定任务，私有化调用path为：capi/DlpOpenApi/CreateDLPFileDetectTask
  * @method Models\CreateDLPFileDetectionTaskResponse CreateDLPFileDetectionTask(Models\CreateDLPFileDetectionTaskRequest $req) 提交送检任务

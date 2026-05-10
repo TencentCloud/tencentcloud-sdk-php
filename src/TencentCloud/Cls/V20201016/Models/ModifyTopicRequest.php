@@ -20,202 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTopic请求参数结构体
  *
- * @method string getTopicId() 获取 主题ID- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
- * @method void setTopicId(string $TopicId) 设置 主题ID- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
- * @method string getTopicName() 获取主题名称
-输入限制：
-- 不能为空字符串
-- 不能包含字符'|'
-- 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
- * @method void setTopicName(string $TopicName) 设置主题名称
-输入限制：
-- 不能为空字符串
-- 不能包含字符'|'
-- 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
- * @method array getTags() 获取标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，并且不能有重复的键值对。
- * @method void setTags(array $Tags) 设置标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，并且不能有重复的键值对。
- * @method boolean getStatus() 获取主题是否开启采集，true：开启采集；false：关闭采集。
-控制台目前不支持修改此参数。
- * @method void setStatus(boolean $Status) 设置主题是否开启采集，true：开启采集；false：关闭采集。
-控制台目前不支持修改此参数。
- * @method boolean getAutoSplit() 获取是否开启自动分裂
- * @method void setAutoSplit(boolean $AutoSplit) 设置是否开启自动分裂
- * @method integer getMaxSplitPartitions() 获取若开启最大分裂，该主题能够允许的最大分区数；
-默认为50；必须为正数
- * @method void setMaxSplitPartitions(integer $MaxSplitPartitions) 设置若开启最大分裂，该主题能够允许的最大分区数；
-默认为50；必须为正数
- * @method integer getPeriod() 获取生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600。取值为3640时代表永久保存
- * @method void setPeriod(integer $Period) 设置生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600。取值为3640时代表永久保存
- * @method string getStorageType() 获取存储类型：cold 低频存储，hot 标准存储
- * @method void setStorageType(string $StorageType) 设置存储类型：cold 低频存储，hot 标准存储
- * @method string getDescribes() 获取主题描述
- * @method void setDescribes(string $Describes) 设置主题描述
- * @method integer getHotPeriod() 获取0：日志主题关闭日志沉降。
-非0：日志主题开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。
-仅在StorageType为 hot 时生效，指标主题不支持该配置。
- * @method void setHotPeriod(integer $HotPeriod) 设置0：日志主题关闭日志沉降。
-非0：日志主题开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。
-仅在StorageType为 hot 时生效，指标主题不支持该配置。
- * @method boolean getIsWebTracking() 获取免鉴权开关。 false：关闭； true：开启。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
- * @method void setIsWebTracking(boolean $IsWebTracking) 设置免鉴权开关。 false：关闭； true：开启。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
- * @method TopicExtendInfo getExtends() 获取主题扩展信息
- * @method void setExtends(TopicExtendInfo $Extends) 设置主题扩展信息
- * @method integer getPartitionCount() 获取主题分区数量。
-默认为1；
-取值范围及约束：
-- 当输入值<=0，系统自动调整为1。
-- 如果未传MaxSplitPartitions，需要PartitionCount<=50；
-- 如果传递了MaxSplitPartitions，需要PartitionCount<=MaxSplitPartitions；
- * @method void setPartitionCount(integer $PartitionCount) 设置主题分区数量。
-默认为1；
-取值范围及约束：
-- 当输入值<=0，系统自动调整为1。
-- 如果未传MaxSplitPartitions，需要PartitionCount<=50；
-- 如果传递了MaxSplitPartitions，需要PartitionCount<=MaxSplitPartitions；
- * @method string getCancelTopicAsyncTaskID() 获取取消切换存储任务的id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。
- * @method void setCancelTopicAsyncTaskID(string $CancelTopicAsyncTaskID) 设置取消切换存储任务的id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。
- * @method integer getEncryption() 获取加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
-只支持传入1：kms-cls 云产品秘钥加密
- * @method void setEncryption(integer $Encryption) 设置加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
-只支持传入1：kms-cls 云产品秘钥加密
- * @method boolean getIsSourceFrom() 获取开启记录公网来源ip和服务端接收时间
- * @method void setIsSourceFrom(boolean $IsSourceFrom) 设置开启记录公网来源ip和服务端接收时间
+ * @method string getTopicId() 获取<p>主题ID- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取主题列表</a>获取主题Id。</p>
+ * @method void setTopicId(string $TopicId) 设置<p>主题ID- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取主题列表</a>获取主题Id。</p>
+ * @method string getTopicName() 获取<p>主题名称<br>输入限制：</p><ul><li>不能为空字符串</li><li>不能包含字符&#39;|&#39;</li><li>不能使用以下名称[&quot;cls_service_log&quot;,&quot;loglistener_status&quot;,&quot;loglistener_alarm&quot;,&quot;loglistener_business&quot;,&quot;cls_service_metric&quot;]</li></ul>
+ * @method void setTopicName(string $TopicName) 设置<p>主题名称<br>输入限制：</p><ul><li>不能为空字符串</li><li>不能包含字符&#39;|&#39;</li><li>不能使用以下名称[&quot;cls_service_log&quot;,&quot;loglistener_status&quot;,&quot;loglistener_alarm&quot;,&quot;loglistener_business&quot;,&quot;cls_service_metric&quot;]</li></ul>
+ * @method array getTags() 获取<p>标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，并且不能有重复的键值对。</p>
+ * @method void setTags(array $Tags) 设置<p>标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，并且不能有重复的键值对。</p>
+ * @method boolean getStatus() 获取<p>主题是否开启采集，true：开启采集；false：关闭采集。<br>控制台目前不支持修改此参数。</p>
+ * @method void setStatus(boolean $Status) 设置<p>主题是否开启采集，true：开启采集；false：关闭采集。<br>控制台目前不支持修改此参数。</p>
+ * @method boolean getAutoSplit() 获取<p>是否开启自动分裂</p>
+ * @method void setAutoSplit(boolean $AutoSplit) 设置<p>是否开启自动分裂</p>
+ * @method integer getMaxSplitPartitions() 获取<p>若开启最大分裂，该主题能够允许的最大分区数；<br>默认为50；必须为正数</p>
+ * @method void setMaxSplitPartitions(integer $MaxSplitPartitions) 设置<p>若开启最大分裂，该主题能够允许的最大分区数；<br>默认为50；必须为正数</p>
+ * @method integer getPeriod() 获取<p>生命周期，单位天，标准存储取值范围1~3600，低频存储取值范围7~3600。取值为3640时代表永久保存</p>
+ * @method void setPeriod(integer $Period) 设置<p>生命周期，单位天，标准存储取值范围1~3600，低频存储取值范围7~3600。取值为3640时代表永久保存</p>
+ * @method string getStorageType() 获取<p>存储类型：cold 低频存储，hot 标准存储</p>
+ * @method void setStorageType(string $StorageType) 设置<p>存储类型：cold 低频存储，hot 标准存储</p>
+ * @method string getDescribes() 获取<p>主题描述</p>
+ * @method void setDescribes(string $Describes) 设置<p>主题描述</p>
+ * @method integer getHotPeriod() 获取<p>0：日志主题关闭日志沉降。<br>非0：日志主题开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。<br>仅在StorageType为 hot 时生效，指标主题不支持该配置。</p>
+ * @method void setHotPeriod(integer $HotPeriod) 设置<p>0：日志主题关闭日志沉降。<br>非0：日志主题开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。<br>仅在StorageType为 hot 时生效，指标主题不支持该配置。</p>
+ * @method boolean getIsWebTracking() 获取<p>免鉴权开关。 false：关闭； true：开启。<br>开启后将支持指定操作匿名访问该日志主题。详情请参见<a href="https://cloud.tencent.com/document/product/614/41035">日志主题</a>。</p>
+ * @method void setIsWebTracking(boolean $IsWebTracking) 设置<p>免鉴权开关。 false：关闭； true：开启。<br>开启后将支持指定操作匿名访问该日志主题。详情请参见<a href="https://cloud.tencent.com/document/product/614/41035">日志主题</a>。</p>
+ * @method TopicExtendInfo getExtends() 获取<p>主题扩展信息</p>
+ * @method void setExtends(TopicExtendInfo $Extends) 设置<p>主题扩展信息</p>
+ * @method integer getPartitionCount() 获取<p>主题分区数量。<br>默认为1；<br>取值范围及约束：</p><ul><li>当输入值&lt;=0，系统自动调整为1。</li><li>如果未传MaxSplitPartitions，需要PartitionCount&lt;=50；</li><li>如果传递了MaxSplitPartitions，需要PartitionCount&lt;=MaxSplitPartitions；</li></ul>
+ * @method void setPartitionCount(integer $PartitionCount) 设置<p>主题分区数量。<br>默认为1；<br>取值范围及约束：</p><ul><li>当输入值&lt;=0，系统自动调整为1。</li><li>如果未传MaxSplitPartitions，需要PartitionCount&lt;=50；</li><li>如果传递了MaxSplitPartitions，需要PartitionCount&lt;=MaxSplitPartitions；</li></ul>
+ * @method string getCancelTopicAsyncTaskID() 获取<p>取消切换存储任务的id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。</li></ul>
+ * @method void setCancelTopicAsyncTaskID(string $CancelTopicAsyncTaskID) 设置<p>取消切换存储任务的id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。</li></ul>
+ * @method integer getEncryption() 获取<p>加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。<br>只支持传入1：kms-cls 云产品秘钥加密</p>
+ * @method void setEncryption(integer $Encryption) 设置<p>加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。<br>只支持传入1：kms-cls 云产品秘钥加密</p>
+ * @method boolean getIsSourceFrom() 获取<p>开启记录公网来源ip和服务端接收时间</p>
+ * @method void setIsSourceFrom(boolean $IsSourceFrom) 设置<p>开启记录公网来源ip和服务端接收时间</p>
+ * @method integer getBillingMode() 获取<p>计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
+ * @method void setBillingMode(integer $BillingMode) 设置<p>计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
  */
 class ModifyTopicRequest extends AbstractModel
 {
     /**
-     * @var string  主题ID- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
+     * @var string <p>主题ID- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取主题列表</a>获取主题Id。</p>
      */
     public $TopicId;
 
     /**
-     * @var string 主题名称
-输入限制：
-- 不能为空字符串
-- 不能包含字符'|'
-- 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
+     * @var string <p>主题名称<br>输入限制：</p><ul><li>不能为空字符串</li><li>不能包含字符&#39;|&#39;</li><li>不能使用以下名称[&quot;cls_service_log&quot;,&quot;loglistener_status&quot;,&quot;loglistener_alarm&quot;,&quot;loglistener_business&quot;,&quot;cls_service_metric&quot;]</li></ul>
      */
     public $TopicName;
 
     /**
-     * @var array 标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，并且不能有重复的键值对。
+     * @var array <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，并且不能有重复的键值对。</p>
      */
     public $Tags;
 
     /**
-     * @var boolean 主题是否开启采集，true：开启采集；false：关闭采集。
-控制台目前不支持修改此参数。
+     * @var boolean <p>主题是否开启采集，true：开启采集；false：关闭采集。<br>控制台目前不支持修改此参数。</p>
      */
     public $Status;
 
     /**
-     * @var boolean 是否开启自动分裂
+     * @var boolean <p>是否开启自动分裂</p>
      */
     public $AutoSplit;
 
     /**
-     * @var integer 若开启最大分裂，该主题能够允许的最大分区数；
-默认为50；必须为正数
+     * @var integer <p>若开启最大分裂，该主题能够允许的最大分区数；<br>默认为50；必须为正数</p>
      */
     public $MaxSplitPartitions;
 
     /**
-     * @var integer 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600。取值为3640时代表永久保存
+     * @var integer <p>生命周期，单位天，标准存储取值范围1~3600，低频存储取值范围7~3600。取值为3640时代表永久保存</p>
      */
     public $Period;
 
     /**
-     * @var string 存储类型：cold 低频存储，hot 标准存储
+     * @var string <p>存储类型：cold 低频存储，hot 标准存储</p>
      */
     public $StorageType;
 
     /**
-     * @var string 主题描述
+     * @var string <p>主题描述</p>
      */
     public $Describes;
 
     /**
-     * @var integer 0：日志主题关闭日志沉降。
-非0：日志主题开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。
-仅在StorageType为 hot 时生效，指标主题不支持该配置。
+     * @var integer <p>0：日志主题关闭日志沉降。<br>非0：日志主题开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。<br>仅在StorageType为 hot 时生效，指标主题不支持该配置。</p>
      */
     public $HotPeriod;
 
     /**
-     * @var boolean 免鉴权开关。 false：关闭； true：开启。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
+     * @var boolean <p>免鉴权开关。 false：关闭； true：开启。<br>开启后将支持指定操作匿名访问该日志主题。详情请参见<a href="https://cloud.tencent.com/document/product/614/41035">日志主题</a>。</p>
      */
     public $IsWebTracking;
 
     /**
-     * @var TopicExtendInfo 主题扩展信息
+     * @var TopicExtendInfo <p>主题扩展信息</p>
      */
     public $Extends;
 
     /**
-     * @var integer 主题分区数量。
-默认为1；
-取值范围及约束：
-- 当输入值<=0，系统自动调整为1。
-- 如果未传MaxSplitPartitions，需要PartitionCount<=50；
-- 如果传递了MaxSplitPartitions，需要PartitionCount<=MaxSplitPartitions；
+     * @var integer <p>主题分区数量。<br>默认为1；<br>取值范围及约束：</p><ul><li>当输入值&lt;=0，系统自动调整为1。</li><li>如果未传MaxSplitPartitions，需要PartitionCount&lt;=50；</li><li>如果传递了MaxSplitPartitions，需要PartitionCount&lt;=MaxSplitPartitions；</li></ul>
      */
     public $PartitionCount;
 
     /**
-     * @var string 取消切换存储任务的id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。
+     * @var string <p>取消切换存储任务的id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。</li></ul>
      */
     public $CancelTopicAsyncTaskID;
 
     /**
-     * @var integer 加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
-只支持传入1：kms-cls 云产品秘钥加密
+     * @var integer <p>加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。<br>只支持传入1：kms-cls 云产品秘钥加密</p>
      */
     public $Encryption;
 
     /**
-     * @var boolean 开启记录公网来源ip和服务端接收时间
+     * @var boolean <p>开启记录公网来源ip和服务端接收时间</p>
      */
     public $IsSourceFrom;
 
     /**
-     * @param string $TopicId  主题ID- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
-     * @param string $TopicName 主题名称
-输入限制：
-- 不能为空字符串
-- 不能包含字符'|'
-- 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
-     * @param array $Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，并且不能有重复的键值对。
-     * @param boolean $Status 主题是否开启采集，true：开启采集；false：关闭采集。
-控制台目前不支持修改此参数。
-     * @param boolean $AutoSplit 是否开启自动分裂
-     * @param integer $MaxSplitPartitions 若开启最大分裂，该主题能够允许的最大分区数；
-默认为50；必须为正数
-     * @param integer $Period 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600。取值为3640时代表永久保存
-     * @param string $StorageType 存储类型：cold 低频存储，hot 标准存储
-     * @param string $Describes 主题描述
-     * @param integer $HotPeriod 0：日志主题关闭日志沉降。
-非0：日志主题开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。
-仅在StorageType为 hot 时生效，指标主题不支持该配置。
-     * @param boolean $IsWebTracking 免鉴权开关。 false：关闭； true：开启。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
-     * @param TopicExtendInfo $Extends 主题扩展信息
-     * @param integer $PartitionCount 主题分区数量。
-默认为1；
-取值范围及约束：
-- 当输入值<=0，系统自动调整为1。
-- 如果未传MaxSplitPartitions，需要PartitionCount<=50；
-- 如果传递了MaxSplitPartitions，需要PartitionCount<=MaxSplitPartitions；
-     * @param string $CancelTopicAsyncTaskID 取消切换存储任务的id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。
-     * @param integer $Encryption 加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
-只支持传入1：kms-cls 云产品秘钥加密
-     * @param boolean $IsSourceFrom 开启记录公网来源ip和服务端接收时间
+     * @var integer <p>计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
+     */
+    public $BillingMode;
+
+    /**
+     * @param string $TopicId <p>主题ID- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取主题列表</a>获取主题Id。</p>
+     * @param string $TopicName <p>主题名称<br>输入限制：</p><ul><li>不能为空字符串</li><li>不能包含字符&#39;|&#39;</li><li>不能使用以下名称[&quot;cls_service_log&quot;,&quot;loglistener_status&quot;,&quot;loglistener_alarm&quot;,&quot;loglistener_business&quot;,&quot;cls_service_metric&quot;]</li></ul>
+     * @param array $Tags <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，并且不能有重复的键值对。</p>
+     * @param boolean $Status <p>主题是否开启采集，true：开启采集；false：关闭采集。<br>控制台目前不支持修改此参数。</p>
+     * @param boolean $AutoSplit <p>是否开启自动分裂</p>
+     * @param integer $MaxSplitPartitions <p>若开启最大分裂，该主题能够允许的最大分区数；<br>默认为50；必须为正数</p>
+     * @param integer $Period <p>生命周期，单位天，标准存储取值范围1~3600，低频存储取值范围7~3600。取值为3640时代表永久保存</p>
+     * @param string $StorageType <p>存储类型：cold 低频存储，hot 标准存储</p>
+     * @param string $Describes <p>主题描述</p>
+     * @param integer $HotPeriod <p>0：日志主题关闭日志沉降。<br>非0：日志主题开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。<br>仅在StorageType为 hot 时生效，指标主题不支持该配置。</p>
+     * @param boolean $IsWebTracking <p>免鉴权开关。 false：关闭； true：开启。<br>开启后将支持指定操作匿名访问该日志主题。详情请参见<a href="https://cloud.tencent.com/document/product/614/41035">日志主题</a>。</p>
+     * @param TopicExtendInfo $Extends <p>主题扩展信息</p>
+     * @param integer $PartitionCount <p>主题分区数量。<br>默认为1；<br>取值范围及约束：</p><ul><li>当输入值&lt;=0，系统自动调整为1。</li><li>如果未传MaxSplitPartitions，需要PartitionCount&lt;=50；</li><li>如果传递了MaxSplitPartitions，需要PartitionCount&lt;=MaxSplitPartitions；</li></ul>
+     * @param string $CancelTopicAsyncTaskID <p>取消切换存储任务的id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。</li></ul>
+     * @param integer $Encryption <p>加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。<br>只支持传入1：kms-cls 云产品秘钥加密</p>
+     * @param boolean $IsSourceFrom <p>开启记录公网来源ip和服务端接收时间</p>
+     * @param integer $BillingMode <p>计费模式</p><p>枚举值：</p><ul><li>0： 按功能项计费</li><li>1： 原始日志量计费</li></ul>
      */
     function __construct()
     {
@@ -298,6 +242,10 @@ class ModifyTopicRequest extends AbstractModel
 
         if (array_key_exists("IsSourceFrom",$param) and $param["IsSourceFrom"] !== null) {
             $this->IsSourceFrom = $param["IsSourceFrom"];
+        }
+
+        if (array_key_exists("BillingMode",$param) and $param["BillingMode"] !== null) {
+            $this->BillingMode = $param["BillingMode"];
         }
     }
 }

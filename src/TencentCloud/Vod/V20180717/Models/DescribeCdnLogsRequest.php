@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCdnLogs请求参数结构体
  *
- * @method string getDomainName() 获取域名。
- * @method void setDomainName(string $DomainName) 设置域名。
- * @method string getStartTime() 获取获取日志起始时间点，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
- * @method void setStartTime(string $StartTime) 设置获取日志起始时间点，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
- * @method string getEndTime() 获取结束时间需大于起始时间；使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
- * @method void setEndTime(string $EndTime) 设置结束时间需大于起始时间；使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
- * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method integer getLimit() 获取分页拉取的最大返回结果数。默认值：100；最大值：1000。
- * @method void setLimit(integer $Limit) 设置分页拉取的最大返回结果数。默认值：100；最大值：1000。
- * @method integer getOffset() 获取分页拉取的起始偏移量。默认值：0。
- * @method void setOffset(integer $Offset) 设置分页拉取的起始偏移量。默认值：0。
+ * @method string getDomainName() 获取<p>域名。</p>
+ * @method void setDomainName(string $DomainName) 设置<p>域名。</p>
+ * @method string getStartTime() 获取<p>获取日志起始时间点，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p><p>参数格式：YYYY-MM-DDThh:mm:ssZ</p>
+ * @method void setStartTime(string $StartTime) 设置<p>获取日志起始时间点，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p><p>参数格式：YYYY-MM-DDThh:mm:ssZ</p>
+ * @method string getEndTime() 获取<p>结束时间需大于起始时间；使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p><p>参数格式：YYYY-MM-DDThh:mm:ssZ</p>
+ * @method void setEndTime(string $EndTime) 设置<p>结束时间需大于起始时间；使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p><p>参数格式：YYYY-MM-DDThh:mm:ssZ</p>
+ * @method integer getSubAppId() 获取<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method void setSubAppId(integer $SubAppId) 设置<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method integer getLimit() 获取<p>分页拉取的最大返回结果数。默认值：100；最大值：1000。</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页拉取的最大返回结果数。默认值：100；最大值：1000。</p>
+ * @method integer getOffset() 获取<p>分页拉取的起始偏移量。默认值：0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页拉取的起始偏移量。默认值：0。</p>
  */
 class DescribeCdnLogsRequest extends AbstractModel
 {
     /**
-     * @var string 域名。
+     * @var string <p>域名。</p>
      */
     public $DomainName;
 
     /**
-     * @var string 获取日志起始时间点，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @var string <p>获取日志起始时间点，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p><p>参数格式：YYYY-MM-DDThh:mm:ssZ</p>
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间需大于起始时间；使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @var string <p>结束时间需大于起始时间；使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p><p>参数格式：YYYY-MM-DDThh:mm:ssZ</p>
      */
     public $EndTime;
 
     /**
-     * @var integer <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * @var integer <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var integer 分页拉取的最大返回结果数。默认值：100；最大值：1000。
+     * @var integer <p>分页拉取的最大返回结果数。默认值：100；最大值：1000。</p>
      */
     public $Limit;
 
     /**
-     * @var integer 分页拉取的起始偏移量。默认值：0。
+     * @var integer <p>分页拉取的起始偏移量。默认值：0。</p>
      */
     public $Offset;
 
     /**
-     * @param string $DomainName 域名。
-     * @param string $StartTime 获取日志起始时间点，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-     * @param string $EndTime 结束时间需大于起始时间；使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-     * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     * @param integer $Limit 分页拉取的最大返回结果数。默认值：100；最大值：1000。
-     * @param integer $Offset 分页拉取的起始偏移量。默认值：0。
+     * @param string $DomainName <p>域名。</p>
+     * @param string $StartTime <p>获取日志起始时间点，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p><p>参数格式：YYYY-MM-DDThh:mm:ssZ</p>
+     * @param string $EndTime <p>结束时间需大于起始时间；使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p><p>参数格式：YYYY-MM-DDThh:mm:ssZ</p>
+     * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param integer $Limit <p>分页拉取的最大返回结果数。默认值：100；最大值：1000。</p>
+     * @param integer $Offset <p>分页拉取的起始偏移量。默认值：0。</p>
      */
     function __construct()
     {

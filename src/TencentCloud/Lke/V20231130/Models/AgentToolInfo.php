@@ -20,206 +20,214 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Agent的工具信息
  *
- * @method string getPluginId() 获取插件id
- * @method void setPluginId(string $PluginId) 设置插件id
- * @method string getPluginName() 获取插件名称
- * @method void setPluginName(string $PluginName) 设置插件名称
- * @method string getIconUrl() 获取插件图标url
- * @method void setIconUrl(string $IconUrl) 设置插件图标url
- * @method integer getPluginType() 获取0 自定义插件
-1 官方插件
-2 第三方插件 目前用于第三方实现的mcp server
- * @method void setPluginType(integer $PluginType) 设置0 自定义插件
-1 官方插件
-2 第三方插件 目前用于第三方实现的mcp server
- * @method string getToolId() 获取工具id
- * @method void setToolId(string $ToolId) 设置工具id
- * @method string getToolName() 获取工具名称
- * @method void setToolName(string $ToolName) 设置工具名称
- * @method string getToolDesc() 获取工具描述
- * @method void setToolDesc(string $ToolDesc) 设置工具描述
- * @method array getInputs() 获取输入参数
- * @method void setInputs(array $Inputs) 设置输入参数
- * @method array getOutputs() 获取输出参数
- * @method void setOutputs(array $Outputs) 设置输出参数
- * @method integer getCreateType() 获取创建方式，0:服务创建，1:代码创建，2:MCP创建	
- * @method void setCreateType(integer $CreateType) 设置创建方式，0:服务创建，1:代码创建，2:MCP创建	
- * @method AgentMCPServerInfo getMcpServer() 获取MCP插件的配置信息
- * @method void setMcpServer(AgentMCPServerInfo $McpServer) 设置MCP插件的配置信息
- * @method boolean getIsBindingKnowledge() 获取该工具是否和知识库绑定
- * @method void setIsBindingKnowledge(boolean $IsBindingKnowledge) 设置该工具是否和知识库绑定
- * @method integer getStatus() 获取插件状态，1:可用，2:不可用	
- * @method void setStatus(integer $Status) 设置插件状态，1:可用，2:不可用	
- * @method array getHeaders() 获取header信息
- * @method void setHeaders(array $Headers) 设置header信息
- * @method string getCallingMethod() 获取NON_STREAMING: 非流式  STREAMIN: 流式
+ * @method string getPluginId() 获取<p>插件id</p>
+ * @method void setPluginId(string $PluginId) 设置<p>插件id</p>
+ * @method string getPluginName() 获取<p>插件名称</p>
+ * @method void setPluginName(string $PluginName) 设置<p>插件名称</p>
+ * @method string getIconUrl() 获取<p>插件图标url</p>
+ * @method void setIconUrl(string $IconUrl) 设置<p>插件图标url</p>
+ * @method integer getPluginType() 获取<p>0 自定义插件<br>1 官方插件<br>2 第三方插件 目前用于第三方实现的mcp server</p>
+ * @method void setPluginType(integer $PluginType) 设置<p>0 自定义插件<br>1 官方插件<br>2 第三方插件 目前用于第三方实现的mcp server</p>
+ * @method string getToolId() 获取<p>工具id</p>
+ * @method void setToolId(string $ToolId) 设置<p>工具id</p>
+ * @method string getToolName() 获取<p>工具名称</p>
+ * @method void setToolName(string $ToolName) 设置<p>工具名称</p>
+ * @method string getToolDesc() 获取<p>工具描述</p>
+ * @method void setToolDesc(string $ToolDesc) 设置<p>工具描述</p>
+ * @method array getInputs() 获取<p>输入参数</p>
+ * @method void setInputs(array $Inputs) 设置<p>输入参数</p>
+ * @method array getOutputs() 获取<p>输出参数</p>
+ * @method void setOutputs(array $Outputs) 设置<p>输出参数</p>
+ * @method integer getCreateType() 获取<p>创建方式，0:服务创建，1:代码创建，2:MCP创建</p>
+ * @method void setCreateType(integer $CreateType) 设置<p>创建方式，0:服务创建，1:代码创建，2:MCP创建</p>
+ * @method AgentMCPServerInfo getMcpServer() 获取<p>MCP插件的配置信息</p>
+ * @method void setMcpServer(AgentMCPServerInfo $McpServer) 设置<p>MCP插件的配置信息</p>
+ * @method boolean getIsBindingKnowledge() 获取<p>该工具是否和知识库绑定</p>
+ * @method void setIsBindingKnowledge(boolean $IsBindingKnowledge) 设置<p>该工具是否和知识库绑定</p>
+ * @method integer getStatus() 获取<p>插件状态，1:可用，2:不可用</p>
+ * @method void setStatus(integer $Status) 设置<p>插件状态，1:可用，2:不可用</p>
+ * @method array getHeaders() 获取<p>header信息</p>
+ * @method void setHeaders(array $Headers) 设置<p>header信息</p>
+ * @method string getCallingMethod() 获取<p>NON_STREAMING: 非流式  STREAMIN: 流式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCallingMethod(string $CallingMethod) 设置NON_STREAMING: 非流式  STREAMIN: 流式
+ * @method void setCallingMethod(string $CallingMethod) 设置<p>NON_STREAMING: 非流式  STREAMIN: 流式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getQuery() 获取query信息
- * @method void setQuery(array $Query) 设置query信息
- * @method integer getFinanceStatus() 获取工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等）
- * @method void setFinanceStatus(integer $FinanceStatus) 设置工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等）
- * @method integer getToolSource() 获取工具来源: 0-来自插件，1-来自工作流
- * @method void setToolSource(integer $ToolSource) 设置工具来源: 0-来自插件，1-来自工作流
- * @method integer getFinanceType() 获取计费状态；0-不计费，1-限时免费，2-官方收费
- * @method void setFinanceType(integer $FinanceType) 设置计费状态；0-不计费，1-限时免费，2-官方收费
- * @method ToolAdvanceConfig getToolAdvanceConfig() 获取工具高级设置
- * @method void setToolAdvanceConfig(ToolAdvanceConfig $ToolAdvanceConfig) 设置工具高级设置
- * @method integer getAuthMode() 获取授权模式； 0-开发者授权；1-使用者授权
- * @method void setAuthMode(integer $AuthMode) 设置授权模式； 0-开发者授权；1-使用者授权
- * @method integer getAuthType() 获取授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；
- * @method void setAuthType(integer $AuthType) 设置授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；
- * @method integer getAuthConfigStatus() 获取工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置
- * @method void setAuthConfigStatus(integer $AuthConfigStatus) 设置工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置
+ * @method array getQuery() 获取<p>query信息</p>
+ * @method void setQuery(array $Query) 设置<p>query信息</p>
+ * @method integer getFinanceStatus() 获取<p>工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等）</p>
+ * @method void setFinanceStatus(integer $FinanceStatus) 设置<p>工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等）</p>
+ * @method integer getToolSource() 获取<p>工具来源: 0-来自插件，1-来自工作流</p>
+ * @method void setToolSource(integer $ToolSource) 设置<p>工具来源: 0-来自插件，1-来自工作流</p>
+ * @method integer getFinanceType() 获取<p>计费状态；0-不计费，1-限时免费，2-官方收费</p>
+ * @method void setFinanceType(integer $FinanceType) 设置<p>计费状态；0-不计费，1-限时免费，2-官方收费</p>
+ * @method ToolAdvanceConfig getToolAdvanceConfig() 获取<p>工具高级设置</p>
+ * @method void setToolAdvanceConfig(ToolAdvanceConfig $ToolAdvanceConfig) 设置<p>工具高级设置</p>
+ * @method integer getAuthMode() 获取<p>授权模式； 0-开发者授权；1-使用者授权</p>
+ * @method void setAuthMode(integer $AuthMode) 设置<p>授权模式； 0-开发者授权；1-使用者授权</p>
+ * @method integer getAuthType() 获取<p>授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；</p>
+ * @method void setAuthType(integer $AuthType) 设置<p>授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；</p>
+ * @method integer getAuthConfigStatus() 获取<p>工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置</p>
+ * @method void setAuthConfigStatus(integer $AuthConfigStatus) 设置<p>工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置</p>
+ * @method integer getToolAccessMode() 获取<p>连接器工具 API 类型</p><p>枚举值：</p><ul><li>1： 只读</li><li>2： 写/删除</li></ul>
+ * @method void setToolAccessMode(integer $ToolAccessMode) 设置<p>连接器工具 API 类型</p><p>枚举值：</p><ul><li>1： 只读</li><li>2： 写/删除</li></ul>
+ * @method boolean getIsDisabled() 获取<p>是否禁用该工具</p>
+ * @method void setIsDisabled(boolean $IsDisabled) 设置<p>是否禁用该工具</p>
  */
 class AgentToolInfo extends AbstractModel
 {
     /**
-     * @var string 插件id
+     * @var string <p>插件id</p>
      */
     public $PluginId;
 
     /**
-     * @var string 插件名称
+     * @var string <p>插件名称</p>
      */
     public $PluginName;
 
     /**
-     * @var string 插件图标url
+     * @var string <p>插件图标url</p>
      */
     public $IconUrl;
 
     /**
-     * @var integer 0 自定义插件
-1 官方插件
-2 第三方插件 目前用于第三方实现的mcp server
+     * @var integer <p>0 自定义插件<br>1 官方插件<br>2 第三方插件 目前用于第三方实现的mcp server</p>
      */
     public $PluginType;
 
     /**
-     * @var string 工具id
+     * @var string <p>工具id</p>
      */
     public $ToolId;
 
     /**
-     * @var string 工具名称
+     * @var string <p>工具名称</p>
      */
     public $ToolName;
 
     /**
-     * @var string 工具描述
+     * @var string <p>工具描述</p>
      */
     public $ToolDesc;
 
     /**
-     * @var array 输入参数
+     * @var array <p>输入参数</p>
      */
     public $Inputs;
 
     /**
-     * @var array 输出参数
+     * @var array <p>输出参数</p>
      */
     public $Outputs;
 
     /**
-     * @var integer 创建方式，0:服务创建，1:代码创建，2:MCP创建	
+     * @var integer <p>创建方式，0:服务创建，1:代码创建，2:MCP创建</p>
      */
     public $CreateType;
 
     /**
-     * @var AgentMCPServerInfo MCP插件的配置信息
+     * @var AgentMCPServerInfo <p>MCP插件的配置信息</p>
      */
     public $McpServer;
 
     /**
-     * @var boolean 该工具是否和知识库绑定
+     * @var boolean <p>该工具是否和知识库绑定</p>
      */
     public $IsBindingKnowledge;
 
     /**
-     * @var integer 插件状态，1:可用，2:不可用	
+     * @var integer <p>插件状态，1:可用，2:不可用</p>
      */
     public $Status;
 
     /**
-     * @var array header信息
+     * @var array <p>header信息</p>
      */
     public $Headers;
 
     /**
-     * @var string NON_STREAMING: 非流式  STREAMIN: 流式
+     * @var string <p>NON_STREAMING: 非流式  STREAMIN: 流式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CallingMethod;
 
     /**
-     * @var array query信息
+     * @var array <p>query信息</p>
      */
     public $Query;
 
     /**
-     * @var integer 工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等）
+     * @var integer <p>工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等）</p>
      */
     public $FinanceStatus;
 
     /**
-     * @var integer 工具来源: 0-来自插件，1-来自工作流
+     * @var integer <p>工具来源: 0-来自插件，1-来自工作流</p>
      */
     public $ToolSource;
 
     /**
-     * @var integer 计费状态；0-不计费，1-限时免费，2-官方收费
+     * @var integer <p>计费状态；0-不计费，1-限时免费，2-官方收费</p>
      */
     public $FinanceType;
 
     /**
-     * @var ToolAdvanceConfig 工具高级设置
+     * @var ToolAdvanceConfig <p>工具高级设置</p>
      */
     public $ToolAdvanceConfig;
 
     /**
-     * @var integer 授权模式； 0-开发者授权；1-使用者授权
+     * @var integer <p>授权模式； 0-开发者授权；1-使用者授权</p>
      */
     public $AuthMode;
 
     /**
-     * @var integer 授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；
+     * @var integer <p>授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；</p>
      */
     public $AuthType;
 
     /**
-     * @var integer 工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置
+     * @var integer <p>工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置</p>
      */
     public $AuthConfigStatus;
 
     /**
-     * @param string $PluginId 插件id
-     * @param string $PluginName 插件名称
-     * @param string $IconUrl 插件图标url
-     * @param integer $PluginType 0 自定义插件
-1 官方插件
-2 第三方插件 目前用于第三方实现的mcp server
-     * @param string $ToolId 工具id
-     * @param string $ToolName 工具名称
-     * @param string $ToolDesc 工具描述
-     * @param array $Inputs 输入参数
-     * @param array $Outputs 输出参数
-     * @param integer $CreateType 创建方式，0:服务创建，1:代码创建，2:MCP创建	
-     * @param AgentMCPServerInfo $McpServer MCP插件的配置信息
-     * @param boolean $IsBindingKnowledge 该工具是否和知识库绑定
-     * @param integer $Status 插件状态，1:可用，2:不可用	
-     * @param array $Headers header信息
-     * @param string $CallingMethod NON_STREAMING: 非流式  STREAMIN: 流式
+     * @var integer <p>连接器工具 API 类型</p><p>枚举值：</p><ul><li>1： 只读</li><li>2： 写/删除</li></ul>
+     */
+    public $ToolAccessMode;
+
+    /**
+     * @var boolean <p>是否禁用该工具</p>
+     */
+    public $IsDisabled;
+
+    /**
+     * @param string $PluginId <p>插件id</p>
+     * @param string $PluginName <p>插件名称</p>
+     * @param string $IconUrl <p>插件图标url</p>
+     * @param integer $PluginType <p>0 自定义插件<br>1 官方插件<br>2 第三方插件 目前用于第三方实现的mcp server</p>
+     * @param string $ToolId <p>工具id</p>
+     * @param string $ToolName <p>工具名称</p>
+     * @param string $ToolDesc <p>工具描述</p>
+     * @param array $Inputs <p>输入参数</p>
+     * @param array $Outputs <p>输出参数</p>
+     * @param integer $CreateType <p>创建方式，0:服务创建，1:代码创建，2:MCP创建</p>
+     * @param AgentMCPServerInfo $McpServer <p>MCP插件的配置信息</p>
+     * @param boolean $IsBindingKnowledge <p>该工具是否和知识库绑定</p>
+     * @param integer $Status <p>插件状态，1:可用，2:不可用</p>
+     * @param array $Headers <p>header信息</p>
+     * @param string $CallingMethod <p>NON_STREAMING: 非流式  STREAMIN: 流式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Query query信息
-     * @param integer $FinanceStatus 工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等）
-     * @param integer $ToolSource 工具来源: 0-来自插件，1-来自工作流
-     * @param integer $FinanceType 计费状态；0-不计费，1-限时免费，2-官方收费
-     * @param ToolAdvanceConfig $ToolAdvanceConfig 工具高级设置
-     * @param integer $AuthMode 授权模式； 0-开发者授权；1-使用者授权
-     * @param integer $AuthType 授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；
-     * @param integer $AuthConfigStatus 工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置
+     * @param array $Query <p>query信息</p>
+     * @param integer $FinanceStatus <p>工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等）</p>
+     * @param integer $ToolSource <p>工具来源: 0-来自插件，1-来自工作流</p>
+     * @param integer $FinanceType <p>计费状态；0-不计费，1-限时免费，2-官方收费</p>
+     * @param ToolAdvanceConfig $ToolAdvanceConfig <p>工具高级设置</p>
+     * @param integer $AuthMode <p>授权模式； 0-开发者授权；1-使用者授权</p>
+     * @param integer $AuthType <p>授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；</p>
+     * @param integer $AuthConfigStatus <p>工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置</p>
+     * @param integer $ToolAccessMode <p>连接器工具 API 类型</p><p>枚举值：</p><ul><li>1： 只读</li><li>2： 写/删除</li></ul>
+     * @param boolean $IsDisabled <p>是否禁用该工具</p>
      */
     function __construct()
     {
@@ -346,6 +354,14 @@ class AgentToolInfo extends AbstractModel
 
         if (array_key_exists("AuthConfigStatus",$param) and $param["AuthConfigStatus"] !== null) {
             $this->AuthConfigStatus = $param["AuthConfigStatus"];
+        }
+
+        if (array_key_exists("ToolAccessMode",$param) and $param["ToolAccessMode"] !== null) {
+            $this->ToolAccessMode = $param["ToolAccessMode"];
+        }
+
+        if (array_key_exists("IsDisabled",$param) and $param["IsDisabled"] !== null) {
+            $this->IsDisabled = $param["IsDisabled"];
         }
     }
 }

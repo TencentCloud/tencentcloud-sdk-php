@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Widget参数配置
  *
- * @method string getName() 获取参数名称
- * @method void setName(string $Name) 设置参数名称
- * @method integer getType() 获取参数类型
- * @method void setType(integer $Type) 设置参数类型
- * @method array getSubParams() 获取子参数
- * @method void setSubParams(array $SubParams) 设置子参数
- * @method string getDefaultValue() 获取默认值, Input未指定时，使用该值
- * @method void setDefaultValue(string $DefaultValue) 设置默认值, Input未指定时，使用该值
- * @method AgentInput getInput() 获取输入的值
- * @method void setInput(AgentInput $Input) 设置输入的值
+ * @method string getName() 获取<p>参数名称</p>
+ * @method void setName(string $Name) 设置<p>参数名称</p>
+ * @method integer getType() 获取<p>参数类型</p><p>枚举值：</p><ul><li>0： string</li><li>1： int</li><li>2： float</li><li>3： bool</li><li>4： object</li><li>5： array_string</li><li>6： array_int</li><li>7： array_float</li><li>8： array_bool</li><li>9： array_object</li><li>20： array_array</li></ul>
+ * @method void setType(integer $Type) 设置<p>参数类型</p><p>枚举值：</p><ul><li>0： string</li><li>1： int</li><li>2： float</li><li>3： bool</li><li>4： object</li><li>5： array_string</li><li>6： array_int</li><li>7： array_float</li><li>8： array_bool</li><li>9： array_object</li><li>20： array_array</li></ul>
+ * @method array getSubParams() 获取<p>子参数</p>
+ * @method void setSubParams(array $SubParams) 设置<p>子参数</p>
+ * @method string getDefaultValue() 获取<p>默认值, Input未指定时，使用该值</p>
+ * @method void setDefaultValue(string $DefaultValue) 设置<p>默认值, Input未指定时，使用该值</p>
+ * @method AgentInput getInput() 获取<p>输入的值</p>
+ * @method void setInput(AgentInput $Input) 设置<p>输入的值</p>
  */
 class WidgetParam extends AbstractModel
 {
     /**
-     * @var string 参数名称
+     * @var string <p>参数名称</p>
      */
     public $Name;
 
     /**
-     * @var integer 参数类型
+     * @var integer <p>参数类型</p><p>枚举值：</p><ul><li>0： string</li><li>1： int</li><li>2： float</li><li>3： bool</li><li>4： object</li><li>5： array_string</li><li>6： array_int</li><li>7： array_float</li><li>8： array_bool</li><li>9： array_object</li><li>20： array_array</li></ul>
      */
     public $Type;
 
     /**
-     * @var array 子参数
+     * @var array <p>子参数</p>
      */
     public $SubParams;
 
     /**
-     * @var string 默认值, Input未指定时，使用该值
+     * @var string <p>默认值, Input未指定时，使用该值</p>
      */
     public $DefaultValue;
 
     /**
-     * @var AgentInput 输入的值
+     * @var AgentInput <p>输入的值</p>
      */
     public $Input;
 
     /**
-     * @param string $Name 参数名称
-     * @param integer $Type 参数类型
-     * @param array $SubParams 子参数
-     * @param string $DefaultValue 默认值, Input未指定时，使用该值
-     * @param AgentInput $Input 输入的值
+     * @param string $Name <p>参数名称</p>
+     * @param integer $Type <p>参数类型</p><p>枚举值：</p><ul><li>0： string</li><li>1： int</li><li>2： float</li><li>3： bool</li><li>4： object</li><li>5： array_string</li><li>6： array_int</li><li>7： array_float</li><li>8： array_bool</li><li>9： array_object</li><li>20： array_array</li></ul>
+     * @param array $SubParams <p>子参数</p>
+     * @param string $DefaultValue <p>默认值, Input未指定时，使用该值</p>
+     * @param AgentInput $Input <p>输入的值</p>
      */
     function __construct()
     {

@@ -20,442 +20,438 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例详细信息
  *
- * @method integer getWanStatus() 获取外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
- * @method void setWanStatus(integer $WanStatus) 设置外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
- * @method string getZone() 获取可用区信息
- * @method void setZone(string $Zone) 设置可用区信息
- * @method integer getInitFlag() 获取初始化标志，可能的返回值为：0-未初始化；1-已初始化
- * @method void setInitFlag(integer $InitFlag) 设置初始化标志，可能的返回值为：0-未初始化；1-已初始化
- * @method RoVipInfo getRoVipInfo() 获取只读vip信息。单独开通只读实例访问的只读实例才有该字段
- * @method void setRoVipInfo(RoVipInfo $RoVipInfo) 设置只读vip信息。单独开通只读实例访问的只读实例才有该字段
- * @method integer getMemory() 获取内存容量，单位为 MB
- * @method void setMemory(integer $Memory) 设置内存容量，单位为 MB
- * @method integer getStatus() 获取实例状态，可能的返回值：0-创建中；1-运行中；4-正在进行隔离操作；5-已隔离
- * @method void setStatus(integer $Status) 设置实例状态，可能的返回值：0-创建中；1-运行中；4-正在进行隔离操作；5-已隔离
- * @method integer getVpcId() 获取私有网络 ID，例如：51102
- * @method void setVpcId(integer $VpcId) 设置私有网络 ID，例如：51102
- * @method SlaveInfo getSlaveInfo() 获取备机信息
- * @method void setSlaveInfo(SlaveInfo $SlaveInfo) 设置备机信息
- * @method string getInstanceId() 获取实例 ID
- * @method void setInstanceId(string $InstanceId) 设置实例 ID
- * @method integer getVolume() 获取硬盘容量，单位为 GB
- * @method void setVolume(integer $Volume) 设置硬盘容量，单位为 GB
- * @method integer getAutoRenew() 获取自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
- * @method void setAutoRenew(integer $AutoRenew) 设置自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
- * @method integer getProtectMode() 获取数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制
- * @method void setProtectMode(integer $ProtectMode) 设置数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制
- * @method array getRoGroups() 获取只读组详细信息
- * @method void setRoGroups(array $RoGroups) 设置只读组详细信息
- * @method integer getSubnetId() 获取子网 ID，例如：2333
- * @method void setSubnetId(integer $SubnetId) 设置子网 ID，例如：2333
- * @method integer getInstanceType() 获取实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
- * @method void setInstanceType(integer $InstanceType) 设置实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
- * @method integer getProjectId() 获取项目 ID
- * @method void setProjectId(integer $ProjectId) 设置项目 ID
- * @method string getRegion() 获取地域信息
- * @method void setRegion(string $Region) 设置地域信息
- * @method string getDeadlineTime() 获取实例到期时间
- * @method void setDeadlineTime(string $DeadlineTime) 设置实例到期时间
- * @method integer getDeployMode() 获取可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区
- * @method void setDeployMode(integer $DeployMode) 设置可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区
- * @method integer getTaskStatus() 获取实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
- * @method void setTaskStatus(integer $TaskStatus) 设置实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
- * @method MasterInfo getMasterInfo() 获取主实例详细信息
- * @method void setMasterInfo(MasterInfo $MasterInfo) 设置主实例详细信息
- * @method string getDeviceType() 获取实例类型
- * @method void setDeviceType(string $DeviceType) 设置实例类型
- * @method string getEngineVersion() 获取内核版本
- * @method void setEngineVersion(string $EngineVersion) 设置内核版本
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method array getDrInfo() 获取灾备实例详细信息
- * @method void setDrInfo(array $DrInfo) 设置灾备实例详细信息
- * @method string getWanDomain() 获取外网域名
- * @method void setWanDomain(string $WanDomain) 设置外网域名
- * @method integer getWanPort() 获取外网端口号
- * @method void setWanPort(integer $WanPort) 设置外网端口号
- * @method integer getPayType() 获取付费类型，可能的返回值：0-包年包月；1-按量计费
- * @method void setPayType(integer $PayType) 设置付费类型，可能的返回值：0-包年包月；1-按量计费
- * @method string getCreateTime() 获取实例创建时间
- * @method void setCreateTime(string $CreateTime) 设置实例创建时间
- * @method string getVip() 获取实例 IP
- * @method void setVip(string $Vip) 设置实例 IP
- * @method integer getVport() 获取端口号
- * @method void setVport(integer $Vport) 设置端口号
- * @method integer getCdbError() 获取磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定
- * @method void setCdbError(integer $CdbError) 设置磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定
- * @method string getUniqVpcId() 获取私有网络描述符，例如：“vpc-5v8wn9mg”
- * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络描述符，例如：“vpc-5v8wn9mg”
- * @method string getUniqSubnetId() 获取子网描述符，例如：“subnet-1typ0s7d”
- * @method void setUniqSubnetId(string $UniqSubnetId) 设置子网描述符，例如：“subnet-1typ0s7d”
- * @method string getPhysicalId() 获取物理 ID
- * @method void setPhysicalId(string $PhysicalId) 设置物理 ID
- * @method integer getCpu() 获取核心数
- * @method void setCpu(integer $Cpu) 设置核心数
- * @method integer getQps() 获取每秒查询数量
- * @method void setQps(integer $Qps) 设置每秒查询数量
- * @method string getZoneName() 获取可用区中文名称
- * @method void setZoneName(string $ZoneName) 设置可用区中文名称
- * @method string getDeviceClass() 获取物理机型
- * @method void setDeviceClass(string $DeviceClass) 设置物理机型
- * @method string getDeployGroupId() 获取置放群组 ID
- * @method void setDeployGroupId(string $DeployGroupId) 设置置放群组 ID
- * @method integer getZoneId() 获取可用区 ID
- * @method void setZoneId(integer $ZoneId) 设置可用区 ID
- * @method integer getInstanceNodes() 获取节点数
- * @method void setInstanceNodes(integer $InstanceNodes) 设置节点数
- * @method array getTagList() 获取标签列表
- * @method void setTagList(array $TagList) 设置标签列表
- * @method string getEngineType() 获取引擎类型
- * @method void setEngineType(string $EngineType) 设置引擎类型
- * @method integer getMaxDelayTime() 获取最大延迟阈值
- * @method void setMaxDelayTime(integer $MaxDelayTime) 设置最大延迟阈值
- * @method string getDiskType() 获取实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。
-说明：
-1. 若返回："DiskType": "CLOUD_HSSD"，则表示该实例磁盘类型为增强型 SSD 云硬盘。
-2. 若返回："DiskType": "CLOUD_SSD"，则表示该实例磁盘类型为 SSD 云硬盘。
-3. 若返回："DiskType": ""，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。
- * @method void setDiskType(string $DiskType) 设置实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。
-说明：
-1. 若返回："DiskType": "CLOUD_HSSD"，则表示该实例磁盘类型为增强型 SSD 云硬盘。
-2. 若返回："DiskType": "CLOUD_SSD"，则表示该实例磁盘类型为 SSD 云硬盘。
-3. 若返回："DiskType": ""，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。
- * @method integer getExpandCpu() 获取当前扩容的CPU核心数。
- * @method void setExpandCpu(integer $ExpandCpu) 设置当前扩容的CPU核心数。
- * @method array getClusterInfo() 获取云盘版实例节点信息
- * @method void setClusterInfo(array $ClusterInfo) 设置云盘版实例节点信息
- * @method array getAnalysisNodeInfos() 获取分析引擎节点列表
- * @method void setAnalysisNodeInfos(array $AnalysisNodeInfos) 设置分析引擎节点列表
- * @method integer getDeviceBandwidth() 获取设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。
- * @method void setDeviceBandwidth(integer $DeviceBandwidth) 设置设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。
- * @method string getDestroyProtect() 获取实例销毁保护状态，on表示开启保护，否则为关闭保护
- * @method void setDestroyProtect(string $DestroyProtect) 设置实例销毁保护状态，on表示开启保护，否则为关闭保护
- * @method string getCpuModel() 获取TDSQL引擎参数
- * @method void setCpuModel(string $CpuModel) 设置TDSQL引擎参数
+ * @method integer getWanStatus() 获取<p>外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网</p>
+ * @method void setWanStatus(integer $WanStatus) 设置<p>外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网</p>
+ * @method string getZone() 获取<p>可用区信息</p>
+ * @method void setZone(string $Zone) 设置<p>可用区信息</p>
+ * @method integer getInitFlag() 获取<p>初始化标志，可能的返回值为：0-未初始化；1-已初始化</p>
+ * @method void setInitFlag(integer $InitFlag) 设置<p>初始化标志，可能的返回值为：0-未初始化；1-已初始化</p>
+ * @method RoVipInfo getRoVipInfo() 获取<p>只读vip信息。单独开通只读实例访问的只读实例才有该字段</p>
+ * @method void setRoVipInfo(RoVipInfo $RoVipInfo) 设置<p>只读vip信息。单独开通只读实例访问的只读实例才有该字段</p>
+ * @method integer getMemory() 获取<p>内存容量，单位为 MB</p>
+ * @method void setMemory(integer $Memory) 设置<p>内存容量，单位为 MB</p>
+ * @method integer getStatus() 获取<p>实例状态，可能的返回值：0-创建中；1-运行中；4-正在进行隔离操作；5-已隔离</p>
+ * @method void setStatus(integer $Status) 设置<p>实例状态，可能的返回值：0-创建中；1-运行中；4-正在进行隔离操作；5-已隔离</p>
+ * @method integer getVpcId() 获取<p>私有网络 ID，例如：51102</p>
+ * @method void setVpcId(integer $VpcId) 设置<p>私有网络 ID，例如：51102</p>
+ * @method SlaveInfo getSlaveInfo() 获取<p>备机信息</p>
+ * @method void setSlaveInfo(SlaveInfo $SlaveInfo) 设置<p>备机信息</p>
+ * @method string getInstanceId() 获取<p>实例 ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID</p>
+ * @method integer getVolume() 获取<p>硬盘容量，单位为 GB</p>
+ * @method void setVolume(integer $Volume) 设置<p>硬盘容量，单位为 GB</p>
+ * @method integer getAutoRenew() 获取<p>自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费</p>
+ * @method void setAutoRenew(integer $AutoRenew) 设置<p>自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费</p>
+ * @method integer getProtectMode() 获取<p>数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制</p>
+ * @method void setProtectMode(integer $ProtectMode) 设置<p>数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制</p>
+ * @method array getRoGroups() 获取<p>只读组详细信息</p>
+ * @method void setRoGroups(array $RoGroups) 设置<p>只读组详细信息</p>
+ * @method integer getSubnetId() 获取<p>子网 ID，例如：2333</p>
+ * @method void setSubnetId(integer $SubnetId) 设置<p>子网 ID，例如：2333</p>
+ * @method integer getInstanceType() 获取<p>实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例</p>
+ * @method void setInstanceType(integer $InstanceType) 设置<p>实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例</p>
+ * @method integer getProjectId() 获取<p>项目 ID</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>项目 ID</p>
+ * @method string getRegion() 获取<p>地域信息</p>
+ * @method void setRegion(string $Region) 设置<p>地域信息</p>
+ * @method string getDeadlineTime() 获取<p>实例到期时间</p>
+ * @method void setDeadlineTime(string $DeadlineTime) 设置<p>实例到期时间</p>
+ * @method integer getDeployMode() 获取<p>可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区</p>
+ * @method void setDeployMode(integer $DeployMode) 设置<p>可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区</p>
+ * @method integer getTaskStatus() 获取<p>实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成</p>
+ * @method void setTaskStatus(integer $TaskStatus) 设置<p>实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成</p>
+ * @method MasterInfo getMasterInfo() 获取<p>主实例详细信息</p>
+ * @method void setMasterInfo(MasterInfo $MasterInfo) 设置<p>主实例详细信息</p>
+ * @method string getDeviceType() 获取<p>实例类型</p>
+ * @method void setDeviceType(string $DeviceType) 设置<p>实例类型</p>
+ * @method string getEngineVersion() 获取<p>内核版本</p>
+ * @method void setEngineVersion(string $EngineVersion) 设置<p>内核版本</p>
+ * @method string getInstanceName() 获取<p>实例名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称</p>
+ * @method array getDrInfo() 获取<p>灾备实例详细信息</p>
+ * @method void setDrInfo(array $DrInfo) 设置<p>灾备实例详细信息</p>
+ * @method string getWanDomain() 获取<p>外网域名</p>
+ * @method void setWanDomain(string $WanDomain) 设置<p>外网域名</p>
+ * @method integer getWanPort() 获取<p>外网端口号</p>
+ * @method void setWanPort(integer $WanPort) 设置<p>外网端口号</p>
+ * @method integer getPayType() 获取<p>付费类型，可能的返回值：0-包年包月；1-按量计费</p>
+ * @method void setPayType(integer $PayType) 设置<p>付费类型，可能的返回值：0-包年包月；1-按量计费</p>
+ * @method string getCreateTime() 获取<p>实例创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>实例创建时间</p>
+ * @method string getVip() 获取<p>实例 IP</p>
+ * @method void setVip(string $Vip) 设置<p>实例 IP</p>
+ * @method integer getVport() 获取<p>端口号</p>
+ * @method void setVport(integer $Vport) 设置<p>端口号</p>
+ * @method integer getCdbError() 获取<p>磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定</p>
+ * @method void setCdbError(integer $CdbError) 设置<p>磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定</p>
+ * @method string getUniqVpcId() 获取<p>私有网络描述符，例如：“vpc-5v8wn9mg”</p>
+ * @method void setUniqVpcId(string $UniqVpcId) 设置<p>私有网络描述符，例如：“vpc-5v8wn9mg”</p>
+ * @method string getUniqSubnetId() 获取<p>子网描述符，例如：“subnet-1typ0s7d”</p>
+ * @method void setUniqSubnetId(string $UniqSubnetId) 设置<p>子网描述符，例如：“subnet-1typ0s7d”</p>
+ * @method string getPhysicalId() 获取<p>物理 ID</p>
+ * @method void setPhysicalId(string $PhysicalId) 设置<p>物理 ID</p>
+ * @method integer getCpu() 获取<p>核心数</p>
+ * @method void setCpu(integer $Cpu) 设置<p>核心数</p>
+ * @method integer getQps() 获取<p>每秒查询数量</p>
+ * @method void setQps(integer $Qps) 设置<p>每秒查询数量</p>
+ * @method string getZoneName() 获取<p>可用区中文名称</p>
+ * @method void setZoneName(string $ZoneName) 设置<p>可用区中文名称</p>
+ * @method string getDeviceClass() 获取<p>物理机型</p>
+ * @method void setDeviceClass(string $DeviceClass) 设置<p>物理机型</p>
+ * @method string getDeployGroupId() 获取<p>置放群组 ID</p>
+ * @method void setDeployGroupId(string $DeployGroupId) 设置<p>置放群组 ID</p>
+ * @method integer getZoneId() 获取<p>可用区 ID</p>
+ * @method void setZoneId(integer $ZoneId) 设置<p>可用区 ID</p>
+ * @method integer getInstanceNodes() 获取<p>节点数</p>
+ * @method void setInstanceNodes(integer $InstanceNodes) 设置<p>节点数</p>
+ * @method array getTagList() 获取<p>标签列表</p>
+ * @method void setTagList(array $TagList) 设置<p>标签列表</p>
+ * @method string getEngineType() 获取<p>引擎类型</p>
+ * @method void setEngineType(string $EngineType) 设置<p>引擎类型</p>
+ * @method integer getMaxDelayTime() 获取<p>最大延迟阈值</p>
+ * @method void setMaxDelayTime(integer $MaxDelayTime) 设置<p>最大延迟阈值</p>
+ * @method string getDiskType() 获取<p>实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。<br>说明：</p><ol><li>若返回：&quot;DiskType&quot;: &quot;CLOUD_HSSD&quot;，则表示该实例磁盘类型为增强型 SSD 云硬盘。</li><li>若返回：&quot;DiskType&quot;: &quot;CLOUD_SSD&quot;，则表示该实例磁盘类型为 SSD 云硬盘。</li><li>若返回：&quot;DiskType&quot;: &quot;&quot;，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。</li></ol>
+ * @method void setDiskType(string $DiskType) 设置<p>实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。<br>说明：</p><ol><li>若返回：&quot;DiskType&quot;: &quot;CLOUD_HSSD&quot;，则表示该实例磁盘类型为增强型 SSD 云硬盘。</li><li>若返回：&quot;DiskType&quot;: &quot;CLOUD_SSD&quot;，则表示该实例磁盘类型为 SSD 云硬盘。</li><li>若返回：&quot;DiskType&quot;: &quot;&quot;，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。</li></ol>
+ * @method integer getExpandCpu() 获取<p>当前扩容的CPU核心数。</p>
+ * @method void setExpandCpu(integer $ExpandCpu) 设置<p>当前扩容的CPU核心数。</p>
+ * @method array getClusterInfo() 获取<p>云盘版实例节点信息</p>
+ * @method void setClusterInfo(array $ClusterInfo) 设置<p>云盘版实例节点信息</p>
+ * @method array getAnalysisNodeInfos() 获取<p>分析引擎节点列表</p>
+ * @method void setAnalysisNodeInfos(array $AnalysisNodeInfos) 设置<p>分析引擎节点列表</p>
+ * @method integer getDeviceBandwidth() 获取<p>设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。</p>
+ * @method void setDeviceBandwidth(integer $DeviceBandwidth) 设置<p>设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。</p>
+ * @method string getDestroyProtect() 获取<p>实例销毁保护状态，on表示开启保护，否则为关闭保护</p>
+ * @method void setDestroyProtect(string $DestroyProtect) 设置<p>实例销毁保护状态，on表示开启保护，否则为关闭保护</p>
+ * @method string getCpuModel() 获取<p>TDSQL引擎参数</p>
+ * @method void setCpuModel(string $CpuModel) 设置<p>TDSQL引擎参数</p>
+ * @method UpgradeAnalysisInstanceVersionInfo getAnalysisUpgradeVersionInfo() 获取<p>分析引擎实例版本升级信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAnalysisUpgradeVersionInfo(UpgradeAnalysisInstanceVersionInfo $AnalysisUpgradeVersionInfo) 设置<p>分析引擎实例版本升级信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
     /**
-     * @var integer 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
+     * @var integer <p>外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网</p>
      */
     public $WanStatus;
 
     /**
-     * @var string 可用区信息
+     * @var string <p>可用区信息</p>
      */
     public $Zone;
 
     /**
-     * @var integer 初始化标志，可能的返回值为：0-未初始化；1-已初始化
+     * @var integer <p>初始化标志，可能的返回值为：0-未初始化；1-已初始化</p>
      */
     public $InitFlag;
 
     /**
-     * @var RoVipInfo 只读vip信息。单独开通只读实例访问的只读实例才有该字段
+     * @var RoVipInfo <p>只读vip信息。单独开通只读实例访问的只读实例才有该字段</p>
      */
     public $RoVipInfo;
 
     /**
-     * @var integer 内存容量，单位为 MB
+     * @var integer <p>内存容量，单位为 MB</p>
      */
     public $Memory;
 
     /**
-     * @var integer 实例状态，可能的返回值：0-创建中；1-运行中；4-正在进行隔离操作；5-已隔离
+     * @var integer <p>实例状态，可能的返回值：0-创建中；1-运行中；4-正在进行隔离操作；5-已隔离</p>
      */
     public $Status;
 
     /**
-     * @var integer 私有网络 ID，例如：51102
+     * @var integer <p>私有网络 ID，例如：51102</p>
      */
     public $VpcId;
 
     /**
-     * @var SlaveInfo 备机信息
+     * @var SlaveInfo <p>备机信息</p>
      */
     public $SlaveInfo;
 
     /**
-     * @var string 实例 ID
+     * @var string <p>实例 ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 硬盘容量，单位为 GB
+     * @var integer <p>硬盘容量，单位为 GB</p>
      */
     public $Volume;
 
     /**
-     * @var integer 自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
+     * @var integer <p>自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费</p>
      */
     public $AutoRenew;
 
     /**
-     * @var integer 数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制
+     * @var integer <p>数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制</p>
      */
     public $ProtectMode;
 
     /**
-     * @var array 只读组详细信息
+     * @var array <p>只读组详细信息</p>
      */
     public $RoGroups;
 
     /**
-     * @var integer 子网 ID，例如：2333
+     * @var integer <p>子网 ID，例如：2333</p>
      */
     public $SubnetId;
 
     /**
-     * @var integer 实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
+     * @var integer <p>实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例</p>
      */
     public $InstanceType;
 
     /**
-     * @var integer 项目 ID
+     * @var integer <p>项目 ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var string 地域信息
+     * @var string <p>地域信息</p>
      */
     public $Region;
 
     /**
-     * @var string 实例到期时间
+     * @var string <p>实例到期时间</p>
      */
     public $DeadlineTime;
 
     /**
-     * @var integer 可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区
+     * @var integer <p>可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区</p>
      */
     public $DeployMode;
 
     /**
-     * @var integer 实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
+     * @var integer <p>实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成</p>
      */
     public $TaskStatus;
 
     /**
-     * @var MasterInfo 主实例详细信息
+     * @var MasterInfo <p>主实例详细信息</p>
      */
     public $MasterInfo;
 
     /**
-     * @var string 实例类型
+     * @var string <p>实例类型</p>
      */
     public $DeviceType;
 
     /**
-     * @var string 内核版本
+     * @var string <p>内核版本</p>
      */
     public $EngineVersion;
 
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
      */
     public $InstanceName;
 
     /**
-     * @var array 灾备实例详细信息
+     * @var array <p>灾备实例详细信息</p>
      */
     public $DrInfo;
 
     /**
-     * @var string 外网域名
+     * @var string <p>外网域名</p>
      */
     public $WanDomain;
 
     /**
-     * @var integer 外网端口号
+     * @var integer <p>外网端口号</p>
      */
     public $WanPort;
 
     /**
-     * @var integer 付费类型，可能的返回值：0-包年包月；1-按量计费
+     * @var integer <p>付费类型，可能的返回值：0-包年包月；1-按量计费</p>
      */
     public $PayType;
 
     /**
-     * @var string 实例创建时间
+     * @var string <p>实例创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 实例 IP
+     * @var string <p>实例 IP</p>
      */
     public $Vip;
 
     /**
-     * @var integer 端口号
+     * @var integer <p>端口号</p>
      */
     public $Vport;
 
     /**
-     * @var integer 磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定
+     * @var integer <p>磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定</p>
      */
     public $CdbError;
 
     /**
-     * @var string 私有网络描述符，例如：“vpc-5v8wn9mg”
+     * @var string <p>私有网络描述符，例如：“vpc-5v8wn9mg”</p>
      */
     public $UniqVpcId;
 
     /**
-     * @var string 子网描述符，例如：“subnet-1typ0s7d”
+     * @var string <p>子网描述符，例如：“subnet-1typ0s7d”</p>
      */
     public $UniqSubnetId;
 
     /**
-     * @var string 物理 ID
+     * @var string <p>物理 ID</p>
      */
     public $PhysicalId;
 
     /**
-     * @var integer 核心数
+     * @var integer <p>核心数</p>
      */
     public $Cpu;
 
     /**
-     * @var integer 每秒查询数量
+     * @var integer <p>每秒查询数量</p>
      */
     public $Qps;
 
     /**
-     * @var string 可用区中文名称
+     * @var string <p>可用区中文名称</p>
      */
     public $ZoneName;
 
     /**
-     * @var string 物理机型
+     * @var string <p>物理机型</p>
      */
     public $DeviceClass;
 
     /**
-     * @var string 置放群组 ID
+     * @var string <p>置放群组 ID</p>
      */
     public $DeployGroupId;
 
     /**
-     * @var integer 可用区 ID
+     * @var integer <p>可用区 ID</p>
      */
     public $ZoneId;
 
     /**
-     * @var integer 节点数
+     * @var integer <p>节点数</p>
      */
     public $InstanceNodes;
 
     /**
-     * @var array 标签列表
+     * @var array <p>标签列表</p>
      */
     public $TagList;
 
     /**
-     * @var string 引擎类型
+     * @var string <p>引擎类型</p>
      */
     public $EngineType;
 
     /**
-     * @var integer 最大延迟阈值
+     * @var integer <p>最大延迟阈值</p>
      */
     public $MaxDelayTime;
 
     /**
-     * @var string 实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。
-说明：
-1. 若返回："DiskType": "CLOUD_HSSD"，则表示该实例磁盘类型为增强型 SSD 云硬盘。
-2. 若返回："DiskType": "CLOUD_SSD"，则表示该实例磁盘类型为 SSD 云硬盘。
-3. 若返回："DiskType": ""，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。
+     * @var string <p>实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。<br>说明：</p><ol><li>若返回：&quot;DiskType&quot;: &quot;CLOUD_HSSD&quot;，则表示该实例磁盘类型为增强型 SSD 云硬盘。</li><li>若返回：&quot;DiskType&quot;: &quot;CLOUD_SSD&quot;，则表示该实例磁盘类型为 SSD 云硬盘。</li><li>若返回：&quot;DiskType&quot;: &quot;&quot;，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。</li></ol>
      */
     public $DiskType;
 
     /**
-     * @var integer 当前扩容的CPU核心数。
+     * @var integer <p>当前扩容的CPU核心数。</p>
      */
     public $ExpandCpu;
 
     /**
-     * @var array 云盘版实例节点信息
+     * @var array <p>云盘版实例节点信息</p>
      */
     public $ClusterInfo;
 
     /**
-     * @var array 分析引擎节点列表
+     * @var array <p>分析引擎节点列表</p>
      */
     public $AnalysisNodeInfos;
 
     /**
-     * @var integer 设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。
+     * @var integer <p>设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。</p>
      */
     public $DeviceBandwidth;
 
     /**
-     * @var string 实例销毁保护状态，on表示开启保护，否则为关闭保护
+     * @var string <p>实例销毁保护状态，on表示开启保护，否则为关闭保护</p>
      */
     public $DestroyProtect;
 
     /**
-     * @var string TDSQL引擎参数
+     * @var string <p>TDSQL引擎参数</p>
      */
     public $CpuModel;
 
     /**
-     * @param integer $WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
-     * @param string $Zone 可用区信息
-     * @param integer $InitFlag 初始化标志，可能的返回值为：0-未初始化；1-已初始化
-     * @param RoVipInfo $RoVipInfo 只读vip信息。单独开通只读实例访问的只读实例才有该字段
-     * @param integer $Memory 内存容量，单位为 MB
-     * @param integer $Status 实例状态，可能的返回值：0-创建中；1-运行中；4-正在进行隔离操作；5-已隔离
-     * @param integer $VpcId 私有网络 ID，例如：51102
-     * @param SlaveInfo $SlaveInfo 备机信息
-     * @param string $InstanceId 实例 ID
-     * @param integer $Volume 硬盘容量，单位为 GB
-     * @param integer $AutoRenew 自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
-     * @param integer $ProtectMode 数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制
-     * @param array $RoGroups 只读组详细信息
-     * @param integer $SubnetId 子网 ID，例如：2333
-     * @param integer $InstanceType 实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
-     * @param integer $ProjectId 项目 ID
-     * @param string $Region 地域信息
-     * @param string $DeadlineTime 实例到期时间
-     * @param integer $DeployMode 可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区
-     * @param integer $TaskStatus 实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
-     * @param MasterInfo $MasterInfo 主实例详细信息
-     * @param string $DeviceType 实例类型
-     * @param string $EngineVersion 内核版本
-     * @param string $InstanceName 实例名称
-     * @param array $DrInfo 灾备实例详细信息
-     * @param string $WanDomain 外网域名
-     * @param integer $WanPort 外网端口号
-     * @param integer $PayType 付费类型，可能的返回值：0-包年包月；1-按量计费
-     * @param string $CreateTime 实例创建时间
-     * @param string $Vip 实例 IP
-     * @param integer $Vport 端口号
-     * @param integer $CdbError 磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定
-     * @param string $UniqVpcId 私有网络描述符，例如：“vpc-5v8wn9mg”
-     * @param string $UniqSubnetId 子网描述符，例如：“subnet-1typ0s7d”
-     * @param string $PhysicalId 物理 ID
-     * @param integer $Cpu 核心数
-     * @param integer $Qps 每秒查询数量
-     * @param string $ZoneName 可用区中文名称
-     * @param string $DeviceClass 物理机型
-     * @param string $DeployGroupId 置放群组 ID
-     * @param integer $ZoneId 可用区 ID
-     * @param integer $InstanceNodes 节点数
-     * @param array $TagList 标签列表
-     * @param string $EngineType 引擎类型
-     * @param integer $MaxDelayTime 最大延迟阈值
-     * @param string $DiskType 实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。
-说明：
-1. 若返回："DiskType": "CLOUD_HSSD"，则表示该实例磁盘类型为增强型 SSD 云硬盘。
-2. 若返回："DiskType": "CLOUD_SSD"，则表示该实例磁盘类型为 SSD 云硬盘。
-3. 若返回："DiskType": ""，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。
-     * @param integer $ExpandCpu 当前扩容的CPU核心数。
-     * @param array $ClusterInfo 云盘版实例节点信息
-     * @param array $AnalysisNodeInfos 分析引擎节点列表
-     * @param integer $DeviceBandwidth 设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。
-     * @param string $DestroyProtect 实例销毁保护状态，on表示开启保护，否则为关闭保护
-     * @param string $CpuModel TDSQL引擎参数
+     * @var UpgradeAnalysisInstanceVersionInfo <p>分析引擎实例版本升级信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AnalysisUpgradeVersionInfo;
+
+    /**
+     * @param integer $WanStatus <p>外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网</p>
+     * @param string $Zone <p>可用区信息</p>
+     * @param integer $InitFlag <p>初始化标志，可能的返回值为：0-未初始化；1-已初始化</p>
+     * @param RoVipInfo $RoVipInfo <p>只读vip信息。单独开通只读实例访问的只读实例才有该字段</p>
+     * @param integer $Memory <p>内存容量，单位为 MB</p>
+     * @param integer $Status <p>实例状态，可能的返回值：0-创建中；1-运行中；4-正在进行隔离操作；5-已隔离</p>
+     * @param integer $VpcId <p>私有网络 ID，例如：51102</p>
+     * @param SlaveInfo $SlaveInfo <p>备机信息</p>
+     * @param string $InstanceId <p>实例 ID</p>
+     * @param integer $Volume <p>硬盘容量，单位为 GB</p>
+     * @param integer $AutoRenew <p>自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费</p>
+     * @param integer $ProtectMode <p>数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制</p>
+     * @param array $RoGroups <p>只读组详细信息</p>
+     * @param integer $SubnetId <p>子网 ID，例如：2333</p>
+     * @param integer $InstanceType <p>实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例</p>
+     * @param integer $ProjectId <p>项目 ID</p>
+     * @param string $Region <p>地域信息</p>
+     * @param string $DeadlineTime <p>实例到期时间</p>
+     * @param integer $DeployMode <p>可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区</p>
+     * @param integer $TaskStatus <p>实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成</p>
+     * @param MasterInfo $MasterInfo <p>主实例详细信息</p>
+     * @param string $DeviceType <p>实例类型</p>
+     * @param string $EngineVersion <p>内核版本</p>
+     * @param string $InstanceName <p>实例名称</p>
+     * @param array $DrInfo <p>灾备实例详细信息</p>
+     * @param string $WanDomain <p>外网域名</p>
+     * @param integer $WanPort <p>外网端口号</p>
+     * @param integer $PayType <p>付费类型，可能的返回值：0-包年包月；1-按量计费</p>
+     * @param string $CreateTime <p>实例创建时间</p>
+     * @param string $Vip <p>实例 IP</p>
+     * @param integer $Vport <p>端口号</p>
+     * @param integer $CdbError <p>磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定</p>
+     * @param string $UniqVpcId <p>私有网络描述符，例如：“vpc-5v8wn9mg”</p>
+     * @param string $UniqSubnetId <p>子网描述符，例如：“subnet-1typ0s7d”</p>
+     * @param string $PhysicalId <p>物理 ID</p>
+     * @param integer $Cpu <p>核心数</p>
+     * @param integer $Qps <p>每秒查询数量</p>
+     * @param string $ZoneName <p>可用区中文名称</p>
+     * @param string $DeviceClass <p>物理机型</p>
+     * @param string $DeployGroupId <p>置放群组 ID</p>
+     * @param integer $ZoneId <p>可用区 ID</p>
+     * @param integer $InstanceNodes <p>节点数</p>
+     * @param array $TagList <p>标签列表</p>
+     * @param string $EngineType <p>引擎类型</p>
+     * @param integer $MaxDelayTime <p>最大延迟阈值</p>
+     * @param string $DiskType <p>实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。<br>说明：</p><ol><li>若返回：&quot;DiskType&quot;: &quot;CLOUD_HSSD&quot;，则表示该实例磁盘类型为增强型 SSD 云硬盘。</li><li>若返回：&quot;DiskType&quot;: &quot;CLOUD_SSD&quot;，则表示该实例磁盘类型为 SSD 云硬盘。</li><li>若返回：&quot;DiskType&quot;: &quot;&quot;，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。</li></ol>
+     * @param integer $ExpandCpu <p>当前扩容的CPU核心数。</p>
+     * @param array $ClusterInfo <p>云盘版实例节点信息</p>
+     * @param array $AnalysisNodeInfos <p>分析引擎节点列表</p>
+     * @param integer $DeviceBandwidth <p>设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。</p>
+     * @param string $DestroyProtect <p>实例销毁保护状态，on表示开启保护，否则为关闭保护</p>
+     * @param string $CpuModel <p>TDSQL引擎参数</p>
+     * @param UpgradeAnalysisInstanceVersionInfo $AnalysisUpgradeVersionInfo <p>分析引擎实例版本升级信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -704,6 +700,11 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("CpuModel",$param) and $param["CpuModel"] !== null) {
             $this->CpuModel = $param["CpuModel"];
+        }
+
+        if (array_key_exists("AnalysisUpgradeVersionInfo",$param) and $param["AnalysisUpgradeVersionInfo"] !== null) {
+            $this->AnalysisUpgradeVersionInfo = new UpgradeAnalysisInstanceVersionInfo();
+            $this->AnalysisUpgradeVersionInfo->deserialize($param["AnalysisUpgradeVersionInfo"]);
         }
     }
 }

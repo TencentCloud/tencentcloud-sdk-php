@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getType() 获取数据源类型英文名
  * @method void setType(string $Type) 设置数据源类型英文名
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
  * @method string getStorageId() 获取存储实例ID
  * @method void setStorageId(string $StorageId) 设置存储实例ID
  */
@@ -33,12 +35,18 @@ class DescribeMountInstanceRequest extends AbstractModel
     public $Type;
 
     /**
+     * @var string <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public $TiProjectId;
+
+    /**
      * @var string 存储实例ID
      */
     public $StorageId;
 
     /**
      * @param string $Type 数据源类型英文名
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
      * @param string $StorageId 存储实例ID
      */
     function __construct()
@@ -56,6 +64,10 @@ class DescribeMountInstanceRequest extends AbstractModel
         }
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
         }
 
         if (array_key_exists("StorageId",$param) and $param["StorageId"] !== null) {

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateMPSTemplate返回参数结构体
  *
- * @method integer getDefinition() 获取MPS 任务模板唯一标识。该模板独立于直接在 MPS 服务中创建的模板。
- * @method void setDefinition(integer $Definition) 设置MPS 任务模板唯一标识。该模板独立于直接在 MPS 服务中创建的模板。
+ * @method integer getDefinition() 获取<p>MPS 任务模板唯一标识。该模板独立于直接在 MPS 服务中创建的模板。</p>
+ * @method void setDefinition(integer $Definition) 设置<p>MPS 任务模板唯一标识。该模板独立于直接在 MPS 服务中创建的模板。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateMPSTemplateResponse extends AbstractModel
 {
     /**
-     * @var integer MPS 任务模板唯一标识。该模板独立于直接在 MPS 服务中创建的模板。
+     * @var integer <p>MPS 任务模板唯一标识。该模板独立于直接在 MPS 服务中创建的模板。</p>
      */
     public $Definition;
 
@@ -38,7 +38,7 @@ class CreateMPSTemplateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Definition MPS 任务模板唯一标识。该模板独立于直接在 MPS 服务中创建的模板。
+     * @param integer $Definition <p>MPS 任务模板唯一标识。该模板独立于直接在 MPS 服务中创建的模板。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

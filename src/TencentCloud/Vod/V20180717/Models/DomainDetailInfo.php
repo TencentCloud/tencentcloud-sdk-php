@@ -20,106 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 域名信息
  *
- * @method string getDomain() 获取域名名称。
- * @method void setDomain(string $Domain) 设置域名名称。
- * @method array getAccelerateAreaInfos() 获取加速地区信息。
- * @method void setAccelerateAreaInfos(array $AccelerateAreaInfos) 设置加速地区信息。
- * @method string getDeployStatus() 获取部署状态，取值有：
-<li>Online：上线；</li>
-<li>Deploying：部署中；</li>
-<li>Locked: 锁定中，出现该状态时，无法对该域名进行部署变更。</li>
- * @method void setDeployStatus(string $DeployStatus) 设置部署状态，取值有：
-<li>Online：上线；</li>
-<li>Deploying：部署中；</li>
-<li>Locked: 锁定中，出现该状态时，无法对该域名进行部署变更。</li>
- * @method DomainHTTPSConfig getHTTPSConfig() 获取HTTPS 配置信息。
- * @method void setHTTPSConfig(DomainHTTPSConfig $HTTPSConfig) 设置HTTPS 配置信息。
- * @method UrlSignatureAuthPolicy getUrlSignatureAuthPolicy() 获取[Key 防盗链](https://cloud.tencent.com/document/product/266/14047)配置信息。
- * @method void setUrlSignatureAuthPolicy(UrlSignatureAuthPolicy $UrlSignatureAuthPolicy) 设置[Key 防盗链](https://cloud.tencent.com/document/product/266/14047)配置信息。
- * @method RefererAuthPolicy getRefererAuthPolicy() 获取[Referer 防盗链](https://cloud.tencent.com/document/product/266/14046)配置信息。
- * @method void setRefererAuthPolicy(RefererAuthPolicy $RefererAuthPolicy) 设置[Referer 防盗链](https://cloud.tencent.com/document/product/266/14046)配置信息。
- * @method string getCreateTime() 获取域名添加到腾讯云点播系统中的时间。
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
- * @method void setCreateTime(string $CreateTime) 设置域名添加到腾讯云点播系统中的时间。
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
- * @method DomainQUICConfig getQUICConfig() 获取域名 QUIC 配置信息。
- * @method void setQUICConfig(DomainQUICConfig $QUICConfig) 设置域名 QUIC 配置信息。
- * @method IPFilterPolicy getIPFilterPolicy() 获取IP 访问限制配置信息。
- * @method void setIPFilterPolicy(IPFilterPolicy $IPFilterPolicy) 设置IP 访问限制配置信息。
- * @method string getType() 获取域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>
- * @method void setType(string $Type) 设置域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>
+ * @method string getDomain() 获取<p>域名名称。</p>
+ * @method void setDomain(string $Domain) 设置<p>域名名称。</p>
+ * @method array getAccelerateAreaInfos() 获取<p>加速地区信息。</p>
+ * @method void setAccelerateAreaInfos(array $AccelerateAreaInfos) 设置<p>加速地区信息。</p>
+ * @method string getDeployStatus() 获取<p>部署状态，取值有：</p><li>Online：上线；</li><li>Deploying：部署中；</li><li>Locked: 锁定中，出现该状态时，无法对该域名进行部署变更。</li>
+ * @method void setDeployStatus(string $DeployStatus) 设置<p>部署状态，取值有：</p><li>Online：上线；</li><li>Deploying：部署中；</li><li>Locked: 锁定中，出现该状态时，无法对该域名进行部署变更。</li>
+ * @method DomainHTTPSConfig getHTTPSConfig() 获取<p>HTTPS 配置信息。</p>
+ * @method void setHTTPSConfig(DomainHTTPSConfig $HTTPSConfig) 设置<p>HTTPS 配置信息。</p>
+ * @method UrlSignatureAuthPolicy getUrlSignatureAuthPolicy() 获取<p><a href="https://cloud.tencent.com/document/product/266/14047">Key 防盗链</a>配置信息。</p>
+ * @method void setUrlSignatureAuthPolicy(UrlSignatureAuthPolicy $UrlSignatureAuthPolicy) 设置<p><a href="https://cloud.tencent.com/document/product/266/14047">Key 防盗链</a>配置信息。</p>
+ * @method RefererAuthPolicy getRefererAuthPolicy() 获取<p><a href="https://cloud.tencent.com/document/product/266/14046">Referer 防盗链</a>配置信息。</p>
+ * @method void setRefererAuthPolicy(RefererAuthPolicy $RefererAuthPolicy) 设置<p><a href="https://cloud.tencent.com/document/product/266/14046">Referer 防盗链</a>配置信息。</p>
+ * @method string getCreateTime() 获取<p>域名添加到腾讯云点播系统中的时间。<li>格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</li></p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>域名添加到腾讯云点播系统中的时间。<li>格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</li></p>
+ * @method DomainQUICConfig getQUICConfig() 获取<p>域名 QUIC 配置信息。</p>
+ * @method void setQUICConfig(DomainQUICConfig $QUICConfig) 设置<p>域名 QUIC 配置信息。</p>
+ * @method IPFilterPolicy getIPFilterPolicy() 获取<p>IP 访问限制配置信息。</p>
+ * @method void setIPFilterPolicy(IPFilterPolicy $IPFilterPolicy) 设置<p>IP 访问限制配置信息。</p>
+ * @method string getType() 获取<p>域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li></p>
+ * @method void setType(string $Type) 设置<p>域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li></p>
  */
 class DomainDetailInfo extends AbstractModel
 {
     /**
-     * @var string 域名名称。
+     * @var string <p>域名名称。</p>
      */
     public $Domain;
 
     /**
-     * @var array 加速地区信息。
+     * @var array <p>加速地区信息。</p>
      */
     public $AccelerateAreaInfos;
 
     /**
-     * @var string 部署状态，取值有：
-<li>Online：上线；</li>
-<li>Deploying：部署中；</li>
-<li>Locked: 锁定中，出现该状态时，无法对该域名进行部署变更。</li>
+     * @var string <p>部署状态，取值有：</p><li>Online：上线；</li><li>Deploying：部署中；</li><li>Locked: 锁定中，出现该状态时，无法对该域名进行部署变更。</li>
      */
     public $DeployStatus;
 
     /**
-     * @var DomainHTTPSConfig HTTPS 配置信息。
+     * @var DomainHTTPSConfig <p>HTTPS 配置信息。</p>
      */
     public $HTTPSConfig;
 
     /**
-     * @var UrlSignatureAuthPolicy [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)配置信息。
+     * @var UrlSignatureAuthPolicy <p><a href="https://cloud.tencent.com/document/product/266/14047">Key 防盗链</a>配置信息。</p>
      */
     public $UrlSignatureAuthPolicy;
 
     /**
-     * @var RefererAuthPolicy [Referer 防盗链](https://cloud.tencent.com/document/product/266/14046)配置信息。
+     * @var RefererAuthPolicy <p><a href="https://cloud.tencent.com/document/product/266/14046">Referer 防盗链</a>配置信息。</p>
      */
     public $RefererAuthPolicy;
 
     /**
-     * @var string 域名添加到腾讯云点播系统中的时间。
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+     * @var string <p>域名添加到腾讯云点播系统中的时间。<li>格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</li></p>
      */
     public $CreateTime;
 
     /**
-     * @var DomainQUICConfig 域名 QUIC 配置信息。
+     * @var DomainQUICConfig <p>域名 QUIC 配置信息。</p>
      */
     public $QUICConfig;
 
     /**
-     * @var IPFilterPolicy IP 访问限制配置信息。
+     * @var IPFilterPolicy <p>IP 访问限制配置信息。</p>
      */
     public $IPFilterPolicy;
 
     /**
-     * @var string 域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>
+     * @var string <p>域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li></p>
      */
     public $Type;
 
     /**
-     * @param string $Domain 域名名称。
-     * @param array $AccelerateAreaInfos 加速地区信息。
-     * @param string $DeployStatus 部署状态，取值有：
-<li>Online：上线；</li>
-<li>Deploying：部署中；</li>
-<li>Locked: 锁定中，出现该状态时，无法对该域名进行部署变更。</li>
-     * @param DomainHTTPSConfig $HTTPSConfig HTTPS 配置信息。
-     * @param UrlSignatureAuthPolicy $UrlSignatureAuthPolicy [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)配置信息。
-     * @param RefererAuthPolicy $RefererAuthPolicy [Referer 防盗链](https://cloud.tencent.com/document/product/266/14046)配置信息。
-     * @param string $CreateTime 域名添加到腾讯云点播系统中的时间。
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
-     * @param DomainQUICConfig $QUICConfig 域名 QUIC 配置信息。
-     * @param IPFilterPolicy $IPFilterPolicy IP 访问限制配置信息。
-     * @param string $Type 域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>
+     * @param string $Domain <p>域名名称。</p>
+     * @param array $AccelerateAreaInfos <p>加速地区信息。</p>
+     * @param string $DeployStatus <p>部署状态，取值有：</p><li>Online：上线；</li><li>Deploying：部署中；</li><li>Locked: 锁定中，出现该状态时，无法对该域名进行部署变更。</li>
+     * @param DomainHTTPSConfig $HTTPSConfig <p>HTTPS 配置信息。</p>
+     * @param UrlSignatureAuthPolicy $UrlSignatureAuthPolicy <p><a href="https://cloud.tencent.com/document/product/266/14047">Key 防盗链</a>配置信息。</p>
+     * @param RefererAuthPolicy $RefererAuthPolicy <p><a href="https://cloud.tencent.com/document/product/266/14046">Referer 防盗链</a>配置信息。</p>
+     * @param string $CreateTime <p>域名添加到腾讯云点播系统中的时间。<li>格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</li></p>
+     * @param DomainQUICConfig $QUICConfig <p>域名 QUIC 配置信息。</p>
+     * @param IPFilterPolicy $IPFilterPolicy <p>IP 访问限制配置信息。</p>
+     * @param string $Type <p>域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li></p>
      */
     function __construct()
     {

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置数据源类型英文名
  * @method string getStorageId() 获取存储实例ID
  * @method void setStorageId(string $StorageId) 设置存储实例ID
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
  * @method boolean getLimitMount() 获取限制开关是否开启，只有开启时才有限制，默认关闭
  * @method void setLimitMount(boolean $LimitMount) 设置限制开关是否开启，只有开启时才有限制，默认关闭
  */
@@ -40,6 +42,11 @@ class CreateMountLimitRequest extends AbstractModel
     public $StorageId;
 
     /**
+     * @var string <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public $TiProjectId;
+
+    /**
      * @var boolean 限制开关是否开启，只有开启时才有限制，默认关闭
      */
     public $LimitMount;
@@ -47,6 +54,7 @@ class CreateMountLimitRequest extends AbstractModel
     /**
      * @param string $Type 数据源类型英文名
      * @param string $StorageId 存储实例ID
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
      * @param boolean $LimitMount 限制开关是否开启，只有开启时才有限制，默认关闭
      */
     function __construct()
@@ -68,6 +76,10 @@ class CreateMountLimitRequest extends AbstractModel
 
         if (array_key_exists("StorageId",$param) and $param["StorageId"] !== null) {
             $this->StorageId = $param["StorageId"];
+        }
+
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
         }
 
         if (array_key_exists("LimitMount",$param) and $param["LimitMount"] !== null) {

@@ -20,401 +20,393 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 集群快照数据结构
  *
- * @method string getSnapshotName() 获取快照名称
+ * @method string getSnapshotName() 获取<p>快照名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSnapshotName(string $SnapshotName) 设置快照名称
+ * @method void setSnapshotName(string $SnapshotName) 设置<p>快照名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUuid() 获取快照Uuid
+ * @method string getUuid() 获取<p>快照Uuid</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUuid(string $Uuid) 设置快照Uuid
+ * @method void setUuid(string $Uuid) 设置<p>快照Uuid</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRepository() 获取仓库名称
+ * @method string getRepository() 获取<p>仓库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRepository(string $Repository) 设置仓库名称
+ * @method void setRepository(string $Repository) 设置<p>仓库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVersion() 获取该快照所属集群的版本号
+ * @method string getVersion() 获取<p>该快照所属集群的版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVersion(string $Version) 设置该快照所属集群的版本号
+ * @method void setVersion(string $Version) 设置<p>该快照所属集群的版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getIndices() 获取备份的索引列表
+ * @method array getIndices() 获取<p>备份的索引列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndices(array $Indices) 设置备份的索引列表
+ * @method void setIndices(array $Indices) 设置<p>备份的索引列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDataStreams() 获取备份的datastream列表
+ * @method array getDataStreams() 获取<p>备份的datastream列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataStreams(array $DataStreams) 设置备份的datastream列表
+ * @method void setDataStreams(array $DataStreams) 设置<p>备份的datastream列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getState() 获取备份的状态
-
-FAILED            备份失败
-
-IN_PROGRESS 备份执行中
-
-PARTIAL          备份部分成功，部分失败，备份失败的索引和原因会在Failures字段中展示
-
-SUCCESS     备份成功
+ * @method string getState() 获取<p>备份的状态</p><p>FAILED            备份失败</p><p>IN_PROGRESS 备份执行中</p><p>PARTIAL          备份部分成功，部分失败，备份失败的索引和原因会在Failures字段中展示</p><p>SUCCESS     备份成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setState(string $State) 设置备份的状态
-
-FAILED            备份失败
-
-IN_PROGRESS 备份执行中
-
-PARTIAL          备份部分成功，部分失败，备份失败的索引和原因会在Failures字段中展示
-
-SUCCESS     备份成功
+ * @method void setState(string $State) 设置<p>备份的状态</p><p>FAILED            备份失败</p><p>IN_PROGRESS 备份执行中</p><p>PARTIAL          备份部分成功，部分失败，备份失败的索引和原因会在Failures字段中展示</p><p>SUCCESS     备份成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStartTime() 获取快照备份的开始时间
+ * @method string getStartTime() 获取<p>快照备份的开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartTime(string $StartTime) 设置快照备份的开始时间
+ * @method void setStartTime(string $StartTime) 设置<p>快照备份的开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEndTime() 获取快照备份的结束时间
+ * @method string getEndTime() 获取<p>快照备份的结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEndTime(string $EndTime) 设置快照备份的结束时间
+ * @method void setEndTime(string $EndTime) 设置<p>快照备份的结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDurationInMillis() 获取快照备份的耗时时间
+ * @method integer getDurationInMillis() 获取<p>快照备份的耗时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDurationInMillis(integer $DurationInMillis) 设置快照备份的耗时时间
+ * @method void setDurationInMillis(integer $DurationInMillis) 设置<p>快照备份的耗时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalShards() 获取备份的总分片数
+ * @method integer getTotalShards() 获取<p>备份的总分片数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalShards(integer $TotalShards) 设置备份的总分片数
+ * @method void setTotalShards(integer $TotalShards) 设置<p>备份的总分片数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getFailedShards() 获取备份失败的分片数量
+ * @method integer getFailedShards() 获取<p>备份失败的分片数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFailedShards(integer $FailedShards) 设置备份失败的分片数量
+ * @method void setFailedShards(integer $FailedShards) 设置<p>备份失败的分片数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSuccessfulShards() 获取备份成功的分片数量
+ * @method integer getSuccessfulShards() 获取<p>备份成功的分片数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSuccessfulShards(integer $SuccessfulShards) 设置备份成功的分片数量
+ * @method void setSuccessfulShards(integer $SuccessfulShards) 设置<p>备份成功的分片数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getFailures() 获取备份失败的索引分片和失败原因
+ * @method array getFailures() 获取<p>备份失败的索引分片和失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFailures(array $Failures) 设置备份失败的索引分片和失败原因
+ * @method void setFailures(array $Failures) 设置<p>备份失败的索引分片和失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUserBackUp() 获取是否用户备份
+ * @method string getUserBackUp() 获取<p>是否用户备份</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserBackUp(string $UserBackUp) 设置是否用户备份
+ * @method void setUserBackUp(string $UserBackUp) 设置<p>是否用户备份</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getEsRepositoryType() 获取0 腾讯云仓库; 1 客户仓库
+ * @method integer getEsRepositoryType() 获取<p>0 腾讯云仓库; 1 客户仓库</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEsRepositoryType(integer $EsRepositoryType) 设置0 腾讯云仓库; 1 客户仓库
+ * @method void setEsRepositoryType(integer $EsRepositoryType) 设置<p>0 腾讯云仓库; 1 客户仓库</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPaasEsRepository() 获取托管快照仓库名称
+ * @method string getPaasEsRepository() 获取<p>托管快照仓库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPaasEsRepository(string $PaasEsRepository) 设置托管快照仓库名称
+ * @method void setPaasEsRepository(string $PaasEsRepository) 设置<p>托管快照仓库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUserEsRepository() 获取客户快照仓库名称
+ * @method string getUserEsRepository() 获取<p>客户快照仓库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserEsRepository(string $UserEsRepository) 设置客户快照仓库名称
+ * @method void setUserEsRepository(string $UserEsRepository) 设置<p>客户快照仓库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStorageDuration() 获取快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+ * @method integer getStorageDuration() 获取<p>快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStorageDuration(integer $StorageDuration) 设置快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+ * @method void setStorageDuration(integer $StorageDuration) 设置<p>快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAutoBackupInterval() 获取自动备份频率, 如果是0,则等效24
+ * @method integer getAutoBackupInterval() 获取<p>自动备份频率, 如果是0,则等效24</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAutoBackupInterval(integer $AutoBackupInterval) 设置自动备份频率, 如果是0,则等效24
+ * @method void setAutoBackupInterval(integer $AutoBackupInterval) 设置<p>自动备份频率, 如果是0,则等效24</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCosRetention() 获取备份锁定 0 不锁定; 1 锁定
+ * @method integer getCosRetention() 获取<p>备份锁定 0 不锁定; 1 锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCosRetention(integer $CosRetention) 设置备份锁定 0 不锁定; 1 锁定
+ * @method void setCosRetention(integer $CosRetention) 设置<p>备份锁定 0 不锁定; 1 锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRetainUntilDate() 获取锁定截止日期 2022-12-10T08:34:48.000Z
+ * @method string getRetainUntilDate() 获取<p>锁定截止日期 2022-12-10T08:34:48.000Z</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRetainUntilDate(string $RetainUntilDate) 设置锁定截止日期 2022-12-10T08:34:48.000Z
+ * @method void setRetainUntilDate(string $RetainUntilDate) 设置<p>锁定截止日期 2022-12-10T08:34:48.000Z</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRetentionGraceTime() 获取锁定宽限期,单位天
+ * @method integer getRetentionGraceTime() 获取<p>锁定宽限期,单位天</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRetentionGraceTime(integer $RetentionGraceTime) 设置锁定宽限期,单位天
+ * @method void setRetentionGraceTime(integer $RetentionGraceTime) 设置<p>锁定宽限期,单位天</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsLocked() 获取是否已经备份锁定 0 不锁定; 1 锁定
+ * @method integer getIsLocked() 获取<p>是否已经备份锁定 0 不锁定; 1 锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsLocked(integer $IsLocked) 设置是否已经备份锁定 0 不锁定; 1 锁定
+ * @method void setIsLocked(integer $IsLocked) 设置<p>是否已经备份锁定 0 不锁定; 1 锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRemoteCos() 获取跨地域备份 0 不跨地域; 1 跨地域
+ * @method integer getRemoteCos() 获取<p>跨地域备份 0 不跨地域; 1 跨地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRemoteCos(integer $RemoteCos) 设置跨地域备份 0 不跨地域; 1 跨地域
+ * @method void setRemoteCos(integer $RemoteCos) 设置<p>跨地域备份 0 不跨地域; 1 跨地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRemoteCosRegion() 获取跨地域备份地域名称 ap-guangzhou
+ * @method string getRemoteCosRegion() 获取<p>跨地域备份地域名称 ap-guangzhou</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRemoteCosRegion(string $RemoteCosRegion) 设置跨地域备份地域名称 ap-guangzhou
+ * @method void setRemoteCosRegion(string $RemoteCosRegion) 设置<p>跨地域备份地域名称 ap-guangzhou</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCosEncryption() 获取备份加密 0 不加密; 1 加密
+ * @method integer getCosEncryption() 获取<p>备份加密 0 不加密; 1 加密</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCosEncryption(integer $CosEncryption) 设置备份加密 0 不加密; 1 加密
+ * @method void setCosEncryption(integer $CosEncryption) 设置<p>备份加密 0 不加密; 1 加密</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getKmsKey() 获取kms密钥
+ * @method string getKmsKey() 获取<p>kms密钥</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKmsKey(string $KmsKey) 设置kms密钥
+ * @method void setKmsKey(string $KmsKey) 设置<p>kms密钥</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStrategyName() 获取策略名称
+ * @method string getStrategyName() 获取<p>策略名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStrategyName(string $StrategyName) 设置策略名称
+ * @method void setStrategyName(string $StrategyName) 设置<p>策略名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMultiAz() 获取cos多AZ备份 0 单AZ; 1 多AZ
+ * @method integer getMultiAz() 获取<p>cos多AZ备份 0 单AZ; 1 多AZ</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMultiAz(integer $MultiAz) 设置cos多AZ备份 0 单AZ; 1 多AZ
+ * @method void setMultiAz(integer $MultiAz) 设置<p>cos多AZ备份 0 单AZ; 1 多AZ</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMaxSnapshotPerSec() 获取<p>每节点写入仓库的最大速度 max_snapshot_bytes_per_sec, 默认40m</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxSnapshotPerSec(string $MaxSnapshotPerSec) 设置<p>每节点写入仓库的最大速度 max_snapshot_bytes_per_sec, 默认40m</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceId() 获取<p>实例ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Snapshots extends AbstractModel
 {
     /**
-     * @var string 快照名称
+     * @var string <p>快照名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotName;
 
     /**
-     * @var string 快照Uuid
+     * @var string <p>快照Uuid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uuid;
 
     /**
-     * @var string 仓库名称
+     * @var string <p>仓库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Repository;
 
     /**
-     * @var string 该快照所属集群的版本号
+     * @var string <p>该快照所属集群的版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
-     * @var array 备份的索引列表
+     * @var array <p>备份的索引列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Indices;
 
     /**
-     * @var array 备份的datastream列表
+     * @var array <p>备份的datastream列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataStreams;
 
     /**
-     * @var string 备份的状态
-
-FAILED            备份失败
-
-IN_PROGRESS 备份执行中
-
-PARTIAL          备份部分成功，部分失败，备份失败的索引和原因会在Failures字段中展示
-
-SUCCESS     备份成功
+     * @var string <p>备份的状态</p><p>FAILED            备份失败</p><p>IN_PROGRESS 备份执行中</p><p>PARTIAL          备份部分成功，部分失败，备份失败的索引和原因会在Failures字段中展示</p><p>SUCCESS     备份成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $State;
 
     /**
-     * @var string 快照备份的开始时间
+     * @var string <p>快照备份的开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
-     * @var string 快照备份的结束时间
+     * @var string <p>快照备份的结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
-     * @var integer 快照备份的耗时时间
+     * @var integer <p>快照备份的耗时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DurationInMillis;
 
     /**
-     * @var integer 备份的总分片数
+     * @var integer <p>备份的总分片数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalShards;
 
     /**
-     * @var integer 备份失败的分片数量
+     * @var integer <p>备份失败的分片数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailedShards;
 
     /**
-     * @var integer 备份成功的分片数量
+     * @var integer <p>备份成功的分片数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SuccessfulShards;
 
     /**
-     * @var array 备份失败的索引分片和失败原因
+     * @var array <p>备份失败的索引分片和失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Failures;
 
     /**
-     * @var string 是否用户备份
+     * @var string <p>是否用户备份</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserBackUp;
 
     /**
-     * @var integer 0 腾讯云仓库; 1 客户仓库
+     * @var integer <p>0 腾讯云仓库; 1 客户仓库</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EsRepositoryType;
 
     /**
-     * @var string 托管快照仓库名称
+     * @var string <p>托管快照仓库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PaasEsRepository;
 
     /**
-     * @var string 客户快照仓库名称
+     * @var string <p>客户快照仓库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserEsRepository;
 
     /**
-     * @var integer 快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+     * @var integer <p>快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StorageDuration;
 
     /**
-     * @var integer 自动备份频率, 如果是0,则等效24
+     * @var integer <p>自动备份频率, 如果是0,则等效24</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoBackupInterval;
 
     /**
-     * @var integer 备份锁定 0 不锁定; 1 锁定
+     * @var integer <p>备份锁定 0 不锁定; 1 锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CosRetention;
 
     /**
-     * @var string 锁定截止日期 2022-12-10T08:34:48.000Z
+     * @var string <p>锁定截止日期 2022-12-10T08:34:48.000Z</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RetainUntilDate;
 
     /**
-     * @var integer 锁定宽限期,单位天
+     * @var integer <p>锁定宽限期,单位天</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RetentionGraceTime;
 
     /**
-     * @var integer 是否已经备份锁定 0 不锁定; 1 锁定
+     * @var integer <p>是否已经备份锁定 0 不锁定; 1 锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsLocked;
 
     /**
-     * @var integer 跨地域备份 0 不跨地域; 1 跨地域
+     * @var integer <p>跨地域备份 0 不跨地域; 1 跨地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemoteCos;
 
     /**
-     * @var string 跨地域备份地域名称 ap-guangzhou
+     * @var string <p>跨地域备份地域名称 ap-guangzhou</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemoteCosRegion;
 
     /**
-     * @var integer 备份加密 0 不加密; 1 加密
+     * @var integer <p>备份加密 0 不加密; 1 加密</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CosEncryption;
 
     /**
-     * @var string kms密钥
+     * @var string <p>kms密钥</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KmsKey;
 
     /**
-     * @var string 策略名称
+     * @var string <p>策略名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StrategyName;
 
     /**
-     * @var integer cos多AZ备份 0 单AZ; 1 多AZ
+     * @var integer <p>cos多AZ备份 0 单AZ; 1 多AZ</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MultiAz;
 
     /**
-     * @param string $SnapshotName 快照名称
+     * @var string <p>每节点写入仓库的最大速度 max_snapshot_bytes_per_sec, 默认40m</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Uuid 快照Uuid
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Repository 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Version 该快照所属集群的版本号
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Indices 备份的索引列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DataStreams 备份的datastream列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $State 备份的状态
+     */
+    public $MaxSnapshotPerSec;
 
-FAILED            备份失败
+    /**
+     * @var string <p>实例ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceId;
 
-IN_PROGRESS 备份执行中
-
-PARTIAL          备份部分成功，部分失败，备份失败的索引和原因会在Failures字段中展示
-
-SUCCESS     备份成功
+    /**
+     * @param string $SnapshotName <p>快照名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StartTime 快照备份的开始时间
+     * @param string $Uuid <p>快照Uuid</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EndTime 快照备份的结束时间
+     * @param string $Repository <p>仓库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DurationInMillis 快照备份的耗时时间
+     * @param string $Version <p>该快照所属集群的版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalShards 备份的总分片数
+     * @param array $Indices <p>备份的索引列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $FailedShards 备份失败的分片数量
+     * @param array $DataStreams <p>备份的datastream列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SuccessfulShards 备份成功的分片数量
+     * @param string $State <p>备份的状态</p><p>FAILED            备份失败</p><p>IN_PROGRESS 备份执行中</p><p>PARTIAL          备份部分成功，部分失败，备份失败的索引和原因会在Failures字段中展示</p><p>SUCCESS     备份成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Failures 备份失败的索引分片和失败原因
+     * @param string $StartTime <p>快照备份的开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UserBackUp 是否用户备份
+     * @param string $EndTime <p>快照备份的结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $EsRepositoryType 0 腾讯云仓库; 1 客户仓库
+     * @param integer $DurationInMillis <p>快照备份的耗时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PaasEsRepository 托管快照仓库名称
+     * @param integer $TotalShards <p>备份的总分片数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UserEsRepository 客户快照仓库名称
+     * @param integer $FailedShards <p>备份失败的分片数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $StorageDuration 快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+     * @param integer $SuccessfulShards <p>备份成功的分片数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AutoBackupInterval 自动备份频率, 如果是0,则等效24
+     * @param array $Failures <p>备份失败的索引分片和失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CosRetention 备份锁定 0 不锁定; 1 锁定
+     * @param string $UserBackUp <p>是否用户备份</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RetainUntilDate 锁定截止日期 2022-12-10T08:34:48.000Z
+     * @param integer $EsRepositoryType <p>0 腾讯云仓库; 1 客户仓库</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RetentionGraceTime 锁定宽限期,单位天
+     * @param string $PaasEsRepository <p>托管快照仓库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsLocked 是否已经备份锁定 0 不锁定; 1 锁定
+     * @param string $UserEsRepository <p>客户快照仓库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RemoteCos 跨地域备份 0 不跨地域; 1 跨地域
+     * @param integer $StorageDuration <p>快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RemoteCosRegion 跨地域备份地域名称 ap-guangzhou
+     * @param integer $AutoBackupInterval <p>自动备份频率, 如果是0,则等效24</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CosEncryption 备份加密 0 不加密; 1 加密
+     * @param integer $CosRetention <p>备份锁定 0 不锁定; 1 锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $KmsKey kms密钥
+     * @param string $RetainUntilDate <p>锁定截止日期 2022-12-10T08:34:48.000Z</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StrategyName 策略名称
+     * @param integer $RetentionGraceTime <p>锁定宽限期,单位天</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MultiAz cos多AZ备份 0 单AZ; 1 多AZ
+     * @param integer $IsLocked <p>是否已经备份锁定 0 不锁定; 1 锁定</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RemoteCos <p>跨地域备份 0 不跨地域; 1 跨地域</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RemoteCosRegion <p>跨地域备份地域名称 ap-guangzhou</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CosEncryption <p>备份加密 0 不加密; 1 加密</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $KmsKey <p>kms密钥</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StrategyName <p>策略名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MultiAz <p>cos多AZ备份 0 单AZ; 1 多AZ</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MaxSnapshotPerSec <p>每节点写入仓库的最大速度 max_snapshot_bytes_per_sec, 默认40m</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceId <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -553,6 +545,14 @@ SUCCESS     备份成功
 
         if (array_key_exists("MultiAz",$param) and $param["MultiAz"] !== null) {
             $this->MultiAz = $param["MultiAz"];
+        }
+
+        if (array_key_exists("MaxSnapshotPerSec",$param) and $param["MaxSnapshotPerSec"] !== null) {
+            $this->MaxSnapshotPerSec = $param["MaxSnapshotPerSec"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

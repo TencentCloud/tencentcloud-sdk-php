@@ -20,106 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 治理中心服务入参
  *
- * @method string getName() 获取服务名。
- * @method void setName(string $Name) 设置服务名。
- * @method string getNamespace() 获取服务所属命名空间。
- * @method void setNamespace(string $Namespace) 设置服务所属命名空间。
- * @method string getComment() 获取服务描述信息。
- * @method void setComment(string $Comment) 设置服务描述信息。
- * @method array getMetadatas() 获取服务元数据。
- * @method void setMetadatas(array $Metadatas) 设置服务元数据。
- * @method string getDepartment() 获取服务所属部门。
- * @method void setDepartment(string $Department) 设置服务所属部门。
- * @method string getBusiness() 获取服务所属业务。
- * @method void setBusiness(string $Business) 设置服务所属业务。
- * @method array getUserIds() 获取被添加进来可以操作此命名空间的用户ID列表
- * @method void setUserIds(array $UserIds) 设置被添加进来可以操作此命名空间的用户ID列表
- * @method array getGroupIds() 获取被添加进来可以操作此命名空间的用户组ID列表
- * @method void setGroupIds(array $GroupIds) 设置被添加进来可以操作此命名空间的用户组ID列表
- * @method array getRemoveUserIds() 获取从操作此命名空间的用户组ID列表被移除的ID列表
- * @method void setRemoveUserIds(array $RemoveUserIds) 设置从操作此命名空间的用户组ID列表被移除的ID列表
- * @method array getRemoveGroupIds() 获取从可以操作此命名空间的用户组ID列表中被移除的ID列表
- * @method void setRemoveGroupIds(array $RemoveGroupIds) 设置从可以操作此命名空间的用户组ID列表中被移除的ID列表
- * @method array getExportTo() 获取该服务对哪些命名空间可见
- * @method void setExportTo(array $ExportTo) 设置该服务对哪些命名空间可见
- * @method boolean getSyncToGlobalRegistry() 获取是否开启同步到全局注册中心
- * @method void setSyncToGlobalRegistry(boolean $SyncToGlobalRegistry) 设置是否开启同步到全局注册中心
+ * @method string getName() 获取<p>服务名。</p>
+ * @method void setName(string $Name) 设置<p>服务名。</p>
+ * @method string getNamespace() 获取<p>服务所属命名空间。</p>
+ * @method void setNamespace(string $Namespace) 设置<p>服务所属命名空间。</p>
+ * @method string getComment() 获取<p>服务描述信息。</p>
+ * @method void setComment(string $Comment) 设置<p>服务描述信息。</p>
+ * @method array getMetadatas() 获取<p>服务元数据。</p>
+ * @method void setMetadatas(array $Metadatas) 设置<p>服务元数据。</p>
+ * @method string getDepartment() 获取<p>服务所属部门。</p>
+ * @method void setDepartment(string $Department) 设置<p>服务所属部门。</p>
+ * @method string getBusiness() 获取<p>服务所属业务。</p>
+ * @method void setBusiness(string $Business) 设置<p>服务所属业务。</p>
+ * @method array getUserIds() 获取<p>被添加进来可以操作此命名空间的用户ID列表</p>
+ * @method void setUserIds(array $UserIds) 设置<p>被添加进来可以操作此命名空间的用户ID列表</p>
+ * @method array getGroupIds() 获取<p>被添加进来可以操作此命名空间的用户组ID列表</p>
+ * @method void setGroupIds(array $GroupIds) 设置<p>被添加进来可以操作此命名空间的用户组ID列表</p>
+ * @method array getRemoveUserIds() 获取<p>从操作此命名空间的用户组ID列表被移除的ID列表</p>
+ * @method void setRemoveUserIds(array $RemoveUserIds) 设置<p>从操作此命名空间的用户组ID列表被移除的ID列表</p>
+ * @method array getRemoveGroupIds() 获取<p>从可以操作此命名空间的用户组ID列表中被移除的ID列表</p>
+ * @method void setRemoveGroupIds(array $RemoveGroupIds) 设置<p>从可以操作此命名空间的用户组ID列表中被移除的ID列表</p>
+ * @method array getExportTo() 获取<p>该服务对哪些命名空间可见</p>
+ * @method void setExportTo(array $ExportTo) 设置<p>该服务对哪些命名空间可见</p>
+ * @method boolean getSyncToGlobalRegistry() 获取<p>是否开启同步到全局注册中心</p>
+ * @method void setSyncToGlobalRegistry(boolean $SyncToGlobalRegistry) 设置<p>是否开启同步到全局注册中心</p>
+ * @method integer getType() 获取<p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul><p>默认值：0</p>
+ * @method void setType(integer $Type) 设置<p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul><p>默认值：0</p>
  */
 class GovernanceServiceInput extends AbstractModel
 {
     /**
-     * @var string 服务名。
+     * @var string <p>服务名。</p>
      */
     public $Name;
 
     /**
-     * @var string 服务所属命名空间。
+     * @var string <p>服务所属命名空间。</p>
      */
     public $Namespace;
 
     /**
-     * @var string 服务描述信息。
+     * @var string <p>服务描述信息。</p>
      */
     public $Comment;
 
     /**
-     * @var array 服务元数据。
+     * @var array <p>服务元数据。</p>
      */
     public $Metadatas;
 
     /**
-     * @var string 服务所属部门。
+     * @var string <p>服务所属部门。</p>
      */
     public $Department;
 
     /**
-     * @var string 服务所属业务。
+     * @var string <p>服务所属业务。</p>
      */
     public $Business;
 
     /**
-     * @var array 被添加进来可以操作此命名空间的用户ID列表
+     * @var array <p>被添加进来可以操作此命名空间的用户ID列表</p>
      */
     public $UserIds;
 
     /**
-     * @var array 被添加进来可以操作此命名空间的用户组ID列表
+     * @var array <p>被添加进来可以操作此命名空间的用户组ID列表</p>
      */
     public $GroupIds;
 
     /**
-     * @var array 从操作此命名空间的用户组ID列表被移除的ID列表
+     * @var array <p>从操作此命名空间的用户组ID列表被移除的ID列表</p>
      */
     public $RemoveUserIds;
 
     /**
-     * @var array 从可以操作此命名空间的用户组ID列表中被移除的ID列表
+     * @var array <p>从可以操作此命名空间的用户组ID列表中被移除的ID列表</p>
      */
     public $RemoveGroupIds;
 
     /**
-     * @var array 该服务对哪些命名空间可见
+     * @var array <p>该服务对哪些命名空间可见</p>
      */
     public $ExportTo;
 
     /**
-     * @var boolean 是否开启同步到全局注册中心
+     * @var boolean <p>是否开启同步到全局注册中心</p>
      */
     public $SyncToGlobalRegistry;
 
     /**
-     * @param string $Name 服务名。
-     * @param string $Namespace 服务所属命名空间。
-     * @param string $Comment 服务描述信息。
-     * @param array $Metadatas 服务元数据。
-     * @param string $Department 服务所属部门。
-     * @param string $Business 服务所属业务。
-     * @param array $UserIds 被添加进来可以操作此命名空间的用户ID列表
-     * @param array $GroupIds 被添加进来可以操作此命名空间的用户组ID列表
-     * @param array $RemoveUserIds 从操作此命名空间的用户组ID列表被移除的ID列表
-     * @param array $RemoveGroupIds 从可以操作此命名空间的用户组ID列表中被移除的ID列表
-     * @param array $ExportTo 该服务对哪些命名空间可见
-     * @param boolean $SyncToGlobalRegistry 是否开启同步到全局注册中心
+     * @var integer <p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul><p>默认值：0</p>
+     */
+    public $Type;
+
+    /**
+     * @param string $Name <p>服务名。</p>
+     * @param string $Namespace <p>服务所属命名空间。</p>
+     * @param string $Comment <p>服务描述信息。</p>
+     * @param array $Metadatas <p>服务元数据。</p>
+     * @param string $Department <p>服务所属部门。</p>
+     * @param string $Business <p>服务所属业务。</p>
+     * @param array $UserIds <p>被添加进来可以操作此命名空间的用户ID列表</p>
+     * @param array $GroupIds <p>被添加进来可以操作此命名空间的用户组ID列表</p>
+     * @param array $RemoveUserIds <p>从操作此命名空间的用户组ID列表被移除的ID列表</p>
+     * @param array $RemoveGroupIds <p>从可以操作此命名空间的用户组ID列表中被移除的ID列表</p>
+     * @param array $ExportTo <p>该服务对哪些命名空间可见</p>
+     * @param boolean $SyncToGlobalRegistry <p>是否开启同步到全局注册中心</p>
+     * @param integer $Type <p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul><p>默认值：0</p>
      */
     function __construct()
     {
@@ -185,6 +193,10 @@ class GovernanceServiceInput extends AbstractModel
 
         if (array_key_exists("SyncToGlobalRegistry",$param) and $param["SyncToGlobalRegistry"] !== null) {
             $this->SyncToGlobalRegistry = $param["SyncToGlobalRegistry"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

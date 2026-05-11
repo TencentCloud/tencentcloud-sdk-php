@@ -20,74 +20,75 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 访问代理配置
  *
- * @method integer getProxyCount() 获取数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones
- * @method void setProxyCount(integer $ProxyCount) 设置数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones
- * @method integer getCpu() 获取cpu核数
- * @method void setCpu(integer $Cpu) 设置cpu核数
- * @method integer getMem() 获取内存
- * @method void setMem(integer $Mem) 设置内存
- * @method string getConnectionPoolType() 获取连接池类型:SessionConnectionPool(会话级别连接池 )
- * @method void setConnectionPoolType(string $ConnectionPoolType) 设置连接池类型:SessionConnectionPool(会话级别连接池 )
- * @method string getOpenConnectionPool() 获取是否开启连接池,yes-开启，no-不开启
- * @method void setOpenConnectionPool(string $OpenConnectionPool) 设置是否开启连接池,yes-开启，no-不开启
- * @method integer getConnectionPoolTimeOut() 获取连接池阈值:单位（秒）
- * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) 设置连接池阈值:单位（秒）
- * @method string getDescription() 获取描述说明
- * @method void setDescription(string $Description) 设置描述说明
- * @method array getProxyZones() 获取数据库节点信息（该参数与ProxyCount需要任选一个输入）
- * @method void setProxyZones(array $ProxyZones) 设置数据库节点信息（该参数与ProxyCount需要任选一个输入）
+ * @method integer getProxyCount() 获取<p>数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones</p>
+ * @method void setProxyCount(integer $ProxyCount) 设置<p>数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones</p>
+ * @method integer getCpu() 获取<p>cpu核数</p>
+ * @method void setCpu(integer $Cpu) 设置<p>cpu核数</p>
+ * @method integer getMem() 获取<p>内存</p>
+ * @method void setMem(integer $Mem) 设置<p>内存</p>
+ * @method string getConnectionPoolType() 获取<p>连接池类型:SessionConnectionPool(会话级别连接池 )</p>
+ * @method void setConnectionPoolType(string $ConnectionPoolType) 设置<p>连接池类型:SessionConnectionPool(会话级别连接池 )</p>
+ * @method string getOpenConnectionPool() 获取<p>是否开启连接池,yes-开启，no-不开启</p>
+ * @method void setOpenConnectionPool(string $OpenConnectionPool) 设置<p>是否开启连接池,yes-开启，no-不开启</p>
+ * @method integer getConnectionPoolTimeOut() 获取<p>连接池阈值:单位（秒）</p>
+ * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) 设置<p>连接池阈值:单位（秒）</p>
+ * @method string getDescription() 获取<p>描述说明</p>
+ * @method void setDescription(string $Description) 设置<p>描述说明</p>
+ * @method array getProxyZones() 获取<p>数据库节点信息（该参数与ProxyCount需要任选一个输入）</p>
+ * @method void setProxyZones(array $ProxyZones) 设置<p>数据库节点信息（该参数与ProxyCount需要任选一个输入）</p>
  */
 class ProxyConfig extends AbstractModel
 {
     /**
-     * @var integer 数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones
+     * @var integer <p>数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones</p>
+     * @deprecated
      */
     public $ProxyCount;
 
     /**
-     * @var integer cpu核数
+     * @var integer <p>cpu核数</p>
      */
     public $Cpu;
 
     /**
-     * @var integer 内存
+     * @var integer <p>内存</p>
      */
     public $Mem;
 
     /**
-     * @var string 连接池类型:SessionConnectionPool(会话级别连接池 )
+     * @var string <p>连接池类型:SessionConnectionPool(会话级别连接池 )</p>
      */
     public $ConnectionPoolType;
 
     /**
-     * @var string 是否开启连接池,yes-开启，no-不开启
+     * @var string <p>是否开启连接池,yes-开启，no-不开启</p>
      */
     public $OpenConnectionPool;
 
     /**
-     * @var integer 连接池阈值:单位（秒）
+     * @var integer <p>连接池阈值:单位（秒）</p>
      */
     public $ConnectionPoolTimeOut;
 
     /**
-     * @var string 描述说明
+     * @var string <p>描述说明</p>
      */
     public $Description;
 
     /**
-     * @var array 数据库节点信息（该参数与ProxyCount需要任选一个输入）
+     * @var array <p>数据库节点信息（该参数与ProxyCount需要任选一个输入）</p>
      */
     public $ProxyZones;
 
     /**
-     * @param integer $ProxyCount 数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones
-     * @param integer $Cpu cpu核数
-     * @param integer $Mem 内存
-     * @param string $ConnectionPoolType 连接池类型:SessionConnectionPool(会话级别连接池 )
-     * @param string $OpenConnectionPool 是否开启连接池,yes-开启，no-不开启
-     * @param integer $ConnectionPoolTimeOut 连接池阈值:单位（秒）
-     * @param string $Description 描述说明
-     * @param array $ProxyZones 数据库节点信息（该参数与ProxyCount需要任选一个输入）
+     * @param integer $ProxyCount <p>数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones</p>
+     * @param integer $Cpu <p>cpu核数</p>
+     * @param integer $Mem <p>内存</p>
+     * @param string $ConnectionPoolType <p>连接池类型:SessionConnectionPool(会话级别连接池 )</p>
+     * @param string $OpenConnectionPool <p>是否开启连接池,yes-开启，no-不开启</p>
+     * @param integer $ConnectionPoolTimeOut <p>连接池阈值:单位（秒）</p>
+     * @param string $Description <p>描述说明</p>
+     * @param array $ProxyZones <p>数据库节点信息（该参数与ProxyCount需要任选一个输入）</p>
      */
     function __construct()
     {

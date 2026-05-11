@@ -206,7 +206,8 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DescribeWatermarkTemplatesResponse DescribeWatermarkTemplates(Models\DescribeWatermarkTemplatesRequest $req) 查询用户自定义水印模板，支持根据条件，分页查询。
  * @method Models\DescribeWordSamplesResponse DescribeWordSamples(Models\DescribeWordSamplesRequest $req) 该接口用于根据应用场景、关键词、标签，分页查询关键词样本信息。
  * @method Models\DescribeWorkflowsResponse DescribeWorkflows(Models\DescribeWorkflowsRequest $req) 根据工作流 ID，获取工作流详情列表。
- * @method Models\DesignVoiceAsyncResponse DesignVoiceAsync(Models\DesignVoiceAsyncRequest $req) 音色设计，根据prompt生成音色ID
+ * @method Models\DesignVoiceAsyncResponse DesignVoiceAsync(Models\DesignVoiceAsyncRequest $req) 音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
+ * @method Models\DetectVideoSubtitleAreaResponse DetectVideoSubtitleArea(Models\DetectVideoSubtitleAreaRequest $req) 快速探测视频文件的硬字幕区域
  * @method Models\DisableScheduleResponse DisableSchedule(Models\DisableScheduleRequest $req) 禁用自动化触发编排任务。
  * @method Models\DisableWorkflowResponse DisableWorkflow(Models\DisableWorkflowRequest $req) 禁用工作流。
  * @method Models\DisassociateSecurityGroupResponse DisassociateSecurityGroup(Models\DisassociateSecurityGroupRequest $req) 批量解绑安全组下面关联的输入输出。
@@ -299,7 +300,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\StartStreamPackageLinearAssemblyChannelResponse StartStreamPackageLinearAssemblyChannel(Models\StartStreamPackageLinearAssemblyChannelRequest $req) 启动媒体包装频道。
  * @method Models\StopStreamLinkFlowResponse StopStreamLinkFlow(Models\StopStreamLinkFlowRequest $req) 停止媒体传输流。
  * @method Models\StopStreamPackageLinearAssemblyChannelResponse StopStreamPackageLinearAssemblyChannel(Models\StopStreamPackageLinearAssemblyChannelRequest $req) 停止线性组装频道。
- * @method Models\SyncDubbingResponse SyncDubbing(Models\SyncDubbingRequest $req) 同步接口，返回克隆音色Id或合成音频结果
+ * @method Models\SyncDubbingResponse SyncDubbing(Models\SyncDubbingRequest $req) 同步接口，返回克隆音色ID或合成音频结果。克隆/设计音色数量上限默认100
  * @method Models\TextToSpeechAsyncResponse TextToSpeechAsync(Models\TextToSpeechAsyncRequest $req) 异步语音合成接口，支持长文本转语音
  * @method Models\TextTranslationResponse TextTranslation(Models\TextTranslationRequest $req) 文本翻译，使用 翻译字幕（附加语种）计费项，按1100字符（按照 Unicode 码点数 统计，hello 算5个字符，你好 算2个字符）/分钟折算到时长计费
  * @method Models\UpdateProjectResponse UpdateProject(Models\UpdateProjectRequest $req) 剧集项目更新

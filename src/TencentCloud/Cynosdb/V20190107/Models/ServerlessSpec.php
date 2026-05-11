@@ -20,69 +20,69 @@ use TencentCloud\Common\AbstractModel;
 /**
  * serverless规格
  *
- * @method float getMinCpu() 获取cpu最小值
- * @method void setMinCpu(float $MinCpu) 设置cpu最小值
- * @method float getMaxCpu() 获取cpu最大值
- * @method void setMaxCpu(float $MaxCpu) 设置cpu最大值
- * @method integer getMaxStorageSize() 获取最大存储空间
- * @method void setMaxStorageSize(integer $MaxStorageSize) 设置最大存储空间
- * @method integer getIsDefault() 获取是否为默认规格
- * @method void setIsDefault(integer $IsDefault) 设置是否为默认规格
- * @method boolean getHasStock() 获取是否有库存
- * @method void setHasStock(boolean $HasStock) 设置是否有库存
- * @method integer getStockCount() 获取库存数量
- * @method void setStockCount(integer $StockCount) 设置库存数量
- * @method array getZoneStockInfos() 获取可用区库存信息
+ * @method float getMinCpu() 获取<p>cpu最小值</p>
+ * @method void setMinCpu(float $MinCpu) 设置<p>cpu最小值</p>
+ * @method float getMaxCpu() 获取<p>cpu最大值</p>
+ * @method void setMaxCpu(float $MaxCpu) 设置<p>cpu最大值</p>
+ * @method integer getMaxStorageSize() 获取<p>最大存储空间</p>
+ * @method void setMaxStorageSize(integer $MaxStorageSize) 设置<p>最大存储空间</p>
+ * @method integer getIsDefault() 获取<p>是否为默认规格</p>
+ * @method void setIsDefault(integer $IsDefault) 设置<p>是否为默认规格</p>
+ * @method boolean getHasStock() 获取<p>是否有库存</p>
+ * @method void setHasStock(boolean $HasStock) 设置<p>是否有库存</p>
+ * @method integer getStockCount() 获取<p>库存数量</p>
+ * @method void setStockCount(integer $StockCount) 设置<p>库存数量</p>
+ * @method array getZoneStockInfos() 获取<p>可用区库存信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setZoneStockInfos(array $ZoneStockInfos) 设置可用区库存信息
+ * @method void setZoneStockInfos(array $ZoneStockInfos) 设置<p>可用区库存信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServerlessSpec extends AbstractModel
 {
     /**
-     * @var float cpu最小值
+     * @var float <p>cpu最小值</p>
      */
     public $MinCpu;
 
     /**
-     * @var float cpu最大值
+     * @var float <p>cpu最大值</p>
      */
     public $MaxCpu;
 
     /**
-     * @var integer 最大存储空间
+     * @var integer <p>最大存储空间</p>
      */
     public $MaxStorageSize;
 
     /**
-     * @var integer 是否为默认规格
+     * @var integer <p>是否为默认规格</p>
      */
     public $IsDefault;
 
     /**
-     * @var boolean 是否有库存
+     * @var boolean <p>是否有库存</p>
      */
     public $HasStock;
 
     /**
-     * @var integer 库存数量
+     * @var integer <p>库存数量</p>
      */
     public $StockCount;
 
     /**
-     * @var array 可用区库存信息
+     * @var array <p>可用区库存信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneStockInfos;
 
     /**
-     * @param float $MinCpu cpu最小值
-     * @param float $MaxCpu cpu最大值
-     * @param integer $MaxStorageSize 最大存储空间
-     * @param integer $IsDefault 是否为默认规格
-     * @param boolean $HasStock 是否有库存
-     * @param integer $StockCount 库存数量
-     * @param array $ZoneStockInfos 可用区库存信息
+     * @param float $MinCpu <p>cpu最小值</p>
+     * @param float $MaxCpu <p>cpu最大值</p>
+     * @param integer $MaxStorageSize <p>最大存储空间</p>
+     * @param integer $IsDefault <p>是否为默认规格</p>
+     * @param boolean $HasStock <p>是否有库存</p>
+     * @param integer $StockCount <p>库存数量</p>
+     * @param array $ZoneStockInfos <p>可用区库存信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

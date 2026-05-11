@@ -20,106 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGovernanceServices请求参数结构体
  *
- * @method string getName() 获取按照服务名过滤，精确匹配。
- * @method void setName(string $Name) 设置按照服务名过滤，精确匹配。
- * @method string getNamespace() 获取按照命名空间过滤，精确匹配。
- * @method void setNamespace(string $Namespace) 设置按照命名空间过滤，精确匹配。
- * @method array getMetadatas() 获取使用元数据过滤，目前只支持一组元组数，若传了多条，只会使用第一条元数据过滤。
- * @method void setMetadatas(array $Metadatas) 设置使用元数据过滤，目前只支持一组元组数，若传了多条，只会使用第一条元数据过滤。
- * @method integer getOffset() 获取偏移量，默认为0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
- * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
- * @method string getInstanceId() 获取tse 实例 id。
- * @method void setInstanceId(string $InstanceId) 设置tse 实例 id。
- * @method string getDepartment() 获取服务所属部门。
- * @method void setDepartment(string $Department) 设置服务所属部门。
- * @method string getBusiness() 获取服务所属业务。
- * @method void setBusiness(string $Business) 设置服务所属业务。
- * @method string getHost() 获取服务中实例的ip，用来过滤服务。
- * @method void setHost(string $Host) 设置服务中实例的ip，用来过滤服务。
- * @method boolean getOnlyExistHealthyInstance() 获取是否只查询存在健康实例的服务
- * @method void setOnlyExistHealthyInstance(boolean $OnlyExistHealthyInstance) 设置是否只查询存在健康实例的服务
- * @method string getSyncToGlobalRegistry() 获取是否开启同步到全局注册中心	
- * @method void setSyncToGlobalRegistry(string $SyncToGlobalRegistry) 设置是否开启同步到全局注册中心	
- * @method array getStatusFilter() 获取过滤筛选条件
- * @method void setStatusFilter(array $StatusFilter) 设置过滤筛选条件
+ * @method string getName() 获取<p>按照服务名过滤，精确匹配。</p>
+ * @method void setName(string $Name) 设置<p>按照服务名过滤，精确匹配。</p>
+ * @method string getNamespace() 获取<p>按照命名空间过滤，精确匹配。</p>
+ * @method void setNamespace(string $Namespace) 设置<p>按照命名空间过滤，精确匹配。</p>
+ * @method array getMetadatas() 获取<p>使用元数据过滤，目前只支持一组元组数，若传了多条，只会使用第一条元数据过滤。</p>
+ * @method void setMetadatas(array $Metadatas) 设置<p>使用元数据过滤，目前只支持一组元组数，若传了多条，只会使用第一条元数据过滤。</p>
+ * @method integer getOffset() 获取<p>偏移量，默认为0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为0。</p>
+ * @method integer getLimit() 获取<p>返回数量，默认为20，最大值为100。</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认为20，最大值为100。</p>
+ * @method string getInstanceId() 获取<p>tse 实例 id。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>tse 实例 id。</p>
+ * @method string getDepartment() 获取<p>服务所属部门。</p>
+ * @method void setDepartment(string $Department) 设置<p>服务所属部门。</p>
+ * @method string getBusiness() 获取<p>服务所属业务。</p>
+ * @method void setBusiness(string $Business) 设置<p>服务所属业务。</p>
+ * @method string getHost() 获取<p>服务中实例的ip，用来过滤服务。</p>
+ * @method void setHost(string $Host) 设置<p>服务中实例的ip，用来过滤服务。</p>
+ * @method boolean getOnlyExistHealthyInstance() 获取<p>是否只查询存在健康实例的服务</p>
+ * @method void setOnlyExistHealthyInstance(boolean $OnlyExistHealthyInstance) 设置<p>是否只查询存在健康实例的服务</p>
+ * @method string getSyncToGlobalRegistry() 获取<p>是否开启同步到全局注册中心</p>
+ * @method void setSyncToGlobalRegistry(string $SyncToGlobalRegistry) 设置<p>是否开启同步到全局注册中心</p>
+ * @method array getStatusFilter() 获取<p>过滤筛选条件</p>
+ * @method void setStatusFilter(array $StatusFilter) 设置<p>过滤筛选条件</p>
+ * @method integer getType() 获取<p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul>
+ * @method void setType(integer $Type) 设置<p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul>
  */
 class DescribeGovernanceServicesRequest extends AbstractModel
 {
     /**
-     * @var string 按照服务名过滤，精确匹配。
+     * @var string <p>按照服务名过滤，精确匹配。</p>
      */
     public $Name;
 
     /**
-     * @var string 按照命名空间过滤，精确匹配。
+     * @var string <p>按照命名空间过滤，精确匹配。</p>
      */
     public $Namespace;
 
     /**
-     * @var array 使用元数据过滤，目前只支持一组元组数，若传了多条，只会使用第一条元数据过滤。
+     * @var array <p>使用元数据过滤，目前只支持一组元组数，若传了多条，只会使用第一条元数据过滤。</p>
      */
     public $Metadatas;
 
     /**
-     * @var integer 偏移量，默认为0。
+     * @var integer <p>偏移量，默认为0。</p>
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认为20，最大值为100。
+     * @var integer <p>返回数量，默认为20，最大值为100。</p>
      */
     public $Limit;
 
     /**
-     * @var string tse 实例 id。
+     * @var string <p>tse 实例 id。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 服务所属部门。
+     * @var string <p>服务所属部门。</p>
      */
     public $Department;
 
     /**
-     * @var string 服务所属业务。
+     * @var string <p>服务所属业务。</p>
      */
     public $Business;
 
     /**
-     * @var string 服务中实例的ip，用来过滤服务。
+     * @var string <p>服务中实例的ip，用来过滤服务。</p>
      */
     public $Host;
 
     /**
-     * @var boolean 是否只查询存在健康实例的服务
+     * @var boolean <p>是否只查询存在健康实例的服务</p>
      */
     public $OnlyExistHealthyInstance;
 
     /**
-     * @var string 是否开启同步到全局注册中心	
+     * @var string <p>是否开启同步到全局注册中心</p>
      */
     public $SyncToGlobalRegistry;
 
     /**
-     * @var array 过滤筛选条件
+     * @var array <p>过滤筛选条件</p>
      */
     public $StatusFilter;
 
     /**
-     * @param string $Name 按照服务名过滤，精确匹配。
-     * @param string $Namespace 按照命名空间过滤，精确匹配。
-     * @param array $Metadatas 使用元数据过滤，目前只支持一组元组数，若传了多条，只会使用第一条元数据过滤。
-     * @param integer $Offset 偏移量，默认为0。
-     * @param integer $Limit 返回数量，默认为20，最大值为100。
-     * @param string $InstanceId tse 实例 id。
-     * @param string $Department 服务所属部门。
-     * @param string $Business 服务所属业务。
-     * @param string $Host 服务中实例的ip，用来过滤服务。
-     * @param boolean $OnlyExistHealthyInstance 是否只查询存在健康实例的服务
-     * @param string $SyncToGlobalRegistry 是否开启同步到全局注册中心	
-     * @param array $StatusFilter 过滤筛选条件
+     * @var integer <p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul>
+     */
+    public $Type;
+
+    /**
+     * @param string $Name <p>按照服务名过滤，精确匹配。</p>
+     * @param string $Namespace <p>按照命名空间过滤，精确匹配。</p>
+     * @param array $Metadatas <p>使用元数据过滤，目前只支持一组元组数，若传了多条，只会使用第一条元数据过滤。</p>
+     * @param integer $Offset <p>偏移量，默认为0。</p>
+     * @param integer $Limit <p>返回数量，默认为20，最大值为100。</p>
+     * @param string $InstanceId <p>tse 实例 id。</p>
+     * @param string $Department <p>服务所属部门。</p>
+     * @param string $Business <p>服务所属业务。</p>
+     * @param string $Host <p>服务中实例的ip，用来过滤服务。</p>
+     * @param boolean $OnlyExistHealthyInstance <p>是否只查询存在健康实例的服务</p>
+     * @param string $SyncToGlobalRegistry <p>是否开启同步到全局注册中心</p>
+     * @param array $StatusFilter <p>过滤筛选条件</p>
+     * @param integer $Type <p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul>
      */
     function __construct()
     {
@@ -190,6 +198,10 @@ class DescribeGovernanceServicesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->StatusFilter, $obj);
             }
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

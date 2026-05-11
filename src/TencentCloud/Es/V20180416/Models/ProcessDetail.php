@@ -20,70 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 任务进度详情
  *
- * @method integer getCompleted() 获取已完成数量
+ * @method integer getCompleted() 获取<p>已完成数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCompleted(integer $Completed) 设置已完成数量
+ * @method void setCompleted(integer $Completed) 设置<p>已完成数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRemain() 获取剩余数量
+ * @method integer getRemain() 获取<p>剩余数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRemain(integer $Remain) 设置剩余数量
+ * @method void setRemain(integer $Remain) 设置<p>剩余数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotal() 获取总数量
+ * @method integer getTotal() 获取<p>总数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotal(integer $Total) 设置总数量
+ * @method void setTotal(integer $Total) 设置<p>总数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTaskType() 获取任务类型：
-60：重启型任务
-70：分片迁移型任务
-80：节点变配任务
+ * @method integer getTaskType() 获取<p>任务类型：<br>60：重启型任务<br>70：分片迁移型任务<br>80：节点变配任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskType(integer $TaskType) 设置任务类型：
-60：重启型任务
-70：分片迁移型任务
-80：节点变配任务
+ * @method void setTaskType(integer $TaskType) 设置<p>任务类型：<br>60：重启型任务<br>70：分片迁移型任务<br>80：节点变配任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEstimatedTimeRemaining() 获取<p>预估剩余时间</p><p>单位：秒</p>
+ * @method void setEstimatedTimeRemaining(integer $EstimatedTimeRemaining) 设置<p>预估剩余时间</p><p>单位：秒</p>
  */
 class ProcessDetail extends AbstractModel
 {
     /**
-     * @var integer 已完成数量
+     * @var integer <p>已完成数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Completed;
 
     /**
-     * @var integer 剩余数量
+     * @var integer <p>剩余数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remain;
 
     /**
-     * @var integer 总数量
+     * @var integer <p>总数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
     /**
-     * @var integer 任务类型：
-60：重启型任务
-70：分片迁移型任务
-80：节点变配任务
+     * @var integer <p>任务类型：<br>60：重启型任务<br>70：分片迁移型任务<br>80：节点变配任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskType;
 
     /**
-     * @param integer $Completed 已完成数量
+     * @var integer <p>预估剩余时间</p><p>单位：秒</p>
+     */
+    public $EstimatedTimeRemaining;
+
+    /**
+     * @param integer $Completed <p>已完成数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Remain 剩余数量
+     * @param integer $Remain <p>剩余数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Total 总数量
+     * @param integer $Total <p>总数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TaskType 任务类型：
-60：重启型任务
-70：分片迁移型任务
-80：节点变配任务
+     * @param integer $TaskType <p>任务类型：<br>60：重启型任务<br>70：分片迁移型任务<br>80：节点变配任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EstimatedTimeRemaining <p>预估剩余时间</p><p>单位：秒</p>
      */
     function __construct()
     {
@@ -112,6 +108,10 @@ class ProcessDetail extends AbstractModel
 
         if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
             $this->TaskType = $param["TaskType"];
+        }
+
+        if (array_key_exists("EstimatedTimeRemaining",$param) and $param["EstimatedTimeRemaining"] !== null) {
+            $this->EstimatedTimeRemaining = $param["EstimatedTimeRemaining"];
         }
     }
 }

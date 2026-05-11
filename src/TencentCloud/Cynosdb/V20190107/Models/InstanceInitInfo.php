@@ -20,90 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例初始化配置信息
  *
- * @method integer getCpu() 获取实例cpu
- * @method void setCpu(integer $Cpu) 设置实例cpu
- * @method integer getMemory() 获取实例内存
- * @method void setMemory(integer $Memory) 设置实例内存
- * @method string getInstanceType() 获取实例类型 rw/ro
- * @method void setInstanceType(string $InstanceType) 设置实例类型 rw/ro
- * @method integer getInstanceCount() 获取实例个数,范围[1,15]
- * @method void setInstanceCount(integer $InstanceCount) 设置实例个数,范围[1,15]
- * @method integer getMinRoCount() 获取Serverless实例个数最小值，范围[1,15]
- * @method void setMinRoCount(integer $MinRoCount) 设置Serverless实例个数最小值，范围[1,15]
- * @method integer getMaxRoCount() 获取Serverless实例个数最大值，范围[1,15]
- * @method void setMaxRoCount(integer $MaxRoCount) 设置Serverless实例个数最大值，范围[1,15]
- * @method float getMinRoCpu() 获取Serverless实例最小规格
- * @method void setMinRoCpu(float $MinRoCpu) 设置Serverless实例最小规格
- * @method float getMaxRoCpu() 获取Serverless实例最大规格
- * @method void setMaxRoCpu(float $MaxRoCpu) 设置Serverless实例最大规格
- * @method string getDeviceType() 获取实例机器类型
-1. common，通用型。
-2. exclusive，独享型。
- * @method void setDeviceType(string $DeviceType) 设置实例机器类型
-1. common，通用型。
-2. exclusive，独享型。
+ * @method integer getCpu() 获取<p>实例cpu</p>
+ * @method void setCpu(integer $Cpu) 设置<p>实例cpu</p>
+ * @method integer getMemory() 获取<p>实例内存</p>
+ * @method void setMemory(integer $Memory) 设置<p>实例内存</p>
+ * @method string getInstanceType() 获取<p>实例类型 rw/ro</p>
+ * @method void setInstanceType(string $InstanceType) 设置<p>实例类型 rw/ro</p>
+ * @method integer getInstanceCount() 获取<p>实例个数,范围[1,15]</p>
+ * @method void setInstanceCount(integer $InstanceCount) 设置<p>实例个数,范围[1,15]</p>
+ * @method integer getMinRoCount() 获取<p>Serverless实例个数最小值，范围[1,15]</p>
+ * @method void setMinRoCount(integer $MinRoCount) 设置<p>Serverless实例个数最小值，范围[1,15]</p>
+ * @method integer getMaxRoCount() 获取<p>Serverless实例个数最大值，范围[1,15]</p>
+ * @method void setMaxRoCount(integer $MaxRoCount) 设置<p>Serverless实例个数最大值，范围[1,15]</p>
+ * @method float getMinRoCpu() 获取<p>Serverless实例最小规格</p>
+ * @method void setMinRoCpu(float $MinRoCpu) 设置<p>Serverless实例最小规格</p>
+ * @method float getMaxRoCpu() 获取<p>Serverless实例最大规格</p>
+ * @method void setMaxRoCpu(float $MaxRoCpu) 设置<p>Serverless实例最大规格</p>
+ * @method string getDeviceType() 获取<p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
+ * @method void setDeviceType(string $DeviceType) 设置<p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
  */
 class InstanceInitInfo extends AbstractModel
 {
     /**
-     * @var integer 实例cpu
+     * @var integer <p>实例cpu</p>
      */
     public $Cpu;
 
     /**
-     * @var integer 实例内存
+     * @var integer <p>实例内存</p>
      */
     public $Memory;
 
     /**
-     * @var string 实例类型 rw/ro
+     * @var string <p>实例类型 rw/ro</p>
      */
     public $InstanceType;
 
     /**
-     * @var integer 实例个数,范围[1,15]
+     * @var integer <p>实例个数,范围[1,15]</p>
      */
     public $InstanceCount;
 
     /**
-     * @var integer Serverless实例个数最小值，范围[1,15]
+     * @var integer <p>Serverless实例个数最小值，范围[1,15]</p>
      */
     public $MinRoCount;
 
     /**
-     * @var integer Serverless实例个数最大值，范围[1,15]
+     * @var integer <p>Serverless实例个数最大值，范围[1,15]</p>
      */
     public $MaxRoCount;
 
     /**
-     * @var float Serverless实例最小规格
+     * @var float <p>Serverless实例最小规格</p>
      */
     public $MinRoCpu;
 
     /**
-     * @var float Serverless实例最大规格
+     * @var float <p>Serverless实例最大规格</p>
      */
     public $MaxRoCpu;
 
     /**
-     * @var string 实例机器类型
-1. common，通用型。
-2. exclusive，独享型。
+     * @var string <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
      */
     public $DeviceType;
 
     /**
-     * @param integer $Cpu 实例cpu
-     * @param integer $Memory 实例内存
-     * @param string $InstanceType 实例类型 rw/ro
-     * @param integer $InstanceCount 实例个数,范围[1,15]
-     * @param integer $MinRoCount Serverless实例个数最小值，范围[1,15]
-     * @param integer $MaxRoCount Serverless实例个数最大值，范围[1,15]
-     * @param float $MinRoCpu Serverless实例最小规格
-     * @param float $MaxRoCpu Serverless实例最大规格
-     * @param string $DeviceType 实例机器类型
-1. common，通用型。
-2. exclusive，独享型。
+     * @param integer $Cpu <p>实例cpu</p>
+     * @param integer $Memory <p>实例内存</p>
+     * @param string $InstanceType <p>实例类型 rw/ro</p>
+     * @param integer $InstanceCount <p>实例个数,范围[1,15]</p>
+     * @param integer $MinRoCount <p>Serverless实例个数最小值，范围[1,15]</p>
+     * @param integer $MaxRoCount <p>Serverless实例个数最大值，范围[1,15]</p>
+     * @param float $MinRoCpu <p>Serverless实例最小规格</p>
+     * @param float $MaxRoCpu <p>Serverless实例最大规格</p>
+     * @param string $DeviceType <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
      */
     function __construct()
     {

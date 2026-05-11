@@ -93,6 +93,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DescribeResourceGroupNewResponse DescribeResourceGroupNew(Models\DescribeResourceGroupNewRequest $req) 资产中心资产组数数据信息查询
  * @method Models\DescribeRuleOverviewResponse DescribeRuleOverview(Models\DescribeRuleOverviewRequest $req) 查询规则列表概况
  * @method Models\DescribeSecurityGroupListResponse DescribeSecurityGroupList(Models\DescribeSecurityGroupListRequest $req) 查询安全组规则列表
+ * @method Models\DescribeSerialRegionResponse DescribeSerialRegion(Models\DescribeSerialRegionRequest $req) 查询串行防火墙地域带宽分配信息
  * @method Models\DescribeSourceAssetResponse DescribeSourceAsset(Models\DescribeSourceAssetRequest $req) DescribeSourceAsset-查询全部资产信息
  * @method Models\DescribeSwitchErrorResponse DescribeSwitchError(Models\DescribeSwitchErrorRequest $req) 互联网边界防火墙开关横幅错误信息
  * @method Models\DescribeSwitchListsResponse DescribeSwitchLists(Models\DescribeSwitchListsRequest $req) 防火墙开关列表，请换用DescribeFwEdgeIps

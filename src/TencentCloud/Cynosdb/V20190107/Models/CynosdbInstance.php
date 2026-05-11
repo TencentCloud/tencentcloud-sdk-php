@@ -20,510 +20,494 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例信息
  *
- * @method string getUin() 获取用户Uin
- * @method void setUin(string $Uin) 设置用户Uin
- * @method integer getAppId() 获取用户AppId
- * @method void setAppId(integer $AppId) 设置用户AppId
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getClusterName() 获取集群名称
- * @method void setClusterName(string $ClusterName) 设置集群名称
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method integer getProjectId() 获取项目ID
- * @method void setProjectId(integer $ProjectId) 设置项目ID
- * @method string getRegion() 获取地域
- * @method void setRegion(string $Region) 设置地域
- * @method string getZone() 获取可用区
- * @method void setZone(string $Zone) 设置可用区
- * @method string getStatus() 获取实例状态
- * @method void setStatus(string $Status) 设置实例状态
- * @method string getStatusDesc() 获取实例状态中文描述
- * @method void setStatusDesc(string $StatusDesc) 设置实例状态中文描述
- * @method string getDbMode() 获取实例形态，是否为serverless实例
- * @method void setDbMode(string $DbMode) 设置实例形态，是否为serverless实例
- * @method string getDbType() 获取数据库类型
- * @method void setDbType(string $DbType) 设置数据库类型
- * @method string getDbVersion() 获取数据库版本
- * @method void setDbVersion(string $DbVersion) 设置数据库版本
- * @method integer getCpu() 获取Cpu，单位：核
- * @method void setCpu(integer $Cpu) 设置Cpu，单位：核
- * @method integer getMemory() 获取内存，单位：GB
- * @method void setMemory(integer $Memory) 设置内存，单位：GB
- * @method integer getStorage() 获取存储量，单位：GB
- * @method void setStorage(integer $Storage) 设置存储量，单位：GB
- * @method string getInstanceType() 获取实例类型
- * @method void setInstanceType(string $InstanceType) 设置实例类型
- * @method string getInstanceRole() 获取实例当前角色
- * @method void setInstanceRole(string $InstanceRole) 设置实例当前角色
- * @method string getUpdateTime() 获取更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getVpcId() 获取VPC网络ID
- * @method void setVpcId(string $VpcId) 设置VPC网络ID
- * @method string getSubnetId() 获取子网ID
- * @method void setSubnetId(string $SubnetId) 设置子网ID
- * @method string getVip() 获取实例内网IP
- * @method void setVip(string $Vip) 设置实例内网IP
- * @method integer getVport() 获取实例内网端口
- * @method void setVport(integer $Vport) 设置实例内网端口
- * @method integer getPayMode() 获取付费模式
- * @method void setPayMode(integer $PayMode) 设置付费模式
- * @method string getPeriodEndTime() 获取实例过期时间
- * @method void setPeriodEndTime(string $PeriodEndTime) 设置实例过期时间
- * @method string getDestroyDeadlineText() 获取销毁期限
- * @method void setDestroyDeadlineText(string $DestroyDeadlineText) 设置销毁期限
- * @method string getIsolateTime() 获取隔离时间
- * @method void setIsolateTime(string $IsolateTime) 设置隔离时间
- * @method integer getNetType() 获取网络类型
- * @method void setNetType(integer $NetType) 设置网络类型
- * @method string getWanDomain() 获取外网域名
- * @method void setWanDomain(string $WanDomain) 设置外网域名
- * @method string getWanIP() 获取外网IP
- * @method void setWanIP(string $WanIP) 设置外网IP
- * @method integer getWanPort() 获取外网端口
- * @method void setWanPort(integer $WanPort) 设置外网端口
- * @method string getWanStatus() 获取外网状态
- * @method void setWanStatus(string $WanStatus) 设置外网状态
- * @method string getDestroyTime() 获取实例销毁时间
- * @method void setDestroyTime(string $DestroyTime) 设置实例销毁时间
- * @method string getCynosVersion() 获取Cynos内核版本
- * @method void setCynosVersion(string $CynosVersion) 设置Cynos内核版本
- * @method string getProcessingTask() 获取正在处理的任务
- * @method void setProcessingTask(string $ProcessingTask) 设置正在处理的任务
- * @method integer getRenewFlag() 获取续费标志
- * @method void setRenewFlag(integer $RenewFlag) 设置续费标志
- * @method float getMinCpu() 获取serverless实例cpu下限
- * @method void setMinCpu(float $MinCpu) 设置serverless实例cpu下限
- * @method float getMaxCpu() 获取serverless实例cpu上限
- * @method void setMaxCpu(float $MaxCpu) 设置serverless实例cpu上限
- * @method string getServerlessStatus() 获取serverless实例状态, 可选值：
-resume
-pause
- * @method void setServerlessStatus(string $ServerlessStatus) 设置serverless实例状态, 可选值：
-resume
-pause
- * @method string getStorageId() 获取预付费存储Id
- * @method void setStorageId(string $StorageId) 设置预付费存储Id
- * @method integer getStoragePayMode() 获取存储付费类型
- * @method void setStoragePayMode(integer $StoragePayMode) 设置存储付费类型
- * @method string getPhysicalZone() 获取物理区
- * @method void setPhysicalZone(string $PhysicalZone) 设置物理区
- * @method string getBusinessType() 获取商业类型
- * @method void setBusinessType(string $BusinessType) 设置商业类型
- * @method array getTasks() 获取任务
- * @method void setTasks(array $Tasks) 设置任务
- * @method string getIsFreeze() 获取是否冻结
- * @method void setIsFreeze(string $IsFreeze) 设置是否冻结
- * @method array getResourceTags() 获取资源标签
+ * @method string getUin() 获取<p>用户Uin</p>
+ * @method void setUin(string $Uin) 设置<p>用户Uin</p>
+ * @method integer getAppId() 获取<p>用户AppId</p>
+ * @method void setAppId(integer $AppId) 设置<p>用户AppId</p>
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method string getClusterName() 获取<p>集群名称</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名称</p>
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getInstanceName() 获取<p>实例名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称</p>
+ * @method integer getProjectId() 获取<p>项目ID</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>项目ID</p>
+ * @method string getRegion() 获取<p>地域</p>
+ * @method void setRegion(string $Region) 设置<p>地域</p>
+ * @method string getZone() 获取<p>可用区</p>
+ * @method void setZone(string $Zone) 设置<p>可用区</p>
+ * @method string getStatus() 获取<p>实例状态</p>
+ * @method void setStatus(string $Status) 设置<p>实例状态</p>
+ * @method string getStatusDesc() 获取<p>实例状态中文描述</p>
+ * @method void setStatusDesc(string $StatusDesc) 设置<p>实例状态中文描述</p>
+ * @method string getDbMode() 获取<p>实例形态，是否为serverless实例</p>
+ * @method void setDbMode(string $DbMode) 设置<p>实例形态，是否为serverless实例</p>
+ * @method string getDbType() 获取<p>数据库类型</p>
+ * @method void setDbType(string $DbType) 设置<p>数据库类型</p>
+ * @method string getDbVersion() 获取<p>数据库版本</p>
+ * @method void setDbVersion(string $DbVersion) 设置<p>数据库版本</p>
+ * @method integer getCpu() 获取<p>Cpu，单位：核</p>
+ * @method void setCpu(integer $Cpu) 设置<p>Cpu，单位：核</p>
+ * @method integer getMemory() 获取<p>内存，单位：GB</p>
+ * @method void setMemory(integer $Memory) 设置<p>内存，单位：GB</p>
+ * @method integer getStorage() 获取<p>存储量，单位：GB</p>
+ * @method void setStorage(integer $Storage) 设置<p>存储量，单位：GB</p>
+ * @method string getInstanceType() 获取<p>实例类型</p>
+ * @method void setInstanceType(string $InstanceType) 设置<p>实例类型</p>
+ * @method string getInstanceRole() 获取<p>实例当前角色</p>
+ * @method void setInstanceRole(string $InstanceRole) 设置<p>实例当前角色</p>
+ * @method string getUpdateTime() 获取<p>更新时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getVpcId() 获取<p>VPC网络ID</p>
+ * @method void setVpcId(string $VpcId) 设置<p>VPC网络ID</p>
+ * @method string getSubnetId() 获取<p>子网ID</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网ID</p>
+ * @method string getVip() 获取<p>实例内网IP</p>
+ * @method void setVip(string $Vip) 设置<p>实例内网IP</p>
+ * @method integer getVport() 获取<p>实例内网端口</p>
+ * @method void setVport(integer $Vport) 设置<p>实例内网端口</p>
+ * @method integer getPayMode() 获取<p>付费模式</p>
+ * @method void setPayMode(integer $PayMode) 设置<p>付费模式</p>
+ * @method string getPeriodEndTime() 获取<p>实例过期时间</p>
+ * @method void setPeriodEndTime(string $PeriodEndTime) 设置<p>实例过期时间</p>
+ * @method string getDestroyDeadlineText() 获取<p>销毁期限</p>
+ * @method void setDestroyDeadlineText(string $DestroyDeadlineText) 设置<p>销毁期限</p>
+ * @method string getIsolateTime() 获取<p>隔离时间</p>
+ * @method void setIsolateTime(string $IsolateTime) 设置<p>隔离时间</p>
+ * @method integer getNetType() 获取<p>网络类型</p>
+ * @method void setNetType(integer $NetType) 设置<p>网络类型</p>
+ * @method string getWanDomain() 获取<p>外网域名</p>
+ * @method void setWanDomain(string $WanDomain) 设置<p>外网域名</p>
+ * @method string getWanIP() 获取<p>外网IP</p>
+ * @method void setWanIP(string $WanIP) 设置<p>外网IP</p>
+ * @method integer getWanPort() 获取<p>外网端口</p>
+ * @method void setWanPort(integer $WanPort) 设置<p>外网端口</p>
+ * @method string getWanStatus() 获取<p>外网状态</p>
+ * @method void setWanStatus(string $WanStatus) 设置<p>外网状态</p>
+ * @method string getDestroyTime() 获取<p>实例销毁时间</p>
+ * @method void setDestroyTime(string $DestroyTime) 设置<p>实例销毁时间</p>
+ * @method string getCynosVersion() 获取<p>Cynos内核版本</p>
+ * @method void setCynosVersion(string $CynosVersion) 设置<p>Cynos内核版本</p>
+ * @method string getProcessingTask() 获取<p>正在处理的任务</p>
+ * @method void setProcessingTask(string $ProcessingTask) 设置<p>正在处理的任务</p>
+ * @method integer getRenewFlag() 获取<p>续费标志</p>
+ * @method void setRenewFlag(integer $RenewFlag) 设置<p>续费标志</p>
+ * @method float getMinCpu() 获取<p>serverless实例cpu下限</p>
+ * @method void setMinCpu(float $MinCpu) 设置<p>serverless实例cpu下限</p>
+ * @method float getMaxCpu() 获取<p>serverless实例cpu上限</p>
+ * @method void setMaxCpu(float $MaxCpu) 设置<p>serverless实例cpu上限</p>
+ * @method string getServerlessStatus() 获取<p>serverless实例状态, 可选值：<br>resume<br>pause</p>
+ * @method void setServerlessStatus(string $ServerlessStatus) 设置<p>serverless实例状态, 可选值：<br>resume<br>pause</p>
+ * @method string getStorageId() 获取<p>预付费存储Id</p>
+ * @method void setStorageId(string $StorageId) 设置<p>预付费存储Id</p>
+ * @method integer getStoragePayMode() 获取<p>存储付费类型</p>
+ * @method void setStoragePayMode(integer $StoragePayMode) 设置<p>存储付费类型</p>
+ * @method string getPhysicalZone() 获取<p>物理区</p>
+ * @method void setPhysicalZone(string $PhysicalZone) 设置<p>物理区</p>
+ * @method string getBusinessType() 获取<p>商业类型</p>
+ * @method void setBusinessType(string $BusinessType) 设置<p>商业类型</p>
+ * @method array getTasks() 获取<p>任务</p>
+ * @method void setTasks(array $Tasks) 设置<p>任务</p>
+ * @method string getIsFreeze() 获取<p>是否冻结</p>
+ * @method void setIsFreeze(string $IsFreeze) 设置<p>是否冻结</p>
+ * @method array getResourceTags() 获取<p>资源标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceTags(array $ResourceTags) 设置资源标签
+ * @method void setResourceTags(array $ResourceTags) 设置<p>资源标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMasterZone() 获取主可用区
- * @method void setMasterZone(string $MasterZone) 设置主可用区
- * @method array getSlaveZones() 获取备可用区
+ * @method string getMasterZone() 获取<p>主可用区</p>
+ * @method void setMasterZone(string $MasterZone) 设置<p>主可用区</p>
+ * @method array getSlaveZones() 获取<p>备可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSlaveZones(array $SlaveZones) 设置备可用区
+ * @method void setSlaveZones(array $SlaveZones) 设置<p>备可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getInstanceNetInfo() 获取实例网络信息
- * @method void setInstanceNetInfo(array $InstanceNetInfo) 设置实例网络信息
- * @method array getResourcePackages() 获取实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）
+ * @method array getInstanceNetInfo() 获取<p>实例网络信息</p>
+ * @method void setInstanceNetInfo(array $InstanceNetInfo) 设置<p>实例网络信息</p>
+ * @method array getResourcePackages() 获取<p>实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourcePackages(array $ResourcePackages) 设置实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）
+ * @method void setResourcePackages(array $ResourcePackages) 设置<p>实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceIndexMode() 获取实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
- * @method void setInstanceIndexMode(string $InstanceIndexMode) 设置实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
- * @method InstanceAbility getInstanceAbility() 获取当前实例支持的能力
- * @method void setInstanceAbility(InstanceAbility $InstanceAbility) 设置当前实例支持的能力
- * @method string getDeviceType() 获取实例机器类型
-1. common，通用型。
-2. exclusive，独享型。
- * @method void setDeviceType(string $DeviceType) 设置实例机器类型
-1. common，通用型。
-2. exclusive，独享型。
- * @method string getInstanceStorageType() 获取实例存储类型
- * @method void setInstanceStorageType(string $InstanceStorageType) 设置实例存储类型
- * @method string getCynosVersionTag() 获取未知字段
- * @method void setCynosVersionTag(string $CynosVersionTag) 设置未知字段
- * @method array getNodeList() 获取libradb 节点信息
- * @method void setNodeList(array $NodeList) 设置libradb 节点信息
- * @method string getGdnId() 获取全球数据库唯一标识
- * @method void setGdnId(string $GdnId) 设置全球数据库唯一标识
+ * @method string getInstanceIndexMode() 获取<p>实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】</p>
+ * @method void setInstanceIndexMode(string $InstanceIndexMode) 设置<p>实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】</p>
+ * @method InstanceAbility getInstanceAbility() 获取<p>当前实例支持的能力</p>
+ * @method void setInstanceAbility(InstanceAbility $InstanceAbility) 设置<p>当前实例支持的能力</p>
+ * @method string getDeviceType() 获取<p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
+ * @method void setDeviceType(string $DeviceType) 设置<p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
+ * @method string getInstanceStorageType() 获取<p>实例存储类型</p>
+ * @method void setInstanceStorageType(string $InstanceStorageType) 设置<p>实例存储类型</p>
+ * @method string getCynosVersionTag() 获取<p>未知字段</p>
+ * @method void setCynosVersionTag(string $CynosVersionTag) 设置<p>未知字段</p>
+ * @method array getNodeList() 获取<p>libradb 节点信息</p>
+ * @method void setNodeList(array $NodeList) 设置<p>libradb 节点信息</p>
+ * @method string getGdnId() 获取<p>全球数据库唯一标识</p>
+ * @method void setGdnId(string $GdnId) 设置<p>全球数据库唯一标识</p>
  */
 class CynosdbInstance extends AbstractModel
 {
     /**
-     * @var string 用户Uin
+     * @var string <p>用户Uin</p>
      */
     public $Uin;
 
     /**
-     * @var integer 用户AppId
+     * @var integer <p>用户AppId</p>
      */
     public $AppId;
 
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 集群名称
+     * @var string <p>集群名称</p>
      */
     public $ClusterName;
 
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
      */
     public $InstanceName;
 
     /**
-     * @var integer 项目ID
+     * @var integer <p>项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
      */
     public $Region;
 
     /**
-     * @var string 可用区
+     * @var string <p>可用区</p>
      */
     public $Zone;
 
     /**
-     * @var string 实例状态
+     * @var string <p>实例状态</p>
      */
     public $Status;
 
     /**
-     * @var string 实例状态中文描述
+     * @var string <p>实例状态中文描述</p>
      */
     public $StatusDesc;
 
     /**
-     * @var string 实例形态，是否为serverless实例
+     * @var string <p>实例形态，是否为serverless实例</p>
      */
     public $DbMode;
 
     /**
-     * @var string 数据库类型
+     * @var string <p>数据库类型</p>
      */
     public $DbType;
 
     /**
-     * @var string 数据库版本
+     * @var string <p>数据库版本</p>
      */
     public $DbVersion;
 
     /**
-     * @var integer Cpu，单位：核
+     * @var integer <p>Cpu，单位：核</p>
      */
     public $Cpu;
 
     /**
-     * @var integer 内存，单位：GB
+     * @var integer <p>内存，单位：GB</p>
      */
     public $Memory;
 
     /**
-     * @var integer 存储量，单位：GB
+     * @var integer <p>存储量，单位：GB</p>
      */
     public $Storage;
 
     /**
-     * @var string 实例类型
+     * @var string <p>实例类型</p>
      */
     public $InstanceType;
 
     /**
-     * @var string 实例当前角色
+     * @var string <p>实例当前角色</p>
      */
     public $InstanceRole;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string VPC网络ID
+     * @var string <p>VPC网络ID</p>
      */
     public $VpcId;
 
     /**
-     * @var string 子网ID
+     * @var string <p>子网ID</p>
      */
     public $SubnetId;
 
     /**
-     * @var string 实例内网IP
+     * @var string <p>实例内网IP</p>
      */
     public $Vip;
 
     /**
-     * @var integer 实例内网端口
+     * @var integer <p>实例内网端口</p>
      */
     public $Vport;
 
     /**
-     * @var integer 付费模式
+     * @var integer <p>付费模式</p>
      */
     public $PayMode;
 
     /**
-     * @var string 实例过期时间
+     * @var string <p>实例过期时间</p>
      */
     public $PeriodEndTime;
 
     /**
-     * @var string 销毁期限
+     * @var string <p>销毁期限</p>
      */
     public $DestroyDeadlineText;
 
     /**
-     * @var string 隔离时间
+     * @var string <p>隔离时间</p>
      */
     public $IsolateTime;
 
     /**
-     * @var integer 网络类型
+     * @var integer <p>网络类型</p>
      */
     public $NetType;
 
     /**
-     * @var string 外网域名
+     * @var string <p>外网域名</p>
      */
     public $WanDomain;
 
     /**
-     * @var string 外网IP
+     * @var string <p>外网IP</p>
      */
     public $WanIP;
 
     /**
-     * @var integer 外网端口
+     * @var integer <p>外网端口</p>
      */
     public $WanPort;
 
     /**
-     * @var string 外网状态
+     * @var string <p>外网状态</p>
      */
     public $WanStatus;
 
     /**
-     * @var string 实例销毁时间
+     * @var string <p>实例销毁时间</p>
      */
     public $DestroyTime;
 
     /**
-     * @var string Cynos内核版本
+     * @var string <p>Cynos内核版本</p>
      */
     public $CynosVersion;
 
     /**
-     * @var string 正在处理的任务
+     * @var string <p>正在处理的任务</p>
      */
     public $ProcessingTask;
 
     /**
-     * @var integer 续费标志
+     * @var integer <p>续费标志</p>
      */
     public $RenewFlag;
 
     /**
-     * @var float serverless实例cpu下限
+     * @var float <p>serverless实例cpu下限</p>
      */
     public $MinCpu;
 
     /**
-     * @var float serverless实例cpu上限
+     * @var float <p>serverless实例cpu上限</p>
      */
     public $MaxCpu;
 
     /**
-     * @var string serverless实例状态, 可选值：
-resume
-pause
+     * @var string <p>serverless实例状态, 可选值：<br>resume<br>pause</p>
      */
     public $ServerlessStatus;
 
     /**
-     * @var string 预付费存储Id
+     * @var string <p>预付费存储Id</p>
      */
     public $StorageId;
 
     /**
-     * @var integer 存储付费类型
+     * @var integer <p>存储付费类型</p>
      */
     public $StoragePayMode;
 
     /**
-     * @var string 物理区
+     * @var string <p>物理区</p>
      */
     public $PhysicalZone;
 
     /**
-     * @var string 商业类型
+     * @var string <p>商业类型</p>
      */
     public $BusinessType;
 
     /**
-     * @var array 任务
+     * @var array <p>任务</p>
      */
     public $Tasks;
 
     /**
-     * @var string 是否冻结
+     * @var string <p>是否冻结</p>
      */
     public $IsFreeze;
 
     /**
-     * @var array 资源标签
+     * @var array <p>资源标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceTags;
 
     /**
-     * @var string 主可用区
+     * @var string <p>主可用区</p>
      */
     public $MasterZone;
 
     /**
-     * @var array 备可用区
+     * @var array <p>备可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SlaveZones;
 
     /**
-     * @var array 实例网络信息
+     * @var array <p>实例网络信息</p>
      */
     public $InstanceNetInfo;
 
     /**
-     * @var array 实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）
+     * @var array <p>实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourcePackages;
 
     /**
-     * @var string 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
+     * @var string <p>实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】</p>
      */
     public $InstanceIndexMode;
 
     /**
-     * @var InstanceAbility 当前实例支持的能力
+     * @var InstanceAbility <p>当前实例支持的能力</p>
      */
     public $InstanceAbility;
 
     /**
-     * @var string 实例机器类型
-1. common，通用型。
-2. exclusive，独享型。
+     * @var string <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
      */
     public $DeviceType;
 
     /**
-     * @var string 实例存储类型
+     * @var string <p>实例存储类型</p>
      */
     public $InstanceStorageType;
 
     /**
-     * @var string 未知字段
+     * @var string <p>未知字段</p>
      */
     public $CynosVersionTag;
 
     /**
-     * @var array libradb 节点信息
+     * @var array <p>libradb 节点信息</p>
      */
     public $NodeList;
 
     /**
-     * @var string 全球数据库唯一标识
+     * @var string <p>全球数据库唯一标识</p>
      */
     public $GdnId;
 
     /**
-     * @param string $Uin 用户Uin
-     * @param integer $AppId 用户AppId
-     * @param string $ClusterId 集群ID
-     * @param string $ClusterName 集群名称
-     * @param string $InstanceId 实例ID
-     * @param string $InstanceName 实例名称
-     * @param integer $ProjectId 项目ID
-     * @param string $Region 地域
-     * @param string $Zone 可用区
-     * @param string $Status 实例状态
-     * @param string $StatusDesc 实例状态中文描述
-     * @param string $DbMode 实例形态，是否为serverless实例
-     * @param string $DbType 数据库类型
-     * @param string $DbVersion 数据库版本
-     * @param integer $Cpu Cpu，单位：核
-     * @param integer $Memory 内存，单位：GB
-     * @param integer $Storage 存储量，单位：GB
-     * @param string $InstanceType 实例类型
-     * @param string $InstanceRole 实例当前角色
-     * @param string $UpdateTime 更新时间
-     * @param string $CreateTime 创建时间
-     * @param string $VpcId VPC网络ID
-     * @param string $SubnetId 子网ID
-     * @param string $Vip 实例内网IP
-     * @param integer $Vport 实例内网端口
-     * @param integer $PayMode 付费模式
-     * @param string $PeriodEndTime 实例过期时间
-     * @param string $DestroyDeadlineText 销毁期限
-     * @param string $IsolateTime 隔离时间
-     * @param integer $NetType 网络类型
-     * @param string $WanDomain 外网域名
-     * @param string $WanIP 外网IP
-     * @param integer $WanPort 外网端口
-     * @param string $WanStatus 外网状态
-     * @param string $DestroyTime 实例销毁时间
-     * @param string $CynosVersion Cynos内核版本
-     * @param string $ProcessingTask 正在处理的任务
-     * @param integer $RenewFlag 续费标志
-     * @param float $MinCpu serverless实例cpu下限
-     * @param float $MaxCpu serverless实例cpu上限
-     * @param string $ServerlessStatus serverless实例状态, 可选值：
-resume
-pause
-     * @param string $StorageId 预付费存储Id
-     * @param integer $StoragePayMode 存储付费类型
-     * @param string $PhysicalZone 物理区
-     * @param string $BusinessType 商业类型
-     * @param array $Tasks 任务
-     * @param string $IsFreeze 是否冻结
-     * @param array $ResourceTags 资源标签
+     * @param string $Uin <p>用户Uin</p>
+     * @param integer $AppId <p>用户AppId</p>
+     * @param string $ClusterId <p>集群ID</p>
+     * @param string $ClusterName <p>集群名称</p>
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $InstanceName <p>实例名称</p>
+     * @param integer $ProjectId <p>项目ID</p>
+     * @param string $Region <p>地域</p>
+     * @param string $Zone <p>可用区</p>
+     * @param string $Status <p>实例状态</p>
+     * @param string $StatusDesc <p>实例状态中文描述</p>
+     * @param string $DbMode <p>实例形态，是否为serverless实例</p>
+     * @param string $DbType <p>数据库类型</p>
+     * @param string $DbVersion <p>数据库版本</p>
+     * @param integer $Cpu <p>Cpu，单位：核</p>
+     * @param integer $Memory <p>内存，单位：GB</p>
+     * @param integer $Storage <p>存储量，单位：GB</p>
+     * @param string $InstanceType <p>实例类型</p>
+     * @param string $InstanceRole <p>实例当前角色</p>
+     * @param string $UpdateTime <p>更新时间</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $VpcId <p>VPC网络ID</p>
+     * @param string $SubnetId <p>子网ID</p>
+     * @param string $Vip <p>实例内网IP</p>
+     * @param integer $Vport <p>实例内网端口</p>
+     * @param integer $PayMode <p>付费模式</p>
+     * @param string $PeriodEndTime <p>实例过期时间</p>
+     * @param string $DestroyDeadlineText <p>销毁期限</p>
+     * @param string $IsolateTime <p>隔离时间</p>
+     * @param integer $NetType <p>网络类型</p>
+     * @param string $WanDomain <p>外网域名</p>
+     * @param string $WanIP <p>外网IP</p>
+     * @param integer $WanPort <p>外网端口</p>
+     * @param string $WanStatus <p>外网状态</p>
+     * @param string $DestroyTime <p>实例销毁时间</p>
+     * @param string $CynosVersion <p>Cynos内核版本</p>
+     * @param string $ProcessingTask <p>正在处理的任务</p>
+     * @param integer $RenewFlag <p>续费标志</p>
+     * @param float $MinCpu <p>serverless实例cpu下限</p>
+     * @param float $MaxCpu <p>serverless实例cpu上限</p>
+     * @param string $ServerlessStatus <p>serverless实例状态, 可选值：<br>resume<br>pause</p>
+     * @param string $StorageId <p>预付费存储Id</p>
+     * @param integer $StoragePayMode <p>存储付费类型</p>
+     * @param string $PhysicalZone <p>物理区</p>
+     * @param string $BusinessType <p>商业类型</p>
+     * @param array $Tasks <p>任务</p>
+     * @param string $IsFreeze <p>是否冻结</p>
+     * @param array $ResourceTags <p>资源标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MasterZone 主可用区
-     * @param array $SlaveZones 备可用区
+     * @param string $MasterZone <p>主可用区</p>
+     * @param array $SlaveZones <p>备可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $InstanceNetInfo 实例网络信息
-     * @param array $ResourcePackages 实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）
+     * @param array $InstanceNetInfo <p>实例网络信息</p>
+     * @param array $ResourcePackages <p>实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceIndexMode 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
-     * @param InstanceAbility $InstanceAbility 当前实例支持的能力
-     * @param string $DeviceType 实例机器类型
-1. common，通用型。
-2. exclusive，独享型。
-     * @param string $InstanceStorageType 实例存储类型
-     * @param string $CynosVersionTag 未知字段
-     * @param array $NodeList libradb 节点信息
-     * @param string $GdnId 全球数据库唯一标识
+     * @param string $InstanceIndexMode <p>实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】</p>
+     * @param InstanceAbility $InstanceAbility <p>当前实例支持的能力</p>
+     * @param string $DeviceType <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
+     * @param string $InstanceStorageType <p>实例存储类型</p>
+     * @param string $CynosVersionTag <p>未知字段</p>
+     * @param array $NodeList <p>libradb 节点信息</p>
+     * @param string $GdnId <p>全球数据库唯一标识</p>
      */
     function __construct()
     {

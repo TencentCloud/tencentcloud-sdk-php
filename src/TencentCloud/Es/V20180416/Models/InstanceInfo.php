@@ -20,1038 +20,1050 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例详细信息
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method string getRegion() 获取地域
- * @method void setRegion(string $Region) 设置地域
- * @method string getZone() 获取可用区
- * @method void setZone(string $Zone) 设置可用区
- * @method integer getAppId() 获取用户ID
- * @method void setAppId(integer $AppId) 设置用户ID
- * @method string getUin() 获取用户UIN
- * @method void setUin(string $Uin) 设置用户UIN
- * @method string getVpcUid() 获取实例所属VPC的UID
- * @method void setVpcUid(string $VpcUid) 设置实例所属VPC的UID
- * @method string getSubnetUid() 获取实例所属子网的UID
- * @method void setSubnetUid(string $SubnetUid) 设置实例所属子网的UID
- * @method integer getStatus() 获取实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中
- * @method void setStatus(integer $Status) 设置实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中
- * @method string getRenewFlag() 获取自动续费标识。取值范围：
-RENEW_FLAG_AUTO：自动续费  
-RENEW_FLAG_MANUAL：不自动续费
-默认取值：
-RENEW_FLAG_DEFAULT：不自动续费
-若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。
- * @method void setRenewFlag(string $RenewFlag) 设置自动续费标识。取值范围：
-RENEW_FLAG_AUTO：自动续费  
-RENEW_FLAG_MANUAL：不自动续费
-默认取值：
-RENEW_FLAG_DEFAULT：不自动续费
-若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。
- * @method string getChargeType() 获取实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
- * @method void setChargeType(string $ChargeType) 设置实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
- * @method integer getChargePeriod() 获取包年包月购买时长,单位:月
- * @method void setChargePeriod(integer $ChargePeriod) 设置包年包月购买时长,单位:月
- * @method string getNodeType() 获取节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
- * @method void setNodeType(string $NodeType) 设置节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
- * @method integer getNodeNum() 获取节点个数
- * @method void setNodeNum(integer $NodeNum) 设置节点个数
- * @method integer getCpuNum() 获取节点CPU核数
- * @method void setCpuNum(integer $CpuNum) 设置节点CPU核数
- * @method integer getMemSize() 获取节点内存大小，单位GB
- * @method void setMemSize(integer $MemSize) 设置节点内存大小，单位GB
- * @method string getDiskType() 获取节点磁盘类型
- * @method void setDiskType(string $DiskType) 设置节点磁盘类型
- * @method integer getDiskSize() 获取节点磁盘大小，单位GB
- * @method void setDiskSize(integer $DiskSize) 设置节点磁盘大小，单位GB
- * @method string getEsDomain() 获取ES域名
- * @method void setEsDomain(string $EsDomain) 设置ES域名
- * @method string getEsVip() 获取ES VIP
- * @method void setEsVip(string $EsVip) 设置ES VIP
- * @method integer getEsPort() 获取ES端口
- * @method void setEsPort(integer $EsPort) 设置ES端口
- * @method string getKibanaUrl() 获取Kibana访问url
- * @method void setKibanaUrl(string $KibanaUrl) 设置Kibana访问url
- * @method string getEsVersion() 获取ES版本号
- * @method void setEsVersion(string $EsVersion) 设置ES版本号
- * @method string getEsConfig() 获取ES配置项
- * @method void setEsConfig(string $EsConfig) 设置ES配置项
- * @method EsAcl getEsAcl() 获取Kibana访问控制配置
- * @method void setEsAcl(EsAcl $EsAcl) 设置Kibana访问控制配置
- * @method string getCreateTime() 获取实例创建时间
- * @method void setCreateTime(string $CreateTime) 设置实例创建时间
- * @method string getUpdateTime() 获取实例最后修改操作时间
- * @method void setUpdateTime(string $UpdateTime) 设置实例最后修改操作时间
- * @method string getDeadline() 获取实例到期时间
- * @method void setDeadline(string $Deadline) 设置实例到期时间
- * @method integer getInstanceType() 获取实例类型（实例类型标识，当前只有1,2两种）
- * @method void setInstanceType(integer $InstanceType) 设置实例类型（实例类型标识，当前只有1,2两种）
- * @method EsDictionaryInfo getIkConfig() 获取Ik分词器配置
- * @method void setIkConfig(EsDictionaryInfo $IkConfig) 设置Ik分词器配置
- * @method MasterNodeInfo getMasterNodeInfo() 获取专用主节点配置
- * @method void setMasterNodeInfo(MasterNodeInfo $MasterNodeInfo) 设置专用主节点配置
- * @method CosBackup getCosBackup() 获取cos自动备份配置
- * @method void setCosBackup(CosBackup $CosBackup) 设置cos自动备份配置
- * @method boolean getAllowCosBackup() 获取是否允许cos自动备份
- * @method void setAllowCosBackup(boolean $AllowCosBackup) 设置是否允许cos自动备份
- * @method array getTagList() 获取实例拥有的标签列表
- * @method void setTagList(array $TagList) 设置实例拥有的标签列表
- * @method string getLicenseType() 获取License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
- * @method void setLicenseType(string $LicenseType) 设置License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
- * @method boolean getEnableHotWarmMode() 获取是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li>
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getInstanceName() 获取<p>实例名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称</p>
+ * @method string getRegion() 获取<p>地域</p>
+ * @method void setRegion(string $Region) 设置<p>地域</p>
+ * @method string getZone() 获取<p>可用区</p>
+ * @method void setZone(string $Zone) 设置<p>可用区</p>
+ * @method integer getAppId() 获取<p>用户ID</p>
+ * @method void setAppId(integer $AppId) 设置<p>用户ID</p>
+ * @method string getUin() 获取<p>用户UIN</p>
+ * @method void setUin(string $Uin) 设置<p>用户UIN</p>
+ * @method string getVpcUid() 获取<p>实例所属VPC的UID</p>
+ * @method void setVpcUid(string $VpcUid) 设置<p>实例所属VPC的UID</p>
+ * @method string getSubnetUid() 获取<p>实例所属子网的UID</p>
+ * @method void setSubnetUid(string $SubnetUid) 设置<p>实例所属子网的UID</p>
+ * @method integer getStatus() 获取<p>实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中</p>
+ * @method void setStatus(integer $Status) 设置<p>实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中</p>
+ * @method string getRenewFlag() 获取<p>自动续费标识。取值范围：<br>RENEW_FLAG_AUTO：自动续费<br>RENEW_FLAG_MANUAL：不自动续费<br>默认取值：<br>RENEW_FLAG_DEFAULT：不自动续费<br>若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。</p>
+ * @method void setRenewFlag(string $RenewFlag) 设置<p>自动续费标识。取值范围：<br>RENEW_FLAG_AUTO：自动续费<br>RENEW_FLAG_MANUAL：不自动续费<br>默认取值：<br>RENEW_FLAG_DEFAULT：不自动续费<br>若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。</p>
+ * @method string getChargeType() 获取<p>实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。</p>
+ * @method void setChargeType(string $ChargeType) 设置<p>实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。</p>
+ * @method integer getChargePeriod() 获取<p>包年包月购买时长,单位:月</p>
+ * @method void setChargePeriod(integer $ChargePeriod) 设置<p>包年包月购买时长,单位:月</p>
+ * @method string getNodeType() 获取<p>节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
+ * @method void setNodeType(string $NodeType) 设置<p>节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
+ * @method integer getNodeNum() 获取<p>节点个数</p>
+ * @method void setNodeNum(integer $NodeNum) 设置<p>节点个数</p>
+ * @method integer getCpuNum() 获取<p>节点CPU核数</p>
+ * @method void setCpuNum(integer $CpuNum) 设置<p>节点CPU核数</p>
+ * @method integer getMemSize() 获取<p>节点内存大小，单位GB</p>
+ * @method void setMemSize(integer $MemSize) 设置<p>节点内存大小，单位GB</p>
+ * @method string getDiskType() 获取<p>节点磁盘类型</p>
+ * @method void setDiskType(string $DiskType) 设置<p>节点磁盘类型</p>
+ * @method integer getDiskSize() 获取<p>节点磁盘大小，单位GB</p>
+ * @method void setDiskSize(integer $DiskSize) 设置<p>节点磁盘大小，单位GB</p>
+ * @method string getEsDomain() 获取<p>ES域名</p>
+ * @method void setEsDomain(string $EsDomain) 设置<p>ES域名</p>
+ * @method string getEsVip() 获取<p>ES VIP</p>
+ * @method void setEsVip(string $EsVip) 设置<p>ES VIP</p>
+ * @method integer getEsPort() 获取<p>ES端口</p>
+ * @method void setEsPort(integer $EsPort) 设置<p>ES端口</p>
+ * @method string getKibanaUrl() 获取<p>Kibana访问url</p>
+ * @method void setKibanaUrl(string $KibanaUrl) 设置<p>Kibana访问url</p>
+ * @method string getEsVersion() 获取<p>ES版本号</p>
+ * @method void setEsVersion(string $EsVersion) 设置<p>ES版本号</p>
+ * @method string getEsConfig() 获取<p>ES配置项</p>
+ * @method void setEsConfig(string $EsConfig) 设置<p>ES配置项</p>
+ * @method EsAcl getEsAcl() 获取<p>Kibana访问控制配置</p>
+ * @method void setEsAcl(EsAcl $EsAcl) 设置<p>Kibana访问控制配置</p>
+ * @method string getCreateTime() 获取<p>实例创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>实例创建时间</p>
+ * @method string getUpdateTime() 获取<p>实例最后修改操作时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>实例最后修改操作时间</p>
+ * @method string getDeadline() 获取<p>实例到期时间</p>
+ * @method void setDeadline(string $Deadline) 设置<p>实例到期时间</p>
+ * @method integer getInstanceType() 获取<p>实例类型（实例类型标识，当前只有1,2两种）</p>
+ * @method void setInstanceType(integer $InstanceType) 设置<p>实例类型（实例类型标识，当前只有1,2两种）</p>
+ * @method EsDictionaryInfo getIkConfig() 获取<p>Ik分词器配置</p>
+ * @method void setIkConfig(EsDictionaryInfo $IkConfig) 设置<p>Ik分词器配置</p>
+ * @method MasterNodeInfo getMasterNodeInfo() 获取<p>专用主节点配置</p>
+ * @method void setMasterNodeInfo(MasterNodeInfo $MasterNodeInfo) 设置<p>专用主节点配置</p>
+ * @method CosBackup getCosBackup() 获取<p>cos自动备份配置</p>
+ * @method void setCosBackup(CosBackup $CosBackup) 设置<p>cos自动备份配置</p>
+ * @method boolean getAllowCosBackup() 获取<p>是否允许cos自动备份</p>
+ * @method void setAllowCosBackup(boolean $AllowCosBackup) 设置<p>是否允许cos自动备份</p>
+ * @method array getTagList() 获取<p>实例拥有的标签列表</p>
+ * @method void setTagList(array $TagList) 设置<p>实例拥有的标签列表</p>
+ * @method string getLicenseType() 获取<p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum</p>
+ * @method void setLicenseType(string $LicenseType) 设置<p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum</p>
+ * @method boolean getEnableHotWarmMode() 获取<p>是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnableHotWarmMode(boolean $EnableHotWarmMode) 设置是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li>
+ * @method void setEnableHotWarmMode(boolean $EnableHotWarmMode) 设置<p>是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWarmNodeType() 获取温节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+ * @method string getWarmNodeType() 获取<p>温节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWarmNodeType(string $WarmNodeType) 设置温节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+ * @method void setWarmNodeType(string $WarmNodeType) 设置<p>温节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getWarmNodeNum() 获取温节点个数
+ * @method integer getWarmNodeNum() 获取<p>温节点个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWarmNodeNum(integer $WarmNodeNum) 设置温节点个数
+ * @method void setWarmNodeNum(integer $WarmNodeNum) 设置<p>温节点个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getWarmCpuNum() 获取温节点CPU核数
+ * @method integer getWarmCpuNum() 获取<p>温节点CPU核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWarmCpuNum(integer $WarmCpuNum) 设置温节点CPU核数
+ * @method void setWarmCpuNum(integer $WarmCpuNum) 设置<p>温节点CPU核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getWarmMemSize() 获取温节点内存内存大小，单位GB
+ * @method integer getWarmMemSize() 获取<p>温节点内存内存大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWarmMemSize(integer $WarmMemSize) 设置温节点内存内存大小，单位GB
+ * @method void setWarmMemSize(integer $WarmMemSize) 设置<p>温节点内存内存大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWarmDiskType() 获取温节点磁盘类型
+ * @method string getWarmDiskType() 获取<p>温节点磁盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWarmDiskType(string $WarmDiskType) 设置温节点磁盘类型
+ * @method void setWarmDiskType(string $WarmDiskType) 设置<p>温节点磁盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getWarmDiskSize() 获取温节点磁盘大小，单位GB
+ * @method integer getWarmDiskSize() 获取<p>温节点磁盘大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWarmDiskSize(integer $WarmDiskSize) 设置温节点磁盘大小，单位GB
+ * @method void setWarmDiskSize(integer $WarmDiskSize) 设置<p>温节点磁盘大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getNodeInfoList() 获取集群节点信息列表
+ * @method array getNodeInfoList() 获取<p>集群节点信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNodeInfoList(array $NodeInfoList) 设置集群节点信息列表
+ * @method void setNodeInfoList(array $NodeInfoList) 设置<p>集群节点信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEsPublicUrl() 获取Es公网地址
+ * @method string getEsPublicUrl() 获取<p>Es公网地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEsPublicUrl(string $EsPublicUrl) 设置Es公网地址
+ * @method void setEsPublicUrl(string $EsPublicUrl) 设置<p>Es公网地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getMultiZoneInfo() 获取多可用区网络信息
+ * @method array getMultiZoneInfo() 获取<p>多可用区网络信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMultiZoneInfo(array $MultiZoneInfo) 设置多可用区网络信息
+ * @method void setMultiZoneInfo(array $MultiZoneInfo) 设置<p>多可用区网络信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDeployMode() 获取部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>
+ * @method integer getDeployMode() 获取<p>部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeployMode(integer $DeployMode) 设置部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>
+ * @method void setDeployMode(integer $DeployMode) 设置<p>部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPublicAccess() 获取ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+ * @method string getPublicAccess() 获取<p>ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPublicAccess(string $PublicAccess) 设置ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+ * @method void setPublicAccess(string $PublicAccess) 设置<p>ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method EsAcl getEsPublicAcl() 获取ES公网访问控制配置
- * @method void setEsPublicAcl(EsAcl $EsPublicAcl) 设置ES公网访问控制配置
- * @method string getKibanaPrivateUrl() 获取Kibana内网地址
+ * @method EsAcl getEsPublicAcl() 获取<p>ES公网访问控制配置</p>
+ * @method void setEsPublicAcl(EsAcl $EsPublicAcl) 设置<p>ES公网访问控制配置</p>
+ * @method string getKibanaPrivateUrl() 获取<p>Kibana内网地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKibanaPrivateUrl(string $KibanaPrivateUrl) 设置Kibana内网地址
+ * @method void setKibanaPrivateUrl(string $KibanaPrivateUrl) 设置<p>Kibana内网地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getKibanaPublicAccess() 获取Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+ * @method string getKibanaPublicAccess() 获取<p>Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKibanaPublicAccess(string $KibanaPublicAccess) 设置Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+ * @method void setKibanaPublicAccess(string $KibanaPublicAccess) 设置<p>Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getKibanaPrivateAccess() 获取Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+ * @method string getKibanaPrivateAccess() 获取<p>Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKibanaPrivateAccess(string $KibanaPrivateAccess) 设置Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+ * @method void setKibanaPrivateAccess(string $KibanaPrivateAccess) 设置<p>Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSecurityType() 获取6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+ * @method integer getSecurityType() 获取<p>6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSecurityType(integer $SecurityType) 设置6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+ * @method void setSecurityType(integer $SecurityType) 设置<p>6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSceneType() 获取场景化模板类型：0、不开启；1、通用场景；2、日志场景；3、搜索场景
+ * @method integer getSceneType() 获取<p>场景化模板类型：0、不开启；1、通用场景；2、日志场景；3、搜索场景</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSceneType(integer $SceneType) 设置场景化模板类型：0、不开启；1、通用场景；2、日志场景；3、搜索场景
+ * @method void setSceneType(integer $SceneType) 设置<p>场景化模板类型：0、不开启；1、通用场景；2、日志场景；3、搜索场景</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getKibanaConfig() 获取Kibana配置项
+ * @method string getKibanaConfig() 获取<p>Kibana配置项</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKibanaConfig(string $KibanaConfig) 设置Kibana配置项
+ * @method void setKibanaConfig(string $KibanaConfig) 设置<p>Kibana配置项</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method KibanaNodeInfo getKibanaNodeInfo() 获取Kibana节点信息
+ * @method KibanaNodeInfo getKibanaNodeInfo() 获取<p>Kibana节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKibanaNodeInfo(KibanaNodeInfo $KibanaNodeInfo) 设置Kibana节点信息
+ * @method void setKibanaNodeInfo(KibanaNodeInfo $KibanaNodeInfo) 设置<p>Kibana节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method WebNodeTypeInfo getWebNodeTypeInfo() 获取可视化节点配置
+ * @method WebNodeTypeInfo getWebNodeTypeInfo() 获取<p>可视化节点配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWebNodeTypeInfo(WebNodeTypeInfo $WebNodeTypeInfo) 设置可视化节点配置
+ * @method void setWebNodeTypeInfo(WebNodeTypeInfo $WebNodeTypeInfo) 设置<p>可视化节点配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getJdk() 获取JDK类型，oracle或kona
+ * @method string getJdk() 获取<p>JDK类型，oracle或kona</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setJdk(string $Jdk) 设置JDK类型，oracle或kona
+ * @method void setJdk(string $Jdk) 设置<p>JDK类型，oracle或kona</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProtocol() 获取集群网络通讯协议
+ * @method string getProtocol() 获取<p>集群网络通讯协议</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProtocol(string $Protocol) 设置集群网络通讯协议
+ * @method void setProtocol(string $Protocol) 设置<p>集群网络通讯协议</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSecurityGroups() 获取安全组id
+ * @method array getSecurityGroups() 获取<p>安全组id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSecurityGroups(array $SecurityGroups) 设置安全组id
+ * @method void setSecurityGroups(array $SecurityGroups) 设置<p>安全组id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getColdNodeType() 获取冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+ * @method string getColdNodeType() 获取<p>冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setColdNodeType(string $ColdNodeType) 设置冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+ * @method void setColdNodeType(string $ColdNodeType) 设置<p>冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getColdNodeNum() 获取冷节点个数
+ * @method integer getColdNodeNum() 获取<p>冷节点个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setColdNodeNum(integer $ColdNodeNum) 设置冷节点个数
+ * @method void setColdNodeNum(integer $ColdNodeNum) 设置<p>冷节点个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getColdCpuNum() 获取冷节点CPU核数
+ * @method integer getColdCpuNum() 获取<p>冷节点CPU核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setColdCpuNum(integer $ColdCpuNum) 设置冷节点CPU核数
+ * @method void setColdCpuNum(integer $ColdCpuNum) 设置<p>冷节点CPU核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getColdMemSize() 获取冷节点内存大小，单位GB
+ * @method integer getColdMemSize() 获取<p>冷节点内存大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setColdMemSize(integer $ColdMemSize) 设置冷节点内存大小，单位GB
+ * @method void setColdMemSize(integer $ColdMemSize) 设置<p>冷节点内存大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getColdDiskType() 获取冷节点磁盘类型
+ * @method string getColdDiskType() 获取<p>冷节点磁盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setColdDiskType(string $ColdDiskType) 设置冷节点磁盘类型
+ * @method void setColdDiskType(string $ColdDiskType) 设置<p>冷节点磁盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getColdDiskSize() 获取冷节点磁盘大小，单位GB
+ * @method integer getColdDiskSize() 获取<p>冷节点磁盘大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setColdDiskSize(integer $ColdDiskSize) 设置冷节点磁盘大小，单位GB
+ * @method void setColdDiskSize(integer $ColdDiskSize) 设置<p>冷节点磁盘大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFrozenNodeType() 获取冻节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+ * @method string getFrozenNodeType() 获取<p>冻节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFrozenNodeType(string $FrozenNodeType) 设置冻节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+ * @method void setFrozenNodeType(string $FrozenNodeType) 设置<p>冻节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getFrozenNodeNum() 获取冻节点个数
+ * @method integer getFrozenNodeNum() 获取<p>冻节点个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFrozenNodeNum(integer $FrozenNodeNum) 设置冻节点个数
+ * @method void setFrozenNodeNum(integer $FrozenNodeNum) 设置<p>冻节点个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getFrozenCpuNum() 获取冻节点CPU核数
+ * @method integer getFrozenCpuNum() 获取<p>冻节点CPU核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFrozenCpuNum(integer $FrozenCpuNum) 设置冻节点CPU核数
+ * @method void setFrozenCpuNum(integer $FrozenCpuNum) 设置<p>冻节点CPU核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getFrozenMemSize() 获取冻节点内存大小，单位GB
+ * @method integer getFrozenMemSize() 获取<p>冻节点内存大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFrozenMemSize(integer $FrozenMemSize) 设置冻节点内存大小，单位GB
+ * @method void setFrozenMemSize(integer $FrozenMemSize) 设置<p>冻节点内存大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFrozenDiskType() 获取冻节点磁盘类型
+ * @method string getFrozenDiskType() 获取<p>冻节点磁盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFrozenDiskType(string $FrozenDiskType) 设置冻节点磁盘类型
+ * @method void setFrozenDiskType(string $FrozenDiskType) 设置<p>冻节点磁盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getFrozenDiskSize() 获取冻节点磁盘大小，单位GB
+ * @method integer getFrozenDiskSize() 获取<p>冻节点磁盘大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFrozenDiskSize(integer $FrozenDiskSize) 设置冻节点磁盘大小，单位GB
+ * @method void setFrozenDiskSize(integer $FrozenDiskSize) 设置<p>冻节点磁盘大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getHealthStatus() 获取集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red
+ * @method integer getHealthStatus() 获取<p>集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHealthStatus(integer $HealthStatus) 设置集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red
+ * @method void setHealthStatus(integer $HealthStatus) 设置<p>集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEsPrivateUrl() 获取https集群内网url
+ * @method string getEsPrivateUrl() 获取<p>https集群内网url</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEsPrivateUrl(string $EsPrivateUrl) 设置https集群内网url
+ * @method void setEsPrivateUrl(string $EsPrivateUrl) 设置<p>https集群内网url</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEsPrivateDomain() 获取https集群内网域名
+ * @method string getEsPrivateDomain() 获取<p>https集群内网域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEsPrivateDomain(string $EsPrivateDomain) 设置https集群内网域名
+ * @method void setEsPrivateDomain(string $EsPrivateDomain) 设置<p>https集群内网域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getEsConfigSets() 获取集群的配置组信息
+ * @method array getEsConfigSets() 获取<p>集群的配置组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEsConfigSets(array $EsConfigSets) 设置集群的配置组信息
+ * @method void setEsConfigSets(array $EsConfigSets) 设置<p>集群的配置组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method OperationDuration getOperationDuration() 获取集群可维护时间段
+ * @method OperationDuration getOperationDuration() 获取<p>集群可维护时间段</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperationDuration(OperationDuration $OperationDuration) 设置集群可维护时间段
+ * @method void setOperationDuration(OperationDuration $OperationDuration) 设置<p>集群可维护时间段</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getOptionalWebServiceInfos() 获取web节点列表
+ * @method array getOptionalWebServiceInfos() 获取<p>web节点列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOptionalWebServiceInfos(array $OptionalWebServiceInfos) 设置web节点列表
+ * @method void setOptionalWebServiceInfos(array $OptionalWebServiceInfos) 设置<p>web节点列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getAutoIndexEnabled() 获取自治索引开关
+ * @method boolean getAutoIndexEnabled() 获取<p>自治索引开关</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAutoIndexEnabled(boolean $AutoIndexEnabled) 设置自治索引开关
+ * @method void setAutoIndexEnabled(boolean $AutoIndexEnabled) 设置<p>自治索引开关</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getEnableHybridStorage() 获取是否支持存储计算分离
+ * @method boolean getEnableHybridStorage() 获取<p>是否支持存储计算分离</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnableHybridStorage(boolean $EnableHybridStorage) 设置是否支持存储计算分离
+ * @method void setEnableHybridStorage(boolean $EnableHybridStorage) 设置<p>是否支持存储计算分离</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getProcessPercent() 获取流程进度
+ * @method float getProcessPercent() 获取<p>流程进度</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProcessPercent(float $ProcessPercent) 设置流程进度
+ * @method void setProcessPercent(float $ProcessPercent) 设置<p>流程进度</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getKibanaAlteringPublicAccess() 获取Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li>
+ * @method string getKibanaAlteringPublicAccess() 获取<p>Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKibanaAlteringPublicAccess(string $KibanaAlteringPublicAccess) 设置Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li>
+ * @method void setKibanaAlteringPublicAccess(string $KibanaAlteringPublicAccess) 设置<p>Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getHasKernelUpgrade() 获取本月是否有内核可以更新：false-无，true-有
+ * @method boolean getHasKernelUpgrade() 获取<p>本月是否有内核可以更新：false-无，true-有</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHasKernelUpgrade(boolean $HasKernelUpgrade) 设置本月是否有内核可以更新：false-无，true-有
+ * @method void setHasKernelUpgrade(boolean $HasKernelUpgrade) 设置<p>本月是否有内核可以更新：false-无，true-有</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCdcId() 获取cdcId，使用cdc子网时传递
+ * @method string getCdcId() 获取<p>cdcId，使用cdc子网时传递</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCdcId(string $CdcId) 设置cdcId，使用cdc子网时传递
+ * @method void setCdcId(string $CdcId) 设置<p>cdcId，使用cdc子网时传递</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getKibanaPrivateVip() 获取kibana内网vip
+ * @method string getKibanaPrivateVip() 获取<p>kibana内网vip</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKibanaPrivateVip(string $KibanaPrivateVip) 设置kibana内网vip
+ * @method void setKibanaPrivateVip(string $KibanaPrivateVip) 设置<p>kibana内网vip</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCustomKibanaPrivateUrl() 获取自定义kibana内网url
+ * @method string getCustomKibanaPrivateUrl() 获取<p>自定义kibana内网url</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCustomKibanaPrivateUrl(string $CustomKibanaPrivateUrl) 设置自定义kibana内网url
+ * @method void setCustomKibanaPrivateUrl(string $CustomKibanaPrivateUrl) 设置<p>自定义kibana内网url</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getOutboundPublicAcls() 获取节点出站访问详细信息
+ * @method array getOutboundPublicAcls() 获取<p>节点出站访问详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutboundPublicAcls(array $OutboundPublicAcls) 设置节点出站访问详细信息
+ * @method void setOutboundPublicAcls(array $OutboundPublicAcls) 设置<p>节点出站访问详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNetConnectScheme() 获取网络连接方案
+ * @method string getNetConnectScheme() 获取<p>网络连接方案</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNetConnectScheme(string $NetConnectScheme) 设置网络连接方案
+ * @method void setNetConnectScheme(string $NetConnectScheme) 设置<p>网络连接方案</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDisasterRecoverGroupAffinity() 获取置放群组相关参数
+ * @method integer getDisasterRecoverGroupAffinity() 获取<p>置放群组相关参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDisasterRecoverGroupAffinity(integer $DisasterRecoverGroupAffinity) 设置置放群组相关参数
+ * @method void setDisasterRecoverGroupAffinity(integer $DisasterRecoverGroupAffinity) 设置<p>置放群组相关参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSubProductCode() 获取子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
+ * @method string getSubProductCode() 获取<p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubProductCode(string $SubProductCode) 设置子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
+ * @method void setSubProductCode(string $SubProductCode) 设置<p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCosBucketStorageSize() 获取存算分离cos用量，单位M
+ * @method integer getCosBucketStorageSize() 获取<p>存算分离cos用量，单位M</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCosBucketStorageSize(integer $CosBucketStorageSize) 设置存算分离cos用量，单位M
+ * @method void setCosBucketStorageSize(integer $CosBucketStorageSize) 设置<p>存算分离cos用量，单位M</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getReadWriteMode() 获取读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
+ * @method integer getReadWriteMode() 获取<p>读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReadWriteMode(integer $ReadWriteMode) 设置读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
+ * @method void setReadWriteMode(integer $ReadWriteMode) 设置<p>读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getEnableScheduleRecoverGroup() 获取是否有置放群组异步调度任务
+ * @method boolean getEnableScheduleRecoverGroup() 获取<p>是否有置放群组异步调度任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnableScheduleRecoverGroup(boolean $EnableScheduleRecoverGroup) 设置是否有置放群组异步调度任务
+ * @method void setEnableScheduleRecoverGroup(boolean $EnableScheduleRecoverGroup) 设置<p>是否有置放群组异步调度任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method EnableScheduleOperationDuration getEnableScheduleOperationDuration() 获取异步调度任务的时间
+ * @method EnableScheduleOperationDuration getEnableScheduleOperationDuration() 获取<p>异步调度任务的时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnableScheduleOperationDuration(EnableScheduleOperationDuration $EnableScheduleOperationDuration) 设置异步调度任务的时间
+ * @method void setEnableScheduleOperationDuration(EnableScheduleOperationDuration $EnableScheduleOperationDuration) 设置<p>异步调度任务的时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEnableDestroyProtection() 获取开启集群保护：OPEN-开启，CLOSE-关闭
+ * @method string getEnableDestroyProtection() 获取<p>开启集群保护：OPEN-开启，CLOSE-关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnableDestroyProtection(string $EnableDestroyProtection) 设置开启集群保护：OPEN-开启，CLOSE-关闭
+ * @method void setEnableDestroyProtection(string $EnableDestroyProtection) 设置<p>开启集群保护：OPEN-开启，CLOSE-关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getShowKibanaIpPort() 获取kibana内网访问地址
- * @method void setShowKibanaIpPort(string $ShowKibanaIpPort) 设置kibana内网访问地址
- * @method boolean getIsCdzLite() 获取是否为CDZLite可用区
- * @method void setIsCdzLite(boolean $IsCdzLite) 设置是否为CDZLite可用区
- * @method string getEsPrivateTcpUrl() 获取集群内网tcp地址
- * @method void setEsPrivateTcpUrl(string $EsPrivateTcpUrl) 设置集群内网tcp地址
+ * @method string getShowKibanaIpPort() 获取<p>kibana内网访问地址</p>
+ * @method void setShowKibanaIpPort(string $ShowKibanaIpPort) 设置<p>kibana内网访问地址</p>
+ * @method boolean getIsCdzLite() 获取<p>是否为CDZLite可用区</p>
+ * @method void setIsCdzLite(boolean $IsCdzLite) 设置<p>是否为CDZLite可用区</p>
+ * @method string getEsPrivateTcpUrl() 获取<p>集群内网tcp地址</p>
+ * @method void setEsPrivateTcpUrl(string $EsPrivateTcpUrl) 设置<p>集群内网tcp地址</p>
+ * @method boolean getIsInRecycleBin() 获取<p>是否在回收站内</p><p>默认值：false</p>
+ * @method void setIsInRecycleBin(boolean $IsInRecycleBin) 设置<p>是否在回收站内</p><p>默认值：false</p>
+ * @method boolean getRecycleLockEnabled() 获取<p>回收站内是否锁定</p><p>默认值：false</p>
+ * @method void setRecycleLockEnabled(boolean $RecycleLockEnabled) 设置<p>回收站内是否锁定</p><p>默认值：false</p>
+ * @method string getMayDestroyPoint() 获取<p>预计销毁的时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
+ * @method void setMayDestroyPoint(string $MayDestroyPoint) 设置<p>预计销毁的时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
+ * @method integer getDelayDestroyInterval() 获取<p>延迟销毁的时间</p><p>单位：天</p>
+ * @method void setDelayDestroyInterval(integer $DelayDestroyInterval) 设置<p>延迟销毁的时间</p><p>单位：天</p>
  */
 class InstanceInfo extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
      */
     public $InstanceName;
 
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
      */
     public $Region;
 
     /**
-     * @var string 可用区
+     * @var string <p>可用区</p>
      */
     public $Zone;
 
     /**
-     * @var integer 用户ID
+     * @var integer <p>用户ID</p>
      */
     public $AppId;
 
     /**
-     * @var string 用户UIN
+     * @var string <p>用户UIN</p>
      */
     public $Uin;
 
     /**
-     * @var string 实例所属VPC的UID
+     * @var string <p>实例所属VPC的UID</p>
      */
     public $VpcUid;
 
     /**
-     * @var string 实例所属子网的UID
+     * @var string <p>实例所属子网的UID</p>
      */
     public $SubnetUid;
 
     /**
-     * @var integer 实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中
+     * @var integer <p>实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中</p>
      */
     public $Status;
 
     /**
-     * @var string 自动续费标识。取值范围：
-RENEW_FLAG_AUTO：自动续费  
-RENEW_FLAG_MANUAL：不自动续费
-默认取值：
-RENEW_FLAG_DEFAULT：不自动续费
-若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。
+     * @var string <p>自动续费标识。取值范围：<br>RENEW_FLAG_AUTO：自动续费<br>RENEW_FLAG_MANUAL：不自动续费<br>默认取值：<br>RENEW_FLAG_DEFAULT：不自动续费<br>若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。</p>
      */
     public $RenewFlag;
 
     /**
-     * @var string 实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
+     * @var string <p>实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。</p>
      */
     public $ChargeType;
 
     /**
-     * @var integer 包年包月购买时长,单位:月
+     * @var integer <p>包年包月购买时长,单位:月</p>
      */
     public $ChargePeriod;
 
     /**
-     * @var string 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * @var string <p>节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
      */
     public $NodeType;
 
     /**
-     * @var integer 节点个数
+     * @var integer <p>节点个数</p>
      */
     public $NodeNum;
 
     /**
-     * @var integer 节点CPU核数
+     * @var integer <p>节点CPU核数</p>
      */
     public $CpuNum;
 
     /**
-     * @var integer 节点内存大小，单位GB
+     * @var integer <p>节点内存大小，单位GB</p>
      */
     public $MemSize;
 
     /**
-     * @var string 节点磁盘类型
+     * @var string <p>节点磁盘类型</p>
      */
     public $DiskType;
 
     /**
-     * @var integer 节点磁盘大小，单位GB
+     * @var integer <p>节点磁盘大小，单位GB</p>
      */
     public $DiskSize;
 
     /**
-     * @var string ES域名
+     * @var string <p>ES域名</p>
      */
     public $EsDomain;
 
     /**
-     * @var string ES VIP
+     * @var string <p>ES VIP</p>
      */
     public $EsVip;
 
     /**
-     * @var integer ES端口
+     * @var integer <p>ES端口</p>
      */
     public $EsPort;
 
     /**
-     * @var string Kibana访问url
+     * @var string <p>Kibana访问url</p>
      */
     public $KibanaUrl;
 
     /**
-     * @var string ES版本号
+     * @var string <p>ES版本号</p>
      */
     public $EsVersion;
 
     /**
-     * @var string ES配置项
+     * @var string <p>ES配置项</p>
      */
     public $EsConfig;
 
     /**
-     * @var EsAcl Kibana访问控制配置
+     * @var EsAcl <p>Kibana访问控制配置</p>
      */
     public $EsAcl;
 
     /**
-     * @var string 实例创建时间
+     * @var string <p>实例创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 实例最后修改操作时间
+     * @var string <p>实例最后修改操作时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 实例到期时间
+     * @var string <p>实例到期时间</p>
      */
     public $Deadline;
 
     /**
-     * @var integer 实例类型（实例类型标识，当前只有1,2两种）
+     * @var integer <p>实例类型（实例类型标识，当前只有1,2两种）</p>
      */
     public $InstanceType;
 
     /**
-     * @var EsDictionaryInfo Ik分词器配置
+     * @var EsDictionaryInfo <p>Ik分词器配置</p>
      */
     public $IkConfig;
 
     /**
-     * @var MasterNodeInfo 专用主节点配置
+     * @var MasterNodeInfo <p>专用主节点配置</p>
      */
     public $MasterNodeInfo;
 
     /**
-     * @var CosBackup cos自动备份配置
+     * @var CosBackup <p>cos自动备份配置</p>
      */
     public $CosBackup;
 
     /**
-     * @var boolean 是否允许cos自动备份
+     * @var boolean <p>是否允许cos自动备份</p>
      */
     public $AllowCosBackup;
 
     /**
-     * @var array 实例拥有的标签列表
+     * @var array <p>实例拥有的标签列表</p>
      */
     public $TagList;
 
     /**
-     * @var string License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
+     * @var string <p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum</p>
      */
     public $LicenseType;
 
     /**
-     * @var boolean 是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li>
+     * @var boolean <p>是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableHotWarmMode;
 
     /**
-     * @var string 温节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * @var string <p>温节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WarmNodeType;
 
     /**
-     * @var integer 温节点个数
+     * @var integer <p>温节点个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WarmNodeNum;
 
     /**
-     * @var integer 温节点CPU核数
+     * @var integer <p>温节点CPU核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WarmCpuNum;
 
     /**
-     * @var integer 温节点内存内存大小，单位GB
+     * @var integer <p>温节点内存内存大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WarmMemSize;
 
     /**
-     * @var string 温节点磁盘类型
+     * @var string <p>温节点磁盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WarmDiskType;
 
     /**
-     * @var integer 温节点磁盘大小，单位GB
+     * @var integer <p>温节点磁盘大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WarmDiskSize;
 
     /**
-     * @var array 集群节点信息列表
+     * @var array <p>集群节点信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeInfoList;
 
     /**
-     * @var string Es公网地址
+     * @var string <p>Es公网地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EsPublicUrl;
 
     /**
-     * @var array 多可用区网络信息
+     * @var array <p>多可用区网络信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MultiZoneInfo;
 
     /**
-     * @var integer 部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>
+     * @var integer <p>部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeployMode;
 
     /**
-     * @var string ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+     * @var string <p>ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicAccess;
 
     /**
-     * @var EsAcl ES公网访问控制配置
+     * @var EsAcl <p>ES公网访问控制配置</p>
      */
     public $EsPublicAcl;
 
     /**
-     * @var string Kibana内网地址
+     * @var string <p>Kibana内网地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KibanaPrivateUrl;
 
     /**
-     * @var string Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+     * @var string <p>Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KibanaPublicAccess;
 
     /**
-     * @var string Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+     * @var string <p>Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KibanaPrivateAccess;
 
     /**
-     * @var integer 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+     * @var integer <p>6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityType;
 
     /**
-     * @var integer 场景化模板类型：0、不开启；1、通用场景；2、日志场景；3、搜索场景
+     * @var integer <p>场景化模板类型：0、不开启；1、通用场景；2、日志场景；3、搜索场景</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SceneType;
 
     /**
-     * @var string Kibana配置项
+     * @var string <p>Kibana配置项</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KibanaConfig;
 
     /**
-     * @var KibanaNodeInfo Kibana节点信息
+     * @var KibanaNodeInfo <p>Kibana节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KibanaNodeInfo;
 
     /**
-     * @var WebNodeTypeInfo 可视化节点配置
+     * @var WebNodeTypeInfo <p>可视化节点配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WebNodeTypeInfo;
 
     /**
-     * @var string JDK类型，oracle或kona
+     * @var string <p>JDK类型，oracle或kona</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Jdk;
 
     /**
-     * @var string 集群网络通讯协议
+     * @var string <p>集群网络通讯协议</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocol;
 
     /**
-     * @var array 安全组id
+     * @var array <p>安全组id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityGroups;
 
     /**
-     * @var string 冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * @var string <p>冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ColdNodeType;
 
     /**
-     * @var integer 冷节点个数
+     * @var integer <p>冷节点个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ColdNodeNum;
 
     /**
-     * @var integer 冷节点CPU核数
+     * @var integer <p>冷节点CPU核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ColdCpuNum;
 
     /**
-     * @var integer 冷节点内存大小，单位GB
+     * @var integer <p>冷节点内存大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ColdMemSize;
 
     /**
-     * @var string 冷节点磁盘类型
+     * @var string <p>冷节点磁盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ColdDiskType;
 
     /**
-     * @var integer 冷节点磁盘大小，单位GB
+     * @var integer <p>冷节点磁盘大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ColdDiskSize;
 
     /**
-     * @var string 冻节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * @var string <p>冻节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FrozenNodeType;
 
     /**
-     * @var integer 冻节点个数
+     * @var integer <p>冻节点个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FrozenNodeNum;
 
     /**
-     * @var integer 冻节点CPU核数
+     * @var integer <p>冻节点CPU核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FrozenCpuNum;
 
     /**
-     * @var integer 冻节点内存大小，单位GB
+     * @var integer <p>冻节点内存大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FrozenMemSize;
 
     /**
-     * @var string 冻节点磁盘类型
+     * @var string <p>冻节点磁盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FrozenDiskType;
 
     /**
-     * @var integer 冻节点磁盘大小，单位GB
+     * @var integer <p>冻节点磁盘大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FrozenDiskSize;
 
     /**
-     * @var integer 集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red
+     * @var integer <p>集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HealthStatus;
 
     /**
-     * @var string https集群内网url
+     * @var string <p>https集群内网url</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EsPrivateUrl;
 
     /**
-     * @var string https集群内网域名
+     * @var string <p>https集群内网域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EsPrivateDomain;
 
     /**
-     * @var array 集群的配置组信息
+     * @var array <p>集群的配置组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EsConfigSets;
 
     /**
-     * @var OperationDuration 集群可维护时间段
+     * @var OperationDuration <p>集群可维护时间段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperationDuration;
 
     /**
-     * @var array web节点列表
+     * @var array <p>web节点列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OptionalWebServiceInfos;
 
     /**
-     * @var boolean 自治索引开关
+     * @var boolean <p>自治索引开关</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoIndexEnabled;
 
     /**
-     * @var boolean 是否支持存储计算分离
+     * @var boolean <p>是否支持存储计算分离</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableHybridStorage;
 
     /**
-     * @var float 流程进度
+     * @var float <p>流程进度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProcessPercent;
 
     /**
-     * @var string Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li>
+     * @var string <p>Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KibanaAlteringPublicAccess;
 
     /**
-     * @var boolean 本月是否有内核可以更新：false-无，true-有
+     * @var boolean <p>本月是否有内核可以更新：false-无，true-有</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HasKernelUpgrade;
 
     /**
-     * @var string cdcId，使用cdc子网时传递
+     * @var string <p>cdcId，使用cdc子网时传递</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CdcId;
 
     /**
-     * @var string kibana内网vip
+     * @var string <p>kibana内网vip</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KibanaPrivateVip;
 
     /**
-     * @var string 自定义kibana内网url
+     * @var string <p>自定义kibana内网url</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomKibanaPrivateUrl;
 
     /**
-     * @var array 节点出站访问详细信息
+     * @var array <p>节点出站访问详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutboundPublicAcls;
 
     /**
-     * @var string 网络连接方案
+     * @var string <p>网络连接方案</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetConnectScheme;
 
     /**
-     * @var integer 置放群组相关参数
+     * @var integer <p>置放群组相关参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DisasterRecoverGroupAffinity;
 
     /**
-     * @var string 子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
+     * @var string <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubProductCode;
 
     /**
-     * @var integer 存算分离cos用量，单位M
+     * @var integer <p>存算分离cos用量，单位M</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CosBucketStorageSize;
 
     /**
-     * @var integer 读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
+     * @var integer <p>读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReadWriteMode;
 
     /**
-     * @var boolean 是否有置放群组异步调度任务
+     * @var boolean <p>是否有置放群组异步调度任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableScheduleRecoverGroup;
 
     /**
-     * @var EnableScheduleOperationDuration 异步调度任务的时间
+     * @var EnableScheduleOperationDuration <p>异步调度任务的时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableScheduleOperationDuration;
 
     /**
-     * @var string 开启集群保护：OPEN-开启，CLOSE-关闭
+     * @var string <p>开启集群保护：OPEN-开启，CLOSE-关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableDestroyProtection;
 
     /**
-     * @var string kibana内网访问地址
+     * @var string <p>kibana内网访问地址</p>
      */
     public $ShowKibanaIpPort;
 
     /**
-     * @var boolean 是否为CDZLite可用区
+     * @var boolean <p>是否为CDZLite可用区</p>
      */
     public $IsCdzLite;
 
     /**
-     * @var string 集群内网tcp地址
+     * @var string <p>集群内网tcp地址</p>
      */
     public $EsPrivateTcpUrl;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $InstanceName 实例名称
-     * @param string $Region 地域
-     * @param string $Zone 可用区
-     * @param integer $AppId 用户ID
-     * @param string $Uin 用户UIN
-     * @param string $VpcUid 实例所属VPC的UID
-     * @param string $SubnetUid 实例所属子网的UID
-     * @param integer $Status 实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中
-     * @param string $RenewFlag 自动续费标识。取值范围：
-RENEW_FLAG_AUTO：自动续费  
-RENEW_FLAG_MANUAL：不自动续费
-默认取值：
-RENEW_FLAG_DEFAULT：不自动续费
-若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。
-     * @param string $ChargeType 实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
-     * @param integer $ChargePeriod 包年包月购买时长,单位:月
-     * @param string $NodeType 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
-     * @param integer $NodeNum 节点个数
-     * @param integer $CpuNum 节点CPU核数
-     * @param integer $MemSize 节点内存大小，单位GB
-     * @param string $DiskType 节点磁盘类型
-     * @param integer $DiskSize 节点磁盘大小，单位GB
-     * @param string $EsDomain ES域名
-     * @param string $EsVip ES VIP
-     * @param integer $EsPort ES端口
-     * @param string $KibanaUrl Kibana访问url
-     * @param string $EsVersion ES版本号
-     * @param string $EsConfig ES配置项
-     * @param EsAcl $EsAcl Kibana访问控制配置
-     * @param string $CreateTime 实例创建时间
-     * @param string $UpdateTime 实例最后修改操作时间
-     * @param string $Deadline 实例到期时间
-     * @param integer $InstanceType 实例类型（实例类型标识，当前只有1,2两种）
-     * @param EsDictionaryInfo $IkConfig Ik分词器配置
-     * @param MasterNodeInfo $MasterNodeInfo 专用主节点配置
-     * @param CosBackup $CosBackup cos自动备份配置
-     * @param boolean $AllowCosBackup 是否允许cos自动备份
-     * @param array $TagList 实例拥有的标签列表
-     * @param string $LicenseType License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
-     * @param boolean $EnableHotWarmMode 是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li>
+     * @var boolean <p>是否在回收站内</p><p>默认值：false</p>
+     */
+    public $IsInRecycleBin;
+
+    /**
+     * @var boolean <p>回收站内是否锁定</p><p>默认值：false</p>
+     */
+    public $RecycleLockEnabled;
+
+    /**
+     * @var string <p>预计销毁的时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
+     */
+    public $MayDestroyPoint;
+
+    /**
+     * @var integer <p>延迟销毁的时间</p><p>单位：天</p>
+     */
+    public $DelayDestroyInterval;
+
+    /**
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $InstanceName <p>实例名称</p>
+     * @param string $Region <p>地域</p>
+     * @param string $Zone <p>可用区</p>
+     * @param integer $AppId <p>用户ID</p>
+     * @param string $Uin <p>用户UIN</p>
+     * @param string $VpcUid <p>实例所属VPC的UID</p>
+     * @param string $SubnetUid <p>实例所属子网的UID</p>
+     * @param integer $Status <p>实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中</p>
+     * @param string $RenewFlag <p>自动续费标识。取值范围：<br>RENEW_FLAG_AUTO：自动续费<br>RENEW_FLAG_MANUAL：不自动续费<br>默认取值：<br>RENEW_FLAG_DEFAULT：不自动续费<br>若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。</p>
+     * @param string $ChargeType <p>实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。</p>
+     * @param integer $ChargePeriod <p>包年包月购买时长,单位:月</p>
+     * @param string $NodeType <p>节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
+     * @param integer $NodeNum <p>节点个数</p>
+     * @param integer $CpuNum <p>节点CPU核数</p>
+     * @param integer $MemSize <p>节点内存大小，单位GB</p>
+     * @param string $DiskType <p>节点磁盘类型</p>
+     * @param integer $DiskSize <p>节点磁盘大小，单位GB</p>
+     * @param string $EsDomain <p>ES域名</p>
+     * @param string $EsVip <p>ES VIP</p>
+     * @param integer $EsPort <p>ES端口</p>
+     * @param string $KibanaUrl <p>Kibana访问url</p>
+     * @param string $EsVersion <p>ES版本号</p>
+     * @param string $EsConfig <p>ES配置项</p>
+     * @param EsAcl $EsAcl <p>Kibana访问控制配置</p>
+     * @param string $CreateTime <p>实例创建时间</p>
+     * @param string $UpdateTime <p>实例最后修改操作时间</p>
+     * @param string $Deadline <p>实例到期时间</p>
+     * @param integer $InstanceType <p>实例类型（实例类型标识，当前只有1,2两种）</p>
+     * @param EsDictionaryInfo $IkConfig <p>Ik分词器配置</p>
+     * @param MasterNodeInfo $MasterNodeInfo <p>专用主节点配置</p>
+     * @param CosBackup $CosBackup <p>cos自动备份配置</p>
+     * @param boolean $AllowCosBackup <p>是否允许cos自动备份</p>
+     * @param array $TagList <p>实例拥有的标签列表</p>
+     * @param string $LicenseType <p>License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum</p>
+     * @param boolean $EnableHotWarmMode <p>是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WarmNodeType 温节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * @param string $WarmNodeType <p>温节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $WarmNodeNum 温节点个数
+     * @param integer $WarmNodeNum <p>温节点个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $WarmCpuNum 温节点CPU核数
+     * @param integer $WarmCpuNum <p>温节点CPU核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $WarmMemSize 温节点内存内存大小，单位GB
+     * @param integer $WarmMemSize <p>温节点内存内存大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WarmDiskType 温节点磁盘类型
+     * @param string $WarmDiskType <p>温节点磁盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $WarmDiskSize 温节点磁盘大小，单位GB
+     * @param integer $WarmDiskSize <p>温节点磁盘大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $NodeInfoList 集群节点信息列表
+     * @param array $NodeInfoList <p>集群节点信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EsPublicUrl Es公网地址
+     * @param string $EsPublicUrl <p>Es公网地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $MultiZoneInfo 多可用区网络信息
+     * @param array $MultiZoneInfo <p>多可用区网络信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DeployMode 部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>
+     * @param integer $DeployMode <p>部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PublicAccess ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+     * @param string $PublicAccess <p>ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EsAcl $EsPublicAcl ES公网访问控制配置
-     * @param string $KibanaPrivateUrl Kibana内网地址
+     * @param EsAcl $EsPublicAcl <p>ES公网访问控制配置</p>
+     * @param string $KibanaPrivateUrl <p>Kibana内网地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $KibanaPublicAccess Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+     * @param string $KibanaPublicAccess <p>Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $KibanaPrivateAccess Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
+     * @param string $KibanaPrivateAccess <p>Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+     * @param integer $SecurityType <p>6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SceneType 场景化模板类型：0、不开启；1、通用场景；2、日志场景；3、搜索场景
+     * @param integer $SceneType <p>场景化模板类型：0、不开启；1、通用场景；2、日志场景；3、搜索场景</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $KibanaConfig Kibana配置项
+     * @param string $KibanaConfig <p>Kibana配置项</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KibanaNodeInfo $KibanaNodeInfo Kibana节点信息
+     * @param KibanaNodeInfo $KibanaNodeInfo <p>Kibana节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WebNodeTypeInfo $WebNodeTypeInfo 可视化节点配置
+     * @param WebNodeTypeInfo $WebNodeTypeInfo <p>可视化节点配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Jdk JDK类型，oracle或kona
+     * @param string $Jdk <p>JDK类型，oracle或kona</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Protocol 集群网络通讯协议
+     * @param string $Protocol <p>集群网络通讯协议</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SecurityGroups 安全组id
+     * @param array $SecurityGroups <p>安全组id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ColdNodeType 冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * @param string $ColdNodeType <p>冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ColdNodeNum 冷节点个数
+     * @param integer $ColdNodeNum <p>冷节点个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ColdCpuNum 冷节点CPU核数
+     * @param integer $ColdCpuNum <p>冷节点CPU核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ColdMemSize 冷节点内存大小，单位GB
+     * @param integer $ColdMemSize <p>冷节点内存大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ColdDiskType 冷节点磁盘类型
+     * @param string $ColdDiskType <p>冷节点磁盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ColdDiskSize 冷节点磁盘大小，单位GB
+     * @param integer $ColdDiskSize <p>冷节点磁盘大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FrozenNodeType 冻节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * @param string $FrozenNodeType <p>冻节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $FrozenNodeNum 冻节点个数
+     * @param integer $FrozenNodeNum <p>冻节点个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $FrozenCpuNum 冻节点CPU核数
+     * @param integer $FrozenCpuNum <p>冻节点CPU核数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $FrozenMemSize 冻节点内存大小，单位GB
+     * @param integer $FrozenMemSize <p>冻节点内存大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FrozenDiskType 冻节点磁盘类型
+     * @param string $FrozenDiskType <p>冻节点磁盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $FrozenDiskSize 冻节点磁盘大小，单位GB
+     * @param integer $FrozenDiskSize <p>冻节点磁盘大小，单位GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $HealthStatus 集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red
+     * @param integer $HealthStatus <p>集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EsPrivateUrl https集群内网url
+     * @param string $EsPrivateUrl <p>https集群内网url</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EsPrivateDomain https集群内网域名
+     * @param string $EsPrivateDomain <p>https集群内网域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $EsConfigSets 集群的配置组信息
+     * @param array $EsConfigSets <p>集群的配置组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OperationDuration $OperationDuration 集群可维护时间段
+     * @param OperationDuration $OperationDuration <p>集群可维护时间段</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $OptionalWebServiceInfos web节点列表
+     * @param array $OptionalWebServiceInfos <p>web节点列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $AutoIndexEnabled 自治索引开关
+     * @param boolean $AutoIndexEnabled <p>自治索引开关</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $EnableHybridStorage 是否支持存储计算分离
+     * @param boolean $EnableHybridStorage <p>是否支持存储计算分离</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $ProcessPercent 流程进度
+     * @param float $ProcessPercent <p>流程进度</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $KibanaAlteringPublicAccess Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li>
+     * @param string $KibanaAlteringPublicAccess <p>Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li></p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $HasKernelUpgrade 本月是否有内核可以更新：false-无，true-有
+     * @param boolean $HasKernelUpgrade <p>本月是否有内核可以更新：false-无，true-有</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CdcId cdcId，使用cdc子网时传递
+     * @param string $CdcId <p>cdcId，使用cdc子网时传递</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $KibanaPrivateVip kibana内网vip
+     * @param string $KibanaPrivateVip <p>kibana内网vip</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CustomKibanaPrivateUrl 自定义kibana内网url
+     * @param string $CustomKibanaPrivateUrl <p>自定义kibana内网url</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $OutboundPublicAcls 节点出站访问详细信息
+     * @param array $OutboundPublicAcls <p>节点出站访问详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NetConnectScheme 网络连接方案
+     * @param string $NetConnectScheme <p>网络连接方案</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DisasterRecoverGroupAffinity 置放群组相关参数
+     * @param integer $DisasterRecoverGroupAffinity <p>置放群组相关参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SubProductCode 子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
+     * @param string $SubProductCode <p>子产品ID枚举值： 开源版：&quot;sp_es_io2&quot;， 基础版：&quot;sp_es_basic&quot;，白金版：&quot;sp_es_platinum&quot;，企业版：&quot;sp_es_enterprise&quot;，CDC白金版：&quot;sp_es_cdc_platinum&quot;，日志增强版：&quot;sp_es_enlogging&quot;，tsearch：&quot;sp_tsearch_io2&quot;，logstash：&quot;sp_es_logstash&quot; ，可以为空，为空的时候后台取LicenseType映射该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CosBucketStorageSize 存算分离cos用量，单位M
+     * @param integer $CosBucketStorageSize <p>存算分离cos用量，单位M</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ReadWriteMode 读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
+     * @param integer $ReadWriteMode <p>读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $EnableScheduleRecoverGroup 是否有置放群组异步调度任务
+     * @param boolean $EnableScheduleRecoverGroup <p>是否有置放群组异步调度任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnableScheduleOperationDuration $EnableScheduleOperationDuration 异步调度任务的时间
+     * @param EnableScheduleOperationDuration $EnableScheduleOperationDuration <p>异步调度任务的时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EnableDestroyProtection 开启集群保护：OPEN-开启，CLOSE-关闭
+     * @param string $EnableDestroyProtection <p>开启集群保护：OPEN-开启，CLOSE-关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ShowKibanaIpPort kibana内网访问地址
-     * @param boolean $IsCdzLite 是否为CDZLite可用区
-     * @param string $EsPrivateTcpUrl 集群内网tcp地址
+     * @param string $ShowKibanaIpPort <p>kibana内网访问地址</p>
+     * @param boolean $IsCdzLite <p>是否为CDZLite可用区</p>
+     * @param string $EsPrivateTcpUrl <p>集群内网tcp地址</p>
+     * @param boolean $IsInRecycleBin <p>是否在回收站内</p><p>默认值：false</p>
+     * @param boolean $RecycleLockEnabled <p>回收站内是否锁定</p><p>默认值：false</p>
+     * @param string $MayDestroyPoint <p>预计销毁的时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
+     * @param integer $DelayDestroyInterval <p>延迟销毁的时间</p><p>单位：天</p>
      */
     function __construct()
     {
@@ -1491,6 +1503,22 @@ RENEW_FLAG_DEFAULT：不自动续费
 
         if (array_key_exists("EsPrivateTcpUrl",$param) and $param["EsPrivateTcpUrl"] !== null) {
             $this->EsPrivateTcpUrl = $param["EsPrivateTcpUrl"];
+        }
+
+        if (array_key_exists("IsInRecycleBin",$param) and $param["IsInRecycleBin"] !== null) {
+            $this->IsInRecycleBin = $param["IsInRecycleBin"];
+        }
+
+        if (array_key_exists("RecycleLockEnabled",$param) and $param["RecycleLockEnabled"] !== null) {
+            $this->RecycleLockEnabled = $param["RecycleLockEnabled"];
+        }
+
+        if (array_key_exists("MayDestroyPoint",$param) and $param["MayDestroyPoint"] !== null) {
+            $this->MayDestroyPoint = $param["MayDestroyPoint"];
+        }
+
+        if (array_key_exists("DelayDestroyInterval",$param) and $param["DelayDestroyInterval"] !== null) {
+            $this->DelayDestroyInterval = $param["DelayDestroyInterval"];
         }
     }
 }

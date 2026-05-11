@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RestoreClusterSnapshot返回参数结构体
  *
- * @method string getInstanceId() 获取集群实例id
- * @method void setInstanceId(string $InstanceId) 设置集群实例id
+ * @method string getInstanceId() 获取<p>集群实例id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>集群实例id</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class RestoreClusterSnapshotResponse extends AbstractModel
 {
     /**
-     * @var string 集群实例id
+     * @var string <p>集群实例id</p>
      */
     public $InstanceId;
 
@@ -38,7 +38,7 @@ class RestoreClusterSnapshotResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $InstanceId 集群实例id
+     * @param string $InstanceId <p>集群实例id</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,18 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteInstance请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method boolean getLockEnabled() 获取<p>回收站锁定设置，true时不可手动销毁，到预设时间后自动销毁</p><p>默认值：false</p>
+ * @method void setLockEnabled(boolean $LockEnabled) 设置<p>回收站锁定设置，true时不可手动销毁，到预设时间后自动销毁</p><p>默认值：false</p>
+ * @method integer getLockDuration() 获取<p>放入回收站的锁定时间</p><p>取值范围：[1, 7]</p><p>单位：天</p><p>默认值：1</p>
+ * @method void setLockDuration(integer $LockDuration) 设置<p>放入回收站的锁定时间</p><p>取值范围：[1, 7]</p><p>单位：天</p><p>默认值：1</p>
  */
 class DeleteInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId 实例ID
+     * @var boolean <p>回收站锁定设置，true时不可手动销毁，到预设时间后自动销毁</p><p>默认值：false</p>
+     */
+    public $LockEnabled;
+
+    /**
+     * @var integer <p>放入回收站的锁定时间</p><p>取值范围：[1, 7]</p><p>单位：天</p><p>默认值：1</p>
+     */
+    public $LockDuration;
+
+    /**
+     * @param string $InstanceId <p>实例ID</p>
+     * @param boolean $LockEnabled <p>回收站锁定设置，true时不可手动销毁，到预设时间后自动销毁</p><p>默认值：false</p>
+     * @param integer $LockDuration <p>放入回收站的锁定时间</p><p>取值范围：[1, 7]</p><p>单位：天</p><p>默认值：1</p>
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DeleteInstanceRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("LockEnabled",$param) and $param["LockEnabled"] !== null) {
+            $this->LockEnabled = $param["LockEnabled"];
+        }
+
+        if (array_key_exists("LockDuration",$param) and $param["LockDuration"] !== null) {
+            $this->LockDuration = $param["LockDuration"];
         }
     }
 }

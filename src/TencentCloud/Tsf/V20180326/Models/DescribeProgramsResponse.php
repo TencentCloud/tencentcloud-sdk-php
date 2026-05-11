@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePrograms返回参数结构体
  *
- * @method PagedProgram getResult() 获取数据集列表
- * @method void setResult(PagedProgram $Result) 设置数据集列表
+ * @method PagedProgram getResult() 获取<p>数据集列表</p>
+ * @method void setResult(PagedProgram $Result) 设置<p>数据集列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeProgramsResponse extends AbstractModel
 {
     /**
-     * @var PagedProgram 数据集列表
+     * @var PagedProgram <p>数据集列表</p>
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class DescribeProgramsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param PagedProgram $Result 数据集列表
+     * @param PagedProgram $Result <p>数据集列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

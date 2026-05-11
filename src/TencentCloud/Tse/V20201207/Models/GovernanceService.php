@@ -20,178 +20,186 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 治理中心服务信息。
  *
- * @method string getName() 获取服务名称。
- * @method void setName(string $Name) 设置服务名称。
- * @method string getNamespace() 获取命名空间名称。
- * @method void setNamespace(string $Namespace) 设置命名空间名称。
- * @method array getMetadatas() 获取元数据信息数组。
- * @method void setMetadatas(array $Metadatas) 设置元数据信息数组。
- * @method string getComment() 获取描述信息。
- * @method void setComment(string $Comment) 设置描述信息。
- * @method string getCreateTime() 获取创建时间。
- * @method void setCreateTime(string $CreateTime) 设置创建时间。
- * @method string getModifyTime() 获取修改时间。
- * @method void setModifyTime(string $ModifyTime) 设置修改时间。
- * @method string getDepartment() 获取服务所属部门。
- * @method void setDepartment(string $Department) 设置服务所属部门。
- * @method string getBusiness() 获取服务所属业务。
- * @method void setBusiness(string $Business) 设置服务所属业务。
- * @method integer getHealthyInstanceCount() 获取健康服务实例数
- * @method void setHealthyInstanceCount(integer $HealthyInstanceCount) 设置健康服务实例数
- * @method integer getTotalInstanceCount() 获取服务实例总数
- * @method void setTotalInstanceCount(integer $TotalInstanceCount) 设置服务实例总数
- * @method string getId() 获取服务ID
- * @method void setId(string $Id) 设置服务ID
- * @method boolean getEditable() 获取是否可以编辑
- * @method void setEditable(boolean $Editable) 设置是否可以编辑
- * @method array getUserIds() 获取可以编辑该资源的用户ID
- * @method void setUserIds(array $UserIds) 设置可以编辑该资源的用户ID
- * @method array getGroupIds() 获取可以编辑该资源的用户组ID
- * @method void setGroupIds(array $GroupIds) 设置可以编辑该资源的用户组ID
- * @method array getRemoveUserIds() 获取移除可以编辑该资源的用户ID
- * @method void setRemoveUserIds(array $RemoveUserIds) 设置移除可以编辑该资源的用户ID
- * @method array getRemoveGroupIds() 获取移除可以编辑该资源的用户组ID
- * @method void setRemoveGroupIds(array $RemoveGroupIds) 设置移除可以编辑该资源的用户组ID
- * @method array getExportTo() 获取该服务对哪些命名空间可见	
- * @method void setExportTo(array $ExportTo) 设置该服务对哪些命名空间可见	
- * @method string getRevision() 获取该服务信息摘要签名
- * @method void setRevision(string $Revision) 设置该服务信息摘要签名
- * @method boolean getSyncToGlobalRegistry() 获取是否开启同步到全局注册中心
- * @method void setSyncToGlobalRegistry(boolean $SyncToGlobalRegistry) 设置是否开启同步到全局注册中心
- * @method integer getIsolateInstanceCount() 获取隔离实例数
- * @method void setIsolateInstanceCount(integer $IsolateInstanceCount) 设置隔离实例数
- * @method integer getServiceStatus() 获取服务健康状态
- * @method void setServiceStatus(integer $ServiceStatus) 设置服务健康状态
+ * @method string getName() 获取<p>服务名称。</p>
+ * @method void setName(string $Name) 设置<p>服务名称。</p>
+ * @method string getNamespace() 获取<p>命名空间名称。</p>
+ * @method void setNamespace(string $Namespace) 设置<p>命名空间名称。</p>
+ * @method array getMetadatas() 获取<p>元数据信息数组。</p>
+ * @method void setMetadatas(array $Metadatas) 设置<p>元数据信息数组。</p>
+ * @method string getComment() 获取<p>描述信息。</p>
+ * @method void setComment(string $Comment) 设置<p>描述信息。</p>
+ * @method string getCreateTime() 获取<p>创建时间。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间。</p>
+ * @method string getModifyTime() 获取<p>修改时间。</p>
+ * @method void setModifyTime(string $ModifyTime) 设置<p>修改时间。</p>
+ * @method string getDepartment() 获取<p>服务所属部门。</p>
+ * @method void setDepartment(string $Department) 设置<p>服务所属部门。</p>
+ * @method string getBusiness() 获取<p>服务所属业务。</p>
+ * @method void setBusiness(string $Business) 设置<p>服务所属业务。</p>
+ * @method integer getHealthyInstanceCount() 获取<p>健康服务实例数</p>
+ * @method void setHealthyInstanceCount(integer $HealthyInstanceCount) 设置<p>健康服务实例数</p>
+ * @method integer getTotalInstanceCount() 获取<p>服务实例总数</p>
+ * @method void setTotalInstanceCount(integer $TotalInstanceCount) 设置<p>服务实例总数</p>
+ * @method string getId() 获取<p>服务ID</p>
+ * @method void setId(string $Id) 设置<p>服务ID</p>
+ * @method boolean getEditable() 获取<p>是否可以编辑</p>
+ * @method void setEditable(boolean $Editable) 设置<p>是否可以编辑</p>
+ * @method array getUserIds() 获取<p>可以编辑该资源的用户ID</p>
+ * @method void setUserIds(array $UserIds) 设置<p>可以编辑该资源的用户ID</p>
+ * @method array getGroupIds() 获取<p>可以编辑该资源的用户组ID</p>
+ * @method void setGroupIds(array $GroupIds) 设置<p>可以编辑该资源的用户组ID</p>
+ * @method array getRemoveUserIds() 获取<p>移除可以编辑该资源的用户ID</p>
+ * @method void setRemoveUserIds(array $RemoveUserIds) 设置<p>移除可以编辑该资源的用户ID</p>
+ * @method array getRemoveGroupIds() 获取<p>移除可以编辑该资源的用户组ID</p>
+ * @method void setRemoveGroupIds(array $RemoveGroupIds) 设置<p>移除可以编辑该资源的用户组ID</p>
+ * @method array getExportTo() 获取<p>该服务对哪些命名空间可见</p>
+ * @method void setExportTo(array $ExportTo) 设置<p>该服务对哪些命名空间可见</p>
+ * @method string getRevision() 获取<p>该服务信息摘要签名</p>
+ * @method void setRevision(string $Revision) 设置<p>该服务信息摘要签名</p>
+ * @method boolean getSyncToGlobalRegistry() 获取<p>是否开启同步到全局注册中心</p>
+ * @method void setSyncToGlobalRegistry(boolean $SyncToGlobalRegistry) 设置<p>是否开启同步到全局注册中心</p>
+ * @method integer getIsolateInstanceCount() 获取<p>隔离实例数</p>
+ * @method void setIsolateInstanceCount(integer $IsolateInstanceCount) 设置<p>隔离实例数</p>
+ * @method integer getServiceStatus() 获取<p>服务健康状态</p>
+ * @method void setServiceStatus(integer $ServiceStatus) 设置<p>服务健康状态</p>
+ * @method integer getType() 获取<p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul>
+ * @method void setType(integer $Type) 设置<p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul>
  */
 class GovernanceService extends AbstractModel
 {
     /**
-     * @var string 服务名称。
+     * @var string <p>服务名称。</p>
      */
     public $Name;
 
     /**
-     * @var string 命名空间名称。
+     * @var string <p>命名空间名称。</p>
      */
     public $Namespace;
 
     /**
-     * @var array 元数据信息数组。
+     * @var array <p>元数据信息数组。</p>
      */
     public $Metadatas;
 
     /**
-     * @var string 描述信息。
+     * @var string <p>描述信息。</p>
      */
     public $Comment;
 
     /**
-     * @var string 创建时间。
+     * @var string <p>创建时间。</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 修改时间。
+     * @var string <p>修改时间。</p>
      */
     public $ModifyTime;
 
     /**
-     * @var string 服务所属部门。
+     * @var string <p>服务所属部门。</p>
      */
     public $Department;
 
     /**
-     * @var string 服务所属业务。
+     * @var string <p>服务所属业务。</p>
      */
     public $Business;
 
     /**
-     * @var integer 健康服务实例数
+     * @var integer <p>健康服务实例数</p>
      */
     public $HealthyInstanceCount;
 
     /**
-     * @var integer 服务实例总数
+     * @var integer <p>服务实例总数</p>
      */
     public $TotalInstanceCount;
 
     /**
-     * @var string 服务ID
+     * @var string <p>服务ID</p>
      */
     public $Id;
 
     /**
-     * @var boolean 是否可以编辑
+     * @var boolean <p>是否可以编辑</p>
      */
     public $Editable;
 
     /**
-     * @var array 可以编辑该资源的用户ID
+     * @var array <p>可以编辑该资源的用户ID</p>
      */
     public $UserIds;
 
     /**
-     * @var array 可以编辑该资源的用户组ID
+     * @var array <p>可以编辑该资源的用户组ID</p>
      */
     public $GroupIds;
 
     /**
-     * @var array 移除可以编辑该资源的用户ID
+     * @var array <p>移除可以编辑该资源的用户ID</p>
      */
     public $RemoveUserIds;
 
     /**
-     * @var array 移除可以编辑该资源的用户组ID
+     * @var array <p>移除可以编辑该资源的用户组ID</p>
      */
     public $RemoveGroupIds;
 
     /**
-     * @var array 该服务对哪些命名空间可见	
+     * @var array <p>该服务对哪些命名空间可见</p>
      */
     public $ExportTo;
 
     /**
-     * @var string 该服务信息摘要签名
+     * @var string <p>该服务信息摘要签名</p>
      */
     public $Revision;
 
     /**
-     * @var boolean 是否开启同步到全局注册中心
+     * @var boolean <p>是否开启同步到全局注册中心</p>
      */
     public $SyncToGlobalRegistry;
 
     /**
-     * @var integer 隔离实例数
+     * @var integer <p>隔离实例数</p>
      */
     public $IsolateInstanceCount;
 
     /**
-     * @var integer 服务健康状态
+     * @var integer <p>服务健康状态</p>
      */
     public $ServiceStatus;
 
     /**
-     * @param string $Name 服务名称。
-     * @param string $Namespace 命名空间名称。
-     * @param array $Metadatas 元数据信息数组。
-     * @param string $Comment 描述信息。
-     * @param string $CreateTime 创建时间。
-     * @param string $ModifyTime 修改时间。
-     * @param string $Department 服务所属部门。
-     * @param string $Business 服务所属业务。
-     * @param integer $HealthyInstanceCount 健康服务实例数
-     * @param integer $TotalInstanceCount 服务实例总数
-     * @param string $Id 服务ID
-     * @param boolean $Editable 是否可以编辑
-     * @param array $UserIds 可以编辑该资源的用户ID
-     * @param array $GroupIds 可以编辑该资源的用户组ID
-     * @param array $RemoveUserIds 移除可以编辑该资源的用户ID
-     * @param array $RemoveGroupIds 移除可以编辑该资源的用户组ID
-     * @param array $ExportTo 该服务对哪些命名空间可见	
-     * @param string $Revision 该服务信息摘要签名
-     * @param boolean $SyncToGlobalRegistry 是否开启同步到全局注册中心
-     * @param integer $IsolateInstanceCount 隔离实例数
-     * @param integer $ServiceStatus 服务健康状态
+     * @var integer <p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul>
+     */
+    public $Type;
+
+    /**
+     * @param string $Name <p>服务名称。</p>
+     * @param string $Namespace <p>命名空间名称。</p>
+     * @param array $Metadatas <p>元数据信息数组。</p>
+     * @param string $Comment <p>描述信息。</p>
+     * @param string $CreateTime <p>创建时间。</p>
+     * @param string $ModifyTime <p>修改时间。</p>
+     * @param string $Department <p>服务所属部门。</p>
+     * @param string $Business <p>服务所属业务。</p>
+     * @param integer $HealthyInstanceCount <p>健康服务实例数</p>
+     * @param integer $TotalInstanceCount <p>服务实例总数</p>
+     * @param string $Id <p>服务ID</p>
+     * @param boolean $Editable <p>是否可以编辑</p>
+     * @param array $UserIds <p>可以编辑该资源的用户ID</p>
+     * @param array $GroupIds <p>可以编辑该资源的用户组ID</p>
+     * @param array $RemoveUserIds <p>移除可以编辑该资源的用户ID</p>
+     * @param array $RemoveGroupIds <p>移除可以编辑该资源的用户组ID</p>
+     * @param array $ExportTo <p>该服务对哪些命名空间可见</p>
+     * @param string $Revision <p>该服务信息摘要签名</p>
+     * @param boolean $SyncToGlobalRegistry <p>是否开启同步到全局注册中心</p>
+     * @param integer $IsolateInstanceCount <p>隔离实例数</p>
+     * @param integer $ServiceStatus <p>服务健康状态</p>
+     * @param integer $Type <p>服务类型</p><p>枚举值：</p><ul><li>0： 微服务（默认）</li><li>1： MCP Server</li><li>2： AI Agent</li></ul>
      */
     function __construct()
     {
@@ -293,6 +301,10 @@ class GovernanceService extends AbstractModel
 
         if (array_key_exists("ServiceStatus",$param) and $param["ServiceStatus"] !== null) {
             $this->ServiceStatus = $param["ServiceStatus"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

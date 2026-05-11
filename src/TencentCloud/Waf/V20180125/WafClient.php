@@ -134,6 +134,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribePostCLSFlowsResponse DescribePostCLSFlows(Models\DescribePostCLSFlowsRequest $req) 获取CLS投递流任务列表
  * @method Models\DescribeProtectGroupResponse DescribeProtectGroup(Models\DescribeProtectGroupRequest $req) 获取防护对象组详情
  * @method Models\DescribeProtectionModesResponse DescribeProtectionModes(Models\DescribeProtectionModesRequest $req) 查询Tiga引擎大类规则及其防护模式
+ * @method Models\DescribeQClawContentSecCheckResponse DescribeQClawContentSecCheck(Models\DescribeQClawContentSecCheckRequest $req) 大模型请求内容和响应内容审核接口
  * @method Models\DescribeRateLimitsV2Response DescribeRateLimitsV2(Models\DescribeRateLimitsV2Request $req) 查询限流规则列表接口
  * @method Models\DescribeRuleLimitResponse DescribeRuleLimit(Models\DescribeRuleLimitRequest $req) 获取各个模块具体的规格限制
  * @method Models\DescribeScanIpResponse DescribeScanIp(Models\DescribeScanIpRequest $req) 查询扫描ip

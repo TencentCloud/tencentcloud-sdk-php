@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGovernanceServices返回参数结构体
  *
- * @method integer getTotalCount() 获取服务数总量。
- * @method void setTotalCount(integer $TotalCount) 设置服务数总量。
- * @method array getContent() 获取服务信息详情。
- * @method void setContent(array $Content) 设置服务信息详情。
+ * @method integer getTotalCount() 获取<p>服务数总量。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>服务数总量。</p>
+ * @method array getContent() 获取<p>服务信息详情。</p>
+ * @method void setContent(array $Content) 设置<p>服务信息详情。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeGovernanceServicesResponse extends AbstractModel
 {
     /**
-     * @var integer 服务数总量。
+     * @var integer <p>服务数总量。</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 服务信息详情。
+     * @var array <p>服务信息详情。</p>
      */
     public $Content;
 
@@ -45,8 +45,8 @@ class DescribeGovernanceServicesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 服务数总量。
-     * @param array $Content 服务信息详情。
+     * @param integer $TotalCount <p>服务数总量。</p>
+     * @param array $Content <p>服务信息详情。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,474 +20,378 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateClusters请求参数结构体
  *
- * @method string getZone() 获取可用区
- * @method void setZone(string $Zone) 设置可用区
- * @method string getVpcId() 获取所属VPC网络ID
- * @method void setVpcId(string $VpcId) 设置所属VPC网络ID
- * @method string getSubnetId() 获取所属子网ID
- * @method void setSubnetId(string $SubnetId) 设置所属子网ID
- * @method string getDbType() 获取数据库类型，取值范围: 
-<li> MYSQL </li>
- * @method void setDbType(string $DbType) 设置数据库类型，取值范围: 
-<li> MYSQL </li>
- * @method string getDbVersion() 获取数据库版本，取值范围: 
-<li> MYSQL可选值：5.7，8.0 </li>
- * @method void setDbVersion(string $DbVersion) 设置数据库版本，取值范围: 
-<li> MYSQL可选值：5.7，8.0 </li>
- * @method integer getProjectId() 获取所属项目ID
- * @method void setProjectId(integer $ProjectId) 设置所属项目ID
- * @method integer getCpu() 获取当DbMode为NORMAL或不填时必选
-普通实例Cpu核数
- * @method void setCpu(integer $Cpu) 设置当DbMode为NORMAL或不填时必选
-普通实例Cpu核数
- * @method integer getMemory() 获取当DbMode为NORMAL或不填时必选
-普通实例内存,单位GB
- * @method void setMemory(integer $Memory) 设置当DbMode为NORMAL或不填时必选
-普通实例内存,单位GB
- * @method integer getInstanceCount() 获取实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos
- * @method void setInstanceCount(integer $InstanceCount) 设置实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos
- * @method integer getStorage() 获取该参数无实际意义，已废弃。
-存储大小，单位GB。
- * @method void setStorage(integer $Storage) 设置该参数无实际意义，已废弃。
-存储大小，单位GB。
- * @method string getClusterName() 获取集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
- * @method void setClusterName(string $ClusterName) 设置集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
- * @method string getAdminPassword() 获取账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种)
- * @method void setAdminPassword(string $AdminPassword) 设置账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种)
- * @method integer getPort() 获取端口，默认3306，取值范围[0, 65535)
- * @method void setPort(integer $Port) 设置端口，默认3306，取值范围[0, 65535)
- * @method integer getPayMode() 获取计费模式，支持值为0和1，默认值为0。
-取值为0，表示按量计费。
-取值为1，表示包年包月。
- * @method void setPayMode(integer $PayMode) 设置计费模式，支持值为0和1，默认值为0。
-取值为0，表示按量计费。
-取值为1，表示包年包月。
- * @method integer getCount() 获取购买集群数，可选值范围[1,50]，默认为1
- * @method void setCount(integer $Count) 设置购买集群数，可选值范围[1,50]，默认为1
- * @method string getRollbackStrategy() 获取回档类型：
-noneRollback：不回档；
-snapRollback，快照回档；
-timeRollback，时间点回档
- * @method void setRollbackStrategy(string $RollbackStrategy) 设置回档类型：
-noneRollback：不回档；
-snapRollback，快照回档；
-timeRollback，时间点回档
- * @method integer getRollbackId() 获取快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
- * @method void setRollbackId(integer $RollbackId) 设置快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
- * @method string getOriginalClusterId() 获取回档时，传入源集群ID，用于查找源poolId
- * @method void setOriginalClusterId(string $OriginalClusterId) 设置回档时，传入源集群ID，用于查找源poolId
- * @method string getExpectTime() 获取时间点回档，指定时间；快照回档，快照时间
- * @method void setExpectTime(string $ExpectTime) 设置时间点回档，指定时间；快照回档，快照时间
- * @method integer getExpectTimeThresh() 获取该参数无实际意义，已废弃。
-时间点回档，指定时间允许范围
- * @method void setExpectTimeThresh(integer $ExpectTimeThresh) 设置该参数无实际意义，已废弃。
-时间点回档，指定时间允许范围
- * @method integer getStorageLimit() 获取普通实例存储上限，单位GB
-当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限
- * @method void setStorageLimit(integer $StorageLimit) 设置普通实例存储上限，单位GB
-当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限
- * @method integer getTimeSpan() 获取包年包月购买时长
- * @method void setTimeSpan(integer $TimeSpan) 设置包年包月购买时长
- * @method string getTimeUnit() 获取包年包月购买时长单位，['s','d','m','y']
- * @method void setTimeUnit(string $TimeUnit) 设置包年包月购买时长单位，['s','d','m','y']
- * @method integer getAutoRenewFlag() 获取包年包月购买是否自动续费，默认为0。
-0标识默认续费方式，1表示自动续费，2表示不自动续费。
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置包年包月购买是否自动续费，默认为0。
-0标识默认续费方式，1表示自动续费，2表示不自动续费。
- * @method integer getAutoVoucher() 获取是否自动选择代金券 1是 0否 默认为0
- * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动选择代金券 1是 0否 默认为0
- * @method integer getHaCount() 获取实例数量（该参数已不再使用，只做存量兼容处理）
- * @method void setHaCount(integer $HaCount) 设置实例数量（该参数已不再使用，只做存量兼容处理）
- * @method string getOrderSource() 获取订单来源
- * @method void setOrderSource(string $OrderSource) 设置订单来源
- * @method array getResourceTags() 获取集群创建需要绑定的tag数组信息
- * @method void setResourceTags(array $ResourceTags) 设置集群创建需要绑定的tag数组信息
- * @method string getDbMode() 获取Db类型
-当DbType为MYSQL时可选(默认NORMAL)：
-<li>NORMAL</li>
-<li>SERVERLESS</li>
- * @method void setDbMode(string $DbMode) 设置Db类型
-当DbType为MYSQL时可选(默认NORMAL)：
-<li>NORMAL</li>
-<li>SERVERLESS</li>
- * @method float getMinCpu() 获取当DbMode为SERVERLESS时必填
-cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
- * @method void setMinCpu(float $MinCpu) 设置当DbMode为SERVERLESS时必填
-cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
- * @method float getMaxCpu() 获取当DbMode为SERVERLESS时必填：
-cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
- * @method void setMaxCpu(float $MaxCpu) 设置当DbMode为SERVERLESS时必填：
-cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
- * @method string getAutoPause() 获取当DbMode为SERVERLESS时，指定集群是否自动暂停，可选范围
-<li>yes</li>
-<li>no</li>
-默认值:yes
- * @method void setAutoPause(string $AutoPause) 设置当DbMode为SERVERLESS时，指定集群是否自动暂停，可选范围
-<li>yes</li>
-<li>no</li>
-默认值:yes
- * @method integer getAutoPauseDelay() 获取当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
-默认值:600
- * @method void setAutoPauseDelay(integer $AutoPauseDelay) 设置当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
-默认值:600
- * @method integer getStoragePayMode() 获取集群存储计费模式，按量计费：0，包年包月：1。默认按量计费
-当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费
-回档与克隆均不支持包年包月存储
- * @method void setStoragePayMode(integer $StoragePayMode) 设置集群存储计费模式，按量计费：0，包年包月：1。默认按量计费
-当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费
-回档与克隆均不支持包年包月存储
- * @method array getSecurityGroupIds() 获取安全组id数组
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组id数组
- * @method array getAlarmPolicyIds() 获取告警策略Id数组
- * @method void setAlarmPolicyIds(array $AlarmPolicyIds) 设置告警策略Id数组
- * @method array getClusterParams() 获取参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感
- * @method void setClusterParams(array $ClusterParams) 设置参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感
- * @method integer getDealMode() 获取交易模式，0-下单且支付，1-下单
- * @method void setDealMode(integer $DealMode) 设置交易模式，0-下单且支付，1-下单
- * @method integer getParamTemplateId() 获取参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
- * @method void setParamTemplateId(integer $ParamTemplateId) 设置参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
- * @method string getSlaveZone() 获取多可用区地址
- * @method void setSlaveZone(string $SlaveZone) 设置多可用区地址
- * @method array getInstanceInitInfos() 获取实例初始化配置信息，主要用于购买集群时选不同规格实例
- * @method void setInstanceInitInfos(array $InstanceInitInfos) 设置实例初始化配置信息，主要用于购买集群时选不同规格实例
- * @method string getGdnId() 获取全球数据库唯一标识
- * @method void setGdnId(string $GdnId) 设置全球数据库唯一标识
- * @method ProxyConfig getProxyConfig() 获取数据库代理配置
- * @method void setProxyConfig(ProxyConfig $ProxyConfig) 设置数据库代理配置
- * @method string getAutoArchive() 获取是否自动归档
- * @method void setAutoArchive(string $AutoArchive) 设置是否自动归档
- * @method integer getAutoArchiveDelayHours() 获取暂停后的归档处理时间
- * @method void setAutoArchiveDelayHours(integer $AutoArchiveDelayHours) 设置暂停后的归档处理时间
- * @method string getCynosVersion() 获取内核小版本号
- * @method void setCynosVersion(string $CynosVersion) 设置内核小版本号
+ * @method string getZone() 获取<p>可用区</p>
+ * @method void setZone(string $Zone) 设置<p>可用区</p>
+ * @method string getVpcId() 获取<p>所属VPC网络ID</p>
+ * @method void setVpcId(string $VpcId) 设置<p>所属VPC网络ID</p>
+ * @method string getSubnetId() 获取<p>所属子网ID</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>所属子网ID</p>
+ * @method string getDbType() 获取<p>数据库类型</p><p>枚举值：</p><ul><li>MYSQL： MYSQL</li></ul>
+ * @method void setDbType(string $DbType) 设置<p>数据库类型</p><p>枚举值：</p><ul><li>MYSQL： MYSQL</li></ul>
+ * @method string getDbVersion() 获取<p>数据库版本</p><p>枚举值：</p><ul><li>5.7： MySQL5.7版本</li><li>8.0： MySQL8.0版本</li></ul>
+ * @method void setDbVersion(string $DbVersion) 设置<p>数据库版本</p><p>枚举值：</p><ul><li>5.7： MySQL5.7版本</li><li>8.0： MySQL8.0版本</li></ul>
+ * @method integer getProjectId() 获取<p>所属项目ID</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>所属项目ID</p>
+ * @method integer getCpu() 获取<p>当DbMode为NORMAL或不填时必选<br>普通实例Cpu核数</p>
+ * @method void setCpu(integer $Cpu) 设置<p>当DbMode为NORMAL或不填时必选<br>普通实例Cpu核数</p>
+ * @method integer getMemory() 获取<p>当DbMode为NORMAL或不填时必选<br>普通实例内存,单位GB</p>
+ * @method void setMemory(integer $Memory) 设置<p>当DbMode为NORMAL或不填时必选<br>普通实例内存,单位GB</p>
+ * @method integer getInstanceCount() 获取<p>实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos</p>
+ * @method void setInstanceCount(integer $InstanceCount) 设置<p>实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos</p>
+ * @method integer getStorage() 获取<p>该参数无实际意义，已废弃。<br>存储大小，单位GB。</p>
+ * @method void setStorage(integer $Storage) 设置<p>该参数无实际意义，已废弃。<br>存储大小，单位GB。</p>
+ * @method string getClusterName() 获取<p>集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（&#39;-&#39;,&#39;_&#39;,&#39;.&#39;）</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（&#39;-&#39;,&#39;_&#39;,&#39;.&#39;）</p>
+ * @method string getAdminPassword() 获取<p>账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&amp;*_-+=`|(){}[]:;&#39;&lt;&gt;,.?/中的任意三种)</p>
+ * @method void setAdminPassword(string $AdminPassword) 设置<p>账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&amp;*_-+=`|(){}[]:;&#39;&lt;&gt;,.?/中的任意三种)</p>
+ * @method integer getPort() 获取<p>端口，默认3306，取值范围[0, 65535)</p>
+ * @method void setPort(integer $Port) 设置<p>端口，默认3306，取值范围[0, 65535)</p>
+ * @method integer getPayMode() 获取<p>计费模式</p><p>枚举值：</p><ul><li>0： 表示按量计费</li><li>1： 表示包年包月</li></ul><p>默认值：0</p>
+ * @method void setPayMode(integer $PayMode) 设置<p>计费模式</p><p>枚举值：</p><ul><li>0： 表示按量计费</li><li>1： 表示包年包月</li></ul><p>默认值：0</p>
+ * @method integer getCount() 获取<p>购买集群数，可选值范围[1,50]，默认为1</p>
+ * @method void setCount(integer $Count) 设置<p>购买集群数，可选值范围[1,50]，默认为1</p>
+ * @method string getRollbackStrategy() 获取<p>回档类型</p><p>枚举值：</p><ul><li>noneRollback： 不回档</li><li>snapRollback： 快照回档</li><li>timeRollback： 时间点回档</li></ul>
+ * @method void setRollbackStrategy(string $RollbackStrategy) 设置<p>回档类型</p><p>枚举值：</p><ul><li>noneRollback： 不回档</li><li>snapRollback： 快照回档</li><li>timeRollback： 时间点回档</li></ul>
+ * @method integer getRollbackId() 获取<p>快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效</p>
+ * @method void setRollbackId(integer $RollbackId) 设置<p>快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效</p>
+ * @method string getOriginalClusterId() 获取<p>回档时，传入源集群ID，用于查找源poolId</p>
+ * @method void setOriginalClusterId(string $OriginalClusterId) 设置<p>回档时，传入源集群ID，用于查找源poolId</p>
+ * @method string getExpectTime() 获取<p>时间点回档，指定时间；快照回档，快照时间</p>
+ * @method void setExpectTime(string $ExpectTime) 设置<p>时间点回档，指定时间；快照回档，快照时间</p>
+ * @method integer getExpectTimeThresh() 获取<p>该参数无实际意义，已废弃。<br>时间点回档，指定时间允许范围</p>
+ * @method void setExpectTimeThresh(integer $ExpectTimeThresh) 设置<p>该参数无实际意义，已废弃。<br>时间点回档，指定时间允许范围</p>
+ * @method integer getStorageLimit() 获取<p>普通实例存储上限，单位GB<br>当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限</p>
+ * @method void setStorageLimit(integer $StorageLimit) 设置<p>普通实例存储上限，单位GB<br>当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限</p>
+ * @method integer getTimeSpan() 获取<p>包年包月购买时长</p>
+ * @method void setTimeSpan(integer $TimeSpan) 设置<p>包年包月购买时长</p>
+ * @method string getTimeUnit() 获取<p>包年包月购买时长单位，[&#39;s&#39;,&#39;d&#39;,&#39;m&#39;,&#39;y&#39;]</p>
+ * @method void setTimeUnit(string $TimeUnit) 设置<p>包年包月购买时长单位，[&#39;s&#39;,&#39;d&#39;,&#39;m&#39;,&#39;y&#39;]</p>
+ * @method integer getAutoRenewFlag() 获取<p>包年包月购买是否自动续费</p><p>枚举值：</p><ul><li>0： 默认续费方式</li><li>1： 自动续费</li><li>2： 不自动续费</li></ul><p>默认值：0</p>
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置<p>包年包月购买是否自动续费</p><p>枚举值：</p><ul><li>0： 默认续费方式</li><li>1： 自动续费</li><li>2： 不自动续费</li></ul><p>默认值：0</p>
+ * @method integer getAutoVoucher() 获取<p>是否自动选择代金券 1是 0否 默认为0</p><p>枚举值：</p><ul><li>1： 是</li><li>0： 否</li></ul><p>默认值：0</p>
+ * @method void setAutoVoucher(integer $AutoVoucher) 设置<p>是否自动选择代金券 1是 0否 默认为0</p><p>枚举值：</p><ul><li>1： 是</li><li>0： 否</li></ul><p>默认值：0</p>
+ * @method integer getHaCount() 获取<p>实例数量（该参数已不再使用，只做存量兼容处理）</p>
+ * @method void setHaCount(integer $HaCount) 设置<p>实例数量（该参数已不再使用，只做存量兼容处理）</p>
+ * @method string getOrderSource() 获取<p>订单来源</p>
+ * @method void setOrderSource(string $OrderSource) 设置<p>订单来源</p>
+ * @method array getResourceTags() 获取<p>集群创建需要绑定的tag数组信息</p>
+ * @method void setResourceTags(array $ResourceTags) 设置<p>集群创建需要绑定的tag数组信息</p>
+ * @method string getDbMode() 获取<p>Db类型</p><p>枚举值：</p><ul><li>NORMAL： 普通实例</li><li>SERVERLESS： serverless实例</li></ul><p>默认值：NORMAL</p><p>当DbType为MYSQL时可选(默认NORMAL)</p>
+ * @method void setDbMode(string $DbMode) 设置<p>Db类型</p><p>枚举值：</p><ul><li>NORMAL： 普通实例</li><li>SERVERLESS： serverless实例</li></ul><p>默认值：NORMAL</p><p>当DbType为MYSQL时可选(默认NORMAL)</p>
+ * @method float getMinCpu() 获取<p>当DbMode为SERVERLESS时必填<br>cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
+ * @method void setMinCpu(float $MinCpu) 设置<p>当DbMode为SERVERLESS时必填<br>cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
+ * @method float getMaxCpu() 获取<p>当DbMode为SERVERLESS时必填：<br>cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
+ * @method void setMaxCpu(float $MaxCpu) 设置<p>当DbMode为SERVERLESS时必填：<br>cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
+ * @method string getAutoPause() 获取<p>否自动暂停</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul><p>默认值：yes</p><p>DbMode为SERVERLESS生效</p>
+ * @method void setAutoPause(string $AutoPause) 设置<p>否自动暂停</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul><p>默认值：yes</p><p>DbMode为SERVERLESS生效</p>
+ * @method integer getAutoPauseDelay() 获取<p>当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]<br>默认值:600</p>
+ * @method void setAutoPauseDelay(integer $AutoPauseDelay) 设置<p>当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]<br>默认值:600</p>
+ * @method integer getStoragePayMode() 获取<p>集群存储计费模式，按量计费：0，包年包月：1。默认按量计费<br>当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费<br>回档与克隆均不支持包年包月存储</p>
+ * @method void setStoragePayMode(integer $StoragePayMode) 设置<p>集群存储计费模式，按量计费：0，包年包月：1。默认按量计费<br>当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费<br>回档与克隆均不支持包年包月存储</p>
+ * @method array getSecurityGroupIds() 获取<p>安全组id数组</p>
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置<p>安全组id数组</p>
+ * @method array getAlarmPolicyIds() 获取<p>告警策略Id数组</p>
+ * @method void setAlarmPolicyIds(array $AlarmPolicyIds) 设置<p>告警策略Id数组</p>
+ * @method array getClusterParams() 获取<p>参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感</p>
+ * @method void setClusterParams(array $ClusterParams) 设置<p>参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感</p>
+ * @method integer getDealMode() 获取<p>交易模式</p><p>枚举值：</p><ul><li>0： 下单且支付</li><li>1： 下单</li></ul><p>默认值：0</p>
+ * @method void setDealMode(integer $DealMode) 设置<p>交易模式</p><p>枚举值：</p><ul><li>0： 下单且支付</li><li>1： 下单</li></ul><p>默认值：0</p>
+ * @method integer getParamTemplateId() 获取<p>参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID</p>
+ * @method void setParamTemplateId(integer $ParamTemplateId) 设置<p>参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID</p>
+ * @method string getSlaveZone() 获取<p>多可用区地址</p>
+ * @method void setSlaveZone(string $SlaveZone) 设置<p>多可用区地址</p>
+ * @method array getInstanceInitInfos() 获取<p>实例初始化配置信息，主要用于购买集群时选不同规格实例</p>
+ * @method void setInstanceInitInfos(array $InstanceInitInfos) 设置<p>实例初始化配置信息，主要用于购买集群时选不同规格实例</p>
+ * @method string getGdnId() 获取<p>全球数据库唯一标识</p>
+ * @method void setGdnId(string $GdnId) 设置<p>全球数据库唯一标识</p>
+ * @method ProxyConfig getProxyConfig() 获取<p>数据库代理配置</p>
+ * @method void setProxyConfig(ProxyConfig $ProxyConfig) 设置<p>数据库代理配置</p>
+ * @method string getAutoArchive() 获取<p>是否自动归档</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul><p>默认值：no</p><p>仅当前集群主实例为SERVERLESS时，该参数生效</p>
+ * @method void setAutoArchive(string $AutoArchive) 设置<p>是否自动归档</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul><p>默认值：no</p><p>仅当前集群主实例为SERVERLESS时，该参数生效</p>
+ * @method integer getAutoArchiveDelayHours() 获取<p>暂停后的归档处理时间</p><p>单位：时</p><p>默认值：12</p><p>仅当前集群主实例为SERVERLESS时，该参数生效</p>
+ * @method void setAutoArchiveDelayHours(integer $AutoArchiveDelayHours) 设置<p>暂停后的归档处理时间</p><p>单位：时</p><p>默认值：12</p><p>仅当前集群主实例为SERVERLESS时，该参数生效</p>
+ * @method string getCynosVersion() 获取<p>内核小版本号</p>
+ * @method void setCynosVersion(string $CynosVersion) 设置<p>内核小版本号</p>
  */
 class CreateClustersRequest extends AbstractModel
 {
     /**
-     * @var string 可用区
+     * @var string <p>可用区</p>
      */
     public $Zone;
 
     /**
-     * @var string 所属VPC网络ID
+     * @var string <p>所属VPC网络ID</p>
      */
     public $VpcId;
 
     /**
-     * @var string 所属子网ID
+     * @var string <p>所属子网ID</p>
      */
     public $SubnetId;
 
     /**
-     * @var string 数据库类型，取值范围: 
-<li> MYSQL </li>
+     * @var string <p>数据库类型</p><p>枚举值：</p><ul><li>MYSQL： MYSQL</li></ul>
      */
     public $DbType;
 
     /**
-     * @var string 数据库版本，取值范围: 
-<li> MYSQL可选值：5.7，8.0 </li>
+     * @var string <p>数据库版本</p><p>枚举值：</p><ul><li>5.7： MySQL5.7版本</li><li>8.0： MySQL8.0版本</li></ul>
      */
     public $DbVersion;
 
     /**
-     * @var integer 所属项目ID
+     * @var integer <p>所属项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var integer 当DbMode为NORMAL或不填时必选
-普通实例Cpu核数
+     * @var integer <p>当DbMode为NORMAL或不填时必选<br>普通实例Cpu核数</p>
      */
     public $Cpu;
 
     /**
-     * @var integer 当DbMode为NORMAL或不填时必选
-普通实例内存,单位GB
+     * @var integer <p>当DbMode为NORMAL或不填时必选<br>普通实例内存,单位GB</p>
      */
     public $Memory;
 
     /**
-     * @var integer 实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos
+     * @var integer <p>实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos</p>
      */
     public $InstanceCount;
 
     /**
-     * @var integer 该参数无实际意义，已废弃。
-存储大小，单位GB。
+     * @var integer <p>该参数无实际意义，已废弃。<br>存储大小，单位GB。</p>
      */
     public $Storage;
 
     /**
-     * @var string 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
+     * @var string <p>集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（&#39;-&#39;,&#39;_&#39;,&#39;.&#39;）</p>
      */
     public $ClusterName;
 
     /**
-     * @var string 账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种)
+     * @var string <p>账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&amp;*_-+=`|(){}[]:;&#39;&lt;&gt;,.?/中的任意三种)</p>
      */
     public $AdminPassword;
 
     /**
-     * @var integer 端口，默认3306，取值范围[0, 65535)
+     * @var integer <p>端口，默认3306，取值范围[0, 65535)</p>
      */
     public $Port;
 
     /**
-     * @var integer 计费模式，支持值为0和1，默认值为0。
-取值为0，表示按量计费。
-取值为1，表示包年包月。
+     * @var integer <p>计费模式</p><p>枚举值：</p><ul><li>0： 表示按量计费</li><li>1： 表示包年包月</li></ul><p>默认值：0</p>
      */
     public $PayMode;
 
     /**
-     * @var integer 购买集群数，可选值范围[1,50]，默认为1
+     * @var integer <p>购买集群数，可选值范围[1,50]，默认为1</p>
      */
     public $Count;
 
     /**
-     * @var string 回档类型：
-noneRollback：不回档；
-snapRollback，快照回档；
-timeRollback，时间点回档
+     * @var string <p>回档类型</p><p>枚举值：</p><ul><li>noneRollback： 不回档</li><li>snapRollback： 快照回档</li><li>timeRollback： 时间点回档</li></ul>
      */
     public $RollbackStrategy;
 
     /**
-     * @var integer 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
+     * @var integer <p>快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效</p>
      */
     public $RollbackId;
 
     /**
-     * @var string 回档时，传入源集群ID，用于查找源poolId
+     * @var string <p>回档时，传入源集群ID，用于查找源poolId</p>
      */
     public $OriginalClusterId;
 
     /**
-     * @var string 时间点回档，指定时间；快照回档，快照时间
+     * @var string <p>时间点回档，指定时间；快照回档，快照时间</p>
      */
     public $ExpectTime;
 
     /**
-     * @var integer 该参数无实际意义，已废弃。
-时间点回档，指定时间允许范围
+     * @var integer <p>该参数无实际意义，已废弃。<br>时间点回档，指定时间允许范围</p>
      */
     public $ExpectTimeThresh;
 
     /**
-     * @var integer 普通实例存储上限，单位GB
-当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限
+     * @var integer <p>普通实例存储上限，单位GB<br>当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限</p>
      */
     public $StorageLimit;
 
     /**
-     * @var integer 包年包月购买时长
+     * @var integer <p>包年包月购买时长</p>
      */
     public $TimeSpan;
 
     /**
-     * @var string 包年包月购买时长单位，['s','d','m','y']
+     * @var string <p>包年包月购买时长单位，[&#39;s&#39;,&#39;d&#39;,&#39;m&#39;,&#39;y&#39;]</p>
      */
     public $TimeUnit;
 
     /**
-     * @var integer 包年包月购买是否自动续费，默认为0。
-0标识默认续费方式，1表示自动续费，2表示不自动续费。
+     * @var integer <p>包年包月购买是否自动续费</p><p>枚举值：</p><ul><li>0： 默认续费方式</li><li>1： 自动续费</li><li>2： 不自动续费</li></ul><p>默认值：0</p>
      */
     public $AutoRenewFlag;
 
     /**
-     * @var integer 是否自动选择代金券 1是 0否 默认为0
+     * @var integer <p>是否自动选择代金券 1是 0否 默认为0</p><p>枚举值：</p><ul><li>1： 是</li><li>0： 否</li></ul><p>默认值：0</p>
      */
     public $AutoVoucher;
 
     /**
-     * @var integer 实例数量（该参数已不再使用，只做存量兼容处理）
+     * @var integer <p>实例数量（该参数已不再使用，只做存量兼容处理）</p>
      */
     public $HaCount;
 
     /**
-     * @var string 订单来源
+     * @var string <p>订单来源</p>
      */
     public $OrderSource;
 
     /**
-     * @var array 集群创建需要绑定的tag数组信息
+     * @var array <p>集群创建需要绑定的tag数组信息</p>
      */
     public $ResourceTags;
 
     /**
-     * @var string Db类型
-当DbType为MYSQL时可选(默认NORMAL)：
-<li>NORMAL</li>
-<li>SERVERLESS</li>
+     * @var string <p>Db类型</p><p>枚举值：</p><ul><li>NORMAL： 普通实例</li><li>SERVERLESS： serverless实例</li></ul><p>默认值：NORMAL</p><p>当DbType为MYSQL时可选(默认NORMAL)</p>
      */
     public $DbMode;
 
     /**
-     * @var float 当DbMode为SERVERLESS时必填
-cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * @var float <p>当DbMode为SERVERLESS时必填<br>cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
      */
     public $MinCpu;
 
     /**
-     * @var float 当DbMode为SERVERLESS时必填：
-cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * @var float <p>当DbMode为SERVERLESS时必填：<br>cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
      */
     public $MaxCpu;
 
     /**
-     * @var string 当DbMode为SERVERLESS时，指定集群是否自动暂停，可选范围
-<li>yes</li>
-<li>no</li>
-默认值:yes
+     * @var string <p>否自动暂停</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul><p>默认值：yes</p><p>DbMode为SERVERLESS生效</p>
      */
     public $AutoPause;
 
     /**
-     * @var integer 当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
-默认值:600
+     * @var integer <p>当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]<br>默认值:600</p>
      */
     public $AutoPauseDelay;
 
     /**
-     * @var integer 集群存储计费模式，按量计费：0，包年包月：1。默认按量计费
-当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费
-回档与克隆均不支持包年包月存储
+     * @var integer <p>集群存储计费模式，按量计费：0，包年包月：1。默认按量计费<br>当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费<br>回档与克隆均不支持包年包月存储</p>
      */
     public $StoragePayMode;
 
     /**
-     * @var array 安全组id数组
+     * @var array <p>安全组id数组</p>
      */
     public $SecurityGroupIds;
 
     /**
-     * @var array 告警策略Id数组
+     * @var array <p>告警策略Id数组</p>
      */
     public $AlarmPolicyIds;
 
     /**
-     * @var array 参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感
+     * @var array <p>参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感</p>
      */
     public $ClusterParams;
 
     /**
-     * @var integer 交易模式，0-下单且支付，1-下单
+     * @var integer <p>交易模式</p><p>枚举值：</p><ul><li>0： 下单且支付</li><li>1： 下单</li></ul><p>默认值：0</p>
      */
     public $DealMode;
 
     /**
-     * @var integer 参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
+     * @var integer <p>参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID</p>
      */
     public $ParamTemplateId;
 
     /**
-     * @var string 多可用区地址
+     * @var string <p>多可用区地址</p>
      */
     public $SlaveZone;
 
     /**
-     * @var array 实例初始化配置信息，主要用于购买集群时选不同规格实例
+     * @var array <p>实例初始化配置信息，主要用于购买集群时选不同规格实例</p>
      */
     public $InstanceInitInfos;
 
     /**
-     * @var string 全球数据库唯一标识
+     * @var string <p>全球数据库唯一标识</p>
      */
     public $GdnId;
 
     /**
-     * @var ProxyConfig 数据库代理配置
+     * @var ProxyConfig <p>数据库代理配置</p>
      */
     public $ProxyConfig;
 
     /**
-     * @var string 是否自动归档
+     * @var string <p>是否自动归档</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul><p>默认值：no</p><p>仅当前集群主实例为SERVERLESS时，该参数生效</p>
      */
     public $AutoArchive;
 
     /**
-     * @var integer 暂停后的归档处理时间
+     * @var integer <p>暂停后的归档处理时间</p><p>单位：时</p><p>默认值：12</p><p>仅当前集群主实例为SERVERLESS时，该参数生效</p>
      */
     public $AutoArchiveDelayHours;
 
     /**
-     * @var string 内核小版本号
+     * @var string <p>内核小版本号</p>
      */
     public $CynosVersion;
 
     /**
-     * @param string $Zone 可用区
-     * @param string $VpcId 所属VPC网络ID
-     * @param string $SubnetId 所属子网ID
-     * @param string $DbType 数据库类型，取值范围: 
-<li> MYSQL </li>
-     * @param string $DbVersion 数据库版本，取值范围: 
-<li> MYSQL可选值：5.7，8.0 </li>
-     * @param integer $ProjectId 所属项目ID
-     * @param integer $Cpu 当DbMode为NORMAL或不填时必选
-普通实例Cpu核数
-     * @param integer $Memory 当DbMode为NORMAL或不填时必选
-普通实例内存,单位GB
-     * @param integer $InstanceCount 实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos
-     * @param integer $Storage 该参数无实际意义，已废弃。
-存储大小，单位GB。
-     * @param string $ClusterName 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
-     * @param string $AdminPassword 账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种)
-     * @param integer $Port 端口，默认3306，取值范围[0, 65535)
-     * @param integer $PayMode 计费模式，支持值为0和1，默认值为0。
-取值为0，表示按量计费。
-取值为1，表示包年包月。
-     * @param integer $Count 购买集群数，可选值范围[1,50]，默认为1
-     * @param string $RollbackStrategy 回档类型：
-noneRollback：不回档；
-snapRollback，快照回档；
-timeRollback，时间点回档
-     * @param integer $RollbackId 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
-     * @param string $OriginalClusterId 回档时，传入源集群ID，用于查找源poolId
-     * @param string $ExpectTime 时间点回档，指定时间；快照回档，快照时间
-     * @param integer $ExpectTimeThresh 该参数无实际意义，已废弃。
-时间点回档，指定时间允许范围
-     * @param integer $StorageLimit 普通实例存储上限，单位GB
-当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限
-     * @param integer $TimeSpan 包年包月购买时长
-     * @param string $TimeUnit 包年包月购买时长单位，['s','d','m','y']
-     * @param integer $AutoRenewFlag 包年包月购买是否自动续费，默认为0。
-0标识默认续费方式，1表示自动续费，2表示不自动续费。
-     * @param integer $AutoVoucher 是否自动选择代金券 1是 0否 默认为0
-     * @param integer $HaCount 实例数量（该参数已不再使用，只做存量兼容处理）
-     * @param string $OrderSource 订单来源
-     * @param array $ResourceTags 集群创建需要绑定的tag数组信息
-     * @param string $DbMode Db类型
-当DbType为MYSQL时可选(默认NORMAL)：
-<li>NORMAL</li>
-<li>SERVERLESS</li>
-     * @param float $MinCpu 当DbMode为SERVERLESS时必填
-cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
-     * @param float $MaxCpu 当DbMode为SERVERLESS时必填：
-cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
-     * @param string $AutoPause 当DbMode为SERVERLESS时，指定集群是否自动暂停，可选范围
-<li>yes</li>
-<li>no</li>
-默认值:yes
-     * @param integer $AutoPauseDelay 当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
-默认值:600
-     * @param integer $StoragePayMode 集群存储计费模式，按量计费：0，包年包月：1。默认按量计费
-当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费
-回档与克隆均不支持包年包月存储
-     * @param array $SecurityGroupIds 安全组id数组
-     * @param array $AlarmPolicyIds 告警策略Id数组
-     * @param array $ClusterParams 参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感
-     * @param integer $DealMode 交易模式，0-下单且支付，1-下单
-     * @param integer $ParamTemplateId 参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
-     * @param string $SlaveZone 多可用区地址
-     * @param array $InstanceInitInfos 实例初始化配置信息，主要用于购买集群时选不同规格实例
-     * @param string $GdnId 全球数据库唯一标识
-     * @param ProxyConfig $ProxyConfig 数据库代理配置
-     * @param string $AutoArchive 是否自动归档
-     * @param integer $AutoArchiveDelayHours 暂停后的归档处理时间
-     * @param string $CynosVersion 内核小版本号
+     * @param string $Zone <p>可用区</p>
+     * @param string $VpcId <p>所属VPC网络ID</p>
+     * @param string $SubnetId <p>所属子网ID</p>
+     * @param string $DbType <p>数据库类型</p><p>枚举值：</p><ul><li>MYSQL： MYSQL</li></ul>
+     * @param string $DbVersion <p>数据库版本</p><p>枚举值：</p><ul><li>5.7： MySQL5.7版本</li><li>8.0： MySQL8.0版本</li></ul>
+     * @param integer $ProjectId <p>所属项目ID</p>
+     * @param integer $Cpu <p>当DbMode为NORMAL或不填时必选<br>普通实例Cpu核数</p>
+     * @param integer $Memory <p>当DbMode为NORMAL或不填时必选<br>普通实例内存,单位GB</p>
+     * @param integer $InstanceCount <p>实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos</p>
+     * @param integer $Storage <p>该参数无实际意义，已废弃。<br>存储大小，单位GB。</p>
+     * @param string $ClusterName <p>集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（&#39;-&#39;,&#39;_&#39;,&#39;.&#39;）</p>
+     * @param string $AdminPassword <p>账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&amp;*_-+=`|(){}[]:;&#39;&lt;&gt;,.?/中的任意三种)</p>
+     * @param integer $Port <p>端口，默认3306，取值范围[0, 65535)</p>
+     * @param integer $PayMode <p>计费模式</p><p>枚举值：</p><ul><li>0： 表示按量计费</li><li>1： 表示包年包月</li></ul><p>默认值：0</p>
+     * @param integer $Count <p>购买集群数，可选值范围[1,50]，默认为1</p>
+     * @param string $RollbackStrategy <p>回档类型</p><p>枚举值：</p><ul><li>noneRollback： 不回档</li><li>snapRollback： 快照回档</li><li>timeRollback： 时间点回档</li></ul>
+     * @param integer $RollbackId <p>快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效</p>
+     * @param string $OriginalClusterId <p>回档时，传入源集群ID，用于查找源poolId</p>
+     * @param string $ExpectTime <p>时间点回档，指定时间；快照回档，快照时间</p>
+     * @param integer $ExpectTimeThresh <p>该参数无实际意义，已废弃。<br>时间点回档，指定时间允许范围</p>
+     * @param integer $StorageLimit <p>普通实例存储上限，单位GB<br>当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限</p>
+     * @param integer $TimeSpan <p>包年包月购买时长</p>
+     * @param string $TimeUnit <p>包年包月购买时长单位，[&#39;s&#39;,&#39;d&#39;,&#39;m&#39;,&#39;y&#39;]</p>
+     * @param integer $AutoRenewFlag <p>包年包月购买是否自动续费</p><p>枚举值：</p><ul><li>0： 默认续费方式</li><li>1： 自动续费</li><li>2： 不自动续费</li></ul><p>默认值：0</p>
+     * @param integer $AutoVoucher <p>是否自动选择代金券 1是 0否 默认为0</p><p>枚举值：</p><ul><li>1： 是</li><li>0： 否</li></ul><p>默认值：0</p>
+     * @param integer $HaCount <p>实例数量（该参数已不再使用，只做存量兼容处理）</p>
+     * @param string $OrderSource <p>订单来源</p>
+     * @param array $ResourceTags <p>集群创建需要绑定的tag数组信息</p>
+     * @param string $DbMode <p>Db类型</p><p>枚举值：</p><ul><li>NORMAL： 普通实例</li><li>SERVERLESS： serverless实例</li></ul><p>默认值：NORMAL</p><p>当DbType为MYSQL时可选(默认NORMAL)</p>
+     * @param float $MinCpu <p>当DbMode为SERVERLESS时必填<br>cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
+     * @param float $MaxCpu <p>当DbMode为SERVERLESS时必填：<br>cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
+     * @param string $AutoPause <p>否自动暂停</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul><p>默认值：yes</p><p>DbMode为SERVERLESS生效</p>
+     * @param integer $AutoPauseDelay <p>当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]<br>默认值:600</p>
+     * @param integer $StoragePayMode <p>集群存储计费模式，按量计费：0，包年包月：1。默认按量计费<br>当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费<br>回档与克隆均不支持包年包月存储</p>
+     * @param array $SecurityGroupIds <p>安全组id数组</p>
+     * @param array $AlarmPolicyIds <p>告警策略Id数组</p>
+     * @param array $ClusterParams <p>参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感</p>
+     * @param integer $DealMode <p>交易模式</p><p>枚举值：</p><ul><li>0： 下单且支付</li><li>1： 下单</li></ul><p>默认值：0</p>
+     * @param integer $ParamTemplateId <p>参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID</p>
+     * @param string $SlaveZone <p>多可用区地址</p>
+     * @param array $InstanceInitInfos <p>实例初始化配置信息，主要用于购买集群时选不同规格实例</p>
+     * @param string $GdnId <p>全球数据库唯一标识</p>
+     * @param ProxyConfig $ProxyConfig <p>数据库代理配置</p>
+     * @param string $AutoArchive <p>是否自动归档</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul><p>默认值：no</p><p>仅当前集群主实例为SERVERLESS时，该参数生效</p>
+     * @param integer $AutoArchiveDelayHours <p>暂停后的归档处理时间</p><p>单位：时</p><p>默认值：12</p><p>仅当前集群主实例为SERVERLESS时，该参数生效</p>
+     * @param string $CynosVersion <p>内核小版本号</p>
      */
     function __construct()
     {

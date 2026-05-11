@@ -20,130 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyServerlessStrategy请求参数结构体
  *
- * @method string getClusterId() 获取serverless集群id
- * @method void setClusterId(string $ClusterId) 设置serverless集群id
- * @method string getAutoPause() 获取集群是否自动暂停，可选范围
-<li>yes</li>
-<li>no</li>
- * @method void setAutoPause(string $AutoPause) 设置集群是否自动暂停，可选范围
-<li>yes</li>
-<li>no</li>
- * @method integer getAutoPauseDelay() 获取集群自动暂停的延迟，单位秒，可选范围[600,691200]，默认600
- * @method void setAutoPauseDelay(integer $AutoPauseDelay) 设置集群自动暂停的延迟，单位秒，可选范围[600,691200]，默认600
- * @method integer getAutoScaleUpDelay() 获取该参数暂时无效
- * @method void setAutoScaleUpDelay(integer $AutoScaleUpDelay) 设置该参数暂时无效
- * @method integer getAutoScaleDownDelay() 获取该参数暂时无效
- * @method void setAutoScaleDownDelay(integer $AutoScaleDownDelay) 设置该参数暂时无效
- * @method float getMinCpu() 获取cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
- * @method void setMinCpu(float $MinCpu) 设置cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
- * @method float getMaxCpu() 获取cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
- * @method void setMaxCpu(float $MaxCpu) 设置cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
- * @method float getMinRoCpu() 获取只读实例cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
- * @method void setMinRoCpu(float $MinRoCpu) 设置只读实例cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
- * @method float getMaxRoCpu() 获取只读cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
- * @method void setMaxRoCpu(float $MaxRoCpu) 设置只读cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
- * @method integer getMinRoCount() 获取只读节点最小个数
- * @method void setMinRoCount(integer $MinRoCount) 设置只读节点最小个数
- * @method integer getMaxRoCount() 获取只读节点最大个数
- * @method void setMaxRoCount(integer $MaxRoCount) 设置只读节点最大个数
- * @method string getAutoArchive() 获取是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
- * @method void setAutoArchive(string $AutoArchive) 设置是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
- * @method string getUpgradeType() 获取升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改
- * @method void setUpgradeType(string $UpgradeType) 设置升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改
- * @method array getSecurityGroupIdsForNewRo() 获取新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。
- * @method void setSecurityGroupIdsForNewRo(array $SecurityGroupIdsForNewRo) 设置新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。
+ * @method string getClusterId() 获取<p>serverless集群id</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>serverless集群id</p>
+ * @method string getAutoPause() 获取<p>集群是否自动暂停，可选范围</p><li>yes</li><li>no</li>
+ * @method void setAutoPause(string $AutoPause) 设置<p>集群是否自动暂停，可选范围</p><li>yes</li><li>no</li>
+ * @method integer getAutoPauseDelay() 获取<p>集群自动暂停的延迟，单位秒，可选范围[600,691200]，默认600</p>
+ * @method void setAutoPauseDelay(integer $AutoPauseDelay) 设置<p>集群自动暂停的延迟，单位秒，可选范围[600,691200]，默认600</p>
+ * @method integer getAutoScaleUpDelay() 获取<p>该参数暂时无效</p>
+ * @method void setAutoScaleUpDelay(integer $AutoScaleUpDelay) 设置<p>该参数暂时无效</p>
+ * @method integer getAutoScaleDownDelay() 获取<p>该参数暂时无效</p>
+ * @method void setAutoScaleDownDelay(integer $AutoScaleDownDelay) 设置<p>该参数暂时无效</p>
+ * @method float getMinCpu() 获取<p>cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
+ * @method void setMinCpu(float $MinCpu) 设置<p>cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
+ * @method float getMaxCpu() 获取<p>cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
+ * @method void setMaxCpu(float $MaxCpu) 设置<p>cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
+ * @method float getMinRoCpu() 获取<p>只读实例cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
+ * @method void setMinRoCpu(float $MinRoCpu) 设置<p>只读实例cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
+ * @method float getMaxRoCpu() 获取<p>只读cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
+ * @method void setMaxRoCpu(float $MaxRoCpu) 设置<p>只读cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
+ * @method integer getMinRoCount() 获取<p>只读节点最小个数</p>
+ * @method void setMinRoCount(integer $MinRoCount) 设置<p>只读节点最小个数</p>
+ * @method integer getMaxRoCount() 获取<p>只读节点最大个数</p>
+ * @method void setMaxRoCount(integer $MaxRoCount) 设置<p>只读节点最大个数</p>
+ * @method string getAutoArchive() 获取<p>是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes</p>
+ * @method void setAutoArchive(string $AutoArchive) 设置<p>是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes</p>
+ * @method string getUpgradeType() 获取<p>升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改</p>
+ * @method void setUpgradeType(string $UpgradeType) 设置<p>升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改</p>
+ * @method array getSecurityGroupIdsForNewRo() 获取<p>新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。</p>
+ * @method void setSecurityGroupIdsForNewRo(array $SecurityGroupIdsForNewRo) 设置<p>新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。</p>
  */
 class ModifyServerlessStrategyRequest extends AbstractModel
 {
     /**
-     * @var string serverless集群id
+     * @var string <p>serverless集群id</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 集群是否自动暂停，可选范围
-<li>yes</li>
-<li>no</li>
+     * @var string <p>集群是否自动暂停，可选范围</p><li>yes</li><li>no</li>
      */
     public $AutoPause;
 
     /**
-     * @var integer 集群自动暂停的延迟，单位秒，可选范围[600,691200]，默认600
+     * @var integer <p>集群自动暂停的延迟，单位秒，可选范围[600,691200]，默认600</p>
      */
     public $AutoPauseDelay;
 
     /**
-     * @var integer 该参数暂时无效
+     * @var integer <p>该参数暂时无效</p>
      */
     public $AutoScaleUpDelay;
 
     /**
-     * @var integer 该参数暂时无效
+     * @var integer <p>该参数暂时无效</p>
      */
     public $AutoScaleDownDelay;
 
     /**
-     * @var float cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * @var float <p>cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
      */
     public $MinCpu;
 
     /**
-     * @var float cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * @var float <p>cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
      */
     public $MaxCpu;
 
     /**
-     * @var float 只读实例cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * @var float <p>只读实例cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
      */
     public $MinRoCpu;
 
     /**
-     * @var float 只读cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * @var float <p>只读cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
      */
     public $MaxRoCpu;
 
     /**
-     * @var integer 只读节点最小个数
+     * @var integer <p>只读节点最小个数</p>
      */
     public $MinRoCount;
 
     /**
-     * @var integer 只读节点最大个数
+     * @var integer <p>只读节点最大个数</p>
      */
     public $MaxRoCount;
 
     /**
-     * @var string 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+     * @var string <p>是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes</p>
      */
     public $AutoArchive;
 
     /**
-     * @var string 升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改
+     * @var string <p>升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改</p>
      */
     public $UpgradeType;
 
     /**
-     * @var array 新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。
+     * @var array <p>新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。</p>
      */
     public $SecurityGroupIdsForNewRo;
 
     /**
-     * @param string $ClusterId serverless集群id
-     * @param string $AutoPause 集群是否自动暂停，可选范围
-<li>yes</li>
-<li>no</li>
-     * @param integer $AutoPauseDelay 集群自动暂停的延迟，单位秒，可选范围[600,691200]，默认600
-     * @param integer $AutoScaleUpDelay 该参数暂时无效
-     * @param integer $AutoScaleDownDelay 该参数暂时无效
-     * @param float $MinCpu cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
-     * @param float $MaxCpu cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
-     * @param float $MinRoCpu 只读实例cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
-     * @param float $MaxRoCpu 只读cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
-     * @param integer $MinRoCount 只读节点最小个数
-     * @param integer $MaxRoCount 只读节点最大个数
-     * @param string $AutoArchive 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
-     * @param string $UpgradeType 升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改
-     * @param array $SecurityGroupIdsForNewRo 新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。
+     * @param string $ClusterId <p>serverless集群id</p>
+     * @param string $AutoPause <p>集群是否自动暂停，可选范围</p><li>yes</li><li>no</li>
+     * @param integer $AutoPauseDelay <p>集群自动暂停的延迟，单位秒，可选范围[600,691200]，默认600</p>
+     * @param integer $AutoScaleUpDelay <p>该参数暂时无效</p>
+     * @param integer $AutoScaleDownDelay <p>该参数暂时无效</p>
+     * @param float $MinCpu <p>cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
+     * @param float $MaxCpu <p>cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
+     * @param float $MinRoCpu <p>只读实例cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
+     * @param float $MaxRoCpu <p>只读cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回</p>
+     * @param integer $MinRoCount <p>只读节点最小个数</p>
+     * @param integer $MaxRoCount <p>只读节点最大个数</p>
+     * @param string $AutoArchive <p>是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes</p>
+     * @param string $UpgradeType <p>升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改</p>
+     * @param array $SecurityGroupIdsForNewRo <p>新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。</p>
      */
     function __construct()
     {

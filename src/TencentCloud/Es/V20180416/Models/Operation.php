@@ -20,94 +20,102 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ES集群操作详细信息
  *
- * @method integer getId() 获取操作唯一id
- * @method void setId(integer $Id) 设置操作唯一id
- * @method string getStartTime() 获取操作开始时间
- * @method void setStartTime(string $StartTime) 设置操作开始时间
- * @method string getType() 获取操作类型
- * @method void setType(string $Type) 设置操作类型
- * @method OperationDetail getDetail() 获取操作详情
- * @method void setDetail(OperationDetail $Detail) 设置操作详情
- * @method string getResult() 获取操作结果
- * @method void setResult(string $Result) 设置操作结果
- * @method array getTasks() 获取流程任务信息
- * @method void setTasks(array $Tasks) 设置流程任务信息
- * @method float getProgress() 获取操作进度
- * @method void setProgress(float $Progress) 设置操作进度
- * @method integer getRollbackTag() 获取回滚标记， 0未回滚 ，1回滚中，2已回滚
- * @method void setRollbackTag(integer $RollbackTag) 设置回滚标记， 0未回滚 ，1回滚中，2已回滚
- * @method string getSubAccountUin() 获取操作者Uin
+ * @method integer getId() 获取<p>操作唯一id</p>
+ * @method void setId(integer $Id) 设置<p>操作唯一id</p>
+ * @method string getStartTime() 获取<p>操作开始时间</p>
+ * @method void setStartTime(string $StartTime) 设置<p>操作开始时间</p>
+ * @method string getType() 获取<p>操作类型</p>
+ * @method void setType(string $Type) 设置<p>操作类型</p>
+ * @method OperationDetail getDetail() 获取<p>操作详情</p>
+ * @method void setDetail(OperationDetail $Detail) 设置<p>操作详情</p>
+ * @method string getResult() 获取<p>操作结果</p>
+ * @method void setResult(string $Result) 设置<p>操作结果</p>
+ * @method array getTasks() 获取<p>流程任务信息</p>
+ * @method void setTasks(array $Tasks) 设置<p>流程任务信息</p>
+ * @method float getProgress() 获取<p>操作进度</p>
+ * @method void setProgress(float $Progress) 设置<p>操作进度</p>
+ * @method integer getRollbackTag() 获取<p>回滚标记， 0未回滚 ，1回滚中，2已回滚</p>
+ * @method void setRollbackTag(integer $RollbackTag) 设置<p>回滚标记， 0未回滚 ，1回滚中，2已回滚</p>
+ * @method string getSubAccountUin() 获取<p>操作者Uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubAccountUin(string $SubAccountUin) 设置操作者Uin
+ * @method void setSubAccountUin(string $SubAccountUin) 设置<p>操作者Uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAutoScaleTag() 获取自动扩容标识：0-非自动，1-自动
- * @method void setAutoScaleTag(integer $AutoScaleTag) 设置自动扩容标识：0-非自动，1-自动
+ * @method integer getAutoScaleTag() 获取<p>自动扩容标识：0-非自动，1-自动</p>
+ * @method void setAutoScaleTag(integer $AutoScaleTag) 设置<p>自动扩容标识：0-非自动，1-自动</p>
+ * @method string getSuspendedReason() 获取<p>流程异常原因</p>
+ * @method void setSuspendedReason(string $SuspendedReason) 设置<p>流程异常原因</p>
  */
 class Operation extends AbstractModel
 {
     /**
-     * @var integer 操作唯一id
+     * @var integer <p>操作唯一id</p>
      */
     public $Id;
 
     /**
-     * @var string 操作开始时间
+     * @var string <p>操作开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var string 操作类型
+     * @var string <p>操作类型</p>
      */
     public $Type;
 
     /**
-     * @var OperationDetail 操作详情
+     * @var OperationDetail <p>操作详情</p>
      */
     public $Detail;
 
     /**
-     * @var string 操作结果
+     * @var string <p>操作结果</p>
      */
     public $Result;
 
     /**
-     * @var array 流程任务信息
+     * @var array <p>流程任务信息</p>
      */
     public $Tasks;
 
     /**
-     * @var float 操作进度
+     * @var float <p>操作进度</p>
      */
     public $Progress;
 
     /**
-     * @var integer 回滚标记， 0未回滚 ，1回滚中，2已回滚
+     * @var integer <p>回滚标记， 0未回滚 ，1回滚中，2已回滚</p>
      */
     public $RollbackTag;
 
     /**
-     * @var string 操作者Uin
+     * @var string <p>操作者Uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubAccountUin;
 
     /**
-     * @var integer 自动扩容标识：0-非自动，1-自动
+     * @var integer <p>自动扩容标识：0-非自动，1-自动</p>
      */
     public $AutoScaleTag;
 
     /**
-     * @param integer $Id 操作唯一id
-     * @param string $StartTime 操作开始时间
-     * @param string $Type 操作类型
-     * @param OperationDetail $Detail 操作详情
-     * @param string $Result 操作结果
-     * @param array $Tasks 流程任务信息
-     * @param float $Progress 操作进度
-     * @param integer $RollbackTag 回滚标记， 0未回滚 ，1回滚中，2已回滚
-     * @param string $SubAccountUin 操作者Uin
+     * @var string <p>流程异常原因</p>
+     */
+    public $SuspendedReason;
+
+    /**
+     * @param integer $Id <p>操作唯一id</p>
+     * @param string $StartTime <p>操作开始时间</p>
+     * @param string $Type <p>操作类型</p>
+     * @param OperationDetail $Detail <p>操作详情</p>
+     * @param string $Result <p>操作结果</p>
+     * @param array $Tasks <p>流程任务信息</p>
+     * @param float $Progress <p>操作进度</p>
+     * @param integer $RollbackTag <p>回滚标记， 0未回滚 ，1回滚中，2已回滚</p>
+     * @param string $SubAccountUin <p>操作者Uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AutoScaleTag 自动扩容标识：0-非自动，1-自动
+     * @param integer $AutoScaleTag <p>自动扩容标识：0-非自动，1-自动</p>
+     * @param string $SuspendedReason <p>流程异常原因</p>
      */
     function __construct()
     {
@@ -166,6 +174,10 @@ class Operation extends AbstractModel
 
         if (array_key_exists("AutoScaleTag",$param) and $param["AutoScaleTag"] !== null) {
             $this->AutoScaleTag = $param["AutoScaleTag"];
+        }
+
+        if (array_key_exists("SuspendedReason",$param) and $param["SuspendedReason"] !== null) {
+            $this->SuspendedReason = $param["SuspendedReason"];
         }
     }
 }

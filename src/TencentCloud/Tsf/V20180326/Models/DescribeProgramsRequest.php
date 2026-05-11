@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePrograms请求参数结构体
  *
- * @method string getSearchWord() 获取模糊查询数据集ID，数据集名称，不传入时查询全量
- * @method void setSearchWord(string $SearchWord) 设置模糊查询数据集ID，数据集名称，不传入时查询全量
- * @method integer getLimit() 获取每页数量，默认值20
- * @method void setLimit(integer $Limit) 设置每页数量，默认值20
- * @method integer getOffset() 获取起始偏移量，默认值0
- * @method void setOffset(integer $Offset) 设置起始偏移量，默认值0
+ * @method string getSearchWord() 获取<p>模糊查询数据集ID，数据集名称，不传入时查询全量</p>
+ * @method void setSearchWord(string $SearchWord) 设置<p>模糊查询数据集ID，数据集名称，不传入时查询全量</p>
+ * @method integer getLimit() 获取<p>每页数量，默认值20</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页数量，默认值20</p>
+ * @method integer getOffset() 获取<p>起始偏移量，默认值0</p>
+ * @method void setOffset(integer $Offset) 设置<p>起始偏移量，默认值0</p>
+ * @method SearchFiltersProgram getSearchFilters() 获取<p>模糊查询，传递模糊查询字段和对应的值</p>
+ * @method void setSearchFilters(SearchFiltersProgram $SearchFilters) 设置<p>模糊查询，传递模糊查询字段和对应的值</p>
  */
 class DescribeProgramsRequest extends AbstractModel
 {
     /**
-     * @var string 模糊查询数据集ID，数据集名称，不传入时查询全量
+     * @var string <p>模糊查询数据集ID，数据集名称，不传入时查询全量</p>
      */
     public $SearchWord;
 
     /**
-     * @var integer 每页数量，默认值20
+     * @var integer <p>每页数量，默认值20</p>
      */
     public $Limit;
 
     /**
-     * @var integer 起始偏移量，默认值0
+     * @var integer <p>起始偏移量，默认值0</p>
      */
     public $Offset;
 
     /**
-     * @param string $SearchWord 模糊查询数据集ID，数据集名称，不传入时查询全量
-     * @param integer $Limit 每页数量，默认值20
-     * @param integer $Offset 起始偏移量，默认值0
+     * @var SearchFiltersProgram <p>模糊查询，传递模糊查询字段和对应的值</p>
+     */
+    public $SearchFilters;
+
+    /**
+     * @param string $SearchWord <p>模糊查询数据集ID，数据集名称，不传入时查询全量</p>
+     * @param integer $Limit <p>每页数量，默认值20</p>
+     * @param integer $Offset <p>起始偏移量，默认值0</p>
+     * @param SearchFiltersProgram $SearchFilters <p>模糊查询，传递模糊查询字段和对应的值</p>
      */
     function __construct()
     {
@@ -72,6 +80,11 @@ class DescribeProgramsRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("SearchFilters",$param) and $param["SearchFilters"] !== null) {
+            $this->SearchFilters = new SearchFiltersProgram();
+            $this->SearchFilters->deserialize($param["SearchFilters"]);
         }
     }
 }

@@ -20,106 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateClusterSnapshot请求参数结构体
  *
- * @method string getInstanceId() 获取实例名称
- * @method void setInstanceId(string $InstanceId) 设置实例名称
- * @method string getSnapshotName() 获取快照名称
- * @method void setSnapshotName(string $SnapshotName) 设置快照名称
- * @method string getIndices() 获取索引名称
- * @method void setIndices(string $Indices) 设置索引名称
- * @method integer getEsRepositoryType() 获取0 腾讯云仓库; 1 客户仓库
- * @method void setEsRepositoryType(integer $EsRepositoryType) 设置0 腾讯云仓库; 1 客户仓库
- * @method string getUserEsRepository() 获取客户快照仓库名称
- * @method void setUserEsRepository(string $UserEsRepository) 设置客户快照仓库名称
- * @method integer getStorageDuration() 获取快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
- * @method void setStorageDuration(integer $StorageDuration) 设置快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
- * @method integer getCosRetention() 获取备份锁定 0 不锁定; 1 锁定
- * @method void setCosRetention(integer $CosRetention) 设置备份锁定 0 不锁定; 1 锁定
- * @method string getRetainUntilDate() 获取锁定截止日期 2022-12-10T08:34:48.000Z
- * @method void setRetainUntilDate(string $RetainUntilDate) 设置锁定截止日期 2022-12-10T08:34:48.000Z
- * @method integer getRetentionGraceTime() 获取锁定宽限期,单位天
- * @method void setRetentionGraceTime(integer $RetentionGraceTime) 设置锁定宽限期,单位天
- * @method integer getRemoteCos() 获取跨地域备份 0 不跨地域; 1 跨地域
- * @method void setRemoteCos(integer $RemoteCos) 设置跨地域备份 0 不跨地域; 1 跨地域
- * @method string getRemoteCosRegion() 获取跨地域备份地域名称 ap-guangzhou
- * @method void setRemoteCosRegion(string $RemoteCosRegion) 设置跨地域备份地域名称 ap-guangzhou
- * @method integer getMultiAz() 获取cos多AZ备份 0 单AZ; 1 多AZ
- * @method void setMultiAz(integer $MultiAz) 设置cos多AZ备份 0 单AZ; 1 多AZ
+ * @method string getInstanceId() 获取<p>实例名称</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例名称</p>
+ * @method string getSnapshotName() 获取<p>快照名称</p>
+ * @method void setSnapshotName(string $SnapshotName) 设置<p>快照名称</p>
+ * @method string getIndices() 获取<p>索引名称</p>
+ * @method void setIndices(string $Indices) 设置<p>索引名称</p>
+ * @method integer getEsRepositoryType() 获取<p>0 腾讯云仓库; 1 客户仓库</p>
+ * @method void setEsRepositoryType(integer $EsRepositoryType) 设置<p>0 腾讯云仓库; 1 客户仓库</p>
+ * @method string getUserEsRepository() 获取<p>客户快照仓库名称</p>
+ * @method void setUserEsRepository(string $UserEsRepository) 设置<p>客户快照仓库名称</p>
+ * @method integer getStorageDuration() 获取<p>快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天</p>
+ * @method void setStorageDuration(integer $StorageDuration) 设置<p>快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天</p>
+ * @method integer getCosRetention() 获取<p>备份锁定 0 不锁定; 1 锁定</p>
+ * @method void setCosRetention(integer $CosRetention) 设置<p>备份锁定 0 不锁定; 1 锁定</p>
+ * @method string getRetainUntilDate() 获取<p>锁定截止日期 2022-12-10T08:34:48.000Z</p>
+ * @method void setRetainUntilDate(string $RetainUntilDate) 设置<p>锁定截止日期 2022-12-10T08:34:48.000Z</p>
+ * @method integer getRetentionGraceTime() 获取<p>锁定宽限期,单位天</p>
+ * @method void setRetentionGraceTime(integer $RetentionGraceTime) 设置<p>锁定宽限期,单位天</p>
+ * @method integer getRemoteCos() 获取<p>跨地域备份 0 不跨地域; 1 跨地域</p>
+ * @method void setRemoteCos(integer $RemoteCos) 设置<p>跨地域备份 0 不跨地域; 1 跨地域</p>
+ * @method string getRemoteCosRegion() 获取<p>跨地域备份地域名称 ap-guangzhou</p>
+ * @method void setRemoteCosRegion(string $RemoteCosRegion) 设置<p>跨地域备份地域名称 ap-guangzhou</p>
+ * @method integer getMultiAz() 获取<p>cos多AZ备份 0 单AZ; 1 多AZ</p>
+ * @method void setMultiAz(integer $MultiAz) 设置<p>cos多AZ备份 0 单AZ; 1 多AZ</p>
+ * @method string getMaxSnapshotPerSec() 获取<p>快照创建速率（单位mb）</p>
+ * @method void setMaxSnapshotPerSec(string $MaxSnapshotPerSec) 设置<p>快照创建速率（单位mb）</p>
  */
 class CreateClusterSnapshotRequest extends AbstractModel
 {
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 快照名称
+     * @var string <p>快照名称</p>
      */
     public $SnapshotName;
 
     /**
-     * @var string 索引名称
+     * @var string <p>索引名称</p>
      */
     public $Indices;
 
     /**
-     * @var integer 0 腾讯云仓库; 1 客户仓库
+     * @var integer <p>0 腾讯云仓库; 1 客户仓库</p>
      */
     public $EsRepositoryType;
 
     /**
-     * @var string 客户快照仓库名称
+     * @var string <p>客户快照仓库名称</p>
      */
     public $UserEsRepository;
 
     /**
-     * @var integer 快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+     * @var integer <p>快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天</p>
      */
     public $StorageDuration;
 
     /**
-     * @var integer 备份锁定 0 不锁定; 1 锁定
+     * @var integer <p>备份锁定 0 不锁定; 1 锁定</p>
      */
     public $CosRetention;
 
     /**
-     * @var string 锁定截止日期 2022-12-10T08:34:48.000Z
+     * @var string <p>锁定截止日期 2022-12-10T08:34:48.000Z</p>
      */
     public $RetainUntilDate;
 
     /**
-     * @var integer 锁定宽限期,单位天
+     * @var integer <p>锁定宽限期,单位天</p>
      */
     public $RetentionGraceTime;
 
     /**
-     * @var integer 跨地域备份 0 不跨地域; 1 跨地域
+     * @var integer <p>跨地域备份 0 不跨地域; 1 跨地域</p>
      */
     public $RemoteCos;
 
     /**
-     * @var string 跨地域备份地域名称 ap-guangzhou
+     * @var string <p>跨地域备份地域名称 ap-guangzhou</p>
      */
     public $RemoteCosRegion;
 
     /**
-     * @var integer cos多AZ备份 0 单AZ; 1 多AZ
+     * @var integer <p>cos多AZ备份 0 单AZ; 1 多AZ</p>
      */
     public $MultiAz;
 
     /**
-     * @param string $InstanceId 实例名称
-     * @param string $SnapshotName 快照名称
-     * @param string $Indices 索引名称
-     * @param integer $EsRepositoryType 0 腾讯云仓库; 1 客户仓库
-     * @param string $UserEsRepository 客户快照仓库名称
-     * @param integer $StorageDuration 快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
-     * @param integer $CosRetention 备份锁定 0 不锁定; 1 锁定
-     * @param string $RetainUntilDate 锁定截止日期 2022-12-10T08:34:48.000Z
-     * @param integer $RetentionGraceTime 锁定宽限期,单位天
-     * @param integer $RemoteCos 跨地域备份 0 不跨地域; 1 跨地域
-     * @param string $RemoteCosRegion 跨地域备份地域名称 ap-guangzhou
-     * @param integer $MultiAz cos多AZ备份 0 单AZ; 1 多AZ
+     * @var string <p>快照创建速率（单位mb）</p>
+     */
+    public $MaxSnapshotPerSec;
+
+    /**
+     * @param string $InstanceId <p>实例名称</p>
+     * @param string $SnapshotName <p>快照名称</p>
+     * @param string $Indices <p>索引名称</p>
+     * @param integer $EsRepositoryType <p>0 腾讯云仓库; 1 客户仓库</p>
+     * @param string $UserEsRepository <p>客户快照仓库名称</p>
+     * @param integer $StorageDuration <p>快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天</p>
+     * @param integer $CosRetention <p>备份锁定 0 不锁定; 1 锁定</p>
+     * @param string $RetainUntilDate <p>锁定截止日期 2022-12-10T08:34:48.000Z</p>
+     * @param integer $RetentionGraceTime <p>锁定宽限期,单位天</p>
+     * @param integer $RemoteCos <p>跨地域备份 0 不跨地域; 1 跨地域</p>
+     * @param string $RemoteCosRegion <p>跨地域备份地域名称 ap-guangzhou</p>
+     * @param integer $MultiAz <p>cos多AZ备份 0 单AZ; 1 多AZ</p>
+     * @param string $MaxSnapshotPerSec <p>快照创建速率（单位mb）</p>
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class CreateClusterSnapshotRequest extends AbstractModel
 
         if (array_key_exists("MultiAz",$param) and $param["MultiAz"] !== null) {
             $this->MultiAz = $param["MultiAz"];
+        }
+
+        if (array_key_exists("MaxSnapshotPerSec",$param) and $param["MaxSnapshotPerSec"] !== null) {
+            $this->MaxSnapshotPerSec = $param["MaxSnapshotPerSec"];
         }
     }
 }

@@ -20,98 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RestoreClusterSnapshot请求参数结构体
  *
- * @method string getInstanceId() 获取集群实例Id，格式：es-xxxx
- * @method void setInstanceId(string $InstanceId) 设置集群实例Id，格式：es-xxxx
- * @method string getRepositoryName() 获取仓库名称
- * @method void setRepositoryName(string $RepositoryName) 设置仓库名称
- * @method string getSnapshotName() 获取集群快照名称
- * @method void setSnapshotName(string $SnapshotName) 设置集群快照名称
- * @method string getTargetInstanceId() 获取目标集群实例Id，格式：es-xxxx，如果是恢复到本地，则和InstanceId一致
- * @method void setTargetInstanceId(string $TargetInstanceId) 设置目标集群实例Id，格式：es-xxxx，如果是恢复到本地，则和InstanceId一致
- * @method string getPassword() 获取elastic用户名对应的密码信息
- * @method void setPassword(string $Password) 设置elastic用户名对应的密码信息
- * @method string getIndexSettings() 获取要在所有恢复的索引中添加或更改的设置的逗号分隔列表。使用此参数可以在恢复快照时覆盖索引设置。
- * @method void setIndexSettings(string $IndexSettings) 设置要在所有恢复的索引中添加或更改的设置的逗号分隔列表。使用此参数可以在恢复快照时覆盖索引设置。
- * @method array getIncludeGlobalState() 获取不应从快照还原的以逗号分隔的索引设置列表。
- * @method void setIncludeGlobalState(array $IncludeGlobalState) 设置不应从快照还原的以逗号分隔的索引设置列表。
- * @method string getIndices() 获取需要恢复的索引名称，非必填，为空则表示恢复所有
-
-支持传多个索引名称
- * @method void setIndices(string $Indices) 设置需要恢复的索引名称，非必填，为空则表示恢复所有
-
-支持传多个索引名称
- * @method string getPartial() 获取如果为 false，则如果快照中包含的一个或多个索引没有所有主分片可用，则整个恢复操作将失败。默认为 false,
-
-如果为 true，则允许恢复具有不可用分片的索引的部分快照。只有成功包含在快照中的分片才会被恢复。所有丢失的碎片将被重新创建为空
- * @method void setPartial(string $Partial) 设置如果为 false，则如果快照中包含的一个或多个索引没有所有主分片可用，则整个恢复操作将失败。默认为 false,
-
-如果为 true，则允许恢复具有不可用分片的索引的部分快照。只有成功包含在快照中的分片才会被恢复。所有丢失的碎片将被重新创建为空
+ * @method string getInstanceId() 获取<p>集群实例Id，格式：es-xxxx</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>集群实例Id，格式：es-xxxx</p>
+ * @method string getRepositoryName() 获取<p>仓库名称</p>
+ * @method void setRepositoryName(string $RepositoryName) 设置<p>仓库名称</p>
+ * @method string getSnapshotName() 获取<p>集群快照名称</p>
+ * @method void setSnapshotName(string $SnapshotName) 设置<p>集群快照名称</p>
+ * @method string getTargetInstanceId() 获取<p>目标集群实例Id，格式：es-xxxx，如果是恢复到本地，则和InstanceId一致</p>
+ * @method void setTargetInstanceId(string $TargetInstanceId) 设置<p>目标集群实例Id，格式：es-xxxx，如果是恢复到本地，则和InstanceId一致</p>
+ * @method string getPassword() 获取<p>elastic用户名对应的密码信息</p>
+ * @method void setPassword(string $Password) 设置<p>elastic用户名对应的密码信息</p>
+ * @method string getIndexSettings() 获取<p>要在所有恢复的索引中添加或更改的设置的逗号分隔列表。使用此参数可以在恢复快照时覆盖索引设置。</p>
+ * @method void setIndexSettings(string $IndexSettings) 设置<p>要在所有恢复的索引中添加或更改的设置的逗号分隔列表。使用此参数可以在恢复快照时覆盖索引设置。</p>
+ * @method array getIncludeGlobalState() 获取<p>不应从快照还原的以逗号分隔的索引设置列表。</p>
+ * @method void setIncludeGlobalState(array $IncludeGlobalState) 设置<p>不应从快照还原的以逗号分隔的索引设置列表。</p>
+ * @method string getIndices() 获取<p>需要恢复的索引名称，非必填，为空则表示恢复所有</p><p>支持传多个索引名称</p>
+ * @method void setIndices(string $Indices) 设置<p>需要恢复的索引名称，非必填，为空则表示恢复所有</p><p>支持传多个索引名称</p>
+ * @method string getPartial() 获取<p>如果为 false，则如果快照中包含的一个或多个索引没有所有主分片可用，则整个恢复操作将失败。默认为 false,</p><p>如果为 true，则允许恢复具有不可用分片的索引的部分快照。只有成功包含在快照中的分片才会被恢复。所有丢失的碎片将被重新创建为空</p>
+ * @method void setPartial(string $Partial) 设置<p>如果为 false，则如果快照中包含的一个或多个索引没有所有主分片可用，则整个恢复操作将失败。默认为 false,</p><p>如果为 true，则允许恢复具有不可用分片的索引的部分快照。只有成功包含在快照中的分片才会被恢复。所有丢失的碎片将被重新创建为空</p>
+ * @method string getMaxRestorePerSec() 获取<p>快照恢复速率（单位mb）</p>
+ * @method void setMaxRestorePerSec(string $MaxRestorePerSec) 设置<p>快照恢复速率（单位mb）</p>
  */
 class RestoreClusterSnapshotRequest extends AbstractModel
 {
     /**
-     * @var string 集群实例Id，格式：es-xxxx
+     * @var string <p>集群实例Id，格式：es-xxxx</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 仓库名称
+     * @var string <p>仓库名称</p>
      */
     public $RepositoryName;
 
     /**
-     * @var string 集群快照名称
+     * @var string <p>集群快照名称</p>
      */
     public $SnapshotName;
 
     /**
-     * @var string 目标集群实例Id，格式：es-xxxx，如果是恢复到本地，则和InstanceId一致
+     * @var string <p>目标集群实例Id，格式：es-xxxx，如果是恢复到本地，则和InstanceId一致</p>
      */
     public $TargetInstanceId;
 
     /**
-     * @var string elastic用户名对应的密码信息
+     * @var string <p>elastic用户名对应的密码信息</p>
      */
     public $Password;
 
     /**
-     * @var string 要在所有恢复的索引中添加或更改的设置的逗号分隔列表。使用此参数可以在恢复快照时覆盖索引设置。
+     * @var string <p>要在所有恢复的索引中添加或更改的设置的逗号分隔列表。使用此参数可以在恢复快照时覆盖索引设置。</p>
      */
     public $IndexSettings;
 
     /**
-     * @var array 不应从快照还原的以逗号分隔的索引设置列表。
+     * @var array <p>不应从快照还原的以逗号分隔的索引设置列表。</p>
      */
     public $IncludeGlobalState;
 
     /**
-     * @var string 需要恢复的索引名称，非必填，为空则表示恢复所有
-
-支持传多个索引名称
+     * @var string <p>需要恢复的索引名称，非必填，为空则表示恢复所有</p><p>支持传多个索引名称</p>
      */
     public $Indices;
 
     /**
-     * @var string 如果为 false，则如果快照中包含的一个或多个索引没有所有主分片可用，则整个恢复操作将失败。默认为 false,
-
-如果为 true，则允许恢复具有不可用分片的索引的部分快照。只有成功包含在快照中的分片才会被恢复。所有丢失的碎片将被重新创建为空
+     * @var string <p>如果为 false，则如果快照中包含的一个或多个索引没有所有主分片可用，则整个恢复操作将失败。默认为 false,</p><p>如果为 true，则允许恢复具有不可用分片的索引的部分快照。只有成功包含在快照中的分片才会被恢复。所有丢失的碎片将被重新创建为空</p>
      */
     public $Partial;
 
     /**
-     * @param string $InstanceId 集群实例Id，格式：es-xxxx
-     * @param string $RepositoryName 仓库名称
-     * @param string $SnapshotName 集群快照名称
-     * @param string $TargetInstanceId 目标集群实例Id，格式：es-xxxx，如果是恢复到本地，则和InstanceId一致
-     * @param string $Password elastic用户名对应的密码信息
-     * @param string $IndexSettings 要在所有恢复的索引中添加或更改的设置的逗号分隔列表。使用此参数可以在恢复快照时覆盖索引设置。
-     * @param array $IncludeGlobalState 不应从快照还原的以逗号分隔的索引设置列表。
-     * @param string $Indices 需要恢复的索引名称，非必填，为空则表示恢复所有
+     * @var string <p>快照恢复速率（单位mb）</p>
+     */
+    public $MaxRestorePerSec;
 
-支持传多个索引名称
-     * @param string $Partial 如果为 false，则如果快照中包含的一个或多个索引没有所有主分片可用，则整个恢复操作将失败。默认为 false,
-
-如果为 true，则允许恢复具有不可用分片的索引的部分快照。只有成功包含在快照中的分片才会被恢复。所有丢失的碎片将被重新创建为空
+    /**
+     * @param string $InstanceId <p>集群实例Id，格式：es-xxxx</p>
+     * @param string $RepositoryName <p>仓库名称</p>
+     * @param string $SnapshotName <p>集群快照名称</p>
+     * @param string $TargetInstanceId <p>目标集群实例Id，格式：es-xxxx，如果是恢复到本地，则和InstanceId一致</p>
+     * @param string $Password <p>elastic用户名对应的密码信息</p>
+     * @param string $IndexSettings <p>要在所有恢复的索引中添加或更改的设置的逗号分隔列表。使用此参数可以在恢复快照时覆盖索引设置。</p>
+     * @param array $IncludeGlobalState <p>不应从快照还原的以逗号分隔的索引设置列表。</p>
+     * @param string $Indices <p>需要恢复的索引名称，非必填，为空则表示恢复所有</p><p>支持传多个索引名称</p>
+     * @param string $Partial <p>如果为 false，则如果快照中包含的一个或多个索引没有所有主分片可用，则整个恢复操作将失败。默认为 false,</p><p>如果为 true，则允许恢复具有不可用分片的索引的部分快照。只有成功包含在快照中的分片才会被恢复。所有丢失的碎片将被重新创建为空</p>
+     * @param string $MaxRestorePerSec <p>快照恢复速率（单位mb）</p>
      */
     function __construct()
     {
@@ -160,6 +152,10 @@ class RestoreClusterSnapshotRequest extends AbstractModel
 
         if (array_key_exists("Partial",$param) and $param["Partial"] !== null) {
             $this->Partial = $param["Partial"];
+        }
+
+        if (array_key_exists("MaxRestorePerSec",$param) and $param["MaxRestorePerSec"] !== null) {
+            $this->MaxRestorePerSec = $param["MaxRestorePerSec"];
         }
     }
 }

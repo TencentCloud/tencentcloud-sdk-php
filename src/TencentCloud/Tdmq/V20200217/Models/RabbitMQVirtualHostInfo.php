@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTs(integer $CreateTs) 设置创建时间时间戳
  * @method integer getModifyTs() 获取修改时间时间戳
  * @method void setModifyTs(integer $ModifyTs) 设置修改时间时间戳
+ * @method RabbitMQVHostBaseQuota getQuota() 获取基础配额信息
+ * @method void setQuota(RabbitMQVHostBaseQuota $Quota) 设置基础配额信息
  */
 class RabbitMQVirtualHostInfo extends AbstractModel
 {
@@ -129,6 +131,11 @@ class RabbitMQVirtualHostInfo extends AbstractModel
     public $ModifyTs;
 
     /**
+     * @var RabbitMQVHostBaseQuota 基础配额信息
+     */
+    public $Quota;
+
+    /**
      * @param string $InstanceId 集群实例Id
      * @param string $VirtualHost vhost名
      * @param string $Description vhost描述信息
@@ -144,6 +151,7 @@ class RabbitMQVirtualHostInfo extends AbstractModel
      * @param boolean $MirrorQueuePolicyFlag 是否存在镜像队列策略，true 为存在，false 为不存
      * @param integer $CreateTs 创建时间时间戳
      * @param integer $ModifyTs 修改时间时间戳
+     * @param RabbitMQVHostBaseQuota $Quota 基础配额信息
      */
     function __construct()
     {
@@ -217,6 +225,11 @@ class RabbitMQVirtualHostInfo extends AbstractModel
 
         if (array_key_exists("ModifyTs",$param) and $param["ModifyTs"] !== null) {
             $this->ModifyTs = $param["ModifyTs"];
+        }
+
+        if (array_key_exists("Quota",$param) and $param["Quota"] !== null) {
+            $this->Quota = new RabbitMQVHostBaseQuota();
+            $this->Quota->deserialize($param["Quota"]);
         }
     }
 }

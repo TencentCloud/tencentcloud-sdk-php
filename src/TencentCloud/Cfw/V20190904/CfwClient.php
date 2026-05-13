@@ -69,6 +69,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DescribeCfwInsStatusResponse DescribeCfwInsStatus(Models\DescribeCfwInsStatusRequest $req) cfw实例运行状态查询
  * @method Models\DescribeClusterVpcFwSwitchsResponse DescribeClusterVpcFwSwitchs(Models\DescribeClusterVpcFwSwitchsRequest $req) 查询集群模式Vpc间防火墙开关
  * @method Models\DescribeDefenseSwitchResponse DescribeDefenseSwitch(Models\DescribeDefenseSwitchRequest $req) 获取入侵防御按钮列表
+ * @method Models\DescribeEdgeIpSimpleResponse DescribeEdgeIpSimple(Models\DescribeEdgeIpSimpleRequest $req) 互联网边界防火墙开关列表(轻量)
  * @method Models\DescribeEnterpriseSGRuleProgressResponse DescribeEnterpriseSGRuleProgress(Models\DescribeEnterpriseSGRuleProgressRequest $req) 查询新版安全组下发进度
  * @method Models\DescribeEnterpriseSecurityGroupRuleResponse DescribeEnterpriseSecurityGroupRule(Models\DescribeEnterpriseSecurityGroupRuleRequest $req) 查询新企业安全组规则
  * @method Models\DescribeEnterpriseSecurityGroupRuleListResponse DescribeEnterpriseSecurityGroupRuleList(Models\DescribeEnterpriseSecurityGroupRuleListRequest $req) 查询新企业安全组规则  从node接口迁移   原接口DescribeSecurityGroupNewList

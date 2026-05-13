@@ -18,36 +18,36 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * filter过滤条件
+ * 过滤条件。同一 Name 下多个 Values 为或关系；不同 Name 之间为且关系
  *
- * @method string getName() 获取实例ID
- * @method void setName(string $Name) 设置实例ID
- * @method array getValues() 获取实例ID内容
- * @method void setValues(array $Values) 设置实例ID内容
- * @method string getExactMatch() 获取模糊匹配
- * @method void setExactMatch(string $ExactMatch) 设置模糊匹配
+ * @method string getName() 获取过滤条件名称
+ * @method void setName(string $Name) 设置过滤条件名称
+ * @method array getValues() 获取过滤条件值列表
+ * @method void setValues(array $Values) 设置过滤条件值列表
+ * @method string getExactMatch() 获取是否精确匹配：1 精确匹配；默认模糊匹配
+ * @method void setExactMatch(string $ExactMatch) 设置是否精确匹配：1 精确匹配；默认模糊匹配
  */
 class Filters extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 过滤条件名称
      */
     public $Name;
 
     /**
-     * @var array 实例ID内容
+     * @var array 过滤条件值列表
      */
     public $Values;
 
     /**
-     * @var string 模糊匹配
+     * @var string 是否精确匹配：1 精确匹配；默认模糊匹配
      */
     public $ExactMatch;
 
     /**
-     * @param string $Name 实例ID
-     * @param array $Values 实例ID内容
-     * @param string $ExactMatch 模糊匹配
+     * @param string $Name 过滤条件名称
+     * @param array $Values 过滤条件值列表
+     * @param string $ExactMatch 是否精确匹配：1 精确匹配；默认模糊匹配
      */
     function __construct()
     {

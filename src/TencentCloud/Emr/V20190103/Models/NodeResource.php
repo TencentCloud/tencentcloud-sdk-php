@@ -20,74 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 规格管理，规格类型描述
  *
- * @method integer getResourceConfigId() 获取配置Id
- * @method void setResourceConfigId(integer $ResourceConfigId) 设置配置Id
- * @method Resource getResource() 获取Resource
+ * @method integer getResourceConfigId() 获取<p>配置Id</p>
+ * @method void setResourceConfigId(integer $ResourceConfigId) 设置<p>配置Id</p>
+ * @method Resource getResource() 获取<p>Resource</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResource(Resource $Resource) 设置Resource
+ * @method void setResource(Resource $Resource) 设置<p>Resource</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getUpdateTime() 获取更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
- * @method string getIsDefault() 获取是否默认配置,DEFAULT,BACKUP
- * @method void setIsDefault(string $IsDefault) 设置是否默认配置,DEFAULT,BACKUP
- * @method integer getMaxResourceNum() 获取该类型剩余
- * @method void setMaxResourceNum(integer $MaxResourceNum) 设置该类型剩余
- * @method array getPrepaidUnderwritePeriods() 获取支持的包销时长
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getUpdateTime() 获取<p>更新时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
+ * @method string getIsDefault() 获取<p>是否默认配置,DEFAULT,BACKUP</p>
+ * @method void setIsDefault(string $IsDefault) 设置<p>是否默认配置,DEFAULT,BACKUP</p>
+ * @method integer getMaxResourceNum() 获取<p>该类型剩余</p>
+ * @method void setMaxResourceNum(integer $MaxResourceNum) 设置<p>该类型剩余</p>
+ * @method array getPrepaidUnderwritePeriods() 获取<p>支持的包销时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPrepaidUnderwritePeriods(array $PrepaidUnderwritePeriods) 设置支持的包销时长
+ * @method void setPrepaidUnderwritePeriods(array $PrepaidUnderwritePeriods) 设置<p>支持的包销时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getQuotaNum() 获取<p>配额数量</p>
+ * @method void setQuotaNum(integer $QuotaNum) 设置<p>配额数量</p>
+ * @method string getQuotaUnit() 获取<p>配额单位</p>
+ * @method void setQuotaUnit(string $QuotaUnit) 设置<p>配额单位</p>
  */
 class NodeResource extends AbstractModel
 {
     /**
-     * @var integer 配置Id
+     * @var integer <p>配置Id</p>
      */
     public $ResourceConfigId;
 
     /**
-     * @var Resource Resource
+     * @var Resource <p>Resource</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resource;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 是否默认配置,DEFAULT,BACKUP
+     * @var string <p>是否默认配置,DEFAULT,BACKUP</p>
      */
     public $IsDefault;
 
     /**
-     * @var integer 该类型剩余
+     * @var integer <p>该类型剩余</p>
      */
     public $MaxResourceNum;
 
     /**
-     * @var array 支持的包销时长
+     * @var array <p>支持的包销时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrepaidUnderwritePeriods;
 
     /**
-     * @param integer $ResourceConfigId 配置Id
-     * @param Resource $Resource Resource
+     * @var integer <p>配额数量</p>
+     */
+    public $QuotaNum;
+
+    /**
+     * @var string <p>配额单位</p>
+     */
+    public $QuotaUnit;
+
+    /**
+     * @param integer $ResourceConfigId <p>配置Id</p>
+     * @param Resource $Resource <p>Resource</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间
-     * @param string $UpdateTime 更新时间
-     * @param string $IsDefault 是否默认配置,DEFAULT,BACKUP
-     * @param integer $MaxResourceNum 该类型剩余
-     * @param array $PrepaidUnderwritePeriods 支持的包销时长
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $UpdateTime <p>更新时间</p>
+     * @param string $IsDefault <p>是否默认配置,DEFAULT,BACKUP</p>
+     * @param integer $MaxResourceNum <p>该类型剩余</p>
+     * @param array $PrepaidUnderwritePeriods <p>支持的包销时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $QuotaNum <p>配额数量</p>
+     * @param string $QuotaUnit <p>配额单位</p>
      */
     function __construct()
     {
@@ -129,6 +145,14 @@ class NodeResource extends AbstractModel
 
         if (array_key_exists("PrepaidUnderwritePeriods",$param) and $param["PrepaidUnderwritePeriods"] !== null) {
             $this->PrepaidUnderwritePeriods = $param["PrepaidUnderwritePeriods"];
+        }
+
+        if (array_key_exists("QuotaNum",$param) and $param["QuotaNum"] !== null) {
+            $this->QuotaNum = $param["QuotaNum"];
+        }
+
+        if (array_key_exists("QuotaUnit",$param) and $param["QuotaUnit"] !== null) {
+            $this->QuotaUnit = $param["QuotaUnit"];
         }
     }
 }

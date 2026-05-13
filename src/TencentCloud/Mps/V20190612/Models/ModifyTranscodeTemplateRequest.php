@@ -20,106 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTranscodeTemplate请求参数结构体
  *
- * @method integer getDefinition() 获取转码模板唯一标识。
- * @method void setDefinition(integer $Definition) 设置转码模板唯一标识。
- * @method string getContainer() 获取封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
- * @method void setContainer(string $Container) 设置封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
- * @method string getName() 获取转码模板名称，长度限制：64 个字符。
- * @method void setName(string $Name) 设置转码模板名称，长度限制：64 个字符。
- * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
- * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
- * @method integer getRemoveVideo() 获取是否去除视频数据，可选值：
-<li>0：保留</li>
-<li>1：去除</li>
- * @method void setRemoveVideo(integer $RemoveVideo) 设置是否去除视频数据，可选值：
-<li>0：保留</li>
-<li>1：去除</li>
- * @method integer getRemoveAudio() 获取是否去除音频数据，可选值：
-<li>0：保留</li>
-<li>1：去除</li>
- * @method void setRemoveAudio(integer $RemoveAudio) 设置是否去除音频数据，可选值：
-<li>0：保留</li>
-<li>1：去除</li>
- * @method VideoTemplateInfoForUpdate getVideoTemplate() 获取视频流配置参数。
- * @method void setVideoTemplate(VideoTemplateInfoForUpdate $VideoTemplate) 设置视频流配置参数。
- * @method AudioTemplateInfoForUpdate getAudioTemplate() 获取音频流配置参数。
- * @method void setAudioTemplate(AudioTemplateInfoForUpdate $AudioTemplate) 设置音频流配置参数。
- * @method TEHDConfigForUpdate getTEHDConfig() 获取极速高清转码参数。
- * @method void setTEHDConfig(TEHDConfigForUpdate $TEHDConfig) 设置极速高清转码参数。
- * @method EnhanceConfig getEnhanceConfig() 获取音视频增强参数。
- * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) 设置音视频增强参数。
+ * @method integer getDefinition() 获取<p>转码模板唯一标识。</p>
+ * @method void setDefinition(integer $Definition) 设置<p>转码模板唯一标识。</p>
+ * @method string getContainer() 获取<p>封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。</p>
+ * @method void setContainer(string $Container) 设置<p>封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。</p>
+ * @method string getName() 获取<p>转码模板名称，长度限制：64 个字符。</p>
+ * @method void setName(string $Name) 设置<p>转码模板名称，长度限制：64 个字符。</p>
+ * @method string getComment() 获取<p>模板描述信息，长度限制：256 个字符。</p>
+ * @method void setComment(string $Comment) 设置<p>模板描述信息，长度限制：256 个字符。</p>
+ * @method integer getRemoveVideo() 获取<p>是否去除视频数据，可选值：</p><li>0：保留</li><li>1：去除</li>
+ * @method void setRemoveVideo(integer $RemoveVideo) 设置<p>是否去除视频数据，可选值：</p><li>0：保留</li><li>1：去除</li>
+ * @method integer getRemoveAudio() 获取<p>是否去除音频数据，可选值：</p><li>0：保留</li><li>1：去除</li>
+ * @method void setRemoveAudio(integer $RemoveAudio) 设置<p>是否去除音频数据，可选值：</p><li>0：保留</li><li>1：去除</li>
+ * @method VideoTemplateInfoForUpdate getVideoTemplate() 获取<p>视频流配置参数。</p>
+ * @method void setVideoTemplate(VideoTemplateInfoForUpdate $VideoTemplate) 设置<p>视频流配置参数。</p>
+ * @method AudioTemplateInfoForUpdate getAudioTemplate() 获取<p>音频流配置参数。</p>
+ * @method void setAudioTemplate(AudioTemplateInfoForUpdate $AudioTemplate) 设置<p>音频流配置参数。</p>
+ * @method TEHDConfigForUpdate getTEHDConfig() 获取<p>极速高清转码参数。</p>
+ * @method void setTEHDConfig(TEHDConfigForUpdate $TEHDConfig) 设置<p>极速高清转码参数。</p>
+ * @method EnhanceConfig getEnhanceConfig() 获取<p>音视频增强参数。</p>
+ * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) 设置<p>音视频增强参数。</p>
  */
 class ModifyTranscodeTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 转码模板唯一标识。
+     * @var integer <p>转码模板唯一标识。</p>
      */
     public $Definition;
 
     /**
-     * @var string 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
+     * @var string <p>封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。</p>
      */
     public $Container;
 
     /**
-     * @var string 转码模板名称，长度限制：64 个字符。
+     * @var string <p>转码模板名称，长度限制：64 个字符。</p>
      */
     public $Name;
 
     /**
-     * @var string 模板描述信息，长度限制：256 个字符。
+     * @var string <p>模板描述信息，长度限制：256 个字符。</p>
      */
     public $Comment;
 
     /**
-     * @var integer 是否去除视频数据，可选值：
-<li>0：保留</li>
-<li>1：去除</li>
+     * @var integer <p>是否去除视频数据，可选值：</p><li>0：保留</li><li>1：去除</li>
      */
     public $RemoveVideo;
 
     /**
-     * @var integer 是否去除音频数据，可选值：
-<li>0：保留</li>
-<li>1：去除</li>
+     * @var integer <p>是否去除音频数据，可选值：</p><li>0：保留</li><li>1：去除</li>
      */
     public $RemoveAudio;
 
     /**
-     * @var VideoTemplateInfoForUpdate 视频流配置参数。
+     * @var VideoTemplateInfoForUpdate <p>视频流配置参数。</p>
      */
     public $VideoTemplate;
 
     /**
-     * @var AudioTemplateInfoForUpdate 音频流配置参数。
+     * @var AudioTemplateInfoForUpdate <p>音频流配置参数。</p>
      */
     public $AudioTemplate;
 
     /**
-     * @var TEHDConfigForUpdate 极速高清转码参数。
+     * @var TEHDConfigForUpdate <p>极速高清转码参数。</p>
      */
     public $TEHDConfig;
 
     /**
-     * @var EnhanceConfig 音视频增强参数。
+     * @var EnhanceConfig <p>音视频增强参数。</p>
      */
     public $EnhanceConfig;
 
     /**
-     * @param integer $Definition 转码模板唯一标识。
-     * @param string $Container 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
-     * @param string $Name 转码模板名称，长度限制：64 个字符。
-     * @param string $Comment 模板描述信息，长度限制：256 个字符。
-     * @param integer $RemoveVideo 是否去除视频数据，可选值：
-<li>0：保留</li>
-<li>1：去除</li>
-     * @param integer $RemoveAudio 是否去除音频数据，可选值：
-<li>0：保留</li>
-<li>1：去除</li>
-     * @param VideoTemplateInfoForUpdate $VideoTemplate 视频流配置参数。
-     * @param AudioTemplateInfoForUpdate $AudioTemplate 音频流配置参数。
-     * @param TEHDConfigForUpdate $TEHDConfig 极速高清转码参数。
-     * @param EnhanceConfig $EnhanceConfig 音视频增强参数。
+     * @param integer $Definition <p>转码模板唯一标识。</p>
+     * @param string $Container <p>封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。</p>
+     * @param string $Name <p>转码模板名称，长度限制：64 个字符。</p>
+     * @param string $Comment <p>模板描述信息，长度限制：256 个字符。</p>
+     * @param integer $RemoveVideo <p>是否去除视频数据，可选值：</p><li>0：保留</li><li>1：去除</li>
+     * @param integer $RemoveAudio <p>是否去除音频数据，可选值：</p><li>0：保留</li><li>1：去除</li>
+     * @param VideoTemplateInfoForUpdate $VideoTemplate <p>视频流配置参数。</p>
+     * @param AudioTemplateInfoForUpdate $AudioTemplate <p>音频流配置参数。</p>
+     * @param TEHDConfigForUpdate $TEHDConfig <p>极速高清转码参数。</p>
+     * @param EnhanceConfig $EnhanceConfig <p>音视频增强参数。</p>
      */
     function __construct()
     {

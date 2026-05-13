@@ -59,6 +59,7 @@ class Workspace extends AbstractModel
 
     /**
      * @var array <p>绑定的资源组信息</p>
+     * @deprecated
      */
     public $ResourceGroups;
 

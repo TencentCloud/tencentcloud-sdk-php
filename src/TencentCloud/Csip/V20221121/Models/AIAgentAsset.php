@@ -44,6 +44,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetadataRiskURL(string $MetadataRiskURL) 设置<p>metadata 有风险时对应路径</p>
  * @method SkillState getSkillState() 获取<p>无</p>
  * @method void setSkillState(SkillState $SkillState) 设置<p>无</p>
+ * @method TrafficPluginState getTrafficPluginState() 获取<p>流量沙箱插件状态</p>
+ * @method void setTrafficPluginState(TrafficPluginState $TrafficPluginState) 设置<p>流量沙箱插件状态</p>
+ * @method array getTrafficRuleState() 获取<p>流量沙箱规则状态</p>
+ * @method void setTrafficRuleState(array $TrafficRuleState) 设置<p>流量沙箱规则状态</p>
+ * @method CommandPluginState getCommandPluginState() 获取<p>命令沙箱插件状态</p>
+ * @method void setCommandPluginState(CommandPluginState $CommandPluginState) 设置<p>命令沙箱插件状态</p>
  */
 class AIAgentAsset extends AbstractModel
 {
@@ -108,6 +114,21 @@ class AIAgentAsset extends AbstractModel
     public $SkillState;
 
     /**
+     * @var TrafficPluginState <p>流量沙箱插件状态</p>
+     */
+    public $TrafficPluginState;
+
+    /**
+     * @var array <p>流量沙箱规则状态</p>
+     */
+    public $TrafficRuleState;
+
+    /**
+     * @var CommandPluginState <p>命令沙箱插件状态</p>
+     */
+    public $CommandPluginState;
+
+    /**
      * @param string $ID <p>ID 标识</p>
      * @param string $AgentName <p>agent 名称</p>
      * @param array $AgentModel <p>agent 使用模型名称</p>
@@ -120,6 +141,9 @@ class AIAgentAsset extends AbstractModel
      * @param string $ExposureStatus <p>暴露状态。有如下枚举值。1. EXPOSED；2.UNEXPOSED；</p><ol start="3"><li>UNKNOWN;</li></ol>
      * @param string $MetadataRiskURL <p>metadata 有风险时对应路径</p>
      * @param SkillState $SkillState <p>无</p>
+     * @param TrafficPluginState $TrafficPluginState <p>流量沙箱插件状态</p>
+     * @param array $TrafficRuleState <p>流量沙箱规则状态</p>
+     * @param CommandPluginState $CommandPluginState <p>命令沙箱插件状态</p>
      */
     function __construct()
     {
@@ -181,6 +205,25 @@ class AIAgentAsset extends AbstractModel
         if (array_key_exists("SkillState",$param) and $param["SkillState"] !== null) {
             $this->SkillState = new SkillState();
             $this->SkillState->deserialize($param["SkillState"]);
+        }
+
+        if (array_key_exists("TrafficPluginState",$param) and $param["TrafficPluginState"] !== null) {
+            $this->TrafficPluginState = new TrafficPluginState();
+            $this->TrafficPluginState->deserialize($param["TrafficPluginState"]);
+        }
+
+        if (array_key_exists("TrafficRuleState",$param) and $param["TrafficRuleState"] !== null) {
+            $this->TrafficRuleState = [];
+            foreach ($param["TrafficRuleState"] as $key => $value){
+                $obj = new TrafficRuleState();
+                $obj->deserialize($value);
+                array_push($this->TrafficRuleState, $obj);
+            }
+        }
+
+        if (array_key_exists("CommandPluginState",$param) and $param["CommandPluginState"] !== null) {
+            $this->CommandPluginState = new CommandPluginState();
+            $this->CommandPluginState->deserialize($param["CommandPluginState"]);
         }
     }
 }

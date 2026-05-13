@@ -14,40 +14,53 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dlc\V20210125\Models;
+namespace TencentCloud\Mna\V20210119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTasks返回参数结构体
+ * GetHardwareInfo返回参数结构体
  *
- * @method array getTaskList() 获取<p>任务对象列表。</p>
- * @method void setTaskList(array $TaskList) 设置<p>任务对象列表。</p>
- * @method integer getTotalCount() 获取<p>实例总数。</p>
- * @method void setTotalCount(integer $TotalCount) 设置<p>实例总数。</p>
- * @method TasksOverview getTasksOverview() 获取<p>任务概览信息</p>
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTasksOverview(TasksOverview $TasksOverview) 设置<p>任务概览信息</p>
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLicensePayMode() 获取license授权有效期 
+0：月度授权 
+1：永久授权 
+-1：未知
+ * @method void setLicensePayMode(integer $LicensePayMode) 设置license授权有效期 
+0：月度授权 
+1：永久授权 
+-1：未知
+ * @method integer getPayer() 获取付费方 0：客户付费 1：厂商付费
+ * @method void setPayer(integer $Payer) 设置付费方 0：客户付费 1：厂商付费
+ * @method string getSN() 获取硬件序列号
+ * @method void setSN(string $SN) 设置硬件序列号
+ * @method string getVendor() 获取厂商名称
+ * @method void setVendor(string $Vendor) 设置厂商名称
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeTasksResponse extends AbstractModel
+class GetHardwareInfoResponse extends AbstractModel
 {
     /**
-     * @var array <p>任务对象列表。</p>
+     * @var integer license授权有效期 
+0：月度授权 
+1：永久授权 
+-1：未知
      */
-    public $TaskList;
+    public $LicensePayMode;
 
     /**
-     * @var integer <p>实例总数。</p>
+     * @var integer 付费方 0：客户付费 1：厂商付费
      */
-    public $TotalCount;
+    public $Payer;
 
     /**
-     * @var TasksOverview <p>任务概览信息</p>
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 硬件序列号
      */
-    public $TasksOverview;
+    public $SN;
+
+    /**
+     * @var string 厂商名称
+     */
+    public $Vendor;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -55,10 +68,13 @@ class DescribeTasksResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $TaskList <p>任务对象列表。</p>
-     * @param integer $TotalCount <p>实例总数。</p>
-     * @param TasksOverview $TasksOverview <p>任务概览信息</p>
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LicensePayMode license授权有效期 
+0：月度授权 
+1：永久授权 
+-1：未知
+     * @param integer $Payer 付费方 0：客户付费 1：厂商付费
+     * @param string $SN 硬件序列号
+     * @param string $Vendor 厂商名称
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -74,22 +90,20 @@ class DescribeTasksResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskList",$param) and $param["TaskList"] !== null) {
-            $this->TaskList = [];
-            foreach ($param["TaskList"] as $key => $value){
-                $obj = new TaskResponseInfo();
-                $obj->deserialize($value);
-                array_push($this->TaskList, $obj);
-            }
+        if (array_key_exists("LicensePayMode",$param) and $param["LicensePayMode"] !== null) {
+            $this->LicensePayMode = $param["LicensePayMode"];
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("Payer",$param) and $param["Payer"] !== null) {
+            $this->Payer = $param["Payer"];
         }
 
-        if (array_key_exists("TasksOverview",$param) and $param["TasksOverview"] !== null) {
-            $this->TasksOverview = new TasksOverview();
-            $this->TasksOverview->deserialize($param["TasksOverview"]);
+        if (array_key_exists("SN",$param) and $param["SN"] !== null) {
+            $this->SN = $param["SN"];
+        }
+
+        if (array_key_exists("Vendor",$param) and $param["Vendor"] !== null) {
+            $this->Vendor = $param["Vendor"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

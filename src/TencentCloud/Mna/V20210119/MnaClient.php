@@ -49,6 +49,7 @@ use TencentCloud\Mna\V20210119\Models as Models;
  * @method Models\GetFlowStatisticByRegionResponse GetFlowStatisticByRegion(Models\GetFlowStatisticByRegionRequest $req) 获取指定区域，指定时间点数据流量使用情况
  * @method Models\GetGroupDetailResponse GetGroupDetail(Models\GetGroupDetailRequest $req) 查看分组详细信息
  * @method Models\GetGroupListResponse GetGroupList(Models\GetGroupListRequest $req) 获取分组列表
+ * @method Models\GetHardwareInfoResponse GetHardwareInfo(Models\GetHardwareInfoRequest $req) 获取硬件设备信息
  * @method Models\GetHardwareListResponse GetHardwareList(Models\GetHardwareListRequest $req) 获取厂商硬件列表
  * @method Models\GetL3ConnListResponse GetL3ConnList(Models\GetL3ConnListRequest $req) 获取互通规则列表
  * @method Models\GetMonitorDataByNameResponse GetMonitorDataByName(Models\GetMonitorDataByNameRequest $req) 获取单个设备所有监控指标的下载文件链接

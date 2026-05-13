@@ -14,40 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dlc\V20210125\Models;
+namespace TencentCloud\Cfw\V20190904\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTasks返回参数结构体
+ * DescribeEdgeIpSimple返回参数结构体
  *
- * @method array getTaskList() 获取<p>任务对象列表。</p>
- * @method void setTaskList(array $TaskList) 设置<p>任务对象列表。</p>
- * @method integer getTotalCount() 获取<p>实例总数。</p>
- * @method void setTotalCount(integer $TotalCount) 设置<p>实例总数。</p>
- * @method TasksOverview getTasksOverview() 获取<p>任务概览信息</p>
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTasksOverview(TasksOverview $TasksOverview) 设置<p>任务概览信息</p>
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getData() 获取ip 开关列表
+ * @method void setData(array $Data) 设置ip 开关列表
+ * @method integer getTotal() 获取ip 开关列表个数
+ * @method void setTotal(integer $Total) 设置ip 开关列表个数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeTasksResponse extends AbstractModel
+class DescribeEdgeIpSimpleResponse extends AbstractModel
 {
     /**
-     * @var array <p>任务对象列表。</p>
+     * @var array ip 开关列表
      */
-    public $TaskList;
+    public $Data;
 
     /**
-     * @var integer <p>实例总数。</p>
+     * @var integer ip 开关列表个数
      */
-    public $TotalCount;
-
-    /**
-     * @var TasksOverview <p>任务概览信息</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $TasksOverview;
+    public $Total;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -55,10 +45,8 @@ class DescribeTasksResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $TaskList <p>任务对象列表。</p>
-     * @param integer $TotalCount <p>实例总数。</p>
-     * @param TasksOverview $TasksOverview <p>任务概览信息</p>
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Data ip 开关列表
+     * @param integer $Total ip 开关列表个数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -74,22 +62,17 @@ class DescribeTasksResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskList",$param) and $param["TaskList"] !== null) {
-            $this->TaskList = [];
-            foreach ($param["TaskList"] as $key => $value){
-                $obj = new TaskResponseInfo();
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = [];
+            foreach ($param["Data"] as $key => $value){
+                $obj = new EdgeIpInfoSimple();
                 $obj->deserialize($value);
-                array_push($this->TaskList, $obj);
+                array_push($this->Data, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("TasksOverview",$param) and $param["TasksOverview"] !== null) {
-            $this->TasksOverview = new TasksOverview();
-            $this->TasksOverview->deserialize($param["TasksOverview"]);
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

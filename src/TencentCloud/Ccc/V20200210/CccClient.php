@@ -62,6 +62,7 @@ use TencentCloud\Ccc\V20200210\Models as Models;
  * @method Models\DescribeAIAgentInfoListResponse DescribeAIAgentInfoList(Models\DescribeAIAgentInfoListRequest $req) 本接口用于分页查询指定实例（SdkAppId）下已配置的智能体信息列表，包括智能体ID和名称等基本信息。
  * @method Models\DescribeAIAnalysisResultResponse DescribeAIAnalysisResult(Models\DescribeAIAnalysisResultRequest $req) 获取 AI 会话分析结果
  * @method Models\DescribeAICallExtractResultResponse DescribeAICallExtractResult(Models\DescribeAICallExtractResultRequest $req) 本接口用于：在语音智能体通话结束后，通过 Session ID 查询指定会话的 **话后标签** 结果。相关话后标签需提前在管理端完成配置，具体说明请参见 [话后标签](https://cloud.tencent.com/document/product/679/119800) 。
+ * @method Models\DescribeAICallInteractionRecordsResponse DescribeAICallInteractionRecords(Models\DescribeAICallInteractionRecordsRequest $req) 获取AI 会话交互事件流
  * @method Models\DescribeAILatencyResponse DescribeAILatency(Models\DescribeAILatencyRequest $req) 调用该接口，可以通过 Session ID 查询指定会话在特定时间段内，AI服务的处理时延明细与统计数据，时延信息包括：
 - 端到端（ETE）时延：统计从用户语音输入到 AI 返回完整响应的整体耗时。
 - 自动语音识别（ASR）时延：统计语音输入被识别为文本所需的处理耗时。

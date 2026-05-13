@@ -20,70 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRecordingRules请求参数结构体
  *
- * @method string getInstanceId() 获取Prometheus 实例 ID
- * @method void setInstanceId(string $InstanceId) 设置Prometheus 实例 ID
- * @method integer getLimit() 获取返回数量，默认为 20，最大值为 100
- * @method void setLimit(integer $Limit) 设置返回数量，默认为 20，最大值为 100
- * @method integer getOffset() 获取偏移量，默认为 0
- * @method void setOffset(integer $Offset) 设置偏移量，默认为 0
- * @method string getRuleId() 获取规则 ID
- * @method void setRuleId(string $RuleId) 设置规则 ID
- * @method integer getRuleState() 获取规则状态码，取值如下：
-<li>1=RuleDeleted</li>
-<li>2=RuleEnabled</li>
-<li>3=RuleDisabled</li>
- * @method void setRuleState(integer $RuleState) 设置规则状态码，取值如下：
-<li>1=RuleDeleted</li>
-<li>2=RuleEnabled</li>
-<li>3=RuleDisabled</li>
- * @method string getName() 获取规则名称
- * @method void setName(string $Name) 设置规则名称
+ * @method string getInstanceId() 获取<p>Prometheus 实例 ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>Prometheus 实例 ID</p>
+ * @method integer getLimit() 获取<p>返回数量，默认为 20，最大值为 100</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认为 20，最大值为 100</p>
+ * @method integer getOffset() 获取<p>偏移量，默认为 0</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为 0</p>
+ * @method string getRuleId() 获取<p>规则 ID</p>
+ * @method void setRuleId(string $RuleId) 设置<p>规则 ID</p>
+ * @method integer getRuleState() 获取<p>规则状态码，取值如下：</p><li>1=RuleDeleted</li><li>2=RuleEnabled</li><li>3=RuleDisabled</li>
+ * @method void setRuleState(integer $RuleState) 设置<p>规则状态码，取值如下：</p><li>1=RuleDeleted</li><li>2=RuleEnabled</li><li>3=RuleDisabled</li>
+ * @method string getName() 获取<p>规则名称</p>
+ * @method void setName(string $Name) 设置<p>规则名称</p>
  */
 class DescribeRecordingRulesRequest extends AbstractModel
 {
     /**
-     * @var string Prometheus 实例 ID
+     * @var string <p>Prometheus 实例 ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 返回数量，默认为 20，最大值为 100
+     * @var integer <p>返回数量，默认为 20，最大值为 100</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量，默认为 0
+     * @var integer <p>偏移量，默认为 0</p>
      */
     public $Offset;
 
     /**
-     * @var string 规则 ID
+     * @var string <p>规则 ID</p>
      */
     public $RuleId;
 
     /**
-     * @var integer 规则状态码，取值如下：
-<li>1=RuleDeleted</li>
-<li>2=RuleEnabled</li>
-<li>3=RuleDisabled</li>
+     * @var integer <p>规则状态码，取值如下：</p><li>1=RuleDeleted</li><li>2=RuleEnabled</li><li>3=RuleDisabled</li>
      */
     public $RuleState;
 
     /**
-     * @var string 规则名称
+     * @var string <p>规则名称</p>
      */
     public $Name;
 
     /**
-     * @param string $InstanceId Prometheus 实例 ID
-     * @param integer $Limit 返回数量，默认为 20，最大值为 100
-     * @param integer $Offset 偏移量，默认为 0
-     * @param string $RuleId 规则 ID
-     * @param integer $RuleState 规则状态码，取值如下：
-<li>1=RuleDeleted</li>
-<li>2=RuleEnabled</li>
-<li>3=RuleDisabled</li>
-     * @param string $Name 规则名称
+     * @param string $InstanceId <p>Prometheus 实例 ID</p>
+     * @param integer $Limit <p>返回数量，默认为 20，最大值为 100</p>
+     * @param integer $Offset <p>偏移量，默认为 0</p>
+     * @param string $RuleId <p>规则 ID</p>
+     * @param integer $RuleState <p>规则状态码，取值如下：</p><li>1=RuleDeleted</li><li>2=RuleEnabled</li><li>3=RuleDisabled</li>
+     * @param string $Name <p>规则名称</p>
      */
     function __construct()
     {

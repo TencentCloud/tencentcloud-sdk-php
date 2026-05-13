@@ -84,6 +84,10 @@ cross-region：跨地域
  * @method void setIdcPointType(string $IdcPointType) 设置IDC侧类型。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方
  * @method boolean getBIapLinkProtected() 获取运营商链路是否有保护
  * @method void setBIapLinkProtected(boolean $BIapLinkProtected) 设置运营商链路是否有保护
+ * @method string getServiceType() 获取服务类型：SHARE-共享型，EXCLUSIVE-独占型
+ * @method void setServiceType(string $ServiceType) 设置服务类型：SHARE-共享型，EXCLUSIVE-独占型
+ * @method string getVlanRange() 获取VLAN范围
+ * @method void setVlanRange(string $VlanRange) 设置VLAN范围
  */
 class CloudAttachInfo extends AbstractModel
 {
@@ -212,6 +216,16 @@ cross-region：跨地域
     public $BIapLinkProtected;
 
     /**
+     * @var string 服务类型：SHARE-共享型，EXCLUSIVE-独占型
+     */
+    public $ServiceType;
+
+    /**
+     * @var string VLAN范围
+     */
+    public $VlanRange;
+
+    /**
      * @param string $InstanceId 敏捷上云实例id
      * @param string $Name 敏捷上云名称
      * @param string $IapId 合作伙伴的AppId
@@ -244,6 +258,8 @@ cross-region：跨地域
      * @param string $IapCode 运营商代码
      * @param string $IdcPointType IDC侧类型。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方
      * @param boolean $BIapLinkProtected 运营商链路是否有保护
+     * @param string $ServiceType 服务类型：SHARE-共享型，EXCLUSIVE-独占型
+     * @param string $VlanRange VLAN范围
      */
     function __construct()
     {
@@ -348,6 +364,14 @@ cross-region：跨地域
 
         if (array_key_exists("BIapLinkProtected",$param) and $param["BIapLinkProtected"] !== null) {
             $this->BIapLinkProtected = $param["BIapLinkProtected"];
+        }
+
+        if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
+            $this->ServiceType = $param["ServiceType"];
+        }
+
+        if (array_key_exists("VlanRange",$param) and $param["VlanRange"] !== null) {
+            $this->VlanRange = $param["VlanRange"];
         }
     }
 }

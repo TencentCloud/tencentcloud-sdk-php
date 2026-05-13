@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMenus(array $Menus) 设置<p>自定义显示菜单</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDomain() 获取<p>公网访问域名</p>
+ * @method void setDomain(string $Domain) 设置<p>公网访问域名</p>
+ * @method string getIntranetDomain() 获取<p>内网访问域名</p>
+ * @method void setIntranetDomain(string $IntranetDomain) 设置<p>内网访问域名</p>
  */
 class Console extends AbstractModel
 {
@@ -172,6 +176,16 @@ class Console extends AbstractModel
     public $Menus;
 
     /**
+     * @var string <p>公网访问域名</p>
+     */
+    public $Domain;
+
+    /**
+     * @var string <p>内网访问域名</p>
+     */
+    public $IntranetDomain;
+
+    /**
      * @param string $ConsoleId <p>DataSight控制台Id</p>
      * @param array $AccessMode <p>访问方式：public-公网，internal-内网</p>
      * @param integer $LoginMode <p>登录方式：0-账号密码鉴权，1-匿名登录，2-第三方认证登录</p>
@@ -200,6 +214,8 @@ class Console extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Menus <p>自定义显示菜单</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Domain <p>公网访问域名</p>
+     * @param string $IntranetDomain <p>内网访问域名</p>
      */
     function __construct()
     {
@@ -297,6 +313,14 @@ class Console extends AbstractModel
 
         if (array_key_exists("Menus",$param) and $param["Menus"] !== null) {
             $this->Menus = $param["Menus"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("IntranetDomain",$param) and $param["IntranetDomain"] !== null) {
+            $this->IntranetDomain = $param["IntranetDomain"];
         }
     }
 }

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCloudAttachService返回参数结构体
  *
- * @method CloudAttachInfo getCloudAttach() 获取敏捷上云服务详情
- * @method void setCloudAttach(CloudAttachInfo $CloudAttach) 设置敏捷上云服务详情
+ * @method CloudAttachInfo getCloudAttach() 获取<p>敏捷上云服务详情</p>
+ * @method void setCloudAttach(CloudAttachInfo $CloudAttach) 设置<p>敏捷上云服务详情</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateCloudAttachServiceResponse extends AbstractModel
 {
     /**
-     * @var CloudAttachInfo 敏捷上云服务详情
+     * @var CloudAttachInfo <p>敏捷上云服务详情</p>
      */
     public $CloudAttach;
 
@@ -38,7 +38,7 @@ class CreateCloudAttachServiceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param CloudAttachInfo $CloudAttach 敏捷上云服务详情
+     * @param CloudAttachInfo $CloudAttach <p>敏捷上云服务详情</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,27 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRecordingRules返回参数结构体
  *
- * @method integer getTotalCount() 获取规则组数量
- * @method void setTotalCount(integer $TotalCount) 设置规则组数量
- * @method array getRecordingRuleSet() 获取规则组详情
+ * @method integer getTotalCount() 获取<p>规则组数量</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>规则组数量</p>
+ * @method array getRecordingRuleSet() 获取<p>规则组详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecordingRuleSet(array $RecordingRuleSet) 设置规则组详情
+ * @method void setRecordingRuleSet(array $RecordingRuleSet) 设置<p>规则组详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalRuleCount() 获取<p>预聚合规则数</p>
+ * @method void setTotalRuleCount(integer $TotalRuleCount) 设置<p>预聚合规则数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeRecordingRulesResponse extends AbstractModel
 {
     /**
-     * @var integer 规则组数量
+     * @var integer <p>规则组数量</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 规则组详情
+     * @var array <p>规则组详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordingRuleSet;
+
+    /**
+     * @var integer <p>预聚合规则数</p>
+     */
+    public $TotalRuleCount;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -48,9 +55,10 @@ class DescribeRecordingRulesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 规则组数量
-     * @param array $RecordingRuleSet 规则组详情
+     * @param integer $TotalCount <p>规则组数量</p>
+     * @param array $RecordingRuleSet <p>规则组详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalRuleCount <p>预聚合规则数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -77,6 +85,10 @@ class DescribeRecordingRulesResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->RecordingRuleSet, $obj);
             }
+        }
+
+        if (array_key_exists("TotalRuleCount",$param) and $param["TotalRuleCount"] !== null) {
+            $this->TotalRuleCount = $param["TotalRuleCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

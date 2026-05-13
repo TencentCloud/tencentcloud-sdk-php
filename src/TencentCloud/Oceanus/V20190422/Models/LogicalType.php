@@ -20,45 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SqlGateway返回LogicalType类型
  *
- * @method string getType() 获取类型
+ * @method string getType() 获取<p>类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置类型
+ * @method void setType(string $Type) 设置<p>类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getNullAble() 获取是否允许为空
+ * @method boolean getNullAble() 获取<p>是否允许为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNullAble(boolean $NullAble) 设置是否允许为空
+ * @method void setNullAble(boolean $NullAble) 设置<p>是否允许为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLength() 获取长度
+ * @method integer getLength() 获取<p>长度</p><p>单位：字符数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLength(integer $Length) 设置长度
+ * @method void setLength(integer $Length) 设置<p>长度</p><p>单位：字符数</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class LogicalType extends AbstractModel
 {
     /**
-     * @var string 类型
+     * @var string <p>类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
-     * @var boolean 是否允许为空
+     * @var boolean <p>是否允许为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NullAble;
 
     /**
-     * @var integer 长度
+     * @var integer <p>长度</p><p>单位：字符数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Length;
 
     /**
-     * @param string $Type 类型
+     * @param string $Type <p>类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $NullAble 是否允许为空
+     * @param boolean $NullAble <p>是否允许为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Length 长度
+     * @param integer $Length <p>长度</p><p>单位：字符数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

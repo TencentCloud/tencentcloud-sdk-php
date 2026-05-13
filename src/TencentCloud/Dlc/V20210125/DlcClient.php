@@ -136,6 +136,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeStandardEngineResourceGroupsResponse DescribeStandardEngineResourceGroups(Models\DescribeStandardEngineResourceGroupsRequest $req) 查询标准引擎资源组信息
  * @method Models\DescribeStoreLocationResponse DescribeStoreLocation(Models\DescribeStoreLocationRequest $req) 查询计算结果存储位置。
  * @method Models\DescribeSubUserAccessPolicyResponse DescribeSubUserAccessPolicy(Models\DescribeSubUserAccessPolicyRequest $req) 本接口（DescribeSubUserAccessPolicy）用于开通了第三方平台访问的用户，查询其子用户的访问策略
+ * @method Models\DescribeTCLakeMetaInstanceResponse DescribeTCLakeMetaInstance(Models\DescribeTCLakeMetaInstanceRequest $req) 是否成功开通TCLake
  * @method Models\DescribeTableResponse DescribeTable(Models\DescribeTableRequest $req) 本接口（DescribeTable），用于查询单个表的详细信息。
  * @method Models\DescribeTablePartitionsResponse DescribeTablePartitions(Models\DescribeTablePartitionsRequest $req) 本接口（DescribeTablePartitions）用于查询数据表分区信息
  * @method Models\DescribeTablesResponse DescribeTables(Models\DescribeTablesRequest $req) 本接口（DescribeTables）用于查询数据表列表。
@@ -170,6 +171,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\GenerateCreateMangedTableSqlResponse GenerateCreateMangedTableSql(Models\GenerateCreateMangedTableSqlRequest $req) 生成创建托管表语句
  * @method Models\GetOptimizerPolicyResponse GetOptimizerPolicy(Models\GetOptimizerPolicyRequest $req) GetOptimizerPolicy
  * @method Models\GrantDLCCatalogAccessResponse GrantDLCCatalogAccess(Models\GrantDLCCatalogAccessRequest $req) 授权访问DLC Catalog
+ * @method Models\InitializeTCLakeResponse InitializeTCLake(Models\InitializeTCLakeRequest $req) 开通TCLake
  * @method Models\LaunchStandardEngineResourceGroupsResponse LaunchStandardEngineResourceGroups(Models\LaunchStandardEngineResourceGroupsRequest $req) 启动标准引擎资源组
  * @method Models\ListTaskJobLogDetailResponse ListTaskJobLogDetail(Models\ListTaskJobLogDetailRequest $req) 本接口（ListTaskJobLogDetail）用于获取spark 作业任务日志详情
  * @method Models\ListTaskJobLogNameResponse ListTaskJobLogName(Models\ListTaskJobLogNameRequest $req) 本接口（ListTaskJobLogName）用于获取spark-jar日志名称列表

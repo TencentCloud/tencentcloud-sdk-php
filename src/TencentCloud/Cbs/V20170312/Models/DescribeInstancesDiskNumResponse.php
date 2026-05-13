@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstancesDiskNum返回参数结构体
  *
- * @method array getAttachDetail() 获取各个云服务器已挂载和可挂载弹性云盘的数量。
- * @method void setAttachDetail(array $AttachDetail) 设置各个云服务器已挂载和可挂载弹性云盘的数量。
+ * @method array getAttachDetail() 获取<p>各个云服务器已挂载和可挂载弹性云盘的数量。</p>
+ * @method void setAttachDetail(array $AttachDetail) 设置<p>各个云服务器已挂载和可挂载弹性云盘的数量。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeInstancesDiskNumResponse extends AbstractModel
 {
     /**
-     * @var array 各个云服务器已挂载和可挂载弹性云盘的数量。
+     * @var array <p>各个云服务器已挂载和可挂载弹性云盘的数量。</p>
      */
     public $AttachDetail;
 
@@ -38,7 +38,7 @@ class DescribeInstancesDiskNumResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $AttachDetail 各个云服务器已挂载和可挂载弹性云盘的数量。
+     * @param array $AttachDetail <p>各个云服务器已挂载和可挂载弹性云盘的数量。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

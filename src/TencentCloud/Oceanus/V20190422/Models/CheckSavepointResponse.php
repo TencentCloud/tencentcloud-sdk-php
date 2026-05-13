@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckSavepoint返回参数结构体
  *
- * @method string getSerialId() 获取资源 id
- * @method void setSerialId(string $SerialId) 设置资源 id
- * @method integer getSavepointStatus() 获取1=可用，2=不可用
- * @method void setSavepointStatus(integer $SavepointStatus) 设置1=可用，2=不可用
+ * @method string getSerialId() 获取<p>资源 id</p>
+ * @method void setSerialId(string $SerialId) 设置<p>资源 id</p>
+ * @method integer getSavepointStatus() 获取<p>1=可用，2=不可用</p>
+ * @method void setSavepointStatus(integer $SavepointStatus) 设置<p>1=可用，2=不可用</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CheckSavepointResponse extends AbstractModel
 {
     /**
-     * @var string 资源 id
+     * @var string <p>资源 id</p>
      */
     public $SerialId;
 
     /**
-     * @var integer 1=可用，2=不可用
+     * @var integer <p>1=可用，2=不可用</p>
      */
     public $SavepointStatus;
 
@@ -45,8 +45,8 @@ class CheckSavepointResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $SerialId 资源 id
-     * @param integer $SavepointStatus 1=可用，2=不可用
+     * @param string $SerialId <p>资源 id</p>
+     * @param integer $SavepointStatus <p>1=可用，2=不可用</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

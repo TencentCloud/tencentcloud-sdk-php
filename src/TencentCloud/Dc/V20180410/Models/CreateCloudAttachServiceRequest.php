@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCloudAttachService请求参数结构体
  *
- * @method CreateCasInput getData() 获取创建敏捷上云入参
- * @method void setData(CreateCasInput $Data) 设置创建敏捷上云入参
+ * @method CreateCasInput getData() 获取<p>创建敏捷上云入参</p>
+ * @method void setData(CreateCasInput $Data) 设置<p>创建敏捷上云入参</p>
+ * @method array getTags() 获取<p>标签</p>
+ * @method void setTags(array $Tags) 设置<p>标签</p>
  */
 class CreateCloudAttachServiceRequest extends AbstractModel
 {
     /**
-     * @var CreateCasInput 创建敏捷上云入参
+     * @var CreateCasInput <p>创建敏捷上云入参</p>
      */
     public $Data;
 
     /**
-     * @param CreateCasInput $Data 创建敏捷上云入参
+     * @var array <p>标签</p>
+     */
+    public $Tags;
+
+    /**
+     * @param CreateCasInput $Data <p>创建敏捷上云入参</p>
+     * @param array $Tags <p>标签</p>
      */
     function __construct()
     {
@@ -49,6 +57,15 @@ class CreateCloudAttachServiceRequest extends AbstractModel
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
             $this->Data = new CreateCasInput();
             $this->Data->deserialize($param["Data"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

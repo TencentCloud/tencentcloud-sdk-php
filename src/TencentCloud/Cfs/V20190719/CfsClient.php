@@ -67,6 +67,7 @@ use TencentCloud\Cfs\V20190719\Models as Models;
  * @method Models\ModifyDataFlowResponse ModifyDataFlow(Models\ModifyDataFlowRequest $req) 修改数据流动相关参数
  * @method Models\ModifyFileSystemAutoScaleUpRuleResponse ModifyFileSystemAutoScaleUpRule(Models\ModifyFileSystemAutoScaleUpRuleRequest $req) 用来设置文件系统扩容策略，该接口只支持turbo文件系统
  * @method Models\ModifyLifecyclePolicyResponse ModifyLifecyclePolicy(Models\ModifyLifecyclePolicyRequest $req) 更新文件存储生命周期策略
+ * @method Models\OverrideCfsRulesResponse OverrideCfsRules(Models\OverrideCfsRulesRequest $req) 本接口（OverrideCfsRules）用于批量覆盖式创建权限组规则。
  * @method Models\ScaleUpFileSystemResponse ScaleUpFileSystem(Models\ScaleUpFileSystemRequest $req) 该接口用于对turbo 文件系统扩容使用,该接口只支持扩容不支持缩容。turbo标准型扩容步长是10240GIB，turbo性能型扩容步长是5120GIB
  * @method Models\SetUserQuotaResponse SetUserQuota(Models\SetUserQuotaRequest $req) 设置文件系统配额，提供UID/GID的配额设置的接口（仅部分Turbo实例能使用，若需要调用请提交工单与我们联系）
  * @method Models\SignUpCfsServiceResponse SignUpCfsService(Models\SignUpCfsServiceRequest $req) 本接口（SignUpCfsService）用于开通CFS服务。

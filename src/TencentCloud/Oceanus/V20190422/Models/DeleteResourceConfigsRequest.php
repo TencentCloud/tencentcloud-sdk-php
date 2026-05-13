@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteResourceConfigs请求参数结构体
  *
- * @method string getResourceId() 获取资源ID
- * @method void setResourceId(string $ResourceId) 设置资源ID
- * @method array getResourceConfigVersions() 获取资源版本数组
- * @method void setResourceConfigVersions(array $ResourceConfigVersions) 设置资源版本数组
- * @method string getWorkSpaceId() 获取工作空间 SerialId
- * @method void setWorkSpaceId(string $WorkSpaceId) 设置工作空间 SerialId
+ * @method string getResourceId() 获取<p>资源ID</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>资源ID</p>
+ * @method array getResourceConfigVersions() 获取<p>资源版本数组</p>
+ * @method void setResourceConfigVersions(array $ResourceConfigVersions) 设置<p>资源版本数组</p>
+ * @method string getWorkSpaceId() 获取<p>工作空间 SerialId</p>
+ * @method void setWorkSpaceId(string $WorkSpaceId) 设置<p>工作空间 SerialId</p>
  */
 class DeleteResourceConfigsRequest extends AbstractModel
 {
     /**
-     * @var string 资源ID
+     * @var string <p>资源ID</p>
      */
     public $ResourceId;
 
     /**
-     * @var array 资源版本数组
+     * @var array <p>资源版本数组</p>
      */
     public $ResourceConfigVersions;
 
     /**
-     * @var string 工作空间 SerialId
+     * @var string <p>工作空间 SerialId</p>
      */
     public $WorkSpaceId;
 
     /**
-     * @param string $ResourceId 资源ID
-     * @param array $ResourceConfigVersions 资源版本数组
-     * @param string $WorkSpaceId 工作空间 SerialId
+     * @param string $ResourceId <p>资源ID</p>
+     * @param array $ResourceConfigVersions <p>资源版本数组</p>
+     * @param string $WorkSpaceId <p>工作空间 SerialId</p>
      */
     function __construct()
     {

@@ -28,10 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoomIdType(integer $RoomIdType) 设置主房间信息RoomType，必须和转推的房间所对应的RoomId类型相同，0为整型房间号，1为字符串房间号。
  * @method AgentParams getAgentParams() 获取转推服务加入TRTC房间的机器人参数。
  * @method void setAgentParams(AgentParams $AgentParams) 设置转推服务加入TRTC房间的机器人参数。
- * @method integer getWithTranscoding() 获取是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转码费用。
-注：混流是必须转码，这个参数需设置为1。
- * @method void setWithTranscoding(integer $WithTranscoding) 设置是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转码费用。
-注：混流是必须转码，这个参数需设置为1。
+ * @method integer getWithTranscoding() 获取是否转码，0表示无需转码，1表示需要转码。
+WithTranscoding为0，表示旁路转推，默认不转码；WithTranscoding为1，表示混流转推，此时一定会转码，并收取转码费用。
+注：
+1，混流是必须转码的，这个参数需设置为1。
+2，WithTranscoding=0时，视频输出Codec默认跟随上行视频Codec，如果上行视频Codec发生变化，CDN会断流重推。
+ * @method void setWithTranscoding(integer $WithTranscoding) 设置是否转码，0表示无需转码，1表示需要转码。
+WithTranscoding为0，表示旁路转推，默认不转码；WithTranscoding为1，表示混流转推，此时一定会转码，并收取转码费用。
+注：
+1，混流是必须转码的，这个参数需设置为1。
+2，WithTranscoding=0时，视频输出Codec默认跟随上行视频Codec，如果上行视频Codec发生变化，CDN会断流重推。
  * @method McuAudioParams getAudioParams() 获取转推流的音频编码参数。由于音频是必转码的（不会收取转码费用），所以启动任务的时候，必须填写。
  * @method void setAudioParams(McuAudioParams $AudioParams) 设置转推流的音频编码参数。由于音频是必转码的（不会收取转码费用），所以启动任务的时候，必须填写。
  * @method McuVideoParams getVideoParams() 获取转推流的视频编码参数，不填表示纯音频转推。
@@ -70,8 +76,11 @@ class StartPublishCdnStreamRequest extends AbstractModel
     public $AgentParams;
 
     /**
-     * @var integer 是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转码费用。
-注：混流是必须转码，这个参数需设置为1。
+     * @var integer 是否转码，0表示无需转码，1表示需要转码。
+WithTranscoding为0，表示旁路转推，默认不转码；WithTranscoding为1，表示混流转推，此时一定会转码，并收取转码费用。
+注：
+1，混流是必须转码的，这个参数需设置为1。
+2，WithTranscoding=0时，视频输出Codec默认跟随上行视频Codec，如果上行视频Codec发生变化，CDN会断流重推。
      */
     public $WithTranscoding;
 
@@ -115,8 +124,11 @@ class StartPublishCdnStreamRequest extends AbstractModel
      * @param string $RoomId 主房间信息RoomId，转推的TRTC房间所对应的RoomId。
      * @param integer $RoomIdType 主房间信息RoomType，必须和转推的房间所对应的RoomId类型相同，0为整型房间号，1为字符串房间号。
      * @param AgentParams $AgentParams 转推服务加入TRTC房间的机器人参数。
-     * @param integer $WithTranscoding 是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转码费用。
-注：混流是必须转码，这个参数需设置为1。
+     * @param integer $WithTranscoding 是否转码，0表示无需转码，1表示需要转码。
+WithTranscoding为0，表示旁路转推，默认不转码；WithTranscoding为1，表示混流转推，此时一定会转码，并收取转码费用。
+注：
+1，混流是必须转码的，这个参数需设置为1。
+2，WithTranscoding=0时，视频输出Codec默认跟随上行视频Codec，如果上行视频Codec发生变化，CDN会断流重推。
      * @param McuAudioParams $AudioParams 转推流的音频编码参数。由于音频是必转码的（不会收取转码费用），所以启动任务的时候，必须填写。
      * @param McuVideoParams $VideoParams 转推流的视频编码参数，不填表示纯音频转推。
      * @param SingleSubscribeParams $SingleSubscribeParams 需要单流旁路转推的用户上行参数，单流旁路转推时，WithTranscoding需要设置为0。

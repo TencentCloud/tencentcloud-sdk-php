@@ -56,6 +56,7 @@ use TencentCloud\Oceanus\V20190422\Models as Models;
  * @method Models\DescribeTreeJobsResponse DescribeTreeJobs(Models\DescribeTreeJobsRequest $req) 生成树状作业显示结构
  * @method Models\DescribeTreeResourcesResponse DescribeTreeResources(Models\DescribeTreeResourcesRequest $req) 查询树状结构资源列表
  * @method Models\DescribeVariablesResponse DescribeVariables(Models\DescribeVariablesRequest $req) 变量列表展示
+ * @method Models\DescribeWorkSpaceUsersResponse DescribeWorkSpaceUsers(Models\DescribeWorkSpaceUsersRequest $req) 工作空间用户列表
  * @method Models\DescribeWorkSpacesResponse DescribeWorkSpaces(Models\DescribeWorkSpacesRequest $req) 授权工作空间列表
  * @method Models\FetchSqlGatewayStatementResultResponse FetchSqlGatewayStatementResult(Models\FetchSqlGatewayStatementResultRequest $req) 查询Sql Gateway的Statement执行结果
  * @method Models\GetMetaTableResponse GetMetaTable(Models\GetMetaTableRequest $req) 查询元数据表

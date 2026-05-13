@@ -20,49 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * setats disk
  *
- * @method string getDiskType() 获取磁盘类型
-CLOUD_BSSD
-CLOUD_SSD
-CLOUD_HSSD
-CLOUD_PREMIUM
+ * @method string getDiskType() 获取<p>磁盘类型<br>CLOUD_BSSD<br>CLOUD_SSD<br>CLOUD_HSSD<br>CLOUD_PREMIUM</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiskType(string $DiskType) 设置磁盘类型
-CLOUD_BSSD
-CLOUD_SSD
-CLOUD_HSSD
-CLOUD_PREMIUM
+ * @method void setDiskType(string $DiskType) 设置<p>磁盘类型<br>CLOUD_BSSD<br>CLOUD_SSD<br>CLOUD_HSSD<br>CLOUD_PREMIUM</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDiskSize() 获取磁盘大小
+ * @method integer getDiskSize() 获取<p>磁盘大小</p><p>单位：GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiskSize(integer $DiskSize) 设置磁盘大小
+ * @method void setDiskSize(integer $DiskSize) 设置<p>磁盘大小</p><p>单位：GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SetatsDisk extends AbstractModel
 {
     /**
-     * @var string 磁盘类型
-CLOUD_BSSD
-CLOUD_SSD
-CLOUD_HSSD
-CLOUD_PREMIUM
+     * @var string <p>磁盘类型<br>CLOUD_BSSD<br>CLOUD_SSD<br>CLOUD_HSSD<br>CLOUD_PREMIUM</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskType;
 
     /**
-     * @var integer 磁盘大小
+     * @var integer <p>磁盘大小</p><p>单位：GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskSize;
 
     /**
-     * @param string $DiskType 磁盘类型
-CLOUD_BSSD
-CLOUD_SSD
-CLOUD_HSSD
-CLOUD_PREMIUM
+     * @param string $DiskType <p>磁盘类型<br>CLOUD_BSSD<br>CLOUD_SSD<br>CLOUD_HSSD<br>CLOUD_PREMIUM</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DiskSize 磁盘大小
+     * @param integer $DiskSize <p>磁盘大小</p><p>单位：GB</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

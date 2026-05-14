@@ -20,693 +20,705 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 集成任务
  *
- * @method string getTaskName() 获取任务名称
- * @method void setTaskName(string $TaskName) 设置任务名称
- * @method string getDescription() 获取任务描述
+ * @method string getTaskName() 获取<p>任务名称</p>
+ * @method void setTaskName(string $TaskName) 设置<p>任务名称</p>
+ * @method string getDescription() 获取<p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescription(string $Description) 设置任务描述
+ * @method void setDescription(string $Description) 设置<p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSyncType() 获取同步类型1.解决方案(整库迁移),2.单表同步
- * @method void setSyncType(integer $SyncType) 设置同步类型1.解决方案(整库迁移),2.单表同步
- * @method integer getTaskType() 获取201.实时,202.离线
- * @method void setTaskType(integer $TaskType) 设置201.实时,202.离线
- * @method string getWorkflowId() 获取任务所属工作流id
+ * @method integer getSyncType() 获取<p>同步类型1.解决方案(整库迁移),2.单表同步</p>
+ * @method void setSyncType(integer $SyncType) 设置<p>同步类型1.解决方案(整库迁移),2.单表同步</p>
+ * @method integer getTaskType() 获取<p>201.实时,202.离线</p>
+ * @method void setTaskType(integer $TaskType) 设置<p>201.实时,202.离线</p>
+ * @method string getWorkflowId() 获取<p>任务所属工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowId(string $WorkflowId) 设置任务所属工作流id
+ * @method void setWorkflowId(string $WorkflowId) 设置<p>任务所属工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskId() 获取任务id
+ * @method string getTaskId() 获取<p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskId(string $TaskId) 设置任务id
+ * @method void setTaskId(string $TaskId) 设置<p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getScheduleTaskId() 获取任务调度id(oceanus or us等作业id)，非填项
+ * @method string getScheduleTaskId() 获取<p>任务调度id(oceanus or us等作业id)，非填项</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScheduleTaskId(string $ScheduleTaskId) 设置任务调度id(oceanus or us等作业id)，非填项
+ * @method void setScheduleTaskId(string $ScheduleTaskId) 设置<p>任务调度id(oceanus or us等作业id)，非填项</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskGroupId() 获取inlong任务id
+ * @method string getTaskGroupId() 获取<p>inlong任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskGroupId(string $TaskGroupId) 设置inlong任务id
+ * @method void setTaskGroupId(string $TaskGroupId) 设置<p>inlong任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProjectId() 获取项目id
+ * @method string getProjectId() 获取<p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectId(string $ProjectId) 设置项目id
+ * @method void setProjectId(string $ProjectId) 设置<p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreatorUin() 获取创建人uin
+ * @method string getCreatorUin() 获取<p>创建人uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreatorUin(string $CreatorUin) 设置创建人uin
+ * @method void setCreatorUin(string $CreatorUin) 设置<p>创建人uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOperatorUin() 获取操作人uin
+ * @method string getOperatorUin() 获取<p>操作人uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperatorUin(string $OperatorUin) 设置操作人uin
+ * @method void setOperatorUin(string $OperatorUin) 设置<p>操作人uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOwnerUin() 获取owner uin
+ * @method string getOwnerUin() 获取<p>owner uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOwnerUin(string $OwnerUin) 设置owner uin
+ * @method void setOwnerUin(string $OwnerUin) 设置<p>owner uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAppId() 获取应用id
+ * @method string getAppId() 获取<p>应用id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppId(string $AppId) 设置应用id
+ * @method void setAppId(string $AppId) 设置<p>应用id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取0:新建(任务开发态默认状态)|1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|
+ * @method integer getStatus() 获取<p>0:新建(任务开发态默认状态)|1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置0:新建(任务开发态默认状态)|1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|
+ * @method void setStatus(integer $Status) 设置<p>0:新建(任务开发态默认状态)|1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getNodes() 获取节点列表
+ * @method array getNodes() 获取<p>节点列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNodes(array $Nodes) 设置节点列表
+ * @method void setNodes(array $Nodes) 设置<p>节点列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExecutorId() 获取执行资源id
+ * @method string getExecutorId() 获取<p>执行资源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecutorId(string $ExecutorId) 设置执行资源id
+ * @method void setExecutorId(string $ExecutorId) 设置<p>执行资源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getConfig() 获取任务配置信息
+ * @method array getConfig() 获取<p>任务配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConfig(array $Config) 设置任务配置信息
+ * @method void setConfig(array $Config) 设置<p>任务配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getExtConfig() 获取任务扩展配置信息
+ * @method array getExtConfig() 获取<p>任务扩展配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExtConfig(array $ExtConfig) 设置任务扩展配置信息
+ * @method void setExtConfig(array $ExtConfig) 设置<p>任务扩展配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getExecuteContext() 获取任务执行context信息
+ * @method array getExecuteContext() 获取<p>任务执行context信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecuteContext(array $ExecuteContext) 设置任务执行context信息
+ * @method void setExecuteContext(array $ExecuteContext) 设置<p>任务执行context信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getMappings() 获取节点映射
+ * @method array getMappings() 获取<p>节点映射</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMappings(array $Mappings) 设置节点映射
+ * @method void setMappings(array $Mappings) 设置<p>节点映射</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskMode() 获取任务配置模式，0:画布 1:表单 3:脚本
+ * @method string getTaskMode() 获取<p>任务配置模式，0:画布 1:表单 3:脚本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskMode(string $TaskMode) 设置任务配置模式，0:画布 1:表单 3:脚本
+ * @method void setTaskMode(string $TaskMode) 设置<p>任务配置模式，0:画布 1:表单 3:脚本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIncharge() 获取责任人
+ * @method string getIncharge() 获取<p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIncharge(string $Incharge) 设置责任人
+ * @method void setIncharge(string $Incharge) 设置<p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method OfflineTaskAddParam getOfflineTaskAddEntity() 获取离线新增参数
+ * @method OfflineTaskAddParam getOfflineTaskAddEntity() 获取<p>离线新增参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOfflineTaskAddEntity(OfflineTaskAddParam $OfflineTaskAddEntity) 设置离线新增参数
+ * @method void setOfflineTaskAddEntity(OfflineTaskAddParam $OfflineTaskAddEntity) 设置<p>离线新增参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExecutorGroupName() 获取group name
+ * @method string getExecutorGroupName() 获取<p>group name</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecutorGroupName(string $ExecutorGroupName) 设置group name
+ * @method void setExecutorGroupName(string $ExecutorGroupName) 设置<p>group name</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInLongManagerUrl() 获取inlong manager url
+ * @method string getInLongManagerUrl() 获取<p>inlong manager url</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInLongManagerUrl(string $InLongManagerUrl) 设置inlong manager url
+ * @method void setInLongManagerUrl(string $InLongManagerUrl) 设置<p>inlong manager url</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInLongStreamId() 获取stream id
+ * @method string getInLongStreamId() 获取<p>stream id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInLongStreamId(string $InLongStreamId) 设置stream id
+ * @method void setInLongStreamId(string $InLongStreamId) 设置<p>stream id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInLongManagerVersion() 获取version
+ * @method string getInLongManagerVersion() 获取<p>version</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInLongManagerVersion(string $InLongManagerVersion) 设置version
+ * @method void setInLongManagerVersion(string $InLongManagerVersion) 设置<p>version</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDataProxyUrl() 获取inlong dataproxy url
+ * @method array getDataProxyUrl() 获取<p>inlong dataproxy url</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataProxyUrl(array $DataProxyUrl) 设置inlong dataproxy url
+ * @method void setDataProxyUrl(array $DataProxyUrl) 设置<p>inlong dataproxy url</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getSubmit() 获取任务版本是否已提交运维
+ * @method boolean getSubmit() 获取<p>任务版本是否已提交运维</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubmit(boolean $Submit) 设置任务版本是否已提交运维
+ * @method void setSubmit(boolean $Submit) 设置<p>任务版本是否已提交运维</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInputDatasourceType() 获取数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
+ * @method string getInputDatasourceType() 获取<p>数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInputDatasourceType(string $InputDatasourceType) 设置数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
+ * @method void setInputDatasourceType(string $InputDatasourceType) 设置<p>数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOutputDatasourceType() 获取数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
+ * @method string getOutputDatasourceType() 获取<p>数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutputDatasourceType(string $OutputDatasourceType) 设置数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
+ * @method void setOutputDatasourceType(string $OutputDatasourceType) 设置<p>数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getNumRecordsIn() 获取读取条数
+ * @method integer getNumRecordsIn() 获取<p>读取条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNumRecordsIn(integer $NumRecordsIn) 设置读取条数
+ * @method void setNumRecordsIn(integer $NumRecordsIn) 设置<p>读取条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getNumRecordsOut() 获取写入条数
+ * @method integer getNumRecordsOut() 获取<p>写入条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNumRecordsOut(integer $NumRecordsOut) 设置写入条数
+ * @method void setNumRecordsOut(integer $NumRecordsOut) 设置<p>写入条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getReaderDelay() 获取读取延迟
+ * @method float getReaderDelay() 获取<p>读取延迟</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReaderDelay(float $ReaderDelay) 设置读取延迟
+ * @method void setReaderDelay(float $ReaderDelay) 设置<p>读取延迟</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getNumRestarts() 获取重启次数
+ * @method integer getNumRestarts() 获取<p>重启次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNumRestarts(integer $NumRestarts) 设置重启次数
+ * @method void setNumRestarts(integer $NumRestarts) 设置<p>重启次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取任务创建时间
+ * @method string getCreateTime() 获取<p>任务创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置任务创建时间
+ * @method void setCreateTime(string $CreateTime) 设置<p>任务创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取任务更新时间
+ * @method string getUpdateTime() 获取<p>任务更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(string $UpdateTime) 设置任务更新时间
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>任务更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLastRunTime() 获取任务最后一次运行时间
+ * @method string getLastRunTime() 获取<p>任务最后一次运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLastRunTime(string $LastRunTime) 设置任务最后一次运行时间
+ * @method void setLastRunTime(string $LastRunTime) 设置<p>任务最后一次运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStopTime() 获取任务停止时间
+ * @method string getStopTime() 获取<p>任务停止时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStopTime(string $StopTime) 设置任务停止时间
+ * @method void setStopTime(string $StopTime) 设置<p>任务停止时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getHasVersion() 获取作业是否已提交
+ * @method boolean getHasVersion() 获取<p>作业是否已提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHasVersion(boolean $HasVersion) 设置作业是否已提交
+ * @method void setHasVersion(boolean $HasVersion) 设置<p>作业是否已提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getLocked() 获取任务是否被锁定
+ * @method boolean getLocked() 获取<p>任务是否被锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLocked(boolean $Locked) 设置任务是否被锁定
+ * @method void setLocked(boolean $Locked) 设置<p>任务是否被锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLocker() 获取任务锁定人
+ * @method string getLocker() 获取<p>任务锁定人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLocker(string $Locker) 设置任务锁定人
+ * @method void setLocker(string $Locker) 设置<p>任务锁定人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getRunningCu() 获取耗费资源量
+ * @method float getRunningCu() 获取<p>耗费资源量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRunningCu(float $RunningCu) 设置耗费资源量
+ * @method void setRunningCu(float $RunningCu) 设置<p>耗费资源量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTaskAlarmRegularList() 获取该任务关联的告警规则
+ * @method array getTaskAlarmRegularList() 获取<p>该任务关联的告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskAlarmRegularList(array $TaskAlarmRegularList) 设置该任务关联的告警规则
+ * @method void setTaskAlarmRegularList(array $TaskAlarmRegularList) 设置<p>该任务关联的告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSwitchResource() 获取实时任务资源分层情况： 0：进行中,1：成功 ,2：失败
+ * @method integer getSwitchResource() 获取<p>实时任务资源分层情况： 0：进行中,1：成功 ,2：失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitchResource(integer $SwitchResource) 设置实时任务资源分层情况： 0：进行中,1：成功 ,2：失败
+ * @method void setSwitchResource(integer $SwitchResource) 设置<p>实时任务资源分层情况： 0：进行中,1：成功 ,2：失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getReadPhase() 获取实时任务读取阶段：0：全部全量,1：部分全量,2：全部增量
+ * @method integer getReadPhase() 获取<p>实时任务读取阶段：0：全部全量,1：部分全量,2：全部增量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReadPhase(integer $ReadPhase) 设置实时任务读取阶段：0：全部全量,1：部分全量,2：全部增量
+ * @method void setReadPhase(integer $ReadPhase) 设置<p>实时任务读取阶段：0：全部全量,1：部分全量,2：全部增量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getInstanceVersion() 获取实时任务版本号
+ * @method integer getInstanceVersion() 获取<p>实时任务版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceVersion(integer $InstanceVersion) 设置实时任务版本号
+ * @method void setInstanceVersion(integer $InstanceVersion) 设置<p>实时任务版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getArrangeSpaceTaskId() 获取离线任务导入到编排空间的任务id
+ * @method string getArrangeSpaceTaskId() 获取<p>离线任务导入到编排空间的任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setArrangeSpaceTaskId(string $ArrangeSpaceTaskId) 设置离线任务导入到编排空间的任务id
+ * @method void setArrangeSpaceTaskId(string $ArrangeSpaceTaskId) 设置<p>离线任务导入到编排空间的任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOfflineTaskStatus() 获取离线任务状态区分1.未提交2.已提交3.已导出
+ * @method integer getOfflineTaskStatus() 获取<p>离线任务状态区分1.未提交2.已提交3.已导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOfflineTaskStatus(integer $OfflineTaskStatus) 设置离线任务状态区分1.未提交2.已提交3.已导出
+ * @method void setOfflineTaskStatus(integer $OfflineTaskStatus) 设置<p>离线任务状态区分1.未提交2.已提交3.已导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method TaskImportInfo getTaskImportInfo() 获取导入到编排空间配置
+ * @method TaskImportInfo getTaskImportInfo() 获取<p>导入到编排空间配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskImportInfo(TaskImportInfo $TaskImportInfo) 设置导入到编排空间配置
+ * @method void setTaskImportInfo(TaskImportInfo $TaskImportInfo) 设置<p>导入到编排空间配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getBusinessLatency() 获取业务延迟
+ * @method integer getBusinessLatency() 获取<p>业务延迟</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBusinessLatency(integer $BusinessLatency) 设置业务延迟
+ * @method void setBusinessLatency(integer $BusinessLatency) 设置<p>业务延迟</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCurrentSyncPosition() 获取当前同步位点
+ * @method integer getCurrentSyncPosition() 获取<p>当前同步位点</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCurrentSyncPosition(integer $CurrentSyncPosition) 设置当前同步位点
+ * @method void setCurrentSyncPosition(integer $CurrentSyncPosition) 设置<p>当前同步位点</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTagList() 获取标签列表
+ * @method array getTagList() 获取<p>标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTagList(array $TagList) 设置标签列表
+ * @method void setTagList(array $TagList) 设置<p>标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getErrorMessage() 获取错误信息
+ * @method string getErrorMessage() 获取<p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrorMessage(string $ErrorMessage) 设置错误信息
+ * @method void setErrorMessage(string $ErrorMessage) 设置<p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTaskSubType() 获取任务子状态
+ * @method integer getTaskSubType() 获取<p>任务子状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskSubType(integer $TaskSubType) 设置任务子状态
+ * @method void setTaskSubType(integer $TaskSubType) 设置<p>任务子状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getNotExistsCheckPoint() 获取是否存在SavePoint, 0-存在, 1-不存在, null 为未知
+ * @method integer getNotExistsCheckPoint() 获取<p>是否存在SavePoint, 0-存在, 1-不存在, null 为未知</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNotExistsCheckPoint(integer $NotExistsCheckPoint) 设置是否存在SavePoint, 0-存在, 1-不存在, null 为未知
+ * @method void setNotExistsCheckPoint(integer $NotExistsCheckPoint) 设置<p>是否存在SavePoint, 0-存在, 1-不存在, null 为未知</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSavePointId() 获取savepiontPath
+ * @method string getSavePointId() 获取<p>savepiontPath</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSavePointId(string $SavePointId) 设置savepiontPath
+ * @method void setSavePointId(string $SavePointId) 设置<p>savepiontPath</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSavePointPath() 获取savepiontId
+ * @method string getSavePointPath() 获取<p>savepiontId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSavePointPath(string $SavePointPath) 设置savepiontId
+ * @method void setSavePointPath(string $SavePointPath) 设置<p>savepiontId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method LastOperateInfo getLastOperateInfo() 获取<p>最近一次操作信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLastOperateInfo(LastOperateInfo $LastOperateInfo) 设置<p>最近一次操作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class IntegrationTaskInfo extends AbstractModel
 {
     /**
-     * @var string 任务名称
+     * @var string <p>任务名称</p>
      */
     public $TaskName;
 
     /**
-     * @var string 任务描述
+     * @var string <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
-     * @var integer 同步类型1.解决方案(整库迁移),2.单表同步
+     * @var integer <p>同步类型1.解决方案(整库迁移),2.单表同步</p>
      */
     public $SyncType;
 
     /**
-     * @var integer 201.实时,202.离线
+     * @var integer <p>201.实时,202.离线</p>
      */
     public $TaskType;
 
     /**
-     * @var string 任务所属工作流id
+     * @var string <p>任务所属工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowId;
 
     /**
-     * @var string 任务id
+     * @var string <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
-     * @var string 任务调度id(oceanus or us等作业id)，非填项
+     * @var string <p>任务调度id(oceanus or us等作业id)，非填项</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduleTaskId;
 
     /**
-     * @var string inlong任务id
+     * @var string <p>inlong任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskGroupId;
 
     /**
-     * @var string 项目id
+     * @var string <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
-     * @var string 创建人uin
+     * @var string <p>创建人uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatorUin;
 
     /**
-     * @var string 操作人uin
+     * @var string <p>操作人uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperatorUin;
 
     /**
-     * @var string owner uin
+     * @var string <p>owner uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OwnerUin;
 
     /**
-     * @var string 应用id
+     * @var string <p>应用id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
-     * @var integer 0:新建(任务开发态默认状态)|1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|
+     * @var integer <p>0:新建(任务开发态默认状态)|1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var array 节点列表
+     * @var array <p>节点列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Nodes;
 
     /**
-     * @var string 执行资源id
+     * @var string <p>执行资源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutorId;
 
     /**
-     * @var array 任务配置信息
+     * @var array <p>任务配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Config;
 
     /**
-     * @var array 任务扩展配置信息
+     * @var array <p>任务扩展配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtConfig;
 
     /**
-     * @var array 任务执行context信息
+     * @var array <p>任务执行context信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecuteContext;
 
     /**
-     * @var array 节点映射
+     * @var array <p>节点映射</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mappings;
 
     /**
-     * @var string 任务配置模式，0:画布 1:表单 3:脚本
+     * @var string <p>任务配置模式，0:画布 1:表单 3:脚本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskMode;
 
     /**
-     * @var string 责任人
+     * @var string <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Incharge;
 
     /**
-     * @var OfflineTaskAddParam 离线新增参数
+     * @var OfflineTaskAddParam <p>离线新增参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OfflineTaskAddEntity;
 
     /**
-     * @var string group name
+     * @var string <p>group name</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutorGroupName;
 
     /**
-     * @var string inlong manager url
+     * @var string <p>inlong manager url</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InLongManagerUrl;
 
     /**
-     * @var string stream id
+     * @var string <p>stream id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InLongStreamId;
 
     /**
-     * @var string version
+     * @var string <p>version</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InLongManagerVersion;
 
     /**
-     * @var array inlong dataproxy url
+     * @var array <p>inlong dataproxy url</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataProxyUrl;
 
     /**
-     * @var boolean 任务版本是否已提交运维
+     * @var boolean <p>任务版本是否已提交运维</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Submit;
 
     /**
-     * @var string 数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
+     * @var string <p>数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputDatasourceType;
 
     /**
-     * @var string 数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
+     * @var string <p>数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputDatasourceType;
 
     /**
-     * @var integer 读取条数
+     * @var integer <p>读取条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NumRecordsIn;
 
     /**
-     * @var integer 写入条数
+     * @var integer <p>写入条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NumRecordsOut;
 
     /**
-     * @var float 读取延迟
+     * @var float <p>读取延迟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReaderDelay;
 
     /**
-     * @var integer 重启次数
+     * @var integer <p>重启次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NumRestarts;
 
     /**
-     * @var string 任务创建时间
+     * @var string <p>任务创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var string 任务更新时间
+     * @var string <p>任务更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
-     * @var string 任务最后一次运行时间
+     * @var string <p>任务最后一次运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastRunTime;
 
     /**
-     * @var string 任务停止时间
+     * @var string <p>任务停止时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StopTime;
 
     /**
-     * @var boolean 作业是否已提交
+     * @var boolean <p>作业是否已提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HasVersion;
 
     /**
-     * @var boolean 任务是否被锁定
+     * @var boolean <p>任务是否被锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Locked;
 
     /**
-     * @var string 任务锁定人
+     * @var string <p>任务锁定人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Locker;
 
     /**
-     * @var float 耗费资源量
+     * @var float <p>耗费资源量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunningCu;
 
     /**
-     * @var array 该任务关联的告警规则
+     * @var array <p>该任务关联的告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskAlarmRegularList;
 
     /**
-     * @var integer 实时任务资源分层情况： 0：进行中,1：成功 ,2：失败
+     * @var integer <p>实时任务资源分层情况： 0：进行中,1：成功 ,2：失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SwitchResource;
 
     /**
-     * @var integer 实时任务读取阶段：0：全部全量,1：部分全量,2：全部增量
+     * @var integer <p>实时任务读取阶段：0：全部全量,1：部分全量,2：全部增量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReadPhase;
 
     /**
-     * @var integer 实时任务版本号
+     * @var integer <p>实时任务版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceVersion;
 
     /**
-     * @var string 离线任务导入到编排空间的任务id
+     * @var string <p>离线任务导入到编排空间的任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ArrangeSpaceTaskId;
 
     /**
-     * @var integer 离线任务状态区分1.未提交2.已提交3.已导出
+     * @var integer <p>离线任务状态区分1.未提交2.已提交3.已导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OfflineTaskStatus;
 
     /**
-     * @var TaskImportInfo 导入到编排空间配置
+     * @var TaskImportInfo <p>导入到编排空间配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskImportInfo;
 
     /**
-     * @var integer 业务延迟
+     * @var integer <p>业务延迟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessLatency;
 
     /**
-     * @var integer 当前同步位点
+     * @var integer <p>当前同步位点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurrentSyncPosition;
 
     /**
-     * @var array 标签列表
+     * @var array <p>标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagList;
 
     /**
-     * @var string 错误信息
+     * @var string <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorMessage;
 
     /**
-     * @var integer 任务子状态
+     * @var integer <p>任务子状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskSubType;
 
     /**
-     * @var integer 是否存在SavePoint, 0-存在, 1-不存在, null 为未知
+     * @var integer <p>是否存在SavePoint, 0-存在, 1-不存在, null 为未知</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NotExistsCheckPoint;
 
     /**
-     * @var string savepiontPath
+     * @var string <p>savepiontPath</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SavePointId;
 
     /**
-     * @var string savepiontId
+     * @var string <p>savepiontId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SavePointPath;
 
     /**
-     * @param string $TaskName 任务名称
-     * @param string $Description 任务描述
+     * @var LastOperateInfo <p>最近一次操作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SyncType 同步类型1.解决方案(整库迁移),2.单表同步
-     * @param integer $TaskType 201.实时,202.离线
-     * @param string $WorkflowId 任务所属工作流id
+     */
+    public $LastOperateInfo;
+
+    /**
+     * @param string $TaskName <p>任务名称</p>
+     * @param string $Description <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskId 任务id
+     * @param integer $SyncType <p>同步类型1.解决方案(整库迁移),2.单表同步</p>
+     * @param integer $TaskType <p>201.实时,202.离线</p>
+     * @param string $WorkflowId <p>任务所属工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ScheduleTaskId 任务调度id(oceanus or us等作业id)，非填项
+     * @param string $TaskId <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskGroupId inlong任务id
+     * @param string $ScheduleTaskId <p>任务调度id(oceanus or us等作业id)，非填项</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProjectId 项目id
+     * @param string $TaskGroupId <p>inlong任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreatorUin 创建人uin
+     * @param string $ProjectId <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OperatorUin 操作人uin
+     * @param string $CreatorUin <p>创建人uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OwnerUin owner uin
+     * @param string $OperatorUin <p>操作人uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AppId 应用id
+     * @param string $OwnerUin <p>owner uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 0:新建(任务开发态默认状态)|1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|
+     * @param string $AppId <p>应用id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Nodes 节点列表
+     * @param integer $Status <p>0:新建(任务开发态默认状态)|1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExecutorId 执行资源id
+     * @param array $Nodes <p>节点列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Config 任务配置信息
+     * @param string $ExecutorId <p>执行资源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ExtConfig 任务扩展配置信息
+     * @param array $Config <p>任务配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ExecuteContext 任务执行context信息
+     * @param array $ExtConfig <p>任务扩展配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Mappings 节点映射
+     * @param array $ExecuteContext <p>任务执行context信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskMode 任务配置模式，0:画布 1:表单 3:脚本
+     * @param array $Mappings <p>节点映射</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Incharge 责任人
+     * @param string $TaskMode <p>任务配置模式，0:画布 1:表单 3:脚本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OfflineTaskAddParam $OfflineTaskAddEntity 离线新增参数
+     * @param string $Incharge <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExecutorGroupName group name
+     * @param OfflineTaskAddParam $OfflineTaskAddEntity <p>离线新增参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InLongManagerUrl inlong manager url
+     * @param string $ExecutorGroupName <p>group name</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InLongStreamId stream id
+     * @param string $InLongManagerUrl <p>inlong manager url</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InLongManagerVersion version
+     * @param string $InLongStreamId <p>stream id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DataProxyUrl inlong dataproxy url
+     * @param string $InLongManagerVersion <p>version</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $Submit 任务版本是否已提交运维
+     * @param array $DataProxyUrl <p>inlong dataproxy url</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InputDatasourceType 数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
+     * @param boolean $Submit <p>任务版本是否已提交运维</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OutputDatasourceType 数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
+     * @param string $InputDatasourceType <p>数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $NumRecordsIn 读取条数
+     * @param string $OutputDatasourceType <p>数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $NumRecordsOut 写入条数
+     * @param integer $NumRecordsIn <p>读取条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $ReaderDelay 读取延迟
+     * @param integer $NumRecordsOut <p>写入条数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $NumRestarts 重启次数
+     * @param float $ReaderDelay <p>读取延迟</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 任务创建时间
+     * @param integer $NumRestarts <p>重启次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime 任务更新时间
+     * @param string $CreateTime <p>任务创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LastRunTime 任务最后一次运行时间
+     * @param string $UpdateTime <p>任务更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StopTime 任务停止时间
+     * @param string $LastRunTime <p>任务最后一次运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $HasVersion 作业是否已提交
+     * @param string $StopTime <p>任务停止时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $Locked 任务是否被锁定
+     * @param boolean $HasVersion <p>作业是否已提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Locker 任务锁定人
+     * @param boolean $Locked <p>任务是否被锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $RunningCu 耗费资源量
+     * @param string $Locker <p>任务锁定人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TaskAlarmRegularList 该任务关联的告警规则
+     * @param float $RunningCu <p>耗费资源量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SwitchResource 实时任务资源分层情况： 0：进行中,1：成功 ,2：失败
+     * @param array $TaskAlarmRegularList <p>该任务关联的告警规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ReadPhase 实时任务读取阶段：0：全部全量,1：部分全量,2：全部增量
+     * @param integer $SwitchResource <p>实时任务资源分层情况： 0：进行中,1：成功 ,2：失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $InstanceVersion 实时任务版本号
+     * @param integer $ReadPhase <p>实时任务读取阶段：0：全部全量,1：部分全量,2：全部增量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ArrangeSpaceTaskId 离线任务导入到编排空间的任务id
+     * @param integer $InstanceVersion <p>实时任务版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $OfflineTaskStatus 离线任务状态区分1.未提交2.已提交3.已导出
+     * @param string $ArrangeSpaceTaskId <p>离线任务导入到编排空间的任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskImportInfo $TaskImportInfo 导入到编排空间配置
+     * @param integer $OfflineTaskStatus <p>离线任务状态区分1.未提交2.已提交3.已导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $BusinessLatency 业务延迟
+     * @param TaskImportInfo $TaskImportInfo <p>导入到编排空间配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CurrentSyncPosition 当前同步位点
+     * @param integer $BusinessLatency <p>业务延迟</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TagList 标签列表
+     * @param integer $CurrentSyncPosition <p>当前同步位点</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ErrorMessage 错误信息
+     * @param array $TagList <p>标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TaskSubType 任务子状态
+     * @param string $ErrorMessage <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $NotExistsCheckPoint 是否存在SavePoint, 0-存在, 1-不存在, null 为未知
+     * @param integer $TaskSubType <p>任务子状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SavePointId savepiontPath
+     * @param integer $NotExistsCheckPoint <p>是否存在SavePoint, 0-存在, 1-不存在, null 为未知</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SavePointPath savepiontId
+     * @param string $SavePointId <p>savepiontPath</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SavePointPath <p>savepiontId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastOperateInfo $LastOperateInfo <p>最近一次操作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -984,6 +996,11 @@ class IntegrationTaskInfo extends AbstractModel
 
         if (array_key_exists("SavePointPath",$param) and $param["SavePointPath"] !== null) {
             $this->SavePointPath = $param["SavePointPath"];
+        }
+
+        if (array_key_exists("LastOperateInfo",$param) and $param["LastOperateInfo"] !== null) {
+            $this->LastOperateInfo = new LastOperateInfo();
+            $this->LastOperateInfo->deserialize($param["LastOperateInfo"]);
         }
     }
 }

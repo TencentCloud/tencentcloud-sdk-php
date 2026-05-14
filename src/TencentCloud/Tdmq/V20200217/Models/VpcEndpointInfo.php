@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * VPC接入点信息
  *
- * @method string getVpcId() 获取vpc的id
- * @method void setVpcId(string $VpcId) 设置vpc的id
- * @method string getSubnetId() 获取子网id
- * @method void setSubnetId(string $SubnetId) 设置子网id
- * @method string getVpcEndpoint() 获取vpc接入点信息
- * @method void setVpcEndpoint(string $VpcEndpoint) 设置vpc接入点信息
- * @method string getVpcDataStreamEndpointStatus() 获取vpc接入点状态 OFF/ON/CREATING/DELETING
- * @method void setVpcDataStreamEndpointStatus(string $VpcDataStreamEndpointStatus) 设置vpc接入点状态 OFF/ON/CREATING/DELETING
- * @method string getVpcTlsEndpoint() 获取TLS加密的数据流接入点
- * @method void setVpcTlsEndpoint(string $VpcTlsEndpoint) 设置TLS加密的数据流接入点
- * @method string getVpcErrorMessage() 获取VPC 接入点操作失败的错误信息
- * @method void setVpcErrorMessage(string $VpcErrorMessage) 设置VPC 接入点操作失败的错误信息
+ * @method string getVpcId() 获取<p>vpc的id</p>
+ * @method void setVpcId(string $VpcId) 设置<p>vpc的id</p>
+ * @method string getSubnetId() 获取<p>子网id</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网id</p>
+ * @method string getVpcEndpoint() 获取<p>vpc接入点信息</p>
+ * @method void setVpcEndpoint(string $VpcEndpoint) 设置<p>vpc接入点信息</p>
+ * @method string getVpcDataStreamEndpointStatus() 获取<p>vpc接入点状态 OFF/ON/CREATING/DELETING</p>
+ * @method void setVpcDataStreamEndpointStatus(string $VpcDataStreamEndpointStatus) 设置<p>vpc接入点状态 OFF/ON/CREATING/DELETING</p>
+ * @method string getVpcTlsEndpoint() 获取<p>TLS加密的数据流接入点</p>
+ * @method void setVpcTlsEndpoint(string $VpcTlsEndpoint) 设置<p>TLS加密的数据流接入点</p>
+ * @method string getVpcErrorMessage() 获取<p>VPC 接入点操作失败的错误信息</p>
+ * @method void setVpcErrorMessage(string $VpcErrorMessage) 设置<p>VPC 接入点操作失败的错误信息</p>
  */
 class VpcEndpointInfo extends AbstractModel
 {
     /**
-     * @var string vpc的id
+     * @var string <p>vpc的id</p>
      */
     public $VpcId;
 
     /**
-     * @var string 子网id
+     * @var string <p>子网id</p>
      */
     public $SubnetId;
 
     /**
-     * @var string vpc接入点信息
+     * @var string <p>vpc接入点信息</p>
      */
     public $VpcEndpoint;
 
     /**
-     * @var string vpc接入点状态 OFF/ON/CREATING/DELETING
+     * @var string <p>vpc接入点状态 OFF/ON/CREATING/DELETING</p>
      */
     public $VpcDataStreamEndpointStatus;
 
     /**
-     * @var string TLS加密的数据流接入点
+     * @var string <p>TLS加密的数据流接入点</p>
      */
     public $VpcTlsEndpoint;
 
     /**
-     * @var string VPC 接入点操作失败的错误信息
+     * @var string <p>VPC 接入点操作失败的错误信息</p>
      */
     public $VpcErrorMessage;
 
     /**
-     * @param string $VpcId vpc的id
-     * @param string $SubnetId 子网id
-     * @param string $VpcEndpoint vpc接入点信息
-     * @param string $VpcDataStreamEndpointStatus vpc接入点状态 OFF/ON/CREATING/DELETING
-     * @param string $VpcTlsEndpoint TLS加密的数据流接入点
-     * @param string $VpcErrorMessage VPC 接入点操作失败的错误信息
+     * @param string $VpcId <p>vpc的id</p>
+     * @param string $SubnetId <p>子网id</p>
+     * @param string $VpcEndpoint <p>vpc接入点信息</p>
+     * @param string $VpcDataStreamEndpointStatus <p>vpc接入点状态 OFF/ON/CREATING/DELETING</p>
+     * @param string $VpcTlsEndpoint <p>TLS加密的数据流接入点</p>
+     * @param string $VpcErrorMessage <p>VPC 接入点操作失败的错误信息</p>
      */
     function __construct()
     {

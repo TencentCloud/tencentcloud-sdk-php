@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConfigCheckRules请求参数结构体
  *
- * @method array getMemberId() 获取集团账号的成员id
- * @method void setMemberId(array $MemberId) 设置集团账号的成员id
+ * @method array getMemberId() 获取<p>集团账号的成员id</p>
+ * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
  * @method array getFilters() 获取过滤内容
  * @method void setFilters(array $Filters) 设置过滤内容
  * @method integer getLimit() 获取分页大小
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeConfigCheckRulesRequest extends AbstractModel
 {
     /**
-     * @var array 集团账号的成员id
+     * @var array <p>集团账号的成员id</p>
      */
     public $MemberId;
 
@@ -66,7 +66,7 @@ class DescribeConfigCheckRulesRequest extends AbstractModel
     public $By;
 
     /**
-     * @param array $MemberId 集团账号的成员id
+     * @param array $MemberId <p>集团账号的成员id</p>
      * @param array $Filters 过滤内容
      * @param integer $Limit 分页大小
      * @param integer $Offset 偏移量

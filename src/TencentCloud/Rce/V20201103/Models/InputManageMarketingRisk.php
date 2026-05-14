@@ -20,250 +20,194 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 全栈式风控引擎入参
  *
- * @method AccountInfo getAccount() 获取用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
-1：QQ开放账号
-2：微信开放账号
-10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
-10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值
- * @method void setAccount(AccountInfo $Account) 设置用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
-1：QQ开放账号
-2：微信开放账号
-10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
-10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值
- * @method string getSceneCode() 获取场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
-控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
-活动防刷默认场景码：e_activity_antirush 
-登录保护默认场景码：e_login_protection
-注册保护默认场景码：e_register_protection
- * @method void setSceneCode(string $SceneCode) 设置场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
-控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
-活动防刷默认场景码：e_activity_antirush 
-登录保护默认场景码：e_login_protection
-注册保护默认场景码：e_register_protection
- * @method string getUserIp() 获取用户外网ip（传入用户非外网ip会影响判断结果）。
- * @method void setUserIp(string $UserIp) 设置用户外网ip（传入用户非外网ip会影响判断结果）。
- * @method integer getPostTime() 获取用户操作时间戳，精确到秒。
- * @method void setPostTime(integer $PostTime) 设置用户操作时间戳，精确到秒。
- * @method string getUserId() 获取业务平台用户唯一标识，支持自定义。
- * @method void setUserId(string $UserId) 设置业务平台用户唯一标识，支持自定义。
- * @method string getDeviceToken() 获取设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。
- * @method void setDeviceToken(string $DeviceToken) 设置设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。
- * @method integer getDeviceBusinessId() 获取设备指纹 BusinessId。
- * @method void setDeviceBusinessId(integer $DeviceBusinessId) 设置设备指纹 BusinessId。
- * @method integer getBusinessId() 获取业务ID。网站或应用在多个业务中使用此服务，通过此ID区分统计数据。
- * @method void setBusinessId(integer $BusinessId) 设置业务ID。网站或应用在多个业务中使用此服务，通过此ID区分统计数据。
- * @method string getNickname() 获取昵称，UTF-8 编码。
- * @method void setNickname(string $Nickname) 设置昵称，UTF-8 编码。
- * @method string getEmailAddress() 获取用户邮箱地址。
- * @method void setEmailAddress(string $EmailAddress) 设置用户邮箱地址。
- * @method integer getCheckDevice() 获取是否识别设备异常：
-0：不识别。
-1：识别。
- * @method void setCheckDevice(integer $CheckDevice) 设置是否识别设备异常：
-0：不识别。
-1：识别。
- * @method string getCookieHash() 获取用户HTTP请求中的Cookie进行2次hash的值，只要保证相同Cookie的hash值一致即可。
- * @method void setCookieHash(string $CookieHash) 设置用户HTTP请求中的Cookie进行2次hash的值，只要保证相同Cookie的hash值一致即可。
- * @method string getReferer() 获取用户HTTP请求的Referer值。
- * @method void setReferer(string $Referer) 设置用户HTTP请求的Referer值。
- * @method string getUserAgent() 获取用户HTTP请求的User-Agent值。
- * @method void setUserAgent(string $UserAgent) 设置用户HTTP请求的User-Agent值。
- * @method string getXForwardedFor() 获取用户HTTP请求的X-Forwarded-For值。
- * @method void setXForwardedFor(string $XForwardedFor) 设置用户HTTP请求的X-Forwarded-For值。
- * @method string getMacAddress() 获取MAC地址或设备唯一标识。
- * @method void setMacAddress(string $MacAddress) 设置MAC地址或设备唯一标识。
- * @method string getVendorId() 获取手机制造商ID，如果手机注册，请带上此信息。
- * @method void setVendorId(string $VendorId) 设置手机制造商ID，如果手机注册，请带上此信息。
- * @method integer getDeviceType() 获取设备类型(已不推荐使用)。
- * @method void setDeviceType(integer $DeviceType) 设置设备类型(已不推荐使用)。
- * @method array getDetails() 获取扩展字段。
- * @method void setDetails(array $Details) 设置扩展字段。
- * @method SponsorInfo getSponsor() 获取邀请助力场景相关信息。
- * @method void setSponsor(SponsorInfo $Sponsor) 设置邀请助力场景相关信息。
- * @method OnlineScamInfo getOnlineScam() 获取详情请跳转至OnlineScamInfo查看。
- * @method void setOnlineScam(OnlineScamInfo $OnlineScam) 设置详情请跳转至OnlineScamInfo查看。
- * @method string getPlatform() 获取1：Android
-2：iOS
-3：H5
-4：小程序
- * @method void setPlatform(string $Platform) 设置1：Android
-2：iOS
-3：H5
-4：小程序
- * @method DataAuthorizationInfo getDataAuthorization() 获取数据授权信息。
-注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。
- * @method void setDataAuthorization(DataAuthorizationInfo $DataAuthorization) 设置数据授权信息。
-注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。
+ * @method AccountInfo getAccount() 获取<p>用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要&quot;提交工单&quot;或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。<br>1：QQ开放账号<br>2：微信开放账号<br>10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值<br>10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值</p>
+ * @method void setAccount(AccountInfo $Account) 设置<p>用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要&quot;提交工单&quot;或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。<br>1：QQ开放账号<br>2：微信开放账号<br>10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值<br>10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值</p>
+ * @method string getSceneCode() 获取<p>场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理<br>控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root<br>活动防刷默认场景码：e_activity_antirush<br>登录保护默认场景码：e_login_protection<br>注册保护默认场景码：e_register_protection</p>
+ * @method void setSceneCode(string $SceneCode) 设置<p>场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理<br>控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root<br>活动防刷默认场景码：e_activity_antirush<br>登录保护默认场景码：e_login_protection<br>注册保护默认场景码：e_register_protection</p>
+ * @method string getUserIp() 获取<p>用户外网ip（传入用户非外网ip会影响判断结果）。</p>
+ * @method void setUserIp(string $UserIp) 设置<p>用户外网ip（传入用户非外网ip会影响判断结果）。</p>
+ * @method integer getPostTime() 获取<p>用户操作时间戳，精确到秒。</p>
+ * @method void setPostTime(integer $PostTime) 设置<p>用户操作时间戳，精确到秒。</p>
+ * @method string getUserId() 获取<p>业务平台用户唯一标识，支持自定义。</p>
+ * @method void setUserId(string $UserId) 设置<p>业务平台用户唯一标识，支持自定义。</p>
+ * @method string getDeviceToken() 获取<p>设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。</p>
+ * @method void setDeviceToken(string $DeviceToken) 设置<p>设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。</p>
+ * @method integer getDeviceBusinessId() 获取<p>设备指纹 BusinessId。</p>
+ * @method void setDeviceBusinessId(integer $DeviceBusinessId) 设置<p>设备指纹 BusinessId。</p>
+ * @method integer getBusinessId() 获取<p>业务ID。网站或应用在多个业务中使用此服务，通过此ID区分统计数据。</p>
+ * @method void setBusinessId(integer $BusinessId) 设置<p>业务ID。网站或应用在多个业务中使用此服务，通过此ID区分统计数据。</p>
+ * @method string getNickname() 获取<p>昵称，UTF-8 编码。</p>
+ * @method void setNickname(string $Nickname) 设置<p>昵称，UTF-8 编码。</p>
+ * @method string getEmailAddress() 获取<p>用户邮箱地址。</p>
+ * @method void setEmailAddress(string $EmailAddress) 设置<p>用户邮箱地址。</p>
+ * @method integer getCheckDevice() 获取<p>是否识别设备异常：<br>0：不识别。<br>1：识别。</p>
+ * @method void setCheckDevice(integer $CheckDevice) 设置<p>是否识别设备异常：<br>0：不识别。<br>1：识别。</p>
+ * @method string getCookieHash() 获取<p>用户HTTP请求中的Cookie进行2次hash的值，只要保证相同Cookie的hash值一致即可。</p>
+ * @method void setCookieHash(string $CookieHash) 设置<p>用户HTTP请求中的Cookie进行2次hash的值，只要保证相同Cookie的hash值一致即可。</p>
+ * @method string getReferer() 获取<p>用户HTTP请求的Referer值。</p>
+ * @method void setReferer(string $Referer) 设置<p>用户HTTP请求的Referer值。</p>
+ * @method string getUserAgent() 获取<p>用户HTTP请求的User-Agent值。</p>
+ * @method void setUserAgent(string $UserAgent) 设置<p>用户HTTP请求的User-Agent值。</p>
+ * @method string getXForwardedFor() 获取<p>用户HTTP请求的X-Forwarded-For值。</p>
+ * @method void setXForwardedFor(string $XForwardedFor) 设置<p>用户HTTP请求的X-Forwarded-For值。</p>
+ * @method string getMacAddress() 获取<p>MAC地址或设备唯一标识。</p>
+ * @method void setMacAddress(string $MacAddress) 设置<p>MAC地址或设备唯一标识。</p>
+ * @method string getVendorId() 获取<p>手机制造商ID，如果手机注册，请带上此信息。</p>
+ * @method void setVendorId(string $VendorId) 设置<p>手机制造商ID，如果手机注册，请带上此信息。</p>
+ * @method integer getDeviceType() 获取<p>设备类型(已不推荐使用)。</p>
+ * @method void setDeviceType(integer $DeviceType) 设置<p>设备类型(已不推荐使用)。</p>
+ * @method array getDetails() 获取<p>扩展字段。</p>
+ * @method void setDetails(array $Details) 设置<p>扩展字段。</p>
+ * @method SponsorInfo getSponsor() 获取<p>邀请助力场景相关信息。</p>
+ * @method void setSponsor(SponsorInfo $Sponsor) 设置<p>邀请助力场景相关信息。</p>
+ * @method OnlineScamInfo getOnlineScam() 获取<p>详情请跳转至OnlineScamInfo查看。</p>
+ * @method void setOnlineScam(OnlineScamInfo $OnlineScam) 设置<p>详情请跳转至OnlineScamInfo查看。</p>
+ * @method string getPlatform() 获取<p>1：Android<br>2：iOS<br>3：H5<br>4：小程序<br>5：鸿蒙</p>
+ * @method void setPlatform(string $Platform) 设置<p>1：Android<br>2：iOS<br>3：H5<br>4：小程序<br>5：鸿蒙</p>
+ * @method DataAuthorizationInfo getDataAuthorization() 获取<p>数据授权信息。<br>注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。</p>
+ * @method void setDataAuthorization(DataAuthorizationInfo $DataAuthorization) 设置<p>数据授权信息。<br>注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。</p>
  */
 class InputManageMarketingRisk extends AbstractModel
 {
     /**
-     * @var AccountInfo 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
-1：QQ开放账号
-2：微信开放账号
-10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
-10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值
+     * @var AccountInfo <p>用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要&quot;提交工单&quot;或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。<br>1：QQ开放账号<br>2：微信开放账号<br>10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值<br>10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值</p>
      */
     public $Account;
 
     /**
-     * @var string 场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
-控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
-活动防刷默认场景码：e_activity_antirush 
-登录保护默认场景码：e_login_protection
-注册保护默认场景码：e_register_protection
+     * @var string <p>场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理<br>控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root<br>活动防刷默认场景码：e_activity_antirush<br>登录保护默认场景码：e_login_protection<br>注册保护默认场景码：e_register_protection</p>
      */
     public $SceneCode;
 
     /**
-     * @var string 用户外网ip（传入用户非外网ip会影响判断结果）。
+     * @var string <p>用户外网ip（传入用户非外网ip会影响判断结果）。</p>
      */
     public $UserIp;
 
     /**
-     * @var integer 用户操作时间戳，精确到秒。
+     * @var integer <p>用户操作时间戳，精确到秒。</p>
      */
     public $PostTime;
 
     /**
-     * @var string 业务平台用户唯一标识，支持自定义。
+     * @var string <p>业务平台用户唯一标识，支持自定义。</p>
      */
     public $UserId;
 
     /**
-     * @var string 设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。
+     * @var string <p>设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。</p>
      */
     public $DeviceToken;
 
     /**
-     * @var integer 设备指纹 BusinessId。
+     * @var integer <p>设备指纹 BusinessId。</p>
      */
     public $DeviceBusinessId;
 
     /**
-     * @var integer 业务ID。网站或应用在多个业务中使用此服务，通过此ID区分统计数据。
+     * @var integer <p>业务ID。网站或应用在多个业务中使用此服务，通过此ID区分统计数据。</p>
      */
     public $BusinessId;
 
     /**
-     * @var string 昵称，UTF-8 编码。
+     * @var string <p>昵称，UTF-8 编码。</p>
      */
     public $Nickname;
 
     /**
-     * @var string 用户邮箱地址。
+     * @var string <p>用户邮箱地址。</p>
      */
     public $EmailAddress;
 
     /**
-     * @var integer 是否识别设备异常：
-0：不识别。
-1：识别。
+     * @var integer <p>是否识别设备异常：<br>0：不识别。<br>1：识别。</p>
      */
     public $CheckDevice;
 
     /**
-     * @var string 用户HTTP请求中的Cookie进行2次hash的值，只要保证相同Cookie的hash值一致即可。
+     * @var string <p>用户HTTP请求中的Cookie进行2次hash的值，只要保证相同Cookie的hash值一致即可。</p>
      */
     public $CookieHash;
 
     /**
-     * @var string 用户HTTP请求的Referer值。
+     * @var string <p>用户HTTP请求的Referer值。</p>
      */
     public $Referer;
 
     /**
-     * @var string 用户HTTP请求的User-Agent值。
+     * @var string <p>用户HTTP请求的User-Agent值。</p>
      */
     public $UserAgent;
 
     /**
-     * @var string 用户HTTP请求的X-Forwarded-For值。
+     * @var string <p>用户HTTP请求的X-Forwarded-For值。</p>
      */
     public $XForwardedFor;
 
     /**
-     * @var string MAC地址或设备唯一标识。
+     * @var string <p>MAC地址或设备唯一标识。</p>
      */
     public $MacAddress;
 
     /**
-     * @var string 手机制造商ID，如果手机注册，请带上此信息。
+     * @var string <p>手机制造商ID，如果手机注册，请带上此信息。</p>
      */
     public $VendorId;
 
     /**
-     * @var integer 设备类型(已不推荐使用)。
+     * @var integer <p>设备类型(已不推荐使用)。</p>
      */
     public $DeviceType;
 
     /**
-     * @var array 扩展字段。
+     * @var array <p>扩展字段。</p>
      */
     public $Details;
 
     /**
-     * @var SponsorInfo 邀请助力场景相关信息。
+     * @var SponsorInfo <p>邀请助力场景相关信息。</p>
      */
     public $Sponsor;
 
     /**
-     * @var OnlineScamInfo 详情请跳转至OnlineScamInfo查看。
+     * @var OnlineScamInfo <p>详情请跳转至OnlineScamInfo查看。</p>
      */
     public $OnlineScam;
 
     /**
-     * @var string 1：Android
-2：iOS
-3：H5
-4：小程序
+     * @var string <p>1：Android<br>2：iOS<br>3：H5<br>4：小程序<br>5：鸿蒙</p>
      */
     public $Platform;
 
     /**
-     * @var DataAuthorizationInfo 数据授权信息。
-注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。
+     * @var DataAuthorizationInfo <p>数据授权信息。<br>注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。</p>
      */
     public $DataAuthorization;
 
     /**
-     * @param AccountInfo $Account 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
-1：QQ开放账号
-2：微信开放账号
-10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
-10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值
-     * @param string $SceneCode 场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
-控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
-活动防刷默认场景码：e_activity_antirush 
-登录保护默认场景码：e_login_protection
-注册保护默认场景码：e_register_protection
-     * @param string $UserIp 用户外网ip（传入用户非外网ip会影响判断结果）。
-     * @param integer $PostTime 用户操作时间戳，精确到秒。
-     * @param string $UserId 业务平台用户唯一标识，支持自定义。
-     * @param string $DeviceToken 设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。
-     * @param integer $DeviceBusinessId 设备指纹 BusinessId。
-     * @param integer $BusinessId 业务ID。网站或应用在多个业务中使用此服务，通过此ID区分统计数据。
-     * @param string $Nickname 昵称，UTF-8 编码。
-     * @param string $EmailAddress 用户邮箱地址。
-     * @param integer $CheckDevice 是否识别设备异常：
-0：不识别。
-1：识别。
-     * @param string $CookieHash 用户HTTP请求中的Cookie进行2次hash的值，只要保证相同Cookie的hash值一致即可。
-     * @param string $Referer 用户HTTP请求的Referer值。
-     * @param string $UserAgent 用户HTTP请求的User-Agent值。
-     * @param string $XForwardedFor 用户HTTP请求的X-Forwarded-For值。
-     * @param string $MacAddress MAC地址或设备唯一标识。
-     * @param string $VendorId 手机制造商ID，如果手机注册，请带上此信息。
-     * @param integer $DeviceType 设备类型(已不推荐使用)。
-     * @param array $Details 扩展字段。
-     * @param SponsorInfo $Sponsor 邀请助力场景相关信息。
-     * @param OnlineScamInfo $OnlineScam 详情请跳转至OnlineScamInfo查看。
-     * @param string $Platform 1：Android
-2：iOS
-3：H5
-4：小程序
-     * @param DataAuthorizationInfo $DataAuthorization 数据授权信息。
-注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。
+     * @param AccountInfo $Account <p>用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要&quot;提交工单&quot;或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。<br>1：QQ开放账号<br>2：微信开放账号<br>10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值<br>10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值</p>
+     * @param string $SceneCode <p>场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理<br>控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root<br>活动防刷默认场景码：e_activity_antirush<br>登录保护默认场景码：e_login_protection<br>注册保护默认场景码：e_register_protection</p>
+     * @param string $UserIp <p>用户外网ip（传入用户非外网ip会影响判断结果）。</p>
+     * @param integer $PostTime <p>用户操作时间戳，精确到秒。</p>
+     * @param string $UserId <p>业务平台用户唯一标识，支持自定义。</p>
+     * @param string $DeviceToken <p>设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。</p>
+     * @param integer $DeviceBusinessId <p>设备指纹 BusinessId。</p>
+     * @param integer $BusinessId <p>业务ID。网站或应用在多个业务中使用此服务，通过此ID区分统计数据。</p>
+     * @param string $Nickname <p>昵称，UTF-8 编码。</p>
+     * @param string $EmailAddress <p>用户邮箱地址。</p>
+     * @param integer $CheckDevice <p>是否识别设备异常：<br>0：不识别。<br>1：识别。</p>
+     * @param string $CookieHash <p>用户HTTP请求中的Cookie进行2次hash的值，只要保证相同Cookie的hash值一致即可。</p>
+     * @param string $Referer <p>用户HTTP请求的Referer值。</p>
+     * @param string $UserAgent <p>用户HTTP请求的User-Agent值。</p>
+     * @param string $XForwardedFor <p>用户HTTP请求的X-Forwarded-For值。</p>
+     * @param string $MacAddress <p>MAC地址或设备唯一标识。</p>
+     * @param string $VendorId <p>手机制造商ID，如果手机注册，请带上此信息。</p>
+     * @param integer $DeviceType <p>设备类型(已不推荐使用)。</p>
+     * @param array $Details <p>扩展字段。</p>
+     * @param SponsorInfo $Sponsor <p>邀请助力场景相关信息。</p>
+     * @param OnlineScamInfo $OnlineScam <p>详情请跳转至OnlineScamInfo查看。</p>
+     * @param string $Platform <p>1：Android<br>2：iOS<br>3：H5<br>4：小程序<br>5：鸿蒙</p>
+     * @param DataAuthorizationInfo $DataAuthorization <p>数据授权信息。<br>注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。</p>
      */
     function __construct()
     {

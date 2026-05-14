@@ -20,54 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListUser请求参数结构体
  *
- * @method string getUserStoreId() 获取用户目录ID
- * @method void setUserStoreId(string $UserStoreId) 设置用户目录ID
- * @method Pageable getPageable() 获取分页数据
- * @method void setPageable(Pageable $Pageable) 设置分页数据
- * @method array getFilters() 获取Key可选值为condition、userGroupId
-
-<li> **condition** </li>	Values = 查询条件，用户ID，用户名称，手机或邮箱
-<li> **userGroupId** </li>	Values = 用户组ID
- * @method void setFilters(array $Filters) 设置Key可选值为condition、userGroupId
-
-<li> **condition** </li>	Values = 查询条件，用户ID，用户名称，手机或邮箱
-<li> **userGroupId** </li>	Values = 用户组ID
- * @method boolean getOriginal() 获取返回信息是否为原文
- * @method void setOriginal(boolean $Original) 设置返回信息是否为原文
+ * @method string getUserStoreId() 获取<p>用户目录ID</p>
+ * @method void setUserStoreId(string $UserStoreId) 设置<p>用户目录ID</p>
+ * @method Pageable getPageable() 获取<p>分页数据</p>
+ * @method void setPageable(Pageable $Pageable) 设置<p>分页数据</p>
+ * @method array getFilters() 获取<p>Key可选值为condition、userGroup、userOrg、weComUserOrg<li> <strong>condition</strong> </li>    Values = 查询条件，用户ID，用户名称，手机或邮箱<li> <strong>userGroup</strong> </li>    Values = 用户组ID<li> <strong>userOrg</strong> </li>    Values = 用户所属机构ID<li> <strong>weComUserOrg</strong> </li>    Values = 用户所属企业微信机构ID</p>
+ * @method void setFilters(array $Filters) 设置<p>Key可选值为condition、userGroup、userOrg、weComUserOrg<li> <strong>condition</strong> </li>    Values = 查询条件，用户ID，用户名称，手机或邮箱<li> <strong>userGroup</strong> </li>    Values = 用户组ID<li> <strong>userOrg</strong> </li>    Values = 用户所属机构ID<li> <strong>weComUserOrg</strong> </li>    Values = 用户所属企业微信机构ID</p>
+ * @method boolean getOriginal() 获取<p>返回信息是否为原文</p>
+ * @method void setOriginal(boolean $Original) 设置<p>返回信息是否为原文</p>
  */
 class ListUserRequest extends AbstractModel
 {
     /**
-     * @var string 用户目录ID
+     * @var string <p>用户目录ID</p>
      */
     public $UserStoreId;
 
     /**
-     * @var Pageable 分页数据
+     * @var Pageable <p>分页数据</p>
      */
     public $Pageable;
 
     /**
-     * @var array Key可选值为condition、userGroupId
-
-<li> **condition** </li>	Values = 查询条件，用户ID，用户名称，手机或邮箱
-<li> **userGroupId** </li>	Values = 用户组ID
+     * @var array <p>Key可选值为condition、userGroup、userOrg、weComUserOrg<li> <strong>condition</strong> </li>    Values = 查询条件，用户ID，用户名称，手机或邮箱<li> <strong>userGroup</strong> </li>    Values = 用户组ID<li> <strong>userOrg</strong> </li>    Values = 用户所属机构ID<li> <strong>weComUserOrg</strong> </li>    Values = 用户所属企业微信机构ID</p>
      */
     public $Filters;
 
     /**
-     * @var boolean 返回信息是否为原文
+     * @var boolean <p>返回信息是否为原文</p>
      */
     public $Original;
 
     /**
-     * @param string $UserStoreId 用户目录ID
-     * @param Pageable $Pageable 分页数据
-     * @param array $Filters Key可选值为condition、userGroupId
-
-<li> **condition** </li>	Values = 查询条件，用户ID，用户名称，手机或邮箱
-<li> **userGroupId** </li>	Values = 用户组ID
-     * @param boolean $Original 返回信息是否为原文
+     * @param string $UserStoreId <p>用户目录ID</p>
+     * @param Pageable $Pageable <p>分页数据</p>
+     * @param array $Filters <p>Key可选值为condition、userGroup、userOrg、weComUserOrg<li> <strong>condition</strong> </li>    Values = 查询条件，用户ID，用户名称，手机或邮箱<li> <strong>userGroup</strong> </li>    Values = 用户组ID<li> <strong>userOrg</strong> </li>    Values = 用户所属机构ID<li> <strong>weComUserOrg</strong> </li>    Values = 用户所属企业微信机构ID</p>
+     * @param boolean $Original <p>返回信息是否为原文</p>
      */
     function __construct()
     {

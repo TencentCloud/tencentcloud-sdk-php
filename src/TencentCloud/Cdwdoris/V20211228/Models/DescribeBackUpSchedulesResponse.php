@@ -20,22 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackUpSchedules返回参数结构体
  *
- * @method string getCurrentTime() 获取当前系统时间
- * @method void setCurrentTime(string $CurrentTime) 设置当前系统时间
- * @method BucketEncryptionInfo getBucketEncryption() 获取桶加密状态信息
- * @method void setBucketEncryption(BucketEncryptionInfo $BucketEncryption) 设置桶加密状态信息
+ * @method boolean getBackUpOpened() 获取<p>备份是否开启</p>
+ * @method void setBackUpOpened(boolean $BackUpOpened) 设置<p>备份是否开启</p>
+ * @method string getCosBucketName() 获取<p>备份桶</p>
+ * @method void setCosBucketName(string $CosBucketName) 设置<p>备份桶</p>
+ * @method integer getBackUpStatus() 获取<p>备份的状态</p>
+ * @method void setBackUpStatus(integer $BackUpStatus) 设置<p>备份的状态</p>
+ * @method array getBackupScheduleInfos() 获取<p>备份、迁移任务信息</p>
+ * @method void setBackupScheduleInfos(array $BackupScheduleInfos) 设置<p>备份、迁移任务信息</p>
+ * @method string getCurrentTime() 获取<p>当前系统时间</p>
+ * @method void setCurrentTime(string $CurrentTime) 设置<p>当前系统时间</p>
+ * @method BucketEncryptionInfo getBucketEncryption() 获取<p>桶加密状态信息</p>
+ * @method void setBucketEncryption(BucketEncryptionInfo $BucketEncryption) 设置<p>桶加密状态信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBackUpSchedulesResponse extends AbstractModel
 {
     /**
-     * @var string 当前系统时间
+     * @var boolean <p>备份是否开启</p>
+     */
+    public $BackUpOpened;
+
+    /**
+     * @var string <p>备份桶</p>
+     */
+    public $CosBucketName;
+
+    /**
+     * @var integer <p>备份的状态</p>
+     */
+    public $BackUpStatus;
+
+    /**
+     * @var array <p>备份、迁移任务信息</p>
+     */
+    public $BackupScheduleInfos;
+
+    /**
+     * @var string <p>当前系统时间</p>
      */
     public $CurrentTime;
 
     /**
-     * @var BucketEncryptionInfo 桶加密状态信息
+     * @var BucketEncryptionInfo <p>桶加密状态信息</p>
      */
     public $BucketEncryption;
 
@@ -45,8 +73,12 @@ class DescribeBackUpSchedulesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $CurrentTime 当前系统时间
-     * @param BucketEncryptionInfo $BucketEncryption 桶加密状态信息
+     * @param boolean $BackUpOpened <p>备份是否开启</p>
+     * @param string $CosBucketName <p>备份桶</p>
+     * @param integer $BackUpStatus <p>备份的状态</p>
+     * @param array $BackupScheduleInfos <p>备份、迁移任务信息</p>
+     * @param string $CurrentTime <p>当前系统时间</p>
+     * @param BucketEncryptionInfo $BucketEncryption <p>桶加密状态信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,6 +94,27 @@ class DescribeBackUpSchedulesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("BackUpOpened",$param) and $param["BackUpOpened"] !== null) {
+            $this->BackUpOpened = $param["BackUpOpened"];
+        }
+
+        if (array_key_exists("CosBucketName",$param) and $param["CosBucketName"] !== null) {
+            $this->CosBucketName = $param["CosBucketName"];
+        }
+
+        if (array_key_exists("BackUpStatus",$param) and $param["BackUpStatus"] !== null) {
+            $this->BackUpStatus = $param["BackUpStatus"];
+        }
+
+        if (array_key_exists("BackupScheduleInfos",$param) and $param["BackupScheduleInfos"] !== null) {
+            $this->BackupScheduleInfos = [];
+            foreach ($param["BackupScheduleInfos"] as $key => $value){
+                $obj = new BackupScheduleInfo();
+                $obj->deserialize($value);
+                array_push($this->BackupScheduleInfos, $obj);
+            }
+        }
+
         if (array_key_exists("CurrentTime",$param) and $param["CurrentTime"] !== null) {
             $this->CurrentTime = $param["CurrentTime"];
         }

@@ -20,82 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSavingPlanOrder请求参数结构体
  *
- * @method integer getRegionId() 获取地域编码
- * @method void setRegionId(integer $RegionId) 设置地域编码
- * @method integer getZoneId() 获取区域编码
- * @method void setZoneId(integer $ZoneId) 设置区域编码
- * @method string getPrePayType() 获取预付费类型
- * @method void setPrePayType(string $PrePayType) 设置预付费类型
- * @method integer getTimeSpan() 获取时长
- * @method void setTimeSpan(integer $TimeSpan) 设置时长
- * @method string getTimeUnit() 获取时长单位
- * @method void setTimeUnit(string $TimeUnit) 设置时长单位
- * @method string getCommodityCode() 获取商品唯一标识
- * @method void setCommodityCode(string $CommodityCode) 设置商品唯一标识
- * @method integer getPromiseUseAmount() 获取承诺时长内的小额金额（单位：元）
- * @method void setPromiseUseAmount(integer $PromiseUseAmount) 设置承诺时长内的小额金额（单位：元）
- * @method string getSpecifyEffectTime() 获取节省计划的指定生效时间，若不传则为当前下单时间。传参数格式:"2023-10-01 00:00:00"，仅支持指定日期的0点时刻
- * @method void setSpecifyEffectTime(string $SpecifyEffectTime) 设置节省计划的指定生效时间，若不传则为当前下单时间。传参数格式:"2023-10-01 00:00:00"，仅支持指定日期的0点时刻
- * @method string getClientToken() 获取可重入ID
- * @method void setClientToken(string $ClientToken) 设置可重入ID
+ * @method integer getRegionId() 获取<p>地域编码</p>
+ * @method void setRegionId(integer $RegionId) 设置<p>地域编码</p>
+ * @method integer getZoneId() 获取<p>区域编码</p>
+ * @method void setZoneId(integer $ZoneId) 设置<p>区域编码</p>
+ * @method string getPrePayType() 获取<p>预付费类型</p><p>枚举值：</p><ul><li>1： 全预费</li><li>2： 部分预付</li><li>3： 不预付</li></ul>
+ * @method void setPrePayType(string $PrePayType) 设置<p>预付费类型</p><p>枚举值：</p><ul><li>1： 全预费</li><li>2： 部分预付</li><li>3： 不预付</li></ul>
+ * @method integer getTimeSpan() 获取<p>时长</p>
+ * @method void setTimeSpan(integer $TimeSpan) 设置<p>时长</p>
+ * @method string getTimeUnit() 获取<p>时长单位</p>
+ * @method void setTimeUnit(string $TimeUnit) 设置<p>时长单位</p>
+ * @method string getCommodityCode() 获取<p>商品唯一标识</p>
+ * @method void setCommodityCode(string $CommodityCode) 设置<p>商品唯一标识</p>
+ * @method integer getPromiseUseAmount() 获取<p>承诺时长内的小额金额（单位：元）</p>
+ * @method void setPromiseUseAmount(integer $PromiseUseAmount) 设置<p>承诺时长内的小额金额（单位：元）</p>
+ * @method string getSpecifyEffectTime() 获取<p>节省计划的指定生效时间，若不传则为当前下单时间。传参数格式:&quot;2023-10-01 00:00:00&quot;，仅支持指定日期的0点时刻</p>
+ * @method void setSpecifyEffectTime(string $SpecifyEffectTime) 设置<p>节省计划的指定生效时间，若不传则为当前下单时间。传参数格式:&quot;2023-10-01 00:00:00&quot;，仅支持指定日期的0点时刻</p>
+ * @method string getClientToken() 获取<p>可重入ID</p>
+ * @method void setClientToken(string $ClientToken) 设置<p>可重入ID</p>
+ * @method integer getCommitmentPeriod() 获取<p>节省计划结算类型</p><p>枚举值：</p><ul><li>1： 小时结算包</li><li>2： 日结算包</li><li>3： 月结算包</li></ul><p>默认值：1</p><p>不填写是默认是小时结算包</p>
+ * @method void setCommitmentPeriod(integer $CommitmentPeriod) 设置<p>节省计划结算类型</p><p>枚举值：</p><ul><li>1： 小时结算包</li><li>2： 日结算包</li><li>3： 月结算包</li></ul><p>默认值：1</p><p>不填写是默认是小时结算包</p>
  */
 class CreateSavingPlanOrderRequest extends AbstractModel
 {
     /**
-     * @var integer 地域编码
+     * @var integer <p>地域编码</p>
      */
     public $RegionId;
 
     /**
-     * @var integer 区域编码
+     * @var integer <p>区域编码</p>
      */
     public $ZoneId;
 
     /**
-     * @var string 预付费类型
+     * @var string <p>预付费类型</p><p>枚举值：</p><ul><li>1： 全预费</li><li>2： 部分预付</li><li>3： 不预付</li></ul>
      */
     public $PrePayType;
 
     /**
-     * @var integer 时长
+     * @var integer <p>时长</p>
      */
     public $TimeSpan;
 
     /**
-     * @var string 时长单位
+     * @var string <p>时长单位</p>
      */
     public $TimeUnit;
 
     /**
-     * @var string 商品唯一标识
+     * @var string <p>商品唯一标识</p>
      */
     public $CommodityCode;
 
     /**
-     * @var integer 承诺时长内的小额金额（单位：元）
+     * @var integer <p>承诺时长内的小额金额（单位：元）</p>
      */
     public $PromiseUseAmount;
 
     /**
-     * @var string 节省计划的指定生效时间，若不传则为当前下单时间。传参数格式:"2023-10-01 00:00:00"，仅支持指定日期的0点时刻
+     * @var string <p>节省计划的指定生效时间，若不传则为当前下单时间。传参数格式:&quot;2023-10-01 00:00:00&quot;，仅支持指定日期的0点时刻</p>
      */
     public $SpecifyEffectTime;
 
     /**
-     * @var string 可重入ID
+     * @var string <p>可重入ID</p>
      */
     public $ClientToken;
 
     /**
-     * @param integer $RegionId 地域编码
-     * @param integer $ZoneId 区域编码
-     * @param string $PrePayType 预付费类型
-     * @param integer $TimeSpan 时长
-     * @param string $TimeUnit 时长单位
-     * @param string $CommodityCode 商品唯一标识
-     * @param integer $PromiseUseAmount 承诺时长内的小额金额（单位：元）
-     * @param string $SpecifyEffectTime 节省计划的指定生效时间，若不传则为当前下单时间。传参数格式:"2023-10-01 00:00:00"，仅支持指定日期的0点时刻
-     * @param string $ClientToken 可重入ID
+     * @var integer <p>节省计划结算类型</p><p>枚举值：</p><ul><li>1： 小时结算包</li><li>2： 日结算包</li><li>3： 月结算包</li></ul><p>默认值：1</p><p>不填写是默认是小时结算包</p>
+     */
+    public $CommitmentPeriod;
+
+    /**
+     * @param integer $RegionId <p>地域编码</p>
+     * @param integer $ZoneId <p>区域编码</p>
+     * @param string $PrePayType <p>预付费类型</p><p>枚举值：</p><ul><li>1： 全预费</li><li>2： 部分预付</li><li>3： 不预付</li></ul>
+     * @param integer $TimeSpan <p>时长</p>
+     * @param string $TimeUnit <p>时长单位</p>
+     * @param string $CommodityCode <p>商品唯一标识</p>
+     * @param integer $PromiseUseAmount <p>承诺时长内的小额金额（单位：元）</p>
+     * @param string $SpecifyEffectTime <p>节省计划的指定生效时间，若不传则为当前下单时间。传参数格式:&quot;2023-10-01 00:00:00&quot;，仅支持指定日期的0点时刻</p>
+     * @param string $ClientToken <p>可重入ID</p>
+     * @param integer $CommitmentPeriod <p>节省计划结算类型</p><p>枚举值：</p><ul><li>1： 小时结算包</li><li>2： 日结算包</li><li>3： 月结算包</li></ul><p>默认值：1</p><p>不填写是默认是小时结算包</p>
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class CreateSavingPlanOrderRequest extends AbstractModel
 
         if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
             $this->ClientToken = $param["ClientToken"];
+        }
+
+        if (array_key_exists("CommitmentPeriod",$param) and $param["CommitmentPeriod"] !== null) {
+            $this->CommitmentPeriod = $param["CommitmentPeriod"];
         }
     }
 }

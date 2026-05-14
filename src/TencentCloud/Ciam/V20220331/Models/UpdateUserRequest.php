@@ -20,130 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateUser请求参数结构体
  *
- * @method string getUserId() 获取用户ID
- * @method void setUserId(string $UserId) 设置用户ID
- * @method string getUserStoreId() 获取用户目录ID
- * @method void setUserStoreId(string $UserStoreId) 设置用户目录ID
- * @method string getUserName() 获取用户名称
- * @method void setUserName(string $UserName) 设置用户名称
- * @method string getPhoneNumber() 获取手机号码
- * @method void setPhoneNumber(string $PhoneNumber) 设置手机号码
- * @method string getEmail() 获取邮箱
- * @method void setEmail(string $Email) 设置邮箱
- * @method string getNickname() 获取昵称
- * @method void setNickname(string $Nickname) 设置昵称
- * @method string getAddress() 获取地址
- * @method void setAddress(string $Address) 设置地址
- * @method array getUserGroup() 获取用户组
- * @method void setUserGroup(array $UserGroup) 设置用户组
- * @method integer getBirthdate() 获取生日
- * @method void setBirthdate(integer $Birthdate) 设置生日
- * @method array getCustomizationAttributes() 获取自定义属性
- * @method void setCustomizationAttributes(array $CustomizationAttributes) 设置自定义属性
- * @method string getIndexedAttribute1() 获取索引字段1
- * @method void setIndexedAttribute1(string $IndexedAttribute1) 设置索引字段1
- * @method string getIndexedAttribute2() 获取索引字段2
- * @method void setIndexedAttribute2(string $IndexedAttribute2) 设置索引字段2
- * @method string getIndexedAttribute3() 获取索引字段3
- * @method void setIndexedAttribute3(string $IndexedAttribute3) 设置索引字段3
- * @method string getIndexedAttribute4() 获取索引字段4
- * @method void setIndexedAttribute4(string $IndexedAttribute4) 设置索引字段4
- * @method string getIndexedAttribute5() 获取索引字段5
- * @method void setIndexedAttribute5(string $IndexedAttribute5) 设置索引字段5
+ * @method string getUserId() 获取<p>用户ID</p>
+ * @method void setUserId(string $UserId) 设置<p>用户ID</p>
+ * @method string getUserStoreId() 获取<p>用户目录ID</p>
+ * @method void setUserStoreId(string $UserStoreId) 设置<p>用户目录ID</p>
+ * @method string getUserName() 获取<p>用户名称</p>
+ * @method void setUserName(string $UserName) 设置<p>用户名称</p>
+ * @method string getPhoneNumber() 获取<p>手机号码</p>
+ * @method void setPhoneNumber(string $PhoneNumber) 设置<p>手机号码</p>
+ * @method string getEmail() 获取<p>邮箱</p>
+ * @method void setEmail(string $Email) 设置<p>邮箱</p>
+ * @method string getNickname() 获取<p>昵称</p>
+ * @method void setNickname(string $Nickname) 设置<p>昵称</p>
+ * @method string getAddress() 获取<p>地址</p>
+ * @method void setAddress(string $Address) 设置<p>地址</p>
+ * @method array getUserGroup() 获取<p>用户组</p>
+ * @method void setUserGroup(array $UserGroup) 设置<p>用户组</p>
+ * @method integer getBirthdate() 获取<p>生日</p>
+ * @method void setBirthdate(integer $Birthdate) 设置<p>生日</p>
+ * @method array getCustomizationAttributes() 获取<p>自定义属性</p>
+ * @method void setCustomizationAttributes(array $CustomizationAttributes) 设置<p>自定义属性</p>
+ * @method string getIndexedAttribute1() 获取<p>索引字段1</p>
+ * @method void setIndexedAttribute1(string $IndexedAttribute1) 设置<p>索引字段1</p>
+ * @method string getIndexedAttribute2() 获取<p>索引字段2</p>
+ * @method void setIndexedAttribute2(string $IndexedAttribute2) 设置<p>索引字段2</p>
+ * @method string getIndexedAttribute3() 获取<p>索引字段3</p>
+ * @method void setIndexedAttribute3(string $IndexedAttribute3) 设置<p>索引字段3</p>
+ * @method string getIndexedAttribute4() 获取<p>索引字段4</p>
+ * @method void setIndexedAttribute4(string $IndexedAttribute4) 设置<p>索引字段4</p>
+ * @method string getIndexedAttribute5() 获取<p>索引字段5</p>
+ * @method void setIndexedAttribute5(string $IndexedAttribute5) 设置<p>索引字段5</p>
+ * @method array getUserOrg() 获取<p>用户所属组织机构ID</p>
+ * @method void setUserOrg(array $UserOrg) 设置<p>用户所属组织机构ID</p>
  */
 class UpdateUserRequest extends AbstractModel
 {
     /**
-     * @var string 用户ID
+     * @var string <p>用户ID</p>
      */
     public $UserId;
 
     /**
-     * @var string 用户目录ID
+     * @var string <p>用户目录ID</p>
      */
     public $UserStoreId;
 
     /**
-     * @var string 用户名称
+     * @var string <p>用户名称</p>
      */
     public $UserName;
 
     /**
-     * @var string 手机号码
+     * @var string <p>手机号码</p>
      */
     public $PhoneNumber;
 
     /**
-     * @var string 邮箱
+     * @var string <p>邮箱</p>
      */
     public $Email;
 
     /**
-     * @var string 昵称
+     * @var string <p>昵称</p>
      */
     public $Nickname;
 
     /**
-     * @var string 地址
+     * @var string <p>地址</p>
      */
     public $Address;
 
     /**
-     * @var array 用户组
+     * @var array <p>用户组</p>
      */
     public $UserGroup;
 
     /**
-     * @var integer 生日
+     * @var integer <p>生日</p>
      */
     public $Birthdate;
 
     /**
-     * @var array 自定义属性
+     * @var array <p>自定义属性</p>
      */
     public $CustomizationAttributes;
 
     /**
-     * @var string 索引字段1
+     * @var string <p>索引字段1</p>
      */
     public $IndexedAttribute1;
 
     /**
-     * @var string 索引字段2
+     * @var string <p>索引字段2</p>
      */
     public $IndexedAttribute2;
 
     /**
-     * @var string 索引字段3
+     * @var string <p>索引字段3</p>
      */
     public $IndexedAttribute3;
 
     /**
-     * @var string 索引字段4
+     * @var string <p>索引字段4</p>
      */
     public $IndexedAttribute4;
 
     /**
-     * @var string 索引字段5
+     * @var string <p>索引字段5</p>
      */
     public $IndexedAttribute5;
 
     /**
-     * @param string $UserId 用户ID
-     * @param string $UserStoreId 用户目录ID
-     * @param string $UserName 用户名称
-     * @param string $PhoneNumber 手机号码
-     * @param string $Email 邮箱
-     * @param string $Nickname 昵称
-     * @param string $Address 地址
-     * @param array $UserGroup 用户组
-     * @param integer $Birthdate 生日
-     * @param array $CustomizationAttributes 自定义属性
-     * @param string $IndexedAttribute1 索引字段1
-     * @param string $IndexedAttribute2 索引字段2
-     * @param string $IndexedAttribute3 索引字段3
-     * @param string $IndexedAttribute4 索引字段4
-     * @param string $IndexedAttribute5 索引字段5
+     * @var array <p>用户所属组织机构ID</p>
+     */
+    public $UserOrg;
+
+    /**
+     * @param string $UserId <p>用户ID</p>
+     * @param string $UserStoreId <p>用户目录ID</p>
+     * @param string $UserName <p>用户名称</p>
+     * @param string $PhoneNumber <p>手机号码</p>
+     * @param string $Email <p>邮箱</p>
+     * @param string $Nickname <p>昵称</p>
+     * @param string $Address <p>地址</p>
+     * @param array $UserGroup <p>用户组</p>
+     * @param integer $Birthdate <p>生日</p>
+     * @param array $CustomizationAttributes <p>自定义属性</p>
+     * @param string $IndexedAttribute1 <p>索引字段1</p>
+     * @param string $IndexedAttribute2 <p>索引字段2</p>
+     * @param string $IndexedAttribute3 <p>索引字段3</p>
+     * @param string $IndexedAttribute4 <p>索引字段4</p>
+     * @param string $IndexedAttribute5 <p>索引字段5</p>
+     * @param array $UserOrg <p>用户所属组织机构ID</p>
      */
     function __construct()
     {
@@ -221,6 +229,10 @@ class UpdateUserRequest extends AbstractModel
 
         if (array_key_exists("IndexedAttribute5",$param) and $param["IndexedAttribute5"] !== null) {
             $this->IndexedAttribute5 = $param["IndexedAttribute5"];
+        }
+
+        if (array_key_exists("UserOrg",$param) and $param["UserOrg"] !== null) {
+            $this->UserOrg = $param["UserOrg"];
         }
     }
 }

@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBframes(integer $Bframes) 设置<p>参考帧之间的B帧数，默认为自动。</p><p>取值范围：[0, 16]</p>
  * @method integer getHlsTime() 获取<p>分片平均时长。0或不填表示自动，将根据视频的 GOP 等特征自动选择合适的分片时长。</p><p>取值范围：[0, 10]</p><p>单位：秒</p><p>只支持转码模板，暂不支持自适应码流模板。</p>
  * @method void setHlsTime(integer $HlsTime) 设置<p>分片平均时长。0或不填表示自动，将根据视频的 GOP 等特征自动选择合适的分片时长。</p><p>取值范围：[0, 10]</p><p>单位：秒</p><p>只支持转码模板，暂不支持自适应码流模板。</p>
+ * @method string getVideoProfile() 获取<p>视频编码标准中对允许使用哪些编码工具或特性的一组预定义组合，适用于不同场景。</p><p>枚举值：</p><ul><li>baseline： 只支持I/P帧，并只支持无交错的场景，适用于视频通话、手机视频等场景。</li><li>main： 主流 Profile，提供I帧、P帧、B帧，并支持无交错模式和交错模式。主要用在主流的音视频消费产品如视频播放器、流媒体传输设备上。</li><li>high： 最高编码等级，在Main Profile上添加了8X8的预测，并支持自定义量化。广泛应用在蓝光存储、高清电视等场景。</li><li>default： 随原视频自动填充。  </li></ul><p>默认值：default</p><p>仅 Codec 为 libx264 时该配置项有效。</p>
+ * @method void setVideoProfile(string $VideoProfile) 设置<p>视频编码标准中对允许使用哪些编码工具或特性的一组预定义组合，适用于不同场景。</p><p>枚举值：</p><ul><li>baseline： 只支持I/P帧，并只支持无交错的场景，适用于视频通话、手机视频等场景。</li><li>main： 主流 Profile，提供I帧、P帧、B帧，并支持无交错模式和交错模式。主要用在主流的音视频消费产品如视频播放器、流媒体传输设备上。</li><li>high： 最高编码等级，在Main Profile上添加了8X8的预测，并支持自定义量化。广泛应用在蓝光存储、高清电视等场景。</li><li>default： 随原视频自动填充。  </li></ul><p>默认值：default</p><p>仅 Codec 为 libx264 时该配置项有效。</p>
  */
 class VideoTemplateInfo extends AbstractModel
 {
@@ -129,6 +131,11 @@ class VideoTemplateInfo extends AbstractModel
     public $HlsTime;
 
     /**
+     * @var string <p>视频编码标准中对允许使用哪些编码工具或特性的一组预定义组合，适用于不同场景。</p><p>枚举值：</p><ul><li>baseline： 只支持I/P帧，并只支持无交错的场景，适用于视频通话、手机视频等场景。</li><li>main： 主流 Profile，提供I帧、P帧、B帧，并支持无交错模式和交错模式。主要用在主流的音视频消费产品如视频播放器、流媒体传输设备上。</li><li>high： 最高编码等级，在Main Profile上添加了8X8的预测，并支持自定义量化。广泛应用在蓝光存储、高清电视等场景。</li><li>default： 随原视频自动填充。  </li></ul><p>默认值：default</p><p>仅 Codec 为 libx264 时该配置项有效。</p>
+     */
+    public $VideoProfile;
+
+    /**
      * @param string $Codec <p>视频流的编码格式，可选值：</p><li>libx264：H.264 编码；</li><li>libx265：H.265 编码；</li><li>av1：AOMedia Video 1 编码；</li><li>H.266：H.266 编码。</li><font color="red">注意：</font><li> av1，H.266 编码容器目前只支持 mp4 ；</li><li> H.266 目前只支持恒定 CRF 码率控制方式。 </li>
      * @param integer $Fps <p>视频帧率，取值范围：[0, 100]，单位：Hz。<br>当取值为 0，表示帧率和原始视频保持一致。</p>
      * @param integer $Bitrate <p>视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。<br>当取值为 0，表示由云点播自动设置码率。</p>
@@ -144,6 +151,7 @@ class VideoTemplateInfo extends AbstractModel
      * @param string $Mode <p>码率控制模式。</p><p>枚举值：</p><ul><li>VBR： Variable Bit Rate，动态比特率，根据视频画面的复杂度动态调整输出的码率，使得画面质量更高，适用于存储场景和对画面质量要求较高的应用。</li><li>ABR： Average Bit Rate，平均比特率，尽量保持输出视频的平均码率稳定，但允许短期内的码率波动，适用于需要在保持一定画质的情况下尽量减少整体码率的场景。</li><li>CBR： Constant Bit Rate，恒定比特率，指视频编码时输出的码率保持恒定不变，不考虑画面复杂度的变化，适用于对网络带宽要求较为严格的场景，如直播等。</li><li>VCRF： 恒定质量因子，通过设定一个质量因子来控制视频质量，实现视频的恒定质量编码，码率会根据内容的复杂度自动调整，适用于希望保持一定画质的场景。</li></ul><p>默认值：VBR</p>
      * @param integer $Bframes <p>参考帧之间的B帧数，默认为自动。</p><p>取值范围：[0, 16]</p>
      * @param integer $HlsTime <p>分片平均时长。0或不填表示自动，将根据视频的 GOP 等特征自动选择合适的分片时长。</p><p>取值范围：[0, 10]</p><p>单位：秒</p><p>只支持转码模板，暂不支持自适应码流模板。</p>
+     * @param string $VideoProfile <p>视频编码标准中对允许使用哪些编码工具或特性的一组预定义组合，适用于不同场景。</p><p>枚举值：</p><ul><li>baseline： 只支持I/P帧，并只支持无交错的场景，适用于视频通话、手机视频等场景。</li><li>main： 主流 Profile，提供I帧、P帧、B帧，并支持无交错模式和交错模式。主要用在主流的音视频消费产品如视频播放器、流媒体传输设备上。</li><li>high： 最高编码等级，在Main Profile上添加了8X8的预测，并支持自定义量化。广泛应用在蓝光存储、高清电视等场景。</li><li>default： 随原视频自动填充。  </li></ul><p>默认值：default</p><p>仅 Codec 为 libx264 时该配置项有效。</p>
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ class VideoTemplateInfo extends AbstractModel
 
         if (array_key_exists("HlsTime",$param) and $param["HlsTime"] !== null) {
             $this->HlsTime = $param["HlsTime"];
+        }
+
+        if (array_key_exists("VideoProfile",$param) and $param["VideoProfile"] !== null) {
+            $this->VideoProfile = $param["VideoProfile"];
         }
     }
 }

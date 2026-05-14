@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrompt(string $Prompt) 设置<p>音色描述</p>
  * @method VoiceProfile getVoiceProfile() 获取<p>音色属性</p>
  * @method void setVoiceProfile(VoiceProfile $VoiceProfile) 设置<p>音色属性</p>
+ * @method string getText() 获取<p>试听音频文本。长度不超过500</p>
+ * @method void setText(string $Text) 设置<p>试听音频文本。长度不超过500</p>
  * @method string getExtParam() 获取<p>扩展参数，json字符串</p>
  * @method void setExtParam(string $ExtParam) 设置<p>扩展参数，json字符串</p>
  */
@@ -40,6 +42,11 @@ class DesignVoiceAsyncRequest extends AbstractModel
     public $VoiceProfile;
 
     /**
+     * @var string <p>试听音频文本。长度不超过500</p>
+     */
+    public $Text;
+
+    /**
      * @var string <p>扩展参数，json字符串</p>
      */
     public $ExtParam;
@@ -47,6 +54,7 @@ class DesignVoiceAsyncRequest extends AbstractModel
     /**
      * @param string $Prompt <p>音色描述</p>
      * @param VoiceProfile $VoiceProfile <p>音色属性</p>
+     * @param string $Text <p>试听音频文本。长度不超过500</p>
      * @param string $ExtParam <p>扩展参数，json字符串</p>
      */
     function __construct()
@@ -69,6 +77,10 @@ class DesignVoiceAsyncRequest extends AbstractModel
         if (array_key_exists("VoiceProfile",$param) and $param["VoiceProfile"] !== null) {
             $this->VoiceProfile = new VoiceProfile();
             $this->VoiceProfile->deserialize($param["VoiceProfile"]);
+        }
+
+        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
+            $this->Text = $param["Text"];
         }
 
         if (array_key_exists("ExtParam",$param) and $param["ExtParam"] !== null) {

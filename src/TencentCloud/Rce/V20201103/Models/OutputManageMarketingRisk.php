@@ -20,66 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 全栈式风控引擎出参
  *
- * @method integer getCode() 获取错误码，0 表示成功，非0表示失败错误码。
-0：成功
-1：错误
-1002：参数错误
-4300：未开通服务
-4301：后端未创建对应产品
- * @method void setCode(integer $Code) 设置错误码，0 表示成功，非0表示失败错误码。
-0：成功
-1：错误
-1002：参数错误
-4300：未开通服务
-4301：后端未创建对应产品
- * @method string getMessage() 获取UTF-8编码，出错消息。
- * @method void setMessage(string $Message) 设置UTF-8编码，出错消息。
- * @method OutputManageMarketingRiskValue getValue() 获取业务详情。
+ * @method integer getCode() 获取<p>错误码，0 表示成功，非0表示失败错误码。<br>0：成功<br>1002：参数错误<br>4300：未开通服务<br>4301：后端未创建对应产品<br>6000：系统内部错误</p>
+ * @method void setCode(integer $Code) 设置<p>错误码，0 表示成功，非0表示失败错误码。<br>0：成功<br>1002：参数错误<br>4300：未开通服务<br>4301：后端未创建对应产品<br>6000：系统内部错误</p>
+ * @method string getMessage() 获取<p>UTF-8编码，出错消息。</p>
+ * @method void setMessage(string $Message) 设置<p>UTF-8编码，出错消息。</p>
+ * @method OutputManageMarketingRiskValue getValue() 获取<p>业务详情。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValue(OutputManageMarketingRiskValue $Value) 设置业务详情。
+ * @method void setValue(OutputManageMarketingRiskValue $Value) 设置<p>业务详情。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUUid() 获取控制台显示的req_id。
- * @method void setUUid(string $UUid) 设置控制台显示的req_id。
+ * @method string getUUid() 获取<p>控制台显示的req_id。</p>
+ * @method void setUUid(string $UUid) 设置<p>控制台显示的req_id。</p>
  */
 class OutputManageMarketingRisk extends AbstractModel
 {
     /**
-     * @var integer 错误码，0 表示成功，非0表示失败错误码。
-0：成功
-1：错误
-1002：参数错误
-4300：未开通服务
-4301：后端未创建对应产品
+     * @var integer <p>错误码，0 表示成功，非0表示失败错误码。<br>0：成功<br>1002：参数错误<br>4300：未开通服务<br>4301：后端未创建对应产品<br>6000：系统内部错误</p>
      */
     public $Code;
 
     /**
-     * @var string UTF-8编码，出错消息。
+     * @var string <p>UTF-8编码，出错消息。</p>
      */
     public $Message;
 
     /**
-     * @var OutputManageMarketingRiskValue 业务详情。
+     * @var OutputManageMarketingRiskValue <p>业务详情。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
-     * @var string 控制台显示的req_id。
+     * @var string <p>控制台显示的req_id。</p>
      */
     public $UUid;
 
     /**
-     * @param integer $Code 错误码，0 表示成功，非0表示失败错误码。
-0：成功
-1：错误
-1002：参数错误
-4300：未开通服务
-4301：后端未创建对应产品
-     * @param string $Message UTF-8编码，出错消息。
-     * @param OutputManageMarketingRiskValue $Value 业务详情。
+     * @param integer $Code <p>错误码，0 表示成功，非0表示失败错误码。<br>0：成功<br>1002：参数错误<br>4300：未开通服务<br>4301：后端未创建对应产品<br>6000：系统内部错误</p>
+     * @param string $Message <p>UTF-8编码，出错消息。</p>
+     * @param OutputManageMarketingRiskValue $Value <p>业务详情。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UUid 控制台显示的req_id。
+     * @param string $UUid <p>控制台显示的req_id。</p>
      */
     function __construct()
     {

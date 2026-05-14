@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBundleInfo(string $BundleInfo) 设置Bundle信息
  * @method array getGeneralTaskParams() 获取通用参数配置
  * @method void setGeneralTaskParams(array $GeneralTaskParams) 设置通用参数配置
+ * @method WorkflowRunConfig getTriggerWorkflowRunConfiguration() 获取
+ * @method void setTriggerWorkflowRunConfiguration(WorkflowRunConfig $TriggerWorkflowRunConfiguration) 设置
  */
 class UpdateTriggerWorkflowRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class UpdateTriggerWorkflowRequest extends AbstractModel
     public $GeneralTaskParams;
 
     /**
+     * @var WorkflowRunConfig 
+     */
+    public $TriggerWorkflowRunConfiguration;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $WorkflowId 工作流ID
      * @param string $WorkflowName 工作流名称
@@ -104,6 +111,7 @@ class UpdateTriggerWorkflowRequest extends AbstractModel
      * @param string $BundleId BundleId项
      * @param string $BundleInfo Bundle信息
      * @param array $GeneralTaskParams 通用参数配置
+     * @param WorkflowRunConfig $TriggerWorkflowRunConfiguration 
      */
     function __construct()
     {
@@ -171,6 +179,11 @@ class UpdateTriggerWorkflowRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->GeneralTaskParams, $obj);
             }
+        }
+
+        if (array_key_exists("TriggerWorkflowRunConfiguration",$param) and $param["TriggerWorkflowRunConfiguration"] !== null) {
+            $this->TriggerWorkflowRunConfiguration = new WorkflowRunConfig();
+            $this->TriggerWorkflowRunConfiguration->deserialize($param["TriggerWorkflowRunConfiguration"]);
         }
     }
 }

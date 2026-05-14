@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 图片处理编排中使用的输入参数。
  *
- * @method MediaInputInfo getImage() 获取图片路径。
- * @method void setImage(MediaInputInfo $Image) 设置图片路径。
+ * @method string getType() 获取<p>图片类型。</p>
+ * @method void setType(string $Type) 设置<p>图片类型。</p>
+ * @method MediaInputInfo getImage() 获取<p>图片路径。</p>
+ * @method void setImage(MediaInputInfo $Image) 设置<p>图片路径。</p>
  */
 class AddOnImageInput extends AbstractModel
 {
     /**
-     * @var MediaInputInfo 图片路径。
+     * @var string <p>图片类型。</p>
+     */
+    public $Type;
+
+    /**
+     * @var MediaInputInfo <p>图片路径。</p>
      */
     public $Image;
 
     /**
-     * @param MediaInputInfo $Image 图片路径。
+     * @param string $Type <p>图片类型。</p>
+     * @param MediaInputInfo $Image <p>图片路径。</p>
      */
     function __construct()
     {
@@ -46,6 +54,10 @@ class AddOnImageInput extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
         if (array_key_exists("Image",$param) and $param["Image"] !== null) {
             $this->Image = new MediaInputInfo();
             $this->Image->deserialize($param["Image"]);

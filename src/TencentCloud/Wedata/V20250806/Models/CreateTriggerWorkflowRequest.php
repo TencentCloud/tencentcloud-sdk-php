@@ -20,90 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTriggerWorkflow请求参数结构体
  *
- * @method string getProjectId() 获取项目ID
- * @method void setProjectId(string $ProjectId) 设置项目ID
- * @method string getWorkflowName() 获取工作流名称
- * @method void setWorkflowName(string $WorkflowName) 设置工作流名称
- * @method string getParentFolderPath() 获取所属文件夹路径
- * @method void setParentFolderPath(string $ParentFolderPath) 设置所属文件夹路径
- * @method string getWorkflowDesc() 获取工作流描述
- * @method void setWorkflowDesc(string $WorkflowDesc) 设置工作流描述
- * @method string getOwnerUin() 获取工作流负责人ID
- * @method void setOwnerUin(string $OwnerUin) 设置工作流负责人ID
- * @method array getWorkflowParams() 获取工作流参数
- * @method void setWorkflowParams(array $WorkflowParams) 设置工作流参数
- * @method array getTriggerWorkflowSchedulerConfigurations() 获取统一调度信息
- * @method void setTriggerWorkflowSchedulerConfigurations(array $TriggerWorkflowSchedulerConfigurations) 设置统一调度信息
- * @method string getBundleId() 获取BundleId项
- * @method void setBundleId(string $BundleId) 设置BundleId项
- * @method string getBundleInfo() 获取Bundle信息
- * @method void setBundleInfo(string $BundleInfo) 设置Bundle信息
- * @method array getGeneralTaskParams() 获取通用参数配置
- * @method void setGeneralTaskParams(array $GeneralTaskParams) 设置通用参数配置
+ * @method string getProjectId() 获取<p>项目ID</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目ID</p>
+ * @method string getWorkflowName() 获取<p>工作流名称</p>
+ * @method void setWorkflowName(string $WorkflowName) 设置<p>工作流名称</p>
+ * @method string getParentFolderPath() 获取<p>所属文件夹路径</p>
+ * @method void setParentFolderPath(string $ParentFolderPath) 设置<p>所属文件夹路径</p>
+ * @method string getWorkflowDesc() 获取<p>工作流描述</p>
+ * @method void setWorkflowDesc(string $WorkflowDesc) 设置<p>工作流描述</p>
+ * @method string getOwnerUin() 获取<p>工作流负责人ID</p>
+ * @method void setOwnerUin(string $OwnerUin) 设置<p>工作流负责人ID</p>
+ * @method array getWorkflowParams() 获取<p>工作流参数</p>
+ * @method void setWorkflowParams(array $WorkflowParams) 设置<p>工作流参数</p>
+ * @method array getTriggerWorkflowSchedulerConfigurations() 获取<p>统一调度信息</p>
+ * @method void setTriggerWorkflowSchedulerConfigurations(array $TriggerWorkflowSchedulerConfigurations) 设置<p>统一调度信息</p>
+ * @method string getBundleId() 获取<p>BundleId项</p>
+ * @method void setBundleId(string $BundleId) 设置<p>BundleId项</p>
+ * @method string getBundleInfo() 获取<p>Bundle信息</p>
+ * @method void setBundleInfo(string $BundleInfo) 设置<p>Bundle信息</p>
+ * @method array getGeneralTaskParams() 获取<p>通用参数配置</p>
+ * @method void setGeneralTaskParams(array $GeneralTaskParams) 设置<p>通用参数配置</p>
+ * @method WorkflowRunConfig getTriggerWorkflowRunConfiguration() 获取<p>工作流调度运行配置</p>
+ * @method void setTriggerWorkflowRunConfiguration(WorkflowRunConfig $TriggerWorkflowRunConfiguration) 设置<p>工作流调度运行配置</p>
  */
 class CreateTriggerWorkflowRequest extends AbstractModel
 {
     /**
-     * @var string 项目ID
+     * @var string <p>项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var string 工作流名称
+     * @var string <p>工作流名称</p>
      */
     public $WorkflowName;
 
     /**
-     * @var string 所属文件夹路径
+     * @var string <p>所属文件夹路径</p>
      */
     public $ParentFolderPath;
 
     /**
-     * @var string 工作流描述
+     * @var string <p>工作流描述</p>
      */
     public $WorkflowDesc;
 
     /**
-     * @var string 工作流负责人ID
+     * @var string <p>工作流负责人ID</p>
      */
     public $OwnerUin;
 
     /**
-     * @var array 工作流参数
+     * @var array <p>工作流参数</p>
      */
     public $WorkflowParams;
 
     /**
-     * @var array 统一调度信息
+     * @var array <p>统一调度信息</p>
      */
     public $TriggerWorkflowSchedulerConfigurations;
 
     /**
-     * @var string BundleId项
+     * @var string <p>BundleId项</p>
      */
     public $BundleId;
 
     /**
-     * @var string Bundle信息
+     * @var string <p>Bundle信息</p>
      */
     public $BundleInfo;
 
     /**
-     * @var array 通用参数配置
+     * @var array <p>通用参数配置</p>
      */
     public $GeneralTaskParams;
 
     /**
-     * @param string $ProjectId 项目ID
-     * @param string $WorkflowName 工作流名称
-     * @param string $ParentFolderPath 所属文件夹路径
-     * @param string $WorkflowDesc 工作流描述
-     * @param string $OwnerUin 工作流负责人ID
-     * @param array $WorkflowParams 工作流参数
-     * @param array $TriggerWorkflowSchedulerConfigurations 统一调度信息
-     * @param string $BundleId BundleId项
-     * @param string $BundleInfo Bundle信息
-     * @param array $GeneralTaskParams 通用参数配置
+     * @var WorkflowRunConfig <p>工作流调度运行配置</p>
+     */
+    public $TriggerWorkflowRunConfiguration;
+
+    /**
+     * @param string $ProjectId <p>项目ID</p>
+     * @param string $WorkflowName <p>工作流名称</p>
+     * @param string $ParentFolderPath <p>所属文件夹路径</p>
+     * @param string $WorkflowDesc <p>工作流描述</p>
+     * @param string $OwnerUin <p>工作流负责人ID</p>
+     * @param array $WorkflowParams <p>工作流参数</p>
+     * @param array $TriggerWorkflowSchedulerConfigurations <p>统一调度信息</p>
+     * @param string $BundleId <p>BundleId项</p>
+     * @param string $BundleInfo <p>Bundle信息</p>
+     * @param array $GeneralTaskParams <p>通用参数配置</p>
+     * @param WorkflowRunConfig $TriggerWorkflowRunConfiguration <p>工作流调度运行配置</p>
      */
     function __construct()
     {
@@ -171,6 +179,11 @@ class CreateTriggerWorkflowRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->GeneralTaskParams, $obj);
             }
+        }
+
+        if (array_key_exists("TriggerWorkflowRunConfiguration",$param) and $param["TriggerWorkflowRunConfiguration"] !== null) {
+            $this->TriggerWorkflowRunConfiguration = new WorkflowRunConfig();
+            $this->TriggerWorkflowRunConfiguration->deserialize($param["TriggerWorkflowRunConfiguration"]);
         }
     }
 }

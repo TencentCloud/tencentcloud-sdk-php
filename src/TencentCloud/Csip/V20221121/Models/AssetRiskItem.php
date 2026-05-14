@@ -20,146 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 资产视角风险信息
  *
- * @method integer getAppId() 获取租户ID
- * @method void setAppId(integer $AppId) 设置租户ID
- * @method string getProvider() 获取云厂商
- * @method void setProvider(string $Provider) 设置云厂商
- * @method string getProviderName() 获取云厂商名称
- * @method void setProviderName(string $ProviderName) 设置云厂商名称
- * @method string getCloudAccountName() 获取云账号名称
- * @method void setCloudAccountName(string $CloudAccountName) 设置云账号名称
- * @method string getCloudAccountId() 获取云账号ID
- * @method void setCloudAccountId(string $CloudAccountId) 设置云账号ID
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getCreateTime() 获取首次发现时间
- * @method void setCreateTime(string $CreateTime) 设置首次发现时间
- * @method string getUpdateTime() 获取更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
- * @method integer getRiskStatus() 获取风险状态
- * @method void setRiskStatus(integer $RiskStatus) 设置风险状态
- * @method string getRiskTitle() 获取风险名称
- * @method void setRiskTitle(string $RiskTitle) 设置风险名称
- * @method string getCheckType() 获取检查类型
- * @method void setCheckType(string $CheckType) 设置检查类型
- * @method string getSeverity() 获取风险等级
- * @method void setSeverity(string $Severity) 设置风险等级
- * @method string getRiskRuleId() 获取风险规则ID
- * @method void setRiskRuleId(string $RiskRuleId) 设置风险规则ID
- * @method string getClassify() 获取处置分类
- * @method void setClassify(string $Classify) 设置处置分类
- * @method array getStandardTerms() 获取等保合规
- * @method void setStandardTerms(array $StandardTerms) 设置等保合规
- * @method string getAssetType() 获取资产类型
- * @method void setAssetType(string $AssetType) 设置资产类型
+ * @method integer getAppId() 获取<p>租户ID</p>
+ * @method void setAppId(integer $AppId) 设置<p>租户ID</p>
+ * @method string getProvider() 获取<p>云厂商</p>
+ * @method void setProvider(string $Provider) 设置<p>云厂商</p>
+ * @method string getProviderName() 获取<p>云厂商名称</p>
+ * @method void setProviderName(string $ProviderName) 设置<p>云厂商名称</p>
+ * @method string getCloudAccountName() 获取<p>云账号名称</p>
+ * @method void setCloudAccountName(string $CloudAccountName) 设置<p>云账号名称</p>
+ * @method string getCloudAccountId() 获取<p>云账号ID</p>
+ * @method void setCloudAccountId(string $CloudAccountId) 设置<p>云账号ID</p>
+ * @method string getInstanceName() 获取<p>实例名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称</p>
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getCreateTime() 获取<p>首次发现时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>首次发现时间</p>
+ * @method string getUpdateTime() 获取<p>更新时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
+ * @method integer getRiskStatus() 获取<p>风险状态</p>
+ * @method void setRiskStatus(integer $RiskStatus) 设置<p>风险状态</p>
+ * @method string getRiskTitle() 获取<p>风险名称</p>
+ * @method void setRiskTitle(string $RiskTitle) 设置<p>风险名称</p>
+ * @method string getCheckType() 获取<p>检查类型</p>
+ * @method void setCheckType(string $CheckType) 设置<p>检查类型</p>
+ * @method string getSeverity() 获取<p>风险等级</p>
+ * @method void setSeverity(string $Severity) 设置<p>风险等级</p>
+ * @method string getRiskRuleId() 获取<p>风险规则ID</p>
+ * @method void setRiskRuleId(string $RiskRuleId) 设置<p>风险规则ID</p>
+ * @method string getClassify() 获取<p>处置分类</p>
+ * @method void setClassify(string $Classify) 设置<p>处置分类</p>
+ * @method array getStandardTerms() 获取<p>等保合规</p>
+ * @method void setStandardTerms(array $StandardTerms) 设置<p>等保合规</p>
+ * @method string getAssetType() 获取<p>资产类型</p>
+ * @method void setAssetType(string $AssetType) 设置<p>资产类型</p>
+ * @method string getAssetTypeIconURL() 获取<p>资产类型图标</p>
+ * @method void setAssetTypeIconURL(string $AssetTypeIconURL) 设置<p>资产类型图标</p>
  */
 class AssetRiskItem extends AbstractModel
 {
     /**
-     * @var integer 租户ID
+     * @var integer <p>租户ID</p>
      */
     public $AppId;
 
     /**
-     * @var string 云厂商
+     * @var string <p>云厂商</p>
      */
     public $Provider;
 
     /**
-     * @var string 云厂商名称
+     * @var string <p>云厂商名称</p>
      */
     public $ProviderName;
 
     /**
-     * @var string 云账号名称
+     * @var string <p>云账号名称</p>
      */
     public $CloudAccountName;
 
     /**
-     * @var string 云账号ID
+     * @var string <p>云账号ID</p>
      */
     public $CloudAccountId;
 
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
      */
     public $InstanceName;
 
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 首次发现时间
+     * @var string <p>首次发现时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var integer 风险状态
+     * @var integer <p>风险状态</p>
      */
     public $RiskStatus;
 
     /**
-     * @var string 风险名称
+     * @var string <p>风险名称</p>
      */
     public $RiskTitle;
 
     /**
-     * @var string 检查类型
+     * @var string <p>检查类型</p>
      */
     public $CheckType;
 
     /**
-     * @var string 风险等级
+     * @var string <p>风险等级</p>
      */
     public $Severity;
 
     /**
-     * @var string 风险规则ID
+     * @var string <p>风险规则ID</p>
      */
     public $RiskRuleId;
 
     /**
-     * @var string 处置分类
+     * @var string <p>处置分类</p>
      */
     public $Classify;
 
     /**
-     * @var array 等保合规
+     * @var array <p>等保合规</p>
      */
     public $StandardTerms;
 
     /**
-     * @var string 资产类型
+     * @var string <p>资产类型</p>
      */
     public $AssetType;
 
     /**
-     * @param integer $AppId 租户ID
-     * @param string $Provider 云厂商
-     * @param string $ProviderName 云厂商名称
-     * @param string $CloudAccountName 云账号名称
-     * @param string $CloudAccountId 云账号ID
-     * @param string $InstanceName 实例名称
-     * @param string $InstanceId 实例ID
-     * @param string $CreateTime 首次发现时间
-     * @param string $UpdateTime 更新时间
-     * @param integer $RiskStatus 风险状态
-     * @param string $RiskTitle 风险名称
-     * @param string $CheckType 检查类型
-     * @param string $Severity 风险等级
-     * @param string $RiskRuleId 风险规则ID
-     * @param string $Classify 处置分类
-     * @param array $StandardTerms 等保合规
-     * @param string $AssetType 资产类型
+     * @var string <p>资产类型图标</p>
+     */
+    public $AssetTypeIconURL;
+
+    /**
+     * @param integer $AppId <p>租户ID</p>
+     * @param string $Provider <p>云厂商</p>
+     * @param string $ProviderName <p>云厂商名称</p>
+     * @param string $CloudAccountName <p>云账号名称</p>
+     * @param string $CloudAccountId <p>云账号ID</p>
+     * @param string $InstanceName <p>实例名称</p>
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $CreateTime <p>首次发现时间</p>
+     * @param string $UpdateTime <p>更新时间</p>
+     * @param integer $RiskStatus <p>风险状态</p>
+     * @param string $RiskTitle <p>风险名称</p>
+     * @param string $CheckType <p>检查类型</p>
+     * @param string $Severity <p>风险等级</p>
+     * @param string $RiskRuleId <p>风险规则ID</p>
+     * @param string $Classify <p>处置分类</p>
+     * @param array $StandardTerms <p>等保合规</p>
+     * @param string $AssetType <p>资产类型</p>
+     * @param string $AssetTypeIconURL <p>资产类型图标</p>
      */
     function __construct()
     {
@@ -245,6 +253,10 @@ class AssetRiskItem extends AbstractModel
 
         if (array_key_exists("AssetType",$param) and $param["AssetType"] !== null) {
             $this->AssetType = $param["AssetType"];
+        }
+
+        if (array_key_exists("AssetTypeIconURL",$param) and $param["AssetTypeIconURL"] !== null) {
+            $this->AssetTypeIconURL = $param["AssetTypeIconURL"];
         }
     }
 }

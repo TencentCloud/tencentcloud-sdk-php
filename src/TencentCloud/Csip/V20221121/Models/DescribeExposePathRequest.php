@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeExposePath请求参数结构体
  *
- * @method array getMemberId() 获取集团账号的成员id
- * @method void setMemberId(array $MemberId) 设置集团账号的成员id
+ * @method array getMemberId() 获取<p>集团账号的成员id</p>
+ * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
  * @method string getAssetId() 获取资产ID
  * @method void setAssetId(string $AssetId) 设置资产ID
  * @method string getIp() 获取资产IP
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeExposePathRequest extends AbstractModel
 {
     /**
-     * @var array 集团账号的成员id
+     * @var array <p>集团账号的成员id</p>
      */
     public $MemberId;
 
@@ -59,7 +59,7 @@ class DescribeExposePathRequest extends AbstractModel
     public $Port;
 
     /**
-     * @param array $MemberId 集团账号的成员id
+     * @param array $MemberId <p>集团账号的成员id</p>
      * @param string $AssetId 资产ID
      * @param string $Ip 资产IP
      * @param string $Domain 资产域名

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IP画像出参
  *
- * @method integer getCode() 获取返回码
- * @method void setCode(integer $Code) 设置返回码
- * @method string getMessage() 获取返回消息
- * @method void setMessage(string $Message) 设置返回消息
- * @method ManageIPPortraitRiskValueOutput getValue() 获取结果
- * @method void setValue(ManageIPPortraitRiskValueOutput $Value) 设置结果
+ * @method integer getCode() 获取<p>错误码，0 表示成功，非0表示失败错误码。<br>0：成功<br>1002：参数错误<br>6000：系统内部错误</p>
+ * @method void setCode(integer $Code) 设置<p>错误码，0 表示成功，非0表示失败错误码。<br>0：成功<br>1002：参数错误<br>6000：系统内部错误</p>
+ * @method string getMessage() 获取<p>返回消息</p>
+ * @method void setMessage(string $Message) 设置<p>返回消息</p>
+ * @method ManageIPPortraitRiskValueOutput getValue() 获取<p>结果</p>
+ * @method void setValue(ManageIPPortraitRiskValueOutput $Value) 设置<p>结果</p>
  */
 class ManageIPPortraitRiskOutput extends AbstractModel
 {
     /**
-     * @var integer 返回码
+     * @var integer <p>错误码，0 表示成功，非0表示失败错误码。<br>0：成功<br>1002：参数错误<br>6000：系统内部错误</p>
      */
     public $Code;
 
     /**
-     * @var string 返回消息
+     * @var string <p>返回消息</p>
      */
     public $Message;
 
     /**
-     * @var ManageIPPortraitRiskValueOutput 结果
+     * @var ManageIPPortraitRiskValueOutput <p>结果</p>
      */
     public $Value;
 
     /**
-     * @param integer $Code 返回码
-     * @param string $Message 返回消息
-     * @param ManageIPPortraitRiskValueOutput $Value 结果
+     * @param integer $Code <p>错误码，0 表示成功，非0表示失败错误码。<br>0：成功<br>1002：参数错误<br>6000：系统内部错误</p>
+     * @param string $Message <p>返回消息</p>
+     * @param ManageIPPortraitRiskValueOutput $Value <p>结果</p>
      */
     function __construct()
     {

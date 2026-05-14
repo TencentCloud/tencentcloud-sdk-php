@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUserById请求参数结构体
  *
- * @method string getUserStoreId() 获取用户目录ID
- * @method void setUserStoreId(string $UserStoreId) 设置用户目录ID
- * @method string getUserId() 获取用户ID
- * @method void setUserId(string $UserId) 设置用户ID
- * @method boolean getOriginal() 获取返回信息是否为原文
-
-<li> **false** </li>	默认，返回信息为脱敏信息
-<li> **true** </li>	返回用户信息原文
- * @method void setOriginal(boolean $Original) 设置返回信息是否为原文
-
-<li> **false** </li>	默认，返回信息为脱敏信息
-<li> **true** </li>	返回用户信息原文
+ * @method string getUserStoreId() 获取<p>用户目录ID</p>
+ * @method void setUserStoreId(string $UserStoreId) 设置<p>用户目录ID</p>
+ * @method string getUserId() 获取<p>用户ID</p>
+ * @method void setUserId(string $UserId) 设置<p>用户ID</p>
+ * @method boolean getOriginal() 获取<p>返回信息是否为原文</p><li> **false** </li>    默认，返回信息为脱敏信息<li> **true** </li>    返回用户信息原文
+ * @method void setOriginal(boolean $Original) 设置<p>返回信息是否为原文</p><li> **false** </li>    默认，返回信息为脱敏信息<li> **true** </li>    返回用户信息原文
  */
 class DescribeUserByIdRequest extends AbstractModel
 {
     /**
-     * @var string 用户目录ID
+     * @var string <p>用户目录ID</p>
      */
     public $UserStoreId;
 
     /**
-     * @var string 用户ID
+     * @var string <p>用户ID</p>
      */
     public $UserId;
 
     /**
-     * @var boolean 返回信息是否为原文
-
-<li> **false** </li>	默认，返回信息为脱敏信息
-<li> **true** </li>	返回用户信息原文
+     * @var boolean <p>返回信息是否为原文</p><li> **false** </li>    默认，返回信息为脱敏信息<li> **true** </li>    返回用户信息原文
      */
     public $Original;
 
     /**
-     * @param string $UserStoreId 用户目录ID
-     * @param string $UserId 用户ID
-     * @param boolean $Original 返回信息是否为原文
-
-<li> **false** </li>	默认，返回信息为脱敏信息
-<li> **true** </li>	返回用户信息原文
+     * @param string $UserStoreId <p>用户目录ID</p>
+     * @param string $UserId <p>用户ID</p>
+     * @param boolean $Original <p>返回信息是否为原文</p><li> **false** </li>    默认，返回信息为脱敏信息<li> **true** </li>    返回用户信息原文
      */
     function __construct()
     {

@@ -20,473 +20,509 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 用户信息
  *
- * @method string getUserId() 获取用户ID
- * @method void setUserId(string $UserId) 设置用户ID
- * @method string getUserName() 获取用户名
+ * @method string getUserId() 获取<p>用户ID</p>
+ * @method void setUserId(string $UserId) 设置<p>用户ID</p>
+ * @method string getUserName() 获取<p>用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserName(string $UserName) 设置用户名
+ * @method void setUserName(string $UserName) 设置<p>用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPhoneNumber() 获取手机号
+ * @method string getPhoneNumber() 获取<p>手机号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPhoneNumber(string $PhoneNumber) 设置手机号
+ * @method void setPhoneNumber(string $PhoneNumber) 设置<p>手机号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEmail() 获取邮箱
+ * @method string getEmail() 获取<p>邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEmail(string $Email) 设置邮箱
+ * @method void setEmail(string $Email) 设置<p>邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLastSignOn() 获取上次登录时间
+ * @method integer getLastSignOn() 获取<p>上次登录时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLastSignOn(integer $LastSignOn) 设置上次登录时间
+ * @method void setLastSignOn(integer $LastSignOn) 设置<p>上次登录时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCreatedDate() 获取创建时间
- * @method void setCreatedDate(integer $CreatedDate) 设置创建时间
- * @method string getStatus() 获取状态
- * @method void setStatus(string $Status) 设置状态
- * @method string getUserDataSourceEnum() 获取用户来源
- * @method void setUserDataSourceEnum(string $UserDataSourceEnum) 设置用户来源
- * @method string getNickname() 获取昵称
+ * @method integer getCreatedDate() 获取<p>创建时间</p>
+ * @method void setCreatedDate(integer $CreatedDate) 设置<p>创建时间</p>
+ * @method string getStatus() 获取<p>状态</p>
+ * @method void setStatus(string $Status) 设置<p>状态</p>
+ * @method string getUserDataSourceEnum() 获取<p>用户来源</p>
+ * @method void setUserDataSourceEnum(string $UserDataSourceEnum) 设置<p>用户来源</p>
+ * @method string getNickname() 获取<p>昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNickname(string $Nickname) 设置昵称
+ * @method void setNickname(string $Nickname) 设置<p>昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAddress() 获取地址
+ * @method string getAddress() 获取<p>地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAddress(string $Address) 设置地址
+ * @method void setAddress(string $Address) 设置<p>地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getBirthdate() 获取生日
+ * @method integer getBirthdate() 获取<p>生日</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBirthdate(integer $Birthdate) 设置生日
+ * @method void setBirthdate(integer $Birthdate) 设置<p>生日</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getUserGroups() 获取用户组ID
+ * @method array getUserGroups() 获取<p>用户组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserGroups(array $UserGroups) 设置用户组ID
+ * @method void setUserGroups(array $UserGroups) 设置<p>用户组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLastModifiedDate() 获取上次修改时间
+ * @method array getUserGroupNames() 获取<p>用户组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLastModifiedDate(integer $LastModifiedDate) 设置上次修改时间
+ * @method void setUserGroupNames(array $UserGroupNames) 设置<p>用户组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getCustomAttributes() 获取自定义属性
- * @method void setCustomAttributes(array $CustomAttributes) 设置自定义属性
- * @method string getResidentIdentityCard() 获取身份证号
+ * @method integer getLastModifiedDate() 获取<p>上次修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResidentIdentityCard(string $ResidentIdentityCard) 设置身份证号
+ * @method void setLastModifiedDate(integer $LastModifiedDate) 设置<p>上次修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getQqOpenId() 获取QQ的OpenId
+ * @method array getCustomAttributes() 获取<p>自定义属性</p>
+ * @method void setCustomAttributes(array $CustomAttributes) 设置<p>自定义属性</p>
+ * @method string getResidentIdentityCard() 获取<p>身份证号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQqOpenId(string $QqOpenId) 设置QQ的OpenId
+ * @method void setResidentIdentityCard(string $ResidentIdentityCard) 设置<p>身份证号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getQqUnionId() 获取QQ的UnionId
+ * @method string getQqOpenId() 获取<p>QQ的OpenId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQqUnionId(string $QqUnionId) 设置QQ的UnionId
+ * @method void setQqOpenId(string $QqOpenId) 设置<p>QQ的OpenId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWechatOpenId() 获取微信的WechatOpenId
+ * @method string getQqUnionId() 获取<p>QQ的UnionId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWechatOpenId(string $WechatOpenId) 设置微信的WechatOpenId
+ * @method void setQqUnionId(string $QqUnionId) 设置<p>QQ的UnionId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWechatUnionId() 获取微信的WechatUnionId
+ * @method string getWechatOpenId() 获取<p>微信的WechatOpenId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWechatUnionId(string $WechatUnionId) 设置微信的WechatUnionId
+ * @method void setWechatOpenId(string $WechatOpenId) 设置<p>微信的WechatOpenId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAlipayUserId() 获取支付宝的AlipayUserId
+ * @method string getWechatUnionId() 获取<p>微信的WechatUnionId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlipayUserId(string $AlipayUserId) 设置支付宝的AlipayUserId
+ * @method void setWechatUnionId(string $WechatUnionId) 设置<p>微信的WechatUnionId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWeComUserId() 获取企业微信的WeComUserId
+ * @method string getAlipayUserId() 获取<p>支付宝的AlipayUserId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWeComUserId(string $WeComUserId) 设置企业微信的WeComUserId
+ * @method void setAlipayUserId(string $AlipayUserId) 设置<p>支付宝的AlipayUserId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDescription() 获取描述
+ * @method string getWeComUserId() 获取<p>企业微信的WeComUserId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescription(string $Description) 设置描述
+ * @method void setWeComUserId(string $WeComUserId) 设置<p>企业微信的WeComUserId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取姓名
+ * @method string getDescription() 获取<p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置姓名
+ * @method void setDescription(string $Description) 设置<p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLocale() 获取坐标
+ * @method string getName() 获取<p>姓名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLocale(string $Locale) 设置坐标
+ * @method void setName(string $Name) 设置<p>姓名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getGender() 获取性别
+ * @method string getLocale() 获取<p>坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGender(string $Gender) 设置性别
+ * @method void setLocale(string $Locale) 设置<p>坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIdentityVerificationMethod() 获取实名核验方式
+ * @method string getGender() 获取<p>性别</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIdentityVerificationMethod(string $IdentityVerificationMethod) 设置实名核验方式
+ * @method void setGender(string $Gender) 设置<p>性别</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getIdentityVerified() 获取是否已经实名核验
- * @method void setIdentityVerified(boolean $IdentityVerified) 设置是否已经实名核验
- * @method string getJob() 获取工作
+ * @method string getIdentityVerificationMethod() 获取<p>实名核验方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setJob(string $Job) 设置工作
+ * @method void setIdentityVerificationMethod(string $IdentityVerificationMethod) 设置<p>实名核验方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNationality() 获取国家
+ * @method boolean getIdentityVerified() 获取<p>是否已经实名核验</p>
+ * @method void setIdentityVerified(boolean $IdentityVerified) 设置<p>是否已经实名核验</p>
+ * @method string getJob() 获取<p>工作</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNationality(string $Nationality) 设置国家
+ * @method void setJob(string $Job) 设置<p>工作</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getPrimary() 获取是否主账号（进行过账号融合后，主账号为true，从账号为false）
- * @method void setPrimary(boolean $Primary) 设置是否主账号（进行过账号融合后，主账号为true，从账号为false）
- * @method string getZone() 获取时区
+ * @method string getNationality() 获取<p>国家</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setZone(string $Zone) 设置时区
+ * @method void setNationality(string $Nationality) 设置<p>国家</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getAlreadyFirstLogin() 获取是否已经首次登录
- * @method void setAlreadyFirstLogin(boolean $AlreadyFirstLogin) 设置是否已经首次登录
- * @method string getTenantId() 获取租户id
- * @method void setTenantId(string $TenantId) 设置租户id
- * @method string getUserStoreId() 获取用户目录id
- * @method void setUserStoreId(string $UserStoreId) 设置用户目录id
- * @method integer getVersion() 获取版本
+ * @method boolean getPrimary() 获取<p>是否主账号（进行过账号融合后，主账号为true，从账号为false）</p>
+ * @method void setPrimary(boolean $Primary) 设置<p>是否主账号（进行过账号融合后，主账号为true，从账号为false）</p>
+ * @method string getZone() 获取<p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVersion(integer $Version) 设置版本
+ * @method void setZone(string $Zone) 设置<p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLockType() 获取锁定类型（分为管理员锁定，和登录策略锁定）
+ * @method boolean getAlreadyFirstLogin() 获取<p>是否已经首次登录</p>
+ * @method void setAlreadyFirstLogin(boolean $AlreadyFirstLogin) 设置<p>是否已经首次登录</p>
+ * @method string getTenantId() 获取<p>租户id</p>
+ * @method void setTenantId(string $TenantId) 设置<p>租户id</p>
+ * @method string getUserStoreId() 获取<p>用户目录id</p>
+ * @method void setUserStoreId(string $UserStoreId) 设置<p>用户目录id</p>
+ * @method integer getVersion() 获取<p>版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLockType(string $LockType) 设置锁定类型（分为管理员锁定，和登录策略锁定）
+ * @method void setVersion(integer $Version) 设置<p>版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLockTime() 获取锁定时间点
+ * @method string getLockType() 获取<p>锁定类型（分为管理员锁定，和登录策略锁定）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLockTime(integer $LockTime) 设置锁定时间点
+ * @method void setLockType(string $LockType) 设置<p>锁定类型（分为管理员锁定，和登录策略锁定）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIndexedAttribute1() 获取索引字段1
+ * @method integer getLockTime() 获取<p>锁定时间点</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndexedAttribute1(string $IndexedAttribute1) 设置索引字段1
+ * @method void setLockTime(integer $LockTime) 设置<p>锁定时间点</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIndexedAttribute2() 获取索引字段2
+ * @method string getIndexedAttribute1() 获取<p>索引字段1</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndexedAttribute2(string $IndexedAttribute2) 设置索引字段2
+ * @method void setIndexedAttribute1(string $IndexedAttribute1) 设置<p>索引字段1</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIndexedAttribute3() 获取索引字段3
+ * @method string getIndexedAttribute2() 获取<p>索引字段2</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndexedAttribute3(string $IndexedAttribute3) 设置索引字段3
+ * @method void setIndexedAttribute2(string $IndexedAttribute2) 设置<p>索引字段2</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIndexedAttribute4() 获取索引字段4
+ * @method string getIndexedAttribute3() 获取<p>索引字段3</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndexedAttribute4(string $IndexedAttribute4) 设置索引字段4
+ * @method void setIndexedAttribute3(string $IndexedAttribute3) 设置<p>索引字段3</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIndexedAttribute5() 获取索引字段5
+ * @method string getIndexedAttribute4() 获取<p>索引字段4</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndexedAttribute5(string $IndexedAttribute5) 设置索引字段5
+ * @method void setIndexedAttribute4(string $IndexedAttribute4) 设置<p>索引字段4</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIndexedAttribute5() 获取<p>索引字段5</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIndexedAttribute5(string $IndexedAttribute5) 设置<p>索引字段5</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getUserOrgs() 获取<p>用户所属组织机构ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserOrgs(array $UserOrgs) 设置<p>用户所属组织机构ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getWeComUserOrgs() 获取<p>用户所属企业微信组织机构</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWeComUserOrgs(array $WeComUserOrgs) 设置<p>用户所属企业微信组织机构</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class User extends AbstractModel
 {
     /**
-     * @var string 用户ID
+     * @var string <p>用户ID</p>
      */
     public $UserId;
 
     /**
-     * @var string 用户名
+     * @var string <p>用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserName;
 
     /**
-     * @var string 手机号
+     * @var string <p>手机号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PhoneNumber;
 
     /**
-     * @var string 邮箱
+     * @var string <p>邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Email;
 
     /**
-     * @var integer 上次登录时间
+     * @var integer <p>上次登录时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastSignOn;
 
     /**
-     * @var integer 创建时间
+     * @var integer <p>创建时间</p>
      */
     public $CreatedDate;
 
     /**
-     * @var string 状态
+     * @var string <p>状态</p>
      */
     public $Status;
 
     /**
-     * @var string 用户来源
+     * @var string <p>用户来源</p>
      */
     public $UserDataSourceEnum;
 
     /**
-     * @var string 昵称
+     * @var string <p>昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Nickname;
 
     /**
-     * @var string 地址
+     * @var string <p>地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Address;
 
     /**
-     * @var integer 生日
+     * @var integer <p>生日</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Birthdate;
 
     /**
-     * @var array 用户组ID
+     * @var array <p>用户组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserGroups;
 
     /**
-     * @var integer 上次修改时间
+     * @var array <p>用户组名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserGroupNames;
+
+    /**
+     * @var integer <p>上次修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastModifiedDate;
 
     /**
-     * @var array 自定义属性
+     * @var array <p>自定义属性</p>
      */
     public $CustomAttributes;
 
     /**
-     * @var string 身份证号
+     * @var string <p>身份证号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResidentIdentityCard;
 
     /**
-     * @var string QQ的OpenId
+     * @var string <p>QQ的OpenId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QqOpenId;
 
     /**
-     * @var string QQ的UnionId
+     * @var string <p>QQ的UnionId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QqUnionId;
 
     /**
-     * @var string 微信的WechatOpenId
+     * @var string <p>微信的WechatOpenId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WechatOpenId;
 
     /**
-     * @var string 微信的WechatUnionId
+     * @var string <p>微信的WechatUnionId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WechatUnionId;
 
     /**
-     * @var string 支付宝的AlipayUserId
+     * @var string <p>支付宝的AlipayUserId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlipayUserId;
 
     /**
-     * @var string 企业微信的WeComUserId
+     * @var string <p>企业微信的WeComUserId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WeComUserId;
 
     /**
-     * @var string 描述
+     * @var string <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
-     * @var string 姓名
+     * @var string <p>姓名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var string 坐标
+     * @var string <p>坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Locale;
 
     /**
-     * @var string 性别
+     * @var string <p>性别</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Gender;
 
     /**
-     * @var string 实名核验方式
+     * @var string <p>实名核验方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdentityVerificationMethod;
 
     /**
-     * @var boolean 是否已经实名核验
+     * @var boolean <p>是否已经实名核验</p>
      */
     public $IdentityVerified;
 
     /**
-     * @var string 工作
+     * @var string <p>工作</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Job;
 
     /**
-     * @var string 国家
+     * @var string <p>国家</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Nationality;
 
     /**
-     * @var boolean 是否主账号（进行过账号融合后，主账号为true，从账号为false）
+     * @var boolean <p>是否主账号（进行过账号融合后，主账号为true，从账号为false）</p>
      */
     public $Primary;
 
     /**
-     * @var string 时区
+     * @var string <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
     /**
-     * @var boolean 是否已经首次登录
+     * @var boolean <p>是否已经首次登录</p>
      */
     public $AlreadyFirstLogin;
 
     /**
-     * @var string 租户id
+     * @var string <p>租户id</p>
      */
     public $TenantId;
 
     /**
-     * @var string 用户目录id
+     * @var string <p>用户目录id</p>
      */
     public $UserStoreId;
 
     /**
-     * @var integer 版本
+     * @var integer <p>版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
-     * @var string 锁定类型（分为管理员锁定，和登录策略锁定）
+     * @var string <p>锁定类型（分为管理员锁定，和登录策略锁定）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LockType;
 
     /**
-     * @var integer 锁定时间点
+     * @var integer <p>锁定时间点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LockTime;
 
     /**
-     * @var string 索引字段1
+     * @var string <p>索引字段1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexedAttribute1;
 
     /**
-     * @var string 索引字段2
+     * @var string <p>索引字段2</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexedAttribute2;
 
     /**
-     * @var string 索引字段3
+     * @var string <p>索引字段3</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexedAttribute3;
 
     /**
-     * @var string 索引字段4
+     * @var string <p>索引字段4</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexedAttribute4;
 
     /**
-     * @var string 索引字段5
+     * @var string <p>索引字段5</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexedAttribute5;
 
     /**
-     * @param string $UserId 用户ID
-     * @param string $UserName 用户名
+     * @var array <p>用户所属组织机构ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PhoneNumber 手机号
+     */
+    public $UserOrgs;
+
+    /**
+     * @var array <p>用户所属企业微信组织机构</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Email 邮箱
+     */
+    public $WeComUserOrgs;
+
+    /**
+     * @param string $UserId <p>用户ID</p>
+     * @param string $UserName <p>用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $LastSignOn 上次登录时间
+     * @param string $PhoneNumber <p>手机号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CreatedDate 创建时间
-     * @param string $Status 状态
-     * @param string $UserDataSourceEnum 用户来源
-     * @param string $Nickname 昵称
+     * @param string $Email <p>邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Address 地址
+     * @param integer $LastSignOn <p>上次登录时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Birthdate 生日
+     * @param integer $CreatedDate <p>创建时间</p>
+     * @param string $Status <p>状态</p>
+     * @param string $UserDataSourceEnum <p>用户来源</p>
+     * @param string $Nickname <p>昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $UserGroups 用户组ID
+     * @param string $Address <p>地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $LastModifiedDate 上次修改时间
+     * @param integer $Birthdate <p>生日</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $CustomAttributes 自定义属性
-     * @param string $ResidentIdentityCard 身份证号
+     * @param array $UserGroups <p>用户组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $QqOpenId QQ的OpenId
+     * @param array $UserGroupNames <p>用户组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $QqUnionId QQ的UnionId
+     * @param integer $LastModifiedDate <p>上次修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WechatOpenId 微信的WechatOpenId
+     * @param array $CustomAttributes <p>自定义属性</p>
+     * @param string $ResidentIdentityCard <p>身份证号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WechatUnionId 微信的WechatUnionId
+     * @param string $QqOpenId <p>QQ的OpenId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AlipayUserId 支付宝的AlipayUserId
+     * @param string $QqUnionId <p>QQ的UnionId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WeComUserId 企业微信的WeComUserId
+     * @param string $WechatOpenId <p>微信的WechatOpenId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Description 描述
+     * @param string $WechatUnionId <p>微信的WechatUnionId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 姓名
+     * @param string $AlipayUserId <p>支付宝的AlipayUserId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Locale 坐标
+     * @param string $WeComUserId <p>企业微信的WeComUserId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Gender 性别
+     * @param string $Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IdentityVerificationMethod 实名核验方式
+     * @param string $Name <p>姓名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $IdentityVerified 是否已经实名核验
-     * @param string $Job 工作
+     * @param string $Locale <p>坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Nationality 国家
+     * @param string $Gender <p>性别</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $Primary 是否主账号（进行过账号融合后，主账号为true，从账号为false）
-     * @param string $Zone 时区
+     * @param string $IdentityVerificationMethod <p>实名核验方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $AlreadyFirstLogin 是否已经首次登录
-     * @param string $TenantId 租户id
-     * @param string $UserStoreId 用户目录id
-     * @param integer $Version 版本
+     * @param boolean $IdentityVerified <p>是否已经实名核验</p>
+     * @param string $Job <p>工作</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LockType 锁定类型（分为管理员锁定，和登录策略锁定）
+     * @param string $Nationality <p>国家</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $LockTime 锁定时间点
+     * @param boolean $Primary <p>是否主账号（进行过账号融合后，主账号为true，从账号为false）</p>
+     * @param string $Zone <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IndexedAttribute1 索引字段1
+     * @param boolean $AlreadyFirstLogin <p>是否已经首次登录</p>
+     * @param string $TenantId <p>租户id</p>
+     * @param string $UserStoreId <p>用户目录id</p>
+     * @param integer $Version <p>版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IndexedAttribute2 索引字段2
+     * @param string $LockType <p>锁定类型（分为管理员锁定，和登录策略锁定）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IndexedAttribute3 索引字段3
+     * @param integer $LockTime <p>锁定时间点</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IndexedAttribute4 索引字段4
+     * @param string $IndexedAttribute1 <p>索引字段1</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IndexedAttribute5 索引字段5
+     * @param string $IndexedAttribute2 <p>索引字段2</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IndexedAttribute3 <p>索引字段3</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IndexedAttribute4 <p>索引字段4</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IndexedAttribute5 <p>索引字段5</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $UserOrgs <p>用户所属组织机构ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $WeComUserOrgs <p>用户所属企业微信组织机构</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -548,6 +584,10 @@ class User extends AbstractModel
 
         if (array_key_exists("UserGroups",$param) and $param["UserGroups"] !== null) {
             $this->UserGroups = $param["UserGroups"];
+        }
+
+        if (array_key_exists("UserGroupNames",$param) and $param["UserGroupNames"] !== null) {
+            $this->UserGroupNames = $param["UserGroupNames"];
         }
 
         if (array_key_exists("LastModifiedDate",$param) and $param["LastModifiedDate"] !== null) {
@@ -673,6 +713,14 @@ class User extends AbstractModel
 
         if (array_key_exists("IndexedAttribute5",$param) and $param["IndexedAttribute5"] !== null) {
             $this->IndexedAttribute5 = $param["IndexedAttribute5"];
+        }
+
+        if (array_key_exists("UserOrgs",$param) and $param["UserOrgs"] !== null) {
+            $this->UserOrgs = $param["UserOrgs"];
+        }
+
+        if (array_key_exists("WeComUserOrgs",$param) and $param["WeComUserOrgs"] !== null) {
+            $this->WeComUserOrgs = $param["WeComUserOrgs"];
         }
     }
 }

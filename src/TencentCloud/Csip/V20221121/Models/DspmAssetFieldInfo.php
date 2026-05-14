@@ -20,82 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * dspm资产字段信息
  *
- * @method string getAssetId() 获取资产实例id
- * @method void setAssetId(string $AssetId) 设置资产实例id
- * @method string getDbName() 获取数据库名称
- * @method void setDbName(string $DbName) 设置数据库名称
- * @method string getSchemaName() 获取schema名
- * @method void setSchemaName(string $SchemaName) 设置schema名
- * @method string getTableName() 获取表名
- * @method void setTableName(string $TableName) 设置表名
- * @method string getFieldName() 获取字段名
- * @method void setFieldName(string $FieldName) 设置字段名
- * @method array getRuleIds() 获取数据项id集合
- * @method void setRuleIds(array $RuleIds) 设置数据项id集合
- * @method array getRuleNames() 获取数据项名称集合
- * @method void setRuleNames(array $RuleNames) 设置数据项名称集合
- * @method array getCategoryIds() 获取分类id集合
- * @method void setCategoryIds(array $CategoryIds) 设置分类id集合
- * @method array getCategoryNames() 获取分类名称集合
- * @method void setCategoryNames(array $CategoryNames) 设置分类名称集合
+ * @method string getAssetId() 获取<p>资产实例id</p>
+ * @method void setAssetId(string $AssetId) 设置<p>资产实例id</p>
+ * @method string getDbName() 获取<p>数据库名称</p>
+ * @method void setDbName(string $DbName) 设置<p>数据库名称</p>
+ * @method string getSchemaName() 获取<p>schema名</p>
+ * @method void setSchemaName(string $SchemaName) 设置<p>schema名</p>
+ * @method string getTableName() 获取<p>表名</p>
+ * @method void setTableName(string $TableName) 设置<p>表名</p>
+ * @method string getFieldName() 获取<p>字段名</p>
+ * @method void setFieldName(string $FieldName) 设置<p>字段名</p>
+ * @method array getRuleIds() 获取<p>数据项id集合</p>
+ * @method void setRuleIds(array $RuleIds) 设置<p>数据项id集合</p>
+ * @method array getRuleNames() 获取<p>数据项名称集合</p>
+ * @method void setRuleNames(array $RuleNames) 设置<p>数据项名称集合</p>
+ * @method array getCategoryIds() 获取<p>分类id集合</p>
+ * @method void setCategoryIds(array $CategoryIds) 设置<p>分类id集合</p>
+ * @method array getCategoryNames() 获取<p>分类名称集合</p>
+ * @method void setCategoryNames(array $CategoryNames) 设置<p>分类名称集合</p>
+ * @method array getCategoryDetails() 获取<p>分类详情</p>
+ * @method void setCategoryDetails(array $CategoryDetails) 设置<p>分类详情</p>
+ * @method string getFieldComment() 获取<p>字段注释</p>
+ * @method void setFieldComment(string $FieldComment) 设置<p>字段注释</p>
  */
 class DspmAssetFieldInfo extends AbstractModel
 {
     /**
-     * @var string 资产实例id
+     * @var string <p>资产实例id</p>
      */
     public $AssetId;
 
     /**
-     * @var string 数据库名称
+     * @var string <p>数据库名称</p>
      */
     public $DbName;
 
     /**
-     * @var string schema名
+     * @var string <p>schema名</p>
      */
     public $SchemaName;
 
     /**
-     * @var string 表名
+     * @var string <p>表名</p>
      */
     public $TableName;
 
     /**
-     * @var string 字段名
+     * @var string <p>字段名</p>
      */
     public $FieldName;
 
     /**
-     * @var array 数据项id集合
+     * @var array <p>数据项id集合</p>
      */
     public $RuleIds;
 
     /**
-     * @var array 数据项名称集合
+     * @var array <p>数据项名称集合</p>
      */
     public $RuleNames;
 
     /**
-     * @var array 分类id集合
+     * @var array <p>分类id集合</p>
      */
     public $CategoryIds;
 
     /**
-     * @var array 分类名称集合
+     * @var array <p>分类名称集合</p>
      */
     public $CategoryNames;
 
     /**
-     * @param string $AssetId 资产实例id
-     * @param string $DbName 数据库名称
-     * @param string $SchemaName schema名
-     * @param string $TableName 表名
-     * @param string $FieldName 字段名
-     * @param array $RuleIds 数据项id集合
-     * @param array $RuleNames 数据项名称集合
-     * @param array $CategoryIds 分类id集合
-     * @param array $CategoryNames 分类名称集合
+     * @var array <p>分类详情</p>
+     */
+    public $CategoryDetails;
+
+    /**
+     * @var string <p>字段注释</p>
+     */
+    public $FieldComment;
+
+    /**
+     * @param string $AssetId <p>资产实例id</p>
+     * @param string $DbName <p>数据库名称</p>
+     * @param string $SchemaName <p>schema名</p>
+     * @param string $TableName <p>表名</p>
+     * @param string $FieldName <p>字段名</p>
+     * @param array $RuleIds <p>数据项id集合</p>
+     * @param array $RuleNames <p>数据项名称集合</p>
+     * @param array $CategoryIds <p>分类id集合</p>
+     * @param array $CategoryNames <p>分类名称集合</p>
+     * @param array $CategoryDetails <p>分类详情</p>
+     * @param string $FieldComment <p>字段注释</p>
      */
     function __construct()
     {
@@ -144,6 +160,19 @@ class DspmAssetFieldInfo extends AbstractModel
 
         if (array_key_exists("CategoryNames",$param) and $param["CategoryNames"] !== null) {
             $this->CategoryNames = $param["CategoryNames"];
+        }
+
+        if (array_key_exists("CategoryDetails",$param) and $param["CategoryDetails"] !== null) {
+            $this->CategoryDetails = [];
+            foreach ($param["CategoryDetails"] as $key => $value){
+                $obj = new DspmIdentifyCategoryDetail();
+                $obj->deserialize($value);
+                array_push($this->CategoryDetails, $obj);
+            }
+        }
+
+        if (array_key_exists("FieldComment",$param) and $param["FieldComment"] !== null) {
+            $this->FieldComment = $param["FieldComment"];
         }
     }
 }

@@ -20,37 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSeal返回参数结构体
  *
- * @method string getSealId() 获取电子印章ID，为32位字符串。
-建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
-可登录腾讯电子签控制台，在 "印章"->"印章中心"选择查看的印章，在"印章详情" 中查看某个印章的SealId(在页面中展示为印章ID)。
- * @method void setSealId(string $SealId) 设置电子印章ID，为32位字符串。
-建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
-可登录腾讯电子签控制台，在 "印章"->"印章中心"选择查看的印章，在"印章详情" 中查看某个印章的SealId(在页面中展示为印章ID)。
- * @method string getSealOperatorVerifyPath() 获取人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。
- * @method void setSealOperatorVerifyPath(string $SealOperatorVerifyPath) 设置人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。
- * @method string getSealOperatorVerifyQrcodeUrl() 获取人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。
- * @method void setSealOperatorVerifyQrcodeUrl(string $SealOperatorVerifyQrcodeUrl) 设置人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。
+ * @method string getSealId() 获取<p>电子印章ID，为32位字符串。<br>建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。<br>可登录腾讯电子签控制台，在 &quot;印章&quot;-&gt;&quot;印章中心&quot;选择查看的印章，在&quot;印章详情&quot; 中查看某个印章的SealId(在页面中展示为印章ID)。</p>
+ * @method void setSealId(string $SealId) 设置<p>电子印章ID，为32位字符串。<br>建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。<br>可登录腾讯电子签控制台，在 &quot;印章&quot;-&gt;&quot;印章中心&quot;选择查看的印章，在&quot;印章详情&quot; 中查看某个印章的SealId(在页面中展示为印章ID)。</p>
+ * @method string getSealOperatorVerifyPath() 获取<p>人脸验证操作人链接，用法可以参考&quot;<a href="https://qian.tencent.com/developers/company/openwxminiprogram/">跳转电子签小程序配置</a>&quot;，默认为空。</p>
+ * @method void setSealOperatorVerifyPath(string $SealOperatorVerifyPath) 设置<p>人脸验证操作人链接，用法可以参考&quot;<a href="https://qian.tencent.com/developers/company/openwxminiprogram/">跳转电子签小程序配置</a>&quot;，默认为空。</p>
+ * @method string getSealOperatorVerifyQrcodeUrl() 获取<p>人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。</p>
+ * @method void setSealOperatorVerifyQrcodeUrl(string $SealOperatorVerifyQrcodeUrl) 设置<p>人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。</p>
+ * @method string getPreviewFileUrl() 获取<p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果图片链接。</p>
+ * @method void setPreviewFileUrl(string $PreviewFileUrl) 设置<p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果图片链接。</p>
+ * @method string getPreviewPdfUrl() 获取<p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果PDF文件链接。</p>
+ * @method void setPreviewPdfUrl(string $PreviewPdfUrl) 设置<p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果PDF文件链接。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateSealResponse extends AbstractModel
 {
     /**
-     * @var string 电子印章ID，为32位字符串。
-建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
-可登录腾讯电子签控制台，在 "印章"->"印章中心"选择查看的印章，在"印章详情" 中查看某个印章的SealId(在页面中展示为印章ID)。
+     * @var string <p>电子印章ID，为32位字符串。<br>建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。<br>可登录腾讯电子签控制台，在 &quot;印章&quot;-&gt;&quot;印章中心&quot;选择查看的印章，在&quot;印章详情&quot; 中查看某个印章的SealId(在页面中展示为印章ID)。</p>
      */
     public $SealId;
 
     /**
-     * @var string 人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。
+     * @var string <p>人脸验证操作人链接，用法可以参考&quot;<a href="https://qian.tencent.com/developers/company/openwxminiprogram/">跳转电子签小程序配置</a>&quot;，默认为空。</p>
      */
     public $SealOperatorVerifyPath;
 
     /**
-     * @var string 人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。
+     * @var string <p>人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。</p>
      */
     public $SealOperatorVerifyQrcodeUrl;
+
+    /**
+     * @var string <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果图片链接。</p>
+     */
+    public $PreviewFileUrl;
+
+    /**
+     * @var string <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果PDF文件链接。</p>
+     */
+    public $PreviewPdfUrl;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -58,11 +66,11 @@ class CreateSealResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $SealId 电子印章ID，为32位字符串。
-建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
-可登录腾讯电子签控制台，在 "印章"->"印章中心"选择查看的印章，在"印章详情" 中查看某个印章的SealId(在页面中展示为印章ID)。
-     * @param string $SealOperatorVerifyPath 人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。
-     * @param string $SealOperatorVerifyQrcodeUrl 人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。
+     * @param string $SealId <p>电子印章ID，为32位字符串。<br>建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。<br>可登录腾讯电子签控制台，在 &quot;印章&quot;-&gt;&quot;印章中心&quot;选择查看的印章，在&quot;印章详情&quot; 中查看某个印章的SealId(在页面中展示为印章ID)。</p>
+     * @param string $SealOperatorVerifyPath <p>人脸验证操作人链接，用法可以参考&quot;<a href="https://qian.tencent.com/developers/company/openwxminiprogram/">跳转电子签小程序配置</a>&quot;，默认为空。</p>
+     * @param string $SealOperatorVerifyQrcodeUrl <p>人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。</p>
+     * @param string $PreviewFileUrl <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果图片链接。</p>
+     * @param string $PreviewPdfUrl <p>创建印章预览逻辑，返回的是印章加盖在示例文件上的效果PDF文件链接。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -88,6 +96,14 @@ class CreateSealResponse extends AbstractModel
 
         if (array_key_exists("SealOperatorVerifyQrcodeUrl",$param) and $param["SealOperatorVerifyQrcodeUrl"] !== null) {
             $this->SealOperatorVerifyQrcodeUrl = $param["SealOperatorVerifyQrcodeUrl"];
+        }
+
+        if (array_key_exists("PreviewFileUrl",$param) and $param["PreviewFileUrl"] !== null) {
+            $this->PreviewFileUrl = $param["PreviewFileUrl"];
+        }
+
+        if (array_key_exists("PreviewPdfUrl",$param) and $param["PreviewPdfUrl"] !== null) {
+            $this->PreviewPdfUrl = $param["PreviewPdfUrl"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

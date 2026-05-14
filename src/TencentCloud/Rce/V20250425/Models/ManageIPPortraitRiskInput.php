@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 业务入参
  *
- * @method string getUserIp() 获取用户公网ip（仅支持IPv4）
- * @method void setUserIp(string $UserIp) 设置用户公网ip（仅支持IPv4）
- * @method integer getChannel() 获取渠道号
- * @method void setChannel(integer $Channel) 设置渠道号
+ * @method string getUserIp() 获取<p>用户公网ip（仅支持IPv4）</p>
+ * @method void setUserIp(string $UserIp) 设置<p>用户公网ip（仅支持IPv4）</p>
+ * @method integer getChannel() 获取<p>渠道号<br>1：pc<br>2：H5<br>3：app<br>4：ott</p>
+ * @method void setChannel(integer $Channel) 设置<p>渠道号<br>1：pc<br>2：H5<br>3：app<br>4：ott</p>
  */
 class ManageIPPortraitRiskInput extends AbstractModel
 {
     /**
-     * @var string 用户公网ip（仅支持IPv4）
+     * @var string <p>用户公网ip（仅支持IPv4）</p>
      */
     public $UserIp;
 
     /**
-     * @var integer 渠道号
+     * @var integer <p>渠道号<br>1：pc<br>2：H5<br>3：app<br>4：ott</p>
      */
     public $Channel;
 
     /**
-     * @param string $UserIp 用户公网ip（仅支持IPv4）
-     * @param integer $Channel 渠道号
+     * @param string $UserIp <p>用户公网ip（仅支持IPv4）</p>
+     * @param integer $Channel <p>渠道号<br>1：pc<br>2：H5<br>3：app<br>4：ott</p>
      */
     function __construct()
     {

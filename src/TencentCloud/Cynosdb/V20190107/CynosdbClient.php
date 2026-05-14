@@ -106,7 +106,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeInstanceDetailResponse DescribeInstanceDetail(Models\DescribeInstanceDetailRequest $req) 本接口(DescribeInstanceDetail)用于查询实例详情。
  * @method Models\DescribeInstanceErrorLogsResponse DescribeInstanceErrorLogs(Models\DescribeInstanceErrorLogsRequest $req) 本接口（DescribeInstanceErrorLogs）用于查询实例错误日志列表。
  * @method Models\DescribeInstanceParamsResponse DescribeInstanceParams(Models\DescribeInstanceParamsRequest $req) 本接口（DescribeInstanceParams）用于查询实例参数列表。
- * @method Models\DescribeInstanceSlowQueriesResponse DescribeInstanceSlowQueries(Models\DescribeInstanceSlowQueriesRequest $req) 此接口（DescribeInstanceSlowQueries）用于查询实例慢日志详情。
+ * @method Models\DescribeInstanceSlowQueriesResponse DescribeInstanceSlowQueries(Models\DescribeInstanceSlowQueriesRequest $req) 此接口（DescribeInstanceSlowQueries）用于查询实例慢日志详情。受到平台返回大小限制，当返回结果过大时，可能会对超过限制的内容进行截断。
  * @method Models\DescribeInstanceSpecsResponse DescribeInstanceSpecs(Models\DescribeInstanceSpecsRequest $req) 本接口（DescribeInstanceSpecs）用于查询购买页可购买的实例规格。
  * @method Models\DescribeInstanceSpecsByOperationTypeResponse DescribeInstanceSpecsByOperationType(Models\DescribeInstanceSpecsByOperationTypeRequest $req) 根据操作类型查询实例规格
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 本接口(DescribeInstances)用于查询实例列表。

@@ -48,6 +48,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
  * @method Models\CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplate(Models\CreateAdaptiveDynamicStreamingTemplateRequest $req) 创建转自适应码流模板，数量上限：100。
  * @method Models\CreateAigcAdvancedCustomElementResponse CreateAigcAdvancedCustomElement(Models\CreateAigcAdvancedCustomElementRequest $req) 该接口用于创建 AIGC 高级自定义主体。
  * @method Models\CreateAigcApiTokenResponse CreateAigcApiToken(Models\CreateAigcApiTokenRequest $req) 创建AIGC调用API的Token。创建后数据同步有延时，约30秒后可查询或删除。
+ * @method Models\CreateAigcAudioCloneResponse CreateAigcAudioClone(Models\CreateAigcAudioCloneRequest $req) 该接口用于创建 AIGC 音色复刻。注意，调用本接口会产生费用，请参考[计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。
  * @method Models\CreateAigcAudioTaskResponse CreateAigcAudioTask(Models\CreateAigcAudioTaskRequest $req) 调用该接口，用于创建AI生音频任务。
  * @method Models\CreateAigcCustomElementResponse CreateAigcCustomElement(Models\CreateAigcCustomElementRequest $req) 调用该接口，针对指定模型进行主体创建。
  * @method Models\CreateAigcCustomVoiceResponse CreateAigcCustomVoice(Models\CreateAigcCustomVoiceRequest $req) 该接口用于创建 AIGC 自定义音色。

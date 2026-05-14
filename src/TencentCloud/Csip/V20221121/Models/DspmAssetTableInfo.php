@@ -20,90 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * dspm资产表信息
  *
- * @method string getAssetId() 获取资产实例id
- * @method void setAssetId(string $AssetId) 设置资产实例id
- * @method string getDbName() 获取数据库名称
- * @method void setDbName(string $DbName) 设置数据库名称
- * @method string getSchemaName() 获取schema名称
- * @method void setSchemaName(string $SchemaName) 设置schema名称
- * @method string getTableName() 获取表名
- * @method void setTableName(string $TableName) 设置表名
- * @method integer getFieldCount() 获取字段数
- * @method void setFieldCount(integer $FieldCount) 设置字段数
- * @method integer getSensitiveFieldCount() 获取敏感字段数
- * @method void setSensitiveFieldCount(integer $SensitiveFieldCount) 设置敏感字段数
- * @method array getRuleIds() 获取数据项id集合
- * @method void setRuleIds(array $RuleIds) 设置数据项id集合
- * @method array getRuleNames() 获取数据项名称集合
- * @method void setRuleNames(array $RuleNames) 设置数据项名称集合
- * @method array getCategoryIds() 获取分类id集合
- * @method void setCategoryIds(array $CategoryIds) 设置分类id集合
- * @method array getCategoryNames() 获取分类名称集合
- * @method void setCategoryNames(array $CategoryNames) 设置分类名称集合
+ * @method string getAssetId() 获取<p>资产实例id</p>
+ * @method void setAssetId(string $AssetId) 设置<p>资产实例id</p>
+ * @method string getDbName() 获取<p>数据库名称</p>
+ * @method void setDbName(string $DbName) 设置<p>数据库名称</p>
+ * @method string getSchemaName() 获取<p>schema名称</p>
+ * @method void setSchemaName(string $SchemaName) 设置<p>schema名称</p>
+ * @method string getTableName() 获取<p>表名</p>
+ * @method void setTableName(string $TableName) 设置<p>表名</p>
+ * @method integer getFieldCount() 获取<p>字段数</p>
+ * @method void setFieldCount(integer $FieldCount) 设置<p>字段数</p>
+ * @method integer getSensitiveFieldCount() 获取<p>敏感字段数</p>
+ * @method void setSensitiveFieldCount(integer $SensitiveFieldCount) 设置<p>敏感字段数</p>
+ * @method array getRuleIds() 获取<p>数据项id集合</p>
+ * @method void setRuleIds(array $RuleIds) 设置<p>数据项id集合</p>
+ * @method array getRuleNames() 获取<p>数据项名称集合</p>
+ * @method void setRuleNames(array $RuleNames) 设置<p>数据项名称集合</p>
+ * @method array getCategoryIds() 获取<p>分类id集合</p>
+ * @method void setCategoryIds(array $CategoryIds) 设置<p>分类id集合</p>
+ * @method array getCategoryNames() 获取<p>分类名称集合</p>
+ * @method void setCategoryNames(array $CategoryNames) 设置<p>分类名称集合</p>
+ * @method array getCategoryDetails() 获取<p>分类详情</p>
+ * @method void setCategoryDetails(array $CategoryDetails) 设置<p>分类详情</p>
+ * @method integer getTableId() 获取<p>数据表id</p>
+ * @method void setTableId(integer $TableId) 设置<p>数据表id</p>
+ * @method string getTableComment() 获取<p>表注释</p>
+ * @method void setTableComment(string $TableComment) 设置<p>表注释</p>
  */
 class DspmAssetTableInfo extends AbstractModel
 {
     /**
-     * @var string 资产实例id
+     * @var string <p>资产实例id</p>
      */
     public $AssetId;
 
     /**
-     * @var string 数据库名称
+     * @var string <p>数据库名称</p>
      */
     public $DbName;
 
     /**
-     * @var string schema名称
+     * @var string <p>schema名称</p>
      */
     public $SchemaName;
 
     /**
-     * @var string 表名
+     * @var string <p>表名</p>
      */
     public $TableName;
 
     /**
-     * @var integer 字段数
+     * @var integer <p>字段数</p>
      */
     public $FieldCount;
 
     /**
-     * @var integer 敏感字段数
+     * @var integer <p>敏感字段数</p>
      */
     public $SensitiveFieldCount;
 
     /**
-     * @var array 数据项id集合
+     * @var array <p>数据项id集合</p>
      */
     public $RuleIds;
 
     /**
-     * @var array 数据项名称集合
+     * @var array <p>数据项名称集合</p>
      */
     public $RuleNames;
 
     /**
-     * @var array 分类id集合
+     * @var array <p>分类id集合</p>
      */
     public $CategoryIds;
 
     /**
-     * @var array 分类名称集合
+     * @var array <p>分类名称集合</p>
      */
     public $CategoryNames;
 
     /**
-     * @param string $AssetId 资产实例id
-     * @param string $DbName 数据库名称
-     * @param string $SchemaName schema名称
-     * @param string $TableName 表名
-     * @param integer $FieldCount 字段数
-     * @param integer $SensitiveFieldCount 敏感字段数
-     * @param array $RuleIds 数据项id集合
-     * @param array $RuleNames 数据项名称集合
-     * @param array $CategoryIds 分类id集合
-     * @param array $CategoryNames 分类名称集合
+     * @var array <p>分类详情</p>
+     */
+    public $CategoryDetails;
+
+    /**
+     * @var integer <p>数据表id</p>
+     */
+    public $TableId;
+
+    /**
+     * @var string <p>表注释</p>
+     */
+    public $TableComment;
+
+    /**
+     * @param string $AssetId <p>资产实例id</p>
+     * @param string $DbName <p>数据库名称</p>
+     * @param string $SchemaName <p>schema名称</p>
+     * @param string $TableName <p>表名</p>
+     * @param integer $FieldCount <p>字段数</p>
+     * @param integer $SensitiveFieldCount <p>敏感字段数</p>
+     * @param array $RuleIds <p>数据项id集合</p>
+     * @param array $RuleNames <p>数据项名称集合</p>
+     * @param array $CategoryIds <p>分类id集合</p>
+     * @param array $CategoryNames <p>分类名称集合</p>
+     * @param array $CategoryDetails <p>分类详情</p>
+     * @param integer $TableId <p>数据表id</p>
+     * @param string $TableComment <p>表注释</p>
      */
     function __construct()
     {
@@ -156,6 +180,23 @@ class DspmAssetTableInfo extends AbstractModel
 
         if (array_key_exists("CategoryNames",$param) and $param["CategoryNames"] !== null) {
             $this->CategoryNames = $param["CategoryNames"];
+        }
+
+        if (array_key_exists("CategoryDetails",$param) and $param["CategoryDetails"] !== null) {
+            $this->CategoryDetails = [];
+            foreach ($param["CategoryDetails"] as $key => $value){
+                $obj = new DspmIdentifyCategoryDetail();
+                $obj->deserialize($value);
+                array_push($this->CategoryDetails, $obj);
+            }
+        }
+
+        if (array_key_exists("TableId",$param) and $param["TableId"] !== null) {
+            $this->TableId = $param["TableId"];
+        }
+
+        if (array_key_exists("TableComment",$param) and $param["TableComment"] !== null) {
+            $this->TableComment = $param["TableComment"];
         }
     }
 }

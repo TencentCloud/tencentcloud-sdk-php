@@ -99,7 +99,7 @@ use TencentCloud\Dbbrain\V20210527\Models as Models;
  * @method Models\DescribeTopSpaceTablesResponse DescribeTopSpaceTables(Models\DescribeTopSpaceTablesRequest $req) 获取实例Top表的实时空间统计信息，默认返回按大小排序。
  * @method Models\DescribeUserAutonomyProfileResponse DescribeUserAutonomyProfile(Models\DescribeUserAutonomyProfileRequest $req) 自治中心-终止自治任务（单次）；注意： 接口调用需要加白名单。
  * @method Models\DescribeUserSqlAdviceResponse DescribeUserSqlAdvice(Models\DescribeUserSqlAdviceRequest $req) 获取SQL优化建议。【产品用户回馈，此接口限免开放，后续将并入dbbrain专业版】
- * @method Models\KillMySqlThreadsResponse KillMySqlThreads(Models\KillMySqlThreadsRequest $req) 根据会话ID中断当前会话，该接口分为两次提交：第一次为预提交阶段，Stage为"Prepare"，得到的返回值包含SqlExecId；第二次为确认提交， Stage为"Commit"， 将SqlExecId的值作为参数传入，最终终止会话进程。
+ * @method Models\KillMySqlThreadsResponse KillMySqlThreads(Models\KillMySqlThreadsRequest $req) 根据会话ID中断当前会话，该接口分为两次提交：第一次为预提交阶段，Stage为"Prepare"，得到的返回值包含SqlExecId；第二次为确认提交， Stage为"Commit"， 将SqlExecId的值作为参数传入，最终终止会话进程。注意：Prepare请求与Commit请求的间隔不能超过10秒，否则Prepare阶段生成的执行凭证（SqlExecId）将过期失效，Commit操作不会执行任何kill动作。
  * @method Models\ModifyAlarmPolicyResponse ModifyAlarmPolicy(Models\ModifyAlarmPolicyRequest $req) 修改告警策略
  * @method Models\ModifyAuditServiceResponse ModifyAuditService(Models\ModifyAuditServiceRequest $req) 修改审计配置相关信息，如高频存储时长等
  * @method Models\ModifyDiagDBInstanceConfResponse ModifyDiagDBInstanceConf(Models\ModifyDiagDBInstanceConfRequest $req) 修改实例的配置信息。

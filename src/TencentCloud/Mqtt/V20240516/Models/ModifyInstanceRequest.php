@@ -78,13 +78,11 @@ class ModifyInstanceRequest extends AbstractModel
      * @var string 客户端证书注册方式：
 JITP：自动注册
 API：手动通过API注册
-     * @deprecated
      */
     public $DeviceCertificateProvisionType;
 
     /**
      * @var boolean 自动注册证书是否自动激活
-     * @deprecated
      */
     public $AutomaticActivation;
 

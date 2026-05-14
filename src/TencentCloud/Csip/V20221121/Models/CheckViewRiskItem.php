@@ -20,130 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 检查项视角风险
  *
- * @method string getRiskRuleId() 获取检查项规则ID
- * @method void setRiskRuleId(string $RiskRuleId) 设置检查项规则ID
- * @method string getRiskTitle() 获取风险名称
- * @method void setRiskTitle(string $RiskTitle) 设置风险名称
- * @method string getCheckType() 获取检查类型
- * @method void setCheckType(string $CheckType) 设置检查类型
- * @method string getSeverity() 获取风险等级
- * @method void setSeverity(string $Severity) 设置风险等级
- * @method string getRiskDesc() 获取存在1个风险项
- * @method void setRiskDesc(string $RiskDesc) 设置存在1个风险项
- * @method string getCreateTime() 获取首次发现时间
- * @method void setCreateTime(string $CreateTime) 设置首次发现时间
- * @method string getUpdateTime() 获取风险更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置风险更新时间
- * @method string getProvider() 获取云厂商
- * @method void setProvider(string $Provider) 设置云厂商
- * @method integer getRiskStatus() 获取风险状态
- * @method void setRiskStatus(integer $RiskStatus) 设置风险状态
- * @method integer getAssetCount() 获取受影响资产数量
- * @method void setAssetCount(integer $AssetCount) 设置受影响资产数量
- * @method integer getRiskCount() 获取风险数量
- * @method void setRiskCount(integer $RiskCount) 设置风险数量
- * @method string getAssetType() 获取资产类型
- * @method void setAssetType(string $AssetType) 设置资产类型
- * @method string getEventType() 获取事件类型
- * @method void setEventType(string $EventType) 设置事件类型
- * @method string getClassify() 获取处置分类
- * @method void setClassify(string $Classify) 设置处置分类
- * @method array getStandardTerms() 获取cspm规范条款
- * @method void setStandardTerms(array $StandardTerms) 设置cspm规范条款
+ * @method string getRiskRuleId() 获取<p>检查项规则ID</p>
+ * @method void setRiskRuleId(string $RiskRuleId) 设置<p>检查项规则ID</p>
+ * @method string getRiskTitle() 获取<p>风险名称</p>
+ * @method void setRiskTitle(string $RiskTitle) 设置<p>风险名称</p>
+ * @method string getCheckType() 获取<p>检查类型</p>
+ * @method void setCheckType(string $CheckType) 设置<p>检查类型</p>
+ * @method string getSeverity() 获取<p>风险等级</p>
+ * @method void setSeverity(string $Severity) 设置<p>风险等级</p>
+ * @method string getRiskDesc() 获取<p>存在1个风险项</p>
+ * @method void setRiskDesc(string $RiskDesc) 设置<p>存在1个风险项</p>
+ * @method string getCreateTime() 获取<p>首次发现时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>首次发现时间</p>
+ * @method string getUpdateTime() 获取<p>风险更新时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>风险更新时间</p>
+ * @method string getProvider() 获取<p>云厂商</p>
+ * @method void setProvider(string $Provider) 设置<p>云厂商</p>
+ * @method integer getRiskStatus() 获取<p>风险状态</p>
+ * @method void setRiskStatus(integer $RiskStatus) 设置<p>风险状态</p>
+ * @method integer getAssetCount() 获取<p>受影响资产数量</p>
+ * @method void setAssetCount(integer $AssetCount) 设置<p>受影响资产数量</p>
+ * @method integer getRiskCount() 获取<p>风险数量</p>
+ * @method void setRiskCount(integer $RiskCount) 设置<p>风险数量</p>
+ * @method string getAssetType() 获取<p>资产类型</p>
+ * @method void setAssetType(string $AssetType) 设置<p>资产类型</p>
+ * @method string getEventType() 获取<p>事件类型</p>
+ * @method void setEventType(string $EventType) 设置<p>事件类型</p>
+ * @method string getClassify() 获取<p>处置分类</p>
+ * @method void setClassify(string $Classify) 设置<p>处置分类</p>
+ * @method array getStandardTerms() 获取<p>cspm规范条款</p>
+ * @method void setStandardTerms(array $StandardTerms) 设置<p>cspm规范条款</p>
+ * @method string getAssetTypeIconURL() 获取<p>资产类型图标</p>
+ * @method void setAssetTypeIconURL(string $AssetTypeIconURL) 设置<p>资产类型图标</p>
  */
 class CheckViewRiskItem extends AbstractModel
 {
     /**
-     * @var string 检查项规则ID
+     * @var string <p>检查项规则ID</p>
      */
     public $RiskRuleId;
 
     /**
-     * @var string 风险名称
+     * @var string <p>风险名称</p>
      */
     public $RiskTitle;
 
     /**
-     * @var string 检查类型
+     * @var string <p>检查类型</p>
      */
     public $CheckType;
 
     /**
-     * @var string 风险等级
+     * @var string <p>风险等级</p>
      */
     public $Severity;
 
     /**
-     * @var string 存在1个风险项
+     * @var string <p>存在1个风险项</p>
      */
     public $RiskDesc;
 
     /**
-     * @var string 首次发现时间
+     * @var string <p>首次发现时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 风险更新时间
+     * @var string <p>风险更新时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 云厂商
+     * @var string <p>云厂商</p>
      */
     public $Provider;
 
     /**
-     * @var integer 风险状态
+     * @var integer <p>风险状态</p>
      */
     public $RiskStatus;
 
     /**
-     * @var integer 受影响资产数量
+     * @var integer <p>受影响资产数量</p>
      */
     public $AssetCount;
 
     /**
-     * @var integer 风险数量
+     * @var integer <p>风险数量</p>
      */
     public $RiskCount;
 
     /**
-     * @var string 资产类型
+     * @var string <p>资产类型</p>
      */
     public $AssetType;
 
     /**
-     * @var string 事件类型
+     * @var string <p>事件类型</p>
      */
     public $EventType;
 
     /**
-     * @var string 处置分类
+     * @var string <p>处置分类</p>
      */
     public $Classify;
 
     /**
-     * @var array cspm规范条款
+     * @var array <p>cspm规范条款</p>
      */
     public $StandardTerms;
 
     /**
-     * @param string $RiskRuleId 检查项规则ID
-     * @param string $RiskTitle 风险名称
-     * @param string $CheckType 检查类型
-     * @param string $Severity 风险等级
-     * @param string $RiskDesc 存在1个风险项
-     * @param string $CreateTime 首次发现时间
-     * @param string $UpdateTime 风险更新时间
-     * @param string $Provider 云厂商
-     * @param integer $RiskStatus 风险状态
-     * @param integer $AssetCount 受影响资产数量
-     * @param integer $RiskCount 风险数量
-     * @param string $AssetType 资产类型
-     * @param string $EventType 事件类型
-     * @param string $Classify 处置分类
-     * @param array $StandardTerms cspm规范条款
+     * @var string <p>资产类型图标</p>
+     */
+    public $AssetTypeIconURL;
+
+    /**
+     * @param string $RiskRuleId <p>检查项规则ID</p>
+     * @param string $RiskTitle <p>风险名称</p>
+     * @param string $CheckType <p>检查类型</p>
+     * @param string $Severity <p>风险等级</p>
+     * @param string $RiskDesc <p>存在1个风险项</p>
+     * @param string $CreateTime <p>首次发现时间</p>
+     * @param string $UpdateTime <p>风险更新时间</p>
+     * @param string $Provider <p>云厂商</p>
+     * @param integer $RiskStatus <p>风险状态</p>
+     * @param integer $AssetCount <p>受影响资产数量</p>
+     * @param integer $RiskCount <p>风险数量</p>
+     * @param string $AssetType <p>资产类型</p>
+     * @param string $EventType <p>事件类型</p>
+     * @param string $Classify <p>处置分类</p>
+     * @param array $StandardTerms <p>cspm规范条款</p>
+     * @param string $AssetTypeIconURL <p>资产类型图标</p>
      */
     function __construct()
     {
@@ -221,6 +229,10 @@ class CheckViewRiskItem extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->StandardTerms, $obj);
             }
+        }
+
+        if (array_key_exists("AssetTypeIconURL",$param) and $param["AssetTypeIconURL"] !== null) {
+            $this->AssetTypeIconURL = $param["AssetTypeIconURL"];
         }
     }
 }

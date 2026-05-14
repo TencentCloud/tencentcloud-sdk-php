@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateUser返回参数结构体
  *
- * @method User getUser() 获取更新之后的用户信息
- * @method void setUser(User $User) 设置更新之后的用户信息
+ * @method User getUser() 获取<p>更新之后的用户信息</p>
+ * @method void setUser(User $User) 设置<p>更新之后的用户信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class UpdateUserResponse extends AbstractModel
 {
     /**
-     * @var User 更新之后的用户信息
+     * @var User <p>更新之后的用户信息</p>
      */
     public $User;
 
@@ -38,7 +38,7 @@ class UpdateUserResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param User $User 更新之后的用户信息
+     * @param User $User <p>更新之后的用户信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

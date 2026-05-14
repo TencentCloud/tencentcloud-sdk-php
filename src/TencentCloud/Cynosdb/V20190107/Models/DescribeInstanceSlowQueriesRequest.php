@@ -20,98 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceSlowQueries请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getStartTime() 获取事务开始最早时间
- * @method void setStartTime(string $StartTime) 设置事务开始最早时间
- * @method string getEndTime() 获取事务开始最晚时间
- * @method void setEndTime(string $EndTime) 设置事务开始最晚时间
- * @method integer getLimit() 获取限制条数
- * @method void setLimit(integer $Limit) 设置限制条数
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method string getUsername() 获取用户名
- * @method void setUsername(string $Username) 设置用户名
- * @method string getHost() 获取客户端host
- * @method void setHost(string $Host) 设置客户端host
- * @method string getDatabase() 获取数据库名
- * @method void setDatabase(string $Database) 设置数据库名
- * @method string getOrderBy() 获取排序字段，可选值：QueryTime,LockTime,RowsExamined,RowsSent
- * @method void setOrderBy(string $OrderBy) 设置排序字段，可选值：QueryTime,LockTime,RowsExamined,RowsSent
- * @method string getOrderByType() 获取排序类型，可选值：asc,desc
- * @method void setOrderByType(string $OrderByType) 设置排序类型，可选值：asc,desc
- * @method string getSqlText() 获取sql语句
- * @method void setSqlText(string $SqlText) 设置sql语句
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getStartTime() 获取<p>事务开始最早时间</p>
+ * @method void setStartTime(string $StartTime) 设置<p>事务开始最早时间</p>
+ * @method string getEndTime() 获取<p>事务开始最晚时间</p>
+ * @method void setEndTime(string $EndTime) 设置<p>事务开始最晚时间</p>
+ * @method integer getLimit() 获取<p>限制条数</p><p>建议控制 limit 大小，当 limit 过大时，由于平台返回结果大小限制，可能会造成截断</p>
+ * @method void setLimit(integer $Limit) 设置<p>限制条数</p><p>建议控制 limit 大小，当 limit 过大时，由于平台返回结果大小限制，可能会造成截断</p>
+ * @method integer getOffset() 获取<p>偏移量</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量</p>
+ * @method string getUsername() 获取<p>用户名</p>
+ * @method void setUsername(string $Username) 设置<p>用户名</p>
+ * @method string getHost() 获取<p>客户端host</p>
+ * @method void setHost(string $Host) 设置<p>客户端host</p>
+ * @method string getDatabase() 获取<p>数据库名</p>
+ * @method void setDatabase(string $Database) 设置<p>数据库名</p>
+ * @method string getOrderBy() 获取<p>排序字段</p><p>枚举值：</p><ul><li>QueryTime： 按照 SQL 语句的总执行时长排序</li><li>LockTime： 按照 SQL 语句在等待锁（如表锁、行锁）上消耗的时间排序</li><li>RowsExamined： 按照 SQL 语句在执行过程中扫描的行数排序</li><li>RowsSent： 按照 SQL 语句最终返回给客户端的结果行数排序</li><li>Timestamp： 按照慢查询语句发生的时间戳排序</li></ul>
+ * @method void setOrderBy(string $OrderBy) 设置<p>排序字段</p><p>枚举值：</p><ul><li>QueryTime： 按照 SQL 语句的总执行时长排序</li><li>LockTime： 按照 SQL 语句在等待锁（如表锁、行锁）上消耗的时间排序</li><li>RowsExamined： 按照 SQL 语句在执行过程中扫描的行数排序</li><li>RowsSent： 按照 SQL 语句最终返回给客户端的结果行数排序</li><li>Timestamp： 按照慢查询语句发生的时间戳排序</li></ul>
+ * @method string getOrderByType() 获取<p>排序类型，可选值：asc,desc</p>
+ * @method void setOrderByType(string $OrderByType) 设置<p>排序类型，可选值：asc,desc</p>
+ * @method string getSqlText() 获取<p>sql语句</p>
+ * @method void setSqlText(string $SqlText) 设置<p>sql语句</p>
  */
 class DescribeInstanceSlowQueriesRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 事务开始最早时间
+     * @var string <p>事务开始最早时间</p>
      */
     public $StartTime;
 
     /**
-     * @var string 事务开始最晚时间
+     * @var string <p>事务开始最晚时间</p>
      */
     public $EndTime;
 
     /**
-     * @var integer 限制条数
+     * @var integer <p>限制条数</p><p>建议控制 limit 大小，当 limit 过大时，由于平台返回结果大小限制，可能会造成截断</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量
+     * @var integer <p>偏移量</p>
      */
     public $Offset;
 
     /**
-     * @var string 用户名
+     * @var string <p>用户名</p>
      */
     public $Username;
 
     /**
-     * @var string 客户端host
+     * @var string <p>客户端host</p>
      */
     public $Host;
 
     /**
-     * @var string 数据库名
+     * @var string <p>数据库名</p>
      */
     public $Database;
 
     /**
-     * @var string 排序字段，可选值：QueryTime,LockTime,RowsExamined,RowsSent
+     * @var string <p>排序字段</p><p>枚举值：</p><ul><li>QueryTime： 按照 SQL 语句的总执行时长排序</li><li>LockTime： 按照 SQL 语句在等待锁（如表锁、行锁）上消耗的时间排序</li><li>RowsExamined： 按照 SQL 语句在执行过程中扫描的行数排序</li><li>RowsSent： 按照 SQL 语句最终返回给客户端的结果行数排序</li><li>Timestamp： 按照慢查询语句发生的时间戳排序</li></ul>
      */
     public $OrderBy;
 
     /**
-     * @var string 排序类型，可选值：asc,desc
+     * @var string <p>排序类型，可选值：asc,desc</p>
      */
     public $OrderByType;
 
     /**
-     * @var string sql语句
+     * @var string <p>sql语句</p>
      */
     public $SqlText;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $StartTime 事务开始最早时间
-     * @param string $EndTime 事务开始最晚时间
-     * @param integer $Limit 限制条数
-     * @param integer $Offset 偏移量
-     * @param string $Username 用户名
-     * @param string $Host 客户端host
-     * @param string $Database 数据库名
-     * @param string $OrderBy 排序字段，可选值：QueryTime,LockTime,RowsExamined,RowsSent
-     * @param string $OrderByType 排序类型，可选值：asc,desc
-     * @param string $SqlText sql语句
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $StartTime <p>事务开始最早时间</p>
+     * @param string $EndTime <p>事务开始最晚时间</p>
+     * @param integer $Limit <p>限制条数</p><p>建议控制 limit 大小，当 limit 过大时，由于平台返回结果大小限制，可能会造成截断</p>
+     * @param integer $Offset <p>偏移量</p>
+     * @param string $Username <p>用户名</p>
+     * @param string $Host <p>客户端host</p>
+     * @param string $Database <p>数据库名</p>
+     * @param string $OrderBy <p>排序字段</p><p>枚举值：</p><ul><li>QueryTime： 按照 SQL 语句的总执行时长排序</li><li>LockTime： 按照 SQL 语句在等待锁（如表锁、行锁）上消耗的时间排序</li><li>RowsExamined： 按照 SQL 语句在执行过程中扫描的行数排序</li><li>RowsSent： 按照 SQL 语句最终返回给客户端的结果行数排序</li><li>Timestamp： 按照慢查询语句发生的时间戳排序</li></ul>
+     * @param string $OrderByType <p>排序类型，可选值：asc,desc</p>
+     * @param string $SqlText <p>sql语句</p>
      */
     function __construct()
     {

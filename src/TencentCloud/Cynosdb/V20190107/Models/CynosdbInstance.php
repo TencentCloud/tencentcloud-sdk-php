@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) 设置<p>内存，单位：GB</p>
  * @method integer getStorage() 获取<p>存储量，单位：GB</p>
  * @method void setStorage(integer $Storage) 设置<p>存储量，单位：GB</p>
- * @method string getInstanceType() 获取<p>实例类型</p>
- * @method void setInstanceType(string $InstanceType) 设置<p>实例类型</p>
+ * @method string getInstanceType() 获取<p>实例类型</p><p>枚举值：</p><ul><li>rw： 读写实例</li><li>ro： 只读实例</li></ul>
+ * @method void setInstanceType(string $InstanceType) 设置<p>实例类型</p><p>枚举值：</p><ul><li>rw： 读写实例</li><li>ro： 只读实例</li></ul>
  * @method string getInstanceRole() 获取<p>实例当前角色</p>
  * @method void setInstanceRole(string $InstanceRole) 设置<p>实例当前角色</p>
  * @method string getUpdateTime() 获取<p>更新时间</p>
@@ -233,7 +233,7 @@ class CynosdbInstance extends AbstractModel
     public $Storage;
 
     /**
-     * @var string <p>实例类型</p>
+     * @var string <p>实例类型</p><p>枚举值：</p><ul><li>rw： 读写实例</li><li>ro： 只读实例</li></ul>
      */
     public $InstanceType;
 
@@ -463,7 +463,7 @@ class CynosdbInstance extends AbstractModel
      * @param integer $Cpu <p>Cpu，单位：核</p>
      * @param integer $Memory <p>内存，单位：GB</p>
      * @param integer $Storage <p>存储量，单位：GB</p>
-     * @param string $InstanceType <p>实例类型</p>
+     * @param string $InstanceType <p>实例类型</p><p>枚举值：</p><ul><li>rw： 读写实例</li><li>ro： 只读实例</li></ul>
      * @param string $InstanceRole <p>实例当前角色</p>
      * @param string $UpdateTime <p>更新时间</p>
      * @param string $CreateTime <p>创建时间</p>

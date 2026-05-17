@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillingSpecs请求参数结构体
  *
- * @method string getChargeType() 获取付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月
- * @method void setChargeType(string $ChargeType) 设置付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月
- * @method string getTaskType() 获取枚举值：空、TRAIN、NOTEBOOK、INFERENCE或EMS
- * @method void setTaskType(string $TaskType) 设置枚举值：空、TRAIN、NOTEBOOK、INFERENCE或EMS
- * @method string getResourceType() 获取资源类型：["", "CALC", "CPU", "GPU", "GPU-SW"]
- * @method void setResourceType(string $ResourceType) 设置资源类型：["", "CALC", "CPU", "GPU", "GPU-SW"]
+ * @method string getChargeType() 获取<p>付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月</p>
+ * @method void setChargeType(string $ChargeType) 设置<p>付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月</p>
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method string getTaskType() 获取<p>枚举值：空、TRAIN、NOTEBOOK、INFERENCE或EMS</p>
+ * @method void setTaskType(string $TaskType) 设置<p>枚举值：空、TRAIN、NOTEBOOK、INFERENCE或EMS</p>
+ * @method string getResourceType() 获取<p>资源类型：[&quot;&quot;, &quot;CALC&quot;, &quot;CPU&quot;, &quot;GPU&quot;, &quot;GPU-SW&quot;]</p>
+ * @method void setResourceType(string $ResourceType) 设置<p>资源类型：[&quot;&quot;, &quot;CALC&quot;, &quot;CPU&quot;, &quot;GPU&quot;, &quot;GPU-SW&quot;]</p>
  */
 class DescribeBillingSpecsRequest extends AbstractModel
 {
     /**
-     * @var string 付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月
+     * @var string <p>付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月</p>
      */
     public $ChargeType;
 
     /**
-     * @var string 枚举值：空、TRAIN、NOTEBOOK、INFERENCE或EMS
+     * @var string <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public $TiProjectId;
+
+    /**
+     * @var string <p>枚举值：空、TRAIN、NOTEBOOK、INFERENCE或EMS</p>
      */
     public $TaskType;
 
     /**
-     * @var string 资源类型：["", "CALC", "CPU", "GPU", "GPU-SW"]
+     * @var string <p>资源类型：[&quot;&quot;, &quot;CALC&quot;, &quot;CPU&quot;, &quot;GPU&quot;, &quot;GPU-SW&quot;]</p>
      */
     public $ResourceType;
 
     /**
-     * @param string $ChargeType 付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月
-     * @param string $TaskType 枚举值：空、TRAIN、NOTEBOOK、INFERENCE或EMS
-     * @param string $ResourceType 资源类型：["", "CALC", "CPU", "GPU", "GPU-SW"]
+     * @param string $ChargeType <p>付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月</p>
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @param string $TaskType <p>枚举值：空、TRAIN、NOTEBOOK、INFERENCE或EMS</p>
+     * @param string $ResourceType <p>资源类型：[&quot;&quot;, &quot;CALC&quot;, &quot;CPU&quot;, &quot;GPU&quot;, &quot;GPU-SW&quot;]</p>
      */
     function __construct()
     {
@@ -64,6 +72,10 @@ class DescribeBillingSpecsRequest extends AbstractModel
         }
         if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
             $this->ChargeType = $param["ChargeType"];
+        }
+
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
         }
 
         if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {

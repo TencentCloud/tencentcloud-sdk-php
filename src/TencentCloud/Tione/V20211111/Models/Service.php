@@ -20,508 +20,436 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述在线服务
  *
- * @method string getServiceGroupId() 获取服务组id
- * @method void setServiceGroupId(string $ServiceGroupId) 设置服务组id
- * @method string getServiceId() 获取服务id
- * @method void setServiceId(string $ServiceId) 设置服务id
- * @method string getServiceGroupName() 获取服务组名
- * @method void setServiceGroupName(string $ServiceGroupName) 设置服务组名
- * @method string getServiceDescription() 获取服务描述
+ * @method string getServiceGroupId() 获取<p>服务组id</p>
+ * @method void setServiceGroupId(string $ServiceGroupId) 设置<p>服务组id</p>
+ * @method string getServiceId() 获取<p>服务id</p>
+ * @method void setServiceId(string $ServiceId) 设置<p>服务id</p>
+ * @method string getServiceGroupName() 获取<p>服务组名</p>
+ * @method void setServiceGroupName(string $ServiceGroupName) 设置<p>服务组名</p>
+ * @method string getServiceDescription() 获取<p>服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServiceDescription(string $ServiceDescription) 设置服务描述
+ * @method void setServiceDescription(string $ServiceDescription) 设置<p>服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ServiceInfo getServiceInfo() 获取服务的详细信息
+ * @method ServiceInfo getServiceInfo() 获取<p>服务的详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServiceInfo(ServiceInfo $ServiceInfo) 设置服务的详细信息
+ * @method void setServiceInfo(ServiceInfo $ServiceInfo) 设置<p>服务的详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getClusterId() 获取集群id
+ * @method string getClusterId() 获取<p>集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterId(string $ClusterId) 设置集群id
+ * @method void setClusterId(string $ClusterId) 设置<p>集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegion() 获取地域
+ * @method string getRegion() 获取<p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegion(string $Region) 设置地域
+ * @method void setRegion(string $Region) 设置<p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNamespace() 获取命名空间
+ * @method string getNamespace() 获取<p>命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNamespace(string $Namespace) 设置命名空间
+ * @method void setNamespace(string $Namespace) 设置<p>命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getChargeType() 获取付费类型
+ * @method string getChargeType() 获取<p>付费类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setChargeType(string $ChargeType) 设置付费类型
+ * @method void setChargeType(string $ChargeType) 设置<p>付费类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResourceGroupId() 获取包年包月服务的资源组id，按量计费的服务为空
+ * @method string getResourceGroupId() 获取<p>包年包月服务的资源组id，按量计费的服务为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceGroupId(string $ResourceGroupId) 设置包年包月服务的资源组id，按量计费的服务为空
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置<p>包年包月服务的资源组id，按量计费的服务为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResourceGroupName() 获取包年包月服务对应的资源组名字
+ * @method string getResourceGroupName() 获取<p>包年包月服务对应的资源组名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceGroupName(string $ResourceGroupName) 设置包年包月服务对应的资源组名字
+ * @method void setResourceGroupName(string $ResourceGroupName) 设置<p>包年包月服务对应的资源组名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTags() 获取服务的标签
+ * @method array getTags() 获取<p>服务的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTags(array $Tags) 设置服务的标签
+ * @method void setTags(array $Tags) 设置<p>服务的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIngressName() 获取服务所在的 ingress 的 name
+ * @method string getIngressName() 获取<p>服务所在的 ingress 的 name</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIngressName(string $IngressName) 设置服务所在的 ingress 的 name
+ * @method void setIngressName(string $IngressName) 设置<p>服务所在的 ingress 的 name</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreatedBy() 获取创建者
+ * @method string getCreatedBy() 获取<p>创建者</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreatedBy(string $CreatedBy) 设置创建者
+ * @method void setCreatedBy(string $CreatedBy) 设置<p>创建者</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间
+ * @method string getCreateTime() 获取<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取更新时间
+ * @method string getUpdateTime() 获取<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUin() 获取主账号
+ * @method string getUin() 获取<p>主账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUin(string $Uin) 设置主账号
+ * @method void setUin(string $Uin) 设置<p>主账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSubUin() 获取子账号
+ * @method string getSubUin() 获取<p>子账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubUin(string $SubUin) 设置子账号
+ * @method void setSubUin(string $SubUin) 设置<p>子账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAppId() 获取app_id
+ * @method integer getAppId() 获取<p>app_id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppId(integer $AppId) 设置app_id
+ * @method void setAppId(integer $AppId) 设置<p>app_id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBusinessStatus() 获取服务的业务状态
-CREATING 创建中
-CREATE_FAILED 创建失败
-CREATE_SUCCEED 创建成功
-ARREARS_STOP 因欠费停止
-WHITELIST_STOP 白名单额度不足
-RELEASE_FAILED 资源释放失败
-WHITELIST_RELEASE_FAILED 白名单资源释放失败
-TIMEOUT_EXCEPTION 创建超时异常
-BILLING 计费中
-WHITELIST_USING 白名单试用中
+ * @method string getBusinessStatus() 获取<p>服务的业务状态<br>CREATING 创建中<br>CREATE_FAILED 创建失败<br>CREATE_SUCCEED 创建成功<br>ARREARS_STOP 因欠费停止<br>WHITELIST_STOP 白名单额度不足<br>RELEASE_FAILED 资源释放失败<br>WHITELIST_RELEASE_FAILED 白名单资源释放失败<br>TIMEOUT_EXCEPTION 创建超时异常<br>BILLING 计费中<br>WHITELIST_USING 白名单试用中</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBusinessStatus(string $BusinessStatus) 设置服务的业务状态
-CREATING 创建中
-CREATE_FAILED 创建失败
-CREATE_SUCCEED 创建成功
-ARREARS_STOP 因欠费停止
-WHITELIST_STOP 白名单额度不足
-RELEASE_FAILED 资源释放失败
-WHITELIST_RELEASE_FAILED 白名单资源释放失败
-TIMEOUT_EXCEPTION 创建超时异常
-BILLING 计费中
-WHITELIST_USING 白名单试用中
+ * @method void setBusinessStatus(string $BusinessStatus) 设置<p>服务的业务状态<br>CREATING 创建中<br>CREATE_FAILED 创建失败<br>CREATE_SUCCEED 创建成功<br>ARREARS_STOP 因欠费停止<br>WHITELIST_STOP 白名单额度不足<br>RELEASE_FAILED 资源释放失败<br>WHITELIST_RELEASE_FAILED 白名单资源释放失败<br>TIMEOUT_EXCEPTION 创建超时异常<br>BILLING 计费中<br>WHITELIST_USING 白名单试用中</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ServiceLimit getServiceLimit() 获取已废弃,以ServiceInfo中的对应为准
- * @method void setServiceLimit(ServiceLimit $ServiceLimit) 设置已废弃,以ServiceInfo中的对应为准
- * @method ScheduledAction getScheduledAction() 获取已废弃,以ServiceInfo中的对应为准
- * @method void setScheduledAction(ScheduledAction $ScheduledAction) 设置已废弃,以ServiceInfo中的对应为准
- * @method string getCreateFailedReason() 获取服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+ * @method ServiceLimit getServiceLimit() 获取<p>已废弃,以ServiceInfo中的对应为准</p>
+ * @method void setServiceLimit(ServiceLimit $ServiceLimit) 设置<p>已废弃,以ServiceInfo中的对应为准</p>
+ * @method ScheduledAction getScheduledAction() 获取<p>已废弃,以ServiceInfo中的对应为准</p>
+ * @method void setScheduledAction(ScheduledAction $ScheduledAction) 设置<p>已废弃,以ServiceInfo中的对应为准</p>
+ * @method string getCreateFailedReason() 获取<p>服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateFailedReason(string $CreateFailedReason) 设置服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+ * @method void setCreateFailedReason(string $CreateFailedReason) 设置<p>服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取服务状态
-CREATING 创建中
-CREATE_FAILED 创建失败
-TIMEOUT_EXCEPTION 创建超时异常
-Normal 正常运行中
-Stopped 已停止
-Stopping 停止中
-Abnormal 异常
-Pending 启动中
-Waiting 就绪中
+ * @method string getStatus() 获取<p>服务状态<br>CREATING 创建中<br>CREATE_FAILED 创建失败<br>TIMEOUT_EXCEPTION 创建超时异常<br>Normal 正常运行中<br>Stopped 已停止<br>Stopping 停止中<br>Abnormal 异常<br>Pending 启动中<br>Waiting 就绪中</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置服务状态
-CREATING 创建中
-CREATE_FAILED 创建失败
-TIMEOUT_EXCEPTION 创建超时异常
-Normal 正常运行中
-Stopped 已停止
-Stopping 停止中
-Abnormal 异常
-Pending 启动中
-Waiting 就绪中
+ * @method void setStatus(string $Status) 设置<p>服务状态<br>CREATING 创建中<br>CREATE_FAILED 创建失败<br>TIMEOUT_EXCEPTION 创建超时异常<br>Normal 正常运行中<br>Stopped 已停止<br>Stopping 停止中<br>Abnormal 异常<br>Pending 启动中<br>Waiting 就绪中</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBillingInfo() 获取费用信息
+ * @method string getBillingInfo() 获取<p>费用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBillingInfo(string $BillingInfo) 设置费用信息
+ * @method void setBillingInfo(string $BillingInfo) 设置<p>费用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getWeight() 获取模型权重
+ * @method integer getWeight() 获取<p>模型权重</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWeight(integer $Weight) 设置模型权重
+ * @method void setWeight(integer $Weight) 设置<p>模型权重</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateSource() 获取服务的创建来源
-AUTO_ML: 来自自动学习的一键发布
-DEFAULT: 其他来源
+ * @method string getCreateSource() 获取<p>服务的创建来源<br>AUTO_ML: 来自自动学习的一键发布<br>DEFAULT: 其他来源</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateSource(string $CreateSource) 设置服务的创建来源
-AUTO_ML: 来自自动学习的一键发布
-DEFAULT: 其他来源
+ * @method void setCreateSource(string $CreateSource) 设置<p>服务的创建来源<br>AUTO_ML: 来自自动学习的一键发布<br>DEFAULT: 其他来源</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVersion() 获取版本号
+ * @method string getVersion() 获取<p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVersion(string $Version) 设置版本号
+ * @method void setVersion(string $Version) 设置<p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLatestVersion() 获取服务组下服务的最高版本号
+ * @method string getLatestVersion() 获取<p>服务组下服务的最高版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLatestVersion(string $LatestVersion) 设置服务组下服务的最高版本号
+ * @method void setLatestVersion(string $LatestVersion) 设置<p>服务组下服务的最高版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResourceGroupSWType() 获取资源组类别 托管 NORMAL，纳管 SW
+ * @method string getResourceGroupSWType() 获取<p>资源组类别 托管 NORMAL，纳管 SW</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceGroupSWType(string $ResourceGroupSWType) 设置资源组类别 托管 NORMAL，纳管 SW
+ * @method void setResourceGroupSWType(string $ResourceGroupSWType) 设置<p>资源组类别 托管 NORMAL，纳管 SW</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getArchiveStatus() 获取服务的归档状态  Waiting 等待归档中，Archived 已归档
+ * @method string getArchiveStatus() 获取<p>服务的归档状态  Waiting 等待归档中，Archived 已归档</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setArchiveStatus(string $ArchiveStatus) 设置服务的归档状态  Waiting 等待归档中，Archived 已归档
+ * @method void setArchiveStatus(string $ArchiveStatus) 设置<p>服务的归档状态  Waiting 等待归档中，Archived 已归档</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDeployType() 获取服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+ * @method string getDeployType() 获取<p>服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeployType(string $DeployType) 设置服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+ * @method void setDeployType(string $DeployType) 设置<p>服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstancePerReplicas() 获取单副本下的实例数，仅在部署类型为DIST时生效，默认1
+ * @method string getInstancePerReplicas() 获取<p>单副本下的实例数，仅在部署类型为DIST时生效，默认1</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstancePerReplicas(string $InstancePerReplicas) 设置单副本下的实例数，仅在部署类型为DIST时生效，默认1
+ * @method void setInstancePerReplicas(string $InstancePerReplicas) 设置<p>单副本下的实例数，仅在部署类型为DIST时生效，默认1</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMonitorSource() 获取用于监控查询的Source
-枚举值，部分情况下与CreateSource不同，通过该字段兼容
- * @method void setMonitorSource(string $MonitorSource) 设置用于监控查询的Source
-枚举值，部分情况下与CreateSource不同，通过该字段兼容
- * @method string getSubUinName() 获取服务创建者的子账号名称
- * @method void setSubUinName(string $SubUinName) 设置服务创建者的子账号名称
- * @method SchedulingPolicy getSchedulingPolicy() 获取服务的调度策略
- * @method void setSchedulingPolicy(SchedulingPolicy $SchedulingPolicy) 设置服务的调度策略
- * @method array getExternalResourceGroups() 获取外部的资源组信息，表示借调了哪些资源组的资源
- * @method void setExternalResourceGroups(array $ExternalResourceGroups) 设置外部的资源组信息，表示借调了哪些资源组的资源
+ * @method string getMonitorSource() 获取<p>用于监控查询的Source<br>枚举值，部分情况下与CreateSource不同，通过该字段兼容</p>
+ * @method void setMonitorSource(string $MonitorSource) 设置<p>用于监控查询的Source<br>枚举值，部分情况下与CreateSource不同，通过该字段兼容</p>
+ * @method string getSubUinName() 获取<p>服务创建者的子账号名称</p>
+ * @method void setSubUinName(string $SubUinName) 设置<p>服务创建者的子账号名称</p>
+ * @method SchedulingPolicy getSchedulingPolicy() 获取<p>服务的调度策略</p>
+ * @method void setSchedulingPolicy(SchedulingPolicy $SchedulingPolicy) 设置<p>服务的调度策略</p>
+ * @method array getExternalResourceGroups() 获取<p>外部的资源组信息，表示借调了哪些资源组的资源</p>
+ * @method void setExternalResourceGroups(array $ExternalResourceGroups) 设置<p>外部的资源组信息，表示借调了哪些资源组的资源</p>
+ * @method string getChanger() 获取<p>变更服务的子账户</p>
+ * @method void setChanger(string $Changer) 设置<p>变更服务的子账户</p>
+ * @method string getChangerName() 获取<p>变更服务的子账户名称</p>
+ * @method void setChangerName(string $ChangerName) 设置<p>变更服务的子账户名称</p>
  */
 class Service extends AbstractModel
 {
     /**
-     * @var string 服务组id
+     * @var string <p>服务组id</p>
      */
     public $ServiceGroupId;
 
     /**
-     * @var string 服务id
+     * @var string <p>服务id</p>
      */
     public $ServiceId;
 
     /**
-     * @var string 服务组名
+     * @var string <p>服务组名</p>
      */
     public $ServiceGroupName;
 
     /**
-     * @var string 服务描述
+     * @var string <p>服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceDescription;
 
     /**
-     * @var ServiceInfo 服务的详细信息
+     * @var ServiceInfo <p>服务的详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceInfo;
 
     /**
-     * @var string 集群id
+     * @var string <p>集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
 
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
-     * @var string 命名空间
+     * @var string <p>命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Namespace;
 
     /**
-     * @var string 付费类型
+     * @var string <p>付费类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChargeType;
 
     /**
-     * @var string 包年包月服务的资源组id，按量计费的服务为空
+     * @var string <p>包年包月服务的资源组id，按量计费的服务为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupId;
 
     /**
-     * @var string 包年包月服务对应的资源组名字
+     * @var string <p>包年包月服务对应的资源组名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupName;
 
     /**
-     * @var array 服务的标签
+     * @var array <p>服务的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
-     * @var string 服务所在的 ingress 的 name
+     * @var string <p>服务所在的 ingress 的 name</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IngressName;
 
     /**
-     * @var string 创建者
+     * @var string <p>创建者</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedBy;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
-     * @var string 主账号
+     * @var string <p>主账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
     /**
-     * @var string 子账号
+     * @var string <p>子账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubUin;
 
     /**
-     * @var integer app_id
+     * @var integer <p>app_id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
-     * @var string 服务的业务状态
-CREATING 创建中
-CREATE_FAILED 创建失败
-CREATE_SUCCEED 创建成功
-ARREARS_STOP 因欠费停止
-WHITELIST_STOP 白名单额度不足
-RELEASE_FAILED 资源释放失败
-WHITELIST_RELEASE_FAILED 白名单资源释放失败
-TIMEOUT_EXCEPTION 创建超时异常
-BILLING 计费中
-WHITELIST_USING 白名单试用中
+     * @var string <p>服务的业务状态<br>CREATING 创建中<br>CREATE_FAILED 创建失败<br>CREATE_SUCCEED 创建成功<br>ARREARS_STOP 因欠费停止<br>WHITELIST_STOP 白名单额度不足<br>RELEASE_FAILED 资源释放失败<br>WHITELIST_RELEASE_FAILED 白名单资源释放失败<br>TIMEOUT_EXCEPTION 创建超时异常<br>BILLING 计费中<br>WHITELIST_USING 白名单试用中</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessStatus;
 
     /**
-     * @var ServiceLimit 已废弃,以ServiceInfo中的对应为准
+     * @var ServiceLimit <p>已废弃,以ServiceInfo中的对应为准</p>
      * @deprecated
      */
     public $ServiceLimit;
 
     /**
-     * @var ScheduledAction 已废弃,以ServiceInfo中的对应为准
+     * @var ScheduledAction <p>已废弃,以ServiceInfo中的对应为准</p>
      * @deprecated
      */
     public $ScheduledAction;
 
     /**
-     * @var string 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+     * @var string <p>服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateFailedReason;
 
     /**
-     * @var string 服务状态
-CREATING 创建中
-CREATE_FAILED 创建失败
-TIMEOUT_EXCEPTION 创建超时异常
-Normal 正常运行中
-Stopped 已停止
-Stopping 停止中
-Abnormal 异常
-Pending 启动中
-Waiting 就绪中
+     * @var string <p>服务状态<br>CREATING 创建中<br>CREATE_FAILED 创建失败<br>TIMEOUT_EXCEPTION 创建超时异常<br>Normal 正常运行中<br>Stopped 已停止<br>Stopping 停止中<br>Abnormal 异常<br>Pending 启动中<br>Waiting 就绪中</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var string 费用信息
+     * @var string <p>费用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillingInfo;
 
     /**
-     * @var integer 模型权重
+     * @var integer <p>模型权重</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weight;
 
     /**
-     * @var string 服务的创建来源
-AUTO_ML: 来自自动学习的一键发布
-DEFAULT: 其他来源
+     * @var string <p>服务的创建来源<br>AUTO_ML: 来自自动学习的一键发布<br>DEFAULT: 其他来源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateSource;
 
     /**
-     * @var string 版本号
+     * @var string <p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
-     * @var string 服务组下服务的最高版本号
+     * @var string <p>服务组下服务的最高版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LatestVersion;
 
     /**
-     * @var string 资源组类别 托管 NORMAL，纳管 SW
+     * @var string <p>资源组类别 托管 NORMAL，纳管 SW</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupSWType;
 
     /**
-     * @var string 服务的归档状态  Waiting 等待归档中，Archived 已归档
+     * @var string <p>服务的归档状态  Waiting 等待归档中，Archived 已归档</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ArchiveStatus;
 
     /**
-     * @var string 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+     * @var string <p>服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeployType;
 
     /**
-     * @var string 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+     * @var string <p>单副本下的实例数，仅在部署类型为DIST时生效，默认1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstancePerReplicas;
 
     /**
-     * @var string 用于监控查询的Source
-枚举值，部分情况下与CreateSource不同，通过该字段兼容
+     * @var string <p>用于监控查询的Source<br>枚举值，部分情况下与CreateSource不同，通过该字段兼容</p>
      */
     public $MonitorSource;
 
     /**
-     * @var string 服务创建者的子账号名称
+     * @var string <p>服务创建者的子账号名称</p>
      */
     public $SubUinName;
 
     /**
-     * @var SchedulingPolicy 服务的调度策略
+     * @var SchedulingPolicy <p>服务的调度策略</p>
      */
     public $SchedulingPolicy;
 
     /**
-     * @var array 外部的资源组信息，表示借调了哪些资源组的资源
+     * @var array <p>外部的资源组信息，表示借调了哪些资源组的资源</p>
      */
     public $ExternalResourceGroups;
 
     /**
-     * @param string $ServiceGroupId 服务组id
-     * @param string $ServiceId 服务id
-     * @param string $ServiceGroupName 服务组名
-     * @param string $ServiceDescription 服务描述
+     * @var string <p>变更服务的子账户</p>
+     */
+    public $Changer;
+
+    /**
+     * @var string <p>变更服务的子账户名称</p>
+     */
+    public $ChangerName;
+
+    /**
+     * @param string $ServiceGroupId <p>服务组id</p>
+     * @param string $ServiceId <p>服务id</p>
+     * @param string $ServiceGroupName <p>服务组名</p>
+     * @param string $ServiceDescription <p>服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceInfo $ServiceInfo 服务的详细信息
+     * @param ServiceInfo $ServiceInfo <p>服务的详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ClusterId 集群id
+     * @param string $ClusterId <p>集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Region 地域
+     * @param string $Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Namespace 命名空间
+     * @param string $Namespace <p>命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ChargeType 付费类型
+     * @param string $ChargeType <p>付费类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResourceGroupId 包年包月服务的资源组id，按量计费的服务为空
+     * @param string $ResourceGroupId <p>包年包月服务的资源组id，按量计费的服务为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResourceGroupName 包年包月服务对应的资源组名字
+     * @param string $ResourceGroupName <p>包年包月服务对应的资源组名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Tags 服务的标签
+     * @param array $Tags <p>服务的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IngressName 服务所在的 ingress 的 name
+     * @param string $IngressName <p>服务所在的 ingress 的 name</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreatedBy 创建者
+     * @param string $CreatedBy <p>创建者</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间
+     * @param string $CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime 更新时间
+     * @param string $UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Uin 主账号
+     * @param string $Uin <p>主账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SubUin 子账号
+     * @param string $SubUin <p>子账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AppId app_id
+     * @param integer $AppId <p>app_id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BusinessStatus 服务的业务状态
-CREATING 创建中
-CREATE_FAILED 创建失败
-CREATE_SUCCEED 创建成功
-ARREARS_STOP 因欠费停止
-WHITELIST_STOP 白名单额度不足
-RELEASE_FAILED 资源释放失败
-WHITELIST_RELEASE_FAILED 白名单资源释放失败
-TIMEOUT_EXCEPTION 创建超时异常
-BILLING 计费中
-WHITELIST_USING 白名单试用中
+     * @param string $BusinessStatus <p>服务的业务状态<br>CREATING 创建中<br>CREATE_FAILED 创建失败<br>CREATE_SUCCEED 创建成功<br>ARREARS_STOP 因欠费停止<br>WHITELIST_STOP 白名单额度不足<br>RELEASE_FAILED 资源释放失败<br>WHITELIST_RELEASE_FAILED 白名单资源释放失败<br>TIMEOUT_EXCEPTION 创建超时异常<br>BILLING 计费中<br>WHITELIST_USING 白名单试用中</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceLimit $ServiceLimit 已废弃,以ServiceInfo中的对应为准
-     * @param ScheduledAction $ScheduledAction 已废弃,以ServiceInfo中的对应为准
-     * @param string $CreateFailedReason 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+     * @param ServiceLimit $ServiceLimit <p>已废弃,以ServiceInfo中的对应为准</p>
+     * @param ScheduledAction $ScheduledAction <p>已废弃,以ServiceInfo中的对应为准</p>
+     * @param string $CreateFailedReason <p>服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 服务状态
-CREATING 创建中
-CREATE_FAILED 创建失败
-TIMEOUT_EXCEPTION 创建超时异常
-Normal 正常运行中
-Stopped 已停止
-Stopping 停止中
-Abnormal 异常
-Pending 启动中
-Waiting 就绪中
+     * @param string $Status <p>服务状态<br>CREATING 创建中<br>CREATE_FAILED 创建失败<br>TIMEOUT_EXCEPTION 创建超时异常<br>Normal 正常运行中<br>Stopped 已停止<br>Stopping 停止中<br>Abnormal 异常<br>Pending 启动中<br>Waiting 就绪中</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BillingInfo 费用信息
+     * @param string $BillingInfo <p>费用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Weight 模型权重
+     * @param integer $Weight <p>模型权重</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateSource 服务的创建来源
-AUTO_ML: 来自自动学习的一键发布
-DEFAULT: 其他来源
+     * @param string $CreateSource <p>服务的创建来源<br>AUTO_ML: 来自自动学习的一键发布<br>DEFAULT: 其他来源</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Version 版本号
+     * @param string $Version <p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LatestVersion 服务组下服务的最高版本号
+     * @param string $LatestVersion <p>服务组下服务的最高版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResourceGroupSWType 资源组类别 托管 NORMAL，纳管 SW
+     * @param string $ResourceGroupSWType <p>资源组类别 托管 NORMAL，纳管 SW</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ArchiveStatus 服务的归档状态  Waiting 等待归档中，Archived 已归档
+     * @param string $ArchiveStatus <p>服务的归档状态  Waiting 等待归档中，Archived 已归档</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DeployType 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+     * @param string $DeployType <p>服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstancePerReplicas 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+     * @param string $InstancePerReplicas <p>单副本下的实例数，仅在部署类型为DIST时生效，默认1</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MonitorSource 用于监控查询的Source
-枚举值，部分情况下与CreateSource不同，通过该字段兼容
-     * @param string $SubUinName 服务创建者的子账号名称
-     * @param SchedulingPolicy $SchedulingPolicy 服务的调度策略
-     * @param array $ExternalResourceGroups 外部的资源组信息，表示借调了哪些资源组的资源
+     * @param string $MonitorSource <p>用于监控查询的Source<br>枚举值，部分情况下与CreateSource不同，通过该字段兼容</p>
+     * @param string $SubUinName <p>服务创建者的子账号名称</p>
+     * @param SchedulingPolicy $SchedulingPolicy <p>服务的调度策略</p>
+     * @param array $ExternalResourceGroups <p>外部的资源组信息，表示借调了哪些资源组的资源</p>
+     * @param string $Changer <p>变更服务的子账户</p>
+     * @param string $ChangerName <p>变更服务的子账户名称</p>
      */
     function __construct()
     {
@@ -696,6 +624,14 @@ DEFAULT: 其他来源
                 $obj->deserialize($value);
                 array_push($this->ExternalResourceGroups, $obj);
             }
+        }
+
+        if (array_key_exists("Changer",$param) and $param["Changer"] !== null) {
+            $this->Changer = $param["Changer"];
+        }
+
+        if (array_key_exists("ChangerName",$param) and $param["ChangerName"] !== null) {
+            $this->ChangerName = $param["ChangerName"];
         }
     }
 }

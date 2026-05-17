@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFallbackStatus(boolean $FallbackStatus) 设置<p>是否启用Fallback模型</p>
  * @method array getFallbackModels() 获取<p>Fallback模型配置</p>
  * @method void setFallbackModels(array $FallbackModels) 设置<p>Fallback模型配置</p>
+ * @method string getModelProtocol() 获取<p>模型协议</p>
+ * @method void setModelProtocol(string $ModelProtocol) 设置<p>模型协议</p>
  */
 class CreateModelServiceRequest extends AbstractModel
 {
@@ -206,6 +208,11 @@ class CreateModelServiceRequest extends AbstractModel
     public $FallbackModels;
 
     /**
+     * @var string <p>模型协议</p>
+     */
+    public $ModelProtocol;
+
+    /**
      * @param string $InstanceID <p>实例</p>
      * @param string $Name <p>模型服务名称</p>
      * @param string $Description <p>描述</p>
@@ -232,6 +239,7 @@ class CreateModelServiceRequest extends AbstractModel
      * @param string $HostKeyHeaderName <p>会话判定方式为fromHeader时会话的header名称</p>
      * @param boolean $FallbackStatus <p>是否启用Fallback模型</p>
      * @param array $FallbackModels <p>Fallback模型配置</p>
+     * @param string $ModelProtocol <p>模型协议</p>
      */
     function __construct()
     {
@@ -368,6 +376,10 @@ class CreateModelServiceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->FallbackModels, $obj);
             }
+        }
+
+        if (array_key_exists("ModelProtocol",$param) and $param["ModelProtocol"] !== null) {
+            $this->ModelProtocol = $param["ModelProtocol"];
         }
     }
 }

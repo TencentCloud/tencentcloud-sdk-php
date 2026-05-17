@@ -20,82 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeModelServices请求参数结构体
  *
- * @method string getInstanceID() 获取实例
- * @method void setInstanceID(string $InstanceID) 设置实例
- * @method integer getOffset() 获取分页参数
- * @method void setOffset(integer $Offset) 设置分页参数
- * @method integer getLimit() 获取分页限制
- * @method void setLimit(integer $Limit) 设置分页限制
- * @method array getIDs() 获取ID列表
- * @method void setIDs(array $IDs) 设置ID列表
- * @method array getNotIDs() 获取排除的ID列表
- * @method void setNotIDs(array $NotIDs) 设置排除的ID列表
- * @method string getStatus() 获取状态：normal，disabled
- * @method void setStatus(string $Status) 设置状态：normal，disabled
- * @method string getKeyword() 获取关键词
- * @method void setKeyword(string $Keyword) 设置关键词
- * @method string getModelID() 获取模型ID
- * @method void setModelID(string $ModelID) 设置模型ID
- * @method DescribeModelServicesSort getSort() 获取排序
- * @method void setSort(DescribeModelServicesSort $Sort) 设置排序
+ * @method string getInstanceID() 获取<p>实例</p>
+ * @method void setInstanceID(string $InstanceID) 设置<p>实例</p>
+ * @method integer getOffset() 获取<p>分页参数</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页参数</p>
+ * @method integer getLimit() 获取<p>分页限制</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页限制</p>
+ * @method array getIDs() 获取<p>ID列表</p>
+ * @method void setIDs(array $IDs) 设置<p>ID列表</p>
+ * @method array getNotIDs() 获取<p>排除的ID列表</p>
+ * @method void setNotIDs(array $NotIDs) 设置<p>排除的ID列表</p>
+ * @method string getStatus() 获取<p>状态：normal，disabled</p>
+ * @method void setStatus(string $Status) 设置<p>状态：normal，disabled</p>
+ * @method string getKeyword() 获取<p>关键词</p>
+ * @method void setKeyword(string $Keyword) 设置<p>关键词</p>
+ * @method string getModelID() 获取<p>模型ID</p>
+ * @method void setModelID(string $ModelID) 设置<p>模型ID</p>
+ * @method DescribeModelServicesSort getSort() 获取<p>排序</p>
+ * @method void setSort(DescribeModelServicesSort $Sort) 设置<p>排序</p>
+ * @method string getModelProtocol() 获取<p>模型类型，OpenAI或Anthropic</p>
+ * @method void setModelProtocol(string $ModelProtocol) 设置<p>模型类型，OpenAI或Anthropic</p>
  */
 class DescribeModelServicesRequest extends AbstractModel
 {
     /**
-     * @var string 实例
+     * @var string <p>实例</p>
      */
     public $InstanceID;
 
     /**
-     * @var integer 分页参数
+     * @var integer <p>分页参数</p>
      */
     public $Offset;
 
     /**
-     * @var integer 分页限制
+     * @var integer <p>分页限制</p>
      */
     public $Limit;
 
     /**
-     * @var array ID列表
+     * @var array <p>ID列表</p>
      */
     public $IDs;
 
     /**
-     * @var array 排除的ID列表
+     * @var array <p>排除的ID列表</p>
      */
     public $NotIDs;
 
     /**
-     * @var string 状态：normal，disabled
+     * @var string <p>状态：normal，disabled</p>
      */
     public $Status;
 
     /**
-     * @var string 关键词
+     * @var string <p>关键词</p>
      */
     public $Keyword;
 
     /**
-     * @var string 模型ID
+     * @var string <p>模型ID</p>
      */
     public $ModelID;
 
     /**
-     * @var DescribeModelServicesSort 排序
+     * @var DescribeModelServicesSort <p>排序</p>
      */
     public $Sort;
 
     /**
-     * @param string $InstanceID 实例
-     * @param integer $Offset 分页参数
-     * @param integer $Limit 分页限制
-     * @param array $IDs ID列表
-     * @param array $NotIDs 排除的ID列表
-     * @param string $Status 状态：normal，disabled
-     * @param string $Keyword 关键词
-     * @param string $ModelID 模型ID
-     * @param DescribeModelServicesSort $Sort 排序
+     * @var string <p>模型类型，OpenAI或Anthropic</p>
+     */
+    public $ModelProtocol;
+
+    /**
+     * @param string $InstanceID <p>实例</p>
+     * @param integer $Offset <p>分页参数</p>
+     * @param integer $Limit <p>分页限制</p>
+     * @param array $IDs <p>ID列表</p>
+     * @param array $NotIDs <p>排除的ID列表</p>
+     * @param string $Status <p>状态：normal，disabled</p>
+     * @param string $Keyword <p>关键词</p>
+     * @param string $ModelID <p>模型ID</p>
+     * @param DescribeModelServicesSort $Sort <p>排序</p>
+     * @param string $ModelProtocol <p>模型类型，OpenAI或Anthropic</p>
      */
     function __construct()
     {
@@ -145,6 +153,10 @@ class DescribeModelServicesRequest extends AbstractModel
         if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
             $this->Sort = new DescribeModelServicesSort();
             $this->Sort->deserialize($param["Sort"]);
+        }
+
+        if (array_key_exists("ModelProtocol",$param) and $param["ModelProtocol"] !== null) {
+            $this->ModelProtocol = $param["ModelProtocol"];
         }
     }
 }

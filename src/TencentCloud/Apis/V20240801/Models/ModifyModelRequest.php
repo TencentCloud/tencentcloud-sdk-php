@@ -20,82 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyModel请求参数结构体
  *
- * @method string getInstanceID() 获取实例
- * @method void setInstanceID(string $InstanceID) 设置实例
- * @method string getID() 获取模型ID
- * @method void setID(string $ID) 设置模型ID
- * @method string getName() 获取模型名称
- * @method void setName(string $Name) 设置模型名称
- * @method string getHttpProtocolType() 获取协议类型：http/https
- * @method void setHttpProtocolType(string $HttpProtocolType) 设置协议类型：http/https
- * @method string getTargetPath() 获取目标路径
- * @method void setTargetPath(string $TargetPath) 设置目标路径
- * @method array getTargetHosts() 获取目标服务器
- * @method void setTargetHosts(array $TargetHosts) 设置目标服务器
- * @method string getCredentialID() 获取凭据ID
- * @method void setCredentialID(string $CredentialID) 设置凭据ID
- * @method boolean getCheckTargetCertsError() 获取https时，是否检查证书合法
- * @method void setCheckTargetCertsError(boolean $CheckTargetCertsError) 设置https时，是否检查证书合法
- * @method string getHttpProtocolVersion() 获取http协议版本：1.1/2.0
- * @method void setHttpProtocolVersion(string $HttpProtocolVersion) 设置http协议版本：1.1/2.0
+ * @method string getInstanceID() 获取<p>实例</p>
+ * @method void setInstanceID(string $InstanceID) 设置<p>实例</p>
+ * @method string getID() 获取<p>模型ID</p>
+ * @method void setID(string $ID) 设置<p>模型ID</p>
+ * @method string getName() 获取<p>模型名称</p>
+ * @method void setName(string $Name) 设置<p>模型名称</p>
+ * @method string getHttpProtocolType() 获取<p>协议类型：http/https</p>
+ * @method void setHttpProtocolType(string $HttpProtocolType) 设置<p>协议类型：http/https</p>
+ * @method string getTargetPath() 获取<p>目标路径</p>
+ * @method void setTargetPath(string $TargetPath) 设置<p>目标路径</p>
+ * @method array getTargetHosts() 获取<p>目标服务器</p>
+ * @method void setTargetHosts(array $TargetHosts) 设置<p>目标服务器</p>
+ * @method string getCredentialID() 获取<p>凭据ID</p>
+ * @method void setCredentialID(string $CredentialID) 设置<p>凭据ID</p>
+ * @method boolean getCheckTargetCertsError() 获取<p>https时，是否检查证书合法</p>
+ * @method void setCheckTargetCertsError(boolean $CheckTargetCertsError) 设置<p>https时，是否检查证书合法</p>
+ * @method string getHttpProtocolVersion() 获取<p>http协议版本：1.1/2.0</p>
+ * @method void setHttpProtocolVersion(string $HttpProtocolVersion) 设置<p>http协议版本：1.1/2.0</p>
+ * @method string getModelID() 获取<p>model ID</p>
+ * @method void setModelID(string $ModelID) 设置<p>model ID</p>
+ * @method string getDescription() 获取<p>描述</p>
+ * @method void setDescription(string $Description) 设置<p>描述</p>
  */
 class ModifyModelRequest extends AbstractModel
 {
     /**
-     * @var string 实例
+     * @var string <p>实例</p>
      */
     public $InstanceID;
 
     /**
-     * @var string 模型ID
+     * @var string <p>模型ID</p>
      */
     public $ID;
 
     /**
-     * @var string 模型名称
+     * @var string <p>模型名称</p>
      */
     public $Name;
 
     /**
-     * @var string 协议类型：http/https
+     * @var string <p>协议类型：http/https</p>
      */
     public $HttpProtocolType;
 
     /**
-     * @var string 目标路径
+     * @var string <p>目标路径</p>
      */
     public $TargetPath;
 
     /**
-     * @var array 目标服务器
+     * @var array <p>目标服务器</p>
      */
     public $TargetHosts;
 
     /**
-     * @var string 凭据ID
+     * @var string <p>凭据ID</p>
      */
     public $CredentialID;
 
     /**
-     * @var boolean https时，是否检查证书合法
+     * @var boolean <p>https时，是否检查证书合法</p>
      */
     public $CheckTargetCertsError;
 
     /**
-     * @var string http协议版本：1.1/2.0
+     * @var string <p>http协议版本：1.1/2.0</p>
      */
     public $HttpProtocolVersion;
 
     /**
-     * @param string $InstanceID 实例
-     * @param string $ID 模型ID
-     * @param string $Name 模型名称
-     * @param string $HttpProtocolType 协议类型：http/https
-     * @param string $TargetPath 目标路径
-     * @param array $TargetHosts 目标服务器
-     * @param string $CredentialID 凭据ID
-     * @param boolean $CheckTargetCertsError https时，是否检查证书合法
-     * @param string $HttpProtocolVersion http协议版本：1.1/2.0
+     * @var string <p>model ID</p>
+     */
+    public $ModelID;
+
+    /**
+     * @var string <p>描述</p>
+     */
+    public $Description;
+
+    /**
+     * @param string $InstanceID <p>实例</p>
+     * @param string $ID <p>模型ID</p>
+     * @param string $Name <p>模型名称</p>
+     * @param string $HttpProtocolType <p>协议类型：http/https</p>
+     * @param string $TargetPath <p>目标路径</p>
+     * @param array $TargetHosts <p>目标服务器</p>
+     * @param string $CredentialID <p>凭据ID</p>
+     * @param boolean $CheckTargetCertsError <p>https时，是否检查证书合法</p>
+     * @param string $HttpProtocolVersion <p>http协议版本：1.1/2.0</p>
+     * @param string $ModelID <p>model ID</p>
+     * @param string $Description <p>描述</p>
      */
     function __construct()
     {
@@ -149,6 +165,14 @@ class ModifyModelRequest extends AbstractModel
 
         if (array_key_exists("HttpProtocolVersion",$param) and $param["HttpProtocolVersion"] !== null) {
             $this->HttpProtocolVersion = $param["HttpProtocolVersion"];
+        }
+
+        if (array_key_exists("ModelID",$param) and $param["ModelID"] !== null) {
+            $this->ModelID = $param["ModelID"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

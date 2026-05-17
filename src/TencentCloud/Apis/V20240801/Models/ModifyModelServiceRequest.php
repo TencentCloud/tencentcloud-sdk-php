@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFallbackStatus(boolean $FallbackStatus) 设置<p>是否开启备份模型</p>
  * @method array getFallbackModels() 获取<p>备份模型</p>
  * @method void setFallbackModels(array $FallbackModels) 设置<p>备份模型</p>
+ * @method string getModelProtocol() 获取<p>模型类型</p>
+ * @method void setModelProtocol(string $ModelProtocol) 设置<p>模型类型</p>
  */
 class ModifyModelServiceRequest extends AbstractModel
 {
@@ -206,6 +208,11 @@ class ModifyModelServiceRequest extends AbstractModel
     public $FallbackModels;
 
     /**
+     * @var string <p>模型类型</p>
+     */
+    public $ModelProtocol;
+
+    /**
      * @param string $InstanceID <p>实例</p>
      * @param string $ID <p>模型服务ID</p>
      * @param string $Name <p>模型服务名称</p>
@@ -232,6 +239,7 @@ class ModifyModelServiceRequest extends AbstractModel
      * @param string $HostKeyHeaderName <p>会话判断header名称</p>
      * @param boolean $FallbackStatus <p>是否开启备份模型</p>
      * @param array $FallbackModels <p>备份模型</p>
+     * @param string $ModelProtocol <p>模型类型</p>
      */
     function __construct()
     {
@@ -368,6 +376,10 @@ class ModifyModelServiceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->FallbackModels, $obj);
             }
+        }
+
+        if (array_key_exists("ModelProtocol",$param) and $param["ModelProtocol"] !== null) {
+            $this->ModelProtocol = $param["ModelProtocol"];
         }
     }
 }

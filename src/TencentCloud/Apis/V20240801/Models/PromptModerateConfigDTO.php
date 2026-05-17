@@ -20,33 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 提示词安全配置
  *
- * @method string getAction() 获取执行动作
+ * @method string getAction() 获取<p>执行动作</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAction(string $Action) 设置执行动作
+ * @method void setAction(string $Action) 设置<p>执行动作</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInterceptMessage() 获取响应拦截内容
+ * @method string getInterceptMessage() 获取<p>响应拦截内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInterceptMessage(string $InterceptMessage) 设置响应拦截内容
+ * @method void setInterceptMessage(string $InterceptMessage) 设置<p>响应拦截内容</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getContextScope() 获取<p>检测上下文</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContextScope(string $ContextScope) 设置<p>检测上下文</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class PromptModerateConfigDTO extends AbstractModel
 {
     /**
-     * @var string 执行动作
+     * @var string <p>执行动作</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Action;
 
     /**
-     * @var string 响应拦截内容
+     * @var string <p>响应拦截内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InterceptMessage;
 
     /**
-     * @param string $Action 执行动作
+     * @var string <p>检测上下文</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InterceptMessage 响应拦截内容
+     */
+    public $ContextScope;
+
+    /**
+     * @param string $Action <p>执行动作</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InterceptMessage <p>响应拦截内容</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ContextScope <p>检测上下文</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -68,6 +80,10 @@ class PromptModerateConfigDTO extends AbstractModel
 
         if (array_key_exists("InterceptMessage",$param) and $param["InterceptMessage"] !== null) {
             $this->InterceptMessage = $param["InterceptMessage"];
+        }
+
+        if (array_key_exists("ContextScope",$param) and $param["ContextScope"] !== null) {
+            $this->ContextScope = $param["ContextScope"];
         }
     }
 }

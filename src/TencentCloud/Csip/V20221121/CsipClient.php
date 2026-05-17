@@ -27,6 +27,10 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\AddNewBindRoleUserResponse AddNewBindRoleUser(Models\AddNewBindRoleUserRequest $req) csip角色授权绑定接口
  * @method Models\CreateAccessKeyCheckTaskResponse CreateAccessKeyCheckTask(Models\CreateAccessKeyCheckTaskRequest $req) 检测AK 异步任务
  * @method Models\CreateAccessKeySyncTaskResponse CreateAccessKeySyncTask(Models\CreateAccessKeySyncTaskRequest $req) 发起AK资产同步任务
+ * @method Models\CreateCosAssetSyncTaskResponse CreateCosAssetSyncTask(Models\CreateCosAssetSyncTaskRequest $req) 创建资产同步任务
+ * @method Models\CreateCosObjectScanTaskResponse CreateCosObjectScanTask(Models\CreateCosObjectScanTaskRequest $req) 创建cos病毒扫描、敏感数据识别任务
+ * @method Models\CreateCosPolicyResponse CreateCosPolicy(Models\CreateCosPolicyRequest $req) 添加cos告警策略
+ * @method Models\CreateCosRiskScanTaskResponse CreateCosRiskScanTask(Models\CreateCosRiskScanTaskRequest $req) 创建风险监测任务
  * @method Models\CreateDomainAndIpResponse CreateDomainAndIp(Models\CreateDomainAndIpRequest $req) 创建域名、ip相关信息
  * @method Models\CreateDspmAccessExportJobResponse CreateDspmAccessExportJob(Models\CreateDspmAccessExportJobRequest $req) 创建Dspm访问记录导出任务
  * @method Models\CreateDspmApplyOrderResponse CreateDspmApplyOrder(Models\CreateDspmApplyOrderRequest $req) 创建Dspm申请单
@@ -40,6 +44,8 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\CreateDspmWhitelistStrategyResponse CreateDspmWhitelistStrategy(Models\CreateDspmWhitelistStrategyRequest $req) 创建Dspm白名单策略
  * @method Models\CreateRiskCenterScanTaskResponse CreateRiskCenterScanTask(Models\CreateRiskCenterScanTaskRequest $req) 创建风险中心扫描任务
  * @method Models\CreateSkillScanResponse CreateSkillScan(Models\CreateSkillScanRequest $req) 上传 Skill ZIP 文件，触发异步安全检测。上传成功后应使用返回的 ContentHash + EngineVersion 轮询 DescribeSkillScanResult 接口获取结果。上传接口具备幂等性，同一 Hash 的文件重复上传不会创建重复任务。检测结果保留90天，超期后需重新上传检测。
+ * @method Models\DeleteCosAkAssetResponse DeleteCosAkAsset(Models\DeleteCosAkAssetRequest $req) 删除已删除的cos ak资产
+ * @method Models\DeleteCosPolicyResponse DeleteCosPolicy(Models\DeleteCosPolicyRequest $req) 删除策略
  * @method Models\DeleteDomainAndIpResponse DeleteDomainAndIp(Models\DeleteDomainAndIpRequest $req) 删除域名和ip请求
  * @method Models\DeleteDspmApplyOrderResponse DeleteDspmApplyOrder(Models\DeleteDspmApplyOrderRequest $req) 删除Dspm申请单
  * @method Models\DeleteDspmAssetAccountResponse DeleteDspmAssetAccount(Models\DeleteDspmAssetAccountRequest $req) 删除Dspm资产账号
@@ -64,6 +70,7 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeAssetRiskListResponse DescribeAssetRiskList(Models\DescribeAssetRiskListRequest $req) 资产视角下云资源配置风险列表
  * @method Models\DescribeAssetViewVulRiskListResponse DescribeAssetViewVulRiskList(Models\DescribeAssetViewVulRiskListRequest $req) 获取资产视角的漏洞风险列表
  * @method Models\DescribeAssumeRoleResponse DescribeAssumeRole(Models\DescribeAssumeRoleRequest $req) 查询是否绑定角色
+ * @method Models\DescribeBucketInvokeIpListResponse DescribeBucketInvokeIpList(Models\DescribeBucketInvokeIpListRequest $req) 查看存储桶调用源ip列表
  * @method Models\DescribeCFWAssetStatisticsResponse DescribeCFWAssetStatistics(Models\DescribeCFWAssetStatisticsRequest $req) 云防资产中心统计数据
  * @method Models\DescribeCSIPRiskStatisticsResponse DescribeCSIPRiskStatistics(Models\DescribeCSIPRiskStatisticsRequest $req) 获取风险中心风险概况示例
  * @method Models\DescribeCVMAssetInfoResponse DescribeCVMAssetInfo(Models\DescribeCVMAssetInfoRequest $req) cvm详情
@@ -73,6 +80,33 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeClusterAssetsResponse DescribeClusterAssets(Models\DescribeClusterAssetsRequest $req) 集群列表
  * @method Models\DescribeClusterPodAssetsResponse DescribeClusterPodAssets(Models\DescribeClusterPodAssetsRequest $req) 集群pod列表
  * @method Models\DescribeConfigCheckRulesResponse DescribeConfigCheckRules(Models\DescribeConfigCheckRulesRequest $req) 云资源配置风险规则列表示例
+ * @method Models\DescribeCosAccessPermissionResponse DescribeCosAccessPermission(Models\DescribeCosAccessPermissionRequest $req) 查看cos桶访问权限信息
+ * @method Models\DescribeCosAccessPermissionsResponse DescribeCosAccessPermissions(Models\DescribeCosAccessPermissionsRequest $req) 查看对象存储访问权限列表
+ * @method Models\DescribeCosActionListResponse DescribeCosActionList(Models\DescribeCosActionListRequest $req) 查看COS接口列表
+ * @method Models\DescribeCosAkAssetResponse DescribeCosAkAsset(Models\DescribeCosAkAssetRequest $req) 查看ak资产列表信息
+ * @method Models\DescribeCosAkInvokeIpListResponse DescribeCosAkInvokeIpList(Models\DescribeCosAkInvokeIpListRequest $req) 查看存储桶调用源ip列表
+ * @method Models\DescribeCosAlarmListResponse DescribeCosAlarmList(Models\DescribeCosAlarmListRequest $req) 查看告警列表
+ * @method Models\DescribeCosAlarmTrendDataResponse DescribeCosAlarmTrendData(Models\DescribeCosAlarmTrendDataRequest $req) 每日告警新增数据
+ * @method Models\DescribeCosAssetResponse DescribeCosAsset(Models\DescribeCosAssetRequest $req) 查看cos资产列表
+ * @method Models\DescribeCosAssetSyncTaskResponse DescribeCosAssetSyncTask(Models\DescribeCosAssetSyncTaskRequest $req) 获取对应appid对应的当前正在扫描的taskid
+ * @method Models\DescribeCosAuditAppIdListResponse DescribeCosAuditAppIdList(Models\DescribeCosAuditAppIdListRequest $req) 查看该appid下已购买的appid集合
+ * @method Models\DescribeCosAuditDictionaryListResponse DescribeCosAuditDictionaryList(Models\DescribeCosAuditDictionaryListRequest $req) 查询cos审计字典信息列表
+ * @method Models\DescribeCosAuditPayInfoResponse DescribeCosAuditPayInfo(Models\DescribeCosAuditPayInfoRequest $req) 获取审计支付信息
+ * @method Models\DescribeCosBucketBillingInfoResponse DescribeCosBucketBillingInfo(Models\DescribeCosBucketBillingInfoRequest $req) 获取存储桶计费信息
+ * @method Models\DescribeCosBucketListResponse DescribeCosBucketList(Models\DescribeCosBucketListRequest $req) 获取存储桶信息
+ * @method Models\DescribeCosBucketRiskResponse DescribeCosBucketRisk(Models\DescribeCosBucketRiskRequest $req) 查看风险资产视角
+ * @method Models\DescribeCosIdentifyFileListResponse DescribeCosIdentifyFileList(Models\DescribeCosIdentifyFileListRequest $req) 查询cos文件数据识别结果列表
+ * @method Models\DescribeCosInvokeUaResponse DescribeCosInvokeUa(Models\DescribeCosInvokeUaRequest $req) 查看调用记录关联的文件信息
+ * @method Models\DescribeCosIpInvokeLogResponse DescribeCosIpInvokeLog(Models\DescribeCosIpInvokeLogRequest $req) 查看cos调用日志
+ * @method Models\DescribeCosIpInvokeRecordFileResponse DescribeCosIpInvokeRecordFile(Models\DescribeCosIpInvokeRecordFileRequest $req) 查看调用记录关联的文件信息
+ * @method Models\DescribeCosOverviewResponse DescribeCosOverview(Models\DescribeCosOverviewRequest $req) cos概览信息
+ * @method Models\DescribeCosPolicyResponse DescribeCosPolicy(Models\DescribeCosPolicyRequest $req) 获取策略列表信息
+ * @method Models\DescribeCosRiskActionListResponse DescribeCosRiskActionList(Models\DescribeCosRiskActionListRequest $req) 风险接口列表信息
+ * @method Models\DescribeCosRiskEvidenceResponse DescribeCosRiskEvidence(Models\DescribeCosRiskEvidenceRequest $req) 查看风险证据以及描述
+ * @method Models\DescribeCosRiskScanTaskResponse DescribeCosRiskScanTask(Models\DescribeCosRiskScanTaskRequest $req) 查看存储桶扫描任务详情
+ * @method Models\DescribeCosRoleAccessPermissionResponse DescribeCosRoleAccessPermission(Models\DescribeCosRoleAccessPermissionRequest $req) 查看cos桶访问权限信息
+ * @method Models\DescribeCosRoleAccessPermissionsResponse DescribeCosRoleAccessPermissions(Models\DescribeCosRoleAccessPermissionsRequest $req) 获取存储桶角色权限列表
+ * @method Models\DescribeCosSourceIpResponse DescribeCosSourceIp(Models\DescribeCosSourceIpRequest $req) 调用源ip列表
  * @method Models\DescribeDbAssetInfoResponse DescribeDbAssetInfo(Models\DescribeDbAssetInfoRequest $req) db资产详情
  * @method Models\DescribeDbAssetsResponse DescribeDbAssets(Models\DescribeDbAssetsRequest $req) 数据库资产列表
  * @method Models\DescribeDomainAssetsResponse DescribeDomainAssets(Models\DescribeDomainAssetsRequest $req) 域名列表
@@ -124,6 +158,8 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeExposuresResponse DescribeExposures(Models\DescribeExposuresRequest $req) 云边界分析资产列表
  * @method Models\DescribeGatewayAssetsResponse DescribeGatewayAssets(Models\DescribeGatewayAssetsRequest $req) 获取网关列表
  * @method Models\DescribeHighBaseLineRiskListResponse DescribeHighBaseLineRiskList(Models\DescribeHighBaseLineRiskListRequest $req) 查询云边界分析-暴露路径下主机节点的高危基线风险列表
+ * @method Models\DescribeIpInvokeRecordResponse DescribeIpInvokeRecord(Models\DescribeIpInvokeRecordRequest $req) 对象存储异常检测调用记录信息
+ * @method Models\DescribeIpInvokeRecordDetailResponse DescribeIpInvokeRecordDetail(Models\DescribeIpInvokeRecordDetailRequest $req) ip访问列表详情信息
  * @method Models\DescribeKeySandboxCredentialResponse DescribeKeySandboxCredential(Models\DescribeKeySandboxCredentialRequest $req) 查询凭证详情，返回凭证元数据和打码后的凭据数据。access类型返回Access数组（Key原文、Value打码），sts类型返回STS对象（System原文、SecretID和SecretKey打码）
  * @method Models\DescribeKeySandboxCredentialListResponse DescribeKeySandboxCredentialList(Models\DescribeKeySandboxCredentialListRequest $req) 查询凭证列表
  * @method Models\DescribeListenerListResponse DescribeListenerList(Models\DescribeListenerListRequest $req) 查询clb监听器列表
@@ -131,8 +167,10 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeOrganizationInfoResponse DescribeOrganizationInfo(Models\DescribeOrganizationInfoRequest $req) 查询集团账号详情
  * @method Models\DescribeOrganizationUserInfoResponse DescribeOrganizationUserInfo(Models\DescribeOrganizationUserInfoRequest $req) 查询集团账号用户列表
  * @method Models\DescribeOtherCloudAssetsResponse DescribeOtherCloudAssets(Models\DescribeOtherCloudAssetsRequest $req) 资产列表
+ * @method Models\DescribePolicyHitDataResponse DescribePolicyHitData(Models\DescribePolicyHitDataRequest $req) 按日期查看策略命中详情
  * @method Models\DescribePublicIpAssetsResponse DescribePublicIpAssets(Models\DescribePublicIpAssetsRequest $req) ip公网列表
  * @method Models\DescribeRepositoryImageAssetsResponse DescribeRepositoryImageAssets(Models\DescribeRepositoryImageAssetsRequest $req) 仓库镜像列表
+ * @method Models\DescribeRiskBucketListResponse DescribeRiskBucketList(Models\DescribeRiskBucketListRequest $req) 查看风险关联的存储桶信息
  * @method Models\DescribeRiskCallRecordResponse DescribeRiskCallRecord(Models\DescribeRiskCallRecordRequest $req) 获取风险调用记录列表
  * @method Models\DescribeRiskCenterAssetViewCFGRiskListResponse DescribeRiskCenterAssetViewCFGRiskList(Models\DescribeRiskCenterAssetViewCFGRiskListRequest $req) 获取资产视角的配置风险列表
  * @method Models\DescribeRiskCenterAssetViewPortRiskListResponse DescribeRiskCenterAssetViewPortRiskList(Models\DescribeRiskCenterAssetViewPortRiskListRequest $req) 获取资产视角的端口风险列表
@@ -144,8 +182,10 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeRiskCenterVULViewVULRiskListResponse DescribeRiskCenterVULViewVULRiskList(Models\DescribeRiskCenterVULViewVULRiskListRequest $req) 获取漏洞视角的漏洞风险列表
  * @method Models\DescribeRiskCenterWebsiteRiskListResponse DescribeRiskCenterWebsiteRiskList(Models\DescribeRiskCenterWebsiteRiskListRequest $req) 获取内容风险列表
  * @method Models\DescribeRiskDetailListResponse DescribeRiskDetailList(Models\DescribeRiskDetailListRequest $req) 风险详情列表示例
+ * @method Models\DescribeRiskItemListResponse DescribeRiskItemList(Models\DescribeRiskItemListRequest $req) 获取风险项视角列表
  * @method Models\DescribeRiskRuleDetailResponse DescribeRiskRuleDetail(Models\DescribeRiskRuleDetailRequest $req) 查询风险规则详情示例
  * @method Models\DescribeRiskRulesResponse DescribeRiskRules(Models\DescribeRiskRulesRequest $req) 高级配置风险规则列表示例
+ * @method Models\DescribeRiskTrendDataResponse DescribeRiskTrendData(Models\DescribeRiskTrendDataRequest $req) 查看风险趋势图
  * @method Models\DescribeScanReportListResponse DescribeScanReportList(Models\DescribeScanReportListRequest $req) 获取扫描报告列表
  * @method Models\DescribeScanStatisticResponse DescribeScanStatistic(Models\DescribeScanStatisticRequest $req) 查询云边界分析扫描结果统计信息
  * @method Models\DescribeScanTaskListResponse DescribeScanTaskList(Models\DescribeScanTaskListRequest $req) 获取扫描任务列表
@@ -168,6 +208,9 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeVulRiskListResponse DescribeVulRiskList(Models\DescribeVulRiskListRequest $req) 查询云边界分析-暴露路径下主机节点的漏洞列表
  * @method Models\DescribeVulViewVulRiskListResponse DescribeVulViewVulRiskList(Models\DescribeVulViewVulRiskListRequest $req) 获取漏洞视角的漏洞风险列表
  * @method Models\DownloadDspmExportLogResponse DownloadDspmExportLog(Models\DownloadDspmExportLogRequest $req) 下载导出日志
+ * @method Models\ModifyAlarmRiskStatusResponse ModifyAlarmRiskStatus(Models\ModifyAlarmRiskStatusRequest $req) 修改或者更改处置状态
+ * @method Models\ModifyCosAuditMonitorAccountResponse ModifyCosAuditMonitorAccount(Models\ModifyCosAuditMonitorAccountRequest $req) 修改cos审计监测账号
+ * @method Models\ModifyCosMarkInfoResponse ModifyCosMarkInfo(Models\ModifyCosMarkInfoRequest $req) 修改对象存储备注
  * @method Models\ModifyDspmAccessRecordResponse ModifyDspmAccessRecord(Models\ModifyDspmAccessRecordRequest $req) 修改Dspm访问管理信息
  * @method Models\ModifyDspmApproveStatusResponse ModifyDspmApproveStatus(Models\ModifyDspmApproveStatusRequest $req) 修改Dspm审批单状态
  * @method Models\ModifyDspmAssetAccountResponse ModifyDspmAssetAccount(Models\ModifyDspmAssetAccountRequest $req) 修改Dspm资产账号信息
@@ -184,6 +227,7 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\ModifyDspmRiskStrategyResponse ModifyDspmRiskStrategy(Models\ModifyDspmRiskStrategyRequest $req) 修改Dspm风险策略
  * @method Models\ModifyDspmWhitelistStrategyResponse ModifyDspmWhitelistStrategy(Models\ModifyDspmWhitelistStrategyRequest $req) 修改Dspm白名单策略
  * @method Models\ModifyOrganizationAccountStatusResponse ModifyOrganizationAccountStatus(Models\ModifyOrganizationAccountStatusRequest $req) 修改集团账号状态
+ * @method Models\ModifyPolicyStatusResponse ModifyPolicyStatus(Models\ModifyPolicyStatusRequest $req) 修改策略状态
  * @method Models\ModifyRiskCenterRiskStatusResponse ModifyRiskCenterRiskStatus(Models\ModifyRiskCenterRiskStatusRequest $req) 修改风险中心风险状态
  * @method Models\ModifyRiskCenterScanTaskResponse ModifyRiskCenterScanTask(Models\ModifyRiskCenterScanTaskRequest $req) 修改风险中心扫描任务
  * @method Models\ModifyUebaRuleSwitchResponse ModifyUebaRuleSwitch(Models\ModifyUebaRuleSwitchRequest $req) 更新自定义策略的开关

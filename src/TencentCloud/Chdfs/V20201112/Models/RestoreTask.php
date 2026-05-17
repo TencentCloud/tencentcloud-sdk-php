@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 回热任务
  *
- * @method integer getRestoreTaskId() 获取回热任务ID
- * @method void setRestoreTaskId(integer $RestoreTaskId) 设置回热任务ID
- * @method string getFilePath() 获取回热任务文件路径
- * @method void setFilePath(string $FilePath) 设置回热任务文件路径
- * @method integer getType() 获取回热任务类型（1：标准；2：极速；3：批量，暂时仅支持标准）
- * @method void setType(integer $Type) 设置回热任务类型（1：标准；2：极速；3：批量，暂时仅支持标准）
- * @method integer getDays() 获取指定恢复出的临时副本的有效时长（单位天）
- * @method void setDays(integer $Days) 设置指定恢复出的临时副本的有效时长（单位天）
- * @method integer getStatus() 获取回热任务状态（1：绑定文件中；2：绑定文件完成；3：文件回热中；4：文件回热完成）
- * @method void setStatus(integer $Status) 设置回热任务状态（1：绑定文件中；2：绑定文件完成；3：文件回热中；4：文件回热完成）
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method integer getRestoreTaskId() 获取<p>回热任务ID</p>
+ * @method void setRestoreTaskId(integer $RestoreTaskId) 设置<p>回热任务ID</p>
+ * @method string getFilePath() 获取<p>回热任务文件路径，不支持目录和通配符</p>
+ * @method void setFilePath(string $FilePath) 设置<p>回热任务文件路径，不支持目录和通配符</p>
+ * @method integer getType() 获取<p>回热任务类型（1：标准；2：极速；3：批量，暂时仅支持标准）</p>
+ * @method void setType(integer $Type) 设置<p>回热任务类型（1：标准；2：极速；3：批量，暂时仅支持标准）</p>
+ * @method integer getDays() 获取<p>指定恢复出的临时副本的有效时长（单位天）</p>
+ * @method void setDays(integer $Days) 设置<p>指定恢复出的临时副本的有效时长（单位天）</p>
+ * @method integer getStatus() 获取<p>回热任务状态（1：绑定文件中；2：绑定文件完成；3：文件回热中；4：文件回热完成）</p>
+ * @method void setStatus(integer $Status) 设置<p>回热任务状态（1：绑定文件中；2：绑定文件完成；3：文件回热中；4：文件回热完成）</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
  */
 class RestoreTask extends AbstractModel
 {
     /**
-     * @var integer 回热任务ID
+     * @var integer <p>回热任务ID</p>
      */
     public $RestoreTaskId;
 
     /**
-     * @var string 回热任务文件路径
+     * @var string <p>回热任务文件路径，不支持目录和通配符</p>
      */
     public $FilePath;
 
     /**
-     * @var integer 回热任务类型（1：标准；2：极速；3：批量，暂时仅支持标准）
+     * @var integer <p>回热任务类型（1：标准；2：极速；3：批量，暂时仅支持标准）</p>
      */
     public $Type;
 
     /**
-     * @var integer 指定恢复出的临时副本的有效时长（单位天）
+     * @var integer <p>指定恢复出的临时副本的有效时长（单位天）</p>
      */
     public $Days;
 
     /**
-     * @var integer 回热任务状态（1：绑定文件中；2：绑定文件完成；3：文件回热中；4：文件回热完成）
+     * @var integer <p>回热任务状态（1：绑定文件中；2：绑定文件完成；3：文件回热中；4：文件回热完成）</p>
      */
     public $Status;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @param integer $RestoreTaskId 回热任务ID
-     * @param string $FilePath 回热任务文件路径
-     * @param integer $Type 回热任务类型（1：标准；2：极速；3：批量，暂时仅支持标准）
-     * @param integer $Days 指定恢复出的临时副本的有效时长（单位天）
-     * @param integer $Status 回热任务状态（1：绑定文件中；2：绑定文件完成；3：文件回热中；4：文件回热完成）
-     * @param string $CreateTime 创建时间
+     * @param integer $RestoreTaskId <p>回热任务ID</p>
+     * @param string $FilePath <p>回热任务文件路径，不支持目录和通配符</p>
+     * @param integer $Type <p>回热任务类型（1：标准；2：极速；3：批量，暂时仅支持标准）</p>
+     * @param integer $Days <p>指定恢复出的临时副本的有效时长（单位天）</p>
+     * @param integer $Status <p>回热任务状态（1：绑定文件中；2：绑定文件完成；3：文件回热中；4：文件回热完成）</p>
+     * @param string $CreateTime <p>创建时间</p>
      */
     function __construct()
     {

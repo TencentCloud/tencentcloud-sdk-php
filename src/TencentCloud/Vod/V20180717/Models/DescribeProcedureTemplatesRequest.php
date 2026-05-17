@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProcedureTemplates请求参数结构体
  *
- * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
- * @method array getNames() 获取任务流模板名字过滤条件，数组长度限制：100。
- * @method void setNames(array $Names) 设置任务流模板名字过滤条件，数组长度限制：100。
- * @method string getType() 获取任务流模板类型过滤条件，可选值：
-<li>Preset：系统预置任务流模板；</li>
-<li>Custom：用户自定义任务流模板。</li>
- * @method void setType(string $Type) 设置任务流模板类型过滤条件，可选值：
-<li>Preset：系统预置任务流模板；</li>
-<li>Custom：用户自定义任务流模板。</li>
- * @method integer getOffset() 获取分页偏移量，默认值：0。
- * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
- * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：100。
- * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：10，最大值：100。
+ * @method integer getSubAppId() 获取<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method void setSubAppId(integer $SubAppId) 设置<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+ * @method array getNames() 获取<p>任务流模板名字过滤条件，数组长度限制：100。</p>
+ * @method void setNames(array $Names) 设置<p>任务流模板名字过滤条件，数组长度限制：100。</p>
+ * @method string getType() 获取<p>任务流模板类型过滤条件，可选值：</p><li>Preset：系统预置任务流模板；</li><li>Custom：用户自定义任务流模板。</li>
+ * @method void setType(string $Type) 设置<p>任务流模板类型过滤条件，可选值：</p><li>Preset：系统预置任务流模板；</li><li>Custom：用户自定义任务流模板。</li>
+ * @method integer getOffset() 获取<p>分页偏移量，默认值：0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移量，默认值：0。</p>
+ * @method integer getLimit() 获取<p>返回记录条数，默认值：10，最大值：100。</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回记录条数，默认值：10，最大值：100。</p>
+ * @method array getSortBy() 获取<p>指定字段对返回结果进行生序或者降序Sort.Field 目前只支持 CreateTime 。Sort.Order 为 desc（降序）或者 asc（升序）</p><p>入参限制：当前仅支持排序字段为CreateTime</p>
+ * @method void setSortBy(array $SortBy) 设置<p>指定字段对返回结果进行生序或者降序Sort.Field 目前只支持 CreateTime 。Sort.Order 为 desc（降序）或者 asc（升序）</p><p>入参限制：当前仅支持排序字段为CreateTime</p>
  */
 class DescribeProcedureTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * @var integer <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public $SubAppId;
 
     /**
-     * @var array 任务流模板名字过滤条件，数组长度限制：100。
+     * @var array <p>任务流模板名字过滤条件，数组长度限制：100。</p>
      */
     public $Names;
 
     /**
-     * @var string 任务流模板类型过滤条件，可选值：
-<li>Preset：系统预置任务流模板；</li>
-<li>Custom：用户自定义任务流模板。</li>
+     * @var string <p>任务流模板类型过滤条件，可选值：</p><li>Preset：系统预置任务流模板；</li><li>Custom：用户自定义任务流模板。</li>
      */
     public $Type;
 
     /**
-     * @var integer 分页偏移量，默认值：0。
+     * @var integer <p>分页偏移量，默认值：0。</p>
      */
     public $Offset;
 
     /**
-     * @var integer 返回记录条数，默认值：10，最大值：100。
+     * @var integer <p>返回记录条数，默认值：10，最大值：100。</p>
      */
     public $Limit;
 
     /**
-     * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     * @param array $Names 任务流模板名字过滤条件，数组长度限制：100。
-     * @param string $Type 任务流模板类型过滤条件，可选值：
-<li>Preset：系统预置任务流模板；</li>
-<li>Custom：用户自定义任务流模板。</li>
-     * @param integer $Offset 分页偏移量，默认值：0。
-     * @param integer $Limit 返回记录条数，默认值：10，最大值：100。
+     * @var array <p>指定字段对返回结果进行生序或者降序Sort.Field 目前只支持 CreateTime 。Sort.Order 为 desc（降序）或者 asc（升序）</p><p>入参限制：当前仅支持排序字段为CreateTime</p>
+     */
+    public $SortBy;
+
+    /**
+     * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param array $Names <p>任务流模板名字过滤条件，数组长度限制：100。</p>
+     * @param string $Type <p>任务流模板类型过滤条件，可选值：</p><li>Preset：系统预置任务流模板；</li><li>Custom：用户自定义任务流模板。</li>
+     * @param integer $Offset <p>分页偏移量，默认值：0。</p>
+     * @param integer $Limit <p>返回记录条数，默认值：10，最大值：100。</p>
+     * @param array $SortBy <p>指定字段对返回结果进行生序或者降序Sort.Field 目前只支持 CreateTime 。Sort.Order 为 desc（降序）或者 asc（升序）</p><p>入参限制：当前仅支持排序字段为CreateTime</p>
      */
     function __construct()
     {
@@ -104,6 +104,15 @@ class DescribeProcedureTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("SortBy",$param) and $param["SortBy"] !== null) {
+            $this->SortBy = [];
+            foreach ($param["SortBy"] as $key => $value){
+                $obj = new SortBy();
+                $obj->deserialize($value);
+                array_push($this->SortBy, $obj);
+            }
         }
     }
 }

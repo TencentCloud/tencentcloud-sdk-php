@@ -20,81 +20,93 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 内容安全配置
  *
- * @method array getScope() 获取检测范围,请求/响应
+ * @method array getScope() 获取<p>检测范围,请求/响应</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScope(array $Scope) 设置检测范围,请求/响应
+ * @method void setScope(array $Scope) 设置<p>检测范围,请求/响应</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMode() 获取检测形式
+ * @method string getMode() 获取<p>检测形式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMode(string $Mode) 设置检测形式
+ * @method void setMode(string $Mode) 设置<p>检测形式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAction() 获取执行动作
+ * @method string getAction() 获取<p>执行动作</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAction(string $Action) 设置执行动作
+ * @method void setAction(string $Action) 设置<p>执行动作</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMergeCount() 获取合并请求检测event数，联动Mode字段sync
+ * @method integer getMergeCount() 获取<p>合并请求检测event数，联动Mode字段sync</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMergeCount(integer $MergeCount) 设置合并请求检测event数，联动Mode字段sync
+ * @method void setMergeCount(integer $MergeCount) 设置<p>合并请求检测event数，联动Mode字段sync</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBizType() 获取风控策略
+ * @method string getBizType() 获取<p>风控策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBizType(string $BizType) 设置风控策略
+ * @method void setBizType(string $BizType) 设置<p>风控策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInterceptMessage() 获取响应拦截内容
+ * @method string getInterceptMessage() 获取<p>响应拦截内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInterceptMessage(string $InterceptMessage) 设置响应拦截内容
+ * @method void setInterceptMessage(string $InterceptMessage) 设置<p>响应拦截内容</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getContextScope() 获取<p>检测上下文</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContextScope(string $ContextScope) 设置<p>检测上下文</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TmsConfigDTO extends AbstractModel
 {
     /**
-     * @var array 检测范围,请求/响应
+     * @var array <p>检测范围,请求/响应</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Scope;
 
     /**
-     * @var string 检测形式
+     * @var string <p>检测形式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mode;
 
     /**
-     * @var string 执行动作
+     * @var string <p>执行动作</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Action;
 
     /**
-     * @var integer 合并请求检测event数，联动Mode字段sync
+     * @var integer <p>合并请求检测event数，联动Mode字段sync</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MergeCount;
 
     /**
-     * @var string 风控策略
+     * @var string <p>风控策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BizType;
 
     /**
-     * @var string 响应拦截内容
+     * @var string <p>响应拦截内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InterceptMessage;
 
     /**
-     * @param array $Scope 检测范围,请求/响应
+     * @var string <p>检测上下文</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Mode 检测形式
+     */
+    public $ContextScope;
+
+    /**
+     * @param array $Scope <p>检测范围,请求/响应</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Action 执行动作
+     * @param string $Mode <p>检测形式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MergeCount 合并请求检测event数，联动Mode字段sync
+     * @param string $Action <p>执行动作</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BizType 风控策略
+     * @param integer $MergeCount <p>合并请求检测event数，联动Mode字段sync</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InterceptMessage 响应拦截内容
+     * @param string $BizType <p>风控策略</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InterceptMessage <p>响应拦截内容</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ContextScope <p>检测上下文</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -132,6 +144,10 @@ class TmsConfigDTO extends AbstractModel
 
         if (array_key_exists("InterceptMessage",$param) and $param["InterceptMessage"] !== null) {
             $this->InterceptMessage = $param["InterceptMessage"];
+        }
+
+        if (array_key_exists("ContextScope",$param) and $param["ContextScope"] !== null) {
+            $this->ContextScope = $param["ContextScope"];
         }
     }
 }

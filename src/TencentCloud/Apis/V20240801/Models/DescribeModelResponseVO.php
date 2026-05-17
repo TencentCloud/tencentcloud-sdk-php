@@ -20,130 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询模型详情的响应
  *
- * @method integer getAppID() 获取腾讯云AppID
- * @method void setAppID(integer $AppID) 设置腾讯云AppID
- * @method string getUin() 获取腾讯云Uin
- * @method void setUin(string $Uin) 设置腾讯云Uin
- * @method string getInstanceID() 获取实例ID
- * @method void setInstanceID(string $InstanceID) 设置实例ID
- * @method string getID() 获取模型ID
- * @method void setID(string $ID) 设置模型ID
- * @method string getName() 获取模型名称
- * @method void setName(string $Name) 设置模型名称
- * @method string getCredentialID() 获取凭据ID
- * @method void setCredentialID(string $CredentialID) 设置凭据ID
- * @method string getCredentialName() 获取凭据名称
- * @method void setCredentialName(string $CredentialName) 设置凭据名称
- * @method string getHttpProtocolType() 获取http协议类型
- * @method void setHttpProtocolType(string $HttpProtocolType) 设置http协议类型
- * @method boolean getCheckTargetCertsError() 获取https时，是否校验目标证书
- * @method void setCheckTargetCertsError(boolean $CheckTargetCertsError) 设置https时，是否校验目标证书
- * @method string getHttpProtocolVersion() 获取http协议版本：1.1/2.0
- * @method void setHttpProtocolVersion(string $HttpProtocolVersion) 设置http协议版本：1.1/2.0
- * @method string getTargetPath() 获取目标路径
- * @method void setTargetPath(string $TargetPath) 设置目标路径
- * @method array getTargetHosts() 获取目标器列表
- * @method void setTargetHosts(array $TargetHosts) 设置目标器列表
- * @method integer getModelServiceCount() 获取被模型服务使用的个数
- * @method void setModelServiceCount(integer $ModelServiceCount) 设置被模型服务使用的个数
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getLastUpdateTime() 获取最后修改时间
- * @method void setLastUpdateTime(string $LastUpdateTime) 设置最后修改时间
+ * @method integer getAppID() 获取<p>腾讯云AppID</p>
+ * @method void setAppID(integer $AppID) 设置<p>腾讯云AppID</p>
+ * @method string getUin() 获取<p>腾讯云Uin</p>
+ * @method void setUin(string $Uin) 设置<p>腾讯云Uin</p>
+ * @method string getInstanceID() 获取<p>实例ID</p>
+ * @method void setInstanceID(string $InstanceID) 设置<p>实例ID</p>
+ * @method string getID() 获取<p>模型ID</p>
+ * @method void setID(string $ID) 设置<p>模型ID</p>
+ * @method string getName() 获取<p>模型名称</p>
+ * @method void setName(string $Name) 设置<p>模型名称</p>
+ * @method string getCredentialID() 获取<p>凭据ID</p>
+ * @method void setCredentialID(string $CredentialID) 设置<p>凭据ID</p>
+ * @method string getCredentialName() 获取<p>凭据名称</p>
+ * @method void setCredentialName(string $CredentialName) 设置<p>凭据名称</p>
+ * @method string getHttpProtocolType() 获取<p>http协议类型</p>
+ * @method void setHttpProtocolType(string $HttpProtocolType) 设置<p>http协议类型</p>
+ * @method boolean getCheckTargetCertsError() 获取<p>https时，是否校验目标证书</p>
+ * @method void setCheckTargetCertsError(boolean $CheckTargetCertsError) 设置<p>https时，是否校验目标证书</p>
+ * @method string getHttpProtocolVersion() 获取<p>http协议版本：1.1/2.0</p>
+ * @method void setHttpProtocolVersion(string $HttpProtocolVersion) 设置<p>http协议版本：1.1/2.0</p>
+ * @method string getTargetPath() 获取<p>目标路径</p>
+ * @method void setTargetPath(string $TargetPath) 设置<p>目标路径</p>
+ * @method array getTargetHosts() 获取<p>目标器列表</p>
+ * @method void setTargetHosts(array $TargetHosts) 设置<p>目标器列表</p>
+ * @method integer getModelServiceCount() 获取<p>被模型服务使用的个数</p>
+ * @method void setModelServiceCount(integer $ModelServiceCount) 设置<p>被模型服务使用的个数</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getLastUpdateTime() 获取<p>最后修改时间</p>
+ * @method void setLastUpdateTime(string $LastUpdateTime) 设置<p>最后修改时间</p>
+ * @method string getModelID() 获取<p>model ID</p>
+ * @method void setModelID(string $ModelID) 设置<p>model ID</p>
+ * @method string getDescription() 获取<p>描述</p>
+ * @method void setDescription(string $Description) 设置<p>描述</p>
  */
 class DescribeModelResponseVO extends AbstractModel
 {
     /**
-     * @var integer 腾讯云AppID
+     * @var integer <p>腾讯云AppID</p>
      */
     public $AppID;
 
     /**
-     * @var string 腾讯云Uin
+     * @var string <p>腾讯云Uin</p>
      */
     public $Uin;
 
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceID;
 
     /**
-     * @var string 模型ID
+     * @var string <p>模型ID</p>
      */
     public $ID;
 
     /**
-     * @var string 模型名称
+     * @var string <p>模型名称</p>
      */
     public $Name;
 
     /**
-     * @var string 凭据ID
+     * @var string <p>凭据ID</p>
      */
     public $CredentialID;
 
     /**
-     * @var string 凭据名称
+     * @var string <p>凭据名称</p>
      */
     public $CredentialName;
 
     /**
-     * @var string http协议类型
+     * @var string <p>http协议类型</p>
      */
     public $HttpProtocolType;
 
     /**
-     * @var boolean https时，是否校验目标证书
+     * @var boolean <p>https时，是否校验目标证书</p>
      */
     public $CheckTargetCertsError;
 
     /**
-     * @var string http协议版本：1.1/2.0
+     * @var string <p>http协议版本：1.1/2.0</p>
      */
     public $HttpProtocolVersion;
 
     /**
-     * @var string 目标路径
+     * @var string <p>目标路径</p>
      */
     public $TargetPath;
 
     /**
-     * @var array 目标器列表
+     * @var array <p>目标器列表</p>
      */
     public $TargetHosts;
 
     /**
-     * @var integer 被模型服务使用的个数
+     * @var integer <p>被模型服务使用的个数</p>
      */
     public $ModelServiceCount;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 最后修改时间
+     * @var string <p>最后修改时间</p>
      */
     public $LastUpdateTime;
 
     /**
-     * @param integer $AppID 腾讯云AppID
-     * @param string $Uin 腾讯云Uin
-     * @param string $InstanceID 实例ID
-     * @param string $ID 模型ID
-     * @param string $Name 模型名称
-     * @param string $CredentialID 凭据ID
-     * @param string $CredentialName 凭据名称
-     * @param string $HttpProtocolType http协议类型
-     * @param boolean $CheckTargetCertsError https时，是否校验目标证书
-     * @param string $HttpProtocolVersion http协议版本：1.1/2.0
-     * @param string $TargetPath 目标路径
-     * @param array $TargetHosts 目标器列表
-     * @param integer $ModelServiceCount 被模型服务使用的个数
-     * @param string $CreateTime 创建时间
-     * @param string $LastUpdateTime 最后修改时间
+     * @var string <p>model ID</p>
+     */
+    public $ModelID;
+
+    /**
+     * @var string <p>描述</p>
+     */
+    public $Description;
+
+    /**
+     * @param integer $AppID <p>腾讯云AppID</p>
+     * @param string $Uin <p>腾讯云Uin</p>
+     * @param string $InstanceID <p>实例ID</p>
+     * @param string $ID <p>模型ID</p>
+     * @param string $Name <p>模型名称</p>
+     * @param string $CredentialID <p>凭据ID</p>
+     * @param string $CredentialName <p>凭据名称</p>
+     * @param string $HttpProtocolType <p>http协议类型</p>
+     * @param boolean $CheckTargetCertsError <p>https时，是否校验目标证书</p>
+     * @param string $HttpProtocolVersion <p>http协议版本：1.1/2.0</p>
+     * @param string $TargetPath <p>目标路径</p>
+     * @param array $TargetHosts <p>目标器列表</p>
+     * @param integer $ModelServiceCount <p>被模型服务使用的个数</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $LastUpdateTime <p>最后修改时间</p>
+     * @param string $ModelID <p>model ID</p>
+     * @param string $Description <p>描述</p>
      */
     function __construct()
     {
@@ -221,6 +237,14 @@ class DescribeModelResponseVO extends AbstractModel
 
         if (array_key_exists("LastUpdateTime",$param) and $param["LastUpdateTime"] !== null) {
             $this->LastUpdateTime = $param["LastUpdateTime"];
+        }
+
+        if (array_key_exists("ModelID",$param) and $param["ModelID"] !== null) {
+            $this->ModelID = $param["ModelID"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

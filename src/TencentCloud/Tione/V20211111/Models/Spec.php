@@ -20,97 +20,97 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 计费项内容
  *
- * @method string getSpecId() 获取计费项标签
- * @method void setSpecId(string $SpecId) 设置计费项标签
- * @method string getSpecName() 获取计费项名称
- * @method void setSpecName(string $SpecName) 设置计费项名称
- * @method string getSpecAlias() 获取计费项显示名称
- * @method void setSpecAlias(string $SpecAlias) 设置计费项显示名称
- * @method boolean getAvailable() 获取是否售罄
- * @method void setAvailable(boolean $Available) 设置是否售罄
- * @method array getAvailableRegion() 获取当前资源售罄时，可用的区域有哪些
- * @method void setAvailableRegion(array $AvailableRegion) 设置当前资源售罄时，可用的区域有哪些
- * @method array getSpecFeatures() 获取当前计费项支持的特性
+ * @method string getSpecId() 获取<p>计费项标签</p>
+ * @method void setSpecId(string $SpecId) 设置<p>计费项标签</p>
+ * @method string getSpecName() 获取<p>计费项名称</p>
+ * @method void setSpecName(string $SpecName) 设置<p>计费项名称</p>
+ * @method string getSpecAlias() 获取<p>计费项显示名称</p>
+ * @method void setSpecAlias(string $SpecAlias) 设置<p>计费项显示名称</p>
+ * @method boolean getAvailable() 获取<p>是否售罄</p>
+ * @method void setAvailable(boolean $Available) 设置<p>是否售罄</p>
+ * @method array getAvailableRegion() 获取<p>当前资源售罄时，可用的区域有哪些</p>
+ * @method void setAvailableRegion(array $AvailableRegion) 设置<p>当前资源售罄时，可用的区域有哪些</p>
+ * @method array getSpecFeatures() 获取<p>当前计费项支持的特性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSpecFeatures(array $SpecFeatures) 设置当前计费项支持的特性
+ * @method void setSpecFeatures(array $SpecFeatures) 设置<p>当前计费项支持的特性</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSpecType() 获取计费项类型
+ * @method string getSpecType() 获取<p>计费项类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSpecType(string $SpecType) 设置计费项类型
+ * @method void setSpecType(string $SpecType) 设置<p>计费项类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getGpuType() 获取GPU类型
+ * @method string getGpuType() 获取<p>GPU类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGpuType(string $GpuType) 设置GPU类型
+ * @method void setGpuType(string $GpuType) 设置<p>GPU类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCategoryId() 获取计费项CategoryId
+ * @method string getCategoryId() 获取<p>计费项CategoryId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCategoryId(string $CategoryId) 设置计费项CategoryId
+ * @method void setCategoryId(string $CategoryId) 设置<p>计费项CategoryId</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Spec extends AbstractModel
 {
     /**
-     * @var string 计费项标签
+     * @var string <p>计费项标签</p>
      */
     public $SpecId;
 
     /**
-     * @var string 计费项名称
+     * @var string <p>计费项名称</p>
      */
     public $SpecName;
 
     /**
-     * @var string 计费项显示名称
+     * @var string <p>计费项显示名称</p>
      */
     public $SpecAlias;
 
     /**
-     * @var boolean 是否售罄
+     * @var boolean <p>是否售罄</p>
      */
     public $Available;
 
     /**
-     * @var array 当前资源售罄时，可用的区域有哪些
+     * @var array <p>当前资源售罄时，可用的区域有哪些</p>
      */
     public $AvailableRegion;
 
     /**
-     * @var array 当前计费项支持的特性
+     * @var array <p>当前计费项支持的特性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpecFeatures;
 
     /**
-     * @var string 计费项类型
+     * @var string <p>计费项类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpecType;
 
     /**
-     * @var string GPU类型
+     * @var string <p>GPU类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GpuType;
 
     /**
-     * @var string 计费项CategoryId
+     * @var string <p>计费项CategoryId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CategoryId;
 
     /**
-     * @param string $SpecId 计费项标签
-     * @param string $SpecName 计费项名称
-     * @param string $SpecAlias 计费项显示名称
-     * @param boolean $Available 是否售罄
-     * @param array $AvailableRegion 当前资源售罄时，可用的区域有哪些
-     * @param array $SpecFeatures 当前计费项支持的特性
+     * @param string $SpecId <p>计费项标签</p>
+     * @param string $SpecName <p>计费项名称</p>
+     * @param string $SpecAlias <p>计费项显示名称</p>
+     * @param boolean $Available <p>是否售罄</p>
+     * @param array $AvailableRegion <p>当前资源售罄时，可用的区域有哪些</p>
+     * @param array $SpecFeatures <p>当前计费项支持的特性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SpecType 计费项类型
+     * @param string $SpecType <p>计费项类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $GpuType GPU类型
+     * @param string $GpuType <p>GPU类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CategoryId 计费项CategoryId
+     * @param string $CategoryId <p>计费项CategoryId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

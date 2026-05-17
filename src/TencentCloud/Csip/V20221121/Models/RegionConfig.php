@@ -20,102 +20,102 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 地域配置
  *
- * @method string getRegion() 获取地域
+ * @method string getRegion() 获取<p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegion(string $Region) 设置地域
+ * @method void setRegion(string $Region) 设置<p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegionName() 获取地域中文
+ * @method string getRegionName() 获取<p>地域中文</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegionName(string $RegionName) 设置地域中文
+ * @method void setRegionName(string $RegionName) 设置<p>地域中文</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getForeign() 获取是否国外
+ * @method integer getForeign() 获取<p>是否境外</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setForeign(integer $Foreign) 设置是否国外
+ * @method void setForeign(integer $Foreign) 设置<p>是否境外</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCode() 获取地域码
+ * @method integer getCode() 获取<p>地域码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCode(integer $Code) 设置地域码
+ * @method void setCode(integer $Code) 设置<p>地域码</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsAutoDriveCloud() 获取是否自驾云
+ * @method integer getIsAutoDriveCloud() 获取<p>是否自驾云</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsAutoDriveCloud(integer $IsAutoDriveCloud) 设置是否自驾云
+ * @method void setIsAutoDriveCloud(integer $IsAutoDriveCloud) 设置<p>是否自驾云</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsSupportNat() 获取是否支持nat
+ * @method integer getIsSupportNat() 获取<p>是否支持nat</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsSupportNat(integer $IsSupportNat) 设置是否支持nat
+ * @method void setIsSupportNat(integer $IsSupportNat) 设置<p>是否支持nat</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegionArea() 获取地区信息
+ * @method string getRegionArea() 获取<p>地区信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegionArea(string $RegionArea) 设置地区信息
+ * @method void setRegionArea(string $RegionArea) 设置<p>地区信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegionNameEN() 获取地域英文
- * @method void setRegionNameEN(string $RegionNameEN) 设置地域英文
+ * @method string getRegionNameEN() 获取<p>地域英文</p>
+ * @method void setRegionNameEN(string $RegionNameEN) 设置<p>地域英文</p>
  */
 class RegionConfig extends AbstractModel
 {
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
-     * @var string 地域中文
+     * @var string <p>地域中文</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionName;
 
     /**
-     * @var integer 是否国外
+     * @var integer <p>是否境外</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Foreign;
 
     /**
-     * @var integer 地域码
+     * @var integer <p>地域码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
 
     /**
-     * @var integer 是否自驾云
+     * @var integer <p>是否自驾云</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAutoDriveCloud;
 
     /**
-     * @var integer 是否支持nat
+     * @var integer <p>是否支持nat</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsSupportNat;
 
     /**
-     * @var string 地区信息
+     * @var string <p>地区信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionArea;
 
     /**
-     * @var string 地域英文
+     * @var string <p>地域英文</p>
      */
     public $RegionNameEN;
 
     /**
-     * @param string $Region 地域
+     * @param string $Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RegionName 地域中文
+     * @param string $RegionName <p>地域中文</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Foreign 是否国外
+     * @param integer $Foreign <p>是否境外</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Code 地域码
+     * @param integer $Code <p>地域码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsAutoDriveCloud 是否自驾云
+     * @param integer $IsAutoDriveCloud <p>是否自驾云</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsSupportNat 是否支持nat
+     * @param integer $IsSupportNat <p>是否支持nat</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RegionArea 地区信息
+     * @param string $RegionArea <p>地区信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RegionNameEN 地域英文
+     * @param string $RegionNameEN <p>地域英文</p>
      */
     function __construct()
     {

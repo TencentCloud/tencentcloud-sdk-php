@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RollbackToNewCluster返回参数结构体
  *
- * @method string getTranId() 获取冻结流水ID
- * @method void setTranId(string $TranId) 设置冻结流水ID
- * @method array getDealNames() 获取订单号
- * @method void setDealNames(array $DealNames) 设置订单号
- * @method array getResourceIds() 获取资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）
- * @method void setResourceIds(array $ResourceIds) 设置资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）
- * @method array getClusterIds() 获取集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）
- * @method void setClusterIds(array $ClusterIds) 设置集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）
- * @method array getBigDealIds() 获取大订单号
+ * @method string getTranId() 获取<p>冻结流水ID</p>
+ * @method void setTranId(string $TranId) 设置<p>冻结流水ID</p>
+ * @method array getDealNames() 获取<p>订单号</p>
+ * @method void setDealNames(array $DealNames) 设置<p>订单号</p>
+ * @method array getResourceIds() 获取<p>资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）</p>
+ * @method void setResourceIds(array $ResourceIds) 设置<p>资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）</p>
+ * @method array getClusterIds() 获取<p>集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）</p>
+ * @method void setClusterIds(array $ClusterIds) 设置<p>集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）</p>
+ * @method array getBigDealIds() 获取<p>大订单号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBigDealIds(array $BigDealIds) 设置大订单号
+ * @method void setBigDealIds(array $BigDealIds) 设置<p>大订单号</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,27 +38,27 @@ use TencentCloud\Common\AbstractModel;
 class RollbackToNewClusterResponse extends AbstractModel
 {
     /**
-     * @var string 冻结流水ID
+     * @var string <p>冻结流水ID</p>
      */
     public $TranId;
 
     /**
-     * @var array 订单号
+     * @var array <p>订单号</p>
      */
     public $DealNames;
 
     /**
-     * @var array 资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）
+     * @var array <p>资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）</p>
      */
     public $ResourceIds;
 
     /**
-     * @var array 集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）
+     * @var array <p>集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）</p>
      */
     public $ClusterIds;
 
     /**
-     * @var array 大订单号
+     * @var array <p>大订单号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BigDealIds;
@@ -69,11 +69,11 @@ class RollbackToNewClusterResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TranId 冻结流水ID
-     * @param array $DealNames 订单号
-     * @param array $ResourceIds 资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）
-     * @param array $ClusterIds 集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）
-     * @param array $BigDealIds 大订单号
+     * @param string $TranId <p>冻结流水ID</p>
+     * @param array $DealNames <p>订单号</p>
+     * @param array $ResourceIds <p>资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）</p>
+     * @param array $ClusterIds <p>集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）</p>
+     * @param array $BigDealIds <p>大订单号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

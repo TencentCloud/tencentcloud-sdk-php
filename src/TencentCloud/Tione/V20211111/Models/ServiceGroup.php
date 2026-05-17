@@ -96,6 +96,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGatewayLogConfig(LogConfig $GatewayLogConfig) 设置<p>网关日志投递相关配置</p>
  * @method GatewayConfig getGatewayConfig() 获取<p>网关路由相关配置</p>
  * @method void setGatewayConfig(GatewayConfig $GatewayConfig) 设置<p>网关路由相关配置</p>
+ * @method string getChanger() 获取<p>变更服务的子账户</p>
+ * @method void setChanger(string $Changer) 设置<p>变更服务的子账户</p>
+ * @method string getChangerName() 获取<p>变更服务的子账户名称</p>
+ * @method void setChangerName(string $ChangerName) 设置<p>变更服务的子账户名称</p>
  */
 class ServiceGroup extends AbstractModel
 {
@@ -242,6 +246,16 @@ class ServiceGroup extends AbstractModel
     public $GatewayConfig;
 
     /**
+     * @var string <p>变更服务的子账户</p>
+     */
+    public $Changer;
+
+    /**
+     * @var string <p>变更服务的子账户名称</p>
+     */
+    public $ChangerName;
+
+    /**
      * @param string $ServiceGroupId <p>服务组id</p>
      * @param string $ServiceGroupName <p>服务组名</p>
      * @param string $CreatedBy <p>创建者</p>
@@ -280,6 +294,8 @@ class ServiceGroup extends AbstractModel
      * @param string $SubUinName <p>子用户的 nickname</p>
      * @param LogConfig $GatewayLogConfig <p>网关日志投递相关配置</p>
      * @param GatewayConfig $GatewayConfig <p>网关路由相关配置</p>
+     * @param string $Changer <p>变更服务的子账户</p>
+     * @param string $ChangerName <p>变更服务的子账户名称</p>
      */
     function __construct()
     {
@@ -413,6 +429,14 @@ class ServiceGroup extends AbstractModel
         if (array_key_exists("GatewayConfig",$param) and $param["GatewayConfig"] !== null) {
             $this->GatewayConfig = new GatewayConfig();
             $this->GatewayConfig->deserialize($param["GatewayConfig"]);
+        }
+
+        if (array_key_exists("Changer",$param) and $param["Changer"] !== null) {
+            $this->Changer = $param["Changer"];
+        }
+
+        if (array_key_exists("ChangerName",$param) and $param["ChangerName"] !== null) {
+            $this->ChangerName = $param["ChangerName"];
         }
     }
 }

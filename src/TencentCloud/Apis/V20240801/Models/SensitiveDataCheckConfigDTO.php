@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckItems(array $CheckItems) 设置<p>检测项</p><p>枚举值：</p><ul><li>birthday： 生日</li><li>email： 邮箱</li><li>identity_number： 身份证</li><li>phone_number： 电话号码</li><li>secret： 秘钥</li><li>password： 密码</li><li>private_key： 私钥</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getContextScope() 获取<p>检测上下文</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContextScope(string $ContextScope) 设置<p>检测上下文</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SensitiveDataCheckConfigDTO extends AbstractModel
 {
@@ -54,11 +58,19 @@ class SensitiveDataCheckConfigDTO extends AbstractModel
     public $CheckItems;
 
     /**
+     * @var string <p>检测上下文</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ContextScope;
+
+    /**
      * @param string $Action <p>执行动作</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InterceptMessage <p>响应拦截内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CheckItems <p>检测项</p><p>枚举值：</p><ul><li>birthday： 生日</li><li>email： 邮箱</li><li>identity_number： 身份证</li><li>phone_number： 电话号码</li><li>secret： 秘钥</li><li>password： 密码</li><li>private_key： 私钥</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ContextScope <p>检测上下文</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +96,10 @@ class SensitiveDataCheckConfigDTO extends AbstractModel
 
         if (array_key_exists("CheckItems",$param) and $param["CheckItems"] !== null) {
             $this->CheckItems = $param["CheckItems"];
+        }
+
+        if (array_key_exists("ContextScope",$param) and $param["ContextScope"] !== null) {
+            $this->ContextScope = $param["ContextScope"];
         }
     }
 }

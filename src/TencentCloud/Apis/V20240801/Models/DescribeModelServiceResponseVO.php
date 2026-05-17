@@ -120,6 +120,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFallbackModels(array $FallbackModels) 设置<p>备份模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getModelProtocol() 获取<p>模型类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModelProtocol(string $ModelProtocol) 设置<p>模型类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeModelServiceResponseVO extends AbstractModel
 {
@@ -318,6 +322,12 @@ class DescribeModelServiceResponseVO extends AbstractModel
     public $FallbackModels;
 
     /**
+     * @var string <p>模型类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ModelProtocol;
+
+    /**
      * @param integer $AppID <p>腾讯云AppID</p>
      * @param string $Uin <p>腾讯云Uin</p>
      * @param string $InstanceID <p>实例ID</p>
@@ -367,6 +377,8 @@ class DescribeModelServiceResponseVO extends AbstractModel
      * @param boolean $FallbackStatus <p>是否开启备份模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FallbackModels <p>备份模型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ModelProtocol <p>模型类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -544,6 +556,10 @@ class DescribeModelServiceResponseVO extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->FallbackModels, $obj);
             }
+        }
+
+        if (array_key_exists("ModelProtocol",$param) and $param["ModelProtocol"] !== null) {
+            $this->ModelProtocol = $param["ModelProtocol"];
         }
     }
 }

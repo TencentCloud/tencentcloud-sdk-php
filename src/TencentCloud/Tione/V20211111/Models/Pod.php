@@ -20,183 +20,183 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Pod信息展示
  *
- * @method string getName() 获取pod名
+ * @method string getName() 获取<p>pod名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置pod名
+ * @method void setName(string $Name) 设置<p>pod名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUid() 获取pod的唯一id
+ * @method string getUid() 获取<p>pod的唯一id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUid(string $Uid) 设置pod的唯一id
+ * @method void setUid(string $Uid) 设置<p>pod的唯一id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getChargeType() 获取服务付费模式
+ * @method string getChargeType() 获取<p>服务付费模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setChargeType(string $ChargeType) 设置服务付费模式
+ * @method void setChargeType(string $ChargeType) 设置<p>服务付费模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPhase() 获取pod的状态
+ * @method string getPhase() 获取<p>pod的状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPhase(string $Phase) 设置pod的状态
+ * @method void setPhase(string $Phase) 设置<p>pod的状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIP() 获取pod的IP
+ * @method string getIP() 获取<p>pod的IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIP(string $IP) 设置pod的IP
+ * @method void setIP(string $IP) 设置<p>pod的IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取pod的创建时间
+ * @method string getCreateTime() 获取<p>pod的创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置pod的创建时间
+ * @method void setCreateTime(string $CreateTime) 设置<p>pod的创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Container getContainers() 获取容器列表
+ * @method Container getContainers() 获取<p>容器列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setContainers(Container $Containers) 设置容器列表
+ * @method void setContainers(Container $Containers) 设置<p>容器列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getContainerInfos() 获取容器列表
+ * @method array getContainerInfos() 获取<p>容器列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setContainerInfos(array $ContainerInfos) 设置容器列表
+ * @method void setContainerInfos(array $ContainerInfos) 设置<p>容器列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CrossTenantENIInfo getCrossTenantENIInfo() 获取容器调用信息
+ * @method CrossTenantENIInfo getCrossTenantENIInfo() 获取<p>容器调用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCrossTenantENIInfo(CrossTenantENIInfo $CrossTenantENIInfo) 设置容器调用信息
+ * @method void setCrossTenantENIInfo(CrossTenantENIInfo $CrossTenantENIInfo) 设置<p>容器调用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取实例的状态信息
- * @method void setStatus(string $Status) 设置实例的状态信息
- * @method string getStartScheduleTime() 获取实例的开始调度时间
- * @method void setStartScheduleTime(string $StartScheduleTime) 设置实例的开始调度时间
- * @method string getMessage() 获取实例状态的补充信息
- * @method void setMessage(string $Message) 设置实例状态的补充信息
- * @method string getNodeIP() 获取当前实例所在的节点 IP
- * @method void setNodeIP(string $NodeIP) 设置当前实例所在的节点 IP
- * @method string getNodeId() 获取当前实例所在节点id
- * @method void setNodeId(string $NodeId) 设置当前实例所在节点id
- * @method string getResourceGroupId() 获取当时实例所属资源组 id
- * @method void setResourceGroupId(string $ResourceGroupId) 设置当时实例所属资源组 id
- * @method string getResourceGroupName() 获取资源组名称
- * @method void setResourceGroupName(string $ResourceGroupName) 设置资源组名称
- * @method ResourceInfo getResourceInfo() 获取实例的资源占用信息
- * @method void setResourceInfo(ResourceInfo $ResourceInfo) 设置实例的资源占用信息
+ * @method string getStatus() 获取<p>实例的状态信息</p>
+ * @method void setStatus(string $Status) 设置<p>实例的状态信息</p>
+ * @method string getStartScheduleTime() 获取<p>实例的开始调度时间</p>
+ * @method void setStartScheduleTime(string $StartScheduleTime) 设置<p>实例的开始调度时间</p>
+ * @method string getMessage() 获取<p>实例状态的补充信息</p>
+ * @method void setMessage(string $Message) 设置<p>实例状态的补充信息</p>
+ * @method string getNodeIP() 获取<p>当前实例所在的节点 IP</p>
+ * @method void setNodeIP(string $NodeIP) 设置<p>当前实例所在的节点 IP</p>
+ * @method string getNodeId() 获取<p>当前实例所在节点id</p>
+ * @method void setNodeId(string $NodeId) 设置<p>当前实例所在节点id</p>
+ * @method string getResourceGroupId() 获取<p>当时实例所属资源组 id</p>
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置<p>当时实例所属资源组 id</p>
+ * @method string getResourceGroupName() 获取<p>资源组名称</p>
+ * @method void setResourceGroupName(string $ResourceGroupName) 设置<p>资源组名称</p>
+ * @method ResourceInfo getResourceInfo() 获取<p>实例的资源占用信息</p>
+ * @method void setResourceInfo(ResourceInfo $ResourceInfo) 设置<p>实例的资源占用信息</p>
  */
 class Pod extends AbstractModel
 {
     /**
-     * @var string pod名
+     * @var string <p>pod名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var string pod的唯一id
+     * @var string <p>pod的唯一id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uid;
 
     /**
-     * @var string 服务付费模式
+     * @var string <p>服务付费模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChargeType;
 
     /**
-     * @var string pod的状态
+     * @var string <p>pod的状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Phase;
 
     /**
-     * @var string pod的IP
+     * @var string <p>pod的IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IP;
 
     /**
-     * @var string pod的创建时间
+     * @var string <p>pod的创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var Container 容器列表
+     * @var Container <p>容器列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     public $Containers;
 
     /**
-     * @var array 容器列表
+     * @var array <p>容器列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerInfos;
 
     /**
-     * @var CrossTenantENIInfo 容器调用信息
+     * @var CrossTenantENIInfo <p>容器调用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CrossTenantENIInfo;
 
     /**
-     * @var string 实例的状态信息
+     * @var string <p>实例的状态信息</p>
      */
     public $Status;
 
     /**
-     * @var string 实例的开始调度时间
+     * @var string <p>实例的开始调度时间</p>
      */
     public $StartScheduleTime;
 
     /**
-     * @var string 实例状态的补充信息
+     * @var string <p>实例状态的补充信息</p>
      */
     public $Message;
 
     /**
-     * @var string 当前实例所在的节点 IP
+     * @var string <p>当前实例所在的节点 IP</p>
      */
     public $NodeIP;
 
     /**
-     * @var string 当前实例所在节点id
+     * @var string <p>当前实例所在节点id</p>
      */
     public $NodeId;
 
     /**
-     * @var string 当时实例所属资源组 id
+     * @var string <p>当时实例所属资源组 id</p>
      */
     public $ResourceGroupId;
 
     /**
-     * @var string 资源组名称
+     * @var string <p>资源组名称</p>
      */
     public $ResourceGroupName;
 
     /**
-     * @var ResourceInfo 实例的资源占用信息
+     * @var ResourceInfo <p>实例的资源占用信息</p>
      */
     public $ResourceInfo;
 
     /**
-     * @param string $Name pod名
+     * @param string $Name <p>pod名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Uid pod的唯一id
+     * @param string $Uid <p>pod的唯一id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ChargeType 服务付费模式
+     * @param string $ChargeType <p>服务付费模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Phase pod的状态
+     * @param string $Phase <p>pod的状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IP pod的IP
+     * @param string $IP <p>pod的IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime pod的创建时间
+     * @param string $CreateTime <p>pod的创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Container $Containers 容器列表
+     * @param Container $Containers <p>容器列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ContainerInfos 容器列表
+     * @param array $ContainerInfos <p>容器列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CrossTenantENIInfo $CrossTenantENIInfo 容器调用信息
+     * @param CrossTenantENIInfo $CrossTenantENIInfo <p>容器调用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 实例的状态信息
-     * @param string $StartScheduleTime 实例的开始调度时间
-     * @param string $Message 实例状态的补充信息
-     * @param string $NodeIP 当前实例所在的节点 IP
-     * @param string $NodeId 当前实例所在节点id
-     * @param string $ResourceGroupId 当时实例所属资源组 id
-     * @param string $ResourceGroupName 资源组名称
-     * @param ResourceInfo $ResourceInfo 实例的资源占用信息
+     * @param string $Status <p>实例的状态信息</p>
+     * @param string $StartScheduleTime <p>实例的开始调度时间</p>
+     * @param string $Message <p>实例状态的补充信息</p>
+     * @param string $NodeIP <p>当前实例所在的节点 IP</p>
+     * @param string $NodeId <p>当前实例所在节点id</p>
+     * @param string $ResourceGroupId <p>当时实例所属资源组 id</p>
+     * @param string $ResourceGroupName <p>资源组名称</p>
+     * @param ResourceInfo $ResourceInfo <p>实例的资源占用信息</p>
      */
     function __construct()
     {

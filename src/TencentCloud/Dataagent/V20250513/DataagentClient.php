@@ -35,6 +35,7 @@ use TencentCloud\Dataagent\V20250513\Models as Models;
  * @method Models\GetKnowledgeBaseListResponse GetKnowledgeBaseList(Models\GetKnowledgeBaseListRequest $req) 获取知识库列表
  * @method Models\GetSessionDetailsResponse GetSessionDetails(Models\GetSessionDetailsRequest $req) 获取用户会话记录详情列表
  * @method Models\GetUploadJobDetailsResponse GetUploadJobDetails(Models\GetUploadJobDetailsRequest $req) 查询上传任务
+ * @method Models\GetUserInstanceListResponse GetUserInstanceList(Models\GetUserInstanceListRequest $req) 获取实例信息列表
  * @method Models\ModifyChunkResponse ModifyChunk(Models\ModifyChunkRequest $req) 编辑修改分片
  * @method Models\ModifyKnowledgeBaseResponse ModifyKnowledgeBase(Models\ModifyKnowledgeBaseRequest $req) 操作知识库
  * @method Models\ModifyUserAuthorityResponse ModifyUserAuthority(Models\ModifyUserAuthorityRequest $req) 修改对象权限

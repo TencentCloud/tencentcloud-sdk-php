@@ -20,18 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDeviceSessionDetails请求参数结构体
  *
- * @method string getSessionId() 获取会话ID
- * @method void setSessionId(string $SessionId) 设置会话ID
+ * @method string getSessionId() 获取<p>会话ID</p>
+ * @method void setSessionId(string $SessionId) 设置<p>会话ID</p>
+ * @method integer getStartTime() 获取<p>查询指标开始时间</p><p>单位：秒</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>查询指标开始时间</p><p>单位：秒</p>
+ * @method integer getEndTime() 获取<p>查询指标结束时间</p><p>单位：秒</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>查询指标结束时间</p><p>单位：秒</p>
  */
 class DescribeDeviceSessionDetailsRequest extends AbstractModel
 {
     /**
-     * @var string 会话ID
+     * @var string <p>会话ID</p>
      */
     public $SessionId;
 
     /**
-     * @param string $SessionId 会话ID
+     * @var integer <p>查询指标开始时间</p><p>单位：秒</p>
+     */
+    public $StartTime;
+
+    /**
+     * @var integer <p>查询指标结束时间</p><p>单位：秒</p>
+     */
+    public $EndTime;
+
+    /**
+     * @param string $SessionId <p>会话ID</p>
+     * @param integer $StartTime <p>查询指标开始时间</p><p>单位：秒</p>
+     * @param integer $EndTime <p>查询指标结束时间</p><p>单位：秒</p>
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DescribeDeviceSessionDetailsRequest extends AbstractModel
         }
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
             $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }

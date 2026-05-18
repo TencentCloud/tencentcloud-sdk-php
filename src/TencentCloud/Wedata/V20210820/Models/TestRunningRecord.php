@@ -20,201 +20,213 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 编排空间试运行记录
  *
- * @method string getStartTime() 获取开始时间
+ * @method string getStartTime() 获取<p>开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartTime(string $StartTime) 设置开始时间
+ * @method void setStartTime(string $StartTime) 设置<p>开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEndTime() 获取结束时间
+ * @method string getEndTime() 获取<p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method void setEndTime(string $EndTime) 设置<p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取更新时间
+ * @method string getUpdateTime() 获取<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRecordId() 获取试运行记录id
+ * @method integer getRecordId() 获取<p>试运行记录id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecordId(integer $RecordId) 设置试运行记录id
+ * @method void setRecordId(integer $RecordId) 设置<p>试运行记录id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getJobId() 获取开发侧提交的jobid
+ * @method integer getJobId() 获取<p>开发侧提交的jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setJobId(integer $JobId) 设置开发侧提交的jobid
+ * @method void setJobId(integer $JobId) 设置<p>开发侧提交的jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExecutionJobId() 获取执行平台jobid
+ * @method string getExecutionJobId() 获取<p>执行平台jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecutionJobId(string $ExecutionJobId) 设置执行平台jobid
+ * @method void setExecutionJobId(string $ExecutionJobId) 设置<p>执行平台jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRecordName() 获取试运行记录名称
+ * @method string getRecordName() 获取<p>试运行记录名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecordName(string $RecordName) 设置试运行记录名称
+ * @method void setRecordName(string $RecordName) 设置<p>试运行记录名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getScriptContent() 获取脚本内容
+ * @method string getScriptContent() 获取<p>脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScriptContent(string $ScriptContent) 设置脚本内容
+ * @method void setScriptContent(string $ScriptContent) 设置<p>脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取状态
+ * @method string getStatus() 获取<p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置状态
+ * @method void setStatus(string $Status) 设置<p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTimeCost() 获取耗时
+ * @method integer getTimeCost() 获取<p>耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTimeCost(integer $TimeCost) 设置耗时
+ * @method void setTimeCost(integer $TimeCost) 设置<p>耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUserUin() 获取用户uin
+ * @method string getUserUin() 获取<p>用户uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserUin(string $UserUin) 设置用户uin
+ * @method void setUserUin(string $UserUin) 设置<p>用户uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOwnerUin() 获取主账户uin
+ * @method string getOwnerUin() 获取<p>主账户uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOwnerUin(string $OwnerUin) 设置主账户uin
+ * @method void setOwnerUin(string $OwnerUin) 设置<p>主账户uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSubRecordList() 获取子记录信息
+ * @method array getSubRecordList() 获取<p>子记录信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubRecordList(array $SubRecordList) 设置子记录信息
+ * @method void setSubRecordList(array $SubRecordList) 设置<p>子记录信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegion() 获取结果或日志地域
+ * @method string getRegion() 获取<p>结果或日志地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegion(string $Region) 设置结果或日志地域
+ * @method void setRegion(string $Region) 设置<p>结果或日志地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBucketName() 获取结果或日志桶名
+ * @method string getBucketName() 获取<p>结果或日志桶名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBucketName(string $BucketName) 设置结果或日志桶名
+ * @method void setBucketName(string $BucketName) 设置<p>结果或日志桶名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getErrorMessage() 获取错误信息
+ * @method string getErrorMessage() 获取<p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrorMessage(string $ErrorMessage) 设置错误信息
+ * @method void setErrorMessage(string $ErrorMessage) 设置<p>错误信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getScriptContentTruncated() 获取<p>脚本内容是否被截断</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScriptContentTruncated(boolean $ScriptContentTruncated) 设置<p>脚本内容是否被截断</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TestRunningRecord extends AbstractModel
 {
     /**
-     * @var string 开始时间
+     * @var string <p>开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
-     * @var integer 试运行记录id
+     * @var integer <p>试运行记录id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordId;
 
     /**
-     * @var integer 开发侧提交的jobid
+     * @var integer <p>开发侧提交的jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JobId;
 
     /**
-     * @var string 执行平台jobid
+     * @var string <p>执行平台jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutionJobId;
 
     /**
-     * @var string 试运行记录名称
+     * @var string <p>试运行记录名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordName;
 
     /**
-     * @var string 脚本内容
+     * @var string <p>脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScriptContent;
 
     /**
-     * @var string 状态
+     * @var string <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var integer 耗时
+     * @var integer <p>耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeCost;
 
     /**
-     * @var string 用户uin
+     * @var string <p>用户uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserUin;
 
     /**
-     * @var string 主账户uin
+     * @var string <p>主账户uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OwnerUin;
 
     /**
-     * @var array 子记录信息
+     * @var array <p>子记录信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubRecordList;
 
     /**
-     * @var string 结果或日志地域
+     * @var string <p>结果或日志地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
-     * @var string 结果或日志桶名
+     * @var string <p>结果或日志桶名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BucketName;
 
     /**
-     * @var string 错误信息
+     * @var string <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorMessage;
 
     /**
-     * @param string $StartTime 开始时间
+     * @var boolean <p>脚本内容是否被截断</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EndTime 结束时间
+     */
+    public $ScriptContentTruncated;
+
+    /**
+     * @param string $StartTime <p>开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime 更新时间
+     * @param string $EndTime <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RecordId 试运行记录id
+     * @param string $UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $JobId 开发侧提交的jobid
+     * @param integer $RecordId <p>试运行记录id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExecutionJobId 执行平台jobid
+     * @param integer $JobId <p>开发侧提交的jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RecordName 试运行记录名称
+     * @param string $ExecutionJobId <p>执行平台jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ScriptContent 脚本内容
+     * @param string $RecordName <p>试运行记录名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 状态
+     * @param string $ScriptContent <p>脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TimeCost 耗时
+     * @param string $Status <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UserUin 用户uin
+     * @param integer $TimeCost <p>耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OwnerUin 主账户uin
+     * @param string $UserUin <p>用户uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SubRecordList 子记录信息
+     * @param string $OwnerUin <p>主账户uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Region 结果或日志地域
+     * @param array $SubRecordList <p>子记录信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BucketName 结果或日志桶名
+     * @param string $Region <p>结果或日志地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ErrorMessage 错误信息
+     * @param string $BucketName <p>结果或日志桶名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ErrorMessage <p>错误信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ScriptContentTruncated <p>脚本内容是否被截断</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -297,6 +309,10 @@ class TestRunningRecord extends AbstractModel
 
         if (array_key_exists("ErrorMessage",$param) and $param["ErrorMessage"] !== null) {
             $this->ErrorMessage = $param["ErrorMessage"];
+        }
+
+        if (array_key_exists("ScriptContentTruncated",$param) and $param["ScriptContentTruncated"] !== null) {
+            $this->ScriptContentTruncated = $param["ScriptContentTruncated"];
         }
     }
 }

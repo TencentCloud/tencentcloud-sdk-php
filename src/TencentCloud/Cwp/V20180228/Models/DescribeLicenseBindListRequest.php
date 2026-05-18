@@ -20,66 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLicenseBindList请求参数结构体
  *
- * @method integer getLicenseId() 获取授权ID
- * @method void setLicenseId(integer $LicenseId) 设置授权ID
- * @method integer getLicenseType() 获取授权类型
- * @method void setLicenseType(integer $LicenseType) 设置授权类型
- * @method string getResourceId() 获取资源ID
- * @method void setResourceId(string $ResourceId) 设置资源ID
- * @method array getFilters() 获取<li>InstanceID、IP、
-
-MachineName 模糊查询</li>
- * @method void setFilters(array $Filters) 设置<li>InstanceID、IP、
-
-MachineName 模糊查询</li>
- * @method integer getLimit() 获取限制条数,默认10.
- * @method void setLimit(integer $Limit) 设置限制条数,默认10.
- * @method integer getOffset() 获取偏移量,默认0.
- * @method void setOffset(integer $Offset) 设置偏移量,默认0.
+ * @method integer getLicenseId() 获取<p>授权ID取DescribeLicenseList接口List对象下的LicenseId参数值</p>
+ * @method void setLicenseId(integer $LicenseId) 设置<p>授权ID取DescribeLicenseList接口List对象下的LicenseId参数值</p>
+ * @method integer getLicenseType() 获取<p>授权类型</p><p>枚举值：</p><ul><li>0： 专业版-按量计费</li><li>1： 专业版-包年包月(主机安全)</li><li>2： 旗舰版-包年包月(主机安全)</li><li>3： 轻量版-LH-包年包月</li><li>6： 专业版-包年包月（云安全中心）</li><li>7： 旗舰版-包年包月（云安全中心）</li></ul>
+ * @method void setLicenseType(integer $LicenseType) 设置<p>授权类型</p><p>枚举值：</p><ul><li>0： 专业版-按量计费</li><li>1： 专业版-包年包月(主机安全)</li><li>2： 旗舰版-包年包月(主机安全)</li><li>3： 轻量版-LH-包年包月</li><li>6： 专业版-包年包月（云安全中心）</li><li>7： 旗舰版-包年包月（云安全中心）</li></ul>
+ * @method string getResourceId() 获取<p>资源ID,取DescribeLicenseList接口List对象下的ResourceId参数值</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>资源ID,取DescribeLicenseList接口List对象下的ResourceId参数值</p>
+ * @method array getFilters() 获取<li>InstanceID、IP、<p>MachineName 模糊查询</li></p>
+ * @method void setFilters(array $Filters) 设置<li>InstanceID、IP、<p>MachineName 模糊查询</li></p>
+ * @method integer getLimit() 获取<p>限制条数,默认10.</p>
+ * @method void setLimit(integer $Limit) 设置<p>限制条数,默认10.</p>
+ * @method integer getOffset() 获取<p>偏移量,默认0.</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量,默认0.</p>
  */
 class DescribeLicenseBindListRequest extends AbstractModel
 {
     /**
-     * @var integer 授权ID
+     * @var integer <p>授权ID取DescribeLicenseList接口List对象下的LicenseId参数值</p>
      */
     public $LicenseId;
 
     /**
-     * @var integer 授权类型
+     * @var integer <p>授权类型</p><p>枚举值：</p><ul><li>0： 专业版-按量计费</li><li>1： 专业版-包年包月(主机安全)</li><li>2： 旗舰版-包年包月(主机安全)</li><li>3： 轻量版-LH-包年包月</li><li>6： 专业版-包年包月（云安全中心）</li><li>7： 旗舰版-包年包月（云安全中心）</li></ul>
      */
     public $LicenseType;
 
     /**
-     * @var string 资源ID
+     * @var string <p>资源ID,取DescribeLicenseList接口List对象下的ResourceId参数值</p>
      */
     public $ResourceId;
 
     /**
-     * @var array <li>InstanceID、IP、
-
-MachineName 模糊查询</li>
+     * @var array <li>InstanceID、IP、<p>MachineName 模糊查询</li></p>
      */
     public $Filters;
 
     /**
-     * @var integer 限制条数,默认10.
+     * @var integer <p>限制条数,默认10.</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量,默认0.
+     * @var integer <p>偏移量,默认0.</p>
      */
     public $Offset;
 
     /**
-     * @param integer $LicenseId 授权ID
-     * @param integer $LicenseType 授权类型
-     * @param string $ResourceId 资源ID
-     * @param array $Filters <li>InstanceID、IP、
-
-MachineName 模糊查询</li>
-     * @param integer $Limit 限制条数,默认10.
-     * @param integer $Offset 偏移量,默认0.
+     * @param integer $LicenseId <p>授权ID取DescribeLicenseList接口List对象下的LicenseId参数值</p>
+     * @param integer $LicenseType <p>授权类型</p><p>枚举值：</p><ul><li>0： 专业版-按量计费</li><li>1： 专业版-包年包月(主机安全)</li><li>2： 旗舰版-包年包月(主机安全)</li><li>3： 轻量版-LH-包年包月</li><li>6： 专业版-包年包月（云安全中心）</li><li>7： 旗舰版-包年包月（云安全中心）</li></ul>
+     * @param string $ResourceId <p>资源ID,取DescribeLicenseList接口List对象下的ResourceId参数值</p>
+     * @param array $Filters <li>InstanceID、IP、<p>MachineName 模糊查询</li></p>
+     * @param integer $Limit <p>限制条数,默认10.</p>
+     * @param integer $Offset <p>偏移量,默认0.</p>
      */
     function __construct()
     {

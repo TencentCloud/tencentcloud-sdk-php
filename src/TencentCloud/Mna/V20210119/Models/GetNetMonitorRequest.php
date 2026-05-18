@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetNetMonitor请求参数结构体
  *
- * @method string getDeviceId() 获取设备id
- * @method void setDeviceId(string $DeviceId) 设置设备id
- * @method integer getBeginTime() 获取开始时间
- * @method void setBeginTime(integer $BeginTime) 设置开始时间
- * @method integer getEndTime() 获取结束时间
- * @method void setEndTime(integer $EndTime) 设置结束时间
- * @method string getMetrics() 获取统计指标（上行速率："TxRate":bit/s，下行速率："RxRate":bit/s，丢包："Loss":%，时延："RTT":ms）
- * @method void setMetrics(string $Metrics) 设置统计指标（上行速率："TxRate":bit/s，下行速率："RxRate":bit/s，丢包："Loss":%，时延："RTT":ms）
- * @method integer getGatewayType() 获取网关类型。0：公有云网关；1：自有网关。不传默认为0。
- * @method void setGatewayType(integer $GatewayType) 设置网关类型。0：公有云网关；1：自有网关。不传默认为0。
+ * @method string getDeviceId() 获取<p>设备id</p>
+ * @method void setDeviceId(string $DeviceId) 设置<p>设备id</p>
+ * @method integer getBeginTime() 获取<p>开始时间</p>
+ * @method void setBeginTime(integer $BeginTime) 设置<p>开始时间</p>
+ * @method integer getEndTime() 获取<p>结束时间</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>结束时间</p>
+ * @method string getMetrics() 获取<p>统计指标（上行速率：&quot;TxRate&quot;:bit/s，下行速率：&quot;RxRate&quot;:bit/s，丢包：&quot;Loss&quot;:%，时延：&quot;RTT&quot;:ms）</p>
+ * @method void setMetrics(string $Metrics) 设置<p>统计指标（上行速率：&quot;TxRate&quot;:bit/s，下行速率：&quot;RxRate&quot;:bit/s，丢包：&quot;Loss&quot;:%，时延：&quot;RTT&quot;:ms）</p>
+ * @method integer getGatewayType() 获取<p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p>
+ * @method void setGatewayType(integer $GatewayType) 设置<p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p>
  */
 class GetNetMonitorRequest extends AbstractModel
 {
     /**
-     * @var string 设备id
+     * @var string <p>设备id</p>
      */
     public $DeviceId;
 
     /**
-     * @var integer 开始时间
+     * @var integer <p>开始时间</p>
      */
     public $BeginTime;
 
     /**
-     * @var integer 结束时间
+     * @var integer <p>结束时间</p>
      */
     public $EndTime;
 
     /**
-     * @var string 统计指标（上行速率："TxRate":bit/s，下行速率："RxRate":bit/s，丢包："Loss":%，时延："RTT":ms）
+     * @var string <p>统计指标（上行速率：&quot;TxRate&quot;:bit/s，下行速率：&quot;RxRate&quot;:bit/s，丢包：&quot;Loss&quot;:%，时延：&quot;RTT&quot;:ms）</p>
      */
     public $Metrics;
 
     /**
-     * @var integer 网关类型。0：公有云网关；1：自有网关。不传默认为0。
+     * @var integer <p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p>
      */
     public $GatewayType;
 
     /**
-     * @param string $DeviceId 设备id
-     * @param integer $BeginTime 开始时间
-     * @param integer $EndTime 结束时间
-     * @param string $Metrics 统计指标（上行速率："TxRate":bit/s，下行速率："RxRate":bit/s，丢包："Loss":%，时延："RTT":ms）
-     * @param integer $GatewayType 网关类型。0：公有云网关；1：自有网关。不传默认为0。
+     * @param string $DeviceId <p>设备id</p>
+     * @param integer $BeginTime <p>开始时间</p>
+     * @param integer $EndTime <p>结束时间</p>
+     * @param string $Metrics <p>统计指标（上行速率：&quot;TxRate&quot;:bit/s，下行速率：&quot;RxRate&quot;:bit/s，丢包：&quot;Loss&quot;:%，时延：&quot;RTT&quot;:ms）</p>
+     * @param integer $GatewayType <p>网关类型。0：公有云网关；1：自有网关。不传默认为0。</p>
      */
     function __construct()
     {

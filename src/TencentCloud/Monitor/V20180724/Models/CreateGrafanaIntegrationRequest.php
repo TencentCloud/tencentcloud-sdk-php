@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateGrafanaIntegration请求参数结构体
  *
- * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-abcdefgh
- * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-abcdefgh
- * @method string getKind() 获取集成类型(接口DescribeGrafanaIntegrationOverviews返回的集成信息中的Code字段)
- * @method void setKind(string $Kind) 设置集成类型(接口DescribeGrafanaIntegrationOverviews返回的集成信息中的Code字段)
- * @method string getContent() 获取集成配置
- * @method void setContent(string $Content) 设置集成配置
+ * @method string getInstanceId() 获取<p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
+ * @method string getKind() 获取<p>集成类型(接口DescribeGrafanaIntegrationOverviews返回的集成信息中的Code字段)</p>
+ * @method void setKind(string $Kind) 设置<p>集成类型(接口DescribeGrafanaIntegrationOverviews返回的集成信息中的Code字段)</p>
+ * @method string getContent() 获取<p>集成配置</p>
+ * @method void setContent(string $Content) 设置<p>集成配置</p>
  */
 class CreateGrafanaIntegrationRequest extends AbstractModel
 {
     /**
-     * @var string Grafana 实例 ID，例如：grafana-abcdefgh
+     * @var string <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 集成类型(接口DescribeGrafanaIntegrationOverviews返回的集成信息中的Code字段)
+     * @var string <p>集成类型(接口DescribeGrafanaIntegrationOverviews返回的集成信息中的Code字段)</p>
      */
     public $Kind;
 
     /**
-     * @var string 集成配置
+     * @var string <p>集成配置</p>
      */
     public $Content;
 
     /**
-     * @param string $InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
-     * @param string $Kind 集成类型(接口DescribeGrafanaIntegrationOverviews返回的集成信息中的Code字段)
-     * @param string $Content 集成配置
+     * @param string $InstanceId <p>Grafana 实例 ID，例如：grafana-abcdefgh</p>
+     * @param string $Kind <p>集成类型(接口DescribeGrafanaIntegrationOverviews返回的集成信息中的Code字段)</p>
+     * @param string $Content <p>集成配置</p>
      */
     function __construct()
     {

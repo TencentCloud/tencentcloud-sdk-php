@@ -20,150 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AdjustCdbProxyAddress请求参数结构体
  *
- * @method string getProxyGroupId() 获取代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
- * @method void setProxyGroupId(string $ProxyGroupId) 设置代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
- * @method string getWeightMode() 获取权重分配模式，
-系统自动分配："system"， 自定义："custom"
- * @method void setWeightMode(string $WeightMode) 设置权重分配模式，
-系统自动分配："system"， 自定义："custom"
- * @method boolean getIsKickOut() 获取是否开启延迟剔除，取值："true" | "false"
- * @method void setIsKickOut(boolean $IsKickOut) 设置是否开启延迟剔除，取值："true" | "false"
- * @method integer getMinCount() 获取最小保留数量，最小取值：0。
-说明：当 IsKickOut 为 true 时才有效。
- * @method void setMinCount(integer $MinCount) 设置最小保留数量，最小取值：0。
-说明：当 IsKickOut 为 true 时才有效。
- * @method integer getMaxDelay() 获取延迟剔除阈值，最小取值：1，取值范围：[1,10000]，整数。
- * @method void setMaxDelay(integer $MaxDelay) 设置延迟剔除阈值，最小取值：1，取值范围：[1,10000]，整数。
- * @method boolean getFailOver() 获取是否开启故障转移，取值："true" | "false"
- * @method void setFailOver(boolean $FailOver) 设置是否开启故障转移，取值："true" | "false"
- * @method boolean getAutoAddRo() 获取是否自动添加RO，取值："true" | "false"
- * @method void setAutoAddRo(boolean $AutoAddRo) 设置是否自动添加RO，取值："true" | "false"
- * @method boolean getReadOnly() 获取是否是只读，取值："true" | "false"
- * @method void setReadOnly(boolean $ReadOnly) 设置是否是只读，取值："true" | "false"
- * @method string getProxyAddressId() 获取代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
- * @method void setProxyAddressId(string $ProxyAddressId) 设置代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
- * @method boolean getTransSplit() 获取是否开启事务分离，取值："true" | "false"，默认值 false。
- * @method void setTransSplit(boolean $TransSplit) 设置是否开启事务分离，取值："true" | "false"，默认值 false。
- * @method boolean getConnectionPool() 获取是否开启连接池。默认关闭。
-注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
- * @method void setConnectionPool(boolean $ConnectionPool) 设置是否开启连接池。默认关闭。
-注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
- * @method array getProxyAllocation() 获取读写权重分配。如果 WeightMode 传的是 system ，则传入的权重不生效，由系统分配默认权重。
- * @method void setProxyAllocation(array $ProxyAllocation) 设置读写权重分配。如果 WeightMode 传的是 system ，则传入的权重不生效，由系统分配默认权重。
- * @method boolean getAutoLoadBalance() 获取是否开启自适应负载均衡。默认关闭。
- * @method void setAutoLoadBalance(boolean $AutoLoadBalance) 设置是否开启自适应负载均衡。默认关闭。
- * @method string getAccessMode() 获取访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。
- * @method void setAccessMode(string $AccessMode) 设置访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。
- * @method string getApNodeAsRoNode() 获取是否将libra节点当作普通RO节点
- * @method void setApNodeAsRoNode(string $ApNodeAsRoNode) 设置是否将libra节点当作普通RO节点
- * @method string getApQueryToOtherNode() 获取libra节点故障，是否转发给其他节点
- * @method void setApQueryToOtherNode(string $ApQueryToOtherNode) 设置libra节点故障，是否转发给其他节点
+ * @method string getProxyGroupId() 获取<p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
+ * @method void setProxyGroupId(string $ProxyGroupId) 设置<p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
+ * @method string getWeightMode() 获取<p>权重分配模式，<br>系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
+ * @method void setWeightMode(string $WeightMode) 设置<p>权重分配模式，<br>系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
+ * @method boolean getIsKickOut() 获取<p>是否开启延迟剔除，取值：&quot;true&quot; | &quot;false&quot;</p>
+ * @method void setIsKickOut(boolean $IsKickOut) 设置<p>是否开启延迟剔除，取值：&quot;true&quot; | &quot;false&quot;</p>
+ * @method integer getMinCount() 获取<p>最小保留数量，最小取值：0。<br>说明：当 IsKickOut 为 true 时才有效。</p>
+ * @method void setMinCount(integer $MinCount) 设置<p>最小保留数量，最小取值：0。<br>说明：当 IsKickOut 为 true 时才有效。</p>
+ * @method integer getMaxDelay() 获取<p>延迟剔除阈值，最小取值：1，取值范围：[1,10000]，整数。</p>
+ * @method void setMaxDelay(integer $MaxDelay) 设置<p>延迟剔除阈值，最小取值：1，取值范围：[1,10000]，整数。</p>
+ * @method boolean getFailOver() 获取<p>是否开启故障转移，取值：&quot;true&quot; | &quot;false&quot;</p>
+ * @method void setFailOver(boolean $FailOver) 设置<p>是否开启故障转移，取值：&quot;true&quot; | &quot;false&quot;</p>
+ * @method boolean getAutoAddRo() 获取<p>是否自动添加RO，取值：&quot;true&quot; | &quot;false&quot;</p>
+ * @method void setAutoAddRo(boolean $AutoAddRo) 设置<p>是否自动添加RO，取值：&quot;true&quot; | &quot;false&quot;</p>
+ * @method boolean getReadOnly() 获取<p>是否是只读，取值：&quot;true&quot; | &quot;false&quot;</p>
+ * @method void setReadOnly(boolean $ReadOnly) 设置<p>是否是只读，取值：&quot;true&quot; | &quot;false&quot;</p>
+ * @method string getProxyAddressId() 获取<p>代理组地址 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
+ * @method void setProxyAddressId(string $ProxyAddressId) 设置<p>代理组地址 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
+ * @method boolean getTransSplit() 获取<p>是否开启事务分离，取值：&quot;true&quot; | &quot;false&quot;，默认值 false。</p>
+ * @method void setTransSplit(boolean $TransSplit) 设置<p>是否开启事务分离，取值：&quot;true&quot; | &quot;false&quot;，默认值 false。</p>
+ * @method boolean getConnectionPool() 获取<p>是否开启连接池。默认关闭。<br>注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。</p>
+ * @method void setConnectionPool(boolean $ConnectionPool) 设置<p>是否开启连接池。默认关闭。<br>注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。</p>
+ * @method array getProxyAllocation() 获取<p>读写权重分配。如果 WeightMode 传的是 system ，则传入的权重不生效，由系统分配默认权重。</p>
+ * @method void setProxyAllocation(array $ProxyAllocation) 设置<p>读写权重分配。如果 WeightMode 传的是 system ，则传入的权重不生效，由系统分配默认权重。</p>
+ * @method boolean getAutoLoadBalance() 获取<p>是否开启自适应负载均衡。默认关闭。</p>
+ * @method void setAutoLoadBalance(boolean $AutoLoadBalance) 设置<p>是否开启自适应负载均衡。默认关闭。</p>
+ * @method string getAccessMode() 获取<p>访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。</p>
+ * @method void setAccessMode(string $AccessMode) 设置<p>访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。</p>
+ * @method boolean getApNodeAsRoNode() 获取<p>是否将libra节点当作普通RO节点</p>
+ * @method void setApNodeAsRoNode(boolean $ApNodeAsRoNode) 设置<p>是否将libra节点当作普通RO节点</p>
+ * @method boolean getApQueryToOtherNode() 获取<p>libra节点故障，是否转发给其他节点</p>
+ * @method void setApQueryToOtherNode(boolean $ApQueryToOtherNode) 设置<p>libra节点故障，是否转发给其他节点</p>
  */
 class AdjustCdbProxyAddressRequest extends AbstractModel
 {
     /**
-     * @var string 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * @var string <p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
      */
     public $ProxyGroupId;
 
     /**
-     * @var string 权重分配模式，
-系统自动分配："system"， 自定义："custom"
+     * @var string <p>权重分配模式，<br>系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
      */
     public $WeightMode;
 
     /**
-     * @var boolean 是否开启延迟剔除，取值："true" | "false"
+     * @var boolean <p>是否开启延迟剔除，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public $IsKickOut;
 
     /**
-     * @var integer 最小保留数量，最小取值：0。
-说明：当 IsKickOut 为 true 时才有效。
+     * @var integer <p>最小保留数量，最小取值：0。<br>说明：当 IsKickOut 为 true 时才有效。</p>
      */
     public $MinCount;
 
     /**
-     * @var integer 延迟剔除阈值，最小取值：1，取值范围：[1,10000]，整数。
+     * @var integer <p>延迟剔除阈值，最小取值：1，取值范围：[1,10000]，整数。</p>
      */
     public $MaxDelay;
 
     /**
-     * @var boolean 是否开启故障转移，取值："true" | "false"
+     * @var boolean <p>是否开启故障转移，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public $FailOver;
 
     /**
-     * @var boolean 是否自动添加RO，取值："true" | "false"
+     * @var boolean <p>是否自动添加RO，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public $AutoAddRo;
 
     /**
-     * @var boolean 是否是只读，取值："true" | "false"
+     * @var boolean <p>是否是只读，取值：&quot;true&quot; | &quot;false&quot;</p>
      */
     public $ReadOnly;
 
     /**
-     * @var string 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * @var string <p>代理组地址 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
      */
     public $ProxyAddressId;
 
     /**
-     * @var boolean 是否开启事务分离，取值："true" | "false"，默认值 false。
+     * @var boolean <p>是否开启事务分离，取值：&quot;true&quot; | &quot;false&quot;，默认值 false。</p>
      */
     public $TransSplit;
 
     /**
-     * @var boolean 是否开启连接池。默认关闭。
-注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
+     * @var boolean <p>是否开启连接池。默认关闭。<br>注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。</p>
      */
     public $ConnectionPool;
 
     /**
-     * @var array 读写权重分配。如果 WeightMode 传的是 system ，则传入的权重不生效，由系统分配默认权重。
+     * @var array <p>读写权重分配。如果 WeightMode 传的是 system ，则传入的权重不生效，由系统分配默认权重。</p>
      */
     public $ProxyAllocation;
 
     /**
-     * @var boolean 是否开启自适应负载均衡。默认关闭。
+     * @var boolean <p>是否开启自适应负载均衡。默认关闭。</p>
      */
     public $AutoLoadBalance;
 
     /**
-     * @var string 访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。
+     * @var string <p>访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。</p>
      */
     public $AccessMode;
 
     /**
-     * @var string 是否将libra节点当作普通RO节点
+     * @var boolean <p>是否将libra节点当作普通RO节点</p>
      */
     public $ApNodeAsRoNode;
 
     /**
-     * @var string libra节点故障，是否转发给其他节点
+     * @var boolean <p>libra节点故障，是否转发给其他节点</p>
      */
     public $ApQueryToOtherNode;
 
     /**
-     * @param string $ProxyGroupId 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
-     * @param string $WeightMode 权重分配模式，
-系统自动分配："system"， 自定义："custom"
-     * @param boolean $IsKickOut 是否开启延迟剔除，取值："true" | "false"
-     * @param integer $MinCount 最小保留数量，最小取值：0。
-说明：当 IsKickOut 为 true 时才有效。
-     * @param integer $MaxDelay 延迟剔除阈值，最小取值：1，取值范围：[1,10000]，整数。
-     * @param boolean $FailOver 是否开启故障转移，取值："true" | "false"
-     * @param boolean $AutoAddRo 是否自动添加RO，取值："true" | "false"
-     * @param boolean $ReadOnly 是否是只读，取值："true" | "false"
-     * @param string $ProxyAddressId 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
-     * @param boolean $TransSplit 是否开启事务分离，取值："true" | "false"，默认值 false。
-     * @param boolean $ConnectionPool 是否开启连接池。默认关闭。
-注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
-     * @param array $ProxyAllocation 读写权重分配。如果 WeightMode 传的是 system ，则传入的权重不生效，由系统分配默认权重。
-     * @param boolean $AutoLoadBalance 是否开启自适应负载均衡。默认关闭。
-     * @param string $AccessMode 访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。
-     * @param string $ApNodeAsRoNode 是否将libra节点当作普通RO节点
-     * @param string $ApQueryToOtherNode libra节点故障，是否转发给其他节点
+     * @param string $ProxyGroupId <p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
+     * @param string $WeightMode <p>权重分配模式，<br>系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
+     * @param boolean $IsKickOut <p>是否开启延迟剔除，取值：&quot;true&quot; | &quot;false&quot;</p>
+     * @param integer $MinCount <p>最小保留数量，最小取值：0。<br>说明：当 IsKickOut 为 true 时才有效。</p>
+     * @param integer $MaxDelay <p>延迟剔除阈值，最小取值：1，取值范围：[1,10000]，整数。</p>
+     * @param boolean $FailOver <p>是否开启故障转移，取值：&quot;true&quot; | &quot;false&quot;</p>
+     * @param boolean $AutoAddRo <p>是否自动添加RO，取值：&quot;true&quot; | &quot;false&quot;</p>
+     * @param boolean $ReadOnly <p>是否是只读，取值：&quot;true&quot; | &quot;false&quot;</p>
+     * @param string $ProxyAddressId <p>代理组地址 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
+     * @param boolean $TransSplit <p>是否开启事务分离，取值：&quot;true&quot; | &quot;false&quot;，默认值 false。</p>
+     * @param boolean $ConnectionPool <p>是否开启连接池。默认关闭。<br>注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。</p>
+     * @param array $ProxyAllocation <p>读写权重分配。如果 WeightMode 传的是 system ，则传入的权重不生效，由系统分配默认权重。</p>
+     * @param boolean $AutoLoadBalance <p>是否开启自适应负载均衡。默认关闭。</p>
+     * @param string $AccessMode <p>访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。</p>
+     * @param boolean $ApNodeAsRoNode <p>是否将libra节点当作普通RO节点</p>
+     * @param boolean $ApQueryToOtherNode <p>libra节点故障，是否转发给其他节点</p>
      */
     function __construct()
     {

@@ -20,129 +20,129 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 任务参数输出dto
  *
- * @method integer getId() 获取唯一标识
+ * @method integer getId() 获取<p>唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setId(integer $Id) 设置唯一标识
+ * @method void setId(integer $Id) 设置<p>唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskId() 获取任务id
+ * @method string getTaskId() 获取<p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskId(string $TaskId) 设置任务id
+ * @method void setTaskId(string $TaskId) 设置<p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getParamKey() 获取参数名
+ * @method string getParamKey() 获取<p>参数名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParamKey(string $ParamKey) 设置参数名
+ * @method void setParamKey(string $ParamKey) 设置<p>参数名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getParamDesc() 获取参数描述
+ * @method string getParamDesc() 获取<p>参数描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParamDesc(string $ParamDesc) 设置参数描述
+ * @method void setParamDesc(string $ParamDesc) 设置<p>参数描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getParamDefine() 获取参数定义
+ * @method string getParamDefine() 获取<p>参数定义</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParamDefine(string $ParamDefine) 设置参数定义
+ * @method void setParamDefine(string $ParamDefine) 设置<p>参数定义</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间
+ * @method string getCreateTime() 获取<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取更新时间
+ * @method string getUpdateTime() 获取<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskName() 获取任务名
+ * @method string getTaskName() 获取<p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskName(string $TaskName) 设置任务名
+ * @method void setTaskName(string $TaskName) 设置<p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProjectId() 获取项目id
+ * @method string getProjectId() 获取<p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectId(string $ProjectId) 设置项目id
+ * @method void setProjectId(string $ProjectId) 设置<p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProjectName() 获取项目名
+ * @method string getProjectName() 获取<p>项目名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectName(string $ProjectName) 设置项目名
+ * @method void setProjectName(string $ProjectName) 设置<p>项目名</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ParameterTaskOutDsDto extends AbstractModel
 {
     /**
-     * @var integer 唯一标识
+     * @var integer <p>唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
-     * @var string 任务id
+     * @var string <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
-     * @var string 参数名
+     * @var string <p>参数名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParamKey;
 
     /**
-     * @var string 参数描述
+     * @var string <p>参数描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParamDesc;
 
     /**
-     * @var string 参数定义
+     * @var string <p>参数定义</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParamDefine;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
-     * @var string 任务名
+     * @var string <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskName;
 
     /**
-     * @var string 项目id
+     * @var string <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
-     * @var string 项目名
+     * @var string <p>项目名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectName;
 
     /**
-     * @param integer $Id 唯一标识
+     * @param integer $Id <p>唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskId 任务id
+     * @param string $TaskId <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ParamKey 参数名
+     * @param string $ParamKey <p>参数名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ParamDesc 参数描述
+     * @param string $ParamDesc <p>参数描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ParamDefine 参数定义
+     * @param string $ParamDefine <p>参数定义</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间
+     * @param string $CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime 更新时间
+     * @param string $UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskName 任务名
+     * @param string $TaskName <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProjectId 项目id
+     * @param string $ProjectId <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProjectName 项目名
+     * @param string $ProjectName <p>项目名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

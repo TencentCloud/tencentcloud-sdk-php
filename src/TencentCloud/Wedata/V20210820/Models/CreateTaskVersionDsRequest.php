@@ -20,46 +20,48 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTaskVersionDs请求参数结构体
  *
- * @method BatchCreateTaskVersionDTO getTask() 获取任务id
- * @method void setTask(BatchCreateTaskVersionDTO $Task) 设置任务id
- * @method boolean getNeedCheckParentSubmitted() 获取是否需要校验父任务已经提交到调度
- * @method void setNeedCheckParentSubmitted(boolean $NeedCheckParentSubmitted) 设置是否需要校验父任务已经提交到调度
- * @method boolean getAutoRun() 获取是否自动运行
- * @method void setAutoRun(boolean $AutoRun) 设置是否自动运行
- * @method string getProjectId() 获取项目ID
- * @method void setProjectId(string $ProjectId) 设置项目ID
+ * @method BatchCreateTaskVersionDTO getTask() 获取<p>任务id</p>
+ * @method void setTask(BatchCreateTaskVersionDTO $Task) 设置<p>任务id</p>
+ * @method boolean getNeedCheckParentSubmitted() 获取<p>是否需要校验父任务已经提交到调度</p>
+ * @method void setNeedCheckParentSubmitted(boolean $NeedCheckParentSubmitted) 设置<p>是否需要校验父任务已经提交到调度</p>
+ * @method boolean getAutoRun() 获取<p>是否自动运行</p>
+ * @method void setAutoRun(boolean $AutoRun) 设置<p>是否自动运行</p>
+ * @method string getProjectId() 获取<p>项目ID</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目ID</p>
  * @method string getRequestFromSource() 获取请求来源，WEB 前端；CLIENT 客户端
  * @method void setRequestFromSource(string $RequestFromSource) 设置请求来源，WEB 前端；CLIENT 客户端
- * @method string getAlarmWays() 获取告警方式:email-邮件;sms-短信;wecom-企业微信
- * @method void setAlarmWays(string $AlarmWays) 设置告警方式:email-邮件;sms-短信;wecom-企业微信
- * @method string getAlarmRecipientTypes() 获取告警对象:1-项目管理员，2-任务责任人
- * @method void setAlarmRecipientTypes(string $AlarmRecipientTypes) 设置告警对象:1-项目管理员，2-任务责任人
- * @method boolean getEnableCheckTaskCycleLink() 获取是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验
- * @method void setEnableCheckTaskCycleLink(boolean $EnableCheckTaskCycleLink) 设置是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验
- * @method boolean getEnableMakeUp() 获取是否需要补录中间实例
- * @method void setEnableMakeUp(boolean $EnableMakeUp) 设置是否需要补录中间实例
- * @method array getAssignApprovalList() 获取指定审批人列表
- * @method void setAssignApprovalList(array $AssignApprovalList) 设置指定审批人列表
+ * @method string getAlarmWays() 获取<p>告警方式:email-邮件;sms-短信;wecom-企业微信</p>
+ * @method void setAlarmWays(string $AlarmWays) 设置<p>告警方式:email-邮件;sms-短信;wecom-企业微信</p>
+ * @method string getAlarmRecipientTypes() 获取<p>告警对象:1-项目管理员，2-任务责任人</p>
+ * @method void setAlarmRecipientTypes(string $AlarmRecipientTypes) 设置<p>告警对象:1-项目管理员，2-任务责任人</p>
+ * @method boolean getEnableCheckTaskCycleLink() 获取<p>是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验</p>
+ * @method void setEnableCheckTaskCycleLink(boolean $EnableCheckTaskCycleLink) 设置<p>是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验</p>
+ * @method boolean getEnableMakeUp() 获取<p>是否需要补录中间实例</p>
+ * @method void setEnableMakeUp(boolean $EnableMakeUp) 设置<p>是否需要补录中间实例</p>
+ * @method array getAssignApprovalList() 获取<p>指定审批人列表</p>
+ * @method void setAssignApprovalList(array $AssignApprovalList) 设置<p>指定审批人列表</p>
+ * @method string getMissingInstanceStrategy() 获取<p>MAKEUP:补录缺失的实例;FORCE_SUCCESS:将缺失的实例置成功;SKIP:不处理，忽略缺失的实例</p>
+ * @method void setMissingInstanceStrategy(string $MissingInstanceStrategy) 设置<p>MAKEUP:补录缺失的实例;FORCE_SUCCESS:将缺失的实例置成功;SKIP:不处理，忽略缺失的实例</p>
  */
 class CreateTaskVersionDsRequest extends AbstractModel
 {
     /**
-     * @var BatchCreateTaskVersionDTO 任务id
+     * @var BatchCreateTaskVersionDTO <p>任务id</p>
      */
     public $Task;
 
     /**
-     * @var boolean 是否需要校验父任务已经提交到调度
+     * @var boolean <p>是否需要校验父任务已经提交到调度</p>
      */
     public $NeedCheckParentSubmitted;
 
     /**
-     * @var boolean 是否自动运行
+     * @var boolean <p>是否自动运行</p>
      */
     public $AutoRun;
 
     /**
-     * @var string 项目ID
+     * @var string <p>项目ID</p>
      */
     public $ProjectId;
 
@@ -69,41 +71,47 @@ class CreateTaskVersionDsRequest extends AbstractModel
     public $RequestFromSource;
 
     /**
-     * @var string 告警方式:email-邮件;sms-短信;wecom-企业微信
+     * @var string <p>告警方式:email-邮件;sms-短信;wecom-企业微信</p>
      */
     public $AlarmWays;
 
     /**
-     * @var string 告警对象:1-项目管理员，2-任务责任人
+     * @var string <p>告警对象:1-项目管理员，2-任务责任人</p>
      */
     public $AlarmRecipientTypes;
 
     /**
-     * @var boolean 是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验
+     * @var boolean <p>是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验</p>
      */
     public $EnableCheckTaskCycleLink;
 
     /**
-     * @var boolean 是否需要补录中间实例
+     * @var boolean <p>是否需要补录中间实例</p>
      */
     public $EnableMakeUp;
 
     /**
-     * @var array 指定审批人列表
+     * @var array <p>指定审批人列表</p>
      */
     public $AssignApprovalList;
 
     /**
-     * @param BatchCreateTaskVersionDTO $Task 任务id
-     * @param boolean $NeedCheckParentSubmitted 是否需要校验父任务已经提交到调度
-     * @param boolean $AutoRun 是否自动运行
-     * @param string $ProjectId 项目ID
+     * @var string <p>MAKEUP:补录缺失的实例;FORCE_SUCCESS:将缺失的实例置成功;SKIP:不处理，忽略缺失的实例</p>
+     */
+    public $MissingInstanceStrategy;
+
+    /**
+     * @param BatchCreateTaskVersionDTO $Task <p>任务id</p>
+     * @param boolean $NeedCheckParentSubmitted <p>是否需要校验父任务已经提交到调度</p>
+     * @param boolean $AutoRun <p>是否自动运行</p>
+     * @param string $ProjectId <p>项目ID</p>
      * @param string $RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
-     * @param string $AlarmWays 告警方式:email-邮件;sms-短信;wecom-企业微信
-     * @param string $AlarmRecipientTypes 告警对象:1-项目管理员，2-任务责任人
-     * @param boolean $EnableCheckTaskCycleLink 是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验
-     * @param boolean $EnableMakeUp 是否需要补录中间实例
-     * @param array $AssignApprovalList 指定审批人列表
+     * @param string $AlarmWays <p>告警方式:email-邮件;sms-短信;wecom-企业微信</p>
+     * @param string $AlarmRecipientTypes <p>告警对象:1-项目管理员，2-任务责任人</p>
+     * @param boolean $EnableCheckTaskCycleLink <p>是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验</p>
+     * @param boolean $EnableMakeUp <p>是否需要补录中间实例</p>
+     * @param array $AssignApprovalList <p>指定审批人列表</p>
+     * @param string $MissingInstanceStrategy <p>MAKEUP:补录缺失的实例;FORCE_SUCCESS:将缺失的实例置成功;SKIP:不处理，忽略缺失的实例</p>
      */
     function __construct()
     {
@@ -157,6 +165,10 @@ class CreateTaskVersionDsRequest extends AbstractModel
 
         if (array_key_exists("AssignApprovalList",$param) and $param["AssignApprovalList"] !== null) {
             $this->AssignApprovalList = $param["AssignApprovalList"];
+        }
+
+        if (array_key_exists("MissingInstanceStrategy",$param) and $param["MissingInstanceStrategy"] !== null) {
+            $this->MissingInstanceStrategy = $param["MissingInstanceStrategy"];
         }
     }
 }

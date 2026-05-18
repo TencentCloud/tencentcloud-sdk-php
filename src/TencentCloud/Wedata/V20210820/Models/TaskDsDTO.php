@@ -20,1401 +20,1281 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 任务信息
  *
- * @method string getTaskId() 获取任务ID
+ * @method string getTaskId() 获取<p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskId(string $TaskId) 设置任务ID
+ * @method void setTaskId(string $TaskId) 设置<p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVirtualTaskId() 获取虚拟任务标记
+ * @method string getVirtualTaskId() 获取<p>虚拟任务标记</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVirtualTaskId(string $VirtualTaskId) 设置虚拟任务标记
+ * @method void setVirtualTaskId(string $VirtualTaskId) 设置<p>虚拟任务标记</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getVirtualFlag() 获取虚拟任务标记
+ * @method boolean getVirtualFlag() 获取<p>虚拟任务标记</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVirtualFlag(boolean $VirtualFlag) 设置虚拟任务标记
+ * @method void setVirtualFlag(boolean $VirtualFlag) 设置<p>虚拟任务标记</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskName() 获取任务名
+ * @method string getTaskName() 获取<p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskName(string $TaskName) 设置任务名
+ * @method void setTaskName(string $TaskName) 设置<p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkflowId() 获取工作流id
+ * @method string getWorkflowId() 获取<p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowId(string $WorkflowId) 设置工作流id
+ * @method void setWorkflowId(string $WorkflowId) 设置<p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRealWorkflowId() 获取真实工作流id
+ * @method string getRealWorkflowId() 获取<p>真实工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRealWorkflowId(string $RealWorkflowId) 设置真实工作流id
+ * @method void setRealWorkflowId(string $RealWorkflowId) 设置<p>真实工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWorkflowName() 获取工作流名称
+ * @method string getWorkflowName() 获取<p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowName(string $WorkflowName) 设置工作流名称
+ * @method void setWorkflowName(string $WorkflowName) 设置<p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFolderId() 获取文件夹id
+ * @method string getFolderId() 获取<p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFolderId(string $FolderId) 设置文件夹id
+ * @method void setFolderId(string $FolderId) 设置<p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFolderName() 获取文件夹名字
+ * @method string getFolderName() 获取<p>文件夹名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFolderName(string $FolderName) 设置文件夹名字
+ * @method void setFolderName(string $FolderName) 设置<p>文件夹名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间
+ * @method string getCreateTime() 获取<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLastUpdate() 获取更新时间
+ * @method string getLastUpdate() 获取<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLastUpdate(string $LastUpdate) 设置更新时间
+ * @method void setLastUpdate(string $LastUpdate) 设置<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取<p>任务状态，取值范围：</p>
-<ul>
-<li>N 新建</li>
-<li>Y 运行</li>
-<li>F 停止</li>
-<li>O 冻结</li>
-<li>T 停止中</li>
-<li>INVALID 已失效</li>
-</ul>
+ * @method string getStatus() 获取<p>任务状态，取值范围：</p><ul><li>N 新建</li><li>Y 运行</li><li>F 停止</li><li>O 冻结</li><li>T 停止中</li><li>INVALID 已失效</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置<p>任务状态，取值范围：</p>
-<ul>
-<li>N 新建</li>
-<li>Y 运行</li>
-<li>F 停止</li>
-<li>O 冻结</li>
-<li>T 停止中</li>
-<li>INVALID 已失效</li>
-</ul>
+ * @method void setStatus(string $Status) 设置<p>任务状态，取值范围：</p><ul><li>N 新建</li><li>Y 运行</li><li>F 停止</li><li>O 冻结</li><li>T 停止中</li><li>INVALID 已失效</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInCharge() 获取责任人
+ * @method string getInCharge() 获取<p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInCharge(string $InCharge) 设置责任人
+ * @method void setInCharge(string $InCharge) 设置<p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInChargeId() 获取责任人用户id
+ * @method string getInChargeId() 获取<p>责任人用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInChargeId(string $InChargeId) 设置责任人用户id
+ * @method void setInChargeId(string $InChargeId) 设置<p>责任人用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStartTime() 获取生效日期
+ * @method string getStartTime() 获取<p>生效日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartTime(string $StartTime) 设置生效日期
+ * @method void setStartTime(string $StartTime) 设置<p>生效日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEndTime() 获取结束日期
+ * @method string getEndTime() 获取<p>结束日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEndTime(string $EndTime) 设置结束日期
+ * @method void setEndTime(string $EndTime) 设置<p>结束日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExecutionStartTime() 获取执行时间左闭区间
+ * @method string getExecutionStartTime() 获取<p>执行时间左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecutionStartTime(string $ExecutionStartTime) 设置执行时间左闭区间
+ * @method void setExecutionStartTime(string $ExecutionStartTime) 设置<p>执行时间左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExecutionEndTime() 获取执行时间右闭区间
+ * @method string getExecutionEndTime() 获取<p>执行时间右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecutionEndTime(string $ExecutionEndTime) 设置执行时间右闭区间
+ * @method void setExecutionEndTime(string $ExecutionEndTime) 设置<p>执行时间右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProjectId() 获取项目id
+ * @method string getProjectId() 获取<p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectId(string $ProjectId) 设置项目id
+ * @method void setProjectId(string $ProjectId) 设置<p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProjectIdent() 获取项目标识
+ * @method string getProjectIdent() 获取<p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectIdent(string $ProjectIdent) 设置项目标识
+ * @method void setProjectIdent(string $ProjectIdent) 设置<p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProjectName() 获取项目名称
+ * @method string getProjectName() 获取<p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectName(string $ProjectName) 设置项目名称
+ * @method void setProjectName(string $ProjectName) 设置<p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCycleType() 获取周期类型
+ * @method string getCycleType() 获取<p>周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCycleType(string $CycleType) 设置周期类型
+ * @method void setCycleType(string $CycleType) 设置<p>周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCycleStep() 获取步长
+ * @method integer getCycleStep() 获取<p>步长</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCycleStep(integer $CycleStep) 设置步长
+ * @method void setCycleStep(integer $CycleStep) 设置<p>步长</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCrontabExpression() 获取对于crontab类型调度配置其为用户输入 对于周期类型调度配置其为系统计算
+ * @method string getCrontabExpression() 获取<p>对于crontab类型调度配置其为用户输入 对于周期类型调度配置其为系统计算</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCrontabExpression(string $CrontabExpression) 设置对于crontab类型调度配置其为用户输入 对于周期类型调度配置其为系统计算
+ * @method void setCrontabExpression(string $CrontabExpression) 设置<p>对于crontab类型调度配置其为用户输入 对于周期类型调度配置其为系统计算</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDelayTime() 获取延时调度
+ * @method integer getDelayTime() 获取<p>延时调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDelayTime(integer $DelayTime) 设置延时调度
+ * @method void setDelayTime(integer $DelayTime) 设置<p>延时调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStartupTime() 获取延时执行时间
+ * @method integer getStartupTime() 获取<p>延时执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartupTime(integer $StartupTime) 设置延时执行时间
+ * @method void setStartupTime(integer $StartupTime) 设置<p>延时执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRetryWait() 获取重试等待时间,单位分钟
+ * @method integer getRetryWait() 获取<p>重试等待时间,单位分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRetryWait(integer $RetryWait) 设置重试等待时间,单位分钟
+ * @method void setRetryWait(integer $RetryWait) 设置<p>重试等待时间,单位分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRetriable() 获取是否可重试
+ * @method integer getRetriable() 获取<p>是否可重试</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRetriable(integer $Retriable) 设置是否可重试
+ * @method void setRetriable(integer $Retriable) 设置<p>是否可重试</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskAction() 获取调度扩展信息
+ * @method string getTaskAction() 获取<p>调度扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskAction(string $TaskAction) 设置调度扩展信息
+ * @method void setTaskAction(string $TaskAction) 设置<p>调度扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTryLimit() 获取运行次数限制
+ * @method integer getTryLimit() 获取<p>运行次数限制</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTryLimit(integer $TryLimit) 设置运行次数限制
+ * @method void setTryLimit(integer $TryLimit) 设置<p>运行次数限制</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRunPriority() 获取运行优先级
+ * @method integer getRunPriority() 获取<p>运行优先级</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRunPriority(integer $RunPriority) 设置运行优先级
+ * @method void setRunPriority(integer $RunPriority) 设置<p>运行优先级</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method TaskTypeDsVO getTaskType() 获取任务类型
+ * @method TaskTypeDsVO getTaskType() 获取<p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskType(TaskTypeDsVO $TaskType) 设置任务类型
+ * @method void setTaskType(TaskTypeDsVO $TaskType) 设置<p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBrokerIp() 获取指定的运行节点
+ * @method string getBrokerIp() 获取<p>指定的运行节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBrokerIp(string $BrokerIp) 设置指定的运行节点
+ * @method void setBrokerIp(string $BrokerIp) 设置<p>指定的运行节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getClusterId() 获取集群name
+ * @method string getClusterId() 获取<p>集群name</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterId(string $ClusterId) 设置集群name
+ * @method void setClusterId(string $ClusterId) 设置<p>集群name</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMinDateTime() 获取最小数据时间
+ * @method string getMinDateTime() 获取<p>最小数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMinDateTime(string $MinDateTime) 设置最小数据时间
+ * @method void setMinDateTime(string $MinDateTime) 设置<p>最小数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMaxDateTime() 获取最大数据时间
+ * @method string getMaxDateTime() 获取<p>最大数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxDateTime(string $MaxDateTime) 设置最大数据时间
+ * @method void setMaxDateTime(string $MaxDateTime) 设置<p>最大数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getExecutionTTL() 获取运行耗时超时时间
+ * @method integer getExecutionTTL() 获取<p>运行耗时超时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecutionTTL(integer $ExecutionTTL) 设置运行耗时超时时间
+ * @method void setExecutionTTL(integer $ExecutionTTL) 设置<p>运行耗时超时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSelfDepend() 获取是否自身依赖 是1 否2 并行3
+ * @method string getSelfDepend() 获取<p>是否自身依赖 是1 否2 并行3</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSelfDepend(string $SelfDepend) 设置是否自身依赖 是1 否2 并行3
+ * @method void setSelfDepend(string $SelfDepend) 设置<p>是否自身依赖 是1 否2 并行3</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getLeftCoordinate() 获取LeftCoordinate坐标
+ * @method float getLeftCoordinate() 获取<p>LeftCoordinate坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLeftCoordinate(float $LeftCoordinate) 设置LeftCoordinate坐标
+ * @method void setLeftCoordinate(float $LeftCoordinate) 设置<p>LeftCoordinate坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getTopCoordinate() 获取TopCoordinate坐标
+ * @method float getTopCoordinate() 获取<p>TopCoordinate坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopCoordinate(float $TopCoordinate) 设置TopCoordinate坐标
+ * @method void setTopCoordinate(float $TopCoordinate) 设置<p>TopCoordinate坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method TaskExtDsVO getTaskExt() 获取TaskExt信息
+ * @method TaskExtDsVO getTaskExt() 获取<p>TaskExt信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskExt(TaskExtDsVO $TaskExt) 设置TaskExt信息
+ * @method void setTaskExt(TaskExtDsVO $TaskExt) 设置<p>TaskExt信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProperties() 获取taskExt 导入导出json使用 private Map  properties;
+ * @method string getProperties() 获取<p>taskExt 导入导出json使用 private Map  properties;</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProperties(string $Properties) 设置taskExt 导入导出json使用 private Map  properties;
+ * @method void setProperties(string $Properties) 设置<p>taskExt 导入导出json使用 private Map  properties;</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNotes() 获取任务备注
+ * @method string getNotes() 获取<p>任务备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNotes(string $Notes) 设置任务备注
+ * @method void setNotes(string $Notes) 设置<p>任务备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceInitStrategy() 获取实例生成策略 T+1 表示当前周期生成上一周期数据时间任务实例 默认T+1 T+0 表示当前周期生成当前周期数据时间任务实例 T-1
-     * 表示当前周期生成下一周期数据时间任务实例
-     *
-     * service不做默认策略处理, 下沉到数据初始化默认T+1, service涉及到多个更新task的路径
+ * @method string getInstanceInitStrategy() 获取<p>实例生成策略 T+1 表示当前周期生成上一周期数据时间任务实例 默认T+1 T+0 表示当前周期生成当前周期数据时间任务实例 T-1</p><pre><code> * 表示当前周期生成下一周期数据时间任务实例 * * service不做默认策略处理, 下沉到数据初始化默认T+1, service涉及到多个更新task的路径</code></pre>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceInitStrategy(string $InstanceInitStrategy) 设置实例生成策略 T+1 表示当前周期生成上一周期数据时间任务实例 默认T+1 T+0 表示当前周期生成当前周期数据时间任务实例 T-1
-     * 表示当前周期生成下一周期数据时间任务实例
-     *
-     * service不做默认策略处理, 下沉到数据初始化默认T+1, service涉及到多个更新task的路径
+ * @method void setInstanceInitStrategy(string $InstanceInitStrategy) 设置<p>实例生成策略 T+1 表示当前周期生成上一周期数据时间任务实例 默认T+1 T+0 表示当前周期生成当前周期数据时间任务实例 T-1</p><pre><code> * 表示当前周期生成下一周期数据时间任务实例 * * service不做默认策略处理, 下沉到数据初始化默认T+1, service涉及到多个更新task的路径</code></pre>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getYarnQueue() 获取资源池队列名称
+ * @method string getYarnQueue() 获取<p>资源池队列名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setYarnQueue(string $YarnQueue) 设置资源池队列名称
+ * @method void setYarnQueue(string $YarnQueue) 设置<p>资源池队列名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAlarms() 获取任务告警信息
+ * @method array getAlarms() 获取<p>任务告警信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlarms(array $Alarms) 设置任务告警信息
+ * @method void setAlarms(array $Alarms) 设置<p>任务告警信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAlarm() 获取alarmDTO 导入导出json使用
+ * @method string getAlarm() 获取<p>alarmDTO 导入导出json使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlarm(string $Alarm) 设置alarmDTO 导入导出json使用
+ * @method void setAlarm(string $Alarm) 设置<p>alarmDTO 导入导出json使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getScriptChange() 获取任务脚本是否发生变化
+ * @method boolean getScriptChange() 获取<p>任务脚本是否发生变化</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScriptChange(boolean $ScriptChange) 设置任务脚本是否发生变化
+ * @method void setScriptChange(boolean $ScriptChange) 设置<p>任务脚本是否发生变化</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getSubmit() 获取任务版本是否已提交
+ * @method boolean getSubmit() 获取<p>任务版本是否已提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubmit(boolean $Submit) 设置任务版本是否已提交
+ * @method void setSubmit(boolean $Submit) 设置<p>任务版本是否已提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLastSchedulerCommitTime() 获取最新调度计划变更时间 仅生产态
+ * @method string getLastSchedulerCommitTime() 获取<p>最新调度计划变更时间 仅生产态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLastSchedulerCommitTime(string $LastSchedulerCommitTime) 设置最新调度计划变更时间 仅生产态
+ * @method void setLastSchedulerCommitTime(string $LastSchedulerCommitTime) 设置<p>最新调度计划变更时间 仅生产态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNormalizedJobStartTime() 获取仅生产态存储于生产态序列化任务信息, 减少base CPU重复密集计算
+ * @method string getNormalizedJobStartTime() 获取<p>仅生产态存储于生产态序列化任务信息, 减少base CPU重复密集计算</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNormalizedJobStartTime(string $NormalizedJobStartTime) 设置仅生产态存储于生产态序列化任务信息, 减少base CPU重复密集计算
+ * @method void setNormalizedJobStartTime(string $NormalizedJobStartTime) 设置<p>仅生产态存储于生产态序列化任务信息, 减少base CPU重复密集计算</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRecoverFreezeStartTime() 获取启动暂停的任务时，选择不补录中间实例，通过此字段来标识从哪个时间开始生成实例
+ * @method string getRecoverFreezeStartTime() 获取<p>启动暂停的任务时，选择不补录中间实例，通过此字段来标识从哪个时间开始生成实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecoverFreezeStartTime(string $RecoverFreezeStartTime) 设置启动暂停的任务时，选择不补录中间实例，通过此字段来标识从哪个时间开始生成实例
+ * @method void setRecoverFreezeStartTime(string $RecoverFreezeStartTime) 设置<p>启动暂停的任务时，选择不补录中间实例，通过此字段来标识从哪个时间开始生成实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSourceServer() 获取源数据源
+ * @method string getSourceServer() 获取<p>源数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSourceServer(string $SourceServer) 设置源数据源
+ * @method void setSourceServer(string $SourceServer) 设置<p>源数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTargetServer() 获取目标数据源
+ * @method string getTargetServer() 获取<p>目标数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTargetServer(string $TargetServer) 设置目标数据源
+ * @method void setTargetServer(string $TargetServer) 设置<p>目标数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTasks() 获取父子节点树
+ * @method array getTasks() 获取<p>父子节点树</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTasks(array $Tasks) 设置父子节点树
+ * @method void setTasks(array $Tasks) 设置<p>父子节点树</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreater() 获取创建者
+ * @method string getCreater() 获取<p>创建者</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreater(string $Creater) 设置创建者
+ * @method void setCreater(string $Creater) 设置<p>创建者</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDependencyRel() 获取分支，依赖关系，and/or, 默认and
+ * @method string getDependencyRel() 获取<p>分支，依赖关系，and/or, 默认and</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDependencyRel(string $DependencyRel) 设置分支，依赖关系，and/or, 默认and
+ * @method void setDependencyRel(string $DependencyRel) 设置<p>分支，依赖关系，and/or, 默认and</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDependencyWorkflow() 获取是否支持工作流依赖 yes / no 默认 no
+ * @method string getDependencyWorkflow() 获取<p>是否支持工作流依赖 yes / no 默认 no</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDependencyWorkflow(string $DependencyWorkflow) 设置是否支持工作流依赖 yes / no 默认 no
+ * @method void setDependencyWorkflow(string $DependencyWorkflow) 设置<p>是否支持工作流依赖 yes / no 默认 no</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEventListenerConfig() 获取支持事件监听器配置导入导出
+ * @method string getEventListenerConfig() 获取<p>支持事件监听器配置导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEventListenerConfig(string $EventListenerConfig) 设置支持事件监听器配置导入导出
+ * @method void setEventListenerConfig(string $EventListenerConfig) 设置<p>支持事件监听器配置导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEventPublisherConfig() 获取支持事件触发器配置导入导出
+ * @method string getEventPublisherConfig() 获取<p>支持事件触发器配置导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEventPublisherConfig(string $EventPublisherConfig) 设置支持事件触发器配置导入导出
+ * @method void setEventPublisherConfig(string $EventPublisherConfig) 设置<p>支持事件触发器配置导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDependencyConfigList() 获取依赖配置
+ * @method array getDependencyConfigList() 获取<p>依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDependencyConfigList(array $DependencyConfigList) 设置依赖配置
+ * @method void setDependencyConfigList(array $DependencyConfigList) 设置<p>依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVirtualTaskStatus() 获取<p>任务状态，取值范围：</p>
-<ul>
-<li>N 新建</li>
-<li>Y 运行</li>
-<li>F 停止</li>
-<li>O 冻结</li>
-<li>T 停止中</li>
-<li>INVALID 已失效</li>
-</ul>
+ * @method string getVirtualTaskStatus() 获取<p>任务状态，取值范围：</p><ul><li>N 新建</li><li>Y 运行</li><li>F 停止</li><li>O 冻结</li><li>T 停止中</li><li>INVALID 已失效</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVirtualTaskStatus(string $VirtualTaskStatus) 设置<p>任务状态，取值范围：</p>
-<ul>
-<li>N 新建</li>
-<li>Y 运行</li>
-<li>F 停止</li>
-<li>O 冻结</li>
-<li>T 停止中</li>
-<li>INVALID 已失效</li>
-</ul>
+ * @method void setVirtualTaskStatus(string $VirtualTaskStatus) 设置<p>任务状态，取值范围：</p><ul><li>N 新建</li><li>Y 运行</li><li>F 停止</li><li>O 冻结</li><li>T 停止中</li><li>INVALID 已失效</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRecycleTips() 获取回收站还原提示语
+ * @method string getRecycleTips() 获取<p>回收站还原提示语</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecycleTips(string $RecycleTips) 设置回收站还原提示语
+ * @method void setRecycleTips(string $RecycleTips) 设置<p>回收站还原提示语</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRecycleUser() 获取回收站所属用户
+ * @method string getRecycleUser() 获取<p>回收站所属用户</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecycleUser(string $RecycleUser) 设置回收站所属用户
+ * @method void setRecycleUser(string $RecycleUser) 设置<p>回收站所属用户</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNewOrUpdate() 获取新增 或 修改
+ * @method string getNewOrUpdate() 获取<p>新增 或 修改</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNewOrUpdate(string $NewOrUpdate) 设置新增 或 修改
+ * @method void setNewOrUpdate(string $NewOrUpdate) 设置<p>新增 或 修改</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getParams() 获取任务上游依赖信息 用于发布管理导入导出
+ * @method array getParams() 获取<p>任务上游依赖信息 用于发布管理导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParams(array $Params) 设置任务上游依赖信息 用于发布管理导入导出
+ * @method void setParams(array $Params) 设置<p>任务上游依赖信息 用于发布管理导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTaskLinkInfo() 获取任务上游依赖信息 用于发布管理导入导出
+ * @method array getTaskLinkInfo() 获取<p>任务上游依赖信息 用于发布管理导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskLinkInfo(array $TaskLinkInfo) 设置任务上游依赖信息 用于发布管理导入导出
+ * @method void setTaskLinkInfo(array $TaskLinkInfo) 设置<p>任务上游依赖信息 用于发布管理导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getImportResult() 获取导入结果
+ * @method boolean getImportResult() 获取<p>导入结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImportResult(boolean $ImportResult) 设置导入结果
+ * @method void setImportResult(boolean $ImportResult) 设置<p>导入结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getImportErrMsg() 获取导入失败原因
+ * @method string getImportErrMsg() 获取<p>导入失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImportErrMsg(string $ImportErrMsg) 设置导入失败原因
+ * @method void setImportErrMsg(string $ImportErrMsg) 设置<p>导入失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getContentType() 获取任务内容 全部内容 配置内容 资源内容
+ * @method string getContentType() 获取<p>任务内容 全部内容 配置内容 资源内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setContentType(string $ContentType) 设置任务内容 全部内容 配置内容 资源内容
+ * @method void setContentType(string $ContentType) 设置<p>任务内容 全部内容 配置内容 资源内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getTaskAutoSubmit() 获取是否导入提交运行
+ * @method boolean getTaskAutoSubmit() 获取<p>是否导入提交运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskAutoSubmit(boolean $TaskAutoSubmit) 设置是否导入提交运行
+ * @method void setTaskAutoSubmit(boolean $TaskAutoSubmit) 设置<p>是否导入提交运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProductName() 获取上层产品 数据质量 / 数据开发 / ...
+ * @method string getProductName() 获取<p>上层产品 数据质量 / 数据开发 / ...</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProductName(string $ProductName) 设置上层产品 数据质量 / 数据开发 / ...
+ * @method void setProductName(string $ProductName) 设置<p>上层产品 数据质量 / 数据开发 / ...</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOwnId() 获取创建者帐号
+ * @method string getOwnId() 获取<p>创建者帐号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOwnId(string $OwnId) 设置创建者帐号
+ * @method void setOwnId(string $OwnId) 设置<p>创建者帐号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUserId() 获取子账号
+ * @method string getUserId() 获取<p>子账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserId(string $UserId) 设置子账号
+ * @method void setUserId(string $UserId) 设置<p>子账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTenantId() 获取租户id
+ * @method string getTenantId() 获取<p>租户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTenantId(string $TenantId) 设置租户id
+ * @method void setTenantId(string $TenantId) 设置<p>租户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateUser() 获取最后修改的人
+ * @method string getUpdateUser() 获取<p>最后修改的人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateUser(string $UpdateUser) 设置最后修改的人
+ * @method void setUpdateUser(string $UpdateUser) 设置<p>最后修改的人</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取最后修改时间
+ * @method string getUpdateTime() 获取<p>最后修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(string $UpdateTime) 设置最后修改时间
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>最后修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateUserId() 获取最后修改的人的ID
+ * @method string getUpdateUserId() 获取<p>最后修改的人的ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateUserId(string $UpdateUserId) 设置最后修改的人的ID
+ * @method void setUpdateUserId(string $UpdateUserId) 设置<p>最后修改的人的ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSchedulerDesc() 获取调度计划
+ * @method string getSchedulerDesc() 获取<p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSchedulerDesc(string $SchedulerDesc) 设置调度计划
+ * @method void setSchedulerDesc(string $SchedulerDesc) 设置<p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResourceGroup() 获取资源组
-
+ * @method string getResourceGroup() 获取<p>资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceGroup(string $ResourceGroup) 设置资源组
-
+ * @method void setResourceGroup(string $ResourceGroup) 设置<p>资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVersionDesc() 获取版本提交说明
+ * @method string getVersionDesc() 获取<p>版本提交说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVersionDesc(string $VersionDesc) 设置版本提交说明
+ * @method void setVersionDesc(string $VersionDesc) 设置<p>版本提交说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLinkId() 获取编排-删除添加的链接
+ * @method string getLinkId() 获取<p>编排-删除添加的链接</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLinkId(string $LinkId) 设置编排-删除添加的链接
+ * @method void setLinkId(string $LinkId) 设置<p>编排-删除添加的链接</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUserFileId() 获取脚本引用关系
+ * @method string getUserFileId() 获取<p>脚本引用关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserFileId(string $UserFileId) 设置脚本引用关系
+ * @method void setUserFileId(string $UserFileId) 设置<p>脚本引用关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSourceServiceId() 获取来源数据源ID
+ * @method string getSourceServiceId() 获取<p>来源数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSourceServiceId(string $SourceServiceId) 设置来源数据源ID
+ * @method void setSourceServiceId(string $SourceServiceId) 设置<p>来源数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSourceServiceType() 获取来源数据源类型
+ * @method string getSourceServiceType() 获取<p>来源数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSourceServiceType(string $SourceServiceType) 设置来源数据源类型
+ * @method void setSourceServiceType(string $SourceServiceType) 设置<p>来源数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTargetServiceId() 获取去向数据源ID
+ * @method string getTargetServiceId() 获取<p>去向数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTargetServiceId(string $TargetServiceId) 设置去向数据源ID
+ * @method void setTargetServiceId(string $TargetServiceId) 设置<p>去向数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTargetServiceType() 获取去向数据源类型
+ * @method string getTargetServiceType() 获取<p>去向数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTargetServiceType(string $TargetServiceType) 设置去向数据源类型
+ * @method void setTargetServiceType(string $TargetServiceType) 设置<p>去向数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getParamInList() 获取输入参数
+ * @method array getParamInList() 获取<p>输入参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParamInList(array $ParamInList) 设置输入参数
+ * @method void setParamInList(array $ParamInList) 设置<p>输入参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getParamOutList() 获取输出参数
+ * @method array getParamOutList() 获取<p>输出参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParamOutList(array $ParamOutList) 设置输出参数
+ * @method void setParamOutList(array $ParamOutList) 设置<p>输出参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskFolderId() 获取任务文件夹id
+ * @method string getTaskFolderId() 获取<p>任务文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskFolderId(string $TaskFolderId) 设置任务文件夹id
+ * @method void setTaskFolderId(string $TaskFolderId) 设置<p>任务文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxRetryAttempts() 获取最大尝试次数
+ * @method integer getMaxRetryAttempts() 获取<p>最大尝试次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxRetryAttempts(integer $MaxRetryAttempts) 设置最大尝试次数
+ * @method void setMaxRetryAttempts(integer $MaxRetryAttempts) 设置<p>最大尝试次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResourceGroupName() 获取资源组名称
+ * @method string getResourceGroupName() 获取<p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceGroupName(string $ResourceGroupName) 设置资源组名称
+ * @method void setResourceGroupName(string $ResourceGroupName) 设置<p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSourceServiceName() 获取数据源
+ * @method string getSourceServiceName() 获取<p>数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSourceServiceName(string $SourceServiceName) 设置数据源
+ * @method void setSourceServiceName(string $SourceServiceName) 设置<p>数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTaskRegisterOutputTable() 获取任务产出登记
+ * @method array getTaskRegisterOutputTable() 获取<p>任务产出登记</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskRegisterOutputTable(array $TaskRegisterOutputTable) 设置任务产出登记
+ * @method void setTaskRegisterOutputTable(array $TaskRegisterOutputTable) 设置<p>任务产出登记</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getCycleDependencyConfigList() 获取循环依赖配置
+ * @method array getCycleDependencyConfigList() 获取<p>循环依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCycleDependencyConfigList(array $CycleDependencyConfigList) 设置循环依赖配置
+ * @method void setCycleDependencyConfigList(array $CycleDependencyConfigList) 设置<p>循环依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWarning() 获取特殊警告信息
+ * @method string getWarning() 获取<p>特殊警告信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWarning(string $Warning) 设置特殊警告信息
+ * @method void setWarning(string $Warning) 设置<p>特殊警告信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getScheduleRunType() 获取0 正常调度 1 空跑调度
+ * @method integer getScheduleRunType() 获取<p>0 正常调度 1 空跑调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScheduleRunType(integer $ScheduleRunType) 设置0 正常调度 1 空跑调度
+ * @method void setScheduleRunType(integer $ScheduleRunType) 设置<p>0 正常调度 1 空跑调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getConcurrentStrategy() 获取0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill
+ * @method integer getConcurrentStrategy() 获取<p>0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConcurrentStrategy(integer $ConcurrentStrategy) 设置0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill
+ * @method void setConcurrentStrategy(integer $ConcurrentStrategy) 设置<p>0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getScheduleTimeZone() 获取UTC+8;UDC-8
+ * @method string getScheduleTimeZone() 获取<p>UTC+8;UDC-8</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置UTC+8;UDC-8
+ * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置<p>UTC+8;UDC-8</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTemplateId() 获取引用的代码模版id
+ * @method string getTemplateId() 获取<p>引用的代码模版id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTemplateId(string $TemplateId) 设置引用的代码模版id
+ * @method void setTemplateId(string $TemplateId) 设置<p>引用的代码模版id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAllowRedoType() 获取允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑
+ * @method string getAllowRedoType() 获取<p>允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAllowRedoType(string $AllowRedoType) 设置允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑
+ * @method void setAllowRedoType(string $AllowRedoType) 设置<p>允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBundleId() 获取BundleId
-CI/CD工程生成的bundle唯一标识
+ * @method string getBundleId() 获取<p>BundleId<br>CI/CD工程生成的bundle唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBundleId(string $BundleId) 设置BundleId
-CI/CD工程生成的bundle唯一标识
+ * @method void setBundleId(string $BundleId) 设置<p>BundleId<br>CI/CD工程生成的bundle唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBundleInfo() 获取bundle信息
+ * @method string getBundleInfo() 获取<p>bundle信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBundleInfo(string $BundleInfo) 设置bundle信息
+ * @method void setBundleInfo(string $BundleInfo) 设置<p>bundle信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAllowDownstreamDependency() 获取是否允许下游依赖 0 不允许 1 允许
+ * @method integer getAllowDownstreamDependency() 获取<p>是否允许下游依赖 0 不允许 1 允许</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAllowDownstreamDependency(integer $AllowDownstreamDependency) 设置是否允许下游依赖 0 不允许 1 允许
+ * @method void setAllowDownstreamDependency(integer $AllowDownstreamDependency) 设置<p>是否允许下游依赖 0 不允许 1 允许</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDependencyTriggerPolicy() 获取- 任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置
-- ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败
-- ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行
-- ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功
-- ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行
-- ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行
-- ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行
-- ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行
-- ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游
-- NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败
-- ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行
-- NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行
-- ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行
+ * @method string getDependencyTriggerPolicy() 获取<ul><li>任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置</li><li>ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败</li><li>ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行</li><li>ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行</li><li>ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行</li><li>ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDependencyTriggerPolicy(string $DependencyTriggerPolicy) 设置- 任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置
-- ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败
-- ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行
-- ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功
-- ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行
-- ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行
-- ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行
-- ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行
-- ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游
-- NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败
-- ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行
-- NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行
-- ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行
+ * @method void setDependencyTriggerPolicy(string $DependencyTriggerPolicy) 设置<ul><li>任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置</li><li>ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败</li><li>ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行</li><li>ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行</li><li>ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行</li><li>ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLastUpdateTimestamp() 获取<p>任务最后更新时间戳</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLastUpdateTimestamp(integer $LastUpdateTimestamp) 设置<p>任务最后更新时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskDsDTO extends AbstractModel
 {
     /**
-     * @var string 任务ID
+     * @var string <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
-     * @var string 虚拟任务标记
+     * @var string <p>虚拟任务标记</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VirtualTaskId;
 
     /**
-     * @var boolean 虚拟任务标记
+     * @var boolean <p>虚拟任务标记</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VirtualFlag;
 
     /**
-     * @var string 任务名
+     * @var string <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskName;
 
     /**
-     * @var string 工作流id
+     * @var string <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowId;
 
     /**
-     * @var string 真实工作流id
+     * @var string <p>真实工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealWorkflowId;
 
     /**
-     * @var string 工作流名称
+     * @var string <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkflowName;
 
     /**
-     * @var string 文件夹id
+     * @var string <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FolderId;
 
     /**
-     * @var string 文件夹名字
+     * @var string <p>文件夹名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FolderName;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastUpdate;
 
     /**
-     * @var string <p>任务状态，取值范围：</p>
-<ul>
-<li>N 新建</li>
-<li>Y 运行</li>
-<li>F 停止</li>
-<li>O 冻结</li>
-<li>T 停止中</li>
-<li>INVALID 已失效</li>
-</ul>
+     * @var string <p>任务状态，取值范围：</p><ul><li>N 新建</li><li>Y 运行</li><li>F 停止</li><li>O 冻结</li><li>T 停止中</li><li>INVALID 已失效</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var string 责任人
+     * @var string <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InCharge;
 
     /**
-     * @var string 责任人用户id
+     * @var string <p>责任人用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InChargeId;
 
     /**
-     * @var string 生效日期
+     * @var string <p>生效日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
-     * @var string 结束日期
+     * @var string <p>结束日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
-     * @var string 执行时间左闭区间
+     * @var string <p>执行时间左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutionStartTime;
 
     /**
-     * @var string 执行时间右闭区间
+     * @var string <p>执行时间右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutionEndTime;
 
     /**
-     * @var string 项目id
+     * @var string <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
-     * @var string 项目标识
+     * @var string <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectIdent;
 
     /**
-     * @var string 项目名称
+     * @var string <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectName;
 
     /**
-     * @var string 周期类型
+     * @var string <p>周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CycleType;
 
     /**
-     * @var integer 步长
+     * @var integer <p>步长</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CycleStep;
 
     /**
-     * @var string 对于crontab类型调度配置其为用户输入 对于周期类型调度配置其为系统计算
+     * @var string <p>对于crontab类型调度配置其为用户输入 对于周期类型调度配置其为系统计算</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CrontabExpression;
 
     /**
-     * @var integer 延时调度
+     * @var integer <p>延时调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DelayTime;
 
     /**
-     * @var integer 延时执行时间
+     * @var integer <p>延时执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartupTime;
 
     /**
-     * @var integer 重试等待时间,单位分钟
+     * @var integer <p>重试等待时间,单位分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RetryWait;
 
     /**
-     * @var integer 是否可重试
+     * @var integer <p>是否可重试</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Retriable;
 
     /**
-     * @var string 调度扩展信息
+     * @var string <p>调度扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskAction;
 
     /**
-     * @var integer 运行次数限制
+     * @var integer <p>运行次数限制</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TryLimit;
 
     /**
-     * @var integer 运行优先级
+     * @var integer <p>运行优先级</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunPriority;
 
     /**
-     * @var TaskTypeDsVO 任务类型
+     * @var TaskTypeDsVO <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskType;
 
     /**
-     * @var string 指定的运行节点
+     * @var string <p>指定的运行节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BrokerIp;
 
     /**
-     * @var string 集群name
+     * @var string <p>集群name</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
 
     /**
-     * @var string 最小数据时间
+     * @var string <p>最小数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MinDateTime;
 
     /**
-     * @var string 最大数据时间
+     * @var string <p>最大数据时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxDateTime;
 
     /**
-     * @var integer 运行耗时超时时间
+     * @var integer <p>运行耗时超时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutionTTL;
 
     /**
-     * @var string 是否自身依赖 是1 否2 并行3
+     * @var string <p>是否自身依赖 是1 否2 并行3</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SelfDepend;
 
     /**
-     * @var float LeftCoordinate坐标
+     * @var float <p>LeftCoordinate坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LeftCoordinate;
 
     /**
-     * @var float TopCoordinate坐标
+     * @var float <p>TopCoordinate坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopCoordinate;
 
     /**
-     * @var TaskExtDsVO TaskExt信息
+     * @var TaskExtDsVO <p>TaskExt信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskExt;
 
     /**
-     * @var string taskExt 导入导出json使用 private Map  properties;
+     * @var string <p>taskExt 导入导出json使用 private Map  properties;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Properties;
 
     /**
-     * @var string 任务备注
+     * @var string <p>任务备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Notes;
 
     /**
-     * @var string 实例生成策略 T+1 表示当前周期生成上一周期数据时间任务实例 默认T+1 T+0 表示当前周期生成当前周期数据时间任务实例 T-1
-     * 表示当前周期生成下一周期数据时间任务实例
-     *
-     * service不做默认策略处理, 下沉到数据初始化默认T+1, service涉及到多个更新task的路径
+     * @var string <p>实例生成策略 T+1 表示当前周期生成上一周期数据时间任务实例 默认T+1 T+0 表示当前周期生成当前周期数据时间任务实例 T-1</p><pre><code> * 表示当前周期生成下一周期数据时间任务实例 * * service不做默认策略处理, 下沉到数据初始化默认T+1, service涉及到多个更新task的路径</code></pre>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceInitStrategy;
 
     /**
-     * @var string 资源池队列名称
+     * @var string <p>资源池队列名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $YarnQueue;
 
     /**
-     * @var array 任务告警信息
+     * @var array <p>任务告警信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Alarms;
 
     /**
-     * @var string alarmDTO 导入导出json使用
+     * @var string <p>alarmDTO 导入导出json使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Alarm;
 
     /**
-     * @var boolean 任务脚本是否发生变化
+     * @var boolean <p>任务脚本是否发生变化</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScriptChange;
 
     /**
-     * @var boolean 任务版本是否已提交
+     * @var boolean <p>任务版本是否已提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Submit;
 
     /**
-     * @var string 最新调度计划变更时间 仅生产态
+     * @var string <p>最新调度计划变更时间 仅生产态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastSchedulerCommitTime;
 
     /**
-     * @var string 仅生产态存储于生产态序列化任务信息, 减少base CPU重复密集计算
+     * @var string <p>仅生产态存储于生产态序列化任务信息, 减少base CPU重复密集计算</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NormalizedJobStartTime;
 
     /**
-     * @var string 启动暂停的任务时，选择不补录中间实例，通过此字段来标识从哪个时间开始生成实例
+     * @var string <p>启动暂停的任务时，选择不补录中间实例，通过此字段来标识从哪个时间开始生成实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecoverFreezeStartTime;
 
     /**
-     * @var string 源数据源
+     * @var string <p>源数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceServer;
 
     /**
-     * @var string 目标数据源
+     * @var string <p>目标数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetServer;
 
     /**
-     * @var array 父子节点树
+     * @var array <p>父子节点树</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tasks;
 
     /**
-     * @var string 创建者
+     * @var string <p>创建者</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Creater;
 
     /**
-     * @var string 分支，依赖关系，and/or, 默认and
+     * @var string <p>分支，依赖关系，and/or, 默认and</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DependencyRel;
 
     /**
-     * @var string 是否支持工作流依赖 yes / no 默认 no
+     * @var string <p>是否支持工作流依赖 yes / no 默认 no</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DependencyWorkflow;
 
     /**
-     * @var string 支持事件监听器配置导入导出
+     * @var string <p>支持事件监听器配置导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventListenerConfig;
 
     /**
-     * @var string 支持事件触发器配置导入导出
+     * @var string <p>支持事件触发器配置导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventPublisherConfig;
 
     /**
-     * @var array 依赖配置
+     * @var array <p>依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DependencyConfigList;
 
     /**
-     * @var string <p>任务状态，取值范围：</p>
-<ul>
-<li>N 新建</li>
-<li>Y 运行</li>
-<li>F 停止</li>
-<li>O 冻结</li>
-<li>T 停止中</li>
-<li>INVALID 已失效</li>
-</ul>
+     * @var string <p>任务状态，取值范围：</p><ul><li>N 新建</li><li>Y 运行</li><li>F 停止</li><li>O 冻结</li><li>T 停止中</li><li>INVALID 已失效</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VirtualTaskStatus;
 
     /**
-     * @var string 回收站还原提示语
+     * @var string <p>回收站还原提示语</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecycleTips;
 
     /**
-     * @var string 回收站所属用户
+     * @var string <p>回收站所属用户</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecycleUser;
 
     /**
-     * @var string 新增 或 修改
+     * @var string <p>新增 或 修改</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NewOrUpdate;
 
     /**
-     * @var array 任务上游依赖信息 用于发布管理导入导出
+     * @var array <p>任务上游依赖信息 用于发布管理导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Params;
 
     /**
-     * @var array 任务上游依赖信息 用于发布管理导入导出
+     * @var array <p>任务上游依赖信息 用于发布管理导入导出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskLinkInfo;
 
     /**
-     * @var boolean 导入结果
+     * @var boolean <p>导入结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImportResult;
 
     /**
-     * @var string 导入失败原因
+     * @var string <p>导入失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImportErrMsg;
 
     /**
-     * @var string 任务内容 全部内容 配置内容 资源内容
+     * @var string <p>任务内容 全部内容 配置内容 资源内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContentType;
 
     /**
-     * @var boolean 是否导入提交运行
+     * @var boolean <p>是否导入提交运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskAutoSubmit;
 
     /**
-     * @var string 上层产品 数据质量 / 数据开发 / ...
+     * @var string <p>上层产品 数据质量 / 数据开发 / ...</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductName;
 
     /**
-     * @var string 创建者帐号
+     * @var string <p>创建者帐号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OwnId;
 
     /**
-     * @var string 子账号
+     * @var string <p>子账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserId;
 
     /**
-     * @var string 租户id
+     * @var string <p>租户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TenantId;
 
     /**
-     * @var string 最后修改的人
+     * @var string <p>最后修改的人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateUser;
 
     /**
-     * @var string 最后修改时间
+     * @var string <p>最后修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
-     * @var string 最后修改的人的ID
+     * @var string <p>最后修改的人的ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateUserId;
 
     /**
-     * @var string 调度计划
+     * @var string <p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SchedulerDesc;
 
     /**
-     * @var string 资源组
-
+     * @var string <p>资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroup;
 
     /**
-     * @var string 版本提交说明
+     * @var string <p>版本提交说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VersionDesc;
 
     /**
-     * @var string 编排-删除添加的链接
+     * @var string <p>编排-删除添加的链接</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LinkId;
 
     /**
-     * @var string 脚本引用关系
+     * @var string <p>脚本引用关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserFileId;
 
     /**
-     * @var string 来源数据源ID
+     * @var string <p>来源数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceServiceId;
 
     /**
-     * @var string 来源数据源类型
+     * @var string <p>来源数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceServiceType;
 
     /**
-     * @var string 去向数据源ID
+     * @var string <p>去向数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetServiceId;
 
     /**
-     * @var string 去向数据源类型
+     * @var string <p>去向数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetServiceType;
 
     /**
-     * @var array 输入参数
+     * @var array <p>输入参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParamInList;
 
     /**
-     * @var array 输出参数
+     * @var array <p>输出参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParamOutList;
 
     /**
-     * @var string 任务文件夹id
+     * @var string <p>任务文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskFolderId;
 
     /**
-     * @var integer 最大尝试次数
+     * @var integer <p>最大尝试次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxRetryAttempts;
 
     /**
-     * @var string 资源组名称
+     * @var string <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupName;
 
     /**
-     * @var string 数据源
+     * @var string <p>数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceServiceName;
 
     /**
-     * @var array 任务产出登记
+     * @var array <p>任务产出登记</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskRegisterOutputTable;
 
     /**
-     * @var array 循环依赖配置
+     * @var array <p>循环依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CycleDependencyConfigList;
 
     /**
-     * @var string 特殊警告信息
+     * @var string <p>特殊警告信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Warning;
 
     /**
-     * @var integer 0 正常调度 1 空跑调度
+     * @var integer <p>0 正常调度 1 空跑调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduleRunType;
 
     /**
-     * @var integer 0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill
+     * @var integer <p>0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConcurrentStrategy;
 
     /**
-     * @var string UTC+8;UDC-8
+     * @var string <p>UTC+8;UDC-8</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduleTimeZone;
 
     /**
-     * @var string 引用的代码模版id
+     * @var string <p>引用的代码模版id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateId;
 
     /**
-     * @var string 允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑
+     * @var string <p>允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AllowRedoType;
 
     /**
-     * @var string BundleId
-CI/CD工程生成的bundle唯一标识
+     * @var string <p>BundleId<br>CI/CD工程生成的bundle唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BundleId;
 
     /**
-     * @var string bundle信息
+     * @var string <p>bundle信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BundleInfo;
 
     /**
-     * @var integer 是否允许下游依赖 0 不允许 1 允许
+     * @var integer <p>是否允许下游依赖 0 不允许 1 允许</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AllowDownstreamDependency;
 
     /**
-     * @var string - 任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置
-- ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败
-- ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行
-- ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功
-- ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行
-- ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行
-- ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行
-- ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行
-- ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游
-- NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败
-- ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行
-- NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行
-- ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行
+     * @var string <ul><li>任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置</li><li>ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败</li><li>ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行</li><li>ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行</li><li>ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行</li><li>ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DependencyTriggerPolicy;
 
     /**
-     * @param string $TaskId 任务ID
+     * @var integer <p>任务最后更新时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VirtualTaskId 虚拟任务标记
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $VirtualFlag 虚拟任务标记
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskName 任务名
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkflowId 工作流id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RealWorkflowId 真实工作流id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WorkflowName 工作流名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FolderId 文件夹id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FolderName 文件夹名字
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LastUpdate 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status <p>任务状态，取值范围：</p>
-<ul>
-<li>N 新建</li>
-<li>Y 运行</li>
-<li>F 停止</li>
-<li>O 冻结</li>
-<li>T 停止中</li>
-<li>INVALID 已失效</li>
-</ul>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InCharge 责任人
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InChargeId 责任人用户id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StartTime 生效日期
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EndTime 结束日期
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExecutionStartTime 执行时间左闭区间
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExecutionEndTime 执行时间右闭区间
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProjectId 项目id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProjectIdent 项目标识
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProjectName 项目名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CycleType 周期类型
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CycleStep 步长
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CrontabExpression 对于crontab类型调度配置其为用户输入 对于周期类型调度配置其为系统计算
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DelayTime 延时调度
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $StartupTime 延时执行时间
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RetryWait 重试等待时间,单位分钟
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Retriable 是否可重试
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskAction 调度扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TryLimit 运行次数限制
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RunPriority 运行优先级
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskTypeDsVO $TaskType 任务类型
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BrokerIp 指定的运行节点
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ClusterId 集群name
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MinDateTime 最小数据时间
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MaxDateTime 最大数据时间
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ExecutionTTL 运行耗时超时时间
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SelfDepend 是否自身依赖 是1 否2 并行3
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $LeftCoordinate LeftCoordinate坐标
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $TopCoordinate TopCoordinate坐标
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskExtDsVO $TaskExt TaskExt信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Properties taskExt 导入导出json使用 private Map  properties;
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Notes 任务备注
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceInitStrategy 实例生成策略 T+1 表示当前周期生成上一周期数据时间任务实例 默认T+1 T+0 表示当前周期生成当前周期数据时间任务实例 T-1
-     * 表示当前周期生成下一周期数据时间任务实例
-     *
-     * service不做默认策略处理, 下沉到数据初始化默认T+1, service涉及到多个更新task的路径
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $YarnQueue 资源池队列名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Alarms 任务告警信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Alarm alarmDTO 导入导出json使用
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $ScriptChange 任务脚本是否发生变化
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $Submit 任务版本是否已提交
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LastSchedulerCommitTime 最新调度计划变更时间 仅生产态
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NormalizedJobStartTime 仅生产态存储于生产态序列化任务信息, 减少base CPU重复密集计算
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RecoverFreezeStartTime 启动暂停的任务时，选择不补录中间实例，通过此字段来标识从哪个时间开始生成实例
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SourceServer 源数据源
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TargetServer 目标数据源
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Tasks 父子节点树
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Creater 创建者
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DependencyRel 分支，依赖关系，and/or, 默认and
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DependencyWorkflow 是否支持工作流依赖 yes / no 默认 no
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EventListenerConfig 支持事件监听器配置导入导出
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EventPublisherConfig 支持事件触发器配置导入导出
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DependencyConfigList 依赖配置
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VirtualTaskStatus <p>任务状态，取值范围：</p>
-<ul>
-<li>N 新建</li>
-<li>Y 运行</li>
-<li>F 停止</li>
-<li>O 冻结</li>
-<li>T 停止中</li>
-<li>INVALID 已失效</li>
-</ul>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RecycleTips 回收站还原提示语
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RecycleUser 回收站所属用户
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NewOrUpdate 新增 或 修改
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Params 任务上游依赖信息 用于发布管理导入导出
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TaskLinkInfo 任务上游依赖信息 用于发布管理导入导出
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $ImportResult 导入结果
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ImportErrMsg 导入失败原因
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ContentType 任务内容 全部内容 配置内容 资源内容
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $TaskAutoSubmit 是否导入提交运行
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProductName 上层产品 数据质量 / 数据开发 / ...
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OwnId 创建者帐号
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UserId 子账号
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TenantId 租户id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateUser 最后修改的人
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime 最后修改时间
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateUserId 最后修改的人的ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SchedulerDesc 调度计划
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResourceGroup 资源组
+     */
+    public $LastUpdateTimestamp;
 
+    /**
+     * @param string $TaskId <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VersionDesc 版本提交说明
+     * @param string $VirtualTaskId <p>虚拟任务标记</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LinkId 编排-删除添加的链接
+     * @param boolean $VirtualFlag <p>虚拟任务标记</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UserFileId 脚本引用关系
+     * @param string $TaskName <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SourceServiceId 来源数据源ID
+     * @param string $WorkflowId <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SourceServiceType 来源数据源类型
+     * @param string $RealWorkflowId <p>真实工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TargetServiceId 去向数据源ID
+     * @param string $WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TargetServiceType 去向数据源类型
+     * @param string $FolderId <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ParamInList 输入参数
+     * @param string $FolderName <p>文件夹名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ParamOutList 输出参数
+     * @param string $CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskFolderId 任务文件夹id
+     * @param string $LastUpdate <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxRetryAttempts 最大尝试次数
+     * @param string $Status <p>任务状态，取值范围：</p><ul><li>N 新建</li><li>Y 运行</li><li>F 停止</li><li>O 冻结</li><li>T 停止中</li><li>INVALID 已失效</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResourceGroupName 资源组名称
+     * @param string $InCharge <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SourceServiceName 数据源
+     * @param string $InChargeId <p>责任人用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TaskRegisterOutputTable 任务产出登记
+     * @param string $StartTime <p>生效日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $CycleDependencyConfigList 循环依赖配置
+     * @param string $EndTime <p>结束日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Warning 特殊警告信息
+     * @param string $ExecutionStartTime <p>执行时间左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ScheduleRunType 0 正常调度 1 空跑调度
+     * @param string $ExecutionEndTime <p>执行时间右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ConcurrentStrategy 0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill
+     * @param string $ProjectId <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ScheduleTimeZone UTC+8;UDC-8
+     * @param string $ProjectIdent <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TemplateId 引用的代码模版id
+     * @param string $ProjectName <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AllowRedoType 允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑
+     * @param string $CycleType <p>周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BundleId BundleId
-CI/CD工程生成的bundle唯一标识
+     * @param integer $CycleStep <p>步长</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BundleInfo bundle信息
+     * @param string $CrontabExpression <p>对于crontab类型调度配置其为用户输入 对于周期类型调度配置其为系统计算</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AllowDownstreamDependency 是否允许下游依赖 0 不允许 1 允许
+     * @param integer $DelayTime <p>延时调度</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DependencyTriggerPolicy - 任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置
-- ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败
-- ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行
-- ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功
-- ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行
-- ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行
-- ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行
-- ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行
-- ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游
-- NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败
-- ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行
-- NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行
-- ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行
+     * @param integer $StartupTime <p>延时执行时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RetryWait <p>重试等待时间,单位分钟</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Retriable <p>是否可重试</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaskAction <p>调度扩展信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TryLimit <p>运行次数限制</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RunPriority <p>运行优先级</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskTypeDsVO $TaskType <p>任务类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BrokerIp <p>指定的运行节点</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterId <p>集群name</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MinDateTime <p>最小数据时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MaxDateTime <p>最大数据时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ExecutionTTL <p>运行耗时超时时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SelfDepend <p>是否自身依赖 是1 否2 并行3</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $LeftCoordinate <p>LeftCoordinate坐标</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $TopCoordinate <p>TopCoordinate坐标</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskExtDsVO $TaskExt <p>TaskExt信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Properties <p>taskExt 导入导出json使用 private Map  properties;</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Notes <p>任务备注</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceInitStrategy <p>实例生成策略 T+1 表示当前周期生成上一周期数据时间任务实例 默认T+1 T+0 表示当前周期生成当前周期数据时间任务实例 T-1</p><pre><code> * 表示当前周期生成下一周期数据时间任务实例 * * service不做默认策略处理, 下沉到数据初始化默认T+1, service涉及到多个更新task的路径</code></pre>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $YarnQueue <p>资源池队列名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Alarms <p>任务告警信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Alarm <p>alarmDTO 导入导出json使用</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ScriptChange <p>任务脚本是否发生变化</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $Submit <p>任务版本是否已提交</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LastSchedulerCommitTime <p>最新调度计划变更时间 仅生产态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NormalizedJobStartTime <p>仅生产态存储于生产态序列化任务信息, 减少base CPU重复密集计算</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RecoverFreezeStartTime <p>启动暂停的任务时，选择不补录中间实例，通过此字段来标识从哪个时间开始生成实例</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SourceServer <p>源数据源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TargetServer <p>目标数据源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tasks <p>父子节点树</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Creater <p>创建者</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DependencyRel <p>分支，依赖关系，and/or, 默认and</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DependencyWorkflow <p>是否支持工作流依赖 yes / no 默认 no</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EventListenerConfig <p>支持事件监听器配置导入导出</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EventPublisherConfig <p>支持事件触发器配置导入导出</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DependencyConfigList <p>依赖配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VirtualTaskStatus <p>任务状态，取值范围：</p><ul><li>N 新建</li><li>Y 运行</li><li>F 停止</li><li>O 冻结</li><li>T 停止中</li><li>INVALID 已失效</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RecycleTips <p>回收站还原提示语</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RecycleUser <p>回收站所属用户</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NewOrUpdate <p>新增 或 修改</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Params <p>任务上游依赖信息 用于发布管理导入导出</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TaskLinkInfo <p>任务上游依赖信息 用于发布管理导入导出</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ImportResult <p>导入结果</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ImportErrMsg <p>导入失败原因</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ContentType <p>任务内容 全部内容 配置内容 资源内容</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $TaskAutoSubmit <p>是否导入提交运行</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProductName <p>上层产品 数据质量 / 数据开发 / ...</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OwnId <p>创建者帐号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UserId <p>子账号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TenantId <p>租户id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UpdateUser <p>最后修改的人</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UpdateTime <p>最后修改时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UpdateUserId <p>最后修改的人的ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SchedulerDesc <p>调度计划</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceGroup <p>资源组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VersionDesc <p>版本提交说明</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LinkId <p>编排-删除添加的链接</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UserFileId <p>脚本引用关系</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SourceServiceId <p>来源数据源ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SourceServiceType <p>来源数据源类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TargetServiceId <p>去向数据源ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TargetServiceType <p>去向数据源类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ParamInList <p>输入参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ParamOutList <p>输出参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaskFolderId <p>任务文件夹id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxRetryAttempts <p>最大尝试次数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceGroupName <p>资源组名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SourceServiceName <p>数据源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TaskRegisterOutputTable <p>任务产出登记</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CycleDependencyConfigList <p>循环依赖配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Warning <p>特殊警告信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ScheduleRunType <p>0 正常调度 1 空跑调度</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ConcurrentStrategy <p>0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ScheduleTimeZone <p>UTC+8;UDC-8</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TemplateId <p>引用的代码模版id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AllowRedoType <p>允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BundleId <p>BundleId<br>CI/CD工程生成的bundle唯一标识</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BundleInfo <p>bundle信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AllowDownstreamDependency <p>是否允许下游依赖 0 不允许 1 允许</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DependencyTriggerPolicy <ul><li>任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置</li><li>ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败</li><li>ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行</li><li>ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行</li><li>ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行</li><li>ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LastUpdateTimestamp <p>任务最后更新时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1895,6 +1775,10 @@ CI/CD工程生成的bundle唯一标识
 
         if (array_key_exists("DependencyTriggerPolicy",$param) and $param["DependencyTriggerPolicy"] !== null) {
             $this->DependencyTriggerPolicy = $param["DependencyTriggerPolicy"];
+        }
+
+        if (array_key_exists("LastUpdateTimestamp",$param) and $param["LastUpdateTimestamp"] !== null) {
+            $this->LastUpdateTimestamp = $param["LastUpdateTimestamp"];
         }
     }
 }

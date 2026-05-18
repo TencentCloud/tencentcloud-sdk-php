@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：NoCheck 表示不启用健康检查策略。
  * @method integer getPort() 获取检查端口。当 Type=HTTP 或 Type=HTTPS 或 Type=TCP 或 Type=UDP 时为必填。
  * @method void setPort(integer $Port) 设置检查端口。当 Type=HTTP 或 Type=HTTPS 或 Type=TCP 或 Type=UDP 时为必填。
- * @method integer getInterval() 获取检查频率，表示多久发起一次健康检查任务，单位为秒。可取值有：30，60，180，300 或 600。
- * @method void setInterval(integer $Interval) 设置检查频率，表示多久发起一次健康检查任务，单位为秒。可取值有：30，60，180，300 或 600。
- * @method integer getTimeout() 获取每一次健康检查的超时时间，若健康检查消耗时间大于此值，则检查结果判定为”不健康“， 单位为秒，默认值为 5s，取值必须小于 Interval。
- * @method void setTimeout(integer $Timeout) 设置每一次健康检查的超时时间，若健康检查消耗时间大于此值，则检查结果判定为”不健康“， 单位为秒，默认值为 5s，取值必须小于 Interval。
+ * @method integer getInterval() 获取检查频率，表示多久发起一次健康检查任务，单位为秒。可配置 10-600 秒。
+ * @method void setInterval(integer $Interval) 设置检查频率，表示多久发起一次健康检查任务，单位为秒。可配置 10-600 秒。
+ * @method integer getTimeout() 获取每一次健康检查的超时时间，若健康检查消耗时间大于此值，则检查结果判定为“不健康”， 单位为秒，默认值为 5s，取值必须小于 Interval。
+ * @method void setTimeout(integer $Timeout) 设置每一次健康检查的超时时间，若健康检查消耗时间大于此值，则检查结果判定为“不健康”， 单位为秒，默认值为 5s，取值必须小于 Interval。
  * @method integer getHealthThreshold() 获取健康阈值，表示连续几次健康检查结果为"健康"，则判断源站为"健康"，单位为次，默认 3 次，最小取值 1 次。
  * @method void setHealthThreshold(integer $HealthThreshold) 设置健康阈值，表示连续几次健康检查结果为"健康"，则判断源站为"健康"，单位为次，默认 3 次，最小取值 1 次。
  * @method integer getCriticalThreshold() 获取不健康阈值，表示连续几次健康检查结果为"不健康"，则判断源站为"不健康"，单位为次，默认 2 次。
@@ -87,12 +87,12 @@ class HealthChecker extends AbstractModel
     public $Port;
 
     /**
-     * @var integer 检查频率，表示多久发起一次健康检查任务，单位为秒。可取值有：30，60，180，300 或 600。
+     * @var integer 检查频率，表示多久发起一次健康检查任务，单位为秒。可配置 10-600 秒。
      */
     public $Interval;
 
     /**
-     * @var integer 每一次健康检查的超时时间，若健康检查消耗时间大于此值，则检查结果判定为”不健康“， 单位为秒，默认值为 5s，取值必须小于 Interval。
+     * @var integer 每一次健康检查的超时时间，若健康检查消耗时间大于此值，则检查结果判定为“不健康”， 单位为秒，默认值为 5s，取值必须小于 Interval。
      */
     public $Timeout;
 
@@ -154,8 +154,8 @@ class HealthChecker extends AbstractModel
 <li>NoCheck。</li>
 注意：NoCheck 表示不启用健康检查策略。
      * @param integer $Port 检查端口。当 Type=HTTP 或 Type=HTTPS 或 Type=TCP 或 Type=UDP 时为必填。
-     * @param integer $Interval 检查频率，表示多久发起一次健康检查任务，单位为秒。可取值有：30，60，180，300 或 600。
-     * @param integer $Timeout 每一次健康检查的超时时间，若健康检查消耗时间大于此值，则检查结果判定为”不健康“， 单位为秒，默认值为 5s，取值必须小于 Interval。
+     * @param integer $Interval 检查频率，表示多久发起一次健康检查任务，单位为秒。可配置 10-600 秒。
+     * @param integer $Timeout 每一次健康检查的超时时间，若健康检查消耗时间大于此值，则检查结果判定为“不健康”， 单位为秒，默认值为 5s，取值必须小于 Interval。
      * @param integer $HealthThreshold 健康阈值，表示连续几次健康检查结果为"健康"，则判断源站为"健康"，单位为次，默认 3 次，最小取值 1 次。
      * @param integer $CriticalThreshold 不健康阈值，表示连续几次健康检查结果为"不健康"，则判断源站为"不健康"，单位为次，默认 2 次。
      * @param string $Path 该参数仅当 Type=HTTP 或 Type=HTTPS 时有效，表示探测路径，需要填写完整的 host/path，不包含协议部分，例如：www.example.com/test。

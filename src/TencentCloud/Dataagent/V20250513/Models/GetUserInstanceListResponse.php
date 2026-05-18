@@ -14,31 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Trro\V20220325\Models;
+namespace TencentCloud\Dataagent\V20250513\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDeviceSessionDetails返回参数结构体
+ * GetUserInstanceList返回参数结构体
  *
- * @method array getDetails() 获取<p>按设备区分的会话详细数据</p>
- * @method void setDetails(array $Details) 设置<p>按设备区分的会话详细数据</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeDeviceSessionDetailsResponse extends AbstractModel
+class GetUserInstanceListResponse extends AbstractModel
 {
-    /**
-     * @var array <p>按设备区分的会话详细数据</p>
-     */
-    public $Details;
-
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param array $Details <p>按设备区分的会话详细数据</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,15 +46,6 @@ class DescribeDeviceSessionDetailsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Details",$param) and $param["Details"] !== null) {
-            $this->Details = [];
-            foreach ($param["Details"] as $key => $value){
-                $obj = new SessionDeviceDetail();
-                $obj->deserialize($value);
-                array_push($this->Details, $obj);
-            }
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

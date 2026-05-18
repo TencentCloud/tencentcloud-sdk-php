@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAssetImageRegistryScanTask请求参数结构体
  *
- * @method boolean getAll() 获取是否扫描全部镜像
- * @method void setAll(boolean $All) 设置是否扫描全部镜像
- * @method array getImages() 获取扫描的镜像列表
- * @method void setImages(array $Images) 设置扫描的镜像列表
- * @method array getScanType() 获取扫描类型数组
- * @method void setScanType(array $ScanType) 设置扫描类型数组
- * @method array getId() 获取扫描的镜像列表
- * @method void setId(array $Id) 设置扫描的镜像列表
- * @method array getFilters() 获取过滤条件
- * @method void setFilters(array $Filters) 设置过滤条件
- * @method array getExcludeImageList() 获取不需要扫描的镜像列表, 与Filters配合使用
- * @method void setExcludeImageList(array $ExcludeImageList) 设置不需要扫描的镜像列表, 与Filters配合使用
- * @method boolean getOnlyScanLatest() 获取是否仅扫描各repository最新版的镜像, 与Filters配合使用
- * @method void setOnlyScanLatest(boolean $OnlyScanLatest) 设置是否仅扫描各repository最新版的镜像, 与Filters配合使用
+ * @method boolean getAll() 获取<p>是否扫描全部镜像</p>
+ * @method void setAll(boolean $All) 设置<p>是否扫描全部镜像</p>
+ * @method array getImages() 获取<p>扫描的镜像列表</p>
+ * @method void setImages(array $Images) 设置<p>扫描的镜像列表</p>
+ * @method array getScanType() 获取<p>扫描类型数组</p>
+ * @method void setScanType(array $ScanType) 设置<p>扫描类型数组</p>
+ * @method array getId() 获取<p>扫描的镜像列表</p>
+ * @method void setId(array $Id) 设置<p>扫描的镜像列表</p>
+ * @method array getFilters() 获取<p>过滤条件</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件</p>
+ * @method array getExcludeImageList() 获取<p>不需要扫描的镜像列表, 与Filters配合使用</p>
+ * @method void setExcludeImageList(array $ExcludeImageList) 设置<p>不需要扫描的镜像列表, 与Filters配合使用</p>
+ * @method boolean getOnlyScanLatest() 获取<p>是否仅扫描各repository最新版的镜像, 与Filters配合使用</p>
+ * @method void setOnlyScanLatest(boolean $OnlyScanLatest) 设置<p>是否仅扫描各repository最新版的镜像, 与Filters配合使用</p>
+ * @method integer getTimeout() 获取<p>任务超时时长</p><p>单位：秒</p>
+ * @method void setTimeout(integer $Timeout) 设置<p>任务超时时长</p><p>单位：秒</p>
  */
 class CreateAssetImageRegistryScanTaskRequest extends AbstractModel
 {
     /**
-     * @var boolean 是否扫描全部镜像
+     * @var boolean <p>是否扫描全部镜像</p>
      */
     public $All;
 
     /**
-     * @var array 扫描的镜像列表
+     * @var array <p>扫描的镜像列表</p>
      */
     public $Images;
 
     /**
-     * @var array 扫描类型数组
+     * @var array <p>扫描类型数组</p>
      */
     public $ScanType;
 
     /**
-     * @var array 扫描的镜像列表
+     * @var array <p>扫描的镜像列表</p>
      */
     public $Id;
 
     /**
-     * @var array 过滤条件
+     * @var array <p>过滤条件</p>
      */
     public $Filters;
 
     /**
-     * @var array 不需要扫描的镜像列表, 与Filters配合使用
+     * @var array <p>不需要扫描的镜像列表, 与Filters配合使用</p>
      */
     public $ExcludeImageList;
 
     /**
-     * @var boolean 是否仅扫描各repository最新版的镜像, 与Filters配合使用
+     * @var boolean <p>是否仅扫描各repository最新版的镜像, 与Filters配合使用</p>
      */
     public $OnlyScanLatest;
 
     /**
-     * @param boolean $All 是否扫描全部镜像
-     * @param array $Images 扫描的镜像列表
-     * @param array $ScanType 扫描类型数组
-     * @param array $Id 扫描的镜像列表
-     * @param array $Filters 过滤条件
-     * @param array $ExcludeImageList 不需要扫描的镜像列表, 与Filters配合使用
-     * @param boolean $OnlyScanLatest 是否仅扫描各repository最新版的镜像, 与Filters配合使用
+     * @var integer <p>任务超时时长</p><p>单位：秒</p>
+     */
+    public $Timeout;
+
+    /**
+     * @param boolean $All <p>是否扫描全部镜像</p>
+     * @param array $Images <p>扫描的镜像列表</p>
+     * @param array $ScanType <p>扫描类型数组</p>
+     * @param array $Id <p>扫描的镜像列表</p>
+     * @param array $Filters <p>过滤条件</p>
+     * @param array $ExcludeImageList <p>不需要扫描的镜像列表, 与Filters配合使用</p>
+     * @param boolean $OnlyScanLatest <p>是否仅扫描各repository最新版的镜像, 与Filters配合使用</p>
+     * @param integer $Timeout <p>任务超时时长</p><p>单位：秒</p>
      */
     function __construct()
     {
@@ -130,6 +138,10 @@ class CreateAssetImageRegistryScanTaskRequest extends AbstractModel
 
         if (array_key_exists("OnlyScanLatest",$param) and $param["OnlyScanLatest"] !== null) {
             $this->OnlyScanLatest = $param["OnlyScanLatest"];
+        }
+
+        if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
+            $this->Timeout = $param["Timeout"];
         }
     }
 }

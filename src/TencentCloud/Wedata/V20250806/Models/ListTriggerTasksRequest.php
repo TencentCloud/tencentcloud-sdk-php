@@ -20,126 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListTriggerTasks请求参数结构体
  *
- * @method string getProjectId() 获取项目ID
- * @method void setProjectId(string $ProjectId) 设置项目ID
- * @method integer getPageNumber() 获取请求的数据页数。默认值为1，取值大于等于1
- * @method void setPageNumber(integer $PageNumber) 设置请求的数据页数。默认值为1，取值大于等于1
- * @method integer getPageSize() 获取每页显示的数据条数。默认值为10 ，最小值为10，最大值为200
- * @method void setPageSize(integer $PageSize) 设置每页显示的数据条数。默认值为10 ，最小值为10，最大值为200
- * @method string getTaskName() 获取任务名称
- * @method void setTaskName(string $TaskName) 设置任务名称
- * @method string getWorkflowId() 获取所属工作流ID
- * @method void setWorkflowId(string $WorkflowId) 设置所属工作流ID
- * @method string getOwnerUin() 获取责任人ID
- * @method void setOwnerUin(string $OwnerUin) 设置责任人ID
- * @method integer getTaskTypeId() 获取任务类型
- * @method void setTaskTypeId(integer $TaskTypeId) 设置任务类型
- * @method string getStatus() 获取任务状态
-* N: 新建 
-* Y: 调度中 
-
- * @method void setStatus(string $Status) 设置任务状态
-* N: 新建 
-* Y: 调度中 
-
- * @method boolean getSubmit() 获取提交状态
- * @method void setSubmit(boolean $Submit) 设置提交状态
- * @method string getBundleId() 获取BundleId信息
- * @method void setBundleId(string $BundleId) 设置BundleId信息
- * @method string getCreateUserUin() 获取创建人ID
- * @method void setCreateUserUin(string $CreateUserUin) 设置创建人ID
- * @method array getModifyTime() 获取修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间
- * @method void setModifyTime(array $ModifyTime) 设置修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间
- * @method array getCreateTime() 获取创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间
- * @method void setCreateTime(array $CreateTime) 设置创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间
+ * @method string getProjectId() 获取<p>项目ID</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目ID</p>
+ * @method integer getPageNumber() 获取<p>请求的数据页数。默认值为1，取值大于等于1</p>
+ * @method void setPageNumber(integer $PageNumber) 设置<p>请求的数据页数。默认值为1，取值大于等于1</p>
+ * @method integer getPageSize() 获取<p>每页显示的数据条数。默认值为10 ，最小值为10，最大值为200</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页显示的数据条数。默认值为10 ，最小值为10，最大值为200</p>
+ * @method string getTaskName() 获取<p>任务名称</p>
+ * @method void setTaskName(string $TaskName) 设置<p>任务名称</p>
+ * @method string getWorkflowId() 获取<p>所属工作流ID</p>
+ * @method void setWorkflowId(string $WorkflowId) 设置<p>所属工作流ID</p>
+ * @method string getOwnerUin() 获取<p>责任人ID</p>
+ * @method void setOwnerUin(string $OwnerUin) 设置<p>责任人ID</p>
+ * @method integer getTaskTypeId() 获取<p>任务类型</p>
+ * @method void setTaskTypeId(integer $TaskTypeId) 设置<p>任务类型</p>
+ * @method string getStatus() 获取<p>任务状态</p><ul><li>N: 新建 </li><li>Y: 调度中</li></ul>
+ * @method void setStatus(string $Status) 设置<p>任务状态</p><ul><li>N: 新建 </li><li>Y: 调度中</li></ul>
+ * @method boolean getSubmit() 获取<p>提交状态</p>
+ * @method void setSubmit(boolean $Submit) 设置<p>提交状态</p>
+ * @method string getBundleId() 获取<p>BundleId信息</p>
+ * @method void setBundleId(string $BundleId) 设置<p>BundleId信息</p>
+ * @method string getCreateUserUin() 获取<p>创建人ID</p>
+ * @method void setCreateUserUin(string $CreateUserUin) 设置<p>创建人ID</p>
+ * @method array getModifyTime() 获取<p>修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p>
+ * @method void setModifyTime(array $ModifyTime) 设置<p>修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p>
+ * @method array getCreateTime() 获取<p>创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p>
+ * @method void setCreateTime(array $CreateTime) 设置<p>创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p>
+ * @method array getTaskFolderPathList() 获取<p>任务文件夹路径列表，支持多选，从工作流下的目录开始填写，节点类型无需填写。选择上层文件夹时，自动包含所有子文件夹下的任务。 路径格式为绝对路径，如 &quot;/子目录A&quot;，根目录为 &quot;/&quot;</p>
+ * @method void setTaskFolderPathList(array $TaskFolderPathList) 设置<p>任务文件夹路径列表，支持多选，从工作流下的目录开始填写，节点类型无需填写。选择上层文件夹时，自动包含所有子文件夹下的任务。 路径格式为绝对路径，如 &quot;/子目录A&quot;，根目录为 &quot;/&quot;</p>
+ * @method array getWorkflowFolderPathList() 获取<p>工作流文件夹路径列表，支持多选。选择上层文件夹时，自动包含所有子文件夹下工作流的任务。 路径格式为绝对路径，如 &quot;/数据开发/子目录&quot;，根目录为 &quot;/&quot;</p>
+ * @method void setWorkflowFolderPathList(array $WorkflowFolderPathList) 设置<p>工作流文件夹路径列表，支持多选。选择上层文件夹时，自动包含所有子文件夹下工作流的任务。 路径格式为绝对路径，如 &quot;/数据开发/子目录&quot;，根目录为 &quot;/&quot;</p>
+ * @method array getTaskNodeTypeList() 获取<p>节点类型列表，用于按任务节点分类筛选，支持多选，可选值参考下面枚举类型 。 传入后将根据这些节点类型包含的任务类型ID列表进行筛选。</p><p>枚举值：</p><ul><li>ETL： 数据集成节点</li><li>EMR： EMR节点</li><li>DLC： DLC节点</li><li>SETATS： SETATS节点</li><li>TDSQL： TDSQL节点</li><li>TCHOUSE： TCHOUSE节点</li><li>GENERAL： 通用节点</li><li>DATA_QUALITY： 数据质量节点</li><li>INDICATOR： 指标节点</li><li>TI_ONE： TI-ONE机器学习节点</li></ul>
+ * @method void setTaskNodeTypeList(array $TaskNodeTypeList) 设置<p>节点类型列表，用于按任务节点分类筛选，支持多选，可选值参考下面枚举类型 。 传入后将根据这些节点类型包含的任务类型ID列表进行筛选。</p><p>枚举值：</p><ul><li>ETL： 数据集成节点</li><li>EMR： EMR节点</li><li>DLC： DLC节点</li><li>SETATS： SETATS节点</li><li>TDSQL： TDSQL节点</li><li>TCHOUSE： TCHOUSE节点</li><li>GENERAL： 通用节点</li><li>DATA_QUALITY： 数据质量节点</li><li>INDICATOR： 指标节点</li><li>TI_ONE： TI-ONE机器学习节点</li></ul>
  */
 class ListTriggerTasksRequest extends AbstractModel
 {
     /**
-     * @var string 项目ID
+     * @var string <p>项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var integer 请求的数据页数。默认值为1，取值大于等于1
+     * @var integer <p>请求的数据页数。默认值为1，取值大于等于1</p>
      */
     public $PageNumber;
 
     /**
-     * @var integer 每页显示的数据条数。默认值为10 ，最小值为10，最大值为200
+     * @var integer <p>每页显示的数据条数。默认值为10 ，最小值为10，最大值为200</p>
      */
     public $PageSize;
 
     /**
-     * @var string 任务名称
+     * @var string <p>任务名称</p>
      */
     public $TaskName;
 
     /**
-     * @var string 所属工作流ID
+     * @var string <p>所属工作流ID</p>
      */
     public $WorkflowId;
 
     /**
-     * @var string 责任人ID
+     * @var string <p>责任人ID</p>
      */
     public $OwnerUin;
 
     /**
-     * @var integer 任务类型
+     * @var integer <p>任务类型</p>
      */
     public $TaskTypeId;
 
     /**
-     * @var string 任务状态
-* N: 新建 
-* Y: 调度中 
-
+     * @var string <p>任务状态</p><ul><li>N: 新建 </li><li>Y: 调度中</li></ul>
      */
     public $Status;
 
     /**
-     * @var boolean 提交状态
+     * @var boolean <p>提交状态</p>
      */
     public $Submit;
 
     /**
-     * @var string BundleId信息
+     * @var string <p>BundleId信息</p>
      */
     public $BundleId;
 
     /**
-     * @var string 创建人ID
+     * @var string <p>创建人ID</p>
      */
     public $CreateUserUin;
 
     /**
-     * @var array 修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间
+     * @var array <p>修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p>
      */
     public $ModifyTime;
 
     /**
-     * @var array 创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间
+     * @var array <p>创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p>
      */
     public $CreateTime;
 
     /**
-     * @param string $ProjectId 项目ID
-     * @param integer $PageNumber 请求的数据页数。默认值为1，取值大于等于1
-     * @param integer $PageSize 每页显示的数据条数。默认值为10 ，最小值为10，最大值为200
-     * @param string $TaskName 任务名称
-     * @param string $WorkflowId 所属工作流ID
-     * @param string $OwnerUin 责任人ID
-     * @param integer $TaskTypeId 任务类型
-     * @param string $Status 任务状态
-* N: 新建 
-* Y: 调度中 
+     * @var array <p>任务文件夹路径列表，支持多选，从工作流下的目录开始填写，节点类型无需填写。选择上层文件夹时，自动包含所有子文件夹下的任务。 路径格式为绝对路径，如 &quot;/子目录A&quot;，根目录为 &quot;/&quot;</p>
+     */
+    public $TaskFolderPathList;
 
-     * @param boolean $Submit 提交状态
-     * @param string $BundleId BundleId信息
-     * @param string $CreateUserUin 创建人ID
-     * @param array $ModifyTime 修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间
-     * @param array $CreateTime 创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间
+    /**
+     * @var array <p>工作流文件夹路径列表，支持多选。选择上层文件夹时，自动包含所有子文件夹下工作流的任务。 路径格式为绝对路径，如 &quot;/数据开发/子目录&quot;，根目录为 &quot;/&quot;</p>
+     */
+    public $WorkflowFolderPathList;
+
+    /**
+     * @var array <p>节点类型列表，用于按任务节点分类筛选，支持多选，可选值参考下面枚举类型 。 传入后将根据这些节点类型包含的任务类型ID列表进行筛选。</p><p>枚举值：</p><ul><li>ETL： 数据集成节点</li><li>EMR： EMR节点</li><li>DLC： DLC节点</li><li>SETATS： SETATS节点</li><li>TDSQL： TDSQL节点</li><li>TCHOUSE： TCHOUSE节点</li><li>GENERAL： 通用节点</li><li>DATA_QUALITY： 数据质量节点</li><li>INDICATOR： 指标节点</li><li>TI_ONE： TI-ONE机器学习节点</li></ul>
+     */
+    public $TaskNodeTypeList;
+
+    /**
+     * @param string $ProjectId <p>项目ID</p>
+     * @param integer $PageNumber <p>请求的数据页数。默认值为1，取值大于等于1</p>
+     * @param integer $PageSize <p>每页显示的数据条数。默认值为10 ，最小值为10，最大值为200</p>
+     * @param string $TaskName <p>任务名称</p>
+     * @param string $WorkflowId <p>所属工作流ID</p>
+     * @param string $OwnerUin <p>责任人ID</p>
+     * @param integer $TaskTypeId <p>任务类型</p>
+     * @param string $Status <p>任务状态</p><ul><li>N: 新建 </li><li>Y: 调度中</li></ul>
+     * @param boolean $Submit <p>提交状态</p>
+     * @param string $BundleId <p>BundleId信息</p>
+     * @param string $CreateUserUin <p>创建人ID</p>
+     * @param array $ModifyTime <p>修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p>
+     * @param array $CreateTime <p>创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p>
+     * @param array $TaskFolderPathList <p>任务文件夹路径列表，支持多选，从工作流下的目录开始填写，节点类型无需填写。选择上层文件夹时，自动包含所有子文件夹下的任务。 路径格式为绝对路径，如 &quot;/子目录A&quot;，根目录为 &quot;/&quot;</p>
+     * @param array $WorkflowFolderPathList <p>工作流文件夹路径列表，支持多选。选择上层文件夹时，自动包含所有子文件夹下工作流的任务。 路径格式为绝对路径，如 &quot;/数据开发/子目录&quot;，根目录为 &quot;/&quot;</p>
+     * @param array $TaskNodeTypeList <p>节点类型列表，用于按任务节点分类筛选，支持多选，可选值参考下面枚举类型 。 传入后将根据这些节点类型包含的任务类型ID列表进行筛选。</p><p>枚举值：</p><ul><li>ETL： 数据集成节点</li><li>EMR： EMR节点</li><li>DLC： DLC节点</li><li>SETATS： SETATS节点</li><li>TDSQL： TDSQL节点</li><li>TCHOUSE： TCHOUSE节点</li><li>GENERAL： 通用节点</li><li>DATA_QUALITY： 数据质量节点</li><li>INDICATOR： 指标节点</li><li>TI_ONE： TI-ONE机器学习节点</li></ul>
      */
     function __construct()
     {
@@ -204,6 +216,18 @@ class ListTriggerTasksRequest extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("TaskFolderPathList",$param) and $param["TaskFolderPathList"] !== null) {
+            $this->TaskFolderPathList = $param["TaskFolderPathList"];
+        }
+
+        if (array_key_exists("WorkflowFolderPathList",$param) and $param["WorkflowFolderPathList"] !== null) {
+            $this->WorkflowFolderPathList = $param["WorkflowFolderPathList"];
+        }
+
+        if (array_key_exists("TaskNodeTypeList",$param) and $param["TaskNodeTypeList"] !== null) {
+            $this->TaskNodeTypeList = $param["TaskNodeTypeList"];
         }
     }
 }

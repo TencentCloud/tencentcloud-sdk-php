@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateVariable返回参数结构体
  *
- * @method string getVariableId() 获取变量Id
- * @method void setVariableId(string $VariableId) 设置变量Id
+ * @method string getVariableId() 获取<p>变量Id</p>
+ * @method void setVariableId(string $VariableId) 设置<p>变量Id</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateVariableResponse extends AbstractModel
 {
     /**
-     * @var string 变量Id
+     * @var string <p>变量Id</p>
      */
     public $VariableId;
 
@@ -38,7 +38,7 @@ class CreateVariableResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $VariableId 变量Id
+     * @param string $VariableId <p>变量Id</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

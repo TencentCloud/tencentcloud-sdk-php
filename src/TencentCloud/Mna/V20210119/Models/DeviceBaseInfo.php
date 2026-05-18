@@ -20,114 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 设备的基本信息
  *
- * @method string getDeviceId() 获取设备唯一ID
- * @method void setDeviceId(string $DeviceId) 设置设备唯一ID
- * @method string getDeviceName() 获取设备名称
- * @method void setDeviceName(string $DeviceName) 设置设备名称
- * @method string getCreateTime() 获取设备创建的时间，单位：ms
- * @method void setCreateTime(string $CreateTime) 设置设备创建的时间，单位：ms
- * @method string getLastTime() 获取设备最后在线时间，单位：ms
- * @method void setLastTime(string $LastTime) 设置设备最后在线时间，单位：ms
- * @method string getRemark() 获取设备的备注
- * @method void setRemark(string $Remark) 设置设备的备注
- * @method integer getAccessScope() 获取接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
- * @method void setAccessScope(integer $AccessScope) 设置接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
- * @method integer getLicensePayMode() 获取license授权有效期 0：月度授权 1：永久授权
- * @method void setLicensePayMode(integer $LicensePayMode) 设置license授权有效期 0：月度授权 1：永久授权
- * @method integer getPayer() 获取付费方 0：厂商付费 1：客户付费
- * @method void setPayer(integer $Payer) 设置付费方 0：厂商付费 1：客户付费
- * @method string getGroupId() 获取设备分组ID
- * @method void setGroupId(string $GroupId) 设置设备分组ID
- * @method string getGroupName() 获取设备分组名称
- * @method void setGroupName(string $GroupName) 设置设备分组名称
- * @method integer getFlowTrunc() 获取设备无流量包处理方式，0: 按量付费，1: 截断加速
- * @method void setFlowTrunc(integer $FlowTrunc) 设置设备无流量包处理方式，0: 按量付费，1: 截断加速
- * @method string getSn() 获取设备sn
- * @method void setSn(string $Sn) 设置设备sn
- * @method string getVendor() 获取厂商
- * @method void setVendor(string $Vendor) 设置厂商
+ * @method string getDeviceId() 获取<p>设备唯一ID</p>
+ * @method void setDeviceId(string $DeviceId) 设置<p>设备唯一ID</p>
+ * @method string getDeviceName() 获取<p>设备名称</p>
+ * @method void setDeviceName(string $DeviceName) 设置<p>设备名称</p>
+ * @method string getCreateTime() 获取<p>设备创建的时间，单位：ms</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>设备创建的时间，单位：ms</p>
+ * @method string getLastTime() 获取<p>设备最后在线时间，单位：ms</p>
+ * @method void setLastTime(string $LastTime) 设置<p>设备最后在线时间，单位：ms</p>
+ * @method string getRemark() 获取<p>设备的备注</p>
+ * @method void setRemark(string $Remark) 设置<p>设备的备注</p>
+ * @method integer getAccessScope() 获取<p>接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）</p>
+ * @method void setAccessScope(integer $AccessScope) 设置<p>接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）</p>
+ * @method integer getLicensePayMode() 获取<p>license授权有效期 0：月度授权 1：永久授权</p>
+ * @method void setLicensePayMode(integer $LicensePayMode) 设置<p>license授权有效期 0：月度授权 1：永久授权</p>
+ * @method integer getPayer() 获取<p>付费方 0：厂商付费 1：客户付费</p>
+ * @method void setPayer(integer $Payer) 设置<p>付费方 0：厂商付费 1：客户付费</p>
+ * @method string getGroupId() 获取<p>设备分组ID</p>
+ * @method void setGroupId(string $GroupId) 设置<p>设备分组ID</p>
+ * @method string getGroupName() 获取<p>设备分组名称</p>
+ * @method void setGroupName(string $GroupName) 设置<p>设备分组名称</p>
+ * @method integer getFlowTrunc() 获取<p>设备无流量包处理方式，0: 按量付费，1: 截断加速</p>
+ * @method void setFlowTrunc(integer $FlowTrunc) 设置<p>设备无流量包处理方式，0: 按量付费，1: 截断加速</p>
+ * @method string getSn() 获取<p>设备sn</p>
+ * @method void setSn(string $Sn) 设置<p>设备sn</p>
+ * @method string getVendor() 获取<p>厂商</p>
+ * @method void setVendor(string $Vendor) 设置<p>厂商</p>
+ * @method array getAllowedRegions() 获取<p>可接入地域列表。</p>
+ * @method void setAllowedRegions(array $AllowedRegions) 设置<p>可接入地域列表。</p>
  */
 class DeviceBaseInfo extends AbstractModel
 {
     /**
-     * @var string 设备唯一ID
+     * @var string <p>设备唯一ID</p>
      */
     public $DeviceId;
 
     /**
-     * @var string 设备名称
+     * @var string <p>设备名称</p>
      */
     public $DeviceName;
 
     /**
-     * @var string 设备创建的时间，单位：ms
+     * @var string <p>设备创建的时间，单位：ms</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 设备最后在线时间，单位：ms
+     * @var string <p>设备最后在线时间，单位：ms</p>
      */
     public $LastTime;
 
     /**
-     * @var string 设备的备注
+     * @var string <p>设备的备注</p>
      */
     public $Remark;
 
     /**
-     * @var integer 接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
+     * @var integer <p>接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）</p>
      */
     public $AccessScope;
 
     /**
-     * @var integer license授权有效期 0：月度授权 1：永久授权
+     * @var integer <p>license授权有效期 0：月度授权 1：永久授权</p>
      */
     public $LicensePayMode;
 
     /**
-     * @var integer 付费方 0：厂商付费 1：客户付费
+     * @var integer <p>付费方 0：厂商付费 1：客户付费</p>
      */
     public $Payer;
 
     /**
-     * @var string 设备分组ID
+     * @var string <p>设备分组ID</p>
      */
     public $GroupId;
 
     /**
-     * @var string 设备分组名称
+     * @var string <p>设备分组名称</p>
      */
     public $GroupName;
 
     /**
-     * @var integer 设备无流量包处理方式，0: 按量付费，1: 截断加速
+     * @var integer <p>设备无流量包处理方式，0: 按量付费，1: 截断加速</p>
      */
     public $FlowTrunc;
 
     /**
-     * @var string 设备sn
+     * @var string <p>设备sn</p>
      */
     public $Sn;
 
     /**
-     * @var string 厂商
+     * @var string <p>厂商</p>
      */
     public $Vendor;
 
     /**
-     * @param string $DeviceId 设备唯一ID
-     * @param string $DeviceName 设备名称
-     * @param string $CreateTime 设备创建的时间，单位：ms
-     * @param string $LastTime 设备最后在线时间，单位：ms
-     * @param string $Remark 设备的备注
-     * @param integer $AccessScope 接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
-     * @param integer $LicensePayMode license授权有效期 0：月度授权 1：永久授权
-     * @param integer $Payer 付费方 0：厂商付费 1：客户付费
-     * @param string $GroupId 设备分组ID
-     * @param string $GroupName 设备分组名称
-     * @param integer $FlowTrunc 设备无流量包处理方式，0: 按量付费，1: 截断加速
-     * @param string $Sn 设备sn
-     * @param string $Vendor 厂商
+     * @var array <p>可接入地域列表。</p>
+     */
+    public $AllowedRegions;
+
+    /**
+     * @param string $DeviceId <p>设备唯一ID</p>
+     * @param string $DeviceName <p>设备名称</p>
+     * @param string $CreateTime <p>设备创建的时间，单位：ms</p>
+     * @param string $LastTime <p>设备最后在线时间，单位：ms</p>
+     * @param string $Remark <p>设备的备注</p>
+     * @param integer $AccessScope <p>接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）</p>
+     * @param integer $LicensePayMode <p>license授权有效期 0：月度授权 1：永久授权</p>
+     * @param integer $Payer <p>付费方 0：厂商付费 1：客户付费</p>
+     * @param string $GroupId <p>设备分组ID</p>
+     * @param string $GroupName <p>设备分组名称</p>
+     * @param integer $FlowTrunc <p>设备无流量包处理方式，0: 按量付费，1: 截断加速</p>
+     * @param string $Sn <p>设备sn</p>
+     * @param string $Vendor <p>厂商</p>
+     * @param array $AllowedRegions <p>可接入地域列表。</p>
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class DeviceBaseInfo extends AbstractModel
 
         if (array_key_exists("Vendor",$param) and $param["Vendor"] !== null) {
             $this->Vendor = $param["Vendor"];
+        }
+
+        if (array_key_exists("AllowedRegions",$param) and $param["AllowedRegions"] !== null) {
+            $this->AllowedRegions = $param["AllowedRegions"];
         }
     }
 }

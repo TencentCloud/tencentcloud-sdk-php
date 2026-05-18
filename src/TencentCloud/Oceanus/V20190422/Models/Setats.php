@@ -78,6 +78,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageVersion(string $ImageVersion) 设置<p>setats镜像版本</p>
  * @method integer getWebUIType() 获取<p>类型：0 公网，1 内网</p><p>枚举值：</p><ul><li>0： 公网</li><li>1： 内网</li></ul><p>默认值：0</p>
  * @method void setWebUIType(integer $WebUIType) 设置<p>类型：0 公网，1 内网</p><p>枚举值：</p><ul><li>0： 公网</li><li>1： 内网</li></ul><p>默认值：0</p>
+ * @method string getName() 获取<p>setats集群的名字</p>
+ * @method void setName(string $Name) 设置<p>setats集群的名字</p>
+ * @method string getRemark() 获取<p>setats集群注释</p>
+ * @method void setRemark(string $Remark) 设置<p>setats集群注释</p>
  */
 class Setats extends AbstractModel
 {
@@ -179,6 +183,16 @@ class Setats extends AbstractModel
     public $WebUIType;
 
     /**
+     * @var string <p>setats集群的名字</p>
+     */
+    public $Name;
+
+    /**
+     * @var string <p>setats集群注释</p>
+     */
+    public $Remark;
+
+    /**
      * @param string $SetatsSerialId <p>setats serialId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status <p>1  // 停止<br>2  // 运行中<br>3  // 初始化中<br>4  // 扩容中<br>5  // Warehoouse未配置<br>6  // Warehoouse配置中<br>7  // 重启中<br>-2 // 已删除(集群被销毁时更新为此状态)</p>
@@ -208,6 +222,8 @@ class Setats extends AbstractModel
      * @param string $SetatsUiUrl <p>Setats UI url</p>
      * @param string $ImageVersion <p>setats镜像版本</p>
      * @param integer $WebUIType <p>类型：0 公网，1 内网</p><p>枚举值：</p><ul><li>0： 公网</li><li>1： 内网</li></ul><p>默认值：0</p>
+     * @param string $Name <p>setats集群的名字</p>
+     * @param string $Remark <p>setats集群注释</p>
      */
     function __construct()
     {
@@ -296,6 +312,14 @@ class Setats extends AbstractModel
 
         if (array_key_exists("WebUIType",$param) and $param["WebUIType"] !== null) {
             $this->WebUIType = $param["WebUIType"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }

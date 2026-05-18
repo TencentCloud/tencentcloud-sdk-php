@@ -32,7 +32,7 @@ use TencentCloud\Oceanus\V20190422\Models as Models;
  * @method Models\CreateJobConfigResponse CreateJobConfig(Models\CreateJobConfigRequest $req) 创建作业配置，一个作业最多有100个配置版本
  * @method Models\CreateResourceResponse CreateResource(Models\CreateResourceRequest $req) 创建资源接口
  * @method Models\CreateResourceConfigResponse CreateResourceConfig(Models\CreateResourceConfigRequest $req) 创建资源配置接口
- * @method Models\CreateVariableResponse CreateVariable(Models\CreateVariableRequest $req) 创建变量 
+ * @method Models\CreateVariableResponse CreateVariable(Models\CreateVariableRequest $req) 创建变量
  * @method Models\CreateWorkSpaceResponse CreateWorkSpace(Models\CreateWorkSpaceRequest $req) 创建工作空间
  * @method Models\DeleteFoldersResponse DeleteFolders(Models\DeleteFoldersRequest $req) 作业列表删除文件夹
  * @method Models\DeleteJobConfigsResponse DeleteJobConfigs(Models\DeleteJobConfigsRequest $req) 删除作业配置

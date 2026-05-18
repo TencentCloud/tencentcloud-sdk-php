@@ -216,6 +216,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShuffleWriteBytesSum(integer $ShuffleWriteBytesSum) 设置<p>ShuffleWrite数据量</p>
  * @method integer getActiveCore() 获取<p>活跃core</p>
  * @method void setActiveCore(integer $ActiveCore) 设置<p>活跃core</p>
+ * @method integer getQueueTime() 获取<p>排队时间</p><p>单位：毫秒</p>
+ * @method void setQueueTime(integer $QueueTime) 设置<p>排队时间</p><p>单位：毫秒</p>
  */
 class TaskFullRespInfo extends AbstractModel
 {
@@ -598,6 +600,11 @@ class TaskFullRespInfo extends AbstractModel
     public $ActiveCore;
 
     /**
+     * @var integer <p>排队时间</p><p>单位：毫秒</p>
+     */
+    public $QueueTime;
+
+    /**
      * @param string $DatabaseName <p>任务所属Database的名称。</p>
      * @param integer $DataAmount <p>任务数据量。</p>
      * @param string $Id <p>任务Id。</p>
@@ -696,6 +703,7 @@ class TaskFullRespInfo extends AbstractModel
      * @param integer $GpuExecutorSize <p>Gpu Executor 规格</p>
      * @param integer $ShuffleWriteBytesSum <p>ShuffleWrite数据量</p>
      * @param integer $ActiveCore <p>活跃core</p>
+     * @param integer $QueueTime <p>排队时间</p><p>单位：毫秒</p>
      */
     function __construct()
     {
@@ -991,6 +999,10 @@ class TaskFullRespInfo extends AbstractModel
 
         if (array_key_exists("ActiveCore",$param) and $param["ActiveCore"] !== null) {
             $this->ActiveCore = $param["ActiveCore"];
+        }
+
+        if (array_key_exists("QueueTime",$param) and $param["QueueTime"] !== null) {
+            $this->QueueTime = $param["QueueTime"];
         }
     }
 }

@@ -20,225 +20,249 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 试运行子记录
  *
- * @method string getStartTime() 获取开发时间
+ * @method string getStartTime() 获取<p>开发时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartTime(string $StartTime) 设置开发时间
+ * @method void setStartTime(string $StartTime) 设置<p>开发时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEndTime() 获取结束时间
+ * @method string getEndTime() 获取<p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method void setEndTime(string $EndTime) 设置<p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExecutionJobId() 获取执行平台执行id
+ * @method string getExecutionJobId() 获取<p>执行平台执行id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecutionJobId(string $ExecutionJobId) 设置执行平台执行id
+ * @method void setExecutionJobId(string $ExecutionJobId) 设置<p>执行平台执行id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExecutionSubJobId() 获取执行平台子执行jobid
+ * @method string getExecutionSubJobId() 获取<p>执行平台子执行jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecutionSubJobId(string $ExecutionSubJobId) 设置执行平台子执行jobid
+ * @method void setExecutionSubJobId(string $ExecutionSubJobId) 设置<p>执行平台子执行jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getJobId() 获取开发侧提交的jobid
+ * @method string getJobId() 获取<p>开发侧提交的jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setJobId(string $JobId) 设置开发侧提交的jobid
+ * @method void setJobId(string $JobId) 设置<p>开发侧提交的jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDetailId() 获取子记录id
+ * @method integer getDetailId() 获取<p>子记录id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDetailId(integer $DetailId) 设置子记录id
+ * @method void setDetailId(integer $DetailId) 设置<p>子记录id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRecordId() 获取试运行记录id
+ * @method integer getRecordId() 获取<p>试运行记录id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecordId(integer $RecordId) 设置试运行记录id
+ * @method void setRecordId(integer $RecordId) 设置<p>试运行记录id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getScriptContent() 获取脚本内容
+ * @method string getScriptContent() 获取<p>脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScriptContent(string $ScriptContent) 设置脚本内容
+ * @method void setScriptContent(string $ScriptContent) 设置<p>脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取状态
+ * @method string getStatus() 获取<p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置状态
+ * @method void setStatus(string $Status) 设置<p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTimeCost() 获取耗时
+ * @method integer getTimeCost() 获取<p>耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTimeCost(integer $TimeCost) 设置耗时
+ * @method void setTimeCost(integer $TimeCost) 设置<p>耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getResultTotalCount() 获取结果总行数
+ * @method integer getResultTotalCount() 获取<p>结果总行数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResultTotalCount(integer $ResultTotalCount) 设置结果总行数
+ * @method void setResultTotalCount(integer $ResultTotalCount) 设置<p>结果总行数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getResultPreviewCount() 获取预览结果行数
+ * @method integer getResultPreviewCount() 获取<p>预览结果行数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResultPreviewCount(integer $ResultPreviewCount) 设置预览结果行数
+ * @method void setResultPreviewCount(integer $ResultPreviewCount) 设置<p>预览结果行数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResultFilePath() 获取结果文件路径
+ * @method string getResultFilePath() 获取<p>结果文件路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResultFilePath(string $ResultFilePath) 设置结果文件路径
+ * @method void setResultFilePath(string $ResultFilePath) 设置<p>结果文件路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResultPreviewFilePath() 获取预览结果文件路径
+ * @method string getResultPreviewFilePath() 获取<p>预览结果文件路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResultPreviewFilePath(string $ResultPreviewFilePath) 设置预览结果文件路径
+ * @method void setResultPreviewFilePath(string $ResultPreviewFilePath) 设置<p>预览结果文件路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取更新时间
+ * @method string getUpdateTime() 获取<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSequence() 获取序号
+ * @method string getSequence() 获取<p>序号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSequence(string $Sequence) 设置序号
+ * @method void setSequence(string $Sequence) 设置<p>序号</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLogFilePath() 获取日志路径
+ * @method string getLogFilePath() 获取<p>日志路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLogFilePath(string $LogFilePath) 设置日志路径
+ * @method void setLogFilePath(string $LogFilePath) 设置<p>日志路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getHasSubResultSet() 获取是否包含子结果
+ * @method boolean getHasSubResultSet() 获取<p>是否包含子结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHasSubResultSet(boolean $HasSubResultSet) 设置是否包含子结果
+ * @method void setHasSubResultSet(boolean $HasSubResultSet) 设置<p>是否包含子结果</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getScriptContentTruncated() 获取<p>脚本内容是否被截断</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScriptContentTruncated(boolean $ScriptContentTruncated) 设置<p>脚本内容是否被截断</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSchemaInfoFilePath() 获取<p>结果集表字符信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSchemaInfoFilePath(string $SchemaInfoFilePath) 设置<p>结果集表字符信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TestRunningSubRecord extends AbstractModel
 {
     /**
-     * @var string 开发时间
+     * @var string <p>开发时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
-     * @var string 执行平台执行id
+     * @var string <p>执行平台执行id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutionJobId;
 
     /**
-     * @var string 执行平台子执行jobid
+     * @var string <p>执行平台子执行jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutionSubJobId;
 
     /**
-     * @var string 开发侧提交的jobid
+     * @var string <p>开发侧提交的jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JobId;
 
     /**
-     * @var integer 子记录id
+     * @var integer <p>子记录id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DetailId;
 
     /**
-     * @var integer 试运行记录id
+     * @var integer <p>试运行记录id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordId;
 
     /**
-     * @var string 脚本内容
+     * @var string <p>脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScriptContent;
 
     /**
-     * @var string 状态
+     * @var string <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var integer 耗时
+     * @var integer <p>耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeCost;
 
     /**
-     * @var integer 结果总行数
+     * @var integer <p>结果总行数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResultTotalCount;
 
     /**
-     * @var integer 预览结果行数
+     * @var integer <p>预览结果行数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResultPreviewCount;
 
     /**
-     * @var string 结果文件路径
+     * @var string <p>结果文件路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResultFilePath;
 
     /**
-     * @var string 预览结果文件路径
+     * @var string <p>预览结果文件路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResultPreviewFilePath;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
-     * @var string 序号
+     * @var string <p>序号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sequence;
 
     /**
-     * @var string 日志路径
+     * @var string <p>日志路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogFilePath;
 
     /**
-     * @var boolean 是否包含子结果
+     * @var boolean <p>是否包含子结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HasSubResultSet;
 
     /**
-     * @param string $StartTime 开发时间
+     * @var boolean <p>脚本内容是否被截断</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EndTime 结束时间
+     */
+    public $ScriptContentTruncated;
+
+    /**
+     * @var string <p>结果集表字符信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExecutionJobId 执行平台执行id
+     */
+    public $SchemaInfoFilePath;
+
+    /**
+     * @param string $StartTime <p>开发时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExecutionSubJobId 执行平台子执行jobid
+     * @param string $EndTime <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $JobId 开发侧提交的jobid
+     * @param string $ExecutionJobId <p>执行平台执行id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DetailId 子记录id
+     * @param string $ExecutionSubJobId <p>执行平台子执行jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RecordId 试运行记录id
+     * @param string $JobId <p>开发侧提交的jobid</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ScriptContent 脚本内容
+     * @param integer $DetailId <p>子记录id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 状态
+     * @param integer $RecordId <p>试运行记录id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TimeCost 耗时
+     * @param string $ScriptContent <p>脚本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ResultTotalCount 结果总行数
+     * @param string $Status <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ResultPreviewCount 预览结果行数
+     * @param integer $TimeCost <p>耗时</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResultFilePath 结果文件路径
+     * @param integer $ResultTotalCount <p>结果总行数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResultPreviewFilePath 预览结果文件路径
+     * @param integer $ResultPreviewCount <p>预览结果行数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime 更新时间
+     * @param string $ResultFilePath <p>结果文件路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Sequence 序号
+     * @param string $ResultPreviewFilePath <p>预览结果文件路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LogFilePath 日志路径
+     * @param string $UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $HasSubResultSet 是否包含子结果
+     * @param string $Sequence <p>序号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LogFilePath <p>日志路径</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $HasSubResultSet <p>是否包含子结果</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ScriptContentTruncated <p>脚本内容是否被截断</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SchemaInfoFilePath <p>结果集表字符信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -324,6 +348,14 @@ class TestRunningSubRecord extends AbstractModel
 
         if (array_key_exists("HasSubResultSet",$param) and $param["HasSubResultSet"] !== null) {
             $this->HasSubResultSet = $param["HasSubResultSet"];
+        }
+
+        if (array_key_exists("ScriptContentTruncated",$param) and $param["ScriptContentTruncated"] !== null) {
+            $this->ScriptContentTruncated = $param["ScriptContentTruncated"];
+        }
+
+        if (array_key_exists("SchemaInfoFilePath",$param) and $param["SchemaInfoFilePath"] !== null) {
+            $this->SchemaInfoFilePath = $param["SchemaInfoFilePath"];
         }
     }
 }

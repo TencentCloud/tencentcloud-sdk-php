@@ -14,26 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Monitor\V20180724\Models;
+namespace TencentCloud\Ioa\V20220601\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeServiceDiscovery返回参数结构体
+ * CreateCompanyDirectoryConfig返回参数结构体
  *
- * @method array getServiceDiscoverySet() 获取返回服务发现列表信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServiceDiscoverySet(array $ServiceDiscoverySet) 设置返回服务发现列表信息
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method DirectoryConfigResultData getData() 获取<p>创建企业目录配置的结果</p>
+ * @method void setData(DirectoryConfigResultData $Data) 设置<p>创建企业目录配置的结果</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeServiceDiscoveryResponse extends AbstractModel
+class CreateCompanyDirectoryConfigResponse extends AbstractModel
 {
     /**
-     * @var array 返回服务发现列表信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var DirectoryConfigResultData <p>创建企业目录配置的结果</p>
      */
-    public $ServiceDiscoverySet;
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +38,7 @@ class DescribeServiceDiscoveryResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ServiceDiscoverySet 返回服务发现列表信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param DirectoryConfigResultData $Data <p>创建企业目录配置的结果</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,13 +54,9 @@ class DescribeServiceDiscoveryResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceDiscoverySet",$param) and $param["ServiceDiscoverySet"] !== null) {
-            $this->ServiceDiscoverySet = [];
-            foreach ($param["ServiceDiscoverySet"] as $key => $value){
-                $obj = new ServiceDiscoveryItem();
-                $obj->deserialize($value);
-                array_push($this->ServiceDiscoverySet, $obj);
-            }
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new DirectoryConfigResultData();
+            $this->Data->deserialize($param["Data"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,34 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetNetMonitor返回参数结构体
  *
- * @method array getMonitorData() 获取监控数据
- * @method void setMonitorData(array $MonitorData) 设置监控数据
- * @method string getAccessRegion() 获取接入区域。取值范围：['MC','AP','EU','AM']
-MC=中国大陆
-AP=亚太
-EU=欧洲
-AM=美洲
- * @method void setAccessRegion(string $AccessRegion) 设置接入区域。取值范围：['MC','AP','EU','AM']
-MC=中国大陆
-AP=亚太
-EU=欧洲
-AM=美洲
+ * @method array getMonitorData() 获取<p>监控数据</p>
+ * @method void setMonitorData(array $MonitorData) 设置<p>监控数据</p>
+ * @method string getAccessRegion() 获取<p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;]<br>MC=中国大陆<br>AP=亚太<br>EU=欧洲<br>AM=美洲</p>
+ * @method void setAccessRegion(string $AccessRegion) 设置<p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;]<br>MC=中国大陆<br>AP=亚太<br>EU=欧洲<br>AM=美洲</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetNetMonitorResponse extends AbstractModel
 {
     /**
-     * @var array 监控数据
+     * @var array <p>监控数据</p>
      */
     public $MonitorData;
 
     /**
-     * @var string 接入区域。取值范围：['MC','AP','EU','AM']
-MC=中国大陆
-AP=亚太
-EU=欧洲
-AM=美洲
+     * @var string <p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;]<br>MC=中国大陆<br>AP=亚太<br>EU=欧洲<br>AM=美洲</p>
      */
     public $AccessRegion;
 
@@ -57,12 +45,8 @@ AM=美洲
     public $RequestId;
 
     /**
-     * @param array $MonitorData 监控数据
-     * @param string $AccessRegion 接入区域。取值范围：['MC','AP','EU','AM']
-MC=中国大陆
-AP=亚太
-EU=欧洲
-AM=美洲
+     * @param array $MonitorData <p>监控数据</p>
+     * @param string $AccessRegion <p>接入区域。取值范围：[&#39;MC&#39;,&#39;AP&#39;,&#39;EU&#39;,&#39;AM&#39;]<br>MC=中国大陆<br>AP=亚太<br>EU=欧洲<br>AM=美洲</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,133 +20,157 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据源对象
  *
- * @method array getDatabaseNames() 获取若数据源列表为绑定数据库，则为db名称
+ * @method array getDatabaseNames() 获取<p>若数据源列表为绑定数据库，则为db名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDatabaseNames(array $DatabaseNames) 设置若数据源列表为绑定数据库，则为db名称
+ * @method void setDatabaseNames(array $DatabaseNames) 设置<p>若数据源列表为绑定数据库，则为db名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDescription() 获取数据源描述信息
+ * @method string getDescription() 获取<p>数据源描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescription(string $Description) 设置数据源描述信息
+ * @method void setDescription(string $Description) 设置<p>数据源描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getID() 获取数据源ID
- * @method void setID(integer $ID) 设置数据源ID
- * @method string getInstance() 获取数据源引擎的实例ID，如CDB实例ID
+ * @method integer getID() 获取<p>数据源ID</p>
+ * @method void setID(integer $ID) 设置<p>数据源ID</p>
+ * @method string getInstance() 获取<p>数据源引擎的实例ID，如CDB实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstance(string $Instance) 设置数据源引擎的实例ID，如CDB实例ID
+ * @method void setInstance(string $Instance) 设置<p>数据源引擎的实例ID，如CDB实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取数据源名称，在相同SpaceName下，数据源名称不能为空
- * @method void setName(string $Name) 设置数据源名称，在相同SpaceName下，数据源名称不能为空
- * @method string getRegion() 获取数据源引擎所属区域
+ * @method string getName() 获取<p>数据源名称，在相同SpaceName下，数据源名称不能为空</p>
+ * @method void setName(string $Name) 设置<p>数据源名称，在相同SpaceName下，数据源名称不能为空</p>
+ * @method string getRegion() 获取<p>数据源引擎所属区域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegion(string $Region) 设置数据源引擎所属区域
+ * @method void setRegion(string $Region) 设置<p>数据源引擎所属区域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getType() 获取数据源类型:枚举值
+ * @method string getType() 获取<p>数据源类型:枚举值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置数据源类型:枚举值
+ * @method void setType(string $Type) 设置<p>数据源类型:枚举值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getClusterId() 获取数据源所属的集群id
+ * @method string getClusterId() 获取<p>数据源所属的集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterId(string $ClusterId) 设置数据源所属的集群id
+ * @method void setClusterId(string $ClusterId) 设置<p>数据源所属的集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVersion() 获取数据源版本信息
+ * @method string getVersion() 获取<p>数据源版本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVersion(string $Version) 设置数据源版本信息
+ * @method void setVersion(string $Version) 设置<p>数据源版本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getParamsString() 获取数据源附带参数信息Params json字符串
+ * @method string getParamsString() 获取<p>数据源附带参数信息Params json字符串</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParamsString(string $ParamsString) 设置数据源附带参数信息Params json字符串
+ * @method void setParamsString(string $ParamsString) 设置<p>数据源附带参数信息Params json字符串</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCategory() 获取区分数据源类型自定义源还是系统源
+ * @method string getCategory() 获取<p>区分数据源类型自定义源还是系统源</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCategory(string $Category) 设置区分数据源类型自定义源还是系统源
+ * @method void setCategory(string $Category) 设置<p>区分数据源类型自定义源还是系统源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIp() 获取<p>数据实例ip</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIp(string $Ip) 设置<p>数据实例ip</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPort() 获取<p>数据实例port</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPort(string $Port) 设置<p>数据实例port</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatasourceBaseInfo extends AbstractModel
 {
     /**
-     * @var array 若数据源列表为绑定数据库，则为db名称
+     * @var array <p>若数据源列表为绑定数据库，则为db名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatabaseNames;
 
     /**
-     * @var string 数据源描述信息
+     * @var string <p>数据源描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
-     * @var integer 数据源ID
+     * @var integer <p>数据源ID</p>
      */
     public $ID;
 
     /**
-     * @var string 数据源引擎的实例ID，如CDB实例ID
+     * @var string <p>数据源引擎的实例ID，如CDB实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Instance;
 
     /**
-     * @var string 数据源名称，在相同SpaceName下，数据源名称不能为空
+     * @var string <p>数据源名称，在相同SpaceName下，数据源名称不能为空</p>
      */
     public $Name;
 
     /**
-     * @var string 数据源引擎所属区域
+     * @var string <p>数据源引擎所属区域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
-     * @var string 数据源类型:枚举值
+     * @var string <p>数据源类型:枚举值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
-     * @var string 数据源所属的集群id
+     * @var string <p>数据源所属的集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
 
     /**
-     * @var string 数据源版本信息
+     * @var string <p>数据源版本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
-     * @var string 数据源附带参数信息Params json字符串
+     * @var string <p>数据源附带参数信息Params json字符串</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParamsString;
 
     /**
-     * @var string 区分数据源类型自定义源还是系统源
+     * @var string <p>区分数据源类型自定义源还是系统源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Category;
 
     /**
-     * @param array $DatabaseNames 若数据源列表为绑定数据库，则为db名称
+     * @var string <p>数据实例ip</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Description 数据源描述信息
+     */
+    public $Ip;
+
+    /**
+     * @var string <p>数据实例port</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ID 数据源ID
-     * @param string $Instance 数据源引擎的实例ID，如CDB实例ID
+     */
+    public $Port;
+
+    /**
+     * @param array $DatabaseNames <p>若数据源列表为绑定数据库，则为db名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 数据源名称，在相同SpaceName下，数据源名称不能为空
-     * @param string $Region 数据源引擎所属区域
+     * @param string $Description <p>数据源描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Type 数据源类型:枚举值
+     * @param integer $ID <p>数据源ID</p>
+     * @param string $Instance <p>数据源引擎的实例ID，如CDB实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ClusterId 数据源所属的集群id
+     * @param string $Name <p>数据源名称，在相同SpaceName下，数据源名称不能为空</p>
+     * @param string $Region <p>数据源引擎所属区域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Version 数据源版本信息
+     * @param string $Type <p>数据源类型:枚举值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ParamsString 数据源附带参数信息Params json字符串
+     * @param string $ClusterId <p>数据源所属的集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Category 区分数据源类型自定义源还是系统源
+     * @param string $Version <p>数据源版本信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ParamsString <p>数据源附带参数信息Params json字符串</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Category <p>区分数据源类型自定义源还是系统源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Ip <p>数据实例ip</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Port <p>数据实例port</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -204,6 +228,14 @@ class DatasourceBaseInfo extends AbstractModel
 
         if (array_key_exists("Category",$param) and $param["Category"] !== null) {
             $this->Category = $param["Category"];
+        }
+
+        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
+            $this->Ip = $param["Ip"];
+        }
+
+        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
+            $this->Port = $param["Port"];
         }
     }
 }

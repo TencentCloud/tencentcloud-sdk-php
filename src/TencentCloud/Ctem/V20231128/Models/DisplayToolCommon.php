@@ -20,114 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据管理公共字段
  *
- * @method string getEnterpriseUid() 获取子公司ID
- * @method void setEnterpriseUid(string $EnterpriseUid) 设置子公司ID
- * @method string getEnterpriseName() 获取子公司名称
- * @method void setEnterpriseName(string $EnterpriseName) 设置子公司名称
- * @method integer getJobId() 获取主任务ID
- * @method void setJobId(integer $JobId) 设置主任务ID
- * @method integer getJobStageId() 获取单任务ID
- * @method void setJobStageId(integer $JobStageId) 设置单任务ID
- * @method boolean getIgnored() 获取是否忽略
- * @method void setIgnored(boolean $Ignored) 设置是否忽略
- * @method integer getJobRecordId() 获取子任务ID
- * @method void setJobRecordId(integer $JobRecordId) 设置子任务ID
- * @method integer getCustomerId() 获取企业ID
- * @method void setCustomerId(integer $CustomerId) 设置企业ID
- * @method string getCustomerName() 获取企业名称
- * @method void setCustomerName(string $CustomerName) 设置企业名称
- * @method string getDetail() 获取详情
- * @method void setDetail(string $Detail) 设置详情
- * @method string getMd5() 获取Md5值
- * @method void setMd5(string $Md5) 设置Md5值
- * @method string getCreateAt() 获取创建时间
- * @method void setCreateAt(string $CreateAt) 设置创建时间
- * @method string getUpdateAt() 获取更新时间
- * @method void setUpdateAt(string $UpdateAt) 设置更新时间
- * @method string getLabels() 获取标签列表，json格式：{\"tag1\":[\"责任人xxx\"],\"tag2\":[\"测试站\"]}
- * @method void setLabels(string $Labels) 设置标签列表，json格式：{\"tag1\":[\"责任人xxx\"],\"tag2\":[\"测试站\"]}
+ * @method string getEnterpriseUid() 获取<p>子公司ID</p>
+ * @method void setEnterpriseUid(string $EnterpriseUid) 设置<p>子公司ID</p>
+ * @method string getEnterpriseName() 获取<p>子公司名称</p>
+ * @method void setEnterpriseName(string $EnterpriseName) 设置<p>子公司名称</p>
+ * @method integer getJobId() 获取<p>主任务ID</p>
+ * @method void setJobId(integer $JobId) 设置<p>主任务ID</p>
+ * @method integer getJobStageId() 获取<p>单任务ID</p>
+ * @method void setJobStageId(integer $JobStageId) 设置<p>单任务ID</p>
+ * @method boolean getIgnored() 获取<p>是否忽略</p>
+ * @method void setIgnored(boolean $Ignored) 设置<p>是否忽略</p>
+ * @method integer getJobRecordId() 获取<p>子任务ID</p>
+ * @method void setJobRecordId(integer $JobRecordId) 设置<p>子任务ID</p>
+ * @method integer getCustomerId() 获取<p>企业ID</p>
+ * @method void setCustomerId(integer $CustomerId) 设置<p>企业ID</p>
+ * @method string getCustomerName() 获取<p>企业名称</p>
+ * @method void setCustomerName(string $CustomerName) 设置<p>企业名称</p>
+ * @method string getDetail() 获取<p>详情</p>
+ * @method void setDetail(string $Detail) 设置<p>详情</p>
+ * @method string getMd5() 获取<p>Md5值</p>
+ * @method void setMd5(string $Md5) 设置<p>Md5值</p>
+ * @method string getCreateAt() 获取<p>创建时间</p>
+ * @method void setCreateAt(string $CreateAt) 设置<p>创建时间</p>
+ * @method string getUpdateAt() 获取<p>更新时间</p>
+ * @method void setUpdateAt(string $UpdateAt) 设置<p>更新时间</p>
+ * @method string getLabels() 获取<p>标签列表，json格式：{"tag1":["责任人xxx"],"tag2":["测试站"]}</p>
+ * @method void setLabels(string $Labels) 设置<p>标签列表，json格式：{"tag1":["责任人xxx"],"tag2":["测试站"]}</p>
+ * @method integer getIsPlainTextInDemo() 获取<p>演示模式是否明文展示</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
+ * @method void setIsPlainTextInDemo(integer $IsPlainTextInDemo) 设置<p>演示模式是否明文展示</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
  */
 class DisplayToolCommon extends AbstractModel
 {
     /**
-     * @var string 子公司ID
+     * @var string <p>子公司ID</p>
      */
     public $EnterpriseUid;
 
     /**
-     * @var string 子公司名称
+     * @var string <p>子公司名称</p>
      */
     public $EnterpriseName;
 
     /**
-     * @var integer 主任务ID
+     * @var integer <p>主任务ID</p>
      */
     public $JobId;
 
     /**
-     * @var integer 单任务ID
+     * @var integer <p>单任务ID</p>
      */
     public $JobStageId;
 
     /**
-     * @var boolean 是否忽略
+     * @var boolean <p>是否忽略</p>
      */
     public $Ignored;
 
     /**
-     * @var integer 子任务ID
+     * @var integer <p>子任务ID</p>
      */
     public $JobRecordId;
 
     /**
-     * @var integer 企业ID
+     * @var integer <p>企业ID</p>
      */
     public $CustomerId;
 
     /**
-     * @var string 企业名称
+     * @var string <p>企业名称</p>
      */
     public $CustomerName;
 
     /**
-     * @var string 详情
+     * @var string <p>详情</p>
      */
     public $Detail;
 
     /**
-     * @var string Md5值
+     * @var string <p>Md5值</p>
      */
     public $Md5;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateAt;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
      */
     public $UpdateAt;
 
     /**
-     * @var string 标签列表，json格式：{\"tag1\":[\"责任人xxx\"],\"tag2\":[\"测试站\"]}
+     * @var string <p>标签列表，json格式：{"tag1":["责任人xxx"],"tag2":["测试站"]}</p>
      */
     public $Labels;
 
     /**
-     * @param string $EnterpriseUid 子公司ID
-     * @param string $EnterpriseName 子公司名称
-     * @param integer $JobId 主任务ID
-     * @param integer $JobStageId 单任务ID
-     * @param boolean $Ignored 是否忽略
-     * @param integer $JobRecordId 子任务ID
-     * @param integer $CustomerId 企业ID
-     * @param string $CustomerName 企业名称
-     * @param string $Detail 详情
-     * @param string $Md5 Md5值
-     * @param string $CreateAt 创建时间
-     * @param string $UpdateAt 更新时间
-     * @param string $Labels 标签列表，json格式：{\"tag1\":[\"责任人xxx\"],\"tag2\":[\"测试站\"]}
+     * @var integer <p>演示模式是否明文展示</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
+     */
+    public $IsPlainTextInDemo;
+
+    /**
+     * @param string $EnterpriseUid <p>子公司ID</p>
+     * @param string $EnterpriseName <p>子公司名称</p>
+     * @param integer $JobId <p>主任务ID</p>
+     * @param integer $JobStageId <p>单任务ID</p>
+     * @param boolean $Ignored <p>是否忽略</p>
+     * @param integer $JobRecordId <p>子任务ID</p>
+     * @param integer $CustomerId <p>企业ID</p>
+     * @param string $CustomerName <p>企业名称</p>
+     * @param string $Detail <p>详情</p>
+     * @param string $Md5 <p>Md5值</p>
+     * @param string $CreateAt <p>创建时间</p>
+     * @param string $UpdateAt <p>更新时间</p>
+     * @param string $Labels <p>标签列表，json格式：{"tag1":["责任人xxx"],"tag2":["测试站"]}</p>
+     * @param integer $IsPlainTextInDemo <p>演示模式是否明文展示</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class DisplayToolCommon extends AbstractModel
 
         if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
             $this->Labels = $param["Labels"];
+        }
+
+        if (array_key_exists("IsPlainTextInDemo",$param) and $param["IsPlainTextInDemo"] !== null) {
+            $this->IsPlainTextInDemo = $param["IsPlainTextInDemo"];
         }
     }
 }

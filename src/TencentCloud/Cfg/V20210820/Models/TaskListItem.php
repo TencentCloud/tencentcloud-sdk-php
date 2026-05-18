@@ -20,146 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 任务列表信息
  *
- * @method integer getTaskId() 获取任务ID
- * @method void setTaskId(integer $TaskId) 设置任务ID
- * @method string getTaskTitle() 获取任务标题
- * @method void setTaskTitle(string $TaskTitle) 设置任务标题
- * @method string getTaskDescription() 获取任务描述
- * @method void setTaskDescription(string $TaskDescription) 设置任务描述
- * @method string getTaskTag() 获取任务标签
- * @method void setTaskTag(string $TaskTag) 设置任务标签
- * @method integer getTaskStatus() 获取任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束)
- * @method void setTaskStatus(integer $TaskStatus) 设置任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束)
- * @method string getTaskCreateTime() 获取任务创建时间
- * @method void setTaskCreateTime(string $TaskCreateTime) 设置任务创建时间
- * @method string getTaskUpdateTime() 获取任务更新时间
- * @method void setTaskUpdateTime(string $TaskUpdateTime) 设置任务更新时间
- * @method integer getTaskPreCheckStatus() 获取0--未开始，1--进行中，2--已完成
- * @method void setTaskPreCheckStatus(integer $TaskPreCheckStatus) 设置0--未开始，1--进行中，2--已完成
- * @method boolean getTaskPreCheckSuccess() 获取环境检查是否通过
- * @method void setTaskPreCheckSuccess(boolean $TaskPreCheckSuccess) 设置环境检查是否通过
- * @method integer getTaskExpect() 获取演练是否符合预期 1-符合预期 2-不符合预期
- * @method void setTaskExpect(integer $TaskExpect) 设置演练是否符合预期 1-符合预期 2-不符合预期
- * @method string getApplicationId() 获取关联应用ID
- * @method void setApplicationId(string $ApplicationId) 设置关联应用ID
- * @method string getApplicationName() 获取关联应用名称
- * @method void setApplicationName(string $ApplicationName) 设置关联应用名称
- * @method integer getVerifyId() 获取验证项ID
- * @method void setVerifyId(integer $VerifyId) 设置验证项ID
- * @method integer getTaskStatusType() 获取状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
- * @method void setTaskStatusType(integer $TaskStatusType) 设置状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
- * @method string getArchId() 获取架构ID
- * @method void setArchId(string $ArchId) 设置架构ID
- * @method string getArchName() 获取架构名称
- * @method void setArchName(string $ArchName) 设置架构名称
- * @method integer getTaskSource() 获取来源
- * @method void setTaskSource(integer $TaskSource) 设置来源
+ * @method integer getTaskId() 获取<p>任务ID</p>
+ * @method void setTaskId(integer $TaskId) 设置<p>任务ID</p>
+ * @method string getTaskTitle() 获取<p>任务标题</p>
+ * @method void setTaskTitle(string $TaskTitle) 设置<p>任务标题</p>
+ * @method string getTaskDescription() 获取<p>任务描述</p>
+ * @method void setTaskDescription(string $TaskDescription) 设置<p>任务描述</p>
+ * @method string getTaskTag() 获取<p>任务标签</p>
+ * @method void setTaskTag(string $TaskTag) 设置<p>任务标签</p>
+ * @method integer getTaskStatus() 获取<p>任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束)</p>
+ * @method void setTaskStatus(integer $TaskStatus) 设置<p>任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束)</p>
+ * @method string getTaskCreateTime() 获取<p>任务创建时间</p>
+ * @method void setTaskCreateTime(string $TaskCreateTime) 设置<p>任务创建时间</p>
+ * @method string getTaskUpdateTime() 获取<p>任务更新时间</p>
+ * @method void setTaskUpdateTime(string $TaskUpdateTime) 设置<p>任务更新时间</p>
+ * @method integer getTaskPreCheckStatus() 获取<p>0--未开始，1--进行中，2--已完成</p>
+ * @method void setTaskPreCheckStatus(integer $TaskPreCheckStatus) 设置<p>0--未开始，1--进行中，2--已完成</p>
+ * @method boolean getTaskPreCheckSuccess() 获取<p>环境检查是否通过</p>
+ * @method void setTaskPreCheckSuccess(boolean $TaskPreCheckSuccess) 设置<p>环境检查是否通过</p>
+ * @method integer getTaskExpect() 获取<p>演练是否符合预期 1-符合预期 2-不符合预期</p>
+ * @method void setTaskExpect(integer $TaskExpect) 设置<p>演练是否符合预期 1-符合预期 2-不符合预期</p>
+ * @method string getApplicationId() 获取<p>关联应用ID</p>
+ * @method void setApplicationId(string $ApplicationId) 设置<p>关联应用ID</p>
+ * @method string getApplicationName() 获取<p>关联应用名称</p>
+ * @method void setApplicationName(string $ApplicationName) 设置<p>关联应用名称</p>
+ * @method integer getVerifyId() 获取<p>验证项ID</p>
+ * @method void setVerifyId(integer $VerifyId) 设置<p>验证项ID</p>
+ * @method integer getTaskStatusType() 获取<p>状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止</p>
+ * @method void setTaskStatusType(integer $TaskStatusType) 设置<p>状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止</p>
+ * @method string getArchId() 获取<p>架构ID</p>
+ * @method void setArchId(string $ArchId) 设置<p>架构ID</p>
+ * @method string getArchName() 获取<p>架构名称</p>
+ * @method void setArchName(string $ArchName) 设置<p>架构名称</p>
+ * @method integer getTaskSource() 获取<p>来源</p>
+ * @method void setTaskSource(integer $TaskSource) 设置<p>来源</p>
+ * @method array getTags() 获取<p>云资源标签列表</p>
+ * @method void setTags(array $Tags) 设置<p>云资源标签列表</p>
  */
 class TaskListItem extends AbstractModel
 {
     /**
-     * @var integer 任务ID
+     * @var integer <p>任务ID</p>
      */
     public $TaskId;
 
     /**
-     * @var string 任务标题
+     * @var string <p>任务标题</p>
      */
     public $TaskTitle;
 
     /**
-     * @var string 任务描述
+     * @var string <p>任务描述</p>
      */
     public $TaskDescription;
 
     /**
-     * @var string 任务标签
+     * @var string <p>任务标签</p>
      */
     public $TaskTag;
 
     /**
-     * @var integer 任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束)
+     * @var integer <p>任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束)</p>
      */
     public $TaskStatus;
 
     /**
-     * @var string 任务创建时间
+     * @var string <p>任务创建时间</p>
      */
     public $TaskCreateTime;
 
     /**
-     * @var string 任务更新时间
+     * @var string <p>任务更新时间</p>
      */
     public $TaskUpdateTime;
 
     /**
-     * @var integer 0--未开始，1--进行中，2--已完成
+     * @var integer <p>0--未开始，1--进行中，2--已完成</p>
      */
     public $TaskPreCheckStatus;
 
     /**
-     * @var boolean 环境检查是否通过
+     * @var boolean <p>环境检查是否通过</p>
      */
     public $TaskPreCheckSuccess;
 
     /**
-     * @var integer 演练是否符合预期 1-符合预期 2-不符合预期
+     * @var integer <p>演练是否符合预期 1-符合预期 2-不符合预期</p>
      */
     public $TaskExpect;
 
     /**
-     * @var string 关联应用ID
+     * @var string <p>关联应用ID</p>
      */
     public $ApplicationId;
 
     /**
-     * @var string 关联应用名称
+     * @var string <p>关联应用名称</p>
      */
     public $ApplicationName;
 
     /**
-     * @var integer 验证项ID
+     * @var integer <p>验证项ID</p>
      */
     public $VerifyId;
 
     /**
-     * @var integer 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
+     * @var integer <p>状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止</p>
      */
     public $TaskStatusType;
 
     /**
-     * @var string 架构ID
+     * @var string <p>架构ID</p>
      */
     public $ArchId;
 
     /**
-     * @var string 架构名称
+     * @var string <p>架构名称</p>
      */
     public $ArchName;
 
     /**
-     * @var integer 来源
+     * @var integer <p>来源</p>
      */
     public $TaskSource;
 
     /**
-     * @param integer $TaskId 任务ID
-     * @param string $TaskTitle 任务标题
-     * @param string $TaskDescription 任务描述
-     * @param string $TaskTag 任务标签
-     * @param integer $TaskStatus 任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束)
-     * @param string $TaskCreateTime 任务创建时间
-     * @param string $TaskUpdateTime 任务更新时间
-     * @param integer $TaskPreCheckStatus 0--未开始，1--进行中，2--已完成
-     * @param boolean $TaskPreCheckSuccess 环境检查是否通过
-     * @param integer $TaskExpect 演练是否符合预期 1-符合预期 2-不符合预期
-     * @param string $ApplicationId 关联应用ID
-     * @param string $ApplicationName 关联应用名称
-     * @param integer $VerifyId 验证项ID
-     * @param integer $TaskStatusType 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
-     * @param string $ArchId 架构ID
-     * @param string $ArchName 架构名称
-     * @param integer $TaskSource 来源
+     * @var array <p>云资源标签列表</p>
+     */
+    public $Tags;
+
+    /**
+     * @param integer $TaskId <p>任务ID</p>
+     * @param string $TaskTitle <p>任务标题</p>
+     * @param string $TaskDescription <p>任务描述</p>
+     * @param string $TaskTag <p>任务标签</p>
+     * @param integer $TaskStatus <p>任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束)</p>
+     * @param string $TaskCreateTime <p>任务创建时间</p>
+     * @param string $TaskUpdateTime <p>任务更新时间</p>
+     * @param integer $TaskPreCheckStatus <p>0--未开始，1--进行中，2--已完成</p>
+     * @param boolean $TaskPreCheckSuccess <p>环境检查是否通过</p>
+     * @param integer $TaskExpect <p>演练是否符合预期 1-符合预期 2-不符合预期</p>
+     * @param string $ApplicationId <p>关联应用ID</p>
+     * @param string $ApplicationName <p>关联应用名称</p>
+     * @param integer $VerifyId <p>验证项ID</p>
+     * @param integer $TaskStatusType <p>状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止</p>
+     * @param string $ArchId <p>架构ID</p>
+     * @param string $ArchName <p>架构名称</p>
+     * @param integer $TaskSource <p>来源</p>
+     * @param array $Tags <p>云资源标签列表</p>
      */
     function __construct()
     {
@@ -240,6 +248,15 @@ class TaskListItem extends AbstractModel
 
         if (array_key_exists("TaskSource",$param) and $param["TaskSource"] !== null) {
             $this->TaskSource = $param["TaskSource"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagWithDescribe();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 主域名详情
  *
- * @method integer getId() 获取主键ID
- * @method void setId(integer $Id) 设置主键ID
- * @method string getDomain() 获取主域名
- * @method void setDomain(string $Domain) 设置主域名
- * @method string getICP() 获取ICP
- * @method void setICP(string $ICP) 设置ICP
- * @method string getRegisteredTime() 获取注册时间
- * @method void setRegisteredTime(string $RegisteredTime) 设置注册时间
- * @method string getExpiredTime() 获取过期时间
- * @method void setExpiredTime(string $ExpiredTime) 设置过期时间
- * @method string getCompany() 获取公司
- * @method void setCompany(string $Company) 设置公司
- * @method DisplayToolCommon getDisplayToolCommon() 获取公共字段
- * @method void setDisplayToolCommon(DisplayToolCommon $DisplayToolCommon) 设置公共字段
- * @method integer getIsCloudAsset() 获取是否为云资产
- * @method void setIsCloudAsset(integer $IsCloudAsset) 设置是否为云资产
- * @method integer getCloudAssetStatus() 获取云资产状态，-1为下线
- * @method void setCloudAssetStatus(integer $CloudAssetStatus) 设置云资产状态，-1为下线
+ * @method integer getId() 获取<p>主键ID</p>
+ * @method void setId(integer $Id) 设置<p>主键ID</p>
+ * @method string getDomain() 获取<p>主域名</p>
+ * @method void setDomain(string $Domain) 设置<p>主域名</p>
+ * @method string getICP() 获取<p>ICP</p>
+ * @method void setICP(string $ICP) 设置<p>ICP</p>
+ * @method string getRegisteredTime() 获取<p>注册时间</p>
+ * @method void setRegisteredTime(string $RegisteredTime) 设置<p>注册时间</p>
+ * @method string getExpiredTime() 获取<p>过期时间</p>
+ * @method void setExpiredTime(string $ExpiredTime) 设置<p>过期时间</p>
+ * @method string getCompany() 获取<p>公司</p>
+ * @method void setCompany(string $Company) 设置<p>公司</p>
+ * @method DisplayToolCommon getDisplayToolCommon() 获取<p>公共字段</p>
+ * @method void setDisplayToolCommon(DisplayToolCommon $DisplayToolCommon) 设置<p>公共字段</p>
+ * @method integer getIsCloudAsset() 获取<p>是否为云资产</p>
+ * @method void setIsCloudAsset(integer $IsCloudAsset) 设置<p>是否为云资产</p>
+ * @method integer getCloudAssetStatus() 获取<p>云资产状态，-1为下线</p>
+ * @method void setCloudAssetStatus(integer $CloudAssetStatus) 设置<p>云资产状态，-1为下线</p>
  */
 class DisplayDomain extends AbstractModel
 {
     /**
-     * @var integer 主键ID
+     * @var integer <p>主键ID</p>
      */
     public $Id;
 
     /**
-     * @var string 主域名
+     * @var string <p>主域名</p>
      */
     public $Domain;
 
     /**
-     * @var string ICP
+     * @var string <p>ICP</p>
      */
     public $ICP;
 
     /**
-     * @var string 注册时间
+     * @var string <p>注册时间</p>
      */
     public $RegisteredTime;
 
     /**
-     * @var string 过期时间
+     * @var string <p>过期时间</p>
      */
     public $ExpiredTime;
 
     /**
-     * @var string 公司
+     * @var string <p>公司</p>
      */
     public $Company;
 
     /**
-     * @var DisplayToolCommon 公共字段
+     * @var DisplayToolCommon <p>公共字段</p>
      */
     public $DisplayToolCommon;
 
     /**
-     * @var integer 是否为云资产
+     * @var integer <p>是否为云资产</p>
      */
     public $IsCloudAsset;
 
     /**
-     * @var integer 云资产状态，-1为下线
+     * @var integer <p>云资产状态，-1为下线</p>
      */
     public $CloudAssetStatus;
 
     /**
-     * @param integer $Id 主键ID
-     * @param string $Domain 主域名
-     * @param string $ICP ICP
-     * @param string $RegisteredTime 注册时间
-     * @param string $ExpiredTime 过期时间
-     * @param string $Company 公司
-     * @param DisplayToolCommon $DisplayToolCommon 公共字段
-     * @param integer $IsCloudAsset 是否为云资产
-     * @param integer $CloudAssetStatus 云资产状态，-1为下线
+     * @param integer $Id <p>主键ID</p>
+     * @param string $Domain <p>主域名</p>
+     * @param string $ICP <p>ICP</p>
+     * @param string $RegisteredTime <p>注册时间</p>
+     * @param string $ExpiredTime <p>过期时间</p>
+     * @param string $Company <p>公司</p>
+     * @param DisplayToolCommon $DisplayToolCommon <p>公共字段</p>
+     * @param integer $IsCloudAsset <p>是否为云资产</p>
+     * @param integer $CloudAssetStatus <p>云资产状态，-1为下线</p>
      */
     function __construct()
     {
